@@ -44,3 +44,7 @@ One React entry point serves all 22 modules. Historical controller fixtures are 
 results from the Python institution models remain downloadable, including the
 maintenance repair and separate accounting extension. See REACT_INTERFACE_CREDITS.md
 and CHANGES.md.
+
+## Attribution and reuse
+
+Credit and cite **Dr. Trey Menefee** when using, reproducing, sharing, or adapting his material. Noncommercial use is permitted under the conditions in [LICENSE](LICENSE); commercial use requires prior permission. Third-party materials retain their own terms.

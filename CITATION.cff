@@ -1,0 +1,7 @@
+cff-version: 1.2.0
+message: "Please cite this work when using, reproducing, or adapting it."
+title: "atlas-of-education"
+authors:
+  - family-names: Menefee
+    given-names: Trey
+repository-code: "https://github.com/TreyModels/atlas-of-education"
