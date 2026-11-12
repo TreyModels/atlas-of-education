@@ -1,0 +1,11 @@
+Atlas of Education
+Hosted via Kimi websites (version card in chat; publish from there for a public URL).
+Previous ChatGPT Sites project: appgprj_6aed35b3d54c81919aa9d80256111125 (legacy).
+
+This rebuild: six model classes (Education & work, School systems, IIEP/UIS methods,
+Angkor, Fertility, Shadow education), each with a story page labelled
+[data] / [sim] / [ruled out] / [open] / [method] that links to its models and research.
+Fertility research bundle served at research/fertility/fertility-research-full.zip.
+
+Development: npm ci, then npm run dev. Build: npm run build (dist/). Tests: npm test.
+Languages: English, Simplified Chinese, Vietnamese (priority EN + zh-Hans).

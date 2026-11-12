@@ -1,0 +1,13 @@
+{
+ "officialPlan":{"year":2026,"newPublicPlaces":50000,"ofWhichGeneralHigh":15000,"plannedExtraGeneralHighAdmissionsAtLeast":10000,"url":"https://jyj.gz.gov.cn/gk/zfxxgkml/qt/ghjh/content/post_10696105.html"},
+ "stages":["Kindergarten","Primary","Junior secondary","General senior high"],
+ "columns":["school_operations","enrollment","full_time_teachers","entry","primary_graduates_if_reported"],
+ "history":[
+  [2020,[[2068,574500,41000,null],[992,1125100,62600,198400,156800],[419,383800,30600,138900],[120,155900,14600,54400]],"https://jyj.gz.gov.cn/gkmlpt/content/7/7850/post_7850770.html"],
+  [2021,[[2155,633200,44200,null],[986,1164400,65000,212000,null],[427,408000,32500,145200],[124,161600,14700,54800]],"https://jyj.gz.gov.cn/gk/sjtj/content/post_8343409.html"],
+  [2022,[[2223,655300,45900,null],[992,1204200,67300,213800,165000],[429,432100,33800,153800],[126,170300,14900,61900]],"https://jyj.gz.gov.cn/gk/sjtj/content/post_9073603.html"],
+  [2023,[[2246,598200,44800,null],[1008,1294500,71300,272500,176700],[432,459400,35500,165200],[134,183600,15400,67500]],"https://jyj.gz.gov.cn/gk/sjtj/content/post_9683303.html"],
+  [2024,[[2224,549700,42700,null],[1013,1332100,74400,240100,195100],[428,502000,38000,185700],[138,201600,16700,73700]],"https://jyj.gz.gov.cn/gk/sjtj/content/post_10335667.html"],
+  [2025,[[2161,511000,41200,null],[1012,1340600,75600,218300,201100],[420,541500,40600,193500],[146,221300,18100,81000]],"https://jyj.gz.gov.cn/gk/zfxxgkml/qt/tjsj/content/post_10855961.html"]
+ ]
+}

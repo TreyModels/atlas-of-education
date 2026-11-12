@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fertility collapse lab · Atlas Worlds</title>
+<link rel="stylesheet" href="../styles.css">
+<style>
+:root{--paper:#f4f2e9;--panel:#fffdf7;--ink:#202d2a;--muted:#4d625a;--line:#d4dcd0;--green:#126550;--shade:#e1eee4;--ochre:#8a411e;--serif:Georgia,'Times New Roman',serif;--sans:system-ui,sans-serif}
+body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.55 var(--sans)}
+.frame{width:min(1160px,calc(100% - 1.4rem));margin:auto}
+.mast{background:#1f3530;color:#fffdf5}.mast a{color:inherit}
+.mast-row{display:flex;align-items:center;justify-content:space-between;min-height:58px;gap:1rem}
+.brand{font:700 1.3rem var(--serif);text-decoration:none}
+.lang{display:flex;gap:.3rem}.lang button{background:transparent;color:#fffdf5;border:1px solid #6f8a80;border-radius:20px;padding:.2rem .65rem;font-size:.8rem;cursor:pointer}
+.lang button[aria-pressed=true]{background:#fffdf5;color:#1f3530}
+.catalog{padding:1.6rem 0 2rem}
+.eyebrow{font-size:.72rem;letter-spacing:.12em;font-weight:750;color:var(--green);margin:0 0 .38rem}
+h1,h2{font-family:var(--serif);font-weight:500;line-height:1.08;margin:0}
+h1{font-size:clamp(2.1rem,6vw,3.6rem);letter-spacing:-.04em}
+h2{font-size:clamp(1.5rem,3.6vw,2.2rem);letter-spacing:-.03em;margin-bottom:.5rem}
+h3{font-size:1rem;margin:0 0 .3rem}
+.lead{max-width:72ch;color:var(--muted);font-size:1.05rem}
+.evidence{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:1rem 1.1rem;margin-top:1rem}
+.acts{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(240px,100%),1fr));gap:.8rem;margin-top:.6rem}
+.acts article{border-top:3px solid var(--green);padding:.5rem .1rem}
+.acts article.sim{border-color:#c9a27e}
+.acts p{margin:.3rem 0;font-size:.92rem}
+.tag{display:inline-block;font-size:.68rem;font-weight:750;letter-spacing:.06em;padding:.12rem .45rem;border-radius:4px;background:var(--shade);color:#17503f}
+.tag.sim{background:#f3e3cd;color:#70370f}.tag.no{background:#f2dcd6;color:#7a2a1a}
+.pills{display:flex;flex-wrap:wrap;gap:.4rem;margin:.4rem 0 .6rem}
+.pills button{padding:.32rem .75rem;border:1px solid var(--line);border-radius:30px;background:var(--panel);cursor:pointer;font-size:.85rem;color:var(--ink)}
+.pills button[aria-pressed=true]{background:var(--green);color:#fff;border-color:var(--green)}
+.lab{display:grid;grid-template-columns:minmax(230px,1fr) minmax(0,1.7fr);gap:1rem;align-items:start}
+@media(max-width:760px){.lab{grid-template-columns:1fr}}
+.ctrl label{display:block;font-size:.84rem;margin:.55rem 0 .1rem}
+.ctrl label b{float:right;font-variant-numeric:tabular-nums;color:var(--green)}
+.ctrl input[type=range]{width:100%;accent-color:var(--green)}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:.5rem;margin-bottom:.6rem}
+.stat{background:var(--shade);border-radius:8px;padding:.5rem .6rem}
+.stat span{display:block;font-size:.72rem;color:var(--muted)}
+.stat strong{font:600 1.5rem var(--serif);font-variant-numeric:tabular-nums}
+.stat em{font-style:normal;font-size:.78rem;color:var(--muted)}
+svg{width:100%;height:auto;display:block}#chart5 svg{max-width:720px}
+.legend{display:flex;flex-wrap:wrap;gap:.9rem;font-size:.8rem;color:var(--muted);margin-top:.3rem}
+.legend i{display:inline-block;width:18px;height:3px;vertical-align:middle;margin-right:.3rem}
+.table-scroll{overflow:auto}
+table{border-collapse:collapse;width:100%;font-size:.88rem}
+th,td{text-align:left;padding:.42rem .5rem;border-bottom:1px solid var(--line);vertical-align:top}
+thead th{font-size:.76rem;color:var(--muted);font-weight:650}
+td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+.verdict{font-weight:650}
+.note{font-size:.82rem;color:var(--muted)}
+.source-links{display:flex;flex-wrap:wrap;gap:.45rem 1.1rem;margin-top:.7rem;font-size:.85rem}
+.status{font-weight:700;padding:.2rem .55rem;border-radius:4px;font-size:.82rem}
+.status.ok{background:var(--shade);color:#17503f}.status.bad{background:#f2dcd6;color:#7a2a1a}
+a{color:var(--green);text-underline-offset:3px}
+</style>
+</head>
+<body>
+<header class="mast"><div class="frame mast-row"><a class="atlas-back" href="../index.html" data-atlas-back>&larr; Atlas</a><a class="brand" href="../index.html">Atlas Worlds</a>
+<div class="lang"><button data-lang="en" aria-pressed="true">EN</button><button data-lang="zh" aria-pressed="false">中文</button><a href="index.html" data-i18n="nav_lib" style="font-size:.82rem;margin-left:.6rem">Research library ↗</a></div></div></header>
+<main class="frame catalog">
+<p class="eyebrow" data-i18n="eyebrow">POPULATION &amp; SCHOOL SYSTEMS · FERTILITY · EXPLORATORY</p>
+<h1 data-i18n="h1">Why is fertility collapsing?</h1>
+<p class="lead" data-i18n="lead">Six places — the Philippines, Thailand, South Korea, Japan, Hong Kong and China — tested with development models, mechanism simulations and a tipping model. Development explains the fall to about 1.4 children per woman. The credential race and a jammed marriage market push East Asia deeper. Since 2015, a shared shock has pushed every place lower at once.</p>
+
+<section class="evidence"><h2 data-i18n="acts_h">The story in four acts</h2>
+<div class="acts">
+<article><span class="tag" data-i18n="t_real">REAL DATA</span><h3 data-i18n="a1h">1 · Survival changes everything</h3><p data-i18n="a1p">Once children survive and people live long lives, big families stop being necessary. Life expectancy alone predicts each place's fall, held out one place at a time, to a floor of about 1.3–1.5.</p></article>
+<article class="sim"><span class="tag sim" data-i18n="t_sim">SIMULATED</span><h3 data-i18n="a2h">2 · Children become credentials</h3><p data-i18n="a2p">Mass higher education turns childrearing into an arms race. Each child costs more, so parents stop at one. In the cohort model this costs about 0.4 children in every regime, through fewer births per married couple.</p></article>
+<article class="sim"><span class="tag sim" data-i18n="t_sim2">SIMULATED · NOT YET PROVEN</span><h3 data-i18n="a3h">3 · The marriage market jams</h3><p data-i18n="a3p">Where births need marriage, women overtaking men in status leaves many unmatched. It is the biggest single pressure in marriage-bound societies and shrinks by about 70% where births outside marriage are common. National enrolment data cannot confirm it.</p></article>
+<article><span class="tag" data-i18n="t_real2">REAL DATA</span><h3 data-i18n="a4h">4 · The shared shock</h3><p data-i18n="a4p">From 2015 to 2024, all six places fell further below their development path, by about 0.46 children on average. A common shock fits better than country-to-country spread. Smartphones, COVID and economic shocks all fit the timing.</p></article>
+</div></section>
+
+<section class="evidence"><h2 data-i18n="s1h">Six places: observed fertility against the models</h2>
+<p class="note" data-i18n="s1n">Each model line is fitted on the other five places and predicts this one. Period total fertility rate, 1961–2024.</p>
+<div class="pills" id="placePills"></div>
+<div id="chart1"></div>
+<div class="legend"><span><i style="background:#202d2a"></i><span data-i18n="lg_obs">Observed</span></span><span><i style="background:#126550"></i><span data-i18n="lg_dev">Development (survival) model</span></span><span><i style="background:#b0632f"></i><span data-i18n="lg_full">+ matching + common shock since 2015</span></span></div>
+<div class="table-scroll" style="margin-top:.8rem"><table><thead><tr><th data-i18n="g_place">Place</th><th data-i18n="g_15">Gap below development path, 2015</th><th data-i18n="g_24">2024</th><th data-i18n="g_ch">Change</th></tr></thead><tbody id="gapRows"></tbody></table></div>
+</section>
+
+<section class="evidence"><h2 data-i18n="s2h">Mechanism lab: build a cohort</h2>
+<p class="note" data-i18n="s2n">A synthetic cohort of 3,000 women and men searches for partners from age 18 to 45, then decides on first, second and later births. Change one pressure at a time and compare with the 1990-like reference. Invented parameters; it shows what the mechanism can do, not measured effects.</p>
+<div class="pills" id="presets"></div>
+<div class="lab">
+<div class="ctrl" id="ctrl"></div>
+<div><div class="stats"><div class="stat"><span data-i18n="o_cf">Completed fertility</span><strong id="oCF">–</strong><em id="dCF"></em></div><div class="stat"><span data-i18n="o_em">Ever married</span><strong id="oEM">–</strong><em id="dEM"></em></div><div class="stat"><span data-i18n="o_pm">Births per married woman</span><strong id="oPM">–</strong><em id="dPM"></em></div></div>
+<div id="chart2"></div><p class="note" id="explain2"></p></div>
+</div></section>
+
+<section class="evidence"><h2 data-i18n="s3h">Tipping lab: can a temporary shock do permanent damage?</h2>
+<p class="note" data-i18n="s3n">People adopt a “small family, no rush to marry” life plan once social pressure passes their personal threshold. Part of the pressure comes from peers who already have. A shock runs in years 30–39, then stops. Policy can push back from year 45.</p>
+<div class="lab">
+<div class="ctrl" id="ctrl3"></div>
+<div><p><span class="status" id="tipStatus">–</span> <span class="note" id="tipText"></span></p><div id="chart3"></div>
+<div class="legend"><span><i style="background:#126550"></i><span data-i18n="lg_ns">No shock</span></span><span><i style="background:#b0632f"></i><span data-i18n="lg_s">With shock (and policy)</span></span></div></div>
+</div>
+<p class="note" data-i18n="s3f">In the model, traps need two things: strong peer influence and a fairly uniform society. With strong feedback, undoing a collapse took about eight times the push that would have prevented it.</p>
+</section>
+
+<section class="evidence"><h2 data-i18n="s4h">What held up and what was ruled out</h2>
+<div class="table-scroll"><table><thead><tr><th data-i18n="c_claim">Claim</th><th data-i18n="c_res">Result</th><th data-i18n="c_ver">Verdict</th></tr></thead><tbody id="claims"></tbody></table></div></section>
+
+<section class="evidence"><h2 data-i18n="s5h">Policy levers in a marriage-squeeze world</h2>
+<p class="note" data-i18n="s5n">Korea-like synthetic cohort; baseline completed fertility 1.07. Change in completed fertility.</p>
+<div id="chart5"></div></section>
+
+<section class="evidence"><h2 data-i18n="s6h">Methods, limits and downloads</h2>
+<p data-i18n="s6p1">Data: World Bank fertility, GDP and life expectancy via FRED, 1961–2024; female-to-male tertiary enrolment ratios (sparse). Models are fitted leaving one place out. Period TFR mixes timing with quantity; Korea's gap includes about 0.2 children of postponement.</p>
+<p data-i18n="s6p2">Six places is a small sample. Mechanism and tipping results come from synthetic models with invented parameters, and some conclusions are partly built into how they are coded. The eight development-family models behave like 1.33 independent models; a real model crowd needs new kinds of data, above all who stays unmarried by sex and education.</p>
+<p class="source-links"><a href="fertility/fertility_research.zip" download data-i18n="dl_zip">Full research package (scripts, data, findings) · ZIP ↓</a><a href="fertility/fertility-series.json" download data-i18n="dl_json">Chart data · JSON ↓</a><a href="https://fred.stlouisfed.org/" data-i18n="src_fred">World Bank series via FRED ↗</a><a href="https://www.mhlw.go.jp/english/database/db-hw/FY2021/dl/live_births02.pdf" data-i18n="src_mhlw">Japan MHLW vital statistics ↗</a></p>
+<p class="note" data-i18n="credit">Theory: Trey Menefee, The Networked Domus (working paper). Models and experiments: Atlas fertility suite, November 2026.</p>
+</section>
+</main>
+<script>
+const SERIES={"years": [1961, 1962, 1963, 1964, 1965, 1966, 1967, 1968, 1969, 1970, 1971, 1972, 1973, 1974, 1975, 1976, 1977, 1978, 1979, 1980, 1981, 1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024], "places": {"PHL": {"obs": [6.994, 6.98, 6.952, 6.886, 6.799, 6.691, 6.572, 6.448, 6.333, 6.218, 6.083, 5.937, 5.787, 5.693, 5.596, 5.505, 5.442, 5.393, 5.255, 5.108, 4.973, 4.917, 4.867, 4.77, 4.664, 4.563, 4.509, 4.449, 4.365, 4.322, 4.273, 4.161, 4.098, 4.079, 4.067, 4.004, 3.943, 3.884, 3.825, 3.754, 3.719, 3.651, 3.591, 3.524, 3.448, 3.466, 3.403, 3.401, 3.376, 3.315, 3.236, 3.143, 3.042, 2.894, 2.829, 2.679, 2.525, 2.378, 2.215, 2.075, 1.95, 1.929, 1.916, 1.894], "dev": [4.643, 4.572, 4.506, 4.478, 4.407, 4.352, 4.306, 4.277, 4.26, 4.3, 4.239, 4.278, 4.322, 4.303, 4.28, 4.289, 4.144, 4.118, 4.067, 4.027, 4.012, 3.951, 3.906, 3.886, 3.806, 3.77, 3.661, 3.556, 3.457, 3.388, 3.329, 3.152, 3.079, 3.001, 2.93, 2.846, 2.78, 2.734, 2.673, 2.615, 2.607, 2.596, 2.563, 2.514, 2.491, 2.539, 2.467, 2.449, 2.452, 2.405, 2.367, 2.342, 2.334, 2.329, 2.305, 2.298, 2.218, 2.252, 2.265, 2.197, 2.85, 2.301, 2.24, 2.221], "full": [4.352, 4.285, 4.223, 4.197, 4.13, 4.079, 4.036, 4.009, 3.993, 4.03, 3.973, 4.01, 4.051, 4.033, 4.012, 4.02, 3.884, 3.86, 3.812, 3.774, 3.76, 3.703, 3.661, 3.642, 3.568, 3.534, 3.432, 3.333, 3.24, 3.175, 3.12, 2.954, 2.886, 2.813, 2.747, 2.668, 2.606, 2.563, 2.506, 2.451, 2.444, 2.433, 2.403, 2.357, 2.335, 2.38, 2.312, 2.296, 2.298, 2.254, 2.218, 2.195, 2.187, 2.183, 2.16, 2.153, 2.077, 2.107, 2.117, 2.05, 2.665, 2.146, 2.087, 2.069]}, "THA": {"obs": [6.324, 6.331, 6.342, 6.309, 6.258, 6.182, 6.077, 5.928, 5.704, 5.452, 5.253, 5.077, 4.845, 4.598, 4.364, 4.119, 3.865, 3.617, 3.451, 3.293, 3.127, 2.943, 2.755, 2.582, 2.45, 2.358, 2.255, 2.171, 2.136, 2.065, 2.036, 2.008, 1.967, 1.928, 1.888, 1.865, 1.845, 1.815, 1.768, 1.734, 1.711, 1.688, 1.673, 1.665, 1.644, 1.631, 1.616, 1.587, 1.565, 1.562, 1.571, 1.563, 1.526, 1.484, 1.451, 1.4, 1.363, 1.323, 1.285, 1.259, 1.234, 1.221, 1.212, 1.204], "dev": [6.231, 6.216, 6.193, 6.167, 6.134, 6.097, 6.056, 6.003, 5.936, 5.854, 5.777, 5.688, 5.599, 5.478, 5.348, 5.21, 5.089, 5.002, 4.894, 4.765, 4.58, 4.361, 4.087, 3.758, 3.446, 3.211, 3.055, 2.95, 2.848, 2.748, 2.693, 2.635, 2.58, 2.557, 2.533, 2.488, 2.389, 2.312, 2.253, 2.206, 2.142, 2.093, 2.033, 2.034, 1.9, 1.832, 1.771, 1.714, 1.66, 1.622, 1.592, 1.564, 1.53, 1.503, 1.48, 1.464, 1.448, 1.434, 1.434, 1.425, 1.407, 1.593, 1.492, 1.48], "full": [6.221, 6.206, 6.183, 6.157, 6.125, 6.088, 6.046, 5.993, 5.926, 5.845, 5.767, 5.679, 5.59, 5.47, 5.34, 5.202, 4.885, 4.934, 4.786, 4.608, 4.369, 4.08, 3.757, 3.454, 3.167, 2.951, 2.808, 2.712, 2.618, 2.526, 2.475, 2.422, 2.372, 2.35, 2.328, 2.287, 2.196, 2.125, 2.071, 2.027, 1.969, 1.924, 1.869, 1.869, 1.746, 1.684, 1.628, 1.575, 1.526, 1.491, 1.463, 1.437, 1.405, 1.378, 1.352, 1.327, 1.291, 1.238, 1.183, 1.119, 1.064, 1.205, 1.107, 1.091]}, "KOR": {"obs": [5.803, 5.562, 5.334, 5.068, 4.887, 4.782, 4.615, 4.51, 4.447, 4.53, 4.54, 4.12, 4.07, 3.77, 3.43, 3.0, 2.99, 2.64, 2.9, 2.82, 2.57, 2.39, 2.06, 1.74, 1.66, 1.58, 1.53, 1.55, 1.56, 1.57, 1.71, 1.76, 1.654, 1.656, 1.634, 1.574, 1.537, 1.464, 1.425, 1.48, 1.309, 1.178, 1.191, 1.164, 1.085, 1.132, 1.259, 1.192, 1.149, 1.226, 1.244, 1.297, 1.187, 1.205, 1.239, 1.172, 1.052, 0.977, 0.918, 0.837, 0.808, 0.778, 0.721, 0.748], "dev": [6.075, 6.02, 6.023, 5.984, 5.931, 5.97, 5.022, 5.018, 4.881, 4.699, 4.574, 4.459, 4.343, 4.224, 4.118, 4.012, 3.89, 3.798, 3.691, 3.538, 3.387, 3.224, 3.094, 2.913, 2.754, 2.59, 2.461, 2.339, 2.236, 2.131, 2.05, 1.975, 1.898, 1.84, 1.8, 1.742, 1.69, 1.646, 1.606, 1.56, 1.518, 1.491, 1.459, 1.43, 1.401, 1.374, 1.353, 1.336, 1.318, 1.312, 1.296, 1.288, 1.275, 1.263, 1.255, 1.249, 1.241, 1.241, 1.23, 1.226, 1.224, 1.24, 1.226, 1.222], "full": [6.063, 6.008, 6.011, 5.973, 5.92, 5.959, 5.012, 5.008, 4.872, 4.69, 4.565, 4.447, 4.298, 4.142, 3.988, 3.986, 3.877, 3.794, 3.688, 3.537, 3.381, 3.204, 3.058, 2.74, 2.487, 2.339, 2.222, 2.112, 2.019, 1.924, 1.852, 1.784, 1.714, 1.662, 1.625, 1.574, 1.526, 1.487, 1.45, 1.409, 1.371, 1.346, 1.318, 1.291, 1.265, 1.241, 1.222, 1.206, 1.19, 1.185, 1.171, 1.163, 1.15, 1.137, 1.127, 1.112, 1.085, 1.049, 0.985, 0.929, 0.89, 0.887, 0.862, 0.855]}, "JPN": {"obs": [1.96, 1.98, 2.0, 2.05, 2.14, 1.58, 2.23, 2.13, 2.13, 2.13, 2.16, 2.14, 2.14, 2.05, 1.91, 1.85, 1.8, 1.79, 1.77, 1.75, 1.74, 1.77, 1.8, 1.81, 1.76, 1.72, 1.69, 1.66, 1.57, 1.54, 1.53, 1.5, 1.46, 1.5, 1.42, 1.43, 1.39, 1.38, 1.34, 1.36, 1.33, 1.32, 1.29, 1.29, 1.26, 1.32, 1.34, 1.37, 1.37, 1.39, 1.39, 1.41, 1.43, 1.42, 1.45, 1.44, 1.43, 1.42, 1.36, 1.33, 1.3, 1.26, 1.2, 1.15], "dev": [2.795, 2.72, 2.452, 2.338, 2.325, 2.185, 2.075, 2.048, 2.002, 1.991, 1.839, 1.786, 1.764, 1.71, 1.634, 1.58, 1.516, 1.482, 1.432, 1.443, 1.406, 1.366, 1.363, 1.335, 1.315, 1.285, 1.26, 1.264, 1.24, 1.237, 1.226, 1.224, 1.212, 1.194, 1.201, 1.171, 1.163, 1.16, 1.161, 1.139, 1.127, 1.119, 1.117, 1.109, 1.111, 1.101, 1.096, 1.094, 1.086, 1.088, 1.094, 1.082, 1.077, 1.071, 1.067, 1.064, 1.062, 1.06, 1.057, 1.054, 1.056, 1.064, 1.063, 1.063], "full": [2.78, 2.705, 2.439, 2.325, 2.312, 2.173, 2.064, 2.037, 1.991, 1.98, 1.829, 1.776, 1.738, 1.659, 1.524, 1.405, 1.275, 1.294, 1.222, 1.242, 1.198, 1.15, 1.146, 1.122, 1.106, 1.081, 1.059, 1.063, 1.043, 1.04, 1.031, 1.029, 1.019, 1.004, 1.01, 0.985, 0.978, 0.975, 0.977, 0.958, 0.948, 0.941, 0.939, 0.933, 0.934, 0.926, 0.922, 0.92, 0.913, 0.915, 0.92, 0.91, 0.905, 0.901, 0.898, 0.894, 0.892, 0.882, 0.793, 0.704, 0.697, 0.704, 0.703, 0.703]}, "HKG": {"obs": [5.169, 5.177, 5.152, 5.085, 4.923, 4.464, 4.123, 3.783, 3.599, 3.386, 3.459, 3.315, 3.177, 2.967, 2.666, 2.48, 2.376, 2.272, 2.12, 2.047, 1.933, 1.86, 1.722, 1.559, 1.491, 1.367, 1.311, 1.4, 1.296, 1.272, 1.281, 1.347, 1.342, 1.355, 1.295, 1.191, 1.127, 1.016, 0.981, 1.032, 0.931, 0.941, 0.901, 0.922, 0.959, 0.984, 1.028, 1.064, 1.055, 1.127, 1.204, 1.285, 1.125, 1.235, 1.196, 1.205, 1.128, 1.08, 1.064, 0.883, 0.772, 0.701, 0.751, 0.841], "dev": [3.075, 2.922, 2.696, 2.533, 2.366, 2.271, 2.149, 2.072, 1.997, 1.945, 1.863, 1.865, 1.779, 1.718, 1.641, 1.698, 1.642, 1.625, 1.615, 1.54, 1.499, 1.494, 1.502, 1.466, 1.448, 1.438, 1.43, 1.424, 1.426, 1.415, 1.4, 1.406, 1.396, 1.384, 1.381, 1.363, 1.356, 1.356, 1.352, 1.346, 1.34, 1.34, 1.341, 1.337, 1.339, 1.332, 1.332, 1.333, 1.33, 1.328, 1.326, 1.326, 1.324, 1.323, 1.322, 1.322, 1.32, 1.319, 1.318, 1.317, 1.317, 1.325, 1.318, 1.318], "full": [3.069, 2.916, 2.691, 2.528, 2.361, 2.267, 2.145, 2.068, 1.993, 1.941, 1.859, 1.865, 1.778, 1.718, 1.641, 1.698, 1.642, 1.624, 1.612, 1.537, 1.489, 1.472, 1.446, 1.385, 1.346, 1.312, 1.287, 1.281, 1.282, 1.272, 1.259, 1.264, 1.256, 1.245, 1.242, 1.226, 1.22, 1.22, 1.216, 1.211, 1.206, 1.205, 1.206, 1.203, 1.204, 1.198, 1.198, 1.199, 1.196, 1.195, 1.193, 1.192, 1.191, 1.19, 1.188, 1.187, 1.179, 1.157, 1.112, 1.067, 1.046, 1.046, 1.039, 1.038]}, "CHN": {"obs": [3.863, 6.085, 7.513, 6.672, 6.605, 6.307, 5.806, 6.508, 6.175, 6.085, 5.523, 5.112, 4.726, 4.17, 3.571, 3.235, 2.844, 2.716, 2.745, 2.739, 2.792, 2.972, 2.559, 2.607, 2.633, 2.721, 2.76, 2.539, 2.52, 2.514, 1.934, 1.776, 1.691, 1.628, 1.588, 1.554, 1.527, 1.522, 1.53, 1.628, 1.563, 1.566, 1.57, 1.605, 1.624, 1.644, 1.666, 1.701, 1.714, 1.687, 1.668, 1.798, 1.714, 1.769, 1.67, 1.772, 1.795, 1.539, 1.496, 1.236, 1.117, 1.034, 0.999, 1.013], "dev": [6.328, 6.183, 6.155, 6.125, 6.09, 6.05, 5.999, 5.934, 5.858, 5.764, 5.645, 5.515, 5.354, 5.205, 5.049, 4.985, 4.673, 4.495, 4.322, 4.162, 4.0, 3.855, 3.707, 3.577, 3.459, 3.351, 3.238, 3.136, 3.041, 2.977, 2.849, 2.728, 2.615, 2.529, 2.403, 2.3, 2.213, 2.138, 2.07, 2.009, 1.942, 1.884, 1.83, 1.78, 1.731, 1.69, 1.644, 1.639, 1.586, 1.55, 1.529, 1.501, 1.479, 1.458, 1.437, 1.42, 1.418, 1.386, 1.371, 1.366, 1.361, 1.356, 1.37, 1.367], "full": [6.314, 6.169, 6.142, 6.111, 6.077, 6.037, 5.986, 5.921, 5.845, 5.752, 5.633, 5.503, 5.342, 5.194, 4.936, 4.931, 4.606, 4.493, 4.322, 4.162, 4.0, 3.855, 3.707, 3.577, 3.459, 3.35, 3.236, 3.132, 3.036, 2.969, 2.835, 2.705, 2.582, 2.483, 2.309, 2.134, 1.971, 1.903, 1.843, 1.789, 1.729, 1.677, 1.629, 1.585, 1.542, 1.505, 1.464, 1.459, 1.412, 1.38, 1.361, 1.336, 1.317, 1.298, 1.28, 1.263, 1.258, 1.207, 1.113, 1.028, 1.0, 0.993, 1.004, 1.001]}}};
+const ZH={
+nav_lib:"研究资料库 ↗",eyebrow:"人口与学校系统 · 生育率 · 探索性研究",h1:"生育率为何崩塌？",
+lead:"菲律宾、泰国、韩国、日本、香港和中国六地，用发展模型、机制模拟和临界点模型检验。发展水平解释了生育率降到每名女性约1.4个孩子；文凭竞赛和堵塞的婚姻市场让东亚跌得更深；2015年以来，一次共同冲击让所有地方同时下跌。",
+acts_h:"四幕故事",t_real:"真实数据",t_real2:"真实数据",t_sim:"模拟",t_sim2:"模拟 · 尚未证实",
+a1h:"1 · 存活率改变一切",a1p:"孩子能活下来、人们普遍长寿之后，大家庭不再必要。仅凭预期寿命（每次留出一地做预测）就能预测各地的下降，底部约在1.3–1.5。",
+a2h:"2 · 孩子变成文凭竞赛",a2p:"高等教育大众化让养育孩子变成军备竞赛。每个孩子更贵，父母只生一个。在队列模型中，无论哪种制度，这都会减少约0.4个孩子，主要通过已婚夫妇少生。",
+a3h:"3 · 婚姻市场堵塞",a3p:"在生育必须以婚姻为前提的地方，女性地位超过男性会让许多人找不到对象。这是婚姻约束社会中最大的单一压力；在非婚生育普遍的地方缩小约70%。国家层面的入学数据无法证实它。",
+a4h:"4 · 共同冲击",a4p:"2015到2024年，六地全部进一步跌破发展路径，平均约0.46个孩子。共同冲击比国与国传染更吻合。智能手机、新冠疫情和经济冲击在时间上都吻合。",
+s1h:"六地：实际生育率与模型对比",s1n:"每条模型线都用另外五地拟合，再预测本地。时期总和生育率，1961–2024。",
+lg_obs:"实际值",lg_dev:"发展（存活率）模型",lg_full:"+ 婚配 + 2015年后共同冲击",
+g_place:"地区",g_15:"低于发展路径的差距，2015",g_24:"2024",g_ch:"变化",
+s2h:"机制实验室：构建一个队列",s2n:"一个由3,000名女性和男性组成的模拟队列，从18岁到45岁寻找伴侣，然后决定是否生第一胎、第二胎及以后。一次改变一种压力，并与1990年式参照对比。参数是设定的；它展示机制能做到什么，而非实测效果。",
+o_cf:"终身生育数",o_em:"曾婚比例",o_pm:"每名已婚女性生育数",
+s3h:"临界点实验室：暂时冲击能造成永久伤害吗？",s3n:"当社会压力超过个人阈值时，人们会采纳“少生、不急着结婚”的生活方式。部分压力来自已经采纳的同伴。冲击发生在第30–39年，然后停止。政策可从第45年开始反向推动。",
+lg_ns:"无冲击",lg_s:"有冲击（及政策）",
+s3f:"在模型中，陷阱需要两个条件：强烈的同伴影响和较为同质的社会。在强反馈下，扭转崩塌所需的推力约为事先预防的八倍。",
+s4h:"哪些成立，哪些被排除",c_claim:"说法",c_res:"结果",c_ver:"结论",
+s5h:"婚姻挤压世界中的政策杠杆",s5n:"类似韩国的模拟队列；基线终身生育数1.07。数值为终身生育数的变化。",
+s6h:"方法、局限与下载",
+s6p1:"数据：世界银行生育率、GDP和预期寿命（经FRED），1961–2024；女性与男性高等教育入学比（数据稀疏）。模型采用留一地交叉验证。时期总和生育率混合了时间和数量；韩国的差距中约0.2个孩子属于推迟生育。",
+s6p2:"六个地区样本很小。机制和临界点结果来自参数设定的模拟模型，部分结论在一定程度上由建模方式决定。八个发展类模型实际上只相当于1.33个独立模型；真正的模型群需要新类型的数据，尤其是按性别和学历统计的未婚率。",
+dl_zip:"完整研究包（脚本、数据、结论）· ZIP ↓",dl_json:"图表数据 · JSON ↓",src_fred:"世界银行数据（经FRED）↗",src_mhlw:"日本厚生劳动省人口动态统计 ↗",
+credit:"理论：Trey Menefee，《The Networked Domus》（工作论文）。模型与实验：Atlas生育率实验套件，2026年11月。"};
+const D={en:{PHL:"Philippines",THA:"Thailand",KOR:"South Korea",JPN:"Japan",HKG:"Hong Kong",CHN:"China",
+ gap:"Women's status lead (SD)",band:"How far women will marry down (SD)",cost:"Child cost (credential race)",meet:"Partner meetings per year",kin:"Grandparent childcare share",nm:"Births outside marriage (vs marital rate)",cash:"Cash for 2nd+ births",menUp:"Men's prospects (+SD)",
+ p90:"1990-like East Asia",pK:"Korea 2020-like",pKnm:"Korea 2020 + births outside marriage",pPH:"Philippines-like",
+ vs:"vs 1990-like",alone:"Effect of each of your settings alone, against the 1990-like reference (children per woman)",
+ w:"Peer feedback",sigma:"Diversity of thresholds",B:"Development pressure",shock:"Shock size (years 30–39)",push:"Policy counter-push (from year 45)",
+ trapped:"Trapped",recov:"Recovers",tiptext:(a,b,c)=>`Fertility ${a} before the shock; ${b} at year 79 with the shock, against ${c} without.`,
+ yr:"Model year",tfr:"TFR",ex2:(cf,em,pm)=>`Completed fertility ${cf}: ${em} of women ever marry, and married women average ${pm} births.`,
+ claims:[["Development (survival) explains the fall to about 1.3–1.5","Held-out error 0.40; best single model","Held"],
+ ["Korea's low TFR is only postponement","About 0.2 children of the gap is timing; the rest is real loss through marriage","Partly"],
+ ["Per-child competition inside marriage explains Korea","Fails the held-out Korean facts","Ruled out"],
+ ["Credential floor + hypergamy, or assortative mating + women overtaking men","Reproduces all five Korean facts","Held (simulated)"],
+ ["The level of women's enrolment lead predicts the extra fall","No information; fitted strength goes to zero","Ruled out"],
+ ["The change in women's relative position predicts the extra fall","Placebo: 31% of shuffled histories fit as well; year-to-year sign is wrong","Not supported"],
+ ["A 15–20 year lag from education to fertility","Best lag is 0 years","Ruled out"],
+ ["First-birth age above 29 locks TFR below 1.3","Japan: first births at 30.7, TFR rose 1.26 → 1.45 (2005–2015)","Ruled out"],
+ ["Decline spreads country to country","Spillover worsens held-out predictions (0.430 vs 0.390)","Ruled out"],
+ ["A common shock since about 2015","All six fell below path, average −0.46; improves predictions","Held (cause open)"],
+ ["Cash is the main remedy","+30% cash adds 0.08 children in the model","Ruled out (simulated)"],
+ ["Many models beat one","Eight models act like 1.33; survival alone is best","Not yet"]],
+ levers:[["Births outside marriage accepted",0.37],["Cash doubled",0.22],["Status gap halved",0.20],["Men's prospects +0.5 SD",0.19],["Cross-border marriage",0.14],["Looser partner norms",0.11],["Cash +30%",0.08],["Credentials 2 years earlier",0.05]]},
+zh:{PHL:"菲律宾",THA:"泰国",KOR:"韩国",JPN:"日本",HKG:"香港",CHN:"中国",
+ gap:"女性地位领先（标准差）",band:"女性可接受的向下婚距离（标准差）",cost:"养育成本（文凭竞赛）",meet:"每年结识伴侣的机会",kin:"有祖辈帮带孩子的比例",nm:"非婚生育（相对婚内生育率）",cash:"二孩及以上现金补贴",menUp:"男性前景（+标准差）",
+ p90:"1990年式东亚",pK:"2020年式韩国",pKnm:"2020年韩国 + 接受非婚生育",pPH:"菲律宾式",
+ vs:"相对1990年式",alone:"每项设置单独的效果，相对1990年式参照（每名女性孩子数）",
+ w:"同伴反馈",sigma:"阈值的多样性",B:"发展压力",shock:"冲击大小（第30–39年）",push:"政策反向推动（第45年起）",
+ trapped:"陷入陷阱",recov:"可以恢复",tiptext:(a,b,c)=>`冲击前生育率${a}；有冲击时第79年为${b}，无冲击时为${c}。`,
+ yr:"模型年份",tfr:"总和生育率",ex2:(cf,em,pm)=>`终身生育数${cf}：${em}的女性曾结婚，已婚女性平均生育${pm}个孩子。`,
+ claims:[["发展水平（存活率）解释了降到约1.3–1.5","留出检验误差0.40；最佳单一模型","成立"],
+ ["韩国低生育率只是推迟生育","差距中约0.2个孩子属于推迟；其余是通过婚姻造成的真实减少","部分成立"],
+ ["婚内每个孩子的竞争解释了韩国","无法复现留出的韩国事实","排除"],
+ ["文凭门槛 + 向上婚，或同类婚配 + 女性地位超过男性","复现了韩国全部五项事实","成立（模拟）"],
+ ["女性入学领先的水平能预测额外下降","没有信息量；拟合强度趋于零","排除"],
+ ["女性相对地位的变化能预测额外下降","安慰剂检验：31%的随机打乱拟合得一样好；逐年方向相反","不支持"],
+ ["从教育到生育存在15–20年滞后","最佳滞后为0年","排除"],
+ ["初育年龄超过29岁会把生育率锁在1.3以下","日本：初育30.7岁，生育率从1.26升到1.45（2005–2015）","排除"],
+ ["下降在国与国之间传染","加入传染后预测变差（0.430对0.390）","排除"],
+ ["约2015年以来的共同冲击","六地全部跌破路径，平均−0.46；改善预测","成立（原因未定）"],
+ ["现金补贴是主要解药","模型中现金+30%只增加0.08个孩子","排除（模拟）"],
+ ["多个模型胜过一个","八个模型相当于1.33个；单靠存活率模型最好","尚未成立"]],
+ levers:[["接受非婚生育",0.37],["现金翻倍",0.22],["地位差距减半",0.20],["男性前景 +0.5标准差",0.19],["跨国婚姻",0.14],["放宽择偶规范",0.11],["现金 +30%",0.08],["提前2年完成学业",0.05]]}};
+let LANG=(new URLSearchParams(location.search).get('lang')||'').startsWith('zh')?'zh':'en';
+try{const s=localStorage.getItem('fert-lang');if(s&&!location.search.includes('lang='))LANG=s}catch(e){}
+const EN={};document.querySelectorAll('[data-i18n]').forEach(el=>EN[el.dataset.i18n]=el.innerHTML);
+const L=k=>D[LANG][k];
+function applyLang(){document.documentElement.lang=LANG==='zh'?'zh-Hans':'en';
+ document.querySelectorAll('[data-i18n]').forEach(el=>{const k=el.dataset.i18n;el.innerHTML=LANG==='zh'&&ZH[k]?ZH[k]:EN[k]});
+ document.querySelectorAll('.lang button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.lang===LANG));
+ buildPlaces();buildGap();buildCtrl();buildPresets();buildCtrl3();buildClaims();drawLevers();runLab();runTip();}
+document.querySelectorAll('.lang button').forEach(b=>b.onclick=()=>{LANG=b.dataset.lang;try{localStorage.setItem('fert-lang',LANG)}catch(e){};applyLang()});
+
+// ---------- generic line chart
+function lineChart(el,xs,series,opt={}){const W=640,H=opt.h||300,m={l:40,r:12,t:12,b:30};
+ const all=series.flatMap(s=>s.y);const ymin=opt.ymin??0,ymax=opt.ymax??Math.ceil(Math.max(...all)*2)/2;
+ const X=i=>m.l+(W-m.l-m.r)*(xs[i]-xs[0])/(xs[xs.length-1]-xs[0]),Yp=v=>m.t+(H-m.t-m.b)*(1-(v-ymin)/(ymax-ymin));
+ let g='';const step=opt.ystep||(ymax>4?1:0.5);
+ for(let v=ymin;v<=ymax+1e-9;v+=step)g+=`<line x1="${m.l}" x2="${W-m.r}" y1="${Yp(v)}" y2="${Yp(v)}" stroke="#d4dcd0"/><text x="${m.l-6}" y="${Yp(v)+4}" font-size="11" text-anchor="end" fill="#4d625a">${(+v.toFixed(1))}</text>`;
+ const xt=opt.xticks||[];xt.forEach(x=>{const i=xs.indexOf(x);if(i<0)return;g+=`<text x="${X(i)}" y="${H-10}" font-size="11" text-anchor="middle" fill="#4d625a">${x}</text>`});
+ if(opt.band)g+=`<rect x="${X(xs.indexOf(opt.band[0]))}" width="${X(xs.indexOf(opt.band[1]))-X(xs.indexOf(opt.band[0]))}" y="${m.t}" height="${H-m.t-m.b}" fill="#f3e3cd" opacity=".6"/>`;
+ if(opt.ref!=null)g+=`<line x1="${m.l}" x2="${W-m.r}" y1="${Yp(opt.ref)}" y2="${Yp(opt.ref)}" stroke="#8a411e" stroke-dasharray="3 3"/>`;
+ series.forEach(s=>{const d=s.y.map((v,i)=>`${i?'L':'M'}${X(i).toFixed(1)},${Yp(Math.min(Math.max(v,ymin),ymax)).toFixed(1)}`).join('');g+=`<path d="${d}" fill="none" stroke="${s.c}" stroke-width="${s.w||2}" ${s.dash?`stroke-dasharray="${s.dash}"`:''}/>`});
+ if(opt.ylab)g+=`<text x="4" y="${m.t+2}" font-size="11" fill="#4d625a">${opt.ylab}</text>`;
+ el.innerHTML=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${opt.label||''}">${g}</svg>`}
+
+// ---------- section 1
+let PLACE='KOR';
+function buildPlaces(){const box=document.getElementById('placePills');box.innerHTML='';
+ Object.keys(SERIES.places).forEach(c=>{const b=document.createElement('button');b.textContent=L(c);b.setAttribute('aria-pressed',c===PLACE);b.onclick=()=>{PLACE=c;buildPlaces()};box.appendChild(b)});
+ const p=SERIES.places[PLACE];lineChart(document.getElementById('chart1'),SERIES.years,[{y:p.dev,c:'#126550',dash:'6 4'},{y:p.full,c:'#b0632f'},{y:p.obs,c:'#202d2a',w:2.6}],{xticks:[1970,1980,1990,2000,2010,2020],ymax:7,ystep:1,band:[2015,2024],ylab:L('tfr'),label:L(PLACE)})}
+function buildGap(){const ys=SERIES.years,i15=ys.indexOf(2015),i24=ys.indexOf(2024);
+ const rows=Object.entries(SERIES.places).map(([c,p])=>[c,p.obs[i15]-p.dev[i15],p.obs[i24]-p.dev[i24]]).sort((a,b)=>(a[2]-a[1])-(b[2]-b[1]));
+ const f=v=>(v>=0?'+':'−')+Math.abs(v).toFixed(2);
+ document.getElementById('gapRows').innerHTML=rows.map(r=>`<tr><th scope="row">${L(r[0])}</th><td class="num">${f(r[1])}</td><td class="num">${f(r[2])}</td><td class="num"><b>${f(r[2]-r[1])}</b></td></tr>`).join('')}
+
+// ---------- section 2: cohort model (port of unified_suite.cohort with cash and men's prospects)
+function rng(seed){let a=seed>>>0;return()=>{a|=0;a=a+0x6D2B79F5|0;let t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}}
+function cohort(P,n=3000,seed=7){const r=rng(seed);const nrm=()=>{let u=0,v=0;while(!u)u=r();v=r();return Math.sqrt(-2*Math.log(u))*Math.cos(2*Math.PI*v)};
+ const zm=new Float64Array(n),zw=new Float64Array(n),me=new Float64Array(n),we=new Float64Array(n),eff=new Float64Array(n);
+ for(let i=0;i<n;i++){zm[i]=P.menUp+nrm();zw[i]=P.gap+nrm();me[i]=21+2*(zm[i]>0.1);we[i]=20+2*(zw[i]>0.1)+1.0*(P.cost-1);
+  const k=r()<P.kin;eff[i]=P.cost*(1-0.5*k)/(1-0.5*0.6)}
+ const free=new Uint8Array(n).fill(1),mar=new Uint8Array(n),par=new Uint8Array(n);
+ for(let age=18;age<=45;age++){const elig=[];for(let i=0;i<n;i++)if(free[i]&&age>=me[i])elig.push(i);elig.sort((a,b)=>zm[a]-zm[b]);const pz=elig.map(i=>zm[i]);
+  const women=[];for(let i=0;i<n;i++)if(!mar[i]&&age>=we[i]&&r()<P.meet)women.push(i);
+  for(let i=women.length-1;i>0;i--){const j=Math.floor(r()*(i+1));[women[i],women[j]]=[women[j],women[i]]}
+  for(const w of women){const t=zw[w]-P.band;let lo=0,hi=pz.length;while(lo<hi){const md=(lo+hi)>>1;if(pz[md]<t)lo=md+1;else hi=md}
+   if(lo<pz.length){const k=lo+Math.floor(r()*(pz.length-lo));const m=elig[k];elig.splice(k,1);pz.splice(k,1);free[m]=0;mar[w]=1}}
+  const fec=age>=35?Math.max(0,Math.min(1,(45-age)/10)):1;
+  for(let i=0;i<n;i++){const p=par[i];const base=p===0?0.45:p===1?0.22:p===2?0.06:0.01;
+   let hz=base/(p===0?Math.sqrt(eff[i]):eff[i])*fec;if(p>=1)hz*=1+P.cash;
+   const u=r();if(mar[i]){if(u<hz)par[i]++}else if(age>=24&&u<hz*P.nm)par[i]++}}
+ let s=0,em=0,sm=0;for(let i=0;i<n;i++){s+=par[i];if(mar[i]){em++;sm+=par[i]}}return{cf:s/n,em:em/n,pm:em?sm/em:0}}
+const REF={gap:0,band:0.55,meet:0.25,cost:1,kin:0.6,nm:0,cash:0,menUp:0};
+const SL=[["gap",0,1.2,0.05],["band",0.3,0.9,0.05],["cost",1,2.4,0.1],["meet",0.1,0.3,0.01],["kin",0,0.6,0.05],["nm",0,0.6,0.05],["cash",0,1,0.1],["menUp",0,0.5,0.05]];
+const PRE={p90:{...REF},pK:{...REF,gap:0.8,meet:0.15,cost:1.8,kin:0.25},pKnm:{...REF,gap:0.8,meet:0.15,cost:1.8,kin:0.25,nm:0.45},pPH:{...REF,gap:0.3,cost:1.2,nm:0.58}};
+let CUR={...PRE.pK};
+function fmt(k,v){return k==='cash'?'+'+Math.round(v*100)+'%':k==='kin'||k==='nm'?Math.round(v*100)+'%':k==='cost'?'×'+v.toFixed(1):v.toFixed(2)}
+function buildCtrl(){const c=document.getElementById('ctrl');c.innerHTML='';SL.forEach(([k,a,b,s])=>{const lab=document.createElement('label');lab.innerHTML=`${L(k)} <b id="v_${k}">${fmt(k,CUR[k])}</b>`;
+ const inp=document.createElement('input');Object.assign(inp,{type:'range',min:a,max:b,step:s,value:CUR[k]});inp.id='s_'+k;
+ inp.oninput=()=>{CUR[k]=+inp.value;document.getElementById('v_'+k).textContent=fmt(k,CUR[k]);clearTimeout(window._t);window._t=setTimeout(runLab,120)};c.append(lab,inp)})}
+function buildPresets(){const box=document.getElementById('presets');box.innerHTML='';Object.keys(PRE).forEach(p=>{const b=document.createElement('button');b.textContent=L(p);
+ b.onclick=()=>{CUR={...PRE[p]};buildCtrl();runLab()};box.appendChild(b)})}
+const REFRES=cohort(REF);
+function runLab(){const R=cohort(CUR);const d=(a,b)=>(a-b>=0?'+':'−')+Math.abs(a-b).toFixed(2)+' '+L('vs');
+ document.getElementById('oCF').textContent=R.cf.toFixed(2);document.getElementById('dCF').textContent=d(R.cf,REFRES.cf);
+ document.getElementById('oEM').textContent=Math.round(R.em*100)+'%';document.getElementById('dEM').textContent=(R.em-REFRES.em>=0?'+':'−')+Math.abs(Math.round((R.em-REFRES.em)*100))+' pp';
+ document.getElementById('oPM').textContent=R.pm.toFixed(2);document.getElementById('dPM').textContent=d(R.pm,REFRES.pm);
+ document.getElementById('explain2').textContent=L('ex2')(R.cf.toFixed(2),Math.round(R.em*100)+'%',R.pm.toFixed(2));
+ const rows=SL.filter(([k])=>CUR[k]!==REF[k]).map(([k])=>[L(k),cohort({...REF,[k]:CUR[k]}).cf-REFRES.cf]);
+ bars(document.getElementById('chart2'),rows,L('alone'))}
+function bars(el,rows,title){if(!rows.length){el.innerHTML='';return}const W=640,rh=26,H=rows.length*rh+40,mid=360,sc=200/Math.max(0.45,...rows.map(r=>Math.abs(r[1])));
+ let g=`<text x="0" y="14" font-size="12" fill="#4d625a">${title}</text><line x1="${mid}" x2="${mid}" y1="22" y2="${H-6}" stroke="#a9b8ae"/>`;
+ rows.forEach((r,i)=>{const y=28+i*rh,v=r[1],w=Math.abs(v)*sc;g+=`<text x="${mid-8-(v<0?w:0)}" y="${y+14}" font-size="12" text-anchor="end" fill="#202d2a">${r[0]}</text><rect x="${v<0?mid-w:mid}" y="${y+3}" width="${w}" height="16" rx="3" fill="${v<0?'#b0632f':'#126550'}"/><text x="${v<0?mid+6:mid+w+6}" y="${y+15}" font-size="12" fill="#202d2a">${(v>=0?'+':'−')+Math.abs(v).toFixed(2)}</text>`});
+ el.innerHTML=`<svg viewBox="0 0 ${W} ${H}">${g}</svg>`}
+function drawLevers(){bars(document.getElementById('chart5'),L('levers'),'')}
+
+// ---------- section 3: tipping model (mean-field threshold, as page_suite.P2/P3)
+function ncdf(x){const t=1/(1+0.3275911*Math.abs(x)/Math.SQRT2),y=1-(((((1.061405429*t-1.453152027)*t)+1.421413741)*t-0.284496736)*t+0.254829592)*t*Math.exp(-x*x/2);return x>=0?(1+y)/2:(1-y)/2}
+let TP={w:0.6,sigma:0.1,B:0.29,shock:0.05,push:0};
+function tipRun(p,withShock){let a=0;const out=[];for(let t=0;t<80;t++){const base=p.B*Math.min(t/25,1),s=withShock&&t>=30&&t<40?p.shock:0,pp=withShock&&t>=45?p.push:0;
+ a=ncdf((base+s-pp+p.w*a-0.5)/p.sigma);out.push(2-1.1*a)}return out}
+const TS=[["w",0,0.8,0.05],["sigma",0.05,0.4,0.01],["B",0,0.6,0.01],["shock",0,0.1,0.005],["push",0,0.3,0.005]];
+function buildCtrl3(){const c=document.getElementById('ctrl3');c.innerHTML='';TS.forEach(([k,a,b,s])=>{const lab=document.createElement('label');lab.innerHTML=`${L(k)} <b id="tv_${k}">${TP[k].toFixed(k==='w'||k==='B'||k==='sigma'?2:3)}</b>`;
+ const inp=document.createElement('input');Object.assign(inp,{type:'range',min:a,max:b,step:s,value:TP[k]});inp.oninput=()=>{TP[k]=+inp.value;document.getElementById('tv_'+k).textContent=TP[k].toFixed(k==='w'||k==='B'||k==='sigma'?2:3);runTip()};c.append(lab,inp)})}
+function runTip(){const a=tipRun(TP,false),b=tipRun(TP,true),xs=[...Array(80).keys()];
+ lineChart(document.getElementById('chart3'),xs,[{y:a,c:'#126550',dash:'6 4'},{y:b,c:'#b0632f',w:2.6}],{ymin:0.8,ymax:2.1,ystep:0.2,xticks:[0,10,20,30,40,50,60,70],band:[30,39],ylab:L('tfr')});
+ const trap=a[79]-b[79]>0.3,st=document.getElementById('tipStatus');st.textContent=trap?L('trapped'):L('recov');st.className='status '+(trap?'bad':'ok');
+ document.getElementById('tipText').textContent=L('tiptext')(b[29].toFixed(2),b[79].toFixed(2),a[79].toFixed(2))}
+
+// ---------- section 4
+function buildClaims(){const good=['Held','Held (simulated)','Held (cause open)','成立','成立（模拟）','成立（原因未定）'],mid=['Partly','部分成立','Not yet','尚未成立'];
+ document.getElementById('claims').innerHTML=L('claims').map(([c,r,v])=>`<tr><td>${c}</td><td>${r}</td><td><span class="tag ${good.includes(v)?'':mid.includes(v)?'sim':'no'}">${v}</span></td></tr>`).join('')}
+applyLang();
+</script>
+<script>(function(){var go=function(fallback){return function(e){if(document.referrer&&new URL(document.referrer).origin===location.origin&&history.length>1){e.preventDefault();history.back();}else{e.preventDefault();location.href=fallback;}};};document.querySelectorAll('[data-atlas-back]').forEach(function(a){a.addEventListener('click',go(a.getAttribute('href')));});})();</script></body>
+</html>

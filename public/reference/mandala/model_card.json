@@ -1,0 +1,363 @@
+{
+ "name": "Angkor Mandala Lab",
+ "version": "0.1",
+ "status": "experimental/uncalibrated",
+ "engine": "worlds/angkor/reference/mandala_lab_v0.1/angkor.py (unchanged; SHA-256 in worlds/angkor/reference_sha256.txt)",
+ "scale": {
+  "space": "18 x 12 synthetic patches (216 community agents), not spatially registered",
+  "agents": "216 community patches (groups of households, population in thousands) and 5 court agents",
+  "time": "10-year ticks, 750-1500 CE (76 ticks)"
+ },
+ "claim_limits": [
+  "Uncalibrated toy: outputs are implications of declared mechanisms, not estimates of Angkorian history.",
+  "No coefficient is fitted to any publication; the cited papers define benchmarks, not parameters.",
+  "Not modelled: warfare (the defense lever is inert), dynastic succession, temple estates, enslaved or corvee labour, fisheries, foreign polities, real GIS.",
+  "Decline-event frequencies are frequencies across simulated worlds under fixed assumptions, not probabilities of historical events."
+ ],
+ "theory_sources": [
+  "Scott: legible surplus and exit",
+  "Tilly: coercion, capital and mobilisation",
+  "Wolters / Southeast Asian mandala: allegiance to overlapping centres",
+  "Menefee: Rice Domus and Networked Domus (worlds/angkor/context/)"
+ ],
+ "mechanisms": [
+  {
+   "id": "M1",
+   "statement": "Communities pledge each decade to the court with the best score: log prestige minus transport cost (scaled by local autonomy) plus fertility plus noise.",
+   "code": "MandalaWorld.allegiance",
+   "switch": "local_autonomy",
+   "ablation": "no_patronage (local_autonomy = 1)",
+   "evidence_class": "interpretation",
+   "note": "Mandala model of overlapping, shifting allegiance."
+  },
+  {
+   "id": "M2",
+   "statement": "Movement by water costs half as much as overland (boat discount on Euclidean distance).",
+   "code": "MandalaWorld.transport_costs",
+   "switch": null,
+   "ablation": null,
+   "evidence_class": "speculative mechanism",
+   "note": "Not a least-cost network; no seasonality."
+  },
+  {
+   "id": "M3",
+   "statement": "Engineered water raises output and productive capacity; extreme wet years damage it; maintenance spending repairs it.",
+   "code": "MandalaWorld.tick",
+   "switch": "water_dependency, maintenance, irrigation",
+   "ablation": "no_water removes BOTH the gain and the damage (compound ablation)",
+   "evidence_class": "rival interpretation",
+   "note": "Penny et al. 2018 (climate-driven cascading failure) vs Penny et al. 2019 (decline first, infrastructure neglected after)."
+  },
+  {
+   "id": "M4",
+   "statement": "Tax reach falls with distance to the pledged court: exp(-cost/8), reduced by local autonomy.",
+   "code": "MandalaWorld.tick",
+   "switch": "tax, local_autonomy",
+   "ablation": null,
+   "evidence_class": "speculative mechanism",
+   "note": "Scott/Tilly-style legibility and reach."
+  },
+  {
+   "id": "M5",
+   "statement": "Court prestige follows resources: sqrt of aligned population and of revenue, with persistence 0.85.",
+   "code": "MandalaWorld.tick",
+   "switch": null,
+   "ablation": null,
+   "evidence_class": "speculative mechanism",
+   "note": "Ritual, dynastic and military sources of prestige are not represented."
+  },
+  {
+   "id": "M6",
+   "statement": "Maritime trade opportunity rises on a logistic curve centred on 1200 CE.",
+   "code": "MandalaWorld.tick (maritime_pressure)",
+   "switch": "sea_trade_shift, trade_open",
+   "ablation": "no_sea_shift",
+   "evidence_class": "illustrative assumption",
+   "note": "CALENDAR-ANCHORED exogenous forcing (centre 1200, scale 85 years). Not a scripted collapse, but a dated input."
+  },
+  {
+   "id": "M7",
+   "statement": "Rainfall = deterministic cycle sin((year-710)/31) (period about 195 years) + stochastic shocks + occasional extremes.",
+   "code": "MandalaWorld.tick (rain)",
+   "switch": "shock_intensity",
+   "ablation": null,
+   "evidence_class": "illustrative assumption",
+   "note": "CALENDAR-ANCHORED climate cycle; uncalibrated. The random stream depends on shock_intensity (draws are conditional), so high_shock does not share realised weather with reference."
+  },
+  {
+   "id": "M8",
+   "statement": "Population grows toward a carrying capacity set by fertility, managed water and soil; drought and stress raise mortality.",
+   "code": "MandalaWorld.tick",
+   "switch": null,
+   "ablation": null,
+   "evidence_class": "illustrative assumption",
+   "note": ""
+  },
+  {
+   "id": "M9",
+   "statement": "Communities move up to 4% of population per decade to the richest neighbouring patch (exit).",
+   "code": "MandalaWorld.tick (migration loop)",
+   "switch": null,
+   "ablation": null,
+   "evidence_class": "speculative mechanism",
+   "note": "Scott: exit; no movement off the board."
+  },
+  {
+   "id": "M10",
+   "statement": "Soil is exhausted by irrigation under stress and restored by community labour (local autonomy).",
+   "code": "MandalaWorld.tick",
+   "switch": "local_autonomy",
+   "ablation": null,
+   "evidence_class": "illustrative assumption",
+   "note": ""
+  },
+  {
+   "id": "INERT",
+   "statement": "The defense lever and court treasuries are computed but affect nothing else.",
+   "code": "Policy.defense; MandalaWorld.treasury",
+   "switch": "defense",
+   "ablation": null,
+   "evidence_class": "illustrative assumption",
+   "note": "Audit finding: present in outputs, absent from causation."
+  }
+ ],
+ "struts": [
+  {
+   "id": "S01",
+   "statement": "A grid cell represents a community of households; populations are in thousands.",
+   "provenance": "illustrative assumption (engine STRUTS)"
+  },
+  {
+   "id": "S02",
+   "statement": "Fertility, waterway route and polity locations are stylized, not a GIS reconstruction.",
+   "provenance": "illustrative assumption (engine STRUTS)"
+  },
+  {
+   "id": "S03",
+   "statement": "Output, tax, maintenance and migration coefficients are illustrative, unfitted.",
+   "provenance": "illustrative assumption (engine STRUTS)"
+  },
+  {
+   "id": "S04",
+   "statement": "A maritime-market trend is an external opportunity, not an algorithmic decline trigger.",
+   "provenance": "illustrative assumption (engine STRUTS)"
+  },
+  {
+   "id": "S05",
+   "statement": "One decade per tick; rain shocks are stochastic; temperature/rain proxies uncalibrated.",
+   "provenance": "illustrative assumption (engine STRUTS)"
+  },
+  {
+   "id": "S06",
+   "statement": "Allegiance is recomputed from prestige, distance and coercive capacity, not dynastic events.",
+   "provenance": "illustrative assumption (engine STRUTS)"
+  },
+  {
+   "id": "S07",
+   "statement": "State courts are candidate sites: Angkor, West, East, South, Highlands.",
+   "provenance": "illustrative assumption (engine STRUTS)"
+  },
+  {
+   "id": "S08",
+   "statement": "Court institutions/rituals are reduced to prestige; military rivalry to contestation.",
+   "provenance": "illustrative assumption (engine STRUTS)"
+  },
+  {
+   "id": "S09",
+   "statement": "Agricultural land has an illustrative carrying capacity and depends on maintenance.",
+   "provenance": "illustrative assumption (engine STRUTS)"
+  },
+  {
+   "id": "S10",
+   "statement": "Trade at boundary is exogenous; no explicit Champa, Dai Viet, or Chinese agents.",
+   "provenance": "illustrative assumption (engine STRUTS)"
+  },
+  {
+   "id": "P-court-prestige",
+   "statement": "Initial prestige: Angkor 1.09, West 0.79, East 0.77, South port 0.68, Upland 0.60.",
+   "value": [
+    1.09,
+    0.79,
+    0.77,
+    0.68,
+    0.6
+   ],
+   "bounds": null,
+   "provenance": "illustrative assumption"
+  },
+  {
+   "id": "P-court-sites",
+   "statement": "Court sites on the grid: Angkor (8,6), West (3,7), East (15,6), South port (12,10), Upland (8,2).",
+   "value": [
+    [
+     8,
+     6
+    ],
+    [
+     3,
+     7
+    ],
+    [
+     15,
+     6
+    ],
+    [
+     12,
+     10
+    ],
+    [
+     8,
+     2
+    ]
+   ],
+   "bounds": null,
+   "provenance": "illustrative assumption; not registered to real geography"
+  }
+ ],
+ "interventions": {
+  "tax": {
+   "default": 0.17,
+   "bounds": [
+    0,
+    0.5
+   ],
+   "live": true
+  },
+  "irrigation": {
+   "default": 0.45,
+   "bounds": [
+    0,
+    1
+   ],
+   "live": true
+  },
+  "maintenance": {
+   "default": 0.3,
+   "bounds": [
+    0,
+    1
+   ],
+   "live": true
+  },
+  "defense": {
+   "default": 0.15,
+   "bounds": [
+    0,
+    1
+   ],
+   "live": false,
+   "note": "inert"
+  },
+  "trade_open": {
+   "default": 0.65,
+   "bounds": [
+    0,
+    1
+   ],
+   "live": true
+  },
+  "local_autonomy": {
+   "default": 0.3,
+   "bounds": [
+    0,
+    1
+   ],
+   "live": true
+  },
+  "shock_intensity": {
+   "default": 1.0,
+   "bounds": [
+    0,
+    3
+   ],
+   "live": true
+  },
+  "sea_trade_shift": {
+   "default": 1.0,
+   "bounds": [
+    0,
+    1
+   ],
+   "live": true
+  },
+  "water_dependency": {
+   "default": 1.0,
+   "bounds": [
+    0,
+    1
+   ],
+   "live": true
+  },
+  "_note": "Bounds are proposed ranges for experiments, not evidence-based. Interventions are landscape-wide regimes: courts do not choose them (audit finding)."
+ },
+ "observables": [
+  "population_k",
+  "angkor_k",
+  "angkor_share",
+  "strongest",
+  "court_shares",
+  "mean_irrigation",
+  "mean_condition",
+  "population_weighted_trade",
+  "external_trade_index",
+  "rain",
+  "harvest_index",
+  "state_revenue_index",
+  "polity_treasuries"
+ ],
+ "benchmarks": [
+  {
+   "id": "B1",
+   "name": "Angkor is the leading centre c. 1200",
+   "evidence_class": "established fact",
+   "role": "calibration",
+   "observable": "strongest court by aligned population in 1200 == Angkor",
+   "pass_share": 0.5,
+   "source": "General historiography: Angkor as capital of the Khmer polity from the late 9th century; height under Jayavarman VII (r. c. 1181-1218). E.g. Higham, The Civilization of Angkor (2001).",
+   "note": "The model mapping (leading in aligned population on a synthetic board) is itself an interpretive choice."
+  },
+  {
+   "id": "B2",
+   "name": "Peak population of Greater Angkor about 700,000-900,000",
+   "evidence_class": "published estimate",
+   "role": "diagnostic",
+   "observable": "peak total population (thousands) within 700-900",
+   "target": [
+    700,
+    900
+   ],
+   "source": "Klassen et al. 2021, Science Advances, \"Diachronic modeling of the population within the medieval Greater Angkor Region settlement complex\": approximately 700,000 to 900,000 inhabitants at its apogee in the 13th century CE. https://scholarsbank.uoregon.edu/items/4531bb7d-727f-4115-a844-1c320edbeea7/full",
+   "note": "Diagnostic only: the synthetic board has no spatial registration, so its total is not the Greater Angkor Region. Becomes a test after spatial registration (plan step 1)."
+  },
+  {
+   "id": "B3",
+   "name": "Apogee in the 13th century",
+   "evidence_class": "published estimate",
+   "role": "holdout",
+   "observable": "year of peak Angkor-aligned population in 1200-1299",
+   "pass_share": 0.5,
+   "source": "Klassen et al. 2021 (as B2).",
+   "note": "Never used to set parameters."
+  },
+  {
+   "id": "B4",
+   "name": "Gradual decline from the early 1300s, not abrupt collapse",
+   "evidence_class": "interpretation",
+   "role": "holdout",
+   "observable": "Angkor-aligned population lower in 1450 than in 1300, and no decade-to-decade fall above 15% in 1300-1450",
+   "pass_share": 0.5,
+   "source": "Penny et al. 2019, PNAS: land use in the urban core declined from the early 1300s; the Angkor Thom moat was unmaintained by the late 14th century; gradual decline rather than collapse in 1431. https://sciencedaily.com/releases/2019/02/190225192144.htm",
+   "note": "Rival reading to B5 on what came first."
+  },
+  {
+   "id": "B5",
+   "name": "Water network degrades after a mid-14th-century drought-to-wet shift",
+   "evidence_class": "rival interpretation",
+   "role": "holdout",
+   "observable": "mean water condition in 1350-1450 below its 1200-1300 mean",
+   "pass_share": 0.5,
+   "source": "Penny et al. 2018, Science Advances: cascading failure of an overloaded canal network under a mid-14th-century shift from prolonged drought to very wet years. https://sciencedaily.com/releases/2018/10/181018095435.htm",
+   "note": "Passing B5 shows the model can produce degradation, not that the climate story is right; B4 vs B5 is the ordering question."
+  }
+ ]
+}

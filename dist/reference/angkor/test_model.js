@@ -1,0 +1,14 @@
+const assert=require('node:assert/strict');
+const M=require('./model.js');
+const a=M.simulate({...M.DEFAULTS,start:1200,end:1220,seed:71});
+const b=M.simulate({...M.DEFAULTS,start:1200,end:1220,seed:71});
+assert.deepEqual(a.final,b.final,'seed determinism');
+assert.equal(a.snapshots.at(-1).cells.length,140,'140 spatial units');
+assert(a.final.pop>0 && Number.isFinite(a.final.surplus),'finite outputs');
+const ensemble=M.mc({...M.DEFAULTS,start:1200,end:1230},{n:4,seed:8,treatment:{raidIntensity:.9}});
+assert.equal(ensemble.rows.length,4,'paired Monte Carlo');
+const sweep=M.sweep({...M.DEFAULTS,start:1200,end:1230},{n:25,seed:9});
+assert.equal(sweep.rows.length,25,'regression sweep');
+const regression=M.regress(sweep.rows,'pop',sweep.keys);
+assert(!regression.error&&Number.isFinite(regression.r2),'OLS regression');
+console.log('PASS: seeded reproducibility, spatial geography, finite outputs, paired MC, parameter sweep, regression');

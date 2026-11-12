@@ -1,0 +1,7 @@
+maintenance_factor 0.2 drought median state 7945 shortfall 5729392
+maintenance_factor 0.35 drought median state 8322 shortfall 5468602
+maintenance_factor 0.6 drought median state 8909 shortfall 5078511
+maintenance_factor 1.0 drought median state 9829 shortfall 4409864
+military_share 0.04 drought median state 7999 shortfall 5687414
+military_share 0.08 drought median state 8322 shortfall 5468602
+military_share 0.16 drought median state 9019 shortfall 5005901

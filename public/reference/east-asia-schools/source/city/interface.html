@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>School Networks · Hong Kong and Guangzhou</title>
+<style>/*STYLE*/</style>
+</head><body>
+<header class="mast"><div class="shell brand"><span>ATLAS OF EDUCATION</span><span>SCHOOL NETWORKS · 2026</span></div></header>
+<main class="shell">
+<section class="intro"><div class="kicker">DEMOGRAPHY AND EDUCATION PLANNING</div><h1>Which schools, how many teachers?</h1>
+<p>Follow enrollment, school counts and staffing through the next several school years. Compare published plans and evidence with outcomes that depend on policy.</p></section>
+<nav aria-label="City" class="tabs">
+<button type="button" data-city="hk" aria-pressed="true">Hong Kong <small>to 2050/51</small></button>
+<button type="button" data-city="gz" aria-pressed="false">Guangzhou <small>to 2050/51</small></button>
+</nav>
+<div class="layout">
+<aside class="panel"><div class="kicker">SCENARIO ASSUMPTIONS</div><h2>Change the inputs</h2>
+<div id="hkControls">
+<label for="savedSites">Sites protected per stage <output id="savedValue"></output></label><input id="savedSites" type="range" min="0" max="30" step="1" value="5">
+<p class="note">Applies to selective retention and preserves dated closures already in the reference.</p>
+<label for="exitScale">Teacher departures vs. 2025/26 <output id="exitValue"></output></label><input id="exitScale" type="range" min="35" max="150" step="5" value="100">
+<label for="births">Births index (observed 2025 = 100) <output id="birthsValue"></output></label><input id="births" type="range" min="65" max="145" step="1" value="100">
+<label for="birthGrowth">Annual change in future births <output id="birthGrowthValue"></output></label><input id="birthGrowth" type="range" min="-4" max="3" step="0.5" value="0">
+<p class="note">100 means 31,100 annual births, the observed 2025 level—not a TFR. The selected level compounds at the annual change below. P1 and S1 population anchors remain on EDB’s published path through 2035.</p>
+<label for="demandShift">Entry demand shift <output id="demandValue"></output></label><input id="demandShift" type="range" min="-15" max="15" step="1" value="0">
+</div>
+<div id="gzControls" hidden>
+<label for="kgGrowth">Initial preschool growth <output id="kgValue"></output></label><input id="kgGrowth" type="range" min="-12" max="5" step="0.5" value="-6.5">
+<label for="longKgGrowth">Long-run preschool growth <output id="longKgValue"></output></label><input id="longKgGrowth" type="range" min="-4" max="3" step="0.5" value="0">
+<label for="primaryDemand">Primary intake demand shift <output id="primaryValue"></output></label><input id="primaryDemand" type="range" min="-15" max="15" step="1" value="0">
+<p class="note">Preschool growth moves toward the long-run rate between 2032 and 2036. Intake demand can move separately as families migrate or participation changes.</p></div>
+<p class="note" id="controlNote"></p>
+<button type="button" id="reset" class="secondary">Reset assumptions</button>
+</aside>
+<div class="stack">
+<section class="panel"><div class="top"><div><div class="kicker">COMPARE THE PATHS</div><h2 id="projectionTitle">The next school years</h2></div><div><button type="button" id="play" class="secondary">Replay run</button> <button type="button" id="download" class="secondary">Scenario CSV ↓</button></div></div>
+<div class="controls"><label for="stage">Stage</label><select id="stage"></select><label for="metric">Metric</label><select id="metric"></select><label for="year">Year</label><select id="year"></select></div>
+<p class="note" id="forecastScope"></p><p class="note" id="playbackStatus" aria-live="off"></p><div id="chart"></div><div id="legend" class="legend"></div>
+<div class="tablewrap"><table id="comparison"></table></div>
+</section>
+<section class="panel"><div class="kicker">BACKTEST</div><h2>What held up against history?</h2><p id="testDescription" class="note"></p><div class="tablewrap"><table id="tests"></table></div></section>
+</div></div>
+<section class="panel wide" id="hkEvidence"><div class="kicker">PUBLISHED HONG KONG PLANS</div><h2>What has been announced</h2>
+<p>Primary P1 class approvals in the matched public profiles fell from <b>1,564 to 1,438</b>. The 15 newly zero-intake profiles correspond to eight merger approvals in principle, two private P1 permissions, four wind-downs and one exemption. Only the explicitly dated subset anchors net school counts. An approved merger can operate over more than one campus during the transition.</p>
+<details open><summary>Reported school plans</summary><div class="tablewrap"><table id="schoolPlans"></table></div></details>
+<details><summary>Primary approvals and demand by district</summary>
+<p class="note">Profile counts are by school location. Demand is modeled. The official district population projections end in 2031, so modeled intake shares remain fixed after 2031.</p>
+<div class="tablewrap"><table id="districts"></table></div></details>
+<p class="note">EDB’s October reply describes proposed merger support under the School Excellence Project. It also reports two Northern Metropolis primary premises allocated for reprovisioning. Those moves are not counted as net new schools. EDB allows up to three years of incumbent teacher retention for eligible primary mergers. The scale of that protection is unknown, so the model reports aggregate employment and separates normal departures from forced cuts.</p>
+<div class="sources"><a href="https://news.rthk.hk/rthk/ch/component/k2/1856145-20260526.htm">RTHK’s report of EDB’s school plans</a> · <a href="https://www.info.gov.hk/gia/general/202610/14/P2026101400523p.htm">EDB merger policy reply</a> · <a href="https://www.info.gov.hk/gia/general/202610/28/P2026102800477p.htm">EDB school-site reply</a></div>
+</section>
+<section class="panel wide" id="gzEvidence" hidden><div class="kicker">PUBLISHED GUANGZHOU PLANS</div><h2>Guangzhou is adding places</h2>
+<p>Guangzhou’s 2026 work plan calls for <b>50,000 additional public basic-education places</b>, including 15,000 general senior-high places, and at least 10,000 additional general senior-high admissions. These are stated capacity and intake plans. They do not specify a net count of school operations or teachers, so the model shows them alongside the scenarios.</p>
+<p>A 2025 article by Guangzhou’s education chief inspector projected peak enrollment in 2026 for primary, 2031 for junior secondary, and 2034 for senior high. The model’s default peak years agree. The article gives a timing benchmark. Enrollment and capacity after the peaks depend on the scenario assumptions.</p>
+<p>The model uses Guangzhou’s 2020–2025 education bulletins. The primary-to-junior transition follows local cohorts. The citywide series cannot identify individual schools, staffing departures, or the geography of new public capacity. School counts and full-time teacher requirements are model sensitivities.</p>
+<div class="sources" id="gzSources"></div></section>
+<section class="panel wide"><div class="kicker">METHOD</div><h2>What the numbers mean</h2>
+<p id="methods"></p>
+<div id="hkSources" class="sources"><a href="https://www.edb.gov.hk/en/about-edb/publications-stat/figures/index.html">EDB enrollment and staffing</a> · <a href="https://www.edb.gov.hk/attachment/en/about-edb/press/legco/replies-to-fc/edb-e-2627.pdf">EDB population projections</a> · <a href="https://www.chsc.hk/datagovhk/psp_2026_en.csv">2026 school profiles</a> · <a href="https://applications.edb.gov.hk/circular/upload/EDBC/EDBC25006E.pdf">Secondary class rules</a> · <a href="https://www.legco.gov.hk/yr2025/english/panels/ed/papers/ed20250502cb3-601-2-e.pdf">Staffing rules</a></div>
+</section>
+</main>
+<script type="application/json" id="input">/*DATA*/</script>
+<script>/*COHORT*/</script><script>/*HK*/</script><script>/*GZ*/</script><script>/*UI*/</script>
+<script>
+if (window.parent !== window) {
+  const reportHeight = () => window.parent.postMessage({
+    type: 'atlas-school-frame-height',
+    height: Math.max(document.body.scrollHeight, document.body.offsetHeight)
+  }, '*');
+  if (typeof ResizeObserver !== 'undefined') new ResizeObserver(reportHeight).observe(document.body);
+  if (typeof MutationObserver !== 'undefined') new MutationObserver(reportHeight).observe(document.body, {childList:true,subtree:true,attributes:true});
+  window.addEventListener('message', event => { if (event.data?.type === 'atlas-school-frame-request-height') reportHeight(); });
+  window.addEventListener('load', reportHeight);
+  reportHeight();
+  document.addEventListener('click', event => {
+    const link = event.target.closest?.('a[href]');
+    if (!link) return;
+    if (link.getAttribute('href') === 'city-networks.html') {
+      event.preventDefault();
+      window.parent.postMessage({type: 'atlas-school-frame-route', route: 'city-networks'}, '*');
+    } else if (link.protocol === 'https:' || link.protocol === 'http:') {
+      link.target = '_blank';
+      link.rel = 'noopener noreferrer';
+    }
+  });
+}
+</script><script>/*LOCALIZE*/</script></body></html>

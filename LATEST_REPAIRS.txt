@@ -1,0 +1,2 @@
+Education-first Atlas of Education React app: 22 models (3 education and employment, 6 Planning Lab tools, 13 Angkor case-study models), all 13 Cambodia policy levers with seed-averaged ranges, four languages, source, production build, tests and experiments. See CHANGES.md.
+Development: npm install, then npm run dev. Build: npm run build. Serve dist over HTTP. Browser workers require an HTTP server; opening index.html directly in iOS Files is insufficient.

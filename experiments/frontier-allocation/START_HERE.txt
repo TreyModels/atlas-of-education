@@ -1,0 +1,6 @@
+FRONTIER AND LABOUR ALLOCATION EXPERIMENT
+
+Save this ZIP to iOS Files and tap to extract. Read RESULTS.md.
+results.csv contains all 16,384 histories. summary.json contains grouped results.
+engine.js is the separate experiment. Reproduce on a computer: node run.cjs
+All quantities and institutional rules remain illustrative.

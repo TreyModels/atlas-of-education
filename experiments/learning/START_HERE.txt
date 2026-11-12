@@ -1,0 +1,6 @@
+ADMINISTRATIVE LEARNING TEST
+
+Save this ZIP to iOS Files and tap to extract. Read RESULTS.md for findings.
+results.csv holds all 5,184 histories. summary.json holds group and paired results.
+To reproduce on a computer with Node, run: node run.cjs
+This is a separate offline experiment. It does not change the website models.

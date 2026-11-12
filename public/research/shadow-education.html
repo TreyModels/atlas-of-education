@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shadow education lab · Atlas Worlds</title>
+<link rel="stylesheet" href="../styles.css">
+<style>
+:root{--paper:#f4f2e9;--panel:#fffdf7;--ink:#202d2a;--muted:#4d625a;--line:#d4dcd0;--green:#126550;--shade:#e1eee4;--ochre:#8a411e;--serif:Georgia,'Times New Roman',serif;--sans:system-ui,sans-serif}
+body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.55 var(--sans)}
+.frame{width:min(1160px,calc(100% - 1.4rem));margin:auto}
+.mast{background:#1f3530;color:#fffdf5}.mast a{color:inherit}
+.mast-row{display:flex;align-items:center;justify-content:space-between;min-height:58px;gap:1rem}
+.brand{font:700 1.3rem var(--serif);text-decoration:none}
+.lang{display:flex;gap:.3rem}.lang button{background:transparent;color:#fffdf5;border:1px solid #6f8a80;border-radius:20px;padding:.2rem .65rem;font-size:.8rem;cursor:pointer}
+.lang button[aria-pressed=true]{background:#fffdf5;color:#1f3530}
+.catalog{padding:1.6rem 0 2rem}
+.eyebrow{font-size:.72rem;letter-spacing:.12em;font-weight:750;color:var(--green);margin:0 0 .38rem}
+h1,h2{font-family:var(--serif);font-weight:500;line-height:1.08;margin:0}
+h1{font-size:clamp(2.1rem,6vw,3.6rem);letter-spacing:-.04em}
+h2{font-size:clamp(1.5rem,3.6vw,2.2rem);letter-spacing:-.03em;margin-bottom:.5rem}
+h3{font-size:1rem;margin:0 0 .3rem}
+.lead{max-width:72ch;color:var(--muted);font-size:1.05rem}
+.evidence{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:1rem 1.1rem;margin-top:1rem}
+.acts{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(240px,100%),1fr));gap:.8rem;margin-top:.6rem}
+.acts article{border-top:3px solid var(--green);padding:.5rem .1rem}
+.acts article.sim{border-color:#c9a27e}
+.acts p{margin:.3rem 0;font-size:.92rem}
+.tag{display:inline-block;font-size:.68rem;font-weight:750;letter-spacing:.06em;padding:.12rem .45rem;border-radius:4px;background:var(--shade);color:#17503f}
+.tag.sim{background:#f3e3cd;color:#70370f}.tag.no{background:#f2dcd6;color:#7a2a1a}
+.pills{display:flex;flex-wrap:wrap;gap:.4rem;margin:.4rem 0 .6rem}
+.pills button{padding:.32rem .75rem;border:1px solid var(--line);border-radius:30px;background:var(--panel);cursor:pointer;font-size:.85rem;color:var(--ink)}
+.pills button[aria-pressed=true]{background:var(--green);color:#fff;border-color:var(--green)}
+.lab{display:grid;grid-template-columns:minmax(230px,1fr) minmax(0,1.7fr);gap:1rem;align-items:start}
+@media(max-width:760px){.lab{grid-template-columns:1fr}}
+.ctrl label{display:block;font-size:.84rem;margin:.55rem 0 .1rem}
+.ctrl label b{float:right;font-variant-numeric:tabular-nums;color:var(--green)}
+.ctrl input[type=range]{width:100%;accent-color:var(--green)}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:.5rem;margin-bottom:.6rem}
+.stat{background:var(--shade);border-radius:8px;padding:.5rem .6rem}
+.stat span{display:block;font-size:.72rem;color:var(--muted)}
+.stat strong{font:600 1.5rem var(--serif);font-variant-numeric:tabular-nums}
+.stat em{font-style:normal;font-size:.78rem;color:var(--muted)}
+svg{width:100%;height:auto;display:block}
+.legend{display:flex;flex-wrap:wrap;gap:.9rem;font-size:.8rem;color:var(--muted);margin-top:.3rem}
+.legend i{display:inline-block;width:18px;height:3px;vertical-align:middle;margin-right:.3rem}
+.table-scroll{overflow:auto}
+table{border-collapse:collapse;width:100%;font-size:.88rem}
+th,td{text-align:left;padding:.42rem .5rem;border-bottom:1px solid var(--line);vertical-align:top}
+thead th{font-size:.76rem;color:var(--muted);font-weight:650}
+td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+.verdict{font-weight:650}
+.note{font-size:.82rem;color:var(--muted)}
+.source-links{display:flex;flex-wrap:wrap;gap:.45rem 1.1rem;margin-top:.7rem;font-size:.85rem}
+.status{font-weight:700;padding:.2rem .55rem;border-radius:4px;font-size:.82rem}
+.status.ok{background:var(--shade);color:#17503f}.status.bad{background:#f2dcd6;color:#7a2a1a}
+a{color:var(--green);text-underline-offset:3px}
+.bars text{font-family:system-ui,sans-serif}</style>
+</head>
+<body>
+<header class="mast"><div class="frame mast-row"><a class="atlas-back" href="../index.html" data-atlas-back>&larr; Atlas</a><a class="brand" href="../index.html">Atlas Worlds</a>
+<div class="lang"><button data-lang="en" aria-pressed="true">EN</button><button data-lang="zh" aria-pressed="false">中文</button><a href="index.html" data-i18n="nav_lib" style="font-size:.82rem;margin-left:.6rem">Research library ↗</a></div></div></header>
+<main class="frame catalog">
+<p class="eyebrow" data-i18n="eyebrow">EDUCATION &amp; WORK · SHADOW EDUCATION · CAMBODIA · EXPLORATORY</p>
+<h1 data-i18n="h1">Why do pupils pay their own teachers?</h1>
+<p class="lead" data-i18n="lead">In Cambodia, about four in five secondary pupils buy private tutoring, and most of it comes from their own teachers. An agent-based model of 72 teachers and 1,260 pupils tests three rival explanations against seven published patterns. All three fit about equally well, so the data cannot tell them apart. But all three agree on what policies would do, and that agreement is the useful result.</p>
+
+<section class="evidence"><h2 data-i18n="r_h">Three rival explanations</h2>
+<div class="acts">
+<article><span class="tag" data-i18n="r1t">THIN TIMETABLE</span><h3 data-i18n="r1h">The school day is too short</h3><p data-i18n="r1p">The curriculum does not fit the official hours, so pupils buy the rest. Teachers gain nothing by holding content back.</p></article>
+<article class="sim"><span class="tag sim" data-i18n="r2t">DIVERSION</span><h3 data-i18n="r2h">Teachers hold content back</h3><p data-i18n="r2p">Teachers withhold parts of the regular lesson that they then cover only in paid sessions.</p></article>
+<article class="sim"><span class="tag sim" data-i18n="r3t">FAVOUR</span><h3 data-i18n="r3h">Buying buys goodwill</h3><p data-i18n="r3p">Paying your own teacher brings a benefit of its own: better grades or a better relationship.</p></article>
+</div></section>
+
+<section class="evidence"><h2 data-i18n="f_h">Fit to the seven published patterns</h2>
+<p class="note" data-i18n="f_n">Targets from Bray et al. (2016, 2018). Model values are posterior medians after ABC-SMC calibration. The fresh-world row re-runs 40 calibrated settings in five new random school systems.</p>
+<div class="table-scroll"><table><thead><tr><th data-i18n="f_c0">Pattern</th><th data-i18n="f_c1">Observed</th><th data-i18n="f_c2">Thin timetable</th><th data-i18n="f_c3">Diversion</th><th data-i18n="f_c4">Favour</th></tr></thead><tbody id="fitRows"></tbody></table></div>
+<p class="note" data-i18n="f_after">Even under the diversion explanation, calibrated teachers withhold almost nothing (median 0%). The evidence ratios are too sparse to rank the explanations, and only 11–18% of calibrated settings still fit in new random worlds.</p></section>
+
+<section class="evidence"><h2 data-i18n="p_h">Policy explorer</h2>
+<p class="note" data-i18n="p_n">Effect of each policy against the same calibrated worlds with the same random seeds. Bars show the median; whiskers show the 5th–95th percentile across calibrated settings. Percentage points.</p>
+<div class="pills" id="polPills"></div><div class="pills" id="varPills"></div>
+<div id="polChart"></div><p class="note" id="polText"></p></section>
+
+<section class="evidence"><h2 data-i18n="d_h">Who leaves school? The credential-floor test</h2>
+<p data-i18n="d_p">A separate Atlas model offers three explanations for who leaves secondary school, and each predicts a different share of leavers from the poorest 40% of households. The Cambodia DHS 2021–22 (Table 2.12) puts it at 47–58%.</p>
+<div class="table-scroll"><table><thead><tr><th data-i18n="d_c0">Structure</th><th data-i18n="d_c1">Predicted share from poorest 40% (median, 5–95%)</th><th data-i18n="d_c2">Verdict against 47–58%</th></tr></thead><tbody id="dhsRows"></tbody></table></div>
+<p class="note" data-i18n="d_n">The published table counts all secondary-age children not in secondary school, ages 12–18, not exits from lower secondary. A matched test needs the DHS microdata.</p></section>
+
+<section class="evidence"><h2 data-i18n="c_h">What held up and what was ruled out</h2>
+<div class="table-scroll"><table><thead><tr><th data-i18n="c_claim">Claim</th><th data-i18n="c_res">Result</th><th data-i18n="c_ver">Verdict</th></tr></thead><tbody id="claims"></tbody></table></div></section>
+
+<section class="evidence"><h2 data-i18n="m_h">Methods, limits and downloads</h2>
+<p data-i18n="m_p1">Six Siem Reap–style schools, Grades 9 and 12, four subjects. Each teacher chooses whether to tutor, how much to withhold, or to take a side job. Each pupil chooses, subject by subject, between their own teacher, the parallel-class teacher, a commercial provider or no one. Calibrated to participation (81.9%; 74.7% in Grade 9, 89.8% in Grade 12), the urban–rural gap, own-teacher (57.7%) and other-teacher (40.9%) shares, about half of teachers tutoring, and a small commercial share.</p>
+<p data-i18n="m_p2">Limits: the favour calibration ended with a low effective sample size; ABC model choice is fragile; policy effects are model-conditional, not evidence of real-world effects. “Coverage” is the model's share of curriculum received, not measured learning. Tutoring is not yet linked to household work or dropout.</p>
+<p class="source-links"><a href="shadow/tutoring_abm.zip" download data-i18n="dl1">Tutoring ABM: code, calibration, results · ZIP ↓</a><a href="shadow/credential_floor_dhs.zip" download data-i18n="dl2">DHS credential-floor test · ZIP ↓</a><a href="https://www.dhsprogram.com/pubs/pdf/FR377/FR377.pdf" data-i18n="src3">Cambodia DHS 2021–22 ↗</a></p>
+<p class="note" data-i18n="credit">Atlas tutoring model, November 2026. Patterns from Bray, Kobakhidze, Liu &amp; Zhang (2016), <i>International Journal of Educational Development</i> 49, 291–299, and Bray, Kobakhidze, Zhang &amp; Liu (2018), <i>Journal of Curriculum Studies</i> 50(4), 435–455. The model's equations are the Atlas's own.</p></section>
+</main>
+<script>
+const S={"policy": {"thin": {"ban_own": {"participation": [-0.48, -0.353, -0.254], "participation_q1": [-0.348, -0.254, -0.191], "participation_q5": [-0.51, -0.344, -0.223], "own_purchase_share": [-0.611, -0.552, -0.511], "other_purchase_share": [0.249, 0.412, 0.512], "com_purchase_share": [0.052, 0.142, 0.313], "coverage": [-0.074, -0.059, -0.041], "nonbuyer_class_instruction": [-0.009, -0.002, 0.004], "coverage_gap_q5_q1": [-0.068, -0.047, -0.023]}, "cond_pay": {"participation": [-0.283, -0.187, -0.097], "participation_q1": [-0.195, -0.136, -0.087], "participation_q5": [-0.298, -0.175, -0.08], "own_purchase_share": [-0.103, -0.056, -0.024], "other_purchase_share": [-0.022, 0.013, 0.058], "com_purchase_share": [0.016, 0.038, 0.083], "coverage": [-0.043, -0.032, -0.021], "nonbuyer_class_instruction": [-0.006, -0.001, 0.003], "coverage_gap_q5_q1": [-0.043, -0.027, -0.012]}, "extra_time": {"participation": [-0.091, -0.037, -0.003], "participation_q1": [-0.092, -0.048, -0.004], "participation_q5": [-0.075, -0.022, -0.002], "own_purchase_share": [-0.007, -0.0, 0.003], "other_purchase_share": [-0.006, -0.001, 0.002], "com_purchase_share": [-0.001, 0.001, 0.008], "coverage": [0.04, 0.081, 0.098], "nonbuyer_class_instruction": [0.084, 0.1, 0.101], "coverage_gap_q5_q1": [-0.049, -0.017, -0.001]}, "com_entry": {"participation": [0.001, 0.014, 0.029], "participation_q1": [0.003, 0.016, 0.036], "participation_q5": [0.0, 0.009, 0.025], "own_purchase_share": [-0.121, -0.068, -0.035], "other_purchase_share": [-0.087, -0.049, -0.027], "com_purchase_share": [0.065, 0.115, 0.204], "coverage": [0.001, 0.005, 0.009], "nonbuyer_class_instruction": [-0.003, -0.0, 0.002], "coverage_gap_q5_q1": [0.0, 0.004, 0.009]}}, "diversion": {"ban_own": {"participation": [-0.477, -0.362, -0.254], "participation_q1": [-0.344, -0.262, -0.187], "participation_q5": [-0.494, -0.358, -0.222], "own_purchase_share": [-0.611, -0.56, -0.513], "other_purchase_share": [0.231, 0.406, 0.534], "com_purchase_share": [0.05, 0.141, 0.338], "coverage": [-0.073, -0.053, -0.003], "nonbuyer_class_instruction": [-0.01, 0.0, 0.097], "coverage_gap_q5_q1": [-0.137, -0.053, -0.022]}, "cond_pay": {"participation": [-0.313, -0.189, -0.11], "participation_q1": [-0.208, -0.138, -0.089], "participation_q5": [-0.349, -0.177, -0.082], "own_purchase_share": [-0.106, -0.058, -0.019], "other_purchase_share": [-0.023, 0.01, 0.06], "com_purchase_share": [0.015, 0.04, 0.092], "coverage": [-0.041, -0.031, -0.009], "nonbuyer_class_instruction": [-0.005, 0.001, 0.064], "coverage_gap_q5_q1": [-0.074, -0.029, -0.012]}, "extra_time": {"participation": [-0.086, -0.039, -0.005], "participation_q1": [-0.095, -0.05, -0.007], "participation_q5": [-0.071, -0.022, -0.003], "own_purchase_share": [-0.006, 0.0, 0.005], "other_purchase_share": [-0.008, -0.001, 0.002], "com_purchase_share": [-0.001, 0.001, 0.008], "coverage": [0.037, 0.081, 0.096], "nonbuyer_class_instruction": [0.076, 0.099, 0.108], "coverage_gap_q5_q1": [-0.053, -0.019, -0.002]}, "com_entry": {"participation": [-0.002, 0.013, 0.032], "participation_q1": [-0.003, 0.015, 0.033], "participation_q5": [-0.001, 0.008, 0.028], "own_purchase_share": [-0.126, -0.071, -0.032], "other_purchase_share": [-0.083, -0.05, -0.022], "com_purchase_share": [0.055, 0.123, 0.208], "coverage": [0.001, 0.005, 0.01], "nonbuyer_class_instruction": [-0.004, -0.0, 0.008], "coverage_gap_q5_q1": [-0.003, 0.003, 0.01]}}, "favour": {"ban_own": {"participation": [-0.514, -0.395, -0.257], "participation_q1": [-0.367, -0.271, -0.188], "participation_q5": [-0.539, -0.386, -0.227], "own_purchase_share": [-0.63, -0.577, -0.522], "other_purchase_share": [0.244, 0.398, 0.542], "com_purchase_share": [0.05, 0.16, 0.33], "coverage": [-0.079, -0.064, -0.041], "nonbuyer_class_instruction": [-0.011, -0.002, 0.003], "coverage_gap_q5_q1": [-0.078, -0.054, -0.023]}, "cond_pay": {"participation": [-0.286, -0.162, -0.093], "participation_q1": [-0.189, -0.124, -0.076], "participation_q5": [-0.3, -0.146, -0.065], "own_purchase_share": [-0.097, -0.053, -0.025], "other_purchase_share": [-0.014, 0.019, 0.054], "com_purchase_share": [0.013, 0.032, 0.082], "coverage": [-0.044, -0.03, -0.018], "nonbuyer_class_instruction": [-0.007, -0.001, 0.004], "coverage_gap_q5_q1": [-0.045, -0.026, -0.01]}, "extra_time": {"participation": [-0.077, -0.039, -0.006], "participation_q1": [-0.082, -0.05, -0.009], "participation_q5": [-0.058, -0.023, -0.003], "own_purchase_share": [-0.006, -0.001, 0.004], "other_purchase_share": [-0.007, -0.001, 0.002], "com_purchase_share": [-0.001, 0.001, 0.009], "coverage": [0.034, 0.083, 0.095], "nonbuyer_class_instruction": [0.075, 0.099, 0.102], "coverage_gap_q5_q1": [-0.053, -0.017, -0.002]}, "com_entry": {"participation": [0.002, 0.012, 0.024], "participation_q1": [0.001, 0.012, 0.031], "participation_q5": [0.0, 0.008, 0.03], "own_purchase_share": [-0.106, -0.066, -0.033], "other_purchase_share": [-0.073, -0.045, -0.021], "com_purchase_share": [0.053, 0.11, 0.182], "coverage": [0.0, 0.004, 0.008], "nonbuyer_class_instruction": [-0.002, -0.0, 0.001], "coverage_gap_q5_q1": [-0.001, 0.004, 0.011]}}}, "fresh": {"thin": {"fit": 0.11, "ban_part": -0.3589541612874867}, "diversion": {"fit": 0.125, "ban_part": -0.37177641937668043}, "favour": {"fit": 0.18, "ban_part": -0.3738162831750666}, "full": {"fit": 0.11, "ban_part": -0.3745499943327496}}, "evidence": {"thin": 3.142839906062978e-06, "diversion": 5.904262511903836e-06, "favour": 0.0}, "fit": {"thin": {"participation": [0.791, 0.806, 0.828], "participation_g9": [0.732, 0.76, 0.784], "participation_g12": [0.864, 0.903, 0.934], "own_purchase_share": [0.511, 0.552, 0.61], "other_purchase_share": [0.347, 0.397, 0.459], "com_purchase_share": [0.021, 0.041, 0.086], "teacher_tutor_share": [0.486, 0.625, 0.722], "withholding_mean": [0.0, 0.0, 0.0]}, "diversion": {"participation": [0.791, 0.808, 0.828], "participation_g9": [0.734, 0.763, 0.785], "participation_g12": [0.865, 0.9, 0.935], "own_purchase_share": [0.512, 0.559, 0.61], "other_purchase_share": [0.345, 0.392, 0.451], "com_purchase_share": [0.017, 0.042, 0.085], "teacher_tutor_share": [0.474, 0.639, 0.722], "withholding_mean": [0.0, 0.001, 0.15]}, "favour": {"participation": [0.79, 0.805, 0.827], "participation_g9": [0.733, 0.763, 0.784], "participation_g12": [0.863, 0.898, 0.933], "own_purchase_share": [0.519, 0.577, 0.63], "other_purchase_share": [0.342, 0.378, 0.442], "com_purchase_share": [0.017, 0.038, 0.081], "teacher_tutor_share": [0.461, 0.597, 0.708], "withholding_mean": [0.0, 0.0, 0.0]}}, "targets": {"participation": [0.819, 0.03], "participation_g9": [0.747, 0.04], "participation_g12": [0.898, 0.04], "urban_rural_gap": [0.026, 0.04], "own_purchase_share": [0.577, 0.07], "other_purchase_share": [0.409, 0.07], "teacher_tutor_share": [0.54, 0.2]}};
+const ZH={nav_lib:"研究资料库 ↗",eyebrow:"教育与工作 · 影子教育 · 柬埔寨 · 探索性研究",h1:"学生为什么付钱给自己的老师？",
+lead:"在柬埔寨，大约五分之四的中学生购买课外补习，而且大多来自自己的任课老师。一个包含72名教师和1,260名学生的主体模型，用七项已发表的规律检验了三种对立解释。三者拟合得几乎一样好，所以数据无法区分它们。但三者对政策效果的判断一致，这种一致才是有用的结论。",
+r_h:"三种对立解释",r1t:"课时不足",r1h:"上课时间太短",r1p:"课程在规定课时内教不完，学生只好购买剩下的部分。老师保留内容并无好处。",
+r2t:"内容转移",r2h:"老师保留内容",r2p:"老师在正课中保留部分内容，只在付费补习中讲授。",
+r3t:"人情",r3h:"花钱买关系",r3p:"向自己的老师付费本身就有好处：更好的成绩或更好的师生关系。",
+f_h:"与七项已发表规律的拟合",f_n:"目标来自Bray等人（2016、2018）。模型数值为ABC-SMC校准后的后验中位数。“新世界”一行把40组已校准参数放到五个新的随机学校系统中重跑。",
+f_c0:"规律",f_c1:"实际值",f_c2:"课时不足",f_c3:"内容转移",f_c4:"人情",
+f_after:"即使在“内容转移”解释下，校准后的老师几乎不保留内容（中位数0%）。证据比太稀疏，无法给解释排序；在新的随机世界中，只有11–18%的已校准参数仍然拟合。",
+p_h:"政策探索器",p_n:"每项政策在相同的已校准世界、相同随机种子下的效果。条形为中位数，须线为各组已校准参数的第5–95百分位。单位：百分点。",
+d_h:"谁离开学校？文凭门槛检验",d_p:"另一个Atlas模型对谁离开中学给出三种解释，每种都预测了不同比例的辍学者来自最贫困40%的家庭。柬埔寨人口与健康调查2021–22（表2.12）显示这一比例为47–58%。",
+d_c0:"结构",d_c1:"预测来自最贫困40%的比例（中位数，5–95%）",d_c2:"对照47–58%的结论",
+d_n:"已发表的表格统计的是12–18岁所有不在中学的学龄儿童，而不是初中的退学人数。精确检验需要DHS微观数据。",
+c_h:"哪些成立，哪些被排除",c_claim:"说法",c_res:"结果",c_ver:"结论",
+m_h:"方法、局限与下载",
+m_p1:"六所暹粒式学校，9年级和12年级，四门科目。每位老师选择是否补习、保留多少内容，或去做副业。每个学生逐科在自己的老师、平行班老师、商业机构或不补习之间选择。校准目标：参与率（81.9%；9年级74.7%，12年级89.8%）、城乡差距、本班老师（57.7%）和其他老师（40.9%）的份额、约一半老师从事补习，以及很小的商业份额。",
+m_p2:"局限：“人情”解释的校准最后有效样本量偏低；ABC模型选择本身很脆弱；政策效果以模型为条件，并非现实效果的证据。“课程覆盖”是模型中获得的课程比例，不是实测学习成果。补习尚未与家庭劳动或辍学相连。",
+dl1:"补习主体模型：代码、校准、结果 · ZIP ↓",dl2:"DHS文凭门槛检验 · ZIP ↓",src3:"柬埔寨DHS 2021–22 ↗",
+credit:"Atlas补习模型，2026年11月。规律来自Bray、Kobakhidze、Liu与Zhang（2016），《International Journal of Educational Development》第49卷，291–299页；以及Bray、Kobakhidze、Zhang与Liu（2018），《Journal of Curriculum Studies》第50卷第4期，435–455页。模型方程为Atlas自建。"};
+const D={en:{
+ pat:{participation:"Tutoring participation",participation_g9:"Participation, Grade 9",participation_g12:"Participation, Grade 12",own_purchase_share:"Share bought from own teacher",other_purchase_share:"Share from parallel-class teacher",com_purchase_share:"Commercial share",teacher_tutor_share:"Teachers who tutor",withholding_mean:"Content withheld (model only)",fresh:"Still fits in new random worlds",evidence:"Prior probability of fitting all seven"},
+ pol:{ban_own:"Ban tutoring own pupils",cond_pay:"Pay teachers not to tutor own pupils",extra_time:"10 more points of class time",com_entry:"Commercial tutoring enters"},
+ var:{thin:"Thin timetable",diversion:"Diversion",favour:"Favour"},
+ met:{participation:"Tutoring participation",participation_q1:"Participation, poorest fifth",participation_q5:"Participation, richest fifth",own_purchase_share:"Share from own teacher",com_purchase_share:"Commercial share",coverage:"Curriculum covered (all pupils)",nonbuyer_class_instruction:"Class instruction, non-buyers",coverage_gap_q5_q1:"Rich–poor coverage gap"},
+ poltext:{ban_own:"A ban cuts tutoring by about 35–40 points under every explanation, but pupils move to the parallel-class teacher and commercial tutors. Curriculum covered falls about 5–6 points, and non-buyers gain nothing.",
+ cond_pay:"Paying teachers not to tutor their own pupils, as in New Generation Schools, cuts participation by 16–19 points with little shift in who sells. Coverage falls about 3 points.",
+ extra_time:"More class time is the only policy that raises learning: coverage +8 points, non-buyers' instruction +10 points and a narrower rich–poor gap. Tutoring barely falls (−4 points).",
+ com_entry:"Commercial entry takes about 11–12 points of the market from own teachers, but barely changes participation or coverage."},
+ same:"The three explanations give almost identical answers.",
+ dhs:[["Human capital","64.6% (45.1–98.5%)","Consistent, at the low end of its band"],["Positional","82.7% (48.7–100%)","Consistent only at the bottom edge"],["Relational floor","98.1% (65.6–100%)","Rejected: even 58% is below its 5th percentile"]],
+ claims:[["The published patterns can tell the three explanations apart","All three fit; evidence too sparse; only 11–18% still fit in new worlds","Not supported"],
+ ["Teachers withhold regular content","Calibrated withholding is about zero even when allowed","Not supported"],
+ ["Favour explains own-teacher buying","0 of 4,000 evidence proposals fit; low effective sample","Open"],
+ ["Banning own-pupil tutoring cuts tutoring","−35 to −40 points under all three explanations","Held (model)"],
+ ["A ban improves learning","Coverage −5 to −6 points; non-buyers unchanged; demand shifts to other teachers and commercial tutors","Ruled out (model)"],
+ ["More class time improves learning","Coverage +8 points; non-buyers +10; gap narrows","Held (model)"],
+ ["Conditional pay reduces tutoring","−16 to −19 points; coverage −3","Partly"],
+ ["A relational credential floor explains who leaves school in Cambodia","DHS 47–58% from poorest 40%, against a predicted ≥66%","Ruled out"],
+ ["Human capital or positional competition fits Cambodian leavers","Both within their bands; human capital fits better","Held"],
+ ["The education package's models are diverse","1.11–1.74 effective models","Ruled out"]]},
+zh:{
+ pat:{participation:"补习参与率",participation_g9:"9年级参与率",participation_g12:"12年级参与率",own_purchase_share:"向本班老师购买的份额",other_purchase_share:"向平行班老师购买的份额",com_purchase_share:"商业补习份额",teacher_tutor_share:"从事补习的老师比例",withholding_mean:"保留的内容（仅模型）",fresh:"在新随机世界中仍拟合",evidence:"拟合全部七项的先验概率"},
+ pol:{ban_own:"禁止给本班学生补习",cond_pay:"付钱让老师不给本班学生补习",extra_time:"课时增加10个百分点",com_entry:"商业补习进入"},
+ var:{thin:"课时不足",diversion:"内容转移",favour:"人情"},
+ met:{participation:"补习参与率",participation_q1:"参与率，最贫困五分之一",participation_q5:"参与率，最富裕五分之一",own_purchase_share:"本班老师份额",com_purchase_share:"商业份额",coverage:"课程覆盖（全体学生）",nonbuyer_class_instruction:"未补习者的课堂教学",coverage_gap_q5_q1:"贫富课程覆盖差距"},
+ poltext:{ban_own:"在任何一种解释下，禁令都会让补习减少约35–40个百分点，但学生会转向平行班老师和商业机构。课程覆盖下降约5–6个百分点，未补习者没有任何收益。",
+ cond_pay:"像“新一代学校”那样付钱让老师不给本班学生补习，参与率下降16–19个百分点，卖方结构变化不大。课程覆盖下降约3个百分点。",
+ extra_time:"增加课时是唯一能提高学习的政策：课程覆盖+8个百分点，未补习者课堂教学+10个百分点，贫富差距缩小。补习几乎不减少（−4个百分点）。",
+ com_entry:"商业补习进入会从本班老师那里拿走约11–12个百分点的市场，但几乎不改变参与率或课程覆盖。"},
+ same:"三种解释给出的答案几乎相同。",
+ dhs:[["人力资本","64.6%（45.1–98.5%）","一致，位于区间低端"],["位置竞争","82.7%（48.7–100%）","仅在区间底部一致"],["关系型门槛","98.1%（65.6–100%）","被否定：即使58%也低于其第5百分位"]],
+ claims:[["已发表的规律能区分三种解释","三者都拟合；证据太稀疏；新世界中仅11–18%仍拟合","不支持"],
+ ["老师保留正课内容","即使允许，校准后的保留几乎为零","不支持"],
+ ["人情解释了向本班老师购买","4,000次证据抽样中0次拟合；有效样本偏低","未定"],
+ ["禁止给本班学生补习会减少补习","三种解释下均为−35到−40个百分点","成立（模型）"],
+ ["禁令能改善学习","课程覆盖−5到−6个百分点；未补习者不变；需求转向其他老师和商业机构","排除（模型）"],
+ ["增加课时能改善学习","课程覆盖+8个百分点；未补习者+10；差距缩小","成立（模型）"],
+ ["条件性报酬能减少补习","−16到−19个百分点；课程覆盖−3","部分成立"],
+ ["关系型文凭门槛解释了柬埔寨谁离开学校","DHS：47–58%来自最贫困40%，预测≥66%","排除"],
+ ["人力资本或位置竞争符合柬埔寨离校者","两者都在区间内；人力资本更吻合","成立"],
+ ["教育研究包的模型具有多样性","有效模型数1.11–1.74","排除"]]}};
+let LANG=(new URLSearchParams(location.search).get('lang')||'').startsWith('zh')?'zh':'en';
+try{const s=localStorage.getItem('fert-lang');if(s&&!location.search.includes('lang='))LANG=s}catch(e){}
+const EN={};document.querySelectorAll('[data-i18n]').forEach(el=>EN[el.dataset.i18n]=el.innerHTML);
+const L=k=>D[LANG][k];
+document.querySelectorAll('.lang button').forEach(b=>b.onclick=()=>{LANG=b.dataset.lang;try{localStorage.setItem('fert-lang',LANG)}catch(e){};apply()});
+let POL='ban_own',VAR='thin';
+const pct=v=>(v*100).toFixed(1)+'%';
+function fitRows(){const P=L('pat'),V=['thin','diversion','favour'];let h='';
+ for(const k of ['participation','participation_g9','participation_g12','own_purchase_share','other_purchase_share','com_purchase_share','teacher_tutor_share','withholding_mean']){
+  const obs=k==='withholding_mean'?'—':k==='com_purchase_share'?(LANG==='zh'?'很小':'small'):k==='teacher_tutor_share'?'13/24':pct(S.targets[k]?S.targets[k][0]:0);
+  h+=`<tr><td>${P[k]}</td><td class="num">${obs}</td>${V.map(v=>`<td class="num">${pct(S.fit[v][k][1])}</td>`).join('')}</tr>`}
+ h+=`<tr><td>${P.fresh}</td><td class="num">—</td>${V.map(v=>`<td class="num">${Math.round(S.fresh[v].fit*100)}%</td>`).join('')}</tr>`;
+ h+=`<tr><td>${P.evidence}</td><td class="num">—</td>${V.map(v=>`<td class="num">${S.evidence[v]?S.evidence[v].toExponential(1):'0'}</td>`).join('')}</tr>`;
+ document.getElementById('fitRows').innerHTML=h}
+function pills(id,obj,cur,set){const box=document.getElementById(id);box.innerHTML='';Object.entries(obj).forEach(([k,v])=>{const b=document.createElement('button');b.textContent=v;b.setAttribute('aria-pressed',k===cur);b.onclick=()=>{set(k);apply()};box.appendChild(b)})}
+function polChart(){const M=L('met'),E=S.policy[VAR][POL],keys=Object.keys(M);const W=680,rh=30,mid=400,H=keys.length*rh+16;
+ const mx=Math.max(20,...keys.flatMap(k=>E[k].map(x=>Math.abs(x*100))));const sc=250/mx;let g=`<line x1="${mid}" x2="${mid}" y1="4" y2="${H-4}" stroke="#a9b8ae"/>`;
+ keys.forEach((k,i)=>{const [lo,md,hi]=E[k].map(x=>x*100),y=8+i*rh,w=Math.abs(md)*sc,good=(k==='coverage'||k==='nonbuyer_class_instruction')?md>0:(k==='coverage_gap_q5_q1'?md<0:null);
+  const col=good===null?'#6f8a80':good?'#126550':'#b0632f';
+  g+=`<text x="${mid-10-Math.max(0,-Math.min(lo,0))*sc}" y="${y+15}" font-size="12.5" text-anchor="end" fill="#202d2a">${M[k]}</text>`;
+  g+=`<rect x="${md<0?mid-w:mid}" y="${y+4}" width="${Math.max(w,1)}" height="15" rx="3" fill="${col}"/>`;
+  g+=`<line x1="${mid+lo*sc}" x2="${mid+hi*sc}" y1="${y+11.5}" y2="${y+11.5}" stroke="#202d2a" stroke-width="1"/>`;
+  g+=`<text x="${mid+Math.max(hi,0)*sc+6}" y="${y+16}" font-size="12" fill="#202d2a">${(md>=0?'+':'−')+Math.abs(md).toFixed(1)}</text>`});
+ document.getElementById('polChart').innerHTML=`<svg class="bars" viewBox="0 0 ${W} ${H}" style="max-width:760px">${g}</svg>`;
+ document.getElementById('polText').textContent=L('poltext')[POL]+' '+L('same')}
+function rows(id,arr,good,mid){document.getElementById(id).innerHTML=arr.map(([c,r,v])=>`<tr><td>${c}</td><td>${r}</td><td>${id==='dhsRows'?v:`<span class="tag ${good.some(g=>v.startsWith(g))?'':mid.some(g=>v.startsWith(g))?'sim':'no'}">${v}</span>`}</td></tr>`).join('')}
+function apply(){document.documentElement.lang=LANG==='zh'?'zh-Hans':'en';
+ document.querySelectorAll('[data-i18n]').forEach(el=>{const k=el.dataset.i18n;el.innerHTML=LANG==='zh'&&ZH[k]?ZH[k]:EN[k]});
+ document.querySelectorAll('.lang button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.lang===LANG));
+ fitRows();pills('polPills',L('pol'),POL,k=>POL=k);pills('varPills',L('var'),VAR,k=>VAR=k);polChart();
+ rows('dhsRows',L('dhs'),[],[]);rows('claims',L('claims'),['Held','成立'],['Partly','Open','部分','未定'])}
+apply();
+</script>
+<script>(function(){var go=function(fallback){return function(e){if(document.referrer&&new URL(document.referrer).origin===location.origin&&history.length>1){e.preventDefault();history.back();}else{e.preventDefault();location.href=fallback;}};};document.querySelectorAll('[data-atlas-back]').forEach(function(a){a.addEventListener('click',go(a.getAttribute('href')));});})();</script></body>
+</html>

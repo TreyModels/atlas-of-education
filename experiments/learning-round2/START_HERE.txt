@@ -1,0 +1,7 @@
+LEARNING AND EXIT: ROUND 2
+
+On iOS save this ZIP to Files and tap to extract.
+Read RESULTS.md. results.csv contains every simulated history.
+summary.json contains grouped results.
+To reproduce on a computer with Node: node run.cjs
+The model is exploratory and has no historical calibration.

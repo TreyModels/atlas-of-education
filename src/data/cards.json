@@ -1,0 +1,304 @@
+[
+  {
+    "eyebrow": "PUBLISHED ECONOMIC ACCOUNT · KLASSEN, ORTMAN, LOBO & EVANS",
+    "title": "How did temple communities provision a city?",
+    "question": "Explore the paper’s community-scale and distance relationships. Output is an archaeological production index, with a separate historical sample showing settlement buildup.",
+    "href": "#provisioning",
+    "badge": "Under active examination",
+    "research": "research/provisioning.html",
+    "details": [
+      {
+        "term": "What we tested",
+        "description": "Explore the paper’s community-scale and distance relationships. Output is an archaeological production index, with a separate historical sample showing settlement buildup."
+      },
+      {
+        "term": "What we learned",
+        "description": "The curve is a normalized output index. The historical sample is shown in the cookbook; it records buildup without simulating it."
+      }
+    ]
+  },
+  {
+    "eyebrow": "01 · PUBLISHED ACCOUNT",
+    "title": "Monsoon and state growth",
+    "href": "#monsoon",
+    "badge": "Under active examination",
+    "question": "Can the documented climate sequence produce a decline in Angkor’s political core?",
+    "details": [
+      {
+        "term": "What we tested",
+        "description": "We ran 2,000 matched parameter draws at each of three crop responses, plus a neutral-climate comparison."
+      },
+      {
+        "term": "What we learned",
+        "description": "At the middle response, 1,260 of 2,000 runs decline; their median onset is 1362. Changing crop sensitivity shifts the timing."
+      },
+      {
+        "term": "What remains open",
+        "description": "The PDSI-to-harvest translation is assumed. Core activity combines court presence and regional population."
+      }
+    ],
+    "research": "research/monsoon.html"
+  },
+  {
+    "eyebrow": "02 · ECOLOGY AND MOBILISATION",
+    "title": "Can an army return before harvest?",
+    "href": "#campaign",
+    "badge": "Under active examination",
+    "question": "How do distance, fish and labour demands change what the landscape can support?",
+    "details": [
+      {
+        "term": "What we tested",
+        "description": "Six scenarios, each with 32 matched seeds and 18 simulated years."
+      },
+      {
+        "term": "What we learned",
+        "description": "Moving the frontier from 180 to 540 km adds 40 campaign days and creates harvest overlap in every modeled year."
+      },
+      {
+        "term": "What remains open",
+        "description": "Unbounded stores mask food pressure in the default setup. Historical quantities still need review."
+      }
+    ],
+    "research": "research/index.html"
+  },
+  {
+    "eyebrow": "03 · AUTHORITY AND ALLEGIANCE",
+    "title": "What does a monument persuade people to believe?",
+    "href": "#signalling",
+    "badge": "Under active examination",
+    "question": "Can inherited stone keep tribute flowing after military capacity weakens?",
+    "details": [
+      {
+        "term": "What we tested",
+        "description": "Matched comparisons change how suppliers read stone, elephants and defence."
+      },
+      {
+        "term": "What we learned",
+        "description": "Default suppliers pledge during failed defence for 7.28 of 12 years on average. Lower trust reduces that to 2.34."
+      },
+      {
+        "term": "What remains open",
+        "description": "This result tests our belief rule. The numerical relationship has yet to be established historically."
+      }
+    ],
+    "research": "research/signalling.html"
+  },
+  {
+    "eyebrow": "04 · OBLIGATIONS AND EXIT",
+    "title": "Who pays when the court leaves?",
+    "href": "#obligations",
+    "badge": "Under active examination",
+    "question": "How do temple bills, court costs and interrupted deliveries affect exit and return?",
+    "details": [
+      {
+        "term": "What we tested",
+        "description": "The model consumes pledges from the signalling experiment and compares return rules."
+      },
+      {
+        "term": "What we learned",
+        "description": "With the same interruption, 21 of 32 courts exit. Allowing a funded return brings all 21 back."
+      },
+      {
+        "term": "What remains open",
+        "description": "Two consecutive shortfalls trigger exit by assumption. Return also depends on assumed funding rules."
+      }
+    ],
+    "research": "research/angkor-sequence.html"
+  },
+  {
+    "eyebrow": "EDUCATION · LABOUR MARKETS",
+    "title": "China’s graduate queue",
+    "href": "#china",
+    "badge": "Next research focus",
+    "question": "What happens when graduates compete for a limited pool of secure jobs?",
+    "details": [
+      {
+        "term": "What we tested",
+        "description": "Browser and Python outputs were checked for parity; the app compares the model with the supplied NBS series."
+      },
+      {
+        "term": "What we learned",
+        "description": "The earlier 2018–22 fit missed the later unemployment bulge. Matching the displayed record leaves the mechanisms open."
+      },
+      {
+        "term": "What remains open",
+        "description": "The reporting definition changes in 2024. Several labour-market responses are assumptions."
+      }
+    ],
+    "research": "research/index.html"
+  },
+  {
+    "eyebrow": "EDUCATION · SCHOOL AND WORK",
+    "title": "School and child labour in Cambodia",
+    "href": "#cambodia",
+    "badge": "In progress",
+    "question": "How might school costs, what school offers, enforcement, migration and the credential floor affect children’s work?",
+    "details": [
+      {
+        "term": "What we tested",
+        "description": "Policy and reference runs share matched seeds across 12 simulated years; several histories show the range."
+      },
+      {
+        "term": "What we learned",
+        "description": "The interface exposes differences between policies. Causal policy effects remain under examination."
+      },
+      {
+        "term": "What remains open",
+        "description": "Programme effect sizes are stylised, and the rural school-retention fit needs a large unexplained adjustment."
+      }
+    ],
+    "research": "research/index.html"
+  },
+  {
+    "eyebrow": "COMPARATIVE EDUCATION · CREDENTIALS",
+    "title": "What keeps students in school?",
+    "href": "#credentials",
+    "badge": "Stored results",
+    "question": "Which explanations of the value of a credential fit Cambodia, Vietnam and China, and who leaves when its relative value falls?",
+    "details": [
+      {
+        "term": "What we tested",
+        "description": "Human-capital, positional and relational bundles were each drawn 24,000 times against country targets."
+      },
+      {
+        "term": "What we learned",
+        "description": "Where a wealth gradient exists, adding the relational floor sharply narrows which parameter draws fit."
+      },
+      {
+        "term": "What remains open",
+        "description": "Cambodia and China lack wealth gradients in this comparison, so acceptance rates cannot rank the theories across countries."
+      }
+    ],
+    "research": "reference/credential-floor.md"
+  },
+  {
+    "eyebrow": "PLANNING · REFERENCE METHOD",
+    "title": "Can teacher supply keep up?",
+    "href": "#teachers",
+    "badge": "Synthetic demonstration",
+    "question": "When do training delays and departures create a teacher shortage?",
+    "details": [
+      {
+        "term": "What we tested",
+        "description": "An age-structured accounting model follows intake, graduation, hiring and retirement through 2050."
+      },
+      {
+        "term": "What we learned",
+        "description": "Explore how a lag between training decisions and hiring changes the projected gap."
+      },
+      {
+        "term": "What remains open",
+        "description": "Starting counts and completion rates are synthetic. This demonstration carries no country forecast."
+      }
+    ],
+    "research": "research/index.html"
+  },
+  {
+    "eyebrow": "ATLAS DYNAMIC EXTENSION · PAPER-INSPIRED · EXPLORATORY",
+    "title": "Can a provisioning economy rise and decline?",
+    "question": "A separate synthetic economy builds fields, waterworks and monuments, then faces a declared climate scenario. Remove one mechanism and compare matched runs.",
+    "href": "#petri",
+    "badge": "Under active examination",
+    "research": "research/provisioning.html",
+    "details": [
+      {
+        "term": "What we tested",
+        "description": "A separate synthetic economy builds fields, waterworks and monuments, then faces a declared climate scenario. Remove one mechanism and compare matched runs."
+      },
+      {
+        "term": "What we learned",
+        "description": "The model is a mechanism test. It has no historical fit score and no claim to identify the cause of Angkor’s decline."
+      }
+    ]
+  },
+  {
+    "eyebrow": "SEPARATE TWO-CENTRE EXPERIMENT · EXPLORATORY",
+    "title": "When does the court choose another centre?",
+    "question": "Elites compare staying with a second centre. Workers move under a different rule, while farmers remain attached to their fields. Compare the same economy with movement blocked.",
+    "href": "#relocation",
+    "badge": "Under active examination",
+    "research": "research/relocation.html",
+    "details": [
+      {
+        "term": "What we tested",
+        "description": "Elites compare staying with a second centre. Workers move under a different rule, while farmers remain attached to their fields. Compare the same economy with movement blocked."
+      },
+      {
+        "term": "What we learned",
+        "description": "A court can leave while farming and local maintenance continue. Movement rules remain experimental assumptions."
+      }
+    ]
+  },
+  {
+    "eyebrow": "SEPARATE INSTITUTIONAL EXPERIMENT · EXPLORATORY",
+    "title": "Who can claim the stored food?",
+    "question": "Compare temple relief and elite extraction in four single-run institutional scenarios.",
+    "href": "#institutions",
+    "badge": "Under active examination",
+    "research": "research/institutions/index.html",
+    "details": [
+      {
+        "term": "What we tested",
+        "description": "Compare temple relief and elite extraction in four single-run institutional scenarios."
+      },
+      {
+        "term": "What we learned",
+        "description": "Food access differs under assumed relief and extraction rules. Each scenario is one trial."
+      }
+    ]
+  },
+  {
+    "eyebrow": "SEPARATE INSTITUTIONAL EXPERIMENT · EXPLORATORY",
+    "title": "Can the state lose people while settlement continues?",
+    "question": "Compare relief and abstract barriers to leaving, with people tracked inside and outside state control.",
+    "href": "#flight",
+    "badge": "Under active examination",
+    "research": "research/institutions/index.html",
+    "details": [
+      {
+        "term": "What we tested",
+        "description": "Compare relief and abstract barriers to leaving, with people tracked inside and outside state control."
+      },
+      {
+        "term": "What we learned",
+        "description": "State-linked and refuge populations follow separate trajectories under assumed movement rules."
+      }
+    ]
+  },
+  {
+    "eyebrow": "SEPARATE INSTITUTIONAL EXPERIMENT · EXPLORATORY",
+    "title": "What changes when maintenance falls at the same time?",
+    "question": "The maintenance cut now begins in year 55. Compare it with a maintained system and the bundled elite reshuffle.",
+    "href": "#maintenance",
+    "badge": "Under active examination",
+    "research": "research/institutions/index.html",
+    "details": [
+      {
+        "term": "What we tested",
+        "description": "The maintenance cut now begins in year 55. Compare it with a maintained system and the bundled elite reshuffle."
+      },
+      {
+        "term": "What we learned",
+        "description": "The corrected maintenance-only drought median is 6,209 state-linked people; its unchanged stable reference is 6,958."
+      }
+    ]
+  },
+  {
+    "eyebrow": "SEPARATE INSTITUTIONAL EXPERIMENT · EXPLORATORY",
+    "title": "Who farms, who serves, and who gets fed?",
+    "question": "Explore the separate extension with bounded labour, paid service rations and an explicit refuge food economy.",
+    "href": "#accounts",
+    "badge": "Under active examination",
+    "research": "research/institutions/index.html",
+    "details": [
+      {
+        "term": "What we tested",
+        "description": "Explore the separate extension with bounded labour, paid service rations and an explicit refuge food economy."
+      },
+      {
+        "term": "What we learned",
+        "description": "The extension checks annual grain, population and labour balances. Historical rates remain uncalibrated."
+      }
+    ]
+  }
+]

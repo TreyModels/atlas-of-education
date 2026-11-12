@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Three experiments on Angkor · Atlas Worlds</title><link rel="stylesheet" href="../styles.css"></head>
+<body><header class="mast"><div class="frame mast-row"><a class="atlas-back" href="../index.html" data-atlas-back>&larr; Atlas</a><a class="brand" href="../index.html">Atlas Worlds</a><a class="archive" href="../index.html#campaign">Start the sequence ↗</a></div></header>
+<main class="frame catalog">
+<p class="eyebrow">ANGKOR · UNDER ACTIVE EXAMINATION</p>
+<h1>How does a court grow, lose its reach, and stay away?</h1>
+<p>Three experiments, each with its own assumptions and outputs. Each can be run on its own. A handoff carries a named quantity into the next experiment where the models agree on its meaning.</p>
+<section class="evidence"><h2>Start with a published account</h2>
+<p>Lieberman and Buckley argue that monsoon conditions contributed to both early state growth and later fragmentation. The Atlas formalization uses Buckley's annual drought reconstruction from 1250–1450 and compares it with a neutral-climate run. It uses the existing Atlas social equations. Each subsequent account should identify its publication, executable claims, assumptions and observations that could reject it.</p>
+<p class="source-links"><a href="../index.html#monsoon">Run Literature Account 01 · Monsoon ↗</a><a href="monsoon.html">Read the account and review results ↗</a></p></section>
+<section class="evidence"><h2>1 · Ecology and mobilisation</h2>
+<p>Start with the seasonal campaign model. Rain, cultivable area, yield, storage and fish determine what settlements can provision. The campaign uses labour and grain before it returns. The first-principles check is simple: 1,000 km² at 1.5 tonnes per hectare with 16% losses yields 126,000 tonnes. At 200 kg per person per year that covers 630,000 rice rations. The area, yield and ration are illustrative inputs. Fish, staggered harvests, imports and other foods can change that budget.</p>
+<p>Output to inspect: campaign days, labour absent at harvest, and available grain. The default comparison moves the frontier from 180 to 540 km: 85 to 125 campaign days and 0 to 18 harvest overlaps. The long fight and large levy increase the food gap in 8 of 32 matched runs. The campaign lab has no physical ceiling on its court store, so we hold its grain volumes out of the later models.</p>
+<p class="source-links"><a href="../index.html#campaign">Run ecology and mobilisation ↗</a><a href="angkor-paired-results.csv">Campaign results · CSV ↗</a><a href="https://link.springer.com/article/10.1007/s10816-021-09535-5">Klassen et al. · provisioning ↗</a></p></section>
+<section class="evidence"><h2>2 · Authority and allegiance</h2>
+<p>Hold the inherited monument and harvest shocks fixed. Let tributaries judge the court by visible construction and maintained elephants, or by what it can actually muster. In the default scenario a tributary pledges despite failed defence for 7.28 of 12 years on average. At 80% of the default trust, that falls to 2.34. The difference tests the belief rule.</p>
+<p>Output passed on: annual pledge status and the matched harvest draw. Click <strong>Use this run in Obligations</strong> to carry your signalling settings and seed into step 3. The next model recomputes that output under the selected observer rule.</p>
+<p class="source-links"><a href="../index.html#signalling">Run authority and allegiance ↗</a><a href="signalling.html">Methods, credits and paired results ↗</a></p></section>
+<section class="evidence"><h2>3 · Obligations, worship and exit</h2>
+<p>Keep a temple’s ritual bill separate from the court’s obligations. Let pledged deliveries pay part of the cost. Two consecutive shortfalls trigger exit by assumption. The return comparison tests whether renewed deliveries and local receipts can cover both bills. Full funding is a sufficient return condition in this experiment, with politics and relocation costs outside its scope.</p>
+<div class="table-scroll"><table><thead><tr><th scope="col">Scenario</th><th scope="col">Exits / 32</th><th scope="col">Returns / 32</th></tr></thead><tbody>
+<tr><th scope="row">Default supply interruption, exit final</th><td>21</td><td>0</td></tr>
+<tr><th scope="row">Same interruption, funded return allowed</th><td>21</td><td>21</td></tr>
+<tr><th scope="row">Return allowed, court bill more adjustable</th><td>0</td><td>0</td></tr>
+<tr><th scope="row">Return allowed, suppliers judge elephants alone</th><td>32</td><td>1</td></tr>
+</tbody></table></div>
+<p>The apparent permanence of exit depends on whether suppliers come back and whether the court can cover both bills. The elephant-only case uses the signalling model’s pledges, with no other change to the return setting. This shows one possible feedback, not a reconstruction of Angkor’s recovery.</p>
+<p class="source-links"><a href="../index.html#obligations">Run obligations and exit ↗</a><a href="angkor-sequence-results.csv">Review comparisons · CSV ↗</a><a href="https://doi.org/10.1073/pnas.1821460116">Penny et al. · Angkor Thom chronology ↗</a><a href="https://doi.org/10.1073/pnas.1821879116">Carter et al. · Angkor Wat occupation ↗</a></p></section>
+<section class="evidence"><h2>What history still has to decide</h2>
+<p>Angkor’s monumental bursts sit within a much longer history of settlement and water management. Land use in the Angkor Thom core declined from the early 1300s, before the moat stopped being maintained. Angkor Wat’s enclosure has its own history of occupation and reuse. The model needs to explain why the political centre lost reach and why that reach was not rebuilt there. It should not score temple use, farming across the region, and the return of the capital as the same outcome.</p></section>
+</main><script>(function(){var go=function(fallback){return function(e){if(document.referrer&&new URL(document.referrer).origin===location.origin&&history.length>1){e.preventDefault();history.back();}else{e.preventDefault();location.href=fallback;}};};document.querySelectorAll('[data-atlas-back]').forEach(function(a){a.addEventListener('click',go(a.getAttribute('href')));});})();</script></body></html>

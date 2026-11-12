@@ -1,0 +1,231 @@
+{
+  "histories": 16384,
+  "policies": {
+    "balanced": [
+      0.5,
+      0.2,
+      0.15,
+      0.1,
+      0.05
+    ],
+    "farm_first": [
+      0.65,
+      0.15,
+      0.1,
+      0.05,
+      0.05
+    ],
+    "military_first": [
+      0.4,
+      0.35,
+      0.1,
+      0.1,
+      0.05
+    ],
+    "irrigation_first": [
+      0.5,
+      0.15,
+      0.25,
+      0.05,
+      0.05
+    ],
+    "monument_first": [
+      0.4,
+      0.15,
+      0.1,
+      0.3,
+      0.05
+    ],
+    "religion_first": [
+      0.45,
+      0.15,
+      0.1,
+      0.05,
+      0.25
+    ],
+    "military_from_farms": [
+      0.35,
+      0.35,
+      0.15,
+      0.1,
+      0.05
+    ],
+    "military_from_monuments": [
+      0.5,
+      0.3,
+      0.15,
+      0,
+      0.05
+    ],
+    "military_from_irrigation": [
+      0.5,
+      0.3,
+      0.05,
+      0.1,
+      0.05
+    ],
+    "irrigation_from_monuments": [
+      0.5,
+      0.2,
+      0.25,
+      0,
+      0.05
+    ]
+  },
+  "summary": [
+    {
+      "policy": "balanced",
+      "runs": 1536,
+      "towns": 6,
+      "peak": 6,
+      "lost": 0,
+      "gap": 0,
+      "garrisonShortYears": 0,
+      "water": 0.875784691382648,
+      "monument": 9425543.69040789
+    },
+    {
+      "policy": "farm_first",
+      "runs": 1536,
+      "towns": 4,
+      "peak": 4,
+      "lost": 0,
+      "gap": 0,
+      "garrisonShortYears": 0,
+      "water": 0.778768128040208,
+      "monument": 4372431.623199621
+    },
+    {
+      "policy": "military_first",
+      "runs": 1536,
+      "towns": 14.75,
+      "peak": 14.75,
+      "lost": 0,
+      "gap": 2015.3655531386712,
+      "garrisonShortYears": 0,
+      "water": 0.7170237590438858,
+      "monument": 12105082.845390834
+    },
+    {
+      "policy": "irrigation_first",
+      "runs": 1536,
+      "towns": 4,
+      "peak": 4,
+      "lost": 0,
+      "gap": 0,
+      "garrisonShortYears": 0,
+      "water": 0.9893935590132169,
+      "monument": 4372431.623199621
+    },
+    {
+      "policy": "monument_first",
+      "runs": 1536,
+      "towns": 4,
+      "peak": 4,
+      "lost": 0,
+      "gap": 23.161731056158157,
+      "garrisonShortYears": 0,
+      "water": 0.778768128040208,
+      "monument": 26234589.739197776
+    },
+    {
+      "policy": "religion_first",
+      "runs": 1536,
+      "towns": 4,
+      "peak": 4,
+      "lost": 0,
+      "gap": 0,
+      "garrisonShortYears": 0,
+      "water": 0.778768128040208,
+      "monument": 4372431.623199621
+    },
+    {
+      "policy": "military_from_farms",
+      "runs": 1536,
+      "towns": 14.515625,
+      "peak": 14.515625,
+      "lost": 0,
+      "gap": 10974.39690772502,
+      "garrisonShortYears": 0,
+      "water": 0.8523957587355172,
+      "monument": 12003215.69803211
+    },
+    {
+      "policy": "military_from_monuments",
+      "runs": 1536,
+      "towns": 12.25,
+      "peak": 12.25,
+      "lost": 0,
+      "gap": 0,
+      "garrisonShortYears": 0,
+      "water": 0.8578330687729636,
+      "monument": 0
+    },
+    {
+      "policy": "military_from_irrigation",
+      "runs": 1536,
+      "towns": 12.25,
+      "peak": 12.25,
+      "lost": 0,
+      "gap": 0,
+      "garrisonShortYears": 0,
+      "water": 0.5327089079675883,
+      "monument": 11400512.430169186
+    },
+    {
+      "policy": "irrigation_from_monuments",
+      "runs": 1536,
+      "towns": 6,
+      "peak": 6,
+      "lost": 0,
+      "gap": 0,
+      "garrisonShortYears": 0,
+      "water": 0.9831658529750787,
+      "monument": 0
+    },
+    {
+      "policy": "hold_balanced",
+      "runs": 256,
+      "towns": 6,
+      "peak": 6,
+      "lost": 0,
+      "gap": 0,
+      "garrisonShortYears": 0,
+      "water": 0.9902336742165967,
+      "monument": 9425543.690408034
+    },
+    {
+      "policy": "shift_army_to_monuments",
+      "runs": 256,
+      "towns": 3,
+      "peak": 6,
+      "lost": 3,
+      "gap": 0,
+      "garrisonShortYears": 4,
+      "water": 0.9902336742165967,
+      "monument": 13752564.165567378
+    },
+    {
+      "policy": "shift_irrigation_to_army",
+      "runs": 256,
+      "towns": 12.5,
+      "peak": 12.5,
+      "lost": 0,
+      "gap": 0,
+      "garrisonShortYears": 0,
+      "water": 0.42090250167384413,
+      "monument": 10600136.108970638
+    },
+    {
+      "policy": "shift_farms_to_army",
+      "runs": 256,
+      "towns": 12.5,
+      "peak": 12.5,
+      "lost": 0,
+      "gap": 0,
+      "garrisonShortYears": 0,
+      "water": 0.9693088484283029,
+      "monument": 10600136.108970638
+    }
+  ]
+}

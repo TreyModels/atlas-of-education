@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Monsoon and state growth · Angkor literature account 01</title><link rel="stylesheet" href="../styles.css"></head>
+<body><header class="mast"><div class="frame mast-row"><a class="atlas-back" href="../index.html#monsoon" data-atlas-back>&larr; Atlas</a><a class="brand" href="../index.html#monsoon">Atlas Worlds · Angkor</a><a class="archive" href="angkor-sequence.html">Research sequence ↗</a></div></header>
+<main class="frame catalog"><p class="eyebrow">LITERATURE ACCOUNT 01 · UNDER ACTIVE EXAMINATION</p>
+<h1>Monsoon and state growth</h1>
+<p>Victor Lieberman and Brendan Buckley's 2012 account connects monsoon variation to the rise and fragmentation of early mainland Southeast Asian kingdoms. Buckley and colleagues' 2010 reconstruction supplies the annual climate series used here. The Atlas formalization makes an executable comparison using those data and the existing Atlas population-and-upkeep model.</p>
+<section class="evidence"><h2>The claim and the implementation</h2>
+<p>The published claim is that climate can support expansion across generations, then contribute to political vulnerability when conditions change. The current run tests the later exposure. It uses the NOAA March–May Palmer Drought Severity Index (PDSI) for 1250–1450. Before 1250 the older engine retains its synthetic weather and initialization. All six dated explanation switches are off. Background successions remain.</p>
+<p>We translate the index into a crop-weather factor: clamp(1 + response × PDSI, 0.4, 1.15), followed by the engine's hydraulic buffering. Three response values test how much the result depends on that translation. The papers do not provide these crop coefficients or the Atlas social equations. Positive PDSI is not used as a direct measure of flood damage.</p>
+<p class="source-links"><a href="https://www.cambridge.org/core/journals/modern-asian-studies/article/abs/impact-of-climate-on-southeast-asia-circa-9501820-new-findings/4EA47A9F9791A563B829EE6ACABAAC66">Lieberman &amp; Buckley · 2012 account ↗</a><a href="https://doi.org/10.1073/pnas.0910827107">Buckley et al. · 2010 reconstruction ↗</a><a href="https://www.ncei.noaa.gov/pub/data/paleo/treering/reconstructions/asia/vietnam/bidoup-nui-ba2010pdsi.txt">NOAA original data ↗</a></p></section>
+<section class="evidence"><h2>What 2,000 matched draws show</h2>
+<div class="table-scroll"><table><thead><tr><th>Crop response per PDSI unit</th><th>Draws with sustained decline</th><th>Median onset among declines</th></tr></thead><tbody>
+<tr><th>0 · neutral after 1250</th><td>0 / 2,000</td><td>—</td></tr>
+<tr><th>0.04</th><td>217 / 2,000</td><td>1402</td></tr>
+<tr><th>0.07</th><td>1,260 / 2,000</td><td>1362</td></tr>
+<tr><th>0.10</th><td>1,657 / 2,000</td><td>1338</td></tr>
+</tbody></table></div>
+<p>At the middle crop response, the median core-activity index in 1450 is 89.4 relative to 100 in 1300. The scoring rule requires 15 years below 85% of the run's 1250–1290 mean. These thresholds translate a historical question into a model test and remain open to review.</p>
+<p>The engine defines core activity as court presence multiplied by regional population. It cannot independently explain elite withdrawal, residential change and rural survival. The run's timing therefore needs the separate archaeological checks in the next experiments. The live chart is one parameter draw. The cards summarize all 2,000 completed draws.</p>
+<p class="source-links"><a href="../index.html#monsoon">Run this account ↗</a><a href="buckley/results.csv">Download all 8,000 results · CSV ↗</a><a href="buckley/buckley-1250-1450.csv">Download the climate subset · CSV ↗</a><a href="../engines/monsoon.js">Inspect browser equations ↗</a><a href="buckley/run.cjs">Review reproduction script ↗</a></p></section>
+<section class="evidence"><h2>What passes into the sequence</h2><p>The published annual climate series is the input to this account. Its normalized population output stays within this model until the geographic denominators are reconciled. In the separate signalling and obligations experiments, the handoff is an annual pledge and matching harvest draw. The sequence page states each connection explicitly.</p></section>
+</main><script>(function(){var go=function(fallback){return function(e){if(document.referrer&&new URL(document.referrer).origin===location.origin&&history.length>1){e.preventDefault();history.back();}else{e.preventDefault();location.href=fallback;}};};document.querySelectorAll('[data-atlas-back]').forEach(function(a){a.addEventListener('click',go(a.getAttribute('href')));});})();</script></body></html>
