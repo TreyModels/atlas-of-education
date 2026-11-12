@@ -1,7 +1,7 @@
 import { worlds } from '../models'
 import { schoolFutures } from '../components/SchoolFutures'
 
-export type ModelFamily = 'education' | 'systems' | 'planning' | 'angkor' | 'fertility' | 'shadow'
+export type ModelFamily = 'education' | 'systems' | 'planning' | 'angkor' | 'fertility' | 'shadow' | 'deephistory'
 export type CatalogueItem = {
   id: string
   family: ModelFamily
@@ -80,8 +80,13 @@ const shadow: CatalogueItem[] = [
   { id: 'shadow-dhs', family: 'shadow', title: 'Credential-floor DHS test', question: 'Who leaves school? Three structures predict different shares of leavers from the poorest 40% of households, checked against the Cambodia DHS.', method: 'Code & data · download', format: 'Classic workbench', href: 'research/shadow/credential_floor_dhs.zip', keywords: 'credential floor DHS Cambodia poorest households download' },
 ]
 
-export const catalogue: CatalogueItem[] = [...education, ...systems, ...planning, ...angkor, ...fertility, ...shadow]
-export const modelFamilies: ModelFamily[] = ['education', 'systems', 'planning', 'angkor', 'fertility', 'shadow']
+const deephistory: CatalogueItem[] = [
+  { id: 'out-of-africa', family: 'deephistory', title: 'Coast or herds? The route out of Africa', question: 'Did the first people to reach Australia follow the shoreline or the big game? 800 simulated dispersals across a drowned Ice Age landscape.', method: 'Monte Carlo · least-cost dispersal', format: 'Classic workbench', href: 'research/out-of-africa.html', keywords: 'out of Africa dispersal coast megafauna Sahul Arabia sea level Monte Carlo ice age prehistory human evolution' },
+  { id: 'out-of-africa-bundle', family: 'deephistory', title: 'Out of Africa model bundle', question: 'The Python model, the 800-run Monte Carlo results, the landscape grid and the static maps.', method: 'Code & data · download', format: 'Classic workbench', href: 'research/out-of-africa/coast-or-herds-model.zip', keywords: 'out of Africa code data download python' },
+]
+
+export const catalogue: CatalogueItem[] = [...education, ...systems, ...planning, ...angkor, ...fertility, ...shadow, ...deephistory]
+export const modelFamilies: ModelFamily[] = ['education', 'systems', 'planning', 'angkor', 'fertility', 'shadow', 'deephistory']
 export const familyItems = (family: ModelFamily) => catalogue.filter(item => item.family === family)
 export const familyCounts = Object.fromEntries(modelFamilies.map(id => [id, familyItems(id).length])) as Record<ModelFamily, number>
 export const totalModels = catalogue.length
@@ -117,6 +122,11 @@ export const familyInfo: Record<ModelFamily, { title: string; short: string; que
     question: 'Why do pupils pay their own teachers?',
     description: 'Private tutoring in Cambodia as a system: three rival explanations calibrated against published patterns, and the policies they agree on.',
   },
+  deephistory: {
+    title: 'Deep history · Human dispersal', short: 'Deep history',
+    question: 'How did people get from Africa to Australia?',
+    description: 'A paleo-landscape model of the exit from Africa 85,000–65,000 years ago: coast-huggers, big-game hunters and mixed foragers raced across shifting sea levels and Green Arabia.',
+  },
 }
 
 export const familyResearch: Record<ModelFamily, { label: string; href: string }[]> = {
@@ -144,6 +154,10 @@ export const familyResearch: Record<ModelFamily, { label: string; href: string }
     { label: 'Shadow education lab', href: 'research/shadow-education.html' },
     { label: 'Tutoring ABM bundle', href: 'research/shadow/tutoring_abm.zip' },
     { label: 'Credential-floor DHS test', href: 'research/shadow/credential_floor_dhs.zip' },
+  ],
+  deephistory: [
+    { label: 'Coast or herds? Full write-up', href: 'research/out-of-africa.html' },
+    { label: 'Model bundle · code, data & maps', href: 'research/out-of-africa/coast-or-herds-model.zip' },
   ],
 }
 

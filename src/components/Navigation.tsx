@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
-import { ArrowRight, ArrowUpRight, Baby, BookOpen, ChevronDown, FlaskConical, GraduationCap, Home, Landmark, Menu, Network, School, Search, X } from 'lucide-react'
+import { ArrowRight, ArrowUpRight, Baby, BookOpen, Footprints, ChevronDown, FlaskConical, GraduationCap, Home, Landmark, Menu, Network, School, Search, X } from 'lucide-react'
 import { worlds } from '../models'
 import type { Language, Translate } from '../types'
 import { catalogue, familyInfo } from '../data/model-catalogue'
@@ -84,6 +84,7 @@ export function Navigation({ route, navigate, t, language, setLanguage }: Naviga
     { id: 'story-angkor', label: familyInfo.angkor.short, icon: Landmark, family: 'angkor' },
     { id: 'story-fertility', label: familyInfo.fertility.short, icon: Baby, family: 'fertility' },
     { id: 'story-shadow', label: familyInfo.shadow.short, icon: School, family: 'shadow' },
+    { id: 'story-deephistory', label: familyInfo.deephistory.short, icon: Footprints, family: 'deephistory' },
   ]
 
   const navContent = <>
@@ -100,6 +101,7 @@ export function Navigation({ route, navigate, t, language, setLanguage }: Naviga
       <a href="research/index.html"><ArrowUpRight size={17} /><span>{t('Research library')}</span></a>
       <a href="research/fertility.html"><ArrowUpRight size={17} /><span>{t('Fertility collapse lab')}</span></a>
       <a href="research/shadow-education.html"><ArrowUpRight size={17} /><span>{t('Shadow education lab')}</span></a>
+      <a href="research/out-of-africa.html"><ArrowUpRight size={17} /><span>{t('Coast or herds? Out of Africa')}</span></a>
       <a href="reference/education/index.html"><ArrowUpRight size={17} /><span>{t('Full Education Atlas')}</span></a>
     </div>
   </>

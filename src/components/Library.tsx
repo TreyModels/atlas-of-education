@@ -6,7 +6,7 @@ import { catalogue, classicLabs, familyCounts, familyInfo, familyItems, totalMod
 import { modelFamilies } from '../data/model-catalogue'
 const families = modelFamilies
 const sectionIds: Record<ModelFamily, string> = {
-  education: 'education-models', systems: 'school-systems', planning: 'planning-lab', angkor: 'angkor-case', fertility: 'fertility-models', shadow: 'shadow-models',
+  education: 'education-models', systems: 'school-systems', planning: 'planning-lab', angkor: 'angkor-case', fertility: 'fertility-models', shadow: 'shadow-models', deephistory: 'deep-history',
 }
 
 export function ModelLink({ item, t, navigate }: { item: CatalogueItem; t: Translate; navigate: (id: string) => void }) {
@@ -58,29 +58,48 @@ export function Library({ t, navigate }: { t: Translate; navigate: (id: string) 
   }
 
   return <main id="main-content">
-    <section className="library-hero shell">
-      <div className="hero-copy">
-        <p className="eyebrow">{t('THE ATLAS OF EDUCATION · COMPLETE MODEL LIBRARY')}</p>
-        <h1>{t('Systems you can interrogate.')}</h1>
-        <p className="hero-lede">{t('{n} catalogue entries for education, demography, planning and historical systems. Choose a question, inspect the assumptions, and explore the evidence.').replace('{n}', String(totalModels))}</p>
-        <div className="hero-actions">
-          <button className="button button-primary" onClick={() => navigate('home/catalogue')}>{t('Browse all {n} entries').replace('{n}', String(totalModels))}<ArrowRight size={18} /></button>
-          <button className="text-link" onClick={() => navigate('angkor-guide')}>{t('Take the Angkor guided sequence')}<ArrowUpRight size={16} /></button>
-        </div>
+    <section className="landing-hero shell">
+      <p className="eyebrow">{t('COMPUTATIONAL SOCIAL SCIENCE · BY TREY MENEFEE')}</p>
+      <h1>{t('Social science you can run.')}</h1>
+      <p className="landing-lede">{t('These are simulations of how societies work: why families pay for tutoring, why fertility collapsed across East Asia, why Angkor declined, how people walked out of Africa. Each one turns an argument into rules a computer can play out, thousands of times. Change the assumptions, run it, and see whether the story still holds.')}</p>
+      <div className="hero-actions">
+        <button className="button button-primary" onClick={() => document.getElementById('questions')?.scrollIntoView({ block: 'start' })}>{t('Start with a question')}<ArrowRight size={18} /></button>
+        <a className="text-link" href="https://comparativist.substack.com" target="_blank" rel="noreferrer">{t('Read the essays on The Comparativist')}<ArrowUpRight size={16} /></a>
       </div>
-      <div className="hero-index" aria-label={t('Atlas model library summary')}>
-        <div className="index-top"><span>{t('COMPLETE INVENTORY')}</span><span>2026</span></div>
-        <div className="inventory-total"><strong>{totalModels}</strong><span>{t('catalogue entries')}<br />{t('one searchable library')}</span></div>
-        <div className="inventory-families">
-          {families.map(family => <button key={family} onClick={() => choose(family)}><span>{t(familyInfo[family].short)}</span><strong>{familyCounts[family]}</strong></button>)}
-        </div>
+    </section>
+
+    <section className="landing-steps shell" aria-label={t('How it works')}>
+      <ol>
+        <li><span>1</span><strong>{t('Pick a question')}</strong><p>{t('Each collection starts from a real puzzle and a short story of what the models found.')}</p></li>
+        <li><span>2</span><strong>{t('Change the assumptions')}</strong><p>{t('Move the sliders: school fees, sea level, teacher pay, rainfall. Everything runs in your browser, nothing is sent anywhere.')}</p></li>
+        <li><span>3</span><strong>{t('See what holds up')}</strong><p>{t('Every finding is labelled: measured from data, produced by a simulation, ruled out, or still open.')}</p></li>
+      </ol>
+    </section>
+
+    <section className="landing-questions shell" id="questions">
+      <div className="landing-section-head"><p className="eyebrow">{t('START WITH A QUESTION')}</p><h2>{t('{n} puzzles, {m} models.').replace('{n}', String(families.length)).replace('{m}', String(totalModels))}</h2></div>
+      <div className="question-grid">
+        {families.map(family => <button key={family} className={`question-card question-${family}`} onClick={() => navigate(`story-${family}`)}>
+          <span className="question-meta">{t(familyInfo[family].short)}<i>·</i>{familyCounts[family]}</span>
+          <strong>{t(familyInfo[family].question)}</strong>
+          <span className="question-go">{t('Read what the models found')}<ArrowRight size={15} /></span>
+        </button>)}
       </div>
+    </section>
+
+    <section className="landing-methods shell">
+      <div className="landing-section-head"><p className="eyebrow">{t('HOW TO READ THESE MODELS')}</p><h2>{t('No equations required.')}</h2></div>
+      <dl>
+        <div><dt>{t('Agent-based models')}</dt><dd>{t('Give thousands of simulated people, teachers or households simple rules, let them interact, and watch what patterns emerge at the level of the whole society.')}</dd></div>
+        <div><dt>{t('Monte Carlo')}</dt><dd>{t('When we do not know an input, say how fast people walked, we draw it at random from a plausible range and run the model again. Hundreds of runs show which conclusions survive our ignorance and which depend on one guess.')}</dd></div>
+        <div><dt>{t('Fitting to evidence')}</dt><dd>{t('Keep only the simulated worlds that reproduce what we actually observe, then ask what those surviving worlds have in common.')}</dd></div>
+      </dl>
     </section>
 
     <section className="catalogue-browser shell" id="catalogue">
       <div className="catalogue-intro">
-        <div><p className="eyebrow">{t('FIND YOUR STARTING POINT')}</p><h2>{t('{n} collections. Nothing hidden in an archive.').replace('{n}', String(families.length))}</h2></div>
-        <p>{t('Atlas workbenches use the shared multilingual interface. Classic entries include original tools, stored experiments and research downloads.')}</p>
+        <div><p className="eyebrow">{t('THE FULL LIBRARY')}</p><h2>{t('Every model, searchable.')}</h2></div>
+        <p>{t('Interactive models open here. Entries marked with ↗ open a standalone lab, a full write-up or a code-and-data download.')}</p>
       </div>
 
       <div className="collection-tabs" role="group" aria-label={t('Filter by collection')}>

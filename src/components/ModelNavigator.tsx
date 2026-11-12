@@ -13,6 +13,7 @@ const families: { id: ModelFamily; entry: string }[] = [
   { id: 'angkor', entry: 'angkor-guide' },
   { id: 'fertility', entry: 'home/fertility-models' },
   { id: 'shadow', entry: 'home/shadow-models' },
+  { id: 'deephistory', entry: 'home/deep-history' },
 ]
 
 export function ModelNavigator({ route, navigate, t }: { route: string; navigate: (id: string) => void; t: Translate }) {

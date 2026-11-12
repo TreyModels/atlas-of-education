@@ -15,10 +15,42 @@ export type FamilyStory = {
   lede: string
   sections: StorySection[]
   bottomLine?: string
-  cta?: { label: string; route: string }
+  cta?: { label: string; route?: string; href?: string }
 }
 
 export const familyStories: Record<ModelFamily, FamilyStory> = {
+  deephistory: {
+    kicker: 'What our models support',
+    title: 'Coast or herds? How people got from Africa to Australia',
+    lede: 'Between about 85,000 and 65,000 years ago, modern humans spread from the Horn of Africa to Sahul (Australia and New Guinea). A Monte Carlo model races three ways of making a living across a landscape where sea level and rainfall kept changing, 800 times over.',
+    sections: [
+      {
+        heading: 'The shoreline is the fast road',
+        blocks: [
+          { kind: 'para', tag: 'sim', text: 'Given the same climate, sea level and walking speed, coast-huggers reach Sahul before big-game hunters in 75% of paired runs, by a median of about 1,100 years.' },
+          { kind: 'para', tag: 'data', text: 'Sea level sat 60–90 m below today. The Persian Gulf was a dry river valley and the Sunda shelf joined Sumatra, Java and Borneo to Asia, so the Ice Age coastline now lies 50–150 km offshore.' },
+          { kind: 'para', tag: 'sim', text: 'That is why the coastal story is hard to prove: a median 46% of the coastal route is underwater today, against 33% for the inland route.' },
+        ],
+      },
+      {
+        heading: 'But pure beachcombing does not fit the sites',
+        blocks: [
+          { kind: 'table', tag: 'sim', caption: 'Share of runs consistent with all long-chronology evidence', head: ['Strategy', 'Fits the evidence'], rows: [['Coastal only', '33%'], ['Big-game hunting', '48%'], ['Mixed forager', '62%']] },
+          { kind: 'para', tag: 'data', text: 'People lived by lakes in interior Arabia during wet phases, and a coast-only population rarely gets there. The best fit is a mixed forager: coast-anchored, but pushing up rivers and into green basins when the rains came.' },
+        ],
+      },
+      {
+        heading: 'One assumption decides it',
+        blocks: [
+          { kind: 'para', tag: 'sim', text: 'If the shore was at least about 85% as rich as good savanna, the coastal route wins almost every time (95% of runs in the richest quarter). In the poorest quarter it wins only 36%.' },
+          { kind: 'para', tag: 'open', text: 'Fitting the model to known sites pins down speed (about 3 km a year) and an early exit around 80,000 years ago, but leaves coastal richness exactly where it started. Only drowned sites, mostly in 10–50 m of water, can settle it.' },
+          { kind: 'para', tag: 'method', text: 'Each run draws every uncertain input at random — sea level, the timing of wet phases, walking speed, coastal productivity, sea-crossing ability — and all three strategies run on the same draw, so comparisons are paired.' },
+        ],
+      },
+    ],
+    bottomLine: 'The coast was probably a highway, not the whole road. People who used the shoreline but stepped inland when rain opened the interior fit the evidence best, and the decisive sites are on the seabed.',
+    cta: { label: 'Open the full write-up', href: 'research/out-of-africa.html' },
+  },
   fertility: {
     kicker: 'What our models support',
     title: 'Why fertility fell, and what can still move it',

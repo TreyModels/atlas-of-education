@@ -45,7 +45,7 @@ export function StoryPage({ family, t, navigate }: { family: ModelFamily; t: Tra
       <p className="eyebrow">{t(familyStories[family].kicker)} · {t('Class {i} of {n}').replace('{i}', String(index + 1).padStart(2, '0')).replace('{n}', String(modelFamilies.length).padStart(2, '0'))}</p>
       <h1>{t(story.title)}</h1>
       <p className="story-lede">{t(story.lede)}</p>
-      {story.cta && <p><button className="button button-primary" onClick={() => navigate(story.cta!.route)}>{t(story.cta.label)}<ArrowRight size={17} /></button></p>}
+      {story.cta && <p>{story.cta.href ? <a className="button button-primary" href={story.cta.href}>{t(story.cta.label)}<ArrowUpRight size={17} /></a> : <button className="button button-primary" onClick={() => navigate(story.cta!.route!)}>{t(story.cta.label)}<ArrowRight size={17} /></button>}</p>}
       <p className="story-legend">
         {(Object.keys(tagMeta) as ClaimTag[]).map(tag => <span key={tag}><Tag tag={tag} t={t} />{t({ data: 'measured from real data', sim: 'produced by a simulation', 'ruled-out': 'tested and rejected', open: 'still unsettled', method: 'a computational tool' }[tag])}</span>)}
       </p>
