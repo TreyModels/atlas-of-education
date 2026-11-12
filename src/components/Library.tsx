@@ -48,9 +48,9 @@ export function Library({ t, navigate }: { t: Translate; navigate: (id: string) 
     return catalogue.filter(item =>
       (active === 'all' || item.family === active) &&
       (!classicOnly || item.format === 'Classic workbench') &&
-      (!needle || `${item.title} ${item.question} ${item.method} ${item.keywords ?? ''}`.toLowerCase().includes(needle)),
+      (!needle || `${item.title} ${item.question} ${item.method} ${item.keywords ?? ''} ${t(item.title)} ${t(item.question)} ${t(item.method)} ${t(familyInfo[item.family].short)}`.toLowerCase().includes(needle)),
     )
-  }, [active, query, classicOnly])
+  }, [active, query, classicOnly, t])
   const visibleFamilies = families.filter(family => active === 'all' || active === family)
   const choose = (family: ModelFamily | 'all') => {
     setActive(family)

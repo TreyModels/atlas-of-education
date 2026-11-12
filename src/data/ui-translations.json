@@ -2558,5 +2558,17 @@
  "Monte Carlo · least-cost dispersal": {
   "zh-Hans": "蒙特卡洛 · 最小成本扩散",
   "vi": "Monte Carlo · phát tán chi phí thấp nhất"
+ },
+ "Did the first people to reach Australia follow the shoreline or the big game? 800 simulated dispersals across a drowned Ice Age landscape.": {
+  "zh-Hans": "最早抵达澳大利亚的人是沿着海岸前行，还是追随大型猎物？在如今已被海水淹没的冰期地貌上模拟了800次迁徙。",
+  "vi": "Những người đầu tiên đến Úc đi theo bờ biển hay theo thú lớn? Khám phá 800 lần mô phỏng di cư qua cảnh quan Kỷ Băng hà nay đã chìm dưới biển."
+ },
+ "The Python model, the 800-run Monte Carlo results, the landscape grid and the static maps.": {
+  "zh-Hans": "包含 Python 模型、800次蒙特卡洛模拟结果、地貌网格和静态地图。",
+  "vi": "Bao gồm mô hình Python, kết quả 800 lần chạy Monte Carlo, lưới cảnh quan và các bản đồ tĩnh."
+ },
+ "A paleo-landscape model of the exit from Africa 85,000–65,000 years ago: coast-huggers, big-game hunters and mixed foragers raced across shifting sea levels and Green Arabia.": {
+  "zh-Hans": "模拟距今8.5万至6.5万年前人类走出非洲的古地貌：沿海迁徙者、大型猎物狩猎者和混合觅食者穿越海平面不断变化的地带与绿色阿拉伯。",
+  "vi": "Mô hình cổ cảnh quan về cuộc di cư khỏi châu Phi 85.000–65.000 năm trước: những người đi ven biển, săn thú lớn và kiếm ăn hỗn hợp vượt qua mực nước biển biến đổi và vùng Ả Rập xanh."
  }
 }

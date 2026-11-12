@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
-import { ArrowRight, ArrowUpRight, Baby, BookOpen, Footprints, ChevronDown, FlaskConical, GraduationCap, Home, Landmark, Menu, Network, School, Search, X } from 'lucide-react'
+import { ArrowRight, ArrowUpRight, Baby, BookOpen, Footprints, ChevronDown, FlaskConical, Globe2, GraduationCap, Home, Landmark, Menu, Network, School, Search, X } from 'lucide-react'
 import { worlds } from '../models'
 import type { Language, Translate } from '../types'
 import { catalogue, familyInfo } from '../data/model-catalogue'
@@ -32,9 +32,10 @@ function Brand({ onClick, t }: { onClick: () => void; t: Translate }) {
 
 function LanguagePicker({ language, setLanguage }: Pick<NavigationProps, 'language' | 'setLanguage'>) {
   return <label className="language-picker">
-    <span className="sr-only">Language / 语言</span>
-    <select aria-label="Language / 语言" value={language} onChange={event => setLanguage(event.target.value as Language)}>
-      <option value="en">EN</option><option value="zh-Hans">中文</option><option value="vi">Tiếng Việt</option>
+    <Globe2 size={19} aria-hidden="true" />
+    <span className="sr-only">Language / 语言 / Ngôn ngữ</span>
+    <select aria-label="Language / 语言 / Ngôn ngữ" value={language} onChange={event => setLanguage(event.target.value as Language)}>
+      <option value="en">English</option><option value="zh-Hans">简体中文</option><option value="vi">Tiếng Việt</option>
     </select><ChevronDown size={13} aria-hidden="true" />
   </label>
 }
@@ -49,8 +50,8 @@ export function Navigation({ route, navigate, t, language, setLanguage }: Naviga
 
   const results = useMemo(() => {
     const needle = query.trim().toLowerCase()
-    return catalogue.filter(model => !needle || `${model.title} ${model.question} ${model.method} ${model.keywords ?? ''}`.toLowerCase().includes(needle))
-  }, [query])
+    return catalogue.filter(model => !needle || `${model.title} ${model.question} ${model.method} ${model.keywords ?? ''} ${t(model.title)} ${t(model.question)} ${t(model.method)} ${t(familyInfo[model.family].short)}`.toLowerCase().includes(needle))
+  }, [query, t])
 
   useEffect(() => {
     setDrawerOpen(false)
