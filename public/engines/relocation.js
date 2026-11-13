@@ -1,12 +1,14 @@
 'use strict';
 globalThis.AngkorRelocation=(()=>{
- const defaults={outside:1.2,portability:.75,movingCost:.25,localRepair:.5,climate:'drought',mobility:'open',seed:42};
+ // coordination: harvest multiplier, new default 1 (no causal effect). Old behaviour: 5**.227.
+ // waterFloor: lower bound on water condition, new default 0 (no floor). Old behaviour: 0.1.
+ const defaults={outside:1.2,portability:.75,movingCost:.25,localRepair:.5,climate:'drought',mobility:'open',seed:42,coordination:1,waterFloor:0};
  const clamp=(x,a,b)=>Math.max(a,Math.min(b,x));
  const rng=seed=>{let s=seed>>>0;return()=>((s=(Math.imul(s,1664525)+1013904223)>>>0)/4294967296);};
  const initial=(rural,core,land,elite)=>({rural,core,land,elite,water:.6,temple:0,store:.03});
- function economy(s,weather,localRepair,eliteShare){
+ function economy(s,weather,localRepair,eliteShare,coord,waterFloor){
   const before=s.store,people=s.rural+s.core+s.elite;
-  const harvest=s.land*1.5*5**.227*(.65+.35*s.water)*weather*Math.min(1,s.rural/(.65*s.land));
+  const harvest=s.land*1.5*coord*(.65+.35*s.water)*weather*Math.min(1,s.rural/(.65*s.land));
   // Local upkeep can continue independently of elite participation.
   const maintenanceNeed=s.land*.035;
   const tax=harvest*.2*(.3+.7*eliteShare),retained=harvest-tax;
@@ -24,7 +26,7 @@ globalThis.AngkorRelocation=(()=>{
   const deposit=Math.min(budget*.35,Math.max(0,people-s.store));s.store+=deposit;budget-=deposit;
   const reclamation=Math.min(budget*.55,(1-s.land)*.15);budget-=reclamation;
   const construction=budget;s.temple+=construction;s.land=Math.min(1,s.land+reclamation*.6);
-  const upkeep=localUpkeep+courtUpkeep;s.water=clamp(s.water+.08*(upkeep/maintenanceNeed-s.water),.1,1);
+  const upkeep=localUpkeep+courtUpkeep;s.water=clamp(s.water+.08*(upkeep/maintenanceNeed-s.water),waterFloor,1);
   const growth=.012*clamp((harvest-people)/people,-1,1)-.08*hunger;
   const demographicChange=(s.rural+s.core)*growth;s.rural*=1+growth;s.core*=1+growth;
   const foodUsed=farmFood+urbanFood+release;
@@ -40,8 +42,8 @@ globalThis.AngkorRelocation=(()=>{
   for(let year=0;year<=240;year++){
    const noise=1+.04*(random()-.5),dry=p.climate==='drought'&&((year>=150&&year<175)||(year>=190&&year<205));
    const oldShare=old.elite/eliteTotal, southShare=south.elite/eliteTotal;
-   const a=economy(old,noise*(dry?.62:1),p.localRepair,oldShare);
-   const b=economy(south,noise*(dry?.85:1),p.localRepair,southShare);
+   const a=economy(old,noise*(dry?.62:1),p.localRepair,oldShare,p.coordination,p.waterFloor);
+   const b=economy(south,noise*(dry?.85:1),p.localRepair,southShare,p.coordination,p.waterFloor);
    // The southern climate and market advantage are scenario assumptions.
    const oldUtility=a.returnIndex;
    const southUtility=p.outside*b.returnIndex-(1-p.portability)*.5*old.water;

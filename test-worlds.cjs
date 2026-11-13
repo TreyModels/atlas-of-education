@@ -199,8 +199,10 @@ test('published provisioning ratios preserve scale and keep distance separate',(
  assert.ok(Math.abs(M.run({distance:20}).distanceOutput-100*2**(-.846))<1e-12);
  assert.equal(b.periods.at(-1).population,213521);
 });
-test('Petri ledger balances and matched drought coordination knockout changes recovery',()=>{
- const M=ctx.AngkorPetri,a=M.run(),b=M.run({knockout:'coordination'});
+test('Petri ledger balances; under the old assumed multiplier, coordination knockout changes recovery',()=>{
+ const M=ctx.AngkorPetri,old={coordination:5**.227,waterFloor:.1},a=M.run(old),b=M.run({...old,knockout:'coordination'});
+ const d=M.run(),k=M.run({knockout:'coordination'});
+ assert.ok(d.maxLedgerError<1e-10&&Math.abs(d.retained-k.retained)<1e-12,'default multiplier 1: knockout is a no-op');
  assert.ok(a.maxLedgerError<1e-10&&b.maxLedgerError<1e-10);
  assert.ok(a.retained>.99&&b.retained<.8);
  assert.ok(b.gap>a.gap);
@@ -218,8 +220,8 @@ test('relocation conserves migrants and food at both centres',()=>{
   if(mobility==='elite-only')assert.ok(r.rows.every(x=>x.workerMove===0));
  }
 });
-test('moving hurdle changes elite exit under the same outside opportunity',()=>{
- const M=ctx.AngkorRelocation,a=M.run({movingCost:.05}),b=M.run({movingCost:.5});
+test('under the old assumed multiplier, moving hurdle changes elite exit',()=>{
+ const M=ctx.AngkorRelocation,old={coordination:5**.227,waterFloor:.1},a=M.run({...old,movingCost:.05}),b=M.run({...old,movingCost:.5});
  assert.ok(a.finalEliteShare<b.finalEliteShare);
  assert.ok(a.exitYear!==null&&b.exitYear===null);
 });

@@ -1,9 +1,11 @@
-const fs=require('fs'),vm=require('vm'),c=vm.createContext({});vm.runInContext(fs.readFileSync(__dirname+'/dist/engines/relocation.js','utf8'),c);const M=c.AngkorRelocation,rows=[];
+const fs=require('fs'),vm=require('vm'),c=vm.createContext({});
+const ENGINE=process.env.ENGINE||__dirname+'/public/engines/relocation.js',OUT=process.env.OUT||__dirname+'/experiments/angkor-review/results';
+vm.runInContext(fs.readFileSync(ENGINE,'utf8'),c);const M=c.AngkorRelocation,rows=[];
 for(const outside of [.8,1.2,1.6])for(const movingCost of [.05,.25,.5])for(const portability of [.25,.75])for(const localRepair of [0,.75])for(const climate of ['stable','drought'])for(let seed=1;seed<=32;seed++){
  const controls={outside,movingCost,portability,localRepair,climate,seed};const r=M.run(controls),closed=M.run({...controls,mobility:'closed'}),eliteOnly=M.run({...controls,mobility:'elite-only'}),workersOnly=M.run({...controls,mobility:'workers-only'});
  if(r.maxMassError>1e-10||r.maxLedgerError>1e-10||closed.maxLedgerError>1e-10)throw Error('Accounting failed');
  rows.push({...controls,exitYear:r.exitYear,finalEliteShare:r.finalEliteShare,oldRuralRetained:r.oldRuralRetained,oldCoreRetained:r.oldCoreRetained,oldWater:r.oldWater,closedWater:closed.oldWater,eliteOnlyWater:eliteOnly.oldWater,workersOnlyWater:workersOnly.oldWater,eliteOnlyExit:eliteOnly.exitYear,waterDelta:r.oldWater-closed.oldWater,coreDelta:r.oldCoreRetained-closed.oldCoreRetained,ruralDelta:r.oldRuralRetained-closed.oldRuralRetained,maxMassError:r.maxMassError,maxLedgerError:r.maxLedgerError});
 }
-const keys=Object.keys(rows[0]);fs.writeFileSync(__dirname+'/dist/research/relocation-results.csv',[keys.join(','),...rows.map(r=>keys.map(k=>r[k]??'').join(','))].join('\n'));
+const keys=Object.keys(rows[0]);fs.mkdirSync(OUT,{recursive:true});fs.writeFileSync(OUT+'/relocation-results.csv',[keys.join(','),...rows.map(r=>keys.map(k=>r[k]??'').join(','))].join('\n'));
 const summary=[];for(const outside of [.8,1.2,1.6])for(const climate of ['stable','drought']){const r=rows.filter(x=>x.outside===outside&&x.climate===climate),mean=k=>r.reduce((s,x)=>s+x[k],0)/r.length;summary.push({outside,climate,runs:r.length,exits:r.filter(x=>x.exitYear!==null).length,finalEliteShare:mean('finalEliteShare'),oldRuralRetained:mean('oldRuralRetained'),oldCoreRetained:mean('oldCoreRetained'),waterDelta:mean('waterDelta')});}
-fs.writeFileSync(__dirname+'/dist/research/relocation-summary.json',JSON.stringify(summary,null,2));console.log(JSON.stringify(summary,null,2));
+fs.writeFileSync(OUT+'/relocation-summary.json',JSON.stringify(summary,null,2));console.log(JSON.stringify(summary,null,2));

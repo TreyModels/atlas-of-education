@@ -1,0 +1,12 @@
+stable none peak 1.015 retained 0.946 gap 0.698
+stable coordination peak 1.015 retained 0.946 gap 0.698
+stable water peak 1.311 retained 1.000 gap 0.000
+stable transport peak 1.019 retained 0.955 gap 0.492
+stable relief peak 1.015 retained 0.946 gap 0.727
+stable temple peak 1.295 retained 1.000 gap 0.000
+drought none peak 0.922 retained 0.665 gap 4.402
+drought coordination peak 0.922 retained 0.665 gap 4.402
+drought water peak 1.140 retained 1.000 gap 0.912
+drought transport peak 0.919 retained 0.678 gap 4.243
+drought relief peak 0.922 retained 0.651 gap 4.602
+drought temple peak 0.980 retained 1.000 gap 2.084

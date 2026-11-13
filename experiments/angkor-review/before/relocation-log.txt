@@ -1,0 +1,62 @@
+[
+  {
+    "outside": 0.8,
+    "climate": "stable",
+    "runs": 384,
+    "exits": 0,
+    "finalEliteShare": 0.9713034972755487,
+    "oldRuralRetained": 0.9851302243478425,
+    "oldCoreRetained": 0.9859172193319427,
+    "waterDelta": -0.06720335769359018
+  },
+  {
+    "outside": 0.8,
+    "climate": "drought",
+    "runs": 384,
+    "exits": 0,
+    "finalEliteShare": 0.9591403721154106,
+    "oldRuralRetained": 1,
+    "oldCoreRetained": 0.9837066137466771,
+    "waterDelta": 0.0858297954710222
+  },
+  {
+    "outside": 1.2,
+    "climate": "stable",
+    "runs": 384,
+    "exits": 96,
+    "finalEliteShare": 0.6816829960106041,
+    "oldRuralRetained": 0.9915903217748799,
+    "oldCoreRetained": 0.9394392865648747,
+    "waterDelta": -0.019033438847870288
+  },
+  {
+    "outside": 1.2,
+    "climate": "drought",
+    "runs": 384,
+    "exits": 142,
+    "finalEliteShare": 0.5243291602068867,
+    "oldRuralRetained": 1,
+    "oldCoreRetained": 0.8439107278748573,
+    "waterDelta": -0.00930904040341524
+  },
+  {
+    "outside": 1.6,
+    "climate": "stable",
+    "runs": 384,
+    "exits": 315,
+    "finalEliteShare": 0.16711793684496712,
+    "oldRuralRetained": 1,
+    "oldCoreRetained": 0.7707731289973347,
+    "waterDelta": 0.12139721086644056
+  },
+  {
+    "outside": 1.6,
+    "climate": "drought",
+    "runs": 384,
+    "exits": 320,
+    "finalEliteShare": 0.16413578388273953,
+    "oldRuralRetained": 1,
+    "oldCoreRetained": 0.7068064403355329,
+    "waterDelta": 0.17307596422630991
+  }
+]

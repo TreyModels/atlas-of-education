@@ -324,11 +324,6 @@
   "zh-Hans": "人口可迁往避居地而非消失。救济与抽象迁移障碍影响国家控制内的人数。防御选项捆绑劳动成本、离开障碍和再捕获；旧版本无避居地食物生产。",
   "fr": "La population peut gagner un refuge sans disparaître. Secours et obstacles abstraits modifient le contrôle de l’État. La fortification combine travail, barrières et captures ; cet ancien modèle omet la production alimentaire du refuge."
  },
- "Canals need continuing work. Here maintenance falls to 35% of its reference level from year 55. The reshuffle also changes extraction, relief and trust. Compare the maintenance-only case first. Harvest still ignores the remaining farm workforce in this version.": {
-  "vi": "Kênh cần công liên tục. Bảo trì ở đây giảm còn 35% tham chiếu từ năm 55. Đổi tinh hoa cũng đổi thu, cứu trợ, niềm tin. So trường hợp chỉ bảo trì trước. Bản này thu hoạch vẫn bỏ qua lao động ruộng còn lại.",
-  "zh-Hans": "渠道需要持续劳动。维护从第55年降至参考的35%。精英变动还改变征收、救济与信任；先比较仅维护变化。此版本收获仍忽略剩余农工。",
-  "fr": "Les canaux demandent du travail continu. L’entretien tombe à 35 % à l’année 55. Le changement des élites modifie aussi prélèvements, secours et confiance ; comparez d’abord l’entretien seul. La récolte ignore encore la main-d’œuvre restante."
- },
  "People divide work among fields and public services. Court stores pay service rations, and the refuge has its own food account. Every year balances food, labour and population. Rates remain hypothetical; there are no battles or frontier supply chains. More military service can redistribute food without proving military success.": {
   "vi": "Người chia công giữa ruộng và phục vụ công. Kho triều đình trả khẩu phần phục vụ; nơi trú có sổ thức ăn riêng. Mỗi năm cân bằng thức ăn, công và dân số. Tỷ lệ vẫn giả định; chưa có trận đánh hay tiếp vận biên giới. Thêm phục vụ quân sự có thể chia lại thức ăn mà chưa chứng minh thắng trận.",
   "zh-Hans": "劳动在农田和公共服务间分配，宫廷支付口粮，避居地有独立食物账本。粮食、劳动和人口逐年平衡。比率是假设，无战斗或边境补给；军役可分配食物而不证明军事成功。",
@@ -2571,5 +2566,10 @@
  "No structure reproduces Cambodia's full quintile profile. The model produces a cliff at the liquidity threshold, while completion in the data rises smoothly with wealth. Read the verdict as a ranking inside a model that misses the shape.": {
   "zh-Hans": "没有一种结构能复现柬埔寨完整的五分位分布：模型在流动性门槛处形成断崖，而数据中的完成率随财富平滑上升。应把结论理解为在一个未能拟合分布形状的模型内部的排序。",
   "vi": "Không cấu trúc nào tái tạo được toàn bộ phân bố theo ngũ phân vị của Campuchia: mô hình tạo ra một vách đứng tại ngưỡng thanh khoản, trong khi dữ liệu cho thấy tỷ lệ hoàn thành tăng đều theo mức giàu. Hãy đọc kết luận như một xếp hạng bên trong một mô hình chưa khớp hình dạng."
+ },
+ "Canals need continuing work. Here maintenance falls to 35% of its reference level from year 55. The reshuffle also changes extraction, relief, trust and the grievance that drives flight, all at once. Compare the maintenance-only case first. Harvest still ignores the remaining farm workforce in this version.": {
+  "vi": "Các kênh cần được tiếp tục công việc. Ở đây việc bảo trì giảm xuống còn 35% mức tham chiếu của nó kể từ năm 55. Việc tái cơ cấu cũng thay đổi khai thác, cứu trợ, niềm tin và sự bất mãn thúc đẩy việc bỏ đi, tất cả cùng một lúc. Hãy so sánh trường hợp chỉ bảo trì trước. Thu hoạch vẫn bỏ qua lực lượng lao động nông trại còn lại trong phiên bản này.",
+  "zh-Hans": "运河需要持续维护。这里的维护从第55年起降至其基准水平的35%。这次重组还同时改变了开采、救济、信任以及驱动逃离的不满情绪。请先比较仅维护的情形。在这个版本中，收割仍然忽略剩余的农场劳动力。",
+  "fr": "Les canaux nécessitent un travail continu. Ici, la maintenance tombe à 35 % de son niveau de référence à partir de l’année 55. Le remaniement modifie aussi l’extraction, les secours, la confiance et le grief qui pousse à la fuite, tous en même temps. Comparez d’abord le cas maintenance seule. La récolte ignore encore la main-d’œuvre agricole restante dans cette version."
  }
 }
