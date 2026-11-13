@@ -1,0 +1,4 @@
+variant,particles,worlds,pair_fit_rate,particle_survival_70pct,converged_share,ban_participation_median,ban_nonbuyer_instr_median
+thin,400,20,0.191,0.0075,1.0,-0.3496,-0.00166
+diversion,400,20,0.166,0.0,0.9478,-0.3525,0.00074
+favour,400,20,0.1713,0.0075,1.0,-0.3752,-0.00168

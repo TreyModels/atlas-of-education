@@ -235,8 +235,8 @@ export const familyStories: Record<ModelFamily, FamilyStory> = {
       {
         heading: 'What the calibrated worlds say',
         blocks: [
-          { kind: 'para', tag: 'sim', text: 'Even under the diversion explanation, calibrated teachers withhold almost nothing — median 0% of content held back.' },
-          { kind: 'para', tag: 'open', text: 'The evidence ratios are too sparse to rank the explanations, and only 11–18% of calibrated settings still fit in fresh random school systems. Treat the policy effects as model-conditional, not as evidence of real-world effects.' },
+          { kind: 'para', tag: 'sim', text: 'Even under the diversion explanation, calibrated teachers withhold almost nothing — median 0% of content held back. In about a fifth of fresh school systems, diversion settings withhold more than 1% (95th percentile 9%). In about a fifth of fresh school systems, diversion settings withhold more than 1% (95th percentile 9%).' },
+          { kind: 'para', tag: 'open', text: 'Recalibrated across 10 school systems, settings fit 37–44% of fresh random systems (up from 17–19%), but only 1–7% fit in most of them. The explanations agree on policy because the effect comes from code they share: removing the shared thin-market or alternative-provider channel moves all of them together, while the diversion mechanism changes nothing. Treat the policy effects as model-conditional.' },
         ],
       },
       {
@@ -247,7 +247,7 @@ export const familyStories: Record<ModelFamily, FamilyStory> = {
         ],
       },
     ],
-    bottomLine: 'Shadow education is not one disease with one cause. The model cannot crown a single explanation, but every surviving explanation points at the same policy levers — so act on the agreement, and keep measuring to break the tie.',
+    bottomLine: 'Shadow education is not one disease with one cause. The model cannot crown a single explanation. Its explanations agree on policy only because they share most of their code, so the agreement is not independent evidence. Keep measuring to break the tie.',
   },
 
   angkor: {

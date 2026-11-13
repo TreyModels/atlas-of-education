@@ -2141,17 +2141,8 @@
  "What the calibrated worlds say": {
   "zh-Hans": "校准后的世界告诉我们什么"
  },
- "Even under the diversion explanation, calibrated teachers withhold almost nothing — median 0% of content held back.": {
-  "zh-Hans": "即使在“故意留白”解释下，校准后的教师也几乎不留白—— withheld 内容中位数为 0%。"
- },
- "The evidence ratios are too sparse to rank the explanations, and only 11–18% of calibrated settings still fit in fresh random school systems. Treat the policy effects as model-conditional, not as evidence of real-world effects.": {
-  "zh-Hans": "证据比率太稀疏，无法给解释排序；在全新随机的学校系统中，只有 11–18% 的校准参数仍然成立。请把政策效果视为以模型为条件，而非现实效应的证据。"
- },
  "Who leaves school: the credential-floor test": {
   "zh-Hans": "谁离开学校：文凭门槛检验"
- },
- "Shadow education is not one disease with one cause. The model cannot crown a single explanation, but every surviving explanation points at the same policy levers — so act on the agreement, and keep measuring to break the tie.": {
-  "zh-Hans": "影子教育不是单一病因的疾病。模型无法为某个解释加冕，但所有存活的解释都指向相同的政策杠杆——所以按共识行动，并持续测量以打破平局。"
  },
  "Who stays in school, and what the diploma is worth": {
   "zh-Hans": "谁留在学校，文凭值多少"
@@ -2571,5 +2562,17 @@
  "The verdict depends on how the liquidity constraint is modelled. The hard version misses the shape of the wealth gradient. The graded version fits it and cannot rank the explanations. These data do not discriminate the relational floor.": {
   "zh-Hans": "裁决取决于流动性约束如何建模。硬性版本未能捕捉财富梯度的形状。分级版本拟合了它，却无法对各项解释进行排序。这些数据无法区分关系性下限。",
   "vi": "Phán quyết phụ thuộc vào cách mô hình hóa ràng buộc thanh khoản. Phiên bản cứng bỏ lỡ hình dạng của gradient tài sản. Phiên bản phân cấp khớp với nó và không thể xếp hạng các giải thích. Những dữ liệu này không phân biệt được sàn quan hệ."
+ },
+ "Recalibrated across 10 school systems, settings fit 37–44% of fresh random systems (up from 17–19%), but only 1–7% fit in most of them. The explanations agree on policy because the effect comes from code they share: removing the shared thin-market or alternative-provider channel moves all of them together, while the diversion mechanism changes nothing. Treat the policy effects as model-conditional.": {
+  "zh-Hans": "在10个学校系统中重新校准后，设定可拟合37–44%的新随机系统（此前为17–19%），但在其中大多数系统中仅有1–7%可拟合。各解释在政策上一致，因为效应来自它们共享的代码：移除共享的薄市场或替代提供者渠道会使它们全部一起变动，而转移机制则毫无影响。应将政策效应视为以模型为条件的。",
+  "vi": "Sau khi hiệu chỉnh lại trên 10 hệ thống trường học, các thiết lập phù hợp với 37–44% hệ thống ngẫu nhiên mới (tăng từ 17–19%), nhưng chỉ 1–7% phù hợp ở phần lớn trong số chúng. Các giải thích đồng thuận về chính sách vì hiệu ứng đến từ mã mà chúng chia sẻ: loại bỏ kênh thị trường mỏng hoặc nhà cung cấp thay thế được chia sẻ sẽ khiến tất cả chúng dịch chuyển cùng nhau, trong khi cơ chế chuyển hướng không thay đổi gì. Hãy coi các hiệu ứng chính sách là có điều kiện theo mô hình."
+ },
+ "Even under the diversion explanation, calibrated teachers withhold almost nothing — median 0% of content held back. In about a fifth of fresh school systems, diversion settings withhold more than 1% (95th percentile 9%).": {
+  "zh-Hans": "即使在转移解释下，校准教师也几乎不保留任何内容——所保留内容的中位数为0%。在约五分之一的新学校系统中，转移设置保留超过1%（第95百分位数为9%）。",
+  "vi": "Ngay cả theo cách giải thích chuyển hướng, các giáo viên đã hiệu chỉnh cũng gần như không giữ lại gì — trung vị 0% nội dung bị giữ lại. Trong khoảng một phần năm các hệ thống trường học mới, cài đặt chuyển hướng giữ lại hơn 1% (bách phân vị thứ 95 là 9%)."
+ },
+ "Shadow education is not one disease with one cause. The model cannot crown a single explanation. Its explanations agree on policy only because they share most of their code, so the agreement is not independent evidence. Keep measuring to break the tie.": {
+  "zh-Hans": "影子教育并非一种疾病对应一种病因。该模型无法裁定单一解释。其各项解释之所以在政策上一致，只是因为它们共享大部分代码，因此这种一致并非独立证据。继续测量以打破平局。",
+  "vi": "Giáo dục bóng tối không phải là một căn bệnh với một nguyên nhân duy nhất. Mô hình không thể tôn vinh một lời giải thích duy nhất. Các lời giải thích của nó chỉ đồng thuận về chính sách vì chúng chia sẻ phần lớn mã của mình, nên sự đồng thuận đó không phải là bằng chứng độc lập. Hãy tiếp tục đo lường để phá vỡ thế cân bằng."
  }
 }

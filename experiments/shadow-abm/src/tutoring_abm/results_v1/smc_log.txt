@@ -1,0 +1,43 @@
+thin gen0 eps=8.196 prior fit share=0.00000
+thin gen1 eps=4.817 proposed=1153 acc=0.347 ess=276 fit=0.003 evidence=3.54e-06
+thin gen2 eps=3.205 proposed=1315 acc=0.304 ess=305 fit=0.002 evidence=1.79e-06
+thin gen3 eps=2.568 proposed=1628 acc=0.246 ess=279 fit=0.002 evidence=6.84e-07
+thin gen4 eps=2.102 proposed=2727 acc=0.147 ess=282 fit=0.005 evidence=1.55e-06
+thin gen5 eps=1.756 proposed=3485 acc=0.115 ess=210 fit=0.009 evidence=2.18e-06
+thin gen6 eps=1.467 proposed=5458 acc=0.073 ess=260 fit=0.012 evidence=1.78e-06
+thin gen7 eps=1.244 proposed=8188 acc=0.049 ess=291 fit=0.015 evidence=2.74e-06
+thin gen8 eps=1.091 proposed=13192 acc=0.030 ess=291 fit=0.019 evidence=2.66e-06
+thin gen9 eps=1.000 proposed=14362 acc=0.028 ess=280 fit=0.028 evidence=3.64e-06
+thin evidence at eps=1: {'estimate': 3.142839906062978e-06, 'ci90': [0.0, 9.428519718188936e-06], 'proposals': 4000, 'fit_share': 0.010869565217391304, 'final_eps': 1.0}
+diversion gen0 eps=7.596 prior fit share=0.00025
+diversion gen1 eps=4.069 proposed=1479 acc=0.270 ess=311 fit=0.001 evidence=5.59e-07
+diversion gen2 eps=2.973 proposed=1526 acc=0.262 ess=293 fit=0.001 evidence=4.42e-07
+diversion gen3 eps=2.341 proposed=2188 acc=0.183 ess=277 fit=0.003 evidence=4.93e-07
+diversion gen4 eps=2.014 proposed=2920 acc=0.137 ess=280 fit=0.005 evidence=1.38e-06
+diversion gen5 eps=1.679 proposed=3921 acc=0.102 ess=270 fit=0.008 evidence=1.74e-06
+diversion gen6 eps=1.402 proposed=6590 acc=0.061 ess=273 fit=0.012 evidence=1.81e-06
+diversion gen7 eps=1.189 proposed=12395 acc=0.032 ess=201 fit=0.014 evidence=1.99e-06
+diversion gen8 eps=1.037 proposed=15514 acc=0.026 ess=237 fit=0.023 evidence=2.27e-06
+diversion gen9 eps=1.000 proposed=14389 acc=0.028 ess=235 fit=0.028 evidence=2.94e-06
+diversion evidence at eps=1: {'estimate': 5.904262511903836e-06, 'ci90': [1.394305792647714e-06, 1.1476356083429264e-05], 'proposals': 4000, 'fit_share': 0.06666666666666667, 'final_eps': 1.0}
+favour gen0 eps=4.793 prior fit share=0.00000
+favour gen1 eps=3.947 proposed=1471 acc=0.272 ess=284 fit=0.001 evidence=8.51e-07
+favour gen2 eps=3.300 proposed=1558 acc=0.257 ess=290 fit=0.000 evidence=0
+favour gen3 eps=2.744 proposed=2372 acc=0.169 ess=232 fit=0.001 evidence=8.82e-07
+favour gen4 eps=2.351 proposed=3309 acc=0.121 ess=289 fit=0.001 evidence=2.95e-07
+favour gen5 eps=2.017 proposed=3990 acc=0.100 ess=235 fit=0.004 evidence=6.99e-07
+favour gen6 eps=1.733 proposed=5657 acc=0.071 ess=293 fit=0.005 evidence=7.83e-07
+favour gen7 eps=1.487 proposed=7447 acc=0.054 ess=257 fit=0.008 evidence=6.69e-07
+favour gen8 eps=1.266 proposed=10087 acc=0.040 ess=237 fit=0.013 evidence=6.39e-07
+favour gen9 eps=1.097 proposed=14148 acc=0.028 ess=261 fit=0.019 evidence=6.96e-07
+favour gen10 eps=1.000 proposed=14510 acc=0.028 ess=71 fit=0.028 evidence=8.65e-07
+favour evidence at eps=1: {'estimate': 0.0, 'ci90': [0.0, 0.0], 'proposals': 4000, 'fit_share': 0.0, 'final_eps': 1.0}
+full gen0 eps=4.681 prior fit share=0.00000
+full gen1 eps=3.828 proposed=1600 acc=0.250 ess=293 fit=0.000 evidence=0
+full gen2 eps=3.267 proposed=1801 acc=0.222 ess=270 fit=0.001 evidence=1.22e-06
+full gen3 eps=2.839 proposed=2376 acc=0.168 ess=277 fit=0.003 evidence=1.37e-06
+full gen4 eps=2.480 proposed=2611 acc=0.153 ess=278 fit=0.003 evidence=7.63e-07
+full gen5 eps=2.151 proposed=4024 acc=0.099 ess=286 fit=0.002 evidence=2.65e-07
+full gen6 eps=1.841 proposed=4883 acc=0.082 ess=217 fit=0.004 evidence=6.85e-07
+full gen7 eps=1.598 proposed=7467 acc=0.054 ess=267 fit=0.006 evidence=4.72e-07
+full gen8 eps=1.373 proposed=9400 acc=0.043 ess=276 fit=0.008 evidence=4.18e-07

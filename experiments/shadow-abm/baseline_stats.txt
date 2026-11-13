@@ -1,0 +1,75 @@
+== thin (results/posterior_thin.json) free=13 particles=400
+  gen 0 eps 8.196 ess - acc - fit_share - ev 0
+  gen 1 eps 4.817 ess 276.2 acc 0.3469 fit_share 0.0035 ev 3.54e-06
+  gen 2 eps 3.205 ess 305.1 acc 0.3042 fit_share 0.0023 ev 1.79e-06
+  gen 3 eps 2.568 ess 278.9 acc 0.2457 fit_share 0.0018 ev 6.84e-07
+  gen 4 eps 2.102 ess 282.4 acc 0.1467 fit_share 0.0048 ev 1.55e-06
+  gen 5 eps 1.756 ess 210.4 acc 0.1148 fit_share 0.0095 ev 2.18e-06
+  gen 6 eps 1.467 ess 259.5 acc 0.0733 fit_share 0.0119 ev 1.78e-06
+  gen 7 eps 1.244 ess 291.3 acc 0.0489 fit_share 0.0147 ev 2.74e-06
+  gen 8 eps 1.091 ess 291.2 acc 0.0303 fit_share 0.0193 ev 2.66e-06
+  gen 9 eps 1.0 ess 280.2 acc 0.0279 fit_share 0.0279 ev 3.64e-06
+  evidence {'estimate': 3.142839906062978e-06, 'ci90': [0.0, 9.428519718188936e-06], 'proposals': 4000, 'fit_share': 0.010869565217391304, 'final_eps': 1.0}
+  final ESS from weights 280.2
+  withholding_mean: weighted median 0.0000, p05 0.0000, p95 0.0000, share<0.01 1.000
+  withholding_among_sellers: weighted median 0.0000, p05 0.0000, p95 0.0000, share<0.01 1.000
+  teacher_own_share: weighted median 0.6250, p05 0.4861, p95 0.7222, share<0.01 0.000
+  nonbuyer_class_instruction median 0.6824
+  distance median (weighted) 0.884 max 0.9986
+== diversion (results/posterior_diversion.json) free=14 particles=400
+  gen 0 eps 7.596 ess - acc - fit_share - ev 0.00025
+  gen 1 eps 4.069 ess 310.9 acc 0.2705 fit_share 0.0007 ev 5.59e-07
+  gen 2 eps 2.973 ess 293.2 acc 0.2621 fit_share 0.0013 ev 4.42e-07
+  gen 3 eps 2.341 ess 276.8 acc 0.1828 fit_share 0.0027 ev 4.93e-07
+  gen 4 eps 2.014 ess 280.3 acc 0.137 fit_share 0.0048 ev 1.38e-06
+  gen 5 eps 1.679 ess 269.6 acc 0.102 fit_share 0.0079 ev 1.74e-06
+  gen 6 eps 1.402 ess 273.4 acc 0.0607 fit_share 0.0124 ev 1.81e-06
+  gen 7 eps 1.189 ess 200.9 acc 0.0323 fit_share 0.0137 ev 1.99e-06
+  gen 8 eps 1.037 ess 237.1 acc 0.0258 fit_share 0.0232 ev 2.27e-06
+  gen 9 eps 1.0 ess 234.7 acc 0.0278 fit_share 0.0278 ev 2.94e-06
+  evidence {'estimate': 5.904262511903836e-06, 'ci90': [1.394305792647714e-06, 1.1476356083429264e-05], 'proposals': 4000, 'fit_share': 0.06666666666666667, 'final_eps': 1.0}
+  final ESS from weights 234.7
+  withholding_mean: weighted median 0.0007, p05 0.0000, p95 0.1504, share<0.01 0.675
+  withholding_among_sellers: weighted median 0.0012, p05 0.0000, p95 0.2429, share<0.01 0.647
+  teacher_own_share: weighted median 0.6389, p05 0.4736, p95 0.7222, share<0.01 0.000
+  nonbuyer_class_instruction median 0.6844
+  distance median (weighted) 0.8973 max 0.9988
+== favour (results/posterior_favour.json) free=14 particles=400
+  gen 0 eps 4.793 ess - acc - fit_share - ev 0
+  gen 1 eps 3.947 ess 284.0 acc 0.2719 fit_share 0.0007 ev 8.51e-07
+  gen 2 eps 3.3 ess 290.2 acc 0.2567 fit_share 0.0 ev 0
+  gen 3 eps 2.744 ess 231.9 acc 0.1686 fit_share 0.0013 ev 8.82e-07
+  gen 4 eps 2.351 ess 289.5 acc 0.1209 fit_share 0.0012 ev 2.95e-07
+  gen 5 eps 2.017 ess 235.5 acc 0.1003 fit_share 0.0035 ev 6.99e-07
+  gen 6 eps 1.733 ess 293.4 acc 0.0707 fit_share 0.0051 ev 7.83e-07
+  gen 7 eps 1.487 ess 256.5 acc 0.0537 fit_share 0.0082 ev 6.69e-07
+  gen 8 eps 1.266 ess 237.5 acc 0.0397 fit_share 0.0132 ev 6.39e-07
+  gen 9 eps 1.097 ess 261.3 acc 0.0283 fit_share 0.0187 ev 6.96e-07
+  gen 10 eps 1.0 ess 71.3 acc 0.0276 fit_share 0.0276 ev 8.65e-07
+  evidence {'estimate': 0.0, 'ci90': [0.0, 0.0], 'proposals': 4000, 'fit_share': 0.0, 'final_eps': 1.0}
+  final ESS from weights 71.3
+  withholding_mean: weighted median 0.0000, p05 0.0000, p95 0.0000, share<0.01 1.000
+  withholding_among_sellers: weighted median 0.0000, p05 0.0000, p95 0.0000, share<0.01 1.000
+  teacher_own_share: weighted median 0.5972, p05 0.4628, p95 0.7083, share<0.01 0.000
+  nonbuyer_class_instruction median 0.6799
+  distance median (weighted) 0.8686 max 0.9997
+== full (source_results/posterior_full.json) free=15 particles=400
+  gen 0 eps 4.681 ess - acc - fit_share - ev 0
+  gen 1 eps 3.828 ess 292.3 acc 0.2663 fit_share 0.0 ev 0
+  gen 2 eps 3.256 ess 261.2 acc 0.2123 fit_share 0.0011 ev 1e-06
+  gen 3 eps 2.848 ess 272.8 acc 0.1854 fit_share 0.0005 ev 9.76e-08
+  gen 4 eps 2.451 ess 253.1 acc 0.1365 fit_share 0.0017 ev 5.22e-07
+  gen 5 eps 2.13 ess 237.1 acc 0.1058 fit_share 0.0019 ev 1.96e-07
+  gen 6 eps 1.83 ess 264.6 acc 0.0715 fit_share 0.0043 ev 4.15e-07
+  gen 7 eps 1.576 ess 215.2 acc 0.0621 fit_share 0.0054 ev 3.96e-07
+  gen 8 eps 1.358 ess 203.5 acc 0.0409 fit_share 0.0091 ev 4.88e-07
+  gen 9 eps 1.162 ess 220.8 acc 0.0307 fit_share 0.0148 ev 6.98e-07
+  gen 10 eps 1.009 ess 221.1 acc 0.0212 fit_share 0.0206 ev 5.19e-07
+  gen 11 eps 1.0 ess 264.4 acc 0.0229 fit_share 0.0229 ev 5.45e-07
+  evidence {'estimate': 0.0, 'ci90': [0.0, 0.0], 'proposals': 4000, 'fit_share': 0.0, 'final_eps': 1.0}
+  final ESS from weights 264.4
+  withholding_mean: weighted median 0.0000, p05 0.0000, p95 0.0767, share<0.01 0.788
+  withholding_among_sellers: weighted median 0.0000, p05 0.0000, p95 0.1411, share<0.01 0.749
+  teacher_own_share: weighted median 0.6111, p05 0.4444, p95 0.7261, share<0.01 0.000
+  nonbuyer_class_instruction median 0.6878
+  distance median (weighted) 0.9035 max 0.9991
