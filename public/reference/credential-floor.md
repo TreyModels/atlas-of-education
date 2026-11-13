@@ -1,52 +1,55 @@
 # The relational-floor test in Cambodia, Vietnam and China
 
-Results note, 5 November 2026. Model: `engine/relfloor_countries.py` (same household model as `relfloor.py`). Output: `engine/results/relfloor_countries.json`. 24,000 parameter draws per country and structure. Follows `relational_floor_test.md` (Philippines).
+Results note, v2, 13 November 2026. Replaces the 5 November note (v1). Model: `engine/relfloor_countries.py`, which uses the same household model as `engine/relfloor.py`. Output: `reference/relfloor_countries_v2.json`. v1's output is kept as `reference/relfloor_countries.json`. Each country × structure gets 24,000 parameter draws. Sources for every target: `inputs/credential_floor_sources.json`, with a URL, a table reference and a verification flag for each value.
 
-## Setup
+## What changed from v1
 
-Same three-part credential value (human capital, positional, relational), cost, liquidity constraint and rerouting. What changes by country is the decision margin, the length of the credential, income level and growth, and the targets a draw must hit to be accepted.
+1. **The v1 Cambodia comparison used the wrong year.** v1 reported the share of non-completers from the bottom 40% (`exit_low`) in 2035, after 11 extrapolated years. The DHS comparison in `research/shadow/credential_floor_dhs.zip` then tested that 2035 value against 2021 data. v2 reads it in the survey year.
+2. **Cambodia is now tested on the model's own margin.** v1 had no wealth gradient for Cambodia. The DHS bundle then used DHS Table 2.12, which counts all children aged 12–18 who are not in secondary school. v2 uses UIS lower-secondary completion by wealth quintile (CR.2.Q1–Q5). UIS computes it from DHS 2005, 2010, 2014 and 2021–22 microdata. This covers most of what the DHS microdata request was meant to settle (review item 2.1). The microdata are still needed to weight quintiles by children rather than people (see Limits).
+3. **Vietnam has a second test.** The full MICS 2014 quintile profile (Table ED.5A, upper-secondary adjusted net attendance, ages 15–17): 40.4, 67.3, 74.3, 85.4, 93.3%.
+4. **China's gaokao registrants are divided by births 18 years earlier** (NBS).
+5. **Income growth priors are sourced.** The band is the WDI real GDP per capita CAGR for 2000–2023, ±1 point: Cambodia 4.6–6.6%, Vietnam 4.1–6.1%, China 6.8–8.8%. v1 used 3–6%, 4–6.5% and 5–9%.
+6. **Each posterior is shown next to its prior**, with a Kolmogorov–Smirnov test.
+7. **Seeds are deterministic.** v1 seeded with Python's per-process string hash, so v1 runs cannot be reproduced exactly. Rerunning v2 with v1's priors (`--v1-priors`) gives acceptance counts within about 10% of v1's.
 
-| | Margin | Sourced targets |
+## Targets
+
+| | Margin | Targets |
 |---|---|---|
-| Cambodia | lower-secondary completion | 17% (2000), 37–49% (2010, two series disagree), 56–58% (2021). **No wealth gradient found.** |
-| Vietnam | upper-secondary completion at 19 | 57.7% overall, **80.5% top quintile, 25.1% bottom** (Young Lives, 2013). |
-| China | college entry | gross enrolment ~30% (2012), 48% (2019), 60.2% (2023). Relative graduate pay falls 0.75→0.60 (2018→2023). |
+| Cambodia | lower-secondary completion | 17% (2000), 33–50% (2010), 50–62% (2021). **By quintile (UIS CR.2):** 17, 25, 37, 53, 65% (2014); 29, 48, 54, 66, 79% (2021). |
+| Vietnam | upper-secondary completion | Young Lives, age 19 (2013): 57.7% overall, 80.5% top quintile, 25.1% bottom. MICS 2014 profile above. |
+| China | college entry | gross enrolment ~30% (2012), 48% (2019), 60.2% (2023); relative graduate pay 0.75 → 0.60 (2018 → 2023). |
 
-Sources: indexmundi and measuredworld (Cambodia completion), Young Lives Vietnam country report, MoE and NBS through China Daily and Yicai (China enrolment), SCMP, Global Times and The Star (exam registrations).
+## Results (sourced priors)
 
-## Results
-
-| | Fits history (accepted share of draws) | Relational weight, posterior median [5–95%] (prior 0–0.8) | Exits from the bottom 40%, median | Q3+ completion change if the relative premium falls 40% by 2035 |
+| | Accepted draws (of 24,000) | Bottom-40% share of non-completers, 2021, median [5–95%] | Relational weight: posterior vs prior | Q3+ completion change if the premium falls 40% by 2035 |
 |---|---|---|---|---|
-| **Cambodia** human capital only | 4.4% | — | 65% | −11.5 pts |
-| + positional | 3.9% | — | 83% | −4 pts |
-| + relational | 3.3% | 0.37 [0.03, 0.76] | **98%** | ~0 |
-| **Vietnam** human capital only | **6.1%** | — | 48% | −12.8 pts |
-| + positional | 3.1% | — | 50% | −9.4 pts |
-| + relational | **0.8%** | **0.09** [0.007, 0.35] | 53% | −6.5 pts |
-| **China** human capital only | 0.3% | — | 56% | −14 pts |
-| + positional | 0.7% | — | 67% | −5 pts |
-| + relational | 0.5% | 0.30 [0.05, 0.75] | **91%** | ~0 |
+| **Cambodia** human capital | 1,361 | 71% [54, 89] | — | −12 pts |
+| + positional | 800 | 78% [59, 92] | — | −6 pts |
+| + relational | 463 | **85% [69, 97]** | 0.32 [0.04, 0.74] vs prior 0.40 [0.04, 0.76] | ~0 |
+| **Vietnam** human capital | 1,407 | — | — | −13 pts |
+| + positional | 799 | — | — | −9 pts |
+| + relational | 180 | — | **0.10 [0.01, 0.37]** vs 0.40 [0.04, 0.76] | −6 pts |
+| **China** human capital | 55 | — | — | −13 pts |
+| + positional | 51 | — | — | −8 pts |
+| + relational | 13 | — | 0.15 [0.02, 0.49] vs 0.40 [0.04, 0.76] (13 draws) | −6 pts |
+
+**Observed Cambodia value:** 55–64% of lower-secondary non-completers in 2021 were in the poorest 40% of households. The range runs from equal child weights per quintile up to twice as many children in the poorest fifth as in the richest. The 2014 figure is 52–61%.
 
 ## Reading
 
-1. **Vietnam is the only country where history pushes back on the relational floor.** It is the only one with a sourced quintile gradient. Human capital fits history about eight times as often as the relational version, and the relational weight that survives is small. In Cambodia, China and the Philippines, the posterior for relational weight sits near the prior, meaning the data say nothing about it.
-2. **Cambodia is where the household test would discriminate most.** Liquidity binds and the model gives sharply different answers on where leavers come from: about 65% from the bottom 40% under human capital, 98% under the relational floor. The Cambodia DHS 2021–22 has wealth-quintile attendance. That is the one table that would settle it. It is the only case where the paper's test is cheap and decisive.
-3. **China cannot be settled from the enrolment series.** Three aggregate points fit all structures about equally (79, 165 and 120 accepted draws). Each structure predicts a different college-entry response to the 20% fall in relative graduate pay by 2023, measured against a no-fall counterfactual: human capital −6.8% [−9.9, −1.1], positional −4.7%, relational −0.9% [−5.7, 0]. Observed:
-   - Gaokao registrants fell 13.42m → 12.9m (−3.9%) from 2024 to 2026. This sits inside every band except the relational median. It is not corrected for cohort size, which no source I fetched addresses, and the later fall is outside the pay-ratio window.
-   - Postgraduate-exam applicants fell 4.74m → 3.88m (−18%) from 2023 to 2025. That is a bigger response than any structure predicts for college entry, but it is a different margin. The paper itself says positional value dominates at elite gates. A fall there fits the human-capital and positional versions better than the paper's prediction that positional competition **intensifies** under saturation.
-4. **Rerouting is not evidence.** Civil-service applicants rose 2.6m → 3.7m, but every structure reroutes about 60% of exiters (Philippine run).
-
-## What would change the answer
-
-- Cambodia DHS 2021–22 attendance by wealth quintile, 14–17: the share of non-attenders from the bottom two quintiles.
-- China: gaokao registrants adjusted for the 18-year-old cohort, and who the 2025–26 non-registrants are (vocational leavers, rural, urban).
-- Vietnam: MICS 2014 quintile enrolment (40, 67, 74, 85, 93% for upper secondary) as a full profile test. I used only the Young Lives end quintiles. A smooth profile across middle quintiles argues against a liquidity-threshold floor.
+1. **Cambodia: the relational floor fails the matched test.** Its 5th percentile (69%) is above the highest observed value (64%). Only 1.5% of accepted relational draws fall inside the observed range. Human capital fits: 22% of its draws fall inside, and its median is 7 points above the observed maximum. Positional is in between (12%). With v1's growth priors the verdict is the same and stronger: 0.3% of relational draws are inside.
+2. **No structure fits Cambodia's full quintile profile.** Zero draws in any structure match all five 2014 and 2021 quintiles within 10 points. The model produces a cliff at the liquidity threshold, and quintiles above it complete at 75–99%. In the data, completion rises smoothly: 29, 48, 54, 66, 79%. Item 1 is therefore a ranking of three structures inside a model that misses the shape of the gradient. It is not a test of the relational floor against reality.
+3. **Vietnam: both tests point the same way.** On Young Lives, human capital fits about eight times as often as the relational version. The surviving relational weight is small (median 0.10, against a prior median of 0.40). On the full MICS profile almost nothing fits: 10 human-capital draws, 2 positional and 0 relational out of 24,000 each. The cause is the same smooth middle-quintile rise the model cannot produce. MICS measures attendance at 15–17, not completion, so it is a shape test more than a level test.
+4. **The posterior equals the prior in three of four countries** (v1 priors; the fourth is the Philippines, `relational_floor_test.md`). In Cambodia and China the relational-weight posterior is statistically indistinguishable from its uniform prior (KS p = 0.44 and 0.07). The data say nothing about relational weight there. Vietnam is the only country where the data move it. With sourced growth priors, Cambodia's posterior is formally different (KS D = 0.11), but its 90% interval still covers 96% of the prior's. China's moves, but on only 13 accepted draws.
+5. **China is not explained by any structure.** Gaokao registrants per birth 18 years earlier fell 5.3% from 2024 to 2026 (raw −3.9%; births 2006 15.84m, 2008 16.08m). Every structure predicts a 2024–26 *rise* in college entry of 3–11% (5–95% across structures), because incomes keep growing after the pay ratio stops falling in 2023. Registrants are not entrants: they include repeaters and spring-gaokao vocational candidates, and enrolment kept rising. The test is not like-for-like, but the model's sign is wrong. The response to the 2018–23 pay fall, against a no-fall counterfactual, is human capital −7.8% [−10.9, −4.2], positional −6.1%, relational −5.1% [−6.9, −0.8]. It has no observed counterpart.
+6. **Rerouting is not evidence.** Every structure reroutes about 60% of exiters (Philippine run).
 
 ## Limits
 
-- Income level and growth priors by country are stylised and wide, not sourced.
-- China's premium path uses graduate pay relative to urban average as a stand-in for the college-vs-high-school premium.
-- Vietnam's age-19 observation is mapped to 2013 although the cohort was born in 1994.
-- One decision per child, no grade-by-grade survival.
-- The Cambodian 2010 series disagree (36.7% vs 49.4%), so that target is wide.
+- **Income level is a free scale parameter.** Income, cost and subsistence are in stylised units with no observed counterpart. Only the growth rate is sourced, and it uses GDP per capita, not household income.
+- **Quintile child weights are assumed.** DHS wealth quintiles hold equal shares of people, not of children. The observed range spans weights from 1:1 to 2:1 (poorest to richest). Matching on children needs the DHS microdata (`hv105`, `hv121`, `hv122`, `hv270`), which require registration with the DHS Program.
+- **Timing.** UIS completion is measured 3–5 years after the official graduation age. The model compares it to the decision in the survey year.
+- China's premium path uses graduate pay relative to the urban average as a stand-in for the college-vs-high-school premium.
+- Vietnam's age-19 observation is mapped to 2013, although the cohort was born in 1994.
+- One decision per child, with no grade-by-grade survival.

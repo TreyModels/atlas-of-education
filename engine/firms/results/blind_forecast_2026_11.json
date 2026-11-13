@@ -1,0 +1,18 @@
+{
+ "written": "2026-11-05",
+ "model": "seasonal_2024 spread11, data frozen Dec 2024",
+ "forecasts": {
+  "2026-10": {
+   "model": 17.28,
+   "naive": 17.1
+  },
+  "2026-11": {
+   "model": 16.94,
+   "naive": 16.1
+  },
+  "2026-12": {
+   "model": 16.7,
+   "naive": 15.7
+  }
+ }
+}

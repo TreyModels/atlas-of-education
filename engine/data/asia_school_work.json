@@ -1,0 +1,237 @@
+{
+ "_about": "Cross-country school and child-labour facts for the childworld Monte Carlo. oos_lower: adolescents out of school, % of lower-secondary age (UIS via World Bank WDI SE.SEC.UNER.LO.ZS, admin enrolment / UN population; latest year shown; Pakistan from PES 2021-22 middle level). child_labour: % of children 5-17 (ILO/UNICEF estimates as tabulated on Wikipedia 'List of countries by child labour rate'). Years differ across rows; admin-based OOS can overstate (see docs/cambodia_observation_equation.md). Composition facts, where available, are survey-based and are used as TESTS, never for matching.",
+ "countries": {
+  "Laos": {
+   "region": "Southeast Asia",
+   "oos_lower": 30.5,
+   "oos_year": 2020,
+   "child_labour": 21.9,
+   "cl_year": 2023
+  },
+  "Bangladesh": {
+   "region": "South Asia",
+   "oos_lower": 33.1,
+   "oos_year": 2017,
+   "child_labour": 7.0,
+   "cl_year": 2022,
+   "composition": {
+    "rural_boys_14_17_dropouts_working": 68.2,
+    "rural_boys_14_17_enrolled_working": 34.3,
+    "source": "UNICEF Innocenti 2024, MICS 2019"
+   }
+  },
+  "Pakistan": {
+   "region": "South Asia",
+   "oos_lower": 30.0,
+   "oos_year": 2022,
+   "child_labour": 6.8,
+   "cl_year": 2021
+  },
+  "Myanmar": {
+   "region": "Southeast Asia",
+   "oos_lower": 21.0,
+   "oos_year": 2018,
+   "child_labour": 8.1,
+   "cl_year": 2015
+  },
+  "Cambodia": {
+   "region": "Southeast Asia",
+   "oos_lower": 14.7,
+   "oos_year": 2020,
+   "child_labour": 10.4,
+   "cl_year": 2021
+  },
+  "Indonesia": {
+   "region": "Southeast Asia",
+   "oos_lower": 16.3,
+   "oos_year": 2018,
+   "child_labour": 1.7,
+   "cl_year": 2021
+  },
+  "India": {
+   "region": "South Asia",
+   "oos_lower": 15.1,
+   "oos_year": 2020,
+   "child_labour": 1.0,
+   "cl_year": 2023,
+   "composition": {
+    "age_6_17_school_only": 93.0,
+    "school_and_work": 0.4,
+    "work_only": 1.8,
+    "neither": 4.8,
+    "source": "UNICEF Innocenti 2024, PLFS 2018/19"
+   },
+   "age_aligned": {
+    "survey": "PLFS 2018/19 (household survey; work = economic activity only, household chores excluded)",
+    "source": "UNICEF Innocenti, Child Labour and Schooling in India: A reappraisal (July 2024), Table 7 p.34 and overall table p.32",
+    "url": "https://www.unicef.org/innocenti/media/9356/file/UNICEF-Innocenti-Child-labour-schooling-India-Report-2024.pdf",
+    "fetched": "2026-11-05",
+    "bands": {
+     "6_17": {
+      "school_only": 93.0,
+      "school_and_work": 0.4,
+      "work_only": 1.8,
+      "neither": 4.8
+     },
+     "6_10": {
+      "school_only": 97.6,
+      "school_and_work": 0.1,
+      "work_only": 0.0,
+      "neither": 2.3
+     },
+     "7_14": {
+      "school_only": 96.4,
+      "school_and_work": 0.2,
+      "work_only": 0.5,
+      "neither": 2.9
+     },
+     "15_17": {
+      "school_only": 82.4,
+      "school_and_work": 0.9,
+      "work_only": 5.7,
+      "neither": 10.9
+     }
+    },
+    "derived": {
+     "oos_7_14": 3.4,
+     "oos_15_17": 16.6,
+     "oos_6_17": 6.6
+    },
+    "notes": "Out of school = work only + neither (derived by us; the report does not state it). The report warns activity status is not consistent across surveys (EUS 2011/12 gives 10.7% out of school). Rows sum to 100 within rounding. Child work 5-17 in PLFS 2018/19 is 2% (5 million), report p.20."
+   }
+  },
+  "Malaysia": {
+   "region": "Southeast Asia",
+   "oos_lower": 12.1,
+   "oos_year": 2019,
+   "child_labour": null,
+   "cl_year": null
+  },
+  "Bhutan": {
+   "region": "South Asia",
+   "oos_lower": 12.0,
+   "oos_year": 2018,
+   "child_labour": 1.7,
+   "cl_year": 2010
+  },
+  "Philippines": {
+   "region": "Southeast Asia",
+   "oos_lower": 10.5,
+   "oos_year": 2019,
+   "child_labour": 1.2,
+   "cl_year": 2022,
+   "composition": {
+    "reasons_not_attending_5_24": {
+     "finished": 21.1,
+     "employment": 19.7,
+     "lack_of_interest": 12.6,
+     "marriage": 10.7,
+     "cost": 9.9
+    },
+    "source": "PSA APIS 2022 via Philstar"
+   }
+  },
+  "Timor-Leste": {
+   "region": "Southeast Asia",
+   "oos_lower": 10.2,
+   "oos_year": 2019,
+   "child_labour": 3.7,
+   "cl_year": 2022
+  },
+  "Mongolia": {
+   "region": "East Asia",
+   "oos_lower": 7.6,
+   "oos_year": 2019,
+   "child_labour": 6.0,
+   "cl_year": 2023
+  },
+  "Korea": {
+   "region": "East Asia",
+   "oos_lower": 4.9,
+   "oos_year": 2019,
+   "child_labour": 0.0,
+   "cl_year": null
+  },
+  "Nepal": {
+   "region": "South Asia",
+   "oos_lower": 2.6,
+   "oos_year": 2019,
+   "child_labour": 19.2,
+   "cl_year": 2014
+  },
+  "Kyrgyzstan": {
+   "region": "Central Asia",
+   "oos_lower": 0.5,
+   "oos_year": 2020,
+   "child_labour": 18.0,
+   "cl_year": 2023,
+   "composition": {
+    "age_5_14_working": 34.0,
+    "attending": 94.7,
+    "age_7_14_work_and_school": 38.4,
+    "source": "US DOL ILAB 2024"
+   },
+   "age_aligned": {
+    "survey": "MICS6 2018 (child labour = ILO MICS definition: economic work hours by age band OR >=28h unpaid household services OR hazardous conditions)",
+    "source": "UNICEF Kyrgyzstan MICS6 statistical snapshots (tables LN.6, PR3.1-PR3.3 cited there)",
+    "url": "https://www.unicef.org/kyrgyzstan/media/6066/file/MICSStatisticalSnapshots.pdf",
+    "fetched": "2026-11-05",
+    "oos_rate_by_level": {
+     "primary": 1.0,
+     "lower_secondary": 1.4,
+     "upper_secondary": 11.4
+    },
+    "child_labour_5_17_broad": 26.7,
+    "unresolved": [
+     "Age bands behind 'primary / lower / upper secondary' follow the national school system (grades 1-4 / 5-9 / 10-11), not the model's 6-11 / 12-14 / 15-17.",
+     "MICS child labour (26.7%, 5-17) counts household chores of 28+ hours and hazardous conditions; the model counts economic work only, so 26.7 is an upper bound for the model's quantity.",
+     "The 18.0% used so far (ILO/UNICEF via a secondary page) was not found in MICS6; kept for the old matching only.",
+     "US DOL 'combining work and school 38.4%, age 7-14' (source: ILO analysis of MICS6 2018) has no definition footnote; the work definition is almost certainly the broad one, and the denominator (all 7-14s vs working 7-14s) is unconfirmed. The page also gives 34.0% working and 94.7% attending for age 5-14.",
+     "The PR3 age-by-attendance split is only in unlabelled chart bars in the snapshot (about 27% of attenders, 22% of non-attenders in child labour); not read as data. The final report table file was not fetchable from this environment."
+    ]
+   }
+  },
+  "Uzbekistan": {
+   "region": "Central Asia",
+   "oos_lower": 1.2,
+   "oos_year": 2019,
+   "child_labour": 17.8,
+   "cl_year": 2022
+  },
+  "Sri Lanka": {
+   "region": "South Asia",
+   "oos_lower": 0.1,
+   "oos_year": 2018,
+   "child_labour": 0.8,
+   "cl_year": 2016
+  },
+  "Japan": {
+   "region": "East Asia",
+   "oos_lower": 0.4,
+   "oos_year": 2018,
+   "child_labour": 0.0,
+   "cl_year": null
+  },
+  "Ethiopia": {
+   "region": "comparator",
+   "oos_lower": 47.1,
+   "oos_year": 2015,
+   "child_labour": 18.7,
+   "cl_year": 2021
+  },
+  "Mexico": {
+   "region": "comparator",
+   "oos_lower": 7.7,
+   "oos_year": 2019,
+   "child_labour": 4.3,
+   "cl_year": 2022
+  },
+  "Turkey": {
+   "region": "comparator",
+   "oos_lower": 3.5,
+   "oos_year": 2019,
+   "child_labour": 5.6,
+   "cl_year": 2022
+  }
+ }
+}

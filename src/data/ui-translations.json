@@ -974,16 +974,6 @@
   "fr": "Les ensembles capital humain, positionnel et relationnel ont chacun été tirés 24 000 fois face aux cibles des pays.",
   "vi": "Các nhóm cơ chế vốn nhân lực, vị thế và quan hệ mỗi nhóm được rút 24.000 lần so với mục tiêu của từng nước."
  },
- "Where a wealth gradient exists, adding the relational floor sharply narrows which parameter draws fit.": {
-  "zh-Hans": "在存在财富梯度的情况下，加入关系门槛会大幅缩小符合目标的参数抽样范围。",
-  "fr": "Là où un gradient de richesse existe, ajouter le plancher relationnel réduit fortement les tirages de paramètres qui correspondent.",
-  "vi": "Ở nơi có chênh lệch theo mức giàu, thêm sàn quan hệ làm thu hẹp mạnh các lần rút tham số phù hợp."
- },
- "Cambodia and China lack wealth gradients in this comparison, so acceptance rates cannot rank the theories across countries.": {
-  "zh-Hans": "柬埔寨和中国在这一比较中缺少财富梯度，因此接受率无法跨国为理论排序。",
-  "fr": "Le Cambodge et la Chine n’ont pas de gradient de richesse dans cette comparaison : les taux d’acceptation ne peuvent pas classer les théories entre pays.",
-  "vi": "Campuchia và Trung Quốc thiếu dữ liệu chênh lệch theo mức giàu trong so sánh này, nên tỷ lệ chấp nhận không thể xếp hạng các lý thuyết giữa các nước."
- },
  "Children can attend school and work at the same time. This model asks how school costs, what school offers, enforcement, the credential floor and migration change that balance. The reference has no added programme and keeps the Thailand route open. Programme strengths are assumed, and rural school retention needs an unexplained adjustment. A change here is a scenario result, not an estimated policy impact.": {
   "zh-Hans": "儿童可以同时上学和工作。这个模型探讨上学费用、学校提供的内容、执法、文凭门槛和迁移如何改变这种平衡。参考设置没有额外项目，并保持泰国通道开放。项目强度是假设的，农村学生的保留率需要一个无法解释的调整。这里的变化是情景结果，而不是估计的政策影响。",
   "fr": "Les enfants peuvent aller à l’école et travailler en même temps. Ce modèle examine comment le coût de l’école, ce qu’elle offre, l’application de la loi, le plancher des diplômes et la migration modifient cet équilibre. La référence n’a aucun programme supplémentaire et garde la route de Thaïlande ouverte. L’intensité des programmes est supposée, et la rétention scolaire rurale exige un ajustement inexpliqué. Un changement ici est un résultat de scénario, pas un impact de politique estimé.",
@@ -2165,12 +2155,6 @@
  "Who leaves school: the credential-floor test": {
   "zh-Hans": "谁离开学校：文凭门槛检验"
  },
- "A separate model offers three explanations for who leaves secondary school, each predicting a different share of leavers from the poorest 40% of households. The Cambodia DHS 2021–22 (Table 2.12) puts that share at 47–58%.": {
-  "zh-Hans": "另一个模型为“谁离开中学”提供三种解释，各自预测最贫困 40% 家庭离校者的不同占比。柬埔寨 DHS 2021–22（表 2.12）给出的该比例为 47–58%。"
- },
- "The published table counts all secondary-age children not in school, ages 12–18 — not exits from lower secondary. A matched test needs the DHS microdata.": {
-  "zh-Hans": "已发表的表格统计的是所有 12–18 岁未在校的儿童，而非初中阶段的流失。严格对应的检验需要 DHS 微观数据。"
- },
  "Shadow education is not one disease with one cause. The model cannot crown a single explanation, but every surviving explanation points at the same policy levers — so act on the agreement, and keep measuring to break the tie.": {
   "zh-Hans": "影子教育不是单一病因的疾病。模型无法为某个解释加冕，但所有存活的解释都指向相同的政策杠杆——所以按共识行动，并持续测量以打破平局。"
  },
@@ -2182,9 +2166,6 @@
  },
  "What keeps students in school": {
   "zh-Hans": "什么让学生留在学校"
- },
- "Human-capital, positional and relational bundles were each drawn 24,000 times against country targets. Where a wealth gradient exists, adding the relational floor sharply narrows which parameter draws fit.": {
-  "zh-Hans": "人力资本、位置性和关系性三种机制束，各自对标国家目标抽样 24,000 次。在存在财富梯度的地方，加入关系性底线会急剧缩小可接受的参数组合。"
  },
  "The graduate queue": {
   "zh-Hans": "毕业生排队"
@@ -2570,5 +2551,25 @@
  "A paleo-landscape model of the exit from Africa 85,000–65,000 years ago: coast-huggers, big-game hunters and mixed foragers raced across shifting sea levels and Green Arabia.": {
   "zh-Hans": "模拟距今8.5万至6.5万年前人类走出非洲的古地貌：沿海迁徙者、大型猎物狩猎者和混合觅食者穿越海平面不断变化的地带与绿色阿拉伯。",
   "vi": "Mô hình cổ cảnh quan về cuộc di cư khỏi châu Phi 85.000–65.000 năm trước: những người đi ven biển, săn thú lớn và kiếm ăn hỗn hợp vượt qua mực nước biển biến đổi và vùng Ả Rập xanh."
+ },
+ "Only Vietnam's data move the relational weight much. Cambodia's wealth gradient rejects the relational floor's prediction of who leaves school, but no structure reproduces its full quintile profile.": {
+  "zh-Hans": "只有越南的数据明显改变了关系性权重。柬埔寨的财富梯度否定了关系性底线对“谁离校”的预测，但没有一种结构能复现其完整的五分位分布。",
+  "vi": "Chỉ dữ liệu Việt Nam làm thay đổi đáng kể trọng số quan hệ. Chênh lệch theo mức giàu ở Campuchia bác bỏ dự báo của sàn quan hệ về ai bỏ học, nhưng không cấu trúc nào tái tạo được toàn bộ phân bố theo nhóm ngũ phân vị."
+ },
+ "Human-capital, positional and relational bundles were each drawn 24,000 times against country targets. Only Vietnam's data move the relational weight much. Cambodia's wealth gradient rejects the relational floor's prediction of who leaves school, but no structure reproduces its full quintile profile.": {
+  "zh-Hans": "人力资本、位置性和关系性三种机制束，各自对标国家目标抽样 24,000 次。只有越南的数据明显改变了关系性权重。柬埔寨的财富梯度否定了关系性底线对“谁离校”的预测，但没有一种结构能复现其完整的五分位分布。",
+  "vi": "Các gói vốn con người, vị thế và quan hệ mỗi gói được rút 24.000 lần so với mục tiêu từng nước. Chỉ dữ liệu Việt Nam làm thay đổi đáng kể trọng số quan hệ. Chênh lệch theo mức giàu ở Campuchia bác bỏ dự báo của sàn quan hệ về ai bỏ học, nhưng không cấu trúc nào tái tạo được toàn bộ phân bố theo nhóm ngũ phân vị."
+ },
+ "In Cambodia and China the relational-weight posterior stays close to its prior, so the aggregate series cannot rank the theories. China's 2024–26 fall in gaokao registrants per birth (−5.3%) is outside every structure's prediction.": {
+  "zh-Hans": "在柬埔寨和中国，关系性权重的后验分布仍接近先验，因此总量序列无法给各理论排序。中国 2024–26 年按出生人数调整后的高考报名人数下降（−5.3%）超出了所有结构的预测范围。",
+  "vi": "Ở Campuchia và Trung Quốc, phân phối hậu nghiệm của trọng số quan hệ vẫn gần với tiên nghiệm, nên chuỗi số liệu tổng hợp không xếp hạng được các lý thuyết. Mức giảm số thí sinh gaokao trên số trẻ sinh ở Trung Quốc giai đoạn 2024–26 (−5,3%) nằm ngoài dự báo của mọi cấu trúc."
+ },
+ "A separate model offers three explanations for who leaves school, each predicting a different share of lower-secondary non-completers from the poorest 40% of households. UIS completion rates by wealth quintile (from the Cambodia DHS 2021–22) put that share at 55–64%. The relational floor predicts 85% (90% band 69–97%) and fails. Human capital predicts 71% (54–89%) and fits.": {
+  "zh-Hans": "另一个模型为“谁离开学校”提供三种解释，各自预测初中未完成者中来自最贫困 40% 家庭的不同占比。联合国教科文组织统计所按财富五分位的完成率（来自柬埔寨 DHS 2021–22）给出的比例为 55–64%。关系性底线预测 85%（90% 区间 69–97%），未通过检验；人力资本预测 71%（54–89%），与数据相符。",
+  "vi": "Một mô hình riêng đưa ra ba cách giải thích về ai rời trường, mỗi cách dự báo một tỷ lệ khác nhau người không hoàn thành THCS thuộc 40% hộ nghèo nhất. Tỷ lệ hoàn thành theo nhóm ngũ phân vị của UIS (từ DHS Campuchia 2021–22) cho tỷ lệ này là 55–64%. Sàn quan hệ dự báo 85% (khoảng 90%: 69–97%) và không đạt. Vốn con người dự báo 71% (54–89%) và phù hợp."
+ },
+ "No structure reproduces Cambodia's full quintile profile. The model produces a cliff at the liquidity threshold, while completion in the data rises smoothly with wealth. Read the verdict as a ranking inside a model that misses the shape.": {
+  "zh-Hans": "没有一种结构能复现柬埔寨完整的五分位分布：模型在流动性门槛处形成断崖，而数据中的完成率随财富平滑上升。应把结论理解为在一个未能拟合分布形状的模型内部的排序。",
+  "vi": "Không cấu trúc nào tái tạo được toàn bộ phân bố theo ngũ phân vị của Campuchia: mô hình tạo ra một vách đứng tại ngưỡng thanh khoản, trong khi dữ liệu cho thấy tỷ lệ hoàn thành tăng đều theo mức giàu. Hãy đọc kết luận như một xếp hạng bên trong một mô hình chưa khớp hình dạng."
  }
 }

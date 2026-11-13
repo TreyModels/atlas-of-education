@@ -1,0 +1,96 @@
+{
+  "version": "0.2",
+  "date": "2026-11-04",
+  "scope": "First comparative assembly, not completed historical replications",
+  "cases": [
+    {
+      "id": "philippines_nursing",
+      "event": "Migration access and programme supply",
+      "evidence": "quasi-experimental published study",
+      "modules": "programme entry; licensing; migration",
+      "outcomes": "Additional licensed nurses per additional migrant; programme counts; pass rates",
+      "status": "Archive reports ratio failure; new behavioural implementation pending"
+    },
+    {
+      "id": "philippines_k12",
+      "event": "School-cycle extension",
+      "evidence": "official policy and descriptive administrative series",
+      "modules": "cohort calendar; credential vintage; returners",
+      "outcomes": "First-time entrants and total enrolment by academic year",
+      "status": "Standalone synthetic accounting implemented; observed totals transcribed"
+    },
+    {
+      "id": "hong_kong_334",
+      "event": "School/university duration change",
+      "evidence": "official transition plan",
+      "modules": "cohort calendar; separate admissions tracks",
+      "outcomes": "2012/13 entrants by old/new track; university enrolment stock",
+      "status": "Standalone synthetic accounting implemented; planned quotas verified"
+    },
+    {
+      "id": "kenya_fpe",
+      "event": "Fee abolition in 2003",
+      "evidence": "quasi-experimental studies",
+      "modules": "school choice; congestion; provider entry",
+      "outcomes": "Completion; public/private enrolment; fees; achievement",
+      "status": "Specification; historical intervention implementation pending"
+    },
+    {
+      "id": "indonesia_inpres",
+      "event": "School construction",
+      "evidence": "cohort-by-region quasi-experiment",
+      "modules": "distance; capacity; earnings",
+      "outcomes": "Years schooling and wages per school per 1000 children",
+      "status": "Specification; regression-level extraction pending"
+    },
+    {
+      "id": "mexico_progresa",
+      "event": "Conditional transfers",
+      "evidence": "randomized intervention and structural validation",
+      "modules": "dynamic household decisions",
+      "outcomes": "Age/sex-specific schooling impacts and cost",
+      "status": "Specification; full replication review pending"
+    },
+    {
+      "id": "pakistan_report_cards",
+      "event": "School information",
+      "evidence": "village randomized intervention",
+      "modules": "belief updating; fees; quality",
+      "outcomes": "Scores; private fees; primary enrolment",
+      "status": "Specification; regression-level extraction pending"
+    },
+    {
+      "id": "china_graduates",
+      "event": "Graduate supply and changing demand",
+      "evidence": "earlier research packet",
+      "modules": "production; job queues; participation",
+      "outcomes": "Wages; unemployment; inactivity; cohort stocks",
+      "status": "Separate firm-side engine implemented: matching, vacancy entry, wages, underemployment and categorical boundaries. Stored full-record fit and early-window failure available. Forecast information-set audit fails: later youth observations affect inferred demand, including earlier periods."
+    },
+    {
+      "id": "cambodia_upgrading",
+      "event": "Sector and education change",
+      "evidence": "earlier research packet; hypothesis under test",
+      "modules": "sector production; investment; skill formation",
+      "outcomes": "Sector jobs; productivity; tasks; learning; earnings",
+      "status": "Public-data comparator regressions and household country pack available. Sector investment/technology choice and household-firm coupling remain pending."
+    }
+  ],
+  "unverified_documentary_comparators": [
+    "Myanmar school-cycle reform",
+    "Angola school-cycle reform",
+    "Djibouti school-cycle reform",
+    "Nigeria demographic and measurement case"
+  ],
+  "benchmark_contract_required_fields": [
+    "source",
+    "table_page",
+    "sample",
+    "period",
+    "unit",
+    "denominator",
+    "estimator",
+    "uncertainty",
+    "calibration_or_holdout"
+  ]
+}
