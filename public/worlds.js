@@ -85,7 +85,7 @@ globalThis.AtlasWorldsLab = (() => {
           metric('Children of migrant parents', pct(at(r => r.clLeft)), 'In child labour, 2036'),
           metric('Teens working away from home', pct(at(r => r.migrant)), 'Share of all children, 2036'),
           metric('Range across histories', pct(lo) + '–' + pct(hi), 'Child labour in 2036'),
-          metric('Programme cost per child-year avoided', costPer === null ? '—' : number(costPer, 2), 'Adult annual wages')
+          metric('Illustrative cost index per child-year avoided (invented unit costs)', costPer === null ? '—' : number(costPer, 2), 'Adult annual wages')
         ],
         lines: [line('Current settings', years.map((y, i) => [y, cl[i] * 100])), line('No programmes', years.map((y, i) => [y, clBase[i] * 100]), 'reference')],
         band: current.length > 1 ? {name: 'Range across histories', points: years.map((y, i) => {

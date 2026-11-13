@@ -3824,10 +3824,10 @@
     "fr": "Travail des enfants en 2036",
     "vi": "Lao động trẻ em năm 2036"
   },
-  "Programme cost per child-year avoided": {
-    "zh-Hans": "每减少一个儿童劳动年的项目成本",
-    "fr": "Coût du programme par année de travail d’enfant évitée",
-    "vi": "Chi phí chương trình cho mỗi năm-trẻ lao động tránh được"
+  "Illustrative cost index per child-year avoided (invented unit costs)": {
+    "zh-Hans": "每减少一个儿童劳动年的示意性成本指数（单位成本为虚构，无来源）",
+    "fr": "Indice de coût illustratif par année de travail d’enfant évitée (coûts unitaires inventés)",
+    "vi": "Chỉ số chi phí minh họa cho mỗi năm-trẻ lao động tránh được (đơn giá giả định, không có nguồn)"
   },
   "Adult annual wages": {
     "zh-Hans": "成人年工资",
