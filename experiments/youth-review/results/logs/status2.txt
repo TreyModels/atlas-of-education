@@ -1,0 +1,11 @@
+bounds_new_early exit 0
+step_central_full exit 0
+bounds_new_a08_full exit 0
+bounds_new_a08_early exit 0
+step_high_full exit 0
+step_central_early exit 0
+lam_data_central_full exit 0
+bounds_new_full exit 0
+step_low_full exit 0
+lam_data_fast_full exit 0
+lam_review_full exit 0

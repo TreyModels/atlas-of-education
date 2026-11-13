@@ -1,0 +1,96 @@
+{
+  "status": "all accounting checks passed",
+  "assumptions": [
+    "100 students in each synthetic cohort",
+    "all progress and enter university",
+    "no repeaters, dropouts, adult returners, early adopters or migration",
+    "fixed programme duration; unlimited capacity except separate-quota example"
+  ],
+  "interpretation": "Accounting checks only. No causal effect or historical fit estimated.",
+  "philippines": [
+    {
+      "year": 2014,
+      "entrants": 100,
+      "enrolled": 400
+    },
+    {
+      "year": 2015,
+      "entrants": 100,
+      "enrolled": 400
+    },
+    {
+      "year": 2016,
+      "entrants": 0,
+      "enrolled": 300
+    },
+    {
+      "year": 2017,
+      "entrants": 0,
+      "enrolled": 200
+    },
+    {
+      "year": 2018,
+      "entrants": 100,
+      "enrolled": 200
+    },
+    {
+      "year": 2019,
+      "entrants": 100,
+      "enrolled": 200
+    },
+    {
+      "year": 2020,
+      "entrants": 100,
+      "enrolled": 300
+    },
+    {
+      "year": 2021,
+      "entrants": 100,
+      "enrolled": 400
+    },
+    {
+      "year": 2022,
+      "entrants": 100,
+      "enrolled": 400
+    }
+  ],
+  "hong_kong": [
+    {
+      "year": 2010,
+      "entrants": 100,
+      "enrolled": 300
+    },
+    {
+      "year": 2011,
+      "entrants": 100,
+      "enrolled": 300
+    },
+    {
+      "year": 2012,
+      "entrants": 200,
+      "enrolled": 400
+    },
+    {
+      "year": 2013,
+      "entrants": 100,
+      "enrolled": 400
+    },
+    {
+      "year": 2014,
+      "entrants": 100,
+      "enrolled": 400
+    },
+    {
+      "year": 2015,
+      "entrants": 100,
+      "enrolled": 400
+    },
+    {
+      "year": 2016,
+      "entrants": 100,
+      "enrolled": 400
+    }
+  ],
+  "ched_total_change_2015_2017_pct": -27.35886724966935,
+  "ched_total_change_2017_2019_pct": 14.307517968155503
+}

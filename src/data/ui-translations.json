@@ -324,11 +324,6 @@
   "zh-Hans": "人口可迁往避居地而非消失。救济与抽象迁移障碍影响国家控制内的人数。防御选项捆绑劳动成本、离开障碍和再捕获；旧版本无避居地食物生产。",
   "fr": "La population peut gagner un refuge sans disparaître. Secours et obstacles abstraits modifient le contrôle de l’État. La fortification combine travail, barrières et captures ; cet ancien modèle omet la production alimentaire du refuge."
  },
- "Canals need continuing work. Here maintenance falls to 35% of its reference level from year 55. The reshuffle also changes extraction, relief and trust. Compare the maintenance-only case first. Harvest still ignores the remaining farm workforce in this version.": {
-  "vi": "Kênh cần công liên tục. Bảo trì ở đây giảm còn 35% tham chiếu từ năm 55. Đổi tinh hoa cũng đổi thu, cứu trợ, niềm tin. So trường hợp chỉ bảo trì trước. Bản này thu hoạch vẫn bỏ qua lao động ruộng còn lại.",
-  "zh-Hans": "渠道需要持续劳动。维护从第55年降至参考的35%。精英变动还改变征收、救济与信任；先比较仅维护变化。此版本收获仍忽略剩余农工。",
-  "fr": "Les canaux demandent du travail continu. L’entretien tombe à 35 % à l’année 55. Le changement des élites modifie aussi prélèvements, secours et confiance ; comparez d’abord l’entretien seul. La récolte ignore encore la main-d’œuvre restante."
- },
  "People divide work among fields and public services. Court stores pay service rations, and the refuge has its own food account. Every year balances food, labour and population. Rates remain hypothetical; there are no battles or frontier supply chains. More military service can redistribute food without proving military success.": {
   "vi": "Người chia công giữa ruộng và phục vụ công. Kho triều đình trả khẩu phần phục vụ; nơi trú có sổ thức ăn riêng. Mỗi năm cân bằng thức ăn, công và dân số. Tỷ lệ vẫn giả định; chưa có trận đánh hay tiếp vận biên giới. Thêm phục vụ quân sự có thể chia lại thức ăn mà chưa chứng minh thắng trận.",
   "zh-Hans": "劳动在农田和公共服务间分配，宫廷支付口粮，避居地有独立食物账本。粮食、劳动和人口逐年平衡。比率是假设，无战斗或边境补给；军役可分配食物而不证明军事成功。",
@@ -973,16 +968,6 @@
   "zh-Hans": "人力资本、地位和关系三组机制各针对国家目标抽取了24,000次。",
   "fr": "Les ensembles capital humain, positionnel et relationnel ont chacun été tirés 24 000 fois face aux cibles des pays.",
   "vi": "Các nhóm cơ chế vốn nhân lực, vị thế và quan hệ mỗi nhóm được rút 24.000 lần so với mục tiêu của từng nước."
- },
- "Where a wealth gradient exists, adding the relational floor sharply narrows which parameter draws fit.": {
-  "zh-Hans": "在存在财富梯度的情况下，加入关系门槛会大幅缩小符合目标的参数抽样范围。",
-  "fr": "Là où un gradient de richesse existe, ajouter le plancher relationnel réduit fortement les tirages de paramètres qui correspondent.",
-  "vi": "Ở nơi có chênh lệch theo mức giàu, thêm sàn quan hệ làm thu hẹp mạnh các lần rút tham số phù hợp."
- },
- "Cambodia and China lack wealth gradients in this comparison, so acceptance rates cannot rank the theories across countries.": {
-  "zh-Hans": "柬埔寨和中国在这一比较中缺少财富梯度，因此接受率无法跨国为理论排序。",
-  "fr": "Le Cambodge et la Chine n’ont pas de gradient de richesse dans cette comparaison : les taux d’acceptation ne peuvent pas classer les théories entre pays.",
-  "vi": "Campuchia và Trung Quốc thiếu dữ liệu chênh lệch theo mức giàu trong so sánh này, nên tỷ lệ chấp nhận không thể xếp hạng các lý thuyết giữa các nước."
  },
  "Children can attend school and work at the same time. This model asks how school costs, what school offers, enforcement, the credential floor and migration change that balance. The reference has no added programme and keeps the Thailand route open. Programme strengths are assumed, and rural school retention needs an unexplained adjustment. A change here is a scenario result, not an estimated policy impact.": {
   "zh-Hans": "儿童可以同时上学和工作。这个模型探讨上学费用、学校提供的内容、执法、文凭门槛和迁移如何改变这种平衡。参考设置没有额外项目，并保持泰国通道开放。项目强度是假设的，农村学生的保留率需要一个无法解释的调整。这里的变化是情景结果，而不是估计的政策影响。",
@@ -2156,23 +2141,8 @@
  "What the calibrated worlds say": {
   "zh-Hans": "校准后的世界告诉我们什么"
  },
- "Even under the diversion explanation, calibrated teachers withhold almost nothing — median 0% of content held back.": {
-  "zh-Hans": "即使在“故意留白”解释下，校准后的教师也几乎不留白—— withheld 内容中位数为 0%。"
- },
- "The evidence ratios are too sparse to rank the explanations, and only 11–18% of calibrated settings still fit in fresh random school systems. Treat the policy effects as model-conditional, not as evidence of real-world effects.": {
-  "zh-Hans": "证据比率太稀疏，无法给解释排序；在全新随机的学校系统中，只有 11–18% 的校准参数仍然成立。请把政策效果视为以模型为条件，而非现实效应的证据。"
- },
  "Who leaves school: the credential-floor test": {
   "zh-Hans": "谁离开学校：文凭门槛检验"
- },
- "A separate model offers three explanations for who leaves secondary school, each predicting a different share of leavers from the poorest 40% of households. The Cambodia DHS 2021–22 (Table 2.12) puts that share at 47–58%.": {
-  "zh-Hans": "另一个模型为“谁离开中学”提供三种解释，各自预测最贫困 40% 家庭离校者的不同占比。柬埔寨 DHS 2021–22（表 2.12）给出的该比例为 47–58%。"
- },
- "The published table counts all secondary-age children not in school, ages 12–18 — not exits from lower secondary. A matched test needs the DHS microdata.": {
-  "zh-Hans": "已发表的表格统计的是所有 12–18 岁未在校的儿童，而非初中阶段的流失。严格对应的检验需要 DHS 微观数据。"
- },
- "Shadow education is not one disease with one cause. The model cannot crown a single explanation, but every surviving explanation points at the same policy levers — so act on the agreement, and keep measuring to break the tie.": {
-  "zh-Hans": "影子教育不是单一病因的疾病。模型无法为某个解释加冕，但所有存活的解释都指向相同的政策杠杆——所以按共识行动，并持续测量以打破平局。"
  },
  "Who stays in school, and what the diploma is worth": {
   "zh-Hans": "谁留在学校，文凭值多少"
@@ -2182,9 +2152,6 @@
  },
  "What keeps students in school": {
   "zh-Hans": "什么让学生留在学校"
- },
- "Human-capital, positional and relational bundles were each drawn 24,000 times against country targets. Where a wealth gradient exists, adding the relational floor sharply narrows which parameter draws fit.": {
-  "zh-Hans": "人力资本、位置性和关系性三种机制束，各自对标国家目标抽样 24,000 次。在存在财富梯度的地方，加入关系性底线会急剧缩小可接受的参数组合。"
  },
  "The graduate queue": {
   "zh-Hans": "毕业生排队"
@@ -2570,5 +2537,42 @@
  "A paleo-landscape model of the exit from Africa 85,000–65,000 years ago: coast-huggers, big-game hunters and mixed foragers raced across shifting sea levels and Green Arabia.": {
   "zh-Hans": "模拟距今8.5万至6.5万年前人类走出非洲的古地貌：沿海迁徙者、大型猎物狩猎者和混合觅食者穿越海平面不断变化的地带与绿色阿拉伯。",
   "vi": "Mô hình cổ cảnh quan về cuộc di cư khỏi châu Phi 85.000–65.000 năm trước: những người đi ven biển, săn thú lớn và kiếm ăn hỗn hợp vượt qua mực nước biển biến đổi và vùng Ả Rập xanh."
+ },
+ "Canals need continuing work. Here maintenance falls to 35% of its reference level from year 55. The reshuffle also changes extraction, relief, trust and the grievance that drives flight, all at once. Compare the maintenance-only case first. Harvest still ignores the remaining farm workforce in this version.": {
+  "vi": "Các kênh cần được tiếp tục công việc. Ở đây việc bảo trì giảm xuống còn 35% mức tham chiếu của nó kể từ năm 55. Việc tái cơ cấu cũng thay đổi khai thác, cứu trợ, niềm tin và sự bất mãn thúc đẩy việc bỏ đi, tất cả cùng một lúc. Hãy so sánh trường hợp chỉ bảo trì trước. Thu hoạch vẫn bỏ qua lực lượng lao động nông trại còn lại trong phiên bản này.",
+  "zh-Hans": "运河需要持续维护。这里的维护从第55年起降至其基准水平的35%。这次重组还同时改变了开采、救济、信任以及驱动逃离的不满情绪。请先比较仅维护的情形。在这个版本中，收割仍然忽略剩余的农场劳动力。",
+  "fr": "Les canaux nécessitent un travail continu. Ici, la maintenance tombe à 35 % de son niveau de référence à partir de l’année 55. Le remaniement modifie aussi l’extraction, les secours, la confiance et le grief qui pousse à la fuite, tous en même temps. Comparez d’abord le cas maintenance seule. La récolte ignore encore la main-d’œuvre agricole restante dans cette version."
+ },
+ "With a hard liquidity threshold the model fits no country's wealth profile. With a graded one it fits Cambodia and Vietnam, and then the data cannot tell the three explanations apart.": {
+  "zh-Hans": "在硬性流动性阈值下，该模型不符合任何国家的财富分布特征。在分级阈值下，它符合柬埔寨和越南的情况，而这时数据无法区分这三种解释。",
+  "vi": "Với ngưỡng thanh khoản cứng, mô hình không phù hợp với hồ sơ tài sản của bất kỳ quốc gia nào. Với ngưỡng phân cấp, nó phù hợp với Campuchia và Việt Nam, và khi đó dữ liệu không thể phân biệt ba cách giải thích."
+ },
+ "Human-capital, positional and relational bundles were each drawn 24,000 times against country targets. With a hard liquidity threshold the model fits no country's wealth profile. With a graded one it fits Cambodia and Vietnam, and then the data cannot tell the three explanations apart.": {
+  "zh-Hans": "人力资本、地位和关系组合各被抽取24,000次，以对照国家目标。在硬性流动性阈值下，该模型无法拟合任何国家的财富分布。在分级阈值下，它能拟合柬埔寨和越南，但随后数据无法区分这三种解释。",
+  "vi": "Các gói vốn nhân lực, vị thế và quan hệ mỗi loại được rút 24.000 lần để đối chiếu với các mục tiêu quốc gia. Với ngưỡng thanh khoản cứng, mô hình không khớp với hồ sơ tài sản của bất kỳ quốc gia nào. Với ngưỡng phân cấp, mô hình khớp với Campuchia và Việt Nam, và khi đó dữ liệu không thể phân biệt ba cách giải thích."
+ },
+ "Once the model fits the wealth profile, the relational-weight posterior equals its prior in every country tested. China's 2024–26 fall in gaokao registrants per birth (−5.3%) is outside every structure's prediction.": {
+  "zh-Hans": "一旦模型拟合财富分布，关系权重后验在每一个测试国家中都等于其先验。中国2024–26年高考报名人数与出生人数之比下降（−5.3%），超出了所有结构的预测范围。",
+  "vi": "Khi mô hình khớp với cấu trúc phân bố tài sản, phân bố hậu nghiệm của trọng số quan hệ bằng phân bố tiên nghiệm của nó ở mọi quốc gia được kiểm tra. Mức giảm 2024–26 của Trung Quốc về số người đăng ký thi gaokao trên mỗi ca sinh (−5.3%) nằm ngoài dự đoán của mọi cấu trúc."
+ },
+ "A separate model offers three explanations for who leaves school, each predicting a share of lower-secondary non-completers from the poorest 40% of households. UIS completion rates by wealth quintile (from the Cambodia DHS 2021–22) put that share at 55–64%. With a hard liquidity threshold the relational floor predicts 85% and fails. With a graded threshold, which also fits the full quintile profile, all three predict 57–58% and fit.": {
+  "zh-Hans": "另一个模型对谁辍学给出了三种解释，每种解释都预测了来自最贫困40%家庭的初中未完成者所占的比例。UIS按财富五分位划分的完成率（来自柬埔寨DHS 2021–22）将该比例定在55–64%。在硬性流动性阈值下，关系下限预测为85%，因此不成立。在分级阈值下——该阈值也拟合完整的五分位分布——三种解释均预测为57–58%，并且拟合。",
+  "vi": "Một mô hình riêng biệt đưa ra ba cách giải thích về việc ai rời bỏ trường học, mỗi cách dự đoán tỷ lệ học sinh không hoàn thành bậc trung học cơ sở đến từ 40% hộ gia đình nghèo nhất. Tỷ lệ hoàn thành của UIS theo nhóm ngũ phân vị tài sản (từ DHS Campuchia 2021–22) đặt tỷ lệ đó ở mức 55–64%. Với ngưỡng thanh khoản cứng, sàn quan hệ dự đoán 85% và không phù hợp. Với ngưỡng phân cấp, cũng phù hợp với toàn bộ hồ sơ ngũ phân vị, cả ba đều dự đoán 57–58% và phù hợp."
+ },
+ "The verdict depends on how the liquidity constraint is modelled. The hard version misses the shape of the wealth gradient. The graded version fits it and cannot rank the explanations. These data do not discriminate the relational floor.": {
+  "zh-Hans": "裁决取决于流动性约束如何建模。硬性版本未能捕捉财富梯度的形状。分级版本拟合了它，却无法对各项解释进行排序。这些数据无法区分关系性下限。",
+  "vi": "Phán quyết phụ thuộc vào cách mô hình hóa ràng buộc thanh khoản. Phiên bản cứng bỏ lỡ hình dạng của gradient tài sản. Phiên bản phân cấp khớp với nó và không thể xếp hạng các giải thích. Những dữ liệu này không phân biệt được sàn quan hệ."
+ },
+ "Recalibrated across 10 school systems, settings fit 37–44% of fresh random systems (up from 17–19%), but only 1–7% fit in most of them. The explanations agree on policy because the effect comes from code they share: removing the shared thin-market or alternative-provider channel moves all of them together, while the diversion mechanism changes nothing. Treat the policy effects as model-conditional.": {
+  "zh-Hans": "在10个学校系统中重新校准后，设定可拟合37–44%的新随机系统（此前为17–19%），但在其中大多数系统中仅有1–7%可拟合。各解释在政策上一致，因为效应来自它们共享的代码：移除共享的薄市场或替代提供者渠道会使它们全部一起变动，而转移机制则毫无影响。应将政策效应视为以模型为条件的。",
+  "vi": "Sau khi hiệu chỉnh lại trên 10 hệ thống trường học, các thiết lập phù hợp với 37–44% hệ thống ngẫu nhiên mới (tăng từ 17–19%), nhưng chỉ 1–7% phù hợp ở phần lớn trong số chúng. Các giải thích đồng thuận về chính sách vì hiệu ứng đến từ mã mà chúng chia sẻ: loại bỏ kênh thị trường mỏng hoặc nhà cung cấp thay thế được chia sẻ sẽ khiến tất cả chúng dịch chuyển cùng nhau, trong khi cơ chế chuyển hướng không thay đổi gì. Hãy coi các hiệu ứng chính sách là có điều kiện theo mô hình."
+ },
+ "Even under the diversion explanation, calibrated teachers withhold almost nothing — median 0% of content held back. In about a fifth of fresh school systems, diversion settings withhold more than 1% (95th percentile 9%).": {
+  "zh-Hans": "即使在转移解释下，校准教师也几乎不保留任何内容——所保留内容的中位数为0%。在约五分之一的新学校系统中，转移设置保留超过1%（第95百分位数为9%）。",
+  "vi": "Ngay cả theo cách giải thích chuyển hướng, các giáo viên đã hiệu chỉnh cũng gần như không giữ lại gì — trung vị 0% nội dung bị giữ lại. Trong khoảng một phần năm các hệ thống trường học mới, cài đặt chuyển hướng giữ lại hơn 1% (bách phân vị thứ 95 là 9%)."
+ },
+ "Shadow education is not one disease with one cause. The model cannot crown a single explanation. Its explanations agree on policy only because they share most of their code, so the agreement is not independent evidence. Keep measuring to break the tie.": {
+  "zh-Hans": "影子教育并非一种疾病对应一种病因。该模型无法裁定单一解释。其各项解释之所以在政策上一致，只是因为它们共享大部分代码，因此这种一致并非独立证据。继续测量以打破平局。",
+  "vi": "Giáo dục bóng tối không phải là một căn bệnh với một nguyên nhân duy nhất. Mô hình không thể tôn vinh một lời giải thích duy nhất. Các lời giải thích của nó chỉ đồng thuận về chính sách vì chúng chia sẻ phần lớn mã của mình, nên sự đồng thuận đó không phải là bằng chứng độc lập. Hãy tiếp tục đo lường để phá vỡ thế cân bằng."
  }
 }

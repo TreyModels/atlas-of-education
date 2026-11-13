@@ -1,0 +1,6 @@
+{
+  "regression_max_abs_diff": 0.0,
+  "regression_runs": 240,
+  "parts_none_vs_maintenance_only": 0.0,
+  "stored_runs_csv_max_abs_diff": 7.275957614183426e-12
+}

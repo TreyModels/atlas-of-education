@@ -67,7 +67,7 @@ All four cases start at 50/20/15/10/5 allocation. At year 30 they either keep th
 | shift_irrigation_to_army | 12.5 | 12.5 | 0.0 | 0.0 | 0.0 | 42.1% |
 | shift_farms_to_army | 12.5 | 12.5 | 0.0 | 0.0 | 0.0 | 96.9% |
 
-The clearest allocation result is that reducing the army after conquest can shed territory while food remains sufficient. In the army-to-monuments case the model loses three of six held towns. That follows directly from standing duty requirements and the stipulated secession threshold. Increasing army allocation by cutting irrigation grows territory but leaves water condition around 42%. Cutting farming by ten points after year 30 does not create a food gap in this particular setup; earlier land development and stores buffer it. A larger farming cut from the outset does create shortfalls. Timing and accumulated capital matter.
+The clearest allocation result is that reducing the army after conquest can shed territory while food remains sufficient. In the army-to-monuments case the model loses three of six held towns. That is a consequence of the assumed standing duty requirements and the stipulated secession threshold, not an empirical finding about garrisons. Increasing army allocation by cutting irrigation grows territory but leaves water condition around 42%. Cutting farming by ten points after year 30 does not create a food gap in this particular setup; earlier land development and stores buffer it. A larger farming cut from the outset does create shortfalls. Timing and accumulated capital matter.
 
 ## Experimental design and limits
 

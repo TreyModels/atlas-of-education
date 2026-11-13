@@ -1,0 +1,65 @@
+thin gen0 eps=7.920 prior fit share=0.00000
+thin gen0 eps=7.920 prior fit share=0.00000
+thin gen1 eps=4.573 proposed=608 acc=0.329 ess_importance=133.9 unique_after_move=120 mh_acc=0.023 fit=0.000
+thin gen2 eps=2.991 proposed=769 acc=0.260 ess_importance=127.0 unique_after_move=127 mh_acc=0.025 fit=0.000
+thin gen3 eps=2.510 proposed=762 acc=0.262 ess_importance=132.1 unique_after_move=129 mh_acc=0.027 fit=0.000
+thin gen4 eps=2.139 proposed=862 acc=0.232 ess_importance=127.3 unique_after_move=126 mh_acc=0.042 fit=0.000
+thin gen5 eps=1.814 proposed=1304 acc=0.153 ess_importance=103.3 unique_after_move=111 mh_acc=0.030 fit=0.002
+thin gen6 eps=1.671 proposed=1539 acc=0.130 ess_importance=131.1 unique_after_move=123 mh_acc=0.018 fit=0.000
+thin gen7 eps=1.516 proposed=1568 acc=0.128 ess_importance=57.1 unique_after_move=108 mh_acc=0.027 fit=0.003
+thin gen8 eps=1.370 proposed=2087 acc=0.096 ess_importance=41.6 unique_after_move=101 mh_acc=0.012 fit=0.002
+thin gen9 eps=1.258 proposed=4030 acc=0.050 ess_importance=113.1 unique_after_move=119 mh_acc=0.010 fit=0.003
+thin gen10 eps=1.200 proposed=3848 acc=0.052 ess_importance=117.4 unique_after_move=111 mh_acc=0.015 fit=0.004
+thin gen11 eps=1.164 proposed=5100 acc=0.039 ess_importance=33.3 unique_after_move=102 mh_acc=0.010 fit=0.004
+thin gen12 eps=1.071 proposed=6952 acc=0.029 ess_importance=55.4 unique_after_move=103 mh_acc=0.003 fit=0.012
+thin gen13 eps=1.017 proposed=13131 acc=0.015 ess_importance=92.9 unique_after_move=108 mh_acc=0.008 fit=0.012
+thin gen14 eps=1.000 proposed=10938 acc=0.018 ess_importance=32.2 unique_after_move=111 mh_acc=0.008 fit=0.018
+thin evidence at eps=1: {'estimate': 2.46559165668701e-07, 'ci90': [4.312725559727459e-08, 5.254041366991044e-07], 'proposals': 2000, 'fit_share': 0.041666666666666664, 'final_eps': 1.0, 'worlds_per_set': 10}
+diversion gen0 eps=7.982 prior fit share=0.00000
+diversion gen1 eps=4.298 proposed=648 acc=0.309 ess_importance=124.4 unique_after_move=117 mh_acc=0.020 fit=0.000
+diversion gen2 eps=3.199 proposed=555 acc=0.360 ess_importance=106.8 unique_after_move=120 mh_acc=0.013 fit=0.000
+diversion gen3 eps=2.645 proposed=647 acc=0.309 ess_importance=128.6 unique_after_move=129 mh_acc=0.028 fit=0.000
+diversion gen4 eps=2.300 proposed=742 acc=0.270 ess_importance=85.5 unique_after_move=110 mh_acc=0.012 fit=0.000
+diversion gen5 eps=2.072 proposed=900 acc=0.222 ess_importance=76.5 unique_after_move=108 mh_acc=0.022 fit=0.000
+diversion gen6 eps=1.788 proposed=1458 acc=0.137 ess_importance=75.9 unique_after_move=104 mh_acc=0.008 fit=0.000
+diversion gen7 eps=1.611 proposed=1882 acc=0.106 ess_importance=91.8 unique_after_move=106 mh_acc=0.017 fit=0.002
+diversion gen8 eps=1.512 proposed=1707 acc=0.117 ess_importance=112.7 unique_after_move=118 mh_acc=0.023 fit=0.001
+diversion gen9 eps=1.390 proposed=2181 acc=0.092 ess_importance=93.8 unique_after_move=117 mh_acc=0.020 fit=0.003
+diversion gen10 eps=1.282 proposed=3501 acc=0.057 ess_importance=105.1 unique_after_move=114 mh_acc=0.015 fit=0.003
+diversion gen11 eps=1.193 proposed=5730 acc=0.035 ess_importance=87.0 unique_after_move=111 mh_acc=0.008 fit=0.003
+diversion gen12 eps=1.133 proposed=6240 acc=0.032 ess_importance=104.8 unique_after_move=112 mh_acc=0.007 fit=0.005
+diversion gen13 eps=1.075 proposed=11918 acc=0.017 ess_importance=36.9 unique_after_move=94 mh_acc=0.003 fit=0.006
+diversion gen14 eps=1.049 proposed=14844 acc=0.013 ess_importance=50.5 unique_after_move=100 mh_acc=0.005 fit=0.008
+diversion evidence at eps=1: {'estimate': 0.0, 'ci90': [0.0, 0.0], 'proposals': 2000, 'fit_share': 0.0, 'final_eps': 1.0489241537080565, 'worlds_per_set': 10}
+favour gen0 eps=4.909 prior fit share=0.00000
+favour gen1 eps=4.029 proposed=525 acc=0.381 ess_importance=92.6 unique_after_move=132 mh_acc=0.033 fit=0.000
+favour gen2 eps=3.246 proposed=880 acc=0.227 ess_importance=122.0 unique_after_move=125 mh_acc=0.030 fit=0.000
+favour gen3 eps=2.788 proposed=795 acc=0.252 ess_importance=137.4 unique_after_move=124 mh_acc=0.032 fit=0.000
+favour gen4 eps=2.467 proposed=931 acc=0.215 ess_importance=101.6 unique_after_move=113 mh_acc=0.025 fit=0.000
+favour gen5 eps=2.164 proposed=1344 acc=0.149 ess_importance=82.4 unique_after_move=102 mh_acc=0.020 fit=0.000
+favour gen6 eps=1.936 proposed=1247 acc=0.160 ess_importance=98.3 unique_after_move=113 mh_acc=0.032 fit=0.000
+favour gen7 eps=1.775 proposed=1305 acc=0.153 ess_importance=100.6 unique_after_move=114 mh_acc=0.018 fit=0.001
+favour gen8 eps=1.606 proposed=1627 acc=0.123 ess_importance=121.9 unique_after_move=116 mh_acc=0.008 fit=0.000
+favour gen9 eps=1.468 proposed=1904 acc=0.105 ess_importance=84.0 unique_after_move=116 mh_acc=0.023 fit=0.001
+favour gen10 eps=1.354 proposed=2556 acc=0.078 ess_importance=41.2 unique_after_move=105 mh_acc=0.018 fit=0.001
+favour gen11 eps=1.258 proposed=3574 acc=0.056 ess_importance=75.6 unique_after_move=103 mh_acc=0.017 fit=0.003
+favour gen12 eps=1.192 proposed=4517 acc=0.044 ess_importance=69.2 unique_after_move=96 mh_acc=0.012 fit=0.003
+favour gen13 eps=1.140 proposed=7477 acc=0.027 ess_importance=120.7 unique_after_move=110 mh_acc=0.008 fit=0.005
+favour gen14 eps=1.072 proposed=7514 acc=0.027 ess_importance=109.3 unique_after_move=116 mh_acc=0.007 fit=0.010
+favour evidence at eps=1: {'estimate': 2.1323232193401325e-08, 'ci90': [0.0, 6.396969658020398e-08], 'proposals': 2000, 'fit_share': 0.009523809523809525, 'final_eps': 1.0724252343093439, 'worlds_per_set': 10}
+full gen0 eps=4.881 prior fit share=0.00000
+full gen1 eps=3.844 proposed=687 acc=0.291 ess_importance=156.8 unique_after_move=125 mh_acc=0.018 fit=0.000
+full gen2 eps=3.365 proposed=640 acc=0.312 ess_importance=107.9 unique_after_move=116 mh_acc=0.027 fit=0.000
+full gen3 eps=3.005 proposed=854 acc=0.234 ess_importance=93.2 unique_after_move=114 mh_acc=0.028 fit=0.000
+full gen4 eps=2.631 proposed=1026 acc=0.195 ess_importance=107.2 unique_after_move=121 mh_acc=0.028 fit=0.000
+full gen5 eps=2.289 proposed=1218 acc=0.164 ess_importance=97.5 unique_after_move=112 mh_acc=0.025 fit=0.000
+full gen6 eps=2.006 proposed=1492 acc=0.134 ess_importance=109.8 unique_after_move=115 mh_acc=0.027 fit=0.000
+full gen7 eps=1.777 proposed=1688 acc=0.118 ess_importance=34.0 unique_after_move=100 mh_acc=0.017 fit=0.000
+full gen8 eps=1.532 proposed=2563 acc=0.078 ess_importance=66.0 unique_after_move=106 mh_acc=0.022 fit=0.001
+full gen9 eps=1.379 proposed=2327 acc=0.086 ess_importance=116.3 unique_after_move=118 mh_acc=0.020 fit=0.002
+full gen10 eps=1.258 proposed=3643 acc=0.055 ess_importance=75.9 unique_after_move=103 mh_acc=0.013 fit=0.002
+full gen11 eps=1.151 proposed=7834 acc=0.026 ess_importance=77.3 unique_after_move=102 mh_acc=0.013 fit=0.004
+full gen12 eps=1.079 proposed=8347 acc=0.024 ess_importance=69.7 unique_after_move=102 mh_acc=0.005 fit=0.008
+full gen13 eps=1.037 proposed=8145 acc=0.025 ess_importance=99.4 unique_after_move=108 mh_acc=0.005 fit=0.016
+full gen14 eps=1.000 proposed=11187 acc=0.018 ess_importance=110.4 unique_after_move=106 mh_acc=0.005 fit=0.018
+full evidence at eps=1: {'estimate': 7.891640029078164e-09, 'ci90': [0.0, 2.3674920087234493e-08], 'proposals': 2000, 'fit_share': 0.015873015873015872, 'final_eps': 1.0, 'worlds_per_set': 10}

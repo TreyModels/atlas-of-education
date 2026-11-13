@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "/Users/treymenefee/code/atlas-of-education/experiments/youth-review/run_fits.py", line 83, in <module>
+    {'baseline': baseline, 'bounds': bounds, 'step': step, 'lam': lam}[sys.argv[1]]()
+  File "/Users/treymenefee/code/atlas-of-education/experiments/youth-review/run_fits.py", line 72, in step
+    run_fit(f'step_{tag}_full', NEW_BOUNDS, {'dr_drop': d[lvl]['dr']}, 'full', drop=('dr_drop',))
+  File "/Users/treymenefee/code/atlas-of-education/experiments/youth-review/run_fits.py", line 36, in run_fit
+    s = summarise(params, fixed, window, cost=float(best.cost),
+  File "/Users/treymenefee/code/atlas-of-education/experiments/youth-review/common.py", line 76, in summarise
+    late_rate=K.window_mean(R, 'rate_new', *L), vg_2025H1_pct=K.vg_check(R))
+  File "/Users/treymenefee/code/atlas-of-education/engine/firms/calibrate_china.py", line 87, in vg_check
+    return 100 * (v25 / v24 - 1)
+ZeroDivisionError: float division by zero

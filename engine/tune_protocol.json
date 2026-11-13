@@ -1,0 +1,40 @@
+{
+  "version": "0.3.2",
+  "recorded_before_search": "2026-11-01",
+  "training_until": 2015,
+  "design": "256 shared Latin-hypercube settings, seed 32, original ranges unchanged",
+  "training_seeds": [
+    0,
+    1
+  ],
+  "evaluation_seeds": [
+    7,
+    19,
+    43
+  ],
+  "selection": "Training rows only; exclude unverified/stylised. Accept when second-largest standardized gap <=2.5 on both seeds. Rank by indicator-balanced Huber loss (delta=1). Missing eligible observations receive infinite loss. If none accepted, mark unmatched and show the five least-loss settings.",
+  "anchoring": "Targets through 2015 only; no target correction during search/evaluation",
+  "evaluation": "Compare original and selected settings on identical seeds and instruments; report training/post-2015 separately and mechanism-only runs. Never select using evaluation results.",
+  "claim": "Retrospective temporal evaluation conditional on coded historical paths/events. Post-2015 observations have already been inspected. No new blind-experiment claim.",
+  "unchanged": "No country-specific mechanism edits, tolerance widening or observation changes.",
+  "refinement": {
+    "recorded_before_refinement": true,
+    "reason": "First-pass training errors increased on other simulation seeds, indicating seed sensitivity. This amendment is recorded after first-pass evaluation; no newly blind claim is made.",
+    "candidates_per_country": 21,
+    "training_seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "design": "four first-pass leaders + original incumbent + eight shared normalized +/-10% range perturbations around each winner/incumbent; perturbation seed 3202",
+    "selection": "Same training-only objective and acceptance threshold. Do not select using post-2015 outcomes.",
+    "evaluation_seeds": [
+      7,
+      19,
+      43
+    ]
+  }
+}

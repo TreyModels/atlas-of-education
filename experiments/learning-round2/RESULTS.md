@@ -24,7 +24,7 @@ Each row averages the same 288 settings, with different outside opportunities, m
 
 ## Findings
 
-1. Maintenance priority is the strongest improvement among these tested rules. Relative to the elite-carried-knowledge arm, prioritizing maintenance lowers the cumulative drought food gap from 2.576 to 1.084, about 58%, and lowers persistent departures from 127/288 to 80/288. This swaps maintenance and ritual budget priority. It is not a finding that Angkor historically paid them in either order.
+1. Under the assumed rule that maintenance is funded before ritual, the drought food gap is lower than under the ritual-first order. The ordering is set by the model rule, so this is an assumption-driven result, not a finding. Relative to the elite-carried-knowledge arm, prioritizing maintenance lowers the cumulative drought food gap from 2.576 to 1.084, about 58%, and lowers persistent departures from 127/288 to 80/288. This swaps maintenance and ritual budget priority. It is not a finding that Angkor historically paid them in either order.
 
 2. Expiring commitments also matter: 2% annual decay in the recurring-obligation base lowers the food gap to 1.970 and increases final water condition from 51.5% to 90.9%. The decaying variable is the cost-bearing temple stock inherited from the earlier model, not an independently measured temple endowment or a structural conservation estimate.
 
@@ -60,7 +60,7 @@ For the forgetting arm only, 0.5% of current knowledge is removed per step befor
 
 The knowledge-retained arm has no migration-related loss. The 50% and 90% variants preserve those shares of the otherwise-transferable amount. The theory-scaling arm uses beta=7/6. The constant-productivity arm uses beta=1, eliminating the economic payoff to K. These exponents are structural scenarios; no archaeological regression is re-estimated.
 
-The baseline temple-obligation base is perpetual. The sunset variant decays that base 2% annually before adding new construction. Maintenance-first calculates the central maintenance allocation before ritual, using the same 45% maintenance-offer rule, and charges both to the same finite budget. The second-centre drought response is 0.85 by default and 0.62 in both equal-exposure arms. Old-centre response remains 0.62. Stable climate remains identical. All unmentioned relocation assumptions are inherited from round 1.
+The baseline temple-obligation base is perpetual. The sunset variant decays that base 2% annually before adding new construction. Maintenance-first is an assumed allocation order. It calculates the central maintenance allocation before ritual, using the same 45% maintenance-offer rule, and charges both to the same finite budget. The second-centre drought response is 0.85 by default and 0.62 in both equal-exposure arms. Old-centre response remains 0.62. Stable climate remains identical. All unmentioned relocation assumptions are inherited from round 1.
 
 ## Interpretation limits
 

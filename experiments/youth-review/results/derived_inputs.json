@@ -1,0 +1,45 @@
+{
+ "ratio": {
+  "2015": 0.782,
+  "2016": 0.7772,
+  "2017": 0.7708,
+  "2018": 0.7473,
+  "2019": 0.7213,
+  "2020": 0.6743,
+  "2021": 0.6552,
+  "2022": 0.6304,
+  "2023": 0.6015
+ },
+ "half_life_years_origin_2015": 4.629495422567288,
+ "half_life_years_origin_2016": 3.6805089396702897,
+ "lam_g": {
+  "data_central": 0.012399495762530521,
+  "data_origin2016": 0.015571586592188491,
+  "data_fast_12m_halflife": 0.05612568731830647,
+  "review_value": 0.0025,
+  "implied_half_life_months_review": 276.91215404724807,
+  "formula": "lam = 1 - 2**(-1/H), H = months for the relative pay ratio to close half of its 2015-2023 decline"
+ },
+ "dr_step": {
+  "low": {
+   "share_real_estate": 0.05,
+   "share_tutoring": 0.025,
+   "dr": 0.0203
+  },
+  "central": {
+   "share_real_estate": 0.1,
+   "share_tutoring": 0.05,
+   "dr": 0.0406
+  },
+  "high": {
+   "share_real_estate": 0.15,
+   "share_tutoring": 0.1,
+   "dr": 0.0678
+  },
+  "inputs": {
+   "real_estate_development_loss": 0.27,
+   "tutoring_loss_share": 0.2727,
+   "note": "graduate-accessible shares are assumptions, not sourced"
+  }
+ }
+}

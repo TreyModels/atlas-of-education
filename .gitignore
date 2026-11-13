@@ -1,3 +1,9 @@
 node_modules/
 .sites*/
 *.tsbuildinfo
+dist/
+__pycache__/
+*.pyc
+.venv/
+experiments/shadow-abm/src/tutoring_abm/results/shared_ablation_runs.csv
+experiments/shadow-abm/src/tutoring_abm/results/pilot_k10.csv

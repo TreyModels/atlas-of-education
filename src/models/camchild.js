@@ -11,10 +11,18 @@ function normal(r) { let u = 0; while (u === 0) u = r(); return Math.sqrt(-2 * M
 const STATES = ['school', 'both', 'work', 'neither'];
 const HAZ = .35;   // A: share of full-time 15-17 workers in hazardous work or over 48 hours
 
+/* PROVENANCE of vPrim / vLow / vUp (school value by level: primary, lower secondary, upper secondary), per region.
+   CALIBRATED, NOT MEASURED. Tuned so the model's out-of-school rates match UNESCO UIS 2024 (3.7 / 17.6 / 48.9%) under an
+   ASSUMED Phnom Penh / countryside split (the split is unsourced; docs/engine/facts_register.md).
+   Solver: engine/camchild_ridge.py (results in engine/results/camchild_ridge.md). Python twin: engine/camchild.py.
+   Census-based alternative targets are in docs/engine/cambodia_observation_equation.md and are NOT shipped. */
 const REGIONS = {
+  // vPrim 3.391 / vLow 2.162 / vUp .886: calibrated to UIS 2024 targets under the assumed split (see block above)
   pp: {label: 'Phnom Penh', khmer: 'ភ្នំពេញ', share: .22, yMedian: 1.55, ySigma: .6, shockP: .08, shockSize: .35, borrow: .22,
     debt: .07, distance: 0, quality: .62, safety: .66, localPull: 1.25, enterprise: .18, leftBehind: .05, formalJobs: .40,
     tutoring: .06, credFloor: .55, migrate: false, vPrim: 3.391, vLow: 2.162, vUp: .886},
+  // vPrim 3.506 / vLow 5.657 / vUp 2.199: calibrated; the rural lower-secondary value is the 'unexplained boost'
+  //   flagged in docs/engine/facts_register.md (Phnom Penh 2.162 vs countryside 5.657)
   rural: {label: 'Countryside', khmer: 'ជនបទ', share: .78, yMedian: .9, ySigma: .6, shockP: .16, shockSize: .45, borrow: .12,
     debt: .12, distance: .45, quality: .50, safety: .64, localPull: .80, enterprise: .55, leftBehind: .20, formalJobs: .05,
     tutoring: .025, credFloor: .25, migrate: true, vPrim: 3.506, vLow: 5.657, vUp: 2.199},
@@ -156,7 +164,22 @@ function simulate(opts) {
   }
   return {rows, spent: {cash: spent.cash, other: spent.other, total: spent.cash + spent.other}, N: o.N, H, P};
 }
-function cst(P, reg) {   // per child per year, adult-wage units (assumed unit costs)
+/* ILLUSTRATIVE COST INDEX ON UNSOURCED (INVENTED) UNIT COSTS. Each constant below was searched for in the code, comments,
+   engine/, docs/engine/ and inputs/, and no source was found. Every one is UNSOURCED. Units: adult annual wages per child
+   per year, charged to every child in the region (not only to beneficiaries):
+     feeding      .05    school meals, x coverage                                  UNSOURCED
+     protection   .03    safety, care and counselling, x coverage                  UNSOURCED
+     leftSupport  .08 x rural leftBehind (.20), rural only                         UNSOURCED
+     leftSupport  .004   Phnom Penh                                                UNSOURCED
+     harvest      .005   flexible harvest timetable, rural only                    UNSOURCED
+     bridging     .01    re-entry and bridging classes                             UNSOURCED
+     tutorFix     .03    teacher pay in place of teacher-sold tutoring             UNSOURCED
+     ban          .004   minimum-age enforcement                                   UNSOURCED
+     debtRelief   .02    microfinance debt restructuring                           UNSOURCED
+   Cash transfers (cash, cashU) are not in this function; they enter spending at their set value.
+   The policy effect sizes are stylised. Nordtveit, Bray and Better Factories Cambodia are cited as framing, not as
+   sources for these costs. The output is an illustrative index, not a cost estimate. Do not quote it as policy advice. */
+function cst(P, reg) {   // per child per year, adult-wage units; UNSOURCED, see block above
   return P.feeding * .05 + P.protection * .03 + (reg === 'rural' ? P.leftSupport * REGIONS.rural.leftBehind * .08 + P.harvest * .005 : P.leftSupport * .004)
     + P.bridging * .01 + P.tutorFix * .03 + P.ban * .004 + P.debtRelief * .02;
 }
@@ -164,6 +187,7 @@ function compare(opts) {
   const base = simulate(Object.assign({}, opts, {policy: {thaiOpen: (opts.policy || {}).thaiOpen ?? 1}}));
   const pol = simulate(opts);
   const yearsAvoided = sum(base.rows.map((x, i) => x.all.cl - pol.rows[i].all.cl)) * base.N;
+  // costPer is an ILLUSTRATIVE COST INDEX on UNSOURCED unit costs (see cst); it is not a programme cost estimate
   return {base, pol, yearsAvoided, costPer: yearsAvoided > 0 ? pol.spent.total / yearsAvoided : null};
 }
 const api = {simulate, compare, REGIONS, POLICY0};

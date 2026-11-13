@@ -59,7 +59,7 @@ export const familyStories: Record<ModelFamily, FamilyStory> = {
       {
         heading: 'Survival sets the floor',
         blocks: [
-          { kind: 'para', tag: 'data', text: 'When children survive and people live long lives, large families stop being necessary. Life expectancy alone predicts each country’s decline down to about 1.3–1.5 children per woman.' },
+          { kind: 'para', tag: 'data', text: 'When children survive and people live long lives, large families stop being necessary. In levels, life expectancy tracks each country’s decline closely. The link does not survive a trend check: in year-to-year changes it vanishes or flips sign, and no place is cointegrated over 1961–2024. Read it as a shared trend, not a predictor.' },
           { kind: 'para', tag: 'data', text: 'Income is the wrong yardstick. Our six places reached replacement at incomes 16 times apart ($990 to $16,000), but all at life expectancies of 67–75 years. The fertility-to-income curve shifted over time; the fertility-to-survival curve held steady.' },
         ],
       },
@@ -83,20 +83,20 @@ export const familyStories: Record<ModelFamily, FamilyStory> = {
         ],
       },
       {
-        heading: 'A shared shock after 2015',
+        heading: 'A post-2015 period dummy',
         blocks: [
           { kind: 'list', tag: 'data', items: [
             'All six places fell below their development path at once, by about 0.46 children on average — 0.71 against their own earlier, recovering trends.',
             'The drop was the same whether or not births require marriage, so it is not the marriage jam. It cut births across the board.',
             'Nothing in pre-2015 trends predicted it. Models trained up to 2014 forecast 1.86 for China in 2024; the actual figure was 1.01.',
           ] },
-          { kind: 'para', tag: 'ruled-out', text: 'Country-to-country spread is ruled out; microplastics are ruled out as the main cause — the pattern is wrong. The cause is still open: smartphones, COVID and economic shocks all fit the timing.' },
+          { kind: 'para', tag: 'ruled-out', text: 'Country-to-country spread is ruled out; microplastics are ruled out as the main cause — the pattern is wrong. The cause is still open: smartphones, COVID and economic shocks all fit the timing, and a period dummy cannot separate them.' },
         ],
       },
       {
         heading: 'Can it bounce back?',
         blocks: [
-          { kind: 'para', tag: 'sim', text: 'In uniform, peer-driven societies a temporary shock can tip fertility into a lasting low. Reversing it then costs about 8 times what preventing it would have.' },
+          { kind: 'para', tag: 'sim', text: 'Illustration with invented parameters: in uniform, peer-driven societies a temporary shock can tip fertility into a lasting low. Reversing it then costs about 8 times what preventing it would have.' },
           { kind: 'para', tag: 'data', text: 'Japan and Hong Kong show a pull back toward their path; Japan recovered from 1.26 to 1.45. Korea and China show none. The data did not confirm a clean tipping cliff, though.' },
         ],
       },
@@ -140,8 +140,8 @@ export const familyStories: Record<ModelFamily, FamilyStory> = {
       {
         heading: 'What keeps students in school',
         blocks: [
-          { kind: 'para', tag: 'sim', text: 'Human-capital, positional and relational bundles were each drawn 24,000 times against country targets. Where a wealth gradient exists, adding the relational floor sharply narrows which parameter draws fit.' },
-          { kind: 'para', tag: 'open', text: 'Cambodia and China lack wealth gradients in this comparison, so acceptance rates cannot rank the theories across countries.' },
+          { kind: 'para', tag: 'sim', text: 'Human-capital, positional and relational bundles were each drawn 24,000 times against country targets. With a hard liquidity threshold the model fits no country\'s wealth profile. With a graded one it fits Cambodia and Vietnam, and then the data cannot tell the three explanations apart.' },
+          { kind: 'para', tag: 'open', text: 'Once the model fits the wealth profile, the relational-weight posterior equals its prior in every country tested. China\'s 2024–26 fall in gaokao registrants per birth (−5.3%) is outside every structure\'s prediction.' },
         ],
       },
       {
@@ -235,19 +235,19 @@ export const familyStories: Record<ModelFamily, FamilyStory> = {
       {
         heading: 'What the calibrated worlds say',
         blocks: [
-          { kind: 'para', tag: 'sim', text: 'Even under the diversion explanation, calibrated teachers withhold almost nothing — median 0% of content held back.' },
-          { kind: 'para', tag: 'open', text: 'The evidence ratios are too sparse to rank the explanations, and only 11–18% of calibrated settings still fit in fresh random school systems. Treat the policy effects as model-conditional, not as evidence of real-world effects.' },
+          { kind: 'para', tag: 'sim', text: 'Even under the diversion explanation, calibrated teachers withhold almost nothing — median 0% of content held back. In about a fifth of fresh school systems, diversion settings withhold more than 1% (95th percentile 9%). In about a fifth of fresh school systems, diversion settings withhold more than 1% (95th percentile 9%).' },
+          { kind: 'para', tag: 'open', text: 'Recalibrated across 10 school systems, settings fit 37–44% of fresh random systems (up from 17–19%), but only 1–7% fit in most of them. The explanations agree on policy because the effect comes from code they share: removing the shared thin-market or alternative-provider channel moves all of them together, while the diversion mechanism changes nothing. Treat the policy effects as model-conditional.' },
         ],
       },
       {
         heading: 'Who leaves school: the credential-floor test',
         blocks: [
-          { kind: 'para', tag: 'data', text: 'A separate model offers three explanations for who leaves secondary school, each predicting a different share of leavers from the poorest 40% of households. The Cambodia DHS 2021–22 (Table 2.12) puts that share at 47–58%.' },
-          { kind: 'para', tag: 'open', text: 'The published table counts all secondary-age children not in school, ages 12–18 — not exits from lower secondary. A matched test needs the DHS microdata.' },
+          { kind: 'para', tag: 'data', text: 'A separate model offers three explanations for who leaves school, each predicting a share of lower-secondary non-completers from the poorest 40% of households. UIS completion rates by wealth quintile (from the Cambodia DHS 2021–22) put that share at 55–64%. With a hard liquidity threshold the relational floor predicts 85% and fails. With a graded threshold, which also fits the full quintile profile, all three predict 57–58% and fit.' },
+          { kind: 'para', tag: 'open', text: 'The verdict depends on how the liquidity constraint is modelled. The hard version misses the shape of the wealth gradient. The graded version fits it and cannot rank the explanations. These data do not discriminate the relational floor.' },
         ],
       },
     ],
-    bottomLine: 'Shadow education is not one disease with one cause. The model cannot crown a single explanation, but every surviving explanation points at the same policy levers — so act on the agreement, and keep measuring to break the tie.',
+    bottomLine: 'Shadow education is not one disease with one cause. The model cannot crown a single explanation. Its explanations agree on policy only because they share most of their code, so the agreement is not independent evidence. Keep measuring to break the tie.',
   },
 
   angkor: {

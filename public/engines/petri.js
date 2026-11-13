@@ -1,9 +1,12 @@
 'use strict';
 globalThis.AngkorPetri=(()=>{
- const defaults={scenario:'drought',knockout:'none',maintenance:.45,extraction:.2,relief:1,seed:42};
+ // coordination: multiplier on harvest. New default 1 = no causal productivity effect.
+ // Old behaviour: coordination 5**.227 (=1.441, base-5 exponent from the Klassen et al. size association).
+ // waterFloor: lower bound on the hydraulic condition. New default 0 = no artificial floor. Old behaviour: 0.1.
+ const defaults={scenario:'drought',knockout:'none',maintenance:.45,extraction:.2,relief:1,seed:42,coordination:1,waterFloor:0};
  const rng=seed=>{let s=seed>>>0;return()=>((s=(Math.imul(s,1664525)+1013904223)>>>0)/4294967296);};
  function run(options={}){
-  const p={...defaults,...options},random=rng(p.seed),coord=p.knockout==='coordination'?1:5**.227;
+  const p={...defaults,...options},random=rng(p.seed),coord=p.knockout==='coordination'?1:p.coordination;
   let rural=.16,core=.015,land=.2,water=.5,temple=0,store=.03;const rows=[];
   for(let year=0;year<=240;year++){
    const weather=1+.04*(random()-.5);const drought=p.scenario==='drought'&&((year>=150&&year<175)||(year>=190&&year<205));
@@ -31,7 +34,7 @@ globalThis.AngkorPetri=(()=>{
    const reclamation=Math.min(treasury*.55,Math.max(0,1-land)*.15);treasury-=reclamation;
    const construction=treasury;treasury=0;temple+=construction;
    land=Math.min(1,land+reclamation*.6);
-   if(p.knockout!=='water')water=Math.max(.1,Math.min(1,water+.08*(maintained-water)));
+   if(p.knockout!=='water')water=Math.max(p.waterFloor,Math.min(1,water+.08*(maintained-water)));
    const hunger=people?gap/people:0;
    const foodMargin=(harvest-people)/Math.max(.001,people);
    const growth=.012*Math.max(-1,Math.min(1,foodMargin));

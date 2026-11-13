@@ -1,0 +1,457 @@
+{
+  "generated": "2026-11-13",
+  "method": "Five parallel DeepSeek web-research runs (deepseek-research, flash, up to 30 tool rounds). Citations and DOIs were checked against the Crossref API; data URLs were checked with HTTP HEAD requests. Numbers marked verified_in_source were read from the source page or PDF by the research agent. Crossref confirms citations only, not the numbers quoted from them.",
+  "summary": "Found: (A) MyCOS graduate income series 2015-2024 (secondary only, paywalled blue books); NBS urban non-private and private average wage 2015-2024 (verified, full series). Zhaopin signed-salary data verified for 2021-2022 only. (B) 5th National Economic Census figures for real estate and IT/software employment (verified); the peer-reviewed double-reduction tutoring paper (Huang et al. 2025, J. Comparative Economics, DOI 10.1016/j.jce.2025.07.002: about 3 million job losses in 4 months). Not found: open per-company layoff figures; machine-readable NBS real-estate headcount series. (C) No clean published per-unit PDSI/SPEI yield coefficient for Cambodia, Thailand or Laos rainfed rice. Closest: NE Thailand panel with SPEI coefficient about 0 and Jun-Aug rainfall coefficient +0.20 SD per SD (2026); Prabnakorn et al. 2018 (slope in paywalled table). (D) Spratt & Lisiecki 2016 NOAA data file verified (downloaded by agent). Grant et al. 2014 DOI verified, but no NOAA archive for the 500 kyr record; only the 150 kyr companion (Grant et al. 2012) is archived. (E) Beyer et al. 2020 data (figshare), Timmermann & Friedrich 2016 model output (IBS climatedata server), Krapp et al. 2021 data (OSF). The titles of Beyer 2020 and Krapp 2021 in the brief were wrong, and both are corrected below. (F) Front-speed estimates: Field & Lahr 2005 (about 2 km/yr) and Mellars 2006 Science (at least 1 km/yr). Not found: any primary source for the '0.2-2 km/yr' range. (G) Least-cost and route studies with verified DOIs. Two corrections: the Osborne 2008 DOI in the brief was wrong, and Breeze et al. 2016 is a northern/Middle East corridor study, not a southern-route study. Breeze 2016 PLoS ONE 'Palaeodeserts as barriers' was not found.",
+  "items": {
+    "A": {
+      "item": "China new-graduate starting salaries and NBS average wages, 2015-2024",
+      "sources": [
+        {
+          "id": "A1",
+          "what_found": "MyCOS undergraduate average monthly income about 6 months after graduation (cash income: wages, bonuses, commission, allowances). Series 2015-2024 circulates via reposts of the blue-book tables. Blue books are paywalled (pishu.com.cn / Social Sciences Academic Press); no open dataset found.",
+          "citation": "MyCOS Research Institute (麦可思研究院), Chinese College Graduates' Employment Report (中国大学生就业报告 / 就业蓝皮书), annual editions 2016-2025. Publisher: Social Sciences Academic Press (社会科学文献出版社).",
+          "doi": null,
+          "data_url": null,
+          "reference_urls": [
+            "https://www.163.com/dy/article/KFFV6F0J05218435.html",
+            "https://news.sciencenet.cn/htmlnews/2024/8/528983.shtm",
+            "https://www.yicaiglobal.com/news/china-college-graduate-earnings-surge-53-over-past-decade-report-says"
+          ],
+          "key_numbers": "Undergraduate monthly income (yuan): 2015 4042; 2016 4376; 2017 4774; 2018 5135; 2019 5440; 2020 5471; 2021 5833; 2022 5990; 2023 6050 (2024 blue book) or 6065 (later MyCOS table, treated as revision); 2024 6199. About +53% over the decade (Yicai, 2024 survey).",
+          "confidence": "secondary_citation"
+        },
+        {
+          "id": "A2",
+          "what_found": "Zhaopin (智联招聘) graduate employment survey: expected and signed monthly salary. 2021 and 2022 verified in the report PDF and press. No verified average signed salary for 2023 or 2024.",
+          "citation": "Zhaopin (智联招聘), 2022大学生就业力调研报告 (2022 graduate employability survey report), 2022.",
+          "doi": null,
+          "data_url": "https://scs.sao.um.edu.mo/wp-content/uploads/2022/11/%E3%80%90%E6%99%BA%E8%81%94%E6%8B%9B%E8%81%98%E3%80%912022%E5%B9%B4%E5%A4%A7%E5%AD%A6%E7%94%9F%E5%B0%B1%E4%B8%9A%E5%8A%9B%E8%B0%83%E7%A0%94%E6%8A%A5%E5%91%8A.pdf",
+          "key_numbers": "2021 (class of 2021): expected 6711 yuan/month, signed 7395 yuan/month. 2022: expected 6295 (-6% y/y), signed 6507 (-12% y/y). Share signing above 10,000 yuan fell to 10.7% from 19.2%. 2023 and 2024 reports: sector preference data only (e.g. expected 2023 share for real estate/construction 5.2%, education/tutoring 5.5%); no average salary found.",
+          "confidence": "verified_in_source for 2021-2022; not_found for 2023-2024 average salary"
+        },
+        {
+          "id": "A3",
+          "what_found": "NBS average annual wage of urban non-private units and urban private units, full series 2015-2024.",
+          "citation": "National Bureau of Statistics of China (国家统计局), 2023年城镇单位就业人员年平均工资情况 (released 2024-05-17) and 2024年城镇单位就业人员年平均工资情况 (released 2025-05-16).",
+          "doi": null,
+          "data_url": "https://www.stats.gov.cn/xxgk/sjfb/zxfb2020/202505/t20250516_1959826.html",
+          "reference_urls": [
+            "https://www.stats.gov.cn/sj/zxfb/202405/t20240520_1950434.html"
+          ],
+          "key_numbers": "Urban non-private (yuan/yr): 2015 62029; 2016 67569; 2017 74318; 2018 82461 (some vintages restate 82413); 2019 90501; 2020 97379; 2021 106837; 2022 114029; 2023 120698; 2024 124110. Urban private: 2015 39589; 2016 42833; 2017 45761; 2018 49575; 2019 53604; 2020 57727; 2021 62884; 2022 65237; 2023 68340; 2024 69476. Note: NBS says the 2024 private-unit series is affected by the 5th Economic Census sample change; use the comparable-basis growth rates for real comparisons.",
+          "confidence": "verified_in_source"
+        },
+        {
+          "id": "A4",
+          "what_found": "Derived ratio of MyCOS undergraduate starting pay to NBS non-private monthly average wage (annual / 12). This is arithmetic on A1 and A3, not a sourced figure. The populations and definitions differ.",
+          "citation": "Derived from A1 and A3.",
+          "doi": null,
+          "data_url": null,
+          "key_numbers": "Ratio: 2015 0.78; 2019 0.72; 2021 0.66; 2022 0.63; 2023 0.60; 2024 0.60. Starting pay rose in nominal terms but fell about 18 percentage points relative to the non-private average over 2015-2023.",
+          "confidence": "derived (inputs: A1 secondary_citation, A3 verified_in_source)"
+        }
+      ]
+    },
+    "B": {
+      "item": "China graduate-job demand after 2021",
+      "sources": [
+        {
+          "id": "B1_real_estate",
+          "what_found": "Real-estate employment from the 5th National Economic Census (end-2023 enterprise employment, compared with end-2018). Development segment fell sharply; property management rose. Real-estate average wage (non-private units) flat in 2023-2024. The yearbook headcount series for urban non-private units by sector (中国统计年鉴 table 4-6) is not machine-readable; secondary aggregator values are unverified.",
+          "citation": "National Bureau of Statistics / Leading Group Office of the Fifth National Economic Census, 第五次全国经济普查公报（第四号）——第三产业基本情况之一 (bulletin No. 4, 2024-12-26).",
+          "doi": null,
+          "data_url": "https://finance.sina.com.cn/jjxw/2025-01-02/doc-inecqnpx5603419.shtml",
+          "reference_urls": [
+            "https://www.cinic.org.cn/xw/tjsj/1569736.html"
+          ],
+          "key_numbers": "Real-estate enterprise employees end-2023: 1439.8 万 (+14.0% vs end-2018). Real-estate development (房地产开发经营): 271.3 万 (-27.0% vs 2018, so about 371.6 万 in 2018, derived). Property management 854.3 万 (+34.1%); brokerage 186.7 万 (+18.0%). Real-estate non-private average wage: 2022 90346 yuan; 2023 91932 (+1.8%); 2024 91912 (0.0%). Aggregator (unverified, do not use as primary): non-private real-estate headcount 2022 512 万, 2023 509 万, 2024 522 万 (jujindata).",
+          "confidence": "census figures verified_in_source; yearbook headcount series not_found in primary form"
+        },
+        {
+          "id": "B2_tutoring",
+          "what_found": "Peer-reviewed estimate of K-12 tutoring job losses after the July 2021 double-reduction policy, using online job postings and firm-registration microdata. Citation confirmed via Crossref (title, journal, volume 53, pages 954-976). Numbers taken from the abstract as read by the research agent.",
+          "citation": "Huang, Zibin; Liu, Yinan; Ma, Mingming; Yang, Leo Yang (2025). 'Biting the hand that teaches: Unraveling the economic impact of banning private tutoring in China.' Journal of Comparative Economics 53(4): 954-976.",
+          "doi": "10.1016/j.jce.2025.07.002",
+          "data_url": "https://www.sciencedirect.com/science/article/abs/pii/S014759672500054X",
+          "key_numbers": "Within 4 months of the policy: online job postings at tutoring-related firms -89%; tutoring-firm entry -50%; exits tripled. Back-of-envelope estimate of about 3 million job losses in 4 months. At least RMB 11 billion VAT losses over 18 months.",
+          "confidence": "verified_in_source (citation via Crossref; numbers from abstract)"
+        },
+        {
+          "id": "B2_corroborating",
+          "what_found": "Corroborating secondary figures: about 11 million employees in the sector before the policy; 95.6% of offline academic tutoring institutions and 87.1% of online ones closed within 13 months; 60-80% of tutoring-company staff facing layoffs. Also a BNU/TAL industry estimate of about 10 million jobs (CNBC, Aug 2021). Correction: the source the agent called 'Oxford Review of Education' is a different journal. Crossref lists DOI 10.1080/02680939.2025.2479151 as Journal of Education Policy 40: 667-688 (2025), on private English tutors under the double-reduction policy. The figures are secondary citations inside that paper and were not checked against their original sources.",
+          "citation": "Journal of Education Policy (2025) 40: 667-688, DOI 10.1080/02680939.2025.2479151 (secondary). CNBC, 2021-08-05 (BNU/TAL estimate).",
+          "doi": "10.1080/02680939.2025.2479151",
+          "data_url": "https://www.cnbc.com/2021/08/05/chinas-harsh-education-crackdown-sends-parents-businesses-scrambling.html",
+          "key_numbers": "About 11 million employees (Zhang 2023, as cited); 95.6% offline and 87.1% online closures within 13 months (Jin 2022, as cited); about 10 million jobs (BNU/TAL, 2021).",
+          "confidence": "secondary_citation"
+        },
+        {
+          "id": "B2_company_layoffs",
+          "what_found": "Audited per-company layoff counts (New Oriental, TAL, Gaotu, Youdao) were not found. Press mentions 'tens of thousands' at Gaotu only.",
+          "citation": null,
+          "doi": null,
+          "data_url": null,
+          "key_numbers": null,
+          "confidence": "not_found"
+        },
+        {
+          "id": "B3_internet",
+          "what_found": "Information transmission, software and IT services employment (enterprise units) from the 5th Economic Census, plus IT non-private average wages from NBS and platform-worker counts from ACFTU/MOHRSS. The NBS IT headcount series 2013-2021 comes from a secondary journal article; the PDF was not opened.",
+          "citation": "National Bureau of Statistics, 第五次全国经济普查公报（第四号） (2024-12-26). 雷尚君、贺俊、张彬斌 (2024), '数字经济稳就业：净贡献及动能枢纽', 财经问题研究 2024(8): 34-50 (CNKI CJWT202408003; no DOI found). ACFTU, 第九次全国职工队伍状况调查 (published Jan 2023), restated by MOHRSS (Jan 2025).",
+          "doi": null,
+          "data_url": "https://finance.sina.com.cn/jjxw/2025-01-02/doc-inecqnpx5603419.shtml",
+          "reference_urls": [
+            "https://www.cnki.com.cn/Article/CJFDTotal-CJWT202408003.htm",
+            "https://chrm.mohrss.gov.cn/page/253"
+          ],
+          "key_numbers": "IT/software enterprise employees end-2023: 1506.7 万 (+51.4% vs 2018); software and IT services 1107.1 万; internet services 242.2 万; telecom/broadcast/satellite 157.5 万. NBS non-private IT headcount 327.3 万 (2013) to 519.2 万 (2021) (secondary). IT non-private average wage (yuan): 2021 201506; 2022 220418; 2023 231810; 2024 238966. Private-unit IT wage fell 4.7% in 2024 (to 123193). Platform / new-form workers: 8400 万 (21% of the 4.02 亿 workforce), ACFTU 9th survey.",
+          "confidence": "census and wage figures verified_in_source; IT headcount series and platform-worker counts secondary_citation"
+        }
+      ]
+    },
+    "C": {
+      "item": "Rice yield response to drought in mainland SE Asia (Cambodia, Thailand, Laos)",
+      "overall": "No widely cited published per-unit PDSI/SPEI (or monsoon-rainfall) yield coefficient for rainfed lowland rice in Cambodia, Thailand or Laos was found. Most sources are either abstract-level, class-based, or report no clear relationship. Treat the coefficients below as inputs for judgement, not parameters.",
+      "sources": [
+        {
+          "id": "C1",
+          "what_found": "Panel of 19 NE Thailand provinces, 2002-2023, wet-season rice (about 85% rainfed lowland). Two-way fixed effects, all variables z-scored. SPEI-2 (Sep-Oct) has a coefficient of about zero; Jun-Aug cumulative rainfall has +0.200 SD yield per SD rainfall (p = 0.010); Jun-Oct mean temperature +0.481 (p = 0.10).",
+          "citation": "'Are dispersed rice planting dates linked to higher provincial yields? Evidence from Northeast Thailand.' Paddy and Water Environment (2026). Authors not shown in the copy retrieved.",
+          "doi": "10.1007/s10333-026-01099-y",
+          "data_url": "https://link.springer.com/article/10.1007/s10333-026-01099-y/tables/2",
+          "key_numbers": "Table 2: SPEI(Sep-Oct) -0.009 (p = 0.96); Jun-Aug rainfall +0.200 SD per SD (p = 0.010).",
+          "confidence": "verified_in_source (Table 2 read by agent; DOI resolves in Crossref; authors not confirmed)"
+        },
+        {
+          "id": "C2",
+          "what_found": "Yield-SPEI-1 relation for rainfed lowland paddy across 10 provinces of the Mun River Basin, NE Thailand, 1984-2013. Positive in all months except September; significant in 8 of 10 provinces (5 of 10 for precipitation). SPEI-1 explains 10-16% of interannual yield variance. Climate-trend effect on yield less than 50 kg/ha/decade (about 3% of mean). The per-unit kg/ha slope is in a paywalled table and was not retrieved.",
+          "citation": "Prabnakorn, S.; Maskey, S.; Suryadi, F.X.; de Fraiture, C. (2018). 'Rice yield in response to climate trends and drought index in the Mun River Basin, Thailand.' Science of the Total Environment 621: 108-119.",
+          "doi": "10.1016/j.scitotenv.2017.11.136",
+          "data_url": "https://www.sciencedirect.com/science/article/abs/pii/S0048969717331947",
+          "key_numbers": "Explained variance 10-16% (SPEI-1); climate-trend effect under 50 kg/ha/decade. Per-unit SPEI coefficient not retrieved.",
+          "confidence": "verified_in_source for qualitative and abstract figures; per-unit coefficient not_found"
+        },
+        {
+          "id": "C3",
+          "what_found": "Cambodia (Lower Mekong), rainfed rice, 2000-2016. No clear regional pattern linking drought indices to yields. Drought-affected provinces average about 1650 kg/ha vs national about 2900 rising to 3550 kg/ha. Fertiliser explains most of the yield variation (R2 about 0.84).",
+          "citation": "Abhishek et al. (2021). 'Evaluating the impacts of drought on rice productivity over Cambodia in the Lower Mekong Basin.' Journal of Hydrology 599: 126291. Full author list not confirmed.",
+          "doi": "10.1016/j.jhydrol.2021.126291",
+          "data_url": null,
+          "key_numbers": "No regional drought-yield pattern; provinces about 1650 vs national about 2900-3550 kg/ha (2000-2016).",
+          "confidence": "verified_in_source (abstract; DOI confirmed via Crossref)"
+        },
+        {
+          "id": "C4",
+          "what_found": "Drought yield-loss mapping from PDSI classes (moderate, severe, extreme) for SE Asian rainfed cropland. Loss rates are imported from a global meta-analysis, not estimated from SE Asian data. Step function, not a continuous slope.",
+          "citation": "Venkatappa, M.; Sasaki, N. (2021). 'Datasets of drought and flood impact on croplands in Southeast Asia from 1980 to ...' Data in Brief 38: 107406. Loss rates from Zhang et al. (2018), IJERPH 15: 839.",
+          "doi": "10.1016/j.dib.2021.107406",
+          "data_url": null,
+          "key_numbers": "Yield reduction: moderate drought (PDSI < -2 class) 27.8%; severe 32.0%; extreme 90%. Source: Zhang et al. 2018 meta-analysis.",
+          "confidence": "secondary_citation (rates imported from a global meta-analysis)"
+        },
+        {
+          "id": "C5",
+          "what_found": "Lower Mekong Basin (Cambodia, Laos, Thailand, Vietnam), rainfed rice, SWAT and AquaCrop. Drought-year growing-season precipitation about -34% associated with yield decreases up to 1.5 t/ha. The 1.5 t/ha figure is for Vietnam's Central Highlands, not the three countries in scope.",
+          "citation": "Kang, S.; Sridhar, V. (2021). 'Future rice farming threatened by drought in the Lower Mekong Basin.' Scientific Reports 11: 9383.",
+          "doi": "10.1038/s41598-021-88405-2",
+          "data_url": "https://www.nature.com/articles/s41598-021-88405-2",
+          "key_numbers": "Up to -1.5 t/ha yield in drought years with about -34% growing-season precipitation (Vietnam, Central Highlands).",
+          "confidence": "verified_in_source (abstract-level; DOI confirmed via Crossref)"
+        },
+        {
+          "id": "C6",
+          "what_found": "Field-based losses under drought and water stress in farmers' fields and experiments in NE Thailand and Laos. Not index-based.",
+          "citation": "Clermont-Dauphin, C. et al. (2010). 'Yield of rice under water and soil salinity risks in farmers' fields in northeast Thailand.' Field Crops Research 118: 289-296. DOI 10.1016/j.fcr.2010.06.009. Sipaseuth, Prohmchum & Jaisil (2007), Khon Kaen Agric. J. 35(1): 84-103 (Laos). Inthavong et al. (2014), Field Crops Research (DOI not verified).",
+          "doi": "10.1016/j.fcr.2010.06.009",
+          "data_url": null,
+          "key_numbers": "Clermont-Dauphin 2010: about 87% yield loss from drought in the 2005 low-rainfall season (abstract). Sipaseuth 2007: under imposed stress, yield reduced about 80% (Vientiane ARC) and about 60% (Tasano). Inthavong 2014: water stress alone 4-12% yield reduction in Savannakhet farms.",
+          "confidence": "verified_in_source (abstracts); Inthavong DOI not verified"
+        },
+        {
+          "id": "C7",
+          "what_found": "Cambodia rainfed lowland rice: SPI-based drought linked to damaged rice area, not yield. No yield-per-index coefficient.",
+          "citation": "Chhinh, N.; Millington, A. (2015). 'Drought Monitoring for Rice Production in Cambodia.' Climate 3(4): 792-811.",
+          "doi": "10.3390/cli3040792",
+          "data_url": null,
+          "key_numbers": "Critical success index 0.66; r = -0.455 between Nino3.4 and SPI-12 lagged 3 months.",
+          "confidence": "verified_in_source (abstract)"
+        },
+        {
+          "id": "C8",
+          "what_found": "Regional historical analysis of drought effects on rice and maize yields in SE Asia. Reports the sign and principal components of association, with no coefficient in units.",
+          "citation": "Amnuaylojaroen, T.; Chanvichit, P. (2024). 'Historical Analysis of the Effects of Drought on Rice and Maize Yields in Southeast Asia.' Resources 13(3): 44.",
+          "doi": "10.3390/resources13030044",
+          "data_url": "https://www.mdpi.com/2079-9276/13/3/44",
+          "key_numbers": "No coefficient with units reported.",
+          "confidence": "verified_in_source (citation via Crossref; no coefficient)"
+        },
+        {
+          "id": "C9",
+          "what_found": "Global gridded drought-to-yield loss patterns including rice. Mainland SEA values appear only in figures and maps and were not tabulated.",
+          "citation": "Kim, Iizumi & Nishimori (2019). 'Global Patterns of Crop Production Losses Associated with Droughts from 1983 to 2009.' Journal of Applied Meteorology and Climatology 58: 1233-1244.",
+          "doi": "10.1175/JAMC-D-18-0174.1",
+          "data_url": null,
+          "key_numbers": "Not extracted.",
+          "confidence": "verified_in_source (citation via Crossref); numbers not_found"
+        },
+        {
+          "id": "C10",
+          "what_found": "Global multiscalar SPEI vs yield-anomaly slopes. Could be a source of a per-unit SPEI estimate for MSEA rice grids; no mainland-SEA value was verified. The DOI did not resolve in Crossref, so the citation is unconfirmed.",
+          "citation": "Hendrawan et al. (2022). Environmental Research Letters 17: 014008. DOI 10.1088/1748-9326/ac418e (unresolved).",
+          "doi": "10.1088/1748-9326/ac418e",
+          "data_url": null,
+          "key_numbers": "not_found for MSEA.",
+          "confidence": "not_found (DOI unresolved; citation unconfirmed)"
+        }
+      ]
+    },
+    "D": {
+      "item": "NOAA NCEI paleo data for Spratt & Lisiecki 2016 and Grant et al. 2014",
+      "sources": [
+        {
+          "id": "D1_spratt",
+          "what_found": "Late Pleistocene sea-level stack. Data file downloaded by the agent. Variables: age (ka BP); SeaLev_shortPC1 (7 records, 0-430 ka) and SeaLev_longPC1 (5 records, 0-798 ka), each with 1-sigma and 95% bounds. Units: metres above present, 1-ka sampling.",
+          "citation": "Spratt, R.M.; Lisiecki, L.E. (2016). 'A Late Pleistocene sea level stack.' Climate of the Past 12(4): 1079-1092.",
+          "doi": "10.5194/cp-12-1079-2016",
+          "data_url": "https://www.ncei.noaa.gov/pub/data/paleo/contributions_by_author/spratt2016/spratt2016-noaa.txt",
+          "reference_urls": [
+            "https://www.ncei.noaa.gov/access/paleo-search/study/19982"
+          ],
+          "dataset_doi": "10.25921/rd66-5820",
+          "key_numbers": "Sea level in m; 0-798 ka at 1-ka steps.",
+          "confidence": "verified_in_source (file URL returns HTTP 200; header read by agent)"
+        },
+        {
+          "id": "D2_grant2014",
+          "what_found": "Red Sea relative sea level over 500 kyr (Hanish Sill). Paper DOI resolves. NOAA NCEI has no archive for the 500 kyr record. The supplementary data (Supplementary Data 1-3) are on the article page, but the individual file URLs were not verified. NCEI holds only the 150 kyr companion (Grant et al. 2012).",
+          "citation": "Grant, K.M.; Rohling, E.J.; Bronk Ramsey, C.; Cheng, H.; Edwards, R.L.; Florindo, F.; Heslop, D.; Marra, F.; Roberts, A.P.; Tamisiea, M.E.; Williams, F. (2014). 'Sea-level variability over five glacial cycles.' Nature Communications 5: 5076.",
+          "doi": "10.1038/ncomms6076",
+          "data_url": "https://www.nature.com/articles/ncomms6076",
+          "reference_urls": [
+            "https://www.ncei.noaa.gov/access/paleo-search/study/13685"
+          ],
+          "companion_dataset": {
+            "citation": "Grant et al. (2012). Nature 491. DOI 10.1038/nature11593. NCEI 150 kyr Red Sea RSL study.",
+            "dataset_doi": "10.25921/mf4a-k406",
+            "files_noted_in_metadata_not_fetched": [
+              "/pub/data/paleo/contributions_by_author/grant2012/grant2012rsl.txt",
+              "/pub/data/paleo/contributions_by_author/grant2012/grant2012rsl-prob.txt"
+            ]
+          },
+          "key_numbers": "Records 0-500 ka at about 200-yr sampling, +/-12 m (2 sigma) sea-level uncertainty plus chronological error (from article text).",
+          "confidence": "DOI verified_in_source; 500 kyr NOAA archive not_found; supplementary file URLs unverified; 150 kyr companion secondary_citation"
+        }
+      ]
+    },
+    "E": {
+      "item": "Gridded paleoclimate output for Africa/Arabia, 50-130 ka",
+      "sources": [
+        {
+          "id": "E1_beyer2020",
+          "what_found": "120 kyr terrestrial climate, bioclimate and vegetation dataset (NetCDF, 0.5 deg). Correction to the brief: the title is 'High-resolution terrestrial climate, bioclimate and vegetation for the last 120,000 years' and the year is 2020. An addendum (monthly NPP) was published in 2021.",
+          "citation": "Beyer, R.M.; Krapp, M.; Manica, A. (2020). 'High-resolution terrestrial climate, bioclimate and vegetation for the last 120,000 years.' Scientific Data 7: 236. Addendum: Scientific Data 8: 262 (2021), DOI 10.1038/s41597-021-01051-1.",
+          "doi": "10.1038/s41597-020-0552-1",
+          "data_url": "https://figshare.com/articles/dataset/LateQuaternary_Environment_nc/12293345",
+          "reference_urls": [
+            "https://doi.org/10.6084/m9.figshare.12293345.v4",
+            "https://osf.io/p86rt (code, DOI 10.17605/osf.io/p86rt)"
+          ],
+          "key_numbers": "Variables: monthly temperature, precipitation, cloudiness, relative humidity, wind speed; BIO1-BIO19; annual NPP, LAI, biome. Time: 2 ka steps 120-22 ka, then 1 ka steps to present (72 steps). Grid 720 x 300 x 12 months. Files: LateQuaternary_Environment.nc (1.24 GB), LateQuaternary_MonthlyNPP.nc (98 MB).",
+          "confidence": "verified_in_source (citation via Crossref; figshare page reachable, returns HTTP 202, landing page read; NetCDF not downloaded)"
+        },
+        {
+          "id": "E2_timmermann2016",
+          "what_found": "Human dispersal model output over 125 ka (arrival time, climate forcing, human density), linked to the paper. Underlying LOVECLIM transient simulation is on the IPRC/APDRC server (per-variable URLs not verified). No PANGAEA or Zenodo deposit found.",
+          "citation": "Timmermann, A.; Friedrich, T. (2016). 'Late Pleistocene climate drivers of early human migration.' Nature 538(7623): 92-95.",
+          "doi": "10.1038/nature19365",
+          "data_url": "https://climatedata.ibs.re.kr/grav/data/human-dispersal-simulation",
+          "reference_urls": [
+            "https://apdrc.soest.hawaii.edu/projects/paleomodeling/"
+          ],
+          "key_numbers": "Migration waves at 106-94, 89-73, 59-47 and 45-29 ka (from abstract). Human density in individuals per 100 km2, 1-ka snapshots.",
+          "confidence": "verified_in_source for DOI and dataset page (HTTP 200); APDRC endpoints secondary_citation"
+        },
+        {
+          "id": "E3_krapp2021",
+          "what_found": "Corrected title. This is a statistics-based reconstruction (a GCM emulator, GCMET) of global terrestrial climate for the last 800 kyr, not a 120 kyr emulator. Data on OSF as NetCDF, one file per variable. Repacks on figshare and Zenodo (secondary).",
+          "citation": "Krapp, M.; Beyer, R.M.; Edmundson, S.L.; Valdes, P.J.; Manica, A. (2021). 'A statistics-based reconstruction of high-resolution global terrestrial climate for the last 800,000 years.' Scientific Data 8: 228.",
+          "doi": "10.1038/s41597-021-01009-3",
+          "data_url": "https://osf.io/8n43x/",
+          "reference_urls": [
+            "https://figshare.com/articles/dataset/pastclim_krapp2021_v1_0_0/19733680",
+            "https://zenodo.org/record/7065055"
+          ],
+          "key_numbers": "Grid 0.5 deg, 720 x 360, 800 time steps (1 ka). Variables: monthly temperature (K), precipitation, cloudiness, minimum annual temperature, NPP, biome, BIO1-BIO19, land mask.",
+          "confidence": "verified_in_source for citation and OSF project (API); figshare/Zenodo secondary_citation"
+        }
+      ]
+    },
+    "F": {
+      "item": "Published Out-of-Africa dispersal front-speed estimates (km/yr)",
+      "sources": [
+        {
+          "id": "F1",
+          "what_found": "About 2 km/yr average (20,000 km in about 10,000 years, 60-50 ka). Authors call this 'perhaps impossibly slow' and argue real coastal legs were faster.",
+          "citation": "Field, J.S.; Mirazón Lahr, M. (2005/2006). 'Assessment of the Southern Dispersal: GIS-Based Analyses of Potential Routes at Oxygen Isotopic Stage 4.' Journal of World Prehistory 19(1): 1-45.",
+          "doi": "10.1007/s10963-005-9000-6",
+          "data_url": "https://os.pennds.org/archaeobib_filestore/pdf_articles/JWP/2005_19_1_FieldandLahr.pdf",
+          "key_numbers": "About 2 km/yr (section 'The Speed of Migration').",
+          "confidence": "verified_in_source (PDF read by agent; citation via Crossref)"
+        },
+        {
+          "id": "F2",
+          "what_found": "At least 1.0 km/yr for a single dispersal of at most 15,000 years (probably under 10,000 years) to Australasia along the coast.",
+          "citation": "Mellars, P. (2006). 'Going East: New Genetic and Archaeological Perspectives on the Modern Human Colonization of Eurasia.' Science 313(5788): 796-800.",
+          "doi": "10.1126/science.1128402",
+          "data_url": "https://os.pennds.org/archaeobib_filestore/pdf_articles/Science/2006_313_5788_Mellars.pdf",
+          "key_numbers": "At least 1.0 km/yr.",
+          "confidence": "verified_in_source (text read by agent; citation via Crossref)"
+        },
+        {
+          "id": "F3",
+          "what_found": "No explicit km/yr speed. Demographic diffusion wave from a small African source region.",
+          "citation": "Mellars, P. (2006). 'Why did modern human populations disperse from Africa ca. 60,000 years ago? A new model.' PNAS 103(25): 9381-9386.",
+          "doi": "10.1073/pnas.0510792103",
+          "data_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1480416/",
+          "key_numbers": "None.",
+          "confidence": "verified_in_source (no speed given)"
+        },
+        {
+          "id": "F4",
+          "what_found": "No km/yr front speed. Reaction-diffusion human dispersal model forced by transient LOVECLIM climate. Diffusivity is in the paywalled methods.",
+          "citation": "Timmermann & Friedrich (2016), Nature 538: 92-95 (see E2).",
+          "doi": "10.1038/nature19365",
+          "data_url": null,
+          "key_numbers": "Migration waves 106-94, 89-73, 59-47, 45-29 ka. No km/yr value.",
+          "confidence": "verified_in_source (abstract); diffusivity not_found"
+        },
+        {
+          "id": "F5",
+          "what_found": "Mellars 2006 Nature (radiocarbon revision of dispersal timing). No km/yr value verified.",
+          "citation": "Mellars, P. (2006). 'A new radiocarbon revolution and the dispersal of modern humans in Eurasia.' Nature 439(7079): 931-935.",
+          "doi": "10.1038/nature04521",
+          "data_url": null,
+          "key_numbers": "None.",
+          "confidence": "secondary_citation (Crossref metadata only; no speed)"
+        },
+        {
+          "id": "F6_not_found",
+          "what_found": "A '0.2-2 km/yr' range was not found in any primary paper (Scerri 2017/2018, Bae et al. 2017 and Hallett et al. checked; none gives a speed). Web sources give loose ranges (0.5-4, ~1, ~2 km/yr) with no primary origin. Do not cite as a sourced range.",
+          "citation": null,
+          "doi": null,
+          "data_url": null,
+          "key_numbers": null,
+          "confidence": "not_found"
+        }
+      ]
+    },
+    "G": {
+      "item": "Least-cost-path, route and agent-based studies of the southern coastal Out-of-Africa route",
+      "sources": [
+        {
+          "id": "G1",
+          "finding": "GIS least-cost modelling of Indian Ocean rim routes at OIS 4 (about 2 km/yr average); a viable coastal corridor, with faster bursts likely.",
+          "citation": "Field & Lahr (2005), Journal of World Prehistory 19: 1-45.",
+          "doi": "10.1007/s10963-005-9000-6",
+          "confidence": "verified_in_source"
+        },
+        {
+          "id": "G2",
+          "finding": "GIS least-cost routes for South Asia predict entry via a coastal corridor from the west (Zagros/Makran) rather than the Hindu Kush, with inland spread via the Indus and Narmada.",
+          "citation": "Field, J.S.; Petraglia, M.D.; Lahr, M.M. (2007). 'The southern dispersal hypothesis and the South Asian archaeological record: Examination of dispersal routes through GIS analysis.' Journal of Anthropological Archaeology 26(1): 88-108.",
+          "doi": "10.1016/j.jaa.2006.06.001",
+          "confidence": "verified_in_source (citation via Crossref; finding from research agent)"
+        },
+        {
+          "id": "G3",
+          "finding": "Northern/Levant-Arabia corridor study (Tabuk corridor, MIS 6-5). Not a southern coastal route study; included as a route-comparison reference.",
+          "citation": "Breeze, P.S. et al. (2016). 'Palaeohydrological corridors for hominin dispersals in the Middle East ~250-70,000 years ago.' Quaternary Science Reviews 144: 155-185.",
+          "doi": "10.1016/j.quascirev.2016.05.012",
+          "confidence": "verified_in_source (citation via Crossref; finding from research agent)"
+        },
+        {
+          "id": "G3b",
+          "finding": "Methods companion to Breeze et al. 2016 (remote sensing and GIS for Arabian palaeohydrology).",
+          "citation": "Breeze, P.S. et al. (2015). Quaternary International 382: 98-119.",
+          "doi": "10.1016/j.quaint.2015.01.022",
+          "confidence": "verified_in_source (citation via Crossref)"
+        },
+        {
+          "id": "G4",
+          "finding": "Genomic evidence (483 high-coverage genomes) for an early out-of-Africa expansion contributing at least 2% of Papuan ancestry, implying modern humans outside Africa before about 75 ka. Relevant to the coastal route's timing, not a route model.",
+          "citation": "Pagani, L. et al. (2016). 'Genomic analyses inform on migration events during the peopling of Eurasia.' Nature 538: 238-242.",
+          "doi": "10.1038/nature19792",
+          "confidence": "verified_in_source (citation via Crossref; finding from research agent)"
+        },
+        {
+          "id": "G5",
+          "finding": "Argues H. sapiens arose in subdivided, weakly connected African populations, so single-origin, single-dispersal models need revising.",
+          "citation": "Scerri, E.M.L. et al. (2018). 'Did Our Species Evolve in Subdivided Populations across Africa, and Why Does It Matter?' Trends in Ecology & Evolution 33(8): 582-594.",
+          "doi": "10.1016/j.tree.2018.05.005",
+          "confidence": "verified_in_source (citation via Crossref; finding from research agent)"
+        },
+        {
+          "id": "G6",
+          "finding": "Southern Asia was probably occupied repeatedly and earlier than a single about-60 ka wave.",
+          "citation": "Dennell, R.; Petraglia, M. (2012). 'The dispersal of Homo sapiens across southern Asia: how early, how often, how complex?' Quaternary Science Reviews 47: 15-22.",
+          "doi": "10.1016/j.quascirev.2012.05.002",
+          "confidence": "verified_in_source (citation via Crossref; finding from research agent)"
+        },
+        {
+          "id": "G7",
+          "finding": "MSA/Acheulean artefacts on a about 125 ka Eritrean Red Sea reef terrace: early coastal-marine occupation supporting the coastal exit.",
+          "citation": "Walter, R.C. et al. (2000). 'Early human occupation of the Red Sea coast of Eritrea during the last interglacial.' Nature 405: 65-69.",
+          "doi": "10.1038/35011048",
+          "confidence": "verified_in_source (citation via Crossref; finding from research agent)"
+        },
+        {
+          "id": "G8",
+          "finding": "Nubian Complex (African MSA) in Dhofar, Oman, about 106 ka, supports expansion into southern Arabia via the southern route.",
+          "citation": "Rose, J.I. et al. (2011). 'The Nubian Complex of Dhofar, Oman: An African Middle Stone Age Industry in Southern Arabia.' PLoS ONE 6(11): e28239.",
+          "doi": "10.1371/journal.pone.0028239",
+          "confidence": "verified_in_source (citation via Crossref; finding from research agent)"
+        },
+        {
+          "id": "G9",
+          "finding": "Trans-Saharan humid corridor in MIS 5e (northern/Sahara route, not the coastal southern route). DOI corrected: the brief's DOI was wrong; 10.1073/pnas.0804472105 resolves to this paper.",
+          "citation": "Osborne, A.H. et al. (2008). 'A humid corridor across the Sahara for the migration of early modern humans out of Africa 120,000 years ago.' PNAS 105(43): 16444-16447.",
+          "doi": "10.1073/pnas.0804472105",
+          "confidence": "verified_in_source (citation via Crossref)"
+        },
+        {
+          "id": "G10",
+          "finding": "Climate-forced reaction-diffusion model reproduces orbitally paced migration waves out of Africa (see E2).",
+          "citation": "Timmermann & Friedrich (2016), Nature 538: 92-95.",
+          "doi": "10.1038/nature19365",
+          "confidence": "verified_in_source"
+        },
+        {
+          "id": "G11",
+          "finding": "Pan-African site database and species distribution models: human niche breadth expanded from about 70 ka, peaking about 50 ka. This is the precondition for successful dispersal.",
+          "citation": "Hallett, E.Y. et al. (2025). 'Major expansion in the human niche preceded out of Africa dispersal.' Nature 644: 115-121.",
+          "doi": "10.1038/s41586-025-09154-0",
+          "confidence": "verified_in_source (citation via Crossref; finding from research agent)"
+        },
+        {
+          "id": "G12",
+          "finding": "Single successful southern/coastal dispersal at at least 1 km/yr, with a later secondary dispersal into Europe.",
+          "citation": "Mellars, P. (2006). 'Going East...' Science 313: 796-800 (see F2).",
+          "doi": "10.1126/science.1128402",
+          "confidence": "verified_in_source"
+        },
+        {
+          "id": "G_misattributed",
+          "finding": "Not a dispersal-route study. 'Man the Fat Hunter' (fat-seeking foraging and H. erectus demise, Levant, about 400 ka). Listed in the brief but excluded from the route set.",
+          "citation": "Ben-Dor, M. et al. (2011). 'Man the Fat Hunter: The Demise of Homo erectus and the Emergence of a New Hominin Lineage.' PLoS ONE 6(12): e28689.",
+          "doi": "10.1371/journal.pone.0028689",
+          "confidence": "verified_in_source (citation via Crossref)"
+        },
+        {
+          "id": "G_not_found",
+          "finding": "A Breeze et al. 2016 PLoS ONE paper titled 'Palaeodeserts as barriers' was not found. The Breeze 2016 dispersal paper is the Quaternary Science Reviews one (G3).",
+          "confidence": "not_found"
+        }
+      ]
+    }
+  }
+}

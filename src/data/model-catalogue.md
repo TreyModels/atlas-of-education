@@ -65,7 +65,7 @@ The empirical studies disagree on the expansion's labour-market effect, and no o
 
 **Data caution:** the official 16–24 rate excluded students from 2023, so earlier figures are not comparable. Under the old method the rate peaked at 21.3% in June 2023; under the new one it reached 18.9% in August 2026 ([report](https://www.qatar-tribune.com/article/255654/business/chinas-youth-unemployment-hits-record-high-as-ai-deepens-job-crunch)).
 
-**Null model to add:** a plain search-and-matching "lake model" (QuantEcon) with job-finding and separation rates only. The Tilly categories earn their place if they explain what the null model cannot: the July spike, waiting outside the labour force, and insider protection.
+**Null model, now run:** a plain search-and-matching "lake model" (QuantEcon) with job-finding and separation rates only. The plain lake null has now been run (experiments/youth-review/lake_null.py, four constant-rate parameters). Out of sample it is no better than the categorical model on 2023 H1 (8.5 against 7.1 points of error) and better on the verified months from December 2023 (2.9 against 5.5). Both lose to a same-month naive benchmark (2.5 and about 1.6). The Tilly categories are therefore not shown to earn their place. The July spike, waiting and insider protection remain untested.
 
 ## Learning and dropout: the Philippines
 
@@ -120,7 +120,7 @@ Build the Philippine learning model first: it is small, its equations are publis
 | 1 | Pritchett learning profile, Philippine cohort | 2–3 days | Philippine assessments by grade; cohort flow rates | Reconstructed cohort, learning-adjusted years | Not started |
 | 2 | China boom: three rival mechanisms, simplified | 1–2 weeks | Chang et al. macro series; AER dataset | China graduate queue | Not started |
 | 3 | Credit and property, stock-flow consistent, with Rogoff–Yang footprint | 1–2 weeks | Total social financing, land revenue, input–output tables | Graduate absorption, China queue | Not started |
-| 4 | Knight cohort-shock test and lake-model null | 2 days | NBS youth series (already in the Atlas) | China graduate queue | Not started |
+| 4 | Knight cohort-shock test and lake-model null | 2 days | NBS youth series (already in the Atlas) | China graduate queue | Lake null run (experiments/youth-review); Knight test not started |
 | 5 | Wittgenstein data spine for three countries | 1 day | WCDE CSV download | Cambodia, sector simulation, teachers | Not started |
 | 6 | Doepke–Zilibotti labour standards check | 2 days | Paper equations | Cambodia enforcement lever | Not started |
 | 7 | Lewis, Harris–Todaro, Schelling, signalling | 1 day each | None (textbook) | Library baselines | Not started |

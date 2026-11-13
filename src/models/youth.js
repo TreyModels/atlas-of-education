@@ -1,7 +1,10 @@
 /* Education Atlas — youth labour market with a categorical (Tilly) core, browser port of engine/firms/categorical.py.
    Same equations, same order of operations; tests/js_parity.mjs checks it against the Python runs stored in ATLAS_DATA.
    Workers: cells of (degree / none) x (insider / outsider). Positions: secure posts (rationed, hoarded), private graduate
-   jobs (free entry), open jobs (free entry, a share c requiring a degree by emulation). Monthly; masses in millions. */
+   jobs (free entry), open jobs (free entry, a share c requiring a degree by emulation). Monthly; masses in millions.
+   dr_drop is the August-2021 step in graduate-job value. It is a FITTED residual with no sourced counterpart (external
+   review 1.1): it is labelled "Aug-2021 step (unexplained)" here, never as a measured demand shock.
+   Broad unemployment (unemployed + graduates waiting outside the labour force) is output as broad_u. */
 (function (root) {
 'use strict';
 const exp = Math.exp, log = Math.log;
@@ -86,7 +89,7 @@ function run(DATA, opts) {
   const shareG = {G_in: T.ins_g, G_out: 1 - T.ins_g}, shareN = {N_in: T.ins_n, N_out: 1 - T.ins_n};
   const out = {year: [], month: [], rate_old: [], rate_new: [], slack: [], u_G: [], u_N: [], waiting: [], c_req: [],
     u_G_in: [], u_G_out: [], u_N_in: [], u_N_out: [], w_N_in: [], w_N_out: [], f_g: [], V_n: [], V_g: [], p_g: [], w_g: [],
-    under: [], sec_ins_share: [], rent_exploit: [], rent_hoard: [], output: [], balance: [], A: [], LF_G: [], LF_N: []};
+    under: [], sec_ins_share: [], rent_exploit: [], rent_hoard: [], output: [], balance: [], A: [], LF_G: [], LF_N: [], broad_u: []};
   const t_ref = p.ref_years[0] + 0.5 * (p.ref_years[1] - p.ref_years[0]) + 0.5;
   const idxOf = {}; I.months.forEach(([y, m], i) => { idxOf[y * 100 + m] = i; });
   const warmUntil = p.warm_until[0] * 100 + p.warm_until[1];
@@ -108,6 +111,7 @@ function run(DATA, opts) {
     const sig = warm ? Infinity : sigmaA;
     let Dg = 1.0;
     if ((o.grad_demand || p.grad_demand || 'observed') === 'observed' && !warm)
+      // dr_drop: fitted Aug-2021 step, an unexplained residual (no sourced counterpart), not a measured shock
       Dg = Math.pow(I.property[i], p.e_prop) * (1 - p.dr_drop * ((y * 100 + m) >= 202108 ? 1 : 0));
     const p_g = Dg * A * p.p_g0 * cesRelative(Math.max(LF_G, 1e-9), SG_ref * exp(p.g_H * tt), sig);
     const p_n = A * p.p_n0 * cesRelative(Math.max(LF_N, 1e-9), SN_ref * exp(p.g_N * tt), sig);
@@ -242,6 +246,8 @@ function run(DATA, opts) {
     push('year', y); push('month', m);
     push('rate_new', LF > 0 ? 100 * Ut / LF : NaN); push('rate_old', LF > 0 ? 100 * (Ut + su) / (LF + su) : NaN);
     push('slack', LF > 0 ? 100 * (Ut + Wt) / (LF + Wt) : NaN);
+    // broad unemployment: the measured unemployed plus graduates waiting outside the labour force, over the broad labour force
+    push('broad_u', LF > 0 ? 100 * (Ut + Wt) / (LF + Wt) : NaN);
     push('u_G', LG > 0 ? 100 * dgroups.reduce((s, k) => s + U[k], 0) / LG : 0);
     push('u_N', LN > 0 ? 100 * UNt_after() / LN : 0);
     function UNt_after() { return ngroups.reduce((s, k) => s + U[k], 0); }
@@ -269,7 +275,31 @@ function windowMean(R, key, a, b) {
   return v.length ? mean(v) : NaN;
 }
 
-const api = {run, windowMean, urnXFromF, cesRelative, rankValue, rankHires};
+/* Labels for the Shapley components of the modelled rise. The 'sector' component is the Aug-2021 step (dr_drop), with
+   e_prop fitted to zero, so it is not real estate. Its label is deliberately "unexplained" (external review 1.6). */
+const SHAPLEY_LABEL_OVERRIDES = {sector: 'Aug-2021 step (unexplained)'};
+function shapleyLabels(DATA) {
+  return Object.assign({}, (DATA.shapley && DATA.shapley.label) || {}, SHAPLEY_LABEL_OVERRIDES);
+}
+
+/* Fit against holdout and naive benchmark, side by side, from the stored profiles (ATLAS_DATA.profiles, ATLAS_DATA.naive).
+   'early|sigma_A=5.0' is the only true holdout: fitted to 2018-22 and scored on 2023 H1 and on the verified new-method months.
+   The whole-record profile is in sample and is shown only as a fit statistic. The naive benchmark is the same calendar month
+   of 2022 carried forward. Each row: {id, label, model, naive, n, detail}; numbers are mean absolute errors in points. */
+function benchmarks(DATA) {
+  const early = DATA.profiles['early|sigma_A=5.0'], naive = DATA.naive;
+  const row = (id, label, model, nv, n, detail) => ({id, label, model, naive: nv, n, detail});
+  return [
+    row('holdout_2023H1', 'Holdout, 2023 H1 (old method)', early.holdout_old_2023H1.mae, naive.old_2023H1.mae,
+      early.holdout_old_2023H1.n, 'Fitted to 2018-22 only. Mean absolute error, points.'),
+    row('forecast_new', 'Forecast, Dec 2023 to Sep 2026 (new method, verified)', early.new_verified.mae, naive.new_verified.mae,
+      early.new_verified.n, 'Fitted to 2018-22 only. Mean absolute error, points.'),
+    row('fit_2018_22', 'Fit, 2018-22 (in sample for the early fit)', early.fit_early.mae, null, early.fit_early.n,
+      'In-sample fit statistic, not a test.')
+  ];
+}
+
+const api = {run, windowMean, urnXFromF, cesRelative, rankValue, rankHires, shapleyLabels, benchmarks, SHAPLEY_LABEL_OVERRIDES};
 if (typeof module !== 'undefined') module.exports = api;
 root.AtlasYouth = api;
 })(typeof window !== 'undefined' ? window : globalThis);

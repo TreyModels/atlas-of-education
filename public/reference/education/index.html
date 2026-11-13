@@ -2047,7 +2047,7 @@ const TOOLS = [
  source: 'Education sector analysis guidelines, external efficiency; Harris & Todaro (1970) queue logic. The firm-side China world is the full model.',
  formula: 'openings(t) = replacement × jobs(t) + [jobs(t) − jobs(t−1)]\njobs(t+1) = jobs(t) × (1 + GDP growth × employment elasticity + skill shift)\nqueue(t+1) = (graduates + queue − hires) × (1 − clearing rate)',
  method: 'A reduced-form balance: graduate-job openings from output growth and replacement, a queue of the unabsorbed that clears into other work, migration or inactivity.',
- limits: 'No wages, no firms’ choices: this is the planner’s balance sheet. The China graduate-queue world adds free entry, wage rigidity and Tilly’s categories.',
+ limits: 'No wages, no firms’ choices: this is the planner’s balance sheet. The China graduate-queue world adds free entry, wage rigidity and Tilly’s categories, whose mechanisms are untested.',
  inputs: [{k: 'gradGrowth', label: 'Growth in graduates a year', min: -.02, max: .12, step: .005, v: .05, f: p1}, {k: 'gdpGrowth', label: 'GDP growth', min: 0, max: .1, step: .005, v: .05, f: p1},
    {k: 'elasticity', label: 'Employment elasticity of growth', min: 0, max: 1, step: .05, v: .4, f: v => v.toFixed(2)}, {k: 'skillShift', label: 'Shift toward graduate jobs a year', min: 0, max: .05, step: .005, v: .01, f: p1},
    {k: 'clear', label: 'Share of the queue clearing each year', min: .1, max: 1, step: .05, v: .4, f: p1}],
@@ -2319,7 +2319,7 @@ function html() {
       ? `<div class="cc-lever"><div class="cc-toggle"><input type="checkbox" id="cc-lv-${it.k}" data-cc="tog" data-k="${it.k}"><label for="cc-lv-${it.k}">${it.label}</label></div><small>${it.note}</small></div>`
       : `<div class="cc-lever"><label for="cc-lv-${it.k}"><span>${it.label}</span><output id="cc-out-${it.k}"></output></label><input type="range" id="cc-lv-${it.k}" min="0" max="${it.max}" step="${it.step}" data-cc="lever" data-k="${it.k}"><small>${it.note}</small></div>`).join('')}</div>`).join('')}</div></section>
    <section class="cc-two"><div class="cc-panel"><h2>Who it reaches</h2><div class="cc-scroll"><table class="cc-table" id="cc-reach"></table></div><p class="cc-small">Child labour rate, average of the last four years, one seed. Left behind: a parent works away from home.</p></div>
-    <div class="cc-panel"><h2>What it costs</h2><div class="cc-cost"><b id="cc-costper">–</b><span>adult informal wage-years per child-year of labour avoided</span></div><div class="cc-cost"><b id="cc-avoided">–</b><span>child-years of labour avoided over 12 years, per 6,000 children</span></div><p class="cc-small">Unit costs are assumptions. Compare packages with each other; don’t quote the level.</p></div></section>
+    <div class="cc-panel"><h2>Illustrative cost index</h2><div class="cc-cost"><b id="cc-costper">–</b><span>adult informal wage-years per child-year of labour avoided. Unit costs are invented and unsourced; not a programme cost.</span></div><div class="cc-cost"><b id="cc-avoided">–</b><span>child-years of labour avoided over 12 years, per 6,000 children</span></div><p class="cc-small">Unit costs are assumptions. Compare packages with each other; don’t quote the level.</p></div></section>
    <section class="cc-two"><div class="cc-panel cc-honest"><h2>What is calibrated and what isn’t</h2><ul>
      <li>Out-of-school rates by level are tuned to UNESCO’s 2024 figures: primary 3.7%, lower secondary 17.6%, upper secondary 48.9%. The split between Phnom Penh and the countryside is assumed.</li>
      <li>Child labour is not calibrated. The model gives about 14%; the 2012 national survey found about 10.7%. The model is probably too high.</li>
@@ -2719,7 +2719,7 @@ function mobileTabs() { return `<div class="mobile-workspace-tabs" role="tablist
 
 // ------------------------------------------------------------------ the youth labour market
 const PRESETS = {
-  tilly: {label: 'Fitted, with Tilly mechanisms', p: () => Object.assign({}, D.params.tilly)},
+  tilly: {label: 'Fitted, with Tilly mechanisms (untested)', p: () => Object.assign({}, D.params.tilly)},
   headline: {label: 'Fitted, no mechanisms (two-type model)', p: () => Object.assign({}, D.params.headline)},
 };
 function openYouth(preset) { st.preset = preset || st.preset; st.yopt = Object.assign({}, D.defaults, D.tilly_defaults, PRESETS[st.preset].p(), {gradSupply: 'observed', demand: 'observed', grad_demand: 'observed'}); runYouth(); }
@@ -2735,7 +2735,7 @@ function youthControls() {
     + ctlGroup('Graduate supply', '', optCtl('Graduates entering', 'gradSupply', typeof sup === 'number' ? 'mult' : sup, [['observed', 'As observed'], ['hold2018', 'Held at 2018'], ['mult', 'Scaled from 2019']], '8.2m in 2018 to 12.7m expected in 2026 (MoE).', 'ysup')
       + (typeof sup === 'number' ? sliderCtl('Scale on graduates from 2019', 'gradmult', sup, .5, 1.5, .05, '×' + sup.toFixed(2), '', 'yr') : ''))
     + ctlGroup('Demand for graduate work', 'Firms open vacancies until one is worth its cost.',
-      sliderCtl('Graduate-job value lost from Aug 2021', 'dr_drop', o.dr_drop, 0, .3, .01, pct(o.dr_drop), 'Tutoring ban, platform crackdown, property slump: the data cannot separate them.', 'yr')
+      sliderCtl('Aug-2021 step, unexplained residual (fitted)', 'dr_drop', o.dr_drop, 0, .3, .01, pct(o.dr_drop), 'Unexplained residual. Candidate causes (tutoring ban, platform crackdown, property slump) are not separately identified, and sourced job-loss figures point to a much smaller step.', 'yr')
       + optCtl('Aggregate demand', 'demand', o.demand, [['observed', 'From adult unemployment'], ['hold2018', 'Flat after 2018']], '', 'yopt')
       + optCtl('Graduate wages adjust', 'lam_g', o.lam_g, lamOpts, 'Monthly speed toward the bargained wage. Rigidity turns supply into queues.', 'yopt')
       + optCtl('Young vs older graduates, substitution σ', 'sigma_A', o.sigma_A === Infinity || o.sigma_A === 'inf' ? 'inf' : o.sigma_A, sigOpts, 'Card & Lemieux estimate roughly 4–6. ∞ = supply alone cannot raise unemployment.', 'yopt'))
@@ -2801,7 +2801,7 @@ function evidencePanel() {
    <p class="evidence-note">Fitted to 2018–22 alone the model forecasts no rise: graduate supply cannot do it by itself. The whole-record fit needs a fall in demand for graduate work from August 2021, and no fit reproduces the 22% fall in graduate postings.</p>
    <h3>Shares of the modelled rise</h3><div class="shap">${Object.entries(sh.contributions).map(([k, v]) => `<div><span>${esc(sh.label[k])}</span><b style="width:${Math.min(100, Math.abs(v) / 4 * 100)}%" class="${v < 0 ? 'neg' : ''}"></b><em>${v >= 0 ? '+' : ''}${v.toFixed(1)}</em></div>`).join('')}</div>
    <p class="evidence-note">Two-type model, whole-record fit, σ = 5 (points of the 2018–19 to 2024–26 rise).</p>
-   <h3>With Tilly’s mechanisms</h3><p class="evidence-note">Refit: official rate +${f1(tf.rate_change)} points but slack +${f1(tf.slack_change)}; ${f1(tf.waiting_late)} million graduates waiting; insiders took ${Math.round(100 * tf.sec_ins_share)}% of secure posts. Adaptation hides slack; it does not replace the demand fall.</p>`;
+   <h3>With Tilly’s mechanisms</h3><p class="evidence-note">Refit: official rate +${f1(tf.rate_change)} points but slack +${f1(tf.slack_change)}; ${f1(tf.waiting_late)} million graduates waiting; insiders took ${Math.round(100 * tf.sec_ins_share)}% of secure posts, as the hoarding assumption dictates. In the model, adaptation hides slack; it does not replace the demand fall.</p>`;
 }
 function renderYouth() {
   const meta = SCEN[0];
@@ -2814,7 +2814,7 @@ function renderYouth() {
     <section class="center-stage ${st.mobile === 'map' ? 'mobile-active' : ''}"><div class="map-toolbar"><div><p class="overline">CATEGORIES × POSITIONS</p><h2>Who stands where</h2></div></div>
      <div class="map-wrap" id="matrix"></div><div class="year-brief" id="ystatus"></div></section>
     <aside class="briefing-panel workspace-panel ${st.mobile === 'brief' ? 'mobile-active' : ''}"><div class="panel-heading">${I.book}<div><h2>The evidence</h2><p>What is established, and what is not.</p></div></div>
-     <p class="world-pitch">Firms decide how many jobs to open. Demand is read from China’s observed adult unemployment and property investment. Workers are categories — degree or none, insider or outsider — and boundaries decide who may enter each position. Tilly’s four mechanisms act at those boundaries.</p>${evidencePanel()}</aside>
+     <p class="world-pitch">Firms decide how many jobs to open. Demand is read from China’s observed adult unemployment and property investment. Workers are categories — degree or none, insider or outsider — and boundaries decide who may enter each position. Tilly’s four mechanisms are built in at those boundaries. None is tested against data: the Atlas has no hukou, party-membership or parental-sector series.</p>${evidencePanel()}</aside>
     <section class="numbers-panel ${st.mobile === 'numbers' ? 'mobile-active' : ''}"><div class="numbers-toolbar"><div><p class="overline">THE RUN</p><h2>Youth unemployment, 16–24, urban</h2></div>
       <div class="segmented">${[['rates', 'Rates vs NBS'], ['groups', 'By category'], ['queue', 'Queue'], ['jobs', 'Graduate jobs']].map(([v, l]) => `<button data-act="ychart" data-v="${v}">${l}</button>`).join('')}</div></div>
      <div class="chart-frame tall" id="ychart"></div><div class="chart-foot"><span>Shaded: the 2018–22 fit window. Dots: NBS releases; crosses are entered from memory.</span><button data-act="modal" data-v="method">How the market works ${I.arrow}</button></div></section>
@@ -2877,7 +2877,7 @@ function modalHTML() {
    <p class="modal-lede">Three engines run here, all in your browser. A fourth, the household schooling engine, runs in Python (engine/) and feeds the fitted numbers shown in the labour-market world.</p>
    <div class="method-grid"><article><span>01</span><h3>Planning worlds</h3><p>Cohort flows, teacher and classroom stocks, training lags and an annual budget identity, in the IIEP tradition. Behaviour sits in declared struts.</p></article>
    <article><span>02</span><h3>The six-district city</h3><p>A synthetic cohort model from Education Worlds 0.6, with every constant now a strut and two accounting fixes (layoffs, consolidation hires).</p></article>
-   <article><span>03</span><h3>The youth labour market</h3><p>Search and matching with free entry of vacancies, CES diminishing returns, rigid wages and an NBS observation equation. Its core is categorical: workers are degree × network cells, positions have entry rules, and Tilly’s exploitation, hoarding, emulation and adaptation act at the boundaries. It is a line-by-line port of the Python model and is tested against it.</p></article>
+   <article><span>03</span><h3>The youth labour market</h3><p>Search and matching with free entry of vacancies, CES diminishing returns, rigid wages and an NBS observation equation. Its core is categorical: workers are degree × network cells, positions have entry rules, and Tilly’s exploitation, hoarding, emulation and adaptation are built in at the boundaries, with sizes set by assumption and untested. It is a line-by-line port of the Python model and is tested against it.</p></article>
    <article><span>04</span><h3>The Planning Lab</h3><p>Twelve planning tools in the IIEP, UIS and education-sector-analysis tradition — reconstructed cohort, population and sector projection, teacher supply, deployment, equity of spending, grant formulas, school mapping, LAYS, target feasibility, graduate absorption. Independent implementations, not official software; 30 tests.</p></article>
    <article><span>05</span><h3>Three tiers of claim</h3><p><b>Identities</b> hold by construction and are checked every step. <b>Theorems</b> hold under stated assumptions and are tested in limiting cases (62 tests across Python and JavaScript). <b>Behaviour</b> is calibrated or assumed and labelled S (sourced), M (memory) or A (assumed).</p></article></div>
    ${st.S && st.S.W && st.S.W.sources ? `<div class="source-list"><h3>Sources & assumptions for ${esc(st.S.W.name)}</h3>${st.S.W.sources.map(s => `<p><b>${s[0]}</b>${s[2] ? `<a href="${esc(s[2])}" target="_blank" rel="noreferrer">${esc(s[1])}</a>` : `<span>${esc(s[1])}</span>`}</p>`).join('')}</div>` : ''}
@@ -2885,7 +2885,7 @@ function modalHTML() {
    <p class="storage-note">No account or server. Only your theme preference is stored in this browser.</p>`;
   if (st.id === 'youth') {
     const P = st.yopt, keys = Object.keys(D.params.tilly);
-    return `<p class="overline">PARAMETERS</p><h2 id="modal-title">What the fit chose, and what was assumed.</h2><p class="modal-lede">Fitted values come from the Python whole-record fit. Tilly’s hoarding share, wage wedge and insider split were set, not estimated; several fitted values sit on their bounds.</p>
+    return `<p class="overline">PARAMETERS</p><h2 id="modal-title">What the fit chose, and what was assumed.</h2><p class="modal-lede">Fitted values come from the Python whole-record fit. Tilly’s hoarding share, wage wedge and insider split were set, not estimated; the waiting and emulation mechanisms are untested; several fitted values sit on their bounds.</p>
      <div class="param-table"><table><thead><tr><th>Parameter</th><th>This run</th><th>Fitted preset</th></tr></thead><tbody>${keys.map(k => `<tr><td>${k}</td><td>${typeof P[k] === 'number' ? (+P[k]).toPrecision(3) : esc(P[k])}</td><td>${typeof D.params.tilly[k] === 'number' ? (+D.params.tilly[k]).toPrecision(3) : esc(D.params.tilly[k])}</td></tr>`).join('')}</tbody></table></div>
      <div class="modal-actions"><button class="primary-action" data-act="closemodal">Close</button></div>`;
   }

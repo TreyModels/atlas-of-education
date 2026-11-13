@@ -1889,11 +1889,6 @@
     "fr": "La série climatique publiée alimente un modèle Atlas de population et d’entretien. Comparez-la au même tirage de paramètres avec un climat neutre après 1250.",
     "vi": "Chuỗi khí hậu công bố tác động lên mô hình dân số và bảo trì Atlas. So sánh cùng mẫu tham số với khí hậu trung tính sau 1250."
   },
-  "Tested sensitivities are 0.04, 0.07 and 0.10. Weather response is capped at 0.4–1.15 before buffering.": {
-    "zh-Hans": "已测试敏感度为0.04、0.07和0.10。缓冲前的天气反应限定在0.4–1.15。",
-    "fr": "Les sensibilités testées sont 0,04, 0,07 et 0,10. La réponse météorologique est bornée entre 0,4 et 1,15 avant amortissement.",
-    "vi": "Các độ nhạy đã thử: 0,04; 0,07; 0,10. Phản ứng thời tiết bị giới hạn 0,4–1,15 trước khi tính khả năng đệm."
-  },
   "Pick one of the same 2,000 parameter draws used in the review results.": {
     "zh-Hans": "从审查结果采用的同一组2000次参数抽样中选择一次。",
     "fr": "Choisissez l’un des 2 000 tirages de paramètres utilisés dans les résultats examinés.",
@@ -2849,11 +2844,6 @@
     "fr": "Tous les mécanismes",
     "vi": "Tất cả cơ chế"
   },
-  "Remove coordination gain": {
-    "zh-Hans": "移除协调增益",
-    "fr": "Retirer le gain de coordination",
-    "vi": "Bỏ lợi ích phối hợp"
-  },
   "Remove hydraulic dependence": {
     "zh-Hans": "移除水利依赖",
     "fr": "Retirer la dépendance hydraulique",
@@ -2968,11 +2958,6 @@
     "zh-Hans": "文献输入 · 协调",
     "fr": "Apport publié · Coordination",
     "vi": "Đầu vào công bố · Phối hợp"
-  },
-  "The coordination multiplier uses the paper’s exponent 1.227, comparing communities of 500 with 100 people. Treating this association as a causal productivity gain is an explicit experimental assumption.": {
-    "zh-Hans": "协调乘数使用论文指数1.227，比较500人与100人的社区。将此关系视为生产率因果增益是明确的实验假设。",
-    "fr": "Le multiplicateur de coordination utilise l’exposant 1,227 pour comparer des communautés de 500 et 100 personnes. Traiter cette relation comme un gain causal est une hypothèse expérimentale explicite.",
-    "vi": "Hệ số phối hợp dùng số mũ 1,227 của bài báo, so cộng đồng 500 với 100 người. Coi quan hệ này như tăng năng suất nhân quả là giả định thử nghiệm rõ ràng."
   },
   "Atlas extension · Dynamic accounts": {
     "zh-Hans": "地图集扩展 · 动态核算",
@@ -3163,11 +3148,6 @@
     "zh-Hans": "机制 · 退出与持续居住",
     "fr": "Mécanisme · Départ et occupation maintenue",
     "vi": "Cơ chế · Rời đi và tiếp tục cư trú"
-  },
-  "Elite presence affects collection and central maintenance resources. Local repair can continue from farm surpluses. Recurring construction commitments can also shrink after departure, so water condition need not worsen.": {
-    "zh-Hans": "精英存在影响征收与中央维护资源。本地修复可由农业剩余持续支持。离开后经常性建设承诺也可能缩减，因此水利状况不一定恶化。",
-    "fr": "La présence des élites affecte les prélèvements et les ressources centrales d’entretien. Les surplus agricoles peuvent maintenir les réparations locales. Les engagements récurrents peuvent aussi diminuer après les départs ; l’état hydraulique ne se dégrade donc pas nécessairement.",
-    "vi": "Sự hiện diện tinh hoa tác động việc thu và nguồn bảo trì trung tâm. Thặng dư ruộng có thể duy trì sửa chữa địa phương. Cam kết xây dựng định kỳ cũng có thể giảm khi họ rời đi, nên thủy lợi không nhất thiết xấu hơn."
   },
   "Declared assumptions · Outside options": {
     "zh-Hans": "明确假设 · 外部选择",
@@ -3464,11 +3444,6 @@
     "fr": "Changement des élites après l’année 55",
     "vi": "Đổi giới tinh hoa sau năm 55"
   },
-  "Timing is repaired. Harvest still ignores the remaining farm workforce, refuge food is not tracked, and court costs are absent. The reshuffle changes several rules together.": {
-    "zh-Hans": "时点已修正。收成仍不随剩余农工变化；未核算避居地食物及宫廷成本。精英变动同时改变多项规则。",
-    "fr": "Le calendrier est corrigé. La récolte ignore encore la main-d’œuvre restante ; alimentation du refuge et coûts de cour sont absents. Le changement des élites modifie plusieurs règles à la fois.",
-    "vi": "Đã sửa thời điểm. Thu hoạch vẫn bỏ qua lao động còn lại; chưa ghi thức ăn nơi trú hay chi phí triều đình. Đổi tinh hoa thay nhiều quy tắc cùng lúc."
-  },
   "Angkor · Labour and food accounts": {
     "zh-Hans": "吴哥 · 劳动与食物核算",
     "fr": "Angkor · Comptes du travail et des vivres",
@@ -3483,11 +3458,6 @@
     "zh-Hans": "探索独立扩展：有限劳动、支付服役口粮及明确的避居地食物经济。",
     "fr": "Explorez une extension distincte avec travail limité, rations de service financées et économie alimentaire explicite du refuge.",
     "vi": "Khám phá phần mở rộng riêng với lao động có hạn, khẩu phần phục vụ được chi trả và kinh tế thức ăn nơi trú rõ ràng."
-  },
-  "Labour days, grain and population balance annually. Rates remain hypothetical. There are no battles, frontier garrisons or historical fit scores. Elite grain accumulates without an expenditure rule.": {
-    "zh-Hans": "劳动日、粮食与人口逐年平衡。比率仍是假设。无战斗、边防驻军或历史拟合评分。精英粮食积累而无支出规则。",
-    "fr": "Journées de travail, grain et population s’équilibrent annuellement. Taux hypothétiques. Ni batailles, ni garnisons frontalières, ni score historique. Le grain des élites s’accumule sans règle de dépense.",
-    "vi": "Ngày công, lương thực và dân số cân bằng hằng năm. Tỷ lệ vẫn giả định. Chưa có trận đánh, đồn biên giới hoặc điểm khớp lịch sử. Kho tinh hoa tích lũy chưa có quy tắc chi."
   },
   "Earlier experiment finding": {
     "zh-Hans": "此前实验的发现",
@@ -3824,10 +3794,10 @@
     "fr": "Travail des enfants en 2036",
     "vi": "Lao động trẻ em năm 2036"
   },
-  "Programme cost per child-year avoided": {
-    "zh-Hans": "每减少一个儿童劳动年的项目成本",
-    "fr": "Coût du programme par année de travail d’enfant évitée",
-    "vi": "Chi phí chương trình cho mỗi năm-trẻ lao động tránh được"
+  "Illustrative cost index per child-year avoided (invented unit costs)": {
+    "zh-Hans": "每减少一个儿童劳动年的示意性成本指数（单位成本为虚构，无来源）",
+    "fr": "Indice de coût illustratif par année de travail d’enfant évitée (coûts unitaires inventés)",
+    "vi": "Chỉ số chi phí minh họa cho mỗi năm-trẻ lao động tránh được (đơn giá giả định, không có nguồn)"
   },
   "Adult annual wages": {
     "zh-Hans": "成人年工资",
@@ -4748,5 +4718,115 @@
     "zh-Hans": "毕业生岗位空缺",
     "fr": "Postes pour diplômés",
     "vi": "Chỗ làm cho người tốt nghiệp"
+  },
+  "Aug-2021 step (unexplained)": {
+    "zh-Hans": "2021年8月冲击（无法解释）",
+    "fr": "Choc d’août 2021 (inexpliqué)",
+    "vi": "Cú sốc tháng 8/2021 (chưa giải thích được)"
+  },
+  "Holdout, 2023 H1 (old method)": {
+    "zh-Hans": "留出检验，2023年上半年（旧口径）",
+    "fr": "Validation, 1er semestre 2023 (ancienne méthode)",
+    "vi": "Kiểm tra ngoài mẫu, nửa đầu 2023 (phương pháp cũ)"
+  },
+  "Forecast, Dec 2023 to Sep 2026 (new method, verified)": {
+    "zh-Hans": "预测，2023年12月至2026年9月（新口径，已核实）",
+    "fr": "Prévision, déc. 2023 à sept. 2026 (nouvelle méthode, vérifiée)",
+    "vi": "Dự báo, tháng 12/2023 đến tháng 9/2026 (phương pháp mới, đã kiểm chứng)"
+  },
+  "Fit, 2018-22 (in sample for the early fit)": {
+    "zh-Hans": "拟合，2018–22年（早期拟合的样本内）",
+    "fr": "Ajustement, 2018–22 (dans l’échantillon pour l’ajustement initial)",
+    "vi": "Độ khớp, 2018–22 (trong mẫu với bản khớp sớm)"
+  },
+  "Fitted to 2018-22 only. Mean absolute error, points.": {
+    "zh-Hans": "仅用2018–22年拟合。平均绝对误差，百分点。",
+    "fr": "Ajusté sur 2018–22 seulement. Erreur absolue moyenne, en points.",
+    "vi": "Chỉ khớp trên 2018–22. Sai số tuyệt đối trung bình, điểm phần trăm."
+  },
+  "In-sample fit statistic, not a test.": {
+    "zh-Hans": "样本内拟合统计量，不是检验。",
+    "fr": "Statistique d’ajustement dans l’échantillon, pas un test.",
+    "vi": "Thống kê khớp trong mẫu, không phải kiểm định."
+  },
+  "Unexplained residual (fitted)": {
+    "zh-Hans": "无法解释的残差（拟合得出）",
+    "fr": "Résidu inexpliqué (ajusté)",
+    "vi": "Phần dư chưa giải thích (được khớp)"
+  },
+  "Broad unemployment (unemployed + waiting)": {
+    "zh-Hans": "广义失业率（失业 + 等待中）",
+    "fr": "Chômage élargi (chômeurs + en attente)",
+    "vi": "Thất nghiệp mở rộng (thất nghiệp + đang chờ)"
+  },
+  "Aug-2021 step (unexplained residual, fitted)": {
+    "zh-Hans": "2021年8月冲击（无法解释的残差，拟合得出）",
+    "fr": "Choc d’août 2021 (résidu inexpliqué, ajusté)",
+    "vi": "Cú sốc tháng 8/2021 (phần dư chưa giải thích, được khớp)"
+  },
+  "Unexplained residual (fitted), not a measured demand shock. No sourced series matches it.": {
+    "zh-Hans": "无法解释的残差（拟合得出），不是实测的需求冲击。没有任何来源数据与之对应。",
+    "fr": "Résidu inexpliqué (ajusté), pas un choc de demande mesuré. Aucune série sourcée ne lui correspond.",
+    "vi": "Phần dư chưa giải thích (được khớp), không phải cú sốc cầu đo được. Không có chuỗi dữ liệu nguồn nào khớp với nó."
+  },
+  "The published exponent 1.227 is a size association between communities of 500 and 100 people. It is not a measured productivity effect. The default coordination multiplier is 1, so the association has no causal effect unless the multiplier is raised. The old base-5 value 5^0.227 (about 1.44) and a midpoint (about 1.20) are sensitivities.": {
+    "zh-Hans": "已发表的指数 1.227 是 500 人与 100 人社区之间的规模关联。它不是实测的生产率效应。默认协调乘数为 1，因此除非提高该乘数，该关联不具有因果效应。旧的以 5 为底的值 5^0.227（约 1.44）和中点值（约 1.20）属于敏感性分析。",
+    "fr": "L'exposant publié 1.227 est une association de taille entre des communautés de 500 et 100 personnes. Ce n'est pas un effet de productivité mesuré. Le multiplicateur de coordination par défaut est 1, donc l'association n'a aucun effet causal à moins que le multiplicateur ne soit augmenté. L'ancienne valeur en base 5 5^0.227 (environ 1.44) et une valeur médiane (environ 1.20) sont des analyses de sensibilité.",
+    "vi": "Số mũ đã công bố 1.227 là một mối liên hệ về quy mô giữa các cộng đồng 500 người và 100 người. Đây không phải là hiệu ứng năng suất được đo lường. Hệ số nhân phối hợp mặc định là 1, vì vậy mối liên hệ này không có hiệu ứng nhân quả trừ khi hệ số nhân được tăng lên. Giá trị cơ số 5 cũ 5^0.227 (khoảng 1.44) và giá trị trung điểm (khoảng 1.20) là các phân tích độ nhạy."
+  },
+  "Remove coordination gain (no effect at the default multiplier 1)": {
+    "zh-Hans": "移除协调增益（在默认乘数 1 下无效果）",
+    "fr": "Supprimer le gain de coordination (aucun effet au multiplicateur par défaut 1)",
+    "vi": "Loại bỏ lợi ích phối hợp (không có tác dụng ở hệ số mặc định 1)"
+  },
+  "No published per-PDSI coefficient for rainfed rice in Cambodia, Thailand or Laos was found (inputs/other_sources.json, item C). The tested sensitivities 0.04, 0.07 and 0.10 are unsourced judgement values, and they decide the monsoon result: at 0 no draw of 2000 shows an onset decline, while 217, 1260 and 1657 draws decline at 0.04, 0.07 and 0.10. Weather response is capped at 0.4–1.15 before buffering.": {
+    "zh-Hans": "未找到柬埔寨、泰国或老挝雨养水稻已发表的每PDSI系数（inputs/other_sources.json，条目C）。所测试的敏感度0.04、0.07和0.10为无来源的判断值，且它们决定了季风结果：在0时，2000次抽样中没有任何一次显示 onset 下降，而在0.04、0.07和0.10时分别有217、1260和1657次抽样下降。天气响应在缓冲前被限制在0.4–1.15。",
+    "fr": "Aucun coefficient par PDSI publié pour le riz pluvial au Cambodge, en Thaïlande ou au Laos n'a été trouvé (inputs/other_sources.json, élément C). Les sensibilités testées 0.04, 0.07 et 0.10 sont des valeurs de jugement sans source, et elles déterminent le résultat de la mousson : à 0, aucun tirage sur 2000 ne montre de baisse d'onset, tandis que 217, 1260 et 1657 tirages baissent à 0.04, 0.07 et 0.10. La réponse météorologique est plafonnée à 0.4–1.15 avant mise en tampon.",
+    "vi": "Không tìm thấy hệ số trên mỗi PDSI nào đã được công bố cho lúa nước trời ở Campuchia, Thái Lan hoặc Lào (inputs/other_sources.json, mục C). Các độ nhạy được kiểm tra 0.04, 0.07 và 0.10 là các giá trị phán đoán không có nguồn, và chúng quyết định kết quả gió mùa: ở 0, không có lần rút mẫu nào trong 2000 lần cho thấy sự suy giảm onset, trong khi 217, 1260 và 1657 lần rút mẫu suy giảm ở 0.04, 0.07 và 0.10. Phản ứng thời tiết được giới hạn ở 0.4–1.15 trước khi đệm."
+  },
+  "Timing is repaired. Harvest still ignores the remaining farm workforce, refuge food is not tracked, and court costs are absent. Canal condition is floored at 0.3 in the stored runs; the review finds that removing the floor changes the collapse results little. The reshuffle changes four rules together: extraction, the temple relief cap, trust erosion and the grievance that drives flight. Each is tested alone in experiments/angkor-review.": {
+    "zh-Hans": "计时已修复。Harvest 仍然忽略剩余的农场劳动力，避难所食物未被追踪，法庭费用缺失。在存储的运行中，运河状况的下限被设为 0.3；审查发现，移除该下限对崩溃结果影响很小。重组同时改变了四条规则：提取、寺庙救济上限、信任侵蚀以及驱动逃离的不满。每条规则都在 experiments/angkor-review 中单独测试。",
+    "fr": "La synchronisation est corrigée. Harvest ignore toujours la main-d'œuvre agricole restante, la nourriture des refuges n'est pas suivie et les frais de justice sont absents. L'état des canaux est plafonné à 0,3 dans les exécutions enregistrées ; l'examen constate que la suppression de ce plancher modifie peu les résultats d'effondrement. Le remaniement modifie quatre règles à la fois : l'extraction, le plafond d'aide du temple, l'érosion de la confiance et le grief qui pousse à la fuite. Chacune est testée isolément dans experiments/angkor-review.",
+    "vi": "Việc tính thời gian đã được sửa. Harvest vẫn bỏ qua lực lượng lao động nông trại còn lại, thực phẩm nơi trú ẩn không được theo dõi, và chi phí tòa án không có. Tình trạng kênh đào được đặt sàn ở 0.3 trong các lần chạy đã lưu; đánh giá cho thấy việc bỏ sàn này thay đổi kết quả sụp đổ rất ít. Việc xáo trộn thay đổi bốn quy tắc cùng lúc: khai thác, giới hạn cứu trợ đền thờ, xói mòn niềm tin và sự bất mãn thúc đẩy bỏ chạy. Mỗi quy tắc được kiểm tra riêng trong experiments/angkor-review."
+  },
+  "Labour days, grain and population balance annually. Rates remain hypothetical. There are no battles, frontier garrisons or historical fit scores. Elite grain accumulates without an expenditure rule in the stored runs. The review tests a spend rule of 0, 10% and 30% a year separately; the stored runs do not include it.": {
+    "zh-Hans": "劳动日、粮食和人口每年平衡。比率仍为假设值。没有战斗、边防驻军或历史拟合分数。在存储的运行中，精英粮食在没有支出规则的情况下累积。审查分别测试每年0、10%和30%的支出规则；存储的运行不包含该规则。",
+    "fr": "Les jours de travail, le grain et la population s'équilibrent annuellement. Les taux restent hypothétiques. Il n'y a ni batailles, ni garnisons frontalières, ni scores d'ajustement historique. Le grain d'élite s'accumule sans règle de dépense dans les exécutions stockées. L'examen teste séparément une règle de dépense de 0, 10 % et 30 % par an ; les exécutions stockées ne l'incluent pas.",
+    "vi": "Ngày lao động, ngũ cốc và dân số cân bằng hàng năm. Các tỷ lệ vẫn mang tính giả định. Không có trận chiến, đồn trú biên giới hay điểm khớp lịch sử. Ngũ cốc của tầng lớp tinh hoa tích lũy mà không có quy tắc chi tiêu trong các lần chạy được lưu trữ. Đánh giá kiểm tra riêng quy tắc chi tiêu 0, 10% và 30% mỗi năm; các lần chạy được lưu trữ không bao gồm quy tắc này."
+  },
+  "Elite presence affects collection and central maintenance resources. Local repair can continue from farm surpluses. Recurring construction commitments can also shrink after departure, so water condition need not worsen. Whether the court leaves depends on the coordination multiplier: with the default 1 no elite exit occurs in 32 drought seeds at outside advantage 1.2, and with the old 5^0.227 all 32 do.": {
+    "vi": "Sự hiện diện tinh hoa tác động việc thu và nguồn bảo trì trung tâm. Thặng dư ruộng có thể duy trì sửa chữa địa phương. Cam kết xây dựng định kỳ cũng có thể giảm khi họ rời đi, nên thủy lợi không nhất thiết xấu hơn. Việc tòa án có rời đi hay không phụ thuộc vào hệ số phối hợp: với giá trị mặc định 1, không có sự rút lui của giới tinh hoa nào xảy ra trong 32 hạt giống hạn hán ở lợi thế bên ngoài 1.2, và với giá trị cũ 5^0.227 thì cả 32 đều rút lui.",
+    "fr": "La présence des élites affecte les prélèvements et les ressources centrales d’entretien. Les surplus agricoles peuvent maintenir les réparations locales. Les engagements récurrents peuvent aussi diminuer après les départs ; l’état hydraulique ne se dégrade donc pas nécessairement. Le fait que la cour parte ou non dépend du multiplicateur de coordination : avec la valeur par défaut 1, aucune sortie de l'élite ne se produit dans 32 graines de sécheresse à un avantage extérieur de 1.2, et avec l'ancienne valeur 5^0.227, les 32 le font.",
+    "zh-Hans": "精英存在影响征收与中央维护资源。本地修复可由农业剩余持续支持。离开后经常性建设承诺也可能缩减，因此水利状况不一定恶化。法院是否离开取决于协调乘数：在默认值 1 下，外部优势为 1.2 时，32 个干旱种子中没有任何精英退出；而在旧的 5^0.227 下，全部 32 个都会退出。"
+  },
+  "Share of secure openings filled through the network. An assumption, not estimated.": {
+    "zh-Hans": "通过网络填补的安全空缺岗位占比。此为假设，非估算值。",
+    "vi": "Tỷ lệ các vị trí tuyển dụng an toàn được lấp đầy thông qua mạng lưới. Đây là giả định, không phải giá trị ước tính.",
+    "fr": "Part des postes vacants sécurisés pourvus via le réseau. Il s'agit d'une hypothèse, non d'une estimation."
+  },
+  "Graduates waiting outside the labour force are outside the official unemployment rate. The waiting mechanism is untested: no data on family support for waiting.": {
+    "zh-Hans": "等待进入劳动力市场的毕业生不在官方失业率统计范围内。等待机制尚未经过检验：没有关于家庭支持等待的数据。",
+    "vi": "Những người tốt nghiệp đang chờ đợi bên ngoài lực lượng lao động nằm ngoài tỷ lệ thất nghiệp chính thức. Cơ chế chờ đợi chưa được kiểm chứng: không có dữ liệu về sự hỗ trợ của gia đình đối với việc chờ đợi.",
+    "fr": "Les diplômés en attente en dehors de la population active se situent hors du taux de chômage officiel. Le mécanisme d'attente n'est pas testé : aucune donnée sur le soutien familial pendant l'attente."
+  },
+  "The reference was fitted to the record shown, so its fit statistics are in sample. Supply, demand and wage responses interact. The hoarding share, insider split and wage wedge were set as assumptions, not estimated. The waiting and emulation mechanisms are untested, and the 2021 step is an unexplained residual.": {
+    "zh-Hans": "该参考值是对所示记录进行拟合得到的，因此其拟合统计量属于样本内统计量。供给、需求与工资响应相互作用。囤积份额、内部人分割与工资楔子被设定为假设，而非估计得出。等待机制与模仿机制未经检验，且2021年的阶跃是一个无法解释的残差。",
+    "vi": "Tham chiếu được khớp với bản ghi được hiển thị, vì vậy các thống kê khớp của nó là trong mẫu. Các phản ứng cung, cầu và tiền lương tương tác với nhau. Tỷ lệ tích trữ, phân chia nội bộ và chênh lệch tiền lương được đặt làm giả định, không phải ước lượng. Các cơ chế chờ đợi và mô phỏng chưa được kiểm nghiệm, và bước nhảy năm 2021 là một phần dư không giải thích được.",
+    "fr": "La référence a été ajustée au relevé présenté, de sorte que ses statistiques d'ajustement sont en échantillon. Les réponses de l'offre, de la demande et des salaires interagissent. La part de thésaurisation, la répartition entre initiés et le coin salarial ont été fixés comme hypothèses, et non estimés. Les mécanismes d'attente et d'émulation ne sont pas testés, et le saut de 2021 est un résidu inexpliqué."
+  },
+  "The Atlas documents that a model fitted to 2018–22 misses the later youth unemployment rise. A naive benchmark (the same month of 2022, carried forward) does better on the 2023 H1 holdout and on the verified months from December 2023.": {
+    "zh-Hans": "《Atlas》记录显示，基于2018–22年拟合的模型未能捕捉到后来的青年失业率上升。一个朴素基准（沿用2022年同月数值向前推算）在2023年上半年留出集以及2023年12月起的已验证月份上表现更好。",
+    "vi": "Atlas ghi nhận rằng một mô hình được khớp với giai đoạn 2018–22 bỏ lỡ mức tăng thất nghiệp thanh niên sau đó. Một chuẩn đối sánh ngây thơ (cùng tháng của năm 2022, được mang tiếp về sau) hoạt động tốt hơn trên tập giữ lại nửa đầu năm 2023 và trên các tháng đã được xác minh từ tháng 12 năm 2023.",
+    "fr": "L'Atlas documente qu'un modèle ajusté sur 2018–22 manque la hausse ultérieure du chômage des jeunes. Une référence naïve (le même mois de 2022, reporté) fait mieux sur l'échantillon de validation du premier semestre 2023 et sur les mois vérifiés à partir de décembre 2023."
+  },
+  "Broad rate · 2024–26": {
+    "zh-Hans": "粗率 · 2024–26",
+    "vi": "Tỷ lệ thô · 2024–26",
+    "fr": "Taux brut · 2024–26"
+  },
+  "Unemployed plus graduates waiting": {
+    "zh-Hans": "失业人员加待业毕业生",
+    "vi": "Người thất nghiệp cộng với sinh viên tốt nghiệp đang chờ việc",
+    "fr": "Chômeurs plus diplômés en attente d'emploi"
   }
 }

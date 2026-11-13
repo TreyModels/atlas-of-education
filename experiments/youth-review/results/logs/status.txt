@@ -1,0 +1,16 @@
+lake exit 0
+lam exit 1
+step exit 1
+lake exit 0
+step exit 1
+lake exit 0
+step_central_full exit 0
+step_low_full exit 0
+lake2 exit 0
+bounds_new_full exit 0
+bounds_new_a08_full exit 0
+bounds_new_early exit 0
+bounds_new_a08_early exit 0
+step_central_early exit 0
+bounds_old_full exit 0
+bounds_old_early exit 0

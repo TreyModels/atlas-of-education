@@ -1,0 +1,15 @@
+{
+  "source": "https://legacy.ched.gov.ph/wp-content/uploads/Higher-Education-Data-and-Indicators-AY-2009-10-to-AY-2019-20.pdf",
+  "table": "Table 1, Enrollment, All Disciplines/Public/Private",
+  "retrieved": "2026-11-03",
+  "unit": "reported student headcount, stock in academic year",
+  "coverage": "Higher education, based on HEI submissions; published classifications",
+  "causal_status": "Descriptive series; changes cannot be attributed solely to K12",
+  "observations": [
+    {"academic_year": "2015-16", "total": 4104841, "public": 1884984, "private": 2219857},
+    {"academic_year": "2016-17", "total": 3589484, "public": 1641607, "private": 1947877},
+    {"academic_year": "2017-18", "total": 2981803, "public": 1385458, "private": 1596345},
+    {"academic_year": "2018-19", "total": 3212542, "public": 1519512, "private": 1693030},
+    {"academic_year": "2019-20", "total": 3408425, "public": 1575645, "private": 1832780}
+  ]
+}

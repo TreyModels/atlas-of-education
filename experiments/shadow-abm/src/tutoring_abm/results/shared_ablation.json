@@ -1,0 +1,251 @@
+{
+ "overlap": {
+  "model_py_shared_by_variants": true,
+  "mechanism_lines_in_model_py": 6,
+  "nonblank_code_lines_in_model_py": 215,
+  "free_parameters": {
+   "thin": 13,
+   "diversion": 14,
+   "favour": 14,
+   "full": 15
+  },
+  "parameters_differing_between_variants": [
+   "diversion",
+   "favour"
+  ]
+ },
+ "particles_per_variant": 60,
+ "worlds": 10,
+ "summary": {
+  "baseline": {
+   "thin": {
+    "fit_share": 0.455,
+    "ban_own_participation": -0.3524808353579303,
+    "ban_own_nonbuyer_instr": -0.0014462512985615739,
+    "cond_pay_participation": -0.17713190061141804,
+    "cond_pay_nonbuyer_instr": -0.0010816614086375242,
+    "extra_time_participation": -0.031004105969898776,
+    "extra_time_nonbuyer_instr": 0.09958625464157911,
+    "com_entry_participation": 0.012905916993198208,
+    "com_entry_nonbuyer_instr": -2.926296819694141e-06
+   },
+   "diversion": {
+    "fit_share": 0.415,
+    "ban_own_participation": -0.36797847666134276,
+    "ban_own_nonbuyer_instr": 0.00013926660184826467,
+    "cond_pay_participation": -0.19267219889644727,
+    "cond_pay_nonbuyer_instr": -0.00014862336494725348,
+    "extra_time_participation": -0.02400499130322009,
+    "extra_time_nonbuyer_instr": 0.09962913892302566,
+    "com_entry_participation": 0.010403021967736237,
+    "com_entry_nonbuyer_instr": 0.00034114026350895443
+   },
+   "favour": {
+    "fit_share": 0.5116666666666667,
+    "ban_own_participation": -0.3762705897698902,
+    "ban_own_nonbuyer_instr": -0.0012726444835450823,
+    "cond_pay_participation": -0.18911058932843383,
+    "cond_pay_nonbuyer_instr": -0.0008292935983560401,
+    "extra_time_participation": -0.021227712830086398,
+    "extra_time_nonbuyer_instr": 0.09975045392065496,
+    "com_entry_participation": 0.009702068063111635,
+    "com_entry_nonbuyer_instr": 4.388115176223728e-05
+   },
+   "full": {
+    "fit_share": 0.48833333333333334,
+    "ban_own_participation": -0.36251159476759526,
+    "ban_own_nonbuyer_instr": -0.00015918369167511326,
+    "cond_pay_participation": -0.17018226182476753,
+    "cond_pay_nonbuyer_instr": -0.0009194937631729627,
+    "extra_time_participation": -0.019474012974635635,
+    "extra_time_nonbuyer_instr": 0.09955336595909325,
+    "com_entry_participation": 0.01066666213033518,
+    "com_entry_nonbuyer_instr": 5.536330038174997e-05
+   }
+  },
+  "no_thin_channel": {
+   "thin": {
+    "fit_share": 0.041666666666666664,
+    "ban_own_participation": -0.3208945543942441,
+    "ban_own_nonbuyer_instr": 0.0007898537894043267,
+    "cond_pay_participation": -0.2015951418894874,
+    "cond_pay_nonbuyer_instr": -0.0004946933536105202,
+    "extra_time_participation": 0.0,
+    "extra_time_nonbuyer_instr": 0.09999999999999998,
+    "com_entry_participation": 0.027597628297474253,
+    "com_entry_nonbuyer_instr": 8.322947247385581e-05
+   },
+   "diversion": {
+    "fit_share": 0.045,
+    "ban_own_participation": -0.34622433264517793,
+    "ban_own_nonbuyer_instr": 0.002194682022834793,
+    "cond_pay_participation": -0.2296461141532505,
+    "cond_pay_nonbuyer_instr": 0.00019676259835599286,
+    "extra_time_participation": 0.0,
+    "extra_time_nonbuyer_instr": 0.09999999999999998,
+    "com_entry_participation": 0.020201817108193743,
+    "com_entry_nonbuyer_instr": 0.0003826309088735824
+   },
+   "favour": {
+    "fit_share": 0.09333333333333334,
+    "ban_own_participation": -0.36429974907101337,
+    "ban_own_nonbuyer_instr": 0.0006857130552145319,
+    "cond_pay_participation": -0.2268664331159656,
+    "cond_pay_nonbuyer_instr": -0.0006815795098054078,
+    "extra_time_participation": 0.0,
+    "extra_time_nonbuyer_instr": 0.09999999999999998,
+    "com_entry_participation": 0.016660702246970138,
+    "com_entry_nonbuyer_instr": -7.453811613378214e-06
+   },
+   "full": {
+    "fit_share": 0.09333333333333334,
+    "ban_own_participation": -0.35527305182255775,
+    "ban_own_nonbuyer_instr": 0.0014967861377069291,
+    "cond_pay_participation": -0.21646705559184864,
+    "cond_pay_nonbuyer_instr": -0.00027019262911442965,
+    "extra_time_participation": 0.0,
+    "extra_time_nonbuyer_instr": 0.09999999999999998,
+    "com_entry_participation": 0.01696593769482113,
+    "com_entry_nonbuyer_instr": 0.00011867418036853872
+   }
+  },
+  "no_alternative_providers": {
+   "thin": {
+    "fit_share": 0.0,
+    "ban_own_participation": -0.5125536873340968,
+    "ban_own_nonbuyer_instr": -0.00033627046303930097,
+    "cond_pay_participation": -0.2632345571729489,
+    "cond_pay_nonbuyer_instr": -0.0005060470220810132,
+    "extra_time_participation": -0.03373293791906057,
+    "extra_time_nonbuyer_instr": 0.09999170461726042,
+    "com_entry_participation": 0.00021468924052581162,
+    "com_entry_nonbuyer_instr": 5.800498852348568e-07
+   },
+   "diversion": {
+    "fit_share": 0.0,
+    "ban_own_participation": -0.5025541073643407,
+    "ban_own_nonbuyer_instr": 0.0027007988707358765,
+    "cond_pay_participation": -0.25776419566086506,
+    "cond_pay_nonbuyer_instr": 0.000690965134776067,
+    "extra_time_participation": -0.027707865053148845,
+    "extra_time_nonbuyer_instr": 0.09983743097843051,
+    "com_entry_participation": 0.00020378437040294295,
+    "com_entry_nonbuyer_instr": 2.609219769689197e-07
+   },
+   "favour": {
+    "fit_share": 0.0,
+    "ban_own_participation": -0.5171792796591662,
+    "ban_own_nonbuyer_instr": 0.0002676798381544554,
+    "cond_pay_participation": -0.27349777776209094,
+    "cond_pay_nonbuyer_instr": -0.0002953339539190636,
+    "extra_time_participation": -0.026871321255784397,
+    "extra_time_nonbuyer_instr": 0.09991229576851307,
+    "com_entry_participation": 0.00015466986636258895,
+    "com_entry_nonbuyer_instr": 2.766629484951544e-07
+   },
+   "full": {
+    "fit_share": 0.0,
+    "ban_own_participation": -0.5261381525343849,
+    "ban_own_nonbuyer_instr": 0.0015075530293641726,
+    "cond_pay_participation": -0.2776945377135449,
+    "cond_pay_nonbuyer_instr": -0.00018887994703131739,
+    "extra_time_participation": -0.023163494959753284,
+    "extra_time_nonbuyer_instr": 0.09976220179070333,
+    "com_entry_participation": 0.0001546711682423596,
+    "com_entry_nonbuyer_instr": 2.4752933991400994e-07
+   }
+  },
+  "weaker_withholding_convexity": {
+   "thin": {
+    "fit_share": 0.455,
+    "ban_own_participation": -0.3524808353579303,
+    "ban_own_nonbuyer_instr": -0.0014462512985615739,
+    "cond_pay_participation": -0.17713190061141804,
+    "cond_pay_nonbuyer_instr": -0.0010816614086375242,
+    "extra_time_participation": -0.031004105969898776,
+    "extra_time_nonbuyer_instr": 0.09958625464157911,
+    "com_entry_participation": 0.012905916993198208,
+    "com_entry_nonbuyer_instr": -2.926296819694141e-06
+   },
+   "diversion": {
+    "fit_share": 0.4166666666666667,
+    "ban_own_participation": -0.3699824568025185,
+    "ban_own_nonbuyer_instr": 0.00021680609101437653,
+    "cond_pay_participation": -0.19157604865292344,
+    "cond_pay_nonbuyer_instr": -5.5902721798006816e-05,
+    "extra_time_participation": -0.023996350070435657,
+    "extra_time_nonbuyer_instr": 0.0996175509848285,
+    "com_entry_participation": 0.01030517998546343,
+    "com_entry_nonbuyer_instr": 0.00037428986598003755
+   },
+   "favour": {
+    "fit_share": 0.5116666666666667,
+    "ban_own_participation": -0.3762705897698902,
+    "ban_own_nonbuyer_instr": -0.0012726444835450823,
+    "cond_pay_participation": -0.18911058932843383,
+    "cond_pay_nonbuyer_instr": -0.0008292935983560401,
+    "extra_time_participation": -0.021227712830086398,
+    "extra_time_nonbuyer_instr": 0.09975045392065496,
+    "com_entry_participation": 0.009702068063111635,
+    "com_entry_nonbuyer_instr": 4.388115176223728e-05
+   },
+   "full": {
+    "fit_share": 0.4866666666666667,
+    "ban_own_participation": -0.3627241343949925,
+    "ban_own_nonbuyer_instr": -0.00010488608624026341,
+    "cond_pay_participation": -0.17033244521080343,
+    "cond_pay_nonbuyer_instr": -0.0008639432884373077,
+    "extra_time_participation": -0.019430526031557482,
+    "extra_time_nonbuyer_instr": 0.09947676399422878,
+    "com_entry_participation": 0.010678784417725018,
+    "com_entry_nonbuyer_instr": 5.82096236780294e-05
+   }
+  },
+  "double_withholding_cost": {
+   "thin": {
+    "fit_share": 0.455,
+    "ban_own_participation": -0.3524808353579303,
+    "ban_own_nonbuyer_instr": -0.0014462512985615739,
+    "cond_pay_participation": -0.17713190061141804,
+    "cond_pay_nonbuyer_instr": -0.0010816614086375242,
+    "extra_time_participation": -0.031004105969898776,
+    "extra_time_nonbuyer_instr": 0.09958625464157911,
+    "com_entry_participation": 0.012905916993198208,
+    "com_entry_nonbuyer_instr": -2.926296819694141e-06
+   },
+   "diversion": {
+    "fit_share": 0.39,
+    "ban_own_participation": -0.36571833313833074,
+    "ban_own_nonbuyer_instr": -0.0006099315791713855,
+    "cond_pay_participation": -0.19364765968020653,
+    "cond_pay_nonbuyer_instr": -0.0007898097007583704,
+    "extra_time_participation": -0.024326007342285128,
+    "extra_time_nonbuyer_instr": 0.09961993610470021,
+    "com_entry_participation": 0.011127391707221879,
+    "com_entry_nonbuyer_instr": 0.00018107956063184716
+   },
+   "favour": {
+    "fit_share": 0.5116666666666667,
+    "ban_own_participation": -0.3762705897698902,
+    "ban_own_nonbuyer_instr": -0.0012726444835450823,
+    "cond_pay_participation": -0.18911058932843383,
+    "cond_pay_nonbuyer_instr": -0.0008292935983560401,
+    "extra_time_participation": -0.021227712830086398,
+    "extra_time_nonbuyer_instr": 0.09975045392065496,
+    "com_entry_participation": 0.009702068063111635,
+    "com_entry_nonbuyer_instr": 4.388115176223728e-05
+   },
+   "full": {
+    "fit_share": 0.4866666666666667,
+    "ban_own_participation": -0.3623310949160026,
+    "ban_own_nonbuyer_instr": -0.0009835833862369414,
+    "cond_pay_participation": -0.169954162330182,
+    "cond_pay_nonbuyer_instr": -0.0011420011685349118,
+    "extra_time_participation": -0.019650934543468723,
+    "extra_time_nonbuyer_instr": 0.09951339855144703,
+    "com_entry_participation": 0.01078510738390076,
+    "com_entry_nonbuyer_instr": 3.6357552008148275e-05
+   }
+  }
+ }
+}
