@@ -36,7 +36,7 @@ Housing investment fell from 12.3% of GDP (2020) to 6.1% (2025). Completions are
 
 ### 3. Regulatory shocks: tutoring and platforms
 
-- **Tutoring ban (July 2021):** more than 3 million job openings lost within four months (Huang, Liu, Ma & Yang 2025, *J. Comparative Economics*). The effect persisted through 2022 and doubled once spillovers to arts and sports training are counted. New Oriental alone cut 60,000 staff. Tutoring hired graduates heavily.
+- **Tutoring ban (July 2021):** about 3 million job losses within four months (estimate; Huang et al. 2025) (Huang, Liu, Ma & Yang 2025, *J. Comparative Economics*). The effect persisted through 2022 and doubled once spillovers to arts and sports training are counted. New Oriental alone cut 60,000 staff. Tutoring hired graduates heavily.
 - **Platform tightening (2021–22):** in 2022 Alibaba cut about 20,000 jobs, Meituan about 10,000, and Tencent and Baidu over 4,000 each (SCMP). Tencent's workforce shrank for the first time in a decade. Internet firms were the graduates' preferred private employers.
 - Renmin University's Mao Yufei: real estate, internet, tutoring and financial services cut graduate hiring the most (Caixin 2025).
 

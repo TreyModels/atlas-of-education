@@ -113,9 +113,9 @@ globalThis.AtlasWorldsLab = (() => {
     defaults: {gradSupply: 1, dr_drop: chinaFit.dr_drop, hoard: chinaFit.hoard, wait_max: chinaFit.wait_max},
     controls: [
       range('gradSupply', 'Graduate entrants from 2019', .5, 1.5, .01, v => number(v, 2) + '×', 'Scale the graduate input series after 2018.'),
-      range('dr_drop', 'Graduate-job value lost', 0, .3, 'any', pct, 'Assumed demand shock from August 2021.'),
-      range('hoard', 'Secure jobs reserved for insiders', 0, .8, .01, pct, 'Share of secure openings filled through the network.'),
-      range('wait_max', 'Maximum monthly move into waiting', 0, .3, 'any', pct, 'Graduates waiting outside the labour force are outside the official unemployment rate.')
+      range('dr_drop', 'Aug-2021 step (unexplained residual, fitted)', 0, .6, 'any', pct, 'Unexplained residual (fitted), not a measured demand shock. No sourced series matches it.'),
+      range('hoard', 'Secure jobs reserved for insiders', 0, .8, .01, pct, 'Share of secure openings filled through the network. An assumption, not estimated.'),
+      range('wait_max', 'Maximum monthly move into waiting', 0, .3, 'any', pct, 'Graduates waiting outside the labour force are outside the official unemployment rate. The waiting mechanism is untested: no data on family support for waiting.')
     ],
     run(values) {
       const parameters = {...chinaFit, ...values};
@@ -135,7 +135,10 @@ globalThis.AtlasWorldsLab = (() => {
         metrics: [
           metric('Model rate · 2024–26', number(mean('rate_new'), 1) + '%', 'Mean through September 2026'),
           metric('Change vs fitted run', signed(mean('rate_new') - AtlasYouth.windowMean(base.run, 'rate_new', start, end)) + ' pp', 'Same reporting window'),
-          metric('Graduates waiting', number(mean('waiting'), 2) + 'm', 'Mean outside the labour force')
+          metric('Graduates waiting', number(mean('waiting'), 2) + 'm', 'Mean outside the labour force'),
+          metric('Broad rate · 2024–26', number(mean('broad_u'), 1) + '%', 'Unemployed plus graduates waiting'),
+          ...AtlasYouth.benchmarks(ATLAS_DATA).filter(b => b.id !== 'fit_2018_22').map(b =>
+            metric(b.label, number(b.model, 1) + ' model · ' + (b.naive == null ? '–' : number(b.naive, 1)) + ' naive', b.detail))
         ],
         lines: [line('Current model', data(current.run)), line('Fitted reference', data(base.run), 'reference'), line('Verified points in Atlas’s NBS series', observations, 'observed')],
         axis: v => number(v, 1) + '%', breaks: [2024],
@@ -144,8 +147,8 @@ globalThis.AtlasWorldsLab = (() => {
     },
     evidence: [
       evidence('Observed · NBS rates', 'The points come from the supplied Atlas extract and use its verified flag. The plot omits entries flagged as recalled from memory.'),
-      evidence('Fitted · Whole-record reference', 'The reference was fitted to the record shown. Supply, demand and wage responses interact. The fitted hoarding share was set as an assumption.'),
-      evidence('Holdout · Earlier fit missed the bulge', 'The Atlas documents that a model fitted to 2018–22 misses the later youth unemployment rise.', true)
+      evidence('Fitted · Whole-record reference', 'The reference was fitted to the record shown, so its fit statistics are in sample. Supply, demand and wage responses interact. The hoarding share, insider split and wage wedge were set as assumptions, not estimated. The waiting and emulation mechanisms are untested, and the 2021 step is an unexplained residual.'),
+      evidence('Holdout · Earlier fit missed the bulge', 'The Atlas documents that a model fitted to 2018–22 misses the later youth unemployment rise. A naive benchmark (the same month of 2022, carried forward) does better on the 2023 H1 holdout and on the verified months from December 2023.', true)
     ], links: [education]
   };
 

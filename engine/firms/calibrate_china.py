@@ -12,10 +12,18 @@ from firms import model as M, data_china as D
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(HERE, 'results')
+# Bounds widened in the external-review pass (experiments/youth-review/README.md, item 1.2). The previous bounds were
+# m_g 0.03-0.50, m_n 0.03-0.42, f_n_ref 0.05-0.38, m_a 0.02-0.6, dr_drop 0-0.3; the previous fit stuck at m_n 0.42,
+# f_n_ref 0.38, m_a 0.02, dr_drop 0.30, and m_g 0.03. lam_g stays capped at 1 (a partial-adjustment speed above 1
+# overshoots the target); e_prop stays floored at 0 (a negative elasticity to property investment is not admissible).
+# f_n_ref is capped at 0.399, not doubled to 0.76: the urn-ball matching needs job-finding below the application rate a
+# (a = 0.40, DEFAULTS), so f_n_ref >= a is infeasible (urn_x_from_f raises). A doubled bound is run separately with a = 0.80.
+# m_n is capped at 0.449, not doubled to 0.84: the non-graduate wage w_n0 = p_n0 (1 - m_n) must stay above the flow value
+# z_n = 0.55 (non-negative bargaining share), so m_n < 1 - z_n/p_n0 = 0.45. The old upper bound 0.42 sat just below this ceiling.
 FREE = [  # name, lower, upper, start
-    ('m_g', 0.03, 0.50, 0.15), ('m_n', 0.03, 0.42, 0.10), ('f_g_ref', 0.05, 0.38, 0.20), ('f_n_ref', 0.05, 0.38, 0.25),
-    ('lam_g', 0.002, 1.0, 0.02), ('zeta', 0.0, 1.0, 0.3), ('m_a', 0.02, 0.6, 0.1), ('sep_scale', 0.2, 2.5, 1.0),
-    ('july_g', 0.2, 1.0, 0.7), ('e_prop', 0.0, 1.0, 0.1), ('dr_drop', 0.0, 0.3, 0.02),
+    ('m_g', 0.00, 0.50, 0.15), ('m_n', 0.03, 0.449, 0.10), ('f_g_ref', 0.05, 0.38, 0.20), ('f_n_ref', 0.05, 0.399, 0.25),
+    ('lam_g', 0.002, 1.0, 0.02), ('zeta', 0.0, 1.0, 0.3), ('m_a', 0.0, 0.6, 0.1), ('sep_scale', 0.2, 2.5, 1.0),
+    ('july_g', 0.2, 1.0, 0.7), ('e_prop', 0.0, 1.0, 0.1), ('dr_drop', 0.0, 0.6, 0.02),
 ]
 FIT = (2018, 2022)
 
@@ -119,7 +127,7 @@ CAUSES = ['supply', 'composition', 'demand', 'sector', 'screening']
 LABEL = dict(supply='Graduate numbers (8.3m in 2019 to 12.7m in 2026)',
              composition='Fewer non-graduate entrants (smaller cohorts, more going to college)',
              demand='Aggregate demand read from adult unemployment',
-             sector='Graduate-job demand: real-estate contraction and the 2021 tutoring ban',
+             sector='Aug-2021 step (unexplained)',   # the dr_drop step: fitted residual, not a sourced shock (review 1.1, 1.6)
              screening='Employers preferring graduates for non-graduate jobs')
 EARLY, LATE = ((2018, 1), (2019, 12)), ((2024, 1), (2026, 9))
 

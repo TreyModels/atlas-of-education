@@ -30,7 +30,8 @@ Mechanisms and where they come from
     (logistic dispersion nu); that share phi is the downgrading / underemployment margin.
   * Demand: A_t from adult unemployment by inverting the same free-entry condition for adults with rigid adult wages.
     Graduate jobs additionally load on observed real-estate investment (elasticity e_prop) and lose a share dr_drop of
-    their value from August 2021 (Double Reduction), the two graduate-specific demand shocks with dated observations.
+    their value from August 2021. dr_drop is a FITTED residual (the August-2021 step), not a measured demand shock: no
+    sourced series maps onto its size (experiments/youth-review, item 1.1).
 """
 import math
 import numpy as np

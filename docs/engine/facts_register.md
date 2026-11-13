@@ -38,7 +38,7 @@ Each mechanism is labelled as one of:
 | Old/new NBS definition gap (searching students) | built in | An observation rule, not a finding |
 | Graduate surge → unemployment, through wage rigidity | built in + tuned | Its size depends on `lam_g`, which the 2018–22 data cannot identify (`forecast_strict.md`) |
 | Downgrading / graduates crowding out non-graduates | emergent | Has a tier-2 property test |
-| Waiting outside the labour force lowers the official rate | built in + tuned | `tilly_fit` "no waiting" counterfactual: +22.8 pts, but only with `wait_max` fitted on post-2022 data. Fitted on pre-2023 data only, the waiting pool drains after 2022 (1.1m → 0.6m), so the mechanism does not produce persistence (`tilly_strict.md`). |
+| Waiting outside the labour force lowers the official rate | built in + tuned | `tilly_fit` "no waiting" counterfactual: +12.2 pts on the current results/tilly_fit.json (the +22.8 of an earlier run is not reproduced). Holding the Tilly parameters fixed, the measured rise is +5.1 with waiting and +12.2 without; the broad measure with waiting is +9.5. Fitted on pre-2023 data only, the waiting pool drains after 2022 (1.1m → 0.6m), so the mechanism does not produce persistence (`tilly_strict.md`). |
 | Hoarding and emulation | built in | Contribute ≈ 0 to the rise in `tilly_fit` |
 
 ## Cambodia child labour (`web/camchild.js`)

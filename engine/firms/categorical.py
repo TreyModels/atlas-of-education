@@ -2,7 +2,7 @@
 
 Tilly's claim is architectural: durable inequality arises when paired, unequal CATEGORIES (citizen/alien, degree/no
 degree, insider/outsider) are matched to ORGANIZATIONAL BOUNDARIES (who may enter which position), because the match
-solves organizational problems. Four mechanisms do the work:
+solves organizational problems. Four mechanisms are built in (their sizes are assumptions, and none is tested against data):
   exploitation        a category commanding a resource takes part of the value produced by outsiders' effort
   opportunity hoarding a network-bounded category keeps access to a valuable, renewable resource for its members
   emulation           organizations copy categorical distinctions from other organizations, whatever their efficiency

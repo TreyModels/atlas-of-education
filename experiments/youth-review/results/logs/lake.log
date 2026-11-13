@@ -1,0 +1,2 @@
+early {'f': np.float64(0.962), 's': np.float64(0.1869), 'q': np.float64(0.1704), 'delta': np.float64(-5.0)} cost 319.46 fit MAE 2.662 holdout 2023H1 MAE 8.451 new MAE 2.881
+full {'f': np.float64(0.962), 's': np.float64(0.1546), 'q': np.float64(0.1561), 'delta': np.float64(-2.0567)} cost 634.94 fit MAE 2.799 holdout 2023H1 MAE 7.915 new MAE 2.094

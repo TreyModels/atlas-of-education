@@ -1,0 +1,1 @@
+bounds_old_full cost 244.858 MAE early 2.05 holdout 2023H1 3.167 new MAE 1.271 rise 5.18 at bounds ['m_g', 'm_n', 'f_n_ref', 'lam_g', 'm_a', 'e_prop', 'dr_drop']
