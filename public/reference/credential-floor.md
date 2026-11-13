@@ -1,6 +1,6 @@
 # The relational-floor test in Cambodia, Vietnam and China
 
-Results note, v2, 13 November 2026. Replaces the 5 November note (v1). Model: `engine/relfloor_countries.py`, which uses the same household model as `engine/relfloor.py`. Output: `reference/relfloor_countries_v2.json`. v1's output is kept as `reference/relfloor_countries.json`. Each country × structure gets 24,000 parameter draws. Sources for every target: `inputs/credential_floor_sources.json`, with a URL, a table reference and a verification flag for each value.
+Results note, v2.1, 14 November 2026. Replaces the 5 November note (v1). Model: `engine/relfloor_countries.py`, which uses the same household model as `engine/relfloor.py`. Output: `reference/relfloor_countries_v2.json`. v1's output is kept as `reference/relfloor_countries.json`. Each country × structure gets 24,000 parameter draws. Sources for every target: `inputs/credential_floor_sources.json`, with a URL, a table reference and a verification flag for each value.
 
 ## What changed from v1
 
@@ -20,7 +20,7 @@ Results note, v2, 13 November 2026. Replaces the 5 November note (v1). Model: `e
 | Vietnam | upper-secondary completion | Young Lives, age 19 (2013): 57.7% overall, 80.5% top quintile, 25.1% bottom. MICS 2014 profile above. |
 | China | college entry | gross enrolment ~30% (2012), 48% (2019), 60.2% (2023); relative graduate pay 0.75 → 0.60 (2018 → 2023). |
 
-## Results (sourced priors)
+## Results (sourced priors, hard liquidity threshold)
 
 | | Accepted draws (of 24,000) | Bottom-40% share of non-completers, 2021, median [5–95%] | Relational weight: posterior vs prior | Q3+ completion change if the premium falls 40% by 2035 |
 |---|---|---|---|---|
@@ -36,14 +36,28 @@ Results note, v2, 13 November 2026. Replaces the 5 November note (v1). Model: `e
 
 **Observed Cambodia value:** 55–64% of lower-secondary non-completers in 2021 were in the poorest 40% of households. The range runs from equal child weights per quintile up to twice as many children in the poorest fifth as in the richest. The 2014 figure is 52–61%.
 
+## Robustness: graded liquidity constraint (decides the verdict)
+
+The model above has a hard liquidity threshold: a household below `y_sub + kappa x cost` cannot pay, except with probability `p_fin`. That makes a cliff in completion by wealth, and no draw fits Cambodia's or Vietnam's smooth quintile profile. The graded variant (`--smooth-liq`) makes the chance of financing rise smoothly in log income around the threshold. It adds one parameter, `s_liq` ~ U(0.1, 1.0). Output: `reference/relfloor_countries_v2_smoothliq.json`.
+
+| | Accepted, aggregate test (HC / POS / REL) | Accepted, full quintile profile | Bottom-40% share of non-completers, 2021, REL median [5–95%] | Relational weight posterior (prior 0.40 [0.04, 0.76]) |
+|---|---|---|---|---|
+| Cambodia | 689 / 633 / 565 | 64 / 91 / 44 | 67% [57, 80]; profile-fitted: 58% [54, 61] | 0.38 [0.04, 0.75], KS p = 0.60; profile 0.43, p = 0.55 |
+| Vietnam (Young Lives) | 6,056 / 5,563 / 5,061 | MICS: 996 / 1,370 / 1,626 | — | 0.36 [0.03, 0.75], KS D = 0.05; MICS 0.40, p = 0.36 |
+| China | 9 / 25 / 11 | — | — | 0.28 [0.07, 0.71], p = 0.36 (11 draws) |
+
 ## Reading
 
-1. **Cambodia: the relational floor fails the matched test.** Its 5th percentile (69%) is above the highest observed value (64%). Only 1.5% of accepted relational draws fall inside the observed range. Human capital fits: 22% of its draws fall inside, and its median is 7 points above the observed maximum. Positional is in between (12%). With v1's growth priors the verdict is the same and stronger: 0.3% of relational draws are inside.
-2. **No structure fits Cambodia's full quintile profile.** Zero draws in any structure match all five 2014 and 2021 quintiles within 10 points. The model produces a cliff at the liquidity threshold, and quintiles above it complete at 75–99%. In the data, completion rises smoothly: 29, 48, 54, 66, 79%. Item 1 is therefore a ranking of three structures inside a model that misses the shape of the gradient. It is not a test of the relational floor against reality.
-3. **Vietnam: both tests point the same way.** On Young Lives, human capital fits about eight times as often as the relational version. The surviving relational weight is small (median 0.10, against a prior median of 0.40). On the full MICS profile almost nothing fits: 10 human-capital draws, 2 positional and 0 relational out of 24,000 each. The cause is the same smooth middle-quintile rise the model cannot produce. MICS measures attendance at 15–17, not completion, so it is a shape test more than a level test.
-4. **The posterior equals the prior in three of four countries** (v1 priors; the fourth is the Philippines, `relational_floor_test.md`). In Cambodia and China the relational-weight posterior is statistically indistinguishable from its uniform prior (KS p = 0.44 and 0.07). The data say nothing about relational weight there. Vietnam is the only country where the data move it. With sourced growth priors, Cambodia's posterior is formally different (KS D = 0.11), but its 90% interval still covers 96% of the prior's. China's moves, but on only 13 accepted draws.
-5. **China is not explained by any structure.** Gaokao registrants per birth 18 years earlier fell 5.3% from 2024 to 2026 (raw −3.9%; births 2006 15.84m, 2008 16.08m). Every structure predicts a 2024–26 *rise* in college entry of 3–11% (5–95% across structures), because incomes keep growing after the pay ratio stops falling in 2023. Registrants are not entrants: they include repeaters and spring-gaokao vocational candidates, and enrolment kept rising. The test is not like-for-like, but the model's sign is wrong. The response to the 2018–23 pay fall, against a no-fall counterfactual, is human capital −7.8% [−10.9, −4.2], positional −6.1%, relational −5.1% [−6.9, −0.8]. It has no observed counterpart.
+1. **The data do not discriminate the relational floor.** Under the graded constraint, all three structures fit Cambodia's and Vietnam's full quintile profiles. In those fits the relational-weight posterior equals its prior. The profile-fitted structures all predict 57–58% of Cambodian non-completers from the bottom 40%, inside the observed 55–64%.
+2. **The earlier verdicts come from the hard threshold.** With it, the relational floor fails Cambodia's matched test (85% [69, 97] predicted, against 55–64% observed). Vietnam's relational weight is also pushed down (0.10). But that model fits no quintile profile (0 draws in Cambodia, at most 10 in Vietnam). Its verdicts are a ranking inside a misspecified model. They are not evidence about the relational floor.
+3. **Projections are not robust.** The Q3+ completion change under a 40% premium fall by 2035 changes sign with the constraint: relational ~0 (hard) vs +10 points (graded); human capital −12 vs −6. Do not quote them.
+4. **The posterior equals the prior almost everywhere.** In the hard-threshold model this holds in Cambodia and China (KS p = 0.44 and 0.07, v1 priors) and in the Philippines (`relational_floor_test.md`). In the graded model it holds in all three countries tested here.
+5. **China is not explained by any structure in either version.** Gaokao registrants per birth 18 years earlier fell 5.3% over 2024–26 (raw −3.9%). Every structure predicts a 3–11% rise in college entry. Registrants are not entrants: they include repeaters and vocational candidates, and enrolment kept rising. The model's sign is still wrong.
 6. **Rerouting is not evidence.** Every structure reroutes about 60% of exiters (Philippine run).
+
+## What would change the answer
+
+A test that separates the structures needs a margin where they predict different things *once each fits the wealth profile*. Wealth gradients in completion cannot do this; the graded fits show that. Candidates: completion responses to a measured change in the premium (a panel of pay and completion by region), or eligibility discontinuities (jobs that require the credential regardless of skill).
 
 ## Limits
 

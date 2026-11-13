@@ -106,8 +106,11 @@ CFG = {
 # v1 growth priors, kept for the comparison run (--v1-priors)
 V1_G = {'Cambodia': (.03, .06), 'Vietnam': (.04, .065), 'China': (.05, .09)}
 
+SMOOTH_LIQ = '--smooth-liq' in sys.argv   # robustness: graded rather than hard liquidity threshold
+
 def draw(rng, S, cfg):
     th = {k: rng.uniform(*v) for k, v in PRIORS.items()}
+    th['s_liq'] = rng.uniform(0.1, 1.0) if SMOOTH_LIQ else 0.0   # log-income scale of the graded constraint
     th['mu'] = rng.uniform(*cfg['mu']); th['g'] = rng.uniform(*cfg['g'])
     if S == 'M_HC': th['b_pos'] = th['b_rel'] = 0.0
     elif S == 'M_POS': th['b_rel'] = 0.0
@@ -135,7 +138,12 @@ def sim(th, cfg, scen='base', n=2000, seed=0):
         y = np.exp(logy0) * (1 + th['g']) ** (yr - 1998)
         R = HZ * (pm[t] * np.exp(th['gamma'] * ab) + th['b_pos'] * s_prev + th['b_rel'])
         want = R - cfg['L'] * c_ + rng.logistic(0, th['sig'], n) > 0
-        fin = (y >= th['y_sub'] + th['kappa'] * c_) | (rng.random(n) < th['p_fin'])
+        thresh = th['y_sub'] + th['kappa'] * c_
+        if th.get('s_liq', 0) > 0:   # P(finance) rises smoothly with log income around the threshold
+            pf = th['p_fin'] + (1 - th['p_fin']) / (1 + np.exp(-(np.log(y) - np.log(thresh)) / th['s_liq']))
+            fin = rng.random(n) < pf
+        else:
+            fin = (y >= thresh) | (rng.random(n) < th['p_fin'])
         stay = want & fin; s_prev = stay.mean(); ex = ~stay
         out['c'].append(stay.mean()); out['q'].append([stay[q == i].mean() for i in range(5)])
         out['exit_low'].append((ex & (q <= 1)).sum() / max(ex.sum(), 1))
@@ -188,7 +196,7 @@ def summarise(a, nd, country, S):
     for yr in (2014, 2021):
         Q = np.array([x[f'q_{yr}'] for x in a])
         d[f'q_profile_{yr}'] = [pct(Q[:, i]) for i in range(5)]
-    for k in ['b_rel', 'b_pos', 'gamma', 'prem0', 'g']:
+    for k in ['b_rel', 'b_pos', 'gamma', 'prem0', 'g', 's_liq']:
         d['post_' + k] = pct([x['th'][k] for x in a])
     if S == 'M_REL':
         lo, hi = PRIORS['b_rel']
@@ -249,6 +257,7 @@ if __name__ == '__main__':
     here = os.path.dirname(__file__)
     os.makedirs(os.path.join(here, 'results'), exist_ok=True)
     fn = 'relfloor_countries_v2.json' if gmode == 'sourced' else 'relfloor_countries_v2_v1priors.json'
+    if SMOOTH_LIQ: fn = fn.replace('.json', '_smoothliq.json')
     json.dump(out, open(os.path.join(here, 'results', fn), 'w'), indent=1)
     print(json.dumps(out['meta'], indent=1))
     for c in CFG:

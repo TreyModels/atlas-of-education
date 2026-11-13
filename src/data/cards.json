@@ -162,11 +162,11 @@
       },
       {
         "term": "What we learned",
-        "description": "Only Vietnam's data move the relational weight much. Cambodia's wealth gradient rejects the relational floor's prediction of who leaves school, but no structure reproduces its full quintile profile."
+        "description": "With a hard liquidity threshold the model fits no country's wealth profile. With a graded one it fits Cambodia and Vietnam, and then the data cannot tell the three explanations apart."
       },
       {
         "term": "What remains open",
-        "description": "In Cambodia and China the relational-weight posterior stays close to its prior, so the aggregate series cannot rank the theories. China's 2024–26 fall in gaokao registrants per birth (−5.3%) is outside every structure's prediction."
+        "description": "Once the model fits the wealth profile, the relational-weight posterior equals its prior in every country tested. China's 2024–26 fall in gaokao registrants per birth (−5.3%) is outside every structure's prediction."
       }
     ],
     "research": "reference/credential-floor.md"

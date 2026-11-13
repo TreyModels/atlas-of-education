@@ -140,8 +140,8 @@ export const familyStories: Record<ModelFamily, FamilyStory> = {
       {
         heading: 'What keeps students in school',
         blocks: [
-          { kind: 'para', tag: 'sim', text: 'Human-capital, positional and relational bundles were each drawn 24,000 times against country targets. Only Vietnam\'s data move the relational weight much. Cambodia\'s wealth gradient rejects the relational floor\'s prediction of who leaves school, but no structure reproduces its full quintile profile.' },
-          { kind: 'para', tag: 'open', text: 'In Cambodia and China the relational-weight posterior stays close to its prior, so the aggregate series cannot rank the theories. China\'s 2024–26 fall in gaokao registrants per birth (−5.3%) is outside every structure\'s prediction.' },
+          { kind: 'para', tag: 'sim', text: 'Human-capital, positional and relational bundles were each drawn 24,000 times against country targets. With a hard liquidity threshold the model fits no country\'s wealth profile. With a graded one it fits Cambodia and Vietnam, and then the data cannot tell the three explanations apart.' },
+          { kind: 'para', tag: 'open', text: 'Once the model fits the wealth profile, the relational-weight posterior equals its prior in every country tested. China\'s 2024–26 fall in gaokao registrants per birth (−5.3%) is outside every structure\'s prediction.' },
         ],
       },
       {
@@ -242,8 +242,8 @@ export const familyStories: Record<ModelFamily, FamilyStory> = {
       {
         heading: 'Who leaves school: the credential-floor test',
         blocks: [
-          { kind: 'para', tag: 'data', text: 'A separate model offers three explanations for who leaves school, each predicting a different share of lower-secondary non-completers from the poorest 40% of households. UIS completion rates by wealth quintile (from the Cambodia DHS 2021–22) put that share at 55–64%. The relational floor predicts 85% (90% band 69–97%) and fails. Human capital predicts 71% (54–89%) and fits.' },
-          { kind: 'para', tag: 'open', text: 'No structure reproduces Cambodia\'s full quintile profile. The model produces a cliff at the liquidity threshold, while completion in the data rises smoothly with wealth. Read the verdict as a ranking inside a model that misses the shape.' },
+          { kind: 'para', tag: 'data', text: 'A separate model offers three explanations for who leaves school, each predicting a share of lower-secondary non-completers from the poorest 40% of households. UIS completion rates by wealth quintile (from the Cambodia DHS 2021–22) put that share at 55–64%. With a hard liquidity threshold the relational floor predicts 85% and fails. With a graded threshold, which also fits the full quintile profile, all three predict 57–58% and fit.' },
+          { kind: 'para', tag: 'open', text: 'The verdict depends on how the liquidity constraint is modelled. The hard version misses the shape of the wealth gradient. The graded version fits it and cannot rank the explanations. These data do not discriminate the relational floor.' },
         ],
       },
     ],
