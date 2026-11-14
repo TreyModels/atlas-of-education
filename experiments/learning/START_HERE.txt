@@ -1,3 +1,5 @@
+WARNING (November 2026): these results come from a frozen engine copy that uses the old coordination multiplier (5^0.227 ≈ 1.44, a size association treated as a causal effect) and a water floor of 0.1. Both were removed from the public engines after the external review (see experiments/angkor-review/README.md). In the public relocation engine, removing them changes the headline result, so these numbers have not been checked under the new defaults. Treat them as historical.
+
 ADMINISTRATIVE LEARNING TEST
 
 Save this ZIP to iOS Files and tap to extract. Read RESULTS.md for findings.

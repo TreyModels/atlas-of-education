@@ -1,3 +1,5 @@
+> **Warning (November 2026):** these results come from a frozen engine copy that uses the old coordination multiplier (5^0.227 ≈ 1.44, a size association treated as a causal effect) and a water floor of 0.1. Both were removed from the public engines after the external review (see experiments/angkor-review/README.md). In the public relocation engine, removing them changes the headline result, so these numbers have not been checked under the new defaults. Treat them as historical.
+
 # Administrative learning: round 2
 
 Exploratory mechanism and structural-sensitivity tests. All units and rates remain synthetic. There is no fit to Angkor's historical decline.

@@ -229,7 +229,7 @@ export const familyStories: Record<ModelFamily, FamilyStory> = {
         heading: 'Three rival explanations, one calibration',
         blocks: [
           { kind: 'para', tag: 'sim', text: 'The thin timetable (the curriculum does not fit the official hours), diversion (teachers hold content back for paid sessions) and favour (paying buys goodwill) each fit the seven published patterns about equally well after ABC-SMC calibration. The data cannot tell them apart.' },
-          { kind: 'para', tag: 'sim', text: 'But all three agree on what policies would do — and that agreement, not the verdict between theories, is the useful result.' },
+          { kind: 'para', tag: 'sim', text: 'All three also agree on what policies would do, but only because they share most of their code. That agreement is not evidence.' },
         ],
       },
       {
