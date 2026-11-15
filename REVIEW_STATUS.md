@@ -2,13 +2,13 @@
 
 Merged to `main` (PR #1). Follow-up fixes from the second review: branch `fix/stale-pages`. Run every local check with `scripts/check-all.sh` (needs Node ≥ 20 and a Python with numpy and scipy). Re-pin an engine hash after an intended engine change with `scripts/repin-hashes.py <file>`.
 
-Status labels: **calibrated** = fitted to sourced data with a holdout; **fitted + free residual** = fits only with an unexplained fitted term; **illustrative** = invented or assumed parameters.
+Status labels (see `research/GATE.md`): **calibrated** = fitted to sourced data with a holdout; **fitted + free residual** = fits only with an unexplained fitted term; **illustrative** = invented or assumed parameters; **not identified** = the available data cannot tell the rival explanations apart.
 
 | Model | Status | Headline after review | Detail |
 |---|---|---|---|
-| China youth unemployment | fitted + free residual | +5 pp rise survives refits; the Aug-2021 step carries most of it and is unexplained; a naive benchmark beats the model out of sample | `experiments/youth-review/README.md` |
-| Credential floor | illustrative | Data do not discriminate the relational floor; the earlier rejection came from a hard liquidity threshold | `public/reference/credential-floor.md` |
-| Shadow education ABM | illustrative | Fresh-world fit 37–44% (was 17–19%), but only 1–7% of settings fit most worlds; policy agreement comes from shared code | `experiments/shadow-abm/README.md` |
+| China youth unemployment | fitted + free residual | +5 pp rise survives refits; the Aug-2021 step carries most of it and is unexplained; a naive benchmark beats the model out of sample, and no small forecaster beats it reliably | `experiments/youth-review/README.md`, `research/china-forecast-ledger/README.md` |
+| Credential floor | not identified | Data do not discriminate the relational floor; the earlier rejection came from a hard liquidity threshold. A fourth rival (relative risk aversion) cannot be separated either | `public/reference/credential-floor.md`, `research/credential-floor/README.md` |
+| Shadow education ABM | not identified | Favour is thin relabelled (identical outputs to 6.7e-16); the seven patterns cannot name the explanation (41% vs 33% chance); fresh-world fit 37–44% | `research/shadow-education/README.md`, `experiments/shadow-abm/README.md` |
 | Fertility | illustrative | Levels link does not survive differencing or cointegration | `experiments/fertility-trend-check/README.md` |
 | Angkor | illustrative | Court relocation and rise-then-decline depend on an assumed multiplier; the monsoon result rests on an unsourced crop sensitivity | `experiments/angkor-review/README.md` |
 | Out of Africa (separate repo) | illustrative | "Mixed wins" holds only at zero cost; coastal vs terrestrial ranking comes from the Nefud constraint | `ooa-coast-vs-herds` branch `fix/review`, `REVIEW_RESPONSE.md` |
@@ -41,3 +41,13 @@ Status labels: **calibrated** = fitted to sourced data with a holdout; **fitted 
 - `experiments/learning` and `learning-round2`: not rerun (frozen engine copies); each RESULTS.md and START_HERE.txt now carries a warning.
 - `TEXT_CHANGES.json`: all 16 entries are applied (three looked unapplied because the old text is a substring of the new).
 - Out of Africa page: "most likely in both chronologies" replaced (ooa-coast-vs-herds PR #2).
+
+## Revamp merged (15 November 2026)
+
+The research and teaching tracks (`research/`, `teach/`, `REVAMP.md`) are in the repo. Also fixed:
+
+- `engine/firms/results/seasonal_2024.md` now says the training-fit winner does not beat naive (0.99 against 0.89). Its prose is generated from the stored results (`--render-only`).
+- The credential-floor world now reads the v2.1 results.
+- The `china_fit.md` label is corrected.
+- The two hard-threshold docs carry superseded notices.
+- The shadow-education page and story say that favour is thin relabelled.

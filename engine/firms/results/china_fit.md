@@ -38,7 +38,7 @@ Jacobian condition number 44980.
 - Graduate numbers (8.3m in 2019 to 12.7m in 2026): +1.47 pp
 - Fewer non-graduate entrants (smaller cohorts, more going to college): -0.10 pp
 - Aggregate demand read from adult unemployment: -0.04 pp
-- Graduate-job demand: real-estate contraction and the 2021 tutoring ban: +3.84 pp
+- Aug-2021 step (unexplained; a fitted residual, not a sourced shock): +3.84 pp
 - Employers preferring graduates for non-graduate jobs: +0.00 pp
 
 Graduate unemployment rate, same decomposition (total +10.41 pp): supply +2.66; composition -0.00; demand -0.08; sector +8.21; screening +0.00

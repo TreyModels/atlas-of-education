@@ -1,0 +1,11 @@
+{'M_HC': 300, 'M_POS': 300, 'M_REL': 300, 'M_RRA': 267} {'M_HC': 110952, 'M_POS': 87216, 'M_REL': 134534, 'M_RRA': 206721} {'per_structure_search': {'M_HC': 66.1, 'M_POS': 50.4, 'M_REL': 72.6, 'M_RRA': 120.0}, 'total': 328.9}
+{'output': 'prem40_dall', 'family': 'prem40', 'mean_auc_folded': 0.7936137432376196, 'best_pair': ['M_HC', 'M_REL'], 'best_auc_folded': 0.9381833333333334, 'best_std_diff': -2.198121590290166}
+{'output': 'prem40_dq4', 'family': 'prem40', 'mean_auc_folded': 0.7787379525593009, 'best_pair': ['M_HC', 'M_REL'], 'best_auc_folded': 0.9329944444444445, 'best_std_diff': -2.1209533193354435}
+{'output': 'prem40_dq5', 'family': 'prem40', 'mean_auc_folded': 0.7762091240116521, 'best_pair': ['M_HC', 'M_REL'], 'best_auc_folded': 0.9221777777777778, 'best_std_diff': -2.0309309023589845}
+{'output': 'prem20_dall', 'family': 'prem20', 'mean_auc_folded': 0.7761979816895548, 'best_pair': ['M_HC', 'M_REL'], 'best_auc_folded': 0.9193722222222223, 'best_std_diff': -1.9685291976992592}
+{'output': 'prem40_dq2', 'family': 'prem40', 'mean_auc_folded': 0.773954556803995, 'best_pair': ['M_HC', 'M_REL'], 'best_auc_folded': 0.9404666666666667, 'best_std_diff': -2.210356311260551}
+{'output': 'prem40_dq3', 'family': 'prem40', 'mean_auc_folded': 0.770506190178943, 'best_pair': ['M_HC', 'M_REL'], 'best_auc_folded': 0.9393277777777778, 'best_std_diff': -2.172477506988795}
+{'output': 'prem40_dq1', 'family': 'prem40', 'mean_auc_folded': 0.768364721181856, 'best_pair': ['M_HC', 'M_REL'], 'best_auc_folded': 0.9345333333333333, 'best_std_diff': -2.0783680558259956}
+{'output': 'prem20_dq4', 'family': 'prem20', 'mean_auc_folded': 0.7574675925925926, 'best_pair': ['M_HC', 'M_REL'], 'best_auc_folded': 0.9067944444444445, 'best_std_diff': -1.8477070170516705}
+{'output': 'prem20_dq5', 'family': 'prem20', 'mean_auc_folded': 0.7566599667082813, 'best_pair': ['M_HC', 'M_REL'], 'best_auc_folded': 0.8986611111111111, 'best_std_diff': -1.7797540988495562}
+{'output': 'prem20_dq3', 'family': 'prem20', 'mean_auc_folded': 0.7559015189346651, 'best_pair': ['M_HC', 'M_REL'], 'best_auc_folded': 0.9168000000000001, 'best_std_diff': -1.8746597246795895}

@@ -1,5 +1,7 @@
 # The relational-floor test in Cambodia, Vietnam and China
 
+> **Superseded (14 November 2026).** This note uses v1 results with a hard liquidity threshold, and its Cambodia exit share was read in 2035, not the survey year. The current note is `public/reference/credential-floor.md` (v2.1). There, with a graded liquidity constraint, all three structures fit Cambodia's and Vietnam's full wealth-quintile profiles, the relational weight stays at its prior, and the 2035 projections change sign. Do not quote the numbers below.
+
 Results note, 5 November 2026. Model: `engine/relfloor_countries.py` (same household model as `relfloor.py`). Output: `engine/results/relfloor_countries.json`. 24,000 parameter draws per country and structure. Follows `relational_floor_test.md` (Philippines).
 
 ## Setup

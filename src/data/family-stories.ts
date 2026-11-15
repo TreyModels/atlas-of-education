@@ -230,6 +230,7 @@ export const familyStories: Record<ModelFamily, FamilyStory> = {
         blocks: [
           { kind: 'para', tag: 'sim', text: 'The thin timetable (the curriculum does not fit the official hours), diversion (teachers hold content back for paid sessions) and favour (paying buys goodwill) each fit the seven published patterns about equally well after ABC-SMC calibration. The data cannot tell them apart.' },
           { kind: 'para', tag: 'sim', text: 'All three also agree on what policies would do, but only because they share most of their code. That agreement is not evidence.' },
+          { kind: 'para', tag: 'sim', text: 'Favour is not even a separate model. A favour for buying from your own teacher is the same as raising everyone’s demand and both outside costs by the same amount. Rewritten that way, all 116 fitted favour settings give exactly the same results as thin settings.' },
         ],
       },
       {

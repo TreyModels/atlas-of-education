@@ -1,0 +1,433 @@
+{
+ "rows_that_fit": 9311,
+ "rows_by_variant": {
+  "full": 2461,
+  "thin": 2336,
+  "favour": 2272,
+  "diversion": 2242
+ },
+ "accuracy_seven_patterns_only": 0.4082909046587437,
+ "chance": 0.3333333333333333,
+ "accuracy_all_outputs_added": {
+  "labels": [
+   "thin",
+   "diversion",
+   "favour"
+  ],
+  "chance": 0.3333333333333333,
+  "balanced_accuracy": 0.48918079734296843,
+  "ci90": [
+   0.4489341775289986,
+   0.5427101394405534
+  ],
+  "confusion_row_share": [
+   [
+    0.4782,
+    0.1657,
+    0.3562
+   ],
+   [
+    0.3747,
+    0.4286,
+    0.1967
+   ],
+   [
+    0.3671,
+    0.0722,
+    0.5607
+   ]
+  ],
+  "n_rows": 6850,
+  "n_parameter_sets": 327
+ },
+ "outputs": {
+  "subjects_bought": {
+   "thin_vs_diversion": 0.5034702916305158,
+   "thin_vs_favour": 0.5468277074691299,
+   "diversion_vs_favour": 0.5450555417697981,
+   "thin_vs_full": 0.5100654108197469,
+   "missing_share": 0.0,
+   "median_by_variant": {
+    "diversion": 1.8152,
+    "favour": 1.8026,
+    "full": 1.8214,
+    "thin": 1.8164
+   },
+   "plain": "number of subjects tutored per pupil",
+   "accuracy_with_this_added": 0.40225264786942416
+  },
+  "own_share": {
+   "thin_vs_diversion": 0.5047216969315558,
+   "thin_vs_favour": 0.6302268609516689,
+   "diversion_vs_favour": 0.6272992549408853,
+   "thin_vs_full": 0.6333562130885652,
+   "missing_share": 0.0,
+   "median_by_variant": {
+    "diversion": 0.7678,
+    "favour": 0.7826,
+    "full": 0.7826,
+    "thin": 0.7699
+   },
+   "plain": "share of tutored pupils with any own-teacher tutoring",
+   "accuracy_with_this_added": 0.404955423070769
+  },
+  "other_share": {
+   "thin_vs_diversion": 0.5107303135654321,
+   "thin_vs_favour": 0.634346775214644,
+   "diversion_vs_favour": 0.6128598082697793,
+   "thin_vs_full": 0.6289685880558632,
+   "missing_share": 0.0,
+   "median_by_variant": {
+    "diversion": 0.6331,
+    "favour": 0.618,
+    "full": 0.619,
+    "thin": 0.6355
+   },
+   "plain": "share of tutored pupils with any parallel-teacher tutoring",
+   "accuracy_with_this_added": 0.4070930784319766
+  },
+  "com_share": {
+   "thin_vs_diversion": 0.5165920991531534,
+   "thin_vs_favour": 0.6357576376495273,
+   "diversion_vs_favour": 0.62359987310123,
+   "thin_vs_full": 0.5488982580307593,
+   "missing_share": 0.0,
+   "median_by_variant": {
+    "diversion": 0.0863,
+    "favour": 0.0661,
+    "full": 0.0761,
+    "thin": 0.0835
+   },
+   "plain": "share of tutored pupils with any commercial tutoring",
+   "accuracy_with_this_added": 0.40875600186030997
+  },
+  "teacher_own_share": {
+   "thin_vs_diversion": 0.5397672508340157,
+   "thin_vs_favour": 0.5966534034041578,
+   "diversion_vs_favour": 0.5574909930142855,
+   "thin_vs_full": 0.5005780240240909,
+   "missing_share": 0.0,
+   "median_by_variant": {
+    "diversion": 0.6389,
+    "favour": 0.6528,
+    "full": 0.6389,
+    "thin": 0.6389
+   },
+   "plain": "share of teachers who tutor their own pupils",
+   "accuracy_with_this_added": 0.41048525326026114
+  },
+  "withholding_mean": {
+   "thin_vs_diversion": 0.6781891168599465,
+   "thin_vs_favour": 0.5,
+   "diversion_vs_favour": 0.6781891168599464,
+   "thin_vs_full": 0.670865501828525,
+   "missing_share": 0.0,
+   "median_by_variant": {
+    "diversion": 0.0,
+    "favour": 0.0,
+    "full": 0.0,
+    "thin": 0.0
+   },
+   "plain": "share of the curriculum teachers hold back from regular lessons (all teachers)",
+   "accuracy_with_this_added": 0.5006380723618449
+  },
+  "withholding_among_sellers": {
+   "thin_vs_diversion": 0.6781891168599465,
+   "thin_vs_favour": 0.5,
+   "diversion_vs_favour": 0.6781891168599464,
+   "thin_vs_full": 0.670865501828525,
+   "missing_share": 0.0,
+   "median_by_variant": {
+    "diversion": 0.0,
+    "favour": 0.0,
+    "full": 0.0,
+    "thin": 0.0
+   },
+   "plain": "share of the curriculum held back, among teachers who tutor their own pupils",
+   "accuracy_with_this_added": 0.5006380723618449
+  },
+  "class_instruction": {
+   "thin_vs_diversion": 0.5328844262094754,
+   "thin_vs_favour": 0.5637897106526143,
+   "diversion_vs_favour": 0.5252032657586914,
+   "thin_vs_full": 0.5661704438556551,
+   "missing_share": 0.0,
+   "median_by_variant": {
+    "diversion": 0.6769,
+    "favour": 0.6824,
+    "full": 0.6904,
+    "thin": 0.6538
+   },
+   "plain": "share of the curriculum delivered in regular lessons",
+   "accuracy_with_this_added": 0.4048014574110597
+  },
+  "coverage": {
+   "thin_vs_diversion": 0.5439765666051593,
+   "thin_vs_favour": 0.5615206112531352,
+   "diversion_vs_favour": 0.5122842877963589,
+   "thin_vs_full": 0.5718583185362893,
+   "missing_share": 0.0,
+   "median_by_variant": {
+    "diversion": 0.7922,
+    "favour": 0.7957,
+    "full": 0.8063,
+    "thin": 0.7675
+   },
+   "plain": "total curriculum coverage, lessons plus tutoring",
+   "accuracy_with_this_added": 0.40594693624580325
+  },
+  "coverage_q1": {
+   "thin_vs_diversion": 0.5371503549912626,
+   "thin_vs_favour": 0.5604626528434304,
+   "diversion_vs_favour": 0.518843210915807,
+   "thin_vs_full": 0.5650930195988935,
+   "missing_share": 0.0,
+   "median_by_variant": {
+    "diversion": 0.714,
+    "favour": 0.7176,
+    "full": 0.728,
+    "thin": 0.6928
+   },
+   "plain": "total coverage, poorest fifth",
+   "accuracy_with_this_added": 0.4016695745124805
+  },
+  "coverage_q5": {
+   "thin_vs_diversion": 0.5479331764080506,
+   "thin_vs_favour": 0.5626171950366583,
+   "diversion_vs_favour": 0.5091514744129362,
+   "thin_vs_full": 0.5757047961904338,
+   "missing_share": 0.0,
+   "median_by_variant": {
+    "diversion": 0.8356,
+    "favour": 0.838,
+    "full": 0.848,
+    "thin": 0.8083
+   },
+   "plain": "total coverage, richest fifth",
+   "accuracy_with_this_added": 0.4102280898393264
+  },
+  "participation_q1": {
+   "thin_vs_diversion": 0.5111221176053671,
+   "thin_vs_favour": 0.5280932706685317,
+   "diversion_vs_favour": 0.5192731433202247,
+   "thin_vs_full": 0.567830762636861,
+   "missing_share": 0.0,
+   "median_by_variant": {
+    "diversion": 0.4127,
+    "favour": 0.4085,
+    "full": 0.4067,
+    "thin": 0.4154
+   },
+   "plain": "tutoring participation, poorest fifth",
+   "accuracy_with_this_added": 0.41308393965805434
+  },
+  "participation_q5": {
+   "thin_vs_diversion": 0.5037788468588467,
+   "thin_vs_favour": 0.5024577042735867,
+   "diversion_vs_favour": 0.5000961949215363,
+   "thin_vs_full": 0.5474242358880731,
+   "missing_share": 0.0,
+   "median_by_variant": {
+    "diversion": 0.961,
+    "favour": 0.9608,
+    "full": 0.9623,
+    "thin": 0.9602
+   },
+   "plain": "tutoring participation, richest fifth",
+   "accuracy_with_this_added": 0.4072873220733695
+  },
+  "nonbuyer_class_instruction": {
+   "thin_vs_diversion": 0.5397320228391969,
+   "thin_vs_favour": 0.5623106414600618,
+   "diversion_vs_favour": 0.516965839416517,
+   "thin_vs_full": 0.5680979443705365,
+   "missing_share": 0.0,
+   "median_by_variant": {
+    "diversion": 0.6813,
+    "favour": 0.6845,
+    "full": 0.6942,
+    "thin": 0.6573
+   },
+   "plain": "regular-lesson coverage received by pupils who buy no tutoring",
+   "accuracy_with_this_added": 0.4069695390887969
+  },
+  "buy_tutoring_teacher": {
+   "thin_vs_diversion": 0.5128371194994684,
+   "thin_vs_favour": 0.5661897594901601,
+   "diversion_vs_favour": 0.555072574160395,
+   "thin_vs_full": 0.5423620465564171,
+   "missing_share": 0.0,
+   "median_by_variant": {
+    "diversion": 0.5799,
+    "favour": 0.5761,
+    "full": 0.5875,
+    "thin": 0.5817
+   },
+   "plain": "share of pupil-subjects with tutoring, in classes whose teacher tutors own pupils",
+   "accuracy_with_this_added": 0.40495131029190384
+  },
+  "buy_nontutoring_teacher": {
+   "thin_vs_diversion": 0.5366949687167768,
+   "thin_vs_favour": 0.5805161932640363,
+   "diversion_vs_favour": 0.5463296336897387,
+   "thin_vs_full": 0.5166466744223587,
+   "missing_share": 0.0,
+   "median_by_variant": {
+    "diversion": 0.225,
+    "favour": 0.2209,
+    "full": 0.2286,
+    "thin": 0.2308
+   },
+   "plain": "the same share in classes whose teacher does not",
+   "accuracy_with_this_added": 0.4092502721820559
+  },
+  "instr_tutoring_teacher": {
+   "thin_vs_diversion": 0.522520331040045,
+   "thin_vs_favour": 0.5641486440044376,
+   "diversion_vs_favour": 0.5353237567689815,
+   "thin_vs_full": 0.5625979318463927,
+   "missing_share": 0.0,
+   "median_by_variant": {
+    "diversion": 0.6727,
+    "favour": 0.6815,
+    "full": 0.6878,
+    "thin": 0.6514
+   },
+   "plain": "regular-lesson coverage in classes whose teacher tutors own pupils",
+   "accuracy_with_this_added": 0.3990663504323388
+  },
+  "instr_nontutoring_teacher": {
+   "thin_vs_diversion": 0.554090724402136,
+   "thin_vs_favour": 0.5618584419617016,
+   "diversion_vs_favour": 0.5032453025467704,
+   "thin_vs_full": 0.5709179640751894,
+   "missing_share": 0.0,
+   "median_by_variant": {
+    "diversion": 0.6864,
+    "favour": 0.6865,
+    "full": 0.6947,
+    "thin": 0.6591
+   },
+   "plain": "regular-lesson coverage in classes whose teacher does not",
+   "accuracy_with_this_added": 0.4028736165214293
+  },
+  "other_given_tutoring_teacher": {
+   "thin_vs_diversion": 0.5179376367113512,
+   "thin_vs_favour": 0.58330927883224,
+   "diversion_vs_favour": 0.5935238437763064,
+   "thin_vs_full": 0.636080736197002,
+   "missing_share": 0.0,
+   "median_by_variant": {
+    "diversion": 0.1684,
+    "favour": 0.1604,
+    "full": 0.1542,
+    "thin": 0.1659
+   },
+   "plain": "share buying from the parallel-class teacher when the own teacher tutors",
+   "accuracy_with_this_added": 0.40501197646942594
+  },
+  "other_given_nontutoring_teacher": {
+   "thin_vs_diversion": 0.5333191912187015,
+   "thin_vs_favour": 0.5560028352908547,
+   "diversion_vs_favour": 0.5248133818522195,
+   "thin_vs_full": 0.5088089956749957,
+   "missing_share": 0.0,
+   "median_by_variant": {
+    "diversion": 0.2019,
+    "favour": 0.2005,
+    "full": 0.2056,
+    "thin": 0.2073
+   },
+   "plain": "share buying from the parallel-class teacher when the own teacher does not",
+   "accuracy_with_this_added": 0.4089431028203609
+  },
+  "instruction_gap_tutoring_vs_not": {
+   "thin_vs_diversion": 0.5903917887649237,
+   "thin_vs_favour": 0.5081938549102836,
+   "diversion_vs_favour": 0.5967642384189167,
+   "thin_vs_full": 0.5172469635909225,
+   "missing_share": 0.0,
+   "median_by_variant": {
+    "diversion": -0.0146,
+    "favour": -0.0052,
+    "full": -0.0067,
+    "thin": -0.0056
+   },
+   "plain": "regular-lesson coverage: tutoring teachers' classes minus other classes",
+   "accuracy_with_this_added": 0.42570192728761874
+  },
+  "purchase_gap_tutoring_vs_not": {
+   "thin_vs_diversion": 0.5220552069458532,
+   "thin_vs_favour": 0.5236174377170557,
+   "diversion_vs_favour": 0.5013659678858162,
+   "thin_vs_full": 0.5294430443688667,
+   "missing_share": 0.0,
+   "median_by_variant": {
+    "diversion": 0.3571,
+    "favour": 0.3549,
+    "full": 0.3565,
+    "thin": 0.351
+   },
+   "plain": "tutoring take-up: tutoring teachers' classes minus other classes",
+   "accuracy_with_this_added": 0.4099370972883111
+  },
+  "coverage_gap_rich_minus_poor": {
+   "thin_vs_diversion": 0.5089521113120623,
+   "thin_vs_favour": 0.5153282440792012,
+   "diversion_vs_favour": 0.5241523853199482,
+   "thin_vs_full": 0.5076684288600803,
+   "missing_share": 0.0,
+   "median_by_variant": {
+    "diversion": 0.1117,
+    "favour": 0.1108,
+    "full": 0.1122,
+    "thin": 0.1121
+   },
+   "plain": "total coverage: richest fifth minus poorest fifth",
+   "accuracy_with_this_added": 0.4044940603584686
+  },
+  "participation_gap_rich_minus_poor": {
+   "thin_vs_diversion": 0.5107440610756052,
+   "thin_vs_favour": 0.5219422269920895,
+   "diversion_vs_favour": 0.5138055417697981,
+   "thin_vs_full": 0.5649469045882897,
+   "missing_share": 0.0,
+   "median_by_variant": {
+    "diversion": 0.5478,
+    "favour": 0.5501,
+    "full": 0.553,
+    "thin": 0.5442
+   },
+   "plain": "participation: richest fifth minus poorest fifth",
+   "accuracy_with_this_added": 0.4111359956344161
+  }
+ },
+ "policy_response_from_repo_runs": {
+  "ban_participation": {
+   "thin_vs_diversion": 0.5646676467320233,
+   "thin_vs_favour": 0.5903872474347177,
+   "diversion_vs_favour": 0.5310532887146784,
+   "thin_vs_full": 0.5917137237254674,
+   "median_by_variant": {
+    "diversion": -0.3656,
+    "favour": -0.3635,
+    "full": -0.3698,
+    "thin": -0.3527
+   },
+   "plain": "change in participation when teachers may not tutor own pupils (policy run)"
+  },
+  "ban_nonbuyer_instr": {
+   "thin_vs_diversion": 0.6244989273412593,
+   "thin_vs_favour": 0.5085131801767667,
+   "diversion_vs_favour": 0.6180889516032234,
+   "thin_vs_full": 0.5912920247358031,
+   "median_by_variant": {
+    "diversion": 0.0009,
+    "favour": -0.0009,
+    "full": 0.0004,
+    "thin": -0.0009
+   },
+   "plain": "change in non-buyers' regular-lesson coverage under that ban (policy run)"
+  }
+ }
+}

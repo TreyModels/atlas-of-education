@@ -2574,5 +2574,8 @@
  "Shadow education is not one disease with one cause. The model cannot crown a single explanation. Its explanations agree on policy only because they share most of their code, so the agreement is not independent evidence. Keep measuring to break the tie.": {
   "zh-Hans": "影子教育并非一种疾病对应一种病因。该模型无法裁定单一解释。其各项解释之所以在政策上一致，只是因为它们共享大部分代码，因此这种一致并非独立证据。继续测量以打破平局。",
   "vi": "Giáo dục bóng tối không phải là một căn bệnh với một nguyên nhân duy nhất. Mô hình không thể tôn vinh một lời giải thích duy nhất. Các lời giải thích của nó chỉ đồng thuận về chính sách vì chúng chia sẻ phần lớn mã của mình, nên sự đồng thuận đó không phải là bằng chứng độc lập. Hãy tiếp tục đo lường để phá vỡ thế cân bằng."
+ },
+ "Favour is not even a separate model. A favour for buying from your own teacher is the same as raising everyone’s demand and both outside costs by the same amount. Rewritten that way, all 116 fitted favour settings give exactly the same results as thin settings.": {
+  "zh-Hans": "“人情”甚至不是一个独立的模型。向自己老师购买所得的人情，等同于把所有人的需求和两种外部成本同时提高相同数值。这样改写后，116组拟合的人情参数与课时不足参数给出完全相同的结果。"
  }
 }

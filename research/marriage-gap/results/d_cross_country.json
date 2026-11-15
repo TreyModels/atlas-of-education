@@ -1,0 +1,119 @@
+{
+ "r": {
+  "China": 1.1592101029411763,
+  "Korea": 1.1206592629411765,
+  "Japan": 1.054499002352941
+ },
+ "chart_gap_points": {
+  "China": 29,
+  "Korea": 12,
+  "Japan": 2
+ },
+ "rows": [
+  {
+   "common_p": 0.6,
+   "country": "China",
+   "m": 0.261804092053602,
+   "r": 1.1592101029411763,
+   "predicted_gap_points": 9.632574008551215,
+   "chart_gap_points": 29
+  },
+  {
+   "common_p": 0.6,
+   "country": "Korea",
+   "m": 0.261804092053602,
+   "r": 1.1206592629411765,
+   "predicted_gap_points": 7.794894595619761,
+   "chart_gap_points": 12
+  },
+  {
+   "common_p": 0.6,
+   "country": "Japan",
+   "m": 0.261804092053602,
+   "r": 1.054499002352941,
+   "predicted_gap_points": 3.9851287594715346,
+   "chart_gap_points": 2
+  },
+  {
+   "common_p": 0.75,
+   "country": "China",
+   "m": 0.261804092053602,
+   "r": 1.1592101029411763,
+   "predicted_gap_points": 14.319455327144349,
+   "chart_gap_points": 29
+  },
+  {
+   "common_p": 0.75,
+   "country": "Korea",
+   "m": 0.261804092053602,
+   "r": 1.1206592629411765,
+   "predicted_gap_points": 11.850852406883467,
+   "chart_gap_points": 12
+  },
+  {
+   "common_p": 0.75,
+   "country": "Japan",
+   "m": 0.261804092053602,
+   "r": 1.054499002352941,
+   "predicted_gap_points": 6.361799280457914,
+   "chart_gap_points": 2
+  },
+  {
+   "common_p": 0.9,
+   "country": "China",
+   "m": 0.261804092053602,
+   "r": 1.1592101029411763,
+   "predicted_gap_points": 20.00451014049164,
+   "chart_gap_points": 29
+  },
+  {
+   "common_p": 0.9,
+   "country": "Korea",
+   "m": 0.261804092053602,
+   "r": 1.1206592629411765,
+   "predicted_gap_points": 17.39845728343411,
+   "chart_gap_points": 12
+  },
+  {
+   "common_p": 0.9,
+   "country": "Japan",
+   "m": 0.261804092053602,
+   "r": 1.054499002352941,
+   "predicted_gap_points": 10.562507593618609,
+   "chart_gap_points": 2
+  }
+ ],
+ "own_average_variant": [
+  {
+   "country": "China",
+   "p": 0.625,
+   "r": 1.1592101029411763,
+   "predicted_gap_points": 10.31119897579879,
+   "chart_gap_points": 29
+  },
+  {
+   "country": "Korea",
+   "p": 0.72,
+   "r": 1.1206592629411765,
+   "predicted_gap_points": 10.908580544088785,
+   "chart_gap_points": 12
+  },
+  {
+   "country": "Japan",
+   "p": 0.52,
+   "r": 1.054499002352941,
+   "predicted_gap_points": 3.106532286629435,
+   "chart_gap_points": 2
+  }
+ ],
+ "order_predicted_p0.9": [
+  "China",
+  "Korea",
+  "Japan"
+ ],
+ "order_chart": [
+  "China",
+  "Korea",
+  "Japan"
+ ]
+}

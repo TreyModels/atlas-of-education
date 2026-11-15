@@ -56,7 +56,7 @@ test('Credential selectors use the stored country and structure summaries', () =
   const w = worlds.find(x => x.id === 'credentials');
   const current = w.run({country: 'Vietnam', structure: 'M_HC'});
   const view = w.view(current);
-  assert.equal(current.rows.M_HC.accepted, 1460);
+  assert.equal(current.rows.M_HC.accepted, 996);
   assert.equal(view.table.rows.filter(r => r.selected).length, 1);
   assert.equal(view.table.rows.find(r => r.selected).cells[0], 'Human capital');
 });

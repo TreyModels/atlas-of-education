@@ -1,5 +1,7 @@
 # Does the relational floor show up in household data? A simulation test of H2
 
+> **Superseded in part (14 November 2026).** This Philippine test uses a hard liquidity threshold. In Cambodia and Vietnam that threshold fits no wealth-quintile profile, and the verdicts against the relational floor disappear under a graded constraint (`public/reference/credential-floor.md`, v2.1). The Philippine run has not been repeated with the graded constraint. The posterior ≈ prior finding below still holds; any ranking of the structures should not be quoted.
+
 Results note, 5 November 2026. Model: `engine/relfloor.py`. Experiment: `engine/relfloor_mc.py` → `engine/results/relfloor_mc.md`. Paper tested: Menefee & Nordtveit, *Massification and Its Mechanisms* (revised June 2026), hypothesis H2.
 
 ## Design
