@@ -1,7 +1,19 @@
 cff-version: 1.2.0
-message: "Please cite this work when using, reproducing, or adapting it."
-title: "atlas-of-education"
+message: "If you use, reproduce or adapt this work, please cite it as below and credit Dr. Trey Menefee."
+title: "Atlas of Education: narrated, downloadable models of education, history and society"
+type: software
 authors:
   - family-names: Menefee
     given-names: Trey
+    affiliation: "Independent researcher"
+license: CC-BY-NC-4.0
 repository-code: "https://github.com/TreyModels/atlas-of-education"
+url: "https://treymodels.github.io/atlas-of-education/"
+keywords:
+  - agent-based modelling
+  - education
+  - computational social science
+  - Angkor
+  - shadow education
+  - teaching models
+# doi: added automatically after the first Zenodo release (see docs/DOI.md)

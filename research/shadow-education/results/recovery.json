@@ -1,0 +1,314 @@
+{
+ "worlds_per_set": 30,
+ "rows": 24000,
+ "fit_share_by_variant": {
+  "diversion": 0.3737,
+  "favour": 0.3787,
+  "full": 0.4102,
+  "thin": 0.3893
+ },
+ "features": [
+  "participation",
+  "participation_g9",
+  "participation_g12",
+  "urban_rural_gap",
+  "own_purchase_share",
+  "other_purchase_share",
+  "teacher_tutor_share",
+  "com_purchase_share"
+ ],
+ "tests": {
+  "three_way|all_rows": {
+   "labels": [
+    "thin",
+    "diversion",
+    "favour"
+   ],
+   "chance": 0.3333333333333333,
+   "balanced_accuracy": 0.4503333333333333,
+   "ci90": [
+    0.40701622182093133,
+    0.49311079958275894
+   ],
+   "confusion_row_share": [
+    [
+     0.4208,
+     0.2763,
+     0.3028
+    ],
+    [
+     0.279,
+     0.4048,
+     0.3162
+    ],
+    [
+     0.231,
+     0.2437,
+     0.5253
+    ]
+   ],
+   "n_rows": 18000,
+   "n_parameter_sets": 327
+  },
+  "four_way|all_rows": {
+   "labels": [
+    "thin",
+    "diversion",
+    "favour",
+    "full"
+   ],
+   "chance": 0.25,
+   "balanced_accuracy": 0.31504166666666666,
+   "ci90": [
+    0.28360718839462606,
+    0.34181740455572956
+   ],
+   "confusion_row_share": [
+    [
+     0.3608,
+     0.236,
+     0.1823,
+     0.2208
+    ],
+    [
+     0.2562,
+     0.3572,
+     0.194,
+     0.1927
+    ],
+    [
+     0.2025,
+     0.1932,
+     0.2727,
+     0.3317
+    ],
+    [
+     0.2388,
+     0.148,
+     0.3437,
+     0.2695
+    ]
+   ],
+   "n_rows": 24000,
+   "n_parameter_sets": 433
+  },
+  "thin_vs_favour|all_rows": {
+   "labels": [
+    "thin",
+    "favour"
+   ],
+   "chance": 0.5,
+   "balanced_accuracy": 0.6194999999999999,
+   "ci90": [
+    0.5511118638420336,
+    0.6790888691412434
+   ],
+   "confusion_row_share": [
+    [
+     0.6238,
+     0.3762
+    ],
+    [
+     0.3848,
+     0.6152
+    ]
+   ],
+   "n_rows": 12000,
+   "n_parameter_sets": 227
+  },
+  "thin_vs_diversion|all_rows": {
+   "labels": [
+    "thin",
+    "diversion"
+   ],
+   "chance": 0.5,
+   "balanced_accuracy": 0.5644166666666667,
+   "ci90": [
+    0.5115520157129162,
+    0.6232434773078003
+   ],
+   "confusion_row_share": [
+    [
+     0.5913,
+     0.4087
+    ],
+    [
+     0.4625,
+     0.5375
+    ]
+   ],
+   "n_rows": 12000,
+   "n_parameter_sets": 211
+  },
+  "diversion_vs_favour|all_rows": {
+   "labels": [
+    "diversion",
+    "favour"
+   ],
+   "chance": 0.5,
+   "balanced_accuracy": 0.6018333333333333,
+   "ci90": [
+    0.5504541799557312,
+    0.6620173529737701
+   ],
+   "confusion_row_share": [
+    [
+     0.5618,
+     0.4382
+    ],
+    [
+     0.3582,
+     0.6418
+    ]
+   ],
+   "n_rows": 12000,
+   "n_parameter_sets": 216
+  },
+  "three_way|rows_that_fit_all_seven": {
+   "labels": [
+    "thin",
+    "diversion",
+    "favour"
+   ],
+   "chance": 0.3333333333333333,
+   "balanced_accuracy": 0.4082909046587437,
+   "ci90": [
+    0.3611748522758138,
+    0.4560223993383053
+   ],
+   "confusion_row_share": [
+    [
+     0.4405,
+     0.2295,
+     0.3301
+    ],
+    [
+     0.3582,
+     0.3368,
+     0.3051
+    ],
+    [
+     0.298,
+     0.2544,
+     0.4476
+    ]
+   ],
+   "n_rows": 6850,
+   "n_parameter_sets": 327
+  },
+  "four_way|rows_that_fit_all_seven": {
+   "labels": [
+    "thin",
+    "diversion",
+    "favour",
+    "full"
+   ],
+   "chance": 0.25,
+   "balanced_accuracy": 0.2869418470689209,
+   "ci90": [
+    0.2587547182138839,
+    0.31353416433344106
+   ],
+   "confusion_row_share": [
+    [
+     0.3211,
+     0.1943,
+     0.1965,
+     0.2881
+    ],
+    [
+     0.2667,
+     0.2828,
+     0.207,
+     0.2435
+    ],
+    [
+     0.2214,
+     0.1769,
+     0.2201,
+     0.3816
+    ],
+    [
+     0.2389,
+     0.1443,
+     0.293,
+     0.3239
+    ]
+   ],
+   "n_rows": 9311,
+   "n_parameter_sets": 433
+  },
+  "thin_vs_favour|rows_that_fit_all_seven": {
+   "labels": [
+    "thin",
+    "favour"
+   ],
+   "chance": 0.5,
+   "balanced_accuracy": 0.6241890555662744,
+   "ci90": [
+    0.5704007931417168,
+    0.6749776144211457
+   ],
+   "confusion_row_share": [
+    [
+     0.6357,
+     0.3643
+    ],
+    [
+     0.3873,
+     0.6127
+    ]
+   ],
+   "n_rows": 4608,
+   "n_parameter_sets": 227
+  },
+  "thin_vs_diversion|rows_that_fit_all_seven": {
+   "labels": [
+    "thin",
+    "diversion"
+   ],
+   "chance": 0.5,
+   "balanced_accuracy": 0.5175536611147092,
+   "ci90": [
+    0.45962091352571666,
+    0.5687870945993067
+   ],
+   "confusion_row_share": [
+    [
+     0.5882,
+     0.4118
+    ],
+    [
+     0.5531,
+     0.4469
+    ]
+   ],
+   "n_rows": 4578,
+   "n_parameter_sets": 211
+  },
+  "diversion_vs_favour|rows_that_fit_all_seven": {
+   "labels": [
+    "diversion",
+    "favour"
+   ],
+   "chance": 0.5,
+   "balanced_accuracy": 0.5920188840446784,
+   "ci90": [
+    0.5415540592440352,
+    0.6395071749766601
+   ],
+   "confusion_row_share": [
+    [
+     0.5045,
+     0.4955
+    ],
+    [
+     0.3204,
+     0.6796
+    ]
+   ],
+   "n_rows": 4514,
+   "n_parameter_sets": 216
+  }
+ }
+}

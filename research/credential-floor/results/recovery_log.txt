@@ -1,0 +1,11 @@
+tolerance scale 1.0
+  M_HC {'M_HC': 0.325, 'M_POS': 0.256, 'M_REL': 0.162, 'M_RRA': 0.257} top: 0.5 meanN 1339.3
+  M_POS {'M_HC': 0.282, 'M_POS': 0.261, 'M_REL': 0.216, 'M_RRA': 0.241} top: 0.2 meanN 1964.0
+  M_REL {'M_HC': 0.216, 'M_POS': 0.253, 'M_REL': 0.254, 'M_RRA': 0.277} top: 0.0 meanN 2030.5
+  M_RRA {'M_HC': 0.259, 'M_POS': 0.233, 'M_REL': 0.207, 'M_RRA': 0.302} top: 0.6 meanN 1584.3
+tolerance scale 0.5
+  M_HC {'M_HC': 0.273, 'M_POS': 0.356, 'M_REL': 0.104, 'M_RRA': 0.267} top: 0.2777777777777778 meanN 20.9
+  M_POS {'M_HC': 0.274, 'M_POS': 0.209, 'M_REL': 0.339, 'M_RRA': 0.178} top: 0.05555555555555555 meanN 39.4
+  M_REL {'M_HC': 0.206, 'M_POS': 0.284, 'M_REL': 0.286, 'M_RRA': 0.224} top: 0.4 meanN 28.2
+  M_RRA {'M_HC': 0.397, 'M_POS': 0.149, 'M_REL': 0.195, 'M_RRA': 0.258} top: 0.4444444444444444 meanN 21.9
+{'draws_per_structure_in_bank': 40000, 'datasets_per_true_structure': 10, 'households': 1500, 'tolerance_scales': [1.0, 0.5], 'seed': 2026, 'liquidity': 'graded', 'structures': ['M_HC', 'M_POS', 'M_REL', 'M_RRA'], 'repo_main_run_draws': 24000, 'repo_main_run_households': '1500 screen / 4000 for outputs', 'seconds_bank': 319.8, 'seconds_total': 320.6}

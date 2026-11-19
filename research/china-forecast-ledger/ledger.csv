@@ -1,0 +1,37 @@
+model,target_month,forecast,data_cutoff,date_frozen,horizon,n_params,note
+naive_same_month,2026-10,17.30,2026-09,2026-11-14,1,0,Same month last year
+naive_same_month,2026-11,16.90,2026-09,2026-11-14,2,0,Same month last year
+naive_same_month,2026-12,16.50,2026-09,2026-11-14,3,0,Same month last year
+naive_same_month,2027-01,16.30,2026-09,2026-11-14,4,0,Same month last year
+naive_same_month,2027-02,16.10,2026-09,2026-11-14,5,0,Same month last year
+naive_same_month,2027-03,15.93,2026-09,2026-11-14,6,0,"Same month last year; reference month last year not observed, linearly interpolated"
+naive_last,2026-10,18.00,2026-09,2026-11-14,1,0,Last value
+naive_last,2026-11,18.00,2026-09,2026-11-14,2,0,Last value
+naive_last,2026-12,18.00,2026-09,2026-11-14,3,0,Last value
+naive_last,2027-01,18.00,2026-09,2026-11-14,4,0,Last value
+naive_last,2027-02,18.00,2026-09,2026-11-14,5,0,Last value
+naive_last,2027-03,18.00,2026-09,2026-11-14,6,0,Last value
+seasonal_drift,2026-10,17.54,2026-09,2026-11-14,1,1,Same month plus recent drift
+seasonal_drift,2026-11,17.14,2026-09,2026-11-14,2,1,Same month plus recent drift
+seasonal_drift,2026-12,16.74,2026-09,2026-11-14,3,1,Same month plus recent drift
+seasonal_drift,2027-01,16.54,2026-09,2026-11-14,4,1,Same month plus recent drift
+seasonal_drift,2027-02,16.34,2026-09,2026-11-14,5,1,Same month plus recent drift
+seasonal_drift,2027-03,16.18,2026-09,2026-11-14,6,1,"Same month plus recent drift; reference month last year not observed, linearly interpolated"
+seasonal_profile,2026-10,17.72,2026-09,2026-11-14,1,4,Level plus smooth seasonal shape
+seasonal_profile,2026-11,16.41,2026-09,2026-11-14,2,4,Level plus smooth seasonal shape
+seasonal_profile,2026-12,15.89,2026-09,2026-11-14,3,4,Level plus smooth seasonal shape
+seasonal_profile,2027-01,16.23,2026-09,2026-11-14,4,4,Level plus smooth seasonal shape
+seasonal_profile,2027-02,16.62,2026-09,2026-11-14,5,4,Level plus smooth seasonal shape
+seasonal_profile,2027-03,16.31,2026-09,2026-11-14,6,4,Level plus smooth seasonal shape
+graduate_inflow,2026-10,17.39,2026-09,2026-11-14,1,2,Same month plus graduate-cohort shift
+graduate_inflow,2026-11,16.99,2026-09,2026-11-14,2,2,Same month plus graduate-cohort shift
+graduate_inflow,2026-12,16.59,2026-09,2026-11-14,3,2,Same month plus graduate-cohort shift
+graduate_inflow,2027-01,16.39,2026-09,2026-11-14,4,2,Same month plus graduate-cohort shift
+graduate_inflow,2027-02,16.19,2026-09,2026-11-14,5,2,Same month plus graduate-cohort shift
+graduate_inflow,2027-03,16.02,2026-09,2026-11-14,6,2,"Same month plus graduate-cohort shift; reference month last year not observed, linearly interpolated"
+blind_seasonal_2024_spread11,2026-10,17.28,2024-12,2026-11-05,,11,"existing engine model, frozen 5 Nov 2026 on data to Dec 2024 (new-method fit window Dec 2023-Dec 2024)"
+blind_naive_2024,2026-10,17.10,2024-12,2026-11-05,,0,its own benchmark: same month of 2024
+blind_seasonal_2024_spread11,2026-11,16.94,2024-12,2026-11-05,,11,"existing engine model, frozen 5 Nov 2026 on data to Dec 2024 (new-method fit window Dec 2023-Dec 2024)"
+blind_naive_2024,2026-11,16.10,2024-12,2026-11-05,,0,its own benchmark: same month of 2024
+blind_seasonal_2024_spread11,2026-12,16.70,2024-12,2026-11-05,,11,"existing engine model, frozen 5 Nov 2026 on data to Dec 2024 (new-method fit window Dec 2023-Dec 2024)"
+blind_naive_2024,2026-12,15.70,2024-12,2026-11-05,,0,its own benchmark: same month of 2024

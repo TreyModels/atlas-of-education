@@ -1841,425 +1841,628 @@
  },
  "Fertility": {
   "zh-Hans": "生育",
-  "vi": "Sinh đẻ"
+  "vi": "Sinh đẻ",
+  "fr": "Fécondité"
  },
  "Shadow ed": {
   "zh-Hans": "影子教育",
-  "vi": "Học thêm"
+  "vi": "Học thêm",
+  "fr": "Éducation parallèle"
  },
  "Fertility & family formation": {
   "zh-Hans": "生育与家庭形成",
-  "vi": "Sinh đẻ & hình thành gia đình"
+  "vi": "Sinh đẻ & hình thành gia đình",
+  "fr": "Fécondité et formation de la famille"
  },
  "Why did fertility fall off its path, and what can still move it?": {
   "zh-Hans": "生育率为何偏离既有路径，还有什么能改变它？",
-  "vi": "Vì sao tỷ lệ sinh rơi khỏi quỹ đạo, và điều gì vẫn có thể thay đổi nó?"
+  "vi": "Vì sao tỷ lệ sinh rơi khỏi quỹ đạo, và điều gì vẫn có thể thay đổi nó?",
+  "fr": "Pourquoi la fécondité s'est-elle écartée de sa trajectoire, et qu'est-ce qui peut encore l'infléchir ?"
  },
  "The six-economy fertility programme: survival floor, credential contest, marriage jam, biological clock and the unexplained post-2015 shock.": {
   "zh-Hans": "覆盖六个经济体的生育研究项目：生存底线、文凭竞争、婚姻市场堵塞、生物钟，以及2015年后尚未解释的同步下跌。",
-  "vi": "Chương trình nghiên cứu sinh đẻ sáu nền kinh tế: sàn sống còn, cuộc đua bằng cấp, tắc nghẽn hôn nhân, đồng hồ sinh học và cú sốc sau 2015 chưa giải thích được."
+  "vi": "Chương trình nghiên cứu sinh đẻ sáu nền kinh tế: sàn sống còn, cuộc đua bằng cấp, tắc nghẽn hôn nhân, đồng hồ sinh học và cú sốc sau 2015 chưa giải thích được.",
+  "fr": "Le programme de fécondité à six économies : plancher de survie, course aux diplômes, blocage du mariage, horloge biologique et choc post-2015 inexpliqué."
  },
  "Shadow education": {
   "zh-Hans": "影子教育",
-  "vi": "Giáo dục ngầm"
+  "vi": "Giáo dục ngầm",
+  "fr": "Éducation parallèle"
  },
  "Why do pupils pay their own teachers?": {
   "zh-Hans": "学生为什么要付钱给自己的老师？",
-  "vi": "Vì sao học sinh trả tiền cho chính giáo viên của mình?"
+  "vi": "Vì sao học sinh trả tiền cho chính giáo viên của mình?",
+  "fr": "Pourquoi les élèves paient-ils leurs propres enseignants ?"
  },
  "Private tutoring in Cambodia as a system: three rival explanations calibrated against published patterns, and the policies they agree on.": {
   "zh-Hans": "把柬埔寨的课外补习当作一个系统：三个相互竞争的解释对标已发表模式进行校准，以及它们一致指向的政策。",
-  "vi": "Dạy thêm ở Campuchia như một hệ thống: ba giải thích đối lập được hiệu chỉnh theo các mô hình đã công bố, và các chính sách mà chúng cùng chỉ ra."
+  "vi": "Dạy thêm ở Campuchia như một hệ thống: ba giải thích đối lập được hiệu chỉnh theo các mô hình đã công bố, và các chính sách mà chúng cùng chỉ ra.",
+  "fr": "Le soutien scolaire privé au Cambodge comme système : trois explications concurrentes calibrées sur des régularités publiées, et les politiques sur lesquelles elles convergent."
  },
  "Six economies fell below their development path at once after 2015. Explore the survival floor, the marriage jam, the biological clock and the policy levers.": {
   "zh-Hans": "2015年后，六个经济体同时跌破各自的发展路径。探索生存底线、婚姻堵塞、生物钟与政策杠杆。",
-  "vi": "Sáu nền kinh tế cùng rơi xuống dưới quỹ đạo phát triển sau 2015. Khám phá sàn sống còn, tắc nghẽn hôn nhân, đồng hồ sinh học và các đòn bẩy chính sách."
+  "vi": "Sáu nền kinh tế cùng rơi xuống dưới quỹ đạo phát triển sau 2015. Khám phá sàn sống còn, tắc nghẽn hôn nhân, đồng hồ sinh học và các đòn bẩy chính sách.",
+  "fr": "Six économies sont tombées simultanément sous leur trajectoire de développement après 2015. Explorez le plancher de survie, le blocage du mariage, l'horloge biologique et les leviers d'action publique."
  },
  "Findings lab · six economies": {
   "zh-Hans": "研究发现实验室 · 六个经济体",
-  "vi": "Phòng kết quả · sáu nền kinh tế"
+  "vi": "Phòng kết quả · sáu nền kinh tế",
+  "fr": "Laboratoire de résultats · six économies"
  },
  "Fertility research bundle": {
   "zh-Hans": "生育研究资料包",
-  "vi": "Gói nghiên cứu sinh đẻ"
+  "vi": "Gói nghiên cứu sinh đẻ",
+  "fr": "Dossier de recherche sur la fécondité"
  },
  "The full codebase and findings: survival floor, credential contest, fecundity clock, shock tests and policy suites.": {
   "zh-Hans": "完整代码与研究发现：生存底线、文凭竞争、生育力时钟、冲击检验与政策套件。",
-  "vi": "Toàn bộ mã nguồn và kết quả: sàn sống còn, cuộc đua bằng cấp, đồng hồ khả năng sinh, kiểm định cú sốc và bộ chính sách."
+  "vi": "Toàn bộ mã nguồn và kết quả: sàn sống còn, cuộc đua bằng cấp, đồng hồ khả năng sinh, kiểm định cú sốc và bộ chính sách.",
+  "fr": "L'ensemble du code et des résultats : plancher de survie, course aux diplômes, horloge de fécondité, tests de chocs et séries de politiques."
  },
  "Code, data & findings · download": {
   "zh-Hans": "代码、数据与发现 · 下载",
-  "vi": "Mã, dữ liệu & kết quả · tải xuống"
+  "vi": "Mã, dữ liệu & kết quả · tải xuống",
+  "fr": "Code, données et résultats · téléchargement"
  },
  "Why do pupils pay their own teachers? Three rival explanations tested against seven published patterns.": {
   "zh-Hans": "学生为什么付钱给自己的老师？三个竞争解释对标七个已发表模式进行检验。",
-  "vi": "Vì sao học sinh trả tiền cho chính giáo viên mình? Ba giải thích đối lập được kiểm chứng với bảy mô hình đã công bố."
+  "vi": "Vì sao học sinh trả tiền cho chính giáo viên mình? Ba giải thích đối lập được kiểm chứng với bảy mô hình đã công bố.",
+  "fr": "Pourquoi les élèves paient-ils leurs propres enseignants ? Trois explications concurrentes confrontées à sept régularités publiées."
  },
  "Agent-based model · Cambodia": {
   "zh-Hans": "主体模型 · 柬埔寨",
-  "vi": "Mô hình tác tử · Campuchia"
+  "vi": "Mô hình tác tử · Campuchia",
+  "fr": "Modèle multi-agents · Cambodge"
  },
  "Tutoring ABM bundle": {
   "zh-Hans": "补习 ABM 模型包",
-  "vi": "Gói ABM dạy thêm"
+  "vi": "Gói ABM dạy thêm",
+  "fr": "Dossier du modèle multi-agents de soutien scolaire"
  },
  "The calibrated agent-based model: 72 teachers and 1,260 pupils, fitted by ABC-SMC against published targets.": {
   "zh-Hans": "校准后的主体模型：72 名教师、1260 名学生，用 ABC-SMC 对标已发表目标拟合。",
-  "vi": "Mô hình tác tử đã hiệu chỉnh: 72 giáo viên và 1.260 học sinh, khớp bằng ABC-SMC theo các mục tiêu đã công bố."
+  "vi": "Mô hình tác tử đã hiệu chỉnh: 72 giáo viên và 1.260 học sinh, khớp bằng ABC-SMC theo các mục tiêu đã công bố.",
+  "fr": "Le modèle multi-agents calibré : 72 enseignants et 1 260 élèves, ajusté par ABC-SMC sur des cibles publiées."
  },
  "Code & data · download": {
   "zh-Hans": "代码与数据 · 下载",
-  "vi": "Mã & dữ liệu · tải xuống"
+  "vi": "Mã & dữ liệu · tải xuống",
+  "fr": "Code et données · téléchargement"
  },
  "Credential-floor DHS test": {
   "zh-Hans": "文凭门槛 DHS 检验",
-  "vi": "Kiểm định ngưỡng bằng cấp DHS"
+  "vi": "Kiểm định ngưỡng bằng cấp DHS",
+  "fr": "Test du plancher de diplôme sur les EDS"
  },
  "Who leaves school? Three structures predict different shares of leavers from the poorest 40% of households, checked against the Cambodia DHS.": {
   "zh-Hans": "谁离开了学校？三种结构对最贫困 40% 家庭的离校比例给出不同预测，并对照柬埔寨 DHS 检验。",
-  "vi": "Ai rời trường? Ba cấu trúc dự đoán tỷ lệ khác nhau của học sinh nghỉ học từ 40% hộ nghèo nhất, đối chiếu DHS Campuchia."
+  "vi": "Ai rời trường? Ba cấu trúc dự đoán tỷ lệ khác nhau của học sinh nghỉ học từ 40% hộ nghèo nhất, đối chiếu DHS Campuchia.",
+  "fr": "Qui quitte l'école ? Trois structures prédisent des parts différentes de sortants parmi les 40 % de ménages les plus pauvres, vérifiées sur l'EDS du Cambodge."
  },
  "Read the class story": {
   "zh-Hans": "阅读该类的研究故事",
-  "vi": "Đọc câu chuyện của nhóm"
+  "vi": "Đọc câu chuyện của nhóm",
+  "fr": "Lire l'histoire de la classe"
  },
  "What our models support": {
   "zh-Hans": "我们的模型支持的结论",
-  "vi": "Điều các mô hình của chúng tôi ủng hộ"
+  "vi": "Điều các mô hình của chúng tôi ủng hộ",
+  "fr": "Ce que nos modèles étayent"
  },
  "How the toolkit works": {
   "zh-Hans": "工具包如何工作",
-  "vi": "Bộ công cụ hoạt động thế nào"
+  "vi": "Bộ công cụ hoạt động thế nào",
+  "fr": "Comment fonctionne la boîte à outils"
  },
  "Models in this class": {
   "zh-Hans": "本类模型",
-  "vi": "Mô hình trong nhóm này"
+  "vi": "Mô hình trong nhóm này",
+  "fr": "Modèles de cette classe"
  },
  "Research & downloads": {
   "zh-Hans": "研究与下载",
-  "vi": "Nghiên cứu & tải xuống"
+  "vi": "Nghiên cứu & tải xuống",
+  "fr": "Recherche et téléchargements"
  },
  "The one-paragraph version": {
   "zh-Hans": "一段话总结",
-  "vi": "Tóm tắt một đoạn"
+  "vi": "Tóm tắt một đoạn",
+  "fr": "La version en un paragraphe"
  },
  "Previous class": {
   "zh-Hans": "上一类",
-  "vi": "Nhóm trước"
+  "vi": "Nhóm trước",
+  "fr": "Classe précédente"
  },
  "Next class": {
   "zh-Hans": "下一类",
-  "vi": "Nhóm tiếp"
+  "vi": "Nhóm tiếp",
+  "fr": "Classe suivante"
  },
  "Browse model classes": {
   "zh-Hans": "浏览模型类别",
-  "vi": "Duyệt các nhóm mô hình"
+  "vi": "Duyệt các nhóm mô hình",
+  "fr": "Parcourir les classes de modèles"
  },
  "measured from real data": {
   "zh-Hans": "来自真实数据的测量",
-  "vi": "đo từ dữ liệu thực"
+  "vi": "đo từ dữ liệu thực",
+  "fr": "mesuré à partir de données réelles"
  },
  "produced by a simulation": {
   "zh-Hans": "来自模拟",
-  "vi": "từ mô phỏng"
+  "vi": "từ mô phỏng",
+  "fr": "produit par une simulation"
  },
  "tested and rejected": {
   "zh-Hans": "经检验后被排除",
-  "vi": "đã kiểm định và bác bỏ"
+  "vi": "đã kiểm định và bác bỏ",
+  "fr": "testé et rejeté"
  },
  "still unsettled": {
   "zh-Hans": "仍未有定论",
-  "vi": "vẫn chưa ngã ngũ"
+  "vi": "vẫn chưa ngã ngũ",
+  "fr": "encore en suspens"
  },
  "a computational tool": {
   "zh-Hans": "一种计算工具",
-  "vi": "một công cụ tính toán"
+  "vi": "một công cụ tính toán",
+  "fr": "un outil de calcul"
  },
  "data": {
   "zh-Hans": "数据",
-  "vi": "dữ liệu"
+  "vi": "dữ liệu",
+  "fr": "données"
  },
  "sim": {
   "zh-Hans": "模拟",
-  "vi": "mô phỏng"
+  "vi": "mô phỏng",
+  "fr": "sim"
  },
  "ruled out": {
   "zh-Hans": "已排除",
-  "vi": "đã loại"
+  "vi": "đã loại",
+  "fr": "écarté"
  },
  "open": {
   "zh-Hans": "待解",
-  "vi": "mở"
+  "vi": "mở",
+  "fr": "ouvert"
  },
  "method": {
   "zh-Hans": "方法",
-  "vi": "phương pháp"
+  "vi": "phương pháp",
+  "fr": "méthode"
  },
  "Browse all {n} models": {
   "zh-Hans": "浏览全部 {n} 个模型",
-  "vi": "Duyệt tất cả {n} mô hình"
+  "vi": "Duyệt tất cả {n} mô hình",
+  "fr": "Parcourir les {n} modèles"
  },
  "{n} models & worlds · 3 languages": {
   "zh-Hans": "{n} 个模型与世界 · 3 种语言",
-  "vi": "{n} mô hình & thế giới · 3 ngôn ngữ"
+  "vi": "{n} mô hình & thế giới · 3 ngôn ngữ",
+  "fr": "{n} modèles et mondes · 3 langues"
  },
  "{n} collections. Nothing hidden in an archive.": {
   "zh-Hans": "{n} 个系列，没有藏在档案夹里的东西。",
-  "vi": "{n} bộ sưu tập. Không có gì giấu trong kho lưu trữ."
+  "vi": "{n} bộ sưu tập. Không có gì giấu trong kho lưu trữ.",
+  "fr": "{n} collections. Rien de caché dans une archive."
  },
  "of {n}": {
   "zh-Hans": "共 {n}",
-  "vi": "trên {n}"
+  "vi": "trên {n}",
+  "fr": "sur {n}"
  },
  "{n} models and worlds for education, demography, planning and historical systems. Choose a question, inspect the assumptions, run the model and follow the evidence.": {
   "zh-Hans": "{n} 个教育、人口、规划与历史系统的模型与世界。选择一个问题，检查假设，运行模型，跟随证据。",
-  "vi": "{n} mô hình và thế giới về giáo dục, nhân khẩu, quy hoạch và hệ thống lịch sử. Chọn một câu hỏi, kiểm tra giả định, chạy mô hình và đi theo bằng chứng."
+  "vi": "{n} mô hình và thế giới về giáo dục, nhân khẩu, quy hoạch và hệ thống lịch sử. Chọn một câu hỏi, kiểm tra giả định, chạy mô hình và đi theo bằng chứng.",
+  "fr": "{n} modèles et mondes pour l’éducation, la démographie, la planification et les systèmes historiques. Choisissez une question, examinez les hypothèses, exécutez le modèle et suivez les preuves."
  },
  "Alternative interfaces and methods studios. These complement the {n} catalogue entries rather than inflating the count.": {
   "zh-Hans": "替代界面与方法工作室。它们是对 {n} 个目录条目的补充，而非凑数。",
-  "vi": "Các giao diện thay thế và xưởng phương pháp. Chúng bổ sung cho {n} mục danh mục chứ không thổi phồng con số."
+  "vi": "Các giao diện thay thế và xưởng phương pháp. Chúng bổ sung cho {n} mục danh mục chứ không thổi phồng con số.",
+  "fr": "Interfaces alternatives et ateliers de méthodes. Ils complètent les {n} entrées du catalogue plutôt que de gonfler le décompte."
  },
  "Research bundle · code, data & findings": {
   "zh-Hans": "研究资料包 · 代码、数据与发现",
-  "vi": "Gói nghiên cứu · mã, dữ liệu & kết quả"
+  "vi": "Gói nghiên cứu · mã, dữ liệu & kết quả",
+  "fr": "Dossier de recherche · code, données et résultats"
  },
  "Class {i} of {n}": {
   "zh-Hans": "第 {i} 类，共 {n} 类",
-  "vi": "Nhóm {i} / {n}"
+  "vi": "Nhóm {i} / {n}",
+  "fr": "Classe {i} sur {n}"
  },
  "Why fertility fell, and what can still move it": {
-  "zh-Hans": "生育率为何下降，以及什么仍能改变它"
+  "zh-Hans": "生育率为何下降，以及什么仍能改变它",
+  "fr": "Pourquoi la fécondité a baissé, et ce qui peut encore la faire évoluer",
+  "vi": "Vì sao mức sinh giảm, và điều gì vẫn có thể làm thay đổi nó"
  },
  "The full story the fertility models support, each part labelled by the kind of evidence behind it.": {
-  "zh-Hans": "生育模型支持的完整故事，每一部分都标注了证据类型。"
+  "zh-Hans": "生育模型支持的完整故事，每一部分都标注了证据类型。",
+  "fr": "L’histoire complète que soutiennent les modèles de fécondité, chaque partie étiquetée selon le type de preuve qui la sous-tend.",
+  "vi": "Toàn bộ câu chuyện mà các mô hình sinh sản ủng hộ, mỗi phần được ghi nhãn theo loại bằng chứng đứng sau nó."
  },
  "Survival sets the floor": {
-  "zh-Hans": "生存率决定底线"
+  "zh-Hans": "生存率决定底线",
+  "fr": "La survie fixe le plancher",
+  "vi": "Sự sống còn đặt ra mức sàn"
  },
  "When children survive and people live long lives, large families stop being necessary. Life expectancy alone predicts each country’s decline down to about 1.3–1.5 children per woman.": {
-  "zh-Hans": "当孩子都能存活、人们普遍长寿，大家庭就不再必要。仅预期寿命一个变量，就能预测每个国家的生育率下降到约 1.3–1.5 个孩子。"
+  "zh-Hans": "当孩子都能存活、人们普遍长寿，大家庭就不再必要。仅预期寿命一个变量，就能预测每个国家的生育率下降到约 1.3–1.5 个孩子。",
+  "fr": "Lorsque les enfants survivent et que les gens vivent longtemps, les grandes familles cessent d’être nécessaires. L’espérance de vie à elle seule prédit la baisse de chaque pays jusqu’à environ 1,3–1,5 enfant par femme.",
+  "vi": "Khi trẻ em sống sót và con người sống thọ, gia đình đông con không còn cần thiết. Chỉ riêng tuổi thọ đã dự báo mức giảm của mỗi quốc gia xuống còn khoảng 1,3–1,5 con mỗi phụ nữ."
  },
  "Income is the wrong yardstick. Our six places reached replacement at incomes 16 times apart ($990 to $16,000), but all at life expectancies of 67–75 years. The fertility-to-income curve shifted over time; the fertility-to-survival curve held steady.": {
-  "zh-Hans": "收入是错误的标尺。我们研究的六个地方在相差 16 倍的收入水平（990 至 16,000 美元）上达到更替水平，但预期寿命都在 67–75 岁。生育率—收入曲线随时间移动；生育率—生存率曲线始终稳定。"
+  "zh-Hans": "收入是错误的标尺。我们研究的六个地方在相差 16 倍的收入水平（990 至 16,000 美元）上达到更替水平，但预期寿命都在 67–75 岁。生育率—收入曲线随时间移动；生育率—生存率曲线始终稳定。",
+  "fr": "Le revenu n’est pas le bon étalon. Nos six lieux ont atteint le seuil de remplacement à des revenus séparés par un facteur 16 (de 990 $ à 16 000 $), mais tous à des espérances de vie de 67–75 ans. La courbe fécondité-revenu s’est déplacée au fil du temps ; la courbe fécondité-survie est restée stable.",
+  "vi": "Thu nhập không phải là thước đo đúng. Sáu địa điểm của chúng tôi đạt mức thay thế với thu nhập chênh lệch 16 lần (990 $ đến 16 000 $), nhưng tất cả đều ở tuổi thọ 67–75 năm. Đường cong sinh sản-thu nhập đã dịch chuyển theo thời gian; đường cong sinh sản-sống còn giữ nguyên."
  },
  "Education turns children and marriage into credential contests": {
-  "zh-Hans": "教育把孩子和婚姻变成文凭竞赛"
+  "zh-Hans": "教育把孩子和婚姻变成文凭竞赛",
+  "fr": "L’éducation transforme les enfants et le mariage en concours de diplômes",
+  "vi": "Giáo dục biến con cái và hôn nhân thành những cuộc thi bằng cấp"
  },
  "Children cost more. Each child needs heavy investment to compete, lowering births everywhere by roughly 0.4 children, mostly second births.": {
-  "zh-Hans": "孩子变得更贵。每个孩子都需要大量投入才能竞争，这使各地出生数下降约 0.4 个，主要是二孩。"
+  "zh-Hans": "孩子变得更贵。每个孩子都需要大量投入才能竞争，这使各地出生数下降约 0.4 个，主要是二孩。",
+  "fr": "Les enfants coûtent plus cher. Chaque enfant exige un investissement lourd pour être compétitif, ce qui réduit les naissances partout d’environ 0,4 enfant, surtout les deuxièmes naissances.",
+  "vi": "Con cái tốn kém hơn. Mỗi đứa trẻ cần đầu tư lớn để cạnh tranh, làm giảm số sinh ở mọi nơi khoảng 0,4 con, chủ yếu là con thứ hai."
  },
  "The marriage market jams. In Korea, the “credential floor plus women marrying up” combination was the only one that reproduced all five Korean facts — unmarried educated women alongside unmarried less-educated men.": {
-  "zh-Hans": "婚姻市场堵塞。在韩国，只有“文凭门槛加上女性上嫁”这一组合同时复现了全部五个韩国事实——未婚的高学历女性与未婚的低学历男性并存。"
+  "zh-Hans": "婚姻市场堵塞。在韩国，只有“文凭门槛加上女性上嫁”这一组合同时复现了全部五个韩国事实——未婚的高学历女性与未婚的低学历男性并存。",
+  "fr": "Le marché du mariage s’enraye. En Corée, la combinaison « plancher de diplôme plus mariage des femmes vers le haut » était la seule à reproduire les cinq faits coréens — des femmes instruites non mariées aux côtés d’hommes moins instruits non mariés.",
+  "vi": "Thị trường hôn nhân bị tắc nghẽn. Ở Hàn Quốc, sự kết hợp “ngưỡng bằng cấp cộng với phụ nữ kết hôn với người có địa vị cao hơn” là cách duy nhất tái hiện cả năm sự thật của Hàn Quốc — phụ nữ có học vấn không kết hôn bên cạnh đàn ông ít học vấn không kết hôn."
  },
  "Marriage gets later. Years establishing a career, housing costs and slower job prospects for men together reproduce China’s 4.7-year rise in women’s marriage age.": {
-  "zh-Hans": "婚姻越来越晚。立业所需的年头、住房成本和男性就业前景放缓，三者共同复现了中国女性初婚年龄推迟 4.7 年的现象。"
+  "zh-Hans": "婚姻越来越晚。立业所需的年头、住房成本和男性就业前景放缓，三者共同复现了中国女性初婚年龄推迟 4.7 年的现象。",
+  "fr": "Le mariage survient plus tard. Les années consacrées à établir une carrière, les coûts du logement et les perspectives d’emploi plus lentes pour les hommes reproduisent ensemble la hausse de 4,7 ans de l’âge au mariage des femmes en Chine.",
+  "vi": "Hôn nhân diễn ra muộn hơn. Những năm xây dựng sự nghiệp, chi phí nhà ở và triển vọng việc làm chậm hơn cho nam giới cùng nhau tái hiện mức tăng 4,7 năm tuổi kết hôn của phụ nữ ở Trung Quốc."
  },
  "The jam matters only where births need marriage. It is large in East Asia and shrinks by about 70% where births outside marriage are common, as in the Philippines.": {
-  "zh-Hans": "只有在生育必须依托婚姻的地方，堵塞才重要。它在东亚影响很大，而在非婚生育普遍的地方（如菲律宾）缩小约 70%。"
+  "zh-Hans": "只有在生育必须依托婚姻的地方，堵塞才重要。它在东亚影响很大，而在非婚生育普遍的地方（如菲律宾）缩小约 70%。",
+  "fr": "L’enrayement ne compte que là où les naissances exigent le mariage. Il est important en Asie de l’Est et diminue d’environ 70 % là où les naissances hors mariage sont courantes, comme aux Philippines.",
+  "vi": "Sự tắc nghẽn chỉ quan trọng ở nơi sinh con cần hôn nhân. Nó lớn ở Đông Á và giảm khoảng 70% ở nơi sinh con ngoài hôn nhân phổ biến, như ở Philippines."
  },
  "Late marriage meets the biological clock": {
-  "zh-Hans": "晚婚遇上生物钟"
+  "zh-Hans": "晚婚遇上生物钟",
+  "fr": "Le mariage tardif rencontre l’horloge biologique",
+  "vi": "Hôn nhân muộn gặp đồng hồ sinh học"
  },
  "Every year of delay costs more than the last, and the cost gets steep after 33–35. The curve is calibrated to medical fecundity data.": {
-  "zh-Hans": "每推迟一年，代价都比上一年更大，33–35 岁之后代价陡增。该曲线按医学生育力数据校准。"
+  "zh-Hans": "每推迟一年，代价都比上一年更大，33–35 岁之后代价陡增。该曲线按医学生育力数据校准。",
+  "fr": "Chaque année de retard coûte plus que la précédente, et le coût devient abrupt après 33–35 ans. La courbe est calibrée sur des données médicales de fécondité.",
+  "vi": "Mỗi năm trì hoãn tốn kém hơn năm trước, và chi phí trở nên dốc sau 33–35 tuổi. Đường cong được hiệu chỉnh theo dữ liệu khả năng sinh sản y khoa."
  },
  "Share of the fertility fall explained by late marriage": {
-  "zh-Hans": "晚婚所解释的生育率下降份额"
+  "zh-Hans": "晚婚所解释的生育率下降份额",
+  "fr": "Part de la baisse de la fécondité expliquée par le mariage tardif",
+  "vi": "Phần mức giảm sinh sản được giải thích bởi hôn nhân muộn"
  },
  "IVF recovers only about a sixth of this loss — validated against Korea’s 15% of births from fertility treatment.": {
-  "zh-Hans": "试管婴儿只能挽回约六分之一的损失——该结论已用韩国 15% 的出生来自辅助生殖这一事实验证。"
+  "zh-Hans": "试管婴儿只能挽回约六分之一的损失——该结论已用韩国 15% 的出生来自辅助生殖这一事实验证。",
+  "fr": "La FIV ne récupère qu'environ un sixième de cette perte — validé par les 15 % de naissances issues de traitements de fertilité en Corée.",
+  "vi": "IVF chỉ bù đắp được khoảng một phần sáu mức tổn thất này — được kiểm chứng dựa trên 15% số ca sinh ở Hàn Quốc nhờ điều trị hiếm muộn."
  },
  "A shared shock after 2015": {
-  "zh-Hans": "2015年后的共同冲击"
+  "zh-Hans": "2015年后的共同冲击",
+  "fr": "Un choc commun après 2015",
+  "vi": "Một cú sốc chung sau năm 2015"
  },
  "All six places fell below their development path at once, by about 0.46 children on average — 0.71 against their own earlier, recovering trends.": {
-  "zh-Hans": "六个地方同时跌破各自的发展路径，平均约 0.46 个孩子；相对各自此前回升的趋势，跌幅为 0.71。"
+  "zh-Hans": "六个地方同时跌破各自的发展路径，平均约 0.46 个孩子；相对各自此前回升的趋势，跌幅为 0.71。",
+  "fr": "Les six territoires sont tous tombés sous leur trajectoire de développement en même temps, d'environ 0,46 enfant en moyenne — 0,71 par rapport à leurs propres tendances antérieures de reprise.",
+  "vi": "Cả sáu nơi đồng loạt tụt xuống dưới quỹ đạo phát triển của mình, trung bình khoảng 0,46 con — 0,71 so với xu hướng phục hồi trước đó của chính họ."
  },
  "The drop was the same whether or not births require marriage, so it is not the marriage jam. It cut births across the board.": {
-  "zh-Hans": "无论生育是否需要婚姻，跌幅都一样，所以这不是婚姻堵塞。它全面压低了出生数。"
+  "zh-Hans": "无论生育是否需要婚姻，跌幅都一样，所以这不是婚姻堵塞。它全面压低了出生数。",
+  "fr": "La baisse est identique que les naissances exigent ou non le mariage ; il ne s'agit donc pas du blocage du mariage. Elle a réduit les naissances dans tous les cas.",
+  "vi": "Mức giảm là như nhau dù sinh con có cần hôn nhân hay không, nên đây không phải là vấn đề tắc nghẽn hôn nhân. Nó cắt giảm sinh con trên mọi phương diện."
  },
  "Nothing in pre-2015 trends predicted it. Models trained up to 2014 forecast 1.86 for China in 2024; the actual figure was 1.01.": {
-  "zh-Hans": "2015 年前的趋势中没有任何迹象。用截至 2014 年数据训练的模型预测中国 2024 年为 1.86，实际值是 1.01。"
+  "zh-Hans": "2015 年前的趋势中没有任何迹象。用截至 2014 年数据训练的模型预测中国 2024 年为 1.86，实际值是 1.01。",
+  "fr": "Rien dans les tendances antérieures à 2015 ne l'annonçait. Les modèles entraînés jusqu'en 2014 prévoyaient 1,86 pour la Chine en 2024 ; le chiffre réel était de 1,01.",
+  "vi": "Không có gì trong các xu hướng trước năm 2015 dự báo được điều này. Các mô hình huấn luyện đến năm 2014 dự báo 1,86 cho Trung Quốc vào năm 2024; con số thực tế là 1,01."
  },
  "Country-to-country spread is ruled out; microplastics are ruled out as the main cause — the pattern is wrong. The cause is still open: smartphones, COVID and economic shocks all fit the timing.": {
-  "zh-Hans": "国与国之间的传播已被排除；微塑料作为主因也被排除——模式对不上。原因仍未确定：智能手机、新冠和经济冲击在时间上都吻合。"
+  "zh-Hans": "国与国之间的传播已被排除；微塑料作为主因也被排除——模式对不上。原因仍未确定：智能手机、新冠和经济冲击在时间上都吻合。",
+  "fr": "La propagation d'un pays à l'autre est écartée ; les microplastiques sont écartés comme cause principale — le schéma ne correspond pas. La cause reste ouverte : smartphones, COVID et chocs économiques correspondent tous à la chronologie.",
+  "vi": "Khả năng lây lan từ nước này sang nước khác bị loại trừ; vi nhựa bị loại trừ là nguyên nhân chính — mô hình không khớp. Nguyên nhân vẫn còn bỏ ngỏ: điện thoại thông minh, COVID và các cú sốc kinh tế đều phù hợp với thời điểm."
  },
  "Can it bounce back?": {
-  "zh-Hans": "还能反弹吗？"
+  "zh-Hans": "还能反弹吗？",
+  "fr": "Un rebond est-il possible ?",
+  "vi": "Liệu có thể phục hồi?"
  },
  "In uniform, peer-driven societies a temporary shock can tip fertility into a lasting low. Reversing it then costs about 8 times what preventing it would have.": {
-  "zh-Hans": "在同质化、同伴驱动的社会中，一次暂时冲击可能把生育率推入持续的低位。届时逆转的代价约为事前预防的 8 倍。"
+  "zh-Hans": "在同质化、同伴驱动的社会中，一次暂时冲击可能把生育率推入持续的低位。届时逆转的代价约为事前预防的 8 倍。",
+  "fr": "Dans les sociétés homogènes et guidées par les pairs, un choc temporaire peut faire basculer la fécondité vers un niveau durablement bas. L'inverser coûte alors environ 8 fois ce qu'aurait coûté sa prévention.",
+  "vi": "Trong các xã hội đồng nhất, chịu ảnh hưởng của bạn bè đồng trang lứa, một cú sốc tạm thời có thể đẩy mức sinh xuống thấp kéo dài. Khi đó, việc đảo ngược tốn khoảng 8 lần so với chi phí phòng ngừa."
  },
  "Japan and Hong Kong show a pull back toward their path; Japan recovered from 1.26 to 1.45. Korea and China show none. The data did not confirm a clean tipping cliff, though.": {
-  "zh-Hans": "日本和香港显示出向路径回归的拉力；日本从 1.26 回升到 1.45。韩国和中国则没有。不过数据并未证实存在清晰的 tipping 悬崖。"
+  "zh-Hans": "日本和香港显示出向路径回归的拉力；日本从 1.26 回升到 1.45。韩国和中国则没有。不过数据并未证实存在清晰的 tipping 悬崖。",
+  "fr": "Le Japon et Hong Kong montrent un retour vers leur trajectoire ; le Japon est remonté de 1,26 à 1,45. La Corée et la Chine n'en montrent aucun. Les données n'ont toutefois pas confirmé de bascule nette.",
+  "vi": "Nhật Bản và Hồng Kông cho thấy sự kéo trở lại quỹ đạo của mình; Nhật Bản phục hồi từ 1,26 lên 1,45. Hàn Quốc và Trung Quốc không cho thấy điều này. Tuy nhiên, dữ liệu không xác nhận một điểm bùng nổ rõ ràng."
  },
  "What policy can do": {
-  "zh-Hans": "政策能做什么"
+  "zh-Hans": "政策能做什么",
+  "fr": "Ce que la politique peut faire",
+  "vi": "Chính sách có thể làm gì"
  },
  "Simulated effect on births per woman": {
-  "zh-Hans": "对每名女性出生数的模拟影响"
+  "zh-Hans": "对每名女性出生数的模拟影响",
+  "fr": "Effet simulé sur les naissances par femme",
+  "vi": "Tác động mô phỏng lên số ca sinh trên mỗi phụ nữ"
  },
  "Even the combined package leaves Korea far below replacement.": {
-  "zh-Hans": "即便组合政策包，韩国仍远低于更替水平。"
+  "zh-Hans": "即便组合政策包，韩国仍远低于更替水平。",
+  "fr": "Même le dispositif combiné laisse la Corée bien en dessous du seuil de renouvellement.",
+  "vi": "Ngay cả gói biện pháp kết hợp cũng để Hàn Quốc thấp hơn nhiều so với mức sinh thay thế."
  },
  "Ruled out along the way": {
-  "zh-Hans": "一路上被排除的解释"
+  "zh-Hans": "一路上被排除的解释",
+  "fr": "Écarté en cours de route",
+  "vi": "Bị loại trừ trong quá trình nghiên cứu"
  },
  "A 15–20 year lag from education to fertility (the effect is immediate)": {
-  "zh-Hans": "教育到生育有 15–20 年滞后（效应是即时的）"
+  "zh-Hans": "教育到生育有 15–20 年滞后（效应是即时的）",
+  "fr": "Un décalage de 15 à 20 ans entre l'éducation et la fécondité (l'effet est immédiat)",
+  "vi": "Độ trễ 15–20 năm từ giáo dục đến mức sinh (tác động là tức thời)"
  },
  "An age-29 trap below 1.3 (Japan is a counterexample)": {
-  "zh-Hans": "1.3 以下的“29 岁陷阱”（日本是反例）"
+  "zh-Hans": "1.3 以下的“29 岁陷阱”（日本是反例）",
+  "fr": "Un piège à 29 ans sous 1,3 (le Japon est un contre-exemple)",
+  "vi": "Bẫy tuổi 29 dưới 1,3 (Nhật Bản là phản ví dụ)"
  },
  "National enrolment ratios as evidence for the marriage jam (failed the placebo test)": {
-  "zh-Hans": "用全国入学率证明婚姻堵塞（未通过安慰剂检验）"
+  "zh-Hans": "用全国入学率证明婚姻堵塞（未通过安慰剂检验）",
+  "fr": "Les taux de scolarisation nationaux comme preuve du blocage du mariage (a échoué au test placebo)",
+  "vi": "Tỷ lệ nhập học quốc gia làm bằng chứng cho tắc nghẽn hôn nhân (không vượt qua kiểm định giả dược)"
  },
  "Competition within marriage as the main driver in Korea": {
-  "zh-Hans": "婚姻内部竞争是韩国的主因"
+  "zh-Hans": "婚姻内部竞争是韩国的主因",
+  "fr": "La concurrence au sein du mariage comme moteur principal en Corée",
+  "vi": "Cạnh tranh trong hôn nhân là động lực chính ở Hàn Quốc"
  },
  "Educated Chinese women wanting fewer children (surveys show about 1.7, the same as others)": {
-  "zh-Hans": "中国高学历女性想要更少孩子（调查显示约 1.7 个，与其他人相同）"
+  "zh-Hans": "中国高学历女性想要更少孩子（调查显示约 1.7 个，与其他人相同）",
+  "fr": "Les femmes chinoises instruites voulant moins d'enfants (les enquêtes indiquent environ 1,7, comme les autres)",
+  "vi": "Phụ nữ Trung Quốc có học vấn muốn ít con hơn (khảo sát cho thấy khoảng 1,7, giống như những người khác)"
  },
  "Diet and stress as a major factor": {
-  "zh-Hans": "饮食与压力是主要因素"
+  "zh-Hans": "饮食与压力是主要因素",
+  "fr": "L'alimentation et le stress comme facteur majeur",
+  "vi": "Chế độ ăn uống và căng thẳng là yếu tố chính"
  },
  "Survival brings every society down to about 1.4. Mass education then turns children into expensive projects and marriage into a credential match. Where births need marriage, that jams the marriage market and pushes weddings into the 30s, where the biological clock turns delay into permanent loss. Since 2015, a still-unexplained shock has pushed every country lower at once. Money alone can’t fix it; what helps most is decoupling births from marriage, helping people marry, and supporting second children — ideally before the fall rather than after.": {
-  "zh-Hans": "生存率把每个社会带到约 1.4。普及教育随后把孩子变成昂贵项目，把婚姻变成文凭匹配。在生育必须依托婚姻的地方，这会堵住婚姻市场，把婚礼推向三十多岁，生物钟则把推迟变成永久损失。2015 年以来，一场仍未解释的冲击让所有国家同时更低。光靠钱解决不了；最有效的是把生育与婚姻解耦、帮助人们结婚、支持二孩——最好在下跌之前，而不是之后。"
+  "zh-Hans": "生存率把每个社会带到约 1.4。普及教育随后把孩子变成昂贵项目，把婚姻变成文凭匹配。在生育必须依托婚姻的地方，这会堵住婚姻市场，把婚礼推向三十多岁，生物钟则把推迟变成永久损失。2015 年以来，一场仍未解释的冲击让所有国家同时更低。光靠钱解决不了；最有效的是把生育与婚姻解耦、帮助人们结婚、支持二孩——最好在下跌之前，而不是之后。",
+  "fr": "La survie ramène toute société à environ 1,4. L'éducation de masse transforme ensuite les enfants en projets coûteux et le mariage en appariement de diplômes. Là où les naissances exigent le mariage, cela bloque le marché matrimonial et repousse les noces vers la trentaine, où l'horloge biologique transforme le retard en perte définitive. Depuis 2015, un choc encore inexpliqué a fait baisser tous les pays à la fois. L'argent seul ne peut y remédier ; ce qui aide le plus, c'est de dissocier les naissances du mariage, d'aider les gens à se marier et de soutenir les deuxièmes enfants — idéalement avant la chute plutôt qu'après.",
+  "vi": "Sự sống còn đưa mọi xã hội xuống khoảng 1,4. Giáo dục đại chúng sau đó biến con cái thành những dự án tốn kém và hôn nhân thành sự kết đôi bằng cấp. Ở nơi sinh con đòi hỏi hôn nhân, điều đó làm tắc nghẽn thị trường hôn nhân và đẩy hôn lễ sang độ tuổi 30, nơi đồng hồ sinh học biến sự trì hoãn thành mất mát vĩnh viễn. Từ năm 2015, một cú sốc vẫn chưa được giải thích đã đẩy mọi quốc gia xuống thấp cùng một lúc. Chỉ tiền thôi không thể khắc phục; điều giúp ích nhiều nhất là tách sinh con khỏi hôn nhân, giúp người ta kết hôn và hỗ trợ con thứ hai — lý tưởng nhất là trước khi sụt giảm chứ không phải sau đó."
  },
  "In Cambodia, about four in five secondary pupils buy private tutoring, and most of it comes from their own teachers. An agent-based model of 72 teachers and 1,260 pupils tests three rival explanations against seven published patterns.": {
-  "zh-Hans": "在柬埔寨，约五分之四的中学生购买课外补习，而大部分补习来自他们自己的老师。一个包含 72 名教师、1260 名学生的主体模型，用七个已发表的模式检验三个相互竞争的解释。"
+  "zh-Hans": "在柬埔寨，约五分之四的中学生购买课外补习，而大部分补习来自他们自己的老师。一个包含 72 名教师、1260 名学生的主体模型，用七个已发表的模式检验三个相互竞争的解释。",
+  "fr": "Au Cambodge, environ quatre élèves du secondaire sur cinq achètent des cours particuliers, et la plupart proviennent de leurs propres enseignants. Un modèle multi-agents de 72 enseignants et 1 260 élèves teste trois explications concurrentes face à sept schémas publiés.",
+  "vi": "Ở Campuchia, khoảng bốn trong năm học sinh trung học mua dịch vụ dạy thêm, và phần lớn đến từ chính giáo viên của các em. Một mô hình dựa trên tác nhân gồm 72 giáo viên và 1.260 học sinh kiểm định ba cách giải thích cạnh tranh dựa trên bảy mô hình đã công bố."
  },
  "Three rival explanations, one calibration": {
-  "zh-Hans": "三个竞争解释，同一套校准"
+  "zh-Hans": "三个竞争解释，同一套校准",
+  "fr": "Trois explications concurrentes, une seule calibration",
+  "vi": "Ba cách giải thích cạnh tranh, một lần hiệu chỉnh"
  },
  "The thin timetable (the curriculum does not fit the official hours), diversion (teachers hold content back for paid sessions) and favour (paying buys goodwill) each fit the seven published patterns about equally well after ABC-SMC calibration. The data cannot tell them apart.": {
-  "zh-Hans": "经过 ABC-SMC 校准，课时太紧（课程塞不进法定课时）、故意留白（教师把内容留到付费课讲）和买人情（付费换取好感）对七个已发表模式的拟合程度几乎相同。数据无法区分它们。"
+  "zh-Hans": "经过 ABC-SMC 校准，课时太紧（课程塞不进法定课时）、故意留白（教师把内容留到付费课讲）和买人情（付费换取好感）对七个已发表模式的拟合程度几乎相同。数据无法区分它们。",
+  "fr": "Le programme trop chargé (le curriculum ne tient pas dans les heures officielles), le détournement (les enseignants retiennent des contenus pour les séances payantes) et la faveur (payer achète la bienveillance) s'ajustent chacun à peu près aussi bien aux sept schémas publiés après calibration ABC-SMC. Les données ne permettent pas de les distinguer.",
+  "vi": "Thời khóa biểu quá tải (chương trình không vừa với số giờ chính thức), sự chuyển hướng (giáo viên giữ lại nội dung cho các buổi học thu phí) và sự ưu ái (trả tiền để mua thiện chí) đều khớp với bảy mô hình đã công bố gần như ngang nhau sau khi hiệu chỉnh ABC-SMC. Dữ liệu không thể phân biệt chúng."
  },
  "All three also agree on what policies would do, but only because they share most of their code. That agreement is not evidence.": {
-  "zh-Hans": "三种解释对政策效果的预测也一致，但这只是因为它们共用大部分代码。这种一致并不构成证据。"
+  "zh-Hans": "三种解释对政策效果的预测也一致，但这只是因为它们共用大部分代码。这种一致并不构成证据。",
+  "fr": "Les trois s'accordent aussi sur les effets des politiques, mais uniquement parce qu'ils partagent la majeure partie de leur code. Cet accord ne constitue pas une preuve.",
+  "vi": "Cả ba cũng đồng thuận về tác động của các chính sách, nhưng chỉ vì chúng chia sẻ phần lớn mã lệnh. Sự đồng thuận đó không phải là bằng chứng."
  },
  "What the calibrated worlds say": {
-  "zh-Hans": "校准后的世界告诉我们什么"
+  "zh-Hans": "校准后的世界告诉我们什么",
+  "fr": "Ce que disent les mondes calibrés",
+  "vi": "Những gì các thế giới đã hiệu chỉnh cho thấy"
  },
  "Who leaves school: the credential-floor test": {
-  "zh-Hans": "谁离开学校：文凭门槛检验"
+  "zh-Hans": "谁离开学校：文凭门槛检验",
+  "fr": "Qui quitte l'école : le test du seuil de diplôme",
+  "vi": "Ai rời trường: kiểm định ngưỡng bằng cấp"
  },
  "Who stays in school, and what the diploma is worth": {
-  "zh-Hans": "谁留在学校，文凭值多少"
+  "zh-Hans": "谁留在学校，文凭值多少",
+  "fr": "Qui reste à l'école, et ce que vaut le diplôme",
+  "vi": "Ai ở lại trường, và tấm bằng có giá trị bao nhiêu"
  },
  "Household choices, graduate queues and credential dynamics — behaviour is modelled, not treated as an accounting identity.": {
-  "zh-Hans": "家庭选择、毕业生排队与文凭动态——行为是被建模的，而不是会计恒等式。"
+  "zh-Hans": "家庭选择、毕业生排队与文凭动态——行为是被建模的，而不是会计恒等式。",
+  "fr": "Choix des ménages, files de diplômés et dynamique des diplômes — le comportement est modélisé, non traité comme une identité comptable.",
+  "vi": "Lựa chọn của hộ gia đình, hàng đợi người tốt nghiệp và động thái bằng cấp — hành vi được mô hình hóa, không được coi là một đồng nhất thức kế toán."
  },
  "What keeps students in school": {
-  "zh-Hans": "什么让学生留在学校"
+  "zh-Hans": "什么让学生留在学校",
+  "fr": "Ce qui retient les élèves à l'école",
+  "vi": "Điều gì giữ học sinh ở lại trường"
  },
  "The graduate queue": {
-  "zh-Hans": "毕业生排队"
+  "zh-Hans": "毕业生排队",
+  "fr": "La file des diplômés",
+  "vi": "Hàng đợi người tốt nghiệp"
  },
  "The fitted labour-market model reproduces the supplied NBS graduate series, and the app compares model and record directly. An earlier 2018–22 fit missed the later unemployment bulge.": {
-  "zh-Hans": "拟合的劳动力市场模型复现了所供的国家统计局毕业生序列，应用直接并列模型与记录。此前基于 2018–22 的拟合漏掉了后来的失业高峰。"
+  "zh-Hans": "拟合的劳动力市场模型复现了所供的国家统计局毕业生序列，应用直接并列模型与记录。此前基于 2018–22 的拟合漏掉了后来的失业高峰。",
+  "fr": "Le modèle du marché du travail ajusté reproduit la série des diplômés du NBS fournie, et l'application compare directement le modèle et les données observées. Un ajustement antérieur portant sur 2018–22 manquait la poussée ultérieure du chômage.",
+  "vi": "Mô hình thị trường lao động đã hiệu chỉnh tái tạo chuỗi số liệu sinh viên tốt nghiệp của NBS được cung cấp, và ứng dụng so sánh trực tiếp giữa mô hình và số liệu ghi nhận. Một lần hiệu chỉnh trước đó cho giai đoạn 2018–22 đã bỏ sót đợt gia tăng thất nghiệp sau này."
  },
  "Matching the displayed record leaves the mechanisms open. The reporting definition changes in 2024, and several labour-market responses remain assumptions.": {
-  "zh-Hans": "匹配所展示的记录并不能确定机制。2024 年统计口径有变，若干劳动力市场反应仍是假设。"
+  "zh-Hans": "匹配所展示的记录并不能确定机制。2024 年统计口径有变，若干劳动力市场反应仍是假设。",
+  "fr": "Le fait de reproduire les données affichées laisse les mécanismes ouverts. La définition de déclaration change en 2024, et plusieurs réponses du marché du travail demeurent des hypothèses.",
+  "vi": "Việc khớp với số liệu được hiển thị vẫn để ngỏ các cơ chế. Định nghĩa báo cáo thay đổi vào năm 2024, và một số phản ứng của thị trường lao động vẫn là giả định."
  },
  "School versus child labour": {
-  "zh-Hans": "上学还是童工"
+  "zh-Hans": "上学还是童工",
+  "fr": "École contre travail des enfants",
+  "vi": "Trường học đối với lao động trẻ em"
  },
  "In the Cambodia household simulation, policy and reference runs share matched seeds across 12 simulated years, so the interface exposes the difference each policy makes.": {
-  "zh-Hans": "在柬埔寨家庭模拟中，政策运行与基准运行在 12 个模拟年内共享匹配随机种子，因此界面能呈现每项政策造成的差异。"
+  "zh-Hans": "在柬埔寨家庭模拟中，政策运行与基准运行在 12 个模拟年内共享匹配随机种子，因此界面能呈现每项政策造成的差异。",
+  "fr": "Dans la simulation des ménages au Cambodge, les exécutions de politique et de référence partagent des graines appariées sur 12 années simulées, de sorte que l'interface expose la différence que produit chaque politique.",
+  "vi": "Trong mô phỏng hộ gia đình Campuchia, các lần chạy chính sách và tham chiếu dùng chung các hạt giống được ghép cặp qua 12 năm mô phỏng, vì vậy giao diện thể hiện rõ sự khác biệt mà mỗi chính sách tạo ra."
  },
  "Causal policy effects are not yet established: programme effect sizes are stylised, and the rural school-retention fit needs a large unexplained adjustment.": {
-  "zh-Hans": "政策的因果效应尚未确立：项目效应量是风格化的，农村在校率的拟合还需要一个很大的未解释调整。"
+  "zh-Hans": "政策的因果效应尚未确立：项目效应量是风格化的，农村在校率的拟合还需要一个很大的未解释调整。",
+  "fr": "Les effets causaux des politiques ne sont pas encore établis : les tailles d'effet des programmes sont stylisées, et l'ajustement de la rétention scolaire en milieu rural nécessite un important ajustement inexpliqué.",
+  "vi": "Các tác động nhân quả của chính sách chưa được xác lập: độ lớn tác động của chương trình mang tính cách điệu, và việc khớp tỷ lệ duy trì học tập ở nông thôn cần một điều chỉnh lớn chưa được giải thích."
  },
  "Credentials are positional as much as productive. When everyone invests more, the queue lengthens rather than the payoff rising — which is why the same models feed the fertility story.": {
-  "zh-Hans": "文凭既是生产性的，也是位置性的。当每个人都加大投入，结果是排队变长而非回报上升——这正是同一批模型通向生育故事的原因。"
+  "zh-Hans": "文凭既是生产性的，也是位置性的。当每个人都加大投入，结果是排队变长而非回报上升——这正是同一批模型通向生育故事的原因。",
+  "fr": "Les diplômes sont autant positionnels que productifs. Lorsque tout le monde investit davantage, la file s'allonge plutôt que le rendement n'augmente — c'est pourquoi les mêmes modèles alimentent le récit de la fécondité.",
+  "vi": "Bằng cấp mang tính vị thế không kém tính năng suất. Khi mọi người đầu tư nhiều hơn, hàng đợi dài ra thay vì lợi ích tăng lên — đó là lý do các mô hình tương tự cũng nuôi dưỡng câu chuyện về mức sinh."
  },
  "What happens when a cohort moves through the system": {
-  "zh-Hans": "当一个队列穿过整个系统"
+  "zh-Hans": "当一个队列穿过整个系统",
+  "fr": "Ce qui se passe lorsqu'une cohorte traverse le système",
+  "vi": "Điều gì xảy ra khi một nhóm tuổi đi qua hệ thống"
  },
  "Demography drives everything": {
-  "zh-Hans": "人口驱动一切"
+  "zh-Hans": "人口驱动一切",
+  "fr": "La démographie est le moteur de tout",
+  "vi": "Nhân khẩu học chi phối mọi thứ"
  },
  "The East Asian dashboards index observed births — Hong Kong’s 2025 count of about 31,100 is the 100 baseline — and follow the shrinking cohort into classrooms, teacher demand and budgets.": {
-  "zh-Hans": "东亚仪表盘以观测出生数为指数——香港 2025 年约 31,100 人记为 100——并跟随收缩的队列进入教室、教师需求与预算。"
+  "zh-Hans": "东亚仪表盘以观测出生数为指数——香港 2025 年约 31,100 人记为 100——并跟随收缩的队列进入教室、教师需求与预算。",
+  "fr": "Les tableaux de bord d'Asie de l'Est indexent les naissances observées — le décompte de Hong Kong pour 2025, d'environ 31 100, constitue la base 100 — et suivent la cohorte en diminution jusque dans les salles de classe, la demande d'enseignants et les budgets.",
+  "vi": "Các bảng điều khiển Đông Á lấy số sinh quan sát được làm chỉ số — con số khoảng 31.100 của Hồng Kông năm 2025 là mốc cơ sở 100 — và theo dõi nhóm tuổi đang thu hẹp vào lớp học, nhu cầu giáo viên và ngân sách."
  },
  "In the toy worlds, births growing 3% a year (Riverton) or falling 4% a year (Stillwater) let you watch the wave move through the system and see when spare capacity appears.": {
-  "zh-Hans": "在玩具世界里，出生数每年增长 3%（Riverton）或下降 4%（Stillwater），你可以看着这股波穿过系统，观察空余产能何时出现。"
+  "zh-Hans": "在玩具世界里，出生数每年增长 3%（Riverton）或下降 4%（Stillwater），你可以看着这股波穿过系统，观察空余产能何时出现。",
+  "fr": "Dans les mondes-jouets, des naissances croissant de 3 % par an (Riverton) ou diminuant de 4 % par an (Stillwater) permettent d'observer la vague traverser le système et de voir quand une capacité excédentaire apparaît.",
+  "vi": "Trong các thế giới mô phỏng, số sinh tăng 3% mỗi năm (Riverton) hoặc giảm 4% mỗi năm (Stillwater) cho phép bạn quan sát làn sóng lan qua hệ thống và thấy khi nào xuất hiện năng lực dư thừa."
  },
  "Teacher supply responds with a lag": {
-  "zh-Hans": "教师供给的反应总是滞后"
+  "zh-Hans": "教师供给的反应总是滞后",
+  "fr": "L'offre d'enseignants réagit avec un décalage",
+  "vi": "Nguồn cung giáo viên phản ứng có độ trễ"
  },
  "An age-structured accounting model follows intake, graduation, hiring and retirement through 2050. A lag between training decisions and hiring changes the projected gap — training pipelines cannot turn on a dime.": {
-  "zh-Hans": "一个年龄结构的核算模型追踪到 2050 年的招生、毕业、招聘与退休。培养决策与招聘之间的滞后会改变预测缺口——培养管线无法说转就转。"
+  "zh-Hans": "一个年龄结构的核算模型追踪到 2050 年的招生、毕业、招聘与退休。培养决策与招聘之间的滞后会改变预测缺口——培养管线无法说转就转。",
+  "fr": "Un modèle comptable structuré par âge suit les admissions, les diplômés, les recrutements et les départs à la retraite jusqu'en 2050. Un décalage entre les décisions de formation et le recrutement modifie l'écart projeté — les filières de formation ne peuvent pas changer du jour au lendemain.",
+  "vi": "Một mô hình kế toán theo cơ cấu tuổi theo dõi tuyển sinh, tốt nghiệp, tuyển dụng và nghỉ hưu đến năm 2050. Độ trễ giữa các quyết định đào tạo và tuyển dụng làm thay đổi khoảng cách dự báo — các chuỗi đào tạo không thể thay đổi ngay lập tức."
  },
  "This is not a country forecast: starting counts and completion rates are synthetic, and the demonstration carries no prediction for any real system.": {
-  "zh-Hans": "这不是国家预测：初始人数与完成率是合成的，演示不构成对任何真实系统的预言。"
+  "zh-Hans": "这不是国家预测：初始人数与完成率是合成的，演示不构成对任何真实系统的预言。",
+  "fr": "Il ne s'agit pas d'une prévision nationale : les effectifs initiaux et les taux d'achèvement sont synthétiques, et la démonstration ne comporte aucune prédiction pour un système réel.",
+  "vi": "Đây không phải là dự báo quốc gia: số liệu ban đầu và tỷ lệ hoàn thành là tổng hợp, và phần trình diễn không đưa ra dự đoán nào cho bất kỳ hệ thống thực tế nào."
  },
  "Policy shocks travel for years": {
-  "zh-Hans": "政策冲击会传导很多年"
+  "zh-Hans": "政策冲击会传导很多年",
+  "fr": "Les chocs de politique se propagent pendant des années",
+  "vi": "Các cú sốc chính sách lan truyền trong nhiều năm"
  },
  "Free primary education during a hiring freeze (Kenya), a K-to-12 expansion (Philippines) and a post-conflict birth boom (Cambodia) each show how a single policy or demographic shock keeps moving through classrooms long after it lands.": {
-  "zh-Hans": "招聘冻结期的免费小学教育（肯尼亚）、K-to-12 扩张（菲律宾）与战后婴儿潮（柬埔寨）各自表明：单次政策或人口冲击落地后，还会在教室中传导多年。"
+  "zh-Hans": "招聘冻结期的免费小学教育（肯尼亚）、K-to-12 扩张（菲律宾）与战后婴儿潮（柬埔寨）各自表明：单次政策或人口冲击落地后，还会在教室中传导多年。",
+  "fr": "La gratuité de l'enseignement primaire pendant un gel des recrutements (Kenya), une extension de la maternelle à la terminale (Philippines) et un baby-boom d'après-conflit (Cambodge) montrent chacun comment un seul choc de politique ou démographique continue de se propager dans les salles de classe longtemps après s'être produit.",
+  "vi": "Giáo dục tiểu học miễn phí trong thời kỳ đóng băng tuyển dụng (Kenya), việc mở rộng từ mẫu giáo đến lớp 12 (Philippines) và bùng nổ sinh sau xung đột (Campuchia) đều cho thấy một cú sốc chính sách hoặc nhân khẩu duy nhất tiếp tục lan truyền qua các lớp học rất lâu sau khi xảy ra."
  },
  "A school system is a pipeline with memory: you cannot hire teachers you did not train, or fill classrooms for children who were never born.": {
-  "zh-Hans": "学校系统是一条有记忆的管道：你招不到没有培养过的教师，也填不满为未曾出生的孩子准备的教室。"
+  "zh-Hans": "学校系统是一条有记忆的管道：你招不到没有培养过的教师，也填不满为未曾出生的孩子准备的教室。",
+  "fr": "Un système scolaire est un pipeline doté de mémoire : on ne peut pas recruter des enseignants que l'on n'a pas formés, ni remplir des classes pour des enfants qui ne sont jamais nés.",
+  "vi": "Hệ thống trường học là một chuỗi có ký ức: bạn không thể tuyển những giáo viên mà bạn chưa đào tạo, hay lấp đầy lớp học cho những đứa trẻ chưa từng được sinh ra."
  },
  "The planner’s arithmetic, showing its work": {
-  "zh-Hans": "规划师的算术，过程全公开"
+  "zh-Hans": "规划师的算术，过程全公开",
+  "fr": "L'arithmétique du planificateur, détaillant ses calculs",
+  "vi": "Số học của nhà hoạch định, trình bày rõ các bước tính"
  },
  "Twelve independent implementations in the IIEP, UIS and education-sector-analysis tradition. Methodological tools, not official UNESCO software.": {
-  "zh-Hans": "十二个遵循 IIEP、UIS 与教育部门分析传统的独立实现。它们是方法工具，不是 UNESCO 官方软件。"
+  "zh-Hans": "十二个遵循 IIEP、UIS 与教育部门分析传统的独立实现。它们是方法工具，不是 UNESCO 官方软件。",
+  "fr": "Douze implémentations indépendantes dans la tradition de l'IIPE, de l'ISU et de l'analyse du secteur éducatif. Des outils méthodologiques, et non des logiciels officiels de l'UNESCO.",
+  "vi": "Mười hai triển khai độc lập theo truyền thống của IIEP, UIS và phân tích khu vực giáo dục. Đây là các công cụ phương pháp luận, không phải phần mềm chính thức của UNESCO."
  },
  "Indicators from raw counts": {
-  "zh-Hans": "从原始计数到指标"
+  "zh-Hans": "从原始计数到指标",
+  "fr": "Indicateurs à partir de dénombrements bruts",
+  "vi": "Các chỉ số từ số liệu đếm thô"
  },
  "The indicator calculator derives GER, NER, GIR, adjusted gender parity and teacher ratios from raw enrolment and population counts, using the standard definitions.": {
-  "zh-Hans": "指标计算器用标准定义，从原始入学与人口计数推导 GER、NER、GIR、调整后性别 parity 与师生比。"
+  "zh-Hans": "指标计算器用标准定义，从原始入学与人口计数推导 GER、NER、GIR、调整后性别 parity 与师生比。",
+  "fr": "Le calculateur d'indicateurs dérive le TBS, le TNS, le TBS brut, la parité des genres ajustée et les ratios d'enseignants à partir des effectifs bruts et des dénombrements de population, selon les définitions standard.",
+  "vi": "Công cụ tính chỉ số suy ra GER, NER, GIR, chỉ số bình đẳng giới đã điều chỉnh và tỷ lệ giáo viên từ số liệu tuyển sinh và dân số thô, theo các định nghĩa chuẩn."
  },
  "Cohort-component projection shows who will be of school age and when; the flows model tracks promotion, repetition and dropout through the grades.": {
-  "zh-Hans": "队列构成预测展示谁将在何时达到学龄；流转模型追踪各年级的升级、留级与辍学。"
+  "zh-Hans": "队列构成预测展示谁将在何时达到学龄；流转模型追踪各年级的升级、留级与辍学。",
+  "fr": "La projection par composantes de cohorte montre qui sera en âge scolaire et quand ; le modèle de flux suit la promotion, le redoublement et l'abandon au fil des niveaux.",
+  "vi": "Dự báo theo thành phần nhóm tuổi cho thấy ai sẽ ở độ tuổi đi học và vào khi nào; mô hình luồng theo dõi việc lên lớp, lưu ban và bỏ học qua các khối lớp."
  },
  "Benefit-incidence analysis traces public education resources across a cohort with a Lorenz curve; the grant-formula tool combines per-pupil, poverty and remoteness weights and shows the allocation per child.": {
-  "zh-Hans": "受益归宿分析用 Lorenz 曲线追踪公共教育资源在一个队列中的分布；拨款公式工具组合生均、贫困与偏远权重，展示每个孩子的分配额。"
+  "zh-Hans": "受益归宿分析用 Lorenz 曲线追踪公共教育资源在一个队列中的分布；拨款公式工具组合生均、贫困与偏远权重，展示每个孩子的分配额。",
+  "fr": "L'analyse d'incidence des bénéfices retrace les ressources publiques d'éducation au sein d'une cohorte à l'aide d'une courbe de Lorenz ; l'outil de formule de subvention combine des pondérations par élève, de pauvreté et d'éloignement et montre l'allocation par enfant.",
+  "vi": "Phân tích tỷ lệ hưởng lợi theo dõi nguồn lực giáo dục công qua một nhóm tuổi bằng đường cong Lorenz; công cụ công thức cấp kinh phí kết hợp các trọng số theo học sinh, nghèo đói và vùng xa và hiển thị mức phân bổ cho mỗi trẻ."
  },
  "The deployment tool applies the education-sector-analysis R² diagnostic to test whether teacher allocations actually follow pupils.": {
-  "zh-Hans": "调配工具应用教育部门分析的 R² 诊断，检验教师分配是否真的跟随学生。"
+  "zh-Hans": "调配工具应用教育部门分析的 R² 诊断，检验教师分配是否真的跟随学生。",
+  "fr": "L'outil de déploiement applique le diagnostic R² de l'analyse du secteur éducatif pour vérifier si les affectations d'enseignants suivent réellement les élèves.",
+  "vi": "Công cụ bố trí áp dụng chẩn đoán R² của phân tích khu vực giáo dục để kiểm tra xem việc phân bổ giáo viên có thực sự theo học sinh hay không."
  },
  "Targets, honestly checked": {
-  "zh-Hans": "诚实地检验目标"
+  "zh-Hans": "诚实地检验目标",
+  "fr": "Des cibles vérifiées honnêtement",
+  "vi": "Các mục tiêu được kiểm tra một cách trung thực"
  },
  "The logistic tool compares the S-curve speed a coverage target requires with the speeds countries have historically achieved — a feasibility check, not a forecast.": {
-  "zh-Hans": "logistic 工具把覆盖率目标所需的 S 曲线速度与各国历史达到的速度对比——这是可行性检验，不是预测。"
+  "zh-Hans": "logistic 工具把覆盖率目标所需的 S 曲线速度与各国历史达到的速度对比——这是可行性检验，不是预测。",
+  "fr": "L'outil logistique compare la vitesse de la courbe en S qu'exige une cible de couverture avec les vitesses que les pays ont historiquement atteintes — une vérification de faisabilité, non une prévision.",
+  "vi": "Công cụ logistic so sánh tốc độ đường cong chữ S mà một mục tiêu bao phủ đòi hỏi với tốc độ mà các quốc gia đã đạt được trong lịch sử — một bước kiểm tra tính khả thi, không phải dự báo."
  },
  "These tools compute; they do not judge. The values they return are only as good as the counts and assumptions fed into them.": {
-  "zh-Hans": "这些工具只计算，不评判。返回的价值取决于喂给它们的计数与假设。"
+  "zh-Hans": "这些工具只计算，不评判。返回的价值取决于喂给它们的计数与假设。",
+  "fr": "Ces outils calculent ; ils ne jugent pas. Les valeurs qu'ils renvoient ne valent que ce que valent les dénombrements et les hypothèses qui leur sont fournis.",
+  "vi": "Các công cụ này tính toán; chúng không phán xét. Các giá trị mà chúng trả về chỉ tốt bằng số liệu đếm và giả định được đưa vào."
  },
  "How food, labour, authority and climate interact": {
-  "zh-Hans": "粮食、劳力、权威与气候如何相互作用"
+  "zh-Hans": "粮食、劳力、权威与气候如何相互作用",
+  "fr": "Comment interagissent l'alimentation, le travail, l'autorité et le climat",
+  "vi": "Cách thức lương thực, lao động, quyền lực và khí hậu tương tác"
  },
  "Climate and the timing of decline": {
-  "zh-Hans": "气候与衰亡的时点"
+  "zh-Hans": "气候与衰亡的时点",
+  "fr": "Le climat et le moment du déclin",
+  "vi": "Khí hậu và thời điểm suy tàn"
  },
  "We ran 2,000 matched parameter draws at each of three crop responses, plus a neutral-climate comparison. At the middle response, 1,260 of 2,000 runs decline; their median onset is 1362. Changing crop sensitivity shifts the timing.": {
-  "zh-Hans": "我们在三种作物反应下各做 2,000 次匹配参数抽样，外加一个中性气候对照。中等反应下，2,000 次运行中有 1,260 次走向衰落， onset 中位数为 1362 年。改变作物敏感度会改变时点。"
+  "zh-Hans": "我们在三种作物反应下各做 2,000 次匹配参数抽样，外加一个中性气候对照。中等反应下，2,000 次运行中有 1,260 次走向衰落， onset 中位数为 1362 年。改变作物敏感度会改变时点。",
+  "fr": "Nous avons exécuté 2 000 tirages de paramètres appariés pour chacune de trois réponses des cultures, plus une comparaison à climat neutre. À la réponse médiane, 1 260 des 2 000 exécutions déclinent ; leur début médian est 1362. Modifier la sensibilité des cultures décale le moment.",
+  "vi": "Chúng tôi đã chạy 2.000 lần rút tham số được ghép cặp cho mỗi một trong ba phản ứng của cây trồng, cùng với một so sánh khí hậu trung tính. Ở phản ứng giữa, 1.260 trong số 2.000 lần chạy suy tàn; thời điểm khởi phát trung vị của chúng là 1362. Thay đổi độ nhạy của cây trồng làm dịch chuyển thời điểm."
  },
  "The synthetic petri economy is a mechanism test only: it has no historical fit score and makes no claim to identify the cause of Angkor’s decline.": {
-  "zh-Hans": "合成的 petri 经济体只是机制检验：它没有历史拟合分，也不声称识别了吴哥衰亡的原因。"
+  "zh-Hans": "合成的 petri 经济体只是机制检验：它没有历史拟合分，也不声称识别了吴哥衰亡的原因。",
+  "fr": "L'économie de Pétri synthétique n'est qu'un test de mécanisme : elle n'a pas de score d'ajustement historique et ne prétend pas identifier la cause du déclin d'Angkor.",
+  "vi": "Nền kinh tế Petri tổng hợp chỉ là một phép thử cơ chế: nó không có điểm khớp lịch sử và không đưa ra tuyên bố nào nhằm xác định nguyên nhân sự suy tàn của Angkor."
  },
  "Distance, campaigns and the harvest": {
-  "zh-Hans": "距离、征战与收成"
+  "zh-Hans": "距离、征战与收成",
+  "fr": "Distance, campagnes et récolte",
+  "vi": "Khoảng cách, các chiến dịch và mùa thu hoạch"
  },
  "Across six scenarios with 32 matched seeds each, moving the frontier from 180 to 540 km adds 40 campaign days and creates harvest overlap in every modelled year.": {
-  "zh-Hans": "在六个各含 32 个匹配种子的情景中，把边疆从 180 公里推到 540 公里会增加 40 天征战时间，并在每个模拟年造成与收成的重叠。"
+  "zh-Hans": "在六个各含 32 个匹配种子的情景中，把边疆从 180 公里推到 540 公里会增加 40 天征战时间，并在每个模拟年造成与收成的重叠。",
+  "fr": "Sur six scénarios comportant chacun 32 graines appariées, le déplacement de la frontière de 180 à 540 km ajoute 40 jours de campagne et crée un chevauchement avec la récolte dans chaque année modélisée.",
+  "vi": "Trên sáu kịch bản với 32 hạt giống được ghép cặp mỗi kịch bản, việc dịch chuyển biên giới từ 180 lên 540 km làm tăng thêm 40 ngày chiến dịch và tạo ra sự chồng lấn với mùa thu hoạch trong mọi năm được mô hình hóa."
  },
  "Unbounded stores mask food pressure in the default setup; historical quantities still need review.": {
-  "zh-Hans": "默认设置中无上限的仓储掩盖了粮食压力；历史数量仍需复核。"
+  "zh-Hans": "默认设置中无上限的仓储掩盖了粮食压力；历史数量仍需复核。",
+  "fr": "Des réserves illimitées masquent la pression alimentaire dans la configuration par défaut ; les quantités historiques restent à examiner.",
+  "vi": "Các kho dự trữ không giới hạn che khuất áp lực lương thực trong thiết lập mặc định; các số lượng lịch sử vẫn cần được xem xét."
  },
  "Stone, pledges and who pays when the court leaves": {
-  "zh-Hans": "巨石、盟誓，以及宫廷离开后谁买单"
+  "zh-Hans": "巨石、盟誓，以及宫廷离开后谁买单",
+  "fr": "Pierre, promesses et qui paie lorsque la cour s'en va",
+  "vi": "Đá, lời cam kết và ai trả giá khi triều đình rời đi"
  },
  "Default suppliers pledge during failed defence for 7.28 of 12 years on average; lowering trust reduces that to 2.34.": {
-  "zh-Hans": "默认情况下，供应者在防御失败的 12 年中平均盟誓 7.28 年；降低信任则降至 2.34 年。"
+  "zh-Hans": "默认情况下，供应者在防御失败的 12 年中平均盟誓 7.28 年；降低信任则降至 2.34 年。",
+  "fr": "Les fournisseurs par défaut s'engagent lors d'une défense manquée pendant 7,28 des 12 années en moyenne ; abaisser la confiance réduit ce chiffre à 2,34.",
+  "vi": "Các nhà cung cấp mặc định cam kết trong thời gian phòng thủ thất bại trung bình 7,28 trong số 12 năm; việc giảm mức tin cậy làm giảm con số đó xuống còn 2,34."
  },
  "With the same interruption, 21 of 32 courts exit. Allowing a funded return brings all 21 back.": {
   "zh-Hans": "同样的中断下，32 个宫廷中有 21 个退出。允许有经费保障的回归则 21 个全部回来。",
@@ -2267,24 +2470,34 @@
   "fr": "Avec la même interruption, 21 cours sur 32 partent. Autoriser un retour financé fait revenir les 21."
  },
  "These results test our belief rules. The numerical relationships have yet to be established historically.": {
-  "zh-Hans": "这些结果检验的是我们的信念规则。其数值关系尚待历史证实。"
+  "zh-Hans": "这些结果检验的是我们的信念规则。其数值关系尚待历史证实。",
+  "fr": "Ces résultats mettent à l'épreuve nos règles de croyance. Les relations numériques restent à établir sur le plan historique.",
+  "vi": "Những kết quả này kiểm nghiệm các quy tắc niềm tin của chúng ta. Các mối quan hệ số học vẫn chưa được xác lập về mặt lịch sử."
  },
  "Maintenance is the quiet variable": {
-  "zh-Hans": "维护是那个安静的变量"
+  "zh-Hans": "维护是那个安静的变量",
+  "fr": "L'entretien est la variable discrète",
+  "vi": "Bảo trì là biến số thầm lặng"
  },
  "The corrected maintenance-only drought median is 6,209 state-linked people, against an unchanged stable reference of 6,958.": {
-  "zh-Hans": "修正后的“仅削减维护”干旱情景中位数为 6,209 名国家控制人口，而稳定基准不变，为 6,958。"
+  "zh-Hans": "修正后的“仅削减维护”干旱情景中位数为 6,209 名国家控制人口，而稳定基准不变，为 6,958。",
+  "fr": "La médiane corrigée de la sécheresse en entretien seul est de 6 209 personnes liées à l'État, contre une référence stable inchangée de 6 958.",
+  "vi": "Trung vị hạn hán chỉ tính bảo trì đã hiệu chỉnh là 6.209 người gắn với nhà nước, so với mức tham chiếu ổn định không đổi là 6.958."
  },
  "No single mechanism carries the story: climate sets the timing, distance strains the army, and trust decides whether the centre holds. The models test mechanisms, not verdicts.": {
-  "zh-Hans": "没有哪个机制能独自讲完这个故事：气候决定时点，距离拖垮军队，信任决定中心能否维系。模型检验的是机制，而非判决书。"
+  "zh-Hans": "没有哪个机制能独自讲完这个故事：气候决定时点，距离拖垮军队，信任决定中心能否维系。模型检验的是机制，而非判决书。",
+  "fr": "Aucun mécanisme unique ne porte le récit : le climat fixe le calendrier, la distance éprouve l'armée et la confiance décide si le centre tient. Les modèles testent des mécanismes, non des verdicts.",
+  "vi": "Không có cơ chế đơn lẻ nào gánh vác toàn bộ câu chuyện: khí hậu quyết định thời điểm, khoảng cách gây sức ép lên quân đội, và lòng tin quyết định liệu trung tâm có trụ vững hay không. Các mô hình kiểm nghiệm cơ chế, không phải phán quyết."
  },
  "Open the full dashboard": {
   "zh-Hans": "打开完整仪表盘",
-  "vi": "Mở bảng điều khiển đầy đủ"
+  "vi": "Mở bảng điều khiển đầy đủ",
+  "fr": "Ouvrir le tableau de bord complet"
  },
  "Start the guided reconstruction": {
   "zh-Hans": "开始引导式重建",
-  "vi": "Bắt đầu tái dựng có hướng dẫn"
+  "vi": "Bắt đầu tái dựng có hướng dẫn",
+  "fr": "Lancer la reconstruction guidée"
  },
  "Choose a catalogue entry": {
   "zh-Hans": "选择目录条目",
@@ -2388,155 +2601,188 @@
  },
  "COMPUTATIONAL SOCIAL SCIENCE · BY TREY MENEFEE": {
   "zh-Hans": "计算社会科学 · TREY MENEFEE",
-  "vi": "KHOA HỌC XÃ HỘI TÍNH TOÁN · TREY MENEFEE"
+  "vi": "KHOA HỌC XÃ HỘI TÍNH TOÁN · TREY MENEFEE",
+  "fr": "SCIENCES SOCIALES COMPUTATIONNELLES · PAR TREY MENEFEE"
  },
  "Social science you can run.": {
   "zh-Hans": "可以亲手运行的社会科学。",
-  "vi": "Khoa học xã hội bạn có thể tự chạy."
- },
- "These are simulations of how societies work: why families pay for tutoring, why fertility collapsed across East Asia, why Angkor declined, how people walked out of Africa. Each one turns an argument into rules a computer can play out, thousands of times. Change the assumptions, run it, and see whether the story still holds.": {
-  "zh-Hans": "这里是关于社会如何运作的模拟：家庭为何花钱请家教，东亚生育率为何骤降，吴哥为何衰落，人类如何走出非洲。每个模型都把一个论点变成计算机可以反复推演成千上万次的规则。改变假设，运行模型，看看这个故事是否依然成立。",
-  "vi": "Đây là những mô phỏng về cách xã hội vận hành: vì sao các gia đình trả tiền học thêm, vì sao mức sinh ở Đông Á sụt giảm, vì sao Angkor suy tàn, con người đã rời châu Phi như thế nào. Mỗi mô hình biến một lập luận thành các quy tắc mà máy tính có thể chạy hàng nghìn lần. Hãy thay đổi giả định, chạy mô hình và xem câu chuyện còn đứng vững không."
+  "vi": "Khoa học xã hội bạn có thể tự chạy.",
+  "fr": "Des sciences sociales que vous pouvez exécuter."
  },
  "Start with a question": {
   "zh-Hans": "从一个问题开始",
-  "vi": "Bắt đầu từ một câu hỏi"
+  "vi": "Bắt đầu từ một câu hỏi",
+  "fr": "Commencer par une question"
  },
  "Read the essays on The Comparativist": {
   "zh-Hans": "阅读 The Comparativist 上的文章",
-  "vi": "Đọc các bài viết trên The Comparativist"
+  "vi": "Đọc các bài viết trên The Comparativist",
+  "fr": "Lire les essais sur The Comparativist"
  },
  "How it works": {
   "zh-Hans": "使用方法",
-  "vi": "Cách sử dụng"
+  "vi": "Cách sử dụng",
+  "fr": "Comment cela fonctionne"
  },
  "Pick a question": {
   "zh-Hans": "选择一个问题",
-  "vi": "Chọn một câu hỏi"
+  "vi": "Chọn một câu hỏi",
+  "fr": "Choisir une question"
  },
  "Each collection starts from a real puzzle and a short story of what the models found.": {
   "zh-Hans": "每个专题都从一个真实的谜题出发，并简要讲述模型的发现。",
-  "vi": "Mỗi bộ sưu tập bắt đầu từ một câu đố thực tế và một tóm tắt ngắn về những gì mô hình tìm ra."
+  "vi": "Mỗi bộ sưu tập bắt đầu từ một câu đố thực tế và một tóm tắt ngắn về những gì mô hình tìm ra.",
+  "fr": "Chaque collection part d'une énigme réelle et d'un court récit de ce que les modèles ont trouvé."
  },
  "Change the assumptions": {
   "zh-Hans": "改变假设",
-  "vi": "Thay đổi giả định"
+  "vi": "Thay đổi giả định",
+  "fr": "Modifier les hypothèses"
  },
  "Move the sliders: school fees, sea level, teacher pay, rainfall. Everything runs in your browser, nothing is sent anywhere.": {
   "zh-Hans": "拖动滑块：学费、海平面、教师工资、降雨量。所有计算都在你的浏览器中完成，不会上传任何数据。",
-  "vi": "Kéo các thanh trượt: học phí, mực nước biển, lương giáo viên, lượng mưa. Mọi thứ chạy trong trình duyệt của bạn, không gửi dữ liệu đi đâu."
+  "vi": "Kéo các thanh trượt: học phí, mực nước biển, lương giáo viên, lượng mưa. Mọi thứ chạy trong trình duyệt của bạn, không gửi dữ liệu đi đâu.",
+  "fr": "Déplacez les curseurs : frais de scolarité, niveau de la mer, salaire des enseignants, précipitations. Tout s'exécute dans votre navigateur, rien n'est envoyé nulle part."
  },
  "See what holds up": {
   "zh-Hans": "看看哪些结论站得住",
-  "vi": "Xem điều gì đứng vững"
+  "vi": "Xem điều gì đứng vững",
+  "fr": "Voir ce qui résiste"
  },
  "Every finding is labelled: measured from data, produced by a simulation, ruled out, or still open.": {
   "zh-Hans": "每项发现都有标注：来自数据、来自模拟、已被排除，或仍无定论。",
-  "vi": "Mỗi phát hiện đều được gắn nhãn: đo từ dữ liệu, tạo ra từ mô phỏng, đã bị loại trừ, hoặc còn bỏ ngỏ."
+  "vi": "Mỗi phát hiện đều được gắn nhãn: đo từ dữ liệu, tạo ra từ mô phỏng, đã bị loại trừ, hoặc còn bỏ ngỏ.",
+  "fr": "Chaque résultat est étiqueté : mesuré à partir de données, produit par une simulation, écarté ou encore ouvert."
  },
  "START WITH A QUESTION": {
   "zh-Hans": "从一个问题开始",
-  "vi": "BẮT ĐẦU TỪ MỘT CÂU HỎI"
+  "vi": "BẮT ĐẦU TỪ MỘT CÂU HỎI",
+  "fr": "COMMENCER PAR UNE QUESTION"
  },
  "{n} puzzles, {m} models.": {
   "zh-Hans": "{n} 个谜题，{m} 个模型。",
-  "vi": "{n} câu đố, {m} mô hình."
+  "vi": "{n} câu đố, {m} mô hình.",
+  "fr": "{n} énigmes, {m} modèles."
  },
  "Read what the models found": {
   "zh-Hans": "看看模型发现了什么",
-  "vi": "Xem mô hình tìm ra gì"
+  "vi": "Xem mô hình tìm ra gì",
+  "fr": "Lire ce que les modèles ont trouvé"
  },
  "HOW TO READ THESE MODELS": {
   "zh-Hans": "如何理解这些模型",
-  "vi": "CÁCH ĐỌC CÁC MÔ HÌNH"
+  "vi": "CÁCH ĐỌC CÁC MÔ HÌNH",
+  "fr": "COMMENT LIRE CES MODÈLES"
  },
  "No equations required.": {
   "zh-Hans": "无需公式。",
-  "vi": "Không cần phương trình."
+  "vi": "Không cần phương trình.",
+  "fr": "Aucune équation requise."
  },
  "Agent-based models": {
   "zh-Hans": "基于主体的模型",
-  "vi": "Mô hình dựa trên tác tử"
+  "vi": "Mô hình dựa trên tác tử",
+  "fr": "Modèles à base d'agents"
  },
  "Give thousands of simulated people, teachers or households simple rules, let them interact, and watch what patterns emerge at the level of the whole society.": {
   "zh-Hans": "给成千上万个模拟的人、教师或家庭设定简单规则，让他们相互作用，观察整个社会层面会涌现出什么模式。",
-  "vi": "Cho hàng nghìn người, giáo viên hay hộ gia đình mô phỏng những quy tắc đơn giản, để họ tương tác, và quan sát những khuôn mẫu nổi lên ở cấp độ toàn xã hội."
+  "vi": "Cho hàng nghìn người, giáo viên hay hộ gia đình mô phỏng những quy tắc đơn giản, để họ tương tác, và quan sát những khuôn mẫu nổi lên ở cấp độ toàn xã hội.",
+  "fr": "Donnez à des milliers de personnes, d'enseignants ou de ménages simulés des règles simples, laissez-les interagir et observez quels schémas émergent à l'échelle de la société tout entière."
  },
  "Monte Carlo": {
   "zh-Hans": "蒙特卡洛",
-  "vi": "Monte Carlo"
+  "vi": "Monte Carlo",
+  "fr": "Monte-Carlo"
  },
  "When we do not know an input, say how fast people walked, we draw it at random from a plausible range and run the model again. Hundreds of runs show which conclusions survive our ignorance and which depend on one guess.": {
   "zh-Hans": "当某个输入未知时，比如人们走得多快，我们就在合理范围内随机抽取一个值，再运行一次模型。数百次运行能显示哪些结论经得起不确定性，哪些只取决于一个猜测。",
-  "vi": "Khi không biết một đầu vào, chẳng hạn con người đi nhanh đến đâu, chúng tôi rút ngẫu nhiên một giá trị trong khoảng hợp lý và chạy lại mô hình. Hàng trăm lần chạy cho thấy kết luận nào đứng vững trước sự thiếu hiểu biết của chúng ta, và kết luận nào chỉ dựa vào một phỏng đoán."
+  "vi": "Khi không biết một đầu vào, chẳng hạn con người đi nhanh đến đâu, chúng tôi rút ngẫu nhiên một giá trị trong khoảng hợp lý và chạy lại mô hình. Hàng trăm lần chạy cho thấy kết luận nào đứng vững trước sự thiếu hiểu biết của chúng ta, và kết luận nào chỉ dựa vào một phỏng đoán.",
+  "fr": "Lorsqu'une donnée d'entrée nous est inconnue — par exemple la vitesse de marche des populations —, nous la tirons au hasard dans une plage plausible et relançons le modèle. Des centaines de simulations révèlent quelles conclusions résistent à notre ignorance et lesquelles reposent sur une seule hypothèse."
  },
  "Fitting to evidence": {
   "zh-Hans": "与证据拟合",
-  "vi": "Khớp với bằng chứng"
+  "vi": "Khớp với bằng chứng",
+  "fr": "Ajustement aux données"
  },
  "Keep only the simulated worlds that reproduce what we actually observe, then ask what those surviving worlds have in common.": {
   "zh-Hans": "只保留能重现实际观察结果的模拟世界，再看这些留下来的世界有什么共同点。",
-  "vi": "Chỉ giữ lại những thế giới mô phỏng tái hiện được điều ta thực sự quan sát, rồi hỏi chúng có điểm gì chung."
+  "vi": "Chỉ giữ lại những thế giới mô phỏng tái hiện được điều ta thực sự quan sát, rồi hỏi chúng có điểm gì chung.",
+  "fr": "Ne conserver que les mondes simulés qui reproduisent ce que nous observons réellement, puis se demander ce que ces mondes survivants ont en commun."
  },
  "THE FULL LIBRARY": {
   "zh-Hans": "完整模型库",
-  "vi": "TOÀN BỘ THƯ VIỆN"
+  "vi": "TOÀN BỘ THƯ VIỆN",
+  "fr": "LA BIBLIOTHÈQUE COMPLÈTE"
  },
  "Every model, searchable.": {
   "zh-Hans": "所有模型，均可搜索。",
-  "vi": "Mọi mô hình, đều tìm được."
+  "vi": "Mọi mô hình, đều tìm được.",
+  "fr": "Tous les modèles, consultables par recherche."
  },
  "Interactive models open here. Entries marked with ↗ open a standalone lab, a full write-up or a code-and-data download.": {
   "zh-Hans": "交互模型在此页面打开。标有 ↗ 的条目会打开独立实验室、完整报告或代码与数据下载。",
-  "vi": "Mô hình tương tác mở ngay tại đây. Mục có dấu ↗ mở một phòng thí nghiệm riêng, bài viết đầy đủ hoặc tải mã và dữ liệu."
+  "vi": "Mô hình tương tác mở ngay tại đây. Mục có dấu ↗ mở một phòng thí nghiệm riêng, bài viết đầy đủ hoặc tải mã và dữ liệu.",
+  "fr": "Les modèles interactifs s'ouvrent ici. Les entrées marquées d'un ↗ ouvrent un laboratoire autonome, une étude complète ou un téléchargement du code et des données."
  },
  "Deep history · Human dispersal": {
   "zh-Hans": "深层历史 · 人类扩散",
-  "vi": "Lịch sử sâu · Sự phát tán của loài người"
+  "vi": "Lịch sử sâu · Sự phát tán của loài người",
+  "fr": "Histoire profonde · Dispersion humaine"
  },
  "Deep history": {
   "zh-Hans": "深层历史",
-  "vi": "Lịch sử sâu"
+  "vi": "Lịch sử sâu",
+  "fr": "Histoire profonde"
  },
  "How did people get from Africa to Australia?": {
   "zh-Hans": "人类是如何从非洲走到澳大利亚的？",
-  "vi": "Con người đã đi từ châu Phi đến Úc như thế nào?"
+  "vi": "Con người đã đi từ châu Phi đến Úc như thế nào?",
+  "fr": "Comment les populations sont-elles passées de l'Afrique à l'Australie ?"
  },
  "Coast or herds? The route out of Africa": {
   "zh-Hans": "沿海岸还是追兽群？走出非洲的路线",
-  "vi": "Bờ biển hay đàn thú? Con đường rời châu Phi"
+  "vi": "Bờ biển hay đàn thú? Con đường rời châu Phi",
+  "fr": "Le littoral ou les troupeaux ? La route hors d'Afrique"
  },
  "Out of Africa model bundle": {
   "zh-Hans": "走出非洲模型包",
-  "vi": "Gói mô hình Rời châu Phi"
+  "vi": "Gói mô hình Rời châu Phi",
+  "fr": "Ensemble de modèles « Out of Africa »"
  },
  "Coast or herds? Out of Africa": {
   "zh-Hans": "沿海岸还是追兽群？走出非洲",
-  "vi": "Bờ biển hay đàn thú? Rời châu Phi"
+  "vi": "Bờ biển hay đàn thú? Rời châu Phi",
+  "fr": "Le littoral ou les troupeaux ? Hors d'Afrique"
  },
  "Coast or herds? How people got from Africa to Australia": {
   "zh-Hans": "沿海岸还是追兽群？人类如何从非洲到达澳大利亚",
-  "vi": "Bờ biển hay đàn thú? Con người đi từ châu Phi đến Úc thế nào"
+  "vi": "Bờ biển hay đàn thú? Con người đi từ châu Phi đến Úc thế nào",
+  "fr": "Le littoral ou les troupeaux ? Comment les populations sont passées de l'Afrique à l'Australie"
  },
  "Open the full write-up": {
   "zh-Hans": "打开完整报告",
-  "vi": "Mở bài viết đầy đủ"
+  "vi": "Mở bài viết đầy đủ",
+  "fr": "Ouvrir l'étude complète"
  },
  "Monte Carlo · least-cost dispersal": {
   "zh-Hans": "蒙特卡洛 · 最小成本扩散",
-  "vi": "Monte Carlo · phát tán chi phí thấp nhất"
+  "vi": "Monte Carlo · phát tán chi phí thấp nhất",
+  "fr": "Monte-Carlo · dispersion à moindre coût"
  },
  "Did the first people to reach Australia follow the shoreline or the big game? 800 simulated dispersals across a drowned Ice Age landscape.": {
   "zh-Hans": "最早抵达澳大利亚的人是沿着海岸前行，还是追随大型猎物？在如今已被海水淹没的冰期地貌上模拟了800次迁徙。",
-  "vi": "Những người đầu tiên đến Úc đi theo bờ biển hay theo thú lớn? Khám phá 800 lần mô phỏng di cư qua cảnh quan Kỷ Băng hà nay đã chìm dưới biển."
+  "vi": "Những người đầu tiên đến Úc đi theo bờ biển hay theo thú lớn? Khám phá 800 lần mô phỏng di cư qua cảnh quan Kỷ Băng hà nay đã chìm dưới biển.",
+  "fr": "Les premiers arrivants en Australie ont-ils suivi le littoral ou le gros gibier ? 800 dispersions simulées à travers un paysage englouti de l'ère glaciaire."
  },
  "The Python model, the 800-run Monte Carlo results, the landscape grid and the static maps.": {
   "zh-Hans": "包含 Python 模型、800次蒙特卡洛模拟结果、地貌网格和静态地图。",
-  "vi": "Bao gồm mô hình Python, kết quả 800 lần chạy Monte Carlo, lưới cảnh quan và các bản đồ tĩnh."
+  "vi": "Bao gồm mô hình Python, kết quả 800 lần chạy Monte Carlo, lưới cảnh quan và các bản đồ tĩnh.",
+  "fr": "Le modèle Python, les résultats Monte-Carlo sur 800 simulations, la grille paysagère et les cartes statiques."
  },
  "A paleo-landscape model of the exit from Africa 85,000–65,000 years ago: coast-huggers, big-game hunters and mixed foragers raced across shifting sea levels and Green Arabia.": {
   "zh-Hans": "模拟距今8.5万至6.5万年前人类走出非洲的古地貌：沿海迁徙者、大型猎物狩猎者和混合觅食者穿越海平面不断变化的地带与绿色阿拉伯。",
-  "vi": "Mô hình cổ cảnh quan về cuộc di cư khỏi châu Phi 85.000–65.000 năm trước: những người đi ven biển, săn thú lớn và kiếm ăn hỗn hợp vượt qua mực nước biển biến đổi và vùng Ả Rập xanh."
+  "vi": "Mô hình cổ cảnh quan về cuộc di cư khỏi châu Phi 85.000–65.000 năm trước: những người đi ven biển, săn thú lớn và kiếm ăn hỗn hợp vượt qua mực nước biển biến đổi và vùng Ả Rập xanh.",
+  "fr": "Un modèle de paléopaysage de la sortie d'Afrique il y a 85 000 à 65 000 ans : populations côtières, chasseurs de gros gibier et fourrageurs mixtes se sont déplacés au gré des variations du niveau marin et de l'Arabie verte."
  },
  "Canals need continuing work. Here maintenance falls to 35% of its reference level from year 55. The reshuffle also changes extraction, relief, trust and the grievance that drives flight, all at once. Compare the maintenance-only case first. Harvest still ignores the remaining farm workforce in this version.": {
   "vi": "Các kênh cần được tiếp tục công việc. Ở đây việc bảo trì giảm xuống còn 35% mức tham chiếu của nó kể từ năm 55. Việc tái cơ cấu cũng thay đổi khai thác, cứu trợ, niềm tin và sự bất mãn thúc đẩy việc bỏ đi, tất cả cùng một lúc. Hãy so sánh trường hợp chỉ bảo trì trước. Thu hoạch vẫn bỏ qua lực lượng lao động nông trại còn lại trong phiên bản này.",
@@ -2545,34 +2791,647 @@
  },
  "With a hard liquidity threshold the model fits no country's wealth profile. With a graded one it fits Cambodia and Vietnam, and then the data cannot tell the three explanations apart.": {
   "zh-Hans": "在硬性流动性阈值下，该模型不符合任何国家的财富分布特征。在分级阈值下，它符合柬埔寨和越南的情况，而这时数据无法区分这三种解释。",
-  "vi": "Với ngưỡng thanh khoản cứng, mô hình không phù hợp với hồ sơ tài sản của bất kỳ quốc gia nào. Với ngưỡng phân cấp, nó phù hợp với Campuchia và Việt Nam, và khi đó dữ liệu không thể phân biệt ba cách giải thích."
+  "vi": "Với ngưỡng thanh khoản cứng, mô hình không phù hợp với hồ sơ tài sản của bất kỳ quốc gia nào. Với ngưỡng phân cấp, nó phù hợp với Campuchia và Việt Nam, và khi đó dữ liệu không thể phân biệt ba cách giải thích.",
+  "fr": "Avec un seuil de liquidité strict, le modèle ne reproduit le profil de richesse d'aucun pays. Avec un seuil gradué, il reproduit ceux du Cambodge et du Vietnam, et les données ne permettent alors plus de distinguer les trois explications."
  },
  "Human-capital, positional and relational bundles were each drawn 24,000 times against country targets. With a hard liquidity threshold the model fits no country's wealth profile. With a graded one it fits Cambodia and Vietnam, and then the data cannot tell the three explanations apart.": {
   "zh-Hans": "人力资本、地位和关系组合各被抽取24,000次，以对照国家目标。在硬性流动性阈值下，该模型无法拟合任何国家的财富分布。在分级阈值下，它能拟合柬埔寨和越南，但随后数据无法区分这三种解释。",
-  "vi": "Các gói vốn nhân lực, vị thế và quan hệ mỗi loại được rút 24.000 lần để đối chiếu với các mục tiêu quốc gia. Với ngưỡng thanh khoản cứng, mô hình không khớp với hồ sơ tài sản của bất kỳ quốc gia nào. Với ngưỡng phân cấp, mô hình khớp với Campuchia và Việt Nam, và khi đó dữ liệu không thể phân biệt ba cách giải thích."
+  "vi": "Các gói vốn nhân lực, vị thế và quan hệ mỗi loại được rút 24.000 lần để đối chiếu với các mục tiêu quốc gia. Với ngưỡng thanh khoản cứng, mô hình không khớp với hồ sơ tài sản của bất kỳ quốc gia nào. Với ngưỡng phân cấp, mô hình khớp với Campuchia và Việt Nam, và khi đó dữ liệu không thể phân biệt ba cách giải thích.",
+  "fr": "Les ensembles capital humain, positionnel et relationnel ont chacun été tirés 24 000 fois face aux cibles nationales. Avec un seuil de liquidité strict, le modèle ne reproduit le profil de richesse d'aucun pays. Avec un seuil gradué, il reproduit ceux du Cambodge et du Vietnam, et les données ne permettent alors plus de distinguer les trois explications."
  },
  "Once the model fits the wealth profile, the relational-weight posterior equals its prior in every country tested. China's 2024–26 fall in gaokao registrants per birth (−5.3%) is outside every structure's prediction.": {
   "zh-Hans": "一旦模型拟合财富分布，关系权重后验在每一个测试国家中都等于其先验。中国2024–26年高考报名人数与出生人数之比下降（−5.3%），超出了所有结构的预测范围。",
-  "vi": "Khi mô hình khớp với cấu trúc phân bố tài sản, phân bố hậu nghiệm của trọng số quan hệ bằng phân bố tiên nghiệm của nó ở mọi quốc gia được kiểm tra. Mức giảm 2024–26 của Trung Quốc về số người đăng ký thi gaokao trên mỗi ca sinh (−5.3%) nằm ngoài dự đoán của mọi cấu trúc."
+  "vi": "Khi mô hình khớp với cấu trúc phân bố tài sản, phân bố hậu nghiệm của trọng số quan hệ bằng phân bố tiên nghiệm của nó ở mọi quốc gia được kiểm tra. Mức giảm 2024–26 của Trung Quốc về số người đăng ký thi gaokao trên mỗi ca sinh (−5.3%) nằm ngoài dự đoán của mọi cấu trúc.",
+  "fr": "Une fois le modèle ajusté au profil de richesse, la distribution a posteriori du poids relationnel est égale à sa distribution a priori dans chaque pays testé. La baisse de 2024–26 en Chine du nombre d'inscrits au gaokao par naissance (−5,3 %) sort de la prédiction de toutes les structures."
  },
  "A separate model offers three explanations for who leaves school, each predicting a share of lower-secondary non-completers from the poorest 40% of households. UIS completion rates by wealth quintile (from the Cambodia DHS 2021–22) put that share at 55–64%. With a hard liquidity threshold the relational floor predicts 85% and fails. With a graded threshold, which also fits the full quintile profile, all three predict 57–58% and fit.": {
   "zh-Hans": "另一个模型对谁辍学给出了三种解释，每种解释都预测了来自最贫困40%家庭的初中未完成者所占的比例。UIS按财富五分位划分的完成率（来自柬埔寨DHS 2021–22）将该比例定在55–64%。在硬性流动性阈值下，关系下限预测为85%，因此不成立。在分级阈值下——该阈值也拟合完整的五分位分布——三种解释均预测为57–58%，并且拟合。",
-  "vi": "Một mô hình riêng biệt đưa ra ba cách giải thích về việc ai rời bỏ trường học, mỗi cách dự đoán tỷ lệ học sinh không hoàn thành bậc trung học cơ sở đến từ 40% hộ gia đình nghèo nhất. Tỷ lệ hoàn thành của UIS theo nhóm ngũ phân vị tài sản (từ DHS Campuchia 2021–22) đặt tỷ lệ đó ở mức 55–64%. Với ngưỡng thanh khoản cứng, sàn quan hệ dự đoán 85% và không phù hợp. Với ngưỡng phân cấp, cũng phù hợp với toàn bộ hồ sơ ngũ phân vị, cả ba đều dự đoán 57–58% và phù hợp."
+  "vi": "Một mô hình riêng biệt đưa ra ba cách giải thích về việc ai rời bỏ trường học, mỗi cách dự đoán tỷ lệ học sinh không hoàn thành bậc trung học cơ sở đến từ 40% hộ gia đình nghèo nhất. Tỷ lệ hoàn thành của UIS theo nhóm ngũ phân vị tài sản (từ DHS Campuchia 2021–22) đặt tỷ lệ đó ở mức 55–64%. Với ngưỡng thanh khoản cứng, sàn quan hệ dự đoán 85% và không phù hợp. Với ngưỡng phân cấp, cũng phù hợp với toàn bộ hồ sơ ngũ phân vị, cả ba đều dự đoán 57–58% và phù hợp.",
+  "fr": "Un modèle distinct propose trois explications de l'abandon scolaire, chacune prédisant la part des non-diplômés du premier cycle du secondaire issus des 40 % de ménages les plus pauvres. Les taux d'achèvement de l'ISU par quintile de richesse (d'après l'EDS du Cambodge 2021–22) situent cette part entre 55 et 64 %. Avec un seuil de liquidité strict, le plancher relationnel prédit 85 % et échoue. Avec un seuil gradué, qui reproduit aussi le profil complet par quintile, les trois prédisent 57–58 % et s'ajustent."
  },
  "The verdict depends on how the liquidity constraint is modelled. The hard version misses the shape of the wealth gradient. The graded version fits it and cannot rank the explanations. These data do not discriminate the relational floor.": {
   "zh-Hans": "裁决取决于流动性约束如何建模。硬性版本未能捕捉财富梯度的形状。分级版本拟合了它，却无法对各项解释进行排序。这些数据无法区分关系性下限。",
-  "vi": "Phán quyết phụ thuộc vào cách mô hình hóa ràng buộc thanh khoản. Phiên bản cứng bỏ lỡ hình dạng của gradient tài sản. Phiên bản phân cấp khớp với nó và không thể xếp hạng các giải thích. Những dữ liệu này không phân biệt được sàn quan hệ."
+  "vi": "Phán quyết phụ thuộc vào cách mô hình hóa ràng buộc thanh khoản. Phiên bản cứng bỏ lỡ hình dạng của gradient tài sản. Phiên bản phân cấp khớp với nó và không thể xếp hạng các giải thích. Những dữ liệu này không phân biệt được sàn quan hệ.",
+  "fr": "Le verdict dépend de la modélisation de la contrainte de liquidité. La version stricte manque la forme du gradient de richesse. La version graduée la reproduit mais ne permet pas de classer les explications. Ces données ne permettent pas de discriminer le plancher relationnel."
  },
  "Recalibrated across 10 school systems, settings fit 37–44% of fresh random systems (up from 17–19%), but only 1–7% fit in most of them. The explanations agree on policy because the effect comes from code they share: removing the shared thin-market or alternative-provider channel moves all of them together, while the diversion mechanism changes nothing. Treat the policy effects as model-conditional.": {
   "zh-Hans": "在10个学校系统中重新校准后，设定可拟合37–44%的新随机系统（此前为17–19%），但在其中大多数系统中仅有1–7%可拟合。各解释在政策上一致，因为效应来自它们共享的代码：移除共享的薄市场或替代提供者渠道会使它们全部一起变动，而转移机制则毫无影响。应将政策效应视为以模型为条件的。",
-  "vi": "Sau khi hiệu chỉnh lại trên 10 hệ thống trường học, các thiết lập phù hợp với 37–44% hệ thống ngẫu nhiên mới (tăng từ 17–19%), nhưng chỉ 1–7% phù hợp ở phần lớn trong số chúng. Các giải thích đồng thuận về chính sách vì hiệu ứng đến từ mã mà chúng chia sẻ: loại bỏ kênh thị trường mỏng hoặc nhà cung cấp thay thế được chia sẻ sẽ khiến tất cả chúng dịch chuyển cùng nhau, trong khi cơ chế chuyển hướng không thay đổi gì. Hãy coi các hiệu ứng chính sách là có điều kiện theo mô hình."
+  "vi": "Sau khi hiệu chỉnh lại trên 10 hệ thống trường học, các thiết lập phù hợp với 37–44% hệ thống ngẫu nhiên mới (tăng từ 17–19%), nhưng chỉ 1–7% phù hợp ở phần lớn trong số chúng. Các giải thích đồng thuận về chính sách vì hiệu ứng đến từ mã mà chúng chia sẻ: loại bỏ kênh thị trường mỏng hoặc nhà cung cấp thay thế được chia sẻ sẽ khiến tất cả chúng dịch chuyển cùng nhau, trong khi cơ chế chuyển hướng không thay đổi gì. Hãy coi các hiệu ứng chính sách là có điều kiện theo mô hình.",
+  "fr": "Recalibrés sur 10 systèmes scolaires, les paramètres reproduisent 37 à 44 % de nouveaux systèmes aléatoires (contre 17 à 19 % auparavant), mais seulement 1 à 7 % dans la plupart d'entre eux. Les explications s'accordent sur les politiques parce que l'effet provient d'un code qu'elles partagent : retirer le canal commun du marché restreint ou du prestataire alternatif les déplace toutes ensemble, tandis que le mécanisme de diversion ne change rien. Traiter les effets de politique comme conditionnels au modèle."
  },
  "Even under the diversion explanation, calibrated teachers withhold almost nothing — median 0% of content held back. In about a fifth of fresh school systems, diversion settings withhold more than 1% (95th percentile 9%).": {
   "zh-Hans": "即使在转移解释下，校准教师也几乎不保留任何内容——所保留内容的中位数为0%。在约五分之一的新学校系统中，转移设置保留超过1%（第95百分位数为9%）。",
-  "vi": "Ngay cả theo cách giải thích chuyển hướng, các giáo viên đã hiệu chỉnh cũng gần như không giữ lại gì — trung vị 0% nội dung bị giữ lại. Trong khoảng một phần năm các hệ thống trường học mới, cài đặt chuyển hướng giữ lại hơn 1% (bách phân vị thứ 95 là 9%)."
+  "vi": "Ngay cả theo cách giải thích chuyển hướng, các giáo viên đã hiệu chỉnh cũng gần như không giữ lại gì — trung vị 0% nội dung bị giữ lại. Trong khoảng một phần năm các hệ thống trường học mới, cài đặt chuyển hướng giữ lại hơn 1% (bách phân vị thứ 95 là 9%).",
+  "fr": "Même sous l'explication par la diversion, les enseignants calibrés ne retiennent presque rien — médiane de 0 % du contenu non transmis. Dans environ un cinquième des nouveaux systèmes scolaires, les paramètres de diversion retiennent plus de 1 % (95e centile : 9 %)."
  },
  "Shadow education is not one disease with one cause. The model cannot crown a single explanation. Its explanations agree on policy only because they share most of their code, so the agreement is not independent evidence. Keep measuring to break the tie.": {
   "zh-Hans": "影子教育并非一种疾病对应一种病因。该模型无法裁定单一解释。其各项解释之所以在政策上一致，只是因为它们共享大部分代码，因此这种一致并非独立证据。继续测量以打破平局。",
-  "vi": "Giáo dục bóng tối không phải là một căn bệnh với một nguyên nhân duy nhất. Mô hình không thể tôn vinh một lời giải thích duy nhất. Các lời giải thích của nó chỉ đồng thuận về chính sách vì chúng chia sẻ phần lớn mã của mình, nên sự đồng thuận đó không phải là bằng chứng độc lập. Hãy tiếp tục đo lường để phá vỡ thế cân bằng."
+  "vi": "Giáo dục bóng tối không phải là một căn bệnh với một nguyên nhân duy nhất. Mô hình không thể tôn vinh một lời giải thích duy nhất. Các lời giải thích của nó chỉ đồng thuận về chính sách vì chúng chia sẻ phần lớn mã của mình, nên sự đồng thuận đó không phải là bằng chứng độc lập. Hãy tiếp tục đo lường để phá vỡ thế cân bằng.",
+  "fr": "L'éducation de l'ombre n'est pas une maladie unique à cause unique. Le modèle ne peut couronner une seule explication. Ses explications s'accordent sur les politiques uniquement parce qu'elles partagent l'essentiel de leur code ; cet accord ne constitue donc pas une preuve indépendante. Continuer à mesurer pour départager."
+ },
+ "Favour is not even a separate model. A favour for buying from your own teacher is the same as raising everyone’s demand and both outside costs by the same amount. Rewritten that way, all 116 fitted favour settings give exactly the same results as thin settings.": {
+  "zh-Hans": "“人情”甚至不是一个独立的模型。向自己老师购买所得的人情，等同于把所有人的需求和两种外部成本同时提高相同数值。这样改写后，116组拟合的人情参数与课时不足参数给出完全相同的结果。",
+  "fr": "La faveur ne constitue même pas un modèle distinct. Une faveur pour l'achat auprès de son propre enseignant équivaut à augmenter la demande de tous et les deux coûts externes du même montant. Réécrits ainsi, les 116 paramètres de faveur ajustés donnent exactement les mêmes résultats que les paramètres de marché restreint.",
+  "vi": "Ưu ái thậm chí không phải là một mô hình riêng. Việc ưu tiên mua từ chính giáo viên của mình tương đương với việc tăng nhu cầu của mọi người và cả hai chi phí bên ngoài lên cùng một lượng. Viết lại theo cách đó, cả 116 thiết lập ưu ái đã khớp đều cho kết quả hoàn toàn giống với các thiết lập thị trường mỏng."
+ },
+ "Explore development, family formation and birth timing across six economies. Compare the assumptions behind the fertility scenarios.": {
+  "zh-Hans": "探索六个经济体的发展、家庭形成与生育时间，比较生育情景背后的假设。",
+  "vi": "Khám phá phát triển, hình thành gia đình và thời điểm sinh con tại sáu nền kinh tế. So sánh các giả định của những kịch bản sinh sản.",
+  "fr": "Explorez le développement, la formation des familles et le calendrier des naissances dans six économies. Comparez les hypothèses des scénarios de fécondité."
+ },
+ "Exploratory lab · six economies": {
+  "zh-Hans": "探索实验室 · 六个经济体",
+  "vi": "Phòng thí nghiệm khám phá · sáu nền kinh tế",
+  "fr": "Laboratoire exploratoire · six économies"
+ },
+ "Historical code and results for exploratory fertility scenarios. Read the research protocols before interpreting fitted relationships or policy effects.": {
+  "zh-Hans": "生育探索情景的历史代码与结果。解释拟合关系或政策效果前，请阅读研究方案。",
+  "vi": "Mã và kết quả lịch sử của các kịch bản sinh sản mang tính khám phá. Đọc đề cương nghiên cứu trước khi diễn giải quan hệ được khớp hoặc tác động chính sách.",
+  "fr": "Code et résultats historiques de scénarios exploratoires de fécondité. Consultez les protocoles avant d’interpréter les relations ajustées ou les effets des politiques."
+ },
+ "Historical calibration bundle. Provider observation equations and the SMC evidence estimator were subsequently corrected; new calibration runs are required.": {
+  "zh-Hans": "历史校准包。后续修正了辅导提供者的观测方程和SMC证据估计量，需要重新校准。",
+  "vi": "Gói hiệu chỉnh lịch sử. Phương trình quan sát người cung cấp dạy thêm và bộ ước lượng bằng chứng SMC đã được sửa; cần chạy hiệu chỉnh lại.",
+  "fr": "Archive d’étalonnage historique. Les équations d’observation des prestataires et l’estimateur de preuve SMC ont été corrigés ; un nouvel étalonnage est nécessaire."
+ },
+ "Exploratory fertility models across six economies, with explicit assumptions about development, family formation, birth timing and period effects.": {
+  "zh-Hans": "六个经济体的生育探索模型，明确列出发展、家庭形成、生育时间和时期效应的假设。",
+  "vi": "Mô hình sinh sản khám phá tại sáu nền kinh tế, nêu rõ giả định về phát triển, hình thành gia đình, thời điểm sinh con và hiệu ứng thời kỳ.",
+  "fr": "Modèles exploratoires de fécondité dans six économies, avec des hypothèses explicites sur le développement, les familles, le calendrier des naissances et les effets de période."
+ },
+ "Explore rival mechanisms for private tutoring in Cambodia. Corrected provider measurements require recalibration; policy comparisons depend on shared rules.": {
+  "zh-Hans": "探索柬埔寨私人辅导的竞争机制。提供者测量修正后需要重新校准，政策比较取决于共同规则。",
+  "vi": "Khám phá các cơ chế cạnh tranh về dạy thêm tại Campuchia. Số đo người cung cấp đã sửa đòi hỏi hiệu chỉnh lại; so sánh chính sách phụ thuộc vào các quy tắc chung.",
+  "fr": "Explorez des mécanismes concurrents du tutorat privé au Cambodge. Les mesures corrigées des prestataires exigent un nouvel étalonnage ; les comparaisons dépendent de règles communes."
+ },
+ "Coast or herds? Full write-up": {
+  "zh-Hans": "沿海还是追随兽群？完整说明",
+  "vi": "Bờ biển hay đàn thú? Bài trình bày đầy đủ",
+  "fr": "Côtes ou troupeaux ? Présentation complète"
+ },
+ "Model bundle · code, data & maps": {
+  "zh-Hans": "模型包 · 代码、数据与地图",
+  "vi": "Gói mô hình · mã, dữ liệu và bản đồ",
+  "fr": "Archive du modèle · code, données et cartes"
+ },
+ "Political systems · CCP bus": {
+  "fr": "Systèmes politiques · bus du PCC",
+  "vi": "Hệ thống chính trị · xe buýt CCP",
+  "zh-Hans": "政治制度 · 中共巴士"
+ },
+ "If this year’s incentives fully determine this year’s corruption, then a campaign that changes incentives should change corruption, and history should not matter. If entry is sponsored, and sponsors and clients share exposure, then inherited networks can keep corruption high, or bring it back, after a campaign. The two views make different predictions about what happens after enforcement changes.": {
+  "fr": "Si les incitations de cette année déterminent entièrement la corruption de cette année, alors une campagne qui modifie les incitations devrait modifier la corruption, et l’histoire ne devrait pas compter. Si l’entrée est parrainée, et si les parrains et les clients partagent une même exposition, alors des réseaux hérités peuvent maintenir la corruption à un niveau élevé, ou la faire réapparaître, après une campagne. Les deux conceptions font des prédictions différentes sur ce qui se produit après un changement des dispositifs de répression.",
+  "vi": "Nếu các động cơ khuyến khích của năm nay quyết định hoàn toàn mức độ tham nhũng của năm nay, thì một chiến dịch làm thay đổi các động cơ khuyến khích lẽ ra phải làm thay đổi mức độ tham nhũng, và lịch sử lẽ ra không nên có vai trò gì. Nếu việc gia nhập diễn ra thông qua bảo trợ, và nếu người bảo trợ và người được bảo trợ cùng chia sẻ rủi ro phơi lộ, thì các mạng lưới kế thừa có thể giữ mức tham nhũng ở mức cao, hoặc làm nó quay trở lại, sau một chiến dịch. Hai quan điểm đưa ra những dự đoán khác nhau về điều gì xảy ra sau khi các biện pháp thực thi thay đổi.",
+  "zh-Hans": "如果今年的激励完全决定今年的腐败，那么改变激励的专项行动就应当改变腐败，而历史不应起作用。如果进入是通过赞助实现的，且赞助者与受庇护者共同承担暴露风险，那么继承下来的网络可以在专项行动之后使腐败维持在高位，或使其重新出现。这两种观点对执法变化之后会发生什么作出了不同的预测。"
+ },
+ "Chapter 1 · The hypothesis and the filings": {
+  "fr": "Chapitre 1 · L’hypothèse et les dossiers",
+  "vi": "Chương 1 · Giả thuyết và các hồ sơ",
+  "zh-Hans": "第1章 · 假设与立案"
+ },
+ "The observable outcome is disciplinary cases filed by the Central Commission for Discipline Inspection (CCDI), reported annually. Cases are not corruption prevalence: they mix detection, reporting, enforcement capacity and the underlying behaviour. The v7 training window is 2013–2019; the evaluation window is 2020–2025.": {
+  "fr": "Le résultat observable est constitué des affaires disciplinaires enregistrées par la Commission centrale de contrôle de la discipline (CCDI), rapportées annuellement. Les affaires ne correspondent pas à la prévalence de la corruption : elles mêlent détection, signalement, capacité de répression et comportement sous-jacent. La fenêtre d’entraînement de v7 est 2013–2019 ; la fenêtre d’évaluation est 2020–2025.",
+  "vi": "Kết quả quan sát được là các vụ việc kỷ luật do Ủy ban Kiểm tra Kỷ luật Trung ương (CCDI) lập hồ sơ, được báo cáo hằng năm. Số vụ việc không phải là tỷ lệ phổ biến của tham nhũng: chúng trộn lẫn giữa phát hiện, báo cáo, năng lực thực thi và hành vi nền tảng. Cửa sổ huấn luyện của v7 là 2013–2019; cửa sổ đánh giá là 2020–2025.",
+  "zh-Hans": "可观察的结果是中央纪律检查委员会（CCDI）立案并逐年报告的纪律案件。案件数并不等于腐败发生率：它们混合了发现、报告、执法能力与底层行为。v7 的训练窗口为 2013–2019；评估窗口为 2020–2025。"
+ },
+ "The hypothesis is stated as a mechanism: entry by sponsorship selects pliable clients and wires them into a sponsor’s circle; shared exposure keeps the network together after enforcement changes. The rival view is that current incentives alone determine current behaviour, so history cannot matter in the long run.": {
+  "fr": "L’hypothèse est formulée comme un mécanisme : l’entrée par parrainage sélectionne des clients dociles et les intègre au cercle d’un parrain ; l’exposition partagée maintient le réseau uni après un changement des dispositifs de répression. La conception rivale est que les incitations actuelles déterminent à elles seules le comportement actuel, de sorte que l’histoire ne peut pas compter à long terme.",
+  "vi": "Giả thuyết được phát biểu như một cơ chế: việc gia nhập thông qua bảo trợ lựa chọn những người được bảo trợ dễ uốn nắn và gắn họ vào vòng quan hệ của một người bảo trợ; rủi ro phơi lộ chung giữ mạng lưới gắn kết sau khi các biện pháp thực thi thay đổi. Quan điểm đối lập cho rằng chỉ các động cơ khuyến khích hiện tại quyết định hành vi hiện tại, nên về lâu dài lịch sử không thể có vai trò gì.",
+  "zh-Hans": "该假设被表述为一种机制：通过赞助进入会筛选出易于摆布的受庇护者，并将其接入赞助者的圈子；共同的暴露风险使网络在执法变化之后仍保持凝聚。对立观点认为，仅当前的激励就决定了当前的行为，因此从长远看历史不可能起作用。"
+ },
+ "National case counts are a coarse outcome. They cannot separate detection from behaviour, and seven annual training points cannot identify many behavioural parameters.": {
+  "fr": "Les décomptes nationaux d’affaires constituent un résultat grossier. Ils ne permettent pas de séparer la détection du comportement, et sept points d’entraînement annuels ne peuvent identifier de nombreux paramètres comportementaux.",
+  "vi": "Số liệu vụ việc toàn quốc là một kết quả thô. Chúng không thể tách phát hiện khỏi hành vi, và bảy điểm huấn luyện hằng năm không thể nhận dạng được nhiều tham số hành vi.",
+  "zh-Hans": "全国案件数是粗略的结果。它们无法将发现与行为区分开来，而七个年度训练点也无法识别许多行为参数。"
+ },
+ "Chapter 2 · v1 rival mechanisms": {
+  "fr": "Chapitre 2 · Mécanismes rivaux de v1",
+  "vi": "Chương 2 · Các cơ chế đối lập của v1",
+  "zh-Hans": "第2章 · v1 的对立机制"
+ },
+ "v1 sets three small rival families to the same 30% corruption snapshot: current incentives (principal–agent, Markov), social trap (peer norms, detection that depends on honest peers, finite enforcement capacity), and bus (social trap plus sponsored entry and threat-driven rewiring).": {
+  "fr": "v1 applique trois petites familles rivales au même instantané de 30 % de corruption : incitations actuelles (principal–agent, Markov), piège social (normes des pairs, détection dépendant de pairs honnêtes, capacité de répression finie) et bus (piège social plus entrée parrainée et reconfiguration guidée par la menace).",
+  "vi": "v1 áp đặt ba nhóm cơ chế đối lập nhỏ lên cùng một ảnh chụp trạng thái tham nhũng 30%: động cơ khuyến khích hiện tại (ủy nhiệm–đại lý, Markov), bẫy xã hội (chuẩn mực đồng nghiệp, phát hiện phụ thuộc vào những người đồng cấp trung thực, năng lực thực thi hữu hạn), và xe buýt (bẫy xã hội cộng với gia nhập có bảo trợ và tái cấu trúc quan hệ do mối đe dọa thúc đẩy).",
+  "zh-Hans": "v1 将三个小型对立机制族设定为同一个 30% 腐败快照：当前激励（委托–代理、马尔可夫）、社会陷阱（同伴规范、依赖诚实同伴的发现、有限的执法能力）以及巴士（社会陷阱加上赞助式进入和威胁驱动的重新连线）。"
+ },
+ "v1 is a small mechanism demonstration, not a calibrated model of China. The parameters are hypotheses to be estimated, not facts.": {
+  "fr": "v1 est une petite démonstration de mécanisme, non un modèle calibré de la Chine. Les paramètres sont des hypothèses à estimer, non des faits.",
+  "vi": "v1 là một minh họa cơ chế nhỏ, không phải một mô hình đã hiệu chỉnh về Trung Quốc. Các tham số là những giả thuyết cần được ước lượng, không phải sự kiện.",
+  "zh-Hans": "v1 是一个小型机制演示，而非经过校准的中国模型。这些参数是待估计的假设，而非事实。"
+ },
+ "Chapter 3 · v3 economy and factions": {
+  "fr": "Chapitre 3 · Économie et factions de v3",
+  "vi": "Chương 3 · Kinh tế và phe phái của v3",
+  "zh-Hans": "第3章 · v3 的经济与派系"
+ },
+ "v3 adds land revenue, credit, PLA procurement, four sectors and faction dynamics: patron protection, encirclement, hiding, bandwagoning and succession.": {
+  "fr": "v3 ajoute les recettes foncières, le crédit, les marchés publics de l’APL, quatre secteurs et une dynamique factionnelle : protection par un patron, encerclement, dissimulation, ralliement et succession.",
+  "vi": "v3 bổ sung nguồn thu từ đất, tín dụng, mua sắm của PLA, bốn khu vực và động lực phe phái: sự che chở của người bảo trợ, bao vây, ẩn náu, theo phe mạnh và kế vị.",
+  "zh-Hans": "v3 增加了土地收入、信贷、解放军采购、四个部门以及派系动态：庇护者保护、包围、隐匿、随大流和继承。"
+ },
+ "The 17 accepted fits are exploratory and fitted. They are not tested out of sample. The AUC comparison is a fitted association, not a causal claim about faction or corruption.": {
+  "fr": "Les 17 ajustements acceptés sont exploratoires et ajustés. Ils ne sont pas testés hors échantillon. La comparaison des AUC est une association ajustée, non une affirmation causale sur les factions ou la corruption.",
+  "vi": "17 kết quả khớp được chấp nhận là mang tính thăm dò và đã được khớp. Chúng chưa được kiểm định ngoài mẫu. So sánh AUC là một liên hệ đã được khớp, không phải một khẳng định nhân quả về phe phái hay tham nhũng.",
+  "zh-Hans": "17 个被接受的拟合是探索性的且经过拟合的。它们未经过样本外检验。AUC 比较是一种拟合关联，而非关于派系或腐败的因果主张。"
+ },
+ "Chapter 4 · v6 institutional kernel": {
+  "fr": "Chapitre 4 · Noyau institutionnel de v6",
+  "vi": "Chương 4 · Hạt nhân thể chế của v6",
+  "zh-Hans": "第4章 · v6 制度内核"
+ },
+ "v6 is a 50,000-agent, 64-organisation, 5-rank kernel with Tilly-labelled mechanisms. It is the shared kernel on which v7 compares the three rival families.": {
+  "fr": "v6 est un noyau de 50 000 agents, 64 organisations et 5 rangs, doté de mécanismes étiquetés selon Tilly. C’est le noyau commun sur lequel v7 compare les trois familles rivales.",
+  "vi": "v6 là một hạt nhân gồm 50.000 tác nhân, 64 tổ chức, 5 cấp bậc, với các cơ chế được gắn nhãn theo Tilly. Đây là hạt nhân chung mà trên đó v7 so sánh ba nhóm cơ chế đối lập.",
+  "zh-Hans": "v6 是一个包含 50,000 个主体、64 个组织、5 个层级的内核，并带有以 Tilly 命名的机制。它是 v7 用来比较三个对立机制族的共享内核。"
+ },
+ "v6 is illustrative and uncalibrated. Its outputs are not evidence about China; they are a platform for the v7 comparison.": {
+  "fr": "v6 est illustratif et non calibré. Ses résultats ne constituent pas des preuves sur la Chine ; ils forment une plateforme pour la comparaison de v7.",
+  "vi": "v6 mang tính minh họa và chưa được hiệu chỉnh. Các kết quả của nó không phải là bằng chứng về Trung Quốc; chúng là một nền tảng cho so sánh của v7.",
+  "zh-Hans": "v6 是示意性的且未经校准。其输出并非关于中国的证据；它们是用于 v7 比较的平台。"
+ },
+ "Chapter 5 · v7 retrospective comparison": {
+  "fr": "Chapitre 5 · Comparaison rétrospective de v7",
+  "vi": "Chương 5 · So sánh hồi cứu của v7",
+  "zh-Hans": "第5章 · v7 回顾性比较"
+ },
+ "v7 compares the three rival families (current incentives, social trap, bus) on the v6 kernel. It is not a comparison across version numbers. Fitted on 2013–2019 filings; scored on 2020–2025. The outcome is disciplinary cases, not corruption prevalence.": {
+  "fr": "v7 compare les trois familles rivales (incitations actuelles, piège social, bus) sur le noyau v6. Il ne s’agit pas d’une comparaison entre numéros de version. Ajusté sur les dossiers de 2013–2019 ; évalué sur 2020–2025. Le résultat est constitué des affaires disciplinaires, non de la prévalence de la corruption.",
+  "vi": "v7 so sánh ba nhóm cơ chế đối lập (động cơ khuyến khích hiện tại, bẫy xã hội, xe buýt) trên hạt nhân v6. Đây không phải là so sánh giữa các số phiên bản. Được khớp trên các hồ sơ 2013–2019; được tính điểm trên 2020–2025. Kết quả là các vụ việc kỷ luật, không phải tỷ lệ phổ biến của tham nhũng.",
+  "zh-Hans": "v7 在 v6 内核上比较三个对立机制族（当前激励、社会陷阱、巴士）。这不是跨版本号的比较。在 2013–2019 年立案数据上拟合；在 2020–2025 年上评分。结果是纪律案件，而非腐败发生率。"
+ },
+ "Log RMSE at 50,000 agents, strict: current incentives 0.195, social trap 0.190, bus 0.190. Bus and social trap are indistinguishable (0.1898 vs 0.1896). At the fitted settings the extra bus mechanisms do nothing for case counts.": {
+  "fr": "Log RMSE à 50 000 agents, strict : incitations actuelles 0,195, piège social 0,190, bus 0,190. Bus et piège social sont indiscernables (0,1898 contre 0,1896). Aux réglages ajustés, les mécanismes supplémentaires du bus n’apportent rien aux décomptes d’affaires.",
+  "vi": "Log RMSE với 50.000 tác nhân, chế độ nghiêm ngặt: động cơ khuyến khích hiện tại 0,195, bẫy xã hội 0,190, xe buýt 0,190. Xe buýt và bẫy xã hội không thể phân biệt được (0,1898 so với 0,1896). Ở các thiết lập đã khớp, các cơ chế bổ sung của xe buýt không tác động gì đến số vụ việc.",
+  "zh-Hans": "50,000 个主体下的对数 RMSE，严格模式：当前激励 0.195，社会陷阱 0.190，巴士 0.190。巴士与社会陷阱无法区分（0.1898 对 0.1896）。在拟合设置下，巴士的额外机制对案件数没有任何作用。"
+ },
+ "Retrospective: the 2020–25 outcomes were already known when the exercise was designed. An independent future period or organisational holdout is needed for an untouched test. The six yearly errors are highly correlated and too few for a reliable model ranking.": {
+  "fr": "Rétrospectif : les résultats de 2020–25 étaient déjà connus lors de la conception de l’exercice. Une période future indépendante ou un échantillon de rétention organisationnel est nécessaire pour un test non touché. Les six erreurs annuelles sont fortement corrélées et trop peu nombreuses pour un classement fiable des modèles.",
+  "vi": "Hồi cứu: các kết quả 2020–25 đã được biết khi bài tập này được thiết kế. Cần một giai đoạn tương lai độc lập hoặc một tập giữ lại theo tổ chức để có một kiểm định chưa bị chạm tới. Sáu sai số hằng năm có tương quan cao và quá ít để xếp hạng mô hình một cách đáng tin cậy.",
+  "zh-Hans": "回顾性：在设计该练习时，2020–25 年的结果已经已知。需要进行未受触碰的检验，就需要一个独立的未来时期或组织层面的留出集。六个年度误差高度相关，且数量太少，无法可靠地对模型进行排序。"
+ },
+ "Room for improvement: compare provincial land receipts and fines/fees, add organisational or faction evidence, and run head-replacement and full-reset experiments. A future forecast must state its information cutoff and score only outcomes not already seen. These proposed checks are not completed findings.": {
+  "fr": "Pistes d’amélioration : comparer les recettes foncières provinciales et les amendes/redevances, ajouter des éléments organisationnels ou factionnels, et mener des expériences de remplacement de tête et de réinitialisation complète. Une prévision future doit indiquer sa date limite d’information et n’évaluer que des résultats non déjà observés. Ces vérifications proposées ne sont pas des résultats achevés.",
+  "vi": "Dư địa cải thiện: so sánh nguồn thu từ đất và tiền phạt/phí ở cấp tỉnh, bổ sung bằng chứng về tổ chức hoặc phe phái, và chạy các thí nghiệm thay thế người đứng đầu và đặt lại hoàn toàn. Một dự báo tương lai phải nêu rõ mốc cắt thông tin của nó và chỉ tính điểm những kết quả chưa từng được thấy. Các kiểm tra được đề xuất này không phải là những phát hiện đã hoàn thành.",
+  "zh-Hans": "改进空间：比较省级土地收入与罚款/收费，增加组织或派系证据，并开展更换负责人和完全重置实验。未来预测必须说明其信息截止点，并且只对尚未见过的结果评分。这些拟议的检验并非已完成的发现。"
+ },
+ "forecast cases filed in year t": {
+  "fr": "prévoir les affaires enregistrées pour l’année t",
+  "vi": "dự báo số vụ việc được lập hồ sơ trong năm t",
+  "zh-Hans": "预测第 t 年立案的案件数"
+ },
+ "A forecast of 700 against an observation of 1,000 gives ln 700 − ln 1,000 ≈ −0.357; squared ≈ 0.127. Averaging over years and taking the square root gives the reported log RMSE.": {
+  "fr": "Une prévision de 700 face à une observation de 1 000 donne ln 700 − ln 1 000 ≈ −0,357 ; au carré ≈ 0,127. La moyenne sur les années puis la racine carrée donnent le log RMSE rapporté.",
+  "vi": "Một dự báo 700 so với quan sát 1.000 cho ln 700 − ln 1.000 ≈ −0,357; bình phương ≈ 0,127. Lấy trung bình qua các năm và lấy căn bậc hai cho ra log RMSE được báo cáo.",
+  "zh-Hans": "预测值为 700 而观测值为 1,000 时，得到 ln 700 − ln 1,000 ≈ −0.357；平方 ≈ 0.127。对各年取平均并取平方根，即得到所报告的对数 RMSE。"
+ },
+ "CCP bus · Rival mechanisms": {
+  "fr": "Bus du PCC · Mécanismes rivaux",
+  "vi": "Xe buýt CCP · Các cơ chế đối lập",
+  "zh-Hans": "中共巴士 · 对立机制"
+ },
+ "Adds land revenue, credit, PLA procurement, four sectors and faction dynamics. Pattern-oriented ABC against CCDI cases plus six qualitative patterns; 17 accepted fits. Not tested out of sample.": {
+  "fr": "Ajoute les recettes foncières, le crédit, les marchés publics de l’APL, quatre secteurs et une dynamique factionnelle. ABC orienté motifs contre les affaires de la CCDI plus six motifs qualitatifs ; 17 ajustements acceptés. Non testé hors échantillon.",
+  "vi": "Bổ sung nguồn thu từ đất, tín dụng, mua sắm của PLA, bốn khu vực và động lực phe phái. ABC định hướng theo mẫu hình đối chiếu với các vụ việc của CCDI cùng sáu mẫu hình định tính; 17 kết quả khớp được chấp nhận. Chưa được kiểm định ngoài mẫu.",
+  "zh-Hans": "增加土地收入、信贷、解放军采购、四个部门以及派系动态。针对 CCDI 案件以及六个定性模式进行面向模式的 ABC；17 个被接受的拟合。未经过样本外检验。"
+ },
+ "CCP bus · Identification comparison": {
+  "fr": "Bus du PCC · Comparaison d’identification",
+  "vi": "Xe buýt CCP · So sánh nhận dạng",
+  "zh-Hans": "中共巴士 · 识别比较"
+ },
+ "Which rival mechanism — enforcement, social trap or bus — best reproduces the observed pattern of disciplinary filings?": {
+  "fr": "Quel mécanisme rival — répression, piège social ou bus — reproduit le mieux le schéma observé des dossiers disciplinaires ?",
+  "vi": "Cơ chế đối lập nào — thực thi, bẫy xã hội hay xe buýt — tái tạo tốt nhất mẫu hình quan sát được của các hồ sơ kỷ luật?",
+  "zh-Hans": "哪一种对立机制——执法、社会陷阱还是巴士——最能再现所观察到的纪律立案模式？"
+ },
+ "Stored experiment · Exploratory fit": {
+  "fr": "Expérience stockée · Ajustement exploratoire",
+  "vi": "Thí nghiệm đã lưu · Khớp thăm dò",
+  "zh-Hans": "已存储实验 · 探索性拟合"
+ },
+ "How do three mechanism families compare on identification in a common kernel — what each can and cannot distinguish given the observed disciplinary filings?": {
+  "fr": "Comment trois familles de mécanismes se comparent-elles en matière d’identification dans un noyau commun — qu’est-ce que chacune peut et ne peut pas distinguer compte tenu des dossiers disciplinaires observés ?",
+  "vi": "Ba nhóm cơ chế so sánh với nhau như thế nào về nhận dạng trong một hạt nhân chung — mỗi nhóm có thể và không thể phân biệt được điều gì khi dựa trên các hồ sơ kỷ luật quan sát được?",
+  "zh-Hans": "在共同内核中，三个机制族在识别方面如何比较——鉴于所观察到的纪律立案，各自能够区分和不能区分什么？"
+ },
+ "Can enforcement change corruption when obligations outlast a campaign?": {
+  "fr": "La répression peut-elle modifier la corruption lorsque les obligations survivent à une campagne ?",
+  "vi": "Liệu việc thực thi có thể làm thay đổi tham nhũng khi các nghĩa vụ kéo dài lâu hơn một chiến dịch?",
+  "zh-Hans": "当义务存续时间超过一场专项行动时，执法能否改变腐败？"
+ },
+ "CCP bus · Economy and factions (v3)": {
+  "fr": "Bus du PCC · Économie et factions (v3)",
+  "vi": "Xe buýt CCP · Kinh tế và phe phái (v3)",
+  "zh-Hans": "中共巴士 · 经济与派系（v3）"
+ },
+ "Source · experiments/ccp-bus/models/": {
+  "fr": "Source · experiments/ccp-bus/models/",
+  "vi": "Nguồn · experiments/ccp-bus/models/",
+  "zh-Hans": "来源 · experiments/ccp-bus/models/"
+ },
+ "Does a sponsored entry route keep corruption going after a campaign?": {
+  "fr": "Une voie d'entrée parrainée permet-elle à la corruption de se poursuivre après une campagne ?",
+  "vi": "Liệu một con đường gia nhập được bảo trợ có khiến tham nhũng tiếp diễn sau một chiến dịch không?",
+  "zh-Hans": "受赞助的准入途径是否会使腐败在一场运动之后持续下去？"
+ },
+ "We follow a modular “model of models” design (Page, The Model Thinker): a broad framework whose pieces switch on and off, each tested against the pattern it bears on. Each added mechanism must earn its place against a pattern in data (Grimm et al. 2005, pattern-oriented modelling).": {
+  "fr": "Nous suivons une conception modulaire de « modèle de modèles » (Page, The Model Thinker) : un cadre général dont les pièces s'activent et se désactivent, chacune étant testée par rapport au motif qu'elle concerne. Chaque mécanisme ajouté doit justifier sa place par rapport à un motif dans les données (Grimm et al. 2005, modélisation orientée motifs).",
+  "vi": "Chúng tôi theo đuổi thiết kế mô-đun “mô hình của các mô hình” (Page, The Model Thinker): một khung tổng quát mà các thành phần có thể bật và tắt, mỗi thành phần được kiểm nghiệm dựa trên mẫu hình mà nó liên quan. Mỗi cơ chế được thêm vào phải chứng minh được vị trí của mình dựa trên một mẫu hình trong dữ liệu (Grimm et al. 2005, mô hình hóa định hướng mẫu hình).",
+  "zh-Hans": "我们采用模块化的“模型之模型”设计（Page, The Model Thinker）：一个宽泛的框架，其各组成部分可开启和关闭，每一部分都针对其所对应的模式进行检验。每一个新增机制都必须针对数据中的某一模式证明其存在的价值（Grimm et al. 2005，模式导向建模）。"
+ },
+ "Path dependence, and what the data can see": {
+  "fr": "La dépendance au sentier, et ce que les données peuvent voir",
+  "vi": "Sự phụ thuộc lộ trình, và những gì dữ liệu có thể thấy",
+  "zh-Hans": "路径依赖，以及数据所能看到的"
+ },
+ "Annual cases filed (thousands): 618 in 2020, 631 in 2021, 596 in 2022, 626 in 2023, 877 in 2024, 1,012 in 2025. The 2024–25 surge is the pattern any mechanism has to explain.": {
+  "fr": "Nombre annuel de dossiers déposés (en milliers) : 618 en 2020, 631 en 2021, 596 en 2022, 626 en 2023, 877 en 2024, 1 012 en 2025. La montée en flèche de 2024-25 est le motif que tout mécanisme doit expliquer.",
+  "vi": "Số vụ việc được thụ lý hằng năm (nghìn vụ): 618 vào năm 2020, 631 vào năm 2021, 596 vào năm 2022, 626 vào năm 2023, 877 vào năm 2024, 1.012 vào năm 2025. Sự gia tăng đột biến giai đoạn 2024–25 là mẫu hình mà bất kỳ cơ chế nào cũng phải giải thích.",
+  "zh-Hans": "每年立案数（千件）：2020年为618，2021年为631，2022年为596，2023年为626，2024年为877，2025年为1,012。2024–25年的激增是任何机制都必须解释的模式。"
+ },
+ "The models are synthetic. Agents are not real officials. The models do not claim that any real person was corrupt, was selected personally, or had any particular motive.": {
+  "fr": "Les modèles sont synthétiques. Les agents ne sont pas de véritables responsables. Les modèles n'affirment pas qu'une personne réelle ait été corrompue, ait été sélectionnée personnellement ou ait eu un motif particulier.",
+  "vi": "Các mô hình là tổng hợp. Các tác nhân không phải là quan chức thực. Các mô hình không khẳng định rằng bất kỳ người thật nào đã tham nhũng, đã được lựa chọn cá nhân, hay có bất kỳ động cơ cụ thể nào.",
+  "zh-Hans": "这些模型是合成性的。智能体并非真实的官员。这些模型并不声称任何真实的人曾腐败、曾被个人挑选，或具有任何特定动机。"
+ },
+ "Briefing for review (19 November 2026)": {
+  "fr": "Note d'information pour examen (19 novembre 2026)",
+  "vi": "Bản tóm tắt để xem xét (ngày 19 tháng 11 năm 2026)",
+  "zh-Hans": "供审阅的简报（2026年11月19日）"
+ },
+ "Three small families on the same snapshot": {
+  "fr": "Trois petites familles sur le même instantané",
+  "vi": "Ba họ nhỏ trên cùng một ảnh chụp trạng thái",
+  "zh-Hans": "同一快照上的三个小型族系"
+ },
+ "Current incentives: an official’s choice depends only on current deterrence. Social trap: strategic complementarities can produce multiple equilibria and hysteresis. Bus: adds sponsored entry that selects pliable clients and wires them into the sponsor’s circle, plus rewiring of corrupt officials toward each other.": {
+  "fr": "Incitations actuelles : le choix d'un responsable dépend uniquement de la dissuasion actuelle. Piège social : les complémentarités stratégiques peuvent produire des équilibres multiples et une hystérésis. Bus : ajoute une entrée parrainée qui sélectionne des clients malléables et les intègre au cercle du parrain, ainsi qu'un recâblage des responsables corrompus les uns vers les autres.",
+  "vi": "Động cơ hiện hành: lựa chọn của một quan chức chỉ phụ thuộc vào sự răn đe hiện tại. Bẫy xã hội: các bổ trợ chiến lược có thể tạo ra nhiều điểm cân bằng và hiện tượng trễ. Bus: bổ sung con đường gia nhập được bảo trợ, lựa chọn những khách hàng dễ uốn nắn và gắn họ vào vòng tròn của người bảo trợ, cùng với việc tái kết nối các quan chức tham nhũng với nhau.",
+  "zh-Hans": "当前激励：官员的选择仅取决于当前的威慑。社会陷阱：策略互补性可产生多重均衡与滞后现象。Bus：增加受赞助的准入途径，该途径挑选易受摆布的客户并将其接入赞助者的圈子，同时将腐败官员相互重新连接。"
+ },
+ "v1 model source and experiments": {
+  "fr": "Source et expériences du modèle v1",
+  "vi": "Mã nguồn và thí nghiệm của mô hình v1",
+  "zh-Hans": "v1模型源代码与实验"
+ },
+ "Adding land, credit and factions": {
+  "fr": "Ajout du foncier, du crédit et des factions",
+  "vi": "Bổ sung đất đai, tín dụng và các phe phái",
+  "zh-Hans": "加入土地、信贷与派系"
+ },
+ "Pattern-oriented approximate Bayesian computation (ABC) against CCDI cases plus six qualitative patterns. The model is fitted to the patterns it is asked to reproduce.": {
+  "fr": "Calcul bayésien approximatif (ABC) orienté motifs par rapport aux affaires de la CCDI, plus six motifs qualitatifs. Le modèle est ajusté aux motifs qu'on lui demande de reproduire.",
+  "vi": "Tính toán Bayes xấp xỉ (ABC) định hướng mẫu hình dựa trên các vụ việc của CCDI cùng sáu mẫu hình định tính. Mô hình được khớp với các mẫu hình mà nó được yêu cầu tái tạo.",
+  "zh-Hans": "针对CCDI案件以及六个定性模式的模式导向近似贝叶斯计算（ABC）。该模型被拟合至要求其再现的模式。"
+ },
+ "v3 README": {
+  "fr": "README v3",
+  "vi": "README v3",
+  "zh-Hans": "v3 README"
+ },
+ "A larger kernel, uncalibrated": {
+  "fr": "Un noyau plus grand, non calibré",
+  "vi": "Một hạt nhân lớn hơn, chưa được hiệu chỉnh",
+  "zh-Hans": "更大的内核，未经校准"
+ },
+ "The kernel is engineered for accounting and personnel identity. Mechanisms are labelled with Tilly’s vocabulary so that each can be switched on and off.": {
+  "fr": "Le noyau est conçu pour la comptabilité et l'identité du personnel. Les mécanismes sont étiquetés selon le vocabulaire de Tilly afin que chacun puisse être activé et désactivé.",
+  "vi": "Hạt nhân được thiết kế cho kế toán và nhận dạng nhân sự. Các cơ chế được gán nhãn theo từ vựng của Tilly để mỗi cơ chế có thể được bật và tắt.",
+  "zh-Hans": "该内核为会计与人员身份识别而设计。各机制以Tilly的术语加以标注，以便每一机制均可开启和关闭。"
+ },
+ "v6 results": {
+  "fr": "Résultats v6",
+  "vi": "Kết quả v6",
+  "zh-Hans": "v6结果"
+ },
+ "Three families on a common kernel": {
+  "fr": "Trois familles sur un noyau commun",
+  "vi": "Ba họ trên một hạt nhân chung",
+  "zh-Hans": "共同内核上的三个族系"
+ },
+ "Strict forecasts hold land receipts at their 2019 level. Conditional hindcasts use realized land receipts. The 2019 land figure was published in May 2020, so the information cutoff is 24 May 2020.": {
+  "fr": "Les prévisions strictes maintiennent les recettes foncières à leur niveau de 2019. Les rétroprévisions conditionnelles utilisent les recettes foncières réalisées. Le chiffre foncier de 2019 a été publié en mai 2020, de sorte que la date limite d'information est le 24 mai 2020.",
+  "vi": "Các dự báo nghiêm ngặt giữ doanh thu đất ở mức năm 2019. Các dự báo ngược có điều kiện sử dụng doanh thu đất thực tế. Con số đất đai năm 2019 được công bố vào tháng 5 năm 2020, do đó mốc cắt thông tin là ngày 24 tháng 5 năm 2020.",
+  "zh-Hans": "严格预测将土地收入保持在2019年水平。条件性回溯预测使用实际土地收入。2019年土地数据于2020年5月公布，因此信息截止日期为2020年5月24日。"
+ },
+ "All three miss the 2024–25 surge. They beat a last-value forecast on log RMSE (0.19 vs 0.25) mainly because last-value misses the surge by even more. On absolute error, last-value MAE is 115,667 against bus 118,066: there is no universal benchmark win.": {
+  "fr": "Les trois manquent la montée en flèche de 2024-25. Ils surpassent une prévision par dernière valeur sur le RMSE logarithmique (0,19 contre 0,25), principalement parce que la dernière valeur manque la montée en flèche encore davantage. En erreur absolue, la MAE de la dernière valeur est de 115 667 contre 118 066 pour bus : il n'y a pas de victoire universelle sur le référentiel.",
+  "vi": "Cả ba đều bỏ lỡ sự gia tăng đột biến giai đoạn 2024–25. Chúng vượt trội so với dự báo giá trị cuối trên log RMSE (0,19 so với 0,25), chủ yếu vì giá trị cuối bỏ lỡ sự gia tăng đột biến còn nhiều hơn. Về sai số tuyệt đối, MAE của giá trị cuối là 115.667 so với bus là 118.066: không có chiến thắng phổ quát trên mọi thước đo.",
+  "zh-Hans": "三者均未捕捉到2024–25年的激增。它们在对数RMSE上优于末值预测（0.19对0.25），主要是因为末值预测更严重地错过了激增。在绝对误差上，末值的MAE为115,667，而bus为118,066：并不存在普遍性的基准胜出。"
+ },
+ "These fits leave parameters weakly constrained; seven annual training targets provide little leverage for discriminating these mechanisms. Fitted values swing widely (rent −0.67 to 0.84, peer effect 0.17 to 4.0) with near-identical fit. The fitted case scale is an unknown observation coefficient; these are simulated minimum-distance fits, not posterior estimates.": {
+  "fr": "Ces ajustements laissent les paramètres faiblement contraints ; sept cibles d'entraînement annuelles offrent peu de levier pour discriminer ces mécanismes. Les valeurs ajustées varient fortement (rente de −0,67 à 0,84, effet de pair de 0,17 à 4,0) avec un ajustement quasi identique. L'échelle des affaires ajustée est un coefficient d'observation inconnu ; il s'agit d'ajustements simulés par distance minimale, et non d'estimations a posteriori.",
+  "vi": "Các khớp nối này để lại các tham số bị ràng buộc yếu; bảy mục tiêu huấn luyện hằng năm cung cấp ít đòn bẩy để phân biệt các cơ chế này. Các giá trị được khớp dao động mạnh (tiền thuê từ −0,67 đến 0,84, hiệu ứng đồng đẳng từ 0,17 đến 4,0) với độ khớp gần như giống hệt nhau. Quy mô vụ việc được khớp là một hệ số quan sát chưa biết; đây là các khớp nối mô phỏng theo khoảng cách tối thiểu, không phải các ước lượng hậu nghiệm.",
+  "zh-Hans": "这些拟合使参数受到较弱的约束；七个年度训练目标为区分这些机制提供的杠杆很小。拟合值大幅波动（租金从−0.67到0.84，同伴效应从0.17到4.0），而拟合结果几乎相同。拟合的案件规模是一个未知的观测系数；这些是模拟的最小距离拟合，而非后验估计。"
+ },
+ "Log RMSE compares forecasts with observations on a log scale, so a miss on a small number counts as much as the same proportional miss on a large one. It is the square root of the mean squared difference between the log of the forecast and the log of the observation.": {
+  "fr": "Le RMSE logarithmique compare les prévisions aux observations sur une échelle logarithmique, de sorte qu'un écart sur un petit nombre compte autant qu'un écart proportionnel identique sur un grand nombre. Il s'agit de la racine carrée de la différence quadratique moyenne entre le logarithme de la prévision et le logarithme de l'observation.",
+  "vi": "Log RMSE so sánh các dự báo với các quan sát trên thang logarit, do đó một sai lệch trên một con số nhỏ được tính ngang với một sai lệch theo tỷ lệ tương đương trên một con số lớn. Đó là căn bậc hai của hiệu bình phương trung bình giữa logarit của dự báo và logarit của quan sát.",
+  "zh-Hans": "对数RMSE在对数尺度上比较预测与观测，因此小数值上的偏差与大幅值上相同比例的偏差同等计权。它是预测值的对数与观测值的对数之间均方差的平方根。"
+ },
+ "observed cases filed in year t": {
+  "fr": "affaires observées déposées au cours de l'année t",
+  "vi": "số vụ việc quan sát được thụ lý trong năm t",
+  "zh-Hans": "第t年观测到的立案数"
+ },
+ "v7 code (zip)": {
+  "fr": "Code v7 (zip)",
+  "vi": "Mã v7 (zip)",
+  "zh-Hans": "v7代码（zip）"
+ },
+ "Three small rival families (current incentives, social trap, bus) set to the same 30% snapshot. Only models with complementarities show hysteresis; the memoryless model never kept a campaign effect (0 of 96 runs).": {
+  "fr": "Trois petites familles rivales (incitations actuelles, piège social, bus) réglées sur le même instantané à 30 %. Seuls les modèles avec complémentarités montrent une hystérésis ; le modèle sans mémoire n'a jamais conservé d'effet de campagne (0 sur 96 exécutions).",
+  "vi": "Ba họ đối thủ nhỏ (động cơ hiện hành, bẫy xã hội, bus) được đặt trên cùng một ảnh chụp trạng thái 30%. Chỉ các mô hình có bổ trợ mới thể hiện hiện tượng trễ; mô hình không có bộ nhớ không bao giờ giữ lại hiệu ứng chiến dịch (0 trên 96 lần chạy).",
+  "zh-Hans": "三个小型竞争族系（当前激励、社会陷阱、bus）设定于同一30%快照。只有具有互补性的模型才表现出滞后现象；无记忆模型从未保留运动效应（96次运行中为0次）。"
+ },
+ "CCP bus · Tilly mechanisms": {
+  "fr": "Bus CCP · Mécanismes de Tilly",
+  "vi": "Bus CCP · Các cơ chế của Tilly",
+  "zh-Hans": "CCP bus · Tilly机制"
+ },
+ "The three rival families on the v6 kernel, fitted to 2013–19 filings and scored on 2020–25. Retrospective: outcomes were known when the exercise was designed. Bus and social trap are indistinguishable on case counts.": {
+  "fr": "Les trois familles rivales sur le noyau v6, ajustées aux dépôts de 2013-19 et évaluées sur 2020-25. Rétrospectif : les résultats étaient connus lors de la conception de l'exercice. Bus et piège social sont indiscernables sur le nombre d'affaires.",
+  "vi": "Ba họ đối thủ trên hạt nhân v6, được khớp với số vụ thụ lý giai đoạn 2013–19 và được chấm điểm trên giai đoạn 2020–25. Hồi cứu: các kết quả đã được biết khi bài tập được thiết kế. Bus và bẫy xã hội không thể phân biệt được về số lượng vụ việc.",
+  "zh-Hans": "v6内核上的三个竞争族系，拟合至2013–19年立案数据，并在2020–25年上评分。回溯性：在设计该练习时结果已为人所知。bus与社会陷阱在案件数量上无法区分。"
+ },
+ "Stored experiment · Mechanism comparison": {
+  "fr": "Expérience archivée · Comparaison de mécanismes",
+  "vi": "Thí nghiệm đã lưu · So sánh cơ chế",
+  "zh-Hans": "已存储实验 · 机制比较"
+ },
+ "Can Tilly-style state-making mechanisms — extraction, coercion and capital — illustrate how enforcement obligations outlast a campaign?": {
+  "fr": "Les mécanismes de formation de l'État à la manière de Tilly — extraction, coercition et capital — peuvent-ils illustrer comment les obligations d'application survivent à une campagne ?",
+  "vi": "Liệu các cơ chế xây dựng nhà nước kiểu Tilly — khai thác, cưỡng chế và tư bản — có thể minh họa cách các nghĩa vụ thực thi tồn tại lâu hơn một chiến dịch không?",
+  "zh-Hans": "Tilly式的国家建构机制——提取、强制与资本——能否说明执法义务如何在一场运动之后持续存在？"
+ },
+ "Stored experiment · Retrospective evaluation": {
+  "fr": "Expérience archivée · Évaluation rétrospective",
+  "vi": "Thí nghiệm đã lưu · Đánh giá hồi cứu",
+  "zh-Hans": "已存储实验 · 回溯性评估"
+ },
+ "Four stored model versions compare competing synthetic mechanisms against observed disciplinary filings. The models describe mechanisms, not the prevalence of corruption.": {
+  "fr": "Quatre versions de modèle archivées comparent des mécanismes synthétiques concurrents aux dépôts disciplinaires observés. Les modèles décrivent des mécanismes, non la prévalence de la corruption.",
+  "vi": "Bốn phiên bản mô hình đã lưu so sánh các cơ chế tổng hợp cạnh tranh với số vụ thụ lý kỷ luật quan sát được. Các mô hình mô tả cơ chế, không phải mức độ phổ biến của tham nhũng.",
+  "zh-Hans": "四个已存储的模型版本将相互竞争的合成机制与观测到的纪律立案数据进行比较。这些模型描述的是机制，而非腐败的普遍程度。"
+ },
+ "CCP bus · Tilly mechanisms (v6)": {
+  "fr": "Bus CCP · Mécanismes de Tilly (v6)",
+  "vi": "Bus CCP · Các cơ chế của Tilly (v6)",
+  "zh-Hans": "CCP bus · Tilly机制（v6）"
+ },
+ "This project’s user manuscript, The Priest and the Bandit, argues that Chinese Communist Party (CCP) corruption is the payroll of a clergy, not deviance: entry by sponsorship creates obligations and shared exposure that keep corruption going after enforcement changes. The manuscript is not peer reviewed, and nothing here treats its claims as established fact. In modelling terms, the claim is path dependence. This page follows four stored model versions that ask whether that claim can be told apart from simpler mechanisms in the data we have. All agents are synthetic.": {
+  "fr": "Le manuscrit de l’utilisateur de ce projet, The Priest and the Bandit, soutient que la corruption au sein du Parti communiste chinois (PCC) relève de la solde d’un clergé et non d’une déviance : l’entrée par parrainage crée des obligations et une exposition partagée qui maintiennent la corruption après un changement des dispositifs de contrôle. Le manuscrit n’a pas fait l’objet d’une évaluation par les pairs, et rien ici ne traite ses affirmations comme des faits établis. En termes de modélisation, l’affirmation est celle d’une dépendance au sentier. Cette page suit quatre versions de modèle archivées qui demandent si cette affirmation peut être distinguée de mécanismes plus simples dans les données dont nous disposons. Tous les agents sont synthétiques.",
+  "vi": "Bản thảo của người dùng trong dự án này, The Priest and the Bandit, lập luận rằng tham nhũng trong Đảng Cộng sản Trung Quốc (CCP) là bảng lương của một giới tăng lữ chứ không phải là sự lệch chuẩn: việc gia nhập thông qua bảo trợ tạo ra các nghĩa vụ và sự phơi nhiễm chung, khiến tham nhũng tiếp diễn sau khi các biện pháp thực thi thay đổi. Bản thảo chưa được bình duyệt, và không nội dung nào ở đây coi các tuyên bố của bản thảo là sự thật đã được xác lập. Theo thuật ngữ mô hình hóa, tuyên bố này là sự phụ thuộc vào lộ trình. Trang này theo dõi bốn phiên bản mô hình đã lưu, nhằm hỏi liệu tuyên bố đó có thể được phân biệt với các cơ chế đơn giản hơn trong dữ liệu mà chúng ta có hay không. Tất cả các tác nhân đều là tổng hợp.",
+  "zh-Hans": "本项目的用户手稿《The Priest and the Bandit》主张，中国共产党（CCP）的腐败是神职人员的薪俸，而非越轨行为：通过举荐进入会形成义务与共同暴露，使腐败在执法变化之后仍得以延续。该手稿未经同行评审，本页任何内容均不将其主张视为既定事实。就建模而言，该主张属于路径依赖。本页追踪四个已存储的模型版本，考察在我们所拥有的数据中，该主张能否与更简单的机制相区分。所有主体均为合成主体。"
+ },
+ "The user manuscript The Priest and the Bandit is the source of the hypothesis. It is not peer reviewed. Nothing on this page treats its claims as established fact, and nothing here estimates the actual prevalence of corruption in China, identifies any real official as corrupt, or describes anyone’s personal motives.": {
+  "fr": "Le manuscrit de l’utilisateur The Priest and the Bandit est la source de l’hypothèse. Il n’a pas fait l’objet d’une évaluation par les pairs. Rien sur cette page ne traite ses affirmations comme des faits établis, et rien ici n’estime la prévalence réelle de la corruption en Chine, n’identifie aucun responsable réel comme corrompu, ni ne décrit les motivations personnelles de quiconque.",
+  "vi": "Bản thảo của người dùng The Priest and the Bandit là nguồn của giả thuyết. Bản thảo chưa được bình duyệt. Không nội dung nào trên trang này coi các tuyên bố của bản thảo là sự thật đã được xác lập, và không nội dung nào ở đây ước tính mức độ phổ biến thực tế của tham nhũng ở Trung Quốc, xác định bất kỳ quan chức thực tế nào là tham nhũng, hay mô tả động cơ cá nhân của bất kỳ ai.",
+  "zh-Hans": "用户手稿《The Priest and the Bandit》是该假设的来源。该手稿未经同行评审。本页任何内容均不将其主张视为既定事实，本页也不估计中国腐败的实际普遍程度，不指认任何真实官员存在腐败，亦不描述任何人的个人动机。"
+ },
+ "If sponsored entry keeps corruption going after a campaign, what should we see, and what do the filings actually record?": {
+  "fr": "Si l’entrée par parrainage maintient la corruption après une campagne, que devrions-nous observer, et que consignent réellement les dossiers ?",
+  "vi": "Nếu việc gia nhập thông qua bảo trợ khiến tham nhũng tiếp diễn sau một chiến dịch, chúng ta nên quan sát thấy gì, và các hồ sơ thực tế ghi nhận những gì?",
+  "zh-Hans": "如果通过举荐进入使腐败在一场运动之后仍得以延续，我们应当看到什么，而备案材料实际记录了些什么？"
+ },
+ "The 2019 land figure was published in May 2020, so the information cutoff for the v7 exercise is 24 May 2020. The 2020–25 outcomes were already known when the exercise was designed; this is a retrospective holdout, not an untouched forecast.": {
+  "fr": "Le chiffre foncier de 2019 a été publié en mai 2020 ; la date limite d’information pour l’exercice v7 est donc le 24 mai 2020. Les résultats de 2020–25 étaient déjà connus lors de la conception de l’exercice ; il s’agit d’une validation rétrospective sur données retenues, et non d’une prévision sur données intactes.",
+  "vi": "Số liệu đất đai năm 2019 được công bố vào tháng 5 năm 2020, do đó mốc cắt thông tin cho bài tập v7 là ngày 24 tháng 5 năm 2020. Các kết quả giai đoạn 2020–25 đã được biết khi bài tập được thiết kế; đây là một phép kiểm định giữ lại hồi cứu, không phải một dự báo trên dữ liệu chưa bị chạm tới.",
+  "zh-Hans": "2019 年的土地数据于 2020 年 5 月发布，因此 v7 练习的信息截止日期为 2020 年 5 月 24 日。在设计该练习时，2020–25 年的结果已为人所知；这是一次回溯性的留出检验，而非未受触碰的预测。"
+ },
+ "The hypothesis is testable in principle. Whether the available data can distinguish it from simpler mechanisms is the question the four model versions address.": {
+  "fr": "L’hypothèse est en principe testable. La question à laquelle répondent les quatre versions de modèle est de savoir si les données disponibles permettent de la distinguer de mécanismes plus simples.",
+  "vi": "Về nguyên tắc, giả thuyết này có thể kiểm định được. Liệu dữ liệu sẵn có có thể phân biệt nó với các cơ chế đơn giản hơn hay không chính là câu hỏi mà bốn phiên bản mô hình giải quyết.",
+  "zh-Hans": "该假设原则上可检验。现有数据能否将其与更简单的机制相区分，正是四个模型版本所处理的问题。"
+ },
+ "v7 results and holdout scores": {
+  "fr": "Résultats v7 et scores de validation sur données retenues",
+  "vi": "Kết quả v7 và điểm số kiểm định giữ lại",
+  "zh-Hans": "v7 结果与留出检验得分"
+ },
+ "Can a memoryless model ever keep a campaign effect?": {
+  "fr": "Un modèle sans mémoire peut-il jamais conserver un effet de campagne ?",
+  "vi": "Một mô hình không có bộ nhớ liệu có bao giờ giữ được hiệu ứng của một chiến dịch không?",
+  "zh-Hans": "无记忆模型能否保留运动效应？"
+ },
+ "Only models with complementarities (finite investigators, peer reporting) show hysteresis. The memoryless model never kept a campaign effect: 0 of 96 runs.": {
+  "fr": "Seuls les modèles présentant des complémentarités (enquêteurs en nombre fini, signalement par les pairs) manifestent une hystérésis. Le modèle sans mémoire n’a jamais conservé d’effet de campagne : 0 sur 96 exécutions.",
+  "vi": "Chỉ những mô hình có tính bổ trợ (số điều tra viên hữu hạn, báo cáo giữa các đồng nghiệp) mới thể hiện hiện tượng trễ. Mô hình không có bộ nhớ không bao giờ giữ được hiệu ứng của một chiến dịch: 0 trên 96 lần chạy.",
+  "zh-Hans": "只有具有互补性的模型（有限的调查人员、同伴举报）才表现出滞后现象。无记忆模型从未保留运动效应：96 次运行中为 0 次。"
+ },
+ "v1 code (zip)": {
+  "fr": "Code v1 (zip)",
+  "vi": "Mã v1 (zip)",
+  "zh-Hans": "v1 代码（zip）"
+ },
+ "Does a richer political economy change what the bus predicts?": {
+  "fr": "Une économie politique plus riche modifie-t-elle ce que prédit le bus ?",
+  "vi": "Một nền kinh tế chính trị phong phú hơn có làm thay đổi những gì mô hình bus dự đoán không?",
+  "zh-Hans": "更丰富的政治经济学是否会改变 bus 的预测？"
+ },
+ "17 accepted fits. Within the simulation, modeled faction status predicts simulated removal about as well as modeled corruption (AUC 0.67 vs 0.66). This is a within-simulation discrimination, not an empirical finding about real officials.": {
+  "fr": "17 ajustements acceptés. Au sein de la simulation, le statut factionnel modélisé prédit l’éviction simulée à peu près aussi bien que la corruption modélisée (AUC 0,67 contre 0,66). Il s’agit d’une discrimination interne à la simulation, et non d’un résultat empirique concernant de réels responsables.",
+  "vi": "17 lần khớp được chấp nhận. Trong nội bộ mô phỏng, địa vị phe phái được mô hình hóa dự đoán việc bị loại bỏ trong mô phỏng gần như tốt ngang với tham nhũng được mô hình hóa (AUC 0,67 so với 0,66). Đây là một sự phân biệt trong nội bộ mô phỏng, không phải một phát hiện thực nghiệm về các quan chức thực tế.",
+  "zh-Hans": "17 次被接受的拟合。在模拟内部，建模的派系地位对模拟免职的预测能力与建模的腐败大致相当（AUC 0.67 对 0.66）。这是模拟内部的区分，而非关于真实官员的实证发现。"
+ },
+ "v3 code (zip)": {
+  "fr": "Code v3 (zip)",
+  "vi": "Mã v3 (zip)",
+  "zh-Hans": "v3 代码（zip）"
+ },
+ "What does a large Tilly-style kernel add, and what does it not yet show?": {
+  "fr": "Qu’apporte un noyau de type Tilly de grande taille, et que ne montre-t-il pas encore ?",
+  "vi": "Một hạt nhân kiểu Tilly quy mô lớn bổ sung điều gì, và nó chưa cho thấy điều gì?",
+  "zh-Hans": "大型 Tilly 式内核增加了什么，又尚未展示什么？"
+ },
+ "Well engineered: 14 passing checks and exact accounting. These checks are implementation verification, not a scientific result. Uncalibrated: 42 hand-set parameters, several mechanisms inert, little memory.": {
+  "fr": "Bien conçu : 14 contrôles réussis et une comptabilité exacte. Ces contrôles relèvent de la vérification de l’implémentation, et non d’un résultat scientifique. Non calibré : 42 paramètres fixés manuellement, plusieurs mécanismes inertes, peu de mémoire.",
+  "vi": "Được thiết kế tốt: 14 kiểm tra đạt và hạch toán chính xác. Các kiểm tra này là xác minh triển khai, không phải một kết quả khoa học. Chưa hiệu chỉnh: 42 tham số được đặt thủ công, một số cơ chế không hoạt động, ít bộ nhớ.",
+  "zh-Hans": "工程设计良好：14 项检查通过，核算精确。这些检查属于实现验证，而非科学结果。未经校准：42 个手工设定参数，若干机制处于惰性状态，记忆性很弱。"
+ },
+ "v6 code (zip)": {
+  "fr": "Code v6 (zip)",
+  "vi": "Mã v6 (zip)",
+  "zh-Hans": "v6 代码（zip）"
+ },
+ "On a common kernel, can the bus be told apart from simpler mechanisms?": {
+  "fr": "Sur un noyau commun, le bus peut-il être distingué de mécanismes plus simples ?",
+  "vi": "Trên một hạt nhân chung, liệu mô hình bus có thể được phân biệt với các cơ chế đơn giản hơn không?",
+  "zh-Hans": "在共同内核上，bus 能否与更简单的机制相区分？"
+ },
+ "A shared case scale is profiled separately for each fit. The 64-draw search and three families generated 192 candidate evaluations, each with two screening seeds; the best four per family were re-ranked with eight independent training seeds. Five parameter dimensions were sampled, with peer gain and reporting capture inactive in the current-incentives family.": {
+  "fr": "Une échelle de cas commune est profilée séparément pour chaque ajustement. La recherche à 64 tirages et trois familles ont généré 192 évaluations de candidats, chacune avec deux graines de présélection ; les quatre meilleures par famille ont été reclassées avec huit graines d’entraînement indépendantes. Cinq dimensions de paramètres ont été échantillonnées, le gain entre pairs et la captation du signalement étant inactifs dans la famille des incitations actuelles.",
+  "vi": "Một thang đo trường hợp chung được lập hồ sơ riêng cho từng lần khớp. Tìm kiếm 64 lần rút và ba họ đã tạo ra 192 đánh giá ứng viên, mỗi đánh giá với hai hạt giống sàng lọc; bốn ứng viên tốt nhất mỗi họ được xếp hạng lại với tám hạt giống huấn luyện độc lập. Năm chiều tham số được lấy mẫu, với lợi ích giữa các đồng nghiệp và việc chiếm đoạt báo cáo ở trạng thái không hoạt động trong họ động cơ hiện hành.",
+  "zh-Hans": "共享的案件尺度针对每次拟合分别进行剖面分析。64 次抽取搜索与三个族共产生 192 次候选评估，每次评估使用两个筛选种子；每个族中最佳的四项以八个独立训练种子重新排序。共对五个参数维度进行抽样，其中同伴增益与举报俘获在当前激励族中处于非活动状态。"
+ },
+ "Memory test: four matched seeds per family began at 5% and 95% misconduct with identical external conditions. The fitted social and bus families show a large initial response (bus +0.8332 at step 1) followed by rapid convergence (≈0 by step 10). This is a state-initialization test only; head replacement and full network reset were not run.": {
+  "fr": "Test de mémoire : quatre graines appariées par famille ont débuté à 5 % et 95 % d’inconduite avec des conditions externes identiques. Les familles ajustées sociale et bus montrent une forte réponse initiale (bus +0,8332 à l’étape 1), suivie d’une convergence rapide (≈0 à l’étape 10). Il s’agit uniquement d’un test d’initialisation d’état ; le remplacement de tête et la réinitialisation complète du réseau n’ont pas été exécutés.",
+  "vi": "Kiểm tra bộ nhớ: bốn hạt giống được ghép cặp cho mỗi họ bắt đầu ở mức 5% và 95% hành vi sai trái với các điều kiện bên ngoài giống hệt nhau. Các họ xã hội và bus đã khớp cho thấy phản ứng ban đầu lớn (bus +0,8332 ở bước 1), sau đó hội tụ nhanh (≈0 ở bước 10). Đây chỉ là một kiểm tra khởi tạo trạng thái; việc thay thế phần đầu và đặt lại toàn bộ mạng chưa được chạy.",
+  "zh-Hans": "记忆检验：每个族的四个配对种子分别以 5% 和 95% 的不当行为水平起步，外部条件完全相同。拟合的社会族与 bus 族表现出较大的初始响应（bus 在第 1 步为 +0.8332），随后迅速收敛（到第 10 步约为 0）。这仅是状态初始化检验；头部替换与完整网络重置均未运行。"
+ },
+ "The memory test does not establish that other parameter regions or interventions lack memory. The replacement and full-reset tests described in the spec remain outstanding.": {
+  "fr": "Le test de mémoire n’établit pas que d’autres régions de paramètres ou interventions soient dépourvues de mémoire. Les tests de remplacement et de réinitialisation complète décrits dans la spécification restent à réaliser.",
+  "vi": "Kiểm tra bộ nhớ không chứng minh rằng các vùng tham số hay can thiệp khác không có bộ nhớ. Các kiểm tra thay thế và đặt lại toàn bộ được mô tả trong đặc tả vẫn còn chưa thực hiện.",
+  "zh-Hans": "记忆检验并不能证明其他参数区域或干预措施缺乏记忆。规范中所述的替换检验与完整重置检验仍有待完成。"
+ },
+ "number of forecast years (6 in v7)": {
+  "fr": "nombre d’années de prévision (6 dans v7)",
+  "vi": "số năm dự báo (6 trong v7)",
+  "zh-Hans": "预测年数（v7 中为 6）"
+ },
+ "natural logarithm": {
+  "fr": "logarithme naturel",
+  "vi": "lôgarit tự nhiên",
+  "zh-Hans": "自然对数"
+ },
+ "Briefing for review": {
+  "fr": "Note d’information pour examen",
+  "vi": "Bản tóm tắt để xem xét",
+  "zh-Hans": "供审阅的简报"
+ },
+ "CCP bus · Economy and factions": {
+  "fr": "Bus PCC · Économie et factions",
+  "vi": "Bus CCP · Kinh tế và phe phái",
+  "zh-Hans": "CCP bus · 经济与派系"
+ },
+ "50,000 agents, 64 organisations, 5 ranks, Tilly-labelled mechanisms. Well engineered (14 passing checks, exact accounting) but uncalibrated: 42 hand-set parameters, several mechanisms inert, little memory.": {
+  "fr": "50 000 agents, 64 organisations, 5 rangs, mécanismes étiquetés Tilly. Bien conçu (14 contrôles réussis, comptabilité exacte) mais non calibré : 42 paramètres fixés manuellement, plusieurs mécanismes inertes, peu de mémoire.",
+  "vi": "50.000 tác nhân, 64 tổ chức, 5 cấp bậc, các cơ chế được gắn nhãn Tilly. Được thiết kế tốt (14 kiểm tra đạt, hạch toán chính xác) nhưng chưa hiệu chỉnh: 42 tham số được đặt thủ công, một số cơ chế không hoạt động, ít bộ nhớ.",
+  "zh-Hans": "50,000 个主体、64 个组织、5 个层级、以 Tilly 命名的机制。工程设计良好（14 项检查通过，核算精确），但未经校准：42 个手工设定参数，若干机制处于惰性状态，记忆性很弱。"
+ },
+ "On national case counts, the bus cannot yet be told apart from simpler mechanisms. Bus and social trap are indistinguishable (log RMSE 0.1898 vs 0.1896), all three families miss the 2024–25 surge, and the memory test finds no lasting memory at the fitted settings. The bus is a coherent, testable theory instrument, not yet evidence for itself. All agents are synthetic. Nothing here estimates the actual prevalence of corruption in China, identifies any real official as corrupt, or describes anyone’s personal motives.": {
+  "fr": "Sur les décomptes nationaux de cas, le bus ne peut pas encore être distingué de mécanismes plus simples. Le bus et le piège social sont indiscernables (log RMSE 0,1898 contre 0,1896), les trois familles manquent la montée de 2024–25, et le test de mémoire ne trouve aucune mémoire durable aux réglages ajustés. Le bus est un instrument théorique cohérent et testable, mais pas encore une preuve de lui-même. Tous les agents sont synthétiques. Rien ici n’estime la prévalence réelle de la corruption en Chine, n’identifie aucun responsable réel comme corrompu, ni ne décrit les motivations personnelles de quiconque.",
+  "vi": "Trên các số liệu đếm trường hợp quốc gia, mô hình bus chưa thể được phân biệt với các cơ chế đơn giản hơn. Bus và bẫy xã hội không thể phân biệt được (log RMSE 0,1898 so với 0,1896), cả ba họ đều bỏ lỡ đợt gia tăng 2024–25, và kiểm tra bộ nhớ không tìm thấy bộ nhớ lâu dài ở các thiết lập đã khớp. Bus là một công cụ lý thuyết mạch lạc, có thể kiểm định, nhưng chưa phải là bằng chứng cho chính nó. Tất cả các tác nhân đều là tổng hợp. Không nội dung nào ở đây ước tính mức độ phổ biến thực tế của tham nhũng ở Trung Quốc, xác định bất kỳ quan chức thực tế nào là tham nhũng, hay mô tả động cơ cá nhân của bất kỳ ai.",
+  "zh-Hans": "就全国案件计数而言，bus 尚无法与更简单的机制相区分。bus 与社会陷阱无法区分（对数 RMSE 0.1898 对 0.1896），三个族均未捕捉到 2024–25 年的激增，记忆检验在拟合设定下未发现持久记忆。bus 是一个连贯、可检验的理论工具，但尚不能作为自身的证据。所有主体均为合成主体。本页任何内容均不估计中国腐败的实际普遍程度，不指认任何真实官员存在腐败，亦不描述任何人的个人动机。"
+ },
+ "How do economic conditions and factional competition interact to shape enforcement outcomes in the stored exploratory fit?": {
+  "fr": "Comment les conditions économiques et la concurrence factionnelle interagissent-elles pour façonner les résultats du contrôle dans l’ajustement exploratoire archivé ?",
+  "vi": "Các điều kiện kinh tế và cạnh tranh phe phái tương tác như thế nào để định hình kết quả thực thi trong lần khớp thăm dò đã lưu?",
+  "zh-Hans": "在已存储的探索性拟合中，经济状况与派系竞争如何相互作用以塑造执法结果？"
+ },
+ "Stored experiment · Illustrative kernel": {
+  "fr": "Expérience archivée · Noyau illustratif",
+  "vi": "Thí nghiệm đã lưu · Hạt nhân minh họa",
+  "zh-Hans": "已存储实验 · 示例性内核"
+ },
+ "Political economy": {
+  "fr": "Économie politique",
+  "vi": "Kinh tế chính trị",
+  "zh-Hans": "政治经济学"
+ },
+ "CCP bus · Rival mechanisms (v1)": {
+  "fr": "Bus PCC · Mécanismes rivaux (v1)",
+  "vi": "Bus CCP · Các cơ chế đối thủ (v1)",
+  "zh-Hans": "CCP bus · 竞争性机制（v1）"
+ },
+ "CCP bus · Identification comparison (v7)": {
+  "fr": "Bus PCC · Comparaison d’identification (v7)",
+  "vi": "Bus CCP · So sánh nhận dạng (v7)",
+  "zh-Hans": "CCP bus · 识别比较（v7）"
+ },
+ "Education Planning Toolkit · UN methods": {
+  "zh-Hans": "教育规划工具包 · 联合国方法",
+  "fr": "Boîte à outils de planification de l’éducation · méthodes de l’ONU",
+  "vi": "Bộ công cụ quy hoạch giáo dục · phương pháp của Liên Hợp Quốc"
+ },
+ "Ed planning toolkit": {
+  "zh-Hans": "教育规划工具包",
+  "fr": "Planification de l’éducation",
+  "vi": "Công cụ quy hoạch giáo dục"
+ },
+ "Farmer field schools · Diffusion": {
+  "zh-Hans": "农民田间学校 · 扩散",
+  "fr": "Écoles pratiques d'agriculture · Diffusion",
+  "vi": "Trường đồng ruộng nông dân · Lan truyền"
+ },
+ "How does adoption spread through a finite horizon when existing adopters mediate it after an initial seed?": {
+  "zh-Hans": "在初始种子之后，当现有采纳者起中介作用时，采纳如何在有限时间范围内扩散？",
+  "fr": "Comment l'adoption se diffuse-t-elle sur un horizon fini lorsque les adoptants existants la médiatisent après une amorce initiale ?",
+  "vi": "Việc chấp nhận lan truyền như thế nào trong một chân trời hữu hạn khi những người đã chấp nhận hiện có làm trung gian sau một hạt giống ban đầu?"
+ },
+ "Stored experiment · diffusion grid": {
+  "zh-Hans": "已存储实验 · 扩散网格",
+  "fr": "Expérience enregistrée · grille de diffusion",
+  "vi": "Thí nghiệm đã lưu · lưới lan truyền"
+ },
+ "Farmer field schools · Food-price politics": {
+  "zh-Hans": "农民田间学校 · 粮食价格政治",
+  "fr": "Écoles pratiques d'agriculture · Politique des prix alimentaires",
+  "vi": "Trường đồng ruộng nông dân · Chính trị giá lương thực"
+ },
+ "What does the food-price model show on its endogenous simulated path, and what can it not show?": {
+  "zh-Hans": "粮食价格模型在其内生模拟路径上显示了什么，又不能显示什么？",
+  "fr": "Que montre le modèle des prix alimentaires sur sa trajectoire simulée endogène, et que ne peut-il pas montrer ?",
+  "vi": "Mô hình giá lương thực cho thấy gì trên đường mô phỏng nội sinh của nó, và nó không thể cho thấy gì?"
+ },
+ "Stored experiment · annual periods 2004–2024": {
+  "zh-Hans": "已存储实验 · 2004–2024 年度期间",
+  "fr": "Expérience enregistrée · périodes annuelles 2004–2024",
+  "vi": "Thí nghiệm đã lưu · các kỳ hàng năm 2004–2024"
+ },
+ "Farmer field schools · Treadmill economy": {
+  "zh-Hans": "农民田间学校 · 跑步机经济",
+  "fr": "Écoles pratiques d'agriculture · Économie du tapis roulant",
+  "vi": "Trường đồng ruộng nông dân · Kinh tế băng chuyền"
+ },
+ "What did the earlier treadmill mechanism story propose, and how should it be read now?": {
+  "zh-Hans": "早先的跑步机机制叙事提出了什么，如今应如何解读？",
+  "fr": "Que proposait le récit antérieur du mécanisme du tapis roulant, et comment faut-il le lire aujourd'hui ?",
+  "vi": "Câu chuyện cơ chế băng chuyền trước đây đã đề xuất điều gì, và nay nên được đọc như thế nào?"
+ },
+ "Historical mechanism card": {
+  "zh-Hans": "历史机制卡片",
+  "fr": "Fiche de mécanisme historique",
+  "vi": "Thẻ cơ chế lịch sử"
+ },
+ "Farmer field schools · Price-tag advice market": {
+  "zh-Hans": "农民田间学校 · 标价建议市场",
+  "fr": "Écoles pratiques d'agriculture · Marché des conseils à prix affiché",
+  "vi": "Trường đồng ruộng nông dân · Thị trường tư vấn gắn giá"
+ },
+ "What did the earlier price-tag advice story propose about ambiguity and willingness to pay for private advice?": {
+  "zh-Hans": "早先的标价建议叙事就模糊性与为私人建议付费的意愿提出了什么？",
+  "fr": "Que proposait le récit antérieur des conseils à prix affiché sur l'ambiguïté et la volonté de payer pour des conseils privés ?",
+  "vi": "Câu chuyện tư vấn gắn giá trước đây đã đề xuất điều gì về sự mơ hồ và sẵn lòng chi trả cho tư vấn tư nhân?"
+ },
+ "Farmer field schools & food politics": {
+  "zh-Hans": "农民田间学校与粮食政治",
+  "fr": "Écoles pratiques d'agriculture et politique alimentaire",
+  "vi": "Trường đồng ruộng nông dân và chính trị lương thực"
+ },
+ "Field schools": {
+  "zh-Hans": "田间学校",
+  "fr": "Écoles pratiques",
+  "vi": "Trường đồng ruộng"
+ },
+ "Can training farmers change what they know without making adoption pay?": {
+  "zh-Hans": "培训农民能否改变他们所知，却不使采纳变得有利可图？",
+  "fr": "La formation des agriculteurs peut-elle changer ce qu'ils savent sans rendre l'adoption rentable ?",
+  "vi": "Việc đào tạo nông dân có thể thay đổi những gì họ biết mà không làm cho việc chấp nhận trở nên có lợi không?"
+ },
+ "A narrated extension story with two current mechanism models and two historical mechanism cards. Observational motivation is not calibrated validation: training may change knowledge without making adoption pay.": {
+  "zh-Hans": "一个配有解说的推广叙事，包含两个当前机制模型和两张历史机制卡片。观察性动机并非经过校准的验证：培训可能改变知识，却不使采纳变得有利可图。",
+  "fr": "Un récit de vulgarisation narré avec deux modèles de mécanisme actuels et deux fiches de mécanisme historiques. La motivation observationnelle n'est pas une validation calibrée : la formation peut changer les connaissances sans rendre l'adoption rentable.",
+  "vi": "Một câu chuyện khuyến nông có tường thuật với hai mô hình cơ chế hiện tại và hai thẻ cơ chế lịch sử. Động lực quan sát không phải là kiểm chứng đã hiệu chỉnh: đào tạo có thể thay đổi kiến thức mà không làm cho việc chấp nhận trở nên có lợi."
+ },
+ "Model bundle · code, data & README": {
+  "zh-Hans": "模型包 · 代码、数据与 README",
+  "fr": "Lot de modèles · code, données et README",
+  "vi": "Gói mô hình · mã, dữ liệu và README"
+ },
+ "README": {
+  "zh-Hans": "README",
+  "fr": "README",
+  "vi": "README"
+ },
+ "Validation notes": {
+  "zh-Hans": "验证说明",
+  "fr": "Notes de validation",
+  "vi": "Ghi chú kiểm chứng"
+ },
+ "These are simulations of how societies work: why families pay for tutoring, why fertility collapsed across East Asia, how Angkor fed itself, how people walked out of Africa. Each one turns an argument into rules a computer can play out, thousands of times. Change the assumptions, run it, and see whether the story still holds.": {
+  "zh-Hans": "这里是关于社会如何运作的模拟：家庭为何花钱请家教，东亚生育率为何骤降，吴哥如何养活自己，人类如何走出非洲。每个模型都把一个论点变成计算机可以反复推演成千上万次的规则。改变假设，运行模型，看看这个故事是否依然成立。",
+  "vi": "Đây là những mô phỏng về cách xã hội vận hành: vì sao các gia đình trả tiền học thêm, vì sao mức sinh ở Đông Á sụt giảm, Angkor đã nuôi sống chính mình như thế nào, con người đã rời châu Phi như thế nào. Mỗi mô hình biến một lập luận thành các quy tắc mà máy tính có thể chạy hàng nghìn lần. Hãy thay đổi giả định, chạy mô hình và xem câu chuyện còn đứng vững không.",
+  "fr": "Ce sont des simulations du fonctionnement des sociétés : pourquoi les familles paient pour des cours particuliers, pourquoi la fécondité s'est effondrée dans toute l'Asie de l'Est, comment Angkor se nourrissait, comment les populations sont sorties d'Afrique. Chacune transforme un argument en règles qu'un ordinateur peut dérouler, des milliers de fois. Modifiez les hypothèses, lancez la simulation et voyez si le récit tient toujours."
  }
 }

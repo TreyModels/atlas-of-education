@@ -1,5 +1,7 @@
 # The relational-floor test in Cambodia, Vietnam and China
 
+> Historical v2.1 results. The research revision corrects the premium contrast in engine/relfloor_countries.py and writes future runs as v3. The old 2035 figures below measure change from 2024 along the falling-premium scenario, including income growth. They do not isolate the premium intervention. The paired 2035 effect must be rerun. Large KS p-values do not establish that prior and posterior are equal.
+
 Results note, v2.1, 14 November 2026. Replaces the 5 November note (v1). Model: `engine/relfloor_countries.py`, which uses the same household model as `engine/relfloor.py`. Output: `reference/relfloor_countries_v2.json`. v1's output is kept as `reference/relfloor_countries.json`. Each country × structure gets 24,000 parameter draws. Sources for every target: `inputs/credential_floor_sources.json`, with a URL, a table reference and a verification flag for each value.
 
 ## What changed from v1

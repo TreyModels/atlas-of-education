@@ -1,5 +1,7 @@
 # Atlas of Education · Model Lab
 
+Research experiments, literature and contribution guidance are in [research/README.md](research/README.md). The research revision supplies code and unrun production protocols, distinguishing toy mechanism exploration from descriptive, forecasting and policy claims. Historical numerical outputs retain their version labels.
+
 A unified catalogue of 46 entries across Education & work, Population & school systems,
 the IIEP/UIS planning collection, Historical systems: Angkor, Fertility, and Shadow education.
 Entries include live workbenches, classic tools, research downloads, and four curated stored
@@ -47,4 +49,4 @@ and CHANGES.md.
 
 ## Attribution and reuse
 
-Credit and cite **Dr. Trey Menefee** when using, reproducing, sharing, or adapting his material. Noncommercial use is permitted under the conditions in [LICENSE](LICENSE); commercial use requires prior permission. Third-party materials retain their own terms.
+Credit and cite **Dr. Trey Menefee** when using, reproducing, sharing, or adapting his material. Licensed under [CC BY-NC 4.0](LICENSE): reuse and adaptation with attribution for noncommercial purposes; commercial use requires prior permission. Cite via [CITATION.cff](CITATION.cff) (DOIs: [docs/DOI.md](docs/DOI.md)). Third-party materials retain their own terms.

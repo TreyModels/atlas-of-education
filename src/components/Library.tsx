@@ -2,11 +2,13 @@ import { useEffect, useMemo, useState } from 'react'
 import { ArrowRight, ArrowUpRight, BookOpen, Search, X } from 'lucide-react'
 import type { Translate } from '../types'
 import { catalogue, classicLabs, familyCounts, familyInfo, familyItems, totalModels, type CatalogueItem, type ModelFamily } from '../data/model-catalogue'
+import { statusIntro, familyStatus, callToAction } from '../data/site-status'
+import { purposeLabel, stateLabel } from '../data/angkor-journey'
 
 import { modelFamilies } from '../data/model-catalogue'
 const families = modelFamilies
 const sectionIds: Record<ModelFamily, string> = {
-  education: 'education-models', systems: 'school-systems', planning: 'planning-lab', angkor: 'angkor-case', fertility: 'fertility-models', shadow: 'shadow-models', deephistory: 'deep-history',
+  education: 'education-models', systems: 'school-systems', planning: 'planning-lab', angkor: 'angkor-case', fertility: 'fertility-models', shadow: 'shadow-models', deephistory: 'deep-history', politics: 'political-economy', extension: 'extension-field-schools',
 }
 
 export function ModelLink({ item, t, navigate }: { item: CatalogueItem; t: Translate; navigate: (id: string) => void }) {
@@ -57,15 +59,81 @@ export function Library({ t, navigate }: { t: Translate; navigate: (id: string) 
     if (family !== 'all') requestAnimationFrame(() => document.getElementById(sectionIds[family])?.scrollIntoView({ block: 'start' }))
   }
 
+  const featured = familyStatus[0]
+  const featuredInfo = familyInfo[featured.family as ModelFamily]
+  const featuredItems = familyItems(featured.family as ModelFamily)
+
   return <main id="main-content">
     <section className="landing-hero shell">
       <p className="eyebrow">{t('COMPUTATIONAL SOCIAL SCIENCE · BY TREY MENEFEE')}</p>
       <h1>{t('Social science you can run.')}</h1>
-      <p className="landing-lede">{t('These are simulations of how societies work: why families pay for tutoring, why fertility collapsed across East Asia, why Angkor declined, how people walked out of Africa. Each one turns an argument into rules a computer can play out, thousands of times. Change the assumptions, run it, and see whether the story still holds.')}</p>
+      <p className="landing-lede">{t('These are simulations of how societies work: why families pay for tutoring, why fertility collapsed across East Asia, how Angkor fed itself, how people walked out of Africa. Each one turns an argument into rules a computer can play out, thousands of times. Change the assumptions, run it, and see whether the story still holds.')}</p>
       <div className="hero-actions">
         <button className="button button-primary" onClick={() => document.getElementById('questions')?.scrollIntoView({ block: 'start' })}>{t('Start with a question')}<ArrowRight size={18} /></button>
         <a className="text-link" href="https://comparativist.substack.com" target="_blank" rel="noreferrer">{t('Read the essays on The Comparativist')}<ArrowUpRight size={16} /></a>
       </div>
+    </section>
+
+    <section className="home-featured shell" aria-labelledby="home-featured-title">
+      <p className="eyebrow">{t('START WITH A QUESTION')}</p>
+      <h2 id="home-featured-title">{t(featuredInfo.title)}</h2>
+      <p className="home-featured-question">{t(featuredInfo.question)}</p>
+      <p className="home-featured-status">{t(featured.line)}</p>
+      <ol className="home-chapter-path">
+        {featuredItems.slice(0, 4).map(item => <li key={item.id}>{t(item.title)}</li>)}
+      </ol>
+      <button className="button button-primary" onClick={() => navigate(featured.route)}>{t('Read what the models found')}<ArrowRight size={18} /></button>
+    </section>
+
+    <section className="home-status shell" aria-labelledby="home-status-title">
+      <div className="landing-section-head">
+        <p className="eyebrow">{t(statusIntro.kicker)}</p>
+        <h2 id="home-status-title">{t(statusIntro.title)}</h2>
+        <p>{t(statusIntro.text)}</p>
+      </div>
+      <ul className="home-status-grid">
+        {familyStatus.map(status => {
+          const info = familyInfo[status.family as ModelFamily]
+          return <li key={status.family} className="home-status-item">
+            <h3>{t(info.short)}</h3>
+            <p>{t(status.line)}</p>
+            <ul className="home-status-badges">
+              {status.purposes.map(purpose => <li key={purpose}><span className={`badge purpose-${purpose}`}>{t(purposeLabel[purpose].label)}</span></li>)}
+              {status.states.map(state => <li key={state}><span className={`badge state-${state}`}>{t(stateLabel[state].label)}</span></li>)}
+            </ul>
+            <button className="text-link" onClick={() => navigate(status.route)}>{t('Read what the models found')}<ArrowRight size={15} /></button>
+          </li>
+        })}
+      </ul>
+    </section>
+
+    <section className="home-stories shell" id="questions" aria-labelledby="home-stories-title">
+      <div className="landing-section-head">
+        <p className="eyebrow">{t('START WITH A QUESTION')}</p>
+        <h2 id="home-stories-title">{t('{n} puzzles, {m} models.').replace('{n}', String(families.length)).replace('{m}', String(totalModels))}</h2>
+      </div>
+      <ul className="home-story-grid">
+        {familyStatus.map((status, index) => {
+          const family = status.family as ModelFamily
+          const info = familyInfo[family]
+          const items = familyItems(family)
+          return <li key={family} className={`home-story-card${index === 0 ? ' home-story-card-featured' : ''}`}>
+            <span className="home-story-count">{familyCounts[family]}</span>
+            <h3>{t(info.title)}</h3>
+            <p className="home-story-question">{t(info.question)}</p>
+            <p className="home-story-status">{t(status.line)}</p>
+            <ul className="home-status-badges">
+              {status.purposes.map(purpose => <li key={purpose}><span className={`badge purpose-${purpose}`}>{t(purposeLabel[purpose].label)}</span></li>)}
+              {status.states.map(state => <li key={state}><span className={`badge state-${state}`}>{t(stateLabel[state].label)}</span></li>)}
+            </ul>
+            <ol className="home-chapter-path">
+              {items.slice(0, 3).map(item => <li key={item.id}>{t(item.title)}</li>)}
+            </ol>
+            <button className="button button-secondary" onClick={() => navigate(status.route)}>{t('Read what the models found')}<ArrowRight size={16} /></button>
+          </li>
+        })}
+      </ul>
+      <p className="home-stories-more"><a className="text-link" href="#catalogue">{t('Every model, searchable.')}<ArrowRight size={15} /></a></p>
     </section>
 
     <section className="landing-steps shell" aria-label={t('How it works')}>
@@ -74,17 +142,6 @@ export function Library({ t, navigate }: { t: Translate; navigate: (id: string) 
         <li><span>2</span><strong>{t('Change the assumptions')}</strong><p>{t('Move the sliders: school fees, sea level, teacher pay, rainfall. Everything runs in your browser, nothing is sent anywhere.')}</p></li>
         <li><span>3</span><strong>{t('See what holds up')}</strong><p>{t('Every finding is labelled: measured from data, produced by a simulation, ruled out, or still open.')}</p></li>
       </ol>
-    </section>
-
-    <section className="landing-questions shell" id="questions">
-      <div className="landing-section-head"><p className="eyebrow">{t('START WITH A QUESTION')}</p><h2>{t('{n} puzzles, {m} models.').replace('{n}', String(families.length)).replace('{m}', String(totalModels))}</h2></div>
-      <div className="question-grid">
-        {families.map(family => <button key={family} className={`question-card question-${family}`} onClick={() => navigate(`story-${family}`)}>
-          <span className="question-meta">{t(familyInfo[family].short)}<i>·</i>{familyCounts[family]}</span>
-          <strong>{t(familyInfo[family].question)}</strong>
-          <span className="question-go">{t('Read what the models found')}<ArrowRight size={15} /></span>
-        </button>)}
-      </div>
     </section>
 
     <section className="landing-methods shell">
@@ -132,6 +189,17 @@ export function Library({ t, navigate }: { t: Translate; navigate: (id: string) 
     <section className="classic-labs shell">
       <div className="classic-labs-heading"><p className="eyebrow">{t('ORIGINAL IMPLEMENTATIONS')}</p><h2>{t('Standalone laboratories')}</h2><p>{t('Alternative interfaces and methods studios. These complement the {n} catalogue entries rather than inflating the count.').replace('{n}', String(totalModels))}</p></div>
       <div className="classic-labs-list">{classicLabs.map(lab => <a href={lab.href} key={lab.href}><span>{t(lab.label)}</span><strong>{t(lab.title)}</strong><p>{t(lab.description)}</p><ArrowUpRight size={19} /></a>)}</div>
+    </section>
+
+    <section className="home-cta shell" aria-labelledby="home-cta-title">
+      <h2 id="home-cta-title">{t(callToAction.title)}</h2>
+      <p>{t(callToAction.text)}</p>
+      <ul className="home-cta-actions">
+        {callToAction.actions.map(action => <li key={action.href}>
+          <a className="button button-secondary" href={action.href} target="_blank" rel="noreferrer">{t(action.label)}<ArrowUpRight size={16} /></a>
+        </li>)}
+      </ul>
+      <footer className="home-licence"><p>{t(callToAction.licence)}</p></footer>
     </section>
 
     <section className="shell library-foot">

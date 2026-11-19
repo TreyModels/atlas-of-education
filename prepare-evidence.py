@@ -5,6 +5,7 @@ import json
 from collections import defaultdict
 from pathlib import Path
 from statistics import quantiles
+import runpy
 
 site = Path(__file__).parent / 'dist'
 lab = site.parent / 'inputs'
@@ -19,10 +20,12 @@ for (scenario, year), values in sorted(trajectories.items()):
     ensemble['population'].setdefault(scenario, []).append([year, cuts[0], cuts[4], cuts[8]])
 bundle = {
     'mandala': ensemble,
-    'relfloor': json.loads((site / 'reference/relfloor_countries.json').read_text()),
+    # v2 graded-liquidity summaries, compacted exactly as scripts/build-relfloor-evidence.py does
+    'relfloor': runpy.run_path(str(site.parent / 'scripts/build-relfloor-evidence.py'))['compact'](
+        json.loads((site / 'reference/relfloor_countries_v2_smoothliq.json').read_text())),
     'sha256': {p.name: hashlib.sha256(p.read_bytes()).hexdigest() for p in [
         *(site / 'engines').glob('*.js'), site / 'reference/angkor/model.js',
-        site / 'reference/relfloor_countries.json', lab / 'results.json', lab / 'trajectories_100_seeds.csv'
+        site / 'reference/relfloor_countries_v2_smoothliq.json', lab / 'results.json', lab / 'trajectories_100_seeds.csv'
     ]},
 }
 (site / 'evidence.js').write_text('globalThis.AtlasEvidence = ' + json.dumps(bundle, separators=(',', ':')) + ';\n')

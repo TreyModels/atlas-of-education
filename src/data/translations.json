@@ -4828,5 +4828,55 @@
     "zh-Hans": "失业人员加待业毕业生",
     "vi": "Người thất nghiệp cộng với sinh viên tốt nghiệp đang chờ việc",
     "fr": "Chômeurs plus diplômés en attente d'emploi"
+  },
+  "Completion was about 17% in 2000 and 56% in 2021. By wealth quintile, poorest to richest, it was 29, 48, 54, 66 and 79% in 2021 (UIS). Accepted draws match every quintile within 10 points in 2014 and 2021.": {
+    "zh-Hans": "2000年完成率约为17%，2021年约为56%。按财富五等分（从最穷到最富），2021年分别为29%、48%、54%、66%和79%（联合国教科文组织统计研究所）。被接受的抽样在2014年和2021年的每个五等分组上误差均在10个百分点以内。",
+    "fr": "L’achèvement était d’environ 17 % en 2000 et 56 % en 2021. Par quintile de richesse, du plus pauvre au plus riche, il était de 29, 48, 54, 66 et 79 % en 2021 (ISU). Les tirages acceptés reproduisent chaque quintile à 10 points près en 2014 et 2021.",
+    "vi": "Tỷ lệ hoàn thành khoảng 17% năm 2000 và 56% năm 2021. Theo nhóm ngũ phân vị giàu nghèo, từ nghèo nhất đến giàu nhất, tỷ lệ năm 2021 là 29, 48, 54, 66 và 79% (UIS). Các lần rút được chấp nhận khớp với mọi nhóm trong phạm vi 10 điểm vào năm 2014 và 2021."
+  },
+  "Upper-secondary attendance at ages 15–17 by wealth quintile, poorest to richest, was 40, 67, 74, 85 and 93% in 2014 (MICS). Accepted draws match every quintile.": {
+    "zh-Hans": "2014年15–17岁高中阶段在读率按财富五等分（从最穷到最富）分别为40%、67%、74%、85%和93%（MICS）。被接受的抽样与每个五等分组均吻合。",
+    "fr": "La fréquentation du deuxième cycle du secondaire à 15–17 ans par quintile de richesse, du plus pauvre au plus riche, était de 40, 67, 74, 85 et 93 % en 2014 (MICS). Les tirages acceptés reproduisent chaque quintile.",
+    "vi": "Tỷ lệ đi học trung học phổ thông ở tuổi 15–17 theo nhóm ngũ phân vị giàu nghèo, từ nghèo nhất đến giàu nhất, là 40, 67, 74, 85 và 93% năm 2014 (MICS). Các lần rút được chấp nhận khớp với mọi nhóm."
+  },
+  "Upper-secondary attendance by wealth, ages 15–17": {
+    "zh-Hans": "按财富划分的高中阶段在读率（15–17岁）",
+    "fr": "Fréquentation du secondaire supérieur selon la richesse, 15–17 ans",
+    "vi": "Tỷ lệ đi học trung học phổ thông theo mức giàu nghèo, tuổi 15–17"
+  },
+  "All three bundles fit the full quintile profiles in Cambodia and Vietnam. The relational weight ends where it started (posterior median 0.43 in Cambodia and 0.40 in Vietnam, against a prior of 0.40), so these data cannot tell the explanations apart.": {
+    "zh-Hans": "三种机制组合都能拟合柬埔寨和越南完整的五等分分布。关系权重没有从先验移动（后验中位数柬埔寨为0.43，越南为0.40，先验为0.40），因此这些数据无法区分各种解释。",
+    "fr": "Les trois ensembles reproduisent les profils complets par quintile au Cambodge et au Vietnam. Le poids relationnel reste à son point de départ (médiane a posteriori 0,43 au Cambodge et 0,40 au Vietnam, pour un a priori de 0,40) : ces données ne permettent pas de départager les explications.",
+    "vi": "Cả ba nhóm cơ chế đều khớp với toàn bộ phân bố theo ngũ phân vị ở Campuchia và Việt Nam. Trọng số quan hệ vẫn ở nguyên chỗ ban đầu (trung vị hậu nghiệm 0,43 ở Campuchia và 0,40 ở Việt Nam, so với tiên nghiệm 0,40), nên dữ liệu này không phân biệt được các cách giải thích."
+  },
+  "An earlier version with a hard liquidity threshold fitted no quintile profile; its verdict against the relational floor came from that cliff. China fits poorly under every bundle (9–25 of 24,000 draws), and graduate pay relative to the urban average stands in for the college premium.": {
+    "zh-Hans": "早期版本使用硬性流动性门槛，无法拟合任何五等分分布；它对关系底线的否定结论来自这一断崖。中国在所有机制组合下拟合都很差（24,000次抽样中仅9–25次），且以毕业生工资相对城镇平均工资作为大学溢价的替代指标。",
+    "fr": "Une version antérieure, avec un seuil de liquidité strict, ne reproduisait aucun profil par quintile ; son verdict contre le plancher relationnel venait de cette falaise. La Chine est mal ajustée par tous les ensembles (9 à 25 tirages sur 24 000), et le salaire des diplômés rapporté à la moyenne urbaine remplace la prime universitaire.",
+    "vi": "Một phiên bản trước dùng ngưỡng thanh khoản cứng và không khớp với phân bố ngũ phân vị nào; kết luận bác bỏ sàn quan hệ của nó đến từ bước nhảy đó. Trung Quốc khớp kém dưới mọi nhóm cơ chế (9–25 trên 24.000 lần rút), và lương sinh viên tốt nghiệp so với mức trung bình đô thị được dùng thay cho mức chênh lệch đại học."
+  },
+  "Draws use the graded liquidity constraint. Cambodia and Vietnam must match the full wealth-quintile profile; China has aggregate targets only. 2035 projections are not shown because their sign depends on the form of the liquidity constraint.": {
+    "zh-Hans": "抽样采用渐进式流动性约束。柬埔寨和越南必须拟合完整的财富五等分分布；中国只有总体目标。未显示2035年预测，因为其方向取决于流动性约束的形式。",
+    "fr": "Les tirages utilisent la contrainte de liquidité graduelle. Le Cambodge et le Vietnam doivent reproduire tout le profil par quintile de richesse ; la Chine n’a que des cibles agrégées. Les projections pour 2035 ne sont pas affichées car leur signe dépend de la forme de la contrainte de liquidité.",
+    "vi": "Các lần rút dùng ràng buộc thanh khoản dạng chuyển tiếp. Campuchia và Việt Nam phải khớp toàn bộ phân bố theo ngũ phân vị giàu nghèo; Trung Quốc chỉ có mục tiêu tổng hợp. Dự báo năm 2035 không được hiển thị vì chiều của nó phụ thuộc vào dạng ràng buộc thanh khoản."
+  },
+  "Non-completers from poorest 40%, 2021": {
+    "zh-Hans": "2021年未完成者中来自最穷40%家庭的比例",
+    "fr": "Non-diplômés issus des 40 % les plus pauvres, 2021",
+    "vi": "Người không hoàn thành thuộc 40% nghèo nhất, 2021"
+  },
+  "Observed in Cambodia: 55–64%": {
+    "zh-Hans": "柬埔寨观测值：55–64%",
+    "fr": "Observé au Cambodge : 55–64 %",
+    "vi": "Quan sát ở Campuchia: 55–64%"
+  },
+  "Relational weight": {
+    "zh-Hans": "关系权重",
+    "fr": "Poids relationnel",
+    "vi": "Trọng số quan hệ"
+  },
+  "Posterior median; prior median 0.40": {
+    "zh-Hans": "后验中位数；先验中位数为0.40",
+    "fr": "Médiane a posteriori ; médiane a priori 0,40",
+    "vi": "Trung vị hậu nghiệm; trung vị tiên nghiệm 0,40"
   }
 }

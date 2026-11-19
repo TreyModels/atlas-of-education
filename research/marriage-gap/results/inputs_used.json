@@ -1,0 +1,63 @@
+{
+ "R": {
+  "China": 1.1592101029411763,
+  "Korea": 1.1206592629411765,
+  "Japan": 1.054499002352941
+ },
+ "srb_years": "1992-2008 mean of UN WPP 2024 via OWID",
+ "R_CHINA": 1.1592101029411763,
+ "P_BEST": 0.9,
+ "M0": 0.261804092053602,
+ "ever_married_target": 0.8160000000000001,
+ "window": [
+  0.75,
+  0.88
+ ],
+ "obs": {
+  "w": 0.48,
+  "m": 0.77,
+  "gap": 0.29000000000000004
+ },
+ "chart": {
+  "Egypt": [
+   83,
+   95,
+   false
+  ],
+  "Israel": [
+   85,
+   92,
+   false
+  ],
+  "United Kingdom": [
+   83,
+   86,
+   null
+  ],
+  "Ireland": [
+   88,
+   78,
+   false
+  ],
+  "United States": [
+   83,
+   77,
+   true
+  ],
+  "Korea": [
+   66,
+   78,
+   false
+  ],
+  "China": [
+   48,
+   77,
+   true
+  ],
+  "Japan": [
+   51,
+   53,
+   null
+  ]
+ }
+}

@@ -1,0 +1,8 @@
+{
+ "assumed_n_per_sex_18_22": 100,
+ "se_gap_selection_fit": 0.04599962598591202,
+ "se_gap_divergence_fit": 0.04923168046023908,
+ "predicted_gap_selection": 0.015455838509927267,
+ "predicted_gap_divergence": 0.11254714200639149,
+ "difference": 0.09709130349646422
+}

@@ -257,17 +257,17 @@ globalThis.AtlasWorldsLab = (() => {
     ], links: [methods, mandalaArchive, history]
   };
 
-  const margins = {Cambodia: 'Lower-secondary completion', Vietnam: 'Upper-secondary completion at 19', China: 'College entry'};
+  const margins = {Cambodia: 'Lower-secondary completion', Vietnam: 'Upper-secondary attendance by wealth, ages 15–17', China: 'College entry'};
   const structures = {M_HC: 'Human capital', M_POS: '+ Positional', M_REL: '+ Relational'};
   const targets = {
-    Cambodia: 'Completion was about 17% in 2000 and 56–58% in 2021. The two 2010 series give 37–49%. The comparison has no wealth gradient.',
-    Vietnam: 'Young Lives reports 57.7% completion at 19, with 25.1% in the bottom wealth quintile and 80.5% in the top.',
+    Cambodia: 'Completion was about 17% in 2000 and 56% in 2021. By wealth quintile, poorest to richest, it was 29, 48, 54, 66 and 79% in 2021 (UIS). Accepted draws match every quintile within 10 points in 2014 and 2021.',
+    Vietnam: 'Upper-secondary attendance at ages 15–17 by wealth quintile, poorest to richest, was 40, 67, 74, 85 and 93% in 2014 (MICS). Accepted draws match every quintile.',
     China: 'Tertiary gross enrolment is the proxy for college entry. The 2012, 2019 and 2023 anchors are about 30%, 48% and 60.2%.'
   };
   const floor = {
     id: 'credentials', nav: 'Education · Credential floor', title: 'What keeps students in school?',
     meta: 'COMPARATIVE EDUCATION · STORED PARAMETER DRAWS', question: 'Which explanations fit the targets, and who leaves when the relative value of a credential falls?',
-    version: 'Atlas 0.11.2 · relfloor_countries.py · 5 November 2026', stored: true, engines: ['relfloor_countries.json'],
+    version: 'Atlas 0.11.2 · relfloor_countries.py v2.1, graded liquidity · 14 November 2026', stored: true, engines: ['relfloor_countries_v2_smoothliq.json'],
     defaults: {country: 'Cambodia', structure: 'M_REL'},
     controls: [
       select('country', 'Country', {Cambodia: 'Cambodia', Vietnam: 'Vietnam', China: 'China'}, 'Each country uses a different credential margin.'),
@@ -279,19 +279,19 @@ globalThis.AtlasWorldsLab = (() => {
       return {
         heading: margins[country],
         metrics: [metric('Draws meeting targets', pct(r.rate, 2), number(r.accepted) + ' of 24,000'),
-          metric('Exits from poorest 40%', pct(r.exit_low[1]), 'Median among accepted draws'),
-          metric('2035 completion change', signed(100 * r.fall35_q3[1]) + ' pp', 'Middle quintile and above')],
-        table: {head: ['Mechanisms', 'Draws accepted', 'Exits from poorest 40%', '2035 change'],
+          metric('Non-completers from poorest 40%, 2021', r.exit_low ? pct(r.exit_low[1]) : '—', 'Observed in Cambodia: 55–64%'),
+          metric('Relational weight', number(rows.M_REL.b_rel[1], 2), 'Posterior median; prior median 0.40')],
+        table: {head: ['Mechanisms', 'Draws accepted', 'Non-completers from poorest 40%, 2021', 'Relational weight'],
           rows: Object.entries(rows).map(([key, v]) => ({selected: key === structure,
-            cells: [structures[key], pct(v.rate, 2), pct(v.exit_low[1]), signed(100 * v.fall35_q3[1]) + ' pp']}))},
-        note: 'The stored 2035 experiment lowers the relative earnings premium by 40%. The change refers to the middle quintile and above. Acceptance shares depend on each country’s targets and priors.'
+            cells: [structures[key], pct(v.rate, 2), v.exit_low ? pct(v.exit_low[1]) : '—', v.b_rel ? number(v.b_rel[1], 2) : '—']}))},
+        note: 'Draws use the graded liquidity constraint. Cambodia and Vietnam must match the full wealth-quintile profile; China has aggregate targets only. 2035 projections are not shown because their sign depends on the form of the liquidity constraint.'
       };
     },
     evidence: ({country}) => [
       evidence('Historical targets · ' + country, targets[country]),
-      evidence('Model comparison · Wealth gradient', 'Vietnam supplies a wealth gradient in this comparison. Its acceptance share drops from 6.1% for human capital alone to about 0.8% with the relational mechanism.'),
-      evidence('What the comparison leaves open', 'The supplied research note identifies missing wealth gradients for Cambodia and China. China’s graduate pay relative to urban average is a proxy for the college versus high-school premium.', true)
-    ], links: [['Comparative results note', 'reference/credential-floor.md'], ['Stored parameter summaries', 'reference/relfloor_countries.json']]
+      evidence('Model comparison · Wealth gradient', 'All three bundles fit the full quintile profiles in Cambodia and Vietnam. The relational weight ends where it started (posterior median 0.43 in Cambodia and 0.40 in Vietnam, against a prior of 0.40), so these data cannot tell the explanations apart.'),
+      evidence('What the comparison leaves open', 'An earlier version with a hard liquidity threshold fitted no quintile profile; its verdict against the relational floor came from that cliff. China fits poorly under every bundle (9–25 of 24,000 draws), and graduate pay relative to the urban average stands in for the college premium.', true)
+    ], links: [['Comparative results note', 'reference/credential-floor.md'], ['Stored parameter summaries', 'reference/relfloor_countries_v2_smoothliq.json']]
   };
   const campaign = {
     id: 'campaign', nav: 'Angkor · Campaigns & distance', title: 'Can the army get home before harvest?',

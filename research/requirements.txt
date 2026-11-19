@@ -1,0 +1,6 @@
+# Direct dependencies; archive exact installed versions with published runs.
+numpy>=1.26,<3
+scipy>=1.11,<2
+pandas>=2.1,<3
+statsmodels>=0.14,<1
+# The Out-of-Africa companion additionally requires numba and its own dependencies.

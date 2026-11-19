@@ -5,7 +5,8 @@
   const years = Array.from({length: END - BASE + 1}, (_, i) => BASE + i);
   const sum = list => list.reduce((total, value) => total + value, 0);
   const defaults = {policy:"reference", births:0, exits:null, firstShare:null, override:null,
-    lag:null, qualify:0.85, seek:0.8, force:false, cost:null};
+    lag:null, qualify:0.85, seek:0.8, force:false, cost:null,
+    hiringTail:'taper', applicantRetention:0};
   const policies = {
     reference: {staff:1, sites:0.45, hk:"policy", gz:"reference"},
     retain: {staff:1, sites:0.45, floor:true, hk:"retention", gz:"retain"},
@@ -71,10 +72,11 @@
     return config.override;
   }
 
-  function plannedFloor(stage, policy, year) {
+  function plannedFloor(stage, policy, year, tail = 'taper') {
     if (!stage.hiring || policy !== "reference") return 0;
     const midpoint = range => Math.round(sum(range) / range.length);
     if (stage.hiring[year]) return midpoint(stage.hiring[year]);
+    if (year > 2030 && tail === 'hold2030') return midpoint(stage.hiring[2030]);
     return year > 2030 ? Math.round(midpoint(stage.hiring[2030]) * Math.max(0, (2034 - year) / 4)) : 0;
   }
 
@@ -82,16 +84,19 @@
     const system = data.systems[name];
     const stage = system.stages[key];
     const config = {...defaults, ...input};
+    if (!['taper','hold2030'].includes(config.hiringTail) || config.applicantRetention < 0 || config.applicantRetention > 1)
+      throw new RangeError('Invalid hiring tail or applicant retention');
     const policy = policies[config.policy];
     const demand = system.family ? cityRows(data, system, stage, config, policy) : nationalRows(data, name, stage, config, policy);
     const base = demand[0].map(row => row.required);
     let employed = [...base];
+    let applicantBacklog = 0;
     const lag = config.lag ?? stage.lag ?? 4;
     const firstShare = config.firstShare ?? stage.firstShare ?? 0.5;
     const aggregate = values => values.some(value => value == null) ? null : sum(values);
     return demand.map((parts, index) => {
       const year = years[index];
-      const floor = plannedFloor(stage, config.policy, year);
+      const floor = plannedFloor(stage, config.policy, year, config.hiringTail);
       const flows = parts.map((row, i) => !index || row.required == null ? null :
         workforce(employed[i], row.required, row.exitRate, config.force, floor));
       employed = flows.map((flow, i) => flow?.employed ?? employed[i]);
@@ -112,9 +117,12 @@
       row.feederIntake = index ? intake(stage, config, year - lag) : null;
       row.qualified = row.feederIntake == null ? null : Math.round(row.feederIntake * config.qualify);
       row.applicants = row.qualified == null ? null : Math.round(row.qualified * config.seek);
+      row.returningApplicants = row.applicants == null ? null : Math.round(applicantBacklog * config.applicantRetention);
+      row.totalApplicants = row.applicants == null ? null : row.applicants + row.returningApplicants;
       row.firstOpenings = row.openings == null ? null : Math.max(floor, Math.round(row.openings * firstShare));
       row.unmatched = row.applicants == null || row.firstOpenings == null ? null :
-        Math.max(0, row.applicants - row.firstOpenings);
+        Math.max(0, row.totalApplicants - row.firstOpenings);
+      applicantBacklog = row.unmatched ?? 0;
       row.payroll = row.employed == null || config.cost == null ? null : row.employed * config.cost;
       return row;
     });
