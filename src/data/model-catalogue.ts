@@ -110,7 +110,7 @@ export const familyInfo: Record<ModelFamily, { title: string; short: string; que
     description: 'Country cases, synthetic cities and East Asian forecasts follow pupils, teachers, classrooms and budgets through demographic change.',
   },
   planning: {
-    title: 'IIEP / UIS planning methods', short: 'IIEP / UIS methods',
+    title: 'Education Planning Toolkit · UN methods', short: 'Ed planning toolkit',
     question: 'The planner’s toolkit, with its arithmetic showing.',
     description: 'Twelve independent implementations in the IIEP, UIS and education-sector-analysis tradition. These are methodological tools, not official UNESCO software.',
   },

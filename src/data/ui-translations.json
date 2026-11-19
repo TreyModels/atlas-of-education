@@ -3333,5 +3333,15 @@
   "fr": "Bus PCC · Comparaison d’identification (v7)",
   "vi": "Bus CCP · So sánh nhận dạng (v7)",
   "zh-Hans": "CCP bus · 识别比较（v7）"
+ },
+ "Education Planning Toolkit · UN methods": {
+  "zh-Hans": "教育规划工具包 · 联合国方法",
+  "fr": "Boîte à outils de planification de l’éducation · méthodes de l’ONU",
+  "vi": "Bộ công cụ quy hoạch giáo dục · phương pháp của Liên Hợp Quốc"
+ },
+ "Ed planning toolkit": {
+  "zh-Hans": "教育规划工具包",
+  "fr": "Planification de l’éducation",
+  "vi": "Công cụ quy hoạch giáo dục"
  }
 }
