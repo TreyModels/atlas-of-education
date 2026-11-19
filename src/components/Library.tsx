@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import { ArrowRight, ArrowUpRight, BookOpen, Search, X } from 'lucide-react'
 import type { Translate } from '../types'
-import { catalogue, classicLabs, familyCounts, familyGroups, familyInfo, familyItems, totalModels, type CatalogueItem, type ModelFamily } from '../data/model-catalogue'
+import { catalogue, classicLabs, experimentalInterfaces, familyCounts, familyGroups, familyInfo, familyItems, totalModels, type CatalogueItem, type ModelFamily } from '../data/model-catalogue'
 import { statusIntro, familyStatus, callToAction } from '../data/site-status'
 import { purposeLabel, stateLabel } from '../data/angkor-journey'
 import { homeExplainer } from '../data/home-explainer'
@@ -74,6 +74,7 @@ export function Library({ t, navigate }: { t: Translate; navigate: (id: string) 
       <div className="hero-actions">
         <button className="button button-primary" onClick={() => document.getElementById('questions')?.scrollIntoView({ block: 'start' })}>{t('Start with a question')}<ArrowRight size={18} /></button>
         <a className="text-link" href="https://comparativist.substack.com" target="_blank" rel="noreferrer">{t('Read the essays on The Comparativist')}<ArrowUpRight size={16} /></a>
+        <button className="text-link" onClick={() => navigate('sector')}>{t('Try the Scenario Theatre')}<span className="experimental-chip">{t('Experimental')}</span><ArrowRight size={16} /></button>
       </div>
     </section>
 
@@ -249,6 +250,11 @@ export function Library({ t, navigate }: { t: Translate; navigate: (id: string) 
           </div>}
         </section>
       })}
+    </section>
+
+    <section className="classic-labs shell" id="experiments">
+      <div className="classic-labs-heading"><p className="eyebrow">{t('EXPERIMENTAL INTERFACES')}</p><h2>{t('Experiments')}</h2><p>{t('Prototypes for comparing model runs. These are experimental interfaces, not additional models, and are not counted in the catalogue above.')}</p></div>
+      <ul className="catalogue-items">{experimentalInterfaces.map(item => <ModelLink key={item.id} item={item} t={t} navigate={navigate} />)}</ul>
     </section>
 
     <section className="classic-labs shell">
