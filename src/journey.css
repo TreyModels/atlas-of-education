@@ -267,3 +267,12 @@ input[type="range"] {
     scroll-behavior: smooth;
   }
 }
+
+/* Fixes after visual check (Claude): nav text wraps on desktop; claim labels sit above their paragraph. */
+.journey-nav-kicker, .journey-nav-title { display: block; }
+.journey-nav-kicker { font-size: .72rem; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; }
+@media (min-width: 1000px) { .journey-nav a { white-space: normal; } }
+.journey-claim { display: block; border: 0; padding: 0; margin-bottom: 2px; font-size: .7rem; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); }
+.journey-hero h1 { font: 400 clamp(2rem, 4vw, 3.2rem)/1.1 var(--serif); margin: 8px 0 16px; }
+.journey-lede { font-size: 1.15rem; line-height: 1.6; }
+.journey-block h3 { margin: 24px 0 8px; font: 600 .78rem/1.3 var(--sans); text-transform: uppercase; letter-spacing: .1em; color: var(--green); }
