@@ -73,7 +73,7 @@ export const educationJourney: Journey = {
       },
       sources: [
         { label: 'Youth review: bounds, step, holdout and lake null', href: 'https://github.com/TreyModels/atlas-of-education/blob/main/experiments/youth-review/README.md' },
-        { label: 'China forecast ledger', href: 'research/china-forecast-ledger/README.md' },
+        { label: 'China forecast ledger', href: 'https://github.com/TreyModels/atlas-of-education/blob/main/research/china-forecast-ledger/README.md' },
         { label: 'Full Education Atlas', href: 'reference/education/index.html' },
       ],
       models: ['china'],
@@ -148,7 +148,7 @@ export const educationJourney: Journey = {
       },
       sources: [
         { label: 'The relational-floor test in Cambodia, Vietnam and China (v2.1)', href: 'reference/credential-floor.md' },
-        { label: 'Credential-floor research folder', href: 'research/credential-floor/README.md' },
+        { label: 'Credential-floor research folder', href: 'https://github.com/TreyModels/atlas-of-education/blob/main/research/credential-floor/README.md' },
         { label: 'Cambodia DHS 2021–22 (FR377)', href: 'https://www.dhsprogram.com/pubs/pdf/FR377/FR377.pdf' },
       ],
       models: ['credentials'],
@@ -241,7 +241,7 @@ export const educationJourney: Journey = {
       state: 'developing',
       note: '24,000 draws per country × structure. With a hard liquidity threshold no draw fits the wealth profile and the relational floor fails; with a graded threshold all three structures fit and predict 57–58% against 55–64% observed. Stored v2.1 results are historical; the premium counterfactual now compares falling and baseline paths in the same year (2035), and the paired effect must be rerun.',
       route: 'credentials',
-      research: 'research/credential-floor/README.md',
+      research: 'https://github.com/TreyModels/atlas-of-education/blob/main/research/credential-floor/README.md',
     },
     'massification-parents': {
       id: 'massification-parents',
