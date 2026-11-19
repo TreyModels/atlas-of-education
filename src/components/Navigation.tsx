@@ -214,9 +214,11 @@ export function Navigation({ route, navigate, t, language, setLanguage }: Naviga
         <div className="search-results">
           {results.map(model => {
             const content = <><span><small>{t(familyInfo[model.family].short)} · {t(model.format)}</small><strong>{t(model.title)}</strong><span>{t(model.question)}</span><span className="search-result-tags">{model.tags.slice(0, 4).map(tag => <span key={tag} className="tag-chip tag-chip-static">#{tag}</span>)}</span></span>{model.href ? <ArrowUpRight size={19} /> : <ArrowRight size={19} />}</>
-            return model.href
+            // File bundles (zip etc.) open their family page instead of downloading straight from search.
+            const fileLink = !!model.href && /\.(zip|tgz|tar\.gz|csv|pdf|xlsx)(\?|#|$)/i.test(model.href)
+            return model.href && !fileLink
               ? <a key={model.id} href={model.href} onClick={() => setSearchOpen(false)}>{content}</a>
-              : <button key={model.id} onClick={() => go(model.route!)}>{content}</button>
+              : <button key={model.id} onClick={() => go(fileLink ? `story-${model.family}` : model.route!)}>{content}</button>
           })}
           {!results.length && <div className="search-empty"><strong>{t('No models found')}</strong><p>{t('Try a broader topic, or a #tag such as #water or #teachers.')}</p></div>}
         </div>

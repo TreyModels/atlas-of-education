@@ -14,6 +14,8 @@ const sectionIds: Record<ModelFamily, string> = {
   education: 'education-models', systems: 'school-systems', planning: 'planning-lab', angkor: 'angkor-case', fertility: 'fertility-models', shadow: 'shadow-models', deephistory: 'deep-history', politics: 'political-economy', extension: 'extension-field-schools',
 }
 const isDownloadItem = (item: CatalogueItem) => item.method.toLowerCase().includes('download')
+/** A link that would start a file download (zip etc.), not open a page. */
+export const isFileLink = (href?: string) => !!href && /\.(zip|tgz|tar\.gz|csv|pdf|xlsx)(\?|#|$)/i.test(href)
 
 export function ModelLink({ item, t, navigate }: { item: CatalogueItem; t: Translate; navigate: (id: string) => void }) {
   const content = <>
@@ -22,14 +24,17 @@ export function ModelLink({ item, t, navigate }: { item: CatalogueItem; t: Trans
       <strong>{t(item.title)}</strong>
       <span className="catalogue-item-question">{t(item.question)}</span>
     </span>
-    <span className="catalogue-item-action">{t('Open entry')}{item.href ? <ArrowUpRight size={18} /> : <ArrowRight size={18} />}</span>
+    <span className="catalogue-item-action">{t('Open entry')}{item.href && !isFileLink(item.href) ? <ArrowUpRight size={18} /> : <ArrowRight size={18} />}</span>
   </>
+  // Never start a download from a search result: open the family page; the file is an explicit link below.
+  const fileLink = isFileLink(item.href)
   const external = item.href?.startsWith('http')
   const openTag = (tag: string) => window.dispatchEvent(new CustomEvent<string>('atlas:search', { detail: `#${tag}` }))
   return <li className={`catalogue-item${isDownloadItem(item) ? ' catalogue-item-download' : ''}`}>
-    {item.href
+    {item.href && !fileLink
       ? <a href={item.href} {...(external ? { target: '_blank', rel: 'noreferrer' } : {})}>{content}</a>
-      : <button onClick={() => navigate(item.route!)}>{content}</button>}
+      : <button onClick={() => navigate(fileLink ? `story-${item.family}` : item.route!)}>{content}</button>}
+    {fileLink && <a className="catalogue-item-file" href={item.href} download>{t('Download file')}</a>}
     <div className="catalogue-item-tags" aria-label={t('Tags')}>
       {item.tags.slice(0, 4).map(tag => <button key={tag} className="tag-chip" onClick={() => openTag(tag)}>#{tag}</button>)}
       {item.tags.length > 4 && <span className="tag-more">+{item.tags.length - 4}</span>}
