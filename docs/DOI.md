@@ -10,6 +10,7 @@
 | **Version DOI** — v2026.11.19 | [10.5281/zenodo.24369168](https://doi.org/10.5281/zenodo.24369168) | [zenodo.org/records/24369168](https://zenodo.org/records/24369168) |
 | **Version DOI** — v2026.11.20 | [10.5281/zenodo.24369385](https://doi.org/10.5281/zenodo.24369385) | [zenodo.org/records/24369385](https://zenodo.org/records/24369385) |
 | **Version DOI** — v2026.11.21 | [10.5281/zenodo.24369841](https://doi.org/10.5281/zenodo.24369841) | [zenodo.org/records/24369841](https://zenodo.org/records/24369841) |
+| **Version DOI** — v2026.11.22 | [10.5281/zenodo.24370343](https://doi.org/10.5281/zenodo.24370343) | [zenodo.org/records/24370343](https://zenodo.org/records/24370343) |
 
 `CITATION.cff` carries the **concept** DOI (10.5281/zenodo.24369167), so a citation keeps resolving to the newest release. Each future GitHub release mints a new version DOI under the same concept DOI; add it to this table when it is issued.
 
