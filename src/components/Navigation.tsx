@@ -24,9 +24,9 @@ const familyFor = (route: string) => {
 }
 
 function Brand({ onClick, t }: { onClick: () => void; t: Translate }) {
-  return <button className="brand" onClick={onClick} aria-label={t('Atlas of Education home')}>
+  return <button className="brand" onClick={onClick} aria-label={t('Atlas Worlds home')}>
     <span className="brand-mark" aria-hidden="true"><i /><i /><i /></span>
-    <span>{t('Atlas of Education')}<small>{t('Model Lab')}</small></span>
+    <span>{t('Atlas Worlds')}<small>{t('Model Lab')}</small></span>
   </button>
 }
 
