@@ -8,6 +8,7 @@ import { DataChart } from './DataChart'
 import { ModelNarrative } from './ModelNarrative'
 import { ModelQuestions } from './ModelQuestions'
 import { ScenarioTheatre } from './ScenarioTheatre'
+import { WorkbenchModelCard } from './WorkbenchModelCard'
 import { catalogue } from '../data/model-catalogue'
 import stories from '../data/model-stories.json'
 
@@ -111,11 +112,11 @@ export function Workbench({ world, values, onChange, onReset, onHandoff, navigat
   return <main id="main-content" className="workbench shell">
     <div className="workbench-topline"><button className="back-link" onClick={() => navigate(guideIndex >= 0 ? 'angkor-guide' : '')}><ArrowLeft size={17} />{t(guideIndex >= 0 ? 'Guided sequence' : 'Back to library')}</button><span>{t(world.meta)}</span></div>
     <header className="world-header">
-      <div><p className="eyebrow">{guide ? t(guide[1]) : t('ATLAS WORLDS · MODEL LAB')}</p><h1>{t(world.title)}</h1><p>{t(world.question)}</p>
-        {catalogueItem && <div className="workbench-tags" aria-label={t('Tags')}>{catalogueItem.tags.slice(0, 5).map(tag => <button key={tag} className="tag-chip tag-chip-quiet" onClick={() => window.dispatchEvent(new CustomEvent<string>('atlas:search', { detail: `#${tag}` }))}>#{tag}</button>)}</div>}
-      </div>
+      <div><p className="eyebrow">{guide ? t(guide[1]) : t('ATLAS WORLDS · MODEL LAB')}</p><h1>{t(world.title)}</h1><p>{t(world.question)}</p></div>
       <span className={`mode ${world.stored ? 'stored' : ''}`}><i />{t(world.stored ? 'Stored results' : 'Live model')}</span>
     </header>
+
+    <WorkbenchModelCard world={world} item={catalogueItem} t={t} navigate={navigate} />
 
     <div className="model-start">{result&&<ModelNarrative world={world} view={view} referenceView={referenceView} values={result.values} referenceControls={reference} onChange={changeValues} t={t} pending={pending} campaignLaunches={launches}/>}<nav><a href="#result-title">{t('Results')}</a><a href="#controls-title">{t('Controls')}</a><a href="#model-explanation">{t('About the models')}</a></nav></div>
     <div className="workspace">
