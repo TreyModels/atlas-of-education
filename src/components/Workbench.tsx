@@ -61,7 +61,7 @@ export function Workbench({ world, values, onChange, onReset, onHandoff, navigat
   const timeline = useMemo(() => world.stored ? [] : [...new Set((view.lines??[]).filter(line=>line.points.length>1).flatMap(line=>line.points.map(point=>point[0])))].sort((a,b)=>a-b), [result, world.id, world.stored])
   const playbackX = playState === 'playing' || playState === 'paused' ? timeline[playIndex] : undefined
   const playbackValues = playbackX === undefined ? [] : (view.lines??[]).map(line=>({line,point:line.points.find(point=>point[0]===playbackX)})).filter(item=>item.point)
-  const playbackAxis = view.xTitle ?? (['cambodia','teachers','sector','absorption','angkor','monsoon','mandala'].includes(world.id) ? 'Year' : ['signalling','obligations'].includes(world.id) ? 'Round' : world.id==='cohort' ? 'Grade' : world.id==='lays' ? 'Age' : 'Simulation step')
+  const playbackAxis = view.xTitle ?? (['cambodia','teachers','sector','absorption','angkor','monsoon','mandala'].includes(world.id) ? t('Year') : ['signalling','obligations'].includes(world.id) ? 'Round' : world.id==='cohort' ? 'Grade' : world.id==='lays' ? 'Age' : 'Simulation step')
   useEffect(() => { setPlayState('idle'); setPlayIndex(0) }, [world.id])
   useEffect(() => {
     if (!result || timeline.length < 2 || playState !== 'idle') return
