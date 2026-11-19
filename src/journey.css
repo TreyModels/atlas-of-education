@@ -84,6 +84,7 @@
   padding-left: 12px;
 }
 
+.claim-data { border-left-color: var(--ink); border-left-style: double; }
 .claim-published {
   border-left-color: var(--green);
 }

@@ -8,7 +8,7 @@ export type Purpose = 'published' | 'mechanism' | 'teaching' | 'accounting'
 /** How far a model has been checked. "checked" means the code and ledgers were verified, not the history. */
 export type DevState = 'checked' | 'developing' | 'historical' | 'evaluated'
 /** What kind of claim a paragraph makes. */
-export type Claim = 'published' | 'sim' | 'open' | 'method'
+export type Claim = 'published' | 'data' | 'sim' | 'open' | 'method'
 
 export interface Para { claim?: Claim; text: string }
 export interface ModelCard { id: string; title: string; purpose: Purpose; state: DevState; note: string; engine?: string; route?: string; research?: string }
@@ -19,7 +19,7 @@ export interface Chapter {
   evidence: Para[]; rule: Para[]; result: Para[]; limitation: Para[]
   maths?: Maths; sources: Source[]; models: string[]; interactive?: 'beta'
 }
-export interface Journey { kicker: string; title: string; lede: string; why: Para[]; chapters: Chapter[]; deeper: string[]; models: Record<string, ModelCard>; bottomLine: string; repo: string }
+export interface Journey { kicker: string; title: string; lede: string; why: Para[]; chapters: Chapter[]; deeper: string[]; models: Record<string, ModelCard>; bottomLine: string; repo: string; family: string }
 
 export const purposeLabel: Record<Purpose, { label: string; help: string }> = {
   published: { label: 'Published foundation', help: 'Implements relationships reported in a peer-reviewed study.' },
@@ -35,6 +35,7 @@ export const stateLabel: Record<DevState, { label: string; help: string }> = {
 }
 export const claimLabel: Record<Claim, string> = {
   published: 'From the published study',
+  data: 'Observed data',
   sim: 'Produced by an Atlas simulation',
   open: 'Still unsettled',
   method: 'How the model works',
@@ -47,6 +48,7 @@ export const journey: Journey = {
   title: 'How did a medieval city feed itself, and what could break it?',
   lede: 'Angkor, in today’s Cambodia, was one of the largest pre-industrial cities ever mapped: an urban landscape of at least 1,500 km² and up to 900,000 people between the 9th and 14th centuries. This page starts from a peer-reviewed study of how its food economy was organised, then follows the Atlas models built on top of it, one assumption at a time.',
   repo: 'https://github.com/TreyModels/atlas-of-education',
+  family: 'angkor',
   why: [
     { text: 'Cities need farmers to feed people who do not farm. A common view in economic anthropology is that farming more intensively brings diminishing returns: each extra hour of work yields less. Angkor is hard to square with that view. Its core alone held more than 150,000 people.' },
     { text: 'So we ask two questions in order. First, what does the archaeological record say about how production was organised? That part is a published result. Second, if those relationships held, how would food, labour, authority and climate interact over time? That part is ours: a set of experiments, each labelled with its purpose and how far it has been checked.' },

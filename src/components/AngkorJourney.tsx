@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import type { Translate } from '../types'
-import { journey, purposeLabel, stateLabel, claimLabel } from '../data/angkor-journey'
-import type { ModelCard, Para } from '../data/angkor-journey'
+import { journey as angkorJourney, purposeLabel, stateLabel, claimLabel } from '../data/angkor-journey'
+import type { Journey, ModelCard, Para } from '../data/angkor-journey'
 import { BetaExplorer } from './BetaExplorer'
 import './../journey.css'
 
@@ -15,7 +15,7 @@ function Paragraph({ p, t }: { p: Para; t: Translate }) {
 }
 
 /** One model, labelled by why it exists and how far it has been checked. */
-function ModelCardView({ m, t, navigate }: { m: ModelCard; t: Translate; navigate: (id: string) => void }) {
+function ModelCardView({ m, t, navigate, journey }: { m: ModelCard; t: Translate; navigate: (id: string) => void; journey: Journey }) {
   const purpose = purposeLabel[m.purpose]
   const state = stateLabel[m.state]
   return <article className="journey-card">
@@ -29,16 +29,17 @@ function ModelCardView({ m, t, navigate }: { m: ModelCard; t: Translate; navigat
       {m.route && <button className="button" onClick={() => navigate(m.route!)}>{t('Open workbench')}</button>}
       {m.engine && <a href={m.engine}>{t('Code')}</a>}
       {m.research && <a href={m.research}>{t('Notes')}</a>}
-      <a target="_blank" rel="noopener" href={`${journey.repo}/issues/new?template=propose-a-version.yml&title=${encodeURIComponent('Version: angkor/' + m.id)}`}>{t('Propose a version')}</a>
+      <a target="_blank" rel="noopener" href={`${journey.repo}/issues/new?template=propose-a-version.yml&title=${encodeURIComponent(`Version: ${journey.family}/` + m.id)}`}>{t('Propose a version')}</a>
     </p>
   </article>
 }
 
-function cardsFor(ids: string[]): ModelCard[] {
+function cardsFor(journey: Journey, ids: string[]): ModelCard[] {
   return ids.map(id => journey.models[id]).filter((m): m is ModelCard => Boolean(m))
 }
 
-export function AngkorJourney({ t, navigate }: { t: Translate; navigate: (id: string) => void }) {
+/** Narrated family page. Angkor is the default; other families pass their own journey. */
+export function AngkorJourney({ t, navigate, journey = angkorJourney }: { t: Translate; navigate: (id: string) => void; journey?: Journey }) {
   const [active, setActive] = useState<string>(journey.chapters[0]?.id ?? '')
   const visible = useRef(new Map<string, boolean>())
 
@@ -136,14 +137,14 @@ export function AngkorJourney({ t, navigate }: { t: Translate; navigate: (id: st
       </ul>}
 
       <div className="journey-cards">
-        {cardsFor(c.models).map(m => <ModelCardView key={m.id} m={m} t={t} navigate={navigate} />)}
+        {cardsFor(journey, c.models).map(m => <ModelCardView key={m.id} m={m} t={t} navigate={navigate} journey={journey} />)}
       </div>
     </section>)}
 
     <section className="journey-deeper">
       <h2>{t('Deeper experiments')}</h2>
       <div className="journey-cards">
-        {cardsFor(journey.deeper).map(m => <ModelCardView key={m.id} m={m} t={t} navigate={navigate} />)}
+        {cardsFor(journey, journey.deeper).map(m => <ModelCardView key={m.id} m={m} t={t} navigate={navigate} journey={journey} />)}
       </div>
     </section>
 
