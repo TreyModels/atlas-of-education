@@ -17,7 +17,7 @@ export const about: Article = {
       'My limit is fieldwork: I can’t easily collect new data. So these models are built from published studies, public statistics and my own observations, and each one says which of those it rests on.',
     ] },
     { heading: 'What kind of models these are', paras: [
-      'Most are descriptive models: they try to represent how something actually works, with as much detail as the evidence supports, rather than the simplest possible toy. Each has a declared purpose. Some implement findings from peer-reviewed studies. Some explore what would follow if a mechanism held. Some exist to teach an idea. Some are still being built.',
+      'Most are descriptive models: they try to represent how something actually works, with as much detail as the evidence supports, rather than the simplest possible toy. Each has a declared purpose. Some implement findings from peer-reviewed studies (marked “published study”; other sources, such as drafts and official statistics, are named as such). Some explore what would follow if a mechanism held. Some exist to teach an idea. Some are still being built.',
       'Many are based on draft papers. Those drafts will be published alongside the models as the next stage of this project.',
     ] },
     { heading: 'When a model doesn’t prove what I hoped', paras: [
@@ -43,11 +43,11 @@ export const howModelsWork: Article = {
     ] },
     { heading: 'Monte Carlo: run it thousands of times', paras: [
       'Real life has chance in it: a good or bad harvest, who meets whom. A model includes that chance with random numbers. So one run tells you very little; it is one possible history. A Monte Carlo simulation runs the same model hundreds or thousands of times with different random draws and reports what happens across all of them.',
-      'When a page says “1,260 of 2,000 runs decline”, it means the model was run 2,000 times and the outcome happened in 1,260 of them. “Matched” runs use the same random draws in two scenarios, so the only difference between them is the thing being compared, for example real drought versus neutral climate.',
+      'Runs can differ for three reasons: chance events inside a run (random seeds), uncertain settings such as a crop response nobody has measured (parameter draws), and different versions of the rules themselves (structural alternatives). Pages say which kind of variation a result covers. When a page says “1,260 of 2,000 runs decline”, it means the model was run 2,000 times and the outcome happened in 1,260 of them. “Matched” runs use the same random draws in two scenarios, so the only difference between them is the thing being compared, for example real drought versus neutral climate.',
     ], maths: {
       plain: 'The main quantity is just a share: how many runs show the outcome, out of how many were run. A range around it says how much that share would wobble if you ran the whole experiment again.',
       formula: 'share = runs with the outcome ÷ total runs',
-      example: 'Angkor: with the drought record, 1,260 of 2,000 runs decline, a share of 1,260 ÷ 2,000 = 0.63, or 63%. With neutral climate, 0 of 2,000 decline. The difference between 63% and 0% is the effect of the drought record, in this model, under its assumptions.',
+      example: 'Angkor: with the drought record, 1,260 of 2,000 runs decline, a share of 1,260 ÷ 2,000 = 0.63, or 63%. With neutral climate, 0 of 2,000 decline. The difference between 63% and 0% is the effect of the drought record, in this model, under its assumptions. It is not a 63% chance that drought caused Angkor’s decline: it says how often these rules produce decline, not whether the rules are right.',
     } },
     { heading: 'What a result can and cannot tell you', paras: [
       'A model result says: if these rules held, this is what would follow. Whether the rules do hold is a separate question, answered by comparing the model with data it was not built from. Many models here have not passed that second test yet, and the pages say so.',
