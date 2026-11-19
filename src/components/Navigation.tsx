@@ -100,14 +100,14 @@ export function Navigation({ route, navigate, t, language, setLanguage }: Naviga
     <button className="all-models-link" onClick={() => { setDrawerOpen(false); setSearchOpen(true) }}><Search size={17} /><span>{t('Find a model')}</span><span className="model-total">{catalogue.length}</span></button>
     <div className="nav-resources">
       <p className="nav-label">{t('Resources')}</p>
+      <button className={route === 'about' ? 'active' : ''} aria-current={route === 'about' ? 'page' : undefined} onClick={() => go('about')}><Landmark size={17} /><span>{t('About')}</span></button>
+      <button className={route === 'how-models-work' ? 'active' : ''} aria-current={route === 'how-models-work' ? 'page' : undefined} onClick={() => go('how-models-work')}><FlaskConical size={17} /><span>{t('How models work')}</span></button>
       <button className={route === 'catalogue' ? 'active' : ''} onClick={() => go('catalogue')}><BookOpen size={17} /><span>{t('Research catalogue')}</span></button>
       <a href="research/index.html"><ArrowUpRight size={17} /><span>{t('Research library')}</span></a>
       <a href="research/fertility.html"><ArrowUpRight size={17} /><span>{t('Fertility collapse lab')}</span></a>
       <a href="research/shadow-education.html"><ArrowUpRight size={17} /><span>{t('Shadow education lab')}</span></a>
       <a href="research/out-of-africa.html"><ArrowUpRight size={17} /><span>{t('Coast or herds? Out of Africa')}</span></a>
       <a href="reference/education/index.html"><ArrowUpRight size={17} /><span>{t('Full Education Atlas')}</span></a>
-      <button className={route === 'about' ? 'active' : ''} aria-current={route === 'about' ? 'page' : undefined} onClick={() => go('about')}><BookOpen size={17} /><span>{t('About')}</span></button>
-      <button className={route === 'how-models-work' ? 'active' : ''} aria-current={route === 'how-models-work' ? 'page' : undefined} onClick={() => go('how-models-work')}><BookOpen size={17} /><span>{t('How models work')}</span></button>
     </div>
   </>
 

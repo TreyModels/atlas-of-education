@@ -3556,16 +3556,6 @@
  "Each paragraph on a model page is also marked as coming from a published study, from observed data, from an Atlas simulation, or as still unsettled.": {
   "zh-Hans": "模型页面上的每一段还会被标记为来自已发表研究、来自观测数据、来自 Atlas 模拟，或仍未有定论。"
  },
- "About": {
-  "zh-Hans": "关于",
-  "fr": "À propos",
-  "vi": "Giới thiệu"
- },
- "How models work": {
-  "zh-Hans": "模型如何运作",
-  "fr": "Comment fonctionnent les modèles",
-  "vi": "Mô hình hoạt động như thế nào"
- },
  "What is this site?": {
   "zh-Hans": "这个网站是什么？",
   "fr": "Qu'est-ce que ce site ?",
@@ -3575,6 +3565,16 @@
   "zh-Hans": "一个计算社会科学的实践实验室：把关于社会的论点写成可以运行、修改和检验的模型。初次到访？请从“模型如何运作”开始。",
   "fr": "Un laboratoire de travail en sciences sociales computationnelles : des arguments sur la société écrits sous forme de modèles que vous pouvez exécuter, modifier et tester. Nouveau ici ? Commencez par comment fonctionnent les modèles.",
   "vi": "Một phòng thí nghiệm thực hành về khoa học xã hội tính toán: các lập luận về xã hội được viết thành những mô hình bạn có thể chạy, thay đổi và kiểm tra. Lần đầu đến? Hãy bắt đầu với mô hình hoạt động như thế nào."
+ },
+ "About": {
+  "zh-Hans": "关于",
+  "fr": "À propos",
+  "vi": "Giới thiệu"
+ },
+ "How models work": {
+  "zh-Hans": "模型如何运作",
+  "fr": "Comment fonctionnent les modèles",
+  "vi": "Mô hình hoạt động như thế nào"
  },
  "Read this first": {
   "zh-Hans": "请先阅读",
