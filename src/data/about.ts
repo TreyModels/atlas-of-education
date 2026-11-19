@@ -59,3 +59,33 @@ export const howModelsWork: Article = {
     ] },
   ],
 }
+
+export const workflow: Article = {
+  id: 'workflow', kicker: 'My digital workflow, 2026', title: 'How one researcher and a team of AI agents build these models',
+  lede: 'My most-read post on my old blog was “My Digital Workflow”. This is the 2026 version. I know some HTML and I ran a WordPress site with too many plugins. Nearly everything else you see here (the models, the code, the tests, this website) was built by AI agents working under my direction. This page describes exactly how, because the method matters as much as the models.',
+  sections: [
+    { heading: 'The team, on four ordinary subscriptions', paras: [
+      'I work with four AI systems at once, each on a cheap plan. Claude (Anthropic, a $20 subscription) acts as coordinator and reviewer: it plans the work, assigns it, checks every number against its source, and merges the results. Codex (OpenAI, through a $20 ChatGPT subscription) owns whole model families end to end and handles deployment. DeepSeek, bought as cheap pay-as-you-go tokens, does the bulk writing: code, page drafts and translations. Kimi owns visual design.',
+      'The expensive models spend their tokens on judgement: planning, reviewing, catching mistakes. The cheap model writes the long files. That division is what makes this affordable for one person.',
+    ] },
+    { heading: 'A shared message board between the agents', paras: [
+      'The agents do not talk to each other directly. They share a message board, the Atlas Bridge: a small MCP server (the Model Context Protocol, a standard way to give AI tools access to other tools) that runs on my laptop. Every agent can post, read and attach files to it.',
+      'Coordination follows a few strict rules, written after two agents once started on the same model at the same time. Each piece of work has one owner from start to finish. Before starting, an agent posts a claim naming the files and branch it will touch. When finished, it posts what it did, the commit, and the output of every check. Only one agent deploys the website, and nothing goes live without a passing checklist.',
+    ] },
+    { heading: 'A fleet of cheap workers', paras: [
+      'For heavy writing, the coordinating agent sends tasks to a fleet of DeepSeek workers through a small runner script. Each task names the files the worker may read, the files it may write, and the checks its output must pass. The worker returns complete files; the runner writes them, runs the checks, and reports one line per task. The coordinator then reads only the result and the check output, not the whole file, unless something fails.',
+      'A typical instruction from me is short: “go spin up some agents and run more experiments”, or “convert the remaining families”. The agents turn that into claims, tasks, checks and a pull request.',
+    ] },
+    { heading: 'The scientific process underneath', paras: [
+      'The workflow serves one process. I start from a verbal model: an argument from the literature or from my own theory and observations. The agents and I write it as explicit rules, find the published studies and data it should answer to, and turn it into code. The code is checked for consistency (do the books balance, do people get counted once), then run many times, then compared with observations it was not built from where such data exist.',
+      'Every model then gets two labels, why it exists and how far it has been checked, and every paragraph on its page says whether it comes from a published study, observed data, a simulation, or is still open. Models that fail a test stay on the site, labelled as failed. Some of my favourite arguments have not survived this process yet. That is what the process is for.',
+    ] },
+    { heading: 'How mistakes get caught', paras: [
+      'AI agents make mistakes confidently, so the process assumes they will. Every number on a model page is traced back to a source file before it is published; drafts with numbers that cannot be traced are sent back. Building this site, that caught a misquoted figure from the Angkor paper, a results table still showing pre-review numbers, broken links, and a worker that ran out of budget halfway through a file. Automated checks run before every merge: model tests, translation coverage, a browser build, and pages loaded at desktop and phone sizes.',
+      'The final checks are mine. I decide what the questions are, which explanations are worth modelling, and whether a result says what the page claims. The agents do the building; the judgement stays human.',
+    ] },
+    { heading: 'Open by default', paras: [
+      'Everything lives on GitHub, licensed CC BY-NC 4.0, and each release is archived on Zenodo with a DOI so it can be cited. Anyone can download a model, change it, and propose a version through a simple form. If this workflow is useful to you, copy it.',
+    ] },
+  ],
+}

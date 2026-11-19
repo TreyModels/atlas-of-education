@@ -77,7 +77,7 @@ const fertility: CatalogueItem[] = [
 const shadow: CatalogueItem[] = [
   { id: 'shadow-education', family: 'shadow', title: 'Shadow education lab', question: 'Why do pupils pay their own teachers? Three rival explanations tested against seven published patterns.', method: 'Agent-based model · Cambodia', format: 'Classic workbench', href: 'research/shadow-education.html', keywords: 'shadow education private tutoring Cambodia Bray diversion favour' },
   { id: 'shadow-abm', family: 'shadow', title: 'Tutoring ABM bundle', question: 'Historical calibration bundle. Provider observation equations and the SMC evidence estimator were subsequently corrected; new calibration runs are required.', method: 'Code & data · download', format: 'Classic workbench', href: 'research/shadow/tutoring_abm.zip', keywords: 'tutoring agent based model code download' },
-  { id: 'shadow-dhs', family: 'shadow', title: 'Credential-floor DHS test', question: 'Who leaves school? Three structures predict different shares of leavers from the poorest 40% of households, checked against the Cambodia DHS.', method: 'Code & data · download', format: 'Classic workbench', href: 'research/shadow/credential_floor_dhs.zip', keywords: 'credential floor DHS Cambodia poorest households download' },
+  { id: 'shadow-dhs', family: 'education', title: 'Credential-floor DHS test', question: 'Who leaves school? Three structures predict different shares of leavers from the poorest 40% of households, checked against the Cambodia DHS.', method: 'Code & data · download', format: 'Classic workbench', href: 'research/shadow/credential_floor_dhs.zip', keywords: 'credential floor DHS Cambodia poorest households download' },
 ]
 
 const deephistory: CatalogueItem[] = [
@@ -101,6 +101,13 @@ const extension: CatalogueItem[] = [
 
 export const catalogue: CatalogueItem[] = [...education, ...systems, ...planning, ...angkor, ...fertility, ...shadow, ...deephistory, ...politics, ...extension]
 export const modelFamilies: ModelFamily[] = ['education', 'systems', 'planning', 'angkor', 'fertility', 'shadow', 'deephistory', 'politics', 'extension']
+
+/** Menu and homepage grouping (Trey, 19 Nov 2026). Families are research areas; the toolkit is methods, not models. */
+export const familyGroups: { id: string; title: string; families: ModelFamily[] }[] = [
+  { id: 'education', title: 'Education and schooling', families: ['education', 'shadow', 'systems', 'extension'] },
+  { id: 'society', title: 'Societies, history and evolution', families: ['angkor', 'deephistory', 'fertility', 'politics'] },
+  { id: 'tools', title: 'Planning toolkit', families: ['planning'] },
+]
 export const familyItems = (family: ModelFamily) => catalogue.filter(item => item.family === family)
 export const familyCounts = Object.fromEntries(modelFamilies.map(id => [id, familyItems(id).length])) as Record<ModelFamily, number>
 export const totalModels = catalogue.length
