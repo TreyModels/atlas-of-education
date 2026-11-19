@@ -48,7 +48,7 @@ async function runTask(t) {
   const started = Date.now()
   const ctx = (t.context || []).map(p => `--- ${p} ---\n${fs.readFileSync(path.join(t.repo, p), 'utf8')}`).join('\n\n')
   const res = await api('/chat/completions', {
-    model: t.model || DEFAULT_MODEL, max_tokens: t.maxTokens || 16000, temperature: 0.2,
+    model: t.model || DEFAULT_MODEL, max_tokens: t.maxTokens || 16000, temperature: 0.2, ...(t.thinking === false ? { thinking: { type: 'disabled' } } : {}),
     messages: [{ role: 'system', content: SYSTEM }, { role: 'user', content: `${t.prompt}\n\nRepository files for context:\n\n${ctx}` }],
   })
   const text = res.choices[0].message.content
