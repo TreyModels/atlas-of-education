@@ -1,7 +1,9 @@
 import { useEffect, useMemo, useState } from 'react'
 import { ArrowRight, ArrowUpRight, BookOpen, Search, X } from 'lucide-react'
 import type { Translate } from '../types'
-import { catalogue, classicLabs, experimentalInterfaces, familyCounts, familyGroups, familyInfo, familyItems, totalModels, type CatalogueItem, type ModelFamily } from '../data/model-catalogue'
+import { allTags, catalogue, classicLabs, experimentalInterfaces, familyCounts, familyGroups, familyInfo, familyItems, tagCounts, totalModels, type CatalogueItem, type ModelFamily } from '../data/model-catalogue'
+import { addTag, matchesQuery, parseTags, removeTag } from '../lib/search'
+import '../hashtags.css'
 import { statusIntro, familyStatus, callToAction } from '../data/site-status'
 import { purposeLabel, stateLabel } from '../data/angkor-journey'
 import { homeExplainer } from '../data/home-explainer'
@@ -23,10 +25,15 @@ export function ModelLink({ item, t, navigate }: { item: CatalogueItem; t: Trans
     <span className="catalogue-item-action">{t('Open entry')}{item.href ? <ArrowUpRight size={18} /> : <ArrowRight size={18} />}</span>
   </>
   const external = item.href?.startsWith('http')
+  const openTag = (tag: string) => window.dispatchEvent(new CustomEvent<string>('atlas:search', { detail: `#${tag}` }))
   return <li className={`catalogue-item${isDownloadItem(item) ? ' catalogue-item-download' : ''}`}>
     {item.href
       ? <a href={item.href} {...(external ? { target: '_blank', rel: 'noreferrer' } : {})}>{content}</a>
       : <button onClick={() => navigate(item.route!)}>{content}</button>}
+    <div className="catalogue-item-tags" aria-label={t('Tags')}>
+      {item.tags.slice(0, 4).map(tag => <button key={tag} className="tag-chip" onClick={() => openTag(tag)}>#{tag}</button>)}
+      {item.tags.length > 4 && <span className="tag-more">+{item.tags.length - 4}</span>}
+    </div>
   </li>
 }
 
@@ -47,14 +54,12 @@ export function Library({ t, navigate }: { t: Translate; navigate: (id: string) 
     window.addEventListener('atlas:section', onNavigate)
     return () => { window.removeEventListener('hashchange', onHash); window.removeEventListener('atlas:section', onNavigate) }
   }, [])
-  const visible = useMemo(() => {
-    const needle = query.trim().toLowerCase()
-    return catalogue.filter(item =>
-      (active === 'all' || item.family === active) &&
-      (!classicOnly || item.format === 'Classic workbench') &&
-      (!needle || `${item.title} ${item.question} ${item.method} ${item.keywords ?? ''} ${t(item.title)} ${t(item.question)} ${t(item.method)} ${t(familyInfo[item.family].short)}`.toLowerCase().includes(needle)),
-    )
-  }, [active, query, classicOnly, t])
+  const visible = useMemo(() => catalogue.filter(item =>
+    (active === 'all' || item.family === active) &&
+    (!classicOnly || item.format === 'Classic workbench') &&
+    matchesQuery(item, query, t),
+  ), [active, query, classicOnly, t])
+  const activeTags = parseTags(query)
   const visibleFamilies = families.filter(family => active === 'all' || active === family)
   const choose = (family: ModelFamily | 'all') => {
     setActive(family)
@@ -225,9 +230,14 @@ export function Library({ t, navigate }: { t: Translate; navigate: (id: string) 
       </div>
 
       <div className="catalogue-tools">
-        <label className="library-search"><Search size={18} /><input type="search" value={query} onChange={event => setQuery(event.target.value)} placeholder={t('Search a country, question, or method')} aria-label={t('Search the complete model library')} />{query && <button onClick={() => setQuery('')} aria-label={t('Clear search')}><X size={17} /></button>}</label>
+        <label className="library-search"><Search size={18} /><input type="search" value={query} onChange={event => setQuery(event.target.value)} placeholder={t('Search a country, question, or #tag')} aria-label={t('Search the complete model library')} />{query && <button onClick={() => setQuery('')} aria-label={t('Clear search')}><X size={17} /></button>}</label>
         <label className="classic-filter"><input type="checkbox" checked={classicOnly} onChange={event => setClassicOnly(event.target.checked)} /><span>{t('Classic workbenches only')}</span></label>
         <output className="catalogue-result-count">{visible.length} {t('of {n}').replace('{n}', String(totalModels))}</output>
+      </div>
+
+      <div className="library-tags" aria-label={t('Filter by tag')}>
+        <span className="tag-row-label">{t('Browse tags')}</span>
+        <div className="tag-cloud">{allTags.slice(0, 14).map(tag => <button key={tag} className={activeTags.includes(tag) ? 'tag-chip tag-chip-active' : 'tag-chip'} aria-pressed={activeTags.includes(tag)} onClick={() => setQuery(activeTags.includes(tag) ? removeTag(query, tag) : addTag(query, tag))}>#{tag}<span className="tag-count">{tagCounts[tag]}</span></button>)}</div>
       </div>
 
       {visible.length === 0 && <div className="catalogue-empty"><h3>{t('No models match this view.')}</h3><p>{t('Try a broader country, topic or method, or reset the filters.')}</p><button className="button button-secondary" onClick={() => { setQuery(''); setActive('all'); setClassicOnly(false) }}>{t('Show the complete library')}</button></div>}

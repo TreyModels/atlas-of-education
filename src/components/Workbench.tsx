@@ -8,6 +8,7 @@ import { DataChart } from './DataChart'
 import { ModelNarrative } from './ModelNarrative'
 import { ModelQuestions } from './ModelQuestions'
 import { ScenarioTheatre } from './ScenarioTheatre'
+import { catalogue } from '../data/model-catalogue'
 import stories from '../data/model-stories.json'
 
 function download(data: string, type: string, filename: string) {
@@ -49,6 +50,7 @@ export function Workbench({ world, values, onChange, onReset, onHandoff, navigat
   const [playState, setPlayState] = useState<'idle'|'playing'|'paused'|'done'>('idle')
   const [playIndex, setPlayIndex] = useState(0)
   const [pinnedScenario, setPinnedScenario] = useState<{values:Values;view:View}|null>(null)
+  const catalogueItem = catalogue.find(entry => entry.route === world.id)
   const {result,pending,recompute,error,runNumber}=useModelRun(world.id,values)
   const guideIndex = guideData.findIndex(step => step[0] === world.id)
   const guide = guideData[guideIndex]
@@ -109,7 +111,9 @@ export function Workbench({ world, values, onChange, onReset, onHandoff, navigat
   return <main id="main-content" className="workbench shell">
     <div className="workbench-topline"><button className="back-link" onClick={() => navigate(guideIndex >= 0 ? 'angkor-guide' : '')}><ArrowLeft size={17} />{t(guideIndex >= 0 ? 'Guided sequence' : 'Back to library')}</button><span>{t(world.meta)}</span></div>
     <header className="world-header">
-      <div><p className="eyebrow">{guide ? t(guide[1]) : t('ATLAS WORLDS · MODEL LAB')}</p><h1>{t(world.title)}</h1><p>{t(world.question)}</p></div>
+      <div><p className="eyebrow">{guide ? t(guide[1]) : t('ATLAS WORLDS · MODEL LAB')}</p><h1>{t(world.title)}</h1><p>{t(world.question)}</p>
+        {catalogueItem && <div className="workbench-tags" aria-label={t('Tags')}>{catalogueItem.tags.slice(0, 5).map(tag => <button key={tag} className="tag-chip tag-chip-quiet" onClick={() => window.dispatchEvent(new CustomEvent<string>('atlas:search', { detail: `#${tag}` }))}>#{tag}</button>)}</div>}
+      </div>
       <span className={`mode ${world.stored ? 'stored' : ''}`}><i />{t(world.stored ? 'Stored results' : 'Live model')}</span>
     </header>
 
