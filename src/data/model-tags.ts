@@ -1,7 +1,7 @@
 import type { CatalogueItem } from './model-catalogue'
 
 /**
- * Curated hashtag vocabulary for the Atlas Worlds catalogue (Trey, 22 Nov 2026).
+ * Curated hashtag vocabulary for the Atlas Worlds catalogue (Trey, 19 November 2026).
  *
  * Tags are lowercase ASCII: letters, digits and hyphens only. Each model gets
  * three to seven tags. Family and kind tags are derived automatically from the
