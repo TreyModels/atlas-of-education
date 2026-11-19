@@ -10,12 +10,13 @@
 import fs from 'node:fs'
 import path from 'node:path'
 import { execSync } from 'node:child_process'
+import { fileURLToPath } from 'node:url'
 
-const HERE = path.dirname(new URL(import.meta.url).pathname)
+const HERE = path.dirname(fileURLToPath(import.meta.url))
 const HOME = path.resolve(HERE, '..')
 const KEYFILE = path.join(HOME, '.deepseek_key')
 const REPORTS = path.join(HOME, 'reports')
-const DEFAULT_MODEL = process.env.FLEET_MODEL || 'deepseek-v4-flash'
+const DEFAULT_MODEL = process.env.FLEET_MODEL || 'deepseek-flash'
 const [cmd, ...args] = process.argv.slice(2)
 
 const key = () => fs.readFileSync(KEYFILE, 'utf8').trim()
