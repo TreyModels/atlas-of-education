@@ -425,7 +425,7 @@
     "vi": "Không có chính sách"
   },
   "One simulated history per policy, with the same starting seed. The full Atlas includes precomputed bands for curated policies.": {
-    "zh-Hans": "每项政策使用相同初始种子模拟一条历史。完整地图集还提供选定政策的预计算区间。",
+    "zh-Hans": "每项政策使用相同初始种子模拟一条历史。完整的 Atlas 还提供选定政策的预计算区间。",
     "fr": "Une trajectoire par politique, avec la même graine initiale. L’Atlas complet propose des intervalles précalculés pour certaines politiques.",
     "vi": "Mỗi chính sách có một lịch sử mô phỏng, cùng hạt giống ban đầu. Bản Atlas đầy đủ có các khoảng kết quả tính sẵn cho một số chính sách."
   },
@@ -455,7 +455,7 @@
     "vi": "Khoảng trống khớp dữ liệu · THCS nông thôn"
   },
   "The full Atlas documents a large unexplained boost to staying in school that the model needs to reproduce the rural pattern.": {
-    "zh-Hans": "完整地图集记录了模型为重现农村模式所需的一项较大、尚未解释的留校增益。",
+    "zh-Hans": "完整的 Atlas 记录了模型为重现农村模式所需的一项较大、尚未解释的留校增益。",
     "fr": "Pour reproduire la situation rurale, le modèle nécessite une forte hausse inexpliquée du maintien à l’école, documentée dans l’Atlas complet.",
     "vi": "Atlas đầy đủ ghi nhận mô hình cần một mức tăng lớn chưa giải thích được để tái hiện việc tiếp tục học ở nông thôn."
   },
@@ -565,12 +565,12 @@
     "vi": "Tham chiếu đã hiệu chỉnh"
   },
   "Verified points in Atlas’s NBS series": {
-    "zh-Hans": "地图集中已核实的国家统计局数据点",
+    "zh-Hans": "Atlas 的 NBS 序列中已核实的数据点",
     "fr": "Points vérifiés de la série du BNS dans l’Atlas",
     "vi": "Các điểm đã xác minh trong chuỗi NBS của Atlas"
   },
   "The Atlas series switches to the student-excluding NBS definition in 2024. The chart separates the two series at the break.": {
-    "zh-Hans": "地图集序列从2024年起采用国家统计局不含在校生的定义。图表在定义变更处将两段序列分开。",
+    "zh-Hans": "Atlas 序列从2024年起采用国家统计局不含在校生的定义。图表在定义变更处将两段序列分开。",
     "fr": "En 2024, la série passe à la définition du BNS excluant les étudiants. Le graphique sépare les deux séries à cette rupture.",
     "vi": "Chuỗi Atlas chuyển sang định nghĩa NBS loại sinh viên từ năm 2024. Biểu đồ tách hai chuỗi tại điểm đổi định nghĩa."
   },
@@ -580,7 +580,7 @@
     "vi": "Quan sát · Tỷ lệ NBS"
   },
   "The points come from the supplied Atlas extract and use its verified flag. The plot omits entries flagged as recalled from memory.": {
-    "zh-Hans": "数据点来自提供的地图集数据摘录，并依据其已核实标记选取。标注为凭记忆填写的条目未绘入图表。",
+    "zh-Hans": "数据点来自所提供的 Atlas 数据摘录，并依据其已核实标记选取。标注为凭记忆填写的条目未绘入图表。",
     "fr": "Les points proviennent de l’extrait fourni et portent son indicateur de vérification. Les valeurs rappelées de mémoire sont omises.",
     "vi": "Các điểm lấy từ bản trích Atlas được cung cấp và đã đánh dấu xác minh. Biểu đồ bỏ các điểm chỉ nhớ lại từ trí nhớ."
   },
@@ -600,7 +600,7 @@
     "vi": "Kiểm tra ngoài mẫu · Bỏ lỡ đợt tăng"
   },
   "The Atlas documents that a model fitted to 2018–22 misses the later youth unemployment rise.": {
-    "zh-Hans": "地图集记录了仅拟合2018–22年的模型未能捕捉后续青年失业率上升。",
+    "zh-Hans": "Atlas 记录显示，仅拟合2018–22年的模型未能捕捉后续青年失业率上升。",
     "fr": "L’Atlas montre qu’un modèle ajusté sur 2018–22 manque la hausse ultérieure du chômage des jeunes.",
     "vi": "Atlas ghi nhận mô hình khớp giai đoạn 2018–22 đã bỏ lỡ đợt tăng thất nghiệp thanh niên sau đó."
   },
@@ -1885,7 +1885,7 @@
     "vi": "ANGKOR · GIẢI THÍCH TỪ TÀI LIỆU 01 · LIEBERMAN VÀ BUCKLEY"
   },
   "The published climate sequence drives an Atlas model of population and upkeep. Compare it with the same parameter draw under neutral climate after 1250.": {
-    "zh-Hans": "已发表的气候序列驱动地图集的人口与维护模型。可与相同参数抽样、1250年后中性气候的情景比较。",
+    "zh-Hans": "已发表的气候序列驱动 Atlas 的人口与维护模型。可与相同参数抽样、1250年后中性气候的情景比较。",
     "fr": "La série climatique publiée alimente un modèle Atlas de population et d’entretien. Comparez-la au même tirage de paramètres avec un climat neutre après 1250.",
     "vi": "Chuỗi khí hậu công bố tác động lên mô hình dân số và bảo trì Atlas. So sánh cùng mẫu tham số với khí hậu trung tính sau 1250."
   },
@@ -1920,12 +1920,12 @@
     "vi": "Kho NOAA của Buckley và cộng sự cung cấp ước tính hạn tháng 3–5 của vùng từ vòng cây Việt Nam. Lần chạy dùng 201 giá trị năm 1250–1450. Chỉ báo này không phải mưa tại Angkor hay chuỗi dòng chảy Tonle Sap."
   },
   "Atlas contribution · Executable comparison": {
-    "zh-Hans": "地图集贡献 · 可执行比较",
+    "zh-Hans": "Atlas 贡献 · 可执行比较",
     "fr": "Contribution Atlas · Comparaison exécutable",
     "vi": "Đóng góp Atlas · So sánh chạy được"
   },
   "We map PDSI into agricultural conditions in the existing Atlas long-run engine and run a neutral-climate comparison. All six dated historical-driver switches are off. The published papers do not provide this social model.": {
-    "zh-Hans": "我们在既有地图集长期引擎中将PDSI映射为农业条件，并运行中性气候比较。六个带历史日期的驱动开关全部关闭。已发表论文未提供此社会模型。",
+    "zh-Hans": "我们在既有 Atlas 长期引擎中将 PDSI 映射为农业条件，并运行中性气候比较。六个带历史日期的驱动开关全部关闭。已发表论文未提供此社会模型。",
     "fr": "Nous traduisons le PDSI en conditions agricoles dans le moteur de long terme Atlas et comparons avec un climat neutre. Les six mécanismes historiques datés sont désactivés. Les articles ne fournissent pas ce modèle social.",
     "vi": "Chúng tôi chuyển PDSI sang điều kiện nông nghiệp trong bộ máy dài hạn Atlas và so với khí hậu trung tính. Tắt cả sáu cơ chế lịch sử đặt theo ngày. Các bài báo không cung cấp mô hình xã hội này."
   },
@@ -2885,7 +2885,7 @@
     "vi": "Phần thu hoạch hệ đền–trung tâm thu"
   },
   "Gross collection is an Atlas assumption. Collected food can support the core, reserves and public commitments.": {
-    "zh-Hans": "按总收成征收是地图集假设。所收食物可支持核心区、储备与公共承诺。",
+    "zh-Hans": "按总收成征收是 Atlas 的假设。所收食物可支持核心区、储备与公共承诺。",
     "fr": "Le prélèvement brut est une hypothèse Atlas. Les denrées collectées peuvent soutenir le centre, les réserves et les engagements publics.",
     "vi": "Thu trên tổng sản lượng là giả định Atlas. Thức ăn thu được có thể nuôi lõi, tạo dự trữ và chi cam kết công."
   },
@@ -2960,7 +2960,7 @@
     "vi": "Đầu vào công bố · Phối hợp"
   },
   "Atlas extension · Dynamic accounts": {
-    "zh-Hans": "地图集扩展 · 动态核算",
+    "zh-Hans": "Atlas 扩展 · 动态核算",
     "fr": "Extension Atlas · Comptabilité dynamique",
     "vi": "Mở rộng Atlas · Kế toán động"
   },
@@ -3695,7 +3695,7 @@
     "vi": "Giả định · Di cư và sàn bằng cấp"
   },
   "The Thailand route, Phnom Penh wages and the Grade 12 floor change what work and schooling are worth. Their strengths are assumptions drawn from the Atlas papers.": {
-    "zh-Hans": "泰国通道、金边工资和12年级门槛会改变工作与上学的价值。它们的强度是取自地图集论文的假设。",
+    "zh-Hans": "泰国通道、金边工资和12年级门槛会改变工作与上学的价值。它们的强度是取自 Atlas 论文的假设。",
     "fr": "La route de Thaïlande, les salaires de Phnom Penh et le plancher de 12e année modifient la valeur du travail et de l’école. Leur intensité est une hypothèse tirée des articles de l’Atlas.",
     "vi": "Tuyến Thái Lan, lương ở Phnôm Pênh và sàn lớp 12 thay đổi giá trị của đi làm và đi học. Cường độ của chúng là giả định lấy từ các bài viết của Atlas."
   },
@@ -4780,12 +4780,12 @@
     "vi": "Loại bỏ lợi ích phối hợp (không có tác dụng ở hệ số mặc định 1)"
   },
   "No published per-PDSI coefficient for rainfed rice in Cambodia, Thailand or Laos was found (inputs/other_sources.json, item C). The tested sensitivities 0.04, 0.07 and 0.10 are unsourced judgement values, and they decide the monsoon result: at 0 no draw of 2000 shows an onset decline, while 217, 1260 and 1657 draws decline at 0.04, 0.07 and 0.10. Weather response is capped at 0.4–1.15 before buffering.": {
-    "zh-Hans": "未找到柬埔寨、泰国或老挝雨养水稻已发表的每PDSI系数（inputs/other_sources.json，条目C）。所测试的敏感度0.04、0.07和0.10为无来源的判断值，且它们决定了季风结果：在0时，2000次抽样中没有任何一次显示 onset 下降，而在0.04、0.07和0.10时分别有217、1260和1657次抽样下降。天气响应在缓冲前被限制在0.4–1.15。",
+    "zh-Hans": "未找到柬埔寨、泰国或老挝雨养水稻已发表的每PDSI系数（inputs/other_sources.json，条目C）。所测试的敏感度0.04、0.07和0.10为无来源的判断值，且它们决定了季风结果：在0时，2000次抽样中没有任何一次显示起势下降，而在0.04、0.07和0.10时分别有217、1260和1657次抽样下降。天气响应在缓冲前被限制在0.4–1.15。",
     "fr": "Aucun coefficient par PDSI publié pour le riz pluvial au Cambodge, en Thaïlande ou au Laos n'a été trouvé (inputs/other_sources.json, élément C). Les sensibilités testées 0.04, 0.07 et 0.10 sont des valeurs de jugement sans source, et elles déterminent le résultat de la mousson : à 0, aucun tirage sur 2000 ne montre de baisse d'onset, tandis que 217, 1260 et 1657 tirages baissent à 0.04, 0.07 et 0.10. La réponse météorologique est plafonnée à 0.4–1.15 avant mise en tampon.",
     "vi": "Không tìm thấy hệ số trên mỗi PDSI nào đã được công bố cho lúa nước trời ở Campuchia, Thái Lan hoặc Lào (inputs/other_sources.json, mục C). Các độ nhạy được kiểm tra 0.04, 0.07 và 0.10 là các giá trị phán đoán không có nguồn, và chúng quyết định kết quả gió mùa: ở 0, không có lần rút mẫu nào trong 2000 lần cho thấy sự suy giảm onset, trong khi 217, 1260 và 1657 lần rút mẫu suy giảm ở 0.04, 0.07 và 0.10. Phản ứng thời tiết được giới hạn ở 0.4–1.15 trước khi đệm."
   },
   "Timing is repaired. Harvest still ignores the remaining farm workforce, refuge food is not tracked, and court costs are absent. Canal condition is floored at 0.3 in the stored runs; the review finds that removing the floor changes the collapse results little. The reshuffle changes four rules together: extraction, the temple relief cap, trust erosion and the grievance that drives flight. Each is tested alone in experiments/angkor-review.": {
-    "zh-Hans": "计时已修复。Harvest 仍然忽略剩余的农场劳动力，避难所食物未被追踪，法庭费用缺失。在存储的运行中，运河状况的下限被设为 0.3；审查发现，移除该下限对崩溃结果影响很小。重组同时改变了四条规则：提取、寺庙救济上限、信任侵蚀以及驱动逃离的不满。每条规则都在 experiments/angkor-review 中单独测试。",
+    "zh-Hans": "计时已修复。收成核算仍然忽略剩余的农业劳动力，避难所食物未被追踪，法庭费用缺失。在存储的运行中，运河状况的下限被设为 0.3；审查发现，移除该下限对崩溃结果影响很小。重组同时改变了四条规则：提取、寺庙救济上限、信任侵蚀以及驱动逃离的不满。每条规则都在 experiments/angkor-review 中单独测试。",
     "fr": "La synchronisation est corrigée. Harvest ignore toujours la main-d'œuvre agricole restante, la nourriture des refuges n'est pas suivie et les frais de justice sont absents. L'état des canaux est plafonné à 0,3 dans les exécutions enregistrées ; l'examen constate que la suppression de ce plancher modifie peu les résultats d'effondrement. Le remaniement modifie quatre règles à la fois : l'extraction, le plafond d'aide du temple, l'érosion de la confiance et le grief qui pousse à la fuite. Chacune est testée isolément dans experiments/angkor-review.",
     "vi": "Việc tính thời gian đã được sửa. Harvest vẫn bỏ qua lực lượng lao động nông trại còn lại, thực phẩm nơi trú ẩn không được theo dõi, và chi phí tòa án không có. Tình trạng kênh đào được đặt sàn ở 0.3 trong các lần chạy đã lưu; đánh giá cho thấy việc bỏ sàn này thay đổi kết quả sụp đổ rất ít. Việc xáo trộn thay đổi bốn quy tắc cùng lúc: khai thác, giới hạn cứu trợ đền thờ, xói mòn niềm tin và sự bất mãn thúc đẩy bỏ chạy. Mỗi quy tắc được kiểm tra riêng trong experiments/angkor-review."
   },
@@ -4815,7 +4815,7 @@
     "fr": "La référence a été ajustée au relevé présenté, de sorte que ses statistiques d'ajustement sont en échantillon. Les réponses de l'offre, de la demande et des salaires interagissent. La part de thésaurisation, la répartition entre initiés et le coin salarial ont été fixés comme hypothèses, et non estimés. Les mécanismes d'attente et d'émulation ne sont pas testés, et le saut de 2021 est un résidu inexpliqué."
   },
   "The Atlas documents that a model fitted to 2018–22 misses the later youth unemployment rise. A naive benchmark (the same month of 2022, carried forward) does better on the 2023 H1 holdout and on the verified months from December 2023.": {
-    "zh-Hans": "《Atlas》记录显示，基于2018–22年拟合的模型未能捕捉到后来的青年失业率上升。一个朴素基准（沿用2022年同月数值向前推算）在2023年上半年留出集以及2023年12月起的已验证月份上表现更好。",
+    "zh-Hans": "Atlas 记录显示，基于2018–22年拟合的模型未能捕捉到后来的青年失业率上升。一个朴素基准（沿用2022年同月数值向前推算）在2023年上半年留出集以及2023年12月起的已验证月份上表现更好。",
     "vi": "Atlas ghi nhận rằng một mô hình được khớp với giai đoạn 2018–22 bỏ lỡ mức tăng thất nghiệp thanh niên sau đó. Một chuẩn đối sánh ngây thơ (cùng tháng của năm 2022, được mang tiếp về sau) hoạt động tốt hơn trên tập giữ lại nửa đầu năm 2023 và trên các tháng đã được xác minh từ tháng 12 năm 2023.",
     "fr": "L'Atlas documente qu'un modèle ajusté sur 2018–22 manque la hausse ultérieure du chômage des jeunes. Une référence naïve (le même mois de 2022, reporté) fait mieux sur l'échantillon de validation du premier semestre 2023 et sur les mois vérifiés à partir de décembre 2023."
   },
