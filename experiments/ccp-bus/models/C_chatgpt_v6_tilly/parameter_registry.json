@@ -1,0 +1,293 @@
+[
+  {
+    "parameter": "request_pressure",
+    "default": 0.2,
+    "experimental_range": [
+      -0.4,
+      0.6
+    ],
+    "empirically_estimated": false
+  },
+  {
+    "parameter": "request_rate",
+    "default": 0.35,
+    "experimental_range": [
+      0.1,
+      0.7
+    ],
+    "empirically_estimated": false
+  },
+  {
+    "parameter": "obligation_gain",
+    "default": 0.25,
+    "experimental_range": null,
+    "empirically_estimated": false
+  },
+  {
+    "parameter": "obligation_pressure",
+    "default": 0.8,
+    "experimental_range": [
+      0.0,
+      1.6
+    ],
+    "empirically_estimated": false
+  },
+  {
+    "parameter": "extraction_rate",
+    "default": 0.25,
+    "experimental_range": null,
+    "empirically_estimated": false
+  },
+  {
+    "parameter": "settlement_fraction",
+    "default": 0.6,
+    "experimental_range": null,
+    "empirically_estimated": false
+  },
+  {
+    "parameter": "lawful_service",
+    "default": 0.06,
+    "experimental_range": [
+      0.01,
+      0.15
+    ],
+    "empirically_estimated": false
+  },
+  {
+    "parameter": "protection_supply",
+    "default": 0.65,
+    "experimental_range": [
+      0.0,
+      0.9
+    ],
+    "empirically_estimated": false
+  },
+  {
+    "parameter": "resource_attraction",
+    "default": 0.45,
+    "experimental_range": [
+      -0.2,
+      0.8
+    ],
+    "empirically_estimated": false
+  },
+  {
+    "parameter": "adaptation",
+    "default": 0.15,
+    "experimental_range": [
+      0.0,
+      0.3
+    ],
+    "empirically_estimated": false
+  },
+  {
+    "parameter": "emulation",
+    "default": 0.15,
+    "experimental_range": [
+      0.0,
+      0.3
+    ],
+    "empirically_estimated": false
+  },
+  {
+    "parameter": "closure_response",
+    "default": 1.0,
+    "experimental_range": [
+      0.0,
+      2.0
+    ],
+    "empirically_estimated": false
+  },
+  {
+    "parameter": "exchange_promotion",
+    "default": 0.6,
+    "experimental_range": [
+      0.0,
+      1.2
+    ],
+    "empirically_estimated": false
+  },
+  {
+    "parameter": "cohort_integrity",
+    "default": 2.2,
+    "experimental_range": [
+      1.5,
+      3.5
+    ],
+    "empirically_estimated": false
+  },
+  {
+    "parameter": "n",
+    "default": 50000,
+    "experimental_range": null,
+    "empirically_estimated": false
+  },
+  {
+    "parameter": "organizations",
+    "default": 64,
+    "experimental_range": null,
+    "empirically_estimated": false
+  },
+  {
+    "parameter": "contacts",
+    "default": 4,
+    "experimental_range": null,
+    "empirically_estimated": false
+  },
+  {
+    "parameter": "rent",
+    "default": -0.45,
+    "experimental_range": [
+      -0.8,
+      -0.1
+    ],
+    "empirically_estimated": false
+  },
+  {
+    "parameter": "peer",
+    "default": 0.7,
+    "experimental_range": null,
+    "empirically_estimated": false
+  },
+  {
+    "parameter": "capacity",
+    "default": 0.025,
+    "experimental_range": [
+      0.01,
+      0.06
+    ],
+    "empirically_estimated": false
+  },
+  {
+    "parameter": "protection",
+    "default": 0.5,
+    "experimental_range": null,
+    "empirically_estimated": false
+  },
+  {
+    "parameter": "entry_bias",
+    "default": 0.0,
+    "experimental_range": null,
+    "empirically_estimated": false
+  },
+  {
+    "parameter": "coordination",
+    "default": 0.35,
+    "experimental_range": null,
+    "empirically_estimated": false
+  },
+  {
+    "parameter": "anti_client",
+    "default": 0.8,
+    "experimental_range": null,
+    "empirically_estimated": false
+  },
+  {
+    "parameter": "concealment_cost",
+    "default": 0.4,
+    "experimental_range": null,
+    "empirically_estimated": false
+  },
+  {
+    "parameter": "memory",
+    "default": 0.6,
+    "experimental_range": null,
+    "empirically_estimated": false
+  },
+  {
+    "parameter": "rewiring",
+    "default": 0.1,
+    "experimental_range": null,
+    "empirically_estimated": false
+  },
+  {
+    "parameter": "signal_noise",
+    "default": 0.25,
+    "experimental_range": null,
+    "empirically_estimated": false
+  },
+  {
+    "parameter": "performance_weight",
+    "default": 0.6,
+    "experimental_range": null,
+    "empirically_estimated": false
+  },
+  {
+    "parameter": "network_weight",
+    "default": 0.7,
+    "experimental_range": null,
+    "empirically_estimated": false
+  },
+  {
+    "parameter": "informality",
+    "default": 0.7,
+    "experimental_range": null,
+    "empirically_estimated": false
+  },
+  {
+    "parameter": "reporting",
+    "default": 0.18,
+    "experimental_range": null,
+    "empirically_estimated": false
+  },
+  {
+    "parameter": "report_suppression",
+    "default": 0.6,
+    "experimental_range": null,
+    "empirically_estimated": false
+  },
+  {
+    "parameter": "turnover",
+    "default": 0.04,
+    "experimental_range": null,
+    "empirically_estimated": false
+  },
+  {
+    "parameter": "sanction_cost",
+    "default": 4.0,
+    "experimental_range": null,
+    "empirically_estimated": false
+  },
+  {
+    "parameter": "case_lag",
+    "default": 2,
+    "experimental_range": null,
+    "empirically_estimated": false
+  },
+  {
+    "parameter": "exit_probability",
+    "default": 0.65,
+    "experimental_range": null,
+    "empirically_estimated": false
+  },
+  {
+    "parameter": "procurement_elasticity",
+    "default": 0.5,
+    "experimental_range": null,
+    "empirically_estimated": false
+  },
+  {
+    "parameter": "productive_patronage",
+    "default": true,
+    "experimental_range": null,
+    "empirically_estimated": false
+  },
+  {
+    "parameter": "empirical_flows",
+    "default": true,
+    "experimental_range": null,
+    "empirically_estimated": false
+  },
+  {
+    "parameter": "contract_timing",
+    "default": "current",
+    "experimental_range": null,
+    "empirically_estimated": false
+  },
+  {
+    "parameter": "initial_corruption",
+    "default": 0.25,
+    "experimental_range": null,
+    "empirically_estimated": false
+  }
+]

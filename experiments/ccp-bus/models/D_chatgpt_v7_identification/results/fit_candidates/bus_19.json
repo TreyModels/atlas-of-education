@@ -1,0 +1,27 @@
+{
+  "family": "bus",
+  "candidate": 19,
+  "theta": {
+    "rent": -0.9233983180752898,
+    "ramp_years": 9.827034837727286,
+    "nsc_multiplier": 1.333101702121003,
+    "peer": 0.9672464404092315,
+    "report_capture": 0.4811817683607613
+  },
+  "seeds": [
+    1101,
+    1102
+  ],
+  "simulated_training_cases": [
+    4.5,
+    4.5,
+    4.5,
+    4.5,
+    1.0,
+    1.0,
+    1.5
+  ],
+  "scale": 151031.93502638393,
+  "log_rmse": 1.1031506117904155,
+  "design_hash": "c3133832f05062c9df5e479a16b10abce442f56de07a0cd6fcc2385b91f97a5b"
+}

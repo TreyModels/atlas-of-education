@@ -1,0 +1,11 @@
+year,period_start,period_end,variable,value,unit,source_id,status
+2026,2026-01-01,2026-09-30,cases_filed,800000.0,cases,ccdi_2026_ytd,year_to_date_execution
+2026,2026-01-01,2026-09-30,persons_sanctioned,680000.0,persons,ccdi_2026_ytd,year_to_date_execution
+2026,2026-01-01,2026-09-30,clues_processed,2149000.0,clues,ccdi_2026_ytd,year_to_date_execution
+2026,2026-01-01,2026-09-30,land_revenue,1.6087,trillion_CNY,mof_2026_ytd,year_to_date_execution
+2026,2026-01-01,2026-09-30,land_related_expenditure,2.5565,trillion_CNY,mof_2026_ytd,year_to_date_execution
+2026,2026-01-01,2026-09-30,national_nontax_revenue,3.1586,trillion_CNY,mof_2026_ytd,year_to_date_execution
+2026,2026-01-01,2026-09-30,local_general_revenue,9.5593,trillion_CNY,mof_2026_ytd,year_to_date_execution
+2026,2026-01-01,2026-09-30,local_general_expenditure,17.7379,trillion_CNY,mof_2026_ytd,year_to_date_execution
+2026,2026-01-01,2026-12-31,central_defense_spending,1.909561,trillion_CNY,mof_2026_defense,annual_budget
+2025,2025-01-01,2025-12-31,central_defense_spending,1.784665,trillion_CNY,mof_2026_defense,annual_execution_comparator
