@@ -4,22 +4,26 @@
 Formerly **Atlas of Education**. Renamed **Atlas Worlds** on 19 November 2026: the project now covers education, history, political economy and human evolution, and every model builds a small world you can run.
 Research experiments, literature and contribution guidance are in [research/README.md](research/README.md). The research revision supplies code and unrun production protocols, distinguishing toy mechanism exploration from descriptive, forecasting and policy claims. Historical numerical outputs retain their version labels.
 
-A unified catalogue of 46 entries across Education & work, Population & school systems,
-the IIEP/UIS planning collection, Historical systems: Angkor, Fertility, and Shadow education.
-Entries include live workbenches, classic tools, research downloads, and four curated stored
-massification experiments; they are not 46 distinct simulation engines. Three standalone
-laboratory implementations are listed separately. English, Simplified Chinese and Vietnamese
-are supported in the shared interface; classic workbenches retain their original language.
+DOI: [10.5281/zenodo.24369167](https://doi.org/10.5281/zenodo.24369167) (concept DOI; always resolves to the latest release).
+
+A unified catalogue of 65 entries across the nine research families: Education & work (8),
+Population & school systems (9), the IIEP/UIS planning collection (12), Historical systems:
+Angkor (13), Fertility (11), Shadow education (2), Political economy (4), Deep history (2) and
+Farmer field schools (4). Entries include 24 interactive Atlas workbenches, 17 classic lab
+tools, 19 downloadable code-and-data bundles, 3 research write-ups and 2 narrated journeys;
+they are not 65 distinct simulation engines. Three standalone laboratory implementations are
+listed separately. English and Simplified Chinese are supported in the shared interface;
+classic workbenches retain their original language.
 
 A single responsive navigation system provides a desktop rail, mobile drawer and
 bottom shortcuts. Global search, collection filters and the model switcher all use
-the same 46-entry inventory in `src/data/model-catalogue.ts`. Classic entries open
+the same 65-entry inventory in `src/data/model-catalogue.ts`. Classic entries open
 specific tools or worlds through `reference/education/index.html#tool=...` and
 `#world=...`, rather than dropping users at an archive homepage.
 
 All simulations run locally; live simulations execute in Web Workers. Stored
-experiments are labelled separately. The language query `?lang=vi` opens directly
-in Vietnamese and the selection persists locally. A web manifest and service worker
+experiments are labelled separately. The language query `?lang=zh-Hans` opens directly
+in Simplified Chinese and the selection persists locally. A web manifest and service worker
 support installation and static font/icon caching; navigation remains network-only.
 
     npm ci

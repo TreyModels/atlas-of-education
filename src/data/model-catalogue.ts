@@ -8,7 +8,7 @@ export type CatalogueItem = {
   title: string
   question: string
   method: string
-  format: 'Atlas workbench' | 'Classic workbench' | 'Write-up' | 'Code & data download' | 'Narrated journey'
+  format: 'Atlas workbench' | 'Classic workbench' | 'Write-up' | 'Code & data download' | 'Narrated journey' | 'Experimental interface'
   route?: string
   href?: string
   keywords?: string
@@ -212,6 +212,16 @@ export const familyResearch: Record<ModelFamily, { label: string; href: string }
     { label: 'Validation notes', href: 'research/field-schools/VALIDATION.md' },
   ],
 }
+
+/** Experimental interfaces deliberately sit outside `catalogue`, so they never inflate totalModels or familyCounts. */
+export const experimentalInterfaces: CatalogueItem[] = [
+  {
+    id: 'scenario-theatre', family: 'planning', title: 'Scenario Theatre',
+    question: 'How does the current plan compare with a pinned run on cost, the unfunded share and completion?',
+    method: 'Prototype · pinned-versus-current model runs', format: 'Experimental interface', route: 'sector',
+    keywords: 'scenario theatre pinned comparison experimental planning sector',
+  },
+]
 
 export const classicLabs = [
   { title: 'Original Angkor Atlas', description: 'The unified offline experiment in rice, population, temples, labour and regional competition.', href: 'reference/angkor/index.html', label: 'Classic integrated lab' },

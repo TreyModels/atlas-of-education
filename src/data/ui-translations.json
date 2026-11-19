@@ -2180,7 +2180,7 @@
   "vi": "Trong các xã hội đồng nhất, chịu ảnh hưởng của bạn bè đồng trang lứa, một cú sốc tạm thời có thể đẩy mức sinh xuống thấp kéo dài. Khi đó, việc đảo ngược tốn khoảng 8 lần so với chi phí phòng ngừa."
  },
  "Japan and Hong Kong show a pull back toward their path; Japan recovered from 1.26 to 1.45. Korea and China show none. The data did not confirm a clean tipping cliff, though.": {
-  "zh-Hans": "日本和香港显示出向路径回归的拉力；日本从 1.26 回升到 1.45。韩国和中国则没有。不过数据并未证实存在清晰的 tipping 悬崖。",
+  "zh-Hans": "日本和香港显示出向路径回归的拉力；日本从 1.26 回升到 1.45。韩国和中国则没有。不过数据并未证实存在清晰的临界悬崖。",
   "fr": "Le Japon et Hong Kong montrent un retour vers leur trajectoire ; le Japon est remonté de 1,26 à 1,45. La Corée et la Chine n'en montrent aucun. Les données n'ont toutefois pas confirmé de bascule nette.",
   "vi": "Nhật Bản và Hồng Kông cho thấy sự kéo trở lại quỹ đạo của mình; Nhật Bản phục hồi từ 1,26 lên 1,45. Hàn Quốc và Trung Quốc không cho thấy điều này. Tuy nhiên, dữ liệu không xác nhận một điểm bùng nổ rõ ràng."
  },
@@ -2385,7 +2385,7 @@
   "vi": "Các chỉ số từ số liệu đếm thô"
  },
  "The indicator calculator derives GER, NER, GIR, adjusted gender parity and teacher ratios from raw enrolment and population counts, using the standard definitions.": {
-  "zh-Hans": "指标计算器用标准定义，从原始入学与人口计数推导 GER、NER、GIR、调整后性别 parity 与师生比。",
+  "zh-Hans": "指标计算器用标准定义，从原始入学与人口计数推导 GER、NER、GIR、调整后性别均等指数与师生比。",
   "fr": "Le calculateur d'indicateurs dérive le TBS, le TNS, le TBS brut, la parité des genres ajustée et les ratios d'enseignants à partir des effectifs bruts et des dénombrements de population, selon les définitions standard.",
   "vi": "Công cụ tính chỉ số suy ra GER, NER, GIR, chỉ số bình đẳng giới đã điều chỉnh và tỷ lệ giáo viên từ số liệu tuyển sinh và dân số thô, theo các định nghĩa chuẩn."
  },
@@ -2410,7 +2410,7 @@
   "vi": "Các mục tiêu được kiểm tra một cách trung thực"
  },
  "The logistic tool compares the S-curve speed a coverage target requires with the speeds countries have historically achieved — a feasibility check, not a forecast.": {
-  "zh-Hans": "logistic 工具把覆盖率目标所需的 S 曲线速度与各国历史达到的速度对比——这是可行性检验，不是预测。",
+  "zh-Hans": "逻辑斯蒂（logistic）工具把覆盖率目标所需的 S 曲线速度与各国历史达到的速度对比——这是可行性检验，不是预测。",
   "fr": "L'outil logistique compare la vitesse de la courbe en S qu'exige une cible de couverture avec les vitesses que les pays ont historiquement atteintes — une vérification de faisabilité, non une prévision.",
   "vi": "Công cụ logistic so sánh tốc độ đường cong chữ S mà một mục tiêu bao phủ đòi hỏi với tốc độ mà các quốc gia đã đạt được trong lịch sử — một bước kiểm tra tính khả thi, không phải dự báo."
  },
@@ -2430,7 +2430,7 @@
   "vi": "Khí hậu và thời điểm suy tàn"
  },
  "We ran 2,000 matched parameter draws at each of three crop responses, plus a neutral-climate comparison. At the middle response, 1,260 of 2,000 runs decline; their median onset is 1362. Changing crop sensitivity shifts the timing.": {
-  "zh-Hans": "我们在三种作物反应下各做 2,000 次匹配参数抽样，外加一个中性气候对照。中等反应下，2,000 次运行中有 1,260 次走向衰落， onset 中位数为 1362 年。改变作物敏感度会改变时点。",
+  "zh-Hans": "我们在三种作物反应下各做 2,000 次匹配参数抽样，外加一个中性气候对照。中等反应下，2,000 次运行中有 1,260 次走向衰落，起势年份中位数为 1362 年。改变作物敏感度会改变时点。",
   "fr": "Nous avons exécuté 2 000 tirages de paramètres appariés pour chacune de trois réponses des cultures, plus une comparaison à climat neutre. À la réponse médiane, 1 260 des 2 000 exécutions déclinent ; leur début médian est 1362. Modifier la sensibilité des cultures décale le moment.",
   "vi": "Chúng tôi đã chạy 2.000 lần rút tham số được ghép cặp cho mỗi một trong ba phản ứng của cây trồng, cùng với một so sánh khí hậu trung tính. Ở phản ứng giữa, 1.260 trong số 2.000 lần chạy suy tàn; thời điểm khởi phát trung vị của chúng là 1362. Thay đổi độ nhạy của cây trồng làm dịch chuyển thời điểm."
  },
@@ -2872,7 +2872,7 @@
  "Political systems · CCP bus": {
   "fr": "Systèmes politiques · bus du PCC",
   "vi": "Hệ thống chính trị · xe buýt CCP",
-  "zh-Hans": "政治制度 · 中共巴士"
+  "zh-Hans": "政治制度 · CCP bus"
  },
  "If this year’s incentives fully determine this year’s corruption, then a campaign that changes incentives should change corruption, and history should not matter. If entry is sponsored, and sponsors and clients share exposure, then inherited networks can keep corruption high, or bring it back, after a campaign. The two views make different predictions about what happens after enforcement changes.": {
   "fr": "Si les incitations de cette année déterminent entièrement la corruption de cette année, alors une campagne qui modifie les incitations devrait modifier la corruption, et l’histoire ne devrait pas compter. Si l’entrée est parrainée, et si les parrains et les clients partagent une même exposition, alors des réseaux hérités peuvent maintenir la corruption à un niveau élevé, ou la faire réapparaître, après une campagne. Les deux conceptions font des prédictions différentes sur ce qui se produit après un changement des dispositifs de répression.",
@@ -2907,7 +2907,7 @@
  "v1 sets three small rival families to the same 30% corruption snapshot: current incentives (principal–agent, Markov), social trap (peer norms, detection that depends on honest peers, finite enforcement capacity), and bus (social trap plus sponsored entry and threat-driven rewiring).": {
   "fr": "v1 applique trois petites familles rivales au même instantané de 30 % de corruption : incitations actuelles (principal–agent, Markov), piège social (normes des pairs, détection dépendant de pairs honnêtes, capacité de répression finie) et bus (piège social plus entrée parrainée et reconfiguration guidée par la menace).",
   "vi": "v1 áp đặt ba nhóm cơ chế đối lập nhỏ lên cùng một ảnh chụp trạng thái tham nhũng 30%: động cơ khuyến khích hiện tại (ủy nhiệm–đại lý, Markov), bẫy xã hội (chuẩn mực đồng nghiệp, phát hiện phụ thuộc vào những người đồng cấp trung thực, năng lực thực thi hữu hạn), và xe buýt (bẫy xã hội cộng với gia nhập có bảo trợ và tái cấu trúc quan hệ do mối đe dọa thúc đẩy).",
-  "zh-Hans": "v1 将三个小型对立机制族设定为同一个 30% 腐败快照：当前激励（委托–代理、马尔可夫）、社会陷阱（同伴规范、依赖诚实同伴的发现、有限的执法能力）以及巴士（社会陷阱加上赞助式进入和威胁驱动的重新连线）。"
+  "zh-Hans": "v1 将三个小型对立机制族设定为同一个 30% 腐败快照：当前激励（委托–代理、马尔可夫）、社会陷阱（同伴规范、依赖诚实同伴的发现、有限的执法能力）以及 bus（社会陷阱加上赞助式进入和威胁驱动的重新连线）。"
  },
  "v1 is a small mechanism demonstration, not a calibrated model of China. The parameters are hypotheses to be estimated, not facts.": {
   "fr": "v1 est une petite démonstration de mécanisme, non un modèle calibré de la Chine. Les paramètres sont des hypothèses à estimer, non des faits.",
@@ -2952,12 +2952,12 @@
  "v7 compares the three rival families (current incentives, social trap, bus) on the v6 kernel. It is not a comparison across version numbers. Fitted on 2013–2019 filings; scored on 2020–2025. The outcome is disciplinary cases, not corruption prevalence.": {
   "fr": "v7 compare les trois familles rivales (incitations actuelles, piège social, bus) sur le noyau v6. Il ne s’agit pas d’une comparaison entre numéros de version. Ajusté sur les dossiers de 2013–2019 ; évalué sur 2020–2025. Le résultat est constitué des affaires disciplinaires, non de la prévalence de la corruption.",
   "vi": "v7 so sánh ba nhóm cơ chế đối lập (động cơ khuyến khích hiện tại, bẫy xã hội, xe buýt) trên hạt nhân v6. Đây không phải là so sánh giữa các số phiên bản. Được khớp trên các hồ sơ 2013–2019; được tính điểm trên 2020–2025. Kết quả là các vụ việc kỷ luật, không phải tỷ lệ phổ biến của tham nhũng.",
-  "zh-Hans": "v7 在 v6 内核上比较三个对立机制族（当前激励、社会陷阱、巴士）。这不是跨版本号的比较。在 2013–2019 年立案数据上拟合；在 2020–2025 年上评分。结果是纪律案件，而非腐败发生率。"
+  "zh-Hans": "v7 在 v6 内核上比较三个对立机制族（当前激励、社会陷阱、bus）。这不是跨版本号的比较。在 2013–2019 年立案数据上拟合；在 2020–2025 年上评分。结果是纪律案件，而非腐败发生率。"
  },
  "Log RMSE at 50,000 agents, strict: current incentives 0.195, social trap 0.190, bus 0.190. Bus and social trap are indistinguishable (0.1898 vs 0.1896). At the fitted settings the extra bus mechanisms do nothing for case counts.": {
   "fr": "Log RMSE à 50 000 agents, strict : incitations actuelles 0,195, piège social 0,190, bus 0,190. Bus et piège social sont indiscernables (0,1898 contre 0,1896). Aux réglages ajustés, les mécanismes supplémentaires du bus n’apportent rien aux décomptes d’affaires.",
   "vi": "Log RMSE với 50.000 tác nhân, chế độ nghiêm ngặt: động cơ khuyến khích hiện tại 0,195, bẫy xã hội 0,190, xe buýt 0,190. Xe buýt và bẫy xã hội không thể phân biệt được (0,1898 so với 0,1896). Ở các thiết lập đã khớp, các cơ chế bổ sung của xe buýt không tác động gì đến số vụ việc.",
-  "zh-Hans": "50,000 个主体下的对数 RMSE，严格模式：当前激励 0.195，社会陷阱 0.190，巴士 0.190。巴士与社会陷阱无法区分（0.1898 对 0.1896）。在拟合设置下，巴士的额外机制对案件数没有任何作用。"
+  "zh-Hans": "50,000 个主体下的对数 RMSE，严格模式：当前激励 0.195，社会陷阱 0.190，bus 0.190。bus 与社会陷阱无法区分（0.1898 对 0.1896）。在拟合设置下，bus 的额外机制对案件数没有任何作用。"
  },
  "Retrospective: the 2020–25 outcomes were already known when the exercise was designed. An independent future period or organisational holdout is needed for an untouched test. The six yearly errors are highly correlated and too few for a reliable model ranking.": {
   "fr": "Rétrospectif : les résultats de 2020–25 étaient déjà connus lors de la conception de l’exercice. Une période future indépendante ou un échantillon de rétention organisationnel est nécessaire pour un test non touché. Les six erreurs annuelles sont fortement corrélées et trop peu nombreuses pour un classement fiable des modèles.",
@@ -2982,7 +2982,7 @@
  "CCP bus · Rival mechanisms": {
   "fr": "Bus du PCC · Mécanismes rivaux",
   "vi": "Xe buýt CCP · Các cơ chế đối lập",
-  "zh-Hans": "中共巴士 · 对立机制"
+  "zh-Hans": "CCP bus · 对立机制"
  },
  "Adds land revenue, credit, PLA procurement, four sectors and faction dynamics. Pattern-oriented ABC against CCDI cases plus six qualitative patterns; 17 accepted fits. Not tested out of sample.": {
   "fr": "Ajoute les recettes foncières, le crédit, les marchés publics de l’APL, quatre secteurs et une dynamique factionnelle. ABC orienté motifs contre les affaires de la CCDI plus six motifs qualitatifs ; 17 ajustements acceptés. Non testé hors échantillon.",
@@ -2992,12 +2992,12 @@
  "CCP bus · Identification comparison": {
   "fr": "Bus du PCC · Comparaison d’identification",
   "vi": "Xe buýt CCP · So sánh nhận dạng",
-  "zh-Hans": "中共巴士 · 识别比较"
+  "zh-Hans": "CCP bus · 识别比较"
  },
  "Which rival mechanism — enforcement, social trap or bus — best reproduces the observed pattern of disciplinary filings?": {
   "fr": "Quel mécanisme rival — répression, piège social ou bus — reproduit le mieux le schéma observé des dossiers disciplinaires ?",
   "vi": "Cơ chế đối lập nào — thực thi, bẫy xã hội hay xe buýt — tái tạo tốt nhất mẫu hình quan sát được của các hồ sơ kỷ luật?",
-  "zh-Hans": "哪一种对立机制——执法、社会陷阱还是巴士——最能再现所观察到的纪律立案模式？"
+  "zh-Hans": "哪一种对立机制——执法、社会陷阱还是 bus——最能再现所观察到的纪律立案模式？"
  },
  "Stored experiment · Exploratory fit": {
   "fr": "Expérience stockée · Ajustement exploratoire",
@@ -3017,7 +3017,7 @@
  "CCP bus · Economy and factions (v3)": {
   "fr": "Bus du PCC · Économie et factions (v3)",
   "vi": "Xe buýt CCP · Kinh tế và phe phái (v3)",
-  "zh-Hans": "中共巴士 · 经济与派系（v3）"
+  "zh-Hans": "CCP bus · 经济与派系（v3）"
  },
  "Source · experiments/ccp-bus/models/": {
   "fr": "Source · experiments/ccp-bus/models/",
@@ -3780,5 +3780,278 @@
  },
  "Downloads": {
   "zh-Hans": "下载"
+ },
+ "Every model’s code can be downloaded and run on your own machine. If you think a model is missing something, change it and propose your version. Proposals are reviewed before anything is listed here. Everything is licensed CC BY-NC 4.0: reuse and adapt it with credit, for noncommercial purposes. Releases are versioned for citation; DOI 10.5281/zenodo.24369167.": {
+  "zh-Hans": "每个模型的代码都可以下载并在你自己的机器上运行。如果你认为某个模型缺少了什么，就修改它并提出你的版本。任何内容在此列出之前，提案都会经过审核。所有材料均以 CC BY-NC 4.0 许可发布：可在注明出处的前提下为非商业目的重用和改编。各版本均带版本号以便引用；DOI 10.5281/zenodo.24369167。"
+ },
+ "Every model’s code can be downloaded and run on your own machine. If you change an assumption, add data or find a mistake, propose your version. Proposals are reviewed by Dr. Trey Menefee before anything is listed here.": {
+  "zh-Hans": "每个模型的代码都可以下载并在你自己的机器上运行。如果你改变某项假设、加入数据或发现错误，请提交你的版本。所有提案都会在列入本站前由 Dr. Trey Menefee 审核。"
+ },
+ "Licensed CC BY-NC 4.0: reuse and adapt with credit to Dr. Trey Menefee, for noncommercial purposes. Versioned releases support citation; DOI 10.5281/zenodo.24369167.": {
+  "zh-Hans": "已按 CC BY-NC 4.0 许可发布：在注明 Dr. Trey Menefee 的前提下可为非商业目的重用和改编。版本化发布支持引用；DOI 10.5281/zenodo.24369167。"
+ },
+ "Some models implement findings from peer-reviewed studies. Some explore what would follow if a mechanism held. Some exist to teach an idea, and some are still being built. Each model page says which, and how far it has been checked. A label is a limit on what the model can claim, not a grade.": {
+  "zh-Hans": "部分模型实现同行评审研究的发现；部分探索若某机制成立会怎样；部分用于教学；部分仍在建设中。每个模型页面都会说明属于哪一种、检验到何种程度。标签是对模型可主张范围的限制，而非评分。"
+ },
+ "Built on a peer-reviewed study (Klassen et al. 2022); the extensions are mechanism explorations, labelled one by one.": {
+  "zh-Hans": "以同行评审研究（Klassen 等，2022）为基础；后续扩展是逐项标注的机制探索。"
+ },
+ "Three explanations of tutoring fit the published patterns equally well; the archived calibration predates later corrections.": {
+  "zh-Hans": "三种关于补习的解释同样吻合已发表模式；存档的校准结果早于后来的修正。"
+ },
+ "Four versions of a path-dependence model; a holdout test cannot yet tell it apart from simpler mechanisms. Synthetic agents only.": {
+  "zh-Hans": "路径依赖模型的四个版本；留出检验尚无法将其与更简单的机制区分开。仅为合成主体。"
+ },
+ "Farmer field schools and food politics: two developing mechanism models and two historical mechanism cards. Observational motivation is not calibrated validation.": {
+  "zh-Hans": "农民田间学校与粮食政治：两个开发中的机制模型和两张历史机制卡片。观察性动机并非经过校准的验证。"
+ },
+ "Planning methods in the UN education-planning tradition, with the arithmetic shown. Not official UNESCO software.": {
+  "zh-Hans": "联合国教育规划传统中的规划方法，算术过程完整呈现。并非联合国教科文组织的官方软件。"
+ },
+ "Exploratory models of six economies; the levels link to survival does not survive differencing.": {
+  "zh-Hans": "六个经济体的探索性模型；水平值上的生存率关联在差分后不再成立。"
+ },
+ "Credentials, schooling and work, including the China youth-unemployment model (fitted with an unexplained residual).": {
+  "zh-Hans": "文凭、学校教育与工作，包括中国青年失业模型（拟合后仍有未解释的残差）。"
+ },
+ "Cohorts, teachers, classrooms and budgets followed through demographic change.": {
+  "zh-Hans": "队列、教师、教室与预算随人口变化推进。"
+ },
+ "Routes out of Africa: rankings depend on stated constraints and priors, which the page shows.": {
+  "zh-Hans": "走出非洲的路线：排序取决于所述约束与先验，页面已展示。"
+ },
+ "Think a model is missing something? Change it.": {
+  "zh-Hans": "觉得某个模型缺了什么？修改它。"
+ },
+ "Download all the code": {
+  "zh-Hans": "下载全部代码"
+ },
+ "Propose a version": {
+  "zh-Hans": "提交你的版本"
+ },
+ "Challenge a claim": {
+  "zh-Hans": "质疑某项主张"
+ },
+ "How to cite (CC BY-NC 4.0)": {
+  "zh-Hans": "如何引用（CC BY-NC 4.0）"
+ },
+ "Published foundation": {
+  "zh-Hans": "已发表基础模型"
+ },
+ "Implements relationships reported in a peer-reviewed study.": {
+  "zh-Hans": "实现同行评审研究报告中的关系。"
+ },
+ "Mechanism exploration": {
+  "zh-Hans": "机制探索"
+ },
+ "Asks what follows if these rules held. Not a reconstruction of what happened.": {
+  "zh-Hans": "追问若这些规则成立会怎样；这不是对史实的重建。"
+ },
+ "Teaching": {
+  "zh-Hans": "教学模型"
+ },
+ "Built to show an idea clearly. Complete for that purpose.": {
+  "zh-Hans": "为清楚地展示某一想法而建；就这一目的而言是完整的。"
+ },
+ "Description and accounting": {
+  "zh-Hans": "描述与核算"
+ },
+ "Keeps food, labour and people consistent so other rules can be examined.": {
+  "zh-Hans": "保持食物、劳力与人口一致，以便检验其他规则。"
+ },
+ "Implementation checked": {
+  "zh-Hans": "实现已检查"
+ },
+ "Code, ledgers and stored results verified. Not validated against history.": {
+  "zh-Hans": "代码、账本与存储结果已核验；未经历史数据验证。"
+ },
+ "In development": {
+  "zh-Hans": "开发中"
+ },
+ "Known gaps remain in the rules or inputs; listed on the card.": {
+  "zh-Hans": "规则或输入仍有已知缺口，已列于卡片。"
+ },
+ "Historical result": {
+  "zh-Hans": "历史结果"
+ },
+ "Kept as a record. Its findings are superseded or limited.": {
+  "zh-Hans": "作为记录保留；其结论已被取代或有限。"
+ },
+ "Empirically evaluated": {
+  "zh-Hans": "经实证评估"
+ },
+ "Tested against observations it was not built from.": {
+  "zh-Hans": "已用其构建时未使用的观测数据检验。"
+ },
+ "From the published study": {
+  "zh-Hans": "来自已发表研究"
+ },
+ "Observed data": {
+  "zh-Hans": "观测数据"
+ },
+ "Produced by an Atlas simulation": {
+  "zh-Hans": "由 Atlas 模拟生成"
+ },
+ "Still unsettled": {
+  "zh-Hans": "仍未有定论"
+ },
+ "How the model works": {
+  "zh-Hans": "模型运作方式"
+ },
+ "Open workbench": {
+  "zh-Hans": "打开工作台"
+ },
+ "Code": {
+  "zh-Hans": "代码"
+ },
+ "Notes": {
+  "zh-Hans": "说明"
+ },
+ "What the evidence says": {
+  "zh-Hans": "证据怎么说"
+ },
+ "The rule we wrote": {
+  "zh-Hans": "我们写下的规则"
+ },
+ "What the experiment shows": {
+  "zh-Hans": "实验显示了什么"
+ },
+ "How the maths works": {
+  "zh-Hans": "数学如何运作"
+ },
+ "Deeper experiments": {
+  "zh-Hans": "深入实验"
+ },
+ "Download and adapt": {
+  "zh-Hans": "下载并改编"
+ },
+ "Everything here, the models, their data and these notes, lives in one repository. Download it, run a model, and change a rule to see what carries the result.": {
+  "zh-Hans": "这里的一切——模型、数据与这些说明——都在同一个代码库中。下载它，运行一个模型，改动一条规则，看看结果由什么承载。"
+ },
+ "The repository on GitHub": {
+  "zh-Hans": "GitHub 上的代码库"
+ },
+ "Download the code (zip)": {
+  "zh-Hans": "下载代码（zip）"
+ },
+ "Watch this": {
+  "zh-Hans": "看这里"
+ },
+ "Move community size. With β above 1, each person’s share of the production index rises as communities grow.": {
+  "zh-Hans": "移动社区规模。当 β 大于 1 时，社区越大，每个人分到的生产指数越高。"
+ },
+ "People in a temple community": {
+  "zh-Hans": "神庙社区人数"
+ },
+ "Per-person production index against community size for three scaling exponents": {
+  "zh-Hans": "三种规模指数下人均生产指数与社区规模的关系"
+ },
+ "Assumption": {
+  "zh-Hans": "假设"
+ },
+ "Index per person at": {
+  "zh-Hans": "人均指数："
+ },
+ "95% range of the published fit": {
+  "zh-Hans": "已发表拟合的 95% 区间"
+ },
+ "Index = 100 at 100 people. It is a product of archaeological proxies for labour, land and water, not tonnes of rice.": {
+  "zh-Hans": "100 人时指数为 100。它是考古代理量（劳力 × 土地 × 水）的乘积，不是稻米吨数。"
+ },
+ "Year": {
+  "zh-Hans": "年"
+ },
+ "A typical instruction from me is short: “go spin up some agents and run more experiments”, or “convert the remaining families”. The agents turn that into claims, tasks, checks and a pull request.": {
+  "zh-Hans": "我给出的典型指令很短：“去启动一些智能体，多跑些实验”，或者“把剩下的系列转换掉”。智能体将其转化为声明、任务、检查和拉取请求。"
+ },
+ "The agents do not talk to each other directly. They share a message board, the Atlas Bridge: a small MCP server (the Model Context Protocol, a standard way to give AI tools access to other tools) that runs on my laptop. Every agent can post, read and attach files to it.": {
+  "zh-Hans": "智能体之间并不直接对话。它们共享一块留言板——Atlas Bridge：一个运行在我笔记本电脑上的小型 MCP 服务器（Model Context Protocol，即模型上下文协议，是一种让 AI 工具访问其他工具的标准方式）。每个智能体都可以在上面发帖、阅读和附加文件。"
+ },
+ "My digital workflow, 2026": {
+  "zh-Hans": "我的数字工作流，2026"
+ },
+ "For heavy writing, the coordinating agent sends tasks to a fleet of DeepSeek workers through a small runner script. Each task names the files the worker may read, the files it may write, and the checks its output must pass. The worker returns complete files; the runner writes them, runs the checks, and reports one line per task. The coordinator reviews the returned code and check output, compares claims with sources, and sends defects back for correction. Passing an automated check is not a substitute for that review.": {
+  "zh-Hans": "对于繁重的写作，协调智能体通过一个小型运行脚本，把任务发送给一支 DeepSeek 工作者队伍。每项任务都会指明该工作者可以读取哪些文件、可以写入哪些文件，以及其输出必须通过哪些检查。工作者返回完整的文件；运行脚本将其写入、执行检查，并为每项任务报告一行结果。协调者会审阅返回的代码和检查输出，将主张与来源进行对照，并把缺陷发回修正。通过自动化检查并不能替代这项审阅。"
+ },
+ "The workflow serves one process. I start from a verbal model: an argument from the literature or from my own theory and observations. The agents and I write it as explicit rules, find the published studies and data it should answer to, and turn it into code. The code is checked for consistency (do the books balance, do people get counted once), then run many times, then compared with observations it was not built from where such data exist.": {
+  "zh-Hans": "这套工作流服务于一个过程。我从一个文字模型出发：一个来自文献、或来自我自己理论与观察的论证。智能体和我把它写成明确的规则，找出它应当回应的已发表研究和数据，并将其转化为代码。代码先经过一致性检查（账目是否平衡，人是否只被计算一次），然后多次运行，再与它并非据以构建的观察数据相比较——前提是存在这样的数据。"
+ },
+ "Every model then gets two labels, why it exists and how far it has been checked, and every paragraph on its page says whether it comes from a published study, observed data, a simulation, or is still open. Models that fail a test stay on the site, labelled as a historical or limited result. Some of my favourite arguments have not survived this process yet. That is what the process is for.": {
+  "zh-Hans": "随后每个模型都会得到两个标签：它为何存在，以及它被检验到什么程度；其页面上的每一段都标明它来自已发表研究、观察数据、模拟，还是仍然悬而未决。未通过检验的模型仍会留在网站上，但会被标注为历史结果或有限结果。我最喜欢的一些论点至今仍未通过这一过程的检验。这正是这一过程的意义所在。"
+ },
+ "Coordination follows a few strict rules, written after two agents once started on the same model at the same time. Each piece of work has one owner from start to finish. Before starting, an agent posts a claim naming the files and branch it will touch. When finished, it posts what it did, the commit, and the output of every check. Only one agent deploys the website, and nothing goes live without a passing checklist.": {
+  "zh-Hans": "协调遵循几条严格的规则，这些规则是在两个智能体曾同时着手同一个模型之后写下的。每一项工作自始至终只有一个负责人。开始之前，智能体先发帖声明它将涉及的文件和分支。完成之后，它发帖说明自己做了什么、提交记录，以及每一项检查的输出。只有一个智能体负责部署网站，且没有通过检查清单，任何内容都不会上线。"
+ },
+ "The public models and available materials live on GitHub under the stated reuse terms. Releases are versioned for citation; Zenodo DOI 10.5281/zenodo.24369167. Anyone can download a model, change it, and propose a version through a simple form. If this workflow is useful to you, copy it.": {
+  "zh-Hans": "公开的模型和现有材料都托管在 GitHub 上，并遵循所述重用条款。版本化发布支持引用；Zenodo DOI 10.5281/zenodo.24369167。任何人都可以下载模型、修改它，并通过一个简单的表单提出自己的版本。如果这套工作流程对你有用，请照搬它。"
+ },
+ "I work with four AI systems. Claude coordinates and reviews; Codex manages model families, checks and deployment; DeepSeek workers draft code, pages and translations; Kimi handles visual design. The division of work lets me direct the research while using the tools for implementation.": {
+  "zh-Hans": "我同时使用四个 AI 系统。Claude 负责协调与审阅；Codex 管理模型系列、检查与部署；DeepSeek 工作者起草代码、页面和翻译；Kimi 负责视觉设计。这种分工让我能够主导研究，同时借助这些工具来完成实现。"
+ },
+ "The final checks are mine. I decide what the questions are, which explanations are worth modelling, and whether a result says what the page claims. The agents do the building; the judgement stays human.": {
+  "zh-Hans": "最后的检查由我来做。我决定问题是什么、哪些解释值得建模，以及某个结果是否支持页面所声称的内容。智能体负责构建；判断始终由人来做。"
+ },
+ "AI agents make mistakes confidently, so the process assumes they will. Every number on a model page is traced back to a source file before it is published; drafts with numbers that cannot be traced are sent back. Building this site, that caught a misquoted figure from the Angkor paper, a results table still showing pre-review numbers, broken links, and a worker that ran out of budget halfway through a file. Automated checks run before every merge: model tests, translation coverage, a browser build, and pages loaded at desktop and phone sizes.": {
+  "zh-Hans": "AI 智能体会自信地犯错，因此这一过程假定它们会犯错。模型页面上的每一个数字在发布前都会被追溯到一个源文件；含有无法追溯数字的草稿会被退回。在构建本网站的过程中，这一做法发现了吴哥论文中被误引的数字、一张仍显示评审前数字的结果表、失效链接，以及一个在文件写到一半时预算耗尽的工作者。每次合并前都会运行自动化检查：模型测试、翻译覆盖率、浏览器构建，以及在桌面和手机尺寸下加载页面。"
+ },
+ "The expensive models spend their tokens on judgement: planning, reviewing, catching mistakes. The cheap model writes the long files. That division is what makes this affordable for one person.": {
+  "zh-Hans": "昂贵的模型把 token 花在判断上：规划、审阅、发现错误。廉价的模型撰写长文件。正是这种分工，让一个人也能负担得起。"
+ },
+ "My most-read post on my old blog was “My Digital Workflow”. This is the 2026 version. I know some HTML and I ran a WordPress site with too many plugins. Nearly everything else you see here (the models, the code, the tests, this website) was built by AI agents working under my direction. This page describes exactly how, because the method matters as much as the models.": {
+  "zh-Hans": "我在旧博客上阅读量最高的一篇文章是《我的数字工作流》。这是 2026 年的版本。我懂一点 HTML，也运营过一个装满了插件的 WordPress 网站。你在这里看到的几乎其他一切（模型、代码、测试、这个网站）都是由 AI 智能体在我的指导下构建的。本页详细说明了具体做法，因为方法与模型同样重要。"
+ },
+ "How mistakes get caught": {
+  "zh-Hans": "错误如何被发现"
+ },
+ "Open by default": {
+  "zh-Hans": "默认开放"
+ },
+ "A fleet of cheap workers": {
+  "zh-Hans": "一支廉价工作者队伍"
+ },
+ "A shared message board between the agents": {
+  "zh-Hans": "智能体之间的共享留言板"
+ },
+ "The team and its division of work": {
+  "zh-Hans": "团队及其分工"
+ },
+ "The scientific process underneath": {
+  "zh-Hans": "底层的科学过程"
+ },
+ "How one researcher and a team of AI agents build these models": {
+  "zh-Hans": "一位研究者与一支 AI 智能体团队如何构建这些模型"
+ },
+ "Prototype · pinned-versus-current model runs": {
+  "zh-Hans": "原型 · 已固定与当前模型运行的对比"
+ },
+ "Experimental": {
+  "zh-Hans": "实验性"
+ },
+ "Scenario Theatre": {
+  "zh-Hans": "情景剧场"
+ },
+ "Experimental interface": {
+  "zh-Hans": "实验性界面"
+ },
+ "Experiments": {
+  "zh-Hans": "实验"
+ },
+ "How does the current plan compare with a pinned run on cost, the unfunded share and completion?": {
+  "zh-Hans": "当前方案与已固定的运行在成本、未获资助比例和完成率上有何差异？"
+ },
+ "Change": {
+  "zh-Hans": "变化"
+ },
+ "Prototypes for comparing model runs. These are experimental interfaces, not additional models, and are not counted in the catalogue above.": {
+  "zh-Hans": "用于比较模型运行的原型。这些是实验性界面，并非新增模型，也不计入上方目录的数量。"
+ },
+ "This compares model runs, not empirical validation.": {
+  "zh-Hans": "这里比较的是模型运行结果，而非实证验证。"
+ },
+ "Try the Scenario Theatre": {
+  "zh-Hans": "试用情景剧场"
+ },
+ "EXPERIMENTAL INTERFACES": {
+  "zh-Hans": "实验性界面"
  }
 }
