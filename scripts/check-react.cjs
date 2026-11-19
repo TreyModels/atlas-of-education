@@ -6,7 +6,7 @@ const compile=(file,extras={})=>{const m={exports:{}};const code=ts.transpileMod
 const {translate:t,translationDictionary:dictionary}=compile(root+'/src/lib/i18n.ts');
 const stories=require('../src/data/model-stories.json');assert.equal(Object.keys(stories).length,22);const audit=require('../src/data/control-audit.json');assert.equal(Object.keys(audit.models).length,22);
 const all=new Set();const add=s=>{if(typeof s==='string'&&/[A-Za-z]{3}/.test(s))all.add(s)};
-for(const file of ['App.tsx','components/Library.tsx','components/Navigation.tsx','components/ModelNavigator.tsx','components/Guide.tsx','components/Workbench.tsx','components/DataChart.tsx','components/ModelQuestions.tsx','components/ModelNarrative.tsx','components/ScenarioTheatre.tsx']){
+for(const file of ['App.tsx','components/Library.tsx','components/Navigation.tsx','components/ModelNavigator.tsx','components/Guide.tsx','components/Workbench.tsx','components/WorkbenchModelCard.tsx','components/DataChart.tsx','components/ModelQuestions.tsx','components/ModelNarrative.tsx','components/ScenarioTheatre.tsx']){
  const text=fs.readFileSync(root+'/src/'+file,'utf8');for(const m of text.matchAll(/\bt\('([^']*)'\)/g))add(m[1]);
 }
 for(const c of JSON.parse(fs.readFileSync(root+'/src/data/cards.json'))){[c.title,c.question,c.eyebrow,c.badge,...c.details.flatMap(d=>[d.term,d.description])].forEach(add)}

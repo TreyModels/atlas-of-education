@@ -1,0 +1,66 @@
+/* Model card on workbench pages: answers "what am I looking at?" before the
+   controls. The honest labels (purpose, development state, limitation, version)
+   come from the same journey model cards used on the family pages. */
+
+.model-card {
+  margin: 0 0 34px;
+  padding: 26px 28px 22px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: color-mix(in oklab, var(--surface) 74%, transparent);
+}
+
+.model-card-head { max-width: 900px; }
+.model-card-head h2 {
+  margin: 2px 0 8px;
+  font: 500 clamp(1.55rem, 2.6vw, 2.05rem)/1.12 var(--serif);
+  letter-spacing: -.01em;
+}
+.model-card-question { margin: 0; max-width: 74ch; color: var(--muted); font-size: .96rem; line-height: 1.55; }
+.model-card-badges { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 14px; }
+.model-card-badges .badge { font-size: .64rem; }
+.model-card-badges .badge-mode {
+  color: var(--muted);
+  border: 1px solid color-mix(in oklab, var(--line) 85%, transparent);
+  background: transparent;
+}
+
+.model-card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px 34px;
+  margin-top: 24px;
+}
+.model-card-grid h3 {
+  margin: 0 0 6px;
+  color: var(--green-dark);
+  font: 600 .64rem/1.2 var(--sans);
+  letter-spacing: .09em;
+  text-transform: uppercase;
+}
+.model-card-grid p { margin: 0; color: var(--ink); font-size: .9rem; line-height: 1.6; }
+
+.model-card-foot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 18px;
+  margin-top: 22px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: .78rem;
+}
+.model-card-source {
+  font-family: ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace;
+  font-size: .7rem;
+  color: var(--muted);
+}
+.model-card-foot .text-link { color: var(--green-dark); font-size: .78rem; }
+.model-card-tags { display: inline-flex; flex-wrap: wrap; gap: 5px; margin-left: auto; }
+
+@media (max-width: 820px) {
+  .model-card { padding: 20px 18px 18px; margin-bottom: 26px; }
+  .model-card-grid { grid-template-columns: 1fr; gap: 16px; }
+  .model-card-tags { margin-left: 0; }
+}

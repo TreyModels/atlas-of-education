@@ -38,6 +38,10 @@
 - New guard `scripts/check-link-destinations.cjs` (wired into `scripts/check-all.sh` and `npm test`) fails if any catalogue entry's primary link is a file, if a download lacks a page target, or if a download page/file is missing.
 - Browser click audit: 66/66 catalogue entries open pages, 19/19 secondary downloads fire only from the labelled control, and `#fertility` search results open `#story-fertility` instead of downloading.
 
+## Workbench model cards
+- Every workbench page now opens with a model card before the controls: purpose and development-state badges (from the same labels used on the family journeys), what you are looking at, why the model exists, how far it has been checked, what it does not show, engine version, a link to the family journey, the evidence section and clickable tags.
+- The card reuses the journey model cards via `src/data/journey-models.ts`, so the workbench and the family story cannot drift apart. Model version display drops the historical "Atlas of Education" prefix; the raw historical label remains in the evidence panel and exported run JSON.
+
 ## Validation
 Validation: all nine journey/link checks, link-destination checks, React/translation checks, 52 model tests, production build and 22-model worker parity. Desktop/mobile browser checks completed. These checks establish implementation behavior, not empirical validity of every model.
 

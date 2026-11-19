@@ -1,5 +1,4 @@
 import type {World,Values,Translate,View} from '../types'
-import stories from '../data/model-stories.json'
 import cards from '../data/cards.json'
 const trials:Record<string,Values>={provisioning:{community:100},relocation:{mobility:'closed'},petri:{knockout:'coordination'},monsoon:{sensitivity:.1},cambodia:{feeding:1},china:{gradSupply:1.5},teachers:{lag:5},angkor:{yieldT:.7},campaign:{distance:540},signalling:{signalScale:.6},obligations:{returnRule:'open'},mandala:{scenario:'high_shock'},credentials:{structure:'M_HC'},institutions:{scenario:'elite_drought'},flight:{scenario:'extraction_fortified'},maintenance:{scenario:'stable'},accounts:{scenario:'stable'},cohort:{rep1:0},sector:{ptrT:30},schoolmap:{rule:'largest'},lays:{hlo:540},absorption:{gradGrowth:.08}}
 export function ModelNarrative({world,view,referenceView,values,referenceControls,onChange,t,pending,campaignLaunches}:{world:World;view:View;referenceView:View;values:Values;referenceControls?:Values;onChange:(v:Values)=>void;t:Translate;pending:boolean;campaignLaunches?:number}){
@@ -9,7 +8,7 @@ export function ModelNarrative({world,view,referenceView,values,referenceControl
  const evidence=typeof world.evidence==='function'?world.evidence(values):world.evidence
  const trial=trials[world.id],finding=cards.find(c=>c.href==='#'+world.id)?.details[1].description ?? evidence.find(e=>e.flag)?.body ?? evidence[0].body
  return <>
- <section className="story-intro"><p>{t((stories as Record<string,string>)[world.id])}</p>
+ <section className="story-intro">
  {finding&&<p><strong>{t('Earlier experiment finding')}: </strong>{t(finding)}</p>}
  <p><strong>{t('Reference setting')}: </strong>{world.controls.filter(c=>!['seed','draw','runs'].includes(c.key)).slice(0,3).map(c=><span key={c.key}>{t(c.label)}: <strong>{format(c.key,ref[c.key])}</strong>; </span>)}</p><details><summary>{t('Reference setting')}</summary><p>{world.controls.filter(c=>!['seed','draw','runs'].includes(c.key)).map(c=><span key={c.key}>{t(c.label)}: <strong>{format(c.key,ref[c.key])}</strong>; </span>)}</p><p><strong>{t('Run settings')}: </strong>{world.controls.filter(c=>!['seed','draw','runs'].includes(c.key)).map(c=><span key={c.key}>{t(c.label)}: {format(c.key,values[c.key])}; </span>)}</p><p>{referenceView.metrics.slice(0,3).map(m=><span key={m.label}>{t(m.label)}: <strong>{t(String(m.value))}</strong>; </span>)}</p></details>
  <p className="try-experiment"><strong>{t('Try this')}: </strong>{Object.entries(trial).map(([key,v])=><button key={key} className="button button-secondary" disabled={pending} onClick={()=>onChange({...values,...trial})}>{t(world.controls.find(c=>c.key===key)!.label)} → {format(key,v)}</button>)}</p>

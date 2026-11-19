@@ -4101,5 +4101,29 @@
  },
  "Download code": {
   "zh-Hans": "下载代码"
+ },
+ "MODEL CARD": {
+  "zh-Hans": "模型卡片"
+ },
+ "What you are looking at": {
+  "zh-Hans": "你在看什么"
+ },
+ "Why this model exists": {
+  "zh-Hans": "这个模型为何存在"
+ },
+ "How far it has been checked": {
+  "zh-Hans": "检验到什么程度"
+ },
+ "What it does not show": {
+  "zh-Hans": "它不能说明什么"
+ },
+ "Read the family journey": {
+  "zh-Hans": "阅读该家族的叙事页"
+ },
+ "Model version": {
+  "zh-Hans": "模型版本"
+ },
+ "Evidence & assumptions": {
+  "zh-Hans": "证据与假设"
  }
 }
