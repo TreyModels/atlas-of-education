@@ -3,7 +3,7 @@ import type { CatalogueItem } from './model-catalogue'
 /**
  * Curated hashtag vocabulary for the Atlas Worlds catalogue.
  *
- * Two audiences, one index (Trey, 22 Nov 2026): a non-specialist should be able
+ * Two audiences, one index (Trey, 19 November 2026): a non-specialist should be able
  * to search #economics, #education, #history, #jobs or #families; a specialist
  * can still use #credential-floor, #massification or #monte-carlo.
  *
