@@ -88,4 +88,6 @@ else if (cmd === 'run') {
   }
 }
 else if (cmd === 'show') { const r = JSON.parse(fs.readFileSync(path.join(REPORTS, args[0] + '.json'), 'utf8')); delete r.raw; console.log(JSON.stringify(r, null, 1)) }
+else if (cmd === 'brief') for (const id of args) { try { const r = JSON.parse(fs.readFileSync(path.join(REPORTS, id + '.json'), 'utf8')); console.log(`${id}: ${r.usage?.completion_tokens} out tok (${r.usage?.completion_tokens_details?.reasoning_tokens} reasoning) · wrote ${r.written.join(', ') || 'NOTHING'}${r.refused.length ? ' · refused ' + r.refused : ''}`); for (const c of r.checks) console.log(`  ${c.ok ? 'ok' : 'FAIL'} ${c.c.slice(0, 50)} :: ${c.tail.trim().slice(-300)}`) } catch (e) { console.log(id + ': no report yet') } }
+else if (cmd === 'bg') { const { spawn } = await import('node:child_process'); const log = path.join(HOME, 'reports', 'bg-' + path.basename(args[0]) + '.log'); fs.mkdirSync(path.dirname(log), { recursive: true }); const out = fs.openSync(log, 'w'); spawn(process.execPath, [fileURLToPath(import.meta.url), 'run', ...args], { detached: true, stdio: ['ignore', out, out] }).unref(); console.log('started; log', log) }
 else console.log('usage: init <key> | models | run <tasks.json> [-p N] | show <id>')
