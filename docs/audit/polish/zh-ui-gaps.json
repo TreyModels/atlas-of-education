@@ -1,0 +1,3687 @@
+{
+  "base": "http://127.0.0.1:4180/",
+  "lang": "zh-Hans",
+  "generatedAt": "2026-11-19T12:48:43.482Z",
+  "routes": {
+    "home@1280": {
+      "status": 200,
+      "ui": [
+        {
+          "sel": "span.sr-only",
+          "text": "Language / 语言 / Ngôn ngữ",
+          "words": [
+            "Language"
+          ]
+        },
+        {
+          "sel": "p",
+          "text": "我是 Trey Menefee，一名比较教育研究者。自 2010 年起我就想做计算社会学；读博期间我给自己一年时间学 Python，好把这些模型建起来，但没能完成。如今的新工具让把这些文字论证变成可运行的模型成为可能，这个网站就是我公开做这件事的地方。Claude、Codex、D",
+          "words": [
+            "Trey",
+            "Menefee"
+          ]
+        },
+        {
+          "sel": "span.badge.purpose-published",
+          "text": "Published foundation",
+          "words": [
+            "Published",
+            "foundation"
+          ]
+        },
+        {
+          "sel": "span.badge.purpose-mechanism",
+          "text": "Mechanism exploration",
+          "words": [
+            "Mechanism",
+            "exploration"
+          ]
+        },
+        {
+          "sel": "span.badge.purpose-teaching",
+          "text": "Teaching",
+          "words": [
+            "Teaching"
+          ]
+        },
+        {
+          "sel": "span.badge.purpose-accounting",
+          "text": "Description and accounting",
+          "words": [
+            "Description",
+            "accounting"
+          ]
+        },
+        {
+          "sel": "span.badge.state-checked",
+          "text": "Implementation checked",
+          "words": [
+            "Implementation",
+            "checked"
+          ]
+        },
+        {
+          "sel": "span.badge.state-developing",
+          "text": "In development",
+          "words": [
+            "development"
+          ]
+        },
+        {
+          "sel": "span.badge.state-historical",
+          "text": "Historical result",
+          "words": [
+            "Historical",
+            "result"
+          ]
+        },
+        {
+          "sel": "span.badge.purpose-mechanism",
+          "text": "Mechanism exploration",
+          "words": [
+            "Mechanism",
+            "exploration"
+          ]
+        },
+        {
+          "sel": "span.badge.state-historical",
+          "text": "Historical result",
+          "words": [
+            "Historical",
+            "result"
+          ]
+        },
+        {
+          "sel": "span.badge.state-developing",
+          "text": "In development",
+          "words": [
+            "development"
+          ]
+        },
+        {
+          "sel": "span.badge.purpose-mechanism",
+          "text": "Mechanism exploration",
+          "words": [
+            "Mechanism",
+            "exploration"
+          ]
+        },
+        {
+          "sel": "span.badge.state-checked",
+          "text": "Implementation checked",
+          "words": [
+            "Implementation",
+            "checked"
+          ]
+        },
+        {
+          "sel": "span.badge.state-developing",
+          "text": "In development",
+          "words": [
+            "development"
+          ]
+        },
+        {
+          "sel": "span.badge.state-evaluated",
+          "text": "Empirically evaluated",
+          "words": [
+            "Empirically",
+            "evaluated"
+          ]
+        },
+        {
+          "sel": "span.badge.purpose-mechanism",
+          "text": "Mechanism exploration",
+          "words": [
+            "Mechanism",
+            "exploration"
+          ]
+        },
+        {
+          "sel": "span.badge.state-developing",
+          "text": "In development",
+          "words": [
+            "development"
+          ]
+        },
+        {
+          "sel": "span.badge.state-historical",
+          "text": "Historical result",
+          "words": [
+            "Historical",
+            "result"
+          ]
+        },
+        {
+          "sel": "span.badge.purpose-teaching",
+          "text": "Teaching",
+          "words": [
+            "Teaching"
+          ]
+        },
+        {
+          "sel": "span.badge.purpose-accounting",
+          "text": "Description and accounting",
+          "words": [
+            "Description",
+            "accounting"
+          ]
+        },
+        {
+          "sel": "span.badge.state-checked",
+          "text": "Implementation checked",
+          "words": [
+            "Implementation",
+            "checked"
+          ]
+        },
+        {
+          "sel": "span.badge.state-developing",
+          "text": "In development",
+          "words": [
+            "development"
+          ]
+        },
+        {
+          "sel": "span.badge.purpose-mechanism",
+          "text": "Mechanism exploration",
+          "words": [
+            "Mechanism",
+            "exploration"
+          ]
+        },
+        {
+          "sel": "span.badge.purpose-teaching",
+          "text": "Teaching",
+          "words": [
+            "Teaching"
+          ]
+        },
+        {
+          "sel": "span.badge.state-developing",
+          "text": "In development",
+          "words": [
+            "development"
+          ]
+        },
+        {
+          "sel": "span.badge.purpose-mechanism",
+          "text": "Mechanism exploration",
+          "words": [
+            "Mechanism",
+            "exploration"
+          ]
+        },
+        {
+          "sel": "span.badge.purpose-teaching",
+          "text": "Teaching",
+          "words": [
+            "Teaching"
+          ]
+        },
+        {
+          "sel": "span.badge.state-developing",
+          "text": "In development",
+          "words": [
+            "development"
+          ]
+        },
+        {
+          "sel": "span.badge.state-checked",
+          "text": "Implementation checked",
+          "words": [
+            "Implementation",
+            "checked"
+          ]
+        },
+        {
+          "sel": "span.badge.state-evaluated",
+          "text": "Empirically evaluated",
+          "words": [
+            "Empirically",
+            "evaluated"
+          ]
+        },
+        {
+          "sel": "span.badge.purpose-accounting",
+          "text": "Description and accounting",
+          "words": [
+            "Description",
+            "accounting"
+          ]
+        },
+        {
+          "sel": "span.badge.purpose-teaching",
+          "text": "Teaching",
+          "words": [
+            "Teaching"
+          ]
+        },
+        {
+          "sel": "span.badge.state-checked",
+          "text": "Implementation checked",
+          "words": [
+            "Implementation",
+            "checked"
+          ]
+        },
+        {
+          "sel": "span.badge.state-developing",
+          "text": "In development",
+          "words": [
+            "development"
+          ]
+        },
+        {
+          "sel": "span.badge.purpose-mechanism",
+          "text": "Mechanism exploration",
+          "words": [
+            "Mechanism",
+            "exploration"
+          ]
+        },
+        {
+          "sel": "span.badge.state-developing",
+          "text": "In development",
+          "words": [
+            "development"
+          ]
+        },
+        {
+          "sel": "span.badge.purpose-mechanism",
+          "text": "Mechanism exploration",
+          "words": [
+            "Mechanism",
+            "exploration"
+          ]
+        },
+        {
+          "sel": "span.badge.state-historical",
+          "text": "Historical result",
+          "words": [
+            "Historical",
+            "result"
+          ]
+        },
+        {
+          "sel": "span.badge.state-developing",
+          "text": "In development",
+          "words": [
+            "development"
+          ]
+        }
+      ],
+      "uiWords": [
+        "Language",
+        "Trey",
+        "Menefee",
+        "Published",
+        "foundation",
+        "Mechanism",
+        "exploration",
+        "Teaching",
+        "Description",
+        "accounting",
+        "Implementation",
+        "checked",
+        "development",
+        "Historical",
+        "result",
+        "Empirically",
+        "evaluated",
+        "Think",
+        "model",
+        "missing",
+        "something",
+        "Change"
+      ],
+      "proseHits": 31,
+      "attr": [
+        {
+          "attr": "aria-label",
+          "sel": "select",
+          "text": "Language / 语言 / Ngôn ngữ"
+        }
+      ],
+      "brokenImgs": 0,
+      "docOverflow": 0,
+      "warn": 0,
+      "oldBrand": 0,
+      "undef": 0
+    },
+    "story-angkor@1280": {
+      "status": 200,
+      "ui": [
+        {
+          "sel": "span.sr-only",
+          "text": "Language / 语言 / Ngôn ngữ",
+          "words": [
+            "Language"
+          ]
+        },
+        {
+          "sel": "p",
+          "text": "© 2026 Dr. Trey Menefee。使用或复制本作品时请注明并引用 Dr. Trey Menefee。仅限非商业用途；商业用途须事先获得许可。第三方材料可能适用其他条款。",
+          "words": [
+            "Trey",
+            "Menefee"
+          ]
+        }
+      ],
+      "uiWords": [
+        "Language",
+        "Trey",
+        "Menefee"
+      ],
+      "proseHits": 262,
+      "attr": [
+        {
+          "attr": "aria-label",
+          "sel": "select",
+          "text": "Language / 语言 / Ngôn ngữ"
+        },
+        {
+          "attr": "aria-label",
+          "sel": "nav.journey-nav",
+          "text": "Chapters"
+        },
+        {
+          "attr": "aria-label",
+          "sel": "svg",
+          "text": "Per-person production index against community size for three scaling exponents"
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-published",
+          "text": "Implements relationships reported in a peer-reviewed study."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-checked",
+          "text": "Code, ledgers and stored results verified. Not validated against history."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-mechanism",
+          "text": "Asks what follows if these rules held. Not a reconstruction of what happened."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-developing",
+          "text": "Known gaps remain in the rules or inputs; listed on the card."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-mechanism",
+          "text": "Asks what follows if these rules held. Not a reconstruction of what happened."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-developing",
+          "text": "Known gaps remain in the rules or inputs; listed on the card."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-accounting",
+          "text": "Keeps food, labour and people consistent so other rules can be examined."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-checked",
+          "text": "Code, ledgers and stored results verified. Not validated against history."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-mechanism",
+          "text": "Asks what follows if these rules held. Not a reconstruction of what happened."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-checked",
+          "text": "Code, ledgers and stored results verified. Not validated against history."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-mechanism",
+          "text": "Asks what follows if these rules held. Not a reconstruction of what happened."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-checked",
+          "text": "Code, ledgers and stored results verified. Not validated against history."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-mechanism",
+          "text": "Asks what follows if these rules held. Not a reconstruction of what happened."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-checked",
+          "text": "Code, ledgers and stored results verified. Not validated against history."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-mechanism",
+          "text": "Asks what follows if these rules held. Not a reconstruction of what happened."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-developing",
+          "text": "Known gaps remain in the rules or inputs; listed on the card."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-mechanism",
+          "text": "Asks what follows if these rules held. Not a reconstruction of what happened."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-checked",
+          "text": "Code, ledgers and stored results verified. Not validated against history."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-teaching",
+          "text": "Built to show an idea clearly. Complete for that purpose."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-developing",
+          "text": "Known gaps remain in the rules or inputs; listed on the card."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-teaching",
+          "text": "Built to show an idea clearly. Complete for that purpose."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-developing",
+          "text": "Known gaps remain in the rules or inputs; listed on the card."
+        }
+      ],
+      "brokenImgs": 0,
+      "docOverflow": 0,
+      "warn": 0,
+      "oldBrand": 0,
+      "undef": 0
+    },
+    "story-shadow@1280": {
+      "status": 200,
+      "ui": [
+        {
+          "sel": "span.sr-only",
+          "text": "Language / 语言 / Ngôn ngữ",
+          "words": [
+            "Language"
+          ]
+        },
+        {
+          "sel": "p",
+          "text": "© 2026 Dr. Trey Menefee。使用或复制本作品时请注明并引用 Dr. Trey Menefee。仅限非商业用途；商业用途须事先获得许可。第三方材料可能适用其他条款。",
+          "words": [
+            "Trey",
+            "Menefee"
+          ]
+        }
+      ],
+      "uiWords": [
+        "Language",
+        "Trey",
+        "Menefee"
+      ],
+      "proseHits": 194,
+      "attr": [
+        {
+          "attr": "aria-label",
+          "sel": "select",
+          "text": "Language / 语言 / Ngôn ngữ"
+        },
+        {
+          "attr": "aria-label",
+          "sel": "nav.journey-nav",
+          "text": "Chapters"
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-mechanism",
+          "text": "Asks what follows if these rules held. Not a reconstruction of what happened."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-historical",
+          "text": "Kept as a record. Its findings are superseded or limited."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-mechanism",
+          "text": "Asks what follows if these rules held. Not a reconstruction of what happened."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-historical",
+          "text": "Kept as a record. Its findings are superseded or limited."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-mechanism",
+          "text": "Asks what follows if these rules held. Not a reconstruction of what happened."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-developing",
+          "text": "Known gaps remain in the rules or inputs; listed on the card."
+        }
+      ],
+      "brokenImgs": 0,
+      "docOverflow": 0,
+      "warn": 0,
+      "oldBrand": 0,
+      "undef": 0
+    },
+    "story-politics@1280": {
+      "status": 200,
+      "ui": [
+        {
+          "sel": "span.sr-only",
+          "text": "Language / 语言 / Ngôn ngữ",
+          "words": [
+            "Language"
+          ]
+        },
+        {
+          "sel": "p",
+          "text": "© 2026 Dr. Trey Menefee。使用或复制本作品时请注明并引用 Dr. Trey Menefee。仅限非商业用途；商业用途须事先获得许可。第三方材料可能适用其他条款。",
+          "words": [
+            "Trey",
+            "Menefee"
+          ]
+        }
+      ],
+      "uiWords": [
+        "Language",
+        "Trey",
+        "Menefee"
+      ],
+      "proseHits": 95,
+      "attr": [
+        {
+          "attr": "aria-label",
+          "sel": "select",
+          "text": "Language / 语言 / Ngôn ngữ"
+        },
+        {
+          "attr": "aria-label",
+          "sel": "nav.journey-nav",
+          "text": "Chapters"
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-mechanism",
+          "text": "Asks what follows if these rules held. Not a reconstruction of what happened."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-checked",
+          "text": "Code, ledgers and stored results verified. Not validated against history."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-mechanism",
+          "text": "Asks what follows if these rules held. Not a reconstruction of what happened."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-developing",
+          "text": "Known gaps remain in the rules or inputs; listed on the card."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-mechanism",
+          "text": "Asks what follows if these rules held. Not a reconstruction of what happened."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-developing",
+          "text": "Known gaps remain in the rules or inputs; listed on the card."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-mechanism",
+          "text": "Asks what follows if these rules held. Not a reconstruction of what happened."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-evaluated",
+          "text": "Tested against observations it was not built from."
+        }
+      ],
+      "brokenImgs": 0,
+      "docOverflow": 0,
+      "warn": 0,
+      "oldBrand": 0,
+      "undef": 0
+    },
+    "story-extension@1280": {
+      "status": 200,
+      "ui": [
+        {
+          "sel": "span.sr-only",
+          "text": "Language / 语言 / Ngôn ngữ",
+          "words": [
+            "Language"
+          ]
+        },
+        {
+          "sel": "p",
+          "text": "© 2026 Dr. Trey Menefee。使用或复制本作品时请注明并引用 Dr. Trey Menefee。仅限非商业用途；商业用途须事先获得许可。第三方材料可能适用其他条款。",
+          "words": [
+            "Trey",
+            "Menefee"
+          ]
+        }
+      ],
+      "uiWords": [
+        "Language",
+        "Trey",
+        "Menefee"
+      ],
+      "proseHits": 142,
+      "attr": [
+        {
+          "attr": "aria-label",
+          "sel": "select",
+          "text": "Language / 语言 / Ngôn ngữ"
+        },
+        {
+          "attr": "aria-label",
+          "sel": "nav.journey-nav",
+          "text": "Chapters"
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-mechanism",
+          "text": "Asks what follows if these rules held. Not a reconstruction of what happened."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-developing",
+          "text": "Known gaps remain in the rules or inputs; listed on the card."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-mechanism",
+          "text": "Asks what follows if these rules held. Not a reconstruction of what happened."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-developing",
+          "text": "Known gaps remain in the rules or inputs; listed on the card."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-mechanism",
+          "text": "Asks what follows if these rules held. Not a reconstruction of what happened."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-historical",
+          "text": "Kept as a record. Its findings are superseded or limited."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-mechanism",
+          "text": "Asks what follows if these rules held. Not a reconstruction of what happened."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-historical",
+          "text": "Kept as a record. Its findings are superseded or limited."
+        }
+      ],
+      "brokenImgs": 0,
+      "docOverflow": 0,
+      "warn": 0,
+      "oldBrand": 0,
+      "undef": 0
+    },
+    "story-fertility@1280": {
+      "status": 200,
+      "ui": [
+        {
+          "sel": "span.sr-only",
+          "text": "Language / 语言 / Ngôn ngữ",
+          "words": [
+            "Language"
+          ]
+        },
+        {
+          "sel": "p",
+          "text": "© 2026 Dr. Trey Menefee。使用或复制本作品时请注明并引用 Dr. Trey Menefee。仅限非商业用途；商业用途须事先获得许可。第三方材料可能适用其他条款。",
+          "words": [
+            "Trey",
+            "Menefee"
+          ]
+        }
+      ],
+      "uiWords": [
+        "Language",
+        "Trey",
+        "Menefee"
+      ],
+      "proseHits": 249,
+      "attr": [
+        {
+          "attr": "aria-label",
+          "sel": "select",
+          "text": "Language / 语言 / Ngôn ngữ"
+        },
+        {
+          "attr": "aria-label",
+          "sel": "nav.journey-nav",
+          "text": "Chapters"
+        },
+        {
+          "attr": "aria-label",
+          "sel": "svg",
+          "text": "Per-person production index against community size for three scaling exponents"
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-mechanism",
+          "text": "Asks what follows if these rules held. Not a reconstruction of what happened."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-developing",
+          "text": "Known gaps remain in the rules or inputs; listed on the card."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-mechanism",
+          "text": "Asks what follows if these rules held. Not a reconstruction of what happened."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-developing",
+          "text": "Known gaps remain in the rules or inputs; listed on the card."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-mechanism",
+          "text": "Asks what follows if these rules held. Not a reconstruction of what happened."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-developing",
+          "text": "Known gaps remain in the rules or inputs; listed on the card."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-mechanism",
+          "text": "Asks what follows if these rules held. Not a reconstruction of what happened."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-developing",
+          "text": "Known gaps remain in the rules or inputs; listed on the card."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-mechanism",
+          "text": "Asks what follows if these rules held. Not a reconstruction of what happened."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-developing",
+          "text": "Known gaps remain in the rules or inputs; listed on the card."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-mechanism",
+          "text": "Asks what follows if these rules held. Not a reconstruction of what happened."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-developing",
+          "text": "Known gaps remain in the rules or inputs; listed on the card."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-mechanism",
+          "text": "Asks what follows if these rules held. Not a reconstruction of what happened."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-developing",
+          "text": "Known gaps remain in the rules or inputs; listed on the card."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-mechanism",
+          "text": "Asks what follows if these rules held. Not a reconstruction of what happened."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-developing",
+          "text": "Known gaps remain in the rules or inputs; listed on the card."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-teaching",
+          "text": "Built to show an idea clearly. Complete for that purpose."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-developing",
+          "text": "Known gaps remain in the rules or inputs; listed on the card."
+        }
+      ],
+      "brokenImgs": 0,
+      "docOverflow": 0,
+      "warn": 0,
+      "oldBrand": 0,
+      "undef": 0
+    },
+    "story-deephistory@1280": {
+      "status": 200,
+      "ui": [
+        {
+          "sel": "span.sr-only",
+          "text": "Language / 语言 / Ngôn ngữ",
+          "words": [
+            "Language"
+          ]
+        },
+        {
+          "sel": "p",
+          "text": "© 2026 Dr. Trey Menefee。使用或复制本作品时请注明并引用 Dr. Trey Menefee。仅限非商业用途；商业用途须事先获得许可。第三方材料可能适用其他条款。",
+          "words": [
+            "Trey",
+            "Menefee"
+          ]
+        }
+      ],
+      "uiWords": [
+        "Language",
+        "Trey",
+        "Menefee"
+      ],
+      "proseHits": 94,
+      "attr": [
+        {
+          "attr": "aria-label",
+          "sel": "select",
+          "text": "Language / 语言 / Ngôn ngữ"
+        },
+        {
+          "attr": "aria-label",
+          "sel": "nav.journey-nav",
+          "text": "Chapters"
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-mechanism",
+          "text": "Asks what follows if these rules held. Not a reconstruction of what happened."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-developing",
+          "text": "Known gaps remain in the rules or inputs; listed on the card."
+        }
+      ],
+      "brokenImgs": 0,
+      "docOverflow": 0,
+      "warn": 0,
+      "oldBrand": 0,
+      "undef": 0
+    },
+    "story-education@1280": {
+      "status": 200,
+      "ui": [
+        {
+          "sel": "span.sr-only",
+          "text": "Language / 语言 / Ngôn ngữ",
+          "words": [
+            "Language"
+          ]
+        },
+        {
+          "sel": "p",
+          "text": "© 2026 Dr. Trey Menefee。使用或复制本作品时请注明并引用 Dr. Trey Menefee。仅限非商业用途；商业用途须事先获得许可。第三方材料可能适用其他条款。",
+          "words": [
+            "Trey",
+            "Menefee"
+          ]
+        }
+      ],
+      "uiWords": [
+        "Language",
+        "Trey",
+        "Menefee"
+      ],
+      "proseHits": 280,
+      "attr": [
+        {
+          "attr": "aria-label",
+          "sel": "select",
+          "text": "Language / 语言 / Ngôn ngữ"
+        },
+        {
+          "attr": "aria-label",
+          "sel": "nav.journey-nav",
+          "text": "Chapters"
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-mechanism",
+          "text": "Asks what follows if these rules held. Not a reconstruction of what happened."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-developing",
+          "text": "Known gaps remain in the rules or inputs; listed on the card."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-mechanism",
+          "text": "Asks what follows if these rules held. Not a reconstruction of what happened."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-developing",
+          "text": "Known gaps remain in the rules or inputs; listed on the card."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-mechanism",
+          "text": "Asks what follows if these rules held. Not a reconstruction of what happened."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-developing",
+          "text": "Known gaps remain in the rules or inputs; listed on the card."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-mechanism",
+          "text": "Asks what follows if these rules held. Not a reconstruction of what happened."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-evaluated",
+          "text": "Tested against observations it was not built from."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-mechanism",
+          "text": "Asks what follows if these rules held. Not a reconstruction of what happened."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-checked",
+          "text": "Code, ledgers and stored results verified. Not validated against history."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-mechanism",
+          "text": "Asks what follows if these rules held. Not a reconstruction of what happened."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-checked",
+          "text": "Code, ledgers and stored results verified. Not validated against history."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-mechanism",
+          "text": "Asks what follows if these rules held. Not a reconstruction of what happened."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-checked",
+          "text": "Code, ledgers and stored results verified. Not validated against history."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-mechanism",
+          "text": "Asks what follows if these rules held. Not a reconstruction of what happened."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-checked",
+          "text": "Code, ledgers and stored results verified. Not validated against history."
+        }
+      ],
+      "brokenImgs": 0,
+      "docOverflow": 0,
+      "warn": 0,
+      "oldBrand": 0,
+      "undef": 0
+    },
+    "story-systems@1280": {
+      "status": 200,
+      "ui": [
+        {
+          "sel": "span.sr-only",
+          "text": "Language / 语言 / Ngôn ngữ",
+          "words": [
+            "Language"
+          ]
+        },
+        {
+          "sel": "p",
+          "text": "© 2026 Dr. Trey Menefee。使用或复制本作品时请注明并引用 Dr. Trey Menefee。仅限非商业用途；商业用途须事先获得许可。第三方材料可能适用其他条款。",
+          "words": [
+            "Trey",
+            "Menefee"
+          ]
+        }
+      ],
+      "uiWords": [
+        "Language",
+        "Trey",
+        "Menefee"
+      ],
+      "proseHits": 230,
+      "attr": [
+        {
+          "attr": "aria-label",
+          "sel": "select",
+          "text": "Language / 语言 / Ngôn ngữ"
+        },
+        {
+          "attr": "aria-label",
+          "sel": "nav.journey-nav",
+          "text": "Chapters"
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-teaching",
+          "text": "Built to show an idea clearly. Complete for that purpose."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-developing",
+          "text": "Known gaps remain in the rules or inputs; listed on the card."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-teaching",
+          "text": "Built to show an idea clearly. Complete for that purpose."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-developing",
+          "text": "Known gaps remain in the rules or inputs; listed on the card."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-accounting",
+          "text": "Keeps food, labour and people consistent so other rules can be examined."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-developing",
+          "text": "Known gaps remain in the rules or inputs; listed on the card."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-accounting",
+          "text": "Keeps food, labour and people consistent so other rules can be examined."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-developing",
+          "text": "Known gaps remain in the rules or inputs; listed on the card."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-accounting",
+          "text": "Keeps food, labour and people consistent so other rules can be examined."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-developing",
+          "text": "Known gaps remain in the rules or inputs; listed on the card."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-accounting",
+          "text": "Keeps food, labour and people consistent so other rules can be examined."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-developing",
+          "text": "Known gaps remain in the rules or inputs; listed on the card."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-accounting",
+          "text": "Keeps food, labour and people consistent so other rules can be examined."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-developing",
+          "text": "Known gaps remain in the rules or inputs; listed on the card."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-accounting",
+          "text": "Keeps food, labour and people consistent so other rules can be examined."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-developing",
+          "text": "Known gaps remain in the rules or inputs; listed on the card."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-teaching",
+          "text": "Built to show an idea clearly. Complete for that purpose."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-developing",
+          "text": "Known gaps remain in the rules or inputs; listed on the card."
+        }
+      ],
+      "brokenImgs": 0,
+      "docOverflow": 0,
+      "warn": 0,
+      "oldBrand": 0,
+      "undef": 0
+    },
+    "story-planning@1280": {
+      "status": 200,
+      "ui": [
+        {
+          "sel": "span.sr-only",
+          "text": "Language / 语言 / Ngôn ngữ",
+          "words": [
+            "Language"
+          ]
+        },
+        {
+          "sel": "p",
+          "text": "© 2026 Dr. Trey Menefee。使用或复制本作品时请注明并引用 Dr. Trey Menefee。仅限非商业用途；商业用途须事先获得许可。第三方材料可能适用其他条款。",
+          "words": [
+            "Trey",
+            "Menefee"
+          ]
+        }
+      ],
+      "uiWords": [
+        "Language",
+        "Trey",
+        "Menefee"
+      ],
+      "proseHits": 220,
+      "attr": [
+        {
+          "attr": "aria-label",
+          "sel": "select",
+          "text": "Language / 语言 / Ngôn ngữ"
+        },
+        {
+          "attr": "aria-label",
+          "sel": "nav.journey-nav",
+          "text": "Chapters"
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-teaching",
+          "text": "Built to show an idea clearly. Complete for that purpose."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-developing",
+          "text": "Known gaps remain in the rules or inputs; listed on the card."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-teaching",
+          "text": "Built to show an idea clearly. Complete for that purpose."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-checked",
+          "text": "Code, ledgers and stored results verified. Not validated against history."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-accounting",
+          "text": "Keeps food, labour and people consistent so other rules can be examined."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-checked",
+          "text": "Code, ledgers and stored results verified. Not validated against history."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-teaching",
+          "text": "Built to show an idea clearly. Complete for that purpose."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-developing",
+          "text": "Known gaps remain in the rules or inputs; listed on the card."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-teaching",
+          "text": "Built to show an idea clearly. Complete for that purpose."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-checked",
+          "text": "Code, ledgers and stored results verified. Not validated against history."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-accounting",
+          "text": "Keeps food, labour and people consistent so other rules can be examined."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-checked",
+          "text": "Code, ledgers and stored results verified. Not validated against history."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-accounting",
+          "text": "Keeps food, labour and people consistent so other rules can be examined."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-checked",
+          "text": "Code, ledgers and stored results verified. Not validated against history."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-teaching",
+          "text": "Built to show an idea clearly. Complete for that purpose."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-developing",
+          "text": "Known gaps remain in the rules or inputs; listed on the card."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-teaching",
+          "text": "Built to show an idea clearly. Complete for that purpose."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-checked",
+          "text": "Code, ledgers and stored results verified. Not validated against history."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-teaching",
+          "text": "Built to show an idea clearly. Complete for that purpose."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-developing",
+          "text": "Known gaps remain in the rules or inputs; listed on the card."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-teaching",
+          "text": "Built to show an idea clearly. Complete for that purpose."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-developing",
+          "text": "Known gaps remain in the rules or inputs; listed on the card."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-teaching",
+          "text": "Built to show an idea clearly. Complete for that purpose."
+        }
+      ],
+      "brokenImgs": 0,
+      "docOverflow": 0,
+      "warn": 0,
+      "oldBrand": 0,
+      "undef": 0
+    },
+    "catalogue@1280": {
+      "status": 200,
+      "ui": [
+        {
+          "sel": "span.sr-only",
+          "text": "Language / 语言 / Ngôn ngữ",
+          "words": [
+            "Language"
+          ]
+        },
+        {
+          "sel": "p",
+          "text": "© 2026 Dr. Trey Menefee。使用或复制本作品时请注明并引用 Dr. Trey Menefee。仅限非商业用途；商业用途须事先获得许可。第三方材料可能适用其他条款。",
+          "words": [
+            "Trey",
+            "Menefee"
+          ]
+        }
+      ],
+      "uiWords": [
+        "Language",
+        "Trey",
+        "Menefee"
+      ],
+      "proseHits": 41,
+      "attr": [
+        {
+          "attr": "aria-label",
+          "sel": "select",
+          "text": "Language / 语言 / Ngôn ngữ"
+        }
+      ],
+      "brokenImgs": 0,
+      "docOverflow": 0,
+      "warn": 0,
+      "oldBrand": 0,
+      "undef": 0
+    },
+    "about@1280": {
+      "status": 200,
+      "ui": [
+        {
+          "sel": "span.sr-only",
+          "text": "Language / 语言 / Ngôn ngữ",
+          "words": [
+            "Language"
+          ]
+        },
+        {
+          "sel": "p.journey-lede",
+          "text": "这是由 Trey Menefee 博士创建的计算社会科学工作实验室。每个模型都接收一个通常以文字表述的论点——关于学校、家庭、城市或国家——并将其写成计算机可以反复运行数千次的规则。代码、可用数据、假设和当前局限性均予以共享。草稿论文正在陆续添加；公开可用并不意味着已经过同行评审",
+          "words": [
+            "Trey",
+            "Menefee"
+          ]
+        },
+        {
+          "sel": "p",
+          "text": "© 2026 Dr. Trey Menefee。使用或复制本作品时请注明并引用 Dr. Trey Menefee。仅限非商业用途；商业用途须事先获得许可。第三方材料可能适用其他条款。",
+          "words": [
+            "Trey",
+            "Menefee"
+          ]
+        }
+      ],
+      "uiWords": [
+        "Language",
+        "Trey",
+        "Menefee"
+      ],
+      "proseHits": 4,
+      "attr": [
+        {
+          "attr": "aria-label",
+          "sel": "select",
+          "text": "Language / 语言 / Ngôn ngữ"
+        }
+      ],
+      "brokenImgs": 0,
+      "docOverflow": 0,
+      "warn": 0,
+      "oldBrand": 0,
+      "undef": 0
+    },
+    "how-models-work@1280": {
+      "status": 200,
+      "ui": [
+        {
+          "sel": "span.sr-only",
+          "text": "Language / 语言 / Ngôn ngữ",
+          "words": [
+            "Language"
+          ]
+        },
+        {
+          "sel": "p",
+          "text": "© 2026 Dr. Trey Menefee。使用或复制本作品时请注明并引用 Dr. Trey Menefee。仅限非商业用途；商业用途须事先获得许可。第三方材料可能适用其他条款。",
+          "words": [
+            "Trey",
+            "Menefee"
+          ]
+        }
+      ],
+      "uiWords": [
+        "Language",
+        "Trey",
+        "Menefee"
+      ],
+      "proseHits": 2,
+      "attr": [
+        {
+          "attr": "aria-label",
+          "sel": "select",
+          "text": "Language / 语言 / Ngôn ngữ"
+        }
+      ],
+      "brokenImgs": 0,
+      "docOverflow": 0,
+      "warn": 0,
+      "oldBrand": 0,
+      "undef": 0
+    },
+    "workflow@1280": {
+      "status": 200,
+      "ui": [
+        {
+          "sel": "span.sr-only",
+          "text": "Language / 语言 / Ngôn ngữ",
+          "words": [
+            "Language"
+          ]
+        },
+        {
+          "sel": "h1",
+          "text": "How one researcher and a team of AI agents build these models",
+          "words": [
+            "How",
+            "one",
+            "researcher",
+            "team",
+            "agents",
+            "build",
+            "these",
+            "models"
+          ]
+        },
+        {
+          "sel": "p.journey-lede",
+          "text": "My most-read post on my old blog was “My Digital Workflow”. This is the 2026 version. I know some HTML and I ran a WordPress site with too m",
+          "words": [
+            "most-read",
+            "post",
+            "old",
+            "blog",
+            "was",
+            "Digital",
+            "Workflow",
+            "version",
+            "know",
+            "some",
+            "ran",
+            "site",
+            "too",
+            "many",
+            "plugins",
+            "Nearly",
+            "everything",
+            "else",
+            "see",
+            "here",
+            "models",
+            "code",
+            "tests",
+            "website",
+            "built",
+            "agents",
+            "working",
+            "under",
+            "direction",
+            "page",
+            "describes",
+            "exactly",
+            "how",
+            "because",
+            "matters",
+            "much"
+          ]
+        },
+        {
+          "sel": "p",
+          "text": "© 2026 Dr. Trey Menefee。使用或复制本作品时请注明并引用 Dr. Trey Menefee。仅限非商业用途；商业用途须事先获得许可。第三方材料可能适用其他条款。",
+          "words": [
+            "Trey",
+            "Menefee"
+          ]
+        }
+      ],
+      "uiWords": [
+        "Language",
+        "How",
+        "one",
+        "researcher",
+        "team",
+        "agents",
+        "build",
+        "these",
+        "models",
+        "most-read",
+        "post",
+        "old",
+        "blog",
+        "was",
+        "Digital",
+        "Workflow",
+        "version",
+        "know",
+        "some",
+        "ran",
+        "site",
+        "too",
+        "many",
+        "plugins",
+        "Nearly",
+        "everything",
+        "else",
+        "see",
+        "here",
+        "code",
+        "tests",
+        "website",
+        "built",
+        "working",
+        "under",
+        "direction",
+        "page",
+        "describes",
+        "exactly",
+        "how",
+        "because",
+        "matters",
+        "much",
+        "Trey",
+        "Menefee"
+      ],
+      "proseHits": 17,
+      "attr": [
+        {
+          "attr": "aria-label",
+          "sel": "select",
+          "text": "Language / 语言 / Ngôn ngữ"
+        }
+      ],
+      "brokenImgs": 0,
+      "docOverflow": 0,
+      "warn": 0,
+      "oldBrand": 0,
+      "undef": 0
+    },
+    "angkor-guide@1280": {
+      "status": 200,
+      "ui": [
+        {
+          "sel": "span.sr-only",
+          "text": "Language / 语言 / Ngôn ngữ",
+          "words": [
+            "Language"
+          ]
+        },
+        {
+          "sel": "p",
+          "text": "© 2026 Dr. Trey Menefee。使用或复制本作品时请注明并引用 Dr. Trey Menefee。仅限非商业用途；商业用途须事先获得许可。第三方材料可能适用其他条款。",
+          "words": [
+            "Trey",
+            "Menefee"
+          ]
+        }
+      ],
+      "uiWords": [
+        "Language",
+        "Trey",
+        "Menefee"
+      ],
+      "proseHits": 0,
+      "attr": [
+        {
+          "attr": "aria-label",
+          "sel": "select",
+          "text": "Language / 语言 / Ngôn ngữ"
+        }
+      ],
+      "brokenImgs": 0,
+      "docOverflow": 0,
+      "warn": 0,
+      "oldBrand": 0,
+      "undef": 0
+    },
+    "cambodia@1280": {
+      "status": 200,
+      "ui": [
+        {
+          "sel": "span.sr-only",
+          "text": "Language / 语言 / Ngôn ngữ",
+          "words": [
+            "Language"
+          ]
+        },
+        {
+          "sel": "p",
+          "text": "© 2026 Dr. Trey Menefee。使用或复制本作品时请注明并引用 Dr. Trey Menefee。仅限非商业用途；商业用途须事先获得许可。第三方材料可能适用其他条款。",
+          "words": [
+            "Trey",
+            "Menefee"
+          ]
+        }
+      ],
+      "uiWords": [
+        "Language",
+        "Trey",
+        "Menefee"
+      ],
+      "proseHits": 1,
+      "attr": [
+        {
+          "attr": "aria-label",
+          "sel": "select",
+          "text": "Language / 语言 / Ngôn ngữ"
+        }
+      ],
+      "brokenImgs": 0,
+      "docOverflow": 0,
+      "warn": 0,
+      "oldBrand": 0,
+      "undef": 0
+    },
+    "angkor@1280": {
+      "status": 200,
+      "ui": [
+        {
+          "sel": "span.sr-only",
+          "text": "Language / 语言 / Ngôn ngữ",
+          "words": [
+            "Language"
+          ]
+        },
+        {
+          "sel": "strong",
+          "text": "Year",
+          "words": [
+            "Year"
+          ]
+        },
+        {
+          "sel": "p",
+          "text": "© 2026 Dr. Trey Menefee。使用或复制本作品时请注明并引用 Dr. Trey Menefee。仅限非商业用途；商业用途须事先获得许可。第三方材料可能适用其他条款。",
+          "words": [
+            "Trey",
+            "Menefee"
+          ]
+        }
+      ],
+      "uiWords": [
+        "Language",
+        "Year",
+        "Trey",
+        "Menefee"
+      ],
+      "proseHits": 1,
+      "attr": [
+        {
+          "attr": "aria-label",
+          "sel": "select",
+          "text": "Language / 语言 / Ngôn ngữ"
+        }
+      ],
+      "brokenImgs": 0,
+      "docOverflow": 0,
+      "warn": 0,
+      "oldBrand": 0,
+      "undef": 0
+    },
+    "monsoon@1280": {
+      "status": 200,
+      "ui": [
+        {
+          "sel": "span.sr-only",
+          "text": "Language / 语言 / Ngôn ngữ",
+          "words": [
+            "Language"
+          ]
+        },
+        {
+          "sel": "span",
+          "text": "吴哥 · 文献解释01 · LIEBERMAN与BUCKLEY",
+          "words": [
+            "LIEBERMAN"
+          ]
+        },
+        {
+          "sel": "small#control-sensitivity-note",
+          "text": "未找到柬埔寨、泰国或老挝雨养水稻已发表的每PDSI系数（inputs/other_sources.json，条目C）。所测试的敏感度0.04、0.07和0.10为无来源的判断值，且它们决定了季风结果：在0时，2000次抽样中没有任何一次显示 onset 下降，而在0.04、0.0",
+          "words": [
+            "inputs",
+            "other",
+            "sources",
+            "json",
+            "onset"
+          ]
+        },
+        {
+          "sel": "strong",
+          "text": "Year",
+          "words": [
+            "Year"
+          ]
+        },
+        {
+          "sel": "p",
+          "text": "© 2026 Dr. Trey Menefee。使用或复制本作品时请注明并引用 Dr. Trey Menefee。仅限非商业用途；商业用途须事先获得许可。第三方材料可能适用其他条款。",
+          "words": [
+            "Trey",
+            "Menefee"
+          ]
+        }
+      ],
+      "uiWords": [
+        "Language",
+        "LIEBERMAN",
+        "inputs",
+        "other",
+        "sources",
+        "json",
+        "onset",
+        "Year",
+        "Trey",
+        "Menefee"
+      ],
+      "proseHits": 1,
+      "attr": [
+        {
+          "attr": "aria-label",
+          "sel": "select",
+          "text": "Language / 语言 / Ngôn ngữ"
+        }
+      ],
+      "brokenImgs": 0,
+      "docOverflow": 0,
+      "warn": 0,
+      "oldBrand": 0,
+      "undef": 0
+    },
+    "sector@1280": {
+      "status": 200,
+      "ui": [
+        {
+          "sel": "span.sr-only",
+          "text": "Language / 语言 / Ngôn ngữ",
+          "words": [
+            "Language"
+          ]
+        },
+        {
+          "sel": "strong",
+          "text": "Year",
+          "words": [
+            "Year"
+          ]
+        },
+        {
+          "sel": "p",
+          "text": "© 2026 Dr. Trey Menefee。使用或复制本作品时请注明并引用 Dr. Trey Menefee。仅限非商业用途；商业用途须事先获得许可。第三方材料可能适用其他条款。",
+          "words": [
+            "Trey",
+            "Menefee"
+          ]
+        }
+      ],
+      "uiWords": [
+        "Language",
+        "Year",
+        "Trey",
+        "Menefee"
+      ],
+      "proseHits": 1,
+      "attr": [
+        {
+          "attr": "aria-label",
+          "sel": "select",
+          "text": "Language / 语言 / Ngôn ngữ"
+        }
+      ],
+      "brokenImgs": 0,
+      "docOverflow": 0,
+      "warn": 0,
+      "oldBrand": 0,
+      "undef": 0
+    },
+    "home@390": {
+      "status": 200,
+      "ui": [
+        {
+          "sel": "span.sr-only",
+          "text": "Language / 语言 / Ngôn ngữ",
+          "words": [
+            "Language"
+          ]
+        },
+        {
+          "sel": "p",
+          "text": "我是 Trey Menefee，一名比较教育研究者。自 2010 年起我就想做计算社会学；读博期间我给自己一年时间学 Python，好把这些模型建起来，但没能完成。如今的新工具让把这些文字论证变成可运行的模型成为可能，这个网站就是我公开做这件事的地方。Claude、Codex、D",
+          "words": [
+            "Trey",
+            "Menefee"
+          ]
+        },
+        {
+          "sel": "span.badge.purpose-published",
+          "text": "Published foundation",
+          "words": [
+            "Published",
+            "foundation"
+          ]
+        },
+        {
+          "sel": "span.badge.purpose-mechanism",
+          "text": "Mechanism exploration",
+          "words": [
+            "Mechanism",
+            "exploration"
+          ]
+        },
+        {
+          "sel": "span.badge.purpose-teaching",
+          "text": "Teaching",
+          "words": [
+            "Teaching"
+          ]
+        },
+        {
+          "sel": "span.badge.purpose-accounting",
+          "text": "Description and accounting",
+          "words": [
+            "Description",
+            "accounting"
+          ]
+        },
+        {
+          "sel": "span.badge.state-checked",
+          "text": "Implementation checked",
+          "words": [
+            "Implementation",
+            "checked"
+          ]
+        },
+        {
+          "sel": "span.badge.state-developing",
+          "text": "In development",
+          "words": [
+            "development"
+          ]
+        },
+        {
+          "sel": "span.badge.state-historical",
+          "text": "Historical result",
+          "words": [
+            "Historical",
+            "result"
+          ]
+        },
+        {
+          "sel": "span.badge.purpose-mechanism",
+          "text": "Mechanism exploration",
+          "words": [
+            "Mechanism",
+            "exploration"
+          ]
+        },
+        {
+          "sel": "span.badge.state-historical",
+          "text": "Historical result",
+          "words": [
+            "Historical",
+            "result"
+          ]
+        },
+        {
+          "sel": "span.badge.state-developing",
+          "text": "In development",
+          "words": [
+            "development"
+          ]
+        },
+        {
+          "sel": "span.badge.purpose-mechanism",
+          "text": "Mechanism exploration",
+          "words": [
+            "Mechanism",
+            "exploration"
+          ]
+        },
+        {
+          "sel": "span.badge.state-checked",
+          "text": "Implementation checked",
+          "words": [
+            "Implementation",
+            "checked"
+          ]
+        },
+        {
+          "sel": "span.badge.state-developing",
+          "text": "In development",
+          "words": [
+            "development"
+          ]
+        },
+        {
+          "sel": "span.badge.state-evaluated",
+          "text": "Empirically evaluated",
+          "words": [
+            "Empirically",
+            "evaluated"
+          ]
+        },
+        {
+          "sel": "span.badge.purpose-mechanism",
+          "text": "Mechanism exploration",
+          "words": [
+            "Mechanism",
+            "exploration"
+          ]
+        },
+        {
+          "sel": "span.badge.state-developing",
+          "text": "In development",
+          "words": [
+            "development"
+          ]
+        },
+        {
+          "sel": "span.badge.state-historical",
+          "text": "Historical result",
+          "words": [
+            "Historical",
+            "result"
+          ]
+        },
+        {
+          "sel": "span.badge.purpose-teaching",
+          "text": "Teaching",
+          "words": [
+            "Teaching"
+          ]
+        },
+        {
+          "sel": "span.badge.purpose-accounting",
+          "text": "Description and accounting",
+          "words": [
+            "Description",
+            "accounting"
+          ]
+        },
+        {
+          "sel": "span.badge.state-checked",
+          "text": "Implementation checked",
+          "words": [
+            "Implementation",
+            "checked"
+          ]
+        },
+        {
+          "sel": "span.badge.state-developing",
+          "text": "In development",
+          "words": [
+            "development"
+          ]
+        },
+        {
+          "sel": "span.badge.purpose-mechanism",
+          "text": "Mechanism exploration",
+          "words": [
+            "Mechanism",
+            "exploration"
+          ]
+        },
+        {
+          "sel": "span.badge.purpose-teaching",
+          "text": "Teaching",
+          "words": [
+            "Teaching"
+          ]
+        },
+        {
+          "sel": "span.badge.state-developing",
+          "text": "In development",
+          "words": [
+            "development"
+          ]
+        },
+        {
+          "sel": "span.badge.purpose-mechanism",
+          "text": "Mechanism exploration",
+          "words": [
+            "Mechanism",
+            "exploration"
+          ]
+        },
+        {
+          "sel": "span.badge.purpose-teaching",
+          "text": "Teaching",
+          "words": [
+            "Teaching"
+          ]
+        },
+        {
+          "sel": "span.badge.state-developing",
+          "text": "In development",
+          "words": [
+            "development"
+          ]
+        },
+        {
+          "sel": "span.badge.state-checked",
+          "text": "Implementation checked",
+          "words": [
+            "Implementation",
+            "checked"
+          ]
+        },
+        {
+          "sel": "span.badge.state-evaluated",
+          "text": "Empirically evaluated",
+          "words": [
+            "Empirically",
+            "evaluated"
+          ]
+        },
+        {
+          "sel": "span.badge.purpose-accounting",
+          "text": "Description and accounting",
+          "words": [
+            "Description",
+            "accounting"
+          ]
+        },
+        {
+          "sel": "span.badge.purpose-teaching",
+          "text": "Teaching",
+          "words": [
+            "Teaching"
+          ]
+        },
+        {
+          "sel": "span.badge.state-checked",
+          "text": "Implementation checked",
+          "words": [
+            "Implementation",
+            "checked"
+          ]
+        },
+        {
+          "sel": "span.badge.state-developing",
+          "text": "In development",
+          "words": [
+            "development"
+          ]
+        },
+        {
+          "sel": "span.badge.purpose-mechanism",
+          "text": "Mechanism exploration",
+          "words": [
+            "Mechanism",
+            "exploration"
+          ]
+        },
+        {
+          "sel": "span.badge.state-developing",
+          "text": "In development",
+          "words": [
+            "development"
+          ]
+        },
+        {
+          "sel": "span.badge.purpose-mechanism",
+          "text": "Mechanism exploration",
+          "words": [
+            "Mechanism",
+            "exploration"
+          ]
+        },
+        {
+          "sel": "span.badge.state-historical",
+          "text": "Historical result",
+          "words": [
+            "Historical",
+            "result"
+          ]
+        },
+        {
+          "sel": "span.badge.state-developing",
+          "text": "In development",
+          "words": [
+            "development"
+          ]
+        }
+      ],
+      "uiWords": [
+        "Language",
+        "Trey",
+        "Menefee",
+        "Published",
+        "foundation",
+        "Mechanism",
+        "exploration",
+        "Teaching",
+        "Description",
+        "accounting",
+        "Implementation",
+        "checked",
+        "development",
+        "Historical",
+        "result",
+        "Empirically",
+        "evaluated",
+        "Think",
+        "model",
+        "missing",
+        "something",
+        "Change"
+      ],
+      "proseHits": 31,
+      "attr": [
+        {
+          "attr": "aria-label",
+          "sel": "select",
+          "text": "Language / 语言 / Ngôn ngữ"
+        }
+      ],
+      "brokenImgs": 0,
+      "docOverflow": 0,
+      "warn": 0,
+      "oldBrand": 0,
+      "undef": 0
+    },
+    "story-angkor@390": {
+      "status": 200,
+      "ui": [
+        {
+          "sel": "span.sr-only",
+          "text": "Language / 语言 / Ngôn ngữ",
+          "words": [
+            "Language"
+          ]
+        },
+        {
+          "sel": "p",
+          "text": "© 2026 Dr. Trey Menefee。使用或复制本作品时请注明并引用 Dr. Trey Menefee。仅限非商业用途；商业用途须事先获得许可。第三方材料可能适用其他条款。",
+          "words": [
+            "Trey",
+            "Menefee"
+          ]
+        }
+      ],
+      "uiWords": [
+        "Language",
+        "Trey",
+        "Menefee"
+      ],
+      "proseHits": 262,
+      "attr": [
+        {
+          "attr": "aria-label",
+          "sel": "select",
+          "text": "Language / 语言 / Ngôn ngữ"
+        },
+        {
+          "attr": "aria-label",
+          "sel": "nav.journey-nav",
+          "text": "Chapters"
+        },
+        {
+          "attr": "aria-label",
+          "sel": "svg",
+          "text": "Per-person production index against community size for three scaling exponents"
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-published",
+          "text": "Implements relationships reported in a peer-reviewed study."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-checked",
+          "text": "Code, ledgers and stored results verified. Not validated against history."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-mechanism",
+          "text": "Asks what follows if these rules held. Not a reconstruction of what happened."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-developing",
+          "text": "Known gaps remain in the rules or inputs; listed on the card."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-mechanism",
+          "text": "Asks what follows if these rules held. Not a reconstruction of what happened."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-developing",
+          "text": "Known gaps remain in the rules or inputs; listed on the card."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-accounting",
+          "text": "Keeps food, labour and people consistent so other rules can be examined."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-checked",
+          "text": "Code, ledgers and stored results verified. Not validated against history."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-mechanism",
+          "text": "Asks what follows if these rules held. Not a reconstruction of what happened."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-checked",
+          "text": "Code, ledgers and stored results verified. Not validated against history."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-mechanism",
+          "text": "Asks what follows if these rules held. Not a reconstruction of what happened."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-checked",
+          "text": "Code, ledgers and stored results verified. Not validated against history."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-mechanism",
+          "text": "Asks what follows if these rules held. Not a reconstruction of what happened."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-checked",
+          "text": "Code, ledgers and stored results verified. Not validated against history."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-mechanism",
+          "text": "Asks what follows if these rules held. Not a reconstruction of what happened."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-developing",
+          "text": "Known gaps remain in the rules or inputs; listed on the card."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-mechanism",
+          "text": "Asks what follows if these rules held. Not a reconstruction of what happened."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-checked",
+          "text": "Code, ledgers and stored results verified. Not validated against history."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-teaching",
+          "text": "Built to show an idea clearly. Complete for that purpose."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-developing",
+          "text": "Known gaps remain in the rules or inputs; listed on the card."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-teaching",
+          "text": "Built to show an idea clearly. Complete for that purpose."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-developing",
+          "text": "Known gaps remain in the rules or inputs; listed on the card."
+        }
+      ],
+      "brokenImgs": 0,
+      "docOverflow": 0,
+      "warn": 0,
+      "oldBrand": 0,
+      "undef": 0
+    },
+    "story-shadow@390": {
+      "status": 200,
+      "ui": [
+        {
+          "sel": "span.sr-only",
+          "text": "Language / 语言 / Ngôn ngữ",
+          "words": [
+            "Language"
+          ]
+        },
+        {
+          "sel": "p",
+          "text": "© 2026 Dr. Trey Menefee。使用或复制本作品时请注明并引用 Dr. Trey Menefee。仅限非商业用途；商业用途须事先获得许可。第三方材料可能适用其他条款。",
+          "words": [
+            "Trey",
+            "Menefee"
+          ]
+        }
+      ],
+      "uiWords": [
+        "Language",
+        "Trey",
+        "Menefee"
+      ],
+      "proseHits": 194,
+      "attr": [
+        {
+          "attr": "aria-label",
+          "sel": "select",
+          "text": "Language / 语言 / Ngôn ngữ"
+        },
+        {
+          "attr": "aria-label",
+          "sel": "nav.journey-nav",
+          "text": "Chapters"
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-mechanism",
+          "text": "Asks what follows if these rules held. Not a reconstruction of what happened."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-historical",
+          "text": "Kept as a record. Its findings are superseded or limited."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-mechanism",
+          "text": "Asks what follows if these rules held. Not a reconstruction of what happened."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-historical",
+          "text": "Kept as a record. Its findings are superseded or limited."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-mechanism",
+          "text": "Asks what follows if these rules held. Not a reconstruction of what happened."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-developing",
+          "text": "Known gaps remain in the rules or inputs; listed on the card."
+        }
+      ],
+      "brokenImgs": 0,
+      "docOverflow": 0,
+      "warn": 0,
+      "oldBrand": 0,
+      "undef": 0
+    },
+    "story-politics@390": {
+      "status": 200,
+      "ui": [
+        {
+          "sel": "span.sr-only",
+          "text": "Language / 语言 / Ngôn ngữ",
+          "words": [
+            "Language"
+          ]
+        },
+        {
+          "sel": "p",
+          "text": "© 2026 Dr. Trey Menefee。使用或复制本作品时请注明并引用 Dr. Trey Menefee。仅限非商业用途；商业用途须事先获得许可。第三方材料可能适用其他条款。",
+          "words": [
+            "Trey",
+            "Menefee"
+          ]
+        }
+      ],
+      "uiWords": [
+        "Language",
+        "Trey",
+        "Menefee"
+      ],
+      "proseHits": 95,
+      "attr": [
+        {
+          "attr": "aria-label",
+          "sel": "select",
+          "text": "Language / 语言 / Ngôn ngữ"
+        },
+        {
+          "attr": "aria-label",
+          "sel": "nav.journey-nav",
+          "text": "Chapters"
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-mechanism",
+          "text": "Asks what follows if these rules held. Not a reconstruction of what happened."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-checked",
+          "text": "Code, ledgers and stored results verified. Not validated against history."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-mechanism",
+          "text": "Asks what follows if these rules held. Not a reconstruction of what happened."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-developing",
+          "text": "Known gaps remain in the rules or inputs; listed on the card."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-mechanism",
+          "text": "Asks what follows if these rules held. Not a reconstruction of what happened."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-developing",
+          "text": "Known gaps remain in the rules or inputs; listed on the card."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-mechanism",
+          "text": "Asks what follows if these rules held. Not a reconstruction of what happened."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-evaluated",
+          "text": "Tested against observations it was not built from."
+        }
+      ],
+      "brokenImgs": 0,
+      "docOverflow": 0,
+      "warn": 0,
+      "oldBrand": 0,
+      "undef": 0
+    },
+    "story-extension@390": {
+      "status": 200,
+      "ui": [
+        {
+          "sel": "span.sr-only",
+          "text": "Language / 语言 / Ngôn ngữ",
+          "words": [
+            "Language"
+          ]
+        },
+        {
+          "sel": "p",
+          "text": "© 2026 Dr. Trey Menefee。使用或复制本作品时请注明并引用 Dr. Trey Menefee。仅限非商业用途；商业用途须事先获得许可。第三方材料可能适用其他条款。",
+          "words": [
+            "Trey",
+            "Menefee"
+          ]
+        }
+      ],
+      "uiWords": [
+        "Language",
+        "Trey",
+        "Menefee"
+      ],
+      "proseHits": 142,
+      "attr": [
+        {
+          "attr": "aria-label",
+          "sel": "select",
+          "text": "Language / 语言 / Ngôn ngữ"
+        },
+        {
+          "attr": "aria-label",
+          "sel": "nav.journey-nav",
+          "text": "Chapters"
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-mechanism",
+          "text": "Asks what follows if these rules held. Not a reconstruction of what happened."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-developing",
+          "text": "Known gaps remain in the rules or inputs; listed on the card."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-mechanism",
+          "text": "Asks what follows if these rules held. Not a reconstruction of what happened."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-developing",
+          "text": "Known gaps remain in the rules or inputs; listed on the card."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-mechanism",
+          "text": "Asks what follows if these rules held. Not a reconstruction of what happened."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-historical",
+          "text": "Kept as a record. Its findings are superseded or limited."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-mechanism",
+          "text": "Asks what follows if these rules held. Not a reconstruction of what happened."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-historical",
+          "text": "Kept as a record. Its findings are superseded or limited."
+        }
+      ],
+      "brokenImgs": 0,
+      "docOverflow": 0,
+      "warn": 0,
+      "oldBrand": 0,
+      "undef": 0
+    },
+    "story-fertility@390": {
+      "status": 200,
+      "ui": [
+        {
+          "sel": "span.sr-only",
+          "text": "Language / 语言 / Ngôn ngữ",
+          "words": [
+            "Language"
+          ]
+        },
+        {
+          "sel": "p",
+          "text": "© 2026 Dr. Trey Menefee。使用或复制本作品时请注明并引用 Dr. Trey Menefee。仅限非商业用途；商业用途须事先获得许可。第三方材料可能适用其他条款。",
+          "words": [
+            "Trey",
+            "Menefee"
+          ]
+        }
+      ],
+      "uiWords": [
+        "Language",
+        "Trey",
+        "Menefee"
+      ],
+      "proseHits": 249,
+      "attr": [
+        {
+          "attr": "aria-label",
+          "sel": "select",
+          "text": "Language / 语言 / Ngôn ngữ"
+        },
+        {
+          "attr": "aria-label",
+          "sel": "nav.journey-nav",
+          "text": "Chapters"
+        },
+        {
+          "attr": "aria-label",
+          "sel": "svg",
+          "text": "Per-person production index against community size for three scaling exponents"
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-mechanism",
+          "text": "Asks what follows if these rules held. Not a reconstruction of what happened."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-developing",
+          "text": "Known gaps remain in the rules or inputs; listed on the card."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-mechanism",
+          "text": "Asks what follows if these rules held. Not a reconstruction of what happened."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-developing",
+          "text": "Known gaps remain in the rules or inputs; listed on the card."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-mechanism",
+          "text": "Asks what follows if these rules held. Not a reconstruction of what happened."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-developing",
+          "text": "Known gaps remain in the rules or inputs; listed on the card."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-mechanism",
+          "text": "Asks what follows if these rules held. Not a reconstruction of what happened."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-developing",
+          "text": "Known gaps remain in the rules or inputs; listed on the card."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-mechanism",
+          "text": "Asks what follows if these rules held. Not a reconstruction of what happened."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-developing",
+          "text": "Known gaps remain in the rules or inputs; listed on the card."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-mechanism",
+          "text": "Asks what follows if these rules held. Not a reconstruction of what happened."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-developing",
+          "text": "Known gaps remain in the rules or inputs; listed on the card."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-mechanism",
+          "text": "Asks what follows if these rules held. Not a reconstruction of what happened."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-developing",
+          "text": "Known gaps remain in the rules or inputs; listed on the card."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-mechanism",
+          "text": "Asks what follows if these rules held. Not a reconstruction of what happened."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-developing",
+          "text": "Known gaps remain in the rules or inputs; listed on the card."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-teaching",
+          "text": "Built to show an idea clearly. Complete for that purpose."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-developing",
+          "text": "Known gaps remain in the rules or inputs; listed on the card."
+        }
+      ],
+      "brokenImgs": 0,
+      "docOverflow": 0,
+      "warn": 0,
+      "oldBrand": 0,
+      "undef": 0
+    },
+    "story-deephistory@390": {
+      "status": 200,
+      "ui": [
+        {
+          "sel": "span.sr-only",
+          "text": "Language / 语言 / Ngôn ngữ",
+          "words": [
+            "Language"
+          ]
+        },
+        {
+          "sel": "p",
+          "text": "© 2026 Dr. Trey Menefee。使用或复制本作品时请注明并引用 Dr. Trey Menefee。仅限非商业用途；商业用途须事先获得许可。第三方材料可能适用其他条款。",
+          "words": [
+            "Trey",
+            "Menefee"
+          ]
+        }
+      ],
+      "uiWords": [
+        "Language",
+        "Trey",
+        "Menefee"
+      ],
+      "proseHits": 94,
+      "attr": [
+        {
+          "attr": "aria-label",
+          "sel": "select",
+          "text": "Language / 语言 / Ngôn ngữ"
+        },
+        {
+          "attr": "aria-label",
+          "sel": "nav.journey-nav",
+          "text": "Chapters"
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-mechanism",
+          "text": "Asks what follows if these rules held. Not a reconstruction of what happened."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-developing",
+          "text": "Known gaps remain in the rules or inputs; listed on the card."
+        }
+      ],
+      "brokenImgs": 0,
+      "docOverflow": 0,
+      "warn": 0,
+      "oldBrand": 0,
+      "undef": 0
+    },
+    "story-education@390": {
+      "status": 200,
+      "ui": [
+        {
+          "sel": "span.sr-only",
+          "text": "Language / 语言 / Ngôn ngữ",
+          "words": [
+            "Language"
+          ]
+        },
+        {
+          "sel": "p",
+          "text": "© 2026 Dr. Trey Menefee。使用或复制本作品时请注明并引用 Dr. Trey Menefee。仅限非商业用途；商业用途须事先获得许可。第三方材料可能适用其他条款。",
+          "words": [
+            "Trey",
+            "Menefee"
+          ]
+        }
+      ],
+      "uiWords": [
+        "Language",
+        "Trey",
+        "Menefee"
+      ],
+      "proseHits": 280,
+      "attr": [
+        {
+          "attr": "aria-label",
+          "sel": "select",
+          "text": "Language / 语言 / Ngôn ngữ"
+        },
+        {
+          "attr": "aria-label",
+          "sel": "nav.journey-nav",
+          "text": "Chapters"
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-mechanism",
+          "text": "Asks what follows if these rules held. Not a reconstruction of what happened."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-developing",
+          "text": "Known gaps remain in the rules or inputs; listed on the card."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-mechanism",
+          "text": "Asks what follows if these rules held. Not a reconstruction of what happened."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-developing",
+          "text": "Known gaps remain in the rules or inputs; listed on the card."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-mechanism",
+          "text": "Asks what follows if these rules held. Not a reconstruction of what happened."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-developing",
+          "text": "Known gaps remain in the rules or inputs; listed on the card."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-mechanism",
+          "text": "Asks what follows if these rules held. Not a reconstruction of what happened."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-evaluated",
+          "text": "Tested against observations it was not built from."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-mechanism",
+          "text": "Asks what follows if these rules held. Not a reconstruction of what happened."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-checked",
+          "text": "Code, ledgers and stored results verified. Not validated against history."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-mechanism",
+          "text": "Asks what follows if these rules held. Not a reconstruction of what happened."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-checked",
+          "text": "Code, ledgers and stored results verified. Not validated against history."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-mechanism",
+          "text": "Asks what follows if these rules held. Not a reconstruction of what happened."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-checked",
+          "text": "Code, ledgers and stored results verified. Not validated against history."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-mechanism",
+          "text": "Asks what follows if these rules held. Not a reconstruction of what happened."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-checked",
+          "text": "Code, ledgers and stored results verified. Not validated against history."
+        }
+      ],
+      "brokenImgs": 0,
+      "docOverflow": 0,
+      "warn": 0,
+      "oldBrand": 0,
+      "undef": 0
+    },
+    "story-systems@390": {
+      "status": 200,
+      "ui": [
+        {
+          "sel": "span.sr-only",
+          "text": "Language / 语言 / Ngôn ngữ",
+          "words": [
+            "Language"
+          ]
+        },
+        {
+          "sel": "p",
+          "text": "© 2026 Dr. Trey Menefee。使用或复制本作品时请注明并引用 Dr. Trey Menefee。仅限非商业用途；商业用途须事先获得许可。第三方材料可能适用其他条款。",
+          "words": [
+            "Trey",
+            "Menefee"
+          ]
+        }
+      ],
+      "uiWords": [
+        "Language",
+        "Trey",
+        "Menefee"
+      ],
+      "proseHits": 230,
+      "attr": [
+        {
+          "attr": "aria-label",
+          "sel": "select",
+          "text": "Language / 语言 / Ngôn ngữ"
+        },
+        {
+          "attr": "aria-label",
+          "sel": "nav.journey-nav",
+          "text": "Chapters"
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-teaching",
+          "text": "Built to show an idea clearly. Complete for that purpose."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-developing",
+          "text": "Known gaps remain in the rules or inputs; listed on the card."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-teaching",
+          "text": "Built to show an idea clearly. Complete for that purpose."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-developing",
+          "text": "Known gaps remain in the rules or inputs; listed on the card."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-accounting",
+          "text": "Keeps food, labour and people consistent so other rules can be examined."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-developing",
+          "text": "Known gaps remain in the rules or inputs; listed on the card."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-accounting",
+          "text": "Keeps food, labour and people consistent so other rules can be examined."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-developing",
+          "text": "Known gaps remain in the rules or inputs; listed on the card."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-accounting",
+          "text": "Keeps food, labour and people consistent so other rules can be examined."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-developing",
+          "text": "Known gaps remain in the rules or inputs; listed on the card."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-accounting",
+          "text": "Keeps food, labour and people consistent so other rules can be examined."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-developing",
+          "text": "Known gaps remain in the rules or inputs; listed on the card."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-accounting",
+          "text": "Keeps food, labour and people consistent so other rules can be examined."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-developing",
+          "text": "Known gaps remain in the rules or inputs; listed on the card."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-accounting",
+          "text": "Keeps food, labour and people consistent so other rules can be examined."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-developing",
+          "text": "Known gaps remain in the rules or inputs; listed on the card."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-teaching",
+          "text": "Built to show an idea clearly. Complete for that purpose."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-developing",
+          "text": "Known gaps remain in the rules or inputs; listed on the card."
+        }
+      ],
+      "brokenImgs": 0,
+      "docOverflow": 0,
+      "warn": 0,
+      "oldBrand": 0,
+      "undef": 0
+    },
+    "story-planning@390": {
+      "status": 200,
+      "ui": [
+        {
+          "sel": "span.sr-only",
+          "text": "Language / 语言 / Ngôn ngữ",
+          "words": [
+            "Language"
+          ]
+        },
+        {
+          "sel": "p",
+          "text": "© 2026 Dr. Trey Menefee。使用或复制本作品时请注明并引用 Dr. Trey Menefee。仅限非商业用途；商业用途须事先获得许可。第三方材料可能适用其他条款。",
+          "words": [
+            "Trey",
+            "Menefee"
+          ]
+        }
+      ],
+      "uiWords": [
+        "Language",
+        "Trey",
+        "Menefee"
+      ],
+      "proseHits": 220,
+      "attr": [
+        {
+          "attr": "aria-label",
+          "sel": "select",
+          "text": "Language / 语言 / Ngôn ngữ"
+        },
+        {
+          "attr": "aria-label",
+          "sel": "nav.journey-nav",
+          "text": "Chapters"
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-teaching",
+          "text": "Built to show an idea clearly. Complete for that purpose."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-developing",
+          "text": "Known gaps remain in the rules or inputs; listed on the card."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-teaching",
+          "text": "Built to show an idea clearly. Complete for that purpose."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-checked",
+          "text": "Code, ledgers and stored results verified. Not validated against history."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-accounting",
+          "text": "Keeps food, labour and people consistent so other rules can be examined."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-checked",
+          "text": "Code, ledgers and stored results verified. Not validated against history."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-teaching",
+          "text": "Built to show an idea clearly. Complete for that purpose."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-developing",
+          "text": "Known gaps remain in the rules or inputs; listed on the card."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-teaching",
+          "text": "Built to show an idea clearly. Complete for that purpose."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-checked",
+          "text": "Code, ledgers and stored results verified. Not validated against history."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-accounting",
+          "text": "Keeps food, labour and people consistent so other rules can be examined."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-checked",
+          "text": "Code, ledgers and stored results verified. Not validated against history."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-accounting",
+          "text": "Keeps food, labour and people consistent so other rules can be examined."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-checked",
+          "text": "Code, ledgers and stored results verified. Not validated against history."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-teaching",
+          "text": "Built to show an idea clearly. Complete for that purpose."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-developing",
+          "text": "Known gaps remain in the rules or inputs; listed on the card."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-teaching",
+          "text": "Built to show an idea clearly. Complete for that purpose."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-checked",
+          "text": "Code, ledgers and stored results verified. Not validated against history."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-teaching",
+          "text": "Built to show an idea clearly. Complete for that purpose."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-developing",
+          "text": "Known gaps remain in the rules or inputs; listed on the card."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-teaching",
+          "text": "Built to show an idea clearly. Complete for that purpose."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.state-developing",
+          "text": "Known gaps remain in the rules or inputs; listed on the card."
+        },
+        {
+          "attr": "title",
+          "sel": "span.badge.purpose-teaching",
+          "text": "Built to show an idea clearly. Complete for that purpose."
+        }
+      ],
+      "brokenImgs": 0,
+      "docOverflow": 0,
+      "warn": 0,
+      "oldBrand": 0,
+      "undef": 0
+    },
+    "catalogue@390": {
+      "status": 200,
+      "ui": [
+        {
+          "sel": "span.sr-only",
+          "text": "Language / 语言 / Ngôn ngữ",
+          "words": [
+            "Language"
+          ]
+        },
+        {
+          "sel": "p",
+          "text": "© 2026 Dr. Trey Menefee。使用或复制本作品时请注明并引用 Dr. Trey Menefee。仅限非商业用途；商业用途须事先获得许可。第三方材料可能适用其他条款。",
+          "words": [
+            "Trey",
+            "Menefee"
+          ]
+        }
+      ],
+      "uiWords": [
+        "Language",
+        "Trey",
+        "Menefee"
+      ],
+      "proseHits": 41,
+      "attr": [
+        {
+          "attr": "aria-label",
+          "sel": "select",
+          "text": "Language / 语言 / Ngôn ngữ"
+        }
+      ],
+      "brokenImgs": 0,
+      "docOverflow": 0,
+      "warn": 0,
+      "oldBrand": 0,
+      "undef": 0
+    },
+    "about@390": {
+      "status": 200,
+      "ui": [
+        {
+          "sel": "span.sr-only",
+          "text": "Language / 语言 / Ngôn ngữ",
+          "words": [
+            "Language"
+          ]
+        },
+        {
+          "sel": "p.journey-lede",
+          "text": "这是由 Trey Menefee 博士创建的计算社会科学工作实验室。每个模型都接收一个通常以文字表述的论点——关于学校、家庭、城市或国家——并将其写成计算机可以反复运行数千次的规则。代码、可用数据、假设和当前局限性均予以共享。草稿论文正在陆续添加；公开可用并不意味着已经过同行评审",
+          "words": [
+            "Trey",
+            "Menefee"
+          ]
+        },
+        {
+          "sel": "p",
+          "text": "© 2026 Dr. Trey Menefee。使用或复制本作品时请注明并引用 Dr. Trey Menefee。仅限非商业用途；商业用途须事先获得许可。第三方材料可能适用其他条款。",
+          "words": [
+            "Trey",
+            "Menefee"
+          ]
+        }
+      ],
+      "uiWords": [
+        "Language",
+        "Trey",
+        "Menefee"
+      ],
+      "proseHits": 4,
+      "attr": [
+        {
+          "attr": "aria-label",
+          "sel": "select",
+          "text": "Language / 语言 / Ngôn ngữ"
+        }
+      ],
+      "brokenImgs": 0,
+      "docOverflow": 0,
+      "warn": 0,
+      "oldBrand": 0,
+      "undef": 0
+    },
+    "how-models-work@390": {
+      "status": 200,
+      "ui": [
+        {
+          "sel": "span.sr-only",
+          "text": "Language / 语言 / Ngôn ngữ",
+          "words": [
+            "Language"
+          ]
+        },
+        {
+          "sel": "p",
+          "text": "© 2026 Dr. Trey Menefee。使用或复制本作品时请注明并引用 Dr. Trey Menefee。仅限非商业用途；商业用途须事先获得许可。第三方材料可能适用其他条款。",
+          "words": [
+            "Trey",
+            "Menefee"
+          ]
+        }
+      ],
+      "uiWords": [
+        "Language",
+        "Trey",
+        "Menefee"
+      ],
+      "proseHits": 2,
+      "attr": [
+        {
+          "attr": "aria-label",
+          "sel": "select",
+          "text": "Language / 语言 / Ngôn ngữ"
+        }
+      ],
+      "brokenImgs": 0,
+      "docOverflow": 0,
+      "warn": 0,
+      "oldBrand": 0,
+      "undef": 0
+    },
+    "workflow@390": {
+      "status": 200,
+      "ui": [
+        {
+          "sel": "span.sr-only",
+          "text": "Language / 语言 / Ngôn ngữ",
+          "words": [
+            "Language"
+          ]
+        },
+        {
+          "sel": "h1",
+          "text": "How one researcher and a team of AI agents build these models",
+          "words": [
+            "How",
+            "one",
+            "researcher",
+            "team",
+            "agents",
+            "build",
+            "these",
+            "models"
+          ]
+        },
+        {
+          "sel": "p.journey-lede",
+          "text": "My most-read post on my old blog was “My Digital Workflow”. This is the 2026 version. I know some HTML and I ran a WordPress site with too m",
+          "words": [
+            "most-read",
+            "post",
+            "old",
+            "blog",
+            "was",
+            "Digital",
+            "Workflow",
+            "version",
+            "know",
+            "some",
+            "ran",
+            "site",
+            "too",
+            "many",
+            "plugins",
+            "Nearly",
+            "everything",
+            "else",
+            "see",
+            "here",
+            "models",
+            "code",
+            "tests",
+            "website",
+            "built",
+            "agents",
+            "working",
+            "under",
+            "direction",
+            "page",
+            "describes",
+            "exactly",
+            "how",
+            "because",
+            "matters",
+            "much"
+          ]
+        },
+        {
+          "sel": "p",
+          "text": "© 2026 Dr. Trey Menefee。使用或复制本作品时请注明并引用 Dr. Trey Menefee。仅限非商业用途；商业用途须事先获得许可。第三方材料可能适用其他条款。",
+          "words": [
+            "Trey",
+            "Menefee"
+          ]
+        }
+      ],
+      "uiWords": [
+        "Language",
+        "How",
+        "one",
+        "researcher",
+        "team",
+        "agents",
+        "build",
+        "these",
+        "models",
+        "most-read",
+        "post",
+        "old",
+        "blog",
+        "was",
+        "Digital",
+        "Workflow",
+        "version",
+        "know",
+        "some",
+        "ran",
+        "site",
+        "too",
+        "many",
+        "plugins",
+        "Nearly",
+        "everything",
+        "else",
+        "see",
+        "here",
+        "code",
+        "tests",
+        "website",
+        "built",
+        "working",
+        "under",
+        "direction",
+        "page",
+        "describes",
+        "exactly",
+        "how",
+        "because",
+        "matters",
+        "much",
+        "Trey",
+        "Menefee"
+      ],
+      "proseHits": 17,
+      "attr": [
+        {
+          "attr": "aria-label",
+          "sel": "select",
+          "text": "Language / 语言 / Ngôn ngữ"
+        }
+      ],
+      "brokenImgs": 0,
+      "docOverflow": 0,
+      "warn": 0,
+      "oldBrand": 0,
+      "undef": 0
+    },
+    "angkor-guide@390": {
+      "status": 200,
+      "ui": [
+        {
+          "sel": "span.sr-only",
+          "text": "Language / 语言 / Ngôn ngữ",
+          "words": [
+            "Language"
+          ]
+        },
+        {
+          "sel": "p",
+          "text": "© 2026 Dr. Trey Menefee。使用或复制本作品时请注明并引用 Dr. Trey Menefee。仅限非商业用途；商业用途须事先获得许可。第三方材料可能适用其他条款。",
+          "words": [
+            "Trey",
+            "Menefee"
+          ]
+        }
+      ],
+      "uiWords": [
+        "Language",
+        "Trey",
+        "Menefee"
+      ],
+      "proseHits": 0,
+      "attr": [
+        {
+          "attr": "aria-label",
+          "sel": "select",
+          "text": "Language / 语言 / Ngôn ngữ"
+        }
+      ],
+      "brokenImgs": 0,
+      "docOverflow": 0,
+      "warn": 0,
+      "oldBrand": 0,
+      "undef": 0
+    },
+    "cambodia@390": {
+      "status": 200,
+      "ui": [
+        {
+          "sel": "span.sr-only",
+          "text": "Language / 语言 / Ngôn ngữ",
+          "words": [
+            "Language"
+          ]
+        },
+        {
+          "sel": "p",
+          "text": "© 2026 Dr. Trey Menefee。使用或复制本作品时请注明并引用 Dr. Trey Menefee。仅限非商业用途；商业用途须事先获得许可。第三方材料可能适用其他条款。",
+          "words": [
+            "Trey",
+            "Menefee"
+          ]
+        }
+      ],
+      "uiWords": [
+        "Language",
+        "Trey",
+        "Menefee"
+      ],
+      "proseHits": 1,
+      "attr": [
+        {
+          "attr": "aria-label",
+          "sel": "select",
+          "text": "Language / 语言 / Ngôn ngữ"
+        }
+      ],
+      "brokenImgs": 0,
+      "docOverflow": 0,
+      "warn": 0,
+      "oldBrand": 0,
+      "undef": 0
+    },
+    "angkor@390": {
+      "status": 200,
+      "ui": [
+        {
+          "sel": "span.sr-only",
+          "text": "Language / 语言 / Ngôn ngữ",
+          "words": [
+            "Language"
+          ]
+        },
+        {
+          "sel": "strong",
+          "text": "Year",
+          "words": [
+            "Year"
+          ]
+        },
+        {
+          "sel": "p",
+          "text": "© 2026 Dr. Trey Menefee。使用或复制本作品时请注明并引用 Dr. Trey Menefee。仅限非商业用途；商业用途须事先获得许可。第三方材料可能适用其他条款。",
+          "words": [
+            "Trey",
+            "Menefee"
+          ]
+        }
+      ],
+      "uiWords": [
+        "Language",
+        "Year",
+        "Trey",
+        "Menefee"
+      ],
+      "proseHits": 1,
+      "attr": [
+        {
+          "attr": "aria-label",
+          "sel": "select",
+          "text": "Language / 语言 / Ngôn ngữ"
+        }
+      ],
+      "brokenImgs": 0,
+      "docOverflow": 0,
+      "warn": 0,
+      "oldBrand": 0,
+      "undef": 0
+    },
+    "monsoon@390": {
+      "status": 200,
+      "ui": [
+        {
+          "sel": "span.sr-only",
+          "text": "Language / 语言 / Ngôn ngữ",
+          "words": [
+            "Language"
+          ]
+        },
+        {
+          "sel": "small#control-sensitivity-note",
+          "text": "未找到柬埔寨、泰国或老挝雨养水稻已发表的每PDSI系数（inputs/other_sources.json，条目C）。所测试的敏感度0.04、0.07和0.10为无来源的判断值，且它们决定了季风结果：在0时，2000次抽样中没有任何一次显示 onset 下降，而在0.04、0.0",
+          "words": [
+            "inputs",
+            "other",
+            "sources",
+            "json",
+            "onset"
+          ]
+        },
+        {
+          "sel": "strong",
+          "text": "Year",
+          "words": [
+            "Year"
+          ]
+        },
+        {
+          "sel": "p",
+          "text": "© 2026 Dr. Trey Menefee。使用或复制本作品时请注明并引用 Dr. Trey Menefee。仅限非商业用途；商业用途须事先获得许可。第三方材料可能适用其他条款。",
+          "words": [
+            "Trey",
+            "Menefee"
+          ]
+        }
+      ],
+      "uiWords": [
+        "Language",
+        "inputs",
+        "other",
+        "sources",
+        "json",
+        "onset",
+        "Year",
+        "Trey",
+        "Menefee"
+      ],
+      "proseHits": 1,
+      "attr": [
+        {
+          "attr": "aria-label",
+          "sel": "select",
+          "text": "Language / 语言 / Ngôn ngữ"
+        }
+      ],
+      "brokenImgs": 0,
+      "docOverflow": 0,
+      "warn": 0,
+      "oldBrand": 0,
+      "undef": 0
+    },
+    "sector@390": {
+      "status": 200,
+      "ui": [
+        {
+          "sel": "span.sr-only",
+          "text": "Language / 语言 / Ngôn ngữ",
+          "words": [
+            "Language"
+          ]
+        },
+        {
+          "sel": "strong",
+          "text": "Year",
+          "words": [
+            "Year"
+          ]
+        },
+        {
+          "sel": "p",
+          "text": "© 2026 Dr. Trey Menefee。使用或复制本作品时请注明并引用 Dr. Trey Menefee。仅限非商业用途；商业用途须事先获得许可。第三方材料可能适用其他条款。",
+          "words": [
+            "Trey",
+            "Menefee"
+          ]
+        }
+      ],
+      "uiWords": [
+        "Language",
+        "Year",
+        "Trey",
+        "Menefee"
+      ],
+      "proseHits": 1,
+      "attr": [
+        {
+          "attr": "aria-label",
+          "sel": "select",
+          "text": "Language / 语言 / Ngôn ngữ"
+        }
+      ],
+      "brokenImgs": 0,
+      "docOverflow": 0,
+      "warn": 0,
+      "oldBrand": 0,
+      "undef": 0
+    }
+  }
+}

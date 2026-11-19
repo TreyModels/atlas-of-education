@@ -1,0 +1,322 @@
+{
+  "base": "http://127.0.0.1:4180/",
+  "generatedAt": "2026-11-19T12:47:26.118Z",
+  "checks": {
+    "brokenImages": 0,
+    "emptySections": 0,
+    "tableOverflow": 0,
+    "doubledSpaces": 0,
+    "oldBrand": 0,
+    "undefined": 0,
+    "consoleWarnings": 0,
+    "ogMeta": [],
+    "metaDescription": "present on all routes",
+    "docOverflowMax": 0
+  },
+  "routes": {
+    "home@1280": {
+      "title": "Atlas Worlds · Model Lab",
+      "metaDesc": true,
+      "broken": 0,
+      "clip": 0,
+      "overflow": 0,
+      "warn": 0
+    },
+    "story-angkor@1280": {
+      "title": "How food, labour, authority and climate interact · Atlas Worlds",
+      "metaDesc": true,
+      "broken": 0,
+      "clip": 0,
+      "overflow": 0,
+      "warn": 0
+    },
+    "story-shadow@1280": {
+      "title": "Why do pupils pay their own teachers? · Atlas Worlds",
+      "metaDesc": true,
+      "broken": 0,
+      "clip": 0,
+      "overflow": 0,
+      "warn": 0
+    },
+    "story-politics@1280": {
+      "title": "Can enforcement change corruption when obligations outlast a campaign? · Atlas Worlds",
+      "metaDesc": true,
+      "broken": 0,
+      "clip": 0,
+      "overflow": 0,
+      "warn": 0
+    },
+    "story-extension@1280": {
+      "title": "Farmer field schools & food politics · Atlas Worlds",
+      "metaDesc": true,
+      "broken": 0,
+      "clip": 0,
+      "overflow": 0,
+      "warn": 0
+    },
+    "story-fertility@1280": {
+      "title": "Why fertility fell, and what can still move it · Atlas Worlds",
+      "metaDesc": true,
+      "broken": 0,
+      "clip": 0,
+      "overflow": 0,
+      "warn": 0
+    },
+    "story-deephistory@1280": {
+      "title": "Coast or herds? How people got from Africa to Australia · Atlas Worlds",
+      "metaDesc": true,
+      "broken": 0,
+      "clip": 0,
+      "overflow": 0,
+      "warn": 0
+    },
+    "story-education@1280": {
+      "title": "Who stays in school, and what the diploma is worth · Atlas Worlds",
+      "metaDesc": true,
+      "broken": 0,
+      "clip": 0,
+      "overflow": 0,
+      "warn": 0
+    },
+    "story-systems@1280": {
+      "title": "What happens when a cohort moves through the system · Atlas Worlds",
+      "metaDesc": true,
+      "broken": 0,
+      "clip": 0,
+      "overflow": 0,
+      "warn": 0
+    },
+    "story-planning@1280": {
+      "title": "The planner’s arithmetic, showing its work · Atlas Worlds",
+      "metaDesc": true,
+      "broken": 0,
+      "clip": 0,
+      "overflow": 0,
+      "warn": 0
+    },
+    "catalogue@1280": {
+      "title": "Atlas of Models · Atlas Worlds",
+      "metaDesc": true,
+      "broken": 0,
+      "clip": 0,
+      "overflow": 0,
+      "warn": 0
+    },
+    "about@1280": {
+      "title": "Atlas Worlds · Model Lab",
+      "metaDesc": true,
+      "broken": 0,
+      "clip": 0,
+      "overflow": 0,
+      "warn": 0
+    },
+    "how-models-work@1280": {
+      "title": "Atlas Worlds · Model Lab",
+      "metaDesc": true,
+      "broken": 0,
+      "clip": 0,
+      "overflow": 0,
+      "warn": 0
+    },
+    "workflow@1280": {
+      "title": "Atlas Worlds · Model Lab",
+      "metaDesc": true,
+      "broken": 0,
+      "clip": 0,
+      "overflow": 0,
+      "warn": 0
+    },
+    "angkor-guide@1280": {
+      "title": "ANGKOR · A GUIDED RECONSTRUCTION · Atlas Worlds",
+      "metaDesc": true,
+      "broken": 0,
+      "clip": 0,
+      "overflow": 0,
+      "warn": 0
+    },
+    "cambodia@1280": {
+      "title": "School and work in Cambodia · Atlas Worlds",
+      "metaDesc": true,
+      "broken": 0,
+      "clip": 0,
+      "overflow": 0,
+      "warn": 0
+    },
+    "angkor@1280": {
+      "title": "Water, rice and population in Angkor · Atlas Worlds",
+      "metaDesc": true,
+      "broken": 0,
+      "clip": 0,
+      "overflow": 0,
+      "warn": 0
+    },
+    "monsoon@1280": {
+      "title": "Can monsoon history explain the decline? · Atlas Worlds",
+      "metaDesc": true,
+      "broken": 0,
+      "clip": 0,
+      "overflow": 0,
+      "warn": 0
+    },
+    "sector@1280": {
+      "title": "Can the budget pay for the plan? · Atlas Worlds",
+      "metaDesc": true,
+      "broken": 0,
+      "clip": 0,
+      "overflow": 0,
+      "warn": 0
+    },
+    "home@390": {
+      "title": "Atlas Worlds · Model Lab",
+      "metaDesc": true,
+      "broken": 0,
+      "clip": 1,
+      "overflow": 0,
+      "warn": 0
+    },
+    "story-angkor@390": {
+      "title": "How food, labour, authority and climate interact · Atlas Worlds",
+      "metaDesc": true,
+      "broken": 0,
+      "clip": 1,
+      "overflow": 0,
+      "warn": 0
+    },
+    "story-shadow@390": {
+      "title": "Why do pupils pay their own teachers? · Atlas Worlds",
+      "metaDesc": true,
+      "broken": 0,
+      "clip": 1,
+      "overflow": 0,
+      "warn": 0
+    },
+    "story-politics@390": {
+      "title": "Can enforcement change corruption when obligations outlast a campaign? · Atlas Worlds",
+      "metaDesc": true,
+      "broken": 0,
+      "clip": 1,
+      "overflow": 0,
+      "warn": 0
+    },
+    "story-extension@390": {
+      "title": "Farmer field schools & food politics · Atlas Worlds",
+      "metaDesc": true,
+      "broken": 0,
+      "clip": 1,
+      "overflow": 0,
+      "warn": 0
+    },
+    "story-fertility@390": {
+      "title": "Why fertility fell, and what can still move it · Atlas Worlds",
+      "metaDesc": true,
+      "broken": 0,
+      "clip": 1,
+      "overflow": 0,
+      "warn": 0
+    },
+    "story-deephistory@390": {
+      "title": "Coast or herds? How people got from Africa to Australia · Atlas Worlds",
+      "metaDesc": true,
+      "broken": 0,
+      "clip": 1,
+      "overflow": 0,
+      "warn": 0
+    },
+    "story-education@390": {
+      "title": "Who stays in school, and what the diploma is worth · Atlas Worlds",
+      "metaDesc": true,
+      "broken": 0,
+      "clip": 1,
+      "overflow": 0,
+      "warn": 0
+    },
+    "story-systems@390": {
+      "title": "What happens when a cohort moves through the system · Atlas Worlds",
+      "metaDesc": true,
+      "broken": 0,
+      "clip": 1,
+      "overflow": 0,
+      "warn": 0
+    },
+    "story-planning@390": {
+      "title": "The planner’s arithmetic, showing its work · Atlas Worlds",
+      "metaDesc": true,
+      "broken": 0,
+      "clip": 1,
+      "overflow": 0,
+      "warn": 0
+    },
+    "catalogue@390": {
+      "title": "Atlas of Models · Atlas Worlds",
+      "metaDesc": true,
+      "broken": 0,
+      "clip": 0,
+      "overflow": 0,
+      "warn": 0
+    },
+    "about@390": {
+      "title": "Atlas Worlds · Model Lab",
+      "metaDesc": true,
+      "broken": 0,
+      "clip": 0,
+      "overflow": 0,
+      "warn": 0
+    },
+    "how-models-work@390": {
+      "title": "Atlas Worlds · Model Lab",
+      "metaDesc": true,
+      "broken": 0,
+      "clip": 1,
+      "overflow": 0,
+      "warn": 0
+    },
+    "workflow@390": {
+      "title": "Atlas Worlds · Model Lab",
+      "metaDesc": true,
+      "broken": 0,
+      "clip": 0,
+      "overflow": 0,
+      "warn": 0
+    },
+    "angkor-guide@390": {
+      "title": "ANGKOR · A GUIDED RECONSTRUCTION · Atlas Worlds",
+      "metaDesc": true,
+      "broken": 0,
+      "clip": 0,
+      "overflow": 0,
+      "warn": 0
+    },
+    "cambodia@390": {
+      "title": "School and work in Cambodia · Atlas Worlds",
+      "metaDesc": true,
+      "broken": 0,
+      "clip": 0,
+      "overflow": 0,
+      "warn": 0
+    },
+    "angkor@390": {
+      "title": "Water, rice and population in Angkor · Atlas Worlds",
+      "metaDesc": true,
+      "broken": 0,
+      "clip": 0,
+      "overflow": 0,
+      "warn": 0
+    },
+    "monsoon@390": {
+      "title": "Can monsoon history explain the decline? · Atlas Worlds",
+      "metaDesc": true,
+      "broken": 0,
+      "clip": 0,
+      "overflow": 0,
+      "warn": 0
+    },
+    "sector@390": {
+      "title": "Can the budget pay for the plan? · Atlas Worlds",
+      "metaDesc": true,
+      "broken": 0,
+      "clip": 0,
+      "overflow": 0,
+      "warn": 0
+    }
+  }
+}
