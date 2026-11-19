@@ -74,6 +74,15 @@ export function Library({ t, navigate }: { t: Translate; navigate: (id: string) 
       </div>
     </section>
 
+    <section className="what-is-site shell" aria-label={t('What is this site?')}>
+      <p className="what-is-site-lede">{t('A working laboratory of computational social science: arguments about society written as models you can run, change and test. New here? Start with how the models work.')}</p>
+      <div className="what-is-site-actions">
+        <button className="button button-primary" onClick={() => navigate('about')}>{t('About')}</button>
+        <button className="button button-secondary" onClick={() => navigate('how-models-work')}>{t('How models work')}</button>
+        <a className="text-link" href="#status">{t('Read this first')}<ArrowRight size={16} /></a>
+      </div>
+    </section>
+
     <section className="home-featured shell" aria-labelledby="home-featured-title">
       <p className="eyebrow">{t('START WITH A QUESTION')}</p>
       <h2 id="home-featured-title">{t(featuredInfo.title)}</h2>
@@ -85,7 +94,7 @@ export function Library({ t, navigate }: { t: Translate; navigate: (id: string) 
       <button className="button button-primary" onClick={() => navigate(featured.route)}>{t('Read what the models found')}<ArrowRight size={18} /></button>
     </section>
 
-    <section className="home-status shell" aria-labelledby="home-status-title">
+    <section className="home-status shell" id="status" aria-labelledby="home-status-title">
       <div className="landing-section-head">
         <p className="eyebrow">{t(statusIntro.kicker)}</p>
         <h2 id="home-status-title">{t(statusIntro.title)}</h2>
