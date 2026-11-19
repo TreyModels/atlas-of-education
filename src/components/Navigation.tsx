@@ -35,7 +35,7 @@ function LanguagePicker({ language, setLanguage }: Pick<NavigationProps, 'langua
     <Globe2 size={19} aria-hidden="true" />
     <span className="sr-only">Language / 语言 / Ngôn ngữ</span>
     <select aria-label="Language / 语言 / Ngôn ngữ" value={language} onChange={event => setLanguage(event.target.value as Language)}>
-      <option value="en">English</option><option value="zh-Hans">简体中文</option>
+      <option value="en">English</option><option value="zh-Hans">简体中文</option><option value="vi">Tiếng Việt</option>
     </select><ChevronDown size={13} aria-hidden="true" />
   </label>
 }
@@ -106,6 +106,8 @@ export function Navigation({ route, navigate, t, language, setLanguage }: Naviga
       <a href="research/shadow-education.html"><ArrowUpRight size={17} /><span>{t('Shadow education lab')}</span></a>
       <a href="research/out-of-africa.html"><ArrowUpRight size={17} /><span>{t('Coast or herds? Out of Africa')}</span></a>
       <a href="reference/education/index.html"><ArrowUpRight size={17} /><span>{t('Full Education Atlas')}</span></a>
+      <button className={route === 'about' ? 'active' : ''} aria-current={route === 'about' ? 'page' : undefined} onClick={() => go('about')}><BookOpen size={17} /><span>{t('About')}</span></button>
+      <button className={route === 'how-models-work' ? 'active' : ''} aria-current={route === 'how-models-work' ? 'page' : undefined} onClick={() => go('how-models-work')}><BookOpen size={17} /><span>{t('How models work')}</span></button>
     </div>
   </>
 
@@ -115,7 +117,7 @@ export function Navigation({ route, navigate, t, language, setLanguage }: Naviga
       <div className="rail-scroll">{navContent}</div>
       <div className="rail-current">
         <span>{t(activeWorld ? 'Current model' : 'Interactive atlas')}</span>
-        <strong>{activeWorld ? t(activeWorld.nav) : t('{n} catalogue entries · 2 languages').replace('{n}', String(catalogue.length))}</strong>
+        <strong>{activeWorld ? t(activeWorld.nav) : t('{n} catalogue entries · 3 languages').replace('{n}', String(catalogue.length))}</strong>
         <small>{t('Runs locally in your browser')}</small>
       </div>
     </aside>

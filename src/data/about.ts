@@ -6,7 +6,7 @@ export interface Article { id: string; kicker: string; title: string; lede: stri
 
 export const about: Article = {
   id: 'about', kicker: 'About this site', title: 'Turning arguments about society into models anyone can run',
-  lede: 'This is a working laboratory of computational social science by Dr. Trey Menefee. Each model takes an argument that usually lives in words, about schools, families, cities or states, and writes it as rules a computer can play out thousands of times. Everything is published: the code, the data, the assumptions, and an honest label for how far each model has got.',
+  lede: 'This is a working laboratory of computational social science by Dr. Trey Menefee. Each model takes an argument that usually lives in words, about schools, families, cities or states, and writes it as rules a computer can play out thousands of times. The code, available data, assumptions and current limitations are shared. Draft papers are being added; public availability does not imply peer review.',
   sections: [
     { heading: 'Why this exists', paras: [
       'I have wanted to do computational sociology since 2010. When I started my PhD I gave myself a year to learn Python well enough to build the models I had in mind. I couldn’t do it. The ideas stayed verbal: arguments in papers, never tested against their own logic.',
@@ -25,7 +25,7 @@ export const about: Article = {
       'Those results stay visible, labelled for what they are. They tell me where to go back and keep working, and they are an open invitation for anyone else to try.',
     ], quote: { text: 'All models are wrong, but some are useful.', who: 'George E. P. Box, statistician (1979)' } },
     { heading: 'Come and work on them', paras: [
-      'Every model can be downloaded, run on your own machine and changed. If you think a model is missing something, change it and propose your version. Proposals are reviewed before anything is listed here. Everything is licensed CC BY-NC 4.0: reuse and adapt it with credit, for noncommercial purposes. Each release has a DOI so it can be cited.',
+      'Every model can be downloaded, run on your own machine and changed. If you think a model is missing something, change it and propose your version. Proposals are reviewed before anything is listed here. Everything is licensed CC BY-NC 4.0: reuse and adapt it with credit, for noncommercial purposes. Releases are versioned for citation; a DOI will be displayed when issued.',
     ] },
   ],
 }
@@ -45,16 +45,16 @@ export const howModelsWork: Article = {
       'Real life has chance in it: a good or bad harvest, who meets whom. A model includes that chance with random numbers. So one run tells you very little; it is one possible history. A Monte Carlo simulation runs the same model hundreds or thousands of times with different random draws and reports what happens across all of them.',
       'When a page says “1,260 of 2,000 runs decline”, it means the model was run 2,000 times and the outcome happened in 1,260 of them. “Matched” runs use the same random draws in two scenarios, so the only difference between them is the thing being compared, for example real drought versus neutral climate.',
     ], maths: {
-      plain: 'The main quantity is just a share: how many runs show the outcome, out of how many were run. A range around it says how much that share would wobble if you ran the whole experiment again.',
+      plain: 'The main quantity is just a share: how many runs show the outcome, out of how many were run. A plotted range may describe different simulated outcomes or different parameter choices. Only a defined sampling interval measures finite-run precision; more runs do not remove uncertainty about the rules and inputs.',
       formula: 'share = runs with the outcome ÷ total runs',
-      example: 'Angkor: with the drought record, 1,260 of 2,000 runs decline, a share of 1,260 ÷ 2,000 = 0.63, or 63%. With neutral climate, 0 of 2,000 decline. The difference between 63% and 0% is the effect of the drought record, in this model, under its assumptions.',
+      example: 'Angkor: with the drought record, 1,260 of 2,000 runs decline, a share of 1,260 ÷ 2,000 = 0.63, or 63%. With neutral climate, 0 of 2,000 decline. The matched comparison measures the effect of the drought record within this model and these assumptions. The 63% is a share of tested simulated cases, not the probability that drought explains the historical decline.',
     } },
     { heading: 'What a result can and cannot tell you', paras: [
       'A model result says: if these rules held, this is what would follow. Whether the rules do hold is a separate question, answered by comparing the model with data it was not built from. Many models here have not passed that second test yet, and the pages say so.',
       'Some numbers depend on an assumption nobody has measured. When that happens the page shows the result at several values of that assumption, so you can see how much it matters.',
     ] },
     { heading: 'Reading the labels', paras: [
-      'Every model carries two labels. Purpose says why it exists: a published foundation, a mechanism exploration, a teaching model, or a description that keeps accounts consistent. Development state says how far it has been checked: implementation checked, in development, historical result, or empirically evaluated. A label is a limit on what the model can claim, not a grade.',
+      'The narrated model pages distinguish two kinds of label. Purpose says why it exists: a published foundation, a mechanism exploration, a teaching model, or a description that keeps accounts consistent. Development state says how far it has been checked: implementation checked, in development, historical result, or empirically evaluated. A label is a limit on what the model can claim, not a grade.',
       'Each paragraph on a model page is also marked as coming from a published study, from observed data, from an Atlas simulation, or as still unsettled.',
     ] },
   ],
