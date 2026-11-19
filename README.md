@@ -49,4 +49,4 @@ and CHANGES.md.
 
 ## Attribution and reuse
 
-Credit and cite **Dr. Trey Menefee** when using, reproducing, sharing, or adapting his material. Noncommercial use is permitted under the conditions in [LICENSE](LICENSE); commercial use requires prior permission. Third-party materials retain their own terms.
+Credit and cite **Dr. Trey Menefee** when using, reproducing, sharing, or adapting his material. Licensed under [CC BY-NC 4.0](LICENSE): reuse and adaptation with attribution for noncommercial purposes; commercial use requires prior permission. Cite via [CITATION.cff](CITATION.cff) (DOIs: [docs/DOI.md](docs/DOI.md)). Third-party materials retain their own terms.
