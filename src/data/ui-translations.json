@@ -140,7 +140,7 @@
   "vi": "Đến nội dung"
  },
  "Atlas Worlds home": {
-  "zh-Hans": "Atlas Worlds首页",
+  "zh-Hans": "Atlas Worlds 首页",
   "fr": "Accueil Atlas Worlds",
   "vi": "Trang chủ Atlas Worlds"
  },
@@ -3769,5 +3769,10 @@
  },
  "The narrated model pages distinguish two kinds of label. Purpose says why it exists: a published foundation, a mechanism exploration, a teaching model, or a description that keeps accounts consistent. Development state says how far it has been checked: implementation checked, in development, historical result, or empirically evaluated. A label is a limit on what the model can claim, not a grade.": {
   "zh-Hans": "带叙述的模型页面区分两类标签。目的说明它为何存在：已发表的基础模型、机制探索、教学模型，或保持账目一致的描述。开发状态说明它已被检验到何种程度：实现已检查、开发中、历史结果，或经实证评估。标签是对模型可以主张的范围的限制，而不是评分等级。"
+ },
+ "Atlas Worlds": {
+  "zh-Hans": "Atlas Worlds",
+  "fr": "Atlas Worlds",
+  "vi": "Atlas Worlds"
  }
 }

@@ -1,5 +1,7 @@
-# Atlas of Education · Model Lab
+# Atlas Worlds · Model Lab
 
+
+Formerly **Atlas of Education**. Renamed **Atlas Worlds** on 19 November 2026: the project now covers education, history, political economy and human evolution, and every model builds a small world you can run.
 Research experiments, literature and contribution guidance are in [research/README.md](research/README.md). The research revision supplies code and unrun production protocols, distinguishing toy mechanism exploration from descriptive, forecasting and policy claims. Historical numerical outputs retain their version labels.
 
 A unified catalogue of 46 entries across Education & work, Population & school systems,
