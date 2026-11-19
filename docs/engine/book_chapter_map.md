@@ -1,5 +1,8 @@
 # Book chapter map: *The Atlas of Education*
 
+> Historical draft, 6 November 2026. Numerical claims and some interpretations were superseded by subsequent model reviews. Use research/README.md and REVIEW_STATUS.md for the current experiment design and limitations. Recheck every number before reuse.
+
+
 **For Bjørn Nordtveit — draft for discussion, 6 November 2026.** A one-page map, one row per chapter, tying each chapter to the world that carries it, the result it rests on, the failure or open question it must carry honestly, and the part I propose Bjørn writes or owns. Numbers are quoted only from the file named in the row. Markers: **[built]** = runs in the repo now; **[specified]** = designed, not built; **[planned]** = proposal only. Bjørn's role markers: **(C)** co-author / theory, **(M)** mechanism and magnitudes, **(F)** field and case material, **(E)** editorial and comparative framing, **(?)** to agree.
 
 The book's argument, in one sentence: comparative education becomes cumulative when each explanation is built as a runnable mechanism inside exact accounting, confronted with patterns it was not tuned to, and allowed to fail in public — and the Atlas is that method applied to the education–labour connection across China, Cambodia, the Philippines and the cross-country record.

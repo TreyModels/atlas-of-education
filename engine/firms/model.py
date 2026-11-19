@@ -55,6 +55,8 @@ DEFAULTS = dict(
     demand='observed',                                    # 'observed' | 'flat' | callable(year, month) -> A
     e_prop=0.0, dr_drop=0.0,                              # graduate-job demand: elasticity to real-estate investment and
                                                           # a step drop from Aug 2021 (Double Reduction tutoring ban)
+    dr_date=(2021, 8),                                    # month the step starts; varied only by the placebo-in-time
+                                                          # experiment (research/rigor, youth_placebo). Default unchanged.
     grad_demand='observed',                               # 'observed' (uses the two above) | 'flat'
     grad_shift=None,                                      # callable(year, month) -> multiplier on graduate-job demand (inversion)
     grad_supply=None,                                     # callable(year) -> graduates (millions); None = observed
@@ -208,7 +210,7 @@ class YouthMarket:
             sig = math.inf if warm else p['sigma_A']
             Dg = 1.0
             if p['grad_demand'] == 'observed' and not warm:
-                Dg = D.property_index(y, m) ** p['e_prop'] * (1 - p['dr_drop'] * ((y, m) >= (2021, 8)))
+                Dg = D.property_index(y, m) ** p['e_prop'] * (1 - p['dr_drop'] * ((y, m) >= tuple(p['dr_date'])))
                 if p['grad_shift'] is not None:
                     Dg *= p['grad_shift'](y, m)
             p_g = Dg * A * p['p_g0'] * ces_relative(max(LF_G, 1e-9), SG_ref * math.exp(p['g_H'] * tt), sig)

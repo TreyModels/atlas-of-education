@@ -1,0 +1,117 @@
+{
+ "schema": 1,
+ "written": "2026-11-16",
+ "status": "Declared before any rigor-family run. All empirical targets have been inspected before; these are not prospective preregistrations. Thresholds below are applied mechanically by research/rigor/analyze.py. Change them only with a dated amendment entry and a new run directory.",
+ "criteria": {
+  "recovery": {
+   "discriminates_accuracy": 0.8,
+   "discriminates_min_recall": 0.7,
+   "fails_accuracy": 0.5,
+   "min_pseudo_observed": 30,
+   "note": "Accuracy is the share of pseudo-observed datasets whose generating structure wins the ABC vote. Chance is 1/(number of structures). A design 'discriminates' only if it recovers every structure well, not just on average."
+  },
+  "placebo": {
+   "lr_threshold": 3.84,
+   "not_identified_share": 0.2,
+   "note": "If at least 20% of placebo step months fit within LR < 3.84 of the best month, the data do not single out August 2021. The LR uses an iid Gaussian approximation and overstates precision when residuals are autocorrelated, so a 'singled out' verdict is weaker than it looks; a 'not singled out' verdict is conservative."
+  },
+  "forecast": {
+   "alpha": 0.05,
+   "note": "Model is called better or worse than a benchmark only when the HLN-corrected Diebold-Mariano test rejects at 5%. Otherwise: no detectable difference."
+  },
+  "fertility": {
+   "null_share": 0.05,
+   "note": "A levels fit is 'not distinguishable from trending' if at least 5% of independent random walks (matched drift and volatility) fit as well, or if another place's covariate fits as well."
+  },
+  "camchild_filmer_schady": {
+   "effect_lo": 0.15,
+   "effect_hi": 0.35,
+   "dose_diff_max": 0.05,
+   "verification_status": "TO VERIFY. Filmer & Schady (2011) report attendance/enrolment effects of roughly 25 percentage points and no additional effect of the US$60 award over US$45. Before treating the verdict as a test, copy the point estimates and confidence intervals from the paper's tables into effect_lo/effect_hi, with table and page.",
+   "note": "Band chosen as roughly +/-10 points around the reported effect to allow for differences in population (RD-local poor children vs bottom-two-quintile average) and outcome definition."
+  },
+  "schools": {
+   "min_n": 10
+  }
+ },
+ "families": {
+  "credential_recovery": {
+   "purpose": "identification by simulation (model recovery)",
+   "question": "If HC, POS, REL or an explicit eligibility gate (GATE) generated Cambodia's completion data, could today's data, or a feasible new study, tell which one did?",
+   "design": "Prior-predictive reference table for four structures x hard/graded financing. Each simulated dataset plays 'the observed data' with declared survey/quasi-experimental errors; leave-one-out ABC rejection vote. Four designs: D0 profiles now; D1 + a premium-shock response; D2 + an eligibility-rule shock; D3 all.",
+   "estimand": "Confusion matrices and recovery accuracy by design, over all prior draws and near the observed profiles.",
+   "failure_criterion": "If D0 'does not discriminate' near data, no comparison of structures on current Cambodian data can rank them; the credential-floor note must say so. If D2 'discriminates' and D0 does not, the eligibility-rule study is the one to fund.",
+   "built_in_result": "HC, POS and REL do not respond to the gate shock by construction, and GATE does. D2's advantage is partly built in; the informative part is how large the response must be relative to its measurement error, and whether GATE can be told from REL without the gate shock.",
+   "sources": ["collins1979", "bills2003", "distasio2016", "breen1997", "robert2011", "wilson2019"],
+   "implementation": "engine/relfloor_gate.py; research/rigor/adapters_rigor.py:credential_recovery",
+   "assumed": "Gate share path, network access curve, +20 point gate shock from 2025, observation-error SDs (relfloor_gate.NOISE)."
+  },
+  "shadow_recovery": {
+   "purpose": "identification by simulation; value of field observations",
+   "question": "Which field observation would separate inadequate instruction (thin), withholding (diversion) and own-teacher favour?",
+   "design": "Prior draws of each variant; outputs the seven published patterns under the corrected observation equation plus candidate field observations (instruction delivered by tutoring vs non-tutoring teachers; purchase rates by teacher status; coverage by wealth; responses to an own-pupil ban and to added class time). Leave-one-out ABC recovery per design.",
+   "estimand": "Recovery accuracy for three rivals (and four variants including full), over all prior draws and near the published patterns.",
+   "failure_criterion": "If S0 'does not discriminate', the current data cannot rank the explanations, whatever the SMC evidence values say. A field observation is worth collecting only if adding it moves a design to 'discriminates' near the data.",
+   "sources": ["bray2016", "jayachandran2014", "biswal1999", "robert2011", "wilson2019"],
+   "implementation": "research/rigor/adapters_rigor.py:shadow_recovery; experiments/shadow-abm/src/tutoring_abm",
+   "assumed": "Observation-error SDs in analyze.py SHADOW_NOISE; one simulated school system per draw; priors as in model.PRIORS."
+  },
+  "youth_placebo": {
+   "purpose": "falsification test of an interpretation",
+   "question": "Does the fitted residual step fit better at August 2021 (Double Reduction) than at other months?",
+   "design": "Full-record refits with the step moved to each quarter 2019-2024, plus August 2021 and a no-step fit; warm start from the headline plus random restarts.",
+   "estimand": "Best least-squares cost per step month; rank of August 2021; share of months indistinguishable from the best.",
+   "failure_criterion": "'Not singled out' means the step cannot be read as the policy; it remains an unexplained residual.",
+   "sources": ["abadie2010"],
+   "implementation": "research/rigor/adapters_rigor.py:youth_placebo; engine/firms/model.py dr_date (default unchanged)"
+  },
+  "youth_rolling": {
+   "purpose": "retrospective predictive evaluation within one measurement definition",
+   "question": "With information available at each origin, does the categorical model forecast the old-definition rate better than a random walk, a seasonal naive or a lake null?",
+   "design": "Origins 2020-06 to 2022-12 every six months; forecasts to 2023-06 (end of the old definition); step fixed at zero for origins before September 2021.",
+   "estimand": "Pooled MAE by benchmark and horizon; HLN-corrected Diebold-Mariano tests.",
+   "failure_criterion": "If the model is 'worse' than any naive benchmark, no forecasting claim is made for it and the methods paper reports the loss.",
+   "sources": ["diebold1995", "harvey1997", "hyndman2006"],
+   "implementation": "research/rigor/adapters_rigor.py:youth_rolling"
+  },
+  "fertility_placebo": {
+   "purpose": "benchmarking a levels association",
+   "question": "Are TFR's levels fits on life expectancy and log GDP stronger than fits to independent trending series or to other places' covariates?",
+   "design": "2,000 random walks per place-covariate with matched drift and volatility; five cross-place swaps; samples from 1961 and 1964.",
+   "estimand": "Share of null R2 at or above the observed R2; maximum swap R2.",
+   "failure_criterion": "'Not distinguishable from trending' means the levels R2 is not evidence for a development explanation.",
+   "sources": ["granger1974", "myrskyla2009", "bongaarts1998"],
+   "implementation": "research/rigor/adapters_rigor.py:fertility_placebo"
+  },
+  "camchild_validation": {
+   "purpose": "external pattern check of one policy response",
+   "question": "Does the model's response to a conditional transfer match the Cambodian CESSP regression-discontinuity evidence?",
+   "design": "US$45 and US$60 awards converted with an adult-wage draw W in [350, 700] US$; eligible group bottom two quintiles aged 12-13; first year; baselines as calibrated and era-matched to 55/65/75% attendance by shifting vLow.",
+   "estimand": "Paired attendance effect at US$45, US$60 and their difference.",
+   "failure_criterion": "If no baseline setting is 'consistent', the cash lever's effect size is not supported by the one Cambodian experiment that measured it, and lever rankings that depend on it are illustrative only.",
+   "sources": ["filmer2011", "filmer2008", "baird2011"],
+   "implementation": "research/rigor/node_rigor.cjs; public/engines/camchild.js (unchanged)",
+   "assumed": "W range (unsourced); era-matched baselines (to verify against the paper's comparison-group means)."
+  }
+ },
+ "sources": {
+  "collins1979": {"cite": "Collins, R. (1979). The Credential Society. Academic Press.", "role": "credentials as gates controlled by occupational groups; motivates M_GATE"},
+  "bills2003": {"cite": "Bills, D. B. (2003). Credentials, signals, and screens. Review of Educational Research 73(4): 441-469.", "role": "employer screening on credentials"},
+  "distasio2016": {"cite": "Di Stasio, V., Bol, T., & van de Werfhorst, H. G. (2016). What makes education positional? Research in Social Stratification and Mobility 43: 53-63.", "role": "positional vs absolute value of education depends on institutions"},
+  "breen1997": {"cite": "Breen, R., & Goldthorpe, J. H. (1997). Explaining educational differentials: towards a formal rational action theory. Rationality and Society 9(3): 275-305.", "role": "canonical formal model of class differentials in educational choice; a natural rival structure to add"},
+  "robert2011": {"cite": "Robert, C. P., Cornuet, J.-M., Marin, J.-M., & Pillai, N. S. (2011). Lack of confidence in approximate Bayesian computation model choice. PNAS 108(37): 15112-15117.", "role": "why ABC posterior model probabilities need recovery checks"},
+  "wilson2019": {"cite": "Wilson, R. C., & Collins, A. G. E. (2019). Ten simple rules for the computational modeling of behavioral data. eLife 8: e49547.", "role": "parameter and model recovery as standard practice"},
+  "jayachandran2014": {"cite": "Jayachandran, S. (2014). Incentives to teach badly: After-school tutoring in developing countries. Journal of Development Economics 108: 190-205.", "role": "formalises and tests the incentive to under-teach in class to sell tutoring (the diversion mechanism)"},
+  "biswal1999": {"cite": "Biswal, B. P. (1999). Private tutoring and public corruption: A cost-effective education system for developing countries. The Developing Economies 37(2): 222-240.", "role": "early formal model of teacher-supplied tutoring and reduced classroom effort"},
+  "abadie2010": {"cite": "Abadie, A., Diamond, A., & Hainmueller, J. (2010). Synthetic control methods for comparative case studies. JASA 105(490): 493-505.", "role": "placebo-in-time and in-space logic"},
+  "diebold1995": {"cite": "Diebold, F. X., & Mariano, R. S. (1995). Comparing predictive accuracy. Journal of Business & Economic Statistics 13(3): 253-263.", "role": "equal predictive accuracy test"},
+  "harvey1997": {"cite": "Harvey, D., Leybourne, S., & Newbold, P. (1997). Testing the equality of prediction mean squared errors. International Journal of Forecasting 13(2): 281-291.", "role": "small-sample correction to DM"},
+  "hyndman2006": {"cite": "Hyndman, R. J., & Koehler, A. B. (2006). Another look at measures of forecast accuracy. International Journal of Forecasting 22(4): 679-688.", "role": "scaled errors and naive benchmarks"},
+  "granger1974": {"cite": "Granger, C. W. J., & Newbold, P. (1974). Spurious regressions in econometrics. Journal of Econometrics 2(2): 111-120.", "role": "high levels R2 between independent trending series"},
+  "myrskyla2009": {"cite": "Myrskyla, M., Kohler, H.-P., & Billari, F. C. (2009). Advances in development reverse fertility declines. Nature 460: 741-743.", "role": "non-monotone development-fertility relation; a rival to a floor"},
+  "bongaarts1998": {"cite": "Bongaarts, J., & Feeney, G. (1998). On the quantum and tempo of fertility. Population and Development Review 24(2): 271-291.", "role": "period TFR distorted by timing"},
+  "filmer2011": {"cite": "Filmer, D., & Schady, N. (2011). Does more cash in conditional cash transfer programs always lead to larger impacts on school attendance? Journal of Development Economics 96(1): 150-157.", "role": "Cambodian CESSP scholarship RD estimates at two award sizes; external target for the cash lever"},
+  "filmer2008": {"cite": "Filmer, D., & Schady, N. (2008). Getting girls into school: Evidence from a scholarship program in Cambodia. Economic Development and Cultural Change 56(3): 581-617.", "role": "second Cambodian scholarship estimate (girls)"},
+  "baird2011": {"cite": "Baird, S., McIntosh, C., & Ozler, B. (2011). Cash or condition? Evidence from a cash transfer experiment. Quarterly Journal of Economics 126(4): 1709-1753.", "role": "conditional vs unconditional transfers; target pattern for cash vs cashU levers"}
+ }
+}

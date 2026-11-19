@@ -46,6 +46,20 @@ def prior_density(names):
     return 1.0 / np.prod([PRIORS[n][1] - PRIORS[n][0] for n in names])
 
 
+def raw_importance_terms(prior, proposal_density, fits, inside):
+    """One term per RAW mixture proposal, with zeros outside the prior box.
+
+    Dividing raw q by the within-box probability would multiply the estimate
+    by that probability. Proposal rejection is not performed in this estimator.
+    """
+    terms = np.zeros(len(inside), dtype=float)
+    q = np.asarray(proposal_density, float)
+    if np.any(q <= 0) or not np.all(np.isfinite(q)):
+        raise ValueError('proposal density must be finite and positive')
+    terms[np.flatnonzero(inside)] = prior / q * np.asarray(fits, float)
+    return terms
+
+
 def resample_move(names, pool, X, D, O, Z, w, eps, cov, rng, sweeps):
     """Resample by importance weights, then Metropolis moves with target prior * 1[D <= eps]."""
     n, dim = X.shape
@@ -66,7 +80,8 @@ def resample_move(names, pool, X, D, O, Z, w, eps, cov, rng, sweeps):
     return X, D, O, Z, accepted / (n * sweeps) if sweeps else 1.0
 
 
-def smc(variant, pool, n_particles, max_gen, seed, log, evidence_n=2000, mh_sweeps=2):
+def smc(variant, pool, n_particles, max_gen, seed, log, evidence_n=2000, mh_sweeps=2,
+        max_proposals=1000000):
     names = free_names(variant)
     dim = len(names)
     rng = np.random.default_rng(seed)
@@ -76,6 +91,8 @@ def smc(variant, pool, n_particles, max_gen, seed, log, evidence_n=2000, mh_swee
     X = lo + (hi - lo) * rng.random((n0, dim))
     res = pool.map(simulate, [(names, x) for x in X], chunksize=10)
     D = np.array([r[0] for r in res])
+    if np.count_nonzero(np.isfinite(D)) < n_particles:
+        raise RuntimeError('too few finite, converged initial worlds for an SMC population')
     order = np.argsort(D)[:n_particles]
     particles, dist = X[order], D[order]
     O = [res[i][1] for i in order]; Z = [res[i][2] for i in order]
@@ -89,18 +106,21 @@ def smc(variant, pool, n_particles, max_gen, seed, log, evidence_n=2000, mh_swee
         kern = multivariate_normal(mean=np.zeros(dim), cov=cov)
         acc_x, acc_d, acc_o, acc_z, acc_q, props, proposed = [], [], [], [], [], [], 0
         while len(acc_x) < n_particles:
-            batch = max(200, 2 * (n_particles - len(acc_x)))
+            if proposed >= max_proposals:
+                raise RuntimeError(f'{variant}: proposal budget exceeded at generation {gen}; '
+                                   'no completed posterior was written')
+            batch = min(max_proposals-proposed,max(200, 2 * (n_particles - len(acc_x))))
             idx = rng.choice(n_particles, size=batch, p=weights)
             cand = particles[idx] + rng.multivariate_normal(np.zeros(dim), cov, size=batch)
+            proposed += batch
             cand = cand[in_prior(names, cand)]
             if not len(cand):
                 continue
             res = pool.map(simulate, [(names, x) for x in cand], chunksize=10)
-            proposed += len(cand)
             q = np.array([np.sum(weights * kern.pdf(c - particles)) for c in cand])
             for x, qq, (d, o, z) in zip(cand, q, res):
                 props.append((qq, d))
-                if d <= eps_new:
+                if np.isfinite(d) and d <= eps_new:
                     acc_x.append(x); acc_d.append(d); acc_o.append(o); acc_z.append(z); acc_q.append(qq)
         test_idx = rng.choice(n_particles, size=20000, p=weights)
         test = particles[test_idx] + rng.multivariate_normal(np.zeros(dim), cov, size=20000)
@@ -110,8 +130,10 @@ def smc(variant, pool, n_particles, max_gen, seed, log, evidence_n=2000, mh_swee
         w = prior_density(names) / (np.array(acc_q[:m]) / inside)
         w = w / w.sum()
         ess_imp = float(1 / np.sum(w ** 2))
-        qs = np.array([p[0] for p in props]) / inside
+        qs = np.array([p[0] for p in props])
         fits = np.array([p[1] <= 1 for p in props])
+        # props are conditional on landing in the prior box. Multiply by P(box)
+        # once when estimating a probability under the untruncated mixture.
         ev_diag = float(np.mean(prior_density(names) / qs * fits) * inside) if len(qs) else 0.0
         particles, dist, O, Z, mh_acc = resample_move(names, pool, X_new, D_new, O_new, Z_new, w, eps_new,
                                                        cov, rng, mh_sweeps)
@@ -130,17 +152,20 @@ def smc(variant, pool, n_particles, max_gen, seed, log, evidence_n=2000, mh_swee
     kern = multivariate_normal(mean=np.zeros(dim), cov=cov)
     idx = rng.choice(n_particles, size=evidence_n, p=weights)
     cand = particles[idx] + rng.multivariate_normal(np.zeros(dim), cov, size=evidence_n)
-    test = particles[rng.choice(n_particles, size=50000, p=weights)] + rng.multivariate_normal(np.zeros(dim), cov, size=50000)
-    inside = in_prior(names, test).mean()
     keep = in_prior(names, cand); cand = cand[keep]
     res = pool.map(simulate, [(names, x) for x in cand], chunksize=10)
-    q = np.array([np.sum(weights * kern.pdf(c - particles)) for c in cand]) / inside
+    q = np.array([np.sum(weights * kern.pdf(c - particles)) for c in cand])
     fits = np.array([r[0] <= 1 for r in res])
-    terms = np.zeros(evidence_n); terms[np.flatnonzero(keep)] = prior_density(names) / q * fits
+    terms = raw_importance_terms(prior_density(names), q, fits, keep)
     boot = [rng.choice(terms, evidence_n).mean() for _ in range(2000)]
     evidence = {"estimate": float(terms.mean()), "ci90": [float(np.quantile(boot, .05)), float(np.quantile(boot, .95))],
-                "proposals": evidence_n, "fit_share": float(fits.mean()), "final_eps": float(eps),
-                "worlds_per_set": K_WORLDS}
+                "proposals": evidence_n, "fit_share": float(fits.mean()) if len(fits) else None, "final_eps": float(eps),
+                "calibration_status": "target_reached" if eps <= 1 else "stopped_above_target",
+                "worlds_per_set": K_WORLDS,
+                "mcse": float(terms.std(ddof=1) / np.sqrt(evidence_n)) if evidence_n > 1 else None,
+                "positive_terms": int(np.count_nonzero(terms)),
+                "interpretation": "prior probability of passing the declared pattern screen; not probability a social theory is true",
+                "precision_warning": "few positive importance terms; bootstrap interval can understate tail uncertainty" if np.count_nonzero(terms) < 30 else None}
     log(f"{variant} evidence at eps=1: {evidence}")
     return names, particles, weights, history, dist, O, Z, evidence
 
@@ -154,7 +179,11 @@ def main():
     ap.add_argument("--procs", type=int, default=2)
     ap.add_argument("--mh-sweeps", type=int, default=3)
     ap.add_argument("--variants", nargs="*", default=list(VARIANTS))
+    ap.add_argument("--evidence-n", type=int, default=2000)
+    ap.add_argument("--max-proposals", type=int, default=1000000)
     a = ap.parse_args()
+    if min(a.particles, a.gens, a.procs, a.evidence_n, a.max_proposals) < 1:
+        ap.error('counts must be positive')
     a.out.mkdir(parents=True, exist_ok=True)
     logf = (a.out / "smc_log.txt").open("a")
 
@@ -164,7 +193,8 @@ def main():
     with Pool(a.procs) as pool:
         for j, variant in enumerate(a.variants):
             names, X, W, hist, D, O, Z, evidence = smc(variant, pool, a.particles, a.gens, a.seed + j, log,
-                                                       mh_sweeps=a.mh_sweeps)
+                                                       mh_sweeps=a.mh_sweeps, evidence_n=a.evidence_n,
+                                                       max_proposals=a.max_proposals)
             rows = []
             for x, d, o, z, w in zip(X, D, O, Z, W):
                 rows.append({"variant": variant, "weight": float(w), "worlds": CAL_WORLDS, "distance": float(d),

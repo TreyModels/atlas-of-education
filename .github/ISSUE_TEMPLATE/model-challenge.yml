@@ -1,0 +1,34 @@
+name: Model challenge or repair
+description: Report a counterexample, measurement mismatch, missing mechanism or repair.
+title: "[Model] "
+body:
+  - type: input
+    id: model
+    attributes:
+      label: Model, claim and source commit
+    validations:
+      required: true
+  - type: textarea
+    id: purpose
+    attributes:
+      label: What proposition or purpose are you testing?
+      description: State expected behavior and why the observed result bears on the claim.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Reproduction settings or run-plan link
+      description: Include parameters, seeds, versions, observed output and failures.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Literature, observations and proposed change
+      description: Link the source and relevant page, equation or table. Explain denominators and remaining assumptions.
+  - type: textarea
+    id: limits
+    attributes:
+      label: What remains unresolved?
+      description: Identify missing evidence and possible counterexamples to the proposed repair.

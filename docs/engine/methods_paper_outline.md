@@ -1,5 +1,8 @@
 # "Generative comparative education": methods paper outline
 
+> Historical draft, 6 November 2026. Numerical claims and some interpretations were superseded by subsequent model reviews. Use research/README.md and REVIEW_STATUS.md for the current experiment design and limitations. Recheck every number before reuse.
+
+
 Draft outline, 6 November 2026. Working title: **"Generative comparative education: building, docking and falsifying mechanism models of education systems"**. Target: a methods paper (TODO §14 P2), with the China forecast failure as the empirical spine. This is an outline for Trey to cut, not prose.
 
 **Central claim (one sentence):** Comparative education can be made cumulative if each explanation is built as an executable micro-mechanism inside exact accounting, docked to simpler rivals, confronted jointly with multiple patterns it was not tuned to, and scored under an information set fixed before the outcome is seen — and the value of that standard is shown not when a model succeeds but when it fails in public.
@@ -60,7 +63,7 @@ Content: the recurring "bar has moved" problem (credential expansion that does n
 
 **Central claim:** Boudon (1974) already asked the question this paper formalises — how do micro-level educational decisions and institutional rules generate a macro distribution of opportunity, and why can expansion leave inequality intact? The paper inherits the question and the insistence on mechanisms; it adds executability, exact accounting and data confrontation.
 
-Content: Boudon's *Education, Opportunity, and Social Inequality: Changing Prospects in Western Society* (New York: Wiley, 1974; ISBN 0471091057); his distinction between inequality of educational opportunity and inequality of social opportunity; the result usually called the Boudon effect (educational expansion need not equalise social opportunity because the value of a credential is positional); the generative structure of his argument (micro decisions → distribution). What Boudon did not have: a computer, a stock-flow ledger, and a held-out test. Be precise: we are not claiming Boudon built a model; we are claiming he specified a mechanism whose execution was analytically intractable. Contrast with the field's later turn to large-scale assessment and cross-national regression, which improved measurement while leaving mechanism underdetermined.
+Content: Boudon's *Education, Opportunity, and Social Inequality: Changing Prospects in Western Society* (New York: Wiley, 1974; ISBN 0471091057); his distinction between inequality of educational opportunity and inequality of social opportunity; the result usually called the Boudon effect (educational expansion need not equalise social opportunity because the value of a credential is positional); the generative structure of his argument (micro decisions → distribution). Boudon's book already presents a simulation model, as its author abstract states (https://eric.ed.gov/?id=ED091493). Review the original implementation before claiming a methodological extension. The Atlas is not a replication of Boudon. Position its contribution relative to computational sociology, existing ODD/TRACE practice, and purpose-specific evaluation, with the comparison supported by literature rather than a blanket claim about the discipline.
 
 ### 3. Ancestry II: Epstein's standard (~700–1,000 words)
 

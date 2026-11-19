@@ -18,7 +18,7 @@ const summaries = {"0.00": {"n": 2000, "declines": 0, "medianOnset": null, "core
  *   hydraulic upkeep per unit of network rises as channels silt (Groslier, Fletcher).
  * Population is a share of food-limited capacity (~590k people in the seasonal model). */
 'use strict';
-function makeClimateEngine(sensitivity, neutral) {
+function makeClimateEngine(sensitivity, neutral, response='linear', pdsiCap=null) {
   const FIRST = 802, LAST = 1450;
   const MECH = ['war', 'orgy', 'theravada', 'trade', 'drought', 'hydraulic'];
   const fixed = Object.freeze({droughts: [[1335, 1365], [1400, 1425]], attacks: [1353, 1370, 1431],
@@ -45,7 +45,10 @@ function makeClimateEngine(sensitivity, neutral) {
       // weather
       const dry = on.drought && fixed.droughts.some(([a, z]) => year >= a && year <= z);
       const originalWeather = Math.min(1.15, (dry ? p.droughtMean : 1) + p.noise * (wr() + wr() + wr() - 1.5));
-      const w = year >= 1250 ? Math.max(.4, Math.min(1.15, 1 + (neutral ? 0 : pdsi[year]) * sensitivity)) : originalWeather;
+      let z=neutral?0:pdsi[year];
+      if(pdsiCap!==null)z=Math.max(-pdsiCap,Math.min(pdsiCap,z));
+      const translated=response==='exponential'?Math.exp(z*sensitivity):1+z*sensitivity;
+      const w = year >= 1250 ? Math.max(.4, Math.min(1.15, translated)) : originalWeather;
       const buffered = w < 1 ? w + C * p.buffer * (1 - w) : w;
       const capacity = buffered * (1 + p.channelGain * C) / (1 + p.channelGain);
       const P0 = N + B;
@@ -140,14 +143,21 @@ function makeClimateEngine(sensitivity, neutral) {
   const defaults = Object.freeze({sensitivity:.07,draw:42});
   function run(options={}) {
     const controls={...defaults,...options};
+    const response=controls.response??'linear',pdsiCap=controls.pdsiCap??null;
+    if(!['linear','exponential'].includes(response)||!Number.isFinite(controls.sensitivity)||controls.sensitivity<0||
+      (pdsiCap!==null&&(!Number.isFinite(pdsiCap)||pdsiCap<=0)))throw new RangeError('Invalid climate translation');
     const index=Math.max(0,Math.min(1999,Math.floor(controls.draw)-1));
     const parameters={...priors[index]};
-    const model=makeClimateEngine(controls.sensitivity,false);
-    const neutral=makeClimateEngine(controls.sensitivity,true);
+    if(controls.seed!==undefined)parameters.seed=controls.seed;
+    const model=makeClimateEngine(controls.sensitivity,false,response,pdsiCap);
+    const neutral=makeClimateEngine(controls.sensitivity,true,response,pdsiCap);
     const current=model.run(parameters,{}), reference=neutral.run(parameters,{});
-    const summary=summaries[Number(controls.sensitivity).toFixed(2)];
+    // Stored summaries apply only to the original response and original seed.
+    const summaryKey=Number(controls.sensitivity).toFixed(2);
+    const summary=response==='linear'&&pdsiCap===null&&controls.seed===undefined&&
+      Math.abs(Number(summaryKey)-controls.sensitivity)<1e-12?(summaries[summaryKey]??null):null;
     return {controls,parameters,source:'NOAA Bidoup Nui Ba 2010 PDSI, 1250–1450',
-      translation:{coefficient:controls.sensitivity,minimum:.4,maximum:1.15},
+      translation:{coefficient:controls.sensitivity,minimum:.4,maximum:1.15,response,pdsiCap,status:'assumed sensitivity; not an estimated crop response'},
       before1250:'Original synthetic initialization weather',
       current:current.filter(r=>r.year>=1250), reference:reference.filter(r=>r.year>=1250),
       summary, score:model.score(current), climate:Object.entries(pdsi).map(([year,value])=>({year:+year,pdsi:value}))};

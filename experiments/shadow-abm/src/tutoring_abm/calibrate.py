@@ -19,11 +19,11 @@ TARGETS = {
     "participation_g9":    (0.747, 0.04),
     "participation_g12":   (0.898, 0.04),
     "urban_rural_gap":     (0.026, 0.04),   # 83.5% urban vs 80.9% semi-urban and rural
-    "own_purchase_share":  (0.577, 0.07),   # tutored pupils naming their own teacher (three schools)
-    "other_purchase_share": (0.409, 0.07),  # another teacher in their school; the two sum to 98.6%
+    "source_own_provider_share":  (0.577, 0.07),   # pupils, not pupil-subject purchases
+    "source_other_provider_share": (0.409, 0.07),  # source: three non-urban schools; identities unknown
     "teacher_tutor_share": (0.54, 0.20),    # 13 of 24 interviewed teachers offered tutoring
 }
-COM_MAX = 0.05                              # remaining 1.4% of answers; commercial provision "still small"
+COM_MAX = 0.05   # loose illustrative bound; source reports 1.2% external teachers + .6% self-employed, not an exclusive remainder
 
 # Calibration worlds: fixed seeds shared by all parameter sets (common random numbers).
 # Fresh-world checks use other seed ranges (see fresh_check.py).
@@ -35,7 +35,10 @@ FIT_RANK = 6                                # 0-based index of the 7th smallest 
 def distances(o):
     o = dict(o, urban_rural_gap=o["participation_urban"] - o["participation_rural"])
     z = {k: abs(o[k] - v) / tol for k, (v, tol) in TARGETS.items()}
-    z["com_purchase_share"] = max(0.0, o["com_purchase_share"] - COM_MAX) / 0.05
+    z["source_external_provider_share"] = max(0.0, o["source_external_provider_share"] - COM_MAX) / 0.05
+    # An unfinished best-response sequence is not an equilibrium fit.
+    if not o['converged']:
+        z['solver_nonconvergence'] = float('inf')
     return z
 
 
