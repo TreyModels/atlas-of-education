@@ -1,0 +1,105 @@
+{
+  "produced by a simulation": {
+    "fr": "produit par une simulation"
+  },
+  "tested and rejected": {
+    "fr": "testé et rejeté"
+  },
+  "still unsettled": {
+    "fr": "encore en suspens"
+  },
+  "a computational tool": {
+    "fr": "un outil de calcul"
+  },
+  "data": {
+    "fr": "données"
+  },
+  "sim": {
+    "fr": "sim"
+  },
+  "ruled out": {
+    "fr": "écarté"
+  },
+  "open": {
+    "fr": "ouvert"
+  },
+  "method": {
+    "fr": "méthode"
+  },
+  "Browse all {n} models": {
+    "fr": "Parcourir les {n} modèles"
+  },
+  "{n} models & worlds · 3 languages": {
+    "fr": "{n} modèles et mondes · 3 langues"
+  },
+  "{n} collections. Nothing hidden in an archive.": {
+    "fr": "{n} collections. Rien de caché dans une archive."
+  },
+  "of {n}": {
+    "fr": "sur {n}"
+  },
+  "{n} models and worlds for education, demography, planning and historical systems. Choose a question, inspect the assumptions, run the model and follow the evidence.": {
+    "fr": "{n} modèles et mondes pour l’éducation, la démographie, la planification et les systèmes historiques. Choisissez une question, examinez les hypothèses, exécutez le modèle et suivez les preuves."
+  },
+  "Alternative interfaces and methods studios. These complement the {n} catalogue entries rather than inflating the count.": {
+    "fr": "Interfaces alternatives et ateliers de méthodes. Ils complètent les {n} entrées du catalogue plutôt que de gonfler le décompte."
+  },
+  "Research bundle · code, data & findings": {
+    "fr": "Dossier de recherche · code, données et résultats"
+  },
+  "Class {i} of {n}": {
+    "fr": "Classe {i} sur {n}"
+  },
+  "Why fertility fell, and what can still move it": {
+    "fr": "Pourquoi la fécondité a baissé, et ce qui peut encore la faire évoluer",
+    "vi": "Vì sao mức sinh giảm, và điều gì vẫn có thể làm thay đổi nó"
+  },
+  "The full story the fertility models support, each part labelled by the kind of evidence behind it.": {
+    "fr": "L’histoire complète que soutiennent les modèles de fécondité, chaque partie étiquetée selon le type de preuve qui la sous-tend.",
+    "vi": "Toàn bộ câu chuyện mà các mô hình sinh sản ủng hộ, mỗi phần được ghi nhãn theo loại bằng chứng đứng sau nó."
+  },
+  "Survival sets the floor": {
+    "fr": "La survie fixe le plancher",
+    "vi": "Sự sống còn đặt ra mức sàn"
+  },
+  "When children survive and people live long lives, large families stop being necessary. Life expectancy alone predicts each country’s decline down to about 1.3–1.5 children per woman.": {
+    "fr": "Lorsque les enfants survivent et que les gens vivent longtemps, les grandes familles cessent d’être nécessaires. L’espérance de vie à elle seule prédit la baisse de chaque pays jusqu’à environ 1,3–1,5 enfant par femme.",
+    "vi": "Khi trẻ em sống sót và con người sống thọ, gia đình đông con không còn cần thiết. Chỉ riêng tuổi thọ đã dự báo mức giảm của mỗi quốc gia xuống còn khoảng 1,3–1,5 con mỗi phụ nữ."
+  },
+  "Income is the wrong yardstick. Our six places reached replacement at incomes 16 times apart ($990 to $16,000), but all at life expectancies of 67–75 years. The fertility-to-income curve shifted over time; the fertility-to-survival curve held steady.": {
+    "fr": "Le revenu n’est pas le bon étalon. Nos six lieux ont atteint le seuil de remplacement à des revenus séparés par un facteur 16 (de 990 $ à 16 000 $), mais tous à des espérances de vie de 67–75 ans. La courbe fécondité-revenu s’est déplacée au fil du temps ; la courbe fécondité-survie est restée stable.",
+    "vi": "Thu nhập không phải là thước đo đúng. Sáu địa điểm của chúng tôi đạt mức thay thế với thu nhập chênh lệch 16 lần (990 $ đến 16 000 $), nhưng tất cả đều ở tuổi thọ 67–75 năm. Đường cong sinh sản-thu nhập đã dịch chuyển theo thời gian; đường cong sinh sản-sống còn giữ nguyên."
+  },
+  "Education turns children and marriage into credential contests": {
+    "fr": "L’éducation transforme les enfants et le mariage en concours de diplômes",
+    "vi": "Giáo dục biến con cái và hôn nhân thành những cuộc thi bằng cấp"
+  },
+  "Children cost more. Each child needs heavy investment to compete, lowering births everywhere by roughly 0.4 children, mostly second births.": {
+    "fr": "Les enfants coûtent plus cher. Chaque enfant exige un investissement lourd pour être compétitif, ce qui réduit les naissances partout d’environ 0,4 enfant, surtout les deuxièmes naissances.",
+    "vi": "Con cái tốn kém hơn. Mỗi đứa trẻ cần đầu tư lớn để cạnh tranh, làm giảm số sinh ở mọi nơi khoảng 0,4 con, chủ yếu là con thứ hai."
+  },
+  "The marriage market jams. In Korea, the “credential floor plus women marrying up” combination was the only one that reproduced all five Korean facts — unmarried educated women alongside unmarried less-educated men.": {
+    "fr": "Le marché du mariage s’enraye. En Corée, la combinaison « plancher de diplôme plus mariage des femmes vers le haut » était la seule à reproduire les cinq faits coréens — des femmes instruites non mariées aux côtés d’hommes moins instruits non mariés.",
+    "vi": "Thị trường hôn nhân bị tắc nghẽn. Ở Hàn Quốc, sự kết hợp “ngưỡng bằng cấp cộng với phụ nữ kết hôn với người có địa vị cao hơn” là cách duy nhất tái hiện cả năm sự thật của Hàn Quốc — phụ nữ có học vấn không kết hôn bên cạnh đàn ông ít học vấn không kết hôn."
+  },
+  "Marriage gets later. Years establishing a career, housing costs and slower job prospects for men together reproduce China’s 4.7-year rise in women’s marriage age.": {
+    "fr": "Le mariage survient plus tard. Les années consacrées à établir une carrière, les coûts du logement et les perspectives d’emploi plus lentes pour les hommes reproduisent ensemble la hausse de 4,7 ans de l’âge au mariage des femmes en Chine.",
+    "vi": "Hôn nhân diễn ra muộn hơn. Những năm xây dựng sự nghiệp, chi phí nhà ở và triển vọng việc làm chậm hơn cho nam giới cùng nhau tái hiện mức tăng 4,7 năm tuổi kết hôn của phụ nữ ở Trung Quốc."
+  },
+  "The jam matters only where births need marriage. It is large in East Asia and shrinks by about 70% where births outside marriage are common, as in the Philippines.": {
+    "fr": "L’enrayement ne compte que là où les naissances exigent le mariage. Il est important en Asie de l’Est et diminue d’environ 70 % là où les naissances hors mariage sont courantes, comme aux Philippines.",
+    "vi": "Sự tắc nghẽn chỉ quan trọng ở nơi sinh con cần hôn nhân. Nó lớn ở Đông Á và giảm khoảng 70% ở nơi sinh con ngoài hôn nhân phổ biến, như ở Philippines."
+  },
+  "Late marriage meets the biological clock": {
+    "fr": "Le mariage tardif rencontre l’horloge biologique",
+    "vi": "Hôn nhân muộn gặp đồng hồ sinh học"
+  },
+  "Every year of delay costs more than the last, and the cost gets steep after 33–35. The curve is calibrated to medical fecundity data.": {
+    "fr": "Chaque année de retard coûte plus que la précédente, et le coût devient abrupt après 33–35 ans. La courbe est calibrée sur des données médicales de fécondité.",
+    "vi": "Mỗi năm trì hoãn tốn kém hơn năm trước, và chi phí trở nên dốc sau 33–35 tuổi. Đường cong được hiệu chỉnh theo dữ liệu khả năng sinh sản y khoa."
+  },
+  "Share of the fertility fall explained by late marriage": {
+    "fr": "Part de la baisse de la fécondité expliquée par le mariage tardif",
+    "vi": "Phần mức giảm sinh sản được giải thích bởi hôn nhân muộn"
+  }
+}

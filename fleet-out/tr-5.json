@@ -1,0 +1,87 @@
+{
+  "Monte Carlo": {
+    "fr": "Monte-Carlo"
+  },
+  "When we do not know an input, say how fast people walked, we draw it at random from a plausible range and run the model again. Hundreds of runs show which conclusions survive our ignorance and which depend on one guess.": {
+    "fr": "Lorsqu'une donnée d'entrée nous est inconnue — par exemple la vitesse de marche des populations —, nous la tirons au hasard dans une plage plausible et relançons le modèle. Des centaines de simulations révèlent quelles conclusions résistent à notre ignorance et lesquelles reposent sur une seule hypothèse."
+  },
+  "Fitting to evidence": {
+    "fr": "Ajustement aux données"
+  },
+  "Keep only the simulated worlds that reproduce what we actually observe, then ask what those surviving worlds have in common.": {
+    "fr": "Ne conserver que les mondes simulés qui reproduisent ce que nous observons réellement, puis se demander ce que ces mondes survivants ont en commun."
+  },
+  "THE FULL LIBRARY": {
+    "fr": "LA BIBLIOTHÈQUE COMPLÈTE"
+  },
+  "Every model, searchable.": {
+    "fr": "Tous les modèles, consultables par recherche."
+  },
+  "Interactive models open here. Entries marked with ↗ open a standalone lab, a full write-up or a code-and-data download.": {
+    "fr": "Les modèles interactifs s'ouvrent ici. Les entrées marquées d'un ↗ ouvrent un laboratoire autonome, une étude complète ou un téléchargement du code et des données."
+  },
+  "Deep history · Human dispersal": {
+    "fr": "Histoire profonde · Dispersion humaine"
+  },
+  "Deep history": {
+    "fr": "Histoire profonde"
+  },
+  "How did people get from Africa to Australia?": {
+    "fr": "Comment les populations sont-elles passées de l'Afrique à l'Australie ?"
+  },
+  "Coast or herds? The route out of Africa": {
+    "fr": "Le littoral ou les troupeaux ? La route hors d'Afrique"
+  },
+  "Out of Africa model bundle": {
+    "fr": "Ensemble de modèles « Out of Africa »"
+  },
+  "Coast or herds? Out of Africa": {
+    "fr": "Le littoral ou les troupeaux ? Hors d'Afrique"
+  },
+  "Coast or herds? How people got from Africa to Australia": {
+    "fr": "Le littoral ou les troupeaux ? Comment les populations sont passées de l'Afrique à l'Australie"
+  },
+  "Open the full write-up": {
+    "fr": "Ouvrir l'étude complète"
+  },
+  "Monte Carlo · least-cost dispersal": {
+    "fr": "Monte-Carlo · dispersion à moindre coût"
+  },
+  "Did the first people to reach Australia follow the shoreline or the big game? 800 simulated dispersals across a drowned Ice Age landscape.": {
+    "fr": "Les premiers arrivants en Australie ont-ils suivi le littoral ou le gros gibier ? 800 dispersions simulées à travers un paysage englouti de l'ère glaciaire."
+  },
+  "The Python model, the 800-run Monte Carlo results, the landscape grid and the static maps.": {
+    "fr": "Le modèle Python, les résultats Monte-Carlo sur 800 simulations, la grille paysagère et les cartes statiques."
+  },
+  "A paleo-landscape model of the exit from Africa 85,000–65,000 years ago: coast-huggers, big-game hunters and mixed foragers raced across shifting sea levels and Green Arabia.": {
+    "fr": "Un modèle de paléopaysage de la sortie d'Afrique il y a 85 000 à 65 000 ans : populations côtières, chasseurs de gros gibier et fourrageurs mixtes se sont déplacés au gré des variations du niveau marin et de l'Arabie verte."
+  },
+  "With a hard liquidity threshold the model fits no country's wealth profile. With a graded one it fits Cambodia and Vietnam, and then the data cannot tell the three explanations apart.": {
+    "fr": "Avec un seuil de liquidité strict, le modèle ne reproduit le profil de richesse d'aucun pays. Avec un seuil gradué, il reproduit ceux du Cambodge et du Vietnam, et les données ne permettent alors plus de distinguer les trois explications."
+  },
+  "Human-capital, positional and relational bundles were each drawn 24,000 times against country targets. With a hard liquidity threshold the model fits no country's wealth profile. With a graded one it fits Cambodia and Vietnam, and then the data cannot tell the three explanations apart.": {
+    "fr": "Les ensembles capital humain, positionnel et relationnel ont chacun été tirés 24 000 fois face aux cibles nationales. Avec un seuil de liquidité strict, le modèle ne reproduit le profil de richesse d'aucun pays. Avec un seuil gradué, il reproduit ceux du Cambodge et du Vietnam, et les données ne permettent alors plus de distinguer les trois explications."
+  },
+  "Once the model fits the wealth profile, the relational-weight posterior equals its prior in every country tested. China's 2024–26 fall in gaokao registrants per birth (−5.3%) is outside every structure's prediction.": {
+    "fr": "Une fois le modèle ajusté au profil de richesse, la distribution a posteriori du poids relationnel est égale à sa distribution a priori dans chaque pays testé. La baisse de 2024–26 en Chine du nombre d'inscrits au gaokao par naissance (−5,3 %) sort de la prédiction de toutes les structures."
+  },
+  "A separate model offers three explanations for who leaves school, each predicting a share of lower-secondary non-completers from the poorest 40% of households. UIS completion rates by wealth quintile (from the Cambodia DHS 2021–22) put that share at 55–64%. With a hard liquidity threshold the relational floor predicts 85% and fails. With a graded threshold, which also fits the full quintile profile, all three predict 57–58% and fit.": {
+    "fr": "Un modèle distinct propose trois explications de l'abandon scolaire, chacune prédisant la part des non-diplômés du premier cycle du secondaire issus des 40 % de ménages les plus pauvres. Les taux d'achèvement de l'ISU par quintile de richesse (d'après l'EDS du Cambodge 2021–22) situent cette part entre 55 et 64 %. Avec un seuil de liquidité strict, le plancher relationnel prédit 85 % et échoue. Avec un seuil gradué, qui reproduit aussi le profil complet par quintile, les trois prédisent 57–58 % et s'ajustent."
+  },
+  "The verdict depends on how the liquidity constraint is modelled. The hard version misses the shape of the wealth gradient. The graded version fits it and cannot rank the explanations. These data do not discriminate the relational floor.": {
+    "fr": "Le verdict dépend de la modélisation de la contrainte de liquidité. La version stricte manque la forme du gradient de richesse. La version graduée la reproduit mais ne permet pas de classer les explications. Ces données ne permettent pas de discriminer le plancher relationnel."
+  },
+  "Recalibrated across 10 school systems, settings fit 37–44% of fresh random systems (up from 17–19%), but only 1–7% fit in most of them. The explanations agree on policy because the effect comes from code they share: removing the shared thin-market or alternative-provider channel moves all of them together, while the diversion mechanism changes nothing. Treat the policy effects as model-conditional.": {
+    "fr": "Recalibrés sur 10 systèmes scolaires, les paramètres reproduisent 37 à 44 % de nouveaux systèmes aléatoires (contre 17 à 19 % auparavant), mais seulement 1 à 7 % dans la plupart d'entre eux. Les explications s'accordent sur les politiques parce que l'effet provient d'un code qu'elles partagent : retirer le canal commun du marché restreint ou du prestataire alternatif les déplace toutes ensemble, tandis que le mécanisme de diversion ne change rien. Traiter les effets de politique comme conditionnels au modèle."
+  },
+  "Even under the diversion explanation, calibrated teachers withhold almost nothing — median 0% of content held back. In about a fifth of fresh school systems, diversion settings withhold more than 1% (95th percentile 9%).": {
+    "fr": "Même sous l'explication par la diversion, les enseignants calibrés ne retiennent presque rien — médiane de 0 % du contenu non transmis. Dans environ un cinquième des nouveaux systèmes scolaires, les paramètres de diversion retiennent plus de 1 % (95e centile : 9 %)."
+  },
+  "Shadow education is not one disease with one cause. The model cannot crown a single explanation. Its explanations agree on policy only because they share most of their code, so the agreement is not independent evidence. Keep measuring to break the tie.": {
+    "fr": "L'éducation de l'ombre n'est pas une maladie unique à cause unique. Le modèle ne peut couronner une seule explication. Ses explications s'accordent sur les politiques uniquement parce qu'elles partagent l'essentiel de leur code ; cet accord ne constitue donc pas une preuve indépendante. Continuer à mesurer pour départager."
+  },
+  "Favour is not even a separate model. A favour for buying from your own teacher is the same as raising everyone’s demand and both outside costs by the same amount. Rewritten that way, all 116 fitted favour settings give exactly the same results as thin settings.": {
+    "fr": "La faveur ne constitue même pas un modèle distinct. Une faveur pour l'achat auprès de son propre enseignant équivaut à augmenter la demande de tous et les deux coûts externes du même montant. Réécrits ainsi, les 116 paramètres de faveur ajustés donnent exactement les mêmes résultats que les paramètres de marché restreint.",
+    "vi": "Ưu ái thậm chí không phải là một mô hình riêng. Việc ưu tiên mua từ chính giáo viên của mình tương đương với việc tăng nhu cầu của mọi người và cả hai chi phí bên ngoài lên cùng một lượng. Viết lại theo cách đó, cả 116 thiết lập ưu ái đã khớp đều cho kết quả hoàn toàn giống với các thiết lập thị trường mỏng."
+  }
+}
