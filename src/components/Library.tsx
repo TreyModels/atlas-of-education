@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import { ArrowRight, ArrowUpRight, BookOpen, Search, X } from 'lucide-react'
 import type { Translate } from '../types'
-import { catalogue, classicLabs, familyCounts, familyInfo, familyItems, totalModels, type CatalogueItem, type ModelFamily } from '../data/model-catalogue'
+import { catalogue, classicLabs, familyCounts, familyGroups, familyInfo, familyItems, totalModels, type CatalogueItem, type ModelFamily } from '../data/model-catalogue'
 import { statusIntro, familyStatus, callToAction } from '../data/site-status'
 import { purposeLabel, stateLabel } from '../data/angkor-journey'
 import { homeExplainer } from '../data/home-explainer'
@@ -11,6 +11,7 @@ const families = modelFamilies
 const sectionIds: Record<ModelFamily, string> = {
   education: 'education-models', systems: 'school-systems', planning: 'planning-lab', angkor: 'angkor-case', fertility: 'fertility-models', shadow: 'shadow-models', deephistory: 'deep-history', politics: 'political-economy', extension: 'extension-field-schools',
 }
+const isDownloadItem = (item: CatalogueItem) => item.method.toLowerCase().includes('download')
 
 export function ModelLink({ item, t, navigate }: { item: CatalogueItem; t: Translate; navigate: (id: string) => void }) {
   const content = <>
@@ -22,7 +23,7 @@ export function ModelLink({ item, t, navigate }: { item: CatalogueItem; t: Trans
     <span className="catalogue-item-action">{t('Open entry')}{item.href ? <ArrowUpRight size={18} /> : <ArrowRight size={18} />}</span>
   </>
   const external = item.href?.startsWith('http')
-  return <li className="catalogue-item">
+  return <li className={`catalogue-item${isDownloadItem(item) ? ' catalogue-item-download' : ''}`}>
     {item.href
       ? <a href={item.href} {...(external ? { target: '_blank', rel: 'noreferrer' } : {})}>{content}</a>
       : <button onClick={() => navigate(item.route!)}>{content}</button>}
@@ -63,6 +64,7 @@ export function Library({ t, navigate }: { t: Translate; navigate: (id: string) 
   const featured = familyStatus[0]
   const featuredInfo = familyInfo[featured.family as ModelFamily]
   const featuredItems = familyItems(featured.family as ModelFamily)
+  const downloadsLabel = t('Downloads') === 'Downloads' && t('Home') === '首页' ? '下载' : t('Downloads')
 
   return <main id="main-content">
     <section className="landing-hero shell">
@@ -164,27 +166,32 @@ export function Library({ t, navigate }: { t: Translate; navigate: (id: string) 
         <p className="eyebrow">{t('START WITH A QUESTION')}</p>
         <h2 id="home-stories-title">{t('{n} collections, {m} catalogue entries.').replace('{n}', String(families.length)).replace('{m}', String(totalModels))}</h2>
       </div>
-      <ul className="home-story-grid">
-        {familyStatus.map((status, index) => {
-          const family = status.family as ModelFamily
-          const info = familyInfo[family]
-          const items = familyItems(family)
-          return <li key={family} className={`home-story-card${index === 0 ? ' home-story-card-featured' : ''}`}>
-            <span className="home-story-count">{familyCounts[family]}</span>
-            <h3>{t(info.title)}</h3>
-            <p className="home-story-question">{t(info.question)}</p>
-            <p className="home-story-status">{t(status.line)}</p>
-            <ul className="home-status-badges">
-              {status.purposes.map(purpose => <li key={purpose}><span className={`badge purpose-${purpose}`}>{t(purposeLabel[purpose].label)}</span></li>)}
-              {status.states.map(state => <li key={state}><span className={`badge state-${state}`}>{t(stateLabel[state].label)}</span></li>)}
-            </ul>
-            <ol className="home-chapter-path">
-              {items.slice(0, 3).map(item => <li key={item.id}>{t(item.title)}</li>)}
-            </ol>
-            <button className="button button-secondary" onClick={() => navigate(status.route)}>{t('Read what the models found')}<ArrowRight size={16} /></button>
-          </li>
-        })}
-      </ul>
+      <div className="home-story-groups">
+        {familyGroups.map(group => <section className="home-story-group" key={group.id} aria-labelledby={`home-story-group-${group.id}`}>
+          <h3 id={`home-story-group-${group.id}`} className="home-story-group-title">{t(group.title)}</h3>
+          <ul className="home-story-grid home-story-group-grid">
+            {familyStatus.filter(status => group.families.includes(status.family as ModelFamily)).map(status => {
+              const family = status.family as ModelFamily
+              const info = familyInfo[family]
+              const items = familyItems(family)
+              return <li key={family} className={`home-story-card${family === familyStatus[0].family ? ' home-story-card-featured' : ''}`}>
+                <span className="home-story-count">{familyCounts[family]}</span>
+                <h3>{t(info.title)}</h3>
+                <p className="home-story-question">{t(info.question)}</p>
+                <p className="home-story-status">{t(status.line)}</p>
+                <ul className="home-status-badges">
+                  {status.purposes.map(purpose => <li key={purpose}><span className={`badge purpose-${purpose}`}>{t(purposeLabel[purpose].label)}</span></li>)}
+                  {status.states.map(state => <li key={state}><span className={`badge state-${state}`}>{t(stateLabel[state].label)}</span></li>)}
+                </ul>
+                <ol className="home-chapter-path">
+                  {items.slice(0, 3).map(item => <li key={item.id}>{t(item.title)}</li>)}
+                </ol>
+                <button className="button button-secondary" onClick={() => navigate(status.route)}>{t('Read what the models found')}<ArrowRight size={16} /></button>
+              </li>
+            })}
+          </ul>
+        </section>)}
+      </div>
       <p className="home-stories-more"><a className="text-link" href="#catalogue">{t('Every model, searchable.')}<ArrowRight size={15} /></a></p>
     </section>
 
@@ -228,12 +235,18 @@ export function Library({ t, navigate }: { t: Translate; navigate: (id: string) 
         const items = familyItems(family).filter(item => visible.includes(item))
         if (!items.length) return null
         const info = familyInfo[family]
+        const modelItems = items.filter(item => !isDownloadItem(item))
+        const downloadItems = items.filter(item => isDownloadItem(item))
         return <section className={`catalogue-family catalogue-family-${family}`} id={sectionIds[family]} key={family}>
           <header className="catalogue-family-heading">
             <div className="family-title"><span>{String(families.indexOf(family) + 1).padStart(2, '0')} / {items.length}</span><h2>{t(info.title)}</h2></div>
             <div><h3>{t(info.question)}</h3><p>{t(info.description)}</p><button className="text-link" onClick={() => navigate(`story-${family}`)}>{t('Read the class story')}<ArrowRight size={15} /></button>{family === 'angkor' && <button className="text-link" onClick={() => navigate('angkor-guide')}>{t('Start with the guided sequence')}<ArrowRight size={15} /></button>}</div>
           </header>
-          <ul className="catalogue-items">{items.map(item => <ModelLink key={item.id} item={item} t={t} navigate={navigate} />)}</ul>
+          {modelItems.length > 0 && <ul className="catalogue-items">{modelItems.map(item => <ModelLink key={item.id} item={item} t={t} navigate={navigate} />)}</ul>}
+          {downloadItems.length > 0 && <div className="catalogue-downloads">
+            <h3 className="catalogue-downloads-title">{downloadsLabel}</h3>
+            <ul className="catalogue-items">{downloadItems.map(item => <ModelLink key={item.id} item={item} t={t} navigate={navigate} />)}</ul>
+          </div>}
         </section>
       })}
     </section>
