@@ -3780,5 +3780,38 @@
  },
  "Downloads": {
   "zh-Hans": "下载"
+ },
+ "Scenario Theatre": {
+  "zh-Hans": "情景剧场"
+ },
+ "Change": {
+  "zh-Hans": "变化"
+ },
+ "This compares model runs, not empirical validation.": {
+  "zh-Hans": "这里比较的是模型运行结果，而非实证验证。"
+ },
+ "Experimental": {
+  "zh-Hans": "实验性"
+ },
+ "Try the Scenario Theatre": {
+  "zh-Hans": "试用情景剧场"
+ },
+ "Experiments": {
+  "zh-Hans": "实验"
+ },
+ "EXPERIMENTAL INTERFACES": {
+  "zh-Hans": "实验性界面"
+ },
+ "Experimental interface": {
+  "zh-Hans": "实验性界面"
+ },
+ "Prototypes for comparing model runs. These are experimental interfaces, not additional models, and are not counted in the catalogue above.": {
+  "zh-Hans": "用于比较模型运行的原型。这些是实验性界面，并非新增模型，也不计入上方目录的数量。"
+ },
+ "Prototype · pinned-versus-current model runs": {
+  "zh-Hans": "原型 · 已固定与当前模型运行的对比"
+ },
+ "How does the current plan compare with a pinned run on cost, the unfunded share and completion?": {
+  "zh-Hans": "当前方案与已固定的运行在成本、未获资助比例和完成率上有何差异？"
  }
 }

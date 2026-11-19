@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
-import { ArrowRight, ArrowUpRight, Baby, BookOpen, Building2, Footprints, ChevronDown, FlaskConical, Globe2, GraduationCap, Home, Landmark, Menu, Network, School, Search, X } from 'lucide-react'
+import { ArrowRight, ArrowUpRight, Baby, BookOpen, Building2, Columns2, Footprints, ChevronDown, FlaskConical, Globe2, GraduationCap, Home, Landmark, Menu, Network, School, Search, X } from 'lucide-react'
 import { worlds } from '../models'
 import type { Language, Translate } from '../types'
 import { catalogue, familyGroups, familyInfo } from '../data/model-catalogue'
@@ -116,6 +116,7 @@ export function Navigation({ route, navigate, t, language, setLanguage }: Naviga
     <button className="all-models-link" onClick={() => { setDrawerOpen(false); setSearchOpen(true) }}><Search size={17} /><span>{t('Find a model')}</span><span className="model-total">{catalogue.length}</span></button>
     <div className="nav-resources">
       <p className="nav-label">{t('Resources')}</p>
+      <button className={route === 'sector' ? 'active' : ''} aria-current={route === 'sector' ? 'page' : undefined} onClick={() => go('sector')}><Columns2 size={17} /><span>{t('Scenario Theatre')} · {t('Experimental')}</span></button>
       <button className={route === 'about' ? 'active' : ''} aria-current={route === 'about' ? 'page' : undefined} onClick={() => go('about')}><Landmark size={17} /><span>{t('About')}</span></button>
       <button className={route === 'how-models-work' ? 'active' : ''} aria-current={route === 'how-models-work' ? 'page' : undefined} onClick={() => go('how-models-work')}><FlaskConical size={17} /><span>{t('How models work')}</span></button>
       <button className={route === 'catalogue' ? 'active' : ''} onClick={() => go('catalogue')}><BookOpen size={17} /><span>{t('Research catalogue')}</span></button>
