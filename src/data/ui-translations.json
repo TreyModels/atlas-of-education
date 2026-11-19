@@ -4095,5 +4095,11 @@
  },
  "Model type & status": {
   "zh-Hans": "模型类型与状态"
+ },
+ "Download code & data": {
+  "zh-Hans": "下载代码与数据"
+ },
+ "Download code": {
+  "zh-Hans": "下载代码"
  }
 }

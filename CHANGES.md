@@ -31,8 +31,15 @@
 - A grouped tag browser shows Broad topics first with counts, then specific and type/status tags; suggested tags appear in the search modal, and chips on catalogue cards and in the workbench header open a pre-filled search.
 - Tags are filters over the existing 65 entries, not new models; totals are unchanged.
 
+## Link destinations: pages first, downloads explicit
+- Fixed a click-path bug reported from the live site: 19 catalogue entries (the 9 fertility model variants, the fertility research bundle, both Shadow education bundles, the Out of Africa bundle, the four Political economy/CCP bundles and the two Farmer field schools bundles) pointed their primary link straight at a ZIP, so clicking a model started a download.
+- Catalogue entries now open a page (the model's journey or research page) as their primary action; the file moved to an optional `downloadHref` rendered as a separate, explicitly labelled "Download code & data" control. Search results and hashtag-filtered results follow the same rule, so a tag → result → model click always lands on a page.
+- Journey model cards label their code link "Download code" and carry the `download` attribute.
+- New guard `scripts/check-link-destinations.cjs` (wired into `scripts/check-all.sh` and `npm test`) fails if any catalogue entry's primary link is a file, if a download lacks a page target, or if a download page/file is missing.
+- Browser click audit: 66/66 catalogue entries open pages, 19/19 secondary downloads fire only from the labelled control, and `#fertility` search results open `#story-fertility` instead of downloading.
+
 ## Validation
-Validation: all nine journey/link checks, React/translation checks, 52 model tests, production build and 22-model worker parity. Desktop/mobile browser checks completed. These checks establish implementation behavior, not empirical validity of every model.
+Validation: all nine journey/link checks, link-destination checks, React/translation checks, 52 model tests, production build and 22-model worker parity. Desktop/mobile browser checks completed. These checks establish implementation behavior, not empirical validity of every model.
 
 # Changes · 8 November 2026 · Education-first restructure
 

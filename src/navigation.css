@@ -2139,3 +2139,35 @@ p.story-block { margin-bottom: 14px; }
   outline-offset: 3px;
   border-radius: 2px;
 }
+
+/* Secondary file download on catalogue cards. Opening the card always goes to
+   the model page; only this explicitly labelled control starts a download. */
+.catalogue-item > .catalogue-file-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  width: fit-content;
+  margin: 2px 0 10px;
+  padding: 6px 11px;
+  border: 1px solid color-mix(in oklab, var(--line) 85%, transparent);
+  border-radius: 999px;
+  color: var(--green-dark);
+  font-family: var(--sans);
+  font-size: .74rem;
+  font-weight: 600;
+  line-height: 1.2;
+  text-decoration: none;
+  transition: color .16s ease, border-color .16s ease, background-color .16s ease;
+}
+
+.catalogue-item > .catalogue-file-link:hover {
+  border-color: var(--green);
+  background: color-mix(in oklab, var(--surface-soft) 70%, transparent);
+}
+
+.catalogue-item > .catalogue-file-link:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 3px;
+}
+
+.catalogue-item > .catalogue-file-link svg { flex: 0 0 auto; color: currentColor; }

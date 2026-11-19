@@ -27,7 +27,7 @@ function ModelCardView({ m, t, navigate, journey }: { m: ModelCard; t: Translate
     <p className="journey-card-note">{t(m.note)}</p>
     <p className="journey-card-actions">
       {m.route && <button className="button" onClick={() => navigate(m.route!)}>{t('Open workbench')}</button>}
-      {m.engine && <a href={m.engine}>{t('Code')}</a>}
+      {m.engine && <a href={m.engine} download>{t('Download code')}</a>}
       {m.research && <a href={m.research}>{t('Notes')}</a>}
       <a target="_blank" rel="noopener" href={`${journey.repo}/issues/new?template=propose-a-version.yml&title=${encodeURIComponent(`Version: ${journey.family}/` + m.id)}`}>{t('Propose a version')}</a>
     </p>
