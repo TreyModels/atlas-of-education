@@ -266,3 +266,30 @@ Candidate dead keys: **254** of 1,774 entries (key is neither an exact rendered 
 - `fr`/`vi` completeness: 71 entries are zh-only (no fr/vi) — noted only; shipping pair is en + zh-Hans (`supportedLanguages`, `i18n.ts:23`), and the language selector exposes only those two (`Navigation.tsx:38`).
 - Legacy `public/reference/*` and `public/research/*` pages use their own `public/languages.js` dictionary and were out of scope; they plausibly contain further English-only content and old brand strings (`ATLAS OF EDUCATION`).
 - `src/components/ui/*` is unused by shipped components; its English literals were catalogued but are not user-visible today.
+
+---
+
+## 10. Disclosure fix — exact wording and placement (held for the post-night pass)
+
+The disclosure that the site is (partly) English is **inaccurate and misplaced** today. The live sentence (`ui-translations.json:1472`, rendered only in the home footer at `Library.tsx:273`) says the *classic workbenches, linked publications and archived research files* stay in their original language, but the larger English-only surface is the **narrated model pages** — 87–99% English in 8 of 9 families — and the **politics journey is already translated (~92%)**, so any blanket claim would be wrong. The precise sentence that used to cover this is a dead key (`translations.json:17`: "Language applies to navigation and core controls. Detailed research notes and some model descriptions remain in English…").
+
+**Recommended implementation (needs JSX, so not in `fix/i18n-2`):**
+
+1. **Per-family notice on every narrated journey page.** Render a small note directly under the lede in `AngkorJourney.tsx` (after line 65, before `journey-why`), only when the interface language is not English. `AngkorJourney` needs the `language` prop threaded from `App.tsx` (it currently receives only `t`); add `.journey-translation-note` styling in `journey.css`.
+   - For the 8 English-only families (angkor, education, systems, planning, fertility, shadow, deephistory, extension):
+     - EN: `This narrated page is being translated family by family. The research prose below is currently in English; the politics journey is already translated. Model labels, buttons and the rest of the site are in Chinese.`
+     - zh-Hans: `本叙述页正在按家族逐步翻译。下方研究文字目前为英文；政治经济学页面已翻译。模型标签、按钮及站内其他界面均为中文。`
+   - For politics (`ccpJourney`), a short positive note instead:
+     - EN: `This narrated page is translated. Linked publications and data files keep their original language.`
+     - zh-Hans: `本叙述页已翻译；链接的出版物与数据文件保留原文。`
+   - Key these as two dictionary entries (e.g. `Narrated page: transcription in progress` / `Narrated page: translated`), so fr/vi can follow later.
+2. **Replace the home-footer disclosure** (`ui-translations.json:1472`, `Library.tsx:273`) with one canonical sentence that names the exception:
+   - EN: `The model library and interactive controls are translated into Chinese. Narrated model pages are being translated family by family (politics is translated); linked publications and archived research files keep their original language.`
+   - zh-Hans: `模型库与交互控件已译为中文。叙述式模型页面正按家族逐步翻译（政治经济学已翻译）；链接的出版物与存档研究文件保留原文。`
+3. **Delete/retire the orphaned variants** while doing this: `translations.json:17` and `translations.json:2212` (dead duplicates of the above), so there is exactly one disclosure string in the codebase.
+4. **Why it matters beyond accuracy:** `translate()` silently falls back to English for every missing key, so without an explicit notice a Chinese reader cannot tell translated chrome from untranslated researched prose. The notice converts a seeming translation failure into a declared limitation — consistent with the site's own "label as a limit" style.
+5. **Do not** claim "the narrated pages are in English" anywhere else (e.g. home hero, meta description) — politics makes that false; refer to "family by family" instead.
+
+### Addendum — `fix/i18n-2` (PR #20, commit `d2b3d19`)
+
+60 zh-Hans entries added for the rewired About/CTA strings + home/journey/beta/chart chrome; 64 existing zh strings normalised (bare `Atlas`, `parity`/`logistic`/`onset`/`Harvest`/`tipping`, `CCP bus`). Four keys deliberately skipped because `translate()`'s substring replacement would corrupt English prose in zh mode: `people` (46 rendered hits), `Limits` (2), `Teaching` (1), `Chapters` (1) — these need key namespacing. Workflow strings left to PR #18. Journeys prose untouched.
