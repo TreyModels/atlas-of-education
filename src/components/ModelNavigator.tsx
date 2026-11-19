@@ -23,7 +23,8 @@ export function ModelNavigator({ route, navigate, t }: { route: string; navigate
   const open = (id: string) => {
     const item = catalogue.find(model => model.id === id)
     if (!item) return
-    if (item.href) window.open(item.href, '_blank', 'noopener,noreferrer')
+    if (item.href && /\.(zip|tgz|tar\.gz|csv|pdf|xlsx)(\?|#|$)/i.test(item.href)) navigate(`story-${item.family}`)
+    else if (item.href) window.open(item.href, '_blank', 'noopener,noreferrer')
     else if (item.route) navigate(item.route)
   }
   return <nav className="model-navigator" aria-label={t('Switch models')}>

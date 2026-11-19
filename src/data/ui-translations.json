@@ -4095,5 +4095,10 @@
  },
  "Model type & status": {
   "zh-Hans": "模型类型与状态"
+ },
+ "Download file": {
+  "zh-Hans": "下载文件",
+  "fr": "Télécharger le fichier",
+  "vi": "Tải tệp"
  }
 }
