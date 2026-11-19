@@ -194,3 +194,544 @@ kbd { padding: 2px 6px; border: 1px solid var(--line); border-radius: 3px; backg
   .question-card { min-height: 0; padding: 20px 0; border-right: 0; }
   .landing-methods dl { gap: 22px; }
 }
+
+/* ==========================================================================
+   Homepage — long-form atlas
+   Warm paper, Newsreader/DM Sans, fine rules, generous rhythm.
+   Reuses the journey badge language (purpose filled, state outlined).
+   ========================================================================== */
+
+/* Shared rhythm for the redesigned home sections. */
+.home-featured,
+.home-status,
+.home-stories,
+.home-cta {
+  padding-block: clamp(40px, 6vw, 72px);
+  border-top: 1px solid var(--line);
+}
+
+.home-featured .eyebrow,
+.home-status .eyebrow,
+.home-stories .eyebrow {
+  margin: 0 0 14px;
+  font-family: var(--sans);
+  font-size: .72rem;
+  font-weight: 600;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--green);
+}
+
+/* --------------------------------------------------------------------------
+   Featured story — quiet editorial opening, not a banner
+   -------------------------------------------------------------------------- */
+
+.home-featured {
+  max-width: 760px;
+  padding-top: clamp(44px, 6vw, 72px);
+}
+
+.home-featured h2 {
+  margin: 0 0 18px;
+  max-width: 22ch;
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(2rem, 4.4vw, 3.2rem);
+  line-height: 1.06;
+  letter-spacing: -.012em;
+  text-wrap: balance;
+}
+
+.home-featured-question {
+  max-width: 52ch;
+  margin: 0 0 20px;
+  padding-left: 16px;
+  border-left: 2px solid var(--ochre);
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(1.15rem, 1.8vw, 1.35rem);
+  line-height: 1.45;
+  color: var(--ink);
+}
+
+.home-featured-status {
+  max-width: 62ch;
+  margin: 0 0 24px;
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  color: var(--ink);
+  text-wrap: pretty;
+}
+
+.home-featured .button {
+  margin-top: 8px;
+}
+
+/* --------------------------------------------------------------------------
+   Chapter path — numbered scholarly list
+   -------------------------------------------------------------------------- */
+
+.home-chapter-path {
+  margin: 0 0 24px;
+  padding: 0;
+  list-style: none;
+  counter-reset: chapter;
+  border-top: 1px solid var(--line);
+}
+
+.home-chapter-path li {
+  position: relative;
+  counter-increment: chapter;
+  padding: 10px 0 10px 40px;
+  border-bottom: 1px solid color-mix(in oklab, var(--line) 70%, transparent);
+  font-family: var(--serif);
+  font-size: 1.02rem;
+  line-height: 1.4;
+  color: var(--ink);
+}
+
+.home-chapter-path li::before {
+  content: counter(chapter, decimal-leading-zero);
+  position: absolute;
+  left: 0;
+  top: 11px;
+  font-family: var(--sans);
+  font-size: .68rem;
+  font-weight: 600;
+  letter-spacing: .1em;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+/* --------------------------------------------------------------------------
+   Status overview — scannable grid + visible legend
+   -------------------------------------------------------------------------- */
+
+.home-status .landing-section-head {
+  margin-top: 0;
+}
+
+.home-status .landing-section-head > p:last-child {
+  max-width: 62ch;
+  margin: 14px 0 0;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.home-status-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--ink);
+  border-left: 1px solid var(--line);
+}
+
+.home-status-item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 22px 24px;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: color-mix(in oklab, var(--surface) 55%, transparent);
+}
+
+.home-status-item h3 {
+  margin: 0;
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 1.3rem;
+  line-height: 1.2;
+  letter-spacing: -.005em;
+}
+
+.home-status-item > p {
+  flex: 1 1 auto;
+  margin: 0;
+  color: var(--muted);
+  font-size: .95rem;
+  line-height: 1.6;
+}
+
+.home-status-item .text-link {
+  align-self: flex-start;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--green-dark);
+  font-size: .88rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.home-status-item .text-link:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+
+/* Badge rows — reuse journey visual language without importing journey.css. */
+.home-status-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.home-status-badges .badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 9px;
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  font-family: var(--sans);
+  font-size: .68rem;
+  font-weight: 600;
+  letter-spacing: .06em;
+  line-height: 1.4;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* Purpose axis — filled, warm, leading glyph. */
+.home-status-badges .badge[class*="purpose-"] {
+  background: color-mix(in oklab, var(--green-soft) 70%, var(--surface));
+  border-color: color-mix(in oklab, var(--green) 30%, var(--line));
+  color: var(--green-dark);
+}
+
+.home-status-badges .badge.purpose-published::before { content: "◆"; }
+.home-status-badges .badge.purpose-mechanism::before { content: "◇"; }
+.home-status-badges .badge.purpose-accounting::before { content: "§"; }
+.home-status-badges .badge.purpose-teaching::before { content: "✎"; }
+
+/* State axis — outlined, neutral, status glyph. */
+.home-status-badges .badge[class*="state-"] {
+  background: transparent;
+  border-color: var(--line);
+  border-style: solid;
+  color: var(--muted);
+}
+
+.home-status-badges .badge.state-checked::before,
+.home-status-badges .badge.state-evaluated::before { content: "✓"; color: var(--green); }
+.home-status-badges .badge.state-developing::before { content: "◐"; color: var(--ochre); }
+.home-status-badges .badge.state-historical::before { content: "↺"; }
+
+/* Legend — visible, calm, sits under the grid. */
+.home-status-legend {
+  max-width: 68ch;
+  margin: 20px 0 0;
+  padding-top: 16px;
+  border-top: 1px solid color-mix(in oklab, var(--line) 70%, transparent);
+  font-family: var(--serif);
+  font-size: .92rem;
+  font-style: italic;
+  line-height: 1.55;
+  color: var(--muted);
+}
+
+/* --------------------------------------------------------------------------
+   Stories — substantial readable cards, no nested cards, no heavy shadows
+   -------------------------------------------------------------------------- */
+
+.home-stories .landing-section-head {
+  margin-top: 0;
+}
+
+.home-story-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--ink);
+  border-left: 1px solid var(--line);
+}
+
+.home-story-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 26px 28px 28px;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: var(--surface);
+}
+
+.home-story-card-featured {
+  background: color-mix(in oklab, var(--green-soft) 22%, var(--surface));
+}
+
+.home-story-count {
+  display: inline-block;
+  width: fit-content;
+  font-family: var(--sans);
+  font-size: .68rem;
+  font-weight: 600;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--ochre);
+  font-variant-numeric: tabular-nums;
+}
+
+.home-story-card h3 {
+  margin: 0;
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(1.4rem, 2.4vw, 1.75rem);
+  line-height: 1.15;
+  letter-spacing: -.01em;
+  text-wrap: balance;
+}
+
+.home-story-question {
+  margin: 0;
+  padding-left: 14px;
+  border-left: 2px solid var(--ochre);
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.08rem;
+  line-height: 1.45;
+  color: var(--ink);
+}
+
+.home-story-status {
+  flex: 1 1 auto;
+  margin: 0;
+  color: var(--muted);
+  font-size: .95rem;
+  line-height: 1.6;
+}
+
+.home-story-card .home-chapter-path {
+  margin: 4px 0 0;
+}
+
+.home-story-card .home-chapter-path li {
+  font-size: .95rem;
+  padding-block: 8px;
+}
+
+.home-story-card .home-chapter-path li::before {
+  top: 9px;
+}
+
+.home-story-card .button {
+  align-self: flex-start;
+  margin-top: 4px;
+}
+
+.home-stories-more {
+  margin: 24px 0 0;
+}
+
+.home-stories-more .text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 44px;
+  color: var(--green-dark);
+  font-size: .95rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.home-stories-more .text-link:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+
+/* --------------------------------------------------------------------------
+   Call to action — download / tinker / propose / challenge / cite
+   -------------------------------------------------------------------------- */
+
+.home-cta {
+  max-width: 760px;
+}
+
+.home-cta h2 {
+  margin: 0 0 14px;
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(1.7rem, 3.4vw, 2.4rem);
+  line-height: 1.12;
+  letter-spacing: -.008em;
+  text-wrap: balance;
+}
+
+.home-cta > p {
+  max-width: 62ch;
+  margin: 0 0 24px;
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  color: var(--ink);
+  text-wrap: pretty;
+}
+
+.home-cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.home-cta-actions .button {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  background: var(--surface);
+  color: var(--ink);
+  font-size: .88rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.home-cta-actions .button:hover {
+  border-color: var(--green);
+  color: var(--green-dark);
+}
+
+.home-licence {
+  margin-top: 28px;
+  padding-top: 16px;
+  border-top: 1px solid color-mix(in oklab, var(--line) 70%, transparent);
+}
+
+.home-licence p {
+  margin: 0;
+  max-width: 68ch;
+  font-family: var(--serif);
+  font-size: .9rem;
+  font-style: italic;
+  line-height: 1.55;
+  color: var(--muted);
+}
+
+/* --------------------------------------------------------------------------
+   Focus — strong and consistent
+   -------------------------------------------------------------------------- */
+
+.home-featured a:focus-visible,
+.home-featured button:focus-visible,
+.home-status a:focus-visible,
+.home-status button:focus-visible,
+.home-stories a:focus-visible,
+.home-stories button:focus-visible,
+.home-cta a:focus-visible,
+.home-cta button:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* --------------------------------------------------------------------------
+   Responsive — desktop 2–3 columns, mobile one column
+   -------------------------------------------------------------------------- */
+
+@media (min-width: 1000px) {
+  .home-status-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .home-featured,
+  .home-status,
+  .home-stories,
+  .home-cta {
+    padding-block: 36px;
+  }
+
+  .home-featured h2 {
+    font-size: clamp(1.9rem, 8vw, 2.4rem);
+  }
+
+  .home-featured-question {
+    padding-left: 12px;
+    font-size: 1.08rem;
+  }
+
+  .home-status-grid,
+  .home-story-grid {
+    grid-template-columns: 1fr;
+    border-left: 0;
+  }
+
+  .home-status-item,
+  .home-story-card {
+    padding: 20px 0;
+    border-right: 0;
+    background: transparent;
+  }
+
+  .home-story-card-featured {
+    background: transparent;
+  }
+
+  .home-status-item {
+    border-bottom: 1px solid var(--line);
+  }
+
+  .home-story-card .button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .home-cta-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .home-cta-actions .button {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 390px) {
+  .home-chapter-path li {
+    padding-left: 34px;
+  }
+
+  .home-status-badges .badge {
+    font-size: .64rem;
+    padding: 3px 7px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Motion — only when the reader allows it
+   -------------------------------------------------------------------------- */
+
+@media (prefers-reduced-motion: no-preference) {
+  .home-status-item .text-link,
+  .home-stories-more .text-link,
+  .home-cta-actions .button,
+  .home-featured .button,
+  .home-story-card .button {
+    transition:
+      background-color 160ms ease,
+      border-color 160ms ease,
+      color 160ms ease,
+      text-decoration-color 160ms ease;
+  }
+}
