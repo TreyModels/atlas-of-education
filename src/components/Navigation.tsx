@@ -2,7 +2,9 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import { ArrowRight, ArrowUpRight, Baby, BookOpen, Building2, Columns2, Footprints, ChevronDown, FlaskConical, Globe2, GraduationCap, Home, Landmark, Menu, Network, School, Search, X } from 'lucide-react'
 import { worlds } from '../models'
 import type { Language, Translate } from '../types'
-import { catalogue, familyGroups, familyInfo } from '../data/model-catalogue'
+import { allTags, catalogue, familyGroups, familyInfo, tagCounts } from '../data/model-catalogue'
+import { addTag, hasQuery, matchesQuery, parseTags, removeTag } from '../lib/search'
+import '../hashtags.css'
 
 type Navigate = (id: string) => void
 
@@ -44,14 +46,21 @@ export function Navigation({ route, navigate, t, language, setLanguage }: Naviga
   const [drawerOpen, setDrawerOpen] = useState(false)
   const [searchOpen, setSearchOpen] = useState(false)
   const [query, setQuery] = useState('')
+  const [allTagsOpen, setAllTagsOpen] = useState(false)
   const searchInput = useRef<HTMLInputElement>(null)
   const family = familyFor(route)
   const activeWorld = worlds.find(world => world.id === route)
 
-  const results = useMemo(() => {
-    const needle = query.trim().toLowerCase()
-    return catalogue.filter(model => !needle || `${model.title} ${model.question} ${model.method} ${model.keywords ?? ''} ${t(model.title)} ${t(model.question)} ${t(model.method)} ${t(familyInfo[model.family].short)}`.toLowerCase().includes(needle))
-  }, [query, t])
+  const results = useMemo(() => catalogue.filter(model => matchesQuery(model, query, t)), [query, t])
+  const activeTags = parseTags(query)
+  const previewTags = allTagsOpen ? allTags : allTags.slice(0, 24)
+  // Suggested tags are drawn from what is on screen, so they can only widen or narrow real results.
+  const suggestedTags = useMemo(() => {
+    if (!hasQuery(query)) return []
+    const counts = new Map<string, number>()
+    for (const model of results) for (const tag of model.tags) if (!activeTags.includes(tag)) counts.set(tag, (counts.get(tag) ?? 0) + 1)
+    return [...counts.entries()].filter(([, count]) => count >= 2).sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0])).slice(0, 10).map(([tag]) => tag)
+  }, [results, query])
 
   useEffect(() => {
     setDrawerOpen(false)
@@ -68,6 +77,17 @@ export function Navigation({ route, navigate, t, language, setLanguage }: Naviga
     }
     window.addEventListener('keydown', onKey)
     return () => window.removeEventListener('keydown', onKey)
+  }, [])
+
+  // Cards and the workbench header open the Find-a-model modal with a #tag query.
+  useEffect(() => {
+    const open = (event: Event) => {
+      const detail = (event as CustomEvent<string>).detail
+      setQuery(typeof detail === 'string' ? detail : '')
+      setSearchOpen(true)
+    }
+    window.addEventListener('atlas:search', open as EventListener)
+    return () => window.removeEventListener('atlas:search', open as EventListener)
   }, [])
 
   useEffect(() => {
@@ -159,16 +179,26 @@ export function Navigation({ route, navigate, t, language, setLanguage }: Naviga
 
     {searchOpen && <div className="search-layer" role="presentation" onMouseDown={event => { if (event.target === event.currentTarget) setSearchOpen(false) }}>
       <section className="model-search" role="dialog" aria-modal="true" aria-label={t('Find a model')}>
-        <div className="model-search-input"><Search size={21} /><input ref={searchInput} type="search" value={query} onChange={event => setQuery(event.target.value)} placeholder={t('Search models, questions, or topics')} aria-label={t('Search models')} /><button className="icon-button" onClick={() => setSearchOpen(false)} aria-label={t('Close search')}><X size={20} /></button></div>
-        <div className="search-meta"><span>{query ? t('Matching models') : t('All interactive models')}</span><span>{results.length}</span></div>
+        <div className="model-search-input"><Search size={21} /><input ref={searchInput} type="search" value={query} onChange={event => setQuery(event.target.value)} placeholder={t('Search models, questions, or #tags')} aria-label={t('Search models')} /><button className="icon-button" onClick={() => setSearchOpen(false)} aria-label={t('Close search')}><X size={20} /></button></div>
+        <div className="search-tags">
+          {activeTags.length > 0 && <div className="search-tag-row" aria-label={t('Active tags')}>{activeTags.map(tag => <button key={tag} className="tag-chip tag-chip-active" aria-pressed="true" onClick={() => setQuery(removeTag(query, tag))}>#{tag}<span aria-hidden="true"> ×</span></button>)}</div>}
+          {!hasQuery(query)
+            ? <div className="tag-browser">
+                <p className="tag-browser-label">{t('Browse tags')}</p>
+                <div className="tag-cloud">{previewTags.map(tag => <button key={tag} className="tag-chip" onClick={() => setQuery(addTag(query, tag))}>#{tag}<span className="tag-count">{tagCounts[tag]}</span></button>)}</div>
+                <button className="tag-cloud-more" aria-expanded={allTagsOpen} onClick={() => setAllTagsOpen(open => !open)}>{allTagsOpen ? t('Fewer tags') : t('All {n} tags').replace('{n}', String(allTags.length))}</button>
+              </div>
+            : suggestedTags.length > 0 && <div className="search-tag-row" aria-label={t('Suggested tags')}><span className="tag-row-label">{t('Suggested tags')}</span>{suggestedTags.map(tag => <button key={tag} className="tag-chip" onClick={() => setQuery(addTag(query, tag))}>#{tag}</button>)}</div>}
+        </div>
+        <div className="search-meta"><span>{hasQuery(query) ? t('Matching models') : t('All interactive models')}</span><span>{results.length}</span></div>
         <div className="search-results">
           {results.map(model => {
-            const content = <><span><small>{t(familyInfo[model.family].short)} · {t(model.format)}</small><strong>{t(model.title)}</strong><span>{t(model.question)}</span></span>{model.href ? <ArrowUpRight size={19} /> : <ArrowRight size={19} />}</>
+            const content = <><span><small>{t(familyInfo[model.family].short)} · {t(model.format)}</small><strong>{t(model.title)}</strong><span>{t(model.question)}</span><span className="search-result-tags">{model.tags.slice(0, 4).map(tag => <span key={tag} className="tag-chip tag-chip-static">#{tag}</span>)}</span></span>{model.href ? <ArrowUpRight size={19} /> : <ArrowRight size={19} />}</>
             return model.href
               ? <a key={model.id} href={model.href} onClick={() => setSearchOpen(false)}>{content}</a>
               : <button key={model.id} onClick={() => go(model.route!)}>{content}</button>
           })}
-          {!results.length && <div className="search-empty"><strong>{t('No models found')}</strong><p>{t('Try a broader topic, such as teachers, climate, or work.')}</p></div>}
+          {!results.length && <div className="search-empty"><strong>{t('No models found')}</strong><p>{t('Try a broader topic, or a #tag such as #water or #teachers.')}</p></div>}
         </div>
         <div className="search-footer"><span>{t('Select a model to open its workbench')}</span><kbd>ESC</kbd></div>
       </section>

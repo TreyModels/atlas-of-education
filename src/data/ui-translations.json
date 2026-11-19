@@ -4053,5 +4053,35 @@
  },
  "EXPERIMENTAL INTERFACES": {
   "zh-Hans": "实验性界面"
+ },
+ "Search models, questions, or #tags": {
+  "zh-Hans": "搜索模型、问题或 #标签"
+ },
+ "Active tags": {
+  "zh-Hans": "已选标签"
+ },
+ "Browse tags": {
+  "zh-Hans": "浏览标签"
+ },
+ "Suggested tags": {
+  "zh-Hans": "建议标签"
+ },
+ "Fewer tags": {
+  "zh-Hans": "收起标签"
+ },
+ "All {n} tags": {
+  "zh-Hans": "全部 {n} 个标签"
+ },
+ "Try a broader topic, or a #tag such as #water or #teachers.": {
+  "zh-Hans": "试试更宽泛的主题，或 #water、#teachers 之类的标签。"
+ },
+ "Tags": {
+  "zh-Hans": "标签"
+ },
+ "Filter by tag": {
+  "zh-Hans": "按标签筛选"
+ },
+ "Search a country, question, or #tag": {
+  "zh-Hans": "搜索国家、问题或 #标签"
  }
 }
