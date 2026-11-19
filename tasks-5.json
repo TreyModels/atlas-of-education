@@ -1,0 +1,51 @@
+[
+ {
+  "id": "E1-education-journey",
+  "repo": "fleet.nosync/atlas",
+  "maxTokens": 24000,
+  "thinking": "high",
+  "context": [
+   "src/data/angkor-journey.ts",
+   "src/data/shadow-journey.ts",
+   "src/data/model-catalogue.ts",
+   "src/data/family-stories.ts",
+   "src/data/model-stories.json",
+   "REVIEW_STATUS.md",
+   "experiments/youth-review/README.md",
+   "experiments/camchild-seeds/README.md",
+   "public/reference/credential-floor.md",
+   "public/research/massification/index.html"
+  ],
+  "allow": [
+   "src/data/education-journey.ts"
+  ],
+  "checks": [
+   "npx tsc --noEmit -p tsconfig.app.json 2>&1 | grep education-journey | head; echo tsc-done"
+  ],
+  "prompt": "Write src/data/education-journey.ts exporting `educationJourney: Journey` (family: 'education') for the EDUCATION & WORK family of the Atlas of Education site: credentials, schooling and labour markets. Models in scope (all must get cards): the China youth-unemployment fitted labour-market model (fitted + free residual; Aug-2021 step unexplained; naive benchmark beats it out of sample), the Cambodia household child-labour/schooling simulation (calibrated out-of-school rates + illustrative cost index; 5 of 13 levers smaller than seed noise), credential dynamics / credential floor (illustrative; graded vs hard liquidity constraint; premium counterfactual now same-year 2035, older values historical), and the four massification stored experiments (parents & peers, three actors, unequal access, persistence). Use the existing family-stories education section as the starting narrative. Suggested chapters: why credentials and work; China youth unemployment; Cambodia child work and schooling; the credential floor; massification experiments; what would settle it.\nFORMAT: follow src/data/angkor-journey.ts exactly (types, house style) and src/data/shadow-journey.ts (a second example). Start with `import type { Journey } from './angkor-journey'` and export the named const. repo: 'https://github.com/TreyModels/atlas-of-education'. NO `interactive` field. Claim types: 'published' only for peer-reviewed studies; 'data' for official statistics/surveys; 'sim' for Atlas simulation results; 'open' for unsettled; 'method' for how it works.\nDONE MEANS: (1) open with a plain-language question and why it matters to someone with no background; (2) chapters follow observations/literature -> proposed mechanisms -> rules/assumptions -> experiments -> findings -> limits; every chapter has evidence, rule, result, limitation; (3) EVERY actual model in this family (see the catalogue entries in src/data/model-catalogue.ts for this family) gets a model card with purpose and state; distinguish models from download bundles and duplicate interfaces (bundles are not separate models; mention them as links); (4) \"implementation checked\" is not empirical validation; a historical run is not a current fit; name evaluation data and window where applicable; (5) maths in words first, optional formula/symbols/worked example; (6) each card links code or research files that exist: relative links must be paths under public/ that appear in the context (e.g. research/..., reference/..., engines/...); otherwise use absolute https GitHub URLs under https://github.com/TreyModels/atlas-of-education/tree/main/... ; card `route` = the catalogue id/route when the catalogue shows it as an internal or route entry.\nRULES: every number must come from the context files; never invent numbers, sources, quotes or findings. No \"proves\"/\"ruled out\". Candid about development state. bottomLine 2-3 sentences. Return only the one file."
+ },
+ {
+  "id": "Y1-systems-journey",
+  "repo": "fleet.nosync/atlas",
+  "maxTokens": 24000,
+  "thinking": "high",
+  "context": [
+   "src/data/angkor-journey.ts",
+   "src/data/shadow-journey.ts",
+   "src/data/model-catalogue.ts",
+   "src/data/family-stories.ts",
+   "src/data/model-stories.json",
+   "src/components/SchoolFutures.tsx",
+   "public/reference/east-asia-schools/README.md",
+   "public/reference/east-asia-schools/CITY-NETWORKS.md",
+   "REVIEW_STATUS.md"
+  ],
+  "allow": [
+   "src/data/systems-journey.ts"
+  ],
+  "checks": [
+   "npx tsc --noEmit -p tsconfig.app.json 2>&1 | grep systems-journey | head; echo tsc-done"
+  ],
+  "prompt": "Write src/data/systems-journey.ts exporting `systemsJourney: Journey` (family: 'systems') for the POPULATION & SCHOOL SYSTEMS family: following cohorts of children through schools, teachers, classrooms and budgets as births rise and fall. Models in scope (all get cards): the East Asian school-futures forecasts (the schoolFutures routes in SchoolFutures.tsx / catalogue), the six-district synthetic city, the country cohort cases (Cambodia, China, Philippines, Kenya) and the toy worlds (Riverton growth, Stillwater and any others listed in the catalogue for 'systems'), plus the city-networks work in east-asia-schools. Clearly distinguish: country projections from published inputs, synthetic teaching examples (toy worlds), and any actual forecast evaluation (say plainly if none exists). Suggested chapters: why cohorts matter; how a cohort-flow model works (with a small worked example of a birth wave moving through grades); country cases; East Asian contraction forecasts; synthetic city and toy worlds as teaching tools; limits and what would test them.\nFORMAT: follow src/data/angkor-journey.ts exactly (types, house style) and src/data/shadow-journey.ts (a second example). Start with `import type { Journey } from './angkor-journey'` and export the named const. repo: 'https://github.com/TreyModels/atlas-of-education'. NO `interactive` field. Claim types: 'published' only for peer-reviewed studies; 'data' for official statistics/surveys; 'sim' for Atlas simulation results; 'open' for unsettled; 'method' for how it works.\nDONE MEANS: (1) open with a plain-language question and why it matters to someone with no background; (2) chapters follow observations/literature -> proposed mechanisms -> rules/assumptions -> experiments -> findings -> limits; every chapter has evidence, rule, result, limitation; (3) EVERY actual model in this family (see the catalogue entries in src/data/model-catalogue.ts for this family) gets a model card with purpose and state; distinguish models from download bundles and duplicate interfaces (bundles are not separate models; mention them as links); (4) \"implementation checked\" is not empirical validation; a historical run is not a current fit; name evaluation data and window where applicable; (5) maths in words first, optional formula/symbols/worked example; (6) each card links code or research files that exist: relative links must be paths under public/ that appear in the context (e.g. research/..., reference/..., engines/...); otherwise use absolute https GitHub URLs under https://github.com/TreyModels/atlas-of-education/tree/main/... ; card `route` = the catalogue id/route when the catalogue shows it as an internal or route entry.\nRULES: every number must come from the context files; never invent numbers, sources, quotes or findings. No \"proves\"/\"ruled out\". Candid about development state. bottomLine 2-3 sentences. Return only the one file."
+ }
+]
