@@ -2,7 +2,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import { ArrowRight, ArrowUpRight, Baby, BookOpen, Building2, Footprints, ChevronDown, FlaskConical, Globe2, GraduationCap, Home, Landmark, Menu, Network, School, Search, X } from 'lucide-react'
 import { worlds } from '../models'
 import type { Language, Translate } from '../types'
-import { catalogue, familyInfo } from '../data/model-catalogue'
+import { catalogue, familyGroups, familyInfo } from '../data/model-catalogue'
 
 type Navigate = (id: string) => void
 
@@ -78,7 +78,6 @@ export function Navigation({ route, navigate, t, language, setLanguage }: Naviga
 
   const go = (id: string) => { navigate(id); setDrawerOpen(false); setSearchOpen(false) }
   const primary = [
-    { id: '', label: 'Overview', icon: Home, family: 'home' },
     { id: 'story-education', label: familyInfo.education.short, icon: GraduationCap, family: 'education' },
     { id: 'story-systems', label: familyInfo.systems.short, icon: Network, family: 'systems' },
     { id: 'story-planning', label: familyInfo.planning.short, icon: FlaskConical, family: 'planning' },
@@ -89,13 +88,30 @@ export function Navigation({ route, navigate, t, language, setLanguage }: Naviga
     { id: 'story-politics', label: familyInfo.politics.short, icon: Building2, family: 'politics' },
     { id: 'story-extension', label: familyInfo.extension.short, icon: School, family: 'extension' },
   ]
+  const workflowLabel = language === 'zh-Hans' ? '我的数字工作流程' : t('My digital workflow')
 
   const navContent = <>
     <nav className="primary-nav" aria-label={t('Primary navigation')}>
-      <p className="nav-label">{t('Explore')}</p>
-      {primary.map(item => <button key={item.family} className={family === item.family ? 'active' : ''} aria-current={family === item.family ? 'page' : undefined} onClick={() => go(item.id)}>
-        <item.icon size={18} strokeWidth={1.7} /><span>{t(item.label)}</span>{family === item.family && <span className="nav-active-dot" />}
-      </button>)}
+      <p className="nav-label">{t('Start here')}</p>
+      <button className={route === 'about' ? 'active' : ''} aria-current={route === 'about' ? 'page' : undefined} onClick={() => go('about')}>
+        <Landmark size={18} strokeWidth={1.7} /><span>{t('About')}</span>{route === 'about' && <span className="nav-active-dot" />}
+      </button>
+      <button className={route === 'how-models-work' ? 'active' : ''} aria-current={route === 'how-models-work' ? 'page' : undefined} onClick={() => go('how-models-work')}>
+        <FlaskConical size={18} strokeWidth={1.7} /><span>{t('How models work')}</span>{route === 'how-models-work' && <span className="nav-active-dot" />}
+      </button>
+      <button className={route === 'workflow' ? 'active' : ''} aria-current={route === 'workflow' ? 'page' : undefined} onClick={() => go('workflow')}>
+        <BookOpen size={18} strokeWidth={1.7} /><span>{workflowLabel}</span>{route === 'workflow' && <span className="nav-active-dot" />}
+      </button>
+      {familyGroups.map(group => <div className="nav-family-group" key={group.id}>
+        <p className="nav-label">{t(group.title)}</p>
+        {group.families.map(familyId => {
+          const item = primary.find(entry => entry.family === familyId)
+          if (!item) return null
+          return <button key={item.family} className={family === item.family ? 'active' : ''} aria-current={family === item.family ? 'page' : undefined} onClick={() => go(item.id)}>
+            <item.icon size={18} strokeWidth={1.7} /><span>{t(item.label)}</span>{family === item.family && <span className="nav-active-dot" />}
+          </button>
+        })}
+      </div>)}
     </nav>
     <button className="all-models-link" onClick={() => { setDrawerOpen(false); setSearchOpen(true) }}><Search size={17} /><span>{t('Find a model')}</span><span className="model-total">{catalogue.length}</span></button>
     <div className="nav-resources">
