@@ -1,0 +1,66 @@
+year,geography,variable,value,unit,source_id,status,note
+2013,China,cases_filed,172000.0,cases,ccdi_2013_18,verified_official_release,Rounded annual totals; discipline and supervision scope evolves.
+2014,China,cases_filed,226000.0,cases,ccdi_2013_18,verified_official_release,Rounded annual totals; discipline and supervision scope evolves.
+2015,China,cases_filed,330000.0,cases,ccdi_2013_18,verified_official_release,Rounded annual totals; discipline and supervision scope evolves.
+2016,China,cases_filed,413000.0,cases,ccdi_2013_18,verified_official_release,Rounded annual totals; discipline and supervision scope evolves.
+2017,China,cases_filed,527000.0,cases,ccdi_2013_18,verified_official_release,Rounded annual totals; discipline and supervision scope evolves.
+2018,China,cases_filed,638000.0,cases,ccdi_2013_18,verified_official_release,Rounded annual totals; discipline and supervision scope evolves.
+2019,China,cases_filed,619000.0,cases,ccdi_2019,verified_official_release,
+2019,China,persons_sanctioned,587000.0,persons,ccdi_2019,verified_official_release,Includes discipline violations; persons sanctioned are not equivalent to corruption cases or exits.
+2019,China,clues_processed,1705000.0,clues,ccdi_2019,verified_official_release,Annual pipeline stage; not a matched cohort of filed cases.
+2020,China,cases_filed,618000.0,cases,ccdi_2020,verified_official_release,
+2020,China,persons_sanctioned,604000.0,persons,ccdi_2020,verified_official_release,Includes discipline violations; persons sanctioned are not equivalent to corruption cases or exits.
+2020,China,clues_processed,1703000.0,clues,ccdi_2020,verified_official_release,Annual pipeline stage; not a matched cohort of filed cases.
+2021,China,cases_filed,631000.0,cases,ccdi_2021,verified_official_release,
+2021,China,persons_sanctioned,627000.0,persons,ccdi_2021,verified_official_release,Includes discipline violations; persons sanctioned are not equivalent to corruption cases or exits.
+2021,China,clues_processed,1826000.0,clues,ccdi_2021,verified_official_release,Annual pipeline stage; not a matched cohort of filed cases.
+2022,China,cases_filed,596000.0,cases,ccdi_2022,verified_official_release,
+2022,China,persons_sanctioned,592000.0,persons,ccdi_2022,verified_official_release,Includes discipline violations; persons sanctioned are not equivalent to corruption cases or exits.
+2022,China,clues_processed,1540000.0,clues,ccdi_2022,verified_official_release,Annual pipeline stage; not a matched cohort of filed cases.
+2023,China,cases_filed,626000.0,cases,ccdi_2023,verified_official_release,
+2023,China,persons_sanctioned,610000.0,persons,ccdi_2023,verified_official_release,Includes discipline violations; persons sanctioned are not equivalent to corruption cases or exits.
+2023,China,clues_processed,1733000.0,clues,ccdi_2023,verified_official_release,Annual pipeline stage; not a matched cohort of filed cases.
+2024,China,cases_filed,877000.0,cases,ccdi_2024,verified_official_release,
+2024,China,persons_sanctioned,889000.0,persons,ccdi_2024,verified_official_release,Includes discipline violations; persons sanctioned are not equivalent to corruption cases or exits.
+2025,China,cases_filed,1012000.0,cases,ccdi_2025,verified_official_release,
+2025,China,persons_sanctioned,983000.0,persons,ccdi_2025,verified_official_release,Includes discipline violations; persons sanctioned are not equivalent to corruption cases or exits.
+2025,China,clues_processed,2630000.0,clues,ccdi_2025,verified_official_release,Annual pipeline stage; not a matched cohort of filed cases.
+2020,China,land_revenue,8.4142,trillion_CNY,mof_2020,verified_official_release,Annual execution release vintage; nontax includes asset and resource proceeds; land revenue is gross.
+2020,China,land_related_expenditure,7.6503,trillion_CNY,mof_2020,verified_official_release,Annual execution release vintage; nontax includes asset and resource proceeds; land revenue is gross.
+2020,China,national_nontax_revenue,2.8585,trillion_CNY,mof_2020,verified_official_release,Annual execution release vintage; nontax includes asset and resource proceeds; land revenue is gross.
+2020,China,local_general_revenue,10.0124,trillion_CNY,mof_2020,verified_official_release,Annual execution release vintage; nontax includes asset and resource proceeds; land revenue is gross.
+2021,China,land_revenue,8.7051,trillion_CNY,mof_2021,verified_official_release,Annual execution release vintage; nontax includes asset and resource proceeds; land revenue is gross.
+2021,China,land_related_expenditure,7.754,trillion_CNY,mof_2021,verified_official_release,Annual execution release vintage; nontax includes asset and resource proceeds; land revenue is gross.
+2021,China,national_nontax_revenue,2.9808,trillion_CNY,mof_2021,verified_official_release,Annual execution release vintage; nontax includes asset and resource proceeds; land revenue is gross.
+2021,China,local_general_revenue,11.1077,trillion_CNY,mof_2021,verified_official_release,Annual execution release vintage; nontax includes asset and resource proceeds; land revenue is gross.
+2021,China,local_general_expenditure,21.1272,trillion_CNY,mof_2021,verified_official_release,Annual execution release vintage; nontax includes asset and resource proceeds; land revenue is gross.
+2022,China,land_revenue,6.6854,trillion_CNY,mof_2022,verified_official_release,Annual execution release vintage; nontax includes asset and resource proceeds; land revenue is gross.
+2022,China,land_related_expenditure,6.3736,trillion_CNY,mof_2022,verified_official_release,Annual execution release vintage; nontax includes asset and resource proceeds; land revenue is gross.
+2022,China,national_nontax_revenue,3.7089,trillion_CNY,mof_2022,verified_official_release,Annual execution release vintage; nontax includes asset and resource proceeds; land revenue is gross.
+2022,China,local_general_revenue,10.8818,trillion_CNY,mof_2022,verified_official_release,Annual execution release vintage; nontax includes asset and resource proceeds; land revenue is gross.
+2022,China,local_general_expenditure,22.5039,trillion_CNY,mof_2022,verified_official_release,Annual execution release vintage; nontax includes asset and resource proceeds; land revenue is gross.
+2023,China,land_revenue,5.7996,trillion_CNY,mof_2023,verified_official_release,Annual execution release vintage; nontax includes asset and resource proceeds; land revenue is gross.
+2023,China,land_related_expenditure,5.5407,trillion_CNY,mof_2023,verified_official_release,Annual execution release vintage; nontax includes asset and resource proceeds; land revenue is gross.
+2023,China,national_nontax_revenue,3.5655,trillion_CNY,mof_2023,verified_official_release,Annual execution release vintage; nontax includes asset and resource proceeds; land revenue is gross.
+2023,China,local_general_revenue,11.7218,trillion_CNY,mof_2023,verified_official_release,Annual execution release vintage; nontax includes asset and resource proceeds; land revenue is gross.
+2023,China,local_general_expenditure,23.6355,trillion_CNY,mof_2023,verified_official_release,Annual execution release vintage; nontax includes asset and resource proceeds; land revenue is gross.
+2024,China,land_revenue,4.8699,trillion_CNY,mof_2024,verified_official_release,Annual execution release vintage; nontax includes asset and resource proceeds; land revenue is gross.
+2024,China,land_related_expenditure,5.0812,trillion_CNY,mof_2024,verified_official_release,Annual execution release vintage; nontax includes asset and resource proceeds; land revenue is gross.
+2024,China,national_nontax_revenue,4.473,trillion_CNY,mof_2024,verified_official_release,Annual execution release vintage; nontax includes asset and resource proceeds; land revenue is gross.
+2024,China,local_general_revenue,11.9266,trillion_CNY,mof_2024,verified_official_release,Annual execution release vintage; nontax includes asset and resource proceeds; land revenue is gross.
+2024,China,local_general_expenditure,24.3892,trillion_CNY,mof_2024,verified_official_release,Annual execution release vintage; nontax includes asset and resource proceeds; land revenue is gross.
+2025,China,land_revenue,4.1518,trillion_CNY,mof_2025,verified_official_release,Annual execution release vintage; nontax includes asset and resource proceeds; land revenue is gross.
+2025,China,land_related_expenditure,4.712,trillion_CNY,mof_2025,verified_official_release,Annual execution release vintage; nontax includes asset and resource proceeds; land revenue is gross.
+2025,China,national_nontax_revenue,3.9682,trillion_CNY,mof_2025,verified_official_release,Annual execution release vintage; nontax includes asset and resource proceeds; land revenue is gross.
+2025,China,local_general_revenue,12.2082,trillion_CNY,mof_2025,verified_official_release,Annual execution release vintage; nontax includes asset and resource proceeds; land revenue is gross.
+2025,China,local_general_expenditure,24.4361,trillion_CNY,mof_2025,verified_official_release,Annual execution release vintage; nontax includes asset and resource proceeds; land revenue is gross.
+2024,China,nominal_gdp,134.8066,trillion_CNY,nbs_2024_final,verified_official_release,"Final verification, revised vintage."
+2025,China,nominal_gdp,140.1879,trillion_CNY,nbs_2025_prelim,verified_official_release,Preliminary; do not interpret real growth 5% as nominal growth.
+2024,China,tsf_increment,32.26,trillion_CNY,pbc_2024,verified_official_release,Financing flow; coverage differs from BIS credit stock. No splice into historical BIS series.
+2024,China,rmb_loans_to_real_economy_increment,17.05,trillion_CNY,pbc_2024,verified_official_release,Financing flow; coverage differs from BIS credit stock. No splice into historical BIS series.
+2024,China,corporate_bond_net_financing,1.91,trillion_CNY,pbc_2024,verified_official_release,Financing flow; coverage differs from BIS credit stock. No splice into historical BIS series.
+2024,China,government_bond_net_financing,11.3,trillion_CNY,pbc_2024,verified_official_release,Financing flow; coverage differs from BIS credit stock. No splice into historical BIS series.
+2025,China,tsf_increment,35.6,trillion_CNY,pbc_2025,verified_official_release,Financing flow; coverage differs from BIS credit stock. No splice into historical BIS series.
+2025,China,rmb_loans_to_real_economy_increment,15.91,trillion_CNY,pbc_2025,verified_official_release,Financing flow; coverage differs from BIS credit stock. No splice into historical BIS series.
+2025,China,corporate_bond_net_financing,2.39,trillion_CNY,pbc_2025,verified_official_release,Financing flow; coverage differs from BIS credit stock. No splice into historical BIS series.
+2025,China,government_bond_net_financing,13.84,trillion_CNY,pbc_2025,verified_official_release,Financing flow; coverage differs from BIS credit stock. No splice into historical BIS series.

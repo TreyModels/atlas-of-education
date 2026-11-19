@@ -1,0 +1,27 @@
+{
+  "family": "current_incentives",
+  "candidate": 63,
+  "theta": {
+    "rent": 0.24488172412519882,
+    "ramp_years": 7.836289435838869,
+    "nsc_multiplier": 1.1264666109331223,
+    "peer": 2.7223605900657653,
+    "report_capture": 0.5349878948335475
+  },
+  "seeds": [
+    1101,
+    1102
+  ],
+  "simulated_training_cases": [
+    12.5,
+    29.0,
+    44.5,
+    57.0,
+    69.0,
+    87.5,
+    107.5
+  ],
+  "scale": 7856.527215761895,
+  "log_rmse": 0.24696661013254684,
+  "design_hash": "c3133832f05062c9df5e479a16b10abce442f56de07a0cd6fcc2385b91f97a5b"
+}

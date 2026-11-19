@@ -1,0 +1,27 @@
+{
+  "family": "social_trap",
+  "candidate": 3,
+  "theta": {
+    "rent": -0.363948548955078,
+    "ramp_years": 1.4295386414292919,
+    "nsc_multiplier": 1.0151020087420037,
+    "peer": 3.2926940600078285,
+    "report_capture": 0.8263047899580531
+  },
+  "seeds": [
+    1101,
+    1102
+  ],
+  "simulated_training_cases": [
+    62.5,
+    111.5,
+    138.5,
+    172.0,
+    170.5,
+    186.5,
+    184.0
+  ],
+  "scale": 2731.7338352283164,
+  "log_rmse": 0.18270676351583656,
+  "design_hash": "c3133832f05062c9df5e479a16b10abce442f56de07a0cd6fcc2385b91f97a5b"
+}

@@ -2878,5 +2878,460 @@
   "zh-Hans": "模型包 · 代码、数据与地图",
   "vi": "Gói mô hình · mã, dữ liệu và bản đồ",
   "fr": "Archive du modèle · code, données et cartes"
+ },
+ "Political systems · CCP bus": {
+  "fr": "Systèmes politiques · bus du PCC",
+  "vi": "Hệ thống chính trị · xe buýt CCP",
+  "zh-Hans": "政治制度 · 中共巴士"
+ },
+ "If this year’s incentives fully determine this year’s corruption, then a campaign that changes incentives should change corruption, and history should not matter. If entry is sponsored, and sponsors and clients share exposure, then inherited networks can keep corruption high, or bring it back, after a campaign. The two views make different predictions about what happens after enforcement changes.": {
+  "fr": "Si les incitations de cette année déterminent entièrement la corruption de cette année, alors une campagne qui modifie les incitations devrait modifier la corruption, et l’histoire ne devrait pas compter. Si l’entrée est parrainée, et si les parrains et les clients partagent une même exposition, alors des réseaux hérités peuvent maintenir la corruption à un niveau élevé, ou la faire réapparaître, après une campagne. Les deux conceptions font des prédictions différentes sur ce qui se produit après un changement des dispositifs de répression.",
+  "vi": "Nếu các động cơ khuyến khích của năm nay quyết định hoàn toàn mức độ tham nhũng của năm nay, thì một chiến dịch làm thay đổi các động cơ khuyến khích lẽ ra phải làm thay đổi mức độ tham nhũng, và lịch sử lẽ ra không nên có vai trò gì. Nếu việc gia nhập diễn ra thông qua bảo trợ, và nếu người bảo trợ và người được bảo trợ cùng chia sẻ rủi ro phơi lộ, thì các mạng lưới kế thừa có thể giữ mức tham nhũng ở mức cao, hoặc làm nó quay trở lại, sau một chiến dịch. Hai quan điểm đưa ra những dự đoán khác nhau về điều gì xảy ra sau khi các biện pháp thực thi thay đổi.",
+  "zh-Hans": "如果今年的激励完全决定今年的腐败，那么改变激励的专项行动就应当改变腐败，而历史不应起作用。如果进入是通过赞助实现的，且赞助者与受庇护者共同承担暴露风险，那么继承下来的网络可以在专项行动之后使腐败维持在高位，或使其重新出现。这两种观点对执法变化之后会发生什么作出了不同的预测。"
+ },
+ "Chapter 1 · The hypothesis and the filings": {
+  "fr": "Chapitre 1 · L’hypothèse et les dossiers",
+  "vi": "Chương 1 · Giả thuyết và các hồ sơ",
+  "zh-Hans": "第1章 · 假设与立案"
+ },
+ "The observable outcome is disciplinary cases filed by the Central Commission for Discipline Inspection (CCDI), reported annually. Cases are not corruption prevalence: they mix detection, reporting, enforcement capacity and the underlying behaviour. The v7 training window is 2013–2019; the evaluation window is 2020–2025.": {
+  "fr": "Le résultat observable est constitué des affaires disciplinaires enregistrées par la Commission centrale de contrôle de la discipline (CCDI), rapportées annuellement. Les affaires ne correspondent pas à la prévalence de la corruption : elles mêlent détection, signalement, capacité de répression et comportement sous-jacent. La fenêtre d’entraînement de v7 est 2013–2019 ; la fenêtre d’évaluation est 2020–2025.",
+  "vi": "Kết quả quan sát được là các vụ việc kỷ luật do Ủy ban Kiểm tra Kỷ luật Trung ương (CCDI) lập hồ sơ, được báo cáo hằng năm. Số vụ việc không phải là tỷ lệ phổ biến của tham nhũng: chúng trộn lẫn giữa phát hiện, báo cáo, năng lực thực thi và hành vi nền tảng. Cửa sổ huấn luyện của v7 là 2013–2019; cửa sổ đánh giá là 2020–2025.",
+  "zh-Hans": "可观察的结果是中央纪律检查委员会（CCDI）立案并逐年报告的纪律案件。案件数并不等于腐败发生率：它们混合了发现、报告、执法能力与底层行为。v7 的训练窗口为 2013–2019；评估窗口为 2020–2025。"
+ },
+ "The hypothesis is stated as a mechanism: entry by sponsorship selects pliable clients and wires them into a sponsor’s circle; shared exposure keeps the network together after enforcement changes. The rival view is that current incentives alone determine current behaviour, so history cannot matter in the long run.": {
+  "fr": "L’hypothèse est formulée comme un mécanisme : l’entrée par parrainage sélectionne des clients dociles et les intègre au cercle d’un parrain ; l’exposition partagée maintient le réseau uni après un changement des dispositifs de répression. La conception rivale est que les incitations actuelles déterminent à elles seules le comportement actuel, de sorte que l’histoire ne peut pas compter à long terme.",
+  "vi": "Giả thuyết được phát biểu như một cơ chế: việc gia nhập thông qua bảo trợ lựa chọn những người được bảo trợ dễ uốn nắn và gắn họ vào vòng quan hệ của một người bảo trợ; rủi ro phơi lộ chung giữ mạng lưới gắn kết sau khi các biện pháp thực thi thay đổi. Quan điểm đối lập cho rằng chỉ các động cơ khuyến khích hiện tại quyết định hành vi hiện tại, nên về lâu dài lịch sử không thể có vai trò gì.",
+  "zh-Hans": "该假设被表述为一种机制：通过赞助进入会筛选出易于摆布的受庇护者，并将其接入赞助者的圈子；共同的暴露风险使网络在执法变化之后仍保持凝聚。对立观点认为，仅当前的激励就决定了当前的行为，因此从长远看历史不可能起作用。"
+ },
+ "National case counts are a coarse outcome. They cannot separate detection from behaviour, and seven annual training points cannot identify many behavioural parameters.": {
+  "fr": "Les décomptes nationaux d’affaires constituent un résultat grossier. Ils ne permettent pas de séparer la détection du comportement, et sept points d’entraînement annuels ne peuvent identifier de nombreux paramètres comportementaux.",
+  "vi": "Số liệu vụ việc toàn quốc là một kết quả thô. Chúng không thể tách phát hiện khỏi hành vi, và bảy điểm huấn luyện hằng năm không thể nhận dạng được nhiều tham số hành vi.",
+  "zh-Hans": "全国案件数是粗略的结果。它们无法将发现与行为区分开来，而七个年度训练点也无法识别许多行为参数。"
+ },
+ "Chapter 2 · v1 rival mechanisms": {
+  "fr": "Chapitre 2 · Mécanismes rivaux de v1",
+  "vi": "Chương 2 · Các cơ chế đối lập của v1",
+  "zh-Hans": "第2章 · v1 的对立机制"
+ },
+ "v1 sets three small rival families to the same 30% corruption snapshot: current incentives (principal–agent, Markov), social trap (peer norms, detection that depends on honest peers, finite enforcement capacity), and bus (social trap plus sponsored entry and threat-driven rewiring).": {
+  "fr": "v1 applique trois petites familles rivales au même instantané de 30 % de corruption : incitations actuelles (principal–agent, Markov), piège social (normes des pairs, détection dépendant de pairs honnêtes, capacité de répression finie) et bus (piège social plus entrée parrainée et reconfiguration guidée par la menace).",
+  "vi": "v1 áp đặt ba nhóm cơ chế đối lập nhỏ lên cùng một ảnh chụp trạng thái tham nhũng 30%: động cơ khuyến khích hiện tại (ủy nhiệm–đại lý, Markov), bẫy xã hội (chuẩn mực đồng nghiệp, phát hiện phụ thuộc vào những người đồng cấp trung thực, năng lực thực thi hữu hạn), và xe buýt (bẫy xã hội cộng với gia nhập có bảo trợ và tái cấu trúc quan hệ do mối đe dọa thúc đẩy).",
+  "zh-Hans": "v1 将三个小型对立机制族设定为同一个 30% 腐败快照：当前激励（委托–代理、马尔可夫）、社会陷阱（同伴规范、依赖诚实同伴的发现、有限的执法能力）以及巴士（社会陷阱加上赞助式进入和威胁驱动的重新连线）。"
+ },
+ "v1 is a small mechanism demonstration, not a calibrated model of China. The parameters are hypotheses to be estimated, not facts.": {
+  "fr": "v1 est une petite démonstration de mécanisme, non un modèle calibré de la Chine. Les paramètres sont des hypothèses à estimer, non des faits.",
+  "vi": "v1 là một minh họa cơ chế nhỏ, không phải một mô hình đã hiệu chỉnh về Trung Quốc. Các tham số là những giả thuyết cần được ước lượng, không phải sự kiện.",
+  "zh-Hans": "v1 是一个小型机制演示，而非经过校准的中国模型。这些参数是待估计的假设，而非事实。"
+ },
+ "Chapter 3 · v3 economy and factions": {
+  "fr": "Chapitre 3 · Économie et factions de v3",
+  "vi": "Chương 3 · Kinh tế và phe phái của v3",
+  "zh-Hans": "第3章 · v3 的经济与派系"
+ },
+ "v3 adds land revenue, credit, PLA procurement, four sectors and faction dynamics: patron protection, encirclement, hiding, bandwagoning and succession.": {
+  "fr": "v3 ajoute les recettes foncières, le crédit, les marchés publics de l’APL, quatre secteurs et une dynamique factionnelle : protection par un patron, encerclement, dissimulation, ralliement et succession.",
+  "vi": "v3 bổ sung nguồn thu từ đất, tín dụng, mua sắm của PLA, bốn khu vực và động lực phe phái: sự che chở của người bảo trợ, bao vây, ẩn náu, theo phe mạnh và kế vị.",
+  "zh-Hans": "v3 增加了土地收入、信贷、解放军采购、四个部门以及派系动态：庇护者保护、包围、隐匿、随大流和继承。"
+ },
+ "The 17 accepted fits are exploratory and fitted. They are not tested out of sample. The AUC comparison is a fitted association, not a causal claim about faction or corruption.": {
+  "fr": "Les 17 ajustements acceptés sont exploratoires et ajustés. Ils ne sont pas testés hors échantillon. La comparaison des AUC est une association ajustée, non une affirmation causale sur les factions ou la corruption.",
+  "vi": "17 kết quả khớp được chấp nhận là mang tính thăm dò và đã được khớp. Chúng chưa được kiểm định ngoài mẫu. So sánh AUC là một liên hệ đã được khớp, không phải một khẳng định nhân quả về phe phái hay tham nhũng.",
+  "zh-Hans": "17 个被接受的拟合是探索性的且经过拟合的。它们未经过样本外检验。AUC 比较是一种拟合关联，而非关于派系或腐败的因果主张。"
+ },
+ "Chapter 4 · v6 institutional kernel": {
+  "fr": "Chapitre 4 · Noyau institutionnel de v6",
+  "vi": "Chương 4 · Hạt nhân thể chế của v6",
+  "zh-Hans": "第4章 · v6 制度内核"
+ },
+ "v6 is a 50,000-agent, 64-organisation, 5-rank kernel with Tilly-labelled mechanisms. It is the shared kernel on which v7 compares the three rival families.": {
+  "fr": "v6 est un noyau de 50 000 agents, 64 organisations et 5 rangs, doté de mécanismes étiquetés selon Tilly. C’est le noyau commun sur lequel v7 compare les trois familles rivales.",
+  "vi": "v6 là một hạt nhân gồm 50.000 tác nhân, 64 tổ chức, 5 cấp bậc, với các cơ chế được gắn nhãn theo Tilly. Đây là hạt nhân chung mà trên đó v7 so sánh ba nhóm cơ chế đối lập.",
+  "zh-Hans": "v6 是一个包含 50,000 个主体、64 个组织、5 个层级的内核，并带有以 Tilly 命名的机制。它是 v7 用来比较三个对立机制族的共享内核。"
+ },
+ "v6 is illustrative and uncalibrated. Its outputs are not evidence about China; they are a platform for the v7 comparison.": {
+  "fr": "v6 est illustratif et non calibré. Ses résultats ne constituent pas des preuves sur la Chine ; ils forment une plateforme pour la comparaison de v7.",
+  "vi": "v6 mang tính minh họa và chưa được hiệu chỉnh. Các kết quả của nó không phải là bằng chứng về Trung Quốc; chúng là một nền tảng cho so sánh của v7.",
+  "zh-Hans": "v6 是示意性的且未经校准。其输出并非关于中国的证据；它们是用于 v7 比较的平台。"
+ },
+ "Chapter 5 · v7 retrospective comparison": {
+  "fr": "Chapitre 5 · Comparaison rétrospective de v7",
+  "vi": "Chương 5 · So sánh hồi cứu của v7",
+  "zh-Hans": "第5章 · v7 回顾性比较"
+ },
+ "v7 compares the three rival families (current incentives, social trap, bus) on the v6 kernel. It is not a comparison across version numbers. Fitted on 2013–2019 filings; scored on 2020–2025. The outcome is disciplinary cases, not corruption prevalence.": {
+  "fr": "v7 compare les trois familles rivales (incitations actuelles, piège social, bus) sur le noyau v6. Il ne s’agit pas d’une comparaison entre numéros de version. Ajusté sur les dossiers de 2013–2019 ; évalué sur 2020–2025. Le résultat est constitué des affaires disciplinaires, non de la prévalence de la corruption.",
+  "vi": "v7 so sánh ba nhóm cơ chế đối lập (động cơ khuyến khích hiện tại, bẫy xã hội, xe buýt) trên hạt nhân v6. Đây không phải là so sánh giữa các số phiên bản. Được khớp trên các hồ sơ 2013–2019; được tính điểm trên 2020–2025. Kết quả là các vụ việc kỷ luật, không phải tỷ lệ phổ biến của tham nhũng.",
+  "zh-Hans": "v7 在 v6 内核上比较三个对立机制族（当前激励、社会陷阱、巴士）。这不是跨版本号的比较。在 2013–2019 年立案数据上拟合；在 2020–2025 年上评分。结果是纪律案件，而非腐败发生率。"
+ },
+ "Log RMSE at 50,000 agents, strict: current incentives 0.195, social trap 0.190, bus 0.190. Bus and social trap are indistinguishable (0.1898 vs 0.1896). At the fitted settings the extra bus mechanisms do nothing for case counts.": {
+  "fr": "Log RMSE à 50 000 agents, strict : incitations actuelles 0,195, piège social 0,190, bus 0,190. Bus et piège social sont indiscernables (0,1898 contre 0,1896). Aux réglages ajustés, les mécanismes supplémentaires du bus n’apportent rien aux décomptes d’affaires.",
+  "vi": "Log RMSE với 50.000 tác nhân, chế độ nghiêm ngặt: động cơ khuyến khích hiện tại 0,195, bẫy xã hội 0,190, xe buýt 0,190. Xe buýt và bẫy xã hội không thể phân biệt được (0,1898 so với 0,1896). Ở các thiết lập đã khớp, các cơ chế bổ sung của xe buýt không tác động gì đến số vụ việc.",
+  "zh-Hans": "50,000 个主体下的对数 RMSE，严格模式：当前激励 0.195，社会陷阱 0.190，巴士 0.190。巴士与社会陷阱无法区分（0.1898 对 0.1896）。在拟合设置下，巴士的额外机制对案件数没有任何作用。"
+ },
+ "Retrospective: the 2020–25 outcomes were already known when the exercise was designed. An independent future period or organisational holdout is needed for an untouched test. The six yearly errors are highly correlated and too few for a reliable model ranking.": {
+  "fr": "Rétrospectif : les résultats de 2020–25 étaient déjà connus lors de la conception de l’exercice. Une période future indépendante ou un échantillon de rétention organisationnel est nécessaire pour un test non touché. Les six erreurs annuelles sont fortement corrélées et trop peu nombreuses pour un classement fiable des modèles.",
+  "vi": "Hồi cứu: các kết quả 2020–25 đã được biết khi bài tập này được thiết kế. Cần một giai đoạn tương lai độc lập hoặc một tập giữ lại theo tổ chức để có một kiểm định chưa bị chạm tới. Sáu sai số hằng năm có tương quan cao và quá ít để xếp hạng mô hình một cách đáng tin cậy.",
+  "zh-Hans": "回顾性：在设计该练习时，2020–25 年的结果已经已知。需要进行未受触碰的检验，就需要一个独立的未来时期或组织层面的留出集。六个年度误差高度相关，且数量太少，无法可靠地对模型进行排序。"
+ },
+ "Room for improvement: compare provincial land receipts and fines/fees, add organisational or faction evidence, and run head-replacement and full-reset experiments. A future forecast must state its information cutoff and score only outcomes not already seen. These proposed checks are not completed findings.": {
+  "fr": "Pistes d’amélioration : comparer les recettes foncières provinciales et les amendes/redevances, ajouter des éléments organisationnels ou factionnels, et mener des expériences de remplacement de tête et de réinitialisation complète. Une prévision future doit indiquer sa date limite d’information et n’évaluer que des résultats non déjà observés. Ces vérifications proposées ne sont pas des résultats achevés.",
+  "vi": "Dư địa cải thiện: so sánh nguồn thu từ đất và tiền phạt/phí ở cấp tỉnh, bổ sung bằng chứng về tổ chức hoặc phe phái, và chạy các thí nghiệm thay thế người đứng đầu và đặt lại hoàn toàn. Một dự báo tương lai phải nêu rõ mốc cắt thông tin của nó và chỉ tính điểm những kết quả chưa từng được thấy. Các kiểm tra được đề xuất này không phải là những phát hiện đã hoàn thành.",
+  "zh-Hans": "改进空间：比较省级土地收入与罚款/收费，增加组织或派系证据，并开展更换负责人和完全重置实验。未来预测必须说明其信息截止点，并且只对尚未见过的结果评分。这些拟议的检验并非已完成的发现。"
+ },
+ "forecast cases filed in year t": {
+  "fr": "prévoir les affaires enregistrées pour l’année t",
+  "vi": "dự báo số vụ việc được lập hồ sơ trong năm t",
+  "zh-Hans": "预测第 t 年立案的案件数"
+ },
+ "A forecast of 700 against an observation of 1,000 gives ln 700 − ln 1,000 ≈ −0.357; squared ≈ 0.127. Averaging over years and taking the square root gives the reported log RMSE.": {
+  "fr": "Une prévision de 700 face à une observation de 1 000 donne ln 700 − ln 1 000 ≈ −0,357 ; au carré ≈ 0,127. La moyenne sur les années puis la racine carrée donnent le log RMSE rapporté.",
+  "vi": "Một dự báo 700 so với quan sát 1.000 cho ln 700 − ln 1.000 ≈ −0,357; bình phương ≈ 0,127. Lấy trung bình qua các năm và lấy căn bậc hai cho ra log RMSE được báo cáo.",
+  "zh-Hans": "预测值为 700 而观测值为 1,000 时，得到 ln 700 − ln 1,000 ≈ −0.357；平方 ≈ 0.127。对各年取平均并取平方根，即得到所报告的对数 RMSE。"
+ },
+ "CCP bus · Rival mechanisms": {
+  "fr": "Bus du PCC · Mécanismes rivaux",
+  "vi": "Xe buýt CCP · Các cơ chế đối lập",
+  "zh-Hans": "中共巴士 · 对立机制"
+ },
+ "Adds land revenue, credit, PLA procurement, four sectors and faction dynamics. Pattern-oriented ABC against CCDI cases plus six qualitative patterns; 17 accepted fits. Not tested out of sample.": {
+  "fr": "Ajoute les recettes foncières, le crédit, les marchés publics de l’APL, quatre secteurs et une dynamique factionnelle. ABC orienté motifs contre les affaires de la CCDI plus six motifs qualitatifs ; 17 ajustements acceptés. Non testé hors échantillon.",
+  "vi": "Bổ sung nguồn thu từ đất, tín dụng, mua sắm của PLA, bốn khu vực và động lực phe phái. ABC định hướng theo mẫu hình đối chiếu với các vụ việc của CCDI cùng sáu mẫu hình định tính; 17 kết quả khớp được chấp nhận. Chưa được kiểm định ngoài mẫu.",
+  "zh-Hans": "增加土地收入、信贷、解放军采购、四个部门以及派系动态。针对 CCDI 案件以及六个定性模式进行面向模式的 ABC；17 个被接受的拟合。未经过样本外检验。"
+ },
+ "CCP bus · Identification comparison": {
+  "fr": "Bus du PCC · Comparaison d’identification",
+  "vi": "Xe buýt CCP · So sánh nhận dạng",
+  "zh-Hans": "中共巴士 · 识别比较"
+ },
+ "Which rival mechanism — enforcement, social trap or bus — best reproduces the observed pattern of disciplinary filings?": {
+  "fr": "Quel mécanisme rival — répression, piège social ou bus — reproduit le mieux le schéma observé des dossiers disciplinaires ?",
+  "vi": "Cơ chế đối lập nào — thực thi, bẫy xã hội hay xe buýt — tái tạo tốt nhất mẫu hình quan sát được của các hồ sơ kỷ luật?",
+  "zh-Hans": "哪一种对立机制——执法、社会陷阱还是巴士——最能再现所观察到的纪律立案模式？"
+ },
+ "Stored experiment · Exploratory fit": {
+  "fr": "Expérience stockée · Ajustement exploratoire",
+  "vi": "Thí nghiệm đã lưu · Khớp thăm dò",
+  "zh-Hans": "已存储实验 · 探索性拟合"
+ },
+ "How do three mechanism families compare on identification in a common kernel — what each can and cannot distinguish given the observed disciplinary filings?": {
+  "fr": "Comment trois familles de mécanismes se comparent-elles en matière d’identification dans un noyau commun — qu’est-ce que chacune peut et ne peut pas distinguer compte tenu des dossiers disciplinaires observés ?",
+  "vi": "Ba nhóm cơ chế so sánh với nhau như thế nào về nhận dạng trong một hạt nhân chung — mỗi nhóm có thể và không thể phân biệt được điều gì khi dựa trên các hồ sơ kỷ luật quan sát được?",
+  "zh-Hans": "在共同内核中，三个机制族在识别方面如何比较——鉴于所观察到的纪律立案，各自能够区分和不能区分什么？"
+ },
+ "Can enforcement change corruption when obligations outlast a campaign?": {
+  "fr": "La répression peut-elle modifier la corruption lorsque les obligations survivent à une campagne ?",
+  "vi": "Liệu việc thực thi có thể làm thay đổi tham nhũng khi các nghĩa vụ kéo dài lâu hơn một chiến dịch?",
+  "zh-Hans": "当义务存续时间超过一场专项行动时，执法能否改变腐败？"
+ },
+ "CCP bus · Economy and factions (v3)": {
+  "fr": "Bus du PCC · Économie et factions (v3)",
+  "vi": "Xe buýt CCP · Kinh tế và phe phái (v3)",
+  "zh-Hans": "中共巴士 · 经济与派系（v3）"
+ },
+ "Source · experiments/ccp-bus/models/": {
+  "fr": "Source · experiments/ccp-bus/models/",
+  "vi": "Nguồn · experiments/ccp-bus/models/",
+  "zh-Hans": "来源 · experiments/ccp-bus/models/"
+ },
+ "Does a sponsored entry route keep corruption going after a campaign?": {
+  "fr": "Une voie d'entrée parrainée permet-elle à la corruption de se poursuivre après une campagne ?",
+  "vi": "Liệu một con đường gia nhập được bảo trợ có khiến tham nhũng tiếp diễn sau một chiến dịch không?",
+  "zh-Hans": "受赞助的准入途径是否会使腐败在一场运动之后持续下去？"
+ },
+ "We follow a modular “model of models” design (Page, The Model Thinker): a broad framework whose pieces switch on and off, each tested against the pattern it bears on. Each added mechanism must earn its place against a pattern in data (Grimm et al. 2005, pattern-oriented modelling).": {
+  "fr": "Nous suivons une conception modulaire de « modèle de modèles » (Page, The Model Thinker) : un cadre général dont les pièces s'activent et se désactivent, chacune étant testée par rapport au motif qu'elle concerne. Chaque mécanisme ajouté doit justifier sa place par rapport à un motif dans les données (Grimm et al. 2005, modélisation orientée motifs).",
+  "vi": "Chúng tôi theo đuổi thiết kế mô-đun “mô hình của các mô hình” (Page, The Model Thinker): một khung tổng quát mà các thành phần có thể bật và tắt, mỗi thành phần được kiểm nghiệm dựa trên mẫu hình mà nó liên quan. Mỗi cơ chế được thêm vào phải chứng minh được vị trí của mình dựa trên một mẫu hình trong dữ liệu (Grimm et al. 2005, mô hình hóa định hướng mẫu hình).",
+  "zh-Hans": "我们采用模块化的“模型之模型”设计（Page, The Model Thinker）：一个宽泛的框架，其各组成部分可开启和关闭，每一部分都针对其所对应的模式进行检验。每一个新增机制都必须针对数据中的某一模式证明其存在的价值（Grimm et al. 2005，模式导向建模）。"
+ },
+ "Path dependence, and what the data can see": {
+  "fr": "La dépendance au sentier, et ce que les données peuvent voir",
+  "vi": "Sự phụ thuộc lộ trình, và những gì dữ liệu có thể thấy",
+  "zh-Hans": "路径依赖，以及数据所能看到的"
+ },
+ "Annual cases filed (thousands): 618 in 2020, 631 in 2021, 596 in 2022, 626 in 2023, 877 in 2024, 1,012 in 2025. The 2024–25 surge is the pattern any mechanism has to explain.": {
+  "fr": "Nombre annuel de dossiers déposés (en milliers) : 618 en 2020, 631 en 2021, 596 en 2022, 626 en 2023, 877 en 2024, 1 012 en 2025. La montée en flèche de 2024-25 est le motif que tout mécanisme doit expliquer.",
+  "vi": "Số vụ việc được thụ lý hằng năm (nghìn vụ): 618 vào năm 2020, 631 vào năm 2021, 596 vào năm 2022, 626 vào năm 2023, 877 vào năm 2024, 1.012 vào năm 2025. Sự gia tăng đột biến giai đoạn 2024–25 là mẫu hình mà bất kỳ cơ chế nào cũng phải giải thích.",
+  "zh-Hans": "每年立案数（千件）：2020年为618，2021年为631，2022年为596，2023年为626，2024年为877，2025年为1,012。2024–25年的激增是任何机制都必须解释的模式。"
+ },
+ "The models are synthetic. Agents are not real officials. The models do not claim that any real person was corrupt, was selected personally, or had any particular motive.": {
+  "fr": "Les modèles sont synthétiques. Les agents ne sont pas de véritables responsables. Les modèles n'affirment pas qu'une personne réelle ait été corrompue, ait été sélectionnée personnellement ou ait eu un motif particulier.",
+  "vi": "Các mô hình là tổng hợp. Các tác nhân không phải là quan chức thực. Các mô hình không khẳng định rằng bất kỳ người thật nào đã tham nhũng, đã được lựa chọn cá nhân, hay có bất kỳ động cơ cụ thể nào.",
+  "zh-Hans": "这些模型是合成性的。智能体并非真实的官员。这些模型并不声称任何真实的人曾腐败、曾被个人挑选，或具有任何特定动机。"
+ },
+ "Briefing for review (19 November 2026)": {
+  "fr": "Note d'information pour examen (19 novembre 2026)",
+  "vi": "Bản tóm tắt để xem xét (ngày 19 tháng 11 năm 2026)",
+  "zh-Hans": "供审阅的简报（2026年11月19日）"
+ },
+ "Three small families on the same snapshot": {
+  "fr": "Trois petites familles sur le même instantané",
+  "vi": "Ba họ nhỏ trên cùng một ảnh chụp trạng thái",
+  "zh-Hans": "同一快照上的三个小型族系"
+ },
+ "Current incentives: an official’s choice depends only on current deterrence. Social trap: strategic complementarities can produce multiple equilibria and hysteresis. Bus: adds sponsored entry that selects pliable clients and wires them into the sponsor’s circle, plus rewiring of corrupt officials toward each other.": {
+  "fr": "Incitations actuelles : le choix d'un responsable dépend uniquement de la dissuasion actuelle. Piège social : les complémentarités stratégiques peuvent produire des équilibres multiples et une hystérésis. Bus : ajoute une entrée parrainée qui sélectionne des clients malléables et les intègre au cercle du parrain, ainsi qu'un recâblage des responsables corrompus les uns vers les autres.",
+  "vi": "Động cơ hiện hành: lựa chọn của một quan chức chỉ phụ thuộc vào sự răn đe hiện tại. Bẫy xã hội: các bổ trợ chiến lược có thể tạo ra nhiều điểm cân bằng và hiện tượng trễ. Bus: bổ sung con đường gia nhập được bảo trợ, lựa chọn những khách hàng dễ uốn nắn và gắn họ vào vòng tròn của người bảo trợ, cùng với việc tái kết nối các quan chức tham nhũng với nhau.",
+  "zh-Hans": "当前激励：官员的选择仅取决于当前的威慑。社会陷阱：策略互补性可产生多重均衡与滞后现象。Bus：增加受赞助的准入途径，该途径挑选易受摆布的客户并将其接入赞助者的圈子，同时将腐败官员相互重新连接。"
+ },
+ "v1 model source and experiments": {
+  "fr": "Source et expériences du modèle v1",
+  "vi": "Mã nguồn và thí nghiệm của mô hình v1",
+  "zh-Hans": "v1模型源代码与实验"
+ },
+ "Adding land, credit and factions": {
+  "fr": "Ajout du foncier, du crédit et des factions",
+  "vi": "Bổ sung đất đai, tín dụng và các phe phái",
+  "zh-Hans": "加入土地、信贷与派系"
+ },
+ "Pattern-oriented approximate Bayesian computation (ABC) against CCDI cases plus six qualitative patterns. The model is fitted to the patterns it is asked to reproduce.": {
+  "fr": "Calcul bayésien approximatif (ABC) orienté motifs par rapport aux affaires de la CCDI, plus six motifs qualitatifs. Le modèle est ajusté aux motifs qu'on lui demande de reproduire.",
+  "vi": "Tính toán Bayes xấp xỉ (ABC) định hướng mẫu hình dựa trên các vụ việc của CCDI cùng sáu mẫu hình định tính. Mô hình được khớp với các mẫu hình mà nó được yêu cầu tái tạo.",
+  "zh-Hans": "针对CCDI案件以及六个定性模式的模式导向近似贝叶斯计算（ABC）。该模型被拟合至要求其再现的模式。"
+ },
+ "v3 README": {
+  "fr": "README v3",
+  "vi": "README v3",
+  "zh-Hans": "v3 README"
+ },
+ "A larger kernel, uncalibrated": {
+  "fr": "Un noyau plus grand, non calibré",
+  "vi": "Một hạt nhân lớn hơn, chưa được hiệu chỉnh",
+  "zh-Hans": "更大的内核，未经校准"
+ },
+ "The kernel is engineered for accounting and personnel identity. Mechanisms are labelled with Tilly’s vocabulary so that each can be switched on and off.": {
+  "fr": "Le noyau est conçu pour la comptabilité et l'identité du personnel. Les mécanismes sont étiquetés selon le vocabulaire de Tilly afin que chacun puisse être activé et désactivé.",
+  "vi": "Hạt nhân được thiết kế cho kế toán và nhận dạng nhân sự. Các cơ chế được gán nhãn theo từ vựng của Tilly để mỗi cơ chế có thể được bật và tắt.",
+  "zh-Hans": "该内核为会计与人员身份识别而设计。各机制以Tilly的术语加以标注，以便每一机制均可开启和关闭。"
+ },
+ "v6 results": {
+  "fr": "Résultats v6",
+  "vi": "Kết quả v6",
+  "zh-Hans": "v6结果"
+ },
+ "Three families on a common kernel": {
+  "fr": "Trois familles sur un noyau commun",
+  "vi": "Ba họ trên một hạt nhân chung",
+  "zh-Hans": "共同内核上的三个族系"
+ },
+ "Strict forecasts hold land receipts at their 2019 level. Conditional hindcasts use realized land receipts. The 2019 land figure was published in May 2020, so the information cutoff is 24 May 2020.": {
+  "fr": "Les prévisions strictes maintiennent les recettes foncières à leur niveau de 2019. Les rétroprévisions conditionnelles utilisent les recettes foncières réalisées. Le chiffre foncier de 2019 a été publié en mai 2020, de sorte que la date limite d'information est le 24 mai 2020.",
+  "vi": "Các dự báo nghiêm ngặt giữ doanh thu đất ở mức năm 2019. Các dự báo ngược có điều kiện sử dụng doanh thu đất thực tế. Con số đất đai năm 2019 được công bố vào tháng 5 năm 2020, do đó mốc cắt thông tin là ngày 24 tháng 5 năm 2020.",
+  "zh-Hans": "严格预测将土地收入保持在2019年水平。条件性回溯预测使用实际土地收入。2019年土地数据于2020年5月公布，因此信息截止日期为2020年5月24日。"
+ },
+ "All three miss the 2024–25 surge. They beat a last-value forecast on log RMSE (0.19 vs 0.25) mainly because last-value misses the surge by even more. On absolute error, last-value MAE is 115,667 against bus 118,066: there is no universal benchmark win.": {
+  "fr": "Les trois manquent la montée en flèche de 2024-25. Ils surpassent une prévision par dernière valeur sur le RMSE logarithmique (0,19 contre 0,25), principalement parce que la dernière valeur manque la montée en flèche encore davantage. En erreur absolue, la MAE de la dernière valeur est de 115 667 contre 118 066 pour bus : il n'y a pas de victoire universelle sur le référentiel.",
+  "vi": "Cả ba đều bỏ lỡ sự gia tăng đột biến giai đoạn 2024–25. Chúng vượt trội so với dự báo giá trị cuối trên log RMSE (0,19 so với 0,25), chủ yếu vì giá trị cuối bỏ lỡ sự gia tăng đột biến còn nhiều hơn. Về sai số tuyệt đối, MAE của giá trị cuối là 115.667 so với bus là 118.066: không có chiến thắng phổ quát trên mọi thước đo.",
+  "zh-Hans": "三者均未捕捉到2024–25年的激增。它们在对数RMSE上优于末值预测（0.19对0.25），主要是因为末值预测更严重地错过了激增。在绝对误差上，末值的MAE为115,667，而bus为118,066：并不存在普遍性的基准胜出。"
+ },
+ "These fits leave parameters weakly constrained; seven annual training targets provide little leverage for discriminating these mechanisms. Fitted values swing widely (rent −0.67 to 0.84, peer effect 0.17 to 4.0) with near-identical fit. The fitted case scale is an unknown observation coefficient; these are simulated minimum-distance fits, not posterior estimates.": {
+  "fr": "Ces ajustements laissent les paramètres faiblement contraints ; sept cibles d'entraînement annuelles offrent peu de levier pour discriminer ces mécanismes. Les valeurs ajustées varient fortement (rente de −0,67 à 0,84, effet de pair de 0,17 à 4,0) avec un ajustement quasi identique. L'échelle des affaires ajustée est un coefficient d'observation inconnu ; il s'agit d'ajustements simulés par distance minimale, et non d'estimations a posteriori.",
+  "vi": "Các khớp nối này để lại các tham số bị ràng buộc yếu; bảy mục tiêu huấn luyện hằng năm cung cấp ít đòn bẩy để phân biệt các cơ chế này. Các giá trị được khớp dao động mạnh (tiền thuê từ −0,67 đến 0,84, hiệu ứng đồng đẳng từ 0,17 đến 4,0) với độ khớp gần như giống hệt nhau. Quy mô vụ việc được khớp là một hệ số quan sát chưa biết; đây là các khớp nối mô phỏng theo khoảng cách tối thiểu, không phải các ước lượng hậu nghiệm.",
+  "zh-Hans": "这些拟合使参数受到较弱的约束；七个年度训练目标为区分这些机制提供的杠杆很小。拟合值大幅波动（租金从−0.67到0.84，同伴效应从0.17到4.0），而拟合结果几乎相同。拟合的案件规模是一个未知的观测系数；这些是模拟的最小距离拟合，而非后验估计。"
+ },
+ "Log RMSE compares forecasts with observations on a log scale, so a miss on a small number counts as much as the same proportional miss on a large one. It is the square root of the mean squared difference between the log of the forecast and the log of the observation.": {
+  "fr": "Le RMSE logarithmique compare les prévisions aux observations sur une échelle logarithmique, de sorte qu'un écart sur un petit nombre compte autant qu'un écart proportionnel identique sur un grand nombre. Il s'agit de la racine carrée de la différence quadratique moyenne entre le logarithme de la prévision et le logarithme de l'observation.",
+  "vi": "Log RMSE so sánh các dự báo với các quan sát trên thang logarit, do đó một sai lệch trên một con số nhỏ được tính ngang với một sai lệch theo tỷ lệ tương đương trên một con số lớn. Đó là căn bậc hai của hiệu bình phương trung bình giữa logarit của dự báo và logarit của quan sát.",
+  "zh-Hans": "对数RMSE在对数尺度上比较预测与观测，因此小数值上的偏差与大幅值上相同比例的偏差同等计权。它是预测值的对数与观测值的对数之间均方差的平方根。"
+ },
+ "observed cases filed in year t": {
+  "fr": "affaires observées déposées au cours de l'année t",
+  "vi": "số vụ việc quan sát được thụ lý trong năm t",
+  "zh-Hans": "第t年观测到的立案数"
+ },
+ "v7 code (zip)": {
+  "fr": "Code v7 (zip)",
+  "vi": "Mã v7 (zip)",
+  "zh-Hans": "v7代码（zip）"
+ },
+ "Three small rival families (current incentives, social trap, bus) set to the same 30% snapshot. Only models with complementarities show hysteresis; the memoryless model never kept a campaign effect (0 of 96 runs).": {
+  "fr": "Trois petites familles rivales (incitations actuelles, piège social, bus) réglées sur le même instantané à 30 %. Seuls les modèles avec complémentarités montrent une hystérésis ; le modèle sans mémoire n'a jamais conservé d'effet de campagne (0 sur 96 exécutions).",
+  "vi": "Ba họ đối thủ nhỏ (động cơ hiện hành, bẫy xã hội, bus) được đặt trên cùng một ảnh chụp trạng thái 30%. Chỉ các mô hình có bổ trợ mới thể hiện hiện tượng trễ; mô hình không có bộ nhớ không bao giờ giữ lại hiệu ứng chiến dịch (0 trên 96 lần chạy).",
+  "zh-Hans": "三个小型竞争族系（当前激励、社会陷阱、bus）设定于同一30%快照。只有具有互补性的模型才表现出滞后现象；无记忆模型从未保留运动效应（96次运行中为0次）。"
+ },
+ "CCP bus · Tilly mechanisms": {
+  "fr": "Bus CCP · Mécanismes de Tilly",
+  "vi": "Bus CCP · Các cơ chế của Tilly",
+  "zh-Hans": "CCP bus · Tilly机制"
+ },
+ "The three rival families on the v6 kernel, fitted to 2013–19 filings and scored on 2020–25. Retrospective: outcomes were known when the exercise was designed. Bus and social trap are indistinguishable on case counts.": {
+  "fr": "Les trois familles rivales sur le noyau v6, ajustées aux dépôts de 2013-19 et évaluées sur 2020-25. Rétrospectif : les résultats étaient connus lors de la conception de l'exercice. Bus et piège social sont indiscernables sur le nombre d'affaires.",
+  "vi": "Ba họ đối thủ trên hạt nhân v6, được khớp với số vụ thụ lý giai đoạn 2013–19 và được chấm điểm trên giai đoạn 2020–25. Hồi cứu: các kết quả đã được biết khi bài tập được thiết kế. Bus và bẫy xã hội không thể phân biệt được về số lượng vụ việc.",
+  "zh-Hans": "v6内核上的三个竞争族系，拟合至2013–19年立案数据，并在2020–25年上评分。回溯性：在设计该练习时结果已为人所知。bus与社会陷阱在案件数量上无法区分。"
+ },
+ "Stored experiment · Mechanism comparison": {
+  "fr": "Expérience archivée · Comparaison de mécanismes",
+  "vi": "Thí nghiệm đã lưu · So sánh cơ chế",
+  "zh-Hans": "已存储实验 · 机制比较"
+ },
+ "Can Tilly-style state-making mechanisms — extraction, coercion and capital — illustrate how enforcement obligations outlast a campaign?": {
+  "fr": "Les mécanismes de formation de l'État à la manière de Tilly — extraction, coercition et capital — peuvent-ils illustrer comment les obligations d'application survivent à une campagne ?",
+  "vi": "Liệu các cơ chế xây dựng nhà nước kiểu Tilly — khai thác, cưỡng chế và tư bản — có thể minh họa cách các nghĩa vụ thực thi tồn tại lâu hơn một chiến dịch không?",
+  "zh-Hans": "Tilly式的国家建构机制——提取、强制与资本——能否说明执法义务如何在一场运动之后持续存在？"
+ },
+ "Stored experiment · Retrospective evaluation": {
+  "fr": "Expérience archivée · Évaluation rétrospective",
+  "vi": "Thí nghiệm đã lưu · Đánh giá hồi cứu",
+  "zh-Hans": "已存储实验 · 回溯性评估"
+ },
+ "Four stored model versions compare competing synthetic mechanisms against observed disciplinary filings. The models describe mechanisms, not the prevalence of corruption.": {
+  "fr": "Quatre versions de modèle archivées comparent des mécanismes synthétiques concurrents aux dépôts disciplinaires observés. Les modèles décrivent des mécanismes, non la prévalence de la corruption.",
+  "vi": "Bốn phiên bản mô hình đã lưu so sánh các cơ chế tổng hợp cạnh tranh với số vụ thụ lý kỷ luật quan sát được. Các mô hình mô tả cơ chế, không phải mức độ phổ biến của tham nhũng.",
+  "zh-Hans": "四个已存储的模型版本将相互竞争的合成机制与观测到的纪律立案数据进行比较。这些模型描述的是机制，而非腐败的普遍程度。"
+ },
+ "CCP bus · Tilly mechanisms (v6)": {
+  "fr": "Bus CCP · Mécanismes de Tilly (v6)",
+  "vi": "Bus CCP · Các cơ chế của Tilly (v6)",
+  "zh-Hans": "CCP bus · Tilly机制（v6）"
+ },
+ "This project’s user manuscript, The Priest and the Bandit, argues that Chinese Communist Party (CCP) corruption is the payroll of a clergy, not deviance: entry by sponsorship creates obligations and shared exposure that keep corruption going after enforcement changes. The manuscript is not peer reviewed, and nothing here treats its claims as established fact. In modelling terms, the claim is path dependence. This page follows four stored model versions that ask whether that claim can be told apart from simpler mechanisms in the data we have. All agents are synthetic.": {
+  "fr": "Le manuscrit de l’utilisateur de ce projet, The Priest and the Bandit, soutient que la corruption au sein du Parti communiste chinois (PCC) relève de la solde d’un clergé et non d’une déviance : l’entrée par parrainage crée des obligations et une exposition partagée qui maintiennent la corruption après un changement des dispositifs de contrôle. Le manuscrit n’a pas fait l’objet d’une évaluation par les pairs, et rien ici ne traite ses affirmations comme des faits établis. En termes de modélisation, l’affirmation est celle d’une dépendance au sentier. Cette page suit quatre versions de modèle archivées qui demandent si cette affirmation peut être distinguée de mécanismes plus simples dans les données dont nous disposons. Tous les agents sont synthétiques.",
+  "vi": "Bản thảo của người dùng trong dự án này, The Priest and the Bandit, lập luận rằng tham nhũng trong Đảng Cộng sản Trung Quốc (CCP) là bảng lương của một giới tăng lữ chứ không phải là sự lệch chuẩn: việc gia nhập thông qua bảo trợ tạo ra các nghĩa vụ và sự phơi nhiễm chung, khiến tham nhũng tiếp diễn sau khi các biện pháp thực thi thay đổi. Bản thảo chưa được bình duyệt, và không nội dung nào ở đây coi các tuyên bố của bản thảo là sự thật đã được xác lập. Theo thuật ngữ mô hình hóa, tuyên bố này là sự phụ thuộc vào lộ trình. Trang này theo dõi bốn phiên bản mô hình đã lưu, nhằm hỏi liệu tuyên bố đó có thể được phân biệt với các cơ chế đơn giản hơn trong dữ liệu mà chúng ta có hay không. Tất cả các tác nhân đều là tổng hợp.",
+  "zh-Hans": "本项目的用户手稿《The Priest and the Bandit》主张，中国共产党（CCP）的腐败是神职人员的薪俸，而非越轨行为：通过举荐进入会形成义务与共同暴露，使腐败在执法变化之后仍得以延续。该手稿未经同行评审，本页任何内容均不将其主张视为既定事实。就建模而言，该主张属于路径依赖。本页追踪四个已存储的模型版本，考察在我们所拥有的数据中，该主张能否与更简单的机制相区分。所有主体均为合成主体。"
+ },
+ "The user manuscript The Priest and the Bandit is the source of the hypothesis. It is not peer reviewed. Nothing on this page treats its claims as established fact, and nothing here estimates the actual prevalence of corruption in China, identifies any real official as corrupt, or describes anyone’s personal motives.": {
+  "fr": "Le manuscrit de l’utilisateur The Priest and the Bandit est la source de l’hypothèse. Il n’a pas fait l’objet d’une évaluation par les pairs. Rien sur cette page ne traite ses affirmations comme des faits établis, et rien ici n’estime la prévalence réelle de la corruption en Chine, n’identifie aucun responsable réel comme corrompu, ni ne décrit les motivations personnelles de quiconque.",
+  "vi": "Bản thảo của người dùng The Priest and the Bandit là nguồn của giả thuyết. Bản thảo chưa được bình duyệt. Không nội dung nào trên trang này coi các tuyên bố của bản thảo là sự thật đã được xác lập, và không nội dung nào ở đây ước tính mức độ phổ biến thực tế của tham nhũng ở Trung Quốc, xác định bất kỳ quan chức thực tế nào là tham nhũng, hay mô tả động cơ cá nhân của bất kỳ ai.",
+  "zh-Hans": "用户手稿《The Priest and the Bandit》是该假设的来源。该手稿未经同行评审。本页任何内容均不将其主张视为既定事实，本页也不估计中国腐败的实际普遍程度，不指认任何真实官员存在腐败，亦不描述任何人的个人动机。"
+ },
+ "If sponsored entry keeps corruption going after a campaign, what should we see, and what do the filings actually record?": {
+  "fr": "Si l’entrée par parrainage maintient la corruption après une campagne, que devrions-nous observer, et que consignent réellement les dossiers ?",
+  "vi": "Nếu việc gia nhập thông qua bảo trợ khiến tham nhũng tiếp diễn sau một chiến dịch, chúng ta nên quan sát thấy gì, và các hồ sơ thực tế ghi nhận những gì?",
+  "zh-Hans": "如果通过举荐进入使腐败在一场运动之后仍得以延续，我们应当看到什么，而备案材料实际记录了些什么？"
+ },
+ "The 2019 land figure was published in May 2020, so the information cutoff for the v7 exercise is 24 May 2020. The 2020–25 outcomes were already known when the exercise was designed; this is a retrospective holdout, not an untouched forecast.": {
+  "fr": "Le chiffre foncier de 2019 a été publié en mai 2020 ; la date limite d’information pour l’exercice v7 est donc le 24 mai 2020. Les résultats de 2020–25 étaient déjà connus lors de la conception de l’exercice ; il s’agit d’une validation rétrospective sur données retenues, et non d’une prévision sur données intactes.",
+  "vi": "Số liệu đất đai năm 2019 được công bố vào tháng 5 năm 2020, do đó mốc cắt thông tin cho bài tập v7 là ngày 24 tháng 5 năm 2020. Các kết quả giai đoạn 2020–25 đã được biết khi bài tập được thiết kế; đây là một phép kiểm định giữ lại hồi cứu, không phải một dự báo trên dữ liệu chưa bị chạm tới.",
+  "zh-Hans": "2019 年的土地数据于 2020 年 5 月发布，因此 v7 练习的信息截止日期为 2020 年 5 月 24 日。在设计该练习时，2020–25 年的结果已为人所知；这是一次回溯性的留出检验，而非未受触碰的预测。"
+ },
+ "The hypothesis is testable in principle. Whether the available data can distinguish it from simpler mechanisms is the question the four model versions address.": {
+  "fr": "L’hypothèse est en principe testable. La question à laquelle répondent les quatre versions de modèle est de savoir si les données disponibles permettent de la distinguer de mécanismes plus simples.",
+  "vi": "Về nguyên tắc, giả thuyết này có thể kiểm định được. Liệu dữ liệu sẵn có có thể phân biệt nó với các cơ chế đơn giản hơn hay không chính là câu hỏi mà bốn phiên bản mô hình giải quyết.",
+  "zh-Hans": "该假设原则上可检验。现有数据能否将其与更简单的机制相区分，正是四个模型版本所处理的问题。"
+ },
+ "v7 results and holdout scores": {
+  "fr": "Résultats v7 et scores de validation sur données retenues",
+  "vi": "Kết quả v7 và điểm số kiểm định giữ lại",
+  "zh-Hans": "v7 结果与留出检验得分"
+ },
+ "Can a memoryless model ever keep a campaign effect?": {
+  "fr": "Un modèle sans mémoire peut-il jamais conserver un effet de campagne ?",
+  "vi": "Một mô hình không có bộ nhớ liệu có bao giờ giữ được hiệu ứng của một chiến dịch không?",
+  "zh-Hans": "无记忆模型能否保留运动效应？"
+ },
+ "Only models with complementarities (finite investigators, peer reporting) show hysteresis. The memoryless model never kept a campaign effect: 0 of 96 runs.": {
+  "fr": "Seuls les modèles présentant des complémentarités (enquêteurs en nombre fini, signalement par les pairs) manifestent une hystérésis. Le modèle sans mémoire n’a jamais conservé d’effet de campagne : 0 sur 96 exécutions.",
+  "vi": "Chỉ những mô hình có tính bổ trợ (số điều tra viên hữu hạn, báo cáo giữa các đồng nghiệp) mới thể hiện hiện tượng trễ. Mô hình không có bộ nhớ không bao giờ giữ được hiệu ứng của một chiến dịch: 0 trên 96 lần chạy.",
+  "zh-Hans": "只有具有互补性的模型（有限的调查人员、同伴举报）才表现出滞后现象。无记忆模型从未保留运动效应：96 次运行中为 0 次。"
+ },
+ "v1 code (zip)": {
+  "fr": "Code v1 (zip)",
+  "vi": "Mã v1 (zip)",
+  "zh-Hans": "v1 代码（zip）"
+ },
+ "Does a richer political economy change what the bus predicts?": {
+  "fr": "Une économie politique plus riche modifie-t-elle ce que prédit le bus ?",
+  "vi": "Một nền kinh tế chính trị phong phú hơn có làm thay đổi những gì mô hình bus dự đoán không?",
+  "zh-Hans": "更丰富的政治经济学是否会改变 bus 的预测？"
+ },
+ "17 accepted fits. Within the simulation, modeled faction status predicts simulated removal about as well as modeled corruption (AUC 0.67 vs 0.66). This is a within-simulation discrimination, not an empirical finding about real officials.": {
+  "fr": "17 ajustements acceptés. Au sein de la simulation, le statut factionnel modélisé prédit l’éviction simulée à peu près aussi bien que la corruption modélisée (AUC 0,67 contre 0,66). Il s’agit d’une discrimination interne à la simulation, et non d’un résultat empirique concernant de réels responsables.",
+  "vi": "17 lần khớp được chấp nhận. Trong nội bộ mô phỏng, địa vị phe phái được mô hình hóa dự đoán việc bị loại bỏ trong mô phỏng gần như tốt ngang với tham nhũng được mô hình hóa (AUC 0,67 so với 0,66). Đây là một sự phân biệt trong nội bộ mô phỏng, không phải một phát hiện thực nghiệm về các quan chức thực tế.",
+  "zh-Hans": "17 次被接受的拟合。在模拟内部，建模的派系地位对模拟免职的预测能力与建模的腐败大致相当（AUC 0.67 对 0.66）。这是模拟内部的区分，而非关于真实官员的实证发现。"
+ },
+ "v3 code (zip)": {
+  "fr": "Code v3 (zip)",
+  "vi": "Mã v3 (zip)",
+  "zh-Hans": "v3 代码（zip）"
+ },
+ "What does a large Tilly-style kernel add, and what does it not yet show?": {
+  "fr": "Qu’apporte un noyau de type Tilly de grande taille, et que ne montre-t-il pas encore ?",
+  "vi": "Một hạt nhân kiểu Tilly quy mô lớn bổ sung điều gì, và nó chưa cho thấy điều gì?",
+  "zh-Hans": "大型 Tilly 式内核增加了什么，又尚未展示什么？"
+ },
+ "Well engineered: 14 passing checks and exact accounting. These checks are implementation verification, not a scientific result. Uncalibrated: 42 hand-set parameters, several mechanisms inert, little memory.": {
+  "fr": "Bien conçu : 14 contrôles réussis et une comptabilité exacte. Ces contrôles relèvent de la vérification de l’implémentation, et non d’un résultat scientifique. Non calibré : 42 paramètres fixés manuellement, plusieurs mécanismes inertes, peu de mémoire.",
+  "vi": "Được thiết kế tốt: 14 kiểm tra đạt và hạch toán chính xác. Các kiểm tra này là xác minh triển khai, không phải một kết quả khoa học. Chưa hiệu chỉnh: 42 tham số được đặt thủ công, một số cơ chế không hoạt động, ít bộ nhớ.",
+  "zh-Hans": "工程设计良好：14 项检查通过，核算精确。这些检查属于实现验证，而非科学结果。未经校准：42 个手工设定参数，若干机制处于惰性状态，记忆性很弱。"
+ },
+ "v6 code (zip)": {
+  "fr": "Code v6 (zip)",
+  "vi": "Mã v6 (zip)",
+  "zh-Hans": "v6 代码（zip）"
+ },
+ "On a common kernel, can the bus be told apart from simpler mechanisms?": {
+  "fr": "Sur un noyau commun, le bus peut-il être distingué de mécanismes plus simples ?",
+  "vi": "Trên một hạt nhân chung, liệu mô hình bus có thể được phân biệt với các cơ chế đơn giản hơn không?",
+  "zh-Hans": "在共同内核上，bus 能否与更简单的机制相区分？"
+ },
+ "A shared case scale is profiled separately for each fit. The 64-draw search and three families generated 192 candidate evaluations, each with two screening seeds; the best four per family were re-ranked with eight independent training seeds. Five parameter dimensions were sampled, with peer gain and reporting capture inactive in the current-incentives family.": {
+  "fr": "Une échelle de cas commune est profilée séparément pour chaque ajustement. La recherche à 64 tirages et trois familles ont généré 192 évaluations de candidats, chacune avec deux graines de présélection ; les quatre meilleures par famille ont été reclassées avec huit graines d’entraînement indépendantes. Cinq dimensions de paramètres ont été échantillonnées, le gain entre pairs et la captation du signalement étant inactifs dans la famille des incitations actuelles.",
+  "vi": "Một thang đo trường hợp chung được lập hồ sơ riêng cho từng lần khớp. Tìm kiếm 64 lần rút và ba họ đã tạo ra 192 đánh giá ứng viên, mỗi đánh giá với hai hạt giống sàng lọc; bốn ứng viên tốt nhất mỗi họ được xếp hạng lại với tám hạt giống huấn luyện độc lập. Năm chiều tham số được lấy mẫu, với lợi ích giữa các đồng nghiệp và việc chiếm đoạt báo cáo ở trạng thái không hoạt động trong họ động cơ hiện hành.",
+  "zh-Hans": "共享的案件尺度针对每次拟合分别进行剖面分析。64 次抽取搜索与三个族共产生 192 次候选评估，每次评估使用两个筛选种子；每个族中最佳的四项以八个独立训练种子重新排序。共对五个参数维度进行抽样，其中同伴增益与举报俘获在当前激励族中处于非活动状态。"
+ },
+ "Memory test: four matched seeds per family began at 5% and 95% misconduct with identical external conditions. The fitted social and bus families show a large initial response (bus +0.8332 at step 1) followed by rapid convergence (≈0 by step 10). This is a state-initialization test only; head replacement and full network reset were not run.": {
+  "fr": "Test de mémoire : quatre graines appariées par famille ont débuté à 5 % et 95 % d’inconduite avec des conditions externes identiques. Les familles ajustées sociale et bus montrent une forte réponse initiale (bus +0,8332 à l’étape 1), suivie d’une convergence rapide (≈0 à l’étape 10). Il s’agit uniquement d’un test d’initialisation d’état ; le remplacement de tête et la réinitialisation complète du réseau n’ont pas été exécutés.",
+  "vi": "Kiểm tra bộ nhớ: bốn hạt giống được ghép cặp cho mỗi họ bắt đầu ở mức 5% và 95% hành vi sai trái với các điều kiện bên ngoài giống hệt nhau. Các họ xã hội và bus đã khớp cho thấy phản ứng ban đầu lớn (bus +0,8332 ở bước 1), sau đó hội tụ nhanh (≈0 ở bước 10). Đây chỉ là một kiểm tra khởi tạo trạng thái; việc thay thế phần đầu và đặt lại toàn bộ mạng chưa được chạy.",
+  "zh-Hans": "记忆检验：每个族的四个配对种子分别以 5% 和 95% 的不当行为水平起步，外部条件完全相同。拟合的社会族与 bus 族表现出较大的初始响应（bus 在第 1 步为 +0.8332），随后迅速收敛（到第 10 步约为 0）。这仅是状态初始化检验；头部替换与完整网络重置均未运行。"
+ },
+ "The memory test does not establish that other parameter regions or interventions lack memory. The replacement and full-reset tests described in the spec remain outstanding.": {
+  "fr": "Le test de mémoire n’établit pas que d’autres régions de paramètres ou interventions soient dépourvues de mémoire. Les tests de remplacement et de réinitialisation complète décrits dans la spécification restent à réaliser.",
+  "vi": "Kiểm tra bộ nhớ không chứng minh rằng các vùng tham số hay can thiệp khác không có bộ nhớ. Các kiểm tra thay thế và đặt lại toàn bộ được mô tả trong đặc tả vẫn còn chưa thực hiện.",
+  "zh-Hans": "记忆检验并不能证明其他参数区域或干预措施缺乏记忆。规范中所述的替换检验与完整重置检验仍有待完成。"
+ },
+ "number of forecast years (6 in v7)": {
+  "fr": "nombre d’années de prévision (6 dans v7)",
+  "vi": "số năm dự báo (6 trong v7)",
+  "zh-Hans": "预测年数（v7 中为 6）"
+ },
+ "natural logarithm": {
+  "fr": "logarithme naturel",
+  "vi": "lôgarit tự nhiên",
+  "zh-Hans": "自然对数"
+ },
+ "Briefing for review": {
+  "fr": "Note d’information pour examen",
+  "vi": "Bản tóm tắt để xem xét",
+  "zh-Hans": "供审阅的简报"
+ },
+ "CCP bus · Economy and factions": {
+  "fr": "Bus PCC · Économie et factions",
+  "vi": "Bus CCP · Kinh tế và phe phái",
+  "zh-Hans": "CCP bus · 经济与派系"
+ },
+ "50,000 agents, 64 organisations, 5 ranks, Tilly-labelled mechanisms. Well engineered (14 passing checks, exact accounting) but uncalibrated: 42 hand-set parameters, several mechanisms inert, little memory.": {
+  "fr": "50 000 agents, 64 organisations, 5 rangs, mécanismes étiquetés Tilly. Bien conçu (14 contrôles réussis, comptabilité exacte) mais non calibré : 42 paramètres fixés manuellement, plusieurs mécanismes inertes, peu de mémoire.",
+  "vi": "50.000 tác nhân, 64 tổ chức, 5 cấp bậc, các cơ chế được gắn nhãn Tilly. Được thiết kế tốt (14 kiểm tra đạt, hạch toán chính xác) nhưng chưa hiệu chỉnh: 42 tham số được đặt thủ công, một số cơ chế không hoạt động, ít bộ nhớ.",
+  "zh-Hans": "50,000 个主体、64 个组织、5 个层级、以 Tilly 命名的机制。工程设计良好（14 项检查通过，核算精确），但未经校准：42 个手工设定参数，若干机制处于惰性状态，记忆性很弱。"
+ },
+ "On national case counts, the bus cannot yet be told apart from simpler mechanisms. Bus and social trap are indistinguishable (log RMSE 0.1898 vs 0.1896), all three families miss the 2024–25 surge, and the memory test finds no lasting memory at the fitted settings. The bus is a coherent, testable theory instrument, not yet evidence for itself. All agents are synthetic. Nothing here estimates the actual prevalence of corruption in China, identifies any real official as corrupt, or describes anyone’s personal motives.": {
+  "fr": "Sur les décomptes nationaux de cas, le bus ne peut pas encore être distingué de mécanismes plus simples. Le bus et le piège social sont indiscernables (log RMSE 0,1898 contre 0,1896), les trois familles manquent la montée de 2024–25, et le test de mémoire ne trouve aucune mémoire durable aux réglages ajustés. Le bus est un instrument théorique cohérent et testable, mais pas encore une preuve de lui-même. Tous les agents sont synthétiques. Rien ici n’estime la prévalence réelle de la corruption en Chine, n’identifie aucun responsable réel comme corrompu, ni ne décrit les motivations personnelles de quiconque.",
+  "vi": "Trên các số liệu đếm trường hợp quốc gia, mô hình bus chưa thể được phân biệt với các cơ chế đơn giản hơn. Bus và bẫy xã hội không thể phân biệt được (log RMSE 0,1898 so với 0,1896), cả ba họ đều bỏ lỡ đợt gia tăng 2024–25, và kiểm tra bộ nhớ không tìm thấy bộ nhớ lâu dài ở các thiết lập đã khớp. Bus là một công cụ lý thuyết mạch lạc, có thể kiểm định, nhưng chưa phải là bằng chứng cho chính nó. Tất cả các tác nhân đều là tổng hợp. Không nội dung nào ở đây ước tính mức độ phổ biến thực tế của tham nhũng ở Trung Quốc, xác định bất kỳ quan chức thực tế nào là tham nhũng, hay mô tả động cơ cá nhân của bất kỳ ai.",
+  "zh-Hans": "就全国案件计数而言，bus 尚无法与更简单的机制相区分。bus 与社会陷阱无法区分（对数 RMSE 0.1898 对 0.1896），三个族均未捕捉到 2024–25 年的激增，记忆检验在拟合设定下未发现持久记忆。bus 是一个连贯、可检验的理论工具，但尚不能作为自身的证据。所有主体均为合成主体。本页任何内容均不估计中国腐败的实际普遍程度，不指认任何真实官员存在腐败，亦不描述任何人的个人动机。"
+ },
+ "How do economic conditions and factional competition interact to shape enforcement outcomes in the stored exploratory fit?": {
+  "fr": "Comment les conditions économiques et la concurrence factionnelle interagissent-elles pour façonner les résultats du contrôle dans l’ajustement exploratoire archivé ?",
+  "vi": "Các điều kiện kinh tế và cạnh tranh phe phái tương tác như thế nào để định hình kết quả thực thi trong lần khớp thăm dò đã lưu?",
+  "zh-Hans": "在已存储的探索性拟合中，经济状况与派系竞争如何相互作用以塑造执法结果？"
+ },
+ "Stored experiment · Illustrative kernel": {
+  "fr": "Expérience archivée · Noyau illustratif",
+  "vi": "Thí nghiệm đã lưu · Hạt nhân minh họa",
+  "zh-Hans": "已存储实验 · 示例性内核"
+ },
+ "Political economy": {
+  "fr": "Économie politique",
+  "vi": "Kinh tế chính trị",
+  "zh-Hans": "政治经济学"
+ },
+ "CCP bus · Rival mechanisms (v1)": {
+  "fr": "Bus PCC · Mécanismes rivaux (v1)",
+  "vi": "Bus CCP · Các cơ chế đối thủ (v1)",
+  "zh-Hans": "CCP bus · 竞争性机制（v1）"
+ },
+ "CCP bus · Identification comparison (v7)": {
+  "fr": "Bus PCC · Comparaison d’identification (v7)",
+  "vi": "Bus CCP · So sánh nhận dạng (v7)",
+  "zh-Hans": "CCP bus · 识别比较（v7）"
  }
 }

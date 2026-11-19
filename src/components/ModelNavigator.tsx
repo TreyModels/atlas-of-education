@@ -14,11 +14,12 @@ const families: { id: ModelFamily; entry: string }[] = [
   { id: 'fertility', entry: 'home/fertility-models' },
   { id: 'shadow', entry: 'home/shadow-models' },
   { id: 'deephistory', entry: 'home/deep-history' },
+  { id: 'politics', entry: 'story-politics' },
 ]
 
 export function ModelNavigator({ route, navigate, t }: { route: string; navigate: (id: string) => void; t: Translate }) {
   const activeItem = catalogue.find(item => item.route === route)
-  const family = families.find(item => item.id === activeItem?.family || (item.id === 'angkor' && route === 'angkor-guide'))
+  const family = families.find(item => item.id === activeItem?.family || (item.id === 'angkor' && route === 'angkor-guide') || (item.id === 'politics' && route === 'story-politics'))
   const open = (id: string) => {
     const item = catalogue.find(model => model.id === id)
     if (!item) return

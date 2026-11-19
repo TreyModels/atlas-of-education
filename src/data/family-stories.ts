@@ -288,4 +288,27 @@ export const familyStories: Record<ModelFamily, FamilyStory> = {
     ],
     bottomLine: 'No single mechanism carries the story: climate sets the timing, distance strains the army, and trust decides whether the centre holds. The models test mechanisms, not verdicts.',
   },
+
+  politics: {
+    kicker: 'What our models support',
+    title: 'Can enforcement change corruption when obligations outlast a campaign?',
+    lede: 'Four stored model versions compare competing synthetic mechanisms against observed disciplinary filings. They describe mechanisms, not the prevalence of corruption.',
+    sections: [
+      {
+        heading: 'Four stored versions, one question',
+        blocks: [
+          { kind: 'para', tag: 'method', text: 'The CCP bus experiments are stored model versions, not live workbenches. Each version is a fixed artefact with its own status: v1 is a mechanism comparison matched to an illustrative snapshot, with rivals being enforcement, social trap and bus; v3 is an exploratory fit in which factions enter; v6 is an illustrative, un-calibrated kernel; and v7 is a retrospective fit and evaluation.' },
+          { kind: 'para', tag: 'open', text: 'The models are synthetic. They are calibrated against observed disciplinary filings, which record enforcement activity rather than the underlying prevalence of corruption.' },
+        ],
+      },
+      {
+        heading: 'What the versions can and cannot show',
+        blocks: [
+          { kind: 'para', tag: 'sim', text: 'In v1, the rival mechanisms — enforcement, social trap and bus — can each be made to reproduce features of the filing record. The comparison shows which mechanisms are consistent with the record, not which one is true. Factional competition enters only in v3.' },
+          { kind: 'para', tag: 'open', text: 'Identification is the central limitation: the stored versions differ in what they can distinguish. v7 compares three mechanism families within a common kernel, rather than pitting v1, v3, v6 and v7 against one another, and its retrospective evaluation is a check on those differences rather than a verdict.' },
+        ],
+      },
+    ],
+    bottomLine: 'Enforcement can change what gets filed, but obligations that outlast a campaign make it hard to tell a change in corruption from a change in reporting. The stored versions test mechanisms, not prevalence.',
+  },
 }

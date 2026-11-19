@@ -1,0 +1,8 @@
+year,geography,variable,value,unit,source_id,status,note
+2013,China,cases_filed,172000.0,cases,ccdi_2013_18,verified_official_release,Rounded annual totals; discipline and supervision scope evolves.
+2014,China,cases_filed,226000.0,cases,ccdi_2013_18,verified_official_release,Rounded annual totals; discipline and supervision scope evolves.
+2015,China,cases_filed,330000.0,cases,ccdi_2013_18,verified_official_release,Rounded annual totals; discipline and supervision scope evolves.
+2016,China,cases_filed,413000.0,cases,ccdi_2013_18,verified_official_release,Rounded annual totals; discipline and supervision scope evolves.
+2017,China,cases_filed,527000.0,cases,ccdi_2013_18,verified_official_release,Rounded annual totals; discipline and supervision scope evolves.
+2018,China,cases_filed,638000.0,cases,ccdi_2013_18,verified_official_release,Rounded annual totals; discipline and supervision scope evolves.
+2019,China,cases_filed,619000.0,cases,ccdi_2019,verified_official_release,
