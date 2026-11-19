@@ -59,6 +59,7 @@ async function runTask(t) {
     model: t.model || DEFAULT_MODEL, max_tokens: t.maxTokens || 16000, temperature: 0.2, ...thinkingParams(t.thinking),
     messages: [{ role: 'system', content: SYSTEM }, { role: 'user', content: `${t.prompt}\n\nRepository files for context:\n\n${ctx}` }],
   })
+  if (res.choices[0].finish_reason === 'length') throw Error(`truncated at max_tokens (${res.usage?.completion_tokens} tokens, ${res.usage?.completion_tokens_details?.reasoning_tokens} reasoning): split the task or lower thinking; nothing written`)
   const text = res.choices[0].message.content
   const { files, notes } = parse(text)
   const written = [], refused = []
