@@ -25,7 +25,7 @@ export const familyStatus: FamilyStatus[] = [
 
 export const callToAction = {
   title: 'Think a model is missing something? Change it.',
-  text: 'Every model can be downloaded, run on your own machine and modified. If you change an assumption, add data or find a mistake, propose your version. Proposals are reviewed by Dr. Trey Menefee before anything is listed here.',
+  text: 'Every model’s code can be downloaded and run on your own machine. If you change an assumption, add data or find a mistake, propose your version. Proposals are reviewed by Dr. Trey Menefee before anything is listed here.',
   actions: [
     { label: 'Download all the code', href: 'https://github.com/TreyModels/atlas-of-education/archive/refs/heads/main.zip' },
     { label: 'Propose a version', href: 'https://github.com/TreyModels/atlas-of-education/issues/new?template=propose-a-version.yml' },
