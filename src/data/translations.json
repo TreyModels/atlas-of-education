@@ -4878,5 +4878,14 @@
     "zh-Hans": "后验中位数；先验中位数为0.40",
     "fr": "Médiane a posteriori ; médiane a priori 0,40",
     "vi": "Trung vị hậu nghiệm; trung vị tiên nghiệm 0,40"
+  },
+  "Code & data download": {
+    "zh-Hans": "代码与数据下载"
+  },
+  "Write-up": {
+    "zh-Hans": "研究报告"
+  },
+  "Narrated journey": {
+    "zh-Hans": "叙述式导览"
   }
 }
