@@ -12,6 +12,7 @@ import { Workbench } from './components/Workbench'
 import { StoryPage } from './components/StoryPage'
 import { AngkorJourney } from './components/AngkorJourney'
 import { ccpJourney } from './data/ccp-journey'
+import { shadowJourney } from './data/shadow-journey'
 import { modelFamilies, type ModelFamily } from './data/model-catalogue'
 import { familyStories } from './data/family-stories'
 import './App.css'
@@ -99,8 +100,9 @@ export default function App() {
       {route === 'catalogue' && <Catalogue t={t} language={language} />}
       {route === 'angkor-guide' && <Guide t={t} navigate={navigate} />}
       {storyFamily === 'angkor' && <AngkorJourney key="angkor" t={t} navigate={navigate} />}
+      {storyFamily === 'shadow' && <AngkorJourney key="shadow" t={t} navigate={navigate} journey={shadowJourney} />}
       {storyFamily === 'politics' && <AngkorJourney key="politics" t={t} navigate={navigate} journey={ccpJourney} />}
-      {storyFamily && storyFamily !== 'angkor' && storyFamily !== 'politics' && <StoryPage family={storyFamily} t={t} navigate={navigate} />}
+      {storyFamily && storyFamily !== 'angkor' && storyFamily !== 'shadow' && storyFamily !== 'politics' && <StoryPage family={storyFamily} t={t} navigate={navigate} />}
       {world && <Workbench key={world.id} world={world} values={states[world.id] ?? world.defaults} onChange={values => setStates(previous => ({ ...previous, [world.id]: values }))} onReset={() => setStates(previous => { const next = { ...previous }; delete next[world.id]; return next })} onHandoff={handoff} navigate={navigate} t={t} />}
       {route && route !== 'angkor-guide' && route !== 'catalogue' && !storyFamily && !schoolRoute && !world && <Library t={t} navigate={navigate} />}
       <footer className="site-footer"><div className="shell"><span>{t('Atlas of Education')} · 2026</span><p>{t('Settings remain in this tab. Language is saved in this browser only.')}</p><p>{language === 'zh-Hans' ? '© 2026 Dr. Trey Menefee。使用或复制本作品时请注明并引用 Dr. Trey Menefee。仅限非商业用途；商业用途须事先获得许可。第三方材料可能适用其他条款。' : language === 'vi' ? '© 2026 Dr. Trey Menefee. Vui lòng ghi công và trích dẫn Dr. Trey Menefee khi sử dụng hoặc sao chép tác phẩm. Chỉ sử dụng phi thương mại; sử dụng thương mại cần được cho phép trước. Điều khoản của bên thứ ba có thể được áp dụng.' : '© 2026 Dr. Trey Menefee. Credit and cite Dr. Trey Menefee when using or reproducing this work. Noncommercial use only; commercial use requires prior permission. Third-party terms may apply.'} <a href="LICENSE.txt">{language === 'zh-Hans' ? '使用条款' : language === 'vi' ? 'Điều khoản sử dụng' : 'Reuse terms'}</a></p><a href="reference/education/index.html">{t('Full Education Atlas')}<ArrowUpRight size={14} /></a></div></footer>

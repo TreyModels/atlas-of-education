@@ -48,4 +48,15 @@ assert.ok(Math.abs(perPersonIndex(500, 1.227) - 144.1) < 0.1, 'N=500 gives 144.1
 assert.ok(perPersonIndex(10, 1.227) < perPersonIndex(100, 1.227) && perPersonIndex(100, 1.227) < perPersonIndex(2000, 1.227), 'increasing in N')
 for (const n of [10, 2000]) assert.ok(Number.isFinite(perPersonIndex(n, 1.227)))
 
+// Generic checks for every other family journey.
+for (const [file, name] of [['src/data/shadow-journey.ts', 'shadowJourney'], ['src/data/ccp-journey.ts', 'ccpJourney']]) {
+  const j = (await load(file))[name]
+  const ids = [...j.chapters.flatMap(c => c.models), ...j.deeper]
+  for (const c of j.chapters) for (const part of ['evidence', 'rule', 'result', 'limitation']) assert.ok(c[part].length > 0, `${name} ${c.id}.${part}`)
+  for (const id of new Set(ids)) { const m = j.models[id]; assert.ok(m && purposeLabel[m.purpose] && stateLabel[m.state], `${name} card ${id}`) }
+  for (const href of [...j.chapters.flatMap(c => c.sources.map(s => s.href)), ...Object.values(j.models).flatMap(m => [m.engine, m.research].filter(Boolean))])
+    if (!/^https?:/.test(href)) assert.ok(existsSync('public/' + href), `${name} broken link: ${href}`)
+  assert.ok(j.family && j.repo, name + ' family/repo')
+  console.log(`${name}: ${j.chapters.length} chapters, ${new Set(ids).size} cards, links ok.`)
+}
 console.log(`Angkor journey: ${journey.chapters.length} chapters, ${ids.length} model cards, ${rel.length} links checked. Passed.`)
