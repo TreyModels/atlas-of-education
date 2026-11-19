@@ -1,0 +1,2026 @@
+{
+ "generatedAt": "2026-11-19T14:19:39.986Z",
+ "base": "https://treymodels.github.io/atlas-of-education/",
+ "deployedSha": "0b263a120e6bc3e40f7c2e4bb6ef4db1d6906f85",
+ "pagesDeployRun": {
+  "workflow": "Deploy GitHub Pages",
+  "branch": "main",
+  "sha": "0b263a120e6bc3e40f7c2e4bb6ef4db1d6906f85",
+  "conclusion": "success",
+  "createdAt": "2026-11-19T14:06:49Z"
+ },
+ "liveAssets": [
+  "assets/index-DZq8iuf3.js",
+  "assets/index-I_lZIfSh.css"
+ ],
+ "catalogue": {
+  "renderedCards": 66,
+  "declaredCatalogueEntries": 65,
+  "experimentalInterfaces": 1,
+  "filePrimary": [
+   {
+    "id": null,
+    "title": "Credential-floor DHS test",
+    "href": "research/shadow/credential_floor_dhs.zip",
+    "buttonClass": false,
+    "click": {
+     "download": "credential_floor_dhs.zip",
+     "fileUrl": "https://treymodels.github.io/atlas-of-education/research/shadow/credential_floor_dhs.zip",
+     "landedH1": "Social science you can run.",
+     "landedHash": ""
+    }
+   },
+   {
+    "id": null,
+    "title": "Development (survival) model",
+    "href": "research/fertility/fertility-research-full.zip",
+    "buttonClass": false,
+    "click": {
+     "download": "fertility-research-full.zip",
+     "fileUrl": "https://treymodels.github.io/atlas-of-education/research/fertility/fertility-research-full.zip",
+     "landedH1": "Social science you can run.",
+     "landedHash": ""
+    }
+   },
+   {
+    "id": null,
+    "title": "Development + matching + post-2015 period dummy",
+    "href": "research/fertility/fertility-research-full.zip",
+    "buttonClass": false,
+    "click": {
+     "download": "fertility-research-full.zip",
+     "fileUrl": "https://treymodels.github.io/atlas-of-education/research/fertility/fertility-research-full.zip",
+     "landedH1": "Social science you can run.",
+     "landedHash": ""
+    }
+   },
+   {
+    "id": null,
+    "title": "Credential cohort model",
+    "href": "research/fertility/fertility-research-full.zip",
+    "buttonClass": false,
+    "click": {
+     "download": "fertility-research-full.zip",
+     "fileUrl": "https://treymodels.github.io/atlas-of-education/research/fertility/fertility-research-full.zip",
+     "landedH1": "Social science you can run.",
+     "landedHash": ""
+    }
+   },
+   {
+    "id": null,
+    "title": "Assortative matching mechanism lab",
+    "href": "research/fertility/fertility-research-full.zip",
+    "buttonClass": false,
+    "click": {
+     "download": "fertility-research-full.zip",
+     "fileUrl": "https://treymodels.github.io/atlas-of-education/research/fertility/fertility-research-full.zip",
+     "landedH1": "Social science you can run.",
+     "landedHash": ""
+    }
+   },
+   {
+    "id": null,
+    "title": "Fecundity-age model",
+    "href": "research/fertility/fertility-research-full.zip",
+    "buttonClass": false,
+    "click": {
+     "download": "fertility-research-full.zip",
+     "fileUrl": "https://treymodels.github.io/atlas-of-education/research/fertility/fertility-research-full.zip",
+     "landedH1": "Social science you can run.",
+     "landedHash": ""
+    }
+   },
+   {
+    "id": null,
+    "title": "IVF and policy suite",
+    "href": "research/fertility/fertility-research-full.zip",
+    "buttonClass": false,
+    "click": {
+     "download": "fertility-research-full.zip",
+     "fileUrl": "https://treymodels.github.io/atlas-of-education/research/fertility/fertility-research-full.zip",
+     "landedH1": "Social science you can run.",
+     "landedHash": ""
+    }
+   },
+   {
+    "id": null,
+    "title": "Post-2015 shock suite",
+    "href": "research/fertility/fertility-research-full.zip",
+    "buttonClass": false,
+    "click": {
+     "download": "fertility-research-full.zip",
+     "fileUrl": "https://treymodels.github.io/atlas-of-education/research/fertility/fertility-research-full.zip",
+     "landedH1": "Social science you can run.",
+     "landedHash": ""
+    }
+   },
+   {
+    "id": null,
+    "title": "Microplastics test",
+    "href": "research/fertility/fertility-research-full.zip",
+    "buttonClass": false,
+    "click": {
+     "download": "fertility-research-full.zip",
+     "fileUrl": "https://treymodels.github.io/atlas-of-education/research/fertility/fertility-research-full.zip",
+     "landedH1": "Social science you can run.",
+     "landedHash": ""
+    }
+   },
+   {
+    "id": null,
+    "title": "Tipping / momentum lab",
+    "href": "research/fertility/fertility-research-full.zip",
+    "buttonClass": false,
+    "click": {
+     "download": "fertility-research-full.zip",
+     "fileUrl": "https://treymodels.github.io/atlas-of-education/research/fertility/fertility-research-full.zip",
+     "landedH1": "Social science you can run.",
+     "landedHash": ""
+    }
+   },
+   {
+    "id": null,
+    "title": "Fertility research bundle",
+    "href": "research/fertility/fertility-research-full.zip",
+    "buttonClass": false,
+    "click": {
+     "download": "fertility-research-full.zip",
+     "fileUrl": "https://treymodels.github.io/atlas-of-education/research/fertility/fertility-research-full.zip",
+     "landedH1": "Social science you can run.",
+     "landedHash": ""
+    }
+   },
+   {
+    "id": null,
+    "title": "Tutoring ABM bundle",
+    "href": "research/shadow/tutoring_abm.zip",
+    "buttonClass": false,
+    "click": {
+     "download": "tutoring_abm.zip",
+     "fileUrl": "https://treymodels.github.io/atlas-of-education/research/shadow/tutoring_abm.zip",
+     "landedH1": "Social science you can run.",
+     "landedHash": ""
+    }
+   },
+   {
+    "id": null,
+    "title": "Out of Africa model bundle",
+    "href": "research/out-of-africa/coast-or-herds-model.zip",
+    "buttonClass": false,
+    "click": {
+     "download": "coast-or-herds-model.zip",
+     "fileUrl": "https://treymodels.github.io/atlas-of-education/research/out-of-africa/coast-or-herds-model.zip",
+     "landedH1": "Social science you can run.",
+     "landedHash": "",
+     "retested": true
+    }
+   },
+   {
+    "id": null,
+    "title": "CCP bus · Rival mechanisms",
+    "href": "research/ccp-bus/ccp-bus-v1.zip",
+    "buttonClass": false,
+    "click": {
+     "download": "ccp-bus-v1.zip",
+     "fileUrl": "https://treymodels.github.io/atlas-of-education/research/ccp-bus/ccp-bus-v1.zip",
+     "landedH1": "Social science you can run.",
+     "landedHash": ""
+    }
+   },
+   {
+    "id": null,
+    "title": "CCP bus · Economy and factions",
+    "href": "research/ccp-bus/ccp-bus-v3.zip",
+    "buttonClass": false,
+    "click": {
+     "download": "ccp-bus-v3.zip",
+     "fileUrl": "https://treymodels.github.io/atlas-of-education/research/ccp-bus/ccp-bus-v3.zip",
+     "landedH1": "Social science you can run.",
+     "landedHash": ""
+    }
+   },
+   {
+    "id": null,
+    "title": "CCP bus · Tilly mechanisms",
+    "href": "research/ccp-bus/ccp-bus-v6.zip",
+    "buttonClass": false,
+    "click": {
+     "download": "ccp-bus-v6.zip",
+     "fileUrl": "https://treymodels.github.io/atlas-of-education/research/ccp-bus/ccp-bus-v6.zip",
+     "landedH1": "Social science you can run.",
+     "landedHash": ""
+    }
+   },
+   {
+    "id": null,
+    "title": "CCP bus · Identification comparison",
+    "href": "research/ccp-bus/ccp-bus-v7.zip",
+    "buttonClass": false,
+    "click": {
+     "download": "ccp-bus-v7.zip",
+     "fileUrl": "https://treymodels.github.io/atlas-of-education/research/ccp-bus/ccp-bus-v7.zip",
+     "landedH1": "Social science you can run.",
+     "landedHash": ""
+    }
+   },
+   {
+    "id": null,
+    "title": "Farmer field schools · Diffusion",
+    "href": "research/field-schools/field-schools-models.zip",
+    "buttonClass": false,
+    "click": {
+     "download": "field-schools-models.zip",
+     "fileUrl": "https://treymodels.github.io/atlas-of-education/research/field-schools/field-schools-models.zip",
+     "landedH1": "Social science you can run.",
+     "landedHash": ""
+    }
+   },
+   {
+    "id": null,
+    "title": "Farmer field schools · Food-price politics",
+    "href": "research/field-schools/field-schools-models.zip",
+    "buttonClass": false,
+    "click": {
+     "download": "field-schools-models.zip",
+     "fileUrl": "https://treymodels.github.io/atlas-of-education/research/field-schools/field-schools-models.zip",
+     "landedH1": "Social science you can run.",
+     "landedHash": ""
+    }
+   }
+  ],
+  "pagePrimary": [
+   {
+    "title": "Massification · Parents & peers",
+    "href": "research/massification/index.html#parents",
+    "click": {
+     "download": null,
+     "landedH1": "Why does everyonekeep going?",
+     "landedHash": "#parents"
+    }
+   },
+   {
+    "title": "Massification · Three actors",
+    "href": "research/massification/index.html#actors",
+    "click": {
+     "download": null,
+     "landedH1": "Why does everyonekeep going?",
+     "landedHash": "#actors"
+    }
+   },
+   {
+    "title": "Massification · Unequal access",
+    "href": "research/massification/index.html#access",
+    "click": {
+     "download": null,
+     "landedH1": "Why does everyonekeep going?",
+     "landedHash": "#access"
+    }
+   },
+   {
+    "title": "Massification · Persistence",
+    "href": "research/massification/index.html#persistence",
+    "click": {
+     "download": null,
+     "landedH1": "Why does everyonekeep going?",
+     "landedHash": "#persistence"
+    }
+   },
+   {
+    "title": "The six-district city",
+    "href": "reference/education/index.html#world=city",
+    "click": {
+     "download": null,
+     "landedH1": "Children come. Children go. The school system stays.",
+     "landedHash": "#world=city"
+    }
+   },
+   {
+    "title": "Cambodia · cohort echo",
+    "href": "reference/education/index.html#world=cambodia",
+    "click": {
+     "download": null,
+     "landedH1": "The post-Khmer Rouge boom and its echo",
+     "landedHash": "#world=cambodia"
+    }
+   },
+   {
+    "title": "China · demographic contraction",
+    "href": "reference/education/index.html#world=china",
+    "click": {
+     "download": null,
+     "landedH1": "The baby bust reaches the classroom",
+     "landedHash": "#world=china"
+    }
+   },
+   {
+    "title": "Philippines · K to 12 expansion",
+    "href": "reference/education/index.html#world=philippines",
+    "click": {
+     "download": null,
+     "landedH1": "The big cohort meets K to 12",
+     "landedHash": "#world=philippines"
+    }
+   },
+   {
+    "title": "Kenya · free primary education",
+    "href": "reference/education/index.html#world=kenya",
+    "click": {
+     "download": null,
+     "landedH1": "Free primary education overnight, with a hiring freeze",
+     "landedHash": "#world=kenya"
+    }
+   },
+   {
+    "title": "Riverton · growing population",
+    "href": "reference/education/index.html#world=rising",
+    "click": {
+     "download": null,
+     "landedH1": "Toy: births grow 3% a year",
+     "landedHash": "#world=rising"
+    }
+   },
+   {
+    "title": "Stillwater · declining population",
+    "href": "reference/education/index.html#world=falling",
+    "click": {
+     "download": null,
+     "landedH1": "Toy: births fall 4% a year",
+     "landedHash": "#world=falling"
+    }
+   },
+   {
+    "title": "Indicator calculator",
+    "href": "reference/education/index.html#tool=indicators",
+    "click": {
+     "download": null,
+     "landedH1": "GER, NER, GIR, the adjusted gender parity index and teacher ratios from raw counts.",
+     "landedHash": "#tool=indicators"
+    }
+   },
+   {
+    "title": "School-age population",
+    "href": "reference/education/index.html#tool=population",
+    "click": {
+     "download": null,
+     "landedH1": "Cohort-component projection: who will be of school age, and when.",
+     "landedHash": "#tool=population"
+    }
+   },
+   {
+    "title": "Teacher deployment",
+    "href": "reference/education/index.html#tool=deployment",
+    "click": {
+     "download": null,
+     "landedH1": "Do teachers follow pupils? The R² test from education sector analysis.",
+     "landedHash": "#tool=deployment"
+    }
+   },
+   {
+    "title": "Who gets public spending",
+    "href": "reference/education/index.html#tool=equity",
+    "click": {
+     "download": null,
+     "landedH1": "Lorenz curve of public education resources across a cohort.",
+     "landedHash": "#tool=equity"
+    }
+   },
+   {
+    "title": "School grant formula",
+    "href": "reference/education/index.html#tool=grants",
+    "click": {
+     "download": null,
+     "landedH1": "Per-pupil, poverty and remoteness weights: who ends up with what per child.",
+     "landedHash": "#tool=grants"
+    }
+   },
+   {
+    "title": "Is the deadline realistic?",
+    "href": "reference/education/index.html#tool=logistic",
+    "click": {
+     "download": null,
+     "landedH1": "Coverage grows along an S-curve: the speed a target needs against the speed countries have achieved.",
+     "landedHash": "#tool=logistic"
+    }
+   },
+   {
+    "title": "Fertility collapse lab",
+    "href": "research/fertility.html",
+    "click": {
+     "download": null,
+     "landedH1": "Why is fertility collapsing?",
+     "landedHash": ""
+    }
+   },
+   {
+    "title": "Shadow education lab",
+    "href": "research/shadow-education.html",
+    "click": {
+     "download": null,
+     "landedH1": "Why do pupils pay their own teachers?",
+     "landedHash": ""
+    }
+   },
+   {
+    "title": "Coast or herds? The route out of Africa",
+    "href": "research/out-of-africa.html",
+    "click": {
+     "download": null,
+     "landedH1": "Coast or herds? A Monte Carlo test of the route out of Africa",
+     "landedHash": ""
+    }
+   }
+  ],
+  "routeButtons": [
+   {
+    "title": "China · Graduate jobs",
+    "route": "button",
+    "click": {
+     "download": null,
+     "landedH1": "China’s graduate queue",
+     "landedHash": "#china"
+    }
+   },
+   {
+    "title": "Cambodia · Child labour",
+    "route": "button",
+    "click": {
+     "download": null,
+     "landedH1": "School and work in Cambodia",
+     "landedHash": "#cambodia"
+    }
+   },
+   {
+    "title": "Education · Credential floor",
+    "route": "button",
+    "click": {
+     "download": null,
+     "landedH1": "What keeps students in school?",
+     "landedHash": "#credentials"
+    }
+   },
+   {
+    "title": "East Asia school and teacher futures",
+    "route": "button",
+    "click": {
+     "download": null,
+     "landedH1": "East Asia school and teacher futures",
+     "landedHash": "#school-futures"
+    }
+   },
+   {
+    "title": "Hong Kong and Guangzhou school networks",
+    "route": "button",
+    "click": {
+     "download": null,
+     "landedH1": "Hong Kong and Guangzhou school networks",
+     "landedHash": "#city-networks"
+    }
+   },
+   {
+    "title": "Planning · Reconstructed cohort",
+    "route": "button",
+    "click": {
+     "download": null,
+     "landedH1": "How many entrants finish primary school?",
+     "landedHash": "#cohort"
+    }
+   },
+   {
+    "title": "Planning · Sector simulation",
+    "route": "button",
+    "click": {
+     "download": null,
+     "landedH1": "Can the budget pay for the plan?",
+     "landedHash": "#sector"
+    }
+   },
+   {
+    "title": "Planning · Teachers",
+    "route": "button",
+    "click": {
+     "download": null,
+     "landedH1": "Can teacher supply keep up?",
+     "landedHash": "#teachers"
+    }
+   },
+   {
+    "title": "Planning · School mapping",
+    "route": "button",
+    "click": {
+     "download": null,
+     "landedH1": "Where should the next schools go?",
+     "landedHash": "#schoolmap"
+    }
+   },
+   {
+    "title": "Planning · Learning-adjusted years",
+    "route": "button",
+    "click": {
+     "download": null,
+     "landedH1": "Are years in school years of learning?",
+     "landedHash": "#lays"
+    }
+   },
+   {
+    "title": "Planning · Graduate absorption",
+    "route": "button",
+    "click": {
+     "download": null,
+     "landedH1": "Can the economy absorb its graduates?",
+     "landedHash": "#absorption"
+    }
+   },
+   {
+    "title": "Angkor · Temple communities",
+    "route": "button",
+    "click": {
+     "download": null,
+     "landedH1": "How did temple communities provision a city?",
+     "landedHash": "#provisioning"
+    }
+   },
+   {
+    "title": "Angkor · Campaigns & distance",
+    "route": "button",
+    "click": {
+     "download": null,
+     "landedH1": "Can the army get home before harvest?",
+     "landedHash": "#campaign"
+    }
+   },
+   {
+    "title": "Angkor · Water & rice",
+    "route": "button",
+    "click": {
+     "download": null,
+     "landedH1": "Water, rice and population in Angkor",
+     "landedHash": "#angkor"
+    }
+   },
+   {
+    "title": "Angkor · Monument signalling",
+    "route": "button",
+    "click": {
+     "download": null,
+     "landedH1": "Would you pay tribute to the successor?",
+     "landedHash": "#signalling"
+    }
+   },
+   {
+    "title": "Angkor · Obligations and exit",
+    "route": "button",
+    "click": {
+     "download": null,
+     "landedH1": "Who pays the bill after the court leaves?",
+     "landedHash": "#obligations"
+    }
+   },
+   {
+    "title": "Angkor · Monsoon account",
+    "route": "button",
+    "click": {
+     "download": null,
+     "landedH1": "Can monsoon history explain the decline?",
+     "landedHash": "#monsoon"
+    }
+   },
+   {
+    "title": "Angkor · 100 seeds",
+    "route": "button",
+    "click": {
+     "download": null,
+     "landedH1": "Angkor across 100 seeds",
+     "landedHash": "#mandala"
+    }
+   },
+   {
+    "title": "Angkor · Labour and food accounts",
+    "route": "button",
+    "click": {
+     "download": null,
+     "landedH1": "Who farms, who serves, and who gets fed?",
+     "landedHash": "#accounts"
+    }
+   },
+   {
+    "title": "Angkor · Temple relief",
+    "route": "button",
+    "click": {
+     "download": null,
+     "landedH1": "Who can claim the stored food?",
+     "landedHash": "#institutions"
+    }
+   },
+   {
+    "title": "Angkor · Flight and refuge",
+    "route": "button",
+    "click": {
+     "download": null,
+     "landedH1": "Can the state lose people while settlement continues?",
+     "landedHash": "#flight"
+    }
+   },
+   {
+    "title": "Angkor · Maintenance repaired",
+    "route": "button",
+    "click": {
+     "download": null,
+     "landedH1": "What changes when maintenance falls at the same time?",
+     "landedHash": "#maintenance"
+    }
+   },
+   {
+    "title": "Angkor · Elite relocation",
+    "route": "button",
+    "click": {
+     "download": null,
+     "landedH1": "When does the court choose another centre?",
+     "landedHash": "#relocation"
+    }
+   },
+   {
+    "title": "Angkor · Provisioning Petri lab",
+    "route": "button",
+    "click": {
+     "download": null,
+     "landedH1": "Can a provisioning economy rise and decline?",
+     "landedHash": "#petri"
+    }
+   },
+   {
+    "title": "Farmer field schools · Treadmill economy",
+    "route": "button",
+    "click": {
+     "download": null,
+     "landedH1": "Farmer field schools & food politics",
+     "landedHash": "#story-extension"
+    }
+   },
+   {
+    "title": "Farmer field schools · Price-tag advice market",
+    "route": "button",
+    "click": {
+     "download": null,
+     "landedH1": "Farmer field schools & food politics",
+     "landedHash": "#story-extension"
+    }
+   },
+   {
+    "title": "Scenario Theatre",
+    "route": "button",
+    "click": {
+     "download": null,
+     "landedH1": "Can the budget pay for the plan?",
+     "landedHash": "#sector"
+    }
+   }
+  ]
+ },
+ "search": [
+  {
+   "query": "fertility",
+   "count": 0,
+   "results": [],
+   "downloadsOnNone": true
+  },
+  {
+   "query": "#fertility",
+   "count": 0,
+   "results": [],
+   "downloadsOnNone": true
+  },
+  {
+   "query": "#ccp",
+   "count": 0,
+   "results": [],
+   "downloadsOnNone": true
+  },
+  {
+   "query": "#education",
+   "count": 0,
+   "results": [],
+   "downloadsOnNone": true
+  }
+ ],
+ "tags": {
+  "cloudCount": 14,
+  "cloudClick": {
+   "label": "home tag cloud chip",
+   "downloads": [],
+   "url": "https://treymodels.github.io/atlas-of-education/",
+   "hash": "",
+   "h1": "Social science you can run."
+  },
+  "librarySearchValue": "#education",
+  "resultsAfterChip": 33,
+  "cardChipClick": {
+   "label": "card tag chip",
+   "downloads": [],
+   "url": "https://treymodels.github.io/atlas-of-education/",
+   "hash": "",
+   "h1": "Social science you can run."
+  },
+  "searchOpenAfterCardChip": 1,
+  "searchValue": "#economics"
+ },
+ "hashtagFlow": [
+  {
+   "index": 0,
+   "row": {
+    "title": "Fertility collapse lab",
+    "href": "research/fertility.html",
+    "tag": "A"
+   },
+   "observed": {
+    "downloads": [],
+    "url": "https://treymodels.github.io/atlas-of-education/research/fertility.html",
+    "hash": "",
+    "h1": "Why is fertility collapsing?"
+   }
+  },
+  {
+   "index": 1,
+   "row": {
+    "title": "Development (survival) model",
+    "href": "research/fertility/fertility-research-full.zip",
+    "tag": "A"
+   },
+   "observed": {
+    "downloads": [
+     {
+      "url": "https://treymodels.github.io/atlas-of-education/research/fertility/fertility-research-full.zip",
+      "name": "fertility-research-full.zip"
+     }
+    ],
+    "url": "https://treymodels.github.io/atlas-of-education/",
+    "hash": "",
+    "h1": "Social science you can run."
+   }
+  },
+  {
+   "index": 2,
+   "row": {
+    "title": "Development + matching + post-2015 period dummy",
+    "href": "research/fertility/fertility-research-full.zip",
+    "tag": "A"
+   },
+   "observed": {
+    "downloads": [
+     {
+      "url": "https://treymodels.github.io/atlas-of-education/research/fertility/fertility-research-full.zip",
+      "name": "fertility-research-full.zip"
+     }
+    ],
+    "url": "https://treymodels.github.io/atlas-of-education/",
+    "hash": "",
+    "h1": "Social science you can run."
+   }
+  },
+  {
+   "cardChip": {
+    "downloads": [],
+    "url": "https://treymodels.github.io/atlas-of-education/",
+    "hash": "",
+    "h1": "Social science you can run."
+   },
+   "overlayQuery": "#economics",
+   "firstFilteredResultClick": {
+    "downloads": [],
+    "url": "https://treymodels.github.io/atlas-of-education/#china",
+    "hash": "#china",
+    "h1": "China’s graduate queue"
+   }
+  }
+ ],
+ "journeys": [
+  {
+   "family": "angkor",
+   "cards": 13,
+   "unresolvedAnchors": [],
+   "openWorkbench": {
+    "h1": "How did temple communities provision a city?",
+    "hash": "#provisioning"
+   }
+  },
+  {
+   "family": "shadow",
+   "cards": 3,
+   "unresolvedAnchors": [],
+   "openWorkbench": null
+  },
+  {
+   "family": "politics",
+   "cards": 4,
+   "unresolvedAnchors": [],
+   "openWorkbench": null
+  },
+  {
+   "family": "extension",
+   "cards": 4,
+   "unresolvedAnchors": [],
+   "openWorkbench": null
+  },
+  {
+   "family": "fertility",
+   "cards": 9,
+   "unresolvedAnchors": [],
+   "openWorkbench": null
+  },
+  {
+   "family": "deephistory",
+   "cards": 1,
+   "unresolvedAnchors": [],
+   "openWorkbench": null
+  },
+  {
+   "family": "education",
+   "cards": 8,
+   "unresolvedAnchors": [],
+   "openWorkbench": {
+    "h1": "China’s graduate queue",
+    "hash": "#china"
+   }
+  },
+  {
+   "family": "systems",
+   "cards": 9,
+   "unresolvedAnchors": [],
+   "openWorkbench": {
+    "h1": "East Asia school and teacher futures",
+    "hash": "#school-futures"
+   }
+  },
+  {
+   "family": "planning",
+   "cards": 12,
+   "unresolvedAnchors": [],
+   "openWorkbench": {
+    "h1": "Can the budget pay for the plan?",
+    "hash": "#sector"
+   }
+  }
+ ],
+ "journeyActions": {
+  "angkor": [
+   {
+    "text": "Code",
+    "href": "engines/provisioning.js"
+   },
+   {
+    "text": "Notes",
+    "href": "research/provisioning.html"
+   },
+   {
+    "text": "Propose a version",
+    "href": "https://github.com/TreyModels/atlas-of-education/issues/new?template=propose-a-version.yml&title=Version%3A%20angkor%2Fprovisioning"
+   },
+   {
+    "text": "Code",
+    "href": "engines/campaign.js"
+   },
+   {
+    "text": "Propose a version",
+    "href": "https://github.com/TreyModels/atlas-of-education/issues/new?template=propose-a-version.yml&title=Version%3A%20angkor%2Fcampaign"
+   },
+   {
+    "text": "Code",
+    "href": "reference/angkor/model.js"
+   },
+   {
+    "text": "Propose a version",
+    "href": "https://github.com/TreyModels/atlas-of-education/issues/new?template=propose-a-version.yml&title=Version%3A%20angkor%2Fangkor"
+   },
+   {
+    "text": "Code",
+    "href": "engines/lab_models.js"
+   },
+   {
+    "text": "Propose a version",
+    "href": "https://github.com/TreyModels/atlas-of-education/issues/new?template=propose-a-version.yml&title=Version%3A%20angkor%2Fmaintenance"
+   }
+  ],
+  "politics": [
+   {
+    "text": "Code",
+    "href": "research/ccp-bus/ccp-bus-v1.zip"
+   },
+   {
+    "text": "Notes",
+    "href": "https://github.com/TreyModels/atlas-of-education/tree/2e19f07/experiments/ccp-bus/models/A_claude_v1_three_models"
+   },
+   {
+    "text": "Propose a version",
+    "href": "https://github.com/TreyModels/atlas-of-education/issues/new?template=propose-a-version.yml&title=Version%3A%20politics%2Fccp-v1"
+   },
+   {
+    "text": "Code",
+    "href": "research/ccp-bus/ccp-bus-v3.zip"
+   },
+   {
+    "text": "Notes",
+    "href": "https://github.com/TreyModels/atlas-of-education/blob/2e19f07/experiments/ccp-bus/models/B_claude_v3_economy_factions/README.md"
+   },
+   {
+    "text": "Propose a version",
+    "href": "https://github.com/TreyModels/atlas-of-education/issues/new?template=propose-a-version.yml&title=Version%3A%20politics%2Fccp-v3"
+   },
+   {
+    "text": "Code",
+    "href": "research/ccp-bus/ccp-bus-v6.zip"
+   },
+   {
+    "text": "Notes",
+    "href": "https://github.com/TreyModels/atlas-of-education/blob/2e19f07/experiments/ccp-bus/models/C_chatgpt_v6_tilly/RESULTS.md"
+   },
+   {
+    "text": "Propose a version",
+    "href": "https://github.com/TreyModels/atlas-of-education/issues/new?template=propose-a-version.yml&title=Version%3A%20politics%2Fccp-v6"
+   }
+  ],
+  "extension": [
+   {
+    "text": "Code",
+    "href": "research/field-schools/field-schools-models.zip"
+   },
+   {
+    "text": "Notes",
+    "href": "research/field-schools/README.md"
+   },
+   {
+    "text": "Propose a version",
+    "href": "https://github.com/TreyModels/atlas-of-education/issues/new?template=propose-a-version.yml&title=Version%3A%20extension%2Ffs-diffusion"
+   },
+   {
+    "text": "Code",
+    "href": "research/field-schools/field-schools-models.zip"
+   },
+   {
+    "text": "Notes",
+    "href": "research/field-schools/README.md"
+   },
+   {
+    "text": "Propose a version",
+    "href": "https://github.com/TreyModels/atlas-of-education/issues/new?template=propose-a-version.yml&title=Version%3A%20extension%2Ffs-foodprice"
+   },
+   {
+    "text": "Code",
+    "href": "research/field-schools/field-schools-models.zip"
+   },
+   {
+    "text": "Notes",
+    "href": "research/field-schools/README.md"
+   },
+   {
+    "text": "Propose a version",
+    "href": "https://github.com/TreyModels/atlas-of-education/issues/new?template=propose-a-version.yml&title=Version%3A%20extension%2Ffs-treadmill"
+   }
+  ]
+ },
+ "nav": {
+  "railLinks": [
+   {
+    "text": "Research library",
+    "href": "research/index.html"
+   },
+   {
+    "text": "Fertility collapse lab",
+    "href": "research/fertility.html"
+   },
+   {
+    "text": "Shadow education lab",
+    "href": "research/shadow-education.html"
+   },
+   {
+    "text": "Coast or herds? Out of Africa",
+    "href": "research/out-of-africa.html"
+   },
+   {
+    "text": "Full Education Atlas",
+    "href": "reference/education/index.html"
+   }
+  ],
+  "railResults": [
+   {
+    "text": "Research library",
+    "href": "research/index.html",
+    "landedH1": "What we’re examining"
+   },
+   {
+    "text": "Fertility collapse lab",
+    "href": "research/fertility.html",
+    "landedH1": "Why is fertility collapsing?"
+   },
+   {
+    "text": "Shadow education lab",
+    "href": "research/shadow-education.html",
+    "landedH1": "Why do pupils pay their own teachers?"
+   },
+   {
+    "text": "Coast or herds? Out of Africa",
+    "href": "research/out-of-africa.html",
+    "landedH1": "Coast or herds? A Monte Carlo test of the route out of Africa"
+   },
+   {
+    "text": "Full Education Atlas",
+    "href": "reference/education/index.html",
+    "landedH1": "Choose a world.Test what holds."
+   }
+  ],
+  "footer": [
+   {
+    "text": "Reuse terms",
+    "href": "LICENSE.txt"
+   },
+   {
+    "text": "DOI 10.5281/zenodo.24369167",
+    "href": "https://doi.org/10.5281/zenodo.24369167"
+   },
+   {
+    "text": "Full Education Atlas",
+    "href": "reference/education/index.html"
+   }
+  ],
+  "footerResults": [
+   {
+    "text": "Reuse terms",
+    "href": "LICENSE.txt",
+    "landedH1": ""
+   },
+   {
+    "text": "DOI 10.5281/zenodo.24369167",
+    "href": "https://doi.org/10.5281/zenodo.24369167",
+    "landedH1": "Atlas Worlds: narrated, downloadable models of education, history and society"
+   },
+   {
+    "text": "Full Education Atlas",
+    "href": "reference/education/index.html",
+    "landedH1": "Choose a world.Test what holds."
+   }
+  ],
+  "footerWorkflow": {
+   "h1": "How one researcher and a team of AI agents build these models"
+  },
+  "brand": {
+   "h1": "Social science you can run."
+  },
+  "drawerOpen": 1,
+  "drawerLinks": [
+   {
+    "text": "Research library",
+    "href": "research/index.html"
+   },
+   {
+    "text": "Fertility collapse lab",
+    "href": "research/fertility.html"
+   },
+   {
+    "text": "Shadow education lab",
+    "href": "research/shadow-education.html"
+   },
+   {
+    "text": "Coast or herds? Out of Africa",
+    "href": "research/out-of-africa.html"
+   },
+   {
+    "text": "Full Education Atlas",
+    "href": "reference/education/index.html"
+   }
+  ]
+ },
+ "articles": [
+  {
+   "route": "about",
+   "anchors": []
+  },
+  {
+   "route": "how-models-work",
+   "anchors": []
+  },
+  {
+   "route": "workflow",
+   "anchors": []
+  }
+ ],
+ "workbench": {
+  "china": {
+   "h1": "China’s graduate queue",
+   "sourceLinks": [
+    {
+     "tag": "A",
+     "text": "Full Education Atlas and Planning Lab",
+     "href": "reference/education/"
+    }
+   ],
+   "dlButtons": [],
+   "downloadObserved": null,
+   "backClick": {
+    "label": "workbench back link",
+    "downloads": [],
+    "url": "https://treymodels.github.io/atlas-of-education/#",
+    "hash": "",
+    "h1": "Social science you can run."
+   },
+   "evidenceHasOldBrand": false
+  },
+  "controls": [
+   {
+    "text": "Guided sequence",
+    "disabled": false,
+    "aria": ""
+   },
+   {
+    "text": "#archaeology",
+    "disabled": false,
+    "aria": ""
+   },
+   {
+    "text": "#anthropology",
+    "disabled": false,
+    "aria": ""
+   },
+   {
+    "text": "#history",
+    "disabled": false,
+    "aria": ""
+   },
+   {
+    "text": "#land",
+    "disabled": false,
+    "aria": ""
+   },
+   {
+    "text": "#angkor",
+    "disabled": false,
+    "aria": ""
+   },
+   {
+    "text": "Annual paddy yield → 0.7 t/ha",
+    "disabled": false,
+    "aria": ""
+   },
+   {
+    "text": "",
+    "disabled": false,
+    "aria": "Reset"
+   },
+   {
+    "text": "Recompute results",
+    "disabled": false,
+    "aria": ""
+   },
+   {
+    "text": "Pin scenario",
+    "disabled": false,
+    "aria": ""
+   },
+   {
+    "text": "Save run JSON",
+    "disabled": false,
+    "aria": ""
+   },
+   {
+    "text": "Replay run",
+    "disabled": false,
+    "aria": ""
+   },
+   {
+    "text": "Export plotted data CSV",
+    "disabled": false,
+    "aria": ""
+   },
+   {
+    "text": "Inspect chart data",
+    "disabled": false,
+    "aria": ""
+   },
+   {
+    "text": "Method & limitations",
+    "disabled": false,
+    "aria": ""
+   },
+   {
+    "text": "Previous1 · Provision the landscape",
+    "disabled": false,
+    "aria": ""
+   },
+   {
+    "text": "Next step3 · Turn resources into authori",
+    "disabled": false,
+    "aria": ""
+   }
+  ],
+  "controlClicks": [
+   {
+    "control": "Guided sequence",
+    "download": null,
+    "landedHash": "#angkor-guide"
+   },
+   {
+    "control": "#archaeology",
+    "download": null,
+    "landedHash": "#angkor"
+   },
+   {
+    "control": "#anthropology",
+    "download": null,
+    "landedHash": "#angkor"
+   },
+   {
+    "control": "#history",
+    "download": null,
+    "landedHash": "#angkor"
+   },
+   {
+    "control": "#land",
+    "download": null,
+    "landedHash": "#angkor"
+   },
+   {
+    "control": "#angkor",
+    "download": null,
+    "landedHash": "#angkor"
+   },
+   {
+    "control": "Annual paddy yield → 0.7 t/ha",
+    "download": null,
+    "landedHash": "#angkor"
+   },
+   {
+    "control": "Reset",
+    "download": null,
+    "landedHash": "#angkor"
+   }
+  ]
+ },
+ "staticPages": [
+  {
+   "page": "research/index.html",
+   "title": "Research status and results · Atlas Worlds",
+   "anchorCount": 22,
+   "fileLinks": [
+    {
+     "text": "Tutoring model · ZIP ↓",
+     "href": "shadow/tutoring_abm.zip"
+    },
+    {
+     "text": "Research package · ZIP ↓",
+     "href": "fertility/fertility_research.zip"
+    },
+    {
+     "text": "Download the 192 runs · CSV ↓",
+     "href": "angkor-paired-results.csv"
+    }
+   ],
+   "localPages": [
+    {
+     "text": "← Atlas",
+     "href": "../index.html"
+    },
+    {
+     "text": "Atlas Worlds",
+     "href": "../index.html"
+    },
+    {
+     "text": "Open Angkor experiment ↗",
+     "href": "../index.html#campaign"
+    },
+    {
+     "text": "Follow the three Angkor experiments ↗",
+     "href": "angkor-sequence.html"
+    },
+    {
+     "text": "Open the lab: explanations, fit and policy explorer ↗",
+     "href": "shadow-education.html"
+    },
+    {
+     "text": "Tutoring model · ZIP ↓",
+     "href": "shadow/tutoring_abm.zip"
+    },
+    {
+     "text": "Open the lab: story, models and simulators ↗",
+     "href": "fertility.html"
+    },
+    {
+     "text": "Research package · ZIP ↓",
+     "href": "fertility/fertility_research.zip"
+    },
+    {
+     "text": "Run the experiment ↗",
+     "href": "../index.html#relocation"
+    },
+    {
+     "text": "Methods, results and limits ↗",
+     "href": "relocation.html"
+    },
+    {
+     "text": "Published relationships ↗",
+     "href": "../index.html#provisioning"
+    },
+    {
+     "text": "Dynamic Petri lab ↗",
+     "href": "../index.html#petri"
+    },
+    {
+     "text": "Methods, economy and results ↗",
+     "href": "provisioning.html"
+    },
+    {
+     "text": "Run the account ↗",
+     "href": "../index.html#monsoon"
+    },
+    {
+     "text": "Sources, assumptions and results ↗",
+     "href": "monsoon.html"
+    },
+    {
+     "text": "Run the experiment ↗",
+     "href": "../index.html#campaign"
+    },
+    {
+     "text": "Download the 192 runs · CSV ↓",
+     "href": "angkor-paired-results.csv"
+    },
+    {
+     "text": "Inspect the equations ↗",
+     "href": "../engines/campaign.js"
+    },
+    {
+     "text": "Open the model ↗",
+     "href": "../index.html#signalling"
+    },
+    {
+     "text": "Cookbook and paired results ↗",
+     "href": "signalling.html"
+    },
+    {
+     "text": "China youth unemployment",
+     "href": "../index.html#china"
+    }
+   ],
+   "fragmentUnresolved": [],
+   "imgs": []
+  },
+  {
+   "page": "research/fertility.html",
+   "title": "Fertility collapse lab · Atlas Worlds",
+   "anchorCount": 7,
+   "fileLinks": [
+    {
+     "text": "Full research package (scripts, data, findings) · ZIP ↓",
+     "href": "fertility/fertility_research.zip"
+    },
+    {
+     "text": "Chart data · JSON ↓",
+     "href": "fertility/fertility-series.json"
+    }
+   ],
+   "localPages": [
+    {
+     "text": "← Atlas",
+     "href": "../index.html"
+    },
+    {
+     "text": "Atlas Worlds",
+     "href": "../index.html"
+    },
+    {
+     "text": "Research library ↗",
+     "href": "index.html"
+    },
+    {
+     "text": "Full research package (scripts, data, findings) · ZIP ↓",
+     "href": "fertility/fertility_research.zip"
+    },
+    {
+     "text": "Chart data · JSON ↓",
+     "href": "fertility/fertility-series.json"
+    }
+   ],
+   "fragmentUnresolved": [],
+   "imgs": []
+  },
+  {
+   "page": "research/massification/index.html",
+   "title": "Massification & durable inequality · Atlas of Education",
+   "anchorCount": 5,
+   "fileLinks": [
+    {
+     "text": "Download parent experiment data ↗",
+     "href": "parent-runs.csv"
+    },
+    {
+     "text": "Download three-actor results ↗",
+     "href": "actor-runs.csv"
+    },
+    {
+     "text": "Download inequality results ↗",
+     "href": "inequality-runs.csv"
+    }
+   ],
+   "localPages": [
+    {
+     "text": "← Atlas of Education",
+     "href": "../../"
+    },
+    {
+     "text": "Download parent experiment data ↗",
+     "href": "parent-runs.csv"
+    },
+    {
+     "text": "Download three-actor results ↗",
+     "href": "actor-runs.csv"
+    },
+    {
+     "text": "Download inequality results ↗",
+     "href": "inequality-runs.csv"
+    },
+    {
+     "text": "Return to the Atlas ↑",
+     "href": "../../"
+    }
+   ],
+   "fragmentUnresolved": [],
+   "imgs": []
+  },
+  {
+   "page": "research/provisioning.html",
+   "title": "Temple communities and provisioning · Atlas Worlds",
+   "anchorCount": 12,
+   "fileLinks": [
+    {
+     "text": "Download the transcription · CSV ↓",
+     "href": "provisioning-periods.csv"
+    },
+    {
+     "text": "2009 thesis",
+     "href": "https://cdn.angkordatabase.asia/libs/docs/publications/power-and-pragmatism-in-the-political-economy-of-angkor/lustig-power-pragmatism-angkor.pdf"
+    },
+    {
+     "text": "Terry and Eileen Lustig (2015)",
+     "href": "https://cdn.angkordatabase.asia/libs/docs/publications/following-the-non-money-trail/lustig-nonmoney-1.pdf"
+    },
+    {
+     "text": "Download every run ↗",
+     "href": "petri-results.csv"
+    }
+   ],
+   "localPages": [
+    {
+     "text": "← Atlas",
+     "href": "../index.html"
+    },
+    {
+     "text": "Atlas Worlds",
+     "href": "../index.html"
+    },
+    {
+     "text": "Open the provisioning model ↗",
+     "href": "../index.html#provisioning"
+    },
+    {
+     "text": "Download the transcription · CSV ↓",
+     "href": "provisioning-periods.csv"
+    },
+    {
+     "text": "Return to the guided sequence ↗",
+     "href": "../index.html#angkor-guide"
+    },
+    {
+     "text": "Inspect the engine ↗",
+     "href": "../engines/provisioning.js"
+    },
+    {
+     "text": "Open the dynamic extension ↗",
+     "href": "../index.html#petri"
+    },
+    {
+     "text": "Download every run ↗",
+     "href": "petri-results.csv"
+    }
+   ],
+   "fragmentUnresolved": [],
+   "imgs": []
+  },
+  {
+   "page": "research/shadow-education.html",
+   "title": "Shadow education lab · Atlas Worlds",
+   "anchorCount": 6,
+   "fileLinks": [
+    {
+     "text": "Tutoring ABM: code, calibration, results · ZIP ↓",
+     "href": "shadow/tutoring_abm.zip"
+    },
+    {
+     "text": "DHS credential-floor test · ZIP ↓",
+     "href": "shadow/credential_floor_dhs.zip"
+    },
+    {
+     "text": "Cambodia DHS 2021–22 ↗",
+     "href": "https://www.dhsprogram.com/pubs/pdf/FR377/FR377.pdf"
+    }
+   ],
+   "localPages": [
+    {
+     "text": "← Atlas",
+     "href": "../index.html"
+    },
+    {
+     "text": "Atlas Worlds",
+     "href": "../index.html"
+    },
+    {
+     "text": "Research library ↗",
+     "href": "index.html"
+    },
+    {
+     "text": "Tutoring ABM: code, calibration, results · ZIP ↓",
+     "href": "shadow/tutoring_abm.zip"
+    },
+    {
+     "text": "DHS credential-floor test · ZIP ↓",
+     "href": "shadow/credential_floor_dhs.zip"
+    }
+   ],
+   "fragmentUnresolved": [],
+   "imgs": []
+  },
+  {
+   "page": "research/out-of-africa.html",
+   "title": "Coast or herds? Modelling the route out of Africa",
+   "anchorCount": 12,
+   "fileLinks": [
+    {
+     "text": "Quaternary Science Reviews",
+     "href": "https://eprints.soton.ac.uk/470011/1/1_s2.0_S0277379122000099_main.pdf"
+    },
+    {
+     "text": "Comptes Rendus Géoscience",
+     "href": "https://comptes-rendus.academie-sciences.fr/geoscience/item/10.5802/crgeos.273.pdf"
+    }
+   ],
+   "localPages": [
+    {
+     "text": "← Atlas of Models · Deep history",
+     "href": "../#story-deephistory"
+    }
+   ],
+   "fragmentUnresolved": [],
+   "imgs": []
+  },
+  {
+   "page": "research/institutions/index.html",
+   "title": "Angkor · Institutional experiments",
+   "anchorCount": 15,
+   "fileLinks": [
+    {
+     "text": "Read the uploaded provisioning paper",
+     "href": "../provisioning-paper.pdf"
+    },
+    {
+     "text": "Angkor · Maintenance repaired",
+     "href": "maintenance-repaired.zip"
+    },
+    {
+     "text": "Angkor · Temple relief",
+     "href": "angkor_institutions_v01.zip"
+    },
+    {
+     "text": "Angkor · Flight and refuge",
+     "href": "angkor_scott_flight_v02.zip"
+    },
+    {
+     "text": "720-run repair comparison · CSV",
+     "href": "runs.csv"
+    },
+    {
+     "text": "Annual accounting ledger · CSV",
+     "href": "annual_ledger.csv"
+    },
+    {
+     "text": "560-run sensitivity comparison · CSV",
+     "href": "sensitivity.csv"
+    },
+    {
+     "text": "Full methods and limits",
+     "href": "RESULTS.md"
+    }
+   ],
+   "localPages": [
+    {
+     "text": "◈ Atlas Worlds",
+     "href": "../../index.html"
+    },
+    {
+     "text": "Angkor · Temple relief",
+     "href": "../../index.html#institutions"
+    },
+    {
+     "text": "Angkor · Flight and refuge",
+     "href": "../../index.html#flight"
+    },
+    {
+     "text": "Angkor · Maintenance repaired",
+     "href": "../../index.html#maintenance"
+    },
+    {
+     "text": "Angkor · Labour and food accounts",
+     "href": "../../index.html#accounts"
+    },
+    {
+     "text": "Published economic foundation",
+     "href": "../../index.html#provisioning"
+    },
+    {
+     "text": "Read the uploaded provisioning paper",
+     "href": "../provisioning-paper.pdf"
+    },
+    {
+     "text": "Angkor · Maintenance repaired",
+     "href": "maintenance-repaired.zip"
+    },
+    {
+     "text": "Angkor · Temple relief",
+     "href": "angkor_institutions_v01.zip"
+    },
+    {
+     "text": "Angkor · Flight and refuge",
+     "href": "angkor_scott_flight_v02.zip"
+    },
+    {
+     "text": "720-run repair comparison · CSV",
+     "href": "runs.csv"
+    },
+    {
+     "text": "Annual accounting ledger · CSV",
+     "href": "annual_ledger.csv"
+    },
+    {
+     "text": "560-run sensitivity comparison · CSV",
+     "href": "sensitivity.csv"
+    },
+    {
+     "text": "Full methods and limits",
+     "href": "RESULTS.md"
+    }
+   ],
+   "fragmentUnresolved": [],
+   "imgs": []
+  },
+  {
+   "page": "research/monsoon.html",
+   "title": "Monsoon and state growth · Angkor literature account 01",
+   "anchorCount": 11,
+   "fileLinks": [
+    {
+     "text": "Download all 8,000 results · CSV ↗",
+     "href": "buckley/results.csv"
+    },
+    {
+     "text": "Download the climate subset · CSV ↗",
+     "href": "buckley/buckley-1250-1450.csv"
+    }
+   ],
+   "localPages": [
+    {
+     "text": "← Atlas",
+     "href": "../index.html#monsoon"
+    },
+    {
+     "text": "Atlas Worlds · Angkor",
+     "href": "../index.html#monsoon"
+    },
+    {
+     "text": "Research sequence ↗",
+     "href": "angkor-sequence.html"
+    },
+    {
+     "text": "Run this account ↗",
+     "href": "../index.html#monsoon"
+    },
+    {
+     "text": "Download all 8,000 results · CSV ↗",
+     "href": "buckley/results.csv"
+    },
+    {
+     "text": "Download the climate subset · CSV ↗",
+     "href": "buckley/buckley-1250-1450.csv"
+    },
+    {
+     "text": "Inspect browser equations ↗",
+     "href": "../engines/monsoon.js"
+    },
+    {
+     "text": "Review reproduction script ↗",
+     "href": "buckley/run.cjs"
+    }
+   ],
+   "fragmentUnresolved": [],
+   "imgs": []
+  },
+  {
+   "page": "research/relocation.html",
+   "title": "Elite relocation · Atlas Worlds",
+   "anchorCount": 10,
+   "fileLinks": [
+    {
+     "text": "All comparisons · CSV ↓",
+     "href": "relocation-results.csv"
+    },
+    {
+     "text": "Grouped results · JSON ↓",
+     "href": "relocation-summary.json"
+    }
+   ],
+   "localPages": [
+    {
+     "text": "← Atlas",
+     "href": "../index.html"
+    },
+    {
+     "text": "Atlas Worlds",
+     "href": "../index.html"
+    },
+    {
+     "text": "Run the relocation experiment ↗",
+     "href": "../index.html#relocation"
+    },
+    {
+     "text": "All comparisons · CSV ↓",
+     "href": "relocation-results.csv"
+    },
+    {
+     "text": "Grouped results · JSON ↓",
+     "href": "relocation-summary.json"
+    },
+    {
+     "text": "Inspect the source ↗",
+     "href": "../engines/relocation.js"
+    }
+   ],
+   "fragmentUnresolved": [],
+   "imgs": []
+  },
+  {
+   "page": "research/signalling.html",
+   "title": "Experiment 03 · Angkor monument signalling",
+   "anchorCount": 8,
+   "fileLinks": [
+    {
+     "text": "Download the 192 comparisons · CSV ↓",
+     "href": "signalling-paired-results.csv"
+    }
+   ],
+   "localPages": [
+    {
+     "text": "← Atlas",
+     "href": "../index.html"
+    },
+    {
+     "text": "Atlas Worlds",
+     "href": "../index.html"
+    },
+    {
+     "text": "Open experiment ↗",
+     "href": "../index.html#signalling"
+    },
+    {
+     "text": "Download the 192 comparisons · CSV ↓",
+     "href": "signalling-paired-results.csv"
+    },
+    {
+     "text": "Inspect the engine ↗",
+     "href": "../engines/signalling.js"
+    }
+   ],
+   "fragmentUnresolved": [],
+   "imgs": []
+  },
+  {
+   "page": "research/angkor-sequence.html",
+   "title": "Three experiments on Angkor · Atlas Worlds",
+   "anchorCount": 14,
+   "fileLinks": [
+    {
+     "text": "Campaign results · CSV ↗",
+     "href": "angkor-paired-results.csv"
+    },
+    {
+     "text": "Review comparisons · CSV ↗",
+     "href": "angkor-sequence-results.csv"
+    }
+   ],
+   "localPages": [
+    {
+     "text": "← Atlas",
+     "href": "../index.html"
+    },
+    {
+     "text": "Atlas Worlds",
+     "href": "../index.html"
+    },
+    {
+     "text": "Start the sequence ↗",
+     "href": "../index.html#campaign"
+    },
+    {
+     "text": "Run Literature Account 01 · Monsoon ↗",
+     "href": "../index.html#monsoon"
+    },
+    {
+     "text": "Read the account and review results ↗",
+     "href": "monsoon.html"
+    },
+    {
+     "text": "Run ecology and mobilisation ↗",
+     "href": "../index.html#campaign"
+    },
+    {
+     "text": "Campaign results · CSV ↗",
+     "href": "angkor-paired-results.csv"
+    },
+    {
+     "text": "Run authority and allegiance ↗",
+     "href": "../index.html#signalling"
+    },
+    {
+     "text": "Methods, credits and paired results ↗",
+     "href": "signalling.html"
+    },
+    {
+     "text": "Run obligations and exit ↗",
+     "href": "../index.html#obligations"
+    },
+    {
+     "text": "Review comparisons · CSV ↗",
+     "href": "angkor-sequence-results.csv"
+    }
+   ],
+   "fragmentUnresolved": [],
+   "imgs": []
+  },
+  {
+   "page": "reference/education/index.html",
+   "title": "The Atlas of Education",
+   "anchorCount": 1,
+   "fileLinks": [],
+   "localPages": [
+    {
+     "text": "← Atlas",
+     "href": "../../index.html"
+    }
+   ],
+   "fragmentUnresolved": [],
+   "imgs": []
+  },
+  {
+   "page": "reference/angkor/index.html",
+   "title": "Angkor Atlas | Experimental History Lab",
+   "anchorCount": 1,
+   "fileLinks": [],
+   "localPages": [
+    {
+     "text": "← Atlas",
+     "href": "../../index.html"
+    }
+   ],
+   "fragmentUnresolved": [],
+   "imgs": []
+  },
+  {
+   "page": "reference/mandala/index.html",
+   "title": "Angkor Mandala Lab · v0.1",
+   "anchorCount": 5,
+   "fileLinks": [],
+   "localPages": [
+    {
+     "text": "← Atlas",
+     "href": "../../index.html"
+    }
+   ],
+   "fragmentUnresolved": [],
+   "imgs": []
+  },
+  {
+   "page": "reference/monte-carlo/index.html",
+   "title": "Angkor Monte Carlo Lab | Methods classroom",
+   "anchorCount": 1,
+   "fileLinks": [],
+   "localPages": [
+    {
+     "text": "← Atlas",
+     "href": "../../index.html"
+    }
+   ],
+   "fragmentUnresolved": [],
+   "imgs": []
+  },
+  {
+   "page": "reference/east-asia-schools/index.html",
+   "title": "School and teacher futures in East Asia",
+   "anchorCount": 4,
+   "fileLinks": [
+    {
+     "text": "School and workforce source",
+     "href": "https://www.edb.gov.hk/attachment/en/about-edb/press/legco/replies-to-fc/edb-e-2627.pdf"
+    }
+   ],
+   "localPages": [
+    {
+     "text": "Hong Kong and Guangzhou network detail",
+     "href": "city-networks.html"
+    },
+    {
+     "text": "← Atlas",
+     "href": "../../index.html"
+    }
+   ],
+   "fragmentUnresolved": [],
+   "imgs": []
+  },
+  {
+   "page": "reference/east-asia-schools/city-networks.html",
+   "title": "School Networks · Hong Kong and Guangzhou",
+   "anchorCount": 19,
+   "fileLinks": [
+    {
+     "text": "EDB population projections",
+     "href": "https://www.edb.gov.hk/attachment/en/about-edb/press/legco/replies-to-fc/edb-e-2627.pdf"
+    },
+    {
+     "text": "2026 school profiles",
+     "href": "https://www.chsc.hk/datagovhk/psp_2026_en.csv"
+    },
+    {
+     "text": "Secondary class rules",
+     "href": "https://applications.edb.gov.hk/circular/upload/EDBC/EDBC25006E.pdf"
+    },
+    {
+     "text": "Staffing rules",
+     "href": "https://www.legco.gov.hk/yr2025/english/panels/ed/papers/ed20250502cb3-601-2-e.pdf"
+    }
+   ],
+   "localPages": [
+    {
+     "text": "← Atlas",
+     "href": "../../index.html"
+    }
+   ],
+   "fragmentUnresolved": [],
+   "imgs": []
+  },
+  {
+   "page": "reference/east-asia-schools/source/interface.html",
+   "title": "School and teacher futures in East Asia",
+   "anchorCount": 2,
+   "fileLinks": [],
+   "localPages": [
+    {
+     "text": "Hong Kong and Guangzhou network detail",
+     "href": "../city-networks.html"
+    }
+   ],
+   "fragmentUnresolved": [],
+   "imgs": []
+  }
+ ],
+ "classicDeepLinks": [
+  {
+   "param": "world=china",
+   "markerFound": true,
+   "snippet": " All worlds The Atlas of Education 04 / Country caseChina Model notes 2012–2040 · SCHOOL SYSTEM PLANNING MODELThe baby bust reaches the classroom 1 yearPlay2012"
+  },
+  {
+   "param": "world=city",
+   "markerFound": true,
+   "snippet": " All worlds The Atlas of Education 02 / Synthetic cityThe six-district city Model notes 2025–2045 · SIX DISTRICTS / ONE SCHOOL SYSTEMChildren come. Children go."
+  },
+  {
+   "param": "world=kenya",
+   "markerFound": true,
+   "snippet": " All worlds The Atlas of Education 06 / Country caseKenya Model notes 2000–2020 · SCHOOL SYSTEM PLANNING MODELFree primary education overnight, with a hiring fr"
+  },
+  {
+   "param": "tool=indicators",
+   "markerFound": true,
+   "snippet": " Planning Lab The Atlas of Education Flows and internal efficiencyIndicator calculator PLANNING LAB · FLOWS AND INTERNAL EFFICIENCYGER, NER, GIR, the adjusted g"
+  },
+  {
+   "param": "tool=logistic",
+   "markerFound": true,
+   "snippet": " Planning Lab The Atlas of Education Learning and targetsIs the deadline realistic? PLANNING LAB · LEARNING AND TARGETSCoverage grows along an S-curve: the spee"
+  },
+  {
+   "param": "lab",
+   "markerFound": true,
+   "snippet": " The Atlas of EducationGenerative models of schooling, work and inequality WorldsPlanning LabHow the models work Runs in your browser MODELS IN THE IIEP, UIS AN"
+  }
+ ],
+ "jsErrors": [
+  {
+   "url": "https://treymodels.github.io/atlas-of-education/reference/east-asia-schools/source/interface.html",
+   "error": "SyntaxError: Unexpected token ';'",
+   "page": "reference/east-asia-schools/source/interface.html"
+  }
+ ],
+ "consoleErrors": []
+}
