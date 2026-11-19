@@ -32,5 +32,5 @@ export const callToAction = {
     { label: 'Challenge a claim', href: 'https://github.com/TreyModels/atlas-of-education/issues/new?template=model-challenge.yml' },
     { label: 'How to cite (CC BY-NC 4.0)', href: 'https://github.com/TreyModels/atlas-of-education/blob/main/CITATION.cff' },
   ],
-  licence: 'Licensed CC BY-NC 4.0: reuse and adapt with credit to Dr. Trey Menefee, for noncommercial purposes. Versioned releases support citation; DOI details appear when available.',
+  licence: 'Licensed CC BY-NC 4.0: reuse and adapt with credit to Dr. Trey Menefee, for noncommercial purposes. Versioned releases support citation; DOI 10.5281/zenodo.24369167.',
 }

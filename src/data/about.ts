@@ -25,7 +25,7 @@ export const about: Article = {
       'Those results stay visible, labelled for what they are. They tell me where to go back and keep working, and they are an open invitation for anyone else to try.',
     ], quote: { text: 'All models are wrong, but some are useful.', who: 'George E. P. Box, statistician (1979)' } },
     { heading: 'Come and work on them', paras: [
-      'Every model’s code can be downloaded and run on your own machine. If you think a model is missing something, change it and propose your version. Proposals are reviewed before anything is listed here. Everything is licensed CC BY-NC 4.0: reuse and adapt it with credit, for noncommercial purposes. Releases are versioned for citation; a DOI will be displayed when issued.',
+      'Every model’s code can be downloaded and run on your own machine. If you think a model is missing something, change it and propose your version. Proposals are reviewed before anything is listed here. Everything is licensed CC BY-NC 4.0: reuse and adapt it with credit, for noncommercial purposes. Releases are versioned for citation; DOI 10.5281/zenodo.24369167.',
     ] },
   ],
 }
@@ -85,7 +85,7 @@ export const workflow: Article = {
       'The final checks are mine. I decide what the questions are, which explanations are worth modelling, and whether a result says what the page claims. The agents do the building; the judgement stays human.',
     ] },
     { heading: 'Open by default', paras: [
-      'The public models and available materials live on GitHub under the stated reuse terms. Releases are versioned for citation; Zenodo DOI details are displayed when issued. Anyone can download a model, change it, and propose a version through a simple form. If this workflow is useful to you, copy it.',
+      'The public models and available materials live on GitHub under the stated reuse terms. Releases are versioned for citation; Zenodo DOI 10.5281/zenodo.24369167. Anyone can download a model, change it, and propose a version through a simple form. If this workflow is useful to you, copy it.',
     ] },
   ],
 }
