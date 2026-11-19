@@ -1,5 +1,9 @@
 # External review: status (14 Nov 2026)
 
+## Research amendment, 16 Nov 2026
+
+The purpose-specific experiment workbench is in `research/README.md`. Production designs are unrun. Credential premium effects now compare the falling and baseline paths in the same year, while scenario growth is reported separately. Tutoring targets now count pupils naming providers; the final SMC importance estimate uses the raw proposal density. Existing calibration/posterior tables remain historical and need rerunning. New indexed policy randomness, income grouping and school applicant-return options are explicit sensitivities. `research/ISSUES.md` records repairs and remaining evidence gaps.
+
 Merged to `main` (PR #1). Follow-up fixes from the second review: branch `fix/stale-pages`. Run every local check with `scripts/check-all.sh` (needs Node ≥ 20 and a Python with numpy and scipy). Re-pin an engine hash after an intended engine change with `scripts/repin-hashes.py <file>`.
 
 Status labels (see `research/GATE.md`): **calibrated** = fitted to sourced data with a holdout; **fitted + free residual** = fits only with an unexplained fitted term; **illustrative** = invented or assumed parameters; **not identified** = the available data cannot tell the rival explanations apart.

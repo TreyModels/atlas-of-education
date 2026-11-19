@@ -1,5 +1,7 @@
 # Atlas of Education · Model Lab
 
+Research experiments, literature and contribution guidance are in [research/README.md](research/README.md). The research revision supplies code and unrun production protocols, distinguishing toy mechanism exploration from descriptive, forecasting and policy claims. Historical numerical outputs retain their version labels.
+
 A unified catalogue of 46 entries across Education & work, Population & school systems,
 the IIEP/UIS planning collection, Historical systems: Angkor, Fertility, and Shadow education.
 Entries include live workbenches, classic tools, research downloads, and four curated stored

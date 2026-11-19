@@ -8,6 +8,18 @@ const clamp = (x, lo, hi) => Math.max(lo, Math.min(hi, x));
 const sum = a => a.reduce((s, x) => s + x, 0);
 function rng(seed) { let n = seed >>> 0; return () => ((n = (n * 1664525 + 1013904223) >>> 0) / 2 ** 32); }
 function normal(r) { let u = 0; while (u === 0) u = r(); return Math.sqrt(-2 * Math.log(u)) * Math.cos(2 * Math.PI * r()); }
+// Indexed uniforms couple the same household/event across policy arms even when
+// one arm takes a branch that draws extra randomness. Legacy mode stays available.
+function eventUniform(seed, year, iteration, household, channel) {
+  let x = seed >>> 0;
+  for (const v of [year, iteration, household, channel]) {
+    x = (x ^ (v >>> 0) ^ 0x9e3779b9) >>> 0;
+    x = Math.imul(x ^ (x >>> 16), 0x21f0aaad) >>> 0;
+    x = Math.imul(x ^ (x >>> 15), 0x735a2d97) >>> 0;
+    x = (x ^ (x >>> 15)) >>> 0;
+  }
+  return (x + .5) / 2 ** 32;
+}
 const STATES = ['school', 'both', 'work', 'neither'];
 const HAZ = .35;   // A: share of full-time 15-17 workers in hazardous work or over 48 hours
 
@@ -45,7 +57,10 @@ const POLICY0 = {
 };
 
 function simulate(opts) {
-  const o = Object.assign({years: 12, N: 6000, seed: 7, policy: {}, over: {}}, opts || {});
+  const o = Object.assign({years: 12, N: 6000, seed: 7, policy: {}, over: {},
+    randomMode: 'legacy', wealthDefinition: 'within_region_rank'}, opts || {});
+  if (!['legacy', 'indexed'].includes(o.randomMode) || !['within_region_rank', 'national_income'].includes(o.wealthDefinition))
+    throw new Error('Unknown randomness or wealth definition');
   const P = Object.assign({}, POLICY0, o.policy);
   const R = {pp: Object.assign({}, REGIONS.pp, (o.over.pp || {})), rural: Object.assign({}, REGIONS.rural, (o.over.rural || {}))};
   const r = rng(o.seed);
@@ -53,18 +68,21 @@ function simulate(opts) {
   for (let i = 0; i < o.N; i++) {
     const reg = r() < R.pp.share ? 'pp' : 'rural', C = R[reg];
     const z = normal(r);
-    H.push({reg, z, y0: C.yMedian * Math.exp(C.ySigma * z), age: 6 + Math.floor(r() * 12), girl: r() < .5,
+    H.push({id: i, reg, z, y0: C.yMedian * Math.exp(C.ySigma * z), age: 6 + Math.floor(r() * 12), girl: r() < .5,
       left: r() < C.leftBehind * (1.3 - .5 * (z > 0)), thai: r() < .65, ability: normal(r),
       enterprise: r() < C.enterprise, outYears: 0, everOut: false, taste: normal(r)});
   }
   const qcut = [-.8416, -.2533, .2533, .8416];
-  const quint = h => qcut.filter(c => h.z > c).length;
+  const incomeRank = new Map([...H].sort((a,b)=>a.y0-b.y0 || a.id-b.id).map((h,i)=>[h.id,Math.min(4,Math.floor(5*i/H.length))]));
+  // This is an income proxy, not observed DHS wealth or IDPoor eligibility.
+  const quint = h => o.wealthDefinition === 'national_income' ? incomeRank.get(h.id) : qcut.filter(c => h.z > c).length;
   const wChild = {pp: 1, rural: 1};
   let L0 = null;
   const rows = [];
   let spent = {cash: 0, other: 0};
   for (let t = 0; t < o.years; t++) {
-    const decide = () => {
+    const decide = (iteration = 0) => {
+      const draw = (h, channel) => o.randomMode === 'indexed' ? eventUniform(o.seed, t, iteration, h.id, channel) : r();
       const S = {pp: mk(), rural: mk(), all: mk()};
       function mk() { return {n: 0, school: 0, both: 0, work: 0, neither: 0, cl: 0, migrant: 0, lab: 0,
         lvl: [[0, 0], [0, 0], [0, 0]], q: [0, 1, 2, 3, 4].map(() => ({n: 0, cl: 0})), girls: [0, 0], boys: [0, 0], left: [0, 0]}; }
@@ -73,13 +91,13 @@ function simulate(opts) {
       for (const h of H) {
         const C = R[h.reg], q = quint(h), a = h.age, rural = h.reg === 'rural';
         // household income: wage, shocks buffered by credit, microfinance repayments, remittances
-        const shocked = r() < C.shockP;
+        const shocked = draw(h, 0) < C.shockP;
         let y = h.y0 * (shocked ? 1 - C.shockSize : 1);
         if (shocked) y += Math.min(C.shockSize * h.y0, (C.borrow + P.debtRelief * .1) * h.y0);
         y -= C.debt * h.y0 * (1 - P.debtRelief * .7);
         let left = h.left;
         if (h.left) {
-          if (h.thai && P.thaiOpen < 1) { y += .6 * .63 * (1 - P.thaiOpen); left = r() < P.thaiOpen; y += .45 * P.thaiOpen; }
+          if (h.thai && P.thaiOpen < 1) { y += .6 * .63 * (1 - P.thaiOpen); left = draw(h, 1) < P.thaiOpen; y += .45 * P.thaiOpen; }
           else y += .45;                                                        // remittance from a parent working away
         }
         if (q <= 1) y += P.cashU;                                               // unconditional transfer: income effect only
@@ -122,12 +140,14 @@ function simulate(opts) {
         };
         const m = Math.max(U.school, U.both, U.work, U.neither);
         const ex = STATES.map(s => Math.exp((U[s] - m) / .3)); const Z = sum(ex);
-        let u = r() * Z, k = 0; while (u > ex[k] && k < 3) { u -= ex[k]; k++; }
+        let u = draw(h, 2) * Z, k = 0; while (u > ex[k] && k < 3) { u -= ex[k]; k++; }
         const s = STATES[k];
         choice.push(s); migr.push(s === 'work' && mig);
         if (s === 'school' || s === 'both') cash += cashAmt;
         if (q <= 1) cash += P.cashU;
-        const isCL = (s === 'work' && (a < 15 || r() < HAZ)) || (s === 'both' && a < 12);   // ILO: 15-17 only if hazardous or over 48 hours
+        const isCL = (s === 'work' && (a < 15 || draw(h, 3) < HAZ)) || (s === 'both' && a < 12);
+        // Stylised observation rule. Combined school/work at 12-14 and unpaid
+        // household services need measured hours to reproduce ILO classifications.
         for (const G of [S[h.reg], S.all]) {
           G.n++; G[s]++; if (isCL) G.cl++; if (s === 'work' && mig) G.migrant++;
           if (s === 'work' && !mig) G.lab += ageW; if (s === 'both') G.lab += .5 * ageW;
@@ -143,7 +163,7 @@ function simulate(opts) {
     if (L0 === null) L0 = {pp: Math.max(D.S.pp.lab, 1), rural: Math.max(D.S.rural.lab, 1)};
     for (let it = 0; it < 3; it++) {                                            // child wages clear in each region
       for (const k of ['pp', 'rural']) wChild[k] = clamp(Math.pow(Math.max(D.S[k].lab, 1) / L0[k], -1 / 2.5), .4, 2.2);
-      D = decide();
+      D = decide(it + 1);
     }
     spent.cash += D.cash;
     const nPP = D.S.pp.n, nR = D.S.rural.n;
@@ -162,7 +182,9 @@ function simulate(opts) {
       if (h.age > 17) { h.age = 6; h.outYears = 0; h.everOut = false; h.ability = normal(r); h.girl = r() < .5; }
     });
   }
-  return {rows, spent: {cash: spent.cash, other: spent.other, total: spent.cash + spent.other}, N: o.N, H, P};
+  return {rows, spent: {cash: spent.cash, other: spent.other, total: spent.cash + spent.other}, N: o.N, H, P,
+    design: {randomMode:o.randomMode,wealthDefinition:o.wealthDefinition,
+      quintileCounts:[0,1,2,3,4].map(q=>H.filter(h=>quint(h)===q).length)}};
 }
 /* ILLUSTRATIVE COST INDEX ON UNSOURCED (INVENTED) UNIT COSTS. Each constant below was searched for in the code, comments,
    engine/, docs/engine/ and inputs/, and no source was found. Every one is UNSOURCED. Units: adult annual wages per child
@@ -190,7 +212,7 @@ function compare(opts) {
   // costPer is an ILLUSTRATIVE COST INDEX on UNSOURCED unit costs (see cst); it is not a programme cost estimate
   return {base, pol, yearsAvoided, costPer: yearsAvoided > 0 ? pol.spent.total / yearsAvoided : null};
 }
-const api = {simulate, compare, REGIONS, POLICY0};
+const api = {simulate, compare, REGIONS, POLICY0, eventUniform};
 if (typeof module !== 'undefined') module.exports = api;
 root.CamChild = api;
 })(typeof window !== 'undefined' ? window : globalThis);

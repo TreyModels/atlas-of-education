@@ -1,0 +1,193 @@
+{
+  "reviewed_on": "2026-11-16",
+  "scope": "Selected primary methodological and domain anchors. This is not a systematic review. Access levels constrain the claims below.",
+  "sources": {
+    "edmonds2019": {
+      "title": "Different Modelling Purposes",
+      "authors": "Edmonds et al.",
+      "year": 2019,
+      "url": "https://jasss.org/22/3/6.html",
+      "doi": "10.18564/jasss.3993",
+      "access": "full text",
+      "role": "method",
+      "implementation": "Every family declares purpose and the conditions under which its claim would fail. Changing to prediction or policy advice requires a new validation argument."
+    },
+    "epstein2008": {
+      "title": "Why Model?",
+      "authors": "Joshua M. Epstein",
+      "year": 2008,
+      "url": "https://jasss.soc.surrey.ac.uk/11/4/12.html",
+      "access": "full text",
+      "role": "method",
+      "implementation": "Theoretical exposition, mechanism exploration and guiding data collection are legitimate purposes. Forecasting success is assessed only for a forecasting claim."
+    },
+    "grimm2020": {
+      "title": "The ODD Protocol for Describing Agent-Based and Other Simulation Models: A Second Update to Improve Clarity, Replication, and Structural Realism",
+      "authors": "Grimm et al.",
+      "year": 2020,
+      "url": "https://jasss.soc.surrey.ac.uk/23/2/7.html",
+      "doi": "10.18564/jasss.4259",
+      "access": "full text",
+      "role": "method",
+      "implementation": "Describe purpose, entities, scheduling, initialization, inputs and rules. Identify empirical patterns and retain failures. The existing shadow ODD needs the measurement and initialization amendments recorded in this packet."
+    },
+    "grimm2014trace": {
+      "title": "Towards better modelling and decision support: Documenting model development, testing, and analysis using TRACE",
+      "authors": "Grimm et al.",
+      "year": 2014,
+      "url": "https://doi.org/10.1016/j.ecolmodel.2014.01.018",
+      "access": "publisher abstract and author manuscript excerpts",
+      "role": "method",
+      "implementation": "Keep design rationale, verification, sensitivity, evaluation and limitations together. The issue matrix is a development record, not certification of completed validation."
+    },
+    "ligmann2020": {
+      "title": "‘One Size Does Not Fit All’: A Roadmap of Purpose-Driven Mixed-Method Pathways for Sensitivity Analysis of Agent-Based Models",
+      "authors": "Ligmann-Zielinska et al.",
+      "year": 2020,
+      "url": "https://www.jasss.org/23/1/6.html",
+      "doi": "10.18564/jasss.4201",
+      "access": "full text",
+      "role": "method",
+      "implementation": "Match sensitivity design to purpose. Cross functional forms and initial conditions, then vary uncertain magnitudes and stochastic realizations. This packet supplies factorial probes; it does not call them Sobol analysis."
+    },
+    "mcculloch2022": {
+      "title": "Calibrating Agent-Based Models Using Uncertainty Quantification Methods",
+      "authors": "McCulloch et al.",
+      "year": 2022,
+      "url": "https://www.jasss.org/25/2/1.html",
+      "doi": "10.18564/jasss.4791",
+      "access": "full text",
+      "role": "method",
+      "implementation": "Treat screening tolerances, model discrepancy and observation error explicitly. Acceptance within assumed ranges does not by itself identify a theory. Emulator/history-matching extensions are deferred until the elementary screens are sound."
+    },
+    "rahmandad2012": {
+      "title": "Reporting guidelines for simulation-based research in social sciences",
+      "authors": "Hazhir Rahmandad and John D. Sterman",
+      "year": 2012,
+      "url": "https://doi.org/10.1002/sdr.1481",
+      "access": "author manuscript record and reporting guidance excerpts",
+      "role": "method",
+      "implementation": "Disclose equations, simulation settings, optimization settings, software and inputs. The runner preserves trial settings, code/input hashes, runtime versions, optimization diagnostics and incomplete runs."
+    },
+    "boudon1974": {
+      "title": "Education, Opportunity, and Social Inequality: Changing Prospects in Western Society",
+      "authors": "Raymond Boudon",
+      "year": 1974,
+      "url": "https://eric.ed.gov/?id=ED091493",
+      "access": "author abstract in ERIC; book not independently reproduced",
+      "role": "theoretical ancestry",
+      "implementation": "The original work already presents a simulation model connecting educational and social opportunity. Atlas is not a replication of that model. Remove claims that Boudon provided no model."
+    },
+    "spence1973": {
+      "title": "Job Market Signaling",
+      "authors": "Michael Spence",
+      "year": 1973,
+      "url": "https://doi.org/10.2307/1882010",
+      "access": "publisher record and abstract",
+      "role": "rival theory",
+      "implementation": "A signalling rival needs employer beliefs, productivity and acquisition costs, with conditions supporting the claimed equilibrium. An additive schooling benefit alone does not reproduce Spence's model."
+    },
+    "bray2016": {
+      "title": "The Internal Dynamics of Privatised Public Education: Fee-charging Supplementary Tutoring Provided by Teachers in Cambodia",
+      "authors": "Mark Bray, Magda Nutsa Kobakhidze, Junyan Liu and Wei Zhang",
+      "year": 2016,
+      "url": "https://hub.hku.hk/bitstream/10722/225919/1/Content.pdf?accept=1",
+      "doi": "10.1016/j.ijedudev.2016.04.003",
+      "access": "author manuscript, full text",
+      "role": "empirical target and mechanism evidence",
+      "implementation": "Provider identities are reported by tutored pupils in three non-urban schools. Replace purchase shares with probabilities that tutored pupils name each provider; vary possible model-school subsets. Four or six subject offsets remain assumptions, and the exact questionnaire/sample mapping still needs checking."
+    },
+    "bharadwaj2020": {
+      "title": "Perverse Consequences of Well Intentioned Regulation: Evidence from India's Child Labor Ban",
+      "authors": "Prashant Bharadwaj, Leah K. Lakdawala and Nicholas Li",
+      "year": 2020,
+      "url": "https://doi.org/10.1093/jeea/jvz059",
+      "access": "publisher abstract",
+      "role": "external mechanism challenge",
+      "implementation": "Use the documented wage/subsistence channel to challenge a model where enforcement mechanically reduces work opportunities. India's estimate is not a Cambodia treatment coefficient. A wage-feedback/subsistence extension needs its own controlled test."
+    },
+    "knight2016": {
+      "title": "China's Expansion of Higher Education: the Labour Market Consequences of a Supply Shock",
+      "authors": "John Knight, Quheng Deng and Shi Li",
+      "year": 2016,
+      "url": "https://ora.ox.ac.uk/objects/uuid%3Af89aa600-ea8f-4370-81e8-6e119d08ad24/files/sq811kk108",
+      "access": "working paper record and author manuscript excerpts",
+      "role": "external cohort benchmark",
+      "implementation": "Entry cohorts and incumbents provide a discriminating margin. Match definitions before using graduate employment and relative wage patterns. The youth model's insider split is currently assumed, not estimated from this paper."
+    },
+    "bongaarts1998": {
+      "title": "On the quantum and tempo of fertility",
+      "authors": "John Bongaarts and Griffith Feeney",
+      "year": 1998,
+      "url": "https://knowledgecommons.popcouncil.org/departments_sbsr-pgy/248/",
+      "access": "author institution record and abstract",
+      "role": "measurement",
+      "implementation": "Period TFR combines timing and completed-family-size processes. A fitted period-TFR floor does not establish a floor in cohort fertility. Cohort or age-specific inputs are required for a tempo/quantum decomposition."
+    },
+    "klassen2022": {
+      "title": "Provisioning an Early City: Spatial Equilibrium in the Agricultural Economy at Angkor, Cambodia",
+      "authors": "Sarah Klassen, Scott G. Ortman, Jose Lobo and Damian Evans",
+      "year": 2022,
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9402775/",
+      "doi": "10.1007/s10816-021-09535-5",
+      "access": "full text",
+      "role": "historical proxy and theoretical inspiration",
+      "implementation": "The output proxy multiplies population, land and water. The 1.227 scaling slope does not supply an identified causal harvest multiplier. Joint sensitivity to the assumed multiplier and maintenance floor remains explicit."
+    },
+    "school_sources": {
+      "title": "Official education records, staffing rules and demographic projections used by the school models",
+      "authors": "EDB, national education ministries, Guangzhou Education Bureau and UN Population Division",
+      "year": 2026,
+      "url": "https://github.com/TreyModels/atlas-of-education/tree/main/public/reference/east-asia-schools/source",
+      "access": "repository source register; individual values not all reverified in this revision",
+      "role": "input register",
+      "implementation": "Exact official URLs are retained in systems.json, city/plans.json and city/guangzhou.json. Historical checks use the current data vintage. Future class, hiring-tail and applicant-retention rules are scenarios."
+    },
+    "ooa_sources": {
+      "title": "Dispersal model literature and palaeoenvironment input gaps",
+      "authors": "Atlas source register",
+      "year": 2026,
+      "url": "https://github.com/TreyModels/atlas-of-education/blob/main/inputs/other_sources.json",
+      "access": "existing source register; external grids not downloaded",
+      "role": "input gap register",
+      "implementation": "Published palaeoclimate and sea-level reconstructions are candidates for replacement inputs. The current boxes and composite curve remain stylised; the narrow speed bracket is a sensitivity experiment, not a newly estimated prior."
+    },
+    "macy2002": {
+      "title": "From Factors to Actors: Computational Sociology and Agent-Based Modeling",
+      "authors": "Michael W. Macy and Robert Willer",
+      "year": 2002,
+      "url": "https://doi.org/10.1146/annurev.soc.28.110601.141117",
+      "access": "publisher abstract",
+      "role": "computational sociology",
+      "implementation": "State actors, adaptation, interaction and the relational microfoundations producing an aggregate pattern. Vary structural rules as virtual experiments; a coefficient list alone leaves the process underspecified."
+    },
+    "hedstrom2010": {
+      "title": "Causal Mechanisms in the Social Sciences",
+      "authors": "Peter Hedstrom and Petri Ylikoski",
+      "year": 2010,
+      "url": "https://doi.org/10.1146/annurev.soc.012809.102632",
+      "access": "publisher abstract",
+      "role": "mechanism explanation",
+      "implementation": "Make the action and interaction process explicit. A named sociological theory needs a defensible mapping into entities and activities; a fitted additive term does not establish its causal role."
+    },
+    "bruch2015": {
+      "title": "Agent-Based Models in Empirical Social Research",
+      "authors": "Elizabeth Bruch and Jon Atwell",
+      "year": 2015,
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4430112/",
+      "doi": "10.1177/0049124113506405",
+      "access": "full text",
+      "role": "computational sociology and empirical evaluation",
+      "implementation": "Match the population and behavioral inputs to the model purpose. Abstract models can sharpen hypotheses and identify empirical relationships to test independently. Treat parameter uncertainty and stochastic variation separately."
+    },
+    "lorscheid2012": {
+      "title": "Opening the black box of simulations: increased transparency and effective communication through the systematic design of experiments",
+      "authors": "Iris Lorscheid, Bernd-Oliver Heine and Matthias Meyer",
+      "year": 2012,
+      "url": "https://doi.org/10.1007/s10588-011-9097-3",
+      "access": "publisher abstract",
+      "role": "experimental design",
+      "implementation": "Declare factors, response variables and comparisons before executing a batch, retaining design cells and failed trials. The packet provides transparent factorial settings and a persistent plan identity."
+    }
+  }
+}

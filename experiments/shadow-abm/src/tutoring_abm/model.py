@@ -51,6 +51,10 @@ class Params:
     side_job_max: float = 0.6       # side-job returns ~ U(0, max)
     norm_cost: float = 0.4          # median per-unit cost of withholding content (lognormal)
     fixed_cost: float = 0.1         # cost of opening a tutoring class
+    # Structural sensitivities, not estimates of the source sample.
+    subject_offsets: tuple = tuple(SUBJECT_OFFSETS)
+    provider_school_ids: tuple | None = None
+    initial_state: str = 'all_sell'
     # policy levers (zero in the observed world)
     ban_own: bool = False           # teachers may not sell to their own pupils
     cond_pay: float = 0.0           # bonus for teachers who do not sell to own pupils
@@ -90,6 +94,9 @@ class World:
     def __init__(self, p: Params, seed: int):
         rng = np.random.default_rng(seed)
         self.p = p
+        self.k = len(p.subject_offsets)
+        if self.k < 1 or p.initial_state not in ('all_sell', 'none_sell', 'random'):
+            raise ValueError('invalid subject count or initial teacher state')
         units = []  # (school, grade)
         for s, (kind, _) in enumerate(SCHOOLS):
             units += [(s, 9)] + ([(s, 12)] if kind == "high" else [])
@@ -105,15 +112,15 @@ class World:
         self.urban = np.array([SCHOOLS[s][1] for s in self.school])
         self.m0 = m0_unit[cls_unit][pc]
         self.resources = rng.normal(0, 1, pc.size) + p.urban_resources * self.urban
-        n_t = self.n_cls * K                                       # teacher = class * K + subject
+        n_t = self.n_cls * self.k
         self.side_job = rng.uniform(0, p.side_job_max, n_t)
         self.norm = p.norm_cost * np.exp(rng.normal(0, 0.5, n_t))
-        self.teacher_m0 = np.repeat(m0_unit[cls_unit], K)
-        self.teacher_fee = np.repeat(np.array([FEE[units[u][1]] for u in cls_unit]), K)
+        self.teacher_m0 = np.repeat(m0_unit[cls_unit], self.k)
+        self.teacher_fee = np.repeat(np.array([FEE[units[u][1]] for u in cls_unit]), self.k)
         # pupil x subject utility pieces that do not depend on teachers
         fee = np.vectorize(FEE.get)(self.grade)
         gamma = p.fee_sens * np.exp(-self.resources)
-        self.base = (p.base_demand + SUBJECT_OFFSETS[None, :] + p.stakes12 * (self.grade == 12)[:, None]
+        self.base = (p.base_demand + np.asarray(p.subject_offsets)[None, :] + p.stakes12 * (self.grade == 12)[:, None]
                      + p.thin * (1 - self.m0)[:, None] - (gamma * fee)[:, None])
         com_cost = p.com_cost_urban + p.com_cost_rural_extra * (~self.urban) - p.com_entry
         self.com_cost = np.maximum(com_cost, 0)[:, None]
@@ -121,19 +128,27 @@ class World:
         self.sell_own = np.ones(n_t, bool) & (not p.ban_own)
         self.sell_other = np.ones(n_t, bool)
         self.d = np.zeros(n_t)
+        # Separate initialization stream keeps pupil/teacher attributes paired.
+        init_rng = np.random.default_rng([seed, 8841])
+        if p.initial_state == 'none_sell':
+            self.sell_own[:] = False
+            self.sell_other[:] = False
+        elif p.initial_state == 'random':
+            self.sell_own = (init_rng.random(n_t) < .5) & (not p.ban_own)
+            self.sell_other = init_rng.random(n_t) < .5
         self.converged = False
         self.sweeps = 0
         self.rng = rng
 
     # --- pupils -----------------------------------------------------------------------------
     def own_teacher(self, pupils):
-        return self.pupil_class[pupils][:, None] * K + np.arange(K)[None, :]
+        return self.pupil_class[pupils][:, None] * self.k + np.arange(self.k)[None, :]
 
     def choice(self, pupils, d_own=None, sell_own=None, other_open=None):
         """Probabilities (own, other, commercial) for the given pupils, shape (n, K, 3)."""
         p = self.p
         t = self.own_teacher(pupils)
-        partner_t = self.partner[self.pupil_class[pupils]][:, None] * K + np.arange(K)[None, :]
+        partner_t = self.partner[self.pupil_class[pupils]][:, None] * self.k + np.arange(self.k)[None, :]
         d = self.d[t] if d_own is None else d_own
         own_ok = self.sell_own[t] if sell_own is None else sell_own
         oth_ok = self.sell_other[partner_t] if other_open is None else other_open
@@ -160,12 +175,12 @@ class World:
 
     def best_response(self, t):
         p = self.p
-        cls, k = divmod(t, K)
+        cls, k = divmod(t, self.k)
         own = self.class_pupils[cls]
         par_cls = self.partner[cls]
         par = self.class_pupils[par_cls]
         margin = self.teacher_fee[t] - TEACHER_COST
-        par_t = par_cls * K + k
+        par_t = par_cls * self.k + k
         _, prob_par, _ = self.choice_k(par, k, np.full(par.size, self.d[par_t]),
                                        float(self.sell_own[par_t]), 1.0)
         q_par = prob_par.sum() / CLASS_SIZE
@@ -219,6 +234,13 @@ class World:
         g9, g12 = self.grade == 9, self.grade == 12
         u, r = self.urban, ~self.urban
         tot = any_buy.sum()
+        # Bray et al. 2016, p.6: respondents naming a provider among tutored pupils
+        # in three schools. Multiple providers per pupil are possible. The exact
+        # source-school identities are unavailable; keep this subset explicit.
+        provider_mask = (np.ones(self.school.size, dtype=bool) if p.provider_school_ids is None
+                         else np.isin(self.school, p.provider_school_ids))
+        provider_total = any_buy[provider_mask].sum()
+        provider_share = lambda a: float(a[provider_mask].sum() / provider_total) if provider_total else np.nan
         out = {
             "participation": any_buy.mean(),
             "participation_g9": any_buy[g9].mean(), "participation_g12": any_buy[g12].mean(),
@@ -227,6 +249,9 @@ class World:
             "own_purchase_share": pr[..., 0].sum() / buy.sum(),
             "other_purchase_share": pr[..., 1].sum() / buy.sum(),
             "com_purchase_share": pr[..., 2].sum() / buy.sum(),
+            "source_own_provider_share": provider_share(any_own),
+            "source_other_provider_share": provider_share(any_oth),
+            "source_external_provider_share": provider_share(any_com),
             "subjects_bought": buy.sum(1).mean(),
             "own_share": any_own.sum() / tot, "other_share": any_oth.sum() / tot, "com_share": any_com.sum() / tot,
             "teacher_tutor_share": tutors.mean(), "teacher_own_share": self.sell_own.mean(),

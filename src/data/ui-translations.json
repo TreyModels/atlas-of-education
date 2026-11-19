@@ -2577,5 +2577,45 @@
  },
  "Favour is not even a separate model. A favour for buying from your own teacher is the same as raising everyone’s demand and both outside costs by the same amount. Rewritten that way, all 116 fitted favour settings give exactly the same results as thin settings.": {
   "zh-Hans": "“人情”甚至不是一个独立的模型。向自己老师购买所得的人情，等同于把所有人的需求和两种外部成本同时提高相同数值。这样改写后，116组拟合的人情参数与课时不足参数给出完全相同的结果。"
+ },
+ "Explore development, family formation and birth timing across six economies. Compare the assumptions behind the fertility scenarios.": {
+  "zh-Hans": "探索六个经济体的发展、家庭形成与生育时间，比较生育情景背后的假设。",
+  "vi": "Khám phá phát triển, hình thành gia đình và thời điểm sinh con tại sáu nền kinh tế. So sánh các giả định của những kịch bản sinh sản.",
+  "fr": "Explorez le développement, la formation des familles et le calendrier des naissances dans six économies. Comparez les hypothèses des scénarios de fécondité."
+ },
+ "Exploratory lab · six economies": {
+  "zh-Hans": "探索实验室 · 六个经济体",
+  "vi": "Phòng thí nghiệm khám phá · sáu nền kinh tế",
+  "fr": "Laboratoire exploratoire · six économies"
+ },
+ "Historical code and results for exploratory fertility scenarios. Read the research protocols before interpreting fitted relationships or policy effects.": {
+  "zh-Hans": "生育探索情景的历史代码与结果。解释拟合关系或政策效果前，请阅读研究方案。",
+  "vi": "Mã và kết quả lịch sử của các kịch bản sinh sản mang tính khám phá. Đọc đề cương nghiên cứu trước khi diễn giải quan hệ được khớp hoặc tác động chính sách.",
+  "fr": "Code et résultats historiques de scénarios exploratoires de fécondité. Consultez les protocoles avant d’interpréter les relations ajustées ou les effets des politiques."
+ },
+ "Historical calibration bundle. Provider observation equations and the SMC evidence estimator were subsequently corrected; new calibration runs are required.": {
+  "zh-Hans": "历史校准包。后续修正了辅导提供者的观测方程和SMC证据估计量，需要重新校准。",
+  "vi": "Gói hiệu chỉnh lịch sử. Phương trình quan sát người cung cấp dạy thêm và bộ ước lượng bằng chứng SMC đã được sửa; cần chạy hiệu chỉnh lại.",
+  "fr": "Archive d’étalonnage historique. Les équations d’observation des prestataires et l’estimateur de preuve SMC ont été corrigés ; un nouvel étalonnage est nécessaire."
+ },
+ "Exploratory fertility models across six economies, with explicit assumptions about development, family formation, birth timing and period effects.": {
+  "zh-Hans": "六个经济体的生育探索模型，明确列出发展、家庭形成、生育时间和时期效应的假设。",
+  "vi": "Mô hình sinh sản khám phá tại sáu nền kinh tế, nêu rõ giả định về phát triển, hình thành gia đình, thời điểm sinh con và hiệu ứng thời kỳ.",
+  "fr": "Modèles exploratoires de fécondité dans six économies, avec des hypothèses explicites sur le développement, les familles, le calendrier des naissances et les effets de période."
+ },
+ "Explore rival mechanisms for private tutoring in Cambodia. Corrected provider measurements require recalibration; policy comparisons depend on shared rules.": {
+  "zh-Hans": "探索柬埔寨私人辅导的竞争机制。提供者测量修正后需要重新校准，政策比较取决于共同规则。",
+  "vi": "Khám phá các cơ chế cạnh tranh về dạy thêm tại Campuchia. Số đo người cung cấp đã sửa đòi hỏi hiệu chỉnh lại; so sánh chính sách phụ thuộc vào các quy tắc chung.",
+  "fr": "Explorez des mécanismes concurrents du tutorat privé au Cambodge. Les mesures corrigées des prestataires exigent un nouvel étalonnage ; les comparaisons dépendent de règles communes."
+ },
+ "Coast or herds? Full write-up": {
+  "zh-Hans": "沿海还是追随兽群？完整说明",
+  "vi": "Bờ biển hay đàn thú? Bài trình bày đầy đủ",
+  "fr": "Côtes ou troupeaux ? Présentation complète"
+ },
+ "Model bundle · code, data & maps": {
+  "zh-Hans": "模型包 · 代码、数据与地图",
+  "vi": "Gói mô hình · mã, dữ liệu và bản đồ",
+  "fr": "Archive du modèle · code, données et cartes"
  }
 }

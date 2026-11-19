@@ -1,0 +1,178 @@
+{
+  "schema": 1,
+  "status": "Unrun experimental designs. All existing empirical targets have previously been inspected; these protocols are not prospective preregistrations.",
+  "common_methods": [
+    "edmonds2019",
+    "epstein2008",
+    "grimm2020",
+    "grimm2014trace",
+    "ligmann2020",
+    "mcculloch2022",
+    "rahmandad2012",
+    "macy2002",
+    "hedstrom2010",
+    "bruch2015",
+    "lorscheid2012"
+  ],
+  "families": {
+    "credential": {
+      "purpose": "theoretical exploration and retrospective pattern screening",
+      "question": "Which financing assumptions allow each credential-value structure to reproduce wealth profiles, and does the premium intervention change completion relative to the same-year baseline?",
+      "sources": [
+        "boudon1974",
+        "spence1973"
+      ],
+      "design": "Country x HC/POS/REL x hard/graded financing, paired nuisance draws and population seeds. Report all profile errors and screens before selecting surviving draws.",
+      "estimand": "Q3+ completion in 2035 under falling premium minus 2035 under baseline premium; separately report 2024-2035 scenario change.",
+      "failure_criterion": "A claimed mechanism distinction fails if it disappears under a financing rule that also matches the observed profile. A large acceptance rate alone supplies no causal ranking.",
+      "uncertainty": "Judgement ranges, functional form and synthetic populations; seed repetitions nested within nuisance draws.",
+      "empirical_gaps": [
+        "eligibility rules and credential requirements by job",
+        "survey-timed completion and child weights",
+        "household income and schooling costs",
+        "synthetic parameter/mechanism recovery with empirical-resolution observation error"
+      ],
+      "implementation": "research/adapters.py:credential; engine/relfloor_countries.py",
+      "scope_limit": "The additive relational term does not implement institutions that set or enforce eligibility. Added empirical ingredients need a separate documented extension.",
+      "built_in_result": "With the same tastes, financing draws and incomes, a lower premium weakly reduces completion because the positional feedback is nonnegative. This sign is imposed by the choice rule. The paired experiments describe magnitude and how other theoretical claims depend on the specification; they do not discover the sign."
+    },
+    "shadow": {
+      "purpose": "theoretical exploration of teacher-pupil choices",
+      "question": "Do observed purchase patterns distinguish diversion, favouritism and insufficient regular instruction after correcting the observation equation?",
+      "sources": [
+        "bray2016"
+      ],
+      "design": "Nested variants x initial selling state x four/six subjects x possible non-urban source-school subsets; paired prior draws and school seeds. Record convergence and withhold policy contrasts from unfinished equilibria.",
+      "estimand": "Pupil-level provider probabilities among tutored pupils; paired changes in participation, withheld content and curriculum coverage.",
+      "failure_criterion": "Any claimed mechanism discrimination must survive admissible measurement mappings and initial conditions. Policy agreement conditional on shared channels has that limited interpretation.",
+      "uncertainty": "Source-school mapping and subject representation are structural sensitivities; generated schools are synthetic replication, not held-out observed schools.",
+      "empirical_gaps": [
+        "exact questionnaire and provider-subset identities",
+        "direct measures of regular instruction and assessment favouritism",
+        "teacher and pupil responses to a policy change",
+        "recalibration under the corrected targets before any calibrated policy comparison"
+      ],
+      "implementation": "research/adapters.py:shadow; experiments/shadow-abm/src/tutoring_abm",
+      "scope_limit": "The runner explores prior draws. Legacy posteriors and evidence values need replacement after local recalibration. Curriculum coverage is not measured learning or welfare."
+    },
+    "camchild": {
+      "purpose": "explore household mechanisms and intervention dependence",
+      "question": "How do paired policy effects change with income/valuation assumptions and the definition of the poorest households?",
+      "sources": [
+        "bharadwaj2020"
+      ],
+      "design": "National-income versus within-region rank, indexed common random numbers, declared nuisance ranges, thirteen single-lever interventions. Cost index reported as an index only.",
+      "estimand": "Same-year policy-minus-reference child-work and attendance rates, child-years avoided and incremental illustrative cost index.",
+      "failure_criterion": "Robustness claims fail when signs reverse across the declared nuisance draws. Effect existence inside the model does not establish programme effectiveness outside it.",
+      "uncertainty": "Synthetic household variation and assumed incomes/school values. Treatment response coefficients and work-hour observation rules remain unestimated.",
+      "empirical_gaps": [
+        "resolve attendance versus administrative enrollment calibration",
+        "hours and hazardous work including school-and-work ages 12-14 and household services",
+        "observed IDPoor eligibility",
+        "programme cost and response coefficients",
+        "endogenous adult wages and subsistence feedback benchmark"
+      ],
+      "implementation": "research/node_adapter.cjs:camchild; public/engines/camchild.js",
+      "scope_limit": "The income rank is a proxy, not the DHS wealth index or IDPoor. No national policy cost-effectiveness claim is supported."
+    },
+    "angkor": {
+      "purpose": "mechanism exploration with accounting constraints",
+      "question": "Which combinations of productivity, maintenance, extraction, climate and mobility rules produce recovery or relocation?",
+      "sources": [
+        "klassen2022"
+      ],
+      "design": "Multiplier x hydraulic floor x climate, with paired nuisance draws and seed repetitions; Petri knockouts and mobility restrictions; conservation checks in every arm. Also test all sixteen institutional reshuffle subsets, canal floors, elite spending destinations, and linear/exponential/capped PDSI translations including zero response.",
+      "estimand": "Paired retention, food-gap and old-centre water differences; elite-exit frequency within each declared design cell.",
+      "failure_criterion": "A proposed sufficient mechanism fails within any declared counterexample cell; a historical claim additionally requires independent temporal/spatial targets.",
+      "uncertainty": "Illustrative economic rates, structural multipliers/floors and small weather shocks; historical reconstruction uncertainty is missing.",
+      "empirical_gaps": [
+        "sourced crop response to drought, including extrapolation limits",
+        "historical population and land uncertainty",
+        "independent maintenance and relocation evidence",
+        "labour-responsive harvest and elite-spending variants in older institutional engines"
+      ],
+      "implementation": "research/node_adapter.cjs:angkor; public/engines/petri.js; public/engines/relocation.js; public/engines/monsoon.js; experiments/angkor-review/model/accounted_v2.py",
+      "scope_limit": "PDSI slopes, response shapes and cap 3 are judgement sensitivities. The institutional engine retains illustrative rates. Accounting and pattern matching require separate historical evaluation."
+    },
+    "schools": {
+      "purpose": "descriptive reconstruction, retrospective forecasting diagnostics and conditional planning",
+      "question": "Which outputs beat simple benchmarks historically, and which future gaps depend on hiring-tail or applicant-return rules?",
+      "sources": [
+        "school_sources"
+      ],
+      "design": "Retain country/city/stage distinctions and raw dated prediction errors; compare rolling and multi-year HK forecasts; vary births, exits, taper/continued hiring and applicant retention.",
+      "estimand": "MAE on matched historical outcomes; future headcount and unmatched applicants conditional on rules.",
+      "failure_criterion": "A claimed forecasting improvement fails when the corresponding outcome loses to its declared benchmark. Historical enrollment success does not validate future closures or layoffs.",
+      "uncertainty": "Current historical vintage; scenario ranges have no probability interpretation.",
+      "empirical_gaps": [
+        "real-time historical vintages",
+        "teacher departures by age and subject",
+        "applicant re-entry and attrition",
+        "future merger-rule outcomes",
+        "district access and learning following consolidation"
+      ],
+      "implementation": "research/node_adapter.cjs:schools; public/reference/east-asia-schools/source/pipeline.js",
+      "scope_limit": "Closure checks evaluate an earlier historical rule; the latest merger policy has no completed holdout. Raw errors permit later horizon-specific analysis."
+    },
+    "youth": {
+      "purpose": "retrospective predictive diagnostics and parameter identification probes",
+      "question": "How much can equally plausible wage-speed and residual-step settings change the fit and held-period error after nuisance parameters are refitted?",
+      "sources": [
+        "knight2016"
+      ],
+      "design": "2022/2024 information sets x fixed wage-speed x fitted/fixed/zero step, with optimizer restarts. Every fit is scored; no winner is selected on test error.",
+      "estimand": "Training residual cost, held-period MAE, matched naive benchmark and local Jacobian singular values.",
+      "failure_criterion": "Predictive superiority fails when matched-definition benchmark error is smaller. Stable aggregate fit across parameter profiles weakens mechanism attribution.",
+      "uncertainty": "Optimization and structural settings, not a posterior distribution. Known evaluation data make this retrospective.",
+      "empirical_gaps": [
+        "graduate versus non-graduate job finding and separations",
+        "outside measure of wage adjustment",
+        "hukou/party/parental-sector outcomes",
+        "independently dated shock exposure",
+        "genuinely prospective registration and new releases"
+      ],
+      "implementation": "research/adapters.py:youth; engine/firms/forecast_strict.py; engine/firms/forecast_2024.py",
+      "scope_limit": "The post-2023 score for a 2022 naive benchmark crosses a measurement break. Lambda values derived from changing wage ratios are order-of-magnitude sensitivities, not identified adjustment estimates."
+    },
+    "fertility": {
+      "purpose": "exploratory descriptive time-series diagnostics",
+      "question": "Which relationships persist across sample windows, differencing, detrending and rolling comparison with persistence?",
+      "sources": [
+        "bongaarts1998"
+      ],
+      "design": "1961/1964 start x HAC lag 1/2/4; separate place regressions; levels, differences and linear detrending; rolling fits use past outcomes only. Distinguish realised-covariate and frozen-covariate scores.",
+      "estimand": "Place-specific slopes and conditional forecast errors; no pooled causal coefficient or fertility floor.",
+      "failure_criterion": "A proposed stable fitted relationship fails when signs or forecast performance change across these diagnostic forms. A nonsignificant test does not establish absence of an effect.",
+      "uncertainty": "Small samples, integration order, breaks, measurement and exploratory multiplicity. HAC does not resolve all these problems.",
+      "empirical_gaps": [
+        "cohort and age-specific fertility",
+        "timing measures",
+        "education and policy mechanisms",
+        "series revision histories",
+        "declared dynamic/structural-break alternatives"
+      ],
+      "implementation": "research/adapters.py:fertility",
+      "scope_limit": "Cointegration is reported only when statsmodels is available; applicability still depends on integration assumptions. Cross-country pooled p-values are omitted."
+    },
+    "ooa": {
+      "purpose": "exploratory spatial feasibility modelling",
+      "question": "How do route comparisons depend on generalist costs, speed brackets and each archaeological constraint?",
+      "sources": [
+        "ooa_sources"
+      ],
+      "design": "Chronology x original/narrow speed bracket x generalist cost x waiting; common nuisance draws, separate noise stream; all-site and leave-one-site-out screens, including explicit zero-support cases.",
+      "estimand": "Arrival feasibility and conditional strategy comparisons under the declared grid, priors and filters; ties split fractionally.",
+      "failure_criterion": "A route-ranking claim fails when it reverses under declared costs or omitted-site screens. Hard date filters supply no archaeological detection likelihood.",
+      "uncertainty": "Hand-drawn landscape, speed ranges, climate windows, crossing rules and chronological selection; empirical preservation/detection uncertainty remains absent.",
+      "empirical_gaps": [
+        "published palaeoclimate and sea-level grids",
+        "independent front-speed evidence",
+        "dating likelihoods and site selection",
+        "preservation/detection model",
+        "grid/time-resolution convergence"
+      ],
+      "implementation": "research/adapters.py:ooa with the sibling ooa-coast-vs-herds checkout",
+      "scope_limit": "Leave-one-site-out is a dependence diagnostic because sites have already informed model design. New external data are needed for validation."
+    }
+  }
+}

@@ -70,13 +70,13 @@ const angkor: CatalogueItem[] = [
 ]
 
 const fertility: CatalogueItem[] = [
-  { id: 'fertility-collapse', family: 'fertility', title: 'Fertility collapse lab', question: 'Six economies fell below their development path at once after 2015. Explore the survival floor, the marriage jam, the biological clock and the policy levers.', method: 'Findings lab · six economies', format: 'Classic workbench', href: 'research/fertility.html', keywords: 'fertility TFR marriage East Asia IVF shock 2015 fecundity' },
-  { id: 'fertility-bundle', family: 'fertility', title: 'Fertility research bundle', question: 'The full codebase and findings: survival floor, credential contest, fecundity clock, shock tests and policy suites.', method: 'Code, data & findings · download', format: 'Classic workbench', href: 'research/fertility/fertility-research-full.zip', keywords: 'fertility code data findings zip download' },
+  { id: 'fertility-collapse', family: 'fertility', title: 'Fertility collapse lab', question: 'Explore development, family formation and birth timing across six economies. Compare the assumptions behind the fertility scenarios.', method: 'Exploratory lab · six economies', format: 'Classic workbench', href: 'research/fertility.html', keywords: 'fertility TFR marriage East Asia IVF shock 2015 fecundity' },
+  { id: 'fertility-bundle', family: 'fertility', title: 'Fertility research bundle', question: 'Historical code and results for exploratory fertility scenarios. Read the research protocols before interpreting fitted relationships or policy effects.', method: 'Code, data & findings · download', format: 'Classic workbench', href: 'research/fertility/fertility-research-full.zip', keywords: 'fertility code data findings zip download' },
 ]
 
 const shadow: CatalogueItem[] = [
   { id: 'shadow-education', family: 'shadow', title: 'Shadow education lab', question: 'Why do pupils pay their own teachers? Three rival explanations tested against seven published patterns.', method: 'Agent-based model · Cambodia', format: 'Classic workbench', href: 'research/shadow-education.html', keywords: 'shadow education private tutoring Cambodia Bray diversion favour' },
-  { id: 'shadow-abm', family: 'shadow', title: 'Tutoring ABM bundle', question: 'The calibrated agent-based model: 72 teachers and 1,260 pupils, fitted by ABC-SMC against published targets.', method: 'Code & data · download', format: 'Classic workbench', href: 'research/shadow/tutoring_abm.zip', keywords: 'tutoring agent based model code download' },
+  { id: 'shadow-abm', family: 'shadow', title: 'Tutoring ABM bundle', question: 'Historical calibration bundle. Provider observation equations and the SMC evidence estimator were subsequently corrected; new calibration runs are required.', method: 'Code & data · download', format: 'Classic workbench', href: 'research/shadow/tutoring_abm.zip', keywords: 'tutoring agent based model code download' },
   { id: 'shadow-dhs', family: 'shadow', title: 'Credential-floor DHS test', question: 'Who leaves school? Three structures predict different shares of leavers from the poorest 40% of households, checked against the Cambodia DHS.', method: 'Code & data · download', format: 'Classic workbench', href: 'research/shadow/credential_floor_dhs.zip', keywords: 'credential floor DHS Cambodia poorest households download' },
 ]
 
@@ -115,12 +115,12 @@ export const familyInfo: Record<ModelFamily, { title: string; short: string; que
   fertility: {
     title: 'Fertility & family formation', short: 'Fertility',
     question: 'Why did fertility fall off its path, and what can still move it?',
-    description: 'The six-economy fertility programme: survival floor, credential contest, marriage jam, biological clock and the unexplained post-2015 shock.',
+    description: 'Exploratory fertility models across six economies, with explicit assumptions about development, family formation, birth timing and period effects.',
   },
   shadow: {
     title: 'Shadow education', short: 'Shadow ed',
     question: 'Why do pupils pay their own teachers?',
-    description: 'Private tutoring in Cambodia as a system: three rival explanations calibrated against published patterns, and the policies they agree on.',
+    description: 'Explore rival mechanisms for private tutoring in Cambodia. Corrected provider measurements require recalibration; policy comparisons depend on shared rules.',
   },
   deephistory: {
     title: 'Deep history · Human dispersal', short: 'Deep history',

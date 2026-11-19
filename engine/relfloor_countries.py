@@ -108,9 +108,10 @@ V1_G = {'Cambodia': (.03, .06), 'Vietnam': (.04, .065), 'China': (.05, .09)}
 
 SMOOTH_LIQ = '--smooth-liq' in sys.argv   # robustness: graded rather than hard liquidity threshold
 
-def draw(rng, S, cfg):
+def draw(rng, S, cfg, smooth_liq=None):
     th = {k: rng.uniform(*v) for k, v in PRIORS.items()}
-    th['s_liq'] = rng.uniform(0.1, 1.0) if SMOOTH_LIQ else 0.0   # log-income scale of the graded constraint
+    smooth_liq = SMOOTH_LIQ if smooth_liq is None else smooth_liq
+    th['s_liq'] = rng.uniform(0.1, 1.0) if smooth_liq else 0.0
     th['mu'] = rng.uniform(*cfg['mu']); th['g'] = rng.uniform(*cfg['g'])
     if S == 'M_HC': th['b_pos'] = th['b_rel'] = 0.0
     elif S == 'M_POS': th['b_rel'] = 0.0
@@ -150,6 +151,15 @@ def sim(th, cfg, scen='base', n=2000, seed=0):
         out['q3'].append(stay[q >= 2].mean())
     return {k: np.array(v) for k, v in out.items()}
 
+def premium_contrasts(base, fall):
+    """Separate a paired intervention effect from change along a growing-income path."""
+    return {
+        'premium_effect_2035_q3': float(fall['q3'][-1] - base['q3'][-1]),
+        'scenario_change_2024_2035_q3': float(fall['q3'][-1] - fall['q3'][yi(2024)]),
+        'baseline_change_2024_2035_q3': float(base['q3'][-1] - base['q3'][yi(2024)]),
+    }
+
+
 def work(args):
     country, S, chunk, nd, gmode = args
     cfg = dict(CFG[country])
@@ -157,7 +167,7 @@ def work(args):
     rng = np.random.default_rng([2026, list(CFG).index(country), SIDX[S], chunk])
     acc = []
     for i in range(nd):
-        seed = (chunk * nd + i) * 7 + SIDX[S]
+        seed = np.random.SeedSequence([2026, list(CFG).index(country), SIDX[S], chunk, i])
         th = draw(rng, S, cfg); r = sim(th, cfg, 'base', 1500, seed)
         passed = [k for k, t in cfg['tests'].items() if t(r)]
         if not passed: continue
@@ -168,7 +178,7 @@ def work(args):
              'exit_low_2014': float(rb['exit_low'][yi(2014)]),
              'exit_low_2021': float(rb['exit_low'][yi(2021)]),
              'exit_low_2035': float(rb['exit_low'][-1]),
-             'fall35_q3': float(rf['q3'][-1] - rf['q3'][yi(2024)]),
+             **premium_contrasts(rb, rf),
              'cn_resp': float(rb['c'][yi(2023)] / rn['c'][yi(2023)] - 1),
              'cn_2024_26': float(rb['c'][yi(2026)] / rb['c'][yi(2024)] - 1),
              'c_end': float(rb['c'][yi(2024)]),
@@ -190,7 +200,8 @@ def ks_uniform(x, lo, hi):
 def summarise(a, nd, country, S):
     d = {'accepted': len(a), 'rate': len(a) / nd}
     if len(a) < 5: return d
-    for k in ['exit_low_2014', 'exit_low_2021', 'exit_low_2035', 'fall35_q3', 'cn_resp',
+    for k in ['exit_low_2014', 'exit_low_2021', 'exit_low_2035', 'premium_effect_2035_q3',
+              'scenario_change_2024_2035_q3', 'baseline_change_2024_2035_q3', 'cn_resp',
               'cn_2024_26', 'c_end']:
         d[k] = pct([x[k] for x in a])
     for yr in (2014, 2021):
@@ -207,8 +218,8 @@ def summarise(a, nd, country, S):
             'posterior': post,
             'width_ratio_90': round((post[2] - post[0]) / (0.9 * (hi - lo)), 3),
             'ks_D': D, 'ks_p': p,
-            'verdict': 'posterior ~ prior (data uninformative)' if (p > 0.01 or D < 0.1)
-                       else 'posterior differs from prior'}
+            'interpretation': 'KS is a descriptive marginal-distribution diagnostic; '
+                              'a large p-value does not establish equality or joint non-identification.'}
     if country == 'Cambodia':
         for yr in (2014, 2021):
             v = np.array([x[f'exit_low_{yr}'] for x in a]); obs = OBS_KHM[yr]
@@ -232,12 +243,18 @@ def chn_cohort():
                     'births are NBS sample-survey estimates; no mortality or migration adjustment.'}
 
 def run(nd, gmode='sourced', chunks=8):
-    jobs = [(c, S, i, nd // chunks, gmode) for c in CFG for S in STRUCTS for i in range(chunks)]
+    if nd <= 0 or chunks <= 0:
+        raise ValueError('draw and chunk counts must be positive')
+    # Fixed chunk size preserves seeds across workers; include the remainder.
+    counts = [nd // chunks + (i < nd % chunks) for i in range(chunks)]
+    jobs = [(c, S, i, n, gmode) for c in CFG for S in STRUCTS for i, n in enumerate(counts) if n]
     res = {}
     with Pool(os.cpu_count()) as p:
         for c, S, acc in p.imap_unordered(work, jobs):
             res.setdefault(c, {}).setdefault(S, []).extend(acc)
-    out = {'meta': {'draws_per_country_structure': nd, 'growth_priors': gmode,
+    out = {'meta': {'schema_version': 3, 'draws_per_country_structure': nd, 'growth_priors': gmode,
+                    'purpose': 'theoretical exploration with retrospective pattern screening',
+                    'counterfactual': 'same draw and seed, falling vs baseline premium in 2035',
                     'growth_bands': {c: list(V1_G[c] if gmode == 'v1' else CFG[c]['g']) for c in CFG},
                     'observed_khm_exit_low': {str(k): {kk: round(vv, 3) for kk, vv in v.items()}
                                               for k, v in OBS_KHM.items()},
@@ -256,7 +273,7 @@ if __name__ == '__main__':
     out = run(nd, gmode)
     here = os.path.dirname(__file__)
     os.makedirs(os.path.join(here, 'results'), exist_ok=True)
-    fn = 'relfloor_countries_v2.json' if gmode == 'sourced' else 'relfloor_countries_v2_v1priors.json'
+    fn = 'relfloor_countries_v3.json' if gmode == 'sourced' else 'relfloor_countries_v3_v1priors.json'
     if SMOOTH_LIQ: fn = fn.replace('.json', '_smoothliq.json')
     json.dump(out, open(os.path.join(here, 'results', fn), 'w'), indent=1)
     print(json.dumps(out['meta'], indent=1))
@@ -265,5 +282,6 @@ if __name__ == '__main__':
             print(f'== {c} [{test}]')
             for S, d in block.items():
                 keep = {k: d[k] for k in d if k in ('accepted', 'exit_low_2021', 'exit_low_2035',
-                        'fall35_q3', 'cn_resp', 'cn_2024_26', 'b_rel_vs_prior', 'exit_low_2021_vs_obs', 'q_profile_2021', 'q_profile_2014')}
+                        'premium_effect_2035_q3', 'scenario_change_2024_2035_q3', 'cn_resp',
+                        'cn_2024_26', 'b_rel_vs_prior', 'exit_low_2021_vs_obs', 'q_profile_2021', 'q_profile_2014')}
                 print(' ', S, json.dumps(keep))
