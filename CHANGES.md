@@ -24,6 +24,12 @@
 - Concept DOI 10.5281/zenodo.24369167 recorded in CITATION.cff, the site footer, the licence line, the About page, README and `docs/DOI.md`.
 - v2026.11.19 notes updated with its version DOI; v2026.11.20 minted as version 2 under the same concept DOI.
 
+## Hashtag search and tag index
+- Every catalogue entry now carries curated hashtags (Latin in every language) alongside automatic family and kind tags (PR #23).
+- Find-a-model and the Library search accept `#tag` queries: exact, prefix or substring match, several tags ANDed, mixed freely with plain words; ordinary keyword search still works.
+- A browseable tag cloud with counts on the Library, suggested tags in the search modal, chips on catalogue cards and in the workbench header open a pre-filled search.
+- Tags are filters over the existing 65 entries, not new models; totals are unchanged.
+
 ## Validation
 Validation: all nine journey/link checks, React/translation checks, 52 model tests, production build and 22-model worker parity. Desktop/mobile browser checks completed. These checks establish implementation behavior, not empirical validity of every model.
 
