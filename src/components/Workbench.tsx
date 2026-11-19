@@ -106,7 +106,7 @@ export function Workbench({ world, values, onChange, onReset, onHandoff, navigat
   return <main id="main-content" className="workbench shell">
     <div className="workbench-topline"><button className="back-link" onClick={() => navigate(guideIndex >= 0 ? 'angkor-guide' : '')}><ArrowLeft size={17} />{t(guideIndex >= 0 ? 'Guided sequence' : 'Back to library')}</button><span>{t(world.meta)}</span></div>
     <header className="world-header">
-      <div><p className="eyebrow">{guide ? t(guide[1]) : t('THE ATLAS OF EDUCATION · MODEL LAB')}</p><h1>{t(world.title)}</h1><p>{t(world.question)}</p></div>
+      <div><p className="eyebrow">{guide ? t(guide[1]) : t('ATLAS WORLDS · MODEL LAB')}</p><h1>{t(world.title)}</h1><p>{t(world.question)}</p></div>
       <span className={`mode ${world.stored ? 'stored' : ''}`}><i />{t(world.stored ? 'Stored results' : 'Live model')}</span>
     </header>
 

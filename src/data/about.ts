@@ -25,7 +25,7 @@ export const about: Article = {
       'Those results stay visible, labelled for what they are. They tell me where to go back and keep working, and they are an open invitation for anyone else to try.',
     ], quote: { text: 'All models are wrong, but some are useful.', who: 'George E. P. Box, statistician (1979)' } },
     { heading: 'Come and work on them', paras: [
-      'Every model can be downloaded, run on your own machine and changed. If you think a model is missing something, change it and propose your version. Proposals are reviewed before anything is listed here. Everything is licensed CC BY-NC 4.0: reuse and adapt it with credit, for noncommercial purposes. Releases are versioned for citation; a DOI will be displayed when issued.',
+      'Every model’s code can be downloaded and run on your own machine. If you think a model is missing something, change it and propose your version. Proposals are reviewed before anything is listed here. Everything is licensed CC BY-NC 4.0: reuse and adapt it with credit, for noncommercial purposes. Releases are versioned for citation; DOI 10.5281/zenodo.24369167.',
     ] },
   ],
 }
@@ -78,14 +78,14 @@ export const workflow: Article = {
     ] },
     { heading: 'The scientific process underneath', paras: [
       'The workflow serves one process. I start from a verbal model: an argument from the literature or from my own theory and observations. The agents and I write it as explicit rules, find the published studies and data it should answer to, and turn it into code. The code is checked for consistency (do the books balance, do people get counted once), then run many times, then compared with observations it was not built from where such data exist.',
-      'Every model then gets two labels, why it exists and how far it has been checked, and every paragraph on its page says whether it comes from a published study, observed data, a simulation, or is still open. Models that fail a test stay on the site, labelled as failed. Some of my favourite arguments have not survived this process yet. That is what the process is for.',
+      'Every model then gets two labels, why it exists and how far it has been checked, and every paragraph on its page says whether it comes from a published study, observed data, a simulation, or is still open. Models that fail a test stay on the site, labelled as a historical or limited result. Some of my favourite arguments have not survived this process yet. That is what the process is for.',
     ] },
     { heading: 'How mistakes get caught', paras: [
       'AI agents make mistakes confidently, so the process assumes they will. Every number on a model page is traced back to a source file before it is published; drafts with numbers that cannot be traced are sent back. Building this site, that caught a misquoted figure from the Angkor paper, a results table still showing pre-review numbers, broken links, and a worker that ran out of budget halfway through a file. Automated checks run before every merge: model tests, translation coverage, a browser build, and pages loaded at desktop and phone sizes.',
       'The final checks are mine. I decide what the questions are, which explanations are worth modelling, and whether a result says what the page claims. The agents do the building; the judgement stays human.',
     ] },
     { heading: 'Open by default', paras: [
-      'The public models and available materials live on GitHub under the stated reuse terms. Releases are versioned for citation; Zenodo DOI details are displayed when issued. Anyone can download a model, change it, and propose a version through a simple form. If this workflow is useful to you, copy it.',
+      'The public models and available materials live on GitHub under the stated reuse terms. Releases are versioned for citation; Zenodo DOI 10.5281/zenodo.24369167. Anyone can download a model, change it, and propose a version through a simple form. If this workflow is useful to you, copy it.',
     ] },
   ],
 }

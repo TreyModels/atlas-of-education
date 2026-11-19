@@ -2,6 +2,15 @@
 
 **Whole Atlas (automatic):** Zenodo is linked to GitHub. Each GitHub *release* of `TreyModels/atlas-of-education` gets a version DOI, and there is one concept DOI that always points to the latest. Metadata comes from `.zenodo.json` and `CITATION.cff`.
 
+## Current DOIs (19 Nov 2026)
+
+| Purpose | DOI | Record |
+| --- | --- | --- |
+| **Concept DOI** — cite this; always resolves to the latest version | [10.5281/zenodo.24369167](https://doi.org/10.5281/zenodo.24369167) | [zenodo.org/records/24369167](https://zenodo.org/records/24369167) |
+| **Version DOI** — v2026.11.19 | [10.5281/zenodo.24369168](https://doi.org/10.5281/zenodo.24369168) | [zenodo.org/records/24369168](https://zenodo.org/records/24369168) |
+
+`CITATION.cff` carries the **concept** DOI (10.5281/zenodo.24369167), so a citation keeps resolving to the newest release. Each future GitHub release mints a new version DOI under the same concept DOI; add it to this table when it is issued.
+
 One-time setup (Trey, about 2 minutes):
 1. zenodo.org → log in with GitHub → profile menu → **GitHub** → **Sync now** → switch **TreyModels/atlas-of-education** ON.
 2. On GitHub, create a release (e.g. tag `v2026.11.19`). Zenodo archives it and shows the DOI badge.

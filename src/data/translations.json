@@ -1,8 +1,8 @@
 {
-  "THE ATLAS OF EDUCATION · MODEL LAB": {
-    "zh-Hans": "教育地图集 · 模型实验室",
-    "fr": "ATLAS DE L’ÉDUCATION · LABORATOIRE DE MODÈLES",
-    "vi": "BẢN ĐỒ GIÁO DỤC · PHÒNG THÍ NGHIỆM MÔ HÌNH"
+  "ATLAS WORLDS · MODEL LAB": {
+    "zh-Hans": "ATLAS WORLDS · 模型实验室",
+    "fr": "ATLAS WORLDS · LABORATOIRE DE MODÈLES",
+    "vi": "ATLAS WORLDS · PHÒNG THÍ NGHIỆM MÔ HÌNH"
   },
   "What changes if…?": {
     "zh-Hans": "如果改变条件，会怎样？",
@@ -4878,5 +4878,71 @@
     "zh-Hans": "后验中位数；先验中位数为0.40",
     "fr": "Médiane a posteriori ; médiane a priori 0,40",
     "vi": "Trung vị hậu nghiệm; trung vị tiên nghiệm 0,40"
+  },
+  "Code & data download": {
+    "zh-Hans": "代码与数据下载"
+  },
+  "Write-up": {
+    "zh-Hans": "研究报告"
+  },
+  "Narrated journey": {
+    "zh-Hans": "叙述式导览"
+  },
+  "Exploratory model · Python bundle": {
+    "zh-Hans": "探索性模型 · Python 包"
+  },
+  "Development (survival) model": {
+    "zh-Hans": "发展（生存）模型"
+  },
+  "Does life expectancy predict fertility levels, and does that link survive differencing?": {
+    "zh-Hans": "预期寿命能预测生育水平吗？这一关系在差分后还成立吗？"
+  },
+  "Development + matching + post-2015 period dummy": {
+    "zh-Hans": "发展 + 婚配匹配 + 2015年后时期虚拟变量"
+  },
+  "What does adding marriage matching and a post-2015 period dummy change?": {
+    "zh-Hans": "加入婚配匹配和2015年后时期虚拟变量会改变什么？"
+  },
+  "Credential cohort model": {
+    "zh-Hans": "文凭世代模型"
+  },
+  "Can mass education raising the cost of each child generate a fertility floor?": {
+    "zh-Hans": "大众教育提高每个孩子的成本，能否形成生育率的下限？"
+  },
+  "Assortative matching mechanism lab": {
+    "zh-Hans": "婚配匹配机制实验室"
+  },
+  "Can a credential floor with women marrying up reproduce Korean marriage facts?": {
+    "zh-Hans": "文凭门槛加上女性向上婚配，能否复现韩国的婚姻事实？"
+  },
+  "Fecundity-age model": {
+    "zh-Hans": "年龄别生育力模型"
+  },
+  "How much do delayed marriages cut births under an age-specific fecundity curve?": {
+    "zh-Hans": "在年龄别生育力曲线下，推迟婚姻会减少多少出生？"
+  },
+  "IVF and policy suite": {
+    "zh-Hans": "IVF 与政策组合"
+  },
+  "What do IVF and policy levers do to completed fertility in a synthetic Korea-like cohort?": {
+    "zh-Hans": "在一个类韩国的合成世代中，IVF 和政策工具会怎样影响完成生育率？"
+  },
+  "Post-2015 shock suite": {
+    "zh-Hans": "2015年后冲击组合"
+  },
+  "Can a post-2015 shock explain the timing, and which shocks does it separate?": {
+    "zh-Hans": "2015年后的冲击能解释这一时间点吗？它能区分哪些冲击？"
+  },
+  "Microplastics test": {
+    "zh-Hans": "微塑料检验"
+  },
+  "Do microplastics fit the post-2015 fertility pattern?": {
+    "zh-Hans": "微塑料符合2015年后的生育率模式吗？"
+  },
+  "Tipping / momentum lab": {
+    "zh-Hans": "临界点／动量实验室"
+  },
+  "Can peer-driven thresholds tip fertility into a lasting low?": {
+    "zh-Hans": "同伴驱动的阈值能否让生育率陷入持久的低位？"
   }
 }

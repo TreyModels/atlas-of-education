@@ -25,12 +25,12 @@ export const familyStatus: FamilyStatus[] = [
 
 export const callToAction = {
   title: 'Think a model is missing something? Change it.',
-  text: 'Every model can be downloaded, run on your own machine and modified. If you change an assumption, add data or find a mistake, propose your version. Proposals are reviewed by Dr. Trey Menefee before anything is listed here.',
+  text: 'Every model’s code can be downloaded and run on your own machine. If you change an assumption, add data or find a mistake, propose your version. Proposals are reviewed by Dr. Trey Menefee before anything is listed here.',
   actions: [
     { label: 'Download all the code', href: 'https://github.com/TreyModels/atlas-of-education/archive/refs/heads/main.zip' },
     { label: 'Propose a version', href: 'https://github.com/TreyModels/atlas-of-education/issues/new?template=propose-a-version.yml' },
     { label: 'Challenge a claim', href: 'https://github.com/TreyModels/atlas-of-education/issues/new?template=model-challenge.yml' },
     { label: 'How to cite (CC BY-NC 4.0)', href: 'https://github.com/TreyModels/atlas-of-education/blob/main/CITATION.cff' },
   ],
-  licence: 'Licensed CC BY-NC 4.0: reuse and adapt with credit to Dr. Trey Menefee, for noncommercial purposes. Versioned releases support citation; DOI details appear when available.',
+  licence: 'Licensed CC BY-NC 4.0: reuse and adapt with credit to Dr. Trey Menefee, for noncommercial purposes. Versioned releases support citation; DOI 10.5281/zenodo.24369167.',
 }

@@ -51,4 +51,4 @@ and CHANGES.md.
 
 ## Attribution and reuse
 
-Credit and cite **Dr. Trey Menefee** when using, reproducing, sharing, or adapting his material. Licensed under [CC BY-NC 4.0](LICENSE): reuse and adaptation with attribution for noncommercial purposes; commercial use requires prior permission. Cite via [CITATION.cff](CITATION.cff) (DOIs: [docs/DOI.md](docs/DOI.md)). Third-party materials retain their own terms.
+Credit and cite **Dr. Trey Menefee** when using, reproducing, sharing, or adapting his material. Licensed under [CC BY-NC 4.0](LICENSE): reuse and adaptation with attribution for noncommercial purposes; commercial use requires prior permission. Cite via [CITATION.cff](CITATION.cff) (DOI: [10.5281/zenodo.24369167](https://doi.org/10.5281/zenodo.24369167); details: [docs/DOI.md](docs/DOI.md)). Third-party materials retain their own terms.
