@@ -8,10 +8,11 @@
 | --- | --- | --- |
 | **Concept DOI** — cite this; always resolves to the latest version | [10.5281/zenodo.24369167](https://doi.org/10.5281/zenodo.24369167) | [zenodo.org/records/24369167](https://zenodo.org/records/24369167) |
 | **Version DOI** — v2026.11.19 | [10.5281/zenodo.24369168](https://doi.org/10.5281/zenodo.24369168) | [zenodo.org/records/24369168](https://zenodo.org/records/24369168) |
+| **Version DOI** — v2026.11.20 | [10.5281/zenodo.24369385](https://doi.org/10.5281/zenodo.24369385) | [zenodo.org/records/24369385](https://zenodo.org/records/24369385) |
 
 `CITATION.cff` carries the **concept** DOI (10.5281/zenodo.24369167), so a citation keeps resolving to the newest release. Each future GitHub release mints a new version DOI under the same concept DOI; add it to this table when it is issued.
 
-One-time setup (Trey, about 2 minutes):
+One-time setup — **DONE 19 Nov 2026** (kept as reference):
 1. zenodo.org → log in with GitHub → profile menu → **GitHub** → **Sync now** → switch **TreyModels/atlas-of-education** ON.
 2. On GitHub, create a release (e.g. tag `v2026.11.19`). Zenodo archives it and shows the DOI badge.
 3. Paste the concept DOI into `CITATION.cff` (`doi:`) and into the site footer. Model pages then cite it.

@@ -1,3 +1,32 @@
+# Changes · 19 November 2026 · Atlas Worlds launch, nine journeys, DOIs, design system
+
+## Rename and releases
+- Renamed **Atlas of Education** to **Atlas Worlds** (PR #14): brand, page titles, manifest, CITATION, Zenodo metadata, README and licence notice.
+- Re-cut release **v2026.11.19** on the renamed main, then released **v2026.11.20** after the design and catalogue integration. First Zenodo DOIs recorded: concept 10.5281/zenodo.24369167, v2026.11.19 = 10.5281/zenodo.24369168, v2026.11.20 = 10.5281/zenodo.24369385.
+
+## Nine narrated journeys and homepage
+- All nine families have narrated journeys: Angkor, Shadow education, Political economy, Farmer field schools, Fertility, Deep history, Education planning, Education and work, School systems.
+- Expanded homepage explaining the research questions, founder background, AI-assisted implementation, evidence, assumptions, negative findings and contribution process.
+- About, How Models Work and My Digital Workflow pages.
+- Catalogue and legacy story pages aligned to the journey design (PR #11).
+
+## Design system (Kimi)
+- Global shell and responsive article presentation (PR #9).
+- Grouped rail and mobile navigation by research family, surfacing About, How Models Work and My Digital Workflow; workflow links added (PR #13).
+- English and Simplified Chinese selector; classic workbenches retain their original language.
+
+## Model coverage and honesty fixes
+- Fertility family now lists all 11 model variants; catalogue grows from 56 to 65 entries.
+- Download bundles and write-ups carry real format labels; blanket download and label claims qualified; precise claims wording (PR #15).
+- Model-level coverage, live-site and research-archive audits added under `docs/`.
+
+## DOI wiring
+- Concept DOI 10.5281/zenodo.24369167 recorded in CITATION.cff, the site footer, the licence line, the About page, README and `docs/DOI.md`.
+- v2026.11.19 notes updated with its version DOI; v2026.11.20 minted as version 2 under the same concept DOI.
+
+## Validation
+Validation: all nine journey/link checks, React/translation checks, 52 model tests, production build and 22-model worker parity. Desktop/mobile browser checks completed. These checks establish implementation behavior, not empirical validity of every model.
+
 # Changes · 8 November 2026 · Education-first restructure
 
 ## Library and navigation
