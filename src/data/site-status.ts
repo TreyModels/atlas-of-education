@@ -18,8 +18,8 @@ export const familyStatus: FamilyStatus[] = [
   { family: 'extension', route: 'story-extension', narrated: true, purposes: ['mechanism'], states: ['developing', 'historical'], line: 'Farmer field schools and food politics: two developing mechanism models and two historical mechanism cards. Observational motivation is not calibrated validation.' },
   { family: 'planning', route: 'story-planning', narrated: true, purposes: ['teaching', 'accounting'], states: ['checked', 'developing'], line: 'Planning methods in the UN education-planning tradition, with the arithmetic shown. Not official UNESCO software.' },
   { family: 'fertility', route: 'story-fertility', narrated: true, purposes: ['mechanism', 'teaching'], states: ['developing'], line: 'Exploratory models of six economies; the levels link to survival does not survive differencing.' },
-  { family: 'education', route: 'story-education', narrated: false, purposes: ['mechanism', 'teaching'], states: ['developing', 'checked'], line: 'Credentials, schooling and work, including the China youth-unemployment model (fitted with an unexplained residual).' },
-  { family: 'systems', route: 'story-systems', narrated: false, purposes: ['accounting', 'teaching'], states: ['checked', 'developing'], line: 'Cohorts, teachers, classrooms and budgets followed through demographic change.' },
+  { family: 'education', route: 'story-education', narrated: true, purposes: ['mechanism', 'teaching'], states: ['developing', 'checked'], line: 'Credentials, schooling and work, including the China youth-unemployment model (fitted with an unexplained residual).' },
+  { family: 'systems', route: 'story-systems', narrated: true, purposes: ['accounting', 'teaching'], states: ['checked', 'developing'], line: 'Cohorts, teachers, classrooms and budgets followed through demographic change.' },
   { family: 'deephistory', route: 'story-deephistory', narrated: true, purposes: ['mechanism'], states: ['developing'], line: 'Routes out of Africa: rankings depend on stated constraints and priors, which the page shows.' },
 ]
 

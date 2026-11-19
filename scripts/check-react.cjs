@@ -26,7 +26,7 @@ for(const w of context.AtlasWorldsLab.worlds){assert.ok(stories[w.id]);for(const
 const exempt=new Set(['Lieberman & Buckley 2012','Buckley et al. 2010']);
 let missing=[];for(const text of all)if(!dictionary[text]&&!exempt.has(text)&&!/^Teachers in \d+$/.test(text))missing.push(text);
 if(missing.length){console.log('Missing exact React translation entries:',JSON.stringify(missing,null,2));process.exitCode=1;}
-for(const [key,v]of Object.entries(dictionary))for(const lang of ['vi','zh-Hans','fr'])assert.ok(v[lang]?.trim(),lang+': '+key);
+for(const [key,v]of Object.entries(dictionary))for(const lang of ['zh-Hans'])assert.ok(v[lang]?.trim(),lang+': '+key); // English + Chinese only since 19 Nov 2026 (Trey); vi/fr kept where present
 for(const lang of ['vi','zh-Hans','fr'])for(const text of all)assert.ok(!t(text,lang).includes('undefined'),lang+': '+text);
 assert.equal(t('Teachers in 2050','vi'),'Giáo viên năm 2050');assert.equal(t('40 days','vi'),'40 ngày');
 assert.equal(context.AtlasWorldsLab.worlds.length,22);{const nav=fs.readFileSync(root+'/src/components/Navigation.tsx','utf8');assert.ok(nav.includes('<option value="zh-Hans">简体中文</option>'));assert.ok(!nav.includes('value="vi"'),'Vietnamese is hidden from the selector (Trey, 19 Nov 2026)');}
