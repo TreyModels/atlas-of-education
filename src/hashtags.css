@@ -103,6 +103,58 @@ button.hashtag-chip:focus-visible {
   gap: 7px;
 }
 
+/* Grouped browse cloud: plain-language tags first and slightly more prominent.
+   flex-shrink:0 keeps the cloud from collapsing inside the modal flex column. */
+.search-tags {
+  flex: 0 0 auto;
+  max-height: 44vh;
+  overflow-y: auto;
+}
+
+.tag-hint {
+  margin: -2px 0 1px;
+  color: var(--muted);
+  font-size: .72rem;
+  line-height: 1.5;
+}
+
+.tag-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.tag-group + .tag-group {
+  margin-top: 3px;
+  padding-top: 8px;
+  border-top: 1px dashed color-mix(in oklab, var(--line) 80%, transparent);
+}
+
+.tag-group-label {
+  color: var(--green-dark);
+  font-family: var(--sans);
+  font-size: .6rem;
+  font-weight: 700;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+}
+
+.tag-chip-broad {
+  padding: 3px 10px;
+  border-color: color-mix(in oklab, var(--green) 32%, var(--line));
+  background: color-mix(in oklab, var(--surface) 55%, transparent);
+  color: var(--ink);
+  font-size: .72rem;
+}
+
+.tag-group-compact .tag-chip {
+  font-size: .62rem;
+}
+
+.tag-group-compact .tag-count {
+  font-size: .56rem;
+}
+
 .tag-cloud-more {
   align-self: flex-start;
   margin-top: 2px;
