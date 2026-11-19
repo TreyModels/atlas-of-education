@@ -1048,3 +1048,266 @@ p.story-block { margin-bottom: 14px; }
     font-size: .8rem;
   }
 }
+
+/* ==========================================================================
+   Task 4 — grouped rail navigation, homepage story groups,
+   catalogue downloads, footer workflow affordance.
+   Additive only: existing rules above are untouched.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Rail navigation — "Start here", then grouped model families.
+   Compact rows so several groups still fit inside the fixed rail.
+   -------------------------------------------------------------------------- */
+
+.nav-start-here {
+  display: grid;
+  gap: 2px;
+  margin: 0 0 10px;
+  padding: 0 0 8px;
+  border-bottom: 1px solid var(--line);
+}
+
+.nav-start-here button,
+.nav-start-here a {
+  position: relative;
+  width: 100%;
+  min-height: 42px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  border: 0;
+  border-radius: 4px;
+  background: transparent;
+  color: var(--muted);
+  font-size: .79rem;
+  line-height: 1.35;
+  text-align: left;
+  text-decoration: none;
+  transition: background-color .18s ease, color .18s ease;
+}
+
+.nav-start-here button:hover,
+.nav-start-here a:hover { background: var(--paper); color: var(--ink); }
+
+.nav-start-here button.active {
+  background: var(--surface);
+  color: var(--green-dark);
+  font-weight: 600;
+}
+
+.nav-start-here button:focus-visible,
+.nav-start-here a:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+.nav-family-group {
+  display: grid;
+  gap: 1px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-family-group + .nav-family-group { margin-top: 12px; }
+
+.nav-group-label {
+  margin: 0 12px 5px;
+  color: var(--muted);
+  font-size: .6rem;
+  font-weight: 600;
+  letter-spacing: .14em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.nav-group-label ~ .nav-group-label { margin-top: 12px; }
+
+.nav-family-group button,
+.nav-family-group a {
+  position: relative;
+  width: 100%;
+  min-height: 38px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 7px 12px;
+  border: 0;
+  border-left: 2px solid transparent;
+  border-radius: 0 4px 4px 0;
+  background: transparent;
+  color: var(--muted);
+  font-size: .77rem;
+  line-height: 1.35;
+  text-align: left;
+  text-decoration: none;
+  transition: background-color .18s ease, color .18s ease, border-color .18s ease;
+}
+
+.nav-family-group button:hover,
+.nav-family-group a:hover {
+  background: var(--paper);
+  border-left-color: var(--line);
+  color: var(--ink);
+}
+
+.nav-family-group button.active {
+  background: var(--surface);
+  border-left-color: var(--green);
+  color: var(--green-dark);
+  font-weight: 600;
+}
+
+.nav-family-group button:focus-visible,
+.nav-family-group a:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+/* The drawer reuses the shared nav content; only touch targets grow. */
+@media (max-width: 900px) {
+  .nav-start-here button,
+  .nav-start-here a { min-height: 46px; }
+
+  .nav-family-group button,
+  .nav-family-group a { min-height: 44px; }
+
+  .nav-family-group + .nav-family-group { margin-top: 16px; }
+}
+
+/* --------------------------------------------------------------------------
+   Homepage — three subject groups wrapping the existing story grid/cards
+   -------------------------------------------------------------------------- */
+
+.home-story-group { margin-top: clamp(28px, 4vw, 40px); }
+
+.home-story-group:first-of-type { margin-top: clamp(20px, 3vw, 30px); }
+
+.home-story-group-title {
+  margin: 0 0 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--line);
+  color: var(--green-dark);
+  font-family: var(--sans);
+  font-size: .72rem;
+  font-weight: 600;
+  letter-spacing: .16em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.home-story-group-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--ink);
+  border-left: 1px solid var(--line);
+}
+
+.home-story-group-grid > * { min-width: 0; }
+
+@media (max-width: 760px) {
+  .home-story-group { margin-top: 28px; }
+
+  .home-story-group-grid {
+    grid-template-columns: 1fr;
+    border-left: 0;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Catalogue — downloads read as secondary metadata, not as model entries
+   -------------------------------------------------------------------------- */
+
+.catalogue-downloads {
+  display: grid;
+  gap: 2px;
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid color-mix(in oklab, var(--line) 70%, transparent);
+}
+
+.catalogue-item-download {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  width: fit-content;
+  max-width: 100%;
+  min-height: 40px;
+  padding: 2px 0;
+  color: var(--muted);
+  font-family: var(--sans);
+  font-size: .78rem;
+  font-weight: 500;
+  line-height: 1.45;
+  text-decoration: none;
+  text-underline-offset: 3px;
+  transition: color .16s ease;
+}
+
+.catalogue-item-download:hover {
+  color: var(--green-dark);
+  text-decoration: underline;
+}
+
+.catalogue-item-download:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.catalogue-item-download svg {
+  flex: 0 0 auto;
+  width: 13px;
+  height: 13px;
+  color: var(--muted);
+}
+
+.catalogue-item-download:hover svg,
+.catalogue-item-download:focus-visible svg { color: var(--green); }
+
+@media (max-width: 760px) {
+  .catalogue-item-download { min-height: 44px; }
+}
+
+/* --------------------------------------------------------------------------
+   Footer — workflow trigger behaves and looks like the footer text links
+   -------------------------------------------------------------------------- */
+
+.site-footer .footer-workflow,
+.site-footer .footer-workflow-button,
+.site-footer .workflow-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 44px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  line-height: 1.5;
+  text-align: left;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.site-footer .footer-workflow:hover,
+.site-footer .footer-workflow-button:hover,
+.site-footer .workflow-button:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.site-footer .footer-workflow:focus-visible,
+.site-footer .footer-workflow-button:focus-visible,
+.site-footer .workflow-button:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
