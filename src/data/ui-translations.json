@@ -3343,5 +3343,95 @@
   "zh-Hans": "教育规划工具包",
   "fr": "Planification de l’éducation",
   "vi": "Công cụ quy hoạch giáo dục"
+ },
+ "Farmer field schools · Diffusion": {
+  "zh-Hans": "农民田间学校 · 扩散",
+  "fr": "Écoles pratiques d'agriculture · Diffusion",
+  "vi": "Trường đồng ruộng nông dân · Lan truyền"
+ },
+ "How does adoption spread through a finite horizon when existing adopters mediate it after an initial seed?": {
+  "zh-Hans": "在初始种子之后，当现有采纳者起中介作用时，采纳如何在有限时间范围内扩散？",
+  "fr": "Comment l'adoption se diffuse-t-elle sur un horizon fini lorsque les adoptants existants la médiatisent après une amorce initiale ?",
+  "vi": "Việc chấp nhận lan truyền như thế nào trong một chân trời hữu hạn khi những người đã chấp nhận hiện có làm trung gian sau một hạt giống ban đầu?"
+ },
+ "Stored experiment · diffusion grid": {
+  "zh-Hans": "已存储实验 · 扩散网格",
+  "fr": "Expérience enregistrée · grille de diffusion",
+  "vi": "Thí nghiệm đã lưu · lưới lan truyền"
+ },
+ "Farmer field schools · Food-price politics": {
+  "zh-Hans": "农民田间学校 · 粮食价格政治",
+  "fr": "Écoles pratiques d'agriculture · Politique des prix alimentaires",
+  "vi": "Trường đồng ruộng nông dân · Chính trị giá lương thực"
+ },
+ "What does the food-price model show on its endogenous simulated path, and what can it not show?": {
+  "zh-Hans": "粮食价格模型在其内生模拟路径上显示了什么，又不能显示什么？",
+  "fr": "Que montre le modèle des prix alimentaires sur sa trajectoire simulée endogène, et que ne peut-il pas montrer ?",
+  "vi": "Mô hình giá lương thực cho thấy gì trên đường mô phỏng nội sinh của nó, và nó không thể cho thấy gì?"
+ },
+ "Stored experiment · annual periods 2004–2024": {
+  "zh-Hans": "已存储实验 · 2004–2024 年度期间",
+  "fr": "Expérience enregistrée · périodes annuelles 2004–2024",
+  "vi": "Thí nghiệm đã lưu · các kỳ hàng năm 2004–2024"
+ },
+ "Farmer field schools · Treadmill economy": {
+  "zh-Hans": "农民田间学校 · 跑步机经济",
+  "fr": "Écoles pratiques d'agriculture · Économie du tapis roulant",
+  "vi": "Trường đồng ruộng nông dân · Kinh tế băng chuyền"
+ },
+ "What did the earlier treadmill mechanism story propose, and how should it be read now?": {
+  "zh-Hans": "早先的跑步机机制叙事提出了什么，如今应如何解读？",
+  "fr": "Que proposait le récit antérieur du mécanisme du tapis roulant, et comment faut-il le lire aujourd'hui ?",
+  "vi": "Câu chuyện cơ chế băng chuyền trước đây đã đề xuất điều gì, và nay nên được đọc như thế nào?"
+ },
+ "Historical mechanism card": {
+  "zh-Hans": "历史机制卡片",
+  "fr": "Fiche de mécanisme historique",
+  "vi": "Thẻ cơ chế lịch sử"
+ },
+ "Farmer field schools · Price-tag advice market": {
+  "zh-Hans": "农民田间学校 · 标价建议市场",
+  "fr": "Écoles pratiques d'agriculture · Marché des conseils à prix affiché",
+  "vi": "Trường đồng ruộng nông dân · Thị trường tư vấn gắn giá"
+ },
+ "What did the earlier price-tag advice story propose about ambiguity and willingness to pay for private advice?": {
+  "zh-Hans": "早先的标价建议叙事就模糊性与为私人建议付费的意愿提出了什么？",
+  "fr": "Que proposait le récit antérieur des conseils à prix affiché sur l'ambiguïté et la volonté de payer pour des conseils privés ?",
+  "vi": "Câu chuyện tư vấn gắn giá trước đây đã đề xuất điều gì về sự mơ hồ và sẵn lòng chi trả cho tư vấn tư nhân?"
+ },
+ "Farmer field schools & food politics": {
+  "zh-Hans": "农民田间学校与粮食政治",
+  "fr": "Écoles pratiques d'agriculture et politique alimentaire",
+  "vi": "Trường đồng ruộng nông dân và chính trị lương thực"
+ },
+ "Field schools": {
+  "zh-Hans": "田间学校",
+  "fr": "Écoles pratiques",
+  "vi": "Trường đồng ruộng"
+ },
+ "Can training farmers change what they know without making adoption pay?": {
+  "zh-Hans": "培训农民能否改变他们所知，却不使采纳变得有利可图？",
+  "fr": "La formation des agriculteurs peut-elle changer ce qu'ils savent sans rendre l'adoption rentable ?",
+  "vi": "Việc đào tạo nông dân có thể thay đổi những gì họ biết mà không làm cho việc chấp nhận trở nên có lợi không?"
+ },
+ "A narrated extension story with two current mechanism models and two historical mechanism cards. Observational motivation is not calibrated validation: training may change knowledge without making adoption pay.": {
+  "zh-Hans": "一个配有解说的推广叙事，包含两个当前机制模型和两张历史机制卡片。观察性动机并非经过校准的验证：培训可能改变知识，却不使采纳变得有利可图。",
+  "fr": "Un récit de vulgarisation narré avec deux modèles de mécanisme actuels et deux fiches de mécanisme historiques. La motivation observationnelle n'est pas une validation calibrée : la formation peut changer les connaissances sans rendre l'adoption rentable.",
+  "vi": "Một câu chuyện khuyến nông có tường thuật với hai mô hình cơ chế hiện tại và hai thẻ cơ chế lịch sử. Động lực quan sát không phải là kiểm chứng đã hiệu chỉnh: đào tạo có thể thay đổi kiến thức mà không làm cho việc chấp nhận trở nên có lợi."
+ },
+ "Model bundle · code, data & README": {
+  "zh-Hans": "模型包 · 代码、数据与 README",
+  "fr": "Lot de modèles · code, données et README",
+  "vi": "Gói mô hình · mã, dữ liệu và README"
+ },
+ "README": {
+  "zh-Hans": "README",
+  "fr": "README",
+  "vi": "README"
+ },
+ "Validation notes": {
+  "zh-Hans": "验证说明",
+  "fr": "Notes de validation",
+  "vi": "Ghi chú kiểm chứng"
  }
 }

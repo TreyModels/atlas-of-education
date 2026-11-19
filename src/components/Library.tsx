@@ -8,7 +8,7 @@ import { purposeLabel, stateLabel } from '../data/angkor-journey'
 import { modelFamilies } from '../data/model-catalogue'
 const families = modelFamilies
 const sectionIds: Record<ModelFamily, string> = {
-  education: 'education-models', systems: 'school-systems', planning: 'planning-lab', angkor: 'angkor-case', fertility: 'fertility-models', shadow: 'shadow-models', deephistory: 'deep-history', politics: 'political-economy',
+  education: 'education-models', systems: 'school-systems', planning: 'planning-lab', angkor: 'angkor-case', fertility: 'fertility-models', shadow: 'shadow-models', deephistory: 'deep-history', politics: 'political-economy', extension: 'extension-field-schools',
 }
 
 export function ModelLink({ item, t, navigate }: { item: CatalogueItem; t: Translate; navigate: (id: string) => void }) {

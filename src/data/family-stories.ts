@@ -311,4 +311,6 @@ export const familyStories: Record<ModelFamily, FamilyStory> = {
     ],
     bottomLine: 'Enforcement can change what gets filed, but obligations that outlast a campaign make it hard to tell a change in corruption from a change in reporting. The stored versions test mechanisms, not prevalence.',
   },
+
+  extension: { kicker: 'Agricultural learning', title: 'Farmer field schools & food politics', lede: 'Two developing mechanism models explore when a farming practice pays and how food prices are chosen; two historical branches show earlier approaches.', sections: [], cta: { label: 'Download code and results', href: 'research/field-schools/field-schools-models.zip' } },
 }
