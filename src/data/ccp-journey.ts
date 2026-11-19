@@ -62,7 +62,7 @@ const models: Record<string, ModelCard> = {
 export const ccpJourney: Journey = {
   kicker: 'Political systems · CCP bus',
   title: 'Does a sponsored entry route keep corruption going after a campaign?',
-  lede: 'This project’s user manuscript, The Priest and the Bandit, argues that Chinese Communist Party (CCP) corruption is the payroll of a clergy, not deviance: entry by sponsorship creates obligations and shared exposure that keep corruption going after enforcement changes. The manuscript is not peer reviewed, and nothing here treats its claims as established fact. In modelling terms, the claim is path dependence. This page follows four stored model versions that ask whether that claim can be told apart from simpler mechanisms in the data we have. All agents are synthetic.',
+  lede: 'Trey Menefee’s manuscript The Priest and the Bandit argues that Chinese Communist Party (CCP) corruption is the payroll of a clergy, not deviance: entry by sponsorship creates obligations and shared exposure that keep corruption going after enforcement changes. The manuscript is not peer reviewed, and nothing here treats its claims as established fact. In modelling terms, the claim is path dependence. This page follows four stored model versions that ask whether that claim can be told apart from simpler mechanisms in the data we have. All agents are synthetic.',
   repo: REPO,
   family: 'politics',
   why: [
