@@ -26,6 +26,14 @@ const api = (p, body) => fetch('https://api.deepseek.com' + p, {
   body: body && JSON.stringify(body),
 }).then(async r => { const j = await r.json(); if (!r.ok) throw Error(r.status + ' ' + JSON.stringify(j).slice(0, 300)); return j })
 
+// Thinking: 'off' | 'low' | 'high' (default low; false is treated as off).
+const THINKING = process.env.FLEET_THINKING || 'low'
+function thinkingParams(v = THINKING) {
+  if (v === false || v === 'off') return { thinking: { type: 'disabled' } }
+  return { thinking: { type: 'enabled' }, reasoning_effort: v === 'high' ? 'high' : 'low' }
+}
+if (cmd === 'ping') { const r = await api('/chat/completions', { model: DEFAULT_MODEL, max_tokens: 200, messages: [{ role: 'user', content: 'Reply OK.' }], ...thinkingParams(args[0]) }); console.log(args[0] || THINKING, '->', JSON.stringify(r.usage)); process.exit(0) }
+
 const SYSTEM = `You are a careful senior engineer working in an existing repository.
 Return ONLY complete files, each wrapped exactly like this:
 === FILE: relative/path.ext ===
@@ -48,7 +56,7 @@ async function runTask(t) {
   const started = Date.now()
   const ctx = (t.context || []).map(p => `--- ${p} ---\n${fs.readFileSync(path.join(t.repo, p), 'utf8')}`).join('\n\n')
   const res = await api('/chat/completions', {
-    model: t.model || DEFAULT_MODEL, max_tokens: t.maxTokens || 16000, temperature: 0.2, ...(t.thinking === false ? { thinking: { type: 'disabled' } } : {}),
+    model: t.model || DEFAULT_MODEL, max_tokens: t.maxTokens || 16000, temperature: 0.2, ...thinkingParams(t.thinking),
     messages: [{ role: 'system', content: SYSTEM }, { role: 'user', content: `${t.prompt}\n\nRepository files for context:\n\n${ctx}` }],
   })
   const text = res.choices[0].message.content
