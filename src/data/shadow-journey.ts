@@ -1,7 +1,7 @@
 import type { Journey } from './angkor-journey'
 
 export const shadowJourney: Journey = {
-  kicker: 'Education and work · Shadow education · Cambodia',
+  kicker: 'Shadow education · Cambodia',
   title: 'Why do pupils pay their own teachers?',
   lede: 'In six Siem Reap schools, about four in five secondary pupils bought private lessons, and more than half of those lessons came from the teacher who already taught them (Bray and colleagues, 2016 and 2018). This page follows one question through the Atlas models: can those published patterns tell three rival explanations apart — a timetable too short, content held back and sold, or goodwill bought from your own teacher? The short answer is no. The way the models fail is more useful than a tidy verdict would have been.',
   repo: 'https://github.com/TreyModels/atlas-of-education',
