@@ -183,7 +183,8 @@ export const journey: Journey = {
         { claim: 'method', text: 'From 1250 to 1450 the long-run engine uses the reconstructed March–May drought index (PDSI). We translate it into a crop factor: clamp(1 + response × PDSI, 0.4, 1.15). Three response values test how much the result depends on that translation. The same society with neutral climate is the comparison.' },
       ],
       result: [
-        { claim: 'sim', text: 'At the middle crop response, 1,260 of 2,000 matched parameter draws decline, with a median onset of 1362. Changing the crop sensitivity shifts the timing.' },
+        { claim: 'sim', text: 'This is the clearest decline result in the Atlas. With neutral climate after 1250, none of 2,000 matched parameter draws declines. With the reconstructed drought record applied to the same societies, 217, 1,260 or 1,657 of 2,000 decline, depending on the crop response (0.04, 0.07 or 0.10 per index unit), with median onsets of 1402, 1362 and 1338.' },
+        { claim: 'sim', text: 'So the documented droughts are enough to produce decline in this society model, and the timing falls in the late 14th century. How often and how early depends on a crop response nobody has measured. At the middle response, the median core-activity index in 1450 is 89.4, against 100 in 1300: a sustained fall, not a collapse.' },
       ],
       limitation: [
         { claim: 'open', text: 'A literature search (November 2026) found no published rice-yield response per PDSI unit for mainland Southeast Asia. The reconstruction reaches −7.2 in 1403, far outside the modern instrumental range, so any modern yield response is an extrapolation. Weather before 1250 is synthetic.' },
