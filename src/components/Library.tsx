@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from 'react'
-import { ArrowRight, ArrowUpRight, BookOpen, Search, X } from 'lucide-react'
+import { ArrowRight, ArrowUpRight, BookOpen, Download, Search, X } from 'lucide-react'
 import type { Translate } from '../types'
 import { allTags, catalogue, classicLabs, experimentalInterfaces, familyCounts, familyGroups, familyInfo, familyItems, tagCounts, totalModels, type CatalogueItem, type ModelFamily } from '../data/model-catalogue'
 import { addTag, matchesQuery, parseTags, removeTag } from '../lib/search'
@@ -29,11 +29,14 @@ export function ModelLink({ item, t, navigate }: { item: CatalogueItem; t: Trans
   return <li className={`catalogue-item${isDownloadItem(item) ? ' catalogue-item-download' : ''}`}>
     {item.href
       ? <a href={item.href} {...(external ? { target: '_blank', rel: 'noreferrer' } : {})}>{content}</a>
-      : <button onClick={() => navigate(item.route!)}>{content}</button>}
+      : <button onClick={() => item.route && navigate(item.route)}>{content}</button>}
     <div className="catalogue-item-tags" aria-label={t('Tags')}>
       {item.tags.slice(0, 4).map(tag => <button key={tag} className="tag-chip" onClick={() => openTag(tag)}>#{tag}</button>)}
       {item.tags.length > 4 && <span className="tag-more">+{item.tags.length - 4}</span>}
     </div>
+    {item.downloadHref && <a className="catalogue-file-link" href={item.downloadHref} download aria-label={`${t('Download code & data')}: ${t(item.title)}`}>
+      <Download size={14} aria-hidden="true" />{t('Download code & data')}
+    </a>}
   </li>
 }
 
