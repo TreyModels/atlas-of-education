@@ -1,7 +1,7 @@
 import { worlds } from '../models'
 import { schoolFutures } from '../components/SchoolFutures'
 
-export type ModelFamily = 'education' | 'systems' | 'planning' | 'angkor' | 'fertility' | 'shadow' | 'deephistory' | 'politics'
+export type ModelFamily = 'education' | 'systems' | 'planning' | 'angkor' | 'fertility' | 'shadow' | 'deephistory' | 'politics' | 'extension'
 export type CatalogueItem = {
   id: string
   family: ModelFamily
@@ -92,8 +92,15 @@ const politics: CatalogueItem[] = [
   { id: 'ccp-v7', family: 'politics', title: 'CCP bus · Identification comparison', question: 'How do three mechanism families compare on identification in a common kernel — what each can and cannot distinguish given the observed disciplinary filings?', method: 'Stored experiment · Retrospective evaluation', format: 'Classic workbench', href: 'research/ccp-bus/ccp-bus-v7.zip', keywords: 'CCP identification comparison retrospective evaluation disciplinary filings mechanism families common kernel' },
 ]
 
-export const catalogue: CatalogueItem[] = [...education, ...systems, ...planning, ...angkor, ...fertility, ...shadow, ...deephistory, ...politics]
-export const modelFamilies: ModelFamily[] = ['education', 'systems', 'planning', 'angkor', 'fertility', 'shadow', 'deephistory', 'politics']
+const extension: CatalogueItem[] = [
+  { id: 'fs-diffusion', family: 'extension', title: 'Farmer field schools · Diffusion', question: 'How does adoption spread through a finite horizon when existing adopters mediate it after an initial seed?', method: 'Stored experiment · diffusion grid', format: 'Classic workbench', href: 'research/field-schools/field-schools-models.zip', keywords: 'extension diffusion adoption finite horizon adopter mediated seed' },
+  { id: 'fs-foodprice', family: 'extension', title: 'Farmer field schools · Food-price politics', question: 'What does the food-price model show on its endogenous simulated path, and what can it not show?', method: 'Stored experiment · annual periods 2004–2024', format: 'Classic workbench', href: 'research/field-schools/field-schools-models.zip', keywords: 'extension food price politics OLS endogenous simulated path' },
+  { id: 'fs-treadmill', family: 'extension', title: 'Farmer field schools · Treadmill economy', question: 'What did the earlier treadmill mechanism story propose, and how should it be read now?', method: 'Historical mechanism card', format: 'Classic workbench', route: 'story-extension', keywords: 'extension treadmill economy historical mechanism card superseded' },
+  { id: 'fs-pricetag', family: 'extension', title: 'Farmer field schools · Price-tag advice market', question: 'What did the earlier price-tag advice story propose about ambiguity and willingness to pay for private advice?', method: 'Historical mechanism card', format: 'Classic workbench', route: 'story-extension', keywords: 'extension price tag advice market historical unverified ambiguity willingness to pay' },
+]
+
+export const catalogue: CatalogueItem[] = [...education, ...systems, ...planning, ...angkor, ...fertility, ...shadow, ...deephistory, ...politics, ...extension]
+export const modelFamilies: ModelFamily[] = ['education', 'systems', 'planning', 'angkor', 'fertility', 'shadow', 'deephistory', 'politics', 'extension']
 export const familyItems = (family: ModelFamily) => catalogue.filter(item => item.family === family)
 export const familyCounts = Object.fromEntries(modelFamilies.map(id => [id, familyItems(id).length])) as Record<ModelFamily, number>
 export const totalModels = catalogue.length
@@ -139,6 +146,11 @@ export const familyInfo: Record<ModelFamily, { title: string; short: string; que
     question: 'Can enforcement change corruption when obligations outlast a campaign?',
     description: 'Four stored model versions compare competing synthetic mechanisms against observed disciplinary filings. The models describe mechanisms, not the prevalence of corruption.',
   },
+  extension: {
+    title: 'Farmer field schools & food politics', short: 'Field schools',
+    question: 'Can training farmers change what they know without making adoption pay?',
+    description: 'A narrated extension story with two current mechanism models and two historical mechanism cards. Observational motivation is not calibrated validation: training may change knowledge without making adoption pay.',
+  },
 }
 
 export const familyResearch: Record<ModelFamily, { label: string; href: string }[]> = {
@@ -177,6 +189,11 @@ export const familyResearch: Record<ModelFamily, { label: string; href: string }
     { label: 'CCP bus · Tilly mechanisms (v6)', href: 'research/ccp-bus/ccp-bus-v6.zip' },
     { label: 'CCP bus · Identification comparison (v7)', href: 'research/ccp-bus/ccp-bus-v7.zip' },
     { label: 'Source · experiments/ccp-bus/models/', href: 'https://github.com/TreyModels/atlas-of-education/tree/2e19f07/experiments/ccp-bus/models/' },
+  ],
+  extension: [
+    { label: 'Model bundle · code, data & README', href: 'research/field-schools/field-schools-models.zip' },
+    { label: 'README', href: 'research/field-schools/README.md' },
+    { label: 'Validation notes', href: 'research/field-schools/VALIDATION.md' },
   ],
 }
 

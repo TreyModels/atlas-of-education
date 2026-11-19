@@ -87,6 +87,7 @@ export function Navigation({ route, navigate, t, language, setLanguage }: Naviga
     { id: 'story-shadow', label: familyInfo.shadow.short, icon: School, family: 'shadow' },
     { id: 'story-deephistory', label: familyInfo.deephistory.short, icon: Footprints, family: 'deephistory' },
     { id: 'story-politics', label: familyInfo.politics.short, icon: Building2, family: 'politics' },
+    { id: 'story-extension', label: familyInfo.extension.short, icon: School, family: 'extension' },
   ]
 
   const navContent = <>
