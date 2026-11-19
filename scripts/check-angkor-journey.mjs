@@ -49,7 +49,7 @@ assert.ok(perPersonIndex(10, 1.227) < perPersonIndex(100, 1.227) && perPersonInd
 for (const n of [10, 2000]) assert.ok(Number.isFinite(perPersonIndex(n, 1.227)))
 
 // Generic checks for every other family journey.
-for (const [file, name] of [['src/data/shadow-journey.ts', 'shadowJourney'], ['src/data/education-journey.ts', 'educationJourney'], ['src/data/systems-journey.ts', 'systemsJourney'], ['src/data/extension-journey.ts', 'extensionJourney'], ['src/data/ccp-journey.ts', 'ccpJourney']]) {
+for (const [file, name] of [['src/data/shadow-journey.ts', 'shadowJourney'], ['src/data/education-journey.ts', 'educationJourney'], ['src/data/systems-journey.ts', 'systemsJourney'], ['src/data/extension-journey.ts', 'extensionJourney'], ['src/data/ccp-journey.ts', 'ccpJourney'], ['src/data/fertility-journey.ts','fertilityJourney'], ['src/data/deephistory-journey.ts','deepHistoryJourney'], ['src/data/planning-journey.ts','planningJourney']]) {
   const j = (await load(file))[name]
   const ids = [...j.chapters.flatMap(c => c.models), ...j.deeper]
   for (const c of j.chapters) for (const part of ['evidence', 'rule', 'result', 'limitation']) assert.ok(c[part].length > 0, `${name} ${c.id}.${part}`)

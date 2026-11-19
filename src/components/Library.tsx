@@ -4,6 +4,7 @@ import type { Translate } from '../types'
 import { catalogue, classicLabs, familyCounts, familyInfo, familyItems, totalModels, type CatalogueItem, type ModelFamily } from '../data/model-catalogue'
 import { statusIntro, familyStatus, callToAction } from '../data/site-status'
 import { purposeLabel, stateLabel } from '../data/angkor-journey'
+import { homeExplainer } from '../data/home-explainer'
 
 import { modelFamilies } from '../data/model-catalogue'
 const families = modelFamilies
@@ -67,20 +68,62 @@ export function Library({ t, navigate }: { t: Translate; navigate: (id: string) 
     <section className="landing-hero shell">
       <p className="eyebrow">{t('COMPUTATIONAL SOCIAL SCIENCE · BY TREY MENEFEE')}</p>
       <h1>{t('Social science you can run.')}</h1>
-      <p className="landing-lede">{t('These are simulations of how societies work: why families pay for tutoring, why fertility collapsed across East Asia, how Angkor fed itself, how people walked out of Africa. Each one turns an argument into rules a computer can play out, thousands of times. Change the assumptions, run it, and see whether the story still holds.')}</p>
+      <p className="landing-lede">{t('Explore questions about schools, families, cities and states through models you can inspect and change. Some reproduce published findings; others test proposed mechanisms or teach an idea. Each states its assumptions, results and limits. Start with a question, then follow the reasoning.')}</p>
       <div className="hero-actions">
         <button className="button button-primary" onClick={() => document.getElementById('questions')?.scrollIntoView({ block: 'start' })}>{t('Start with a question')}<ArrowRight size={18} /></button>
         <a className="text-link" href="https://comparativist.substack.com" target="_blank" rel="noreferrer">{t('Read the essays on The Comparativist')}<ArrowUpRight size={16} /></a>
       </div>
     </section>
 
-    <section className="what-is-site shell" aria-label={t('What is this site?')}>
-      <p className="what-is-site-lede">{t('A working laboratory of computational social science: arguments about society written as models you can run, change and test. New here? Start with how the models work.')}</p>
-      <div className="what-is-site-actions">
-        <button className="button button-primary" onClick={() => navigate('about')}>{t('About')}</button>
-        <button className="button button-secondary" onClick={() => navigate('how-models-work')}>{t('How models work')}</button>
-        <a className="text-link" href="#status">{t('Read this first')}<ArrowRight size={16} /></a>
+    <section className="landing-section shell" aria-labelledby="home-what-title">
+      <header className="landing-section-head">
+        <h2 id="home-what-title">{t(homeExplainer.intro.title)}</h2>
+        {homeExplainer.intro.paragraphs.map((paragraph, index) => <p key={index}>{t(paragraph)}</p>)}
+      </header>
+      <div className="hero-actions">
+        <button className="button button-primary" onClick={() => navigate('how-models-work')}>{t('How models work')}<ArrowRight size={18} /></button>
+        <button className="button button-secondary" onClick={() => navigate('about')}>{t('About')}<ArrowRight size={18} /></button>
+        <a className="text-link" href="#home-status-title">{t('Read this first')}<ArrowRight size={16} /></a>
       </div>
+    </section>
+
+    <section className="landing-section shell" aria-labelledby="home-author-title">
+      <header className="landing-section-head">
+        <h2 id="home-author-title">{t(homeExplainer.author.title)}</h2>
+        <p>{t(homeExplainer.author.paragraph)}</p>
+      </header>
+    </section>
+
+    <section className="landing-section shell" aria-labelledby="home-how-it-works-title">
+      <header className="landing-section-head">
+        <h2 id="home-how-it-works-title">{t('How it works')}</h2>
+      </header>
+      <ol className="landing-steps">
+        {homeExplainer.howItWorks.map((step, index) => <li key={index}>
+          <span>{index + 1}</span>
+          <strong>{t(step.title)}</strong>
+          <p>{t(step.text)}</p>
+        </li>)}
+      </ol>
+    </section>
+
+    <section className="landing-section shell" aria-labelledby="home-how-to-read-title">
+      <header className="landing-section-head">
+        <h2 id="home-how-to-read-title">{t('How to read these models')}</h2>
+      </header>
+      <dl>
+        {homeExplainer.howToRead.map((limit, index) => <div key={index}>
+          <dt>{t(limit.title)}</dt>
+          <dd>{t(limit.text)}</dd>
+        </div>)}
+      </dl>
+    </section>
+
+    <section className="landing-section shell" aria-labelledby="home-invitation-title">
+      <header className="landing-section-head">
+        <h2 id="home-invitation-title">{t(homeExplainer.invitation.title)}</h2>
+        {homeExplainer.invitation.paragraphs.map((paragraph, index) => <p key={index}>{t(paragraph)}</p>)}
+      </header>
     </section>
 
     <section className="home-featured shell" aria-labelledby="home-featured-title">
@@ -94,7 +137,7 @@ export function Library({ t, navigate }: { t: Translate; navigate: (id: string) 
       <button className="button button-primary" onClick={() => navigate(featured.route)}>{t('Read what the models found')}<ArrowRight size={18} /></button>
     </section>
 
-    <section className="home-status shell" id="status" aria-labelledby="home-status-title">
+    <section className="home-status shell" aria-labelledby="home-status-title">
       <div className="landing-section-head">
         <p className="eyebrow">{t(statusIntro.kicker)}</p>
         <h2 id="home-status-title">{t(statusIntro.title)}</h2>
@@ -119,7 +162,7 @@ export function Library({ t, navigate }: { t: Translate; navigate: (id: string) 
     <section className="home-stories shell" id="questions" aria-labelledby="home-stories-title">
       <div className="landing-section-head">
         <p className="eyebrow">{t('START WITH A QUESTION')}</p>
-        <h2 id="home-stories-title">{t('{n} puzzles, {m} models.').replace('{n}', String(families.length)).replace('{m}', String(totalModels))}</h2>
+        <h2 id="home-stories-title">{t('{n} collections, {m} catalogue entries.').replace('{n}', String(families.length)).replace('{m}', String(totalModels))}</h2>
       </div>
       <ul className="home-story-grid">
         {familyStatus.map((status, index) => {
@@ -148,13 +191,13 @@ export function Library({ t, navigate }: { t: Translate; navigate: (id: string) 
     <section className="landing-steps shell" aria-label={t('How it works')}>
       <ol>
         <li><span>1</span><strong>{t('Pick a question')}</strong><p>{t('Each collection starts from a real puzzle and a short story of what the models found.')}</p></li>
-        <li><span>2</span><strong>{t('Change the assumptions')}</strong><p>{t('Move the sliders: school fees, sea level, teacher pay, rainfall. Everything runs in your browser, nothing is sent anywhere.')}</p></li>
+        <li><span>2</span><strong>{t('Change the assumptions')}</strong><p>{t('Move the sliders: school fees, sea level, teacher pay, rainfall. Most interactive models run in your browser; downloadable Python models run on your own machine.')}</p></li>
         <li><span>3</span><strong>{t('See what holds up')}</strong><p>{t('Every finding is labelled: measured from data, produced by a simulation, ruled out, or still open.')}</p></li>
       </ol>
     </section>
 
     <section className="landing-methods shell">
-      <div className="landing-section-head"><p className="eyebrow">{t('HOW TO READ THESE MODELS')}</p><h2>{t('No equations required.')}</h2></div>
+      <div className="landing-section-head"><p className="eyebrow">{t('HOW TO READ THESE MODELS')}</p><h2>{t('Plain language first. Math when you want it.')}</h2></div>
       <dl>
         <div><dt>{t('Agent-based models')}</dt><dd>{t('Give thousands of simulated people, teachers or households simple rules, let them interact, and watch what patterns emerge at the level of the whole society.')}</dd></div>
         <div><dt>{t('Monte Carlo')}</dt><dd>{t('When we do not know an input, say how fast people walked, we draw it at random from a plausible range and run the model again. Hundreds of runs show which conclusions survive our ignorance and which depend on one guess.')}</dd></div>
