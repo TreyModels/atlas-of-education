@@ -2519,11 +2519,6 @@
   "fr": "Toutes les entrées",
   "vi": "Tất cả các mục"
  },
- "{n} catalogue entries · 3 languages": {
-  "zh-Hans": "{n} 个目录条目 · 3 种语言",
-  "fr": "{n} entrées · 3 langues",
-  "vi": "{n} mục · 3 ngôn ngữ"
- },
  "{n} catalogue entries for education, demography, planning and historical systems. Choose a question, inspect the assumptions, and explore the evidence.": {
   "zh-Hans": "{n} 个教育、人口、规划和历史系统目录条目。选择问题，查看假设并探索证据。",
   "fr": "{n} entrées sur l’éducation, la démographie, la planification et les systèmes historiques. Choisissez une question, examinez les hypothèses et explorez les données.",
@@ -3433,5 +3428,10 @@
   "zh-Hans": "这里是关于社会如何运作的模拟：家庭为何花钱请家教，东亚生育率为何骤降，吴哥如何养活自己，人类如何走出非洲。每个模型都把一个论点变成计算机可以反复推演成千上万次的规则。改变假设，运行模型，看看这个故事是否依然成立。",
   "vi": "Đây là những mô phỏng về cách xã hội vận hành: vì sao các gia đình trả tiền học thêm, vì sao mức sinh ở Đông Á sụt giảm, Angkor đã nuôi sống chính mình như thế nào, con người đã rời châu Phi như thế nào. Mỗi mô hình biến một lập luận thành các quy tắc mà máy tính có thể chạy hàng nghìn lần. Hãy thay đổi giả định, chạy mô hình và xem câu chuyện còn đứng vững không.",
   "fr": "Ce sont des simulations du fonctionnement des sociétés : pourquoi les familles paient pour des cours particuliers, pourquoi la fécondité s'est effondrée dans toute l'Asie de l'Est, comment Angkor se nourrissait, comment les populations sont sorties d'Afrique. Chacune transforme un argument en règles qu'un ordinateur peut dérouler, des milliers de fois. Modifiez les hypothèses, lancez la simulation et voyez si le récit tient toujours."
+ },
+ "{n} catalogue entries · 2 languages": {
+  "zh-Hans": "{n} 个目录条目 · 2 种语言",
+  "fr": "{n} entrées · 2 langues",
+  "vi": "{n} mục · 2 ngôn ngữ"
  }
 }

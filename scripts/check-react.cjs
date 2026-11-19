@@ -29,7 +29,7 @@ if(missing.length){console.log('Missing exact React translation entries:',JSON.s
 for(const [key,v]of Object.entries(dictionary))for(const lang of ['vi','zh-Hans','fr'])assert.ok(v[lang]?.trim(),lang+': '+key);
 for(const lang of ['vi','zh-Hans','fr'])for(const text of all)assert.ok(!t(text,lang).includes('undefined'),lang+': '+text);
 assert.equal(t('Teachers in 2050','vi'),'Giáo viên năm 2050');assert.equal(t('40 days','vi'),'40 ngày');
-assert.equal(context.AtlasWorldsLab.worlds.length,22);assert.ok(fs.readFileSync(root+'/src/components/Navigation.tsx','utf8').includes('<option value="vi">Tiếng Việt</option>'));
+assert.equal(context.AtlasWorldsLab.worlds.length,22);{const nav=fs.readFileSync(root+'/src/components/Navigation.tsx','utf8');assert.ok(nav.includes('<option value="zh-Hans">简体中文</option>'));assert.ok(!nav.includes('value="vi"'),'Vietnamese is hidden from the selector (Trey, 19 Nov 2026)');}
 assert.ok(fs.readFileSync(root+'/src/model/useModelRun.ts','utf8').includes('latest.current=request'));
 console.log('React: 22 modules, '+Object.keys(dictionary).length+' translated entries, Vietnamese dynamic labels and selector checked.');
 

@@ -27,7 +27,7 @@ export default function App() {
     try {
       const requested = new URLSearchParams(location.search).get('lang')
       const saved = requested || localStorage.getItem('atlas-language')
-      return saved === 'zh-Hans' || saved === 'vi' ? saved : 'en'
+      return saved === 'zh-Hans' ? saved : 'en'
     } catch { return 'en' }
   })
   const [states, setStates] = useState<Record<string, Values>>({})
