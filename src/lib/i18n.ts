@@ -16,5 +16,5 @@ export function translate(source:string,language:Language):string {
  if(/^(\d[\d,]*) of 24,000$/.test(source))return source.replace(/^(\d[\d,]*) of 24,000$/,(_,n)=>language==='fr'?n+' sur 24 000':n+' / 24.000')
  return result
 }
-export const supportedLanguages:Language[]=['en','zh-Hans','vi']
+export const supportedLanguages:Language[]=['en','zh-Hans']
 export const translationDictionary=dictionary
