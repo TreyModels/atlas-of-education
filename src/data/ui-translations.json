@@ -3780,5 +3780,65 @@
  },
  "Downloads": {
   "zh-Hans": "下载"
+ },
+ "My digital workflow, 2026": {
+  "zh-Hans": "我的数字工作流，2026"
+ },
+ "How one researcher and a team of AI agents build these models": {
+  "zh-Hans": "一位研究者与一支 AI 智能体团队如何构建这些模型"
+ },
+ "My most-read post on my old blog was “My Digital Workflow”. This is the 2026 version. I know some HTML and I ran a WordPress site with too many plugins. Nearly everything else you see here (the models, the code, the tests, this website) was built by AI agents working under my direction. This page describes exactly how, because the method matters as much as the models.": {
+  "zh-Hans": "我在旧博客上阅读量最高的一篇文章是《我的数字工作流》。这是 2026 年的版本。我懂一点 HTML，也运营过一个装满了插件的 WordPress 网站。你在这里看到的几乎其他一切（模型、代码、测试、这个网站）都是由 AI 智能体在我的指导下构建的。本页详细说明了具体做法，因为方法与模型同样重要。"
+ },
+ "The team and its division of work": {
+  "zh-Hans": "团队及其分工"
+ },
+ "I work with four AI systems. Claude coordinates and reviews; Codex manages model families, checks and deployment; DeepSeek workers draft code, pages and translations; Kimi handles visual design. The division of work lets me direct the research while using the tools for implementation.": {
+  "zh-Hans": "我同时使用四个 AI 系统。Claude 负责协调与审阅；Codex 管理模型系列、检查与部署；DeepSeek 工作者起草代码、页面和翻译；Kimi 负责视觉设计。这种分工让我能够主导研究，同时借助这些工具来完成实现。"
+ },
+ "The expensive models spend their tokens on judgement: planning, reviewing, catching mistakes. The cheap model writes the long files. That division is what makes this affordable for one person.": {
+  "zh-Hans": "昂贵的模型把 token 花在判断上：规划、审阅、发现错误。廉价的模型撰写长文件。正是这种分工，让一个人也能负担得起。"
+ },
+ "A shared message board between the agents": {
+  "zh-Hans": "智能体之间的共享留言板"
+ },
+ "The agents do not talk to each other directly. They share a message board, the Atlas Bridge: a small MCP server (the Model Context Protocol, a standard way to give AI tools access to other tools) that runs on my laptop. Every agent can post, read and attach files to it.": {
+  "zh-Hans": "智能体之间并不直接对话。它们共享一块留言板——Atlas Bridge：一个运行在我笔记本电脑上的小型 MCP 服务器（Model Context Protocol，即模型上下文协议，是一种让 AI 工具访问其他工具的标准方式）。每个智能体都可以在上面发帖、阅读和附加文件。"
+ },
+ "Coordination follows a few strict rules, written after two agents once started on the same model at the same time. Each piece of work has one owner from start to finish. Before starting, an agent posts a claim naming the files and branch it will touch. When finished, it posts what it did, the commit, and the output of every check. Only one agent deploys the website, and nothing goes live without a passing checklist.": {
+  "zh-Hans": "协调遵循几条严格的规则，这些规则是在两个智能体曾同时着手同一个模型之后写下的。每一项工作自始至终只有一个负责人。开始之前，智能体先发帖声明它将涉及的文件和分支。完成之后，它发帖说明自己做了什么、提交记录，以及每一项检查的输出。只有一个智能体负责部署网站，且没有通过检查清单，任何内容都不会上线。"
+ },
+ "A fleet of cheap workers": {
+  "zh-Hans": "一支廉价工作者队伍"
+ },
+ "For heavy writing, the coordinating agent sends tasks to a fleet of DeepSeek workers through a small runner script. Each task names the files the worker may read, the files it may write, and the checks its output must pass. The worker returns complete files; the runner writes them, runs the checks, and reports one line per task. The coordinator reviews the returned code and check output, compares claims with sources, and sends defects back for correction. Passing an automated check is not a substitute for that review.": {
+  "zh-Hans": "对于繁重的写作，协调智能体通过一个小型运行脚本，把任务发送给一支 DeepSeek 工作者队伍。每项任务都会指明该工作者可以读取哪些文件、可以写入哪些文件，以及其输出必须通过哪些检查。工作者返回完整的文件；运行脚本将其写入、执行检查，并为每项任务报告一行结果。协调者会审阅返回的代码和检查输出，将主张与来源进行对照，并把缺陷发回修正。通过自动化检查并不能替代这项审阅。"
+ },
+ "A typical instruction from me is short: “go spin up some agents and run more experiments”, or “convert the remaining families”. The agents turn that into claims, tasks, checks and a pull request.": {
+  "zh-Hans": "我给出的典型指令很短：“去启动一些智能体，多跑些实验”，或者“把剩下的系列转换掉”。智能体将其转化为声明、任务、检查和拉取请求。"
+ },
+ "The scientific process underneath": {
+  "zh-Hans": "底层的科学过程"
+ },
+ "The workflow serves one process. I start from a verbal model: an argument from the literature or from my own theory and observations. The agents and I write it as explicit rules, find the published studies and data it should answer to, and turn it into code. The code is checked for consistency (do the books balance, do people get counted once), then run many times, then compared with observations it was not built from where such data exist.": {
+  "zh-Hans": "这套工作流服务于一个过程。我从一个文字模型出发：一个来自文献、或来自我自己理论与观察的论证。智能体和我把它写成明确的规则，找出它应当回应的已发表研究和数据，并将其转化为代码。代码先经过一致性检查（账目是否平衡，人是否只被计算一次），然后多次运行，再与它并非据以构建的观察数据相比较——前提是存在这样的数据。"
+ },
+ "Every model then gets two labels, why it exists and how far it has been checked, and every paragraph on its page says whether it comes from a published study, observed data, a simulation, or is still open. Models that fail a test stay on the site, labelled as a historical or limited result. Some of my favourite arguments have not survived this process yet. That is what the process is for.": {
+  "zh-Hans": "随后每个模型都会得到两个标签：它为何存在，以及它被检验到什么程度；其页面上的每一段都标明它来自已发表研究、观察数据、模拟，还是仍然悬而未决。未通过检验的模型仍会留在网站上，但会被标注为历史结果或有限结果。我最喜欢的一些论点至今仍未通过这一过程的检验。这正是这一过程的意义所在。"
+ },
+ "How mistakes get caught": {
+  "zh-Hans": "错误如何被发现"
+ },
+ "AI agents make mistakes confidently, so the process assumes they will. Every number on a model page is traced back to a source file before it is published; drafts with numbers that cannot be traced are sent back. Building this site, that caught a misquoted figure from the Angkor paper, a results table still showing pre-review numbers, broken links, and a worker that ran out of budget halfway through a file. Automated checks run before every merge: model tests, translation coverage, a browser build, and pages loaded at desktop and phone sizes.": {
+  "zh-Hans": "AI 智能体会自信地犯错，因此这一过程假定它们会犯错。模型页面上的每一个数字在发布前都会被追溯到一个源文件；含有无法追溯数字的草稿会被退回。在构建本网站的过程中，这一做法发现了吴哥论文中被误引的数字、一张仍显示评审前数字的结果表、失效链接，以及一个在文件写到一半时预算耗尽的工作者。每次合并前都会运行自动化检查：模型测试、翻译覆盖率、浏览器构建，以及在桌面和手机尺寸下加载页面。"
+ },
+ "The final checks are mine. I decide what the questions are, which explanations are worth modelling, and whether a result says what the page claims. The agents do the building; the judgement stays human.": {
+  "zh-Hans": "最后的检查由我来做。我决定问题是什么、哪些解释值得建模，以及某个结果是否支持页面所声称的内容。智能体负责构建；判断始终由人来做。"
+ },
+ "Open by default": {
+  "zh-Hans": "默认开放"
+ },
+ "The public models and available materials live on GitHub under the stated reuse terms. Releases are versioned for citation; Zenodo DOI 10.5281/zenodo.24369167. Anyone can download a model, change it, and propose a version through a simple form. If this workflow is useful to you, copy it.": {
+  "zh-Hans": "公开的模型和现有材料都托管在 GitHub 上，并遵循所述重用条款。版本化发布支持引用；Zenodo DOI 10.5281/zenodo.24369167。任何人都可以下载模型、修改它，并通过一个简单的表单提出自己的版本。如果这套工作流程对你有用，请照搬它。"
  }
 }
