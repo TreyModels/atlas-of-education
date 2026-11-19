@@ -1,6 +1,6 @@
 import type { Journey } from './angkor-journey';
 export const educationJourney: Journey = {
-  "kicker": "Education & work · Credentials, schooling and labour markets",
+  "kicker": "Education & work \u00b7 Credentials, schooling and labour markets",
   "title": "Who stays in school, and what is the diploma worth?",
   "lede": "A credential can teach a skill, rank an applicant or open a queue that would otherwise be closed. Those three jobs pull in different directions. This page follows one question through the Atlas models of education and work: when families, employers and states all respond to the same diploma, what can the evidence actually separate? The short answer is less than we would like, and the models are most useful when they show why.",
   "repo": "https://github.com/TreyModels/atlas-of-education",
@@ -15,23 +15,23 @@ export const educationJourney: Journey = {
     },
     {
       "claim": "open",
-      "text": "Nothing on this page is a verdict on a country’s education system. The models are mechanism tests and fitted descriptions. Where a result is a historical run, we say so. Where the code has been checked but the history has not, we say that too. Implementation checked is not empirical validation."
+      "text": "Nothing on this page is a verdict on a country\u2019s education system. The models are mechanism tests and fitted descriptions. Where a result is a historical run, we say so. Where the code has been checked but the history has not, we say that too. Implementation checked is not empirical validation."
     }
   ],
   "chapters": [
     {
       "id": "why",
-      "kicker": "Chapter 1 · The question",
+      "kicker": "Chapter 1 \u00b7 The question",
       "title": "Why credentials and work belong in one story",
       "question": "Why should a page about schooling start with the labour market?",
       "evidence": [
         {
           "claim": "data",
-          "text": "In Cambodia, the DHS 2021–22 puts the share of lower-secondary non-completers who come from the poorest 40% of households at 55–64%. Who leaves school early is not a random draw from the wealth distribution."
+          "text": "In Cambodia, the DHS 2021\u201322 puts the share of lower-secondary non-completers who come from the poorest 40% of households at 55\u201364%. Who leaves school early is not a random draw from the wealth distribution."
         },
         {
           "claim": "data",
-          "text": "In China, gaokao registrants per birth 18 years earlier fell 5.3% over 2024–26 (raw −3.9%). A demographic fall in the applicant pool is not the same as a fall in college entry, and the series has to be read with that distinction in mind."
+          "text": "In China, gaokao registrants per birth 18 years earlier fell 5.3% over 2024\u201326 (raw \u22123.9%). A demographic fall in the applicant pool is not the same as a fall in college entry, and the series has to be read with that distinction in mind."
         },
         {
           "claim": "open",
@@ -45,23 +45,23 @@ export const educationJourney: Journey = {
       "rule": [
         {
           "claim": "method",
-          "text": "The education family contains three live or fitted models — China youth unemployment, Cambodia child labour and schooling, and credential dynamics — plus four stored massification experiments. Each gets a model card at the bottom of the page. The full Education Atlas is an interface, not another model. Download bundles and duplicate interfaces are links, not extra entities."
+          "text": "The education family contains three live or fitted models \u2014 China youth unemployment, Cambodia child labour and schooling, and credential dynamics \u2014 plus four stored massification experiments. Each gets a model card at the bottom of the page. The full Education Atlas is an interface, not another model. Download bundles and duplicate interfaces are links, not extra entities."
         },
         {
           "claim": "method",
-          "text": "Claims are labelled. “Data” means official statistics or surveys. “Sim” means an Atlas simulation result. “Open” means still unsettled. “Method” means how a model works. “Published” is reserved for peer-reviewed studies."
+          "text": "Claims are labelled. \u201cData\u201d means official statistics or surveys. \u201cSim\u201d means an Atlas simulation result. \u201cOpen\u201d means still unsettled. \u201cMethod\u201d means how a model works. \u201cPublished\u201d is reserved for peer-reviewed studies."
         }
       ],
       "result": [
         {
           "claim": "open",
-          "text": "The family story’s bottom line is that credentials are positional as much as productive, and that this is why the same models feed the fertility story. The chapters below test how far that framing survives contact with the stored results."
+          "text": "The family story\u2019s bottom line is that credentials are positional as much as productive, and that this is why the same models feed the fertility story. The chapters below test how far that framing survives contact with the stored results."
         }
       ],
       "limitation": [
         {
           "claim": "open",
-          "text": "A framing is not a finding. The education models are calibrated or illustrative to different degrees, and several of the headline results are stored historical runs rather than current fits. Read each card’s state before reading its number."
+          "text": "A framing is not a finding. The education models are calibrated or illustrative to different degrees, and several of the headline results are stored historical runs rather than current fits. Read each card\u2019s state before reading its number."
         }
       ],
       "sources": [
@@ -74,7 +74,7 @@ export const educationJourney: Journey = {
           "href": "research/index.html"
         },
         {
-          "label": "Cambodia DHS 2021–22 (FR377)",
+          "label": "Cambodia DHS 2021\u201322 (FR377)",
           "href": "https://www.dhsprogram.com/pubs/pdf/FR377/FR377.pdf"
         }
       ],
@@ -82,9 +82,9 @@ export const educationJourney: Journey = {
     },
     {
       "id": "china",
-      "kicker": "Chapter 2 · China",
+      "kicker": "Chapter 2 \u00b7 China",
       "title": "The graduate queue and a step nobody can explain",
-      "question": "Can a fitted labour-market model reproduce China’s graduate unemployment record, and what carries the rise?",
+      "question": "Can a fitted labour-market model reproduce China\u2019s graduate unemployment record, and what carries the rise?",
       "evidence": [
         {
           "claim": "data",
@@ -92,11 +92,11 @@ export const educationJourney: Journey = {
         },
         {
           "claim": "sim",
-          "text": "The Shapley decomposition of the on-disk headline is supply +1.47, composition −0.10, demand −0.04 and the Aug-2021 step +3.84, of a total +5.18 points. In the widened refit it is supply +1.91, composition −0.18, demand 0.00 and the step +3.33, of +5.06. The step carries most of the rise in both decompositions."
+          "text": "The Shapley decomposition of the on-disk headline is supply +1.47, composition \u22120.10, demand \u22120.04 and the Aug-2021 step +3.84, of a total +5.18 points. In the widened refit it is supply +1.91, composition \u22120.18, demand 0.00 and the step +3.33, of +5.06. The step carries most of the rise in both decompositions."
         },
         {
           "claim": "data",
-          "text": "The step is not sourced at its fitted size. Sourced inputs give a data-sized step of about 0.020 to 0.068; the fitted full-window value is 0.30 on the old bounds and 0.32 on the widened bounds. The step size is also unstable across windows: it is 0.079 when the model is fitted to 2018–22 only."
+          "text": "The step is not sourced at its fitted size. Sourced inputs give a data-sized step of about 0.020 to 0.068; the fitted full-window value is 0.30 on the old bounds and 0.32 on the widened bounds. The step size is also unstable across windows: it is 0.079 when the model is fitted to 2018\u201322 only."
         }
       ],
       "rule": [
@@ -116,11 +116,11 @@ export const educationJourney: Journey = {
         },
         {
           "claim": "sim",
-          "text": "The “no waiting” counterfactual is +12.17 points in the current fit, not the +22.8 points in an older note. The +22.8 figure is not reproduced. Even the corrected waiting effect is about 7 points on the measured rate."
+          "text": "The \u201cno waiting\u201d counterfactual is +12.17 points in the current fit, not the +22.8 points in an older note. The +22.8 figure is not reproduced. Even the corrected waiting effect is about 7 points on the measured rate."
         },
         {
           "claim": "sim",
-          "text": "A naive benchmark — the same month of 2022 — beats the early fit out of sample. On the true 2023 H1 holdout the early fit has MAE 7.14 against 2.50 for naive. On the verified Dec 2023 to Sep 2026 window the early fit has MAE 5.54 (n = 32) against 1.61 for naive."
+          "text": "A naive benchmark \u2014 the same month of 2022 \u2014 beats the early fit out of sample. On the true 2023 H1 holdout the early fit has MAE 7.14 against 2.50 for naive. On the verified Dec 2023 to Sep 2026 window the early fit has MAE 5.54 (n = 32) against 1.61 for naive."
         },
         {
           "claim": "sim",
@@ -130,11 +130,11 @@ export const educationJourney: Journey = {
       "limitation": [
         {
           "claim": "open",
-          "text": "Status is fitted + free residual, not calibrated with a successful holdout. The Aug-2021 step is an unexplained fitted residual, not a sourced demand shock. Data-sized steps fit worse in sample and do not fix the vacancy check: the observed graduate-vacancy fall of about −22% year on year in H1 2025 is not reproduced by any variant, and the sign is wrong in all of them."
+          "text": "Status is fitted + free residual, not calibrated with a successful holdout. The Aug-2021 step is an unexplained fitted residual, not a sourced demand shock. Data-sized steps fit worse in sample and do not fix the vacancy check: the observed graduate-vacancy fall of about \u221222% year on year in H1 2025 is not reproduced by any variant, and the sign is wrong in all of them."
         },
         {
           "claim": "open",
-          "text": "The parameter surface is flat. Seven parameters sat on bounds in the on-disk full fit, and several different parameter sets fit within a few cost units. lam_g is weakly identified: the free fit moves it between 0.004 and 1.0 across local optima, and pinning it at a data-derived value makes the in-sample fit worse while leaving the rise at 5–6 points."
+          "text": "The parameter surface is flat. Seven parameters sat on bounds in the on-disk full fit, and several different parameter sets fit within a few cost units. lam_g is weakly identified: the free fit moves it between 0.004 and 1.0 across local optima, and pinning it at a data-derived value makes the in-sample fit worse while leaving the rise at 5\u20136 points."
         },
         {
           "claim": "open",
@@ -142,8 +142,8 @@ export const educationJourney: Journey = {
         }
       ],
       "maths": {
-        "plain": "A naive forecast says next year will look like the same month last year. The model has to beat that before its mechanisms deserve attention. On the 2023 H1 holdout the model’s average error is 7.14 percentage points; the naive rule’s is 2.50. A smaller error is better, so the naive rule wins.",
-        "formula": "MAE = (1/n) · Σ |forecast − observed|",
+        "plain": "A naive forecast says next year will look like the same month last year. The model has to beat that before its mechanisms deserve attention. On the 2023 H1 holdout the model\u2019s average error is 7.14 percentage points; the naive rule\u2019s is 2.50. A smaller error is better, so the naive rule wins.",
+        "formula": "MAE = (1/n) \u00b7 \u03a3 |forecast \u2212 observed|",
         "symbols": [
           [
             "MAE",
@@ -155,7 +155,7 @@ export const educationJourney: Journey = {
           ],
           [
             "forecast",
-            "the model’s or naive rule’s value for that month"
+            "the model\u2019s or naive rule\u2019s value for that month"
           ],
           [
             "observed",
@@ -184,21 +184,21 @@ export const educationJourney: Journey = {
     },
     {
       "id": "cambodia",
-      "kicker": "Chapter 3 · Cambodia",
+      "kicker": "Chapter 3 \u00b7 Cambodia",
       "title": "Child work, school and a seed spread that swallows small effects",
-      "question": "Which policies change child labour, and which differences are smaller than the simulation’s own noise?",
+      "question": "Which policies change child labour, and which differences are smaller than the simulation\u2019s own noise?",
       "evidence": [
         {
           "claim": "data",
-          "text": "The Cambodia household simulation is calibrated on out-of-school rates. Its costs are illustrative: the cost index’s unit costs are invented and unsourced, and the engine’s school values (vPrim, vLow, vUp) are calibrated, not measured. That affects the level of child labour more than the spread."
+          "text": "The Cambodia household simulation is calibrated on out-of-school rates. Its costs are illustrative: the cost index\u2019s unit costs are invented and unsourced, and the engine\u2019s school values (vPrim, vLow, vUp) are calibrated, not measured. That affects the level of child labour more than the spread."
         },
         {
           "claim": "sim",
-          "text": "The reference run has 6,000 households over 12 years, 2025 to 2036, with every lever at zero and the Thailand route open. Its national child labour rate in 2036 is 14.01%, with a seed standard deviation of 0.46 percentage points. The p5–p95 range is 13.40% to 14.71%."
+          "text": "The reference run has 6,000 households over 12 years, 2025 to 2036, with every lever at zero and the Thailand route open. Its national child labour rate in 2036 is 14.01%, with a seed standard deviation of 0.46 percentage points. The p5\u2013p95 range is 13.40% to 14.71%."
         },
         {
           "claim": "sim",
-          "text": "Policy and reference runs share matched seeds across the 12 simulated years, so the interface exposes the difference each policy makes. The seed comparison uses 50 seeds, 50 reference histories and 13 single-lever scenarios at half of each slider’s maximum, or at zero for the Thailand route."
+          "text": "Policy and reference runs share matched seeds across the 12 simulated years, so the interface exposes the difference each policy makes. The seed comparison uses 50 seeds, 50 reference histories and 13 single-lever scenarios at half of each slider\u2019s maximum, or at zero for the Thailand route."
         }
       ],
       "rule": [
@@ -208,21 +208,21 @@ export const educationJourney: Journey = {
         },
         {
           "claim": "method",
-          "text": "The yardstick is the reference’s own seed spread. A policy difference is called “smaller than seed spread” when its absolute mean paired difference is below the reference standard deviation for that output. That is a noise check, not a significance test."
+          "text": "The yardstick is the reference\u2019s own seed spread. A policy difference is called \u201csmaller than seed spread\u201d when its absolute mean paired difference is below the reference standard deviation for that output. That is a noise check, not a significance test."
         }
       ],
       "result": [
         {
           "claim": "sim",
-          "text": "Five of the 13 single-lever settings move the national child labour rate in 2036 by less than the reference seed SD of 0.46 points: leftSupport −0.26, bridging −0.44, ban −0.32, garmentBoom +0.02 and closing the Thailand route 0.00. Harvest is just above the line at −0.50 (ratio 1.08)."
+          "text": "Five of the 13 single-lever settings move the national child labour rate in 2036 by less than the reference seed SD of 0.46 points: leftSupport \u22120.26, bridging \u22120.44, ban \u22120.32, garmentBoom +0.02 and closing the Thailand route 0.00. Harvest is just above the line at \u22120.50 (ratio 1.08)."
         },
         {
           "claim": "sim",
-          "text": "Several effects are larger than the spread: cash −4.82, cashU −2.07, protection −2.20, feeding −2.30, tutorFix −1.34 and debtRelief −1.28 points. The smaller-than-spread effects are not all zero: under common seeds leftSupport (t = −3.5), bridging (t = −6.6) and ban (t = −4.4) are reliably below zero, but they are small compared with a single history’s variation."
+          "text": "Several effects are larger than the spread: cash \u22124.82, cashU \u22122.07, protection \u22122.20, feeding \u22122.30, tutorFix \u22121.34 and debtRelief \u22121.28 points. The smaller-than-spread effects are not all zero: under common seeds leftSupport (t = \u22123.5), bridging (t = \u22126.6) and ban (t = \u22124.4) are reliably below zero, but they are small compared with a single history\u2019s variation."
         },
         {
           "claim": "sim",
-          "text": "Closing the Thailand route leaves national child labour unchanged, but teens working away from home fall by 10.0 points (about 29 reference SDs, paired t = −206). The migration channel is substituted, not removed: the same children end up in local work or school. Read the national rate and the migrant-teen rate together."
+          "text": "Closing the Thailand route leaves national child labour unchanged, but teens working away from home fall by 10.0 points (about 29 reference SDs, paired t = \u2212206). The migration channel is substituted, not removed: the same children end up in local work or school. Read the national rate and the migrant-teen rate together."
         }
       ],
       "limitation": [
@@ -241,7 +241,7 @@ export const educationJourney: Journey = {
       ],
       "maths": {
         "plain": "Under matched seeds, each scenario is compared with the reference history for the same seed. The mean paired difference is the average policy effect. The reference seed standard deviation says how much a single history moves anyway. If the mean difference is smaller than that spread, the effect is hard to see in one run even if it is reliably non-zero across many seeds.",
-        "formula": "d_s = scenario_s − reference_s;   mean difference = (1/S) Σ d_s;   reference SD = √(Σ(reference_s − mean_reference)² / (S − 1))",
+        "formula": "d_s = scenario_s \u2212 reference_s;   mean difference = (1/S) \u03a3 d_s;   reference SD = \u221a(\u03a3(reference_s \u2212 mean_reference)\u00b2 / (S \u2212 1))",
         "symbols": [
           [
             "S",
@@ -260,7 +260,7 @@ export const educationJourney: Journey = {
             "the paired difference for seed s"
           ]
         ],
-        "example": "The reference mean is 14.01% and its seed SD is 0.46 points. leftSupport has mean paired difference −0.26 points, which is 0.56 of the SD, so it is classed as smaller than seed spread. Cash has −4.82 points, which is 10.37 of the SD, so it is not."
+        "example": "The reference mean is 14.01% and its seed SD is 0.46 points. leftSupport has mean paired difference \u22120.26 points, which is 0.56 of the SD, so it is classed as smaller than seed spread. Cash has \u22124.82 points, which is 10.37 of the SD, so it is not."
       },
       "sources": [
         {
@@ -282,21 +282,21 @@ export const educationJourney: Journey = {
     },
     {
       "id": "credentials",
-      "kicker": "Chapter 4 · Credential dynamics",
+      "kicker": "Chapter 4 \u00b7 Credential dynamics",
       "title": "The credential floor and the constraint that decides the verdict",
       "question": "Do the data discriminate a relational floor in schooling from human-capital or positional stories?",
       "evidence": [
         {
           "claim": "data",
-          "text": "The matched test is Cambodia. UIS lower-secondary completion by wealth quintile, computed from DHS rounds, gives a 2021 profile of 29, 48, 54, 66 and 79% from poorest to richest. The observed share of lower-secondary non-completers from the poorest 40% is 55–64%."
+          "text": "The matched test is Cambodia. UIS lower-secondary completion by wealth quintile, computed from DHS rounds, gives a 2021 profile of 29, 48, 54, 66 and 79% from poorest to richest. The observed share of lower-secondary non-completers from the poorest 40% is 55\u201364%."
         },
         {
           "claim": "data",
-          "text": "Vietnam has a second test: the MICS 2014 upper-secondary adjusted net attendance profile for ages 15–17 is 40.4, 67.3, 74.3, 85.4 and 93.3%. China’s gaokao registrants per birth 18 years earlier fell 5.3% over 2024–26, while every structure predicts a 3–11% rise in college entry."
+          "text": "Vietnam has a second test: the MICS 2014 upper-secondary adjusted net attendance profile for ages 15\u201317 is 40.4, 67.3, 74.3, 85.4 and 93.3%. China\u2019s gaokao registrants per birth 18 years earlier fell 5.3% over 2024\u201326, while every structure predicts a 3\u201311% rise in college entry."
         },
         {
           "claim": "sim",
-          "text": "Each country × structure gets 24,000 parameter draws. With a hard liquidity threshold, Cambodia accepts 1,361 human-capital draws, 800 positional draws and 463 relational draws. The relational structure predicts that 85% [69–97] of non-completers come from the poorest 40%, against 55–64% observed. No draw fits any quintile profile."
+          "text": "Each country \u00d7 structure gets 24,000 parameter draws. With a hard liquidity threshold, Cambodia accepts 1,361 human-capital draws, 800 positional draws and 463 relational draws. The relational structure predicts that 85% [69\u201397] of non-completers come from the poorest 40%, against 55\u201364% observed. No draw fits any quintile profile."
         }
       ],
       "rule": [
@@ -312,15 +312,15 @@ export const educationJourney: Journey = {
       "result": [
         {
           "claim": "sim",
-          "text": "With the hard threshold no structure fits the full wealth profile, and the relational floor fails. With a graded threshold all three structures fit Cambodia’s and Vietnam’s full quintile profiles. The profile-fitted structures predict 57–58% of Cambodian non-completers from the poorest 40%, inside the observed 55–64%."
+          "text": "With the hard threshold no structure fits the full wealth profile, and the relational floor fails. With a graded threshold all three structures fit Cambodia\u2019s and Vietnam\u2019s full quintile profiles. The profile-fitted structures predict 57\u201358% of Cambodian non-completers from the poorest 40%, inside the observed 55\u201364%."
         },
         {
           "claim": "sim",
-          "text": "In the graded fits the relational-weight posterior equals its prior. Cambodia’s relational posterior is 0.38 [0.04–0.75] against a prior of 0.40 [0.04–0.76], with KS p = 0.60; the profile-fitted value is 0.43, p = 0.55. The data do not discriminate the relational floor."
+          "text": "In the graded fits the relational-weight posterior equals its prior. Cambodia\u2019s relational posterior is 0.38 [0.04\u20130.75] against a prior of 0.40 [0.04\u20130.76], with KS p = 0.60; the profile-fitted value is 0.43, p = 0.55. The data do not discriminate the relational floor."
         },
         {
           "claim": "sim",
-          "text": "The projections are fragile. Under a 40% premium fall by 2035 the Q3+ completion change changes sign with the constraint: relational about 0 under the hard threshold against +10 points under the graded one; human capital −12 against −6. The older v2.1 values should not be quoted as premium effects."
+          "text": "The projections are fragile. Under a 40% premium fall by 2035 the Q3+ completion change changes sign with the constraint: relational about 0 under the hard threshold against +10 points under the graded one; human capital \u221212 against \u22126. The older v2.1 values should not be quoted as premium effects."
         }
       ],
       "limitation": [
@@ -334,16 +334,16 @@ export const educationJourney: Journey = {
         },
         {
           "claim": "open",
-          "text": "China is not explained by any structure in either version: the model’s sign is wrong for the 2024–26 gaokao fall. Rerouting is not evidence either: every structure reroutes about 60% of exiters in the Philippine run. Large KS p-values do not establish that prior and posterior are equal."
+          "text": "China is not explained by any structure in either version: the model\u2019s sign is wrong for the 2024\u201326 gaokao fall. Rerouting is not evidence either: every structure reroutes about 60% of exiters in the Philippine run. Large KS p-values do not establish that prior and posterior are equal."
         },
         {
           "claim": "open",
-          "text": "v1 had two code errors: it was not reproducible because it was seeded with Python’s per-process hash(), and its exit_low was read in 2035 and compared with 2021 data. The stored v2.1 results are historical, not a current fit."
+          "text": "v1 had two code errors: it was not reproducible because it was seeded with Python\u2019s per-process hash(), and its exit_low was read in 2035 and compared with 2021 data. The stored v2.1 results are historical, not a current fit."
         }
       ],
       "maths": {
         "plain": "A threshold rule says a household can pay for school only if income clears a line. A hard threshold makes that a cliff: just below the line, almost nobody continues; just above, almost everybody does. A graded threshold makes the chance of paying rise smoothly with income, so the same wealth profile can be produced without a cliff. When the graded rule fits, three different stories can produce the same share of leavers from the poorest households.",
-        "formula": "hard: P(finance) = 1 if y ≥ y_sub + κ · cost, else p_fin;   graded: P(finance) rises smoothly in log y around the threshold",
+        "formula": "hard: P(finance) = 1 if y \u2265 y_sub + \u03ba \u00b7 cost, else p_fin;   graded: P(finance) rises smoothly in log y around the threshold",
         "symbols": [
           [
             "y",
@@ -354,7 +354,7 @@ export const educationJourney: Journey = {
             "subsistence requirement"
           ],
           [
-            "κ",
+            "\u03ba",
             "the share of the school cost the household must cover"
           ],
           [
@@ -366,7 +366,7 @@ export const educationJourney: Journey = {
             "a smooth logistic-type rise with one extra parameter, s_liq ~ U(0.1, 1.0)"
           ]
         ],
-        "example": "The hard model predicts 85% [69–97] of Cambodian non-completers from the poorest 40%; the observed range is 55–64%. The graded model’s profile-fitted relational prediction is 58% [54–61]. The rule, not the theory, changes the verdict."
+        "example": "The hard model predicts 85% [69\u201397] of Cambodian non-completers from the poorest 40%; the observed range is 55\u201364%. The graded model\u2019s profile-fitted relational prediction is 58% [54\u201361]. The rule, not the theory, changes the verdict."
       },
       "sources": [
         {
@@ -378,17 +378,18 @@ export const educationJourney: Journey = {
           "href": "https://github.com/TreyModels/atlas-of-education/blob/main/research/credential-floor/README.md"
         },
         {
-          "label": "Cambodia DHS 2021–22 (FR377)",
+          "label": "Cambodia DHS 2021\u201322 (FR377)",
           "href": "https://www.dhsprogram.com/pubs/pdf/FR377/FR377.pdf"
         }
       ],
       "models": [
-        "credentials"
+        "credentials",
+        "credential-dhs"
       ]
     },
     {
       "id": "massification",
-      "kicker": "Chapter 5 · Massification experiments",
+      "kicker": "Chapter 5 \u00b7 Massification experiments",
       "title": "Four stored experiments on the credential pipeline",
       "question": "What keeps a credential pipeline moving when families, employers and the state all respond?",
       "evidence": [
@@ -398,7 +399,7 @@ export const educationJourney: Journey = {
         },
         {
           "claim": "open",
-          "text": "The lab says plainly what is imposed rather than estimated: parent peer pressure is inserted into the model; exclusion and organisational inertia are imposed interventions; removing an actor also changes other actors’ incentives; and some differences vary substantially by seed."
+          "text": "The lab says plainly what is imposed rather than estimated: parent peer pressure is inserted into the model; exclusion and organisational inertia are imposed interventions; removing an actor also changes other actors\u2019 incentives; and some differences vary substantially by seed."
         },
         {
           "claim": "method",
@@ -418,7 +419,7 @@ export const educationJourney: Journey = {
       "result": [
         {
           "claim": "sim",
-          "text": "The stored runs are the result. The lab reports that parent peer pressure is inserted, exclusion and organisational inertia are imposed, and removing an actor changes other actors’ incentives. Those are mechanism statements, not measured causal effects."
+          "text": "The stored runs are the result. The lab reports that parent peer pressure is inserted, exclusion and organisational inertia are imposed, and removing an actor changes other actors\u2019 incentives. Those are mechanism statements, not measured causal effects."
         },
         {
           "claim": "open",
@@ -432,7 +433,7 @@ export const educationJourney: Journey = {
         },
         {
           "claim": "open",
-          "text": "Exclusion and organisational inertia are imposed interventions, not estimated parameters. Removing an actor also changes other actors’ incentives, so an “actor removed” run is not a clean counterfactual for that actor alone."
+          "text": "Exclusion and organisational inertia are imposed interventions, not estimated parameters. Removing an actor also changes other actors\u2019 incentives, so an \u201cactor removed\u201d run is not a clean counterfactual for that actor alone."
         }
       ],
       "sources": [
@@ -462,13 +463,13 @@ export const educationJourney: Journey = {
     },
     {
       "id": "settle",
-      "kicker": "Chapter 6 · What would settle it",
+      "kicker": "Chapter 6 \u00b7 What would settle it",
       "title": "The tests the current data cannot provide",
       "question": "What would separate the explanations once each fits the observed profile?",
       "evidence": [
         {
           "claim": "open",
-          "text": "For the credential floor, a test that separates the structures needs a margin where they predict different things once each fits the wealth profile. Wealth gradients in completion cannot do this; the graded fits show that. Candidates are completion responses to a measured change in the premium — a panel of pay and completion by region — or eligibility discontinuities, such as jobs that require the credential regardless of skill."
+          "text": "For the credential floor, a test that separates the structures needs a margin where they predict different things once each fits the wealth profile. Wealth gradients in completion cannot do this; the graded fits show that. Candidates are completion responses to a measured change in the premium \u2014 a panel of pay and completion by region \u2014 or eligibility discontinuities, such as jobs that require the credential regardless of skill."
         },
         {
           "claim": "open",
@@ -506,7 +507,7 @@ export const educationJourney: Journey = {
         },
         {
           "claim": "open",
-          "text": "The education family’s models are at different stages. China is fitted + free residual and loses to a naive benchmark out of sample. Cambodia is calibrated on out-of-school rates with illustrative costs. Credential dynamics is illustrative and its stored v2.1 premium results are historical. The four massification experiments are stored mechanism tests. None of that is a verdict on a country."
+          "text": "The education family\u2019s models are at different stages. China is fitted + free residual and loses to a naive benchmark out of sample. Cambodia is calibrated on out-of-school rates with illustrative costs. Credential dynamics is illustrative and its stored v2.1 premium results are historical. The four massification experiments are stored mechanism tests. None of that is a verdict on a country."
         }
       ],
       "sources": [
@@ -533,7 +534,7 @@ export const educationJourney: Journey = {
       "title": "China youth unemployment (fitted labour-market model)",
       "purpose": "mechanism",
       "state": "developing",
-      "note": "Fitted to the supplied NBS graduate series. Status: fitted + free residual. The +5 pp rise survives refits, but the Aug-2021 step carries most of it and is unexplained; a naive benchmark beats the model out of sample (2023 H1 MAE 7.14 vs 2.50; verified Dec 2023–Sep 2026 5.54 vs 1.61). The 2024 reporting-definition change and several labour-market responses remain assumptions.",
+      "note": "Fitted to the supplied NBS graduate series. Status: fitted + free residual. The +5 pp rise survives refits, but the Aug-2021 step carries most of it and is unexplained; a naive benchmark beats the model out of sample (2023 H1 MAE 7.14 vs 2.50; verified Dec 2023\u2013Sep 2026 5.54 vs 1.61). The 2024 reporting-definition change and several labour-market responses remain assumptions.",
       "route": "china",
       "research": "https://github.com/TreyModels/atlas-of-education/blob/main/experiments/youth-review/README.md"
     },
@@ -542,7 +543,7 @@ export const educationJourney: Journey = {
       "title": "Cambodia child labour and schooling (household simulation)",
       "purpose": "mechanism",
       "state": "developing",
-      "note": "6,000 households over 12 years, 2025–2036. Out-of-school rates are calibrated; the cost index is illustrative and its unit costs are unsourced. Five of 13 single-lever effects on the 2036 national child-labour rate are smaller than the reference seed SD of 0.46 pp. School values are calibrated, not measured.",
+      "note": "6,000 households over 12 years, 2025\u20132036. Out-of-school rates are calibrated; the cost index is illustrative and its unit costs are unsourced. Five of 13 single-lever effects on the 2036 national child-labour rate are smaller than the reference seed SD of 0.46 pp. School values are calibrated, not measured.",
       "engine": "engines/camchild.js",
       "route": "cambodia",
       "research": "https://github.com/TreyModels/atlas-of-education/blob/main/experiments/camchild-seeds/README.md"
@@ -552,13 +553,13 @@ export const educationJourney: Journey = {
       "title": "Credential dynamics and the credential floor",
       "purpose": "mechanism",
       "state": "developing",
-      "note": "24,000 draws per country × structure. With a hard liquidity threshold no draw fits the wealth profile and the relational floor fails; with a graded threshold all three structures fit and predict 57–58% against 55–64% observed. Stored v2.1 results are historical; the premium counterfactual now compares falling and baseline paths in the same year (2035), and the paired effect must be rerun.",
+      "note": "24,000 draws per country \u00d7 structure. With a hard liquidity threshold no draw fits the wealth profile and the relational floor fails; with a graded threshold all three structures fit and predict 57\u201358% against 55\u201364% observed. Stored v2.1 results are historical; the premium counterfactual now compares falling and baseline paths in the same year (2035), and the paired effect must be rerun.",
       "route": "credentials",
       "research": "https://github.com/TreyModels/atlas-of-education/blob/main/research/credential-floor/README.md"
     },
     "massification-parents": {
       "id": "massification-parents",
-      "title": "Massification · Parents & peers",
+      "title": "Massification \u00b7 Parents & peers",
       "purpose": "mechanism",
       "state": "checked",
       "note": "Stored experiment, 8 seeds per setting. Parent peer pressure is inserted into the model, not estimated. The lab warns that some differences vary substantially by seed. A mechanism test, not a measurement of what happened in a country.",
@@ -566,15 +567,15 @@ export const educationJourney: Journey = {
     },
     "massification-actors": {
       "id": "massification-actors",
-      "title": "Massification · Three actors",
+      "title": "Massification \u00b7 Three actors",
       "purpose": "mechanism",
       "state": "checked",
-      "note": "Stored experiment, 8 seeds per setting. Households, employers and the state interact; removing an actor also changes other actors’ incentives, so an “actor removed” run is not a clean counterfactual for that actor alone.",
+      "note": "Stored experiment, 8 seeds per setting. Households, employers and the state interact; removing an actor also changes other actors\u2019 incentives, so an \u201cactor removed\u201d run is not a clean counterfactual for that actor alone.",
       "research": "research/massification/index.html"
     },
     "massification-access": {
       "id": "massification-access",
-      "title": "Massification · Unequal access",
+      "title": "Massification \u00b7 Unequal access",
       "purpose": "mechanism",
       "state": "checked",
       "note": "Stored experiment, 8 seeds per setting. Exclusion is an imposed intervention, not an estimated parameter. It asks who gets into credential-screened jobs when access is restricted, not who gets in in any named country.",
@@ -582,12 +583,20 @@ export const educationJourney: Journey = {
     },
     "massification-persistence": {
       "id": "massification-persistence",
-      "title": "Massification · Persistence",
+      "title": "Massification \u00b7 Persistence",
       "purpose": "mechanism",
       "state": "checked",
       "note": "Stored experiment, 8 seeds per setting. Organisational inertia is an imposed intervention. It asks whether credential screening can persist after referral networks return; it does not estimate how long that took anywhere.",
       "research": "research/massification/index.html"
+    },
+    "credential-dhs": {
+      "id": "credential-dhs",
+      "title": "Credential floor and the DHS wealth profile",
+      "purpose": "mechanism",
+      "state": "evaluated",
+      "note": "Compared with UIS completion rates by wealth quintile (Cambodia DHS 2021\u201322). Once the liquidity threshold is graded, all three structures predict the same share, so the data do not discriminate them; child weights per quintile are assumed.",
+      "engine": "research/shadow/credential_floor_dhs.zip"
     }
   },
-  "bottomLine": "The education models agree on a shape: credentials are positional as well as productive, so more investment can lengthen the queue rather than raise the payoff. But the evidence separates the explanations poorly. China’s fitted model loses to a naive benchmark out of sample, Cambodia’s policy effects are calibrated to illustrative costs, the credential floor’s verdict depends on whether the liquidity constraint is hard or graded, and the massification experiments are stored mechanism tests with 8 seeds per setting. The most useful result is a sharper list of tests the current data cannot provide."
+  "bottomLine": "The education models agree on a shape: credentials are positional as well as productive, so more investment can lengthen the queue rather than raise the payoff. But the evidence separates the explanations poorly. China\u2019s fitted model loses to a naive benchmark out of sample, Cambodia\u2019s policy effects are calibrated to illustrative costs, the credential floor\u2019s verdict depends on whether the liquidity constraint is hard or graded, and the massification experiments are stored mechanism tests with 8 seeds per setting. The most useful result is a sharper list of tests the current data cannot provide."
 };

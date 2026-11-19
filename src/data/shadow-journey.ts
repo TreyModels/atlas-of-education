@@ -1,8 +1,8 @@
 import type { Journey } from './angkor-journey';
 export const shadowJourney: Journey = {
-  "kicker": "Shadow education · Cambodia",
+  "kicker": "Shadow education \u00b7 Cambodia",
   "title": "Why do pupils pay their own teachers?",
-  "lede": "In six Siem Reap schools, about four in five secondary pupils bought private lessons, and more than half of those lessons came from the teacher who already taught them (Bray and colleagues, 2016 and 2018). This page follows one question through the Atlas models: can those published patterns tell three rival explanations apart — a timetable too short, content held back and sold, or goodwill bought from your own teacher? The short answer is no. The way the models fail is more useful than a tidy verdict would have been.",
+  "lede": "In six Siem Reap schools, about four in five secondary pupils bought private lessons, and more than half of those lessons came from the teacher who already taught them (Bray and colleagues, 2016 and 2018). This page follows one question through the Atlas models: can those published patterns tell three rival explanations apart \u2014 a timetable too short, content held back and sold, or goodwill bought from your own teacher? The short answer is no. The way the models fail is more useful than a tidy verdict would have been.",
   "repo": "https://github.com/TreyModels/atlas-of-education",
   "family": "shadow",
   "why": [
@@ -15,19 +15,19 @@ export const shadowJourney: Journey = {
     },
     {
       "claim": "method",
-      "text": "We follow a descriptive approach (Edmonds and Moss, “From KISS to KIDS”): add detail where the evidence supports it, and label every paragraph as published, observed, simulated or still unsettled. Where a result has been superseded by a correction, we say so rather than quietly replacing it."
+      "text": "We follow a descriptive approach (Edmonds and Moss, \u201cFrom KISS to KIDS\u201d): add detail where the evidence supports it, and label every paragraph as published, observed, simulated or still unsettled. Where a result has been superseded by a correction, we say so rather than quietly replacing it."
     }
   ],
   "chapters": [
     {
       "id": "puzzle",
-      "kicker": "Chapter 1 · The published pattern",
+      "kicker": "Chapter 1 \u00b7 The published pattern",
       "title": "Pupils pay the teacher in front of them",
       "question": "Why do pupils buy extra lessons, and what do the surveys actually report?",
       "evidence": [
         {
           "claim": "published",
-          "text": "Bray, Kobakhidze, Liu and Zhang (2016) and Bray, Kobakhidze, Zhang and Liu (2018) report the pattern that starts this page: in six Siem Reap schools, tutoring participation is 81.9% overall, 74.7% in Grade 9 and 89.8% in Grade 12. Of the lessons bought, 57.7% come from the pupil’s own teacher and 40.9% from a parallel-class teacher. About half of teachers tutor (13 of 24), commercial providers hold a small share, and the urban–rural gap is only 2.6 percentage points."
+          "text": "Bray, Kobakhidze, Liu and Zhang (2016) and Bray, Kobakhidze, Zhang and Liu (2018) report the pattern that starts this page: in six Siem Reap schools, tutoring participation is 81.9% overall, 74.7% in Grade 9 and 89.8% in Grade 12. Of the lessons bought, 57.7% come from the pupil\u2019s own teacher and 40.9% from a parallel-class teacher. About half of teachers tutor (13 of 24), commercial providers hold a small share, and the urban\u2013rural gap is only 2.6 percentage points."
         },
         {
           "claim": "published",
@@ -41,17 +41,17 @@ export const shadowJourney: Journey = {
       "rule": [
         {
           "claim": "method",
-          "text": "The model holds 72 teachers and 1,260 pupils in six Siem Reap–style schools, Grades 9 and 12, four subjects. Each teacher decides whether to tutor. Each pupil chooses, subject by subject, between their own teacher, the parallel-class teacher, a commercial provider, or nobody."
+          "text": "The model holds 72 teachers and 1,260 pupils in six Siem Reap\u2013style schools, Grades 9 and 12, four subjects. Each teacher decides whether to tutor. Each pupil chooses, subject by subject, between their own teacher, the parallel-class teacher, a commercial provider, or nobody."
         },
         {
           "claim": "method",
-          "text": "The seven published patterns — overall, Grade 9 and Grade 12 participation, the urban–rural gap, the own-teacher and other-teacher shares, and the share of teachers who tutor — plus a small commercial share, are the targets the model is fitted to."
+          "text": "The seven published patterns \u2014 overall, Grade 9 and Grade 12 participation, the urban\u2013rural gap, the own-teacher and other-teacher shares, and the share of teachers who tutor \u2014 plus a small commercial share, are the targets the model is fitted to."
         }
       ],
       "result": [
         {
           "claim": "data",
-          "text": "So the question is narrow on purpose. It is not “why does Cambodia tutor?” but “why, in these six schools, do so many pupils buy from the teacher in front of them?” A model that answers the second question says nothing directly about the first."
+          "text": "So the question is narrow on purpose. It is not \u201cwhy does Cambodia tutor?\u201d but \u201cwhy, in these six schools, do so many pupils buy from the teacher in front of them?\u201d A model that answers the second question says nothing directly about the first."
         }
       ],
       "limitation": [
@@ -76,7 +76,7 @@ export const shadowJourney: Journey = {
     },
     {
       "id": "rivals",
-      "kicker": "Chapter 2 · Three rival explanations",
+      "kicker": "Chapter 2 \u00b7 Three rival explanations",
       "title": "Thin hours, held-back content, or goodwill",
       "question": "What could make a pupil pay the teacher who already teaches them?",
       "evidence": [
@@ -90,7 +90,7 @@ export const shadowJourney: Journey = {
         },
         {
           "claim": "published",
-          "text": "Favour. Paying your own teacher brings a benefit of its own — better treatment, marks or goodwill — whatever is covered in class."
+          "text": "Favour. Paying your own teacher brings a benefit of its own \u2014 better treatment, marks or goodwill \u2014 whatever is covered in class."
         }
       ],
       "rule": [
@@ -110,7 +110,7 @@ export const shadowJourney: Journey = {
       "result": [
         {
           "claim": "method",
-          "text": "Each explanation is a different lever on the same logit choice model, not a different world. That is convenient for side-by-side comparison, and — as Chapter 4 shows — risky for it."
+          "text": "Each explanation is a different lever on the same logit choice model, not a different world. That is convenient for side-by-side comparison, and \u2014 as Chapter 4 shows \u2014 risky for it."
         }
       ],
       "limitation": [
@@ -135,7 +135,7 @@ export const shadowJourney: Journey = {
     },
     {
       "id": "calibration",
-      "kicker": "Chapter 3 · The archived calibration",
+      "kicker": "Chapter 3 \u00b7 The archived calibration",
       "title": "Fitting each explanation to the seven patterns",
       "question": "How well does each explanation reproduce what the survey reported?",
       "evidence": [
@@ -151,13 +151,13 @@ export const shadowJourney: Journey = {
       "rule": [
         {
           "claim": "method",
-          "text": "The acceptance rule is a tolerance on those per-world scores; a fresh-world check then reruns each accepted setting in new random school systems. The archived run stopped at a tolerance of 1.0–1.07, reached after the resampling fix that raised the favour variant’s final importance ESS from 71 of 400 to 121 of 200."
+          "text": "The acceptance rule is a tolerance on those per-world scores; a fresh-world check then reruns each accepted setting in new random school systems. The archived run stopped at a tolerance of 1.0\u20131.07, reached after the resampling fix that raised the favour variant\u2019s final importance ESS from 71 of 400 to 121 of 200."
         }
       ],
       "result": [
         {
           "claim": "sim",
-          "text": "On 20 fresh worlds per setting, the pair fit rate is 37–44%; the older single-world run gave 17–19%. Only 1–7% of settings fit at least 70% of fresh worlds (older: 0–1%). At a tolerance of 1, only 0–4% of proposals fit, and the evidence ratios are tiny: thin 2.5e-7, favour 2.1e-8, full 7.9e-9, diversion 0."
+          "text": "On 20 fresh worlds per setting, the pair fit rate is 37\u201344%; the older single-world run gave 17\u201319%. Only 1\u20137% of settings fit at least 70% of fresh worlds (older: 0\u20131%). At a tolerance of 1, only 0\u20134% of proposals fit, and the evidence ratios are tiny: thin 2.5e-7, favour 2.1e-8, full 7.9e-9, diversion 0."
         },
         {
           "claim": "sim",
@@ -188,21 +188,21 @@ export const shadowJourney: Journey = {
     },
     {
       "id": "equivalence",
-      "kicker": "Chapter 4 · Two labels, one model",
+      "kicker": "Chapter 4 \u00b7 Two labels, one model",
       "title": "Favour is thin relabelled",
       "question": "Can the three explanations be told apart, even in principle?",
       "evidence": [
         {
           "claim": "method",
-          "text": "With diversion off, a pupil compares three options: their own teacher, worth b + f; another teacher, worth b − c_o; a commercial provider, worth b − c_c. Buying nothing is worth 0. Raising f by some amount is the same as raising b and both costs by that amount. The utilities are unchanged, so the choice probabilities are unchanged."
+          "text": "With diversion off, a pupil compares three options: their own teacher, worth b + f; another teacher, worth b \u2212 c_o; a commercial provider, worth b \u2212 c_c. Buying nothing is worth 0. Raising f by some amount is the same as raising b and both costs by that amount. The utilities are unchanged, so the choice probabilities are unchanged."
         },
         {
           "claim": "sim",
-          "text": "The code check: each of the 116 distinct fitted favour settings was rewritten as a thin setting and compared with its favour original in three school systems — no policy, then each of the four policy levers. The largest difference in any output is 6.7e-16, which is rounding error."
+          "text": "The code check: each of the 116 distinct fitted favour settings was rewritten as a thin setting and compared with its favour original in three school systems \u2014 no policy, then each of the four policy levers. The largest difference in any output is 6.7e-16, which is rounding error."
         },
         {
           "claim": "sim",
-          "text": "The recovery test: 24,000 pretend datasets, 30 fresh school systems for each of 200 fitted settings per variant. Naming one of three explanations scores 45% (41–49) against 33% chance, and 41% (36–46) on the datasets that fit all seven patterns. Thin against diversion scores 52% (46–57). With every model output added at once, three-way accuracy is 49% (45–54)."
+          "text": "The recovery test: 24,000 pretend datasets, 30 fresh school systems for each of 200 fitted settings per variant. Naming one of three explanations scores 45% (41\u201349) against 33% chance, and 41% (36\u201346) on the datasets that fit all seven patterns. Thin against diversion scores 52% (46\u201357). With every model output added at once, three-way accuracy is 49% (45\u201354)."
         },
         {
           "claim": "sim",
@@ -212,17 +212,17 @@ export const shadowJourney: Journey = {
       "rule": [
         {
           "claim": "method",
-          "text": "Why the explanations agree about policy: they share one model.py. Only 6 of about 215 lines and 2 of 15 priors differ. Removing the thin-market channel or the alternative providers moves every variant’s policy effects together — the ban effect on participation goes from −0.35 to −0.51 — and the fit collapses. Changing the diversion-specific withholding cost or convexity changes nothing."
+          "text": "Why the explanations agree about policy: they share one model.py. Only 6 of about 215 lines and 2 of 15 priors differ. Removing the thin-market channel or the alternative providers moves every variant\u2019s policy effects together \u2014 the ban effect on participation goes from \u22120.35 to \u22120.51 \u2014 and the fit collapses. Changing the diversion-specific withholding cost or convexity changes nothing."
         },
         {
           "claim": "sim",
-          "text": "So the policy picture is one picture. A ban on teachers tutoring their own pupils cuts participation by about 35–40 points and coverage by 5–6 points, and sends pupils to parallel-class and commercial providers. Paying teachers not to tutor their own pupils cuts participation by 16–19 points. Ten more points of class time is the only lever that raises coverage, by about 8 points, and it barely touches participation."
+          "text": "So the policy picture is one picture. A ban on teachers tutoring their own pupils cuts participation by about 35\u201340 points and coverage by 5\u20136 points, and sends pupils to parallel-class and commercial providers. Paying teachers not to tutor their own pupils cuts participation by 16\u201319 points. Ten more points of class time is the only lever that raises coverage, by about 8 points, and it barely touches participation."
         }
       ],
       "result": [
         {
           "claim": "open",
-          "text": "In the wording the review recommends: “The current aggregate targets poorly distinguish the variants; favour and thin are equivalent under the stated transformation where the commercial-cost floor does not bind.”"
+          "text": "In the wording the review recommends: \u201cThe current aggregate targets poorly distinguish the variants; favour and thin are equivalent under the stated transformation where the commercial-cost floor does not bind.\u201d"
         },
         {
           "claim": "sim",
@@ -232,7 +232,7 @@ export const shadowJourney: Journey = {
       "limitation": [
         {
           "claim": "open",
-          "text": "The transformation is only exact where the commercial-cost floor does not bind: the implementation clamps commercial cost at zero after the commercial-entry policy, and 32 of the 116 rewritten favour settings fell outside the thin variant’s allowed prior ranges. Those ranges, not different behaviour, explain the different fit rates in the archived calibration."
+          "text": "The transformation is only exact where the commercial-cost floor does not bind: the implementation clamps commercial cost at zero after the commercial-entry policy, and 32 of the 116 rewritten favour settings fell outside the thin variant\u2019s allowed prior ranges. Those ranges, not different behaviour, explain the different fit rates in the archived calibration."
         },
         {
           "claim": "open",
@@ -240,12 +240,12 @@ export const shadowJourney: Journey = {
         },
         {
           "claim": "open",
-          "text": "And a classifier struggling in one finite experiment does not show that no data could separate the explanations. It shows that these seven aggregate patterns, read through this model, do not — and the pretend datasets come from settings fitted to those same patterns, so the test describes the region that fits Siem Reap, not every possible school system."
+          "text": "And a classifier struggling in one finite experiment does not show that no data could separate the explanations. It shows that these seven aggregate patterns, read through this model, do not \u2014 and the pretend datasets come from settings fitted to those same patterns, so the test describes the region that fits Siem Reap, not every possible school system."
         }
       ],
       "maths": {
-        "plain": "A pupil weighs three paid options against buying nothing. Each option has a value: your own teacher gives the base lesson plus any favour; another teacher or a commercial provider gives the base lesson minus what it costs to go outside. The logit rule turns those values into probabilities. If you add the same amount to the base value and to both costs, every option keeps its value and nothing about the pupil’s choice changes.",
-        "formula": "U_own = b + f,   U_other = b − c_o,   U_commercial = b − c_c,   U_none = 0;   P(j) = e^(U_j) / (1 + Σ_k e^(U_k))",
+        "plain": "A pupil weighs three paid options against buying nothing. Each option has a value: your own teacher gives the base lesson plus any favour; another teacher or a commercial provider gives the base lesson minus what it costs to go outside. The logit rule turns those values into probabilities. If you add the same amount to the base value and to both costs, every option keeps its value and nothing about the pupil\u2019s choice changes.",
+        "formula": "U_own = b + f,   U_other = b \u2212 c_o,   U_commercial = b \u2212 c_c,   U_none = 0;   P(j) = e^(U_j) / (1 + \u03a3_k e^(U_k))",
         "symbols": [
           [
             "b",
@@ -272,7 +272,7 @@ export const shadowJourney: Journey = {
             "the logit probability that the pupil picks option j"
           ]
         ],
-        "example": "Take b = 1, f = 0.5, c_o = 0.3, c_c = 0.8. With favour: own = 1.5, other = 0.7, commercial = 0.2. Now set f = 0 and raise b, c_o and c_c by 0.5, so b′ = 1.5, c_o′ = 0.8, c_c′ = 1.3: own = 1.5, other = 1.5 − 0.8 = 0.7, commercial = 1.5 − 1.3 = 0.2. Same three utilities, so the same three probabilities. These numbers are illustrative and are not estimates."
+        "example": "Take b = 1, f = 0.5, c_o = 0.3, c_c = 0.8. With favour: own = 1.5, other = 0.7, commercial = 0.2. Now set f = 0 and raise b, c_o and c_c by 0.5, so b\u2032 = 1.5, c_o\u2032 = 0.8, c_c\u2032 = 1.3: own = 1.5, other = 1.5 \u2212 0.8 = 0.7, commercial = 1.5 \u2212 1.3 = 0.2. Same three utilities, so the same three probabilities. These numbers are illustrative and are not estimates."
       },
       "sources": [
         {
@@ -288,7 +288,7 @@ export const shadowJourney: Journey = {
     },
     {
       "id": "signatures",
-      "kicker": "Chapter 5 · What would separate them",
+      "kicker": "Chapter 5 \u00b7 What would separate them",
       "title": "Three signatures nobody has measured yet",
       "question": "What would each explanation predict that the others do not?",
       "evidence": [
@@ -298,7 +298,7 @@ export const shadowJourney: Journey = {
         },
         {
           "claim": "open",
-          "text": "Diversion: content covered in regular lessons is lower in a tutoring teacher’s classes than in the same teacher’s classes in a subject or year where tutoring is not sold. That needs a within-teacher comparison, not a comparison between teachers."
+          "text": "Diversion: content covered in regular lessons is lower in a tutoring teacher\u2019s classes than in the same teacher\u2019s classes in a subject or year where tutoring is not sold. That needs a within-teacher comparison, not a comparison between teachers."
         },
         {
           "claim": "open",
@@ -308,7 +308,7 @@ export const shadowJourney: Journey = {
       "rule": [
         {
           "claim": "method",
-          "text": "Each signature asks for something the model does not carry: school marks kept apart from exam scores; a teacher’s own coverage recorded where tutoring cannot be sold; hours and curriculum load entered by subject and grade."
+          "text": "Each signature asks for something the model does not carry: school marks kept apart from exam scores; a teacher\u2019s own coverage recorded where tutoring cannot be sold; hours and curriculum load entered by subject and grade."
         },
         {
           "claim": "method",
@@ -329,7 +329,7 @@ export const shadowJourney: Journey = {
       ],
       "sources": [
         {
-          "label": "“To make the explanations rivals”: the candidate signatures",
+          "label": "\u201cTo make the explanations rivals\u201d: the candidate signatures",
           "href": "https://github.com/TreyModels/atlas-of-education/tree/main/research/shadow-education"
         }
       ],
@@ -339,17 +339,17 @@ export const shadowJourney: Journey = {
     },
     {
       "id": "credential",
-      "kicker": "Chapter 6 · A second test, same outcome",
+      "kicker": "Chapter 6 \u00b7 A second test, same outcome",
       "title": "Who leaves school? The credential floor",
       "question": "Does a wealth profile tell the credential stories apart?",
       "evidence": [
         {
           "claim": "data",
-          "text": "UIS completion rates by wealth quintile, from the Cambodia DHS 2021–22, put the share of lower-secondary non-completers who come from the poorest 40% of households at 55–64%."
+          "text": "UIS completion rates by wealth quintile, from the Cambodia DHS 2021\u201322, put the share of lower-secondary non-completers who come from the poorest 40% of households at 55\u201364%."
         },
         {
           "claim": "sim",
-          "text": "A separate Atlas model reads that share from three structures. Human capital: 71% (54–89) under a hard liquidity threshold, 57% (53–60) under a graded one. Positional: 78% (59–92) hard, 58% (54–61) graded. Relational floor: 85% (69–97) hard, 58% (54–61) graded."
+          "text": "A separate Atlas model reads that share from three structures. Human capital: 71% (54\u201389) under a hard liquidity threshold, 57% (53\u201360) under a graded one. Positional: 78% (59\u201392) hard, 58% (54\u201361) graded. Relational floor: 85% (69\u201397) hard, 58% (54\u201361) graded."
         }
       ],
       "rule": [
@@ -367,22 +367,20 @@ export const shadowJourney: Journey = {
       "limitation": [
         {
           "claim": "open",
-          "text": "Child weights per quintile are assumed; the DHS microdata would remove that assumption. The earlier rejection of the relational floor came from the hard threshold rather than from the data, and the v1 bundle also compared a 2035 value with 2021 data — a known error now recorded in the review notes."
+          "text": "Child weights per quintile are assumed; the DHS microdata would remove that assumption. The earlier rejection of the relational floor came from the hard threshold rather than from the data, and the v1 bundle also compared a 2035 value with 2021 data \u2014 a known error now recorded in the review notes."
         }
       ],
       "sources": [
         {
-          "label": "Cambodia DHS 2021–22 (FR377)",
+          "label": "Cambodia DHS 2021\u201322 (FR377)",
           "href": "https://www.dhsprogram.com/pubs/pdf/FR377/FR377.pdf"
         },
         {
-          "label": "DHS credential-floor test: code and results · ZIP",
+          "label": "DHS credential-floor test: code and results \u00b7 ZIP",
           "href": "research/shadow/credential_floor_dhs.zip"
         }
       ],
-      "models": [
-        "credential-dhs"
-      ]
+      "models": []
     }
   ],
   "deeper": [],
@@ -402,14 +400,6 @@ export const shadowJourney: Journey = {
       "state": "historical",
       "note": "Six schools, 72 teachers, 1,260 pupils. The shipped calibration bundle predates the corrections, so its posterior tables and evidence ratios need rerunning; the ODD protocol has not been externally reviewed.",
       "engine": "research/shadow/tutoring_abm.zip"
-    },
-    "credential-dhs": {
-      "id": "credential-dhs",
-      "title": "Credential floor and the DHS wealth profile",
-      "purpose": "mechanism",
-      "state": "evaluated",
-      "note": "Compared with UIS completion rates by wealth quintile (Cambodia DHS 2021–22). Once the liquidity threshold is graded, all three structures predict the same share, so the data do not discriminate them; child weights per quintile are assumed.",
-      "engine": "research/shadow/credential_floor_dhs.zip"
     },
     "research-folder": {
       "id": "research-folder",
