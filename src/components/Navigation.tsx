@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
-import { ArrowRight, ArrowUpRight, Baby, BookOpen, Footprints, ChevronDown, FlaskConical, Globe2, GraduationCap, Home, Landmark, Menu, Network, School, Search, X } from 'lucide-react'
+import { ArrowRight, ArrowUpRight, Baby, BookOpen, Building2, Footprints, ChevronDown, FlaskConical, Globe2, GraduationCap, Home, Landmark, Menu, Network, School, Search, X } from 'lucide-react'
 import { worlds } from '../models'
 import type { Language, Translate } from '../types'
 import { catalogue, familyInfo } from '../data/model-catalogue'
@@ -86,6 +86,7 @@ export function Navigation({ route, navigate, t, language, setLanguage }: Naviga
     { id: 'story-fertility', label: familyInfo.fertility.short, icon: Baby, family: 'fertility' },
     { id: 'story-shadow', label: familyInfo.shadow.short, icon: School, family: 'shadow' },
     { id: 'story-deephistory', label: familyInfo.deephistory.short, icon: Footprints, family: 'deephistory' },
+    { id: 'story-politics', label: familyInfo.politics.short, icon: Building2, family: 'politics' },
   ]
 
   const navContent = <>

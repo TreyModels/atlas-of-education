@@ -1,7 +1,7 @@
 import { worlds } from '../models'
 import { schoolFutures } from '../components/SchoolFutures'
 
-export type ModelFamily = 'education' | 'systems' | 'planning' | 'angkor' | 'fertility' | 'shadow' | 'deephistory'
+export type ModelFamily = 'education' | 'systems' | 'planning' | 'angkor' | 'fertility' | 'shadow' | 'deephistory' | 'politics'
 export type CatalogueItem = {
   id: string
   family: ModelFamily
@@ -85,8 +85,15 @@ const deephistory: CatalogueItem[] = [
   { id: 'out-of-africa-bundle', family: 'deephistory', title: 'Out of Africa model bundle', question: 'The Python model, the 800-run Monte Carlo results, the landscape grid and the static maps.', method: 'Code & data · download', format: 'Classic workbench', href: 'research/out-of-africa/coast-or-herds-model.zip', keywords: 'out of Africa code data download python' },
 ]
 
-export const catalogue: CatalogueItem[] = [...education, ...systems, ...planning, ...angkor, ...fertility, ...shadow, ...deephistory]
-export const modelFamilies: ModelFamily[] = ['education', 'systems', 'planning', 'angkor', 'fertility', 'shadow', 'deephistory']
+const politics: CatalogueItem[] = [
+  { id: 'ccp-v1', family: 'politics', title: 'CCP bus · Rival mechanisms', question: 'Which rival mechanism — enforcement, social trap or bus — best reproduces the observed pattern of disciplinary filings?', method: 'Stored experiment · Mechanism comparison', format: 'Classic workbench', href: 'research/ccp-bus/ccp-bus-v1.zip', keywords: 'CCP corruption enforcement social trap bus mechanism comparison' },
+  { id: 'ccp-v3', family: 'politics', title: 'CCP bus · Economy and factions', question: 'How do economic conditions and factional competition interact to shape enforcement outcomes in the stored exploratory fit?', method: 'Stored experiment · Exploratory fit', format: 'Classic workbench', href: 'research/ccp-bus/ccp-bus-v3.zip', keywords: 'CCP economy factions exploratory fit enforcement' },
+  { id: 'ccp-v6', family: 'politics', title: 'CCP bus · Tilly mechanisms', question: 'Can Tilly-style state-making mechanisms — extraction, coercion and capital — illustrate how enforcement obligations outlast a campaign?', method: 'Stored experiment · Illustrative kernel', format: 'Classic workbench', href: 'research/ccp-bus/ccp-bus-v6.zip', keywords: 'CCP Tilly state making extraction coercion capital illustrative kernel' },
+  { id: 'ccp-v7', family: 'politics', title: 'CCP bus · Identification comparison', question: 'How do three mechanism families compare on identification in a common kernel — what each can and cannot distinguish given the observed disciplinary filings?', method: 'Stored experiment · Retrospective evaluation', format: 'Classic workbench', href: 'research/ccp-bus/ccp-bus-v7.zip', keywords: 'CCP identification comparison retrospective evaluation disciplinary filings mechanism families common kernel' },
+]
+
+export const catalogue: CatalogueItem[] = [...education, ...systems, ...planning, ...angkor, ...fertility, ...shadow, ...deephistory, ...politics]
+export const modelFamilies: ModelFamily[] = ['education', 'systems', 'planning', 'angkor', 'fertility', 'shadow', 'deephistory', 'politics']
 export const familyItems = (family: ModelFamily) => catalogue.filter(item => item.family === family)
 export const familyCounts = Object.fromEntries(modelFamilies.map(id => [id, familyItems(id).length])) as Record<ModelFamily, number>
 export const totalModels = catalogue.length
@@ -127,6 +134,11 @@ export const familyInfo: Record<ModelFamily, { title: string; short: string; que
     question: 'How did people get from Africa to Australia?',
     description: 'A paleo-landscape model of the exit from Africa 85,000–65,000 years ago: coast-huggers, big-game hunters and mixed foragers raced across shifting sea levels and Green Arabia.',
   },
+  politics: {
+    title: 'Political economy', short: 'Political economy',
+    question: 'Can enforcement change corruption when obligations outlast a campaign?',
+    description: 'Four stored model versions compare competing synthetic mechanisms against observed disciplinary filings. The models describe mechanisms, not the prevalence of corruption.',
+  },
 }
 
 export const familyResearch: Record<ModelFamily, { label: string; href: string }[]> = {
@@ -158,6 +170,13 @@ export const familyResearch: Record<ModelFamily, { label: string; href: string }
   deephistory: [
     { label: 'Coast or herds? Full write-up', href: 'research/out-of-africa.html' },
     { label: 'Model bundle · code, data & maps', href: 'research/out-of-africa/coast-or-herds-model.zip' },
+  ],
+  politics: [
+    { label: 'CCP bus · Rival mechanisms (v1)', href: 'research/ccp-bus/ccp-bus-v1.zip' },
+    { label: 'CCP bus · Economy and factions (v3)', href: 'research/ccp-bus/ccp-bus-v3.zip' },
+    { label: 'CCP bus · Tilly mechanisms (v6)', href: 'research/ccp-bus/ccp-bus-v6.zip' },
+    { label: 'CCP bus · Identification comparison (v7)', href: 'research/ccp-bus/ccp-bus-v7.zip' },
+    { label: 'Source · experiments/ccp-bus/models/', href: 'https://github.com/TreyModels/atlas-of-education/tree/2e19f07/experiments/ccp-bus/models/' },
   ],
 }
 
