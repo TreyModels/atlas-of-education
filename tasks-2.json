@@ -1,0 +1,35 @@
+[
+ {
+  "id": "D1-component",
+  "repo": "fleet.nosync/atlas",
+  "maxTokens": 32000,
+  "context": [
+   "src/data/angkor-journey.ts",
+   "src/components/BetaExplorer.tsx",
+   "src/components/StoryPage.tsx",
+   "src/types.ts"
+  ],
+  "allow": [
+   "src/components/AngkorJourney.tsx"
+  ],
+  "checks": [
+   "npx tsc --noEmit -p tsconfig.app.json 2>&1 | grep -i angkorjourney | head -20; echo tsc-done"
+  ],
+  "prompt": "Build part of the Angkor journey page for this React 19 + TypeScript + Vite app. Content, types and labels already exist in src/data/angkor-journey.ts; BetaExplorer exists. Do not change them. Think briefly; output the file.\n\n1. Create src/components/AngkorJourney.tsx exporting `AngkorJourney({ t, navigate }: { t: Translate; navigate: (id: string) => void })`. Import { journey, purposeLabel, stateLabel, claimLabel } and type ModelCard/Para. Every visible string passes through t(). Render:\n - <main id=\"main-content\" className=\"journey-page\"> with a hero: kicker (p.eyebrow), h1 title, p.journey-lede lede, then the `why` paragraphs.\n - A sticky chapter nav <nav className=\"journey-nav\" aria-label={t('Chapters')}> listing anchor links href=\"#ch-<id>\" to each chapter (show kicker + title); set aria-current=\"true\" on the link of the chapter currently in view using one IntersectionObserver in a useEffect (clean up on unmount). Clicking a link must not change the app route: call event.preventDefault() and element.scrollIntoView().\n - Each chapter: <section id={`ch-${c.id}`} className=\"journey-chapter\"> with kicker, h2 title, p.journey-question, then four blocks in order, each a <div className=\"journey-block\"> with an h3: 'What the evidence says' (evidence), 'The rule we wrote' (rule), 'What the experiment shows' (result), 'Limits' (limitation). A Para renders <p className={`journey-para claim-${p.claim ?? 'none'}`}>; if p.claim, prefix <span className=\"journey-claim\">{t(claimLabel[p.claim])}</span>. If c.interactive === 'beta' render <BetaExplorer t={t} /> right after the result block. If c.maths: <details className=\"journey-maths\"><summary>{t('How the maths works')}</summary> plain paragraph, formula in <pre><code>, symbols as <dl> (dt symbol, dd meaning), example paragraph. Then sources as <ul className=\"journey-sources\"> of links (external links target=\"_blank\" rel=\"noopener\"). Then a .journey-cards grid of ModelCard for c.models.\n - ModelCardView: <article className=\"journey-card\"> h4 title; badges <span className={`badge purpose-${m.purpose}`} title={t(purposeLabel[m.purpose].help)}>{t(purposeLabel[m.purpose].label)}</span> and the same with state-${m.state}/stateLabel; p note; actions: if m.route a <button className=\"button\" onClick={() => navigate(m.route!)}>{t('Open workbench')}</button>; if m.engine <a href={m.engine}>{t('Code')}</a>; if m.research <a href={m.research}>{t('Notes')}</a>; always <a target=\"_blank\" rel=\"noopener\" href={`${journey.repo}/issues/new?template=propose-a-version.yml&title=${encodeURIComponent('Version: angkor/' + m.id)}`}>{t('Propose a version')}</a>.\n - After the chapters: <section className=\"journey-deeper\"> h2 'Deeper experiments' + cards for journey.deeper; <aside className=\"journey-bottomline\"> with bottomLine; <section className=\"journey-download\"> h2 'Download and adapt' with a sentence and links to journey.repo and `${journey.repo}/archive/refs/heads/main.zip`.\n - Import './../journey.css'.\n\nReturn only src/components/AngkorJourney.tsx."
+ },
+ {
+  "id": "D2-css-app",
+  "repo": "fleet.nosync/atlas",
+  "maxTokens": 16000,
+  "context": [
+   "src/App.tsx",
+   "src/components/BetaExplorer.tsx"
+  ],
+  "allow": [
+   "src/journey.css",
+   "src/App.tsx"
+  ],
+  "checks": [],
+  "prompt": "Build part of the Angkor journey page for this React 19 + TypeScript + Vite app. Content, types and labels already exist in src/data/angkor-journey.ts; BetaExplorer exists. Do not change them. Think briefly; output the file.\n\nA component src/components/AngkorJourney.tsx (being written separately) exports AngkorJourney({t, navigate}) and imports '../journey.css'. It uses these class names: journey-page, journey-nav (links with aria-current), journey-lede, journey-chapter, journey-question, journey-block, journey-para, claim-published, claim-sim, claim-open, claim-method, claim-none, journey-claim, journey-maths, journey-sources, journey-cards, journey-card, badge, purpose-*, state-*, journey-deeper, journey-bottomline, journey-download, plus BetaExplorer's classes.\n\n2. Create src/journey.css: PLAIN and minimal (a designer restyles later). Use existing CSS variables --ink --paper --line --muted --green --ochre --surface --serif --sans. Layout: .journey-page max-width 1200px centred, padding 24px. At min-width 1000px a CSS grid: nav column 220px sticky (top 80px, align-self start), content column max 760px. Below 1000px one column, nav becomes a horizontal scrolling strip. Claim types: left border 3px, padding-left 12px: claim-published var(--green), claim-sim var(--ochre), claim-open dashed var(--muted), claim-method var(--ink). .journey-claim small caps label. Cards grid auto-fill minmax(240px,1fr), border 1px var(--line), padding 16px. Badges small pill borders. nav a[aria-current=true] bold with left border var(--green). BetaExplorer classes: .beta-chart width 100% height auto; .beta-line fill none; .beta-klassen stroke var(--green) 3px; .beta-theory stroke var(--ochre) 2px dasharray 6 4; .beta-flat stroke var(--muted) 2px; .beta-band fill var(--green) opacity .15; .beta-marker stroke var(--ink) dasharray 2 3; .beta-axis font-size 11px fill var(--muted); input[type=range] width 100%. Add @media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth } }. No animations.\n3. In src/App.tsx: import AngkorJourney and render <AngkorJourney t={t} navigate={navigate} /> when storyFamily === 'angkor', otherwise the existing <StoryPage .../>. Change nothing else in App.tsx; return the entire file."
+ }
+]
