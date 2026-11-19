@@ -2609,11 +2609,6 @@
   "vi": "Khoa học xã hội bạn có thể tự chạy.",
   "fr": "Des sciences sociales que vous pouvez exécuter."
  },
- "These are simulations of how societies work: why families pay for tutoring, why fertility collapsed across East Asia, why Angkor declined, how people walked out of Africa. Each one turns an argument into rules a computer can play out, thousands of times. Change the assumptions, run it, and see whether the story still holds.": {
-  "zh-Hans": "这里是关于社会如何运作的模拟：家庭为何花钱请家教，东亚生育率为何骤降，吴哥为何衰落，人类如何走出非洲。每个模型都把一个论点变成计算机可以反复推演成千上万次的规则。改变假设，运行模型，看看这个故事是否依然成立。",
-  "vi": "Đây là những mô phỏng về cách xã hội vận hành: vì sao các gia đình trả tiền học thêm, vì sao mức sinh ở Đông Á sụt giảm, vì sao Angkor suy tàn, con người đã rời châu Phi như thế nào. Mỗi mô hình biến một lập luận thành các quy tắc mà máy tính có thể chạy hàng nghìn lần. Hãy thay đổi giả định, chạy mô hình và xem câu chuyện còn đứng vững không.",
-  "fr": "Ce sont des simulations du fonctionnement des sociétés : pourquoi les familles paient pour des cours particuliers, pourquoi la fécondité s'est effondrée dans toute l'Asie de l'Est, pourquoi Angkor a décliné, comment les populations sont sorties d'Afrique. Chacune transforme un argument en règles qu'un ordinateur peut dérouler, des milliers de fois. Modifiez les hypothèses, lancez la simulation et voyez si le récit tient toujours."
- },
  "Start with a question": {
   "zh-Hans": "从一个问题开始",
   "vi": "Bắt đầu từ một câu hỏi",
@@ -3433,5 +3428,10 @@
   "zh-Hans": "验证说明",
   "fr": "Notes de validation",
   "vi": "Ghi chú kiểm chứng"
+ },
+ "These are simulations of how societies work: why families pay for tutoring, why fertility collapsed across East Asia, how Angkor fed itself, how people walked out of Africa. Each one turns an argument into rules a computer can play out, thousands of times. Change the assumptions, run it, and see whether the story still holds.": {
+  "zh-Hans": "这里是关于社会如何运作的模拟：家庭为何花钱请家教，东亚生育率为何骤降，吴哥如何养活自己，人类如何走出非洲。每个模型都把一个论点变成计算机可以反复推演成千上万次的规则。改变假设，运行模型，看看这个故事是否依然成立。",
+  "vi": "Đây là những mô phỏng về cách xã hội vận hành: vì sao các gia đình trả tiền học thêm, vì sao mức sinh ở Đông Á sụt giảm, Angkor đã nuôi sống chính mình như thế nào, con người đã rời châu Phi như thế nào. Mỗi mô hình biến một lập luận thành các quy tắc mà máy tính có thể chạy hàng nghìn lần. Hãy thay đổi giả định, chạy mô hình và xem câu chuyện còn đứng vững không.",
+  "fr": "Ce sont des simulations du fonctionnement des sociétés : pourquoi les familles paient pour des cours particuliers, pourquoi la fécondité s'est effondrée dans toute l'Asie de l'Est, comment Angkor se nourrissait, comment les populations sont sorties d'Afrique. Chacune transforme un argument en règles qu'un ordinateur peut dérouler, des milliers de fois. Modifiez les hypothèses, lancez la simulation et voyez si le récit tient toujours."
  }
 }

@@ -67,7 +67,7 @@ export function Library({ t, navigate }: { t: Translate; navigate: (id: string) 
     <section className="landing-hero shell">
       <p className="eyebrow">{t('COMPUTATIONAL SOCIAL SCIENCE · BY TREY MENEFEE')}</p>
       <h1>{t('Social science you can run.')}</h1>
-      <p className="landing-lede">{t('These are simulations of how societies work: why families pay for tutoring, why fertility collapsed across East Asia, why Angkor declined, how people walked out of Africa. Each one turns an argument into rules a computer can play out, thousands of times. Change the assumptions, run it, and see whether the story still holds.')}</p>
+      <p className="landing-lede">{t('These are simulations of how societies work: why families pay for tutoring, why fertility collapsed across East Asia, how Angkor fed itself, how people walked out of Africa. Each one turns an argument into rules a computer can play out, thousands of times. Change the assumptions, run it, and see whether the story still holds.')}</p>
       <div className="hero-actions">
         <button className="button button-primary" onClick={() => document.getElementById('questions')?.scrollIntoView({ block: 'start' })}>{t('Start with a question')}<ArrowRight size={18} /></button>
         <a className="text-link" href="https://comparativist.substack.com" target="_blank" rel="noreferrer">{t('Read the essays on The Comparativist')}<ArrowUpRight size={16} /></a>
