@@ -27,7 +27,8 @@
 ## Hashtag search and tag index
 - Every catalogue entry now carries curated hashtags (Latin in every language) alongside automatic family and kind tags (PR #23).
 - Find-a-model and the Library search accept `#tag` queries: exact, prefix or substring match, several tags ANDed, mixed freely with plain words; ordinary keyword search still works.
-- A browseable tag cloud with counts on the Library, suggested tags in the search modal, chips on catalogue cards and in the workbench header open a pre-filled search.
+- The tag-index update (PR #26) adds a plain-language broad layer: 16 discipline tags and 25 everyday topics (41 broad tags), plus 45 specific and 10 type/status tags. All 65 models are re-tagged with 6–9 tags (average 7.74), every model carries a discipline tag, and no entry is findable only through jargon.
+- A grouped tag browser shows Broad topics first with counts, then specific and type/status tags; suggested tags appear in the search modal, and chips on catalogue cards and in the workbench header open a pre-filled search.
 - Tags are filters over the existing 65 entries, not new models; totals are unchanged.
 
 ## Validation

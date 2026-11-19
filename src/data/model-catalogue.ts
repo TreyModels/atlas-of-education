@@ -1,6 +1,6 @@
 import { worlds } from '../models'
 import { schoolFutures } from '../components/SchoolFutures'
-import { tagsFor } from './model-tags'
+import { tagGroup, tagsFor } from './model-tags'
 
 export type ModelFamily = 'education' | 'systems' | 'planning' | 'angkor' | 'fertility' | 'shadow' | 'deephistory' | 'politics' | 'extension'
 export type CatalogueItem = {
@@ -122,8 +122,15 @@ export const tagIndex: Record<string, CatalogueItem[]> = {}
 for (const item of catalogue) for (const tag of item.tags) (tagIndex[tag] ??= []).push(item)
 export const tagCounts: Record<string, number> = Object.fromEntries(Object.entries(tagIndex).map(([tag, items]) => [tag, items.length]))
 /** Every tag, most used first, then alphabetical. */
-export const allTags: string[] = Object.keys(tagIndex).sort((a, b) => tagCounts[b] - tagCounts[a] || a.localeCompare(b))
-export { tagsFor }
+const byUsage = (a: string, b: string) => tagCounts[b] - tagCounts[a] || a.localeCompare(b)
+export const allTags: string[] = Object.keys(tagIndex).sort(byUsage)
+/** Grouped layers for the browse cloud: plain language first, then specifics, type and status. */
+export const broadTags: string[] = allTags.filter(tag => tagGroup(tag) === 'broad').sort(byUsage)
+export const specificTags: string[] = allTags.filter(tag => tagGroup(tag) === 'specific').sort(byUsage)
+export const typeTags: string[] = allTags.filter(tag => tagGroup(tag) === 'type').sort(byUsage)
+export const statusTags: string[] = allTags.filter(tag => tagGroup(tag) === 'status').sort(byUsage)
+export const tagStats = { total: allTags.length, broad: broadTags.length, specific: specificTags.length, type: typeTags.length, status: statusTags.length }
+export { tagGroup, tagsFor }
 export const modelFamilies: ModelFamily[] = ['education', 'systems', 'planning', 'angkor', 'fertility', 'shadow', 'deephistory', 'politics', 'extension']
 
 /** Menu and homepage grouping (Trey, 19 Nov 2026). Families are research areas; the toolkit is methods, not models. */

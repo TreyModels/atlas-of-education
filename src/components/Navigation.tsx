@@ -2,7 +2,8 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import { ArrowRight, ArrowUpRight, Baby, BookOpen, Building2, Columns2, Footprints, ChevronDown, FlaskConical, Globe2, GraduationCap, Home, Landmark, Menu, Network, School, Search, X } from 'lucide-react'
 import { worlds } from '../models'
 import type { Language, Translate } from '../types'
-import { allTags, catalogue, familyGroups, familyInfo, tagCounts } from '../data/model-catalogue'
+import { allTags, broadTags, catalogue, familyGroups, familyInfo, specificTags, statusTags, tagCounts, typeTags } from '../data/model-catalogue'
+import { tagGroup } from '../data/model-tags'
 import { addTag, hasQuery, matchesQuery, parseTags, removeTag } from '../lib/search'
 import '../hashtags.css'
 
@@ -48,18 +49,23 @@ export function Navigation({ route, navigate, t, language, setLanguage }: Naviga
   const [query, setQuery] = useState('')
   const [allTagsOpen, setAllTagsOpen] = useState(false)
   const searchInput = useRef<HTMLInputElement>(null)
+  const tagsPanel = useRef<HTMLDivElement>(null)
   const family = familyFor(route)
   const activeWorld = worlds.find(world => world.id === route)
 
   const results = useMemo(() => catalogue.filter(model => matchesQuery(model, query, t)), [query, t])
   const activeTags = parseTags(query)
-  const previewTags = allTagsOpen ? allTags : allTags.slice(0, 24)
-  // Suggested tags are drawn from what is on screen, so they can only widen or narrow real results.
+  const previewBroad = allTagsOpen ? broadTags : broadTags.slice(0, 18)
+  // Suggested tags are drawn from what is on screen, plain-language tags first.
   const suggestedTags = useMemo(() => {
     if (!hasQuery(query)) return []
     const counts = new Map<string, number>()
     for (const model of results) for (const tag of model.tags) if (!activeTags.includes(tag)) counts.set(tag, (counts.get(tag) ?? 0) + 1)
-    return [...counts.entries()].filter(([, count]) => count >= 2).sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0])).slice(0, 10).map(([tag]) => tag)
+    return [...counts.entries()]
+      .filter(([, count]) => count >= 2)
+      .sort((a, b) => (tagGroup(a[0]) === 'broad' ? 0 : 1) - (tagGroup(b[0]) === 'broad' ? 0 : 1) || b[1] - a[1] || a[0].localeCompare(b[0]))
+      .slice(0, 10)
+      .map(([tag]) => tag)
   }, [results, query])
 
   useEffect(() => {
@@ -180,13 +186,27 @@ export function Navigation({ route, navigate, t, language, setLanguage }: Naviga
     {searchOpen && <div className="search-layer" role="presentation" onMouseDown={event => { if (event.target === event.currentTarget) setSearchOpen(false) }}>
       <section className="model-search" role="dialog" aria-modal="true" aria-label={t('Find a model')}>
         <div className="model-search-input"><Search size={21} /><input ref={searchInput} type="search" value={query} onChange={event => setQuery(event.target.value)} placeholder={t('Search models, questions, or #tags')} aria-label={t('Search models')} /><button className="icon-button" onClick={() => setSearchOpen(false)} aria-label={t('Close search')}><X size={20} /></button></div>
-        <div className="search-tags">
+        <div className="search-tags" ref={tagsPanel}>
           {activeTags.length > 0 && <div className="search-tag-row" aria-label={t('Active tags')}>{activeTags.map(tag => <button key={tag} className="tag-chip tag-chip-active" aria-pressed="true" onClick={() => setQuery(removeTag(query, tag))}>#{tag}<span aria-hidden="true"> ×</span></button>)}</div>}
           {!hasQuery(query)
             ? <div className="tag-browser">
                 <p className="tag-browser-label">{t('Browse tags')}</p>
-                <div className="tag-cloud">{previewTags.map(tag => <button key={tag} className="tag-chip" onClick={() => setQuery(addTag(query, tag))}>#{tag}<span className="tag-count">{tagCounts[tag]}</span></button>)}</div>
-                <button className="tag-cloud-more" aria-expanded={allTagsOpen} onClick={() => setAllTagsOpen(open => !open)}>{allTagsOpen ? t('Fewer tags') : t('All {n} tags').replace('{n}', String(allTags.length))}</button>
+                <p className="tag-hint">{t('Try #economics, #education, #history, #jobs')}</p>
+                <div className="tag-group">
+                  <span className="tag-group-label">{t('Broad topics')}</span>
+                  <div className="tag-cloud">{previewBroad.map(tag => <button key={tag} className="tag-chip tag-chip-broad" onClick={() => setQuery(addTag(query, tag))}>#{tag}<span className="tag-count">{tagCounts[tag]}</span></button>)}</div>
+                </div>
+                {allTagsOpen && <>
+                  <div className="tag-group">
+                    <span className="tag-group-label">{t('Specific topics')}</span>
+                    <div className="tag-cloud">{specificTags.map(tag => <button key={tag} className="tag-chip" onClick={() => setQuery(addTag(query, tag))}>#{tag}<span className="tag-count">{tagCounts[tag]}</span></button>)}</div>
+                  </div>
+                  <div className="tag-group tag-group-compact">
+                    <span className="tag-group-label">{t('Model type & status')}</span>
+                    <div className="tag-cloud">{typeTags.map(tag => <button key={tag} className="tag-chip tag-chip-quiet" onClick={() => setQuery(addTag(query, tag))}>#{tag}<span className="tag-count">{tagCounts[tag]}</span></button>)}{statusTags.map(tag => <button key={tag} className="tag-chip tag-chip-quiet" onClick={() => setQuery(addTag(query, tag))}>#{tag}<span className="tag-count">{tagCounts[tag]}</span></button>)}</div>
+                  </div>
+                </>}
+                <button className="tag-cloud-more" aria-expanded={allTagsOpen} onClick={() => { setAllTagsOpen(open => !open); requestAnimationFrame(() => { if (tagsPanel.current) tagsPanel.current.scrollTop = 0 }) }}>{allTagsOpen ? t('Fewer tags') : t('All {n} tags').replace('{n}', String(allTags.length))}</button>
               </div>
             : suggestedTags.length > 0 && <div className="search-tag-row" aria-label={t('Suggested tags')}><span className="tag-row-label">{t('Suggested tags')}</span>{suggestedTags.map(tag => <button key={tag} className="tag-chip" onClick={() => setQuery(addTag(query, tag))}>#{tag}</button>)}</div>}
         </div>

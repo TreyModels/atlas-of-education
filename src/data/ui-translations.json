@@ -4083,5 +4083,17 @@
  },
  "Search a country, question, or #tag": {
   "zh-Hans": "搜索国家、问题或 #标签"
+ },
+ "Try #economics, #education, #history, #jobs": {
+  "zh-Hans": "试试 #economics、#education、#history、#jobs"
+ },
+ "Broad topics": {
+  "zh-Hans": "宽泛主题"
+ },
+ "Specific topics": {
+  "zh-Hans": "具体主题"
+ },
+ "Model type & status": {
+  "zh-Hans": "模型类型与状态"
  }
 }
