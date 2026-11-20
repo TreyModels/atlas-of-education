@@ -1,0 +1,127 @@
+{
+  "closing_cells": 40,
+  "date": "2026-11-21",
+  "determinism": {
+    "all_byte_identical": true,
+    "method": "two full executions, byte comparison of all five outputs",
+    "pairs": {
+      "FLOOR_CLOSE_DETAIL.csv": true,
+      "FLOOR_CLOSE_PANEL.json": true,
+      "FLOOR_CLOSE_RESULTS.csv": true,
+      "FLOOR_CLOSE_SENSITIVITY.csv": true,
+      "FLOOR_CLOSE_SHAPLEY.csv": true
+    }
+  },
+  "experiment": "EXP-12 FLOOR-CLOSE",
+  "falsifier_min_cells": 30,
+  "files": {
+    "FINDINGS.md": {
+      "bytes": 16836,
+      "sha256": "13d44076ec7b3e6e2713a4a54570c63f3d43e7d81a88357a1da4ae3296c76046"
+    },
+    "PRE_DECLARATIONS.md": {
+      "bytes": 18939,
+      "sha256": "1db266e2739d09cf54d8ec5dc4f72f2b8e73d6471b4bc7a1ff99de0924e06e44"
+    },
+    "PRE_DECLARATIONS.sha256": {
+      "bytes": 86,
+      "sha256": "712d2b5a2ce05e0bc469d3f1e8ee4724bc4d2a4293dfda3e86cb2214c3b4ffbf"
+    },
+    "code/build_predeclarations.py": {
+      "bytes": 3174,
+      "sha256": "104f43bbfb2ec13db866dbaa5fe76439280acf3b4b9d86995d09e0ebdb87119c"
+    },
+    "code/make_manifest.py": {
+      "bytes": 4680,
+      "sha256": "4d412ac610d4d7385d2dc405234c033a33d22b475c53d3418a7942ea73ccfb5a"
+    },
+    "code/predecl_template.md": {
+      "bytes": 14746,
+      "sha256": "c317227b86bb9eb47b59a4c50de5c728f30c64c1f133b2952fa9fa83762f50b1"
+    },
+    "code/run_floor_close.py": {
+      "bytes": 20847,
+      "sha256": "3bfaea42e96408f938a4e82b4fb12d227e074b13312b6d3b2e2c94c8eee61f8a"
+    },
+    "results/FLOOR_CLOSE_DETAIL.csv": {
+      "bytes": 130901,
+      "sha256": "f546ff9fb8b34b1cfba4ce57eae4b62daa3751e4d2e234775ab939ac4c524bf5"
+    },
+    "results/FLOOR_CLOSE_PANEL.json": {
+      "bytes": 15720,
+      "sha256": "98b817f5853359ab10f533493b2bde3260f8a52d8ba4030301368d431e4bf6f1"
+    },
+    "results/FLOOR_CLOSE_RESULTS.csv": {
+      "bytes": 15275,
+      "sha256": "160ddd929b7e58e7dc64a7887219a79eb3ca2f1de38fdc59b403c8bb2fe1693e"
+    },
+    "results/FLOOR_CLOSE_SENSITIVITY.csv": {
+      "bytes": 6183,
+      "sha256": "ea7d08efb0fa42a9b5bc48bed90484717a01f747de833d732408989b52dc87ac"
+    },
+    "results/FLOOR_CLOSE_SHAPLEY.csv": {
+      "bytes": 9138,
+      "sha256": "6251170952920fcb4376ef81304d9aff360bdf8265736ab025709839d50be5d1"
+    },
+    "results/determinism_run2/FLOOR_CLOSE_DETAIL.csv": {
+      "bytes": 130901,
+      "sha256": "f546ff9fb8b34b1cfba4ce57eae4b62daa3751e4d2e234775ab939ac4c524bf5"
+    },
+    "results/determinism_run2/FLOOR_CLOSE_PANEL.json": {
+      "bytes": 15720,
+      "sha256": "98b817f5853359ab10f533493b2bde3260f8a52d8ba4030301368d431e4bf6f1"
+    },
+    "results/determinism_run2/FLOOR_CLOSE_RESULTS.csv": {
+      "bytes": 15275,
+      "sha256": "160ddd929b7e58e7dc64a7887219a79eb3ca2f1de38fdc59b403c8bb2fe1693e"
+    },
+    "results/determinism_run2/FLOOR_CLOSE_SENSITIVITY.csv": {
+      "bytes": 6183,
+      "sha256": "ea7d08efb0fa42a9b5bc48bed90484717a01f747de833d732408989b52dc87ac"
+    },
+    "results/determinism_run2/FLOOR_CLOSE_SHAPLEY.csv": {
+      "bytes": 9138,
+      "sha256": "6251170952920fcb4376ef81304d9aff360bdf8265736ab025709839d50be5d1"
+    }
+  },
+  "inputs": {
+    "council_brief": {
+      "path": "08_council/brief_023/SYNTHESIS_023.md",
+      "sha256": "39e666cffbe3950d43460ba177a36501d53fd0ec8083cd5c9abcbd1c7aeed44c"
+    },
+    "council_decisions": {
+      "path": "08_council/DECISIONS.md",
+      "sha256": "15c564cffb1d9994386873b7daf9793407745da5477d437ef3adcb9efba8771c"
+    },
+    "generator_code": {
+      "path": "10_massification/extensions/synthetic_2026-11-20/generator_v1_2/code/sim_v1_2.py",
+      "sha256": "61123aa9370a407487407bf3ff4b97287aea67cac5f90629e540a6e8cc855e7c"
+    },
+    "panel": {
+      "path": "10_massification/extensions/synthetic_2026-11-20/generator_v1_2/results/synthetic_panel_v1_2.csv",
+      "sha256": "14729c5141a71dd9aaf87a5ad2e973a84b5f04603577aae627f2833276fac5ac"
+    },
+    "params": {
+      "path": "10_massification/extensions/synthetic_2026-11-20/generator_v1_2/PARAMS.md",
+      "sha256": "0d619781c4e059f54cf771fb385475f5f939dceced5036e8a21b6e07a2b315e3"
+    }
+  },
+  "label": "SYNTHETIC",
+  "no_external_request": true,
+  "no_model_rerun": true,
+  "no_phys_cap_change": true,
+  "no_refit": true,
+  "no_web": true,
+  "predeclaration": {
+    "path": "PRE_DECLARATIONS.md",
+    "sha256": "1db266e2739d09cf54d8ec5dc4f72f2b8e73d6471b4bc7a1ff99de0924e06e44"
+  },
+  "read_only": true,
+  "run_commands": [
+    "python code/run_floor_close.py",
+    "python code/run_floor_close.py results/determinism_run2"
+  ],
+  "verdict": "ALLOWANCE-CARRIED",
+  "worker": "WORKER FC",
+  "write_scope": "10_massification/extensions/floor_close_2026-11-20/"
+}

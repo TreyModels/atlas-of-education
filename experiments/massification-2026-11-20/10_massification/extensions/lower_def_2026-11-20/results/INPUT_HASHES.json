@@ -1,0 +1,32 @@
+{
+  "DECISIONS.md": {
+    "bytes": 147215,
+    "path": "/Users/treymenefee/massification_live/experiments/massification-2026-11-20/08_council/DECISIONS.md",
+    "sha256": "ceb04ea646b7c5a4597cfd301f6a50cd1dc1533ca2fceef959d6406e5239da16"
+  },
+  "PARAMS.md": {
+    "bytes": 23735,
+    "path": "/Users/treymenefee/massification_live/experiments/massification-2026-11-20/10_massification/extensions/synthetic_2026-11-20/generator_v1_2/PARAMS.md",
+    "sha256": "0d619781c4e059f54cf771fb385475f5f939dceced5036e8a21b6e07a2b315e3"
+  },
+  "SYNTHESIS_023.md": {
+    "bytes": 63066,
+    "path": "/Users/treymenefee/massification_live/experiments/massification-2026-11-20/08_council/brief_023/SYNTHESIS_023.md",
+    "sha256": "39e666cffbe3950d43460ba177a36501d53fd0ec8083cd5c9abcbd1c7aeed44c"
+  },
+  "UNIVERSALIZATION_SERIES.csv": {
+    "bytes": 592750,
+    "path": "/Users/treymenefee/massification_live/experiments/massification-2026-11-20/10_massification/data/UNIVERSALIZATION_SERIES.csv",
+    "sha256": "85bc869396ebfcb39e3e1a21a31af219e75a07326c738a51d2bfdbe536737ddb"
+  },
+  "sim_v1_2.py": {
+    "bytes": 63078,
+    "path": "/Users/treymenefee/massification_live/experiments/massification-2026-11-20/10_massification/extensions/synthetic_2026-11-20/generator_v1_2/code/sim_v1_2.py",
+    "sha256": "61123aa9370a407487407bf3ff4b97287aea67cac5f90629e540a6e8cc855e7c"
+  },
+  "synthetic_panel_v1_2.csv": {
+    "bytes": 5086014,
+    "path": "/Users/treymenefee/massification_live/experiments/massification-2026-11-20/10_massification/extensions/synthetic_2026-11-20/generator_v1_2/results/synthetic_panel_v1_2.csv",
+    "sha256": "14729c5141a71dd9aaf87a5ad2e973a84b5f04603577aae627f2833276fac5ac"
+  }
+}

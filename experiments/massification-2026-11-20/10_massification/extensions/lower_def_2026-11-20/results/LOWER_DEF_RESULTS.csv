@@ -1,0 +1,58 @@
+record_type,factor,realised_value,required_value_d1,log_contribution,share_pct_d1,share_pct_d2,share_pct_alt_w25,share_pct_alt_w75,single_lever_required,single_lever_reachability,verdict_label,component_name,component_value,component_unit,label,note
+meta,experiment,,,,,,,,,,,experiment,EXP-13 LOWER-DEF,,DECLARED,brief 023 section 6.3; D136 #3 rank #3; predeclaration sha256 in RUN_MANIFEST.json
+meta,verdict_cell,,,,,,,,,,,verdict_cell,SYN00_PHL_LIKE|lower_secondary|2021,,SYNTHETIC,single scored cell; identity scope is the whole lower series 1973-2025
+factor,convention,1.1,1.1,0.0,0.000000,16.291307,0.000000,0.000000,1.31789857277,ARITH-ONLY_DECLARED-EXCLUDED,,,,,CONVENTION,"m = meas_completion_factor; declared constant, held at its value by D1"
+factor,rationing,0.783805472329,0.85684410378,0.0890951252749,49.297828,41.637433,92.041352,6.554304,0.939069193922,REACHABLE-BY-CAPACITY,,,,,SYNTHETIC,admitted_official/cohort at entry year t-3; the lower gate
+factor,survival,0.7818186593,0.85684410378,0.0916331726326,50.702172,42.071260,7.958648,93.445696,0.936688813872,UNREACHABLE-UNDER-DECLARED-LAW,,,,,SYNTHETIC,panel survival(t) = clip(surv_max*Q^theta); quality/congestion channel
+verdict,,,,,,,,,,,JOINT,verdict_label,JOINT,,VERDICT,frozen rule 6.2 (JOINT tested first); top=survival 50.702172% second=rationing 49.297828% delta=1.404344 pp; flag=none
+verdict,,,,,,,,,,,SURVIVAL-CARRIED,verdict_label_literal_order,SURVIVAL-CARRIED,,VERDICT-LITERAL-ORDER,block lists X-CARRIED first and states no precedence; reported for disclosure only (section 5.2 D4)
+component,,,,,,,,,,,,required_lower_2021,0.8076,ratio,DERIVED,"80.76 = 76.6391/0.949 = 80.7577; internal-consistency requirement, not a target or forecast"
+component,,,,,,,,,,,,realised_chain_2021,0.674073117881,ratio,SYNTHETIC,m * admission_rate(2018) * survival(2021)
+component,,,,,,,,,,,,gap_pp,13.352688,percentage points,DERIVED,100*(0.8076 - realised); the block's 13.35 pp
+component,,,,,,,,,,,,gap_log,0.180728297908,log points,DERIVED,ln(0.8076) - ln(realised)
+component,,,,,,,,,,,,identity_abs_error_2021,1.91465732158e-11,ratio,SYNTHETIC,|chain reconstruction - panel completion_uis| at the verdict cell; tolerance 1e-9
+component,,,,,,,,,,,,identity_max_abs_error_lower_series,2.05882477733e-10,ratio,SYNTHETIC,max over scored cells 1973-2025; tolerance 1e-9
+component,,,,,,,,,,,,identity_cells_scored,53,cells,SYNTHETIC,lower_secondary chain years 1973-2025
+component,,,,,,,,,,,,identity_cells_failed,0,cells,SYNTHETIC,0 -> chain identity holds; >0 would force UNDETERMINED
+component,,,,,,,,,,,,display_reproduction_6dp,0.674073005425,ratio,DECLARED-ROUNDED,1.10*0.783805*0.781819 as printed in the block
+component,,,,,,,,,,,,display_reproduction_abs_error,1.12475499914e-07,ratio,DERIVED,print rounding only; tolerance 5e-7; not an identity test
+component,,,,,,,,,,,,declared_chain_constants,1.10 * 0.783805 * 0.781819 = 0.674073,expression,DECLARED,"the block's own chain identity, reproduced verbatim"
+component,,,,,,,,,,,,m,1.1,ratio,CONVENTION,"meas_completion_factor, sim_v1_2.py:133"
+component,,,,,,,,,,,,admission_rate_entry_2018,0.783805472329,ratio,SYNTHETIC,admitted_official(2018)/cohort(2018); equals phys_cap*seat_coverage(2018) while the capacity term binds
+component,,,,,,,,,,,,survival_2021,0.7818186593,ratio,SYNTHETIC,panel survival(2021)
+component,,,,,,,,,,,,surv_max_lower,0.91,ratio,DECLARED,hard ceiling of the survival channel when Q<=1 (PARAMS.md 4.1)
+component,,,,,,,,,,,,surv_theta_lower,1.0,elasticity,DECLARED,PARAMS.md 4.1
+component,,,,,,,,,,,,gamma,0.55,coefficient,DECLARED,quality decay on congestion
+component,,,,,,,,,,,,phys_cap,1.15,pupils per place,DECLARED,PARAMS.md 4.1
+component,,,,,,,,,,,,quality_q_2021,0.8591413838,index,SYNTHETIC,"Q(2021) = exp(-gamma*max(0,q-1)); q = C/seats"
+component,,,,,,,,,,,,congestion_q_2021,1.276039599,ratio,SYNTHETIC,cohort/seats in 2021
+component,,,,,,,,,,,,seat_coverage_2021,0.7836747394,places per cohort,SYNTHETIC,seats(2021)/cohort(2021)
+component,,,,,,,,,,,,seat_coverage_entry_2018,0.681569976,places per cohort,SYNTHETIC,"seats(2018)/cohort(2018), the entry cohort of the 2021 completion"
+component,,,,,,,,,,,,gate_binding_term_entry,phys_cap*seats,term,SYNTHETIC,"which term of min(phys_cap*seats, overage_cap*cohort) set the entry gate"
+component,,,,,,,,,,,,gate_identity_abs_error,2.05285788368e-11,ratio,DERIVED,"|admission_rate - gate_capacity/cohort| at entry; ~0 means the gate, not demand, set admission"
+component,,,,,,,,,,,,required_m,1.31789857277,ratio,DERIVED,"m that alone closes the gap; DECLARED-EXCLUDED (FAIL-RE-FIT, D134)"
+component,,,,,,,,,,,,required_admission_rate,0.939069193922,ratio,DERIVED,admission rate that alone closes the gap
+component,,,,,,,,,,,,required_entry_coverage,0.816581907758,places per cohort,DERIVED,required_admission_rate/phys_cap
+component,,,,,,,,,,,,required_survival,0.936688813872,ratio,DERIVED,survival that alone closes the gap; compare surv_max_lower
+component,,,,,,,,,,,,max_completion_at_surv_max,0.784589277801,ratio,DERIVED,m*a*surv_max: the survival channel's ceiling for this cell
+component,,,,,,,,,,,,shortfall_at_surv_max_pp,2.301072,percentage points,DERIVED,how far the survival channel alone falls short of 80.76
+component,,,,,,,,,,,,observed_PHL_lower_2021,80.8960494995,percent,OBSERVED,"UNIVERSALIZATION_SERIES.csv completion_lower_secondary, status=observed; reference only"
+component,,,,,,,,,,,,observed_minus_required_pp,0.136049,percentage points,DERIVED,"observed 80.896 against the model-side requirement 80.76; +0.14 pp, reference only"
+component,,,,,,,,,,,,share_gap_top_minus_second_pp,1.404344,percentage points,DERIVED,survival vs rationing
+component,,,,,,,,,,,,channel_depth_survival_minus_rationing_pp,-0.198681,percentage points,DERIVED,the two state channels' depths differ by -0.1987 pp (0.781819 vs 0.783805); they are near-equal by construction of the declared rules
+component,,,,,,,,,,,,joint_split_weight_interval,"[0.466649, 0.525137]",weight on a*,DERIVED,declared weight w_a on rationing in a* for which D1 returns JOINT; outside it the same rule returns X-CARRIED. Edge cross-check: |share_a-share_s| = 10.000000 / 10.000000 pp against the 10 pp window
+component,,,,,,,,,,,,completion_if_m_removed,0.612793743528,ratio,DERIVED,arithmetic on the declared chain with m set to 1.0; NOT a model run and NOT a repair option
+component,,,,,,,,,,,,gap_if_m_removed_pp,19.480626,percentage points,DERIVED,"if the 1.10 convention were dropped, the gap would widen by 6.1279 pp: the convention is a net uplift, not the loss"
+component,,,,,,,,,,,,years_without_shortfall,"2024,2025",years,DERIVED,lower series chain years at or above the declared required value (no attribution reported for these)
+component,,,,,,,,,,,,flip_condition_abs_log_diff,0.00253804735776,log points,DERIVED,|ln surv - ln adm|; JOINT survives only while this is <= 0.10*G_log under D1
+component,,,,,,,,,,,,flip_condition_threshold,0.0180728297908,log points,DECLARED,"0.10*G_log, from the 10 pp JOINT window"
+component,,,,,,,,,,,,d1_share_sum_residual,5.68434188608e-14,percentage points,DERIVED,shares sum to 100 %% by construction
+component,,,,,,,,,,,,threshold_x_carried_pct,50.0,percent,DECLARED,block clause 5
+component,,,,,,,,,,,,threshold_joint_pp,10.0,percentage points,DECLARED,block clause 5
+component,,,,,,,,,,,,tolerance_identity,1e-09,ratio,DECLARED,block clause 5
+component,,,,,,,,,,,,gap_2017_pp,30.479462,percentage points,DERIVED,secondary: shortfall localisation
+component,,,,,,,,,,,,gap_2022_pp,7.839768,percentage points,DERIVED,secondary: shortfall localisation
+component,,,,,,,,,,,,gap_2024_pp,-5.114640,percentage points,DERIVED,secondary: shortfall localisation
+component,,,,,,,,,,,,types_with_shortfall_2021,27,of 30,SYNTHETIC,types whose 2021 lower chain value is below the common declared yardstick 0.8076
+component,,,,,,,,,,,,types_identity_failures_2021,0,of 30,SYNTHETIC,secondary; cannot affect the verdict (section 6.3)
+component,,,,,,,,,,,,clip_boundary,"completion_uis clipped to [0,1]",text,DECLARED,never binds in lower_secondary; binds in primary 2024-2025 (descriptive rows only)

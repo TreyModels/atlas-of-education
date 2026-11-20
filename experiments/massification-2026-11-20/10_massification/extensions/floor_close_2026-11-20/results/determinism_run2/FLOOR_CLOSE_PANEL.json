@@ -1,0 +1,618 @@
+{
+  "anchor": {
+    "binding_branch_close": "places",
+    "binding_years_before_close": 49,
+    "capacity_close_105_cohort": 2546950.4444999998,
+    "capacity_close_115": 2432921.2227999996,
+    "cell_label": "ALLOWANCE-CARRIED",
+    "cohort_close": 2425667.09,
+    "country": "SYN00_PHL_LIKE",
+    "delta_log": 0.15051699292645007,
+    "demand_close": 2415085.14,
+    "level": "primary",
+    "margin_bind": -0.003396907042804723,
+    "margin_close": 0.007358143508486815,
+    "seat_coverage_close": 0.8721657150404757,
+    "seats_close": 2115583.672,
+    "share_allowance": 0.9285459379556771,
+    "share_demand": 0.027640512378687417,
+    "share_places": 0.0438135496656355,
+    "v10_check": "PASS",
+    "year_close": 2019,
+    "year_last_binding": 2018
+  },
+  "branch_switch_cells": [],
+  "cell_label_counts": {
+    "ALLOWANCE-CARRIED": 40,
+    "CAPACITY-CARRIED": 0,
+    "DEMAND-CARRIED": 0,
+    "MIXED": 0
+  },
+  "closing_cells": 40,
+  "cohort_branch_cells": [],
+  "efficiency_max_abs_residual": 2.7755575615628914e-17,
+  "exclusions": {
+    "cells": [
+      {
+        "binding_years": 56,
+        "country": "SYN01_TWIN_MFG",
+        "country_id": 1,
+        "level": "primary",
+        "reason": "RIGHT_CENSORED_STILL_BINDING"
+      },
+      {
+        "binding_years": 56,
+        "country": "SYN02_TWIN_OFFICE",
+        "country_id": 2,
+        "level": "primary",
+        "reason": "RIGHT_CENSORED_STILL_BINDING"
+      },
+      {
+        "binding_years": 56,
+        "country": "SYN03",
+        "country_id": 3,
+        "level": "primary",
+        "reason": "RIGHT_CENSORED_STILL_BINDING"
+      },
+      {
+        "binding_years": 56,
+        "country": "SYN04",
+        "country_id": 4,
+        "level": "primary",
+        "reason": "RIGHT_CENSORED_STILL_BINDING"
+      },
+      {
+        "binding_years": 56,
+        "country": "SYN05",
+        "country_id": 5,
+        "level": "primary",
+        "reason": "RIGHT_CENSORED_STILL_BINDING"
+      },
+      {
+        "binding_years": 56,
+        "country": "SYN06",
+        "country_id": 6,
+        "level": "primary",
+        "reason": "RIGHT_CENSORED_STILL_BINDING"
+      },
+      {
+        "binding_years": 56,
+        "country": "SYN09",
+        "country_id": 9,
+        "level": "primary",
+        "reason": "RIGHT_CENSORED_STILL_BINDING"
+      },
+      {
+        "binding_years": 56,
+        "country": "SYN13",
+        "country_id": 13,
+        "level": "primary",
+        "reason": "RIGHT_CENSORED_STILL_BINDING"
+      },
+      {
+        "binding_years": 56,
+        "country": "SYN14",
+        "country_id": 14,
+        "level": "primary",
+        "reason": "RIGHT_CENSORED_STILL_BINDING"
+      },
+      {
+        "binding_years": 56,
+        "country": "SYN15",
+        "country_id": 15,
+        "level": "primary",
+        "reason": "RIGHT_CENSORED_STILL_BINDING"
+      },
+      {
+        "binding_years": 55,
+        "country": "SYN20",
+        "country_id": 20,
+        "level": "primary",
+        "reason": "RIGHT_CENSORED_STILL_BINDING"
+      },
+      {
+        "binding_years": 56,
+        "country": "SYN21",
+        "country_id": 21,
+        "level": "primary",
+        "reason": "RIGHT_CENSORED_STILL_BINDING"
+      },
+      {
+        "binding_years": 56,
+        "country": "SYN22",
+        "country_id": 22,
+        "level": "primary",
+        "reason": "RIGHT_CENSORED_STILL_BINDING"
+      },
+      {
+        "binding_years": 56,
+        "country": "SYN24",
+        "country_id": 24,
+        "level": "primary",
+        "reason": "RIGHT_CENSORED_STILL_BINDING"
+      },
+      {
+        "binding_years": 56,
+        "country": "SYN25",
+        "country_id": 25,
+        "level": "primary",
+        "reason": "RIGHT_CENSORED_STILL_BINDING"
+      },
+      {
+        "binding_years": 56,
+        "country": "SYN28",
+        "country_id": 28,
+        "level": "primary",
+        "reason": "RIGHT_CENSORED_STILL_BINDING"
+      },
+      {
+        "binding_years": 56,
+        "country": "SYN03",
+        "country_id": 3,
+        "level": "lower_secondary",
+        "reason": "RIGHT_CENSORED_STILL_BINDING"
+      },
+      {
+        "binding_years": 56,
+        "country": "SYN06",
+        "country_id": 6,
+        "level": "lower_secondary",
+        "reason": "RIGHT_CENSORED_STILL_BINDING"
+      },
+      {
+        "binding_years": 56,
+        "country": "SYN09",
+        "country_id": 9,
+        "level": "lower_secondary",
+        "reason": "RIGHT_CENSORED_STILL_BINDING"
+      },
+      {
+        "binding_years": 56,
+        "country": "SYN14",
+        "country_id": 14,
+        "level": "lower_secondary",
+        "reason": "RIGHT_CENSORED_STILL_BINDING"
+      },
+      {
+        "binding_years": 56,
+        "country": "SYN15",
+        "country_id": 15,
+        "level": "lower_secondary",
+        "reason": "RIGHT_CENSORED_STILL_BINDING"
+      },
+      {
+        "binding_years": 56,
+        "country": "SYN17",
+        "country_id": 17,
+        "level": "lower_secondary",
+        "reason": "RIGHT_CENSORED_STILL_BINDING"
+      },
+      {
+        "binding_years": 56,
+        "country": "SYN22",
+        "country_id": 22,
+        "level": "lower_secondary",
+        "reason": "RIGHT_CENSORED_STILL_BINDING"
+      },
+      {
+        "binding_years": 56,
+        "country": "SYN24",
+        "country_id": 24,
+        "level": "lower_secondary",
+        "reason": "RIGHT_CENSORED_STILL_BINDING"
+      },
+      {
+        "binding_years": 56,
+        "country": "SYN25",
+        "country_id": 25,
+        "level": "lower_secondary",
+        "reason": "RIGHT_CENSORED_STILL_BINDING"
+      },
+      {
+        "binding_years": 55,
+        "country": "SYN26",
+        "country_id": 26,
+        "level": "lower_secondary",
+        "reason": "RIGHT_CENSORED_STILL_BINDING"
+      },
+      {
+        "binding_years": 56,
+        "country": "SYN28",
+        "country_id": 28,
+        "level": "lower_secondary",
+        "reason": "RIGHT_CENSORED_STILL_BINDING"
+      },
+      {
+        "binding_years": 0,
+        "country": "SYN00_PHL_LIKE",
+        "country_id": 0,
+        "level": "upper_secondary",
+        "reason": "NEVER_BOUND_3_YEARS"
+      },
+      {
+        "binding_years": 0,
+        "country": "SYN03",
+        "country_id": 3,
+        "level": "upper_secondary",
+        "reason": "NEVER_BOUND_3_YEARS"
+      },
+      {
+        "binding_years": 0,
+        "country": "SYN04",
+        "country_id": 4,
+        "level": "upper_secondary",
+        "reason": "NEVER_BOUND_3_YEARS"
+      },
+      {
+        "binding_years": 0,
+        "country": "SYN05",
+        "country_id": 5,
+        "level": "upper_secondary",
+        "reason": "NEVER_BOUND_3_YEARS"
+      },
+      {
+        "binding_years": 1,
+        "country": "SYN06",
+        "country_id": 6,
+        "level": "upper_secondary",
+        "reason": "NEVER_BOUND_3_YEARS"
+      },
+      {
+        "binding_years": 0,
+        "country": "SYN08",
+        "country_id": 8,
+        "level": "upper_secondary",
+        "reason": "NEVER_BOUND_3_YEARS"
+      },
+      {
+        "binding_years": 6,
+        "country": "SYN09",
+        "country_id": 9,
+        "level": "upper_secondary",
+        "reason": "RIGHT_CENSORED_STILL_BINDING"
+      },
+      {
+        "binding_years": 2,
+        "country": "SYN10_BOOM",
+        "country_id": 10,
+        "level": "upper_secondary",
+        "reason": "NEVER_BOUND_3_YEARS"
+      },
+      {
+        "binding_years": 0,
+        "country": "SYN13",
+        "country_id": 13,
+        "level": "upper_secondary",
+        "reason": "NEVER_BOUND_3_YEARS"
+      },
+      {
+        "binding_years": 1,
+        "country": "SYN15",
+        "country_id": 15,
+        "level": "upper_secondary",
+        "reason": "NEVER_BOUND_3_YEARS"
+      },
+      {
+        "binding_years": 0,
+        "country": "SYN16",
+        "country_id": 16,
+        "level": "upper_secondary",
+        "reason": "NEVER_BOUND_3_YEARS"
+      },
+      {
+        "binding_years": 0,
+        "country": "SYN17",
+        "country_id": 17,
+        "level": "upper_secondary",
+        "reason": "NEVER_BOUND_3_YEARS"
+      },
+      {
+        "binding_years": 0,
+        "country": "SYN18",
+        "country_id": 18,
+        "level": "upper_secondary",
+        "reason": "NEVER_BOUND_3_YEARS"
+      },
+      {
+        "binding_years": 0,
+        "country": "SYN20",
+        "country_id": 20,
+        "level": "upper_secondary",
+        "reason": "NEVER_BOUND_3_YEARS"
+      },
+      {
+        "binding_years": 0,
+        "country": "SYN21",
+        "country_id": 21,
+        "level": "upper_secondary",
+        "reason": "NEVER_BOUND_3_YEARS"
+      },
+      {
+        "binding_years": 0,
+        "country": "SYN22",
+        "country_id": 22,
+        "level": "upper_secondary",
+        "reason": "NEVER_BOUND_3_YEARS"
+      },
+      {
+        "binding_years": 0,
+        "country": "SYN23",
+        "country_id": 23,
+        "level": "upper_secondary",
+        "reason": "NEVER_BOUND_3_YEARS"
+      },
+      {
+        "binding_years": 0,
+        "country": "SYN24",
+        "country_id": 24,
+        "level": "upper_secondary",
+        "reason": "NEVER_BOUND_3_YEARS"
+      },
+      {
+        "binding_years": 0,
+        "country": "SYN25",
+        "country_id": 25,
+        "level": "upper_secondary",
+        "reason": "NEVER_BOUND_3_YEARS"
+      },
+      {
+        "binding_years": 0,
+        "country": "SYN26",
+        "country_id": 26,
+        "level": "upper_secondary",
+        "reason": "NEVER_BOUND_3_YEARS"
+      },
+      {
+        "binding_years": 0,
+        "country": "SYN27",
+        "country_id": 27,
+        "level": "upper_secondary",
+        "reason": "NEVER_BOUND_3_YEARS"
+      },
+      {
+        "binding_years": 0,
+        "country": "SYN28",
+        "country_id": 28,
+        "level": "upper_secondary",
+        "reason": "NEVER_BOUND_3_YEARS"
+      },
+      {
+        "binding_years": 0,
+        "country": "SYN29",
+        "country_id": 29,
+        "level": "upper_secondary",
+        "reason": "NEVER_BOUND_3_YEARS"
+      },
+      {
+        "binding_years": 0,
+        "country": "SYN00_PHL_LIKE",
+        "country_id": 0,
+        "level": "tertiary",
+        "reason": "NEVER_BOUND_3_YEARS"
+      },
+      {
+        "binding_years": 0,
+        "country": "SYN01_TWIN_MFG",
+        "country_id": 1,
+        "level": "tertiary",
+        "reason": "NEVER_BOUND_3_YEARS"
+      },
+      {
+        "binding_years": 0,
+        "country": "SYN02_TWIN_OFFICE",
+        "country_id": 2,
+        "level": "tertiary",
+        "reason": "NEVER_BOUND_3_YEARS"
+      },
+      {
+        "binding_years": 0,
+        "country": "SYN03",
+        "country_id": 3,
+        "level": "tertiary",
+        "reason": "NEVER_BOUND_3_YEARS"
+      },
+      {
+        "binding_years": 0,
+        "country": "SYN04",
+        "country_id": 4,
+        "level": "tertiary",
+        "reason": "NEVER_BOUND_3_YEARS"
+      },
+      {
+        "binding_years": 0,
+        "country": "SYN05",
+        "country_id": 5,
+        "level": "tertiary",
+        "reason": "NEVER_BOUND_3_YEARS"
+      },
+      {
+        "binding_years": 0,
+        "country": "SYN06",
+        "country_id": 6,
+        "level": "tertiary",
+        "reason": "NEVER_BOUND_3_YEARS"
+      },
+      {
+        "binding_years": 0,
+        "country": "SYN07",
+        "country_id": 7,
+        "level": "tertiary",
+        "reason": "NEVER_BOUND_3_YEARS"
+      },
+      {
+        "binding_years": 0,
+        "country": "SYN08",
+        "country_id": 8,
+        "level": "tertiary",
+        "reason": "NEVER_BOUND_3_YEARS"
+      },
+      {
+        "binding_years": 0,
+        "country": "SYN09",
+        "country_id": 9,
+        "level": "tertiary",
+        "reason": "NEVER_BOUND_3_YEARS"
+      },
+      {
+        "binding_years": 0,
+        "country": "SYN10_BOOM",
+        "country_id": 10,
+        "level": "tertiary",
+        "reason": "NEVER_BOUND_3_YEARS"
+      },
+      {
+        "binding_years": 0,
+        "country": "SYN11_FLAT",
+        "country_id": 11,
+        "level": "tertiary",
+        "reason": "NEVER_BOUND_3_YEARS"
+      },
+      {
+        "binding_years": 0,
+        "country": "SYN12_DECLINE",
+        "country_id": 12,
+        "level": "tertiary",
+        "reason": "NEVER_BOUND_3_YEARS"
+      },
+      {
+        "binding_years": 0,
+        "country": "SYN13",
+        "country_id": 13,
+        "level": "tertiary",
+        "reason": "NEVER_BOUND_3_YEARS"
+      },
+      {
+        "binding_years": 0,
+        "country": "SYN14",
+        "country_id": 14,
+        "level": "tertiary",
+        "reason": "NEVER_BOUND_3_YEARS"
+      },
+      {
+        "binding_years": 0,
+        "country": "SYN15",
+        "country_id": 15,
+        "level": "tertiary",
+        "reason": "NEVER_BOUND_3_YEARS"
+      },
+      {
+        "binding_years": 0,
+        "country": "SYN16",
+        "country_id": 16,
+        "level": "tertiary",
+        "reason": "NEVER_BOUND_3_YEARS"
+      },
+      {
+        "binding_years": 0,
+        "country": "SYN17",
+        "country_id": 17,
+        "level": "tertiary",
+        "reason": "NEVER_BOUND_3_YEARS"
+      },
+      {
+        "binding_years": 0,
+        "country": "SYN18",
+        "country_id": 18,
+        "level": "tertiary",
+        "reason": "NEVER_BOUND_3_YEARS"
+      },
+      {
+        "binding_years": 0,
+        "country": "SYN19",
+        "country_id": 19,
+        "level": "tertiary",
+        "reason": "NEVER_BOUND_3_YEARS"
+      },
+      {
+        "binding_years": 0,
+        "country": "SYN20",
+        "country_id": 20,
+        "level": "tertiary",
+        "reason": "NEVER_BOUND_3_YEARS"
+      },
+      {
+        "binding_years": 0,
+        "country": "SYN21",
+        "country_id": 21,
+        "level": "tertiary",
+        "reason": "NEVER_BOUND_3_YEARS"
+      },
+      {
+        "binding_years": 0,
+        "country": "SYN22",
+        "country_id": 22,
+        "level": "tertiary",
+        "reason": "NEVER_BOUND_3_YEARS"
+      },
+      {
+        "binding_years": 0,
+        "country": "SYN23",
+        "country_id": 23,
+        "level": "tertiary",
+        "reason": "NEVER_BOUND_3_YEARS"
+      },
+      {
+        "binding_years": 0,
+        "country": "SYN24",
+        "country_id": 24,
+        "level": "tertiary",
+        "reason": "NEVER_BOUND_3_YEARS"
+      },
+      {
+        "binding_years": 0,
+        "country": "SYN25",
+        "country_id": 25,
+        "level": "tertiary",
+        "reason": "NEVER_BOUND_3_YEARS"
+      },
+      {
+        "binding_years": 0,
+        "country": "SYN26",
+        "country_id": 26,
+        "level": "tertiary",
+        "reason": "NEVER_BOUND_3_YEARS"
+      },
+      {
+        "binding_years": 0,
+        "country": "SYN27",
+        "country_id": 27,
+        "level": "tertiary",
+        "reason": "NEVER_BOUND_3_YEARS"
+      },
+      {
+        "binding_years": 0,
+        "country": "SYN28",
+        "country_id": 28,
+        "level": "tertiary",
+        "reason": "NEVER_BOUND_3_YEARS"
+      },
+      {
+        "binding_years": 0,
+        "country": "SYN29",
+        "country_id": 29,
+        "level": "tertiary",
+        "reason": "NEVER_BOUND_3_YEARS"
+      }
+    ],
+    "counts": {
+      "NEVER_BOUND_3_YEARS": 52,
+      "RIGHT_CENSORED_STILL_BINDING": 28
+    }
+  },
+  "experiment": "EXP-12 FLOOR-CLOSE",
+  "falsifier_min_cells": 30,
+  "inputs": {
+    "panel_sha256": "14729c5141a71dd9aaf87a5ad2e973a84b5f04603577aae627f2833276fac5ac",
+    "predecl_sha256": "1db266e2739d09cf54d8ec5dc4f72f2b8e73d6471b4bc7a1ff99de0924e06e44"
+  },
+  "label": "SYNTHETIC",
+  "plurality_label": "ALLOWANCE-CARRIED",
+  "s3_identity_cells": 40,
+  "s3_identity_max_abs_residual": 2.0816681711721685e-16,
+  "s4_closure_definition_counts": {
+    "consecutive_3": 40,
+    "open_bar_1e-9": 40,
+    "primary": 40
+  },
+  "verdict": "ALLOWANCE-CARRIED"
+}

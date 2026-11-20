@@ -1,0 +1,213 @@
+{
+  "experiment": "EXP-13 LOWER-DEF",
+  "worker": "LD",
+  "question": "Which of rationing / survival / convention loses the 13.35 pp in the lower-secondary series?",
+  "authority": {
+    "brief": "08_council/brief_023/SYNTHESIS_023.md section 6.3 (verbatim in PRE_DECLARATIONS.md section 1)",
+    "decision": "D136 #3 (rank #3); D133/D134 for the required value 76.6391/0.949 and the chain",
+    "rank": 3
+  },
+  "predeclaration": {
+    "path": "PRE_DECLARATIONS.md",
+    "sha256": "0ab3a90e3220ef967e64e45f453d2aa7646583146c892fd34165528408f561bd",
+    "bytes": 20297,
+    "note": "written and hashed BEFORE code/run_lower_def.py was executed; thresholds, labels and precedence frozen",
+    "frozen_sha256_file": "PRE_DECLARATIONS.sha256"
+  },
+  "code": {
+    "path": "code/run_lower_def.py",
+    "sha256": "0eab319eb23545962b6a7dfc9b7427c4e7a5fa00c5b8998c7325a4197e55aed6",
+    "bytes": 34670,
+    "entry_point": "code/run_lower_def.py --outdir results",
+    "deterministic": true,
+    "rng": "none",
+    "network": "none",
+    "clock_in_outputs": false,
+    "environment": {
+      "python": "3.11.17",
+      "implementation": "CPython"
+    }
+  },
+  "inputs": {
+    "DECISIONS.md": {
+      "path": "/Users/treymenefee/massification_live/experiments/massification-2026-11-20/08_council/DECISIONS.md",
+      "sha256": "ceb04ea646b7c5a4597cfd301f6a50cd1dc1533ca2fceef959d6406e5239da16",
+      "bytes": 147215,
+      "mode": "read-only"
+    },
+    "PARAMS.md": {
+      "path": "/Users/treymenefee/massification_live/experiments/massification-2026-11-20/10_massification/extensions/synthetic_2026-11-20/generator_v1_2/PARAMS.md",
+      "sha256": "0d619781c4e059f54cf771fb385475f5f939dceced5036e8a21b6e07a2b315e3",
+      "bytes": 23735,
+      "mode": "read-only"
+    },
+    "SYNTHESIS_023.md": {
+      "path": "/Users/treymenefee/massification_live/experiments/massification-2026-11-20/08_council/brief_023/SYNTHESIS_023.md",
+      "sha256": "39e666cffbe3950d43460ba177a36501d53fd0ec8083cd5c9abcbd1c7aeed44c",
+      "bytes": 63066,
+      "mode": "read-only"
+    },
+    "UNIVERSALIZATION_SERIES.csv": {
+      "path": "/Users/treymenefee/massification_live/experiments/massification-2026-11-20/10_massification/data/UNIVERSALIZATION_SERIES.csv",
+      "sha256": "85bc869396ebfcb39e3e1a21a31af219e75a07326c738a51d2bfdbe536737ddb",
+      "bytes": 592750,
+      "mode": "read-only"
+    },
+    "sim_v1_2.py": {
+      "path": "/Users/treymenefee/massification_live/experiments/massification-2026-11-20/10_massification/extensions/synthetic_2026-11-20/generator_v1_2/code/sim_v1_2.py",
+      "sha256": "61123aa9370a407487407bf3ff4b97287aea67cac5f90629e540a6e8cc855e7c",
+      "bytes": 63078,
+      "mode": "read-only"
+    },
+    "synthetic_panel_v1_2.csv": {
+      "path": "/Users/treymenefee/massification_live/experiments/massification-2026-11-20/10_massification/extensions/synthetic_2026-11-20/generator_v1_2/results/synthetic_panel_v1_2.csv",
+      "sha256": "14729c5141a71dd9aaf87a5ad2e973a84b5f04603577aae627f2833276fac5ac",
+      "bytes": 5086014,
+      "mode": "read-only"
+    }
+  },
+  "inputs_role": "read-only; no input file was modified; no generator was re-run",
+  "outputs": {
+    "LOWER_DEF_RESULTS.csv": {
+      "path": "results/LOWER_DEF_RESULTS.csv",
+      "sha256": "10d44743564d8023fb436916d320903aa279e7026549d7541ac302c315ef8743",
+      "bytes": 8132,
+      "contents": "factor rows (realised, D1 required, log contribution, D1/D2/alt-split shares, single-lever requirement and reachability), verdict rows (D1 and literal-order), component rows (all declared numbers, thresholds, secondary context)"
+    },
+    "LOWER_DEF_DETAIL.csv": {
+      "path": "results/LOWER_DEF_DETAIL.csv",
+      "sha256": "277c613c37c2cb87cd916aad1d4f200ab141a80a422788a724c3c6fcc4b9aa8b",
+      "bytes": 60356,
+      "contents": "year x level chain for SYN00_PHL_LIKE, 1970-2025 (224 rows): entry admission rate, survival, quality/congestion/coverage, chain reconstruction, identity error, gap, shares, labels"
+    },
+    "LOWER_DEF_TYPES.csv": {
+      "path": "results/LOWER_DEF_TYPES.csv",
+      "sha256": "dff97b9ffc45ad51958101b3e1c6d1e3d729857e2b9a24ee7ee39093f25b4314",
+      "bytes": 6765,
+      "contents": "all 30 country types, lower_secondary 2021: chain, identity, gap against the common declared yardstick, shares, labels (secondary, non-verdict-bearing)"
+    },
+    "INPUT_HASHES.json": {
+      "path": "results/INPUT_HASHES.json",
+      "sha256": "a8231e5282f80044c8428c683269bf4525ed09e6d0e4eebcb9c525a83f76b7d0",
+      "bytes": 1694,
+      "contents": "sha256 of every input read"
+    }
+  },
+  "determinism": {
+    "runs": 2,
+    "method": "sha256 per file plus diff -r between results/ and results/determinism_run2/",
+    "result": "byte-identical in all four files",
+    "files": {
+      "LOWER_DEF_RESULTS.csv": {
+        "run1_sha256": "10d44743564d8023fb436916d320903aa279e7026549d7541ac302c315ef8743",
+        "run2_sha256": "10d44743564d8023fb436916d320903aa279e7026549d7541ac302c315ef8743",
+        "byte_identical": true
+      },
+      "LOWER_DEF_DETAIL.csv": {
+        "run1_sha256": "277c613c37c2cb87cd916aad1d4f200ab141a80a422788a724c3c6fcc4b9aa8b",
+        "run2_sha256": "277c613c37c2cb87cd916aad1d4f200ab141a80a422788a724c3c6fcc4b9aa8b",
+        "byte_identical": true
+      },
+      "LOWER_DEF_TYPES.csv": {
+        "run1_sha256": "dff97b9ffc45ad51958101b3e1c6d1e3d729857e2b9a24ee7ee39093f25b4314",
+        "run2_sha256": "dff97b9ffc45ad51958101b3e1c6d1e3d729857e2b9a24ee7ee39093f25b4314",
+        "byte_identical": true
+      },
+      "INPUT_HASHES.json": {
+        "run1_sha256": "a8231e5282f80044c8428c683269bf4525ed09e6d0e4eebcb9c525a83f76b7d0",
+        "run2_sha256": "a8231e5282f80044c8428c683269bf4525ed09e6d0e4eebcb9c525a83f76b7d0",
+        "byte_identical": true
+      }
+    }
+  },
+  "verdict": {
+    "cell": "SYN00_PHL_LIKE | lower_secondary | 2021",
+    "chain_identity": {
+      "declared": "1.10 x 0.783805 x 0.781819 = 0.674073",
+      "reconstruction": 0.674073117881,
+      "panel": 0.6740731179,
+      "abs_error": 1.91465732158e-11,
+      "tolerance": 1e-09,
+      "scored_cells": 53,
+      "failed_cells": 0,
+      "max_abs_error_scored": 2.05882477733e-10,
+      "passes": true
+    },
+    "required": 0.8076,
+    "gap_pp": 13.352688211914653,
+    "gap_log": 0.1807282979075351,
+    "shares_d1_pct": {
+      "convention": 0.0,
+      "rationing": 49.297828,
+      "survival": 50.702172
+    },
+    "shares_d2_pct": {
+      "convention": 16.291307,
+      "rationing": 41.637433,
+      "survival": 42.07126
+    },
+    "label_d1_precedence": "JOINT",
+    "label_literal_order": "SURVIVAL-CARRIED",
+    "top_minus_second_pp": 1.404344,
+    "no_majority_flag": false,
+    "single_lever": {
+      "m_required": 1.31789857277,
+      "m_tag": "ARITH-ONLY_DECLARED-EXCLUDED",
+      "a_required": 0.939069193922,
+      "a_tag": "REACHABLE-BY-CAPACITY",
+      "a_required_entry_coverage": 0.816581907758,
+      "s_required": 0.936688813872,
+      "s_tag": "UNREACHABLE-UNDER-DECLARED-LAW",
+      "max_completion_at_surv_max": 0.784589277801,
+      "shortfall_at_surv_max_pp": 2.301072
+    },
+    "not_identified": "the split of the required product between rationing and survival; D1 fixes it at 1/2 : 1/2 by declaration; the label is JOINT for split weight in [0.466649, 0.525137]",
+    "observed_reference": {
+      "value_pct": 80.8960494995,
+      "label": "OBSERVED",
+      "source": "UNIVERSALIZATION_SERIES.csv completion_lower_secondary PHL 2021",
+      "note": "reference only; never used in a computation; 0.136 pp above the derived requirement"
+    }
+  },
+  "labels": {
+    "panel": "SYNTHETIC",
+    "required_value": "DERIVED (76.6391/0.949)",
+    "allocation_rules": "DECLARED",
+    "observed_reference": "OBSERVED"
+  },
+  "closed_claims": [
+    "no re-fit",
+    "no new parameter",
+    "no generator re-run",
+    "no re-scoring of EXP-7 or v1.5",
+    "no causal claim",
+    "no direction claim",
+    "D63 remains UNABLE as to cause",
+    "phase verdict and scaling FAIL untouched"
+  ],
+  "writes": {
+    "scope": "10_massification/extensions/lower_def_2026-11-20/ only",
+    "files": [
+      "PRE_DECLARATIONS.md",
+      "PRE_DECLARATIONS.sha256",
+      "code/run_lower_def.py",
+      "results/LOWER_DEF_RESULTS.csv",
+      "results/LOWER_DEF_DETAIL.csv",
+      "results/LOWER_DEF_TYPES.csv",
+      "results/INPUT_HASHES.json",
+      "results/determinism_run2/LOWER_DEF_RESULTS.csv",
+      "results/determinism_run2/LOWER_DEF_DETAIL.csv",
+      "results/determinism_run2/LOWER_DEF_TYPES.csv",
+      "results/determinism_run2/INPUT_HASHES.json",
+      "FINDINGS.md",
+      "RUN_MANIFEST.json",
+      "SHA256SUMS.txt"
+    ],
+    "outside_scope_writes": "none"
+  },
+  "notes": [
+    "08_council/DECISIONS.md was being edited by the Lead concurrently (145514 -> 147215 bytes) between an early determinism attempt and the final pair; it is read for provenance/citation only and is consumed by no arithmetic. The final back-to-back pair (run1, run2) records one hash for it and all four outputs are byte-identical.",
+    "Nothing in this experiment executed generator code; the panel, the simulation source and PARAMS.md were read only.",
+    "completion_uis is clipped to [0,1]; the clip binds in primary 2024-2025 (identity error 0.0121) and never in lower_secondary (max m*completion_cohort = 0.9265). Declared boundary, see PRE_DECLARATIONS.md section 6.3."
+  ]
+}

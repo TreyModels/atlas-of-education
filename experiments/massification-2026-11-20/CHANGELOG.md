@@ -387,3 +387,17 @@ B1 — pre-run SHA snapshot reconstructed (30/33 match, original hash `89638b39�
   slope +0.017318 / shift 7.44 fail; CHN reported only. Aggregate 3/7 within strict bound, 4 violations → BOUND-BREAKS;
   falsifier tripped; verdict invariant. **V16-REPAIR: κ may not be a forward constraint** — within-window trajectory only
   (never extrapolated) or dropped. No re-fit.
+
+## 2026-11-21 — EXP-12 FLOOR-CLOSE (ALLOWANCE-CARRIED) and EXP-13 LOWER-DEF (JOINT)
+
+- **EXP-12** (`floor_close_2026-11-20/`, predecl `1db266e2…`, 18/18 SHA, deterministic): **40/40 closing cells carried by
+  the declared `phys_cap = 1.15` allowance** (median 84.2%, range 66.5–98.1%; places 0/40, demand 0/40; all on the
+  1.15·seats branch; at phys_cap=1.0 capacity<demand in 40/40). Anchor PHL primary 2019 coverage 0.872166; Shapley
+  0.9285/0.0438/0.0276. **A10/D62 "capacity buys the floor" restated as CONDITIONAL on the crowding convention**; V16
+  must report phys_cap sensitivity; measured places/PTR = HELD.
+- **EXP-13** (`lower_def_2026-11-20/`, predecl `0ab3a90e…`, deterministic): **JOINT** — the 13.3527 pp lower gap is lost
+  through **rationing 49.30% / survival 50.70%** (delta 1.40 pp; literal order would read SURVIVAL-CARRIED, both
+  reported); convention carries none (m=1.10 is an uplift; dropping it widens the gap to 19.48 pp). Chain identity passes
+  (err 1.9e-11; 53/53 cells). Gate reachable by capacity (a*=0.939069); survival cannot close (s*=0.936689 > surv_max 0.91;
+  ceiling 78.46). Split not identified (JOINT for weight 0.4666–0.5251). V16 must fix target provenance (80.76 vs 80.896),
+  both channels declared together, m frozen, scored on 2021 not 2024, survival ceiling + clip boundary declared.

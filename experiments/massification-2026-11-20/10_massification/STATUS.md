@@ -1205,3 +1205,26 @@ in the manifest/guard). Verdict string unchanged; no threshold altered.
   `BOUND-BREAKS`; falsifier tripped**; verdict invariant across declared readings.
 - **V16-REPAIR: κ may NOT be a forward constraint** — only a declared within-window trajectory (never extrapolated) or
   dropped. The D133 per-system register stays the descriptive record, not a projection input.
+
+### r) EXP-12 FLOOR-CLOSE — `ALLOWANCE-CARRIED`; A10/D62 restated conditionally (D139)
+
+- `floor_close_2026-11-20/` (predecl `1db266e2…`; deterministic; 18/18 SHA). **40/40 closing cells carried by the
+  declared `phys_cap = 1.15` crowding allowance** — median **84.2%** of the counterfactual log-margin (range 66.5–98.1%);
+  places 0/40, demand 0/40. 40/120 cells close (primary 14, lower 19, upper 7, tertiary 0); all 40 on the 1.15·seats
+  branch; at `phys_cap = 1.0` capacity < demand in every closure. Anchor PHL primary 2019 coverage **0.872166**;
+  Shapley A/P/Q = 0.9285/0.0438/0.0276. S1 nuance: the year-to-year mover is places (34/6/0), the allowance is a
+  **standing level**.
+- **Consequence:** **A10/D62 "capacity buys the floor" is CONDITIONAL on the declared crowding convention**; no
+  capacity-mechanism claim may rest on the floor until measured places/PTR (HELD); **V16 must report `phys_cap`
+  sensitivity**.
+
+### s) EXP-13 LOWER-DEF — `JOINT`; the lower series loses 13.35 pp through gate + survival (D140)
+
+- `lower_def_2026-11-20/` (predecl `0ab3a90e…`; deterministic). **Chain identity PASSES** (1.10 × 0.783805 × 0.781819 =
+  0.674073117881 vs panel; err 1.91e-11; 53/53 cells). Gap **13.3527 pp**. Shares **convention 0.00% / rationing 49.30% /
+  survival 50.70%** (delta 1.40 pp → **JOINT**; literal order would read SURVIVAL-CARRIED, both reported). Gate can close
+  alone (a* = 0.939069; REACHABLE-BY-CAPACITY); **survival cannot** (s* = 0.936689 > surv_max 0.91; ceiling 78.46,
+  2.30 pp short). Channels are one object (gate = 1.15·cover(2018); surv = 0.91·exp(−0.55(C/seats−1))). Path crosses 80.76
+  between 2023 and 2024; 27/30 types short. **Declared limit: the required-state split is not identified** (JOINT for
+  weight 0.4666–0.5251). **V16 must fix:** target provenance (80.76 vs observed 80.896, +0.136 pp), both lower channels
+  declared together, m frozen 1.10, **scored on 2021 not 2024**, survival ceiling stated, clip boundary declared.
