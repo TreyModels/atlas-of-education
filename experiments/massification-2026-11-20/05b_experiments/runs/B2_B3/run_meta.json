@@ -1,0 +1,30 @@
+{
+ "eid": "B2_B3",
+ "reps": 4,
+ "N": 6000,
+ "wall": 293.65781593322754,
+ "runs": 72,
+ "ok": 72,
+ "failed": {},
+ "scales": [
+  0.0,
+  1.0,
+  2.0
+ ],
+ "arms": [
+  "ranked, no floor",
+  "ranked, adaptive employer floor (baseline)",
+  "ranked, fixed rule-set floor",
+  "unranked, no floor (lottery)",
+  "unranked, adaptive employer floor",
+  "unranked, fixed rule-set floor"
+ ],
+ "lottery_slope_pooled": 0.15090445645124287,
+ "lottery_slope_perrep": 0.1976589836055865,
+ "lottery_slope_perrep_sd": 0.042173830622702836,
+ "rank_neg": true,
+ "alloc_pos": [
+  "random among all (mode=lottery)"
+ ],
+ "comparator": "stored E8 reps=4 N=6000"
+}

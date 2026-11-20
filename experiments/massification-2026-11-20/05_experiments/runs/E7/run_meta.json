@@ -1,0 +1,15 @@
+{
+ "eid": "E7",
+ "reps": 3,
+ "N": 5000,
+ "workers": 2,
+ "runs": 30,
+ "runs_ok": 30,
+ "failed": [],
+ "wall_seconds": 100,
+ "wall_source": "recovered from the cell log (the run crashed in the findings formatter AFTER both CSVs were written; no run was rerun or dropped)",
+ "seeds": "3000+r, r=0..2, matched across arms",
+ "bars": [-2.0, -1.5, -1.0, -0.5, 0.0, 0.5],
+ "bans": {"none": [], "apex": ["apex"], "board": ["board"], "all_formal": ["apex", "board"]},
+ "artifacts": ["e7_raw.csv", "e7_summary.csv", "findings.txt", "run_E7.py", "post_E7.py"]
+}

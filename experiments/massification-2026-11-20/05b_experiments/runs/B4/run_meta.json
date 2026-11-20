@@ -1,0 +1,32 @@
+{
+ "eid": "B4_E12",
+ "implementation": "NEW code/e12_traj.py (not a reproduction)",
+ "horizon": 40,
+ "burn_in": 40,
+ "seeds": [
+  0,
+  1,
+  2,
+  3,
+  4
+ ],
+ "median_cost_declared_calibration": 0.22,
+ "exo_entry_rise": 0.33,
+ "endo_entry_rise": -0.384,
+ "endo_smooth_entry_rise_posthoc": -0.110241836628671,
+ "checkpoint_signs_consistent": false,
+ "generated": false,
+ "invariant_failures": [],
+ "inputs": {
+  "SCOMP": 0.65,
+  "CCOMP": 0.85,
+  "F0": 0.12,
+  "GF": 0.02,
+  "THETA": 0.4,
+  "sigma_cost": 0.5,
+  "annuity": {
+   "40": 23.47625708669557,
+   "20": 15.206855235775086
+  }
+ }
+}

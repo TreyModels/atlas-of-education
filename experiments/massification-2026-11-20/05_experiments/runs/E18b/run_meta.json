@@ -1,0 +1,10 @@
+{
+ "eid": "E18b",
+ "reps": 3,
+ "N": 5000,
+ "wall": 90.54603815078735,
+ "runs": 18,
+ "ok": 18,
+ "failed": [],
+ "decision": "withdraw C10 if any C1-C4 < C0 by >2 seed sd"
+}

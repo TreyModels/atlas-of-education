@@ -1,0 +1,66 @@
+B1 MATCHED-ELASTICITY RIVAL: INDEPENDENT REPLICATION (Batch B)
+reps=6 N=3000 wall=97s ok=72/72 failed=0
+Same households, same tuition shock, SAME formal vacancy path (macro_elasticity=0). Surplus
+world hires by credential floor + rank; rival uses CES skill prices sigma in {0.5,1,2} and hires
+by expected productivity (no credential floor). Declared comparator: stored E13b (reps=6,N=5000).
+Caveat: I saw the stored E13b output before predeclaring; this is a replication at a different N,
+not a blind test. Precision and plausibility gates below were fixed in PRE_DECLARATIONS_B.md.
+
+  world                                  sigma shock                                d dip inc     d formal|dip   d ratio base ratio
+  surplus (slots+floors+rank)              nan college half price from 1995       -0.0552(0.017)      -0.1430(0.019)   +0.0492      0.537
+  surplus (slots+floors+rank)              nan college 80% off from 1995          -0.0292(0.016)      -0.1543(0.017)   +0.0788      0.537
+  competitive CES + slots (matched rival)   0.5 college half price from 1995       -0.1094(0.030)      +0.0238(0.031)   -0.0680      0.234
+  competitive CES + slots (matched rival)   0.5 college 80% off from 1995          -0.1753(0.044)      +0.0513(0.012)   -0.0610      0.234
+  competitive CES + slots (matched rival)   1.0 college half price from 1995       -0.0099(0.018)      +0.0199(0.018)   -0.1067      0.340
+  competitive CES + slots (matched rival)   1.0 college 80% off from 1995          -0.0154(0.031)      +0.0240(0.019)   -0.1583      0.340
+  competitive CES + slots (matched rival)   2.0 college half price from 1995       +0.0420(0.004)      -0.0068(0.003)   +0.0799      0.541
+  competitive CES + slots (matched rival)   2.0 college 80% off from 1995          +0.0696(0.005)      -0.0150(0.005)   +0.1405      0.541
+
+Baseline levels (no shock):
+  surplus (slots+floors+rank)              0.0 dip_inc=1.559 deg_inc=2.903 ratio=0.537 formal|dip=0.271
+  competitive CES + slots (matched rival)   0.5 dip_inc=1.065 deg_inc=25.664 ratio=0.234 formal|dip=0.448
+  competitive CES + slots (matched rival)   1.0 dip_inc=1.261 deg_inc=3.835 ratio=0.340 formal|dip=0.472
+  competitive CES + slots (matched rival)   2.0 dip_inc=1.053 deg_inc=1.948 ratio=0.541 formal|dip=0.477
+
+PREDECLARED DECISION RULE (three conditions at one sigma):
+  (1) BOTH shocks have delta diploma income < 0;
+  (2) |delta| > 2 x seed sd for at least one shock;
+  (3) baseline diploma/degree ratio >= 0.20 (not a degenerate CES limit).
+  sigma=0.5: both_shocks_negative=True  exceeds_2sd=True  plausible_baseline(ratio=0.234>=0.2)=True  -> survives=True
+  sigma=1.0: both_shocks_negative=True  exceeds_2sd=False  plausible_baseline(ratio=0.340>=0.2)=True  -> survives=False
+  sigma=2.0: both_shocks_negative=False  exceeds_2sd=True  plausible_baseline(ratio=0.541>=0.2)=True  -> survives=False
+  -> CONTRADICTION SURVIVES at sigma=[0.5] under the predeclared rule.
+
+Secondary check (discriminating margin, predeclared):
+  surplus   college half price from 1995   d formal|dip=-0.1430 (2sd=0.0372)
+  surplus   college 80% off from 1995      d formal|dip=-0.1543 (2sd=0.0349)
+  rival cells with delta formal|dip < -2sd: [(2.0, 'college half price from 1995', -0.00684456533635953), (2.0, 'college 80% off from 1995', -0.014964158566778851)]
+
+======================================================================
+POST-HOC ROBUSTNESS DIAGNOSTIC (added after the predeclared run; NOT the declared test).
+Question: is the literal predeclared sigma=0.5 verdict a fair-rival result, or does one
+unstable seeded world drive it? The predeclared plausibility gate was written on the ARM
+MEAN baseline ratio; here the same gate is applied per replication and the rival worlds'
+across-seed range is reported. This can only downgrade, never upgrade, the declared verdict.
+  sigma=0.5: baseline ratio per rep [0.022, 0.036, 0.024, 0.055, 1.212, 0.055] -> 83% of reps below the 0.2 gate; degree income range 1.01-42.39 (mean 25.66, sd 14.18)
+    college half price from 1995: per-rep delta diploma income [-0.08, -0.06, -0.123, -0.131, -0.145, -0.116] (6/6 negative)
+    college 80% off from 1995: per-rep delta diploma income [-0.173, -0.126, -0.182, -0.14, -0.264, -0.167] (6/6 negative)
+  sigma=1.0: baseline ratio per rep [0.363, 0.405, 0.407, 0.344, 0.242, 0.281] -> 0% of reps below the 0.2 gate; degree income range 3.11-5.11 (mean 3.83, sd 0.73)
+    college half price from 1995: per-rep delta diploma income [0.01, -0.006, -0.036, 0.014, -0.014, -0.028] (4/6 negative)
+    college 80% off from 1995: per-rep delta diploma income [0.025, -0.019, -0.068, 0.019, -0.025, -0.025] (4/6 negative)
+  sigma=2.0: baseline ratio per rep [0.546, 0.542, 0.538, 0.549, 0.527, 0.543] -> 0% of reps below the 0.2 gate; degree income range 1.92-2.00 (mean 1.95, sd 0.03)
+    college half price from 1995: per-rep delta diploma income [0.047, 0.043, 0.043, 0.041, 0.034, 0.043] (0/6 negative)
+    college 80% off from 1995: per-rep delta diploma income [0.073, 0.077, 0.066, 0.068, 0.062, 0.071] (0/6 negative)
+
+Predeclared condition (3) requires a NON-degenerate rival. Re-applied per replication:
+  sigma=0.5: plausible in 17% of reps; half-price shock negative in 100% of reps; |mean|>2sd=True; -> robust contradiction = False
+  sigma=1.0: plausible in 100% of reps; half-price shock negative in 67% of reps; |mean|>2sd=False; -> robust contradiction = False
+  sigma=2.0: plausible in 100% of reps; half-price shock negative in 0% of reps; |mean|>2sd=True; -> robust contradiction = False
+
+Reading: sigma=0.5 is the only sigma where the predeclared three-condition rule fired.
+It fires on the ARM MEAN, but 5/6 seeded worlds in that cell have a baseline ratio far
+below the plausibility gate and the cell's degree income spans ~1 to ~42. That is a
+numerically unstable CES corner, not a fair rival. sigma=1 is stable but its negative is
+within seed noise; sigma=2 is stable and produces clear GAINS. Robust verdict: the
+contradiction does NOT survive as a fair-rival result; what survives is the employment-
+margin difference (surplus 14-15pp loss vs rival +2pp/-1pp).

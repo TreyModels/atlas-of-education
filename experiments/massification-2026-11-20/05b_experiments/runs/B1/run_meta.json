@@ -1,0 +1,29 @@
+{
+ "eid": "B1",
+ "reps": 6,
+ "N": 3000,
+ "wall": 97.42553400993347,
+ "runs": 72,
+ "ok": 72,
+ "failed": {},
+ "sigmas": [
+  0.5,
+  1.0,
+  2.0
+ ],
+ "decision": "survives iff both shocks negative AND |d|>2sd AND baseline ratio>=0.20",
+ "survives_at_sigmas": [
+  0.5
+ ],
+ "comparator": "stored E13b reps=6 N=5000 (point-estimate contradiction only)",
+ "posthoc_robustness": {
+  "note": "added after predeclared run; downgrades only",
+  "sigma05_reps_below_plaus_gate": 0.8333333333333334,
+  "sigma05_degree_income_range": [
+   1.010487697775087,
+   42.39450726386173
+  ],
+  "robust_contradiction": false,
+  "survives_as": "employment-margin difference only"
+ }
+}

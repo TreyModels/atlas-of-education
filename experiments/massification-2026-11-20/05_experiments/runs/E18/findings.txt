@@ -1,0 +1,23 @@
+E18 CHINA-STYLE DOUBLE REDUCTION SYNTHETIC VARIANTS (no-effect baseline present)
+reps=3 N=5000 wall=90s ok=18/18 failed=0
+School support = zero-price public gate preparation worth 0.5 score units (one exam sd), EXTENSION module.
+Declared public cost: 0.30 index units per supported pupil-year (not budget-constrained in massabm).
+
+  arm                                                   paid spend apex spend tut_basic tut_board completion  colQ3-5 college inc
+  A0 no-effect baseline                                       4092      0.411     0.040     0.932      0.717    0.372       4.221
+  A1 ban only (leak 0.5: informal substitute market)          3669      0.341     0.040     0.870      0.716    0.389       4.112
+  A2 ban fully enforced (leak 0.0)                            1519      0.000     0.040     0.000      0.717    0.394       3.981
+  A3 school support only (universal, free)                    4815      0.675     0.009     0.829      0.724    0.312       4.350
+  A4 ban + school support                                     4098      0.675     0.010     0.687      0.725    0.310       4.358
+  A5 ban + school support, partial access (60%)               3855      0.565     0.022     0.740      0.719    0.340       4.303
+
+PAIRED EFFECTS vs no-effect baseline (matched seeds), paid tutoring spend:
+  A1 ban only            Δ=  -423.1  (2*sd≈107.2)
+  A3 support only        Δ=  +722.9  (2*sd≈63.0)
+  A4 ban+support         Δ=    +5.9  (2*sd≈79.8)
+  A5 ban+support 60%     Δ=  -236.5  (2*sd≈57.4)
+
+Predeclared: supports substitution if ban+support paid spend < ban-only paid spend by >2 seed sd AND completion not lower by >2 sd.
+  ban+support vs ban-only spend: Δ=+429.0 (2*sd≈107.3) -> DOES NOT SUPPORT substitution
+  completion ban+support vs baseline: Δ=+0.0076 (2*sd≈0.0055) -> LEARNING CHANGED
+  no-effect baseline reproduces baseline exactly (arm A0 is the untreated system): spend=4092

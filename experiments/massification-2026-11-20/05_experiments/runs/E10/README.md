@@ -1,0 +1,26 @@
+# E10 — Learning vs test performance (Yang-style omega)
+
+Command: `PYTHONPATH=<work>/ext/massabm "$PY" exp/run_E10.py --reps 2 --N 5000 --workers 2 --out <out>`
+Uses the documented EXTENSION (tut_hc_equiv); identity-tested at defaults.
+
+E10 LEARNING vs TEST PERFORMANCE (Yang-style omega)
+reps=2 N=5000 wall=60s ok=12/12 failed=0
+omega = productive share of the tutoring effect, credited as tut_hc_equiv = omega*0.25 schooling-year
+equivalents per tutored gate-year. omega=0 = the stock massabm (test-only boost). EXTENSION module.
+
+  omega              college  pass basic  colQ3-5  degree college inc  basic inc  tut spend
+    0.0 full cost                  0.717    0.377   0.165       4.104      1.817       4091
+    0.0 half cost from 1995        0.719    0.462   0.250       3.980      1.718       4583
+    0.5 full cost                  0.716    0.383   0.168       4.166      1.820       4130
+    0.5 half cost from 1995        0.721    0.468   0.251       4.070      1.732       4592
+    1.0 full cost                  0.717    0.385   0.169       4.195      1.812       4172
+    1.0 half cost from 1995        0.721    0.461   0.249       4.164      1.737       4591
+
+SEPARABILITY TEST at full college cost (omega 0 -> 1):
+  basic_completion     0.7166 -> 0.7167  Δ=+0.0001 (2*sd≈0.0037)
+  college_q35          0.3774 -> 0.3849  Δ=+0.0075 (2*sd≈0.0079)
+  tut_spend_total      4091.1750 -> 4171.5000  Δ=+80.3250 (2*sd≈36.9880)
+  college_income       4.1035 -> 4.1952  Δ=+0.0917 (2*sd≈0.0424)
+  basic_income         1.8174 -> 1.8119  Δ=-0.0055 (2*sd≈0.0072)
+
+Predeclared: supports separability if PASS RATES stay flat while later income responds. Pass rates flat -> SUPPORTS

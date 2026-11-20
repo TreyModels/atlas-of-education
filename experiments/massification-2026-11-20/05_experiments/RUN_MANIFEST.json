@@ -1,0 +1,467 @@
+{
+ "generated_utc": "2026-11-20T04:49:09.695386Z",
+ "workspace_root": "massification_2026-11-20",
+ "write_scope": "05_experiments/ only",
+ "python": [
+  "os: macOS 26.6.2 25.6.0",
+  "arch: arm64",
+  "cpu_cores: 8",
+  "mem_gb: 8",
+  "python 3.11.17",
+  "numpy 2.4.6",
+  "scipy 1.17.1",
+  "pandas 3.1.1",
+  "matplotlib 3.11.2"
+ ],
+ "env_record": "logs/PHASE0_env.txt",
+ "phase0": {
+  "results_file": "logs/phase0_results.txt",
+  "text": "PHASE 0 RESULTS (captured 2026-11-20T04:27:09Z)\n\n== 1. massabm run.py smoke ==\n  basic completion, entry 1990-95 (HS ~2001-05)              0.743   target ~0.55-0.62\n  basic completion, entry 2008-12 (SHS ~2020-24)             0.649   target ~0.70-0.73\n  basic completion Q1, entry 1985-90                         0.411   target ~0.35-0.40\n  basic completion Q5, entry 1985-90                         0.816   target ~0.90+\n  degree share, entry 1990-95                                0.196   target ~0.14-0.20\n  basic->college transition, entry 2008-12                   0.296   target ~0.70 (SHS grads)\n  prof-track entry share, entry 1990-98 (nursing boom)       0.095   target ~0.04-0.06\n  OFW professional share of deployments, 2015-23             0.106   target <~0.25 (41% elementary)\n  informal share of entrants, 2010                           0.466   target ~0.5-0.6\n  tutoring rate at board exam, 2010                          0.921   target high (review centres)\n  tutoring rate at basic gate, 2010                          0.069   target thin\n  tertiary GPI (college entry F/M), entry 1995-2005          0.835   target ~1.2-1.3\nok in 8.3s; reform year 2013\n[exit: 0]\n\n== 2. triad emergence --quick ==\n  Median year (of 2 runs) each thing first happens:\n    state funds upper secondary (>=50%)              30\n    half of each cohort completes upper secondary    34\n    households' median target reaches tertiary      38\n    most firms screen by credential                  66  (urban share then 0.53)\n\n  End state (years 110-139): mean_years 11.69, upper 0.58, tertiary 0.38, cred 0.80, floor 3.93, frontier 4.50, formal 0.49\n  Convergence after year 90: mean |employer floor - state funding frontier| = 0.51 levels\n\nRead: if credential screening, the floor, state funding and deep schooling all appear and line up without\nany actor reading the others, the pipeline is produced by three separate interests converging.\nThe order tells you who leads.\n\n--- emergence done in 2s\n[exit: 0]\n\n== 3. known-answer cohort arithmetic (E2 core, independent new implementation) ==\nKNOWN-ANSWER COHORT ARITHMETIC TEST (independent new implementation)\n  world: N=200/cohort, 10 grades, seats=60, vacancies=150, T=40\n  C1 people conservation per cohort: PASS\n  C2 fixed seats never overfilled: PASS\n  C3 enrolment stock identity: PASS\n  C4 money conservation + endowment never overdrawn: PASS\n  C5 jobs: formal<=vacancies, formal+informal==labour force: PASS\n  C6 nonnegativity / finiteness: PASS\n  C7 probabilities in [0,1]: PASS\n  C8 limit cases (seats=0, seats>=N): PASS\n  C9 enrolment-cap stress: PASS\n  KNOWN ANSWER admission share (all pass, zero dropout), constant across matured cohorts: 0.3000  (must equal min(SEATS,N)/N = 0.3000)\n  KNOWN ANSWER final money_cum (must be ~0): 0.00e+00\n  KNOWN ANSWER startup endowment drawn: 0 of 4000 (remaining 2530); fiscal warm-up is an explicit stock, not a hidden subsidy\n  failures: 0\n\n== 4. massabm invariant checks ==\nMASSABM INVARIANT CHECKS\n  default (N=3000): PASS\n  reform=never: PASS\n  mode=no_floor: PASS\n  mode=lottery: PASS\n  V7 tutoring fully banned, leak=0: spend=0.000000 (expect 0) -> PASS\n  V7b ban with leak=0.5 (informal substitute market): spend=4464.9 (expected nonzero: the ban reroutes, it does not delete demand)\n  total failures: 0\n[exit: 0]\n"
+ },
+ "runs": {
+  "E10": {
+   "dir": "../../../../../../../../../tmp/massrun/runs/E10",
+   "meta": [
+    {
+     "file": "../../../../../../../../../tmp/massrun/runs/E10/run_meta.json",
+     "eid": "E10",
+     "reps": 2,
+     "N": 5000,
+     "wall": 59.885047912597656,
+     "runs": 12,
+     "ok": 12,
+     "failed": [],
+     "mean_run": 9.894814093907675
+    }
+   ],
+   "artifacts": [
+    "../../../../../../../../../tmp/massrun/runs/E10/e10_raw.csv",
+    "../../../../../../../../../tmp/massrun/runs/E10/e10_summary.csv",
+    "../../../../../../../../../tmp/massrun/runs/E10/findings.txt",
+    "../../../../../../../../../tmp/massrun/runs/E10/run_meta.json"
+   ]
+  },
+  "E13": {
+   "dir": "../../../../../../../../../tmp/massrun/runs/E13",
+   "meta": [
+    {
+     "file": "../../../../../../../../../tmp/massrun/runs/E13/run_meta.json",
+     "eid": "E13",
+     "reps": 3,
+     "N": 5000,
+     "wall": 80.72492218017578,
+     "runs": 18,
+     "ok": 18,
+     "failed": [],
+     "mean_run": 8.857960515552097
+    }
+   ],
+   "artifacts": [
+    "../../../../../../../../../tmp/massrun/runs/E13/e13_raw.csv",
+    "../../../../../../../../../tmp/massrun/runs/E13/e13_summary.csv",
+    "../../../../../../../../../tmp/massrun/runs/E13/findings.txt",
+    "../../../../../../../../../tmp/massrun/runs/E13/run_meta.json"
+   ]
+  },
+  "E13b": {
+   "dir": "../../../../../../../../../tmp/massrun/runs/E13b",
+   "meta": [
+    {
+     "file": "../../../../../../../../../tmp/massrun/runs/E13b/run_meta.json",
+     "eid": "E13b",
+     "reps": 6,
+     "N": 5000,
+     "wall": 282.02288484573364,
+     "runs": 72,
+     "ok": 72,
+     "failed": [],
+     "mean_run": 7.812140332327949,
+     "sigmas": [
+      0.5,
+      1.0,
+      2.0
+     ],
+     "decision": "contradicted if rival d_diploma_income<=0 at any sigma"
+    }
+   ],
+   "artifacts": [
+    "../../../../../../../../../tmp/massrun/runs/E13b/e13b_raw.csv",
+    "../../../../../../../../../tmp/massrun/runs/E13b/e13b_summary.csv",
+    "../../../../../../../../../tmp/massrun/runs/E13b/findings.txt",
+    "../../../../../../../../../tmp/massrun/runs/E13b/run_meta.json"
+   ]
+  },
+  "E13c": {
+   "dir": "../../../../../../../../../tmp/massrun/runs/E13c",
+   "meta": [
+    {
+     "file": "../../../../../../../../../tmp/massrun/runs/E13c/run_meta.json",
+     "eid": "E13c",
+     "reps": 3,
+     "N": 5000,
+     "wall": 189.30641508102417,
+     "runs": 36,
+     "ok": 36,
+     "failed": [],
+     "calibration": [
+      {
+       "sigma": 0.5,
+       "target_share": 0.28624509854283314,
+       "target_degree_income": 2.9252857489639146,
+       "mult": 0.5839310643039786,
+       "scale": 1.0823218355417938,
+       "achieved_share": 0.2795219026075261,
+       "achieved_degree_income": 11.388160189666827,
+       "rival_share_unmatched": 0.4407894736842105,
+       "rival_degree_income_unmatched": 24.463529315363544
+      },
+      {
+       "sigma": 1.0,
+       "target_share": 0.28624509854283314,
+       "target_degree_income": 2.9252857489639146,
+       "mult": 0.5153308133085255,
+       "scale": 0.6365909767370154,
+       "achieved_share": 0.2794764974060682,
+       "achieved_degree_income": 1.4571951469678224,
+       "rival_share_unmatched": 0.4924401061847681,
+       "rival_degree_income_unmatched": 3.6343264857209165
+      },
+      {
+       "sigma": 2.0,
+       "target_share": 0.28624509854283314,
+       "target_degree_income": 2.9252857489639146,
+       "mult": 0.613463823501291,
+       "scale": 1.408158598865662,
+       "achieved_share": 0.28754213271175355,
+       "achieved_degree_income": 2.706343180813489,
+       "rival_share_unmatched": 0.4766318974160525,
+       "rival_degree_income_unmatched": 1.963988852300046
+      }
+     ]
+    }
+   ],
+   "artifacts": [
+    "../../../../../../../../../tmp/massrun/runs/E13c/e13c_calibration.csv",
+    "../../../../../../../../../tmp/massrun/runs/E13c/e13c_raw.csv",
+    "../../../../../../../../../tmp/massrun/runs/E13c/e13c_summary.csv",
+    "../../../../../../../../../tmp/massrun/runs/E13c/findings.txt",
+    "../../../../../../../../../tmp/massrun/runs/E13c/run_meta.json"
+   ]
+  },
+  "E18": {
+   "dir": "../../../../../../../../../tmp/massrun/runs/E18",
+   "meta": [
+    {
+     "file": "../../../../../../../../../tmp/massrun/runs/E18/run_meta.json",
+     "eid": "E18",
+     "reps": 3,
+     "N": 5000,
+     "wall": 90.28857016563416,
+     "runs": 18,
+     "ok": 18,
+     "failed": [],
+     "mean_run": 9.961544036865234
+    }
+   ],
+   "artifacts": [
+    "../../../../../../../../../tmp/massrun/runs/E18/e18_raw.csv",
+    "../../../../../../../../../tmp/massrun/runs/E18/e18_summary.csv",
+    "../../../../../../../../../tmp/massrun/runs/E18/findings.txt",
+    "../../../../../../../../../tmp/massrun/runs/E18/run_meta.json"
+   ]
+  },
+  "E18b": {
+   "dir": "../../../../../../../../../tmp/massrun/runs/E18b",
+   "meta": [
+    {
+     "file": "../../../../../../../../../tmp/massrun/runs/E18b/run_meta.json",
+     "eid": "E18b",
+     "reps": 3,
+     "N": 5000,
+     "wall": 90.54603815078735,
+     "runs": 18,
+     "ok": 18,
+     "failed": [],
+     "decision": "withdraw C10 if any C1-C4 < C0 by >2 seed sd"
+    }
+   ],
+   "artifacts": [
+    "../../../../../../../../../tmp/massrun/runs/E18b/e18b_raw.csv",
+    "../../../../../../../../../tmp/massrun/runs/E18b/e18b_summary.csv",
+    "../../../../../../../../../tmp/massrun/runs/E18b/findings.txt",
+    "../../../../../../../../../tmp/massrun/runs/E18b/run_meta.json"
+   ]
+  },
+  "E19_E20": {
+   "dir": "../../../../../../../../../tmp/massrun/runs/E19_E20",
+   "meta": [
+    {
+     "file": "../../../../../../../../../tmp/massrun/runs/E19_E20/run_meta.json",
+     "eid": "E19+E20",
+     "reps": 2,
+     "N": 5000,
+     "wall": 34.46722912788391,
+     "runs": 6,
+     "ok": 6,
+     "failed": [],
+     "status": "pilot only; HK data blocked"
+    }
+   ],
+   "artifacts": [
+    "../../../../../../../../../tmp/massrun/runs/E19_E20/e19_e20_raw.csv",
+    "../../../../../../../../../tmp/massrun/runs/E19_E20/e19_e20_summary.csv",
+    "../../../../../../../../../tmp/massrun/runs/E19_E20/findings.txt",
+    "../../../../../../../../../tmp/massrun/runs/E19_E20/run_meta.json"
+   ]
+  },
+  "E21": {
+   "dir": "../../../../../../../../../tmp/massrun/runs/E21",
+   "meta": [
+    {
+     "file": "../../../../../../../../../tmp/massrun/runs/E21/run_meta.json",
+     "eid": "E21",
+     "reps": 2,
+     "N": 5000,
+     "wall": 9.767484903335571,
+     "status": "external benchmark; observed cells only"
+    }
+   ],
+   "artifacts": [
+    "../../../../../../../../../tmp/massrun/runs/E21/e21_series.csv",
+    "../../../../../../../../../tmp/massrun/runs/E21/e21_summary.csv",
+    "../../../../../../../../../tmp/massrun/runs/E21/findings.txt",
+    "../../../../../../../../../tmp/massrun/runs/E21/run_meta.json"
+   ]
+  },
+  "E2_cohort_arithmetic": {
+   "dir": "../../../../../../../../../tmp/massrun/runs/E2_cohort_arithmetic",
+   "meta": null,
+   "artifacts": [
+    "../../../../../../../../../tmp/massrun/runs/E2_cohort_arithmetic/kat_cohort.csv"
+   ]
+  },
+  "E3": {
+   "dir": "../../../../../../../../../tmp/massrun/runs/E3",
+   "meta": [
+    {
+     "file": "../../../../../../../../../tmp/massrun/runs/E3/run_meta.json",
+     "eid": "E3",
+     "reps": 3,
+     "N": 5000,
+     "wall": 47.71163201332092,
+     "runs": 18,
+     "ok": 18,
+     "failed": [],
+     "mean_run": 5.042290502124363
+    }
+   ],
+   "artifacts": [
+    "../../../../../../../../../tmp/massrun/runs/E3/e3_raw.csv",
+    "../../../../../../../../../tmp/massrun/runs/E3/e3_summary.csv",
+    "../../../../../../../../../tmp/massrun/runs/E3/findings.txt",
+    "../../../../../../../../../tmp/massrun/runs/E3/run_meta.json"
+   ]
+  },
+  "E5": {
+   "dir": "../../../../../../../../../tmp/massrun/runs/E5",
+   "meta": [
+    {
+     "file": "../../../../../../../../../tmp/massrun/runs/E5/run_meta.json",
+     "eid": "E5",
+     "reps": 3,
+     "N": 5000,
+     "wall": 80.4431140422821,
+     "runs": 15,
+     "ok": 15,
+     "failed": [],
+     "mean_run": 10.141713126500447
+    }
+   ],
+   "artifacts": [
+    "../../../../../../../../../tmp/massrun/runs/E5/e5_raw.csv",
+    "../../../../../../../../../tmp/massrun/runs/E5/e5_summary.csv",
+    "../../../../../../../../../tmp/massrun/runs/E5/findings.txt",
+    "../../../../../../../../../tmp/massrun/runs/E5/run_meta.json"
+   ]
+  },
+  "E7": {
+   "dir": "../../../../../../../../../tmp/massrun/runs/E7",
+   "meta": null,
+   "artifacts": [
+    "../../../../../../../../../tmp/massrun/runs/E7/e7_raw.csv",
+    "../../../../../../../../../tmp/massrun/runs/E7/e7_summary.csv",
+    "../../../../../../../../../tmp/massrun/runs/E7/findings.txt"
+   ]
+  },
+  "E8": {
+   "dir": "../../../../../../../../../tmp/massrun/runs/E8",
+   "meta": [
+    {
+     "file": "../../../../../../../../../tmp/massrun/runs/E8/run_meta.json",
+     "eid": "E8",
+     "reps": 4,
+     "N": 6000,
+     "workers": 2,
+     "scales": [
+      0.0,
+      1.0,
+      2.0
+     ],
+     "arms": [
+      "ranked, no floor",
+      "ranked, adaptive employer floor (baseline)",
+      "ranked, fixed rule-set floor",
+      "unranked, no floor (lottery)",
+      "unranked, adaptive employer floor",
+      "unranked, fixed rule-set floor"
+     ],
+     "wall_seconds": 332.31337785720825,
+     "runs": 72,
+     "runs_ok": 72,
+     "failed": [],
+     "mean_run_seconds": 9.212132814857695,
+     "max_run_seconds": 13.49059009552002
+    }
+   ],
+   "artifacts": [
+    "../../../../../../../../../tmp/massrun/runs/E8/e8_raw.csv",
+    "../../../../../../../../../tmp/massrun/runs/E8/e8_summary.csv",
+    "../../../../../../../../../tmp/massrun/runs/E8/findings.txt",
+    "../../../../../../../../../tmp/massrun/runs/E8/run_meta.json"
+   ]
+  },
+  "P0_floor6_pilot": {
+   "dir": "../../../../../../../../../tmp/massrun/runs/P0_floor6_pilot",
+   "meta": [
+    {
+     "file": "../../../../../../../../../tmp/massrun/runs/P0_floor6_pilot/run_meta.json",
+     "eid": "E8",
+     "reps": 2,
+     "N": 6000,
+     "workers": 2,
+     "scales": [
+      0.0,
+      1.0,
+      2.0
+     ],
+     "arms": [
+      "ranked, no floor",
+      "ranked, adaptive employer floor (baseline)",
+      "ranked, fixed rule-set floor",
+      "unranked, no floor (lottery)",
+      "unranked, adaptive employer floor",
+      "unranked, fixed rule-set floor"
+     ],
+     "wall_seconds": 184.7420253753662,
+     "runs": 36,
+     "runs_ok": 36,
+     "failed": [],
+     "mean_run_seconds": 10.153110947873857,
+     "max_run_seconds": 16.860603094100952
+    }
+   ],
+   "artifacts": [
+    "../../../../../../../../../tmp/massrun/runs/P0_floor6_pilot/e8_raw.csv",
+    "../../../../../../../../../tmp/massrun/runs/P0_floor6_pilot/e8_summary.csv",
+    "../../../../../../../../../tmp/massrun/runs/P0_floor6_pilot/findings.txt",
+    "../../../../../../../../../tmp/massrun/runs/P0_floor6_pilot/run_meta.json"
+   ]
+  },
+  "kat_cohort.csv": {
+   "dir": "../../../../../../../../../tmp/massrun/runs/kat_cohort.csv",
+   "meta": null,
+   "artifacts": []
+  },
+  "triad": {
+   "dir": "../../../../../../../../../tmp/massrun/runs/triad",
+   "meta": [
+    {
+     "file": "../../../../../../../../../tmp/massrun/runs/triad/run_meta.json",
+     "eid": "E14+E15",
+     "reps": 3,
+     "N": 2000,
+     "wall": 56.693894147872925
+    }
+   ],
+   "artifacts": [
+    "../../../../../../../../../tmp/massrun/runs/triad/E14_lockin/findings.txt",
+    "../../../../../../../../../tmp/massrun/runs/triad/E14_lockin/lockin.csv",
+    "../../../../../../../../../tmp/massrun/runs/triad/E14_lockin/lockin.png",
+    "../../../../../../../../../tmp/massrun/runs/triad/E14_necessity/findings.txt",
+    "../../../../../../../../../tmp/massrun/runs/triad/E14_necessity/necessity.csv",
+    "../../../../../../../../../tmp/massrun/runs/triad/E15_state_motive/findings.txt",
+    "../../../../../../../../../tmp/massrun/runs/triad/E15_state_motive/state_motive.csv",
+    "../../../../../../../../../tmp/massrun/runs/triad/run_meta.json"
+   ]
+  }
+ },
+ "failures": [],
+ "dropped_or_proposed": [],
+ "source_hashes": {},
+ "notes": [
+  "Copies of massabm and triad are in code/massabm and code/triad (unmodified originals).",
+  "code/ext_massabm is the copy with the documented EXTENSION (school support + omega). Its defaults are identity-tested against the original (code/exp/verify_ext.py).",
+  "New mechanism modules are in code/new/ and are labelled independently named new implementations.",
+  "All runs used workers<=2, nice -n 10, PYTHONDONTWRITEBYTECODE=1, per-run SIGALRM timeout=MASSRUN_TIMEOUT (300s).",
+  "Failures are recorded in ERROR_LOG.md and in this manifest; no unrun cell is claimed as completed."
+ ],
+ "actual_commands": {
+  "E8": "PYTHONPATH=code/massabm MASSRUN_EXP=code/exp \"$PY\" code/exp/run_E8.py --reps 4 --N 6000 --workers 2 --out runs/E8",
+  "E13": "PYTHONPATH=code/massabm MASSRUN_EXP=code/exp \"$PY\" code/exp/run_E13.py --reps 3 --N 5000 --workers 2 --out runs/E13",
+  "E13b": "PYTHONPATH=code/ext_massabm MASSRUN_EXP=code/exp \"$PY\" code/exp/run_E13b.py --reps 6 --N 5000 --workers 2 --out runs/E13b",
+  "E13c": "PYTHONPATH=code/ext_massabm MASSRUN_EXP=code/exp \"$PY\" code/exp/run_E13c.py --reps 3 --N 5000 --workers 2 --out runs/E13c",
+  "E18b": "PYTHONPATH=code/ext_massabm MASSRUN_EXP=code/exp \"$PY\" code/exp/run_E18b.py --reps 3 --N 5000 --workers 2 --out runs/E18b",
+  "E21": "PYTHONPATH=code/massabm MASSRUN_EXP=code/exp \"$PY\" code/exp/run_E21.py --reps 2 --N 5000 --workers 2 --out runs/E21",
+  "E3": "PYTHONPATH=code/massabm MASSRUN_EXP=code/exp \"$PY\" code/exp/run_E3.py --reps 3 --N 5000 --workers 2 --out runs/E3",
+  "E5": "PYTHONPATH=code/massabm MASSRUN_EXP=code/exp \"$PY\" code/exp/run_E5.py --reps 3 --N 5000 --workers 2 --out runs/E5",
+  "E7": "PYTHONPATH=code/massabm \"$PY\" code/exp/run_E7.py --reps 3 --N 5000 --workers 2 --out runs/E7 ; \"$PY\" code/exp/post_E7.py runs/E7",
+  "E10": "PYTHONPATH=code/ext_massabm \"$PY\" code/exp/run_E10.py --reps 2 --N 5000 --workers 2 --out runs/E10",
+  "E18": "PYTHONPATH=code/ext_massabm \"$PY\" code/exp/run_E18.py --reps 3 --N 5000 --workers 2 --out runs/E18",
+  "E19_E20": "PYTHONPATH=code/massabm \"$PY\" code/exp/run_E19_E20.py --reps 2 --N 5000 --workers 2 --out runs/E19_E20",
+  "E14_E15": "PYTHONPATH=code/triad \"$PY\" code/exp/run_triad_E14_E15.py runs/triad 3 2000 2",
+  "E2": "\"$PY\" code/exp/kat_cohort.py --csv runs/E2_cohort_arithmetic/kat_cohort.csv",
+  "E0_invariants": "PYTHONPATH=code/massabm \"$PY\" code/exp/invariants.py",
+  "E0_smoke_massabm": "cd code/massabm && \"$PY\" run.py smoke",
+  "E0_smoke_triad": "cd code/triad && \"$PY\" run_triad.py emergence --quick --workers 1"
+ },
+ "compute": {
+  "workers_max": 2,
+  "nice": "nice -n 10",
+  "PYTHONDONTWRITEBYTECODE": 1,
+  "per_run_timeout_seconds": 300,
+  "machine": "8 cores / 8 GB shared with a second Python agent",
+  "wall_seconds_by_cell": {
+   "E0_smokes+invariants": 25,
+   "E2_kat": 1,
+   "E7": 100,
+   "E8_reps4": 332,
+   "E8_pilot_reps2": 185,
+   "E13": 81,
+   "E13b": 282,
+   "E13c_calibration": 95,
+   "E13c_stage2": 189,
+   "E3": 48,
+   "E5": 80,
+   "E10": 60,
+   "E18": 90,
+   "E18b": 91,
+   "E19_E20": 35,
+   "E14_E15": 70,
+   "E21": 10
+  },
+  "approx_total_compute_seconds": 1754
+ },
+ "new_data_used": {
+  "04_data/data/gmr_observed_6countries_1970_2024.csv": "E21 external GER benchmark (OBSERVED cells only; imputed cells never used as truth)",
+  "04_data/data/gmr_annual_1980_2020_imputed.csv": "listed in E21 next steps only; not used as truth anywhere"
+ },
+ "follow_ups": {
+  "task-7 (Council brief 002)": {
+   "predeclarations": "PRE_DECLARATIONS_E18b_E13c.md",
+   "E18b": "completed 18/18; C10 WITHDRAWN (substitution appears); runs/E18b/",
+   "E13c": "completed (calibration + 36/36); Prediction 2 SURVIVES in formal-access form; runs/E13c/",
+   "E13b_correction": "E13b level figures confirmed against 6-rep e13b_summary.csv; note appended to runs/E13b/README.md",
+   "atlas_bridge": "status posted + 4 attachments to party deepseek-research (append-only; no rewrite)"
+  }
+ }
+}

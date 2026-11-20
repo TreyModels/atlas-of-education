@@ -1,0 +1,172 @@
+country,iso3,indicator,n_observed,n_imputed,n_imputed_longgap,n_missing_no_anchor,coverage_pct,first_observed,last_observed,max_imputed_gap,low_confidence_imputed
+Cambodia,KHM,aner_lower_secondary,17,1,0,23,43.9,1998,2015,2,0
+Cambodia,KHM,aner_primary,15,7,0,19,53.7,1997,2018,3,0
+Cambodia,KHM,completion_lower_secondary,7,17,0,17,58.5,1996,2019,5,0
+Cambodia,KHM,completion_primary,12,9,0,20,51.2,2000,2020,5,0
+Cambodia,KHM,completion_upper_secondary,16,9,0,16,61.0,1996,2020,4,0
+Cambodia,KHM,enrolment_preprimary,35,4,0,2,95.1,1981,2019,3,0
+Cambodia,KHM,enrolment_primary,37,3,0,1,97.6,1981,2020,3,0
+Cambodia,KHM,enrolment_secondary,15,15,0,11,73.2,1991,2020,9,8
+Cambodia,KHM,enrolment_tertiary,32,8,0,1,97.6,1980,2019,4,0
+Cambodia,KHM,ger_lower_secondary,22,0,0,19,53.7,1998,2019,,0
+Cambodia,KHM,ger_preprimary,36,4,0,1,97.6,1981,2020,3,0
+Cambodia,KHM,ger_preprimary_ece,20,1,0,20,51.2,1998,2018,2,0
+Cambodia,KHM,ger_primary,37,3,0,1,97.6,1981,2020,3,0
+Cambodia,KHM,ger_secondary,15,15,0,11,73.2,1991,2020,9,8
+Cambodia,KHM,ger_tertiary,33,8,0,0,100.0,1980,2020,4,0
+Cambodia,KHM,ger_upper_secondary,10,1,0,30,26.8,1998,2008,2,0
+Cambodia,KHM,gpi_primary,30,5,0,6,85.4,1986,2020,5,0
+Cambodia,KHM,gpi_secondary,14,9,0,18,56.1,1998,2020,9,8
+Cambodia,KHM,gpi_tertiary,21,7,0,13,68.3,1993,2020,4,0
+Cambodia,KHM,gross_intake_lower_secondary,6,0,0,35,14.6,2013,2018,,0
+Cambodia,KHM,gross_intake_primary,24,1,0,16,61.0,1994,2018,2,0
+Cambodia,KHM,ner_lower_secondary,18,2,0,21,48.8,1999,2018,2,0
+Cambodia,KHM,ner_preprimary,18,1,0,22,46.3,2000,2018,2,0
+Cambodia,KHM,ner_primary,16,6,0,19,53.7,1997,2018,3,0
+Cambodia,KHM,ner_secondary,10,1,0,30,26.8,1998,2008,2,0
+Cambodia,KHM,ner_upper_secondary,8,2,0,31,24.4,1999,2008,2,0
+Cambodia,KHM,oos_lower_secondary,17,6,0,18,56.1,1998,2020,5,0
+Cambodia,KHM,oos_primary,18,6,0,17,58.5,1997,2020,3,0
+Cambodia,KHM,oos_upper_secondary,11,12,0,18,56.1,1998,2020,12,11
+Cambodia,KHM,overage_primary,15,6,0,20,51.2,1998,2018,3,0
+Cambodia,KHM,ptr_primary,37,3,0,1,97.6,1981,2020,3,0
+Cambodia,KHM,ptr_secondary,8,2,0,31,24.4,1998,2007,3,0
+Cambodia,KHM,underage_primary,17,4,0,20,51.2,1998,2018,3,0
+Japan,JPN,enrolment_preprimary,39,0,0,2,95.1,1980,2018,,0
+Japan,JPN,enrolment_primary,28,13,0,0,100.0,1980,2020,14,13
+Japan,JPN,enrolment_secondary,27,14,0,0,100.0,1980,2020,14,13
+Japan,JPN,enrolment_tertiary,36,3,0,2,95.1,1980,2018,3,0
+Japan,JPN,ger_preprimary,23,13,0,5,87.8,1980,2015,14,13
+Japan,JPN,ger_primary,8,0,0,33,19.5,2013,2020,,0
+Japan,JPN,ger_secondary,8,0,0,33,19.5,2013,2020,,0
+Japan,JPN,ger_tertiary,25,16,0,0,100.0,1980,2020,14,13
+Japan,JPN,gpi_primary,8,0,0,33,19.5,2013,2020,,0
+Japan,JPN,gpi_secondary,8,0,0,33,19.5,2013,2020,,0
+Japan,JPN,gpi_tertiary,8,0,0,33,19.5,2013,2020,,0
+Japan,JPN,oos_lower_secondary,8,0,0,33,19.5,2013,2020,,0
+Japan,JPN,oos_primary,24,17,0,0,100.0,1980,2020,14,13
+Japan,JPN,oos_upper_secondary,9,13,0,19,53.7,1999,2020,14,13
+Japan,JPN,ptr_primary,28,13,0,0,100.0,1980,2020,14,13
+Japan,JPN,ptr_secondary,24,17,0,0,100.0,1980,2020,15,14
+"Hong Kong SAR, China",HKG,aner_lower_secondary,24,15,0,2,95.1,1980,2018,11,10
+"Hong Kong SAR, China",HKG,aner_primary,15,9,15,2,58.5,1980,2018,10,9
+"Hong Kong SAR, China",HKG,enrolment_preprimary,36,4,0,1,97.6,1980,2019,4,0
+"Hong Kong SAR, China",HKG,enrolment_primary,40,1,0,0,100.0,1980,2020,2,0
+"Hong Kong SAR, China",HKG,enrolment_secondary,30,11,0,0,100.0,1980,2020,8,0
+"Hong Kong SAR, China",HKG,enrolment_tertiary,24,16,0,1,97.6,1980,2019,9,8
+"Hong Kong SAR, China",HKG,ger_lower_secondary,22,0,0,19,53.7,1998,2019,,0
+"Hong Kong SAR, China",HKG,ger_preprimary,27,14,0,0,100.0,1980,2020,14,13
+"Hong Kong SAR, China",HKG,ger_preprimary_ece,8,13,0,20,51.2,1998,2018,14,13
+"Hong Kong SAR, China",HKG,ger_primary,20,0,0,21,48.8,2001,2020,,0
+"Hong Kong SAR, China",HKG,ger_secondary,20,0,0,21,48.8,2001,2020,,0
+"Hong Kong SAR, China",HKG,ger_tertiary,25,16,0,0,100.0,1980,2020,9,8
+"Hong Kong SAR, China",HKG,ger_upper_secondary,19,0,0,22,46.3,2001,2019,,0
+"Hong Kong SAR, China",HKG,gpi_primary,20,0,0,21,48.8,2001,2020,,0
+"Hong Kong SAR, China",HKG,gpi_secondary,20,0,0,21,48.8,2001,2020,,0
+"Hong Kong SAR, China",HKG,gpi_tertiary,18,0,0,23,43.9,2003,2020,,0
+"Hong Kong SAR, China",HKG,gross_intake_lower_secondary,6,0,0,35,14.6,2013,2018,,0
+"Hong Kong SAR, China",HKG,gross_intake_primary,23,16,0,2,95.1,1980,2018,14,13
+"Hong Kong SAR, China",HKG,ner_lower_secondary,17,1,0,23,43.9,2001,2018,2,0
+"Hong Kong SAR, China",HKG,ner_preprimary,1,0,0,40,2.4,2018,2018,,0
+"Hong Kong SAR, China",HKG,ner_primary,15,9,15,2,58.5,1980,2018,10,9
+"Hong Kong SAR, China",HKG,ner_secondary,24,15,0,2,95.1,1980,2018,11,10
+"Hong Kong SAR, China",HKG,ner_upper_secondary,17,1,0,23,43.9,2001,2018,2,0
+"Hong Kong SAR, China",HKG,oos_lower_secondary,26,15,0,0,100.0,1980,2020,11,10
+"Hong Kong SAR, China",HKG,oos_primary,28,13,0,0,100.0,1980,2020,10,9
+"Hong Kong SAR, China",HKG,oos_upper_secondary,20,0,0,21,48.8,2001,2020,,0
+"Hong Kong SAR, China",HKG,overage_primary,15,9,15,2,58.5,1980,2018,10,9
+"Hong Kong SAR, China",HKG,ptr_primary,38,3,0,0,100.0,1980,2020,2,0
+"Hong Kong SAR, China",HKG,ptr_secondary,30,11,0,0,100.0,1980,2020,8,0
+"Hong Kong SAR, China",HKG,underage_primary,7,0,0,34,17.1,2012,2018,,0
+Philippines,PHL,aner_lower_secondary,19,7,0,15,63.4,1992,2017,5,0
+Philippines,PHL,aner_primary,27,10,0,4,90.2,1981,2017,6,0
+Philippines,PHL,completion_lower_secondary,7,12,0,22,46.3,1999,2017,4,0
+Philippines,PHL,completion_primary,7,12,0,22,46.3,1999,2017,4,0
+Philippines,PHL,completion_upper_secondary,8,11,0,22,46.3,1999,2017,4,0
+Philippines,PHL,enrolment_preprimary,32,6,0,3,92.7,1981,2018,6,0
+Philippines,PHL,enrolment_primary,37,4,0,0,100.0,1980,2020,5,0
+Philippines,PHL,enrolment_secondary,36,5,0,0,100.0,1980,2020,5,0
+Philippines,PHL,enrolment_tertiary,31,7,0,3,92.7,1980,2017,3,0
+Philippines,PHL,ger_lower_secondary,16,5,0,20,51.2,1998,2018,5,0
+Philippines,PHL,ger_preprimary,38,2,0,1,97.6,1981,2020,3,0
+Philippines,PHL,ger_preprimary_ece,16,12,0,13,68.3,1990,2017,8,0
+Philippines,PHL,ger_primary,37,4,0,0,100.0,1980,2020,5,0
+Philippines,PHL,ger_secondary,36,5,0,0,100.0,1980,2020,5,0
+Philippines,PHL,ger_tertiary,36,5,0,0,100.0,1980,2020,3,0
+Philippines,PHL,ger_upper_secondary,19,2,0,20,51.2,1998,2018,2,0
+Philippines,PHL,gpi_primary,35,5,0,1,97.6,1981,2020,5,0
+Philippines,PHL,gpi_secondary,28,12,0,1,97.6,1981,2020,8,0
+Philippines,PHL,gpi_tertiary,27,14,0,0,100.0,1980,2020,10,9
+Philippines,PHL,gross_intake_lower_secondary,4,0,0,37,9.8,2014,2017,,0
+Philippines,PHL,gross_intake_primary,28,9,0,4,90.2,1981,2017,5,0
+Philippines,PHL,ner_lower_secondary,4,0,0,37,9.8,2014,2017,,0
+Philippines,PHL,ner_preprimary,10,7,0,24,41.5,2001,2017,6,0
+Philippines,PHL,ner_primary,28,9,0,4,90.2,1981,2017,5,0
+Philippines,PHL,ner_secondary,17,7,0,17,58.5,1992,2015,5,0
+Philippines,PHL,ner_upper_secondary,2,0,0,39,4.9,2014,2015,,0
+Philippines,PHL,oos_lower_secondary,21,8,0,12,70.7,1992,2020,5,0
+Philippines,PHL,oos_primary,32,8,0,1,97.6,1981,2020,5,0
+Philippines,PHL,oos_upper_secondary,20,9,0,12,70.7,1992,2020,5,0
+Philippines,PHL,overage_primary,29,8,0,4,90.2,1981,2017,5,0
+Philippines,PHL,ptr_primary,37,4,0,0,100.0,1980,2020,5,0
+Philippines,PHL,ptr_secondary,32,8,0,1,97.6,1981,2020,5,0
+Philippines,PHL,underage_primary,16,9,0,16,61.0,1993,2017,5,0
+China,CHN,aner_primary,11,0,0,30,26.8,1987,1997,,0
+China,CHN,completion_lower_secondary,6,5,0,30,26.8,2010,2020,2,0
+China,CHN,completion_primary,7,14,0,20,51.2,2000,2020,10,9
+China,CHN,completion_upper_secondary,6,5,0,30,26.8,2010,2020,2,0
+China,CHN,enrolment_preprimary,38,2,0,1,97.6,1980,2019,3,0
+China,CHN,enrolment_primary,35,6,0,0,100.0,1980,2020,5,0
+China,CHN,enrolment_secondary,38,3,0,0,100.0,1980,2020,3,0
+China,CHN,enrolment_tertiary,38,2,0,1,97.6,1980,2019,3,0
+China,CHN,ger_lower_secondary,13,3,0,25,39.0,1995,2010,3,0
+China,CHN,ger_preprimary,39,2,0,0,100.0,1980,2020,3,0
+China,CHN,ger_preprimary_ece,20,2,0,19,53.7,1997,2018,3,0
+China,CHN,ger_primary,35,6,0,0,100.0,1980,2020,5,0
+China,CHN,ger_secondary,30,3,0,8,80.5,1980,2012,3,0
+China,CHN,ger_tertiary,39,2,0,0,100.0,1980,2020,3,0
+China,CHN,ger_upper_secondary,21,3,0,17,58.5,1996,2019,3,0
+China,CHN,gpi_primary,35,6,0,0,100.0,1980,2020,5,0
+China,CHN,gpi_secondary,27,6,0,8,80.5,1980,2012,4,0
+China,CHN,gpi_tertiary,20,21,0,0,100.0,1980,2020,14,21
+China,CHN,gross_intake_lower_secondary,5,1,0,35,14.6,2013,2018,2,0
+China,CHN,gross_intake_primary,24,6,0,11,73.2,1989,2018,4,0
+China,CHN,ner_primary,11,0,0,30,26.8,1987,1997,,0
+China,CHN,oos_primary,11,0,0,30,26.8,1987,1997,,0
+China,CHN,overage_primary,11,0,0,30,26.8,1987,1997,,0
+China,CHN,ptr_primary,35,6,0,0,100.0,1980,2020,5,0
+China,CHN,ptr_secondary,37,4,0,0,100.0,1980,2020,3,0
+China,CHN,underage_primary,10,1,0,30,26.8,1987,1997,2,0
+Republic of Korea,KOR,aner_lower_secondary,30,8,0,3,92.7,1980,2017,4,0
+Republic of Korea,KOR,aner_primary,25,13,0,3,92.7,1980,2017,8,0
+Republic of Korea,KOR,completion_lower_secondary,18,0,0,23,43.9,2003,2020,,0
+Republic of Korea,KOR,completion_primary,1,0,0,40,2.4,2012,2012,,0
+Republic of Korea,KOR,completion_upper_secondary,21,0,0,20,51.2,2000,2020,,0
+Republic of Korea,KOR,enrolment_preprimary,23,0,16,2,56.1,1980,2018,,0
+Republic of Korea,KOR,enrolment_primary,41,0,0,0,100.0,1980,2020,,0
+Republic of Korea,KOR,enrolment_secondary,41,0,0,0,100.0,1980,2020,,0
+Republic of Korea,KOR,enrolment_tertiary,39,0,0,2,95.1,1980,2018,,0
+Republic of Korea,KOR,ger_lower_secondary,25,0,0,16,61.0,1994,2018,,0
+Republic of Korea,KOR,ger_preprimary,25,0,16,0,61.0,1980,2020,,0
+Republic of Korea,KOR,ger_preprimary_ece,9,12,17,3,51.2,1980,2017,5,0
+Republic of Korea,KOR,ger_primary,21,0,0,20,51.2,2000,2020,,0
+Republic of Korea,KOR,ger_secondary,21,0,0,20,51.2,2000,2020,,0
+Republic of Korea,KOR,ger_tertiary,21,0,0,20,51.2,2000,2020,,0
+Republic of Korea,KOR,ger_upper_secondary,25,0,0,16,61.0,1994,2018,,0
+Republic of Korea,KOR,gpi_primary,21,0,0,20,51.2,2000,2020,,0
+Republic of Korea,KOR,gpi_secondary,21,0,0,20,51.2,2000,2020,,0
+Republic of Korea,KOR,gpi_tertiary,21,0,0,20,51.2,2000,2020,,0
+Republic of Korea,KOR,gross_intake_lower_secondary,5,0,0,36,12.2,2013,2017,,0
+Republic of Korea,KOR,gross_intake_primary,38,0,0,3,92.7,1980,2017,,0
+Republic of Korea,KOR,ner_lower_secondary,12,2,0,27,34.1,2004,2017,2,0
+Republic of Korea,KOR,ner_preprimary,5,0,0,36,12.2,2013,2017,,0
+Republic of Korea,KOR,ner_primary,38,0,0,3,92.7,1980,2017,,0
+Republic of Korea,KOR,ner_secondary,30,8,0,3,92.7,1980,2017,4,0
+Republic of Korea,KOR,ner_upper_secondary,12,2,0,27,34.1,2004,2017,2,0
+Republic of Korea,KOR,oos_lower_secondary,21,0,0,20,51.2,2000,2020,,0
+Republic of Korea,KOR,oos_primary,21,0,0,20,51.2,2000,2020,,0
+Republic of Korea,KOR,oos_upper_secondary,21,0,0,20,51.2,2000,2020,,0
+Republic of Korea,KOR,overage_primary,38,0,0,3,92.7,1980,2017,,0
+Republic of Korea,KOR,ptr_primary,41,0,0,0,100.0,1980,2020,,0
+Republic of Korea,KOR,ptr_secondary,41,0,0,0,100.0,1980,2020,,0
+Republic of Korea,KOR,underage_primary,21,7,0,13,68.3,1990,2017,8,0

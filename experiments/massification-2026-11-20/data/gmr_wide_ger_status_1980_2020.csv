@@ -1,0 +1,247 @@
+country,iso3,year,ger_preprimary_status,ger_primary_status,ger_secondary_status,ger_lower_secondary_status,ger_upper_secondary_status,ger_tertiary_status
+Cambodia,KHM,1980,.,.,.,.,.,O
+Cambodia,KHM,1981,O,O,.,.,.,O
+Cambodia,KHM,1982,O,O,.,.,.,O
+Cambodia,KHM,1983,O,O,.,.,.,O
+Cambodia,KHM,1984,O,O,.,.,.,O
+Cambodia,KHM,1985,O,O,.,.,.,O
+Cambodia,KHM,1986,O,O,.,.,.,O
+Cambodia,KHM,1987,O,O,.,.,.,I
+Cambodia,KHM,1988,O,O,.,.,.,I
+Cambodia,KHM,1989,O,O,.,.,.,O
+Cambodia,KHM,1990,O,O,.,.,.,O
+Cambodia,KHM,1991,O,O,O,.,.,O
+Cambodia,KHM,1992,I,I,I,.,.,O
+Cambodia,KHM,1993,I,I,I,.,.,O
+Cambodia,KHM,1994,O,O,I,.,.,O
+Cambodia,KHM,1995,O,O,I,.,.,O
+Cambodia,KHM,1996,I,I,I,.,.,O
+Cambodia,KHM,1997,O,O,I,.,.,O
+Cambodia,KHM,1998,O,O,O,O,O,I
+Cambodia,KHM,1999,O,O,O,O,O,I
+Cambodia,KHM,2000,O,O,O,O,O,O
+Cambodia,KHM,2001,O,O,O,O,O,O
+Cambodia,KHM,2002,O,O,O,O,O,O
+Cambodia,KHM,2003,O,O,O,O,O,O
+Cambodia,KHM,2004,O,O,O,O,O,O
+Cambodia,KHM,2005,O,O,I,O,I,O
+Cambodia,KHM,2006,O,O,O,O,O,O
+Cambodia,KHM,2007,O,O,O,O,O,O
+Cambodia,KHM,2008,O,O,O,O,O,O
+Cambodia,KHM,2009,I,O,I,O,.,O
+Cambodia,KHM,2010,O,O,I,O,.,O
+Cambodia,KHM,2011,O,O,I,O,.,O
+Cambodia,KHM,2012,O,O,I,O,.,I
+Cambodia,KHM,2013,O,O,I,O,.,I
+Cambodia,KHM,2014,O,O,I,O,.,I
+Cambodia,KHM,2015,O,O,I,O,.,O
+Cambodia,KHM,2016,O,O,I,O,.,I
+Cambodia,KHM,2017,O,O,O,O,.,O
+Cambodia,KHM,2018,O,O,O,O,.,O
+Cambodia,KHM,2019,O,O,O,O,.,O
+Cambodia,KHM,2020,O,O,O,.,.,O
+Japan,JPN,1980,O,.,.,,,O
+Japan,JPN,1981,O,.,.,,,O
+Japan,JPN,1982,O,.,.,,,O
+Japan,JPN,1983,O,.,.,,,O
+Japan,JPN,1984,O,.,.,,,O
+Japan,JPN,1985,O,.,.,,,O
+Japan,JPN,1986,O,.,.,,,O
+Japan,JPN,1987,O,.,.,,,O
+Japan,JPN,1988,O,.,.,,,O
+Japan,JPN,1989,O,.,.,,,O
+Japan,JPN,1990,O,.,.,,,O
+Japan,JPN,1991,O,.,.,,,O
+Japan,JPN,1992,O,.,.,,,O
+Japan,JPN,1993,O,.,.,,,I
+Japan,JPN,1994,O,.,.,,,O
+Japan,JPN,1995,O,.,.,,,O
+Japan,JPN,1996,O,.,.,,,I
+Japan,JPN,1997,O,.,.,,,I
+Japan,JPN,1998,O,.,.,,,O
+Japan,JPN,1999,O,.,.,,,O
+Japan,JPN,2000,I,.,.,,,I
+Japan,JPN,2001,I,.,.,,,I
+Japan,JPN,2002,I,.,.,,,I
+Japan,JPN,2003,I,.,.,,,I
+Japan,JPN,2004,I,.,.,,,I
+Japan,JPN,2005,I,.,.,,,I
+Japan,JPN,2006,I,.,.,,,I
+Japan,JPN,2007,I,.,.,,,I
+Japan,JPN,2008,I,.,.,,,I
+Japan,JPN,2009,I,.,.,,,I
+Japan,JPN,2010,I,.,.,,,I
+Japan,JPN,2011,I,.,.,,,I
+Japan,JPN,2012,I,.,.,,,I
+Japan,JPN,2013,O,O,O,,,O
+Japan,JPN,2014,O,O,O,,,O
+Japan,JPN,2015,O,O,O,,,O
+Japan,JPN,2016,.,O,O,,,O
+Japan,JPN,2017,.,O,O,,,O
+Japan,JPN,2018,.,O,O,,,O
+Japan,JPN,2019,.,O,O,,,O
+Japan,JPN,2020,.,O,O,,,O
+"Hong Kong SAR, China",HKG,1980,O,.,.,.,.,O
+"Hong Kong SAR, China",HKG,1981,O,.,.,.,.,I
+"Hong Kong SAR, China",HKG,1982,O,.,.,.,.,O
+"Hong Kong SAR, China",HKG,1983,O,.,.,.,.,O
+"Hong Kong SAR, China",HKG,1984,O,.,.,.,.,O
+"Hong Kong SAR, China",HKG,1985,O,.,.,.,.,I
+"Hong Kong SAR, China",HKG,1986,O,.,.,.,.,I
+"Hong Kong SAR, China",HKG,1987,O,.,.,.,.,I
+"Hong Kong SAR, China",HKG,1988,O,.,.,.,.,I
+"Hong Kong SAR, China",HKG,1989,O,.,.,.,.,I
+"Hong Kong SAR, China",HKG,1990,O,.,.,.,.,I
+"Hong Kong SAR, China",HKG,1991,O,.,.,.,.,I
+"Hong Kong SAR, China",HKG,1992,O,.,.,.,.,O
+"Hong Kong SAR, China",HKG,1993,O,.,.,.,.,O
+"Hong Kong SAR, China",HKG,1994,O,.,.,.,.,O
+"Hong Kong SAR, China",HKG,1995,O,.,.,.,.,I
+"Hong Kong SAR, China",HKG,1996,O,.,.,.,.,I
+"Hong Kong SAR, China",HKG,1997,I,.,.,.,.,I
+"Hong Kong SAR, China",HKG,1998,O,.,.,O,.,I
+"Hong Kong SAR, China",HKG,1999,I,.,.,O,.,I
+"Hong Kong SAR, China",HKG,2000,I,.,.,O,.,I
+"Hong Kong SAR, China",HKG,2001,I,O,O,O,O,I
+"Hong Kong SAR, China",HKG,2002,I,O,O,O,O,I
+"Hong Kong SAR, China",HKG,2003,I,O,O,O,O,O
+"Hong Kong SAR, China",HKG,2004,I,O,O,O,O,O
+"Hong Kong SAR, China",HKG,2005,I,O,O,O,O,O
+"Hong Kong SAR, China",HKG,2006,I,O,O,O,O,O
+"Hong Kong SAR, China",HKG,2007,I,O,O,O,O,O
+"Hong Kong SAR, China",HKG,2008,I,O,O,O,O,O
+"Hong Kong SAR, China",HKG,2009,I,O,O,O,O,O
+"Hong Kong SAR, China",HKG,2010,I,O,O,O,O,O
+"Hong Kong SAR, China",HKG,2011,I,O,O,O,O,O
+"Hong Kong SAR, China",HKG,2012,O,O,O,O,O,O
+"Hong Kong SAR, China",HKG,2013,O,O,O,O,O,O
+"Hong Kong SAR, China",HKG,2014,O,O,O,O,O,O
+"Hong Kong SAR, China",HKG,2015,O,O,O,O,O,O
+"Hong Kong SAR, China",HKG,2016,O,O,O,O,O,O
+"Hong Kong SAR, China",HKG,2017,O,O,O,O,O,O
+"Hong Kong SAR, China",HKG,2018,O,O,O,O,O,O
+"Hong Kong SAR, China",HKG,2019,O,O,O,O,O,O
+"Hong Kong SAR, China",HKG,2020,O,O,O,.,.,O
+Philippines,PHL,1980,.,O,O,.,.,O
+Philippines,PHL,1981,O,O,O,.,.,O
+Philippines,PHL,1982,O,O,O,.,.,O
+Philippines,PHL,1983,O,O,O,.,.,O
+Philippines,PHL,1984,O,O,O,.,.,O
+Philippines,PHL,1985,O,O,O,.,.,O
+Philippines,PHL,1986,O,O,O,.,.,O
+Philippines,PHL,1987,O,O,O,.,.,O
+Philippines,PHL,1988,O,O,O,.,.,O
+Philippines,PHL,1989,O,O,O,.,.,O
+Philippines,PHL,1990,O,O,O,.,.,O
+Philippines,PHL,1991,O,O,O,.,.,O
+Philippines,PHL,1992,O,O,O,.,.,O
+Philippines,PHL,1993,O,O,O,.,.,I
+Philippines,PHL,1994,O,O,O,.,.,I
+Philippines,PHL,1995,O,O,O,.,.,O
+Philippines,PHL,1996,O,O,O,.,.,O
+Philippines,PHL,1997,O,O,O,.,.,I
+Philippines,PHL,1998,O,O,O,O,O,O
+Philippines,PHL,1999,O,O,O,O,O,O
+Philippines,PHL,2000,O,O,I,I,I,I
+Philippines,PHL,2001,O,O,O,O,O,O
+Philippines,PHL,2002,O,O,O,O,O,O
+Philippines,PHL,2003,O,O,O,O,O,O
+Philippines,PHL,2004,O,O,O,O,O,O
+Philippines,PHL,2005,O,O,O,O,O,O
+Philippines,PHL,2006,O,O,O,O,O,O
+Philippines,PHL,2007,O,O,O,O,O,I
+Philippines,PHL,2008,O,O,O,O,O,O
+Philippines,PHL,2009,O,O,O,O,O,O
+Philippines,PHL,2010,I,I,I,I,O,O
+Philippines,PHL,2011,I,I,I,I,O,O
+Philippines,PHL,2012,O,I,I,I,O,O
+Philippines,PHL,2013,O,I,I,I,I,O
+Philippines,PHL,2014,O,O,O,O,O,O
+Philippines,PHL,2015,O,O,O,O,O,O
+Philippines,PHL,2016,O,O,O,O,O,O
+Philippines,PHL,2017,O,O,O,O,O,O
+Philippines,PHL,2018,O,O,O,O,O,O
+Philippines,PHL,2019,O,O,O,.,.,O
+Philippines,PHL,2020,O,O,O,.,.,O
+China,CHN,1980,O,O,O,.,.,O
+China,CHN,1981,O,O,O,.,.,O
+China,CHN,1982,O,O,O,.,.,I
+China,CHN,1983,O,O,O,.,.,I
+China,CHN,1984,O,O,O,.,.,O
+China,CHN,1985,O,O,O,.,.,O
+China,CHN,1986,O,O,O,.,.,O
+China,CHN,1987,O,O,O,.,.,O
+China,CHN,1988,O,O,O,.,.,O
+China,CHN,1989,O,O,O,.,.,O
+China,CHN,1990,O,O,O,.,.,O
+China,CHN,1991,O,O,O,.,.,O
+China,CHN,1992,O,O,O,.,.,O
+China,CHN,1993,O,O,O,.,.,O
+China,CHN,1994,O,O,O,.,.,O
+China,CHN,1995,O,O,O,O,.,O
+China,CHN,1996,O,O,O,O,O,O
+China,CHN,1997,O,O,O,O,O,O
+China,CHN,1998,O,O,I,I,I,O
+China,CHN,1999,O,I,O,O,O,O
+China,CHN,2000,O,I,O,O,O,O
+China,CHN,2001,O,O,O,O,O,O
+China,CHN,2002,O,I,O,O,O,O
+China,CHN,2003,O,I,O,O,O,O
+China,CHN,2004,I,I,I,I,I,O
+China,CHN,2005,I,I,I,I,I,O
+China,CHN,2006,O,O,O,O,O,O
+China,CHN,2007,O,O,O,O,O,O
+China,CHN,2008,O,O,O,O,O,O
+China,CHN,2009,O,O,O,O,O,O
+China,CHN,2010,O,O,O,O,O,O
+China,CHN,2011,O,O,O,.,O,O
+China,CHN,2012,O,O,O,.,O,O
+China,CHN,2013,O,O,.,.,O,O
+China,CHN,2014,O,O,.,.,O,O
+China,CHN,2015,O,O,.,.,O,O
+China,CHN,2016,O,O,.,.,O,O
+China,CHN,2017,O,O,.,.,O,O
+China,CHN,2018,O,O,.,.,O,O
+China,CHN,2019,O,O,.,.,O,O
+China,CHN,2020,O,O,.,.,.,O
+Republic of Korea,KOR,1980,O,.,.,.,.,.
+Republic of Korea,KOR,1981,O,.,.,.,.,.
+Republic of Korea,KOR,1982,O,.,.,.,.,.
+Republic of Korea,KOR,1983,O,.,.,.,.,.
+Republic of Korea,KOR,1984,O,.,.,.,.,.
+Republic of Korea,KOR,1985,O,.,.,.,.,.
+Republic of Korea,KOR,1986,O,.,.,.,.,.
+Republic of Korea,KOR,1987,O,.,.,.,.,.
+Republic of Korea,KOR,1988,O,.,.,.,.,.
+Republic of Korea,KOR,1989,O,.,.,.,.,.
+Republic of Korea,KOR,1990,O,.,.,.,.,.
+Republic of Korea,KOR,1991,O,.,.,.,.,.
+Republic of Korea,KOR,1992,O,.,.,.,.,.
+Republic of Korea,KOR,1993,O,.,.,.,.,.
+Republic of Korea,KOR,1994,O,.,.,O,O,.
+Republic of Korea,KOR,1995,O,.,.,O,O,.
+Republic of Korea,KOR,1996,O,.,.,O,O,.
+Republic of Korea,KOR,1997,L,.,.,O,O,.
+Republic of Korea,KOR,1998,L,.,.,O,O,.
+Republic of Korea,KOR,1999,L,.,.,O,O,.
+Republic of Korea,KOR,2000,L,O,O,O,O,O
+Republic of Korea,KOR,2001,L,O,O,O,O,O
+Republic of Korea,KOR,2002,L,O,O,O,O,O
+Republic of Korea,KOR,2003,L,O,O,O,O,O
+Republic of Korea,KOR,2004,L,O,O,O,O,O
+Republic of Korea,KOR,2005,L,O,O,O,O,O
+Republic of Korea,KOR,2006,L,O,O,O,O,O
+Republic of Korea,KOR,2007,L,O,O,O,O,O
+Republic of Korea,KOR,2008,L,O,O,O,O,O
+Republic of Korea,KOR,2009,L,O,O,O,O,O
+Republic of Korea,KOR,2010,L,O,O,O,O,O
+Republic of Korea,KOR,2011,L,O,O,O,O,O
+Republic of Korea,KOR,2012,L,O,O,O,O,O
+Republic of Korea,KOR,2013,O,O,O,O,O,O
+Republic of Korea,KOR,2014,O,O,O,O,O,O
+Republic of Korea,KOR,2015,O,O,O,O,O,O
+Republic of Korea,KOR,2016,O,O,O,O,O,O
+Republic of Korea,KOR,2017,O,O,O,O,O,O
+Republic of Korea,KOR,2018,O,O,O,O,O,O
+Republic of Korea,KOR,2019,O,O,O,.,.,O
+Republic of Korea,KOR,2020,O,O,O,.,.,O

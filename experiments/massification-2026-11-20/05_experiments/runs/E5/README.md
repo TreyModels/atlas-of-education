@@ -1,0 +1,20 @@
+# E5 — Memory, learning and decision horizons
+
+Command: `PYTHONPATH=<work>/massabm "$PY" exp/run_E5.py --reps 3 --N 5000 --workers 2 --out <out>`
+
+E5 MEMORY, LEARNING AND DECISION HORIZONS
+reps=3 N=5000 wall=80s ok=15/15 failed=0
+belief_decay = weight kept each year on older observations; 0.88 ~ 5-year memory; 1.0 = infinite (reported as a limit,
+not a plausible parameter). belief_speed = mean |one-year change| in believed CE income 1980-2030.
+
+  arm                                          basic  colQ3-5  degree  tut/q35  belief speed
+  M0 very short memory (decay 0.0)             0.729    0.212   0.091   0.0400  0.29664(±0.01908)
+  M1 short memory (decay 0.5)                  0.720    0.368   0.161   0.0570  0.08321(±0.00362)
+  M2 baseline memory (decay 0.88, ~5yr)        0.718    0.386   0.168   0.0588  0.03093(±0.00049)
+  M3 long memory (decay 0.99)                  0.699    0.511   0.237   0.0673  0.01161(±0.00034)
+  M4 selection-corrected learning              0.706    0.436   0.200   0.0545  0.02687(±0.00131)
+
+PREDECLARED THRESHOLD (monotone memory effect on response speed and investment):
+  belief speed: decay0=0.29664  0.88=0.03093  0.99=0.01161  (2*sd between extremes ≈ 0.03817)
+  monotone? YES -> SUPPORTS a memory effect
+  college Q3-5: decay0=0.212 0.99=0.511 Δ=+0.2995 (2*sd≈0.0473)

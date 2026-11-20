@@ -1,0 +1,30 @@
+B2/B3 FLOOR-RACE TABLE AND ALLOCATION-RULE KNOCK-OUT (Batch B, independent rerun)
+reps=4 N=6000 wall=294s ok=72/72 failed=0
+No K-12 reform; cohorts entering 1995-2012, labour market 2010-30. Means at baseline demand
+(sd across reps). slope = d(Q3-5 college entry)/d(degree income) across demand scales 0/1/2;
+negative = intensification (invest more as degrees pay less). Stored E8 comparator: reps=4, N=6000,
+slopes ranked -0.039/-0.064/-0.049, unranked +0.151/+0.036/+0.630.
+
+  arm                                                 diploma     diploma Q1 formal|<dip formal|dip        colQ3-5 slope(pool)  slope(perrep)
+  ranked, no floor                               0.771(0.001)   0.571(0.004)       0.122      0.351   0.493(0.002)      -0.039   -0.039(0.009)
+  ranked, adaptive employer floor (baseline)     0.770(0.000)   0.569(0.002)       0.119      0.225   0.542(0.010)      -0.064   -0.063(0.006)
+  ranked, fixed rule-set floor                   0.772(0.001)   0.572(0.003)       0.117      0.354   0.492(0.002)      -0.049   -0.049(0.017)
+  unranked, no floor (lottery)                   0.731(0.003)   0.538(0.003)       0.436      0.450   0.180(0.013)      +0.151   +0.198(0.042)
+  unranked, adaptive employer floor              0.771(0.001)   0.570(0.003)       0.118      0.207   0.614(0.002)      +0.036   +0.037(0.022)
+  unranked, fixed rule-set floor                 0.771(0.001)   0.571(0.002)       0.118      0.495   0.478(0.008)      +0.630   +0.800(0.288)
+
+B2 unranked-lottery intensification slope at 4 reps:
+  pooled = +0.151 (stored E8 +0.151; 2-rep pilot +0.221)
+  per-rep mean = +0.198, sd = 0.042 (2sd bar 0.084)
+  decision: ranked_all_negative=True  lottery_positive_2sd=True
+  -> rank-dependence of intensification CONFIRMED at 4 reps
+
+B3 ALLOCATION-RULE KNOCK-OUT (same run set; utility/cost specification fixed):
+  allocation                                     slope(pool)  slope(perrep)     2sd deg-inc span
+  rank + employer cutoff (mode=full)                  -0.064   -0.063(0.006)   0.012        0.534
+  rank only, no cutoff (mode=no_floor)                -0.039   -0.039(0.009)   0.018        0.599
+  cutoff + random among eligible (mode=no_rank)       +0.036   +0.037(0.022)   0.045        0.401
+  random among all (mode=lottery)                     +0.151   +0.198(0.042)   0.084        0.216
+  non-rank arms with slope > 0 beyond 2sd: ['random among all (mode=lottery)']
+  -> the predeclared sign-flip threshold is NOT met; report as not identified / mixed.
+  arms with degree-income span < 0.1 (not identified): none

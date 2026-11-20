@@ -1,0 +1,292 @@
+{
+  "generated_utc": "2026-11-20T05:10:00Z",
+  "workspace": "/Users/treymenefee/Library/Mobile Documents/com~apple~CloudDocs/Downloads/DeepSeek/massification_2026-11-20",
+  "note": "Retrieval records for the Massification literature ledger. Saved files under 02_lit/raw/ are working copies for verification, not for redistribution. Access status vocabulary: full-text (retrieved and read), full-text-unread (retrieved, not yet mined), abstract-only (metadata/abstract only), landing-only (DOI/IDEAS/ERIC record; no abstract), blocked (HTTP 403/404/SSL).",
+  "records": [
+    {
+      "key": "yoo2003",
+      "url": "https://www.kdi.re.kr/upload/7036/V_YooYoonHa.pdf",
+      "http_status": 200,
+      "content_type": "application/pdf; charset=UTF-8",
+      "bytes": 368217,
+      "retrieved_utc": "2026-11-20T04:16:10Z",
+      "sha256": "479957d8b3ab4e505a9b3a3b1742bbc314bfc24042a07c1b79805af42afce6f4",
+      "saved_as": "raw/yoo2003_private_tutoring_rent_seeking.pdf",
+      "note": null
+    },
+    {
+      "key": "kim2007",
+      "url": "https://ncspe.tc.columbia.edu/working-papers/files/OP144.pdf",
+      "http_status": 200,
+      "content_type": "application/pdf",
+      "bytes": 165223,
+      "retrieved_utc": "2026-11-20T04:16:13Z",
+      "sha256": "39440b0f61a708174944fb2deb2562238892b5cc5e0c805c16cb88313c987727",
+      "saved_as": "raw/kim2007_game_theoretical_tutoring_korea.pdf",
+      "note": null
+    },
+    {
+      "key": "kang2026",
+      "url": "https://jaykanglabor.github.io/jobmarket/Tournament_WP.pdf",
+      "http_status": 200,
+      "content_type": "application/pdf",
+      "bytes": 1727221,
+      "retrieved_utc": "2026-11-20T04:16:15Z",
+      "sha256": "77baa52e63d312e8f0232cfe07f6a159f9d98ba90668f9eb52aff4a0c97b0c3d",
+      "saved_as": "raw/kang2026_parental_investment_rat_race.pdf",
+      "note": null
+    },
+    {
+      "key": "yang2026",
+      "url": "https://www.mdpi.com/2227-7099/14/9/415/pdf",
+      "http_status": 403,
+      "content_type": null,
+      "bytes": 0,
+      "retrieved_utc": "2026-11-20T04:16:17Z",
+      "sha256": null,
+      "saved_as": null,
+      "note": "HTTPError 403 Forbidden",
+      "access_status": "abstract-only",
+      "abstract_source": "RePEc record gam/jecomi/v14y2026i9p415-d2044259 (raw/yang2026_ideas_page.html)"
+    },
+    {
+      "key": "jayachandran2014",
+      "url": "https://seemajayachandran.com/tutoring.pdf",
+      "http_status": 200,
+      "content_type": "application/pdf",
+      "bytes": 295829,
+      "retrieved_utc": "2026-11-20T04:16:17Z",
+      "sha256": "53d1826d6842d24a63042ec631bf42520a1ce4a872e3c863d5530f614fcc2f41",
+      "saved_as": "raw/jayachandran2014_incentives_to_teach_badly.pdf",
+      "note": null
+    },
+    {
+      "key": "gxl2017",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5509065/",
+      "http_status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 206627,
+      "retrieved_utc": "2026-11-20T04:16:19Z",
+      "sha256": "50a87f081ba6a5cd859d37de949e583294e8e13b1ab3dd9d6eaaad66b0568b70",
+      "saved_as": "raw/gxl2017_work_education_mismatch_pmc.html",
+      "note": null
+    },
+    {
+      "key": "ostrovsky2010",
+      "url": "https://web.stanford.edu/~ost/papers/disclosure6.pdf",
+      "http_status": 200,
+      "content_type": "application/pdf",
+      "bytes": 241990,
+      "retrieved_utc": "2026-11-20T04:16:20Z",
+      "sha256": "46dc64e96170a3ab81892f5edaa1c6f6e2428fff60721fe48adcc0d4f0a187a1",
+      "saved_as": "raw/ostrovsky_schwarz2010_disclosure_unraveling.pdf",
+      "note": null
+    },
+    {
+      "key": "bray2016",
+      "url": "https://hub.hku.hk/bitstream/10722/225919/1/Content.pdf",
+      "http_status": 403,
+      "content_type": null,
+      "bytes": 0,
+      "retrieved_utc": "2026-11-20T04:16:22Z",
+      "sha256": null,
+      "saved_as": null,
+      "note": "HTTPError 403 Forbidden"
+    },
+    {
+      "key": "braykwok2003",
+      "url": "https://web.edu.hku.hk/f/staff/376/Bray_%26_Kwok_Tutoring_EER_1.pdf",
+      "http_status": null,
+      "content_type": null,
+      "bytes": 0,
+      "retrieved_utc": "2026-11-20T04:16:23Z",
+      "sha256": null,
+      "saved_as": null,
+      "note": "SSLError: [SSL: DECRYPTION_FAILED_OR_BAD_RECORD_MAC] decryption failed or bad record mac (_ssl.c:2536)"
+    },
+    {
+      "key": "he2024",
+      "url": "https://arxiv.org/pdf/2412.10974",
+      "http_status": 200,
+      "content_type": "application/pdf",
+      "bytes": 938795,
+      "retrieved_utc": "2026-11-20T04:16:24Z",
+      "sha256": "18240cbfa71f65d3518372df20b5fbe32245bef3c06d21db3f5f23fd4f58b707",
+      "saved_as": "raw/he2024_quantifying_educational_competition.pdf",
+      "note": null
+    },
+    {
+      "key": "gee2012",
+      "url": "https://lkyspp.nus.edu.sg/docs/default-source/ips/wp-20_the-educational-arms-race-all-for-one-loss-for-all.pdf",
+      "http_status": 200,
+      "content_type": "application/pdf",
+      "bytes": 257462,
+      "retrieved_utc": "2026-11-20T04:16:26Z",
+      "sha256": "f0ff490c15fa034bee03f672b4b19ca61a9a60f7ebdb761d9f6eb3f491b8f592",
+      "saved_as": "raw/gee2012_educational_arms_race_singapore.pdf",
+      "note": null
+    },
+    {
+      "key": "biswal1999",
+      "url": "https://www.ide.go.jp/English/Publish/Periodicals/De/037_2/99_02_04_46_pdf.html",
+      "http_status": 200,
+      "content_type": "text/html",
+      "bytes": 47125,
+      "retrieved_utc": "2026-11-20T04:16:29Z",
+      "sha256": "5dcfa92d240826572525fcdc4098ed83c3001413f3437c624b385f63735e7ce9",
+      "saved_as": "raw/biswal1999_tutoring_public_corruption.html",
+      "note": null
+    },
+    {
+      "key": "edmonds_moss",
+      "url": "https://ccl.northwestern.edu/2004/henein2004.pdf",
+      "http_status": 200,
+      "content_type": "application/pdf",
+      "bytes": 3617976,
+      "retrieved_utc": "2026-11-20T04:16:32Z",
+      "sha256": "2db70b7273280d4d463de44f8f756277a67e493d82c5e841a40b389f212fb3ab",
+      "saved_as": "raw/edmonds_moss2004_kiss_to_kids.pdf",
+      "note": null
+    },
+    {
+      "key": "yuding2011",
+      "url": "https://doi.org/10.1007/s11516-011-0132-4",
+      "http_status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 3038,
+      "retrieved_utc": "2026-11-20T04:16:38Z",
+      "sha256": "32ed63159c77e21ee19ca1b9aa3213ccf0218eb59539560b132a8e68ef0e18ea",
+      "saved_as": "raw/yuding2011_doi_landing.html",
+      "note": null
+    },
+    {
+      "key": "sahasaha2009",
+      "url": "https://doi.org/10.1177/097492921000100305",
+      "http_status": 403,
+      "content_type": null,
+      "bytes": 0,
+      "retrieved_utc": "2026-11-20T04:16:40Z",
+      "sha256": null,
+      "saved_as": null,
+      "note": "HTTPError 403 Forbidden"
+    },
+    {
+      "key": "illepeacey2019",
+      "url": "https://doi.org/10.1016/j.ijedudev.2018.12.003",
+      "http_status": 200,
+      "content_type": "text/html;charset=UTF-8",
+      "bytes": 2687,
+      "retrieved_utc": "2026-11-20T04:16:41Z",
+      "sha256": "d9c80eb67fd25a3179f3553e87113c0fef4825c053a5157040a8eb7ccaffa826",
+      "saved_as": "raw/illepeacey2019_doi_landing.html",
+      "note": null
+    },
+    {
+      "key": "bray2014",
+      "url": "https://doi.org/10.1016/j.econedurev.2013.10.002",
+      "http_status": 200,
+      "content_type": "text/html;charset=UTF-8",
+      "bytes": 2731,
+      "retrieved_utc": "2026-11-20T04:16:44Z",
+      "sha256": "051bbc047647cf5e732b8aabef6ee8b3d5bd76dd2d13884677916173e2bfb923",
+      "saved_as": "raw/bray2014_doi_landing.html",
+      "note": null
+    },
+    {
+      "key": "choi2010",
+      "url": "https://ideas.repec.org/a/eaa/eerese/v10y2010i3_2.html",
+      "http_status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "bytes": 51163,
+      "retrieved_utc": "2026-11-20T04:16:45Z",
+      "sha256": "e4e03c2f1a5b6a6773018c4c8221ca253dbc14e39ff7afd43d7ee8ff759bcbe4",
+      "saved_as": "raw/choi2010_ideas_page.html",
+      "note": null
+    },
+    {
+      "key": "suenxu",
+      "url": "https://hub.hku.hk/cris/project/hkugrant127273",
+      "http_status": 403,
+      "content_type": null,
+      "bytes": 0,
+      "retrieved_utc": "2026-11-20T04:16:48Z",
+      "sha256": null,
+      "saved_as": null,
+      "note": "HTTPError 403 Forbidden"
+    },
+    {
+      "key": "boudon1974",
+      "url": "https://eric.ed.gov/?id=ED091493",
+      "http_status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 11665,
+      "retrieved_utc": "2026-11-20T04:16:48Z",
+      "sha256": "3402ca2236600d6cb489547a810ac829895f396d163b6ba5a05d5c77ba3c1868",
+      "saved_as": "raw/boudon1974_eric_page.html",
+      "note": null
+    },
+    {
+      "key": "stange2012",
+      "url": "https://doi.org/10.1257/app.4.1.49",
+      "http_status": 403,
+      "content_type": null,
+      "bytes": 0,
+      "retrieved_utc": "2026-11-20T04:16:50Z",
+      "sha256": null,
+      "saved_as": null,
+      "note": "HTTPError 403 Forbidden"
+    },
+    {
+      "key": "paglayan2024",
+      "url": "https://doi.org/10.1017/S0003055423000748",
+      "http_status": 404,
+      "content_type": null,
+      "bytes": 0,
+      "retrieved_utc": "2026-11-20T04:16:52Z",
+      "sha256": null,
+      "saved_as": null,
+      "note": "HTTPError 404 Not Found"
+    },
+    {
+      "key": "mousley2025",
+      "url": "https://www.nature.com/articles/s41467-025-64438-7",
+      "http_status": 404,
+      "content_type": null,
+      "bytes": 0,
+      "retrieved_utc": "2026-11-20T04:16:53Z",
+      "sha256": null,
+      "saved_as": null,
+      "note": "HTTPError 404 Not Found"
+    },
+    {
+      "key": "ngyip2020",
+      "url": "https://doi.org/10.1016/j.econmod.2019.09.033",
+      "http_status": 200,
+      "content_type": "text/html;charset=UTF-8",
+      "bytes": 2684,
+      "retrieved_utc": "2026-11-20T04:16:56Z",
+      "sha256": "b4d80515185c28ec1fc1aee8379e737f82265b81ee7a0b111845af632acd46b4",
+      "saved_as": "raw/ngyip2020_doi_landing.html",
+      "note": "DOI GUESS WAS WRONG. I constructed 10.1016/j.econmod.2019.09.033 from the citation in June's reference list; it resolves to Rhee & Song, 'Wage rigidities and unemployment fluctuations in a small open economy', Economic Modelling - NOT Ng & Yip. The saved file is that unrelated article's landing page and must not be cited. Ng & Yip (2020) remains UNVERIFIED and its printed subtitle matches Gee (2012) IPS WP 20. See MANUSCRIPT_COMPARISON \u00a72.1."
+    },
+    {
+      "key": "yang2026_repec",
+      "url": "https://ideas.repec.org/a/gam/jecomi/v14y2026i9p415-d2044259.html",
+      "http_status": 200,
+      "content_type": "text/html",
+      "retrieved_utc": "2026-11-20T05:07:00Z",
+      "saved_as": "raw/yang2026_ideas_page.html",
+      "sha256": "08c83d62d0c60448fb5f4c930955bb58890b4c0c059d13c59ae21d5cc50e6e3e",
+      "bytes": 37553
+    },
+    {
+      "key": "stange2012",
+      "url": "https://pubs.aeaweb.org/doi/pdf/10.1257/app.4.1.49",
+      "http_status": 403,
+      "content_type": "text/html",
+      "retrieved_utc": "2026-11-20T05:07:00Z",
+      "saved_as": null,
+      "note": "AEA paywall; PDF not retrieved. Abstract/metadata not independently verified this session."
+    }
+  ]
+}

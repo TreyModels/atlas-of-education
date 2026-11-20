@@ -1,0 +1,25 @@
+{
+ "eid": "E8",
+ "reps": 2,
+ "N": 6000,
+ "workers": 2,
+ "scales": [
+  0.0,
+  1.0,
+  2.0
+ ],
+ "arms": [
+  "ranked, no floor",
+  "ranked, adaptive employer floor (baseline)",
+  "ranked, fixed rule-set floor",
+  "unranked, no floor (lottery)",
+  "unranked, adaptive employer floor",
+  "unranked, fixed rule-set floor"
+ ],
+ "wall_seconds": 184.7420253753662,
+ "runs": 36,
+ "runs_ok": 36,
+ "failed": [],
+ "mean_run_seconds": 10.153110947873857,
+ "max_run_seconds": 16.860603094100952
+}

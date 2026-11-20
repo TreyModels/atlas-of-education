@@ -1,0 +1,44 @@
+{
+ "eid": "E13c",
+ "reps": 3,
+ "N": 5000,
+ "wall": 189.30641508102417,
+ "runs": 36,
+ "ok": 36,
+ "failed": [],
+ "calibration": [
+  {
+   "sigma": 0.5,
+   "target_share": 0.28624509854283314,
+   "target_degree_income": 2.9252857489639146,
+   "mult": 0.5839310643039786,
+   "scale": 1.0823218355417938,
+   "achieved_share": 0.2795219026075261,
+   "achieved_degree_income": 11.388160189666827,
+   "rival_share_unmatched": 0.4407894736842105,
+   "rival_degree_income_unmatched": 24.463529315363544
+  },
+  {
+   "sigma": 1.0,
+   "target_share": 0.28624509854283314,
+   "target_degree_income": 2.9252857489639146,
+   "mult": 0.5153308133085255,
+   "scale": 0.6365909767370154,
+   "achieved_share": 0.2794764974060682,
+   "achieved_degree_income": 1.4571951469678224,
+   "rival_share_unmatched": 0.4924401061847681,
+   "rival_degree_income_unmatched": 3.6343264857209165
+  },
+  {
+   "sigma": 2.0,
+   "target_share": 0.28624509854283314,
+   "target_degree_income": 2.9252857489639146,
+   "mult": 0.613463823501291,
+   "scale": 1.408158598865662,
+   "achieved_share": 0.28754213271175355,
+   "achieved_degree_income": 2.706343180813489,
+   "rival_share_unmatched": 0.4766318974160525,
+   "rival_degree_income_unmatched": 1.963988852300046
+  }
+ ]
+}

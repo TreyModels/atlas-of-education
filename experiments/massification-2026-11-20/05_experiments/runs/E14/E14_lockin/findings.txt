@@ -1,0 +1,15 @@
+LOCK-IN: the same removals, made at year 0 vs. year 90 (after the system matures). End state, years 120-139.
+
+  arm                                       years  upper+ tertiary+ cred hiring  floor state funds to
+  full system                                11.5    0.58      0.38        0.83    3.8            4.1
+  household removed EARLY (year 0)            8.2    0.26      0.00        0.80    2.6            3.0
+  household removed LATE (year 90)            8.1    0.25      0.00        0.73    2.6            3.0
+  employer removed EARLY (year 0)            10.0    0.58      0.00        0.00    nan            3.0
+  employer removed LATE (year 90)            11.6    0.58      0.38        0.00    nan            4.2
+  state removed EARLY (year 0)               10.4    0.52      0.21        0.87    3.4            0.0
+  state removed LATE (year 90)               10.5    0.52      0.22        0.85    3.5            0.8
+  kin networks restored (year 90)            11.7    0.58      0.37        0.05    4.4            4.6
+
+Read: lock-in = a LATE removal leaves the pipeline much closer to the full system than an EARLY removal does.
+If late and early removals end in the same place, there is no lock-in: the pipeline is only as strong as its weakest current support.
+Restoring kin networks asks whether the pipeline survives the disappearance of the problem that started it.

@@ -1,0 +1,16 @@
+{
+ "eid": "E13b",
+ "reps": 6,
+ "N": 5000,
+ "wall": 282.02288484573364,
+ "runs": 72,
+ "ok": 72,
+ "failed": [],
+ "mean_run": 7.812140332327949,
+ "sigmas": [
+  0.5,
+  1.0,
+  2.0
+ ],
+ "decision": "contradicted if rival d_diploma_income<=0 at any sigma"
+}

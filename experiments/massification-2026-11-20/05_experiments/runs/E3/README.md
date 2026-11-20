@@ -1,0 +1,29 @@
+# E3 — Household liquidity, credit and shocks
+
+Command actually run:
+```
+PYTHONPATH=<work>/massabm MASSRUN_EXP=<work>/exp \
+  "$PY" exp/run_E3.py --reps 3 --N 5000 --workers 2 --out /tmp/massrun/runs/E3
+```
+
+E3 HOUSEHOLD LIQUIDITY, CREDIT AND SHOCKS
+reps=3 N=5000 wall=48s ok=18/18 failed=0
+All arms share matched cohorts and seed list 21000+r; no K-12 reform change; window cohorts 1995-2012.
+
+  arm                                      basic  basicQ1   Q5-Q1  colQ3-5  liq exit   liqQ1  choiceQ1
+  1 baseline (borrow 0.5, shock sd 0.5)    0.715    0.462   0.321    0.378    0.4038  0.7036    0.0116
+  2 hard cash cutoff (borrow 0)            0.501    0.017   0.781    0.355    0.7283  0.9832    0.0000
+  3 expanded credit (borrow 1.0)           0.742    0.665   0.090    0.463    0.2477  0.5741    0.0175
+  4 temporary shock (shock sd 0.9)         0.714    0.408   0.388    0.383    0.5214  0.7852    0.0047
+  5 shock + no credit                      0.212    0.001   0.634    0.187    0.8977  0.9991    0.0000
+  6 free basic schooling + CCT             0.749    0.611   0.178    0.396    0.3991  0.6623    0.0067
+
+PREDECLARED CONTRASTS (matched seeds, 2 seed sd in parentheses):
+  hard cutoff vs baseline: Q1 liquidity exits          Δ=+0.2796 (2*sd≈0.0146) -> clears threshold
+  hard cutoff vs baseline: Q5-Q1 completion gap        Δ=+0.4604 (2*sd≈0.0098) -> clears threshold
+  expanded credit vs baseline: Q5-Q1 gap               Δ=-0.2311 (2*sd≈0.0081) -> clears threshold
+  shock vs baseline: Q1 completion                     Δ=-0.0539 (2*sd≈0.0044) -> clears threshold
+  shock+no credit vs shock: Q1 completion              Δ=-0.4617 (2*sd≈0.0034) -> clears threshold
+  free+CCT vs baseline: Q1 completion                  Δ=+0.1485 (2*sd≈0.0044) -> clears threshold
+
+Caveat: massabm borrow is a quantity (share of income), not a price; no interest rate is modelled.

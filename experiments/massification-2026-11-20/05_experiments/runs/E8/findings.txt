@@ -1,0 +1,30 @@
+E8 THE RACE AND THE FLOOR -- 6 arms x formal-demand scale x matched seeds
+reps=4 N=6000 workers=2 no K-12 reform; cohorts entering 1995-2012, labour 2010-30.
+wall=332s, runs_ok=72/72, failed=0
+
+  arm                                                diploma    diploma Q1 formal|<dip formal|dip       colQ3-5    slope
+  ranked, no floor                              0.771(0.001)  0.571(0.004)       0.122      0.351  0.493(0.002)   -0.039
+  ranked, adaptive employer floor (baseline)    0.770(0.000)  0.569(0.002)       0.119      0.225  0.542(0.010)   -0.064
+  ranked, fixed rule-set floor                  0.772(0.001)  0.572(0.003)       0.117      0.354  0.492(0.002)   -0.049
+  unranked, no floor (lottery)                  0.731(0.003)  0.538(0.003)       0.436      0.450  0.180(0.013)   +0.151
+  unranked, adaptive employer floor             0.771(0.001)  0.570(0.003)       0.118      0.207  0.614(0.002)   +0.036
+  unranked, fixed rule-set floor                0.771(0.001)  0.571(0.002)       0.118      0.495  0.478(0.008)   +0.630
+
+FLOOR EFFECTS holding ranking fixed (fixed/adaptive floor minus no floor):
+  ranked    adaptive employer floor (baseline) diploma_all                -0.0011 (seed sd 0.0013)
+  ranked    adaptive employer floor (baseline) diploma_q1                 -0.0020 (seed sd 0.0042)
+  ranked    adaptive employer floor (baseline) formal_rate_below_diploma  -0.0022 (seed sd 0.0013)
+  ranked    adaptive employer floor (baseline) college_q35                +0.0489 (seed sd 0.0104)
+  ranked    fixed rule-set floor             diploma_all                +0.0004 (seed sd 0.0015)
+  ranked    fixed rule-set floor             diploma_q1                 +0.0001 (seed sd 0.0048)
+  ranked    fixed rule-set floor             formal_rate_below_diploma  -0.0041 (seed sd 0.0021)
+  ranked    fixed rule-set floor             college_q35                -0.0018 (seed sd 0.0031)
+  unranked  fixed rule-set floor             diploma_all                +0.0405 (seed sd 0.0034)
+  unranked  fixed rule-set floor             diploma_q1                 +0.0331 (seed sd 0.0031)
+  unranked  fixed rule-set floor             formal_rate_below_diploma  -0.3184 (seed sd 0.0055)
+  unranked  fixed rule-set floor             college_q35                +0.2985 (seed sd 0.0150)
+
+Read: an eligibility-rule floor should move exclusion (formal|<dip) and persistence;
+the intensity of investment (slope < 0 = invest more as degrees pay less) should need
+the RANK race, not the floor. A floor arm that shows both is not identified separately.
+elapsed_wall_seconds=332.3 per_run_seconds=9.21 max=13.49

@@ -1,0 +1,33 @@
+B5 / E16 CREDENTIAL READERS — NEW implementation (static screening model; NOT the paper E16)
+N=2000 applicants, M=300 formal vacancies, 10 matched seeds, 5 arms x 16 factor combos = 800 cells.
+True productivity p = ability + 0.25*(2 x credential tier): schooling is productive, so no arm is
+optimal by construction. Baseline = accuracy high (noise 0.3), screening cost 0, no network, rho=1.
+
+  arm                    coverage    p_error  excl top1/3    SES gap  formal sh  cert demand
+  detailed_domestic     0.851(0.016)  0.045        0.550     +0.105      0.150        0.062
+  coarse_domestic       0.565(0.022)  0.411        0.620     +0.269      0.150        0.217
+  skill_test            0.696(0.018)  0.179        0.568     +0.007      0.150        0.000
+  eligibility_rule      0.397(0.021)  0.724        0.677     +0.206      0.150        0.169
+  foreign_reader        0.662(0.027)  0.259        0.592     +0.250      0.150        0.194
+
+  detailed vs coarse p_error: -0.365 (2sd 0.076, sign 10/10) -> DISTINGUISHABLE
+  skill test vs detailed p_error: +0.133 (2sd 0.027, sign 10/10) -> DISTINGUISHABLE
+  detailed vs coarse cert demand: -0.155 (2sd 0.030, sign 10/10) -> DISTINGUISHABLE
+
+  foreign reader, rho=1.0 -> 0.3: coverage +0.105 (2sd 0.049), p_error -0.137 (2sd 0.050), top-tertile exclusion -0.032 (2sd 0.014)
+
+Factor sensitivities, detailed domestic arm (baseline vs one-factor change, 10 seeds):
+  accuracy low         coverage  0.653 (base 0.851), SES hire gap +0.090 (base +0.105), top-tertile exclusion 0.593, cert demand 0.055
+  screening cost 0.5   coverage  0.835 (base 0.851), SES hire gap +0.130 (base +0.105), top-tertile exclusion 0.551, cert demand 0.058
+  network 0.3          coverage  0.729 (base 0.851), SES hire gap +0.186 (base +0.105), top-tertile exclusion 0.616, cert demand 0.050
+
+Read (stylized model, NOT empirical hiring estimates):
+  - a detailed domestic reader and a skill test both beat a coarse credential reader on hiring
+    error at the declared baseline; the coarse reader pays for discarding within-tier ability.
+  - the skill test is not free: it ignores the schooling component of productivity (omega>0),
+    so its advantage over the detailed reader is bounded and it has near-zero certification
+    demand by construction (declared limitation, not a finding).
+  - screening costs and SES-linked networks convert reader quality into SES exclusion; the
+    cost/network cells, not the reader choice alone, produce the largest SES hire gap.
+  - cross-border recognition (rho 1.0 -> 0.3) raises foreign-reader error and top-tertile
+    exclusion and lowers coverage of the genuinely best applicants.

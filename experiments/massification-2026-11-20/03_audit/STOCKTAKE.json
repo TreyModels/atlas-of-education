@@ -1,0 +1,744 @@
+{
+ "audit": {
+  "auditor": "repo-auditor",
+  "date": "2026-11-20",
+  "root": "massification_2026-11-20",
+  "scope": "03_audit/ only",
+  "task": "task-2",
+  "lead": "lead"
+ },
+ "sources": {
+  "massification_project": {
+   "path": "01_sources/massification_project",
+   "vcs": null,
+   "git_commit": null,
+   "note": "No .git; prior docking note 02cade9d not verifiable from this copy. Content dates Oct 25 - Nov 5 2026."
+  },
+  "atlas": {
+   "path": "01_sources/atlas-main-55732f4",
+   "vcs": "git worktree",
+   "git_commit": "55732f4728a13adb3aec5173d8bc7f3a4ac7f926",
+   "note": "clean at audit start"
+  },
+  "project_hashes_sha256": {
+   "code/massabm/run.py": "f2e23a62bd78919c229bf24530a25a34b8562aa9d161cc5d240663e396565ddd",
+   "code/massabm/massabm/model.py": "2b6484e7a98866f8362a216b118cf8abbfefc7236b9278d2ec0ac47d6eafeb40",
+   "code/massabm/massabm/params.py": "6a4d133a3369b8a34ceb905dfa4fd66e0a0369b44aa710ab17dc3ec0deffe2d9",
+   "code/massabm/massabm/experiments.py": "6648fdc2886a1978270c7851dbc401667a0175736a06efc5ed5699f503101044",
+   "code/massabm/massabm/experiments2.py": "799dc0f29548e011f2e283e8f1129fdc087ce5ee2fe55724162af0b21edea8d7",
+   "code/massabm/massabm/experiments3.py": "2c00e0c27d08354c792f5d195b27da9e934a6a99ebff2b8de8c335b77ac0c6a5",
+   "code/massabm/massabm/experiments4.py": "0fa167d99455b0fa3e22c91dd7d1b577adccdad90a89d4eb93a79deec5d13203",
+   "code/massabm/massabm/experiments8.py": "c01873347e5542c6badb5c40023c8216c0e07fdc6628ac2273d68205dd456401",
+   "code/massabm/massabm/fiscal.py": "a136e071392d9e6ffdff7ca9bf175d651e377a5029f839fe52ffbf0bdd547ffe",
+   "code/triad/run_triad.py": "6e99b29d8a85872f986f936612b0ff569fcfd4c4708b608fcb3ce71b56e6b227",
+   "code/triad/triad/model.py": "7b22d93cab66f8c4af08f3131800f8dc5489f5f9041cd66dc5b327053314ccea",
+   "code/triad/triad/experiments.py": "1a9e1bac3c7c7ed28a9dfd2a64b1e9e063412878bd08b5e5e1fcb626c71d30b3",
+   "code/triad/triad/experiments_r3.py": "7e784fed22626e21339c5ac79758d9356f6d71f27491d0cb974bae32f7c839a2",
+   "code/triad/triad/experiments_r4.py": "4c638c9466609ca8a7ffaeec16fd562b44593b1c64e30686072e21e76ef3944d",
+   "code/triad/triad/experiments_r6.py": "3cd5993a47afbdc74a605cebc9e88e11fcd625cb25424ffef9aeb432fc5359fb",
+   "paper/Massification_and_Its_Mechanisms.md": "1138d453a79243f573b57f971369a61f598aecc6f4882f7ff052fd1ea90228cf"
+  },
+  "atlas_engine_hashes_sha256": {
+   "engine/floorworld.py": "28ba9d4c6a707a637ef97ddffb29ec88f7b4312e7821475bc838f3d7336f59c3",
+   "engine/floorworld_mc.py": "0f2b7b0a9547166899310e967332a141421ca7ed1535c7ace85a51d9809637d8",
+   "engine/childworld.py": "ae73adb2a6d9c75d59966390e4304437479ff310a8724093e9108e9d26a23cab",
+   "engine/childworld_mc.py": "944d104059aa62c0ac3bad73432815009a813336208fa4f0700a39b3171bb464",
+   "engine/relfloor.py": "82c1cef0eb2c75ff555bc622403cbdfe3a79c13415a0b7a1a2d4350ab6889ee2",
+   "engine/relfloor_countries.py": "6bc38e80d49407b1f98e78bf132c66dbc8910286a214f9169565b1b3e7fae1d8",
+   "engine/relfloor_gate.py": "cef2d0983bcc808137d4d50ef64ffce06c8afc9c16f516cdb5d237f7b8aa9bcb",
+   "engine/mc.py": "52ab4bae4d0042d2fa32aeb1c4238fe09ee41b815f5f9da161d0d3d320d33cde"
+  },
+  "stored_result_hashes_sha256": {
+   "results/round8_mechanisms_and_ledger_fix/floor_test/findings.txt": "730db4a26fae7e0b6adbf1f87616dfdc46a69647d2fa8bb0cbccef9192c4a134",
+   "results/round2b_three_actor_model/30_replications/necessity/findings.txt": "2cd0701a2e0339eb5e213ae8d97496918f33efc600401a9ebb2280029eeaad46"
+  }
+ },
+ "environment": {
+  "python": "3.11.17",
+  "numpy": "2.4.6",
+  "scipy": "1.17.1",
+  "pandas": "3.1.1",
+  "matplotlib": "3.11.2",
+  "historical_runs": "Python 3.10.2 / numpy 2.2.6 / scipy 1.15.3 / matplotlib 3.10.9 (round-2 notes)",
+  "cores": 8
+ },
+ "engines": [
+  {
+   "name": "massabm",
+   "path": "01_sources/massification_project/code/massabm",
+   "kind": "agent-based case model",
+   "country": "Philippines (+korea sketch)",
+   "horizon": "1920-2035 annual",
+   "executed": true,
+   "entry": "python run.py <experiment> --out ...",
+   "status": "current",
+   "limitations": "loosely fitted; nurse response 0.25 vs ~9; post-K-12 recovery not reproduced; fiscal params first guesses"
+  },
+  {
+   "name": "massabm.fiscal",
+   "path": "01_sources/massification_project/code/massabm/massabm/fiscal.py",
+   "kind": "state ledger",
+   "country": "Philippines",
+   "horizon": "annual to 2080",
+   "executed": true,
+   "entry": "imported by experiments",
+   "status": "current",
+   "limitations": "ledger rates first guesses; K-12 payback unreliable due to college-shrink flaw"
+  },
+  {
+   "name": "triad",
+   "path": "01_sources/massification_project/code/triad",
+   "kind": "abstract agent-based 3-actor model",
+   "country": "none",
+   "horizon": "140 years annual",
+   "executed": true,
+   "entry": "python run_triad.py <experiment> --out ...",
+   "status": "current",
+   "limitations": "contributions are knockout deltas within specification; employer leg depends on costly noisy tests"
+  },
+  {
+   "name": "floorworld",
+   "path": "01_sources/atlas-main-55732f4/engine/floorworld.py",
+   "kind": "aggregate cohort model",
+   "country": "China, Vietnam, Philippines, Cambodia",
+   "horizon": "1980-2035 annual",
+   "executed": true,
+   "entry": "import simulate(country, structure, theta)",
+   "status": "current",
+   "limitations": "stylised schedules are inputs, not fitted; no validation"
+  },
+  {
+   "name": "floorworld_mc",
+   "path": "01_sources/atlas-main-55732f4/engine/floorworld_mc.py",
+   "kind": "pattern-oriented MC",
+   "country": "same 4",
+   "horizon": "1980-2035",
+   "executed": true,
+   "entry": "python engine/floorworld_mc.py --draws N",
+   "status": "current",
+   "limitations": "prior-based screen, not truth probabilities; needs engine/results to exist"
+  },
+  {
+   "name": "childworld",
+   "path": "01_sources/atlas-main-55732f4/engine/childworld.py",
+   "kind": "school/work household engine",
+   "country": "generic Asia",
+   "horizon": "8-year worlds annual",
+   "executed": false,
+   "entry": "import simulate",
+   "status": "current",
+   "limitations": "simplified work classification; stylised values"
+  },
+  {
+   "name": "childworld_mc",
+   "path": "01_sources/atlas-main-55732f4/engine/childworld_mc.py",
+   "kind": "MC/ABC over childworld",
+   "country": "Asian countries in data file",
+   "horizon": "8-year worlds",
+   "executed": true,
+   "entry": "python engine/childworld_mc.py --worlds 6000",
+   "status": "current",
+   "limitations": "100-world smoke only; most countries <5 accepted worlds; v1 failed India composition test"
+  },
+  {
+   "name": "relfloor",
+   "path": "01_sources/atlas-main-55732f4/engine/relfloor.py",
+   "kind": "household credential-value engine",
+   "country": "Philippines",
+   "horizon": "1998-2036 annual",
+   "executed": true,
+   "entry": "import simulate; smoke via driver",
+   "status": "current",
+   "limitations": "stylised units; patterns not estimates"
+  },
+  {
+   "name": "relfloor_countries",
+   "path": "01_sources/atlas-main-55732f4/engine/relfloor_countries.py",
+   "kind": "country screen of relfloor",
+   "country": "Cambodia, Vietnam, China",
+   "horizon": "1998-2035 annual",
+   "executed": true,
+   "entry": "python engine/relfloor_countries.py 24000 (default)",
+   "status": "current",
+   "limitations": "HC/POS/REL not identifiable on wealth profiles; 120-draw smoke has thin acceptance"
+  },
+  {
+   "name": "relfloor_gate",
+   "path": "01_sources/atlas-main-55732f4/engine/relfloor_gate.py",
+   "kind": "institutional gate/recovery design",
+   "country": "Cambodia",
+   "horizon": "1998-2035",
+   "executed": false,
+   "entry": "module (recovery designs)",
+   "status": "current",
+   "limitations": "screened-job share unsourced; observation-error SDs assumed"
+  },
+  {
+   "name": "relfloor_mc",
+   "path": "01_sources/atlas-main-55732f4/engine/relfloor_mc.py",
+   "kind": "MC over relfloor",
+   "country": "Philippines",
+   "horizon": "1998-2035",
+   "executed": false,
+   "entry": "python engine/relfloor_mc.py",
+   "status": "current",
+   "limitations": "acceptance bands are judgement choices"
+  },
+  {
+   "name": "firms",
+   "path": "01_sources/atlas-main-55732f4/engine/firms/",
+   "kind": "China youth labour market + Tilly categorical core",
+   "country": "China",
+   "horizon": "monthly",
+   "executed": false,
+   "entry": "python -m firms.calibrate_china (~60 min)",
+   "status": "current",
+   "limitations": "Aug-2021 residual is not a measured Double Reduction effect; naive forecasts beat retrospective models"
+  },
+  {
+   "name": "tutoring_abm",
+   "path": "01_sources/atlas-main-55732f4/experiments/shadow-abm/src/tutoring_abm/",
+   "kind": "Cambodian own-teacher tutoring ABM",
+   "country": "Cambodia",
+   "horizon": "one school year, sequential best response",
+   "executed": false,
+   "entry": "python smc.py / smoke.py",
+   "status": "current; historical results invalidated by observation fix",
+   "limitations": "shared code not independent corroboration; favour/thin equivalent under a reparameterisation"
+  },
+  {
+   "name": "policy lab",
+   "path": "01_sources/atlas-main-55732f4/engine/policy.py + eduengine/",
+   "kind": "country policy lab",
+   "country": "country packs",
+   "horizon": "to 2039 annual",
+   "executed": false,
+   "entry": "python engine/policy.py",
+   "status": "current",
+   "limitations": "inherits frozen eduengine assumptions"
+  },
+  {
+   "name": "toy worlds T1-T5",
+   "path": "01_sources/atlas-main-55732f4/engine/experiments.py + worlds.py",
+   "kind": "theory demonstrations",
+   "country": "none",
+   "horizon": "short",
+   "executed": false,
+   "entry": "python engine/experiments.py",
+   "status": "current",
+   "limitations": "teaching illustrations, not estimates"
+  },
+  {
+   "name": "MC machinery",
+   "path": "01_sources/atlas-main-55732f4/engine/mc.py + *_sobol.py",
+   "kind": "MC/seeds/sensitivity",
+   "country": "-",
+   "horizon": "-",
+   "executed": true,
+   "entry": "library",
+   "status": "current",
+   "limitations": "sampling method; priors are judgement choices"
+  }
+ ],
+ "results": {
+  "floor_test_6arm": {
+   "reported": {
+    "ranked, no floor": {
+     "diploma": 0.7721,
+     "q1": 0.5734,
+     "formal_below": 0.1208,
+     "formal_dip": 0.3539,
+     "college_q35": 0.4879,
+     "slope": -0.0437
+    },
+    "ranked, adaptive floor": {
+     "diploma": 0.77,
+     "q1": 0.5695,
+     "formal_below": 0.1193,
+     "formal_dip": 0.2252,
+     "college_q35": 0.5423,
+     "slope": -0.0641
+    },
+    "ranked, fixed floor": {
+     "diploma": 0.7716,
+     "q1": 0.5715,
+     "formal_below": 0.1175,
+     "formal_dip": 0.3545,
+     "college_q35": 0.4916,
+     "slope": -0.0478
+    },
+    "unranked, no floor (lottery)": {
+     "diploma": 0.7307,
+     "q1": 0.5379,
+     "formal_below": 0.436,
+     "formal_dip": 0.4497,
+     "college_q35": 0.1795,
+     "slope": 0.1509
+    },
+    "unranked, adaptive floor": {
+     "diploma": 0.7713,
+     "q1": 0.57,
+     "formal_below": 0.1178,
+     "formal_dip": 0.2072,
+     "college_q35": 0.6144,
+     "slope": 0.0359
+    },
+    "unranked, fixed floor": {
+     "diploma": 0.7712,
+     "q1": 0.571,
+     "formal_below": 0.1176,
+     "formal_dip": 0.4947,
+     "college_q35": 0.478,
+     "slope": 0.6301
+    }
+   },
+   "fresh": {
+    "ranked, no floor": {
+     "diploma": 0.7713,
+     "q1": 0.5702,
+     "formal_below": 0.1212,
+     "formal_dip": 0.351,
+     "college_q35": 0.494,
+     "slope": -0.034
+    },
+    "ranked, adaptive floor": {
+     "diploma": 0.7702,
+     "q1": 0.5685,
+     "formal_below": 0.12,
+     "formal_dip": 0.2116,
+     "college_q35": 0.5498,
+     "slope": -0.0682
+    },
+    "ranked, fixed floor": {
+     "diploma": 0.7712,
+     "q1": 0.5696,
+     "formal_below": 0.1182,
+     "formal_dip": 0.3543,
+     "college_q35": 0.4923,
+     "slope": -0.0367
+    },
+    "unranked, no floor (lottery)": {
+     "diploma": 0.7329,
+     "q1": 0.5394,
+     "formal_below": 0.4332,
+     "formal_dip": 0.4471,
+     "college_q35": 0.1888,
+     "slope": 0.2208
+    },
+    "unranked, adaptive floor": {
+     "diploma": 0.7711,
+     "q1": 0.5695,
+     "formal_below": 0.1164,
+     "formal_dip": 0.2139,
+     "college_q35": 0.614,
+     "slope": 0.0274
+    },
+    "unranked, fixed floor": {
+     "diploma": 0.771,
+     "q1": 0.5701,
+     "formal_below": 0.1174,
+     "formal_dip": 0.4948,
+     "college_q35": 0.4729,
+     "slope": 0.6498
+    }
+   },
+   "reported_source": "results/round8_mechanisms_and_ledger_fix/floor_test; paper table after para 128",
+   "fresh_source": "runs/massabm/floor_test",
+   "reps_reported": 4,
+   "reps_fresh": 2,
+   "N": 6000,
+   "max_abs_delta_levels": 0.0136,
+   "max_abs_delta_slopes": 0.0699,
+   "verdict": "reproduced",
+   "caveat": "unranked-lottery slope +0.151 reported vs +0.221 fresh"
+  },
+  "grad_supply": {
+   "reported": {
+    "surplus_half": {
+     "d_degree_share": 0.138,
+     "d_diploma_income": -0.061,
+     "d_degree_income": -0.359,
+     "d_ratio": 0.051,
+     "d_formal_dip": -0.156
+    },
+    "surplus_80": {
+     "d_degree_share": 0.216,
+     "d_diploma_income": -0.042,
+     "d_degree_income": -0.447,
+     "d_ratio": 0.079,
+     "d_formal_dip": -0.169
+    },
+    "competitive_half": {
+     "d_degree_share": 0.128,
+     "d_diploma_income": 0.29,
+     "d_degree_income": -0.429,
+     "d_ratio": 0.166,
+     "d_formal_dip": null
+    },
+    "competitive_80": {
+     "d_degree_share": 0.219,
+     "d_diploma_income": 0.544,
+     "d_degree_income": -0.652,
+     "d_ratio": 0.319,
+     "d_formal_dip": null
+    }
+   },
+   "fresh": {
+    "surplus_half": {
+     "d_degree_share": 0.1406,
+     "d_diploma_income": -0.0588,
+     "d_degree_income": -0.3636,
+     "d_ratio": 0.0526,
+     "d_formal_dip": -0.1512
+    },
+    "surplus_80": {
+     "d_degree_share": 0.2161,
+     "d_diploma_income": -0.0404,
+     "d_degree_income": -0.4532,
+     "d_ratio": 0.0812,
+     "d_formal_dip": -0.1654
+    },
+    "competitive_half": {
+     "d_degree_share": 0.1273,
+     "d_diploma_income": 0.2853,
+     "d_degree_income": -0.4289,
+     "d_ratio": 0.1631,
+     "d_formal_dip": null
+    },
+    "competitive_80": {
+     "d_degree_share": 0.221,
+     "d_diploma_income": 0.5449,
+     "d_degree_income": -0.6572,
+     "d_ratio": 0.318,
+     "d_formal_dip": null
+    }
+   },
+   "reported_source": "results/round8_mechanisms_and_ledger_fix/grad_supply; paper table paras 155-164",
+   "fresh_source": "runs/massabm/grad_supply",
+   "reps_reported": 6,
+   "reps_fresh": 2,
+   "paired": true,
+   "N": 6000,
+   "max_abs_delta": 0.0063,
+   "verdict": "reproduced"
+  },
+  "actors_contributions": {
+   "reported": {
+    "all": {
+     "years": 11.6,
+     "tertiary": 0.38,
+     "upper": 0.58,
+     "cred": 0.84
+    },
+    "minus_household": {
+     "years": 8.2,
+     "tertiary": 0.0,
+     "upper": 0.25,
+     "cred": 0.74
+    },
+    "minus_employer": {
+     "years": 10.1,
+     "tertiary": 0.04,
+     "upper": 0.58,
+     "cred": 0.0
+    },
+    "minus_state": {
+     "years": 10.4,
+     "tertiary": 0.21,
+     "upper": 0.52,
+     "cred": 0.85
+    },
+    "contributions_years": {
+     "household": 3.45,
+     "employer": 1.49,
+     "state": 1.19,
+     "total": 4.29
+    }
+   },
+   "fresh": {
+    "all": {
+     "years": 11.4966,
+     "tertiary": 0.3751,
+     "upper": 0.5832,
+     "cred": 0.85
+    },
+    "minus_household": {
+     "years": 8.161,
+     "tertiary": 0.0027,
+     "upper": 0.2571,
+     "cred": 0.7567
+    },
+    "minus_employer": {
+     "years": 9.9633,
+     "tertiary": 0.0004,
+     "upper": 0.578,
+     "cred": 0.0
+    },
+    "minus_state": {
+     "years": 10.4319,
+     "tertiary": 0.2158,
+     "upper": 0.5187,
+     "cred": 0.8592
+    },
+    "contributions_years": {
+     "household": 3.34,
+     "employer": 1.53,
+     "state": 1.06,
+     "total": 4.16
+    }
+   },
+   "reported_source": "results/round2b_three_actor_model/30_replications/necessity; paper para 168 + appendix",
+   "fresh_source": "runs/triad/necessity",
+   "reps_reported": 30,
+   "reps_fresh": 2,
+   "N": 3000,
+   "verdict": "reproduced_at_small_reps",
+   "caveat": "employer tertiary 0.04 reported vs 0.0004 fresh (and 0.00 in the stored 8-rep run) -> fragile cell; contributions attenuated by 0.03-0.13"
+  },
+  "gates": {
+   "reported": {
+    "basic": 0.05,
+    "apex": 0.3,
+    "college": 0.35,
+    "board": 0.93,
+    "bar_sweep": {
+     "-2.0": 0.03,
+     "-1.5": 0.12,
+     "-1.0": 0.32,
+     "-0.5": 0.58,
+     "0.0": 0.76,
+     "0.5": 0.77
+    },
+    "spend_share": {
+     "basic": 0.15,
+     "apex": 0.4,
+     "college": 0.26,
+     "board": 0.2
+    }
+   },
+   "fresh": {
+    "basic": 0.06,
+    "apex": 0.3,
+    "college": 0.35,
+    "board": 0.93,
+    "bar_sweep": {
+     "-2.0": 0.03,
+     "-1.5": 0.12,
+     "-1.0": 0.31,
+     "-0.5": 0.58,
+     "0.0": 0.76,
+     "0.5": 0.77
+    },
+    "spend_share": {
+     "basic": 0.15,
+     "apex": 0.4,
+     "college": 0.25,
+     "board": 0.2
+    }
+   },
+   "reported_source": "results/round1_philippine_model/gates; paper para 176 + appendix",
+   "fresh_source": "runs/massabm/gates",
+   "reps_reported": 4,
+   "reps_fresh": 2,
+   "N": 6000,
+   "max_abs_delta": 0.01,
+   "verdict": "reproduced"
+  },
+  "reform_distribution": {
+   "reported_as_built": {
+    "aggregate_from": 0.783,
+    "aggregate_to": 0.652,
+    "effect": -0.132,
+    "q1": -0.258,
+    "q5": -0.094,
+    "gap_from": 0.201,
+    "gap_to": 0.365
+   },
+   "fresh": {
+    "aggregate_from": 0.783,
+    "aggregate_to": 0.652,
+    "effect": -0.131,
+    "q1": -0.254,
+    "q5": -0.089,
+    "gap_from": 0.196,
+    "gap_to": 0.361
+   },
+   "reported_source": "results/round1_philippine_model/reform_distribution",
+   "fresh_source": "runs/massabm/reform_distribution",
+   "reps_reported": 10,
+   "reps_fresh": 2,
+   "N": 6000,
+   "verdict": "reproduced_as_built_variant",
+   "caveat": "paper text quotes the un-run dropout_per_stage audit variant (-6.5 aggregate, Q1 -22, Q5 -2, gap 0.20->0.41)"
+  },
+  "floorworld": {
+   "reported": {
+    "S1_all_pass": 10.25,
+    "S2_all_pass": 14.72,
+    "S3_all_pass": 0.03,
+    "S4_all_pass": 0.0,
+    "S5_all_pass": 0.72,
+    "draws": 6000
+   },
+   "fresh": {
+    "S1_all_pass": 10.25,
+    "S2_all_pass": 14.5,
+    "S3_all_pass": 0.0,
+    "S4_all_pass": 0.0,
+    "S5_all_pass": 0.5,
+    "draws": 400
+   },
+   "reported_source": "atlas engine/results/floorworld_mc.md (stored)",
+   "fresh_source": "scripts/atlas_engine/results/floorworld_mc.md",
+   "draws_reported": 6000,
+   "draws_fresh": 400,
+   "verdict": "reproduced",
+   "caveat": "not a manuscript number; code-health check"
+  },
+  "slope_h2": {
+   "reported": -0.09,
+   "fresh": -0.068,
+   "reported_source": "results/round1_philippine_model/ablation; paper para 147",
+   "fresh_source": "from runs/massabm/floor_test baseline arm slope",
+   "verdict": "partially_reproduced",
+   "caveat": "ablation experiment itself not run; sign/ordering match"
+  }
+ },
+ "provenance_actor_runs_csv": {
+  "file": "01_sources/atlas-main-55732f4/public/research/massification/actor-runs.csv",
+  "n_per_cell": 8,
+  "statistic": "mean over 8 runs",
+  "data_json_triad_identical": true,
+  "paper_statistic": "median of 30 replications (paper para 168, appendix)",
+  "paper_values_source": "results/round2b_three_actor_model/30_replications/necessity/findings.txt",
+  "public_implied_contributions": {
+   "household": 3.4,
+   "employer": 1.43,
+   "state": 1.09
+  },
+  "stored_30rep_contributions": {
+   "household": 3.45,
+   "employer": 1.49,
+   "state": 1.19
+  },
+  "stored_8rep_contributions": {
+   "household": 3.5,
+   "employer": 1.67,
+   "state": 1.3
+  },
+  "same_design": true,
+  "same_run": false,
+  "contradictory": false,
+  "status": "partially_unresolved",
+  "reason": "same knockout design, but 8-seed mean on an unknown seed set; no generating script/manifest in either delivered tree"
+ },
+ "missing_code_paths": [
+  {
+   "claim": "public parent-runs.csv (160 rows, peer-pressure grid) and the web page parent tab",
+   "source_present_public": false,
+   "source_present_local": false,
+   "note": "no generating code anywhere in the delivered material"
+  },
+  {
+   "claim": "public actor-runs.csv / data.json triad block",
+   "source_present_public": false,
+   "source_present_local": true,
+   "note": "local triad model can generate the design; exact seed set unresolved"
+  },
+  {
+   "claim": "public inequality-runs.csv / data.json tilly block",
+   "source_present_public": true,
+   "source_present_local": false,
+   "note": "engine/firms/tilly_experiments.py exists in public checkout; not executed here"
+  },
+  {
+   "claim": "all massabm results (floor/race, grad supply, gates, K-12, fiscal, macro, nurses)",
+   "source_present_public": false,
+   "source_present_local": true,
+   "note": "public worktree lacks related/massification_project (recorded in its own research/ISSUES.md); local copy fills the gap"
+  },
+  {
+   "claim": "all triad results (emergence, necessity, lock-in, dose, conditions, state motives)",
+   "source_present_public": false,
+   "source_present_local": true,
+   "note": "same"
+  },
+  {
+   "claim": "paper reproducibility claim [^code] that code/params/every round of results are distributed",
+   "source_present_public": false,
+   "source_present_local": true,
+   "note": "only the local snapshot makes it runnable; public tree has stored outputs without generating source"
+  }
+ ],
+ "runs_executed": [
+  {
+   "cmd": "run.py smoke --out runs/massabm/smoke",
+   "exit": 0,
+   "wall_s": 4.0
+  },
+  {
+   "cmd": "run.py grad_supply --reps 2 --N 6000 --workers 2",
+   "exit": 0,
+   "wall_s": 54
+  },
+  {
+   "cmd": "run.py floor_test --reps 2 --N 6000 --workers 2",
+   "exit": 0,
+   "wall_s": 204
+  },
+  {
+   "cmd": "run.py gates --reps 2 --N 6000 --workers 2",
+   "exit": 0,
+   "wall_s": 143
+  },
+  {
+   "cmd": "run.py reform_distribution --reps 2 --N 6000 --workers 2",
+   "exit": 0,
+   "wall_s": 57
+  },
+  {
+   "cmd": "run_triad.py all --quick --workers 2",
+   "exit": 0,
+   "wall_s": 71
+  },
+  {
+   "cmd": "run_triad.py necessity --reps 2 --N 3000 --workers 2",
+   "exit": 0,
+   "wall_s": 32
+  },
+  {
+   "cmd": "run_floorworld_baseline.py",
+   "exit": 0,
+   "wall_s": 0.5
+  },
+  {
+   "cmd": "floorworld_mc.py --draws 400 (attempt 1, missing results dir)",
+   "exit": 1,
+   "note": "FileNotFoundError at final json.dump; all five structures computed; retried after mkdir"
+  },
+  {
+   "cmd": "floorworld_mc.py --draws 400 (retry)",
+   "exit": 0,
+   "wall_s": 80
+  },
+  {
+   "cmd": "run_childworld_audit.py 100",
+   "exit": 0,
+   "wall_s": 40,
+   "note": "execution-only; too few accepted worlds at n=100"
+  },
+  {
+   "cmd": "run_relfloor_audit.py 120",
+   "exit": 0,
+   "wall_s": 60,
+   "note": "execution-only; thin acceptance"
+  }
+ ],
+ "verdict_counts": {
+  "reproduced": 5,
+  "reproduced_at_small_reps": 1,
+  "partially_reproduced": 1,
+  "not_run": 0,
+  "failed_and_fixed": 1
+ }
+}

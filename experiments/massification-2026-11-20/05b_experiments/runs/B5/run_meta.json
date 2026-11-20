@@ -1,0 +1,51 @@
+{
+ "eid": "B5_E16",
+ "implementation": "NEW code/e16_readers.py (stylized, not the paper E16)",
+ "N": 2000,
+ "M": 300,
+ "omega": 0.25,
+ "cert_cost": 6.0,
+ "annuity_20y": 15.206855235775086,
+ "seeds": [
+  0,
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9
+ ],
+ "arms": [
+  "detailed_domestic",
+  "coarse_domestic",
+  "skill_test",
+  "eligibility_rule",
+  "foreign_reader"
+ ],
+ "detailed_vs_coarse_p_error": {
+  "mean": -0.3653945950497638,
+  "sd": 0.038211808134831216,
+  "same_sign": 10,
+  "distinguishable": true
+ },
+ "skill_vs_detailed_p_error": {
+  "mean": 0.13330650485185788,
+  "sd": 0.013705756010307059,
+  "same_sign": 10,
+  "distinguishable": true
+ },
+ "detailed_vs_coarse_cert_demand": {
+  "mean": -0.1548,
+  "sd": 0.014831048513169928,
+  "same_sign": 10,
+  "distinguishable": true
+ },
+ "foreign_rho_effect": {
+  "coverage": 0.10466666666666664,
+  "p_error": -0.13731213198134698,
+  "exclude_top": -0.03163418290854575
+ }
+}

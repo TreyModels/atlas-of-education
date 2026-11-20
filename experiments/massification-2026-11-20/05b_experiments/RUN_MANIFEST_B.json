@@ -1,0 +1,319 @@
+{
+ "batch": "B",
+ "owner": "experiment-runner-2",
+ "scope": "05b_experiments only",
+ "environment": {
+  "python": "3.11.17",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "numpy": "2.4.6",
+  "executable": "/Users/treymenefee/Library/Application Support/dsh-massification/venv/bin/python",
+  "policy": "workers<=2, nice -n 10, per-run SIGALRM timeout 300s, PYTHONDONTWRITEBYTECODE=1"
+ },
+ "provenance": {
+  "predeclarations": "PRE_DECLARATIONS_B.md",
+  "source_model": "01_sources/massification_project/code/massabm (copied to code/stock, unmodified)",
+  "rival_extension": "05_experiments/code/ext_massabm (runner 1 NEW mechanism hc_fair_slots; copied to code/ext_massabm)",
+  "note": "B1/B2/B3 re-drive existing massabm code with new drivers; B4 is a NEW implementation."
+ },
+ "code_sha256_16": {
+  "code/run_B1.py": "449c64de69de3130",
+  "code/run_B2B3.py": "8236d49f77d56d8e",
+  "code/e12_traj.py": "47c84794aeea98f6",
+  "code/e16_readers.py": "8b0d6c5372dcda5e",
+  "code/bcommon.py": "70b68126ed8a7a51",
+  "code/b1_robust.py": "7a2b59345db5e723",
+  "code/make_manifest_B.py": "3f3ff1c074d1bcc0",
+  "code/ext_massabm/massabm/model.py": "69fb2dfe93a8c07a",
+  "code/ext_massabm/massabm/params.py": "bd32a7575cb1c455",
+  "code/stock/massabm/model.py": "2b6484e7a98866f8",
+  "code/stock/massabm/params.py": "6a4d133a3369b8a3"
+ },
+ "experiments": [
+  {
+   "bid": "B1",
+   "meta": {
+    "eid": "B1",
+    "reps": 6,
+    "N": 3000,
+    "wall": 97.42553400993347,
+    "runs": 72,
+    "ok": 72,
+    "failed": {},
+    "sigmas": [
+     0.5,
+     1.0,
+     2.0
+    ],
+    "decision": "survives iff both shocks negative AND |d|>2sd AND baseline ratio>=0.20",
+    "survives_at_sigmas": [
+     0.5
+    ],
+    "comparator": "stored E13b reps=6 N=5000 (point-estimate contradiction only)",
+    "posthoc_robustness": {
+     "note": "added after predeclared run; downgrades only",
+     "sigma05_reps_below_plaus_gate": 0.8333333333333334,
+     "sigma05_degree_income_range": [
+      1.010487697775087,
+      42.39450726386173
+     ],
+     "robust_contradiction": false,
+     "survives_as": "employment-margin difference only"
+    }
+   },
+   "meta_sha16": "81847939be0b17b9"
+  },
+  {
+   "bid": "B2_B3",
+   "meta": {
+    "eid": "B2_B3",
+    "reps": 4,
+    "N": 6000,
+    "wall": 293.65781593322754,
+    "runs": 72,
+    "ok": 72,
+    "failed": {},
+    "scales": [
+     0.0,
+     1.0,
+     2.0
+    ],
+    "arms": [
+     "ranked, no floor",
+     "ranked, adaptive employer floor (baseline)",
+     "ranked, fixed rule-set floor",
+     "unranked, no floor (lottery)",
+     "unranked, adaptive employer floor",
+     "unranked, fixed rule-set floor"
+    ],
+    "lottery_slope_pooled": 0.15090445645124287,
+    "lottery_slope_perrep": 0.1976589836055865,
+    "lottery_slope_perrep_sd": 0.042173830622702836,
+    "rank_neg": true,
+    "alloc_pos": [
+     "random among all (mode=lottery)"
+    ],
+    "comparator": "stored E8 reps=4 N=6000"
+   },
+   "meta_sha16": "f3c800f41d5dd12b"
+  },
+  {
+   "bid": "B4",
+   "meta": {
+    "eid": "B4_E12",
+    "implementation": "NEW code/e12_traj.py (not a reproduction)",
+    "horizon": 40,
+    "burn_in": 40,
+    "seeds": [
+     0,
+     1,
+     2,
+     3,
+     4
+    ],
+    "median_cost_declared_calibration": 0.22,
+    "exo_entry_rise": 0.33,
+    "endo_entry_rise": -0.384,
+    "endo_smooth_entry_rise_posthoc": -0.110241836628671,
+    "checkpoint_signs_consistent": false,
+    "generated": false,
+    "invariant_failures": [],
+    "inputs": {
+     "SCOMP": 0.65,
+     "CCOMP": 0.85,
+     "F0": 0.12,
+     "GF": 0.02,
+     "THETA": 0.4,
+     "sigma_cost": 0.5,
+     "annuity": {
+      "40": 23.47625708669557,
+      "20": 15.206855235775086
+     }
+    }
+   },
+   "meta_sha16": "26cf416acfa4e36b"
+  },
+  {
+   "bid": "B5",
+   "meta": {
+    "eid": "B5_E16",
+    "implementation": "NEW code/e16_readers.py (stylized, not the paper E16)",
+    "N": 2000,
+    "M": 300,
+    "omega": 0.25,
+    "cert_cost": 6.0,
+    "annuity_20y": 15.206855235775086,
+    "seeds": [
+     0,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9
+    ],
+    "arms": [
+     "detailed_domestic",
+     "coarse_domestic",
+     "skill_test",
+     "eligibility_rule",
+     "foreign_reader"
+    ],
+    "detailed_vs_coarse_p_error": {
+     "mean": -0.3653945950497638,
+     "sd": 0.038211808134831216,
+     "same_sign": 10,
+     "distinguishable": true
+    },
+    "skill_vs_detailed_p_error": {
+     "mean": 0.13330650485185788,
+     "sd": 0.013705756010307059,
+     "same_sign": 10,
+     "distinguishable": true
+    },
+    "detailed_vs_coarse_cert_demand": {
+     "mean": -0.1548,
+     "sd": 0.014831048513169928,
+     "same_sign": 10,
+     "distinguishable": true
+    },
+    "foreign_rho_effect": {
+     "coverage": 0.10466666666666664,
+     "p_error": -0.13731213198134698,
+     "exclude_top": -0.03163418290854575
+    }
+   },
+   "meta_sha16": "40f12c0dd8b3b8e4"
+  }
+ ],
+ "outputs": [
+  {
+   "path": "runs/B5/b5_raw.csv",
+   "sha256_16": "3631bc933a35c859",
+   "bytes": 102079
+  },
+  {
+   "path": "runs/B5/b5_summary.csv",
+   "sha256_16": "5194a62425987d89",
+   "bytes": 22087
+  },
+  {
+   "path": "runs/B5/findings.txt",
+   "sha256_16": "8f782cb82163ff93",
+   "bytes": 2655
+  },
+  {
+   "path": "runs/B5/run_meta.json",
+   "sha256_16": "40f12c0dd8b3b8e4",
+   "bytes": 928
+  },
+  {
+   "path": "runs/B4/e12_checkpoints.csv",
+   "sha256_16": "286ac48aabb65940",
+   "bytes": 11229
+  },
+  {
+   "path": "runs/B4/e12_trajectories.csv",
+   "sha256_16": "db2d3c79eaee9b09",
+   "bytes": 535998
+  },
+  {
+   "path": "runs/B4/findings.txt",
+   "sha256_16": "df3cd492db068421",
+   "bytes": 4245
+  },
+  {
+   "path": "runs/B4/run_meta.json",
+   "sha256_16": "26cf416acfa4e36b",
+   "bytes": 585
+  },
+  {
+   "path": "runs/B2_B3/b2_summary.csv",
+   "sha256_16": "375b564fec328ce7",
+   "bytes": 2808
+  },
+  {
+   "path": "runs/B2_B3/b2b3_raw.csv",
+   "sha256_16": "58bbace569290ff7",
+   "bytes": 12559
+  },
+  {
+   "path": "runs/B2_B3/b3_knockout.csv",
+   "sha256_16": "7b619dcc6ce3ae3b",
+   "bytes": 1035
+  },
+  {
+   "path": "runs/B2_B3/findings.txt",
+   "sha256_16": "bf382509b8fbd67c",
+   "bytes": 2559
+  },
+  {
+   "path": "runs/B2_B3/run_meta.json",
+   "sha256_16": "f3c800f41d5dd12b",
+   "bytes": 633
+  },
+  {
+   "path": "runs/B1/b1_raw.csv",
+   "sha256_16": "1cc05575fbd109aa",
+   "bytes": 15971
+  },
+  {
+   "path": "runs/B1/b1_robustness.csv",
+   "sha256_16": "586fe8cc55ee2471",
+   "bytes": 723
+  },
+  {
+   "path": "runs/B1/b1_summary.csv",
+   "sha256_16": "40d4815a7749e956",
+   "bytes": 4891
+  },
+  {
+   "path": "runs/B1/findings.txt",
+   "sha256_16": "97c64c89024512d5",
+   "bytes": 6123
+  },
+  {
+   "path": "runs/B1/run_meta.json",
+   "sha256_16": "81847939be0b17b9",
+   "bytes": 657
+  }
+ ],
+ "logs": [
+  {
+   "path": "logs/B1.log",
+   "sha256_16": "01bbe02ce78a895c",
+   "bytes": 3403
+  },
+  {
+   "path": "logs/B2_B3.log",
+   "sha256_16": "0fa5410b56867fa4",
+   "bytes": 2649
+  },
+  {
+   "path": "logs/B4.log",
+   "sha256_16": "a054c80d98b14d77",
+   "bytes": 4325
+  },
+  {
+   "path": "logs/B5.log",
+   "sha256_16": "153952915ba24a1c",
+   "bytes": 5311
+  }
+ ],
+ "external_data": {
+  "path": "../04_data/data/gmr_annual_1980_2020_imputed.csv",
+  "sha256_16": "59de0c0333742e97",
+  "status_counts": {
+   "missing_no_anchor": 2281,
+   "observed": 3760,
+   "imputed": 876,
+   "not_imputed_long_gap": 94
+  },
+  "method_doc": "../04_data/IMPUTATION_METHOD.md",
+  "method_doc_sha16": "53e10bca78eb7102",
+  "used_in_batch_b": false,
+  "note": "GMR/UIS enrolment panel 1980-2020 for PHL,KHM,HKG,CHN,JPN,KOR with per-cell observed/imputed status. Batch-B B4/B5 are STYLIZED and make no country-level comparison, so no cell - observed or imputed - from this panel is cited in any Batch-B result. A future country-calibrated B4 must use status==observed only and may cite imputed cells only with their method/gap/confidence flags, never as observed."
+ }
+}
