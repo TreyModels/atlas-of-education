@@ -244,6 +244,20 @@ Two external requests are drafted and held; per protocol, external data requests
   or dropped) before its next run; exp2 re-scores the four testable rivals on crossing ordering/spacing and
   mechanism-implied ordering, listing the two design-only rivals in every results file.
 
+## 3j. INCOME-SCALING REPAIR CELL — **FAILED** (D31 timebox; exp1 `calib/repair_*.csv`)
+
+- The structural income-facing intake/continuation repair (D31-accepted cell) was run and **FAILED its predeclared
+  gate**: generated OOS exponents remain wrong-sign and outside the A3 estimator range —
+  secondary **−2.73 / −2.53 / −1.03** (A3 range +0.090…+0.215; A1 +0.286 ± 0.045), tertiary
+  **−0.32 / −1.32 / −0.39** (A3 +0.567…+0.848; A1 +0.776 ± 0.086), lower-sec completion law **+11.46 / +1.87 /
+  +2.55** (A3 +0.169…+0.247). `signs_ok` 1/3, `contained` 0/3, `within_1se_A1` false for all three rivals.
+  PHL fit MAE 6.16–7.43 (worse than the 5 pp gate), holdout 4.80–6.26; CHN fit/holdout 7.03–8.83.
+- **Consequence per Council timebox (D26/R14/R17):** the phase outcome stands at **conditional reproduction +
+  observational equivalence**; universalization reproduction is capped at **PARTIAL**; the anchor (A1) may still be
+  run for mechanism/crossing description but **cannot PASS the scaling criterion**, and no further scaling-repair
+  iteration is to be attempted without a new Council decision. Unrepaired results retained alongside (R12).
+  Routed to Council for formal adjudication under D26/D31.
+
 ## 4. Next three actions for `repo-auditor`
 
 1. **Council gate:** get the Council's final `COUNCIL:` post for brief 013 (SUCCESS_CRITERIA + STOP_RULES are

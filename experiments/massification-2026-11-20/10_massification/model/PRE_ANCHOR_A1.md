@@ -125,3 +125,39 @@ state-building, sectoral demand) are fitted on the **same PHL 1999–2013 record
 scored on (i) the milestone ordering/gap vector and (ii) out-of-sample trajectory 2014–2024; a rival that matches the
 same moments is **EQUIVALENT** (R3/R13), no winner chosen. Anchor PASS requires beating them on the predeclared
 ordering/gap estimand AND on out-of-sample trajectory.
+
+## AMENDMENT A7 / R24–R25 (Council D50–D52; applied before anchor fitting)
+**A7 re-scope (binding).** The anchor's target is the **observed crossing years and their spacing** (A6 values), not
+the laws. The **state-push mechanism is alignment-gated, not assumed (R24)**. A candidate marker is admitted to the
+mechanism test only if **(i)** the event window is computable on the affected level's **observed** series (not
+`UNABLE`), **(ii)** the shift's sign is the predicted one, **(iii)** the event-to-crossing gap is within **±5 y** (or
+the crossing lies inside the post window), and **(iv)** the affected-cohort definition is declared and transition
+cohorts excluded. A law that fails (i)–(iii) is **context / candidate marker only** and may **not** be coded as a
+mechanism that moves levels.
+
+**PHL verdict under R24 (predeclared, from scout's descriptive windows):** all four PHL discrete pushes fail the
+alignment rule — 1987 Constitution → primary ≥90 crossing 2017–21 (**31 y later**, shift −0.22 pp, t=−0.15);
+RA 10533 K-12 (effective 2016) → upper-secondary **mass** already crossed ≤1999, GER shift +0.42 pp (t=0.50);
+RA 10931 free tertiary (2018) → tertiary GER shift **−5.39 pp** (t=−3.00) but K-12 cohort delay confounds, and the
+tertiary ≥50 crossing is 2024–25 (**6.5 y later**); 4Ps (2008) → −2.49 pp (t=−1.27, n_post=3). Therefore in A1 these
+four are entered as **candidate timing markers / context**, and the PHL state-push mechanism is **re-specified**: the
+anchor tests state push through **capacity/teacher supply (A2d, now data-available)** and through the **cohort
+mechanics of the cycle extension** (a definitional/cohort-flow mechanism, not a law-date level shift), not through
+law-date breaks.
+**Portability contrast (recorded for A6/A7):** HKG 12-year free education 2009 → upper-secondary NER **+9.08 pp
+(t=5.20)** and CHN 1999 higher-ed expansion → tertiary GER **+4.70 pp (t=7.94)** DO align at their levels; CHN 1986
+compulsory law misses the primary crossing by 27 y. So the alignment screen is a genuine filter, not a universal
+rejection.
+
+**R25 (event-window evidence is descriptive only).** The windows are naive-SE, no controls, quality A/B/C; they are
+**never supplied to the model as schedules** (R4/R14). **Quality-C inferred expansion episodes are not policy dates**
+and may not serve as event evidence. **Update:** `10_massification/data/SCHOOL_EXPANSION.csv` **has now landed** (with
+observed PHL high-school pupil–teacher ratios 37 (2000) → 27 (2014) → 24 (2017), plus other observed capacity series),
+so A2d is **no longer DATA BLOCKED**; only genuinely absent country/level series remain blocked, and inferred
+top-decile-growth episodes stay excluded as evidence.
+
+**Consequence for A1 scoring:** the anchor is scored on (a) trajectory, (b) A1/A3 generated scaling, (c) **A6/A7
+crossing years, ordering and gaps (±5 y; ±3 y narrow; single curve = PARTIAL, R23)**, (d) **R6 false-positive** — no
+generated upper-secondary universalization by 2024, (e) rival comparison on the same ordering/gap vector, and (f) the
+A2d capacity-leads-intake test where the observed series permit. Event-break tests that fail alignment are reported
+as **descriptive context only**, and nulls are valid results (R25/R12).

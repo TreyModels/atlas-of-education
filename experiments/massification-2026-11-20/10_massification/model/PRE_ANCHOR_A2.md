@@ -47,3 +47,20 @@ tuition, confounded by the K-12 transition; −2.49 pp t=−1.27 for 4Ps). Each 
 valid result** and carries the MDE power statement (PASS at ≥4 pp, else INCONCLUSIVE). A2a (K-12 cohort exposure) is
 the primary state-push test; A2b/A2c (fee abolition) keep the Q1–Q2 concentration rule; A2d (places/teachers) remains
 DATA BLOCKED until DepEd/DPWH series land. No test may add the law date as a fitted parameter (R12/R4).
+
+## AMENDMENT A7 / R24 (Council D50–D52) — battery is alignment-gated; PHL laws are markers, not mechanisms
+- **Admission screen (R24):** each candidate event must pass (i) computable event window on the affected **observed**
+  series, (ii) predicted shift sign, (iii) event-to-crossing gap ±5 y or crossing in the post window, (iv) affected
+  cohorts declared and transition cohorts excluded. PHL's four discrete pushes fail this screen (31 y; mass already
+  crossed ≤1999; −5.39 pp confounded; 4Ps negative) → they are recorded as **candidate markers/context only**, not as
+  event-break tests. Verdict: **DESCRIPTIVE CONTEXT** for A2a (K-12 law date), A2b (free SHS), A2c (free tertiary).
+- **What remains a live state-push test:** **A2d places/teacher supply** — now runnable because
+  `10_massification/data/SCHOOL_EXPANSION.csv` has landed (observed PHL high-school PTR 37→27→24 across 2000/2014/2017
+  and other observed capacity series). Test: capacity/teacher stock **leads** intake/enrolment with a declared lag
+  (2–4 y), sign predeclared positive; placebo = reverse ordering (intake leads capacity) reported as failure; R25
+  quality rules apply and inferred top-decile-growth episodes are excluded as evidence.
+- **Cohort mechanics test (definitional, retained):** the K-12 cycle extension is tested through **cohort flow and
+  definition** (JHS holders are not upper-secondary completers; SHS cohorts enter later) — a mechanical/accounting
+  mechanism declared in the model, not a law-date level break.
+- MDE claim cap unchanged (PASS at ≥4 pp, else INCONCLUSIVE); null is a valid result; no law date as a fitted
+  parameter (R12/R4); no direction claims (R13).
