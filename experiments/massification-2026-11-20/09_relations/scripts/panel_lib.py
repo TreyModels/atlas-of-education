@@ -1,7 +1,9 @@
 """Two-way fixed-effects OLS with country-clustered SE — small, explicit, no black boxes.
 Observed cells only. Within transformation via alternating projections (country demean, year demean) repeated.
 """
+from math import erf as _erf
 import numpy as np, pandas as pd
+_erf = np.vectorize(_erf)
 
 def load_panel(path=None):
     import os
@@ -44,16 +46,16 @@ def fe_ols(d, y, xs, entity='iso3', time='year', cluster='iso3', lags=None, diff
     gid = dd[entity].values; tid = dd[time].values
     # check variation after within transform
     Xw = _demean_twoway(X, gid, tid)
-    yw = _demean_twoway(yv, gid, tid)
+    yw = _demean_twoway(yv, gid, tid).reshape(-1, 1)
     ok = np.std(Xw, axis=0) > 1e-9
     if not ok.all():
         return dict(error='no within variation in ' + ','.join(np.array(list(xs))[~ok]))
     XtX = Xw.T @ Xw
     try:
-        b = np.linalg.solve(XtX, Xw.T @ yw)
+        b = np.asarray(np.linalg.solve(XtX, Xw.T @ yw)).ravel()
     except np.linalg.LinAlgError:
         return dict(error='singular XtX')
-    e = (yw - Xw @ b).ravel()
+    e = (yw.ravel() - Xw @ b)
     # dof: n - k - (n_entities-1) - (n_years-1) - 1
     G = dd[cluster].nunique()
     nent = dd[entity].nunique(); nyr = dd[time].nunique()
@@ -70,13 +72,11 @@ def fe_ols(d, y, xs, entity='iso3', time='year', cluster='iso3', lags=None, diff
     scale = (G/(G-1)) * ((n-1)/dof)
     V = inv @ meat @ inv * scale
     se = np.sqrt(np.diag(V))
-    from math import erf, sqrt
-    tstats = b/se if np.all(se>0) else np.full(k, np.nan)
-    # two-sided p via normal approx
-    p = [2*(1-0.5*(1+erf(abs(t)/sqrt(2)))) for t in tstats]
+    tstats = np.asarray(b/se).ravel() if np.all(se > 0) else np.full(k, np.nan)
+    p = 2.0 * (1.0 - 0.5 * (1.0 + _erf(np.abs(tstats) / np.sqrt(2.0))))   # two-sided normal
     out = dict(n=n, n_cty=nent, n_yr=nyr, n_clusters=G, dof=dof,
                period=f'{int(dd[time].min())}-{int(dd[time].max())}',
-               r2_within=float(1 - (e@e)/max((yw@yw),1e-12)))
+               r2_within=1.0 - float(np.asarray(e@e).ravel()[0])/max(float(np.asarray(yw.T @ yw).ravel()[0]),1e-12))
     for i,x in enumerate(xs):
         out[x] = dict(coef=float(b[i]), se=float(se[i]), t=float(tstats[i]), p=float(p[i]))
     return out

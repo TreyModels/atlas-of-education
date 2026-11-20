@@ -236,6 +236,27 @@ data-first: better shadow-incidence and fee/breadth data for PH/KHM/CN, repeated
 gradients, provider entry/capacity data, and the empirical-relations layer (`09_relations/`) that plugs
 estimated relationships into the model as parameters with identification grades.
 
+## 4e. FINAL VERDICT (loop close-out, 20 Nov 2026)
+
+The research loop is closed. See [`06_report/LOOP_CLOSEOUT.md`](06_report/LOOP_CLOSEOUT.md) for the full
+adjudication; the binding sentence is:
+
+> *Within this model class and the available evidence, identification of the five central claim classes is
+> not established. This is a statement about the evidence base and the model, not about the world.*
+
+**Excluded by predeclared tests:** gate architecture (E1, all six rates fail), provider technology as the
+missing channel (E2, fails thresholds and reverses across priors), cross-country shadow incidence (loop-3
+S1 + Korean no-fit), mechanism classification (C1/U2 recovery 0.50, forced-ID 0.30–0.50), and country
+completion forecasting (PH holdout 14.68 vs 5.70 naive).
+
+**What survives:** the negative/identification map; the measurement programme (six country cards,
+target register, parameter observability map — only 8 of 28 model quantities observable); a Korean
+provider/fee descriptive block; a weak income-gradient regularity (2.14 vs 3.67); and a not-rejected
+Japanese density channel (n=2).
+
+**Eight of nine stop rules fired.** The rule that ended the central claims was predeclared before the
+results that fired it. The one that did not fire — cohort conservation — passed exactly.
+
 ## 5. Numbers, corrected (this is the “pull the numbers” part)
 
 | claim | verdict | what the source actually says |

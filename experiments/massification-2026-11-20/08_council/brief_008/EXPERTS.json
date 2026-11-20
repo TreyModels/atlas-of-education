@@ -1,0 +1,59 @@
+{
+  "brief_id": "brief_008",
+  "brief_file": "08_council/brief_008/BRIEF.md",
+  "material": "FINAL loop adjudication: loop5 E1/E1b/E4 (batch B) + E2/E3 (batch A); loop2-4 cumulative record; PARAMETER_MAP (28 quantities, 8 observable/10 not); 09_relations PENDING/partial; briefs 003-007; RESEARCH_LOOP stop rules.",
+  "synthetic_disclaimer": "SYNTHETIC EXERCISE. Panelists are AI-constructed composite personas whose positions are inferred from the published literature. Nothing here is a statement by, or endorsed by, the named individuals or any living person. Names in literature_basis identify the work each composite draws on, not participants in a deliberation.",
+  "convened_by": "lead",
+  "convened_at": "2026-11-20T13:38+08:00",
+  "panel_size": 4,
+  "panel": [
+    {
+      "handle": "CARTWRIGHT",
+      "label": "Composite drawing on philosophy-of-social-science literature",
+      "literature_basis": ["Cartwright, The Dappled World (1999)", "Cartwright & Hardie, Evidence-Based Policy (2012)"],
+      "grounding_basis": ["publication"],
+      "role": "Adjudicator: whether the identification limits are established; stop-rule audit; close-out language",
+      "assigned_prior_question": "Q1 (verdict), Q2 (stop audit), Q5 (close-out)",
+      "steel_man_slot": false
+    },
+    {
+      "handle": "PATRINOS",
+      "label": "Composite drawing on returns-to-education and education-economics literature",
+      "literature_basis": ["Psacharopoulos & Patrinos, decennial returns review (2018)", "Becker, Human Capital (1964)"],
+      "grounding_basis": ["publication"],
+      "role": "Economist: what the failed identification implies; publishable objects; data-first ranking",
+      "assigned_prior_question": "Q1 (verdict), Q3 (publishable), Q4 (data-first)",
+      "steel_man_slot": true
+    },
+    {
+      "handle": "PAGE",
+      "label": "Composite drawing on model-based-reasoning and complexity literature",
+      "literature_basis": ["Page, The Model Thinker (2018)", "Miller & Page, Complex Adaptive Systems (2007)"],
+      "grounding_basis": ["publication"],
+      "role": "Model-class reviewer: what the negative map is worth; two-iteration rule; relations layer",
+      "assigned_prior_question": "Q2 (stop audit), Q3 (publishable), Q6 (dissent)",
+      "steel_man_slot": false
+    },
+    {
+      "handle": "BRAY",
+      "label": "Composite drawing on comparative shadow-education literature (mandatory seat)",
+      "literature_basis": ["Bray & Lykins, Shadow Education (2012)", "Bray & Kwok (2003)", "Bray, comparative shadow-education work"],
+      "grounding_basis": ["listed", "publication"],
+      "role": "Shadow-evidence reviewer: fairness of the incidence verdict; dissent on data adequacy",
+      "assigned_prior_question": "Q2 (stop audit), Q5 (close-out), Q6 (dissent)",
+      "steel_man_slot": false
+    }
+  ],
+  "composition_check": {
+    "size_3_to_4": true,
+    "mandatory_shadow_education_composite": "BRAY",
+    "steel_man_slot": "PATRINOS",
+    "all_composites_grounded": true
+  },
+  "intake_notes": [
+    "Loop-5 E1/E1b/E2/E3/E4 read from disk; all thresholds as predeclared.",
+    "09_relations: panel WDI data + scripts only; RELATION_CANDIDATES.csv / DATA_PATTERNS.md / MODEL_PLUG_MAP.md absent — PENDING/partial.",
+    "PARAMETER_MAP: 28 quantities, 8 observable, 10 not observable, rest proxy/partial."
+  ],
+  "deviation_from_lead": "none: 4 composites; Bray under the mandatory shadow-education rule."
+}
