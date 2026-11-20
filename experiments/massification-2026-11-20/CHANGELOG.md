@@ -527,3 +527,22 @@ B1 — pre-run SHA snapshot reconstructed (30/33 match, original hash `89638b39�
   a writing failure, not a register. Phase stays CLOSED at PARTIAL/DESCRIPTIVE/EQUIVALENT (D76/D77 untouched).
 - **Corrections applied:** D-1 closeout range corrected to the 12-arm range 1.0475–3.2917 / 4.0148–6.1222 (with the
   six-arm subset named); D-4 read order paths fixed and the four registers + write-up order added; V35b not-THIN.
+
+## 2026-11-21 — THE PHASE WRITE-UP SHIPPED: `WRITE-UP-GATE: PASS` (D170)
+
+- `10_massification/lit/PHASE_WRITEUP.md` (726 lines, canonical; supersedes PHASE_WRITEUP_SHELL.md) +
+  `10_massification/lit/PHASE_WRITEUP_GATE.md` (287 lines; A-1…A-8): **all eight gate items PASS → `WRITE-UP-GATE: PASS`.**
+- Two-object headline block: phase object (A1 anchor class, 12 arms, pre-close) = conditional level reproduction, fit MAE
+  1.047492271754753–3.2916863270693772 / holdout 4.014780434743067–6.122199101442962, losing to the 4.35 pp linear trend,
+  observational equivalence, one unreproduced upper-secondary asymmetry, placement 9/33; post-close object (v1.7 A17) =
+  representation-only, upper unfilled 15/15, both-level queue 30/30, strict both-level coexistence 0/15, 0/33 vs ≥17/33,
+  crossings 1/3, D63 UNABLE split 58.6008/41.3992 at the t−3 pair.
+- W-2…W-6 + Appendices A–G: level sentences (ger_secondary trap, T vs completion, THIN unmeasured, m=1.10 a point
+  convention); participation (three spans, NO-REGISTERED-COUNTERPART, WITHHELD); D63 (t−3 sentence, BOUNDS-EDGE, UNABLE);
+  κ (four fixed sentences + windows, KOR counter-example, 17/193, κ-link/2027 barred, stale column not lifted); limits
+  (HELD 14/14, HKG two-part condition, corrected 12-arm range, read order, theory-as-declared, parks); four registers;
+  banned register B-1…B-28; provenance 21 groups.
+- Integrity: 30 claims tagged one-sentence; 79 links 0 unresolved; 4/4 κ sentences verbatim; 0 banned outside Appendix F;
+  748 numeric tokens mapped; no model run, no new number; untagged D77 headline 0 occurrences; D76/D77 applied not amended;
+  no SPINE-REPLACED verdict; Lead checks the gate. Phase CLOSED at PARTIAL/DESCRIPTIVE/EQUIVALENT; experiment programme
+  CLOSED at 0 new cells (D167); parks stand.

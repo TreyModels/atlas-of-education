@@ -2,8 +2,8 @@
   "experiment": "EXP-19 PLACES-BOUND",
   "inputs": {
     "08_council/DECISIONS.md": {
-      "bytes": 181341,
-      "sha256": "1bf43b39125c07e228a8d21b4062040d80b8a76df750536b7014a034a841d3a2"
+      "bytes": 182346,
+      "sha256": "706ccbcbdc945b5fc313e8cfb56900f3544f05992feeff41affeeebffd40b9e5"
     },
     "08_council/brief_024/SYNTHESIS_024.md": {
       "bytes": 67613,

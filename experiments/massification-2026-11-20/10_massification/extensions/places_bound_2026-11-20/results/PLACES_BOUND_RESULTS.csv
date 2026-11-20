@@ -12,18 +12,18 @@ required_state,required_target,0.8076,fraction,DERIVED,"D148: DERIVED target 0.8
 required_state,lambda_star,1.11465019198,multiplier,DERIVED,EXP-17 required uplift; NOT a parameter and NOT adopted
 required_state,required_state_source,10_massification/extensions/joint_cover_2026-11-20/results/JOINT_COVER_RESULTS.csv,,OBSERVED,values read from JOINT_COVER_RESULTS.csv and checked to 1e-12 against PRE_DECLARATIONS.md
 required_state,required_state_span,0.113811094126,fraction,DERIVED,"R = [0.759712104599164, 0.87352319872549]; span = R_2021 - R_2018"
-observed_input,classroom_student_ratio_elementary_2010,39,observed,OBSERVED,10_massification/data/SCHOOL_EXPANSION.csv; PHL; status=observed
-observed_input,classroom_student_ratio_elementary_2019,29,observed,OBSERVED,10_massification/data/SCHOOL_EXPANSION.csv; PHL; status=observed
-observed_input,classroom_student_ratio_elementary_2021,32,observed,OBSERVED,10_massification/data/SCHOOL_EXPANSION.csv; PHL; status=observed
-observed_input,classroom_student_ratio_junior_high_school_2010,54,observed,OBSERVED,10_massification/data/SCHOOL_EXPANSION.csv; PHL; status=observed
-observed_input,classroom_student_ratio_junior_high_school_2019,39,observed,OBSERVED,10_massification/data/SCHOOL_EXPANSION.csv; PHL; status=observed
-observed_input,classroom_student_ratio_junior_high_school_2021,44,observed,OBSERVED,10_massification/data/SCHOOL_EXPANSION.csv; PHL; status=observed
-observed_input,classroom_student_ratio_senior_high_school_2019,31,observed,OBSERVED,10_massification/data/SCHOOL_EXPANSION.csv; PHL; status=observed
-observed_input,pupil_teacher_ratio_high_school_2000,37,observed,OBSERVED,10_massification/data/SCHOOL_EXPANSION.csv; PHL; status=observed
-observed_input,pupil_teacher_ratio_high_school_2014,27,observed,OBSERVED,10_massification/data/SCHOOL_EXPANSION.csv; PHL; status=observed
-observed_input,pupil_teacher_ratio_high_school_2017,24,observed,OBSERVED,10_massification/data/SCHOOL_EXPANSION.csv; PHL; status=observed
-observed_input,classrooms_needed_backlog_2019,110954,observed,OBSERVED,10_massification/data/SCHOOL_EXPANSION.csv; PHL; status=observed
-observed_input,classrooms_needed_per_year_2019,10000,observed,OBSERVED,10_massification/data/SCHOOL_EXPANSION.csv; PHL; status=observed
+observed_input,classroom_student_ratio_elementary_2010,39,students per classroom,OBSERVED,10_massification/data/SCHOOL_EXPANSION.csv; PHL; status=observed
+observed_input,classroom_student_ratio_elementary_2019,29,students per classroom,OBSERVED,10_massification/data/SCHOOL_EXPANSION.csv; PHL; status=observed
+observed_input,classroom_student_ratio_elementary_2021,32,students per classroom,OBSERVED,10_massification/data/SCHOOL_EXPANSION.csv; PHL; status=observed
+observed_input,classroom_student_ratio_junior_high_school_2010,54,students per classroom,OBSERVED,10_massification/data/SCHOOL_EXPANSION.csv; PHL; status=observed
+observed_input,classroom_student_ratio_junior_high_school_2019,39,students per classroom,OBSERVED,10_massification/data/SCHOOL_EXPANSION.csv; PHL; status=observed
+observed_input,classroom_student_ratio_junior_high_school_2021,44,students per classroom,OBSERVED,10_massification/data/SCHOOL_EXPANSION.csv; PHL; status=observed
+observed_input,classroom_student_ratio_senior_high_school_2019,31,students per classroom,OBSERVED,10_massification/data/SCHOOL_EXPANSION.csv; PHL; status=observed
+observed_input,pupil_teacher_ratio_high_school_2000,37,learners per teacher,OBSERVED,10_massification/data/SCHOOL_EXPANSION.csv; PHL; status=observed
+observed_input,pupil_teacher_ratio_high_school_2014,27,learners per teacher,OBSERVED,10_massification/data/SCHOOL_EXPANSION.csv; PHL; status=observed
+observed_input,pupil_teacher_ratio_high_school_2017,24,learners per teacher,OBSERVED,10_massification/data/SCHOOL_EXPANSION.csv; PHL; status=observed
+observed_input,classrooms_needed_backlog_2019,110954,classrooms,OBSERVED,10_massification/data/SCHOOL_EXPANSION.csv; PHL; status=observed
+observed_input,classrooms_needed_per_year_2019,10000,classrooms/year,OBSERVED,10_massification/data/SCHOOL_EXPANSION.csv; PHL; status=observed
 observed_input,ger_lower_secondary_2018,92.8941,percent,OBSERVED,10_massification/data/UNIVERSALIZATION_SERIES.csv; PHL; gross enrolment ratio
 observed_input,ger_secondary_2018,79.3622469757,percent,OBSERVED,10_massification/data/UNIVERSALIZATION_SERIES.csv; PHL; gross enrolment ratio
 observed_input,ger_secondary_2021,85.8666475632,percent,OBSERVED,10_massification/data/UNIVERSALIZATION_SERIES.csv; PHL; gross enrolment ratio
@@ -49,11 +49,18 @@ identification,exact_cells_2021,0,cells,DERIVED,LEVEL-AND-YEAR EXACT primary cel
 identification,identification_gate_G,FAIL,,DERIVED,G = PASS iff at least one exact cell at EACH required year
 identification,identification_reason,2018 divisor carried from 2019; 2021 enrolment ratio is the broader ger_secondary,,DERIVED,"no same-year, level-matched conversion at either required year"
 implied_capacity,coverage_2018_n40,0.95276,seats/cohort,DERIVED,F1 class-size route; divisor classroom_student_ratio_junior_high_school 2019=39; GER ger_lower_secondary 2018=92.8941
+implied_capacity,places_per_enrolled_student_2018_n40,1.02564102564,places per enrolled student,DERIVED,"norm / observed divisor; the capacity per enrolled student, before multiplying by GER"
 implied_capacity,coverage_2018_n45,1.071855,seats/cohort,DERIVED,F1 class-size route; divisor classroom_student_ratio_junior_high_school 2019=39; GER ger_lower_secondary 2018=92.8941
+implied_capacity,places_per_enrolled_student_2018_n45,1.15384615385,places per enrolled student,DERIVED,"norm / observed divisor; the capacity per enrolled student, before multiplying by GER"
 implied_capacity,coverage_2018_n50,1.19095,seats/cohort,DERIVED,F1 class-size route; divisor classroom_student_ratio_junior_high_school 2019=39; GER ger_lower_secondary 2018=92.8941
+implied_capacity,places_per_enrolled_student_2018_n50,1.28205128205,places per enrolled student,DERIVED,"norm / observed divisor; the capacity per enrolled student, before multiplying by GER"
 implied_capacity,coverage_2021_n40,0.780605886938,seats/cohort,DERIVED,F1 class-size route; divisor classroom_student_ratio_junior_high_school 2021=44; GER ger_secondary 2021=85.8666475632
+implied_capacity,places_per_enrolled_student_2021_n40,0.909090909091,places per enrolled student,DERIVED,"norm / observed divisor; the capacity per enrolled student, before multiplying by GER"
 implied_capacity,coverage_2021_n45,0.878181622805,seats/cohort,DERIVED,F1 class-size route; divisor classroom_student_ratio_junior_high_school 2021=44; GER ger_secondary 2021=85.8666475632
+implied_capacity,places_per_enrolled_student_2021_n45,1.02272727273,places per enrolled student,DERIVED,"norm / observed divisor; the capacity per enrolled student, before multiplying by GER"
 implied_capacity,coverage_2021_n50,0.975757358672,seats/cohort,DERIVED,F1 class-size route; divisor classroom_student_ratio_junior_high_school 2021=44; GER ger_secondary 2021=85.8666475632
+implied_capacity,places_per_enrolled_student_2021_n50,1.13636363636,places per enrolled student,DERIVED,"norm / observed divisor; the capacity per enrolled student, before multiplying by GER"
+implied_capacity,absolute_seats_status,unavailable,,DECLARED,"no observed cohort/enrolment count or room stock is on disk; absolute seats cannot be formed without fabrication; REQUIRED as a ratio, HELD as a count"
 coverage_interval,interval_n40,[0.780605886938; 0.95276],seats/cohort,DERIVED,min/max over the primary F1 cells at both required years
 coverage_interval,interval_span_n40,0.172154113062,fraction,DERIVED,span(I_n); required span=0.113811094126; wide test span>3.0*required_span
 coverage_interval,interval_n45,[0.878181622805; 1.071855],seats/cohort,DERIVED,min/max over the primary F1 cells at both required years

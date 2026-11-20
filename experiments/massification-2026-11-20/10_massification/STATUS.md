@@ -1421,3 +1421,27 @@ frozen A10 at 4.44e-10; determinism 3/3; final SHA256SUMS 14/14.
 - **Record corrections applied:** **D-1** closeout fit range now the 12-arm range **1.0475–3.2917** (fit) /
   **4.0148–6.1222** (holdout), with the "2.03–3.29" identified as the six law/capacity-only arms; **D-4** read-order
   paths fixed and the four registers + write-up order added; **V35b** 4-pair lower level **not THIN**.
+
+---
+
+## 3ah. THE PHASE WRITE-UP IS SHIPPED — `WRITE-UP-GATE: PASS` (D170)
+
+- `10_massification/lit/PHASE_WRITEUP.md` (**726 lines**; canonical; supersedes `PHASE_WRITEUP_SHELL.md`)
+  + `10_massification/lit/PHASE_WRITEUP_GATE.md` (**287 lines**; A-1…A-8 self-check): **A-1 PASS · A-2 PASS · A-3 PASS ·
+  A-4 PASS · A-5 PASS · A-6 PASS · A-7 PASS · A-8 PASS → `WRITE-UP-GATE: PASS`.**
+- **Two-object headline block:** phase object (A1 anchor class, 12 arms, pre-close) = conditional **level** reproduction
+  with fit MAE **1.047492271754753–3.2916863270693772** / holdout **4.014780434743067–6.122199101442962**, losing to the
+  **4.35 pp** linear trend, observational equivalence, one unreproduced upper-secondary asymmetry, placement **9/33** (and
+  a placement is not a reproduction); post-close object (`v1.7 (A17)`) = representation-only, upper unfilled **15/15**,
+  both-level queue **30/30**, strict both-level coexistence **0/15**, **0/33** vs the **≥17/33** bar, crossings **1/3**,
+  D63 `UNABLE` split **58.6008/41.3992** at the declared t−3 pair.
+- **W-2…W-6 + Appendices A–G** as adjudicated: level sentences with the `ger_secondary` trap and T-vs-completion columns;
+  participation paragraph with `NO-REGISTERED-COUNTERPART`/placement **WITHHELD**; D63 with the t−3 sentence and
+  `BOUNDS-EDGE`; κ with the four fixed sentences, KOR counter-example, 17-of-193 universe, κ-link/2027 barred and the
+  stale column not lifted; limits (HELD 14/14, HKG two-part condition, corrected 12-arm range, read order,
+  theory-as-declared, parks); four register appendices; banned register B-1…B-28; provenance 21 groups.
+- **Integrity:** 30 claims each label·class/object·window·status·one sentence; 79 links (35 unique) 0 unresolved; 4/4 κ
+  sentences verbatim; 0 banned sentences outside Appendix F; 748 numeric tokens (218 distinct) all mapped to delivered
+  cells; **no model run, no re-run, no re-score, no new number**; the untagged D77 headline occurs **0** times; D76/D77
+  applied, not amended; no `SPINE-REPLACED` verdict; **Lead checks the gate**. The phase stays **CLOSED at
+  PARTIAL/DESCRIPTIVE/EQUIVALENT**; the experiment programme stays **CLOSED at 0 new cells** (D167); parks stand.

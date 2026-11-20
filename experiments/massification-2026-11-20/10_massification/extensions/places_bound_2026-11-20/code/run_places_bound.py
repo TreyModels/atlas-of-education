@@ -542,6 +542,14 @@ def main() -> int:
         "R = [0.759712104599164, 0.87352319872549]; span = R_2021 - R_2018")
 
     # observed inputs
+    observed_units = {
+        "classroom_student_ratio_elementary": "students per classroom",
+        "classroom_student_ratio_junior_high_school": "students per classroom",
+        "classroom_student_ratio_senior_high_school": "students per classroom",
+        "pupil_teacher_ratio_high_school": "learners per teacher",
+        "classrooms_needed_backlog": "classrooms",
+        "classrooms_needed_per_year": "classrooms/year",
+    }
     for ind, ys in (
         ("classroom_student_ratio_elementary", (2010, 2019, 2021)),
         ("classroom_student_ratio_junior_high_school", (2010, 2019, 2021)),
@@ -552,7 +560,7 @@ def main() -> int:
     ):
         for y in ys:
             if (ind, y) in shool:
-                add("observed_input", "%s_%d" % (ind, y), shool[(ind, y)], "observed", "OBSERVED",
+                add("observed_input", "%s_%d" % (ind, y), shool[(ind, y)], observed_units[ind], "OBSERVED",
                     "%s; PHL; status=%s" % (SCHOOL_EXP, school_status.get(ind, "")))
     for ind in ("ger_lower_secondary", "ger_secondary", "ger_primary", "ger_upper_secondary"):
         for t in REQUIRED_YEARS:
@@ -605,6 +613,12 @@ def main() -> int:
             "F1 class-size route; divisor %s %d=%.12g; GER %s %d=%.12g"
             % (c["divisor_indicator"], c["divisor_year"], c["divisor_value"],
                c["enrolment_ratio_indicator"], c["enrolment_ratio_year"], c["enrolment_ratio_value_pct"]))
+        add("implied_capacity", "places_per_enrolled_student_%d_n%d" % (c["required_year"], c["norm_class_size"]),
+            c["rooms_per_enrolled_student"], "places per enrolled student", "DERIVED",
+            "norm / observed divisor; the capacity per enrolled student, before multiplying by GER")
+    add("implied_capacity", "absolute_seats_status", "unavailable", "", "DECLARED",
+        "no observed cohort/enrolment count or room stock is on disk; absolute seats cannot be formed without "
+        "fabrication; REQUIRED as a ratio, HELD as a count")
     for n in NORMS:
         lo, hi = intervals[n]
         add("coverage_interval", "interval_n%d" % n, "[%s; %s]" % (fmt(lo), fmt(hi)), "seats/cohort", "DERIVED",
