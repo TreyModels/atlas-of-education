@@ -1,0 +1,33 @@
+S1 — STAGE-MATCHED SHADOW CHECK TABLE (all 11 use_as_model_target=YES rows + HKG gradient)
+Model: loop3/code/shadow3.py baseline structural parameters (NOT calibrated to these rows).
+HK 0.85 is a CALIBRATION target, never incidence evidence. Ranges: literature low-high where given,
+else point +/-5pp (declared range rule). UNABLE rows are reported, not dropped.
+
+  source          iso  stage                          lit%           range   model%                               status
+  SHADOW_TARGETS  KOR  all levels (elem+middle+high   78.5     [78.3,78.7]      nan                     UNABLE TO ASSESS
+  SHADOW_TARGETS  KOR  elementary                     90.0     [88.0,92.0]      nan                     UNABLE TO ASSESS
+  SHADOW_TARGETS  JPN  primary (grade 6)              41.8     [22.1,57.9]      nan                     UNABLE TO ASSESS
+  SHADOW_TARGETS  HKG  senior secondary               85.0     [80.0,90.0]     54.4 calibration (excluded from pass/fail
+  SHADOW_TARGETS  KHM  lower secondary (grade 9)      68.4 point +/-5pp (d     21.3                             assessed
+  SHADOW_TARGETS  KHM  primary                        41.3 point +/-5pp (d     12.8                             assessed
+  SHADOW_TARGETS  KHM  primary - urban                60.5 point +/-5pp (d     19.6                             assessed
+  SHADOW_TARGETS  KHM  primary - rural                26.4 point +/-5pp (d     10.5                             assessed
+  SHADOW_TARGETS  PHL  all basic education            46.5     [42.0,49.9]     23.5                             assessed
+  SHADOW_TARGETS  PHL  elementary                     23.8 point +/-5pp (d     17.4                             assessed
+  SHADOW_TARGETS  PHL  upper secondary                28.1 point +/-5pp (d     39.4                             assessed
+  TARGETS_SHADOW  HKG  lower-secondary                72.0    point +/-5pp     30.6                             assessed
+  TARGETS_SHADOW  HKG  middle-secondary               82.0    point +/-5pp     40.2                             assessed
+  TARGETS_SHADOW  HKG  senior-secondary               85.0    point +/-5pp     54.4 calibration (excluded from pass/fail
+  TARGETS_SHADOW  HKG  primary                        45.0             n/a     21.4                     UNABLE TO ASSESS
+  TARGETS_SHADOW  HKG  lower-secondary                26.0             n/a     30.6                     UNABLE TO ASSESS
+  TARGETS_SHADOW  HKG  middle-secondary               34.0             n/a     40.2                     UNABLE TO ASSESS
+  TARGETS_SHADOW  HKG  senior-secondary               40.0             n/a     54.4                     UNABLE TO ASSESS
+
+Assessable countries (excl. calibration): HKG, KHM, PHL. Outside range: ['HKG', 'KHM', 'PHL']; inside: none; UNABLE: ['KOR', 'JPN'].
+HKG gradient checks (2010 lower/middle): 2 assessed, 2 outside.
+
+PREDECLARED THRESHOLD: >=2 of the assessable countries outside their literature range (or any HKG
+gradient check outside) => stop claiming incidence. (KOR/JPN marked UNABLE, not counted as outside.)
+  -> S1 FAIL — outside-range countries: 3/3; HKG gradient misses: 2.
+  Incidence claim is NOT established: the model over-universalises outside the HKG calibration,
+  reproducing the Council brief-005 concern.

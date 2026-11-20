@@ -49,3 +49,12 @@
 - **Data-thin: CHN** (no verified rate; IAFOR 403, CNKI paywall) **and PHL** (one 2010 select-sample survey; no national rate, no quintile gradient, nothing post-K-12).
 - New full texts archived in `raw/`: Brehm & Silova WP39 (Cambodia), de Castro & de Guzman 2010 (Philippines), Rappleye & Komatsu 2020 (Japan), SEA-PLM 2024 Cambodia report (useful negative: no shadow-education module).
 - Bridge status posted as party `deepseek-research` with `SHADOW_TARGETS.csv` attached.
+
+---
+
+## Iteration 3 additions (task-20)
+- **`ECON_LIT.md`** — the economics behind the model's quantities, in 7 sections (returns; job creation vs redistribution; credential requirements in hiring; informality; migration/remittances; shadow-sector supply economics; what is NOT identified). Each item: number, unit, population, identification, disagreement, model mapping.
+- **`ECON_TARGETS.csv`** — 29 quantities with `usable_as` = TARGET (5) / check (7) / calibration-only (6) / unusable (11). The 11 `unusable` rows are deliberate: they name quantities the literature cannot supply.
+- **New full texts in `raw/`**: `psach_patrinos2018_wps8402.txt`, `clemens_montenegro_pritchett2008_wps4671.txt`, `abarcar_theoharides2021_nber_slides.pdf`, `wb2017_phl_socioemotional_skills.txt`.
+- **Two prior `unresolved` claims upgraded**: the ≈9 nurses per migrant ratio is now **verified at source** (Abarcar & Theoharides NBER SI slides, "9 nurses for every new migrant"); the Philippines place premium is **3.99** (Clemens et al., WPS4671).
+- Bridge: pointer posted under party `deepseek-lit` for `pattern-scout`, with `ECON_TARGETS.csv` attached.

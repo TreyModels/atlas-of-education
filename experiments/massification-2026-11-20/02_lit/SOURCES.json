@@ -1,7 +1,7 @@
 {
-  "generated_utc": "2026-11-20T05:41:00Z",
+  "generated_utc": "2026-11-20T05:52:00Z",
   "workspace": "/Users/treymenefee/Library/Mobile Documents/com~apple~CloudDocs/Downloads/DeepSeek/massification_2026-11-20",
-  "note": "Retrieval records for the Massification literature ledger. Saved files under 02_lit/raw/ are working copies for verification, not for redistribution. Access status vocabulary: full-text (retrieved and read), full-text-unread (retrieved, not yet mined), abstract-only (metadata/abstract only), landing-only (DOI/IDEAS/ERIC record; no abstract), blocked (HTTP 403/404/SSL). Iteration 2 additions: Brehm & Silova WP39, de Castro & de Guzman 2010, Rappleye & Komatsu 2020, SEA-PLM 2024 KHM, plus recorded blocks (ADB book 404, IAFOR 403).",
+  "note": "Retrieval records for the Massification literature ledger. Saved files under 02_lit/raw/ are working copies for verification, not for redistribution. Access status vocabulary: full-text (retrieved and read), full-text-unread (retrieved, not yet mined), abstract-only (metadata/abstract only), landing-only (DOI/IDEAS/ERIC record; no abstract), blocked (HTTP 403/404/SSL). Iteration 2 additions: Brehm & Silova WP39, de Castro & de Guzman 2010, Rappleye & Komatsu 2020, SEA-PLM 2024 KHM, plus recorded blocks (ADB book 404, IAFOR 403). Iteration-3 additions (task-20): Psacharopoulos-Patrinos WPS8402, Clemens-Montenegro-Pritchett WPS4671, Abarcar-Theoharides NBER slides, World Bank 2017 PHL skills report.",
   "records": [
     {
       "key": "yoo2003",
@@ -355,6 +355,54 @@
       "saved_as": null,
       "access_status": "blocked",
       "note": "China Double Reduction Xi'an participation study - 403. No China rate obtained."
+    },
+    {
+      "key": "psach_patrinos2018",
+      "url": "https://openknowledge.worldbank.org/server/api/core/bitstreams/270b9d54-6dcb-571d-b449-9b4143738dd3/content",
+      "http_status": 200,
+      "content_type": "text/plain",
+      "retrieved_utc": "2026-11-20T05:22:00Z",
+      "saved_as": "02_lit/raw/psach_patrinos2018_wps8402.txt",
+      "access_status": "full-text",
+      "note": "Psacharopoulos & Patrinos (2018), WB PRWP 8402, 'Returns to Investment in Education: A Decennial Review'. Served as plain-text PDF; archived as .txt (content is the extracted text).",
+      "sha256": "aeaf595462931e983684d64575009b6ab6c08c0cc1c6d679b75d8aabb984aefd",
+      "bytes": 65054
+    },
+    {
+      "key": "clemens_montenegro_pritchett2008",
+      "url": "https://openknowledge.worldbank.org/server/api/core/bitstreams/d9df96d4-81a6-5fe1-b7ae-d406cbe1cf36/content",
+      "http_status": 200,
+      "content_type": "text/plain",
+      "retrieved_utc": "2026-11-20T05:22:00Z",
+      "saved_as": "02_lit/raw/clemens_montenegro_pritchett2008_wps4671.txt",
+      "access_status": "full-text",
+      "note": "Clemens, Montenegro & Pritchett (2008), WB PRWP 4671, 'The Place Premium'. Philippines R_o = 3.99. Archived as .txt.",
+      "sha256": "ca93f83a90737704005eeae25554796fc2b18454a761ee8ddd45d8f93423bd61",
+      "bytes": 237314
+    },
+    {
+      "key": "abarcar_theoharides2021_slides",
+      "url": "http://conference.nber.org/conf_papers/f152421.slides.pdf",
+      "http_status": 200,
+      "content_type": "application/pdf",
+      "retrieved_utc": "2026-11-20T05:22:00Z",
+      "saved_as": "02_lit/raw/abarcar_theoharides2021_nber_slides.pdf",
+      "access_status": "full-text",
+      "note": "Abarcar & Theoharides, NBER Summer Institute 2021 slides for 'Medical Worker Migration and Origin-Country Human Capital'. VERIFIES '9 nurses for every new migrant'.",
+      "sha256": "381977e003ff382eb8499b8cc8d6bf15c352f78df179bbda34320ba1602eaaab",
+      "bytes": 1141874
+    },
+    {
+      "key": "wb2017_phl_skills",
+      "url": "https://documents1.worldbank.org/curated/en/333521498727263689/pdf/Developing-socioemotional-skills-for-the-Philippines-labor-market.pdf",
+      "http_status": 200,
+      "content_type": "text/plain",
+      "retrieved_utc": "2026-11-20T05:22:00Z",
+      "saved_as": "02_lit/raw/wb2017_phl_socioemotional_skills.txt",
+      "access_status": "full-text",
+      "note": "World Bank (2017), 'Developing Socioemotional Skills for the Philippines' Labor Market', DOI 10.1596/978-1-4648-1191-3. Table 2.1: firms citing inadequate skills as major obstacle = 7.8% (2009), 10.1% (2015).",
+      "sha256": "1eef57d9b797491025fcd0f06bda6923b76d3dd12f55c868d8cdbce4295bfcec",
+      "bytes": 230589
     }
   ]
 }

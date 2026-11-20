@@ -1,0 +1,198 @@
+{
+ "loop": "4",
+ "owner": "experiment-runner-2",
+ "scope": "05b_experiments/loop4 only",
+ "environment": {
+  "python": "3.11.17",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "numpy": "2.4.6"
+ },
+ "predeclaration": "PRE_DECLARATIONS_L4.md",
+ "meta": {
+  "module": "l4.py (NEW identification-round code; U1/U1b use loop3 structural market; U2 two-channel identification test; U3 uses loop2 twoway)",
+  "seeds": [
+   0,
+   1,
+   2,
+   3,
+   4
+  ],
+  "U1": {
+   "shift": 2.423544544432743,
+   "price": 0.13499999999999998,
+   "per_participant": 0.13499999999999998,
+   "per_student": 0.10597499999999997,
+   "participation": 0.7849999999999999,
+   "by_level": {
+    "elementary": 0.7190468032443252,
+    "middle": 0.7890520461847911,
+    "high": 0.8795883170783789
+   },
+   "commercial_share": 0.8294656749213806,
+   "fee_ok": true,
+   "order_ok": false,
+   "within": false,
+   "hours": "UNABLE",
+   "bylevel_fee_gradient": "UNIFORM (not reproduced)"
+  },
+  "U1b": {
+   "shift": 2.068601055388106,
+   "obs": {
+    "lower": 35.1,
+    "middle": 46.6,
+    "senior": 70.3
+   },
+   "model": {
+    "lower": 51.927534661929165,
+    "middle": 58.71363337563814,
+    "senior": 68.23601958681377
+   },
+   "monotone": true,
+   "rho": 1.0,
+   "within": false,
+   "provider_mix": {
+    "middle": 100.0,
+    "senior": 22.284002860344387
+   },
+   "mix_ok": false,
+   "fee_ratio": 0.051923076923076926,
+   "fee_ok": false,
+   "verdict": "FAIL"
+  },
+  "U2": {
+   "recovery": 0.5,
+   "forced_placebo": 0.3,
+   "forced_noplacebo": 0.5,
+   "identification": false
+  },
+  "U3": {
+   "PHL": {
+    "fit_rmse": 4.5435888426436115,
+    "s0_mult": 1.0600000000000005,
+    "holdout_mae": 14.684366272670587,
+    "naive_mae": 5.704125732421875,
+    "n_fit": 6,
+    "n_hold": 5,
+    "passed": false,
+    "pred": {
+     "1999": 64.55721284046565,
+     "2000": 63.77241558230766,
+     "2003": 62.155655613637464,
+     "2004": 64.73539369647455,
+     "2008": 59.90095675340215,
+     "2010": 59.03914884654717,
+     "2013": 55.270554746783354,
+     "2017": 57.68488850627925,
+     "2022": 57.24790998243916,
+     "2023": 57.050403529237336,
+     "2024": 58.45844385432984
+    },
+    "obs": {
+     "1999": 59.7,
+     "2000": 60.13323974609375,
+     "2003": 61.72880554199219,
+     "2004": 60.36248016357422,
+     "2008": 64.09,
+     "2010": 66.1226806640625,
+     "2013": 67.47,
+     "2017": 76.43295288085938,
+     "2022": 68.2765121459961,
+     "2023": 71.92931365966797,
+     "2024": 75.02525329589844
+    }
+   },
+   "KHM": {
+    "fit_rmse": 14.802997695878707,
+    "s0_mult": 0.4,
+    "holdout_mae": 1.8361212865497927,
+    "naive_mae": 6.796608491377397,
+    "n_fit": 7,
+    "n_hold": 11,
+    "passed": true,
+    "pred": {
+     "1996": 21.57541188847168,
+     "1997": 23.166363114838536,
+     "2000": 23.36755294414935,
+     "2001": 23.806208641406574,
+     "2005": 24.307025652787996,
+     "2008": 23.2045447774103,
+     "2010": 21.966939052176734,
+     "2011": 19.632943335216844,
+     "2012": 22.166180991806666,
+     "2013": 20.714675919755933,
+     "2014": 22.674834952100326,
+     "2015": 24.65825050431026,
+     "2016": 24.007179682239908,
+     "2017": 22.787924101770436,
+     "2019": 23.378993903457115,
+     "2020": 24.872958986503807,
+     "2021": 24.833226889992122,
+     "2023": 24.29276565571478
+    },
+    "obs": {
+     "1996": 3.144537448883057,
+     "1997": 3.538026094436646,
+     "2000": 4.36,
+     "2001": 12.56429767608643,
+     "2005": 10.39342021942139,
+     "2008": 13.06760025024414,
+     "2010": 16.97507095336914,
+     "2011": 21.09941101074219,
+     "2012": 21.99811744689941,
+     "2013": 21.82463455200195,
+     "2014": 21.22901916503906,
+     "2015": 24.34737205505371,
+     "2016": 25.41107368469238,
+     "2017": 27.24068641662598,
+     "2019": 21.78261947631836,
+     "2020": 22.02969360351563,
+     "2021": 26.65299034118652,
+     "2023": 27.87285614013672
+    }
+   }
+  }
+ },
+ "code_sha": {
+  "code/l4.py": "30c959545cb53602",
+  "code/make_manifest_l4.py": "08483aa0ec89f896"
+ },
+ "outputs": [
+  {
+   "path": "runs/l4_meta.json",
+   "sha16": "48ae319e594854ce",
+   "bytes": 3484
+  },
+  {
+   "path": "runs/U1/findings.txt",
+   "sha16": "bd467884a010442f",
+   "bytes": 1590
+  },
+  {
+   "path": "runs/U1b/findings.txt",
+   "sha16": "541f8311fc580088",
+   "bytes": 1202
+  },
+  {
+   "path": "runs/U3/findings.txt",
+   "sha16": "04467e0e12555ebf",
+   "bytes": 1168
+  },
+  {
+   "path": "runs/U2/findings.txt",
+   "sha16": "07f853c1ac0f77fd",
+   "bytes": 1444
+  },
+  {
+   "path": "runs/U2/u2_recovery.csv",
+   "sha16": "19a90d96f34f2d69",
+   "bytes": 473
+  }
+ ],
+ "verdicts": {
+  "U1": "price block USABLE for KOR; demand by-level UNABLE/failed; hours UNABLE",
+  "U1b": "FAIL under predeclared rule -> incidence stays withdrawn for all countries",
+  "U2": "NEGATIVE: recovery 0.50 (<0.67), forced-ID 0.60 (!=0)",
+  "U3": "PHL FAIL (14.68pp held-out MAE); KHM mechanical pass only, no country claim",
+  "U4": "publishable = negative/identification map + KOR provider economics + data-first program"
+ }
+}

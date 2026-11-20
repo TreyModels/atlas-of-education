@@ -51,7 +51,10 @@ Iteration 1 produced 23 executed cells and one reproduction audit. Three results
                                    ▼
    ┌─────────────────────────────────────────────────────────────────────────┐
    │  E. COUNCIL  (synthetic panel, adversarial)                             │
-   │     what is imposed, what is discovered; amendments; next experiments   │
+   │     reads the country profiles + data + economic literature, not just   │
+   │     the results, and PROPOSES THE NEXT EXPERIMENT SLATE                 │
+   │     (country/stage, variable, mechanism, data needed, arms, estimand,   │
+   │      threshold, cost, rank by identification value and feasibility)     │
    └───────────────────────────────┬─────────────────────────────────────────┘
                                    ▼
                         next iteration (change one variable)
@@ -85,6 +88,45 @@ world (surplus / competitive / Yoo).** A calibration target may never double as 
 **The structural variable for iteration 2 is provider supply/entry, including teacher-tutor
 capacity** — the change that creates a new checkable moment, endogenises the economy→education leg,
 and addresses the paper's nursing failure (0.25 versus ~9 licensed per migrant).
+
+## 1a2. The empirical scout layer (added 20 Nov, iteration 4/5)
+
+A dedicated agent (`pattern-scout`) mines the economic and education data plus the empirical
+literature for **candidate relationships** the model can plug in: spending -> enrollment, school
+supply -> enrollment/transition, returns -> tutoring demand, informality -> credential demand,
+migration/remittances -> schooling, policy events (compulsory schooling, fee abolition, K-12,
+Double Reduction) -> enrollment jumps, provider entry/fees -> shadow take-up.
+
+Each candidate is graded by identification (causal / plausibly-causal / correlational), tested for
+**country-type heterogeneity** (income, informality, state capacity, urbanization), and mapped to a
+model parameter or function with a proposed in-model validation experiment. Deliverables:
+`09_relations/RELATION_CANDIDATES.csv`, `DATA_PATTERNS.md`, `LITERATURE_ELASTICITIES.md`,
+`MODEL_PLUG_MAP.md`, `COUNTRY_TYPOLOGY.md`, `scripts/`, `raw/`.
+
+This is the layer that lets the model "stand up by itself": parameters arrive with a sign, a
+magnitude, a sample, an identification grade, and a stated condition under which the relation holds
+or fails — not as free knobs.
+
+## 1b. The Council reads evidence, not just results (added 20 Nov, iteration 4/5)
+
+The panel's job is not only to audit what ran. Each cycle it must read the **country profiles, the
+coded data, and the economic literature**, then propose the experiment slate. The slate format is
+binding:
+
+| field | requirement |
+|---|---|
+| country / stage | which profile row this comes from |
+| model variable changed | a structural variable, not a re-parameterisation |
+| mechanism | stated in words, with the economic literature behind it |
+| data required | exact series/source, or "new data needed" |
+| arms / estimand / threshold | predeclared before running |
+| cost | minutes of compute or data-acquisition effort |
+| type | identification / description / forecast |
+
+Two parallel evidence builds feed it: `04_data/econ_round2/` (WB snapshots and a parameter map of
+what is observable vs not) and `02_lit/ECON_LIT.md` (returns to schooling, job creation, credential
+requirements, informality, migration, provider economics). The slate ranks experiments by
+identification value and feasibility; the Lead picks the next iteration from that rank.
 
 ## 2. What "shadow education appears where the literature says" means operationally
 

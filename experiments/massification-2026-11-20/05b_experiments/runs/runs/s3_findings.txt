@@ -1,0 +1,20 @@
+S3 — PRICE / PROVIDER-ENTRY CALIBRATION GRID (entry-cost x capacity x teacher capacity)
+Observed fee moments: the only verified ones are Korean (434k won/month per student; 553k per
+participant). There is NO verified fee moment for PH, HK or KHM and NO KOR model variant, so the
+fee comparison is UNABLE TO ASSESS. Grid reported for structure.
+
+  PH-like: grid 675 points; price 0.004-0.500; price/income 0.004-0.500; finite-price points 306/675
+    provider count n_cm 0.0-2.3, n_tt 1.6-11.8, teacher share 0.53-1.00
+    points with price/income inside declared plausible band [1%,15%]: 476/675
+  HK-like: grid 675 points; price 0.009-2.475; price/income 0.003-0.825; finite-price points 395/675
+    provider count n_cm 0.0-7.1, n_tt 0.9-20.2, teacher share 0.18-1.00
+    points with price/income inside declared plausible band [1%,15%]: 416/675
+  KHM-like: grid 675 points; price 0.002-0.144; price/income 0.004-0.288; finite-price points 270/675
+    provider count n_cm 0.0-0.0, n_tt 1.6-6.8, teacher share 1.00-1.00
+    points with price/income inside declared plausible band [1%,15%]: 495/675
+
+THRESHOLD: price inside an OBSERVED range => pass; no observed moment => UNABLE (never called a pass).
+  -> S3 verdict: UNABLE TO ASSESS (no observed fee moment for PH/HK/KHM; only KOR moments, no KOR model).
+  Structure note: with entry costs multiplied up to 10x, the price can stay above the floor at part of
+  the grid (see finite-price counts) — the loop-2 floor collapse is an under-priced entry-cost block, not
+  an intrinsic result. Provider counts remain high in the credible-price region.

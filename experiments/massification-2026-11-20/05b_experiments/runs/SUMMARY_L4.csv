@@ -1,0 +1,16 @@
+cell,item,value,target,status,source
+U1,per-participant fee/income,0.135000,0.138,PASS,runs/U1/findings.txt
+U1,per-student fee/income,0.105975,0.108,PASS,runs/U1/findings.txt
+U1,by-level participation ordering (E>M>H?),False,E 86/M 75.4/H 66.4,FAIL (ordering),runs/U1/findings.txt
+U1,hours 7.3/wk,UNABLE,7.3,UNABLE,runs/U1/findings.txt
+U1b,1998/99 lower take-up %,51.927535,35.100000,miss +16.8pp,runs/U1b/findings.txt
+U1b,1998/99 middle take-up %,58.713633,46.600000,miss +12.1pp,runs/U1b/findings.txt
+U1b,1998/99 senior take-up %,68.236020,70.300000,miss -2.1pp,runs/U1b/findings.txt
+U1b,verdict,FAIL,predeclared 4-condition rule,FAIL,runs/U1b/findings.txt
+U2,recovery (candidate truths),0.500000,>=0.67,NEGATIVE,runs/U2/findings.txt
+U2,forced-ID (placebo),0.300000,=0,NEGATIVE,runs/U2/findings.txt
+U2,forced-ID (no placebo),0.500000,=0,NEGATIVE,runs/U2/findings.txt
+U3,PHL held-out MAE,14.684366,<=5.0pp and < naive,FAIL,runs/U3/findings.txt
+U3,PHL in-sample RMSE,4.543589,-,,runs/U3/findings.txt
+U3,KHM held-out MAE,1.836121,<=5.0pp and < naive,PASS,runs/U3/findings.txt
+U3,KHM in-sample RMSE,14.802998,-,caveat,runs/U3/findings.txt

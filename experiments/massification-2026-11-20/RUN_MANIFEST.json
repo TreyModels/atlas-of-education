@@ -1,7 +1,7 @@
 {
  "package": "massification_2026-11-20",
  "title": "Massification, the economy, and shadow education — DeepSeek research execution package",
- "generated_utc": "2026-11-20T05:21:26.280149+00:00",
+ "generated_utc": "2026-11-20T05:25:03.292726+00:00",
  "time_zone": "Asia/Shanghai",
  "prepared_for": "Dr. Trey Menefee (Menefee & Nordtveit working paper, October 2026)",
  "handoff_source_zip": "/Users/treymenefee/Downloads/DeepSeek_Massification_Research_Package.zip",
@@ -466,13 +466,21 @@
   "EXPERIMENTS.md": "df24a7d68a197a07de55816001e7c2dd28ed43f0a8caf69e5aa2be10fcf80f21",
   "OPEN_QUESTIONS.md": "fe4c16428981c1668a2882a173335a5b499d9c6faec042009faf8ccdd4c2f976",
   "PROVENANCE.md": "5a5e584b6d73a6db97dfa2142c8962e742e05f29e2d4234156919232502ba782",
-  "RUN_MANIFEST.json": "424071ebe1abe3bb6dbce0a35fef306070354f5f1140e0065c725dd1a578b873"
+  "RUN_MANIFEST.json": "29eb249db14e3fa96594b8bb94d7da29baab7dd7d9217294074a5a710293c8ce"
  },
  "subtree_hashes": {
   "02_lit": {
    "02_lit/CLAIM_REGISTER.csv": {
     "sha256": "42e58d7b286d7eca34bdad1c029d0c9abb102278ffeaf8fdf572392aa1d55899",
     "bytes": 21338
+   },
+   "02_lit/ECON_LIT.md": {
+    "sha256": "c716a4fd81c597c0eed05839421b1610067892a0c8fdef8544ff3718af5b2106",
+    "bytes": 17260
+   },
+   "02_lit/ECON_TARGETS.csv": {
+    "sha256": "3963d8c1c2d224bf1608f98773050476b74917bebe9c3800cfef2b5d6e4ffbaa",
+    "bytes": 7930
    },
    "02_lit/LITERATURE_LEDGER.md": {
     "sha256": "4b6c9ba4e70c5f4505af1098675c52f7cb257b780994840f8c11ff076693a7e5",
@@ -487,16 +495,16 @@
     "bytes": 30894
    },
    "02_lit/README.md": {
-    "sha256": "cd0c1bea12e1d55435861ab92203006d5f506e3929490d6219dda55226d77360",
-    "bytes": 5686
+    "sha256": "83516b736c2c564fb9f4e46252b733e58c2609c29113b4627589e3b011b34b9e",
+    "bytes": 6834
    },
    "02_lit/SHADOW_TARGETS.csv": {
     "sha256": "3c613137d82830f3108e3c610922b8af57d3a8155d9baf7c96ec89994a8dc06f",
     "bytes": 6320
    },
    "02_lit/SOURCES.json": {
-    "sha256": "509747ff575cdb2f8df711f6b41efdfc4eb367300cf2983502192afe2c8857fc",
-    "bytes": 14846
+    "sha256": "5e0a277569fed61541279d5922bf5b7da84284536dc6bae6091ef066ae041d41",
+    "bytes": 17741
    },
    "02_lit/COUNTRY_CARDS/CHN.md": {
     "sha256": "c1a382abf66bfe3847d0c13ae579b3cb3147df3c05126e6c1f7bd7164538c812",

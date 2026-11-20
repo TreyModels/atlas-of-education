@@ -1,0 +1,19 @@
+U2 — RECOVERY WITH TRUTHS OUTSIDE THE CANDIDATE SET + FORCED-IDENTIFICATION RATE
+Two-channel identification test (declared): candidate set = {EDUCATION_LED (ed=.8,ec=0),
+DEMAND_LED (0,.8), COMPLEMENTARY (.6,.6)}; OUTSIDE truths = {common shock gamma=.9 with no
+mechanism, opposite-sign (-.6,-.6)}. Data: schooling-push arm, demand-push arm, placebo arm;
+seed noise sd 0.30; 20 simulations per truth; classifier threshold |est|>0.25.
+Estimator A (declared design): difference-in-differences vs placebo (nets out common shocks).
+Estimator B (no placebo): raw arm response.
+
+  truth                    mean ed_hat mean ec_hat  recovery forced(ID) forced(no placebo)
+  EDUCATION_LED                 +0.794      +0.103       0.5                              
+  DEMAND_LED                    +0.156      +0.913       0.5                              
+  COMPLEMENTARY                 +0.520      +0.536       0.5                              
+  OUTSIDE_COMMON_SHOCK          -0.005      +0.126                  0.6                1.0
+  OUTSIDE_OPPOSITE_SIGN         -0.622      -0.664                  0.0                0.0
+
+PREDECLARED THRESHOLD: identification claimed iff recovery >= 0.67 AND forced-ID = 0.
+  -> recovery = 0.50; forced-ID (placebo design) = 0.30; forced-ID (no placebo) = 0.50
+  -> U2 verdict: NEGATIVE: identification NOT established
+  No mechanism claim from this module: the candidate set is not recoverable/forced-ID-free.

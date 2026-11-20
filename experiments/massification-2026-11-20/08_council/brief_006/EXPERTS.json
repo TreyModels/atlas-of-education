@@ -1,0 +1,60 @@
+{
+  "brief_id": "brief_006",
+  "brief_file": "08_council/brief_006/BRIEF.md",
+  "material": "Loop-3 stop-rule adjudication: S1 stage-matched shadow check (FAIL 3/3 assessable), S2 structural-parameter search (PH no reproduction; KHM partial; HKG weak-ID), S3 price/entry (UNABLE); sign-off of SUMMARY_FOR_TREY.md and RESEARCH_LOOP.md withdrawal language; loop 4 pending.",
+  "synthetic_disclaimer": "SYNTHETIC EXERCISE. Panelists are AI-constructed composite personas whose positions are inferred from the published literature. Nothing here is a statement by, or endorsed by, the named individuals or any living person. Names in literature_basis identify the work each composite draws on, not participants in a deliberation.",
+  "convened_by": "lead",
+  "convened_at": "2026-11-20T13:23+08:00",
+  "panel_size": 4,
+  "panel": [
+    {
+      "handle": "BRAY",
+      "label": "Composite drawing on comparative shadow-education literature (mandatory seat)",
+      "literature_basis": ["Bray & Lykins, Shadow Education (2012)", "Bray, comparative shadow-education work", "Bray & Zhang, China shadow-education research"],
+      "grounding_basis": ["listed", "publication"],
+      "role": "Shadow-incidence reviewer: confirm the failure, define what is withdrawn, judge the data reality",
+      "assigned_prior_question": "Lead Q1 (withdrawal scope), Q2 (publishable ranking)",
+      "steel_man_slot": false
+    },
+    {
+      "handle": "PATRINOS",
+      "label": "Composite drawing on returns-to-education and education-economics literature",
+      "literature_basis": ["Psacharopoulos & Patrinos, decennial returns review (2018)", "Becker, Human Capital (1964)"],
+      "grounding_basis": ["publication"],
+      "role": "Identification/econometrics reviewer: S2 evidence, weak-ID audit, the rescue experiment",
+      "assigned_prior_question": "Lead Q3 (rescue experiment), Q4 (sign-off)",
+      "steel_man_slot": true
+    },
+    {
+      "handle": "PAGE",
+      "label": "Composite drawing on model-based-reasoning and complexity literature",
+      "literature_basis": ["Page, The Model Thinker (2018)", "Miller & Page, Complex Adaptive Systems (2007)"],
+      "grounding_basis": ["publication"],
+      "role": "Model-class reviewer: what the model can now support; provider economics; ranking of publishable objects",
+      "assigned_prior_question": "Lead Q2 (publishable ranking), Q3 (rescue)",
+      "steel_man_slot": false
+    },
+    {
+      "handle": "CARTWRIGHT",
+      "label": "Composite drawing on philosophy-of-social-science literature",
+      "literature_basis": ["Cartwright, The Dappled World (1999)", "Cartwright & Hardie, Evidence-Based Policy (2012)"],
+      "grounding_basis": ["publication"],
+      "role": "Stop-rule adjudicator: confirm the event, distinguish withdrawn vs retained, sign off withdrawal language",
+      "assigned_prior_question": "Lead Q1 (scope), Q4 (sign-off/amendments)",
+      "steel_man_slot": false
+    }
+  ],
+  "composition_check": {
+    "size_3_to_4": true,
+    "mandatory_shadow_education_composite": "BRAY",
+    "steel_man_slot": "PATRINOS",
+    "all_composites_grounded": true
+  },
+  "intake_notes": [
+    "Loop 3 verified; stop rule 1 fired (S1 3/3 assessable countries outside range; HKG gradient 2 misses).",
+    "S2 HKG fit is 8 params/2 targets — weak identification, not replication.",
+    "S3 UNABLE: only Korean fee moments exist and there is no KOR model variant.",
+    "Loop 4 not on disk at intake — PENDING/UNABLE TO ASSESS; will be marked, not inferred."
+  ],
+  "deviation_from_lead": "none: 4 composites; Bray under the mandatory shadow-education rule."
+}

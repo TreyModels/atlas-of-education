@@ -1,0 +1,21 @@
+U1b — HKG MULTI-MOMENT OUT-OF-SAMPLE CHECK (Bray & Kwok 2003, 1998/99; peer-reviewed, 6-school
+quota sample n=630). Calibrated ONLY on the 2010 senior-secondary 85% (existing single
+calibration; shift=+2.069). The 1998/99 rows are NOT fitted.
+
+  2010 checks (not fitted): lower 72, middle 82 observed; model lower 68.7, middle 76.2, senior 85.0 (calibrated).
+
+  1998/99 OOS (declared time-trend factors: stakes x0.70, returns x0.75, public_sub 0.85,
+  income x0.78, cost x0.9):
+    stage    observed    model     miss
+    S1-3         35.1     51.9    +16.8
+    S4-5         46.6     58.7    +12.1
+    S6-7         70.3     68.2     -2.1
+    monotone rising: True; Spearman rank rho with observed gradient: 1.0
+    provider mix: commercial mass-lecture share S6-7 22.3% vs S4-5 100.0% (observed 72.4% vs 33.0%; gap observed 39.4pp)
+    fee/income ratio: model 5.19% vs observed band 1.1-5.0% -> outside
+
+PREDECLARED THRESHOLD: PASS (single-country check) iff monotone rising, every stage within
++/-15pp, commercial share higher at S6-7 with gap >=20pp, and fee/income inside 1.1-5.0%.
+Shape-only if monotone + provider ordering hold but levels/fee fail. FAIL if not monotone.
+
+  -> U1b verdict: FAIL

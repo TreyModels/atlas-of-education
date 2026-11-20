@@ -1,0 +1,22 @@
+U1 — KOR-LIKE VARIANT vs OFFICIAL 2023 ANCHORS (MODS/KEDI 2023).
+One calibration: common demand intercept so all-levels participation = 78.5% (shift=+2.424).
+Observed (official): all 78.5; elementary 86.0, middle 75.4, high 66.4;
+hours 7.3 h/wk (by level 7.5/7.4/6.7) = UNABLE (no hours object in this module);
+spend: 434k won/month per student, 553k per participant; by level 462/596/740k;
+income anchor GDP pc 2024 36,238.6 US$ x declared 1,330 KRW/USD -> ratios 10.8% per student,
+13.8% per participant, by level 11.5/14.9/18.4%.
+
+  model price (annual fee/income, per participant) = 13.5%
+  model per-student fee/income = 10.6%
+  model participation by level: elementary 71.9%, middle 78.9%, high 88.0% (all 78.5% by calibration)
+  model provider mix: commercial share of demand = 82.9% (observed hagwon = 241/434 = 55.5% of expenditure; 1:1 8.5%, group 5.1%, internet 3.7%)
+  model by-level fee/income is UNIFORM (13.5% every level) -> cannot reproduce the
+  observed by-level spend gradient 11.5/14.9/18.4% (model has one price, no stage-specific
+  provider choice); this is a structural limitation, reported not fitted.
+
+PREDECLARED THRESHOLDS: per-participant ratio inside [10.5%,18.5%] and per-student inside
+[9.5%,16%] => price block usable; by-level participation ordering/levels within +/-15pp descriptive.
+
+  fee block: PASS (usable)
+  by-level participation ordering (model needs E>M>H): False; within +/-15pp: False
+  -> U1 verdict: price block USABLE for KOR; demand by-level ordering FAILS (model predicts rising take-up with stage; official data declines); hours UNABLE

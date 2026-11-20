@@ -1,0 +1,112 @@
+{
+ "loop": "3",
+ "owner": "experiment-runner-2",
+ "scope": "05b_experiments/loop3 only",
+ "module": "code/shadow3.py (NEW; not massabm/floorworld/triad/paper reproduction)",
+ "environment": {
+  "python": "3.11.17",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "numpy": "2.4.6"
+ },
+ "predeclaration": "PRE_DECLARATIONS_L3.md",
+ "meta": {
+  "module": "shadow3.py (NEW; not massabm/floorworld/triad/paper reproduction)",
+  "countries": [
+   "PH-like",
+   "HK-like",
+   "KHM-like"
+  ],
+  "seeds": [
+   0,
+   1,
+   2,
+   3,
+   4
+  ],
+  "intake_corrections": {
+   "shadow_targets_yes_rows": 11,
+   "loop2_teacher_entry_effect_pp": "54-67 (correction of 46-66)"
+  },
+  "s1": {
+   "passed": false,
+   "outside": [
+    "HKG",
+    "KHM",
+    "PHL"
+   ],
+   "inside": [],
+   "unable": [
+    "KOR",
+    "JPN"
+   ],
+   "hkg_gradient_misses": 2
+  },
+  "s2": {
+   "PH-like": {
+    "base_rmse": 15.236041541924864,
+    "joint_rmse": 11.70502965220896
+   },
+   "HK-like": {
+    "base_rmse": 41.59238322610955,
+    "joint_rmse": 0.21507703210432166
+   },
+   "KHM-like": {
+    "base_rmse": 35.205792501747204,
+    "joint_rmse": 8.287065054423742
+   }
+  },
+  "s3": {
+   "verdict": "UNABLE TO ASSESS (no observed fee moment for PH/HK/KHM)"
+  },
+  "pending_L2_4_L2_5": "NOT RUN in this timebox"
+ },
+ "intake_corrections": {
+  "shadow_targets_yes_rows": 11,
+  "loop2_teacher_entry_effect_pp": "54-67 (correction of 46-66)"
+ },
+ "code_sha": {
+  "code/shadow3.py": "5a645eccbfb9a2a9",
+  "code/make_manifest_l3.py": "f19697ee3baaf03c"
+ },
+ "outputs": [
+  {
+   "path": "runs/run_meta.json",
+   "sha16": "8db7c0d9d8ea05cf",
+   "bytes": 890
+  },
+  {
+   "path": "runs/s1_table.csv",
+   "sha16": "4b922beff966f2ef",
+   "bytes": 3713
+  },
+  {
+   "path": "runs/s1_table.txt",
+   "sha16": "44fcdfe40121c71f",
+   "bytes": 3275
+  },
+  {
+   "path": "runs/s2_findings.txt",
+   "sha16": "58c7c833c55d83d3",
+   "bytes": 2165
+  },
+  {
+   "path": "runs/s2_search.csv",
+   "sha16": "73e7214c045c0a56",
+   "bytes": 9934
+  },
+  {
+   "path": "runs/s3_findings.txt",
+   "sha16": "ee2d1dd6b8365f4f",
+   "bytes": 1602
+  },
+  {
+   "path": "runs/s3_grid.csv",
+   "sha16": "04e21a03836434a8",
+   "bytes": 190239
+  }
+ ],
+ "pending": [
+  "L2-4 recovery/forced-ID",
+  "L2-5 1980-2010 fit / 2011-2024 holdout"
+ ]
+}

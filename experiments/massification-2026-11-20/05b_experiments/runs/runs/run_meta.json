@@ -1,0 +1,51 @@
+{
+ "module": "shadow3.py (NEW; not massabm/floorworld/triad/paper reproduction)",
+ "countries": [
+  "PH-like",
+  "HK-like",
+  "KHM-like"
+ ],
+ "seeds": [
+  0,
+  1,
+  2,
+  3,
+  4
+ ],
+ "intake_corrections": {
+  "shadow_targets_yes_rows": 11,
+  "loop2_teacher_entry_effect_pp": "54-67 (correction of 46-66)"
+ },
+ "s1": {
+  "passed": false,
+  "outside": [
+   "HKG",
+   "KHM",
+   "PHL"
+  ],
+  "inside": [],
+  "unable": [
+   "KOR",
+   "JPN"
+  ],
+  "hkg_gradient_misses": 2
+ },
+ "s2": {
+  "PH-like": {
+   "base_rmse": 15.236041541924864,
+   "joint_rmse": 11.70502965220896
+  },
+  "HK-like": {
+   "base_rmse": 41.59238322610955,
+   "joint_rmse": 0.21507703210432166
+  },
+  "KHM-like": {
+   "base_rmse": 35.205792501747204,
+   "joint_rmse": 8.287065054423742
+  }
+ },
+ "s3": {
+  "verdict": "UNABLE TO ASSESS (no observed fee moment for PH/HK/KHM)"
+ },
+ "pending_L2_4_L2_5": "NOT RUN in this timebox"
+}

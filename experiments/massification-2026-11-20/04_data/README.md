@@ -40,6 +40,10 @@ Tidy long format: `country, iso3, indicator_code, indicator_name, year, value, u
 - **No invented values.** Where a source was blocked, the cell is empty and the blocker is named in `retrieval_log.md`. The only modelled series present are UIS `CR.MOD.*`, labelled as such. Nothing was interpolated.
 - **Definitions are kept apart.** Gross vs net enrolment, enrolment vs completion vs modelled completion, attainment stock vs current flow, informality vs occupation vs credential requirement. `DATA_LEDGER.md` opens with the conflation traps that matter for these four countries.
 
+## Shadow-education round 2 (task-16)
+
+`shadow_round2/` closes as much of the shadow-education gap as free sources allow: `SHADOW_DATA.md` (ledger), `data/shadow_incidence_round2.csv` (38 incidence rows, country × stage × provider, with year/denominator/scope/confidence), `data/shadow_fees_round2.csv` (20 fee moments), raw PDFs and extraction text. Korea (MODS/KEDI 2023) and Japan (Rappleye & Komatsu 2020) now have high-confidence anchors; Hong Kong gains a 2003 survey anchor with provider mix and fees; Cambodia is a clearly-scoped case study; China has a 2014 national rate and a low-confidence post-2021 marker; the Philippines remains blocked (PSA 403, data.gov.ph SPA).
+
 ## Iteration-2 target sets
 
 `TARGETS_SHADOW.csv` (tutoring participation, country × stage × provider), `TARGETS_FLOW.csv` (completion/out-of-school/transition proxies/formality/attainment), `ECONOMY_SERIES.csv` (annual GDP p.c., sector & status employment, urbanisation, remittances). **No imputed values.** `status` distinguishes `target` (calibratable), `check` (different concept, plausibility only) and `unresolved` (blank + blocker named). Read `TARGETS_README.md` first — it carries the definition/vintage discipline and the five traps.

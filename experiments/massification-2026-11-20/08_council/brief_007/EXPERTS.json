@@ -1,0 +1,51 @@
+{
+  "brief_id": "brief_007",
+  "brief_file": "08_council/brief_007/BRIEF.md",
+  "material": "Country-evidence-driven experiment slate for iteration 5: country cards, new shadow_round2 data (KOR official 2023, HK 2003, JPN prefecture, CHN 2014, KHM case), targets/economy series, loop2 calibration+ledger, loop3 stop-rule, loop4 U1/U1b/U2/U3. 09_relations layer PENDING.",
+  "synthetic_disclaimer": "SYNTHETIC EXERCISE. Panelists are AI-constructed composite personas whose positions are inferred from the published literature. Nothing here is a statement by, or endorsed by, the named individuals or any living person. Names in literature_basis identify the work each composite draws on, not participants in a deliberation.",
+  "convened_by": "lead",
+  "convened_at": "2026-11-20T13:29+08:00",
+  "panel_size": 3,
+  "panel": [
+    {
+      "handle": "BRAY",
+      "label": "Composite drawing on comparative shadow-education literature (mandatory seat)",
+      "literature_basis": ["Bray & Lykins, Shadow Education (2012)", "Bray & Kwok (2003), Economics of Education Review 22", "Bray, comparative shadow-education work", "Bray & Zhang, China shadow-education research"],
+      "grounding_basis": ["listed", "publication"],
+      "role": "Shadow-evidence reviewer: what the profiles support; provider/form and gate-stage experiments",
+      "assigned_prior_question": "Task Q1 (country support), Q2 (slate), Q5 (the one)",
+      "steel_man_slot": false
+    },
+    {
+      "handle": "PATRINOS",
+      "label": "Composite drawing on returns-to-education and education-economics literature",
+      "literature_basis": ["Psacharopoulos & Patrinos, decennial returns review (2018)", "Becker, Human Capital (1964)"],
+      "grounding_basis": ["publication"],
+      "role": "Identification/feasibility reviewer: which experiments can identify, which are description",
+      "assigned_prior_question": "Task Q2 (slate), Q3 (ranking), Q4 (data-first)",
+      "steel_man_slot": true
+    },
+    {
+      "handle": "PAGE",
+      "label": "Composite drawing on model-based-reasoning and complexity literature",
+      "literature_basis": ["Page, The Model Thinker (2018)", "Miller & Page, Complex Adaptive Systems (2007)"],
+      "grounding_basis": ["publication"],
+      "role": "Model-design reviewer: structural variables, arms, thresholds; country-type heterogeneity",
+      "assigned_prior_question": "Task Q2 (slate), Q3 (ranking)",
+      "steel_man_slot": false
+    }
+  ],
+  "composition_check": {
+    "size_3_to_4": true,
+    "mandatory_shadow_education_composite": "BRAY",
+    "steel_man_slot": "PATRINOS",
+    "all_composites_grounded": true
+  },
+  "intake_notes": [
+    "09_relations (pattern-scout) exists but is empty — relation layer PENDING; every experiment carries a relation slot PENDING and a design-intent type; no id invented.",
+    "New shadow_round2 data read: KOR official 2023 (86.0/75.4/66.4; fees), HK 2003 (35.1/46.6/70.3; provider/fees), JPN prefecture range, CHN 2014 29.8, KHM case study.",
+    "Loop-4 U1/U1b/U2/U3 read from disk; U4 verdict pending.",
+    "Runner-1 loop2 calibration table + cohort ledger now on disk (balance checks pass; long-run collapse anomaly noted)."
+  ],
+  "deviation_from_lead": "none: 3 composites (within 3–4); Bray under the mandatory shadow-education rule."
+}

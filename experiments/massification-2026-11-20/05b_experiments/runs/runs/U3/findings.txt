@@ -1,0 +1,11 @@
+U3 — HOLDOUT: fit 1980-2010 observed completion, test 2011-2024 (loop-2 two-way module).
+Model horizon extended to 60y: t=0 <-> 1965, t=59 <-> 2024. One fitted parameter: s0 multiplier
+(grid 0.40-1.60 step 0.02), mean over 5 seeds. Threshold: held-out MAE <= 5.0pp AND < naive
+persistence benchmark (last fit-year value carried forward); else no country claim.
+
+  PHL: fit 6 obs, holdout 5 obs; best s0 multiplier 1.06; in-sample RMSE 4.54pp; held-out MAE 14.68pp; naive persistence MAE 5.70pp
+    -> FAIL — no country claim: held-out miss exceeds the predeclared threshold or naive benchmark
+    held-out obs vs model: 2013: 67.5 vs 55.3; 2017: 76.4 vs 57.7; 2022: 68.3 vs 57.2; 2023: 71.9 vs 57.1; 2024: 75.0 vs 58.5
+  KHM: fit 7 obs, holdout 11 obs; best s0 multiplier 0.40; in-sample RMSE 14.80pp; held-out MAE 1.84pp; naive persistence MAE 6.80pp
+    -> PASS: held-out miss within threshold and better than naive
+    held-out obs vs model: 2011: 21.1 vs 19.6; 2012: 22.0 vs 22.2; 2013: 21.8 vs 20.7; 2014: 21.2 vs 22.7; 2015: 24.3 vs 24.7; 2016: 25.4 vs 24.0; 2017: 27.2 vs 22.8; 2019: 21.8 vs 23.4; 2020: 22.0 vs 24.9; 2021: 26.7 vs 24.8; 2023: 27.9 vs 24.3
