@@ -84,6 +84,22 @@ so their differences are due only to sector mix / cohort path. Before this, the 
 was identical but upper/tertiary differed slightly through the demand shock and the growth path. This is a
 design choice for clean comparisons, declared in the code.
 
+## D5 — post-run labelling fix (no parameter, no check impact)
+
+The scored panel initially set tertiary (adult) `work_final`/`neither_final` to 0/OOS, which made
+`oos_neither_share = 1.0` on every tertiary row. That is a **label** error, not a model result: the
+four-state block is a child block and tertiary is an adult decision. Fixed to 0/0 (non-enrolment remains in
+`out_of_school`). No parameter changed, no check value changed (checks A–E reproduce identically); the code
+and panel hashes changed, so the code was re-frozen and **both determinism runs were repeated**. This is
+disclosed here rather than silently patched.
+
+## D6 — manifest completeness (contract requirement)
+
+The first manifests recorded the predeclaration, code, PARAMS and input-data hashes but not the hashes of
+the three results files. The frozen output contract requires results hashes too, so a `results_sha256`
+block was added to the manifest. No model parameter or output value changed; the code was re-frozen and the
+determinism runs repeated.
+
 ## Freeze and scored run
 
 Frozen: `code/sim_v1_2.py`, `PARAMS.md`, this log. Scored run: two clean runs into separate directories;

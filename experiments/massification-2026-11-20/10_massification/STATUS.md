@@ -859,3 +859,38 @@ hand-off**; PHL remains the critical path.
 - **Queued after W1–W3 (dispatched):** WT battery (`wt_2026-11-20/`: WT1, WT2, WT4, WT3 scored; WT5 design-only) and DT
   battery (`dt_2026-11-20/`: DT1, DT2, DT4, DT5 scored; DT3 design-only/HELD) — predeclared, deterministic, all cells
   reported including nulls.
+
+### e) WT + DT batteries EXECUTED — both Council gates NOT met (D106/D107)
+
+- **WT battery** (`wt_2026-11-20/`, predecl sha256 `d3ad365e…`; deterministic, 13/13 SHA verify): **WT1 NOT SUPPORTED**
+  (fall/rise run count 0.443 ≤ 0.50 passes, but median depth ratio 0.601 > 0.50 fails — direction as predicted, magnitude
+  short; indicator-dependent); **WT2 NOT SUPPORTED** (10/10 decoupled but 4/10 have a ≥5 pp sustained tertiary
+  reversal > 1/3; the % growth vs pp criterion is near-vacuous); **WT3 NOT SUPPORTED** (income-partial ρ = −0.520; raw
+  +0.073 flips sign on income — Y1 lesson); **WT4 SUPPORTED (descriptive)** (0 exit episodes, but fragile: the
+  2017→2022 upper-sec drawdown −8.16 pp has only ONE observed year below threshold; one more 2022-level year flips it);
+  **WT5 DESIGN-ONLY / NOT SCORED** — **data problem found:** the block's 1.889 is HKG **2010 senior ÷ 1996 primary**
+  (cross-year); the only same-year pair on disk (HKG 1996) is 40/45 = **0.889 → no gate gradient**. **D101 gate NOT met
+  (WT1 & WT3 null) → exit-cost/complementarity layer PARKED**; hysteresis paper remains a scored rival with no
+  demonstrated footprint.
+- **DT battery** (`dt_2026-11-20/`, predecl sha256 `6ed67b82…`; deterministic, 10/10 SHA verify): **DT1 NULL** (median
+  income-partial ρ = +0.0146 vs raw +0.3867; 2/5 countries; n = 91 / 5 cty — thin); **DT2 NON-NULL** (`E_entrant`
+  b = +1.6054, p = 0.00036; gap0 = 0.204× E; n = 241 / 25 cty; reproduces the on-disk D1 coefficient to 2e-16; partly
+  arithmetic); **DT3 UNABLE/HELD** (no behavioural/reform data; no number); **DT4 NULL (falsifier)** (partial ρ = +0.202
+  < 0.40; bottom-half reversal 18.2% < 40%; depth proxy duration-sign-sensitive); **DT5 NULL (falsifier)** (joint 58.3%
+  ≥ 50% but PHL residual z = −0.508 > −1.0; robust to ECI/completion measure; near-circular). **D104 gate NOT met
+  (DT1 null ∧ DT2 non-null) → induction grounding PARKED; Amendments A1/A3 remain declared assumptions, no theory
+  citation, no model change.**
+- **Consequence for the queue:** neither theory paper earns a model layer. The next builds stay: **v1.3 shadow module**
+  (the user's "shadow must show up"; W2's frozen design is ready), **v1.2.1 NER object** (W4, in progress) so HKG
+  becomes runnable at the model interface, and then **A3 demand-signal implementation**. The HKG *run* still requires
+  an explicit Council authority decision (SR-9).
+
+### f) v1.2 revision R2 (disclosed post-run fix — labelling only, no check impact)
+
+After the v1.2 delivery was committed, W1 applied two **disclosed** fixes (`TUNE_LOG.md` D5–D6): (D5) the tertiary
+row's `work_final`/`neither_final` labels were set to 0/0 because the four-state block is a **child** block and
+tertiary is an adult decision — the earlier 1.0 `oos_neither_share` was a label error, not a result; (D6) the manifest
+gained a `results_sha256` block (contract completeness). **Controller verification:** the only panel column that
+changed is `oos_neither_share` (1,680 tertiary rows); `reproduction_checks_v1_2.csv` and
+`reproduction_checks_detail_v1_2.csv` are **byte-identical** to the committed versions; the revised code re-runs
+**two clean times byte-identical to the delivered files**. No parameter, threshold or check value changed.

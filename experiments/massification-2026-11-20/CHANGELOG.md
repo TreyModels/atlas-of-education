@@ -196,3 +196,17 @@ manifests and error logs.
 - **Council cycle 12 merged**: brief_020 decisions D102–D105; BIG_PICTURE/COUNCIL_STATE cycle-12 addenda;
   `MODEL_ARCHITECTURE.md` **Amendment A4 DECLARED-THEORY** (scaffold/induction/exit-cost/shadow frame; no parameters or
   layers; conditional gates on WT1&WT3 / DT1&DT2; theory-only, never evidence). WT and DT batteries dispatched.
+
+## 2026-11-20 (reactivation batch 3) — WT + DT theory-test batteries: both conditional gates fail
+
+- **WT battery** (`wt_2026-11-20/`, predecl `d3ad365e…`, 13/13 SHA verify, deterministic): WT1 NOT SUPPORTED
+  (depth ratio 0.601 > 0.50), WT2 NOT SUPPORTED (4/10 decoupled countries reverse), WT3 NOT SUPPORTED (income-partial
+  ρ = −0.520, sign flip), WT4 SUPPORTED descriptive (0 exit episodes; fragile), WT5 DESIGN-ONLY/NOT SCORED (block's
+  1.889 is cross-year HKG 2010 senior / 1996 primary; same-year HKG 1996 = 0.889 → no gradient). **D101 gate not met:
+  exit-cost/complementarity layer PARKED.**
+- **DT battery** (`dt_2026-11-20/`, predecl `6ed67b82…`, 10/10 SHA verify, deterministic): DT1 NULL (income-partial
+  ρ = +0.0146 vs raw +0.3867; 5 countries), DT2 NON-NULL (E_entrant +1.605, p = 0.00036; reproduces on-disk D1),
+  DT3 UNABLE/HELD, DT4 NULL, DT5 NULL (PHL z = −0.508). **D104 gate not met: induction grounding PARKED; A1/A3 stay
+  declared assumptions with no theory citation.**
+- DECISIONS D106–D107 record both outcomes. Queue: v1.3 shadow build, v1.2.1 NER object (W4 in progress), A3 demand
+  implementation; HKG run still needs explicit Council authority (SR-9).

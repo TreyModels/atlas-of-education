@@ -1,0 +1,427 @@
+test,level,unit,metric,value,n,note
+DT1,country,COL,rho_partial_income_urban,-0.0027883569961840056,19,"youth literacy vs primary completion lagged 5y, partial on log income + urban"
+DT1,country,COL,rho_raw,0.04035087719298246,19,uncontrolled Spearman
+DT1,country,COL,n_country_years,19,19,years meeting the >=12-year eligibility rule
+DT1,country,IDN,rho_partial_income_urban,0.5330918193208953,14,"youth literacy vs primary completion lagged 5y, partial on log income + urban"
+DT1,country,IDN,rho_raw,0.7040708330888924,14,uncontrolled Spearman
+DT1,country,IDN,n_country_years,14,14,years meeting the >=12-year eligibility rule
+DT1,country,LKA,rho_partial_income_urban,0.005602685967483671,14,"youth literacy vs primary completion lagged 5y, partial on log income + urban"
+DT1,country,LKA,rho_raw,-0.20022014315965378,14,uncontrolled Spearman
+DT1,country,LKA,n_country_years,14,14,years meeting the >=12-year eligibility rule
+DT1,country,MEX,rho_partial_income_urban,0.43617642639532833,20,"youth literacy vs primary completion lagged 5y, partial on log income + urban"
+DT1,country,MEX,rho_raw,0.804813896704666,20,uncontrolled Spearman
+DT1,country,MEX,n_country_years,20,20,years meeting the >=12-year eligibility rule
+DT1,country,PER,rho_partial_income_urban,0.014610071470505248,24,"youth literacy vs primary completion lagged 5y, partial on log income + urban"
+DT1,country,PER,rho_raw,0.3866899017397091,24,uncontrolled Spearman
+DT1,country,PER,n_country_years,24,24,years meeting the >=12-year eligibility rule
+DT1,headline,eligible countries,median_rho_partial,0.014610071470505248,5,range -0.0028..+0.5331
+DT1,headline,eligible countries,median_rho_raw,0.3866899017397091,5,
+DT1,headline,eligible countries,n_countries_rho_ge_0.40,2,5,"share 0.4000 (secondary, non-verdict)"
+DT2,model,D1_crosscheck,n,241,241,
+DT2,model,D1_crosscheck,n_cty,25,241,
+DT2,model,D1_crosscheck,within_r2,0.14897722418812787,241,
+DT2,model,D1_crosscheck,coef_E_entrant,1.654507924465739,241,
+DT2,model,D1_crosscheck,se_E_entrant,0.5255778137756316,241,
+DT2,model,D1_crosscheck,p_E_entrant,0.0016440349967253034,241,
+DT2,model,M1_income_control,n,241,241,
+DT2,model,M1_income_control,n_cty,25,241,
+DT2,model,M1_income_control,within_r2,0.15019447203110803,241,
+DT2,model,M1_income_control,coef_E_entrant,1.634436121948636,241,
+DT2,model,M1_income_control,se_E_entrant,0.508832151103137,241,
+DT2,model,M1_income_control,p_E_entrant,0.0013175374545988097,241,
+DT2,model,M1_income_control,coef_log_gdp,-0.91842567614094,241,
+DT2,model,M1_income_control,se_log_gdp,2.1062894041325624,241,
+DT2,model,M1_income_control,p_log_gdp,0.662807968516671,241,
+DT2,model,M2_joint_income_control,n,241,241,
+DT2,model,M2_joint_income_control,n_cty,25,241,
+DT2,model,M2_joint_income_control,within_r2,0.18195332970607248,241,
+DT2,model,M2_joint_income_control,coef_E_entrant,1.6053747738017585,241,
+DT2,model,M2_joint_income_control,se_E_entrant,0.44985770861157454,241,
+DT2,model,M2_joint_income_control,p_E_entrant,0.0003588556491977642,241,
+DT2,model,M2_joint_income_control,coef_gap0,0.3267058544664427,241,
+DT2,model,M2_joint_income_control,se_gap0,0.12695431950592828,241,
+DT2,model,M2_joint_income_control,p_gap0,0.010070105672163725,241,
+DT2,model,M2_joint_income_control,coef_log_gdp,-1.3505713865596047,241,
+DT2,model,M2_joint_income_control,se_log_gdp,2.4460691240681807,241,
+DT2,model,M2_joint_income_control,p_log_gdp,0.580852780036601,241,
+DT2,crosscheck,on_disk_D1,coef,1.6545079244657388,241,09_relations/data/literacy_decomposition_regressions.csv
+DT2,crosscheck,reproduced_D1,abs_diff,2.220446049250313e-16,241,reproduction check only; not a DT2 result
+DT3,design_only,n/a,status,HELD,,no run; behavioural/reform series absent. Support iff reform-associated behavioural shift >= 5% of within-series SD and survives a pre-declared parallel-trends check.
+DT4,country,BGD,cmpt_mean_1995_2024,79.91379273157428,8,
+DT4,country,BGD,duration_mean_total,12.0,30,
+DT4,country,BGD,z_cmpt,-1.0635485447383624,8,
+DT4,country,BGD,z_duration,0.5826940624322956,30,
+DT4,country,BGD,depth,-0.6197234221275525,30,
+DT4,country,BGD,lit_mean_1995_2024,67.37538557786209,13,
+DT4,country,BGD,reversal_events_ge3pp,0,11,consecutive-year adult-literacy Delta <= -3.0 pp
+DT4,country,BGD,min_annual_delta,-0.9099998474121023,11,
+DT4,country,BGD,depth_half,bottom,,
+DT4,country,CHN,cmpt_mean_1995_2024,97.7981829027493,8,
+DT4,country,CHN,duration_mean_total,11.7,30,
+DT4,country,CHN,z_cmpt,0.6242332352368617,8,
+DT4,country,CHN,z_duration,0.08235958479608434,30,
+DT4,country,CHN,depth,0.05141159007002437,30,
+DT4,country,CHN,lit_mean_1995_2024,94.25999959309894,3,
+DT4,country,CHN,reversal_events_ge3pp,0,0,consecutive-year adult-literacy Delta <= -3.0 pp
+DT4,country,CHN,min_annual_delta,,0,
+DT4,country,CHN,depth_half,top,,
+DT4,country,COL,cmpt_mean_1995_2024,106.55599524758081,22,
+DT4,country,COL,duration_mean_total,11.0,30,
+DT4,country,COL,z_cmpt,1.4507235973109498,22,
+DT4,country,COL,z_duration,-1.0850875296884048,30,
+DT4,country,COL,depth,-1.5741620844668147,30,
+DT4,country,COL,lit_mean_1995_2024,94.05524864688532,20,
+DT4,country,COL,reversal_events_ge3pp,0,17,consecutive-year adult-literacy Delta <= -3.0 pp
+DT4,country,COL,min_annual_delta,-0.5499954223632955,17,
+DT4,country,COL,depth_half,bottom,,
+DT4,country,EGY,cmpt_mean_1995_2024,87.28824467236421,21,
+DT4,country,EGY,duration_mean_total,11.666666666666666,30,
+DT4,country,EGY,z_cmpt,-0.36760836987969453,21,
+DT4,country,EGY,z_duration,0.026766865058727853,30,
+DT4,country,EGY,depth,-0.0098397236310287,30,
+DT4,country,EGY,lit_mean_1995_2024,71.15039543395264,9,
+DT4,country,EGY,reversal_events_ge3pp,0,3,consecutive-year adult-literacy Delta <= -3.0 pp
+DT4,country,EGY,min_annual_delta,-2.6272238669209003,3,
+DT4,country,EGY,depth_half,bottom,,
+DT4,country,IDN,cmpt_mean_1995_2024,100.5798147999605,26,
+DT4,country,IDN,duration_mean_total,12.0,30,
+DT4,country,IDN,z_cmpt,0.8867407957282307,26,
+DT4,country,IDN,z_duration,0.5826940624322956,30,
+DT4,country,IDN,depth,0.5166985965873292,30,
+DT4,country,IDN,lit_mean_1995_2024,93.60363700173117,11,
+DT4,country,IDN,reversal_events_ge3pp,0,5,consecutive-year adult-literacy Delta <= -3.0 pp
+DT4,country,IDN,min_annual_delta,-0.26000213623049717,5,
+DT4,country,IDN,depth_half,top,,
+DT4,country,IND,cmpt_mean_1995_2024,90.37444231245262,19,
+DT4,country,IND,duration_mean_total,12.0,30,
+DT4,country,IND,z_cmpt,-0.07635839733441824,19,
+DT4,country,IND,z_duration,0.5826940624322956,30,
+DT4,country,IND,depth,-0.044493584743611536,30,
+DT4,country,IND,lit_mean_1995_2024,72.29710154593647,12,
+DT4,country,IND,reversal_events_ge3pp,1,8,consecutive-year adult-literacy Delta <= -3.0 pp
+DT4,country,IND,min_annual_delta,-3.5374639131019023,8,
+DT4,country,IND,depth_half,bottom,,
+DT4,country,KEN,cmpt_mean_1995_2024,95.282986655114,5,
+DT4,country,KEN,duration_mean_total,12.0,30,
+DT4,country,KEN,z_cmpt,0.3868696819263936,5,
+DT4,country,KEN,z_duration,0.5826940624322956,30,
+DT4,country,KEN,depth,0.22542666659358032,30,
+DT4,country,KEN,lit_mean_1995_2024,82.2300033569336,1,
+DT4,country,KEN,reversal_events_ge3pp,0,0,consecutive-year adult-literacy Delta <= -3.0 pp
+DT4,country,KEN,min_annual_delta,,0,
+DT4,country,KEN,depth_half,top,,
+DT4,country,KHM,cmpt_mean_1995_2024,77.8550809467897,27,
+DT4,country,KHM,duration_mean_total,12.0,30,
+DT4,country,KHM,z_cmpt,-1.2578328455908412,27,
+DT4,country,KHM,z_duration,0.5826940624322956,30,
+DT4,country,KHM,depth,-0.7329317306581017,30,
+DT4,country,KHM,lit_mean_1995_2024,77.43410439977836,10,
+DT4,country,KHM,reversal_events_ge3pp,2,5,consecutive-year adult-literacy Delta <= -3.0 pp
+DT4,country,KHM,min_annual_delta,-10.621042777080504,5,
+DT4,country,KHM,depth_half,bottom,,
+DT4,country,KOR,cmpt_mean_1995_2024,99.74386108398441,25,
+DT4,country,KOR,duration_mean_total,12.0,30,
+DT4,country,KOR,z_cmpt,0.8078503534362123,25,
+DT4,country,KOR,z_duration,0.5826940624322956,30,
+DT4,country,KOR,depth,0.4707296042811123,30,
+DT4,country,KOR,lit_mean_1995_2024,97.9700012207031,1,
+DT4,country,KOR,reversal_events_ge3pp,0,0,consecutive-year adult-literacy Delta <= -3.0 pp
+DT4,country,KOR,min_annual_delta,,0,
+DT4,country,KOR,depth_half,top,,
+DT4,country,LAO,cmpt_mean_1995_2024,81.11631864042475,29,
+DT4,country,LAO,duration_mean_total,11.466666666666667,30,
+DT4,country,LAO,z_cmpt,-0.9500640311776389,29,
+DT4,country,LAO,z_duration,-0.306789453365411,30,
+DT4,country,LAO,depth,0.2914696247871267,30,
+DT4,country,LAO,lit_mean_1995_2024,72.18285805838448,7,
+DT4,country,LAO,reversal_events_ge3pp,0,1,consecutive-year adult-literacy Delta <= -3.0 pp
+DT4,country,LAO,min_annual_delta,-0.849998474121108,1,
+DT4,country,LAO,depth_half,top,,
+DT4,country,LKA,cmpt_mean_1995_2024,95.99855772605542,22,
+DT4,country,LKA,duration_mean_total,12.9,30,
+DT4,country,LKA,z_cmpt,0.45439939942041435,22,
+DT4,country,LKA,z_duration,2.0836974953409264,30,
+DT4,country,LKA,depth,0.9468308904567386,30,
+DT4,country,LKA,lit_mean_1995_2024,91.95122929316253,15,
+DT4,country,LKA,reversal_events_ge3pp,0,10,consecutive-year adult-literacy Delta <= -3.0 pp
+DT4,country,LKA,min_annual_delta,-0.4899978637694886,10,
+DT4,country,LKA,depth_half,top,,
+DT4,country,MAR,cmpt_mean_1995_2024,80.24522436392654,30,
+DT4,country,MAR,duration_mean_total,12.0,30,
+DT4,country,MAR,z_cmpt,-1.0322707508053504,30,
+DT4,country,MAR,z_duration,0.5826940624322956,30,
+DT4,country,MAR,depth,-0.6014980373168055,30,
+DT4,country,MAR,lit_mean_1995_2024,60.673335393269866,6,
+DT4,country,MAR,reversal_events_ge3pp,0,2,consecutive-year adult-literacy Delta <= -3.0 pp
+DT4,country,MAR,min_annual_delta,0.9300003051758026,2,
+DT4,country,MAR,depth_half,bottom,,
+DT4,country,MEX,cmpt_mean_1995_2024,102.2874728393555,25,
+DT4,country,MEX,duration_mean_total,12.0,30,
+DT4,country,MEX,z_cmpt,1.0478955288632958,25,
+DT4,country,MEX,z_duration,0.5826940624322956,30,
+DT4,country,MEX,depth,0.6106025027179928,30,
+DT4,country,MEX,lit_mean_1995_2024,93.74533617318868,23,
+DT4,country,MEX,reversal_events_ge3pp,0,20,consecutive-year adult-literacy Delta <= -3.0 pp
+DT4,country,MEX,min_annual_delta,-0.5690953844542008,20,
+DT4,country,MEX,depth_half,top,,
+DT4,country,MMR,cmpt_mean_1995_2024,86.58548037211104,12,
+DT4,country,MMR,duration_mean_total,11.0,30,
+DT4,country,MMR,z_cmpt,-0.43392948959537025,12,
+DT4,country,MMR,z_duration,-1.0850875296884048,30,
+DT4,country,MMR,depth,0.4708514779239907,30,
+DT4,country,MMR,lit_mean_1995_2024,90.58194716446103,6,
+DT4,country,MMR,reversal_events_ge3pp,1,2,consecutive-year adult-literacy Delta <= -3.0 pp
+DT4,country,MMR,min_annual_delta,-6.744286216541994,2,
+DT4,country,MMR,depth_half,top,,
+DT4,country,MNG,cmpt_mean_1995_2024,91.1000897024423,21,
+DT4,country,MNG,duration_mean_total,11.133333333333333,30,
+DT4,country,MNG,z_cmpt,-0.007877759650438094,21,
+DT4,country,MNG,z_duration,-0.8627166507389789,30,
+DT4,country,MNG,depth,0.0067962744209526214,30,
+DT4,country,MNG,lit_mean_1995_2024,98.42159541422053,9,
+DT4,country,MNG,reversal_events_ge3pp,0,6,consecutive-year adult-literacy Delta <= -3.0 pp
+DT4,country,MNG,min_annual_delta,-0.4843535399965049,6,
+DT4,country,MNG,depth_half,top,,
+DT4,country,MYS,cmpt_mean_1995_2024,94.31214431696354,26,
+DT4,country,MYS,duration_mean_total,12.0,30,
+DT4,country,MYS,z_cmpt,0.2952495599163157,26,
+DT4,country,MYS,z_duration,0.5826940624322956,30,
+DT4,country,MYS,depth,0.17204016549898546,30,
+DT4,country,MYS,lit_mean_1995_2024,93.90857151576449,7,
+DT4,country,MYS,reversal_events_ge3pp,0,3,consecutive-year adult-literacy Delta <= -3.0 pp
+DT4,country,MYS,min_annual_delta,-0.23000335693360796,3,
+DT4,country,MYS,depth_half,top,,
+DT4,country,NGA,cmpt_mean_1995_2024,75.61622524261475,8,
+DT4,country,NGA,duration_mean_total,12.0,30,
+DT4,country,NGA,z_cmpt,-1.4691176492287288,8,
+DT4,country,NGA,z_duration,0.5826940624322956,30,
+DT4,country,NGA,depth,-0.8560461312200722,30,
+DT4,country,NGA,lit_mean_1995_2024,63.3520004272461,5,
+DT4,country,NGA,reversal_events_ge3pp,0,0,consecutive-year adult-literacy Delta <= -3.0 pp
+DT4,country,NGA,min_annual_delta,,0,
+DT4,country,NGA,depth_half,bottom,,
+DT4,country,NPL,cmpt_mean_1995_2024,91.94416080754891,20,
+DT4,country,NPL,duration_mean_total,11.8,30,
+DT4,country,NPL,z_cmpt,0.07177873512334404,20,
+DT4,country,NPL,z_duration,0.24913774400815675,30,
+DT4,country,NPL,depth,0.017882792136388978,30,
+DT4,country,NPL,lit_mean_1995_2024,60.81257800560962,6,
+DT4,country,NPL,reversal_events_ge3pp,0,1,consecutive-year adult-literacy Delta <= -3.0 pp
+DT4,country,NPL,min_annual_delta,1.3653947551556058,1,
+DT4,country,NPL,depth_half,top,,
+DT4,country,PAK,cmpt_mean_1995_2024,57.74197651175685,17,
+DT4,country,PAK,duration_mean_total,12.0,30,
+DT4,country,PAK,z_cmpt,-3.1559423634037693,17,
+DT4,country,PAK,z_duration,0.5826940624322956,30,
+DT4,country,PAK,depth,-1.8389488765339226,30,
+DT4,country,PAK,lit_mean_1995_2024,54.78199996948242,15,
+DT4,country,PAK,reversal_events_ge3pp,0,11,consecutive-year adult-literacy Delta <= -3.0 pp
+DT4,country,PAK,min_annual_delta,-2.1200027465819957,11,
+DT4,country,PAK,depth_half,bottom,,
+DT4,country,PER,cmpt_mean_1995_2024,98.14657725458558,23,
+DT4,country,PER,duration_mean_total,11.0,30,
+DT4,country,PER,z_cmpt,0.6571118312441927,23,
+DT4,country,PER,z_duration,-1.0850875296884048,30,
+DT4,country,PER,depth,-0.713023853693785,30,
+DT4,country,PER,lit_mean_1995_2024,92.2058334350586,12,
+DT4,country,PER,reversal_events_ge3pp,0,7,consecutive-year adult-literacy Delta <= -3.0 pp
+DT4,country,PER,min_annual_delta,-0.01999664306639204,7,
+DT4,country,PER,depth_half,bottom,,
+DT4,country,PHL,cmpt_mean_1995_2024,90.22513625195054,20,
+DT4,country,PHL,duration_mean_total,10.5,30,
+DT4,country,PHL,z_cmpt,-0.09044867640702672,20,
+DT4,country,PHL,z_duration,-1.918978325748755,30,
+DT4,country,PHL,depth,0.17356904961774705,30,
+DT4,country,PHL,lit_mean_1995_2024,95.8787488937378,8,
+DT4,country,PHL,reversal_events_ge3pp,0,1,consecutive-year adult-literacy Delta <= -3.0 pp
+DT4,country,PHL,min_annual_delta,2.190002441406193,1,
+DT4,country,PHL,depth_half,top,,
+DT4,country,SGP,cmpt_mean_1995_2024,99.43587182186721,8,
+DT4,country,SGP,duration_mean_total,10.133333333333333,30,
+DT4,country,SGP,z_cmpt,0.778784857769089,8,
+DT4,country,SGP,z_duration,-2.530498242859679,30,
+DT4,country,SGP,depth,-1.970713714150405,30,
+DT4,country,SGP,lit_mean_1995_2024,96.53230872521034,13,
+DT4,country,SGP,reversal_events_ge3pp,0,11,consecutive-year adult-literacy Delta <= -3.0 pp
+DT4,country,SGP,min_annual_delta,-0.3500061035155966,11,
+DT4,country,SGP,depth_half,bottom,,
+DT4,country,THA,cmpt_mean_1995_2024,96.86684685550354,11,
+DT4,country,THA,duration_mean_total,12.0,30,
+DT4,country,THA,z_cmpt,0.53634139232074,11,
+DT4,country,THA,z_duration,0.5826940624322956,30,
+DT4,country,THA,depth,0.3125229447419656,30,
+DT4,country,THA,lit_mean_1995_2024,93.03111097547743,9,
+DT4,country,THA,reversal_events_ge3pp,0,2,consecutive-year adult-literacy Delta <= -3.0 pp
+DT4,country,THA,min_annual_delta,-2.5,2,
+DT4,country,THA,depth_half,top,,
+DT4,country,TUR,cmpt_mean_1995_2024,100.2121601104737,12,
+DT4,country,TUR,duration_mean_total,11.533333333333333,30,
+DT4,country,TUR,z_cmpt,0.8520445673246264,12,
+DT4,country,TUR,z_duration,-0.19560401389069806,30,
+DT4,country,TUR,depth,-0.16666333738246006,30,
+DT4,country,TUR,lit_mean_1995_2024,93.14666798909505,15,
+DT4,country,TUR,reversal_events_ge3pp,0,11,consecutive-year adult-literacy Delta <= -3.0 pp
+DT4,country,TUR,min_annual_delta,-0.11000061035159092,11,
+DT4,country,TUR,depth_half,bottom,,
+DT4,country,UKR,cmpt_mean_1995_2024,96.16104894567599,24,
+DT4,country,UKR,duration_mean_total,10.733333333333333,30,
+DT4,country,UKR,z_cmpt,0.4697339854620205,24,
+DT4,country,UKR,z_duration,-1.5298292875872594,30,
+DT4,country,UKR,depth,-0.7186128083348869,30,
+DT4,country,UKR,lit_mean_1995_2024,99.4300003051758,1,
+DT4,country,UKR,reversal_events_ge3pp,0,0,consecutive-year adult-literacy Delta <= -3.0 pp
+DT4,country,UKR,min_annual_delta,,0,
+DT4,country,UKR,depth_half,bottom,,
+DT4,country,VNM,cmpt_mean_1995_2024,101.54544892653425,16,
+DT4,country,VNM,duration_mean_total,12.0,30,
+DT4,country,VNM,z_cmpt,0.9778694095280034,16,
+DT4,country,VNM,z_duration,0.5826940624322956,30,
+DT4,country,VNM,depth,0.5697986987661424,30,
+DT4,country,VNM,lit_mean_1995_2024,93.16799926757815,5,
+DT4,country,VNM,reversal_events_ge3pp,0,1,consecutive-year adult-literacy Delta <= -3.0 pp
+DT4,country,VNM,min_annual_delta,-0.1199951171875,1,
+DT4,country,VNM,depth_half,top,,
+DT4,country,ZAF,cmpt_mean_1995_2024,87.02312641086978,14,
+DT4,country,ZAF,duration_mean_total,12.0,30,
+DT4,country,ZAF,z_cmpt,-0.39262805279906005,14,
+DT4,country,ZAF,z_duration,0.5826940624322956,30,
+DT4,country,ZAF,depth,-0.22878203511036616,30,
+DT4,country,ZAF,lit_mean_1995_2024,91.67833328247069,12,
+DT4,country,ZAF,reversal_events_ge3pp,0,5,consecutive-year adult-literacy Delta <= -3.0 pp
+DT4,country,ZAF,min_annual_delta,-2.6300048828125,5,
+DT4,country,ZAF,depth_half,bottom,,
+DT4,headline,cross-section,partial_rho,0.20229361374562987,27,
+DT4,headline,top half,zero_reversal_share,0.9090909090909091,11,
+DT4,headline,bottom half,at_least_one_reversal_share,0.18181818181818182,11,
+DT4,sensitivity,cross-section,rho_primary_duration_only,-0.07103418645159483,27,primary-duration depth sensitivity; never verdict-changing
+DT4,diagnostic,cross-section,corr_depth_vs_zcmpt,0.35604262758448346,27,duration contributes little cross-country variation
+DT5,regression,up_attainment,intercept,-31.877882262314362,23,
+DT5,regression,up_attainment,coef_log_inc,13.147818688490519,23,
+DT5,regression,up_attainment,coef_primary_cmpt,-0.37657985422538365,23,
+DT5,regression,up_attainment,resid_sd,15.806943614695694,23,
+DT5,regression,PHL,residual,-8.027263826078517,23,
+DT5,regression,PHL,residual_z,-0.5078314961923177,23,fixed operational cut: not explained iff z <= -1.0
+DT5,country,BGD,lit_latest,79.0,,year 2022
+DT5,country,BGD,universalized_ge90,0,,
+DT5,country,BGD,up_attainment_max,33.6561393737793,,
+DT5,country,BGD,ceiling_persistent,1,,sustained_5pp_reversal=False
+DT5,country,BGD,joint_signature,0,,
+DT5,country,BRA,lit_latest,94.7399978637695,,year 2024
+DT5,country,BRA,universalized_ge90,1,,
+DT5,country,BRA,up_attainment_max,61.7327776308577,,
+DT5,country,BRA,ceiling_persistent,1,,sustained_5pp_reversal=False
+DT5,country,BRA,joint_signature,1,,
+DT5,country,CHN,lit_latest,96.7399978637695,,year 2020
+DT5,country,CHN,universalized_ge90,1,,
+DT5,country,CHN,up_attainment_max,31.7697906494141,,
+DT5,country,CHN,ceiling_persistent,1,,sustained_5pp_reversal=False
+DT5,country,CHN,joint_signature,1,,
+DT5,country,COL,lit_latest,95.3399963378906,,year 2024
+DT5,country,COL,universalized_ge90,1,,
+DT5,country,COL,up_attainment_max,58.815788269043,,
+DT5,country,COL,ceiling_persistent,1,,sustained_5pp_reversal=False
+DT5,country,COL,joint_signature,1,,
+DT5,country,EGY,lit_latest,79.4531619498685,,year 2022
+DT5,country,EGY,universalized_ge90,0,,
+DT5,country,EGY,up_attainment_max,55.6923702917355,,
+DT5,country,EGY,ceiling_persistent,1,,sustained_5pp_reversal=False
+DT5,country,EGY,joint_signature,0,,
+DT5,country,IDN,lit_latest,96.0,,year 2020
+DT5,country,IDN,universalized_ge90,1,,
+DT5,country,IDN,up_attainment_max,39.5653046324461,,
+DT5,country,IDN,ceiling_persistent,1,,sustained_5pp_reversal=False
+DT5,country,IDN,joint_signature,1,,
+DT5,country,IND,lit_latest,78.1625330351403,,year 2024
+DT5,country,IND,universalized_ge90,0,,
+DT5,country,IND,up_attainment_max,41.3380012512207,,
+DT5,country,IND,ceiling_persistent,1,,sustained_5pp_reversal=False
+DT5,country,IND,joint_signature,0,,
+DT5,country,KHM,lit_latest,71.9300003051758,,year 2021
+DT5,country,KHM,universalized_ge90,0,,
+DT5,country,KHM,up_attainment_max,12.1864056881054,,
+DT5,country,KHM,ceiling_persistent,1,,sustained_5pp_reversal=False
+DT5,country,KHM,joint_signature,0,,
+DT5,country,LAO,lit_latest,75.6399993896484,,year 2023
+DT5,country,LAO,universalized_ge90,0,,
+DT5,country,LAO,up_attainment_max,23.9881845934688,,
+DT5,country,LAO,ceiling_persistent,1,,sustained_5pp_reversal=False
+DT5,country,LAO,joint_signature,0,,
+DT5,country,LKA,lit_latest,92.7399978637695,,year 2024
+DT5,country,LKA,universalized_ge90,1,,
+DT5,country,LKA,up_attainment_max,74.0255737304688,,
+DT5,country,LKA,ceiling_persistent,0,,sustained_5pp_reversal=True
+DT5,country,LKA,joint_signature,0,,
+DT5,country,MEX,lit_latest,95.5500030517578,,year 2024
+DT5,country,MEX,universalized_ge90,1,,
+DT5,country,MEX,up_attainment_max,40.8621500693844,,
+DT5,country,MEX,ceiling_persistent,1,,sustained_5pp_reversal=False
+DT5,country,MEX,joint_signature,1,,
+DT5,country,MMR,lit_latest,93.527395549521,,year 2020
+DT5,country,MMR,universalized_ge90,1,,
+DT5,country,MMR,up_attainment_max,22.7649192810059,,
+DT5,country,MMR,ceiling_persistent,1,,sustained_5pp_reversal=False
+DT5,country,MMR,joint_signature,1,,
+DT5,country,MNG,lit_latest,98.6399993896484,,year 2024
+DT5,country,MNG,universalized_ge90,1,,
+DT5,country,MNG,up_attainment_max,84.0449371337891,,
+DT5,country,MNG,ceiling_persistent,1,,sustained_5pp_reversal=False
+DT5,country,MNG,joint_signature,1,,
+DT5,country,MYS,lit_latest,95.7699966430664,,year 2022
+DT5,country,MYS,universalized_ge90,1,,
+DT5,country,MYS,up_attainment_max,69.8045806884766,,
+DT5,country,MYS,ceiling_persistent,1,,sustained_5pp_reversal=False
+DT5,country,MYS,joint_signature,1,,
+DT5,country,NGA,lit_latest,70.4100036621094,,year 2024
+DT5,country,NGA,universalized_ge90,0,,
+DT5,country,NGA,up_attainment_max,48.0727996826172,,
+DT5,country,NGA,ceiling_persistent,1,,sustained_5pp_reversal=False
+DT5,country,NGA,joint_signature,0,,
+DT5,country,NPL,lit_latest,68.7099990844727,,year 2019
+DT5,country,NPL,universalized_ge90,0,,
+DT5,country,NPL,up_attainment_max,19.8068646945664,,
+DT5,country,NPL,ceiling_persistent,0,,sustained_5pp_reversal=True
+DT5,country,NPL,joint_signature,0,,
+DT5,country,PAK,lit_latest,58.8600006103516,,year 2021
+DT5,country,PAK,universalized_ge90,0,,
+DT5,country,PAK,up_attainment_max,27.7178897857666,,
+DT5,country,PAK,ceiling_persistent,1,,sustained_5pp_reversal=False
+DT5,country,PAK,joint_signature,0,,
+DT5,country,PER,lit_latest,93.6600036621094,,year 2024
+DT5,country,PER,universalized_ge90,1,,
+DT5,country,PER,up_attainment_max,58.2721481323242,,
+DT5,country,PER,ceiling_persistent,1,,sustained_5pp_reversal=False
+DT5,country,PER,joint_signature,1,,
+DT5,country,PHL,lit_latest,98.4700012207031,,year 2020
+DT5,country,PHL,universalized_ge90,1,,
+DT5,country,PHL,up_attainment_max,58.4567413330078,,
+DT5,country,PHL,ceiling_persistent,0,,sustained_5pp_reversal=True
+DT5,country,PHL,joint_signature,0,,
+DT5,country,SGP,lit_latest,97.6500015258789,,year 2021
+DT5,country,SGP,universalized_ge90,1,,
+DT5,country,SGP,up_attainment_max,79.0433883666992,,
+DT5,country,SGP,ceiling_persistent,1,,sustained_5pp_reversal=False
+DT5,country,SGP,joint_signature,1,,
+DT5,country,THA,lit_latest,91.0999984741211,,year 2022
+DT5,country,THA,universalized_ge90,1,,
+DT5,country,THA,up_attainment_max,39.4400587660553,,
+DT5,country,THA,ceiling_persistent,1,,sustained_5pp_reversal=False
+DT5,country,THA,joint_signature,1,,
+DT5,country,TUR,lit_latest,97.2600021362305,,year 2021
+DT5,country,TUR,universalized_ge90,1,,
+DT5,country,TUR,up_attainment_max,42.1706085205078,,
+DT5,country,TUR,ceiling_persistent,1,,sustained_5pp_reversal=False
+DT5,country,TUR,joint_signature,1,,
+DT5,country,VNM,lit_latest,96.129997253418,,year 2022
+DT5,country,VNM,universalized_ge90,1,,
+DT5,country,VNM,up_attainment_max,41.9241218566895,,
+DT5,country,VNM,ceiling_persistent,1,,sustained_5pp_reversal=False
+DT5,country,VNM,joint_signature,1,,
+DT5,country,ZAF,lit_latest,91.1500015258789,,year 2024
+DT5,country,ZAF,universalized_ge90,1,,
+DT5,country,ZAF,up_attainment_max,50.0408210754395,,
+DT5,country,ZAF,ceiling_persistent,1,,sustained_5pp_reversal=False
+DT5,country,ZAF,joint_signature,1,,
+DT5,headline,denominator,joint_share,0.5833333333333334,24,14/24 countries
+DT5,headline,denominator,universalized_share,0.6666666666666666,24,
+DT5,headline,denominator,ceiling_persistent_share,0.875,24,
+DT5,corroboration,PHL,completion_upper_secondary_peak,76.43295288085938,11,UNIVERSALIZATION_SERIES.csv; descriptive corroboration only

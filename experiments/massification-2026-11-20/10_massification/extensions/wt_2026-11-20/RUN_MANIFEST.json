@@ -1,0 +1,130 @@
+{
+  "battery": "WT1-WT5 (brief_019 section C; D98-D101, D89 standing order)",
+  "cells_reported_including_nulls": true,
+  "code": {
+    "10_massification/extensions/wt_2026-11-20/code/build_manifest.py": "302e795932df6ae5aa2299605961e8412561e0d3b94bd12be16fd0d87be203d7",
+    "10_massification/extensions/wt_2026-11-20/code/build_predeclarations.py": "afc088e47d390dfd04ff1719c0804c3a520e706a53c7b512991b2b94fd9a4e59",
+    "10_massification/extensions/wt_2026-11-20/code/run_wt.py": "8fafbebb6143201229ba66574daa0bbca37d1c2903e6a254b01afe279b56a964"
+  },
+  "determinism": {
+    "all_byte_identical": true,
+    "environment": {
+      "numpy": "2.4.6",
+      "pandas": "3.1.1",
+      "platform": "macOS-26.6.2-arm64-arm-64bit",
+      "python": "3.11.17"
+    },
+    "files": {
+      "results/DETAIL.csv": {
+        "byte_identical": true,
+        "run_a": "results/DETAIL.csv",
+        "run_a_sha256": "5bfb933f65930f5d4f32396068713265795361dc15c787c039a01140480becf2",
+        "run_b": "_determinism/run_b/DETAIL.csv",
+        "run_b_sha256": "5bfb933f65930f5d4f32396068713265795361dc15c787c039a01140480becf2"
+      },
+      "results/RESULTS.csv": {
+        "byte_identical": true,
+        "run_a": "results/RESULTS.csv",
+        "run_a_sha256": "92b4323f10cdb577549df06690c8695594ea41704f8e5293c7c0dd163b3191e2",
+        "run_b": "_determinism/run_b/RESULTS.csv",
+        "run_b_sha256": "92b4323f10cdb577549df06690c8695594ea41704f8e5293c7c0dd163b3191e2"
+      },
+      "results/run_info.json": {
+        "byte_identical": true,
+        "run_a": "results/run_info.json",
+        "run_a_sha256": "c81273295bd86230427529cb804e89df7d6bb9b421ca244da402d55539a2d615",
+        "run_b": "_determinism/run_b/run_info.json",
+        "run_b_sha256": "c81273295bd86230427529cb804e89df7d6bb9b421ca244da402d55539a2d615"
+      }
+    },
+    "guarantees": "no RNG; fixed sorts (kind=mergesort); %.6f formatting; no dependence on dict/hash order; single-threaded pandas groupby with sort=True/False stated explicitly in code",
+    "method": "code/run_wt.py run twice into separate output directories; outputs compared byte-for-byte (sha256) and with cmp",
+    "run_a_dir": "results/",
+    "run_b_dir": "_determinism/run_b/"
+  },
+  "inputs": {
+    "04_data/TARGETS_SHADOW.csv": "e6e64bd16181412ceb951a30a338cf2c43f609d2a67514939a72b3b51ead9b19",
+    "09_relations/data/economic_complexity_panel_30ctys.csv": "9657bfd6cc17d3ed7f59939e0ba6af1412c2d070f2dd0c600a514f4b063a7f04",
+    "09_relations/data/panel_wdi_long.csv": "a37629ae5d4f9ed2be4c71e33bfc876131880f65d356c88bd4d047a9bbdeae75",
+    "09_relations/data/shadow_gradients.csv": "6c7af28a86bce710689a007b9cbcaf716fe1163053c374858235115e6a6a696d",
+    "10_massification/data/UNIVERSALIZATION_SERIES.csv": "85bc869396ebfcb39e3e1a21a31af219e75a07326c738a51d2bfdbe536737ddb"
+  },
+  "labels": {
+    "held": {
+      "HELD-1": "credential wage-premium series (PSA FIES/LFS; WB Enterprise Surveys) - not on disk",
+      "HELD-2": "PHL/KHM/CHN/JPN shadow participation rates - TARGETS_SHADOW rows 'unresolved'",
+      "HELD-3": "de facto enforcement; individual competence data; withdrawal episodes - out of scope"
+    },
+    "policy": "OBSERVED / DERIVED / HELD on every row; HELD cells carry no number and are never imputed, interpolated, back-cast or forecast"
+  },
+  "manifest_version": "WT-1",
+  "outputs": {
+    "10_massification/extensions/wt_2026-11-20/results/DETAIL.csv": "5bfb933f65930f5d4f32396068713265795361dc15c787c039a01140480becf2",
+    "10_massification/extensions/wt_2026-11-20/results/RESULTS.csv": "92b4323f10cdb577549df06690c8695594ea41704f8e5293c7c0dd163b3191e2",
+    "10_massification/extensions/wt_2026-11-20/results/run_info.json": "c81273295bd86230427529cb804e89df7d6bb9b421ca244da402d55539a2d615"
+  },
+  "predeclaration": {
+    "blocks_verified_verbatim": true,
+    "path": "10_massification/extensions/wt_2026-11-20/PRE_DECLARATIONS.md",
+    "sha256": "d3ad365e7a0f71fd1b187f24fe4cb4e9a4a07f2b1827a253bbbe19e016b1a350",
+    "statement": "written before any run; hash recorded in RUN_MANIFEST.json; no threshold change after results",
+    "verbatim_source": "08_council/brief_019/SYNTHESIS_019.md lines 105-232 and 234-238 (extracted by line range; blocks byte-equal to the source)"
+  },
+  "programme_root": "massification-2026-11-20",
+  "result_files": [
+    "10_massification/extensions/wt_2026-11-20/results/RESULTS.csv",
+    "10_massification/extensions/wt_2026-11-20/results/DETAIL.csv",
+    "10_massification/extensions/wt_2026-11-20/results/run_info.json",
+    "10_massification/extensions/wt_2026-11-20/RUN_MANIFEST.json",
+    "10_massification/extensions/wt_2026-11-20/FINDINGS.md",
+    "10_massification/extensions/wt_2026-11-20/RESULTS_README.md"
+  ],
+  "rng": "none (no bootstrap, no Monte Carlo)",
+  "rows_reported": 7,
+  "scope_discipline": {
+    "c1_c4_reopened": "no",
+    "causal_claims": "none",
+    "direction_claims": "none (no push/pull)",
+    "external_data_requests": "none",
+    "toy_or_synthetic_data": "none",
+    "web_access": "none",
+    "writes_outside_scope": "none",
+    "wt_pass_means": "a descriptive footprint on disk - NOT validation of the hysteresis paper"
+  },
+  "seed": null,
+  "thresholds": {
+    "MIN_OBS": 15,
+    "RUN_MIN_DEPTH": 3.0,
+    "RUN_MIN_LEN": 2,
+    "WT1_RATIO_MAX": 0.5,
+    "WT2_DECOUPLED_SHARE": 0.5,
+    "WT2_REVERSAL_SHARE_MAX": 0.3333333333333333,
+    "WT2_WINDOW": [
+      1995,
+      2024
+    ],
+    "WT3_RHO_MIN": 0.4,
+    "WT3_WINDOW": [
+      1995,
+      2024
+    ],
+    "WT4_DROP": 5.0,
+    "WT4_RECOVER": 2.0,
+    "WT4_RUN_YEARS": 3,
+    "WT4_TER_ANCHOR": 38.344741,
+    "WT4_TER_RECOVER_LEVEL": 50.0,
+    "WT4_TER_RECOVER_YEAR": 2025,
+    "WT4_US_PEAK": 76.432953
+  },
+  "verdicts": {
+    "WT1": "NOT SUPPORTED",
+    "WT2": "NOT SUPPORTED",
+    "WT2.HELD-1": "HELD",
+    "WT3": "NOT SUPPORTED",
+    "WT4": "SUPPORTED",
+    "WT5": "DESIGN-ONLY",
+    "WT5.HELD-2": "HELD"
+  },
+  "worker": "WT",
+  "write_scope": "10_massification/extensions/wt_2026-11-20/ (only)"
+}

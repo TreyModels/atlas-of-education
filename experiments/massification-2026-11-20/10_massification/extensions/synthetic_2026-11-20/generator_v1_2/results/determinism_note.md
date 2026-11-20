@@ -37,25 +37,33 @@ IDENTICAL reproduction_checks_detail_v1_2.csv
 IDENTICAL RUN_MANIFEST.json
 ```
 
-## sha256
+## sha256 (run 1 = run 2)
 
-| file | sha256 (run 1 = run 2) |
+| file | sha256 |
 |---|---|
-| `results/synthetic_panel_v1_2.csv` | `7669486ccac56a36065da1dce3443090f31149afdba48c8479196429c2427093` |
+| `results/synthetic_panel_v1_2.csv` | `14729c5141a71dd9aaf87a5ad2e973a84b5f04603577aae627f2833276fac5ac` |
 | `results/reproduction_checks_v1_2.csv` | `72a17fb6dcf59db671bbbcdb04111560d1d1aee59791009111dc3861b3f0fba8` |
 | `results/reproduction_checks_detail_v1_2.csv` | `0597bafb8f8b90ad03a0164e9c2137cdaaff2186f1d7d0c5e5476462b285706b` |
-| `RUN_MANIFEST.json` | `9a2d9c77b14595bdc5e08bd286b1ea865e2091c25ab0ffae49ce8ed544c21afa` |
+| `RUN_MANIFEST.json` | `36c40ff95470893a6d6fda21d9afe341ec0f374073a7af56cdf9c55c9b75b876` |
 
 Frozen inputs recorded in the manifest:
 
 | object | sha256 |
 |---|---|
 | `v1_2/PRE_DECLARATIONS.md` | `fde18d405d875167977b350a925c28248c3007d2813dcdb29219d3baf0b95f16` |
-| `code/sim_v1_2.py` | `7aded3e2b099e870a99f1714201536403a5e611ade32380bcbd12e73ee1fa2e5` |
-| `PARAMS.md` | `b6f6e84f046d1dcab9d64c95a0209b78cacd0c5aa0ee38a42cfe6e1ce013119a` |
-| `TUNE_LOG.md` | `20f5727d20f4feb8629f191b297a0e07971a1a080dbce3223afd9e115f313665` |
+| `code/sim_v1_2.py` | `61123aa9370a407487407bf3ff4b97287aea67cac5f90629e540a6e8cc855e7c` |
+| `PARAMS.md` | `0d619781c4e059f54cf771fb385475f5f939dceced5036e8a21b6e07a2b315e3` |
+| `TUNE_LOG.md` | `acc5d929dd1547709010b4a87f719477303d6021441b0cf03478fb9256ec37b0` |
 
-Input data hashes are in `RUN_MANIFEST.json → hashes.input_data_sha256`.
+Input data hashes are in `RUN_MANIFEST.json → hashes.input_data_sha256`; results hashes are in
+`RUN_MANIFEST.json → hashes.results_sha256`.
+
+## Re-freeze note
+
+Two labelling/contract fixes were made after the first scored run and disclosed in `TUNE_LOG.md` (D5:
+tertiary adult rows no longer carry a placeholder child "neither" share; D6: the manifest now records the
+results sha256 values). No model parameter changed and every check value is identical; the code was
+re-frozen and **both runs repeated** — the hashes above are from the final pair.
 
 ## Environment and runtime
 

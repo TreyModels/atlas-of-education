@@ -292,7 +292,9 @@ X ≥ 0.95 and GDPpc ≥ 6000. Literacy is a lagged (12-year) function of primar
 
 Levels 0–2 use the four-state block; tertiary is an **adult** decision (no child states, no child labour)
 driven by the declared participation logit applied to the eligible pool. The panel's `demand_share` column
-is the four-state demand share for levels 0–2 and the participation rate for tertiary.
+is the four-state demand share for levels 0–2 and the participation rate for tertiary. For tertiary the panel's
+`work_share` / `neither_share` / `oos_work_share` / `oos_neither_share` columns are **0**: the four-state child
+block does not apply to adults, and non-enrolment is carried by `out_of_school`. They are not a residual.
 
 ---
 

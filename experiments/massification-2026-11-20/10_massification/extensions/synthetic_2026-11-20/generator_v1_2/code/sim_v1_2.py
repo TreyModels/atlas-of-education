@@ -633,8 +633,11 @@ def simulate_country(cp, gnoise, hhnoise, S_path, Pop_path):
                     cl += both_f
                 out["child_labour"][L, t] = cl
             else:
+                # tertiary is an adult decision: the four-state child block does not
+                # apply, so work/neither are 0 here (not a residual). Non-enrolment is
+                # carried by out_of_school.
                 out["work_final"][L, t] = 0.0
-                out["neither_final"][L, t] = out["oos"][L, t]
+                out["neither_final"][L, t] = 0.0
                 out["both_final"][L, t] = 0.0
                 out["child_labour"][L, t] = 0.0
 
@@ -1217,6 +1220,12 @@ def main(argv=None):
             "code_sha256": sha256_file(CODE),
             "params_md_sha256": sha256_file(ROOT / "PARAMS.md") if (ROOT / "PARAMS.md").exists() else None,
             "input_data_sha256": {p.name: sha256_file(p) for p in data_files if p.exists()},
+            "results_sha256": {
+                "synthetic_panel_v1_2.csv": sha256_file(outdir / "synthetic_panel_v1_2.csv"),
+                "reproduction_checks_v1_2.csv": sha256_file(outdir / "reproduction_checks_v1_2.csv"),
+                "reproduction_checks_detail_v1_2.csv": sha256_file(
+                    outdir / "reproduction_checks_detail_v1_2.csv"),
+            },
         },
         "params": {k: (list(v) if isinstance(v, tuple) else v) for k, v in P.items()},
         "borrow_ledger": BORROW,

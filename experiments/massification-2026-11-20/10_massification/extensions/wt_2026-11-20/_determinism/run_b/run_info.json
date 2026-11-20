@@ -1,0 +1,50 @@
+{
+  "battery": "WT1-WT5 (brief_019 section C; D98-D101, D89)",
+  "inputs": {
+    "04_data/TARGETS_SHADOW.csv": "e6e64bd16181412ceb951a30a338cf2c43f609d2a67514939a72b3b51ead9b19",
+    "09_relations/data/economic_complexity_panel_30ctys.csv": "9657bfd6cc17d3ed7f59939e0ba6af1412c2d070f2dd0c600a514f4b063a7f04",
+    "09_relations/data/panel_wdi_long.csv": "a37629ae5d4f9ed2be4c71e33bfc876131880f65d356c88bd4d047a9bbdeae75",
+    "09_relations/data/shadow_gradients.csv": "6c7af28a86bce710689a007b9cbcaf716fe1163053c374858235115e6a6a696d",
+    "10_massification/data/UNIVERSALIZATION_SERIES.csv": "85bc869396ebfcb39e3e1a21a31af219e75a07326c738a51d2bfdbe536737ddb"
+  },
+  "outputs": {
+    "DETAIL.csv": "5bfb933f65930f5d4f32396068713265795361dc15c787c039a01140480becf2",
+    "RESULTS.csv": "92b4323f10cdb577549df06690c8695594ea41704f8e5293c7c0dd163b3191e2"
+  },
+  "rng": "none - no bootstrap, no Monte Carlo (M15)",
+  "script": "code/run_wt.py",
+  "seed": null,
+  "thresholds": {
+    "MIN_OBS": 15,
+    "RUN_MIN_DEPTH": 3.0,
+    "RUN_MIN_LEN": 2,
+    "WT1_RATIO_MAX": 0.5,
+    "WT2_DECOUPLED_SHARE": 0.5,
+    "WT2_REVERSAL_SHARE_MAX": 0.3333333333333333,
+    "WT2_WINDOW": [
+      1995,
+      2024
+    ],
+    "WT3_RHO_MIN": 0.4,
+    "WT3_WINDOW": [
+      1995,
+      2024
+    ],
+    "WT4_DROP": 5.0,
+    "WT4_RECOVER": 2.0,
+    "WT4_RUN_YEARS": 3,
+    "WT4_TER_ANCHOR": 38.344741,
+    "WT4_TER_RECOVER_LEVEL": 50.0,
+    "WT4_TER_RECOVER_YEAR": 2025,
+    "WT4_US_PEAK": 76.432953
+  },
+  "verdicts": {
+    "WT1": "NOT SUPPORTED",
+    "WT2": "NOT SUPPORTED",
+    "WT2.HELD-1": "HELD",
+    "WT3": "NOT SUPPORTED",
+    "WT4": "SUPPORTED",
+    "WT5": "DESIGN-ONLY",
+    "WT5.HELD-2": "HELD"
+  }
+}

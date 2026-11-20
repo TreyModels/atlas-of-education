@@ -23,7 +23,7 @@
   },
   "generator": "code/sim_v1_2.py",
   "hashes": {
-    "code_sha256": "7aded3e2b099e870a99f1714201536403a5e611ade32380bcbd12e73ee1fa2e5",
+    "code_sha256": "61123aa9370a407487407bf3ff4b97287aea67cac5f90629e540a6e8cc855e7c",
     "input_data_sha256": {
       "SCHOOL_EXPANSION.csv": "c218e6c9bd784e135e089ebecefec21112a09e6bf2c778599a33bc81b78c8ea3",
       "STATE_CAPACITY.csv": "704efacad00f0ba7ddf579459a930d064fdb0f4b882cffbbf44a6cbecd585044",
@@ -31,10 +31,15 @@
       "economic_complexity_panel_30ctys.csv": "9657bfd6cc17d3ed7f59939e0ba6af1412c2d070f2dd0c600a514f4b063a7f04",
       "gmr_observed_6countries_1970_2024.csv": "794a67c11ca052412edb2935c33c3c6e635cbd2e81ca5b9e44345ef9f5326e41"
     },
-    "params_md_sha256": "b6f6e84f046d1dcab9d64c95a0209b78cacd0c5aa0ee38a42cfe6e1ce013119a",
+    "params_md_sha256": "0d619781c4e059f54cf771fb385475f5f939dceced5036e8a21b6e07a2b315e3",
     "predeclaration_expected": "fde18d405d875167977b350a925c28248c3007d2813dcdb29219d3baf0b95f16",
     "predeclaration_match": true,
-    "predeclaration_sha256": "fde18d405d875167977b350a925c28248c3007d2813dcdb29219d3baf0b95f16"
+    "predeclaration_sha256": "fde18d405d875167977b350a925c28248c3007d2813dcdb29219d3baf0b95f16",
+    "results_sha256": {
+      "reproduction_checks_detail_v1_2.csv": "0597bafb8f8b90ad03a0164e9c2137cdaaff2186f1d7d0c5e5476462b285706b",
+      "reproduction_checks_v1_2.csv": "72a17fb6dcf59db671bbbcdb04111560d1d1aee59791009111dc3861b3f0fba8",
+      "synthetic_panel_v1_2.csv": "14729c5141a71dd9aaf87a5ad2e973a84b5f04603577aae627f2833276fac5ac"
+    }
   },
   "label": "SYNTHETIC",
   "numpy": "2.4.6",

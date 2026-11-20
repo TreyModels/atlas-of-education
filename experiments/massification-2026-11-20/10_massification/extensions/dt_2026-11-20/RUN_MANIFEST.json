@@ -1,0 +1,194 @@
+{
+  "manifest_version": "1.0",
+  "battery": "DT1-DT5 (brief 020)",
+  "worker": "DT",
+  "programme_root": "/Users/treymenefee/massification_live/experiments/massification-2026-11-20",
+  "write_scope": "10_massification/extensions/dt_2026-11-20/",
+  "authority": [
+    "D89",
+    "D102",
+    "D103",
+    "D104",
+    "D105"
+  ],
+  "generated_utc": "2026-11-20T14:53:27Z",
+  "python": "3.11.17",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "seed": null,
+  "seed_note": "deterministic battery: no RNG, no sampling, no resampling, no network",
+  "predeclaration": {
+    "path": "10_massification/extensions/dt_2026-11-20/PRE_DECLARATIONS.md",
+    "sha256": "6ed67b82be1f9d62e950a77236580996a627fd18c1ded593191788e9e3f4be40",
+    "bytes": 31751,
+    "mtime_utc": "2026-11-20T14:48:37Z",
+    "written_before_first_run": true,
+    "predecl_mtime_precedes_run_outputs": true,
+    "no_threshold_changes_after_results": true,
+    "run_output_utc": "2026-11-20T14:52:58Z",
+    "determinism_runs": 2
+  },
+  "code": {
+    "path": "10_massification/extensions/dt_2026-11-20/code/run_dt.py",
+    "sha256": "743862acaca2a840f1fa86c1bae5c9b2c9820e208bd710b654686848dab8ac2f",
+    "bytes": 30267,
+    "lines": 561
+  },
+  "findings": {
+    "path": "10_massification/extensions/dt_2026-11-20/FINDINGS.md",
+    "sha256": "d30e96558ba0cc4695d505b7f8fefe94fccf89f2cc997b25ec8ebe6d623f25f9",
+    "bytes": 14828
+  },
+  "determinism": {
+    "method": "run twice into separate dirs; sha256 equality and byte-level cmp on both CSVs",
+    "runs": [
+      "10_massification/extensions/dt_2026-11-20/results/run1",
+      "10_massification/extensions/dt_2026-11-20/results/run2"
+    ],
+    "artifacts": [
+      {
+        "name": "RESULTS.csv",
+        "run1_sha256": "e28935ac64c64c104ce8f5f0fc726b4e607bfbf0ba27722c8c7f39087f052f8e",
+        "run2_sha256": "e28935ac64c64c104ce8f5f0fc726b4e607bfbf0ba27722c8c7f39087f052f8e",
+        "byte_identical": true
+      },
+      {
+        "name": "DETAIL.csv",
+        "run1_sha256": "e0e263d33807bd23f184d63bbbd4580d75fc0bf3c4fb054f2dacb9d27aea2b78",
+        "run2_sha256": "e0e263d33807bd23f184d63bbbd4580d75fc0bf3c4fb054f2dacb9d27aea2b78",
+        "byte_identical": true
+      }
+    ],
+    "all_byte_identical": true,
+    "cmp": "clean (no differences)"
+  },
+  "inputs": [
+    {
+      "path": "09_relations/data/panel_wdi_long.csv",
+      "sha256": "a37629ae5d4f9ed2be4c71e33bfc876131880f65d356c88bd4d047a9bbdeae75",
+      "bytes": 2965833,
+      "role": "observed WDI long panel (DT1, DT2, DT4, DT5)",
+      "read_by_code": true,
+      "mtime_utc": "2026-11-20T10:53:19Z"
+    },
+    {
+      "path": "09_relations/data/literacy_cohort_decomposition.csv",
+      "sha256": "9f331a341f0de6c5c9866fce146da81acbd6c57a8a777822a4f5fb6bb6f57c71",
+      "bytes": 64037,
+      "role": "on-disk derived cohort decomposition (DT2)",
+      "read_by_code": true,
+      "mtime_utc": "2026-11-20T10:53:19Z"
+    },
+    {
+      "path": "09_relations/data/literacy_decomposition_regressions.csv",
+      "sha256": "a4d05afcbdd55c28cb23a707bbcf092cb527301801a8ee83b093c56e348bfb52",
+      "bytes": 415,
+      "role": "on-disk D1/D2a/D2b regression cross-check (DT2)",
+      "read_by_code": true,
+      "mtime_utc": "2026-11-20T10:53:19Z"
+    },
+    {
+      "path": "10_massification/data/UNIVERSALIZATION_SERIES.csv",
+      "sha256": "85bc869396ebfcb39e3e1a21a31af219e75a07326c738a51d2bfdbe536737ddb",
+      "bytes": 592750,
+      "role": "PHL upper-secondary completion corroboration (DT5)",
+      "read_by_code": true,
+      "mtime_utc": "2026-11-20T10:53:20Z"
+    },
+    {
+      "path": "09_relations/data/economic_complexity_panel_30ctys.csv",
+      "sha256": "9657bfd6cc17d3ed7f59939e0ba6af1412c2d070f2dd0c600a514f4b063a7f04",
+      "bytes": 29123,
+      "role": "named by brief; not named by any DT block; not read",
+      "read_by_code": false,
+      "mtime_utc": "2026-11-20T10:53:19Z"
+    },
+    {
+      "path": "10_massification/data/JOBS_AND_MARKETS_PANEL.csv",
+      "sha256": "aaaab2744803989ff0f347e27d5824c9b0086b967914d96d21ecd354329787d3",
+      "bytes": 2838863,
+      "role": "named by brief; not named by any DT block; not read",
+      "read_by_code": false,
+      "mtime_utc": "2026-11-20T10:53:20Z"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "10_massification/extensions/dt_2026-11-20/results/RESULTS.csv",
+      "sha256": "e28935ac64c64c104ce8f5f0fc726b4e607bfbf0ba27722c8c7f39087f052f8e",
+      "bytes": 2813,
+      "role": "results table (5 rows, one per test)",
+      "read_by_code": true,
+      "mtime_utc": "2026-11-20T14:52:59Z",
+      "rows": 5
+    },
+    {
+      "path": "10_massification/extensions/dt_2026-11-20/results/DETAIL.csv",
+      "sha256": "e0e263d33807bd23f184d63bbbd4580d75fc0bf3c4fb054f2dacb9d27aea2b78",
+      "bytes": 24055,
+      "role": "underlying detail numbers",
+      "read_by_code": true,
+      "mtime_utc": "2026-11-20T14:52:59Z",
+      "rows": 426
+    },
+    {
+      "path": "10_massification/extensions/dt_2026-11-20/results/run1/RESULTS.csv",
+      "sha256": "e28935ac64c64c104ce8f5f0fc726b4e607bfbf0ba27722c8c7f39087f052f8e",
+      "bytes": 2813,
+      "role": "determinism run 1 RESULTS",
+      "read_by_code": true,
+      "mtime_utc": "2026-11-20T14:52:58Z",
+      "rows": 5
+    },
+    {
+      "path": "10_massification/extensions/dt_2026-11-20/results/run1/DETAIL.csv",
+      "sha256": "e0e263d33807bd23f184d63bbbd4580d75fc0bf3c4fb054f2dacb9d27aea2b78",
+      "bytes": 24055,
+      "role": "determinism run 1 DETAIL",
+      "read_by_code": true,
+      "mtime_utc": "2026-11-20T14:52:58Z",
+      "rows": 426
+    },
+    {
+      "path": "10_massification/extensions/dt_2026-11-20/results/run2/RESULTS.csv",
+      "sha256": "e28935ac64c64c104ce8f5f0fc726b4e607bfbf0ba27722c8c7f39087f052f8e",
+      "bytes": 2813,
+      "role": "determinism run 2 RESULTS",
+      "read_by_code": true,
+      "mtime_utc": "2026-11-20T14:52:59Z",
+      "rows": 5
+    },
+    {
+      "path": "10_massification/extensions/dt_2026-11-20/results/run2/DETAIL.csv",
+      "sha256": "e0e263d33807bd23f184d63bbbd4580d75fc0bf3c4fb054f2dacb9d27aea2b78",
+      "bytes": 24055,
+      "role": "determinism run 2 DETAIL",
+      "read_by_code": true,
+      "mtime_utc": "2026-11-20T14:52:59Z",
+      "rows": 426
+    }
+  ],
+  "test_verdicts": {
+    "DT1": "NULL (negative)",
+    "DT2": "NON-NULL (support)",
+    "DT3": "UNABLE (HELD, design-only)",
+    "DT4": "NULL (falsifier)",
+    "DT5": "NULL (falsifier)"
+  },
+  "gate": {
+    "rule": "D104: induction naming allowed only if DT1 AND DT2 both non-null",
+    "DT1_non_null": false,
+    "DT2_non_null": true,
+    "gate_met": false,
+    "consequence": "induction grounding PARKED; A1/A3 remain declared assumptions with no theory citation"
+  },
+  "held_series": [
+    "DT3 reform/grade-discontinuity behavioural outcomes (punctuality, arrest/incarceration, evaluative orientation)",
+    "anthropometric series (no dt block reaches it)",
+    "adoption/migrant panel (no dt block reaches it)"
+  ],
+  "notes": [
+    "All statistics are descriptive/associational; no causal or direction claim.",
+    "DT3 is design-only; no number was fabricated.",
+    "No writes outside the DT write scope."
+  ]
+}
