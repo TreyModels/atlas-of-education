@@ -222,6 +222,28 @@ Two external requests are drafted and held; per protocol, external data requests
    Public retrieval is authorised: BEPER 2019 must be retrieved from public sources and logged before any citation
    (D49); the ILO/OECD/PSA 403s remain recorded as blocks. Op centre requested to surface both to the user.
 
+## 3i. A7 adopted — timing alignment; anchor mechanism verdict is DESCRIPTIVE
+
+- **A7/R24 — timing-alignment rule (adopted):** a state-push law counts as a mechanism only if its event window is
+  computable on the affected level's observed series, the shift sign matches the prediction, the event-to-crossing
+  gap is within ±5 y (or the crossing sits inside the post window), and affected cohorts are declared with transition
+  cohorts excluded. Otherwise it is a **candidate marker/context, not a mechanism**. Evidence is descriptive (naive
+  SE, no controls, quality A/B/C — R25): no causal claim (R13), never a model schedule (R4/R14).
+- **Anchor mechanism verdict (descriptive, D51):** PHL's discrete state pushes **do not align** — 1987 Constitution →
+  primary universal 2017–21 (**31 y later**); K-12 (effective 2016) → upper-secondary mass already **≤1999**;
+  2018 free tuition → tertiary GER **−5.39 pp (t=−3.00, confounded)**; 4Ps negative. **The anchor's state-push channel
+  is alignment-gated and may not be assumed** — justify by R24 alignment or drop/re-specify. The anchor target is the
+  observed **crossing years and spacing** (A6: primary 2017, lower-secondary 2024, upper-secondary never by 2024,
+  tertiary 2024–25). Aligned portability markers: HKG 2009 (+9.08, t=5.20), CHN 1999 (+4.70, t=7.94); CHN 1986
+  (−27 y) and PHL 1987 (−31 y) are not markers; HKG lower-secondary NER 2015–16 is a measure artefact.
+- **`SCHOOL_EXPANSION.csv` absent → DATA ASK** (D52): scout's four expansion episodes are quality-C inferred and
+  **may not serve as event-window evidence (R25)**; data-hunter asked to pull the named file (DepEd/DPWH construction,
+  teacher hires, pupil-teacher, SHS capacity) or mark DATA BLOCKED. Public retrieval authorised; external requests
+  remain AWAITING USER APPROVAL (STATUS §3h).
+- **Enforcement:** exp1 re-scopes `PRE_ANCHOR_A1.md` to A6/A7 (crossings+spacing target; state push alignment-gated
+  or dropped) before its next run; exp2 re-scores the four testable rivals on crossing ordering/spacing and
+  mechanism-implied ordering, listing the two design-only rivals in every results file.
+
 ## 4. Next three actions for `repo-auditor`
 
 1. **Council gate:** get the Council's final `COUNCIL:` post for brief 013 (SUCCESS_CRITERIA + STOP_RULES are

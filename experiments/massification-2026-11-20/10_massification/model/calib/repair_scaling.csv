@@ -1,0 +1,10 @@
+rival,law,generated,A3_lo,A3_hi,contained,A1_value,A1_se,within_1se_A1
+demand_led,secondary,-2.733722425389776,0.0904,0.2154,False,0.286,0.045,False
+demand_led,tertiary,-0.31873944716655084,0.5666,0.8482,False,0.776,0.086,False
+demand_led,completion_low,11.464684685107695,0.169,0.2468,False,nan,nan,
+education_led,secondary,-2.526712979736413,0.0904,0.2154,False,0.286,0.045,False
+education_led,tertiary,-1.317353409769002,0.5666,0.8482,False,0.776,0.086,False
+education_led,completion_low,1.8682052419296216,0.169,0.2468,False,nan,nan,
+complementary,secondary,-1.0343696359734724,0.0904,0.2154,False,0.286,0.045,False
+complementary,tertiary,-0.3909852948483437,0.5666,0.8482,False,0.776,0.086,False
+complementary,completion_low,2.545763584557513,0.169,0.2468,False,nan,nan,

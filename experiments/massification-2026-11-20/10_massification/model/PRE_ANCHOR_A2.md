@@ -38,3 +38,12 @@ or the result is **EQUIVALENT** — a state-push date coincidence is not identif
 ## Roles, tolerances, vocabulary
 As reproduced verbatim in `PRE_ANCHOR_A1.md` (brief 013 §2 table + §3 tolerances + A1/A4/A5 additions). Verdicts
 PASS / PARTIAL / FAIL / EQUIVALENT (+ PASS-CONDITIONAL / IDENTIFIED); STOP RULES R1–R12, R20–R22.
+
+## AMENDMENT A6 (Council D47–D49) — cohort exposure, not level breaks; null results allowed
+Per R23/A6 and scout's event_windows: state-push tests are scored on **cohort exposure** (exposed vs unexposed
+cohorts by birth year / stage) and on **crossing years/ordering**, not on level shifts at law dates. Window shifts
+computed by scout are recorded as context only (+0.42 pp t=0.50 for K-12 secondary GER; −5.39 pp t=−3.0 for free
+tuition, confounded by the K-12 transition; −2.49 pp t=−1.27 for 4Ps). Each event test **predeclares that a null is a
+valid result** and carries the MDE power statement (PASS at ≥4 pp, else INCONCLUSIVE). A2a (K-12 cohort exposure) is
+the primary state-push test; A2b/A2c (fee abolition) keep the Q1–Q2 concentration rule; A2d (places/teachers) remains
+DATA BLOCKED until DepEd/DPWH series land. No test may add the law date as a fitted parameter (R12/R4).

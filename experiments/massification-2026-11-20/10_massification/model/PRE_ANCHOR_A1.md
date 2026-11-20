@@ -67,8 +67,8 @@ near-universal → timing/boundary regime. **A5 mechanisms:** each event break w
 inside the predeclared band, placebo null. **Verdict vocabulary:** PASS / PARTIAL / FAIL / EQUIVALENT, plus
 PASS-CONDITIONAL vs IDENTIFIED (A1). Stop rules R1–R12 + R20–R22 adopted.
 
-## Known data limits (declared before fitting)
-Pre-1999 completion is missing (A8 data-first pending); the FIT window for PHL is therefore effectively 1999–2010
+## Known data limits (declared before fitting; ANCHOR fit window superseded to 1999–2013 by Amendment A6 below)
+Pre-1999 completion is missing (A8 data-first pending); the anchor FIT window is **1999–2013** (Amendment A6), holdout 2014–2024; the earlier smoke window 1999–2010 remains only for the pre-anchor diagnostic cells
 (≈6–7 observed points per level) and 2013+ events fall inside the HOLDOUT window, so event-break tests for K-12/free
 SHS/free tertiary have limited pre-period support. DepEd/DPWH places/teacher series are not yet on disk (A8/A2
 data-first); where absent, the affected test is **DATA BLOCKED**, never imputed. E3 nurse series remain DATA BLOCKED
@@ -80,3 +80,48 @@ data-first); where absent, the affected test is **DATA BLOCKED**, never imputed.
 3. Portability A6 (CHN) then A7 (HKG) only after A1/A2, with **fixed behaviour + PHL parameter values**; only declared
    country inputs re-set; behavioural re-fit = **FAIL** (R20). No direction claims anywhere (R13); label
    observed/simulated; no git writes.
+
+## AMENDMENT A6 (Council D47–D49 / R23; applied before anchor fitting)
+**The anchor's discriminating signal is the verified ASYMMETRY of the PHL record, not a single universalization
+curve.** Observed (on-disk, `status==target`; A6 text): primary completion 83.16 (1999) → 91.92 in **2017** (first
+≥90) → 98.30 (2024); lower-secondary 58.86 (1999) → 92.41 in **2024** (first ≥90); upper-secondary 59.70 (1999) →
+75.03 (2024) and **never ≥90**; tertiary GER 16.34 (1971) → 52.99 (2026), first ≥50 in the **2024–2025** band.
+
+**1. Fit/holdout supersession (binding).** For the ANCHOR model: **FIT window 1999–2013; HOLDOUT 2014–2024.** This
+supersedes the earlier 1999–2010 smoke window for the anchor (the smoke/PHL+CHN cells are retained as pre-anchor
+diagnostics, R12). CHN/KHM roles are unchanged; KHM stays the held-out country.
+
+**2. Milestone set M0–M4 (declared; crossing years are HOLDOUT OUTCOMES, never fitted).**
+| id | milestone (PHL) | observed crossing | status of the crossing |
+|---|---|---|---|
+| M0 | primary completion ≥90% | **2017** | observed |
+| M1 | lower-secondary completion ≥90% | **2024** | observed (at edge of holdout) |
+| M2 | upper-secondary completion ≥90% | **none by 2024** (75.03 last) | **right-censored / never observed** |
+| M3 | tertiary GER ≥50% | **2024–2025 band** | observed band, not a point |
+| M4 | upper-secondary completion ≥75% | **~2023–24** (75.03 in 2024) | observed (level unsaturated) |
+**Estimand:** the vector of generated crossing years/intervals, their **ordering**, and the **gaps** between them.
+**Tolerances:** ±5 y (±3 y narrow band) per A4; a crossing reported as an interval when the observed bracket is wider
+than one year.
+**Asymmetry test (predeclared):** a model that fits one shared universalization curve/timing to all levels is
+**PARTIAL at most (R23)**. PASS requires the model to reproduce *which* milestones moved and *when* — i.e. the
+ordering (M0 ≺ M1/M3/M4, with M3 as a band) and the gaps — not merely the overall level.
+**False-positive check (R6, predeclared):** generating upper-secondary completion reaching ≥90 by 2024 is a
+**structural failure** (the record never shows it), regardless of how well the trajectory otherwise fits. Model
+crossings for M2 must be absent or right-censored consistently.
+**No shared-curve shortcut:** the model may not be given the crossing years, ceilings, or a logistic schedule as
+inputs (R4). Generated paths only.
+
+**3. Events vs crossings (evidence recorded before fitting).** Scout's `relations/data/event_windows.csv` shows PHL
+policy dates do **not** align with crossing years: 1987 Constitution → primary ≥90 crossing 2017–21 (gap **31 y**);
+RA 10533 (2016 effective) → secondary GER window shift **+0.42 pp (t=0.50)**, i.e. null; RA 10931 free tuition (2018) →
+tertiary window shift **−5.39 pp (t=−3.0)** but confounded with the K-12 transition cohorts; 4Ps CCT → secondary
+−2.49 pp (t=−1.27, n_post=3). Therefore: (a) the anchor is scored primarily on **crossing years/ordering/gaps**, not
+on law-date breaks; (b) event-break tests are predeclared to **allow a null result** and must carry a declared power
+statement (the E2 power/MDE rule: PASS at ≥MDE ≈4 pp, else INCONCLUSIVE — not support, not null); (c) a state-push
+event that shows no break is reported as such, not tuned until it appears (R12).
+
+**4. Rivals scored on ordering/gaps, not levels.** The five rival models (HC, world society, labour queue,
+state-building, sectoral demand) are fitted on the **same PHL 1999–2013 record with the same exogenous events** and
+scored on (i) the milestone ordering/gap vector and (ii) out-of-sample trajectory 2014–2024; a rival that matches the
+same moments is **EQUIVALENT** (R3/R13), no winner chosen. Anchor PASS requires beating them on the predeclared
+ordering/gap estimand AND on out-of-sample trajectory.
