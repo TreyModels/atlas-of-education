@@ -134,6 +134,23 @@ identification value and feasibility; the Lead picks the next iteration from tha
 > map + a data-first measurement programme, with Korean provider/fee economics as the one positive block.
 > Nothing below may be re-tuned and called a match.
 
+## 1c. Synthetic assumption-space layer (added 20 Nov, post-close-out)
+
+With identification limits established, the loop adds a **synthetic possibility layer**: literature-grounded
+*assumed* parameters are fed into the model to ask (a) which assumption regions can reproduce the literature
+pattern, and (b) which patterns are impossible under any declared plausible range. This is assumption-space
+mapping, not evidence: every output is labelled SYNTHETIC, no synthetic match may be called a validation or a
+fit, and "empty support" is reported as a finding.
+
+Inputs: `08_council/brief_009/` (SYNTHETIC_PARAMS.csv, SCENARIO_FAMILIES.md, PREDICTION_REGISTER.csv);
+`02_lit/ECON_LIT.md` + `ECON_TARGETS.csv` (literature ranges); `04_data/econ_round2/PARAMETER_MAP.csv` (10 not
+observable); `02_lit/SHADOW_TARGETS.csv` (targets). Outputs: `05b_experiments/loop6/` — synthetic observables,
+possibility frontier per target, impossibility check, prediction-register results, and a "what would have to be
+true" table.
+
+The decisive product is not a match; it is the boundary: which parts of the literature pattern the model class
+cannot produce under any defensible assumptions, and which single measured parameter would collapse the space.
+
 ## 2. What "shadow education appears where the literature says" means operationally
 
 It is **not** "the model has a tutoring rule". It is:

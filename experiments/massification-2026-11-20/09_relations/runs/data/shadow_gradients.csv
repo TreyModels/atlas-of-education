@@ -1,0 +1,18 @@
+country,year,dimension,level,value_pct,source,note
+HKG,2003,stage,S1-3,35.1,"Bray & Kwok (2003) EER 22:611-620, Table 1 p.616","same survey, same schools: gate proximity"
+HKG,2003,stage,S4-5,46.6,"Bray & Kwok (2003) EER 22:611-620, Table 1 p.616","same survey, same schools: gate proximity"
+HKG,2003,stage,S6-7,70.3,"Bray & Kwok (2003) EER 22:611-620, Table 1 p.616","same survey, same schools: gate proximity"
+HKG,2003,gate-gradient,S6-7 minus S1-3,35.199999999999996,Bray & Kwok (2003) Table 1,+35.2pp at the senior gate
+KOR,2023,income-band,<3m won,183.0,"MODS/KEDI 2023 English release, income table",thousand won/month per student (not %)
+KOR,2023,income-band,>=8m won,671.0,"MODS/KEDI 2023 English release, income table",thousand won/month per student (not %)
+KOR,2023,income-elasticity,>=8m vs <3m,1.3246780519042365,derived from MODS/KEDI 2023 income bands,elasticity of tutoring expenditure wrt household income (2.67x income gap -> 3.67x spend)
+KOR,2023,level-participation,elementary,86.0,MODS/KEDI 2023 Table 2,
+KOR,2023,level-participation,high,66.4,MODS/KEDI 2023 Table 2,-19.6pp from elementary to high
+KOR,2023,level-spend,elementary,398.0,MODS/KEDI 2023 Table 2,thousand won/month per student
+KOR,2023,level-spend,high,491.0,MODS/KEDI 2023 Table 2,+23% spend per student at the high-school gate
+JPN,2018,urbanisation,Tokyo (max),57.9,"Rappleye & Komatsu (2020) EPAA 28(67), Table 2",
+JPN,2018,urbanisation,Akita (min),22.1,"Rappleye & Komatsu (2020) EPAA 28(67), Table 2",2.6x urban/rural gap
+KHM,2012,urbanisation,urban grade 6,60.5,Brehm & Silova (2013 WP39; 2014 JERO 6(1)),"ONE DISTRICT, six schools - case study only"
+KHM,2012,urbanisation,rural grade 6,26.4,Brehm & Silova (2013/2014),"2.3x urban/rural gap, case study"
+CHN,2014,policy,pre-Double-Reduction,29.8,Liu & Bray (2020) Educational Studies 46(2):170-187 (ERIC abstract),national survey 2014
+CHN,2022,policy,post-Double-Reduction (<20%),20.0,China Education Daily 2022-03-03 headline (LOW confidence),upper bound of reported <20%

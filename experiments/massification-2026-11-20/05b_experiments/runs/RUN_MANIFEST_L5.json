@@ -1,0 +1,218 @@
+{
+ "loop": "5",
+ "owner": "experiment-runner-2",
+ "scope": "05b_experiments/loop5 only",
+ "environment": {
+  "python": "3.11.17",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "numpy": "2.4.6"
+ },
+ "predeclaration": "PRE_DECLARATIONS_L5.md",
+ "meta": {
+  "module": "e1.py (NEW loop-5 code; gate-stakes structural variable only)",
+  "gate_dates": {
+   "KOR": {
+    "CSAT_terminal": "1994 ASSUMED",
+    "source": "02_lit/COUNTRY_CARDS/KOR.md \u00a72"
+   },
+   "HKG": {
+    "HKDSE_first_cohort": "2012",
+    "source": "02_lit/COUNTRY_CARDS/HKG.md \u00a72",
+    "note": "card says dates not independently verified; pre-DSE HKCEE+HKALE"
+   }
+  },
+  "relations": "PENDING (09_relations slot tables not consulted)",
+  "E1": {
+   "all_pass": false,
+   "results": {
+    "KOR-like": {
+     "arm": "gate_each_transition",
+     "rates": [
+      27.27486446587631,
+      24.963284330027015,
+      24.406231091232442
+     ],
+     "misses": [
+      -58.725135534123694,
+      -50.43671566997299,
+      -41.993768908767564
+     ],
+     "within5": false
+    },
+    "HK-like": {
+     "arm": "terminal_only",
+     "rates": [
+      14.380991753214806,
+      19.71821390017604,
+      46.65500373215723
+     ],
+     "misses": [
+      -20.719008246785194,
+      -26.881786099823962,
+      -23.644996267842764
+     ],
+     "within5": false
+    }
+   },
+   "all_arms": [
+    {
+     "country": "KOR-like",
+     "arm": "terminal_only",
+     "stage1": 13.240906000219827,
+     "stage2": 18.240463044215186,
+     "stage3": 44.22955502524435,
+     "target1": 86.0,
+     "target2": 75.4,
+     "target3": 66.4,
+     "policy_arm": false
+    },
+    {
+     "country": "KOR-like",
+     "arm": "gate_each_transition",
+     "stage1": 27.27486446587631,
+     "stage2": 24.963284330027015,
+     "stage3": 24.406231091232442,
+     "target1": 86.0,
+     "target2": 75.4,
+     "target3": 66.4,
+     "policy_arm": true
+    },
+    {
+     "country": "KOR-like",
+     "arm": "continuous",
+     "stage1": 20.096749906664385,
+     "stage2": 23.139452554719696,
+     "stage3": 28.27651117022703,
+     "target1": 86.0,
+     "target2": 75.4,
+     "target3": 66.4,
+     "policy_arm": false
+    },
+    {
+     "country": "HK-like",
+     "arm": "terminal_only",
+     "stage1": 14.380991753214806,
+     "stage2": 19.71821390017604,
+     "stage3": 46.65500373215723,
+     "target1": 35.1,
+     "target2": 46.6,
+     "target3": 70.3,
+     "policy_arm": true
+    },
+    {
+     "country": "HK-like",
+     "arm": "gate_each_transition",
+     "stage1": 29.234956690584905,
+     "stage2": 26.815570087449984,
+     "stage3": 26.230935596702633,
+     "target1": 35.1,
+     "target2": 46.6,
+     "target3": 70.3,
+     "policy_arm": false
+    },
+    {
+     "country": "HK-like",
+     "arm": "continuous",
+     "stage1": 21.687010438657172,
+     "stage2": 24.899116539300376,
+     "stage3": 30.279995610610456,
+     "target1": 35.1,
+     "target2": 46.6,
+     "target3": 70.3,
+     "policy_arm": false
+    }
+   ]
+  },
+  "E1b": {
+   "rates": {
+    "elementary": 27.780988995371718,
+    "middle": 24.63232440505155,
+    "high": 23.278948911932606
+   },
+   "misses": {
+    "elementary": -58.219011004628285,
+    "middle": -50.76767559494846,
+    "high": -43.121051088067404
+   },
+   "within": false,
+   "provider_ok": false,
+   "hours_dir_ok": true,
+   "fee_mult": {
+    "elementary": 0.851851851851852,
+    "middle": 1.1037037037037039,
+    "high": 1.3629629629629632
+   },
+   "spend": {
+    "elementary": 0.115,
+    "middle": 0.149,
+    "high": 0.184
+   },
+   "pass_": false,
+   "per_participant": 0.13499999999999998,
+   "per_student": 0.1424086635698625,
+   "commercial_share": 0.4135085036816007
+  },
+  "E4": {
+   "ratio": 2.136449018060651,
+   "monotone": true,
+   "inside": true,
+   "pass_": true,
+   "spend": [
+    0.022513347466404633,
+    0.029544256853386974,
+    0.03480053365829867,
+    0.04116433562751423,
+    0.048098619087858424
+   ],
+   "mults": [
+    0.5,
+    0.75,
+    1.0,
+    1.4,
+    2.0
+   ]
+  }
+ },
+ "relations": "PENDING (09_relations slot tables not consulted)",
+ "code_sha": {
+  "code/e1.py": "41d110d4cd403daa",
+  "code/make_manifest_l5.py": "40f8aca32721243e"
+ },
+ "outputs": [
+  {
+   "path": "runs/l5_meta.json",
+   "sha16": "849281c36b67dadd",
+   "bytes": 3534
+  },
+  {
+   "path": "runs/E4/e4_income.csv",
+   "sha16": "c8c1b6b630dbceb5",
+   "bytes": 276
+  },
+  {
+   "path": "runs/E4/findings.txt",
+   "sha16": "7a341ee27eeaccf1",
+   "bytes": 831
+  },
+  {
+   "path": "runs/E1/e1_arms.csv",
+   "sha16": "5e5d7ece6140b078",
+   "bytes": 679
+  },
+  {
+   "path": "runs/E1/findings.txt",
+   "sha16": "ca27a2971dc33ad9",
+   "bytes": 1352
+  },
+  {
+   "path": "runs/E1b/findings.txt",
+   "sha16": "fed940283fa86039",
+   "bytes": 949
+  }
+ ],
+ "verdicts": {
+  "E1": "FAIL (all six rates outside +/-5pp; gate-position story dropped)",
+  "E1b": "FAIL (no one-country claim; stop-rule permanent)",
+  "E4": "PASS demand-consistent (ratio 2.14 vs observed 3.67)"
+ }
+}

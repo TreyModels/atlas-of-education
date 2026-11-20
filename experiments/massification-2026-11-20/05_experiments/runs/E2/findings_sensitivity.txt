@@ -1,0 +1,7 @@
+E2 SENSITIVITY over 36 declared quality parametersations (no optimisation of targets):
+  T1 (KOR mix, all five within +/-10pp) passes 3/36;
+  T2 (HKG S6-7 mass-lecture >=20pp above S4-5) passes 33/36.
+  best T1 parameterisation: q_1:1=0.95, q_sg=0.85, boost=0.15: shares hagwon 63.8 (obs 73.7), 1:1 11.3 (obs 11.3), sg 12.6 (obs 6.7), net 7.1 (obs 4.9), tb 5.2 (obs 3.4)
+  largest HKG gap over the grid: +89.2 pp (threshold +20); observed gap is +39.4 pp.
+  => no plausible quality parameterisation passes T1; T2 cannot be reached by raising the
+     terminal-gate exam-orientation boost up to 0.50. Provider technology alone is not the missing channel.

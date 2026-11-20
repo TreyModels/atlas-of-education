@@ -1,0 +1,4 @@
+driver,auxiliary_ratio,required_elasticity,plausibility_lo,plausibility_hi,passes_T4,basis
+density_competition,71.49438202247191,0.2255798010527262,0.1,0.6,True,"sourced approximate: pop density 6,363 vs 89 per km2 (Statistics Bureau 2020)"
+income,1.6,2.0492177424265727,0.1,1.0,False,estimated/assumed: prefectural per-capita income ratio ~1.6 (accounts not on disk)
+gate_stakes,1.2,5.282643440477566,0.5,2.0,False,assumed: high-school applicants-per-seat ratio ~1.2 (NOT FOUND on disk)

@@ -1,0 +1,21 @@
+E1 — GATE-ARCHITECTURE GRADIENT (new structural variable; no take-up fitting).
+Frozen structural configs from loop-4 uncalibrated KOR/HK; only the binding-gate stakes
+vector differs across arms. Gate dates from country cards: KOR CSAT terminal (1994 date
+ASSUMED), high-school equalisation; HKG single terminal HKDSE from 2012 (ASSUMED era),
+SSPA at primary->secondary. No demand-intercept calibration.
+
+Policy-dated assignment: KOR -> gate_each_transition; HKG -> terminal_only.
+
+  country   arm                      stage1   stage2   stage3
+  KOR-like  terminal_only              13.2     18.2     44.2
+  KOR-like  gate_each_transition       27.3     25.0     24.4
+  KOR-like  continuous                 20.1     23.1     28.3
+  HK-like   terminal_only              14.4     19.7     46.7
+  HK-like   gate_each_transition       29.2     26.8     26.2
+  HK-like   continuous                 21.7     24.9     30.3
+
+PREDECLARED THRESHOLD: all SIX stage rates within +/-5 pp under the policy-dated assignment.
+  KOR-like policy arm=gate_each_transition: model 27.3/25.0/24.4 vs target 86.0/75.4/66.4 -> misses -58.7/-50.4/-42.0 -> OUTSIDE +/-5pp
+  HK-like policy arm=terminal_only: model 14.4/19.7/46.7 vs target 35.1/46.6/70.3 -> misses -20.7/-26.9/-23.6 -> OUTSIDE +/-5pp
+
+  -> E1 verdict: FAIL — the gate-position story is dropped, not re-fitted

@@ -1,0 +1,67 @@
+{
+ "T1": false,
+ "T2": false,
+ "T3": true,
+ "gap_pp": -55.32636018087038,
+ "fee_pct": 3.5561666666666665,
+ "rho": 1.3246780519042365,
+ "obs_share": {
+  "hagwon_mass": 73.70030581039755,
+  "one_to_one": 11.314984709480122,
+  "small_group": 6.72782874617737,
+  "internet": 4.892966360856269,
+  "textbook_visit": 3.363914373088685
+ },
+ "model_share": {
+  "hagwon_mass": 47.689373487247124,
+  "one_to_one": 12.990015437790225,
+  "small_group": 17.340863335673568,
+  "internet": 13.327147207119157,
+  "textbook_visit": 8.652600532169927
+ },
+ "hkg": {
+  "S4_5": {
+   "take": 1.0,
+   "ml_share": 82.28657014478283,
+   "avg_spend": 267066.6666666666
+  },
+  "S6_7": {
+   "take": 0.8153333333333334,
+   "ml_share": 26.96020996391245,
+   "avg_spend": 113797.33333333333
+  }
+ },
+ "arms": {
+  "a uniform single provider": {
+   "take_all": 0.379,
+   "commercial_demand_share": 0.379,
+   "commercial_spend_share": 1.0,
+   "avg_spend": 348139.62765851605
+  },
+  "b commercial chain + internet (scale)": {
+   "take_all": 0.649,
+   "commercial_demand_share": 0.649,
+   "commercial_spend_share": 1.0,
+   "avg_spend": 366878.5416538557
+  },
+  "c teacher-tutor capacity (1:1 + small group)": {
+   "take_all": 0.15825,
+   "commercial_demand_share": 0.0,
+   "commercial_spend_share": 0.0,
+   "avg_spend": 237413.16077020392
+  },
+  "d mixed technology menu": {
+   "take_all": 0.8375,
+   "commercial_demand_share": 0.8015,
+   "commercial_spend_share": 0.8533276812208564,
+   "avg_spend": 361152.7623775019
+  }
+ },
+ "theta_levels": {
+  "elementary": 0.1670577668329923,
+  "middle": 0.012255179682000888,
+  "high": 7.999996503266006
+ },
+ "income_med_kor": 4000000.0,
+ "income_med_hkg": 3200000.0
+}

@@ -1,0 +1,15 @@
+E4 — KOR INCOME GRADIENT (model spend by declared income band; observed official 2023 spend
+183k won (<3m won) -> 671k (>=8m won); observed top/bottom ratio = 3.67.
+Income multipliers declared from band midpoints: 0.5, 0.75, 1.0, 1.4, 2.0
+
+  group   income x  participation  model spend
+       1      0.50          16.7%         2.3%
+       2      0.75          21.9%         3.0%
+       3      1.00          25.8%         3.5%
+       4      1.40          30.5%         4.1%
+       5      2.00          35.6%         4.8%
+
+  demand-consistent top/bottom spend ratio = 2.14 vs observed 3.67; monotone: True
+  (mechanical income-multiplier identity would give 8.55; reported only as a diagnostic)
+PREDECLARED THRESHOLD: monotone increasing AND ratio inside 3.67 x [0.5,1.5] = [1.84,5.51].
+  -> E4 verdict: PASS (demand-consistent)

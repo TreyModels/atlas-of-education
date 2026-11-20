@@ -1,0 +1,16 @@
+E1b — KOR NO-FIT BENCHMARK (frozen structural params; only fee multipliers fitted to Korean fee
+moments 11.5/14.9/18.4%; overall 10.8/13.8% are checks; participation NOT fitted).
+  fitted stage fee multipliers: elementary=0.852, middle=1.104, high=1.363
+  model annual fee/income by stage: 11.5/14.9/18.4% vs fitted targets 11.5/14.9/18.4%
+  overall checks: per-participant 13.5% vs 13.8% observed; per-student 14.2% vs 10.8% observed
+
+  stage          target    model     miss
+  elementary       86.0     27.8    -58.2
+  middle           75.4     24.6    -50.8
+  high             66.4     23.3    -43.1
+
+PREDECLARED THRESHOLD: all three stages within +/-5 pp AND direction checks
+  (provider commercial share >= 50% [41.4%] and
+   participation falling + spend rising with stage [True]).
+  Hours level 7.3 h/wk = UNABLE (no hours object). KHM/PH transfer stays out-of-sample (not run).
+  -> E1b verdict: FAIL — the stop-rule stands permanently
