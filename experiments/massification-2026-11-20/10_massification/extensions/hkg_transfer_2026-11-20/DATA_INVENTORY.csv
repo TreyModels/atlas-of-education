@@ -1,0 +1,76 @@
+file,indicator,measure,years,censoring,hash16,provenance,row_locator,notes
+data/gmr_observed_6countries_1970_2024.csv,ner_primary,NER,1971-2018 (n=24),none,794a67c11ca05241,observed,L1684-L1707,"SOURCE OF BOTH D75 TARGETS. 1973=89.60049 (L1686), 1974=91.10855 (L1687) => TC-1. 1977=95.10725 (L1690) first-at-above, 1978=94.6876 dip (L1691), 1979=95.07646 (L1692) => TC-2."
+data/gmr_observed_6countries_1970_2024.csv,aner_primary,ANER,1971-2018 (n=24),none,794a67c11ca05241,observed,L1203-L1226,Identical to ner_primary for 1971-1996 to 5dp; diverges 2012+ (2012 NER 94.19961 vs ANER 99.27739). Measure choice cannot move 1974/1979.
+data/gmr_observed_6countries_1970_2024.csv,ger_primary,GER,2001-2024 (n=23),left (already 100.91 at first obs 2001),794a67c11ca05241,observed,L1466-L1488,UNUSABLE for D75 targets: no informative crossing; 2001=100.90641784668.
+data/gmr_observed_6countries_1970_2024.csv,ger_tertiary,GER,1971-2025 (n=38),none,794a67c11ca05241,observed,L1512-L1549,1971=7.252349853515625 (L1512). Crossings 1992 (>=15) and 2008 (>=50). Not a D75 target.
+data/gmr_observed_6countries_1970_2024.csv,ger_upper_secondary,GER,2001-2019 (n=19),left (2001=68.74772),794a67c11ca05241,observed,L1550-L1568,Target series of the 2008/2009 free-senior-secondary event window.
+data/gmr_observed_6countries_1970_2024.csv,ger_secondary,GER,2001-2024 (n=23),left (at 2001),794a67c11ca05241,observed,-,Not a D75 target.
+data/gmr_observed_6countries_1970_2024.csv,ger_lower_secondary,GER,1998-2019 (n=22),left (at 1998),794a67c11ca05241,observed,-,Not a D75 target.
+data/gmr_observed_6countries_1970_2024.csv,ner_lower_secondary,NER,2001-2018 (n=17),left (at 2001),794a67c11ca05241,observed,-,Underlies the 2016 crossing that is FLAGGED UNRELIABLE (denominator artefact). Never a target.
+data/gmr_observed_6countries_1970_2024.csv,aner_lower_secondary,ANER,1971-2018 (n=33),none,794a67c11ca05241,observed,-,Underlies the 2014 ANER crossing flagged as artefact in lit/UNIVERSALIZATION_TIMELINES_JPN_KOR_HKG.md:99.
+data/gmr_observed_6countries_1970_2024.csv,ner_secondary,NER,1971-2018 (n=33),none,794a67c11ca05241,observed,-,Not a D75 target.
+data/gmr_observed_6countries_1970_2024.csv,ner_upper_secondary,NER,2001-2018 (n=17),left (at 2001),794a67c11ca05241,observed,-,Not a D75 target.
+data/gmr_observed_6countries_1970_2024.csv,ptr_primary,PTR,1971-2025 (n=52),none,794a67c11ca05241,observed,L1878-L1929,"CAPACITY AT THE CROSSINGS IS AVAILABLE: 1974=31.88956 (L1881), 1979=30.21286 (L1886). Contradicts the 1996-anchored '13-24' framing in lit/STATE_CAPACITY.md:65."
+data/gmr_observed_6countries_1970_2024.csv,ptr_secondary,PTR,1971-2025 (n=44),none,794a67c11ca05241,observed,L1930-,"1974=24.19997 (L1933), 1979=30.10794 (L1938)."
+data/gmr_observed_6countries_1970_2024.csv,enrolment_primary,count,1971-2024 (n=53),none,794a67c11ca05241,observed,-,Headcount; used for reconstructed GER denominators.
+data/gmr_observed_6countries_1970_2024.csv,enrolment_secondary,count,1971-2024 (n=43),none,794a67c11ca05241,observed,-,Headcount.
+data/gmr_observed_6countries_1970_2024.csv,enrolment_tertiary,count,1971-2019 (n=32),none,794a67c11ca05241,observed,-,Headcount.
+data/gmr_observed_6countries_1970_2024.csv,oos_primary,out-of-school rate,1971-2025 (n=41),none,794a67c11ca05241,observed,-,Basis of the in-school (100-OOS) cross-check.
+data/gmr_observed_6countries_1970_2024.csv,completion_primary,completion,ABSENT - 0 HKG rows,n/a,794a67c11ca05241,ABSENT,(no rows),File carries completion for CHN/KHM/KOR/PHL only. Constraint 5 grounded: no HKG completion in the analysis panel.
+data/gmr_observed_6countries_1970_2024.csv,completion_lower_secondary,completion,ABSENT - 0 HKG rows,n/a,794a67c11ca05241,ABSENT,(no rows),As above.
+data/gmr_observed_6countries_1970_2024.csv,completion_upper_secondary,completion,ABSENT - 0 HKG rows,n/a,794a67c11ca05241,ABSENT,(no rows),As above; this is why the 2012 3-3-4 event window is UNABLE.
+10_massification/data/UNIVERSALIZATION_TIMING.csv,primary 90 NER crossing,NER,1974 (band 1973-1974),none,6e067ffd76b2c57c,observed,L48,TC-1. Matches D75 exactly. status=observed confidence=high.
+10_massification/data/UNIVERSALIZATION_TIMING.csv,primary 95 NER crossing,NER,1979 (band 1978-1979),none,6e067ffd76b2c57c,observed,L51,TC-2. Matches D75 exactly. 1977 is NOT the reported year - sustained-crossing rule excludes it.
+10_massification/data/UNIVERSALIZATION_TIMING.csv,primary 90 GER crossing,GER,2001,left,6e067ffd76b2c57c,observed,L46,Uninformative (left-censored at first obs).
+10_massification/data/UNIVERSALIZATION_TIMING.csv,primary 95 GER crossing,GER,2001,left,6e067ffd76b2c57c,observed,L49,Uninformative.
+10_massification/data/UNIVERSALIZATION_TIMING.csv,primary 50 NER crossing,NER,1971,left,6e067ffd76b2c57c,observed,L45,Left-censored (already 88.47 at 1971).
+10_massification/data/UNIVERSALIZATION_TIMING.csv,lower_secondary 90 GER crossing,GER,1998,left,6e067ffd76b2c57c,observed,L41,Not a D75 target.
+10_massification/data/UNIVERSALIZATION_TIMING.csv,secondary 90 GER crossing,GER,2012 (band 2011-2012),none,6e067ffd76b2c57c,observed,L56,Not a D75 target.
+10_massification/data/UNIVERSALIZATION_TIMING.csv,secondary 90 NER crossing,NER,2016 (band 2015-2016),none,6e067ffd76b2c57c,derived,L58,FLAGGED artefact; never a target.
+10_massification/data/UNIVERSALIZATION_TIMING.csv,upper_secondary 90 GER crossing,GER,2012 (band 2011-2012),none,6e067ffd76b2c57c,observed,L64,Not a D75 target.
+10_massification/data/UNIVERSALIZATION_TIMING.csv,tertiary 15 GER crossing,GER,1992 (band 1984-1992),none,6e067ffd76b2c57c,observed,L59,Trow mass threshold.
+10_massification/data/UNIVERSALIZATION_TIMING.csv,tertiary 50 GER crossing,GER,2008 (band 2007-2008),none,6e067ffd76b2c57c,observed,L61,Trow universal threshold.
+10_massification/data/UNIVERSALIZATION_TIMING.csv,primary 95 completion,completion,UNABLE,n/a,6e067ffd76b2c57c,UNABLE,L52,File states no UIS completion for HKG; national source needed.
+10_massification/data/UNIVERSALIZATION_TIMING.csv,lower_secondary 95 completion,completion,UNABLE,n/a,6e067ffd76b2c57c,UNABLE,L42,As above.
+10_massification/data/UNIVERSALIZATION_TIMING.csv,upper_secondary 95 completion,completion,UNABLE,n/a,6e067ffd76b2c57c,UNABLE,L65,As above.
+10_massification/data/POLICY_TIMELINE.csv,6-year free primary education,policy,1971,n/a,a068b5bf92cee52e,policy_fact,L3,confidence='fact (not re-verified this pass)'.
+10_massification/data/POLICY_TIMELINE.csv,9-year free compulsory education,policy,1978,n/a,a068b5bf92cee52e,policy_fact,L4,P6 + S1-S3. Same confidence caveat.
+10_massification/data/POLICY_TIMELINE.csv,12-year free education rolled out,policy,2008,n/a,a068b5bf92cee52e,policy_fact,L5,Free senior secondary from SY2008/09. This is the policy behind the 'HKG 2009' event window (effective 2009).
+10_massification/data/POLICY_TIMELINE.csv,3-3-4 academic structure reform,policy,2012,n/a,a068b5bf92cee52e,policy_fact,L6,Secondary to 6 years; 4-year degrees; first HKDSE 2012. Distinct from the 2008 row.
+10_massification/data/STATE_CAPACITY.csv,"pupil-teacher ratio, primary",PTR,1996-2018 (n=22),none,704efacad00f0ba7,observed,dimension=delivery_capacity,"1996=23.72998, 2018=13.34788 (matches gmr_observed to 5dp). Subset of the 1971+ series."
+10_massification/data/STATE_CAPACITY.csv,"pupil-teacher ratio, secondary",PTR,1996-2018 (n=19),none,704efacad00f0ba7,observed,dimension=delivery_capacity,Subset.
+10_massification/data/STATE_CAPACITY.csv,"teachers, primary (persons)",count,1996-2024 (n=28),none,704efacad00f0ba7,observed,dimension=delivery_capacity,-
+10_massification/data/STATE_CAPACITY.csv,"teachers, secondary (persons)",count,1996-2024 (n=27),none,704efacad00f0ba7,observed,dimension=delivery_capacity,-
+10_massification/data/STATE_CAPACITY.csv,"education spending (% of GDP), WDI",fiscal,1996-2024 (n=25),none,704efacad00f0ba7,observed,dimension=fiscal_capacity,D74: keep K_fiscal separate.
+10_massification/data/STATE_CAPACITY.csv,"education spending (% of GDP), UIS cross-check",fiscal,1971-2025 (n=42),none,704efacad00f0ba7,observed,dimension=fiscal_capacity,The only fiscal series reaching the 1974/1979 window.
+10_massification/data/STATE_CAPACITY.csv,policy event rows (1971/1978/2008/2012),policy,single years,n/a,704efacad00f0ba7,policy_fact,dimension=enforcement_capacity,"Law markers, NOT enforcement (D74: enforcement UNMEASURED)."
+10_massification/data/SCHOOL_EXPANSION.csv,(no HKG indicator),-,ABSENT - 0 HKG rows,n/a,c218e6c9bd784e13,ABSENT,(whole file),"FILE IS PHL-ONLY: 27 rows, all iso3=PHL. No HKG school/classroom expansion. Gap M4."
+10_massification/data/UNIVERSALIZATION_SERIES.csv,cohort_population_0_14,count,1995-2024 (n=30),none,85bc869396ebfcb3,derived,indicator=cohort_population_0_14,Declared-input D1. Does NOT cover 1971-1994 -> pre-1995 path must be DECLARED (SR-5).
+10_massification/data/UNIVERSALIZATION_SERIES.csv,population_total,count,1995-2024 (n=30),none,85bc869396ebfcb3,observed,indicator=population_total,D1. Same 1995 start.
+10_massification/data/UNIVERSALIZATION_SERIES.csv,ner_primary (mirror),NER,1971-2018 (n=24),none,85bc869396ebfcb3,observed,indicator=ner_primary,Mirrors gmr_observed; same 24 obs.
+10_massification/data/UNIVERSALIZATION_SERIES.csv,ger_tertiary (mirror),GER,1971-2025 (n=38),none,85bc869396ebfcb3,observed,indicator=ger_tertiary,Mirrors gmr_observed.
+10_massification/data/UNIVERSALIZATION_SERIES.csv,completion (any level),completion,ABSENT,n/a,85bc869396ebfcb3,ABSENT,(no rows),No completion indicator for HKG (438 HKG rows scanned).
+10_massification/data/JOBS_AND_MARKETS_PANEL.csv,SL.AGR.EMPL.ZS (and SL.IND/SRV/EMP.WORK/EMP.SELF/VULN),economy,1995-2024 (n=30),none,aaaab2744803989f,observed,indicator_code=SL.*,D2. Sector/employment shares. Does NOT reach 1971-1979.
+10_massification/data/JOBS_AND_MARKETS_PANEL.csv,NY.GDP.PCAP.PP.CD (and CD/KD variants),economy,1995-2024 (n=30),none,aaaab2744803989f,observed,indicator_code=NY.GDP.PCAP.*,D2. Same start.
+10_massification/data/JOBS_AND_MARKETS_PANEL.csv,SE.XPD.TOTL.GD.ZS,fiscal,1996-2024 (n=25),none,aaaab2744803989f,observed,indicator_code=SE.XPD.TOTL.GD.ZS,Education spending %GDP.
+10_massification/data/JOBS_AND_MARKETS_PANEL.csv,SE.PRM.ENRL.TC.ZS,PTR,1996-2018 (n=22),none,aaaab2744803989f,observed,indicator_code=SE.PRM.ENRL.TC.ZS,2018=13.3; subset of long PTR.
+10_massification/data/JOBS_AND_MARKETS_PANEL.csv,BX.TRF.PWKR.*,remittances,1998-2024 (n=27),none,aaaab2744803989f,observed,indicator_code=BX.TRF.PWKR.*,Migration channel proxy.
+10_massification/data/JOBS_AND_MARKETS_PANEL.csv,SL.UEM.1524.ZS / SL.UEM.NEET.ZS,economy,1995-2024 / 2009-2024,none,aaaab2744803989f,observed,indicator_code=SL.UEM.*,Youth labour market.
+09_relations/data/economic_complexity_panel.csv,eci_sitc,ECI,1995-2024 (n=30),none,27403fce9556239e,observed,"columns eci_sitc, eci_rank_sitc",Coverage 30/30 y (audit B17). Does NOT reach 1971-1979.
+09_relations/data/economic_complexity_panel.csv,eci_hs92,ECI,1995-2024 (n=30),none,27403fce9556239e,observed,"columns eci_hs92, eci_rank_hs92",30/30 y.
+09_relations/data/economic_complexity_panel.csv,eci_hs12,ECI,2012-2024 only,none,27403fce9556239e,observed,"columns eci_hs12, eci_rank_hs12",Only 2012+ (audit B17).
+10_massification/relations/data/UNIVERSALIZATION_TIMING.csv,primary_universal 95 NER (first-sustained),NER,band 1978.0-1979.0 (midpoint 1978.5),none,6223b75a4d4808c2,observed,L21,METHOD SOURCE: '>=5 consecutive years above'. pct_years_above=45.8; later_dips_after_crossing=True. Explains why 1977 is excluded.
+10_massification/relations/data/UNIVERSALIZATION_TIMING.csv,primary_universal 95 in-school (100-OOS),in-school,band 1979.0-1980.0,none,6223b75a4d4808c2,observed,L22,"Independent measure corroborates 1979, not 1977."
+10_massification/relations/data/UNIVERSALIZATION_TIMING.csv,lower_secondary_universal 90 NER,NER,band 2015.0-2016.0,none,6223b75a4d4808c2,observed,L24,Artefact-flagged; never a target.
+10_massification/relations/data/UNIVERSALIZATION_TIMING.csv,upper_secondary_universal 90 NER,NER,not crossed by last obs (2018),right,6223b75a4d4808c2,observed,L28,Upper-sec NER never reaches 90.
+10_massification/relations/data/UNIVERSALIZATION_TIMING.csv,tertiary_mass 50 GER,GER,band 2007.0-2008.0,none,6223b75a4d4808c2,observed,L30,Trow universal.
+10_massification/relations/data/UNIVERSALIZATION_TIMING.csv,reconstructed NER primary 95 (BOUND),NER,censored above at first obs 1971,left,6223b75a4d4808c2,reconstructed,L23,BOUND ONLY; never a target (audit: never impute).
+10_massification/relations/data/event_windows.csv,1971 free primary event window,event-window,pre 1961-1970 / post 1971-1977,n/a,7bac26b3ff143b97,UNABLE,L7,UNABLE: 'insufficient observed annual series around the event' - no pre-1971 data. The '3 years to 1974' is NOT a computed shift.
+10_massification/relations/data/event_windows.csv,1978 9-year compulsory event window,event-window,pre 1969-1978 / post 1979-1985,n/a,7bac26b3ff143b97,UNABLE,L8,UNABLE. Implied gap to lower-sec crossing 36.5 y = the artefact.
+10_massification/relations/data/event_windows.csv,2008/2009 free senior secondary event window,event-window,pre 1999-2008 / post 2009-2015,n/a,7bac26b3ff143b97,derived,L9,"ONLY computed HKG window: shift=+9.08pp, se=1.75, t=5.20, n_pre=n_post=7, post 71.78 vs pre 57.62. Descriptive only; affected crossing censored."
+10_massification/relations/data/event_windows.csv,2012 3-3-4 event window,event-window,pre 2002-2011 / post 2012-2018,n/a,7bac26b3ff143b97,UNABLE,L10,"UNABLE: needs completion_upper_secondary, which HKG does not have."
+02_lit/COUNTRY_CARDS/HKG.md,"shadow education, senior secondary",shadow participation,c.2011,n/a,d8c0c6a213fb6d8d,observed (second-hand),L15 (headline L9),"~85% (interval 80-90), Bray & Lykins 2012 p.X via Dierkes/Jukupedia 19 May 2012, SECOND-HAND QUOTATION; denominator='senior secondary' only. NOT a D75 transfer input."
+02_lit/SHADOW_TARGETS.csv,"shadow education, senior secondary",shadow participation,c.2011,n/a,3c613137d82830f3,observed (second-hand),L9,"Structured row of the same figure: 85, lo 80, hi 90, confidence medium, 'Provenance verified'."
+10_massification/extensions/lab_2026-11-20_c/Y5_portability_audit/results/transfer_checklist.csv,six D75 inputs I1-I6 (HKG),manifest,various,n/a,2a512622a68c1164,derived,"rows country=HKG, input_id I1-I6","Y5 verdict DATA-COMPLETE: 6/6 present-on-disk, 0 NEW-ASK. Presence only - not window coverage, not model compatibility."
+10_massification/extensions/audit_2026-11-20/a_regressions/REGRESSION_INVENTORY.csv,audit rows A01/A03/C01/C03/C03/A14/B17,audit,n/a,n/a,b4effcc4f194d093,derived,"L2,L4,L50,L52,L15,L14,L39",C01 confirms PATH DRIFT (04_data/data/ does not exist). C03 flags TWO timing layers sharing a filename. A14 = HKG 2009 +9.08 t=5.20. B17 = ECI 30/30.
+10_massification/data/DATA_NOTES_MASSIFICATION.md,measurement definitions,definition,n/a,n/a,5e51c5d0a6d62012,observed,whole file,"D6. HASH DRIFT: actual 5e51c5d0..., SHA256SUMS.txt records e2cfcdb2... (updated 22:12 per STATUS.md:609 after sums built)."

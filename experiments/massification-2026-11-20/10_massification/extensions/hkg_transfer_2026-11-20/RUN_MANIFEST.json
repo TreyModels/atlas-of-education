@@ -1,0 +1,180 @@
+{
+  "manifest_version": "1.0",
+  "kind": "PREP-ONLY / NO RESULTS",
+  "worker": "W3",
+  "created_utc": "2026-11-20T14:40:00Z",
+  "created_local": "2026-11-20T22:40:00+08:00",
+  "programme_root": "/Users/treymenefee/massification_live/experiments/massification-2026-11-20",
+  "branch": "experiment/massification-2026-11-20",
+  "write_scope": "10_massification/extensions/hkg_transfer_2026-11-20/",
+  "purpose": "Frozen HKG transfer pre-declaration + inventory + checklist under D75's six constraints. Run-ready, NOT run.",
+  "status": "BLOCKED",
+  "status_detail": {
+    "verdict": null,
+    "blocking_stop_rules": [
+      "SR-1: frozen PHL model emits no NER object",
+      "SR-2: v1.2 has not passed its PHL checks (a)-(e)",
+      "SR-9: no Council decision authorising the HKG run"
+    ],
+    "note": "BLOCKED is a terminal non-verdict state. No HKG model was run; no parameter was fitted; no completion series was imputed."
+  },
+  "predeclaration": {
+    "path": "10_massification/extensions/hkg_transfer_2026-11-20/HKG_TRANSFER_PRE_DECLARATIONS.md",
+    "sha256": "99be01d78abee2fa797c02a68a05330a4d53ad43c30960508039708edc98fb5f",
+    "frozen_before_run": true,
+    "frozen_at": "2026-11-20T22:40:00+08:00",
+    "no_result_existed_at_freeze": true,
+    "edit_rule": "Not edited after results are seen. A wrong rule requires a NEW predeclaration under a NEW Council decision."
+  },
+  "spec_files": {
+    "10_massification/extensions/hkg_transfer_2026-11-20/HKG_TRANSFER_PRE_DECLARATIONS.md": "99be01d78abee2fa797c02a68a05330a4d53ad43c30960508039708edc98fb5f",
+    "10_massification/extensions/hkg_transfer_2026-11-20/HKG_INVENTORY.md": "254d4a5e9af6841ddb750e899b27bb891c1cefafbfa3177f7d01491188dc8bc9",
+    "10_massification/extensions/hkg_transfer_2026-11-20/HKG_CHECKLIST.md": "3baf5a29a159745c7d7a8dd5b266a916a61636437e9b79410e132fd878c2f932",
+    "10_massification/extensions/hkg_transfer_2026-11-20/DATA_INVENTORY.csv": "ce76fd3a7a57455d46fa5cc0dde04ac0d9c01b7501d4068d5673fda60a2ad10b"
+  },
+  "inputs": {
+    "data/gmr_observed_6countries_1970_2024.csv": "794a67c11ca052412edb2935c33c3c6e635cbd2e81ca5b9e44345ef9f5326e41",
+    "10_massification/data/UNIVERSALIZATION_TIMING.csv": "6e067ffd76b2c57c7c0363387735750cb9e6f68bc4dfd242b3d0f9c80786f892",
+    "10_massification/data/POLICY_TIMELINE.csv": "a068b5bf92cee52e442231ef8de63e1b3814d1e42cd61b02969ccf1f3fb3353e",
+    "10_massification/data/STATE_CAPACITY.csv": "704efacad00f0ba7ddf579459a930d064fdb0f4b882cffbbf44a6cbecd585044",
+    "10_massification/data/SCHOOL_EXPANSION.csv": "c218e6c9bd784e135e089ebecefec21112a09e6bf2c778599a33bc81b78c8ea3",
+    "10_massification/data/UNIVERSALIZATION_SERIES.csv": "85bc869396ebfcb39e3e1a21a31af219e75a07326c738a51d2bfdbe536737ddb",
+    "10_massification/data/JOBS_AND_MARKETS_PANEL.csv": "aaaab2744803989ff0f347e27d5824c9b0086b967914d96d21ecd354329787d3",
+    "09_relations/data/economic_complexity_panel.csv": "27403fce9556239ed058bf981749a856946a96ada38f52920d77c13362d44958",
+    "10_massification/relations/data/UNIVERSALIZATION_TIMING.csv": "6223b75a4d4808c29426aa67fdf52e5155b53bf77e701cf804c0e062c3d11525",
+    "10_massification/relations/data/event_windows.csv": "7bac26b3ff143b97443988db822457b2c5fa63f13c41fad8c8247ca6a0d52ffb",
+    "10_massification/data/DATA_NOTES_MASSIFICATION.md": "5e51c5d0a6d620125f0f8ef902ed8942cf3bed96af762cd213f71b7613a8c244"
+  },
+  "model_inputs": {
+    "10_massification/extensions/synthetic_2026-11-20/MODEL_ARCHITECTURE.md": "862b5b8bd4360da243dcaca5a239f3ff97ff243dee1f01ab94afccc1b15dad55",
+    "10_massification/extensions/synthetic_2026-11-20/v1_2/PRE_DECLARATIONS.md": "fde18d405d875167977b350a925c28248c3007d2813dcdb29219d3baf0b95f16",
+    "10_massification/extensions/synthetic_2026-11-20/generator_v1/PARAMS.md": "9052e85bb0a2b010c2c300a2f728e2a99f277a2bcea6d08f193d25b8a7f026fe",
+    "10_massification/extensions/synthetic_2026-11-20/generator_v1/code/sim_v1.py": "a03fa0cb05a879020e254207dcd4add540883d0920b7d4457d3b157f7400a8d8",
+    "10_massification/extensions/synthetic_2026-11-20/generator_v1/results/synthetic_panel_v1.csv": "cf8dfbcb10f2f9abc370d549e94e048cfaa9d54392d6142a80bf5cf45076fd8d"
+  },
+  "governance_inputs": {
+    "08_council/DECISIONS.md": "7bfba8776f6c08e85c02b2ac183b099f08abe2d79dfd72e0c3e273cebddde6ff",
+    "10_massification/STATUS.md": "2056ab94148c60f2ccbe26c581dc135d42bd5b59be53934d39bbd167e24ffc99",
+    "10_massification/extensions/lab_2026-11-20_c/Y5_portability_audit/results/transfer_checklist.csv": "2a512622a68c11649a66dd5f255462787cee94068fef8e80906eeed0892760eb",
+    "10_massification/extensions/lab_2026-11-20_c/FINDINGS.md": "8c2a675b8913d1f1bd2fde5765589585072ba0cdcde8d091cb8a6b8c3dc761b5",
+    "10_massification/extensions/audit_2026-11-20/a_regressions/REGRESSION_INVENTORY.csv": "b4effcc4f194d093b796a92e655625b5e715209e1feae67167cd3ed3a8414c0a",
+    "10_massification/lit/UNIVERSALIZATION_TIMELINES_JPN_KOR_HKG.md": "80fd254cff94a40d84ff6c8a59bdf38367f617818d3f00e66cd5a5248e69e9e4",
+    "10_massification/lit/UNIVERSALIZATION_TIMING.md": "fbb5198ccd6b08cdc9c7ab14b8ab552c1d7a58d9fb4aeecae5d523e775efc68f",
+    "10_massification/lit/STATE_CAPACITY.md": "093e03dc5d9cf4f8eeb076b26c6ac56afb15b24d154555f69cb9e18b0b1ab56a",
+    "10_massification/lit/RIVAL_MODELS_ANCHOR.md": "ee99e05cabfd167f716bb7d62ce1794c5e3eb74eba616da7f9f6960e0c145fba",
+    "10_massification/lit/LABOUR_MARKET_REPORTS.md": "683940287830a76e66dfa89fc14c1c4e4dea7441697d40d4673ffa0257fdec32",
+    "02_lit/COUNTRY_CARDS/HKG.md": "d8c0c6a213fb6d8de24b808925a37f4f84ca7d2b9f27e72382d29bd07d77c769",
+    "02_lit/SHADOW_TARGETS.csv": "3c613137d82830f3108e3c610922b8af57d3a8155d9baf7c96ec89994a8dc06f",
+    "DATA_LEDGER.md": "a93f3cd69d4d7e374412f48542e1f75e533636d3284601251a665ba989a97bfe"
+  },
+  "frozen_targets": {
+    "TC-1": {
+      "level": "primary",
+      "measure": "NER",
+      "series": "ner_primary",
+      "threshold_pct": 90.0,
+      "target_year": 1974,
+      "observed_band": [
+        1973,
+        1974
+      ],
+      "censoring": "none",
+      "observed_adjacent_values": {
+        "1973": 89.60049,
+        "1974": 91.10855
+      },
+      "source": "10_massification/data/UNIVERSALIZATION_TIMING.csv:48; data/gmr_observed_6countries_1970_2024.csv:1686-1687",
+      "tolerance_years": 5,
+      "accept_window": [
+        1969,
+        1979
+      ]
+    },
+    "TC-2": {
+      "level": "primary",
+      "measure": "NER",
+      "series": "ner_primary",
+      "threshold_pct": 95.0,
+      "target_year": 1979,
+      "observed_band": [
+        1978,
+        1979
+      ],
+      "censoring": "none",
+      "observed_adjacent_values": {
+        "1978": 94.6876,
+        "1979": 95.07646
+      },
+      "source": "10_massification/data/UNIVERSALIZATION_TIMING.csv:51; data/gmr_observed_6countries_1970_2024.csv:1691-1692",
+      "tolerance_years": 5,
+      "accept_window": [
+        1974,
+        1984
+      ],
+      "mandatory_disclosure": "1977=95.10725 is the first year numerically >=95 (gmr L1690) but 1978=94.6876 falls back below (L1691); 1977 is NOT a sustained crossing. pct_years_above=45.8, later_dips_after_crossing=True (relations/data/UNIVERSALIZATION_TIMING.csv:21); later dips 1995/1996/2012-2015."
+    },
+    "LC-1": {
+      "level": "primary",
+      "measure": "NER",
+      "kind": "levels check-only",
+      "contributes_to_verdict": false,
+      "tolerance_pp": 5
+    },
+    "verdict_vocabulary": [
+      "DIAGNOSTIC-TRANSFER: TRANSFER-HOLDS",
+      "DIAGNOSTIC-TRANSFER: TRANSFER-FAILS",
+      "DIAGNOSTIC-TRANSFER: FAIL-RE-FIT",
+      "BLOCKED-*(SR-n) (terminal, not a verdict)"
+    ],
+    "forbidden_strings": [
+      "PASS",
+      "SUPPORTED",
+      "NOT SUPPORTED",
+      "REPRODUCED",
+      "VALIDATED",
+      "CONFIRMED",
+      "PORTABLE",
+      "HOLDS (except inside TRANSFER-HOLDS)"
+    ]
+  },
+  "constraints_D75": {
+    "i": "fixed PHL behaviour; only declared country inputs re-set (R20)",
+    "ii": "no re-fit / no extra free parameters / no target fitting -> FAIL-RE-FIT, moved parameter named",
+    "iii": "HKG timing-only, levels check-only; NER>=90 1974, NER>=95 1979; threshold-specific, never spliced",
+    "iv": "CHN out of scope here (slate A6); 1986-law -27y miss not part of this document",
+    "v": "standing scaling FAIL printed in every table; no imputed completion",
+    "vi": "verdict vocabulary DIAGNOSTIC-TRANSFER only, never PASS; predecl states what it would change"
+  },
+  "standing_labels": {
+    "scaling": "FAIL (A12/B02) - printed in every emitted table",
+    "phase_verdict": "CLOSED at PARTIAL/DESCRIPTIVE/EQUIVALENT (D76) - unchanged by any outcome of this transfer",
+    "no_causality": "No causal, direction, push-pull, portability, capacity or policy claim (R13/R22/D61/D77)",
+    "evidence_status": "declared-assumption simulator output; not evidence about Hong Kong"
+  },
+  "data_completeness": {
+    "y5_verdict": "DATA-COMPLETE (6/6 D75 inputs present-on-disk, 0 NEW-ASK)",
+    "y5_source": "10_massification/extensions/lab_2026-11-20_c/FINDINGS.md:20",
+    "reconciliation": "Presence != window coverage != model compatibility. Economy/capacity series begin ~1995/1996, ~20y after the targets; SCHOOL_EXPANSION.csv is PHL-only; and the frozen model emits no NER object.",
+    "blocking_gap": "M1 - no NER object in the frozen model",
+    "missing_objects": [
+      "M1 NER object in model (BLOCKING)",
+      "M2 HKG completion series pre-2001",
+      "M3 HKG economy series pre-1995",
+      "M4 HKG school expansion",
+      "M5 HKG fiscal/enforcement pre-1996",
+      "M6 HKG labour-market narrative / earnings by education",
+      "M7 HKG literacy",
+      "M8 usable lower-secondary crossing (artefact)",
+      "M9 pre-1970 HKG series",
+      "M10 Council authorisation"
+    ]
+  },
+  "integrity_notes": [
+    "PATH DRIFT: lit/audit layers cite 04_data/data/gmr_observed_6countries_1970_2024.csv which does not exist; real path is data/gmr_observed_6countries_1970_2024.csv (audit C01). This manifest uses the real path.",
+    "HASH DRIFT: 10_massification/data/DATA_NOTES_MASSIFICATION.md actual hash != SHA256SUMS.txt (updated 22:12 per STATUS.md:639 after sums built). Recorded here as the ACTUAL hash.",
+    "Two timing layers share a filename: relations/ (63 rows, first-SUSTAINED) vs 10_massification/data/ (128 rows). Not conflated.",
+    "No external data request; no web access; no server interaction; nothing written outside this directory."
+  ],
+  "results": {},
+  "results_note": "EMPTY BY CONSTRUCTION. This is prep only. No HKG model was run."
+}
