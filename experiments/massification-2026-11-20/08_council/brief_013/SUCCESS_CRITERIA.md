@@ -303,3 +303,40 @@ CHN fit/holdout 7.03–8.83.
    class/implementation cannot generate the observed positive income-scaling sign without an exogenous supply channel
    (0/3 contained across rivals; adding six parameters did not rescue it). It does not prove that no cohort-flow model
    can; it is a result about this class/implementation and is publishable as such, alongside the equivalence map.
+
+
+## Amendment A9 (2026-11-20 16:30) — state capacity: three dimensions, measured and gated
+
+**User directive:** a law is a marker; capacity is the mechanism. State capacity enters A6/A7 as a **third mechanism
+dimension** to be measured and tested, not assumed.
+
+### 1. Sub-dimensions and indicators (observed-only; DATA ASK where absent)
+
+| Dimension | Indicators | On-disk status |
+|---|---|---|
+| **(a) Fiscal** | Education spending **% GDP** and **% government expenditure** (WDI SE.XPD.TOTL.GD.ZS / GB.ZS, XGDP.FSGOV; observed in the jobs/markets panel); per-student spending; **tax/GDP, government revenue/GDP, revenue volatility** | spending observed; per-student derivable from spending × GDP / enrolment (derived, label); tax/revenue/volatility **DATA ASK** (not on disk) |
+| **(b) Delivery** | Teacher hiring/PTR path (WDI SE.PRM/SEC.TCHR, PTR observed; PIDS 2025 PHL hires 2012–16 `check`/medium); school/classroom construction; procurement; subnational implementation | PTR/teacher path observed; schools/classrooms **UNABLE** (DepEd/DPWH 403) = DATA ASK; procurement/subnational implementation **DATA ASK** |
+| **(c) Enforcement** | Compulsory-schooling age/duration (POLICY_TIMELINE observed); attendance enforcement/inspection/sanctions; participation mandates (4Ps conditionalities) | age/duration observed as policy facts; enforcement/inspection/sanctions **NOT on disk** = DATA ASK; 4Ps is a weak participation-mandate marker (quality B, model-internal path only) |
+
+### 2. Model entry (declared functional form)
+
+State push enters as **law marker × capacity gate**: `effective_push_t = law_t · G(C_t)`, where `law_t` is the
+candidate marker (0/1 or declared intensity) and `C_t ∈ [0,1]` is a **declared, observed** capacity index (normalised
+from the available indicators; missing sub-dimensions excluded and labelled, never inferred). Declared form:
+multiplicative gate `G(C) = C^κ`, `κ ∈ [0.5, 1.0]` predeclared with sensitivity over κ and equal/declared weights;
+capacity is an **input trajectory**, never fitted to outcomes and never a target (R4/R28). If only some sub-dimensions
+are observed, the index is a **partial-capacity index** and the results must say so.
+
+### 3. Capacity-alignment test (under R24) and new success criterion
+
+The capacity trajectory must be tested against the crossings where the laws did not align: PHL PTR/teacher path
+(37→27→24; hires 2012–16) vs primary ≥90 crossing 2017 (plausible 1–5 y), vs lower-secondary 2024 and tertiary 2024–25
+(no alignment). **New anchor criterion:** the model must reproduce the crossing years **given observed capacity**, and
+the capacity-gated specification (`law × capacity`) must fit the A6 crossings **better than the law-only specification**;
+if capacity-timing does not beat law-only timing, report EQUIVALENT/FAIL and do not claim the capacity mechanism. The
+PHL state-push non-alignment may be *explained* as a capacity-timing problem only if that comparison passes.
+### 4. Portability
+
+The **capacity-response function** (how outcomes respond to the gate) transfers fixed; **capacity trajectories and
+minimum-capacity thresholds are country inputs** (declared and dated: HKG/CHN/PHL differ); any re-fit of the response
+function or use of outcome-fitting to set thresholds = portability FAIL (R20/R28).

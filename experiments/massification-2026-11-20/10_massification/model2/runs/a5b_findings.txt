@@ -37,3 +37,11 @@ DESIGN-ONLY RIVALS (D48; blocked, not modelled here — listed in every results 
 VERDICT: see a5b_scores.csv; any rival without order_ok and within ±5y on all crossings is NOT equivalent (R3);
 a shared-curve rival (single timing) is a structural miss (R23). Anchor-vs-rival comparison remains deferred to A1.
 No direction/causal claim; event evidence descriptive (R24/R25). No git writes.
+
+PREDICTED SEQUENCES (from a5b_scores.csv; crossing = first predicted year >= threshold within the rival's prediction horizon; covariate rivals horizon = holdout 2014-2024 only, formal shapes extrapolate to 2050):
+  world_society      : primary 2014; lower/upper/tertiary no crossing (shared timing => primary moves, others do not; single shared curve = structural miss, R23)
+  formal_shapes      : primary 2023; lower/upper/tertiary no crossing within 2050 (pre-2013 fitted ceilings below 90/50)
+  state_building     : no crossing in holdout for any level (covariate paths do not push any series over threshold; upper secondary prediction has missing covariate -> NaN)
+  demographic_cohort : no crossing in holdout; upper-secondary extrapolation implausible (-122 pp) -> rival fails
+OBSERVED SEQUENCE: primary 2017 < lower-secondary 2024 < tertiary 2025; upper-secondary never >=90 by 2024.
+=> None of the four testable rivals reproduces the observed ordering/spacing; none is observationally equivalent (R3); world-society is a shared-timing structural miss (R23).

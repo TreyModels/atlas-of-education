@@ -275,6 +275,27 @@ Two external requests are drafted and held; per protocol, external data requests
   Publishable alongside the equivalence/identification map, caveated to this class/implementation; no positive model
   claim.
 
+## 3l. Council A9/R28/D59–D61 — STATE CAPACITY as third mechanism dimension (20 Nov 16:30)
+
+- **A9 adopted:** the anchor's third mechanism dimension is **state capacity**, measured (not assumed) in three
+  dimensions: **fiscal** (education spending %GDP / %gov exp observed; per-student derived; tax/GDP, revenue/GDP,
+  volatility = DATA ASK), **delivery** (PTR/teacher path observed; PIDS hires `check`/medium; schools/classrooms/
+  procurement = UNABLE/DATA ASK), **enforcement** (compulsory age/duration policy facts; inspection/sanctions/
+  attendance enforcement NOT on disk = DATA ASK; 4Ps = weak B marker). Missing sub-dimensions are **excluded and
+  labelled partial — never inferred from outcomes (R28)**.
+- **Model entry (D60):** `effective_push_t = law_t · G(C_t)`, `G(C)=C^κ`, κ∈[0.5,1.0], weights predeclared with
+  sensitivity; `C` is an **observed input trajectory**, never a target/fitted. Ladder: **law-only vs law×capacity**
+  must be compared.
+- **Capacity-alignment criterion (D61):** the model must reproduce A6 crossing years **given observed capacity**, and
+  the capacity-gated spec must beat law-only on the crossings before PHL's state-push non-alignment is called a
+  capacity-timing problem; otherwise **EQUIVALENT/FAIL, no capacity claim**. PHL evidence: PTR/teacher path
+  37→27→24 / hires 2012–16 plausibly aligns with primary 2017 but **not** lower-secondary 2024 / tertiary 2024–25.
+  Portability: capacity-response function fixed; capacity trajectories + minimum-capacity thresholds are declared
+  country inputs (PHL/CHN/HKG differ); re-fit = FAIL (R20/R28).
+- **New DATA ASKS (observed-only or DATA BLOCKED; external access needs user approval):** fiscal tax/revenue/volatility;
+  delivery schools/classrooms/procurement; enforcement inspection/sanctions/attendance. Drafted/hold; route via op
+  centre with the existing PSA and WB-ES asks (STATUS §3h). Nothing sent.
+
 ## 4. Next three actions for `repo-auditor`
 
 1. **Council gate:** get the Council's final `COUNCIL:` post for brief 013 (SUCCESS_CRITERIA + STOP_RULES are

@@ -140,3 +140,15 @@ imputation as observation. E1 stays PARKED; direction claims EQUIVALENT.
 3. **One thread this cycle:** write the **descriptive anchor report** (crossings + alignment + capacity + rivals) and the **bounded negative result** on the scaling failure; that is the phase's honest product. Do not tune.
 4. **Drift check:** after the repair failure the temptation is another iteration or a level-only victory — both barred by R27/R14. The failure is a result; report it. No parameter additions without a discriminating test.
 5. **If only one thing mattered:** the descriptive anchor + negative result, not another repair.
+
+
+## Cycle 7 addendum (state capacity dimension)
+
+- **A9 adopted:** capacity measured in three sub-dimensions — fiscal (spending observed; tax/revenue/volatility DATA ASK),
+  delivery (PTR/teacher path observed; schools/classrooms/procurement UNABLE/DATA ASK), enforcement (age/duration policy
+  facts; inspection/sanctions absent; 4Ps weak marker).
+- **Model entry:** effective_push = law × G(C), G(C)=C^κ with declared κ/weights; capacity = observed input trajectory,
+  never target/fitted; partial index labelled (R28).
+- **New anchor criterion:** reproduce crossings given observed capacity; capacity-gated must beat law-only on A6
+  crossings before explaining PHL's state-push non-alignment as capacity-timing.
+- **Portability:** response function fixed; capacity trajectories/thresholds country inputs; no re-fit.

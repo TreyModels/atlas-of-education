@@ -3,3 +3,5 @@ PHL 1987 compulsory-primary lineage,1987,primary,2017.0,-30.0,False,False,"conte
 PHL K-12 2013 (RA 10533),2013,upper_secondary,,,False,False,"context, not mechanism"
 PHL free SHS 2016,2016,upper_secondary,,,False,False,"context, not mechanism"
 PHL free tertiary 2018,2018,tertiary_ger,2025.0,-7.0,False,False,"context, not mechanism"
+human_capital,,,,,,,design-only (D48): PSA returns by education — DATA BLOCKED; external request needs approval; NOT modelled/tested
+signalling_MMI,,,,,,,design-only (D48): Enterprise Surveys credential/skills module — DATA BLOCKED; external request needs approval; NOT modelled/tested

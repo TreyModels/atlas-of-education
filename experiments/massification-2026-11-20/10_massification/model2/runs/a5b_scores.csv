@@ -3,3 +3,5 @@ demographic_cohort,,,,,False,,,False,False,False
 formal_shapes,2023.0,,,,False,,,False,False,False
 state_building,,,,,False,,,False,False,False
 world_society,2014.0,,,,False,,,False,False,False
+human_capital,,,,,,,,,,design-only
+signalling_MMI,,,,,,,,,,design-only

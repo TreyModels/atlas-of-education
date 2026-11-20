@@ -180,3 +180,18 @@ rival equivalence where the rivals match the same moments; **no IDENTIFIED mecha
 The scaling failure is reported in every anchor result table as a standing FAIL, not hidden by trajectory fit.
 **No new fitting until the Council rules** on the scaling failure and on the anchor's capped claim. Existing cells
 (smoke, PHL+CHN, repair) keep their labels (R12); A6/A7 re-scope above stands; A2 remains conditional on R24.
+
+## AMENDMENT — milestone IDs reconciled to brief 013 `UNIVERSALIZATION_MILESTONES.md` (before the A1 run)
+The A6 table above used local IDs; the **binding** milestone definitions are the brief-013 ones, adopted here:
+| ID | official definition | PHL observed | status of crossing |
+|---|---|---|---|
+| M0 | massification: cohort completion **≥50%** | lower-secondary completion 58.86 already in 1999 (upper-secondary 59.70 in 1999) | **left-censored** (crossed at/before first observation) |
+| M1 | primary universalization: **NER ≥95% or GER ≥100%** | primary GER ≥100 by 1999 (observed ~102) | **left-censored**; model must cross at/before Y0 |
+| M2 | lower-secondary universal completion **≥90%** | 92.41 in **2024** (first ≥90) | observed, at edge of holdout |
+| M3 | upper-secondary universal completion **≥90%** | 75.03 in 2024, **never ≥90** | **right-censored: model must NOT cross (R6)** |
+| M4 | mass tertiary: tertiary **GER ≥50%** | first ≥50 in the **2024–2025 band** | observed band |
+Tolerances per `UNIVERSALIZATION_MILESTONES.md`: ±5 y; ±3 y where the band ≤2 y and no definition break; left-censored =
+boundary constraint (no point-timing credit); right-censored = model must not cross. **Capacity enters as a
+first-class input via the declared gate in `PRE_ANCHOR_CAPACITY.md` (marker × G(capacity)); no crossing year is
+fitted; the scaling criterion remains a standing FAIL reported in every table (R17/R23).** No A1 result has been run
+under the previous local labels, so this reconciliation retro-fits nothing.

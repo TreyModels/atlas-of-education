@@ -1,0 +1,5 @@
+rival,equivalent_to_observed_R3,predicted
+demographic_cohort,False,"{'primary': None, 'lower_secondary': None, 'upper_secondary': None, 'tertiary_ger': None}"
+formal_shapes,False,"{'primary': 2023.0, 'lower_secondary': None, 'upper_secondary': None, 'tertiary_ger': None}"
+state_building,False,"{'primary': None, 'lower_secondary': None, 'upper_secondary': None, 'tertiary_ger': None}"
+world_society,False,"{'primary': 2014.0, 'lower_secondary': None, 'upper_secondary': None, 'tertiary_ger': None}"

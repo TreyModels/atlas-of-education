@@ -1,0 +1,25 @@
+A5b FINAL SCORING ADDENDUM (phase ruling D56-D58/R27: conditional reproduction + observational equivalence;
+universalization capped PARTIAL; anchor A1 descriptive-only; no direction/causal claim; R13/R23/R25).
+
+Pairwise observational equivalence among the four testable rivals (same predicted crossing set within +/-5y):
+  demographic_cohort   vs formal_shapes        : distinguished
+  demographic_cohort   vs state_building       : EQUIVALENT
+  demographic_cohort   vs world_society        : distinguished
+  formal_shapes        vs state_building       : distinguished
+  formal_shapes        vs world_society        : distinguished
+  state_building       vs world_society        : distinguished
+  Equivalence classes: {demographic_cohort, state_building} ; {formal_shapes} ; {world_society}
+
+Equivalence to the observed record (primary 2017, lower 2024, tertiary 2025, upper never by 2024; +/-5y):
+  demographic_cohort   : NOT equivalent  pred={'primary': None, 'lower_secondary': None, 'upper_secondary': None, 'tertiary_ger': None}
+  formal_shapes        : NOT equivalent  pred={'primary': 2023.0, 'lower_secondary': None, 'upper_secondary': None, 'tertiary_ger': None}
+  state_building       : NOT equivalent  pred={'primary': None, 'lower_secondary': None, 'upper_secondary': None, 'tertiary_ger': None}
+  world_society        : NOT equivalent  pred={'primary': 2014.0, 'lower_secondary': None, 'upper_secondary': None, 'tertiary_ger': None}
+
+FINAL: equivalence-to-observed set is EMPTY; every testable rival fails the observed ordering/spacing (R3/R23).
+Two rivals (state_building, demographic_cohort) are indistinguishable FROM EACH OTHER only in that both predict
+no crossing in the holdout — an empty-ordering equivalence, not support; world_society and formal_shapes each
+produce a single early primary crossing. Design-only rivals (human_capital, signalling/MMI) are listed in every
+results file and are NOT modelled or claimed as tested (D48). Under D56-D58 the phase result is EQUIVALENT +
+PARTIAL universalization: no rival, including the anchor class, reproduces the observed milestone ordering.
+No direction/causal claim; event evidence descriptive (R24/R25); no git writes.

@@ -125,3 +125,16 @@ capacity path is computable and aligns within ±5 y; for **upper-secondary** the
 fails). Capacity enters the model as a declared path, not as a law schedule. **Equity check (check-only):** PIDS
 regional mean years NCR 11.53→12.05 vs ARMM 7.00→8.10; education Gini NCR 0.16→0.13 vs ARMM 0.40→0.34 — predeclared
 direction (NCR > ARMM; gaps narrow: 4.53→3.95 years; 0.24→0.21 Gini), never fitted.
+
+
+## B6. State capacity — third mechanism dimension (A9/R28)
+
+Capacity is **measured**, not assumed, and enters as a third dimension alongside law markers (A7) and demand/supply:
+**fiscal** (education spending %GDP/%gov exp observed; tax/revenue/volatility DATA ASK), **delivery** (PTR/teacher path
+observed; schools/classrooms/procurement UNABLE/DATA ASK), **enforcement** (compulsory age/duration policy facts;
+inspection/sanctions/attendance enforcement NOT on disk; 4Ps weak marker). Model entry: `effective_push = law × G(C)`,
+`G(C)=C^κ`, κ and weights predeclared; capacity is an observed input trajectory (never target/fitted), partial index
+labelled. **Capacity-alignment test:** PHL PTR/teacher path (37→27→24; hires 2012–16) vs primary crossing 2017
+(plausible 1–5 y) but not vs lower-secondary 2024 or tertiary 2024–25; the capacity-gated model must beat law-only on
+A6 crossings before the state-push non-alignment is explained as capacity-timing (A9 §3). Portability: response
+function fixed; capacity trajectories/thresholds are country inputs (HKG/CHN/PHL differ; no re-fit).

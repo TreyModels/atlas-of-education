@@ -1,0 +1,52 @@
+{
+ "equivalence_pairs": [
+  [
+   "demographic_cohort",
+   "formal_shapes",
+   false
+  ],
+  [
+   "demographic_cohort",
+   "state_building",
+   true
+  ],
+  [
+   "demographic_cohort",
+   "world_society",
+   false
+  ],
+  [
+   "formal_shapes",
+   "state_building",
+   false
+  ],
+  [
+   "formal_shapes",
+   "world_society",
+   false
+  ],
+  [
+   "state_building",
+   "world_society",
+   false
+  ]
+ ],
+ "classes": [
+  [
+   "demographic_cohort",
+   "state_building"
+  ],
+  [
+   "formal_shapes"
+  ],
+  [
+   "world_society"
+  ]
+ ],
+ "equivalence_to_observed": {
+  "demographic_cohort": false,
+  "formal_shapes": false,
+  "state_building": false,
+  "world_society": false
+ }
+}

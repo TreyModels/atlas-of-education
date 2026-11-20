@@ -1,0 +1,7 @@
+rival_a,rival_b,equivalent_R3
+demographic_cohort,formal_shapes,False
+demographic_cohort,state_building,True
+demographic_cohort,world_society,False
+formal_shapes,state_building,False
+formal_shapes,world_society,False
+state_building,world_society,False

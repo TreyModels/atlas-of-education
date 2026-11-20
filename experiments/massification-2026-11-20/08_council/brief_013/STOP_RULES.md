@@ -113,3 +113,10 @@ fire.
 | # | Rule | Trigger |
 |---|---|---|
 | **R27** | **Repair budget exhausted:** after a predeclared repair fails, no further scaling-repair iteration may run without a new Council decision, a new predeclaration and intake acceptance; the standing phase verdict is PARTIAL + EQUIVALENT and the anchor is descriptive-only. Re-running the failed cell, retuning, or presenting its level fit as PASS is a rule violation (R5/R12/R14/R17) | repair cell FAIL: signs_ok 1/3, contained 0/3; D56 |
+
+
+## Amendment A9 (2026-11-20 16:30) — R28 (state-capacity measurement)
+
+| # | Rule | Trigger |
+|---|---|---|
+| **R28** | **Capacity must be measured, not assumed:** capacity enters only as observed indicators (fiscal/delivery/enforcement) with declared normalisation, weights and gate form; missing sub-dimensions are excluded and labelled partial (DATA ASK), never inferred from outcomes; capacity is never a target and never fitted; the capacity-gated specification must beat law-only on the A6 crossings before a capacity-timing explanation is claimed, else EQUIVALENT/FAIL | user directive; fiscal/delivery partial on disk, enforcement largely absent; capacity is a mechanism candidate not an assumption |
