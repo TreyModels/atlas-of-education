@@ -163,3 +163,45 @@ imputation as observation. E1 stays PARKED; direction claims EQUIVALENT.
   capacity effects may saturate by level; **ceiling residual** (PHL 75.0 vs 90) reported with candidate accounts
   (foregone income, demand/returns, gate structure, enforcement) or UNABLE — predeclared, no direction claim.
 - **Caveats:** spending-%GDP and PTR crude; enforcement unmeasured; real per-pupil spending DATA ASK.
+
+
+## Cycle 8 step-back (council-2 intake: anchor A1 descriptive report reviewed)
+
+1. **Goal restated:** a model in which massification/universalization is produced by schooling–government–market
+   interaction, each standing the others up, with cohort flows and country/sector variation; for the anchor the outcome is
+   the **crossing years and their spacing** (A6) and which candidate mechanisms align (A7/R24); shadow secondary.
+2. **Threads (labels):** **KEEP** — anchor A1 **descriptive write-up** under D67/D68 (the phase's product: crossings,
+   capacity floor-vs-ceiling, ceiling residual UNABLE, rivals, scaling FAIL), the A2d descriptive-negative note, the A5 rival
+   field as scored (equivalence-to-observed set EMPTY), gate/rules, the bounded negative result + equivalence map (D58).
+   **PARK** — A6 CHN / A7 HKG portability (**design-only**; no run or claim before the A1 report is final), the KHM
+   holdout-country check (after the write-up), E4/E3, E1, E5/E7, ECI, T1/T2, shadow paper. **KILL** — further scaling repair
+   (R27), direction/complementarity claims from panel moments (R13), any capacity-mechanism claim from this record
+   (EQUIVALENT, D61), post-hoc arm re-specification to rescue M2/M4.
+3. **One thread this cycle:** the **A1 write-up** — converting the timing/capacity failure into a reportable bounded
+   negative plus equivalence map; nothing else changes the phase verdict.
+4. **Drift check:** after A1 the drift risk is **another run** (chasing M2/M4) or a capacity story; both are barred
+   (R27/R29/D61). One red flag stands (two cycles of validation/reporting rather than model improvement); mitigation is to
+   **close the phase with the negative result** rather than add cells. No closed claim reopened; no parameter added without a
+   discriminating test.
+5. **If only one thing mattered this week:** the A1 descriptive write-up (with C1–C7 closed), not another run.
+
+
+## Cycle 8 addendum (council-2 second pass: verification + label changes; D71–D78)
+
+- **Verified, verdict unchanged:** PARTIAL/DESCRIPTIVE + EQUIVALENT; M1 bound ≤1977; M2 2024 (band 2021–2027);
+  M3 never (peak 76.43 in 2017); M4 2024 47.41 → 2025 51.07.
+- **One material gap (D71):** the A6 signature's first milestone — **primary completion ≥90 in 2017** — is **not in
+  the tested M0–M4 vector** (official M1 is NER≥95/GER≥100, left-censored). The asymmetry was tested with its first
+  element missing; the addendum must report it from existing outputs (C8). It cannot lift the PARTIAL cap.
+- **M4 relabelled (D72):** the 1960 crossing appears in **all** arms including no-push, so M4 is **not
+  discriminable** — a tertiary level path (≥50 simulated in 1960 vs 16.34 observed 1971) must be reported before
+  calling it a miss.
+- **A2d relabelled (D73):** model-internal **simulated** diagnostic, max-|r| over lags 0–6 — not an empirical null.
+- **Capacity ruling (D74):** three dimensions separate; composite DERIVED, never a claim; the de jure enforcement
+  proxy inside `G(C)` is collinear with the law marker → `law × G(C)` **double-counts the law**.
+- **Portability slate-A6/A7 (D75):** **PARKED-ARMED**, diagnostic-only if ever ordered (R22/R20; no PASS vocabulary).
+- **PHL cell CLOSED (D76)** at PARTIAL/DESCRIPTIVE/EQUIVALENT; re-openers C1–C4 only.
+- **Label rule (D77):** "conditional **level** reproduction + observational equivalence + unreproduced asymmetry".
+- **Labels changed this cycle:** portability PARK → **PARK (armed, diagnostic-only)**; capacity re-measurement →
+  **PARK** until observed annual series (C4). KEEP/KILL lists otherwise as in the cycle-8 step-back; one thread and
+  drop-if-one-thing unchanged.

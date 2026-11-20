@@ -398,6 +398,91 @@ it in CHANGELOG. No rotation has occurred yet.
   fit 2.03/hold 4.42; capacity_gated 1.85/4.51; education_led none 1.37/5.88; capacity_only 3.02/6.12; crossings
   ~1960s vs observed 2017/2024); **`anchor_out/` still empty → no result claimed**.
 
+## 3q. ANCHOR CELL CLOSED — rotation executed; phase verdict recorded (D66–D78)
+
+- **Rotation executed (2026-11-20 14:31 +08): expert-council → council-2** (fresh-context subagent, party
+  `deepseek-council2`; handoff `08_council/COUNCIL_STATE.md` mirrored to `10_massification/HANDOFF_expert-council.md`,
+  brief `10_massification/COUNCIL2_BRIEF.md`). Old Council stood down. **Authority persists via files** (A1–A10,
+  R1–R29, D1–D78, `INTAKE_ACCEPTANCE.md`); Council-2 posted `COUNCIL: online`/intake ACKs; **`DECISIONS.md` D71–D78
+  bind** (second pass; D66–D70 first pass kept); concurrent-instance precedence recorded in D78.
+- **PHL anchor cell CLOSED at PARTIAL/DESCRIPTIVE/EQUIVALENT (D76).** Remaining PHL-side work = **A1 addendum
+  C1–C10 + the write-up only**. No new fit, repair, arm re-specification, rival re-score, capacity re-index or
+  level re-fit without a new Council decision (R27).
+- **Phase headline (exact, D77):** **"conditional *level* reproduction + observational equivalence + an
+  unreproduced asymmetry"**. Barred phrasings: "reproduces universalization", "capacity explains the timing",
+  "portability holds", any direction word (R13/R14/R17/R22/R28).
+- **A1 verdict detail (Council-2 re-derived on disk):** M0 left-censored (≤1999); **M1 left-censored ≤1976/77**
+  (primary NER 96.79 at 1976; GER≥100 1977 — report's ≤1999 was looser); **M2 lower-sec ≥90 in 2024** (92.41;
+  2023 = 88.44); **M3 upper-sec never ≥90** (peak 76.43 2017; 75.03 2024); **M4 tertiary GER ≥50 first 2025**
+  (51.07; 2024 = 47.41). Model: M0/M1 1960/1966 satisfy bounds but **earn no credit**; M2 no crossing in 9/12 arms
+  (only education_led/gated 2025 within ±3; others late/far); M3 in-window R6 passes but **2/12 arms overshoot after
+  2024** (2027/2031 = ceiling overshoot, R29); **M4 = 1960 is an initialisation artefact, not a 65-y miss** — the
+  simulated tertiary GER is ≥50 at the first simulated year, so M4 is **not discriminable** and the tertiary-GER
+  **level check is missing (C6)**. **A6 asymmetry not reproduced: 0/3 informative outcomes credited.**
+- **Capacity:** capacity-gated **ties** law-only in 2/3 rivals (identical crossings); its one gain co-occurs with the
+  M3 overshoot (not creditable); capacity_only worse → **capacity-timing hypothesis NOT supported → EQUIVALENT**
+  (D61/R28). **A2d r = −0.427 at lag 6 is MODEL-INTERNAL descriptive-negative** (simulated series; max-|r| search
+  outside the predeclared 2–4 window; observed capacity has only 3 points) — **not an empirical null about the
+  Philippines** (D73/F6); folded into the A1 capacity section as exploratory.
+- **Capacity ruling binding (D74):** `data/STATE_CAPACITY.csv` canonical for the **three dimensions**; scout composite
+  canonical only as **DERIVED** (coverage 0.85); models keep `K_fiscal`/`K_delivery`/`K_enforcement` separate; no
+  collapsed index may carry a capacity claim; tax/GDP only with scout WDI `GC.TAX` provenance, never spliced;
+  de jure ≠ de facto; **enforcement-proxy-inside-G(C) double-count defect recorded as an OPEN MODEL DEFECT**.
+- **Report defects to close in the addendum (C1–C10, D71–D73/D68):** C1 missing naive benchmarks (persistence/linear
+  trend); C2 missing κ/weight sensitivity; C3 A10/R29 addendum is post-run (declare; predeclare residual next time);
+  C4 findings text says `sigmoid` but code executes **G(C)=C^0.75** (fix text); C5 enforcement sub-index is a
+  **de jure** proxy (label); C6 M4/tertiary-GER level check missing; C7 M1 censoring year ≤1976/77; plus F1 report
+  the **primary completion ≥90 in 2017** crossing (83.16 1999 → 87.45 2013 → 91.92 2017); F2 classify M4 as
+  **not discriminable** (not a 64-y miss); F6 relabel A2d model-internal.
+- **Re-openers (only these, D76):** C1 correct-sign OOS generated exponents with no exponent as parameter
+  (PASS-CONDITIONAL at best); C2 fixed-behaviour crossings within ±5 y on the corrected informative vector;
+  C3 a discriminating push/pull/queue/capacity test (needs PSA/ES data); C4 observed annual capacity/enforcement
+  making capacity measured.
+- **Portability (A6 CHN / A7 HKG) PARKED-ARMED (D75):** design notes accepted as intake only; any later run needs a
+  new Council decision + predecl under fixed-behaviour/declared-inputs (R20), no re-fit, HKG timing-only, CHN
+  massifying; no portability claim now (R22).
+- **Data queue HELD — nothing sent (user quiet mode):** PSA microdata; WB Enterprise Surveys; A9 fiscal/delivery/
+  enforcement; annual classrooms; real per-pupil spending; GC.* verification; BEPER 2019; HKG/CHN/JPN/KOR historical
+  timing series. All AWAITING USER APPROVAL / public-retrieval-with-log.
+- **Current pair:** commit `3e3f705` (A1 descriptive report final + capacity reconciliation); this closure checkpoint
+  supersedes it; ZIP hash in the adjacent `.sha256` and the OP post. Branch worktree is `01_sources/atlas-main-55732f4`
+  (the package root is not the git repo; `3e3f705` contains `10_massification/model/anchor_out/anchor_table.csv`,
+  `findings.txt`, `run_meta.json`).
+
+## 3r. INCIDENT 2026-11-20 ~14:40–14:50 (+08) — iCloud file-loss during checkpoint; remote restored
+
+**What happened:** during the anchor-closure checkpoint the iCloud-synced package began losing files (directories emptied:
+`08_council/brief_013` → 3 files, `10_massification/model2/runs` → 0, `02_lit`/`04_data` partial; git worktree showed 855
+tracked files deleted; reads failed with "file truncated"/"No such file"; git index operations timed out). A checkpoint
+commit (`fabe4cf`) was created against an incomplete stage and **deleted 282 tracked files** (sha256SUMS −894 lines,
+several scripts). That commit was pushed, then **reverted on the remote by force-push to the last good commit
+`3e3f705`**; local branch ref restored to `3e3f705` as well (worktree may be inconsistent until a clean `git reset --hard`).
+**No history was rewritten before `3e3f705`; `3e3f705` is the authoritative branch tip.**
+
+**Recovery assets (outside iCloud):**
+- `/tmp/massif_recover/` — full extraction of the pre-incident ZIP (1,184 files) used to restore missing package files.
+- `/tmp/massif_new_checkpoint/` — snapshot of the post-`3e3f705` content that could not be committed: Council-2
+  `COUNCIL2_INTAKE.md`, `DECISIONS.md` (D66–D78), `COUNCIL_STATE.md`, `BIG_PICTURE.md`; A1 addendum + corrected
+  `findings.txt` + `anchor_table.csv` + `run_meta.json`; `A2D_CAPACITY_LEADS_INTAKE.md`,
+  `PRE_PORTABILITY_A6_A7.md`; `lit/PHASE_WRITEUP_SHELL.md`; closure STATUS/CHANGELOG; calib provenance CSVs.
+  Key hashes: COUNCIL2_INTAKE 71aadc99…, DECISIONS 88cdf6f8…, A1 addendum 02c5f476…, findings 4c21e3f6…,
+  phase shell ed6e2400…, A2d a139f6ff…, portability 53373007…, STATUS fb275563…, CHANGELOG 174fdbfd….
+- Git objects for all content up to `3e3f705` are intact in `fleet.nosync/atlas/.git`; prior ZIPs remain on disk.
+
+**Provenance resolved for the write-up shell numbers (lead item):**
+- `4.35` linear-trend and `8.60` persistence benchmarks → `10_massification/model/calib/calibration_table.csv`
+  sha256-16 **552e0cce04bd148d** (values 4.352883341604888 / 8.599852941176476).
+- `6.16–7.43` repair-cell PHL fit MAE → `10_massification/model/calib/repair_table.csv` sha256-16
+  **34b0a5bc98e3d603** (PHL_fit_mae 6.1627–7.4326); companion `repair_scaling.csv` **7330a8785e28619f**,
+  `scaling_check.csv` **a07077c4e38253af**. These can be pasted into the shell; if the shell already cites
+  STATUS, replace with these paths+hashes.
+
+**Pending when filesystem is stable:** re-run `build_manifest.py` + `package_delivery.py stage` from a complete package
+root (verify stage ≥900 files, SHA256SUMS verifies), `git reset --hard 3e3f705`, rsync stage → worktree, scoped
+`git add`, commit the snapshot content, push, rebuild ZIP, and post `OP: checkpoint <sha> — anchor closed; addendum+shell
+in`. No external messages; data queue remains HELD (user quiet mode). Until then, **`3e3f705` is authoritative** and the
+new content lives in `/tmp/massif_new_checkpoint/`.
+
 ## 4. Next three actions for `repo-auditor`
 
 1. **Council gate:** get the Council's final `COUNCIL:` post for brief 013 (SUCCESS_CRITERIA + STOP_RULES are

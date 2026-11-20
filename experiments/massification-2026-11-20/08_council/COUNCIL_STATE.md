@@ -60,3 +60,25 @@ executor may mirror this screen to `10_massification/HANDOFF_expert-council.md`.
    residual (candidate accounts or UNABLE), rivals.
 3. Keep the negative result (repair failure) and equivalence map as the phase's publishable objects; short posts,
    files not chat.
+
+**Rotation: council-2 active 2026-11-20 14:31 (+08), party `deepseek-council2`.** The §"Rotation" paragraph above is the
+council-1 handoff and is kept unchanged as history. Council-2 read the gate list, D1–D65 (now D1–D70), STATUS §3c/§3g–§3p
+and the anchor A1 report; intake is ACKed and the A1 verdict recorded in `COUNCIL2_INTAKE.md` (D66–D70):
+**PARTIAL/DESCRIPTIVE + EQUIVALENT — no PASS, no direction claim**; capacity-timing hypothesis **not supported**
+(capacity-gated ties law-only on the A6 crossings; the one gain co-occurs with a ceiling overshoot); A2d
+**descriptive-negative** (r = −0.427 at lag 6, outside the predeclared lag window); scaling **FAIL standing**.
+Next: A1 write-up under conditions C1–C7 (D68); portability PARK/design-only; data asks HELD. Write scope still
+`08_council/` only; short posts.
+
+**Council-2 second pass 2026-11-20 14:33 (+08) — D71–D78.** Verification pass on the same files plus five additions;
+where anything above differs, `COUNCIL2_INTAKE.md` §9 and D71–D78 bind. **Material finding:** the A6 signature's first
+milestone — **primary completion ≥90 in 2017** — is **not in the tested M0–M4 vector** (official M1 = NER≥95/GER≥100,
+left-censored) → addendum item **C8**, no re-fit, verdict cap unchanged. **M4 = 1960 is "not discriminable"**, not a
+64-year miss (all arms incl. no-push cross at 1960; simulated tertiary GER ≥50 at 1960 vs 16.34 observed 1971) → C9.
+**A2d is model-internal (simulated)**, max-|r| over lags 0–6 (D73). **Capacity:** dimensions stay separate; composite
+DERIVED, never a claim; de jure enforcement proxy inside `G(C)` is collinear with the marker (law × G(C)
+double-counts) (D74). **Portability slate-A6 CHN / A7 HKG: PARKED-ARMED**, diagnostic-only if ever ordered (D75).
+**PHL cell CLOSED** at PARTIAL/DESCRIPTIVE/EQUIVALENT; re-openers C1–C4 only (D76). **Label:** "conditional *level*
+reproduction + observational equivalence + unreproduced asymmetry" (D77). **Next 3:** (1) A1 addendum C1–C10 (exp1);
+(2) phase write-up shell (Lead + lit + exp1/exp2 tables); (3) record closure in `STATUS.md` + keep data asks HELD
+(Lead). Data asks still awaiting user approval; nothing sent.

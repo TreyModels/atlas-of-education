@@ -3,6 +3,44 @@
 All dates 2026 (Asia/Shanghai). This is the programme-level log; per-cell run records live in the experiment
 manifests and error logs.
 
+## 2026-11-20 (night, recovery) — DELIVERY INCIDENT + RECOVERY CHECKPOINT (outside iCloud)
+
+- **Incident:** during the anchor-closure checkpoint the iCloud-synced package lost files mid-operation (directories
+  emptied, truncated reads, git index timeouts). A checkpoint built against the incomplete stage (`fabe4cf`) deleted
+  282 tracked files; it was pushed then **reverted on the remote by force-push to the last good commit `3e3f705`**
+  (authoritative). No pre-`3e3f705` history was rewritten.
+- **Recovery:** checkpoint rebuilt entirely in `/tmp` from the pre-incident ZIP extraction
+  (`/tmp/massif_recover`, 1,184 files) overlaid with the uncommitted post-`3e3f705` content
+  (`/tmp/massif_new_checkpoint`, 19 files); manifest/stage/SHA256SUMS/commit/ZIP built there; only the `.zip` +
+  `.sha256` copied back to the iCloud package. Branch tip and ZIP hash are announced in the `OP:` checkpoint post.
+- **Content now included:** Council-2 intake (D66–D78; D71–D78 bind), A1 addendum C1–C10 (C8 primary-2017 reporting
+  gap; M4 not discriminable; constant back-fill + de jure enforcement disclosed; G(C)=C^0.75 text fix; M1 ≤1977;
+  corrected accounting), A2d model-internal descriptive-negative, A6/A7 portability design notes (PARKED-ARMED),
+  phase write-up shell with provenance block, closure STATUS §3q/§3r.
+- **Provenance resolved:** linear-trend 4.35 / persistence 8.60 from `model/calib/calibration_table.csv`
+  sha256-16 552e0cce04bd148d; repair fit 6.16–7.43 from `model/calib/repair_table.csv` sha256-16 34b0a5bc98e3d603.
+- **Standing recommendations:** keep the iCloud package read-only until a reconciliation pass; use a stable-root copy
+  (e.g. `/tmp/massif_work` or `~/massif_work`, cloned from GitHub) for future checkpoints and mirror to iCloud only at
+  delivery boundaries. Data queue HELD; nothing external sent.
+
+## 2026-11-20 (night) — ANCHOR CELL CLOSED; COUNCIL ROTATED TO COUNCIL-2
+
+- **Council rotation executed** (context-rotation plan): expert-council → **council-2** (fresh-context subagent, party
+  `deepseek-council2`); handoff `08_council/COUNCIL_STATE.md` + `10_massification/HANDOFF_expert-council.md`; authority
+  persists via files; D66–D70 (first pass) kept and **D71–D78 bind**; old Council stood down.
+- **PHL anchor cell CLOSED at PARTIAL/DESCRIPTIVE/EQUIVALENT (D76)**: A1 descriptive report (`model/anchor_out/`) =
+  milestone timing miss (M2 2024 not reproduced in 9/12 arms; M4 = 1960 initialisation artefact/not discriminable;
+  M3 non-crossing passes in-window but 2/12 arms overshoot after 2024), **A6 asymmetry unreproduced 0/3**, capacity-gated
+  ties law-only → capacity-timing not supported (EQUIVALENT), A2d model-internal descriptive-negative (−0.427 lag 6),
+  scaling criterion FAIL standing. Remaining PHL work = **A1 addendum C1–C10 + write-up**; re-openers C1–C4 only.
+- **Phase headline (exact): "conditional level reproduction + observational equivalence + an unreproduced asymmetry"**;
+  "reproduces universalization"/"capacity explains timing"/"portability holds"/direction words barred.
+- **Capacity data reconciled**: three dimensions canonical (data-hunter), scout composite DERIVED only; tax/GDP provenance
+  resolved; WGI blocked → 0.85; de jure ≠ de facto; BEPER DATA BLOCKED; asks held.
+- **Publishable objects**: bounded negative on income-scaling (model class cannot generate positive income-scaling sign
+  without exogenous supply channel, R27) + equivalence/identification map with the unreproduced asymmetry (D58); write-up
+  shell assigned to lit-archivist.
+
 ## 2026-11-20 (late) — SINGLE-SYSTEM PIVOT + TIMING REGIME (A4)
 
 - **User design pivot (logged):** (1) single-system first — stand up ONE education system (best data, actually
