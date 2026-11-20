@@ -962,3 +962,21 @@ changed is `oos_neither_share` (1,680 tertiary rows); `reproduction_checks_v1_2.
   the shadow-off ablation still reproduces the v1.2 panel byte-for-byte — c6 no-re-fit guard holds). **c4 FAIL stands**
   (c4a HKG level 0.340 vs band [0.75,0.95]; c4b gap 0.0967 vs 0.10) — the declared shadow parameterisation does not
   reproduce the HKG anchor.
+
+### i) EXP-2 A3-D demand core executed — **FALSIFIED**, A3 demand block PARKED
+
+- **`generator_v1_4_demand/`** (predecl `9ed0cae3…`; deterministic; no-re-fit guard PASS: demand-OFF panel byte-identical
+  to the frozen v1.3 panel `47d4b082…`, and a placebo arm reproduces it exactly). **Verdict: FALSIFIED — the demand
+  block does not replace the upper-secondary taste parameter.**
+- **d1** (+10% gross E[R] → 2020 upper demand): HKG **+1.52**, KHM **+4.77** PASS; **PHL +0.15 FAIL** (share at bound
+  0.99); sign ≥0 in all 103 scored cells. **d2** (R→2R gate demand): HKG +2.47, KHM +10.33, **PHL +0.23 FAIL**; shadow
+  +31.1/+32.6/+32.0 pp (structural). **d3** (office − mfg twin at equal graduate flow): **−0.58 pp vs +2.0 bar FAIL**.
+  **d6** identities 0/6,720 PASS. **Replacement test: upper UIS 2024 = 95.05 vs 76.64 → +18.05 pp outside [73,77],
+  NOT DEMAND-ROBUST** (reported, not re-tuned). **Ablation: +18.41 pp ≥ 3.0 → NON-DECORATIVE** (the block matters by
+  destroying the ceiling). Migration/remittance channel DECLARED/NOT-VERIFIED and tiny (−0.09 / +0.29 pp).
+- **Structural finding:** the model's `P(advance) ≈ 0.999` at the upper gate (unrationed; advances include over-age
+  admissions) → the gate-probability channel is **near-inert**. This is consistent with CEIL-ATTRIB's
+  **pipeline** reclassification: the ceiling is **not a demand-rationed gate**.
+- **Disposition: A3 demand core PARKED; no demand layer wired; the ceiling remains a declared taste parameter.** The
+  block's non-trivial ablation effect says the *specification* is wrong for the object, not that demand is irrelevant —
+  a new predeclaration would be required. Council decision D116.

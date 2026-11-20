@@ -1,0 +1,10 @@
+[v1.4] hosts: SYN_HKG_LIKE<-SYN28, SYN_PHL_LIKE<-SYN00_PHL_LIKE, SYN_KHM_LIKE<-SYN18
+[v1.4] no-re-fit guard: OFF panel 47d4b082f4ba5838 vs v1.3 47d4b082f4ba5838 -> True
+[v1.4] upper UIS 2024: OFF 76.6391  ON 95.0455
+[v1.4] experiment: FALSIFIED  (d1 FAIL / d2 FAIL / d3 FAIL / d6 PASS; replacement NOT DEMAND-ROBUST; ablation NON-DECORATIVE)
+[sim_v1_4_demand] SYNTHETIC: 6720 rows, 6.6s, seed 20261120
+  d1: FAIL  upper +10% E[R] gap at 2020 (pp): SYN_HKG_LIKE +1.516, SYN_PHL_LIKE +0.151, SYN_KHM_LIKE +4.768; sign cells: 103 scored, 62 saturated, min +0 pp
+  d2: FAIL  R->2R gate-level gap (pp): SYN_HKG_LIKE +2.470, SYN_PHL_LIKE +0.233, SYN_KHM_LIKE +10.329; shadow-offset (pp): SYN_HKG_LIKE +32.64, SYN_PHL_LIKE +31.13, SYN_KHM_LIKE +32.03
+  d3: FAIL  flow-matched office-mfg upper demand gap -0.584 pp (bar +2.0); raw twin gap -0.515 pp; access-only variant -0.551 pp
+  d6: PASS  0 identity violations over 6720 rows; ds in [0.000112, 0.998791]; max |sum shares-1| 3.33e-16
+  replacement: 95.0455 (band [73,77]); ablation 18.4064 pp; guard True -> FALSIFIED

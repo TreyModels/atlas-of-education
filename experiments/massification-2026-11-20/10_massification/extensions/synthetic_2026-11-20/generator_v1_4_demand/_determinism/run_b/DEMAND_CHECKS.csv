@@ -1,0 +1,38 @@
+check_id,component,value,threshold,component_verdict,note,label
+d1,__check__,"upper +10% E[R] gap at 2020 (pp): SYN_HKG_LIKE +1.516, SYN_PHL_LIKE +0.151, SYN_KHM_LIKE +4.768; sign cells: 103 scored, 62 saturated, min +0 pp","+10% E[R] raises the upper-secondary demand share by >= +1.0 pp at t*=2020 in all three country types, with the sign positive in every scored cell (PRE_DECLARATIONS.md sec.5 d1).",FAIL,"Comparative static of the declared demand value. Not an estimate, not a causal effect, not evidence about any country. Saturation rule inherited from v1.3 DRY_RUN_PLAN sec.7.2; the sign test uses the expected household (y_shock=0).",SYNTHETIC
+d1,d1_upper_plus10pct_2020_pp_SYN_HKG_LIKE,1.515747579,>= +1.0 pp (upper-secondary demand share),PASS,,SYNTHETIC
+d1,d1_upper_plus10pct_2020_pp_SYN_PHL_LIKE,0.151456155,>= +1.0 pp (upper-secondary demand share),FAIL,,SYNTHETIC
+d1,d1_upper_plus10pct_2020_pp_SYN_KHM_LIKE,4.768245608,>= +1.0 pp (upper-secondary demand share),PASS,,SYNTHETIC
+d1,d1_sign_nonneg_all_scored_cells,"103 scored, 62 saturated/NOT-SCORED, min d(pp) = 0",>= 0 pp in every scored cell,PASS,,SYNTHETIC
+d1,INFO_d1_lower_plus10pct_2020_pp_SYN_HKG_LIKE,0,,INFO,,SYNTHETIC
+d1,INFO_d1_lower_plus10pct_2020_pp_SYN_PHL_LIKE,0,,INFO,,SYNTHETIC
+d1,INFO_d1_lower_plus10pct_2020_pp_SYN_KHM_LIKE,0,,INFO,,SYNTHETIC
+d1,INFO_d1_tertiary_not_applicable,L=3 has no four-state v_3 slot; demand block value reported in DETAIL only,,INFO,,SYNTHETIC
+d2,__check__,"R->2R gate-level gap (pp): SYN_HKG_LIKE +2.470, SYN_PHL_LIKE +0.233, SYN_KHM_LIKE +10.329; shadow-offset (pp): SYN_HKG_LIKE +32.64, SYN_PHL_LIKE +31.13, SYN_KHM_LIKE +32.03","R->2R at g2 (t*=2020) raises gate-level demand by >= +0.5 pp in all three country types, AND shadow demand rises more than non-gate demand (PRE_DECLARATIONS.md sec.5 d2).",FAIL,"The ordering clause is STRUCTURAL: the doubling is applied at g2 only, so non-gate demand (g0, g1, g3) is unchanged by construction. The scored bar is the +0.5 pp gate-level response. Not evidence about any country.",SYNTHETIC
+d2,d2_gate_level_demand_R2R_2020_pp_SYN_HKG_LIKE,2.46953933,>= +0.5 pp (gate-level demand),PASS,,SYNTHETIC
+d2,INFO_d2_shadow_demand_R2R_2020_pp_SYN_HKG_LIKE,32.63673206,,INFO,,SYNTHETIC
+d2,INFO_d2_non_gate_demand_R2R_2020_pp_SYN_HKG_LIKE,0,,INFO,,SYNTHETIC
+d2,d2_gate_level_demand_R2R_2020_pp_SYN_PHL_LIKE,0.2334150812,>= +0.5 pp (gate-level demand),FAIL,,SYNTHETIC
+d2,INFO_d2_shadow_demand_R2R_2020_pp_SYN_PHL_LIKE,31.13114655,,INFO,,SYNTHETIC
+d2,INFO_d2_non_gate_demand_R2R_2020_pp_SYN_PHL_LIKE,0,,INFO,,SYNTHETIC
+d2,d2_gate_level_demand_R2R_2020_pp_SYN_KHM_LIKE,10.32871853,>= +0.5 pp (gate-level demand),PASS,,SYNTHETIC
+d2,INFO_d2_shadow_demand_R2R_2020_pp_SYN_KHM_LIKE,32.03457465,,INFO,,SYNTHETIC
+d2,INFO_d2_non_gate_demand_R2R_2020_pp_SYN_KHM_LIKE,0,,INFO,,SYNTHETIC
+d2,d2_shadow_rises_more_than_gate_demand,True,shadow demand response > gate-level demand response,PASS,,SYNTHETIC
+d2,d2_shadow_rises_more_than_non_gate,non-gate response is 0 by construction,shadow demand response > non-gate demand response,PASS,,SYNTHETIC
+d3,__check__,flow-matched office-mfg upper demand gap -0.584 pp (bar +2.0); raw twin gap -0.515 pp; access-only variant -0.551 pp,Office-biased twin's upper-secondary demand minus the mfg-biased twin's >= +2.0 pp at equal graduate flow (PRE_DECLARATIONS.md sec.5 d3).,FAIL,"The flow-matched comparison holds the MFG twin's state, wages, hires/queues and household parameters fixed and varies ONLY the sector composition J, so the graduate flow is identical by construction. The access-only variant is NOT-SCORED and is reported to show which channel drives the sign. Not evidence about any real economy.",SYNTHETIC
+d3,d3_flow_matched_office_minus_mfg_pp,-0.5843332036,">= +2.0 pp, equal graduate flow",FAIL,,SYNTHETIC
+d3,INFO_d3_raw_twin_upper_demand_diff_pp,-0.5152715901,,INFO,,SYNTHETIC
+d3,INFO_d3_grad_upper_2020_mfg,1426804.369,,INFO,,SYNTHETIC
+d3,INFO_d3_grad_upper_2020_office,1418372.009,,INFO,,SYNTHETIC
+d3,INFO_d3_status_at_equal_flow,"flow-matched by construction (same state, same household params, same grads; only J composition differs)",,INFO,,SYNTHETIC
+d3,NOT-SCORED_d3_access_only_variant_pp,-0.5510134864,,INFO,,SYNTHETIC
+d6,__check__,"0 identity violations over 6720 rows; ds in [0.000112, 0.998791]; max |sum shares-1| 3.33e-16","Identities on every scored row: shares in [0,1], cohort conservation, non-negative demand, no NaN/inf (PRE_DECLARATIONS.md sec.5 d6).",PASS,Mechanical accounting checks; they cannot establish any empirical claim.,SYNTHETIC
+d6,d6_shares_in_0_1,"ds in [0.000112, 0.998791]",zero violations,PASS,,SYNTHETIC
+d6,d6_state_shares_sum_to_1,max |sum-1| = 3.33e-16,zero violations,PASS,,SYNTHETIC
+d6,d6_nonneg_demand_and_oos,ok,zero violations,PASS,,SYNTHETIC
+d6,d6_cohort_conservation,max |admitted+rationed-demand| = 0,zero violations,PASS,,SYNTHETIC
+d6,d6_admitted_le_cap,ok,zero violations,PASS,,SYNTHETIC
+d6,d6_completion_bounds,ok,zero violations,PASS,,SYNTHETIC
+d6,d6_no_nan_inf,ok,zero violations,PASS,,SYNTHETIC
+d6,d6_rows_checked,6720,zero violations,INFO,,SYNTHETIC

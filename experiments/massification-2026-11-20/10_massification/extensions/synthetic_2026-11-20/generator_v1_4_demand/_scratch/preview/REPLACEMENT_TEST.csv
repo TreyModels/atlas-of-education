@@ -1,0 +1,3 @@
+arm,upper_uis_2024,band_lo,band_hi,distance_from_band_pp,inside_band,outside_by_gt_2pp,verdict,label
+baseline_demand_block_OFF,76.63908112,73,77,0,True,False,INFO,SYNTHETIC
+replacement_v2_to_ERxPadv,95.04548615,73,77,-18.04548615,False,True,NOT DEMAND-ROBUST,SYNTHETIC

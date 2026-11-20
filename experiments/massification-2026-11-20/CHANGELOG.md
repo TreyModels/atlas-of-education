@@ -246,3 +246,13 @@ manifests and error logs.
   runs byte-identical and the c6 no-re-fit guard; **c4a/c4b FAIL stand** (HKG level 0.340 vs 0.75–0.95; HKG−PHL gap
   0.0967 vs 0.10).
 - DECISIONS **D114** (M1-NER/H1 + HKG blocked) and **D115** (CEIL-ATTRIB) recorded. Next: EXP-2 A3-D demand core.
+
+## 2026-11-20 (reactivation batch 7) — EXP-2 A3-D demand core FALSIFIED; A3 PARKED
+
+- `generator_v1_4_demand/` (predecl `9ed0cae3…`, deterministic, 18/18 SHA): **FALSIFIED** — the demand block does not
+  replace the upper-secondary taste parameter. d1/d2 fail on PHL (at bound; HKG +1.52/+2.47, KHM +4.77/+10.33), d3
+  −0.58 pp vs +2.0 bar, d6 PASS; replacement test +18.05 pp outside [73,77] (NOT DEMAND-ROBUST, not re-tuned);
+  ablation +18.41 pp → NON-DECORATIVE (destroys the ceiling); no-re-fit guard PASS (OFF panel = v1.3 panel byte-identical,
+  placebo same). Migration/remittances DECLARED/NOT-VERIFIED and tiny. **Structural finding: P(advance) ≈ 0.999 at the
+  upper gate → the gate-probability channel is near-inert; the ceiling is not a demand-rationed gate (consistent with
+  CEIL-ATTRIB's pipeline reclassification).** **Disposition: A3 demand core PARKED; no demand layer wired** (D116).

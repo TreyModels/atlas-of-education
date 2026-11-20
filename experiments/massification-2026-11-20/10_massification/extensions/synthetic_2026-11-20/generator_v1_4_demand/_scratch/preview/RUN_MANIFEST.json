@@ -1,0 +1,99 @@
+{
+  "ablation_bar_pp": 3.0,
+  "base_generator": {
+    "path": "code/base_v1_3_sim.py",
+    "sha256": "70ae8f0eef83358493dad3d3feb2d6a8841c4bb6fad3966627f4eed70e2a9877",
+    "status": "byte-identical copy of generator_v1_3/code/sim_v1_3.py"
+  },
+  "determinism": {
+    "floats": "%.10g",
+    "method": "two clean runs into separate output directories, cmp on every results CSV and on RUN_MANIFEST.json",
+    "wall_clock_in_outputs": false
+  },
+  "generator": "code/sim_v1_4_demand.py",
+  "hashes": {
+    "ablation": {
+      "_ablation/synthetic_panel_v1_4_demand_off.csv": "47d4b082f4ba5838cc20fbb09e59dd3dd847ad25393b1ce091069c94496657e3"
+    },
+    "base_code_sha256": "70ae8f0eef83358493dad3d3feb2d6a8841c4bb6fad3966627f4eed70e2a9877",
+    "code_sha256": "a5740f9375d91bbec12a569a446c501f502640cac2ce8172a53e5f143a1634ea",
+    "params_md_sha256": "d0bd9d46c4c178745940753d779d09ce7e92a8cb095f2b13bd513d75676c936d",
+    "predeclaration_sha256": "7e3dbb95a3e31104a3fb69513d2354f6b4b6f037adf5086b97bc5e949935e7f0",
+    "results": {
+      "ABLATION_TEST.csv": "0e719e8ea1009d3df1c4c230de2491d1c3c024145d879b3c3ed52c0db19da2da",
+      "DEMAND_CHECKS.csv": "53f90250878679717c2c014fa78db9c41791fe5a0b8d5dacbba31c3c9cff1535",
+      "DEMAND_CHECKS_DETAIL.csv": "547ca39b9a4bd00a796d07a96ac0f1369f86172067599e9055eccf08d35482cc",
+      "DETAIL.csv": "f158899827489b003a7a603d9546598dd8457845edab516954c4555cf4b1af19",
+      "REPLACEMENT_TEST.csv": "0633f2ad2cf5f0f5f17aa6ac60e61d3f121eae49a10e91b0e41877811bc47017",
+      "synthetic_panel_v1_4_demand.csv": "ffecd450514cf8259512647db4e78bcd058639c208a1a2057bbac8b506ddbdaa"
+    },
+    "v12_panel_sha256": "14729c5141a71dd9aaf87a5ad2e973a84b5f04603577aae627f2833276fac5ac",
+    "v13_panel_sha256": "47d4b082f4ba5838cc20fbb09e59dd3dd847ad25393b1ce091069c94496657e3"
+  },
+  "host_mapping": {
+    "SYN_HKG_LIKE": "SYN28",
+    "SYN_KHM_LIKE": "SYN18",
+    "SYN_PHL_LIKE": "SYN00_PHL_LIKE"
+  },
+  "host_mapping_rule": "HKG=highest 2020 gdppc; PHL=SYN00_PHL_LIKE; KHM=lowest 2020 gdppc (shadow-blind income rule, unchanged from v1.3)",
+  "label": "SYNTHETIC",
+  "no_refit_guard": {
+    "byte_identical": true,
+    "off_panel_sha256": "47d4b082f4ba5838cc20fbb09e59dd3dd847ad25393b1ce091069c94496657e3",
+    "v13_panel_sha256": "47d4b082f4ba5838cc20fbb09e59dd3dd847ad25393b1ce091069c94496657e3"
+  },
+  "numpy": "2.4.6",
+  "panel": {
+    "columns": 103,
+    "countries": 30,
+    "levels": [
+      "primary",
+      "lower_secondary",
+      "upper_secondary",
+      "tertiary"
+    ],
+    "rows": 6720,
+    "years": [
+      1970,
+      2025
+    ]
+  },
+  "python": "3.11.17",
+  "rng": "numpy PCG64 (np.random.default_rng), single stream, v1.2 draw order; the shadow block and the demand block draw nothing",
+  "seed": 20261120,
+  "sensitivity": {
+    "cells": 0,
+    "file": "results/SENSITIVITY.csv"
+  },
+  "spec": {
+    "base_panel_sha256": "47d4b082f4ba5838cc20fbb09e59dd3dd847ad25393b1ce091069c94496657e3",
+    "frozen_shadow_predeclaration_sha256": "cf8c61cb818cd63acfb2ada594bc9541bfcb0711f801e13b7eee3b86508f94f2",
+    "params": "PARAMS.md",
+    "params_sha256": "d0bd9d46c4c178745940753d779d09ce7e92a8cb095f2b13bd513d75676c936d",
+    "predeclaration": "PRE_DECLARATIONS.md",
+    "predeclaration_sha256": "7e3dbb95a3e31104a3fb69513d2354f6b4b6f037adf5086b97bc5e949935e7f0",
+    "s1_note_sha256": "af49a616a7b57c4ef23a693c155d022cd17817f66f5acafba4dc6798dedb65eb"
+  },
+  "statement": "Synthetic data from declared assumptions only. Not evidence, not an estimate, not a forecast, no causal or direction claim, no real country modelled. The demand block is a declared behavioural assumption, not an estimated demand system; its migration/remittance channel is DECLARED / NOT-VERIFIED and no literature coefficient was inserted.",
+  "upper_uis_2024": {
+    "band": [
+      73.0,
+      77.0
+    ],
+    "delta_pp": 18.406405026714566,
+    "off": 76.63908112137804,
+    "on": 95.0454861480926,
+    "outside_by_pp": 18.045486148092607
+  },
+  "verdicts": {
+    "ablation": "NON-DECORATIVE",
+    "d1": "FAIL",
+    "d2": "FAIL",
+    "d3": "FAIL",
+    "d6": "PASS",
+    "experiment": "FALSIFIED",
+    "falsifier_triggered": true,
+    "guard": "PASS",
+    "replacement": "NOT DEMAND-ROBUST"
+  }
+}

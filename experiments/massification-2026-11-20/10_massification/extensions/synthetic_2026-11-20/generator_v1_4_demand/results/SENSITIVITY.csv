@@ -1,0 +1,14 @@
+label,cell_id,variant,upper_uis_2024,delta_vs_baseline_pp,placebo_panel_sha256,placebo_equals_v13_panel,scored,note
+SYNTHETIC,central,central values D01-D08,95.04548615,18.40640503,,,INFO,one-at-a-time sensitivity; cannot replace the central run
+SYNTHETIC,B_Z_D=0.10,gate-pressure coefficient,95.00147988,18.36239876,,,INFO,one-at-a-time sensitivity; cannot replace the central run
+SYNTHETIC,B_Z_D=0.40,gate-pressure coefficient,95.12574444,18.48666332,,,INFO,one-at-a-time sensitivity; cannot replace the central run
+SYNTHETIC,ER_scale=0.75,sensitivity on the level of E[R] (NOT an option),94.37229009,17.73320897,,,INFO,one-at-a-time sensitivity; cannot replace the central run
+SYNTHETIC,ER_scale=1.25,sensitivity on the level of E[R] (NOT an option),95.33707467,18.69799355,,,INFO,one-at-a-time sensitivity; cannot replace the central run
+SYNTHETIC,migration OFF,mig_L = 0 and remittance lift off,94.95881149,18.31973037,,,INFO,one-at-a-time sensitivity; cannot replace the central run
+SYNTHETIC,remittance OFF,remit_prop = 0 only,95.03262055,18.39353943,,,INFO,one-at-a-time sensitivity; cannot replace the central run
+SYNTHETIC,dest_mult=2.50,destination differential,95.00869075,18.36960963,,,INFO,one-at-a-time sensitivity; cannot replace the central run
+SYNTHETIC,dest_mult=4.50,destination differential,95.07988485,18.44080373,,,INFO,one-at-a-time sensitivity; cannot replace the central run
+SYNTHETIC,"R_L alt (L=2 -> {1,2})",destination set excluding the professional rung,90.8975785,14.25849738,,,INFO,one-at-a-time sensitivity; cannot replace the central run
+SYNTHETIC,"placebo no substitution, liquidity off","code-integrity check: block ON, substitution OFF, liquidity OFF -> must equal v1.3",76.63908112,0,47d4b082f4ba5838cc20fbb09e59dd3dd847ad25393b1ce091069c94496657e3,True,NO,"panel with the demand block ON but NO substitution, v1.3 89-column form"
+SYNTHETIC,"liquidity only, no substitution","block ON, substitution OFF, remittance liquidity ON: isolates the liquidity channel",76.92491474,0.2858336166,af8a088f74f98c4d3dcdfe080485f6e96b37903caa8abefda2a4a2cd0ab9aa57,False,NO,"panel with the demand block ON but NO substitution, v1.3 89-column form"
+SYNTHETIC,arm_R2 work-weight swap,NOT-SCORED alternative reading of 'work-incentive weight',70.11647823,-6.52260289,,,NO,one-at-a-time sensitivity; cannot replace the central run
