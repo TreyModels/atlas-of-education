@@ -1,0 +1,31 @@
+iso3,country,milestone,threshold,series_used,series_priority,crossing_lo,crossing_hi,status,midpoint_estimate,interval_width,note
+JPN,Japan,primary_universal,95.0,,completion_primary,,,no_series,,,
+JPN,Japan,lower_secondary_universal,90.0,,completion_lower_secondary,,,no_series,,,
+JPN,Japan,upper_secondary_mass,50.0,,completion_upper_secondary,,,no_series,,,
+JPN,Japan,upper_secondary_universal,90.0,,completion_upper_secondary,,,no_series,,,
+JPN,Japan,tertiary_mass,50.0,ger_tertiary,ger_tertiary,1999.0,2013.0,crossed,2006.0,14.0,
+KOR,Republic of Korea,primary_universal,95.0,ner_primary,completion_primary,,1971.0,censored_above_at_first_obs,,,already above threshold at first observation: the crossing PRECEDES the observed window
+KOR,Republic of Korea,lower_secondary_universal,90.0,completion_lower_secondary,completion_lower_secondary,,2003.0,censored_above_at_first_obs,,,already above threshold at first observation: the crossing PRECEDES the observed window
+KOR,Republic of Korea,upper_secondary_mass,50.0,completion_upper_secondary,completion_upper_secondary,,2000.0,censored_above_at_first_obs,,,already above threshold at first observation: the crossing PRECEDES the observed window
+KOR,Republic of Korea,upper_secondary_universal,90.0,completion_upper_secondary,completion_upper_secondary,2008.0,2009.0,crossed,2008.5,1.0,
+KOR,Republic of Korea,tertiary_mass,50.0,ger_tertiary,ger_tertiary,,2000.0,censored_above_at_first_obs,,,already above threshold at first observation: the crossing PRECEDES the observed window
+HKG,"Hong Kong SAR, China",primary_universal,95.0,ner_primary,completion_primary,2015.0,2016.0,crossed,2015.5,1.0,
+HKG,"Hong Kong SAR, China",lower_secondary_universal,90.0,ner_lower_secondary,completion_lower_secondary,2015.0,2016.0,crossed,2015.5,1.0,
+HKG,"Hong Kong SAR, China",upper_secondary_mass,50.0,ner_upper_secondary,completion_upper_secondary,,2001.0,censored_above_at_first_obs,,,already above threshold at first observation: the crossing PRECEDES the observed window
+HKG,"Hong Kong SAR, China",upper_secondary_universal,90.0,ner_upper_secondary,completion_upper_secondary,2018.0,,not_crossed_by_last_obs,,,not universal by the last observation
+HKG,"Hong Kong SAR, China",tertiary_mass,50.0,ger_tertiary,ger_tertiary,2007.0,2008.0,crossed,2007.5,1.0,
+PHL,Philippines,primary_universal,95.0,completion_primary,completion_primary,2017.0,2021.0,crossed,2019.0,4.0,
+PHL,Philippines,lower_secondary_universal,90.0,completion_lower_secondary,completion_lower_secondary,2023.0,2024.0,crossed,2023.5,1.0,
+PHL,Philippines,upper_secondary_mass,50.0,completion_upper_secondary,completion_upper_secondary,,1999.0,censored_above_at_first_obs,,,already above threshold at first observation: the crossing PRECEDES the observed window
+PHL,Philippines,upper_secondary_universal,90.0,completion_upper_secondary,completion_upper_secondary,2024.0,,not_crossed_by_last_obs,,,not universal by the last observation
+PHL,Philippines,tertiary_mass,50.0,ger_tertiary,ger_tertiary,2024.0,2025.0,crossed,2024.5,1.0,
+KHM,Cambodia,primary_universal,95.0,ner_primary,completion_primary,2018.0,,not_crossed_by_last_obs,,,not universal by the last observation
+KHM,Cambodia,lower_secondary_universal,90.0,ner_lower_secondary,completion_lower_secondary,2018.0,,not_crossed_by_last_obs,,,not universal by the last observation
+KHM,Cambodia,upper_secondary_mass,50.0,ner_upper_secondary,completion_upper_secondary,2008.0,,not_crossed_by_last_obs,,,not universal by the last observation
+KHM,Cambodia,upper_secondary_universal,90.0,ner_upper_secondary,completion_upper_secondary,2008.0,,not_crossed_by_last_obs,,,not universal by the last observation
+KHM,Cambodia,tertiary_mass,50.0,ger_tertiary,ger_tertiary,2025.0,,not_crossed_by_last_obs,,,not universal by the last observation
+CHN,China,primary_universal,95.0,completion_primary,completion_primary,2012.0,2014.0,crossed,2013.0,2.0,
+CHN,China,lower_secondary_universal,90.0,completion_lower_secondary,completion_lower_secondary,2014.0,2016.0,crossed,2015.0,2.0,
+CHN,China,upper_secondary_mass,50.0,completion_upper_secondary,completion_upper_secondary,2010.0,2012.0,crossed,2011.0,2.0,
+CHN,China,upper_secondary_universal,90.0,completion_upper_secondary,completion_upper_secondary,2020.0,,not_crossed_by_last_obs,,,not universal by the last observation
+CHN,China,tertiary_mass,50.0,ger_tertiary,ger_tertiary,2016.0,2017.0,crossed,2016.5,1.0,

@@ -86,3 +86,18 @@ a point estimate in (0, 3 pp) with a pre-trend-passing specification is reported
 support; a null cannot be claimed either. If CHN (7 distinct years) or pooled coverage is used, `n_pre≈3–4`,
 `n_post≈3–4`, `SE≈1.8–2.0 pp`, `MDE≈5–6 pp` — weaker still. The power limitation is part of the declared result and is
 not worked around by imputation, by widening the window, or by pooling across countries with different definitions.
+
+## AMENDMENT (repo-auditor Council adjudication D23, applied before running)
+**Claim cap (binding).** The output of this cell is a **descriptive association only**, unless BOTH: (i) there are
+**≥10 pre-reform observed completion points**, and (ii) pre-trends pass. With the observed coverage on disk (PHL ≈6
+pre-reform completion points), condition (i) fails, so even under D23 the maximum claim is a **descriptive
+association** — no causal claim, no directional push-pull claim (R13), no "reform raised completion" language. If
+the Council later supplies a denser observed pre-period (≥10 points), the cap lifts only for this cell and only if
+pre-trends pass; the cell is not re-run silently.
+**Power (predeclared, see §Power above).** Declared s=2.5 pp, n_pre≈6, n_post≈6 → SE≈1.44 pp, MDE(80%)≈4.0 pp; the
+3 pp threshold is below the MDE, so (0,3 pp) is predeclared INCONCLUSIVE.
+**COVID sensitivity (predeclared, before running).** 2020–21 disruption overlaps the first full exposed cohort
+(SY2020–21). Declared sensitivity set: (a) exclude 2020–2022 from the post period; (b) include a COVID-period
+indicator/interaction; (c) report the headline estimate with and without COVID years. Rule: if the sign of the
+estimated effect flips between (a) and (c), the cell is reported **INCONCLUSIVE/COVID-CONFOUNDED** — not support,
+not a null. No re-specification may be chosen after seeing which version is "nicer" (R12).

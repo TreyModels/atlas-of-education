@@ -1,7 +1,7 @@
 # BIG_PICTURE — live keep/park/kill list (Council authority)
 
 **Owner:** Council of Experts. **Rule:** `08_council/BIG_PICTURE_RULE.md` (standing order, user, 20 Nov 2026).
-**Updated:** 2026-11-20 14:52 (cycle 3: loop-5 outcomes — M2c fail, task-37 PARTIAL/EQUIVALENT, A1 scaling fail, E2/E3 intake). Update at the top of every Council
+**Updated:** 2026-11-20 15:02 (cycle 4: user timing directive; scaling-repair intake; E2/M2c adjudication). Update at the top of every Council
 cycle, before ordering experiments.
 
 ## First-order goal (restated every cycle)
@@ -72,3 +72,19 @@ education is secondary; the shadow phase's identification limits stand and are n
 3. **One thread that most advances this cycle:** **income-scaling channel repair** — the model has just failed the A1 scaling check with *wrong-sign* OOS exponents; if a structural income-demand channel (not exponent fitting) cannot fix the sign, the model caps at PARTIAL and the phase's honest output is conditional reproduction + equivalence. E4 is the fallback identification route.
 4. **Drift check:** no parameter-tuning drift (the repair is structural and separate); but **validation-machinery drift** is live — three gates (recovery, smoke, scaling) in one cycle. Two red flags: repeated measurement/gate actions + no model improvement yet. Mitigation: time-box the repair to one cell/one cycle; if it fails, stop adding checks and publish PARTIAL + EQUIVALENT.
 5. **If only one thing mattered this week:** the income-scaling channel repair cell (structural, predeclared, holdout untouched); everything else waits. Direction claims remain EQUIVALENT; no PASS.
+
+
+## Cycle 4 step-back (timing directive + intake adjudication)
+
+1. **Goal restated:** massification produced by schooling–government–market interaction, each standing the others up; for near-universal systems the outcome is **when**, not the level; shadow secondary.
+2. **Threads:** **KEEP (critical path)** — **timing-of-universalization (E6 reframed, first-order)**, the accepted **income-scaling channel repair** (next run), the **conforming M2c-2** (gate before any E1 fielding), E2 (descriptive, accepted with MDE amendment); **PARK** — E4 Bartik (after repair/timing), E5, E7, complexity/ECI, T1/T2 papers, shadow paper; **KILL** — E8, shadow threads; **E1** PARKED, not fielded (reinstatement only via conforming M2c-2 pass + new predecl); direction claims EQUIVALENT (R13).
+3. **One thread that most advances the model:** the **income-scaling repair** — if it cannot generate the correct-sign scaling laws, the model caps at PARTIAL; **timing reproduction** is the parallel first-order test (E6 reframed) and must be run next because a level-only model misses Japan/Korea/HK by construction.
+4. **Drift check:** validation-machinery drift risk remains; the timing directive counters niche drift by making the first-order outcome explicit. No parameter/target tuning. Two red flags → time-box: repair + timing cells only this cycle; if either fails, close with PARTIAL + EQUIVALENT + explicit timing miss.
+5. **If only one thing mattered this week:** run the repair cell and the six-country milestone-timing comparison; everything else waits. M2c-2 in parallel because no E1 fielding without it.
+
+
+## Cycle 4 addendum (A4 confirmation)
+
+E9 (crossing-year reconstruction for censored JPN/KOR/HKG series) is **KEEP, rank #3** and is a data-first prerequisite
+for E6's timing comparison (#2). N = ±5 y (±3 y narrow-band). Censored-ratio reconstruction rule recorded; no
+imputation as observation. E1 stays PARKED; direction claims EQUIVALENT.

@@ -146,3 +146,29 @@ range**: between-logit **+0.84**, all-year re-run **+1.36**, year-FE log-log **+
 **+1.174** is carried as the scout's value (its exact script was not executable in this environment — disclosed).
 A1 §1/R14 therefore judges the model's generated logit/log exponents against this range, not a single point, and
 requires the **sign** plus range containment (≥2 of 3 classified laws). No post-hoc narrowing of the range.
+
+
+## Amendment A4 (2026-11-20 15:02) — timing regime for near-universal systems
+
+**User directive.** For near-universal systems (JPN, KOR, HKG; any level at/above threshold for ≥10 observed years),
+the outcome is the **timing of universalization**, not the level (definitions and tolerances in
+`UNIVERSALIZATION_MILESTONES.md`).
+
+1. **Milestones:** M1 primary NER≥95 (or GER≥100); M2 lower-secondary completion ≥90; M3 upper-secondary completion
+   (or transition) ≥90; M4 tertiary GER ≥50. Crossing year = first observed year above threshold; band = adjacent
+   observed years; left-censored = boundary constraint only; right-censored = false-positive test.
+2. **Timing replaces level:** crossing year within **±5 years** (band midpoint), **±3 years** where the band ≤2 years
+   and no definition break; levels become **check-only** (±5 pp, never fitted) for near-universal milestones.
+3. **Single-curve fit:** must reproduce timing/midpoint, not the functional form; a level match without timing = PASS
+   at most PARTIAL and is a structural miss; supplying the midpoint is R4-invalid.
+4. **A1 interplay:** A1 scaling exponents remain required checks; timing is an additional required outcome for
+   near-universal cells, not a substitute for the scaling check in expanding cells.
+
+
+## A4 Clarification C1 (2026-11-20 15:10) — M0, N=5, reconstruction
+
+M0 massification = cohort completion ≥50% (expanding systems); universalization M1–M4 as defined. Timing tolerance
+**N = ±5 years** (band midpoint; ±3 y where band ≤2 y). Crossing years are holdout outcomes, never fitted. Censored
+UIS ratios may be reconstructed from observed headcounts + documented population denominators, labelled
+"reconstructed (not UIS)" with method/uncertainty and two-denominator sensitivity; never imputed as observation.
+See `UNIVERSALIZATION_MILESTONES.md` C1.

@@ -68,3 +68,10 @@ fire.
 | **R16** | **Interaction-estimator sufficiency:** a two-shock design may be fielded as an identification gate only if its predeclared recovery test passes sign accuracy, median bias, coverage and null-FP thresholds. Failure = do not field; a redesigned estimator requires a NEW predeclaration and its own recovery test, and the current reduction (conditional reproduction + equivalence) stands until it passes | M2c: median abs bias 0.55 > 0.50 (predeclared); sigma=1.0 sign accuracy 0.74/0.68 |
 | **R17** | **Scaling repair must be structural:** if generated OOS exponents have the wrong sign, the reproduction claim is capped at PARTIAL; only a new predeclared structural channel may repair it — never exponent fitting, never target-to-parameter, holdout untouched | task-37 scaling_check FAILED: secondary -1.89/-0.38/-0.74 vs +0.286; tertiary -1.23/-0.14/-0.35 vs +0.776 |
 | **R18** | **Smoke-fit status:** a fit that loses to the linear-trend benchmark on holdout is PARTIAL at best, regardless of in-sample fit; no PASS, no direction claim | task-37: holdout MAE 4.84/5.40/6.08 vs linear-trend 4.35 (persistence 8.60) |
+
+
+## Amendment A3 (2026-11-20 15:02) — R19 (timing regime)
+
+| # | Rule | Trigger |
+|---|---|---|
+| **R19** | **Timing miss is a structural miss:** for near-universal systems, if the model does not reproduce the observed universalization crossing years within the declared timing tolerances (or violates a left-censored boundary / produces a false crossing), the reproduction claim is FAIL for that country/milestone; report the timing miss explicitly. No level-only victory may be reported as reproducing universalization in a near-universal system. | `UNIVERSALIZATION_MILESTONES.md`; A4 |

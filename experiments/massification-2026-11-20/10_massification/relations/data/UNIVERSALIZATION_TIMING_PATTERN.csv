@@ -1,0 +1,7 @@
+iso3,order,n_crossed,first_crossing,last_crossing,primary_to_lower,lower_to_upper_mass,upper_mass_to_tertiary,groups
+JPN,tertiary_mass,1,2006.0,2006.0,,,,early (JPN/KOR/HKG)
+KOR,upper_secondary_universal,1,2008.5,2008.5,,,,early (JPN/KOR/HKG)
+HKG,tertiary_mass < primary_universal < lower_secondary_universal,3,2007.5,2015.5,0.0,,,early (JPN/KOR/HKG)
+PHL,primary_universal < lower_secondary_universal < tertiary_mass,3,2019.0,2024.5,4.5,,,late (PHL/KHM/CHN)
+KHM,,0,,,,,,late (PHL/KHM/CHN)
+CHN,upper_secondary_mass < primary_universal < lower_secondary_universal < tertiary_mass,4,2011.0,2016.5,2.0,,,late (PHL/KHM/CHN)
