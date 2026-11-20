@@ -1,0 +1,351 @@
+{
+  "artifact": "generator_v1_5_bimodal",
+  "title": "Amendment A5 / v1.5 BIMODAL-GATE — design + frozen pre-declaration",
+  "status": "DESIGN + FROZEN PRE-DECLARATION — RUN-READY, NOT RUN",
+  "label": "SYNTHETIC",
+  "not_evidence": true,
+  "causal_or_direction_claim": false,
+  "c1_c4_reopened": false,
+  "a3d_retuned": false,
+  "created_utc": "2026-11-20",
+  "worker": "BM",
+  "authorisation_to_execute": "NONE — execution requires an explicit user/Council authorisation and is outside this delivery",
+  "executed": false,
+  "results_present": false,
+  "rng_drawn": false,
+  "predeclaration": {
+    "path": "10_massification/extensions/synthetic_2026-11-20/generator_v1_5_bimodal/PRE_DECLARATIONS.md",
+    "sha256": "7178e3d2ee2e367cd7dbb0619f2031305ff446978a43aab9e1f6caefb07ca97f",
+    "frozen_before_any_run": true,
+    "expected_predecl_sha_constant_to_embed_in_code": "7178e3d2ee2e367cd7dbb0619f2031305ff446978a43aab9e1f6caefb07ca97f",
+    "no_threshold_change_after_results": true
+  },
+  "spec_files": [
+    {
+      "path": "10_massification/extensions/synthetic_2026-11-20/generator_v1_5_bimodal/PRE_DECLARATIONS.md",
+      "sha256": "7178e3d2ee2e367cd7dbb0619f2031305ff446978a43aab9e1f6caefb07ca97f",
+      "bytes": 43528,
+      "role": "frozen pre-declaration"
+    },
+    {
+      "path": "10_massification/extensions/synthetic_2026-11-20/generator_v1_5_bimodal/PARAMETERS.csv",
+      "sha256": "72327cf799b5e96c68a8e9030f265ef06b3b37a58917d892d87bb6fabcfcb65a",
+      "bytes": 21012,
+      "role": "spec"
+    },
+    {
+      "path": "10_massification/extensions/synthetic_2026-11-20/generator_v1_5_bimodal/DESIGN.md",
+      "sha256": "db21055b38ef8343f791b27a3fe192a72367f5377f966dd660a94d39a26a5f43",
+      "bytes": 23461,
+      "role": "spec"
+    },
+    {
+      "path": "10_massification/extensions/synthetic_2026-11-20/generator_v1_5_bimodal/DRY_RUN_PLAN.md",
+      "sha256": "4660390501747949eb27c5d966012a768ebc82ee025efea89ee4333e8bbedeab",
+      "bytes": 14953,
+      "role": "spec"
+    }
+  ],
+  "base_instrument": {
+    "generator": "generator_v1_3",
+    "code": "10_massification/extensions/synthetic_2026-11-20/generator_v1_3/code/sim_v1_3.py",
+    "code_sha256": "70ae8f0eef83358493dad3d3feb2d6a8841c4bb6fad3966627f4eed70e2a9877",
+    "panel": "10_massification/extensions/synthetic_2026-11-20/generator_v1_3/results/synthetic_panel_v1_3.csv",
+    "panel_sha256": "47d4b082f4ba5838cc20fbb09e59dd3dd847ad25393b1ce091069c94496657e3",
+    "panel_rows": 6720,
+    "panel_columns_v1_3": 89,
+    "transitive_base": {
+      "generator_v1_2_code_sha256": "61123aa9370a407487407bf3ff4b97287aea67cac5f90629e540a6e8cc855e7c",
+      "generator_v1_2_panel_sha256": "14729c5141a71dd9aaf87a5ad2e973a84b5f04603577aae627f2833276fac5ac"
+    }
+  },
+  "switches": {
+    "bimodal": [
+      "OFF",
+      "ON"
+    ],
+    "kappa_link": [
+      "OFF",
+      "ON"
+    ],
+    "orthogonal": true
+  },
+  "arms": {
+    "A00": {
+      "bimodal": "OFF",
+      "kappa_link": "OFF",
+      "role": "no-re-fit guard E1 (byte-identical to v1.3 panel)"
+    },
+    "A10": {
+      "bimodal": "ON",
+      "kappa_link": "OFF",
+      "role": "diagnostic, not scored"
+    },
+    "A01": {
+      "bimodal": "OFF",
+      "kappa_link": "ON",
+      "role": "linked arm, reported separately, guard E2"
+    },
+    "A11": {
+      "bimodal": "ON",
+      "kappa_link": "ON",
+      "role": "scored arm (checks a-e)"
+    },
+    "declared_extra_arms": [
+      "h_share+0.10",
+      "h_share-0.10",
+      "q_H_mult=1.10",
+      "q_H_mult=1.40",
+      "q_O_mult=0.40",
+      "q_O_mult=0.70",
+      "kappa=0.960",
+      "child_wage+10pct",
+      "q_O_mult*0.80",
+      "sorting_OFF"
+    ]
+  },
+  "declared_constants": {
+    "kappa": 0.949,
+    "kappa_sensitivity": 0.96,
+    "kappa_lag_years": 3,
+    "scored_cells_a": 30,
+    "scored_anchor_cells_d": 53,
+    "seed": 20261120,
+    "meas_completion_factor_m": 1.1
+  },
+  "verdict_vocabulary": [
+    "PASS",
+    "FAIL",
+    "MIXED",
+    "UNDETERMINED"
+  ],
+  "guard_status_vocabulary": [
+    "GUARD-PASS",
+    "GUARD-FAIL",
+    "BASELINE-GUARD-PASS",
+    "BASELINE-GUARD-FAIL",
+    "KAPPA-GUARD-PASS",
+    "KAPPA-GUARD-FAIL",
+    "FROZEN-FILE-GUARD-PASS",
+    "FROZEN-FILE-GUARD-FAIL",
+    "DETERMINISM-PASS",
+    "DETERMINISM-FAIL"
+  ],
+  "guards": {
+    "E1": "bimodal OFF + kappa OFF => sha256(panel projected to v1.3 columns) == 47d4b082...",
+    "E2": "bimodal OFF + kappa ON => primary/lower/tertiary cell-identical to v1.3 (6720 rows); upper differs only where the cap binds; 0/53 completion-ratio violations",
+    "E3": "frozen-file sha256 invariance across generator_v1_2/, generator_v1_3/, generator_v1_4_demand/, shadow_module/, repro_path_2026-11-20/",
+    "E4": "determinism: run1 == run2 byte-for-byte",
+    "R1": "ratchet construction audit: 0 reversal tokens; Tstate non-decreasing; opened rungs non-decreasing (failure => run VOID)",
+    "R2": "monotonicity report, descriptive only"
+  },
+  "held_data_ask": {
+    "status": "HELD — never fabricated",
+    "items": [
+      "DepEd/CHED seats vs enrolment by level/track/region",
+      "private/public shares of enrolment and provision by level/track",
+      "SHS voucher take-up by track/region",
+      "any seat-utilisation or quality target"
+    ],
+    "corroboration_that_blocked": "10_massification/data/STATE_CAPACITY.csv:2-3 (school-count and classroom series DATA BLOCKED)"
+  },
+  "banned_language": {
+    "phrase": "demand falsified",
+    "also_paraphrases": true,
+    "correct_label": "the unrationed single-gate model cannot represent a bimodal system"
+  },
+  "validation_scope_disclosure": "v1.3/v1.2 levels are a 2021-2024 placement: 9/33 within +/-5 pp (EXP-7 ENDPOINT-ONLY); median lower -29.44, upper -27.59 pp; 24-37 pp low before 2021; every level statement in this experiment is readable as a 2022-2024 placement only",
+  "inputs": [
+    {
+      "path": "10_massification/extensions/synthetic_2026-11-20/MODEL_ARCHITECTURE.md",
+      "sha256": "31ad5234ea2d783a61bc81ef8f5f71eec3b44dc4e48abcb87675f49242fa9b15",
+      "bytes": 37721,
+      "label": "DECLARED-DIRECTIVE",
+      "role": "A5/A4 amendment source of record"
+    },
+    {
+      "path": "10_massification/extensions/synthetic_2026-11-20/THEORY_FRAME.md",
+      "sha256": "7bc96f4bc61d567672a58aa15efd94c4b84104d095a84212f8dab7e56316359a",
+      "bytes": 6274,
+      "label": "DECLARED-THEORY",
+      "role": "combined theory frame; one-way ratchet; bimodal definition"
+    },
+    {
+      "path": "10_massification/extensions/synthetic_2026-11-20/v1_2/PRE_DECLARATIONS.md",
+      "sha256": "fde18d405d875167977b350a925c28248c3007d2813dcdb29219d3baf0b95f16",
+      "bytes": 10579,
+      "label": "DECLARED",
+      "role": "frozen v1.2 spec; bands reused in check (b)"
+    },
+    {
+      "path": "10_massification/extensions/synthetic_2026-11-20/generator_v1_2/code/sim_v1_2.py",
+      "sha256": "61123aa9370a407487407bf3ff4b97287aea67cac5f90629e540a6e8cc855e7c",
+      "bytes": 63078,
+      "label": "FROZEN-CODE",
+      "role": "v1.2 base (ancestor of v1.3)"
+    },
+    {
+      "path": "10_massification/extensions/synthetic_2026-11-20/generator_v1_2/PARAMS.md",
+      "sha256": "0d619781c4e059f54cf771fb385475f5f939dceced5036e8a21b6e07a2b315e3",
+      "bytes": 23735,
+      "label": "DECLARED",
+      "role": "v1.2 parameter provenance and childworld borrow ledger"
+    },
+    {
+      "path": "10_massification/extensions/synthetic_2026-11-20/generator_v1_2/results/synthetic_panel_v1_2.csv",
+      "sha256": "14729c5141a71dd9aaf87a5ad2e973a84b5f04603577aae627f2833276fac5ac",
+      "bytes": 5086014,
+      "label": "SYNTHETIC",
+      "role": "v1.2 panel; transitive guard reference"
+    },
+    {
+      "path": "10_massification/extensions/synthetic_2026-11-20/generator_v1_3/code/sim_v1_3.py",
+      "sha256": "70ae8f0eef83358493dad3d3feb2d6a8841c4bb6fad3966627f4eed70e2a9877",
+      "bytes": 122690,
+      "label": "FROZEN-CODE",
+      "role": "base instrument for v1.5"
+    },
+    {
+      "path": "10_massification/extensions/synthetic_2026-11-20/generator_v1_3/results/synthetic_panel_v1_3.csv",
+      "sha256": "47d4b082f4ba5838cc20fbb09e59dd3dd847ad25393b1ce091069c94496657e3",
+      "bytes": 5492788,
+      "label": "SYNTHETIC",
+      "role": "E1 byte-identity reference; pre-freeze arithmetic"
+    },
+    {
+      "path": "10_massification/extensions/synthetic_2026-11-20/generator_v1_3/results/shadow_checks_v1_3.csv",
+      "sha256": "e6a83de509362fbeb1e1e987e9b2b30dd1ff1e13905d56db0938cab911bd68f1",
+      "bytes": 4682,
+      "label": "SYNTHETIC",
+      "role": "v1.3 c1-c6 values carried as comparison (c-iv)"
+    },
+    {
+      "path": "10_massification/extensions/synthetic_2026-11-20/generator_v1_3/results/shadow_gates_v1_3.csv",
+      "sha256": "df3cab007ce5fbe9a48d58b0701d04e6d762591848ca1517a634c8f897edb351",
+      "bytes": 244777,
+      "label": "SYNTHETIC",
+      "role": "gate state Q/pi0 reference (V8)"
+    },
+    {
+      "path": "10_massification/extensions/synthetic_2026-11-20/generator_v1_4_demand/PRE_DECLARATIONS.md",
+      "sha256": "9ed0cae353c9a3dfba00582ff47d19ca8b761d8dd7b7ce5f9a8a8e4c5c5f49b3",
+      "bytes": 27297,
+      "label": "DECLARED",
+      "role": "A3-D frozen spec (parked; not re-scored)"
+    },
+    {
+      "path": "10_massification/extensions/synthetic_2026-11-20/generator_v1_4_demand/code/sim_v1_4_demand.py",
+      "sha256": "6e4a6761fa32325c61f138037a1e5c8d5e578e19f8a2ee2519e73e8f2332b2d1",
+      "bytes": 157497,
+      "label": "FROZEN-CODE",
+      "role": "v1.4 guard convention (verified)"
+    },
+    {
+      "path": "10_massification/extensions/synthetic_2026-11-20/generator_v1_4_demand/results/_ablation/synthetic_panel_v1_4_demand_off.csv",
+      "sha256": "47d4b082f4ba5838cc20fbb09e59dd3dd847ad25393b1ce091069c94496657e3",
+      "bytes": 5492788,
+      "label": "SYNTHETIC",
+      "role": "PROOF the OFF-arm convention reproduces v1.3 (hashes 47d4b082...)"
+    },
+    {
+      "path": "10_massification/extensions/synthetic_2026-11-20/shadow_module/PRE_DECLARATIONS.md",
+      "sha256": "cf8c61cb818cd63acfb2ada594bc9541bfcb0711f801e13b7eee3b86508f94f2",
+      "bytes": 18823,
+      "label": "DECLARED",
+      "role": "frozen v1.3 shadow spec (cf8c61cb...); c1/c3/c2 thresholds reused"
+    },
+    {
+      "path": "10_massification/extensions/synthetic_2026-11-20/shadow_module/PARAMETERS.csv",
+      "sha256": "cb49d3197b911451f8b1e32080fbe6d095f181440572e1a2b72005dc4302703a",
+      "bytes": 10915,
+      "label": "DECLARED",
+      "role": "B17 H=20, B23 z_q reused verbatim"
+    },
+    {
+      "path": "10_massification/extensions/synthetic_2026-11-20/shadow_module/PRE_DECLARATIONS_S1_NOTE.md",
+      "sha256": "af49a616a7b57c4ef23a693c155d022cd17817f66f5acafba4dc6798dedb65eb",
+      "bytes": 3023,
+      "label": "DECLARED",
+      "role": "binding controller note; c3/c4 reading"
+    },
+    {
+      "path": "10_massification/extensions/repro_path_2026-11-20/PRE_DECLARATIONS.md",
+      "sha256": "74f9d0e0ece9680eaba470f3979f5d1e6042d7851585962cb1cdf7d365b3db12",
+      "bytes": 21525,
+      "label": "DECLARED",
+      "role": "EXP-7 frozen spec (74f9d0e0...); kappa declaration"
+    },
+    {
+      "path": "10_massification/extensions/repro_path_2026-11-20/FINDINGS.md",
+      "sha256": "eb868567669e434282be68eaeec4138a7961a4485e767511f558a613cc45ab52",
+      "bytes": 12547,
+      "label": "SYNTHETIC",
+      "role": "ENDPOINT-ONLY + b2; pipeline must be built in"
+    },
+    {
+      "path": "10_massification/extensions/repro_path_2026-11-20/results/KAPPA_LINK.csv",
+      "sha256": "671962dc585bcc833215ecc22823fb46d26f65b8a181dd9a6d8aa96dfb6b1e38",
+      "bytes": 7991,
+      "label": "SYNTHETIC",
+      "role": "53 scored cells; 20/53 violations before, 0 after"
+    },
+    {
+      "path": "10_massification/data/UNIVERSALIZATION_SERIES.csv",
+      "sha256": "85bc869396ebfcb39e3e1a21a31af219e75a07326c738a51d2bfdbe536737ddb",
+      "bytes": 592750,
+      "label": "OBSERVED",
+      "role": "PHL completion/GER/OOS anchors; kappa pair provenance"
+    },
+    {
+      "path": "10_massification/data/STATE_CAPACITY.csv",
+      "sha256": "704efacad00f0ba7ddf579459a930d064fdb0f4b882cffbbf44a6cbecd585044",
+      "bytes": 641644,
+      "label": "OBSERVED",
+      "role": "PTR / students-per-classroom proxies; DATA BLOCKED rows 2-3"
+    },
+    {
+      "path": "10_massification/data/SCHOOL_EXPANSION.csv",
+      "sha256": "c218e6c9bd784e135e089ebecefec21112a09e6bf2c778599a33bc81b78c8ea3",
+      "bytes": 8749,
+      "label": "OBSERVED",
+      "role": "teacher/classroom context (read, not encoded)"
+    },
+    {
+      "path": "10_massification/data/POLICY_TIMELINE.csv",
+      "sha256": "a068b5bf92cee52e442231ef8de63e1b3814d1e42cd61b02969ccf1f3fb3353e",
+      "bytes": 4097,
+      "label": "OBSERVED",
+      "role": "K-12 2013 / free SHS 2016 policy facts"
+    },
+    {
+      "path": "10_massification/data/JOBS_AND_MARKETS_PANEL.csv",
+      "sha256": "aaaab2744803989ff0f347e27d5824c9b0086b967914d96d21ecd354329787d3",
+      "bytes": 2838863,
+      "label": "OBSERVED",
+      "role": "labour-market context (read, not encoded)"
+    },
+    {
+      "path": "09_relations/data/panel_wdi_long.csv",
+      "sha256": "a37629ae5d4f9ed2be4c71e33bfc876131880f65d356c88bd4d047a9bbdeae75",
+      "bytes": 2965833,
+      "label": "OBSERVED",
+      "role": "SE.PRM.PRIV.ZS / SE.SEC.PRIV.ZS private-share proxies"
+    },
+    {
+      "path": "08_council/DECISIONS.md",
+      "sha256": "6fdcf8eea440d4cc5e5d94ffc42d107d6788426a1a2b32d151575a338c203148",
+      "bytes": 118678,
+      "label": "DECLARED",
+      "role": "D117-D125 (D119, D121, D124, D125)"
+    },
+    {
+      "path": "08_council/brief_022/SYNTHESIS_022.md",
+      "sha256": "9508dd55be8dd64da8322a8277c8342a4f50be6790a3d287e39e7004537c109b",
+      "bytes": 49519,
+      "label": "DECLARED",
+      "role": "cycle-14 V1-V8 facts (V2, V3, V6, V8)"
+    }
+  ],
+  "verify_command": "cd /Users/treymenefee/massification_live/experiments/massification-2026-11-20 && shasum -a 256 -c 10_massification/extensions/synthetic_2026-11-20/generator_v1_5_bimodal/SHA256SUMS.txt",
+  "note": "Paths in SHA256SUMS.txt are relative to the programme root (massification-2026-11-20/), not to this directory."
+}

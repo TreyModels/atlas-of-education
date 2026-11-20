@@ -139,8 +139,9 @@ way is precisely what this diagnostic cannot say — no direction claim is made,
 **Caveat carried with the result.** κ = 0.949 is the observed **median**, not the observed **maximum** (1.072).
 A median-placed necessary-condition constraint is expected to censor a panel that sits above the observed
 distribution; the informative numbers are therefore *how many* years are censored (20/53), *where* the
-censoring starts (2006), and *what 2024 becomes* (63.97), not the mere existence of violations. The 0.960
-sensitivity shows the class is stable.
+censoring starts (2006), and *what 2024 becomes* (63.97), not the mere existence of violations. The start is
+smooth — 2005 sits 0.69 pp below the bound, 2006 is 0.13 pp above it — so "first violation 2006" is a crossing,
+not a break; the margin then widens to +18.31 pp by 2022. The 0.960 sensitivity shows the class is stable.
 
 ---
 

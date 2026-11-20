@@ -1083,3 +1083,21 @@ model-specification failure.
 - **v1.5 level claims must be scored on the path** (counts over observed cells, D119/EXP-7 leg A), not a single endpoint.
 - Recorded in `MODEL_ARCHITECTURE.md` A5 addendum 2; the v1.5 design deliverable will be checked against this before its
   predeclaration is frozen (a pre-run S1 amendment is legitimate if needed).
+
+### l) Amendment A5 / v1.5 BIMODAL-GATE predeclaration FROZEN — run-ready, NOT RUN (D127)
+
+- `synthetic_2026-11-20/generator_v1_5_bimodal/` (predecl sha256 **`7178e3d2…`**, 32/32 SHA verify; no results dir, no
+  RNG). **Tier O** open low-cost places whose take-up is a utility equilibrium; **unfilled places are a primary object**
+  (no reallocation to Tier H). **Tier H** rank-rationed, carrying **both** the school gate and the **credentialed-job
+  rung (p4 ≈ 0.151)**. Outside option = frozen childworld four-state block. **κ = 0.949 in-loop admission cap**
+  (declared, never fitted). **One-way ratchet** = three declared absences, no reversal term, **no reversal diagnostic**.
+- **Checks frozen** (a)–(e) with thresholds; **two orthogonal switches / four arms** (A00 no-re-fit guard must
+  reproduce the v1.3 panel byte-for-byte `47d4b082…`; A01 linked arm reported separately; A11 scored).
+  **Pre-freeze arithmetic (declared, not results): κ×67.4073 = 63.9695, so check (b) is expected MIXED**; check (a) is
+  a declared **representation** check.
+- **HELD DATA ASK:** DepEd/CHED seats-vs-enrolment by track/region, private/public shares, SHS voucher take-up,
+  utilisation/quality — not on disk; declared proxies only (DERIVED, distortions stated). **Scope honesty:** the current
+  stack already has 0.1418 spare upper places plus a binding job gate, so "bimodal" is scoped to **three declared
+  absences**, not literal absence.
+- **Not run.** Parks stay intact until the v1.5 build/run (next worker job). No re-tune of A3-D; no fitting to the known
+  outcome.

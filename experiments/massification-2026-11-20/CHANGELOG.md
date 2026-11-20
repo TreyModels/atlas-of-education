@@ -306,3 +306,16 @@ manifests and error logs.
   (κ = 0.949 declared from the observed median; 20/53 → 0/53 violations; guards pass) with class **b2** (linked upper
   2024 63.97, delta −12.67 pp). The pipeline link must be built into v1.5; v1.5 BIMODAL-GATE predeclaration (κ + two
   orthogonal no-refit guards) in production. No re-fit; no causal/direction claim.
+
+## 2026-11-20 — Amendment A5 / v1.5 BIMODAL-GATE predeclaration FROZEN, run-ready NOT RUN (D127)
+
+- `generator_v1_5_bimodal/` (predecl `7178e3d2…`, 32/32 SHA; no results/RNG): Tier O open low-cost places with unfilled
+  places as a primary object (no reallocation to Tier H); Tier H rank-rationed carrying both the school gate and the
+  credentialed-job rung (p4 ≈ 0.151, V8); childworld outside option; **κ = 0.949 structural in-loop admission cap**
+  (declared, never fitted); **one-way ratchet** (three declared absences, no reversal term, no reversal diagnostic);
+  checks (a)–(e) with thresholds and four arms (A00 guard = byte-identical v1.3 panel).
+- **Pre-freeze expectation declared:** κ×67.4073 = 63.9695 ⇒ check (b) expected MIXED; (a) a representation check.
+  **HELD DATA ASK:** DepEd/CHED seats-vs-enrolment by track/region, private/public shares, SHS voucher take-up,
+  utilisation/quality — proxies only, DERIVED, distortions stated. Scope honesty: current stack already has 0.1418 spare
+  upper places + a binding job gate, so "bimodal" = three declared absences.
+- **Not run**; parks intact until the v1.5 build/run. No re-tune of A3-D; no fitting to the known outcome.
