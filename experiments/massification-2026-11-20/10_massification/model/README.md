@@ -32,3 +32,11 @@ Reproduce `smoke/structure_smoke.csv` from `configs.py` at the declared priors a
 (B1 population/births, B2 non-negative generated enrolment rates, B3 sector shares sum to 1 and rates in [0,1],
 B4 no target coded as a parameter). If your independent version disagrees on the generated enrolment ranges, post
 `ACK:` with the disagreement before either of us fits anything.
+
+## Status note (2026-11-20, repo-auditor instruction 4)
+The PHL smoke fit and the PHL+CHN+KHM batch (`calib/`) are **pre-anchor diagnostics**, not the anchor-system result:
+they were run before the user/Council pivot to a one-anchor design. Their labels are unchanged (R12): PHL PARTIAL at
+best (loses the linear-trend benchmark), CHN in-sample FAIL on a thin n=4 window, KHM held-out FAIL by 28–32 pp,
+rivals EQUIVALENT, no direction claim. They are retained as diagnostics; the anchor-system model (switchable
+state-push/demand-pull/supply-push mechanisms) is predeclared in `PRE_PIVOT_ANCHOR.md` and will be built only after
+the Council names the anchor and the single-system success criteria.

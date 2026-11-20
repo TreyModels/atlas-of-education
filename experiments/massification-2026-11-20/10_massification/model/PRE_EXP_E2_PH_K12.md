@@ -101,3 +101,12 @@ pre-trends pass; the cell is not re-run silently.
 indicator/interaction; (c) report the headline estimate with and without COVID years. Rule: if the sign of the
 estimated effect flips between (a) and (c), the cell is reported **INCONCLUSIVE/COVID-CONFOUNDED** — not support,
 not a null. No re-specification may be chosen after seeing which version is "nicer" (R12).
+
+## AMENDMENT — MDE ruling (repo-auditor instruction 3; D23)
+**Ruling (binding, predeclared):** the cell PASSES only if the estimated post-reform effect is **≥ the predeclared
+MDE ≈ 4.0 pp** (computed above: s=2.5 pp, n_pre≈6, n_post≈6, SE≈1.44 pp, 80% power) **and** pre-trends pass **and**
+the placebo outcome is null. An estimate **below the MDE** is reported as **INCONCLUSIVE — not support and not a
+null** (it cannot distinguish a true 3–4 pp effect from zero). Claim cap stands: with ~6 pre-reform observed
+completion points the maximum claim is a descriptive association; COVID-year sensitivity per the section above must
+be reported in the same table, and a sign flip between the COVID-excluded and COVID-included estimates makes the cell
+**INCONCLUSIVE/COVID-CONFOUNDED**. No re-specification after seeing results (R12).

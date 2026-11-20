@@ -41,13 +41,17 @@ exponents** (secondary +0.286, tertiary +0.776, completion logit law) which must
 **The scaling exponents are never fit; the holdout period and KHM are never used in the repair fit.**
 
 ## What counts as PASS / PARTIAL / FAIL (predeclared)
-- **PASS (repair works):** the repaired structural version (i) keeps completion fit/holdout inside brief-013 §3
-  tolerances; (ii) **generates** secondary and tertiary income exponents within **±1 se of the A1 values**
-  (|e_gen − e_A1| ≤ 1·se) out of sample; (iii) keeps cohort-flow conservation exact; (iv) KHM held-out completion
-  within the §3 out-of-sample tolerance; (v) no target was coded as a parameter. Only then may scaling be described
-  as *generated*.
-- **PARTIAL:** (i) and (iii)–(v) hold but one or both exponents differ by 1–3 se, or the sign is now right but the
-  magnitude is outside 1 se → scaling is *partially generated*; descriptive only.
+- **PASS (repair works) — AMENDED to Council A3 estimator-range rule (D31):** the repaired structural version
+  (i) keeps completion fit/holdout inside brief-013 §3 tolerances; (ii) **generates** the correct **sign** for all
+  three classified laws (S1 secondary GER~income; S2 tertiary GER~income; S4 lower-secondary completion~income) and
+  the generated exponent lies inside the **A3 estimator range** (within-country to between-country bounds from
+  `relations/scaling_laws.csv`) for **≥2 of the 3** laws out of sample; (iii) keeps cohort-flow conservation exact;
+  (iv) holds the holdout period 2011–2024 untouched and no target coded as a parameter. Under A3, containment within
+  **±1 se of the A1 values is a STRICTER DESCRIPTIVE CHECK only** — reported, not required for PASS.
+  Only then may scaling be described as *generated*.
+- **PARTIAL:** (i) and (iii)–(iv) hold, the signs are now right, but the A3 range containment holds for only one of
+  the three laws (or for two only at the ±1 se stricter descriptive check) → scaling is *partially generated*;
+  descriptive only.
 - **FAIL:** exponent still wrong-signed, or any conservation violation, or completion/holdout tolerances broken by the
   change, or the repair requires the exponent as an input (R4 violation).
 - **EQUIVALENT:** if the repair improves scaling only because it adds a free channel with no new discriminating

@@ -77,3 +77,22 @@ fitting — report which parameter had to move (R20). HKG is a timing/ceiling te
 
 E1-class two-shock identification is **secondary** until the anchor works (user directive); E1 stays parked. Rival
 model comparison is the substitute for causal direction until the anchor is shown. Shadow education remains closed.
+
+
+## B2. ASYMMETRY — the anchor's discriminating signal (A6; verified on disk)
+
+Observed PHL completion: primary 83.16 (1999) → ≥90 in **2017** (91.92) → 98.30 (2024); lower-secondary 58.86 → ≥90 in
+**2024** (92.41); upper-secondary 59.70 → 75.03 (2024), **never ≥90**; tertiary GER ≥50 in **2024–25**.
+The model must reproduce **which milestone moved and when** (ordering and gaps), ±5 y (±3 y narrow); a single shared
+curve/timing is a structural miss (R23); generating top-level universalization the record does not show is a
+false-positive failure (R6). Anchor fit 1999–2013, holdout 2014–2024 (policy test not circular).
+
+## B3. Rival order (testability split; A6 §4)
+
+**Testable now, in order:** (1) world-society timing (adoption vs global declaration dates; flat skills constraint —
+two report-based facts on disk); (2) state-building step (2013 RA 10533: step in stage structure/completion; place/
+teacher series ASKed); (3) demographic/cohort contrast (PHL cohort still growing; contrast with JPN/KOR);
+(4) formal-model shapes (GXL overshoot, gate parameters; GER swing available). **Design-only (explicit data asks):**
+(5) human capital — PSA returns by education (FIES/APIS/LFS microdata, 403-blocked; external request needs user
+approval); (6) signalling/MMI — employer requirement series + household surveys (Enterprise Surveys credential/skills
+module). No rival may be dropped silently; design-only rivals are listed in every results file.

@@ -84,3 +84,10 @@ fire.
 | **R20** | **Portability requires fixed behaviour:** if the transferred model needs behavioural re-fitting, extra free parameters, or target fitting to match HKG/CHN, portability FAILS; report which parameter had to move. Only declared country inputs may re-set | A5 §3 |
 | **R21** | **Mechanism events are exogenous, predeclared and falsifiable:** state-push/demand-pull dates enter as inputs; the model's event break must be predeclared (sign, band, placebo); fitting an event's effect to the outcome is a rule violation (R4/R12); a trajectory match without event breaks is not "mechanisms shown" | A5 §2 |
 | **R22** | **Anchor-first:** no portability claim before the anchor (PHL) passes its trajectory, scaling, timing and mechanism-event criteria; E1-class identification stays secondary until then | user directive; A5 §1 |
+
+
+## Amendment A5 (2026-11-20 15:40) — R23 (anchor asymmetry)
+
+| # | Rule | Trigger |
+|---|---|---|
+| **R23** | **Single-curve / symmetric-universalization failure:** for the anchor, if the model cannot reproduce the milestone **ordering and gaps** (primary ~2017, lower-secondary ~2024, upper-secondary never by 2024, tertiary GER ~2024–25), the anchor reproduction claim is at most PARTIAL; a single shared curve/timing is a structural miss, and generating upper-secondary universalization the record does not show is a false-positive failure (R6) | A6; verified PHL completion series |

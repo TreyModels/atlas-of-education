@@ -82,15 +82,25 @@ def run(iso, rival='complementary', priors=None, t0=T0, t1=T1, shocks=None):
         # --- schooling block (supply side responds to lagged job opportunities)
         jlag = job_hist[max(0, len(job_hist) - 1 - lag_d)] if len(job_hist) > lag_d else 1.0
         intake_rate = float(np.clip(intake_rate * (1.0 + e_d * (jlag / max(job_opp, 1e-9) - 1.0) * 0.1), 0.2, 1.0))
+        # REPAIR (structural, default off): income-facing participation margin. eta_in=0, m_k=0 reproduces the
+        # unrepaired model exactly (unrepaired results retained alongside, R12).
+        eta_in = pr.get('eta_in', 0.0); lag_in = int(pr.get('lag_in', 0))
+        if eta_in > 0:
+            gdp_lag = gdp_hist[max(0, len(gdp_hist) - 1 - lag_in)] if len(gdp_hist) > lag_in else 1.0
+            intake_rate = float(np.clip(intake_rate * (max(gdp_lag, 1e-9) ** eta_in), 0.0, 1.0))
         # progression rates: declared reduced form in income, urbanisation and (demand-led) job opportunity.
         # The intercepts and slopes are the FREE parameters of the calibration (vector theta); no target is a parameter.
         th = pr  # theta dict
         lg = np.log(max(gdp, 1e-9)); lj = np.log(max(job_opp, 1e-9))
         p_pri = float(np.clip(th.get('p_pri0', 0.86) + th.get('g_pri', 0.04) * lg + th.get('u_pri', 0.05) * urb
+                              + th.get('m_pri', 0.0) * lg
                               + (0.02 * e_d * lj if th.get('job_slope', 1) else 0.0), 0.3, 0.995))
-        p_low = float(np.clip(th.get('p_low0', 0.78) + th.get('g_low', 0.05) * lg + th.get('u_low', 0.05) * urb, 0.2, 0.99))
-        p_up = float(np.clip(th.get('p_up0', 0.70) + th.get('g_up', 0.06) * lg + th.get('u_up', 0.04) * urb, 0.1, 0.98))
-        p_ter = float(np.clip(th.get('p_ter0', 0.35) + th.get('g_ter', 0.06) * lg + th.get('u_ter', 0.03) * urb, 0.02, 0.95))
+        p_low = float(np.clip(th.get('p_low0', 0.78) + th.get('g_low', 0.05) * lg + th.get('u_low', 0.05) * urb
+                              + th.get('m_low', 0.0) * lg, 0.2, 0.99))
+        p_up = float(np.clip(th.get('p_up0', 0.70) + th.get('g_up', 0.06) * lg + th.get('u_up', 0.04) * urb
+                             + th.get('m_up', 0.0) * lg, 0.1, 0.98))
+        p_ter = float(np.clip(th.get('p_ter0', 0.35) + th.get('g_ter', 0.06) * lg + th.get('u_ter', 0.03) * urb
+                              + th.get('m_ter', 0.0) * lg, 0.02, 0.95))
         # --- enrolment stocks from cohort flow (synthetic cohort sizes from pop at entry ages)
         ent = pop[6] * intake_rate
         prim = ent * cyc['primary']

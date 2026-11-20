@@ -192,3 +192,38 @@ See `UNIVERSALIZATION_MILESTONES.md` C1.
    statistical offices) for baseline series to fill the anchor's missing pre-1999 completion and the event/place
    series — each series recorded with source, vintage, observed flag; no imputation as observation; external
    *requests* still need user approval (site/data rules).
+
+
+## A4 Clarification C2 (2026-11-20 15:30) — censored timing bounds
+
+Left-censored milestones enter the timing gate as **one-sided bounds** ("crossed at or before Y0"), never point
+years, never fit targets; the model must cross at or before Y0 with no point credit. Historical pre-Y0 sources may
+upgrade a bound only when obtained and provenance-labelled. Completion milestones are UNABLE where UIS completion is
+absent (JPN) unless a national series is obtained; GER cannot substitute for completion in the timing gate.
+
+
+## Amendment A6 (2026-11-20 15:40) — anchor's discriminating signal is ASYMMETRY (verified on disk)
+
+**Verified observed pattern (PHL completion, `10_massification/data/UNIVERSALIZATION_SERIES.csv`, observed cells):**
+primary completion 83.16 (1999) → 91.92 (**first ≥90 in 2017**) → 98.30 (2024); lower-secondary 58.86 (1999) →
+**first ≥90 in 2024** (92.41); upper-secondary 59.70 (1999) → 75.03 (2024) and **never ≥90**; tertiary GER 16.34
+(1971) → 52.99 (2026), first ≥50 in the 2024–2025 band.
+
+1. **Asymmetry is the anchor's discriminating outcome.** The model must reproduce **which milestone moved and when**:
+   primary crosses 90 ≈2017, lower-secondary ≈2024, **upper-secondary does not cross 90 by 2024**, tertiary GER
+   crosses 50 ≈2024–25. Crossing years within ±5 y (±3 y narrow band); upper-secondary must **not** cross (R6
+   false-positive applies to a top-level universalization the record does not show). **A single universalization curve
+   / one shared timing cannot pass** — a single-curve fit is PARTIAL at most (R23).
+2. **Anchor fit/holdout amendment:** fit **1999–2013** (observed PHL completion available 1999+), holdout
+   **2014–2024**, so the K-12 state-push test is not circular (the earlier 1999–2010 smoke window is superseded for the
+   anchor). Global gate holdout 2011–2024 remains for non-anchor cells; the anchor's 2014–2024 holdout is declared as
+   the policy-test window.
+3. **Rival scoring:** score rivals on **milestone ordering and gaps**, not level closeness (lit note §4.3).
+4. **Rival testability split (lit `RIVAL_MODELS_ANCHOR.md`):** testable now — world-society timing, state-building
+   step, demographic/cohort contrast, formal-model shapes; **design-only** — human capital (PSA returns by education,
+   blocked) and signalling/MMI (employer requirement/household data, blocked). The two blocked rivals are **explicit
+   data asks** (PSA microdata; Enterprise Surveys credential/skills module), not modelling-order placeholders; they
+   are listed as DESIGN-ONLY until data arrive.
+5. **Report-layer rule:** anchor claims must rest on **observed on-disk evidence**; blocked sources (OECD/ILO/PSA) may
+   not be load-bearing; UNREAD documents (e.g., BEPER 2019) are registered and retrieved from public sources before
+   use — no citation of unread material.

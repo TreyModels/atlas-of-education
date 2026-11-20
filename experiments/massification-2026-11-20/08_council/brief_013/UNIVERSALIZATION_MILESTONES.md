@@ -77,3 +77,14 @@ crossing, left-censored applies. No timing claim may rest on modelled/imputed ce
   crossing. No imputation may serve as observation.
 - **Slate re-rank:** E6 (timing comparison) rank #2; **E9 (crossing-year reconstruction, data-first) enters at rank
   #3**; E4 Bartik rank #4; E2 rank #5; E1 rank #6 (parked); E3 rank #7 (DATA BLOCKED); E5 rank #8; E7 rank #9; E8 KILL.
+
+
+## Clarification C2 (2026-11-20 15:30, Council) — censored crossings are one-sided bounds
+
+Confirmed: **left-censored milestones enter the timing gate as one-sided bounds** ("crossed at or before the first
+observed year Y0"), **never as point years**, and **never as fit targets** (R4/R19). The model must cross at or
+before Y0; no point-timing credit is given. If historical pre-Y0 observations are obtained from public sources
+(MEXT/NIER, Bank of Korea, HK EDB, national statistical yearbooks), recompute the band and label the provenance
+(observed/reconstructed); only then may a bounded observed crossing be reported. Where completion is unavailable
+(JPN CR.1–CR.3 absent), the milestone is **UNABLE** unless a national completion series is obtained — do not
+substitute GER for completion at these levels in the timing gate (GER remains a labelled check).
