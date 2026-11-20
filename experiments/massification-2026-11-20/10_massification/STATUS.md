@@ -221,6 +221,13 @@ Two external requests are drafted and held; per protocol, external data requests
    Status: **AWAITING USER APPROVAL**.
    Public retrieval is authorised: BEPER 2019 must be retrieved from public sources and logged before any citation
    (D49); the ILO/OECD/PSA 403s remain recorded as blocks. Op centre requested to surface both to the user.
+3. **A9 state-capacity data asks** (Council A9/D59, queued only — nothing sent; user is away and asked for no
+   op-centre updates beyond the queue): (a) **fiscal** — tax/GDP, government revenue/GDP, revenue volatility
+   (education spending %GDP/%gov exp and per-student are observed/derived already); (b) **delivery** —
+   schools/classrooms counts, procurement, subnational delivery series (PTR/teacher path observed; PIDS hires
+   `check`/medium; school/classroom counts UNABLE); (c) **enforcement** — inspection/sanctions/attendance-enforcement
+   indicators (compulsory age/duration are policy facts; 4Ps = weak B marker). Status: **AWAITING USER APPROVAL /
+   queued; observed-only or DATA BLOCKED; never inferred from outcomes (R28)**.
 
 ## 3i. A7 adopted — timing alignment; anchor mechanism verdict is DESCRIPTIVE
 

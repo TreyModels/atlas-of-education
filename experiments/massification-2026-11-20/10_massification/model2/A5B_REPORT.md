@@ -71,3 +71,24 @@ All four testable rivals **fail/are not equivalent (R3)** on the PHL anchor reco
 reproduced by any of them, and the two blocked rivals cannot be tested. The anchor-vs-rival comparison remains
 **deferred to A1**: the anchor model must beat this (weak) rival field on crossing ordering/spacing and event breaks,
 or the honest A5 result is EQUIVALENT. No direction/causal claim; no git writes (executor commits).
+
+---
+
+## FINAL SCORING under the repair-failure ruling (D56–D58/R27, branch 3k)
+Phase stands at **conditional reproduction + observational equivalence**; universalization capped **PARTIAL**;
+anchor A1 descriptive-only. A5b's final scoring (added after the ruling; no re-fit, no threshold change):
+
+- **Pairwise observational equivalence among the four testable rivals:** {state_building, demographic_cohort} are
+  equivalent to each other only in the empty sense (both predict no crossing in the holdout); {formal_shapes} and
+  {world_society} are each distinguished from all others (single early primary crossing, 2023 vs 2014).
+  File: `runs/a5b_pairwise_equivalence.csv`.
+- **Equivalence to the observed record** (primary 2017, lower 2024, tertiary 2025, upper never by 2024; ±5 y):
+  **the equivalence set is EMPTY** — no testable rival is equivalent to the observed ordering/spacing.
+  File: `runs/a5b_equivalence_to_observed.csv`.
+- **No rival, including the anchor model class, reproduces the observed milestone ordering**; under D56–D58 the
+  honest phase result is **EQUIVALENT + PARTIAL universalization**, with the observed asymmetry (primary 2017 <
+  lower 2024 < tertiary 2025; upper never ≥90) left unreproduced by this rival field.
+- **Design-only rivals remain listed in every results file** (human capital — PSA returns by education; signalling/
+  MMI — Enterprise Surveys credential module; both DATA BLOCKED, not modelled, not claimed as tested, D48/D49).
+- **No direction/causal claim; event evidence descriptive (R24/R25); never supplied as schedules (R4/R14).**
+  Final scoring file: `runs/a5b_final_scoring.txt`; meta `runs/a5b_final_meta.json`.
