@@ -41,18 +41,25 @@ peak model capability. Work from the canonical copies, not iCloud.
   **awaiting user approval — do not send**.
 - Bridge (`atlas-bridge`) has been unreliable (local writes time out); GitHub + files are the record.
 
-## Model routing (use it deliberately)
+## Model routing (use it deliberately; evidence-backed brief at 06_report/MODEL_ROUTING_RESEARCH.md)
 
-- **DeepSeek Flash** (`deepseek-official/deepseek-flash`): default worker/orchestrator; best for **web-search
-  and web-fetch-heavy research**, code-run loops, long-context with cache reuse (cache-hit $0.003/M vs GLM
-  $0.03/M). It has a built-in Search & Fetch API — prefer it for source-finding tasks.
-- **Z.AI GLM Flash** (`zai/glm-5.3-flash`; free `zai/glm-4.7-flash`): use for output-heavy generation,
-  multimodal inputs, and DeepSeek peak-hours fallback. **Verify routing works before dispatching a fleet:**
-  call `subagent(provider="zai", model="glm-5.3-flash", prompt="Reply ZAI_OK")`. If it says “not allowed for
-  this Session”, check `~/.dsh/profiles/web/cordis.patch.yml` (provider + allowedModels) and restart the web
-  host: `launchctl kickstart -k gui/$(id -u)/com.trey.dsh-web-iphone`, then use a fresh session.
-- **DeepSeek V4 Pro** (`deepseek-official/deepseek-v4-pro`): escalate only for hard debugging, adversarial
-  review, or final synthesis.
+- **DeepSeek Flash** (`deepseek-official/deepseek-flash`): default worker **and** orchestrator for ~80% of
+  stages. AA Intelligence Index **32.6** (max effort) / 28.6 (high) vs GLM-5.3-Flash 27.8; ~**2.9× faster per
+  task** (14.4 vs 41.4 min); cache-hit $0.003/M vs GLM $0.03/M; built-in **Search & Fetch API** — best for
+  source-finding/web research. Schedule bulk work **off-peak** (prices exactly halved outside 01:00–04:00 and
+  06:00–10:00 UTC weekdays).
+- **Z.AI GLM-5.3-Flash** (`zai/glm-5.3-flash`): **not** a throughput fleet worker (defaults to max reasoning
+  effort, ~41 min/task, max output ~128K) — pin `reasoning_effort` when used. Best roles: **abstention-aware
+  reviewer** (AA non-hallucination 61.7% vs DeepSeek 35.9%) and second reader on citation-bearing or
+  long-document stages. **Free `glm-4.7-flash` is not fleet-usable** (~1 concurrent request, a generation
+  behind) — serialized zero-stakes work only. Verify routing before dispatch:
+  `subagent(provider="zai", model="glm-5.3-flash", prompt="Reply ZAI_OK")`; if "not allowed for this
+  Session", check `~/.dsh/profiles/web/cordis.patch.yml` and restart the web host:
+  `launchctl kickstart -k gui/$(id -u)/com.trey.dsh-web-iphone`, then use a fresh session.
+- **DeepSeek V4 Pro** (`deepseek-official/deepseek-v4-pro`): escalate for hard debugging, adversarial review,
+  final synthesis (3.3× output price). Neither Flash model is safe for final scientific synthesis
+  (GDP.pdf ≤17.2%, Terminal-Bench-Science ≤12.9%) — pair cheap generation with deterministic citation checks
+  and GLM/Pro verification.
 
 ## Your task: run 15 experiments using Z.AI Flash as the worker fleet
 
