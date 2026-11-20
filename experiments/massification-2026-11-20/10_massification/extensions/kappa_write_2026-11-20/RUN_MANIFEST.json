@@ -1,0 +1,233 @@
+{
+  "brief": "Council brief 025, SYNTHESIS_025.md section 6.4, rank #4; D156",
+  "cell": "EXP-24 KAPPA-WRITE",
+  "claims": {
+    "adoption": "NONE",
+    "causal_or_direction_claim": "NONE",
+    "external_request": "NONE",
+    "labels": [
+      "OBSERVED",
+      "DERIVED"
+    ],
+    "model_run": "NONE",
+    "refit": "NONE",
+    "writes_outside_cell": "NONE"
+  },
+  "determinism": {
+    "KAPPA_WRITE_REGISTER.csv": {
+      "byte_identical": true,
+      "run1_sha256": "53c8f6d74f9d5304f92880f0a0923d9ea6f3f30f3bce2b3175317dd565bd9338",
+      "run2_sha256": "53c8f6d74f9d5304f92880f0a0923d9ea6f3f30f3bce2b3175317dd565bd9338"
+    },
+    "KAPPA_WRITE_SUMMARY.csv": {
+      "byte_identical": true,
+      "run1_sha256": "0c14f361c9b0924db023b5b4e0f5fa7a47cbe602ffd6c1b8d0e6ece21e27aec6",
+      "run2_sha256": "0c14f361c9b0924db023b5b4e0f5fa7a47cbe602ffd6c1b8d0e6ece21e27aec6"
+    },
+    "KAPPA_WRITE_USES.csv": {
+      "byte_identical": true,
+      "run1_sha256": "e0cff07ff446289995541013651e04691ea176728c7f93e5df4f355ecc836551",
+      "run2_sha256": "e0cff07ff446289995541013651e04691ea176728c7f93e5df4f355ecc836551"
+    },
+    "all_four_byte_identical": true,
+    "console.txt": {
+      "byte_identical": true,
+      "run1_sha256": "88b83b0e1175230b66d6e9d444dee974f5dc0d4f8fa57cb38299cad355810f6b",
+      "run2_sha256": "88b83b0e1175230b66d6e9d444dee974f5dc0d4f8fa57cb38299cad355810f6b"
+    }
+  },
+  "files": [
+    {
+      "bytes": 14856,
+      "path": "FINDINGS.md",
+      "sha256": "6bfdff11ec883a5e9a2ccf789b782115400b9c59ab95bcb1f806d8c4fee8018e"
+    },
+    {
+      "bytes": 37719,
+      "path": "PRE_DECLARATIONS.md",
+      "sha256": "db20d123835164f0274e7d486d87c9eadd4ef7fa7dbcb74ad6cdb437583776f1"
+    },
+    {
+      "bytes": 9701,
+      "path": "RUN_MANIFEST.json",
+      "sha256": "0baff241ea900f7d0efa02f43e40c502b2572dab2d569ed1bbe9f8ad42129c19"
+    },
+    {
+      "bytes": 1338,
+      "path": "SHA256SUMS.txt",
+      "sha256": "fa83913fd41f5af361e2b053629af9088e7b9cd90f0dd1ef344a70c88ec0c1dd"
+    },
+    {
+      "bytes": 35002,
+      "path": "code/build_predecl.py",
+      "sha256": "b615a4d5e4e4fd9465f861e73576547df9894302c4202486e21027c85117fdce"
+    },
+    {
+      "bytes": 10003,
+      "path": "code/make_manifest.py",
+      "sha256": "ee25ceaba2493810658871c61a167577ed2ca1ef793b5aa8d7e4e518c66bc76f"
+    },
+    {
+      "bytes": 40260,
+      "path": "code/run_kappa_write.py",
+      "sha256": "5f8c4a2b3838c1146842d60b2c39c819b735d390c936335352d414796ea0a5d8"
+    },
+    {
+      "bytes": 2773,
+      "path": "results/KAPPA_WRITE_REGISTER.csv",
+      "sha256": "53c8f6d74f9d5304f92880f0a0923d9ea6f3f30f3bce2b3175317dd565bd9338"
+    },
+    {
+      "bytes": 1361,
+      "path": "results/KAPPA_WRITE_SUMMARY.csv",
+      "sha256": "0c14f361c9b0924db023b5b4e0f5fa7a47cbe602ffd6c1b8d0e6ece21e27aec6"
+    },
+    {
+      "bytes": 94597,
+      "path": "results/KAPPA_WRITE_USES.csv",
+      "sha256": "e0cff07ff446289995541013651e04691ea176728c7f93e5df4f355ecc836551"
+    },
+    {
+      "bytes": 6681,
+      "path": "results/console.txt",
+      "sha256": "88b83b0e1175230b66d6e9d444dee974f5dc0d4f8fa57cb38299cad355810f6b"
+    },
+    {
+      "bytes": 2773,
+      "path": "results/determinism_run2/KAPPA_WRITE_REGISTER.csv",
+      "sha256": "53c8f6d74f9d5304f92880f0a0923d9ea6f3f30f3bce2b3175317dd565bd9338"
+    },
+    {
+      "bytes": 1361,
+      "path": "results/determinism_run2/KAPPA_WRITE_SUMMARY.csv",
+      "sha256": "0c14f361c9b0924db023b5b4e0f5fa7a47cbe602ffd6c1b8d0e6ece21e27aec6"
+    },
+    {
+      "bytes": 94597,
+      "path": "results/determinism_run2/KAPPA_WRITE_USES.csv",
+      "sha256": "e0cff07ff446289995541013651e04691ea176728c7f93e5df4f355ecc836551"
+    },
+    {
+      "bytes": 6681,
+      "path": "results/determinism_run2/console.txt",
+      "sha256": "88b83b0e1175230b66d6e9d444dee974f5dc0d4f8fa57cb38299cad355810f6b"
+    }
+  ],
+  "findings_checks": {
+    "banned_assertions_outside_prohibition_clauses": {
+      "CHN is a forward constraint": false,
+      "the register is clean": false,
+      "the κ-link validates the model path": false,
+      "κ is a parameter": false,
+      "κ is stable across systems": false,
+      "κ predicts upper completion": false,
+      "κ ≈ 0.95 for the Philippines": false,
+      "κ-STABLE is forward-usable": false
+    },
+    "fixed_sentences_present": {
+      "CHN": true,
+      "KHM": true,
+      "KOR": true,
+      "PHL": true
+    },
+    "kor_counter_example_carried": true,
+    "verdict_word_present": true
+  },
+  "inputs_unchanged": {
+    "08_council/DECISIONS.md": {
+      "declared": "b0a314b06f73b1cc933539d77f2e8bc3d4f6237e63ba8541e2b16629708c3e57",
+      "sha256": "b0a314b06f73b1cc933539d77f2e8bc3d4f6237e63ba8541e2b16629708c3e57",
+      "unchanged": true
+    },
+    "08_council/brief_025/SYNTHESIS_025.md": {
+      "declared": "e279e8200bb8504cafb6b5a4f6f70f3f436410d6839b315896877973c50a8beb",
+      "sha256": "e279e8200bb8504cafb6b5a4f6f70f3f436410d6839b315896877973c50a8beb",
+      "unchanged": true
+    },
+    "10_massification/STATUS.md": {
+      "declared": "8fe0a3ec62e1b59cf1e827951662e644471508f7675e892281d82787e47958c4",
+      "sha256": "8fe0a3ec62e1b59cf1e827951662e644471508f7675e892281d82787e47958c4",
+      "unchanged": true
+    },
+    "10_massification/extensions/kappa_fwd_2026-11-20/FINDINGS.md": {
+      "declared": "024d049b763eda29635ab68c954c0850e8ecd22df5daf42421e480ccf443603c",
+      "sha256": "024d049b763eda29635ab68c954c0850e8ecd22df5daf42421e480ccf443603c",
+      "unchanged": true
+    },
+    "10_massification/extensions/kappa_fwd_2026-11-20/results/KAPPA_FWD_DETAIL.csv": {
+      "declared": "a52c322726c8a20b2867e5468e052ba20ff302f8b1f8a3d9f970d12948cce004",
+      "sha256": "a52c322726c8a20b2867e5468e052ba20ff302f8b1f8a3d9f970d12948cce004",
+      "unchanged": true
+    },
+    "10_massification/extensions/kappa_fwd_2026-11-20/results/KAPPA_FWD_RESULTS.csv": {
+      "declared": "da5a78e2113a618da9f4b315bbecbbd8be6227c33e1cb572493d669244ac67a4",
+      "sha256": "da5a78e2113a618da9f4b315bbecbbd8be6227c33e1cb572493d669244ac67a4",
+      "unchanged": true
+    },
+    "10_massification/extensions/kappa_fwd_2026-11-20/results/KAPPA_FWD_SECONDARY.csv": {
+      "declared": "d0ef0a56f515d8126f97480ec75bf77e32823ff1cfb7f7612bd2eb8ffb9fa774",
+      "sha256": "d0ef0a56f515d8126f97480ec75bf77e32823ff1cfb7f7612bd2eb8ffb9fa774",
+      "unchanged": true
+    },
+    "10_massification/extensions/pipe_loo_2026-11-20/FINDINGS.md": {
+      "declared": "2e37159103874214edd95f1cc91533f3ece374f6e8c39d9196470ae8f741d12b",
+      "sha256": "2e37159103874214edd95f1cc91533f3ece374f6e8c39d9196470ae8f741d12b",
+      "unchanged": true
+    },
+    "10_massification/extensions/pipe_loo_2026-11-20/results/PIPE_LOO_PAIRS.csv": {
+      "declared": "692ca7c01b8b3a7105e84339a87f97029b6a50e277681bdcdbe0f02bf027600f",
+      "sha256": "692ca7c01b8b3a7105e84339a87f97029b6a50e277681bdcdbe0f02bf027600f",
+      "unchanged": true
+    },
+    "10_massification/extensions/pipe_loo_2026-11-20/results/PIPE_LOO_RESULTS.csv": {
+      "declared": "7c4faa427f48485393e58a234d1f1cbd2302bbfc11e81d55454cc56b5e5eff6c",
+      "sha256": "7c4faa427f48485393e58a234d1f1cbd2302bbfc11e81d55454cc56b5e5eff6c",
+      "unchanged": true
+    },
+    "10_massification/extensions/repro_path_2026-11-20/FINDINGS.md": {
+      "declared": "eb868567669e434282be68eaeec4138a7961a4485e767511f558a613cc45ab52",
+      "sha256": "eb868567669e434282be68eaeec4138a7961a4485e767511f558a613cc45ab52",
+      "unchanged": true
+    },
+    "10_massification/extensions/repro_path_2026-11-20/results/KAPPA_LINK.csv": {
+      "declared": "671962dc585bcc833215ecc22823fb46d26f65b8a181dd9a6d8aa96dfb6b1e38",
+      "sha256": "671962dc585bcc833215ecc22823fb46d26f65b8a181dd9a6d8aa96dfb6b1e38",
+      "unchanged": true
+    },
+    "10_massification/extensions/repro_path_2026-11-20/results/REPRO_PATH_RESULTS.csv": {
+      "declared": "8666492c396afb6beda094b50e3a414542dd50f5fd49702015b873e6284df227",
+      "sha256": "8666492c396afb6beda094b50e3a414542dd50f5fd49702015b873e6284df227",
+      "unchanged": true
+    },
+    "10_massification/extensions/synthetic_2026-11-20/generator_v1_5_bimodal/results/KAPPA_BIND_CELLS.csv": {
+      "declared": "ce3b1c1277e9618985a7fad7cd3c764dabd1de92146e1a3420495f07ad880162",
+      "sha256": "ce3b1c1277e9618985a7fad7cd3c764dabd1de92146e1a3420495f07ad880162",
+      "unchanged": true
+    },
+    "10_massification/extensions/synthetic_2026-11-20/generator_v1_5_bimodal/results/kappa_cap_audit.csv": {
+      "declared": "e7cebc4e46b72f7d267fe9439802f42cfe519d8405bca1ca8c0350a824306e9b",
+      "sha256": "e7cebc4e46b72f7d267fe9439802f42cfe519d8405bca1ca8c0350a824306e9b",
+      "unchanged": true
+    },
+    "10_massification/extensions/synthetic_2026-11-20/generator_v1_6_repair/results/kappa_object_audit.csv": {
+      "declared": "e9ac569233fe14cc87b49c2bcc65b9cdc1914c8cdf1e2ff628c308d17574791d",
+      "sha256": "e9ac569233fe14cc87b49c2bcc65b9cdc1914c8cdf1e2ff628c308d17574791d",
+      "unchanged": true
+    },
+    "10_massification/extensions/synthetic_2026-11-20/generator_v1_6_repair/results/panel_A01D_kappa.csv": {
+      "declared": "a6ea635f1aea7a35572d1b61bc3b1265a0c57025a5148ab1678f83b9d5b6afcc",
+      "sha256": "a6ea635f1aea7a35572d1b61bc3b1265a0c57025a5148ab1678f83b9d5b6afcc",
+      "unchanged": true
+    },
+    "_all_unchanged": true
+  },
+  "predeclaration": {
+    "embedded_constant": "db20d123835164f0274e7d486d87c9eadd4ef7fa7dbcb74ad6cdb437583776f1",
+    "enforced_at_verdict_time": true,
+    "file": "PRE_DECLARATIONS.md",
+    "sha256": "db20d123835164f0274e7d486d87c9eadd4ef7fa7dbcb74ad6cdb437583776f1",
+    "verdict": "PRE_DECL-FROZEN"
+  },
+  "type": "static register, not a run",
+  "worker": "KW"
+}

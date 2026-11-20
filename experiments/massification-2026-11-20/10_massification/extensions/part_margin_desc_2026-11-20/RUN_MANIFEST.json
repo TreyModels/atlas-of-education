@@ -1,0 +1,410 @@
+{
+  "authority": [
+    "08_council/brief_025/SYNTHESIS_025.md section 6.2 (block items 1-7, copied verbatim)",
+    "08_council/brief_025/SYNTHESIS_025.md section 7 (the seven authoring rules, copied verbatim)",
+    "08_council/brief_025/SYNTHESIS_025.md section 8 (the banned-sentences bullet, copied verbatim)",
+    "08_council/DECISIONS.md D156 (EXP-22 clause), D153(xii), D158",
+    "08_council/brief_025/VERIFICATION_025.csv V35a-V35c (anchors, copied verbatim)"
+  ],
+  "cell": "EXP-22 PART-MARGIN-DESC",
+  "closed_claims": [
+    "no_model_run",
+    "no_re_fit",
+    "no_parameter_set",
+    "no_33_cell_score",
+    "no_9_cell_score",
+    "no_deviation",
+    "no_within_5pp_hit_count",
+    "no_crossing_count",
+    "no_observed_path_coverage_count",
+    "no_cross_source_arithmetic",
+    "no_re_score_of_EXP_18",
+    "no_proxy",
+    "no_adoption",
+    "no_causal_claim",
+    "no_direction_claim",
+    "no_cross_level_margin",
+    "no_required_state_in_any_verdict_path",
+    "no_web_access",
+    "no_server_touch",
+    "no_write_outside_cell_dir"
+  ],
+  "code": {
+    "clock_in_outputs": false,
+    "deterministic": true,
+    "environment": {
+      "implementation": "CPython",
+      "python": "3.11.17"
+    },
+    "manifest_builder": {
+      "entry_point": "code/make_manifest.py",
+      "sha256": "3e8a155b2c2b2f71e31e24d1f8b9f2b2762de1a513a1c8c69dc5b3e660755a55"
+    },
+    "network": "none",
+    "rng": "none",
+    "runner": {
+      "entry_point": "code/run_part_margin_desc.py --out results",
+      "sha256": "0cac535a2e6683a723478bf0e9de9a317245ca76fd5568e73538b563af4b46b2"
+    },
+    "verbatim_checker": {
+      "entry_point": "code/verify_verbatim.py",
+      "sha256": "e3d031a769b4cdd77f531c5704a544be15c6f7b760ab308a0684ed8e5da58c27"
+    }
+  },
+  "cycle": "cycle 17 (post-generator descriptive consolidation, D155)",
+  "determinism": {
+    "files": {
+      "COUNT_BLIND_AUDIT.json": {
+        "byte_identical": true,
+        "run1_sha256": "3805c3e8c116ec65e718aa2790a10d53a9538a576badca5444328a6caa02fa59",
+        "run2_sha256": "3805c3e8c116ec65e718aa2790a10d53a9538a576badca5444328a6caa02fa59"
+      },
+      "OBJECT_IDENTITY_AUDIT.csv": {
+        "byte_identical": true,
+        "run1_sha256": "bc7ade8026dbd8ccfb318b3d2774759af1c868c01b5456904e5a6ea56fcf9e63",
+        "run2_sha256": "bc7ade8026dbd8ccfb318b3d2774759af1c868c01b5456904e5a6ea56fcf9e63"
+      },
+      "PART_MARGIN_DESC.csv": {
+        "byte_identical": true,
+        "run1_sha256": "611cd8298f6466341569e48ee0f4eb9f9f90641c78c3f7704d3835cd7459b549",
+        "run2_sha256": "611cd8298f6466341569e48ee0f4eb9f9f90641c78c3f7704d3835cd7459b549"
+      },
+      "PART_MARGIN_DESC_DETAIL.csv": {
+        "byte_identical": true,
+        "run1_sha256": "14c8aec70d4249bb96ea6e947c41082ef11fcceb8ab75be5fbd6722207dd0935",
+        "run2_sha256": "14c8aec70d4249bb96ea6e947c41082ef11fcceb8ab75be5fbd6722207dd0935"
+      },
+      "VERDICT.json": {
+        "byte_identical": true,
+        "run1_sha256": "872c332a6148e74b64523d2595c5a001eaff2af1134ed085a01c9dff4c431470",
+        "run2_sha256": "872c332a6148e74b64523d2595c5a001eaff2af1134ed085a01c9dff4c431470"
+      },
+      "console.txt": {
+        "byte_identical": true,
+        "run1_sha256": "705b738bcd0b92f5bdabec6ea97c0cd5622f2d5410bf2c8ca1c68ec35d8bd7ef",
+        "run2_sha256": "705b738bcd0b92f5bdabec6ea97c0cd5622f2d5410bf2c8ca1c68ec35d8bd7ef"
+      }
+    },
+    "method": "sha256 per file between results/ and results/determinism_run2/ (two independent executions of the same code on the same inputs)",
+    "result": "deterministic in all 6 artifacts"
+  },
+  "files": [
+    {
+      "bytes": 14811,
+      "path": "FINDINGS.md",
+      "sha256": "9283cbbb1097f2ba80540ff37aa77b7c04faa3bf15695722de5ad0a5287e8169"
+    },
+    {
+      "bytes": 38832,
+      "path": "PRE_DECLARATIONS.md",
+      "sha256": "8f47aa216395b6c0da1eb78e696ed80796a077c72780ac4211d2143ddda439bd"
+    },
+    {
+      "bytes": 86,
+      "path": "PRE_DECLARATIONS.sha256",
+      "sha256": "0ae4417acc6746d7a17e29abf8a106a3590576f7ec21dd6b7a233a381d2cfd6b"
+    },
+    {
+      "bytes": 9831,
+      "path": "code/make_manifest.py",
+      "sha256": "3e8a155b2c2b2f71e31e24d1f8b9f2b2762de1a513a1c8c69dc5b3e660755a55"
+    },
+    {
+      "bytes": 43676,
+      "path": "code/run_part_margin_desc.py",
+      "sha256": "0cac535a2e6683a723478bf0e9de9a317245ca76fd5568e73538b563af4b46b2"
+    },
+    {
+      "bytes": 1006,
+      "path": "code/verify_verbatim.py",
+      "sha256": "e3d031a769b4cdd77f531c5704a544be15c6f7b760ab308a0684ed8e5da58c27"
+    },
+    {
+      "bytes": 9842,
+      "path": "results/COUNT_BLIND_AUDIT.json",
+      "sha256": "3805c3e8c116ec65e718aa2790a10d53a9538a576badca5444328a6caa02fa59"
+    },
+    {
+      "bytes": 1705,
+      "path": "results/DETERMINISM.json",
+      "sha256": "f6f89fa035d0b50c1a5a4933487dd7619c271707484f351eaa5c9b13351628d6"
+    },
+    {
+      "bytes": 1962,
+      "path": "results/INPUT_HASHES.json",
+      "sha256": "d6981912e07cf17d947321e105373c60f1120b191005135f11f74798ec40962a"
+    },
+    {
+      "bytes": 7788,
+      "path": "results/OBJECT_IDENTITY_AUDIT.csv",
+      "sha256": "bc7ade8026dbd8ccfb318b3d2774759af1c868c01b5456904e5a6ea56fcf9e63"
+    },
+    {
+      "bytes": 4514,
+      "path": "results/PART_MARGIN_DESC.csv",
+      "sha256": "611cd8298f6466341569e48ee0f4eb9f9f90641c78c3f7704d3835cd7459b549"
+    },
+    {
+      "bytes": 8433,
+      "path": "results/PART_MARGIN_DESC_DETAIL.csv",
+      "sha256": "14c8aec70d4249bb96ea6e947c41082ef11fcceb8ab75be5fbd6722207dd0935"
+    },
+    {
+      "bytes": 5567,
+      "path": "results/VERDICT.json",
+      "sha256": "872c332a6148e74b64523d2595c5a001eaff2af1134ed085a01c9dff4c431470"
+    },
+    {
+      "bytes": 1675,
+      "path": "results/console.txt",
+      "sha256": "705b738bcd0b92f5bdabec6ea97c0cd5622f2d5410bf2c8ca1c68ec35d8bd7ef"
+    },
+    {
+      "bytes": 9842,
+      "path": "results/determinism_run2/COUNT_BLIND_AUDIT.json",
+      "sha256": "3805c3e8c116ec65e718aa2790a10d53a9538a576badca5444328a6caa02fa59"
+    },
+    {
+      "bytes": 1962,
+      "path": "results/determinism_run2/INPUT_HASHES.json",
+      "sha256": "d6981912e07cf17d947321e105373c60f1120b191005135f11f74798ec40962a"
+    },
+    {
+      "bytes": 7788,
+      "path": "results/determinism_run2/OBJECT_IDENTITY_AUDIT.csv",
+      "sha256": "bc7ade8026dbd8ccfb318b3d2774759af1c868c01b5456904e5a6ea56fcf9e63"
+    },
+    {
+      "bytes": 4514,
+      "path": "results/determinism_run2/PART_MARGIN_DESC.csv",
+      "sha256": "611cd8298f6466341569e48ee0f4eb9f9f90641c78c3f7704d3835cd7459b549"
+    },
+    {
+      "bytes": 8433,
+      "path": "results/determinism_run2/PART_MARGIN_DESC_DETAIL.csv",
+      "sha256": "14c8aec70d4249bb96ea6e947c41082ef11fcceb8ab75be5fbd6722207dd0935"
+    },
+    {
+      "bytes": 5567,
+      "path": "results/determinism_run2/VERDICT.json",
+      "sha256": "872c332a6148e74b64523d2595c5a001eaff2af1134ed085a01c9dff4c431470"
+    },
+    {
+      "bytes": 1675,
+      "path": "results/determinism_run2/console.txt",
+      "sha256": "705b738bcd0b92f5bdabec6ea97c0cd5622f2d5410bf2c8ca1c68ec35d8bd7ef"
+    }
+  ],
+  "files_excluded_from_manifest": [
+    "RUN_MANIFEST.json",
+    "SHA256SUMS.txt"
+  ],
+  "frozen_thresholds": {
+    "min_pairs": 3,
+    "system": "PHL",
+    "thin_rule": "n_pairs < 3",
+    "verdicts": [
+      "NO-OBSERVED-COUNTERPART",
+      "PLACEMENT-OUTSIDE",
+      "PLACEMENT-INSIDE"
+    ]
+  },
+  "identity_test": {
+    "against": "10_massification/extensions/conv_reg_2026-11-20/results/CONV_REG.csv",
+    "per_level": {
+      "lower_secondary": {
+        "identity": "NO-REGISTERED-COUNTERPART",
+        "n_matching_lines": 0,
+        "n_register_lines": 1
+      },
+      "primary": {
+        "identity": "NO-REGISTERED-COUNTERPART",
+        "n_matching_lines": 0,
+        "n_register_lines": 1
+      },
+      "upper_secondary": {
+        "identity": "NO-REGISTERED-COUNTERPART",
+        "n_matching_lines": 0,
+        "n_register_lines": 1
+      }
+    },
+    "register_hash_verified_before_use": true,
+    "register_overall_verdict": "REGISTER-BINDING",
+    "result": "NO-REGISTERED-COUNTERPART at all three levels: the register's only convention family is completion/GER and it carries no demand_share line and no NER line"
+  },
+  "inputs": [
+    {
+      "path": "10_massification/data/UNIVERSALIZATION_SERIES.csv",
+      "sha256": "85bc869396ebfcb39e3e1a21a31af219e75a07326c738a51d2bfdbe536737ddb"
+    },
+    {
+      "path": "10_massification/extensions/conv_reg_2026-11-20/results/CONV_REG.csv",
+      "sha256": "f53d8e707d929843dad36ef66e230933de25430eaf8b70a683a925b70c8d4b0b"
+    },
+    {
+      "path": "10_massification/extensions/conv_reg_2026-11-20/results/VERDICT.json",
+      "sha256": "966d80ffee3423bedb2afddfc6b789d8347e6667abccc8fd5110ba3149685857"
+    },
+    {
+      "path": "10_massification/extensions/conv_reg_2026-11-20/PRE_DECLARATIONS.md",
+      "sha256": "1dd86bd139a81c22e0ba2918728818fe7184775d925211a28fdd2be00b975410"
+    },
+    {
+      "path": "10_massification/extensions/conv_reg_2026-11-20/PRE_DECLARATIONS.sha256",
+      "sha256": "62204900c1dd84b6ca8d50b3572f31dc9d5ea944b142920ceff01353594f656f"
+    },
+    {
+      "path": "08_council/brief_025/SYNTHESIS_025.md",
+      "sha256": "e279e8200bb8504cafb6b5a4f6f70f3f436410d6839b315896877973c50a8beb"
+    },
+    {
+      "path": "08_council/DECISIONS.md",
+      "sha256": "b0a314b06f73b1cc933539d77f2e8bc3d4f6237e63ba8541e2b16629708c3e57"
+    },
+    {
+      "path": "08_council/brief_025/VERIFICATION_025.csv",
+      "sha256": "aa064a462e7b7153eb2a510f35744282f36ab0c921537d186d3f1ac018869284"
+    },
+    {
+      "path": "10_massification/extensions/synthetic_2026-11-20/generator_v1_6_repair/results/panel_A10_repaired.csv",
+      "sha256": "349cf637f1415b7809c17696dea4e842434f846b6be607c8d24047f9f0d1a8c4"
+    },
+    {
+      "path": "10_massification/extensions/synthetic_2026-11-20/generator_v1_7_partrepair/results/panel_A17.csv",
+      "sha256": "e955f02d49e78d52ddf0d7125ba3746c18629ea6b7714375d5e940daa1c4afcf"
+    }
+  ],
+  "labels": {
+    "conventions": "DECLARED",
+    "model": "SYNTHETIC",
+    "observed_inputs": "OBSERVED",
+    "spans": "DERIVED"
+  },
+  "model_shares": {
+    "class_tags": [
+      "v1.6",
+      "v1.7"
+    ],
+    "label": "SYNTHETIC",
+    "match_predecl_expected": {
+      "v1.6": {
+        "lower_secondary": true,
+        "primary": true,
+        "upper_secondary": true
+      },
+      "v1.7": {
+        "lower_secondary": true,
+        "primary": true,
+        "upper_secondary": true
+      }
+    },
+    "placement": "WITHHELD-NO-IDENTITY",
+    "v1.6": {
+      "lower_secondary": "0.9000000000",
+      "primary": "0.9000000000",
+      "upper_secondary": "0.8200000000"
+    },
+    "v1.7": {
+      "lower_secondary": "0.9534771716",
+      "primary": "0.9956438554",
+      "upper_secondary": "0.8003108482"
+    },
+    "verdict_bearing": false,
+    "year": "2024"
+  },
+  "notes": [
+    "Object identity before comparison (D158(2)): the identity test runs against EXP-21's register before the observed series and before either model panel is opened; the event order is in results/COUNT_BLIND_AUDIT.json.",
+    "The six model values are printed beside the spans for orientation only; comparison_performed = FALSE and cross_source_arithmetic_ops = 0.",
+    "THIN rule (<3 pairs) is applied as a flag, not a verdict; upper secondary has 2 pairs and may carry no placement label. V35b's note saying THIN for lower secondary is recorded as a discrepancy and the rule governs (n=4).",
+    "D153(xii) writes the span as net - gross (negative); this cell reports the frozen block's ger - ner (positive) and records the notation difference. No verdict rests on the sign.",
+    "Every reported number is re-read from its path + column by a fresh traceability pass before the verdict is written; a mismatch aborts rather than producing a label.",
+    "The count-blind audit discloses the only plain opens in the cell: sha256 hashing of the declared inputs and writes to the cell's own output directory. Every content read is guarded and allow-listed, and the hash-before-data gate covers the observed series and both model panels."
+  ],
+  "observed_spans": {
+    "lower_secondary": {
+      "n_pairs": 4,
+      "span_max_pp": "29.239540",
+      "span_max_year": "2016",
+      "span_median_pp": "28.518155",
+      "span_min_pp": "17.412040",
+      "span_min_year": "2017",
+      "thin": "FALSE",
+      "window": [
+        "2014",
+        "2017"
+      ]
+    },
+    "primary": {
+      "n_pairs": 30,
+      "span_max_pp": "14.627307",
+      "span_max_year": "1999",
+      "span_median_pp": "10.086482",
+      "span_min_pp": "2.196578",
+      "span_min_year": "1976",
+      "thin": "FALSE",
+      "window": [
+        "1976",
+        "2017"
+      ]
+    },
+    "upper_secondary": {
+      "n_pairs": 2,
+      "span_max_pp": "51.704530",
+      "span_max_year": "2015",
+      "span_median_pp": "48.883320",
+      "span_min_pp": "46.062110",
+      "span_min_year": "2014",
+      "thin": "TRUE",
+      "window": [
+        "2014",
+        "2015"
+      ]
+    }
+  },
+  "predeclaration": {
+    "enforced_by_runner": true,
+    "enforcement": "checked three ways (file, literal, actual) before any input is read and again immediately before VERDICT.json is written",
+    "path": "PRE_DECLARATIONS.md",
+    "sha256": "8f47aa216395b6c0da1eb78e696ed80796a077c72780ac4211d2143ddda439bd",
+    "verbatim_checks": {
+      "all_verbatim": true,
+      "banned_8_verbatim_in_predecl": true,
+      "block_6_2_verbatim_in_predecl": true,
+      "block_6_2_verbatim_in_source": true,
+      "block_header": true,
+      "d153_xii_verbatim_in_predecl": true,
+      "d156_exp22_clause_verbatim_in_predecl": true,
+      "d158_rules_verbatim_in_predecl": true,
+      "n_v35_rows": 3,
+      "verification_v35_verbatim_in_predecl": true
+    }
+  },
+  "question": "does the observed record contain a counterpart to the model's participation margin, and where does the model's share sit relative to it?",
+  "scope": {
+    "levels": [
+      "primary",
+      "lower_secondary",
+      "upper_secondary"
+    ],
+    "system": "PHL",
+    "why_one_system": "the frozen block's anchors (30 / 4 / 2 pairs) are PHL's and the model's placement subject is its PHL row; other systems' ger/ner rows exist on disk but are not computed here (declared, not widened after results)"
+  },
+  "verdict": {
+    "adoption": "NONE",
+    "clause_fired": [
+      1
+    ],
+    "counts": {
+      "levels": 3,
+      "levels_counterpart_identified": 0,
+      "levels_no_registered_counterpart": 3,
+      "levels_placeable": 0,
+      "levels_placement_reported": 0,
+      "levels_thin": 1,
+      "pairs_total": 36
+    },
+    "label": "NO-OBSERVED-COUNTERPART",
+    "precedence": "NO-OBSERVED-COUNTERPART > PLACEMENT-OUTSIDE > PLACEMENT-INSIDE",
+    "reason": "no observed object on disk carries the model's numerator (a choice probability) or denominator (the model's level cohort); EXP-21's register records no such line; the observed gross - net span is in pp and the model share is a cohort fraction, so no comparison is licensed and the placement is withheld."
+  }
+}

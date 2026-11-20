@@ -1,0 +1,82 @@
+====================================================================================================
+EXP-23 D63-BOUNDS  |  worker D63  |  Council brief 025 (D156 #3, rank #3); SYNTHESIS_025.md section 6.3 EXP-23; D153(xiii); D158(1)-(7)
+predeclaration sha256 : dc714963f9c4273ebc36837d50bb98542dba98bf1d66c7b7a3ce076d36efad36
+====================================================================================================
+
+[guards] predeclaration hash + verbatim re-extraction, before any computation
+  OK   predeclaration sha256 (enforced before any computation)
+  OK   verbatim region SYNTHESIS_025-6.3
+  OK   verbatim region DECISIONS-D153-xiii
+  OK   verbatim region DECISIONS-D156-EXP23
+  OK   verbatim region DECISIONS-D158
+  OK   verbatim region SYNTHESIS_025-8-banned
+
+[guards] frozen inputs (read-only)
+  OK   10_massification/data/UNIVERSALIZATION_SERIES.csv [ARITHMETIC]
+  OK   08_council/brief_025/SYNTHESIS_025.md [ARITHMETIC (verbatim source)]
+  OK   08_council/DECISIONS.md [ARITHMETIC (verbatim source)]
+  OK   10_massification/extensions/pipe_loo_2026-11-20/results/PIPE_LOO_PAIRS.csv [ARITHMETIC (8-pair cross-check)]
+  OK   10_massification/extensions/conv_reg_2026-11-20/results/CONV_REG.csv [CITATION-ONLY (object naming)]
+  OK   10_massification/extensions/kappa_fwd_2026-11-20/results/KAPPA_FWD_RESULTS.csv [CITATION-ONLY (descriptive / window-only)]
+  OK   10_massification/extensions/synthetic_2026-11-20/generator_v1_3/results/synthetic_panel_v1_3.csv [CITATION-ONLY (synthetic context)]
+
+[data] 10_massification/data/UNIVERSALIZATION_SERIES.csv: 2458 data rows; PHL observed completion years -- upper 11 [1999, 2000, 2003, 2004, 2008, 2010, 2013, 2017, 2022, 2023, 2024], lower 11 [1999, 2000, 2004, 2008, 2010, 2013, 2017, 2021, 2022, 2023, 2024]
+       duplicate (iso3, indicator, year) cells on the PHL completion rows: 0
+
+[pairs] rebuilt under the declared rule: n = 8 (declared 8); pair set vs PIPE_LOO_PAIRS.csv: MATCH (8 vs 8); max 4-dp ratio deviation 0
+        upper 2003 / lower 2000 (EXACT, +0y)  upper 61.728806  lower 65.026917  ratio 0.949280834
+        upper 2004 / lower 2000 (NEAREST_1Y, -1y)  upper 60.362480  lower 65.026917  ratio 0.928269145
+        upper 2008 / lower 2004 (NEAREST_1Y, -1y)  upper 64.090000  lower 66.083504  ratio 0.969833565
+        upper 2010 / lower 2008 (NEAREST_1Y, +1y)  upper 66.122681  lower 67.960000  ratio 0.972964695
+        upper 2013 / lower 2010 (EXACT, +0y)  upper 67.470000  lower 71.096642  ratio 0.948989974
+        upper 2017 / lower 2013 (NEAREST_1Y, -1y)  upper 76.432953  lower 71.270000  ratio 1.072442162
+        upper 2023 / lower 2021 (NEAREST_1Y, +1y)  upper 71.929314  lower 80.896049  ratio 0.889157309
+        upper 2024 / lower 2021 (EXACT, +0y)  upper 75.025253  lower 80.896049  ratio 0.927427900
+
+[identity] G = ln(90/upper_2024) = ln(90/lower_2021) + ln(lower_2021/upper_2024)
+  upper_2024 = 75.02525329589844   lower_2021 = 80.89604949951172   lower_2024 = 92.4139633178711 (record max lower, year 2024)
+  gap_pp                  = 14.974746704102
+  G  = ln(90/u24)         = 0.18198490285627197
+  P  = ln(90/l21)         = 0.1066446793553944
+  Q  = ln(l21/u24)        = 0.07534022350087775
+  P + Q - G               = 1.943e-16   (declared tolerance 1e-12)
+  pipeline_share = P/G    = 0.586008386858443  (58.6008 %)
+  ratio_share    = Q/G    = 0.41399161314155797  (41.3992 %)
+  SPLIT VERDICT           = RESIDUAL-SPLIT   (band [1/3, 2/3], n_pairs 8, thin=False)
+
+[bounds] three comparisons against the observed record's envelope (no tolerance anywhere)
+  B1 required_lower 97.0425841315231 vs record_max_lower 92.4139633178711  -> excess +4.628620813652 pp  -> OUTSIDE
+  B2 required_ratio 0.9738788032543533 vs observed 8-pair range [0.8891573087274445, 1.0724421619315192]  -> INSIDE
+  B3 implied upper interval at the record max lower [82.17055091255504, 99.10863061327778] vs 90  -> INSIDE
+  outcomes: OUTSIDE/INSIDE/INSIDE  -> n_inside = 2  -> BOUNDS VERDICT = BOUNDS-EDGE
+
+[reproduction] the block's and D153(xiii)'s stated numbers, declared rounding rule
+  OK   R1    upper_2024                             stated 75.02525329589844      recomputed 75.02525329589844        diff +0.000e+00
+  OK   R2    lower_2021                             stated 80.89604949951172      recomputed 80.89604949951172        diff +0.000e+00
+  OK   R3    gap_pp = 90 - upper_2024               stated 14.974747              recomputed 14.974746704101562       diff -2.959e-07
+  OK   R4    pipeline_share_pct                     stated 58.6008                recomputed 58.6008386858443         diff +3.869e-05
+  OK   R5    ratio_share_pct                        stated 41.3992                recomputed 41.3991613141558         diff -3.869e-05
+  OK   R6    required_lower                         stated 97.042584              recomputed 97.0425841315231         diff +1.315e-07
+  OK   R7    excess over record max                 stated 4.628621               recomputed 4.628620813652006        diff -1.863e-07
+  OK   R8    record_max_lower                       stated 92.4139633178711       recomputed 92.4139633178711         diff +0.000e+00
+  OK   R9    required_ratio                         stated 0.973879               recomputed 0.9738788032543533       diff -1.967e-07
+  OK   R10a  ratio_min (3 dp)                       stated 0.889                  recomputed 0.8891573087274445       diff +1.573e-04
+  OK   R10b  ratio_max (3 dp)                       stated 1.072                  recomputed 1.0724421619315192       diff +4.422e-04
+  reproduced 11/11
+
+[sensitivity] DESCRIPTIVE / NOT-VERDICT-BEARING -- contemporaneous lower value in place of the t-3 pair
+  ratio upper_2024/lower_2024 = 0.8118389321518255
+  pipeline_share = ln(90/l24)/G = -0.14544291665697634
+  ratio_share    = ln(l24/u24)/G = 1.145442916656977
+  identity residual 1.388e-16
+
+[verdict]
+  split  : RESIDUAL-SPLIT
+  bounds : BOUNDS-EDGE
+  D63    : UNABLE as to cause  (fixed; no outcome of this cell changes it)
+  model run: NONE.  re-fit: NONE.  adoption: NONE.  the 8-pair range is consumed as a range, not re-tested.
+
+wrote D63_BOUNDS_RESULTS.csv
+wrote D63_BOUNDS_DETAIL.csv
+wrote console.txt
+(all three in the --outdir given on the command line; nothing is written outside this experiment directory)

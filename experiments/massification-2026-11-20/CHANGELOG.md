@@ -493,3 +493,19 @@ B1 — pre-run SHA snapshot reconstructed (30/33 match, original hash `89638b39�
   A17 CONSTANT 8.84e-10; v1.3/v1.2 NOT-CONSTANT 4.704e-02 (35/6,720 cells cap completion_uis at 1.0). **m=1.10 is a point
   convention, not a level convention; every level sentence carries its register line.** No adoption; no causal/direction
   claim.
+
+## 2026-11-21 — Descriptive slate (D161–D163): EXP-22 NO-OBSERVED-COUNTERPART; EXP-23 BOUNDS-EDGE; EXP-24 REGISTER-NARROWED
+
+- **EXP-22** (`part_margin_desc_2026-11-20/`, predecl `8f47aa21…`, deterministic 6/6, 22/22 SHA): **NO-OBSERVED-COUNTERPART**
+  — observed spans PHL primary n=30 2.196578–14.627307 pp (median 10.086482), lower n=4 17.412040–29.239540 (not THIN;
+  V35b note contradicts rule, recorded), upper n=2 46.062110–51.704530 (THIN); EXP-21 register has 0 demand/choice-over-
+  cohort lines → NO-REGISTERED-COUNTERPART; placement WITHHELD; shares printed beside, comparison_performed FALSE;
+  count-blind PASS; no same-year span at 2024.
+- **EXP-23** (`d63_bounds_2026-11-20/`, predecl `dc714963…`, deterministic, 14/14 SHA): split **RESIDUAL-SPLIT**
+  (58.6008/41.3992; residual 1.9e-16; 11/11 reproduce); bounds **BOUNDS-EDGE** (B1 OUTSIDE 97.042584 vs 92.413963;
+  B2 INSIDE 0.973879 in [0.889157,1.072442]; B3 INSIDE [82.170551,99.108631] contains 90); D63 UNABLE; banned sentence
+  0 hits; caveat 58.6% is t−3 (contemporaneous share −0.145443).
+- **EXP-24** (`kappa_write_2026-11-20/`, predecl `db20d123…`, deterministic 4/4, 14/14 SHA): **REGISTER-NARROWED**
+  (USE-OUTSIDE-WINDOW) — 309 uses enumerated, 299 applied, 233 in-window (77.93%), 64 below + 4 above, 68 barred; all
+  PHL in 7 named objects (κ-link 31/53 years outside; 2027 κ-implied sentence in D133/STATUS); 0 load-bearing; KOR
+  counter-example carried; four fixed sentences admissible; bar κ-link and 2027 sentences.

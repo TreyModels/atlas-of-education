@@ -1,0 +1,21 @@
+row_type,item_id,item,value_num,value_display,units,label,comparison,outcome,used_in_verdict,note
+SPLIT_COMPONENT,S1,gap_pp = 90 - upper_2024,14.974746704101562,14.974747,pp,DERIVED,90 - 75.02525329589844,,TRUE,the raw pp gap; the identity below splits the LOG gap
+SPLIT_COMPONENT,S2,ln_gap G = ln(90/upper_2024),0.18198490285627197,0.181984902856,log ratio,DERIVED,ln(90/75.02525329589844),,TRUE,denominator of both shares
+SPLIT_COMPONENT,S3,pipeline_log P = ln(90/lower_2021),0.1066446793553944,0.106644679355,log ratio,DERIVED,ln(90/80.89604949951172),,TRUE,"pipeline-level channel, t-3 pair"
+SPLIT_COMPONENT,S4,ratio_log Q = ln(lower_2021/upper_2024),0.07534022350087775,0.075340223501,log ratio,DERIVED,ln(80.89604949951172/75.02525329589844),,TRUE,"transition-ratio channel, t-3 pair"
+SPLIT_COMPONENT,S5,identity_residual |(P+Q)-G|,1.942890293094024e-16,1.943e-16,log ratio,DERIVED,"== 0 by construction, floating point only",PASS,TRUE,declared tolerance 1e-12
+SPLIT_COMPONENT,S6,pipeline_share = P/G,0.586008386858443,0.586008387,share,DERIVED,"in [1/3, 2/3] ?",,TRUE,0.586008386858443
+SPLIT_COMPONENT,S7,ratio_share = Q/G,0.41399161314155797,0.413991613,share,DERIVED,"in [1/3, 2/3] ?",,TRUE,0.413991613141558
+SPLIT_COMPONENT,S8,pipeline_share_pct,58.6008386858443,58.6008,percent,DERIVED,P/G x 100,,TRUE,the block's 58.6008 %
+SPLIT_COMPONENT,S9,ratio_share_pct,41.3991613141558,41.3992,percent,DERIVED,Q/G x 100,,TRUE,the block's 41.3992 %
+BOUND_COMPARISON,B1,required_lower <= record_max_lower,97.0425841315231,97.042584,pp,DERIVED,97.042584 vs record max 92.413963 (excess 4.628621 pp),OUTSIDE,TRUE,"lower completion needed at the 2024 ratio, vs the highest lower completion in the record"
+BOUND_COMPARISON,B2,ratio_min <= required_ratio <= ratio_max,0.9738788032543533,0.973878803,ratio,DERIVED,"0.973878803 in [0.889157309, 1.072442162]",INSIDE,TRUE,"ratio needed at the record's 2024 lower completion, vs the observed 8-pair range"
+BOUND_COMPARISON,B3,implied_lo <= 90 <= implied_hi,99.10863061327778,99.108631,pp,DERIVED,"[82.170551, 99.108631] contains 90",INSIDE,TRUE,upper completion implied by the observed 8-ratio range at the record's highest lower completion
+VERDICT,V1,split_verdict,,RESIDUAL-SPLIT,,DERIVED,"pipeline 0.586008387, ratio 0.413991613, band [1/3, 2/3]",RESIDUAL-SPLIT,TRUE,block S6.3 item 5 mapping; THIN rule not binding at n_pairs = 8
+VERDICT,V2,bounds_verdict,,BOUNDS-EDGE,,DERIVED,B1 OUTSIDE / B2 INSIDE / B3 INSIDE -> 2 of 3 inside,BOUNDS-EDGE,TRUE,precedence BOUNDS-INSIDE > BOUNDS-EDGE > BOUNDS-OUTSIDE; mapping fixed in PRE_DECLARATIONS.md section 4
+VERDICT,V3,d63_status,,UNABLE as to cause,,DECLARED,"fixed by the block, D153(vi) and D153(xiii)",UNABLE,TRUE,no outcome of V1 or V2 changes it
+VERDICT,V4,n_pairs,8.0,8,pairs,DERIVED,== 8 declared pairs,PASS,TRUE,pair set cross-checked against PIPE_LOO_PAIRS.csv
+VERDICT,V5,reproduction_checks_passed,11.0,11 of 11,checks,DERIVED,"the block's and D153(xiii)'s stated numbers, declared rounding rule",PASS,TRUE,"R1-R10b, see DETAIL"
+SENSITIVITY_NVB,X1,pipeline_share at the contemporaneous lower value,-0.14544291665697634,-0.145442917,share,DERIVED,ln(90/lower_2024) / G,,FALSE,DESCRIPTIVE / NOT-VERDICT-BEARING; declared in PRE_DECLARATIONS.md S7
+SENSITIVITY_NVB,X2,ratio_share at the contemporaneous lower value,1.145442916656977,1.145442917,share,DERIVED,ln(lower_2024/upper_2024) / G,,FALSE,DESCRIPTIVE / NOT-VERDICT-BEARING
+SENSITIVITY_NVB,X3,ratio at the contemporaneous lower value,0.8118389321518255,0.811838932,ratio,DERIVED,upper_2024 / lower_2024,,FALSE,the observed 2024 same-year ratio; not one of the 8 declared pairs

@@ -1,0 +1,186 @@
+{
+  "adoption": "NONE",
+  "cell": "EXP-22 PART-MARGIN-DESC",
+  "count_blind": true,
+  "counts": {
+    "levels": 3,
+    "levels_counterpart_identified": 0,
+    "levels_no_registered_counterpart": 3,
+    "levels_placeable": 0,
+    "levels_placement_reported": 0,
+    "levels_thin": 1,
+    "pairs_total": 36
+  },
+  "frozen_thresholds": {
+    "min_pairs": 3,
+    "system": "PHL",
+    "thin_rule": "n_pairs < 3",
+    "verdicts": [
+      "NO-OBSERVED-COUNTERPART",
+      "PLACEMENT-OUTSIDE",
+      "PLACEMENT-INSIDE"
+    ]
+  },
+  "hash_enforcement": "checked pre-input and re-checked immediately before this verdict was written",
+  "identity_test": {
+    "lower_secondary": {
+      "identity": "NO-REGISTERED-COUNTERPART",
+      "n_matching_lines": 0,
+      "n_register_lines": 1
+    },
+    "primary": {
+      "identity": "NO-REGISTERED-COUNTERPART",
+      "n_matching_lines": 0,
+      "n_register_lines": 1
+    },
+    "upper_secondary": {
+      "identity": "NO-REGISTERED-COUNTERPART",
+      "n_matching_lines": 0,
+      "n_register_lines": 1
+    }
+  },
+  "labels": {
+    "conventions": "DECLARED",
+    "model": "SYNTHETIC",
+    "observed_inputs": "OBSERVED",
+    "spans": "DERIVED"
+  },
+  "model_shares_match_predecl_expected": {
+    "v1.6": {
+      "lower_secondary": true,
+      "primary": true,
+      "upper_secondary": true
+    },
+    "v1.7": {
+      "lower_secondary": true,
+      "primary": true,
+      "upper_secondary": true
+    }
+  },
+  "model_shares_placement_subjects": {
+    "class_tags": [
+      "v1.6",
+      "v1.7"
+    ],
+    "label": "SYNTHETIC",
+    "v1.6": {
+      "lower_secondary": "0.9000000000",
+      "primary": "0.9000000000",
+      "upper_secondary": "0.8200000000"
+    },
+    "v1.7": {
+      "lower_secondary": "0.9534771716",
+      "primary": "0.9956438554",
+      "upper_secondary": "0.8003108482"
+    },
+    "verdict_bearing": false,
+    "year": "2024"
+  },
+  "n_detail_rows": 36,
+  "n_identity_audit_rows": 21,
+  "n_level_rows": 3,
+  "no_clock_in_outputs": true,
+  "no_model_run": true,
+  "no_re_fit": true,
+  "no_rng": true,
+  "overall_verdict": "NO-OBSERVED-COUNTERPART",
+  "per_level": [
+    {
+      "identity_test": "NO-REGISTERED-COUNTERPART",
+      "level": "primary",
+      "n_pairs": 30,
+      "n_unpaired_years": 20,
+      "pair_year_max": "2017",
+      "pair_year_min": "1976",
+      "placement": "WITHHELD-NO-IDENTITY",
+      "span_max_pp": "14.627307",
+      "span_max_year": "1999",
+      "span_median_pp": "10.086482",
+      "span_min_pp": "2.196578",
+      "span_min_year": "1976",
+      "thin": "FALSE",
+      "verdict": "NO-OBSERVED-COUNTERPART"
+    },
+    {
+      "identity_test": "NO-REGISTERED-COUNTERPART",
+      "level": "lower_secondary",
+      "n_pairs": 4,
+      "n_unpaired_years": 12,
+      "pair_year_max": "2017",
+      "pair_year_min": "2014",
+      "placement": "WITHHELD-NO-IDENTITY",
+      "span_max_pp": "29.239540",
+      "span_max_year": "2016",
+      "span_median_pp": "28.518155",
+      "span_min_pp": "17.412040",
+      "span_min_year": "2017",
+      "thin": "FALSE",
+      "verdict": "NO-OBSERVED-COUNTERPART"
+    },
+    {
+      "identity_test": "NO-REGISTERED-COUNTERPART",
+      "level": "upper_secondary",
+      "n_pairs": 2,
+      "n_unpaired_years": 17,
+      "pair_year_max": "2015",
+      "pair_year_min": "2014",
+      "placement": "WITHHELD-NO-IDENTITY",
+      "span_max_pp": "51.704530",
+      "span_max_year": "2015",
+      "span_median_pp": "48.883320",
+      "span_min_pp": "46.062110",
+      "span_min_year": "2014",
+      "thin": "TRUE",
+      "verdict": "NO-OBSERVED-COUNTERPART"
+    }
+  ],
+  "precedence": "NO-OBSERVED-COUNTERPART > PLACEMENT-OUTSIDE > PLACEMENT-INSIDE",
+  "precedence_trace": [
+    {
+      "clause": 1,
+      "evidence": [
+        "primary",
+        "lower_secondary",
+        "upper_secondary"
+      ],
+      "fired": true,
+      "label": "NO-OBSERVED-COUNTERPART",
+      "test": "any level's identity test is NO-REGISTERED-COUNTERPART (no observed object with the model's convention at any level-year)"
+    },
+    {
+      "clause": 2,
+      "evidence": "not reached: no identity-licensed observed range exists",
+      "fired": false,
+      "label": "PLACEMENT-OUTSIDE",
+      "test": "identity passes at >=1 non-THIN level and any class-tagged model share lies outside the licensed range"
+    },
+    {
+      "clause": 3,
+      "evidence": "not reached: no identity-licensed observed range exists",
+      "fired": false,
+      "label": "PLACEMENT-INSIDE",
+      "test": "identity passes at >=1 non-THIN level and all class-tagged model shares lie inside their ranges"
+    }
+  ],
+  "predeclaration_hash_enforced": true,
+  "predeclaration_sha256": "8f47aa216395b6c0da1eb78e696ed80796a077c72780ac4211d2143ddda439bd",
+  "question": "does the observed record contain a counterpart to the model's participation margin, and where does the model's share sit relative to it?",
+  "register": {
+    "hash_verified_before_use": true,
+    "overall_verdict": "REGISTER-BINDING",
+    "path": "10_massification/extensions/conv_reg_2026-11-20/results/CONV_REG.csv",
+    "predeclaration_sha256": "1dd86bd139a81c22e0ba2918728818fe7184775d925211a28fdd2be00b975410"
+  },
+  "verbatim_checks": {
+    "all_verbatim": true,
+    "banned_8_verbatim_in_predecl": true,
+    "block_6_2_verbatim_in_predecl": true,
+    "block_6_2_verbatim_in_source": true,
+    "block_header": true,
+    "d153_xii_verbatim_in_predecl": true,
+    "d156_exp22_clause_verbatim_in_predecl": true,
+    "d158_rules_verbatim_in_predecl": true,
+    "n_v35_rows": 3,
+    "verification_v35_verbatim_in_predecl": true
+  }
+}

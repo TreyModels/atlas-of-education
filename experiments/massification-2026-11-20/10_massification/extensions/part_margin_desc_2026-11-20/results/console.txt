@@ -1,0 +1,14 @@
+predeclaration hash ENFORCED at pre-input: 8f47aa216395b6c0da1eb78e696ed80796a077c72780ac4211d2143ddda439bd
+EXP-22 PART-MARGIN-DESC -- descriptive, count-blind -- no model run, no RNG, no clock
+frozen rule: same-year ger - ner span per level, PHL; THIN if n_pairs < 3; identity test against EXP-21 BEFORE any placement
+verdict precedence: NO-OBSERVED-COUNTERPART > PLACEMENT-OUTSIDE > PLACEMENT-INSIDE
+identity PHL/primary register_lines=1 matching=0 -> NO-REGISTERED-COUNTERPART
+identity PHL/lower_secondary register_lines=1 matching=0 -> NO-REGISTERED-COUNTERPART
+identity PHL/upper_secondary register_lines=1 matching=0 -> NO-REGISTERED-COUNTERPART
+traceability pass: every reported number re-read from its path + column (no abort)
+model shares read (SYNTHETIC, placement subjects only): v1.6 primary=0.9000000000 ; v1.6 lower_secondary=0.9000000000 ; v1.6 upper_secondary=0.8200000000 ; v1.7 primary=0.9956438554 ; v1.7 lower_secondary=0.9534771716 ; v1.7 upper_secondary=0.8003108482
+per level: primary n=30 span=2.196578..14.627307 thin=FALSE identity=NO-REGISTERED-COUNTERPART placement=WITHHELD-NO-IDENTITY | lower_secondary n=4 span=17.412040..29.239540 thin=FALSE identity=NO-REGISTERED-COUNTERPART placement=WITHHELD-NO-IDENTITY | upper_secondary n=2 span=46.062110..51.704530 thin=TRUE identity=NO-REGISTERED-COUNTERPART placement=WITHHELD-NO-IDENTITY
+predeclaration hash ENFORCED at pre-verdict-write: 8f47aa216395b6c0da1eb78e696ed80796a077c72780ac4211d2143ddda439bd
+OVERALL VERDICT: NO-OBSERVED-COUNTERPART (clause 1 fired)
+rows: levels=3 detail=36 identity_audit=21
+count-blind: no 33-cell score, no 9-cell score, no deviation, no hit count, no crossing count

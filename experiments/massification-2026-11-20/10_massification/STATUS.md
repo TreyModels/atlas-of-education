@@ -1376,3 +1376,24 @@ frozen A10 at 4.44e-10; determinism 3/3; final SHA256SUMS 14/14.
   at 8.8395202269e-10; v1.3/v1.2 NOT-CONSTANT at 4.7043695535e-02 — **35/6,720 cells cap `completion_uis` at 1.0** where
   1.10×cohort > 1. **Consequence: `m = 1.10` is a point convention on a synthetic panel, not a level convention; every
   level sentence names the object pair and the register line.**
+
+### z) Descriptive slate complete except EXP-25: EXP-22 NO-OBSERVED-COUNTERPART; EXP-23 BOUNDS-EDGE; EXP-24 REGISTER-NARROWED (D161–D163)
+
+- **EXP-22** (`part_margin_desc_2026-11-20/`, predecl `8f47aa21…`, deterministic 6/6, 22/22 SHA) — **`NO-OBSERVED-COUNTERPART`**:
+  observed same-year gross−net spans PHL primary n=30 **2.196578–14.627307 pp** (median 10.086482), lower n=4
+  **17.412040–29.239540** (not THIN; V35b's THIN note contradicts the rule — recorded), upper n=2 **46.062110–51.704530**
+  (**THIN**); EXP-21's register has **0** lines naming demand/choice over a cohort → **NO-REGISTERED-COUNTERPART**,
+  placement **WITHHELD**; shares printed beside with `comparison_performed = FALSE`; count-blind PASS; no observed
+  same-year span at 2024.
+- **EXP-23** (`d63_bounds_2026-11-20/`, predecl `dc714963…`, deterministic, 14/14 SHA) — split **RESIDUAL-SPLIT**
+  (58.6008% / 41.3992%; identity residual 1.9e-16; 11/11 reproduction), bounds **`BOUNDS-EDGE`**: B1 **OUTSIDE**
+  (required lower 97.042584 vs record max 92.413963, +4.628621), B2 **INSIDE** (required ratio 0.973879 in
+  [0.889157309, 1.072442162]), B3 **INSIDE** (implied [82.170551, 99.108631] contains 90); **D63 stays UNABLE**; banned
+  sentence 0 hits; caveat — contemporaneous lower pipeline share −0.145443, so **58.6% is a t−3 statement**.
+- **EXP-24** (`kappa_write_2026-11-20/`, predecl `db20d123…`, deterministic 4/4, 14/14 SHA) — **`REGISTER-NARROWED`**
+  (block label USE-OUTSIDE-WINDOW): register PHL 0.949135 [2003-17/2003-24] slope −0.000704 shift 2.1348 holdout 2/2;
+  KOR 0.989758 [2005-20/2005-23] 0.002875/0.6354/**0/3**; KHM 0.594984 [2000-17/2000-23] 0.017318/7.4361/1/2; CHN
+  0.722222 [2012-20] 0.041728/25.6573/0 cells; HKG/JPN non-entrant. **309 uses enumerated, 299 applied, 233 in-window
+  (77.93%), 64 below + 4 above, 68 barred** — all PHL's in 7 named objects (κ-link 31/53 years outside; v1.5 guards;
+  v1.6 audit/panel; 2027 κ-implied sentence in D133/STATUS); **0 load-bearing → NARROWED**; KOR counter-example carried;
+  **four fixed sentences admissible; bar the κ-link and 2027 sentences**; no adoption.

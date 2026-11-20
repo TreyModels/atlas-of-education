@@ -1,0 +1,49 @@
+{
+  "cell": "EXP-22 PART-MARGIN-DESC",
+  "inputs": [
+    {
+      "path": "10_massification/data/UNIVERSALIZATION_SERIES.csv",
+      "sha256": "85bc869396ebfcb39e3e1a21a31af219e75a07326c738a51d2bfdbe536737ddb"
+    },
+    {
+      "path": "10_massification/extensions/conv_reg_2026-11-20/results/CONV_REG.csv",
+      "sha256": "f53d8e707d929843dad36ef66e230933de25430eaf8b70a683a925b70c8d4b0b"
+    },
+    {
+      "path": "10_massification/extensions/conv_reg_2026-11-20/results/VERDICT.json",
+      "sha256": "966d80ffee3423bedb2afddfc6b789d8347e6667abccc8fd5110ba3149685857"
+    },
+    {
+      "path": "10_massification/extensions/conv_reg_2026-11-20/PRE_DECLARATIONS.md",
+      "sha256": "1dd86bd139a81c22e0ba2918728818fe7184775d925211a28fdd2be00b975410"
+    },
+    {
+      "path": "10_massification/extensions/conv_reg_2026-11-20/PRE_DECLARATIONS.sha256",
+      "sha256": "62204900c1dd84b6ca8d50b3572f31dc9d5ea944b142920ceff01353594f656f"
+    },
+    {
+      "path": "08_council/brief_025/SYNTHESIS_025.md",
+      "sha256": "e279e8200bb8504cafb6b5a4f6f70f3f436410d6839b315896877973c50a8beb"
+    },
+    {
+      "path": "08_council/DECISIONS.md",
+      "sha256": "b0a314b06f73b1cc933539d77f2e8bc3d4f6237e63ba8541e2b16629708c3e57"
+    },
+    {
+      "path": "08_council/brief_025/VERIFICATION_025.csv",
+      "sha256": "aa064a462e7b7153eb2a510f35744282f36ab0c921537d186d3f1ac018869284"
+    },
+    {
+      "path": "10_massification/extensions/synthetic_2026-11-20/generator_v1_6_repair/results/panel_A10_repaired.csv",
+      "sha256": "349cf637f1415b7809c17696dea4e842434f846b6be607c8d24047f9f0d1a8c4"
+    },
+    {
+      "path": "10_massification/extensions/synthetic_2026-11-20/generator_v1_7_partrepair/results/panel_A17.csv",
+      "sha256": "e955f02d49e78d52ddf0d7125ba3746c18629ea6b7714375d5e940daa1c4afcf"
+    }
+  ],
+  "predeclaration": {
+    "path": "PRE_DECLARATIONS.md",
+    "sha256": "8f47aa216395b6c0da1eb78e696ed80796a077c72780ac4211d2143ddda439bd"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "all_identical": true,
+  "artifacts": [
+    {
+      "artifact": "PART_MARGIN_DESC.csv",
+      "byte_identical": true,
+      "sha256_run1": "611cd8298f6466341569e48ee0f4eb9f9f90641c78c3f7704d3835cd7459b549",
+      "sha256_run2": "611cd8298f6466341569e48ee0f4eb9f9f90641c78c3f7704d3835cd7459b549"
+    },
+    {
+      "artifact": "PART_MARGIN_DESC_DETAIL.csv",
+      "byte_identical": true,
+      "sha256_run1": "14c8aec70d4249bb96ea6e947c41082ef11fcceb8ab75be5fbd6722207dd0935",
+      "sha256_run2": "14c8aec70d4249bb96ea6e947c41082ef11fcceb8ab75be5fbd6722207dd0935"
+    },
+    {
+      "artifact": "OBJECT_IDENTITY_AUDIT.csv",
+      "byte_identical": true,
+      "sha256_run1": "bc7ade8026dbd8ccfb318b3d2774759af1c868c01b5456904e5a6ea56fcf9e63",
+      "sha256_run2": "bc7ade8026dbd8ccfb318b3d2774759af1c868c01b5456904e5a6ea56fcf9e63"
+    },
+    {
+      "artifact": "VERDICT.json",
+      "byte_identical": true,
+      "sha256_run1": "872c332a6148e74b64523d2595c5a001eaff2af1134ed085a01c9dff4c431470",
+      "sha256_run2": "872c332a6148e74b64523d2595c5a001eaff2af1134ed085a01c9dff4c431470"
+    },
+    {
+      "artifact": "COUNT_BLIND_AUDIT.json",
+      "byte_identical": true,
+      "sha256_run1": "3805c3e8c116ec65e718aa2790a10d53a9538a576badca5444328a6caa02fa59",
+      "sha256_run2": "3805c3e8c116ec65e718aa2790a10d53a9538a576badca5444328a6caa02fa59"
+    },
+    {
+      "artifact": "console.txt",
+      "byte_identical": true,
+      "sha256_run1": "705b738bcd0b92f5bdabec6ea97c0cd5622f2d5410bf2c8ca1c68ec35d8bd7ef",
+      "sha256_run2": "705b738bcd0b92f5bdabec6ea97c0cd5622f2d5410bf2c8ca1c68ec35d8bd7ef"
+    }
+  ],
+  "cell": "EXP-22 PART-MARGIN-DESC",
+  "n_artifacts": 6,
+  "verdict": "DETERMINISTIC"
+}

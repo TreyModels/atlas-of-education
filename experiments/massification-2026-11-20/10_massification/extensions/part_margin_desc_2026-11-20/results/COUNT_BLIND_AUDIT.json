@@ -1,0 +1,221 @@
+{
+  "allowed_files": [
+    "08_council/DECISIONS.md",
+    "08_council/brief_025/SYNTHESIS_025.md",
+    "08_council/brief_025/VERIFICATION_025.csv",
+    "10_massification/data/DATA_NOTES_MASSIFICATION.md",
+    "10_massification/data/UNIVERSALIZATION_SERIES.csv",
+    "10_massification/extensions/conv_reg_2026-11-20/PRE_DECLARATIONS.md",
+    "10_massification/extensions/conv_reg_2026-11-20/PRE_DECLARATIONS.sha256",
+    "10_massification/extensions/conv_reg_2026-11-20/results/CONV_REG.csv",
+    "10_massification/extensions/conv_reg_2026-11-20/results/VERDICT.json",
+    "10_massification/extensions/part_margin_desc_2026-11-20/PRE_DECLARATIONS.md",
+    "10_massification/extensions/part_margin_desc_2026-11-20/PRE_DECLARATIONS.sha256",
+    "10_massification/extensions/synthetic_2026-11-20/generator_v1_6_repair/results/panel_A10_repaired.csv",
+    "10_massification/extensions/synthetic_2026-11-20/generator_v1_7_partrepair/results/panel_A17.csv"
+  ],
+  "cell": "EXP-22 PART-MARGIN-DESC",
+  "comparison_performed": false,
+  "counts_computed": [
+    {
+      "classification": "observed co-occurrence count of two status=observed rows; not a model score",
+      "n_values": 3,
+      "name": "n_pairs",
+      "purpose": "frozen block item 5 (same-year gross - net span per level)"
+    },
+    {
+      "classification": "years without both sides; no value formed; not a model score",
+      "n_values": 3,
+      "name": "n_unpaired_years",
+      "purpose": "the block's NOT-COMPARABLE tally"
+    },
+    {
+      "classification": "process count of a delivered register; not a model score",
+      "n_values": 3,
+      "name": "n_register_lines",
+      "purpose": "identity test (EXP-21 register rows at PHL x level)"
+    },
+    {
+      "classification": "process count; not a model score",
+      "n_values": 3,
+      "name": "n_matching_lines",
+      "purpose": "identity test"
+    },
+    {
+      "classification": "process count",
+      "n_values": 1,
+      "name": "n_levels",
+      "purpose": "document structure"
+    },
+    {
+      "classification": "process count",
+      "n_values": 1,
+      "name": "n_register_rows",
+      "purpose": "register binding check"
+    },
+    {
+      "classification": "read-only SYNTHETIC values; not a score",
+      "n_values": 1,
+      "name": "n_model_share_values_read",
+      "purpose": "placement subjects (3 levels x 2 classes)"
+    }
+  ],
+  "cross_source_arithmetic_ops": 0,
+  "event_order": [
+    {
+      "detail": "8f47aa216395b6c0da1eb78e696ed80796a077c72780ac4211d2143ddda439bd",
+      "event": "predecl_hash_verified",
+      "ordinal": 0
+    },
+    {
+      "detail": "block + D156 + D153(xii) + D158 + banned + V35",
+      "event": "verbatim_checks_passed",
+      "ordinal": 1
+    },
+    {
+      "detail": "CONV_REG.csv rows=18 overall=REGISTER-BINDING",
+      "event": "register_read",
+      "ordinal": 2
+    },
+    {
+      "detail": "{\"lower_secondary\": \"NO-REGISTERED-COUNTERPART\", \"primary\": \"NO-REGISTERED-COUNTERPART\", \"upper_secondary\": \"NO-REGISTERED-COUNTERPART\"}",
+      "event": "identity_test_recorded",
+      "ordinal": 3
+    },
+    {
+      "detail": "",
+      "event": "observed_series_open_requested",
+      "ordinal": 4
+    },
+    {
+      "detail": "10_massification/data/UNIVERSALIZATION_SERIES.csv",
+      "event": "observed_series_read",
+      "ordinal": 5
+    },
+    {
+      "detail": "{\"lower_secondary\": \"NO-REGISTERED-COUNTERPART\", \"primary\": \"NO-REGISTERED-COUNTERPART\", \"upper_secondary\": \"NO-REGISTERED-COUNTERPART\"}",
+      "event": "identity_availability_resolved",
+      "ordinal": 6
+    },
+    {
+      "detail": "pairs=36",
+      "event": "observed_spans_computed",
+      "ordinal": 7
+    },
+    {
+      "detail": "",
+      "event": "model_panels_open_requested",
+      "ordinal": 8
+    },
+    {
+      "detail": "6 demand_share values, display-only",
+      "event": "model_panels_read_after_identity_test",
+      "ordinal": 9
+    },
+    {
+      "detail": "all reported numbers re-read from path + column",
+      "event": "traceability_pass_completed",
+      "ordinal": 10
+    }
+  ],
+  "files_hashed_for_manifest": [
+    "08_council/DECISIONS.md",
+    "08_council/brief_025/SYNTHESIS_025.md",
+    "08_council/brief_025/VERIFICATION_025.csv",
+    "10_massification/data/UNIVERSALIZATION_SERIES.csv",
+    "10_massification/extensions/conv_reg_2026-11-20/PRE_DECLARATIONS.md",
+    "10_massification/extensions/conv_reg_2026-11-20/PRE_DECLARATIONS.sha256",
+    "10_massification/extensions/conv_reg_2026-11-20/results/CONV_REG.csv",
+    "10_massification/extensions/conv_reg_2026-11-20/results/VERDICT.json",
+    "10_massification/extensions/synthetic_2026-11-20/generator_v1_6_repair/results/panel_A10_repaired.csv",
+    "10_massification/extensions/synthetic_2026-11-20/generator_v1_7_partrepair/results/panel_A17.csv"
+  ],
+  "files_opened_guarded": [
+    "10_massification/extensions/part_margin_desc_2026-11-20/PRE_DECLARATIONS.md",
+    "08_council/brief_025/SYNTHESIS_025.md",
+    "08_council/DECISIONS.md",
+    "08_council/brief_025/VERIFICATION_025.csv",
+    "10_massification/extensions/conv_reg_2026-11-20/PRE_DECLARATIONS.sha256",
+    "10_massification/extensions/conv_reg_2026-11-20/results/CONV_REG.csv",
+    "10_massification/extensions/conv_reg_2026-11-20/results/VERDICT.json",
+    "10_massification/data/UNIVERSALIZATION_SERIES.csv",
+    "10_massification/extensions/synthetic_2026-11-20/generator_v1_6_repair/results/panel_A10_repaired.csv",
+    "10_massification/extensions/synthetic_2026-11-20/generator_v1_6_repair/results/panel_A10_repaired.csv",
+    "10_massification/extensions/synthetic_2026-11-20/generator_v1_6_repair/results/panel_A10_repaired.csv",
+    "10_massification/extensions/synthetic_2026-11-20/generator_v1_7_partrepair/results/panel_A17.csv",
+    "10_massification/extensions/synthetic_2026-11-20/generator_v1_7_partrepair/results/panel_A17.csv",
+    "10_massification/extensions/synthetic_2026-11-20/generator_v1_7_partrepair/results/panel_A17.csv",
+    "10_massification/data/UNIVERSALIZATION_SERIES.csv",
+    "10_massification/extensions/synthetic_2026-11-20/generator_v1_6_repair/results/panel_A10_repaired.csv",
+    "10_massification/extensions/synthetic_2026-11-20/generator_v1_6_repair/results/panel_A10_repaired.csv",
+    "10_massification/extensions/synthetic_2026-11-20/generator_v1_6_repair/results/panel_A10_repaired.csv",
+    "10_massification/extensions/synthetic_2026-11-20/generator_v1_7_partrepair/results/panel_A17.csv",
+    "10_massification/extensions/synthetic_2026-11-20/generator_v1_7_partrepair/results/panel_A17.csv",
+    "10_massification/extensions/synthetic_2026-11-20/generator_v1_7_partrepair/results/panel_A17.csv"
+  ],
+  "forbidden_files_opened": [],
+  "guard_selftest": {
+    "cases": [
+      {
+        "case": "a model-score artifact outside the allow-list",
+        "decision": "NOT-ALLOWED",
+        "hash_recorded": true,
+        "path": "10_massification/extensions/part_repair_2026-11-20/results/A17_scores.csv",
+        "rejected": true
+      },
+      {
+        "case": "the observed series opened before the frozen hash is recorded",
+        "decision": "HASH-NOT-RECORDED",
+        "hash_recorded": false,
+        "path": "10_massification/data/UNIVERSALIZATION_SERIES.csv",
+        "rejected": true
+      },
+      {
+        "case": "a model panel opened before the frozen hash is recorded",
+        "decision": "HASH-NOT-RECORDED",
+        "hash_recorded": false,
+        "path": "10_massification/extensions/synthetic_2026-11-20/generator_v1_6_repair/results/panel_A10_repaired.csv",
+        "rejected": true
+      },
+      {
+        "case": "the observed series opened after the frozen hash is recorded",
+        "decision": null,
+        "hash_recorded": true,
+        "path": "10_massification/data/UNIVERSALIZATION_SERIES.csv",
+        "rejected": false
+      }
+    ],
+    "note": "the identity-test-before-panel order is structural (code order) and is recorded in event_order; a panel read is also gated on the frozen hash by the cases above",
+    "predicate": "guard_decision"
+  },
+  "hash_recorded_before_first_data_open": true,
+  "identity_test_completed_before_observed_series_open": true,
+  "model_panels_opened_after_identity_test": true,
+  "model_score": {
+    "crossings": "NOT-COMPUTED",
+    "deviation": "NOT-COMPUTED",
+    "nine_cell_score": "NOT-COMPUTED",
+    "observed_path_coverage_count": "NOT-COMPUTED",
+    "thirty_three_cell_score": "NOT-COMPUTED",
+    "within_5pp_hits": "NOT-COMPUTED"
+  },
+  "model_score_computed": false,
+  "n_open_events": 21,
+  "no_clock_in_outputs": true,
+  "no_model_run": true,
+  "no_network": true,
+  "no_rng": true,
+  "note": "the observed series and the model panels are opened only after the frozen predecl hash is recorded and after the identity test is recorded; the six model values are printed beside the spans for orientation and never combined with an observed value",
+  "open_guard_scope": {
+    "guarded_reads": "every read of data, register, source and predeclaration content goes through guarded_open(), which enforces the allow-list and the hash-before-data gate",
+    "note": "disclosed because the predeclaration's L1 wording describes content reads; the plain opens above are hashing and output writes, and none of them can introduce a model score",
+    "plain_opens": [
+      "sha256 hashing of the declared inputs (sha256_file, for INPUT_HASHES.json and the manifest) -- the same declared paths, no field is read",
+      "writes to this cell's output directory (never reads)",
+      "in --compare mode only, hashing of this cell's own six artifacts"
+    ]
+  },
+  "predeclaration_sha256": "8f47aa216395b6c0da1eb78e696ed80796a077c72780ac4211d2143ddda439bd",
+  "predeclaration_sha256_enforced_literal": "8f47aa216395b6c0da1eb78e696ed80796a077c72780ac4211d2143ddda439bd",
+  "writes_outside_cell": []
+}

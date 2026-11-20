@@ -1,0 +1,94 @@
+====================================================================================================
+EXP-24 KAPPA-WRITE -- worker KW
+brief: Council brief 025; SYNTHESIS_025.md section 6.4, EXP-24, rank #4; D156 #4
+static register, NOT a run: no model execution, no estimation, no re-fit, no RNG
+====================================================================================================
+
+[PRE-FLIGHT] predeclaration hash enforcement (D158 rule 1)
+  PRE_DECLARATIONS.md sha256 : db20d123835164f0274e7d486d87c9eadd4ef7fa7dbcb74ad6cdb437583776f1
+  embedded constant          : db20d123835164f0274e7d486d87c9eadd4ef7fa7dbcb74ad6cdb437583776f1
+  OK (predeclaration is the one this script implements)
+[VERBATIM CHECK] fence body vs SYNTHESIS_025.md lines 603-641: IDENTICAL (39 lines)
+
+[INPUT HASHES] declared universe: 17 files
+  kappa_fwd_2026-11-20/results/KAPPA_FWD_RESULTS.csv                                              da5a78e2113a618d OK
+  kappa_fwd_2026-11-20/results/KAPPA_FWD_DETAIL.csv                                               a52c322726c8a20b OK
+  kappa_fwd_2026-11-20/results/KAPPA_FWD_SECONDARY.csv                                            d0ef0a56f515d812 OK
+  kappa_fwd_2026-11-20/FINDINGS.md                                                                024d049b763eda29 OK
+  pipe_loo_2026-11-20/results/PIPE_LOO_RESULTS.csv                                                7c4faa427f484853 OK
+  pipe_loo_2026-11-20/results/PIPE_LOO_PAIRS.csv                                                  692ca7c01b8b3a71 OK
+  pipe_loo_2026-11-20/FINDINGS.md                                                                 2e37159103874214 OK
+  repro_path_2026-11-20/results/KAPPA_LINK.csv                                                    671962dc585bcc83 OK
+  repro_path_2026-11-20/results/REPRO_PATH_RESULTS.csv                                            8666492c396afb6b OK
+  repro_path_2026-11-20/FINDINGS.md                                                               eb868567669e4342 OK
+  synthetic_2026-11-20/generator_v1_5_bimodal/results/KAPPA_BIND_CELLS.csv                        ce3b1c1277e96189 OK
+  synthetic_2026-11-20/generator_v1_5_bimodal/results/kappa_cap_audit.csv                         e7cebc4e46b72f7d OK
+  synthetic_2026-11-20/generator_v1_6_repair/results/kappa_object_audit.csv                       e9ac569233fe14cc OK
+  synthetic_2026-11-20/generator_v1_6_repair/results/panel_A01D_kappa.csv                         a6ea635f1aea7a35 OK
+  08_council/DECISIONS.md                                                                         b0a314b06f73b1cc OK
+  08_council/brief_025/SYNTHESIS_025.md                                                           e279e8200bb8504c OK
+  10_massification/STATUS.md                                                                      8fe0a3ec62e1b59c OK
+  predeclaration input table == runner constants (17 rows)
+
+[LOAD] delivered kappa results
+  KAPPA_FWD_RESULTS.csv: 4 SYSTEM rows, 2 NON-ENTRANT rows
+  KAPPA_FWD_DETAIL.csv : 43 pair rows
+
+[REGISTER] windows derived from KAPPA_FWD_DETAIL.csv; values reconciled at 4 dp (PRE_DECL S6.5)
+  PHL n= 8  window_pre=2003-2017  window_full=2003-2024  lower=2000-2021
+       kappa_full=0.94913500 (recomputed 0.94913550, MATCH)  kappa_pre=0.95955700 (recomputed 0.95955750, MATCH)
+  KOR n=19  window_pre=2005-2020  window_full=2005-2023  lower=2003-2020
+       kappa_full=0.98975800 (recomputed 0.98975800, MATCH)  kappa_pre=0.98866500 (recomputed 0.98866450, MATCH)
+  KHM n=11  window_pre=2000-2017  window_full=2000-2023  lower=1996-2019
+       kappa_full=0.59498400 (recomputed 0.59498400, MATCH)  kappa_pre=0.59498400 (recomputed 0.59498400, MATCH)
+  CHN n= 5  window_pre=2012-2020  window_full=2012-2020  lower=2010-2016
+       kappa_full=0.72222200 (recomputed 0.72222200, MATCH)  kappa_pre=0.72222200 (recomputed 0.72222200, MATCH)
+
+[USES] enumerating numeric kappa uses in the declared universe
+
+[REGISTER TABLE]
+  iso3 kappa_full      n window_pre    window_full        slope   half_pp  holdout  admissible
+  PHL  0.94913500      8 2003-2017     2003-2024      -0.000704    2.1348      2/2  SENTENCE-ONLY
+  KOR  0.98975800     19 2005-2020     2005-2023       0.002875    0.6354      0/3  SENTENCE-ONLY
+  KHM  0.59498400     11 2000-2017     2000-2023       0.017318    7.4361      1/2  SENTENCE-ONLY
+  CHN  0.72222200      5 2012-2020     2012-2020       0.041728   25.6573 N/A (0 hold-out cells)  REPORTED-ONLY
+  HKG  -               0 -             -                      -         -        -  NONE
+  JPN  -               0 -             -                      -         -        -  NONE
+
+[COUNTS]
+  n_uses                             309
+  n_applied                          299
+  n_in_window                        233
+  n_out_below                        64
+  n_out_above                        4
+  n_empty_window                     0
+  n_not_applied                      8
+  n_out_of_object                    2
+  n_projection                       64
+  n_not_comparable                   44
+  n_barred                           68
+  n_observed_descriptive_in_window   132
+  pct_in_window_of_applied           77.9264
+
+[BARRED OBJECTS] (named, never re-scored)
+  08_council/DECISIONS.md                                                                            1 uses
+  10_massification/STATUS.md                                                                         1 uses
+  repro_path_2026-11-20/results/KAPPA_LINK.csv                                                      62 uses
+  synthetic_2026-11-20/generator_v1_5_bimodal/results/KAPPA_BIND_CELLS.csv                           1 uses
+  synthetic_2026-11-20/generator_v1_5_bimodal/results/kappa_cap_audit.csv                            1 uses
+  synthetic_2026-11-20/generator_v1_6_repair/results/kappa_object_audit.csv                          1 uses
+  synthetic_2026-11-20/generator_v1_6_repair/results/panel_A01D_kappa.csv                            1 uses
+
+[OUT-OF-OBJECT] (declared exclusion, D9)
+  DECISIONS.md L69:c0  model congestion elasticity kappa (G(C)=C^kappa), a different object; excluded (D9)
+  STATUS.md L301:c0  model congestion elasticity kappa (G(C)=C^kappa), a different object; excluded (D9)
+
+[VERDICT] REGISTER-NARROWED   (block label: USE-OUTSIDE-WINDOW)
+  precedence: REGISTER-CONSISTENT > REGISTER-NARROWED > REGISTER-UNUSABLE (frozen in S9)
+  falsifier tripped: FALSE ; reconciliation: MATCH ; KOR counter-example carried: True
+  no model run; no re-fit; no adoption; no causal or direction claim
+
+[WRITE] four files (register, uses, summary, console) to the requested outdir
+  KAPPA_WRITE_REGISTER.csv
+  KAPPA_WRITE_USES.csv
+  KAPPA_WRITE_SUMMARY.csv

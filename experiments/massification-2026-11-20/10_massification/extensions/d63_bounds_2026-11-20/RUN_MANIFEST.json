@@ -1,0 +1,236 @@
+{
+  "experiment": "EXP-23 D63-BOUNDS",
+  "brief": "Council brief 025 (D156 #3, rank #3); SYNTHESIS_025.md section 6.3 EXP-23; D153(xiii); D158(1)-(7)",
+  "worker": "D63",
+  "date": "2026-11-21",
+  "status": "COMPLETE",
+  "label": "OBSERVED (completion cells) + DERIVED (logs, shares, required values, interval, verdicts) + DECLARED-THRESHOLD (90 pp) + CITATION-ONLY (kappa)",
+  "statement": "Descriptive bound on the D63 upper-secondary residual. The log gap between the declared 90 pp level and observed upper-secondary completion 2024 splits at the declared one-stage pair (upper 2024 / lower 2021) into a pipeline-level share and a transition-ratio share; three comparisons then ask whether the required lower completion, the required transition ratio and the implied upper interval lie inside the observed record's envelope. No model was run; no value was adopted; no re-fit; no causal claim; no direction claim. D63 stays UNABLE as to cause regardless of the verdicts. The observed ratio range is consumed as a range, not re-tested, and CEIL-ATTRIB is not re-run or re-scored.",
+  "verdict": {
+    "split_verdict": "RESIDUAL-SPLIT",
+    "split_rule": "RESIDUAL-SPLIT iff both shares lie in [1/3, 2/3]; PIPELINE-DOMINANT iff pipeline_share > 2/3; RATIO-DOMINANT iff ratio_share > 2/3; THIN rule below 3 pairs",
+    "bounds_verdict": "BOUNDS-EDGE",
+    "bounds_rule": "BOUNDS-INSIDE iff all three comparisons INSIDE; BOUNDS-OUTSIDE iff all three OUTSIDE; BOUNDS-EDGE iff mixed; precedence stated in the predeclaration, no tolerance anywhere",
+    "outcomes": {
+      "B1": "OUTSIDE",
+      "B2": "INSIDE",
+      "B3": "INSIDE"
+    },
+    "n_inside": 2,
+    "d63_status": "UNABLE as to cause",
+    "d63_status_note": "fixed by the block, D153(vi) and D153(xiii); no outcome of this cell changes it",
+    "branch_fired": "BOUNDS-EDGE -> the record bounds the residual on the transition-ratio channel and not on the pipeline channel; the sentence calling the ceiling structural is unavailable, and so is its opposite."
+  },
+  "split": {
+    "upper_2024": 75.02525329589844,
+    "lower_2021": 80.89604949951172,
+    "gap_pp": 14.974746704101562,
+    "G_log": 0.18198490285627197,
+    "pipeline_log": 0.1066446793553944,
+    "ratio_log": 0.07534022350087775,
+    "identity_residual": 1.942890293094024e-16,
+    "identity_tolerance": 1e-12,
+    "pipeline_share": 0.586008386858443,
+    "ratio_share": 0.41399161314155797,
+    "pipeline_share_pct": 58.6008386858443,
+    "ratio_share_pct": 41.3991613141558,
+    "band": [
+      0.3333333333333333,
+      0.6666666666666666
+    ]
+  },
+  "bounds": {
+    "B1": {
+      "required_lower": 97.0425841315231,
+      "record_max_lower": 92.4139633178711,
+      "record_max_lower_year": 2024,
+      "excess_pp": 4.628620813652006,
+      "outcome": "OUTSIDE"
+    },
+    "B2": {
+      "required_ratio": 0.9738788032543533,
+      "observed_ratio_min": 0.8891573087274445,
+      "observed_ratio_max": 1.0724421619315192,
+      "outcome": "INSIDE"
+    },
+    "B3": {
+      "implied_upper_lo": 82.17055091255504,
+      "implied_upper_hi": 99.10863061327778,
+      "target": 90.0,
+      "outcome": "INSIDE"
+    },
+    "n_pairs": 8,
+    "pair_set_crosscheck": "n = 8 and the (upper year, lower year) set matches PIPE_LOO_PAIRS.csv, ratios at 4 dp"
+  },
+  "sensitivity_non_verdict_bearing": {
+    "declared_in": "PRE_DECLARATIONS.md section 7",
+    "label": "DESCRIPTIVE / NOT-VERDICT-BEARING",
+    "ratio_contemporaneous": 0.8118389321518255,
+    "pipeline_share_contemporaneous": -0.14544291665697634,
+    "ratio_share_contemporaneous": 1.145442916656977,
+    "why_reported": "the declared split uses the t-3 pair; at the contemporaneous lower value the pipeline term changes sign, so the split may not be cited as lag-free"
+  },
+  "predeclaration": {
+    "file": "PRE_DECLARATIONS.md",
+    "sha256": "dc714963f9c4273ebc36837d50bb98542dba98bf1d66c7b7a3ce076d36efad36",
+    "recorded_sidecar": "PRE_DECLARATIONS.sha256",
+    "sidecar_sha256": "6388f70ac69f5f1311e4c4d01b6f0f0c5105ca982e49ebd4c03fa172521cf77b",
+    "hashed_before_any_run": true,
+    "enforced_by_runner_at_verdict_time": true,
+    "enforcement_note": "code/run_d63_bounds.py embeds the sha256 as PREDECL_SHA256 and aborts before any computation on mismatch; no hash in any verdict row is RECORDED-NOT-ENFORCED",
+    "verbatim_regions_re_extracted_from_frozen_sources": {
+      "SYNTHESIS_025-6.3": "PASS (36 source lines)",
+      "DECISIONS-D153-xiii": "PASS",
+      "DECISIONS-D156-EXP23": "PASS",
+      "DECISIONS-D158": "PASS",
+      "SYNTHESIS_025-8-banned": "PASS"
+    },
+    "thresholds_changed_after_results": false,
+    "authored_by": "code/author_predecl.py (mechanical splice of the Council's text; no manual transcription)"
+  },
+  "frozen_inputs": {
+    "10_massification/data/UNIVERSALIZATION_SERIES.csv": {
+      "role": "ARITHMETIC (observed completion)",
+      "sha256": "85bc869396ebfcb39e3e1a21a31af219e75a07326c738a51d2bfdbe536737ddb",
+      "declared_and_enforced": true
+    },
+    "08_council/brief_025/SYNTHESIS_025.md": {
+      "role": "ARITHMETIC (verbatim source + reproduction anchors)",
+      "sha256": "e279e8200bb8504cafb6b5a4f6f70f3f436410d6839b315896877973c50a8beb",
+      "declared_and_enforced": true
+    },
+    "08_council/DECISIONS.md": {
+      "role": "ARITHMETIC (verbatim source + D153(xiii) anchors)",
+      "sha256": "b0a314b06f73b1cc933539d77f2e8bc3d4f6237e63ba8541e2b16629708c3e57",
+      "declared_and_enforced": true
+    },
+    "10_massification/extensions/pipe_loo_2026-11-20/results/PIPE_LOO_PAIRS.csv": {
+      "role": "ARITHMETIC (8-pair set cross-check)",
+      "sha256": "692ca7c01b8b3a7105e84339a87f97029b6a50e277681bdcdbe0f02bf027600f",
+      "declared_and_enforced": true
+    },
+    "10_massification/extensions/conv_reg_2026-11-20/results/CONV_REG.csv": {
+      "role": "CITATION-ONLY (object naming)",
+      "sha256": "f53d8e707d929843dad36ef66e230933de25430eaf8b70a683a925b70c8d4b0b"
+    },
+    "10_massification/extensions/kappa_fwd_2026-11-20/results/KAPPA_FWD_RESULTS.csv": {
+      "role": "CITATION-ONLY (kappa, descriptive / window-only)",
+      "sha256": "da5a78e2113a618da9f4b315bbecbbd8be6227c33e1cb572493d669244ac67a4"
+    },
+    "10_massification/extensions/synthetic_2026-11-20/generator_v1_3/results/synthetic_panel_v1_3.csv": {
+      "role": "CITATION-ONLY (synthetic context; no model value enters any bound)",
+      "sha256": "47d4b082f4ba5838cc20fbb09e59dd3dd847ad25393b1ce091069c94496657e3"
+    }
+  },
+  "declared_parameters": {
+    "target_pp": 90.0,
+    "target_status": "DECLARED-THRESHOLD (D34/A6, 90/90/90 pp), not an observed object, not a policy target here",
+    "iso3": "PHL",
+    "upper_column": "completion_upper_secondary",
+    "lower_column": "completion_lower_secondary",
+    "upper_year": 2024,
+    "lower_pair_year": 2021,
+    "lag_years": 3,
+    "tolerance_years": 1,
+    "tie_break": "nearest lower year to t-3 within +/-1 y, ties toward the earlier year (the EXP-1 build_pairs rule)",
+    "expected_n_pairs": 8,
+    "identity_tolerance": 1e-12,
+    "split_band": [
+      0.3333333333333333,
+      0.6666666666666666
+    ],
+    "rng": "none",
+    "model_run": "none"
+  },
+  "results": {
+    "files": {
+      "results/D63_BOUNDS_RESULTS.csv": "0f627046238482ffab94152cbd00952f7d052b7c7d7fd5457509b2d5517328c1",
+      "results/D63_BOUNDS_DETAIL.csv": "3f8df22bfe7a6cbbd34fc11166951e1c593634d1ddb0384697b4d8743e2ccb6f",
+      "results/console.txt": "cbf536c006fcfd884e5482ce907b012cb09f0cb22590a8fb63c0d28f635bde8f",
+      "results/determinism_run2/D63_BOUNDS_RESULTS.csv": "0f627046238482ffab94152cbd00952f7d052b7c7d7fd5457509b2d5517328c1",
+      "results/determinism_run2/D63_BOUNDS_DETAIL.csv": "3f8df22bfe7a6cbbd34fc11166951e1c593634d1ddb0384697b4d8743e2ccb6f",
+      "results/determinism_run2/console.txt": "cbf536c006fcfd884e5482ce907b012cb09f0cb22590a8fb63c0d28f635bde8f"
+    },
+    "n_rows_results": 20,
+    "n_rows_detail": 51,
+    "reproduction_checks_passed": "11 of 11",
+    "verdict_rows": {
+      "split": "RESIDUAL-SPLIT",
+      "bounds": "BOUNDS-EDGE",
+      "d63": "UNABLE"
+    }
+  },
+  "determinism": {
+    "two_runs_byte_identical": true,
+    "run1_dir": "results/",
+    "run2_dir": "results/determinism_run2/",
+    "per_file": {
+      "D63_BOUNDS_RESULTS.csv": {
+        "run1_sha256": "0f627046238482ffab94152cbd00952f7d052b7c7d7fd5457509b2d5517328c1",
+        "run2_sha256": "0f627046238482ffab94152cbd00952f7d052b7c7d7fd5457509b2d5517328c1",
+        "byte_identical": true
+      },
+      "D63_BOUNDS_DETAIL.csv": {
+        "run1_sha256": "3f8df22bfe7a6cbbd34fc11166951e1c593634d1ddb0384697b4d8743e2ccb6f",
+        "run2_sha256": "3f8df22bfe7a6cbbd34fc11166951e1c593634d1ddb0384697b4d8743e2ccb6f",
+        "byte_identical": true
+      },
+      "console.txt": {
+        "run1_sha256": "cbf536c006fcfd884e5482ce907b012cb09f0cb22590a8fb63c0d28f635bde8f",
+        "run2_sha256": "cbf536c006fcfd884e5482ce907b012cb09f0cb22590a8fb63c0d28f635bde8f",
+        "byte_identical": true
+      }
+    },
+    "note": "no RNG, no network, no clock value in any result file; the two runs are byte-identical"
+  },
+  "findings_number_register": {
+    "executed_by": "code/run_d63_bounds.py --check-findings (read-only; writes nothing)",
+    "executed_after_FINDINGS_was_written": true,
+    "n_numbers_in_findings": 80,
+    "n_matched": 80,
+    "n_unmatched": 0,
+    "unmatched": [],
+    "banned_sentence_hits": [],
+    "files_scanned": [
+      "results/D63_BOUNDS_RESULTS.csv",
+      "results/D63_BOUNDS_DETAIL.csv"
+    ],
+    "rule": "every number in FINDINGS.md must appear in results/D63_BOUNDS_DETAIL.csv with path+column+derivation"
+  },
+  "declared_limits": [
+    "8 Philippine pairs only: the observed ratio range is a single-system range and the bounds inherit that",
+    "the declared t-3 lag is a choice: at the contemporaneous lower value the pipeline share changes sign (sensitivity reported, non-verdict-bearing)",
+    "the record maximum lower completion is the 2024 cell, contemporaneous with the residual's upper cell; B1 therefore compares a 2021-based requirement with a 2024 maximum",
+    "the 90 pp level is a declared threshold, not an observed object; the cell does not evaluate whether 90 is the right bar",
+    "B2/B3 combine observed numbers from different years; the joint combination was never observed, and an interval containing 90 is not evidence that 90 would have been reached",
+    "the split is an accounting identity with zero free parameters and zero residual by construction: it cannot fail, so only the band and the bounds are tests",
+    "the cell is upper-level by construction and may not be cited about the lower level or a two-level object",
+    "three of the eleven observed upper years cannot enter the pair set (no lower observation within the declared tolerance of the exact three-year lag)"
+  ],
+  "closed_claims": [
+    "no model run; no model value in any bound",
+    "no re-fit, no grid, no second estimand, no adoption",
+    "does not re-run or re-score CEIL-ATTRIB; its [0.90, 1.10] band test is not recomputed (the 8 ratios are consumed as a range)",
+    "does not re-score EXP-18, EXP-21, PIPE-LOO, LOWER-DEF or any of the 33 cells",
+    "no causal claim; no direction claim; no forecast; no policy target",
+    "D63 stays UNABLE as to cause; the barred structural-ceiling sentence and its opposite both remain unwritten",
+    "no write outside 10_massification/extensions/d63_bounds_2026-11-20/; every input opened read-only",
+    "no web; the running server was not touched"
+  ],
+  "files": {
+    "PRE_DECLARATIONS.md": "dc714963f9c4273ebc36837d50bb98542dba98bf1d66c7b7a3ce076d36efad36",
+    "PRE_DECLARATIONS.sha256": "6388f70ac69f5f1311e4c4d01b6f0f0c5105ca982e49ebd4c03fa172521cf77b",
+    "FINDINGS.md": "b99d32d5099a86769d4cd87ad5b3dde35c1f016a5c5f02d4371ba4299e130211",
+    "code/author_predecl.py": "57d76a05cd0a964ac492abfe6d259ce35cfeb2a1fefdb599c1a98a2a3bc8b8c9",
+    "code/predecl_template.md": "442c6c4dc73119c12f4fbbe757ae36459bf918b6750c98715292c56dd8393121",
+    "code/run_d63_bounds.py": "c0ac249d5943222180fdb3b3b336967ef4149ea0fe56a2b5b821bc6148415230",
+    "code/make_manifest.py": "a2ffa5c64eed841dd8e7214d7a4573cc9d53872e93a975b8374c49a17f5bb94e",
+    "results/D63_BOUNDS_RESULTS.csv": "0f627046238482ffab94152cbd00952f7d052b7c7d7fd5457509b2d5517328c1",
+    "results/D63_BOUNDS_DETAIL.csv": "3f8df22bfe7a6cbbd34fc11166951e1c593634d1ddb0384697b4d8743e2ccb6f",
+    "results/console.txt": "cbf536c006fcfd884e5482ce907b012cb09f0cb22590a8fb63c0d28f635bde8f",
+    "results/determinism_run2/D63_BOUNDS_RESULTS.csv": "0f627046238482ffab94152cbd00952f7d052b7c7d7fd5457509b2d5517328c1",
+    "results/determinism_run2/D63_BOUNDS_DETAIL.csv": "3f8df22bfe7a6cbbd34fc11166951e1c593634d1ddb0384697b4d8743e2ccb6f",
+    "results/determinism_run2/console.txt": "cbf536c006fcfd884e5482ce907b012cb09f0cb22590a8fb63c0d28f635bde8f"
+  },
+  "writes_outside_experiment_dir": "none"
+}
