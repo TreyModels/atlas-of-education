@@ -1157,3 +1157,13 @@ model-specification failure.
 - **Disposition:** model class admitted for the **representation** purpose only; level not reproduced; the κ-in-loop
   implementation needs a design fix (bound the right object without breaching cell identity); the child-wage
   substitution sign is wrong. No rescue, no re-tune. Parks stay parked; A3 line KILLED (D130); D63 stays UNABLE.
+
+**v1.5 post-run disclosures (added after the first report; no re-score):** (i) the outside refusal set used is
+`max(U_work, U_neither)` — `U_both` is a *school* state and as an outside value dominates Tier O in **15/15** cells every
+year (published per cell in `both_would_dominate_cells`), which would drive `T_O ≡ 0`; the two no-place outside states
+were used and the affected-cell count published, not silently dropped; (ii) outside option evaluated at each cell's own
+income; (iii) **tertiary has no tier-choice equilibrium** (frozen child block undefined at L=3) → carry-forward
+declared; (iv) `D_O` year-invariant by construction; (v) κ-binding reduction order over-age → Tier H → Tier O (cap never
+manufactures unfilled Tier O); (vi) **process error B1:** the pre-run SHA snapshot was overwritten by smoke runs, so
+`FROZEN_BEFORE_SHA256SUMS.txt` is a reconstruction of 33 recorded pairs (30/33 match; original hash `89638b39…` recorded
+in the manifest/guard). Verdict string unchanged; no threshold altered.

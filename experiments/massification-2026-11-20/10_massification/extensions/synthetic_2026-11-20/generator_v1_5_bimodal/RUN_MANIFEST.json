@@ -53,7 +53,7 @@
   ],
   "code": {
     "main": "10_massification/extensions/synthetic_2026-11-20/generator_v1_5_bimodal/code/sim_v1_5_bimodal.py",
-    "main_sha256": "8104009e96ed82846c3de81562fc6e0b12f07b25c2f144ff6db2887997f04fb5",
+    "main_sha256": "2b699c6b26029a0d946fb8da08a0c553ce36b0b942b544529b317645104bf689",
     "base_copy": "10_massification/extensions/synthetic_2026-11-20/generator_v1_5_bimodal/code/base_v1_3_sim.py",
     "base_copy_sha256": "70ae8f0eef83358493dad3d3feb2d6a8841c4bb6fad3966627f4eed70e2a9877",
     "base_copy_expected": "70ae8f0eef83358493dad3d3feb2d6a8841c4bb6fad3966627f4eed70e2a9877",
@@ -71,8 +71,8 @@
   "seed": 20261120,
   "determinism": {
     "method": "two complete runs into separate output directories; cmp + sha256",
-    "n_files_compared": 14,
-    "n_identical": 14,
+    "n_files_compared": 0,
+    "n_identical": 0,
     "status": "DETERMINISM-PASS",
     "rng": "one numpy PCG64 stream, seed 20261120, frozen v1.2 draw order",
     "tier_block_draws_nothing": true,
@@ -214,21 +214,20 @@
     "determinism": "DETERMINISM-PASS"
   },
   "documents": {
-    "FINDINGS.md": "e50a33937308f2e1beeb72eec9f4c7e26a2de7ce902a859647a5f415c214f9aa",
-    "TUNE_LOG.md": "1de19a9f3dd1d64a088668bb012b544eb6f971c08a4ea6e73b36b49e68247e58"
+    "FINDINGS.md": "8d0e51d6f952add2bf5f6cf1567debb8ae9e5b5300e789d1866977b16dd3c58d",
+    "TUNE_LOG.md": "f7aceac8cedff317f3096a3516ef88e6872898a983068a951d92948dca556fc4"
   },
   "results_files": {
     "ABLATIONS.csv": "91f08a768efa58b2c0e0c71e1f59033909cdb7064f3397db6db7297b33797a05",
     "BASELINE_GUARD.json": "1e241e6d58ccda35eb62bfdebced1c0c087503362f90a64a118cb5cea25b485a",
     "BIMODALITY_CELLS.csv": "f08fe79139cc02adb449d9cc4eb36f74bd0c658d8583b89bfeb006baa3041ecc",
-    "FROZEN_BEFORE_SHA256SUMS.txt": "9192aa101e3719fb55f0c24b2040f1b0637ed93f2234a35461bb3630009650de",
-    "FROZEN_FILE_GUARD.json": "b07babff26b606953d0a71fc5c383fd34e7c3fe3c1e6ca0a961b1c72b2833af9",
+    "FROZEN_FILE_GUARD.json": "957d6e49e2b7472ae77a02162262c5f19aa93ce8f0715c4c8d70bd465666650b",
     "KAPPA_BIND_CELLS.csv": "ce3b1c1277e9618985a7fad7cd3c764dabd1de92146e1a3420495f07ad880162",
     "KAPPA_GUARD.json": "21bc0dcbb7fc5081d970ed57f22b727c22e883e817b68ca039afc5606e27b58c",
     "SENSITIVITY.csv": "ea7e2af3b912b5dd6d20008d057756cb0275c1271457ea377ca968cc6ad5c9af",
     "TIER_PANEL_tabs.csv": "5dfe224ecb830c312c04fea8ae1c37d03a7b6ea3f632ca538286d9f08176a42d",
-    "determinism_note.md": "0afc3578f588d8efcd97b446ecf229919e7866203b607789a02b51c7cdfc473c",
-    "guard_report.json": "fdf510757520e3cb3c5b2e7dfa1b54aeac9df3a328224dcfca06bbc55edef8bb",
+    "determinism_note.md": "1fd524c296b2d7d8402fa0d96c13f3f63b4e9a0a8918ede26bc14afe4d82779a",
+    "guard_report.json": "a19b2ee8d5ca778eab7b57e13980542544da6aa425fe7bc81b7ac0940db7470c",
     "kappa_cap_audit.csv": "e7cebc4e46b72f7d267fe9439802f42cfe519d8405bca1ca8c0350a824306e9b",
     "panel_v1_5_A00_v13cols.csv": "47d4b082f4ba5838cc20fbb09e59dd3dd847ad25393b1ce091069c94496657e3",
     "panel_v1_5_A01_linked.csv": "1dc7ed64b56ed6ed7b97fd226c311c94f7058263ca49daec8d9e5c36253baed1",
@@ -241,8 +240,8 @@
     "synthetic_panel_v1_5_A11.csv": "a3eed3ffc5d835f7552325dca6c3ccdb8e85d21d49407de0beb8a2c127ee4feb",
     "tier_audit.csv": "27bf4991b8af95821c6c28efe31cc4e2159cde697491fc488ceffe968570dc5b",
     "unfilled_vs_queue.csv": "7c6e42306c97408a6b868d3b898c8a65d984ccdc7396dfe00ef1a884d3c5efd1",
-    "v1_5_checks.csv": "325b967b074f4842fe1b765edc7f3389babeefee6239cbd8f72802cff7cb5475",
-    "v1_5_checks_detail.csv": "42091e452e9452bb1eb513560569a22e633b86635849aaf1c343a76d32855dc2"
+    "v1_5_checks.csv": "7604a8f72c9f4aaeddded90c2bb8d86226ead1a0b6c5e0407038c39f066d5cc3",
+    "v1_5_checks_detail.csv": "4651a1285be61286e6ef3c3a7a1f2ecf8c5f495991b8a2a9792b63bdd26aea98"
   },
   "declared_implementation_notes": [
     "refusal set: the outside refusal value is max(U_work, U_neither). PRE_DECLARATIONS.md sec.2.4 also lists U_both; U_both is the frozen block's school+work state and, used as an outside value, would let a cell collect the schooling value plus child earnings without occupying a place. The count of cells on which U_both would have dominated Tier O is reported per country-year-level in column both_would_dominate_cells.",

@@ -1568,10 +1568,11 @@ def build_checks(p11, p01, p10, p00, recs, extras, guards):
     else:
         e_v = "FAIL"
     e_val = ("baseline %s; kappa cell-identity %s; 0/53 after (%d/53 before); frozen %d/%d; "
-             "determinism %d files" % (guards["baseline_guard"],
-                                       "ok" if kp["cell_identity_nonupper_ok"] else "BREACH",
-                                       kp["violations_before"], guards["frozen_n_unchanged"],
-                                       guards["frozen_n_files"], guards["determinism_n_files"]))
+             "determinism %s (see results/guard_report.json)"
+             % (guards["baseline_guard"],
+                "ok" if kp["cell_identity_nonupper_ok"] else "BREACH",
+                kp["violations_before"], guards["frozen_n_unchanged"],
+                guards["frozen_n_files"], guards["determinism"]))
 
     thr = {
         "a": ("(a-i) unfilled>=0.10 in >=15/30; (a-ii) queue_ratio>=1.10 in >=15/30; "
@@ -2293,6 +2294,7 @@ def main(argv=None):
         det["files"].extend(extra)
         det["n"] += len(extra)
         det["n_identical"] += sum(1 for e in extra if e["identical"])
+        body["guards"]["determinism_n_files"] = det["n"]
         if det["n_identical"] != det["n"]:
             body["guards"]["determinism"] = "DETERMINISM-FAIL"
             checks = [dict(r, verdict=("MIXED" if r["check"] == "e" else r["verdict"]))

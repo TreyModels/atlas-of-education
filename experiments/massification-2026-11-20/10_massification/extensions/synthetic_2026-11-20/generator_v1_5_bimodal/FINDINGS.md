@@ -66,8 +66,9 @@ asked for — holds in every scored year.
 | 2024 | **0.178** | **0.648** | 3.19 | 1.93 | 0.250 | **yes** |
 
 At **upper secondary** the two facts hold together in **every** year of the window: 65–93 % of the open-access places
-are unfilled *while* 1.3–1.9 candidates queue per high-gate place. At **lower secondary** the open tier fills until
-2019 and only begins to leave places untaken from 2022. **This is a representation statement, not an empirical one**:
+are unfilled *while* 1.3–1.9 candidates queue per high-gate place. At **lower secondary** the open tier is essentially
+filled through 2018 (unfilled share 0.000), starts leaving places untaken from 2019 (0.008 → 0.038 → 0.068) and only
+clears the 0.10 floor from 2022 (0.102 → 0.138 → 0.178). **This is a representation statement, not an empirical one**:
 with `h_share` declared, part of the coexistence is arithmetical (PRE_DECLARATIONS §9), and the diagnostic content is
 the magnitude, its monotone response to the `h_share` grid (mean unfilled 0.464 → 0.436 → 0.434 as `h_share` rises by
 0.10 steps), and the **exact zero** in the single-gate arm A00.

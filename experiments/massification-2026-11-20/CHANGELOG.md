@@ -353,3 +353,9 @@ manifests and error logs.
   byte-identical)**; frozen 20/20; determinism PASS; κ 20/53→0/53 — but the in-loop κ cap breaches cell identity
   (`KAPPA-GUARD-FAIL`). **A01 linked upper 2024 = 55.657** (≤63.97 but 8.31 below: cap bounds entry cohort, upper
   survival 0.870); required lower-2021 80.76 vs generator 67.41. No rescue/re-tune; parks stay; A3 KILLED; D63 UNABLE.
+
+**v1.5 post-run disclosures (Lead-recorded; no re-score):** outside refusal set = `max(U_work, U_neither)` (U_both is a
+school state; as an outside value it dominates Tier O 15/15 cells → would drive T_O ≡ 0; affected-cell count published
+per cell); outside option at cell income; tertiary tier-choice has no equilibrium in the frozen child block → declared
+carry-forward; `D_O` year-invariant by construction; κ-binding reduction order over-age → Tier H → Tier O; process error
+B1 — pre-run SHA snapshot reconstructed (30/33 match, original hash `89638b39…` recorded). No threshold altered.

@@ -11,7 +11,7 @@ frozen originals (`7178e3d2…`, `72327cf7…`, `db21055b…`, `46603905…`).
 
 | | |
 |---|---|
-| **Scored run** | the final full run, `code/sim_v1_5_bimodal.py` sha256 **`8104009e…`**, ≈32 s wall (two complete runs + guards) |
+| **Scored run** | the final full run, `code/sim_v1_5_bimodal.py` sha256 **`2b699c6b…`**, ≈32 s wall (two complete runs + guards) |
 | **After that run began** | **no parameter, threshold, band, year set, κ value, arm, column or verdict word was changed** |
 | **Runs before it** | smoke and bug-fix runs only; `results/` was rebuilt from scratch for the scored run |
 | **Every bug fix** | re-ran **all four principal arms and all ten declared extras**, and re-verified the A00 guard from zero |
@@ -19,7 +19,7 @@ frozen originals (`7178e3d2…`, `72327cf7…`, `db21055b…`, `46603905…`).
 
 **One disclosed post-run edit, for completeness.** After the first complete scored run I added a `documents` section to
 the *manifest writer* (to record the `FINDINGS.md` / `TUNE_LOG.md` hashes). That changed the code hash
-(`94e076a1…` → `8104009e…`) and forced one more complete run. **No model logic, parameter or threshold was touched:**
+(`94e076a1…` → `2b699c6b…`) and forced one more complete run. **No model logic, parameter or threshold was touched:**
 A00 still hashes `47d4b082…`, every check statistic and every verdict is identical, and the full guard suite re-passed.
 It is recorded here rather than hidden because a changing code hash is exactly what a reader should be able to see.
 
