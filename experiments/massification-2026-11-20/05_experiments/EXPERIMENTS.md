@@ -1014,3 +1014,139 @@ cells) to extend the benchmark to Cambodia, China, Hong Kong and Japan; fit the 
 observed cells and evaluate on 2011-2020 as a genuine holdout.
 
 **Reproduce.** `PYTHONPATH=code/massabm "$PY" code/exp/run_E21.py --reps 2 --N 5000 --workers 2 --out runs/E21`.
+
+---
+
+## C1 — Recovery / identification study (cross-cutting; batch C, task-8)
+
+**ID and question.** Given only six aggregate moments with measurement error, can the three rival
+generators be told apart — surplus/relational-floor, Yoo fixed cutoff, competitive CES — and what
+happens to a truth that is not in the candidate set?
+
+**Status.** **completed** (61 s, 2 measurement-error datasets per truth, N=2000).
+
+**Purpose.** recovery / identification; the cross-cutting study the handoff ranks highest.
+
+**Why the comparison is informative.** All three candidates are fitted to the *same* moments by
+minimum weighted distance; the classifier is whichever family's best grid point is closest. If the
+fitted distances are nearly tied, the moments cannot separate the mechanisms no matter how well each
+fits.
+
+**Model and version.** massabm unmodified for the surplus/floor world (`mode='full'`, grid:
+floor ∈ {none, adaptive, fixed} × college cost ∈ {0.4, 0.6, 0.8}) and the competitive world
+(`mode='hc_fair_slots'`, grid: σ ∈ {0.5, 1, 2} × `hc_school` ∈ {0.03, 0.05, 0.07}); plus
+`code/new/toy_generators.py` — **independently named new implementations, not reproductions** of
+Yoo or any atlas engine — for the Yoo fixed-cutoff rival (grid: t* ∈ {−0.5, 0, 0.5} × β ∈ {0.15,
+0.25, 0.35}) and for the truth outside the set (random-among-eligible).
+
+**Initial conditions and timeline.** massabm 1920-2035, cohorts 1995-2012, labour 2010-2030; toy
+models are cross-sections of 2,000 households.
+
+**Arms and shared controls.** Four truths (G1 surplus/floor, G2 Yoo, G3 competitive CES, G4 outside)
+× 2 noise draws each; measurement error lognormal σ = 0.06 with additive σ = 0.02 on the gap.
+
+**Outputs.** Six moments (completion, tertiary share, degree premium, formal share, prep take-up,
+Q5−Q1 completion gap); confusion matrix; distances; recovery share.
+
+**Assumptions / sources.** Toy generators are declared reduced forms, not estimates; the moment set is
+deliberately the kind of aggregate available from survey/administrative series.
+
+**Sampling.** 2 noise draws per truth; candidate grids 9 points per family.
+
+**Verification.** 0 failed runs; truth moments and candidate moment surfaces written to CSV for audit.
+
+**Result.** Confusion matrix (rows = truth, columns = assigned family; 2 draws each):
+
+| truth | surplus/floor | Yoo | competitive CES |
+|---|---|---|---|
+| G1 surplus/floor | **1** | 0 | 1 |
+| G2 Yoo cutoff | 0 | **2** | 0 |
+| G3 competitive CES | 2 | 0 | **0** |
+| G4 outside (random among eligible) | 2 | 0 | 0 |
+
+Distances: the surplus/floor and competitive-CES candidates fit G1 and G3 almost identically
+(e.g. G3: d_surplus 0.012-0.019 vs d_competitive 0.012-0.019 — a tie, broken arbitrarily by
+floating-point ordering), while the Yoo family is clearly separated (distance 25-29 on the
+massabm-truth datasets).
+
+**Interpretation.** **NO IDENTIFICATION between the surplus/floor and competitive-CES worlds on
+these six aggregate moments** — the competitive generator is never recovered (0/2), and its fitted
+distance is statistically indistinguishable from the surplus candidate's. Yoo's fixed-cutoff world
+*is* recovered (2/2) because its prep take-up is 1.0 and its Q5−Q1 gap is 0.05, which no other
+family can match. The truth outside the model set is confidently (2/2) assigned to the surplus
+family: **forced identification** — the candidates claim to identify a generator that is not in the
+set. By the predeclared generator-level rule 2 of 3 are recovered (PASS), but the substantive verdict
+is the stronger negative: these moments cannot separate the two accounts the paper is about.
+Cannot identify: whether richer moments (gate-specific tutoring, formal vs informal transitions,
+distribution near the cutoff) would separate them — that is the next design.
+
+**Evidence to collect next.** Add distributional moments near the admission cutoff, credential-specific
+formal-transition rates, and tutoring-by-gate data to the moment set; re-run recovery with a truth
+outside the set that includes measurement error in *panel* form.
+
+**Reproduce.** `PYTHONPATH=code/massabm MASSRUN_EXP=code/exp "$PY" code/exp/run_C1.py --N 2000 --out runs/C1`.
+
+---
+
+## C2 — E11 education–economy mechanisms (atlas floorworld S1–S5, Philippines; batch C)
+
+**ID and question.** In floorworld's structures S1–S5 with the same Philippine schedules, is the
+1980–2020 rise in enrolment and formal jobs **generated** by the economy–education feedback, or
+**supplied** by the exogenous schedules?
+
+**Status.** **completed** (aggregate 56-year scalar model; instant).
+
+**Purpose.** mechanism / atlas-engine (first atlas cell in this package).
+
+**Why the comparison is informative.** Freezing the supplied schooling schedules at their 1980 values
+removes the input-driven channel; whatever rise remains must come from the structure's own
+wage-premium response and job generation. `supplied_share = 1 − frozen_rise/baseline_rise`.
+
+**Model and version.** `floorworld.py` copied **unmodified** from
+`01_sources/atlas-main-55732f4/engine/` into `code/engine/floorworld.py`; structures S1–S5;
+country schedules `COUNTRIES['Philippines']`; `th` = midpoint of each `PRIORS` range (declared; same
+for every structure so structures are compared at identical parameters).
+
+**Initial conditions and timeline.** 1980–2035; report years 1980/1990/2000/2010/2020/2035.
+
+**Arms and shared controls.** 5 structures × 2 schedule regimes (baseline supplied PHL schedules;
+`floor_lower`/`floor_upper`/`he_cap`/`vshare` frozen at 1980 values).
+
+**Outputs.** floor, tertiary, formal, complex, informal, output, surplus, overeducation by year;
+supplied-share decomposition 1980–2020.
+
+**Assumptions / sources.** floorworld's own stylised schedules and priors; `th` midpoints are a
+declared choice, not an estimate.
+
+**Sampling.** Deterministic given `th`; no random draws in these structures (the engine's MC layer was
+not used).
+
+**Verification.** Runs to completion for every S and regime; `c2_floorworld.csv` and
+`c2_decomposition.csv` retained.
+
+**Result.** 1980→2020 (baseline) and supplied share:
+
+| structure | floor | tertiary | formal | complex |
+|---|---|---|---|---|
+| S1 | 0.702→0.918 (supplied +1.13) | 0.200→0.350 (+1.00) | 0.144→0.357 (+0.23) | 0.001→0.041 (+0.36) |
+| S2 | 0.702→0.914 (+1.14) | 0.200→0.301 (+1.00) | 0.097→0.306 (+0.10) | 0.000→0.004 (negligible) |
+| S3 | 0.702→0.925 (+1.10) | 0.200→0.350 (+1.00) | 0.097→0.434 (+0.22) | 0.000→0.194 (+0.33) |
+| S4 | 0.702→0.919 (+1.13) | 0.200→0.350 (+1.00) | 0.076→0.282 (+0.40) | 0.000→0.194 (+0.33) |
+| S5 | 0.702→0.904 (+1.19) | 0.200→0.350 (+1.00) | 0.076→0.138 (+0.33) | 0.000→0.004 (negligible) |
+
+**Interpretation.** **The schooling rise is supplied, not generated** in every structure: with the
+supplied schedules frozen at 1980, basic completion does not rise at all (supplied share ≈ 1.1-1.2,
+i.e. the frozen run can even fall), and the tertiary stock is entirely capped by `he_cap`. **The
+formal-job rise is not from schooling**: 60-90% of it survives with schooling frozen in all five
+structures, because it comes from the investment/industrial-policy path and, in S3/S4, capability
+feedback. Which structure builds the *complex*-jobs leg is what separates S1 (legibility of human
+capital) from S3/S4 (capabilities) and S2/S5 (industrial policy): complex jobs reach 19-20% in S3/S4
+but stay negligible in S2/S5 at these priors. So the honest headline: **schooling is supplied;
+formal jobs are not supplied by schooling** — no structure generates the education rise itself under
+this design. Cannot identify: whether a different `th` (e.g. higher `resp` or `budget`) would let the
+premium response generate more of the enrolment rise; the midpoint priors are one draw.
+
+**Evidence to collect next.** Sweep `resp`/`budget`/`v_protect` (the schooling-response parameters)
+over the floorworld priors, and compare the generated education path with the observed PHL series.
+
+**Reproduce.** `MASSRUN_EXP=code/exp "$PY" code/exp/run_C2.py --out runs/C2`.

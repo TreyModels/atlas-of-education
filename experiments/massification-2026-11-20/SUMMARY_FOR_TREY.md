@@ -160,6 +160,26 @@ question, and the most important parameter to estimate before the model can say 
   baseline "neither" share is flagged for validation, not treated as an estimate.
 - **No atlas-engine cells ran** (`floorworld`, `childworld`, `relfloor`, `firms`, `tutoring_abm`).
 
+## 4b. Iteration 1's hinge: the model can't yet identify its own rivals, and the economy is one-way
+
+Two cell results are the reason this is now a research loop rather than a finished report:
+
+- **C1 (recovery/identification): the two central worlds are not distinguishable.** On six aggregate
+  moments, a surplus/relational-floor world and a competitive-CES world fit the same data equally well
+  (distances 0.012–0.023 both), a competitive truth is never recovered (0/2), and a truth *outside* the
+  model set is confidently assigned to the surplus world (forced identification). Yoo's fixed-cutoff
+  world is identifiable. More simulation of the same two worlds will not separate them — new moments or
+  natural experiments are required.
+- **C2 (floorworld): attainment is supplied; jobs are not from schooling.** Freezing the schooling
+  schedules at 1980 removes essentially all of the basic-completion and tertiary rise, while 60–90% of
+  the formal-job rise survives with schooling frozen. The model is one-way: the economy grows without
+  schooling, and schooling grows without the economy.
+
+That is why iteration 2 (**now running**) builds the two-way interaction and an endogenous shadow
+sector, and calibrates against literature-reported shadow-education rates rather than adding more
+parameter variants of the same one-way model. The loop, its stopping rules, and its success criteria are
+in [`06_report/RESEARCH_LOOP.md`](06_report/RESEARCH_LOOP.md).
+
 ## 5. Numbers, corrected (this is the “pull the numbers” part)
 
 | claim | verdict | what the source actually says |

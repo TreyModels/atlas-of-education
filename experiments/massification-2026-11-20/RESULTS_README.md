@@ -26,7 +26,7 @@ of any theory, not a country study, and not causal evidence.
 
 ## 2. What actually executed
 
-**Twenty-three completed experiment cells** (plus a Phase-0 validation gate), one pilot, a parallel
+**Twenty-five completed experiment cells** (plus a Phase-0 validation gate), one pilot, a parallel
 adversarial batch, and two Council-commissioned follow-ups:
 
 | batch | cells | status |
@@ -36,7 +36,7 @@ adversarial batch, and two Council-commissioned follow-ups:
 | A — follow-up | **E13c level-matched rival** | completed (36/36 stage-2 runs): Prediction 2 survives in formal-access form |
 | B — adversarial replication (`experiment-runner-2`) | B1 independent matched-rival replication, B2 floor/race at 4 reps, B3 allocation-rule knockout, B4 10/20/30/40-year trajectories, B5 credential information/recognition | 5 completed |
 | C — follow-on cells | C4 return compression/outside options, C5 corruption + well-informed foreign reader, C6 childworld four states | 3 completed |
-| C — runner-1 cells | C1 recovery/identification, C2 floorworld E11, C3 Philippine calibration | **in progress at delivery; not claimed** |
+| C — runner-1 cells | C1 recovery/identification, C2 floorworld E11 (both completed), C3 Philippine calibration | 2 completed; C3 **in progress, not claimed** |
 
 Never claimed: E4, E9, E11, the recovery study, cross-cutting parameter-uncertainty sampling, the
 E16 corruption channel, and all atlas-engine cells

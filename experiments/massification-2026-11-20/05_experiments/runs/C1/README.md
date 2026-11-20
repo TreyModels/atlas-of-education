@@ -1,0 +1,49 @@
+# C1 — Recovery / identification study (cross-cutting)
+
+Command: `PYTHONPATH=<work>/massabm MASSRUN_EXP=<work>/exp "$PY" exp/run_C1.py --N 2000 --out <out>`
+
+Status: **completed** (61 s). Generators: massabm surplus/floor, massabm competitive CES, and a new
+Yoo-style fixed-cutoff module (`toy_generators.py`, independently named new implementation). Truth outside
+the set: random-among-eligible. 2 measurement-error datasets per truth.
+
+C1 RECOVERY / IDENTIFICATION STUDY (cross-cutting)
+draws=2 measurement-error datasets per truth; wall=61s
+Candidate families: surplus/floor (massabm full, 3x3 floor x college-cost), Yoo fixed cutoff (3x3 t* x beta),
+competitive CES (massabm hc_fair_slots, 3x3 sigma x hc_school). Fitted by minimum weighted distance on six
+moments: completion, tertiary share, degree premium, formal share, prep take-up, Q5-Q1 gap.
+
+TRUTH MOMENTS (noise-free):
+  completion=0.720  tertiary=0.178  premium=2.261  formal_share=0.405  prep_takeup=0.155  gap_q5_q1=0.318
+  G1 surplus/floor                     completion=0.720  tertiary=0.178  premium=2.261  formal_share=0.405  prep_takeup=0.155  gap_q5_q1=0.318
+  G2 yoo cutoff                        completion=0.762  tertiary=0.470  premium=2.200  formal_share=0.469  prep_takeup=1.000  gap_q5_q1=0.050
+  G3 competitive CES                   completion=0.716  tertiary=0.171  premium=2.250  formal_share=0.416  prep_takeup=0.159  gap_q5_q1=0.323
+  G4 outside (random among eligible)   completion=0.428  tertiary=0.146  premium=1.080  formal_share=0.175  prep_takeup=0.150  gap_q5_q1=0.405
+
+CONFUSION MATRIX (rows = truth, cols = assigned family; 2 noise draws each):
+  truth                                 surplus    yoo  competitive
+  G1 surplus/floor                            1      0            1
+  G2 yoo cutoff                               0      2            0
+  G3 competitive CES                          2      0            0
+  G4 outside (random among eligible)          2      0            0
+
+DISTANCES PER DRAW (lower = better fit):
+  truth                                draw  d_surplus    d_yoo   d_comp         pick
+  G1 surplus/floor                        0      0.023   28.446    0.023      surplus
+  G1 surplus/floor                        1      0.035   26.556    0.019  competitive
+  G2 yoo cutoff                           0      3.569    0.084    3.372          yoo
+  G2 yoo cutoff                           1      3.759    0.048    3.558          yoo
+  G3 competitive CES                      0      0.019   25.196    0.019      surplus
+  G3 competitive CES                      1      0.012   28.895    0.012      surplus
+  G4 outside (random among eligible)      0      3.942   30.284    4.078      surplus
+  G4 outside (random among eligible)      1      3.615   28.870    3.727      surplus
+
+PREDECLARED DECISION: a model must recover its own generator better than rivals in >=2 of 3 in-set cases.
+  G1 surplus/floor: recovered 1/2 draws -> PASS
+  G2 yoo cutoff: recovered 2/2 draws -> PASS
+  G3 competitive CES: recovered 0/2 draws -> FAIL
+  overall recovery share = 0.67 (>=0.67 required) -> NO IDENTIFICATION on these moments
+
+TRUTH OUTSIDE THE MODEL SET (G4): assigned surplus 2/2, yoo 0/2, competitive 0/2 -> the candidates claim a confident identification of a generator that is NOT in their set: FORCED IDENTIFICATION, reported as a failure mode.
+
+CAVEAT: six aggregate moments, two noise draws per truth, small candidate grids. This is a pilot-strength
+recovery test: it can show that identification is weak, not that it would fail with richer data.

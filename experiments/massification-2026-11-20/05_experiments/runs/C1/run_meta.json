@@ -1,0 +1,28 @@
+{
+ "eid": "C1",
+ "N": 2000,
+ "wall": 61.229799032211304,
+ "recovery_share": 0.6666666666666666,
+ "confusion": {
+  "G1 surplus/floor": {
+   "surplus": 1,
+   "yoo": 0,
+   "competitive": 1
+  },
+  "G2 yoo cutoff": {
+   "surplus": 0,
+   "yoo": 2,
+   "competitive": 0
+  },
+  "G3 competitive CES": {
+   "surplus": 2,
+   "yoo": 0,
+   "competitive": 0
+  },
+  "G4 outside (random among eligible)": {
+   "surplus": 2,
+   "yoo": 0,
+   "competitive": 0
+  }
+ }
+}

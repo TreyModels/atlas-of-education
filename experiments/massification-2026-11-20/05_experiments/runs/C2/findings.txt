@@ -1,0 +1,36 @@
+C2 (E11) ATLAS FLOORWORLD S1-S5, PHILIPPINE SCHEDULES: IS THE RISE GENERATED OR SUPPLIED?
+wall=0s; th = midpoint of each floorworld PRIOR range (same for every structure).
+Baseline = supplied PHL schedules. Frozen = floor_lower/floor_upper/he_cap/vshare held at their 1980 values.
+supplied_share = 1 - (rise with schedules frozen)/(rise in baseline), 1980-2020.
+
+  S1: floor 0.702->0.918 (supplied share +1.13); tertiary 0.200->0.350 (+1.00); formal 0.144->0.357 (+0.23); complex 0.001->0.041 (+0.36)
+  S2: floor 0.702->0.914 (supplied share +1.14); tertiary 0.200->0.301 (+1.00); formal 0.097->0.306 (+0.10); complex 0.000->0.004 (+0.03)
+  S3: floor 0.702->0.925 (supplied share +1.10); tertiary 0.200->0.350 (+1.00); formal 0.097->0.434 (+0.22); complex 0.000->0.194 (+0.33)
+  S4: floor 0.702->0.919 (supplied share +1.13); tertiary 0.200->0.350 (+1.00); formal 0.076->0.282 (+0.40); complex 0.000->0.194 (+0.33)
+  S5: floor 0.702->0.904 (supplied share +1.19); tertiary 0.200->0.350 (+1.00); formal 0.076->0.138 (+0.33); complex 0.000->0.004 (+0.01)
+
+READ: supplied_share near 1 = the rise is essentially the exogenous schedule; near 0 or negative =
+the structure's own wage-premium response and job generation produce it. Positive but < 1 = mixed.
+
+PER-OUTCOME VERDICT (predeclared rule applied separately, so supply and generation are not conflated):
+  S1: enrollment/attainment -- floor: SUPPLIED-BY-SCHOOLING (supplied share +1.13, 2020 level 0.918); tertiary: SUPPLIED-BY-SCHOOLING (supplied share +1.00, 2020 level 0.350)
+      job structure        -- formal: NOT-FROM-SCHOOLING (supplied share +0.23, 2020 level 0.357); complex: NOT-FROM-SCHOOLING (supplied share +0.36, 2020 level 0.041)
+  S2: enrollment/attainment -- floor: SUPPLIED-BY-SCHOOLING (supplied share +1.14, 2020 level 0.914); tertiary: SUPPLIED-BY-SCHOOLING (supplied share +1.00, 2020 level 0.301)
+      job structure        -- formal: NOT-FROM-SCHOOLING (supplied share +0.10, 2020 level 0.306); complex: NEGLIGIBLE (level 0.004)
+  S3: enrollment/attainment -- floor: SUPPLIED-BY-SCHOOLING (supplied share +1.10, 2020 level 0.925); tertiary: SUPPLIED-BY-SCHOOLING (supplied share +1.00, 2020 level 0.350)
+      job structure        -- formal: NOT-FROM-SCHOOLING (supplied share +0.22, 2020 level 0.434); complex: NOT-FROM-SCHOOLING (supplied share +0.33, 2020 level 0.194)
+  S4: enrollment/attainment -- floor: SUPPLIED-BY-SCHOOLING (supplied share +1.13, 2020 level 0.919); tertiary: SUPPLIED-BY-SCHOOLING (supplied share +1.00, 2020 level 0.350)
+      job structure        -- formal: NOT-FROM-SCHOOLING (supplied share +0.40, 2020 level 0.282); complex: NOT-FROM-SCHOOLING (supplied share +0.33, 2020 level 0.194)
+  S5: enrollment/attainment -- floor: SUPPLIED-BY-SCHOOLING (supplied share +1.19, 2020 level 0.904); tertiary: SUPPLIED-BY-SCHOOLING (supplied share +1.00, 2020 level 0.350)
+      job structure        -- formal: NOT-FROM-SCHOOLING (supplied share +0.33, 2020 level 0.138); complex: NEGLIGIBLE (level 0.004)
+
+HEADLINE: across all five structures the 1980-2020 rise in basic completion and tertiary stock is
+essentially supplied by the exogenous PHL schedules (frozen-schedule counterfactual leaves ~none of it).
+Formal-job expansion, by contrast, survives with schooling frozen in every structure (60-90% of the
+baseline rise) -- it is NOT-FROM-SCHOOLING in all five. Which structure generates that job leg is what
+separates S1 (legibility of human capital) from S2 (investment) and S3/S4 (capabilities): the
+counterfactual used here freezes only the schooling schedules, so "NOT-FROM-SCHOOLING" means the rise
+comes from investment/industrial-policy schedules and endogenous capability feedback, not that it is
+a free-running emergent result. Complex jobs are NEGLIGIBLE in S2/S5 at these priors and reach 19-20%
+in S3/S4. So the honest headline is: SCHOOLING IS SUPPLIED; FORMAL JOBS ARE NOT SUPPLIED BY SCHOOLING.
+No structure generates the schooling rise itself under this design.

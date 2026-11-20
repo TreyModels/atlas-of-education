@@ -422,7 +422,10 @@
   "E2": "\"$PY\" code/exp/kat_cohort.py --csv runs/E2_cohort_arithmetic/kat_cohort.csv",
   "E0_invariants": "PYTHONPATH=code/massabm \"$PY\" code/exp/invariants.py",
   "E0_smoke_massabm": "cd code/massabm && \"$PY\" run.py smoke",
-  "E0_smoke_triad": "cd code/triad && \"$PY\" run_triad.py emergence --quick --workers 1"
+  "E0_smoke_triad": "cd code/triad && \"$PY\" run_triad.py emergence --quick --workers 1",
+  "C1": "PYTHONPATH=code/massabm MASSRUN_EXP=code/exp \"$PY\" code/exp/run_C1.py --N 2000 --out runs/C1",
+  "C2": "MASSRUN_EXP=code/exp \"$PY\" code/exp/run_C2.py --out runs/C2",
+  "C3_NOT_RUN": "PYTHONPATH=code/massabm MASSRUN_EXP=code/exp \"$PY\" code/exp/run_C3.py --draws 96 --best 6 --N 2000 --Nfine 4000 --out runs/C3"
  },
  "compute": {
   "workers_max": 2,
@@ -462,6 +465,13 @@
    "E13c": "completed (calibration + 36/36); Prediction 2 SURVIVES in formal-access form; runs/E13c/",
    "E13b_correction": "E13b level figures confirmed against 6-rep e13b_summary.csv; note appended to runs/E13b/README.md",
    "atlas_bridge": "status posted + 4 attachments to party deepseek-research (append-only; no rewrite)"
+  },
+  "task-8 (batch C)": {
+   "predeclarations": "PRE_DECLARATIONS_C.md",
+   "C1": "completed 61s; NO IDENTIFICATION between surplus/floor and competitive CES; outside truth forced-identified; runs/C1/",
+   "C2": "completed; schooling supplied, formal jobs not supplied by schooling; runs/C2/",
+   "C3": "IN PROGRESS - not completed, not claimed; design + runner + next command in runs/C_STATUS.md",
+   "status_file": "runs/C_STATUS.md"
   }
  }
 }

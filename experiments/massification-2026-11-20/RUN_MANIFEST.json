@@ -1,7 +1,7 @@
 {
  "package": "massification_2026-11-20",
  "title": "Massification, the economy, and shadow education — DeepSeek research execution package",
- "generated_utc": "2026-11-20T05:04:54.133861+00:00",
+ "generated_utc": "2026-11-20T05:08:32.413114+00:00",
  "time_zone": "Asia/Shanghai",
  "prepared_for": "Dr. Trey Menefee (Menefee & Nordtveit working paper, October 2026)",
  "handoff_source_zip": "/Users/treymenefee/Downloads/DeepSeek_Massification_Research_Package.zip",
@@ -152,6 +152,32 @@
   "compute_wall_minutes_approx": 40,
   "workers_max": 2,
   "run_dirs": [
+   {
+    "id": "C1",
+    "files": [
+     "README.md",
+     "c1_candidate_moments.csv",
+     "c1_confusion.csv",
+     "c1_truth_moments.csv",
+     "findings.txt",
+     "run_C1.py",
+     "run_meta.json",
+     "toy_generators.py"
+    ],
+    "has_findings": true
+   },
+   {
+    "id": "C2",
+    "files": [
+     "README.md",
+     "c2_decomposition.csv",
+     "c2_floorworld.csv",
+     "findings.txt",
+     "run_C2.py",
+     "run_meta.json"
+    ],
+    "has_findings": true
+   },
    {
     "id": "E0_phase0",
     "files": [
@@ -380,15 +406,15 @@
   "site_safety": "vite build reads src/ + public/ only; experiments/ is not imported by the site"
  },
  "deliverable_hashes": {
-  "SUMMARY_FOR_TREY.md": "6413c2d3aa4d3e0205fcb32ecf846a5066e2fde60ec2ed213a43b085afdf7456",
-  "RESULTS_README.md": "435c368687e1bf8e8061630a5d3a5867d28e1eedda638e971ae6b3d74726a991",
+  "SUMMARY_FOR_TREY.md": "cedae18ba453ed3440392ab083562b498a4516354d7f7229998eea8b2953fae9",
+  "RESULTS_README.md": "73e89ffbaff7a318dd81630ab7aa4a33d9cc9529df9acc749660063a22f7f8b8",
   "MODEL_INVENTORY.md": "db12da75200b8b461d552846c39290870a83508f6086c2f67271c247a769b8e5",
   "LITERATURE_LEDGER.md": "4b6c9ba4e70c5f4505af1098675c52f7cb257b780994840f8c11ff076693a7e5",
   "DATA_LEDGER.md": "a93f3cd69d4d7e374412f48542e1f75e533636d3284601251a665ba989a97bfe",
-  "EXPERIMENTS.md": "af463a33147ec84be282a22778947bb92d9e267b328375899d37b7708f3e047b",
+  "EXPERIMENTS.md": "df24a7d68a197a07de55816001e7c2dd28ed43f0a8caf69e5aa2be10fcf80f21",
   "OPEN_QUESTIONS.md": "fe4c16428981c1668a2882a173335a5b499d9c6faec042009faf8ccdd4c2f976",
   "PROVENANCE.md": "5a5e584b6d73a6db97dfa2142c8962e742e05f29e2d4234156919232502ba782",
-  "RUN_MANIFEST.json": "5b7a429d3fe22f26bfbd51dde89ecd1fdc8ddf706eac1d633f611b0435344198"
+  "RUN_MANIFEST.json": "1464d37ae941bbe040d3ac5e7f1cb68669758f7d5bd18bb90e015b16514e6989"
  },
  "subtree_hashes": {
   "02_lit": {
@@ -754,6 +780,66 @@
    }
   },
   "05_experiments/runs": {
+   "05_experiments/runs/C_STATUS.md": {
+    "sha256": "a0c224ab193679b3343aba1113b7017db18c0224360c60b83044383ba96db713",
+    "bytes": 1627
+   },
+   "05_experiments/runs/C1/README.md": {
+    "sha256": "795f3dc850f6ee5dcb00c966312394aa367a47b46d432f961985f52fa56d30f9",
+    "bytes": 3563
+   },
+   "05_experiments/runs/C1/c1_candidate_moments.csv": {
+    "sha256": "c7f3aa2e67520582076571499d29b026990988ac3a29781d59965ce92d301bb2",
+    "bytes": 2909
+   },
+   "05_experiments/runs/C1/c1_confusion.csv": {
+    "sha256": "4df8e38b2e7ff6f7d8002b3d3d225f7ce4fee6a767b62b392ea5dff5651ec994",
+    "bytes": 887
+   },
+   "05_experiments/runs/C1/c1_truth_moments.csv": {
+    "sha256": "3a44346c8b8075e2d46949948fbd7faea1b8d99e1a6bd14299f5df4fd1cc7bc4",
+    "bytes": 500
+   },
+   "05_experiments/runs/C1/findings.txt": {
+    "sha256": "f213849ebe2174edceca061e5254be423cfb0e35cf7e7d3b53805347cbd2c923",
+    "bytes": 3123
+   },
+   "05_experiments/runs/C1/run_C1.py": {
+    "sha256": "e719087af6bbca4c2b360265106a47af12607e3fd9b105a4b0989be278c2082b",
+    "bytes": 8951
+   },
+   "05_experiments/runs/C1/run_meta.json": {
+    "sha256": "34bc69afa58220bd85ae20144fdcf47514e742fb15687dc11bf6a58b60581449",
+    "bytes": 448
+   },
+   "05_experiments/runs/C1/toy_generators.py": {
+    "sha256": "dc3a4ff7cddc42040b74464d9c8952f8d7f79f5c96561d6bd6a7e57e71b8f8bc",
+    "bytes": 2677
+   },
+   "05_experiments/runs/C2/README.md": {
+    "sha256": "4ffa313f132730782516058f117813c5ed85c57b28f79841843776c5028c1fd0",
+    "bytes": 4353
+   },
+   "05_experiments/runs/C2/c2_decomposition.csv": {
+    "sha256": "5dde2ae1f64c0d42d5caa2cf0491c7ce945b90c4d8fb72bf6d2bf853b358ad02",
+    "bytes": 2030
+   },
+   "05_experiments/runs/C2/c2_floorworld.csv": {
+    "sha256": "19c2c26bd8ea736c234bb2301b63fc2539321a27992791d8c7255af90a283b7f",
+    "bytes": 10086
+   },
+   "05_experiments/runs/C2/findings.txt": {
+    "sha256": "d65012d3b4b2adefeef7f3afe62ed9044d0a4a5347bf87f20a01af6e6925d1f1",
+    "bytes": 3978
+   },
+   "05_experiments/runs/C2/run_C2.py": {
+    "sha256": "ded712158cb721d705a043279ef98c491ce1be45ee11b98760a0623500b1cfde",
+    "bytes": 6041
+   },
+   "05_experiments/runs/C2/run_meta.json": {
+    "sha256": "80f19b6fb332f1df3e8b7bd0921aeca5ac0c8d509d4627d902b81f4e82b0d0f2",
+    "bytes": 462
+   },
    "05_experiments/runs/E0_phase0/README.md": {
     "sha256": "3be049542c53df7dd24cbd7416ec6ace9fdbcadc5a35a3a412dd4fac0670dbff",
     "bytes": 4402
