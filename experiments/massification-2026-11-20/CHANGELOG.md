@@ -332,3 +332,11 @@ manifests and error logs.
   **0.151**. Falsifier not tripped; A3-D d2 and A3-S c4a explained, not reopened; **EXP-9 dispatched**. Caveat: v1.3 g3
   panel vs flow panel tertiary p_off ≡ 1.0 disclosed.
 - D128/D129 recorded; STATUS 3ac(m)/(n).
+
+## 2026-11-21 — EXP-9 RUNG-PROB: NOT DEMAND-DERIVABLE; A3 demand line KILLED (D130)
+
+- `rung_prob_2026-11-20/` (predecl `1cd399dd…`, deterministic, 21/21 SHA): arm A (school-gate P≈0.999) upper 2024
+  **95.05** (+16.05 above the band; ablation +18.41 pp, NON-DECORATIVE); arm B (rung-4 P≈0.151) upper 2024 **42.13**
+  (−28.87 below the band; ablation −34.51 pp). **Both outside [71,79] → NOT DEMAND-DERIVABLE → the A3 line is KILLED**
+  (not parked); the taste parameter is irreducible without a fit. Baseline guards PASS (G1 = v1.3 panel; G2 = frozen v1.4
+  panel); no re-tune; A3-D FALSIFIED stands; "demand falsified" language still banned.

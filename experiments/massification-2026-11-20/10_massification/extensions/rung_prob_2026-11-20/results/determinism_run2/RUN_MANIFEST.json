@@ -1,0 +1,103 @@
+{
+  "arms": {
+    "A": {
+      "probability": "pi0(g2)",
+      "substitution": "none (frozen v1.4 ON arm)"
+    },
+    "B": {
+      "anchor_median_2010_plus": 0.15103225591118347,
+      "fallback": "pi0(g2) where rung4_demand == 0 (100/1680 cells, none in anchor)",
+      "probability": "rung4_emp / rung4_demand from synthetic_panel_v1_2.csv",
+      "substitution": "gs[2]['pi0'] replaced inside demand_values only; R_gate unchanged"
+    }
+  },
+  "arms_detail_rows": 5040,
+  "baseline_guard": {
+    "G1_byte_identical": true,
+    "G2_byte_identical": true,
+    "armA_panel_sha256": "ffecd450514cf8259512647db4e78bcd058639c208a1a2057bbac8b506ddbdaa",
+    "armB_panel_sha256": "6b9befffc159d536c470267e55ab6fba2d27ebb8e281342877fa06ce125c10f7",
+    "off_panel_sha256": "47d4b082f4ba5838cc20fbb09e59dd3dd847ad25393b1ce091069c94496657e3",
+    "verdict": "PASS"
+  },
+  "code": {
+    "base_copy": "code/frozen_v1_4/base_v1_3_sim.py",
+    "base_copy_sha256": "70ae8f0eef83358493dad3d3feb2d6a8841c4bb6fad3966627f4eed70e2a9877",
+    "frozen_copy": "code/frozen_v1_4/sim_v1_4_demand.py",
+    "frozen_copy_sha256": "6e4a6761fa32325c61f138037a1e5c8d5e578e19f8a2ee2519e73e8f2332b2d1",
+    "frozen_copy_status": "byte-identical copy of frozen v1.4 code; not edited",
+    "path": "code/run_rung_prob.py",
+    "sha256": "1683d3bfb3971e30ca6282a4e8f0d87141b2a93d93846aa93763c88d3b33ff90"
+  },
+  "determinism": {
+    "floats": "%.10g",
+    "method": "two clean runs into separate output directories; cmp on every result CSV, the guard JSON and the manifest",
+    "wall_clock_in_outputs": false
+  },
+  "experiment": "EXP-9 RUNG-PROB",
+  "files": {
+    "BASELINE_GUARD.json": "21c94d637a0f063ab03b9848e5599825b375a9bef9ffda03965fde3780108672",
+    "RUNG_PROB_ARMS.csv": "7743bbfaa8d100791cd26e85cce0a8f772d90d005012b6df98f24013eb616aa7",
+    "RUNG_PROB_RESULTS.csv": "95b598dbf998ed1a061ad9295d13970e89d45b55073b2365e102ca185fd73a7d",
+    "panels/synthetic_panel_v1_4_demand_off.csv": "47d4b082f4ba5838cc20fbb09e59dd3dd847ad25393b1ce091069c94496657e3",
+    "panels/synthetic_panel_v1_4_demand_on_armA.csv": "ffecd450514cf8259512647db4e78bcd058639c208a1a2057bbac8b506ddbdaa",
+    "panels/synthetic_panel_v1_4_demand_on_armB.csv": "6b9befffc159d536c470267e55ab6fba2d27ebb8e281342877fa06ce125c10f7"
+  },
+  "frozen_spec": {
+    "v12_panel_sha256": "14729c5141a71dd9aaf87a5ad2e973a84b5f04603577aae627f2833276fac5ac",
+    "v13_panel_sha256": "47d4b082f4ba5838cc20fbb09e59dd3dd847ad25393b1ce091069c94496657e3",
+    "v14_off_panel_sha256": "47d4b082f4ba5838cc20fbb09e59dd3dd847ad25393b1ce091069c94496657e3",
+    "v14_on_panel_sha256": "ffecd450514cf8259512647db4e78bcd058639c208a1a2057bbac8b506ddbdaa",
+    "v14_predecl_sha256": "9ed0cae353c9a3dfba00582ff47d19ca8b761d8dd7b7ce5f9a8a8e4c5c5f49b3"
+  },
+  "host_mapping": {
+    "SYN_HKG_LIKE": "SYN28",
+    "SYN_KHM_LIKE": "SYN18",
+    "SYN_PHL_LIKE": "SYN00_PHL_LIKE"
+  },
+  "label": "SYNTHETIC",
+  "numpy": "2.4.6",
+  "predeclaration": {
+    "path": "PRE_DECLARATIONS.md",
+    "sha256": "1cd399dd07a5ad1bc1e1d47637f36dde2a9dcf3ed7c46beca02550f6608bb8be"
+  },
+  "python": "3.11.17",
+  "results": {
+    "ablation_pp": {
+      "arm_A": 18.406405026714566,
+      "arm_B": -34.513456823492966
+    },
+    "arm_verdict": {
+      "arm_A": "NOT DEMAND-DERIVABLE",
+      "arm_B": "NOT DEMAND-DERIVABLE"
+    },
+    "both_arms_outside_band": true,
+    "falsifier_triggered": true,
+    "in_band": {
+      "arm_A": false,
+      "arm_B": false
+    },
+    "overall": "NOT DEMAND-DERIVABLE",
+    "upper_2024": {
+      "arm_A": 95.0454861480926,
+      "arm_B": 42.125624297885075,
+      "off": 76.63908112137804
+    }
+  },
+  "rng": "numpy PCG64 (np.random.default_rng), single stream, v1.2 draw order; neither the shadow block nor the demand block nor the arm-B substitution draws a random number",
+  "scored_object": {
+    "country": "SYN00_PHL_LIKE",
+    "level": "upper_secondary",
+    "object": "UIS-convention completion (completion_uis x 100)",
+    "year": 2024
+  },
+  "seed": 20261120,
+  "statement": "Synthetic data from declared assumptions only. Not evidence, not an estimate, not a forecast, no causal or direction claim, no real country modelled. A negative result is the expected outcome and is reported as such; no parameter, band, bar or arm was changed after any result was seen.",
+  "thresholds": {
+    "ablation_bar_pp": 3.0,
+    "band": [
+      71.0,
+      79.0
+    ]
+  }
+}

@@ -1124,3 +1124,14 @@ model-specification failure.
   architecture not reversed; **the "ceiling as upper gate" line is CLOSED**; A3-D's d2 and A3-S's c4a are
   **explained, not reopened**; **EXP-9 dispatched** (dispatch-eligible). Disclosed caveat: v1.3 gate panel disagrees at g3
   (PHL-like pi0 0.43–0.71) vs flow tertiary p_off ≡ 1.0 — secondary leg only.
+
+### o) EXP-9 RUNG-PROB — `NOT DEMAND-DERIVABLE`; the A3 demand line is KILLED (D130)
+
+- `rung_prob_2026-11-20/` (predecl `1cd399dd…`; deterministic, two runs byte-identical; 21/21 SHA). **Arm A**
+  (`P = pi0(g2) ≈ 0.999`): upper 2024 = **95.04548615** (16.05 above 79), ablation **+18.4064 pp** → NON-DECORATIVE.
+  **Arm B** (`P = rung4_emp/rung4_demand`, anchor median 0.151): upper 2024 = **42.1256243** (28.87 below 71), ablation
+  **−34.5135 pp** → NON-DECORATIVE. **Overall `NOT DEMAND-DERIVABLE` — both arms outside [71,79]; the falsifier fires;
+  the A3 demand line is KILLED, not parked; the taste parameter is irreducible without a fit.** Baseline guards PASS
+  (G1 OFF = v1.3 panel `47d4b082…`; G2 unmodified arm-A ON = frozen v1.4 panel `ffecd450…`, both byte-identical).
+  A3-D's FALSIFIED verdict stands; no re-tune/fit; migration/remittance DECLARED/NOT-VERIFIED and unused; "demand
+  falsified" language remains banned (the *specification* failed).

@@ -1,0 +1,38 @@
+{
+  "G1_off": {
+    "byte_identical": true,
+    "expected": "47d4b082f4ba5838cc20fbb09e59dd3dd847ad25393b1ce091069c94496657e3",
+    "sha256": "47d4b082f4ba5838cc20fbb09e59dd3dd847ad25393b1ce091069c94496657e3",
+    "what": "demand-OFF panel vs frozen v1.3 panel",
+    "written": "panels/synthetic_panel_v1_4_demand_off.csv"
+  },
+  "G2_on_unmodified": {
+    "byte_identical": true,
+    "expected": "ffecd450514cf8259512647db4e78bcd058639c208a1a2057bbac8b506ddbdaa",
+    "sha256": "ffecd450514cf8259512647db4e78bcd058639c208a1a2057bbac8b506ddbdaa",
+    "what": "arm A (no substitution) ON panel vs frozen v1.4 ON panel",
+    "written": "panels/synthetic_panel_v1_4_demand_on_armA.csv"
+  },
+  "arm_B_panel": {
+    "sha256": "6b9befffc159d536c470267e55ab6fba2d27ebb8e281342877fa06ce125c10f7",
+    "written": "panels/synthetic_panel_v1_4_demand_on_armB.csv"
+  },
+  "frozen_inputs": {
+    "v12_panel_sha256": "14729c5141a71dd9aaf87a5ad2e973a84b5f04603577aae627f2833276fac5ac",
+    "v13_base_code_sha256": "70ae8f0eef83358493dad3d3feb2d6a8841c4bb6fad3966627f4eed70e2a9877",
+    "v13_panel_sha256": "47d4b082f4ba5838cc20fbb09e59dd3dd847ad25393b1ce091069c94496657e3",
+    "v14_code_sha256": "6e4a6761fa32325c61f138037a1e5c8d5e578e19f8a2ee2519e73e8f2332b2d1",
+    "v14_off_panel_sha256": "47d4b082f4ba5838cc20fbb09e59dd3dd847ad25393b1ce091069c94496657e3",
+    "v14_on_panel_sha256": "ffecd450514cf8259512647db4e78bcd058639c208a1a2057bbac8b506ddbdaa",
+    "v14_predecl_sha256": "9ed0cae353c9a3dfba00582ff47d19ca8b761d8dd7b7ce5f9a8a8e4c5c5f49b3"
+  },
+  "guard_verdict": "PASS",
+  "label": "SYNTHETIC",
+  "statement": "The unmodified arm must reproduce the frozen v1.4 panel byte-for-byte; the demand-OFF run must reproduce the frozen v1.3 panel byte-for-byte.",
+  "v12_rung4_lookup": {
+    "anchor_fallback": 0,
+    "country_years": 1680,
+    "defined": 1580,
+    "fallback": 100
+  }
+}
