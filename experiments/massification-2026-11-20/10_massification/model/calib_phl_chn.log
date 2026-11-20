@@ -1,0 +1,10 @@
+PHL demand_led: fit MAE 5.57 pp (n=16), hold MAE 7.23 pp (n=17), naive persistence 8.60, trend 4.35, sector check 25.57 pp
+CHN demand_led: fit MAE 8.65 pp (n=4), hold MAE 8.70 pp (n=15), naive persistence 10.11, trend 2.64, sector check 21.39 pp
+KHM (held-out country) demand_led: all-years MAE 34.11 pp (n=40), 2011-2024 MAE 28.24 pp (n=23), naive 6.89/8.91
+PHL education_led: fit MAE 4.65 pp (n=16), hold MAE 4.38 pp (n=17), naive persistence 8.60, trend 4.35, sector check 12.94 pp
+CHN education_led: fit MAE 9.69 pp (n=4), hold MAE 7.38 pp (n=15), naive persistence 10.11, trend 2.64, sector check 9.11 pp
+KHM (held-out country) education_led: all-years MAE 35.94 pp (n=40), 2011-2024 MAE 32.23 pp (n=23), naive 6.89/8.91
+PHL complementary: fit MAE 4.61 pp (n=16), hold MAE 5.38 pp (n=17), naive persistence 8.60, trend 4.35, sector check 11.67 pp
+CHN complementary: fit MAE 9.80 pp (n=4), hold MAE 7.82 pp (n=15), naive persistence 10.11, trend 2.64, sector check 8.36 pp
+KHM (held-out country) complementary: all-years MAE 35.70 pp (n=40), 2011-2024 MAE 31.26 pp (n=23), naive 6.89/8.91
+wrote /Users/treymenefee/Library/Mobile Documents/com~apple~CloudDocs/Downloads/DeepSeek/massification_2026-11-20/10_massification/model/calib/calibration_table.csv

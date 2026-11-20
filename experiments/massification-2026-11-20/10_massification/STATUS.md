@@ -153,6 +153,16 @@ level.
   (definitions documented: e.g. 50% / 90% / 95% cohort completion or equivalent by level) + uncertainty intervals,
   reconstructed from **headcounts/population** where UIS ratios are censored; observed-only; method + uncertainty
   + status per row; HKG/JPN have no UIS completion series and must be reconstructed or marked UNABLE (no imputation).
+- **A4 CONFIRMED (Council D31–D37, 20 Nov 15:02/15:10; on disk `SUCCESS_CRITERIA.md` Amendment A4 +
+  `UNIVERSALIZATION_MILESTONES.md`):** milestones **M0 massification ≥50%**, **M1** primary NER≥95 (or GER≥100),
+  **M2** lower-sec completion ≥90, **M3** upper-sec completion/transition ≥90, **M4** tertiary GER ≥50; crossing year
+  = first observed year at/above threshold, band = adjacent observed years; **N = ±5 y (±3 y where band ≤2 y)**;
+  JPN/KOR/HKG levels **CHECK-ONLY ±5 pp**; crossing years are **HOLDOUT outcomes, never fitted** (R4/R5; R19 timing
+  miss = structural miss); left-censored = boundary constraint, right-censored = false-positive test.
+  **Censored-ratio rule:** reconstruct only from observed headcounts + documented population denominators, labelled
+  **"reconstructed (not UIS)"**, with method/uncertainty + two-denominator sensitivity; never imputed as observation.
+  **Slate re-ranked:** E6 timing comparison **#2**; **E9 crossing-year reconstruction #3** (data-hunter+scout);
+  E4 #4; E2 #5; E1 #6 parked/unfielded; E3 #7 DATA BLOCKED; E5 #8; E7 #9; E8 KILL.
 - **Lit/scout deliverable:** dated timelines (policy and attainment) for JPN/KOR/HKG, with sources and uncertainty.
 - **task-37 timing check must be predeclared before its next run:** generated vs observed crossing years, per
   level/country, tolerance from Council A4 (±N y), timing **never fitted** (else R4/R5 supplied-law violation);
