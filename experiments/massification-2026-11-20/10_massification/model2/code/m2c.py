@@ -34,7 +34,7 @@ def main():
                 Ud=np.kron(np.eye(N),np.ones((T,1))); Td=np.kron(np.ones((N,1)),np.eye(T))
                 Xf=np.column_stack([S,D,S*D,Ud[:,1:],Td[:,1:]])
                 b,se=ols_cluster(Xf,Y,unit)
-                gh,seh=b[1],se[1]; tstat=gh/max(seh,1e-9)
+                gh,seh=b[3],se[3]; tstat=gh/max(seh,1e-9)
                 cover=(gh-1.645*seh)<=gamma<=(gh+1.645*seh)
                 rows.append(dict(gamma=gamma,sigma=sigma,sim=sim,ghat=gh,se=seh,t=tstat,cover=bool(cover)))
     import pandas as pd

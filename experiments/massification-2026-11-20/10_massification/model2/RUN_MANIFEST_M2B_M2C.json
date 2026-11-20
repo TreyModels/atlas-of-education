@@ -1,0 +1,40 @@
+{
+ "phase": "massification",
+ "owner": "experiment-runner-2",
+ "scope": "10_massification/model2 only",
+ "gate_ack": "GATE_ACK_BRIEF013.md sha256-16 203d7e42ea46831e",
+ "m2b": {
+  "amendment": "AMENDMENT_M2b.md",
+  "discrepancy": "estimator range +0.84..+2.3; scout relay +1.174; exact scout script not executable"
+ },
+ "m2c": {
+  "prereg": "M2C_PREREG.md",
+  "verdict": "E1 NOT SUFFICIENT (sign recoverable, size bias 0.55>0.50)"
+ },
+ "task34_data_adoption": "DEFERRED by instruction; original M2/M2b estimates stand",
+ "code_sha": {
+  "code/m2b.py": "e443d837f4a95f81",
+  "code/m2c.py": "b2f779fcd1aa8ea8",
+  "code/make_manifest_m2b.py": "f6763a514ba121f4"
+ },
+ "outputs": [
+  {
+   "group": "M2b_scaling",
+   "file": "m2b_scaling.csv",
+   "rows": 17,
+   "sha": "63e658d3d98df86c"
+  },
+  {
+   "group": "M2b_logistic",
+   "file": "m2b_logistic_compare.csv",
+   "rows": 50,
+   "sha": "4afdbf6894c5e106"
+  },
+  {
+   "group": "M2c_recovery",
+   "file": "m2c_recovery.csv",
+   "rows": 600,
+   "sha": "02e233e55e73380b"
+  }
+ ]
+}

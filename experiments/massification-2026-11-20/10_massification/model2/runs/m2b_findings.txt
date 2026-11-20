@@ -32,3 +32,8 @@ LEAD-LAG/PUSH-PULL: scout 13 tests, cannot_discriminate=YES in 7/13; model2 lead
 
 WHAT IT CHANGES: Part-1 lower-sec coefficient is declared as an estimator range (~+0.84 logit-between to ~+1.17 log-within);
 Part-2 conclusions are unchanged (country-specific slopes; no identifiable lead-lag). No direction claim. No git push.
+
+NOTE (M2b amendment): the lower-sec ratio above is an ESTIMATOR RANGE (+0.84 between-logit original; +1.36
+between-logit re-run; +1.97/+2.28 year-FE log-log reimplementation; scout relay +1.174). The exact scout
+script could not be executed here (relative-path layout); the reimplementation follows the stated spec.
+Part-2 conclusions unchanged; task-34 data adoption re-run DEFERRED by instruction.

@@ -74,6 +74,42 @@ no "conflicted copy" names, and no `.icloud` placeholders. Actions taken:
 - **E1 kill trigger:** if E2/E3 and M2c are not executing within one cycle, the programme reduces to conditional
   reproduction + an equivalence result (Council step-back, `08_council/BIG_PICTURE.md`).
 
+## 3c. Milestone log — first results after gate (20 Nov, 14:15)
+
+**task-37 PHL smoke fit (experiment-runner; `model/calib/calibration_table.csv`, hash 13c93588…)**
+- Fit window reduced to observed `status=target` rows only: fit 1999–2010 (n=16), holdout 2011–2024 (n=17).
+- Rivals same window: demand-led fit 0.95 pp / holdout 4.84 pp; education-led 1.20 / 5.40; complementary 1.09 / 6.08.
+- Naive benchmarks: persistence 8.60 pp; **linear trend 4.35 pp**. All three rivals lose to the linear-trend benchmark.
+- **Verdict: PARTIAL, EQUIVALENT on completion moments (R13).** Levels clear §3 tolerance but no PASS; sector shares
+  executed as CHECK-only (demand-led 19.96, education-led 2.47, complementary 12.77 pp) per §6 + Lead resolution.
+- **A1 scaling check (`model/calib/scaling_check.csv`, hash a07077c4…): FAILED.** Generated OOS exponents are the
+  wrong sign vs A1: secondary GER~income −1.89/−0.38/−0.74 vs target **+0.286**; tertiary −1.23/−0.14/−0.35 vs
+  **+0.776**. Model does not generate the classified scaling law → R4 (supplied law) applies; universalization
+  reproduction is at most PARTIAL. Logit completion slopes positive (+0.032/+0.040/+0.031). Proposed next fix:
+  income-scaling channel as a predeclared structural change (not completion tuning).
+
+**M2c — E1 estimator recovery (`model2/runs/m2c_*`; SIMULATED, predeclared M2C_PREREG.md before run)**
+- DGP 30 provinces × 10y; γ ∈ {−0.30, 0, +0.30}; σ ∈ {0.5, 1.0}; 100 sims/cell; two-way FE OLS, CR1.
+- σ=0.5: sign accuracy 0.93/0.92; median |bias| **0.55 > 0.50 predeclared**; 90% coverage 0.88; null FP 0.08.
+- **Predeclared sufficiency rule FAILS on bias → E1 NOT SUFFICIENT as the identification gate; do not field E1.**
+  High-noise stress (σ=1.0) sign accuracy falls to 0.74/0.68. Routed to Council for the R3/R13 reduction decision.
+
+**M2b — declared partial re-run (`model2/runs/m2b_*`)**: lower-secondary completion coefficient resolved as an
+**estimator range** (~+0.84 logit-between to ~+1.17 log-within), not a data error; Part-2 conclusions unchanged
+(countries do not share a common slope; lead-lag not identifiable). No direction claim.
+
+**Phase-1 predeclarations**: E2 `PRE_EXP_E2_PH_K12.md` (sha 14a007df…) and E3 `PRE_EXP_E3_PH_NURSES.md`
+(sha 8708015c…) delivered, brief-013 §2–§4 + A1 copied verbatim, `04_data` fallback declared. **E3 is DATA BLOCKED**
+for replication: no PRC/CHED nursing series on disk (simulated elasticity may be reported, labelled simulated, never
+as replication). E2 coverage is thin (~6–7 pre-reform completion points) with a declared DATA BLOCKED contingency.
+Both await Council intake acceptance. M2c ran at 14:13, before `INTAKE_ACCEPTANCE.md` was registered at 14:40 —
+Council retro-review requested.
+
+**Data (D16) satisfied**: `data/UNIVERSALIZATION_SERIES.csv` (2,458 rows) + `JOBS_AND_MARKETS_PANEL.csv` (5,622 rows,
+39 series) + `DATA_NOTES_MASSIFICATION.md`, observed-only with derived/check flags; ILOSTAT/OECD/PSA/Enterprise
+Surveys 403/000 recorded as DATA BLOCKED. Hygiene note: `data/SHA256SUMS.txt` is written as `hash size filename`
+(not `shasum -c` parseable); hashes verified manually; regenerate in standard format next batch.
+
 ## 4. Next three actions for `repo-auditor`
 
 1. **Council gate:** get the Council's final `COUNCIL:` post for brief 013 (SUCCESS_CRITERIA + STOP_RULES are

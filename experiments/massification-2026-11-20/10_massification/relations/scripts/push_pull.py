@@ -71,31 +71,31 @@ def granger(df,y,x,maxlag=5):
                 sign='+' if csum>0 else '-' if csum<0 else '0')
 
 TESTS=[
- ('P1','demand-led: growth -> secondary enrollment','d_log_gdppc','d_log_ger_s',
+ ('P1','predictive association: lagged GDP-pc growth -> secondary-GER growth','d_log_gdppc','d_log_ger_s',
   'do lagged GDP-per-capita growth changes predict secondary-GER growth (after own lags)?'),
- ('P2','demand-led: growth -> tertiary enrollment','d_log_gdppc','d_log_ger_t',
+ ('P2','predictive association: lagged GDP-pc growth -> tertiary-GER growth','d_log_gdppc','d_log_ger_t',
   'do lagged GDP-per-capita growth changes predict tertiary-GER growth (after own lags)?'),
- ('P3','demand-led: growth -> completion','d_log_gdppc','d_log_cmpt_s',
+ ('P3','predictive association: lagged GDP-pc growth -> completion growth','d_log_gdppc','d_log_cmpt_s',
   'do lagged GDP-per-capita growth changes predict lower-secondary completion growth?'),
- ('P4','education-led: secondary enrollment -> growth','d_log_ger_s','d_log_gdppc',
+ ('P4','predictive association: lagged secondary-GER growth -> GDP-pc growth','d_log_ger_s','d_log_gdppc',
   'do lagged secondary-GER growth changes predict GDP-per-capita growth (after own lags)?'),
- ('P5','education-led: tertiary enrollment -> growth','d_log_ger_t','d_log_gdppc',
+ ('P5','predictive association: lagged tertiary-GER growth -> GDP-pc growth','d_log_ger_t','d_log_gdppc',
   'do lagged tertiary-GER growth changes predict GDP-per-capita growth (after own lags)?'),
- ('P6','education-led: completion -> growth','d_log_cmpt_s','d_log_gdppc',
+ ('P6','predictive association: lagged completion growth -> GDP-pc growth','d_log_cmpt_s','d_log_gdppc',
   'do lagged completion growth changes predict GDP-per-capita growth?'),
- ('P7','supply-led: public spending -> secondary enrollment','d_log_spend','d_log_ger_s',
+ ('P7','predictive association: lagged spending growth -> secondary-GER growth','d_log_spend','d_log_ger_s',
   'does lagged education-spending growth predict secondary enrolment growth?'),
- ('P8','demand-driven budget: enrollment -> spending','d_log_ger_s','d_log_spend',
+ ('P8','predictive association: lagged enrolment growth -> spending growth','d_log_ger_s','d_log_spend',
   'does lagged enrolment growth predict education-spending growth (budget follows pupils)?'),
- ('P9','jobs channel: formal jobs -> secondary enrollment','d_log_wage','d_log_ger_s',
+ ('P9','predictive association: lagged wage-share growth -> secondary-GER growth','d_log_wage','d_log_ger_s',
   'does lagged growth of the wage-and-salaried share predict secondary enrolment growth (demand-led)?'),
- ('P10','jobs channel: secondary enrollment -> formal jobs','d_log_ger_s','d_log_wage',
+ ('P10','predictive association: lagged secondary-GER growth -> wage-share change','d_log_ger_s','d_log_wage',
   'does lagged secondary-enrolment growth predict the wage-and-salaried share (education-led job creation)?'),
- ('P11','demand-led: complexity -> tertiary enrollment','d_eci_sitc','d_log_ger_t',
+ ('P11','predictive association: lagged ECI change -> tertiary-GER growth','d_eci_sitc','d_log_ger_t',
   'does lagged ECI change predict tertiary-GER growth (complexity pulls enrolment)?'),
- ('P12','education-led: completion -> complexity','d_log_cmpt_s','d_eci_sitc',
+ ('P12','predictive association: lagged completion growth -> ECI change','d_log_cmpt_s','d_eci_sitc',
   'does lagged completion growth predict ECI change (educated cohorts upgrade exports)?'),
- ('P13','supply-led: primary completion -> secondary enrollment','d_log_cmpt_p','d_log_ger_s',
+ ('P13','predictive association: lagged primary-completion growth -> secondary-GER growth','d_log_cmpt_p','d_log_ger_s',
   'does lagged primary-completion growth predict secondary GER (pipeline/supply)?'),
 ]
 rows=[]
@@ -104,7 +104,10 @@ for tid,hyp,y,x,q in TESTS:
     base=dict(id=tid,hypothesis=hyp,dependent=y,driver=x,test='panel Granger: y_t ~ own lags(1-5) + driver lags(1-5), two-way FE, CR1 cluster')
     if 'error' in r:
         rows.append({**base,'error':r['error'],'cannot_discriminate':'yes - insufficient annual variation'}); continue
-    rows.append({**base,**r,'identification_grade':'correlational (Granger-style prediction, not causality)',
-                 'cannot_discriminate':('yes' if r['p']>0.10 else 'no')})
+    rows.append({**base,**r,
+        'identification_grade':'correlational (Granger-style prediction; not causality)',
+        'claim_label':'EQUIVALENT / descriptive — R13 bars direction claims from cross-country/panel moments',
+        'direction_claim':'none: demand-led, supply-led and complementary processes are observationally compatible with this row (see deepseek-exp2 forced-ID, msg 761cb5cd)',
+        'cannot_discriminate':('yes' if r['p']>0.10 else 'yes — jointly significant lags do not identify which channel generated them')})
 pp=pd.DataFrame(rows); pp.to_csv(os.path.join(D,'push_pull_tests.csv'),index=False)
 print(pp[['id','hypothesis','sign','coef_sum','se_sum','t_sum','best_lag','F','p','n','n_cty']].to_string(index=False))
