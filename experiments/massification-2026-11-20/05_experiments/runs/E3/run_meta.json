@@ -1,36 +1,10 @@
 {
- "obs": {
-  "mean": 41.8,
-  "akita": 22.1,
-  "tokyo": 57.9,
-  "r_with_achievement": -0.16
- },
- "ratio": 2.619909502262443,
- "drivers": {
-  "density_competition": {
-   "ratio": 71.49438202247191,
-   "band": [
-    0.1,
-    0.6
-   ]
-  },
-  "income": {
-   "ratio": 1.6,
-   "band": [
-    0.1,
-    1.0
-   ]
-  },
-  "gate_stakes": {
-   "ratio": 1.2,
-   "band": [
-    0.5,
-    2.0
-   ]
-  }
- },
- "T4_pass": [
-  "density_competition"
- ],
- "T5_computable": false
+ "eid": "E3",
+ "reps": 3,
+ "N": 5000,
+ "wall": 47.71163201332092,
+ "runs": 18,
+ "ok": 18,
+ "failed": [],
+ "mean_run": 5.042290502124363
 }
