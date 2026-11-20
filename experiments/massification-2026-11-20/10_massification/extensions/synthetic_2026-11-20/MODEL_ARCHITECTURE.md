@@ -342,3 +342,64 @@ agency ranking; genetic-sameness transplant/migration designs; relational self-d
 share" has no on-disk proxy); assembly §8 Predictions 1/3/4; hysteresis Predictions 2/3; and every micro citation the
 papers marshal. **Neither paper is falsification-tested by this programme**; the reachable disconfirmers (assembly §8
 #2/#5, hysteresis high-switching-cost corollary) are descriptive only (D105). No causal or direction claim is licensed.
+
+---
+
+## Amendment A5 (user directive, 2026-11-20, dashboard — second structural point) — BIMODAL-GATE: two-tier gates, untaken free seats, and tier-specific exit cost
+
+**Status: design directive (first-class model requirement). A v1.5 predeclaration must be frozen before any run.**
+This supersedes the single-gate framing of A3-D's successor experiment (`v1.4 BINDING-GATE`): the user's point is that
+the Philippine pattern is **bimodal within the same system**, not one scarce gate.
+
+### The user's structural point (recorded)
+
+Low-cost, if not free, seats go **untaken** by families choosing out of education at upper-secondary (and starting at
+lower-secondary — some primary, though primary is basically universalised) — **at the same time as extreme competition
+at the gates**. That coexistence is the interesting object. The correct label for the A3-D result is therefore **"the
+unrationed single-gate model cannot represent a bimodal system"** — a **model-specification failure**, never "demand
+falsified". Demand is revealed and strong (shadow education, queues for good schools, parental reaction to closures,
+credential chasing).
+
+### The two-tier structure (v1.5)
+
+1. **Tier O — open-access, low-cost/low-quality seats** that can go **unfilled**. Near-zero private cost; low quality
+   and low return; take-up is an **equilibrium** between quality, opportunity cost and the option value of work.
+2. **Tier H — rationed high-quality gates**: good SHS tracks, university slots, credentialed jobs. Capacity-constrained
+   **places/slots** with queues, rank, exam/credential rationing and **shadow competition**. `P(advance) < 1` by
+   construction, so demand pressure has something to press against.
+3. **Explicit outside option**: work / child labour / informal / migration — reuse the v1.2 childworld four-state
+   block (`school`/`both`/`work`/`neither`; out-of-school defaults to work; no passive "neither" sink). The outside
+   option is why free seats can sit empty while elites queue: the low tier's return can be below the option value of work.
+4. **Sorting**: families sort by income / ability / taste into (i) high-gate competition (returns high, costs and risk
+   high), (ii) low-tier seats (cheap, low return, can be declined), or (iii) out of school. Returns differ by tier.
+5. **Tier-specific exit cost (theory refinement for the Council, WT-adjacent):** exiting the **low-quality open seat is
+   cheap — and people do it**; exiting the **credential gate is expensive — and nobody does**. This is more testable
+   than "exit cost" as a single quantity. The Council is asked to consider a WT-adjacent test with the same
+   no-direction-claim discipline; it is **not** a re-opening of D101 (no exit-cost layer until WT1 ∧ WT3).
+
+### Predeclared checks for v1.5 (freeze before run; report mixed/negative honestly)
+
+- **(a) Bimodality in one system:** simultaneous **untaken low-cost seats** AND **excess demand/queues at the high
+  gates** in the same synthetic country-year (declared thresholds in the v1.5 predeclaration, e.g. an unfilled-seat
+  share above a declared floor while the high-gate queue/acceptance ratio exceeds a declared bar).
+- **(b) Level pattern:** primary near-universal while upper-secondary **stalls** (the v1.2/v1.3 PHL signature bands).
+- **(c) Shadow placement:** shadow demand **concentrated at the high gates**, low at the open tier.
+- **(d) Ceiling from sorting/quality/outside-option with NO free taste parameter** — the declared work-incentive weight
+  removed; ceiling must emerge from the tier structure. Mixed/negative reported as such; **no rescue, no fitting to the
+  known PHL outcome**.
+- **(e) No-re-fit guard:** with the new bimodal block **off**, v1.5 must reproduce the current generator panel
+  byte-for-byte (the v1.3/v1.4 guard convention).
+
+### Data
+
+**HELD DATA ASK (do not fabricate):** true seat utilisation / quality is **not on disk** — DepEd/CHED seats vs
+enrolment, private/public shares, SHS voucher take-up, by track/region. Until granted, v1.5 may use **declared proxies**
+already on disk — enrolment vs cohort, PTR/capacity (`STATE_CAPACITY.csv`, `SCHOOL_EXPANSION.csv`), private share
+(`SE.PRM.PRIV.ZS`, `SE.SEC.PRIV.ZS`) — each labelled **DERIVED** and each with its distortion stated. **Never invent a
+utilisation number or a quality series.**
+
+### Prohibitions
+
+No "demand falsified" language anywhere. No re-tune of A3-D. No fitted demand/quality parameter (R4/R27). No causal or
+direction claim. No C1–C4 reopening. HELD data stays HELD. The tier structure and the outside-option parameters are
+**declared assumptions**, tested by ablation, never called evidence.

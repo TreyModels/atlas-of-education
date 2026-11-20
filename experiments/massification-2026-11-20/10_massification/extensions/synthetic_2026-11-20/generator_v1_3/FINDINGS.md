@@ -279,3 +279,15 @@ currency conversion, no provider block, no entry cost.
   verbatim copy and `PARAMS.md`, and refuses to run on any mismatch.
 - Re-run: `python code/sim_v1_3.py --out results --manifest RUN_MANIFEST.json` (≈ 8 s; `--smoke` for the
   ablation + distributions only, `--no-sensitivity` to skip the grid).
+
+---
+
+## INTERPRETATION CORRECTION (user point via dashboard, 2026-11-20 — Lead-recorded)
+
+The c4a/c4b miss against the HKG 85% anchor is a **gate-rationing miss, not a demand miss**. The v1.3 module's demand
+response is present and correct in direction (c1/c2 PASS), but the upper-secondary gate in v1.2/v1.3 is **unrationed**
+(`P(advance) ≈ 0.999`), so the model has no scarce high-quality gate for demand to press against and the synthetic
+tutoring level stays far below the observed high-shadow case. **"Demand is not falsified."** The correct label is that
+the **unrationed single-gate specification cannot represent a bimodal system**. The fix is Amendment A5 / v1.5
+BIMODAL-GATE (two-tier gate structure + explicit outside option + binding rationing at the high gates), after which the
+c4 checks are re-run against the same anchor band with no fitting.

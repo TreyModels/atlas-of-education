@@ -171,3 +171,24 @@ declared taste parameter**. The block is ablation-live (18.41 pp) but the ceilin
 demand-robust** (95.05 vs `[73,77]`); d3 fails outright; d1/d2 fail in the ceiling country at the
 bound. Per the block's own negative branch: **the ceiling stays a declared taste parameter; the A3
 core is PARKED and no layer is added to the ceiling claim.** No re-tuning was performed.
+
+---
+
+## INTERPRETATION CORRECTION (user point via dashboard, 2026-11-20 — Lead-recorded; the verdict string is unchanged)
+
+**"FALSIFIED" refers narrowly to the predeclared A3-D demand-block checks, and must NOT be read as "there is no
+demand" or "demand is weak".** The user's objection is correct and is recorded here: demand is **revealed and strong**
+— shadow-education spending and participation, queues and competition for good schools, parental reaction to school
+closures, credential chasing. What this experiment actually shows is narrower and more useful:
+
+> **A demand channel attached to a non-binding gate is inert by construction.** The model's own `P(advance) ≈ 0.999`
+> at the upper-secondary gate (it is *unrationed*; advances include over-age admissions), so there is nothing for
+> demand pressure to press against. The correct label is **"the unrationed single-gate model cannot represent a bimodal
+> system"** — a **model-specification failure**, not evidence about demand.
+
+Forced choice: *would a demand block help if the gate bound?* The declarative block as specified cannot answer that,
+because its gate term is structurally dead in this generator. The next predeclaration — **Amendment A5 / v1.5
+BIMODAL-GATE** — must make the gates scarce (capacity-constrained places/exam rationing at lower→upper and
+upper→tertiary) and represent the two tiers (open-access low-cost seats that can go unfilled + rationed high-quality
+gates with queues/rank/shadow competition), with the v1.2 four-state block as the outside option. Only then can
+"demand" be tested at a binding gate. **No re-tune of A3-D; no fitting to the known outcome.**

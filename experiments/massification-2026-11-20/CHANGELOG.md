@@ -256,3 +256,24 @@ manifests and error logs.
   placebo same). Migration/remittances DECLARED/NOT-VERIFIED and tiny. **Structural finding: P(advance) ≈ 0.999 at the
   upper gate → the gate-probability channel is near-inert; the ceiling is not a demand-rationed gate (consistent with
   CEIL-ATTRIB's pipeline reclassification).** **Disposition: A3 demand core PARKED; no demand layer wired** (D116).
+- **USER CORRECTION (Lead-recorded): demand is NOT falsified** — it is revealed and strong (shadow education,
+  queues/competition for good schools, closure reactions, credential chasing). What failed is the **specified block at
+  an unrationed gate** (`P(advance) ≈ 0.999`): a **model-specification failure**; correct label "the unrationed
+  single-gate model cannot represent a bimodal system". Successor: **Amendment A5 / v1.5 BIMODAL-GATE** (two-tier
+  gates — open-access low-cost seats that can go unfilled + rationed high-quality gates with queues/rank/shadow —
+  explicit outside option, binding rationing, shadow re-anchor, tier-specific exit cost for the Council). No re-tune of
+  A3-D; no fitting to the known outcome.
+
+## 2026-11-20 (reactivation) — user structural correction: bimodal system; Amendment A5 / v1.5 BIMODAL-GATE
+
+- **No "demand falsified" language.** The A3-D result is relabelled **"the unrationed single-gate model cannot represent
+  a bimodal system"** — a model-specification failure; demand is revealed and strong (shadow education, queues for good
+  schools, closure reactions, credential chasing). Record corrections applied to DECISIONS D116, v1.3/v1.4 FINDINGS,
+  STATUS and CHANGELOG.
+- **`MODEL_ARCHITECTURE.md` Amendment A5 (first-class requirement):** two-tier gates — open-access low-cost seats that
+  can go untaken + rationed high-quality gates with queues/rank/shadow — plus explicit outside option (childworld
+  four-state), sorting by income/ability/taste, returns differing by tier, and **tier-specific exit cost** (cheap exit
+  from the open seat; expensive exit from the credential gate) as a WT-adjacent Council question. v1.5 checks (a)–(e)
+  frozen before run, incl. **no free taste parameter** and a no-re-fit guard; true seat utilisation **HELD DATA ASK**
+  (DepEd/CHED seats vs enrolment, private/public shares, SHS voucher take-up) — declared proxies only, labelled DERIVED.
+- Next: frozen v1.5 predeclaration after the Council cycle-14 merge. No re-tune of A3-D; no fitting to the known outcome.

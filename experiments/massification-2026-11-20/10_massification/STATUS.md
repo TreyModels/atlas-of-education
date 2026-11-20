@@ -963,7 +963,7 @@ changed is `oos_neither_share` (1,680 tertiary rows); `reproduction_checks_v1_2.
   (c4a HKG level 0.340 vs band [0.75,0.95]; c4b gap 0.0967 vs 0.10) — the declared shadow parameterisation does not
   reproduce the HKG anchor.
 
-### i) EXP-2 A3-D demand core executed — **FALSIFIED**, A3 demand block PARKED
+### i) EXP-2 A3-D demand core executed — **block checks failed (specification failure), A3 block PARKED — demand is NOT falsified**
 
 - **`generator_v1_4_demand/`** (predecl `9ed0cae3…`; deterministic; no-re-fit guard PASS: demand-OFF panel byte-identical
   to the frozen v1.3 panel `47d4b082…`, and a placebo arm reproduces it exactly). **Verdict: FALSIFIED — the demand
@@ -980,3 +980,39 @@ changed is `oos_neither_share` (1,680 tertiary rows); `reproduction_checks_v1_2.
 - **Disposition: A3 demand core PARKED; no demand layer wired; the ceiling remains a declared taste parameter.** The
   block's non-trivial ablation effect says the *specification* is wrong for the object, not that demand is irrelevant —
   a new predeclaration would be required. Council decision D116.
+
+**USER CORRECTION (Lead-recorded, dashboard):** the word "FALSIFIED" refers only to the predeclared A3-D block
+checks. **Demand is revealed and strong** — shadow education, queues/competition for good schools, closure reactions,
+credential chasing. Because the model's upper gate is **unrationed** (`P(advance) ≈ 0.999`), a demand channel attached
+to it is inert by construction: the correct label is **"the unrationed single-gate model cannot represent a bimodal
+system"** — a **model-specification failure**. Successor: **Amendment A5 / v1.5 BIMODAL-GATE** (two-tier gates +
+explicit outside option + binding rationing at high gates + shadow re-anchor). Corrections also appended to
+`generator_v1_4_demand/FINDINGS.md` and `generator_v1_3/FINDINGS.md`; no re-tune of A3-D.
+
+---
+
+## 3ab. USER STRUCTURAL CORRECTION (dashboard, 2026-11-20) — bimodal system, not a single gate; Amendment A5 / v1.5 BIMODAL-GATE
+
+**The correction (recorded verbatim in intent):** the Philippine pattern is **bimodal within the same system** — low-cost,
+if not free, seats go **untaken** by families choosing out of education at upper-secondary (starting at lower-secondary),
+**at the same time as extreme competition at the gates**. That coexistence is the object. **"Demand falsified" is banned
+language**; the A3-D result is **"the unrationed single-gate model cannot represent a bimodal system"** — a
+model-specification failure.
+
+- **`MODEL_ARCHITECTURE.md` Amendment A5** now records the first-class requirement: **two-tier gate structure** (open-access
+  low-cost seats that can go unfilled + rationed high-quality gates with queues/rank/shadow competition), **explicit
+  outside option** (v1.2 childworld four-state block: work/child labour/informal/migration), **sorting** by
+  income/ability/taste, **returns differing by tier**, and **tier-specific exit cost** (cheap to exit the open seat and
+  people do; expensive to exit the credential gate and nobody does) as a **WT-adjacent** question for the Council —
+  not a re-opening of D101.
+- **v1.5 checks (to be frozen before any run):** (a) untaken low-cost seats AND high-gate queues in the same
+  system; (b) primary near-universal while upper-secondary stalls; (c) shadow concentrated at high gates, low at the
+  open tier; (d) the PHL ceiling emerges from sorting/quality/outside-option **with no free taste parameter**; (e)
+  no-re-fit guard (bimodal block off ⇒ reproduce the current panel byte-for-byte).
+- **Data:** true seat utilisation/quality is **not on disk** → **HELD DATA ASK** (DepEd/CHED seats vs enrolment,
+  private/public shares, SHS voucher take-up). Until then only **declared proxies** on disk (enrolment vs cohort,
+  PTR/capacity, private share), labelled DERIVED, with their distortion stated — never invent utilisation numbers.
+- **Record corrections applied** to `DECISIONS.md` D116, `generator_v1_4_demand/FINDINGS.md`,
+  `generator_v1_3/FINDINGS.md`, and the CHANGELOG: the A3-D verdict word refers only to the predeclared block checks;
+  demand is revealed and strong; no re-tune of A3-D; no fitting to the known outcome. The next step is a **frozen v1.5
+  predeclaration** (`v1.5 BIMODAL-GATE`), to be written before any run, after the Council cycle-14 slate is merged.
