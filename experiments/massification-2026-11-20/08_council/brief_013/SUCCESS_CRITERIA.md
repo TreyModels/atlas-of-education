@@ -340,3 +340,28 @@ PHL state-push non-alignment may be *explained* as a capacity-timing problem onl
 The **capacity-response function** (how outcomes respond to the gate) transfers fixed; **capacity trajectories and
 minimum-capacity thresholds are country inputs** (declared and dated: HKG/CHN/PHL differ); any re-fit of the response
 function or use of outcome-fitting to set thresholds = portability FAIL (R20/R28).
+
+
+## Amendment A10 (2026-11-20 16:45) — capacity buys the floor, not the ceiling (level-specific, non-monotone)
+
+**Trigger:** lit `STATE_CAPACITY.md` (NEW 3d3037da), verified against `JOBS_AND_MARKETS_PANEL.csv`:
+PHL spending 2.66 (1995) → 3.16 (2000) → 2.33 (2005) → 2.83 (2015) → 3.41 (2019) → 3.93 (2024) %GDP; secondary PTR
+**37.9 (2005) → 23.9 (2017)** — delivery improved markedly — yet **upper-secondary completion stayed 75.0 (2024),
+never ≥90**. HKG: primary PTR 23.7 → 13.4, NER **≥90 crossed 1974** (3 y after the 1971 reform); NER ≥95 crossed 1979
+(note: the scout event-window row's 1978–79 is the ≥95 crossing, not ≥90 — threshold-specific). CHN: primary PTR
+22.9 → 16.4 yet lower-secondary completion crossed 90 only in 2016 (~30 y after the 1986 law) — enforcement/rural
+capacity, not places. KOR at ceiling before the series.
+
+1. **The capacity channel is level-specific and non-monotone:** capacity (fiscal/delivery) is a **necessary delivery
+   precondition** for floor universalization (primary/lower-secondary completion, intake) but **not sufficient** for
+   ceiling universalization (upper-secondary/tertiary completion). The model must **not** generate upper-secondary
+   universalization from capacity when the record shows none (R6/R29); capacity-gated effects must be allowed to
+   saturate at the ceiling (declared, e.g. cap/diminishing returns by level), not a single monotone mapping across levels.
+2. **Residual test (A1 descriptive scope):** after law markers (A7), capacity (A9/A10) and observed demand inputs, the
+   **unexplained ceiling residual** (PHL upper-secondary 75.0 vs 90; tertiary 53 vs 50 mass (crossed) — report exact
+   per level) must be reported and the candidate accounts tested/listed: foregone-income/opportunity cost, demand/returns,
+   gate structure/credential, enforcement. Predeclare the residual decomposition and candidate list before the run; where
+   no discriminating observable exists, report **UNABLE**, not an explanation. No direction claim (R13).
+3. **Caveats recorded:** spending-%GDP and PTR are **crude proxies** (PHL and HKG both ~3–4% of GDP but PTR 29–38 vs
+   11–24); enforcement is **unmeasured everywhere**; real per-pupil spending is absent (DATA ASK). Capacity findings are
+   descriptive unless stronger measures arrive; no overclaiming.

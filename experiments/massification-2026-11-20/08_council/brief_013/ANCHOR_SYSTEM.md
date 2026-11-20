@@ -138,3 +138,15 @@ labelled. **Capacity-alignment test:** PHL PTR/teacher path (37→27→24; hires
 (plausible 1–5 y) but not vs lower-secondary 2024 or tertiary 2024–25; the capacity-gated model must beat law-only on
 A6 crossings before the state-push non-alignment is explained as capacity-timing (A9 §3). Portability: response
 function fixed; capacity trajectories/thresholds are country inputs (HKG/CHN/PHL differ; no re-fit).
+
+
+## B7. Capacity: floor not ceiling (A10/R29)
+
+Verified: PHL spending 2.66→3.93 %GDP (1995–2024), secondary PTR 37.9 (2005)→23.9 (2017), yet upper-secondary
+completion 75.0 (2024) never ≥90. HKG: PTR 23.7→13.4, NER ≥90 in **1974** (3 y after the 1971 reform; NER ≥95 in 1979);
+CHN: PTR 22.9→16.4 but lower-sec ≥90 only 2016 (~30 y after the 1986 law) — enforcement/rural capacity. **Ruling:** the
+capacity channel is level-specific and non-monotone — necessary for the floor, not sufficient for the ceiling; the
+model must not generate upper-secondary universalization the record does not show (R6/R29); the ceiling residual
+(PHL upper-sec 75.0 vs 90) is reported with candidate accounts (foregone income, demand/returns, gate structure,
+enforcement) or **UNABLE**, predeclared before the run, never a direction claim (R13). Caveats: spending-%GDP and PTR
+are crude proxies; enforcement unmeasured; real per-pupil spending DATA ASK.

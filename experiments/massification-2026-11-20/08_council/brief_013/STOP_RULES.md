@@ -120,3 +120,10 @@ fire.
 | # | Rule | Trigger |
 |---|---|---|
 | **R28** | **Capacity must be measured, not assumed:** capacity enters only as observed indicators (fiscal/delivery/enforcement) with declared normalisation, weights and gate form; missing sub-dimensions are excluded and labelled partial (DATA ASK), never inferred from outcomes; capacity is never a target and never fitted; the capacity-gated specification must beat law-only on the A6 crossings before a capacity-timing explanation is claimed, else EQUIVALENT/FAIL | user directive; fiscal/delivery partial on disk, enforcement largely absent; capacity is a mechanism candidate not an assumption |
+
+
+## Amendment A10 (2026-11-20 16:45) — R29 (capacity floor/ceiling)
+
+| # | Rule | Trigger |
+|---|---|---|
+| **R29** | **Capacity buys the floor, not the ceiling:** the capacity channel is level-specific and non-monotone; it may be a precondition for floor universalization but may not be claimed sufficient for ceiling universalization. If the capacity-gated model generates upper-secondary/tertiary universalization the record does not show, it FAILS (R6/R29) and must not be rescued by tuning; the ceiling residual is reported as a residual with candidate accounts (or UNABLE), never as a capacity explanation | STATE_CAPACITY.md: PHL delivery improved, ceiling 75.0; CHN 1986 law vs 2016 completion; HKG fast at high capacity |

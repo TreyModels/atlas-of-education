@@ -152,3 +152,14 @@ imputation as observation. E1 stays PARKED; direction claims EQUIVALENT.
 - **New anchor criterion:** reproduce crossings given observed capacity; capacity-gated must beat law-only on A6
   crossings before explaining PHL's state-push non-alignment as capacity-timing.
 - **Portability:** response function fixed; capacity trajectories/thresholds country inputs; no re-fit.
+
+
+## Cycle 7 addendum 2 (capacity: floor not ceiling)
+
+- **A10/R29:** capacity is level-specific and non-monotone — necessary delivery precondition for the floor, **not
+  sufficient** for the ceiling. PHL: spending 2.66→3.93 %GDP, secondary PTR 37.9→23.9, ceiling still 75.0 (never ≥90).
+  HKG: PTR 23.7→13.4, NER≥90 in 1974 (3 y after 1971; ≥95 in 1979). CHN: PTR 22.9→16.4, lower-sec ≥90 only 2016.
+- **Model rule:** no capacity-generated upper-secondary/tertiary universalization the record does not show (R6/R29);
+  capacity effects may saturate by level; **ceiling residual** (PHL 75.0 vs 90) reported with candidate accounts
+  (foregone income, demand/returns, gate structure, enforcement) or UNABLE — predeclared, no direction claim.
+- **Caveats:** spending-%GDP and PTR crude; enforcement unmeasured; real per-pupil spending DATA ASK.
