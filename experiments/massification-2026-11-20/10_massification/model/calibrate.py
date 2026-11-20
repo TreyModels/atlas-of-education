@@ -136,6 +136,30 @@ def objective(z, iso, rival):
 OBS = None
 
 
+def objective_pool(z, rival):
+    """Pooled PHL+CHN objective on the brief-013 FIT window (equal weight per country)."""
+    tot, n = 0.0, 0
+    for iso in ('PHL', 'CHN'):
+        try:
+            m = objective(z, iso, rival)
+        except Exception:
+            return 1e6
+        if np.isfinite(m):
+            tot += m; n += 1
+    return tot / n if n else 1e6
+
+
+def fit_pool(rival, seed=2027, maxiter=40, popsize=10):
+    from scipy.optimize import differential_evolution
+    def obj(z):
+        return objective_pool(z, rival)
+    res = differential_evolution(obj, bounds=[(0, 1)] * len(KEYS), seed=seed, maxiter=maxiter,
+                                 popsize=popsize, tol=1e-4, polish=False, workers=1)
+    theta = {k: (float(round(BOUNDS[k][0] + res.x[i] * (BOUNDS[k][1] - BOUNDS[k][0])) if k in ('lag_s', 'lag_d')
+                  else BOUNDS[k][0] + res.x[i] * (BOUNDS[k][1] - BOUNDS[k][0]))) for i, k in enumerate(KEYS)}
+    return theta, float(res.fun)
+
+
 def fit_phl(rival, seed=2026, maxiter=60, popsize=12):
     from scipy.optimize import differential_evolution
     rng = np.random.default_rng(seed)
@@ -206,22 +230,32 @@ def main():
                   f"sector check {r.get('sector_check_mae', float('nan')):.2f} pp")
     if mode in ('--phl_chn', '--all'):
         for rival in rivals:
-            theta, loss = fit_phl(rival)
-            r = evaluate('CHN', rival, theta, with_sector=True)
-            results.append(r)
-            print(f"CHN {rival}: fit MAE {r['fit_mae']:.2f} pp (n={r['fit_n']}), hold MAE {r['hold_mae']:.2f} pp, "
-                  f"sector check {r.get('sector_check_mae', float('nan')):.2f} pp")
-    # KHM held-out country: apply PHL-fitted theta (never fitted on KHM)
-    if mode in ('--khm', '--all'):
-        for rival in rivals:
-            theta, loss = fit_phl(rival)
+            theta, loss = fit_pool(rival)
+            for iso in ('PHL', 'CHN'):
+                r = evaluate(iso, rival, theta)
+                r['role'] = 'fit+holdout-period'
+                r['fit_loss'] = loss
+                r['theta_note'] = 'pooled PHL+CHN fit on brief-013 FIT window'
+                results.append(r)
+                print(f"{iso} {rival}: fit MAE {r['fit_mae']:.2f} pp (n={r['fit_n']}), hold MAE {r['hold_mae']:.2f} pp "
+                      f"(n={r['hold_n']}), naive persistence {r['naive_persistence']:.2f}, trend {r['naive_trend']:.2f}, "
+                      f"sector check {r.get('sector_check_mae', float('nan')):.2f} pp")
+            # KHM held-out country: pooled theta, never fitted on KHM
             h = simulate('KHM', rival, theta)
             sim = {k: series_from(h, k) for k in LEVEL_KEYS}
             fr = fit_metrics(sim, OBS.get('KHM', {}), (1980, 2024))
-            r = dict(iso='KHM', rival=rival, hold_mae=float(np.mean([x[4] for x in fr])) if fr else float('nan'),
-                     hold_n=len(fr), note='held-out country: PHL-fitted theta, never fitted on KHM')
+            hr = fit_metrics(sim, OBS.get('KHM', {}), HOLD_Y)
+            nb = naive_benchmarks(OBS.get('KHM', {}), FIT_Y, HOLD_Y)
+            r = dict(iso='KHM', rival=rival, role='HOLDOUT COUNTRY (never fitted)',
+                     hold_mae=float(np.mean([x[4] for x in hr])) if hr else float('nan'), hold_n=len(hr),
+                     fit_mae=float(np.mean([x[4] for x in fr])) if fr else float('nan'), fit_n=len(fr),
+                     naive_persistence=nb['persistence'][0], naive_trend=nb['linear_trend'][0],
+                     beats_persistence=(np.mean([x[4] for x in hr]) < nb['persistence'][0]) if hr else None,
+                     beats_trend=(np.mean([x[4] for x in hr]) < nb['linear_trend'][0]) if hr else None,
+                     sector_check_mae=float('nan'), sector_check_n=0, theta=theta)
             results.append(r)
-            print(f"KHM (held-out country) {rival}: MAE {r['hold_mae']:.2f} pp (n={r['hold_n']})")
+            print(f"KHM (held-out country) {rival}: all-years MAE {r['fit_mae']:.2f} pp (n={r['fit_n']}), "
+                  f"2011-2024 MAE {r['hold_mae']:.2f} pp (n={r['hold_n']}), naive {nb['persistence'][0]:.2f}/{nb['linear_trend'][0]:.2f}")
     if results:
         keys = sorted({k for r in results for k in r if k != 'theta'})
         with open(os.path.join(outdir, 'calibration_table.csv'), 'w', newline='') as f:

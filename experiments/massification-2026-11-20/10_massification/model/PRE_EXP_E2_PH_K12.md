@@ -73,3 +73,16 @@ violated. **Verdict vocabulary:** PASS / PARTIAL / FAIL / EQUIVALENT, plus A1's 
 ## What this cell may claim
 An event-study association for exposed cohorts under pre-trends. It may **not** claim a push-pull direction from
 this panel moment (R13); the direction claim requires the E1/E2+E3 predeclared pair.
+
+## Power calculation (explicit; added per repo-auditor instruction 5, 2026-11-20)
+Declared before estimation. With `n_pre` observed pre-reform cohort points and `n_post` post-reform points, and a
+completion-series year-to-year residual sd `s` (PHL observed completion series show year-to-year changes of ~2–3 pp;
+take `s = 2.5 pp` as the declared upper bound), the standard error of a cohort difference-in-differences estimate is
+approximately `SE = s·sqrt(1/n_pre + 1/n_post)`. For the PHL observed coverage (`n_pre ≈ 6`, `n_post ≈ 6`):
+`SE ≈ 2.5·sqrt(1/6+1/6) = 1.44 pp`, so the minimum detectable effect at 80% power / 5% two-sided is
+`MDE ≈ 2.8·SE ≈ 4.0 pp`. The predeclared 3 pp net threshold is **below the MDE**, i.e. this cell is
+**UNDERPOWERED for a 3 pp effect** at the observed coverage; it can only detect ≥4 pp. Consequence declared now:
+a point estimate in (0, 3 pp) with a pre-trend-passing specification is reported as **INCONCLUSIVE**, not as
+support; a null cannot be claimed either. If CHN (7 distinct years) or pooled coverage is used, `n_pre≈3–4`,
+`n_post≈3–4`, `SE≈1.8–2.0 pp`, `MDE≈5–6 pp` — weaker still. The power limitation is part of the declared result and is
+not worked around by imputation, by widening the window, or by pooling across countries with different definitions.

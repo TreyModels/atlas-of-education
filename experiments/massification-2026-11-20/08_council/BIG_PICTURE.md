@@ -1,7 +1,7 @@
 # BIG_PICTURE — live keep/park/kill list (Council authority)
 
 **Owner:** Council of Experts. **Rule:** `08_council/BIG_PICTURE_RULE.md` (standing order, user, 20 Nov 2026).
-**Updated:** 2026-11-20 14:34 (cycle 2: model2 push-pull recovery/forced-ID intake). Update at the top of every Council
+**Updated:** 2026-11-20 14:52 (cycle 3: loop-5 outcomes — M2c fail, task-37 PARTIAL/EQUIVALENT, A1 scaling fail, E2/E3 intake). Update at the top of every Council
 cycle, before ordering experiments.
 
 ## First-order goal (restated every cycle)
@@ -63,3 +63,12 @@ education is secondary; the shadow phase's identification limits stand and are n
 3. **One thread that most advances the model:** E2 + E3 execution now, with E1-design recovery (M2c) in parallel — the model's interaction claim depends on it; E1 fielding follows.
 4. **Drift check:** the prior cycle was measurement-heavy and this cycle opened with a definition gate; the recovery intake is another identification-methodology step — **two red flags present** (measuring/ID-methodology vs modelling). Critical-path justification (required by the rule): the ID gate defines what the model may claim and is time-boxed; if E2/E3 predeclarations and M2c are not executing within one cycle, the Council will kill E1 and reduce the programme to conditional reproduction + equivalence.
 5. **If only one thing mattered this week:** E2 + E3 predeclarations/results plus M2c; everything else — E4, E6, E7, paper tasks — waits. Also: **`10_massification/data/` is EMPTY (only raw/) — named critical-path blocker**; data-hunter must post a partial jobs/markets + completion panel with hash within one cycle, or E2 runs on the observed `04_data` fallback and E4/KHM waits.
+
+
+## Cycle 3 step-back (first loop-5 outcomes)
+
+1. **Goal restated:** massification produced by schooling–government–market interaction, each standing the others up, cohort flows + country/sector variation; shadow secondary.
+2. **Threads:** **KILLED this cycle** — **E1/E1b two-shock as the identification gate** (M2c recovery failed predeclared sufficiency: median |bias| 0.55 > 0.50; σ=1.0 sign accuracy 0.74/0.68; do not field as-is); **panel/cross-country direction claims** (R13; EQUIVALENT headline); **E3 replication** (DATA BLOCKED; simulated-only note accepted, not a replication); **E8**; shadow threads. **KEEP** — **income-scaling channel repair** as a predeclared structural cell (the model's only remaining route to generating the classified laws; new cell, no exponent fitting); **E2** PH K-12 event study with a Council-imposed **descriptive-only cap** (thin pre-period, COVID); **E6** scaling-form test (constraint); the gate/scaling checks; tasks 34/35/data (data landed: 2,458 + 5,622 rows). **PARK** — E4 Bartik (data now landed; next identification option after the income-channel cell), E5, E7, complexity/ECI, T1/T2 papers, shadow paper rewrite. **DONE** — M2b.
+3. **One thread that most advances this cycle:** **income-scaling channel repair** — the model has just failed the A1 scaling check with *wrong-sign* OOS exponents; if a structural income-demand channel (not exponent fitting) cannot fix the sign, the model caps at PARTIAL and the phase's honest output is conditional reproduction + equivalence. E4 is the fallback identification route.
+4. **Drift check:** no parameter-tuning drift (the repair is structural and separate); but **validation-machinery drift** is live — three gates (recovery, smoke, scaling) in one cycle. Two red flags: repeated measurement/gate actions + no model improvement yet. Mitigation: time-box the repair to one cell/one cycle; if it fails, stop adding checks and publish PARTIAL + EQUIVALENT.
+5. **If only one thing mattered this week:** the income-scaling channel repair cell (structural, predeclared, holdout untouched); everything else waits. Direction claims remain EQUIVALENT; no PASS.

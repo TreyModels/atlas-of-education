@@ -116,3 +116,24 @@ complementary 0.00; a truth outside the candidate set forced-identified at 1.00;
    `10_massification/relations/data/` with a declared amendment (same estimators/thresholds), posts `NEW:` with
    hash; Part 4 recovery is design-bound and is re-run only as **M2c**: the E1 two-shock estimator's own recovery
    test (simulated), before E1 is fielded.
+
+
+## Amendment A2 (2026-11-20 14:52) — loop-5 outcomes: fit window, scaling cap, conditional status
+
+**Trigger:** task-37 PHL smoke fit PARTIAL/EQUIVALENT (holdout MAE 4.84/5.40/6.08 vs linear-trend 4.35; persistence
+8.60; all three rivals lose to the trend benchmark); A1 scaling check FAILED (generated OOS exponents wrong sign:
+secondary −1.89/−0.38/−0.74 vs +0.286; tertiary −1.23/−0.14/−0.35 vs +0.776); M2c recovery failed predeclared
+sufficiency (median |bias| 0.55 > 0.50).
+
+1. **Fit-window amendment (disclosed, accepted):** PHL smoke fit uses observed `status=target` rows only,
+   **1999–2010** (n=16), holdout 2011–2024 (n=17). The gate's 1980–2010 window is not available in observed cells;
+   this is a declared data-driven amendment, holdout unchanged. Because the window is shorter, in-sample fit is
+   not comparable to the original gate and the model **cannot exceed PARTIAL** on this smoke.
+2. **Scaling cap:** with wrong-sign generated exponents, the model does **not** reproduce the classified scaling laws
+   → universalization reproduction is capped at **PARTIAL** until a structural repair generates the correct signs
+   out of sample (R14/R16).
+3. **Direction:** EQUIVALENT (R13); no push-pull direction or complementarity claim from these results.
+4. **Repair rule:** a scaling-channel repair is admissible **only** as a new predeclared structural cell — a named
+   behavioural mechanism (e.g., income→demand/feasibility channel), no exponent used as a parameter, fit/check/holdout
+   roles unchanged, and the A1 exponents used only as checks. A repair that fits the exponents directly is a
+   restatement and is rejected (R4).
