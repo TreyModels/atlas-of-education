@@ -39,3 +39,18 @@ thresholds in `data/country_typology.csv`, typology computed from **observed 198
 **Bottom line for the model:** four of the six conditional relations (T1, T2, T3, T5) are all versions of one condition — **whether the state is the
 binding constraint on school places**. Country presets should carry one flag (`capacity_binding: bool`) that switches these channels on, rather than four
 separate elasticities. T4 and T6 are unconditional (income demand; cohort dilution) and can be global parameters.
+
+## 7. Complexity as a second typology dimension (task-28)
+
+**Why add it:** the Council asked whether complexity is the missing country-type axis. The tests above say: it is a *descriptive* axis and a conditioner of one channel (education->growth), but **not** a conditioner of the spending channel. It should be added to the typology, but as a secondary axis, not as a replacement for the state-capacity flag.
+
+**ECI levels for the six countries (SITC, 1995 -> 2024):** JPN 2.06 -> 1.54 (high, falling); KOR 1.23 -> 1.44; HKG 1.16 -> 1.42; CHN 0.72 -> 1.30 (fast catch-up); PHL 0.34 -> 0.75; KHM -1.32 -> 0.30 (from far below zero). The income ordering and the complexity ordering are *not* the same: HKG is richer than KOR but slightly less complex; CHN is poorer than HKG but converging fast.
+
+| Typology cell | Countries (1995) | Relations that are live | Relations that are dormant |
+|---|---|---|---|
+| **low complexity + low income** | KHM, IND, BGD, PAK, LAO, MMR | T1 spending->enrolment, T2 private provision, T3 tax capacity, T5 teacher supply, R07 fertility, R42 completion<-ECI, **R48 schooling->growth payoff is largest here** | ECI->tertiary (income carries it), spending x ECI |
+| **low complexity + high income (resource/rentier)** | MYS (1995), TUR, MEX, ZAF, NGA | T1, T2, T3 still live; R48 payoff fading | ECI->completion weak |
+| **mid complexity + mid income** | CHN, THA, IDN, PHL(2024), VNM | R41 income->tertiary, R42 ECI->completion survives income, R45 ECI->growth null | R48 payoff near zero |
+| **high complexity + high income** | JPN, KOR, HKG, SGP | R21 gate tutoring, R22 income elasticity, R23 two-margin shadow demand, R49 metric | T1/T2/T3/T5 dormant (capacity not binding); R48 schooling->growth payoff fades/reverses |
+
+**The key conditional finding (state it plainly):** for the *model's* purposes, complexity is a good **state variable** and a poor **mechanism**. Use it to set a country's initial complex-job share and formal-job pool (massabm `vac_paths`, twoway `Vc0`, `eps_ec`), and to label the typology cells — but do **not** use it to switch the spending elasticity (the interaction is a clean null) and do **not** assume higher complexity means a bigger schooling payoff (the interaction is negative in this sample).

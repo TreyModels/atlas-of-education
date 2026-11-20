@@ -312,3 +312,60 @@ LAO, MNG, IND, BGD, PAK, LKA, NPL); non-Asia = 11 (TUR, MEX, BRA, EGY, NGA, KEN,
 ## 8. Addendum A1 — literacy, ECI and population pyramids
 
 A separate analysis file, **`LITERACY_ECI_DEMOGRAPHY.md`**, extends this layer with the ECI (Growth Lab / Harvard Dataverse, CC0) and literacy/pyramid data: tests E1–E17 (ECI × GDP × literacy × growth), the cohort-replacement decomposition D1–D2, and the population pyramids. Headline: **62–66% of observed adult-literacy gains is cohort replacement, not learning**; ECI tracks the schooling *flow* (completion t−10, 0.593) but not the literacy *stock*; and the published ECI growth premium does not replicate in this 30-country 1995–2024 panel (−0.068, se 0.067). Register rows R31–R40.
+
+## 9. Economic complexity (task-28)
+
+**Canonical panel:** `04_data/complexity/ECONOMIC_COMPLEXITY.csv` (6 countries x 1995-2024, Growth Lab, Harvard Dataverse doi:10.7910/DVN/XTAQMC, CC0). **Usable model-input file:** `data/economic_complexity_panel.csv` (180 rows, 27 columns: ECI SITC/HS92/HS12 + ranks, growth_proj, `eci_pctile`, `eci_z_year`, `eci_growth_5y`, `complexity_gap` = ECI minus the year-by-year income-implied ECI, `complexity_quadrant`, plus merged gdppc, tertiary/secondary GER, completion, spending, wage-and-salaried share, vulnerable share, urban share, population, fertility). A 30-country ECI column set for panel tests: `data/economic_complexity_panel_30ctys.csv`.
+
+**Coverage for the six countries:** CHN, HKG, JPN, KHM, KOR, PHL all have **30/30 years (1995-2024)** for `eci_sitc` and `eci_hs92`; `eci_hs12` only 2012-2024 (13 years); `growth_proj` 2004-2024. No gaps, no proxies needed for the six.
+
+### ECI relations (two-way FE, CR1 clustered on country)
+
+| test | outcome | driver | coef | se | t | p | n | n_cty | period | within_r2 |
+|---|---|---|---|---|---|---|---|---|---|---|
+| C1 | log_ger_t | eci_sitc | 0.306 | 0.140 | 2.190 | 0.029 | 656 | 30 | 1995-2024 | 0.057 |
+| C2 | log_ger_t | eci_sitc lag5 | 0.215 | 0.127 | 1.687 | 0.092 | 506 | 30 | 2000-2024 | 0.031 |
+| C3 | log_cmpt_s | eci_sitc | 0.197 | 0.069 | 2.849 | 0.004 | 516 | 28 | 1995-2024 | 0.097 |
+| C4 | log_cmpt_s | eci_hs92 | 0.202 | 0.062 | 3.271 | 0.001 | 516 | 28 | 1995-2024 | 0.110 |
+| C5 | wage_share | eci_sitc | 2.767 | 1.914 | 1.446 | 0.148 | 892 | 30 | 1995-2024 | 0.056 |
+| C6 | vuln_share | eci_sitc | -3.035 | 2.006 | -1.513 | 0.130 | 892 | 30 | 1995-2024 | 0.054 |
+| C7 | dlog_gdp10 | eci_sitc | -0.142 | 0.105 | -1.357 | 0.175 | 893 | 30 | 1995-2024 | 0.040 |
+| C8 | log_ger_s | eci_sitc | 0.165 | 0.075 | 2.206 | 0.027 | 652 | 30 | 1995-2024 | 0.068 |
+| C9 | log_ger_sup | eci_sitc | 0.113 | 0.100 | 1.126 | 0.260 | 502 | 29 | 1995-2019 | 0.015 |
+| C10 | lit_youth | eci_sitc | 4.493 | 1.531 | 2.935 | 0.003 | 314 | 28 | 1995-2024 | 0.066 |
+| C11 | log_ger_t | eci_sitc | 0.120 | 0.075 | 1.594 | 0.111 | 656 | 30 | 1995-2024 | 0.254 |
+| C11 | log_ger_t | log_gdppc | 0.845 | 0.198 | 4.255 | 0.000 | 656 | 30 | 1995-2024 | 0.254 |
+| C12 | log_cmpt_s | eci_sitc | 0.139 | 0.049 | 2.807 | 0.005 | 516 | 28 | 1995-2024 | 0.151 |
+| C12 | log_cmpt_s | log_gdppc | 0.243 | 0.104 | 2.332 | 0.020 | 516 | 28 | 1995-2024 | 0.151 |
+
+### Does complexity condition the spending and returns channels? (interaction tests)
+
+Interactions use within-country-centred ECI, so country FE absorbs the ECI level and year FE absorbs common shocks; the interaction is the within-country co-movement of the driver with complexity.
+
+| test | outcome | driver | coef | se | t | p | n | n_cty | note |
+|---|---|---|---|---|---|---|---|---|---|
+| X1 | log_ger_s | log_spend | 0.059 | 0.068 | 0.868 | 0.385 | 487 | 30 | spending x complexity interaction, secondary GER |
+| X1 | log_ger_s | spend_x_eci | 0.081 | 0.080 | 1.024 | 0.306 | 487 | 30 | spending x complexity interaction, secondary GER |
+| X2 | log_cmpt_s | log_spend | 0.024 | 0.077 | 0.316 | 0.752 | 380 | 27 | spending x complexity interaction, completion |
+| X2 | log_cmpt_s | spend_x_eci | 0.144 | 0.099 | 1.444 | 0.149 | 380 | 27 | spending x complexity interaction, completion |
+| X3 | log_ger_s | log_spend | 0.026 | 0.039 | 0.661 | 0.508 | 342 | 27 | lagged interaction |
+| X3 | log_ger_s | spend_x_eci lag5 | 0.062 | 0.071 | 0.874 | 0.382 | 342 | 27 | lagged interaction |
+| X4 | log_ger_t | log_gdppc | 0.852 | 0.200 | 4.267 | 0.000 | 656 | 30 | income x complexity, tertiary GER |
+| X4 | log_ger_t | inc_x_eci | 0.014 | 0.010 | 1.315 | 0.188 | 656 | 30 | income x complexity, tertiary GER |
+| X5 | dlog_gdp10 | log_cmpt_s | 0.233 | 0.141 | 1.656 | 0.098 | 516 | 28 | completion x complexity -> 10y growth (returns channel) |
+| X5 | dlog_gdp10 | cmpt_x_eci | -0.039 | 0.015 | -2.674 | 0.007 | 516 | 28 | completion x complexity -> 10y growth (returns channel) |
+| X6 | dlog_gdp10 | log_ger_t | 0.103 | 0.075 | 1.370 | 0.171 | 654 | 30 | tertiary x complexity -> 10y growth (returns channel) |
+| X6 | dlog_gdp10 | tert_x_eci | -0.077 | 0.020 | -3.800 | 0.000 | 654 | 30 | tertiary x complexity -> 10y growth (returns channel) |
+| X7 | wage_share | log_cmpt_s | 3.259 | 2.138 | 1.525 | 0.127 | 539 | 28 | completion -> wage-share (payoff proxy) |
+| X8 | wage_share | log_gdppc | 6.107 | 1.536 | 3.976 | 0.000 | 1017 | 30 | income -> wage-share (baseline) |
+
+**Answer:** complexity does **not** condition the spending->enrolment channel (interaction 0.081, se 0.080, p=0.31; completion 0.144, se 0.099, p=0.15). It **does** condition the education->growth channel, **negatively** (completion x ECI -0.039, se 0.015, p=0.007; tertiary x ECI -0.077, se 0.020, p<0.001): schooling's growth payoff is concentrated in low-complexity economies in this sample. Complexity also does not condition the income->tertiary channel (0.014, se 0.010, p=0.19).
+
+### Best single complexity metric
+
+| metric | n | n_cty | years | b_gdp | t_gdp | r2_gdp | b_tert | t_tert | r2_tert | b_cmpt | t_cmpt | r2_cmpt | yr_on_yr_sd | corr_sitc_hs92 |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| eci_sitc | 895 | 30 | 1995-2024 | 0.292 | 2.429 | 0.147 | 0.306 | 2.190 | 0.057 | 0.197 | 2.849 | 0.097 | 0.132 | 0.983 |
+| eci_hs92 | 895 | 30 | 1995-2024 | 0.322 | 3.287 | 0.183 | 0.227 | 1.547 | 0.032 | 0.202 | 3.271 | 0.110 | 0.127 | 0.983 |
+
+**Recommendation:** ingest **`eci_hs92`** as the primary country-year index (strongest GDP relation, standard modern classification, full coverage, most stable year-on-year), carry **`eci_sitc`** as a robustness column (correlation 0.983; all relations agree within ~1 SE). Never ingest **ranks** (relative, not levels), **`growth_proj`** (fails as a predictor, R36), or a spliced HS12 series (2012+ only).

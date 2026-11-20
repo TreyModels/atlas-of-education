@@ -2511,5 +2511,70 @@
   "bytes": 595019,
   "license": "World Bank open access; country profile PDF",
   "notes": "Workforce/firm labour tables; no education-credential-requirement table. ES data API returned HTTP 000; Cambodia 2016 profile URL naming not discoverable (404)."
+ },
+ {
+  "id": "complexity_extra_wdi_NE_EXP_GNFS_ZS_json",
+  "agency": "World Bank",
+  "dataset": "WDI proxy indicator wdi_NE.EXP.GNFS.ZS.json",
+  "url": "https://api.worldbank.org/v2/country/PHL;KHM;HKG;CHN;KOR;JPN/indicator/NE.EXP.GNFS.ZS?format=json&per_page=6000&date=1980:2024",
+  "http_status": 200,
+  "retrieved_utc": "2026-11-20T05:45:00Z",
+  "file": "complexity/extras/raw/wdi_NE.EXP.GNFS.ZS.json",
+  "sha256": "54cb99b76896045bbd54960ca23c3e318d70812747857939c38a74c14fe2ee19",
+  "bytes": 62811,
+  "license": "CC BY 4.0",
+  "notes": "task-27 extras; status=proxy in the CSV — not a complexity index"
+ },
+ {
+  "id": "complexity_extra_wdi_NV_IND_MANF_ZS_json",
+  "agency": "World Bank",
+  "dataset": "WDI proxy indicator wdi_NV.IND.MANF.ZS.json",
+  "url": "https://api.worldbank.org/v2/country/PHL;KHM;HKG;CHN;KOR;JPN/indicator/NV.IND.MANF.ZS?format=json&per_page=6000&date=1980:2024",
+  "http_status": 200,
+  "retrieved_utc": "2026-11-20T05:45:00Z",
+  "file": "complexity/extras/raw/wdi_NV.IND.MANF.ZS.json",
+  "sha256": "50f703cacdef658e3c9df50c515c380bbca4d057ca659747d1bebd1035c17802",
+  "bytes": 61087,
+  "license": "CC BY 4.0",
+  "notes": "task-27 extras; status=proxy in the CSV — not a complexity index"
+ },
+ {
+  "id": "complexity_extra_wdi_TX_VAL_MRCH_CD_WT_json",
+  "agency": "World Bank",
+  "dataset": "WDI proxy indicator wdi_TX.VAL.MRCH.CD.WT.json",
+  "url": "https://api.worldbank.org/v2/country/PHL;KHM;HKG;CHN;KOR;JPN/indicator/TX.VAL.MRCH.CD.WT?format=json&per_page=6000&date=1980:2024",
+  "http_status": 200,
+  "retrieved_utc": "2026-11-20T05:45:00Z",
+  "file": "complexity/extras/raw/wdi_TX.VAL.MRCH.CD.WT.json",
+  "sha256": "4860743db7e2268a66f3d06d9f20846196d56637a35a7c6c7e056fafb3e8a529",
+  "bytes": 60652,
+  "license": "CC BY 4.0",
+  "notes": "task-27 extras; status=proxy in the CSV — not a complexity index"
+ },
+ {
+  "id": "complexity_extra_wdi_TX_VAL_TECH_MF_ZS_json",
+  "agency": "World Bank",
+  "dataset": "WDI proxy indicator wdi_TX.VAL.TECH.MF.ZS.json",
+  "url": "https://api.worldbank.org/v2/country/PHL;KHM;HKG;CHN;KOR;JPN/indicator/TX.VAL.TECH.MF.ZS?format=json&per_page=6000&date=1980:2024",
+  "http_status": 200,
+  "retrieved_utc": "2026-11-20T05:45:00Z",
+  "file": "complexity/extras/raw/wdi_TX.VAL.TECH.MF.ZS.json",
+  "sha256": "89d2560ee13d05d663fabc7fbe9c6830e72e3b70d91cae838098ccb88bac7cff",
+  "bytes": 64721,
+  "license": "CC BY 4.0",
+  "notes": "task-27 extras; status=proxy in the CSV — not a complexity index"
+ },
+ {
+  "id": "complexity_extra_COMPLEXITY_WDI_PROXIES_csv",
+  "agency": "World Bank",
+  "dataset": "Complexity extras: WDI proxy series (derived table)",
+  "url": "derived from raw/wdi_*.json",
+  "http_status": 200,
+  "retrieved_utc": "2026-11-20T05:45:00Z",
+  "file": "complexity/extras/COMPLEXITY_WDI_PROXIES.csv",
+  "sha256": "bffc6f7ce7b43251eb89193e9c083b69a976a773b073ed9477707585d63b7fd2",
+  "bytes": 111106,
+  "license": "CC BY 4.0",
+  "notes": "task-27 extras; status=proxy in the CSV — not a complexity index"
  }
 ]

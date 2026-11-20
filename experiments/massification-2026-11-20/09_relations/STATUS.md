@@ -66,3 +66,26 @@ Requested by Dr. Menefee after the task closed: *"a correlation between literacy
 - **No adult literacy series for KOR/JPN/HKG** — the developed benchmarks are absent from the literacy decomposition.
 - **The exit component is bounded, not estimated** (the dying cohort's literacy is unobserved); the 0.62–0.66 replacement share is conditional on that bound.
 - **KHM/LAO/LKA/VNM show replacement >1** — within-cohort literacy loss or series revision; cannot separate the two without the original census tabulations.
+
+---
+
+# ADDENDUM A2 (task-28): economic complexity as a model metric
+
+**Status: COMPLETE.** Deliverables added:
+
+| Deliverable | Status | Content |
+|---|---|---|
+| `data/economic_complexity_panel.csv` | **complete** | 180 rows (CHN/HKG/JPN/KHM/KOR/PHL x 1995-2024), 27 columns: ECI SITC/HS92/HS12 + ranks, growth_proj, in_rankings, `eci_pctile`, `eci_z_year`, `eci_growth_5y`, `complexity_gap` (ECI minus income-implied ECI), `complexity_quadrant`, and merged gdppc / tertiary GER / secondary GER / completion / spending / wage-and-salaried share / vulnerable share / youth literacy / urban / population / fertility. Ready to ingest; no proxies used. |
+| `data/economic_complexity_panel_30ctys.csv` | **complete** | ECI column set for all 30 panel countries (1995-2024) used in the panel tests. |
+| `data/complexity_results.csv` | **complete** | C1-C12: ECI -> tertiary GER, completion, formal share, growth, secondary GER, upper-secondary, literacy; ECI-vs-income horse races. |
+| `data/complexity_conditioning.csv` | **complete** | X1-X8: ECI x spending interactions, ECI x income, ECI x schooling -> growth (returns channel), completion -> wage share. |
+| `data/complexity_metric_choice.csv` | **complete** | coverage, cross-variant correlation, within-R2 and stability comparison for eci_sitc vs eci_hs92. |
+| `RELATION_CANDIDATES.csv` | **49 rows** | R41-R49 appended (ECI -> tertiary/completion/secondary/formal/growth/literacy, ECI x spending null, ECI x schooling negative, metric choice). |
+| `DATA_PATTERNS.md` §9, `COUNTRY_TYPOLOGY.md` §7, `MODEL_PLUG_MAP.md` §E | **complete** | complexity specs, the complexity typology cells, and the plug map with the "do not plug" list. |
+
+**Headline answers:** (1) coverage for the six countries is complete 1995-2024 for SITC and HS92. (2) Complexity does NOT condition the spending->enrolment channel
+(interaction 0.081, se 0.080); it DOES condition the education->growth channel negatively (tertiary x ECI -0.077, se 0.020). (3) Best single metric: `eci_hs92`
+(primary) with `eci_sitc` as robustness (r = 0.983); never ranks, growth_proj or spliced HS12.
+
+**Partial/caveats:** the formal-share channel (R44) is sign-only (p=0.15); the education->growth interaction (R48) is correlational and could be convergence rather than
+complexity; complexity is a country-level index, not a mechanism.
