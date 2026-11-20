@@ -32,8 +32,9 @@ asymmetry.”*
 ### Anchor (Philippines) — CLOSED at PARTIAL / DESCRIPTIVE / EQUIVALENT (D76)
 - Observed signature: primary completion ≥90 in **2017**; lower-secondary ≥90 in **2024**; upper-secondary
   **never ≥90** (75.03 in 2024); tertiary GER ≥50 in **2024–25**.
-- Levels: fit MAE 2.03–3.29 pp; holdout 4.01–6.12 pp — but **loses to the linear-trend benchmark (4.35 pp)**;
+- Levels (12 arms; the phase's A1 anchor class): fit MAE **1.0475–3.2917** pp; holdout **4.0148–6.1222** pp — but **loses to the linear-trend benchmark (4.35 pp)**;
   all rivals lose to the trend; no PASS.
+  *(Correction per D165(x): the previously quoted "fit 2.03–3.29" is the min–max of the **six** `law_only` + `capacity_only` arms, not the 12-arm range; it joined a six-arm fit range to a twelve-arm holdout range. The three `none` arms fit best (1.0475–1.3713) and hold worst (5.88–6.11). The `PARTIAL` verdict does not depend on the range.)*
 - Crossing accounting (12 arms): **M0** left-censored (boundary only); **M1** left-censored **≤1977**;
   **M2 clean 0/12** (the single 2025 hit is R29-flagged, in the arm that overshoots M3); **M3** R6 in-window
   12/12 but 2/12 post-window overshoots (2027, 2031); **M4 not discriminable** (simulated tertiary GER ≥50 in

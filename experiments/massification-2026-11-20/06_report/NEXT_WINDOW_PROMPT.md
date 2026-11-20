@@ -11,13 +11,13 @@ peak model capability. Work from the canonical copies, not iCloud.
 
 ## Read first (in this order)
 
-1. `/Users/treymenefee/massification_live/experiments/massification-2026-11-20/06_report/MASSIFICATION_CLOSEOUT.md`
-2. `…/10_massification/STATUS.md` and `…/06_report/MODEL_ROUTING_RESEARCH.md`
-3. `…/08_council/brief_013/` (SUCCESS_CRITERIA, STOP_RULES, ANCHOR_SYSTEM), `…/08_council/DECISIONS.md` (D1–D87), `…/08_council/COUNCIL_STATE.md`
-4. `…/10_massification/extensions/codex_2026-11-20/toys_2026-11-20/README.md` + `COUNCIL_REVIEW_016.md`
-5. `…/10_massification/extensions/lab_2026-11-20/` (PRE_DECLARATIONS, FINDINGS, results)
-6. `…/06_report/AGENT_PROTOCOL.md`, `…/06_report/CONTEXT_ROTATION_PLAN.md`, `…/06_report/EXTERNAL_CHECKIN.md`
-7. `…/LEAD_HANDOFF.md`, `…/NEXT_LEAD_PROMPT.md`
+1. `…/MASSIFICATION_CLOSEOUT.md` (programme root; see the D-1 corrected 12-arm range)
+2. `…/10_massification/STATUS.md`, `…/08_council/DECISIONS.md` (**D1–D169**), `…/08_council/COUNCIL_STATE.md`, `…/08_council/BIG_PICTURE.md`
+3. The closing record: **D150** (generator line closed), **D154** (closing record ruled), **D166–D168** (EXP-25 CLOSED-UNRUN; line complete; programme closed; write-up is the only open item)
+4. The four registers (citation appendices): `…/10_massification/extensions/conv_reg_2026-11-20/`, `…/part_margin_desc_2026-11-20/`, `…/d63_bounds_2026-11-20/`, `…/kappa_write_2026-11-20/`
+5. The write-up order and gate: `…/08_council/brief_026/SYNTHESIS_026.md` §5 (W-1…W-6) and the gate A-1…A-8; canonical write-up path `…/10_massification/lit/PHASE_WRITEUP.md`
+6. `…/AGENT_PROTOCOL.md` (programme root; **not** `06_report/`), `…/EXTERNAL_CHECKIN.md` (programme root), `…/06_report/MODEL_ROUTING_RESEARCH.md`
+7. `…/10_massification/lit/PHASE_WRITEUP_SHELL.md` (status `SUPERSEDED` by the post-close write-up)
 
 ## Canonical locations (iCloud copy is broken — do not read it)
 

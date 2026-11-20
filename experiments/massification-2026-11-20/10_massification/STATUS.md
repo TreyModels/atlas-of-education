@@ -1397,3 +1397,27 @@ frozen A10 at 4.44e-10; determinism 3/3; final SHA256SUMS 14/14.
   (77.93%), 64 below + 4 above, 68 barred** — all PHL's in 7 named objects (κ-link 31/53 years outside; v1.5 guards;
   v1.6 audit/panel; 2027 κ-implied sentence in D133/STATUS); **0 load-bearing → NARROWED**; KOR counter-example carried;
   **four fixed sentences admissible; bar the κ-link and 2027 sentences**; no adoption.
+
+---
+
+## 3ag. Council cycle 18 merged (D164–D169) — EXPERIMENT PROGRAMME CLOSED; the write-up is the only open item
+
+- **Adjudications:** EXP-21 **ACCEPT clean** (REGISTER-BINDING; 4/12 INTER, 6 NOT, 2 THIN; m constant A17-only
+  8.8395202269e-10 vs NOT-CONSTANT v1.3/v1.2 4.7043695535e-02; 35/6,720 capped); EXP-22 **AWC** (NO-OBSERVED-COUNTERPART;
+  identity fails, placement WITHHELD; V35b's THIN note contradicts the <3 rule — corrected to not-THIN per D165(vii));
+  EXP-23 **AWC** (RESIDUAL-SPLIT 58.6008/41.3992; BOUNDS-EDGE — B1 outside, B2/B3 inside; 58.6% is a t−3 statement,
+  contemporaneous pipeline share −0.145443); EXP-24 **AWC** (REGISTER-NARROWED — 233/299 in-window 77.93%, 68 barred,
+  universe 17 of 193 files; **D-2** the `exp11_forward_constraint` column carries a stale `FORWARD-CONSTRAINT-ELIGIBLE`
+  value and may not ship; **D-3** the HKG/HELD legs owed by the write-up).
+- **EXP-25 V-SPINE: `CLOSED-UNRUN`** (drop-first exercised) — it is the write-up, not a test; handed off as **W-1…W-6**
+  under the frozen gate **A-1…A-8**; **no `SPINE-REPLACED` verdict**.
+- **Line COMPLETE and sunset DISCHARGED** (D167): four of five deliverables on disk and adjudicated; the fifth is the
+  write-up the sunset names. **Experiment programme CLOSED — 0 new cells**, by exhaustion (HELD / data gaps / static
+  text / forbidden re-entries); **D89 discharged through the completion branch** (a ruling, not an omission).
+- **The write-up is the only open item (D168):** two-object headline + four register appendices + HELD/banned apparatus;
+  canonical path `10_massification/lit/PHASE_WRITEUP.md`; deadline before the next Council cycle; **if it does not ship,
+  it is a writing failure, not a register**. Phase stays CLOSED at `PARTIAL / DESCRIPTIVE / EQUIVALENT` (D76/D77
+  untouched).
+- **Record corrections applied:** **D-1** closeout fit range now the 12-arm range **1.0475–3.2917** (fit) /
+  **4.0148–6.1222** (holdout), with the "2.03–3.29" identified as the six law/capacity-only arms; **D-4** read-order
+  paths fixed and the four registers + write-up order added; **V35b** 4-pair lower level **not THIN**.

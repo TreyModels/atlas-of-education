@@ -467,3 +467,31 @@ imputation as observation. E1 stays PARKED; direction claims EQUIVALENT.
    sentence; level-symmetric legs; class tags; banned sentences register; REQUIRED-STATE/DERIVED label discipline) are
    the guard. **If only one thing mattered:** EXP-21 (the register is the precondition for every level sentence).
    **Drop-first: EXP-25** (second cut EXP-24).
+
+## Cycle 18 addendum (descriptive line complete; EXPERIMENT PROGRAMME CLOSED; the write-up is the only open item; D164–D169)
+
+1. **Goal restated:** massification produced by schooling–government–market interaction; the phase is **CLOSED** at
+   `PARTIAL / DESCRIPTIVE / EQUIVALENT` (D76/D77 untouched), the generator line is **closed at representation-only**
+   (D150/D154), and the **experiment programme is CLOSED with 0 new cells** (D167) — the four exhaustive reasons:
+   every candidate is either against a `HELD` object, a data gap that cannot be closed on disk, static text, or a
+   forbidden re-entry. **D89 is discharged through the completion branch** (a ruling, not an omission).
+2. **KEEP/PARK/KILL delta.** KEEP — the four registers (CONV-REG, PART-MARGIN-DESC, D63-BOUNDS, KAPPA-WRITE) as the
+   citation appendices; the bounded negative on income-scaling (A1 anchor class: **12 arms**, fit
+   **1.0475–3.2917 pp**, holdout **4.0148–6.1222 pp**, losing to the **4.35 pp** linear trend); the equivalence /
+   identification map with the unreproduced upper-secondary asymmetry (placement **9/33**; D63 `UNABLE`, split
+   **58.6008 / 41.3992** at the declared t−3 pair); the single-tier representation capability; the per-system κ
+   descriptive register (WINDOW-ONLY; KOR counter-example; **four fixed sentences**). PARK — HKG (`DEFER-HKG`);
+   exit-cost/induction layers (D101/D104); A3 demand line (KILLED). KILL — any successor generator (D154's named
+   forbidden re-entries); any proxy against the required state; any experiment against a HELD object; the
+   `exp11_forward_constraint` label lift; the untagged D77 headline as a post-close sentence; "demand falsified"; the
+   banned-sentence list.
+3. **The only open item is the write-up** (D166/D168): **W-1…W-6** under the frozen acceptance gate **A-1…A-8**;
+   canonical path `10_massification/lit/PHASE_WRITEUP.md`; deadline **before the next Council cycle**; if it does not
+   ship, that is a **writing failure, not a register**. No `SPINE-REPLACED` verdict — EXP-25 is `CLOSED-UNRUN`.
+4. **Record corrections applied (D165):** **D-1** — the closeout's fit range is now the 12-arm range with its arm set
+   (the quoted "2.03–3.29" was the six `law_only`+`capacity_only` arms); **D-4** — the read-order paths fixed
+   (`AGENT_PROTOCOL.md` and `MASSIFICATION_CLOSEOUT.md` at the programme root, absent `LEAD_HANDOFF.md` removed, the four
+   registers and the write-up order added); **V35b** — the 4-pair lower level is **not THIN** (the frozen <3 rule
+   governs); **D-2** — the κ register's stale `FORWARD-CONSTRAINT-ELIGIBLE` column may not ship; **D-3** — the HKG
+   re-entry condition and the HELD table are owed by the write-up (Appendix B). **What would reopen the line:** a
+   **measured** object currently `HELD` **and** a new Council decision — neither exists.

@@ -222,3 +222,23 @@ evidence-spine correction (Z2); see `brief_018/SYNTHESIS_018.md` and `DECISIONS.
    bimodal/κ/WINDOW-ONLY; headline "Conditional level reproduction…") — EXP-25 must replace it with the closed-line
    state, the single-tier representation sentence, the class tags, the REQUIRED-STATE provenance and the banned-sentence
    register. **No external message sent this cycle** (D87).
+
+## Next 3 actions (cycle 18, brief 026 — experiment programme CLOSED; D164–D169)
+
+1. **Author the phase write-up (the only open item)** — W-1 headline block and two-class spine (replaces the stale
+   headline); W-2 level sentences (object table, the three numbers with licences, `ger_secondary` trap, `T` vs
+   completion in separate columns, THIN shown as unmeasured); W-3 participation paragraph (three spans, identity
+   negative, historical window, `comparison_performed = FALSE`); W-4 D63 paragraph (split + t−3 sentence, B1/B2/B3,
+   `BOUNDS-EDGE` defined, `UNABLE`, no structural sentence either way); W-5 κ paragraph (four sentences + windows +
+   KOR counter-example, 17-of-193 universe, two symbols, κ-link/2027 barred, no lift of the `exp11_forward_constraint`
+   column); W-6 limits/apparatus (HELD table 14, HKG two-part condition, corrected 12-arm range, read-order fix,
+   banned-sentence appendix). Canonical path `10_massification/lit/PHASE_WRITEUP.md`; **deadline before the next cycle**.
+2. **Check the gate A-1…A-8 and record `WRITE-UP-GATE: PASS`** — every headline/caption/claim labelled + class-tagged +
+   windowed + statused + exactly one permitted sentence; 0 untraceable numbers; 0 banned sentences outside the
+   quoted-and-barred register; the two-object headline block present and the untagged D77 headline absent; the four κ
+   sentences verbatim with the KOR counter-example; the HELD table (14) and HKG condition present; the 12-arm range
+   stated with its arm set; every read-order link resolves. **No `SPINE-REPLACED` verdict** (EXP-25 `CLOSED-UNRUN`).
+3. **Report the close** — phase stays CLOSED at `PARTIAL / DESCRIPTIVE / EQUIVALENT` (D76/D77 untouched); the deliverable
+   is the write-up (two objects + register appendices + HELD/banned apparatus). **0 new cells; no re-run, no re-score,
+   no proxy, no generator, no HKG run.** Parks stand: A3 KILLED; exit-cost/induction PARKED; HKG DEFER; D63 UNABLE;
+   C1–C4 closed.

@@ -509,3 +509,21 @@ B1 — pre-run SHA snapshot reconstructed (30/33 match, original hash `89638b39�
   (USE-OUTSIDE-WINDOW) — 309 uses enumerated, 299 applied, 233 in-window (77.93%), 64 below + 4 above, 68 barred; all
   PHL in 7 named objects (κ-link 31/53 years outside; 2027 κ-implied sentence in D133/STATUS); 0 load-bearing; KOR
   counter-example carried; four fixed sentences admissible; bar κ-link and 2027 sentences.
+
+## 2026-11-21 — Council cycle 18 merged (D164–D169): EXPERIMENT PROGRAMME CLOSED; the write-up is the only open item
+
+- **Adjudications:** EXP-21 ACCEPT clean (REGISTER-BINDING; 4/12 INTER, 6 NOT, 2 THIN; m constant A17-only
+  8.84e-10 vs NOT-CONSTANT v1.3/v1.2 4.704e-02; 35/6,720 capped); EXP-22 AWC (NO-OBSERVED-COUNTERPART; identity fails,
+  placement WITHHELD; V35b THIN note corrected to not-THIN per D165(vii)); EXP-23 AWC (RESIDUAL-SPLIT
+  58.6008/41.3992; BOUNDS-EDGE — B1 outside, B2/B3 inside; 58.6% is a t−3 statement); EXP-24 AWC (REGISTER-NARROWED;
+  233/299 in-window 77.93%, 68 barred, universe 17 of 193 files; D-2 the `exp11_forward_constraint` column is a stale
+  label and may not ship; D-3 the HKG/HELD legs owed by the write-up).
+- **EXP-25 V-SPINE `CLOSED-UNRUN`** (drop-first exercised): it is the write-up, not a test; handed off as W-1…W-6 under
+  the frozen gate A-1…A-8; no `SPINE-REPLACED` verdict.
+- **Line COMPLETE, sunset DISCHARGED, EXPERIMENT PROGRAMME CLOSED — 0 new cells** (D167) by exhaustion; **D89 discharged
+  through the completion branch** (a ruling, not an omission).
+- **The write-up is the only open item (D168):** two-object headline + four register appendices + HELD/banned apparatus;
+  canonical path `10_massification/lit/PHASE_WRITEUP.md`; deadline before the next Council cycle; if it does not ship it is
+  a writing failure, not a register. Phase stays CLOSED at PARTIAL/DESCRIPTIVE/EQUIVALENT (D76/D77 untouched).
+- **Corrections applied:** D-1 closeout range corrected to the 12-arm range 1.0475–3.2917 / 4.0148–6.1222 (with the
+  six-arm subset named); D-4 read order paths fixed and the four registers + write-up order added; V35b not-THIN.
