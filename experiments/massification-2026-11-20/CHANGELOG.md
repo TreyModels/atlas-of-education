@@ -135,9 +135,18 @@ manifests and error logs.
   CI −4.112…−1.067, negative-significant, opposite the canon; raw within-country r = −0.153), H3 NOT SUPPORTED,
   H4 SUPPORTED (descriptive co-movement only); "growth is the weakly-attached variable" (all nine growth pairs
   |r| < 0.21 and negative). Package rebuilt (3 stale hashes fixed; 23/23 verify). No causal/direction/Africa claims.
-- **External literature review launched** (Priority 1, user ask): web-verified memo + claim CSV under
-  `10_massification/lit/external_review_2026-11-20/`, five strands + education → complexity; "what we do NOT need
-  to redo" as the deliverable. Repo literature audit in parallel.
+- **External literature review DELIVERED** (Priority 1, user ask): `10_massification/lit/external_review_2026-11-20/`
+  — memo + **76 claim rows / 63 unique sources** (38 VERIFIED-FULLTEXT, 10 VERIFIED, 14 VERIFIED-ABSTRACT, 4
+  VERIFIED-METADATA, 10 UNVERIFIED flagged) + citation index + repo literature audit + deterministic assembler;
+  packaged 13/13 SHA256 verify. Verdicts: (a) schooling-vs-skills settled — skills not attainment (HW 2012 1 SD ≈
+  1.2–2.0 pp/yr; Pritchett 2001 no association vs 0.21–0.42 benchmark; Krueger–Lindahl initial-stock reconciliation;
+  Barro 2013 counterexample 0.44 pp); (b) ECI→growth modest/contested, education→complexity is capability theory with
+  R=0.13 between ECI and schooling in the field's own data; (c) absorptive/threshold frame canonical but absent
+  internally; (d) credential/queue theory settled and the Philippines already measured (39% overeducated, 1-in-5
+  vertical mismatch, BPO 1.9M jobs/80k net adds); (e) projection models absent internally — **WIC multi-state model
+  with CC BY 4.0 2023 data is directly reusable; do not rebuild the demographic engine**. Ledger audit: 0 hits for
+  growth/complexity/ECI; only 10/43 equations are literature equations. "What we do NOT need to redo" (§8) and
+  "what remains open" (§9) in the memo. `web_fetch` DNS-blocked; retrieval via curl, every status reflects text read.
 - **Education → ECI predeclared panel analysis run** (`10_massification/extensions/edu_eci_2026-11-20/`): 272-row
   matrix, frozen rule → **1 SUPPORTED · 5 PARTIAL · 8 NOT SUPPORTED** (12/14 robust to `eci_hs92`). Primary
   completion PARTIAL at 5 and 10 years and robust (+0.003–0.008 ECI points/pp, halved by income control); adult

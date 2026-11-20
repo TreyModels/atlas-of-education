@@ -655,14 +655,46 @@ claims; data asks remain HELD; literature *reading* is authorised.
 - **Package rebuilt** after the correction (3 stale hashes fixed): `RUN_MANIFEST.json` + `SHA256SUMS.txt` **23/23
   verify**; `stats/REPRO_CHECK.json` shows 10/10 result files identical across re-runs.
 
-### c) External literature review (Priority 1, in progress)
+### c) External literature review — DELIVERED
 
-- Target: `10_massification/lit/external_review_2026-11-20/` — web-verified memo + claim CSV with real URLs, covering
-  (a) schooling vs cognitive skills and growth, (b) economic complexity/ECI and growth **plus education → complexity**
-  (user's current hypothesis), (c) absorptive-capacity/threshold/dual economy, (d) educated unemployment/credential
-  queue/job matching, (e) existing projection models (IIASA/Wittgenstein/Barro–Lee). Every row carries a
-  VERIFIED-FULLTEXT / VERIFIED-ABSTRACT / UNVERIFIED tag; ends with "what we do NOT need to redo" and "what remains
-  open". Repo literature audit in parallel (the internal ledger covers none of these growth/complexity strands).
+- **Deliverable:** `10_massification/lit/external_review_2026-11-20/` — `EXTERNAL_LITERATURE_MEMO.md` (memo with
+  citation + URL per claim, the "what we do NOT need to redo" section and the "what genuinely remains open" section),
+  `EXTERNAL_LITERATURE_ROWS.csv` (**76 claim rows, 63 unique sources**: 38 VERIFIED-FULLTEXT, 10 `VERIFIED`, 14
+  VERIFIED-ABSTRACT, 4 VERIFIED-METADATA, **10 UNVERIFIED** clearly flagged), `EXTERNAL_LITERATURE_CITE_INDEX.csv`,
+  and the three workstream evidence files + `rows_C_REPO_AUDIT.md` + `build_rows.py`. Retrieval used `curl` because
+  `web_fetch` is DNS-blocked in this environment; every status reflects text actually downloaded and read.
+- **Strand verdicts:** (a) schooling vs cognitive skills and growth — **settled in outline**: measured cognitive skills,
+  not years of attainment, carry the cross-country growth association (HW 2012: 1 SD ≈ **1.2–2.0 pp/yr**; attainment
+  insignificant once skills enter; IV first stage weak); Pritchett (2001) finds **no association** between
+  educational-capital growth and output-per-worker growth against a growth-accounting benchmark of 0.21–0.42; Krueger–
+  Lindahl reconcile via initial stock/level composition; Barro (2013) is the live counterexample (+1 year male
+  secondary = **0.44 pp** impact growth). The programme's years-of-schooling null is a **replication**, not a
+  discovery; the programme has **no learning-outcome data**. (b) ECI/complexity — ECI→growth content is real but
+  **modest, metric-dependent and contested** (spectral-clustering interpretation, contrasting rankings); education →
+  complexity is **capability theory, not established evidence** — the field's own authors report **R = 0.13** between
+  ECI and years of schooling and call schooling-years an inadequate capabilities proxy; the three direct
+  complexity×human-capital studies were identified but **not fetched**. The programme's own ECI→growth nulls are
+  consistent with the critique record. (c) absorptive capacity/threshold/dual economy — **canonical frame exists**
+  (Lewis; Harris–Todaro; Abramovitz; Timmer; McMillan–Rodrik; Rodrik; Caselli–Coleman; Goldin–Katz; Autor et al.;
+  Eichengreen et al.) but the internal layer has **no** coverage; no published source supplies a threshold value for
+  the Philippines. (d) educated unemployment/credential queue — **theory settled** (Freeman, Collins, Spence, Arrow,
+  Thurow; Leuven–Oosterbeek: surplus-schooling returns ≈ **45%** of required-schooling returns, rejecting pure
+  human-capital *and* pure job-competition), and the **Philippines is already measured**: **39%** overeducated,
+  flat real graduate wages vs **~50%** growth below secondary, highest graduate-youth unemployment (World Bank 2026,
+  *Building the Filipino Middle Class*); **1 in 5** tertiary workers in basic-skill jobs and licence premia only when
+  matched (PIDS DP 2025-32); IT-BPM **~1.9M jobs / US$40bn / ~80k net adds per year** (IBPAP). (e) projection models —
+  **internal coverage zero**: WIC multi-state cohort-component (published method; **WIC 2023 dataset CC BY 4.0**,
+  Zenodo `10.5281/zenodo.7767425`), WCDE, Barro–Lee (reconstruction, not projection), EPSSim 2.1, UNESCO generic model,
+  MOSART microsimulation, schooling ABM. **The programme reinvented its demography; it should adopt/benchmark WIC and
+  cite EPSSim/MOSART, not rebuild.**
+- **Repo ledger audit:** `LITERATURE_LEDGER.md` contains **zero** hits for growth/complexity/ECI/Hanushek/Barro/Lutz/
+  IIASA — it is a shadow-education corpus. `EXPECTATIONS.csv` is **not** zero-standard-citation (19 rows; 9 name a
+  work) but **no row's citation is held on disk**. Only **10 of 43** registered equations are literature equations.
+- **"What we do NOT need to redo"** (memo §8): the demographic engine; the structural/dual-economy frame; credential/
+  queue theory; the ~9%/yr global returns benchmark; the macro–micro puzzle and its resolution; the Philippine
+  graduate-market facts; the threshold/middle-income claims. **"What remains open"** (memo §9): a dynamic estimate of
+  the queue (what happens to the marginal graduate when the rung fills); direct education→complexity evidence; a usable
+  functional form for absorptive capacity; the measurement-definition work; the demographic-overflow mechanism (v1.2).
 
 
 ### e) Education → ECI — predeclared panel analysis RUN (the user's restated hypothesis)

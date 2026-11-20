@@ -1,0 +1,23 @@
+{
+  "package": "external_review_2026-11-20",
+  "status": "BIBLIOGRAPHIC review of external literature; 76 claim rows / 63 sources; verification tags; no field evidence claims",
+  "generated_utc": "2026-11-20T14:22:36Z",
+  "git_head": "51a22d6",
+  "predeclarations_sha256": null,
+  "files": {
+    "EXTERNAL_LITERATURE_CITE_INDEX.csv": "5ee55ccdc4bfbf975e766c28f8f1157e835f3912e723944ec89c01abf5c46c4b",
+    "EXTERNAL_LITERATURE_MEMO.md": "ebe1b2a43af947a9b4662aeeac50bf9d8faba59e6b6a6bf16dfe845540474275",
+    "EXTERNAL_LITERATURE_ROWS.csv": "7b9cc84326c20238f4f7040dc127a768b9a4d65f76042d0c3bf597792896799b",
+    "build_rows.py": "0caf02b4c44bab671e9b4a6f3f977174a9e00a5430a84783cd2e2485d7c6d91c",
+    "build_rows_B.py": "ab0fa041285bae7dd18fd263cbeb0b03b45bd385a7ab9643ec0acf0659005028",
+    "rows_A2_education_to_complexity.csv": "9ea987c9a87485665a405d0e028fcaf589e72ef846f69d06683339257a3ac51c",
+    "rows_A_NOTES.md": "1579a9190c369015eda380bcaadbacb10db674fdc93a8ee39d0e849a5c110960",
+    "rows_A_schooling_complexity.csv": "e60f5d9334494cd920c32cc8f22d790afbbf91b78eac0d4fd61242713815df48",
+    "rows_B_NOTES.md": "8eb3b4ab6c1fb10e50d6a7c94c0e168835f7d5d1cf6ea60cc1ab1a52ec7b2c37",
+    "rows_B_absorption_credential.csv": "1667661194dd805d3259324da04b3e86cdc44b7571fbdacd7cc4b8773eef524b",
+    "rows_C_REPO_AUDIT.md": "d543036b2c8a3ffa8f31d5c567184e7451a544517d08cae50a664e561946e5bf",
+    "rows_C_projections.csv": "7e39875663af7514e7bace49499448622ffa599a6b542ca88ea332d50d3795c9"
+  },
+  "subdirectories": {},
+  "notes": "SHA256SUMS.txt covers every file in this package (including this manifest); it excludes only itself."
+}
