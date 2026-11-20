@@ -6,7 +6,6 @@
 011ccc77de63b1cb1cef9cae8026d78d5b4656c3aaf4d2a3f6e4ff88f4017864  09_relations/raw/wdi/SE.PRM.DURS.MEX.json
 011ccc77de63b1cb1cef9cae8026d78d5b4656c3aaf4d2a3f6e4ff88f4017864  09_relations/runs/raw/wdi/SE.PRM.DURS.MEX.json
 013306a274e8c15ca920612e999abc84f47bf4835f4aed1e3dd2467eb71822e1  08_council/brief_007/EXPERTS.json
-0191daad0521f3b2615d52fe3a8e36e3431dcd01cd200d75d0ca8ba6f0033c2f  RUN_MANIFEST.json
 01a1c8d2f38726af3ae0f74162c2f4afedcec3c90216d835c09f746728a2daa9  08_council/brief_005/COUNCIL_DELIBERATION_005.md
 03f1e2526fb887c0a89e4b8a21931514eb740889d4c667658eb6c4c45e60fd0a  09_relations/raw/wdi/SE.PRM.PRIV.ZS.CHN.json
 03f1e2526fb887c0a89e4b8a21931514eb740889d4c667658eb6c4c45e60fd0a  09_relations/runs/raw/wdi/SE.PRM.PRIV.ZS.CHN.json
@@ -58,6 +57,8 @@
 1507f7ab2d267c6df0ba3bca522a8f9b133c45c986d59023a54e57fd6ae1bb5f  05_experiments/runs/E18/e18_summary.csv
 15cf08b163ccb89dad3dfaef46db4c5c48a39ae51e1c2cfb12d1c0db7df3b920  09_relations/raw/wdi/SE.PRM.DURS.SGP.json
 15cf08b163ccb89dad3dfaef46db4c5c48a39ae51e1c2cfb12d1c0db7df3b920  09_relations/runs/raw/wdi/SE.PRM.DURS.SGP.json
+15eba2752a45a3f63f49fabbdb279820e71a9fc675c2c0acf19b3bcb5b28d09b  09_relations/raw/wdi/SL.EMP.WORK.ZS.BGD.json
+15eba2752a45a3f63f49fabbdb279820e71a9fc675c2c0acf19b3bcb5b28d09b  09_relations/runs/raw/wdi/SL.EMP.WORK.ZS.BGD.json
 163be6fad2d731eb245d4d87853ad425c656ad8ccb064a114a423f672fef205a  09_relations/raw/wdi/SE.PRM.NENR.MEX.json
 163be6fad2d731eb245d4d87853ad425c656ad8ccb064a114a423f672fef205a  09_relations/runs/raw/wdi/SE.PRM.NENR.MEX.json
 16cc27e97d3637822f5e308c0a916a8b65cc1cec3ba07d2091b4cffe7a95f258  09_relations/raw/wdi/SE.TER.ENRL.CHN.json
@@ -130,6 +131,8 @@
 2de450b450151446f18d7416f34be89ea5f6d5319182ec0fc351e6c3d8babbb4  09_relations/runs/raw/wdi/NY.GDP.PCAP.KD.json
 2e214fbfbe499451479040b6a15028ab58b9233880182088cad7d082d76fce94  05_experiments/runs/E2/run_E2.py
 2e5255b5aab7f8741a9215390061383fa44bb8196e4c59d03bcc759576392405  05_experiments/runs/E8/run_E8.py
+2e6b24737925d4350251d88dc8da2dc7238be3e000b05b8e726e916232d436bd  09_relations/raw/wdi/SL.EMP.WORK.ZS.CHN.json
+2e6b24737925d4350251d88dc8da2dc7238be3e000b05b8e726e916232d436bd  09_relations/runs/raw/wdi/SL.EMP.WORK.ZS.CHN.json
 2e8d03d835000f10b1a7e6e7c0626b7122e3dc38e29b10b099b202d74107a25e  09_relations/data/eci_literacy_results.csv
 2e8d03d835000f10b1a7e6e7c0626b7122e3dc38e29b10b099b202d74107a25e  09_relations/runs/data/eci_literacy_results.csv
 307fe1b6b89d697144a74f53201be6be76a8b4d6972073e2fff2e36d3298174a  05_experiments/runs/E14/E14_lockin/findings.txt
@@ -190,6 +193,8 @@
 3f5a4dab712b40d7545d397554af87492b3f0141bdd57c0880e41d14ef4d984b  09_relations/runs/raw/wdi/SE.PRM.CUAT.ZS.BGD.json
 3fb769cd3ab45ff431483a4ff592d611dffd7738d700f0a932fcc5ece3079275  05_experiments/runs/E13c/e13c_summary.csv
 4033aa4b9616ab65f63f169d808b0f5dde2b51d2e7da5316c9a18aa3962826da  05b_experiments/runs/runs/L2/run_meta.json
+40b04a54c685b612e3109126a74409594cc7ddd33460fb8c57ae1d67502c412e  09_relations/raw/wdi/SL.EMP.VULN.ZS.BGD.json
+40b04a54c685b612e3109126a74409594cc7ddd33460fb8c57ae1d67502c412e  09_relations/runs/raw/wdi/SL.EMP.VULN.ZS.BGD.json
 40d4815a7749e956c6b269062014d26c58c426f27f10e9db444375ebc84808aa  05b_experiments/runs/B1/b1_summary.csv
 40f12c0dd8b3b8e45c2df6ba01a6cf1f9658ec6da964bfee21d1912b1801fc8d  05b_experiments/runs/B5/run_meta.json
 40f8aca32721243e6ed10819658bff73259e7333f290baf6c99eb41931950cc9  05b_experiments/runs/code/make_manifest_l5.py
@@ -436,6 +441,8 @@
 8db7c0d9d8ea05cf6706b25150592399ad31d72ebc763ac99d708e413353b9b7  05b_experiments/runs/runs/run_meta.json
 8df8428a850af013a987a02f4c746119d05f1286c2d8ff1dcbe62eba8906d11e  data/edb_secondary_education.csv
 8e5bbe0e20e486c34dd1ccd31790746270f99333d0f592fd09e991153b85b3e8  05_experiments/runs/E18/run_meta.json
+8e972958ec739b401a70a154935ffcbfcb024763a545b28623cd3ce28afaaefa  09_relations/raw/wdi/SL.EMP.VULN.ZS.CHN.json
+8e972958ec739b401a70a154935ffcbfcb024763a545b28623cd3ce28afaaefa  09_relations/runs/raw/wdi/SL.EMP.VULN.ZS.CHN.json
 8ee35c7cdbcd5ebd630a37f7d1d901132ec28012887372a7e7afac505c271250  09_relations/raw/wdi/SE.SEC.ENRL.TC.ZS.json
 8ee35c7cdbcd5ebd630a37f7d1d901132ec28012887372a7e7afac505c271250  09_relations/runs/raw/wdi/SE.SEC.ENRL.TC.ZS.json
 8f782cb82163ff93aeee02ef6a40c212537e3ae9ce29a47b5c4d94808bd9bcbe  05b_experiments/runs/B5/findings.txt
@@ -472,6 +479,7 @@
 9b1ad3f8754dce72162c8969926e982aad1e733dc52cde67286bff32156967f8  05b_experiments/runs/SUMMARY_L3.csv
 9b605c3556cac620d63bbd7e4d84f948f8e723e4af9b626f4e292482c37879e0  05_experiments/runs/E8/run_meta.json
 9c4aca28416b1d143d9328fcb0f03e625c19b15fa92d71df88031a21c38b3ec8  05_experiments/ERROR_LOG.md
+9cebab6a51217648f4e51fd0691f402ad0b12ee184f4c2acf93015f3d4c0cde0  RUN_MANIFEST.json
 9d5eaf7750845dbfe460375cad5517249b72d28cf40df6abeb9c43a0b88f5145  05b_experiments/runs/runs/L2_uncalibrated/l2_raw.csv
 9dfac6c1942a6f3e32d8dffc69d2d8c92bc40c6198c72b7bbde5804b7aab8e09  09_relations/raw/wdi/SE.SEC.ENRL.TC.ZS.SGP.json
 9dfac6c1942a6f3e32d8dffc69d2d8c92bc40c6198c72b7bbde5804b7aab8e09  09_relations/runs/raw/wdi/SE.SEC.ENRL.TC.ZS.SGP.json
@@ -687,6 +695,8 @@ e15ecc392c1f0014632b22b04579967a5ada9c23bdbf009b70fed91bfe259f69  04_data/TARGET
 e16abe7f5f1275bffc97af126b993a90dcfc828a32cafc82eba2b170f5917d77  09_relations/raw/wdi/SE.SEC.ENRR.UP.CHN.json
 e16abe7f5f1275bffc97af126b993a90dcfc828a32cafc82eba2b170f5917d77  09_relations/runs/raw/wdi/SE.SEC.ENRR.UP.CHN.json
 e18008b94c6fddf2caec4e80aff83d7bbc9ca9cf082fe128e32aad9f01d8a437  04_data/econ_round2/WB_SNAPSHOT_HKG.md
+e36a9831223092931268baf4cd01724db35a75c2e8d44c5aa6bbfe011d1cd96f  09_relations/raw/wdi/SL.EMP.MPYR.ZS.CHN.json
+e36a9831223092931268baf4cd01724db35a75c2e8d44c5aa6bbfe011d1cd96f  09_relations/runs/raw/wdi/SL.EMP.MPYR.ZS.CHN.json
 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  09_relations/raw/wdi/fetch_parallel.log
 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  09_relations/runs/raw/wdi/fetch_parallel.log
 e476107c7d41039f15a517edc1079bd1a096d1b77e8a1117eb39767d59bb7117  05_experiments/runs/E2_cohort_arithmetic/README.md
