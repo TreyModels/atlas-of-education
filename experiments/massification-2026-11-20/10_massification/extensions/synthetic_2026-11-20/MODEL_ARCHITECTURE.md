@@ -220,3 +220,71 @@ channel (A1) is still present and positive with a 5–10-year lag.
 
 **No post-hoc rescue parameters.** If the mechanism cannot produce the asymmetry without per-level anchors, that is
 the finding — the asymmetry then has to be attributed to the stipulated capacity path, not to a reproduction.
+
+---
+
+## Amendment A3 (user directive, 2026-11-20, dashboard) — education DEMAND signals, their interaction with the wider economy, and the shadow block at the gates
+
+**Status: design directive. Not implemented. Requires a frozen predeclaration before any run.** The shadow-education
+part is specified in `shadow_module/SHADOW_MODULE.md` + `shadow_module/PRE_DECLARATIONS.md` (frozen by the W2 worker);
+this amendment fixes the demand-signal architecture it plugs into.
+
+### The gap this closes
+
+v1/v1.2 model **supply** (cohort flows) and **capacity** (seats/teachers/quality) and carry a household block, but the
+**demand side is implicit and the economy interaction is under-modelled**. The user's directive is to model
+*education demand signals and their interaction with the wider economy* accurately: what makes a family demand the next
+level or a credential; what makes tutoring worth buying; and why the same schooling is worth different amounts in
+different economies. The programme has already measured the PHL symptoms — flat graduate wages, 39% overeducation,
+1-in-5 vertical mismatch, BPO absorption ~80k/yr against a much larger graduate flow — but has not *modelled the
+signals* behind them.
+
+### The declared demand-signal block (Layer 2c)
+
+**Household demand for level `L` in country `c`, year `t`** is a declared function of:
+
+1. **Expected net return to the credential**, `E[R_{L,c,t}] = P(advance_{L,c,t}) × (w_formal(L)_{c,t} − w_informal_{c,t}) × H × access − cost(L) − foregone earnings`,
+   where `H` is a declared horizon/discount factor, `access` is a declared network/eligibility term (education–job
+   credential alignment, as in the PIDS evidence on licence premia only when matched), and `cost` is declared fees +
+   opportunity cost.
+2. **Gate probability** `P(advance_L)` — the probability of actually being admitted/promoted at the gate: a declared
+   logistic/rationing function of **seats vs qualified demand**, queue length, and credential rank. This is the object
+   shadow education buys.
+3. **Sector structure and the job ladder** — rung demand `J_r` (from `X`, sector mix and the twins' office/mfg bias)
+   determines which credentials have a destination. This is the mechanism behind "the same schooling has different
+   value in different economies" (Caselli–Coleman skill-biased technology; the programme's own twins).
+4. **Migration and remittances** — a **declared** channel: a destination-wage differential × declared migration
+   probability raises `E[R_L]` for exportable credentials (nursing, IT, care), and remittance income raises household
+   liquidity (and may finance tutoring). **LABEL: DECLARED / NOT-VERIFIED — `10_massification/lit/PUSH_PULL.md`
+   records that the remittance→schooling coefficient is NOT VERIFIED (Clemens/Yang not retrievable); no literature
+   coefficient may be inserted.** The channel is a declared behavioural assumption to be tested, not an estimated
+   relationship.
+5. **Family income / liquidity** — the four-state household block's `y_med` distribution; liquidity constraints can
+   block a positive expected return (declared).
+6. **Shadow education (v1.3, from W2)** — tutoring demand `D_shadow = f(gate pressure, expected returns, family income)`;
+   tutoring raises `P(advance)` and/or credential rank; **near-zero at primary**; HKG-high / PHL-mid / KHM-low
+   ordering as a declared check. Shadow is a **signal of gate pressure**, not a generic add-on.
+
+### Feedback loop (the "interaction with the wider economy")
+
+study demand → enrolment/flow → **gate pressure** (queue/rationing) → return expectations and shadow demand →
+credential composition of graduates → **rung matching** (absorption) → wages/queues → next period's expectations.
+Simultaneously, schooling flow raises `X` with a lag (Amendment A1) and `X` opens rungs and shapes sector mix; the
+ladder governs the marginal return (v1 check D) while gate pressure governs the shadow/horse-race margin.
+
+### Predeclared checks for A3 (frozen in the v1.3 predeclaration; thresholds to be stated before any run)
+
+- **d1.** Household demand for the next level responds **positively** to expected returns (declared sign).
+- **d2.** Demand responds **positively** to gate pressure/queue length at the gate (the horse-race margin).
+- **d3.** **Sector-mix heterogeneity**: the same graduate flow yields different demand and different returns in the
+  manufacturing-biased vs office-biased twin (composition > totals, extended to demand).
+- **d4.** **Migration/remittance channel present and labelled**: an export-credential premium is visible when the
+  declared migration probability is on, and is switched off under the declared counterfactual — reported, not claimed.
+- **d5.** **Shadow demand near-zero at primary**, positive and pressure-increasing at secondary/tertiary gates (W2's
+  checks c1–c5), and the HKG/PHL/KHM ordering check (HKG 85% is a **second-hand, upper-secondary-only, upper-bound
+  target** — `02_lit/COUNTRY_CARDS/HKG.md:15,19,38` — not a system-wide rate).
+- **d6.** Accounting/identity gates retained (shares in [0,1], non-negative demand, cohort conservation).
+
+**No causal or direction claim is licensed.** All demand equations are **declared behavioural assumptions**; the checks
+ask whether the declared model *reproduces the predeclared patterns*, not whether any family or country behaves this
+way.

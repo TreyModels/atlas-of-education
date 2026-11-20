@@ -159,3 +159,20 @@ manifests and error logs.
   a predeclared education→ECI panel analysis is queued on the existing 30-country data
   (`09_relations/LITERACY_ECI_DEMOGRAPHY.md`: literacy STOCK 0.001 ns vs primary completion lagged 10y **0.593**,
   p=0.001 — the flow tracks complexity).
+
+## 2026-11-20 (late) — REACTIVATION: PHL critical path resumes (v1.2 build + shadow-at-gates + HKG prep)
+
+- **User directive recorded (STATUS §3w):** the Philippine system is only partly stood up — v1.2 demographic/quality
+  layer not built, no shadow-education block, demand signals/economy interactions not accurately modelled. The user's
+  standing instruction is to **keep working until that exists**; HKG is a **parallel prep workstream, not a hand-off**.
+  Shadow education (paused) must now "show up" **around the relevant gating** — tutoring demand as a demand signal at
+  the gates/queue, not a generic add-on.
+- **Three workers dispatched** (disjoint dirs, predeclare-first, labelled): W1 builds `generator_v1_2/` to the frozen
+  v1.2 spec (check A **without per-level anchor interpolation**, childworld four-state structural borrow, five checks);
+  W2 designs `shadow_module/` (SHADOW_MODULE.md + frozen predeclaration + parameter table + dry-run plan for v1.3:
+  tutoring demand = f(gate pressure, expected returns, family income), tutoring raises gate-passing probability/rank,
+  near-zero at primary, HKG-high/PHL-mid/KHM-low ordering predeclared); W3 prepares `hkg_transfer_2026-11-20/`
+  (inventory + frozen D75 transfer predeclaration + checklist, run-ready not run).
+- **Next integration:** MODEL_ARCHITECTURE **Amendment A3** — demand signals (expected returns × gate probability ×
+  sector structure × migration/remittances) and the shadow block at gates; verify/package/commit each deliverable and
+  rebuild the ZIP.

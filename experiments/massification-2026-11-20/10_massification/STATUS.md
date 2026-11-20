@@ -751,3 +751,41 @@ claims; data asks remain HELD; literature *reading* is authorised.
   upper-secondary attainment 0.055 (ns)** (`09_relations/LITERACY_ECI_DEMOGRAPHY.md`). A new predeclared
   education→ECI panel (levels × lags 5/10 × cross-section-FE/5-yr-block/within-between/reverse/heterogeneity) is the
   next deliverable; `MODEL_ARCHITECTURE.md` carries **Amendment A1** requiring v1.1 to encode schooling flow → X.
+
+---
+
+## 3w. USER DIRECTIVE (2026-11-20, dashboard relay) — keep building until the PHL system exists; HKG is parallel prep, not a hand-off
+
+**Status correction (accepted):** the Philippine system is only **partly stood up**. Three gaps are now the critical
+path: (i) the **v1.2 demographic/quality layer** (cohort surge → lagged capacity → congestion/quality → completion) is
+**not built**; (ii) there is **no shadow-education block**; (iii) **education demand signals and their interaction with
+the wider economy are not yet modelled accurately**. The user's standing instruction is to **keep working until that
+exists**, and he asks whether to move on to Hong Kong — answer: **HKG is a parallel prep workstream (W3), not a
+hand-off**; PHL remains the critical path.
+
+**The user's three points, recorded verbatim in intent:**
+1. *"Do we move on to Hong Kong?"* → HKG prep proceeds in parallel (inventory + frozen transfer predeclaration,
+   run-ready, not run), under D75's six constraints; the actual HKG run waits until v1.2 passes its PHL checks.
+2. *Shadow education was paused and must now "show up" around the relevant gating* — tutoring demand as a **demand
+   signal at the gates/queue**, not a generic add-on. Encoded in W2's `shadow_module/` (frozen predeclaration).
+3. *Accurately model education demand signals and their interaction with the wider economy* — expected returns, gate
+   probability, sector structure, migration/remittances. Encoded as **MODEL_ARCHITECTURE Amendment A3** and in the v1.2
+   household block; the demand-signal equations must be declared, labelled, and tested, not assumed.
+
+**Work queue dispatched (disjoint dirs; predeclare first; everything labelled observed/derived/synthetic):**
+- **W1** — `synthetic_2026-11-20/generator_v1_2/`: build v1.2 exactly to the frozen
+  `v1_2/PRE_DECLARATIONS.md`, including check A **without per-level anchor interpolation**, the childworld four-state
+  block (structural borrow only, sha256 `ae73adb2…`, no passive "neither"), and the five checks. **Critical path.**
+- **W2** — `synthetic_2026-11-20/shadow_module/`: SHADOW_MODULE.md + frozen predeclaration + parameter table + dry-run
+  plan for the v1.3 shadow-education-at-the-gates block (tutoring demand = f(gate pressure, expected returns, family
+  income); tutoring raises gate-passing probability/rank; near-zero at primary; HKG-high/PHL-mid/KHM-low ordering as a
+  predeclared check). Design only, not a build.
+- **W3** — `extensions/hkg_transfer_2026-11-20/`: HKG inventory + frozen transfer predeclaration + checklist under
+  D75's six constraints (fixed PHL behaviour, no re-fit, timing-only, levels check-only, no imputed completion,
+  DIAGNOSTIC-TRANSFER verdicts only; NER ≥90 1974 / ≥95 1979 targets to be verified from disk).
+- **Integration (controller, after W1–W3):** `MODEL_ARCHITECTURE.md` **Amendment A3** — demand signals
+  (expected returns × gate probability × sector structure × migration/remittances) and the shadow block at gates; verify
+  each deliverable, package it (RUN_MANIFEST + SHA256SUMS), commit, push, rebuild the ZIP, report milestones.
+- **Standing rules unchanged:** predeclare before running; labels observed/derived/synthetic; no causal or
+  direction/push–pull claims (R13/D77); never fabricate a number or citation; deterministic runs (two runs
+  byte-identical); data asks remain HELD; no long tasks in the dashboard window.
