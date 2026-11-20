@@ -1,0 +1,12 @@
+{
+  "expected": "47d4b082f4ba5838cc20fbb09e59dd3dd847ad25393b1ce091069c94496657e3",
+  "observed_via_v15_loop": "47d4b082f4ba5838cc20fbb09e59dd3dd847ad25393b1ce091069c94496657e3",
+  "observed_via_base_code_direct": "47d4b082f4ba5838cc20fbb09e59dd3dd847ad25393b1ce091069c94496657e3",
+  "match": true,
+  "cross_check": true,
+  "cmp": "identical",
+  "rows": 6720,
+  "columns": 89,
+  "columns_v1_13": 89,
+  "status": "BASELINE-GUARD-PASS"
+}

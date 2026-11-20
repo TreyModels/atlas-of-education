@@ -1,0 +1,57 @@
+#!/usr/bin/env python3
+"""Reconstruct results/FROZEN_BEFORE_SHA256SUMS.txt -- the pre-run input snapshot for guard E3.
+
+The original pre-run SHA256SUMS.txt (sha256 89638b39...) was destroyed by a smoke run during
+the build before it could be copied byte-for-byte (TUNE_LOG.md B1). This file transcribes its
+33 recorded (sha256, path) pairs verbatim, in the original order. Every pair was re-verified
+against the on-disk file: 30/33 still match. The three that do not are RUN_MANIFEST.json and
+SHA256SUMS.txt (rewritten by the run by design) and 08_council/DECISIONS.md (edited outside
+this worker's write scope). Run once, before the scored run.
+"""
+import hashlib
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent.parent
+P = "10_massification/extensions/synthetic_2026-11-20/"
+LINES = [
+"7178e3d2ee2e367cd7dbb0619f2031305ff446978a43aab9e1f6caefb07ca97f  " + P + "generator_v1_5_bimodal/PRE_DECLARATIONS.md",
+"72327cf799b5e96c68a8e9030f265ef06b3b37a58917d892d87bb6fabcfcb65a  " + P + "generator_v1_5_bimodal/PARAMETERS.csv",
+"db21055b38ef8343f791b27a3fe192a72367f5377f966dd660a94d39a26a5f43  " + P + "generator_v1_5_bimodal/DESIGN.md",
+"4660390501747949eb27c5d966012a768ebc82ee025efea89ee4333e8bbedeab  " + P + "generator_v1_5_bimodal/DRY_RUN_PLAN.md",
+"af01b9ccb9602779e71b65fb33c2c4873c46cf5e8e7a69b4c02c9a67a22a2b8d  " + P + "generator_v1_5_bimodal/RUN_MANIFEST.json",
+"89638b39019618d8e877ebbdab1dd3ca221253b5531c01eb5af677cc3d72a319  " + P + "generator_v1_5_bimodal/SHA256SUMS.txt",
+"31ad5234ea2d783a61bc81ef8f5f71eec3b44dc4e48abcb87675f49242fa9b15  " + P + "MODEL_ARCHITECTURE.md",
+"7bc96f4bc61d567672a58aa15efd94c4b84104d095a84212f8dab7e56316359a  " + P + "THEORY_FRAME.md",
+"fde18d405d875167977b350a925c28248c3007d2813dcdb29219d3baf0b95f16  " + P + "v1_2/PRE_DECLARATIONS.md",
+"61123aa9370a407487407bf3ff4b97287aea67cac5f90629e540a6e8cc855e7c  " + P + "generator_v1_2/code/sim_v1_2.py",
+"0d619781c4e059f54cf771fb385475f5f939dceced5036e8a21b6e07a2b315e3  " + P + "generator_v1_2/PARAMS.md",
+"14729c5141a71dd9aaf87a5ad2e973a84b5f04603577aae627f2833276fac5ac  " + P + "generator_v1_2/results/synthetic_panel_v1_2.csv",
+"70ae8f0eef83358493dad3d3feb2d6a8841c4bb6fad3966627f4eed70e2a9877  " + P + "generator_v1_3/code/sim_v1_3.py",
+"47d4b082f4ba5838cc20fbb09e59dd3dd847ad25393b1ce091069c94496657e3  " + P + "generator_v1_3/results/synthetic_panel_v1_3.csv",
+"e6a83de509362fbeb1e1e987e9b2b30dd1ff1e13905d56db0938cab911bd68f1  " + P + "generator_v1_3/results/shadow_checks_v1_3.csv",
+"df3cab007ce5fbe9a48d58b0701d04e6d762591848ca1517a634c8f897edb351  " + P + "generator_v1_3/results/shadow_gates_v1_3.csv",
+"9ed0cae353c9a3dfba00582ff47d19ca8b761d8dd7b7ce5f9a8a8e4c5c5f49b3  " + P + "generator_v1_4_demand/PRE_DECLARATIONS.md",
+"6e4a6761fa32325c61f138037a1e5c8d5e578e19f8a2ee2519e73e8f2332b2d1  " + P + "generator_v1_4_demand/code/sim_v1_4_demand.py",
+"47d4b082f4ba5838cc20fbb09e59dd3dd847ad25393b1ce091069c94496657e3  " + P + "generator_v1_4_demand/results/_ablation/synthetic_panel_v1_4_demand_off.csv",
+"cf8c61cb818cd63acfb2ada594bc9541bfcb0711f801e13b7eee3b86508f94f2  " + P + "shadow_module/PRE_DECLARATIONS.md",
+"cb49d3197b911451f8b1e32080fbe6d095f181440572e1a2b72005dc4302703a  " + P + "shadow_module/PARAMETERS.csv",
+"af49a616a7b57c4ef23a693c155d022cd17817f66f5acafba4dc6798dedb65eb  " + P + "shadow_module/PRE_DECLARATIONS_S1_NOTE.md",
+"74f9d0e0ece9680eaba470f3979f5d1e6042d7851585962cb1cdf7d365b3db12  10_massification/extensions/repro_path_2026-11-20/PRE_DECLARATIONS.md",
+"eb868567669e434282be68eaeec4138a7961a4485e767511f558a613cc45ab52  10_massification/extensions/repro_path_2026-11-20/FINDINGS.md",
+"671962dc585bcc833215ecc22823fb46d26f65b8a181dd9a6d8aa96dfb6b1e38  10_massification/extensions/repro_path_2026-11-20/results/KAPPA_LINK.csv",
+"85bc869396ebfcb39e3e1a21a31af219e75a07326c738a51d2bfdbe536737ddb  10_massification/data/UNIVERSALIZATION_SERIES.csv",
+"704efacad00f0ba7ddf579459a930d064fdb0f4b882cffbbf44a6cbecd585044  10_massification/data/STATE_CAPACITY.csv",
+"c218e6c9bd784e135e089ebecefec21112a09e6bf2c778599a33bc81b78c8ea3  10_massification/data/SCHOOL_EXPANSION.csv",
+"a068b5bf92cee52e442231ef8de63e1b3814d1e42cd61b02969ccf1f3fb3353e  10_massification/data/POLICY_TIMELINE.csv",
+"aaaab2744803989ff0f347e27d5824c9b0086b967914d96d21ecd354329787d3  10_massification/data/JOBS_AND_MARKETS_PANEL.csv",
+"a37629ae5d4f9ed2be4c71e33bfc876131880f65d356c88bd4d047a9bbdeae75  09_relations/data/panel_wdi_long.csv",
+"6fdcf8eea440d4cc5e5d94ffc42d107d6788426a1a2b32d151575a338c203148  08_council/DECISIONS.md",
+"9508dd55be8dd64da8322a8277c8342a4f50be6790a3d287e39e7004537c109b  08_council/brief_022/SYNTHESIS_022.md",
+]
+
+if __name__ == "__main__":
+    out = ROOT / "results" / "FROZEN_BEFORE_SHA256SUMS.txt"
+    out.parent.mkdir(parents=True, exist_ok=True)
+    out.write_text("\n".join(LINES) + "\n")
+    print("wrote %s (%d lines, sha256 %s)"
+          % (out, len(LINES), hashlib.sha256(out.read_bytes()).hexdigest()))

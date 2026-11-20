@@ -1,0 +1,33 @@
+{
+  "tokens_searched": [
+    "restore",
+    "revert",
+    "rollback",
+    "return_to_prior",
+    "return-to-prior",
+    "target_return",
+    "prior_level",
+    "reversal",
+    "reset_to",
+    "go_back"
+  ],
+  "hits": {
+    "restore": 0,
+    "revert": 0,
+    "rollback": 0,
+    "return_to_prior": 0,
+    "return-to-prior": 0,
+    "target_return": 0,
+    "prior_level": 0,
+    "reversal": 0,
+    "reset_to": 0,
+    "go_back": 0
+  },
+  "total_hits": 0,
+  "source_functions": [
+    "simulate_country_v15",
+    "tier_cells",
+    "tier_allocate"
+  ],
+  "note": "Construction audit only (D125/THEORY_FRAME.md sec.1). THE ABSENCE OF A REVERSAL TERM IS NOT A TEST OF 'NOBODY EVER GOES BACK' AND NO REVERSAL DIAGNOSTIC MAY BE INFERRED FROM IT."
+}

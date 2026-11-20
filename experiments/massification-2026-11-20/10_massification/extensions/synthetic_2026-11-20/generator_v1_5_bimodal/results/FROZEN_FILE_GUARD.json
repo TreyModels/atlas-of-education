@@ -1,0 +1,289 @@
+{
+  "status": "FROZEN-FILE-GUARD-PASS",
+  "frozen_before_snapshot": {
+    "path": "results/FROZEN_BEFORE_SHA256SUMS.txt",
+    "sha256": "9192aa101e3719fb55f0c24b2040f1b0637ed93f2234a35461bb3630009650de",
+    "original_sha256": "89638b39019618d8e877ebbdab1dd3ca221253b5531c01eb5af677cc3d72a319",
+    "byte_identical_to_original": false,
+    "note": "The pre-run SHA256SUMS.txt could not be snapshotted byte-identically: smoke runs during the build rewrote it before the snapshot was taken (process error, TUNE_LOG.md B1). This file is a reconstruction of its 33 recorded (sha256, path) pairs, transcribed verbatim; every pair was re-verified against the on-disk file and 30/33 still match, the three exceptions being the two files this run updates by design and 08_council/DECISIONS.md, which was edited outside this worker's write scope during the run."
+  },
+  "n_files": 33,
+  "n_frozen": 20,
+  "n_unchanged": 20,
+  "changed_outside_declared_scope": [
+    {
+      "path": "08_council/DECISIONS.md",
+      "sha_before": "6fdcf8eea440d4cc5e5d94ffc42d107d6788426a1a2b32d151575a338c203148",
+      "sha_after": "59696b81af15a700389827d19a435e5a9cf43c9925707ef76c80ec0d15765717",
+      "frozen": false,
+      "mutable_by_design": false,
+      "unchanged": false
+    }
+  ],
+  "entries": [
+    {
+      "path": "10_massification/extensions/synthetic_2026-11-20/generator_v1_5_bimodal/PRE_DECLARATIONS.md",
+      "sha_before": "7178e3d2ee2e367cd7dbb0619f2031305ff446978a43aab9e1f6caefb07ca97f",
+      "sha_after": "7178e3d2ee2e367cd7dbb0619f2031305ff446978a43aab9e1f6caefb07ca97f",
+      "frozen": true,
+      "mutable_by_design": false,
+      "unchanged": true
+    },
+    {
+      "path": "10_massification/extensions/synthetic_2026-11-20/generator_v1_5_bimodal/PARAMETERS.csv",
+      "sha_before": "72327cf799b5e96c68a8e9030f265ef06b3b37a58917d892d87bb6fabcfcb65a",
+      "sha_after": "72327cf799b5e96c68a8e9030f265ef06b3b37a58917d892d87bb6fabcfcb65a",
+      "frozen": true,
+      "mutable_by_design": false,
+      "unchanged": true
+    },
+    {
+      "path": "10_massification/extensions/synthetic_2026-11-20/generator_v1_5_bimodal/DESIGN.md",
+      "sha_before": "db21055b38ef8343f791b27a3fe192a72367f5377f966dd660a94d39a26a5f43",
+      "sha_after": "db21055b38ef8343f791b27a3fe192a72367f5377f966dd660a94d39a26a5f43",
+      "frozen": true,
+      "mutable_by_design": false,
+      "unchanged": true
+    },
+    {
+      "path": "10_massification/extensions/synthetic_2026-11-20/generator_v1_5_bimodal/DRY_RUN_PLAN.md",
+      "sha_before": "4660390501747949eb27c5d966012a768ebc82ee025efea89ee4333e8bbedeab",
+      "sha_after": "4660390501747949eb27c5d966012a768ebc82ee025efea89ee4333e8bbedeab",
+      "frozen": true,
+      "mutable_by_design": false,
+      "unchanged": true
+    },
+    {
+      "path": "10_massification/extensions/synthetic_2026-11-20/generator_v1_5_bimodal/RUN_MANIFEST.json",
+      "sha_before": "af01b9ccb9602779e71b65fb33c2c4873c46cf5e8e7a69b4c02c9a67a22a2b8d",
+      "sha_after": "ab6967fca9f518a419b779897766b78b0ae321504e726bc37db0e759ac5bd7ba",
+      "frozen": false,
+      "mutable_by_design": true,
+      "unchanged": false
+    },
+    {
+      "path": "10_massification/extensions/synthetic_2026-11-20/generator_v1_5_bimodal/SHA256SUMS.txt",
+      "sha_before": "89638b39019618d8e877ebbdab1dd3ca221253b5531c01eb5af677cc3d72a319",
+      "sha_after": "f4545ff5d66f56cafc27b4933df596724689bbbadee2e6dfa2b6a06cf04ca258",
+      "frozen": false,
+      "mutable_by_design": true,
+      "unchanged": false
+    },
+    {
+      "path": "10_massification/extensions/synthetic_2026-11-20/MODEL_ARCHITECTURE.md",
+      "sha_before": "31ad5234ea2d783a61bc81ef8f5f71eec3b44dc4e48abcb87675f49242fa9b15",
+      "sha_after": "31ad5234ea2d783a61bc81ef8f5f71eec3b44dc4e48abcb87675f49242fa9b15",
+      "frozen": false,
+      "mutable_by_design": false,
+      "unchanged": true
+    },
+    {
+      "path": "10_massification/extensions/synthetic_2026-11-20/THEORY_FRAME.md",
+      "sha_before": "7bc96f4bc61d567672a58aa15efd94c4b84104d095a84212f8dab7e56316359a",
+      "sha_after": "7bc96f4bc61d567672a58aa15efd94c4b84104d095a84212f8dab7e56316359a",
+      "frozen": false,
+      "mutable_by_design": false,
+      "unchanged": true
+    },
+    {
+      "path": "10_massification/extensions/synthetic_2026-11-20/v1_2/PRE_DECLARATIONS.md",
+      "sha_before": "fde18d405d875167977b350a925c28248c3007d2813dcdb29219d3baf0b95f16",
+      "sha_after": "fde18d405d875167977b350a925c28248c3007d2813dcdb29219d3baf0b95f16",
+      "frozen": false,
+      "mutable_by_design": false,
+      "unchanged": true
+    },
+    {
+      "path": "10_massification/extensions/synthetic_2026-11-20/generator_v1_2/code/sim_v1_2.py",
+      "sha_before": "61123aa9370a407487407bf3ff4b97287aea67cac5f90629e540a6e8cc855e7c",
+      "sha_after": "61123aa9370a407487407bf3ff4b97287aea67cac5f90629e540a6e8cc855e7c",
+      "frozen": true,
+      "mutable_by_design": false,
+      "unchanged": true
+    },
+    {
+      "path": "10_massification/extensions/synthetic_2026-11-20/generator_v1_2/PARAMS.md",
+      "sha_before": "0d619781c4e059f54cf771fb385475f5f939dceced5036e8a21b6e07a2b315e3",
+      "sha_after": "0d619781c4e059f54cf771fb385475f5f939dceced5036e8a21b6e07a2b315e3",
+      "frozen": true,
+      "mutable_by_design": false,
+      "unchanged": true
+    },
+    {
+      "path": "10_massification/extensions/synthetic_2026-11-20/generator_v1_2/results/synthetic_panel_v1_2.csv",
+      "sha_before": "14729c5141a71dd9aaf87a5ad2e973a84b5f04603577aae627f2833276fac5ac",
+      "sha_after": "14729c5141a71dd9aaf87a5ad2e973a84b5f04603577aae627f2833276fac5ac",
+      "frozen": true,
+      "mutable_by_design": false,
+      "unchanged": true
+    },
+    {
+      "path": "10_massification/extensions/synthetic_2026-11-20/generator_v1_3/code/sim_v1_3.py",
+      "sha_before": "70ae8f0eef83358493dad3d3feb2d6a8841c4bb6fad3966627f4eed70e2a9877",
+      "sha_after": "70ae8f0eef83358493dad3d3feb2d6a8841c4bb6fad3966627f4eed70e2a9877",
+      "frozen": true,
+      "mutable_by_design": false,
+      "unchanged": true
+    },
+    {
+      "path": "10_massification/extensions/synthetic_2026-11-20/generator_v1_3/results/synthetic_panel_v1_3.csv",
+      "sha_before": "47d4b082f4ba5838cc20fbb09e59dd3dd847ad25393b1ce091069c94496657e3",
+      "sha_after": "47d4b082f4ba5838cc20fbb09e59dd3dd847ad25393b1ce091069c94496657e3",
+      "frozen": true,
+      "mutable_by_design": false,
+      "unchanged": true
+    },
+    {
+      "path": "10_massification/extensions/synthetic_2026-11-20/generator_v1_3/results/shadow_checks_v1_3.csv",
+      "sha_before": "e6a83de509362fbeb1e1e987e9b2b30dd1ff1e13905d56db0938cab911bd68f1",
+      "sha_after": "e6a83de509362fbeb1e1e987e9b2b30dd1ff1e13905d56db0938cab911bd68f1",
+      "frozen": true,
+      "mutable_by_design": false,
+      "unchanged": true
+    },
+    {
+      "path": "10_massification/extensions/synthetic_2026-11-20/generator_v1_3/results/shadow_gates_v1_3.csv",
+      "sha_before": "df3cab007ce5fbe9a48d58b0701d04e6d762591848ca1517a634c8f897edb351",
+      "sha_after": "df3cab007ce5fbe9a48d58b0701d04e6d762591848ca1517a634c8f897edb351",
+      "frozen": true,
+      "mutable_by_design": false,
+      "unchanged": true
+    },
+    {
+      "path": "10_massification/extensions/synthetic_2026-11-20/generator_v1_4_demand/PRE_DECLARATIONS.md",
+      "sha_before": "9ed0cae353c9a3dfba00582ff47d19ca8b761d8dd7b7ce5f9a8a8e4c5c5f49b3",
+      "sha_after": "9ed0cae353c9a3dfba00582ff47d19ca8b761d8dd7b7ce5f9a8a8e4c5c5f49b3",
+      "frozen": true,
+      "mutable_by_design": false,
+      "unchanged": true
+    },
+    {
+      "path": "10_massification/extensions/synthetic_2026-11-20/generator_v1_4_demand/code/sim_v1_4_demand.py",
+      "sha_before": "6e4a6761fa32325c61f138037a1e5c8d5e578e19f8a2ee2519e73e8f2332b2d1",
+      "sha_after": "6e4a6761fa32325c61f138037a1e5c8d5e578e19f8a2ee2519e73e8f2332b2d1",
+      "frozen": true,
+      "mutable_by_design": false,
+      "unchanged": true
+    },
+    {
+      "path": "10_massification/extensions/synthetic_2026-11-20/generator_v1_4_demand/results/_ablation/synthetic_panel_v1_4_demand_off.csv",
+      "sha_before": "47d4b082f4ba5838cc20fbb09e59dd3dd847ad25393b1ce091069c94496657e3",
+      "sha_after": "47d4b082f4ba5838cc20fbb09e59dd3dd847ad25393b1ce091069c94496657e3",
+      "frozen": true,
+      "mutable_by_design": false,
+      "unchanged": true
+    },
+    {
+      "path": "10_massification/extensions/synthetic_2026-11-20/shadow_module/PRE_DECLARATIONS.md",
+      "sha_before": "cf8c61cb818cd63acfb2ada594bc9541bfcb0711f801e13b7eee3b86508f94f2",
+      "sha_after": "cf8c61cb818cd63acfb2ada594bc9541bfcb0711f801e13b7eee3b86508f94f2",
+      "frozen": true,
+      "mutable_by_design": false,
+      "unchanged": true
+    },
+    {
+      "path": "10_massification/extensions/synthetic_2026-11-20/shadow_module/PARAMETERS.csv",
+      "sha_before": "cb49d3197b911451f8b1e32080fbe6d095f181440572e1a2b72005dc4302703a",
+      "sha_after": "cb49d3197b911451f8b1e32080fbe6d095f181440572e1a2b72005dc4302703a",
+      "frozen": true,
+      "mutable_by_design": false,
+      "unchanged": true
+    },
+    {
+      "path": "10_massification/extensions/synthetic_2026-11-20/shadow_module/PRE_DECLARATIONS_S1_NOTE.md",
+      "sha_before": "af49a616a7b57c4ef23a693c155d022cd17817f66f5acafba4dc6798dedb65eb",
+      "sha_after": "af49a616a7b57c4ef23a693c155d022cd17817f66f5acafba4dc6798dedb65eb",
+      "frozen": true,
+      "mutable_by_design": false,
+      "unchanged": true
+    },
+    {
+      "path": "10_massification/extensions/repro_path_2026-11-20/PRE_DECLARATIONS.md",
+      "sha_before": "74f9d0e0ece9680eaba470f3979f5d1e6042d7851585962cb1cdf7d365b3db12",
+      "sha_after": "74f9d0e0ece9680eaba470f3979f5d1e6042d7851585962cb1cdf7d365b3db12",
+      "frozen": true,
+      "mutable_by_design": false,
+      "unchanged": true
+    },
+    {
+      "path": "10_massification/extensions/repro_path_2026-11-20/FINDINGS.md",
+      "sha_before": "eb868567669e434282be68eaeec4138a7961a4485e767511f558a613cc45ab52",
+      "sha_after": "eb868567669e434282be68eaeec4138a7961a4485e767511f558a613cc45ab52",
+      "frozen": true,
+      "mutable_by_design": false,
+      "unchanged": true
+    },
+    {
+      "path": "10_massification/extensions/repro_path_2026-11-20/results/KAPPA_LINK.csv",
+      "sha_before": "671962dc585bcc833215ecc22823fb46d26f65b8a181dd9a6d8aa96dfb6b1e38",
+      "sha_after": "671962dc585bcc833215ecc22823fb46d26f65b8a181dd9a6d8aa96dfb6b1e38",
+      "frozen": true,
+      "mutable_by_design": false,
+      "unchanged": true
+    },
+    {
+      "path": "10_massification/data/UNIVERSALIZATION_SERIES.csv",
+      "sha_before": "85bc869396ebfcb39e3e1a21a31af219e75a07326c738a51d2bfdbe536737ddb",
+      "sha_after": "85bc869396ebfcb39e3e1a21a31af219e75a07326c738a51d2bfdbe536737ddb",
+      "frozen": false,
+      "mutable_by_design": false,
+      "unchanged": true
+    },
+    {
+      "path": "10_massification/data/STATE_CAPACITY.csv",
+      "sha_before": "704efacad00f0ba7ddf579459a930d064fdb0f4b882cffbbf44a6cbecd585044",
+      "sha_after": "704efacad00f0ba7ddf579459a930d064fdb0f4b882cffbbf44a6cbecd585044",
+      "frozen": false,
+      "mutable_by_design": false,
+      "unchanged": true
+    },
+    {
+      "path": "10_massification/data/SCHOOL_EXPANSION.csv",
+      "sha_before": "c218e6c9bd784e135e089ebecefec21112a09e6bf2c778599a33bc81b78c8ea3",
+      "sha_after": "c218e6c9bd784e135e089ebecefec21112a09e6bf2c778599a33bc81b78c8ea3",
+      "frozen": false,
+      "mutable_by_design": false,
+      "unchanged": true
+    },
+    {
+      "path": "10_massification/data/POLICY_TIMELINE.csv",
+      "sha_before": "a068b5bf92cee52e442231ef8de63e1b3814d1e42cd61b02969ccf1f3fb3353e",
+      "sha_after": "a068b5bf92cee52e442231ef8de63e1b3814d1e42cd61b02969ccf1f3fb3353e",
+      "frozen": false,
+      "mutable_by_design": false,
+      "unchanged": true
+    },
+    {
+      "path": "10_massification/data/JOBS_AND_MARKETS_PANEL.csv",
+      "sha_before": "aaaab2744803989ff0f347e27d5824c9b0086b967914d96d21ecd354329787d3",
+      "sha_after": "aaaab2744803989ff0f347e27d5824c9b0086b967914d96d21ecd354329787d3",
+      "frozen": false,
+      "mutable_by_design": false,
+      "unchanged": true
+    },
+    {
+      "path": "09_relations/data/panel_wdi_long.csv",
+      "sha_before": "a37629ae5d4f9ed2be4c71e33bfc876131880f65d356c88bd4d047a9bbdeae75",
+      "sha_after": "a37629ae5d4f9ed2be4c71e33bfc876131880f65d356c88bd4d047a9bbdeae75",
+      "frozen": false,
+      "mutable_by_design": false,
+      "unchanged": true
+    },
+    {
+      "path": "08_council/DECISIONS.md",
+      "sha_before": "6fdcf8eea440d4cc5e5d94ffc42d107d6788426a1a2b32d151575a338c203148",
+      "sha_after": "59696b81af15a700389827d19a435e5a9cf43c9925707ef76c80ec0d15765717",
+      "frozen": false,
+      "mutable_by_design": false,
+      "unchanged": false
+    },
+    {
+      "path": "08_council/brief_022/SYNTHESIS_022.md",
+      "sha_before": "9508dd55be8dd64da8322a8277c8342a4f50be6790a3d287e39e7004537c109b",
+      "sha_after": "9508dd55be8dd64da8322a8277c8342a4f50be6790a3d287e39e7004537c109b",
+      "frozen": false,
+      "mutable_by_design": false,
+      "unchanged": true
+    }
+  ]
+}

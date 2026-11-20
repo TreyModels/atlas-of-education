@@ -340,3 +340,16 @@ manifests and error logs.
   (−28.87 below the band; ablation −34.51 pp). **Both outside [71,79] → NOT DEMAND-DERIVABLE → the A3 line is KILLED**
   (not parked); the taste parameter is irreducible without a fit. Baseline guards PASS (G1 = v1.3 panel; G2 = frozen v1.4
   panel); no re-tune; A3-D FALSIFIED stands; "demand falsified" language still banned.
+
+## 2026-11-21 — v1.5 BIMODAL-GATE BUILT AND RUN: representation works, level FAILS, two implementation defects (D131)
+
+- `generator_v1_5_bimodal/` run to the frozen predecl (`7178e3d2…`; controller-verified deterministic; 84/84 SHA):
+  **a=MIXED; b=FAIL; c=MIXED; d=FAIL; e=MIXED; ALL=FAIL.** **Representation works:** PHL-like 2010–2024, Tier O upper
+  unfilled 0.648–0.932 coexisting with Tier H queue ratio 1.29–1.93 and p4 ≈ 0.25 in all 15 years; a-i/a-ii/a-iii hold;
+  a-iv mislabelled in the predecl (A00 same_level 0 vs A01 15 because the κ cap creates same-level counts).
+  **Level fails:** Tier O quality 0.55 → survival ≈0.48–0.51 → primary 51.63, upper 33.68 (collapse not stall).
+  **(d) FAIL:** child-wage substitution wrong sign (+1.081 pp vs ≤ −2.0) despite 0 free-taste audit hits and working
+  quality sensitivity. **(c) MIXED:** open-tier gap +2.16 > +1.0 bar. **(e) MIXED:** **A00 guard PASS (v1.3 panel
+  byte-identical)**; frozen 20/20; determinism PASS; κ 20/53→0/53 — but the in-loop κ cap breaches cell identity
+  (`KAPPA-GUARD-FAIL`). **A01 linked upper 2024 = 55.657** (≤63.97 but 8.31 below: cap bounds entry cohort, upper
+  survival 0.870); required lower-2021 80.76 vs generator 67.41. No rescue/re-tune; parks stay; A3 KILLED; D63 UNABLE.

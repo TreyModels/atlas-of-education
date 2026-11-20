@@ -1,0 +1,29 @@
+check,leg,statistic,value,threshold,holds,n_cells,note
+a,a-i_unfilled_floor,cells with unfilled_share_O >= 0.10,18,>= 15 of 30,TRUE,30,
+a,a-ii_queue_bar,cells with queue_ratio_H >= 1.10,30,>= 15 of 30,TRUE,30,
+a,a-iii_simultaneity,years 2010-2024 with both (a-i) and (a-ii) same year,15,>= 8 of 15,TRUE,15,
+a,a-iii_job_gate,"of those years, years with p4 <= 0.50",15,>= 8 of 15,TRUE,15,p4 = rung4_emp/rung4_demand
+a,a-iv_same_level_A11,"same_level(upper) count, arm A11",15,>= 8,TRUE,15,
+a,a-iv_same_level_A01,"same_level(upper) count, arm A01 (bimodal OFF, kappa ON)",15,== 0,FALSE,15,"the predeclared zero rests on 'the upper school gate is unrationed'; that is true of A00 but NOT of A01 -- the kappa admission cap itself rations the upper gate, so rationed_official > 0 in A01"
+a,a-iv_same_level_A00_diag,"same_level(upper) count, arm A00 (frozen single gate)",0,"reported, not a declared leg",TRUE,15,the frozen single-gate stack has no declined/contested coexistence at one level
+b,b-i_primary,first sustained primary >= 90,-1,"in [2014,2020]",FALSE,56,
+b,b-i_primary_2024,primary completion_uis 2024 (pp),51.62568565,>= 92,FALSE,1,
+b,b-ii_stall,upper < 90 in every year <= 2024,1,TRUE,TRUE,56,
+b,b-ii_band,upper completion_uis 2024 (pp),33.68346818,"in [55,85]",FALSE,1,
+b,b-iii_endpoint,upper completion_uis 2024 (pp) vs v1.2 band,33.68346818,"in [73.0,77.0] (reported, not verdict-bearing)",FALSE,1,
+c,c-i_placement_ratio,min over 2010-2024 of D_H(g2)/D_O,33.22529998,>= 5.0,TRUE,15,"D_O evaluated at the open tier: R_O=1, V_O=0, dpi=0"
+c,c-ii_open_ceiling,max D_O over the 3 designated types x 56 years,0.007740595645,<= 0.025,TRUE,168,shadow inputs exist only for the 3 designated types (v1.3 sec.7)
+c,c-iii_high_gate_gap,D_H(g2) gap from R->2R at 2020 (pp),31.13122283,>= +10.0,TRUE,1,
+c,c-iii_open_gap,D_O gap from R->2R at the open tier (pp),2.157388367,<= +1.0,FALSE,1,"open tier sits in the logit's left tail, where a doubling of R is ~3x, not ~2x"
+d,d-i_no_free_taste,w_work_free and T-AUD-1/2 hit count,0,"== 0 hits, w_work_free=0",TRUE,1,
+d,d-ii_stall_under_cap,upper < 90 every year <= 2024,0,TRUE,TRUE,56,
+d,d-ii_slack,cells (1973-2025) with slack = kappa*lower(t-3) - upper(t) >= 0,53,53 of 53,TRUE,53,min slack 2.719 pp
+d,d-ii_cap_nonbinding,cells where the cap does not bind,0,>= 5 of 53,FALSE,53,
+d,d-iii_child_wage,upper completion_uis 2024 change from w_child +10% (pp),1.080546093,<= -2.0,FALSE,1,baseline 33.683 pp; ablation 34.764 pp
+d,d-iv_qO_unfilled,mean unfilled_share_O 2010-2024 change from q_O -20% (pp),11.22406483,>= +5.0,TRUE,30,baseline 0.4363; ablation 0.5485
+e,e-i_baseline,sha256(A00 panel projected to the v1.3 column set),0,== 47d4b082...,TRUE,6720,47d4b082f4ba5838cc20fbb09e59dd3dd847ad25393b1ce091069c94496657e3
+e,e-ii_cell_identity,non-upper rows cell-identical to v1.3 (A01),180,5040 of 5040,FALSE,5040,"primary and lower-secondary are cell-identical; tertiary is NOT, because the frozen pipeline feeds the tertiary eligibility pool from upper-secondary graduates (sim_v1_3.py:866-873)"
+e,e-ii_upper_diff,upper rows differing only where the cap binds,1620,all listed in KAPPA_BIND_CELLS,FALSE,1680,
+e,e-ii_violations,completion-ratio violations after the in-loop cap,0,0 of 53,TRUE,53,before the cap (A00): 20 of 53
+e,e-iii_frozen_files,frozen input files with an unchanged sha256,20,all,TRUE,20,
+e,e-iv_determinism,result files byte-identical across two runs,12,all,TRUE,12,

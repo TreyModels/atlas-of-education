@@ -1135,3 +1135,25 @@ model-specification failure.
   (G1 OFF = v1.3 panel `47d4b082…`; G2 unmodified arm-A ON = frozen v1.4 panel `ffecd450…`, both byte-identical).
   A3-D's FALSIFIED verdict stands; no re-tune/fit; migration/remittance DECLARED/NOT-VERIFIED and unused; "demand
   falsified" language remains banned (the *specification* failed).
+
+### p) v1.5 BIMODAL-GATE BUILT AND RUN — representation works, level FAILS, two implementation defects disclosed (D131)
+
+- `generator_v1_5_bimodal/` (frozen predecl `7178e3d2…` verified before/after; controller re-ran the model twice and
+  reproduced the delivered panels byte-for-byte; 84/84 SHA from programme root). **Verdict: a=MIXED; b=FAIL; c=MIXED;
+  d=FAIL; e=MIXED; ALL=FAIL.**
+- **Representation (the user's structural point) works:** for SYN00_PHL_LIKE in **all 15** scored years 2010–2024,
+  **Tier O upper-secondary unfilled share 0.648–0.932** coexists with **Tier H queue ratio 1.29–1.93** and
+  credentialed-job absorption **p4 ≈ 0.25**. Checks a-i/a-ii/a-iii hold; only a-iv (A01 contrast leg) fails and that leg
+  is **mislabelled in the frozen predecl** (A00 has same_level 0; A01 has 15 because the κ cap creates same-level counts).
+- **Level FAILS:** declared Tier O quality (`q_O_mult = 0.55`) drives Tier O survival ≈0.48–0.51 → **primary completion
+  51.63** (never ≥90) and **upper 33.68** — a collapse, not the predeclared stall. **(d) FAIL:** child-wage substitution
+  has the **wrong sign (+1.081 pp vs ≤ −2.0 required)** even though the no-free-taste audit (0 hits) and the quality
+  sensitivity (−20% → unfilled +11.22 pp) pass. **(c) MIXED:** placement ratio 33.2 and D_O 0.0077 pass; open-tier gap
+  +2.16 pp > the ≤+1.0 pp bar. **(e) MIXED:** **A00 guard PASS (byte-identical v1.3 panel `47d4b082…`)**, frozen 20/20,
+  determinism PASS, κ violations 20/53 → 0/53 — **but the in-loop κ cap breaches the cell-identity guard**
+  (`KAPPA-GUARD-FAIL`: A01 secondary columns `ptr_system`, `D_cohort` differ from A00).
+- **A01 linked upper 2024 = 55.657** (satisfies ≤63.9695 but 8.31 pp below it: the cap bounds the **entry cohort**, and
+  upper survival is 0.870); **required lower-2021 = 80.76 vs generator 67.41** — the lower series is the defect.
+- **Disposition:** model class admitted for the **representation** purpose only; level not reproduced; the κ-in-loop
+  implementation needs a design fix (bound the right object without breaching cell identity); the child-wage
+  substitution sign is wrong. No rescue, no re-tune. Parks stay parked; A3 line KILLED (D130); D63 stays UNABLE.

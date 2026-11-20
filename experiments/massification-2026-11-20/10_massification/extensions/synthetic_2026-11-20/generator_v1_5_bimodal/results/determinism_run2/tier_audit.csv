@@ -1,0 +1,6 @@
+audit_id,rule,hits,status
+T-AUD-1,no country-specific value in the tier block,0,PASS
+T-AUD-2,one declared vector for all 30 countries; no level shim,0,PASS
+T-AUD-3,K_H depends on seats and h_share only (no reallocation),0,PASS
+T-AUD-4,one boolean read per insertion point,3,PASS
+T-AUD-5,outside_utilities() reproduces frozen state_shares(),0,PASS

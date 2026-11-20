@@ -1,0 +1,4 @@
+arm,object,baseline_value,ablation_value,delta_pp,bar_pp,holds
+D1_child_wage_plus10,upper completion_uis 2024 (pp),33.68346818,34.76401427,1.080546093,-2,0
+D2_q_O_minus20,mean unfilled_share_O 2010-2024 (share),0.4362531316,0.5484937799,11.22406483,5,1
+D3_sorting_off,mean unfilled_share_O 2010-2024 (share),0.4362531316,0.4204533479,-1.579978372,0,-1

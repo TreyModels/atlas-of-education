@@ -1,351 +1,269 @@
 {
   "artifact": "generator_v1_5_bimodal",
-  "title": "Amendment A5 / v1.5 BIMODAL-GATE — design + frozen pre-declaration",
-  "status": "DESIGN + FROZEN PRE-DECLARATION — RUN-READY, NOT RUN",
+  "title": "Amendment A5 / v1.5 BIMODAL-GATE -- EXECUTED",
+  "status": "BUILT AND RUN (frozen predeclaration, no re-tuning)",
   "label": "SYNTHETIC",
   "not_evidence": true,
   "causal_or_direction_claim": false,
   "c1_c4_reopened": false,
   "a3d_retuned": false,
-  "created_utc": "2026-11-20",
-  "worker": "BM",
-  "authorisation_to_execute": "NONE — execution requires an explicit user/Council authorisation and is outside this delivery",
-  "executed": false,
-  "results_present": false,
-  "rng_drawn": false,
+  "reversal_diagnostic_inferred": false,
+  "worker": "V15R",
+  "executed": true,
+  "results_present": true,
+  "rng_drawn": true,
   "predeclaration": {
     "path": "10_massification/extensions/synthetic_2026-11-20/generator_v1_5_bimodal/PRE_DECLARATIONS.md",
     "sha256": "7178e3d2ee2e367cd7dbb0619f2031305ff446978a43aab9e1f6caefb07ca97f",
+    "expected": "7178e3d2ee2e367cd7dbb0619f2031305ff446978a43aab9e1f6caefb07ca97f",
+    "match": true,
     "frozen_before_any_run": true,
-    "expected_predecl_sha_constant_to_embed_in_code": "7178e3d2ee2e367cd7dbb0619f2031305ff446978a43aab9e1f6caefb07ca97f",
+    "expected_predecl_sha_constant_embedded_in_code": "7178e3d2ee2e367cd7dbb0619f2031305ff446978a43aab9e1f6caefb07ca97f",
     "no_threshold_change_after_results": true
   },
   "spec_files": [
     {
       "path": "10_massification/extensions/synthetic_2026-11-20/generator_v1_5_bimodal/PRE_DECLARATIONS.md",
       "sha256": "7178e3d2ee2e367cd7dbb0619f2031305ff446978a43aab9e1f6caefb07ca97f",
-      "bytes": 43528,
+      "expected": "7178e3d2ee2e367cd7dbb0619f2031305ff446978a43aab9e1f6caefb07ca97f",
+      "match": true,
       "role": "frozen pre-declaration"
     },
     {
       "path": "10_massification/extensions/synthetic_2026-11-20/generator_v1_5_bimodal/PARAMETERS.csv",
       "sha256": "72327cf799b5e96c68a8e9030f265ef06b3b37a58917d892d87bb6fabcfcb65a",
-      "bytes": 21012,
+      "expected": "72327cf799b5e96c68a8e9030f265ef06b3b37a58917d892d87bb6fabcfcb65a",
+      "match": true,
       "role": "spec"
     },
     {
       "path": "10_massification/extensions/synthetic_2026-11-20/generator_v1_5_bimodal/DESIGN.md",
       "sha256": "db21055b38ef8343f791b27a3fe192a72367f5377f966dd660a94d39a26a5f43",
-      "bytes": 23461,
+      "expected": "db21055b38ef8343f791b27a3fe192a72367f5377f966dd660a94d39a26a5f43",
+      "match": true,
       "role": "spec"
     },
     {
       "path": "10_massification/extensions/synthetic_2026-11-20/generator_v1_5_bimodal/DRY_RUN_PLAN.md",
       "sha256": "4660390501747949eb27c5d966012a768ebc82ee025efea89ee4333e8bbedeab",
-      "bytes": 14953,
+      "expected": "4660390501747949eb27c5d966012a768ebc82ee025efea89ee4333e8bbedeab",
+      "match": true,
       "role": "spec"
     }
   ],
-  "base_instrument": {
-    "generator": "generator_v1_3",
-    "code": "10_massification/extensions/synthetic_2026-11-20/generator_v1_3/code/sim_v1_3.py",
-    "code_sha256": "70ae8f0eef83358493dad3d3feb2d6a8841c4bb6fad3966627f4eed70e2a9877",
-    "panel": "10_massification/extensions/synthetic_2026-11-20/generator_v1_3/results/synthetic_panel_v1_3.csv",
-    "panel_sha256": "47d4b082f4ba5838cc20fbb09e59dd3dd847ad25393b1ce091069c94496657e3",
-    "panel_rows": 6720,
-    "panel_columns_v1_3": 89,
-    "transitive_base": {
-      "generator_v1_2_code_sha256": "61123aa9370a407487407bf3ff4b97287aea67cac5f90629e540a6e8cc855e7c",
-      "generator_v1_2_panel_sha256": "14729c5141a71dd9aaf87a5ad2e973a84b5f04603577aae627f2833276fac5ac"
+  "code": {
+    "main": "10_massification/extensions/synthetic_2026-11-20/generator_v1_5_bimodal/code/sim_v1_5_bimodal.py",
+    "main_sha256": "8104009e96ed82846c3de81562fc6e0b12f07b25c2f144ff6db2887997f04fb5",
+    "base_copy": "10_massification/extensions/synthetic_2026-11-20/generator_v1_5_bimodal/code/base_v1_3_sim.py",
+    "base_copy_sha256": "70ae8f0eef83358493dad3d3feb2d6a8841c4bb6fad3966627f4eed70e2a9877",
+    "base_copy_expected": "70ae8f0eef83358493dad3d3feb2d6a8841c4bb6fad3966627f4eed70e2a9877",
+    "builder": "code/build_from_base.py",
+    "builder_sha256": "f0fd0cddab8c8b2bd70b9662c085b3b34fe58f225028504263fc352b01b9c3a8",
+    "loop_provenance": "the year loop of simulate_country_v15() is injected verbatim from base_v1_3_sim.py lines 640-988 (PRE 651-748, LOOP_HEAD 750-780, BLOCK_A 784-823, BLOCK_B 825-864, LOOP_TAIL 866-988); the only inserted text is at I2-I7",
+    "base_instrument": {
+      "generator": "generator_v1_3",
+      "code_sha256": "70ae8f0eef83358493dad3d3feb2d6a8841c4bb6fad3966627f4eed70e2a9877",
+      "panel_sha256": "47d4b082f4ba5838cc20fbb09e59dd3dd847ad25393b1ce091069c94496657e3",
+      "panel_rows": 6720,
+      "panel_columns": 89
     }
   },
-  "switches": {
-    "bimodal": [
-      "OFF",
-      "ON"
-    ],
-    "kappa_link": [
-      "OFF",
-      "ON"
-    ],
-    "orthogonal": true
+  "seed": 20261120,
+  "determinism": {
+    "method": "two complete runs into separate output directories; cmp + sha256",
+    "n_files_compared": 14,
+    "n_identical": 14,
+    "status": "DETERMINISM-PASS",
+    "rng": "one numpy PCG64 stream, seed 20261120, frozen v1.2 draw order",
+    "tier_block_draws_nothing": true,
+    "float_format": "%.10g",
+    "no_timestamp_hostname_pid": true
   },
   "arms": {
     "A00": {
-      "bimodal": "OFF",
-      "kappa_link": "OFF",
-      "role": "no-re-fit guard E1 (byte-identical to v1.3 panel)"
+      "bimodal": false,
+      "kappa_link": false,
+      "role": "no-re-fit guard E1 (byte-identical to v1.3)"
     },
     "A10": {
-      "bimodal": "ON",
-      "kappa_link": "OFF",
-      "role": "diagnostic, not scored"
+      "bimodal": true,
+      "kappa_link": false,
+      "role": "diagnostic only (tier block without the pipeline; reported, not scored)"
     },
     "A01": {
-      "bimodal": "OFF",
-      "kappa_link": "ON",
+      "bimodal": false,
+      "kappa_link": true,
       "role": "linked arm, reported separately, guard E2"
     },
     "A11": {
-      "bimodal": "ON",
-      "kappa_link": "ON",
+      "bimodal": true,
+      "kappa_link": true,
       "role": "scored arm (checks a-e)"
-    },
-    "declared_extra_arms": [
-      "h_share+0.10",
-      "h_share-0.10",
-      "q_H_mult=1.10",
-      "q_H_mult=1.40",
-      "q_O_mult=0.40",
-      "q_O_mult=0.70",
-      "kappa=0.960",
-      "child_wage+10pct",
-      "q_O_mult*0.80",
-      "sorting_OFF"
-    ]
+    }
   },
-  "declared_constants": {
-    "kappa": 0.949,
-    "kappa_sensitivity": 0.96,
-    "kappa_lag_years": 3,
-    "scored_cells_a": 30,
-    "scored_anchor_cells_d": 53,
-    "seed": 20261120,
-    "meas_completion_factor_m": 1.1
+  "declared_extra_arms": [
+    "S1_h_share_plus",
+    "S2_h_share_minus",
+    "S3_q_H_110",
+    "S4_q_H_140",
+    "S5_q_O_040",
+    "S6_q_O_070",
+    "S7_kappa_0960",
+    "D1_child_wage_plus10",
+    "D2_q_O_minus20",
+    "D3_sorting_off"
+  ],
+  "kappa": {
+    "value": 0.949,
+    "sensitivity": 0.96,
+    "lag_years": 3,
+    "register": "completion_uis (UIS convention)",
+    "fitted": false,
+    "updated_from_panel": false,
+    "source_derivation": "median of 8 observed PHL upper_t/lower_t-3 pairs = 0.94916 -> 0.949"
   },
-  "verdict_vocabulary": [
-    "PASS",
-    "FAIL",
-    "MIXED",
-    "UNDETERMINED"
-  ],
-  "guard_status_vocabulary": [
-    "GUARD-PASS",
-    "GUARD-FAIL",
-    "BASELINE-GUARD-PASS",
-    "BASELINE-GUARD-FAIL",
-    "KAPPA-GUARD-PASS",
-    "KAPPA-GUARD-FAIL",
-    "FROZEN-FILE-GUARD-PASS",
-    "FROZEN-FILE-GUARD-FAIL",
-    "DETERMINISM-PASS",
-    "DETERMINISM-FAIL"
-  ],
+  "tier_parameters": {
+    "h_share": [
+      0.15,
+      0.28,
+      0.4,
+      0.5
+    ],
+    "q_H_mult": [
+      1.25,
+      1.25,
+      1.25,
+      1.25
+    ],
+    "q_O_mult": [
+      0.55,
+      0.55,
+      0.55,
+      0.55
+    ],
+    "cost_H_mult": 1.6,
+    "cost_O_mult": 0.03,
+    "cred_prem_H": 0.18,
+    "cred_prem_O": 0.03,
+    "v_tier_scale": 0.45,
+    "w_work_free": 0.0,
+    "a_gate": 0.4,
+    "risk_pen": 0.2,
+    "H_h": 20.0,
+    "sigma_tier": 0.8,
+    "z_q": [
+      -1.2816,
+      -0.5244,
+      0.0,
+      0.5244,
+      1.2816
+    ],
+    "ability_grid": [
+      0.25,
+      0.5,
+      0.75
+    ],
+    "cell_weight": [
+      [
+        0.1,
+        0.07,
+        0.03
+      ],
+      [
+        0.08,
+        0.08,
+        0.04
+      ],
+      [
+        0.06,
+        0.09,
+        0.05
+      ],
+      [
+        0.04,
+        0.09,
+        0.07
+      ],
+      [
+        0.02,
+        0.07,
+        0.11
+      ]
+    ],
+    "rank_w_income": 0.3,
+    "rank_w_ability": 0.7,
+    "padv_expect_lag": 1,
+    "padv_clip": [
+      0.01,
+      0.999
+    ],
+    "exit_cost_O": 0.0
+  },
+  "checks": {
+    "a": "MIXED",
+    "b": "FAIL",
+    "c": "MIXED",
+    "d": "FAIL",
+    "e": "MIXED",
+    "ALL": "FAIL"
+  },
   "guards": {
-    "E1": "bimodal OFF + kappa OFF => sha256(panel projected to v1.3 columns) == 47d4b082...",
-    "E2": "bimodal OFF + kappa ON => primary/lower/tertiary cell-identical to v1.3 (6720 rows); upper differs only where the cap binds; 0/53 completion-ratio violations",
-    "E3": "frozen-file sha256 invariance across generator_v1_2/, generator_v1_3/, generator_v1_4_demand/, shadow_module/, repro_path_2026-11-20/",
-    "E4": "determinism: run1 == run2 byte-for-byte",
-    "R1": "ratchet construction audit: 0 reversal tokens; Tstate non-decreasing; opened rungs non-decreasing (failure => run VOID)",
-    "R2": "monotonicity report, descriptive only"
+    "baseline": "BASELINE-GUARD-PASS",
+    "kappa": "KAPPA-GUARD-FAIL",
+    "frozen_file": "FROZEN-FILE-GUARD-PASS",
+    "determinism": "DETERMINISM-PASS"
   },
+  "documents": {
+    "FINDINGS.md": "e50a33937308f2e1beeb72eec9f4c7e26a2de7ce902a859647a5f415c214f9aa",
+    "TUNE_LOG.md": "1de19a9f3dd1d64a088668bb012b544eb6f971c08a4ea6e73b36b49e68247e58"
+  },
+  "results_files": {
+    "ABLATIONS.csv": "91f08a768efa58b2c0e0c71e1f59033909cdb7064f3397db6db7297b33797a05",
+    "BASELINE_GUARD.json": "1e241e6d58ccda35eb62bfdebced1c0c087503362f90a64a118cb5cea25b485a",
+    "BIMODALITY_CELLS.csv": "f08fe79139cc02adb449d9cc4eb36f74bd0c658d8583b89bfeb006baa3041ecc",
+    "FROZEN_BEFORE_SHA256SUMS.txt": "9192aa101e3719fb55f0c24b2040f1b0637ed93f2234a35461bb3630009650de",
+    "FROZEN_FILE_GUARD.json": "b07babff26b606953d0a71fc5c383fd34e7c3fe3c1e6ca0a961b1c72b2833af9",
+    "KAPPA_BIND_CELLS.csv": "ce3b1c1277e9618985a7fad7cd3c764dabd1de92146e1a3420495f07ad880162",
+    "KAPPA_GUARD.json": "21bc0dcbb7fc5081d970ed57f22b727c22e883e817b68ca039afc5606e27b58c",
+    "SENSITIVITY.csv": "ea7e2af3b912b5dd6d20008d057756cb0275c1271457ea377ca968cc6ad5c9af",
+    "TIER_PANEL_tabs.csv": "5dfe224ecb830c312c04fea8ae1c37d03a7b6ea3f632ca538286d9f08176a42d",
+    "determinism_note.md": "0afc3578f588d8efcd97b446ecf229919e7866203b607789a02b51c7cdfc473c",
+    "guard_report.json": "fdf510757520e3cb3c5b2e7dfa1b54aeac9df3a328224dcfca06bbc55edef8bb",
+    "kappa_cap_audit.csv": "e7cebc4e46b72f7d267fe9439802f42cfe519d8405bca1ca8c0350a824306e9b",
+    "panel_v1_5_A00_v13cols.csv": "47d4b082f4ba5838cc20fbb09e59dd3dd847ad25393b1ce091069c94496657e3",
+    "panel_v1_5_A01_linked.csv": "1dc7ed64b56ed6ed7b97fd226c311c94f7058263ca49daec8d9e5c36253baed1",
+    "panel_v1_5_A10_bimodal_noKappa.csv": "e256595d83eb580ca208eecafe25f6118b70a6c53c79e74c36f1be891187585e",
+    "ratchet_audit.json": "4541fe06c7e1b3e4b6d55890698f1caf15463690d64d420b3c7f7f6f2f67d3b8",
+    "synthetic_panel_v1_5.csv": "a3eed3ffc5d835f7552325dca6c3ccdb8e85d21d49407de0beb8a2c127ee4feb",
+    "synthetic_panel_v1_5_A00.csv": "47d4b082f4ba5838cc20fbb09e59dd3dd847ad25393b1ce091069c94496657e3",
+    "synthetic_panel_v1_5_A01.csv": "1dc7ed64b56ed6ed7b97fd226c311c94f7058263ca49daec8d9e5c36253baed1",
+    "synthetic_panel_v1_5_A10.csv": "e256595d83eb580ca208eecafe25f6118b70a6c53c79e74c36f1be891187585e",
+    "synthetic_panel_v1_5_A11.csv": "a3eed3ffc5d835f7552325dca6c3ccdb8e85d21d49407de0beb8a2c127ee4feb",
+    "tier_audit.csv": "27bf4991b8af95821c6c28efe31cc4e2159cde697491fc488ceffe968570dc5b",
+    "unfilled_vs_queue.csv": "7c6e42306c97408a6b868d3b898c8a65d984ccdc7396dfe00ef1a884d3c5efd1",
+    "v1_5_checks.csv": "325b967b074f4842fe1b765edc7f3389babeefee6239cbd8f72802cff7cb5475",
+    "v1_5_checks_detail.csv": "42091e452e9452bb1eb513560569a22e633b86635849aaf1c343a76d32855dc2"
+  },
+  "declared_implementation_notes": [
+    "refusal set: the outside refusal value is max(U_work, U_neither). PRE_DECLARATIONS.md sec.2.4 also lists U_both; U_both is the frozen block's school+work state and, used as an outside value, would let a cell collect the schooling value plus child earnings without occupying a place. The count of cells on which U_both would have dominated Tier O is reported per country-year-level in column both_would_dominate_cells.",
+    "outside option evaluated at each lattice cell's own income y_i (the four-state block's equations and parameters are unchanged; only the income argument is the cell's rather than the representative household's).",
+    "tertiary: the frozen child block is undefined at L=3 (AGE_W and cost_base each have 3 entries), so the tertiary tier composition inherits the same-year upper-secondary choice shares while the aggregate stays the model's own tertiary demand.",
+    "D_O is evaluated at the open tier's gate state (R_O=1, V_O=0, dpi=0), the v1.3 g0 no-gate control that sec.9 uses as the (c-i) baseline; it is therefore year-invariant and country-specific.",
+    "the kappa cap acts on the official-age entry cohort and, at upper secondary, reduces admission in the order over-age -> Tier H -> Tier O, so the unfilled-Tier-O object is never manufactured by the cap (reported in kappa_cap_audit.csv)."
+  ],
   "held_data_ask": {
-    "status": "HELD — never fabricated",
+    "status": "HELD -- never fabricated",
     "items": [
       "DepEd/CHED seats vs enrolment by level/track/region",
-      "private/public shares of enrolment and provision by level/track",
+      "private/public shares of enrolment and provision",
       "SHS voucher take-up by track/region",
       "any seat-utilisation or quality target"
-    ],
-    "corroboration_that_blocked": "10_massification/data/STATE_CAPACITY.csv:2-3 (school-count and classroom series DATA BLOCKED)"
+    ]
   },
   "banned_language": {
     "phrase": "demand falsified",
     "also_paraphrases": true,
     "correct_label": "the unrationed single-gate model cannot represent a bimodal system"
   },
-  "validation_scope_disclosure": "v1.3/v1.2 levels are a 2021-2024 placement: 9/33 within +/-5 pp (EXP-7 ENDPOINT-ONLY); median lower -29.44, upper -27.59 pp; 24-37 pp low before 2021; every level statement in this experiment is readable as a 2022-2024 placement only",
-  "inputs": [
-    {
-      "path": "10_massification/extensions/synthetic_2026-11-20/MODEL_ARCHITECTURE.md",
-      "sha256": "31ad5234ea2d783a61bc81ef8f5f71eec3b44dc4e48abcb87675f49242fa9b15",
-      "bytes": 37721,
-      "label": "DECLARED-DIRECTIVE",
-      "role": "A5/A4 amendment source of record"
-    },
-    {
-      "path": "10_massification/extensions/synthetic_2026-11-20/THEORY_FRAME.md",
-      "sha256": "7bc96f4bc61d567672a58aa15efd94c4b84104d095a84212f8dab7e56316359a",
-      "bytes": 6274,
-      "label": "DECLARED-THEORY",
-      "role": "combined theory frame; one-way ratchet; bimodal definition"
-    },
-    {
-      "path": "10_massification/extensions/synthetic_2026-11-20/v1_2/PRE_DECLARATIONS.md",
-      "sha256": "fde18d405d875167977b350a925c28248c3007d2813dcdb29219d3baf0b95f16",
-      "bytes": 10579,
-      "label": "DECLARED",
-      "role": "frozen v1.2 spec; bands reused in check (b)"
-    },
-    {
-      "path": "10_massification/extensions/synthetic_2026-11-20/generator_v1_2/code/sim_v1_2.py",
-      "sha256": "61123aa9370a407487407bf3ff4b97287aea67cac5f90629e540a6e8cc855e7c",
-      "bytes": 63078,
-      "label": "FROZEN-CODE",
-      "role": "v1.2 base (ancestor of v1.3)"
-    },
-    {
-      "path": "10_massification/extensions/synthetic_2026-11-20/generator_v1_2/PARAMS.md",
-      "sha256": "0d619781c4e059f54cf771fb385475f5f939dceced5036e8a21b6e07a2b315e3",
-      "bytes": 23735,
-      "label": "DECLARED",
-      "role": "v1.2 parameter provenance and childworld borrow ledger"
-    },
-    {
-      "path": "10_massification/extensions/synthetic_2026-11-20/generator_v1_2/results/synthetic_panel_v1_2.csv",
-      "sha256": "14729c5141a71dd9aaf87a5ad2e973a84b5f04603577aae627f2833276fac5ac",
-      "bytes": 5086014,
-      "label": "SYNTHETIC",
-      "role": "v1.2 panel; transitive guard reference"
-    },
-    {
-      "path": "10_massification/extensions/synthetic_2026-11-20/generator_v1_3/code/sim_v1_3.py",
-      "sha256": "70ae8f0eef83358493dad3d3feb2d6a8841c4bb6fad3966627f4eed70e2a9877",
-      "bytes": 122690,
-      "label": "FROZEN-CODE",
-      "role": "base instrument for v1.5"
-    },
-    {
-      "path": "10_massification/extensions/synthetic_2026-11-20/generator_v1_3/results/synthetic_panel_v1_3.csv",
-      "sha256": "47d4b082f4ba5838cc20fbb09e59dd3dd847ad25393b1ce091069c94496657e3",
-      "bytes": 5492788,
-      "label": "SYNTHETIC",
-      "role": "E1 byte-identity reference; pre-freeze arithmetic"
-    },
-    {
-      "path": "10_massification/extensions/synthetic_2026-11-20/generator_v1_3/results/shadow_checks_v1_3.csv",
-      "sha256": "e6a83de509362fbeb1e1e987e9b2b30dd1ff1e13905d56db0938cab911bd68f1",
-      "bytes": 4682,
-      "label": "SYNTHETIC",
-      "role": "v1.3 c1-c6 values carried as comparison (c-iv)"
-    },
-    {
-      "path": "10_massification/extensions/synthetic_2026-11-20/generator_v1_3/results/shadow_gates_v1_3.csv",
-      "sha256": "df3cab007ce5fbe9a48d58b0701d04e6d762591848ca1517a634c8f897edb351",
-      "bytes": 244777,
-      "label": "SYNTHETIC",
-      "role": "gate state Q/pi0 reference (V8)"
-    },
-    {
-      "path": "10_massification/extensions/synthetic_2026-11-20/generator_v1_4_demand/PRE_DECLARATIONS.md",
-      "sha256": "9ed0cae353c9a3dfba00582ff47d19ca8b761d8dd7b7ce5f9a8a8e4c5c5f49b3",
-      "bytes": 27297,
-      "label": "DECLARED",
-      "role": "A3-D frozen spec (parked; not re-scored)"
-    },
-    {
-      "path": "10_massification/extensions/synthetic_2026-11-20/generator_v1_4_demand/code/sim_v1_4_demand.py",
-      "sha256": "6e4a6761fa32325c61f138037a1e5c8d5e578e19f8a2ee2519e73e8f2332b2d1",
-      "bytes": 157497,
-      "label": "FROZEN-CODE",
-      "role": "v1.4 guard convention (verified)"
-    },
-    {
-      "path": "10_massification/extensions/synthetic_2026-11-20/generator_v1_4_demand/results/_ablation/synthetic_panel_v1_4_demand_off.csv",
-      "sha256": "47d4b082f4ba5838cc20fbb09e59dd3dd847ad25393b1ce091069c94496657e3",
-      "bytes": 5492788,
-      "label": "SYNTHETIC",
-      "role": "PROOF the OFF-arm convention reproduces v1.3 (hashes 47d4b082...)"
-    },
-    {
-      "path": "10_massification/extensions/synthetic_2026-11-20/shadow_module/PRE_DECLARATIONS.md",
-      "sha256": "cf8c61cb818cd63acfb2ada594bc9541bfcb0711f801e13b7eee3b86508f94f2",
-      "bytes": 18823,
-      "label": "DECLARED",
-      "role": "frozen v1.3 shadow spec (cf8c61cb...); c1/c3/c2 thresholds reused"
-    },
-    {
-      "path": "10_massification/extensions/synthetic_2026-11-20/shadow_module/PARAMETERS.csv",
-      "sha256": "cb49d3197b911451f8b1e32080fbe6d095f181440572e1a2b72005dc4302703a",
-      "bytes": 10915,
-      "label": "DECLARED",
-      "role": "B17 H=20, B23 z_q reused verbatim"
-    },
-    {
-      "path": "10_massification/extensions/synthetic_2026-11-20/shadow_module/PRE_DECLARATIONS_S1_NOTE.md",
-      "sha256": "af49a616a7b57c4ef23a693c155d022cd17817f66f5acafba4dc6798dedb65eb",
-      "bytes": 3023,
-      "label": "DECLARED",
-      "role": "binding controller note; c3/c4 reading"
-    },
-    {
-      "path": "10_massification/extensions/repro_path_2026-11-20/PRE_DECLARATIONS.md",
-      "sha256": "74f9d0e0ece9680eaba470f3979f5d1e6042d7851585962cb1cdf7d365b3db12",
-      "bytes": 21525,
-      "label": "DECLARED",
-      "role": "EXP-7 frozen spec (74f9d0e0...); kappa declaration"
-    },
-    {
-      "path": "10_massification/extensions/repro_path_2026-11-20/FINDINGS.md",
-      "sha256": "eb868567669e434282be68eaeec4138a7961a4485e767511f558a613cc45ab52",
-      "bytes": 12547,
-      "label": "SYNTHETIC",
-      "role": "ENDPOINT-ONLY + b2; pipeline must be built in"
-    },
-    {
-      "path": "10_massification/extensions/repro_path_2026-11-20/results/KAPPA_LINK.csv",
-      "sha256": "671962dc585bcc833215ecc22823fb46d26f65b8a181dd9a6d8aa96dfb6b1e38",
-      "bytes": 7991,
-      "label": "SYNTHETIC",
-      "role": "53 scored cells; 20/53 violations before, 0 after"
-    },
-    {
-      "path": "10_massification/data/UNIVERSALIZATION_SERIES.csv",
-      "sha256": "85bc869396ebfcb39e3e1a21a31af219e75a07326c738a51d2bfdbe536737ddb",
-      "bytes": 592750,
-      "label": "OBSERVED",
-      "role": "PHL completion/GER/OOS anchors; kappa pair provenance"
-    },
-    {
-      "path": "10_massification/data/STATE_CAPACITY.csv",
-      "sha256": "704efacad00f0ba7ddf579459a930d064fdb0f4b882cffbbf44a6cbecd585044",
-      "bytes": 641644,
-      "label": "OBSERVED",
-      "role": "PTR / students-per-classroom proxies; DATA BLOCKED rows 2-3"
-    },
-    {
-      "path": "10_massification/data/SCHOOL_EXPANSION.csv",
-      "sha256": "c218e6c9bd784e135e089ebecefec21112a09e6bf2c778599a33bc81b78c8ea3",
-      "bytes": 8749,
-      "label": "OBSERVED",
-      "role": "teacher/classroom context (read, not encoded)"
-    },
-    {
-      "path": "10_massification/data/POLICY_TIMELINE.csv",
-      "sha256": "a068b5bf92cee52e442231ef8de63e1b3814d1e42cd61b02969ccf1f3fb3353e",
-      "bytes": 4097,
-      "label": "OBSERVED",
-      "role": "K-12 2013 / free SHS 2016 policy facts"
-    },
-    {
-      "path": "10_massification/data/JOBS_AND_MARKETS_PANEL.csv",
-      "sha256": "aaaab2744803989ff0f347e27d5824c9b0086b967914d96d21ecd354329787d3",
-      "bytes": 2838863,
-      "label": "OBSERVED",
-      "role": "labour-market context (read, not encoded)"
-    },
-    {
-      "path": "09_relations/data/panel_wdi_long.csv",
-      "sha256": "a37629ae5d4f9ed2be4c71e33bfc876131880f65d356c88bd4d047a9bbdeae75",
-      "bytes": 2965833,
-      "label": "OBSERVED",
-      "role": "SE.PRM.PRIV.ZS / SE.SEC.PRIV.ZS private-share proxies"
-    },
-    {
-      "path": "08_council/DECISIONS.md",
-      "sha256": "6fdcf8eea440d4cc5e5d94ffc42d107d6788426a1a2b32d151575a338c203148",
-      "bytes": 118678,
-      "label": "DECLARED",
-      "role": "D117-D125 (D119, D121, D124, D125)"
-    },
-    {
-      "path": "08_council/brief_022/SYNTHESIS_022.md",
-      "sha256": "9508dd55be8dd64da8322a8277c8342a4f50be6790a3d287e39e7004537c109b",
-      "bytes": 49519,
-      "label": "DECLARED",
-      "role": "cycle-14 V1-V8 facts (V2, V3, V6, V8)"
-    }
-  ],
-  "verify_command": "cd /Users/treymenefee/massification_live/experiments/massification-2026-11-20 && shasum -a 256 -c 10_massification/extensions/synthetic_2026-11-20/generator_v1_5_bimodal/SHA256SUMS.txt",
-  "note": "Paths in SHA256SUMS.txt are relative to the programme root (massification-2026-11-20/), not to this directory."
+  "validation_scope_disclosure": "v1.3/v1.2 levels are a 2021-2024 placement: 9/33 within +/-5 pp (EXP-7 ENDPOINT-ONLY); median lower -29.44, upper -27.59 pp; 24-37 pp low before 2021; every level statement here is readable as a 2022-2024 placement only."
 }
