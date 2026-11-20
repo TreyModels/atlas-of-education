@@ -58,6 +58,22 @@ no "conflicted copy" names, and no `.icloud` placeholders. Actions taken:
   artifacts (listed in §1) plus the packaging guard and this STATUS file — all clean, all committed by this
   checkpoint. `07_logs/` is local-only (excluded from the experimental folder by design; included in the ZIP).
 
+## 3b. Council gate amendment + critical path (20 Nov, D13–D16)
+
+- **Amendment A1 (binding):** "reproduces universalization" = trajectory checks **and** classified scaling-exponent
+  reproduction out of sample (secondary GER~income +0.286 (0.045); tertiary +0.776 (0.086); lower-sec completion
+  logit law) with country-specific timing. Verdicts add **PASS-CONDITIONAL** (declared channel mixture) and
+  **IDENTIFIED** (E1 or the predeclared E2+E3 pair). **R13:** no direction claims from cross-country/panel moments —
+  report EQUIVALENT (model2 forced-ID 1.00). **R14:** scaling-exponent reproduction caps trajectory-only fits at
+  PARTIAL. **R15:** conditional reproductions must be labelled.
+- **Assignments (1-cycle deadlines):** exp2 → M2b (declared partial re-run vs landed relations data; resolve
+  lower-sec coefficient +0.84 vs +1.174) + M2c (E1-design recovery test on simulated two-shock data, predeclared);
+  exp1 → E2 (PH K-12 cohort exposure) + E3 (PH nurse-visa replication) predeclarations on observed `04_data` fallback;
+  data-hunter → D16 one-cycle partial jobs/markets + completion/sector panel with hash, else **DATA BLOCKED** recorded;
+  pattern-scout → `NEW:` for universalization fits with PAGE caveat, lead-lag labelled predictive-only, E6 constraint-only.
+- **E1 kill trigger:** if E2/E3 and M2c are not executing within one cycle, the programme reduces to conditional
+  reproduction + an equivalence result (Council step-back, `08_council/BIG_PICTURE.md`).
+
 ## 4. Next three actions for `repo-auditor`
 
 1. **Council gate:** get the Council's final `COUNCIL:` post for brief 013 (SUCCESS_CRITERIA + STOP_RULES are

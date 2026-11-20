@@ -73,3 +73,25 @@ FIT series and GER a CHECK. The structure smoke was re-run after this change: 0 
    and 2011–2024 held out. Ordering: (i) one-country (PHL) smoke fit to confirm the calibration machinery and
    out-of-sample machinery, (ii) PHL+CHN fit, (iii) rival comparison + equivalence/recovery, (iv) scaling exponents
    (generated vs supplied), (v) push-pull decomposition with the two-shock discriminating design.
+
+## I. Sector-data decision (Lead resolution, 2026-11-20; recorded before the fit)
+The Lead confirmed the flow/economy series exist from the previous phase and are observed-only with a per-row
+`status` (target / check / unresolved):
+- `04_data/TARGETS_FLOW.csv` (747 rows): completion primary/lower/upper, transition_to_tertiary, dropout,
+  repetition, out-of-school, formal/informal share, degree/upper-secondary employment share, wage premia.
+- `04_data/ECONOMY_SERIES.csv` (4,031 rows, 1995–2024): GDP p.c. (3 variants), sector + status employment,
+  urbanisation, remittances, unemployment/NEET/LFPR.
+- `04_data/TARGETS_SHADOW.csv` (13 rows): shadow education — secondary, not used here.
+**Decision applied:** the sector link is built from `ECONOMY_SERIES` sector/status shares as a **declared CHECK,
+not a fitted target**, because (i) those sector shares are WDI/ILO *modelled* series and brief 013 §6 excludes
+modelled series from targets, and (ii) the Lead's resolution designates them check-only for task-37. The "FIT
+(cohort-sector link)" row in brief 013 §2 is therefore executed as a check in this model; that deviation is
+recorded here rather than silently changed. If a country/series is missing or `unresolved`, the result is reported
+as **DATA BLOCKED** — never imputed.
+**Data-reality note (observed before fitting):** the completion targets are sparse. Distinct target years:
+PHL 12 (1999–2024), CHN 7 (2000–2020), KHM 19 (1996–2023), KOR 24 (2000–2023); HKG and JPN have no UIS completion
+rows (CHECK only). The predeclared 1980–2010 fit window therefore reduces, for PHL, to 1999–2010 (≈6–7 points per
+level) and the 2011–2024 holdout to ≈5–6 points per level. This is reported as a **thin-data limitation**, not
+worked around by imputation or by widening the window after seeing results.
+**New jobs panel / ILO-OECD tables (task-34)**: to be treated as the upgrade when they land; the sector check will be
+re-run against them and any change to a check reported.

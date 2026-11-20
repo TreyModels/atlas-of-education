@@ -1,0 +1,4 @@
+PHL demand_led: fit MAE 0.95 pp (n=16), hold MAE 4.84 pp (n=17), naive persistence 8.60, trend 4.35, sector check 19.96 pp
+PHL education_led: fit MAE 1.20 pp (n=16), hold MAE 5.40 pp (n=17), naive persistence 8.60, trend 4.35, sector check 2.47 pp
+PHL complementary: fit MAE 1.09 pp (n=16), hold MAE 6.08 pp (n=17), naive persistence 8.60, trend 4.35, sector check 12.77 pp
+wrote /Users/treymenefee/Library/Mobile Documents/com~apple~CloudDocs/Downloads/DeepSeek/massification_2026-11-20/10_massification/model/calib/calibration_table.csv
