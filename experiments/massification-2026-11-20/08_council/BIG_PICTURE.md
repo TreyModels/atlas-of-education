@@ -97,3 +97,15 @@ imputation as observation. E1 stays PARKED; direction claims EQUIVALENT.
 3. **One thread that most advances the model:** the **anchor model itself** (A1) — trajectory + scaling laws + milestone timing on PHL, with the state-push battery (A2) as the mechanism audition. Everything else is secondary until PHL works.
 4. **Drift check:** anchor focus is the anti-niche move; the risk now is data-first drift (endless web pulls). Time-box A8 to one week and feed directly into A1–A3. No target fitting; events exogenous (R21).
 5. **If only one thing mattered this week:** A1 anchor model + A2 state-push battery on PHL; drop portability and all other experiments until the anchor's trajectory/scaling/timing/event breaks are in.
+
+
+## Cycle 5 addendum 2 (asymmetry criterion)
+
+- **A6 adopted:** the anchor's discriminating signal is the milestone **asymmetry** — primary >=90 in 2017, lower-secondary
+  >=90 in 2024, upper-secondary never (75.0 by 2024), tertiary GER >=50 2024-25 (verified on disk). Anchor fit
+  1999-2013, holdout 2014-2024; single-curve fit = PARTIAL at most (R23); false top-level universalization = FAIL (R6).
+- **Rival order:** testable now = world-society timing, state-building step, demographic contrast, formal-model shapes;
+  design-only = human capital (PSA returns) and signalling/MMI (employer requirements) — explicit data asks to the user,
+  not placeholders.
+- **Report layer:** blocked sources (OECD/ILO/PSA) are not load-bearing; BEPER 2019 retrieved from public sources before
+  use; no citation of unread material.

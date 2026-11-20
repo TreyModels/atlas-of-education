@@ -1,0 +1,29 @@
+A3/A5 — PHL ANCHOR DEMAND-PULL + RIVAL COMPARISON (observed; A3b SIMULATED-labelled; no direction claim).
+
+A3a remittances -> schooling (log-log, NW lag2, controls log GDPpc + trend):
+  ger_tertiary                       beta   -0.213 (se 0.070) n=27 lead_placebo beta -0.090 (t 1.22)
+  ger_secondary                      beta   -0.018 (se 0.041) n=25 lead_placebo beta -0.126 (t 3.33)
+  ger_primary                        beta   +0.124 (se 0.052) n=26 lead_placebo beta +0.119 (t 2.11)
+
+A3b nurse-visa design expectation (SIMULATED ONLY; E3 DATA BLOCKED; no claim):
+  nursing            pre 1534 post 1831 -> +19.4%
+  placebo_edu        pre 2119 post 2028 -> -4.3%
+  placebo_business   pre 1907 post 1970 -> +3.3%
+
+A3c BPO regional growth: DATA BLOCKED (no regional/BPO series; PSA blocked) — not run, not claimed.
+
+A5 rivals fitted on PHL pre-2013, predicting 2013-2024 (observed only; no direction claim):
+  ger_secondary: best labour_queue MAE 2.81 | second HC MAE 3.16 | gap 0.36
+    labour_queue     MAE  2.81 RMSE  3.57 event-change obs +2.5 pred +9.2 err +6.7
+    HC               MAE  3.16 RMSE  3.80 event-change obs +2.5 pred +6.9 err +4.4
+    state_building   MAE  8.05 RMSE  8.92 event-change obs +2.5 pred +13.8 err +11.2
+    sectoral_demand  MAE  9.54 RMSE 10.46 event-change obs +2.5 pred -2.0 err -4.5
+    world_culture    MAE 33.08 RMSE 33.19 event-change obs +2.5 pred +7.7 err +5.2
+  ger_tertiary: best labour_queue MAE 4.37 | second HC MAE 7.80 | gap 3.43
+    labour_queue     MAE  4.37 RMSE  5.07 event-change obs +9.1 pred +6.6 err -2.5
+    HC               MAE  7.80 RMSE  9.55 event-change obs +9.1 pred +0.4 err -8.7
+    sectoral_demand  MAE  8.09 RMSE  9.70 event-change obs +9.1 pred -0.3 err -9.4
+    world_culture    MAE 18.46 RMSE 19.62 event-change obs +9.1 pred +2.9 err -6.2
+
+EQUIVALENT (R3) if best/second OOS MAE gap <=0.5pp and event-break gap <=0.5pp. No anchor-vs-rival claim (A1 pending).
+No direction claim (R13/EQUIVALENT); observed vs simulated labelled; no imputation. No git writes.

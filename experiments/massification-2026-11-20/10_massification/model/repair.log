@@ -1,1 +1,2 @@
 demand_led: PHL fit 7.43/hold 5.44; CHN fit 7.42/hold 4.14; exps sec -2.734 ter -0.319 comp +11.465 -> FAIL (signs 1/3, contained 0/3)
+education_led: PHL fit 6.47/hold 6.26; CHN fit 8.83/hold 8.72; exps sec -2.527 ter -1.317 comp +1.868 -> FAIL (signs 1/3, contained 0/3)

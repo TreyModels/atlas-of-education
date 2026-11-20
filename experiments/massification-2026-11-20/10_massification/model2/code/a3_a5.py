@@ -16,13 +16,15 @@ def load():
     p=u[u['iso3']=='PHL']; pj=j[j['iso3']=='PHL']
     def ser(ind):
         z=p[p['indicator']==ind][['year','value']].dropna().sort_values('year')
+        z['year']=z['year'].astype(int)
         return z.set_index('year')['value']
     out={k:ser(k) for k in ['ger_secondary','ger_tertiary','ger_primary','completion_upper_secondary']}
     def js(name):
-        z=pj[pj['indicator_name'].str.contains(name,case=False,na=False)][['year','value']].dropna().sort_values('year')
+        z=pj[pj['indicator_name'].str.contains(name,case=False,na=False,regex=False)][['year','value']].dropna().sort_values('year')
+        z['year']=z['year'].astype(int)
         return z.groupby('year')['value'].mean()
-    out['remit']=js('Personal remittances, received \\(% of GDP\\)')
-    out['gdppc']=js('GDP per capita \\(PPP')
+    out['remit']=js('remittances, received (% of GDP)')
+    out['gdppc']=js('GDP per capita, PPP')
     out['spend']=js('expenditure on education as a percentage of GDP')
     out['teachers_s']=js('Secondary education, teachers')
     out['services']=js('Employment in services')
@@ -100,7 +102,10 @@ def main():
     L=['A3/A5 — PHL ANCHOR DEMAND-PULL + RIVAL COMPARISON (observed; A3b SIMULATED-labelled; no direction claim).','',
        'A3a remittances -> schooling (log-log, NW lag2, controls log GDPpc + trend):']
     for _,r in A.iterrows():
-        L.append(f'  {r["outcome"]:34s} beta {r["beta"] if pd.notna(r["beta"]) else float("nan"):+8.3f} (se {r["se"] if pd.notna(r["se"]) else float("nan"):.3f}) n={r["n"]} lead_placebo beta {r["lead_beta"] if pd.notna(r["lead_beta"]) else float("nan"):+.3f} (t {abs(r["lead_beta"]/r["lead_se"]) if pd.notna(r["lead_se"]) and r["lead_se"]>0 else float("nan"):.2f})')
+        lb=r.get('lead_beta',float('nan')); ls=r.get('lead_se',float('nan'))
+        tstat=abs(lb/ls) if (pd.notna(lb) and pd.notna(ls) and ls>0) else float('nan')
+        bv=r.get('beta',float('nan')); sv=r.get('se',float('nan'))
+        L.append(f'  {r["outcome"]:34s} beta {bv if pd.notna(bv) else float("nan"):+8.3f} (se {sv if pd.notna(sv) else float("nan"):.3f}) n={int(r.get("n",0))} lead_placebo beta {lb if pd.notna(lb) else float("nan"):+.3f} (t {tstat:.2f})')
     L += ['','A3b nurse-visa design expectation (SIMULATED ONLY; E3 DATA BLOCKED; no claim):']
     for s in sim: L.append(f'  {s["field"]:18s} pre {s["pre_mean"]:.0f} post {s["post_mean"]:.0f} -> {s["pct_change"]:+.1f}%')
     L += ['','A3c BPO regional growth: DATA BLOCKED (no regional/BPO series; PSA blocked) — not run, not claimed.','',

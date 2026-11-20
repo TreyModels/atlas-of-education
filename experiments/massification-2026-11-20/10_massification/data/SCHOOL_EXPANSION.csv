@@ -1,0 +1,9 @@
+country,iso3,indicator,year,period,value,unit,status,definition,source,source_detail,confidence,retrieved_utc
+Philippines,PHL,pupil_teacher_ratio_high_school,2000,2000-2011,37,learners/teacher,observed,High-school pupil-teacher ratio (DepEd),PIDS 2025 ch.4 pp.97-98,text,high,2026-11-20T06:45:00Z
+Philippines,PHL,pupil_teacher_ratio_high_school,2014,2014,27,learners/teacher,observed,High-school PTR after hiring expansion,PIDS 2025 ch.4,text,high,2026-11-20T06:45:00Z
+Philippines,PHL,pupil_teacher_ratio_high_school,2017,2017,24,learners/teacher,observed,High-school PTR after hiring expansion,PIDS 2025 ch.4,text,high,2026-11-20T06:45:00Z
+Philippines,PHL,teachers_hired_kindergarten_elementary,2016,2012-2016,200000,persons (approx.),check,"DepEd hiring during K-12 rollout (approx. 200,000)",PIDS 2025 ch.4 p.97,text approximation,medium,2026-11-20T06:45:00Z
+Philippines,PHL,teachers_hired_senior_high_school,2016,2012-2016,40000,persons (approx.),check,"DepEd SHS hiring during K-12 rollout ('nearly 40,000')",PIDS 2025 ch.4 p.97,text approximation,medium,2026-11-20T06:45:00Z
+Philippines,PHL,number_of_public_schools,,,,,unable,DepEd school counts not retrievable: deped.gov.ph HTTP 403; PSA 403; no public table located this pass,,,,2026-11-20T06:45:00Z
+Philippines,PHL,number_of_classrooms,,,,,unable,DepEd/DPWH classroom counts not retrievable: deped.gov.ph HTTP 403; DPWH page not probed,,,,2026-11-20T06:45:00Z
+Philippines,PHL,teacher_count_by_level_series,,,,,unable,PIDS 2025 Figure 1 (p.98) plots DepEd teacher counts 2002-2019 but the values are graphical only; underlying DepEd table blocked (403),,,,2026-11-20T06:45:00Z

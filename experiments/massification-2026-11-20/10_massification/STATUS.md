@@ -192,6 +192,36 @@ directive (A4/R19) are retained.
   2018 free tuition / 4Ps), alternatives Korea (near-universal timing, little mechanism room) and China (scale,
   weaker subnational data).
 
+## 3g. Council A6 adopted — anchor signal is ASYMMETRY (D47–D49; A6; R23)
+
+- **A6 milestone asymmetry (verified on disk):** PHL completion primary 83.16 (1999) → ≥90 in **2017** (91.92) →
+  98.30 (2024); lower-secondary 58.86 → ≥90 in **2024** (92.41); upper-secondary 59.70 → 75.03 (2024) **never ≥90**;
+  tertiary GER ≥50 in **2024–25**. The anchor model must reproduce **which milestone moved and when (ordering/gaps,
+  ±5 y / ±3 y)**; a single universalization curve is **PARTIAL at most (R23)**; generating top-level universalization
+  the record does not show is a **false-positive failure (R6)**. **Anchor fit 1999–2013, holdout 2014–2024**
+  (supersedes the 1999–2010 smoke window for the anchor). Rivals are scored on ordering/gaps, not levels.
+- **D48 rival testability split:** testable now (in order) world-society timing, state-building step,
+  demographic/cohort contrast, formal-model shapes; **design-only** human capital (PSA returns by education) and
+  signalling/MMI (Enterprise Surveys credential/skills module) — listed in every results file, never silently
+  dropped, never modelled as if tested.
+- **D49 report-layer rule:** anchor claims rest on observed on-disk evidence; blocked sources (OECD/ILO/PSA) are not
+  load-bearing; UNREAD docs (BEPER 2019) must be retrieved from public sources before use; no citation of unread
+  material.
+- **Enforcement:** exp1 must fold A6 into the anchor predeclaration before fitting; exp2 runs the four testable
+  rivals on the same PHL record/events with the two design-only rivals explicitly listed.
+
+## 3h. DATA ASKS — AWAITING USER APPROVAL (do not send)
+
+Two external requests are drafted and held; per protocol, external data requests need the user's approval and
+**nothing has been sent**. Drafts: `06_report/access_requests/01_PSA_PHILIPPINES.md`,
+`06_report/access_requests/03_WB_ENTERPRISE_SURVEYS.md`.
+1. **PSA Philippines microdata** — FIES / APIS / LFS (returns by education, education expenditure, formal/informal
+   transitions); the 403 route. Status: **AWAITING USER APPROVAL**.
+2. **World Bank Enterprise Surveys credential/skills module** (PHL 2015/2023, KHM 2016) + establishment census.
+   Status: **AWAITING USER APPROVAL**.
+   Public retrieval is authorised: BEPER 2019 must be retrieved from public sources and logged before any citation
+   (D49); the ILO/OECD/PSA 403s remain recorded as blocks. Op centre requested to surface both to the user.
+
 ## 4. Next three actions for `repo-auditor`
 
 1. **Council gate:** get the Council's final `COUNCIL:` post for brief 013 (SUCCESS_CRITERIA + STOP_RULES are
