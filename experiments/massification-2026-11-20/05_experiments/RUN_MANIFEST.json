@@ -425,7 +425,10 @@
   "E0_smoke_triad": "cd code/triad && \"$PY\" run_triad.py emergence --quick --workers 1",
   "C1": "PYTHONPATH=code/massabm MASSRUN_EXP=code/exp \"$PY\" code/exp/run_C1.py --N 2000 --out runs/C1",
   "C2": "MASSRUN_EXP=code/exp \"$PY\" code/exp/run_C2.py --out runs/C2",
-  "C3_NOT_RUN": "PYTHONPATH=code/massabm MASSRUN_EXP=code/exp \"$PY\" code/exp/run_C3.py --draws 96 --best 6 --N 2000 --Nfine 4000 --out runs/C3"
+  "C3_NOT_RUN": "PYTHONPATH=code/massabm MASSRUN_EXP=code/exp \"$PY\" code/exp/run_C3.py --draws 96 --best 6 --N 2000 --Nfine 4000 --out runs/C3",
+  "C3": "PYTHONPATH=code/massabm MASSRUN_EXP=code/exp \"$PY\" code/exp/run_C3.py --draws 96 --best 6 --N 2000 --Nfine 4000 --out runs/C3",
+  "LOOP2_cal": "PYTHONPATH=code/ext_massabm:loop2 MASSRUN_EXP=code/exp \"$PY\" loop2/calibrate2.py --draws 24 --N 2000 --Nfine 3000 --out loop2",
+  "LOOP2_ledger": "PYTHONPATH=code/ext_massabm:loop2 MASSRUN_EXP=code/exp \"$PY\" loop2/ledger.py --N 2500 --out loop2"
  },
  "compute": {
   "workers_max": 2,
@@ -472,6 +475,18 @@
    "C2": "completed; schooling supplied, formal jobs not supplied by schooling; runs/C2/",
    "C3": "IN PROGRESS - not completed, not claimed; design + runner + next command in runs/C_STATUS.md",
    "status_file": "runs/C_STATUS.md"
+  },
+  "task-12 (iteration 2 / brief 004)": {
+   "C3": "completed; calibration residuals in runs/C3/",
+   "country_configs": "COUNTRY_CONFIGS.md; every parameter labelled sourced/estimated/fitted/assumed",
+   "calibration_loop": "completed: CALIBRATION_TABLE.csv (fit/check labelled, predicted signs), held-out 2011-2024, HKG untouched, 2 real-data check-only moments",
+   "freeze_both": "completed: freeze_both.csv; verdict = the two-way claim is largely a schedule",
+   "cohort_ledger": "completed: cohort_ledger_annual.csv + cohort_horizon_table.csv + balance_checks.csv (exact balance)",
+   "data_blocked": [
+    "shadow-education targets (02_lit/SHADOW_TARGETS.csv, 04_data/TARGETS_SHADOW.csv not landed)",
+    "wage-premium dynamics (no observed wage series)"
+   ],
+   "provider_module": "provider supply/entry + teacher-tutor capacity added to code/ext_massabm (brief 004 recommended structural variable); shadow take-up never fitted"
   }
  }
 }

@@ -1,0 +1,42 @@
+{
+ "fit_iso": [
+  "PHL",
+  "KHM",
+  "CHN"
+ ],
+ "untouched": "HKG",
+ "draws": 24,
+ "N": 2000,
+ "Nfine": 3000,
+ "best": {
+  "PHL": {
+   "z": {
+    "cost_col": 0.573012846750278,
+    "prov_capacity": 0.4037205298384015,
+    "teacher_capacity": 0.08237097111931437,
+    "prov_elasticity": 1.2502432325102368
+   },
+   "tot": 12.515252907078517
+  },
+  "KHM": {
+   "z": {
+    "cost_col": 0.7001532225352797,
+    "prov_capacity": 0.09788036515966564,
+    "teacher_capacity": 0.4711242131247162,
+    "prov_elasticity": 2.388980567315766
+   },
+   "tot": 31.34481274555339
+  },
+  "CHN": {
+   "z": {
+    "cost_col": 0.771427886365329,
+    "prov_capacity": 0.4886388004382477,
+    "teacher_capacity": 0.21339834595570725,
+    "prov_elasticity": 1.5036933713419203
+   },
+   "tot": 16.281686826074296
+  }
+ },
+ "wall": 145.8253390789032,
+ "amendments": "Council brief 004"
+}

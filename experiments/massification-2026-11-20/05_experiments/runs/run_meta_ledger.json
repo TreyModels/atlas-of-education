@@ -1,0 +1,55 @@
+{
+ "N": 2500,
+ "wall": 9.814645051956177,
+ "horizon": [
+  1980,
+  1990,
+  2000,
+  2010,
+  2020,
+  2030,
+  2040
+ ],
+ "checks": [
+  {
+   "iso": "PHL",
+   "b1_max_abs_identity_error": 0.0,
+   "b1_negative_exit_years": 0,
+   "b2_max_cohort_conservation_error": 0.0,
+   "b3_violations": "none",
+   "entrants_total": 302500.0,
+   "exits_total": 273026.0,
+   "stock_2040": 29474.0
+  },
+  {
+   "iso": "KHM",
+   "b1_max_abs_identity_error": 0.0,
+   "b1_negative_exit_years": 0,
+   "b2_max_cohort_conservation_error": 0.0,
+   "b3_violations": "none",
+   "entrants_total": 302500.0,
+   "exits_total": 276641.0,
+   "stock_2040": 25859.0
+  },
+  {
+   "iso": "HKG",
+   "b1_max_abs_identity_error": 0.0,
+   "b1_negative_exit_years": 0,
+   "b2_max_cohort_conservation_error": 0.0,
+   "b3_violations": "none",
+   "entrants_total": 302500.0,
+   "exits_total": 273356.0,
+   "stock_2040": 29144.0
+  },
+  {
+   "iso": "CHN",
+   "b1_max_abs_identity_error": 0.0,
+   "b1_negative_exit_years": 0,
+   "b2_max_cohort_conservation_error": 0.0,
+   "b3_violations": "none",
+   "entrants_total": 302500.0,
+   "exits_total": 273121.0,
+   "stock_2040": 29379.0
+  }
+ ]
+}

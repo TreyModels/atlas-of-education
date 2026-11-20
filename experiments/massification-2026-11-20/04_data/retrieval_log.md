@@ -157,3 +157,20 @@ Task-11: build `TARGETS_SHADOW.csv`, `TARGETS_FLOW.csv`, `ECONOMY_SERIES.csv`, `
 | Transition / repetition / dropout / wage premium | **Not available** in UIS SDG4 bulk or WDI; UIS core education indicators are API-key only. Unresolved rows. |
 
 **Outcome:** 747 flow rows (540 target, 172 check, 35 unresolved), 13 shadow rows (7 HK student-participation targets covering 1996 and 2010 stage-by-stage; 1 HK parent-level check; 5 unresolved country placeholders for PHL, KHM, CHN, KOR, JPN), 4,031 economy rows. Matrix and the "calibratable vs check vs unusable" split in `TARGETS_README.md`.
+
+## 12. Shadow-education gap closure (task-16, 2026-11-20 13:15–13:45 HKT)
+
+| Attempt | Result |
+|---|---|
+| Korea MODS/KEDI 2023 press release (`mods.go.kr` board page) | HTTP 200 but body is navigation only; found the attachment endpoint `boardDownload.es?bid=11758&list_no=430448&seq=2` → **HTTP 200, 1,358,684-byte PDF**, English release with tables. **Used.** |
+| KEDI 2011 "90%" release | **Not retrieved.** KEDI site not queried directly (Korean-only pages, no stable English release); Wayback closest KEDI capture is 2026. The 2011 figure therefore remains an untraced assumption; 2023 = 78.5% is the traceable anchor. |
+| Japan MEXT (`mext.go.jp`) | **HTTP 000** (DNS-level failure, same class as nis.gov.kh). WayBack not attempted for the expenditure survey PDFs; e-Stat (`e-stat.go.jp`) HTTP 200 but API needs an application ID. **Japan fee series unresolved.** |
+| Rappleye & Komatsu (2020) EPAA | HTTP 200, 623,299-byte PDF, open access. **Used** for the grade-6 prefecture table (mean 41.8%, range 22.1–57.9) and the OECD/MEXT 2007 national figures. |
+| Bray & Kwok (2003) HKU-hosted PDF | HTTP 200, 103,885-byte PDF. **Used** for HK 1998/99 participation by stage (35.1/46.6/70.3/48.8), provider mix (mass-lecture 72.4%/33.0%), fees and duration. |
+| Brehm & Silova (2013 WP39, 2014 JERO) | Author site `willbrehm.com` HTTP 200 for both PDFs. **Used** for the Cambodia case study (one district, 6 schools, 444 students). `pedocs.de` frontdoor returned HTTP 000 (DNS) — author mirror used instead. |
+| China: Liu & Bray (2020) | `eric.ed.gov` HTTP 200; **abstract** carries the 2014 national rate (29.8%). Underlying survey table not retrieved. |
+| China: post-2021 | `jyb.cn` article HTTP 200 but body JavaScript-rendered; **only the headline** ("超八成受访学生未参加校外学科培训", >80% not attending) recovered. Confidence low. |
+| Philippines | PSA HTTP 403 (all paths); `data.gov.ph` Angular SPA, no CKAN API; PIDS search JS-only; World Bank microdata catalog reachable but studies credentialed. **Nothing retrieved; recorded as blocked, not guessed.** |
+| CFPS/CEPS microdata | **Access request not made** (needs registration + application). Recorded in SHADOW_DATA.md as the route if the loop wants China microdata. |
+
+**Outcome:** 38 incidence rows and 20 fee rows in `shadow_round2/data/`; three country rows upgraded to high confidence (Korea participation/hours, Japan grade-6 prefecture attendance), four to medium, four Cambodian cells to medium-low with case-study scope stated; HK 2003 anchor added; Philippines remains blocked and the Korean 2011 figure remains untraced.

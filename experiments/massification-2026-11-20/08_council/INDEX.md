@@ -31,26 +31,24 @@ by being resolved (established or abandoned), not by being restated.
 | Liquidity and memory drive the dynamics | 002 | **CLOSED (003): near-mechanical**; report as sensitivity | none further |
 | Four-country comparison from E19 | 002 | **CLOSED (003): withdrawn**; PH levels only, no shape/validation; HK blocked | PH calibration + holdout if revived |
 
-## Pending brief 005 — iteration-2 results (HOLD until the Lead's signal)
+## Loop 3 / PENDING brief 006 — stop-rule adjudication (NO ACTION until the Lead's signal)
 
-Do not review from memory. Required on disk before the panel convenes:
-`02_lit/COUNTRY_CARDS/`; `02_lit/SHADOW_TARGETS.csv`; `04_data/TARGETS_SHADOW.csv` + `TARGETS_FLOW.csv`;
-`05_experiments/loop2/CALIBRATION_TABLE.csv` + cohort ledger; `05b_experiments/loop2/` (two-way decomposition +
-take-up table).
+**Status (recorded 2026-11-20 13:2x, from the Lead's message; loop-3 artifacts not yet reviewed):**
+- S1 stage-matched shadow check: **FAIL — 3/3 assessable countries outside the predeclared range.**
+- S2 structural-parameter search: **none reproduces PHL 46.5.**
+- S3 price/entry calibration: **UNABLE** (no usable price moment).
+- The loop's **stop rule 1 has fired**: the programme must stop claiming shadow-education incidence.
 
-Additional 005 tests (per Lead, 2026-11-20 13:11):
-1. **Restatement test** — judge explicitly whether any literature target was coded as a parameter (the loop's stop
-   rule 5). For each target: was the matched rate generated, or set? Cite the fitted parameter table row.
-2. **Standard 005 questions** — shadow education where the literature says (stage/provider/country); cohort-flow
-   consistency; two-way feedback identified or imposed (freeze-both); sign-off or amendments.
-3. **Next 3 experiments** with arms / estimand / threshold / cost (as in briefs 002–003).
+**Brief 006 (when signalled):** adjudicate the stop-rule event; name the publishable object now — (i) method +
+negative map, (ii) provider economics, or (iii) data-first measurement paper — and set the iteration-3 design and
+report language accordingly. Read loop-3 artifacts from disk only; mark absent layers UNABLE TO ASSESS; no review
+from memory.
 
-Missing or mid-write artifacts are marked `UNABLE TO ASSESS`, never inferred.
-
-
-| Shadow incidence matches the literature | 005 | **Failed restatement test**: 1 of 11 fitted (HK 0.85); PH/KHM over-universalised (0.88–0.89) | stage-matched check table; disclosure |
-| Two-way education–economy feedback | 005 | **Asymmetric**: education→economy 3–4% (schedule); economy→education genuine + 20–40% shadow residual (upper bound) | response-elasticity moments + recovery |
-| Cohort flows consistent | 005 | **UNABLE TO ASSESS** (runner-1 ledger pending); internal misses PH −8.9 pp, KHM +9.9 pp | ledger lands, then conservation checks |
+**Bridge correction (Lead, same message):** use the wrapper, not the raw CLI —
+`cd /Users/treymenefee/.../DeepSeek && ATLAS_PARTY=deepseek-council ./bridge-agent.sh post "Subject" "Body"` (and
+`attach ./path "note"`); it prints BRIDGE OK / BRIDGE FAIL and verifies the write. Party is **deepseek-council**.
+Previous council verdicts (briefs 003/004/005) were posted under `deepseek-research` before the per-agent slug fix;
+append-only, left as posted; a one-line signpost can be posted under the correct party if the Lead wants it.
 
 ## Cycle log
 

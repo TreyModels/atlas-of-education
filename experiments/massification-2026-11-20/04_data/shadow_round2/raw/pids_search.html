@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="en-US" class="">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>PIDS - Philippine Institute for Development Studies</title>
+    <meta name="csrf-param" content="_csrf-frontend">
+<meta name="csrf-token" content="H-FC2khQZt38kljooqrJg3cj6jgQqnfaXNFjIpckuhd0tCaOKzU5qo_XKqnFzb23PU-ID1rELZI9t1FUxX7zcw==">
+
+<link href="/assets/268c1043/css/bootstrap.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/themes/base/jquery-ui.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/css/bootstrap4-toggle.min.css" rel="stylesheet">
+<link href="/assets/c7cfdbbe/css/normalize.css" rel="stylesheet">
+<link href="/assets/c7cfdbbe/css/pids.css" rel="stylesheet">
+<link href="/assets/c7cfdbbe/css/fixes.css" rel="stylesheet">
+<script src="/assets/87e2e873/jquery.js"></script>
+<script src="/assets/b9b898b0/yii.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+<script src="/assets/c7cfdbbe/js/mobilemenu.js"></script>
+    <!-- Twitter Share -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@Mysite">
+    <meta name="twitter:creator" content="@mytwitterhandle">
+
+    <!-- Facebook/LinkedIn Share -->
+    <meta property="og:type" content="website" />
+
+</head>
+
+<body>
+    
+    <header id="header">
+        <div id="top-nav" class="container-fluid bg-color-dark-grey">
+            <div class="grid">
+                <div class="block">
+                    <div class="left-menu block-50">
+                        <ul class="display-flex">
+                           <li><a href="https://www.gov.ph/" class="text-color-light-grey">GOV.PH</a></li>
+                            <li><a href="/transparency-seal" class="text-color-light-grey">Transparency Seal</a></li>
+                            <li><a href="https://pids.gov.ph/content/public/preview?slug=citizen-s-charter&access_token=6600fb1185bcd" class="text-color-light-grey">Citizen's Charter</a></li>
+                        </ul>
+                    </div>
+                    <div class="right-menu block-50">
+                        <ul class="display-flex text-align-right">
+                            <li class="main-menu-item">
+                                <a href="/about-us" class="text-color-light-grey">About Us</a>
+                                <div class="sub-menu">
+                                    <ul class="sub-menu-links">
+                                        <li><a href="/vision-mission-and-quality-policy">PIDS Vision, Mission and Quality Policy</a></li>
+                                        <li><a href="/details/pids-strategic-plan-2026-2030">Strategic Plan 2026-2030</a></li>
+                                        <li><a href="/organizational-structure">Organizational Structure</a></li>
+                                        <li><a href="/directory">Directory</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li><a href="/networks" class="text-color-light-grey">Networks</a></li>
+                            <li class="main-menu-item">
+                                <a href="/opportunities" class="text-color-light-grey">Opportunities</a>
+                                <div class="sub-menu">
+                                    <ul class="sub-menu-links">
+                                        <li><a href="/bid-announcements">Bid Announcements</a></li>
+                                        <li><a href="/employment">Employment</a></li>
+                                    </ul>
+                                </div>
+
+                            </li>
+                            <li><a href="/site-statistics" class="text-color-light-grey">Site Statistics</a></li>
+                            <li><a href="/privacy-notice" class="text-color-light-grey">Privacy Notice</a></li>
+                            <li class="search"><a href="/site/search" class="text-color-light-grey"><i class="fas fa-search"></i> Search</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="primary-nav" class="container-fluid">
+            <div class="grid">
+                <div class="block">
+                    <a href="/" class="block-30"><img src='/assets/c7cfdbbe/img/ui/PIDS-logo-fullnew.png' class="logo-with-text"></a>
+
+                    <div id="mobile-menu" class="block-70">
+                        <div class="mobile-menu-icon text-align-right">
+                            <div id="mobilemenu-icon" class="icon" onclick="showMenu()">
+                                <span class="first"></span>
+                                <span class="second"></span>
+                                <span class="third"></span>
+                                <span class="fourth"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="menu" class="block-70">
+                        <ul class="display-flex text-align-right">
+                            <li class="main-menu-item">
+                                <a href='/research' class="menu-hover text-color-dark-grey">Research </a>
+                                <div class="sub-menu">
+                                    <ul class="sub-menu-links">
+                                        <li><a href='/research-agenda'>Research Agenda</a></li>
+                                        <li><a href='/research' style="">Research Projects</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="main-menu-item">
+                                <a href='/publications' class="menu-hover text-color-dark-grey">Publications </i></a>
+                                <div class="sub-menu">
+                                    <ul class="sub-menu-links">
+                                        <li><a href="/publications/category/books">Books</a></li>
+                                        <li><a href="/publications/category/research-paper-series">Research Paper Series</a></li>
+
+                                        <li class="collapse-container">
+                                            <a href="#" class="collapsible">Philippine Journal of Development <span><i class="fas fa-caret-down"></i></span></a>
+                                            <div class="collapse-content">
+                                                <hr>
+                                                <p><a href="/details/guidelines-in-the-preparation-of-articles">Guidelines in Preparation of Articles</a></p>
+                                                <p><a href="/details/editorial-board">Editorial Board</a></p>
+                                                <p><a href="/content/publication/index-pjd">List of All Issues</a></p>
+                                                <p><a href="/details/disclaimer-and-permissions">Disclaimer and Permissions</a></p>
+                                                <p><a href="/details/pjd-inquiries">Inquiries and Submissions</a></p>
+                                                <p><a href="/details/subcribe">Subscription</a></p>
+                                                <hr>
+                                            </div>
+                                        </li>
+
+                                        <li><a href="/publications/category/economic-policy-monitor">Economic Policy Monitor</a></li>
+                                        <li><a href="/publications/category/discussion-papers">Discussion Paper Series</a></li>
+                                        <li><a href="/publications/category/policy-notes">Policy Notes</a></li>
+                                        <li><a href="/publications/category/development-research-news">Development Research News</a></li>
+                                        <li><a href="/publications/category/policy-pulse">Policy Pulse</a></li>
+                                        <li><a href="/publications/category/proceedings">Proceedings</a></li>
+                                        <li><a href="/publications/category/economic-issue-of-the-day">Economic Issue of the Day</a></li>
+                                        <li><a href="/publications/category/annual-reports">Annual Reports</a></li>
+                                        <li><a href="/publications/category/special-publications">Special Publications</a></li>
+                                        <li class="collapse-container">
+                                            <a href="#" class="collapsible">Archived Publications <span><i class="fas fa-caret-down"></i></span></a>
+                                            <div class="collapse-content">
+                                                <hr>
+                                                <p><a href="/content/public/search-contenttype?contenttype=publication&category=working-papers">Working Papers</a></p>
+                                                <p><a href="/content/public/search-contenttype?contenttype=publication&category=monograph-series">Monograph Series</a></p>
+                                                <p><a href="/content/public/search-contenttype?contenttype=publication&category=staff-papers">Staff Papers</a></p>
+                                                <p><a href="/content/public/search-contenttype?contenttype=publication&category=economic-outlook-series">Economic Outlook Series</a></p>
+                                                <p><a href="/content/publication/index-archive">List of All Archived Publications</a></p>
+                                                <hr>
+                                            </div>
+                                        </li>
+                                        <!-- hide other publications <li><a href="/publications/category/other-publications-by-pids-staff">Other Publications by PIDS Staff</a></li> -->
+                                        <li><a href="/details/how-to-order-publications">How to Order Publications</a></li>
+                                        <li><a href="https://forms.office.com/pages/responsepage.aspx?id=r0o1yMXs90-VkN_E98HzYbdZoJA7Bp1DkUjWgNL4UFVUQ08xM05aTjU3MFRDRVJLSFY2RkxMNTMzSy4u" target="_blank">Rate Our Publications</a></li>
+
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="main-menu-item"><a href="/events" class="menu-hover text-color-dark-grey">Events </a></li>
+                            <li class="main-menu-item">
+                                <a href='/news' class="menu-hover text-color-dark-grey">News</a>
+                                <div class="sub-menu">
+                                    <ul class="sub-menu-links">
+                                        <li><a href="/content/public/search-contenttype?contenttype=news&category=press-releases">Press Releases</a></li>
+                                        <li><a href="/content/public/search-contenttype?contenttype=news&category=in-the-news">PIDS in the News</a></li>
+                                        <li><a href="/content/public/index-custom?view=news%2Findex-pids-updates&category=news">PIDS Updates</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="main-menu-item top-level">
+                                <a href='/legislative-inputs' class="menu-hover text-color-dark-grey">Legislative Inputs</a>
+                                                            </li>
+                            <li class="main-menu-item">
+                                <a href='/databases' class="menu-hover text-color-dark-grey">Databases </a>
+                                <div class="sub-menu">
+                                    <ul class="sub-menu-links">
+                                        <li class="collapse-container">
+                                            <a href="http://seis.pids.gov.ph/">Economic and Social Database </a> <span class="collapsible collapsible-caret"><i class="fas fa-caret-down"></i></span>
+                                            <div class="collapse-content">
+                                                <hr>
+                                                <p><a href="/content/public/index-contenttype?contenttype=database">Database Updates</a></p>
+                                                <hr>
+                                            </div>
+                                        </li>
+                                        
+                                        <li><a href="https://serp-p.pids.gov.ph/">Socioeconomic Research Portal for the Philippines</a></li>
+                                        <li><a href="https://hefp.pids.gov.ph/">Health Economics and Finance Program</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="main-menu-item">
+                                <a href='/resources' class="menu-hover text-color-dark-grey">Resources </a>
+                                <div class="sub-menu">
+                                    <ul class="sub-menu-links">
+                                        <li><a href="/content/public/index-custom?view=resource%2Findex-infographics">Infographics</a></li>
+                                        <li><a href="/content/public/index-custom?view=resource%2Findex-photos">Photos</a></li>
+                                        <li><a href="/videos">Videos</a></li>
+                                        <li><a href="https://library.pids.gov.ph">PIDS Library</a></li>
+                                        <li><a href="/pids-corners">PIDS Corners</a></li>
+                                        <!-- <li class="collapse-container"> -->
+                                            <!-- <a href="#" class="collapsible">Knowledge Materials <span><i class="fas fa-caret-down"></i></span></a>
+                                            <div class="collapse-content"> 
+                                                <hr>-->
+                                                
+                                                <!-- <p><a href="/content/public/index-custom?view=resource%2Findex-photos">Photos</a></p>
+                                                <p><a href="/videos">Videos</a></p>
+                                                <p><a href="/content/public/index-custom?view=resource%2Findex-infographics">Infographics</a></p>
+                                                <hr> -->
+                                            <!-- </div> -->
+                                        </li>
+                                        <!-- 
+                                    <li><a href="/content/public/search-contenttype?contenttype=resource&category=info-graphics-fact-friday">Infographics - Fact Friday</a></li>
+                                    <li><a href="/content/public/search-contenttype?contenttype=resource&category=infographics-infobits">Infographics - Infobits</a></li>                                
+                                    -->
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class=""><a href='/contact-us' class="menu-cta btn btn-primary">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+
+    <!--Main Content-->
+    <main>
+        
+<main class="index-v1">
+    <section class="page-header">
+        <div class="container">
+            <nav aria-label="breadcrumb"><ol id="w0" class="breadcrumb"><li class="breadcrumb-item"><a href="/">Home</a></li>
+<li class="breadcrumb-item"><a href="/publications?search=tutoring"></a></li>
+</ol></nav>            <h1 class="page-title"> Publications </h1>
+        </div>
+    </section>
+
+    <div class="container section-detail">
+        <div class="grid">
+            <h3 class="bold">Quick Links</h3>
+            <div class="quick-links-wrapper block block-four-cols display-flex">
+                <div class="quick-links"><a href="/publications/category/books" class="text-color-dark-brown">Books</a></div>
+                <div class="quick-links"><a href="/publications/category/research-paper-series" class="text-color-dark-brown">Research Paper Series</a></div>
+                <div class="quick-links"><a href="/content/publication/index-pjd" class="text-color-dark-brown">Philippine Journal of Development</a></div>
+                <div class="quick-links"><a href="/publications/category/economic-policy-monitor" class="text-color-dark-brown">Economic Policy Monitor</a></div>
+                <div class="quick-links"><a href="/publications/category/discussion-papers" class="text-color-dark-brown">Discussion Paper Series</a></div>
+                <div class="quick-links"><a href="/publications/category/policy-notes" class="text-color-dark-brown">Policy Notes</a></div>
+                <div class="quick-links"><a href="/publications/category/development-research-news" class="text-color-dark-brown">Development Research News</a></div>
+                <div class="quick-links"><a href="/publications/category/policy-pulse" class="text-color-dark-brown">Policy Pulse</a></div>
+                <div class="quick-links"><a href="/publications/category/proceedings" class="text-color-dark-brown">Proceedings</a></div>
+                <div class="quick-links"><a href="/publications/category/economic-issue-of-the-day" class="text-color-dark-brown">Economic Issue of the Day</a></div>
+                <div class="quick-links"><a href="/publications/category/annual-reports" class="text-color-dark-brown">Annual Reports</a></div>
+                <div class="quick-links"><a href="/publications/category/special-publications" class="text-color-dark-brown">Special Publications</a></div>
+                <div class="quick-links"><a href="/content/publication/index-archive" class="text-color-dark-brown">Archived Publications</a></div>
+                <div></div>
+            </div>
+
+            <div class="margin-bottom-50">
+                <hr>
+                <a href="/details/how-to-order-publications" class="btn btn-secondary mr-4">How to order publications</a>
+                <a href="https://forms.office.com/pages/responsepage.aspx?id=r0o1yMXs90-VkN_E98HzYbdZoJA7Bp1DkUjWgNL4UFVUQ08xM05aTjU3MFRDRVJLSFY2RkxMNTMzSy4u" target="_blank" class="btn btn-secondary">Rate our publications</a>
+            </div>
+
+            <h3 class="bold">All Publications</h3>
+            <p class="filter-description">What are you looking for? Refine results by category, focus area, or year of publication.</p>
+
+            <br>
+            <form id="w1" action="/publications" method="get">            <div class="filter display-flex">
+                <div class="custom-input-select">
+                    <div class="form-group field-publicationsearch-filter_title_keywords">
+<label for="publicationsearch-filter_title_keywords">Title or Keyword</label>
+<input type="text" id="publicationsearch-filter_title_keywords" class="form-control" name="PublicationSearch[filter_title_keywords]" placeholder="Enter keywords (e.g. Digital Health)">
+
+<div class="invalid-feedback"></div>
+</div>                </div>
+                <div class="custom-input-select">
+                    <div class="form-group field-publicationsearch-filter_author">
+<label for="publicationsearch-filter_author">Author</label>
+<input type="text" id="publicationsearch-filter_author" class="form-control" name="PublicationSearch[filter_author]" placeholder="Enter Author">
+
+<div class="invalid-feedback"></div>
+</div>                </div>
+                <div class="custom-input-select">
+                    <div class="form-group field-publicationsearch-filter_category_id">
+<label for="publicationsearch-filter_category_id">Category</label>
+<select id="publicationsearch-filter_category_id" class="form-control" name="PublicationSearch[filter_category_id]">
+<option value="">- Select Category -</option>
+<option value="20">Policy Notes</option>
+<option value="21">Development Research News</option>
+<option value="22">Economic Issue of the Day</option>
+<option value="23">Discussion Papers</option>
+<option value="24">Philippine Journal of Development</option>
+<option value="25">Research Paper Series</option>
+<option value="26">Books</option>
+<option value="27">Economic Policy Monitor</option>
+<option value="28">Annual Reports</option>
+<option value="29">Special Publications</option>
+<option value="45">Monograph Series</option>
+<option value="46">Working Papers</option>
+<option value="47">Staff Papers</option>
+<option value="48">Economic Outlook Series</option>
+<option value="57">Policy Pulse</option>
+<option value="59">Proceedings</option>
+</select>
+
+<div class="invalid-feedback"></div>
+</div>                </div>
+                <div class="custom-input-select">
+                    <div class="form-group field-publicationsearch-filter_tag_id">
+<label for="publicationsearch-filter_tag_id">Focus Area</label>
+<select id="publicationsearch-filter_tag_id" class="form-control" name="PublicationSearch[filter_tag_id]">
+<option value="">- Select Focus Area -</option>
+<option value="1">Agriculture</option>
+<option value="2">Banking and Finance</option>
+<option value="3">Economic Outlook</option>
+<option value="4">Environment and Natural Resources</option>
+<option value="5">Fiscal Policy and Taxation</option>
+<option value="6">Governance</option>
+<option value="7">Health</option>
+<option value="8">Infrastructure Transportation and Communication</option>
+<option value="9">International Relations and Foreign Policy</option>
+<option value="10">Labor and Education</option>
+<option value="11">Poverty</option>
+<option value="12">Technology and Innovation</option>
+<option value="13">Trade and Industry</option>
+<option value="14">Urban Development and Housing</option>
+<option value="15">Climate Change</option>
+<option value="16">Corporate Events</option>
+<option value="17">Gender and Development</option>
+<option value="18">Land Reform and Property Rights</option>
+<option value="19">Media and Information</option>
+<option value="20">Migration and Development</option>
+<option value="21">Peace and Security</option>
+<option value="22">Regional Integration</option>
+<option value="23">Monetary and Financial Policy</option>
+</select>
+
+<div class="invalid-feedback"></div>
+</div>                </div>
+                <div class="custom-input-select">
+                    <div class="form-group field-publicationsearch-year">
+<label for="publicationsearch-year">Year</label>
+<select id="publicationsearch-year" class="form-control" name="PublicationSearch[year]" style="">
+<option value="">- Select Year -</option>
+<option value="2026">2026</option>
+<option value="2025">2025</option>
+<option value="2024">2024</option>
+<option value="2023">2023</option>
+<option value="2022">2022</option>
+<option value="2021">2021</option>
+<option value="2020">2020</option>
+<option value="2019">2019</option>
+<option value="2018">2018</option>
+<option value="2017">2017</option>
+<option value="2016">2016</option>
+<option value="2015">2015</option>
+<option value="2014">2014</option>
+<option value="2013">2013</option>
+<option value="2012">2012</option>
+<option value="2011">2011</option>
+<option value="2010">2010</option>
+<option value="2009">2009</option>
+<option value="2008">2008</option>
+<option value="2007">2007</option>
+<option value="2006">2006</option>
+<option value="2005">2005</option>
+<option value="2004">2004</option>
+<option value="2003">2003</option>
+<option value="2002">2002</option>
+<option value="2001">2001</option>
+<option value="2000">2000</option>
+<option value="1999">1999</option>
+<option value="1998">1998</option>
+<option value="1997">1997</option>
+<option value="1996">1996</option>
+<option value="1995">1995</option>
+<option value="1994">1994</option>
+<option value="1993">1993</option>
+<option value="1992">1992</option>
+<option value="1991">1991</option>
+<option value="1990">1990</option>
+<option value="1989">1989</option>
+<option value="1988">1988</option>
+<option value="1987">1987</option>
+<option value="1986">1986</option>
+<option value="1985">1985</option>
+<option value="1984">1984</option>
+<option value="1983">1983</option>
+<option value="1982">1982</option>
+<option value="1981">1981</option>
+<option value="1980">1980</option>
+<option value="1979">1979</option>
+</select>
+
+<div class="invalid-feedback"></div>
+</div>                </div>
+                <div class="btn-container">
+                    <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i> Search</button>                </div>
+            </div>
+            </form>
+
+            <br><br>
+
+            <hr class="divider divider-primary-color">
+
+            <div class="">
+                <div class="listview">
+                    <div id="w2" class="list-view">
+                            <div class='float-right mb-4'><div class="summary">Showing <b>1-15</b> of <b>3,225</b> items.</div></div>
+                            <div class='clearfix block block-three-cols'>
+                                <div data-key="3271">
+<div class="card card-hover bg-color-grey">
+    <div class="card-image card-image-bottom-border"><img src="https://pidswebs.pids.gov.ph/CDN/featured-image/pascnbook.jpg"></div>
+    <div class="card-content">
+        <div class="card-title"><a href="/publication/books/contemporary-philippine-issues-and-emerging-apec-priorities">Contemporary Philippine Issues and Emerging APEC Priorities</a></div>
+        <div class="card-meta">
+            <div class="card-date"><i class="far fa-calendar-alt" aria-hidden="true"></i> Nov 03, 2026</div>
+            <div class="card-date"><i class="far fa-bookmark"></i> PIDS Book 2026-02</div>
+            <div class="card-desc">As the Philippine APEC Study Center Network marks its 30th anniversary, this volume examines how the Philippines can better leverage Asia-Pacific inte..</div>
+        </div>
+    </div>
+    <a href="/publications/category/books"><div class="card-type-floating">Books</div></a>
+</div>
+</div>
+<div data-key="3270">
+<div class="card card-hover bg-color-grey">
+    <div class="card-image card-image-bottom-border"><img src="https://pidswebs.pids.gov.ph/CDN/featured-image/pidspn2621.jpg"></div>
+    <div class="card-content">
+        <div class="card-title"><a href="/publication/policy-notes/how-will-the-new-law-on-professional-regulation-of-agriculture-affect-the-agrifood-system">How Will the New Law on Professional Regulation of Agriculture Affect the Agrifood System?</a></div>
+        <div class="card-meta">
+            <div class="card-date"><i class="far fa-calendar-alt" aria-hidden="true"></i> Oct 13, 2026</div>
+            <div class="card-date"><i class="far fa-bookmark"></i> PN 2026-21</div>
+            <div class="card-desc">Republic Act (RA) 12215, or the Philippine Agriculturists Act, seeks to strengthen professional standards and improve the quality of agricultural serv..</div>
+        </div>
+    </div>
+    <a href="/publications/category/policy-notes"><div class="card-type-floating">Policy Notes</div></a>
+</div>
+</div>
+<div data-key="3269">
+<div class="card card-hover bg-color-grey">
+    <div class="card-image card-image-bottom-border"><img src="https://pidswebs.pids.gov.ph/CDN/featured-image/1791271746_6ac4a3420562f.png"></div>
+    <div class="card-content">
+        <div class="card-title"><a href="/publication/proceedings/indigenous-peoples-and-nation-building-lessons-in-leadership-sustainability-and-peace-proceedings-of-the-12th-serp-p-knowledge-forum-and-roundtable-discussion">Indigenous Peoples and Nation-Building: Lessons in Leadership, Sustainability, and Peace (Proceedings of the 12th SERP-P Knowledge-Forum and Roundtable Discussion)</a></div>
+        <div class="card-meta">
+            <div class="card-date"><i class="far fa-calendar-alt" aria-hidden="true"></i> Oct 06, 2026</div>
+            <div class="card-date"><i class="far fa-bookmark"></i> SERPP 2026-01</div>
+            <div class="card-desc">
+This proceedings document captures the research presentations, discussions, and policy insights from the 12th SERP-P Network Knowledge-Sharing Forum..</div>
+        </div>
+    </div>
+    <a href="/publications/category/proceedings"><div class="card-type-floating">Proceedings</div></a>
+</div>
+</div>
+<div data-key="3268">
+<div class="card card-hover bg-color-grey">
+    <div class="card-image card-image-bottom-border"><img src="https://pidswebs.pids.gov.ph/CDN/featured-image/pidspn2620.jpg"></div>
+    <div class="card-content">
+        <div class="card-title"><a href="/publication/policy-notes/big-dreams-unequal-odds-why-aspirations-matter-for-filipino-youth"> Big Dreams, Unequal Odds: Why Aspirations Matter for Filipino Youth</a></div>
+        <div class="card-meta">
+            <div class="card-date"><i class="far fa-calendar-alt" aria-hidden="true"></i> Oct 06, 2026</div>
+            <div class="card-date"><i class="far fa-bookmark"></i> PN 2026-20</div>
+            <div class="card-desc">This Policy Note highlights the important role of educational aspirations in shaping the academic trajectories of Filipino youth. It finds that childr..</div>
+        </div>
+    </div>
+    <a href="/publications/category/policy-notes"><div class="card-type-floating">Policy Notes</div></a>
+</div>
+</div>
+<div data-key="3267">
+<div class="card card-hover bg-color-grey">
+    <div class="card-image card-image-bottom-border"><img src="https://pidswebs.pids.gov.ph/CDN/featured-image/pidsdps2619.png"></div>
+    <div class="card-content">
+        <div class="card-title"><a href="/publication/policy-notes/beyond-the-talk-why-conversations-alone-may-not-be-enough-for-filipino-youth">Beyond “The Talk”: Why Conversations Alone May Not Be Enough for Filipino Youth </a></div>
+        <div class="card-meta">
+            <div class="card-date"><i class="far fa-calendar-alt" aria-hidden="true"></i> Oct 06, 2026</div>
+            <div class="card-date"><i class="far fa-bookmark"></i> PN 2026-19</div>
+            <div class="card-desc">This Policy Note examines whether parent-child discussions about puberty and sexuality are associated with adolescent sexual behaviors among Filipino ..</div>
+        </div>
+    </div>
+    <a href="/publications/category/policy-notes"><div class="card-type-floating">Policy Notes</div></a>
+</div>
+</div>
+<div data-key="3265">
+<div class="card card-hover bg-color-grey">
+    <div class="card-image card-image-bottom-border"><img src="https://pidswebs.pids.gov.ph/CDN/featured-image/pidsdrn2603.png"></div>
+    <div class="card-content">
+        <div class="card-title"><a href="/publication/development-research-news/more-spending-limited-results-pids-study-flags-gaps-in-food-security-outcomes">More Spending, Limited Results: PIDS Study Flags Gaps in Food Security Outcomes </a></div>
+        <div class="card-meta">
+            <div class="card-date"><i class="far fa-calendar-alt" aria-hidden="true"></i> Sep 30, 2026</div>
+            <div class="card-date"><i class="far fa-bookmark"></i> DRN Vol. 44 No. 3</div>
+            <div class="card-desc">This issue of the Development Research News highlights the importance of strengthening policies, institutions, and investments to improve development ..</div>
+        </div>
+    </div>
+    <a href="/publications/category/development-research-news"><div class="card-type-floating">Development Research News</div></a>
+</div>
+</div>
+<div data-key="3264">
+<div class="card card-hover bg-color-grey">
+    <div class="card-image card-image-bottom-border"><img src="https://pidswebs.pids.gov.ph/CDN/featured-image/pidspn2618.png"></div>
+    <div class="card-content">
+        <div class="card-title"><a href="/publication/policy-notes/school-based-linguistic-deprivation-limits-learning">School-Based Linguistic Deprivation Limits Learning</a></div>
+        <div class="card-meta">
+            <div class="card-date"><i class="far fa-calendar-alt" aria-hidden="true"></i> Sep 28, 2026</div>
+            <div class="card-date"><i class="far fa-bookmark"></i> PN 2026-18</div>
+            <div class="card-desc">This Policy Note examines how school-based linguistic deprivation, defined as the mismatch between learners&rsquo; home languages and the languages of..</div>
+        </div>
+    </div>
+    <a href="/publications/category/policy-notes"><div class="card-type-floating">Policy Notes</div></a>
+</div>
+</div>
+<div data-key="3263">
+<div class="card card-hover bg-color-grey">
+    <div class="card-image card-image-bottom-border"><img src="https://pidswebs.pids.gov.ph/CDN/featured-image/pidspn2617.png"></div>
+    <div class="card-content">
+        <div class="card-title"><a href="/publication/policy-notes/why-the-official-poverty-line-needs-reexamining-as-consumption-patterns-change">Why the Official Poverty Line Needs Reexamining as Consumption Patterns Change</a></div>
+        <div class="card-meta">
+            <div class="card-date"><i class="far fa-calendar-alt" aria-hidden="true"></i> Sep 28, 2026</div>
+            <div class="card-date"><i class="far fa-bookmark"></i> PN 2026-17</div>
+            <div class="card-desc">Despite the Philippines&rsquo; reclassification as an upper-middle-income economy in July 2026, its poverty threshold remains aligned with lower-middl..</div>
+        </div>
+    </div>
+    <a href="/publications/category/policy-notes"><div class="card-type-floating">Policy Notes</div></a>
+</div>
+</div>
+<div data-key="3262">
+<div class="card card-hover bg-color-grey">
+    <div class="card-image card-image-bottom-border"><img src="https://pidswebs.pids.gov.ph/CDN/featured-image/pidsdps2618.jpg"></div>
+    <div class="card-content">
+        <div class="card-title"><a href="/publication/discussion-papers/philhealth-coverage-supply-side-readiness-and-adolescent-healthcare-utilization-in-the-philippines-evidence-from-the-longitudinal-cohort-study-of-the-filipino-child">PhilHealth Coverage, Supply-Side Readiness, and Adolescent Healthcare Utilization in the Philippines: Evidence from the Longitudinal Cohort Study of the Filipino Child</a></div>
+        <div class="card-meta">
+            <div class="card-date"><i class="far fa-calendar-alt" aria-hidden="true"></i> Sep 07, 2026</div>
+            <div class="card-date"><i class="far fa-bookmark"></i> DP 2026-18</div>
+            <div class="card-desc">The Universal Health Care Act of 2019 made PhilHealth membership universal and automatic for all Filipinos, but whether that membership translates int..</div>
+        </div>
+    </div>
+    <a href="/publications/category/discussion-papers"><div class="card-type-floating">Discussion Papers</div></a>
+</div>
+</div>
+<div data-key="3261">
+<div class="card card-hover bg-color-grey">
+    <div class="card-image card-image-bottom-border"><img src="https://pidswebs.pids.gov.ph/CDN/featured-image/pidsdps2617.jpg"></div>
+    <div class="card-content">
+        <div class="card-title"><a href="/publication/discussion-papers/labor-market-outcomes-of-education-graduates-in-the-philippines-the-role-of-licensure-credentials-and-job-matching">Labor Market Outcomes of Education Graduates in the Philippines: The Role of Licensure Credentials and Job Matching</a></div>
+        <div class="card-meta">
+            <div class="card-date"><i class="far fa-calendar-alt" aria-hidden="true"></i> Aug 25, 2026</div>
+            <div class="card-date"><i class="far fa-bookmark"></i> DP 2026-17</div>
+            <div class="card-desc">International evidence has shown that occupational licensing influences employment opportunities and wage determination, however, the effects of licen..</div>
+        </div>
+    </div>
+    <a href="/publications/category/discussion-papers"><div class="card-type-floating">Discussion Papers</div></a>
+</div>
+</div>
+<div data-key="3260">
+<div class="card card-hover bg-color-grey">
+    <div class="card-image card-image-bottom-border"><img src="https://pidswebs.pids.gov.ph/CDN/featured-image/pidsdps2616.jpg"></div>
+    <div class="card-content">
+        <div class="card-title"><a href="/publication/discussion-papers/reshaping-economic-institutions-for-transformational-partnerships-in-human-capital-development">Reshaping Economic Institutions for Transformational Partnerships in Human Capital Development</a></div>
+        <div class="card-meta">
+            <div class="card-date"><i class="far fa-calendar-alt" aria-hidden="true"></i> Aug 25, 2026</div>
+            <div class="card-date"><i class="far fa-bookmark"></i> DP 2026-16</div>
+            <div class="card-desc">The Philippines experienced periods of macroeconomic stability under past reforms. However, this stability has not translated into sustained productiv..</div>
+        </div>
+    </div>
+    <a href="/publications/category/discussion-papers"><div class="card-type-floating">Discussion Papers</div></a>
+</div>
+</div>
+<div data-key="3258">
+<div class="card card-hover bg-color-grey">
+    <div class="card-image card-image-bottom-border"><img src="https://pidswebs.pids.gov.ph/CDN/featured-image/pidspn2616.jpg"></div>
+    <div class="card-content">
+        <div class="card-title"><a href="/publication/policy-notes/home-should-be-safe-how-parental-violence-affects-children-s-education-in-the-philippines">Home Should Be Safe: How Parental Violence Affects Children’s Education in the Philippines</a></div>
+        <div class="card-meta">
+            <div class="card-date"><i class="far fa-calendar-alt" aria-hidden="true"></i> Aug 17, 2026</div>
+            <div class="card-date"><i class="far fa-bookmark"></i> PN 2026-16</div>
+            <div class="card-desc">For many Filipino children, experiencing violence at home is linked to disadvantages that can persist into adolescence. Using nationally representativ..</div>
+        </div>
+    </div>
+    <a href="/publications/category/policy-notes"><div class="card-type-floating">Policy Notes</div></a>
+</div>
+</div>
+<div data-key="3259">
+<div class="card card-hover bg-color-grey">
+    <div class="card-image card-image-bottom-border"><img src="https://pidswebs.pids.gov.ph/CDN/featured-image/1786963598_6a82e68eefd53.png"></div>
+    <div class="card-content">
+        <div class="card-title"><a href="/publication/annual-reports/pids-2025-annual-report-reimagining-governance-in-the-age-of-ai">PIDS 2025 Annual Report: Reimagining Governance in the Age of AI</a></div>
+        <div class="card-meta">
+            <div class="card-date"><i class="far fa-calendar-alt" aria-hidden="true"></i> Aug 17, 2026</div>
+            <div class="card-date"><i class="far fa-bookmark"></i> PIDS AR 2025</div>
+            <div class="card-desc">As rapid technological change reshapes economies, institutions, and societies, the need for sound evidence to guide public policy has become more crit..</div>
+        </div>
+    </div>
+    <a href="/publications/category/annual-reports"><div class="card-type-floating">Annual Reports</div></a>
+</div>
+</div>
+<div data-key="3257">
+<div class="card card-hover bg-color-grey">
+    <div class="card-image card-image-bottom-border"><img src="https://pidswebs.pids.gov.ph/CDN/featured-image/1786433643_6a7ad06b9abd9.png"></div>
+    <div class="card-content">
+        <div class="card-title"><a href="/publication/books/reimagining-governance-in-the-age-of-ai-proceedings-of-the-eleventh-annual-public-policy-conference">Reimagining Governance in the Age of AI (Proceedings of the Eleventh Annual Public Policy Conference)</a></div>
+        <div class="card-meta">
+            <div class="card-date"><i class="far fa-calendar-alt" aria-hidden="true"></i> Aug 11, 2026</div>
+            <div class="card-date"><i class="far fa-bookmark"></i> PIDS Book 2026-01</div>
+            <div class="card-desc">The Philippines is entering a new development phase shaped not only by persistent economic and social pressures but also by the rapid emergence of art..</div>
+        </div>
+    </div>
+    <a href="/publications/category/books"><div class="card-type-floating">Books</div></a>
+</div>
+</div>
+<div data-key="3256">
+<div class="card card-hover bg-color-grey">
+    <div class="card-image card-image-bottom-border"><img src="https://pidswebs.pids.gov.ph/CDN/featured-image/pidsdps2615.jpg"></div>
+    <div class="card-content">
+        <div class="card-title"><a href="/publication/discussion-papers/food-security-sectoral-analysis-strengthening-access-to-safe-and-nutritious-food-for-every-filipino">Food Security Sectoral Analysis: Strengthening Access to Safe and Nutritious Food for Every Filipino </a></div>
+        <div class="card-meta">
+            <div class="card-date"><i class="far fa-calendar-alt" aria-hidden="true"></i> Jul 30, 2026</div>
+            <div class="card-date"><i class="far fa-bookmark"></i> DP 2026-15</div>
+            <div class="card-desc">This paper documents patterns of public spending on food security-related sectoral outcomes and undertakes a results-based assessment of food security..</div>
+        </div>
+    </div>
+    <a href="/publications/category/discussion-papers"><div class="card-type-floating">Discussion Papers</div></a>
+</div>
+</div>
+
+                            </div>
+                            <hr><br>
+                            <div class='float-left'><div class="summary">Showing <b>1-15</b> of <b>3,225</b> items.</div></div>
+                            <div class='float-right'><ul class="pagination"><li class="page-item first disabled"><span>First</span></li>
+<li class="page-item prev disabled"><span>&laquo;</span></li>
+<li class="page-item active"><a class="page-link" href="/publications?search=tutoring&amp;page=1&amp;per-page=15" data-page="0">1</a></li>
+<li class="page-item"><a class="page-link" href="/publications?search=tutoring&amp;page=2&amp;per-page=15" data-page="1">2</a></li>
+<li class="page-item"><a class="page-link" href="/publications?search=tutoring&amp;page=3&amp;per-page=15" data-page="2">3</a></li>
+<li class="page-item"><a class="page-link" href="/publications?search=tutoring&amp;page=4&amp;per-page=15" data-page="3">4</a></li>
+<li class="page-item"><a class="page-link" href="/publications?search=tutoring&amp;page=5&amp;per-page=15" data-page="4">5</a></li>
+<li class="page-item"><a class="page-link" href="/publications?search=tutoring&amp;page=6&amp;per-page=15" data-page="5">6</a></li>
+<li class="page-item"><a class="page-link" href="/publications?search=tutoring&amp;page=7&amp;per-page=15" data-page="6">7</a></li>
+<li class="page-item"><a class="page-link" href="/publications?search=tutoring&amp;page=8&amp;per-page=15" data-page="7">8</a></li>
+<li class="page-item"><a class="page-link" href="/publications?search=tutoring&amp;page=9&amp;per-page=15" data-page="8">9</a></li>
+<li class="page-item"><a class="page-link" href="/publications?search=tutoring&amp;page=10&amp;per-page=15" data-page="9">10</a></li>
+<li class="page-item next"><a class="page-link" href="/publications?search=tutoring&amp;page=2&amp;per-page=15" data-page="1">&raquo;</a></li>
+<li class="page-item last"><a class="page-link" href="/publications?search=tutoring&amp;page=215&amp;per-page=15" data-page="214">Last</a></li></ul></div>
+                            <div class='clearfix'></div>
+                        </div>                </div>
+            </div>
+        </div>
+    </div>
+</main>
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer id="footer">
+        <div class="bg-color-dark-brown section">
+            <div class="container top-footer">
+                <div class="grid">
+                    <div class="block align-items-center">
+                        <div class="block-50">
+                            <div><img class="footer-logo" src='/assets/c7cfdbbe/img/ui/PIDS-logo-with-text_white.png'></div>
+                        </div>
+                          <div class="socials block-50">
+                            <ul class="display-flex text-align-right">
+                                <li class="margin-right-10"><a href='https://www.facebook.com/pidsgovph' class="text-color-white"><i class="fab fa-facebook"></i></a></li>
+ <li class="margin-right-10"><a href='https://www.tiktok.com/@pidsgovph' class="text-color-white"><i class="fab fa-tiktok"></i></a></li>
+                                <li class="margin-right-10"><a href='https://www.youtube.com/channel/UCNTTTRCsrNvKRW6ywNlIpaw' class="text-color-white"><i class="fab fa-youtube"></i></a></li>
+                                <li><a href='https://x.com/pidsgovph' class="text-color-white"><i class="fa-brands fa-x-twitter"></i></a></li>
+ <li><a href='https://www.linkedin.com/company/pidsgovph' class="text-color-white"><i class="fa-brands fa-linkedin"></i></a></li>
+                            </ul>
+                        </div>                    </div>
+                    <div class="block footer-menu">
+                            <div class="menu-list">
+                            <div class="menu-list-title">Find us</div>
+                            <div class="menu-list-desc">18F Three Cyberpod Centris - North Tower, <br>EDSA corner Quezon Avenue, Quezon City</div>
+
+                            <div class="menu-list-title">Call us</div>
+                            <div class="menu-list-desc">8877-4000</div>
+                            <a href="https://pids.gov.ph/contact-us" class="btn btn-primary">Contact Us</a>
+                        </div>
+                        <div class="menu-list">
+                            <div class="menu-list-title">About PIDS</div>
+                            <div class="menu-list-bullets">
+                                <ul>
+                                    <li><a href="https://pids.gov.ph/vision-mission-and-quality-policy">Vision, Mission, and Quality Policy</a></li>
+                                    <li><a href="https://pids.gov.ph/details/pids-strategic-plan-2026-2030">Strategic Plan 2026-2030</a></li>
+                                    <li><a href="https://pids.gov.ph/organizational-structure">Organizational Structure</a></li>
+                                    <li><a href="https://pids.gov.ph/directory">Directory</a></li>
+                                </ul>
+                            </div>
+                        </div>                        <div class="menu-list">
+                            <div class="menu-list-title">Resources</div>
+                            <div class="menu-list-bullets">
+                                <ul>
+                                    <li><a href='https://library.pids.gov.ph'>PIDS Library</a></li>
+                                    <li><a href="https://pids.gov.ph/pids-corners">PIDS Corner</a></li>
+                                </ul>
+                            </div>
+                        </div>                        <div class="menu-list">
+<div class="menu-list-title">PIDS Opportunities</div>
+<div class="menu-list-bullets">
+    <ul>
+        <li><a href="https://pids.gov.ph/bid-announcements">Bid Announcements</a></li>
+        <li><a href="https://pids.gov.ph/employment">Employment</a></li>
+    </ul>
+</div>
+</div>                         <div class="menu-list">
+                            <div class="menu-list-title">Statistics</div>
+                            <div class="menu-list-bullets">
+                                <ul>
+                                    <li><a href="https://pids.gov.ph/site-statistics">Most Downloaded</a></li>
+                                    <li><a href="https://pids.gov.ph/site-usage">Usage Statistics</a></li>
+                                </ul>
+                            </div>
+                        </div>                    </div>
+                    <div class="copyright">Philippine Institute for Development Studies. Copyright 2021. All Rights Reserved</div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-footer section">
+            <div class="container">
+                <div class="grid">
+                    <div class="block">
+                        <div class="menu-list">
+                            <img src="https://www.officialgazette.gov.ph/wp-content/themes/govph/assets/images/footlogo.png" class="gov-logo d-block">
+                            <a href="/transparency-seal"> <img src=/assets/c7cfdbbe/img/ui/transparencyseal.png class="gov-logo d-block"></a>
+                            <a href="https://www.foi.gov.ph/agencies/pids/"><img src=/assets/c7cfdbbe/img/ui/foilogo.png class="gov-logo d-block"></a>
+                        </div>
+                        <div class="menu-list">
+                            <div class="menu-list-title">REPUBLIC OF THE PHILIPPINES</div>
+                            <div class="menu-list-desc">All content is in the public domain unless otherwise stated.</div>
+                            <hr class="divider" />
+                            <div id="pst-container" class="menu-list-desc">
+                                <span class="pst-title">Philippine Standard Time</span>
+                                <div id="pst-time" class="pst-info p-0"></div>
+                            </div>
+                        </div>
+                         <div class="menu-list">
+                            <div class="menu-list-title">ABOUT GOVPH</div>
+                            <div class="menu-list-desc">Learn more about the Philippine government, its structure, how government works and the people behind it.</div>
+                            <div class="menu-list-bullets">
+                                <ul>
+                                    <li><a href='https://www.gov.ph/'>GOV.PH</a></li>
+                                    <li><a href='http://www.officialgazette.gov.ph/'>Official Gazette</a></li>
+                                    <li><a href='https://data.gov.ph/'>Open Data Portal</a></li>
+                                </ul>
+                            </div>
+                        </div>                        <div class="menu-list">
+                            <div class="menu-list-title">GOVERNMENT LINKS</div>
+                            <div class="menu-list-bullets">
+                                <ul>
+                                    <li><a href='http://president.gov.ph/'>Office of the President</a></li>
+                                    <li><a href='https://ovp.gov.ph/'>Office of the Vice President</a></li>
+                                    <li><a href='http://www.senate.gov.ph/'>Senate of the Philippines</a></li>
+                                    <li><a href='http://www.congress.gov.ph/'>House of Representatives</a></li>
+                                    <li><a href='http://sc.judiciary.gov.ph/'>Supreme Court</a></li>
+                                    <li><a href='http://ca.judiciary.gov.ph/'>Court of Appeals</a></li>
+                                    <li><a href='http://sb.judiciary.gov.ph/'>Sandiganbayan</a></li>
+                                </ul>
+                            </div>
+                        </div>                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MOBILE MENU -->
+    <div id="mobile-menu-wrapper" class="bg-color-dark-grey hide">
+        <div class="mobile-menu-content">
+            <div class="mobile-menu-title">Main Menu</div>
+            <ul>
+                <li class="collapse-container">
+                    <a href='/research-agenda' class="menu-hover text-color-white">Research</a>
+                    <span class="collapsible mobile-caret"><i class="fas fa-caret-down"></i></span>
+                    <ul class="collapse-content">
+                        <li><a href='/research-agenda'>Research Agenda</a></li>
+                        <li><a href='/research' style="">Research Projects</a></li>
+                    </ul>
+                </li>
+                <li class="collapse-container">
+                    <a href='/publications' class="menu-hover text-color-white">Publications </a>
+                    <span class="collapsible mobile-caret"><i class="fas fa-caret-down"></i></span>
+                    <ul class="collapse-content parent-collapse">
+                        <li><a href="/publications/category/books">Books</a></li>
+                        <li><a href="/publications/category/research-paper-series">Research Paper Series</a></li>
+                        <li class="collapse-container">
+                            <a href="#">Philippine Journal of Development</a>
+                            <span class="sub-collapsible mobile-caret"><i class="fas fa-caret-down"></i></span>
+                            <ul class="collapse-content">
+                                <li><a href="/details/guidelines-in-the-preparation-of-articles">Guidelines in Preparation of Articles</a></li>
+                                <li><a href="/details/editorial-board">Editorial Board</a></li>
+                                <li><a href="/content/publication/index-pjd">List of All Issues</a></li>
+                                <li><a href="/details/disclaimer-and-permissions">Disclaimer and Permissions</a></li>
+                                <li><a href="/details/pjd-inquiries">Inquiries and Submissions</a></li>
+                                <li><a href="/details/subcribe">Subscription</a></li>
+
+                            </ul>
+                        </li>
+                        <li><a href="/publications/category/economic-policy-monitor">Economic Policy Monitor</a></li>
+                        <li><a href="/publications/category/discussion-papers">Discussion Paper Series</a></li>
+                        <li><a href="/publications/category/policy-notes">Policy Notes</a></li>
+                        <li><a href="/publications/category/development-research-news">Development Research News</a></li>
+                        <li><a href="/publications/category/policy-pulse">Policy Pulse</a></li>  
+                        <li><a href="/publications/category/proceedings">Proceedings</a></li>                        
+                        <li><a href="/publications/category/economic-issue-of-the-day">Economic Issue of the Day</a></li>
+                        <li><a href="/publications/category/annual-reports">Annual Reports</a></li>
+                        <li><a href="/publications/category/special-publications">Special Publications</a></li>
+                        <li class="collapse-container">
+                            <a href="#" class="collapsible">Archived Publications <span><i class="fas fa-caret-down"></i></span></a>
+                            <div class="collapse-content">
+                                <p><a href="/content/public/search-contenttype?contenttype=publication&category=working-papers">Working Papers</a></p>
+                                <p><a href="/content/public/search-contenttype?contenttype=publication&category=monograph-series">Monograph Series</a></p>
+                                <p><a href="/content/public/search-contenttype?contenttype=publication&category=staff-papers">Staff Papers</a></p>
+                                <p><a href="/content/public/search-contenttype?contenttype=publication&category=economic-outlook-series">Economic Outlook Series</a></p>
+                                <p><a href="/content/publication/index-archive">List of All Archived Publications</a></p>
+                            </div>
+                        </li>
+                        <!-- hide other publications  <li><a href="/publications/category/other-publications-by-pids-staff">Other Publications by PIDS Staff</a></li> -->
+                        <li><a href="/details/how-to-order-publications">How to Order Publications?</a></li>
+                        <li><a href="https://forms.office.com/pages/responsepage.aspx?id=r0o1yMXs90-VkN_E98HzYbdZoJA7Bp1DkUjWgNL4UFVUQ08xM05aTjU3MFRDRVJLSFY2RkxMNTMzSy4u" target="_blank">Rate Our Publications</a></li>                        
+                    </ul>
+                </li>
+                <li><a href="/events" class="menu-hover">Events </a></li>
+                <li class="collapse-container">
+                    <a href='/news' class="menu-hover">News</a>
+                    <span class="collapsible mobile-caret"><i class="fas fa-caret-down"></i></span>
+                    <ul class="collapse-content">
+                        <li><a href="/content/public/search-contenttype?contenttype=news&category=press-releases">Press Releases</a></li>
+                        <li><a href="/content/public/search-contenttype?contenttype=news&category=in-the-news">PIDS in the News</a></li>
+                        <li><a href="/content/public/index-custom?view=news%2Findex-pids-updates&category=news">PIDS Updates</a></li>
+                    </ul>
+                </li>
+                <li class="collapse-container">
+                    <a href='/legislative-inputs' class="menu-hover">Legislative Inputs</a>
+                                    </li>
+                <li class="collapse-container">
+                    <a href='/databases' class="menu-hover">Databases </a>
+                    <span class="collapsible mobile-caret"><i class="fas fa-caret-down"></i></span>
+                    <ul class="collapse-content parent-collapse">
+                        <li class="collapse-container">
+                            <a href="https://seis.pids.gov.ph/">Economic and Social Database </a>
+                            <span class="sub-collapsible mobile-caret"><i class="fas fa-caret-down"></i></span>
+                            <ul class="collapse-content">
+                                <li><a href="/content/public/index-contenttype?contenttype=database">Database Updates</a></li>
+                            </ul>
+                        </li>
+                        
+                        <li><a href="https://serp-p.pids.gov.ph/">Socioeconomic Research Portal for the Philippines</a></li>
+                        <li><a href="https://hefp.pids.gov.ph/">Health Economics and Finance Program</a></li>
+                    </ul>
+                </li>
+                <li class="collapse-container">
+                    <a href='/resources' class="menu-hover">Resources </a>
+                    <span class="collapsible mobile-caret"><i class="fas fa-caret-down"></i></span>
+                    <ul class="collapse-content parent-collapse">
+                            <li><a href="/content/public/index-custom?view=resource%2Findex-infographics">Infographics</a></li>
+                            <li><a href="/content/public/index-custom?view=resource%2Findex-photos">Photos</a></li>
+                            <li><a href="/videos">Videos</a></li>
+                            <li><a href="https://library.pids.gov.ph">PIDS Library</a></li>
+                            <li><a href="/pids-corners">PIDS Corners</a></li>
+                        <!-- <li class="collapse-container">
+                            <a href="#" class="collapsible">Knowledge Materials <span><i class="fas fa-caret-down"></i></span></a>
+                            <span class="sub-collapsible mobile-caret"><i class="fas fa-caret-down"></i></span>
+                            <ul class="collapse-content"> -->
+<!--                                 
+                                <li><a href="/videos">Videos</a></li>
+                                <li><a href="/content/public/index-custom?view=resource%2Findex-infographics">Infographics</a></li> -->
+                            <!-- </ul>
+                        </li> -->
+                    </ul>
+                </li>
+            </ul>
+
+            <hr class="divider divider-primary-color" />
+
+            <div class="mobile-menu-title">Secondary Menu</div>
+            <ul>
+                <li><a href="/about-us" class="menu-hover text-color-white">About Us</a></li>
+                <li><a href="/networks" class="menu-hover text-color-white">Networks</a></li>
+                <li><a href="/opportunities" class="menu-hover text-color-white">Opportunities</a></li>
+                <li><a href="#" class="menu-hover text-color-white">Privacy Notice</a></li>
+                <li class="search"><a href="/site/search" class="menu-hover text-color-white"><i class="fas fa-search"></i> Search</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="/assets/268c1043/js/bootstrap.bundle.js"></script>
+<script src="/assets/b9b898b0/yii.activeForm.js"></script>
+<script>jQuery(function ($) {
+jQuery('#w1').yiiActiveForm([], {"errorSummary":".alert.alert-danger","errorCssClass":"is-invalid","successCssClass":"is-valid","validationStateOn":"input"});
+});</script></body>
+
+</html>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script type="text/javascript" id="gwt-pst">
+    (function(d, eId) {
+        var js, gjs = d.getElementById(eId);
+        js = d.createElement('script');
+        js.id = 'gwt-pst-jsdk';
+        js.src = "//gwhs.i.gov.ph/pst/gwtpst.js?" + new Date().getTime();
+        gjs.parentNode.insertBefore(js, gjs);
+    }(document, 'gwt-pst'));
+</script>
+<script async src=https://www.googletagmanager.com/gtag/js?id=UA-39249520-1></script>
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'UA-39249520-1');
+</script>
+
+<script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+            }
+        });
+    }
+
+    var subCol = document.getElementsByClassName("sub-collapsible");
+    var a;
+
+    for (a = 0; a < subCol.length; a++) {
+        subCol[a].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            var parent = this.closest('.parent-collapse');
+
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+                parent.style.maxHeight = '100%';
+            }
+        });
+    }
+</script>
+

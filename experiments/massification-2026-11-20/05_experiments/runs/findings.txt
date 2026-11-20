@@ -1,0 +1,107 @@
+LOOP2 CALIBRATION (Council brief 004 amendments applied)
+fit draws=24/country over 4 params at N=2000; selected point re-run at N=3000 with 2 seeds; wall=146s
+FIT years 1980-2010; HELD OUT 2011-2024 (no refitting). HKG = UNTOUCHED country (never fitted).
+Fitted objects (brief 004): household demand `cost_col`, provider entry/capacity `prov_capacity`,
+teacher-tutor capacity `teacher_capacity`, provider elasticity `prov_elasticity`.
+Shadow take-up and provider mix are CHECKS, never fitted shares; shadow targets are DATA BLOCKED.
+
+SELECTED PARAMETERS:
+  PHL: cost_col=0.573  prov_capacity=0.404  teacher_capacity=0.082  prov_elasticity=1.250  (in-sample total MAE 12.5 pp)
+  KHM: cost_col=0.700  prov_capacity=0.098  teacher_capacity=0.471  prov_elasticity=2.389  (in-sample total MAE 31.3 pp)
+  CHN: cost_col=0.771  prov_capacity=0.489  teacher_capacity=0.213  prov_elasticity=1.504  (in-sample total MAE 16.3 pp)
+
+CALIBRATION TABLE (fit vs check; MAE in pp):
+  PHL  ger_primary                    FIT   in-sample    3.2  held-out    5.7  [all + (weak)]
+  PHL  ger_primary_HOLD               CHECK held-out    5.7  [all + (weak)]
+  PHL  ger_secondary                  FIT   in-sample   12.4  held-out   11.9  [all + (weak)]
+  PHL  ger_secondary_HOLD             CHECK held-out   11.9  [all + (weak)]
+  PHL  ger_tertiary                   FIT   in-sample    2.7  held-out   16.5  [surplus + ; competitive + ; yoo +]
+  PHL  ger_tertiary_HOLD              CHECK held-out   16.5  [surplus + ; competitive + ; yoo +]
+  PHL  completion_primary             FIT   in-sample   14.9  held-out    4.5  [all + (weak)]
+  PHL  completion_primary_HOLD        CHECK held-out    4.5  [all + (weak)]
+  PHL  completion_lower_secondary     FIT   in-sample    8.6  held-out    9.9  [all + (weak)]
+  PHL  completion_lower_secondary_HOLD CHECK held-out    9.9  [all + (weak)]
+  PHL  completion_upper_secondary     FIT   in-sample   12.3  held-out    7.4  [surplus + ; competitive + ; yoo +]
+  PHL  completion_upper_secondary_HOLD CHECK held-out    7.4  [surplus + ; competitive + ; yoo +]
+  PHL  emp_industry_services          CHECK held-out   36.3  [surplus: formal access responds - to graduate supply ; compe]
+  PHL  emp_agriculture                CHECK held-out   24.9  [surplus: informality falls as floors rise ; competitive: fol]
+  PHL  shadow_takeup                  CHECK  DATA BLOCKED/NA  [DATA BLOCKED (TARGETS_SHADOW.csv not landed) ; surplus: high]
+  PHL  wage_premium_dynamics          CHECK  DATA BLOCKED/NA  [DATA BLOCKED (no observed wage series in 04_data) ; surplus:]
+  KHM  ger_primary                    FIT   in-sample   34.9  held-out    7.4  [all + (weak)]
+  KHM  ger_primary_HOLD               CHECK held-out    7.4  [all + (weak)]
+  KHM  ger_secondary                  FIT   in-sample   47.7  held-out   26.7  [all + (weak)]
+  KHM  ger_secondary_HOLD             CHECK held-out   26.7  [all + (weak)]
+  KHM  ger_tertiary                   FIT   in-sample   13.3  held-out    9.5  [surplus + ; competitive + ; yoo +]
+  KHM  ger_tertiary_HOLD              CHECK held-out    9.5  [surplus + ; competitive + ; yoo +]
+  KHM  completion_primary             FIT   in-sample   41.1  held-out   23.3  [all + (weak)]
+  KHM  completion_primary_HOLD        CHECK held-out   23.3  [all + (weak)]
+  KHM  completion_lower_secondary     FIT   in-sample   38.1  held-out   22.2  [all + (weak)]
+  KHM  completion_lower_secondary_HOLD CHECK held-out   22.2  [all + (weak)]
+  KHM  completion_upper_secondary     FIT   in-sample   57.5  held-out   45.8  [surplus + ; competitive + ; yoo +]
+  KHM  completion_upper_secondary_HOLD CHECK held-out   45.8  [surplus + ; competitive + ; yoo +]
+  KHM  emp_industry_services          CHECK held-out   15.7  [surplus: formal access responds - to graduate supply ; compe]
+  KHM  emp_agriculture                CHECK held-out    5.9  [surplus: informality falls as floors rise ; competitive: fol]
+  KHM  shadow_takeup                  CHECK  DATA BLOCKED/NA  [DATA BLOCKED (TARGETS_SHADOW.csv not landed) ; surplus: high]
+  KHM  wage_premium_dynamics          CHECK  DATA BLOCKED/NA  [DATA BLOCKED (no observed wage series in 04_data) ; surplus:]
+  HKG  ger_primary                    FIT   in-sample    2.1  held-out    4.8  [all + (weak)]
+  HKG  ger_primary_HOLD               CHECK held-out    4.8  [all + (weak)]
+  HKG  ger_secondary                  FIT   in-sample    6.0  held-out   15.3  [all + (weak)]
+  HKG  ger_secondary_HOLD             CHECK held-out   15.3  [all + (weak)]
+  HKG  ger_tertiary                   FIT   in-sample   23.2  held-out   30.1  [surplus + ; competitive + ; yoo +]
+  HKG  ger_tertiary_HOLD              CHECK held-out   30.1  [surplus + ; competitive + ; yoo +]
+  HKG  completion_primary             FIT   in-sample    nan  held-out    nan  [all + (weak)]
+  HKG  completion_primary_HOLD        CHECK  DATA BLOCKED/NA  [all + (weak)]
+  HKG  completion_lower_secondary     FIT   in-sample    nan  held-out    nan  [all + (weak)]
+  HKG  completion_lower_secondary_HOLD CHECK  DATA BLOCKED/NA  [all + (weak)]
+  HKG  completion_upper_secondary     FIT   in-sample    nan  held-out    nan  [surplus + ; competitive + ; yoo +]
+  HKG  completion_upper_secondary_HOLD CHECK  DATA BLOCKED/NA  [surplus + ; competitive + ; yoo +]
+  HKG  emp_industry_services          CHECK held-out   45.4  [surplus: formal access responds - to graduate supply ; compe]
+  HKG  emp_agriculture                CHECK held-out   45.4  [surplus: informality falls as floors rise ; competitive: fol]
+  HKG  shadow_takeup                  CHECK  DATA BLOCKED/NA  [DATA BLOCKED (TARGETS_SHADOW.csv not landed) ; surplus: high]
+  HKG  wage_premium_dynamics          CHECK  DATA BLOCKED/NA  [DATA BLOCKED (no observed wage series in 04_data) ; surplus:]
+  CHN  ger_primary                    FIT   in-sample   15.1  held-out    2.0  [all + (weak)]
+  CHN  ger_primary_HOLD               CHECK held-out    2.0  [all + (weak)]
+  CHN  ger_secondary                  FIT   in-sample   36.3  held-out    3.8  [all + (weak)]
+  CHN  ger_secondary_HOLD             CHECK held-out    3.8  [all + (weak)]
+  CHN  ger_tertiary                   FIT   in-sample   20.8  held-out   13.1  [surplus + ; competitive + ; yoo +]
+  CHN  ger_tertiary_HOLD              CHECK held-out   13.1  [surplus + ; competitive + ; yoo +]
+  CHN  completion_primary             FIT   in-sample    2.1  held-out    3.2  [all + (weak)]
+  CHN  completion_primary_HOLD        CHECK held-out    3.2  [all + (weak)]
+  CHN  completion_lower_secondary     FIT   in-sample    3.8  held-out    7.5  [all + (weak)]
+  CHN  completion_lower_secondary_HOLD CHECK held-out    7.5  [all + (weak)]
+  CHN  completion_upper_secondary     FIT   in-sample   37.2  held-out   15.8  [surplus + ; competitive + ; yoo +]
+  CHN  completion_upper_secondary_HOLD CHECK held-out   15.8  [surplus + ; competitive + ; yoo +]
+  CHN  emp_industry_services          CHECK held-out   11.6  [surplus: formal access responds - to graduate supply ; compe]
+  CHN  emp_agriculture                CHECK held-out   11.6  [surplus: informality falls as floors rise ; competitive: fol]
+  CHN  shadow_takeup                  CHECK  DATA BLOCKED/NA  [DATA BLOCKED (TARGETS_SHADOW.csv not landed) ; surplus: high]
+  CHN  wage_premium_dynamics          CHECK  DATA BLOCKED/NA  [DATA BLOCKED (no observed wage series in 04_data) ; surplus:]
+
+FREEZE-BOTH SYMMETRY TEST (1980-2010 changes in pp):
+  PHL  baseline                   upper-sec   +7.7  tertiary GER   -2.2  formal(proxy)  +12.7
+  PHL  freeze schooling feedback  upper-sec   +2.4  tertiary GER   +7.4  formal(proxy)   +8.0
+  PHL  freeze jobs and wages      upper-sec   +3.4  tertiary GER   +6.6  formal(proxy)   +2.4
+  PHL  freeze both                upper-sec   +2.5  tertiary GER   +5.8  formal(proxy)   +2.5
+  KHM  baseline                   upper-sec   +4.2  tertiary GER   -2.7  formal(proxy)   +9.9
+  KHM  freeze schooling feedback  upper-sec   +4.6  tertiary GER   +3.2  formal(proxy)  +12.3
+  KHM  freeze jobs and wages      upper-sec   +3.0  tertiary GER   +2.5  formal(proxy)   -1.2
+  KHM  freeze both                upper-sec   +3.8  tertiary GER   +3.2  formal(proxy)   +0.8
+  HKG  baseline                   upper-sec   +1.1  tertiary GER   +0.6  formal(proxy)   +3.8
+  HKG  freeze schooling feedback  upper-sec   +2.0  tertiary GER   +1.6  formal(proxy)   +2.1
+  HKG  freeze jobs and wages      upper-sec   +0.4  tertiary GER   +2.2  formal(proxy)   -0.3
+  HKG  freeze both                upper-sec   +1.8  tertiary GER   +3.4  formal(proxy)   -0.6
+  CHN  baseline                   upper-sec   +2.9  tertiary GER   +7.4  formal(proxy)  +12.3
+  CHN  freeze schooling feedback  upper-sec   +4.7  tertiary GER   +9.5  formal(proxy)   +8.5
+  CHN  freeze jobs and wages      upper-sec   +0.4  tertiary GER   +4.9  formal(proxy)   +1.0
+  CHN  freeze both                upper-sec   +1.6  tertiary GER   +8.6  formal(proxy)   +0.9
+
+VERDICT:
+  The freeze tests show what moves what. If attainment still rises with the wage/job feedback frozen,
+  AND formal jobs still rise with schooling feedback frozen, then neither is generated by the other:
+  the two-way path is largely a SCHEDULE in this structure (consistent with C2 floorworld).
+  Identifiability: calibration moves the fitted point INSIDE a family; C1 showed surplus and
+  competitive CES are not distinguishable on aggregate moments. Calibration therefore cannot make
+  them identifiable. What would: gate-specific shadow take-up (data blocked), formal-vs-informal
+  transition rates by credential, density near admission cutoffs, and panel shock responses.
+  Forced-identification rate: inherited from C1 = 2/2 (outside truth absorbed by the surplus family);
+  this loop adds no separating moment, so the rate cannot improve until the shadow/transition
+  moments land.

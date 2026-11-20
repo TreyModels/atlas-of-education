@@ -1,0 +1,65 @@
+country,target,role,years,predicted_sign,fit_mae,hold_mae
+PHL,ger_primary,fit,1980-2010,all + (weak),3.2383165147569817,5.650033127195317
+PHL,ger_primary_HOLD,check,2011-2024,all + (weak),,5.650033127195317
+PHL,ger_secondary,fit,1980-2010,all + (weak),12.433037093590043,11.872781724956011
+PHL,ger_secondary_HOLD,check,2011-2024,all + (weak),,11.872781724956011
+PHL,ger_tertiary,fit,1980-2010,surplus + ; competitive + ; yoo +,2.6688892126660764,16.506389008333336
+PHL,ger_tertiary_HOLD,check,2011-2024,surplus + ; competitive + ; yoo +,,16.506389008333336
+PHL,completion_primary,fit,1980-2010,all + (weak),14.875480834960939,4.516222025553381
+PHL,completion_primary_HOLD,check,2011-2024,all + (weak),,4.516222025553381
+PHL,completion_lower_secondary,fit,1980-2010,all + (weak),8.607920979817711,9.912602071126306
+PHL,completion_lower_secondary_HOLD,check,2011-2024,all + (weak),,9.912602071126306
+PHL,completion_upper_secondary,fit,1980-2010,surplus + ; competitive + ; yoo +,12.28268786960178,7.444436442057292
+PHL,completion_upper_secondary_HOLD,check,2011-2024,surplus + ; competitive + ; yoo +,,7.444436442057292
+PHL,emp_industry_services,check,1980-2024,surplus: formal access responds - to graduate supply ; competitive: 0/+ ; yoo: -,,36.285789478742494
+PHL,emp_agriculture,check,1980-2024,surplus: informality falls as floors rise ; competitive: follows skill prices ; yoo: flat,,24.8791726166805
+PHL,shadow_takeup,check,n/a,DATA BLOCKED (TARGETS_SHADOW.csv not landed) ; surplus: high at board/apex ; competitive: flat/low ; yoo: high near cutoff,,
+PHL,wage_premium_dynamics,check,n/a,DATA BLOCKED (no observed wage series in 04_data) ; surplus: compress then rebound ; competitive: smooth decline ; yoo: jump at cutoff,,
+KHM,ger_primary,fit,1980-2010,all + (weak),34.865679109047434,7.373829589904765
+KHM,ger_primary_HOLD,check,2011-2024,all + (weak),,7.373829589904765
+KHM,ger_secondary,fit,1980-2010,all + (weak),47.688326529300575,26.729215926038528
+KHM,ger_secondary_HOLD,check,2011-2024,all + (weak),,26.729215926038528
+KHM,ger_tertiary,fit,1980-2010,surplus + ; competitive + ; yoo +,13.304848050280116,9.516616657
+KHM,ger_tertiary_HOLD,check,2011-2024,surplus + ; competitive + ; yoo +,,9.516616657
+KHM,completion_primary,fit,1980-2010,all + (weak),41.14042798868815,23.3454429909035
+KHM,completion_primary_HOLD,check,2011-2024,all + (weak),,23.3454429909035
+KHM,completion_lower_secondary,fit,1980-2010,all + (weak),38.06324791463216,22.231278143988714
+KHM,completion_lower_secondary_HOLD,check,2011-2024,all + (weak),,22.231278143988714
+KHM,completion_upper_secondary,fit,1980-2010,surplus + ; competitive + ; yoo +,57.49148295584179,45.83892661585952
+KHM,completion_upper_secondary_HOLD,check,2011-2024,surplus + ; competitive + ; yoo +,,45.83892661585952
+KHM,emp_industry_services,check,1980-2024,surplus: formal access responds - to graduate supply ; competitive: 0/+ ; yoo: -,,15.680325429842052
+KHM,emp_agriculture,check,1980-2024,surplus: informality falls as floors rise ; competitive: follows skill prices ; yoo: flat,,5.926355339582548
+KHM,shadow_takeup,check,n/a,DATA BLOCKED (TARGETS_SHADOW.csv not landed) ; surplus: high at board/apex ; competitive: flat/low ; yoo: high near cutoff,,
+KHM,wage_premium_dynamics,check,n/a,DATA BLOCKED (no observed wage series in 04_data) ; surplus: compress then rebound ; competitive: smooth decline ; yoo: jump at cutoff,,
+HKG,ger_primary,fit,untouched,all + (weak),2.087285855065089,4.754983233509411
+HKG,ger_primary_HOLD,check,2011-2024,all + (weak),,4.754983233509411
+HKG,ger_secondary,fit,untouched,all + (weak),6.005119675739988,15.257533633029023
+HKG,ger_secondary_HOLD,check,2011-2024,all + (weak),,15.257533633029023
+HKG,ger_tertiary,fit,untouched,surplus + ; competitive + ; yoo +,23.182231224907767,30.138263593401234
+HKG,ger_tertiary_HOLD,check,2011-2024,surplus + ; competitive + ; yoo +,,30.138263593401234
+HKG,completion_primary,fit,untouched,all + (weak),,
+HKG,completion_primary_HOLD,check,2011-2024,all + (weak),,
+HKG,completion_lower_secondary,fit,untouched,all + (weak),,
+HKG,completion_lower_secondary_HOLD,check,2011-2024,all + (weak),,
+HKG,completion_upper_secondary,fit,untouched,surplus + ; competitive + ; yoo +,,
+HKG,completion_upper_secondary_HOLD,check,2011-2024,surplus + ; competitive + ; yoo +,,
+HKG,emp_industry_services,check,1980-2024,surplus: formal access responds - to graduate supply ; competitive: 0/+ ; yoo: -,,45.42538225733391
+HKG,emp_agriculture,check,1980-2024,surplus: informality falls as floors rise ; competitive: follows skill prices ; yoo: flat,,45.42538033963452
+HKG,shadow_takeup,check,n/a,DATA BLOCKED (TARGETS_SHADOW.csv not landed) ; surplus: high at board/apex ; competitive: flat/low ; yoo: high near cutoff,,
+HKG,wage_premium_dynamics,check,n/a,DATA BLOCKED (no observed wage series in 04_data) ; surplus: compress then rebound ; competitive: smooth decline ; yoo: jump at cutoff,,
+CHN,ger_primary,fit,1980-2010,all + (weak),15.107034049522724,1.9688244772142605
+CHN,ger_primary_HOLD,check,2011-2024,all + (weak),,1.9688244772142605
+CHN,ger_secondary,fit,1980-2010,all + (weak),36.31257839857462,3.7966244109567597
+CHN,ger_secondary_HOLD,check,2011-2024,all + (weak),,3.7966244109567597
+CHN,ger_tertiary,fit,1980-2010,surplus + ; competitive + ; yoo +,20.82913838035759,13.06265653882708
+CHN,ger_tertiary_HOLD,check,2011-2024,surplus + ; competitive + ; yoo +,,13.06265653882708
+CHN,completion_primary,fit,1980-2010,all + (weak),2.098297576904301,3.2134778645833366
+CHN,completion_primary_HOLD,check,2011-2024,all + (weak),,3.2134778645833366
+CHN,completion_lower_secondary,fit,1980-2010,all + (weak),3.7733333333333405,7.512388285319014
+CHN,completion_lower_secondary_HOLD,check,2011-2024,all + (weak),,7.512388285319014
+CHN,completion_upper_secondary,fit,1980-2010,surplus + ; competitive + ; yoo +,37.19666666666666,15.791173400878908
+CHN,completion_upper_secondary_HOLD,check,2011-2024,surplus + ; competitive + ; yoo +,,15.791173400878908
+CHN,emp_industry_services,check,1980-2024,surplus: formal access responds - to graduate supply ; competitive: 0/+ ; yoo: -,,11.60227935358282
+CHN,emp_agriculture,check,1980-2024,surplus: informality falls as floors rise ; competitive: follows skill prices ; yoo: flat,,11.602278520267687
+CHN,shadow_takeup,check,n/a,DATA BLOCKED (TARGETS_SHADOW.csv not landed) ; surplus: high at board/apex ; competitive: flat/low ; yoo: high near cutoff,,
+CHN,wage_premium_dynamics,check,n/a,DATA BLOCKED (no observed wage series in 04_data) ; surplus: compress then rebound ; competitive: smooth decline ; yoo: jump at cutoff,,

@@ -180,6 +180,28 @@ sector, and calibrates against literature-reported shadow-education rates rather
 parameter variants of the same one-way model. The loop, its stopping rules, and its success criteria are
 in [`06_report/RESEARCH_LOOP.md`](06_report/RESEARCH_LOOP.md).
 
+## 4c. Stop-rule event: the model does not (yet) put shadow education where the literature does
+
+Iteration 3 tested the loop's central ambition directly — does tutoring appear, in the model, at the
+rates and stages the literature reports, without the rate being coded as a parameter? **No.**
+
+- **Stage-matched check: FAIL in 3/3 assessable countries.** PHL all-basic 23.5% vs 46.5% literature;
+  KHM grade-9 21.3% vs 68.4%, primary 12.8% vs 41.3%; HKG lower-secondary 30.6% vs 72%, middle 40.2%
+  vs 82% (HKG senior-secondary 85% is excluded because it is the one calibration). Korea, Japan and
+  HKG-1996 could not be assessed (no country variant / no dated model).
+- **No defensible parameter combination reproduces the Philippine rate.** A joint structural search over
+  gate stakes, public-school substitutes, income distribution, provider cost, teacher capacity and
+  credential returns gives best RMSE 11.7pp for PHL; KHM partial (8.3pp); HKG fits its two checks but
+  with 8 parameters for 2 targets (weak identification, not validation).
+- **Price/entry economics: unable to assess.** The only verified fee moments are Korean; there is no
+  Korean model variant, and no observed PH/HK/KHM fee moment.
+
+**Consequence (the loop's own stop rule): the program stops claiming shadow-education incidence.** The
+claim that the model reproduces where shadow education appears is withdrawn. What survives is the
+method, the negative/identification map, and a provider/fee economics question that needs a Korean
+variant and more data. The next round is identification-focused (recovery with outside-set truths,
+holdout) and data-first (close the shadow-incidence data gap), not another incidence fit.
+
 ## 5. Numbers, corrected (this is the “pull the numbers” part)
 
 | claim | verdict | what the source actually says |

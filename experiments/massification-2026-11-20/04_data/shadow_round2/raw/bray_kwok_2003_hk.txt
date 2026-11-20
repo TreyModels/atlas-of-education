@@ -1,0 +1,936 @@
+=== PAGE 1 ===
+Economics of Education Review 22 (2003) 611–620
+www.elsevier.com/locate/econedurev
+Demand for private supplementary tutoring: conceptual
+considerations, and socio-economic patterns in Hong Kong
+Mark Bray a,∗, Percy Kwok b
+a Comparative Education Research Centre, Faculty of Education, The University of Hong Kong, Pokfulam Road,
+Hong Kong, China
+b Department of Educational Policy and Administration, School of Educational Foundations, The Hong Kong Institute of
+Education, 10 Lo Ping Road, Tai Po, Hong Kong, China
+Received 9 January 2003; accepted 19 February 2003
+Abstract
+Despite the fact that in some parts of the world private supplementary tutoring is a huge industry with far-reaching
+economic, social and educational implications, the topic has been neglected by educational researchers. This paper
+focuses on the nature and determinants of demand for private supplementary tutoring. It ﬁrst draws on literature from
+a wide range of countries to identify some conceptual considerations, and then presents data on socio-economic patterns
+of demand for tutoring in Hong Kong. It highlights the complexity of the topic, and calls for further detailed research
+in multiple settings.
+ 2003 Elsevier Ltd. All rights reserved.
+Keywords: Demand; Expenditures; Private supplementary tutoring; Hong Kong
+JEL classiﬁcation: I21
+1. Introduction
+Worldwide, private supplementary tutoring has been
+a neglected topic for analysis but is increasingly recog-
+nized to be of major importance. In some societies it is
+a major industry, which on the one hand consumes huge
+amounts of household expenditure but on the other hand
+provides incomes for the tutors. Private supplementary
+tutoring may also have major social and educational
+implications. It appears to exacerbate social inequalities;
+and while it helps pupils to learn, it can interfere with
+educational processes in mainstream classes.
+In many settings, private supplementary tutoring is a
+∗ Corresponding author. Tel.: +852-2859-2414; fax: +852-
+2517-4737.
+E-mail addresses: mbray@hku.hk (M. Bray); lykwok@
+ied.edu.hk (P. Kwok).
+0272-7757/$ - see front matter  2003 Elsevier Ltd. All rights reserved.
+doi:10.1016/S0272-7757(03)00032-3
+shadowy phenomenon which is difﬁcult to document
+(Stevenson & Baker, 1992; Bray, 1999a ). Pupils may
+receive different amounts of tutoring at different seasons
+and at different stages of their school careers, and may
+receive different types of tutoring for different subjects.
+Further, pupils may be unwilling to expose the amounts
+and types of tutoring that they receive because the
+tutoring might seem to confer an unfair advantage in
+competition with their peers. The tutors may also be
+unwilling to expose their activities, especially when they
+take on such work unofﬁcially and when their incomes
+are untaxed. Also, parents may want tutoring to remain
+conﬁdential because school teachers could interpret the
+demand for supplementary tutoring as reﬂecting parents’
+lack of conﬁdence in the schools.
+Nevertheless, it is possible to secure some estimates
+of the scale and nature of private supplementary tutoring,
+and then to analyze the factors which underlie the
+demand for such tutoring. This paper presents such data
+=== PAGE 2 ===
+612 M. Bray, P. Kwok / Economics of Education Review 22 (2003) 611–620
+from Hong Kong. While caution should always be
+expressed concerning the extent to which other parts of
+the world can draw lessons from speci ﬁc places, the
+Hong Kong study is instructive in several ways. Hong
+Kong is commonly characterized as a meeting place of
+East and West, i.e. it is a Chinese society which,
+especially because of the British colonial period which
+ended in 1997, has many Western characteristics; and it
+is also ﬁrmly part of the global economy. Private sup-
+plementary tutoring has deep roots, as in other East
+Asian societies such as Japan, South Korea and Taiwan.
+At the same time, analysis of the Hong Kong situation
+might hold lessons for societies in which private sup-
+plementary tutoring is not currently a major enterprise
+but in which it is growing.
+The paper begins with the broad literature, noting the
+scale and nature of private supplementary tutoring in a
+range of countries. It observes that the factors underlying
+demand for tutoring may be signi ﬁcantly different from
+those which underlie demand for private mainstream
+schooling, and thus that analysis of supplementary
+tutoring may add an important element to overall con-
+ceptual understanding. The paper then turns to the data
+from Hong Kong, explaining how the data were collected
+and what they show. The ﬁnal section highlights the sig-
+niﬁcance of the study and stresses the need for further
+research.
+2. The nature and scale of supplementary tutoring:
+comparative perspectives
+2.1. Nature
+At the outset, some de ﬁnitions are needed. Private
+supplementary tutoring, as de ﬁned here, means tutoring
+in academic subjects which is provided by the tutors for
+ﬁnancial gain and which is additional to the provision
+by mainstream schooling. This de ﬁnition may be elabor-
+ated as follows:
+/L50539 Academic subjects. The paper is only concerned with
+academic subjects taught in mainstream schools, such
+as languages and mathematics. The focus does not
+include extra-curricular subjects such as soccer and
+ballet. It also excludes religious studies (e.g. through
+Sunday School) where they are not part of school
+mainstream curricula. These additional forms of
+learning are certainly important, but deserve focus
+separately from this paper.
+/L50539 Financial gain . The paper is only concerned with
+tutoring provided by tutors (and the companies which
+employ the tutors) for ﬁnancial gain. It is not con-
+cerned with extra lessons that are given by main-
+stream teachers to needy pupils on a voluntary basis
+outside school hours. Nor is it concerned with the vol-
+untary help given by family members to other family
+members. Again, such forms of voluntary tutoring are
+certainly important, but they raise different sorts of
+issues from those covered here.
+/L50539 Additional to the provision by mainstream schooling .
+The tutoring covered in this paper is provided outside
+school hours, mostly in the evenings, at week-ends,
+and during vacations. Most of the tutoring is also pro-
+vided in separate premises, outside the school com-
+pounds.
+The overall conceptual framework of the paper is
+mainly concerned with the subjects learned in primary
+and secondary schools, and the speci ﬁc data for Hong
+Kong are from the secondary level. Supplementary
+tutoring certainly exists at the pre-primary and post-sec-
+ondary levels. However, it is less vigorous at these lev-
+els, and the mechanics and issues arising are rather dif-
+ferent.
+Private supplementary tutoring may be received
+through many channels. Some tutoring is provided one-
+to-one in the homes of either the tutors or the tutees.
+Other tutoring is in small groups, in large classes, or
+even in huge lecture theatres with over ﬂow rooms in
+which students watch on a screen what is happening in
+the main theatres. Some tutoring is provided by compa-
+nies, which may have multiple branches and hundreds
+of employees. Other tutoring is provided by individuals,
+commonly on an informal basis and without written con-
+tracts. The curricula used by the tutors may be tightly
+structured or they may be somewhat ad hoc and depen-
+dent on the speci ﬁc needs of tutees at particular times.
+2.2. Scale
+Partly because most supplementary tutoring is unof-
+ﬁcial and unwelcoming of attention, data on the topic are
+scarce. However, a picture can be drawn from scattered
+studies in a range of settings. They include the following:
+/L50539 In Egypt, a 1994 survey of 4729 households found
+that 64.0% of urban primary children and 52.0% of
+rural ones had received supplementary tutoring
+(Fergany, 1994, p. 75 ). A 1997 study estimated that
+household expenditures on supplementary tutoring in
+preparatory, primary and secondary levels accounted
+for 1.6% of Gross Domestic Product ( World Bank,
+2002, Fig. 15 ).
+/L50539 In India, a 1997 survey of 7879 primary school pupils
+in Delhi found that 39.2% were receiving tutoring
+(Aggarwal, 1998, p. 65 ).
+/L50539 In Japan, a 1993 survey found that 23.6% of elemen-
+tary pupils and 59.5% of junior high school pupils
+attended tutorial schools ( Japan, 1995, p. 6 ). A 1997
+=== PAGE 3 ===
+613M. Bray, P. Kwok / Economics of Education Review 22 (2003) 611 –620
+survey added numbers of pupils receiving other forms
+of tutoring, and found that among Primary 5 children
+33.0% attended tutorial schools, 5.7% received help
+from tutors on a one-to-one basis, 24.5% studied on
+correspondence courses, and 17.9% received home-
+delivery study materials (Japan, 1999, p. 68). In urban
+areas, over 90% of children were receiving some sort
+of tutoring.
+/L50539 In Kenya, a 1997 national sample of 3233 Standard
+six pupils found 68.6% receiving tutoring, ranging
+from 39.0% in North Eastern province to 74.4% in
+Nyanza Province ( Nzomo, Kariuki & Guantai, 2001,
+p. 28).
+/L50539 In Malta, a 1997/1998 survey of 1482 pupils in upper
+primary and lower secondary schools found that
+50.5% had received private tutoring at some time
+(Fenech & Spiteri, 1999, p. 26 ). Some had ﬁrst
+received tutoring at the age of four, though the largest
+number had commenced at the age of 10.
+/L50539 In Romania, a 1994 study of Grade 12 pupils in a
+national sample found that 32.0% in rural areas and
+58.0% in urban areas received private supplementary
+tutoring (UNESCO, 2000, Section 4.3 ).
+/L50539 In South Korea, a 1997 study indicated that 72.9% of
+primary students were receiving private tutoring
+(Kim, 2000, p. 2 ). Among middle-school students the
+proportion was 56.0%; and among high school stu-
+dents it was 32.0%.
+/L50539 In Taiwan, government statistics indicate that in
+1998, 5536 tutoring centers had 1,891,096 students
+(Taiwan, 1999, p. 136 ). Other centers were unregis-
+tered, so total numbers were even larger.
+This set of examples presents data from a wide range
+of countries. Partly for cultural reasons, private sup-
+plementary tutoring has long been prominent in many
+Asian societies. However, tutoring is growing in other
+parts of the world, including North America and Europe.
+In 2000, Canada ’s Council of Ministers of Education
+published a study of science learning based on a sample
+of 31,000 students in 2000 schools. The study indicated
+that 10.9% of 13-year-old students and 13.3% of 16-
+year-old students received 1 hour or more of extra school
+lessons or tutoring during a normal week ( Canada, 2000,
+p. 53). Among 16-year-olds, in no province was the pro-
+portion below 8%, and in one province it reached 20%.
+Similarly, Russell (2002) wrote an article about the UK
+entitled ‘The Secret Lessons ’. She remarked (p. 10) that
+“almost unnoticed, a revolution has taken place in state
+education”, adding that:
+In London and other big cities, private tutoring is
+booming. It has become one of the most important,
+yet also unacknowledged, factors in a child ’s per-
+formance.
+Baker, Akiba, LeTendre and Wiseman (2001) and
+Wolf (2002) presented data from national samples in a
+number of countries on the percentages of pupils in
+Grades 7 and 8 who reported receiving tutoring. The pro-
+portions exceeded 50% in Czech Republic, Russia, Rom-
+ania, Slovenia, South Africa, Philippines and Slovak
+Republic; and in Latvia the proportion exceeded 90%.
+3. The demand for tutoring: determinants in
+different contexts
+At the outset it is useful to contrast demand for private
+tutoring with demand for private schooling. James (1987,
+1993) has presented a model to explain why private
+school sectors are larger in some countries than in others.
+The core of her model is a distinction between excess
+demand and differentiated demand. In some countries,
+she points out, public schools are of adequate or good
+quality but are limited in capacity. Private schools then
+cater for excess demand. They may not be so good as
+the public schools, but they provide places for children
+of families who are unable to gain places in the public
+schools but can afford the costs of private institutions.
+Other private schools, by contrast, cater for differentiated
+demand. The pupils in these schools could secure places
+in public schools, but instead attend private schools
+because those schools are superior in quality and/or have
+different curricula, e.g. with a desired religious orien-
+tation. Differences in the scale and nature of public
+schooling thus have a bearing on the demand for priv-
+ate schooling.
+While this model helps to explain the nature of
+demand for private schooling, it needs modi ﬁcation to ﬁt
+private tutoring because such tutoring is supplementary
+rather than substitutive. In the case of private tutoring,
+demand may simultaneously be both excess and differen-
+tiated. It is excess when the students and their families
+feel that the mainstream system is not meeting all their
+needs; and may be differentiated insofar as the tutors
+provide a curriculum which differs from that in the main-
+stream classes rather than simply providing more of the
+same. In either case, the pupils ’ full-time schooling may
+be in either public or private institutions.
+To understand the range of patterns more fully, it is
+necessary to distinguish between two rather different sets
+of arrangements for private tutoring. In the ﬁrst, tutoring
+is provided to pupils by the same teachers who have
+responsibility for those pupils in mainstream classes.
+This type of pattern is found in countries as different as
+Cambodia, Mauritius and Romania ( Bray, 1999b; Foon-
+dun, 2002; Popa & Acedo, 2003 ). It can lead to a form
+of blackmail in which teachers teach a portion of the
+curriculum during of ﬁcial hours and only teach the
+remainder to pupils who pay for the private lessons. The
+authorities in these countries tolerate the situation partly
+=== PAGE 4 ===
+614 M. Bray, P. Kwok / Economics of Education Review 22 (2003) 611 –620
+because they have few weapons to prevent it, and partly
+because they know that of ﬁcial salaries are very low and
+that teachers are justi ﬁed in seeking additional incomes.
+In this situation, demand is effectively created by the
+teachers themselves. Parents may have little choice over
+whether or not to pay for the extra lessons, especially
+when the teachers set and mark the end-of-year tests
+which determine which pupils will be promoted to sub-
+sequent grades. Parents may decide that it is less expens-
+ive to pay for the extra lessons than to suffer the costs
+of their children repeating grades. Yet although in such
+circumstances teachers effectively have monopoly con-
+trols over their pupils, social sanctions commonly pre-
+vent individual teachers from charging signi ﬁcantly
+greater amounts than their counterparts in neighboring
+institutions.
+In the second type of situation, which is applicable in
+Hong Kong and therefore to the rest of this paper, teach-
+ers are prohibited from providing supplementary tutoring
+to their own mainstream pupils. Private tutoring is thus
+provided either by specialist tutors or by other classroom
+teachers who do not already have responsibility for the
+tutees whom they tutor. In this situation, parents have
+greater choice of action. They may still feel under press-
+ure, e.g. from the fact that their children ’s classmates are
+receiving tutoring and therefore that their children are
+getting left behind in tests and other classwork; but the
+parents do have some choice ﬁrst on whether or not to
+send their children to tutors, and second, if so, on which
+type of tutoring to purchase from which tutors.
+Because a major purpose of tutoring is to help pupils
+to gain quali ﬁcations, demand tends to increase close to
+the major public examinations, and then abruptly to
+decline once the examinations are over. However,
+demand may not reach consistent levels for all school
+subjects. In Hong Kong, English typically has the great-
+est demand because it is important not only as a subject
+but also as a medium of instruction for other subjects.
+Mathematics and science are also high-demand subjects.
+For some parents, tutoring may also have a child-
+minding function by keeping the children occupied in
+constructive activities when the parents are themselves
+unavailable. This element tends to be stronger at the pri-
+mary than the secondary level, in part because the formal
+hours for primary schooling are shorter than for second-
+ary schooling, and is particularly important in Hong
+Kong for families in which both parents are in wage
+employment. Such parents commonly undertake infor-
+mal comparisons of the costs of tutoring and the incomes
+that the parents would sacri ﬁce if they were to stay at
+home to look after their children.
+Other determinants of demand are similar to those
+which apply to other services. At the basic level are the
+prices and the availability of tutoring at times and in
+places which are convenient to the consumers. Also rel-
+evant are the quality of the services and the anticipated
+beneﬁts, not only in pupils ’ learning but also in self-
+conﬁdence and future earnings after leaving school.
+Some tutors have ways to stimulate demand through
+advertising, offering discount coupons in magazines, and
+providing rewards for tutees who bring their classmates
+and other clients. All these factors are relevant in the
+Hong Kong situation.
+4. Private supplementary tutoring in Hong Kong:
+identifying patterns of demand
+4.1. Collecting data
+As noted above, research on private supplementary
+tutoring commonly encounters various obstacles. Per-
+haps the greatest is the unwillingness of the tutors to be
+researched. Many tutors avoid taxation on their earnings,
+and these tutors in particular do not welcome attention
+from researchers. The Hong Kong government has
+recently insisted that tutorial businesses which provide
+for 20 or more persons during any one day, or eight or
+more persons at any one time, should register with the
+authorities. However, some tutors still fail to register,
+and would not welcome exposure of that fact by
+researchers. Some tutors are also sensitive to the possi-
+bility of negative publicity about their quali ﬁcations and
+methods; and full-time school teachers who undertake
+private supplementary tutoring may not want their
+schools to know about their after-school activities
+because it could affect their school images and/or pro-
+motion prospects.
+In this situation, it is generally easier and more reliable
+to collect data from households than from tutors. One
+study of 507 students was conducted in 1996 through a
+telephone survey of randomly selected households ( Lee,
+1996). This method did produce useful data, though was
+subject to shortcomings in the types of information that
+could be collected over the telephone. Rather more effec-
+tive for those who have access to schools is to solicit
+information from the pupils themselves. This technique
+has been used on a small scale by Tseng (1998) and
+Wong (1998), who were classroom teachers who sought
+information from their own pupils. The technique was
+also used for the present study. Solicitation of data from
+households and from pupils has the added advantage
+over solicitation of data from tutors that it is possible to
+identify which sorts of pupils do not receive tutoring in
+addition to identifying their counterparts who do.
+Most of the data which follow are taken from a study
+which focused on the secondary level of schooling, and
+which employed a combination of quantitative and quali-
+tative techniques ( Kwok, 2001 ). The researcher did not
+have capacity to survey pupils in all of Hong Kong ’s
+450 secondary schools, and for the quantitative part of
+the study decided instead to undertake detailed investi-
+=== PAGE 5 ===
+615M. Bray, P. Kwok / Economics of Education Review 22 (2003) 611 –620
+gation of six schools which served a range of socio-econ-
+omic groups and had diverse academic abilities in the
+student populations. Within each of these schools, one
+class was randomly selected during the 1998/1999 aca-
+demic year from each of three class groupings: Second-
+ary 1–3, Secondary 4 –5 and Secondary 6 –7. This gener-
+ated responses from 630 pupils. The questionnaire was
+written in Chinese, and piloted before conduct of the
+main study. With the agreement of the classroom teach-
+ers, the researcher himself administered the question-
+naires during class time, and was thus available to
+answer procedural questions and to ensure response rates
+of almost 100%. The ﬁndings were generally consistent
+with those of Lee (1996), Tseng (1998) and Wong
+(1998).
+The quantitative study gave a useful portrait, but in
+some respects had limitations. To supplement the quanti-
+tative study, therefore, a qualitative study was organized.
+Semi-structured interviews were conducted of 47 teach-
+ers, 42 tutors, 34 members of the general public, 31 par-
+ents, 28 secondary school students, 12 principals or vice-
+principals, and three school inspectors. These investi-
+gations included 16 in-depth case studies conducted over
+a 3-year period of students, tutors, and tutorial schools
+undertaking different types of tutoring. The viewpoints
+of persons other than students are important because stu-
+dents may not have the same perspectives as their par-
+ents, teachers and other actors. The quantitative and
+qualitative studies generated huge quantities of data.
+Since the data cannot all be presented here, the remain-
+der of this paper highlights some key ﬁndings.
+4.2. Quantitative ﬁndings
+Table 1 shows the proportions of sampled pupils
+receiving private supplementary tutoring at the time of
+the survey. Some variation existed between the schools,
+but this variation was within the bounds of expectation
+based on previous studies both in Hong Kong and else-
+where. Overall, 35.1% of the sampled Secondary 1 –3
+pupils indicated that they were receiving tutoring. In Sec-
+ondary 4–5 the proportion was 46.6%, and in Secondary
+6–7 it was 70.3%. In other words, at higher grades the
+Table 1
+Proportion of sampled pupils receiving private supplemen-
+tary tutoring
+Number of % Receiving
+pupils tutoring
+Secondary 1–3 231 35.1
+Secondary 4–5 234 46.6
+Secondary 6–7 165 70.3
+Total 630 48.8
+proportion of pupils receiving tutoring increased. This
+feature reﬂected the relative signi ﬁcance of the examin-
+ations at each level.
+The greatest proportions of pupils attended large-scale
+examination-oriented mass tutoring classes rather than
+individual or small-group sessions, and mass tutoring
+became particularly popular in the higher grades. Thus
+72.4% of Secondary 6 –7 pupils received large-scale
+mass tutoring, compared with 33.0% of Secondary 4 –5
+pupils. At Secondary 1–3, 12.3% of pupils received more
+than one type of tutoring. This proportion increased to
+29.4% in Secondary 4 –5, and was 19.8% in Secondary
+6–7. In Secondary 1–3, mathematics was the most popu-
+lar subject, being taken by 89.7% of the pupils who
+received tutoring. It was followed by English (taken by
+78.2%), Chinese (44.9%), and science (52.6%). At
+higher grades, the rankings depended on the pupils ’
+specialisms, but English and mathematics remained
+particularly popular. The modal duration of tutoring in
+each group of grades was 6 –10 hours per month, with
+30.4% of pupils indicating that they received over 10
+hours per month, and 6.5% indicating that they received
+over 25 hours per month.
+Table 2 indicates the reasons given by students for
+receiving private tutoring. Overall, preparation for exam-
+inations was by a considerable margin the greatest
+motivation, but it was relatively weak in Secondary 1 –
+3 and strongest in Secondary 6 –7. Conversely, seeking
+guidance with homework was the greatest motivation in
+Secondary 1 –3, but declined in signi ﬁcance with the
+higher grades. One third of pupils indicated that they
+received tutoring in order to meet parental obligations;
+but 10.1%, with a rather different orientation, indicated
+that they did so in order to make new friends.
+On the other side of the coin, the strongest reason
+presented for not receiving tutoring was that those stu-
+dents were able to solve their own learning problems
+either independently or in conjunction with classmates.
+One third of respondents indicated that they did not need
+private tutoring because parents or relatives could pro-
+vide the necessary assistance, but this proportion
+declined from 43.2% in Secondary 1 –3 to 17.1% in Sec-
+ondary 6–7, presumably in part because parents and rela-
+tives were less easily able to help with the more special-
+ized studies in the higher grades. A few students declared
+that academic results were not important, and a very
+small number indicated either that they had received suf-
+ﬁcient academic improvement after previous tutoring to
+be no longer in need, or that they had not received any
+academic improvement after previous tutoring and there-
+fore did not consider it useful.
+Also noteworthy is that 10.9% of respondents indi-
+cated that they did not receive tutoring because it was
+not affordable. This information may be considered in
+conjunction with data on fees and household incomes.
+One third of the students indicated that they spent less
+=== PAGE 6 ===
+616 M. Bray, P. Kwok / Economics of Education Review 22 (2003) 611 –620
+Table 2
+Main reasons given for receiving private tutoring (%)
+Secondary 1–3 Secondary 4 –5 Secondary 6 –7 Total
+(n = 73) ( n = 108) ( n = 116) ( n = 297)
+Seeking guidance with homework 60.3 43.5 37.1 45.1
+Examination preparation 28.8 64.8 84.5 63.6
+Parental obligations 57.5 37.0 12.1 32.3
+Daytime lessons not understandable 32.9 55.6 48.3 47.1
+Lack of guidance on schoolwork from 32.9 29.6 23.3 27.9
+parents/relatives
+Making new friends 8.2 16.7 5.2 10.1
+Others 1.4 4.6 2.6 3.0
+than HK$500 (US$64) per month on fees; but 28.1%
+indicated that they spent over HK$1000, and 8.5% spent
+over HK$2000.
+To help in estimation of the extent to which these
+expenditures were a burden on household budgets, stu-
+dents were asked about their households ’ monthly
+incomes. Recognizing that students might not be able to
+declare such information accurately, the researcher also
+asked students about the education levels of each parent,
+about the parents ’ occupations, and about the number of
+children and other members in the household, so that
+some sort of triangulation could be achieved. On the
+basis of this set of information, a rough estimate of
+socio-economic status was derived. The largest number
+of students from low-income households appeared to be
+spending HK$301 –500 per month on fees for private
+tutoring, while the most common range for middle-
+income households was HK$701 –1000, and for high-
+income households it was HK$1001 –2000. In addition
+were costs of materials and transportation, though most
+students indicated that the costs of materials were fairly
+modest and that the tutoring was received in locations
+close to their homes. For all income groups, the tutoring
+fees appeared to consume between 1.1 and 5.0% of
+monthly incomes ( Table 3 ). However, for an estimated
+3.6% of low-income families and 12.5% of middle-
+Table 3
+Ratio of tutoring fees to monthly household incomes (%)
+Percentage of incomes consumed by Low-income households Middle-income households High-income households
+tutoring fees ( n = 84) ( n = 32) ( n = 64)
+0.0–1.0 3.6 9.4 14.1
+1.1–5.0 51.2 53.1 51.6
+5.1–10.0 31.0 15.6 29.7
+10.1–15.0 10.7 9.4 4.7
+15.1–20.0 3.6 12.5 0.0
+Note: Data are only for the 180 respondents who gave apparently reliable ﬁgures on both tutoring fees and household incomes.
+income families, tutoring fees consumed between 15.1
+and 20.0% of monthly incomes.
+As might be expected, low-income households had
+lower participation rates in private tutoring than did their
+more af ﬂuent counterparts. For the low-income group
+(n = 333), participation rates were 10.2% in Secondary
+1–3, 13.2% in Secondary 4 –5, and 16.2% in Secondary
+6–7. By contrast, for the high income group ( n = 217),
+participation rates were 15.2% in Secondary 1 –3, 22.1%
+in Secondary 4 –5, and 19.3% in Secondary 6 –7.
+These proportions were correlated with the edu-
+cational levels of the parents. Table 4 indicates that the
+proportion of pupils receiving tutoring rose with parental
+education levels. To some extent this was presumably a
+reﬂection of incomes, since lower-educated parents prob-
+ably earned less than higher-educated parents. However,
+the pattern may also have re ﬂected parental expectations
+of their children. The more highly educated parents were
+presumably in a better position to tutor their own chil-
+dren than were their less-educated counterparts, but
+many parents chose instead to pay for tutors perhaps
+because they felt that the tutors were specialists and
+could perform the task more cost-effectively.
+Finally, it is useful to link the scale of tutoring to lev-
+els of academic achievement. While some people assume
+that most tutoring is received by low academic achievers
+=== PAGE 7 ===
+617M. Bray, P. Kwok / Economics of Education Review 22 (2003) 611 –620
+Table 4
+Receipt or non-receipt of tutoring, by parents ’/guardians’ educational levels
+Parents’/guardians’ educational levels Number of pupils Percentage of pupils receiving Percentage of pupils not
+tutoring receiving tutoring
+Primary education or less 195 35.5 64.5
+Junior secondary 182 44.5 55.5
+Upper secondary 125 52.8 47.2
+Matriculation 58 67.2 32.8
+University or above 70 72.9 27.1
+Total 630 48.6 51.2
+Note: Where two parents/guardians had different levels of education, the higher of the two was used for the purposes of this table.
+because they are most in need, research commonly
+shows that higher achievers tend to receive more tutoring
+than lower achievers. Thus, the families of students who
+are top in their classes may insist that those students
+receive tutoring in order to remain top in the class, while
+the families of students who are near the top insist that
+those students receive tutoring so that they can reach the
+top. At an institutional level, the quantitative study found
+that schools with higher-band ability intakes had higher
+levels of tutoring than the schools with lower-band
+intakes. One of the schools sampled was a prestigious
+English-medium institution. In that school, 71.2% of
+pupils were receiving private tutoring, compared with the
+average of 48.8% for all schools. Institutional culture and
+peer pressure were additional factors underlying the
+demand for private tutoring, and appeared stronger at
+higher levels of academic achievement.
+4.3. Qualitative ﬁndings
+While the quantitative survey provided an overall pic-
+ture of patterns, it could only give limited information
+on contextual factors and interrelationships. Constraints
+were imposed by the format of the questionnaire; and
+even when students had space and time to write com-
+ments, they may have felt unwilling to provide full infor-
+mation in the school settings. As noted above, the stu-
+dents may have felt inhibited by the fact that receipt of
+tutoring could be seen to confer an unfair advantage over
+peers in their schools. Further, the respondents ’ state-
+ments in the questionnaires were limited by their own
+perceptions as secondary school students. The qualitative
+part of the research was conducted within a multi-level
+framework which considered students, families, insti-
+tutions, and the system as a whole.
+Because of constraints in the length of this paper, only
+a few insights from the qualitative ﬁndings will be
+sketched here. At the student level, personal factors
+included self-esteem, learning abilities, and motivation,
+with some highly-motivated students actively seeking
+tutoring and less-motivated students being pushed by
+their peers, families, teachers or others. Parents were also
+inﬂuenced by peers, noting that other parents provided
+tutoring, and fearing that their children would get left
+behind in the competition.
+The case studies also highlighted the signi ﬁcance of
+the demographic shift in recent decades towards nuclear
+families, which typically have at most two children. On
+the one hand this has reduced the number of relatives
+likely to be available for informal tutoring at home, but
+on the other hand it means that parents ’ incomes need
+only to be spread over two children and that the parents
+are therefore more easily able to employ tutors. It is per-
+haps signiﬁcant that the mean number of school children
+per family ranged from 1.11 in families in which tutoring
+was being received to 1.90 in families in which it was
+not.
+Turning to the institutional level, the case studies
+showed that the tutoring centers and individual private
+tutors were readily accessible because of excellent trans-
+portation links within the urban society. Some tutoring
+centers had been deliberately located close to the stations
+of the Mass Transit Railway. The analysis also indicated
+various ways in which the tutoring establishments were
+perceived to be more attractive than mainstream schools.
+Many of the particularly vibrant centers employed ﬂashy
+‘idol’ tutors, who increased their attractiveness to teen-
+agers by wearing trendy clothes and using vocabulary
+which appealed to their clients. They stressed their aca-
+demic credentials by displaying their higher education
+qualiﬁcations in the promotion pamphlets and on the
+walls of the centers; and they enhanced their reputation
+for effectiveness by advertising the brilliant examination
+results of former pupils. In some tutorial classes, students
+who achieved high grades in open examinations were
+awarded cash prizes and package holidays in neighbor-
+ing countries. Some tutors who had been or still were
+teachers in mainstream schools explicitly stated that they
+saw themselves as catering to clients in a market place
+in a way that was not the norm in the school system.
+The market orientation was also evident in the names of
+the centers. Whereas most secondary schools were
+=== PAGE 8 ===
+618 M. Bray, P. Kwok / Economics of Education Review 22 (2003) 611 –620
+named after districts, sponsoring bodies, or saints (for
+church-run schools), the tutoring centers had names like
+A1 Institute, Top Learning Centre, Cleverland, and
+New Target.
+At the system level, Hong Kong was described in the
+qualitative analyses as a competitive city in which edu-
+cational quali ﬁcations were a key component of econ-
+omic advance. Hong Kong had experienced signi ﬁcant
+credential inﬂation in recent years, which required young
+people to gain higher qualiﬁcations than had been needed
+by their elders. Hong Kong is also strongly in ﬂuenced
+by what some researchers have called the Confucian
+heritage culture (see e.g. Watkins & Biggs, 1999; 2001 ).
+This culture stresses effort for self-improvement rather
+than acceptance of in-born abilities and existing circum-
+stances. Such cultural traits are arguably one reason why
+tutoring has been particularly evident in East Asia (Zeng,
+1999; Foondun, 2002 ).
+Concerning the curriculum, most tutees aimed for con-
+solidation of the school curriculum. Some, however,
+particularly the ones receiving individual tutoring, went
+beyond the school curriculum to domains that could not
+be covered during school hours. In some cases consoli-
+dation was achieved through repetition and drilling, but
+in other cases it was achieved through a different langu-
+age of instruction. Thus, some pupils in English-medium
+schools received tutoring through the medium of Chinese
+for general subjects. A few pupils even received tutoring
+in English through the medium of Chinese. In this aspect,
+the tutors were able to offer an approach which was pro-
+hibited in the schools, since even the schools which
+ofﬁcially taught the majority of subjects through the
+medium of Chinese were required to teach English
+through the medium of English. The tutors felt able to
+go straight for what their clients wanted without the extra
+baggage that had to be carried by the school system not
+only in linguistic correctness but also in building civic
+awareness, national identity, all-rounded development,
+etc.
+Finally, some tutors, particularly the ones who oper-
+ated on a one-to-one or small-group basis, were able to
+give students more individual attention than was possible
+in the school system. Schools typically had 40 –45 pupils
+per class in Secondary 1 –5, and 28 –30 pupils per class
+in Secondary 6 –7; and some schools frowned on diver-
+sity when it implied inequity between pupils. Tutors
+were less constrained in these dimensions. On the one
+hand they could give more stimulating materials to the
+high achievers, and on the other hand they could give
+extra support to the low achievers. The mass tutorial
+classes were not able to cater for such diversity, since
+these classes were considerably larger than the schools ’
+classes. However, the mass classes were to some extent
+graded by ability to match the standards of different cli-
+ents.
+5. Conclusions
+This paper began by noting that private supplementary
+tutoring has been a neglected topic in the literature. This
+is regrettable, because such tutoring may be substantial
+in scale and far-reaching in its implications. Its sup-
+plementary role is to replicate daytime schooling and to
+compensate for insuf ﬁciency in daytime lessons. One
+reason for the neglect by researchers is that tutoring
+tends to be a hidden phenomenon which is rarely docu-
+mented in ofﬁcial statistics. Also, while tutoring has long
+been a major activity in some parts of the world, parti-
+cularly in East Asia, it has been less signi ﬁcant else-
+where. In recent decades, however, private tutoring has
+become more evident in all regions of the globe. This
+fact underlines the desirability of giving the phenomenon
+more research and policy attention.
+The paper also noted at the outset that private sup-
+plementary tutoring may be of many types, and that
+determinants of its size and shape may vary in different
+societies. One important feature in Hong Kong is that
+school teachers are prohibited from receiving payment
+for supplementary tutoring of their own pupils. In the
+societies where such arrangements are permitted, teach-
+ers are able through quasi-blackmail methods to create
+demand for tutoring among pupils in their mainstream
+classes. Additional aspects in which Hong Kong may dif-
+fer from other societies lie in its Confucian heritage cul-
+ture, and in the fact that Hong Kong is a competitive
+urban society with excellent internal transportation
+which enhances access by tutors and tutees to each other.
+However, Hong Kong may also have similarities to
+other societies, and may even indicate the directions in
+which those societies are moving. On the one hand are
+neighboring societies such as mainland China and Viet-
+nam which are also in ﬂuenced by Confucian heritage
+cultures but in which political factors have in the past
+constrained the emergence of a substantial private
+tutoring industry; and on the other hand are societies
+elsewhere in the world, such as North America and
+Western Europe, in which school systems are becoming
+more strati ﬁed and in which families increasingly use
+out-of-school strategies to enhance in-school success.
+The factors which in ﬂuence demand for private sup-
+plementary tutoring in Hong Kong may have counter-
+parts elsewhere.
+The paper has also contrasted the determinants of
+demand for private supplementary tutoring with those
+which shape demand for private schooling. In particular,
+James’ (1987, 1993) model of an excess/differentiated
+dichotomy cannot be applied to private tutoring in an
+either/or way. It may be added that the market for private
+tutoring is much more ﬂuid than that for schooling. Cli-
+ents of private tutors can much more easily select the
+types, durations and intensities of services that they
+desire, and can instantly cease enrollment at any time
+=== PAGE 9 ===
+619M. Bray, P. Kwok / Economics of Education Review 22 (2003) 611 –620
+that they are dissatis ﬁed. Cessation of enrollment is con-
+siderably less easy in private school systems, since
+pupils, once registered, usually ﬁnd themselves locked
+into the private system by its curriculum, and are corre-
+spondingly excluded from the public system by the fact
+that they have not been following its curriculum. Analy-
+sis of demand for private tutoring can thus expose an
+important dimension of the broader theme of privately-
+provided education.
+When making decisions about private tutoring, house-
+holds commonly undertake informal rate-of-return analy-
+ses. Through cross-national studies, analysts such as Psa-
+charopoulos and Patrinos (2002) have shown that
+education is generally a very good investment that can
+generate high rates of return, and that it is usually wise
+for individuals to stay in education systems as long as
+possible. Few Hong Kong parents have read the studies
+of rates of return; but they can easily observe that more
+highly educated people in Hong Kong society generally
+have higher incomes than less educated people. Kwan-
+Terry (1991) has remarked on a similar phenomenon in
+Singapore, and has explicitly linked it to the economic
+returns that families can achieve from private tutoring.
+Many Hong Kong parents make similar rough calcu-
+lations, either explicitly or implicitly.
+However, such decisions depend on many additional
+factors, including affordability, accessibility, and general
+culture. Affordability of tutoring costs by individuals and
+families was measured in this study by the apparent bur-
+den on household budgets. The observations can be
+linked to the broader literature which stresses the impor-
+tance of such costs, even in so-called ‘free education ’
+systems (see e.g. Bray, 1996; Mehrotra & Delamonica,
+1998; Penrose, 1998 ). Concerning accessibility, the
+Hong Kong study indicated ease of transportation in the
+urban society. And cultural factors played a role insofar
+as pupils and their families were in ﬂuenced by peer
+pressures, institutions were in ﬂuenced by comparisons
+with other institutions, and the whole society was in ﬂu-
+enced by Confucian and other values.
+This study has identi ﬁed major variables in the
+demand for private supplementary tutoring, and has indi-
+cated a structure which could be followed by other
+researchers. More research on this theme, both in Hong
+Kong and elsewhere, is very desirable. Because sup-
+plementary tutoring has an impact on full-time school-
+ing, such research would shed light on patterns and pro-
+cesses in school systems as well as on tutoring itself.
+References
+Aggarwal, Y. (1998). Primary education in Delhi: how much
+do the children learn? New Delhi: National Institute of Edu-
+cational Planning and Administration.
+Baker, D. P., Akiba, M., LeTendre, G. K., & Wiseman, A. W.
+(2001). Worldwide shadow education: outside-school learn-
+ing, institutional quality of schooling, and cross-national
+mathematics achievement. Educational Evaluation and Pol-
+icy Analysis, 23(1), 1–17.
+Bray, M. (1996). Counting the full cost: community and par-
+ental ﬁnancing of education in East Asia . Washington, DC:
+The World Bank in collaboration with UNICEF.
+Bray, M. (1999a). The shadow education system: private
+tutoring and its implications for planners . Fundamentals of
+educational planning 61. Paris: UNESCO International Insti-
+tute for Educational Planning.
+Bray, M. (1999b). The private costs of public schooling: house-
+hold and community ﬁnancing of primary education in Cam-
+bodia. Paris: UNESCO International Institute for Edu-
+cational Planning in collaboration with UNICEF.
+Canada, Council of Ministers of Education (2000). Science
+learning: the Canadian context —school achievement indi-
+cators program 1999. Toronto: Council of Ministers of Edu-
+cation, Canada.
+Fenech, N., & Spiteri, C. (1999). Private tuition in Malta .B E d
+(Hons.) Dissertation. University of Malta.
+Fergany, N. (1994). Survey of access to primary education and
+acquisition of basic literacy skills in three Governorates in
+Egypt. Cairo: UNICEF.
+Foondun, A. R. (2002). The issue of private tuition: an analysis
+of the practice in Mauritius and selected South-East Asian
+countries. International Review of Education , 48(6), 485 –
+515.
+James, E. (1987). The public/private division of responsibility
+for education: an international comparison. Economics of
+Education Review, 6(1), 1–14.
+James, E. (1993). Why is there proportionately more enrollment
+in private schools in some countries? Working Paper Series
+1069. Washington, DC: Country Economics Department,
+The World Bank.
+Japan, Ministry of Education, Science and Culture (1995).
+Japanese government policies in education, science and cul-
+ture: new directions in school education —fostering strength
+for life. Tokyo: Ministry of Education, Science and Culture.
+Japan, Ministry of Education, Culture, Sports, Science and
+Technology (1999). Committee report from Council on Life-
+long Education . Tokyo: Ministry of Education, Culture,
+Sports, Science and Technology (in Japanese).
+Kim, I. (2000). Private tutoring in Korea: a cultural analysis.
+Paper presented at the annual conference of the Compara-
+tive & International Education Society, San Antonio, Texas,
+USA, 8–12 March.
+Kwan-Terry, A. (1991). The economics of language in Singa-
+pore: students ’ use of extracurricular language lessons.
+Journal of Asian Paci ﬁc Communication, 2(1), 69–89.
+Kwok, P. L. Y. (2001). A multi-level social analysis of demand
+for private supplementary tutoring at secondary level in
+Hong Kong. PhD Thesis. Faculty of Education, The Univer-
+sity of Hong Kong.
+Lee, C. (1996). Children and private tuition. Hong Kong: Hong
+Kong Federation of Youth Groups Youth Poll Series No. 34.
+Mehrotra, S., & Delamonica, E. (1998). Household costs and
+public expenditure on primary education in ﬁve low-income
+countries: a comparative analysis. International Journal of
+Educational Development, 18(1), 41–61.
+Nzomo, J., Kariuki, M., & Guantai, L. (2001). The quality of
+=== PAGE 10 ===
+620 M. Bray, P. Kwok / Economics of Education Review 22 (2003) 611 –620
+primary education: some policy suggestions based on a sur-
+vey of schools —Kenya. Paris: UNESCO International Insti-
+tute for Educational Planning SACMEQ Policy Research
+Report No. 6.
+Penrose, P. (1998). Cost sharing in education: public ﬁnance,
+school and household perspectives. London: Department for
+International Development Serial No. 27.
+Popa, S., & Acedo, C. (2003). Redeﬁning professionalism:
+Romanian teachers and the private tutoring system . Paper
+presented at the annual conference of the Comparative and
+International Education Society, New Orleans, USA, 12 –
+16 March.
+Psacharopoulos, G., & Patrinos, H. A. (2002). Returns to invest-
+ment in education: a further update . Washington, DC: The
+World Bank Policy Research Working Paper 2881.
+Russell, J. (2002). The secret lessons. New Statesman, 8 April,
+pp. 10-13.
+Stevenson, D. L., & Baker, D. P. (1992). Shadow education
+and allocation in formal schooling: transition to university
+in Japan. American Journal of Sociology, 97(6), 1639–1657.
+Taiwan, Ministry of Education (1999). Education statistics in
+the Republic of China . Taipei: Ministry of Education (in
+Chinese).
+Tseng, J. L. C. (1998). Private supplementary tutoring at the
+senior secondary level in Taiwan and Hong Kong. MEd Dis-
+sertation. The University of Hong Kong.
+UNESCO (2000). The EFA 2000 assessment: country reports—
+Romania. Paris: UNESCO (Available on
+www2.unesco.org/wefcountryreports/romania/rapport—
+1.html).
+Watkins, D. A., & Biggs, J. B. (Eds.). (1999). The Chinese
+learner: cultural psychological and contextual in ﬂuences.
+Hong Kong: Comparative Education Research Centre, The
+University of Hong Kong.
+Watkins, D. A., & Biggs, J. B. (Eds.). (2001). Teaching the
+Chinese learner: psychological and pedagogical perspec-
+tives. Hong Kong: Comparative Education Research Centre,
+The University of Hong Kong.
+Wolf, R. (2002). Extra-school instruction in mathematics and
+science. In D. F. Robitaille, & A. E. Beaton (Eds.), Second-
+ary analysis of the TIMSS data (pp. 331 –341). Dordrecht:
+Kluwer Academic Publishers.
+Wong, A. (1998). Private tutoring in Hong Kong: a case study .
+Hong Kong: Faculty of Education, The University of Hong
+Kong Unpublished paper.
+The World Bank (2002). Arab Republic of Egypt: education
+sector review—progress and priorities for the future. Wash-
+ington DC: The World Bank.
+Zeng, K. (1999). Dragon gate: competitive examinations and
+their consequences. London: Cassell.

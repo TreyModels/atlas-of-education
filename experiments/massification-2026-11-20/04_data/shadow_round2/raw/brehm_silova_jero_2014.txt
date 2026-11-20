@@ -1,0 +1,1046 @@
+94 JERO, Vol. 6, No. 1 (2014)
+Abstract
+The international construction of a new political economic order in Cambodia has 
+had contradictory e ﬀ ects on education. The rhetoric of democracy thrives along-
+side corruption and human rights abuses, the Education for All initiative exists 
+alongside privatization of public education, and many international education de-
+velopment eﬀ orts perpetuate (post)colonial legacies. In this context, private tutor-
+ing has emerged as an essential part of the public education system. A mastery 
+of the required curriculum is now possible only through a careful combination of 
+public schooling and private tutoring. Only those who can a ﬀ ord private tutoring 
+thus receive access to a complete national education and have greater opportuni-
+ties to successfully graduate from public school. Drawing on a preliminary anal-
+ysis of qualitative and quantitative data, including 26 classroom observations, six 
+focus groups with a total of 37 participants, grade tracking of 36 students, and 
+informal interviews with 10 participants, this article examines the nature, scope, 
+and equity implications of private tutoring in Cambodia. The article concludes by 
+explaining how a seamless combination of public schooling and private tutoring 
+creates an educational arrangement that continues to stratify Cambodian youth 
+along socioeconomic lines.
+ 1
+Keywords
+Cambodia; Private tutoring; Shadow education; Privatization
+William C. Brehm (corresponding author), University of Hong Kong, 97 Albert Street, East 
+Melbourne, Australia
+e-mail:  will.brehm@gmail.com
+Prof. Dr. Iveta Silova, Lehigh University, College of Education, 111 Research Drive, Bethle-
+hem, Pennsylvania, 18015, United States of America
+e-mail:  ism207@lehigh.edu
+William C. Brehm & Iveta Silova
+Hidden privatization of public education 
+in Cambodia: Equity implications of 
+private tutoring
+Journal for Educational Research Online
+Journal für Bildungsforschung Online
+Volume 6 (2014), No. 1, 94–116
+© 2014 Waxmann
+JERO_1_2014.indb   94JERO_1_2014.indb   94 26.11.13   11:5026.11.13   11:50
+Hidden privatization of public education in Cambodia
+95JERO, Vol. 6, No. 1 (2014)
+Die heimliche Privatisierung ö ﬀ entlicher 
+Bildung in Kambodscha: Gerechtigkeitsspezi ﬁ sche 
+Auswirkungen von Nachhilfeunterricht
+Zusammenfassung
+Der internationale Aufbau einer neuen politischen Wirtschaftsordnung in 
+Kambodscha hatte gegensätzliche E ﬀ ekte in Bezug auf Bildung. Die Sprache der 
+Demokratie entwickelt sich neben Korruption und Menschenrechtsverletzungen, 
+die Initiative ‚Education for All‘ besteht neben der Privatisierung ö ﬀ entlicher 
+Bildung, und zahlreiche internationale Bemühungen zur Bildungsentwicklung 
+tragen zur Aufrechterhaltung (post)kolonialer Verhältnisse bei. In diesem 
+Kontext ist privater Nachhilfeunterricht zu einem wesentlichen Bestandteil des 
+öﬀ entlichen Bildungssystems geworden. Die Beherrschung der vorgesehenen 
+Unterrichtsinhalte ist nur durch eine bedachte Kombination von ö ﬀ entlicher 
+Beschulung und Privatunterricht möglich. Nur wer sich Nachhilfeunterricht leis-
+ten kann erhält vollständigen Zugang zur nationalen Bildung und hat demnach 
+bessere Möglichkeiten, im ö ﬀ entlichen Schulsystem erfolgreich einen Abschluss zu 
+erwerben. Auf Basis erster Analysen qualitativer und quantitativer Daten aus 26 
+Klassenbeobachtungen, sechs Fokusgruppen mit insgesamt 37 Teilnehmerinnen 
+und Teilnehmern, Trackinginformationen von 36 Schülerinnen und Schülern so-
+wie informellen Interviews mit 10 Teilnehmerinnen und Teilnehmern unter-
+sucht dieser Artikel die Bescha ﬀ enheit und Tragweite des Nachhilfeunterrichts in 
+Kambodscha sowie dessen Auswirkungen auf Bildungsgerechtigkeit. Der Artikel 
+schließt damit, zu erläutern, wie eine nahtlose Kombination aus ö ﬀ entlicher 
+Bildung und privatem Nachhilfeunterricht zur Scha ﬀ ung eines Bildungsgefüges 
+beiträgt, das eine Strati ﬁ zierung der Kinder und Jugendlichen in Kambodscha 
+nach sozio-ökonomischen Kriterien fortsetzt.
+Schlagworte
+Kambodscha; Nachhilfeunterricht; Shadow Education; Privatisierung
+1.  Introduction
+The boundaries between the public and private provision of education in Cambodia 
+have become blurred since the early 1990s. While the number of private schools re-
+mains marginal and attendance is generally limited to elite families in urban areas 
+and low-fee private schools are relatively scarce, hidden privatization has entered 
+public schools in the form of private tutoring. Before or after attending the re-
+quired four or ﬁ ve hours of public school each day, many students receive, and pay 
+for, extra instruction. By channeling private funds directly to teachers in the form 
+of private tutoring fees (among other educational services and materials house-
+holds pay for), the practice of private tutoring has helped ﬁ nance the underfund-
+JERO_1_2014.indb   95JERO_1_2014.indb   95 26.11.13   11:5026.11.13   11:50
+William C. Brehm & Iveta Silova
+96 JERO, Vol. 6, No. 1 (2014)
+ed public education system. At the same time, it remains unregulated (or hidden), 
+perhaps re ﬂ ecting the government’s broader commitment to neoliberal globaliza-
+tion starting in the 1990s and its accompanying policies of privatization: deregu-
+lation, decentralization, and marketization of formally public services and goods.
+Whether taking place in teachers’ homes, public schools, or tutoring centers 
+(primarily in Phnom Penh, the capital), private tutoring serves multiple purposes. 
+On the one hand, it allows teachers to supplement their meager salaries with addi-
+tional income necessary to survive. On the other hand, it o ﬀ ers students adequate 
+time to cover the national curriculum, which is otherwise di ﬃ  cult to complete dur-
+ing the school day in primary and secondary school. Public school thus only par-
+tially covers the required national curriculum, enabling teachers to charge students 
+for the remaining content after school hours, often inside pubic school buildings. 
+Those who can pay for private tutoring receive a more complete education and 
+hence have a greater likelihood of successfully completing secondary education.
+In this context, private tutoring has been explicitly linked to teacher corruption 
+(Dawson, 2009) and the “shadow education” market (Bray, 1999a). For example, 
+Walter Dawson (2009, 2010) argues that private tutoring is a part of the broader 
+system of “forced corruption” in Cambodia, which is linked to chronically low sala-
+ries of public sector employees. In order to supplement their income, teachers are 
+“forced” to ﬁ nd alternative sources of income such as engaging in private tutoring 
+or charging students informal fees (for example, fees for the monthly photocopy-
+ing of examination papers and the daily parking of bicycles at school, as well as, 
+in some cases, fees for overlooking student absences, obtaining examination an-
+swers, or forcing students to buy lunches from the teacher). Similarly, Mark Bray 
+(1999a) discusses the phenomenon of private tutoring in terms of “shadow educa-
+tion”, implying its connection to a “shadow economy”. He explains that the reduc-
+tion of government expenditure on social sector services (including education) has 
+led to the increase in private ﬁ nancing of education to ﬁ ll the funding gap , thereby 
+passing the costs onto households and extending elements of public education into 
+“shadow” markets.
+Although the existing research on private tutoring o ﬀ ers meaningful explana-
+tions of the nature, causes, and implications of tutoring in Cambodia, it only tells 
+a part of the story. As we attempt to illustrate in this article, theorizing private 
+tutoring in the Cambodian context requires situating the study in post-colonial, 
+post-conﬂ ict histories and their persisting legacies (such as hierarchy, patronage, 
+and bribery), unpacking the contradictions between international in ﬂ uences (such 
+as a rights-based discourses) and national practices (such as political oppression 
+and assassinations), as well as examining the political economy of the country in 
+relation to the global economy. A combination of these factors yields a more nu-
+anced understanding and a more complete explanation of the nature and impli-
+cations of private tutoring, while revealing an educational arrangement – that is, 
+the public-private ﬁ nancing of education – formulated in the 1990s (see for exam-
+ple, Government of Cambodia, 1994, p. 109) that obscures the boundaries between 
+public schooling and private tutoring in Cambodia.
+JERO_1_2014.indb   96JERO_1_2014.indb   96 26.11.13   11:5026.11.13   11:50
+Hidden privatization of public education in Cambodia
+97JERO, Vol. 6, No. 1 (2014)
+Drawing on a preliminary analysis of qualitative and quantitative data from a 
+yearlong research project funded by the Open Society Institute (OSI) and gath-
+ered in the beginning of 2011 (see Brehm, Silova, & Tuot, 2012), this article exam-
+ines the nature, scope, and equity implications of private tutoring provided by gov-
+ernment schoolteachers to their own students during the school year. Taking into 
+consideration the complexity of Cambodia’s historical, political, and socioeconom-
+ic contexts, this research study attempts to explain how a seamless combination of 
+public schooling and private tutoring creates an educational arrangement that ex-
+cludes poor students from receiving a full education. In particular, the study ex-
+amines (a) the nature of the public-private education arrangement (including dif-
+ferences and similarities in curriculum content and teaching methodologies used 
+during public schooling and private tutoring lessons) and (b) equity implications 
+of private tutoring (including di ﬀ erences in academic achievement among students 
+attending private tutoring lessons and those who do not).
+2.  Contextualizing private tutoring in Cambodian 
+public education: History and culture
+Private tutoring is a complex phenomenon worldwide, which is driven by multi-
+ple factors, including economic, social, cultural, and educational ones. In compar-
+ative education research, private tutoring has been generally conceptualized as: (a) 
+a cultural phenomenon re ﬂ ecting the perceived value of e ﬀ ort in education success 
+(for example Rohlen & LeTendre, 1996; Stevenson & Stigler, 1992), (b) an enrich-
+ment strategy to cope with high stakes examinations (for example Bray & Kwok, 
+2003; Tansel & Bircan, 2006; Aurini & Davies, 2004), (c) a remedial strategy to 
+help students keep up with the curriculum requirements (Baker & LeTendre, 2005; 
+Stevenson & Baker, 1992), and/or (d) an economic survival mechanism for un-
+derpaid teachers (Dawson, 2009; Silova, 2009; Silova, Budiene, & Bray, 2006; ). 
+Notwithstanding these di ﬀ erent research foci, most studies have conceptualized the 
+phenomenon of private tutoring in terms of social capital – whether cultural, hu-
+man, or ﬁ nancial – to highlight the relationship between education (including pri-
+vate tutoring) and the attainment of enhanced educational opportunities and social 
+status. On the one hand, studies conceptualized within the human capital frame-
+work view private tutoring as an important educational “investment” that may gen-
+erate pedagogical and curricular innovation and “add to the nation’s human capi-
+tal stock in both quantity and quality” (Heyneman, 2011, p. 184; see also Coleman, 
+1998). On the other hand, studies based on critical approaches to social capital – 
+primarily drawing on Pierre Bourdieu’s (1986) work – focus on socioeconomic in-
+equalities stemming from private tutoring, arguing that students bene ﬁ t unevenly 
+from the social and cultural capital they have accrued through supplementary tu-
+toring (de Silva et al., 1991; Bray, 1999a; Kwok, 2004; Ball, 2007; Ball & Youdell, 
+2008; Burch, 2009).
+JERO_1_2014.indb   97JERO_1_2014.indb   97 26.11.13   11:5026.11.13   11:50
+William C. Brehm & Iveta Silova
+98 JERO, Vol. 6, No. 1 (2014)
+Aiming to examine equity implications of private tutoring in Cambodia through 
+the lens of critical theory, this study makes two speci ﬁ c contributions to the exist-
+ing body of research. First, we argue that private tutoring should be conceptual-
+ized as a multi-dimensional phenomenon, which is not driven by any single fac-
+tor (whether high-stakes examinations or low teacher salaries) bur rather re ﬂ ects a 
+complex combination of multiple factors. In the Cambodian context, for  example, 
+some students attend tutoring to increase their knowledge, others use it to improve 
+their scores on national examinations, and still others seek tutoring for subjects 
+not taught at school (such as English language at the primary level). In addition, 
+public school teachers bene ﬁ t from privately tutoring their own students by gener-
+ating additional income to supplement their salaries and by providing more hours 
+to teach the national curriculum. Furthermore, speci ﬁ c historical legacies contrib-
+ute to the institutionalization of private tutoring on a mass scale. Therefore, it is 
+important that research on private tutoring includes a simultaneous examination of 
+historical, cultural, economic, and institutional factors, as well as an investigation 
+of how these factors interact with each other to produce social e ﬀ ects.
+Second, the Cambodian case  of private tutoring is not a phenomenon strictly 
+associated with the domain of private education provision, which is commonly as-
+sumed in the existing research. In particular, some conceptualizations of private tu-
+toring discuss it in terms of “shadow education”, emphasizing how private tutoring 
+acts as a changing shadow of mainstream schooling in terms of content taught and 
+takes place in a shadow of regulation due to its lack of oversight by governments 
+(Bray, 1999a, 2010a, 2010b). Although “shadow education” in the Cambodian case 
+mimics mainstream schooling content and lacks government regulations, it also il-
+lustrates how the boundaries between public schooling and private tutoring have 
+become blurred because public school teachers use the space of private tutoring 
+to ﬁ nish – or provide a higher quality of instruction on – the national curriculum. 
+The complexity of the Cambodian case – both in terms of its multi-dimensional na-
+ture and the public-private educational arrangement – becomes particularly visible 
+by taking a more in-depth look at the historical, political, and economic contexts 
+within which the project of mass schooling has arrived in Cambodia. We ﬁ nd that 
+the post-colonial legacies and international norms of the 1990s rede ﬁ ned the pub-
+lic-private education space today.
+2.1 Post-colonial legacies and historical continuities
+Since Cambodia gained independence from French colonial rule in 1953, it has 
+gone through ﬁ ve distinct political transitions, from royalist (1953– 1970) to repub-
+licanism (1970– 1975) to socialism/Maoism (1975– 1979) to communism (1979– 
+1993) and to liberal democracy (1993– present). Notwithstanding the chang-
+es in nomenclature during these transitions and the massive disjuncture with 
+the past caused by the Pol Pot regime (generally referred to as the Khmer Rouge; 
+JERO_1_2014.indb   98JERO_1_2014.indb   98 26.11.13   11:5026.11.13   11:50
+Hidden privatization of public education in Cambodia
+99JERO, Vol. 6, No. 1 (2014)
+1975–1979), there are elements of continuity in Cambodia’s politics and policies. 
+Education policy is a clear example.
+Despite the political di ﬀ erences and geopolitical maneuvering by di ﬀ erent rul-
+ers over the decades and the abolition of schooling under the Khmer Rouge, a re-
+curring education policy after French colonialism (and then again after the Khmer 
+Rouge rule) has been the focus on increasing access to education by building more 
+schools and enrolling more students in public education as a way to teach citi-
+zenship to children along various political visions for the future (Ayres, 2000a). 
+Following nearly a century of French colonial rule (1863–1953), the goal of ex-
+panding educational access and making public education compulsory became a na-
+tional priority and was ﬁ rst introduced by head of state Prince Sihanouk in 1955. 
+The goal was at odds with a report commissioned by UNESCO, which emphasized 
+the need to ensure education quality and teacher training by building on the sys-
+tem of education created by the French (Bilodeau, Pathammavong, & Lê, 1955). In 
+particular, the report argued that “it is the moral duty of the state, before making 
+education compulsory, to o ﬀ er the pupils proper schools with hygienic conditions, 
+qualiﬁ ed teachers, and a suitable curriculum” (Bilodeau et al., 1955, p. 31). By fo-
+cusing on “quali ﬁ ed teachers” and “suitable curriculum”, the aim to achieve com-
+pulsory education was to be a deliberately slow process that “set its seal on an al-
+ready existing situation [implemented by the French]” and “aimed at only a small 
+number of recalcitrants” (p. 31). In other words, the report suggested that rath-
+er than focus on increasing access to education as the state’s main educational pri-
+ority, the Cambodian government should also focus on creating a robust system of 
+quality education both in terms of teaching force and meaningful curriculum.
+Notwithstanding international pressures for a deliberate and adequately funded 
+expansion of a quality education system, the Cambodian government focused in-
+stead on a rapid construction of schools to increase educational access for the large 
+number of children remaining out of school. The focus on increasing access to edu-
+cation occurred between 1953 and 1975 and then again between 1979 and present. 1 
+The conclusion of the Paris Peace Conference in 1991, which authorized the United 
+Nations (UN) to supervise a cease ﬁ re between the three factions vying for pow-
+er after the fall of the Khmer Rouge and to oversee free and fair elections to take 
+place in 1993, billions of dollars were pledged to develop Cambodia, including the 
+(re)modernization of its education system and a call for Education for All (EFA). 
+Although aid stalled in the early 1990s, 2 the new educational rhetoric of EFA re-
+1 During the Khmer Rouge, the system of schooling established during French colonialism 
+was more or less eliminated. Khmer Rouge soldiers targeted teachers and the educated 
+class because they were – or were thought to be – symbols of colonialism and moder-
+nism, which Pol Pot was trying to eradicate (Haas, 1991). This is not to suggest, however, 
+that the Khmer Rouge did not provide some sort of education during its rule. Ideologi-
+cal training may be considered a form of education between 1975–1979 (Clayton, 2000, 
+p. 71).
+2 Fighting continued in the northern part of the country controlled by the Khmer Rouge 
+and eﬀ ectively postponed aid. Donors were nervous to give money to a country that was 
+thought could easily slip back into civil war.
+JERO_1_2014.indb   99JERO_1_2014.indb   99 26.11.13   11:5026.11.13   11:50
+William C. Brehm & Iveta Silova
+100 JERO, Vol. 6, No. 1 (2014)
+conﬁ rmed and gave new life to Cambodia’s long history of focusing on education-
+al access, despite the initiative’s call for quality education. As a result, the number 
+of schools more than doubled between the ﬁ nal years of French colonialism and 
+the turn of the century. In 1951, there were 2,234 primary schools (including ele-
+mentary, complementary and wat schools 3) and 242 secondary schools (Bilodeau 
+et al., 1955). By 2000, there were a total of 5,741 primary schools and 697 second-
+ary schools (MoEYS, 2001).
+While the construction of more schools over the decade has allowed addition-
+al children to enter school, a rapid increase in the number of schools has had seri-
+ous implications for sta ﬀ , curriculum, and ﬁ nancing of education. One of the out-
+comes was a severe shortage of quali ﬁ ed teachers to ﬁ ll positions in the newly built 
+schools. One way the government addressed the problem of teacher shortage was 
+by maximizing the student to teacher ratio, with the average Cambodian classroom 
+accommodating over 40 students at the primary school level. Another strategy has 
+included the introduction of double-shift schooling, whereby one group of students 
+attend four to ﬁ ve hours of instruction in the morning and a second group receives 
+instruction in the afternoon. In 2005, approximately 81 % of primary and 41 % of 
+lower secondary schools held two shifts ( Benveniste, Marshall, & Araujo, 2008). 
+While these measures undoubtedly address the urgent issue of teacher shortages, 
+they could simultaneously contribute to the deterioration of education quality in 
+mainstream schools and the potential need for private tutoring to compensate for 
+the reduced classroom time (Bray, 2008).
+A chronic underfunding of the education system in Cambodia has further com-
+pounded problems. Ratcli ﬀ e (2009) pointed out that education spending as a per-
+cent of GDP continued to hover between 1 and 2 %, and on average the government 
+spends $50 per student per year. Despite the increases in education spending as a 
+proportion of total government spending since the 1990s, 4 the percent of recurrent 
+expenditures devoted to teacher salaries decreased between 1997 and 2005 from 78 
+to 60 %. As the report commissioned by the World Bank points out, “this is low in 
+comparison with both developed and developing economies where the wage share 
+ranges between 70 and 80 %” ( Benveniste et al., 2008, p. 74). In 2007, a prima-
+ry teacher’s base salary was $44 per month, which made it di ﬃ  cult (if not impossi-
+ble) for many teachers, especially new teachers who are lowest on the pay scale, to 
+aﬀ ord the basic necessities of food, housing, and health care, as well as supporting 
+3 Wat schools are traditional schools located in pagodas, and in which children are taught 
+by monks.
+4 Government recurrent budget on education increased from approximately 10 % in the 
+1990s to nearly 18.5 % in 2003 (UNICEF & World Bank, 2006). Between 2003 and 2007, 
+the overall budget for education increased 29.5 % in real terms, leading to an increased 
+educational recurrent expenditure as a percentage of total government spending (from 
+11 % in 1999 to 19.2 % in 2007 back to 16.4 % in 2009; as cited in Engel, 2011).
+JERO_1_2014.indb   100JERO_1_2014.indb   100 26.11.13   11:5026.11.13   11:50
+Hidden privatization of public education in Cambodia
+101JERO, Vol. 6, No. 1 (2014)
+any children or elderly family members ( Benveniste et al., 2008, p. 59). 5 In oth-
+er words, teachers receive an unlivable salary and therefore were forced to seek a 
+second occupation. According to Benveniste et al. (2008), the majority of teachers 
+(nearly 70 %) had second jobs and thus supplemented their incomes by giving pri-
+vate lessons, driving motorbike taxis, working at the markets, farming, or in oth-
+er ways (p. 38). 
+In these circumstances, households are left to contribute to educational expen-
+ditures through the payment of informal fees (Bray, 1999b; Bray & Bunly, 2005; 
+NEP, 2007; Benveniste et al., 2008). These informal fees include “education fees” 
+for private tutoring, examination papers, and other school materials; “start-up 
+fees” for school uniforms and registration; “daily fees” for food and parking a bicy-
+cle; and “miscellaneous costs” for teacher gifts and various fundraising ceremonies 
+(NEP, 2007). The various school fees account for 10 to 19 % of total average house-
+hold income, and private tutoring fees commonly make up the largest share (NEP, 
+2007, p. 25). 6 In the context of an underfunded public education system that relies 
+on private fees to supplement teacher salaries and pay for classroom resources like 
+examination papers, the constitutionally guaranteed system of compulsory school-
+ing designed to equalize society instead excludes children who cannot pay the fee 
+to attend private tutoring and thus receive a full education, re-enforcing dimen-
+sions of the system of hierarchies and power found throughout Cambodia’s past 
+(Chandler, 2008; Ayres 2000a, 2000b).
+2.2  Hierarchy and Power
+The ideas of hierarchy and power have traditionally been associated with 
+Cambodian culture since the 9th century rule of God-King Jayavarman II 
+(Mannikka, 1996) and bolstered under French colonialism (see Chandler, 2008). 
+Even modern Khmer language uses the historical phrases of “people who have” 
+(neak mean ) and “people who do not” ( neak kro ) as a way to distinguish be-
+tween groups. Ayres (2000a, pp. 9–10) suggests that traditional Cambodian cul-
+ture stems from the time when India increased trade in the Indian Ocean, settling 
+along areas of the Mekong River Delta. Although Cambodia did not develop an of-
+ﬁ cial caste system like that of India, Ayres (2000b) suggests that what emerged in 
+the 8th century was “a social system based on reciprocities and dependencies and 
+a complex social hierarchy that encompassed individuals, their families, villagers, 
+and religious and government o ﬃ  cials” (p. 456). Moreover, “a web of patronage 
+and clientship” along with the absence of “mutual obligation” de ﬁ ned society (see 
+5 According to the World Bank report (Benveniste et al., 2008), salaries increased after 
+16 years of experience by around 20 % and after 28 years they increased by about 30 % 
+of the initial base salary. Salary levels also depend on grade/subject taught and location 
+of school. For example, senior teachers in the 6th grade can earn between $80–100 per 
+month (personal communication, March 31, 2011).
+6 In real terms, in 2007 families spent on average $137.85 per year on education for one 
+child, with $52.38 going to education fees, mainly private tutoring.
+JERO_1_2014.indb   101JERO_1_2014.indb   101 26.11.13   11:5026.11.13   11:50
+William C. Brehm & Iveta Silova
+102 JERO, Vol. 6, No. 1 (2014)
+also Toomer, Teng, Cerecina, & Liu, 2011, p. 19). Similar social systems of patron-
+age/clientship were uncovered in 2007 within the Extraordinary Criminal Court of 
+Cambodia, the tribunal set up to try senior members of the Khmer Rouge (Hall, 
+2007).
+These traditional values of a rigid hierarchy and exercise of absolute power 
+were not dismantled when the modernity project entered Cambodia with French 
+colonialism in 1863. During the 90 years of being a French protectorate, tradition-
+al tenets of Cambodian society were reinforced under the French rationale of mis-
+sion civilisatrice . For example, the French did not create a vast system of mod-
+ern education in Cambodia like in its other South East Asian colonies but instead 
+modernized the traditional wat schools by training the monk teachers in French 
+teacher training schools. Clayton (2000) suggests that these “reforms intended to 
+broaden the base of the educational pyramid, to increase the pool of candidates 
+brought to the sorting machine  [emphasis added], and ultimately to improve the 
+preparedness and the quantity of Cambodians promoted through education to po-
+sitions in the colonial administration” (p. 56). As a result, notions of hierarchy, 
+perhaps ﬁ rst established during the Angkor period (9th–15th century), were rein-
+forced under French colonial rule by elevating the royal family to a similar status 
+of the God-Kings of Angkor and creating a government bourgeois of French edu-
+cated Cambodians through a “sorting machine.” In this system, those children who 
+excelled in wat school then attended a French language secondary school and per-
+haps even an institution of higher education in France.
+As Cambodia entered a tumultuous period with the withdrawal of the French in 
+1953, traditional elements of Cambodian society persisted. During 40 years of po-
+litical transition to the system of liberal democracy set up by the UN in 1993, there 
+has been more continuity than discontinuity in the country’s politics and policies 
+(excluding, but also noting the signi ﬁ cance of, the Khmer Rouge years) that are a 
+reﬂ ection of (pre)colonial times. Serge Thion commented in 1993,
+It might seem paradoxical to consider the evolution of modern Cambodian 
+politics as a continuous and at times repetitive process, because it appears 
+mainly as a succession of brutal changes, involving merciless replacement 
+of ruling elites. Successive regimes abhorred the preceding ones and tried 
+to stamp out any leftover in ﬂ uence. But these total and abrupt changes, 
+sometimes labeled revolutions, occurred in a distinctly Khmer way that 
+calls for some re ﬂ ection on what Cambodian politics is really about. (quot-
+ed in Ayres, 2000b, p. 455)
+2.3  International Norms
+With these historical legacies of the “Khmer way” persisting into the present, 
+there has been a complicated injection of democratic and liberal economic reforms 
+since the 1990s. Established in 1992, the United Nations Transitional Authority in 
+JERO_1_2014.indb   102JERO_1_2014.indb   102 26.11.13   11:5026.11.13   11:50
+Hidden privatization of public education in Cambodia
+103JERO, Vol. 6, No. 1 (2014)
+Cambodia (UNTAC) had “all powers necessary” over the government to promote 
+free elections, human rights, and political neutrality (UNTAC, 1992), and to trans-
+form the economy into a “market economy system” as stipulated in article 56 of the 
+Cambodian Constitution. Not only was Cambodia the only country in the world to 
+experience such a sweeping mandate by the United Nations, but it also entered the 
+global economy at a time of contentious debates within the very international ﬁ -
+nancial institutions (the World Bank, International Monetary Fund, etc.) that were 
+to develop the country. As Springer (2010) pointed out, Cambodian development 
+was wrapped up in the 1990s refashioning of the international ﬁ nancial institutions 
+language from “the productive e ﬀ orts of the free market” to the “more easily di-
+gested emphasis on poverty reduction, transparent governance, and (…) the slightly 
+more problematic notions of human rights and democracy” (p. 935). These discur-
+sive changes provide a more nuanced understanding of an institutionalized hierar-
+chy, which is shaped, as Springer (2011) suggested albeit using a straw man argu-
+ment, as much by the neoliberal market forces as it is by “the Khmer way”:
+(...) the suggestion that Cambodia’s increasing gap between the rich and 
+the poor is exclusively [ sic] the result of corruption – rather than, to at 
+least some degree, a feature of market forces – is misguided if not disin-
+genuous. Capitalism positions hierarchy as the natural order of human ex-
+istence, so in an insidious perpetuation of social Darwinism, neoliberalism 
+actively promotes inequality through the discursive production of an indi-
+vidualist binary between ‘hard work’ and ‘laziness’. (p. 944)
+The complex and contradictory in ﬂ uences in Cambodia in the 1990s create the 
+space for the government to promote human rights, on the one hand, while under-
+taking a system of political assassinations and violence, on the other; a system of 
+centrally controlled ministries was coupled with a call for decentralization in areas 
+of management and ﬁ nancing social services (see, for example, Curtis, 1993. A sen-
+ior parliamentarian of the main opposition party claimed, “In Cambodia, the pillars 
+of democracy are all there, but you have to look at the quality, the functions. It’s 
+really just a facade” (Mu Sochua cited in Brinkley, 2011, p. 301). In 2010, the gov-
+ernment built the ﬁ rst “democracy square” to provide space for organized protests 
+and symbolize freedom of expression, but memories persisted of the assassinations 
+of union leaders without ever bringing the culprits to justice (see, for example, 
+Bangkok Post, 2010). In education, the contradiction between government rhetoric 
+and reality comes in the form of supporting the 1990 EFA initiative through build-
+ing more schools to increase access while not closing the ﬁ nancing gap to achieve 
+EFA (Thomas, 2002). Household expenditures on education have reduced, albeit 
+in an exclusionary way, the ﬁ nancing gap within the public education system.
+This mixture of structural issues forcing teachers to seek alternative means to 
+supplement their salaries, the historical legacies of hierarchy and power described 
+loosely as the “Khmer Way”, and the international construction of a new political 
+economic order that has privatized the ﬁ nancing of previously state sponsored so-
+JERO_1_2014.indb   103JERO_1_2014.indb   103 26.11.13   11:5026.11.13   11:50
+William C. Brehm & Iveta Silova
+104 JERO, Vol. 6, No. 1 (2014)
+cial services, has created a system of private tutoring that is economically bene-
+ﬁ cial to teachers, school administrators, and government o ﬃ  cials. As the govern-
+ment faces international pressure to liberalize its economy while at the same time 
+increasing access to education for all students, private tutoring serves as a mech-
+anism to provide both supplementary salaries to teachers and additional hours of 
+instructional time to adequately meet the demands of the national curriculum. At 
+the same time, it maintains a system of hierarchy where private tutoring (hiding in 
+the “shadows” of governance) serves as a “sorting machine” separating those who 
+have (neak mean) from those who do not ( neak kro).
+3.  Methods
+This study is based on data collected from document analysis, classroom obser-
+vations, comparison of academic achievement and attendance among students at-
+tending private tutoring and public school, focus groups with parents and students, 
+and informal interviews with teachers, students, and their parents.
+The observation rubrics were developed using instruments from a World Bank 
+report ( Benveniste et al., 2008, pp. 89–91), which focused on teaching method-
+ology (from the Ministry of Education, Youth and Sport (MoEYS) grade 3 assess-
+ment, 2006, p. 84), classroom characteristics (from the MoEYS grade 3 assess-
+ment, 2006, p. 73), and class time use (from Cambodian Education Sector Support 
+Project (CESSP), 2006). The questions within each of these categories were then 
+compiled into an observation checklist adapted for the last year of primary and sec-
+ondary school, grades 6 and 9 respectively, and used for observations of teaching/
+learning processes in both public school classes and private tutoring lessons. 7 The 
+sample included six schools in one district in Cambodia, including three schools in 
+an urban location and three schools in a rural area. The sample was deliberately 
+chosen to re ﬂ ect a range of private tutoring costs in di ﬀ erent schools depending on 
+their geographical location.
+After collecting data on the cost of private tutoring for one session within all 
+lower secondary schools (13) in the district, we selected the lower secondary school 
+with the highest (1000 Riel, or approximately $0.25, per session) and lowest (500 
+Riel, or approximately $0.13, per session) private tutoring costs, which also corre-
+sponded to urban and rural areas respectively. We then worked backwards to ﬁ nd 
+two primary schools that fed into each lower secondary school. In each location, 
+7 In particular, rubrics for teaching methodology included such categories as the frequency 
+of high-ability students working with weak students, students exchanging work, students 
+working in groups, as well as teacher calling on weakest students in class, assigning mul-
+tiple choice questions, showing examples of mistakes, using teacher aids, and solving ex-
+ample problem. Rubrics for classroom characteristics included the frequency of a teacher 
+getting impatient with students, checking students’ work, returning graded homework, 
+and assigning homework. Rubrics for class time included such categories as teacher ar-
+rival to school, a review of written lesson plan, a frequency of a teacher answering his or 
+her cell phone in class, and the time spent on going over homework.
+JERO_1_2014.indb   104JERO_1_2014.indb   104 26.11.13   11:5026.11.13   11:50
+Hidden privatization of public education in Cambodia
+105JERO, Vol. 6, No. 1 (2014)
+observations were conducted of Khmer, Math, Physics, and Chemistry classes in 
+one 9th grade at the lower secondary level (following the private tutoring teach-
+er to his or her government class) and two 6th grade classes (a total of four teach-
+ers) at the primary school level. A total of 26 classroom observations were conduct-
+ed, including 14 observations of lessons conducted in public schools and 12 obser-
+vations of private tutoring lessons.
+Data on academic achievement and attendance came from the tracking of 36 
+students in an urban 6th grade classroom over one month (only 14 total school 
+days due to Khmer New Year). Comparative data on academic achievement of stu-
+dents in all six schools within our sample were not available, but a careful exami-
+nation of the subset of the data revealed interesting dynamics. The teacher of this 
+class recorded student attendance in her private tutoring classes (not a govern-
+ment mandated procedure) using an attendance sheet speci ﬁ cally designed for this 
+study. The principal of the school provided us the government attendance sheet 
+and monthly grades for the tracked class (a government mandated procedure). 
+These data allowed for a comparison of academic achievement and private tutor-
+ing attendance among students who attend private tutoring and those who do not.
+The study focused on the academic subjects of math, Khmer dictation, Khmer 
+writing, and Khmer reading – the only subjects where the teacher o ﬀ ered private 
+tutoring after school hours inside school buildings. However, we also looked at the 
+overall grade of the students, which is an average of all of the subjects tested dur-
+ing the month. During the month of data collection, students were tested on 11 
+subjects (math, Khmer dictation, Khmer writing, Khmer reading, biology, morals, 
+geography, history, home economics, handwriting skills, and drawing). Although 
+the sample is small, covers a short time, and does not take into consideration ex-
+ternal factors a ﬀ ecting student achievement (parental education, past education-
+al experience of the student, provision of tutoring other than that provided by the 
+teacher, etc.), our purpose here was not to draw a correlation between private tu-
+toring and student achievement, but rather to highlight a disparity between stu-
+dents who go and do not go to private tutoring that, we suggest, is part of the 
+“sorting machine” of education.
+Furthermore, focus groups and interviews were conducted with students, par-
+ents, and teachers. Participants were selected by consulting the principal or teach-
+er of each school or class, who then helped arrange interviews and focus groups 
+with community members and students. Although the principal or teacher could 
+have purposefully selected participants, this strategy was the only politically fea-
+sible option we had because research on private tutoring caused some di ﬃ  culty in 
+obtaining permission at the district and provincial ministry levels; however, we did 
+ﬁ nd all participants willing to talk openly about private tutoring and its exclusion-
+ary features. For the purposes of this study, six focus groups were conducted with 
+a total of 37 participants between two lower secondary schools and two primary 
+schools (one urban and one rural), including one focus group with parents whose 
+children attend private tutoring lessons (four people), one focus group with par-
+ents whose children do not attend tutoring (nine people), as well as three focus 
+JERO_1_2014.indb   105JERO_1_2014.indb   105 26.11.13   11:5026.11.13   11:50
+William C. Brehm & Iveta Silova
+106 JERO, Vol. 6, No. 1 (2014)
+groups with students attending private tutoring (seven, ﬁ ve, and ﬁ ve people respec-
+tively) and one focus group with students not enrolled in private tutoring (seven 
+people). Lasting on average an hour and a half, the semi-structured focus groups 
+provided space for participants to explore reasons for attending private tutoring, 
+issues of quality of education, and the impact of private tutoring on education eq-
+uity. In addition, informal interviews were conducted with 10 participants, includ-
+ing 6th grade teachers, students, parents, and principals. These informal interviews 
+focused on the experiences of individuals with private tutoring and, as England 
+pointed out (cited in Sin, 2010, p. 986), helped us by “engaging in real or con-
+structed dialogues in order to understand the people studied in their own terms 
+(sometimes described as the insider’s view)”.
+Finally, document analysis included a review of government policies and laws 
+related to education funding and teacher salaries. In addition, we analyzed vari-
+ous reports on education quality and equity in Cambodia published by non-govern-
+mental organizations (NGOs) and international agencies (such as the World Bank, 
+UNICEF, and UNESCO). Combined, data gained through document analysis, class-
+room observations, academic achievement and attendance, as well as focus groups 
+and interviews were triangulated to facilitate validation of data through cross veri-
+ﬁ cation from multiple sources and data collection techniques.
+4.  A public-private system of education: Findings and 
+discussion
+The preliminary ﬁ ndings are organized around two central themes: (a) the nature 
+of private tutoring (including di ﬀ erences and similarities of the academic instruc-
+tion in public schools and private tutoring) and (b) equity implications of private 
+tutoring. In particular, the ﬁ ndings highlight that academic instruction in public 
+schools and private tutoring are strikingly similar, with the private tutoring serving 
+as an extension of public school and thus blurring the boundaries between the pub-
+lic and private provision of education. At the same time, the costs of private tutor-
+ing outlined elsewhere (NEP, 2007) are perceived to be the main reason why poor 
+students do not attend the extra classes and result in an academic achievement 
+gap that helps stratify Cambodian youth along socioeconomic lines, or between the 
+contemporary neak mean and neak kro. 
+4.1  Blurring the boundaries: The emergence of a public-private 
+education system
+Qualitative data from focus groups and interviews reveal that private tutoring is 
+commonly perceived to be an extension of public schooling, which is used to com-
+pensate for limited instructional time in government schools by allowing teach-
+JERO_1_2014.indb   106JERO_1_2014.indb   106 26.11.13   11:5026.11.13   11:50
+Hidden privatization of public education in Cambodia
+107JERO, Vol. 6, No. 1 (2014)
+ers to cover the national curriculum. In particular, students and parents perceive 
+private tutoring as a mechanism enabling teachers to properly teach the subjects 
+included in the national curriculum. For example, one student recounted a story 
+told by her teacher who explained, “we cannot ﬁ nish the curriculum by only at-
+tending government school (...) this is why students need to have private tutor-
+ing.” Similarly, some parents believe that there is simply not enough time in the 
+school day to cover all curriculum, making speci ﬁ c references to the reduction of 
+the school day following the introduction of double-shift schooling. Despite the few 
+reported cases of teachers purposefully “slowing down” content delivery to create 
+a market for private tutoring (Bray, 1999a, p. 55), the perceived lack of time none-
+theless leads to a perceived need for more instructional time simply to provide req-
+uisite coverage of the national curriculum.
+Classroom observations reveal striking similarities between government school 
+classes and private tutoring lessons in terms of instructional methods, classroom 
+characteristics, and class time use. Not only do private tutoring classes occur in-
+side government school buildings (and often in the same classrooms where stu-
+dents receive o ﬃ  cial government school instruction) and are taught by government 
+teachers (usually by their own teachers), but also each class operates and func-
+tions in surprisingly similar ways. Data from the observations reveal that the use 
+of teaching aids, group work, exchanging student work, mixing high and low abil-
+ity students together, and even homework assignments occur in more or less the 
+same frequency in government school as private tutoring classes (see Table 1). One 
+student commented that even the teaching/learning materials are frequently the 
+same. In other words, private tutoring seems to be simply a continuation of gov-
+ernment school classes.
+Table 1:  Similarities between government school and private tutoring classes
+Teacher Pedagogy
+Government School
+N = 14
+Private Tutoring
+N = 12
+% of classes 
+observed
+Number 
+of classes 
+observed
+% of classes 
+observed
+Number 
+of classes 
+observed
+High ability students work with low ability students 28.6 4 16.7 2
+High ability students help teach whole class 71.4 10 50.0 6
+Call of weak students to answer questions 50.0 7 50.0 6
+Students answer multiple choice questions 14.3 2 16.7 2
+Students answer questions at board 100.0 14 75.0 9
+Assigns homework 64.3 9 41.7 5
+Teacher presents new material 78.6 11 41.7 5
+Provides whole class instruction 100.0 14 91.7 11
+Students answer in chorus 71.4 10 66.7 8
+Teacher gives example to whole class 78.6 11 83.3 10
+JERO_1_2014.indb   107JERO_1_2014.indb   107 26.11.13   11:5026.11.13   11:50
+William C. Brehm & Iveta Silova
+108 JERO, Vol. 6, No. 1 (2014)
+Importantly, the participating students noted that curriculum content is often stra-
+tegically split between lessons in government schools and private tutoring. When 
+asked about the di ﬀ erences, students repeatedly explained that public school class-
+es were primarily reserved for learning theory, whereas private tutoring allows for 
+practical application of theoretical concepts. One student who received private tu-
+toring elaborated on her experience by noting the use of di ﬀ erent teaching/learn-
+ing materials: “In government classes teachers follow school textbooks, whereas 
+in private tutoring teachers ﬁ nd lessons and exercises from many di ﬀ erent sourc-
+es.” In students’ experiences, teachers used both more and better quality examples 
+in private tutoring than in government school. The major distinction, however, re-
+volved around the idea of splitting curriculum into theory, which is typically taught 
+during public school hours, and practical application, which is available during pri-
+vate tutoring lessons. One student gave a detailed description of how some teach-
+ers split curriculum content between public schools and private tutoring:
+Government class is mostly about giving introductions, theories, and a lit-
+tle bit of practice, while private tutoring has a lot of problem solving and 
+practice (...). However, having private tutoring alone is di ﬃ  cult too (…), 
+because practice alone is not enough. Learning theoretical introductions 
+during school hours and practicing applications during private tutoring 
+lessons is better.
+While classroom observations did not necessarily con ﬁ rm the existence of a curric-
+ulum divided between theory (in government schools) and practice (in private tu-
+toring), they revealed that students do receive more individualized instruction in 
+private tutoring lessons because the class size is generally smaller. In particular, 
+government school classes are on average 35–40 students, whereas private tutor-
+ing lessons would have on average 15–20 students. Furthermore, private tutoring 
+lessons provide more opportunities for students to work independently (working 
+on solving their own problems with the help of the teacher), whereas government 
+school classes tend to group students by mixed ability to solve problems togeth-
+er more frequently. Similarly, high ability students are less likely to help the teach-
+er during whole class instruction in private tutoring lessons, thus allowing more 
+time for their own learning. Commenting on the class size, several students stat-
+ed that private tutoring lessons also encourage more active student participation in 
+the learning process:
+Attending private tutoring makes me brave and able to ask questions and 
+learn better. (student)
+Private tutoring classes are smaller and it is easier to ask questions. (stu-
+dent)
+With so many students in government school classes, I sometimes feel shy 
+to ask questions. This is not the case in private tutoring lessons. (student)
+JERO_1_2014.indb   108JERO_1_2014.indb   108 26.11.13   11:5026.11.13   11:50
+Hidden privatization of public education in Cambodia
+109JERO, Vol. 6, No. 1 (2014)
+Overall, the participating students and parents unanimously agreed that private tu-
+toring was a “good” and “necessary” part of the education system. None of the par-
+ticipants discussed private tutoring in negative terms; instead, the multiple bene-
+ﬁ ts of private tutoring were repeatedly discussed in terms of immediate academ-
+ic success, future studies, or employment opportunities. As some students argued, 
+attending private tutoring would help them “reach [their] goal in life,” “get to high 
+school,” or “open up job opportunities”. In other words, the vast majority of the re-
+spondents believed that private tutoring was a necessary component of the educa-
+tion system without which complete (quality) education would be unattainable. The 
+focus group participants explained:
+My teachers want students to get more knowledge. (students)
+Teachers want their students to have a better understanding of the lessons 
+taught in government school. (students)
+My parents want me to get good education by attending more private tu-
+toring lessons. (students)
+In other words, students and parents perceived private tutoring as a necessary con-
+tinuation of public school classes for a ﬁ nancial cost. As one parent observed, “you 
+learn 50 % in a government school and 50 % in private tutoring.” Others agreed 
+that “private tutoring helps the children a lot, because government school is not 
+enough” and that “there are many subjects in government school and teachers do 
+not have time to teach them all”. This was a common theme during focus group 
+discussions irrespective of whether students were enrolled in private tutoring or 
+not. Interestingly, some parents and students observed that private tutoring is not 
+voluntary, but rather a compulsory continuation of schooling in private tutoring 
+lessons. The majority of students emphasized that it is through private tutoring 
+that they can acquire “all knowledge”.
+4.2  Equity implications and di ﬀ erences in student achievement
+Given that private tutoring is an extension of public schooling in terms of teach-
+ing methodology, classroom characteristics, and curricular content, the attendance 
+of private tutoring lessons is likely to impact student achievement and act as an-
+other way to di ﬀ erentiate between students, regardless of whether some grades 
+depended on corrupt teacher behavior or not. To examine this, we tracked aca-
+demic achievement of 36 students attending an urban school over one month (14 
+school days) to get a snapshot of whether their grades and examination results dif-
+fer by the amount of private tutoring received. Of the 36 students involved in the 
+study, 29 attended the majority (over 50 %) of available private tutoring lessons 
+per month (categorized as “high” attendance) and seven students attended fewer 
+than two sessions per month (categorized as “low” attendance). Interestingly, there 
+JERO_1_2014.indb   109JERO_1_2014.indb   109 26.11.13   11:5026.11.13   11:50
+William C. Brehm & Iveta Silova
+110 JERO, Vol. 6, No. 1 (2014)
+were no students attending between three and six private tutoring sessions during 
+the month, suggesting that students in this urban school either attended a majori-
+ty of private tutoring lessons or barely attended at all; there was no middle in our 
+sample. 
+The diﬀ erence in the overall monthly score between students with high and low 
+attendance of private tutoring was approximately 11 percentage points, constitut-
+ing approximately 1 grade point on a 10-point grading scale. 8 Students with low at-
+tendance of private tutoring barely exceeded the passing 5-point grade, while stu-
+dents with high attendance of private tutoring lessons scored 6 points or higher 
+(see Figure 1). The di ﬀ erence in academic achievement among students with high/
+low attendance of private tutoring varied by school subject, with students attend-
+ing private tutoring lessons in mathematics gaining greater advantage compared to 
+students attending private tutoring lessons in the Khmer language: 12.4 percentage 
+points in math, 11.3 percentage points in dictation, 8.2 percentage points in writ-
+ing, and 10.9 percentage points in reading (see Figure 1). Although we do not know 
+to what extent these di ﬀ erences are because of private tutoring, they reveal dispar-
+ities between students who have the means to attend private tutoring and those 
+who do not. As one parent stated, “If you don’t come to private tutoring, you will 
+fail”.
+Figure 1:  Score di ﬀ erences between high and low student attendance at private tutoring 
+(N = 36)
+8 The passing grade is a 5.0 out of 10. The grading scale is as follows: 4.99 and below 
+is “failing”; 5.0–6.49/10 is “medium”; 6.5–7.99/10 is “fairly good”; 8–9.99/10 is “good” 
+and 10/10 is “very good” (personal communication, provincial teacher training college 
+professor, May 31, 2011).
+ 
+6.46 
+6.74 
+7.34 
+6.18 
+6.84 
+5.40 5.50 
+6.21 
+5.36 
+5.75 
+0.00
+1.00
+2.00
+3.00
+4.00
+5.00
+6.00
+7.00
+8.00
+Overall Math Dictation Writing Reading
+Grades (on scale of 10) 
+Subjects 
+High Private Tutoring (n=29) Low Private Tutoring (n=7)
+JERO_1_2014.indb   110JERO_1_2014.indb   110 26.11.13   11:5026.11.13   11:50
+Hidden privatization of public education in Cambodia
+111JERO, Vol. 6, No. 1 (2014)
+ 
+45%
+47%
+49%
+51%
+53%
+55%
+57%
+59%
+61%
+63%
+65%
+67%
+69%
+71%
+73%
+75%
+77%
+79%
+81%
+0
+(n=3)
+1
+(n=1)
+2
+(n=3)
+3
+(n=0)
+4
+(n=0)
+5
+(n=0)
+6
+(n=0)
+7
+(n=2)
+8
+(n=1)
+9
+(n=3)
+10
+(n=5)
+11
+(n=5)
+12
+(n=10)
+13
+(n=3)
+Average Score 
+# of days attended private tutoring (13 days of tutoring offered by teacher) 
+Overall
+Mathematics
+Khmer Dictation
+Khmer Writing
+Khmer Reading
+Breaking this data down further by the number of days students attended private 
+tutoring with the average score in individual subjects, it becomes evident that the 
+more days a student attends private tutoring the more likely he or she will receive 
+a higher grade on the monthly exam. Although no statistical tests were performed 
+on this small subset of data, it reveals interesting dynamics in terms of di ﬀ erences 
+in academic achievement among students depending on the frequency of their at-
+tendance of private tutoring. In particular, students who regularly attend private 
+tutoring score approximately in the 70th percentile, whereas students with mini-
+mal private tutoring attendance scored in the 50th percentile, barely passing the 
+minimum requirements (see Figure 2). As one student put it, and many others ech-
+oed, “I have to attend private tutoring. If I don’t, then I get a low score”. For stu-
+dents who cannot a ﬀ ord private tutoring classes, the consequences are real and un-
+derstood. One student who cannot a ﬀ ord private tutoring classes explained, “I am 
+very jealous of those who attend private tutoring”, signaling a clear understanding 
+of the bene ﬁ ts – perhaps beyond academic – associated with private tutoring.
+Figure 2:  Graph of the average score by total number of days student attended private 
+tutoring (N = 36)
+JERO_1_2014.indb   111JERO_1_2014.indb   111 26.11.13   11:5026.11.13   11:50
+William C. Brehm & Iveta Silova
+112 JERO, Vol. 6, No. 1 (2014)
+Focus groups revealed that the main obstacle preventing students from attend-
+ing private tutoring lessons is cost. When asked to describe their living situation, 
+students who do not attend private tutoring shared similar stories. They generally 
+come from families who cannot a ﬀ ord clothes or school uniforms, provide enough 
+food for their children, or cover unexpected hospital costs. They have small hous-
+es, limited farming land, few cows and bu ﬀ aloes, yet many members in their fam-
+ily. Life is a struggle for these families and private tutoring fees are but one of the 
+many luxuries like health care and land ownership they cannot a ﬀ ord. One stu-
+dent described his hardship as follows: “My family’s life is di ﬃ  cult [because we 
+have] low income but high expenses. My house is made from wood with an old ce-
+ment roof. It is very old now. We have one motorbike but it is old, and we have 
+small land to do farming”. In this case, informal fees (including private tutoring) 
+have very real rami ﬁ cations for the social reproduction and socialization of stu-
+dents (Dawson, 2009). Inevitably, poor families excluded from the private tutor-
+ing system are becoming – or already are – the contemporary version of neak kro 
+(those who do not have) as in former times. Because of their socioeconomic status, 
+these families receive less education and lower grades than students – the contem-
+porary neak mean – who can complete the full public-private education system.
+5.  Conclusions
+Stemming from a complex combination of (post)colonial legacies and contradictory 
+international norms in the context of severe economic austerity, the development 
+of the contemporary education system since the 1990s has resulted in the emer-
+gence of an educational arrangement that obscures the boundaries between public 
+schooling and private tutoring. To receive full access to the (presumably entire) 6th 
+and 9th grade required national curriculum, students need to regularly attend not 
+only public school classes, but also private tutoring lessons. In this context, private 
+tutoring provides a continuation of public schooling in terms of curriculum con-
+tent, while also assuming the same classroom characteristics and pedagogy as the 
+public education system. Furthermore, most students receive private tutoring from 
+their government schoolteachers inside government school buildings. As this re-
+search study illustrated, private tutoring has become a (compulsory) part of public 
+schooling, without which access to the complete national curriculum is unavailable.
+The emergence of this educational arrangement – whereby public schooling and 
+private tutoring are seamlessly merged into one system – has serious implications 
+for education equity. Only those who can a ﬀ ord the private tutoring fees receive a 
+full education and therefore have a greater likelihood of doing well on monthly, se-
+mester, and annual examinations. Since access to private tutoring is determined by 
+whether or not one can a ﬀ ord the fee, private tutoring becomes a mechanism by 
+which the strati ﬁ cation of society along socioeconomic lines occurs inside a pub-
+lic space. Families who are poor are therefore unable to receive the same education 
+JERO_1_2014.indb   112JERO_1_2014.indb   112 26.11.13   11:5026.11.13   11:50
+Hidden privatization of public education in Cambodia
+113JERO, Vol. 6, No. 1 (2014)
+as children from families in middle and high socioeconomic classes, which may 
+in turn limit their academic success, social mobility, and future job opportunities. 
+Paradoxically, the rhetoric of Education for All on which the contemporary system 
+of education was built, has morphed into a public-private educational arrangement 
+displaying a set of exclusionary features that (re)order the Cambodian society along 
+traditional lines of power and hierarchy. It is the education system (with its essen-
+tial component of private tutoring) that functions as a “sorting machine” by sepa-
+rating those who have ( neak mean) from those who do not ( neak kro).
+The blurred lines between the public and private provision of education re ﬂ ects 
+a complex system that allows for modern education structures to thrive alongside 
+international norms, traditional tenets, post-colonial legacies, and post-con ﬂ ict 
+pathologies at the same time. Such a system does not necessarily ﬁ t the existing 
+conceptualizations of private tutoring as “shadow education”. Private tutoring in 
+Cambodia is not (only) remedial, not (only) high stakes, and not (only) elective, al-
+though it may at times re ﬂ ect all of these features and more. It is an essential part 
+of the educational system that provides national curricular content and a space for 
+the economic, structural, and political transformations of the “new world order” 
+(and its accompanying policies of economic liberalization, privatization, and mar-
+ketization) to play out. It is precisely within this blurred public-private education 
+system where teachers and students are able to construct a Cambodian education-
+al space, far removed from – yet paradoxically much closer to – the (inter)national 
+rhetoric of a quality education, but at the expense of access.
+Acknowledgment
+This research was supported by the Open Society Institute – with contribution of 
+the Education Support Program of OSI Budapest.
+References
+Aurini, J., & Davies, S. (2004). The transformation of private tutoring: Education in a 
+franchise form. The Canadian Journal of Sociology , 29(3), 419–438.
+Ayres, D. M. (2000a). Anatomy of a crisis: Education, development, and the State of 
+Cambodia, 1953–1998. Honolulu: University of Hawai‘i Press.
+Ayres, D. M. (2000b). Tradition, modernity, and the development of education in 
+Cambodia. Comparative Education Review, 44 (4), 440–463.
+Baker, D. P., & LeTendre, G. K. (2005). National diﬀ erences, global similarities: World 
+culture and the future of schooling . Stanford, CA: Stanford University Press.
+Ball, S. J. (2007). Education plc: Private sector participation in public sector educa-
+tion. London: Routledge.
+Ball, S. J., & Youdell, D. (2008). Hidden privatisation in public education . Brusells: 
+Education International.
+Bangkok Post. (2010, January 9). Assassination of a union leader . Retrieved from 
+http://sochua.wordpress.com/2010/09/02/assassination-of-a-union-leader/
+JERO_1_2014.indb   113JERO_1_2014.indb   113 26.11.13   11:5026.11.13   11:50
+William C. Brehm & Iveta Silova
+114 JERO, Vol. 6, No. 1 (2014)
+Benveniste, L., Marshall, J., & Araujo, M. C. (2008). Teaching in Cambodia . 
+Washington, DC: World Bank.
+Bilodeau, C., Pathammavong, S., & Lê, Q. H. (1955). Compulsory education in 
+Cambodia, Laos, and Viet-Nam . Paris, France: UNESCO.
+Bourdieu, P. (1986). The forms of capital. In J. G. Richardson (Ed.), Handbook of 
+Theory and Research for the Sociology of Education  (pp. 241–258). Westport, CT: 
+Greenwood Press.
+Bray, M. (2010a). Blurring boundaries: The growing visibility, evolving forms and com-
+plex implications of private supplementary tutoring. Orbis Scholae, 4 (2), 61–73.
+Bray, M. (2010b). Researching shadow education: Methodological challenges and direc-
+tions. Asia Paciﬁ c Education Review, 11 , 3–13.
+Bray, M. (2008). Double-shift schooling: Design and operation for cost-e ﬀ ectiveness. 
+Paris: UNESCO International Institute for Educational Planning (IIEP).
+Bray (1999a). The shadow education system: Private tutoring and its implications for 
+planners. Paris: UNESCO International Institute for Educational Planning (IIEP).
+Bray, M. (1999b). The private costs of public schooling: Household and community ﬁ -
+nancing of primary education in Cambodia . Paris, France: UNESCO International 
+Institute for Educational Planning (IIEP).
+Bray, M., & Bunly, S. (2005). Balancing the books: Household ﬁ nancing of basic edu-
+cation in Cambodia . Hong Kong, China: Comparative Education Research Centre, 
+University of Hong Kong.
+Bray, M., & Kwok, P. (2003). Demand for private supplementary tutoring: Conceptual 
+considerations, and socio-economic patterns in Hong Kong. Economics of 
+Education Review, 22(6), 611–620.
+Brehm, W. C., Silova, I., & Tuot, M. (2012). Hidden privatization of public education 
+in Cambodia: The impact and implications of private tutoring . London, England: 
+Open Society Institute.
+Brinkley, J. (2011). Cambodia’s curse: The modern history of a troubled land . New 
+York, NY: PublicA ﬀ airs.
+Burch, P. (2009). Hidden markets: The new education privatization . New York, NY: 
+Routledge.
+CESSP – Cambodian Education Sector Support Project. (2006). Basic education and 
+teacher training . Phnom Penh, Cambodia: Ministry of Education, Youth and 
+Sport.
+Chandler, D. (2008). A history of cambodia  (4th ed.). Chiang Mai, Thailand: Silkworm 
+Books. 
+Clayton, T. (2000). Education and the politics of language: Hegemony and prag-
+matism in Cambodia, 1979–1989 . Hong Kong, China: Comparative Education 
+Research Centre, University of Hong Kong.
+Coleman, J. S. (1998). Social capital in the creation of human capital. American Journal 
+of Sociology, 94, 95–120.
+Curtis, G. (1993). Transition to what? Cambodia, UNTAC and the peace process. 
+UNRISD discussion paper. Retrieved from http://www.peacedividendtrust.org/
+EIPdata/Library/Economic%20Impact%20of%20Peacekeeping/UNTAC%20in%20
+Cambodia.pdf
+Dawson, W. (2010). Private tutoring and mass schooling in East Asia: Re ﬂ ections of in-
+equality in Japan, South Korea, and Cambodia. Asia Paci ﬁ c Education Review 11 , 
+14–24.
+Dawson, W. (2009). The tricks of the teacher: Shadow education and corruption in 
+Cambodia. In S. P. Heyneman (Ed.), Buying your way into heaven: Education 
+and corruption in international perspective  (pp. 51–74). Rotterdam, Netherlands: 
+Sense Publishers.
+de Silva, W. A., Gunawardena, C., Jayaweera, S., Perera, L., Rupasinghe, S., & 
+Wijetunge, S. (1991). Extra-school instruction, social equity and educational 
+JERO_1_2014.indb   114JERO_1_2014.indb   114 26.11.13   11:5026.11.13   11:50
+Hidden privatization of public education in Cambodia
+115JERO, Vol. 6, No. 1 (2014)
+equality. Report prepared for the International Development Research Centre, 
+Singapore. 
+Engel, J. (2011). Rebuilding basic education in Cambodia: Establishing a more ef-
+fective development partnership . Working paper for the Overseas Development 
+Institute.
+Government of Cambodia. (1994). Education sector review  (Vol. 2A). Manila, 
+Cambodia: Asian Development Bank and Brisbane: Queensland Education 
+Consortium. 
+Hall, J. A. (2007, September 21). Yet Another U.N. Scandal. Wall Street Journal , A15.
+Haas, M. (1991). Cambodia, Pol Pot, and the United States . New York, NY: Praeger. 
+Kwok, P. L. Y. (2004). Emergence of demand for private supplementary tutoring in 
+Hong Kong: Argument, indicators and implications. Hong Kong Teachers’ Centre 
+Journal, 3, 1–14. 
+Heyneman, S.P. (2011). Private tutoring and social cohesion. Peabody Journal of 
+Education, 86(2), 183–188.
+Mannikka, E. (1996). Angkor Wat: Time, space, and kingship . Honolulu, HI: University 
+of Hawai’i Press.
+MoEYS – Ministry of Education, Youth and Sports. (2001). Education Management 
+and Information Systens (2001) . Phnom Penh, Cambodia: Ministry of Education, 
+Youth and Sports.
+MoEYS – Ministry of Education, Youth and Sport. (2006). Grade 3 assessment . Phnom 
+Penh, Cambodia: Ministry of Education, Youth and Sport.
+NEP – NGO Education Partnership. (2007). The impact of informal school fees on fa-
+mily expenditures . NGO Education Partnership, Education Operational Research. 
+Retrieved from http://www.nepcambodia.org/images/stories/Informal_School_
+Fee_Report_2nd_Version_in_English.pdf
+NEP – NGO Education Partnership. (2011, May 5–6). Conference on Overview of 
+Education in Cambodia: Promoting Rights in Schools . Phnom Penh: Cambodia.
+Ratcliﬀ e, M. (2009). Study on governance challenges for education in fragile situa-
+tions: Cambodia country report . Report to the European Commission.
+Rohlen, T. P., & LeTendre, G. K. (1996). Conclusion: Themes in the Japanese culture of 
+learning. In T. P. Rohlen & G. K. LeTendre (Eds), Teaching and learning in Japan 
+(pp. 369–376). Cambridge, England: Cambridge University Press.
+Silova, I. (Ed.). (2009). Private supplementary tutoring in Central Asia: New opportu-
+nities and burdens . Paris, France: UNESCO International Institute for Educational 
+Planning (IIEP).
+Silova, I., Budiene, V., & Bray, M. (Eds.). (2006). Education in a hidden marketplace: 
+Monitoring of private tutoring. Budapest, Hungary: Education Support Program 
+(ESP) of the Open Society Institute.
+Sin, H. L. (2010). Who are we responsible to? Locals’ tales of volunteer tourism. 
+Geoforum, 41, 983–992.
+Springer, S. (2011). Articulated neoliberalism: The speci ﬁ city of patronage, kleptocracy, 
+and violence in Cambodia’s neoliberalization. Environment and Planning, 43 (11), 
+2554–2570.
+Springer, S. (2010). Neoliberal discursive formations: On the contours of subjecti-
+vation, good governance, and symbolic violence in posttransitional Cambodia. 
+Environment and Planning D: Society and Space, 28 , 931–950.
+Stevenson, D. L., & Baker, D. P. (1992). Shadow education and allocation in formal 
+schooling: Transition to University in Japan. American Journal of Sociology, 
+97(6), 1639–1657.
+Stevenson, W. H., & Stigler, W. J. (1992). The learning gap: Why our schools are fai-
+ling and what we can learn from Japanese and Chinese education . New York, 
+NY: Summit Books.
+JERO_1_2014.indb   115JERO_1_2014.indb   115 26.11.13   11:5026.11.13   11:50
+William C. Brehm & Iveta Silova
+116 JERO, Vol. 6, No. 1 (2014)
+Tansel, A., & Bircan, F. (2006). Demand for education in Turkey: A Tobit analysis of 
+private tutoring expenditures. Economics of Education Review , 25(3), 303–313.
+Thomas, C. J. (2002). Achieving Education for All in post-con ﬂ ict Cambodia . 
+Washington, DC: World Bank.
+Toomer, C., Teng, N., Cerecina, M., & Liu, X. (2011). Education and fragility in 
+Cambodia. Paris, France: International Institute for Educational Planning.
+UNICEF, & World Bank. (2006). Appraisal of basic education component of 
+Cambodia’s education strategic plan . Report to Cambodia’s Education Sector 
+Working Group, Phnom Penh, Cambodia.
+UNTAC (1992). Agreements on a comprehensive political settlement of the Cambodia 
+conﬂ ict. Retrieved from http://www.usip.org/sites/default/ ﬁ les/ﬁ le/resources/col-
+lections/peace_agreements/agree_comppol_10231991.pdf
+JERO_1_2014.indb   116JERO_1_2014.indb   116 26.11.13   11:5026.11.13   11:50

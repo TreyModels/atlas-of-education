@@ -1,7 +1,7 @@
 {
  "package": "massification_2026-11-20",
  "title": "Massification, the economy, and shadow education — DeepSeek research execution package",
- "generated_utc": "2026-11-20T05:16:40.463344+00:00",
+ "generated_utc": "2026-11-20T05:21:26.280149+00:00",
  "time_zone": "Asia/Shanghai",
  "prepared_for": "Dr. Trey Menefee (Menefee & Nordtveit working paper, October 2026)",
  "handoff_source_zip": "/Users/treymenefee/Downloads/DeepSeek_Massification_Research_Package.zip",
@@ -418,7 +418,22 @@
   "site_safety": "vite build reads src/ + public/ only; experiments/ is not imported by the site"
  },
  "iteration2_artifacts": {
-  "05_experiments/loop2": [],
+  "05_experiments/loop2": [
+   "CALIBRATION_TABLE.csv",
+   "COUNTRY_CONFIGS.md",
+   "LOOP2_STATUS.md",
+   "balance_checks.csv",
+   "calibrate2.py",
+   "cohort_horizon_table.csv",
+   "cohort_ledger_annual.csv",
+   "configs.py",
+   "findings.txt",
+   "findings_ledger.txt",
+   "freeze_both.csv",
+   "ledger.py",
+   "run_meta.json",
+   "run_meta_ledger.json"
+  ],
   "05b_experiments/loop2": [
    "ERROR_LOG_L2.md",
    "EXPERIMENTS_L2.md",
@@ -435,10 +450,15 @@
    "KHM.md",
    "KOR.md",
    "PHL.md"
+  ],
+  "04_data/shadow_round2": [
+   "SHADOW_DATA.md",
+   "data",
+   "raw"
   ]
  },
  "deliverable_hashes": {
-  "SUMMARY_FOR_TREY.md": "cedae18ba453ed3440392ab083562b498a4516354d7f7229998eea8b2953fae9",
+  "SUMMARY_FOR_TREY.md": "1ca26397cff42f8041fc23334863ccc1fa4d9e2f8403f33032f4a25dad49df75",
   "RESULTS_README.md": "73e89ffbaff7a318dd81630ab7aa4a33d9cc9529df9acc749660063a22f7f8b8",
   "MODEL_INVENTORY.md": "db12da75200b8b461d552846c39290870a83508f6086c2f67271c247a769b8e5",
   "LITERATURE_LEDGER.md": "4b6c9ba4e70c5f4505af1098675c52f7cb257b780994840f8c11ff076693a7e5",
@@ -446,7 +466,7 @@
   "EXPERIMENTS.md": "df24a7d68a197a07de55816001e7c2dd28ed43f0a8caf69e5aa2be10fcf80f21",
   "OPEN_QUESTIONS.md": "fe4c16428981c1668a2882a173335a5b499d9c6faec042009faf8ccdd4c2f976",
   "PROVENANCE.md": "5a5e584b6d73a6db97dfa2142c8962e742e05f29e2d4234156919232502ba782",
-  "RUN_MANIFEST.json": "d7d9d8e6cbea8077901a9d1c03ace45aad40c1b44c8b4747af1f24cab2dc0438"
+  "RUN_MANIFEST.json": "424071ebe1abe3bb6dbce0a35fef306070354f5f1140e0065c725dd1a578b873"
  },
  "subtree_hashes": {
   "02_lit": {
