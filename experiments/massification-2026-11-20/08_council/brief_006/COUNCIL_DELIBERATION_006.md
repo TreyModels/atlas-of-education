@@ -1,3 +1,7 @@
+> **SYNTHETIC EXERCISE.** Panelists are AI-constructed composite personas whose positions are inferred from the
+> published literature. Nothing in this file is a statement by, or endorsed by, the named individuals or any living
+> person; names identify the published work each composite draws on, not participants in a deliberation.
+
 # COUNCIL DELIBERATION 006 — stop-rule adjudication
 
 **Panel (AI composites):** BRAY (shadow education, mandatory), PATRINOS (education economics; steel-man), PAGE (model

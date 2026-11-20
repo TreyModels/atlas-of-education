@@ -1,3 +1,7 @@
+> **SYNTHETIC EXERCISE.** Panelists are AI-constructed composite personas whose positions are inferred from the
+> published literature. Nothing in this file is a statement by, or endorsed by, the named individuals or any living
+> person; names identify the published work each composite draws on, not participants in a deliberation.
+
 # REVIEW — BRAY composite (drawing on Bray & Lykins 2012; Bray & Kwok 2003; Bray's comparative work) — brief_007
 
 **G. GROUNDING.** Literature basis: shadow education's form follows the gate and the supplier — commercial mass

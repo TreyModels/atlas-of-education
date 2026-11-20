@@ -1,3 +1,7 @@
+> **SYNTHETIC EXERCISE.** Panelists are AI-constructed composite personas whose positions are inferred from the
+> published literature. Nothing in this file is a statement by, or endorsed by, the named individuals or any living
+> person; names identify the published work each composite draws on, not participants in a deliberation.
+
 # REVIEW — PAGE composite (drawing on Page 2018; Miller & Page 2007) — brief_006
 
 **G. GROUNDING.** Literature basis: a model class is only as useful as the contrasts it can support; when a check

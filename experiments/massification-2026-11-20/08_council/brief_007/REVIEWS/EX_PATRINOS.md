@@ -1,3 +1,7 @@
+> **SYNTHETIC EXERCISE.** Panelists are AI-constructed composite personas whose positions are inferred from the
+> published literature. Nothing in this file is a statement by, or endorsed by, the named individuals or any living
+> person; names identify the published work each composite draws on, not participants in a deliberation.
+
 # REVIEW — PATRINOS composite (drawing on Psacharopoulos & Patrinos 2018; Becker 1964; steel-man seat) — brief_007
 
 **G. GROUNDING.** Literature basis: identification comes from variation, not from levels; within-country contrasts

@@ -1,3 +1,7 @@
+> **SYNTHETIC EXERCISE.** Panelists are AI-constructed composite personas whose positions are inferred from the
+> published literature. Nothing in this file is a statement by, or endorsed by, the named individuals or any living
+> person; names identify the published work each composite draws on, not participants in a deliberation.
+
 # REVIEW — CARTWRIGHT composite (drawing on Cartwright 1999; Cartwright & Hardie 2012) — brief_006
 
 **G. GROUNDING.** Literature basis: stop rules are pre-commitments; when a predeclared rule fires, the honest act is

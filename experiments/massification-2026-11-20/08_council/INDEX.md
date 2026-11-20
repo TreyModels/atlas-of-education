@@ -14,6 +14,8 @@ never reused; a re-review of the same batch gets a new number and a `supersedes`
 | 003 | 2026-11-20 | lead | FINAL adjudication (E18b, E13c, E21, batch B) | SUMMARY_FOR_TREY.md; runs E13c/E18b/E21; B1–B5 | PATRINOS, BRAY, PAGE, CARTWRIGHT (AI composites) | F1–F8 | F1 Cond (formal-access, one matched cell); F2 amended (unidentified corner); F3 C10 withdrawn, substitution unidentified; F4 unidentified; F5 floor/race restated/mixed; F6 trajectory claims withdrawn; F7 PH description only; F8 error kept, cert-demand withdrawn | SUMMARY_FOR_TREY.md amended before issue | Blind level-matched rival; E18c ts-grid; PH calibration+holdout | [brief](brief_003/BRIEF.md) · [deliberation](brief_003/COUNCIL_DELIBERATION_003.md) · [synthesis](brief_003/SYNTHESIS_003.md) |
 | 004 | 2026-11-20 | lead | Iteration-2 DESIGN review (pre-results) | RESEARCH_LOOP.md; C1; C2; C_STATUS.md; OPEN_QUESTIONS.md | PAGE, BRAY, PATRINOS, CARTWRIGHT (AI composites) | Design Qa–Qd | Design sound, fit-first sequencing; 6 anti-re-param requirements; 4 added stop rules; 10 publishability stages; single variable = provider supply/entry | No discriminating moments declared before calibration | Provider-supply iteration with freeze-both test; holdout 2011–2024 | [brief](brief_004/BRIEF.md) · [deliberation](brief_004/COUNCIL_DELIBERATION_004.md) · [synthesis](brief_004/SYNTHESIS_004.md) |
 | 005 | 2026-11-20 | lead | Iteration-2 PARTIAL results (cards/targets/two-way+shadow); runner-1 layer pending | COUNTRY_CARDS (6); SHADOW_TARGETS (21 rows, 11 YES); TARGETS_SHADOW/FLOW; loop2 EXPERIMENTS/SUMMARY/PRE_DECL/ERROR_LOG/code/runs | BRAY, PAGE, PATRINOS, CARTWRIGHT (AI composites) | Shadow incidence; cohort flows; two-way; restatement | Restatement FAILED (HK 0.85 fitted; 10/11 unused); shadow NOT ESTABLISHED; two-way asymmetric (job side schedule 3–4%); cohort UNABLE; direction HK only | Stage-matched checks; holdout+recovery; price/entry calibration | [brief](brief_005/BRIEF.md) · [deliberation](brief_005/COUNCIL_DELIBERATION_005.md) · [synthesis](brief_005/SYNTHESIS_005.md) |
+| 006 | 2026-11-20 | lead | Loop-3 STOP-RULE adjudication + withdrawal sign-off | loop3 PRE_DECL/EXPERIMENTS/SUMMARY/runs s1,s2,s3; SUMMARY_FOR_TREY §4b/§6; RESEARCH_LOOP §2/§4/§5/§6; loop4 pending | BRAY, PATRINOS, PAGE, CARTWRIGHT (AI composites) | Stop rule 1; withdrawal scope; publishable objects; rescue; sign-off | **Stop rule 1 FIRED**: S1 3/3 assessable outside; S2 no defensible PH reproduction (11.7pp); S3 UNABLE; loop4 U1/U1b/U2/U3 read later | Shadow-incidence WITHDRAWN; publishable = method+negative map+measurement; KOR no-fit rescue | [brief](brief_006/BRIEF.md) · [deliberation](brief_006/COUNCIL_DELIBERATION_006.md) · [synthesis](brief_006/SYNTHESIS_006.md) |
+| 007 | 2026-11-20 | lead | COUNTRY-EVIDENCE-DRIVEN EXPERIMENT SLATE (iteration 5) | country cards; SHADOW_TARGETS; TARGETS_*/ECONOMY_SERIES; shadow_round2; loop2 calibration+ledger; loop3; loop4 U1/U1b/U2/U3; 09_relations PENDING | BRAY, PATRINOS, PAGE (AI composites) | Q1–Q5 | 7-experiment slate; E1 gate-architecture gradient #1; provider tech #2; JPN within-country #3; data-first list; relations PENDING | — | E1 gate-gradient (KOR fall vs HKG rise; ±5pp; 30–45 min) | [brief](brief_007/BRIEF.md) · [deliberation](brief_007/COUNCIL_DELIBERATION_007.md) · [synthesis](brief_007/SYNTHESIS_007.md) |
 
 ## Standing-verdict watchlist
 
@@ -50,10 +52,17 @@ from memory.
 Previous council verdicts (briefs 003/004/005) were posted under `deepseek-research` before the per-agent slug fix;
 append-only, left as posted; a one-line signpost can be posted under the correct party if the Lead wants it.
 
+| Shadow-education incidence claim | 005 | **WITHDRAWN (006)**: stop rule 1 fired; 3/3 assessable outside range | only KOR no-fit benchmark may restore a one-country claim |
+| Two-way education-economy feedback | 005 | **Asymmetric**: education→economy 3–4%; economy→education genuine + 20–40% shadow residual | response-elasticity moments |
+| Cohort flows consistent | 005 | Balance checks pass exactly (loop2 ledger) BUT long-run collapse (PH degree→0 at +40y) | diagnose feedback structure (E6) |
+| Relation layer (pattern-scout) | 007 | PENDING: 09_relations empty at intake | land RELATION_CANDIDATES/DATA_PATTERNS/MODEL_PLUG_MAP; re-rank slate |
+
 ## Cycle log
 
 | # | Convened | Completed | Lead report sent | Notes |
 |---|---|---|---|---|
+| 007 | 2026-11-20 13:29 | 2026-11-20 13:37 | yes (brief 007 slate) + bridge post | Slate of 7; E1 gate-gradient first; relation layer PENDING. |
+| 006 | 2026-11-20 13:23 | 2026-11-20 13:31 | yes (brief 006) + bridge post | Stop rule 1 confirmed; incidence withdrawn; sign-off amendments for SUMMARY+R RESEARCH_LOOP. |
 | 005 | 2026-11-20 13:16 | 2026-11-20 13:30 | yes (brief 005, partial set) + bridge post | Partial results. Restatement test failed at HK 0.85; 11 YES not 6; entry effect 54–67pp not 46–66; runner-1 layer UNABLE TO ASSESS. |
 | 004 | 2026-11-20 13:08 | 2026-11-20 13:22 | yes (brief 004) + interim bridge post | Iteration 2 design gate. RESEARCH_LOOP.md appeared mid-intake (recorded). Brief 005 queued for loop2 artifacts. |
 | 003 | 2026-11-20 13:02 | 2026-11-20 13:12 | yes (≤900 words) + bridge post to `all` | CLOSING cycle. Conditional sign-off; 6 report amendments required; final claim/withdrawals/3 experiments in SYNTHESIS_003. |

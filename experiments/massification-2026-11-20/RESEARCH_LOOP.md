@@ -128,6 +128,12 @@ what is observable vs not) and `02_lit/ECON_LIT.md` (returns to schooling, job c
 requirements, informality, migration, provider economics). The slate ranks experiments by
 identification value and feasibility; the Lead picks the next iteration from that rank.
 
+> **STATUS (20 Nov, iteration 3–4): the incidence claim is WITHDRAWN.** Stop rule 1 fired:
+> stage-matched shadow take-up failed in 3/3 assessable countries; the single-country HKG rescue also
+> failed; recovery/forced-ID is negative. The publishable object is the method + negative/identification
+> map + a data-first measurement programme, with Korean provider/fee economics as the one positive block.
+> Nothing below may be re-tuned and called a match.
+
 ## 2. What "shadow education appears where the literature says" means operationally
 
 It is **not** "the model has a tutoring rule". It is:
@@ -164,7 +170,8 @@ The economy side must be a *model*, not a schedule:
 |---|---|---|---|
 | 1 (20 Nov, AM) | 23 cells: floor/race, grad supply, liquidity, memory, gates, actor knockouts, state, China support, information, trajectories, child states, recovery, floorworld, PH benchmark | established the mechanism suite; reproduction audit | C1 no identification; C2 one-way economy; shadow incidence untested |
 | 2 (20 Nov, PM) | 6 country cards + 21-row shadow target table; WDI/UIS target sets; two-way economy module with provider entry/teacher-tutor capacity (150 trajectories, 0 failures); calibration loop + cohort ledger (in progress); Council design review (004) and results review (005) | changed variable: **provider supply/entry + endogenous two-way economy** | **Two-way test: the job side is still ~a supplied schedule** (freezing schooling still lets complex vacancies rise; schooling adds only 3–4% of jobs). **Economy→education is the dominant direction** (+6.7–11.8pp live vs +2.2–2.8pp frozen), with a 20–40% residual shadow-supply channel. **Shadow pattern not identified by one moment**: fitting HK 0.85 forces PH/KHM to 0.88–0.89 with no target to check. Teacher-tutors dominate supply (76–97%); endogenous entry raises take-up 46–66pp. Positional response is a null in this specification. |
-| 3 | (to be designed from iteration 2's misses) | one variable at a time | |
+| 3 (20 Nov, PM) | stage-matched shadow checks (11 rows), structural non-universality search, price/entry grid, HKG multi-moment rescue, recovery/forced-ID, holdout; Council brief 005 | changed variable: structural (gate stakes, school substitute, returns, provider cost) instead of take-up | **Stop rule 1 fired: no incidence claim.** Recovery/forced-ID negative. Korean fee block passes; by-level ordering fails. |
+| 4 (20 Nov, PM) | KOR variant fee test, HKG multi-moment OOS, recovery/forced-ID, 1980–2010/2011–2024 holdout; Council 006 (stop-rule adjudication) and 007 (experiment slate) | identification round + evidence-driven slate | Publishable object fixed (method + negative map + data-first); E1 gate-architecture gradient is the next decisive test; evidence layer (WB snapshots, econ literature, relation scout) built. |
 
 ## 5. Stopping and falsification criteria (declared before iteration 2 results)
 

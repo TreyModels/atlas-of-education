@@ -175,10 +175,11 @@ Two cell results are the reason this is now a research loop rather than a finish
   the formal-job rise survives with schooling frozen. The model is one-way: the economy grows without
   schooling, and schooling grows without the economy.
 
-That is why iteration 2 (**now running**) builds the two-way interaction and an endogenous shadow
-sector, and calibrates against literature-reported shadow-education rates rather than adding more
-parameter variants of the same one-way model. The loop, its stopping rules, and its success criteria are
-in [`06_report/RESEARCH_LOOP.md`](06_report/RESEARCH_LOOP.md).
+Iteration 2 built the two-way interaction and an endogenous shadow sector; iteration 3 showed that the
+structural shadow model **cannot reproduce the literature's stage-matched rates in any assessable
+country**, so the incidence claim is withdrawn and the attempt is reported as a failed calibration — a
+finding about the data and the model class, not a parameter to tune. The loop, its stopping rules, and
+its success criteria are in [`06_report/RESEARCH_LOOP.md`](06_report/RESEARCH_LOOP.md).
 
 ## 4c. Stop-rule event: the model does not (yet) put shadow education where the literature does
 

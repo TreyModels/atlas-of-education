@@ -1,3 +1,7 @@
+> **SYNTHETIC EXERCISE.** Panelists are AI-constructed composite personas whose positions are inferred from the
+> published literature. Nothing in this file is a statement by, or endorsed by, the named individuals or any living
+> person; names identify the published work each composite draws on, not participants in a deliberation.
+
 # REVIEW — PAGE composite (drawing on Page 2018; Miller & Page 2007) — brief_007
 
 **G. GROUNDING.** Literature basis: an experiment is a contrast between a model class and a rival, with a
