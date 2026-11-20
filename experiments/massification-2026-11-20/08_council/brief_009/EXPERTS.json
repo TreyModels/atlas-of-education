@@ -1,0 +1,51 @@
+{
+  "brief_id": "brief_009",
+  "brief_file": "08_council/brief_009/BRIEF.md",
+  "material": "Assumption-space mapping (iteration 6): 45 assumed parameters, 7 scenario families, 70-row prediction register, support/impossibility criteria, data-first link. Inputs: ECON_LIT/ECON_TARGETS, PARAMETER_MAP (10 not observable), shadow_round2, pattern-scout relation register (30 rows), typology.",
+  "synthetic_disclaimer": "SYNTHETIC EXERCISE. Panelists are AI-constructed composite personas whose positions are inferred from the published literature. Nothing here is a statement by, or endorsed by, the named individuals or any living person. Names in literature_basis identify the work each composite draws on, not participants in a deliberation.",
+  "convened_by": "lead",
+  "convened_at": "2026-11-20T13:52+08:00",
+  "panel_size": 3,
+  "panel": [
+    {
+      "handle": "PAGE",
+      "label": "Composite drawing on model-based-reasoning and complexity literature",
+      "literature_basis": ["Page, The Model Thinker (2018)", "Miller & Page, Complex Adaptive Systems (2007)"],
+      "grounding_basis": ["publication"],
+      "role": "Model-space reviewer: coherence of families, predeclared impossibilities, two-margin requirement",
+      "assigned_prior_question": "Families (task §2), register design (§3)",
+      "steel_man_slot": false
+    },
+    {
+      "handle": "PATRINOS",
+      "label": "Composite drawing on returns-to-education and education-economics literature",
+      "literature_basis": ["Psacharopoulos & Patrinos, decennial returns review (2018)", "Becker, Human Capital (1964)"],
+      "grounding_basis": ["publication"],
+      "role": "Economist: literature-grounded values vs assumed; identification grades; data-first collapse ranking",
+      "assigned_prior_question": "Data-first link (§5), support criteria (§4)",
+      "steel_man_slot": true
+    },
+    {
+      "handle": "BRAY",
+      "label": "Composite drawing on comparative shadow-education literature (mandatory seat)",
+      "literature_basis": ["Bray & Lykins, Shadow Education (2012)", "Bray & Kwok (2003)", "Bray, comparative shadow-education work"],
+      "grounding_basis": ["listed", "publication"],
+      "role": "Shadow-education reviewer: predicted profiles vs literature rows, provider form, two-margin Korea fact",
+      "assigned_prior_question": "Families (task §2), predicted shadow profiles",
+      "steel_man_slot": false
+    }
+  ],
+  "composition_check": {
+    "size_3_to_4": true,
+    "mandatory_shadow_education_composite": "BRAY",
+    "steel_man_slot": "PATRINOS",
+    "all_composites_grounded": true
+  },
+  "intake_notes": [
+    "Pattern-scout relation register landed before writing (30 rows; R01–R24 cited in SYNTHETIC_PARAMS).",
+    "R13 education->growth negative (-1.035, se 0.240) made F7 a named arm per Lead.",
+    "Korea two-margin fact (R23) embedded as a predeclared impossibility: no one-margin family reproduces KOR falling profile.",
+    "Register and params predeclared with sha256 before runner-2 synthetic runs."
+  ],
+  "deviation_from_lead": "6 families + F7 negative-growth arm (7 total) per Lead's explicit instruction; 3 composites within the 3-4 rule."
+}

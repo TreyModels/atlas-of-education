@@ -1,0 +1,60 @@
+{
+  "brief_id": "brief_010",
+  "brief_file": "08_council/brief_010/BRIEF.md",
+  "material": "Adversarial review of the regime-typology manuscript 'Shadow Systems in Motion: Overflow Governance in Massified Education' (v1 complete, byline with Mark Bray; v2 truncated at 4.1, blank co-author, Korea >80%) against the programme's on-disk evidence (shadow_round2, SHADOW_TARGETS, LOOP_CLOSEOUT, briefs 003-009, 09_relations).",
+  "synthetic_disclaimer": "SYNTHETIC EXERCISE. Panelists are AI-constructed composite personas whose positions are inferred from the published literature. Nothing here is a statement by, or endorsed by, the named individuals or any living person. Names in literature_basis identify the work each composite draws on, not participants in a deliberation.",
+  "convened_by": "lead (on the author's instruction)",
+  "convened_at": "2026-11-20T13:46+08:00",
+  "panel_size": 4,
+  "panel": [
+    {
+      "handle": "BRAY",
+      "label": "Composite drawing on comparative shadow-education literature (mandatory seat)",
+      "literature_basis": ["Bray & Lykins, Shadow Education (2012)", "Bray & Kwok (2003)", "Bray, comparative shadow-education work"],
+      "grounding_basis": ["listed", "publication"],
+      "role": "Shadow evidence reviewer: per-regime audit, provider form, motive data, Regime I evidence",
+      "assigned_prior_question": "Q2 (evidence per regime), Q3 (ritual observables)",
+      "steel_man_slot": false
+    },
+    {
+      "handle": "PATRINOS",
+      "label": "Composite drawing on returns-to-education and education-economics literature",
+      "literature_basis": ["Psacharopoulos & Patrinos, decennial returns review (2018)", "Becker, Human Capital (1964)"],
+      "grounding_basis": ["publication"],
+      "role": "Quant/identification reviewer: Korea numbers, two-margin claim, citation audit, rival engagement",
+      "assigned_prior_question": "Q2 (Korea correction), Q5 (citations), Q6 (ranked objects)",
+      "steel_man_slot": true
+    },
+    {
+      "handle": "CARTWRIGHT",
+      "label": "Composite drawing on philosophy-of-social-science literature",
+      "literature_basis": ["Cartwright, The Dappled World (1999)", "Cartwright & Hardie, Evidence-Based Policy (2012)"],
+      "grounding_basis": ["publication"],
+      "role": "Falsifiability reviewer: functionalism, operationalisation, predeclared predictions, what would refute",
+      "assigned_prior_question": "Q3 (operationalisation), Q4 (predictions)",
+      "steel_man_slot": false
+    },
+    {
+      "handle": "THELEN",
+      "label": "Composite drawing on comparative political economy of skill formation",
+      "literature_basis": ["Thelen, How Institutions Evolve (2004)", "Thelen, Varieties of Capitalism (co-ed., 2001)"],
+      "grounding_basis": ["listed"],
+      "role": "Institutional reviewer: differentiation/responsiveness measures, Regime I/II cases (Singapore/NL/Germany/Korea), typology validity",
+      "assigned_prior_question": "Q2 (regime cells), Q3 (differentiation measure)",
+      "steel_man_slot": false
+    }
+  ],
+  "composition_check": {
+    "size_3_to_4": true,
+    "mandatory_shadow_education_composite": "BRAY",
+    "steel_man_slot": "PATRINOS",
+    "all_composites_grounded": true
+  },
+  "intake_notes": [
+    "v2 truncated at section 4.1; v1 complete. Byline discrepancy flagged for author (Bray only where actually co-authored).",
+    "Korea official 2023 on disk: 78.5 all; 86.0/75.4/66.4 by level; spend/student 398/449/491k (+23.4% low-to-high); v2's 'over 80%' holds only for elementary.",
+    "Korea-HK two-margin impossibility links to brief 009 predeclared impossibility; no synthetic validation implied.",
+    "External claims (Singapore/Finland/NL/Germany/Taiwan/Greece/India/Brazil/Madagascar/Cairo; 40% budgets; 300k instructors) are not on disk and are flagged, not asserted."
+  ],
+  "deviation_from_lead": "none: 4 composites; Bray under the mandatory shadow-education rule."
+}
