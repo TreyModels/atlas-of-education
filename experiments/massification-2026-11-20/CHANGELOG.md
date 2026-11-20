@@ -277,3 +277,24 @@ manifests and error logs.
   frozen before run, incl. **no free taste parameter** and a no-re-fit guard; true seat utilisation **HELD DATA ASK**
   (DepEd/CHED seats vs enrolment, private/public shares, SHS voucher take-up) — declared proxies only, labelled DERIVED.
 - Next: frozen v1.5 predeclaration after the Council cycle-14 merge. No re-tune of A3-D; no fitting to the known outcome.
+
+## 2026-11-20 (reactivation) — Council cycle 14 merged; user corrections + macro-principle (ratchet); bimodal v1.5 queued
+
+- **D117–D123**: model-line batch adjudicated — all four verdicts stand, no re-runs. EXP-1 CEIL-ATTRIB
+  ACCEPT-WITH-CONDITIONS (band one-sided; generator ratio >1.10 in 12 anchor-type years); EXP-2 A3-D FALSIFIED narrowed
+  (PHL saturation artefact; substitution used school gate ≈0.999 vs binding rung-4 ≈0.151 — 6.6× domain error); EXP-3
+  M1-NER ACCEPT; A3-S/v1.3 ACCEPT-WITH-CONDITIONS (c4b not informative at 0.0033). Pipeline reclassification confirmed
+  **as location** (object = `upper_t/lower_{t−3}`, one admissible numerator). HKG `BLOCKED-MEASURE` terminal.
+- **New disclosures:** v1.2 is **crossing/endpoint placement, not a path** (9/33 within ±5 pp; D119); the generator has
+  **no cross-level linkage** (ratio >1.10 in 12 anchor years, max 1.444); school gate rations at primary/lower (87.4% /
+  93.3%) not upper/tertiary (6.5% / 0%); the binding queue is **rung-4 absorption ≈0.151**. Record items fixed (+18.05
+  vs +18.4064; v1.4 SHA256SUMS 38/38; v1.3 binding spec hash).
+- **D124 (user correction): no "demand falsified"** — correct label "the unrationed single-gate model cannot represent
+  a bimodal system"; **Amendment A5 / v1.5 BIMODAL-GATE** (two-tier gates, untaken free seats, outside option,
+  tier-specific exit cost, checks a–e, no free taste parameter, no-re-fit guard; true seat utilisation = HELD DATA ASK).
+- **D125 (user macro-principle): the ONE-WAY RATCHET** — declared theory (never evidence): no reverse/reversal term,
+  shocks as declared inputs, options path-created; stronger than exit-cost asymmetry (exit cost is *why* the ratchet
+  holds); honest bound: data show **setbacks without reversal** (PHL upper-sec −8.16 pp then 75.03, never ≥90; WT4 zero
+  sustained exits, fragile), strong claim **untestable**; recorded in `THEORY_FRAME.md` + MODEL_ARCHITECTURE A4.
+- Next model line object = transition ratio + declared κ=0.949 link; sequencing EXP-7 → EXP-6 → EXP-8 → EXP-9 →
+  EXP-10; **EXP-7 dispatched** (gates downstream predeclarations). DOMUS noted, not integrated.

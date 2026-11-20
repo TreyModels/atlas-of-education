@@ -1016,3 +1016,45 @@ model-specification failure.
   `generator_v1_3/FINDINGS.md`, and the CHANGELOG: the A3-D verdict word refers only to the predeclared block checks;
   demand is revealed and strong; no re-tune of A3-D; no fitting to the known outcome. The next step is a **frozen v1.5
   predeclaration** (`v1.5 BIMODAL-GATE`), to be written before any run, after the Council cycle-14 slate is merged.
+
+---
+
+## 3ac. Council cycle 14 merged (D117–D123) + user corrections and macro-principle recorded (D124–D125); v1.5 BIMODAL-GATE queued
+
+- **Council brief 022 merged as D117–D123.** All four model-line verdicts **stand, no re-runs**: EXP-1 CEIL-ATTRIB
+  ACCEPT-WITH-CONDITIONS (Test A MIXED; Test B PIPELINE-CONSISTENT 7/8, band effectively one-sided, pass carried by
+  2003–2017; generator ratio >1.10 in 12 anchor-type years); EXP-2 A3-D FALSIFIED **narrowed** (PHL failure is a
+  **saturation artefact**, share 0.9925 at bound pre-perturbation; the substitution used the school-gate probability
+  ≈0.999 rather than the **rung-4 absorption ≈0.151** — a 6.6× domain error; \\\"demand does not respond\\\" narrowed to
+  \\\"the replacement drives PHL to the bound\\\"); EXP-3 M1-NER ACCEPT clean; A3-S/v1.3 ACCEPT-WITH-CONDITIONS (c4a
+  informative, c4b not informative at its 0.0033 margin). Dispositions: A3-D parked CONFIRM; pipeline reclassification
+  **CONFIRMED AS LOCATION with corrected wording** (object = transition ratio `upper_t/lower_{t−3}`; one admissible
+  numerator, GER not substitutable); HKG `BLOCKED-MEASURE(SR-1)` terminal CONFIRM.
+- **New disclosures recorded:** (V1) **v1.2 is crossing/endpoint placement, not a path** — within ±5 pp in **9/33**
+  year-level comparisons (median lower −29.44, upper −27.59; 2024 upper +1.61); label restated in **D119** (no file may
+  say v1.2 reproduces the PHL series). (V2) **The generator has no cross-level linkage**: synthetic
+  `upper_t/lower_{t−3}` >1.10 in **12 anchor-type years** (all 2013–2024), **177/1,590** cells, max 1.444 vs observed max
+  1.072 — no ceiling it produces is inherited. (V3) the school gate rations at **primary 87.4% / lower 93.3%** of
+  level-years but **upper 6.5% / tertiary 0%** (anchor upper gate unrationed, Q = 0.621 PHL-like). (V8) the binding
+  queue is **rung-4 absorption ≈0.151**, not the school gate ≈0.999. **Record items fixed:** the +18.05 (above band)
+  vs +18.4064 (vs baseline) distinction; v1.4 `SHA256SUMS.txt` path defect (regenerated, 38/38 verify); v1.3 copy hash
+  `bdb205b2…` vs **binding** spec `cf8c61cb…`.
+- **Next model line (D121):** object = the **transition ratio**, first move = a **declared cross-level accounting link**
+  `upper_t ≤ κ·lower_{t−3}` with **κ = 0.949 declared from an observed median (never fitted)**; no new layer
+  (D116 stands); sequencing **EXP-7 → EXP-6 → EXP-8 → EXP-9 → EXP-10**. EXP-7 REPRO-PATH **dispatched** (it gates any
+  downstream predeclaration, D119).
+- **User corrections recorded (D124–D125):** (a) **no \\\"demand falsified\\\" language** — the correct label is \\\"the unrationed
+  single-gate model cannot represent a bimodal system\\\"; demand is revealed and strong; **Amendment A5 / v1.5
+  BIMODAL-GATE** is now a first-class requirement (two-tier gates: open-access seats that can go untaken + rationed
+  high-quality gates incl. the rung-4 credential queue; explicit childworld outside option; sorting; tier-specific exit
+  cost; v1.5 checks a–e; true seat utilisation = **HELD DATA ASK** (DepEd/CHED seats vs enrolment, private/public shares,
+  SHS voucher take-up), declared proxies only, labelled DERIVED). (b) **The user's macro-principle — the ONE-WAY
+  RATCHET (\\\"there is no reverse button\\\")** recorded as **DECLARED-THEORY (never evidence)** in
+  `synthetic_2026-11-20/THEORY_FRAME.md` and `MODEL_ARCHITECTURE.md` A4: transition rules irreversible by declaration;
+  no reverse/reversal term; shocks only as declared inputs; options path-created. Stronger than the hysteresis exit-cost
+  asymmetry (exit cost is *why* the ratchet holds). **Honest bound:** our data show **setbacks without reversal** (PHL
+  upper-sec 2017→2022 −8.16 pp, recovery to 75.03, never ≥90; WT4 zero sustained exit episodes, descriptive/fragile)
+  — a bounded observable implication, **NOT** a test of the strong claim, which is **untestable on our data**; any
+  reversal diagnostic must be predeclared and labelled descriptive. The Manila→hill-tribe examples are thought
+  experiments and must not be modelled literally.
+- **DOMUS noted but not integrated** (separate programme workspace; no action).

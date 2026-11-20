@@ -140,3 +140,19 @@ evidence-spine correction (Z2); see `brief_018/SYNTHESIS_018.md` and `DECISIONS.
    equivalence: |stock−flow| ≤ 2.0 pp in the 85–95 band and ≤1 y crossing difference) and H2–H6 hold; verify checklist
    §2 hashes + determinism; report `BLOCKED-*` as a terminal state and `TRANSFER-FAILS` as the informative outcome.
    No HKG/portability/phase-verdict claim. **No external message sent this cycle** (D87).
+
+## Next 3 actions (cycle 14, brief 022 — model-line adjudication + post-H1 HKG; D117–D125)
+
+1. **Merge + run the slate in dependency order** (Lead): D117–D123 merged; copy the EXP-6…EXP-10 blocks verbatim from
+   `brief_022/SYNTHESIS_022.md` §6; **predeclare EXP-7 first** (does v1.2 reproduce the observed path; κ-link test),
+   then EXP-6, EXP-8, EXP-9; **EXP-10 is drop-first** (HKG stock-object design; D120 governs, run-ready not run).
+   Re-derive every block number from disk before freeze (D113a).
+2. **Record the user corrections and the theory frame** (Lead): D124 (no "demand falsified"; bimodal two-tier A5
+   requirement; HELD seat-utilisation data ask) and D125 (one-way ratchet macro-principle — declared theory, no
+   reverse term, shocks as declared inputs, strong claim untestable). `synthetic_2026-11-20/THEORY_FRAME.md` and
+   `MODEL_ARCHITECTURE.md` A4/A5 carry them; **no reversal diagnostic may be proposed as reachable**, any future one
+   must be predeclared and labelled descriptive.
+3. **Freeze the v1.5 BIMODAL-GATE predeclaration before any run** (Lead): two-tier gates (open-access seats that can
+   go untaken + rationed high-quality gates incl. the rung-4 credential queue), explicit outside option, κ-link
+   precondition, no free taste parameter, checks (a)–(e) from D124, no-re-fit guard; HELD data named, never
+   fabricated; no re-tune of A3-D, no fitting to the known outcome. **No external message sent this cycle** (D87).

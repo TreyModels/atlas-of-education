@@ -355,3 +355,26 @@ imputation as observation. E1 stays PARKED; direction claims EQUIVALENT.
    justification recorded in `brief_021/SYNTHESIS_021.md` §1.
 5. **If only one thing mattered this week:** CEIL-ATTRIB (it decides whether v1.2's ceiling is a mechanism result at
    all). **Drop-first of the five: ASYM-K** (paper-side; cannot unlock D101 even if positive).
+
+## Cycle 14 addendum (model-line adjudication; SR-9 post-H1; D117–D125)
+
+1. **Goal restated:** massification produced by schooling–government–market interaction; the next model line is the
+   **transition ratio** (`upper_t/lower_{t−3}`) and a **declared cross-level accounting link** (κ declared, never
+   fitted); the ceiling is a **pipeline/location** object (D115/D118), and the user's structural point requires a
+   **bimodal two-tier system** (D124/A5). Phase CLOSED at PARTIAL/DESCRIPTIVE/EQUIVALENT.
+2. **KEEP/PARK/KILL delta.** KEEP — CEIL-ATTRIB (pipeline-consistent, one-sided-band caveat), M1-NER (H1 not
+   admissible), v1.3 (c4 fail, not informative at the margin), v1.2 (PASS-CONDITIONAL, scope = crossing/endpoint
+   placement, NOT a path — D119), EXP-6…EXP-10 slate (D122), **Amendment A5 / v1.5 BIMODAL-GATE** (two-tier gates,
+   untaken free seats, outside option, tier-specific exit cost), **one-way ratchet** (D125, declared theory). PARK —
+   A3-D demand block (parked; mis-specified — fails replacement, not response; PHL saturation artefact), exit-cost /
+   complementarity layer (D101), induction grounding (D104), HKG run (DESIGN-ONLY STOCK-NER PREDECLARATION, N1–N6,
+   run-ready not run — D120). KILL — "demand falsified" language; re-runs of delivered cells; reversal tests the data
+   cannot reach; literal modelling of the Manila→hill-tribe thought experiments; **v1.2 "reproduces the PHL path"**
+   claims; unqualified "v1.2 passes".
+3. **One thread:** make the model capable of a pipeline (EXP-7 → EXP-6 → EXP-8 → EXP-9), then the bimodal v1.5 layer.
+4. **Drift check (red-flag count 3):** (R1) building the bimodal layer on a panel that is not a path (D119; guarded by
+   EXP-7 first); (R2) demand language laundering (banned; D124); (R3) theory-frame adoption without an empirical
+   implication (guarded: ratchet is declared-only, WT/DT gates parked). Written justification in SYNTHESIS_022 §1.
+5. **If only one thing mattered this week:** **EXP-7** (does the generator reproduce the observed path at all?) — every
+   synthetic level statement currently rides on a panel that is 24–37 pp low before 2021. **Drop-first of the five:
+   EXP-10** (no number this cycle; design continues under D120).

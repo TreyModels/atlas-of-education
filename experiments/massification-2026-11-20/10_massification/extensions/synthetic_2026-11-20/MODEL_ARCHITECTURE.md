@@ -403,3 +403,44 @@ utilisation number or a quality series.**
 No "demand falsified" language anywhere. No re-tune of A3-D. No fitted demand/quality parameter (R4/R27). No causal or
 direction claim. No C1–C4 reopening. HELD data stays HELD. The tier structure and the outside-option parameters are
 **declared assumptions**, tested by ablation, never called evidence.
+
+### A4 addendum (user macro-principle, 2026-11-20, dashboard) — THE ONE-WAY RATCHET ("no reverse button")
+
+**Status: DECLARED-THEORY (theory-only, never evidence). No parameters; no layer.** The user's formulation is recorded
+in `THEORY_FRAME.md` §1 and D125: on the development/industrialisation path **nobody ever says "go back"**; shocks
+produce **setbacks, not reversal to the prior configuration**; the options are **path-created** (build wafer fabs vs keep
+exporting labour, not "return to the prior state"); a Polanyi-like one-way transformation, stronger — the double
+movement happens *inside* the installed state. The illustrative examples (Manila→hill tribe) are thought experiments and
+must **not** be modelled literally.
+
+**Model requirement (declared, not fitted):** the generator carries a **declared one-way ratchet** —
+- **no reverse/reversal term** anywhere in the transition rules;
+- shocks enter only as **declared inputs** and may move **levels** (setbacks), never reverse the **path**;
+- the option set is **path-created** (available choices depend on prior installation).
+This is **stronger than the hysteresis paper's exit-cost asymmetry** — **exit cost is *why* the ratchet holds**. It is
+consistent with both papers (scaffold adoption → no exit; schooling installs competences → options change). The v1.5
+BIMODAL-GATE spec must not imply reversibility.
+
+**Honesty bound:** our data show **setbacks without reversal** (PHL upper-secondary 2017→2022 −8.16 pp, recovery to
+75.03, never ≥90; WT4 zero sustained exit episodes, descriptive and fragile) — a **bounded observable implication, NOT
+a test of the strong claim**. The strong claim ("nobody ever goes back") is **untestable on our data**; no reversal
+diagnostic may be proposed as if reachable; any future one must be predeclared and labelled **descriptive**.
+
+### A5 addendum (cycle-14 integration + user macro-principle, 2026-11-20)
+
+1. **Precondition from D121/V2 (the generator cannot hold a pipeline):** v1.5 must also satisfy the **declared cross-level
+   accounting link** `upper_t ≤ κ · lower_{t−3}` with **κ declared from an observed median (never fitted)** — v1.2's
+   synthetic ratio exceeds 1.10 in 12 anchor-type years (max 1.444) while the observed PHL maximum is 1.072. The bimodal
+   tier structure is built **on top of** that link, not instead of it.
+2. **The high gate includes the job rung, not only the school gate (cycle-14 V8):** the model's binding queue is
+   **rung-4 absorption** (`rung4_emp/rung4_demand` ≈ 0.151 for the PHL-like type), not the school-gate advance probability
+   (≈0.999). Tier H must therefore carry both the **rationed school gate** (good SHS tracks/university slots) **and** the
+   **credentialed-job rung**, as the theory frame's "credential gate" specifies.
+3. **One-way ratchet (D125):** v1.5 transition rules carry **no reverse/reversal term**; shocks enter only as **declared
+   inputs** and may set back levels, never reverse the path. The spec must state this explicitly and test it only by
+   construction (no reversal term present), not by a reversal diagnostic the data cannot support.
+4. **v1.2 validity-scope disclosure (D119) applies to every layer built on it:** v1.2 is **crossing/endpoint placement,
+   not a path** (within ±5 pp of the observed PHL series in 9/33 year-level comparisons; median lower −29.44, upper
+   −27.59 pp; 24–37 pp low before 2021). Any v1.5 statement inheriting v1.2 levels inherits that scope.
+5. **No "demand falsified" language** anywhere; correct label = "the unrationed single-gate model cannot represent a
+   bimodal system". No re-tune of A3-D; no fitting to the known PHL outcome.
