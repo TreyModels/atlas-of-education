@@ -1,0 +1,29 @@
+A1 ANCHOR (PHL) — DESCRIPTIVE-ONLY under D57; capacity-gated state-push arms; crossing years M0-M4
+SCALING CRITERION: FAIL (standing; unrepaired + repair cells; generated exps wrong-sign/outside A3 range).
+Phase cap (D56/R17/R23): at most PARTIAL/DESCRIPTIVE + EQUIVALENT; no PASS; no direction claim.
+
+Observed milestones (on-disk): M0 left-censored (>=50 before 1999); M1 left-censored (primary GER>=100 by 1999);
+M2 lower-sec completion >=90 in 2024; M3 upper-sec completion >=90 NEVER by 2024 (75.03) => R6 false-positive test;
+M4 tertiary GER >=50 in 2024-25 band.
+Capacity index inputs: PHL high-school PTR 37(2000)->27(2014)->24(2017) [observed/high];
+education spending %GDP where observed (WDI); enforcement proxy = compulsory duration mapping (declared);
+weights delivery 0.5 / fiscal 0.3 / enforcement 0.2; gate G(C)=sigmoid((C-0.5)/0.15) declared.
+
+  rival          arm                 fit   hold    M0    M1    M2    M3    M4  R6fp
+  demand_led     law_only           2.03   4.42  1960  1966     -     -  1960 False
+  demand_led     capacity_gated     1.85   4.51  1960  1966     -     -  1960 False
+  demand_led     capacity_only      3.29   4.55  1979  1966  2028  2031  1960 False
+  demand_led     none               1.05   6.11  1967  1966     -     -  1960 False
+  education_led  law_only           2.16   5.19  1960  1966     -     -  1960 False
+  education_led  capacity_gated     2.05   5.26  1980  1966  2025  2027  1960 False
+  education_led  capacity_only      3.02   6.12  1961  1966     -     -  1960 False
+  education_led  none               1.37   5.88  1967  1966     -     -  1960 False
+  complementary  law_only           2.17   4.57  1960  1966     -     -  1960 False
+  complementary  capacity_gated     1.97   4.01  1963  1966     -     -  1960 False
+  complementary  capacity_only      2.47   5.94  1960  1966     -     -  1960 False
+  complementary  none               1.32   5.94  1980  1966  2038     -  1960 False
+
+A2d capacity-leads-intake (declared lag 0-6, cross-correlation of dC and enrolment growth): best ('demand_led', 6, -0.42722853008394596)
+READ: M0/M1 are left-censored (no point-timing credit); M2/M4 are the informative crossings; M3 must stay "not crossed" (R6).
+If the capacity-gated arm reproduces M2/M4 timing while law_only does not, the capacity-timing hypothesis is supported;
+if all arms tie, report EQUIVALENT (R13). No direction claim.

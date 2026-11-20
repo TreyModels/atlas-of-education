@@ -375,6 +375,29 @@ it in CHANGELOG. No rotation has occurred yet.
   observed; `base_cost × (1 + cap_cost(1−K_t))`; places gate; twoway φ), **validation rule** (must produce PHL
   crossings within ±5 y **without a fitted capacity coefficient**, else the gate FAILS), and weight/κ sensitivities.
 
+## 3p. Capacity data RECONCILED (executor adjudication; `data/CAPACITY_RECONCILIATION.md`)
+
+- **Two files, canonical split:** data-hunter `data/STATE_CAPACITY.csv` (1,799 rows: fiscal 611 / delivery 509 /
+  enforcement 679; statuses observed/policy_fact/check/unable) is **canonical for the three dimensions**; scout
+  `relations/data/state_capacity.csv` (1,182 country-years × 30 countries, 1971–2024) is **canonical for the declared
+  composite index only, labelled DERIVED**, with `weight_coverage`/weights metadata. Models take fiscal/delivery/
+  enforcement **separately**; no collapsed index may carry a capacity claim.
+- **tax/GDP discrepancy resolved:** scout includes `tax_gdp` (weight 0.20) from WDI `GC.TAX.TOTL.GD.ZS` with
+  provenance columns (PHL 11.9/13.0/13.6 for 2005/2015/2017); data-hunter's `GC.*` pull failed (api HTTP 000) and is
+  `unable`. Resolution: tax enters the index **only with scout's WDI provenance, never spliced** with blocked rows;
+  data-hunter retries `GC.*` next batch; if provenance cannot be verified the component is dropped and weights
+  renormalised.
+- **WGI governance 0.15 blocked in BOTH files** → not proxied; index renormalises over the remaining **0.85**
+  coverage; governance/enforcement is a declared assumption (R28).
+- **De jure ≠ de facto (binding):** UIS compulsory years (PHL 12) vs delivery (PHL 110,954 missing classrooms;
+  ≥1:50 congestion in 90% of NCR Northern Manila elementaries) vs enforcement (inspection/sanctions UNABLE) are
+  three separate inputs in the anchor predeclaration — no collapse.
+- **BEPER 2019 = DATA BLOCKED**, no citations (D49); schools/classrooms/procurement + attendance enforcement UNABLE.
+  User-approval asks remain queued (nothing sent).
+- **Anchor A1 status:** crash fix applied; run progressing in `model/anchor.log` (rival arms: demand_led law_only
+  fit 2.03/hold 4.42; capacity_gated 1.85/4.51; education_led none 1.37/5.88; capacity_only 3.02/6.12; crossings
+  ~1960s vs observed 2017/2024); **`anchor_out/` still empty → no result claimed**.
+
 ## 4. Next three actions for `repo-auditor`
 
 1. **Council gate:** get the Council's final `COUNCIL:` post for brief 013 (SUCCESS_CRITERIA + STOP_RULES are

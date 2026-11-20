@@ -3,3 +3,11 @@ demand_led/capacity_gated: fit 1.85 hold 4.51 crossings {'M0': 1960, 'M1': 1966,
 demand_led/capacity_only: fit 3.29 hold 4.55 crossings {'M0': 1979, 'M1': 1966, 'M2': 2028, 'M3': 2031, 'M4': 1960} R6fp=False
 demand_led/none: fit 1.05 hold 6.11 crossings {'M0': 1967, 'M1': 1966, 'M2': None, 'M3': None, 'M4': 1960} R6fp=False
 education_led/law_only: fit 2.16 hold 5.19 crossings {'M0': 1960, 'M1': 1966, 'M2': None, 'M3': None, 'M4': 1960} R6fp=False
+education_led/capacity_gated: fit 2.05 hold 5.26 crossings {'M0': 1980, 'M1': 1966, 'M2': 2025, 'M3': 2027, 'M4': 1960} R6fp=False
+education_led/capacity_only: fit 3.02 hold 6.12 crossings {'M0': 1961, 'M1': 1966, 'M2': None, 'M3': None, 'M4': 1960} R6fp=False
+education_led/none: fit 1.37 hold 5.88 crossings {'M0': 1967, 'M1': 1966, 'M2': None, 'M3': None, 'M4': 1960} R6fp=False
+complementary/law_only: fit 2.17 hold 4.57 crossings {'M0': 1960, 'M1': 1966, 'M2': None, 'M3': None, 'M4': 1960} R6fp=False
+complementary/capacity_gated: fit 1.97 hold 4.01 crossings {'M0': 1963, 'M1': 1966, 'M2': None, 'M3': None, 'M4': 1960} R6fp=False
+complementary/capacity_only: fit 2.47 hold 5.94 crossings {'M0': 1960, 'M1': 1966, 'M2': None, 'M3': None, 'M4': 1960} R6fp=False
+complementary/none: fit 1.32 hold 5.94 crossings {'M0': 1980, 'M1': 1966, 'M2': 2038, 'M3': None, 'M4': 1960} R6fp=False
+wrote /Users/treymenefee/Library/Mobile Documents/com~apple~CloudDocs/Downloads/DeepSeek/massification_2026-11-20/10_massification/model/anchor_out

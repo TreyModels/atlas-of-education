@@ -1,0 +1,13 @@
+rival,arm,fit_mae,fit_n,hold_mae,hold_n,M0,M1,M2,M3,M4,R6_false_pos,scaling_verdict
+demand_led,law_only,2.03256440424153,19,4.419372307607801,14,1960,1966,,,1960,False,FAIL (standing; generated exps wrong-sign/outside A3 range)
+demand_led,capacity_gated,1.8546607892456848,19,4.514717646782828,14,1960,1966,,,1960,False,FAIL (standing; generated exps wrong-sign/outside A3 range)
+demand_led,capacity_only,3.2916863270693772,19,4.546970438807209,14,1979,1966,2028,2031,1960,False,FAIL (standing; generated exps wrong-sign/outside A3 range)
+demand_led,none,1.047492271754753,19,6.111754907690532,14,1967,1966,,,1960,False,FAIL (standing; generated exps wrong-sign/outside A3 range)
+education_led,law_only,2.1581646858248105,19,5.190641911665736,14,1960,1966,,,1960,False,FAIL (standing; generated exps wrong-sign/outside A3 range)
+education_led,capacity_gated,2.0525346242409244,19,5.256464756267308,14,1980,1966,2025,2027,1960,False,FAIL (standing; generated exps wrong-sign/outside A3 range)
+education_led,capacity_only,3.0238001930597282,19,6.122199101442962,14,1961,1966,,,1960,False,FAIL (standing; generated exps wrong-sign/outside A3 range)
+education_led,none,1.371270727493839,19,5.875474290798293,14,1967,1966,,,1960,False,FAIL (standing; generated exps wrong-sign/outside A3 range)
+complementary,law_only,2.1718223656032265,19,4.565579948487351,14,1960,1966,,,1960,False,FAIL (standing; generated exps wrong-sign/outside A3 range)
+complementary,capacity_gated,1.9732647435235702,19,4.014780434743067,14,1963,1966,,,1960,False,FAIL (standing; generated exps wrong-sign/outside A3 range)
+complementary,capacity_only,2.4683916625376967,19,5.943703661626381,14,1960,1966,,,1960,False,FAIL (standing; generated exps wrong-sign/outside A3 range)
+complementary,none,1.318865482339633,19,5.938227008289883,14,1980,1966,2038,,1960,False,FAIL (standing; generated exps wrong-sign/outside A3 range)
