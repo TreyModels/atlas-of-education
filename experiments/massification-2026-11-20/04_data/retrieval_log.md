@@ -174,3 +174,17 @@ Task-11: build `TARGETS_SHADOW.csv`, `TARGETS_FLOW.csv`, `ECONOMY_SERIES.csv`, `
 | CFPS/CEPS microdata | **Access request not made** (needs registration + application). Recorded in SHADOW_DATA.md as the route if the loop wants China microdata. |
 
 **Outcome:** 38 incidence rows and 20 fee rows in `shadow_round2/data/`; three country rows upgraded to high confidence (Korea participation/hours, Japan grade-6 prefecture attendance), four to medium, four Cambodian cells to medium-low with case-study scope stated; HK 2003 anchor added; Philippines remains blocked and the Korean 2011 figure remains untraced.
+
+## 13. Economic snapshots + parameter map (task-19, 2026-11-20 13:20–13:45 HKT)
+
+| Attempt | Result |
+|---|---|
+| 30+ WDI indicator pulls for PHL;KHM;HKG;CHN;KOR;JPN (`raw/worldbank_econ2/`, `raw/worldbank_fin/`) + metadata | HTTP 200 each; two transient HTTP 000s (`NY.GDP.PCAP.KD.ZG`, `SE.SEC.TCAQ.ZS`) retried OK. |
+| UIS SDG4 re-extraction: XGDP.FSGOV, XGOVEXP.IMF, XUNIT.PPPCONST.\*.FSGOV.FFNTR, XUNIT.GDPCAP.\*.FSGOV.FFNTR, XASTRP.GDPCAP.\*.TXP15/TXPS.PCONTR | OK for six countries (671 values); coverage of per-student funding and teacher pay is thin (often 2000s–2010s only). |
+| World Bank Enterprise Surveys | Site 200; **Philippines 2015 country-profile PDF downloaded** (595 KB, no education-requirement table); **ES data API `api.enterprisesurveys.org` HTTP 000**; Cambodia 2016 profile URL guess 404. |
+| STEP skills surveys | `microdata.worldbank.org` catalog 200; STEP studies exist for other countries, **microdata credentialed**, no STEP for the six; programme page 404. |
+| EdStats | data-catalog page 200 but **EdStats discontinued**; no returns-to-schooling/expenditure-by-level API. |
+| ILOSTAT / PSA / DHS | unchanged blocks (403 / 403 / credentialed). |
+| Derived series | `DERIVED_GOVT_EDU_SPEND_USD` = SE.XPD.TOTL.GD.ZS × NY.GDP.MKTP.CD, flagged DERIVED everywhere (WDI publishes only shares). |
+
+**Outcome:** 7,704-row panel (62 indicators), six snapshots (series present 47–53 of ~53), `PARAMETER_MAP.csv` 28 rows (10 not observable), `WBSOURCE_NOTES.md`. Posted to bridge (deepseek-data) and a directed reuse note sent to deepseek-scout.

@@ -428,7 +428,9 @@
   "C3_NOT_RUN": "PYTHONPATH=code/massabm MASSRUN_EXP=code/exp \"$PY\" code/exp/run_C3.py --draws 96 --best 6 --N 2000 --Nfine 4000 --out runs/C3",
   "C3": "PYTHONPATH=code/massabm MASSRUN_EXP=code/exp \"$PY\" code/exp/run_C3.py --draws 96 --best 6 --N 2000 --Nfine 4000 --out runs/C3",
   "LOOP2_cal": "PYTHONPATH=code/ext_massabm:loop2 MASSRUN_EXP=code/exp \"$PY\" loop2/calibrate2.py --draws 24 --N 2000 --Nfine 3000 --out loop2",
-  "LOOP2_ledger": "PYTHONPATH=code/ext_massabm:loop2 MASSRUN_EXP=code/exp \"$PY\" loop2/ledger.py --N 2500 --out loop2"
+  "LOOP2_ledger": "PYTHONPATH=code/ext_massabm:loop2 MASSRUN_EXP=code/exp \"$PY\" loop2/ledger.py --N 2500 --out loop2",
+  "E2_loop5": "\"$PY\" loop5/run_E2.py loop5/E2 ; \"$PY\" loop5/sens_E2.py loop5/E2",
+  "E3_loop5": "\"$PY\" loop5/run_E3.py loop5/E3"
  },
  "compute": {
   "workers_max": 2,
@@ -487,6 +489,12 @@
     "wage-premium dynamics (no observed wage series)"
    ],
    "provider_module": "provider supply/entry + teacher-tutor capacity added to code/ext_massabm (brief 004 recommended structural variable); shadow take-up never fitted"
+  },
+  "task-23 (iteration 5 / brief 007)": {
+   "predeclarations": "PRE_DECLARATIONS_loop5.md",
+   "E2": "completed; T1 FAIL at declared prior (3/36 sensitivity pass), T2 FAIL at declared prior (33/36 grid pass, seed-sensitive), T3 PASS 3.56%; NOT a rescue; loop5/E2/",
+   "E3": "completed; density required e=0.226 PASS band, income 2.05 FAIL, gate stakes 5.29 FAIL; n=2 -> not identified; loop5/E3/",
+   "status_file": "loop5/LOOP5_STATUS.md"
   }
  }
 }

@@ -220,6 +220,17 @@ with frozen structural parameters and **no take-up fitting**, gate dates taken f
   model's top/bottom spend ratio is **2.14 vs the observed 3.67** — the demand channel exists and is
   about 40% too shallow. Hours remain `UNABLE` (no hours object).
 
+- **E2: provider technology is not the missing channel.** At the declared quality prior the Korean
+  spend mix fails (hagwon 47.7% vs 73.7% observed; only 3/36 parameterisations pass). The Hong Kong
+  mass-lecture ordering reverses (−55.3 pp) but passes in 33/36 grid runs — the sign flips with priors
+  and seed, so it is **not identified**. The fee/income check passes (3.56%), and a robust diagnostic
+  is that observed Korean fees are **1.5–4.2× cost-plus**: a cost-plus provider block cannot price
+  itself. So the candidate that would have explained loop-4's provider inversion does not.
+- **E3: Japan density is not rejected but not identified.** The density elasticity needed to span
+  Tokyo/Akita is 0.226 (inside the 0.1–0.6 band), but income (2.05) and gate-stakes (5.29) are far
+  outside theirs, and with n = 2 endpoints the mean test is not computable. Density is collinear with
+  income at the endpoints.
+
 What this leaves is a clean negative map plus one conditional demand result. The remaining work is
 data-first: better shadow-incidence and fee/breadth data for PH/KHM/CN, repeated within-country stage
 gradients, provider entry/capacity data, and the empirical-relations layer (`09_relations/`) that plugs

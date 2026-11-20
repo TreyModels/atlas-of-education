@@ -1216,3 +1216,65 @@ formal-vs-informal transition rates by credential, density near admission cutoff
 **Reproduce.**
 `PYTHONPATH=code/ext_massabm:loop2 MASSRUN_EXP=code/exp "$PY" loop2/calibrate2.py --draws 24 --N 2000 --Nfine 3000 --out loop2`
 `PYTHONPATH=code/ext_massabm:loop2 MASSRUN_EXP=code/exp "$PY" loop2/ledger.py --N 2500 --out loop2`
+
+---
+
+## E2 — Provider technology and fee block (KOR + HKG; iteration 5, brief 007)
+
+**Status.** **completed** — all three predeclared thresholds evaluated; T1 and T2 FAIL at the declared prior,
+T3 PASSES. Predeclared in `PRE_DECLARATIONS_loop5.md`.
+
+**Files.** `loop5/E2/` — `findings.txt`, `e2_spend_mix.csv`, `e2_price_decomposition.csv`,
+`e2_sensitivity.csv`, `findings_sensitivity.txt`, `provider_tech.py`, `run_E2.py`, `sens_E2.py`.
+
+**Model.** `loop5/provider_tech.py` — **independently named new implementation** (not a reproduction of any
+atlas engine, hagwon model, Bray & Kwok or KEDI): five provider technologies with teacher-time variable
+costs, amortised entry costs, declared prices, and a logit technology choice with income-dependent price
+sensitivity. KOR fee/income data fix the prices and one demand elasticity; **the five spend shares are
+predictions, not fitted**.
+
+**Result.** T1 (KOR provider spend mix, all five within ±10 pp): **FAIL** at the declared quality prior —
+hagwon 47.7% vs observed 73.7% (−26.0 pp); one-to-one 13.0 vs 11.3 (pass), small group 17.3 vs 6.7
+(+10.6 fail), internet 13.3 vs 4.9 (pass), textbook 8.7 vs 3.4 (pass). Over 36 declared quality
+parameterisations T1 passes only **3/36** (best corner: all five inside ±10 pp, hagwon −9.9). T2 (HKG
+mass-lecture S6-7 ≥20 pp above S4-5): **FAIL** at the declared prior (−55.3 pp, ordering reversed),
+but passes in **33/36** grid runs — the sign flips with quality priors and seed, so the HKG stage gap is
+**not identified** by this block. T3 (HKG fee/income 1.1–5.0%): **PASS** (3.56%).
+
+**Diagnostic that survives.** Observed KOR fees are **1.5–4.2×** teacher-time + amortised entry cost, so a
+cost-plus provider block cannot price itself; rents/brand/marketing (or hours heterogeneity) carry the fee.
+The mixed arm separates commercial demand from spend only weakly (80.2% vs 85.3%), so provider technology
+is **not** the missing channel behind loop-4's provider-ordering inversion, and it does not rescue U1's
+by-level reversal (E1's decisive failure removes the gate-position story; E4's income gradient remains the
+only loop-5 positive).
+
+**Reproduce.** `"$PY" loop5/run_E2.py loop5/E2` and `"$PY" loop5/sens_E2.py loop5/E2`.
+
+---
+
+## E3 — Japan within-country identification (grade-6 juku; iteration 5)
+
+**Status.** **completed** (endpoint + elasticity-identification test).
+
+**Files.** `loop5/E3/` — `findings.txt`, `e3_channels.csv`, `run_E3.py`.
+
+**Data.** Rappleye & Komatsu 2020 Table 2 as carried in `02_lit/COUNTRY_CARDS/JPN.md` and
+`02_lit/SHADOW_TARGETS.csv`: grade-6 juku unweighted prefecture mean **41.8%**, range **22.1% (Akita) to
+57.9% (Tokyo)**; r with achievement −0.16. Only the two endpoints and the mean are on disk.
+
+**Estimand.** required elasticity of participation to each candidate channel to span the observed
+Tokyo/Akita ratio (2.62), against predeclared plausibility bands.
+
+**Result.** density/competition: auxiliary ratio 71.5 (population density 6,363 vs 89 per km²), required
+elasticity **0.226**, band 0.1–0.6 → **PASS**. income: ratio 1.6, required elasticity **2.05**, band
+0.1–1.0 → **FAIL**. gate stakes: ratio 1.2, required elasticity **5.29**, band 0.5–2.0 → **FAIL**.
+T5 (density model mean within ±5 pp of 41.8 with no prefecture fitting): **NOT COMPUTABLE** — the full
+47-prefecture table is not on disk; inventing 45 values was rejected. Rank correlation and R² are **not
+testable** with n=2; the r=−0.16 with achievement is an external consistency note only.
+
+**Interpretation.** Density/competition is the only channel that spans the observed range with a plausible
+elasticity — a 70× density difference against only a 2.6× participation difference demands just a modest
+density elasticity, while income would need ~2.1 and gate stakes ~5.3. But with two endpoints this
+**rejects** two channels; it does not identify density (income is collinear with density at the
+endpoints, and density can stand in for any urban correlate). The binding constraint is the missing
+prefecture table, not more simulation.
