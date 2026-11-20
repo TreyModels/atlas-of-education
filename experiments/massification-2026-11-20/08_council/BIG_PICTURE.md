@@ -296,3 +296,43 @@ imputation as observation. E1 stays PARKED; direction claims EQUIVALENT.
   on-disk, one deterministic script each, disjoint write scopes, parallel.
 - New critical path = **M + V**; A1 write-up runs in parallel (consumes Z2); C1 data pull dispatched; "fix now" housekeeping
   alongside. **No external message sent this cycle.**
+
+
+## Cycle 11 addendum (civilizational-hysteresis paper intake; D98–D101)
+
+1. **Goal restated:** massification produced by schooling–government–market interaction, each standing the others up,
+   with cohort flows + country/sector variation; PHL anchor → HKG portability; shadow secondary; live line = synthetic
+   v1.2 (demographic/quality) + A3 demand signals + shadow at gates. Phase CLOSED at PARTIAL/DESCRIPTIVE/EQUIVALENT.
+2. **KEEP/PARK/KILL delta.** **KEEP** — synthetic v1.2 (W1), A3 demand-signal block, shadow module (W2), HKG prep (W3),
+   M+V (Z1/Z2), A1 write-up; **NEW-KEEP** — WT1–WT5 test slate (descriptive, anchored, no direction claim). **PARK** —
+   the **hysteresis paper** as a *candidate rival frame* (scored as sixth A5 rival + D63 ceiling-residual account;
+   no model status until WT1/WT3 land non-null); CHN/HKG portability run; C3/C4 (HELD). **KILL** — treating the paper
+   as validated; adding a "hysteresis/exit-cost parameter" now (D81-2); further scaling repair (R27).
+3. **One thread that most advances the model this cycle:** **v1.2** — the only route to a *generated* (not stipulated)
+   PHL ceiling. The paper sharpens the ceiling's interpretation, not its generation.
+4. **Drift check:** theory-frame adoption risk (grand persistence theory without a discriminating test) + re-describing
+   the closed ceiling residual under new vocabulary. Mitigated by admitting the paper only as a rival + candidate
+   account, gated on WT1–WT5, and by the conditional-ablation rule for any model change. **Red-flag count: 1.**
+5. **If only one thing mattered this week:** v1.2 (W1). **Drop-first of WT1–WT5: WT5** (shadow re-tabulation,
+   near-circular). **No external message sent this cycle** (D87).
+
+## Cycle 12 addendum (assembly-paper intake; D102–D105)
+
+1. **Goal restated:** massification produced by schooling–government–market interaction, each standing the others up,
+   with cohort flows + country/sector variation; PHL anchor → HKG portability; shadow secondary; live line = synthetic
+   v1.2 (demographic/quality) + A3 demand signals + shadow at gates. Phase CLOSED at PARTIAL/DESCRIPTIVE/EQUIVALENT.
+2. **KEEP/PARK/KILL delta.** **KEEP** — v1.2 (W1), A3 demand-signal block, shadow module (W2), HKG prep (W3), M+V
+   (Z1/Z2), A1 write-up, WT1–WT5 and **new** DT1–DT5 slates (descriptive, anchored). **PARK** — the **assembly paper**
+   as a candidate theory frame gated on DT1/DT2; the **combined frame** (`scaffold = schooling system → induction =
+   literacy/numeracy/schedule-discipline → exit cost = persistence/ceiling → shadow = niche expansion at the gates`) as
+   the write-up frame only; hysteresis as sixth A5 rival + D63 ceiling-residual candidate account, gated on WT1/WT3.
+   **KILL** — citing either paper as evidence; adding an "induction"/"developmental-window"/"hysteresis" parameter or
+   layer now; re-describing known facts or the closed ceiling residual under new vocabulary without a predeclared test;
+   further scaling repair (R27).
+3. **One thread that most advances the model this cycle:** **v1.2** — the only route to a *generated* (not stipulated)
+   PHL ceiling. The papers sharpen interpretation, not generation.
+4. **Drift check:** grand-theory adoption risk + vocabulary re-description of known facts. Mitigated by theory-only,
+   declared-assumption grounding notes; conditional gates (DT1&DT2 for induction naming; WT1&WT3 for any exit-cost
+   layer, ablation-tested per D81-2). **Red-flag count: 1.**
+5. **If only one thing mattered this week:** v1.2 (W1). **Drop-first: DT3** (of DT1–DT5; HELD data); **WT5** remains
+   drop-first of WT1–WT5. **No external message sent this cycle** (D87).

@@ -1,0 +1,29 @@
+check_id,component,value,component_verdict,label
+A,A1_primary_uis_first_ge90_2014_2020,2019,PASS,SYNTHETIC
+A,A2_lower_uis_first_ge90_2021_2027_and_2023_lt90,"(2025, 79.04)",PASS,SYNTHETIC
+A,A3_upper_uis_never_ge90_by_2024_and_2024_in_73_77,"(76.64, 76.64)",PASS,SYNTHETIC
+A,A4_tertiary_ger_2025_in_48_1_54_1,50.23,PASS,SYNTHETIC
+A,A5_single_supply_rule_code_inspection,no forbidden token,PASS,SYNTHETIC
+B,B1_phl_primary_oos_2005_2015_in_5_20pct,8.72,PASS,SYNTHETIC
+B,B2_work_or_cl_share_of_oos_ge50_every_country_year,0.918,PASS,SYNTHETIC
+B,B3_boom_oos_minus_flat_decline_ge2pp_1990_2015,5.99,PASS,SYNTHETIC
+B,B3_means_boom_flat_decline,"(27.1, 21.11, 17.26)",PASS,SYNTHETIC
+B,B2b_childlabour_share_of_oos_min_info,0.599,PASS,SYNTHETIC
+C,C1_peak_year_1990_2010,1996,PASS,SYNTHETIC
+C,C2_peak_ge_110pct_of_2024,1.253,PASS,SYNTHETIC
+C,C3_2024_below_peak,"(32.66, 40.93)",PASS,SYNTHETIC
+D,D1_no_completion_above_ger,0,PASS,SYNTHETIC
+D,D2_single_declared_m,1.1,PASS,SYNTHETIC
+E,E1_two_way_fe_positive_p_lt_05,"(0.8283, 0.0)",PASS,SYNTHETIC
+E,E2_five_year_block_same_sign,"(0.7445, 0.0)",PASS,SYNTHETIC
+E_detail,b1,0.8283161796,,SYNTHETIC
+E_detail,p1,0,,SYNTHETIC
+E_detail,b2,0.7444868276,,SYNTHETIC
+E_detail,p2,1.740678934e-08,,SYNTHETIC
+E_detail,n1,1380,,SYNTHETIC
+E_detail,n2,300,,SYNTHETIC
+E_detail,lag,10,,SYNTHETIC
+A_audit,functions_audited,coverage_target;desired_capacity;update_seats,INFO,SYNTHETIC
+A_audit,country_branches,0,INFO,SYNTHETIC
+A_audit,year_indexed_anchor_arrays,0,INFO,SYNTHETIC
+A_audit,forbidden_tokens_found,none,INFO,SYNTHETIC

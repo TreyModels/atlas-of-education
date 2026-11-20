@@ -95,3 +95,32 @@ reproduction + observational equivalence + unreproduced asymmetry" (D77). **Next
 WHOLE evidence base; C1–C4 re-opened for NEW predeclared tests under the user directive (D93). Standing order D89 unchanged
 (exactly 5 anchored experiments + 7-field block + drop-first). Critical path = model re-specification (Z1, C2 re-opener) +
 evidence-spine correction (Z2); see `brief_018/SYNTHESIS_018.md` and `DECISIONS.md` D93–D97.
+
+## Next 3 actions (cycle 11, brief 019 — hysteresis-paper intake)
+
+1. **Relay the ruling + WT slate** (Lead): paper = **candidate rival frame** (sixth A5 rival + D63 ceiling-residual
+   account, still UNABLE); copy the WT1–WT5 anchoring blocks from `brief_019/SYNTHESIS_019.md` §C verbatim; **drop-first
+   = WT5**. Dispatch WT1/WT2/WT4/WT3 in parallel (disjoint write scopes); WT5 = design-only note.
+2. **Fold the rival into the write-up** (lit): re-label "signalling/MMI" → "credential hysteresis (signalling +
+   exit-cost)" in the A5 rival field; cite the paper as a theoretical candidate (author blank), never as validated;
+   keep the external credential facts (39% overeducation, ~45% surplus-return, BPO ~1.9M) on the external-review rows
+   only.
+3. **Hold the model gate** (Council): no architecture layer until WT1 AND WT3 both return non-null; then the
+   complementarity→persistence term is added only as a declared, ablation-tested assumption (R4/R27, D81-2). Record
+   WT1/WT3 outcomes in `DECISIONS.md`; no direction claim, no C1–C4 reopening. **No external message sent this cycle**
+   (bridge times out; files are the memory — D87).
+
+## Next 3 actions (cycle 12, brief 020 — assembly-paper intake; D102–D105)
+
+1. **Dispatch the WT and DT slates in parallel** (Lead/executor): copy the WT1–WT5 blocks from
+   `brief_019/SYNTHESIS_019.md` §C and the DT1–DT5 blocks from `brief_020/SYNTHESIS_020.md` §C **verbatim** into frozen
+   predeclarations; disjoint write scopes; deterministic scripts; HELD parts named and never fabricated (WT2 wage
+   premium, WT5 PHL/KHM participation, DT3 behavioural data). Drop-first: WT5, DT3.
+2. **Write-up wiring** (lit): re-label the A5 rival field "signalling/MMI" → "credential hysteresis (signalling +
+   exit-cost)", cite the hysteresis paper as theoretical candidate only (author blank, never validated), add the
+   combined theory-frame section (`scaffold/induction/exit-cost/shadow-at-gates`) labelled THEORY / DECLARED-ASSUMPTION,
+   and keep the external credential facts on the external-review rows only.
+3. **Hold both model gates** (Council): (a) **no exit-cost/complementarity layer** until WT1 AND WT3 both return
+   non-null — then only a declared, ablation-tested term (R4/R27, D81-2); (b) **no induction naming** until DT1 AND DT2
+   both return non-null. Record WT/DT outcomes in `DECISIONS.md`; no direction claim; no C1–C4 reopening. **No external
+   message sent this cycle** (bridge times out; files are the memory — D87).

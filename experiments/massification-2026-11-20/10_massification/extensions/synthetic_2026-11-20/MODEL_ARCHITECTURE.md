@@ -288,3 +288,57 @@ ladder governs the marginal return (v1 check D) while gate pressure governs the 
 **No causal or direction claim is licensed.** All demand equations are **declared behavioural assumptions**; the checks
 ask whether the declared model *reproduces the predeclared patterns*, not whether any family or country behaves this
 way.
+
+---
+
+## Amendment A4 (Council-merged theory frame, 2026-11-20, cycle 12) — DECLARED-THEORY: scaffold, induction, exit cost, shadow at the gates
+
+**Status: DECLARED-THEORY. Theory-only; NOT evidence; NO parameters; NO new layer. Gated.** Source of record:
+`08_council/brief_020/THEORY_FRAME.md` (combined frame from the two PI working papers: hysteresis paper — brief 019;
+assembly paper — brief 020), admitted by Council decisions D102–D105. Both papers are **candidate theory**, never
+authority and never evidence (D49: no citation of unread material; their reference lists do not enter the verified
+ledger).
+
+### The frame in one paragraph (as adopted)
+
+Mass schooling is a **scaffold** whose forward adoption is a local gain (literacy unlocks the first industrial step;
+credentials give employers a cheap screen), but whose installation **transforms the state** from which exit must later be
+attempted — complementary capital, cohort demography, institutional rules and the distribution of competence all
+reorganize around it (Assembly: induced competence §3.2; hysteresis: exit-cost state transformation C_M/C_D/C_E/C_K,
+not a sunk cost). What the scaffold installs into persons is **induced competence** — literacy, numeracy and
+schedule-discipline assembled *within development* on a conserved architecture by repeated exposure, with no ancestral
+counterpart as a coordinated whole. The two papers meet at the **educational credential**: an induced competence whose
+exit is asymmetric (it persists after its value decays because employers screen, applicants acquire, schools expand and
+regulators gate). The programme's own anchor — the PHL system whose floor and middle crossed 90 but whose upper-secondary
+ceiling never did — is read as the junction: **induction at the floor, exit cost at the ceiling.**
+
+### How the frame maps onto the model (no code change is licensed by this amendment)
+
+| frame element | where it already lives | status |
+|---|---|---|
+| literacy = takeoff prerequisite | `MODEL_ARCHITECTURE.md` Amendment A1 (v1.2 Layer 1c/2b) | declared assumption, now **theory-grounded** by assembly §3.2 — still not evidence |
+| school formats persons (schedule-discipline, numeracy) | A3 household block (school/both/work/neither) | declared assumption, theory-grounded — **not encoded as an "induction" parameter** |
+| demographic overflow → quality collapse | v1.2 (Amendment A2; `generator_v1_2/`) | declared synthetic mechanism, now being tested |
+| shadow education = niche expansion at the gates | `shadow_module/` (Amendment A3 + W2 frozen predeclaration) | declared design; not yet built/run |
+| credential = junction (competence + asymmetric exit) | WT2/WT4/DT5 tests (descriptive) | test slate, not a model parameter |
+| exit cost / complementarity → persistence | WT3; conditional gate | **no layer until WT1 AND WT3 both non-null** |
+
+### Binding gates (from D101 and D104)
+
+1. **Exit-cost / complementarity layer:** may be added ONLY if **WT1 AND WT3 both return non-null**; then only as a
+   **declared** (never fitted) term, tested by the D81 ablation rule (a synthetic persistence PASS is non-diagnostic
+   unless the ablation fails). If either is null, the exit-cost layer is **PARKED** and the hysteresis paper is cited
+   only as a scored rival with no empirical footprint.
+2. **Induction naming:** the generator may *name* the induction mechanism in its declared-assumption provenance ONLY if
+   **DT1 AND DT2 both return non-null**. If either is null, the induction grounding is **PARKED** and Amendments A1/A3
+   keep their current "declared" label with no theory citation.
+3. Any model change under (1) or (2) requires its own frozen predeclaration before the run, and must remain
+   **DECLARED-ASSUMPTION**, never fitted, never called evidence.
+
+### What is explicitly NOT encoded (and must never be claimed)
+
+Release (ancestral-reference) claims; the extended developmental window as administered input; the tracker/physicist
+agency ranking; genetic-sameness transplant/migration designs; relational self-domestication ("niche-specified phenotype
+share" has no on-disk proxy); assembly §8 Predictions 1/3/4; hysteresis Predictions 2/3; and every micro citation the
+papers marshal. **Neither paper is falsification-tested by this programme**; the reachable disconfirmers (assembly §8
+#2/#5, hysteresis high-switching-cost corollary) are descriptive only (D105). No causal or direction claim is licensed.

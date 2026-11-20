@@ -1,0 +1,80 @@
+{
+  "c1": {
+    "gaps_at_g2": {
+      "SYN_HKG_LIKE": 0.1268,
+      "SYN_KHM_LIKE": 0.2554,
+      "SYN_PHL_LIKE": 0.2478
+    },
+    "sign_all_cells_nonneg": true,
+    "threshold": 0.1,
+    "verdict": "PASS"
+  },
+  "c2": {
+    "gaps_at_g2": {
+      "SYN_HKG_LIKE": 0.0258,
+      "SYN_KHM_LIKE": 0.0372,
+      "SYN_PHL_LIKE": 0.0398
+    },
+    "threshold": 0.02,
+    "verdict": "PASS"
+  },
+  "c3": {
+    "max_D_g0": 0.00806,
+    "ratio_to_g1": {
+      "SYN_HKG_LIKE": 0.029,
+      "SYN_KHM_LIKE": 0.028,
+      "SYN_PHL_LIKE": 0.0294
+    },
+    "thresholds": [
+      0.025,
+      0.2
+    ],
+    "verdict": "PASS"
+  },
+  "c5": {
+    "verdict": "PASS"
+  },
+  "checks_not_testable_here": [
+    "c4",
+    "c6"
+  ],
+  "checks_scored_here": [
+    "c1",
+    "c2",
+    "c3",
+    "c5"
+  ],
+  "label": "SYNTHETIC/TOY",
+  "predecl_sha256_verified": "cf8c61cb818cd63acfb2ada594bc9541bfcb0711f801e13b7eee3b86508f94f2",
+  "random_draws": 0,
+  "seed": 20261120,
+  "summary": {
+    "SYN_HKG_LIKE": {
+      "D0": 0.0081,
+      "D1": 0.2785,
+      "D2": 0.821,
+      "D3": 0.9297,
+      "D4": 0.7733,
+      "Dstar": 0.7414,
+      "exposure": 0.94
+    },
+    "SYN_KHM_LIKE": {
+      "D0": 0.0079,
+      "D1": 0.2842,
+      "D2": 0.5926,
+      "D3": 0.8761,
+      "D4": 0.7991,
+      "Dstar": 0.1741,
+      "exposure": 0.43
+    },
+    "SYN_PHL_LIKE": {
+      "D0": 0.0078,
+      "D1": 0.2637,
+      "D2": 0.6064,
+      "D3": 0.8391,
+      "D4": 0.7833,
+      "Dstar": 0.3753,
+      "exposure": 0.75
+    }
+  }
+}

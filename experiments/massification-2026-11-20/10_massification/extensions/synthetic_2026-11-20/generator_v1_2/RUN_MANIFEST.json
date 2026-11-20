@@ -1,0 +1,364 @@
+{
+  "borrow_ledger": {
+    "not_taken": "no childworld prior, posterior, calibrated value, country target or output number enters as a parameter; its observation equation is NOT the ILO child-labour definition and is not claimed to be",
+    "sha256": "ae73adb2a6d9c75d59966390e4304437479ff310a8724093e9108e9d26a23cab",
+    "source": "engine/childworld.py at parent-repo HEAD (`git -C /Users/treymenefee/massification_live show HEAD:engine/childworld.py`)",
+    "taken": "the four-state set (school/both/work/neither), the household utility comparison and its parameter NAMES: y_med, w_child, farm, compat, v0, decay, cost, neither, girl_care, haz"
+  },
+  "checks_summary": {
+    "A": "PASS",
+    "B": "PASS",
+    "C": "PASS",
+    "D": "PASS",
+    "E": "PASS"
+  },
+  "declared_inputs_used_numerically": {
+    "cohort_population_0_14": "observed PHL path 1995-2024 used directly as the declared school-age cohort path for SYN00; 1970-1994 and 2025 extrapolated with declared growth",
+    "population_total": "observed PHL 1995-2024 used for the population stock; extrapolated with declared growth"
+  },
+  "determinism": {
+    "floats": "%.10g",
+    "method": "two clean runs into separate output directories, cmp on every results CSV",
+    "wall_clock_in_outputs": false
+  },
+  "generator": "code/sim_v1_2.py",
+  "hashes": {
+    "code_sha256": "7aded3e2b099e870a99f1714201536403a5e611ade32380bcbd12e73ee1fa2e5",
+    "input_data_sha256": {
+      "SCHOOL_EXPANSION.csv": "c218e6c9bd784e135e089ebecefec21112a09e6bf2c778599a33bc81b78c8ea3",
+      "STATE_CAPACITY.csv": "704efacad00f0ba7ddf579459a930d064fdb0f4b882cffbbf44a6cbecd585044",
+      "UNIVERSALIZATION_SERIES.csv": "85bc869396ebfcb39e3e1a21a31af219e75a07326c738a51d2bfdbe536737ddb",
+      "economic_complexity_panel_30ctys.csv": "9657bfd6cc17d3ed7f59939e0ba6af1412c2d070f2dd0c600a514f4b063a7f04",
+      "gmr_observed_6countries_1970_2024.csv": "794a67c11ca052412edb2935c33c3c6e635cbd2e81ca5b9e44345ef9f5326e41"
+    },
+    "params_md_sha256": "b6f6e84f046d1dcab9d64c95a0209b78cacd0c5aa0ee38a42cfe6e1ce013119a",
+    "predeclaration_expected": "fde18d405d875167977b350a925c28248c3007d2813dcdb29219d3baf0b95f16",
+    "predeclaration_match": true,
+    "predeclaration_sha256": "fde18d405d875167977b350a925c28248c3007d2813dcdb29219d3baf0b95f16"
+  },
+  "label": "SYNTHETIC",
+  "numpy": "2.4.6",
+  "observed_benchmarks_recorded": {
+    "phl_education_spending_pct_gdp": {
+      "1995": 2.66400003433227,
+      "1996": 2.94357991218567,
+      "1997": 3.07755994796753,
+      "1998": 3.69745993614197,
+      "2000": 3.16440010070801,
+      "2001": 2.92463994026184,
+      "2002": 2.89222002029419,
+      "2003": 2.93517994880676,
+      "2004": 2.46983003616333,
+      "2005": 2.32806992530823,
+      "2006": 2.42579007148743,
+      "2007": 2.48518991470337,
+      "2008": 2.58282995223999,
+      "2009": 2.53777003288269,
+      "2014": 2.66454238129968,
+      "2015": 2.83052303785203,
+      "2016": 3.30128109042443,
+      "2017": 3.96384087403915,
+      "2018": 3.85502760745456,
+      "2019": 3.40748649142134,
+      "2020": 3.85829051308063,
+      "2021": 3.87249754784633,
+      "2022": 3.57960089528426,
+      "2023": 3.6236863467978,
+      "2024": 3.92501087473821
+    },
+    "phl_primary_ptr": {
+      "1995": 33.73656,
+      "1996": 34.47076,
+      "1997": 34.72563,
+      "1998": 34.47868,
+      "1999": 34.69483,
+      "2000": 35.31923,
+      "2001": 35.20686,
+      "2002": 35.38941,
+      "2003": 34.92513,
+      "2004": 34.53153,
+      "2005": 35.07377,
+      "2006": 34.59417,
+      "2007": 33.66837,
+      "2008": 33.7418,
+      "2009": 31.43572,
+      "2014": 31.35082,
+      "2015": 30.26629,
+      "2016": 28.98824,
+      "2017": 29.08352
+    }
+  },
+  "observed_inputs_read_for_rationale_and_benchmark_only": {
+    "SCHOOL_EXPANSION.csv": "read and hashed; teacher/room/PTR context only",
+    "STATE_CAPACITY.csv": "PHL primary PTR + education spending used only as the observed benchmark in check (c) and as declared rationale",
+    "economic_complexity_panel_30ctys.csv": "read and hashed as the declared ECI reference; no panel value is encoded in the synthetic X",
+    "gmr_observed_6countries_1970_2024.csv": "read and hashed; not encoded"
+  },
+  "panel": {
+    "countries": 30,
+    "levels": [
+      "primary",
+      "lower_secondary",
+      "upper_secondary",
+      "tertiary"
+    ],
+    "rows": 6720,
+    "years": [
+      1970,
+      2025
+    ]
+  },
+  "params": {
+    "accel_div": [
+      1.0,
+      1.0,
+      1.3,
+      1.5
+    ],
+    "accel_ind": [
+      1.0,
+      1.0,
+      1.6,
+      1.3
+    ],
+    "band_share": [
+      0.42,
+      0.21,
+      0.2,
+      0.17
+    ],
+    "class_target": [
+      40.0,
+      42.0,
+      42.0,
+      30.0
+    ],
+    "comp_step": [
+      0.1,
+      0.18,
+      0.32,
+      0.5
+    ],
+    "cost_base": [
+      0.05,
+      0.14,
+      0.22
+    ],
+    "cover_hi": [
+      0.9,
+      1.25,
+      1.0,
+      0.85
+    ],
+    "cover_lo": [
+      0.72,
+      0.55,
+      0.45,
+      0.1
+    ],
+    "cred_prem": 0.1,
+    "div_income": 6000.0,
+    "div_x": 0.95,
+    "edu_lag": 10,
+    "g_cap": 0.09,
+    "g_floor": 0.0,
+    "g_noise_sd": 0.006,
+    "gamma": 0.55,
+    "gp": [
+      0.012,
+      0.008,
+      0.03,
+      0.022
+    ],
+    "hh_noise_sd": 0.015,
+    "init_comp": [
+      0.55,
+      0.35,
+      0.15,
+      0.05
+    ],
+    "init_cover": [
+      0.9,
+      0.55,
+      0.3,
+      0.08
+    ],
+    "init_pipe": [
+      0.95,
+      0.75,
+      0.5,
+      0.15
+    ],
+    "learn_theta": [
+      1.0,
+      1.0,
+      1.0,
+      0.8
+    ],
+    "lf_share_of_pop": 0.52,
+    "lit_ag_growth": 0.01,
+    "lit_lag": 12,
+    "lit_learn": 0.05,
+    "meas_completion_factor": 1.1,
+    "mfg_u_coef": [
+      0.0,
+      -0.1,
+      0.3,
+      0.1
+    ],
+    "oa_rate": [
+      0.08,
+      0.06,
+      0.05,
+      0.04
+    ],
+    "office_u_coef": [
+      0.0,
+      0.35,
+      0.0,
+      -0.2
+    ],
+    "overage_cap": 1.05,
+    "phi_formal": 0.82,
+    "phys_cap": 1.15,
+    "pool_retain": 0.5,
+    "psi_div": 0.12,
+    "psi_ind": 0.22,
+    "psi_pre": 0.02,
+    "ptr0": [
+      24.0,
+      26.0,
+      26.0,
+      18.0
+    ],
+    "ptr_target": [
+      33.0,
+      35.0,
+      34.0,
+      24.0
+    ],
+    "queue_max_lf": 0.2,
+    "queue_retain": 0.5,
+    "rank_gain": 0.2,
+    "ration_work_share": 0.9,
+    "rung_a": [
+      0.9,
+      0.4,
+      -0.3,
+      -1.3
+    ],
+    "rung_b": [
+      -0.65,
+      0.2,
+      1.0,
+      2.2
+    ],
+    "rung_mult": [
+      2.2,
+      3.2,
+      4.6,
+      6.4
+    ],
+    "seat_lag": [
+      4,
+      5,
+      5,
+      6
+    ],
+    "seat_resp": [
+      0.45,
+      0.4,
+      0.35,
+      0.3
+    ],
+    "seat_t50": [
+      2003.0,
+      2024.0,
+      2010.0,
+      2000.0
+    ],
+    "seat_width": [
+      12.0,
+      5.0,
+      10.0,
+      12.0
+    ],
+    "sec_ag_base": 0.5,
+    "sec_ag_x": -0.45,
+    "sec_floors": [
+      0.02,
+      0.05,
+      0.03,
+      0.05
+    ],
+    "sec_inf_base": 0.24,
+    "sec_inf_x": -0.08,
+    "sec_man_base": 0.13,
+    "sec_man_x": 0.09,
+    "seed": 20261120,
+    "seek": [
+      0.15,
+      0.35,
+      0.6,
+      0.8
+    ],
+    "sep": [
+      0.1,
+      0.07,
+      0.05,
+      0.04
+    ],
+    "surv_max": [
+      0.96,
+      0.91,
+      0.9,
+      0.9
+    ],
+    "surv_theta": [
+      1.0,
+      1.0,
+      1.0,
+      0.8
+    ],
+    "t3_a": -2.02,
+    "t3_b": 0.45,
+    "t3_c": 0.6,
+    "takeoff_income": 1500.0,
+    "takeoff_lit": 0.6,
+    "teach_delivery_base": 0.35,
+    "teach_delivery_gain": 0.65,
+    "teach_lag": [
+      4,
+      5,
+      5,
+      6
+    ],
+    "teach_resp": [
+      0.35,
+      0.3,
+      0.25,
+      0.2
+    ],
+    "ter_pool_retain": 0.35,
+    "x_edu_delta": 0.15,
+    "x_edu_level": 0.4,
+    "x_income_coef": 0.55,
+    "x_max": 2.4,
+    "x_min": 0.0,
+    "x_off_sd": 0.16,
+    "x_open": [
+      0.0,
+      0.08,
+      0.26,
+      0.48
+    ],
+    "x_persist": 0.5,
+    "x_urban_coef": 0.55,
+    "x_urban_ref": 0.4
+  },
+  "python": "3.11.17",
+  "rng": "numpy PCG64 (np.random.default_rng), single stream, fixed draw order",
+  "seed": 20261120,
+  "spec": "v1_2/PRE_DECLARATIONS.md",
+  "statement": "Synthetic data from declared assumptions only. Not evidence, not an estimate, not a forecast, no causal or direction claim, no real country modelled."
+}

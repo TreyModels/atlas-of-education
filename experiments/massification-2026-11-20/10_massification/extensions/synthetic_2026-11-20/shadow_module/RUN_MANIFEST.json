@@ -1,0 +1,270 @@
+{
+  "label": "SYNTHETIC/DESIGN",
+  "module": "shadow-education gating module for the SYNTHETIC generator (target: v1.3)",
+  "worker": "W2",
+  "programme_root": "/Users/treymenefee/massification_live/experiments/massification-2026-11-20",
+  "branch": "experiment/massification-2026-11-20",
+  "created_utc": "2026-11-20T14:40:53Z",
+  "status": "DESIGN + FROZEN PRE-DECLARATION + PARAMETER TABLE + DRY-RUN PLAN. No v1.3 run has occurred.",
+  "frozen_predeclaration": {
+    "path": "10_massification/extensions/synthetic_2026-11-20/shadow_module/PRE_DECLARATIONS.md",
+    "sha256": "cf8c61cb818cd63acfb2ada594bc9541bfcb0711f801e13b7eee3b86508f94f2",
+    "frozen_utc": "2026-11-20T14:37:17Z",
+    "rule": "sim_v1_3.py must re-hash this file at start-up and refuse to run on mismatch",
+    "toy_guard": "toy_design_check.py embeds this hash and refused-allowed check is active"
+  },
+  "spec_files": [
+    {
+      "path": "10_massification/extensions/synthetic_2026-11-20/shadow_module/PRE_DECLARATIONS.md",
+      "sha256": "cf8c61cb818cd63acfb2ada594bc9541bfcb0711f801e13b7eee3b86508f94f2",
+      "bytes": 18823
+    },
+    {
+      "path": "10_massification/extensions/synthetic_2026-11-20/shadow_module/SHADOW_MODULE.md",
+      "sha256": "78b5beff79290d0a3d4825f2c86032a08ac52f4cd517cf42699c0aec9cf1d6dd",
+      "bytes": 22631
+    },
+    {
+      "path": "10_massification/extensions/synthetic_2026-11-20/shadow_module/PARAMETERS.csv",
+      "sha256": "cb49d3197b911451f8b1e32080fbe6d095f181440572e1a2b72005dc4302703a",
+      "bytes": 10915
+    },
+    {
+      "path": "10_massification/extensions/synthetic_2026-11-20/shadow_module/DRY_RUN_PLAN.md",
+      "sha256": "52daaabd843d77b258d19c5abbfd489010181d87eee5026a233bdd7a471b24a4",
+      "bytes": 13663
+    },
+    {
+      "path": "10_massification/extensions/synthetic_2026-11-20/shadow_module/toy_design_check.py",
+      "sha256": "be7b3fd7a3452dca498ff0c00df646f93343a27097a6f8ddbb5a7cef9a425e14",
+      "bytes": 14178
+    },
+    {
+      "path": "10_massification/extensions/synthetic_2026-11-20/shadow_module/toy/toy_results.csv",
+      "sha256": "604ae8ae10e2356528bf0a15eca93b39504180953a21b6f6bf5bbc8b4e28a593",
+      "bytes": 1903
+    },
+    {
+      "path": "10_massification/extensions/synthetic_2026-11-20/shadow_module/toy/TOY_DESIGN_CHECK.md",
+      "sha256": "2331ecd6f84cdd48c7b954cad4668aed811ffa5f5e1de0bf439e4ae36803afd1",
+      "bytes": 3123
+    },
+    {
+      "path": "10_massification/extensions/synthetic_2026-11-20/shadow_module/toy/toy_checks.json",
+      "sha256": "fd6dbdb501b9278a468d62a806aeccc2e8ee448728be848805b1e8395124bb74",
+      "bytes": 1488
+    },
+    {
+      "path": "10_massification/extensions/synthetic_2026-11-20/shadow_module/PRE_DECLARATIONS_S1_NOTE.md",
+      "sha256": "af49a616a7b57c4ef23a693c155d022cd17817f66f5acafba4dc6798dedb65eb",
+      "bytes": 3023,
+      "role": "controller pre-run clarification (no threshold/parameter change)"
+    }
+  ],
+  "toy_design_check": {
+    "label": "SYNTHETIC/TOY",
+    "script": "10_massification/extensions/synthetic_2026-11-20/shadow_module/toy_design_check.py",
+    "executed_after_freeze": true,
+    "seed": 20261120,
+    "random_draws": 0,
+    "checks_scored": [
+      "c1",
+      "c2",
+      "c3",
+      "c5"
+    ],
+    "checks_not_testable_here": [
+      "c4",
+      "c6"
+    ],
+    "outputs": [
+      {
+        "path": "10_massification/extensions/synthetic_2026-11-20/shadow_module/toy/toy_results.csv"
+      },
+      {
+        "path": "10_massification/extensions/synthetic_2026-11-20/shadow_module/toy/TOY_DESIGN_CHECK.md"
+      },
+      {
+        "path": "10_massification/extensions/synthetic_2026-11-20/shadow_module/toy/toy_checks.json"
+      }
+    ],
+    "note": "Not a v1.3 result. Illustrative gate states are declared, not simulated. c4 arithmetic printed there is a worked example and is explicitly NOT a c4 result."
+  },
+  "scored_run": {
+    "status": "NOT RUN \u2014 depends on v1_2/code/sim_v1_2.py and v1_2/results/synthetic_panel_v1_2.csv, neither of which exists yet (dependency recorded in DRY_RUN_PLAN.md section 0)",
+    "seed": 20261120,
+    "determinism_requirement": "two clean runs byte-identical"
+  },
+  "inputs_cited": [
+    {
+      "path": "LOOP_CLOSEOUT.md",
+      "sha256": "c799a48e60f212cfd51c0f962603a7546542b2df025fc916926e48e0f5788e76",
+      "bytes": 7182,
+      "used_for": "binding exclusion list; closed-phase adjudication"
+    },
+    {
+      "path": "08_council/brief_008/SYNTHESIS_008.md",
+      "sha256": "91fa9cef119e0bcd9faef1d38d660103e45370e137ddb4b58e6628450a068af8",
+      "bytes": 13594,
+      "used_for": "final adjudication; exclusion classes; dissent"
+    },
+    {
+      "path": "04_data/TARGETS_SHADOW.csv",
+      "sha256": "e6e64bd16181412ceb951a30a338cf2c43f609d2a67514939a72b3b51ead9b19",
+      "bytes": 4578,
+      "used_for": "HKG 85% row (line 4); PHL/KHM unresolved rows (10-11)"
+    },
+    {
+      "path": "02_lit/SHADOW_TARGETS.csv",
+      "sha256": "3c613137d82830f3108e3c610922b8af57d3a8155d9baf7c96ec89994a8dc06f",
+      "bytes": 6320,
+      "used_for": "HKG 85% second row (line 9); PHL 46.5/23.8/28.1 (17-19); KHM 68.4/41.3 (10-11)"
+    },
+    {
+      "path": "02_lit/CLAIM_REGISTER.csv",
+      "sha256": "42e58d7b286d7eca34bdad1c029d0c9abb102278ffeaf8fdf572392aa1d55899",
+      "bytes": 21338,
+      "used_for": "O-22 gate-indexed take-up; O-23 gate-stakes experiment; J-02 85%"
+    },
+    {
+      "path": "02_lit/MODEL_CARDS.md",
+      "sha256": "c5d504e658305bc9522321e40832f26c430a5c9c0216e743cdbd0768e977c595",
+      "bytes": 30894,
+      "used_for": "Yoo rent-seeking; Kang tournament; Jayachandran teacher-sold"
+    },
+    {
+      "path": "02_lit/COUNTRY_CARDS/HKG.md",
+      "sha256": "d8c0c6a213fb6d8de24b808925a37f4f84ca7d2b9f27e72382d29bd07d77c769",
+      "bytes": 3839,
+      "used_for": "HKG 85% provenance and denominator caveat"
+    },
+    {
+      "path": "02_lit/COUNTRY_CARDS/PHL.md",
+      "sha256": "63b58cca1fc69e9c360dd49fb0b558291358797162d74c59c6186dacb0e1c389",
+      "bytes": 5792,
+      "used_for": "PHL gate-clustering reading; 46.5% caveat"
+    },
+    {
+      "path": "02_lit/COUNTRY_CARDS/KHM.md",
+      "sha256": "0e7ea4fdd05b320cedf8d9c9121ec676c82648532613a1d5aeb3a94b6299104a",
+      "bytes": 5406,
+      "used_for": "KHM 68.4% grade-9 case study; teacher-sold (rien kuo)"
+    },
+    {
+      "path": "02_lit/ECON_TARGETS.csv",
+      "sha256": "3963d8c1c2d224bf1608f98773050476b74917bebe9c3800cfef2b5d6e4ffbaa",
+      "bytes": 7930,
+      "used_for": "r_EAP = 8.7% (line 3); world 8.8% (line 2)"
+    },
+    {
+      "path": "02_lit/ECON_LIT.md",
+      "sha256": "c716a4fd81c597c0eed05839421b1610067892a0c8fdef8544ff3718af5b2106",
+      "bytes": 17260,
+      "used_for": "Mincer section 1.2: no country return on disk; calibration-only"
+    },
+    {
+      "path": "09_relations/data/shadow_gradients.csv",
+      "sha256": "6c7af28a86bce710689a007b9cbcaf716fe1163053c374858235115e6a6a696d",
+      "bytes": 2012,
+      "used_for": "HKG 2003 gate gradient (2-5); KOR income elasticity (8); KOR level rates (9-12)"
+    },
+    {
+      "path": "09_relations/RELATION_CANDIDATES.csv",
+      "sha256": "8257fc938439471db8a9610abaa3fb3c0f2c61fe010edaab4344746c1ffcff35",
+      "bytes": 41258,
+      "used_for": "R21 gate gradient; R22 income elasticity; R26 returns not identifiable; R28 credential gate; R29 price elasticity"
+    },
+    {
+      "path": "04_data/shadow_round2/SHADOW_DATA.md",
+      "sha256": "7771b4bfb1282f3a01a65b496dc7ee9cfc726286ca70293e514cef51617b6030",
+      "bytes": 15897,
+      "used_for": "fee levels and income shares (sections 5-6); confidence rules (section 8)"
+    },
+    {
+      "path": "04_data/shadow_round2/data/shadow_incidence_round2.csv",
+      "sha256": "aa7cab472e3de8ae306a8c9c3b2ec103c5198b202963c573dce0a713c2cc1670",
+      "bytes": 13283,
+      "used_for": "38-row incidence register cited by SHADOW_DATA"
+    },
+    {
+      "path": "04_data/shadow_round2/data/shadow_fees_round2.csv",
+      "sha256": "b600be5a19814c8c8fa7bae7afb65cd28d112600f8be835313b510cba09d974f",
+      "bytes": 4848,
+      "used_for": "20-row fee register"
+    },
+    {
+      "path": "04_data/econ_round2/PARAMETER_MAP.csv",
+      "sha256": "e5fddbb68258b4ae0003c49f5b2a8e16d68b5c88798405aa84c00d00385cf5b0",
+      "bytes": 9253,
+      "used_for": "observability map: returns/wage premium/formal transitions NOT observable"
+    },
+    {
+      "path": "04_data/ECONOMY_SERIES.csv",
+      "sha256": "54255b6181a4125297ed1d74e2555a744cf1a397c0c5d83e5b2702f3207c9b5d",
+      "bytes": 2456828,
+      "used_for": "vulnerable-employment shares 2019 -> phi_c; GDP pc PPP"
+    },
+    {
+      "path": "10_massification/data/UNIVERSALIZATION_SERIES.csv",
+      "sha256": "85bc869396ebfcb39e3e1a21a31af219e75a07326c738a51d2bfdbe536737ddb",
+      "bytes": 592750,
+      "used_for": "observed oos_upper_secondary 2020 -> nu anchors; GER/cohort path"
+    },
+    {
+      "path": "10_massification/extensions/synthetic_2026-11-20/MODEL_ARCHITECTURE.md",
+      "sha256": "862b5b8bd4360da243dcaca5a239f3ff97ff243dee1f01ab94afccc1b15dad55",
+      "bytes": 23725,
+      "used_for": "Layer 2 gate/queue machinery; Amendments A1, A2"
+    },
+    {
+      "path": "10_massification/extensions/synthetic_2026-11-20/v1_2/PRE_DECLARATIONS.md",
+      "sha256": "fde18d405d875167977b350a925c28248c3007d2813dcdb29219d3baf0b95f16",
+      "bytes": 10579,
+      "used_for": "the frozen v1.2 spec this module extends; seed 20261120"
+    },
+    {
+      "path": "10_massification/extensions/synthetic_2026-11-20/generator_v1/FINDINGS.md",
+      "sha256": "9f6569e65b2fb6588163e029aa7dd050c553bee77fdc8218c0c40fe9f9e632e3",
+      "bytes": 11933,
+      "used_for": "v1 load-bearing assumption; runtime ~1 s; check conventions"
+    },
+    {
+      "path": "10_massification/extensions/synthetic_2026-11-20/generator_v1/code/sim_v1.py",
+      "sha256": "a03fa0cb05a879020e254207dcd4add540883d0920b7d4457d3b157f7400a8d8",
+      "bytes": 48048,
+      "used_for": "insertion-point template for simulate_country"
+    },
+    {
+      "path": "10_massification/lit/external_review_2026-11-20/EXTERNAL_LITERATURE_MEMO.md",
+      "sha256": "ebe1b2a43af947a9b4662aeeac50bf9d8faba59e6b6a6bf16dfe845540474275",
+      "bytes": 38598,
+      "used_for": "section 6 credential/queue theory and its caution list"
+    },
+    {
+      "path": "10_massification/lit/external_review_2026-11-20/rows_B_absorption_credential.csv",
+      "sha256": "1667661194dd805d3259324da04b3e86cdc44b7571fbdacd7cc4b8773eef524b",
+      "bytes": 33263,
+      "used_for": "strand-d rows B17-B25 with verification status"
+    }
+  ],
+  "inputs_cited_missing": [],
+  "provenance_labels_used": [
+    "OBSERVED",
+    "DERIVED",
+    "DECLARED",
+    "BORROWED-FROM-SHADOW-RECORD",
+    "BORROWED-FROM-LIT",
+    "SYNTHETIC",
+    "SYNTHETIC/TOY",
+    "THRESHOLD"
+  ],
+  "no_external_access": true,
+  "external_requests_made": 0,
+  "files_written_outside_module": [],
+  "environment": {
+    "python": "3.11.17",
+    "numpy": "2.4.6",
+    "interpreter": "/Users/treymenefee/Library/Application Support/dsh-massification/venv/bin/python",
+    "note": "the toy uses the standard library only (no numpy import)"
+  }
+}

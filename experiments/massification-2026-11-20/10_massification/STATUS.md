@@ -789,3 +789,73 @@ hand-off**; PHL remains the critical path.
 - **Standing rules unchanged:** predeclare before running; labels observed/derived/synthetic; no causal or
   direction/push–pull claims (R13/D77); never fabricate a number or citation; deterministic runs (two runs
   byte-identical); data asks remain HELD; no long tasks in the dashboard window.
+
+---
+
+## 3x. Reactivation progress — v1.2 built, shadow module frozen, HKG prep BLOCKED, theory frame merged (2026-11-20 ~22:50)
+
+### a) W1 — SYNTHETIC generator v1.2 DELIVERED (`synthetic_2026-11-20/generator_v1_2/`)
+
+- **Panel:** 30 synthetic countries × 1970–2025 × 4 levels = **6,720 rows**; declared observed PHL cohort path as an
+  input; childworld four-state household block (structural borrow only, sha256 `ae73adb2…`), no passive "neither"
+  (out-of-school ⇒ work), lagged capacity → congestion `q = cohort/seats` → quality `Q = exp(−γ·max(0,q−1))` →
+  completion/dropout; education→`X` channel at 10-year lag.
+- **Predeclared checks: A PASS · B PASS · C PASS · D PASS · E PASS** — **with decisive caveats, stated by the worker
+  and carried here:** (i) **check A is scored on a UIS-convention series** (`m × cohort-flow`, one declared constant
+  **m = 1.10**); the **identity-bound cohort-flow series would FAIL A** (primary 90 only 2024, lower never), and the
+  admissible window is narrow (m = 1.05 → primary 2022 FAIL; m = 1.12 → upper-sec 78.0 FAIL); (ii) **the parameterisation
+  was calibrated in the design phase** (`TUNE_LOG.md` D0–D4, all disclosed) — this is a **feasibility demonstration,
+  not a blind test**; (iii) **the upper-secondary ceiling is demand/quality-driven, not boom-driven** (flat cohort →
+  upper-sec 2024 = 73.2 and still never crosses 90); (iv) the design-run 22 completion>GER identity violations were
+  traced to an unrealistic 8% household shock (`hh_noise_sd` 0.08→0.015) and a burn-in level; the scored run has
+  **0 violations** (worst margin −2.19e−02).
+- **Headline numbers (SYNTHETIC):** UIS completion primary first ≥90 **2019**, lower **2025** (2023 = 79.04), upper
+  never ≥90 with 2024 = **76.64**; tertiary GER 2025 = **50.23**; PHL primary OOS 2005–15 mean **8.72%**; child-labour
+  share of OOS ≥ 0.599 in every country-year; PTR peak **40.93 (1996)** → 32.66 (2024); education→X two-way FE
+  **b = +0.828** (p<1e−4).
+- **Supply-rule audit PASS:** one equation in three functions, **0 country branches, 0 per-level year-indexed anchor
+  arrays, 0 forbidden tokens** — the v1 failure (target-encoded floors) is removed.
+- **Verified by the controller:** two clean re-runs byte-identical to each other and to the delivered CSVs; all
+  manifest hashes (code, PARAMS, predeclaration, 5 input files) re-computed and **match**.
+
+### b) W2 — shadow-education gating module DESIGNED + FROZEN (`synthetic_2026-11-20/shadow_module/`)
+
+- Design: tutoring demand at a gate `D = σ(a_g + b_Z·lnR + b_V·ln(1+V) + b_Δ·ln(1+Δπ) + b_y·ln(y) − b_F·ln(1+s))`,
+  with `R` built from v1.2's queue/transition/rank state, `V` the positional credential value, `Δπ = δ_g(1−π⁰)` so
+  tutoring's room is largest where the gate is tightest; feedback into next-period eligibility. **No passive "neither"
+  sink; near-zero-at-primary kept as a STRUCTURAL (not empirical) check.**
+- Frozen predeclaration sha256 `cf8c61cb…` (hash-checked by the script); checks c1–c6 with thresholds (c4a HKG
+  D ∈ [0.75,0.95]; c4b ordering on cohort-incidence D*; **c6 no-re-fit guard**: with shadow off, v1.3 must reproduce
+  v1.2 byte-for-byte); 42-row parameter table with provenance; dry-run plan; toy design check (SYNTHETIC/TOY) PASS
+  c1/c2/c3/c5, deterministic on re-run.
+- **Controller S1 pre-run note added** (`PRE_DECLARATIONS_S1_NOTE.md`, sha256 `af49a616…`): the dispatch brief's
+  "HKG high, PHL mid, KHM low" is **not established by the on-disk rates** (KHM Grade-9 case study **68.4%** > PHL
+  all-basic **46.5%**; different stages/samples). c4b is therefore a **declared synthetic-reproduction check on the
+  model's cohort-incidence statistic**, not a data claim; c4a is the only (wide) empirical anchor; c3 is structural.
+- **D* (toy, illustrative states): 0.741 / 0.375 / 0.174** for HKG-like / PHL-like / KHM-like — the ordering is carried
+  by **who reaches the gate** (exposure 0.94/0.75/0.43), not by different demand intensity.
+
+### c) W3 — HKG transfer prep BLOCKED (run-ready, NOT run) (`hkg_transfer_2026-11-20/`)
+
+- Both D75 targets verified from disk: primary **NER ≥90 in 1974** (band 1973–74; 89.60→91.11) and **NER ≥95 in 1979**
+  (band 1978–79; 94.69→95.08); the **1977-vs-1979 discrepancy resolved** (1977 first-at-above but not sustained; 1978
+  dips; on-disk rule = first sustained ≥5y) and carried as a mandatory disclosure.
+- **BLOCKED (terminal non-verdict):** **SR-1 no NER object in the frozen model** (panel emits GER/completion/survival/
+  enrolment only; not rescued by GER, completion or a proxy), **SR-2** v1.2 not yet passed at time of writing, **SR-9**
+  no Council authority. Frozen predeclaration sha256 `99be01d7…`; SHA256SUMS 5/5 verify; no results produced.
+- Consequence queued: **v1.2.1 must add an NER output object** (and audit the identity fix) before an HKG run is even
+  possible at the model interface.
+
+### d) Council cycle 12 merged; theory frame wired
+
+- brief_019 (hysteresis paper) D98–D101 were already in the log; **brief_020 (assembly paper) merged as D102–D105**
+  (paper-status ruling: developmental micro-foundation scoped to the person-installation channel; DT1–DT5 slate;
+  integration ruling; falsification reach). `BIG_PICTURE.md` + `COUNCIL_STATE.md` updated once (cycle 12).
+- **`MODEL_ARCHITECTURE.md` gains Amendment A4 — DECLARED-THEORY:** the combined frame `scaffold = schooling system →
+  induction = literacy/numeracy/schedule-discipline → exit cost = persistence/ceiling → shadow = niche expansion at the
+  gates`; **no parameters, no new layer**; gates: exit-cost layer only if **WT1 AND WT3 both non-null** (then declared +
+  D81 ablation-tested); induction naming only if **DT1 AND DT2 both non-null**; everything labelled theory-only, never
+  evidence.
+- **Queued after W1–W3 (dispatched):** WT battery (`wt_2026-11-20/`: WT1, WT2, WT4, WT3 scored; WT5 design-only) and DT
+  battery (`dt_2026-11-20/`: DT1, DT2, DT4, DT5 scored; DT3 design-only/HELD) — predeclared, deterministic, all cells
+  reported including nulls.

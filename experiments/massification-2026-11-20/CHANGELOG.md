@@ -176,3 +176,23 @@ manifests and error logs.
 - **Next integration:** MODEL_ARCHITECTURE **Amendment A3** — demand signals (expected returns × gate probability ×
   sector structure × migration/remittances) and the shadow block at gates; verify/package/commit each deliverable and
   rebuild the ZIP.
+
+## 2026-11-20 (reactivation batch 2) — v1.2 built, shadow module frozen, HKG prep blocked, theory frame merged
+
+- **v1.2 DELIVERED** (`synthetic_2026-11-20/generator_v1_2/`): 30×56×4 = 6,720-row SYNTHETIC panel; declared PHL
+  cohort path; childworld four-state structural borrow; lagged capacity → congestion/quality → completion;
+  education→X at lag 10. Predeclared checks **A–E PASS** with decisive caveats disclosed (A scored on the UIS series
+  with single declared m = 1.10; cohort-flow series would fail A; parameters calibrated in design phase → feasibility
+  demonstration, not blind test; ceiling demand/quality-driven, not boom-driven; 0 identity violations in scored run).
+  Supply-rule audit: 0 country branches, 0 anchor arrays. Determinism and all manifest hashes verified by the controller.
+- **Shadow-education gating module DESIGNED + FROZEN** (`shadow_module/`): tutoring demand at gates from queue/
+  transition/rank pressure, positional credential value, family income; frozen predeclaration sha256 `cf8c61cb…`;
+  checks c1–c6 incl. no-re-fit guard; 42-row parameter table; dry-run plan; toy design check PASS c1/c2/c3/c5; controller
+  S1 pre-run note corrects the "HKG>PHL>KHM" assumption (KHM 68.4 case study > PHL 46.5 all-basic; c4b is a
+  cohort-incidence synthetic check).
+- **HKG transfer prep BLOCKED** (`hkg_transfer_2026-11-20/`): D75 targets verified (NER ≥90 1974; ≥95 1979; 1977-vs-1979
+  resolved and disclosed); frozen predeclaration `99be01d7…`; blocked by SR-1 (no NER object in the model), SR-2, SR-9;
+  no results. v1.2.1 queued to add NER output + audit the identity fix.
+- **Council cycle 12 merged**: brief_020 decisions D102–D105; BIG_PICTURE/COUNCIL_STATE cycle-12 addenda;
+  `MODEL_ARCHITECTURE.md` **Amendment A4 DECLARED-THEORY** (scaffold/induction/exit-cost/shadow frame; no parameters or
+  layers; conditional gates on WT1&WT3 / DT1&DT2; theory-only, never evidence). WT and DT batteries dispatched.
