@@ -1,0 +1,7 @@
+iso3,country,first_year,last_year,n_years,eci_first,eci_last,eci_min,eci_max,rank_first,rank_last,growth_proj_last
+PHL,Philippines,1995,2024,30,0.337,0.748,0.271,0.806,60,40,3.196
+KHM,Cambodia,1995,2024,30,-1.32,0.298,-1.591,0.298,124,64,3.906
+HKG,"Hong Kong SAR, China",1995,2024,30,1.156,1.416,0.902,1.856,19,6,3.215
+CHN,China,1995,2024,30,0.716,1.298,0.689,1.488,34,8,4.527
+KOR,Republic of Korea,1995,2024,30,1.231,1.437,1.202,1.717,14,3,
+JPN,Japan,1995,2024,30,2.063,1.542,1.542,2.161,1,2,0.822
