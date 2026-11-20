@@ -1,0 +1,48 @@
+{
+ "rows": [
+  {
+   "stage": "elementary",
+   "participation": 0.86,
+   "hours_week": 7.5,
+   "spend_participant_kw": 462.0,
+   "spend_student_kw": 397.32,
+   "hours_month": 32.5,
+   "price_won_h": 14215.384615384615
+  },
+  {
+   "stage": "middle",
+   "participation": 0.754,
+   "hours_week": 7.4,
+   "spend_participant_kw": 596.0,
+   "spend_student_kw": 449.384,
+   "hours_month": 32.06666666666666,
+   "price_won_h": 18586.27858627859
+  },
+  {
+   "stage": "high",
+   "participation": 0.664,
+   "hours_week": 6.7,
+   "spend_participant_kw": 740.0,
+   "spend_student_kw": 491.36,
+   "hours_month": 29.03333333333333,
+   "price_won_h": 25487.944890929968
+  }
+ ],
+ "decomposition": {
+  "dln_spend": 0.21243505534535712,
+  "participation": -0.25865023977111956,
+  "hours": -0.1127954941453444,
+  "price": 0.5838807892618211,
+  "residual": 0.0
+ },
+ "price_ratio": 1.7929831362667186,
+ "participation_fall_pp": 19.599999999999994,
+ "hours_fall": 0.7999999999999998,
+ "verdict": "TWO/THREE-MARGIN (one-margin arms-race mechanism must be rewritten)",
+ "consistency_checks": {
+  "elementary": 0.0017085427135678562,
+  "middle": 0.0008552338530067139,
+  "high": 0.0007331975560081744
+ },
+ "consistent": true
+}

@@ -1,0 +1,58 @@
+{
+  "brief_id": "brief_012",
+  "brief_file": "08_council/brief_012/BRIEF.md",
+  "material": "Adversarial read of the T1 Korea spend decomposition (loop8_T1): implied price/hour +79.3% elementary->high with participation and hours falling; verdict two/three-margin. Audit of identity/arithmetic, inference vs composition, strongest objection, verdict and permissible paper language, measurement steps, T2 design-only.",
+  "synthetic_disclaimer": "SYNTHETIC EXERCISE. Panelists are AI-constructed composite personas whose positions are inferred from the published literature. Nothing here is a statement by, or endorsed by, the named individuals or any living person. Names in literature_basis identify the work each composite draws on, not participants in a deliberation.",
+  "convened_by": "lead-successor",
+  "convened_at": "2026-11-20T14:28+08:00",
+  "panel_size": 4,
+  "panel": [
+    {
+      "handle": "BRAY",
+      "label": "Composite drawing on comparative shadow-education literature (mandatory seat)",
+      "literature_basis": ["Bray & Lykins, Shadow Education (2012)", "Bray & Kwok (2003)", "Bray, comparative shadow-education work"],
+      "grounding_basis": ["listed", "publication"],
+      "role": "Shadow-provider/subject composition reviewer: provider mix, subject/purpose mix, what KEDI tables do and do not report",
+      "assigned_prior_question": "Q2 (composition), Q3 (objection)",
+      "steel_man_slot": false
+    },
+    {
+      "handle": "PATRINOS",
+      "label": "Composite drawing on returns-to-education and education-economics literature",
+      "literature_basis": ["Psacharopoulos & Patrinos, decennial returns review (2018)", "Becker, Human Capital (1964)"],
+      "grounding_basis": ["publication"],
+      "role": "Measurement/econometrics reviewer: identity, denominators, selection, decomposition alternatives, verdict",
+      "assigned_prior_question": "Q1 (identity), Q2 (inference), Q4 (verdict)",
+      "steel_man_slot": true
+    },
+    {
+      "handle": "PAGE",
+      "label": "Composite drawing on model-based-reasoning and complexity literature",
+      "literature_basis": ["Page, The Model Thinker (2018)", "Miller & Page, Complex Adaptive Systems (2007)"],
+      "grounding_basis": ["publication"],
+      "role": "Decomposition/arithmetic reviewer: identity algebra, hours-denominator sensitivity, what the residual can and cannot mean",
+      "assigned_prior_question": "Q1 (arithmetic), Q2 (alternative decompositions)",
+      "steel_man_slot": false
+    },
+    {
+      "handle": "CARTWRIGHT",
+      "label": "Composite drawing on philosophy-of-social-science literature",
+      "literature_basis": ["Cartwright, The Dappled World (1999)", "Cartwright & Hardie, Evidence-Based Policy (2012)"],
+      "grounding_basis": ["publication"],
+      "role": "Claim-discipline reviewer: what T1 establishes vs what the paper may write; exact language",
+      "assigned_prior_question": "Q4 (verdict/language), Q6 (dissent)",
+      "steel_man_slot": false
+    }
+  ],
+  "composition_check": {
+    "size_3_to_4": true,
+    "mandatory_shadow_education_composite": "BRAY",
+    "steel_man_slot": "PATRINOS",
+    "all_composites_grounded": true
+  },
+  "intake_notes": [
+    "Programme remains CLOSED; T1 advisory only.",
+    "Critical audit questions: KEDI Table 2 hours denominator ('students' vs participating students); numerator includes all private education (general + arts/physical + materials) while provider split is general-subject only; participant selection as participation falls; 52/12 term-vs-year assumption.",
+    "T2 listed design-only, no data collected."
+  ]
+}

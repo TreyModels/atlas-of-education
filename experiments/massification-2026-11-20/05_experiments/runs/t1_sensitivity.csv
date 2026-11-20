@@ -1,0 +1,7 @@
+hours_convention,stage,participation_pct,hours_week_per_participant,price_won_per_hour
+hours among participating students (base case),elementary,86.0,7.5,14215
+hours among participating students (base case),middle,75.4,7.4,18586
+hours among participating students (base case),high,66.4,6.7,25488
+hours among all students (alternative),elementary,86.0,8.721,12225
+hours among all students (alternative),middle,75.4,9.814,14014
+hours among all students (alternative),high,66.4,10.09,16924

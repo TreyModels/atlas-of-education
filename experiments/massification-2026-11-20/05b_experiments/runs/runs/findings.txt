@@ -1,0 +1,31 @@
+LOOP 8 — RELATIONS WIRED INTO THE SYNTHETIC GENERATOR; FRONTIER RE-RUN.
+256 LHS draws x 5 matched seeds; same targets/tolerances as loop 6; no tuning.
+SYNTHETIC / POSSIBILITY ONLY; programme CLOSED; brief-008 limits stand.
+
+  target              loop6 inside/256  loop8 inside/256   delta  shrink?
+  KOR_gradient                       0                 0      +0       no
+  HKG_gradient                       0                 1      +1      YES
+  KOR_fee                           28                27      -1       no
+  HKG_fee                          134               137      +3       no
+  KOR_income                       117                87     -30       no
+  KOR_provider                      42                44      +2       no
+  PHL_completion                    36                 0     -36       no
+  KHM_completion                    73               142     +69       no
+
+EPS_EC ARM (R13; panel -1.035 rejects eps_ec>0): synthetic eps in {-1.035, 0, 0.3, 0.6} run; see runs/eps_ec_arm.csv.
+  eps=-1.035 PH-like   completion  61.07 degree share 12.29 complex jobs   122.3
+  eps=-1.035 KHM-like  completion  33.15 degree share  7.62 complex jobs    71.7
+  eps=+0.000 PH-like   completion  61.13 degree share 12.47 complex jobs   125.1
+  eps=+0.000 KHM-like  completion  33.20 degree share  7.84 complex jobs    74.8
+  eps=+0.300 PH-like   completion  61.14 degree share 12.53 complex jobs   126.0
+  eps=+0.300 KHM-like  completion  33.21 degree share  7.91 complex jobs    75.8
+  eps=+0.600 PH-like   completion  61.16 degree share 12.58 complex jobs   126.9
+  eps=+0.600 KHM-like  completion  33.23 degree share  7.97 complex jobs    76.7
+
+KOR TWO-MARGIN (R23) under wired intensity margin: joint 0/256; participation-only 0; intensity-only 229; neither 27
+
+DECISION RULE (predeclared): shrink = a target 0/256 in loop 6 becomes >=1/256 in loop 8.
+  shrink targets: ['HKG_gradient']
+  KOR/HKG stage gradients after wiring: KOR 0/256, HKG 1/256 -> empty support SHRANK for at least one stage gradient
+
+SYNTHETIC / POSSIBILITY ONLY — not evidence, not validation; programme stays CLOSED; brief-008 limits stand.
