@@ -1,0 +1,27 @@
+parameter,value,declared_in,status,used_by,changed_by_this_cell,chosen_by_reference_to_bar_band_or_cell,note
+T01 h_share,"(0.15, 0.28, 0.4, 0.5)",generator_v1_5_bimodal/PARAMETERS.csv T01,DECLARED,"the tier menu (H/O split, U_O, refusal margin)",NO,NO,
+T05 q_O,0.55,generator_v1_5_bimodal/PARAMETERS.csv T05,DECLARED,"the tier menu (H/O split, U_O, refusal margin)",NO,NO,
+T06 cost_H_mult,1.6,generator_v1_5_bimodal/PARAMETERS.csv T06,DECLARED,"the tier menu (H/O split, U_O, refusal margin)",NO,NO,
+T07 cost_O_mult,0.03,generator_v1_5_bimodal/PARAMETERS.csv T07,DECLARED,"the tier menu (H/O split, U_O, refusal margin)",NO,NO,
+T12 a_gate,0.4,generator_v1_5_bimodal/PARAMETERS.csv T12,DECLARED,"the tier menu (H/O split, U_O, refusal margin)",NO,NO,
+T13 risk_pen,0.2,generator_v1_5_bimodal/PARAMETERS.csv T13,DECLARED,"the tier menu (H/O split, U_O, refusal margin)",NO,NO,
+T14 H_h,20.0,generator_v1_5_bimodal/PARAMETERS.csv T14,DECLARED,"the tier menu (H/O split, U_O, refusal margin)",NO,NO,
+S03 sigma_tier,0.8,generator_v1_5_bimodal/PARAMETERS.csv S03,DECLARED,"the tier menu (H/O split, U_O, refusal margin)",NO,NO,
+S06 rank_w_income,0.3,generator_v1_5_bimodal/PARAMETERS.csv S06,DECLARED,"the tier menu (H/O split, U_O, refusal margin)",NO,NO,
+S06 rank_w_ability,0.7,generator_v1_5_bimodal/PARAMETERS.csv S06,DECLARED,"the tier menu (H/O split, U_O, refusal margin)",NO,NO,
+T10 v_tier_scale,,generator_v1_5_bimodal/PARAMETERS.csv T10 (RETIRED),RETIRED (not used),"the tier menu (H/O split, U_O, refusal margin)",NO,NO,
+S01/S02/S04/S08 cell_weight,"((0.1, 0.07, 0.03), (0.08, 0.08, 0.04), (0.06, 0.09, 0.05), (0.04, 0.09, 0.07), (0.02, 0.07, 0.11))",generator_v1_5_bimodal/PARAMETERS.csv,DECLARED,the 15-cell payoffs,NO,NO,
+S01/S02/S04/S08 z_q,"(-1.2816, -0.5244, 0.0, 0.5244, 1.2816)",generator_v1_5_bimodal/PARAMETERS.csv,DECLARED,the 15-cell payoffs,NO,NO,
+S01/S02/S04/S08 ability_grid,"(0.25, 0.5, 0.75)",generator_v1_5_bimodal/PARAMETERS.csv,DECLARED,the 15-cell payoffs,NO,NO,
+S01/S02/S04/S08 padv_clip,"(0.01, 0.999)",generator_v1_5_bimodal/PARAMETERS.csv,DECLARED,the 15-cell payoffs,NO,NO,
+phys_cap,1.15,generator_v1_3/PARAMS.md (P),DECLARED,the physical admission ceiling (not re-chosen; no grid run here),NO,NO,
+m meas_completion_factor,1.1,generator_v1_3/PARAMS.md (P),CONVENTION,completion_uis,NO,NO,
+cost_base,"(0.05, 0.14, 0.22)",generator_v1_3/PARAMS.md (P),DECLARED,the v1.3 four-state block (the substituted primitive),NO,NO,
+"NEED, UTIL_SCALE, GIRL_SHARE, TASTE, ABILITY, OUT_YEARS, AGE_W","0.85, 0.30, 0.50, 0.0, 0.0, 0.0, (0.25,0.70,1.00)",generator_v1_3/code/sim_v1_3.py geometry constants,DECLARED,the v1.3 four-state block (the substituted primitive),NO,NO,
+seed,20261120,generator_v1_3/code/sim_v1_3.py,DECLARED,the frozen draw order,NO,NO,
+-- the repair itself --,sim_v1_3.state_shares,frozen v1.3 function,SUBSTITUTION (no value),the participation decision,NO,NO,one behavioural object declared once; no number introduced
+scored bar,"17/33 cells, +/-5.0 pp",EXP-7 (copied verbatim),THRESHOLD,the verdict object,NO,NO,"copied, not chosen"
+crossing tolerance,+/-5 y at 90/90/90 pp,D34/A6 (copied verbatim),THRESHOLD,the crossings verdict,NO,NO,"copied, not chosen"
+representation thresholds,"unfilled >= 0.10, queue >= 1.10, 15/30 cells, 8/15 years",Council block 024 sec.5.3 (copied verbatim),THRESHOLD,the representation guard,NO,NO,"copied, not chosen"
+upper structural part,"declared, report-only",Council block 024 sec.5.3 / D144(6),REPORT-ONLY,upper_structural_sensitivity.csv,NO,NO,no menu value is moved; the q_O route is closed (D144(5))
+EXP-17 lambda*,1.11465019198434,joint_cover_2026-11-20/results,REQUIRED-STATE (EXP-17) -- NOT ADOPTED,cited only; no lambda enters the model,NO,NO,DERIVED target 0.8076 attached; nothing installed

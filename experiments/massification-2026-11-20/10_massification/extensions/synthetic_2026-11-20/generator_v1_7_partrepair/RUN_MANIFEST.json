@@ -1,0 +1,139 @@
+{
+  "cell": "EXP-18-PART-REPAIR",
+  "closing_rule": {
+    "note": "the pre-committed closing rule fires: no successor generator is predeclared this phase; the line becomes descriptive",
+    "status": "GENERATOR-LINE-CLOSED (representation-only)"
+  },
+  "code": {
+    "frozen_sim_v1_3.py": "70ae8f0eef83358493dad3d3feb2d6a8841c4bb6fad3966627f4eed70e2a9877",
+    "frozen_sim_v1_6_repair.py": "9c0e799850fd30bb0b46bb7841e8f301715745a5c73452e7644055122325de56",
+    "repair_v17.py": "87d421c96da7200120a0f801419f8a5874b18a5fc40e2ef4b8575317846e91f8",
+    "sim_v1_7_partrepair.py": "8a740ad89eeab9fe2ee11f5ca04ad920887608fc2f42a0d25f0e413e5c321af6"
+  },
+  "counts": {
+    "bar": 17,
+    "crossings": 1,
+    "n_cells": 33,
+    "observed_path_A00": 9,
+    "observed_path_A17": 0,
+    "representation": {
+      "n_both": 15,
+      "n_both_p4": 15,
+      "n_both_strict": 0,
+      "n_queue": 30,
+      "n_unfilled": 15,
+      "n_unfilled_lower": 0,
+      "n_unfilled_upper": 15,
+      "same_level_A00": 0,
+      "same_level_A17": 15
+    }
+  },
+  "date": "2026-11-21",
+  "determinism": {
+    "compared_dirs": [
+      "results/",
+      "results/determinism_run2/"
+    ],
+    "files": [
+      "capacity_decomposition.csv",
+      "count_blind_audit.json",
+      "counterfactual_identity.csv",
+      "crossing_check.csv",
+      "determinism_note.md",
+      "guard_report.json",
+      "no_fit_audit.csv",
+      "observed_path_A17.csv",
+      "panel_A00_v13cols.csv",
+      "panel_A17.csv",
+      "panel_A17CF_identity.csv",
+      "propagation_ledger.csv",
+      "repair_in_force.csv",
+      "representation_cells.csv",
+      "schooling_identity.csv",
+      "upper_structural_sensitivity.csv",
+      "v1_7_checks.csv",
+      "v1_7_checks_detail.csv"
+    ],
+    "n": 18,
+    "n_identical": 18,
+    "status": "BYTE-IDENTICAL"
+  },
+  "files": [
+    "results/capacity_decomposition.csv",
+    "results/count_blind_audit.json",
+    "results/counterfactual_identity.csv",
+    "results/crossing_check.csv",
+    "results/determinism_note.md",
+    "results/determinism_run2/capacity_decomposition.csv",
+    "results/determinism_run2/count_blind_audit.json",
+    "results/determinism_run2/counterfactual_identity.csv",
+    "results/determinism_run2/crossing_check.csv",
+    "results/determinism_run2/determinism_note.md",
+    "results/determinism_run2/guard_report.json",
+    "results/determinism_run2/no_fit_audit.csv",
+    "results/determinism_run2/observed_path_A17.csv",
+    "results/determinism_run2/panel_A00_v13cols.csv",
+    "results/determinism_run2/panel_A17.csv",
+    "results/determinism_run2/panel_A17CF_identity.csv",
+    "results/determinism_run2/propagation_ledger.csv",
+    "results/determinism_run2/repair_in_force.csv",
+    "results/determinism_run2/representation_cells.csv",
+    "results/determinism_run2/schooling_identity.csv",
+    "results/determinism_run2/upper_structural_sensitivity.csv",
+    "results/determinism_run2/v1_7_checks.csv",
+    "results/determinism_run2/v1_7_checks_detail.csv",
+    "results/guard_report.json",
+    "results/no_fit_audit.csv",
+    "results/observed_path_A17.csv",
+    "results/panel_A00_v13cols.csv",
+    "results/panel_A17.csv",
+    "results/panel_A17CF_identity.csv",
+    "results/propagation_ledger.csv",
+    "results/repair_in_force.csv",
+    "results/representation_cells.csv",
+    "results/schooling_identity.csv",
+    "results/upper_structural_sensitivity.csv",
+    "results/v1_7_checks.csv",
+    "results/v1_7_checks_detail.csv"
+  ],
+  "freeze_record": {
+    "code_sha256": {
+      "code/frozen/sim_v1_3.py": "70ae8f0eef83358493dad3d3feb2d6a8841c4bb6fad3966627f4eed70e2a9877",
+      "code/frozen/sim_v1_6_repair.py": "9c0e799850fd30bb0b46bb7841e8f301715745a5c73452e7644055122325de56",
+      "code/repair_v17.py": "87d421c96da7200120a0f801419f8a5874b18a5fc40e2ef4b8575317846e91f8",
+      "code/sim_v1_7_partrepair.py": "8a740ad89eeab9fe2ee11f5ca04ad920887608fc2f42a0d25f0e413e5c321af6"
+    },
+    "count_computed_before_freeze": false,
+    "file": "FREEZE_RECORD.json",
+    "frozen_inputs_sha256": {
+      "generator_v1_3/results/synthetic_panel_v1_3.csv": "47d4b082f4ba5838cc20fbb09e59dd3dd847ad25393b1ce091069c94496657e3",
+      "generator_v1_6_repair/PRE_DECLARATIONS.md": "6a554dc033828835431f65be2e5e218833fcdb56220baad8fbe53c3324e78991",
+      "generator_v1_6_repair/results/panel_A10_repaired.csv": "349cf637f1415b7809c17696dea4e842434f846b6be607c8d24047f9f0d1a8c4"
+    },
+    "observed_file_opened_before_freeze": false,
+    "predecl_sha256": "3778afe38d29fc78bcf54275d40a3c183bcaa83f6f1fa4283d9e4e3cfe26d4a1"
+  },
+  "guards": {
+    "G1_a00_identity": true,
+    "G2_counterfactual_identity": true,
+    "G3_schooling_supply_identity": true,
+    "G4_projection_order": true,
+    "G6_repair_in_force": true,
+    "G7_no_fit_audit_zero": true,
+    "G8_count_blind": true
+  },
+  "label": "SYNTHETIC",
+  "literature": "licence: EXP-16 PARTPROV predecl d7c81309..., verdict MIXED (D149); EXP-17 JOINT-COVER predecl 3394e3f4..., lambda*=1.11465019198434, cited as REQUIRED-STATE (EXP-17) with the DERIVED target 0.8076; no lambda adopted",
+  "parameter_counts": {
+    "new": 0,
+    "v16": 110,
+    "v17": 110
+  },
+  "predeclaration": {
+    "file": "PRE_DECLARATIONS.md",
+    "n_declared_scalars_checked": 35,
+    "sha256": "3778afe38d29fc78bcf54275d40a3c183bcaa83f6f1fa4283d9e4e3cfe26d4a1"
+  },
+  "question": "can a declaration-consistency repair of the participation margin -- the frozen v1.3 four-state block substituted unchanged, no new parameter -- put the class on the observed path (>=17/33 within +/-5 pp)?",
+  "verdict": "PATH-FAILED"
+}

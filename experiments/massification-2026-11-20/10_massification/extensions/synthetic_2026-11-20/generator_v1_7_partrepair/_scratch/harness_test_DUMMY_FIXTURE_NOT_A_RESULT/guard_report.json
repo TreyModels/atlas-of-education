@@ -1,0 +1,108 @@
+{
+  "closing_rule": {
+    "note": "a falsifier or derivation failure fired; the line closes at REPRESENTATION-ONLY with the falsifier named",
+    "status": "VOID / INVALID -- no successor"
+  },
+  "experiment": "EXP-18-PART-REPAIR",
+  "files_written_outside_experiment_dir": [],
+  "frozen_inputs": {
+    "PRE_DECLARATIONS_v16.md": "6a554dc033828835431f65be2e5e218833fcdb56220baad8fbe53c3324e78991",
+    "panel_A10_repaired.csv": "349cf637f1415b7809c17696dea4e842434f846b6be607c8d24047f9f0d1a8c4",
+    "sim_v1_3.py": "70ae8f0eef83358493dad3d3feb2d6a8841c4bb6fad3966627f4eed70e2a9877",
+    "sim_v1_6_repair.py": "9c0e799850fd30bb0b46bb7841e8f301715745a5c73452e7644055122325de56",
+    "synthetic_panel_v1_3.csv": "47d4b082f4ba5838cc20fbb09e59dd3dd847ad25393b1ce091069c94496657e3"
+  },
+  "guards": {
+    "G1_a00_identity": {
+      "expected": "47d4b082f4ba5838cc20fbb09e59dd3dd847ad25393b1ce091069c94496657e3",
+      "holds": false,
+      "sha256": "aaa7562fe0e475cd7d9a05e697efbbe144e6a4b43419eb4204f15b3f20ac6120"
+    },
+    "G2_counterfactual_identity": {
+      "arms": "A17 vs A17CF (A00 accounting + A17's upper admission vector)",
+      "cells": 18480,
+      "columns": [
+        "admitted_official",
+        "survival",
+        "completion_cohort",
+        "completion_uis",
+        "graduates",
+        "cohort",
+        "seats",
+        "congestion_q",
+        "quality_q",
+        "class_size",
+        "measurement_factor"
+      ],
+      "differing": 0,
+      "holds": true,
+      "mechanism": "the frozen inject_upper hook sets admitted_official AFTER the over-age top-up is computed from the pre-injection baseline, so admitted_overage/enrolment/ger/teachers/ptr are not replay-determined and are reported, never asserted",
+      "non_replay_columns": [
+        "admitted_overage",
+        "enrolment",
+        "ger",
+        "teachers",
+        "ptr"
+      ]
+    },
+    "G3_schooling_supply_identity": {
+      "cells": 53760,
+      "columns": [
+        "cohort",
+        "band_population",
+        "seats",
+        "seat_coverage",
+        "congestion_q",
+        "quality_q",
+        "class_size",
+        "measurement_factor"
+      ],
+      "differing": 0,
+      "holds": true
+    },
+    "G4_projection_order": {
+      "declares_within_year": [
+        "W1: Tier-O take-up is an equilibrium inside the same level's admission (intra-level market clearing, not economy feedback)",
+        "W2: tertiary tier composition reads the entry cohort t-3",
+        "W3: the participation primitive ds13 is a function of the country's drawn traits and the year's household shock only -- it reads no endogenous state, so the repair introduces no new projection order"
+      ],
+      "forbidden_hits": [],
+      "frozen_note": "the base v1.3 tertiary demand line reads grads_hist[2, t] = admission(t-3) x survival(t): a pipeline flow, not an economy->admission feedback",
+      "holds": true,
+      "n_hits": 0,
+      "region_lines": 111
+    },
+    "G5_representation": {
+      "holds": true,
+      "n_both": 15,
+      "n_both_p4": 15,
+      "n_both_strict": 0,
+      "n_queue": 30,
+      "n_unfilled": 15,
+      "n_unfilled_lower": 0,
+      "n_unfilled_upper": 15,
+      "same_level_A00": 0,
+      "same_level_A17": 15
+    },
+    "G6_repair_in_force": {
+      "cells": 45,
+      "holds": true,
+      "identical": 45
+    },
+    "G7_no_fit": {
+      "band_hits": 0,
+      "n_audited": 26,
+      "n_chosen_by_reference": 0
+    },
+    "G8_count_blind": {
+      "allowed_observed_opens": 0,
+      "blocked_attempts": 1,
+      "predecl_first": true,
+      "selftest": "BLOCKED-AS-REQUIRED"
+    }
+  },
+  "label": "SYNTHETIC",
+  "note": "SYNTHETIC representation; no causal/direction claim; no re-fit; the observed path is the only target; the upper structural part is reported as a sensitivity and is not adopted",
+  "predeclaration_sha256": "3778afe38d29fc78bcf54275d40a3c183bcaa83f6f1fa4283d9e4e3cfe26d4a1",
+  "verdict": "VOID (CONTAMINATED-BY-DESIGN)"
+}

@@ -1,0 +1,103 @@
+arm,column,moves,n_cells_differing,first_diff_year,median_delta,sign,mechanism
+A17,country_id,NO,0,,0,none,not in the declared mechanism table
+A17,year,NO,0,,0,none,not in the declared mechanism table
+A17,cohort,NO,0,,0,none,not in the declared mechanism table
+A17,band_population,NO,0,,0,none,not in the declared mechanism table
+A17,seats,NO,0,,0,none,not in the declared mechanism table
+A17,seat_coverage,NO,0,,0,none,not in the declared mechanism table
+A17,congestion_q,NO,0,,0,none,not in the declared mechanism table
+A17,quality_q,NO,0,,0,none,not in the declared mechanism table
+A17,class_size,NO,0,,0,none,not in the declared mechanism table
+A17,teachers,YES,6110,1974,-770.7542826,negative,lagged delivery rule reads enrolment history (cross-year)
+A17,ptr,YES,6705,1970,-0.2320368047,negative,enrolment / teachers
+A17,ptr_system,YES,6720,1970,-0.6006702624,negative,"system enrolment / system teachers (economy channel, cross-year)"
+A17,enrolment,YES,6696,1970,-37478.63799,negative,= admitted_official + admitted_overage
+A17,ger,YES,6695,1970,-2.486528933,negative,admission / cohort (over-age included)
+A17,demand_share,YES,4379,1970,1.110223025e-16,positive,participation share: ds13 (the frozen block's own) in A17
+A17,demand_official,YES,5220,1970,-4.656612873e-10,negative,applicant object: A_H + A_O_first (V16 fix D-2)
+A17,demand_overage,NO,0,,0,none,not in the declared mechanism table
+A17,admitted_official,YES,6708,1970,-114448.9858,negative,admission = admitted_H + T_O (the take-up margin)
+A17,admitted_overage,YES,3865,1970,104461.4592,positive,over-age top-up after the tier admission; never reallocated
+A17,rationed_official,YES,5733,1970,105806.6146,positive,demand_official - admitted_official (applicants not placed)
+A17,out_of_school,YES,6701,1970,114832.6513,positive,cohort - admitted_official (official age)
+A17,oos_rate,YES,6701,1970,0.08070244233,positive,out_of_school / cohort
+A17,eligibility_pool,YES,3674,1972,-131647.7674,negative,graduates(t) + retention x pool(t-1): the pipeline channel
+A17,school_share,YES,6720,1970,0.4237099383,positive,p_school = (A_H + A_O_first)/(elig*C)
+A17,both_share,YES,5040,1970,-0.3745580404,negative,reporting composition (the block's own 'both' mass folds into school)
+A17,work_share,NO,0,,0,none,the block's own Pr[work]
+A17,neither_share,NO,0,,0,none,the block's own Pr[neither]
+A17,oos_work_share,YES,4864,1970,-0.001871259441,negative,not in the declared mechanism table
+A17,oos_neither_share,YES,4827,1970,0.001900368246,positive,not in the declared mechanism table
+A17,child_labour,YES,5021,1970,23028.92571,positive,out-of-school composition; reads the applicant/rationed objects
+A17,child_labour_rate,YES,5021,1970,0.0162254738,positive,not in the declared mechanism table
+A17,survival,NO,0,,0,none,Q law; UNCHANGED by the repair (no tier multiplier)
+A17,dropout_rate,NO,0,,0,none,not in the declared mechanism table
+A17,completion_cohort,YES,6229,1973,-0.04318453509,negative,"same, without m"
+A17,completion_uis,YES,6228,1973,-0.0475029886,negative,admission(t-DVEC) x survival(t) x m: the participation/admission margin
+A17,measurement_factor,NO,0,,0,none,not in the declared mechanism table
+A17,graduates,YES,6228,1973,-64830.17812,negative,admission(t-DVEC) count x survival(t)
+A17,s_ag,YES,5004,1974,0.02622602087,positive,not in the declared mechanism table
+A17,s_inf,YES,5748,1974,0.005220785523,positive,not in the declared mechanism table
+A17,s_man,YES,5844,1974,-0.004523939446,negative,not in the declared mechanism table
+A17,s_srv,YES,5752,1974,-0.02238075443,negative,not in the declared mechanism table
+A17,complexity_x,YES,5844,1974,-0.06444098813,negative,not in the declared mechanism table
+A17,gdppc,YES,6092,1974,-26.91088367,negative,not in the declared mechanism table
+A17,urban,NO,0,,0,none,not in the declared mechanism table
+A17,literacy,YES,4560,1988,-0.04780356137,negative,not in the declared mechanism table
+A17,yos_proxy,YES,6360,1973,-0.3551872711,negative,not in the declared mechanism table
+A17,population,NO,0,,0,none,not in the declared mechanism table
+A17,rung1_demand,YES,5844,1974,20376.93058,positive,not in the declared mechanism table
+A17,rung2_demand,YES,5844,1974,-2379.729165,negative,not in the declared mechanism table
+A17,rung3_demand,YES,5800,1974,-46669.55843,negative,not in the declared mechanism table
+A17,rung4_demand,YES,5632,1974,-147501.9374,negative,not in the declared mechanism table
+A17,rung1_emp,YES,5784,1973,-17250.8123,negative,not in the declared mechanism table
+A17,rung2_emp,YES,6016,1973,-45508.31738,negative,not in the declared mechanism table
+A17,rung3_emp,YES,5964,1973,-80872.77653,negative,not in the declared mechanism table
+A17,rung4_emp,YES,5912,1974,17186.92674,positive,not in the declared mechanism table
+A17,queue_total,YES,5024,1973,-163348.8535,negative,rung matching over t's graduates
+A17,queue_pressure,YES,5024,1973,-0.01667449576,negative,not in the declared mechanism table
+A17,wage_informal,YES,6092,1974,-0.03439326612,negative,not in the declared mechanism table
+A17,wage_formal_rung1,YES,6092,1974,-0.05920394407,negative,not in the declared mechanism table
+A17,wage_formal_rung2,YES,6252,1973,-0.2097953986,negative,not in the declared mechanism table
+A17,formal_share,YES,6212,1973,-0.0154321806,negative,not in the declared mechanism table
+A17,informal_share,YES,6212,1973,0.0154321806,positive,not in the declared mechanism table
+A17,growth,YES,6212,1973,-0.0004903467723,negative,not in the declared mechanism table
+A17,shadow_type,NO,0,,0,none,not in the declared mechanism table
+A17,shadow_gate_status,NO,0,,0,none,not in the declared mechanism table
+A17,shadow_gate,NO,0,,0,none,not in the declared mechanism table
+A17,D_gate,YES,639,1970,-0.0086223549,negative,not in the declared mechanism table
+A17,D_cohort,YES,660,1970,-0.01309865761,negative,not in the declared mechanism table
+A17,cohort_exposure,NO,0,,0,none,not in the declared mechanism table
+A17,R,YES,639,1970,-0.02614760122,negative,not in the declared mechanism table
+A17,ln_R,YES,639,1970,-0.02115094218,negative,not in the declared mechanism table
+A17,Q_gate,YES,465,1973,-0.1146265163,negative,not in the declared mechanism table
+A17,pi0,YES,401,1970,0.0141714232,positive,not in the declared mechanism table
+A17,pi1,YES,400,1970,0.0101272678,positive,not in the declared mechanism table
+A17,Pi,YES,548,1970,1.110223025e-16,positive,not in the declared mechanism table
+A17,kappa,YES,103,1975,0.00248292006,positive,not in the declared mechanism table
+A17,V,NO,0,,0,none,not in the declared mechanism table
+A17,s_g,NO,0,,0,none,not in the declared mechanism table
+A17,spend_share,YES,639,1970,-0.0002577113689,negative,not in the declared mechanism table
+A17,Pi_over_pi0,YES,548,1970,-1.110223025e-16,negative,not in the declared mechanism table
+A17,p_q1,YES,639,1970,-0.006256566269,negative,not in the declared mechanism table
+A17,p_q2,YES,639,1970,-0.007785216794,negative,not in the declared mechanism table
+A17,p_q3,YES,639,1970,-0.008783356025,negative,not in the declared mechanism table
+A17,p_q4,YES,639,1970,-0.009347309739,negative,not in the declared mechanism table
+A17,p_q5,YES,639,1970,-0.009949405622,negative,not in the declared mechanism table
+A17,tier_K_H,NO,0,,0,none,not in the declared mechanism table
+A17,tier_K_O,NO,0,,0,none,not in the declared mechanism table
+A17,tier_A_H,NO,0,,0,none,not in the declared mechanism table
+A17,tier_A_O_first,NO,0,,0,none,not in the declared mechanism table
+A17,tier_T_O,NO,0,,0,none,not in the declared mechanism table
+A17,tier_O_unfilled,NO,0,,0,none,not in the declared mechanism table
+A17,tier_O_unfilled_share,NO,0,,0,none,K_O - T_O over K_O: the take-up margin
+A17,tier_O_takeup_share,NO,0,,0,none,not in the declared mechanism table
+A17,tier_admitted_H,NO,0,,0,none,not in the declared mechanism table
+A17,tier_queue_H,NO,0,,0,none,not in the declared mechanism table
+A17,tier_queue_ratio_H,NO,0,,0,none,A_H / K_H: the contested high gate
+A17,tier_p_adv_H,NO,0,,0,none,not in the declared mechanism table
+A17,tier_Q_H,NO,0,,0,none,not in the declared mechanism table
+A17,tier_Q_O,NO,0,,0,none,not in the declared mechanism table
+A17,tier_surv_H,NO,0,,0,none,not in the declared mechanism table
+A17,tier_surv_O,NO,0,,0,none,not in the declared mechanism table
+A17,job_gate_p4,NO,0,,0,none,not in the declared mechanism table

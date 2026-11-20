@@ -1,0 +1,9 @@
+column,cells,differing,holds
+cohort,6720,0,YES
+band_population,6720,0,YES
+seats,6720,0,YES
+seat_coverage,6720,0,YES
+congestion_q,6720,0,YES
+quality_q,6720,0,YES
+class_size,6720,0,YES
+measurement_factor,6720,0,YES

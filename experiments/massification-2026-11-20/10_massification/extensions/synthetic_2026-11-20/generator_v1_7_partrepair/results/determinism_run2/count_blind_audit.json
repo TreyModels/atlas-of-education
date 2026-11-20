@@ -1,0 +1,553 @@
+{
+  "ast_scan": [
+    {
+      "data_path_refs": [
+        {
+          "lineno": 1126
+        }
+      ],
+      "file": "sim_v1_7_partrepair.py",
+      "forbidden_literal_hits": [
+        {
+          "enclosing_function": "<module>",
+          "lineno": 59,
+          "text": "UNIVERSALIZATION_SERIES.csv"
+        }
+      ],
+      "n_lines": 1473,
+      "open_calls": [
+        {
+          "call": "read_text",
+          "enclosing_function": "declared_block",
+          "first_arg": "",
+          "first_arg_name": "",
+          "lineno": 253
+        },
+        {
+          "call": "open",
+          "enclosing_function": "write_rows",
+          "first_arg": "",
+          "first_arg_name": "path",
+          "lineno": 234
+        },
+        {
+          "call": "open",
+          "enclosing_function": "write_dicts",
+          "first_arg": "",
+          "first_arg_name": "path",
+          "lineno": 245
+        },
+        {
+          "call": "read_text",
+          "enclosing_function": "verify_freeze_record",
+          "first_arg": "",
+          "first_arg_name": "",
+          "lineno": 373
+        },
+        {
+          "call": "open",
+          "enclosing_function": "run_pipeline",
+          "first_arg": "",
+          "first_arg_name": "V13_PANEL",
+          "lineno": 730
+        },
+        {
+          "call": "open",
+          "enclosing_function": "emit_void",
+          "first_arg": "<expr>",
+          "first_arg_name": "",
+          "lineno": 1377
+        },
+        {
+          "call": "open",
+          "enclosing_function": "finalize",
+          "first_arg": "<expr>",
+          "first_arg_name": "",
+          "lineno": 1437
+        },
+        {
+          "call": "open",
+          "enclosing_function": "finalize",
+          "first_arg": "<expr>",
+          "first_arg_name": "",
+          "lineno": 1450
+        },
+        {
+          "call": "open",
+          "enclosing_function": "run_pipeline",
+          "first_arg": "",
+          "first_arg_name": "V13_PANEL",
+          "lineno": 413
+        },
+        {
+          "call": "read_text",
+          "enclosing_function": "run_pipeline",
+          "first_arg": "",
+          "first_arg_name": "",
+          "lineno": 668
+        },
+        {
+          "call": "open",
+          "enclosing_function": "run_all",
+          "first_arg": "",
+          "first_arg_name": "OBSERVED_PATH",
+          "lineno": 1194
+        },
+        {
+          "call": "open",
+          "enclosing_function": "run_all",
+          "first_arg": "<expr>",
+          "first_arg_name": "",
+          "lineno": 1304
+        },
+        {
+          "call": "open",
+          "enclosing_function": "run_all",
+          "first_arg": "<expr>",
+          "first_arg_name": "",
+          "lineno": 1312
+        },
+        {
+          "call": "open",
+          "enclosing_function": "run_all",
+          "first_arg": "<expr>",
+          "first_arg_name": "",
+          "lineno": 1353
+        },
+        {
+          "call": "read_bytes",
+          "enclosing_function": "sha256_file",
+          "first_arg": "",
+          "first_arg_name": "",
+          "lineno": 218
+        },
+        {
+          "call": "read_text",
+          "enclosing_function": "band_scan",
+          "first_arg": "",
+          "first_arg_name": "",
+          "lineno": 901
+        }
+      ],
+      "sha256": "8a740ad89eeab9fe2ee11f5ca04ad920887608fc2f42a0d25f0e413e5c321af6"
+    },
+    {
+      "data_path_refs": [],
+      "file": "repair_v17.py",
+      "forbidden_literal_hits": [],
+      "n_lines": 403,
+      "open_calls": [
+        {
+          "call": "open",
+          "enclosing_function": "load_demographic_inputs",
+          "first_arg": "",
+          "first_arg_name": "path",
+          "lineno": 111
+        },
+        {
+          "call": "open",
+          "enclosing_function": "load_observed_cells",
+          "first_arg": "",
+          "first_arg_name": "path",
+          "lineno": 162
+        },
+        {
+          "call": "read_text",
+          "enclosing_function": "ast_scan_files",
+          "first_arg": "",
+          "first_arg_name": "",
+          "lineno": 276
+        },
+        {
+          "call": "read_text",
+          "enclosing_function": "ast_called_names",
+          "first_arg": "",
+          "first_arg_name": "",
+          "lineno": 323
+        },
+        {
+          "call": "read_text",
+          "enclosing_function": "own_code_rule",
+          "first_arg": "",
+          "first_arg_name": "",
+          "lineno": 346
+        },
+        {
+          "call": "read_bytes",
+          "enclosing_function": "sha256_file",
+          "first_arg": "",
+          "first_arg_name": "",
+          "lineno": 81
+        }
+      ],
+      "sha256": "87d421c96da7200120a0f801419f8a5874b18a5fc40e2ef4b8575317846e91f8"
+    },
+    {
+      "data_path_refs": [],
+      "file": "sim_v1_6_repair.py",
+      "forbidden_literal_hits": [
+        {
+          "enclosing_function": "load_observed_phl_paths",
+          "lineno": 731,
+          "text": "UNIVERSALIZATION_SERIES.csv"
+        }
+      ],
+      "n_lines": 2892,
+      "open_calls": [
+        {
+          "call": "read_text",
+          "enclosing_function": "declared_block",
+          "first_arg": "",
+          "first_arg_name": "",
+          "lineno": 407
+        },
+        {
+          "call": "read_csv",
+          "enclosing_function": "load_observed_phl_paths",
+          "first_arg": "<expr>",
+          "first_arg_name": "",
+          "lineno": 731
+        },
+        {
+          "call": "read_csv",
+          "enclosing_function": "load_observed_phl_paths",
+          "first_arg": "<expr>",
+          "first_arg_name": "",
+          "lineno": 766
+        },
+        {
+          "call": "open",
+          "enclosing_function": "write_panel",
+          "first_arg": "",
+          "first_arg_name": "path",
+          "lineno": 1579
+        },
+        {
+          "call": "open",
+          "enclosing_function": "write_panel_v13",
+          "first_arg": "",
+          "first_arg_name": "path",
+          "lineno": 2007
+        },
+        {
+          "call": "open",
+          "enclosing_function": "write_checks",
+          "first_arg": "<expr>",
+          "first_arg_name": "",
+          "lineno": 2439
+        },
+        {
+          "call": "open",
+          "enclosing_function": "write_checks",
+          "first_arg": "<expr>",
+          "first_arg_name": "",
+          "lineno": 2447
+        },
+        {
+          "call": "open",
+          "enclosing_function": "write_gates",
+          "first_arg": "",
+          "first_arg_name": "path",
+          "lineno": 2472
+        },
+        {
+          "call": "open",
+          "enclosing_function": "write_decomposition",
+          "first_arg": "",
+          "first_arg_name": "path",
+          "lineno": 2502
+        },
+        {
+          "call": "open",
+          "enclosing_function": "write_country_inputs_audit",
+          "first_arg": "",
+          "first_arg_name": "path",
+          "lineno": 2545
+        },
+        {
+          "call": "open",
+          "enclosing_function": "run_sensitivity",
+          "first_arg": "<expr>",
+          "first_arg_name": "",
+          "lineno": 2641
+        },
+        {
+          "call": "read_text",
+          "enclosing_function": "guard_hashes",
+          "first_arg": "",
+          "first_arg_name": "",
+          "lineno": 2668
+        },
+        {
+          "call": "open",
+          "enclosing_function": "load_observed_phl_paths",
+          "first_arg": "",
+          "first_arg_name": "path",
+          "lineno": 728
+        },
+        {
+          "call": "read_bytes",
+          "enclosing_function": "sha256_file",
+          "first_arg": "",
+          "first_arg_name": "",
+          "lineno": 518
+        },
+        {
+          "call": "read_text",
+          "enclosing_function": "guard_hashes",
+          "first_arg": "",
+          "first_arg_name": "",
+          "lineno": 2670
+        }
+      ],
+      "sha256": "9c0e799850fd30bb0b46bb7841e8f301715745a5c73452e7644055122325de56"
+    },
+    {
+      "data_path_refs": [],
+      "file": "sim_v1_3.py",
+      "forbidden_literal_hits": [
+        {
+          "enclosing_function": "load_observed_phl_paths",
+          "lineno": 429,
+          "text": "UNIVERSALIZATION_SERIES.csv"
+        }
+      ],
+      "n_lines": 2395,
+      "open_calls": [
+        {
+          "call": "read_csv",
+          "enclosing_function": "load_observed_phl_paths",
+          "first_arg": "<expr>",
+          "first_arg_name": "",
+          "lineno": 429
+        },
+        {
+          "call": "read_csv",
+          "enclosing_function": "load_observed_phl_paths",
+          "first_arg": "<expr>",
+          "first_arg_name": "",
+          "lineno": 464
+        },
+        {
+          "call": "open",
+          "enclosing_function": "write_panel",
+          "first_arg": "",
+          "first_arg_name": "path",
+          "lineno": 1082
+        },
+        {
+          "call": "open",
+          "enclosing_function": "write_panel_v13",
+          "first_arg": "",
+          "first_arg_name": "path",
+          "lineno": 1510
+        },
+        {
+          "call": "open",
+          "enclosing_function": "write_checks",
+          "first_arg": "<expr>",
+          "first_arg_name": "",
+          "lineno": 1942
+        },
+        {
+          "call": "open",
+          "enclosing_function": "write_checks",
+          "first_arg": "<expr>",
+          "first_arg_name": "",
+          "lineno": 1950
+        },
+        {
+          "call": "open",
+          "enclosing_function": "write_gates",
+          "first_arg": "",
+          "first_arg_name": "path",
+          "lineno": 1975
+        },
+        {
+          "call": "open",
+          "enclosing_function": "write_decomposition",
+          "first_arg": "",
+          "first_arg_name": "path",
+          "lineno": 2005
+        },
+        {
+          "call": "open",
+          "enclosing_function": "write_country_inputs_audit",
+          "first_arg": "",
+          "first_arg_name": "path",
+          "lineno": 2048
+        },
+        {
+          "call": "open",
+          "enclosing_function": "run_sensitivity",
+          "first_arg": "<expr>",
+          "first_arg_name": "",
+          "lineno": 2144
+        },
+        {
+          "call": "read_text",
+          "enclosing_function": "guard_hashes",
+          "first_arg": "",
+          "first_arg_name": "",
+          "lineno": 2171
+        },
+        {
+          "call": "open",
+          "enclosing_function": "load_observed_phl_paths",
+          "first_arg": "",
+          "first_arg_name": "path",
+          "lineno": 426
+        },
+        {
+          "call": "read_bytes",
+          "enclosing_function": "sha256_file",
+          "first_arg": "",
+          "first_arg_name": "",
+          "lineno": 216
+        },
+        {
+          "call": "read_text",
+          "enclosing_function": "guard_hashes",
+          "first_arg": "",
+          "first_arg_name": "",
+          "lineno": 2173
+        }
+      ],
+      "sha256": "70ae8f0eef83358493dad3d3feb2d6a8841c4bb6fad3966627f4eed70e2a9877"
+    }
+  ],
+  "capability_lint": "PASS",
+  "cell": "EXP-18-PART-REPAIR",
+  "closing_rule": {
+    "note": "the pre-committed closing rule fires: no successor generator is predeclared this phase; the line becomes descriptive",
+    "status": "GENERATOR-LINE-CLOSED (representation-only)"
+  },
+  "count_blind": {
+    "count_computed_after_score": true,
+    "count_computed_before_freeze": false,
+    "n_33cell_counts_before_freeze": 0,
+    "verdict_object": "the single 33-cell count in observed_path_A17.csv (after every arm)"
+  },
+  "demographic_input": {
+    "cohort_years": [
+      1995,
+      2024
+    ],
+    "construction": "S = cohort_population_0_14 with the declared backward (1.0245) / forward (0.992) extrapolation; Pop = population_total with the declared backward (1.025) / forward (1.010) extrapolation",
+    "indicators_retained": [
+      "cohort_population_0_14",
+      "population_total"
+    ],
+    "observed_outcomes_retained": 0,
+    "path": "<PROG>/10_massification/data/UNIVERSALIZATION_SERIES.csv",
+    "phase": "A (demographic input)",
+    "population_years": [
+      1995,
+      2024
+    ],
+    "rows_retained": 60,
+    "rows_skipped_on_arrival": 2398
+  },
+  "frozen_forbidden_literal_functions": [
+    {
+      "file": "sim_v1_6_repair.py",
+      "functions": [
+        "load_observed_phl_paths"
+      ],
+      "n": 1
+    },
+    {
+      "file": "sim_v1_3.py",
+      "functions": [
+        "load_observed_phl_paths"
+      ],
+      "n": 1
+    }
+  ],
+  "label": "SYNTHETIC",
+  "observed_access": {
+    "allowed_open_phases": [
+      "DEMOGRAPHIC",
+      "SCORE"
+    ],
+    "allowed_opens": [
+      {
+        "allowed": true,
+        "op": "open:r",
+        "path": "<PROG>/10_massification/data/UNIVERSALIZATION_SERIES.csv",
+        "phase": "DEMOGRAPHIC"
+      },
+      {
+        "allowed": true,
+        "op": "open:r",
+        "path": "<PROG>/10_massification/data/UNIVERSALIZATION_SERIES.csv",
+        "phase": "SCORE"
+      }
+    ],
+    "blocked_attempt_phases": [
+      "ARMS"
+    ],
+    "blocked_attempts": 1,
+    "demographic_phase_retained": [
+      "cohort_population_0_14",
+      "population_total"
+    ],
+    "forbidden_basename": "UNIVERSALIZATION_SERIES.csv",
+    "observed_outcomes_retained_before_score": 0,
+    "resolved": "<PROG>/10_massification/data/UNIVERSALIZATION_SERIES.csv",
+    "scoring_phase_cells": 33,
+    "selftest": "BLOCKED-AS-REQUIRED"
+  },
+  "own_code_rule": {
+    "declared_guard_open_site": "run_all",
+    "guard_names": [
+      "OBSERVED_BASENAME"
+    ],
+    "observed_path_derived_from_guard_constant": true,
+    "open_calls_on_guard_name": 1,
+    "open_sites": [
+      "run_all"
+    ],
+    "phase_function_open_counts": {
+      "load_demographic_inputs": 1,
+      "load_observed_cells": 1
+    },
+    "rule": "the forbidden basename appears only as the module-level constant OBSERVED_BASENAME; its only direct open() is the phase-guard self-test; each of the two declared phase functions opens its `path` argument exactly once",
+    "verdict": "PASS",
+    "violations": []
+  },
+  "phases": [
+    "PREDECL-VERIFY",
+    "FREEZE-RECORD-VERIFY",
+    "AST-LINT",
+    "DEMOGRAPHIC",
+    "ARMS",
+    "SCORE",
+    "DONE"
+  ],
+  "predeclaration": {
+    "freeze_record": "FREEZE_RECORD.json",
+    "frozen_sha256_embedded": "3778afe38d29fc78bcf54275d40a3c183bcaa83f6f1fa4283d9e4e3cfe26d4a1",
+    "sha256": "3778afe38d29fc78bcf54275d40a3c183bcaa83f6f1fa4283d9e4e3cfe26d4a1",
+    "verified": true
+  },
+  "reachability_lint": {
+    "R": [
+      "ast_called_names",
+      "ast_scan_files",
+      "load_demographic_inputs",
+      "load_observed_cells",
+      "make_arm_functions",
+      "own_code_rule"
+    ],
+    "S": [
+      "build_panel_v13",
+      "run_arm",
+      "run_arm_full",
+      "shadow_inputs_named",
+      "verify_predecl",
+      "write_panel_v13"
+    ]
+  },
+  "verdict": "PATH-FAILED"
+}

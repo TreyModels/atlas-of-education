@@ -442,3 +442,17 @@ B1 — pre-run SHA snapshot reconstructed (30/33 match, original hash `89638b39�
   +190,326/+213,498 (+11.465%); law max 1.05105; λ_demand 1.218125; falsifier PASS (|chain−panel| 1.03e-12). **Scope:**
   λ* solved on the capacity-limited v1.2 gate; does not transfer to A10's participation-limited gate — citable only as
   REQUIRED-STATE (EXP-17) with the DERIVED target 0.8076. No λ adopted; no causal/direction claim.
+
+## 2026-11-21 — EXP-18 PART-REPAIR: PATH-FAILED; closing rule fires — GENERATOR-LINE-CLOSED (D150)
+
+- `generator_v1_7_partrepair/` (predecl `3778afe3…`, deterministic 18/18, 42/42 SHA): consistency repair made cleanly —
+  participation from the frozen v1.3 four-state block called unchanged, no new parameter (110→110), A17 participation
+  share = frozen block's own in 45/45 cells (0.995644/0.953477/0.800311 at 2024) — **but A17 still 0/33 within ±5 pp**
+  (bar ≥17/33; A10 0/33; A00 9/33 = EXP-7 construction); crossings 1/3 (primary max 88.66, lower 80.56). All guards PASS
+  (A00 byte-identical 47d4b082…; counterfactual 0/18,480; supply 0/53,760; repair-in-force 45/45; no-fit 0/26; count-blind
+  PASS; deterministic 18/18). Level now set by declared one-place-per-pupil tier capacity (primary seats/cohort 0.8629
+  at 2018) and the upper unfilled Tier-O margin — structural, not tuned. Representation 15/30 unfilled through upper
+  cells only; lower unfilled → 0 (strict both-level coexistence 0/15) — flagged.
+- **CLOSING RULE FIRED: GENERATOR-LINE-CLOSED at representation-only; no successor this phase.** The level question
+  passes to the descriptive + measurement lines (D144 fallback). Disclosures: G2 narrowed 16→11 columns (pre-freeze
+  amendment); capacity sensitivity decomposition; nan beyond 2025; EXP-16 RESULTS.csv hash recorded-not-enforced.

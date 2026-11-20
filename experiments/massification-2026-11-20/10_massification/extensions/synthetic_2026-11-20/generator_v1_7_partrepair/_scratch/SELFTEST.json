@@ -1,0 +1,50 @@
+{
+  "count_computed": false,
+  "demographic_input": "reconstructed from the frozen v1.3 panel",
+  "harness_identity": {
+    "cells_compared": 67200,
+    "differing_gt_tol": 0,
+    "max_rel": 1.2743025106863842e-09,
+    "passes": true,
+    "tol_rel": 1e-06,
+    "worst": {
+      "column": "survival",
+      "country": "SYN00_PHL_LIKE",
+      "level": "tertiary",
+      "year": "1987"
+    }
+  },
+  "label": "SYNTHETIC",
+  "level_statement_printed": false,
+  "observed_file_opened": false,
+  "passes": true,
+  "phase_guard_selftest": "BLOCKED-AS-REQUIRED",
+  "predecl_embedded_ok": true,
+  "predecl_sha256": "3778afe38d29fc78bcf54275d40a3c183bcaa83f6f1fa4283d9e4e3cfe26d4a1",
+  "probe": "SELFTEST_V17",
+  "repair_in_force": {
+    "cells": 45,
+    "identical": 45,
+    "passes": true
+  },
+  "tier_objects": {
+    "finite": true,
+    "levels": [
+      "primary",
+      "lower_secondary",
+      "upper_secondary"
+    ],
+    "passes": true,
+    "queue_ratio": [
+      6.923478515198218,
+      4.102472295279074,
+      1.532583450222863
+    ],
+    "unfilled_share": [
+      0.0,
+      0.0,
+      0.5642820796642564
+    ],
+    "year": 2018
+  }
+}

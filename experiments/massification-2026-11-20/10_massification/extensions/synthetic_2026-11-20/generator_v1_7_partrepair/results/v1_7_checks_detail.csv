@@ -1,0 +1,10 @@
+check,leg,level,n_cells,n_within_5pp,median_deviation_pp,mean_deviation_pp,max_abs_pp,a00_n_within_5pp,a00_median_pp,verdict
+S1,observed_path,primary,11,0,-15.69910364,-16.85560008,25.02294451,6,-4.300823545,PATH-BAR-MISSED
+S1,observed_path,lower_secondary,11,0,-34.89185283,-30.05426061,37.53267603,0,-29.43513075,PATH-BAR-MISSED
+S1,observed_path,upper_secondary,11,0,-38.46083849,-33.10682765,43.24226904,3,-27.58573809,PATH-BAR-MISSED
+S2,crossing,primary,1,,,,88.65871947,,,observed crosses; model never crosses by 2025
+S2,crossing,lower_secondary,1,,,,80.56270787,,,observed crosses; model never crosses by 2025
+S2,crossing,upper_secondary,1,1,,,62.92956254,,,neither crosses by 2025
+S3,representation,lower_secondary,15,0,,,,,,unfilled>=0.10 cells; strict both-level coexistence 0/15
+S3,representation,upper_secondary,15,15,,,,,,unfilled>=0.10 cells; strict both-level coexistence 0/15
+S3,same_level_contrast_A00_vs_A17,upper_secondary,15,15,,,,0,,"A00 = 0 is the declared contrast; A17 >= 8 is not required here (D134(4) corrected contrast, reported)"

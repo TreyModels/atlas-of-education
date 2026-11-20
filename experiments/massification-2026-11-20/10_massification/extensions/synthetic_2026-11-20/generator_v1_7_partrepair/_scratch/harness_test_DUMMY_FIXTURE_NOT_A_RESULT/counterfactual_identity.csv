@@ -1,0 +1,17 @@
+column,cells,differing,group,holds
+admitted_official,1680,0,replay-determined,YES
+survival,1680,0,replay-determined,YES
+completion_cohort,1680,0,replay-determined,YES
+completion_uis,1680,0,replay-determined,YES
+graduates,1680,0,replay-determined,YES
+cohort,1680,0,replay-determined,YES
+seats,1680,0,replay-determined,YES
+congestion_q,1680,0,replay-determined,YES
+quality_q,1680,0,replay-determined,YES
+class_size,1680,0,replay-determined,YES
+measurement_factor,1680,0,replay-determined,YES
+admitted_overage,1680,239,not-replay-determined,NO
+enrolment,1680,239,not-replay-determined,NO
+ger,1680,239,not-replay-determined,NO
+teachers,1680,857,not-replay-determined,NO
+ptr,1680,890,not-replay-determined,NO

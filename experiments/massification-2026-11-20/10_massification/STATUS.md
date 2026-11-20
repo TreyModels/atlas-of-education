@@ -1307,3 +1307,22 @@ in 2010), not a menu object; **P2** zeroes unfilled 15/15 at primary/lower, surv
 at primary 12/15 and lower 13/15 — a representation risk flagged for EXP-18's unfilled≥0.10 condition**; count-blind
 audit: observed file opened false, 0 bytes read, 1 blocked self-test attempt, own-code AST rule PASS; S-IDENT P0 ≡
 frozen A10 at 4.44e-10; determinism 3/3; final SHA256SUMS 14/14.
+
+### w) EXP-18 PART-REPAIR — `PATH-FAILED`; the closing rule FIRES: GENERATOR-LINE-CLOSED at representation-only (D150)
+
+- `generator_v1_7_partrepair/` (predecl `3778afe3…`; deterministic 18/18; 42/42 SHA). The consistency repair was made
+  cleanly — participation decision from the **frozen v1.3 four-state block, called unchanged**, **no new parameter
+  (110 → 110)**; A17's participation share = the frozen block's own (0.995644 / 0.953477 / 0.800311 at 2024) in
+  **45/45** cells. **But A17 still scores 0/33 within ±5 pp** (primary 0/11, lower 0/11, upper 0/11; A10 0/33; A00 9/33
+  = EXP-7 construction); crossings 1/3 (upper trivially; primary max **88.66**, lower **80.56**).
+- **All guards PASS:** A00 byte-identical `47d4b082…`; counterfactual identity 0/18,480; supply identity 0/53,760;
+  repair-in-force 45/45; projection order 0 hits; no-fit 0/26 + 0 band hits; count-blind PASS; deterministic 18/18.
+  **What sets the level now:** the declared one-place-per-pupil tier capacity (primary admits exactly seats/cohort =
+  0.8629 at 2018) and the upper unfilled Tier-O margin — **both structural, not tuned**.
+- **Representation passes at exactly 15/30 unfilled through the UPPER cells only**; lower unfilled → 0 (strict both-level
+  coexistence 0/15) — flagged. **Disclosures:** G2 narrowed 16→11 columns (frozen `inject_upper` cannot replay the
+  over-age top-up; pre-freeze amendment); capacity sensitivity is a decomposition; `capacity_decomposition` nan beyond
+  2025; EXP-16 RESULTS.csv hash recorded-not-enforced (file rewritten at 01:31; DETAIL enforced, verdict rows unchanged).
+- **CLOSING RULE FIRED: the generator line closes at representation-only; no successor is predeclared this phase.** The
+  programme holds a representation capability, a descriptive per-system κ, a labelled placement instrument, and a
+  localised level failure; the level question passes to the descriptive + measurement lines (D144 fallback).
