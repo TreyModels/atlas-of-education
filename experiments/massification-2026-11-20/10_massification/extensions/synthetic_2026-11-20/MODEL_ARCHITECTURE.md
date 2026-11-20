@@ -154,3 +154,69 @@ checks — **not** a post-hoc re-fit of v1 (see `FINDINGS.md` §4).
 4. **Carry the completion/GER denominator note** (`facts/STYLIZED_FACTS.md` §12; `10_massification/data/
    DATA_NOTES_MASSIFICATION.md`): a cohort-flow model cannot produce completion > GER, so any completion-based
    target must declare its denominator; do not fit completion up to observed levels.
+
+---
+
+## Amendment A2 (user directive, 2026-11-20, dashboard) — demographic overflow, quality collapse, and the child-labour block (v1.2)
+
+**Status: design directive. Not implemented. A v1.2 predeclaration must be frozen before any v1.2 run**
+(`v1_2/PRE_DECLARATIONS.md` is that frozen spec).
+
+### The user's reading, restated
+
+The Philippine story is **not a "seats" story in the abstract**: a **baby boom moved through the school-age
+population**, and schools and teachers were **not built fast enough** — seats overflowed, and **quality collapsed**
+(congestion, high pupil–teacher ratios, double shifts, overcrowded classrooms). The **out-of-school block should be
+borrowed from the Atlas `childworld` model** ("unless it's broken"), with the default assumption: **if a child is not
+in school, that child is in child labour/work**, and **families compete for school places**. This demographic/quality
+layer is the missing piece: it is what turns a cohort surge into a completion ceiling and a learning collapse.
+
+### What is borrowed, and from where
+
+| element | source | sha256 | what we take |
+|---|---|---|---|
+| four-state household block (`school` / `both` / `work` / `neither`) and the household utility decision | `engine/childworld.py` at parent-repo HEAD (retrieved read-only: `git -C /Users/treymenefee/massification_live show HEAD:engine/childworld.py`) | `ae73adb2a6d9c75d59966390e4304437479ff310a8724093e9108e9d26a23cab` | the **state structure, choice logic and parameter names** — `y_med` household income, `w_child` child wage, `farm`, `compat` work–school compatibility, `v0`/`decay` schooling value, `cost`, `neither`, `girl_care`, `haz` hazardous share |
+| Monte-Carlo/ABC wrapper, age-aligned variant, Sobol sensitivity | `engine/childworld_mc.py` (`944d1040…`), `childworld_agealigned.py`, `childworld_sobol.py` | per `MODEL_INVENTORY.md` rows #6–#7 | only the *design pattern* (parameter draws, composition tests); **not** any posterior or calibrated value |
+
+**Borrow caveats (from the programme's own review — these travel with the code):** `MODEL_INVENTORY.md` row #6 says
+childworld was **"Not run in this audit (only inspected)"**, that its **observation equation is not the ILO child-labour
+definition**, and that its **values are stylised**; row #7 says **v1 failed the India composition test** and that the
+**baseline "neither" share (0.421) was flagged for validation**. Therefore:
+
+1. **Borrow the structure, not the values.** Every borrowed element is labelled **`BORROWED-FROM-ATLAS / structural`**
+   in `PARAMS.md` and in the code header, with the source file and sha256 above. No childworld prior, posterior,
+   country target or output number is imported as a parameter.
+2. **No passive "neither" residual** (user directive). The four states are retained for the decision logic, but
+   **out-of-school children default to work/child labour**; "neither" is allowed only as a **declared, bounded option**
+   (domestic care, disability, inaccessible school) whose share is reported, not a free sink to absorb any out-of-school
+   residual.
+3. **State every deviation** from childworld in `v1_2/PRE_DECLARATIONS.md` (observation measure, child-labour
+   definition, rationing rule, cohort/year structure).
+
+### What v1.2 adds (the layer v1 lacks)
+
+- **Layer 1b — demographics as a declared input.** The observed PHL cohort path (`UNIVERSALIZATION_SERIES.csv`
+  `cohort_population_0_14` / `population_total`, the baby-boom shape) enters as a **declared input, not fitted**. Other
+  synthetic countries get declared cohort paths (boom / flat / decline) so the mechanism can be seen to matter.
+- **Layer 1c — capacity built with a lag, and quality as an output.** Seats and teachers are built with a lag from
+  declared PHL expansion series (`10_massification/data/SCHOOL_EXPANSION.csv` PTR/hires,
+  `10_massification/data/STATE_CAPACITY.csv` delivery). **Congestion/quality = f(cohort/seat ratio, PTR, class size)**
+  and it feeds **completion, learning and dropout**, not just intake. This is the piece that makes a boom produce a
+  ceiling rather than a transient queue.
+- **Layer 2b — household four-state block with rationing.** State chosen by the borrowed decision logic; **families
+  compete for limited seats** — when qualified demand exceeds seats the surplus is **rationed by a declared rule**, and
+  the rationed child is out of school and defaults to work. Child wage, work–school compatibility, schooling value and
+  decay, and school cost are declared parameters (drawn from the childworld parameter *names*, with our own declared
+  ranges).
+- **Layer 3 — unchanged growth/composition logic**, plus the Amendment-A1 **education → complexity** channel.
+
+### v1.2 predeclared checks (frozen in `v1_2/PRE_DECLARATIONS.md`; see that file for exact thresholds)
+
+(a) the PHL ceiling/asymmetry can be produced by **cohort surge + seat lag + quality collapse** with **no per-level
+anchor interpolation** (the "one parameterisation" clause v1 failed); (b) out-of-school / child-labour shares are
+plausible and **responsive to cohort size**; (c) PTR/congestion **rises during the boom then falls**; (d) identity:
+no completion > GER beyond the disclosed UIS 3–5-years-above-grade denominator; (e) the **education → complexity**
+channel (A1) is still present and positive with a 5–10-year lag.
+
+**No post-hoc rescue parameters.** If the mechanism cannot produce the asymmetry without per-level anchors, that is
+the finding — the asymmetry then has to be attributed to the stipulated capacity path, not to a reproduction.

@@ -122,6 +122,11 @@ manifests and error logs.
   substantially by assuming it. An earlier same-day intermediate run (A–D FAIL) is withdrawn; the full audit trail is
   `generator_v1/TUNE_LOG.md`. **v1.1 predeclaration must** add the education→complexity channel, remove the per-level
   anchor interpolation, adopt the ablation-fail diagnostic rule, and derive the seat cap from the economy side.
+- **Amendment A2 (user directive) recorded + v1.2 spec frozen:** demographic overflow (baby boom) + lagged
+  capacity → congestion/quality collapse + **childworld four-state child-labour block** (structural borrow only,
+  `engine/childworld.py` sha256 `ae73adb2…`; no calibrated values; caveats carried). `synthetic_2026-11-20/v1_2/
+  PRE_DECLARATIONS.md` freezes the five v1.2 checks, including "PHL asymmetry from the mechanism **without per-level
+  anchor interpolation**" and "no passive neither sink". v1.2 build is the next worker-sized job.
 - **Measurement insight recorded:** completion can exceed GER (UIS completion uses a 3–5-years-above-grade
   denominator) — verified PHL 2024 primary **98.30 vs 94.03**; note added to `facts/STYLIZED_FACTS.md` §12 and
   `10_massification/data/DATA_NOTES_MASSIFICATION.md`. This explains part of the old model's over-scale GER artefact

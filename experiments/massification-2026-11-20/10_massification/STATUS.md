@@ -690,6 +690,27 @@ claims; data asks remain HELD; literature *reading* is authorised.
   negative), the literacy stock shows nothing, and there is no threshold-from-a-low-base pattern. Determinism: two
   clean runs byte-identical. Deliverable: `FINDINGS.md` in the workbench.
 
+### f) Amendment A2 recorded — demographic overflow / quality collapse / child-labour block (v1.2 predeclared)
+
+- **User directive (dashboard, 2026-11-20):** the Philippine story is a **baby boom moving through the school-age
+  population** with schools/teachers not built fast enough → **seats overflowed, quality collapsed** (congestion, PTR,
+  double shifts); the **out-of-school block should be borrowed from the Atlas `childworld` model** ("unless it's
+  broken"), default **not-in-school = child labour/work**, families compete for places.
+- **Recorded** as `MODEL_ARCHITECTURE.md` **Amendment A2** in `synthetic_2026-11-20/`, with the borrow ledger: structural
+  elements only from `engine/childworld.py` at parent-repo HEAD, sha256 `ae73adb2…a23cab` (four-state household block,
+  utility decision, parameter names), read-only retrieval via `git show`; **no childworld prior/posterior/target/value
+  is imported**. Caveats carried: childworld "Not run, only inspected", observation equation **not the ILO definition**,
+  v1 failed the India composition test, baseline "neither" 0.421 flagged — all stated in the amendment and spec.
+- **Frozen v1.2 spec:** `synthetic_2026-11-20/v1_2/PRE_DECLARATIONS.md` — declared cohort path (observed
+  `UNIVERSALIZATION_SERIES.csv`), lagged capacity → congestion/quality → completion/dropout, four-state household block
+  **with rationing** and **no passive "neither" sink**, education→complexity channel retained, and five predeclared
+  checks: (a) PHL asymmetry from cohort surge + seat lag + quality collapse **without per-level anchor interpolation**,
+  (b) OOS/child-labour plausible and cohort-responsive, (c) PTR peaks during the boom then falls, (d) completion ≤ GER
+  identity with the disclosed UIS measurement convention, (e) education→X positive at lag. **No post-hoc rescue
+  parameters.** v1.2 code/PARAMS are to be frozen with their sha256 in the manifest before the first scored run —
+  the build is a separate worker-sized job, not executed in this window.
+
+
 ### d) New user directive (education → ECI) — predeclaration next
 
 - The hypothesis is **education → economic complexity**, not education → growth; outcome = `eci_sitc`. Existing
