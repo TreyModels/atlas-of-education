@@ -303,6 +303,23 @@ Two external requests are drafted and held; per protocol, external data requests
   delivery schools/classrooms/procurement; enforcement inspection/sanctions/attendance. Drafted/hold; route via op
   centre with the existing PSA and WB-ES asks (STATUS §3h). Nothing sent.
 
+## 3m. Council A10/R29/D62–D64 — capacity buys the floor, not the ceiling
+
+- **A10/R29 adopted:** the capacity channel is **level-specific and non-monotone** — a necessary delivery precondition
+  for **floor** universalization, **not sufficient** for the **ceiling**. The model may not generate upper-secondary/
+  tertiary universalization the record does not show (R6/R29); capacity effects may saturate by level; no tuning to
+  rescue. Verified on disk: PHL spending 2.66→3.93 %GDP, secondary PTR 37.9→23.9, **ceiling 75.0 (never ≥90)**;
+  HKG PTR 23.7→13.4, NER≥90 **1974** (≥95 1979); CHN PTR 22.9→16.4, lower-sec ≥90 only **2016**; KOR at ceiling.
+- **Ceiling-residual test added to A1 descriptive scope (D63):** after law markers (A7), capacity (A9/A10) and observed
+  demand inputs, predeclare and report the unexplained **ceiling residual** (PHL upper-secondary 75.0 vs 90; per level)
+  with candidate accounts — foregone income/opportunity cost, demand/returns, gate structure/credential, enforcement;
+  where no discriminating observable exists report **UNABLE**, never an explanation; no direction claim (R13).
+- **Caveats (D64):** spending-%GDP and PTR are **crude proxies**; enforcement unmeasured everywhere; real per-pupil
+  spending absent (DATA ASK); HKG crossings are threshold-specific (NER≥90 1974; NER≥95 1979).
+- **Anchor A1 first run attempt FAILED (honest record):** `model/anchor.py` crashed with `KeyError: 'ger_primary'` at
+  the crossing computation; `anchor_out/` is empty — **no anchor result exists yet**; exp1 is fixing and must add the
+  A10 floor/ceiling split + predeclared residual decomposition before the re-run. No result claimed.
+
 ## 4. Next three actions for `repo-auditor`
 
 1. **Council gate:** get the Council's final `COUNCIL:` post for brief 013 (SUCCESS_CRITERIA + STOP_RULES are

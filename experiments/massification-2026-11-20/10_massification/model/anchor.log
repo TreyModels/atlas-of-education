@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/Users/treymenefee/Library/Mobile Documents/com~apple~CloudDocs/Downloads/DeepSeek/massification_2026-11-20/10_massification/model/anchor.py", line 186, in <module>
+    main()
+  File "/Users/treymenefee/Library/Mobile Documents/com~apple~CloudDocs/Downloads/DeepSeek/massification_2026-11-20/10_massification/model/anchor.py", line 134, in main
+    cr = dict(M0=crossing(sim['completion_lower'], 50, years), M1=crossing(sim['ger_primary'], 100, years),
+                                                                           ~~~^^^^^^^^^^^^^^^
+KeyError: 'ger_primary'
