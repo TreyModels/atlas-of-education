@@ -11,10 +11,10 @@ KOR,upper_secondary_mass,50,completion,logistic,,censored_above_at_first_obs,197
 KOR,upper_secondary_mass,50,completion,gompertz,,censored_above_at_first_obs,1973.5,
 KOR,upper_secondary_mass,50,completion,linear,,censored_above_at_first_obs,,
 KOR,upper_secondary_mass,50,completion,exponential,,censored_above_at_first_obs,,
-KOR,upper_secondary_universal,90,completion,logistic,2008.5,crossed,1991.0,-17.5
-KOR,upper_secondary_universal,90,completion,gompertz,2008.5,crossed,1991.4,-17.1
-KOR,upper_secondary_universal,90,completion,linear,2008.5,crossed,,
-KOR,upper_secondary_universal,90,completion,exponential,2008.5,crossed,,
+KOR,upper_secondary_universal,90,completion,logistic,,censored_above_at_first_obs,1991.0,
+KOR,upper_secondary_universal,90,completion,gompertz,,censored_above_at_first_obs,1991.4,
+KOR,upper_secondary_universal,90,completion,linear,,censored_above_at_first_obs,,
+KOR,upper_secondary_universal,90,completion,exponential,,censored_above_at_first_obs,,
 KOR,tertiary_mass,50,GER (labelled),logistic,,censored_above_at_first_obs,1996.4,
 KOR,tertiary_mass,50,GER (labelled),gompertz,,censored_above_at_first_obs,1996.7,
 KOR,tertiary_mass,50,GER (labelled),linear,,censored_above_at_first_obs,1862.5,

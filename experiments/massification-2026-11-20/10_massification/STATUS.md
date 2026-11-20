@@ -168,6 +168,30 @@ level.
   level/country, tolerance from Council A4 (±N y), timing **never fitted** (else R4/R5 supplied-law violation);
   the check is a HOLDOUT outcome, not a target.
 
+## 3f. DESIGN PIVOT (user directive, 20 Nov ~15:20) — SINGLE-SYSTEM FIRST
+
+**Directive:** (1) **single-system first** — stand up ONE education system (best data, actually massifies), show the
+mechanisms, then test **portability to HKG and CHN**; (2) mechanisms to test, especially **state pushes** —
+compulsory-education-law changes, **school/place expansion** (construction, teacher supply, pupil-teacher ratios),
+**fee abolition** — against **demand-pull** (jobs/returns) and **supply-push** (cohorts); (3) researchers do **web
+searches for baseline data** (UNESCO, World Bank, national) to answer synthetic-fitting questions; (4) **test
+different researchers' models on the same system record**. The Council gate/acceptance rules and the Japan timing
+directive (A4/R19) are retained.
+
+**Board restructure (in progress):**
+- **task-37 = anchor-system model** (mechanisms + calibration) with a **portability checkpoint to HKG/CHN**; the
+  runner must NOT fit until the Council names the anchor system and single-system success criteria.
+- **data-hunter** = web-search baseline data (compulsory-law dates, construction/places, teacher supply/pupil-teacher,
+  fees/free-tuition, cohorts, jobs/returns; UNESCO/WB/national; retrieval log + sources) on top of the E9 timing file.
+- **lit-archivist** = UNESCO/WB report layer + narrative of different researchers' models (world society, human
+  capital, queue/credential, political economy/state-building, demographic) applied to the anchor system record.
+- **pattern-scout** = event windows for compulsory-law/expansion/fee dates (anchor + HKG/CHN portability), with
+  sources and uncertainty; E6 timing comparison remains #2.
+- Council asked to **name the anchor system and single-system success criteria** before the fit; provisional
+  candidate **Philippines** (best observed coverage on disk; actually massified; dated state pushes 2013 K-12 /
+  2018 free tuition / 4Ps), alternatives Korea (near-universal timing, little mechanism room) and China (scale,
+  weaker subnational data).
+
 ## 4. Next three actions for `repo-auditor`
 
 1. **Council gate:** get the Council's final `COUNCIL:` post for brief 013 (SUCCESS_CRITERIA + STOP_RULES are

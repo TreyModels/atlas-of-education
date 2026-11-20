@@ -5,6 +5,8 @@ NOT-FOUND = searched, not found. Never promote a STANDARD-CITATION date to a tar
 
 # UNIVERSALIZATION_TIMING — when Japan, Korea and Hong Kong actually universalized
 
+> **Companion (canonical evidence side):** `UNIVERSALIZATION_TIMELINES_JPN_KOR_HKG.md` supplies the dated crossing tables with measure definitions and access status (requested by repo-auditor under amendment A4). This file keeps the **rival-theory timing predictions** (§4) and the mechanism discussion; the two are cross-linked and must not drift.
+
 **Why this file exists.** For JPN/KOR/HKG universalization is *already achieved*; the research question is **when each level crossed**, because the crossing year is the dependent variable that discriminates the rival theories. Trow's phases and MMI are ratio-driven and say little about calendar time; world society, human capital, push-pull and state-building make *different* timing predictions. This file supplies the crossings and then states what each theory predicts about them.
 
 ## 0. Method and sourcing

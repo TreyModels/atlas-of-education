@@ -1,7 +1,7 @@
 iso3,group,order_measured,n_crossed,n_censored,n_not_crossed,first_measured_crossing,last_measured_crossing,primary_to_lower,lower_to_upper_universal,upper_mass_to_tertiary,censored_levels,note
 JPN,early (JPN/KOR/HKG),tertiary_mass,1,4,0,2006.0,2006.0,,,,primary_universal;lower_secondary_universal;upper_secondary_mass;upper_secondary_universal,universalization precedes the observed window for: primary_universal;lower_secondary_universal;upper_secondary_mass;upper_secondary_universal
-KOR,early (JPN/KOR/HKG),upper_secondary_universal,1,4,0,2008.5,2008.5,,,,primary_universal;lower_secondary_universal;upper_secondary_mass;tertiary_mass,universalization precedes the observed window for: primary_universal;lower_secondary_universal;upper_secondary_mass;tertiary_mass
-HKG,early (JPN/KOR/HKG),tertiary_mass < primary_universal < lower_secondary_universal,3,1,1,2007.5,2015.5,0.0,,,upper_secondary_mass,universalization precedes the observed window for: upper_secondary_mass
+KOR,early (JPN/KOR/HKG),(none measured),0,5,0,,,,,,primary_universal;lower_secondary_universal;upper_secondary_mass;upper_secondary_universal;tertiary_mass,universalization precedes the observed window for: primary_universal;lower_secondary_universal;upper_secondary_mass;upper_secondary_universal;tertiary_mass
+HKG,early (JPN/KOR/HKG),primary_universal < tertiary_mass < lower_secondary_universal,3,1,1,1978.5,2015.5,37.0,,,upper_secondary_mass,universalization precedes the observed window for: upper_secondary_mass
 PHL,late (PHL/CHN/KHM),primary_universal < lower_secondary_universal < tertiary_mass,3,1,1,2019.0,2024.5,4.5,,,upper_secondary_mass,universalization precedes the observed window for: upper_secondary_mass
 CHN,late (PHL/CHN/KHM),upper_secondary_mass < primary_universal < lower_secondary_universal < tertiary_mass,4,0,1,2011.0,2016.5,2.0,,5.5,,
 KHM,late (PHL/CHN/KHM),(none measured),0,0,5,,,,,,,

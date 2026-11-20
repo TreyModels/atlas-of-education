@@ -27,17 +27,36 @@ def s_of(iso,ind,frame=None):
     s=f[(f.iso3==iso)&(f.indicator==ind)][['year','value']].dropna().sort_values('year')
     return s[(s.year>=1960)&(s.year<=2026)]
 
-def sustained_crossing(y,v,thr):
-    """First year at/above threshold never followed by a return below, with the bracketing interval."""
+def sustained_crossing(y,v,thr,run=5):
+    """FIRST sustained crossing: first year at/above threshold followed by >=run consecutive years at/above
+    (allowing a later definitional dip). Reports interval, diagnostics, and whether later dips exist.
+    This is the policy-relevant date; a later re-crossing after a dip is flagged, not used as the crossing."""
     y=np.asarray(y,dtype=int); v=np.asarray(v,dtype=float)
-    if len(y)==0: return dict(lo=np.nan,hi=np.nan,status='no_series')
+    if len(y)==0: return dict(lo=np.nan,hi=np.nan,status='no_series',diag='')
     above=v>=thr
-    if not above.any(): return dict(lo=int(y[-1]),hi=np.nan,status='not_crossed_by_last_obs')
-    below=np.where(~above)[0]
-    if len(below)==0: return dict(lo=np.nan,hi=int(y[0]),status='censored_above_at_first_obs')
-    lb=below[-1]
-    if lb==len(y)-1: return dict(lo=int(y[-1]),hi=np.nan,status='not_crossed_by_last_obs')
-    return dict(lo=int(y[lb]),hi=int(y[lb+1]),status='crossed')
+    first_above=bool(above[0]); pct_above=round(float(above.mean()*100),1)
+    later_dips=False
+    found=None
+    for i in range(len(y)):
+        if above[i] and above[i:i+run].all() if i+run<=len(y) else above[i] and above[i:].all():
+            found=i; break
+    if found is None:
+        if above.any():
+            # never sustained for `run` years; use first above as a weak crossing, flagged
+            i=int(np.argmax(above))
+            later_dips=True
+            return dict(lo=int(y[i-1]) if i>0 else np.nan,hi=int(y[i]),status='weak_crossing_not_sustained',
+                        diag=f'first_above={int(y[i])};pct_years_above={pct_above}')
+        return dict(lo=int(y[-1]),hi=np.nan,status='not_crossed_by_last_obs',
+                    diag=f'pct_years_above={pct_above}')
+    if found==0:
+        return dict(lo=np.nan,hi=int(y[0]),status='censored_above_at_first_obs',
+                    diag=f'above_at_first_obs;pct_years_above={pct_above}')
+    # later dips after the first sustained episode
+    tail=above[found:]
+    later_dips=bool((~tail).any())
+    return dict(lo=int(y[found-1]),hi=int(y[found]),status='crossed',
+                diag=f'pct_years_above={pct_above}'+(';later_dips_after_crossing' if later_dips else ''))
 
 def in_school(iso,ind):
     s=s_of(iso,ind)
@@ -90,7 +109,8 @@ for iso in COUNTRIES:
                 crossing_lo=r['lo'],crossing_hi=r['hi'],status=r['status'],
                 crossing_mid=(round((r['lo']+r['hi'])/2.0,1) if r['status']=='crossed' else np.nan),
                 interval_width_years=(r['hi']-r['lo'] if r['status']=='crossed' else np.nan),
-                method=('observed sustained crossing' if kind!='reconstructed NER (BOUND)' else 'RECONSTRUCTED from observed headcounts/population - BOUND only'),
+                method=('observed first-sustained crossing (>=5 consecutive years above)' if kind!='reconstructed NER (BOUND)' else 'RECONSTRUCTED from observed headcounts/population - BOUND only'),
+                diagnostics=r.get('diag',''),
                 reconstructed=(kind=='reconstructed NER (BOUND)'),
                 flags=(';'.join([f for f,c in [
                     ('censored_before_observed_window', r['status']=='censored_above_at_first_obs'),

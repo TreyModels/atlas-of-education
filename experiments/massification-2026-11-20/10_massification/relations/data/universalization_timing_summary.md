@@ -12,7 +12,7 @@ PRECEDES the observed window and only an upper bound is reported. No imputation;
 | CHN | upper_secondary_mass | 50% | completion (completion_upper_secondary, 2010-2020) | 2010–2012 | crossed | <Flags(allows_duplicate_labels=True)> |
 | CHN | upper_secondary_universal | 90% | completion (completion_upper_secondary, 2010-2020) | 2020–? | not_crossed_by_last_obs | <Flags(allows_duplicate_labels=True)> |
 | HKG | lower_secondary_universal | 90% | NER (ner_lower_secondary, 2001-2018) | 2015–2016 | crossed | <Flags(allows_duplicate_labels=True)> |
-| HKG | primary_universal | 95% | NER (ner_primary, 1971-2018) | 2015–2016 | crossed | <Flags(allows_duplicate_labels=True)> |
+| HKG | primary_universal | 95% | NER (ner_primary, 1971-2018) | 1978–1979 | crossed | <Flags(allows_duplicate_labels=True)> |
 | HKG | tertiary_mass | 50% | GER (labelled) (ger_tertiary, 1971-2025) | 2007–2008 | crossed | <Flags(allows_duplicate_labels=True)> |
 | HKG | upper_secondary_mass | 50% | NER (ner_upper_secondary, 2001-2018) | ?–2001 | censored_above_at_first_obs | <Flags(allows_duplicate_labels=True)> |
 | HKG | upper_secondary_universal | 90% | NER (ner_upper_secondary, 2001-2018) | 2018–? | not_crossed_by_last_obs | <Flags(allows_duplicate_labels=True)> |
@@ -30,7 +30,7 @@ PRECEDES the observed window and only an upper bound is reported. No imputation;
 | KOR | primary_universal | 95% | NER (ner_primary, 1971-2017) | ?–1971 | censored_above_at_first_obs | <Flags(allows_duplicate_labels=True)> |
 | KOR | tertiary_mass | 50% | GER (labelled) (ger_tertiary, 2000-2024) | ?–2000 | censored_above_at_first_obs | <Flags(allows_duplicate_labels=True)> |
 | KOR | upper_secondary_mass | 50% | completion (completion_upper_secondary, 2000-2023) | ?–2000 | censored_above_at_first_obs | <Flags(allows_duplicate_labels=True)> |
-| KOR | upper_secondary_universal | 90% | completion (completion_upper_secondary, 2000-2023) | 2008–2009 | crossed | <Flags(allows_duplicate_labels=True)> |
+| KOR | upper_secondary_universal | 90% | completion (completion_upper_secondary, 2000-2023) | ?–2000 | censored_above_at_first_obs | <Flags(allows_duplicate_labels=True)> |
 | PHL | lower_secondary_universal | 90% | completion (completion_lower_secondary, 1999-2024) | 2023–2024 | crossed | <Flags(allows_duplicate_labels=True)> |
 | PHL | primary_universal | 95% | completion (completion_primary, 1999-2024) | 2017–2021 | crossed | <Flags(allows_duplicate_labels=True)> |
 | PHL | tertiary_mass | 50% | GER (labelled) (ger_tertiary, 1971-2026) | 2024–2025 | crossed | <Flags(allows_duplicate_labels=True)> |
