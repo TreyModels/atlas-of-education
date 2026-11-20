@@ -1,0 +1,44 @@
+{
+ "eid": "C5_E16b",
+ "implementation": "NEW code/e16_readers2.py (extends B5; not the paper E16)",
+ "N": 2000,
+ "M": 300,
+ "omega": 0.25,
+ "cert_cost": 6.0,
+ "seeds": [
+  0,
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9
+ ],
+ "kappas": [
+  0.0,
+  0.3,
+  0.6
+ ],
+ "bribe_budget": 1.0,
+ "corruption_p_error_effect": {
+  "mean": 0.026136040411378764,
+  "sd": 0.0081173023396874,
+  "matters": true
+ },
+ "corruption_ses_gap_effect": {
+  "mean": 0.09550224887556222,
+  "sd": 0.015610213333583556
+ },
+ "wellinformed_foreign_vs_domestic_gap": {
+  "mean": 0.014258412386705346,
+  "sd": 0.008318764449133252,
+  "removes_penalty": true
+ },
+ "lossy_foreign_vs_domestic_gap": {
+  "mean": 0.21174559736447973,
+  "sd": 0.028842101212551208
+ }
+}

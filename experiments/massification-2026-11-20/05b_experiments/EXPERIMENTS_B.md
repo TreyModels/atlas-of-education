@@ -7,14 +7,14 @@ logs and `findings.txt` are in `runs/<BID>/`. **Every number below is simulated 
 observed country value. Seed dispersion (sd across replications) is reported separately from any
 parameter-uncertainty statement; no parameter-uncertainty sampling was done in Batch B.
 
-**Counts.** completed = 5 experiments (B1, B2, B3, B4, B5); failed runs = 0 of 72 (B1), 0 of 72 (B2/B3),
+**Counts.** completed = 8 cells: batch B = 5 experiments (B1, B2, B3, B4, B5) and batch C2 = 3 cells (C4, C5, C6, records below); failed runs = 0 of 72 (B1), 0 of 72 (B2/B3),
 0 invariant failures out of 60 trajectories (B4), 0 of 800 static screening cells (B5). One
 implementation defect was found in code review *before* the affected model ran (B4, degree-share
 denominator) and fixed; it never produced a reported number. One method issue: B1's predeclared
 plausibility gate was written on an arm mean and passed a numerically unstable cell; a clearly labelled
 post-hoc diagnostic (not the declared test) is reported and it downgrades the verdict.
 
-**Headline table:** `SUMMARY_TABLE_B.csv` (188 rows). **Manifest:** `RUN_MANIFEST_B.json`.
+**Headline table:** `SUMMARY_TABLE_B.csv` (359 rows; batch B + C2). **Manifest:** `RUN_MANIFEST_B.json`.
 
 **Data note (added at close-out, no result changed).** A UIS/WDI enrolment panel for PHL, KHM, HKG,
 CHN, JPN, KOR became available as `04_data/data/gmr_annual_1980_2020_imputed.csv`
@@ -359,3 +359,118 @@ are mechanism limits, not policy proposals.
 - No floorworld / childworld / atlas cell is claimed.
 - B5 is complete for E16's reader comparison; E16's "corruption" channel and a genuinely well-informed
   foreign reader (the menu's explicit control) were not run.
+
+---
+
+# BATCH C2 (task-9) — closing remaining menu cells
+
+Predeclared in `PRE_DECLARATIONS_C2.md` before running. Wrote only into `05b_experiments/runs/C4*`,
+`code/`, and appended to this file / `SUMMARY_TABLE_B.csv` / `RUN_MANIFEST_B.json`. Workers ≤ 2, seeds
+matched, failures logged. All numbers simulated.
+
+## C4 — E9 return compression and outside options (`runs/C4/`, stock massabm)
+
+**Question.** Does investment rise because the *outside option* falls (the paper's relational/insurance
+reading), or is the response feasibility/liquidity-driven? **Status.** completed, 32/32 runs, wall 48 s.
+**Design.** Stock massabm `mode='full'`, `reform_rule='never'`, tuition HELD FIXED; one factor changed
+at a time, paired seeds 30000+r, r=0..3, N=3000: premium_down (degree wages 4.5/2.6→3.2/2.0),
+outside_down (routine 1.6→1.2, informal 1.0→0.8), vol_up (shock_sigma 0.5→1.0), opp_down (formal
+growth frozen), opp_up (doubled), cost_down (cost_col 0.6→0.3), borrow_up (borrow 0.5→1.0).
+
+**Result (paired Δ Q3–Q5 college entry vs baseline; baseline 0.513; sd across 4 reps).**
+
+| arm | Δ Q3-5 entry | Δ beyond 2sd? | level Q3-5 | Q1 entry | degree share | income ratio |
+|---|---|---|---|---|---|---|
+| premium_down | −0.0991 (0.021) | falls | 0.414 | 0.018 | 0.180 | 1.675 |
+| outside_down | −0.0875 (0.021) | **falls** | 0.426 | 0.020 | 0.184 | 2.186 |
+| vol_up | −0.0358 (0.010) | falls | 0.477 | **0.048** | 0.150 | 1.906 |
+| opp_down | +0.0148 (0.014) | no | 0.528 | 0.023 | 0.228 | 1.880 |
+| opp_up | −0.0261 (0.016) | falls | 0.487 | 0.022 | 0.206 | 1.841 |
+| cost_down | **+0.1203** (0.010) | **rises** | 0.633 | 0.117 | 0.353 | 1.709 |
+| borrow_up | **+0.1044** (0.013) | **rises** | 0.617 | 0.063 | 0.362 | 1.818 |
+
+**Verdict.** The paper's insurance/outside-option reading is **contradicted in this design**: the
+outside-option decline *lowers* Q3–Q5 college entry (−0.0875, 2sd 0.0413), in the same direction as
+degree-premium compression (−0.0991), and is not an investment stimulus. The only channels that raise
+Q3–Q5 investment are the human-capital/liquidity benchmarks (cost_down +0.120, borrow_up +0.104).
+One quintile-heterogeneous nuance: income volatility raises Q1 entry (+0.025) while lowering Q3–Q5
+(−0.036), consistent with an insurance motive at the bottom, not a general outside-option claim.
+**Caveat.** one-factor-at-a-time, 4 paired reps; simulated mechanism comparison, not a country effect.
+**Reproduce.** `runs/C4/{c4_raw.csv,c4_summary.csv,findings.txt,run_meta.json}`; `logs/C4.log`.
+
+## C5 — E16 corruption channel + well-informed foreign reader (`runs/C5/`, NEW implementation)
+
+**Question.** Does bought bias corrupt credential screening, and does a foreign reader that can see
+institutional tier remove the border lossiness penalty found in B5? **Status.** completed; extension of
+`code/e16_readers.py` as `code/e16_readers2.py`; 10 matched seeds, per-cell identical noise streams
+(improvement over B5's sequential streams); N=2000, M=300.
+**New readers.** `corrupt_reader` = detailed signal + κ for applicants with SES budget ≥ 1.0,
+κ ∈ {0, 0.3, 0.6}; `foreign_wellinformed` = ability + 0.5·(2·tier) + noise (true productivity weights,
+institutional tier visible).
+
+**Result (baseline factors; mean over 10 seeds).**
+
+| reader | coverage | productivity error | top-tertile exclusion | SES hire gap | cert demand |
+|---|---|---|---|---|---|
+| detailed domestic | 0.851 (0.016) | 0.045 | 0.550 | +0.105 | 0.062 |
+| coarse domestic | 0.572 (0.018) | 0.400 | 0.618 | +0.273 | 0.215 |
+| skill test | 0.683 (0.017) | 0.191 | 0.570 | +0.006 | 0.000 |
+| eligibility rule | 0.395 (0.029) | 0.723 | 0.677 | +0.216 | 0.167 |
+| foreign (lossy, ρ=1) | 0.661 (0.024) | 0.257 | 0.591 | +0.254 | 0.194 |
+| corrupt reader κ=0 / .3 / .6 | 0.851 / 0.848 / 0.812 | 0.045 / 0.049 / **0.072** | 0.550 / 0.550 / 0.551 | +0.105 / +0.157 / **+0.201** | 0.062 / 0.060 / 0.055 |
+| foreign well-informed | 0.831 (0.013) | **0.060** | 0.551 | +0.180 | 0.122 |
+
+**Verdicts.** (a) **Corruption matters** (predeclared): κ=.6 vs 0 raises the productivity error by
++0.026 (2sd 0.016, 10/10 seeds) and widens the SES hire gap by +0.096 (2sd 0.031), while top-tertile
+exclusion barely moves — corruption redistributes access toward paying households without large
+aggregate error. (b) **The well-informed foreign reader removes the border penalty**: its error gap vs
+the domestic detailed reader is +0.014 (2sd 0.017 — inside the predeclared ±2sd band), versus +0.212
+(2sd 0.058) for the lossy foreign reader. So in this model the penalty is about **information access,
+not foreignness**. Caveat: both readers are declared signal rules in a static stylized model; the
+corruption channel is a bought signal shift, not an empirical bribery estimate.
+**Reproduce.** `runs/C5/{c5_raw.csv,c5_summary.csv,findings.txt,run_meta.json}`; `logs/C5.log`.
+
+## C6 — E4 children's four states, first atlas childworld cell (`runs/C6/`)
+
+**Model.** `engine/childworld.py` copied from `01_sources/atlas-main-55732f4/engine/` to
+`code/atlas/childworld.py`; ONLY additions: `shock_p`/`shock_size` parameters (defaults .15/.6
+reproduce the original draws exactly) and a `mean_out_years` output (no RNG change). N=2000 children,
+8 years, last 3 averaged, 5 paired seeds. Mid-prior baseline; one factor varied at a time.
+**Status.** completed, 55/55 deterministic runs, 0 failures.
+
+**Four-state result (shares, sd across seeds).**
+
+| arm | school | both | work | neither | out-of-school | child labour | years out |
+|---|---|---|---|---|---|---|---|
+| baseline (mid priors) | 0.289 (0.008) | 0.174 (0.004) | 0.116 (0.007) | 0.421 (0.008) | 0.537 (0.010) | 0.213 (0.006) | 1.372 |
+| compat low | 0.351 (0.010) | 0.030 (0.003) | 0.138 (0.008) | 0.481 (0.008) | 0.619 (0.012) | 0.126 (0.006) | 1.826 |
+| compat high | 0.163 (0.001) | **0.468** (0.005) | 0.082 (0.005) | 0.288 (0.006) | 0.369 (0.006) | 0.366 (0.004) | 0.756 |
+| w_child low | 0.327 (0.008) | 0.079 (0.005) | 0.040 (0.003) | 0.554 (0.010) | 0.593 (0.011) | 0.088 (0.004) | 1.683 |
+| w_child high | 0.259 (0.005) | 0.307 (0.005) | 0.107 (0.005) | 0.327 (0.005) | 0.434 (0.006) | 0.263 (0.005) | 0.998 |
+| cost low (near school) | 0.331 (0.009) | 0.267 (0.006) | 0.072 (0.004) | 0.329 (0.006) | 0.401 (0.004) | 0.208 (0.006) | 0.887 |
+| cost high (far school) | 0.215 (0.005) | 0.072 (0.004) | 0.148 (0.007) | 0.564 (0.006) | **0.712** (0.008) | 0.175 (0.007) | 2.352 |
+| y_med low (poor) | 0.067 (0.002) | 0.245 (0.005) | 0.458 (0.005) | 0.230 (0.003) | 0.688 (0.005) | 0.570 (0.005) | 2.022 |
+| y_med high (rich) | 0.462 (0.005) | 0.105 (0.002) | 0.007 (0.001) | 0.427 (0.004) | 0.434 (0.005) | 0.065 (0.002) | 0.996 |
+| shock_p 0.0 | 0.303 (0.008) | 0.168 (0.003) | 0.102 (0.007) | 0.426 (0.008) | 0.528 (0.009) | 0.196 (0.006) | 1.342 |
+| shock_p 0.4 | 0.267 (0.008) | 0.182 (0.005) | 0.138 (0.006) | 0.412 (0.008) | 0.550 (0.011) | 0.240 (0.006) | 1.422 |
+
+**Verdict.** The predeclared shock test is **SUPPORTED**: raising shock risk from 0 to .15 raises the
+out-of-school share by +0.0087 (2sd 0.0016) and from .15 to .40 by +0.0131 (2sd 0.0027), while the
+naive fixed-share baseline has an exactly 0 response by construction — a liquidity/shock channel moves
+children out of school beyond a fixed-share world. State composition of the out-of-school group at
+baseline: 78.4% "neither", 21.6% "work"; girls' neither share 0.611 vs boys' 0.228. Factor reads:
+compatibility raises both-ness (both 0.468 at compat high), child wages pull work and child labour
+(0.263 at w_child high), distance/cost pushes out-of-school (0.712 at high cost), and poor households
+show the work state strongly (0.458 at y_med low). **Caveat.** this is an engine-behaviour cell on
+mid-prior parameters, not a Cambodia/Asia estimate; the high "neither" baseline share is a property of
+the engine's mid priors and should be checked against observed state shares before any interpretation.
+**Reproduce.** `runs/C6/{c6_raw.csv,c6_summary.csv,findings.txt,run_meta.json}`; `logs/C6.log`.
+
+## C2 close-out notes
+
+- 0 failed runs across C4–C6 (32/32 model runs, 1,440 screening cells, 55 trajectories); the C5 first
+  pass used a sequential RNG stream across cells and was rerun with per-cell matched streams before any
+  result was recorded (see `ERROR_LOG_B.md`).
+- C4's literal predeclared rule and the targeted insurance-claim reading are both reported: the literal
+  branch ("not specific") fires because cost/borrow arms rise, but the insurance claim itself is
+  contradicted because the outside-option decline lowers investment.

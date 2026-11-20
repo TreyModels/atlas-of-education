@@ -1,0 +1,35 @@
+C4 / E9 RETURN COMPRESSION AND OUTSIDE OPTIONS (massabm, one-factor-at-a-time)
+reps=4 N=3000 wall=48s ok=32/32 failed=0
+Stock massabm mode=full, reform_rule=never; tuition HELD FIXED (no 2018 free-tuition confound).
+Paired vs baseline, same seeds 30000+r. Labour market 2010-30, cohorts entering 1995-2012.
+d(Q3-5 college entry) is the primary estimand. sd = across 4 paired replications.
+
+  arm                                                colQ3-5        d colQ3-5          colQ1        diploma      deg share      inc ratio
+  baseline (stock defaults)                     0.513(0.017)     +0.0000(0.000)   0.023(0.001)   0.769(0.002)   0.219(0.008)   1.854(0.010)
+  premium_down (degree wage compression)        0.414(0.014)     -0.0991(0.021)   0.018(0.001)   0.765(0.002)   0.180(0.005)   1.675(0.006)
+  outside_down (non-degree income falls)        0.426(0.008)     -0.0875(0.021)   0.020(0.001)   0.762(0.001)   0.184(0.002)   2.186(0.006)
+  vol_up (income volatility 0.5->1.0)           0.477(0.007)     -0.0358(0.010)   0.048(0.002)   0.765(0.001)   0.150(0.002)   1.906(0.010)
+  opp_down (formal growth frozen at 1980)       0.528(0.005)     +0.0148(0.014)   0.023(0.001)   0.766(0.002)   0.228(0.004)   1.880(0.007)
+  opp_up (formal growth doubled)                0.487(0.003)     -0.0261(0.016)   0.022(0.002)   0.773(0.001)   0.206(0.002)   1.841(0.004)
+  cost_down (cost_col 0.6->0.3)                 0.633(0.007)     +0.1203(0.010)   0.117(0.005)   0.772(0.002)   0.353(0.004)   1.709(0.005)
+  borrow_up (borrow 0.5->1.0)                   0.617(0.010)     +0.1044(0.013)   0.063(0.002)   0.801(0.002)   0.362(0.006)   1.818(0.011)
+
+PREDECLARED DECISION RULE (paired d Q3-5 college entry vs baseline, 2 seed-sd bar):
+  outside_down: -0.0875 (2sd 0.0413) -> no rise beyond 2sd
+  premium_down: -0.0991 (2sd 0.0415) -> does not rise beyond 2sd
+  arms with d > +2sd: [('cost_down (cost_col 0.6->0.3)', 0.12026667755053874), ('borrow_up (borrow 0.5->1.0)', 0.10442000207877075)]
+  -> NOT SPECIFIC: investment rises through two or more channels (see list above), so the
+     increase is not attributable to the outside-option decline alone.
+
+## Reading against the paper's insurance claim (added at close-out, same run; no re-run)
+The predeclared "outside-option decline does the work" branch is NOT met: the outside-option decline
+LOWERS Q3-5 college entry by -0.0875 (2sd 0.0413), in the same direction as degree-premium compression
+(-0.0991). The predeclared `contradicted` clause for the insurance reading therefore applies:
+  - outside-option decline does NOT raise investment in massabm; it reduces it;
+  - the only arms that raise Q3-5 investment are the human-capital/liquidity benchmarks (cost_down
+    +0.120, borrow_up +0.104);
+  - volatility up does raise Q1 entry (+0.025 vs baseline 0.023) while lowering Q3-5 (-0.036), a
+    quintile-heterogeneous response consistent with an insurance motive at the bottom, not with a
+    general "invest more as the outside option falls" claim.
+So the investment response here is feasibility/liquidity-driven, not outside-option/insurance-driven.
+Caveat: one-factor-at-a-time, 4 paired reps, simulated mechanism comparison, not a country estimate.

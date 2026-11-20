@@ -1,0 +1,37 @@
+C5 / E16 CORRUPTION + WELL-INFORMED FOREIGN READER (extends B5; NEW implementation)
+N=2000 applicants, M=300 vacancies, 10 matched seeds; true p = ability + 0.25*(2*tier).
+Corrupt reader: detailed signal + bought bias kappa for SES budget>=1.0. Well-informed foreign
+reader: true productivity weights with institutional tier visible. Baseline = accuracy high,
+screening cost 0, no network, rho=1.
+
+  reader                   coverage   p_error  excl top1/3    SES gap  cert demand
+  detailed_domestic       0.851(0.016)  0.045        0.550     +0.105        0.062
+  coarse_domestic         0.572(0.018)  0.400        0.618     +0.273        0.215
+  skill_test              0.683(0.017)  0.191        0.570     +0.006        0.000
+  eligibility_rule        0.395(0.029)  0.723        0.677     +0.216        0.167
+  foreign_reader          0.661(0.024)  0.257        0.591     +0.254        0.194
+  corrupt_reader          0.851(0.016)  0.045        0.550     +0.105        0.062
+  foreign_wellinformed    0.831(0.013)  0.060        0.551     +0.180        0.122
+
+Corruption sweep (corrupt reader, baseline factors):
+  kappa=0.0: coverage 0.851 (0.016), p_error 0.045 (0.007), top-tertile exclusion 0.550, SES hire gap +0.105, cert demand 0.062
+  kappa=0.3: coverage 0.848 (0.014), p_error 0.049 (0.006), top-tertile exclusion 0.550, SES hire gap +0.157, cert demand 0.060
+  kappa=0.6: coverage 0.812 (0.020), p_error 0.072 (0.008), top-tertile exclusion 0.551, SES hire gap +0.201, cert demand 0.055
+  corruption effect on p_error (kappa .6 vs 0): +0.026 (2sd 0.016, sign 10/10) -> MATTERS
+  corruption effect on SES hire gap: +0.096 (2sd 0.031)
+
+Border penalty (foreign reader minus domestic detailed reader, baseline factors):
+  lossy foreign (rho=1)    p_error      gap +0.212 (2sd 0.058, sign 10/10)
+  lossy foreign (rho=1)    coverage     gap -0.190 (2sd 0.068, sign 10/10)
+  lossy foreign (rho=1)    exclude_top  gap +0.041 (2sd 0.014, sign 10/10)
+  well-informed foreign    p_error      gap +0.014 (2sd 0.017, sign 10/10)
+  well-informed foreign    coverage     gap -0.021 (2sd 0.028, sign 10/10)
+  well-informed foreign    exclude_top  gap +0.000 (2sd 0.001, sign 1/10)
+
+PREDECLARED DECISION RULES:
+  (a) corruption matters iff |d p_error(kappa .6 - 0)| > 2sd: True
+  (b) well-informed foreign reader removes the border penalty iff |gap vs domestic detailed| <= 2sd:
+      well-informed gap +0.014 (2sd 0.017) -> REMOVES PENALTY;
+      lossy foreign gap +0.212 (2sd 0.058)
+  -> The lossiness penalty is about INFORMATION ACCESS, not foreignness: a foreign reader that
+     can see institutional tier performs at domestic-detailed level in this model.

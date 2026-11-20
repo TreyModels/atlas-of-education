@@ -1,0 +1,42 @@
+{
+ "eid": "C6_E4",
+ "engine": "atlas childworld.py (copied; shock_p/shock_size/mean_out_years added)",
+ "N": 2000,
+ "years": 8,
+ "seeds": [
+  0,
+  1,
+  2,
+  3,
+  4
+ ],
+ "arms": [
+  "baseline (mid priors)",
+  "compat low",
+  "compat high",
+  "w_child low",
+  "w_child high",
+  "cost low (near school)",
+  "cost high (far school)",
+  "y_med low (poor)",
+  "y_med high (rich)",
+  "shock_p 0.0",
+  "shock_p 0.4"
+ ],
+ "shock_response_oos_shock15_vs_0": {
+  "mean": 0.008666666666666623,
+  "sd": 0.0008027729719195224,
+  "supported": true
+ },
+ "shock_response_oos_shock40_vs_15": {
+  "mean": 0.013066666666666671,
+  "sd": 0.0013686976778431745
+ },
+ "fixed_share_baseline_oos": 0.5371666666666667,
+ "baseline_states": {
+  "school": 0.28886666666666666,
+  "both": 0.17396666666666666,
+  "work": 0.11593333333333333,
+  "neither": 0.42123333333333335
+ }
+}

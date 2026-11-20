@@ -1,0 +1,30 @@
+{
+ "eid": "C4_E9",
+ "model": "stock massabm (unmodified copy)",
+ "reps": 4,
+ "N": 3000,
+ "wall": 47.61794304847717,
+ "runs": 32,
+ "ok": 32,
+ "failed": {},
+ "arms": [
+  "baseline (stock defaults)",
+  "premium_down (degree wage compression)",
+  "outside_down (non-degree income falls)",
+  "vol_up (income volatility 0.5->1.0)",
+  "opp_down (formal growth frozen at 1980)",
+  "opp_up (formal growth doubled)",
+  "cost_down (cost_col 0.6->0.3)",
+  "borrow_up (borrow 0.5->1.0)"
+ ],
+ "seeds": "30000+r",
+ "tuition": "held constant",
+ "outside_rises": false,
+ "premium_rises": false,
+ "arms_beyond_2sd": [
+  "cost_down (cost_col 0.6->0.3)",
+  "borrow_up (borrow 0.5->1.0)"
+ ],
+ "insurance_claim": "contradicted: outside_down d_colQ35=-0.0875 (2sd 0.041); only cost/borrow arms rise",
+ "posthoc_note": "interpretation appended to findings.txt at close-out; no re-run"
+}

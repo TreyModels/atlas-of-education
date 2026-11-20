@@ -86,3 +86,25 @@ Nothing was dropped silently; no reported number comes from a run listed here as
 - E16's corruption channel and the menu's explicit **well-informed foreign reader control** were not
   run; only the ρ variation on a single foreign reader was run.
 - No parameter-uncertainty sweep (Sobol/LHS), no external data fitting, no causal claim.
+
+---
+
+# BATCH C2 (task-9) — failures and amendments
+
+- **Run-level:** C4 32/32 runs ok (wall 48 s); C5 1,440 static screening cells, 0 failures; C6 55/55
+  trajectories, 0 failures. No per-run timeouts fired.
+- **C5 first pass used a sequential RNG stream across cells** (inherited from B5), confounding paired arm
+  contrasts with stream position. Rerun with per-cell matched streams before any result was recorded;
+  first-pass output overwritten and never reported. B5 itself retains the sequential-stream limitation
+  (recorded as a caveat in its record; results are averaged over 10 seeds with large effect sizes).
+- **C4 literal rule vs targeted reading:** the predeclared three-way rule's `not specific` branch fired
+  (cost_down, borrow_up rise) while the paper's insurance specificity claim is contradicted
+  (outside_down −0.0875, 2sd 0.0413). Both are reported; interpretation appended to findings, no re-run.
+  Caveat: the outside-down arm changes two wage-base entries at once (routine + informal), as declared.
+- **C6 engine copy is patched** (declared): `shock_p`/`shock_size` parameters and a `mean_out_years`
+  output only; defaults reproduce the original draw exactly (verified by inspection of the RNG
+  consumption: `r.random(N)` is always drawn, so changing `shock_p` does not shift the stream).
+  The mid-prior baseline's high "neither" share (0.421) is an engine property, flagged for validation.
+- **C5 corrupt reader at κ=0 exactly equals the detailed reader** (0.851/0.045) after the matched-stream
+  fix, verifying the corruption add-on does not perturb the base screen.
+- **Timebox:** C4–C6 ran inside ~25 minutes; workers ≤ 2 throughout; `PYTHONDONTWRITEBYTECODE=1`.

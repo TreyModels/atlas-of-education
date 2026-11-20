@@ -1020,33 +1020,32 @@ observed cells and evaluate on 2011-2020 as a genuine holdout.
 # Batch B — adversarial replication and missing menu cells
 
 Full records: [`05b_experiments/EXPERIMENTS_B.md`](05b_experiments/EXPERIMENTS_B.md); machine-readable
-summary: `05b_experiments/SUMMARY_TABLE_B.csv` (188 estimate rows); manifest:
-`05b_experiments/RUN_MANIFEST_B.json`. Independent runner, independent N, same pre-declaration
-discipline. 5 experiments, 1,004 runs/cells, **0 failed runs**.
+summary: `05b_experiments/SUMMARY_TABLE_B.csv`; manifest: `05b_experiments/RUN_MANIFEST_B.json`.
+Independent runner, independent N, same pre-declaration discipline. Zero failed runs.
 
 | cell | question | status | headline |
 |---|---|---|---|
-| B1 | Does the matched-elasticity rival contradiction replicate? | completed (72/72, 6 paired reps, N=3000) | The literal rule fires only in a numerically unstable σ=0.5 corner (baseline ratio 0.022–0.055; degree income 1.0–42.4 across seeds). σ=1.0 −0.010/−0.015 (inside noise); σ=2.0 **+0.042/+0.070** (clear gains). The **formal-employment margin discriminates cleanly**: surplus −14.3/−15.4 pp vs rival never worse than −1.5 pp. C3 is defensible as "who gets the formal jobs", not as an absolute-income claim. Caveat: not blind (E13b seen first). |
-| B2 | Floor/race at the stored 4 reps | completed (72/72) | Lottery slope pooled **+0.151**, exactly the stored value (the 2-rep +0.221 was a small-sample artefact); per-rep +0.198 (sd 0.042). Ranked arms all negative, unranked lottery positive beyond 2 sd. Rank-dependence confirmed. |
-| B3 | Allocation-rule knockout | completed | rank+cutoff −0.063; rank only −0.039; cutoff+random among eligible +0.037 (not >2 sd); lottery +0.198. Pre-declared multi-arm sign-flip threshold **not met** — report as **allocation-conditional and partially identified**, not a clean knockout. |
-| B4 | 10/20/30/40-year trajectories, exogenous vs endogenous | completed (60/60, 5 seeds) | EXO (input-driven): entry 0.22→0.55. ENDO (generated): entry collapses 0.404→0.020 in a cobweb (seed sd up to 0.38); post-hoc smoothed arm still 0.218→0.108 ⇒ **requires a supplied trend**. Degree share and premium are generated in both arms. |
-| B5 | Credential information / recognition (E16) | completed (800/800 cells) | Detailed domestic reader best (coverage 0.851, error 0.045) vs coarse 0.565/0.411, skill test 0.696/0.179, eligibility 0.397/0.724, foreign 0.662/0.259. Pre-declared "rising certification demand" half-claim **contradicted** (detailed reader has lower error AND lower certification demand: 0.062 vs 0.217). Foreign-recognition sign is a declared parameter artifact — flagged. |
+| B1 | Does the matched-elasticity rival contradiction replicate? | completed (72/72, 6 paired reps, N=3000) | The literal rule fires only in a numerically unstable σ=0.5 corner (baseline ratio 0.022–0.055; degree income 1.0–42.4 across seeds). σ=1.0 −0.010/−0.015 (inside noise); σ=2.0 **+0.042/+0.070** (clear gains). The **formal-employment margin discriminates cleanly**: surplus −14.3/−15.4 pp vs rival never worse than −1.5 pp. Caveat: not blind. |
+| B2 | Floor/race at the stored 4 reps | completed (72/72) | Lottery slope pooled **+0.151**, exactly the stored value; per-rep +0.198 (sd 0.042). Rank-dependence confirmed. |
+| B3 | Allocation-rule knockout | completed | rank+cutoff −0.063; rank only −0.039; cutoff+random +0.037 (n.s.); lottery +0.198. Pre-declared threshold **not met** — allocation-conditional and partially identified. |
+| B4 | 10/20/30/40-year trajectories, exogenous vs endogenous | completed (60/60) | EXO entry 0.22→0.55 (input-driven). ENDO collapses 0.404→0.020 (cobweb, sd 0.38); smoothed 0.218→0.108 ⇒ **requires a supplied trend**. |
+| B5 | Credential information / recognition | completed (800/800) | Detailed domestic reader best (error 0.045 vs 0.411 coarse). Pre-declared "rising certification demand" half-claim **contradicted** (0.062 vs 0.217). Foreign-recognition sign is a declared parameter artifact. |
 
-## Follow-up cell E21 (external enrolment benchmark)
+## Batch C2 — follow-on cells (independent runner)
 
-Uses only OBSERVED cells of the new UIS/WDI 1980–2020 panel (`04_data/data/gmr_observed_6countries_1970_2024.csv`).
-Model GER = model enrolment stock / (N × duration); secondary duration switches with the model's own K-12
-reform flag, not tuned to the data. **This is a flow benchmark, not a calibration.**
+Records: `05b_experiments/EXPERIMENTS_B.md` (C4–C6 appended); summary: `SUMMARY_TABLE_B.csv`.
 
-| country | indicator | n | obs mean | model mean | corr | MAE (pp) | bias (pp) |
-|---|---|---|---|---|---|---|---|
-| PHL | ger_primary | 37 | 102.1 | 99.7 | 0.309 | 3.4 | −2.4 |
-| PHL | ger_secondary | 36 | 72.3 | 79.9 | −0.326 | 12.6 | +7.6 |
-| PHL | ger_tertiary | 36 | 27.3 | 24.6 | −0.397 | 5.4 | −2.7 |
-| KOR | ger_primary | 21 | 100.0 | 100.0 | 0.643 | 0.7 | −0.0 |
-| KOR | ger_secondary | 21 | 97.7 | 88.6 | 0.607 | 9.0 | −9.0 |
-| KOR | ger_tertiary | 21 | 93.7 | 41.0 | 0.156 | 52.7 | −52.7 |
+| cell | question | status | headline |
+|---|---|---|---|
+| C4 | Return compression and outside options (E9) | completed (32/32, 4 paired reps) | **Insurance/outside-option claim contradicted**: falling non-degree income lowers Q3–5 college entry (−0.0875, 2sd 0.041), same direction as degree-premium compression (−0.0991). Only cost_down (+0.1203) and borrow_up (+0.1044) raise investment. Volatility is insurance-like only at Q1. |
+| C5 | Corruption + well-informed foreign reader (E16) | completed (1,440 cells, 10 seeds) | **Border penalty is information access, not foreignness**: well-informed foreign reader error gap +0.014 (2sd 0.017) vs domestic detailed; lossy foreign +0.212 (2sd 0.058). Corruption κ=0.6 raises error +0.026 and SES hire gap +0.096, exclusion barely moves. |
+| C6 | Children's four states (E4, first childworld cell) | completed (55/55, 5 seeds) | Baseline school 0.289 / both 0.174 / work 0.116 / neither 0.421; higher shock risk raises out-of-school (+0.0087, 2sd 0.0016; +0.0131 higher) vs fixed-share baseline 0 ⇒ shock test **supported**. High baseline "neither" flagged for validation. |
 
-Read: Philippine **levels** are roughly right; the **shape** of the post-1990 expansion is wrong
-(negative secondary/tertiary correlation). The Korea-like preset is a stylised schedule, not a
-quantified Korea — a miss there is a statement about the preset, not about Korea.
+**Batch C (runner-1) — C1 recovery/identification, C2 floorworld E11, C3 Philippine calibration** were
+predeclared (`05_experiments/PRE_DECLARATIONS_C.md`) and were still executing at delivery; they are
+marked in progress, **not claimed** as results. See `05_experiments/PRE_DECLARATIONS_C.md`.
+
+**Why this matters.** Batch B/C make the report honest: they independently confirm the formal-access
+margin, close the reps gap, show the long-run trajectory is input-driven, contradict the insurance
+reading, locate the border penalty in information access, and give the child-state and education-
+economy mechanisms their first engine cells.

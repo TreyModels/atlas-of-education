@@ -123,3 +123,22 @@ Requested by the Lead after the first report: Cambodia, Japan, Hong Kong, Philip
 **Consequence.** A three-layer harmonisation was built (UIS SDG4 > UIS EDUNONCORE > WDI/UIS-derived) and gaps were imputed under written rules: linear (2–8-year gaps), log-linear (9–15-year gaps), no extrapolation, gaps >15 years left empty, structural breaks flagged. Result: 7,011 skeleton cells, 53.6% observed, 12.5% imputed, 1.3% long-gap, 32.5% no anchor. Full audit in `IMPUTATION_METHOD.md`; conflicts between layers (18 cells) in `data/gmr_source_disagreements.csv`.
 
 **Still blocked for this request:** Japan primary/secondary GER and NER 1980–2012 (needs UIS API key for core indicators, or Japan's e-Stat/MEXT tables); Korea level enrolment ratios 2001–2020 (same); any pre-1980 UIS series (the 2026-11 SDG release and the Feb-2020 archive both stop around 1970). Extractions of the 87 MB SDG national file and the 96 MB EDUNONCORE CSV were deleted after filtering to keep the iCloud workspace small; the zips remain and re-extraction is documented in `IMPUTATION_METHOD.md`.
+
+## 10. GMR country-page snapshots (2026-11-20 12:52–13:05 HKT)
+
+Request: "some snapshots of the country pages in GMR's across this time period. samples". Deliverable: `gmr_snapshots/`, ledger `gmr_snapshots/GMR_SNAPSHOTS.md`.
+
+| Attempt | Result |
+|---|---|
+| `http://efareport.unesco.org/` and `www.` variant | **HTTP 000** — GMR legacy site is dead; only Wayback captures exist. |
+| Wayback availability for `efareport.unesco.org` | OK (closest capture 2021-04-10), but the 2004 capture is a JavaScript redirect stub with no content. |
+| Wayback CDX for `efareport.unesco.org` with domain match / filters | **HTTP 504 gateway timeouts**; prefix queries mostly empty. Legacy GMR site structure therefore not enumerable in reasonable time. |
+| `https://unesdoc.unesco.org/...` (home, image PDFs, `/rest/search`, `/search`) | **HTTP 403 on every path**, with and without browser User-Agent. The country-profile PDFs cannot be fetched directly. |
+| Wayback for a known unesdoc profile PDF (`images/0014/001472/147226e.pdf`) | **HTTP 200, application/pdf** at timestamps before ~2019 (the 2020+ capture is an HTML redirect). Confirms the Wayback route. |
+| Wayback CDX listing of the directory `unesdoc.unesco.org/images/0014/001472/*` | **HTTP 200**, 246 entries. Enumerated all captured `NNNNNNe.pdf` IDs, fetched them, extracted page 1 and kept documents containing "Country profile … Global Monitoring Report". **28 GMR 2007 country profiles found**, including Philippines (CP/70) and Republic of Korea (CP/42). Qatar (CP/71) and Singapore (CP/75) kept as format exemplars. |
+| `www.unesco.org/education/gmr2007/` via Wayback | HTTP 404. `gmr2008`–`gmr2015` microsite CDX listings were fetched: gmr2009 contains only **regional** factsheets (Arab States, CEE/CA, …), no country pages; gmr2008/2010/2011/2012/2015 listings contain no country-profile links. |
+| GEM Report country member pages, `gem-report-2017.unesco.org/en/members/<country>/` (live and Wayback) | **HTTP 404 / no capture** at the tested paths. Not sampled. |
+| GEM fact-sheet pattern `en.unesco.org/gem-report/sites/gem-report/files/<Country>_fact_sheet.pdf` | Live host returns a 1.78 MB SPA 404 for all six countries; the single known archived example (`Jordan_fact_sheet.pdf`) was used to confirm the family exists, but the naming is not uniform. |
+| `https://www.education-inequalities.org/countries/<slug>` (WIDE, the GMR team's equity database) | **HTTP 200** for all six countries. Pages are Next.js/RSC; indicator values are embedded in the payload. Captured raw HTML + extracted text/indicator lists for all six. Slugs: cambodia, china, japan, hong-kong-china, philippines, rep-of-korea (korea-rep and republic-of-korea are 404). |
+
+**Outcome.** 4 GMR-2007 country-profile PDFs + 6 WIDE country pages + 1 index captured, hashed and logged. Gaps recorded rather than guessed: unesdoc blocked (so the sample is 2 of 6 countries for the 2007 profiles), Cambodia/China/Japan profiles not in the archived batch, later editions not sampled, no pre-2002 country pages exist for this series.

@@ -1,0 +1,35 @@
+C6 / E4 CHILDREN'S FOUR STATES — atlas childworld engine, first cell
+N=2000 children, 8 years, last 3 years averaged, 5 paired seeds; engine copied
+from 01_sources/atlas-main-55732f4/engine/childworld.py (only shock_p/shock_size + mean_out_years
+added; defaults reproduce original draws). Mid-prior baseline; one factor varied at a time.
+
+  arm                                school           both           work        neither            oos     child lab    yrs out
+  baseline (mid priors)        0.289(0.008)   0.174(0.004)   0.116(0.007)   0.421(0.008)   0.537(0.010)  0.213(0.006) 1.372
+  compat low                   0.351(0.010)   0.030(0.003)   0.138(0.008)   0.481(0.008)   0.619(0.012)  0.126(0.006) 1.826
+  compat high                  0.163(0.001)   0.468(0.005)   0.082(0.005)   0.288(0.006)   0.369(0.006)  0.366(0.004) 0.756
+  w_child low                  0.327(0.008)   0.079(0.005)   0.040(0.003)   0.554(0.010)   0.593(0.011)  0.088(0.004) 1.683
+  w_child high                 0.259(0.005)   0.307(0.005)   0.107(0.005)   0.327(0.005)   0.434(0.006)  0.263(0.005) 0.998
+  cost low (near school)       0.331(0.009)   0.267(0.006)   0.072(0.004)   0.329(0.006)   0.401(0.004)  0.208(0.006) 0.887
+  cost high (far school)       0.215(0.005)   0.072(0.004)   0.148(0.007)   0.564(0.006)   0.712(0.008)  0.175(0.007) 2.352
+  y_med low (poor)             0.067(0.002)   0.245(0.005)   0.458(0.005)   0.230(0.003)   0.688(0.005)  0.570(0.005) 2.022
+  y_med high (rich)            0.462(0.005)   0.105(0.002)   0.007(0.001)   0.427(0.004)   0.434(0.005)  0.065(0.002) 0.996
+  shock_p 0.0                  0.303(0.008)   0.168(0.003)   0.102(0.007)   0.426(0.008)   0.528(0.009)  0.196(0.006) 1.342
+  shock_p 0.4                  0.267(0.008)   0.182(0.005)   0.138(0.006)   0.412(0.008)   0.550(0.011)  0.240(0.006) 1.422
+
+Shock response in out-of-school share (paired seeds):
+  shock_p .15 vs 0.0: +0.0087 (2sd 0.0016)
+  shock_p .40 vs .15: +0.0131 (2sd 0.0027)
+  naive fixed-share baseline: out-of-school share 0.537, shock response EXACTLY 0 by construction
+
+PREDECLARED DECISION RULE: shock -> out-of-school beyond the fixed-share baseline iff
+  delta(oos, shock_p .15 vs 0) > +2 seed sd.
+  -> SUPPORTED (model response +0.0087 vs 2sd 0.0016)
+  -> a liquidity/shock channel moves children out of school beyond a fixed-share world in this engine.
+
+Four-state composition of the out-of-school group (baseline):
+  work share 0.216, neither share 0.784;
+  girls neither 0.611 vs boys neither 0.228.
+
+Factor reads: compat raises both-ness; w_child pulls work; cost/distance pushes out; y_med (income)
+moves school participation; child labour tracks work states under the ILO definition used by the engine.
+This is a model-behaviour cell, not a Cambodia/Asia estimate.

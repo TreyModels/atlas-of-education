@@ -26,43 +26,34 @@ unverified claim. Nothing is invented. Where the results contradict the paper, I
 - **Two synthetic expert-council sessions** on the results. Their withdrawal list is binding on the
   language below.
 
-## 2. The graduate-supply test: the income version dies, the formal-access version survives
+## 2. The graduate-supply test: the income version dies, the formal-access version survives (one cell deep)
 
 Your October Prediction 2 says a graduate-supply shock separates the surplus account from a
-competitive market on **diploma holders' absolute income**: under surplus, diploma holders lose;
-under competition, they gain as they become scarcer.
+competitive market on **diploma holders' absolute income**. Two follow-ups tested that and changed the
+verdict twice; **the Council has now signed off on exactly one sentence**, which the paper may use:
 
-Two follow-ups tested that, and they changed the verdict twice.
+> *"In this model class, with baseline formal access matched (0.280 vs 0.286), a graduate-supply shock
+> under fixed formal vacancies lowers diploma holders' formal-employment probability by 15.1 points
+> (±2.2) under credential-rationed hiring, while a level-matched productivity-hiring CES benchmark
+> shows no material fall — at most 0.5 points, at σ = 2, the cell where degree income is also matched
+> (2.706 vs 2.925); absolute income does not discriminate: there the rival's diploma income rises
+> 12.5 points. This is a model-class result, not evidence about any country. At σ = 0.5/1 the formal
+> share is matched but income is not (11.4 and 1.5 vs 2.9); the σ = 0.5 income corner of E13b/B1 is
+> numerically unstable and is not cited."*
 
-**First (E13b), the income version looked dead.** When the competitive world got the same
-formal/informal margin, vacancies and shock, a CES market with high substitutability (σ = 0.5) also
-produced diploma-income losses (−0.059, then −0.109 in an independent N=3000 replication). So
-absolute income does not separate the accounts.
+| world (college half price) | Δ diploma formal-job probability | Δ diploma income | level match |
+|---|---|---|---|
+| surplus (slots + floors + rank) | **−0.1511** (sd 0.022) | −0.0583 (0.018) | target |
+| level-matched rival, σ = 0.5 | +0.0085 (0.011) | −0.0270 (0.048) | formal share ✓, income ✗ (11.4 vs 2.9) |
+| level-matched rival, σ = 1.0 | +0.0095 (0.008) | +0.0001 (0.002) | formal share ✓, income ✗ (1.5 vs 2.9) |
+| level-matched rival, σ = 2.0 | −0.0054 (0.003) | +0.1252 (0.017) | **both ✓** |
 
-**Then (E13c), level-matching revived the formal-access version.** The two worlds did not start from
-the same place (formal share 0.27 vs 0.46; degree-income scale 2.9 vs 24–32). E13c matched the
-baseline formal share (0.2795 vs target 0.286), the vacancy path and the shock, and re-ran:
-
-| world (college half price) | Δ diploma formal-job probability | Δ diploma income |
-|---|---|---|
-| surplus (slots + floors + rank) | **−0.1511** (sd 0.022) | −0.0583 (0.018) |
-| level-matched rival, σ = 0.5 | +0.0085 (0.011) | −0.0270 (0.048) |
-| level-matched rival, σ = 1.0 | +0.0095 (0.008) | +0.0001 (0.002) |
-| level-matched rival, σ = 2.0 | −0.0054 (0.003) | +0.1252 (0.017) |
-
-The level-matched rival **never shows a material formal-employment fall** (≤ 0.5 pp at σ = 2, versus
-−15.1 pp under surplus). Batch B reached the same reading independently: B1's σ=0.5 firing cell is
-numerically unstable (baseline ratio 0.022–0.055 and degree income 1.0–42.4 across seeds), and at
-σ = 2 the rival clearly gains.
-
-**Verdict:** Prediction 2 **survives as a formal-access claim**, simulation-only:
-> when hiring is credential-rationed, a graduate-supply shock with formal vacancies fixed lowers
-> diploma holders' formal-employment probability by about 15 points; a level-matched productivity-
-> hiring rival shows no material fall (≤ 0.5 pp at σ = 2).
-
-**Withdraw only the absolute-income version.** Caveats that belong in the same sentence: degree income
-could be level-matched only at σ = 2; the B1 replication was not blind; the formal share is matched to
-0.28, not estimated.
+**What to withdraw:** the absolute-income discriminator. **What not to say:** that the income
+contradiction was a "level artefact" — B1's σ=0.5 fall is real in point estimates (−0.109 / −0.175,
+2 sd, plausible baseline 0.234) but that corner is numerically unstable (ratio 0.022–0.055; degree
+income 1.0–42.4 across seeds). Its status is **unidentified**, and it is cited for neither theory.
+The formal-access claim is **one cell deep** (σ=2 is the only fully matched world); a blind
+fully-matched rival is listed below as the first credibility experiment.
 
 ## 3. The Double Reduction hunch: the direction depends on a parameter the model cannot pin down
 
@@ -85,17 +76,20 @@ elasticity-2 aggregator has a positive cross-partial and cannot crowd anything o
 | C3 support targeted to Q1–Q2 (40%) | 3,327 | **−341.4** (2sd 149) | 0.718 vs 0.716 |
 | C4 support capacity-capped at 25% | 2,427 | **−1,241.2** (2sd 101) | 0.719 vs 0.716 |
 
-**Verdict: C10 is withdrawn.** Substitution appears once support has a demand channel, and completion
-does not fall. So E18's “race absorbs the subsidy” was an **artefact of the additive, universal,
-no-demand-channel support** — it is not evidence against your hypothesis. Equally, E18b is a
-**best-case construction for you**, not evidence for it.
+**Verdict (Council-amended): C10 is withdrawn as a general claim; "substitution appears" is NOT a
+finding.** E18b is a one-parameter linear damping (ts = 1 halves tutoring's value; ts = 2 fully
+displaces it). The least constructed arm is C1 (ts = 1, −1,291.5, 2 sd 92.3): *substitution is
+possible under a declared channel*. C2/C4 are best cases and are labelled as such.
 
-The honest conclusion: **the Double Reduction effect is not identified by the model.** Its sign hinges
-on the elasticity of substitution between school support and commercial tutoring — i.e. on whether
-they really produce the same kind of score increment. That is an empirical question, and it is the
-most important parameter to estimate before the model can say anything about China.
-**Do not describe E18/E18b as a measured Double Reduction effect**: no COVID, no policy timing, no
-real Chinese data, and the direction is specification-dependent.
+The honest conclusion: **the direction is unidentified, because the damping parameter is
+unestimated.** It hinges on the elasticity of substitution between school support and commercial
+tutoring — whether they really produce the same kind of score increment. That is an empirical
+question, and the most important parameter to estimate before the model can say anything about China.
+
+> *"In this model, universal additive school support raises paid tutoring spend at high-stakes gates
+> (+18%), while support declared to damp tutoring's marginal value lowers it; because the damping is
+> unestimated, the effect of China's 2021 Double Reduction on paid tutoring is unidentified, and
+> E18/E18b are not tests of that policy."*
 
 ## 4. What else the experiments showed
 
@@ -150,6 +144,20 @@ real Chinese data, and the direction is specification-dependent.
   expansion (secondary corr −0.33, tertiary corr −0.40). The Korea-like preset badly under-predicts
   tertiary (41.0 vs 93.7 observed) and must not be quoted as a Korea forecast. Observed cells only;
   imputed UIS cells were not used as truth.
+- **The insurance/outside-option story is contradicted (C4).** In the stock model, falling non-degree
+  income *lowers* college entry (−0.0875, 2sd 0.041), in the same direction as degree-premium
+  compression (−0.0991). Only the human-capital/liquidity factors raise investment (education cost
+  down +0.120, borrowing up +0.104). Volatility is insurance-like only at the bottom quintile. The
+  paper's "insurance against a bad outside option" reading is not what the model does.
+- **The border penalty is about information access, not foreignness (C5).** A well-informed foreign
+  reader (true productivity weights, institutional tier visible) has an error gap of +0.014
+  (2sd 0.017) versus the domestic detailed reader — inside the pre-declared band — while the lossy
+  foreign reader is +0.212 (2sd 0.058). Corruption (κ=0.6) raises error +0.026 and widens the SES hire
+  gap +0.096 without moving top-tertile exclusion: access shifts to paying households.
+- **Children's four states: shock → out-of-school is supported (C6, first childworld cell).** Baseline
+  shares school 0.289 / both 0.174 / work 0.116 / neither 0.421; higher shock risk raises out-of-school
+  (+0.0087, 2sd 0.0016; +0.0131 at higher risk) against a fixed-share baseline response of 0. The high
+  baseline "neither" share is flagged for validation, not treated as an estimate.
 - **No atlas-engine cells ran** (`floorworld`, `childworld`, `relfloor`, `firms`, `tutoring_abm`).
 
 ## 5. Numbers, corrected (this is the “pull the numbers” part)
@@ -178,11 +186,12 @@ real Chinese data, and the direction is specification-dependent.
 **Second plank:** the floor/race decomposition — floor as eligibility, race as intensification, floor
 *movement* as the additional effect — plus the many-dated-readers framing for the Philippines.
 
-**Withdraw before submission** (Council, updated after E18b): the income discriminator; the bar sweep
-as a discovery (Yoo); treating E18 *or* E18b as a Double Reduction effect (the direction is
-unidentified); E3/E5 as discoveries; every four-country / HK / transfer claim; and “the floor is an
-engine of persistence.” Also withdraw the claim that school support *cannot* crowd out tutoring —
-E18b shows it can, when support and tutoring are substitutes.
+**Withdraw before submission** (Council brief 003, signed): the absolute-income discriminator; the
+bar sweep as a discovery (Yoo 2003); E18 *or* E18b as Double Reduction evidence; the phrase
+"substitution appears" (the direction is unidentified); E3/E5 as discoveries; "the floor is an engine
+of persistence"; **all massification trajectories/projections** (the generated path collapses — they
+are conditional accounting, not forecasts); every four-country / Hong Kong / transfer claim; "rising
+certification demand with reader detail"; and the σ = 0.5 income corner in either direction.
 
 ## 7. What I would do next, in order
 
@@ -190,7 +199,8 @@ E18b shows it can, when support and tutoring are substitutes.
    the single most decision-relevant parameter in the whole programme: E18 and E18b point in opposite
    directions because of it, and no amount of further simulation will settle it. It needs data (e.g. a
    policy-exposure design with school homework/teacher-feedback intensity and paid-tutoring spend).
-2. **Finish E13c (level-matched rival)** and rewrite Prediction 2 around formal-employment probability.
+2. **Propagate E13c**: rewrite Prediction 2 around formal-employment probability, and replace the
+   σ=0.5 income corner with the σ=2 fully-matched cell everywhere.
 3. **Calibrate the Philippine case** to its own targets and publish the residual misses before any
    country statement.
 4. **Build the China Double Reduction test properly** — dated policy evidence, separate
@@ -217,3 +227,8 @@ would actually move the field.
 
 Nothing in this package is causal evidence about the Philippines, Cambodia, Hong Kong or China. It is
 a reproducible map of what your model can and cannot say — which is what you asked for.
+
+---
+*The synthetic Council of Experts is an AI construct: panelists are composite personas grounded in
+published literature. Nothing in the council files is a statement by, or endorsed by, the named
+scholars. Charter and disclaimers: `08_council/CHARTER.md`.*

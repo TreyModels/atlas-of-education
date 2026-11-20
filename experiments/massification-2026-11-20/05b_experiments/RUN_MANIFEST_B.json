@@ -1,5 +1,5 @@
 {
- "batch": "B",
+ "batch": "B + C2",
  "owner": "experiment-runner-2",
  "scope": "05b_experiments only",
  "environment": {
@@ -10,7 +10,10 @@
   "policy": "workers<=2, nice -n 10, per-run SIGALRM timeout 300s, PYTHONDONTWRITEBYTECODE=1"
  },
  "provenance": {
-  "predeclarations": "PRE_DECLARATIONS_B.md",
+  "predeclarations": [
+   "PRE_DECLARATIONS_B.md (batch B)",
+   "PRE_DECLARATIONS_C2.md (batch C2)"
+  ],
   "source_model": "01_sources/massification_project/code/massabm (copied to code/stock, unmodified)",
   "rival_extension": "05_experiments/code/ext_massabm (runner 1 NEW mechanism hc_fair_slots; copied to code/ext_massabm)",
   "note": "B1/B2/B3 re-drive existing massabm code with new drivers; B4 is a NEW implementation."
@@ -20,9 +23,13 @@
   "code/run_B2B3.py": "8236d49f77d56d8e",
   "code/e12_traj.py": "47c84794aeea98f6",
   "code/e16_readers.py": "8b0d6c5372dcda5e",
+  "code/run_C4.py": "66d028ee7319ffc3",
+  "code/e16_readers2.py": "ee3d4d3dbeebe4b8",
+  "code/run_C6.py": "29157ca4bd122d69",
+  "code/atlas/childworld.py": "ab1e70b203622f5e",
   "code/bcommon.py": "70b68126ed8a7a51",
   "code/b1_robust.py": "7a2b59345db5e723",
-  "code/make_manifest_B.py": "3f3ff1c074d1bcc0",
+  "code/make_manifest_B.py": "cbf780420ae43115",
   "code/ext_massabm/massabm/model.py": "69fb2dfe93a8c07a",
   "code/ext_massabm/massabm/params.py": "bd32a7575cb1c455",
   "code/stock/massabm/model.py": "2b6484e7a98866f8",
@@ -186,6 +193,134 @@
     }
    },
    "meta_sha16": "40f12c0dd8b3b8e4"
+  },
+  {
+   "bid": "C4",
+   "meta": {
+    "eid": "C4_E9",
+    "model": "stock massabm (unmodified copy)",
+    "reps": 4,
+    "N": 3000,
+    "wall": 47.61794304847717,
+    "runs": 32,
+    "ok": 32,
+    "failed": {},
+    "arms": [
+     "baseline (stock defaults)",
+     "premium_down (degree wage compression)",
+     "outside_down (non-degree income falls)",
+     "vol_up (income volatility 0.5->1.0)",
+     "opp_down (formal growth frozen at 1980)",
+     "opp_up (formal growth doubled)",
+     "cost_down (cost_col 0.6->0.3)",
+     "borrow_up (borrow 0.5->1.0)"
+    ],
+    "seeds": "30000+r",
+    "tuition": "held constant",
+    "outside_rises": false,
+    "premium_rises": false,
+    "arms_beyond_2sd": [
+     "cost_down (cost_col 0.6->0.3)",
+     "borrow_up (borrow 0.5->1.0)"
+    ],
+    "insurance_claim": "contradicted: outside_down d_colQ35=-0.0875 (2sd 0.041); only cost/borrow arms rise",
+    "posthoc_note": "interpretation appended to findings.txt at close-out; no re-run"
+   },
+   "meta_sha16": "35ed2ec0695037d1"
+  },
+  {
+   "bid": "C5",
+   "meta": {
+    "eid": "C5_E16b",
+    "implementation": "NEW code/e16_readers2.py (extends B5; not the paper E16)",
+    "N": 2000,
+    "M": 300,
+    "omega": 0.25,
+    "cert_cost": 6.0,
+    "seeds": [
+     0,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9
+    ],
+    "kappas": [
+     0.0,
+     0.3,
+     0.6
+    ],
+    "bribe_budget": 1.0,
+    "corruption_p_error_effect": {
+     "mean": 0.026136040411378764,
+     "sd": 0.0081173023396874,
+     "matters": true
+    },
+    "corruption_ses_gap_effect": {
+     "mean": 0.09550224887556222,
+     "sd": 0.015610213333583556
+    },
+    "wellinformed_foreign_vs_domestic_gap": {
+     "mean": 0.014258412386705346,
+     "sd": 0.008318764449133252,
+     "removes_penalty": true
+    },
+    "lossy_foreign_vs_domestic_gap": {
+     "mean": 0.21174559736447973,
+     "sd": 0.028842101212551208
+    }
+   },
+   "meta_sha16": "701a6352c1a18b0a"
+  },
+  {
+   "bid": "C6",
+   "meta": {
+    "eid": "C6_E4",
+    "engine": "atlas childworld.py (copied; shock_p/shock_size/mean_out_years added)",
+    "N": 2000,
+    "years": 8,
+    "seeds": [
+     0,
+     1,
+     2,
+     3,
+     4
+    ],
+    "arms": [
+     "baseline (mid priors)",
+     "compat low",
+     "compat high",
+     "w_child low",
+     "w_child high",
+     "cost low (near school)",
+     "cost high (far school)",
+     "y_med low (poor)",
+     "y_med high (rich)",
+     "shock_p 0.0",
+     "shock_p 0.4"
+    ],
+    "shock_response_oos_shock15_vs_0": {
+     "mean": 0.008666666666666623,
+     "sd": 0.0008027729719195224,
+     "supported": true
+    },
+    "shock_response_oos_shock40_vs_15": {
+     "mean": 0.013066666666666671,
+     "sd": 0.0013686976778431745
+    },
+    "fixed_share_baseline_oos": 0.5371666666666667,
+    "baseline_states": {
+     "school": 0.28886666666666666,
+     "both": 0.17396666666666666,
+     "work": 0.11593333333333333,
+     "neither": 0.42123333333333335
+    }
+   },
+   "meta_sha16": "db013af4fc3a8424"
   }
  ],
  "outputs": [
@@ -255,6 +390,26 @@
    "bytes": 633
   },
   {
+   "path": "runs/C6/c6_raw.csv",
+   "sha256_16": "8abc4f9237157b20",
+   "bytes": 13121
+  },
+  {
+   "path": "runs/C6/c6_summary.csv",
+   "sha256_16": "ebe6eb8dd2a05d71",
+   "bytes": 5731
+  },
+  {
+   "path": "runs/C6/findings.txt",
+   "sha256_16": "4782d9d771e37480",
+   "bytes": 2779
+  },
+  {
+   "path": "runs/C6/run_meta.json",
+   "sha256_16": "db013af4fc3a8424",
+   "bytes": 845
+  },
+  {
    "path": "runs/B1/b1_raw.csv",
    "sha256_16": "1cc05575fbd109aa",
    "bytes": 15971
@@ -278,6 +433,46 @@
    "path": "runs/B1/run_meta.json",
    "sha256_16": "81847939be0b17b9",
    "bytes": 657
+  },
+  {
+   "path": "runs/C4/c4_raw.csv",
+   "sha256_16": "e76fd9a00c382eec",
+   "bytes": 6149
+  },
+  {
+   "path": "runs/C4/c4_summary.csv",
+   "sha256_16": "a451fd5af284d3d9",
+   "bytes": 5117
+  },
+  {
+   "path": "runs/C4/findings.txt",
+   "sha256_16": "704ef9abb2c22068",
+   "bytes": 3208
+  },
+  {
+   "path": "runs/C4/run_meta.json",
+   "sha256_16": "35ed2ec0695037d1",
+   "bytes": 862
+  },
+  {
+   "path": "runs/C5/c5_raw.csv",
+   "sha256_16": "c332f432af89c4f8",
+   "bytes": 190596
+  },
+  {
+   "path": "runs/C5/c5_summary.csv",
+   "sha256_16": "10afb3484d935ef9",
+   "bytes": 40705
+  },
+  {
+   "path": "runs/C5/findings.txt",
+   "sha256_16": "1764ca2752d5dce0",
+   "bytes": 2659
+  },
+  {
+   "path": "runs/C5/run_meta.json",
+   "sha256_16": "701a6352c1a18b0a",
+   "bytes": 727
   }
  ],
  "logs": [
@@ -300,6 +495,21 @@
    "path": "logs/B5.log",
    "sha256_16": "153952915ba24a1c",
    "bytes": 5311
+  },
+  {
+   "path": "logs/C4.log",
+   "sha256_16": "c19e053d35ce56bc",
+   "bytes": 2222
+  },
+  {
+   "path": "logs/C5.log",
+   "sha256_16": "ce34b2fdac419a21",
+   "bytes": 5319
+  },
+  {
+   "path": "logs/C6.log",
+   "sha256_16": "f42998fae9250855",
+   "bytes": 5559
   }
  ],
  "external_data": {

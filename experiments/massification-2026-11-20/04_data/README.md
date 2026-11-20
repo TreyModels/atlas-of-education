@@ -40,6 +40,10 @@ Tidy long format: `country, iso3, indicator_code, indicator_name, year, value, u
 - **No invented values.** Where a source was blocked, the cell is empty and the blocker is named in `retrieval_log.md`. The only modelled series present are UIS `CR.MOD.*`, labelled as such. Nothing was interpolated.
 - **Definitions are kept apart.** Gross vs net enrolment, enrolment vs completion vs modelled completion, attainment stock vs current flow, informality vs occupation vs credential requirement. `DATA_LEDGER.md` opens with the conflation traps that matter for these four countries.
 
+## Snapshots: GMR country pages (sample)
+
+`gmr_snapshots/` holds sampled country-level GMR material: 4 archived **GMR 2007 country profiles** (IBE/2006/EFA/GMR/CP series — Philippines CP/70 and Republic of Korea CP/42, plus Qatar and Singapore as format exemplars) and **WIDE country pages** for all six countries (the GMR team's equity database, data late-1990s–2024). Ledger and caveats: `gmr_snapshots/GMR_SNAPSHOTS.md`. `unesdoc.unesco.org` is blocked from this environment (HTTP 403); the profile PDFs were recovered from Wayback captures of known image IDs.
+
 ## Extension: 1980–2020 six-country panel with imputation
 
 Added on request (see `IMPUTATION_METHOD.md`): Cambodia, Japan, Hong Kong, Philippines, China and Korea, UIS/WDI enrolment at pre-primary/primary/lower-secondary/upper-secondary/tertiary levels, with documented interpolation for gaps. **Imputed cells are flagged in `status`; they are not observations and must not be cited as such.** No extrapolation beyond observed endpoints; gaps longer than 15 years left unfilled.
