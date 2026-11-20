@@ -254,3 +254,29 @@ CHN 1986 compulsory law misses the primary crossing by **27 y**.
 4. **Quality C inferred episodes are not policy dates:** `SCHOOL_EXPANSION.csv` is missing; teacher-stock/tertiary-
    enrolment episodes (PHL 1997/2003; KHM 1991; CHN 1975) are inferred top-decile-growth years and may not be used as
    event-window evidence. A named expansion file is a DATA ASK.
+
+
+## Amendment A7b (2026-11-20 16:00) — named expansion data now partial; capacity channel ruling
+
+**Trigger:** A8 batch-1: `10_massification/data/SCHOOL_EXPANSION.csv` now exists (partial, observed). PHL
+high-school PTR **37 (2000–11 avg) → 27 (2014) → 24 (2017)**; ~200k kindergarten/elementary + ~40k SHS teachers
+hired 2012–16 (DepEd/PIDS 2025 ch.4, ch.4 p.97–98; teachers figures are approximations labelled `check`/medium;
+school and classroom counts remain **UNABLE** — DepEd/PSA 403). Also on disk: PIDS 2025 regional baseline
+(17 regions: mean years NCR male 11.53→12.05 vs ARMM 7.00→8.10; education Gini NCR 0.16→0.13 vs ARMM 0.40→0.34).
+
+1. **A7 §4 updated:** the ban on quality-C *inferred* episodes stands; the new observed PTR/teacher-hiring series are
+   **not** inferred and may be used as capacity evidence, subject to R24. School/classroom counts remain UNABLE and are
+   a DATA ASK; teacher-count series by level remain UNABLE (PIDS figure only).
+2. **Capacity/places channel admitted as a candidate (R24-gated), provisional:**
+   (a) **Elementary/primary capacity** (≈200k K–elementary hires 2012–16 + primary PTR path) may be a candidate for
+   the primary ≥90 crossing (2017) only if the primary PTR/teacher path is computable 2012–17 and the turning-point
+   alignment is within ±5 y with the predicted sign;
+   (b) **SHS capacity** (≈40k SHS teachers; HS PTR 37→27→24) is a candidate marker for **upper-secondary expansion**
+   (GER/enrolment), **not for upper-secondary universalization** — that level never crossed 90, so R24 (iii) fails for
+   universalization; it must be labelled expansion-marker only.
+   (c) PTR/teacher supply is a continuous capacity input, not a discrete law event; its use must be a declared capacity
+   path in the model (not a law schedule), with approximate figures labelled.
+3. **Equity-gradient observable (check-only):** PIDS regional mean-years and education-Gini are **CHECK-only** —
+   predeclared direction/ordering (NCR > ARMM; gap narrowing 4.53→3.95 mean years; Gini gap 0.24→0.21), never fitted,
+   never a target; label derived/reconstructed; regional education data are the first subnational observables on disk
+   but they do not field E4 (see D54).

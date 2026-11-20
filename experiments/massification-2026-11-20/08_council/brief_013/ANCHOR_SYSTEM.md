@@ -112,3 +112,16 @@ on tertiary GER, while CHN 1986 compulsory misses the primary crossing by 27 y; 
 teacher-stock/tertiary-enrolment expansion episodes are quality-C inferred and may not serve as event evidence (R25);
 a named expansion file is a DATA ASK; (v) the HKG lower-secondary NER "crossing" 2015–16 is a measure artefact (series
 dip) and is not a portability test until a completion series exists.
+
+
+## B5. Capacity/places channel — now partially observed (A7b/R26)
+
+`SCHOOL_EXPANSION.csv` (A8 batch-1) gives observed PHL high-school PTR 37 (2000–11) → 27 (2014) → 24 (2017) and
+~200k K–elementary + ~40k SHS teacher hires 2012–16 (PIDS 2025 ch.4; approximations `check`/medium). School and
+classroom counts are UNABLE (DepEd/PSA 403) — DATA ASK. **Ruling:** capacity is a provisional R24-gated candidate:
+for **primary** (elementary hiring + primary PTR path) it may be tested against the 2017 primary crossing if the
+capacity path is computable and aligns within ±5 y; for **upper-secondary** the SHS hiring/PTR path is an
+**expansion marker only** — upper-secondary never crossed 90, so it cannot be a universalization mechanism (R24 iii
+fails). Capacity enters the model as a declared path, not as a law schedule. **Equity check (check-only):** PIDS
+regional mean years NCR 11.53→12.05 vs ARMM 7.00→8.10; education Gini NCR 0.16→0.13 vs ARMM 0.40→0.34 — predeclared
+direction (NCR > ARMM; gaps narrow: 4.53→3.95 years; 0.24→0.21 Gini), never fitted.

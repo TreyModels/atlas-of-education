@@ -121,3 +121,13 @@ imputation as observation. E1 stays PARKED; direction claims EQUIVALENT.
   spacing (A6); any state-push channel must pass R24 or be abandoned/re-specified.
 - **Evidence quality:** event windows are descriptive (naive SE, no controls, quality A/B/C); `SCHOOL_EXPANSION.csv`
   missing -> expansion episodes are quality-C inferred and not event evidence (R25); named expansion file is a DATA ASK.
+
+
+## Cycle 5 addendum 4 (A8 batch-1: capacity data + equity check)
+
+- **SCHOOL_EXPANSION.csv partial observed** (PTR 37→27→24; ~200k/40k hires 2012–16); schools/classrooms UNABLE (DATA ASK).
+- **Capacity/PTR channel admitted as provisional R24-gated candidate:** primary only if capacity path aligns with the
+  2017 crossing; upper-secondary SHS capacity = expansion marker only (level never crossed 90) — R26.
+- **PIDS regional equity = CHECK-only** (mean years/Gini NCR vs ARMM; direction predeclared; never fitted).
+- **E4 stays DATA BLOCKED** (PSA 403; **no national-share proxy allowed**); **E3 demand-pull = unverified context**
+  (nurse-visa 2005–06 not verified in POLICY_TIMELINE).

@@ -161,3 +161,22 @@ crossing years, ordering and gaps (±5 y; ±3 y narrow; single curve = PARTIAL, 
 generated upper-secondary universalization by 2024, (e) rival comparison on the same ordering/gap vector, and (f) the
 A2d capacity-leads-intake test where the observed series permit. Event-break tests that fail alignment are reported
 as **descriptive context only**, and nulls are valid results (R25/R12).
+
+## AMENDMENT — scaling criterion recorded as REPORTED-FAIL; phase capped at PARTIAL + EQUIVALENT (R17/R23)
+**Recorded before any anchor fitting (repo-auditor instruction, D26/D31 timebox consumed).** The model class **fails
+the A1/A3 scaling criterion**, and this is predeclared as a **reported failure, not something to be fitted around**:
+- Unrepaired cell: OOS generated exponents secondary GER~income −1.89 / −0.38 / −0.74 (demand / education /
+  complementary) vs A1 +0.286 and A3 range [0.0904, 0.2154]; tertiary −1.23 / −0.14 / −0.35 vs +0.776 and
+  [0.5666, 0.8482].
+- Repair cell (D31, one-cycle timebox consumed): secondary −2.73 / −2.53 / −1.03; tertiary −0.32 / −1.32 / −0.39;
+  completion law +11.46 / +1.87 / +2.55; **signs_ok 1/3, contained 0/3 → FAIL**; PHL fit 6.16–7.43 / holdout
+  4.80–6.26, CHN 7.03–8.83. Diagnosis: bounded cohort-flow GER against a free exponential income index mechanically
+  forces negative log-log slopes. **No further scaling-repair iteration without a new Council decision**; the
+  unrepaired results are retained (R12) and the repair result is not re-labelled.
+**Consequence for the anchor's claim (R17/R23):** the anchor **cannot** be scored as PASS on the full single-system
+criteria, because criterion B2 (generated scaling laws) is a recorded FAIL. The **phase is therefore capped at
+PARTIAL + EQUIVALENT**: at best a descriptive/partial reproduction of the crossing-year ordering and trajectory, with
+rival equivalence where the rivals match the same moments; **no IDENTIFIED mechanism claim and no direction claim**.
+The scaling failure is reported in every anchor result table as a standing FAIL, not hidden by trajectory fit.
+**No new fitting until the Council rules** on the scaling failure and on the anchor's capped claim. Existing cells
+(smoke, PHL+CHN, repair) keep their labels (R12); A6/A7 re-scope above stands; A2 remains conditional on R24.
