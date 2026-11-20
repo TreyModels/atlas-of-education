@@ -1,0 +1,55 @@
+{
+  "experiment": "Y5",
+  "design_only": true,
+  "predeclarations_sha256": "8b431b672bbc9679dc192e907c1db3b95e22bacad2abd6b377c68e864dc336e1",
+  "data_files_read": [
+    {
+      "path": "10_massification/data/UNIVERSALIZATION_TIMING.csv",
+      "sha256": "6e067ffd76b2c57c7c0363387735750cb9e6f68bc4dfd242b3d0f9c80786f892"
+    },
+    {
+      "path": "10_massification/data/UNIVERSALIZATION_SERIES.csv",
+      "sha256": "85bc869396ebfcb39e3e1a21a31af219e75a07326c738a51d2bfdbe536737ddb"
+    },
+    {
+      "path": "10_massification/data/POLICY_TIMELINE.csv",
+      "sha256": "a068b5bf92cee52e442231ef8de63e1b3814d1e42cd61b02969ccf1f3fb3353e"
+    },
+    {
+      "path": "10_massification/data/JOBS_AND_MARKETS_PANEL.csv",
+      "sha256": "aaaab2744803989ff0f347e27d5824c9b0086b967914d96d21ecd354329787d3"
+    },
+    {
+      "path": "10_massification/data/STATE_CAPACITY.csv",
+      "sha256": "704efacad00f0ba7ddf579459a930d064fdb0f4b882cffbbf44a6cbecd585044"
+    },
+    {
+      "path": "10_massification/data/SCHOOL_EXPANSION.csv",
+      "sha256": "c218e6c9bd784e135e089ebecefec21112a09e6bf2c778599a33bc81b78c8ea3"
+    },
+    {
+      "path": "10_massification/data/DATA_NOTES_MASSIFICATION.md",
+      "sha256": "e2cfcdb2b17eb3d659a94b98c9b25c2b0803a4eac59d521ff237563ec857a8ec"
+    }
+  ],
+  "code": [
+    {
+      "path": "10_massification/extensions/lab_2026-11-20_c/Y5_portability_audit/code/run.py",
+      "sha256": "2312ad61ea7161b8c5ebf9328e545c9f7300605cfaca10b29efae5bd3e7eb4b1"
+    }
+  ],
+  "python_version": "3.11.17 (pandas 3.1.1, numpy 2.4.6)",
+  "seed": "none",
+  "run_utc": "2026-11-20T13:21:04Z",
+  "reproducibility": "Deterministic: no RNG, no network, no clock value in any result cell; all paths absolute and all inputs read-only. code/run.py was run twice in the same environment: exit 0 both times and results/transfer_checklist.csv and results/CLUSTER_RESULTS.csv were byte-identical (hashes below). Any change to an input file or to code/run.py changes the result hashes.",
+  "result_sha256": {
+    "results/transfer_checklist.csv": "2a512622a68c11649a66dd5f255462787cee94068fef8e80906eeed0892760eb",
+    "results/CLUSTER_RESULTS.csv": "a63bc188a82b79021b7eeaee0d013bb352560952c4452e3cb3b453ca419ce458"
+  },
+  "verdict": {
+    "overall": "DATA-COMPLETE",
+    "new_ask": [],
+    "inputs_audited": 6,
+    "checklist_rows": 12
+  }
+}

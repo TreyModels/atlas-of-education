@@ -1,0 +1,5 @@
+pair_id,schooling_indicator,market_indicator,direction_of_strongest_cell,strongest_cell_lag,strongest_partial_r,strongest_abs_partial_r,n_countries_schooling_to_market,n_obs_schooling_to_market_lag1,n_countries_market_to_schooling,n_obs_market_to_schooling_lag1,qualifying_runs,pair_verdict,reason,label
+SE.SEC.ENRR__SL.EMP.WORK.ZS,SE.SEC.ENRR,SL.EMP.WORK.ZS,schooling_to_market,1,0.2078868853,0.2078868853,29,700,28,629,none,NOT SUPPORTED,schooling_to_market: max |r| < 0.25; market_to_schooling: max |r| < 0.25,derived
+SE.SEC.ENRR__SL.SRV.EMPL.ZS,SE.SEC.ENRR,SL.SRV.EMPL.ZS,schooling_to_market,1,0.1491747860,0.1491747860,14,342,13,305,none,NOT SUPPORTED,schooling_to_market: max |r| < 0.25; market_to_schooling: max |r| < 0.25,derived
+SE.TER.ENRR__SL.EMP.WORK.ZS,SE.TER.ENRR,SL.EMP.WORK.ZS,schooling_to_market,1,0.1686052942,0.1686052942,29,689,27,628,none,NOT SUPPORTED,schooling_to_market: max |r| < 0.25; market_to_schooling: max |r| < 0.25,derived
+SE.TER.ENRR__SL.SRV.EMPL.ZS,SE.TER.ENRR,SL.SRV.EMPL.ZS,schooling_to_market,2,0.1405750434,0.1405750434,15,381,14,352,none,NOT SUPPORTED,schooling_to_market: max |r| < 0.25; market_to_schooling: max |r| < 0.25,derived

@@ -1,0 +1,44 @@
+country,iso3,level,threshold_pct,measure,crossing_year,band_earliest,band_latest,censoring,status,midpoint,included_in_median,exclusion_reason
+China,CHN,lower secondary,90,GER,2006,2003.0000000000,2006.0000000000,none,observed,2004.5000000000,True,included: band midpoint
+"Hong Kong SAR, China",HKG,lower secondary,90,GER,1998,,1998.0000000000,left,observed,,False,"left_censored_excluded (bound only, no band midpoint)"
+Cambodia,KHM,lower secondary,90,GER,>2019,2019.0000000000,,right,observed,,False,"right_censored_excluded (bound only, no band midpoint)"
+Republic of Korea,KOR,lower secondary,90,GER,1994,,1994.0000000000,left,observed,,False,"left_censored_excluded (bound only, no band midpoint)"
+Philippines,PHL,lower secondary,90,GER,2014,2009.0000000000,2014.0000000000,none,observed,2011.5000000000,True,included: band midpoint
+China,CHN,primary,90,GER,1970,,1970.0000000000,left,observed,,False,"left_censored_excluded (bound only, no band midpoint)"
+China,CHN,primary,90,GER_reconstructed,1975,1974.0000000000,1975.0000000000,none,reconstructed,1974.5000000000,True,included: band midpoint
+China,CHN,primary,90,NER,1987,,1987.0000000000,left,observed,,False,"left_censored_excluded (bound only, no band midpoint)"
+"Hong Kong SAR, China",HKG,primary,90,GER,2001,,2001.0000000000,left,observed,,False,"left_censored_excluded (bound only, no band midpoint)"
+"Hong Kong SAR, China",HKG,primary,90,GER_reconstructed,1971,,1971.0000000000,left,reconstructed,,False,"left_censored_excluded (bound only, no band midpoint)"
+"Hong Kong SAR, China",HKG,primary,90,NER,1974,1973.0000000000,1974.0000000000,none,observed,1973.5000000000,True,included: band midpoint
+Japan,JPN,primary,90,GER,2013,,2013.0000000000,left,observed,,False,"left_censored_excluded (bound only, no band midpoint)"
+Japan,JPN,primary,90,GER_reconstructed,1971,,1971.0000000000,left,reconstructed,,False,"left_censored_excluded (bound only, no band midpoint)"
+Cambodia,KHM,primary,90,GER,1981,1973.0000000000,1981.0000000000,none,observed,1977.0000000000,True,included: band midpoint
+Cambodia,KHM,primary,90,GER_reconstructed,1981,1973.0000000000,1981.0000000000,none,reconstructed,1977.0000000000,True,included: band midpoint
+Cambodia,KHM,primary,90,NER,2000,1999.0000000000,2000.0000000000,none,observed,1999.5000000000,True,included: band midpoint
+Republic of Korea,KOR,primary,90,GER,2000,,2000.0000000000,left,observed,,False,"left_censored_excluded (bound only, no band midpoint)"
+Republic of Korea,KOR,primary,90,GER_reconstructed,1971,,1971.0000000000,left,reconstructed,,False,"left_censored_excluded (bound only, no band midpoint)"
+Republic of Korea,KOR,primary,90,NER,1971,,1971.0000000000,left,observed,,False,"left_censored_excluded (bound only, no band midpoint)"
+Philippines,PHL,primary,90,GER,1971,,1971.0000000000,left,observed,,False,"left_censored_excluded (bound only, no band midpoint)"
+Philippines,PHL,primary,90,GER_reconstructed,1971,,1971.0000000000,left,reconstructed,,False,"left_censored_excluded (bound only, no band midpoint)"
+Philippines,PHL,primary,90,NER,1976,,1976.0000000000,left,observed,,False,"left_censored_excluded (bound only, no band midpoint)"
+China,CHN,secondary,90,GER,2010,2009.0000000000,2010.0000000000,none,observed,2009.5000000000,True,included: band midpoint
+China,CHN,secondary,90,GER_reconstructed,2009,2008.0000000000,2009.0000000000,none,reconstructed,2008.5000000000,True,included: band midpoint
+"Hong Kong SAR, China",HKG,secondary,90,GER,2012,2011.0000000000,2012.0000000000,none,observed,2011.5000000000,True,included: band midpoint
+"Hong Kong SAR, China",HKG,secondary,90,GER_reconstructed,2001,1996.0000000000,2001.0000000000,none,reconstructed,1998.5000000000,True,included: band midpoint
+"Hong Kong SAR, China",HKG,secondary,90,NER,2016,2015.0000000000,2016.0000000000,none,observed,2015.5000000000,True,included: band midpoint
+Japan,JPN,secondary,90,GER,2013,,2013.0000000000,left,observed,,False,"left_censored_excluded (bound only, no band midpoint)"
+Japan,JPN,secondary,90,GER_reconstructed,1973,1972.0000000000,1973.0000000000,none,reconstructed,1972.5000000000,True,included: band midpoint
+Cambodia,KHM,secondary,90,GER,>2024,2024.0000000000,,right,observed,,False,"right_censored_excluded (bound only, no band midpoint)"
+Cambodia,KHM,secondary,90,GER_reconstructed,>2023,2023.0000000000,,right,reconstructed,,False,"right_censored_excluded (bound only, no band midpoint)"
+Cambodia,KHM,secondary,90,NER,>2008,2008.0000000000,,right,observed,,False,"right_censored_excluded (bound only, no band midpoint)"
+Republic of Korea,KOR,secondary,90,GER,2000,,2000.0000000000,left,observed,,False,"left_censored_excluded (bound only, no band midpoint)"
+Republic of Korea,KOR,secondary,90,GER_reconstructed,1987,1986.0000000000,1987.0000000000,none,reconstructed,1986.5000000000,True,included: band midpoint
+Republic of Korea,KOR,secondary,90,NER,1996,1992.0000000000,1996.0000000000,none,observed,1994.0000000000,True,included: band midpoint
+Philippines,PHL,secondary,90,GER,2022,2021.0000000000,2022.0000000000,none,observed,2021.5000000000,True,included: band midpoint
+Philippines,PHL,secondary,90,GER_reconstructed,2022,2021.0000000000,2022.0000000000,none,reconstructed,2021.5000000000,True,included: band midpoint
+Philippines,PHL,secondary,90,NER,>2015,2015.0000000000,,right,observed,,False,"right_censored_excluded (bound only, no band midpoint)"
+China,CHN,upper secondary,90,GER,>2019,2019.0000000000,,right,observed,,False,"right_censored_excluded (bound only, no band midpoint)"
+"Hong Kong SAR, China",HKG,upper secondary,90,GER,2012,2011.0000000000,2012.0000000000,none,observed,2011.5000000000,True,included: band midpoint
+Cambodia,KHM,upper secondary,90,GER,>2008,2008.0000000000,,right,observed,,False,"right_censored_excluded (bound only, no band midpoint)"
+Republic of Korea,KOR,upper secondary,90,GER,1994,,1994.0000000000,left,observed,,False,"left_censored_excluded (bound only, no band midpoint)"
+Philippines,PHL,upper secondary,90,GER,>2018,2018.0000000000,,right,observed,,False,"right_censored_excluded (bound only, no band midpoint)"

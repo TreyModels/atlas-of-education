@@ -1,0 +1,23 @@
+metric,value,label
+verdict,NOT SUPPORTED,derived
+n_cells,24,derived
+n_cells_abs_partial_r_ge_0.25,0,derived
+n_pairs_supported,0,derived
+n_pairs_not_supported,4,derived
+n_pairs_unable,0,derived
+max_abs_partial_r,0.2079,derived
+max_abs_partial_r_pair,SE.SEC.ENRR__SL.EMP.WORK.ZS,derived
+max_abs_partial_r_direction,schooling_to_market,derived
+max_abs_partial_r_lag,1,derived
+max_abs_partial_r_n_obs,700,derived
+max_abs_partial_r_n_countries,30,derived
+forward_partial_r_min,0.1023,derived
+forward_partial_r_max,0.2079,derived
+reverse_partial_r_min,-0.0567,derived
+reverse_partial_r_max,0.0904,derived
+zero_order_r_min,0.4899,derived
+zero_order_r_max,0.7081,derived
+rank_partial_abs_max_sensitivity,0.2465,derived
+pairwindow_demean_abs_max_sensitivity,0.1478,derived
+min_countries_any_cell,13,derived
+max_countries_any_cell,30,derived

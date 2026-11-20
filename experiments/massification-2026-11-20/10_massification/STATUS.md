@@ -561,3 +561,40 @@ append-only with per-agent parties via `bridge-agent.sh`.
   thresholds.
 - **Determinism:** all five cluster scripts + the amendment script re-ran **byte-identical**; `SHA256SUMS.txt`
   51/51 verify; `RUN_MANIFEST.json` carries predeclaration/data/code/results hashes and the re-run table.
+
+---
+
+## 3u. Council-2 brief 017 + battery C (five anchored experiments, Y1–Y5) — 2026-11-20 ~21:30 +08:00
+
+- **User directive this session (institutionalised):** the Council decides next directions and, **after every
+  delivered results batch, issues exactly five anchored experiments**; each experiment must carry the mandatory
+  7-field ANCHORING BLOCK (first-order channel link; what changes in the model if positive vs negative; why it is
+  not a niche; on-disk data or a HELD data ask; numeric threshold + falsifier; closed-claim check; cost/rank) plus a
+  **drop-first** naming. Recorded as **D89** (rabbit-hole guard = mandatory step-back + block + drop-first); the
+  standing order is also written into `06_report/NEXT_WINDOW_PROMPT.md` so future windows inherit it.
+- **Council cycle executed** (`08_council/brief_017/SYNTHESIS_017.md`, sha256 47e28af7…): step-back (five lines);
+  **battery B adjudicated ACCEPT-WITH-CONDITIONS** (labelled design evidence, evidential weight zero; Council
+  re-derived X10 ρ = −0.443627 / 17-17 and X11 ρ = −0.621524 / 17-17 — MATCH); X3 relabelled
+  derived/mechanical (its numerator is a lagged tertiary-attainment stock); battery-B numbers banned from evidence
+  columns; all four disclosed Lead adjudications ruled **correct**. Decisions **D88–D92**: battery-B verdict;
+  standing order; Y-slate ranking (Y1 > Y4 > Y3 > Y2 > Y5) with **drop-first = Y5**; **critical path = the A1/phase
+  write-up** (D91; model repair barred R27; more descriptive battery work = the drift being corrected; C1
+  provider-entry design = held re-opener); data ruling (10 usable on-disk series; PSA/ES/annual capacity/per-pupil/
+  subnational sector = HELD; no Y needs a new ask). No external message sent (bridge times out, D87).
+- **Battery C predeclared and run:** `10_massification/extensions/lab_2026-11-20_c/` — `PRE_DECLARATIONS.md`
+  sha256 `8b431b672bbc9679dc192e907c1db3b95e22bacad2abd6b377c68e864dc336e1` (thresholds copied verbatim from
+  SYNTHESIS_017 §D, Lead operationalisation declared). Executed by **three DeepSeek Flash workers** (disjoint
+  dirs: Y1+Y3 / Y2+Y4 / Y5); Lead consolidated; **all five scripts re-ran byte-identical**; SHA256SUMS 46/46 verify.
+- **Results (RESULTS.csv, one row each):** **Y1 NOT SUPPORTED** — opportunity-cost account discarded
+  (income-partial ρ ceiling×agri −0.105, ceiling×youth-unemp +0.246, n=30; raw agri −0.718 absorbed by income;
+  6-system raw check points the other way, disclosed tension). **Y2 NOT SUPPORTED** — no detectable schooling↔market
+  lead-lag (max |partial r| 0.208 < 0.25 bar; zero-order 0.49–0.71 is shared trend; EQUIVALENT reinforced).
+  **Y3 NOT SUPPORTED** — capacity floor-vs-ceiling not separable at n=6 (floor ρ 0.50 boundary; ceiling ρ 0.60
+  fails; leave-one-out fragility 0.0–0.8 / 0.3–0.9 disclosed; A10 stays a model-side ruling). **Y4 DISTINGUISHED** —
+  the world-society null (median-year crossings) manufactures upper-secondary ≥90 crossings for 4 never-crossed
+  systems (2 evidence-backed: CHN 79.39, PHL 66.05), supporting the D77 scoping; caveat = upper null rests on one
+  dated crossing (HKG 2011.5). **Y5 DATA-COMPLETE** — all six D75 CHN/HKG transfer inputs present on disk; **0
+  NEW-ASK**; held queue reaffirmed HELD, nothing sent; design-only (no portability claim, R20/R22).
+- **Critical path (D91) unchanged:** the A1/phase write-up + addendum C1–C10 remains the one thing this cycle;
+  Y1–Y5 tighten its open descriptive items only. Phase **CLOSED** at PARTIAL/DESCRIPTIVE/EQUIVALENT; C1–C4 not
+  reopened; no direction claims.

@@ -1,0 +1,6 @@
+level,n_90_rows_total,n_dated_non_censored_rows,n_systems_dated_non_censored,median_year_system_collapsed,median_year_all_rows,median_year_incl_left_censored_sensitivity,n_censored_rows_excluded,censored_rows_listed,null_defined,label
+primary,17,5,3,1974.5000000000,1977.0000000000,1974.0000000000,12,CHN:GER:1970(left); CHN:NER:1987(left); HKG:GER:2001(left); HKG:GER_reconstructed:1971(left); JPN:GER:2013(left); JPN:GER_reconstructed:1971(left); KOR:GER:2000(left); KOR:GER_reconstructed:1971(left); KOR:NER:1971(left); PHL:GER:1971(left); PHL:GER_reconstructed:1971(left); PHL:NER:1976(left),True,derived
+lower secondary,5,2,2,2008.0000000000,2008.0000000000,2001.2500000000,3,HKG:GER:1998(left); KHM:GER:>2019(right); KOR:GER:1994(left),True,derived
+secondary,16,10,5,2009.0000000000,2009.0000000000,2009.0000000000,6,JPN:GER:2013(left); KHM:GER:>2024(right); KHM:GER_reconstructed:>2023(right); KHM:NER:>2008(right); KOR:GER:2000(left); PHL:NER:>2015(right),True,derived
+upper secondary,5,1,1,2011.5000000000,2011.5000000000,2002.7500000000,4,CHN:GER:>2019(right); KHM:GER:>2008(right); KOR:GER:1994(left); PHL:GER:>2018(right),True,derived
+tertiary,0,0,0,,,,0,,False,derived

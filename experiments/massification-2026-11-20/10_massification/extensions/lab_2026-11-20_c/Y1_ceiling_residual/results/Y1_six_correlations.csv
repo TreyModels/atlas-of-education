@@ -1,0 +1,5 @@
+ceiling_variable,candidate,estimator,n,n_countries,rho,label,small_n_caveat,countries
+completion_upper_secondary,agri,Spearman rho on terminal/latest observed country values (<=2024),4,4,-0.8,observed,n=4 <= 6 (six-system check; descriptive only),CHN;KHM;KOR;PHL
+completion_upper_secondary,wage_share,Spearman rho on terminal/latest observed country values (<=2024),4,4,0.8,observed,n=4 <= 6 (six-system check; descriptive only),CHN;KHM;KOR;PHL
+ger_tertiary,agri,Spearman rho on terminal/latest observed country values (<=2024),6,6,-0.7142857142857143,observed,n=6 <= 6 (six-system check; descriptive only),CHN;HKG;JPN;KHM;KOR;PHL
+ger_tertiary,wage_share,Spearman rho on terminal/latest observed country values (<=2024),6,6,0.7142857142857143,observed,n=6 <= 6 (six-system check; descriptive only),CHN;HKG;JPN;KHM;KOR;PHL

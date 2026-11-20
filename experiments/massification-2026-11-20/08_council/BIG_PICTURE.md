@@ -205,3 +205,51 @@ imputation as observation. E1 stays PARKED; direction claims EQUIVALENT.
 - **Labels changed this cycle:** portability PARK → **PARK (armed, diagnostic-only)**; capacity re-measurement →
   **PARK** until observed annual series (C4). KEEP/KILL lists otherwise as in the cycle-8 step-back; one thread and
   drop-if-one-thing unchanged.
+
+
+## Cycle 9 addendum (battery-B adjudication + standing order + Y1–Y5)
+
+1. **Goal restated:** massification produced by schooling–government–market interaction, each standing the others
+   up, with cohort flows and country/sector variation; shadow secondary. Phase CLOSED at
+   PARTIAL/DESCRIPTIVE/EQUIVALENT (D76); C1–C4 only re-openers.
+2. **Threads (labels).** **KEEP** — A1 descriptive write-up + C1–C10 addendum; bounded negative + equivalence/
+   identification map; gate/rules; battery B **as labelled design appendix only** (evidential weight zero, D88);
+   Y1–Y5 slate (descriptive checks that tighten the write-up + portability design; none reopens C1–C4). **PARK** —
+   A6 CHN / A7 HKG portability (PARKED-ARMED; Y5 sharpens the design), KHM holdout, E4/E3, E1, E5/E7, ECI, T1/T2,
+   shadow paper, C1 provider-entry cell (re-opener, held). **KILL** — citing toy/amended-toy numbers as evidence;
+   re-running toys to rescue a FAIL; further scaling repair (R27); "capacity explains timing" (D61/R28); direction/
+   complementarity claims from panel moments (R13).
+3. **One thread this cycle:** the **A1 write-up** (C1–C10 closed) — no on-disk experiment can change the locked
+   verdict; the write-up is the only route to the publishable bounded negative + equivalence map.
+4. **Drift check:** battery B (15 experiments / ~388 KB) is the third consecutive measurement-heavy batch — **two
+   red flags** (measuring-vs-modelling; re-describing a closed phase). Critical-path justification (recorded, D88):
+   the verdict is locked so honest options are label-and-ban (D88) + point the five new experiments at the
+   write-up's open items, never at re-opening. No closed claim reopened; no toy re-run ordered.
+5. **If only one thing mattered this week:** the A1 write-up. **Drop-first of Y1–Y5: Y5** (portability design
+   audit — changes no verdict). Red-flag count this cycle: **2** (both mitigated by labelling, results-table ban,
+   no re-runs).
+
+### Battery-B adjudication summary (D88, `brief_017/SYNTHESIS_017.md` §B)
+
+- **Verdict: ACCEPT-WITH-CONDITIONS** (design evidence, weight zero). Council re-derived four headline numbers from
+  the CSVs — X10 ρ **−0.443627** / 17/17, X11 **−0.621524** / 17/17, X12 ratio **1.098**, X1 within **−0.858125** —
+  **all match the battery**. Lead adjudications (X1 ambiguity, X2 sign, X4 denominator, cluster-5 Amendment B1) all
+  ruled **CORRECT**. Defects recorded: X3 mechanical-caveat (relabel derived/mechanical); cluster-5 contractive
+  recursion (predeclaration must sanity-check reachability); X1/X2 literal-falsifier ambiguity (authoring lesson).
+- Cluster labels: 1 not-on-critical-path (mechanical caveat), 2 not-on-critical-path (data-starved), 3
+  rabbit-hole-adjacent, 4 descriptive-context, 5 not-evidence (toy).
+
+### Standing order (D89) + Y1–Y5 (D90)
+
+- Every results batch → **exactly 5 new anchored experiments** with the 7-field ANCHORING BLOCK (first-order link;
+  positive-vs-negative discriminating action; not-a-niche reason; on-disk data; numeric threshold+falsifier;
+  closed-claim check; cost+rank) + **drop-first named**. Missing a field = RETURN.
+- Slate: **Y1** ceiling-residual candidate-account screen (#1) · **Y4** world-society rival false-positive check (#2) ·
+  **Y3** capacity floor-not-ceiling check (#3) · **Y2** cross-channel lead-lag constraint (#4) · **Y5** portability
+  design audit (#5, drop-first). Full blocks in `brief_017/SYNTHESIS_017.md` §D.
+
+### Next phase + data (D91/D92)
+
+- Critical path = **A1 write-up**; one thing this cycle = close C1–C10. Data: usable = the 10 on-disk series; HELD =
+  PSA/ES microdata, annual capacity/enforcement, per-pupil, subnational sector, expansion file. No Y needs a new ask.
+  **No external message sent this cycle.**

@@ -1,0 +1,333 @@
+{
+  "battery": "lab_2026-11-20_c",
+  "status": "DESCRIPTIVE / DESIGN-ONLY; no causal or direction claims; Y5 design-only",
+  "phase_state": "CLOSED at PARTIAL/DESCRIPTIVE/EQUIVALENT (D76); C1-C4 not reopened",
+  "authority": "Synthetic Council-2 brief 017 (SYNTHESIS_017.md, D88-D92); standing order D89 = 5 anchored experiments per delivered results batch",
+  "run_utc": "2026-11-20T13:25:15Z",
+  "python": "3.11.17",
+  "python_path": "/Users/treymenefee/Library/Application Support/dsh-massification/venv/bin/python",
+  "pandas": "3.1.1",
+  "predeclarations_sha256": "8b431b672bbc9679dc192e907c1db3b95e22bacad2abd6b377c68e864dc336e1",
+  "data_sha256": {
+    "10_massification/data/UNIVERSALIZATION_SERIES.csv": "85bc869396ebfcb39e3e1a21a31af219e75a07326c738a51d2bfdbe536737ddb",
+    "10_massification/data/UNIVERSALIZATION_TIMING.csv": "6e067ffd76b2c57c7c0363387735750cb9e6f68bc4dfd242b3d0f9c80786f892",
+    "10_massification/data/JOBS_AND_MARKETS_PANEL.csv": "aaaab2744803989ff0f347e27d5824c9b0086b967914d96d21ecd354329787d3",
+    "10_massification/data/STATE_CAPACITY.csv": "704efacad00f0ba7ddf579459a930d064fdb0f4b882cffbbf44a6cbecd585044",
+    "10_massification/data/SCHOOL_EXPANSION.csv": "c218e6c9bd784e135e089ebecefec21112a09e6bf2c778599a33bc81b78c8ea3",
+    "10_massification/data/POLICY_TIMELINE.csv": "a068b5bf92cee52e442231ef8de63e1b3814d1e42cd61b02969ccf1f3fb3353e",
+    "09_relations/data/panel_wdi_long.csv": "a37629ae5d4f9ed2be4c71e33bfc876131880f65d356c88bd4d047a9bbdeae75",
+    "09_relations/data/panel_wdi_wide.csv": "7fd645cb05fbffde038366a010aea2ffa5f5d1afaaa72642e6760ac5300c4485"
+  },
+  "clusters": {
+    "Y1_ceiling_residual": {
+      "experiments": [
+        "Y1"
+      ],
+      "results_files": {
+        "Y1_ceiling_residual/results/CLUSTER_RESULTS.csv": "0a3eb3d5abb22df3b4d2cf41efe3d4cc2eb8e40dca30bac630f877a3afebeb58",
+        "Y1_ceiling_residual/results/Y1_correlations.csv": "811b637f5933ef42696cb4ca1cf1579a8ed4b7465f839070bf46ce6a67e5e38a",
+        "Y1_ceiling_residual/results/Y1_country_panel.csv": "b2d35002a081699643cc48f79c1c421dfe756b47ed69579f1784c06a7136256f",
+        "Y1_ceiling_residual/results/Y1_six_correlations.csv": "689fb35c2d07c01436f107197746f21449bdcf8346492ff8948352a9abeee2c0",
+        "Y1_ceiling_residual/results/Y1_six_system.csv": "8858dfe7e006ca8daa8c60fa248ab4ff2efab403b264dd54dcb3d2eebb10701c"
+      },
+      "code": {
+        "Y1_ceiling_residual/code/run.py": "7e9a75dd7a8bf25d68138d430aa0bca3cb7cb88aa5d8528a966bfd18ec21d247"
+      },
+      "manifest": {
+        "experiment": "Y1",
+        "predeclarations_sha256": "8b431b672bbc9679dc192e907c1db3b95e22bacad2abd6b377c68e864dc336e1",
+        "data_files_read": [
+          {
+            "path": "/Users/treymenefee/massification_live/experiments/massification-2026-11-20/09_relations/data/panel_wdi_long.csv",
+            "sha256": "a37629ae5d4f9ed2be4c71e33bfc876131880f65d356c88bd4d047a9bbdeae75"
+          },
+          {
+            "path": "/Users/treymenefee/massification_live/experiments/massification-2026-11-20/10_massification/data/UNIVERSALIZATION_SERIES.csv",
+            "sha256": "85bc869396ebfcb39e3e1a21a31af219e75a07326c738a51d2bfdbe536737ddb"
+          },
+          {
+            "path": "/Users/treymenefee/massification_live/experiments/massification-2026-11-20/10_massification/data/JOBS_AND_MARKETS_PANEL.csv",
+            "sha256": "aaaab2744803989ff0f347e27d5824c9b0086b967914d96d21ecd354329787d3"
+          }
+        ],
+        "code": [
+          {
+            "path": "/Users/treymenefee/massification_live/experiments/massification-2026-11-20/10_massification/extensions/lab_2026-11-20_c/Y1_ceiling_residual/code/run.py",
+            "sha256": "7e9a75dd7a8bf25d68138d430aa0bca3cb7cb88aa5d8528a966bfd18ec21d247"
+          }
+        ],
+        "python_version": "3.11.17",
+        "seed": "none",
+        "run_utc": "2026-11-20T13:24:54Z",
+        "reproducibility": "Deterministic: no RNG, no network, fixed absolute input paths, explicit sorts. results/*.csv contain no timestamps and are byte-identical across re-runs (verified by shasum -a 256). This manifest itself changes only in run_utc between runs."
+      }
+    },
+    "Y2_leadlag": {
+      "experiments": [
+        "Y2"
+      ],
+      "results_files": {
+        "Y2_leadlag/results/CLUSTER_RESULTS.csv": "2cbc47a42245dc91b28e26fa9ccb9d254657c8004e5d2bf8a345280131ddd031",
+        "Y2_leadlag/results/Y2_COUNTRY_COVERAGE.csv": "530d16d113682530701d44e839df956efcca240bbcf77d0032765d52a9277cf3",
+        "Y2_leadlag/results/Y2_LAG_MATRIX.csv": "3ae694c1aed8e652ac37e12b60c94255f233d4723600b5c9b650487123ab9edb",
+        "Y2_leadlag/results/Y2_MATRIX_WIDE.csv": "36ed247b91a040e43ed74ebf189c6aa86c7acd902bb43184ab409cfd77566ede",
+        "Y2_leadlag/results/Y2_PAIR_VERDICTS.csv": "ca357be3468d8c141ee0c95fde353ccaae9b88c0f2a30bf6bb2ac5e7aa9921ed",
+        "Y2_leadlag/results/Y2_SENSITIVITY.csv": "f984929424ad24f97b5d0c6fa386fd9a0319747066b150b1d89fb5e0d6839773",
+        "Y2_leadlag/results/Y2_SUMMARY.csv": "befedaf29af924e66a03b3568ad0b21174d3f9cc382e4febcee1a6f8d67460e4"
+      },
+      "code": {
+        "Y2_leadlag/code/run.py": "d93fa11940c8f94e373e8ff21891930c563c71cb3e7b63707bfed662df2f5ca9"
+      },
+      "manifest": {
+        "experiment": "Y2_leadlag",
+        "predeclarations_sha256": "8b431b672bbc9679dc192e907c1db3b95e22bacad2abd6b377c68e864dc336e1",
+        "data_files_read": [
+          {
+            "path": "/Users/treymenefee/massification_live/experiments/massification-2026-11-20/09_relations/data/panel_wdi_long.csv",
+            "sha256": "a37629ae5d4f9ed2be4c71e33bfc876131880f65d356c88bd4d047a9bbdeae75"
+          }
+        ],
+        "code": [
+          {
+            "path": "/Users/treymenefee/massification_live/experiments/massification-2026-11-20/10_massification/extensions/lab_2026-11-20_c/Y2_leadlag/code/run.py",
+            "sha256": "d93fa11940c8f94e373e8ff21891930c563c71cb3e7b63707bfed662df2f5ca9"
+          }
+        ],
+        "python_version": "3.11.17",
+        "seed": "none",
+        "run_utc": "2026-11-20T13:24:55Z",
+        "reproducibility": "deterministic; no RNG, no network, no imputation; results/*.csv byte-identical on re-run"
+      }
+    },
+    "Y3_capacity_floor": {
+      "experiments": [
+        "Y3"
+      ],
+      "results_files": {
+        "Y3_capacity_floor/results/CLUSTER_RESULTS.csv": "1233896d64a60438a991aa548fbac576bfa4bf156dd95589132f4a9bbfb0b39e",
+        "Y3_capacity_floor/results/Y3_correlations.csv": "24de180aac267ffd03ec4c8e342517888c0a3a88fbe95ab0139beeb392b69b6e",
+        "Y3_capacity_floor/results/Y3_country_detail.csv": "4d1f775982beefc8f4015f7a9d3cd9db77a5b9c184b24c19dd2db2b7026fa066",
+        "Y3_capacity_floor/results/Y3_leave_one_out.csv": "3af6854edd4f455cf2c4686cc3eb4e8d48736fece4dce8653025ad28171a21c9",
+        "Y3_capacity_floor/results/Y3_ptr_source_sensitivity.csv": "17ffcea0f674da5c361de4ee9d506eb93a7d67499113c300857702493a893ec5"
+      },
+      "code": {
+        "Y3_capacity_floor/code/run.py": "11cb21f33bfe1fd2f8c9eea18affecae3cdd1e3437dfe992083f59b5a3480c64"
+      },
+      "manifest": {
+        "experiment": "Y3",
+        "predeclarations_sha256": "8b431b672bbc9679dc192e907c1db3b95e22bacad2abd6b377c68e864dc336e1",
+        "data_files_read": [
+          {
+            "path": "/Users/treymenefee/massification_live/experiments/massification-2026-11-20/09_relations/data/panel_wdi_long.csv",
+            "sha256": "a37629ae5d4f9ed2be4c71e33bfc876131880f65d356c88bd4d047a9bbdeae75"
+          },
+          {
+            "path": "/Users/treymenefee/massification_live/experiments/massification-2026-11-20/10_massification/data/UNIVERSALIZATION_SERIES.csv",
+            "sha256": "85bc869396ebfcb39e3e1a21a31af219e75a07326c738a51d2bfdbe536737ddb"
+          },
+          {
+            "path": "/Users/treymenefee/massification_live/experiments/massification-2026-11-20/10_massification/data/JOBS_AND_MARKETS_PANEL.csv",
+            "sha256": "aaaab2744803989ff0f347e27d5824c9b0086b967914d96d21ecd354329787d3"
+          }
+        ],
+        "code": [
+          {
+            "path": "/Users/treymenefee/massification_live/experiments/massification-2026-11-20/10_massification/extensions/lab_2026-11-20_c/Y3_capacity_floor/code/run.py",
+            "sha256": "11cb21f33bfe1fd2f8c9eea18affecae3cdd1e3437dfe992083f59b5a3480c64"
+          }
+        ],
+        "python_version": "3.11.17",
+        "seed": "none",
+        "run_utc": "2026-11-20T13:24:55Z",
+        "reproducibility": "Deterministic: no RNG, no network, fixed absolute input paths, explicit sorts. results/*.csv contain no timestamps and are byte-identical across re-runs (verified by shasum -a 256). This manifest itself changes only in run_utc between runs."
+      }
+    },
+    "Y4_worldsociety": {
+      "experiments": [
+        "Y4"
+      ],
+      "results_files": {
+        "Y4_worldsociety/results/CLUSTER_RESULTS.csv": "37cccb5aa30b83109627f5959709428553633746190770008543b15a91f0185f",
+        "Y4_worldsociety/results/Y4_AUDIT.csv": "e05c2e12a4d32f9d72482d34932ffce5295b80a7b12e73c2fe234d82315d06dd",
+        "Y4_worldsociety/results/Y4_LEVEL_SCORE.csv": "a41b8cfacdeb4b2f9df6d80034238c2ad5eda32b560ec39528b15264429e2f31",
+        "Y4_worldsociety/results/Y4_LEVEL_SUMMARY.csv": "c6cfa946894898125d07f63ca5066ec8ff6951808752172f7f386f2debe4dc1e",
+        "Y4_worldsociety/results/Y4_MEDIAN_INPUTS.csv": "6bf3b3b690a8c90a59bcfaa32c55e2c6fcff7b68e05b9e95ee5b7594c977d36a",
+        "Y4_worldsociety/results/Y4_SUMMARY.csv": "407250e46d9e4ba2a8a4a91ecd4ff3c8b4138f248cf536db638c1b36b7de69da"
+      },
+      "code": {
+        "Y4_worldsociety/code/run.py": "c622e341b76303928df214f3c34adcec256edd8e7ca6956bd5e051c4d85718e0"
+      },
+      "manifest": {
+        "experiment": "Y4_worldsociety",
+        "predeclarations_sha256": "8b431b672bbc9679dc192e907c1db3b95e22bacad2abd6b377c68e864dc336e1",
+        "data_files_read": [
+          {
+            "path": "/Users/treymenefee/massification_live/experiments/massification-2026-11-20/10_massification/data/UNIVERSALIZATION_TIMING.csv",
+            "sha256": "6e067ffd76b2c57c7c0363387735750cb9e6f68bc4dfd242b3d0f9c80786f892"
+          },
+          {
+            "path": "/Users/treymenefee/massification_live/experiments/massification-2026-11-20/10_massification/data/UNIVERSALIZATION_SERIES.csv",
+            "sha256": "85bc869396ebfcb39e3e1a21a31af219e75a07326c738a51d2bfdbe536737ddb"
+          }
+        ],
+        "code": [
+          {
+            "path": "/Users/treymenefee/massification_live/experiments/massification-2026-11-20/10_massification/extensions/lab_2026-11-20_c/Y4_worldsociety/code/run.py",
+            "sha256": "c622e341b76303928df214f3c34adcec256edd8e7ca6956bd5e051c4d85718e0"
+          }
+        ],
+        "python_version": "3.11.17",
+        "seed": "none",
+        "run_utc": "2026-11-20T13:24:56Z",
+        "reproducibility": "deterministic; no RNG, no network, no imputation; results/*.csv byte-identical on re-run"
+      }
+    },
+    "Y5_portability_audit": {
+      "experiments": [
+        "Y5"
+      ],
+      "results_files": {
+        "Y5_portability_audit/results/CLUSTER_RESULTS.csv": "a63bc188a82b79021b7eeaee0d013bb352560952c4452e3cb3b453ca419ce458",
+        "Y5_portability_audit/results/transfer_checklist.csv": "2a512622a68c11649a66dd5f255462787cee94068fef8e80906eeed0892760eb"
+      },
+      "code": {
+        "Y5_portability_audit/code/run.py": "2312ad61ea7161b8c5ebf9328e545c9f7300605cfaca10b29efae5bd3e7eb4b1"
+      },
+      "manifest": {
+        "experiment": "Y5",
+        "design_only": true,
+        "predeclarations_sha256": "8b431b672bbc9679dc192e907c1db3b95e22bacad2abd6b377c68e864dc336e1",
+        "data_files_read": [
+          {
+            "path": "10_massification/data/UNIVERSALIZATION_TIMING.csv",
+            "sha256": "6e067ffd76b2c57c7c0363387735750cb9e6f68bc4dfd242b3d0f9c80786f892"
+          },
+          {
+            "path": "10_massification/data/UNIVERSALIZATION_SERIES.csv",
+            "sha256": "85bc869396ebfcb39e3e1a21a31af219e75a07326c738a51d2bfdbe536737ddb"
+          },
+          {
+            "path": "10_massification/data/POLICY_TIMELINE.csv",
+            "sha256": "a068b5bf92cee52e442231ef8de63e1b3814d1e42cd61b02969ccf1f3fb3353e"
+          },
+          {
+            "path": "10_massification/data/JOBS_AND_MARKETS_PANEL.csv",
+            "sha256": "aaaab2744803989ff0f347e27d5824c9b0086b967914d96d21ecd354329787d3"
+          },
+          {
+            "path": "10_massification/data/STATE_CAPACITY.csv",
+            "sha256": "704efacad00f0ba7ddf579459a930d064fdb0f4b882cffbbf44a6cbecd585044"
+          },
+          {
+            "path": "10_massification/data/SCHOOL_EXPANSION.csv",
+            "sha256": "c218e6c9bd784e135e089ebecefec21112a09e6bf2c778599a33bc81b78c8ea3"
+          },
+          {
+            "path": "10_massification/data/DATA_NOTES_MASSIFICATION.md",
+            "sha256": "e2cfcdb2b17eb3d659a94b98c9b25c2b0803a4eac59d521ff237563ec857a8ec"
+          }
+        ],
+        "code": [
+          {
+            "path": "10_massification/extensions/lab_2026-11-20_c/Y5_portability_audit/code/run.py",
+            "sha256": "2312ad61ea7161b8c5ebf9328e545c9f7300605cfaca10b29efae5bd3e7eb4b1"
+          }
+        ],
+        "python_version": "3.11.17 (pandas 3.1.1, numpy 2.4.6)",
+        "seed": "none",
+        "run_utc": "2026-11-20T13:21:04Z",
+        "reproducibility": "Deterministic: no RNG, no network, no clock value in any result cell; all paths absolute and all inputs read-only. code/run.py was run twice in the same environment: exit 0 both times and results/transfer_checklist.csv and results/CLUSTER_RESULTS.csv were byte-identical (hashes below). Any change to an input file or to code/run.py changes the result hashes.",
+        "result_sha256": {
+          "results/transfer_checklist.csv": "2a512622a68c11649a66dd5f255462787cee94068fef8e80906eeed0892760eb",
+          "results/CLUSTER_RESULTS.csv": "a63bc188a82b79021b7eeaee0d013bb352560952c4452e3cb3b453ca419ce458"
+        },
+        "verdict": {
+          "overall": "DATA-COMPLETE",
+          "new_ask": [],
+          "inputs_audited": 6,
+          "checklist_rows": 12
+        }
+      }
+    }
+  },
+  "determinism_rerun": {
+    "Y1_ceiling_residual": {
+      "status": "BYTE_IDENTICAL",
+      "exit_code": 0,
+      "seconds": 0.5,
+      "files": [
+        "results/CLUSTER_RESULTS.csv",
+        "results/Y1_correlations.csv",
+        "results/Y1_country_panel.csv",
+        "results/Y1_six_correlations.csv",
+        "results/Y1_six_system.csv"
+      ]
+    },
+    "Y2_leadlag": {
+      "status": "BYTE_IDENTICAL",
+      "exit_code": 0,
+      "seconds": 1.2,
+      "files": [
+        "results/CLUSTER_RESULTS.csv",
+        "results/Y2_COUNTRY_COVERAGE.csv",
+        "results/Y2_LAG_MATRIX.csv",
+        "results/Y2_MATRIX_WIDE.csv",
+        "results/Y2_PAIR_VERDICTS.csv",
+        "results/Y2_SENSITIVITY.csv",
+        "results/Y2_SUMMARY.csv"
+      ]
+    },
+    "Y3_capacity_floor": {
+      "status": "BYTE_IDENTICAL",
+      "exit_code": 0,
+      "seconds": 0.4,
+      "files": [
+        "results/CLUSTER_RESULTS.csv",
+        "results/Y3_correlations.csv",
+        "results/Y3_country_detail.csv",
+        "results/Y3_leave_one_out.csv",
+        "results/Y3_ptr_source_sensitivity.csv"
+      ]
+    },
+    "Y4_worldsociety": {
+      "status": "BYTE_IDENTICAL",
+      "exit_code": 0,
+      "seconds": 0.4,
+      "files": [
+        "results/CLUSTER_RESULTS.csv",
+        "results/Y4_AUDIT.csv",
+        "results/Y4_LEVEL_SCORE.csv",
+        "results/Y4_LEVEL_SUMMARY.csv",
+        "results/Y4_MEDIAN_INPUTS.csv",
+        "results/Y4_SUMMARY.csv"
+      ]
+    },
+    "Y5_portability_audit": {
+      "status": "BYTE_IDENTICAL",
+      "exit_code": 0,
+      "seconds": 0.4,
+      "files": [
+        "results/CLUSTER_RESULTS.csv",
+        "results/transfer_checklist.csv"
+      ]
+    }
+  },
+  "n_experiments": 5,
+  "verdict_counts": {
+    "DATA-COMPLETE": 1,
+    "DISTINGUISHED": 1,
+    "NOT SUPPORTED": 3
+  },
+  "verification_errors": [],
+  "labels": {
+    "observed": "on-disk measured series",
+    "derived": "computed from observed series (proxy)"
+  },
+  "council_ranking": {
+    "Y1": 1,
+    "Y4": 2,
+    "Y3": 3,
+    "Y2": 4,
+    "Y5": "5 (drop-first)"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "experiment": "Y2_leadlag",
+  "predeclarations_sha256": "8b431b672bbc9679dc192e907c1db3b95e22bacad2abd6b377c68e864dc336e1",
+  "data_files_read": [
+    {
+      "path": "/Users/treymenefee/massification_live/experiments/massification-2026-11-20/09_relations/data/panel_wdi_long.csv",
+      "sha256": "a37629ae5d4f9ed2be4c71e33bfc876131880f65d356c88bd4d047a9bbdeae75"
+    }
+  ],
+  "code": [
+    {
+      "path": "/Users/treymenefee/massification_live/experiments/massification-2026-11-20/10_massification/extensions/lab_2026-11-20_c/Y2_leadlag/code/run.py",
+      "sha256": "d93fa11940c8f94e373e8ff21891930c563c71cb3e7b63707bfed662df2f5ca9"
+    }
+  ],
+  "python_version": "3.11.17",
+  "seed": "none",
+  "run_utc": "2026-11-20T13:25:14Z",
+  "reproducibility": "deterministic; no RNG, no network, no imputation; results/*.csv byte-identical on re-run"
+}

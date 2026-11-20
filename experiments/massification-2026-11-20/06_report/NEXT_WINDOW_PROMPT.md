@@ -82,6 +82,26 @@ causal or direction claims; report all cells incl. failures; write `RESULTS.csv`
 `RUN_MANIFEST.json`, `SHA256SUMS.txt`; commit and push to the branch; report the 5 most decision-relevant
 findings, the commit, and the zip hash.
 
+## Standing order from the Council (institutionalised 2026-11-20, D89 — binding on future windows)
+
+**After every delivered results batch, the Council issues exactly five new anchored experiments.** Each must carry
+the mandatory 7-field ANCHORING BLOCK, and the Council must name which of its own five it would drop first:
+(i) first-order link (which channel: schooling / government / markets / cohort flows / scaling);
+(ii) what changes in the model if the result is positive vs negative (the discriminating action);
+(iii) why it is not a niche (a reader of the first-order question must care);
+(iv) data on disk (exact file + columns) or an explicit HELD data ask;
+(v) predeclaration-ready numeric threshold + falsifier, fixed before the run;
+(vi) closed-claim check (does not reopen C1–C4);
+(vii) cost class + expected information-gain rank.
+
+The **rabbit-hole guard** is part of the block: the step-back (`08_council/BIG_PICTURE_RULE.md`) is mandatory at
+the start of every Council cycle, and no new thread may be opened without the anchoring block. The Council's latest
+cycle is `08_council/brief_017/SYNTHESIS_017.md` (D88–D92) — read it before proposing anything new. The Lead
+predeclares the five, runs them with the worker fleet, consolidates, commits and reports the batch back to the
+Council, which then issues the next five. Keep the batch cheap: on-disk data only, small deterministic scripts, no
+external requests, no direction claims. Continue the descriptive correlation work **only** when it is tethered to a
+model decision; the critical path remains the A1/phase write-up (D91).
+
 ## Rules
 
 Predeclare; label simulated vs observed; never fabricate numbers/sources; no direction claims; closed claims

@@ -1,0 +1,24 @@
+{
+  "experiment": "Y4_worldsociety",
+  "predeclarations_sha256": "8b431b672bbc9679dc192e907c1db3b95e22bacad2abd6b377c68e864dc336e1",
+  "data_files_read": [
+    {
+      "path": "/Users/treymenefee/massification_live/experiments/massification-2026-11-20/10_massification/data/UNIVERSALIZATION_TIMING.csv",
+      "sha256": "6e067ffd76b2c57c7c0363387735750cb9e6f68bc4dfd242b3d0f9c80786f892"
+    },
+    {
+      "path": "/Users/treymenefee/massification_live/experiments/massification-2026-11-20/10_massification/data/UNIVERSALIZATION_SERIES.csv",
+      "sha256": "85bc869396ebfcb39e3e1a21a31af219e75a07326c738a51d2bfdbe536737ddb"
+    }
+  ],
+  "code": [
+    {
+      "path": "/Users/treymenefee/massification_live/experiments/massification-2026-11-20/10_massification/extensions/lab_2026-11-20_c/Y4_worldsociety/code/run.py",
+      "sha256": "c622e341b76303928df214f3c34adcec256edd8e7ca6956bd5e051c4d85718e0"
+    }
+  ],
+  "python_version": "3.11.17",
+  "seed": "none",
+  "run_utc": "2026-11-20T13:25:15Z",
+  "reproducibility": "deterministic; no RNG, no network, no imputation; results/*.csv byte-identical on re-run"
+}

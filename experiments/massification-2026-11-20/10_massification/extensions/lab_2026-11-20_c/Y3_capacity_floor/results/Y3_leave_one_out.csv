@@ -1,0 +1,7 @@
+excluded_system,n_floor,rho_floor,floor_component_met,n_ceiling,rho_ceiling,ceiling_component_met
+KHM,4,0.0,False,5,0.3,True
+CHN,4,0.8,True,5,0.6,False
+HKG,4,0.4,False,5,0.7,False
+JPN,5,0.5,True,5,0.3,True
+KOR,4,0.4,False,5,0.7,False
+PHL,4,0.8,True,5,0.9,False

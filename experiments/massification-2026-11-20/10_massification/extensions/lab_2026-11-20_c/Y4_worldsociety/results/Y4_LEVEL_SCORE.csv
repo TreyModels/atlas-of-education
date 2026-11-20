@@ -1,0 +1,6 @@
+level,null_median_year,n_systems,n_never_crossed,n_never_crossed_with_series,n_null_false_positive_evidence_backed,n_null_false_positive_including_absent,n_never_crossed_testable_at_null_year,level_verdict,label
+primary,1974.5000000000,6,0,0,0,0,0,NOT DISTINGUISHED,derived
+lower secondary,2008.0000000000,6,2,1,1,2,1,DISTINGUISHED,derived
+secondary,2009.0000000000,6,1,1,1,1,1,DISTINGUISHED,derived
+upper secondary,2011.5000000000,6,4,3,2,4,2,DISTINGUISHED,derived
+tertiary,,6,4,4,0,0,0,UNABLE,derived

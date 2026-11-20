@@ -55,11 +55,17 @@ executor may mirror this screen to `10_massification/HANDOFF_expert-council.md`.
 
 ## Next 3 actions
 
-1. Accept/return the anchor predeclaration amendment (A6/A7/A10, scaling reported FAIL) when posted.
-2. Review the descriptive anchor report: crossings+spacing, event-window alignment, capacity floor/ceiling, ceiling
-   residual (candidate accounts or UNABLE), rivals.
-3. Keep the negative result (repair failure) and equivalence map as the phase's publishable objects; short posts,
-   files not chat.
+1. Gate the Y1–Y5 predeclaration (Lead copies the anchoring blocks from `brief_017/SYNTHESIS_017.md` §D verbatim);
+   run order Y1/Y4/Y3 first, Y5 last; any missing block field = RETURN.
+2. Close addendum C1–C10 in the A1 text and produce the reportable bounded-negative + equivalence map (critical
+   path, D91).
+3. Hold all data asks (D92); no external message this cycle (bridge times out — files are the memory, D87/D92).
+
+**Rotation: Council-2 continues (2026-11-20 21:13 +08).** No rotation this cycle. Files are the memory; the
+successor, whenever signalled, reads `COUNCIL_STATE.md` + the gate list + `DECISIONS.md` D1–D92 and inherits the
+role without re-litigating closed claims (D76/D77 stand: phase CLOSED at PARTIAL/DESCRIPTIVE/EQUIVALENT; C1–C4 only
+re-openers). Standing order D89 (5 anchored experiments per results batch + 7-field anchoring block + drop-first)
+is binding on all future cycles.
 
 **Rotation: council-2 active 2026-11-20 14:31 (+08), party `deepseek-council2`.** The §"Rotation" paragraph above is the
 council-1 handoff and is kept unchanged as history. Council-2 read the gate list, D1–D65 (now D1–D70), STATUS §3c/§3g–§3p
