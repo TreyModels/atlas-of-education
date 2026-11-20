@@ -598,3 +598,64 @@ append-only with per-agent parties via `bridge-agent.sh`.
 - **Critical path (D91) unchanged:** the A1/phase write-up + addendum C1–C10 remains the one thing this cycle;
   Y1–Y5 tighten its open descriptive items only. Phase **CLOSED** at PARTIAL/DESCRIPTIVE/EQUIVALENT; C1–C4 not
   reopened; no direction claims.
+
+---
+
+## 3v. Synthetic workbench v1 + longitudinal battery (final verdicts) + external literature review — 2026-11-20 ~22:30 +08:00
+
+**Authority unchanged:** phase CLOSED at PARTIAL/DESCRIPTIVE/EQUIVALENT (D76); no causal or push/pull direction
+claims; data asks remain HELD; literature *reading* is authorised.
+
+### a) Synthetic-data workbench — v1 delivered, verified, packaged
+
+- **Position:** `10_massification/extensions/synthetic_2026-11-20/` (v0 + v1 + registers), packaged with
+  `RUN_MANIFEST.json` + `SHA256SUMS.txt` (**30/30 verify**) via `extensions/build_package.py`.
+- **Registers:** equations 43 rows (10 carry an `equation-in-literature` tag; the rest narrative-only /
+  programme-invented / programme-estimated); facts 53 rows, **35 VERIFIED-FROM-DISK** (6 SIMULATED, 5 DISPUTED,
+  4 MODEL-OUTPUT-NOT-FACT, 3 REPORT-ONLY-UNRELIABLE).
+- **v1 (`generator_v1/`):** 30 synthetic countries × 1970–2025 × 4 levels = **6,720 rows**, seed 20261120, constant
+  all-SYNTHETIC labels. Determinism **controller-verified**: two fresh runs byte-identical to each other *and* to the
+  delivered CSVs (`synthetic_panel_v1.csv` sha256 `d27957be…3103a2b`).
+- **v1 predeclared checks: A FAIL · B FAIL · C FAIL · D FAIL · E PASS · F PASS (2/6).** Key numbers: check A —
+  primary completion ≥90 in 2011 (target 2017), lower-secondary **never** ≥90 (2023 = 76.88), tertiary 2025 = 54.19
+  (band 48.1–54.1); check B — industrialising/diversified decades literacy −0.288 (p=0.57) / schooling-years +0.073
+  (weak ✓) but pre-industrial decades literacy **+1.781** (p<0.001) → the literacy association sits in the *wrong
+  regime*; check C — rung2/rung1 ladder rises with queue pressure **+4.280** (p<0.01) ✓ but the rung1/informal margin
+  is not flat (−0.340); check D — gating visible in tercile slopes (low +0.13 vs high +0.56 pp/yr, ratio 4.31) but the
+  interaction is not significant (+0.138, p=0.56); check E PASS (twins: same graduates within 1.94%, growth 2.79 vs
+  2.11 pp, queue-pressure rel. diff 96%); check F PASS (cohort conservation 1.98e-16; shares sum to 1).
+- **Ruling:** failures are **declared-model calibration/identification failures, not empirical findings**; no
+  post-hoc re-fitting (target-chasing) was done or is permitted. A **v1.1 predeclaration** is the correct next step
+  (re-specify the literacy/takeoff channel, repair the secondary ladder without per-level rescue, restate check C,
+  and add the user's education → complexity channel). Recorded in synthetic `FINDINGS.md` / `README.md` and
+  `generator_v1/PARAMS.md` (parameters mirrored from the run manifest; stale docstring path flagged).
+
+### b) Longitudinal battery — final verdicts after the stats re-run (Lead correction applied)
+
+- `longitudinal_2026-11-20/FINDINGS.md` corrected: **H1 PARTIAL · H2 NOT SUPPORTED · H3 NOT SUPPORTED · H4
+  SUPPORTED (descriptive co-movement map only)**. H2's final numbers: ECI S2 −0.581 [−1.632, 0.469] ns; **S3
+  −2.589 [−4.112, −1.067] significantly NEGATIVE** (opposite the canon's predeclared sign); unconditional
+  within-country growth~ECI r = **−0.153** (p=0.001). S4 long differences DATA LIMITED (CHN/LKA/MNG/MYS/SGP).
+- **"Growth is the weakly-attached variable":** all nine growth pairs |r| < 0.21 and negative (growth~MYS −0.203,
+  growth~ECI −0.153, growth~lit −0.091); the horse race is unresolved on the growth side. No causal/direction claim;
+  no Africa claim.
+- **Package rebuilt** after the correction (3 stale hashes fixed): `RUN_MANIFEST.json` + `SHA256SUMS.txt` **23/23
+  verify**; `stats/REPRO_CHECK.json` shows 10/10 result files identical across re-runs.
+
+### c) External literature review (Priority 1, in progress)
+
+- Target: `10_massification/lit/external_review_2026-11-20/` — web-verified memo + claim CSV with real URLs, covering
+  (a) schooling vs cognitive skills and growth, (b) economic complexity/ECI and growth **plus education → complexity**
+  (user's current hypothesis), (c) absorptive-capacity/threshold/dual economy, (d) educated unemployment/credential
+  queue/job matching, (e) existing projection models (IIASA/Wittgenstein/Barro–Lee). Every row carries a
+  VERIFIED-FULLTEXT / VERIFIED-ABSTRACT / UNVERIFIED tag; ends with "what we do NOT need to redo" and "what remains
+  open". Repo literature audit in parallel (the internal ledger covers none of these growth/complexity strands).
+
+### d) New user directive (education → ECI) — predeclaration next
+
+- The hypothesis is **education → economic complexity**, not education → growth; outcome = `eci_sitc`. Existing
+  on-disk evidence to build on (do not redo): **ECI ~ adult literacy stock 0.001 (p=0.83) — no relation; ECI ~
+  primary completion lagged 10y 0.593 (se 0.176, p=0.001) — the schooling FLOW tracks complexity;
+  upper-secondary attainment 0.055 (ns)** (`09_relations/LITERACY_ECI_DEMOGRAPHY.md`). A new predeclared
+  education→ECI panel (levels × lags 5/10 × cross-section-FE/5-yr-block/within-between/reverse/heterogeneity) is the
+  next deliverable; `MODEL_ARCHITECTURE.md` carries **Amendment A1** requiring v1.1 to encode schooling flow → X.

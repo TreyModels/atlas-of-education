@@ -1,0 +1,33 @@
+{
+  "script": "/Users/treymenefee/massification_live/experiments/massification-2026-11-20/10_massification/extensions/longitudinal_2026-11-20/stats/code/run.py",
+  "run.py_sha256": "bc16348343e6b6d7d3ec0e79e59387dd8ecab4e3c9b265c07be05f8a6b40ea2b",
+  "checked_at_utc": "2026-11-20T14:01:44+00:00",
+  "n_result_files": 10,
+  "identical": true,
+  "differing_files": [],
+  "run1": {
+    "RESULTS.csv": "b04cbd32e4fbdd5f1e5726fe86d40e3bbfc05fd5aba7cd3978b9f9428a72171b",
+    "ROBUSTNESS.csv": "b425566f74176bd375767eca068a444e546cb0a84c5805c9aa5b7983429bbeb3",
+    "S1_cross_section.csv": "00d293a5bf4faea5d29b0200cbe3c55058d4655a0b0af3e849d6ccb69f04ad89",
+    "S2_countryFE.csv": "3081aae154c463856702a4d7b302504ac6144699b3c9f0f77f44acbb36bf741e",
+    "S3_five_year_blocks.csv": "c2e7d807b73bf148463442a3c3045a216c73d1f34432b78f0918da0c20f2d160",
+    "S4_long_differences.csv": "664b4fd110881203eec3702d192d8f3e0f3f3e790c2bf035351ce83cef8862e2",
+    "S5_interaction.csv": "a2203d0f0ab30b8aff38fc0ee2f50c52b104923e130267bcda8591ae9c3594b9",
+    "S6_eci_terciles.csv": "5ec4fd4af49ffe2005fc5bde7926ef07418ad83f2739ac0867c86ac8632168be",
+    "S7_reverse.csv": "7fa45059aecd7eba5fdd79c17c15da8bfcf5ab22d4f514747d79164b163a7bba",
+    "S8_comovement.csv": "6ec2e80175452a651ad01baa9ddea2842c5ef60d3f2b648bac9222756dcc164b"
+  },
+  "run2": {
+    "RESULTS.csv": "b04cbd32e4fbdd5f1e5726fe86d40e3bbfc05fd5aba7cd3978b9f9428a72171b",
+    "ROBUSTNESS.csv": "b425566f74176bd375767eca068a444e546cb0a84c5805c9aa5b7983429bbeb3",
+    "S1_cross_section.csv": "00d293a5bf4faea5d29b0200cbe3c55058d4655a0b0af3e849d6ccb69f04ad89",
+    "S2_countryFE.csv": "3081aae154c463856702a4d7b302504ac6144699b3c9f0f77f44acbb36bf741e",
+    "S3_five_year_blocks.csv": "c2e7d807b73bf148463442a3c3045a216c73d1f34432b78f0918da0c20f2d160",
+    "S4_long_differences.csv": "664b4fd110881203eec3702d192d8f3e0f3f3e790c2bf035351ce83cef8862e2",
+    "S5_interaction.csv": "a2203d0f0ab30b8aff38fc0ee2f50c52b104923e130267bcda8591ae9c3594b9",
+    "S6_eci_terciles.csv": "5ec4fd4af49ffe2005fc5bde7926ef07418ad83f2739ac0867c86ac8632168be",
+    "S7_reverse.csv": "7fa45059aecd7eba5fdd79c17c15da8bfcf5ab22d4f514747d79164b163a7bba",
+    "S8_comovement.csv": "6ec2e80175452a651ad01baa9ddea2842c5ef60d3f2b648bac9222756dcc164b"
+  },
+  "note": "Both runs executed code/run.py in this directory with the same Python interpreter. Every results/*.csv was hashed after each run. `run_utc` in RUN_MANIFEST.json and FINDINGS.md differs between runs by design and is not part of this comparison."
+}

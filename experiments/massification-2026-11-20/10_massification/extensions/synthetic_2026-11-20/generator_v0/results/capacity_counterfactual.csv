@@ -1,0 +1,5 @@
+level,role,delta_ger_mean_2020_2024,delta_comp_mean_2020_2024,delta_ger_phl_2024,label
+primary,floor,6.504872,6.179628,0.030872,SYNTHETIC
+lower_secondary,intermediate,5.937908,5.641013,0.048221,SYNTHETIC
+upper_secondary,ceiling,4.893905,4.502393,0.077505,SYNTHETIC
+tertiary,top,3.992183,3.513121,0.074176,SYNTHETIC

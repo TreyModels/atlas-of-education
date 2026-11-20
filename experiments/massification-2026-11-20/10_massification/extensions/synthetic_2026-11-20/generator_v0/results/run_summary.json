@@ -1,0 +1,138 @@
+{
+  "b_sec": 1.0551444716918654,
+  "b_ter": 1.1089977188459499,
+  "c1": {
+    "ger_max": 100.00974160632354,
+    "ger_min": 0.8737291653555236,
+    "n_gt105": 0,
+    "n_neg": 0
+  },
+  "c2": {
+    "cross_sec": 0.27818809135404154,
+    "cross_ter": 0.7762233794281324,
+    "n_sec": 1760,
+    "n_ter": 1760,
+    "r2_sec": 0.47091751264858195,
+    "r2_ter": 0.6406373689252898,
+    "sec_all": 0.28190905500143143,
+    "sec_nonphl": 0.29000000000000004,
+    "ter_all": 0.7756668916116991,
+    "ter_nonphl": 0.7799999999999996,
+    "within_sec": 0.46069106794235537,
+    "within_ter": 0.7489291909978479
+  },
+  "c3": {
+    "comp_low_2024": 91.99999999999999,
+    "comp_prim_2024": 93.99999999999999,
+    "t_low": 2016,
+    "t_prim": 2003,
+    "t_ter25": 1996,
+    "t_ter40": 2016,
+    "ter_end": 50.82883824204967,
+    "ter_start": 15.0,
+    "upper_max": 78.0
+  },
+  "c4": {
+    "dcomp": [
+      6.179628183592712,
+      5.641012560844899,
+      4.50239264257911,
+      3.5131207116901066
+    ],
+    "dger": [
+      6.504871772202833,
+      5.937907958784095,
+      4.89390504628166,
+      3.9921826269205667
+    ],
+    "dger_phl_2024": [
+      0.03087249777092893,
+      0.04822091379253379,
+      0.07750535431353,
+      0.07417612616033864
+    ],
+    "floor_minus_ceiling": 1.6109667259211733
+  },
+  "c5": {
+    "comp_max": 95.00925452600737,
+    "comp_min": 0.7688816655128607,
+    "neg_enrol": 0,
+    "rates_ok": true,
+    "within_corr": [
+      0.9999999999999996,
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  "c5b": {
+    "compliance": 0.6988636363636364,
+    "pairwise": {
+      "lower>=upper": 0.9352272727272727,
+      "primary>=lower": 0.8681818181818182,
+      "upper>=tertiary": 0.84375
+    },
+    "violations": 530
+  },
+  "calibration_targets": {
+    "sec": 0.29,
+    "ter": 0.78,
+    "tolerance": 0.15
+  },
+  "data_files_read": [],
+  "label": "SYNTHETIC",
+  "levels": [
+    "primary",
+    "lower_secondary",
+    "upper_secondary",
+    "tertiary"
+  ],
+  "n_countries": 32,
+  "n_years": 55,
+  "on_disk_targets_note": {
+    "brief_targets": {
+      "secondary": 0.29,
+      "tertiary": 0.78
+    },
+    "secondary_between": 0.2154,
+    "secondary_within": 0.0904,
+    "tertiary_between": 0.5666,
+    "tertiary_within": 0.8482
+  },
+  "panel_rows": 7040,
+  "phl_design": {
+    "K0": 0.75,
+    "N0": 50000000.0,
+    "f0": 5.5,
+    "fdec": 0.05,
+    "gdp0": 2200.0,
+    "growth": 0.02,
+    "law_years": [
+      1990,
+      1995,
+      2005,
+      2015
+    ],
+    "npop": 0.019,
+    "p0_ter": 0.15,
+    "sp0": 3.0,
+    "spg": 0.02,
+    "sv0": 0.42,
+    "svg": 0.004,
+    "u0": 0.33,
+    "ug": 0.006
+  },
+  "phl_e": {
+    "lower_secondary": 0.6384445524690026,
+    "primary": 0.02864669989342805,
+    "tertiary": -0.2756819821391223,
+    "upper_secondary": 0.47032232907017657
+  },
+  "runtime_seconds": 0.13667893409729004,
+  "seed": 20261120,
+  "target_source": "10_massification/relations/data/scaling_laws.csv (citation only; no file read)",
+  "years": [
+    1970,
+    2024
+  ]
+}

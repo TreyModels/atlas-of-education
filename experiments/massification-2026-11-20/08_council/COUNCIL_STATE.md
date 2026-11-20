@@ -53,13 +53,15 @@ Authority survives rotation because it is in **these files**. If the Council win
 Council that reads this file + the gate list above and inherits the role without re-litigating closed claims. The
 executor may mirror this screen to `10_massification/HANDOFF_expert-council.md`.
 
-## Next 3 actions
+## Next 3 actions (cycle 10, brief 018)
 
-1. Gate the Y1–Y5 predeclaration (Lead copies the anchoring blocks from `brief_017/SYNTHESIS_017.md` §D verbatim);
-   run order Y1/Y4/Y3 first, Y5 last; any missing block field = RETURN.
-2. Close addendum C1–C10 in the A1 text and produce the reportable bounded-negative + equivalence map (critical
-   path, D91).
-3. Hold all data asks (D92); no external message this cycle (bridge times out — files are the memory, D87/D92).
+1. **Predeclare Z1–Z5** (Lead copies the anchoring blocks from `brief_018/SYNTHESIS_018.md` §D verbatim); dispatch as five
+   parallel workstreams with the disjoint write scopes stated there; any missing block field = RETURN (D89).
+2. **Run the parallel non-experiment tasks:** keep the A1 write-up running (it consumes Z2's corrected vector when it
+   lands) and dispatch the **C1 provider-entry data pull** (bounded public retrieval, D43) to the data-hunter.
+3. **Consolidate + commit** (byte-identical determinism re-runs, `NEW:`+hash, SHA256SUMS) and execute the "fix now"
+   housekeeping (toy SHA256SUMS, FLAG-01 path, D10 prose, relabels per `SYNTHESIS_018.md` §A). No external message this
+   cycle (bridge times out — files are the memory, D87).
 
 **Rotation: Council-2 continues (2026-11-20 21:13 +08).** No rotation this cycle. Files are the memory; the
 successor, whenever signalled, reads `COUNCIL_STATE.md` + the gate list + `DECISIONS.md` D1–D92 and inherits the
@@ -88,3 +90,8 @@ double-counts) (D74). **Portability slate-A6 CHN / A7 HKG: PARKED-ARMED**, diagn
 reproduction + observational equivalence + unreproduced asymmetry" (D77). **Next 3:** (1) A1 addendum C1–C10 (exp1);
 (2) phase write-up shell (Lead + lit + exp1/exp2 tables); (3) record closure in `STATUS.md` + keep data asks HELD
 (Lead). Data asks still awaiting user approval; nothing sent.
+
+**Rotation note (cycle 10, 2026-11-20 21:37 +08):** no rotation this cycle — Council-2 continues. Remit expanded to the
+WHOLE evidence base; C1–C4 re-opened for NEW predeclared tests under the user directive (D93). Standing order D89 unchanged
+(exactly 5 anchored experiments + 7-field block + drop-first). Critical path = model re-specification (Z1, C2 re-opener) +
+evidence-spine correction (Z2); see `brief_018/SYNTHESIS_018.md` and `DECISIONS.md` D93–D97.

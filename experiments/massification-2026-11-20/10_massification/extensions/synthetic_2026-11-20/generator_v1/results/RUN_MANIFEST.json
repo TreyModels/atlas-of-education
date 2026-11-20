@@ -1,0 +1,289 @@
+{
+  "checks_summary": {
+    "A": "FAIL",
+    "B": "FAIL",
+    "C": "FAIL",
+    "D": "FAIL",
+    "E": "PASS",
+    "F": "PASS"
+  },
+  "code_sha256": "dde8d079ad3275cc7bec57d59d49c6956fed4a63ae1a085fe6d93c0f28b8aee9",
+  "declared_countries": {
+    "SYN00_PHL_LIKE": "idx 0; narrow office sector, clerical boom, K-12-style pipeline break",
+    "SYN01_TWIN_MFG": "idx 1; twin pair A",
+    "SYN02_TWIN_OFFICE": "idx 2; twin pair B (identical except sector mix)"
+  },
+  "determinism": "single numpy PCG64 stream, seed fixed; all draws in fixed order; no wall-clock, no OS entropy, no dict-order dependence in output; floats written at %.10g. Re-running writes byte-identical results CSVs (verified).",
+  "generator": "sim_v1.py",
+  "label": "SYNTHETIC",
+  "numpy": "2.4.6",
+  "panel": {
+    "countries": 30,
+    "levels": [
+      "primary",
+      "lower_secondary",
+      "upper_secondary",
+      "tertiary"
+    ],
+    "rows": 6720,
+    "years": [
+      1970,
+      2025
+    ]
+  },
+  "params": {
+    "accel_div": [
+      1.0,
+      1.0,
+      1.3,
+      1.5
+    ],
+    "accel_ind": [
+      1.0,
+      1.0,
+      1.6,
+      1.3
+    ],
+    "adj_speed": [
+      0.5,
+      0.5,
+      0.35,
+      0.35
+    ],
+    "age_share_base": 0.16,
+    "age_share_max": 0.42,
+    "age_share_min": 0.13,
+    "age_share_tfr_slope": 0.045,
+    "band_share": [
+      0.42,
+      0.21,
+      0.2,
+      0.17
+    ],
+    "comp_step": [
+      0.1,
+      0.18,
+      0.32,
+      0.5
+    ],
+    "cred_prem": 0.1,
+    "div_income": 6000.0,
+    "div_x": 0.95,
+    "g_cap": 0.09,
+    "g_floor": 0.0,
+    "g_noise_sd": 0.006,
+    "ger_cap": 105.0,
+    "gp": [
+      0.012,
+      0.008,
+      0.03,
+      0.022
+    ],
+    "lf_share_of_pop": 0.52,
+    "lit_ag_growth": 0.01,
+    "lit_lag": 12,
+    "lit_learn": 0.05,
+    "meas_completion_factor": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "mfg_u_coef": [
+      0.0,
+      -0.1,
+      0.3,
+      0.1
+    ],
+    "office_u_coef": [
+      0.0,
+      0.35,
+      0.0,
+      -0.2
+    ],
+    "overage_cap": 1.05,
+    "phi_formal": 0.82,
+    "psi_div": 0.12,
+    "psi_ind": 0.22,
+    "psi_pre": 0.02,
+    "queue_max_lf": 0.2,
+    "queue_retain": 0.5,
+    "rank_gain": 0.2,
+    "rung_a": [
+      0.9,
+      0.4,
+      -0.3,
+      -1.3
+    ],
+    "rung_b": [
+      -0.65,
+      0.2,
+      1.0,
+      2.2
+    ],
+    "rung_mult": [
+      2.2,
+      3.2,
+      4.6,
+      6.4
+    ],
+    "seat_hi": [
+      1.05,
+      0.985,
+      0.8,
+      0.78
+    ],
+    "seat_lo": [
+      1.02,
+      0.28,
+      0.14,
+      0.05
+    ],
+    "sec_ag_base": 0.5,
+    "sec_ag_x": -0.45,
+    "sec_floors": [
+      0.02,
+      0.05,
+      0.03,
+      0.05
+    ],
+    "sec_inf_base": 0.24,
+    "sec_inf_x": -0.08,
+    "sec_man_base": 0.13,
+    "sec_man_x": 0.09,
+    "seek": [
+      0.15,
+      0.35,
+      0.6,
+      0.8
+    ],
+    "sep": [
+      0.1,
+      0.07,
+      0.05,
+      0.04
+    ],
+    "star_c1": [
+      0.3,
+      1.6,
+      1.45,
+      1.05
+    ],
+    "star_c3": [
+      0.25,
+      1.1,
+      1.1,
+      0.85
+    ],
+    "surv_min": [
+      0.62,
+      0.55,
+      0.6,
+      0.7
+    ],
+    "takeoff_income": 1500.0,
+    "takeoff_lit": 0.6,
+    "ter_pool_retain": 0.35,
+    "ter_trans_cap": 0.65,
+    "x_income_coef": 0.55,
+    "x_max": 1.8,
+    "x_min": 0.0,
+    "x_open": [
+      0.0,
+      0.08,
+      0.26,
+      0.48
+    ],
+    "x_urban_coef": 0.55,
+    "x_urban_ref": 0.4
+  },
+  "python": "3.11.17",
+  "python_executable": "/Users/treymenefee/Library/Application Support/dsh-massification/venv/bin/python",
+  "results_sha256": {
+    "reproduction_checks_detail_v1.csv": "2dd1ce7eb4e6108cc9716694116f9c658c5cf0d3c07a817d162fc79569a6df69",
+    "reproduction_checks_v1.csv": "e667d51df1075a9cd366c82cdc87f8b96ff0c374195c2f803af21dffea337a84",
+    "synthetic_panel_v1.csv": "61611b882fd3d7ab7b764965c72fea2fa435da87b6a980beb91234becf3a5c1f"
+  },
+  "seed": 20261120,
+  "statement": "Synthetic data from declared assumptions only. Not evidence, not an estimate, no causal claim, no real country modelled.",
+  "targets_encoded": [
+    {
+      "fact": "PHL-01",
+      "unit": "crossing year",
+      "value": "2017",
+      "what": "primary completion first >=90 in 2017"
+    },
+    {
+      "fact": "PHL-02",
+      "unit": "crossing year",
+      "value": "2024",
+      "what": "lower-secondary completion first >=90 in 2024"
+    },
+    {
+      "fact": "PHL-03",
+      "unit": "band",
+      "value": "75.0-77.0",
+      "what": "upper-secondary completion never >=90 by 2024; peak in [75,77]"
+    },
+    {
+      "fact": "PHL-03",
+      "unit": "percent",
+      "value": "75.025",
+      "what": "upper-secondary completion 2024"
+    },
+    {
+      "fact": "PHL-04",
+      "unit": "percent",
+      "value": "16.336",
+      "what": "tertiary GER 1971"
+    },
+    {
+      "fact": "PHL-04",
+      "unit": "percent",
+      "value": "51.072",
+      "what": "tertiary GER 2025 (endpoint band [48,54])"
+    },
+    {
+      "fact": "PHL-05",
+      "unit": "percent",
+      "value": "99.54 / 88.83 / 94.03",
+      "what": "primary GER 1971 / 2021 / 2024 shape (over-age margin)"
+    },
+    {
+      "fact": "PHL-06",
+      "unit": "years",
+      "value": "7",
+      "what": "floor-to-middle crossing gap in [5,9] years"
+    },
+    {
+      "fact": "PHL-06",
+      "unit": "pp",
+      "value": "14.975",
+      "what": "ceiling residual 90 - upper-sec completion 2024 in [13,17] pp"
+    },
+    {
+      "fact": "CAP-03",
+      "unit": "pupils/teacher",
+      "value": "35.07 -> 29.08",
+      "what": "PHL primary PTR 35.07 (2005) -> 29.08 (2017)"
+    },
+    {
+      "fact": "CAP-03",
+      "unit": "% GDP",
+      "value": "2.328 -> 3.964",
+      "what": "PHL education spending 2.328 (2005) -> 3.964 (2017)"
+    },
+    {
+      "fact": "--",
+      "unit": "fraction",
+      "value": "declared",
+      "what": "PHL initial GERs (1970): primary .995, lower .58, upper .32, tertiary .163"
+    },
+    {
+      "fact": "--",
+      "unit": "multiplier",
+      "value": "declared",
+      "what": "K-12-style pipeline break at upper-secondary completion (2018-2024 multipliers)"
+    }
+  ]
+}

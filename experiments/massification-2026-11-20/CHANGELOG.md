@@ -110,3 +110,24 @@ manifests and error logs.
   missing channel, cross-country shadow incidence, mechanism classification, country completion forecasting);
   8/9 stop rules fired; cohort conservation passed exactly. Publishable objects: negative/identification map,
   measurement programme, Korean provider/fee descriptive note.
+
+## 2026-11-20 (evening) — synthetic workbench v1, longitudinal battery, external literature review
+
+- **Synthetic workbench packaged** (`10_massification/extensions/synthetic_2026-11-20/`, 30/30 SHA256SUMS verify):
+  equations register (43 relationships; 10 `equation-in-literature` tags) + fact register (53 facts; 35
+  VERIFIED-FROM-DISK) + generator v0 (7,040-row panel) + generator v1 (6,720-row tiered occupation-aware panel,
+  controller-verified byte-identical on two re-runs). v1 passes **2 of its 6 predeclared checks** (E composition,
+  F accounting); A–D fail as disclosed, with the failures diagnosed as declared-model calibration/identification
+  failures, **not** empirical findings and not to be re-fitted post hoc. v1.1 predeclaration is the next step.
+- **Longitudinal battery corrected to final verdicts:** H1 PARTIAL, **H2 NOT SUPPORTED** (ECI S3 −2.589,
+  CI −4.112…−1.067, negative-significant, opposite the canon; raw within-country r = −0.153), H3 NOT SUPPORTED,
+  H4 SUPPORTED (descriptive co-movement only); "growth is the weakly-attached variable" (all nine growth pairs
+  |r| < 0.21 and negative). Package rebuilt (3 stale hashes fixed; 23/23 verify). No causal/direction/Africa claims.
+- **External literature review launched** (Priority 1, user ask): web-verified memo + claim CSV under
+  `10_massification/lit/external_review_2026-11-20/`, five strands + education → complexity; "what we do NOT need
+  to redo" as the deliverable. Repo literature audit in parallel.
+- **New user directive recorded:** hypothesis is **education → economic complexity (ECI)** (growth is a different
+  outcome). `synthetic_2026-11-20/MODEL_ARCHITECTURE.md` Amendment A1 requires v1.1 to encode schooling flow → X;
+  a predeclared education→ECI panel analysis is queued on the existing 30-country data
+  (`09_relations/LITERACY_ECI_DEMOGRAPHY.md`: literacy STOCK 0.001 ns vs primary completion lagged 10y **0.593**,
+  p=0.001 — the flow tracks complexity).

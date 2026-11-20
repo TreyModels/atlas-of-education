@@ -253,3 +253,46 @@ imputation as observation. E1 stays PARKED; direction claims EQUIVALENT.
 - Critical path = **A1 write-up**; one thing this cycle = close C1–C10. Data: usable = the 10 on-disk series; HELD =
   PSA/ES microdata, annual capacity/enforcement, per-pupil, subnational sector, expansion file. No Y needs a new ask.
   **No external message sent this cycle.**
+
+
+## Cycle 10 addendum (whole-evidence-base adjudication + direction portfolio + Z1–Z5)
+
+1. **Goal restated:** massification produced by schooling–government–market interaction, each standing the others up,
+   with cohort flows and country/sector variation; shadow secondary. Phase CLOSED at PARTIAL/DESCRIPTIVE/EQUIVALENT
+   (D76); re-openers C1–C4; **this cycle the user reopened C1–C4 for NEW predeclared tests** (D93).
+2. **Threads (labels).** **KEEP** — the observed data spine (GMR / `UNIVERSALIZATION_SERIES` / `panel_wdi_*`) — verified
+   sound; gate/rules; bounded-negative + equivalence map; the A1 write-up (parallel reporting); the new direction portfolio
+   (**M** model re-specification, **V** evidence-spine correction, **S** benchmark rivalry, **Q** cohort-shock, **F**
+   free-tuition falsifier); the **C1 provider-entry cell** (re-opened design, data pull). **PARK** — C3 (PSA/ES blocked),
+   C4 de facto enforcement (held; reaffirm ask), portability CHN/HKG (after re-specification), KHM holdout, E1/M2c-2,
+   complexity/ECI, T1/T2, shadow paper. **KILL** — further scaling repair (R27); the old pushpull/anchor implementation as
+   a live instrument (GER series, 12-arm table, m2b, `scaling_check.csv`, A2d negative — not citable); citing toy numbers as
+   evidence; re-running toys; direction claims from panel moments (R13); the three non-reproducing capacity headline numbers
+   as written (FLAG-02/03/05); "no common shape" rejection (FLAG-04).
+3. **One thread this cycle:** the **model re-specification** (corrected single-cohort identity + bound-checked GER + real
+   K-12 switch) — the only on-disk path that can change the phase verdict (C2), per the models audit's "do (1) first and only
+   (1)".
+4. **Drift check:** the three audits confirm three consecutive measurement-heavy batches; this cycle reverses it with a
+   model-side direction. Live risk = re-specification drifting into re-fitting; guarded by making Z1 a validity gate (no
+   fit). **Red-flag count this cycle: 1** (re-spec→re-fit risk), mitigated.
+5. **If only one thing mattered this week:** **Z1** (re-specified stock-flow validity smoke). **Drop-first of Z1–Z5: Z5**
+   (free-tuition falsifier — highest cost-per-info; kept only because off-peak).
+
+### Whole-evidence adjudication + portfolio (D94/D95, `brief_018/SYNTHESIS_018.md` §A–§C)
+
+- **Load-bearing and verified:** A6/D77 observed signature (spot-checked verbatim), the scaling register, the two aligned
+  events, the scaling-sign/trend/identification failures, the unreproduced asymmetry, the five toy design constraints.
+- **Dead (KILL):** old GER series (D-02), 12-arm table (D-03), `m2b_scaling.csv` (D-04), `scaling_check.csv` pipeline
+  (D-11), A2d negative (D-10), the "+0.15…all ns" null (FLAG-02), "+35.2 into crossing" (FLAG-03), "no common shape"
+  (FLAG-04), K-12 mechanism (D-21), six toys (#4/#5/#6/#9/#11/#13).
+- **Portfolio (ranked):** M (re-specification, C2) > V (spine correction, C2 vector) > I1 (C1 provider-entry, data pull) >
+  S (benchmark rivalry) > Q+F (cohort shock + free-tuition). De-prioritised: C3, C4, portability, more batteries, E1/M2c-2,
+  ECI/papers.
+
+### Z1–Z5 + critical path (D96/D97, `brief_018/SYNTHESIS_018.md` §D–§E)
+
+- Slate: **Z1** stock-flow validity smoke (#1, **C2 re-opener**) · **Z2** corrected vector + capacity re-derivation (#2) ·
+  **Z4** cohort-shock R07 (#3) · **Z3** benchmark rival field (#4) · **Z5** free-tuition falsifier (#5, drop-first). All
+  on-disk, one deterministic script each, disjoint write scopes, parallel.
+- New critical path = **M + V**; A1 write-up runs in parallel (consumes Z2); C1 data pull dispatched; "fix now" housekeeping
+  alongside. **No external message sent this cycle.**
