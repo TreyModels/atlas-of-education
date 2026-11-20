@@ -1,0 +1,58 @@
+{
+  "brief_id": "brief_011",
+  "brief_file": "08_council/brief_011/BRIEF.md",
+  "material": "Merits-and-testability deliberation on the 'Overflow Governance' theory paper (v1/v2), following brief 010's adversarial review. Panel discusses contributions, novelty vs prior literature, and falsifiable propositions with designs/data/thresholds/cost.",
+  "synthetic_disclaimer": "SYNTHETIC EXERCISE. Panelists are AI-constructed composite personas whose positions are inferred from the published literature. Nothing here is a statement by, or endorsed by, the named individuals or any living person. Names in literature_basis identify the work each composite draws on, not participants in a deliberation.",
+  "convened_by": "Dr. Menefee (direct request)",
+  "convened_at": "2026-11-20T14:14+08:00",
+  "panel_size": 4,
+  "panel": [
+    {
+      "handle": "COLLINS",
+      "label": "Composite drawing on credential-inflation and positional-competition literature",
+      "literature_basis": ["Collins, The Credential Society (1979; 2nd ed. 2019)", "Collins, Interaction Ritual Chains (2004)", "Hirsch, Social Limits to Growth (1976)"],
+      "grounding_basis": ["publication"],
+      "role": "Credential-theory reviewer: what is new vs Collins/Hirsch; the legitimation claim as the distinctive contribution",
+      "assigned_prior_question": "Q1 (merits), Q2 (novelty), Q3 (tests)",
+      "steel_man_slot": false
+    },
+    {
+      "handle": "BRAY",
+      "label": "Composite drawing on comparative shadow-education literature (mandatory seat)",
+      "literature_basis": ["Bray & Lykins, Shadow Education (2012)", "Bray & Kwok (2003)", "Bray, comparative shadow-education work"],
+      "grounding_basis": ["listed", "publication"],
+      "role": "Shadow-education reviewer: phenomenon description; provider evidence; ban/transition tests; on-disk data",
+      "assigned_prior_question": "Q3 (tests), Q4 (first test), Q5 (cut/keep)",
+      "steel_man_slot": false
+    },
+    {
+      "handle": "THELEN",
+      "label": "Composite drawing on comparative political economy of skill formation",
+      "literature_basis": ["Thelen, How Institutions Evolve (2004)", "Thelen, Varieties of Capitalism (co-ed., 2001)"],
+      "grounding_basis": ["listed"],
+      "role": "Institutional reviewer: typology merits, measurement of differentiation/responsiveness, case selection",
+      "assigned_prior_question": "Q1 (merits), Q2 (novelty), Q5 (cut/keep)",
+      "steel_man_slot": false
+    },
+    {
+      "handle": "PAGE",
+      "label": "Composite drawing on model-based-reasoning and complexity literature",
+      "literature_basis": ["Page, The Model Thinker (2018)", "Miller & Page, Complex Adaptive Systems (2007)"],
+      "grounding_basis": ["publication"],
+      "role": "Test-design reviewer: which propositions are falsifiable, cheapest tests, predeclaration",
+      "assigned_prior_question": "Q3 (tests), Q4 (first test)",
+      "steel_man_slot": true
+    }
+  ],
+  "composition_check": {
+    "size_3_to_4": true,
+    "mandatory_shadow_education_composite": "BRAY",
+    "steel_man_slot": "PAGE",
+    "all_composites_grounded": true
+  },
+  "intake_notes": [
+    "Merits cycle, distinct from brief 010's referee report.",
+    "On-disk data used: KOR official 2023, HKG 2003, KHM case, China 2014/post-2021 headline, SHADOW_TARGETS, PARAMETER_MAP, scout relations/typology.",
+    "Three-margin decomposition (participation x hours x price/hour) proposed as a cheap test of the Korea puzzle."
+  ]
+}
