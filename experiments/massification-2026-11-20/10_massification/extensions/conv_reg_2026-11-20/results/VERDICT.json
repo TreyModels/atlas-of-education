@@ -1,0 +1,107 @@
+{
+  "adoption": "NONE",
+  "cell": "EXP-21 CONV-REG",
+  "counts": {
+    "cells_frozen": 12,
+    "cells_interchangeable": 4,
+    "cells_no_completion_series": 0,
+    "cells_not_interchangeable": 6,
+    "cells_thin": 2,
+    "cells_total": 18,
+    "cells_untraceable": 0,
+    "cells_with_crossing": 6
+  },
+  "frozen_thresholds": {
+    "band": [
+      0.85,
+      1.15
+    ],
+    "declared_m": 1.1,
+    "m_tolerance": 1e-09,
+    "max_range": 0.3,
+    "min_in_band_share": 0.8,
+    "min_pairs": 3
+  },
+  "hash_enforcement": "checked pre-input and re-checked immediately before this verdict was written",
+  "labels": {
+    "m": "DECLARED / CONVENTION",
+    "observed_inputs": "OBSERVED",
+    "panel_values": "SYNTHETIC",
+    "register_values": "DERIVED"
+  },
+  "m_constancy": {
+    "A17": "CONSTANT",
+    "v1.2": "NOT-CONSTANT",
+    "v1.3": "NOT-CONSTANT"
+  },
+  "m_constancy_max_dev": {
+    "A17": "8.8395202269e-10",
+    "v1.2": "4.7043695535e-02",
+    "v1.3": "4.7043695535e-02"
+  },
+  "n_detail_rows": 90,
+  "n_register_rows": 18,
+  "no_clock_in_outputs": true,
+  "no_model_run": true,
+  "no_rng": true,
+  "overall_verdict": "REGISTER-BINDING",
+  "precedence": "UNVERIFIED > REGISTER-BINDING > REGISTER-UNIFORM",
+  "precedence_trace": [
+    {
+      "clause": 1,
+      "evidence": [],
+      "fired": false,
+      "label": "UNVERIFIED",
+      "test": "any register line untraceable to a named file+column"
+    },
+    {
+      "clause": 2,
+      "evidence": {
+        "crossing_1_0": [
+          "CHN/primary",
+          "KHM/upper_secondary",
+          "KOR/lower_secondary",
+          "KOR/upper_secondary",
+          "PHL/primary",
+          "PHL/upper_secondary"
+        ],
+        "not_interchangeable": [
+          "CHN/upper_secondary",
+          "KHM/lower_secondary",
+          "KHM/primary",
+          "KHM/upper_secondary",
+          "PHL/lower_secondary",
+          "PHL/primary"
+        ]
+      },
+      "fired": true,
+      "label": "REGISTER-BINDING",
+      "test": "any frozen cell NOT-INTERCHANGEABLE, or any T crosses 1.0"
+    },
+    {
+      "clause": 3,
+      "evidence": [
+        "PHL/upper_secondary",
+        "KOR/lower_secondary",
+        "KOR/upper_secondary",
+        "CHN/primary"
+      ],
+      "fired": false,
+      "label": "REGISTER-UNIFORM",
+      "test": "all 12 frozen cells INTERCHANGEABLE and no crossing"
+    },
+    {
+      "clause": 4,
+      "evidence": [
+        "KOR/primary",
+        "CHN/lower_secondary"
+      ],
+      "fired": false,
+      "label": "REGISTER-UNIFORM-PARTIAL",
+      "test": "no UNVERIFIED, no NOT-INTERCHANGEABLE, no crossing, >=1 frozen cell THIN"
+    }
+  ],
+  "predeclaration_hash_enforced": true,
+  "predeclaration_sha256": "1dd86bd139a81c22e0ba2918728818fe7184775d925211a28fdd2be00b975410",
+  "question": "which object may carry which level statement, and is one constant conversion enough?"
+}

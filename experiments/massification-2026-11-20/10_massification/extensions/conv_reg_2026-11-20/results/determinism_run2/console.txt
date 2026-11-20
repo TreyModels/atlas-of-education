@@ -1,0 +1,38 @@
+predeclaration hash ENFORCED at pre-input: 1dd86bd139a81c22e0ba2918728818fe7184775d925211a28fdd2be00b975410
+EXP-21 CONV-REG -- descriptive register -- no model run, no RNG, no clock
+band [0.85, 1.15] closed; in-band share >= 0.80 of paired cells; range <= 0.30; THIN if n<3
+series is long-format (iso3,indicator,level,year,value,status): a cell is read as value where indicator=<object> and status=observed; both sides of every pair name their indicator
+frozen systems: PHL,KOR,KHM,CHN; reported outside verdict scope: HKG,JPN
+  v1.3: cells where 1.10*completion_cohort > 1.0: 35; of those, completion_uis == 1.0 exactly (capped): 35
+m-constancy v1.3: n_rows=6720 tested=6720 not_testable=0 max_dev_ratio=4.7043695535e-02 max_dev_factor=0.0000000000e+00 -> NOT-CONSTANT
+  v1.2: cells where 1.10*completion_cohort > 1.0: 35; of those, completion_uis == 1.0 exactly (capped): 35
+m-constancy v1.2: n_rows=6720 tested=6720 not_testable=0 max_dev_ratio=4.7043695535e-02 max_dev_factor=0.0000000000e+00 -> NOT-CONSTANT
+  A17: cells where 1.10*completion_cohort > 1.0: 0; of those, completion_uis == 1.0 exactly (capped): 0
+m-constancy A17: n_rows=6720 tested=6720 not_testable=0 max_dev_ratio=8.8395202269e-10 max_dev_factor=0.0000000000e+00 -> CONSTANT
+register PHL/primary pairs=9 share=0.555556 range=0.271307 crossing=2021 -> NOT-INTERCHANGEABLE
+register PHL/lower_secondary pairs=4 share=0.250000 range=0.154759 crossing=NONE -> NOT-INTERCHANGEABLE
+register PHL/upper_secondary pairs=6 share=1.000000 range=0.195080 crossing=2017 -> INTERCHANGEABLE
+register KOR/primary pairs=1 share=1.000000 range=0.000000 crossing=UNABLE -> THIN
+register KOR/lower_secondary pairs=16 share=1.000000 range=0.083801 crossing=2010;2017 -> INTERCHANGEABLE
+register KOR/upper_secondary pairs=19 share=1.000000 range=0.175726 crossing=2006;2007;2008;2009;2016 -> INTERCHANGEABLE
+register KHM/primary pairs=14 share=0.000000 range=0.456382 crossing=NONE -> NOT-INTERCHANGEABLE
+register KHM/lower_secondary pairs=6 share=0.000000 range=0.245824 crossing=NONE -> NOT-INTERCHANGEABLE
+register KHM/upper_secondary pairs=3 share=0.000000 range=0.802623 crossing=2001;2008 -> NOT-INTERCHANGEABLE
+register CHN/primary pairs=6 share=1.000000 range=0.100048 crossing=2014;2016;2020 -> INTERCHANGEABLE
+register CHN/lower_secondary pairs=1 share=0.000000 range=0.000000 crossing=UNABLE -> THIN
+register CHN/upper_secondary pairs=5 share=0.200000 range=0.374174 crossing=NONE -> NOT-INTERCHANGEABLE
+register HKG/primary pairs=0 share=UNABLE range=UNABLE crossing=UNABLE -> NO-COMPLETION-SERIES
+register HKG/lower_secondary pairs=0 share=UNABLE range=UNABLE crossing=UNABLE -> NO-COMPLETION-SERIES
+register HKG/upper_secondary pairs=0 share=UNABLE range=UNABLE crossing=UNABLE -> NO-COMPLETION-SERIES
+register JPN/primary pairs=0 share=UNABLE range=UNABLE crossing=UNABLE -> NO-COMPLETION-SERIES
+register JPN/lower_secondary pairs=0 share=UNABLE range=UNABLE crossing=UNABLE -> NO-COMPLETION-SERIES
+register JPN/upper_secondary pairs=0 share=UNABLE range=UNABLE crossing=UNABLE -> NO-COMPLETION-SERIES
+system PHL levels_measured=3 intersection=NONEMPTY spread=0.347762
+system KOR levels_measured=3 intersection=NONEMPTY spread=0.175726
+system KHM levels_measured=3 intersection=NONEMPTY spread=0.839544
+system CHN levels_measured=3 intersection=EMPTY spread=0.431889
+system HKG levels_measured=0 intersection=UNABLE spread=UNABLE
+system JPN levels_measured=0 intersection=UNABLE spread=UNABLE
+predeclaration hash ENFORCED at pre-verdict-write: 1dd86bd139a81c22e0ba2918728818fe7184775d925211a28fdd2be00b975410
+OVERALL VERDICT: REGISTER-BINDING (clause 2 fired)
+register rows=18 detail rows=90

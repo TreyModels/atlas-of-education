@@ -1,0 +1,292 @@
+{
+  "adoption": "NONE",
+  "authority": {
+    "brief": "08_council/brief_025/SYNTHESIS_025.md section 6.1 (verbatim in PRE_DECLARATIONS.md section 1)",
+    "decision": "D156 #1 (rank #1); D153(xi) (the non-constant observed relation); D158(1)-(7) (authoring rules); D157 (required-state isolation)",
+    "rank": 1,
+    "sequencing": "first cell of the cycle-17 slate; precondition for EXP-22 and EXP-25 (EXP-21 -> (22, 25))"
+  },
+  "closed_claims": [
+    "no_model_run",
+    "no_re_fit",
+    "no_threshold_change",
+    "no_proxy",
+    "no_adoption",
+    "no_causal_claim",
+    "no_direction_claim",
+    "no_re_score_of_EXP_18",
+    "no_re_run_of_EXP_15",
+    "no_ner_statistic",
+    "no_required_state_in_any_verdict_path",
+    "no_write_outside_cell_dir"
+  ],
+  "code": {
+    "clock_in_outputs": false,
+    "deterministic": true,
+    "environment": {
+      "implementation": "CPython",
+      "python": "3.11.17"
+    },
+    "manifest_builder": {
+      "bytes": 8271,
+      "entry_point": "code/make_manifest.py",
+      "path": "code/make_manifest.py",
+      "sha256": "06ca46f3950f5b3d24dcf092c41654f4087058dc7c844c1ab4ad75e0691bc8b7"
+    },
+    "network": "none",
+    "rng": "none",
+    "runner": {
+      "bytes": 24650,
+      "entry_point": "code/run_conv_reg.py --out results",
+      "path": "code/run_conv_reg.py",
+      "sha256": "2e7125f09aee9df2061bd2b983cdf34b8a74a6d576ec394a18f132e4ead95876"
+    }
+  },
+  "determinism": {
+    "files": {
+      "CONV_REG.csv": {
+        "byte_identical": true,
+        "run1_sha256": "f53d8e707d929843dad36ef66e230933de25430eaf8b70a683a925b70c8d4b0b",
+        "run2_sha256": "f53d8e707d929843dad36ef66e230933de25430eaf8b70a683a925b70c8d4b0b"
+      },
+      "CONV_REG_DETAIL.csv": {
+        "byte_identical": true,
+        "run1_sha256": "587ade715e82f1dcefa4df10529f2257f486fb1e892430f20505a26e78312886",
+        "run2_sha256": "587ade715e82f1dcefa4df10529f2257f486fb1e892430f20505a26e78312886"
+      },
+      "CONV_REG_SYSTEM.csv": {
+        "byte_identical": true,
+        "run1_sha256": "5796131779ad26a3dd82020b38a5a8a5867230d6d1c8b76095920c46f2a38ade",
+        "run2_sha256": "5796131779ad26a3dd82020b38a5a8a5867230d6d1c8b76095920c46f2a38ade"
+      },
+      "M_CONSTANCY.csv": {
+        "byte_identical": true,
+        "run1_sha256": "32cac91be20d2b1a5498f409a27285198189eb0a599840ddcaa64555bd8f58e5",
+        "run2_sha256": "32cac91be20d2b1a5498f409a27285198189eb0a599840ddcaa64555bd8f58e5"
+      },
+      "VERDICT.json": {
+        "byte_identical": true,
+        "run1_sha256": "966d80ffee3423bedb2afddfc6b789d8347e6667abccc8fd5110ba3149685857",
+        "run2_sha256": "966d80ffee3423bedb2afddfc6b789d8347e6667abccc8fd5110ba3149685857"
+      },
+      "console.txt": {
+        "byte_identical": true,
+        "run1_sha256": "fcb1d6f5a7608636f340be398666029ebcdeb60e11ad8c9a750987ee3dfb2657",
+        "run2_sha256": "fcb1d6f5a7608636f340be398666029ebcdeb60e11ad8c9a750987ee3dfb2657"
+      }
+    },
+    "method": "sha256 per file between results/ and results/determinism_run2/ (two independent executions of the same code on the same inputs)",
+    "result": "deterministic in all 6 artifacts"
+  },
+  "experiment": "EXP-21 CONV-REG",
+  "files": [
+    {
+      "bytes": 24092,
+      "path": "FINDINGS.md",
+      "sha256": "c17a671a9dd15aced1408297f36fad236f0886dac26f9dbd19e33588d3054569"
+    },
+    {
+      "bytes": 35515,
+      "path": "PRE_DECLARATIONS.md",
+      "sha256": "1dd86bd139a81c22e0ba2918728818fe7184775d925211a28fdd2be00b975410"
+    },
+    {
+      "bytes": 86,
+      "path": "PRE_DECLARATIONS.sha256",
+      "sha256": "62204900c1dd84b6ca8d50b3572f31dc9d5ea944b142920ceff01353594f656f"
+    },
+    {
+      "bytes": 8271,
+      "path": "code/make_manifest.py",
+      "sha256": "06ca46f3950f5b3d24dcf092c41654f4087058dc7c844c1ab4ad75e0691bc8b7"
+    },
+    {
+      "bytes": 24650,
+      "path": "code/run_conv_reg.py",
+      "sha256": "2e7125f09aee9df2061bd2b983cdf34b8a74a6d576ec394a18f132e4ead95876"
+    },
+    {
+      "bytes": 6215,
+      "path": "results/CONV_REG.csv",
+      "sha256": "f53d8e707d929843dad36ef66e230933de25430eaf8b70a683a925b70c8d4b0b"
+    },
+    {
+      "bytes": 19829,
+      "path": "results/CONV_REG_DETAIL.csv",
+      "sha256": "587ade715e82f1dcefa4df10529f2257f486fb1e892430f20505a26e78312886"
+    },
+    {
+      "bytes": 466,
+      "path": "results/CONV_REG_SYSTEM.csv",
+      "sha256": "5796131779ad26a3dd82020b38a5a8a5867230d6d1c8b76095920c46f2a38ade"
+    },
+    {
+      "bytes": 1668,
+      "path": "results/DETERMINISM.json",
+      "sha256": "51029ddba29cc1ed104f6ab4e459c655a3c43dbd857dc6b3b721671568e94719"
+    },
+    {
+      "bytes": 1030,
+      "path": "results/INPUT_HASHES.json",
+      "sha256": "9286467a3963e8cf4aae493cbbb2b420a083ea11873789b3cf0c6ec2de07d981"
+    },
+    {
+      "bytes": 1002,
+      "path": "results/M_CONSTANCY.csv",
+      "sha256": "32cac91be20d2b1a5498f409a27285198189eb0a599840ddcaa64555bd8f58e5"
+    },
+    {
+      "bytes": 2852,
+      "path": "results/VERDICT.json",
+      "sha256": "966d80ffee3423bedb2afddfc6b789d8347e6667abccc8fd5110ba3149685857"
+    },
+    {
+      "bytes": 3657,
+      "path": "results/console.txt",
+      "sha256": "fcb1d6f5a7608636f340be398666029ebcdeb60e11ad8c9a750987ee3dfb2657"
+    },
+    {
+      "bytes": 6215,
+      "path": "results/determinism_run2/CONV_REG.csv",
+      "sha256": "f53d8e707d929843dad36ef66e230933de25430eaf8b70a683a925b70c8d4b0b"
+    },
+    {
+      "bytes": 19829,
+      "path": "results/determinism_run2/CONV_REG_DETAIL.csv",
+      "sha256": "587ade715e82f1dcefa4df10529f2257f486fb1e892430f20505a26e78312886"
+    },
+    {
+      "bytes": 466,
+      "path": "results/determinism_run2/CONV_REG_SYSTEM.csv",
+      "sha256": "5796131779ad26a3dd82020b38a5a8a5867230d6d1c8b76095920c46f2a38ade"
+    },
+    {
+      "bytes": 1030,
+      "path": "results/determinism_run2/INPUT_HASHES.json",
+      "sha256": "9286467a3963e8cf4aae493cbbb2b420a083ea11873789b3cf0c6ec2de07d981"
+    },
+    {
+      "bytes": 1002,
+      "path": "results/determinism_run2/M_CONSTANCY.csv",
+      "sha256": "32cac91be20d2b1a5498f409a27285198189eb0a599840ddcaa64555bd8f58e5"
+    },
+    {
+      "bytes": 2852,
+      "path": "results/determinism_run2/VERDICT.json",
+      "sha256": "966d80ffee3423bedb2afddfc6b789d8347e6667abccc8fd5110ba3149685857"
+    },
+    {
+      "bytes": 3657,
+      "path": "results/determinism_run2/console.txt",
+      "sha256": "fcb1d6f5a7608636f340be398666029ebcdeb60e11ad8c9a750987ee3dfb2657"
+    }
+  ],
+  "files_excluded_from_manifest": [
+    "RUN_MANIFEST.json",
+    "SHA256SUMS.txt"
+  ],
+  "frozen_thresholds": {
+    "band": [
+      0.85,
+      1.15
+    ],
+    "declared_m": 1.1,
+    "m_tolerance": 1e-09,
+    "max_range": 0.3,
+    "min_in_band_share": 0.8,
+    "min_pairs": 3
+  },
+  "inputs": [
+    {
+      "path": "10_massification/data/UNIVERSALIZATION_SERIES.csv",
+      "sha256": "85bc869396ebfcb39e3e1a21a31af219e75a07326c738a51d2bfdbe536737ddb"
+    },
+    {
+      "path": "10_massification/extensions/synthetic_2026-11-20/generator_v1_3/results/synthetic_panel_v1_3.csv",
+      "sha256": "47d4b082f4ba5838cc20fbb09e59dd3dd847ad25393b1ce091069c94496657e3"
+    },
+    {
+      "path": "10_massification/extensions/synthetic_2026-11-20/generator_v1_2/results/synthetic_panel_v1_2.csv",
+      "sha256": "14729c5141a71dd9aaf87a5ad2e973a84b5f04603577aae627f2833276fac5ac"
+    },
+    {
+      "path": "10_massification/extensions/synthetic_2026-11-20/generator_v1_7_partrepair/results/panel_A17.csv",
+      "sha256": "e955f02d49e78d52ddf0d7125ba3746c18629ea6b7714375d5e940daa1c4afcf"
+    },
+    {
+      "path": "10_massification/extensions/synthetic_2026-11-20/generator_v1_2/PARAMS.md",
+      "sha256": "0d619781c4e059f54cf771fb385475f5f939dceced5036e8a21b6e07a2b315e3"
+    },
+    {
+      "path": "08_council/brief_025/SYNTHESIS_025.md",
+      "sha256": "e279e8200bb8504cafb6b5a4f6f70f3f436410d6839b315896877973c50a8beb"
+    },
+    {
+      "path": "08_council/DECISIONS.md",
+      "sha256": "c2cb7cbe85a814ea3568ab36d90e12e4d20c83f4c84d1d39eb33917bbca2ae59"
+    },
+    {
+      "path": "10_massification/data/DATA_NOTES_MASSIFICATION.md",
+      "sha256": "5e51c5d0a6d620125f0f8ef902ed8942cf3bed96af762cd213f71b7613a8c244"
+    }
+  ],
+  "labels": {
+    "m": "DECLARED / CONVENTION",
+    "observed_inputs": "OBSERVED",
+    "panel_values": "SYNTHETIC",
+    "register_values": "DERIVED"
+  },
+  "notes": [
+    "Register before sentence (D158(3)): every row carries system, level, convention pair, source path and column, label and the enforced predeclaration hash.",
+    "Object identity (D158(2)): a pair requires the same system, the same level, the same year and both status=observed; otherwise the year is counted as NOT-COMPARABLE and contributes no number.",
+    "The observed T is NOT assumed constant, and m = 1.10 is a DECLARED point convention on a SYNTHETIC panel, not a level convention.",
+    "HKG and JPN carry no UIS completion series on disk; their cells are NO-COMPLETION-SERIES and enter no verdict path.",
+    "No REQUIRED-STATE object (lambda*, required coverage, 0.8076) is read, computed or cited in this cell (D157/D158(7))."
+  ],
+  "predeclaration": {
+    "enforced_at_verdict_time": true,
+    "enforcement": "code/run_conv_reg.py checks the hash before reading any input and re-checks it immediately before VERDICT.json is written; mismatch aborts with exit 2 and writes no verdict",
+    "freeze_check": "PASS",
+    "frozen_before_execution": true,
+    "path": "PRE_DECLARATIONS.md",
+    "sha256": "1dd86bd139a81c22e0ba2918728818fe7184775d925211a28fdd2be00b975410",
+    "sha256_file": "PRE_DECLARATIONS.sha256"
+  },
+  "sources_verbatim": [
+    "08_council/brief_025/SYNTHESIS_025.md section 6.1 (block items 1-7)",
+    "08_council/brief_025/SYNTHESIS_025.md section 7 (the seven authoring rules)",
+    "08_council/brief_025/SYNTHESIS_025.md section 8 (the banned-sentences bullet)",
+    "08_council/DECISIONS.md D156 (EXP-21 clause), D153(xi), D158"
+  ],
+  "status": "delivered",
+  "verdict": {
+    "adoption": "NONE",
+    "clause_fired": [
+      2
+    ],
+    "counts": {
+      "cells_frozen": 12,
+      "cells_interchangeable": 4,
+      "cells_no_completion_series": 0,
+      "cells_not_interchangeable": 6,
+      "cells_thin": 2,
+      "cells_total": 18,
+      "cells_untraceable": 0,
+      "cells_with_crossing": 6
+    },
+    "label": "REGISTER-BINDING",
+    "m_constancy": {
+      "A17": "CONSTANT",
+      "v1.2": "NOT-CONSTANT",
+      "v1.3": "NOT-CONSTANT"
+    },
+    "m_constancy_max_dev": {
+      "A17": "8.8395202269e-10",
+      "v1.2": "4.7043695535e-02",
+      "v1.3": "4.7043695535e-02"
+    },
+    "precedence": "UNVERIFIED > REGISTER-BINDING > REGISTER-UNIFORM",
+    "reason": "6 of 12 frozen system x level cells are NOT-INTERCHANGEABLE and 6 of 12 cross T = 1.0 (all 4 INTERCHANGEABLE cells among them); 2 cells are THIN. One constant conversion cannot stand for a relation that is neither in band nor constant."
+  },
+  "worker": "CR"
+}

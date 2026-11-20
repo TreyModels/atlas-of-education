@@ -483,3 +483,13 @@ B1 — pre-run SHA snapshot reconstructed (30/33 match, original hash `89638b39�
 - **Slate (D156):** EXP-21 CONV-REG (#1), EXP-22 PART-MARGIN-DESC (#2), EXP-23 D63-BOUNDS (#3), EXP-24 KAPPA-WRITE (#4),
   EXP-25 V-SPINE (#5 drop-first; second cut EXP-24). HELD unchanged (D157); no proxy substitution; no experiment against
   a HELD object; parks stand.
+
+## 2026-11-21 — EXP-21 CONV-REG: REGISTER-BINDING — one constant conversion is not enough (D160)
+
+- `conv_reg_2026-11-20/` (predecl `1dd86bd1…`, hash enforced pre-input and pre-verdict; deterministic 6/6; 21/21 SHA;
+  0 untraceable rows): **4/12 INTERCHANGEABLE, 6 NOT, 2 THIN**; PHL primary NOT (share 0.5556, crosses 2021), PHL lower
+  NOT (0.25), PHL upper INTER (1.0, crosses 2017); KOR lower/upper INTER; KHM all NOT (0.0 in band); CHN primary INTER,
+  upper NOT; HKG/JPN no series. **All four interchangeable cells cross 1.0; CHN level intervals disjoint.** m-constancy:
+  A17 CONSTANT 8.84e-10; v1.3/v1.2 NOT-CONSTANT 4.704e-02 (35/6,720 cells cap completion_uis at 1.0). **m=1.10 is a point
+  convention, not a level convention; every level sentence carries its register line.** No adoption; no causal/direction
+  claim.

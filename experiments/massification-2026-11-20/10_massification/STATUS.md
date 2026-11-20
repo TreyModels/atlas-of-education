@@ -1364,3 +1364,15 @@ frozen A10 at 4.44e-10; determinism 3/3; final SHA256SUMS 14/14.
 - **Next slate (D156):** EXP-21 CONV-REG (#1), EXP-22 PART-MARGIN-DESC (#2), EXP-23 D63-BOUNDS (#3), EXP-24 KAPPA-WRITE
   (#4), EXP-25 V-SPINE (#5 drop-first; second cut EXP-24). HELD unchanged (D157); no proxy substitution; no experiment
   against a HELD object.
+
+### y) EXP-21 CONV-REG — `REGISTER-BINDING`: one constant conversion is not enough (D160)
+
+- `conv_reg_2026-11-20/` (predecl `1dd86bd1…`, hash enforced pre-input and pre-verdict; deterministic 6/6; 21/21 SHA;
+  0 untraceable rows). **4/12 cells INTERCHANGEABLE, 6 NOT, 2 THIN.** PHL primary n=9 0.802546–1.073853, share 0.555556,
+  crosses 2021 → **NOT**; PHL lower n=4 0.746209–0.900968, 0.250000 → **NOT**; PHL upper n=6 0.898892–1.093971, 1.0,
+  crosses 2017 → **INTER**; KOR lower/upper n=16/19 → **INTER**; KOR primary THIN; KHM all three 0.0 in band → **NOT**;
+  CHN primary n=6 1.0 → **INTER**; CHN lower THIN; CHN upper 0.2 → **NOT**; HKG/JPN no completion series.
+- **All four interchangeable cells still cross 1.0; CHN's per-level intervals are disjoint.** **m-constancy:** A17 CONSTANT
+  at 8.8395202269e-10; v1.3/v1.2 NOT-CONSTANT at 4.7043695535e-02 — **35/6,720 cells cap `completion_uis` at 1.0** where
+  1.10×cohort > 1. **Consequence: `m = 1.10` is a point convention on a synthetic panel, not a level convention; every
+  level sentence names the object pair and the register line.**

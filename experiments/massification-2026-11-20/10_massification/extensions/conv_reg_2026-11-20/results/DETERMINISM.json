@@ -1,0 +1,44 @@
+{
+  "all_identical": true,
+  "artifacts": [
+    {
+      "artifact": "CONV_REG.csv",
+      "byte_identical": true,
+      "sha256_run1": "f53d8e707d929843dad36ef66e230933de25430eaf8b70a683a925b70c8d4b0b",
+      "sha256_run2": "f53d8e707d929843dad36ef66e230933de25430eaf8b70a683a925b70c8d4b0b"
+    },
+    {
+      "artifact": "CONV_REG_DETAIL.csv",
+      "byte_identical": true,
+      "sha256_run1": "587ade715e82f1dcefa4df10529f2257f486fb1e892430f20505a26e78312886",
+      "sha256_run2": "587ade715e82f1dcefa4df10529f2257f486fb1e892430f20505a26e78312886"
+    },
+    {
+      "artifact": "CONV_REG_SYSTEM.csv",
+      "byte_identical": true,
+      "sha256_run1": "5796131779ad26a3dd82020b38a5a8a5867230d6d1c8b76095920c46f2a38ade",
+      "sha256_run2": "5796131779ad26a3dd82020b38a5a8a5867230d6d1c8b76095920c46f2a38ade"
+    },
+    {
+      "artifact": "M_CONSTANCY.csv",
+      "byte_identical": true,
+      "sha256_run1": "32cac91be20d2b1a5498f409a27285198189eb0a599840ddcaa64555bd8f58e5",
+      "sha256_run2": "32cac91be20d2b1a5498f409a27285198189eb0a599840ddcaa64555bd8f58e5"
+    },
+    {
+      "artifact": "VERDICT.json",
+      "byte_identical": true,
+      "sha256_run1": "966d80ffee3423bedb2afddfc6b789d8347e6667abccc8fd5110ba3149685857",
+      "sha256_run2": "966d80ffee3423bedb2afddfc6b789d8347e6667abccc8fd5110ba3149685857"
+    },
+    {
+      "artifact": "console.txt",
+      "byte_identical": true,
+      "sha256_run1": "fcb1d6f5a7608636f340be398666029ebcdeb60e11ad8c9a750987ee3dfb2657",
+      "sha256_run2": "fcb1d6f5a7608636f340be398666029ebcdeb60e11ad8c9a750987ee3dfb2657"
+    }
+  ],
+  "cell": "EXP-21 CONV-REG",
+  "n_artifacts": 6,
+  "verdict": "DETERMINISTIC"
+}
