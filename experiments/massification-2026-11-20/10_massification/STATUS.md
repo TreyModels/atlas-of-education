@@ -1326,3 +1326,11 @@ frozen A10 at 4.44e-10; determinism 3/3; final SHA256SUMS 14/14.
 - **CLOSING RULE FIRED: the generator line closes at representation-only; no successor is predeclared this phase.** The
   programme holds a representation capability, a descriptive per-system κ, a labelled placement instrument, and a
   localised level failure; the level question passes to the descriptive + measurement lines (D144 fallback).
+
+### x) EXP-19 PLACES-BOUND — `PROXY-SILENT`: the required coverage is not observable on disk (D151)
+
+- `places_bound_2026-11-20/` (predecl `22786090…`; deterministic; 16/16 SHA). One declared conversion family from the
+  on-disk PHL class-size/PTR/enrolment description, three norm class sizes {40,45,50} **declared and none adopted**, does
+  **not** discriminate EXP-17's REQUIRED-STATE (required seats/cohort **0.759712** (2018) / **0.873523** (2021); DERIVED
+  target 0.8076; λ* NOT adopted) → **`PROXY-SILENT`**. The required state stays **DECLARED**; the **HELD places ask stays
+  HELD**; no norm, path or λ adopted.

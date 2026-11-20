@@ -1,0 +1,247 @@
+{
+  "adoption": "NONE",
+  "authority": {
+    "brief": "08_council/brief_024/SYNTHESIS_024.md section 5.4 (verbatim in PRE_DECLARATIONS.md section 1)",
+    "decision": "D145 #4 (rank #4); D146 (coverage/data ruling); D147 (authoring rules); D148 (EXP-17 required state)",
+    "rank": 4,
+    "sequencing": "after EXP-17 (D145/D148); dependency satisfied"
+  },
+  "closed_claims": [
+    "no_phys_cap_change",
+    "no_re_fit",
+    "no_fabrication",
+    "no_proxy_outside_family",
+    "no_causal_claim",
+    "no_direction_claim",
+    "no_level_bar",
+    "adopt_nothing"
+  ],
+  "code": {
+    "clock_in_outputs": false,
+    "deterministic": true,
+    "environment": {
+      "implementation": "CPython",
+      "python": "3.11.17"
+    },
+    "manifest_builder": {
+      "bytes": 11159,
+      "entry_point": "code/make_manifest.py",
+      "path": "code/make_manifest.py",
+      "sha256": "3e2fcd168428b0fc19af6546858512cf99e84c06fda35f75e613255b3ffec4a1"
+    },
+    "network": "none",
+    "rng": "none",
+    "runner": {
+      "bytes": 42337,
+      "entry_point": "code/run_places_bound.py --outdir results",
+      "path": "code/run_places_bound.py",
+      "sha256": "bbfd38133f2eaa992fb65da52199aa150a2a3476382fa53bc7a3fb5a94d1d1ec"
+    }
+  },
+  "declared_norms": {
+    "adopted": 0,
+    "label": "DECLARED",
+    "values": [
+      40,
+      45,
+      50
+    ]
+  },
+  "determinism": {
+    "files": {
+      "INPUT_HASHES.json": {
+        "byte_identical": true,
+        "run1_sha256": "fef77f3bc1c601f88f46fcc1b7d1650f6408ac28f8d7409c554526ce97ffb55f",
+        "run2_sha256": "fef77f3bc1c601f88f46fcc1b7d1650f6408ac28f8d7409c554526ce97ffb55f"
+      },
+      "PLACES_BOUND_DETAIL.csv": {
+        "byte_identical": true,
+        "run1_sha256": "8928ffb285d40fffc1e81f483689b992559ee90277d3cef350246b99dfc8d574",
+        "run2_sha256": "8928ffb285d40fffc1e81f483689b992559ee90277d3cef350246b99dfc8d574"
+      },
+      "PLACES_BOUND_RESULTS.csv": {
+        "byte_identical": true,
+        "run1_sha256": "800de3c9ad043f6c7cfe94b407869778e062b961f749e99049799386908a4888",
+        "run2_sha256": "800de3c9ad043f6c7cfe94b407869778e062b961f749e99049799386908a4888"
+      },
+      "PROXY_DISTORTION.md": {
+        "byte_identical": true,
+        "run1_sha256": "1b43998684b04f1aae933838b0fb55684f5b29c1ac494553a7ec6cb738e5f092",
+        "run2_sha256": "1b43998684b04f1aae933838b0fb55684f5b29c1ac494553a7ec6cb738e5f092"
+      },
+      "console.txt": {
+        "byte_identical": true,
+        "run1_sha256": "e28481890520b93d66c1028ec396773d80e45667828678c10869eacdfc84687c",
+        "run2_sha256": "e28481890520b93d66c1028ec396773d80e45667828678c10869eacdfc84687c"
+      }
+    },
+    "method": "sha256 per file between results/ and results/determinism_run2/ (two independent executions)",
+    "result": "byte-identical in all five output files"
+  },
+  "experiment": "EXP-19 PLACES-BOUND",
+  "files": [
+    {
+      "bytes": 13296,
+      "path": "FINDINGS.md",
+      "sha256": "d6c559089e1dd6d9110f59724c61e9f30ebd21f241721a3489d53bb9c4b7d9eb"
+    },
+    {
+      "bytes": 31988,
+      "path": "PRE_DECLARATIONS.md",
+      "sha256": "22786090d91598cb03d04ae081c48ec41aa664bae8a1bd40d33aa77de7e1d25f"
+    },
+    {
+      "bytes": 86,
+      "path": "PRE_DECLARATIONS.sha256",
+      "sha256": "5dcc7fd636f166c843a3e574a6ced535444c1b50c4eb49eaa2edf05d1e2fbabb"
+    },
+    {
+      "bytes": 11159,
+      "path": "code/make_manifest.py",
+      "sha256": "3e2fcd168428b0fc19af6546858512cf99e84c06fda35f75e613255b3ffec4a1"
+    },
+    {
+      "bytes": 42337,
+      "path": "code/run_places_bound.py",
+      "sha256": "bbfd38133f2eaa992fb65da52199aa150a2a3476382fa53bc7a3fb5a94d1d1ec"
+    },
+    {
+      "bytes": 1443,
+      "path": "results/INPUT_HASHES.json",
+      "sha256": "fef77f3bc1c601f88f46fcc1b7d1650f6408ac28f8d7409c554526ce97ffb55f"
+    },
+    {
+      "bytes": 6731,
+      "path": "results/PLACES_BOUND_DETAIL.csv",
+      "sha256": "8928ffb285d40fffc1e81f483689b992559ee90277d3cef350246b99dfc8d574"
+    },
+    {
+      "bytes": 17522,
+      "path": "results/PLACES_BOUND_RESULTS.csv",
+      "sha256": "800de3c9ad043f6c7cfe94b407869778e062b961f749e99049799386908a4888"
+    },
+    {
+      "bytes": 4385,
+      "path": "results/PROXY_DISTORTION.md",
+      "sha256": "1b43998684b04f1aae933838b0fb55684f5b29c1ac494553a7ec6cb738e5f092"
+    },
+    {
+      "bytes": 1468,
+      "path": "results/console.txt",
+      "sha256": "e28481890520b93d66c1028ec396773d80e45667828678c10869eacdfc84687c"
+    },
+    {
+      "bytes": 1443,
+      "path": "results/determinism_run2/INPUT_HASHES.json",
+      "sha256": "fef77f3bc1c601f88f46fcc1b7d1650f6408ac28f8d7409c554526ce97ffb55f"
+    },
+    {
+      "bytes": 6731,
+      "path": "results/determinism_run2/PLACES_BOUND_DETAIL.csv",
+      "sha256": "8928ffb285d40fffc1e81f483689b992559ee90277d3cef350246b99dfc8d574"
+    },
+    {
+      "bytes": 17522,
+      "path": "results/determinism_run2/PLACES_BOUND_RESULTS.csv",
+      "sha256": "800de3c9ad043f6c7cfe94b407869778e062b961f749e99049799386908a4888"
+    },
+    {
+      "bytes": 4385,
+      "path": "results/determinism_run2/PROXY_DISTORTION.md",
+      "sha256": "1b43998684b04f1aae933838b0fb55684f5b29c1ac494553a7ec6cb738e5f092"
+    },
+    {
+      "bytes": 1468,
+      "path": "results/determinism_run2/console.txt",
+      "sha256": "e28481890520b93d66c1028ec396773d80e45667828678c10869eacdfc84687c"
+    }
+  ],
+  "held_used": "NONE",
+  "identification": {
+    "ger_lower_secondary_last_year": "2018",
+    "jhs_ger_lower_year_intersection": "0",
+    "jhs_ratio_years": "2010;2019;2021",
+    "reason": "2018 divisor carried from 2019; 2021 enrolment ratio is the broader ger_secondary"
+  },
+  "implied_capacity_derived": {
+    "coverage_2018_n40": "0.95276",
+    "coverage_2018_n45": "1.071855",
+    "coverage_2018_n50": "1.19095",
+    "coverage_2021_n40": "0.780605886938",
+    "coverage_2021_n45": "0.878181622805",
+    "coverage_2021_n50": "0.975757358672"
+  },
+  "inputs": [
+    {
+      "path": "10_massification/data/SCHOOL_EXPANSION.csv",
+      "sha256": "c218e6c9bd784e135e089ebecefec21112a09e6bf2c778599a33bc81b78c8ea3"
+    },
+    {
+      "path": "10_massification/data/STATE_CAPACITY.csv",
+      "sha256": "704efacad00f0ba7ddf579459a930d064fdb0f4b882cffbbf44a6cbecd585044"
+    },
+    {
+      "path": "10_massification/data/UNIVERSALIZATION_SERIES.csv",
+      "sha256": "85bc869396ebfcb39e3e1a21a31af219e75a07326c738a51d2bfdbe536737ddb"
+    },
+    {
+      "path": "10_massification/extensions/joint_cover_2026-11-20/results/JOINT_COVER_RESULTS.csv",
+      "sha256": "9d5afc9a4483d135ed671392489a5b813a5e1200e27c22b17f3af2076a27f46a"
+    },
+    {
+      "path": "08_council/brief_024/SYNTHESIS_024.md",
+      "sha256": "6c6aea4576098c7df68bb1a2d1ee858ec989f45b5e725d5acffc4373ef84babe"
+    },
+    {
+      "path": "08_council/DECISIONS.md",
+      "sha256": "1bf43b39125c07e228a8d21b4062040d80b8a76df750536b7014a034a841d3a2"
+    }
+  ],
+  "intervals_derived": {
+    "n40": "[0.780605886938; 0.95276]",
+    "n45": "[0.878181622805; 1.071855]",
+    "n50": "[0.975757358672; 1.19095]"
+  },
+  "labels": {
+    "declared": "norm class sizes, conversion assumptions, matching rules, verdict precedence",
+    "derived": "required state, implied coverage, intervals, comparisons, verdict",
+    "held": "D135/D146 data not on disk and not used",
+    "observed": "on-disk ratio / enrolment / backlog / flow values",
+    "synthetic": "only inside the imported EXP-17 required state's provenance; not used as an observed value"
+  },
+  "notes": [
+    "D146 stands: the places object is not on disk as a count; the class-size/PTR record is a description.",
+    "The proxy is DERIVED and its distortions are stated in results/PROXY_DISTORTION.md; nothing is adopted.",
+    "PROXY-SILENT closes the proxy route; the HELD places ask remains HELD."
+  ],
+  "predeclaration": {
+    "freeze_check": "PASS",
+    "frozen_before_execution": true,
+    "path": "PRE_DECLARATIONS.md",
+    "sha256": "22786090d91598cb03d04ae081c48ec41aa664bae8a1bd40d33aa77de7e1d25f",
+    "sha256_file": "PRE_DECLARATIONS.sha256"
+  },
+  "required_state_derived": {
+    "label": "DERIVED; REQUIRED-STATE (EXP-17); NOT adopted",
+    "lambda_star": "1.11465019198",
+    "required_coverage_2018": "0.759712104599",
+    "required_coverage_2021": "0.873523198725",
+    "required_target": "0.8076",
+    "source": "10_massification/extensions/joint_cover_2026-11-20/results/JOINT_COVER_RESULTS.csv"
+  },
+  "status": "delivered",
+  "verdict": {
+    "adoption": "NONE",
+    "exact_cells_2018": "0",
+    "exact_cells_2021": "0",
+    "headline_counterfactual_non_verdict_bearing": "PROXY-EXCLUDES",
+    "identification_gate": "FAIL",
+    "label": "PROXY-SILENT",
+    "norms_inside": "0",
+    "norms_outside": "2",
+    "norms_straddle": "1",
+    "precedence": "DATA-BLOCKED > SILENT(identification) > BOUNDS > EXCLUDES > SILENT(other)",
+    "reason": "identification gate FAIL: no LEVEL-AND-YEAR EXACT primary cell at one or more required years; the conversion is not identified at the required object (block clause 5, 'or the conversion is not identified')"
+  },
+  "worker": "PB"
+}

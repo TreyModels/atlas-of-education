@@ -1,0 +1,35 @@
+{
+  "experiment": "EXP-19 PLACES-BOUND",
+  "inputs": {
+    "08_council/DECISIONS.md": {
+      "bytes": 181341,
+      "sha256": "1bf43b39125c07e228a8d21b4062040d80b8a76df750536b7014a034a841d3a2"
+    },
+    "08_council/brief_024/SYNTHESIS_024.md": {
+      "bytes": 67613,
+      "sha256": "6c6aea4576098c7df68bb1a2d1ee858ec989f45b5e725d5acffc4373ef84babe"
+    },
+    "10_massification/data/SCHOOL_EXPANSION.csv": {
+      "bytes": 8749,
+      "sha256": "c218e6c9bd784e135e089ebecefec21112a09e6bf2c778599a33bc81b78c8ea3"
+    },
+    "10_massification/data/STATE_CAPACITY.csv": {
+      "bytes": 641644,
+      "sha256": "704efacad00f0ba7ddf579459a930d064fdb0f4b882cffbbf44a6cbecd585044"
+    },
+    "10_massification/data/UNIVERSALIZATION_SERIES.csv": {
+      "bytes": 592750,
+      "sha256": "85bc869396ebfcb39e3e1a21a31af219e75a07326c738a51d2bfdbe536737ddb"
+    },
+    "10_massification/extensions/joint_cover_2026-11-20/results/JOINT_COVER_RESULTS.csv": {
+      "bytes": 8533,
+      "sha256": "9d5afc9a4483d135ed671392489a5b813a5e1200e27c22b17f3af2076a27f46a"
+    },
+    "10_massification/extensions/places_bound_2026-11-20/PRE_DECLARATIONS.md": {
+      "bytes": 31988,
+      "sha256": "22786090d91598cb03d04ae081c48ec41aa664bae8a1bd40d33aa77de7e1d25f"
+    }
+  },
+  "predeclaration_sha256_embedded": "22786090d91598cb03d04ae081c48ec41aa664bae8a1bd40d33aa77de7e1d25f",
+  "role": "read-only inputs; no input file was modified; no generator was run"
+}

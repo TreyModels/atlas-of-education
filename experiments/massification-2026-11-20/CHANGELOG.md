@@ -456,3 +456,10 @@ B1 — pre-run SHA snapshot reconstructed (30/33 match, original hash `89638b39�
 - **CLOSING RULE FIRED: GENERATOR-LINE-CLOSED at representation-only; no successor this phase.** The level question
   passes to the descriptive + measurement lines (D144 fallback). Disclosures: G2 narrowed 16→11 columns (pre-freeze
   amendment); capacity sensitivity decomposition; nan beyond 2025; EXP-16 RESULTS.csv hash recorded-not-enforced.
+
+## 2026-11-21 — EXP-19 PLACES-BOUND: PROXY-SILENT — required coverage not observable on disk (D151)
+
+- `places_bound_2026-11-20/` (predecl `22786090…`, deterministic, 16/16 SHA): one declared conversion family from the
+  on-disk PHL class-size/PTR/enrolment description (norms {40,45,50} declared, none adopted) does not bound EXP-17's
+  REQUIRED-STATE (0.759712 / 0.873523; DERIVED target 0.8076) → **PROXY-SILENT**. Required state stays DECLARED; HELD
+  places ask stays HELD; no norm/path/λ adopted; no causal/direction claim.

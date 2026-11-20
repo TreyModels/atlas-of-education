@@ -1,0 +1,21 @@
+EXP-19 PLACES-BOUND  (predecl 22786090d91598cb03d04ae081c48ec41aa664bae8a1bd40d33aa77de7e1d25f)
+freeze check: PASS
+required state: R = [0.759712104599, 0.873523198725] (DERIVED, EXP-17)
+norms: 40, 45, 50 (declared; none adopted)
+JHS class-size years: 2010,2019,2021
+ger_lower_secondary last year: 2018; intersection: 0
+  n=40  I=[0.780605886938, 0.95276]  STRADDLE
+  n=45  I=[0.878181622805, 1.071855]  OUTSIDE
+  n=50  I=[0.975757358672, 1.19095]  OUTSIDE
+  2018 n=40  coverage=0.95276  (divisor 2019=39, GER ger_lower_secondary 2018=92.8941)
+  2018 n=45  coverage=1.071855  (divisor 2019=39, GER ger_lower_secondary 2018=92.8941)
+  2018 n=50  coverage=1.19095  (divisor 2019=39, GER ger_lower_secondary 2018=92.8941)
+  2021 n=40  coverage=0.780605886938  (divisor 2021=44, GER ger_secondary 2021=85.8666475632)
+  2021 n=45  coverage=0.878181622805  (divisor 2021=44, GER ger_secondary 2021=85.8666475632)
+  2021 n=50  coverage=0.975757358672  (divisor 2021=44, GER ger_secondary 2021=85.8666475632)
+identification gate: FAIL (exact 2018=0, exact 2021=0)
+inside/outside/straddle: 0/2/1
+headline counterfactual (non-verdict-bearing): PROXY-EXCLUDES
+VERDICT: PROXY-SILENT
+reason: identification gate FAIL: no LEVEL-AND-YEAR EXACT primary cell at one or more required years; the conversion is not identified at the required object (block clause 5, 'or the conversion is not identified')
+adoption: NONE; phys_cap change: NONE; causal/direction claim: NONE; HELD use: NONE

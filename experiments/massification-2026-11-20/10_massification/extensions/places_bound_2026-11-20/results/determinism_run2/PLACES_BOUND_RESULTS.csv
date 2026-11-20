@@ -1,0 +1,127 @@
+record_type,item,value,unit,label,note
+meta,experiment,EXP-19 PLACES-BOUND,,DECLARED,brief 024 section 5.4; D145 #4 rank #4
+meta,worker,PB,,DECLARED,cycle 16
+meta,authority,D145 #4; D146; D147; D148; brief 024 section 5.4,,DECLARED,required-state inputs from D148 / EXP-17
+meta,predeclaration_sha256,22786090d91598cb03d04ae081c48ec41aa664bae8a1bd40d33aa77de7e1d25f,,DECLARED,PRE_DECLARATIONS.md; embedded in code and verified before the run
+meta,freeze_check,PASS,,DERIVED,sha256 of PRE_DECLARATIONS.md equals the embedded value
+meta,determinism,two independent runs; results files byte-identical,,DERIVED,compare results/ with results/determinism_run2/
+meta,labels,OBSERVED / DERIVED / DECLARED / HELD,,DECLARED,SYNTHETIC only inside the imported EXP-17 required state's provenance note
+required_state,required_coverage_2018,0.759712104599,seats/cohort,DERIVED,REQUIRED-STATE (EXP-17); lambda*-implied seats/cohort at the 2018 entry year; NOT adopted
+required_state,required_coverage_2021,0.873523198725,seats/cohort,DERIVED,REQUIRED-STATE (EXP-17); lambda*-implied seats/cohort at the 2021 completion year; NOT adopted
+required_state,required_target,0.8076,fraction,DERIVED,"D148: DERIVED target 0.8076 travels with the required state; internal-consistency, not a policy target"
+required_state,lambda_star,1.11465019198,multiplier,DERIVED,EXP-17 required uplift; NOT a parameter and NOT adopted
+required_state,required_state_source,10_massification/extensions/joint_cover_2026-11-20/results/JOINT_COVER_RESULTS.csv,,OBSERVED,values read from JOINT_COVER_RESULTS.csv and checked to 1e-12 against PRE_DECLARATIONS.md
+required_state,required_state_span,0.113811094126,fraction,DERIVED,"R = [0.759712104599164, 0.87352319872549]; span = R_2021 - R_2018"
+observed_input,classroom_student_ratio_elementary_2010,39,observed,OBSERVED,10_massification/data/SCHOOL_EXPANSION.csv; PHL; status=observed
+observed_input,classroom_student_ratio_elementary_2019,29,observed,OBSERVED,10_massification/data/SCHOOL_EXPANSION.csv; PHL; status=observed
+observed_input,classroom_student_ratio_elementary_2021,32,observed,OBSERVED,10_massification/data/SCHOOL_EXPANSION.csv; PHL; status=observed
+observed_input,classroom_student_ratio_junior_high_school_2010,54,observed,OBSERVED,10_massification/data/SCHOOL_EXPANSION.csv; PHL; status=observed
+observed_input,classroom_student_ratio_junior_high_school_2019,39,observed,OBSERVED,10_massification/data/SCHOOL_EXPANSION.csv; PHL; status=observed
+observed_input,classroom_student_ratio_junior_high_school_2021,44,observed,OBSERVED,10_massification/data/SCHOOL_EXPANSION.csv; PHL; status=observed
+observed_input,classroom_student_ratio_senior_high_school_2019,31,observed,OBSERVED,10_massification/data/SCHOOL_EXPANSION.csv; PHL; status=observed
+observed_input,pupil_teacher_ratio_high_school_2000,37,observed,OBSERVED,10_massification/data/SCHOOL_EXPANSION.csv; PHL; status=observed
+observed_input,pupil_teacher_ratio_high_school_2014,27,observed,OBSERVED,10_massification/data/SCHOOL_EXPANSION.csv; PHL; status=observed
+observed_input,pupil_teacher_ratio_high_school_2017,24,observed,OBSERVED,10_massification/data/SCHOOL_EXPANSION.csv; PHL; status=observed
+observed_input,classrooms_needed_backlog_2019,110954,observed,OBSERVED,10_massification/data/SCHOOL_EXPANSION.csv; PHL; status=observed
+observed_input,classrooms_needed_per_year_2019,10000,observed,OBSERVED,10_massification/data/SCHOOL_EXPANSION.csv; PHL; status=observed
+observed_input,ger_lower_secondary_2018,92.8941,percent,OBSERVED,10_massification/data/UNIVERSALIZATION_SERIES.csv; PHL; gross enrolment ratio
+observed_input,ger_secondary_2018,79.3622469757,percent,OBSERVED,10_massification/data/UNIVERSALIZATION_SERIES.csv; PHL; gross enrolment ratio
+observed_input,ger_secondary_2021,85.8666475632,percent,OBSERVED,10_massification/data/UNIVERSALIZATION_SERIES.csv; PHL; gross enrolment ratio
+observed_input,ger_primary_2018,94.5541345217,percent,OBSERVED,10_massification/data/UNIVERSALIZATION_SERIES.csv; PHL; gross enrolment ratio
+observed_input,ger_primary_2021,88.8345145801,percent,OBSERVED,10_massification/data/UNIVERSALIZATION_SERIES.csv; PHL; gross enrolment ratio
+observed_input,ger_upper_secondary_2018,66.04604,percent,OBSERVED,10_massification/data/UNIVERSALIZATION_SERIES.csv; PHL; gross enrolment ratio
+observed_input,ger_lower_secondary_last_year,2018,year,OBSERVED,the level-matched lower-secondary GER stops here
+observed_input,jhs_class_size_years,2010;2019;2021,years,OBSERVED,junior-high classroom-student ratio observations
+observed_input,congested_share_2021_count,5,values,OBSERVED,"five regional values, one percent column; the block declares no region key (region labels appear in the file's region column but are not used); not used in the verdict"
+observed_input,congested_share_2021_min,57.7,percent,OBSERVED,min of the five observed values
+observed_input,congested_share_2021_max,90,percent,OBSERVED,max of the five observed values
+observed_input,classroom_count_status,unable,,OBSERVED,"direct place count is DATA-BLOCKED (D146); not filled, imputed or replaced"
+declared_norm,norm_40,40,students per classroom,DECLARED,declared before the run; adopted=FALSE
+declared_norm,norm_45,45,students per classroom,DECLARED,declared before the run; adopted=FALSE
+declared_norm,norm_50,50,students per classroom,DECLARED,declared before the run; adopted=FALSE
+declared_norm,norms_declared,3,norms,DECLARED,"40, 45, 50"
+declared_norm,norms_adopted,0,norms,DECLARED,none adopted
+identification,jhs_ratio_years,2010;2019;2021,years,OBSERVED,SCHOOL_EXPANSION.csv classroom_student_ratio_junior_high_school
+identification,ger_lower_secondary_years_count,16,years,OBSERVED,UNIVERSALIZATION_SERIES.csv ger_lower_secondary
+identification,jhs_ger_lower_year_intersection,0,years,DERIVED,empty intersection: no same-year level-matched divisor/enrolment pair on disk
+identification,exact_cells_2018,0,cells,DERIVED,LEVEL-AND-YEAR EXACT primary cells at the required year
+identification,exact_cells_2021,0,cells,DERIVED,LEVEL-AND-YEAR EXACT primary cells at the required year
+identification,identification_gate_G,FAIL,,DERIVED,G = PASS iff at least one exact cell at EACH required year
+identification,identification_reason,2018 divisor carried from 2019; 2021 enrolment ratio is the broader ger_secondary,,DERIVED,"no same-year, level-matched conversion at either required year"
+implied_capacity,coverage_2018_n40,0.95276,seats/cohort,DERIVED,F1 class-size route; divisor classroom_student_ratio_junior_high_school 2019=39; GER ger_lower_secondary 2018=92.8941
+implied_capacity,coverage_2018_n45,1.071855,seats/cohort,DERIVED,F1 class-size route; divisor classroom_student_ratio_junior_high_school 2019=39; GER ger_lower_secondary 2018=92.8941
+implied_capacity,coverage_2018_n50,1.19095,seats/cohort,DERIVED,F1 class-size route; divisor classroom_student_ratio_junior_high_school 2019=39; GER ger_lower_secondary 2018=92.8941
+implied_capacity,coverage_2021_n40,0.780605886938,seats/cohort,DERIVED,F1 class-size route; divisor classroom_student_ratio_junior_high_school 2021=44; GER ger_secondary 2021=85.8666475632
+implied_capacity,coverage_2021_n45,0.878181622805,seats/cohort,DERIVED,F1 class-size route; divisor classroom_student_ratio_junior_high_school 2021=44; GER ger_secondary 2021=85.8666475632
+implied_capacity,coverage_2021_n50,0.975757358672,seats/cohort,DERIVED,F1 class-size route; divisor classroom_student_ratio_junior_high_school 2021=44; GER ger_secondary 2021=85.8666475632
+coverage_interval,interval_n40,[0.780605886938; 0.95276],seats/cohort,DERIVED,min/max over the primary F1 cells at both required years
+coverage_interval,interval_span_n40,0.172154113062,fraction,DERIVED,span(I_n); required span=0.113811094126; wide test span>3.0*required_span
+coverage_interval,interval_n45,[0.878181622805; 1.071855],seats/cohort,DERIVED,min/max over the primary F1 cells at both required years
+coverage_interval,interval_span_n45,0.193673377195,fraction,DERIVED,span(I_n); required span=0.113811094126; wide test span>3.0*required_span
+coverage_interval,interval_n50,[0.975757358672; 1.19095],seats/cohort,DERIVED,min/max over the primary F1 cells at both required years
+coverage_interval,interval_span_n50,0.215192641328,fraction,DERIVED,span(I_n); required span=0.113811094126; wide test span>3.0*required_span
+comparison,classification_n40,STRADDLE,,DERIVED,INSIDE iff R subset I_n; OUTSIDE iff R intersect I_n empty; else STRADDLE
+comparison,gap_2018_n40_pp,19.3047895401,percentage points,DERIVED,implied coverage at 2018 minus the required 2018 value; positive = proxy above the requirement
+comparison,gap_2021_n40_pp,-9.29173117878,percentage points,DERIVED,implied coverage at 2021 minus the required 2021 value; positive = proxy above the requirement
+comparison,classification_n45,OUTSIDE,,DERIVED,INSIDE iff R subset I_n; OUTSIDE iff R intersect I_n empty; else STRADDLE
+comparison,gap_2018_n45_pp,31.2142895401,percentage points,DERIVED,implied coverage at 2018 minus the required 2018 value; positive = proxy above the requirement
+comparison,gap_2021_n45_pp,0.465842407946,percentage points,DERIVED,implied coverage at 2021 minus the required 2021 value; positive = proxy above the requirement
+comparison,classification_n50,OUTSIDE,,DERIVED,INSIDE iff R subset I_n; OUTSIDE iff R intersect I_n empty; else STRADDLE
+comparison,gap_2018_n50_pp,43.1237895401,percentage points,DERIVED,implied coverage at 2018 minus the required 2018 value; positive = proxy above the requirement
+comparison,gap_2021_n50_pp,10.2234159947,percentage points,DERIVED,implied coverage at 2021 minus the required 2021 value; positive = proxy above the requirement
+comparison,norms_inside,0,norms,DERIVED,count of INSIDE classifications
+comparison,norms_outside,2,norms,DERIVED,count of OUTSIDE classifications
+comparison,norms_straddle,1,norms,DERIVED,count of STRADDLE classifications
+comparison,norms_uninformative_wide,0,norms,DERIVED,count with span(I_n) > 3.0 * span(R)
+comparison,headline_counterfactual,PROXY-EXCLUDES,,DERIVED,"NON-VERDICT-BEARING: what the block's >=2-of-3 headline threshold would say; the frozen gate precedes it, so the verdict is not this label"
+sensitivity,PTR-VARIANT-F2_2018_n40,1.548235,seats/cohort,DERIVED,PTR-VARIANT-F2; divisor pupil_teacher_ratio_high_school 2017; GER ger_lower_secondary 2018; not verdict-bearing
+sensitivity,PTR-VARIANT-F2_2018_n45,1.741764375,seats/cohort,DERIVED,PTR-VARIANT-F2; divisor pupil_teacher_ratio_high_school 2017; GER ger_lower_secondary 2018; not verdict-bearing
+sensitivity,PTR-VARIANT-F2_2018_n50,1.93529375,seats/cohort,DERIVED,PTR-VARIANT-F2; divisor pupil_teacher_ratio_high_school 2017; GER ger_lower_secondary 2018; not verdict-bearing
+sensitivity,BROADER-GER-SENSITIVITY_2018_n40,0.813971763853,seats/cohort,DERIVED,BROADER-GER-SENSITIVITY; divisor classroom_student_ratio_junior_high_school 2019; GER ger_secondary 2018; not verdict-bearing
+sensitivity,BROADER-GER-SENSITIVITY_2018_n45,0.915718234335,seats/cohort,DERIVED,BROADER-GER-SENSITIVITY; divisor classroom_student_ratio_junior_high_school 2019; GER ger_secondary 2018; not verdict-bearing
+sensitivity,BROADER-GER-SENSITIVITY_2018_n50,1.01746470482,seats/cohort,DERIVED,BROADER-GER-SENSITIVITY; divisor classroom_student_ratio_junior_high_school 2019; GER ger_secondary 2018; not verdict-bearing
+sensitivity,LEVEL-SENSITIVITY_elementary_2018_n40,1.30419495892,seats/cohort,DERIVED,LEVEL-SENSITIVITY; divisor classroom_student_ratio_elementary 2019; GER ger_primary 2018; not verdict-bearing
+sensitivity,LEVEL-SENSITIVITY_elementary_2018_n45,1.46721932879,seats/cohort,DERIVED,LEVEL-SENSITIVITY; divisor classroom_student_ratio_elementary 2019; GER ger_primary 2018; not verdict-bearing
+sensitivity,LEVEL-SENSITIVITY_elementary_2018_n50,1.63024369865,seats/cohort,DERIVED,LEVEL-SENSITIVITY; divisor classroom_student_ratio_elementary 2019; GER ger_primary 2018; not verdict-bearing
+sensitivity,LEVEL-SENSITIVITY_shs_2018_n40,0.852206967742,seats/cohort,DERIVED,LEVEL-SENSITIVITY; divisor classroom_student_ratio_senior_high_school 2019; GER ger_upper_secondary 2018; not verdict-bearing
+sensitivity,LEVEL-SENSITIVITY_shs_2018_n45,0.95873283871,seats/cohort,DERIVED,LEVEL-SENSITIVITY; divisor classroom_student_ratio_senior_high_school 2019; GER ger_upper_secondary 2018; not verdict-bearing
+sensitivity,LEVEL-SENSITIVITY_shs_2018_n50,1.06525870968,seats/cohort,DERIVED,LEVEL-SENSITIVITY; divisor classroom_student_ratio_senior_high_school 2019; GER ger_upper_secondary 2018; not verdict-bearing
+sensitivity,LEVEL-SENSITIVITY_elementary_2021_n40,1.11043143225,seats/cohort,DERIVED,LEVEL-SENSITIVITY; divisor classroom_student_ratio_elementary 2021; GER ger_primary 2021; not verdict-bearing
+sensitivity,LEVEL-SENSITIVITY_elementary_2021_n45,1.24923536128,seats/cohort,DERIVED,LEVEL-SENSITIVITY; divisor classroom_student_ratio_elementary 2021; GER ger_primary 2021; not verdict-bearing
+sensitivity,LEVEL-SENSITIVITY_elementary_2021_n50,1.38803929031,seats/cohort,DERIVED,LEVEL-SENSITIVITY; divisor classroom_student_ratio_elementary 2021; GER ger_primary 2021; not verdict-bearing
+sensitivity,PTR-VARIANT-F2_2021,UNIDENTIFIED,,DECLARED,no PTR observation within +/-1 year of 2021 (last observed 2017)
+sensitivity,LEVEL-SENSITIVITY_SHS_2021,UNIDENTIFIED,,DECLARED,no SHS class-size observation within +/-1 year of 2021 (last observed 2019); upper-secondary GER also stops 2018
+verdict,verdict,PROXY-SILENT,,DERIVED,"identification gate FAIL: no LEVEL-AND-YEAR EXACT primary cell at one or more required years; the conversion is not identified at the required object (block clause 5, 'or the conversion is not identified')"
+verdict,precedence,DATA-BLOCKED > SILENT(identification) > BOUNDS > EXCLUDES > SILENT(other),,DECLARED,first label that fires is the verdict; PRE_DECLARATIONS.md section 5
+verdict,adoption,NONE,,DECLARED,"no norm, coverage path or lambda adopted"
+verdict,phys_cap_change,NONE,,DECLARED,phys_cap is not in the verdict path
+verdict,causal_claim,NONE,,DECLARED,no causal claim
+verdict,direction_claim,NONE,,DECLARED,no direction claim
+verdict,held_use,NONE,,DECLARED,no HELD item used or fabricated
+blocked_input,classroom_construction_completed_by_year,unable,,OBSERVED,10_massification/data/SCHOOL_EXPANSION.csv; DPWH 403; DepEd Basic Education Facilities reports not publicly retrievable this pass.
+blocked_input,number_of_classrooms_by_year,unable,,OBSERVED,10_massification/data/SCHOOL_EXPANSION.csv; DepEd 403; the 2019 National School Building Inventory is not published as a public table (only aggregates quoted in PIDS 2025). No year-series obtained.
+blocked_input,number_of_public_schools_by_year,unable,,OBSERVED,10_massification/data/SCHOOL_EXPANSION.csv; DepEd 403; DPWH 403; DepEd datasets page 403; Wayback snapshots returned 429/blocked. No public year-series of school counts obtained.
+blocked_input,senior_high_school_capacity_2016_2018,unable,,OBSERVED,10_massification/data/SCHOOL_EXPANSION.csv; DepEd 403; PIDS 2025 ch.8 discusses SHS rollout qualitatively but gives no capacity counts by year.
+blocked_input,falsifier_conflicts,0,objects,DERIVED,same-object/year conflicts between the two on-disk copies; 0 = no conflict
+held,measured places/PTR series (DepEd/CHED seats-vs-enrolment),HELD,,HELD,not on disk; not used; user approval required (D135/D146)
+held,capacity utilisation (the object V_O would be validated against),HELD,,HELD,not on disk; not used; user approval required (D135/D146)
+held,private/public shares of enrolment and provision,HELD,,HELD,not on disk; not used; user approval required (D135/D146)
+held,SHS voucher take-up,HELD,,HELD,not on disk; not used; user approval required (D135/D146)
+held,upper-secondary completion for additional systems,HELD,,HELD,not on disk; not used; user approval required (D135/D146)
+held,single-age HKG population 1971-1996,HELD,,HELD,not on disk; not used; user approval required (D135/D146)
+held,HKG senior-secondary queue/places,HELD,,HELD,not on disk; not used; user approval required (D135/D146)
+held,PSA microdata,HELD,,HELD,not on disk; not used; user approval required (D135/D146)
+held,WB Enterprise Surveys,HELD,,HELD,not on disk; not used; user approval required (D135/D146)
+held,real per-pupil spending,HELD,,HELD,not on disk; not used; user approval required (D135/D146)
+held,annual capacity/enforcement,HELD,,HELD,not on disk; not used; user approval required (D135/D146)
+held,measured credential-queue (rung-4) series,HELD,,HELD,not on disk; not used; user approval required (D135/D146)
+held,PHL/KHM/CHN/JPN shadow participation,HELD,,HELD,not on disk; not used; user approval required (D135/D146)
+held,measured remittance->schooling coefficient,HELD,,HELD,not on disk; not used; user approval required (D135/D146)
+closed_claim,no_phys_cap_change,TRUE,,DECLARED,closed-claim check (PRE_DECLARATIONS.md section 6)
+closed_claim,no_re_fit,TRUE,,DECLARED,closed-claim check (PRE_DECLARATIONS.md section 6)
+closed_claim,no_fabrication,TRUE,,DECLARED,closed-claim check (PRE_DECLARATIONS.md section 6)
+closed_claim,no_proxy_outside_family,TRUE,,DECLARED,closed-claim check (PRE_DECLARATIONS.md section 6)
+closed_claim,no_causal_claim,TRUE,,DECLARED,closed-claim check (PRE_DECLARATIONS.md section 6)
+closed_claim,no_direction_claim,TRUE,,DECLARED,closed-claim check (PRE_DECLARATIONS.md section 6)
+closed_claim,no_level_bar,TRUE,,DECLARED,closed-claim check (PRE_DECLARATIONS.md section 6)
+closed_claim,adopt_nothing,TRUE,,DECLARED,closed-claim check (PRE_DECLARATIONS.md section 6)
