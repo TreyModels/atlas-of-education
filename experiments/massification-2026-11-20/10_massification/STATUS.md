@@ -118,6 +118,46 @@ be predeclared as **SIGN-identification only**, not size. Scout `SCALING_NOTES.m
 Surveys 403/000 recorded as DATA BLOCKED. Hygiene note: `data/SHA256SUMS.txt` is written as `hash size filename`
 (not `shasum -c` parseable); hashes verified manually; regenerate in standard format next batch.
 
+## 3d. Council loop-5 adjudication applied (D19–D30; Amendments A2–A3, R16–R18)
+
+- **Phase headline is now CONDITIONAL REPRODUCTION + OBSERVATIONAL EQUIVALENCE** (D19): E1 is **killed as the
+  identification gate as specified** (M2c: sign recoverable 0.92–0.93 but median size bias 0.55 > 0.50); panel/
+  cross-country direction claims remain barred (R13). E1 is not killed forever: a redesigned E1 with a power fix +
+  its own recovery test is permitted under a NEW predeclaration; sign-only E1 only if both shocks ever have observed
+  data (D28). No direction claim has been posted.
+- **task-37 smoke fit accepted PARTIAL/EQUIVALENT** (D20/R18); fit window 1999–2010 accepted as disclosed deviation
+  (A2); sector shares CHECK-only.
+- **A1 scaling failure confirmed; universalization capped at PARTIAL** (R14/R17). **Income-scaling channel repair
+  APPROVED for predeclaration intake** as a new structural cell (named mechanism, no exponent as parameter, holdout
+  untouched, exponents only as checks; D21). **Timebox: one cell / one cycle** — if it fails, publish PARTIAL +
+  EQUIVALENT and park the rest (D26).
+- **E2 accepted with a claim cap** (D23): descriptive association only unless ≥10 pre-reform observed points AND
+  pre-trends pass; add COVID sensitivity + predecl amendment before running. **E3 DATA BLOCKED** for replication
+  (D22): simulated elasticity only, labelled, never a replication; E2+E3 cannot identify direction → EQUIVALENT.
+- **M2c retro-accepted** (D24/D27; gate ACK corrected 321a8cf8 verified). **M2b estimator range confirmed** (D29/A3).
+  **Data D16 accepted**; M2 data-adoption re-run not ordered now (D30).
+- **Slate re-rank:** E4 Bartik elevated to KEEP (next identification route after the income-channel cell); E5/E7
+  PARK; E8/shadow KILL; T1/T2 papers PARK (D25).
+
+## 3e. NEW USER DIRECTIVE — outcome is TIMING for near-universal systems (20 Nov ~15:00)
+
+**Directive (user, via Lead):** Japan is probably near-universal already; the question is **when** that happened —
+same for Korea and Hong Kong. For near-universal systems the outcome is the **timing of universalization**, not the
+level.
+
+- **Council action requested (Amendment A4 + slate re-rank):** add crossing-year tolerances (±N years) for
+  JPN/KOR/HKG, make **levels check-only** for those three, keep fit/holdout roles for PHL/CHN/KHM unchanged, and
+  re-rank the slate with timing as a first-class outcome. Pending A4, provisional tolerance is ±5 years (the existing
+  midpoint tolerance) and crossing years are **never fitted**.
+- **Data deliverable (data-hunter):** `10_massification/data/UNIVERSALIZATION_TIMING.csv` — crossing years
+  (definitions documented: e.g. 50% / 90% / 95% cohort completion or equivalent by level) + uncertainty intervals,
+  reconstructed from **headcounts/population** where UIS ratios are censored; observed-only; method + uncertainty
+  + status per row; HKG/JPN have no UIS completion series and must be reconstructed or marked UNABLE (no imputation).
+- **Lit/scout deliverable:** dated timelines (policy and attainment) for JPN/KOR/HKG, with sources and uncertainty.
+- **task-37 timing check must be predeclared before its next run:** generated vs observed crossing years, per
+  level/country, tolerance from Council A4 (±N y), timing **never fitted** (else R4/R5 supplied-law violation);
+  the check is a HOLDOUT outcome, not a target.
+
 ## 4. Next three actions for `repo-auditor`
 
 1. **Council gate:** get the Council's final `COUNCIL:` post for brief 013 (SUCCESS_CRITERIA + STOP_RULES are

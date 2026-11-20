@@ -1,0 +1,5 @@
+indicator,label,source,n_countries,N,rmse_free,rmse_common,shared_r,F,df1,df2,p_asymptotic,boot_reps,boot_F_median,p_bootstrap,verdict_bootstrap
+ger_secondary,secondary GER,GMR observed,5,158,6.983,7.394,0.04,4.339,4,143,0.0024,3,6.783,1.0,common shape NOT rejected at 0.05 (bootstrap)
+ger_tertiary,tertiary GER,GMR observed,6,240,3.85,5.931,0.09,60.941,5,222,0.0,24,45.162,0.125,common shape NOT rejected at 0.05 (bootstrap)
+SE.SEC.ENRR,secondary GER,WDI 30-country panel,26,1025,5.764,6.234,0.06,6.432,25,947,0.0,0,,,bootstrap failed
+SE.TER.ENRR,tertiary GER,WDI 30-country panel,27,1040,3.849,5.535,0.1,39.415,26,959,0.0,0,,,bootstrap failed

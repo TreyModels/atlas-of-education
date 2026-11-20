@@ -137,3 +137,12 @@ sufficiency (median |bias| 0.55 > 0.50).
    behavioural mechanism (e.g., income→demand/feasibility channel), no exponent used as a parameter, fit/check/holdout
    roles unchanged, and the A1 exponents used only as checks. A repair that fits the exponents directly is a
    restatement and is rejected (R4).
+
+
+## Amendment A3 (2026-11-20 14:56) — lower-secondary completion law is an estimator range, not a point
+
+**Trigger:** M2b resolution (D15). The lower-secondary completion ~ income law is judged against the **estimator
+range**: between-logit **+0.84**, all-year re-run **+1.36**, year-FE log-log **+1.97/+2.28**; the scout relay
+**+1.174** is carried as the scout's value (its exact script was not executable in this environment — disclosed).
+A1 §1/R14 therefore judges the model's generated logit/log exponents against this range, not a single point, and
+requires the **sign** plus range containment (≥2 of 3 classified laws). No post-hoc narrowing of the range.

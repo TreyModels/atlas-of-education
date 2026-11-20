@@ -1,0 +1,3 @@
+indicator,label,source,method,n_countries,N,F_all,p_all,F_jack_min,F_jack_max,p_jack_max,n_loco,verdict
+ger_secondary,secondary GER,GMR observed,jackknife_LOCO,5,158,0.236,0.9178,0.196,0.29,0.899,5,rejection NOT robust - at least one leave-one-out gives p>=0.05
+ger_tertiary,tertiary GER,GMR observed,jackknife_LOCO,6,240,0.303,0.911,0.189,0.394,0.9439,6,rejection NOT robust - at least one leave-one-out gives p>=0.05

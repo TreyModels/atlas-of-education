@@ -59,3 +59,12 @@ fire.
 | **R13** | **Direction claims from cross-country/panel moments are barred:** if a recovery/forced-ID test shows the estimator assigns channels confidently without identification (forced-ID > 0), no push/pull/complementarity claim may be made from those moments; report EQUIVALENT and require E1 (or the predeclared E2+E3 pair) | model2 recovery: forced-ID 1.00, recovery complementary 0.00 |
 | **R14** | **Scaling-exponent reproduction is a gate, not decoration:** if the model cannot generate the classified scaling laws (secondary GER ~ income +0.286; tertiary +0.776; lower-sec completion law) within the estimator range and with country-specific timing, the universalization reproduction claim is capped at PARTIAL | `scaling_classification.csv` |
 | **R15** | **Conditional-labelling:** any reproduction claim made under a declared channel mixture must be labelled PASS-CONDITIONAL; presenting it as identified is a rule violation | A1 §3 |
+
+
+## Amendment A2 (2026-11-20 14:52) — R16–R18 (loop-5 outcomes)
+
+| # | Rule | Trigger |
+|---|---|---|
+| **R16** | **Interaction-estimator sufficiency:** a two-shock design may be fielded as an identification gate only if its predeclared recovery test passes sign accuracy, median bias, coverage and null-FP thresholds. Failure = do not field; a redesigned estimator requires a NEW predeclaration and its own recovery test, and the current reduction (conditional reproduction + equivalence) stands until it passes | M2c: median abs bias 0.55 > 0.50 (predeclared); sigma=1.0 sign accuracy 0.74/0.68 |
+| **R17** | **Scaling repair must be structural:** if generated OOS exponents have the wrong sign, the reproduction claim is capped at PARTIAL; only a new predeclared structural channel may repair it — never exponent fitting, never target-to-parameter, holdout untouched | task-37 scaling_check FAILED: secondary -1.89/-0.38/-0.74 vs +0.286; tertiary -1.23/-0.14/-0.35 vs +0.776 |
+| **R18** | **Smoke-fit status:** a fit that loses to the linear-trend benchmark on holdout is PARTIAL at best, regardless of in-sample fit; no PASS, no direction claim | task-37: holdout MAE 4.84/5.40/6.08 vs linear-trend 4.35 (persistence 8.60) |
