@@ -1,0 +1,7 @@
+spec,outcome,level,lag,controls,coef,se,ci_lo,ci_hi,n,n_ctry,note
+S6_HET,eci_sitc,cuat_up,5,C1,-0.01195078722,0.00759261045,-0.02683203025,0.002930455808,149,15,baseline-ECI group LOW (median split at 0.0934); S2(C1); NO sign expectation
+S6_HET,eci_sitc,cuat_up,5,C1,-0.006116288775,0.006611054234,-0.01907371697,0.006841139423,167,14,baseline-ECI group HIGH (median split at 0.0934); S2(C1); NO sign expectation
+S6_HET_BOOT,eci_sitc,cuat_up,5,C1,-0.004502210977,0.01086958651,-0.02394926541,0.01885479431,999,29,LOW-minus-HIGH slope difference; percentile 95% CI; B=1000 valid=999; no direction claim
+S6_HET,eci_sitc,cuat_up,10,C1,-0.009742052986,0.008465836057,-0.02633478676,0.006850680786,96,14,baseline-ECI group LOW (median split at 0.0934); S2(C1); NO sign expectation
+S6_HET,eci_sitc,cuat_up,10,C1,-0.0002384634843,0.003755101846,-0.00759832786,0.007121400891,121,14,baseline-ECI group HIGH (median split at 0.0934); S2(C1); NO sign expectation
+S6_HET_BOOT,eci_sitc,cuat_up,10,C1,-0.007510964291,0.01334464468,-0.03140166375,0.02063261275,996,29,LOW-minus-HIGH slope difference; percentile 95% CI; B=1000 valid=996; no direction claim

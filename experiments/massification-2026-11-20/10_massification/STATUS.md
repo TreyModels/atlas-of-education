@@ -616,19 +616,32 @@ claims; data asks remain HELD; literature *reading* is authorised.
 - **v1 (`generator_v1/`):** 30 synthetic countries × 1970–2025 × 4 levels = **6,720 rows**, seed 20261120, constant
   all-SYNTHETIC labels. Determinism **controller-verified**: two fresh runs byte-identical to each other *and* to the
   delivered CSVs (`synthetic_panel_v1.csv` sha256 `d27957be…3103a2b`).
-- **v1 predeclared checks: A FAIL · B FAIL · C FAIL · D FAIL · E PASS · F PASS (2/6).** Key numbers: check A —
-  primary completion ≥90 in 2011 (target 2017), lower-secondary **never** ≥90 (2023 = 76.88), tertiary 2025 = 54.19
-  (band 48.1–54.1); check B — industrialising/diversified decades literacy −0.288 (p=0.57) / schooling-years +0.073
-  (weak ✓) but pre-industrial decades literacy **+1.781** (p<0.001) → the literacy association sits in the *wrong
-  regime*; check C — rung2/rung1 ladder rises with queue pressure **+4.280** (p<0.01) ✓ but the rung1/informal margin
-  is not flat (−0.340); check D — gating visible in tercile slopes (low +0.13 vs high +0.56 pp/yr, ratio 4.31) but the
-  interaction is not significant (+0.138, p=0.56); check E PASS (twins: same graduates within 1.94%, growth 2.79 vs
-  2.11 pp, queue-pressure rel. diff 96%); check F PASS (cohort conservation 1.98e-16; shares sum to 1).
-- **Ruling:** failures are **declared-model calibration/identification failures, not empirical findings**; no
-  post-hoc re-fitting (target-chasing) was done or is permitted. A **v1.1 predeclaration** is the correct next step
-  (re-specify the literacy/takeoff channel, repair the secondary ladder without per-level rescue, restate check C,
-  and add the user's education → complexity channel). Recorded in synthetic `FINDINGS.md` / `README.md` and
-  `generator_v1/PARAMS.md` (parameters mirrored from the run manifest; stale docstring path flagged).
+- **v1 predeclared checks (AUTHORITATIVE worker delivery; an earlier same-day intermediate run that read A–D FAIL is
+  withdrawn):** **A PASS but target-encoded · B FAIL · C PASS (half structural) · D PASS · E PASS · F PASS.** Key
+  numbers: check A — primary first ≥90 **2017**, lower-sec first ≥90 **2024** (2023 = 87.2), upper-sec never ≥90 max
+  **75.1**, tertiary GER **15.3 → 50.3**, floor→middle gap **7 y**, ceiling residual **14.9 pp** — but the four PHL
+  supply paths are interpolated through the declared anchors, so **"one parameterisation, no per-level rescue" is NOT
+  met** and A is encoding, not prediction; check B — pooled decade-FE `b_lit` **+2.37** vs `b_yos` **+0.26** ✓ but the
+  association **survives the takeoff ablation (+2.29) and the full job-ladder ablation (+2.10)** → over-determined and
+  **non-diagnostic**; check C — no positive rank premium at the primary margin (−0.485 with literacy control; rung-1
+  rank factor = 1 by construction → half structural), credential ladder +4.76 (p<1e-6) ✓; check D — +10% schooling
+  push buys **+0.022 pp** growth per unit X (p=5.8e-8), high-X tercile +0.029 vs low-X +0.005 (**6.2×**); check E PASS
+  (twins within 1.41% graduates: growth 3.10 vs 2.50 pp, queue diff 95%); check F PASS (cohort conservation 2.05e-16;
+  shares sum to 1).
+- **Load-bearing finding (worker TUNE_LOG):** the **stipulated upper-secondary seat cap (0.845→0.875)** is what makes
+  the anchor asymmetry — put the ceiling on the floor's growth path and the asymmetry disappears. v1 therefore
+  **reproduces the asymmetry substantially by assuming it**; the declared PHL survival path is the second
+  load-bearing object. The rung ladder governs the **marginal return** (D) but not the **level** association (B).
+- **Ruling:** target encoding and the non-diagnostic B are **declared-model facts, not empirical findings**; no
+  post-hoc re-fitting is permitted. **v1.1 predeclaration must**: (a) add the user's **education → complexity**
+  channel (schooling flow raises X with a 5–10 y lag), (b) **remove the per-level PHL anchor interpolation**, (c) adopt
+  the rule that a synthetic horse-race PASS is **non-diagnostic unless the ablation fails**, (d) derive the
+  upper-secondary seat capacity from the economy side. Also recorded: **completion can exceed GER** because the UIS
+  completion rate uses a 3–5-years-above-grade denominator — verified PHL 2024 primary **98.30 completion vs 94.03
+  GER**; a measurement-definition note added to `facts/STYLIZED_FACTS.md` §12 and
+  `10_massification/data/DATA_NOTES_MASSIFICATION.md`.
+- **Determinism re-verified** on the authoritative files: two fresh runs byte-identical to each other and to the
+  delivered CSVs (`synthetic_panel_v1.csv` `cf8dfbcb…`, `reproduction_checks_v1.csv` `0914e3c7…`).
 
 ### b) Longitudinal battery — final verdicts after the stats re-run (Lead correction applied)
 
@@ -650,6 +663,32 @@ claims; data asks remain HELD; literature *reading* is authorised.
   queue/job matching, (e) existing projection models (IIASA/Wittgenstein/Barro–Lee). Every row carries a
   VERIFIED-FULLTEXT / VERIFIED-ABSTRACT / UNVERIFIED tag; ends with "what we do NOT need to redo" and "what remains
   open". Repo literature audit in parallel (the internal ledger covers none of these growth/complexity strands).
+
+
+### e) Education → ECI — predeclared panel analysis RUN (the user's restated hypothesis)
+
+- **New workbench:** `10_massification/extensions/edu_eci_2026-11-20/` — `PRE_DECLARATIONS.md` frozen before the run
+  (sha256 `e2a707a9…5bc230`, hash-checked by the script), one deterministic script, 272-row `RESULTS_ALL.csv`;
+  specs S1 long differences, S2 annual two-way FE, S3 5-year blocks, S4 within/between, S5 reverse-order (symmetric,
+  no direction claim), S6 baseline-ECI heterogeneity; true calendar-year lags 5/10; control sets C0/C1; outcomes
+  `eci_sitc` (primary) and `eci_hs92` (robustness). Descriptively only — no causal, no direction claim.
+- **Verdicts (frozen rule): 1 SUPPORTED · 5 PARTIAL · 8 NOT SUPPORTED; 12/14 ROBUST to `eci_hs92`.** The single
+  SUPPORTED cell (youth literacy, 5y) is **not robust**. **Primary completion is PARTIAL at both 5 and 10 years and
+  ROBUST** (+0.003–0.008 ECI points per pp; roughly halved by the income control); lower-secondary PARTIAL at 5y,
+  flat at 10y. **Adult literacy stock: null at 10y** (consistent with the earlier on-disk result). **Upper-secondary
+  attainment: nothing (negative, ns). Tertiary attainment: negative-significant in the country+year FE spec**
+  (−0.0155, p=0.006, adjusted) — massification-without-complexity association, not a direction claim. **No
+  low-base heterogeneity**: LOW−HIGH slope difference −0.0045 [−0.024, +0.019] at 5y and −0.0075 [−0.031, +0.021] at
+  10y. Reverse order: ECI(t−10) → upper-secondary −4.68 (p=0.016); → primary completion +1.58 (ns); → literacy −0.84 (ns).
+- **Existing-result cross-check: EXACT.** E5 (`eci_hs92 ~ log primary completion, t−10`, two-way FE, the file's own
+  row-shift lag) reproduces **0.5932271376 (se 0.1757698583, n=253, 23 countries)**; the same spec with a true
+  calendar-year 10-year lag gives **0.5690534891 (se 0.2317801262, n=320, 27 countries)** — the anchor survives the
+  lag implementation, but it is a **log specification on `eci_hs92` with no income control**, and the predeclared
+  level matrix on `eci_sitc` returns only PARTIAL. Specification-dependence must be stated in any write-up.
+- **Answer to the user, plainly: the hypothesis is not established in this panel.** The best description is a small,
+  fragile association between **primary-completion flow** and measured complexity; the upper levels show nothing (or
+  negative), the literacy stock shows nothing, and there is no threshold-from-a-low-base pattern. Determinism: two
+  clean runs byte-identical. Deliverable: `FINDINGS.md` in the workbench.
 
 ### d) New user directive (education → ECI) — predeclaration next
 

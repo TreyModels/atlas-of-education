@@ -1,13 +1,14 @@
 {
   "package": "synthetic_2026-11-20",
-  "status": "SYNTHETIC workbench: equations+facts registers, v0 (7,040 rows), v1 (6,720 rows; 2/6 predeclared checks pass); no causal/direction claims",
-  "generated_utc": "2026-11-20T14:05:14Z",
-  "git_head": "1464f51",
+  "status": "SYNTHETIC workbench: registers + v0 (7,040 rows) + v1 (6,720 rows; authoritative A PASS-but-target-encoded, B FAIL non-diagnostic, C/D/E/F PASS); no causal claims",
+  "generated_utc": "2026-11-20T14:13:59Z",
+  "git_head": "54b2f63",
   "predeclarations_sha256": null,
   "files": {
-    "FINDINGS.md": "f3d578210d9f03a44bc83805b66319a0fb99cffcc57b66d1463cd824fb8bfac9",
-    "MODEL_ARCHITECTURE.md": "0fe0a653b38dee883419d46a8bd918165c94292e83a7e75a7ba8e033101feeaa",
-    "README.md": "f86b84b5687a9635477b47af9cd7b9445c43c3e2700b81f2788283bf4c3f7c8c",
+    "FINDINGS.md": "4e8a22af3e57518e19b0b552a165f4938619592989841bc1bde81cec9e2728a6",
+    "MODEL_ARCHITECTURE.md": "69ed68b458594a89589a0459d975242456aa0af26f73719002dbf9905a5713b4",
+    "README.md": "f7c3e2a0b5377ae1233d632ae6c55e598dc3cd7555c97f79e4d8552929359426",
+    "RUN_MANIFEST.json": "5fc012dd8c0ca9cf03c8b4c428e1718d62f86ee21d2eb599cdf2114b96e063ff",
     "equations/EQUATION_REGISTER.csv": "533056b141443d6acb78099437f31c3cddda166d6382e2838164d902013b3f46",
     "equations/EQUATION_REGISTER.md": "58a5af3dc996319af7a86a7fe62d0df783e8ede84e2593a23e6d578c24dafd2f",
     "equations/PLAIN_ENGLISH.md": "ddd391b8dd72076c4ac5a7f9032b6a9273c52646203c5812844810cab4380a55",
@@ -15,7 +16,7 @@
     "facts/MUST_REPRODUCE.md": "0fbd7570d7c4b4cf4eb1cd1a23989522016197639989ddbe6068007fd8dfdbaa",
     "facts/PLAIN_ENGLISH.md": "06f2972becaa8effa00807cab97c45a1fceb6432090d39689d9d13be9b6f5e5c",
     "facts/STYLIZED_FACTS.csv": "13074c4f469ccc9b7178deda3fdf728f870ef0afbc38311a12fd54d12b4e238a",
-    "facts/STYLIZED_FACTS.md": "b4c2e0c21306386b29b4d385c1941ca0a4c520653a666b64d5a628d070d01c38",
+    "facts/STYLIZED_FACTS.md": "840113ada6036d5d5798b6257b00ff25780c67c7fb44755cd31e6911299edf14",
     "facts/build_facts_csv.py": "d67fb6b3286552f757653eabdc00b559775eb1c60fb9d777a258425d42ad8615",
     "generator_v0/FINDINGS.md": "11abe2b0daf04619d7d5bcf1ea11cd2dcb04356aefe040e0fbd4c564cdbbfab9",
     "generator_v0/PARAMS.md": "167904eeb178df757e63fe2c97c63edd30b8bc6e24787a4114fca16cb2ca6492",
@@ -27,13 +28,15 @@
     "generator_v0/results/reproduction_checks.csv": "ab3079fcb8ff198839d98b9bd88086bd1f6a1d403fcf3027f151e8f807f4ba1c",
     "generator_v0/results/run_summary.json": "e8484d0e64a4be3f1fa1540ef651535d988c749cdffb3a3a772618107be899ce",
     "generator_v0/results/synthetic_panel.csv": "e97297d48f528c8f8c218e1000768f2438bd9575f22a6cd744b3e8dd6d069d65",
-    "generator_v1/PARAMS.md": "07ae58fc85f7aee1a6f60b9ce95eb3c676c40aeeee3178d1b6691a55a8b5e754",
+    "generator_v1/FINDINGS.md": "9f6569e65b2fb6588163e029aa7dd050c553bee77fdc8218c0c40fe9f9e632e3",
+    "generator_v1/PARAMS.md": "9052e85bb0a2b010c2c300a2f728e2a99f277a2bcea6d08f193d25b8a7f026fe",
+    "generator_v1/RUN_MANIFEST.json": "f9e3640e5aa164679a56003803e0a696a93fa0c6cae40772c76efca39a163c13",
+    "generator_v1/TUNE_LOG.md": "730f6c4e1c9193d1dd97bad24f95e8a4db0cfab1024a8cd250e0ae2f46492a59",
     "generator_v1/code/_probe.py": "6ec5df22f192abf037cec317dffd1a361b46c1832f27d070c893779b3c407311",
-    "generator_v1/code/sim_v1.py": "dde8d079ad3275cc7bec57d59d49c6956fed4a63ae1a085fe6d93c0f28b8aee9",
-    "generator_v1/results/RUN_MANIFEST.json": "02d974623304ae53b585c51879ea57a2b051189aa217b151acea9e41eb866dbf",
-    "generator_v1/results/reproduction_checks_detail_v1.csv": "2dd1ce7eb4e6108cc9716694116f9c658c5cf0d3c07a817d162fc79569a6df69",
-    "generator_v1/results/reproduction_checks_v1.csv": "e667d51df1075a9cd366c82cdc87f8b96ff0c374195c2f803af21dffea337a84",
-    "generator_v1/results/synthetic_panel_v1.csv": "61611b882fd3d7ab7b764965c72fea2fa435da87b6a980beb91234becf3a5c1f"
+    "generator_v1/code/sim_v1.py": "a03fa0cb05a879020e254207dcd4add540883d0920b7d4457d3b157f7400a8d8",
+    "generator_v1/results/reproduction_checks_detail_v1.csv": "fcbc725500a4173c190e7fe2f5fd9d3232929402d87f4a02ad7ad0f42d53ed62",
+    "generator_v1/results/reproduction_checks_v1.csv": "0914e3c7089f28d40a6c7bd8ba848f153d1c99886cf5f6eb45201b74234beb8e",
+    "generator_v1/results/synthetic_panel_v1.csv": "cf8dfbcb10f2f9abc370d549e94e048cfaa9d54392d6142a80bf5cf45076fd8d"
   },
   "subdirectories": {
     "equations": [
@@ -62,10 +65,12 @@
       "generator_v0/results/synthetic_panel.csv"
     ],
     "generator_v1": [
+      "generator_v1/FINDINGS.md",
       "generator_v1/PARAMS.md",
+      "generator_v1/RUN_MANIFEST.json",
+      "generator_v1/TUNE_LOG.md",
       "generator_v1/code/_probe.py",
       "generator_v1/code/sim_v1.py",
-      "generator_v1/results/RUN_MANIFEST.json",
       "generator_v1/results/reproduction_checks_detail_v1.csv",
       "generator_v1/results/reproduction_checks_v1.csv",
       "generator_v1/results/synthetic_panel_v1.csv"

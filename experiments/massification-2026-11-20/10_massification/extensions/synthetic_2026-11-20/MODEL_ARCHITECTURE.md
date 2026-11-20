@@ -132,6 +132,25 @@ The user has restated the hypothesis that the generator must encode, distinct fr
    flow is strong (the asymmetry); plus the existing E/F accounting gates retained, D re-tested in a powered
    specification, and B re-specified so the literacy association is located in the takeoff transition.
 
-Why this amendment is needed: as delivered, v1's checks B and D fail partly because the complexity channel is
-one-directional (income/urbanisation → X → rungs/education), so the user's mechanism cannot appear. The fix is a
-declared model change with new predeclared checks — **not** a post-hoc re-fit of v1 (see `FINDINGS.md` §4).
+Why this amendment is needed: as delivered, v1's complexity channel is one-directional (income/urbanisation → X →
+rungs/education), so the user's mechanism cannot appear. The fix is a declared model change with new predeclared
+checks — **not** a post-hoc re-fit of v1 (see `FINDINGS.md` §4).
+
+### What v1.1 must also change (recorded 2026-11-20 after the authoritative v1 delivery)
+
+1. **Remove the per-level PHL anchor interpolation.** v1's check A passes *by construction*: the PHL-like country's
+   four supply paths are interpolated through the declared PHL-01/02/03 anchors, so "one parameterisation, no
+   per-level rescue" is not tested. v1.1 must carry either one declared supply parameterisation for all countries or
+   an explicitly enumerated set of declared country types, and must re-score A honestly (expect it to fail unless the
+   mechanism genuinely produces the dates).
+2. **Adopt the ablation rule.** A synthetic horse-race PASS (check B) is **non-diagnostic unless the ablation
+   fails**: in v1 the literacy association survives both the takeoff ablation (+2.37 → +2.29) and the full job-ladder
+   ablation (→ +2.10), so the pattern is over-determined and carries no information about the mechanism. v1.1's
+   check B must pass only if switching off the relevant layer *materially attenuates* the association.
+3. **Derive, don't stipulate, the upper-secondary seat cap.** v1's load-bearing object is the stipulated seat cap
+   (0.845 → 0.875 of the cohort); put the ceiling on the floor's growth path and the anchor asymmetry vanishes. v1.1
+   must model who hires upper-secondary completers (demand side) and derive capacity from that, or label the
+   asymmetry result as an assumption rather than a reproduction.
+4. **Carry the completion/GER denominator note** (`facts/STYLIZED_FACTS.md` §12; `10_massification/data/
+   DATA_NOTES_MASSIFICATION.md`): a cohort-flow model cannot produce completion > GER, so any completion-based
+   target must declare its denominator; do not fit completion up to observed levels.

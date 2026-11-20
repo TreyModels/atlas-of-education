@@ -365,3 +365,39 @@ Two rows exist so a generator does not copy a defect:
 
 See [`MUST_REPRODUCE.md`](MUST_REPRODUCE.md) for the ranked short list with exact numeric checks, and
 [`PLAIN_ENGLISH.md`](PLAIN_ENGLISH.md) for the one-page non-statistician version.
+
+---
+
+## 12. Measurement note added 2026-11-20 — completion can exceed GER because the denominators differ
+
+**Why this is in the register.** A synthetic generator that builds completion from a cohort-flow identity cannot
+produce completion above the entering gross enrolment ratio. The observed Philippine series does produce it, at every
+level in 2024. That is not a data error; it is a **measurement-definition fact** that every completion/GER comparison
+in the programme must respect.
+
+**Verified from disk** (`10_massification/data/UNIVERSALIZATION_SERIES.csv`, `data/gmr_observed_6countries_1970_2024.csv`; 2024, PHL):
+
+| level | completion rate | gross enrolment ratio | ratio |
+|---|---|---|---|
+| primary | **98.30** | **94.03** | 1.045 |
+| lower secondary | **92.41** | 85.29 *(secondary GER, combined lower+upper)* | 1.08 |
+| upper secondary | **75.03** | — *(upper-secondary GER not in the on-disk extract)* | — |
+
+**The coherent explanation:** the UIS completion rate is measured on children **3–5 years above the official grade
+age**, whereas GER is enrolment in the age band for that level. They are different denominators, so completion can
+exceed GER. The alternative — that the cohort-flow identity is wrong — would imply the observed series are
+inconsistent; nothing on disk supports that.
+
+**Consequences for the programme.**
+1. **"Universalisation" is measure-dependent.** GER-based and completion-based crossing dates are not interchangeable:
+   a GER-based reading can put primary universalisation decades earlier than a completion-based one. `MUST_REPRODUCE.md`
+   R2 already flags this ambiguity; the numbers above quantify it.
+2. A synthetic cohort-flow model must either (a) declare the completion denominator and accept that it reports later
+   crossing dates than the observed completion series, or (b) add an explicit declared measurement-factor for the
+   age-above-grade convention — never silently "fit" completion up to the observed level (that is target encoding).
+3. Any completion/GER ratio comparison elsewhere in the programme must state which series/denominator it uses.
+4. This also explains part of the old model's over-scale GER artefact (GER 64–207 %, `100_massification` audit D-02):
+   GER and completion were being treated as the same object.
+
+**Evidence label:** VERIFIED-FROM-DISK for the 2024 PHL numbers above; the denominator mechanism is the UIS
+definition, reported as the coherent explanation (not separately re-derived here).

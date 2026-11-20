@@ -1,0 +1,3 @@
+check,coef,se,n,n_ctry,period,target_coef,target_se,target_n,target_ctry,note
+E5_replication_rows_shift,0.5932271376,0.1757698583,253,23,2005-2024,0.5932271376,0.1757698583,253,23,
+E5_true_year_lag_10,0.5690534891,0.2317801262,320,27,2005-2024,0.5932271376,0.1757698583,253,23,

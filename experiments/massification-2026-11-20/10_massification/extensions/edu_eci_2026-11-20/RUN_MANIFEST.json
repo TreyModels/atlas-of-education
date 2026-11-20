@@ -1,0 +1,34 @@
+{
+  "package": "edu_eci_2026-11-20",
+  "status": "DESCRIPTIVE education->ECI panel; predeclared; no causal/direction claims",
+  "generated_utc": "2026-11-20T14:15:32Z",
+  "git_head": "54b2f63",
+  "predeclarations_sha256": "e2a707a9b67e525a1f483fc42d71555d882af31478f348f22a2943396c5bc230",
+  "files": {
+    "FINDINGS.md": "4ee29a310c864075d733a4946e6fc6281ce4713f5318edd2183208960d680ae2",
+    "PRE_DECLARATIONS.md": "e2a707a9b67e525a1f483fc42d71555d882af31478f348f22a2943396c5bc230",
+    "code/build_rows_note.txt": "dabc1da9c598f7520125db05ba9c5b1c52692766a3712caae0c57030f9d86149",
+    "code/run_edu_eci.py": "a9564aa5225c8717aacf73db254fc531bd3cc3f1d6199aeb4ff42a098743eda7",
+    "results/CROSSCHECK_EXISTING.csv": "fd936a0d4f6c6f93227e2e782f35d233c00d86ffd376ed393baeafa7a68ae537",
+    "results/HETEROGENEITY.csv": "ea8ae223cf7bb7fcd80b30fb725c2f64eb9421301e87f2a4a9b4606a06b78c8d",
+    "results/RESULTS_ALL.csv": "cbe155907bcb506e33ca917b7f80b9db3dfa66ee9ae492de60843d384ceaca37",
+    "results/ROBUSTNESS_HS92.csv": "dc8107c9a93ef38736620970fbe882f84f77ac23ff8f963277228bf362677e53",
+    "results/RUN_MANIFEST.json": "f6afe808ba821240f110b34809edc156273a6af4832f87c089b166c6944a607f",
+    "results/VERDICT_MATRIX.csv": "97c9d5eaee3bd884076d4b13fd3d7b892765cd45caefc51591f4b06ffade43d5"
+  },
+  "subdirectories": {
+    "code": [
+      "code/build_rows_note.txt",
+      "code/run_edu_eci.py"
+    ],
+    "results": [
+      "results/CROSSCHECK_EXISTING.csv",
+      "results/HETEROGENEITY.csv",
+      "results/RESULTS_ALL.csv",
+      "results/ROBUSTNESS_HS92.csv",
+      "results/RUN_MANIFEST.json",
+      "results/VERDICT_MATRIX.csv"
+    ]
+  },
+  "notes": "SHA256SUMS.txt covers every file in this package (including this manifest); it excludes only itself."
+}

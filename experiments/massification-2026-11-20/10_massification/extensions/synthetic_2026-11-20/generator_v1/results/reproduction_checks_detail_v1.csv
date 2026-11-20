@@ -1,29 +1,20 @@
 check_id,component,value,component_verdict,label
 A,A1 primary first>=90,2017,PASS,SYNTHETIC
 A,A2 lower-sec first>=90,"(2024, 87.2220970751671)",PASS,SYNTHETIC
-A,A3 upper-sec never>=90 by 2024,"(None, 75.12313420278726, 75.12313420278726)",PASS,SYNTHETIC
-A,A4 tertiary GER 16.3(1971)->51.1(2025),"(15.251750000000001, 57.91449617969357)",FAIL,SYNTHETIC
+A,A3 upper-sec never>=90 by 2024,"(None, 75.06372747302365, 75.06372747302365)",PASS,SYNTHETIC
+A,A4 tertiary GER 16.3(1971)->51.1(2025),"(15.251750000000001, 50.313426038337994)",PASS,SYNTHETIC
 A,"A5 floor->middle gap in [5,9]",7,PASS,SYNTHETIC
-A,"A6 ceiling residual in [13,17]pp",14.876865797212744,PASS,SYNTHETIC
-B,ind_div.n,66,,SYNTHETIC
-B,ind_div.b_lit,0.118467,,SYNTHETIC
-B,ind_div.p_lit,0.759867,,SYNTHETIC
-B,ind_div.b_yos,0.0616661,,SYNTHETIC
-B,ind_div.p_yos,0.148295,,SYNTHETIC
-B,ind_div.both_lit,-2.59339,,SYNTHETIC
-B,ind_div.both_lit_p,0.00538088,,SYNTHETIC
-B,ind_div.both_yos,0.329202,,SYNTHETIC
-B,ind_div.both_yos_p,0.00159301,,SYNTHETIC
-B,pre.n,114,,SYNTHETIC
-B,pre.b_lit,1.79428,,SYNTHETIC
-B,pre.p_lit,0,,SYNTHETIC
-B,pre.b_yos,0.190986,,SYNTHETIC
-B,pre.p_yos,0,,SYNTHETIC
-B,pre.both_lit,-0.572341,,SYNTHETIC
-B,pre.both_lit_p,0.21128,,SYNTHETIC
-B,pre.both_yos,0.240024,,SYNTHETIC
-B,pre.both_yos_p,1.86835e-08,,SYNTHETIC
-C,value,d ln(w_formal_rung1/w_informal)/d queue_pressure = -0.366 (p=0.000); d ln(w_rung2/w_rung1)/d pressure = +4.320 (p=0); sd of logs 0.049 vs 0.027,FAIL,SYNTHETIC
-D,value,"interaction dyos x X = -0.122 (p=0.6137); low-X tercile slope +0.34 pp/yr per yr-of-schooling, high-X tercile +0.58 (ratio 1.71)",FAIL,SYNTHETIC
-E,value,matched window 1970-2025 (cum. graduates within 1.43%); growth MFG 3.11 vs OFFICE 2.51 pp (diff 0.60); queue pressure 0.0001 vs 0.0031 (rel diff 96%),PASS,SYNTHETIC
-F,value,"GER [2.91,105.00] OK=True; completion [2.18,95.11] OK=True; |sum sector -1| max 2.22e-16 OK=True; |occ shares -1| max 0.00e+00 OK=True; cohort conservation max rel err 1.98e-16 OK=True; non-negativity OK=True",PASS,SYNTHETIC
+A,"A6 ceiling residual in [13,17]pp",14.936272526976353,PASS,SYNTHETIC
+B,n,180,,SYNTHETIC
+B,b_lit,2.37148,,SYNTHETIC
+B,p_lit,0,,SYNTHETIC
+B,b_yos,0.261171,,SYNTHETIC
+B,p_yos,0,,SYNTHETIC
+B,abl_lit,2.29422,,SYNTHETIC
+B,occupation_ablation_b_lit,2.09735,,SYNTHETIC
+B,occupation_ablation_p_lit,0,,SYNTHETIC
+B,takeoff_ablation_p_lit,0,,SYNTHETIC
+C,value,with literacy control: d ln(w_rung1/w_inf)/d pressure = -0.485 (p=0.000); d ln(w_rung2/w_rung1)/d pressure = +4.757 (p=0); without the control: -0.495; sd ln(ratio1)=0.049 vs sd ln(ladder)=0.025,PASS,SYNTHETIC
+D,value,counterfactual +100% schooling push: d growth per unit X1980 = +0.022 pp (p=5.764e-08); mean d growth low-X tercile +0.005 pp vs high-X tercile +0.029 pp (ratio 6.21),PASS,SYNTHETIC
+E,value,matched window 1970-2025 (cum. graduates within 1.41%); growth MFG 3.10 vs OFFICE 2.50 pp (diff 0.60); queue pressure 0.0001 vs 0.0028 (rel diff 95%),PASS,SYNTHETIC
+F,value,"GER [2.83,105.00] OK=True; completion [2.10,95.11] OK=True; |sum sector -1| max 2.22e-16 OK=True; |occ shares -1| max 0.00e+00 OK=True; cohort conservation max rel err 2.05e-16 OK=True; non-negativity OK=True",PASS,SYNTHETIC

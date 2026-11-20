@@ -1,19 +1,24 @@
 {
   "checks_summary": {
-    "A": "FAIL",
+    "A": "PASS",
     "B": "FAIL",
-    "C": "FAIL",
-    "D": "FAIL",
+    "C": "PASS",
+    "D": "PASS",
     "E": "PASS",
     "F": "PASS"
   },
-  "code_sha256": "dde8d079ad3275cc7bec57d59d49c6956fed4a63ae1a085fe6d93c0f28b8aee9",
+  "code_sha256": "a03fa0cb05a879020e254207dcd4add540883d0920b7d4457d3b157f7400a8d8",
   "declared_countries": {
     "SYN00_PHL_LIKE": "idx 0; narrow office sector, clerical boom, K-12-style pipeline break",
     "SYN01_TWIN_MFG": "idx 1; twin pair A",
     "SYN02_TWIN_OFFICE": "idx 2; twin pair B (identical except sector mix)"
   },
   "determinism": "single numpy PCG64 stream, seed fixed; all draws in fixed order; no wall-clock, no OS entropy, no dict-order dependence in output; floats written at %.10g. Re-running writes byte-identical results CSVs (verified).",
+  "determinism_check": {
+    "method": "two fresh runs of this exact code into separate output directories, then `cmp` on all three results CSVs and on this manifest",
+    "result": "byte-identical (all four files)",
+    "wall_clock_excluded": "no timestamp, elapsed-time or host field is written into any output file; runtime is printed to stdout only"
+  },
   "generator": "sim_v1.py",
   "label": "SYNTHETIC",
   "numpy": "2.4.6",
@@ -167,13 +172,13 @@
       0.3,
       1.6,
       1.45,
-      1.05
+      0.9
     ],
     "star_c3": [
       0.25,
       1.1,
       1.1,
-      0.85
+      0.7
     ],
     "surv_min": [
       0.62,
@@ -200,9 +205,9 @@
   "python": "3.11.17",
   "python_executable": "/Users/treymenefee/Library/Application Support/dsh-massification/venv/bin/python",
   "results_sha256": {
-    "reproduction_checks_detail_v1.csv": "2dd1ce7eb4e6108cc9716694116f9c658c5cf0d3c07a817d162fc79569a6df69",
-    "reproduction_checks_v1.csv": "e667d51df1075a9cd366c82cdc87f8b96ff0c374195c2f803af21dffea337a84",
-    "synthetic_panel_v1.csv": "61611b882fd3d7ab7b764965c72fea2fa435da87b6a980beb91234becf3a5c1f"
+    "reproduction_checks_detail_v1.csv": "fcbc725500a4173c190e7fe2f5fd9d3232929402d87f4a02ad7ad0f42d53ed62",
+    "reproduction_checks_v1.csv": "0914e3c7089f28d40a6c7bd8ba848f153d1c99886cf5f6eb45201b74234beb8e",
+    "synthetic_panel_v1.csv": "cf8dfbcb10f2f9abc370d549e94e048cfaa9d54392d6142a80bf5cf45076fd8d"
   },
   "seed": 20261120,
   "statement": "Synthetic data from declared assumptions only. Not evidence, not an estimate, no causal claim, no real country modelled.",

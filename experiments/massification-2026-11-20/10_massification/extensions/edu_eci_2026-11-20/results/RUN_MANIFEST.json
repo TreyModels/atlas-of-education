@@ -1,0 +1,58 @@
+{
+  "analysis": "education -> ECI (descriptive; no causal/direction claim)",
+  "predeclarations": {
+    "path": "/Users/treymenefee/massification_live/experiments/massification-2026-11-20/10_massification/extensions/edu_eci_2026-11-20/PRE_DECLARATIONS.md",
+    "sha256": "e2a707a9b67e525a1f483fc42d71555d882af31478f348f22a2943396c5bc230"
+  },
+  "seed": 20261120,
+  "python": "3.11.17",
+  "numpy": "2.4.6",
+  "pandas": "3.1.1",
+  "data": [
+    {
+      "path": "/Users/treymenefee/massification_live/experiments/massification-2026-11-20/09_relations/data/panel_wdi_long.csv",
+      "sha256": "a37629ae5d4f9ed2be4c71e33bfc876131880f65d356c88bd4d047a9bbdeae75"
+    },
+    {
+      "path": "/Users/treymenefee/massification_live/experiments/massification-2026-11-20/09_relations/data/panel_wdi_wide.csv",
+      "sha256": "7fd645cb05fbffde038366a010aea2ffa5f5d1afaaa72642e6760ac5300c4485"
+    },
+    {
+      "path": "/Users/treymenefee/massification_live/experiments/massification-2026-11-20/09_relations/data/economic_complexity_panel_30ctys.csv",
+      "sha256": "9657bfd6cc17d3ed7f59939e0ba6af1412c2d070f2dd0c600a514f4b063a7f04"
+    }
+  ],
+  "code": [
+    {
+      "path": "/Users/treymenefee/massification_live/experiments/massification-2026-11-20/10_massification/extensions/edu_eci_2026-11-20/code/run_edu_eci.py",
+      "sha256": "a9564aa5225c8717aacf73db254fc531bd3cc3f1d6199aeb4ff42a098743eda7"
+    }
+  ],
+  "results": [
+    {
+      "path": "/Users/treymenefee/massification_live/experiments/massification-2026-11-20/10_massification/extensions/edu_eci_2026-11-20/results/RESULTS_ALL.csv",
+      "sha256": "cbe155907bcb506e33ca917b7f80b9db3dfa66ee9ae492de60843d384ceaca37"
+    },
+    {
+      "path": "/Users/treymenefee/massification_live/experiments/massification-2026-11-20/10_massification/extensions/edu_eci_2026-11-20/results/VERDICT_MATRIX.csv",
+      "sha256": "97c9d5eaee3bd884076d4b13fd3d7b892765cd45caefc51591f4b06ffade43d5"
+    },
+    {
+      "path": "/Users/treymenefee/massification_live/experiments/massification-2026-11-20/10_massification/extensions/edu_eci_2026-11-20/results/ROBUSTNESS_HS92.csv",
+      "sha256": "dc8107c9a93ef38736620970fbe882f84f77ac23ff8f963277228bf362677e53"
+    },
+    {
+      "path": "/Users/treymenefee/massification_live/experiments/massification-2026-11-20/10_massification/extensions/edu_eci_2026-11-20/results/HETEROGENEITY.csv",
+      "sha256": "ea8ae223cf7bb7fcd80b30fb725c2f64eb9421301e87f2a4a9b4606a06b78c8d"
+    },
+    {
+      "path": "/Users/treymenefee/massification_live/experiments/massification-2026-11-20/10_massification/extensions/edu_eci_2026-11-20/results/CROSSCHECK_EXISTING.csv",
+      "sha256": "fd936a0d4f6c6f93227e2e782f35d233c00d86ffd376ed393baeafa7a68ae537"
+    }
+  ],
+  "windows": "1995-2024; lags true calendar years 5 and 10",
+  "verdict_rule": "PRE_DECLARATIONS \u00a74 (frozen)",
+  "labels": "education observed WDI/UIS; mys_proxy DERIVED; ECI observed Growth Lab (CC0)",
+  "generated_utc": "2026-11-20T14:15:25Z",
+  "derived_into_manifest_only": "generated_utc differs between runs; results CSVs are byte-stable"
+}

@@ -4,11 +4,14 @@
 > not an estimate, not a forecast, and not a model of any real country.** No causal or push/pull
 > direction claim is licensed by anything below. Country labels are synthetic (`SYN00_PHL_LIKE` etc.).
 > The only observed numbers encoded anywhere are the declared targets listed in
-> `generator_v1/results/RUN_MANIFEST.json` (`targets_encoded`) and declared in the fact register.
+> `generator_v1/RUN_MANIFEST.json` (`targets_encoded`) and in `facts/`.
 
-**Built:** 2026-11-20. **Status:** v0 DONE (delivered 21:58), v1 DELIVERED (22:01) — **v1 passes 2 of its
-6 predeclared checks**; see §4. The user's latest directive (education → economic complexity, separate from
-growth) is recorded as an amendment to `MODEL_ARCHITECTURE.md` and is **not yet implemented** (v1.1 work).
+**Built:** 2026-11-20. **Status:** v0 DONE; **v1 DELIVERED (authoritative)** — 6 predeclared checks:
+**A PASS but target-encoded · B FAIL · C PASS (half structural) · D PASS · E PASS · F PASS.** The
+authoritative v1 supersedes an earlier intermediate run of the same day whose checks read A–D FAIL / E–F PASS;
+the earlier run's numbers are withdrawn (see `generator_v1/TUNE_LOG.md` for the full audit trail of what changed
+between them and why). Recorded here because two versions must not coexist: the arbiter for v1 is the worker's
+hash list, which the controller re-verified (two clean re-runs byte-identical; §6).
 
 ---
 
@@ -16,11 +19,11 @@ growth) is recorded as an amendment to `MODEL_ARCHITECTURE.md` and is **not yet 
 
 | component | what it is | size |
 |---|---|---|
-| `MODEL_ARCHITECTURE.md` | the user's verbal specification, restated as a layered design directive (+ dated amendments) | 95 lines + amendments |
+| `MODEL_ARCHITECTURE.md` | the user's verbal specification restated as a layered design directive (+ dated amendments A1: education → complexity) | 95 lines + amendments |
 | `equations/EQUATION_REGISTER.csv` | every equation/relationship in the programme's massification literature layer, with status, form, parameters, implementation site | **43 rows**; 10 tagged `equation-in-literature` (candidate/definition forms included), the rest `narrative-only`, `programme-invented` or `programme-estimated` |
-| `facts/STYLIZED_FACTS.csv` | the provenance-labelled facts a generator may reproduce | **53 facts**; **35 VERIFIED-FROM-DISK**, 6 SIMULATED, 5 DISPUTED, 4 MODEL-OUTPUT-NOT-FACT, 3 REPORT-ONLY-UNRELIABLE |
+| `facts/STYLIZED_FACTS.csv` | the provenance-labelled facts a generator may reproduce | **53 facts**; 35 VERIFIED-FROM-DISK, 6 SIMULATED, 5 DISPUTED, 4 MODEL-OUTPUT-NOT-FACT, 3 REPORT-ONLY-UNRELIABLE (+ the completion/GER measurement note added 2026-11-20) |
 | `generator_v0/` | arithmetic skeleton: demand-ceiling + capacity gate + law push, one declared PHL-like country | 32 synthetic countries × 55 years (1970–2024) × 4 levels = **7,040 rows**; `FINDINGS.md`, `PARAMS.md`, `results/` |
-| `generator_v1/` | layered, tiered, occupation-aware generator (takeoff regime, sector mix, job ladder, rank/queue matching, composition growth) | 30 synthetic countries × 56 years (1970–2025) × 4 levels = **6,720 rows**; `PARAMS.md`, `code/sim_v1.py`, `results/` |
+| `generator_v1/` | layered, tiered, occupation-aware generator (takeoff regime, sector mix, job ladder, rank/queue matching, composition growth) | 30 synthetic countries × 56 years (1970–2025) × 4 levels = **6,720 rows**; `FINDINGS.md`, `TUNE_LOG.md`, `PARAMS.md`, `RUN_MANIFEST.json`, `code/sim_v1.py`, `results/` |
 
 Both generators use one seeded NumPy `PCG64` stream (seed 20261120), read no observed data at runtime, and write
 fixed-precision CSVs so reruns are byte-identical.
@@ -29,68 +32,82 @@ fixed-precision CSVs so reruns are byte-identical.
 
 v0 establishes the flow/stock accounting: logistic demand ceiling, capacity gate `K^0.75`, a 0/1 law push, the
 cohort-flow identity, and a declared `PHL_like` country pattern-matched to the brief (not fitted to observed
-Philippine series). Its report discloses two failures rather than hiding them:
+Philippine series). It discloses two failures rather than hiding them:
 
 1. **C5b cross-level ladder** — primary ≥ lower ≥ upper ≥ tertiary completion holds in only **69.89%**
    (1,230/1,760) of country-years (530 violations; pairwise 86.82% / 93.52% / 84.38%). The ordering is not
    enforced by construction in v0.
 2. **Within/between conflation** — v0's one demand relation does not separate within-country dynamics from
-   cross-country level differences, so its "reproduction" of income scaling mixes the two margins.
+   cross-country level differences.
 
-v1 was specified to add the missing structure (tiers, occupations, takeoff, queue) on top of v0's skeleton, which
-it does — but it does not repair the ladder violation (§4, check A).
-
-## 3. v1 — what it actually implements (as delivered)
+## 3. v1 — what it implements and what its predeclared checks say (authoritative)
 
 Layers as in `MODEL_ARCHITECTURE.md`: Layer 0 economy states (complexity-like `X`, income, urbanisation, sector
-mix, four formal job rungs, three takeoff states); Layer 1 cohort-flow schooling supply (GER capped at 105,
-completion from the cohort flow with a duration lag, not a product of fitted probabilities); Layer 2 rank-based
-absorption into formal rungs vs the informal residual, with queueing; Layer 3 composition-weighted growth
-(productivity by sector + a finite step when a worker moves to a formal rung); Layer 4 synthetic panel + a
-reproduction-check table. Declared country set includes a PHL-like economy and a matched twin pair that differs
-**only** in sector mix (manufacturing-biased vs office/BPO-biased).
-
-## 4. v1 reproduction checks (predeclared A–F; frozen in `code/sim_v1.py`)
-
-**Result: A FAIL · B FAIL · C FAIL · D FAIL · E PASS · F PASS (2/6).** This is the honest headline. The failures
-are informative about which parts of the declared architecture do not yet bite; they are **not** evidence about
-the world and must not be spun either way.
+mix, four formal job rungs, three takeoff states); Layer 1 cohort-flow schooling supply (GER ≤ 105, completion
+from the cohort flow with a duration lag); Layer 2 rank-based absorption into formal rungs vs the informal
+residual, with queueing; Layer 3 composition-weighted growth; Layer 4 synthetic panel + check table. Declared
+country set includes a PHL-like economy and a matched twin pair differing **only** in sector mix.
 
 | check | verdict | key numbers (synthetic) | reading |
 |---|---|---|---|
-| **A. PHL signature** (one parameterisation, no per-level rescue) | **FAIL** (2/6 components) | primary completion first ≥90 in **2011** (target 2017); lower-sec **never** reaches 90 (2023 = 76.88; target 2024); upper-sec never ≥90, max 75.96, 2024 = 75.96 ✓; tertiary GER 1971 = 16.45 ✓ → 2025 = **54.19** (target 48.1–54.1, misses by 0.09); floor→middle gap n/a; ceiling residual 14.04 ✓ | the secondary ladder compresses: lower- and upper-secondary completion converge near 76% instead of forming a 5–9y staircase. The model overshoots tertiary slightly and reaches primary "universalization" six years early. |
-| **B. Literacy vs schooling-years horse race** | **FAIL** | industrialising/diversified decades (n=66): literacy −0.288 (p=0.569), schooling-years +0.073 (p=0.210) → schooling-years *is* weak (cond2 ✓) but literacy is **not positive** (cond1 ✗); pre-industrial decades (n=114): literacy **+1.781** (p<0.001), schooling-years +0.192 (p<0.001) → not flat (cond3 ✗). Occupation-structure ablation: literacy association **survives** without the rung ladder (−0.375, p=0.449) | the synthetic world puts the literacy–growth association in **pre-industrial** decades, not in takeoff — the opposite of the user's specification; and the association does not run through the occupation ladder. |
-| **C. No horse race at primary** | **FAIL** (cond2 ✓) | d ln(w_formal_rung1/w_informal)/d queue pressure = **−0.340** (p<0.001) vs required \|·\|<0.15 (cond1 ✗); d ln(w_rung2/w_rung1)/d pressure = **+4.280** (p<0.01) ✓ | the rung2/rung1 credential ladder *does* rise with queue pressure (the emergent horse race), but the rung1/informal margin is not flat. N.B. the primary rung has `rank_factor == 1` **by construction** — no primary rank competition is a structural restriction, so cond1 is testing a different object (the informal-wage channel) than the architecture's claim. |
-| **D. ECI gating** | **FAIL** (cond2 ✓) | interaction Δyos × X = +0.138 (p=0.557); low-X tercile slope **+0.13** pp/yr per year-of-schooling, high-X **+0.56** (ratio **4.31**, high slope significant) | gating is visible in tercile slopes (more than 4×) but the linear interaction with decade FE has no power (n=330 blocks). Gating exists in the mechanism, not in this test. |
-| **E. Composition > totals** | **PASS** | twins matched 1970–2021 (cumulative graduates within **1.94%**): growth 2.79 vs 2.11 pp (diff 0.68); queue pressure 0.0002 vs 0.0050 (relative diff **96%**) | same graduate count, different sector mix → different growth and queueing. This is the one behavioural check that passes cleanly. |
-| **F. Identity/accounting gate** | **PASS** | GER ∈ [2.91, 105.00]; completion ∈ [2.10, 93.26]; \|Σ sector − 1\| ≤ 2.2e-16; \|Σ occupation shares − 1\| = 0; cohort conservation max rel. err **1.98e-16**; non-negativity OK | the stock–flow bookkeeping is exact. This is the Z1-class gate v0 lacked. |
+| **A. PHL signature** | **PASS — but target-encoded** | primary first ≥90 **2017**; lower-sec first ≥90 **2024** (2023 = 87.2); upper-sec never ≥90, max **75.1**, 2024 = 75.1; tertiary GER **15.3 → 50.3** (1971→2025); floor→middle gap **7 y**; ceiling residual **14.9 pp** | the PHL-like country's four level-specific supply paths (survival + seat capacity) are **interpolated through the declared PHL-01/02/03 anchors**. A1/A2/A3/A4(1971) are therefore produced by the encoding, **not predicted**, and the architecture's "one parameterisation, no per-level rescue" clause is **NOT met**. Emergent: A5 (7 y gap), A6 (14.9 pp residual), the tertiary 2025 endpoint, the never-crossing, and that one path set yields all six together. |
+| **B. Literacy vs schooling-years horse race** | **FAIL (2 of 3 conditions)** | pooled decade-FE n=180: `b_lit` = **+2.37** (p<1e-4), `b_yos` = **+0.26** (p<1e-4); takeoff ablation `b_lit` = **+2.29**; full job-ladder ablation `b_lit` = **+2.10** | the headline pattern holds and schooling-years is weak ✓✓, but the association **survives the removal of its own mechanism** (condition B3 fails). The pattern is over-determined and **not diagnostic** of the takeoff/occupation structure. In the pre-industrial subsample literacy–growth is *positive* (+1.75), while within industrialising/diversified it is slightly negative (r = −0.15). |
+| **C. No horse race at primary** | **PASS (half structural)** | primary-margin return vs queue pressure = **−0.485** (with literacy control); credential ladder `w_rung2/w_rung1` vs pressure = **+4.757** (p<1e-6); without the literacy control the primary margin falls (−0.495) | no *positive* rank premium at the primary margin, and the lower-secondary+ ladder does widen with queue pressure. Caveat: the rung-1 rank factor is 1.0 **by construction**, so the flatness is a design restriction, not an emergent result; the negative number without the control is the informal-productivity channel, not a rank premium. |
+| **D. ECI gating** | **PASS** | counterfactual +10 % schooling push: Δgrowth per unit X(1980) = **+0.022 pp** (p = 5.8e-8); high-X tercile **+0.029 pp** vs low-X **+0.005 pp** (ratio **6.2**) | a schooling push buys ~6× more growth where the higher rungs exist. Tested as an experiment (the architecture's own wording), not as an unstable panel interaction. |
+| **E. Composition > totals** | **PASS** | twins matched 1970–2025 (cumulative graduates within **1.41%**): growth **3.10 % vs 2.50 %** (diff 0.60 pp); queue pressure **0.0001 vs 0.0028** (95 % apart) | same graduate count, different sector mix → different growth and queueing. The one controlled comparison that passes cleanly. |
+| **F. Identity/accounting gate** | **PASS** | GER ∈ [2.83, 105.0]; completion ∈ [2.10, 95.11]; \|Σ sector − 1\| ≤ 2.2e-16; \|Σ occupation shares − 1\| = 0; cohort conservation max rel. err **2.05e-16**; non-negativity OK | exact stock–flow bookkeeping (the Z1-class gate v0 lacked). |
 
-**Determinism (controller-verified 2026-11-20):** `sim_v1.py` run twice from a clean state produced results CSVs
-**byte-identical to each other and to the delivered copies** (`sha256`:
-`synthetic_panel_v1.csv` `d27957bef9197c7c0e9513be4644e160eb5d1e2195e7b052a32b5f88e3103a2b`,
-`reproduction_checks_v1.csv` `947a2577…`, `reproduction_checks_detail_v1.csv` `a9647d02…`).
+## 4. What is load-bearing — and why v1 is a demonstration, not a test
 
-### What the failures mean, and what they do not
+The worker's audit trail (`generator_v1/TUNE_LOG.md`) and ablation results converge on one uncomfortable finding:
 
-- The v1 failures are **calibration/identification failures of a declared model**, not empirical findings and not a
-  refutation of the user's model. Check B's direction failure says the literacy channel in v1 is too general: it
-  pays in the pre-industrial regime rather than specifically enabling takeoff.
-- **No re-fitting to pass the checks was done and none should be done post hoc** — the checks were frozen with the
-  architecture; passing them by moving parameters after seeing the verdicts would be target-chasing.
-- The correct next step is a **v1.1 predeclaration** (new frozen checks, declared parameter changes) that
-  (i) re-specifies the literacy channel as a takeoff condition, (ii) fixes the secondary completion ladder without
-  per-level rescue, (iii) adds **education → complexity** (user directive, see `MODEL_ARCHITECTURE.md` amendment),
-  and (iv) restates check C's primary-margin test to match the architecture's actual restriction. That is a Council
-  decision, not a controller one.
+- **The upper-secondary seat cap is load-bearing.** Set the cap at 0.845–0.875 and the ceiling is arithmetically
+  incapable of crossing 90 whatever the floor does; put the ceiling on the *same growth path* as the floor
+  (0.58 → 1.00, as lower-secondary has) and the anchor asymmetry disappears entirely. Nothing else — not the
+  queue, the rank premium, the takeoff switch or the sector mix — is close in power.
+- **But the seat cap is stipulated, not derived** (from CAP-04 "capacity buys the floor, not the ceiling", which the
+  fact register itself labels a model-side ruling the data cannot separate at n = 6). So the honest statement is:
+  **v1 reproduces the asymmetry substantially by assuming the asymmetry.** The second most load-bearing object is
+  the declared PHL floor survival path, which is interpolated through the anchors and therefore target-encoded.
+- **The rung ladder is not load-bearing for the level association** (check B's ablations) but *is* load-bearing for
+  the marginal return (check D). Both can be true; together they are the most useful output: the ladder governs the
+  **marginal return** to more schooling, not the **level** association between literacy and growth.
+- **A synthetic horse-race PASS is non-diagnostic unless the ablation fails** — adopted as a standing rule for v1.1.
 
-## 5. What must not be claimed
+## 5. A real measurement insight produced by the exercise (recorded to the fact register)
+
+The generator cannot produce completion above gross enrolment: in a cohort-flow identity, completion is a share of
+the **entering** cohort and can never exceed the entering GER (v1 tops out at 94.0 primary / 90.4 lower-secondary).
+But the observed Philippine series does exceed it — verified from disk (`10_massification/data/
+UNIVERSALIZATION_SERIES.csv`, `data/gmr_observed_6countries_1970_2024.csv`, 2024): **primary completion 98.30 on
+GER 94.03; lower-secondary completion 92.41 on secondary GER 85.29; upper-secondary completion 75.03.** The
+coherent explanation is that the UIS completion rate is measured on children **3–5 years above grade age**, not on
+the GER age band — i.e. it is a different denominator, not a different reality.
+
+Consequence for the whole programme: **"universalisation" is measure-dependent.** GER-based and completion-based
+crossing dates are not interchangeable (the ambiguity `facts/MUST_REPRODUCE.md` R2 flags), and any completion/GER
+ratio comparison in the programme must state which denominator it uses. This also explains part of the old model's
+over-scale GER artefact. Recorded in `facts/STYLIZED_FACTS.md` §12 and `10_massification/data/
+DATA_NOTES_MASSIFICATION.md`.
+
+## 6. Verification at packaging (controller, 2026-11-20)
+
+- Authoritative v1 file hashes re-verified against the worker's list: `sim_v1.py` `a03fa0cb…`, `PARAMS.md`
+  `9052e85b…`, `FINDINGS.md` `9f6569e6…`, `TUNE_LOG.md` `730f6c4e…`, `RUN_MANIFEST.json` `f9e3640e…`,
+  `synthetic_panel_v1.csv` `cf8dfbcb…`, `reproduction_checks_v1.csv` `0914e3c7…`,
+  `reproduction_checks_detail_v1.csv` `fcbc7255…`.
+- Two fresh runs of `sim_v1.py` into separate output directories: **byte-identical to each other and to the
+  delivered CSVs** (`cmp` on all three results files).
+- No observed data file is read at runtime; every output row carries `label = SYNTHETIC`.
+
+## 7. What must not be claimed
 
 No causal claims; no push/pull direction claims; no statement that any real education system "would" behave this
 way; no forecast; no policy inference; no "the model shows" — only "the declared model, under these parameters,
-produces". Synthetic panel rows are labelled `SYNTHETIC` in every record. Anything tagged DERIVED in the fact
-register (e.g. the MYS proxy) is a declared approximation, not an observation.
+produces". Check A is target-encoded and must never be quoted as a successful prediction. Check B's headline pattern
+is non-diagnostic. `mys_proxy`-style derived proxies are labelled where used.
 
-## 6. Reproduction
+## 8. Reproduction
 
 ```bash
 VENV="/Users/treymenefee/Library/Application Support/dsh-massification/venv/bin/python"
@@ -100,9 +117,15 @@ cd ../.. && "$VENV" ../build_package.py . "SYNTHETIC workbench"   # rebuild RUN_
 shasum -a 256 -c SHA256SUMS.txt
 ```
 
-## 7. Provenance chain
+## 9. Provenance chain and v1.1 requirements
 
 `MODEL_ARCHITECTURE.md` (user directive) → `equations/` (what the literature actually says) → `facts/` (what may be
-reproduced, with provenance labels) → v0 (accounting skeleton) → v1 (layered model, 2/6 behavioural checks pass) →
-v1.1 (to be predeclared; education → complexity). Every generated row is `SYNTHETIC`; every claim in this file is
-about the generator, not the world.
+reproduced, with provenance labels) → v0 (accounting skeleton) → v1 (layered model; A target-encoded, B
+non-diagnostic, C structural, D/E/F genuine) → v1.1 (to be predeclared).
+
+**v1.1 predeclaration must** (a) add the **education → complexity** channel (schooling flow raises `X` with a 5–10 y
+lag, so `X` is not only a function of income/urbanisation); (b) **remove the per-level PHL anchor interpolation** so
+the "one parameterisation, no per-level rescue" clause is actually tested; (c) state that a synthetic horse-race
+PASS is **non-diagnostic unless the ablation fails**; and (d) derive the upper-secondary seat capacity from the
+economy side (who hires upper-secondary completers) rather than stipulating it. That is a Council decision, not a
+controller one.

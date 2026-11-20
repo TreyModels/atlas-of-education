@@ -81,3 +81,19 @@ One row per country x level x threshold x measure. `status` ∈ {observed, recon
 **Policy timeline.** `POLICY_TIMELINE.csv` lists compulsory-education and reform dates (JPN 1886/1947; KOR 1953/1985; HKG 1971/1978/2008/2012; CHN 1986; PHL 1987/2013; KHM 1996). Most are well-established policy facts that were **not re-verified against a primary document in this pass** — status `policy_fact` with that caveat in the `confidence` column; the ones tied to the user's own papers (PHL RA 10533 2013, HKG 3-3-4 2012) are sourced to workspace materials.
 
 **Known weak spots in the timing table (do not hide).** HKG tertiary reconstruction disagrees with observed (reconstructed 1983 vs observed 1992 for the 15% crossing) — confidence `check`, use the observed row. JPN tertiary reconstruction (50% in 1994–95) is `check` too because the reconstruction denominator (WPP 18–21) omits older tertiary students; the observed row is authoritative where it exists. PHL secondary 90% NER is right-censored at 2015 (the NER series ends); the GER row (2022) is the usable one.
+
+## Definition trap added 2026-11-20 — completion rate vs GER (different denominators)
+
+The observed Philippine series has **completion above gross enrolment** at the same level and year. Verified from disk
+2024 (`UNIVERSALIZATION_SERIES.csv`, `data/gmr_observed_6countries_1970_2024.csv`): **primary completion 98.30 vs GER
+94.03**; **lower-secondary completion 92.41 vs secondary GER 85.29**; upper-secondary completion 75.03. This is not a
+data error and must not be "corrected" by scaling: the **UIS completion rate is measured on children 3–5 years above
+the official grade age**, while GER uses the level's age band — so the denominators differ and completion can exceed
+GER. A cohort-flow synthetic model (see `10_massification/extensions/synthetic_2026-11-20/`) cannot produce
+completion > entering GER and therefore reports later crossing dates than a GER-based reading.
+
+**Rules that follow.** (1) Never mix completion-based and GER-based "universalisation" dates without stating the
+measure — this is the R2 ambiguity in `facts/MUST_REPRODUCE.md`. (2) Any completion/GER ratio comparison must name
+both series and their denominators. (3) A synthetic model may declare either the cohort-flow denominator or an
+explicit measurement-factor convention, but must not silently fit completion up to observed levels (target encoding).
+This also explains part of the old model's over-scale GER artefact (audit D-02).

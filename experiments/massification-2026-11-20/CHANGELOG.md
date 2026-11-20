@@ -113,12 +113,19 @@ manifests and error logs.
 
 ## 2026-11-20 (evening) — synthetic workbench v1, longitudinal battery, external literature review
 
-- **Synthetic workbench packaged** (`10_massification/extensions/synthetic_2026-11-20/`, 30/30 SHA256SUMS verify):
-  equations register (43 relationships; 10 `equation-in-literature` tags) + fact register (53 facts; 35
-  VERIFIED-FROM-DISK) + generator v0 (7,040-row panel) + generator v1 (6,720-row tiered occupation-aware panel,
-  controller-verified byte-identical on two re-runs). v1 passes **2 of its 6 predeclared checks** (E composition,
-  F accounting); A–D fail as disclosed, with the failures diagnosed as declared-model calibration/identification
-  failures, **not** empirical findings and not to be re-fitted post hoc. v1.1 predeclaration is the next step.
+- **Synthetic workbench packaged** (`10_massification/extensions/synthetic_2026-11-20/`): equations register (43
+  relationships; 10 `equation-in-literature` tags) + fact register (53 facts; 35 VERIFIED-FROM-DISK) + generator v0
+  (7,040-row panel) + generator v1 (6,720-row tiered occupation-aware panel; authoritative worker delivery,
+  controller-verified byte-identical on two clean re-runs). v1's predeclared checks: **A PASS but target-encoded · B
+  FAIL (non-diagnostic: association survives both ablations) · C PASS (half structural) · D PASS · E PASS · F PASS**;
+  the load-bearing object is the **stipulated upper-secondary seat cap**, so v1 reproduces the anchor asymmetry
+  substantially by assuming it. An earlier same-day intermediate run (A–D FAIL) is withdrawn; the full audit trail is
+  `generator_v1/TUNE_LOG.md`. **v1.1 predeclaration must** add the education→complexity channel, remove the per-level
+  anchor interpolation, adopt the ablation-fail diagnostic rule, and derive the seat cap from the economy side.
+- **Measurement insight recorded:** completion can exceed GER (UIS completion uses a 3–5-years-above-grade
+  denominator) — verified PHL 2024 primary **98.30 vs 94.03**; note added to `facts/STYLIZED_FACTS.md` §12 and
+  `10_massification/data/DATA_NOTES_MASSIFICATION.md`. This explains part of the old model's over-scale GER artefact
+  and makes "universalisation" measure-dependent.
 - **Longitudinal battery corrected to final verdicts:** H1 PARTIAL, **H2 NOT SUPPORTED** (ECI S3 −2.589,
   CI −4.112…−1.067, negative-significant, opposite the canon; raw within-country r = −0.153), H3 NOT SUPPORTED,
   H4 SUPPORTED (descriptive co-movement only); "growth is the weakly-attached variable" (all nine growth pairs
@@ -126,6 +133,13 @@ manifests and error logs.
 - **External literature review launched** (Priority 1, user ask): web-verified memo + claim CSV under
   `10_massification/lit/external_review_2026-11-20/`, five strands + education → complexity; "what we do NOT need
   to redo" as the deliverable. Repo literature audit in parallel.
+- **Education → ECI predeclared panel analysis run** (`10_massification/extensions/edu_eci_2026-11-20/`): 272-row
+  matrix, frozen rule → **1 SUPPORTED · 5 PARTIAL · 8 NOT SUPPORTED** (12/14 robust to `eci_hs92`). Primary
+  completion PARTIAL at 5 and 10 years and robust (+0.003–0.008 ECI points/pp, halved by income control); adult
+  literacy stock null at 10y; upper-secondary nothing; tertiary attainment negative-significant (S2, −0.0155,
+  p=0.006); no low-base heterogeneity. Existing E5 **replicated exactly** (0.5932271376, se 0.1757698583, n=253,
+  23 cty; true-year-lag version 0.5691, n=320, 27 cty) — real but specification-dependent (log spec, `eci_hs92`, no
+  income control). Descriptive only; no causal/direction claim. Deterministic, two runs byte-identical.
 - **New user directive recorded:** hypothesis is **education → economic complexity (ECI)** (growth is a different
   outcome). `synthetic_2026-11-20/MODEL_ARCHITECTURE.md` Amendment A1 requires v1.1 to encode schooling flow → X;
   a predeclared education→ECI panel analysis is queued on the existing 30-country data
