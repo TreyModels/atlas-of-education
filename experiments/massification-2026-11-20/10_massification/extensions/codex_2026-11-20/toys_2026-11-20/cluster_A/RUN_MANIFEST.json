@@ -1,0 +1,581 @@
+{
+  "label": "ILLUSTRATIVE TOY - stipulated parameters; not calibrated; not evidence; no historical test; phase closed; do not cite numbers as estimates.",
+  "generated_utc": "2026-11-20T11:13:11Z",
+  "package": "extensions_archive/toys_2026-11-20/cluster_A",
+  "spec": "extensions_archive/codex_2026-11-20/COUNCIL_TOY_SPECS_015.md (Cluster A, #1-#3)",
+  "python": {
+    "version": "3.10.2",
+    "implementation": "CPython",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "dependencies": "stdlib only (no numpy, no network)"
+  },
+  "seeds": {
+    "base": 20261120,
+    "count_per_cell": 200,
+    "first": 20261120,
+    "last": 20261319,
+    "rule": "seed_i = 20261120 + i, i = 0..199",
+    "list": [
+      20261120,
+      20261121,
+      20261122,
+      20261123,
+      20261124,
+      20261125,
+      20261126,
+      20261127,
+      20261128,
+      20261129,
+      20261130,
+      20261131,
+      20261132,
+      20261133,
+      20261134,
+      20261135,
+      20261136,
+      20261137,
+      20261138,
+      20261139,
+      20261140,
+      20261141,
+      20261142,
+      20261143,
+      20261144,
+      20261145,
+      20261146,
+      20261147,
+      20261148,
+      20261149,
+      20261150,
+      20261151,
+      20261152,
+      20261153,
+      20261154,
+      20261155,
+      20261156,
+      20261157,
+      20261158,
+      20261159,
+      20261160,
+      20261161,
+      20261162,
+      20261163,
+      20261164,
+      20261165,
+      20261166,
+      20261167,
+      20261168,
+      20261169,
+      20261170,
+      20261171,
+      20261172,
+      20261173,
+      20261174,
+      20261175,
+      20261176,
+      20261177,
+      20261178,
+      20261179,
+      20261180,
+      20261181,
+      20261182,
+      20261183,
+      20261184,
+      20261185,
+      20261186,
+      20261187,
+      20261188,
+      20261189,
+      20261190,
+      20261191,
+      20261192,
+      20261193,
+      20261194,
+      20261195,
+      20261196,
+      20261197,
+      20261198,
+      20261199,
+      20261200,
+      20261201,
+      20261202,
+      20261203,
+      20261204,
+      20261205,
+      20261206,
+      20261207,
+      20261208,
+      20261209,
+      20261210,
+      20261211,
+      20261212,
+      20261213,
+      20261214,
+      20261215,
+      20261216,
+      20261217,
+      20261218,
+      20261219,
+      20261220,
+      20261221,
+      20261222,
+      20261223,
+      20261224,
+      20261225,
+      20261226,
+      20261227,
+      20261228,
+      20261229,
+      20261230,
+      20261231,
+      20261232,
+      20261233,
+      20261234,
+      20261235,
+      20261236,
+      20261237,
+      20261238,
+      20261239,
+      20261240,
+      20261241,
+      20261242,
+      20261243,
+      20261244,
+      20261245,
+      20261246,
+      20261247,
+      20261248,
+      20261249,
+      20261250,
+      20261251,
+      20261252,
+      20261253,
+      20261254,
+      20261255,
+      20261256,
+      20261257,
+      20261258,
+      20261259,
+      20261260,
+      20261261,
+      20261262,
+      20261263,
+      20261264,
+      20261265,
+      20261266,
+      20261267,
+      20261268,
+      20261269,
+      20261270,
+      20261271,
+      20261272,
+      20261273,
+      20261274,
+      20261275,
+      20261276,
+      20261277,
+      20261278,
+      20261279,
+      20261280,
+      20261281,
+      20261282,
+      20261283,
+      20261284,
+      20261285,
+      20261286,
+      20261287,
+      20261288,
+      20261289,
+      20261290,
+      20261291,
+      20261292,
+      20261293,
+      20261294,
+      20261295,
+      20261296,
+      20261297,
+      20261298,
+      20261299,
+      20261300,
+      20261301,
+      20261302,
+      20261303,
+      20261304,
+      20261305,
+      20261306,
+      20261307,
+      20261308,
+      20261309,
+      20261310,
+      20261311,
+      20261312,
+      20261313,
+      20261314,
+      20261315,
+      20261316,
+      20261317,
+      20261318,
+      20261319
+    ],
+    "pairing": "one latent cohort per seed, reused by every arm and counterfactual"
+  },
+  "reps": {
+    "runs_per_cell": 200,
+    "cells": [
+      {
+        "experiment": "1_entry_hysteresis",
+        "arm": "divisible_F_high_shock_down",
+        "seeds": 200,
+        "rows": 10400
+      },
+      {
+        "experiment": "1_entry_hysteresis",
+        "arm": "divisible_F_high_shock_up",
+        "seeds": 200,
+        "rows": 10400
+      },
+      {
+        "experiment": "1_entry_hysteresis",
+        "arm": "divisible_F_low_shock_down",
+        "seeds": 200,
+        "rows": 10400
+      },
+      {
+        "experiment": "1_entry_hysteresis",
+        "arm": "divisible_F_low_shock_up",
+        "seeds": 200,
+        "rows": 10400
+      },
+      {
+        "experiment": "1_entry_hysteresis",
+        "arm": "lump_F_high_shock_down",
+        "seeds": 200,
+        "rows": 10400
+      },
+      {
+        "experiment": "1_entry_hysteresis",
+        "arm": "lump_F_high_shock_up",
+        "seeds": 200,
+        "rows": 10400
+      },
+      {
+        "experiment": "1_entry_hysteresis",
+        "arm": "lump_F_low_shock_down",
+        "seeds": 200,
+        "rows": 10400
+      },
+      {
+        "experiment": "1_entry_hysteresis",
+        "arm": "lump_F_low_shock_up",
+        "seeds": 200,
+        "rows": 10400
+      },
+      {
+        "experiment": "2_public_expansion",
+        "arm": "cap15_F_high_exp30_50",
+        "seeds": 200,
+        "rows": 4200
+      },
+      {
+        "experiment": "2_public_expansion",
+        "arm": "cap15_F_high_exp38_39",
+        "seeds": 200,
+        "rows": 4200
+      },
+      {
+        "experiment": "2_public_expansion",
+        "arm": "cap15_F_low_exp30_50",
+        "seeds": 200,
+        "rows": 4200
+      },
+      {
+        "experiment": "2_public_expansion",
+        "arm": "cap15_F_low_exp38_39",
+        "seeds": 200,
+        "rows": 4200
+      },
+      {
+        "experiment": "2_public_expansion",
+        "arm": "cap15_F_mid_exp30_50",
+        "seeds": 200,
+        "rows": 4200
+      },
+      {
+        "experiment": "2_public_expansion",
+        "arm": "cap15_F_mid_exp38_39",
+        "seeds": 200,
+        "rows": 4200
+      },
+      {
+        "experiment": "2_public_expansion",
+        "arm": "cap30_F_high_exp30_50",
+        "seeds": 200,
+        "rows": 4200
+      },
+      {
+        "experiment": "2_public_expansion",
+        "arm": "cap30_F_high_exp38_39",
+        "seeds": 200,
+        "rows": 4200
+      },
+      {
+        "experiment": "2_public_expansion",
+        "arm": "cap30_F_low_exp30_50",
+        "seeds": 200,
+        "rows": 4200
+      },
+      {
+        "experiment": "2_public_expansion",
+        "arm": "cap30_F_low_exp38_39",
+        "seeds": 200,
+        "rows": 4200
+      },
+      {
+        "experiment": "2_public_expansion",
+        "arm": "cap30_F_mid_exp30_50",
+        "seeds": 200,
+        "rows": 4200
+      },
+      {
+        "experiment": "2_public_expansion",
+        "arm": "cap30_F_mid_exp38_39",
+        "seeds": 200,
+        "rows": 4200
+      },
+      {
+        "experiment": "3_entry_lag",
+        "arm": "L0_perm",
+        "seeds": 200,
+        "rows": 16800
+      },
+      {
+        "experiment": "3_entry_lag",
+        "arm": "L0_temp",
+        "seeds": 200,
+        "rows": 16800
+      },
+      {
+        "experiment": "3_entry_lag",
+        "arm": "L2_perm",
+        "seeds": 200,
+        "rows": 16800
+      },
+      {
+        "experiment": "3_entry_lag",
+        "arm": "L2_temp",
+        "seeds": 200,
+        "rows": 16800
+      },
+      {
+        "experiment": "3_entry_lag",
+        "arm": "L4_perm",
+        "seeds": 200,
+        "rows": 16800
+      },
+      {
+        "experiment": "3_entry_lag",
+        "arm": "L4_temp",
+        "seeds": 200,
+        "rows": 16800
+      }
+    ],
+    "total_rows": 234400,
+    "csv_header": [
+      "experiment",
+      "arm",
+      "seed",
+      "metric",
+      "value"
+    ]
+  },
+  "imposed_parameters": {
+    "engine_constants": {
+      "households": 100,
+      "budgets": "50 x 1.5, 50 x 4.0 (shuffled)",
+      "opportunity_cost": "U[0, 3.5)",
+      "public_fee": 1.0,
+      "tuition": 2.0,
+      "variable_cost": 1.0,
+      "unit_contribution": 1.0,
+      "base_premium": 4.0,
+      "capacity_rule_primary": "fixed lump of `cap` seats per provider",
+      "capacity_rule_robustness": "divisible: min(cap, unmet customers at decision)",
+      "entry_rule": "unmet customers >= break-even seats bk = F / unit contribution",
+      "exit_rule": "allocated customers < bk, minus one-period installation lock",
+      "pipeline": "entrants observe capacity already under construction"
+    },
+    "experiment_1": {
+      "cap": 8,
+      "f_high": 800,
+      "f_low": 400,
+      "max_providers": 4,
+      "public_seats": 30
+    },
+    "experiment_1_paths": {
+      "down": [
+        1.0,
+        0.8,
+        0.8,
+        1.0
+      ],
+      "up": [
+        1.0,
+        1.2,
+        1.2,
+        1.0
+      ]
+    },
+    "experiment_1_modes": [
+      "lump",
+      "divisible"
+    ],
+    "experiment_2": {
+      "configs": [
+        {
+          "cap": 15,
+          "max_providers": 2,
+          "name": "cap15",
+          "primary": true
+        },
+        {
+          "cap": 30,
+          "max_providers": 1,
+          "name": "cap30",
+          "primary": false
+        }
+      ],
+      "expansions": [
+        [
+          "exp30_50",
+          30,
+          50
+        ],
+        [
+          "exp38_39",
+          38,
+          39
+        ]
+      ],
+      "fixed_costs": [
+        [
+          "F_low",
+          400
+        ],
+        [
+          "F_mid",
+          1200
+        ],
+        [
+          "F_high",
+          1500
+        ]
+      ]
+    },
+    "experiment_3": {
+      "boom_end": 5,
+      "boom_start": 2,
+      "cap": 4,
+      "fixed_cost_cents": 400,
+      "max_providers": 10,
+      "periods": 12,
+      "public_seats": 30
+    },
+    "experiment_3_paths": {
+      "permanent": [
+        1.0,
+        1.2,
+        1.2,
+        1.2,
+        1.2,
+        1.2,
+        1.2,
+        1.2,
+        1.2,
+        1.2,
+        1.2,
+        1.2
+      ],
+      "temporary": [
+        1.0,
+        1.2,
+        1.2,
+        1.2,
+        1.2,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    }
+  },
+  "verdicts": {
+    "1_entry_hysteresis": "FAIL",
+    "2_public_expansion": "PASS",
+    "3_entry_lag": "PASS",
+    "detail_file": "verdicts.json"
+  },
+  "files": {
+    "PRE_DECLARATIONS.md": {
+      "sha256": "2e4fe65c4606aa1387b11ca8ddc4012f02a366992d7317a6de0727c24e1e4561",
+      "sha256_16": "2e4fe65c4606aa13",
+      "bytes": 15683,
+      "mtime_local": "2026-11-20T19:10:29"
+    },
+    "FINDINGS.md": {
+      "sha256": "96e7c38a508806b246e94fb5ce8e2afa6957e339cfb74e1a70a5559577e8ad90",
+      "sha256_16": "96e7c38a508806b2",
+      "bytes": 16507,
+      "mtime_local": "2026-11-20T19:13:11"
+    },
+    "RESULTS.csv": {
+      "sha256": "f7595cf8d7e5f44e687bda094176037cca19022afedb06a5019a337be1ed079f",
+      "sha256_16": "f7595cf8d7e5f44e",
+      "bytes": 14256400,
+      "mtime_local": "2026-11-20T19:12:47"
+    },
+    "RESULTS_SUMMARY.json": {
+      "sha256": "66798318c03fc36505aaca396c4de662c2d1142909a2871af604315040f66bdc",
+      "sha256_16": "66798318c03fc365",
+      "bytes": 43864,
+      "mtime_local": "2026-11-20T19:12:47"
+    },
+    "verdicts.json": {
+      "sha256": "e0ecb11c320f9ff17725f0e5fd4a0c295dbb2045bc1036dca8e09d16cf771036",
+      "sha256_16": "e0ecb11c320f9ff1",
+      "bytes": 2350,
+      "mtime_local": "2026-11-20T19:12:47"
+    },
+    "code/toy_market.py": {
+      "sha256": "d0f9dfeadd744140c33886073db825a494b55c69bf9ee9f82bfc4f876caf160e",
+      "sha256_16": "d0f9dfeadd744140",
+      "bytes": 8776,
+      "mtime_local": "2026-11-20T19:09:11"
+    },
+    "code/run_cluster_a.py": {
+      "sha256": "ec8cfeac30bfbc0bd657a5788173ba4b02ffce4f20b4ac9bb591408fcf83148d",
+      "sha256_16": "ec8cfeac30bfbc0b",
+      "bytes": 17855,
+      "mtime_local": "2026-11-20T19:12:27"
+    },
+    "code/verdicts.py": {
+      "sha256": "40e8b136b53e1c6cddb10ea9c3f717cccdab5a9e785057fe2b47460dcab1ef89",
+      "sha256_16": "40e8b136b53e1c6c",
+      "bytes": 5865,
+      "mtime_local": "2026-11-20T19:10:38"
+    },
+    "code/build_manifest.py": {
+      "sha256": "f886642a26b2c1001831a87e09d9fe73c107d1fe27d208d611dc63015926b0e7",
+      "sha256_16": "f886642a26b2c100",
+      "bytes": 5954,
+      "mtime_local": "2026-11-20T19:13:00"
+    }
+  },
+  "amendments": [
+    "Amendment 1 in PRE_DECLARATIONS.md: capacity rule set to fixed lumps (base-toy reading), high-F break-even standardised at bk = cap, pre-amendment #2 F=$12.00 retained as a reported sensitivity cell. Thresholds and falsifiers unchanged."
+  ],
+  "reproduce": "cd code && python3 run_cluster_a.py && python3 verdicts.py && python3 build_manifest.py",
+  "not_evidence": "No number in this package is an estimate of any real quantity. Nothing here reopens the closed massification phase or substitutes for the observed provider-entry supply-response test in brief 014 section 3.1."
+}

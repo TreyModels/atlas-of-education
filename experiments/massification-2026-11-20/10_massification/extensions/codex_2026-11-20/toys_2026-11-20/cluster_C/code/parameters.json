@@ -1,0 +1,164 @@
+{
+  "label": "ILLUSTRATIVE TOY \u2014 stipulated parameters; not calibrated; not evidence; no historical test; phase closed; do not cite numbers as estimates",
+  "python": "3.10.2",
+  "seeds": {
+    "first": 20261120,
+    "last": 20261319,
+    "n_per_cell": 200
+  },
+  "experiment_7": {
+    "N": 120,
+    "cohorts": 30,
+    "fee": [
+      0.2,
+      0.36,
+      0.55
+    ],
+    "base_seats": [
+      55,
+      20,
+      7
+    ],
+    "gate": [
+      0.3,
+      0.45,
+      0.35
+    ],
+    "apt_w": 0.15,
+    "stock_w": 0.15,
+    "cash_group": [
+      0.24,
+      0.62,
+      1.05
+    ],
+    "cash_draw": 0.5,
+    "seat_ramp": 4,
+    "stock_keep": 0.8,
+    "stock_feed": 0.2,
+    "arms": {
+      "control": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "primary_only": [
+        2.0,
+        1.0,
+        1.0
+      ],
+      "secondary_only": [
+        1.0,
+        2.0,
+        1.0
+      ],
+      "tertiary_only": [
+        1.0,
+        1.0,
+        2.0
+      ],
+      "all_levels": [
+        2.0,
+        2.0,
+        2.0
+      ]
+    },
+    "shock": "level capacity doubled (m=2), phased over 4 cohorts, permanent"
+  },
+  "experiment_8": {
+    "N": 120,
+    "att_threshold": 0.55,
+    "comp_threshold": 0.6,
+    "comp_base": 0.02,
+    "delta_norm": 0.01,
+    "enf_coef": 0.35,
+    "reg_threshold": 0.7,
+    "reg_norm": 0.1,
+    "reg_enf": 0.3,
+    "work_retain": 0.6,
+    "cells": {
+      "no_law": [
+        0,
+        0.0
+      ],
+      "law_e0": [
+        1,
+        0.0
+      ],
+      "law_e05": [
+        1,
+        0.5
+      ],
+      "law_e1": [
+        1,
+        1.0
+      ],
+      "no_law_e05": [
+        0,
+        0.5
+      ],
+      "no_law_e1": [
+        0,
+        1.0
+      ]
+    }
+  },
+  "experiment_9": {
+    "N": 120,
+    "budget": 480,
+    "room_cost": 12,
+    "teacher_cost": 60,
+    "teacher_capacity": 12,
+    "base_rooms": 30,
+    "base_posts": 2,
+    "q_base": 0.92,
+    "q_floor": 0.55,
+    "q_slope": 0.04,
+    "retention": {
+      "low": 0.6,
+      "high": 0.9
+    },
+    "alloc": {
+      "baseline": [
+        0,
+        0
+      ],
+      "rooms_only": [
+        40,
+        0
+      ],
+      "teachers_only": [
+        0,
+        8
+      ],
+      "split": [
+        20,
+        4
+      ]
+    }
+  },
+  "thresholds": {
+    "T7_FLOOR_GAIN": 10.0,
+    "T7_CEIL_GAIN": 2.0,
+    "T7_MID_GAIN": 3.0,
+    "T7_MID_SEAT_SHARE": 8.33,
+    "T7_CEIL_VS_FLOOR": 0.25,
+    "T7_NO_UNIVERSAL": 50.0,
+    "T7_UNIVERSAL": 90.0,
+    "T7_BINDING": 0.75,
+    "T8_INERT_ATT": 2.0,
+    "T8_INERT_COMP": 1.0,
+    "T8_BIND_ATT": 10.0,
+    "T8_BIND_COMP": 6.0,
+    "T8_RATIO": 4.0,
+    "T8_GAP": 8.0,
+    "T9_ROOMS_PHYS": 30.0,
+    "T9_ROOMS_STAFF": 2.0,
+    "T9_ROOMS_COMP": 1.0,
+    "T9_SPLIT_STAFF": 20.0,
+    "T9_SPLIT_COMP": 5.0,
+    "T9_SPLIT_TEACH": 3.0,
+    "T9_COMP_SHARE": 0.7,
+    "T9_RETENTION": 2.0
+  },
+  "elapsed_seconds": 8.38
+}

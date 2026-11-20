@@ -1,0 +1,219 @@
+{
+  "label": "ILLUSTRATIVE TOY \u2014 stipulated parameters; not calibrated; not evidence; no historical test; phase closed; do not cite numbers as estimates.",
+  "battery": "Cluster D toys #10, #11, #12 (COUNCIL_TOY_SPECS_015.md)",
+  "status": "illustrative; not calibrated; not evidence; phase stays CLOSED",
+  "run_utc": "2026-11-20T11:13:32Z",
+  "python": "3.10.2",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "seeds": {
+    "count": 240,
+    "first": 20261121,
+    "last": 20261360,
+    "base": 20261120,
+    "paired": true,
+    "note": "paired counterfactuals share identical latent draws per (seed, cohort, slot)"
+  },
+  "parameter_vector": {
+    "cohort_nominal": 120,
+    "horizon_cohorts": 30,
+    "max_cohort": 144,
+    "fee": [
+      0.2,
+      0.36,
+      0.55
+    ],
+    "work_mult": [
+      0.85,
+      1.35,
+      1.8
+    ],
+    "payoff": [
+      0.65,
+      0.51,
+      0.42
+    ],
+    "access": [
+      0.14,
+      0.9,
+      0.3
+    ],
+    "rank": [
+      0.05,
+      0.2,
+      0.65
+    ],
+    "skill_gain": [
+      0.25,
+      0.4,
+      0.6
+    ],
+    "seat0": [
+      18,
+      0,
+      0
+    ],
+    "build_limit": 12,
+    "work": 1.0,
+    "capital": 1.0,
+    "fixed_posts": 40,
+    "discount_pv": 0.97,
+    "placement_prior": 0.5,
+    "group_cycle": 3,
+    "investment_fixed": null,
+    "init_readers": 0.05,
+    "init_formal_share": 0.1,
+    "init_skill_stock": 0.0,
+    "warm_stage": false,
+    "belief_memory": 0.7,
+    "placement_reference": 12.0,
+    "belief_cap": 2.0,
+    "belief_floor": 0.5
+  },
+  "experiment_overrides": {
+    "exp10": {
+      "pv_budget_per_level": 40.0,
+      "discount": 0.97,
+      "arms": {
+        "control": null,
+        "primary_first": {
+          "0": [
+            1,
+            5
+          ],
+          "1": [
+            6,
+            10
+          ],
+          "2": [
+            11,
+            15
+          ]
+        },
+        "lower_first": {
+          "1": [
+            1,
+            5
+          ],
+          "0": [
+            6,
+            10
+          ],
+          "2": [
+            11,
+            15
+          ]
+        },
+        "upper_first": {
+          "2": [
+            1,
+            5
+          ],
+          "1": [
+            6,
+            10
+          ],
+          "0": [
+            11,
+            15
+          ]
+        },
+        "simultaneous": {
+          "0": [
+            1,
+            15
+          ],
+          "1": [
+            1,
+            15
+          ],
+          "2": [
+            1,
+            15
+          ]
+        }
+      }
+    },
+    "exp11": {
+      "cohort_sizes": {
+        "down": 96,
+        "neutral": 120,
+        "up": 144
+      },
+      "capacity_rules": [
+        "frozen",
+        "responsive"
+      ],
+      "investment_fixed": 3,
+      "employer": "responsive (per-child invariant)"
+    },
+    "exp12": {
+      "seat0": [
+        108,
+        100,
+        12
+      ],
+      "lease_seats": 12,
+      "lease_cohorts": [
+        2,
+        4
+      ],
+      "investment_fixed": 0,
+      "warm_stage": true,
+      "init_readers": 0.758,
+      "init_formal_share": 0.4,
+      "init_skill_stock": 0.35,
+      "belief_memory": 0.7,
+      "placement_reference": 12.0,
+      "fee_waiver_upper": 0.0,
+      "windows": {
+        "PRE": [
+          0,
+          1
+        ],
+        "DURING": [
+          1,
+          4
+        ],
+        "POST": [
+          4,
+          7
+        ],
+        "DECAY": [
+          15,
+          20
+        ]
+      }
+    }
+  },
+  "verdicts": {
+    "10_level_first": "PARTIAL",
+    "11_cohort_shock": "SUPPORTED",
+    "12_temporary": "PARTIAL"
+  },
+  "runtime_seconds": 42.61,
+  "rows": 36922,
+  "predeclarations": {
+    "sha256_16": "192f4e540a0b8d76",
+    "sha256": "192f4e540a0b8d760574d96a1f74f11c06ffcad57e85103a1efe2e28ecebd620",
+    "note": "thresholds frozen before the run; see PRE_DECLARATIONS.md"
+  },
+  "results_sha256_16": "3d152be977f61970",
+  "files_sha256_16": {
+    "FINDINGS.md": "95a90466a59234a7",
+    "PRE_DECLARATIONS.md": "192f4e540a0b8d76",
+    "RESULTS.csv": "3d152be977f61970",
+    "RUN_MANIFEST.json": "2a3854905432f1bb",
+    "code/exp10_level_first.py": "3ac122b1ad50970f",
+    "code/exp11_cohort_shock.py": "809ffacc35998cf7",
+    "code/exp12_temporary.py": "e12381cd459d4b2c",
+    "code/run_all.py": "40ec1a3c6569829a",
+    "code/toy_engine.py": "7ad7923a2bbc136f"
+  },
+  "isolation": {
+    "writes_only_under": "extensions_archive/toys_2026-11-20/cluster_D/",
+    "phase_files_touched": null,
+    "closed_anchor_files_touched": null,
+    "git_commit": null,
+    "icloud_writes": null
+  }
+}

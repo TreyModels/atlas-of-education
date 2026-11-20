@@ -1,0 +1,573 @@
+{
+  "exp4_visibility_mechanism": {
+    "label": "ILLUSTRATIVE TOY \u2014 stipulated parameters; not calibrated; not evidence",
+    "cells": {
+      "human_capital:v0.0": {
+        "applications": 85.848,
+        "admissions": 48.792,
+        "public_admissions": 30.0,
+        "private_admissions": 18.792,
+        "graduate_hires": 39.98,
+        "applicant_hires": 39.99,
+        "output_true_hires": 1.498210282390677,
+        "output_valued_hires": 0.9995,
+        "rejected_count": 45.858,
+        "rejected_skill": 0.6878346186865999
+      },
+      "human_capital:v0.5": {
+        "applications": 85.848,
+        "admissions": 48.792,
+        "public_admissions": 30.0,
+        "private_admissions": 18.792,
+        "graduate_hires": 39.98,
+        "applicant_hires": 39.994,
+        "output_true_hires": 1.5848462610403913,
+        "output_valued_hires": 1.2921731305201956,
+        "rejected_count": 45.854,
+        "rejected_skill": 0.612501068079631
+      },
+      "human_capital:v1.0": {
+        "applications": 85.848,
+        "admissions": 48.792,
+        "public_admissions": 30.0,
+        "private_admissions": 18.792,
+        "graduate_hires": 39.98,
+        "applicant_hires": 39.994,
+        "output_true_hires": 1.5848462610403913,
+        "output_valued_hires": 1.5848462610403913,
+        "rejected_count": 45.854,
+        "rejected_skill": 0.612501068079631
+      },
+      "signaling:v0.0": {
+        "applications": 85.848,
+        "admissions": 48.792,
+        "public_admissions": 30.0,
+        "private_admissions": 18.792,
+        "graduate_hires": 39.98,
+        "applicant_hires": 39.99,
+        "output_true_hires": 0.49871028239067694,
+        "output_valued_hires": 0.9995,
+        "rejected_count": 45.858,
+        "rejected_skill": 0.49614615913318194
+      },
+      "signaling:v0.5": {
+        "applications": 28.45,
+        "admissions": 27.264,
+        "public_admissions": 27.264,
+        "private_admissions": 0.0,
+        "graduate_hires": 27.264,
+        "applicant_hires": 27.416,
+        "output_true_hires": 0.6268034499488926,
+        "output_valued_hires": 0.6542017249744453,
+        "rejected_count": 1.034,
+        "rejected_skill": 0.4551735108932002
+      },
+      "signaling:v1.0": {
+        "applications": 0.0,
+        "admissions": 0.0,
+        "public_admissions": 0.0,
+        "private_admissions": 0.0,
+        "graduate_hires": 0.0,
+        "applicant_hires": 0.0,
+        "output_true_hires": 0.795551234286773,
+        "output_valued_hires": 0.795551234286773,
+        "rejected_count": 0.0,
+        "rejected_skill": null
+      }
+    },
+    "paired_contrasts": {
+      "hc_true_v1_minus_v0": {
+        "n": 500,
+        "mean": 0.08663597864971487,
+        "sd": 0.03274380235803004,
+        "share_positive": 1.0,
+        "share_negative": 0.0,
+        "share_zero": 0.0
+      },
+      "sg_true_v1_minus_v0": {
+        "n": 500,
+        "mean": 0.29684095189609555,
+        "sd": 0.04099944272113926,
+        "share_positive": 1.0,
+        "share_negative": 0.0,
+        "share_zero": 0.0
+      },
+      "hc_valued_v1_minus_v0": {
+        "n": 500,
+        "mean": 0.5853462610403921,
+        "sd": 0.05520158447684751,
+        "share_positive": 1.0,
+        "share_negative": 0.0,
+        "share_zero": 0.0
+      },
+      "sg_valued_v1_minus_v0": {
+        "n": 500,
+        "mean": -0.20394876571322743,
+        "sd": 0.0322033570285716,
+        "share_positive": 0.002,
+        "share_negative": 0.998,
+        "share_zero": 0.0
+      },
+      "hc_true_v05_minus_v0": {
+        "n": 500,
+        "mean": 0.08663597864971487,
+        "sd": 0.03274380235803004,
+        "share_positive": 1.0,
+        "share_negative": 0.0,
+        "share_zero": 0.0
+      },
+      "sg_true_v05_minus_v0": {
+        "n": 500,
+        "mean": 0.12809316755821426,
+        "sd": 0.047831189752748283,
+        "share_positive": 0.998,
+        "share_negative": 0.002,
+        "share_zero": 0.0
+      },
+      "hc_true_v1_minus_v05": {
+        "n": 500,
+        "mean": 0.0,
+        "sd": 0.0,
+        "share_positive": 0.0,
+        "share_negative": 0.0,
+        "share_zero": 1.0
+      },
+      "sg_true_v1_minus_v05": {
+        "n": 500,
+        "mean": 0.1687477843378812,
+        "sd": 0.03945222938161461,
+        "share_positive": 1.0,
+        "share_negative": 0.0,
+        "share_zero": 0.0
+      },
+      "hc_valued_v05_minus_v0": {
+        "n": 500,
+        "mean": 0.2926731305201961,
+        "sd": 0.02760079223842375,
+        "share_positive": 1.0,
+        "share_negative": 0.0,
+        "share_zero": 0.0
+      },
+      "hc_valued_v1_minus_v05": {
+        "n": 500,
+        "mean": 0.292673130520196,
+        "sd": 0.027600792238423762,
+        "share_positive": 1.0,
+        "share_negative": 0.0,
+        "share_zero": 0.0
+      },
+      "sg_valued_v05_minus_v0": {
+        "n": 500,
+        "mean": -0.345298275025554,
+        "sd": 0.03470581544234745,
+        "share_positive": 0.0,
+        "share_negative": 1.0,
+        "share_zero": 0.0
+      },
+      "sg_valued_v1_minus_v05": {
+        "n": 500,
+        "mean": 0.14134950931232687,
+        "sd": 0.03780077332502906,
+        "share_positive": 1.0,
+        "share_negative": 0.0,
+        "share_zero": 0.0
+      },
+      "hc_applications_v1_minus_v0": {
+        "n": 500,
+        "mean": 0.0,
+        "sd": 0.0,
+        "share_positive": 0.0,
+        "share_negative": 0.0,
+        "share_zero": 1.0
+      },
+      "sg_applications_v1_minus_v0": {
+        "n": 500,
+        "mean": -85.848,
+        "sd": 3.482082135734308,
+        "share_positive": 0.0,
+        "share_negative": 1.0,
+        "share_zero": 0.0
+      }
+    },
+    "verdicts": [
+      {
+        "status": "NOT MET",
+        "statement": "T4.1 TRUE-output sign pattern: HC output among hires rises with v by >= +0.05 and is monotone non-decreasing; signalling output among hires falls with v by >= -0.05 and is monotone non-increasing.",
+        "id": "T4.1"
+      },
+      {
+        "status": "NOT MET",
+        "statement": "T4.2 EMPLOYER-VALUED output sign pattern (v*skill + (1-v)*credential): same rise/fall pattern with the same margins.",
+        "id": "T4.2"
+      },
+      {
+        "status": "PASS",
+        "statement": "T4.3 Rejected-applicant composition differs at v in {0.5,1}: rejected-count gap >= 10 or rejected-skill gap >= 0.10, and graduate-hire gap >= 10.",
+        "id": "T4.3"
+      }
+    ],
+    "composition_legs": [
+      {
+        "v": 0.5,
+        "rejected_count_gap": 44.82,
+        "rejected_skill_gap": 0.15732755718643082,
+        "graduate_hires_gap": 12.715999999999998,
+        "met": true
+      },
+      {
+        "v": 1.0,
+        "rejected_count_gap": 45.854,
+        "rejected_skill_gap": null,
+        "graduate_hires_gap": 39.98,
+        "met": true
+      }
+    ],
+    "pairing_diagnostics_v0": {
+      "applications_equal_at_v0": true,
+      "admissions_equal_at_v0": true,
+      "rejected_count_equal_at_v0": true,
+      "graduate_hires_equal_at_v0": true,
+      "valued_output_equal_at_v0": true,
+      "rejected_skill_equal_at_v0": null,
+      "rejected_skill_at_v0_note": "Not a pairing test: at v=0 the two markets are structurally identical (counts above are equal), but the human-capital rule adds +1.0 true skill to every graduate by definition, so the rejected set's MEAN TRUE SKILL necessarily differs between mechanisms (0.688 vs 0.496). Recorded for transparency."
+    },
+    "falsifier": {
+      "status": "falsifier not triggered",
+      "statement": "F4: signatures coincide at ALL v (output true and valued gaps < 0.02, rejected counts equal, graduate hires equal).",
+      "detail": [
+        {
+          "v": 0.0,
+          "output_true_gap": 0.9995000000000002,
+          "output_valued_gap": 0.0,
+          "rejected_count_gap": 0.0,
+          "graduate_hires_gap": 0.0,
+          "signatures_coincide": false
+        },
+        {
+          "v": 0.5,
+          "output_true_gap": 0.9580428110914987,
+          "output_valued_gap": 0.6379714055457503,
+          "rejected_count_gap": 44.82,
+          "graduate_hires_gap": 12.715999999999998,
+          "signatures_coincide": false
+        },
+        {
+          "v": 1.0,
+          "output_true_gap": 0.7892950267536183,
+          "output_valued_gap": 0.7892950267536183,
+          "rejected_count_gap": 45.854,
+          "graduate_hires_gap": 39.98,
+          "signatures_coincide": false
+        }
+      ]
+    }
+  },
+  "exp5_queue_vs_human_capital": {
+    "label": "ILLUSTRATIVE TOY \u2014 stipulated parameters; not calibrated; not evidence",
+    "cells": {
+      "skill_upgrade:fixed_jobs": {
+        "older_group_hires": 4.384,
+        "treated_group_hires": 20.0,
+        "total_hires": 37.496,
+        "output_hires": 1.2126495046782841,
+        "population_mean_skill": 0.6983478932251628,
+        "job_count": 37.496
+      },
+      "skill_upgrade:responsive_jobs": {
+        "older_group_hires": 20.0,
+        "treated_group_hires": 20.0,
+        "total_hires": 100.0,
+        "output_hires": 0.6983478932251628,
+        "population_mean_skill": 0.6983478932251628,
+        "job_count": 100.0
+      },
+      "rank_upgrade:fixed_jobs": {
+        "older_group_hires": 0.0,
+        "treated_group_hires": 20.0,
+        "total_hires": 37.496,
+        "output_hires": 0.6607658828206885,
+        "population_mean_skill": 0.4983478932251626,
+        "job_count": 37.496
+      },
+      "rank_upgrade:responsive_jobs": {
+        "older_group_hires": 20.0,
+        "treated_group_hires": 20.0,
+        "total_hires": 100.0,
+        "output_hires": 0.49834789322516265,
+        "population_mean_skill": 0.4983478932251626,
+        "job_count": 100.0
+      },
+      "reference_no_treatment:fixed_jobs": {
+        "older_group_hires": 7.606,
+        "treated_group_hires": 7.552,
+        "total_hires": 37.496,
+        "output_hires": 0.8080209064456976,
+        "population_mean_skill": 0.4983478932251626,
+        "job_count": 37.496
+      },
+      "reference_no_treatment:responsive_jobs": {
+        "older_group_hires": 20.0,
+        "treated_group_hires": 20.0,
+        "total_hires": 100.0,
+        "output_hires": 0.49834789322516265,
+        "population_mean_skill": 0.4983478932251626,
+        "job_count": 100.0
+      }
+    },
+    "paired_contrasts": {
+      "rank_fixed_minus_reference_fixed_output": {
+        "n": 500,
+        "mean": -0.1472550236250092,
+        "sd": 0.030970225594574415,
+        "share_positive": 0.0,
+        "share_negative": 1.0,
+        "share_zero": 0.0
+      },
+      "skill_fixed_minus_reference_fixed_output": {
+        "n": 500,
+        "mean": 0.40462859823258657,
+        "sd": 0.029680120650802923,
+        "share_positive": 1.0,
+        "share_negative": 0.0,
+        "share_zero": 0.0
+      },
+      "rank_fixed_minus_skill_fixed_output": {
+        "n": 500,
+        "mean": -0.5518836218575959,
+        "sd": 0.022985757906706025,
+        "share_positive": 0.0,
+        "share_negative": 1.0,
+        "share_zero": 0.0
+      },
+      "rank_fixed_minus_reference_fixed_older_hires": {
+        "n": 500,
+        "mean": -7.606,
+        "sd": 2.026515235570658,
+        "share_positive": 0.0,
+        "share_negative": 0.998,
+        "share_zero": 0.002
+      },
+      "rank_fixed_minus_skill_fixed_older_hires": {
+        "n": 500,
+        "mean": -4.384,
+        "sd": 1.7042722787160507,
+        "share_positive": 0.0,
+        "share_negative": 0.994,
+        "share_zero": 0.006
+      },
+      "rank_resp_minus_skill_resp_output": {
+        "n": 500,
+        "mean": -0.20000000000000182,
+        "sd": 3.0135666041508396e-16,
+        "share_positive": 0.0,
+        "share_negative": 1.0,
+        "share_zero": 0.0
+      },
+      "rank_resp_minus_skill_resp_older_hires": {
+        "n": 500,
+        "mean": 0.0,
+        "sd": 0.0,
+        "share_positive": 0.0,
+        "share_negative": 0.0,
+        "share_zero": 1.0
+      }
+    },
+    "gaps": {
+      "output_gap_fixed": -0.5518836218575957,
+      "output_gap_responsive": -0.20000000000000012,
+      "population_mean_gap_responsive": -0.20000000000000018,
+      "allocation_component_responsive": 5.551115123125783e-17,
+      "older_hire_gap_responsive": 0.0,
+      "output_gap_attenuation_share": 0.6376047556424735
+    },
+    "verdicts": [
+      {
+        "status": "PASS",
+        "statement": "T5.1 Rank allocation lowers hires of the fixed older-diploma group: rank/fixed <= reference/fixed - 1.0 and rank/fixed <= skill/fixed - 1.0.",
+        "id": "T5.1"
+      },
+      {
+        "status": "PASS",
+        "statement": "T5.2 Rank allocation lowers output among hires: rank/fixed <= reference/fixed - 0.05.",
+        "id": "T5.2"
+      },
+      {
+        "status": "PASS",
+        "statement": "T5.3 Skill upgrade raises output among hires: skill/fixed >= reference/fixed + 0.05.",
+        "id": "T5.3"
+      },
+      {
+        "status": "NOT MET",
+        "statement": "T5.4 The fixed-jobs output separation DISAPPEARS under responsive jobs: |output(rank,responsive) - output(skill,responsive)| <= 0.05.",
+        "id": "T5.4"
+      }
+    ],
+    "diagnostics": [
+      {
+        "status": "PASS",
+        "statement": "D5.5 (diagnostic) Older-diploma hire separation disappears under responsive jobs: |older(rank,responsive) - older(skill,responsive)| <= 1.0.",
+        "id": "D5.5"
+      },
+      {
+        "status": "PASS",
+        "statement": "D5.6 (diagnostic) Allocation-induced output gap under responsive jobs (total gap minus the stipulated population skill gap) <= 0.05 in absolute value.",
+        "id": "D5.6"
+      }
+    ]
+  },
+  "exp6_eligibility_vs_blind_ranking": {
+    "label": "ILLUSTRATIVE TOY \u2014 stipulated parameters; not calibrated; not evidence",
+    "cells": {
+      "c45:visible_credential:gate_repealed": {
+        "uncred_offers": 0.0,
+        "cred_offers": 35.0,
+        "total_offers": 35.0,
+        "uncred_offer_rate": 0.0,
+        "offer_skill_mean": 0.6076483051419259,
+        "vacancies": 0.0,
+        "eligible_count": 100.0
+      },
+      "c45:visible_credential:gate_retained": {
+        "uncred_offers": 0.0,
+        "cred_offers": 35.0,
+        "total_offers": 35.0,
+        "uncred_offer_rate": 0.0,
+        "offer_skill_mean": 0.6076483051419259,
+        "vacancies": 0.0,
+        "eligible_count": 45.0
+      },
+      "c45:blind_ranking:gate_repealed": {
+        "uncred_offers": 19.254,
+        "cred_offers": 15.746,
+        "total_offers": 35.0,
+        "uncred_offer_rate": 0.3500727272727271,
+        "offer_skill_mean": 0.8204262079314361,
+        "vacancies": 0.0,
+        "eligible_count": 100.0
+      },
+      "c45:blind_ranking:gate_retained": {
+        "uncred_offers": 0.0,
+        "cred_offers": 35.0,
+        "total_offers": 35.0,
+        "uncred_offer_rate": 0.0,
+        "offer_skill_mean": 0.6076483051419259,
+        "vacancies": 0.0,
+        "eligible_count": 45.0
+      },
+      "c25:visible_credential:gate_repealed": {
+        "uncred_offers": 10.0,
+        "cred_offers": 25.0,
+        "total_offers": 35.0,
+        "uncred_offer_rate": 0.13333333333333322,
+        "offer_skill_mean": 0.6219154677638015,
+        "vacancies": 0.0,
+        "eligible_count": 100.0
+      },
+      "c25:visible_credential:gate_retained": {
+        "uncred_offers": 0.0,
+        "cred_offers": 25.0,
+        "total_offers": 25.0,
+        "uncred_offer_rate": 0.0,
+        "offer_skill_mean": 0.49999021181857595,
+        "vacancies": 10.0,
+        "eligible_count": 25.0
+      },
+      "c25:blind_ranking:gate_repealed": {
+        "uncred_offers": 26.266,
+        "cred_offers": 8.734,
+        "total_offers": 35.0,
+        "uncred_offer_rate": 0.3502133333333334,
+        "offer_skill_mean": 0.8204262079314361,
+        "vacancies": 0.0,
+        "eligible_count": 100.0
+      },
+      "c25:blind_ranking:gate_retained": {
+        "uncred_offers": 0.0,
+        "cred_offers": 25.0,
+        "total_offers": 25.0,
+        "uncred_offer_rate": 0.0,
+        "offer_skill_mean": 0.49999021181857595,
+        "vacancies": 10.0,
+        "eligible_count": 25.0
+      }
+    },
+    "paired_contrasts": {
+      "visible_repealed_minus_visible_retained": {
+        "n": 500,
+        "mean": 0.0,
+        "sd": 0.0,
+        "share_positive": 0.0,
+        "share_negative": 0.0,
+        "share_zero": 1.0
+      },
+      "blind_repealed_minus_blind_retained": {
+        "n": 500,
+        "mean": 0.3500727272727271,
+        "sd": 0.04436320417077109,
+        "share_positive": 1.0,
+        "share_negative": 0.0,
+        "share_zero": 0.0
+      },
+      "both_minus_visible_repealed": {
+        "n": 500,
+        "mean": 0.3500727272727271,
+        "sd": 0.04436320417077109,
+        "share_positive": 1.0,
+        "share_negative": 0.0,
+        "share_zero": 0.0
+      }
+    },
+    "main_rates": {
+      "visible_gate_retained": 0.0,
+      "visible_gate_repealed": 0.0,
+      "blind_gate_retained": 0.0,
+      "blind_gate_repealed": 0.3500727272727271
+    },
+    "sensitivity_c25": {
+      "c25": {
+        "rates": {
+          "visible_gate_retained": 0.0,
+          "visible_gate_repealed": 0.13333333333333322,
+          "blind_gate_retained": 0.0,
+          "blind_gate_repealed": 0.3502133333333334
+        },
+        "gate_alone_raises_by": 0.13333333333333322,
+        "blind_alone_rate": 0.0,
+        "both_rate": 0.3502133333333334,
+        "repeal_reaches_75pct_of_both": false
+      }
+    },
+    "verdicts": [
+      {
+        "status": "NOT MET",
+        "statement": "T6.1 Gate repeal alone raises the uncredentialed offer rate by >= 0.15 and to the declared high level (>= 0.25) when the credential is visible at ranking.",
+        "id": "T6.1"
+      },
+      {
+        "status": "PASS",
+        "statement": "T6.2 Blind ranking alone (gate retained) leaves the uncredentialed offer rate at the low level (<= 0.05).",
+        "id": "T6.2"
+      },
+      {
+        "status": "PASS",
+        "statement": "T6.3 Both levers together (blind ranking + gate repealed) reach the declared high level (>= 0.25).",
+        "id": "T6.3"
+      },
+      {
+        "status": "NOT MET",
+        "statement": "T6.4 Repeal is a sufficient lever: rate(visible,repealed) >= 0.75 * rate(blind,repealed).",
+        "id": "T6.4"
+      }
+    ],
+    "falsifier": {
+      "status": "falsifier not triggered",
+      "statement": "F6: no effect of either lever - all four main uncredentialed offer rates equal within 0.01.",
+      "rates": {
+        "visible_gate_retained": 0.0,
+        "visible_gate_repealed": 0.0,
+        "blind_gate_retained": 0.0,
+        "blind_gate_repealed": 0.3500727272727271
+      }
+    }
+  }
+}

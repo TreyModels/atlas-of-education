@@ -1,0 +1,471 @@
+{
+  "label": "ILLUSTRATIVE TOY \u2014 stipulated parameters; not calibrated; not evidence; no historical test; phase closed; do not cite numbers as estimates",
+  "run_id": "cluster_C_toys_2026-11-20",
+  "generated_at_utc": "2026-11-20T11:08:38Z",
+  "purpose": "Illustrative simulation of Council brief 015 Cluster C experiments #7 (capacity by level), #8 (enforcement x compulsory law) and #9 (buildings vs teachers at equal budget). Mechanism pedagogy and hypothesis generation only.",
+  "phase_status": {
+    "massification_phase": "CLOSED (closeout 787f1792...)",
+    "reopens_phase": false,
+    "claimed_as_evidence": false,
+    "not_substitute_for": "brief 014 section 3.1 observed provider-entry supply-response cell"
+  },
+  "inputs_read": [
+    "extensions_archive/codex_2026-11-20/COUNCIL_TOY_SPECS_015.md (Cluster C: #7, #8, #9)",
+    "/tmp/codex_unpack/codex-massification-5eec11470690/workspace/model.py",
+    "/tmp/codex_unpack/codex-massification-5eec11470690/workspace/experiments.py",
+    "/tmp/codex_unpack/codex-massification-5eec11470690/workspace/takeoff.py"
+  ],
+  "environment": {
+    "python": "3.10.2",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "third_party_imports": "none (stdlib only; numpy installed but not imported)",
+    "cwd_of_model": "extensions_archive/toys_2026-11-20/cluster_C/code"
+  },
+  "protocol": {
+    "seeds_per_cell": 200,
+    "seed_first": 20261120,
+    "seed_last": 20261319,
+    "pairing": "identical latent draws across arms within a seed; draw RNG constructed only from (seed[, cohort])",
+    "starting_conditions": "matched across arms (same base seats / same 30 rooms + 2 posts / same no-law baseline)",
+    "one_factor_shocks": true,
+    "aggregation": "per-seed statistic -> across-seed mean; contrasts paired within seed; 95% CI = mean +/- 1.96*sd/sqrt(n)",
+    "all_cells_reported": true
+  },
+  "parameters": {
+    "label": "ILLUSTRATIVE TOY \u2014 stipulated parameters; not calibrated; not evidence; no historical test; phase closed; do not cite numbers as estimates",
+    "python": "3.10.2",
+    "seeds": {
+      "first": 20261120,
+      "last": 20261319,
+      "n_per_cell": 200
+    },
+    "experiment_7": {
+      "N": 120,
+      "cohorts": 30,
+      "fee": [
+        0.2,
+        0.36,
+        0.55
+      ],
+      "base_seats": [
+        55,
+        20,
+        7
+      ],
+      "gate": [
+        0.3,
+        0.45,
+        0.35
+      ],
+      "apt_w": 0.15,
+      "stock_w": 0.15,
+      "cash_group": [
+        0.24,
+        0.62,
+        1.05
+      ],
+      "cash_draw": 0.5,
+      "seat_ramp": 4,
+      "stock_keep": 0.8,
+      "stock_feed": 0.2,
+      "arms": {
+        "control": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "primary_only": [
+          2.0,
+          1.0,
+          1.0
+        ],
+        "secondary_only": [
+          1.0,
+          2.0,
+          1.0
+        ],
+        "tertiary_only": [
+          1.0,
+          1.0,
+          2.0
+        ],
+        "all_levels": [
+          2.0,
+          2.0,
+          2.0
+        ]
+      },
+      "shock": "level capacity doubled (m=2), phased over 4 cohorts, permanent"
+    },
+    "experiment_8": {
+      "N": 120,
+      "att_threshold": 0.55,
+      "comp_threshold": 0.6,
+      "comp_base": 0.02,
+      "delta_norm": 0.01,
+      "enf_coef": 0.35,
+      "reg_threshold": 0.7,
+      "reg_norm": 0.1,
+      "reg_enf": 0.3,
+      "work_retain": 0.6,
+      "cells": {
+        "no_law": [
+          0,
+          0.0
+        ],
+        "law_e0": [
+          1,
+          0.0
+        ],
+        "law_e05": [
+          1,
+          0.5
+        ],
+        "law_e1": [
+          1,
+          1.0
+        ],
+        "no_law_e05": [
+          0,
+          0.5
+        ],
+        "no_law_e1": [
+          0,
+          1.0
+        ]
+      }
+    },
+    "experiment_9": {
+      "N": 120,
+      "budget": 480,
+      "room_cost": 12,
+      "teacher_cost": 60,
+      "teacher_capacity": 12,
+      "base_rooms": 30,
+      "base_posts": 2,
+      "q_base": 0.92,
+      "q_floor": 0.55,
+      "q_slope": 0.04,
+      "retention": {
+        "low": 0.6,
+        "high": 0.9
+      },
+      "alloc": {
+        "baseline": [
+          0,
+          0
+        ],
+        "rooms_only": [
+          40,
+          0
+        ],
+        "teachers_only": [
+          0,
+          8
+        ],
+        "split": [
+          20,
+          4
+        ]
+      }
+    },
+    "thresholds": {
+      "T7_FLOOR_GAIN": 10.0,
+      "T7_CEIL_GAIN": 2.0,
+      "T7_MID_GAIN": 3.0,
+      "T7_MID_SEAT_SHARE": 8.33,
+      "T7_CEIL_VS_FLOOR": 0.25,
+      "T7_NO_UNIVERSAL": 50.0,
+      "T7_UNIVERSAL": 90.0,
+      "T7_BINDING": 0.75,
+      "T8_INERT_ATT": 2.0,
+      "T8_INERT_COMP": 1.0,
+      "T8_BIND_ATT": 10.0,
+      "T8_BIND_COMP": 6.0,
+      "T8_RATIO": 4.0,
+      "T8_GAP": 8.0,
+      "T9_ROOMS_PHYS": 30.0,
+      "T9_ROOMS_STAFF": 2.0,
+      "T9_ROOMS_COMP": 1.0,
+      "T9_SPLIT_STAFF": 20.0,
+      "T9_SPLIT_COMP": 5.0,
+      "T9_SPLIT_TEACH": 3.0,
+      "T9_COMP_SHARE": 0.7,
+      "T9_RETENTION": 2.0
+    },
+    "elapsed_seconds": 8.38
+  },
+  "deliverables": {
+    "PRE_DECLARATIONS.md": {
+      "sha256": "b0b0bdefa91d05ca21a98fd9a62b755e2faadb5d8f4a9d4659b927eb470afa80",
+      "sha256_16": "b0b0bdefa91d05ca",
+      "bytes": 17514
+    },
+    "RESULTS.csv": {
+      "sha256": "af889331b6668f5bf423475989a0a73b2da731930c6f84b5f455cc3ee4c5ee41",
+      "sha256_16": "af889331b6668f5b",
+      "bytes": 120195
+    },
+    "FINDINGS.md": {
+      "sha256": "6beab3a7937087c868638b5d205b5c411c5b7afd68c58a13829166237d7393f0",
+      "sha256_16": "6beab3a7937087c8",
+      "bytes": 20681
+    },
+    "code/cluster_c_model.py": {
+      "sha256": "2d81e767ab112318ad4dcbf72d7c5a64c59f37129cc260740197b151358e2566",
+      "sha256_16": "2d81e767ab112318",
+      "bytes": 11228
+    },
+    "code/run_cluster_c.py": {
+      "sha256": "6469897007831d4ead5f5e884a3a64764d51482165c1be488675322a3e69a069",
+      "sha256_16": "6469897007831d4e",
+      "bytes": 27158
+    },
+    "code/selftest.py": {
+      "sha256": "d5e1aa14455af26775e2c7ae0eb9a8773c36cdced96a2087578c0aadcac05425",
+      "sha256_16": "d5e1aa14455af267",
+      "bytes": 6667
+    },
+    "code/parameters.json": {
+      "sha256": "8af44f59bbca9048b55dd5168c934da50ba14d19ac1a7f7965b48dcdb838e6e0",
+      "sha256_16": "8af44f59bbca9048",
+      "bytes": 2852
+    },
+    "code/run_stdout.txt": {
+      "sha256": "ad6f9a45db05490d3bc823829efd8893b652dc822dce8ada43065147577dffe3",
+      "sha256_16": "ad6f9a45db05490d",
+      "bytes": 2451
+    },
+    "code/predecl_sha256.txt": {
+      "sha256": "4f92dcd3ad7aced0f95922cc11c53d134fbedfc7c3b7a05819cfc016e3392c53",
+      "sha256_16": "4f92dcd3ad7aced0",
+      "bytes": 86
+    },
+    "code/predecl_frozen_at_utc.txt": {
+      "sha256": "4e4e1b4a11ef94bb38999913cf5b38a62f23c671c53e0bdb7e62783fd966556e",
+      "sha256_16": "4e4e1b4a11ef94bb",
+      "bytes": 21
+    },
+    "code/predecl_refrozen_at_utc.txt": {
+      "sha256": "a7c10bfccc5d826cd1f011b9e21dd194926e5d657636947c273da148d5bf1d6c",
+      "sha256_16": "a7c10bfccc5d826c",
+      "bytes": 21
+    }
+  },
+  "results_summary": {
+    "rows": 375,
+    "rows_by_experiment": {
+      "7_capacity_by_level": 175,
+      "verdicts": 20,
+      "8_law_enforcement": 70,
+      "9_buildings_vs_teachers": 110
+    },
+    "status_counts": {
+      "ok": 314,
+      "censored": 34,
+      "undefined_no_floor_gain": 2,
+      "binding": 3,
+      "PASS": 16,
+      "FAIL": 3,
+      "not_fired": 3
+    },
+    "verdicts": [
+      {
+        "id": "T7a",
+        "status": "PASS",
+        "value": 1.0,
+        "observed": "floor gain +44.43 pp [+44.19,+44.68] (need >= +10.0 pp, CI>0, binding=1.00)"
+      },
+      {
+        "id": "T7b",
+        "status": "PASS",
+        "value": 1.0,
+        "observed": "tertiary_only ceiling gain +4.58 pp [+4.38,+4.77] (need >= +2.0, binding=1.00)"
+      },
+      {
+        "id": "T7c",
+        "status": "FAIL",
+        "value": 0.0,
+        "observed": "secondary_only middle gain +11.71 pp (need in [+3.0, +8.33) of a +16.67 pp seat shock; binding=1.00)"
+      },
+      {
+        "id": "T7d",
+        "status": "PASS",
+        "value": 1.0,
+        "observed": "primary_only ceiling gain +0.00 pp = 0.000 x floor gain"
+      },
+      {
+        "id": "T7e",
+        "status": "FAIL",
+        "value": 0.0,
+        "observed": "clause (i) ceiling max 11.67 pp < 50 -> True; clause (ii) any-level max 90.46 pp < 90 -> False"
+      },
+      {
+        "id": "T7f",
+        "status": "PASS",
+        "value": 1.0,
+        "observed": "floor 0.50 crossing observed in 1.00 of seeds; max ceiling-crossing share over arms 0.00"
+      },
+      {
+        "id": "F7",
+        "status": "not_fired",
+        "value": 0.0,
+        "observed": "floor-moving arms ['primary_only']; of these, ceiling gain >= floor gain: none; ceiling universalization: False"
+      },
+      {
+        "id": "T8a",
+        "status": "PASS",
+        "value": 1.0,
+        "observed": "law_e0: attendance +1.09 pp [+0.95,+1.23], completion +0.51 pp [+0.42,+0.60] (need |att| <= 2.0, comp <= +1.0)"
+      },
+      {
+        "id": "T8b",
+        "status": "PASS",
+        "value": 1.0,
+        "observed": "law_e1: attendance +18.63 pp, completion +20.29 pp (need >= +10.0 and >= +6.0)"
+      },
+      {
+        "id": "T8c",
+        "status": "PASS",
+        "value": 1.0,
+        "observed": "gains e0/e0.5/e1 = +1.09/+9.71/+18.63 pp, ratio 17.06x, gap +17.54 pp"
+      },
+      {
+        "id": "T8d",
+        "status": "PASS",
+        "value": 1.0,
+        "observed": "household-work reduction e1/e0 = 18.17x (-0.0031 vs -0.0565 units)"
+      },
+      {
+        "id": "F8",
+        "status": "not_fired",
+        "value": 0.0,
+        "observed": "law_e0 attendance gain +1.09 pp (fires if > 2.0 pp)"
+      },
+      {
+        "id": "T9a[low]",
+        "status": "PASS",
+        "value": 1.0,
+        "observed": "rooms_only pi=0.6: physical +40, staffed +0.00, completion +0.00 pp"
+      },
+      {
+        "id": "T9a[high]",
+        "status": "PASS",
+        "value": 1.0,
+        "observed": "rooms_only pi=0.9: physical +40, staffed +0.00, completion +0.00 pp"
+      },
+      {
+        "id": "T9b[low]",
+        "status": "PASS",
+        "value": 1.0,
+        "observed": "split - rooms_only pi=0.6: staffed +29.00, completion +22.18 pp"
+      },
+      {
+        "id": "T9b[high]",
+        "status": "PASS",
+        "value": 1.0,
+        "observed": "split - rooms_only pi=0.9: staffed +29.00, completion +22.23 pp"
+      },
+      {
+        "id": "T9c[low]",
+        "status": "PASS",
+        "value": 1.0,
+        "observed": "split - teachers_only pi=0.6: completion +9.96 pp; teachers/split gain share 0.55"
+      },
+      {
+        "id": "T9c[high]",
+        "status": "PASS",
+        "value": 1.0,
+        "observed": "split - teachers_only pi=0.9: completion +15.33 pp; teachers/split gain share 0.31"
+      },
+      {
+        "id": "T9d",
+        "status": "PASS",
+        "value": 1.0,
+        "observed": "retention gain: split +5.37, teachers_only +0.00, baseline +5.32, rooms_only +5.32 pp"
+      },
+      {
+        "id": "F9",
+        "status": "not_fired",
+        "value": 0.0,
+        "observed": "rooms_only completion gain > 1.0 pp in any retention cell: False"
+      }
+    ],
+    "verdict_tally": {
+      "pass": 15,
+      "fail": 2,
+      "falsifiers_fired": 0,
+      "falsifiers_clear": 3
+    }
+  },
+  "failures": [
+    {
+      "id": "T7c",
+      "status": "FAIL",
+      "detail": "secondary_only middle gain +11.71 pp (>= +3 pp clause passes) but seat conversion 70.2% exceeds the pre-declared 50% cap (8.33 pp); the level did not saturate as pre-declared."
+    },
+    {
+      "id": "T7e",
+      "status": "FAIL",
+      "detail": "clause (i) ceiling max 11.67 pp < 50 pp PASS; clause (ii) any-level max 90.46 pp (the FLOOR) >= 90 pp FAIL. Literal wording defect in PRE_DECLARATIONS.md; both clauses reported separately; no threshold edited."
+    }
+  ],
+  "censored_cells": {
+    "count": 34,
+    "meaning": "crossing not reached within 30 cohorts; recorded as '>30', never as a number"
+  },
+  "undefined_cells": {
+    "count": 2,
+    "meaning": "ceiling/floor gain ratio where the arm does not move the floor; recorded 0 with status"
+  },
+  "mechanically_forced_cells_flagged": [
+    "primary_only ceiling gain exactly 0.00 pp (secondary seats unchanged pin the tertiary eligible pool)",
+    "rooms_only staffed places and completion gain exactly 0 (stipulated production function has no unstaffed seat channel)",
+    "enforcement without law exactly 0.000 in all metrics (enforcement multiplies law)",
+    "T9d baseline / rooms_only retention gain, because teacher capacity = posts * pi enters the baseline too)"
+  ],
+  "predeclaration": {
+    "file": "PRE_DECLARATIONS.md",
+    "sha256": "b0b0bdefa91d05ca21a98fd9a62b755e2faadb5d8f4a9d4659b927eb470afa80",
+    "frozen_before_run": true,
+    "first_freeze_utc": "2026-11-20T11:03:59Z",
+    "refrozen_utc": "2026-11-20T11:05:55Z",
+    "pre_run_deviation": {
+      "id": 1,
+      "what": "F7 gained an applicability condition (only in single-level arms whose own floor gain is >= +2.0 pp)",
+      "why": "a 3-seed runtime smoke test showed the original wording fires on a degenerate 0-vs-0 comparison in arms that do not touch the primary level",
+      "thresholds_changed": "none",
+      "logged_in": "PRE_DECLARATIONS.md section 5"
+    },
+    "post_run_wording_defects_reported_not_edited": [
+      "T7c bundles a direction claim (+3 pp) with a conversion cap (<50%); only the cap fails",
+      "T7e clause (ii) says 'no level' but the experiment's claim is about the ceiling; the floor trips it"
+    ]
+  },
+  "checks": {
+    "selftest": "code/selftest.py: 0 failures (determinism, pairing incl. arm-order invariance, one-factor shocks, equal budget 480, matched start, accounting invariants, stdlib-only, seed count)",
+    "deterministic_rerun": "two independent full runs produced byte-identical RESULTS.csv (sha256 af889331b6668f5bf423475989a0a73b2da731930c6f84b5f455cc3ee4c5ee41)",
+    "bind_precondition": "control seat utilisation = 1.000 at all three levels of experiment 7"
+  },
+  "guards": {
+    "writes_confined_to": "extensions_archive/toys_2026-11-20/cluster_C/",
+    "files_written": [
+      "PRE_DECLARATIONS.md",
+      "RESULTS.csv",
+      "FINDINGS.md",
+      "code/cluster_c_model.py",
+      "code/run_cluster_c.py",
+      "code/selftest.py",
+      "code/parameters.json",
+      "code/run_stdout.txt",
+      "code/predecl_sha256.txt",
+      "code/predecl_frozen_at_utc.txt",
+      "code/predecl_refrozen_at_utc.txt"
+    ],
+    "icloud_writes": false,
+    "git_commit": false,
+    "git_state": "extensions_archive/ is untracked in the repo; no commit or index change was made",
+    "phase_or_closed_anchor_files_touched": false,
+    "preexisting_modification_not_mine": "experiments/massification-2026-11-20/10_massification/STATUS.md modified 2026-11-20T18:55:42+08:00, before this session started (19:00:56+08:00); not touched by this run"
+  }
+}

@@ -1,0 +1,245 @@
+{
+  "label": "ILLUSTRATIVE TOY \u2014 stipulated parameters; not calibrated; not evidence",
+  "generated_at_utc": "2026-11-20T11:08:55+00:00",
+  "python": "3.10.2",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "numpy_used": false,
+  "spec": {
+    "path": "/Users/treymenefee/massification_live/extensions_archive/codex_2026-11-20/COUNCIL_TOY_SPECS_015.md",
+    "sha256_16": "ee8510a1daa3530e"
+  },
+  "base_model": {
+    "model_py": {
+      "path": "/tmp/codex_unpack/codex-massification-5eec11470690/workspace/model.py",
+      "sha256_16": "64fea5d71cc02571"
+    },
+    "experiments_py": {
+      "path": "/tmp/codex_unpack/codex-massification-5eec11470690/workspace/experiments.py",
+      "sha256_16": "ddf3267533c3a1fb"
+    }
+  },
+  "predeclarations": {
+    "path": "/Users/treymenefee/massification_live/extensions_archive/toys_2026-11-20/cluster_B/PRE_DECLARATIONS.md",
+    "sha256_16": "8bf544761ac661a3"
+  },
+  "protocol": {
+    "seeds_per_cell": 500,
+    "seed_base": 20261120,
+    "seed_list": "SEED_BASE + rep for rep in range(N)",
+    "pairing": "identical latent draws across arms within a seed",
+    "one_factor": "only the named arm factor changes between cells",
+    "all_cells_reported": true,
+    "reproduce": "python3 code/run_all.py  (stdlib Python only; deterministic)"
+  },
+  "parameters": {
+    "common": {
+      "population": 100,
+      "jobs": 40,
+      "public_seats": 30,
+      "public_fee": 1.0,
+      "private_capacity": 30,
+      "private_fixed_cost": 12.0,
+      "private_seat_cost": 1.0,
+      "tuition": 2.0,
+      "gross_premium": 4.0,
+      "opportunity_cost_scale": 3.5,
+      "budgets": "1.5 / 4.0 alternating, not shuffled (as model.py)",
+      "seed_base": 20261120,
+      "seeds_per_cell": 500,
+      "pairing": "identical latent draws (skill, costs, lottery) across all arms of a seed"
+    },
+    "exp4": {
+      "mechanisms": [
+        "human_capital",
+        "signaling"
+      ],
+      "visibility_levels": [
+        0.0,
+        0.5,
+        1.0
+      ],
+      "hc_skill_increment": 1.0,
+      "signaling_premium": "4.0 * (1 - visibility)",
+      "hc_premium": "4.0 (constant in visibility)",
+      "employer_score": "visibility*true_skill + (1-visibility)*credential",
+      "hires": 40,
+      "metrics": [
+        "applications",
+        "admissions",
+        "public_admissions",
+        "private_admissions",
+        "graduate_hires",
+        "applicant_hires",
+        "output_true_hires",
+        "output_valued_hires",
+        "rejected_count",
+        "rejected_skill"
+      ]
+    },
+    "exp5": {
+      "older_diploma_group": "indices 0..19 (20 people, fixed membership)",
+      "treated_group": "indices 20..39 (20 young people, fixed, paired across arms)",
+      "young_group": "indices 20..99 (80 people)",
+      "jobs_fixed": "J0 ~ Uniform{35,36,37,38,39,40}, one draw per seed shared by fixed arms",
+      "jobs_responsive": "J = 100 (full absorption; the pool responds to the queue)",
+      "skill_upgrade": "+1.0 true skill on treated group only",
+      "rank_upgrade": "treated group hired first (lottery order), then other young by skill, then older group by skill; no skill change",
+      "reference": "no treatment; hire by true skill",
+      "metrics": [
+        "older_group_hires",
+        "treated_group_hires",
+        "total_hires",
+        "output_hires",
+        "population_mean_skill",
+        "job_count"
+      ]
+    },
+    "exp6": {
+      "offers": 35,
+      "population": 100,
+      "credential_shares": [
+        45,
+        25
+      ],
+      "credential_skill_correlation": 0.0,
+      "gate_retained": "only credentialed applicants eligible",
+      "gate_repealed": "all applicants eligible",
+      "ranking_visible": "credentialed first, then true skill",
+      "ranking_blind": "true skill only",
+      "metrics": [
+        "uncred_offers",
+        "cred_offers",
+        "total_offers",
+        "uncred_offer_rate",
+        "offer_skill_mean",
+        "vacancies",
+        "eligible_count"
+      ]
+    }
+  },
+  "arms": {
+    "exp4": [
+      "human_capital:v0.0",
+      "human_capital:v0.5",
+      "human_capital:v1.0",
+      "signaling:v0.0",
+      "signaling:v0.5",
+      "signaling:v1.0"
+    ],
+    "exp5": [
+      "skill_upgrade:fixed_jobs",
+      "skill_upgrade:responsive_jobs",
+      "rank_upgrade:fixed_jobs",
+      "rank_upgrade:responsive_jobs",
+      "reference_no_treatment:fixed_jobs",
+      "reference_no_treatment:responsive_jobs"
+    ],
+    "exp6": [
+      "c45:visible_credential:gate_repealed",
+      "c45:visible_credential:gate_retained",
+      "c45:blind_ranking:gate_repealed",
+      "c45:blind_ranking:gate_retained",
+      "c25:visible_credential:gate_repealed",
+      "c25:visible_credential:gate_retained",
+      "c25:blind_ranking:gate_repealed",
+      "c25:blind_ranking:gate_retained"
+    ]
+  },
+  "threshold_ids": {
+    "exp4": [
+      "T4.1",
+      "T4.2",
+      "T4.3",
+      "F4"
+    ],
+    "exp5": [
+      "T5.1",
+      "T5.2",
+      "T5.3",
+      "T5.4",
+      "D5.5",
+      "D5.6"
+    ],
+    "exp6": [
+      "T6.1",
+      "T6.2",
+      "T6.3",
+      "T6.4",
+      "F6"
+    ]
+  },
+  "verdict_summary": {
+    "T4.1": "NOT MET",
+    "T4.2": "NOT MET",
+    "T4.3": "PASS",
+    "falsifier": "falsifier not triggered",
+    "T5.1": "PASS",
+    "T5.2": "PASS",
+    "T5.3": "PASS",
+    "T5.4": "NOT MET",
+    "D5.5": "PASS",
+    "D5.6": "PASS",
+    "T6.1": "NOT MET",
+    "T6.2": "PASS",
+    "T6.3": "PASS",
+    "T6.4": "NOT MET"
+  },
+  "failures": [
+    {
+      "id": "T4.1",
+      "statement": "T4.1 TRUE-output sign pattern: HC output among hires rises with v by >= +0.05 and is monotone non-decreasing; signalling output among hires falls with v by >= -0.05 and is monotone non-increasing."
+    },
+    {
+      "id": "T4.2",
+      "statement": "T4.2 EMPLOYER-VALUED output sign pattern (v*skill + (1-v)*credential): same rise/fall pattern with the same margins."
+    },
+    {
+      "id": "T5.4",
+      "statement": "T5.4 The fixed-jobs output separation DISAPPEARS under responsive jobs: |output(rank,responsive) - output(skill,responsive)| <= 0.05."
+    },
+    {
+      "id": "T6.1",
+      "statement": "T6.1 Gate repeal alone raises the uncredentialed offer rate by >= 0.15 and to the declared high level (>= 0.25) when the credential is visible at ranking."
+    },
+    {
+      "id": "T6.4",
+      "statement": "T6.4 Repeal is a sufficient lever: rate(visible,repealed) >= 0.75 * rate(blind,repealed)."
+    }
+  ],
+  "results_csv": {
+    "path": "/Users/treymenefee/massification_live/extensions_archive/toys_2026-11-20/cluster_B/RESULTS.csv",
+    "rows": 84000,
+    "sha256_16": "e672272f008a25c9",
+    "schema": [
+      "experiment",
+      "arm",
+      "seed",
+      "metric",
+      "value"
+    ],
+    "line_1": "# ILLUSTRATIVE TOY \u2014 stipulated parameters; not calibrated; not evidence"
+  },
+  "code": {
+    "exp4_visibility.py": {
+      "sha256_16": "3d70318135a67b9d"
+    },
+    "exp5_queue.py": {
+      "sha256_16": "46dd9a16eabff334"
+    },
+    "exp6_eligibility.py": {
+      "sha256_16": "cd20493bf6683184"
+    },
+    "run_all.py": {
+      "sha256_16": "f8ac20baed1b1dbc"
+    },
+    "test_toys.py": {
+      "sha256_16": "d45dff3ad0c4689b"
+    },
+    "toy_common.py": {
+      "sha256_16": "f75658c6e3cb09a4"
+    },
+    "verdicts.py": {
+      "sha256_16": "0cdb31591e4071e4"
+    }
+  }
+}

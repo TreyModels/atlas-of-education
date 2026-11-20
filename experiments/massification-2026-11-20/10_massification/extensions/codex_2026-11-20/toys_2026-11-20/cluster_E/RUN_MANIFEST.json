@@ -1,0 +1,412 @@
+{
+  "run_id": "cluster_E_toys_2026-11-20",
+  "label": "ILLUSTRATIVE TOY - stipulated parameters; not calibrated; not evidence; no historical test; phase closed; do not cite numbers as estimates",
+  "status": "illustrative_toy_only",
+  "spec": "extensions_archive/codex_2026-11-20/COUNCIL_TOY_SPECS_015.md (Cluster E, #13-#15)",
+  "base_models": [
+    "/tmp/codex_unpack/codex-massification-5eec11470690/workspace/model.py",
+    "/tmp/codex_unpack/codex-massification-5eec11470690/workspace/experiments.py",
+    "/tmp/codex_unpack/codex-massification-5eec11470690/workspace/takeoff.py",
+    "/tmp/codex_unpack/codex-massification-5eec11470690/workspace/diffusion.py"
+  ],
+  "phase_status": "closed; no phase, closeout or closed-anchor file read, written or modified",
+  "runtime": {
+    "python": "3.10.2",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "numpy_used": false,
+    "dependencies": "stdlib only"
+  },
+  "protocol": {
+    "paired_counterfactuals": true,
+    "latent_draws_shared_across_arms": true,
+    "one_factor_shocks": true,
+    "matched_starting_conditions": true,
+    "seeds_per_cell": 200,
+    "seed_schedule": {
+      "E13_migration_remittance": "20261120+0..199",
+      "E14_sector_shock_field_access": "20461120+0..199",
+      "E15_neighbour_information_roads": "20661120+0..199"
+    },
+    "ci": "mean of paired per-seed differences; sample sd; normal approximation z=1.959964",
+    "all_cells_reported": true,
+    "failures_retained": true,
+    "determinism_check": "two full runs produced byte-identical RESULTS.csv"
+  },
+  "run_timing": {
+    "pre_declarations_frozen_utc": "2026-11-20T11:06:43Z",
+    "run_completed_utc": "2026-11-20T11:09:36Z"
+  },
+  "pre_declarations": {
+    "path": "PRE_DECLARATIONS.md",
+    "sha256": "2cdc053aa03ae92133ace188b7bb2d169df083603aa83d8deb402cb100ae0733",
+    "sha256_16": "2cdc053aa03ae921",
+    "frozen_before_run": true
+  },
+  "imposed_parameters": {
+    "E13_migration_remittance": {
+      "N": 200,
+      "T": 20,
+      "SEATS_ORIGIN": 170,
+      "FEE": 1.0,
+      "INDIRECT": 0.8,
+      "V0": 2.6,
+      "APT_VALUE": 0.6,
+      "ROUTE_PREMIUM": 2.4,
+      "ROUTE_ACCESS_P": 0.45,
+      "REMIT_AMOUNT": 0.8,
+      "KIN_P": 0.35,
+      "M_REF": 40,
+      "DIASPORA": 20,
+      "LOCAL_JOBS": 45,
+      "P_COMPLETE": "0.82 + 0.12*aptitude",
+      "P_MIGRATE": "0.55 + 0.25*aptitude",
+      "cash": "U(1.5,3.5)",
+      "opportunity_cost": "U(0,3.5)",
+      "aptitude": "U(0,1)",
+      "note": "origin seats deliberately non-binding (peak applications 134); local posts fixed at 45 in every arm and cycle"
+    },
+    "E14_sector_shock_field_access": {
+      "N": 200,
+      "V_BASE": 1.2,
+      "APT_VALUE": 1.0,
+      "RETURN_BASE": 2.0,
+      "SHOCK": 2.5,
+      "FEE": 1.0,
+      "SEATS_PER_FIELD": 150,
+      "GATE_SHARE": 0.3,
+      "POSTS_BASE": 30,
+      "POSTS_SHOCK": 25,
+      "P_LICENSE": "0.80 + 0.12*aptitude_f",
+      "cash": "U(0.8,2.8)",
+      "opportunity_cost": "U(0,3.5)",
+      "note": "field seats deliberately non-binding; SHOCK 2.5 exceeds the aptitude range (1.0) so the arm sits at a corner solution (100% field switching, zero field-B applications)"
+    },
+    "E15_neighbour_information_roads": {
+      "H_per_village": 60,
+      "villages_per_seed": 2,
+      "tie_types": [
+        "untied",
+        "tied"
+      ],
+      "BASE_SEATS": [
+        16,
+        6,
+        2
+      ],
+      "TEACHER_SEATS_PER_LEVEL": 1,
+      "FEE": [
+        0.19,
+        0.34,
+        0.52
+      ],
+      "INDIRECT": 0.12,
+      "V0": [
+        0.95,
+        1.55,
+        2.15
+      ],
+      "APT_VALUE": 0.45,
+      "SIGNAL": [
+        0.35,
+        0.7,
+        0.95
+      ],
+      "SIGNAL_BASE": 0.16,
+      "SIGNAL_EXPOSED": 0.34,
+      "SIGNAL_TIED": 0.22,
+      "EXPOSE_BASE": 0.3,
+      "EXPOSE_ROAD": 0.4,
+      "ROAD_REDUCTION": 0.55,
+      "W_PEN": [
+        0.8,
+        1.05,
+        1.3
+      ],
+      "P_PASS": "0.78 + 0.06*teacher + 0.08*aptitude",
+      "note": "information travels on roads (exposure probability 0.30 without a road, 0.70 with one) is a STIPULATED mechanism; kin transmission +0.22 is a STIPULATED assumption, not a test"
+    }
+  },
+  "threshold_verdicts": [
+    {
+      "id": "T13-P1a",
+      "experiment": "E13_migration_remittance",
+      "cell": "route=open|remit=on",
+      "metric": "threshold_remit_apps",
+      "observed": 8.045,
+      "unit": "persons/cycle",
+      "rule": ">= 4.000000",
+      "verdict": "PASS"
+    },
+    {
+      "id": "T13-P1b",
+      "experiment": "E13_migration_remittance",
+      "cell": "route=open|remit=on",
+      "metric": "threshold_remit_completion",
+      "observed": 3.5355,
+      "unit": "pp of cohort",
+      "rule": ">= 1.000000",
+      "verdict": "PASS"
+    },
+    {
+      "id": "T13-P2",
+      "experiment": "E13_migration_remittance",
+      "cell": "route=open|remit=off",
+      "metric": "threshold_route_completion",
+      "observed": 15.218875,
+      "unit": "pp of cohort",
+      "rule": ">= 8.000000",
+      "verdict": "PASS"
+    },
+    {
+      "id": "T13-P3",
+      "experiment": "E13_migration_remittance",
+      "cell": "all 4 cells",
+      "metric": "threshold_local_jobs_flat",
+      "observed": 0.0,
+      "unit": "posts",
+      "rule": "max |difference| = 0",
+      "verdict": "PASS"
+    },
+    {
+      "id": "F13",
+      "experiment": "E13_migration_remittance",
+      "cell": "falsifier check",
+      "metric": "falsifier_13_triggered",
+      "observed": 0.0,
+      "unit": "0/1",
+      "rule": "0 = not triggered",
+      "verdict": "PASS"
+    },
+    {
+      "id": "T14-P1a",
+      "experiment": "E14_sector_shock_field_access",
+      "cell": "shock=targeted_A|access=open",
+      "metric": "threshold_field_specificity",
+      "observed": 106.495,
+      "unit": "persons",
+      "rule": ">= 30.000000",
+      "verdict": "PASS"
+    },
+    {
+      "id": "T14-P1b",
+      "experiment": "E14_sector_shock_field_access",
+      "cell": "shock=targeted_A|access=open",
+      "metric": "threshold_field_specificity_completers",
+      "observed": 90.07,
+      "unit": "persons",
+      "rule": ">= 25.000000",
+      "verdict": "PASS"
+    },
+    {
+      "id": "T14-P1c",
+      "experiment": "E14_sector_shock_field_access",
+      "cell": "shock=targeted_A|access=open",
+      "metric": "threshold_reallocation_not_general",
+      "observed": 24.675,
+      "unit": "persons",
+      "rule": "|x| <= 10.000000",
+      "verdict": "FAIL"
+    },
+    {
+      "id": "T14-P2a",
+      "experiment": "E14_sector_shock_field_access",
+      "cell": "shock=targeted_A|access=closed",
+      "metric": "threshold_gate_attenuation_apps",
+      "observed": 32.26,
+      "unit": "persons",
+      "rule": "ratio <= 0.500000",
+      "verdict": "PASS"
+    },
+    {
+      "id": "T14-P2b",
+      "experiment": "E14_sector_shock_field_access",
+      "cell": "shock=targeted_A|access=closed",
+      "metric": "threshold_gate_attenuation_completers",
+      "observed": 27.155,
+      "unit": "persons",
+      "rule": "ratio <= 0.500000",
+      "verdict": "PASS"
+    },
+    {
+      "id": "T14-P3",
+      "experiment": "E14_sector_shock_field_access",
+      "cell": "shock=placebo_B|access=open",
+      "metric": "threshold_placebo_symmetry",
+      "observed": 106.73,
+      "unit": "persons",
+      "rule": "B >= +30 and A <= -20",
+      "verdict": "PASS"
+    },
+    {
+      "id": "T14-P4",
+      "experiment": "E14_sector_shock_field_access",
+      "cell": "shock=targeted_A|access=closed",
+      "metric": "threshold_vacancies_under_gate",
+      "observed": 8.35,
+      "unit": "posts",
+      "rule": "closed >= 10 and open <= 3",
+      "verdict": "FAIL"
+    },
+    {
+      "id": "F14",
+      "experiment": "E14_sector_shock_field_access",
+      "cell": "falsifier check",
+      "metric": "falsifier_14_triggered",
+      "observed": 0.0,
+      "unit": "0/1",
+      "rule": "0 = not triggered",
+      "verdict": "PASS"
+    },
+    {
+      "id": "T15-P1",
+      "experiment": "E15_neighbour_information_roads",
+      "cell": "road=1 interaction",
+      "metric": "threshold_info_interaction",
+      "observed": 0.030687,
+      "unit": "applications/hh",
+      "rule": "diff >= 0.06; r1 >= 0.10; r0 <= 0.06",
+      "verdict": "FAIL"
+    },
+    {
+      "id": "T15-P2",
+      "experiment": "E15_neighbour_information_roads",
+      "cell": "main effects",
+      "metric": "threshold_main_effects",
+      "observed": 0.226531,
+      "unit": "applications/hh",
+      "rule": "road >= 0.05; teacher >= 2.0 pp; info >= 0.03",
+      "verdict": "PASS"
+    },
+    {
+      "id": "T15-P3",
+      "experiment": "E15_neighbour_information_roads",
+      "cell": "info=1 vs 0",
+      "metric": "threshold_queues_not_places",
+      "observed": 0.048135,
+      "unit": "applications/hh",
+      "rule": "|adm| <= 0.02; queue >= 0.05",
+      "verdict": "FAIL"
+    },
+    {
+      "id": "F15",
+      "experiment": "E15_neighbour_information_roads",
+      "cell": "falsifier check",
+      "metric": "falsifier_15_triggered",
+      "observed": 0.0,
+      "unit": "0/1",
+      "rule": "0 = not triggered",
+      "verdict": "PASS"
+    }
+  ],
+  "verdict_counts": {
+    "PASS": 13,
+    "FAIL": 4,
+    "total": 17
+  },
+  "failures": [
+    "T14-P1c reallocation-not-expansion: total completers +24.675 vs |x|<=10",
+    "T14-P4 vacancies-under-gate: closed-access level 8.350 vs >=10",
+    "T15-P1 info-road interaction: +0.0307 vs >=0.06 (road=1 effect +0.0634 vs >=0.10)",
+    "T15-P3 queues-not-places: queue +0.0481/hh vs >=0.05 (admissions flat -0.00002/hh held)"
+  ],
+  "falsifiers": {
+    "F13": "not triggered",
+    "F14": "not triggered",
+    "F15": "not triggered, marginal (|diff| 0.0307 vs 0.03 floor)"
+  },
+  "auxiliary_sensitivity_arms": {
+    "E13": "route premium halved to 1.2: completion effect +11.36 pp (vs +15.22 pp full premium), sign and ordering stable",
+    "E14": "gate tightened to 15%: closed-access dApps_A +16.23, dCompleters_A +13.76 (vs +32.26/+27.16 at 30%)",
+    "E15": "road travel reduction 0.30: info x road interaction +0.0391 (vs +0.0307 at 0.55), still below the 0.06 margin"
+  },
+  "deviations": [
+    {
+      "what": "T15-P3 queue unit",
+      "detail": "first run compared per-village total queue against the per-household margin in PRE_DECLARATIONS.md and recorded PASS; corrected to per household (2.888 -> 0.0481), verdict now FAIL; no other estimand value changed (three E14 definition strings were extended for readability, see next deviation); no parameter, seed, draw or threshold changed"
+    },
+    {
+      "what": "E14 threshold-row definition text",
+      "detail": "observed closed/open ratios (0.3029, 0.3015) and the open-access vacancy level (0.00) added to the definition fields for readability; values and verdicts unchanged"
+    },
+    {
+      "what": "control-arm-only calibration",
+      "detail": "constants fixed against control-arm base rates only (code/base_rate_check.py prints control arms exclusively); no treatment arm inspected before thresholds were frozen"
+    }
+  ],
+  "result_rows": 369,
+  "artifacts": [
+    {
+      "path": "PRE_DECLARATIONS.md",
+      "sha256": "2cdc053aa03ae92133ace188b7bb2d169df083603aa83d8deb402cb100ae0733",
+      "sha256_16": "2cdc053aa03ae921",
+      "bytes": 13206
+    },
+    {
+      "path": "RESULTS.csv",
+      "sha256": "f8cb72d18bd8aff183b6bf54ffa5a07f73afaf6e70bdb774cb162facbdd8c448",
+      "sha256_16": "f8cb72d18bd8aff1",
+      "bytes": 133438
+    },
+    {
+      "path": "FINDINGS.md",
+      "sha256": "3563c8519e25e9a084225abd7aebecc09390398d3f093651b08e7b8cec06909f",
+      "sha256_16": "3563c8519e25e9a0",
+      "bytes": 19798
+    },
+    {
+      "path": "code/common.py",
+      "sha256": "1f3c01bc29e10f7ede3498d249bc4c163b1c04b5b36baabcdcb6eec6b8bd1535",
+      "sha256_16": "1f3c01bc29e10f7e",
+      "bytes": 2092
+    },
+    {
+      "path": "code/exp13_migration.py",
+      "sha256": "d505c60a01d80602e53aaa152a29d6682e78a7e504eb5210eebe7fa142aa7cec",
+      "sha256_16": "d505c60a01d80602",
+      "bytes": 15379
+    },
+    {
+      "path": "code/exp14_sector.py",
+      "sha256": "5c7184100beb0424ea4b883aac6e915ec301249b3fe4019cf342821c6aaacae3",
+      "sha256_16": "5c7184100beb0424",
+      "bytes": 14338
+    },
+    {
+      "path": "code/exp15_diffusion.py",
+      "sha256": "1d67ee188cb97cf5f8e982012c6ecd94800841f159a3b1c40b06585a2f6d1d4b",
+      "sha256_16": "1d67ee188cb97cf5",
+      "bytes": 17039
+    },
+    {
+      "path": "code/run_all.py",
+      "sha256": "9b7f981a6848b56a2bf2b1eb6bfdf0dd7628c0041e3ff968bae45c555d946a09",
+      "sha256_16": "9b7f981a6848b56a",
+      "bytes": 1072
+    },
+    {
+      "path": "code/base_rate_check.py",
+      "sha256": "667e7e69cc546888f7b4610727a54f55f8376a1267c889423cf4eaa40a3e87aa",
+      "sha256_16": "667e7e69cc546888",
+      "bytes": 2419
+    },
+    {
+      "path": "code/verify_results.py",
+      "sha256": "2a5695b1a7df1c7846545b28f769e79906261241accaa219375399be8ee44cf8",
+      "sha256_16": "2a5695b1a7df1c78",
+      "bytes": 8155
+    }
+  ],
+  "non_claims": [
+    "not estimates, not calibrated, not evidence, no historical test",
+    "does not reopen the closed massification phase (closeout 787f1792...)",
+    "says nothing about R13, R27/C1, A10/R29, ceiling residual or timing",
+    "the admissible next cell remains the observed provider-entry supply-response test in COUNCIL_REVIEW_014.md section 3.1",
+    "every magnitude is a property of the stipulated parameter vector"
+  ],
+  "boundaries": {
+    "writes": "extensions_archive/toys_2026-11-20/cluster_E/ only",
+    "icloud_writes": false,
+    "git_operations": false,
+    "phase_or_closed_anchor_files_touched": false
+  }
+}

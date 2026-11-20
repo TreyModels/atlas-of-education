@@ -1,0 +1,31 @@
+==============================================================================
+ILLUSTRATIVE TOY — stipulated parameters; not calibrated; not evidence; no historical test; phase closed; do not cite numbers as estimates
+==============================================================================
+
+[7] capacity by level — 200 seeds x 5 arms
+  PASS  T7a: floor gain +44.43 pp [+44.19,+44.68] (need >= +10.0 pp, CI>0, binding=1.00)
+  PASS  T7b: tertiary_only ceiling gain +4.58 pp [+4.38,+4.77] (need >= +2.0, binding=1.00)
+  FAIL  T7c: secondary_only middle gain +11.71 pp (need in [+3.0, +8.33) of a +16.67 pp seat shock; binding=1.00)
+  PASS  T7d: primary_only ceiling gain +0.00 pp = 0.000 x floor gain
+  FAIL  T7e: clause (i) ceiling max 11.67 pp < 50 -> True; clause (ii) any-level max 90.46 pp < 90 -> False
+  PASS  T7f: floor 0.50 crossing observed in 1.00 of seeds; max ceiling-crossing share over arms 0.00
+  clear  F7: floor-moving arms ['primary_only']; of these, ceiling gain >= floor gain: none; ceiling universalization: False
+
+[8] enforcement x compulsory law — 200 seeds x 6 cells
+  PASS  T8a: law_e0: attendance +1.09 pp [+0.95,+1.23], completion +0.51 pp [+0.42,+0.60] (need |att| <= 2.0, comp <= +1.0)
+  PASS  T8b: law_e1: attendance +18.63 pp, completion +20.29 pp (need >= +10.0 and >= +6.0)
+  PASS  T8c: gains e0/e0.5/e1 = +1.09/+9.71/+18.63 pp, ratio 17.06x, gap +17.54 pp
+  PASS  T8d: household-work reduction e1/e0 = 18.17x (-0.0031 vs -0.0565 units)
+  clear  F8: law_e0 attendance gain +1.09 pp (fires if > 2.0 pp)
+
+[9] buildings vs teachers at equal budget — 200 seeds x 8 cells
+  PASS  T9a[low]: rooms_only pi=0.6: physical +40, staffed +0.00, completion +0.00 pp
+  PASS  T9a[high]: rooms_only pi=0.9: physical +40, staffed +0.00, completion +0.00 pp
+  PASS  T9b[low]: split - rooms_only pi=0.6: staffed +29.00, completion +22.18 pp
+  PASS  T9b[high]: split - rooms_only pi=0.9: staffed +29.00, completion +22.23 pp
+  PASS  T9c[low]: split - teachers_only pi=0.6: completion +9.96 pp; teachers/split gain share 0.55
+  PASS  T9c[high]: split - teachers_only pi=0.9: completion +15.33 pp; teachers/split gain share 0.31
+  PASS  T9d: retention gain: split +5.37, teachers_only +0.00, baseline +5.32, rooms_only +5.32 pp
+  clear  F9: rooms_only completion gain > 1.0 pp in any retention cell: False
+
+wrote /Users/treymenefee/massification_live/extensions_archive/toys_2026-11-20/cluster_C/RESULTS.csv (375 rows) in 8.4s

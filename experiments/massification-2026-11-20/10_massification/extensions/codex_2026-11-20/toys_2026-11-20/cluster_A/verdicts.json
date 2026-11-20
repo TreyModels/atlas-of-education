@@ -1,0 +1,90 @@
+{
+  "exp1": {
+    "A_diff": 0.008332,
+    "A_high": 1.033755,
+    "A_low": 1.025424,
+    "T1a": "FAIL",
+    "T1a_rule": "A_high >= 1.25",
+    "T1b": "FAIL",
+    "T1b_rule": "A_high - A_low >= 0.25",
+    "band": "inside",
+    "falsifier_triggered": true,
+    "mean_entry_seats_high": 9.48,
+    "mean_exit_seats_high": 9.8,
+    "mean_recovery_ratio_high_down": 1.0,
+    "overall": "FAIL",
+    "robustness": {
+      "divisible_A_diff": 0.119859,
+      "divisible_A_high": 1.033755,
+      "divisible_A_low": 0.913896
+    },
+    "share_entry_event_high": 0.96,
+    "share_exit_event_high": 0.94
+  },
+  "exp2": {
+    "R_F_high_30_50": 0.48625,
+    "R_F_high_38_39": 0.55,
+    "R_F_low_30_50": 0.708,
+    "R_F_low_38_39": 0.71,
+    "R_F_mid_30_50": 0.66525,
+    "R_cap30_F_high_30_50": 0.31375,
+    "R_cap30_F_low_30_50": 0.68225,
+    "T2a": "PASS",
+    "T2a_rule": "R(F_high, 30->50) < 0.50",
+    "T2b": "PASS",
+    "T2b_rule": "R(F_low, 30->50) >= 0.50",
+    "T2c": "PASS",
+    "T2c_rule": "exit share (F_high, 30->50) >= 0.50",
+    "band": "below",
+    "exit_share_F_high_30_50": 0.685,
+    "falsifier_triggered": false,
+    "gross_high": 20.0,
+    "net_high": 9.725,
+    "overall": "PASS"
+  },
+  "exp3": {
+    "T3a": "PASS",
+    "T3a_rule": "peak vacancy L4 temp >= 8.0",
+    "T3b": "PASS",
+    "T3b_rule": "peak vacancy L4 temp >= L0 temp + 4.0",
+    "T3c": "PASS",
+    "T3c_rule": "peak vacancy L4 perm < 4.0",
+    "censored": {
+      "L0_temp": 0.0,
+      "L2_temp": 0.0,
+      "L4_temp": 0.0
+    },
+    "falsifier_triggered": false,
+    "margin_note": "T3a margin = 0.08 seats over the declared floor",
+    "monotone_temporary": true,
+    "overall": "PASS",
+    "peak_backlog": {
+      "L0_temp": 2.07,
+      "L2_temp": 10.89,
+      "L4_perm": 10.89,
+      "L4_temp": 10.89
+    },
+    "peak_vacancy": {
+      "L0_perm": 0.0,
+      "L0_temp": 0.0,
+      "L2_perm": 0.0,
+      "L2_temp": 0.0,
+      "L4_perm": 0.0,
+      "L4_temp": 8.08
+    },
+    "time_to_steady_state": {
+      "L0_perm": 2.0,
+      "L0_temp": 6.0,
+      "L2_perm": 4.0,
+      "L2_temp": 6.0,
+      "L4_perm": 6.0,
+      "L4_temp": 7.0
+    }
+  },
+  "label": "ILLUSTRATIVE TOY - stipulated parameters; not calibrated; not evidence; no historical test; phase closed; do not cite numbers as estimates.",
+  "seeds": {
+    "count": 200,
+    "first": 20261120,
+    "last": 20261319
+  }
+}
