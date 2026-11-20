@@ -70,3 +70,11 @@ information and enforcement intensities. Several results are **load-bearing on t
 credential-inflation queue, B6's zero credential–skill correlation, A2's all-or-nothing exit, B4's premium
 4(1−v) making v=1 degenerate). No toy is calibrated, none uses observed data, and none can test history or
 reopen the closed phase's C1–C4. Alternative rules were not run unless predeclared.
+
+## Canonical location (housekeeping)
+
+The canonical home of this battery is **this committed folder** under
+`experiments/massification-2026-11-20/10_massification/extensions/codex_2026-11-20/toys_2026-11-20/`.
+`extensions_archive/` was a staging workspace used while the clusters ran; it is not canonical and has been
+moved out of the repository. Cluster paths in the Council's brief-016 text refer to the pre-commit staging
+tree; every artifact it cites is present here with the same hashes (see `SHA256SUMS.txt`).
