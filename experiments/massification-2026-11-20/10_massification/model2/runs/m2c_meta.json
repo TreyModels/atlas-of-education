@@ -1,0 +1,55 @@
+{
+ "sufficient": false,
+ "sign_ok": false,
+ "bias_ok": false,
+ "cover_ok": false,
+ "null_fp_ok": false,
+ "cells": [
+  {
+   "gamma": -0.3,
+   "sigma": 0.5,
+   "false_pos": null,
+   "cover": 0.0,
+   "bias": 2.633431244365615,
+   "sign": 0.0
+  },
+  {
+   "gamma": -0.3,
+   "sigma": 1.0,
+   "false_pos": null,
+   "cover": 0.13,
+   "bias": 2.6001958220645642,
+   "sign": 0.04
+  },
+  {
+   "gamma": 0,
+   "sigma": 0.5,
+   "false_pos": 0.92,
+   "cover": 0.06,
+   "bias": null
+  },
+  {
+   "gamma": 0,
+   "sigma": 1.0,
+   "false_pos": 0.43,
+   "cover": 0.49,
+   "bias": null
+  },
+  {
+   "gamma": 0.3,
+   "sigma": 0.5,
+   "false_pos": null,
+   "cover": 0.6,
+   "bias": 0.6347851354378865,
+   "sign": 1.0
+  },
+  {
+   "gamma": 0.3,
+   "sigma": 1.0,
+   "false_pos": null,
+   "cover": 0.78,
+   "bias": 0.7556650413986108,
+   "sign": 0.96
+  }
+ ]
+}

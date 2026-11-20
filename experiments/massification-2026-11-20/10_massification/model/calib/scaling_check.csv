@@ -1,0 +1,19 @@
+rival,iso,segment,relation,generated_exponent
+demand_led,PHL,fit_1999_2010,secondary GER~income,0.03962631233913633
+demand_led,PHL,fit_1999_2010,tertiary GER~income,-0.158779028741004
+demand_led,PHL,fit_1999_2010,logit(lower-sec completion)~year,0.025680030547230132
+demand_led,PHL,oos_2011_2024,secondary GER~income,-1.8925136363459218
+demand_led,PHL,oos_2011_2024,tertiary GER~income,-1.2293362553999858
+demand_led,PHL,oos_2011_2024,logit(lower-sec completion)~year,0.03197453380832757
+education_led,PHL,fit_1999_2010,secondary GER~income,0.0412741082165041
+education_led,PHL,fit_1999_2010,tertiary GER~income,0.10421140601493226
+education_led,PHL,fit_1999_2010,logit(lower-sec completion)~year,0.029817654645597887
+education_led,PHL,oos_2011_2024,secondary GER~income,-0.3788691508438984
+education_led,PHL,oos_2011_2024,tertiary GER~income,-0.13734608594788075
+education_led,PHL,oos_2011_2024,logit(lower-sec completion)~year,0.039634400401123586
+complementary,PHL,fit_1999_2010,secondary GER~income,-0.04260240601193654
+complementary,PHL,fit_1999_2010,tertiary GER~income,0.06820411025132593
+complementary,PHL,fit_1999_2010,logit(lower-sec completion)~year,0.024251807349092335
+complementary,PHL,oos_2011_2024,secondary GER~income,-0.7431543754941816
+complementary,PHL,oos_2011_2024,tertiary GER~income,-0.3525323930118642
+complementary,PHL,oos_2011_2024,logit(lower-sec completion)~year,0.03122435633068087

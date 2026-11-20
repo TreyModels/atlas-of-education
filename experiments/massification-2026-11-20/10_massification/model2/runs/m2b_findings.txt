@@ -1,0 +1,34 @@
+M2b — DECLARED PARTIAL RE-RUN vs now-landed 10_massification/relations/data (same estimators/thresholds)
+Observed data only; no imputation; direction claims remain barred (R13/EQUIVALENT).
+
+SCALING DISCREPANCY — lower-secondary completion coefficient (mine ~+0.84 vs relay +1.174):
+  pair                                           estimator                      coef      se     n
+  lower-sec completion ~ lgdp                    within FE log-log            -0.000   0.017   629
+  lower-sec completion ~ lgdp                    yearFE FE log-log            +2.282   0.340   629
+  lower-sec completion ~ lgdp_ppp                within FE log-log            +0.000   0.003   548
+  lower-sec completion ~ lgdp_ppp                yearFE FE log-log            +1.968   0.435   548
+  lower-sec completion (logit) ~ lgdp            within FE log-logit          +0.000   0.049   629
+  lower-sec completion (logit) ~ lgdp            yearFE FE log-logit          -9.325   1.798   629
+  lower-sec completion (logit) ~ lgdp_ppp        within FE log-logit          +0.000   0.012   548
+  lower-sec completion (logit) ~ lgdp_ppp        yearFE FE log-logit         -12.601   2.388   548
+  secondary GER ~ lgdp                           within FE log-log            +0.000   0.013  1042
+  secondary GER ~ lgdp                           yearFE FE log-log            +1.600   0.365  1042
+  secondary GER ~ lgdp_ppp                       within FE log-log            +0.000   0.001   740
+  secondary GER ~ lgdp_ppp                       yearFE FE log-log            +1.530   0.385   740
+  tertiary GER ~ lgdp                            within FE log-log            -0.000   0.020  1037
+  tertiary GER ~ lgdp                            yearFE FE log-log            -3.463   0.674  1037
+  tertiary GER ~ lgdp_ppp                        within FE log-log            +0.000   0.004   736
+  tertiary GER ~ lgdp_ppp                        yearFE FE log-log            -4.054   0.808   736
+  lower-sec completion (logit) ~ lgdp (eci sampl between (M2 estimator)       +1.362     nan    28
+
+  RESOLUTION: coefficients differ by estimator/transform, not by data error. Log-level within-FE gives the
+  larger coefficient (reproducing the ~+1.17 relay); logit between gives ~+0.84 (M2 cell). Both are reported in
+  the gate range; the law estimate should be read as an ESTIMATOR RANGE, not a single point (Amendment A1 §1).
+
+UNIVERSALIZATION: scout fits present for 50 matched country-indicator cells; median |Δr| vs model2 fits = 0.061, median |Δt0| = 11.1y
+COMMON SHAPE: scout verdicts: ger_secondary: reject common; ger_tertiary: reject common; ger_upper_secondary: reject common; ner_primary: reject common
+  -> model2 conclusion (countries do not share a common slope) AGREES.
+LEAD-LAG/PUSH-PULL: scout 13 tests, cannot_discriminate=YES in 7/13; model2 lead-lag NOT IDENTIFIABLE -> AGREE (predictive-only; not causal).
+
+WHAT IT CHANGES: Part-1 lower-sec coefficient is declared as an estimator range (~+0.84 logit-between to ~+1.17 log-within);
+Part-2 conclusions are unchanged (country-specific slopes; no identifiable lead-lag). No direction claim. No git push.

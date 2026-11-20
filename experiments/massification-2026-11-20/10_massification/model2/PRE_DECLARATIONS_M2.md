@@ -73,3 +73,14 @@ equivalence < 0.34 for the candidate truths; otherwise report **NOT identifiable
 regions). No threshold changed after results.
 
 **Failure rule:** failed fits are logged and excluded with counts; no imputation.
+
+---
+
+## GATE ACK (brief-013) — registered before M2b/M2c
+The binding fit/check/holdout table (SUCCESS_CRITERIA §2), tolerances (§3), verdict vocabulary (§4),
+and both Amendment A1 texts (SUCCESS_CRITERIA §A1 including PASS-CONDITIONAL and M2b/M2c authorization;
+STOP_RULES §A1 R13–R15) are copied **verbatim** into `GATE_ACK_BRIEF013.md` in this directory and are
+binding on M2b/M2c. Direction claims from cross-country/panel moments remain barred (R13); default
+direction verdict is EQUIVALENT. M2b = declared partial re-run of Parts 1–2 against the now-landed
+`10_massification/relations/data/`, same estimators/thresholds, dated amendment. M2c = the E1 two-shock
+estimator's own recovery test (simulated), predeclared before running, not a model fit.

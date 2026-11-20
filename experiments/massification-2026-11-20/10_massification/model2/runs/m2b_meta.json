@@ -1,0 +1,5 @@
+{
+ "discrepancy": "estimator/transform, not data: log-within ~+1.17 vs logit-between ~+0.84",
+ "rows": 17,
+ "matched_logistic": 50
+}

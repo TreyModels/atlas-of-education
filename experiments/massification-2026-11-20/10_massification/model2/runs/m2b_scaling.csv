@@ -1,0 +1,18 @@
+part,pair,estimator,exponent,se,n,n_cty
+scaling_M2b,lower-sec completion ~ lgdp,within FE log-log,-4.405256115385453e-16,0.017393735123597338,629,28
+scaling_M2b,lower-sec completion ~ lgdp,yearFE FE log-log,2.2821928681812893,0.3397264468340343,629,28
+scaling_M2b,lower-sec completion ~ lgdp_ppp,within FE log-log,1.2441271047619698e-17,0.0025791812420031496,548,28
+scaling_M2b,lower-sec completion ~ lgdp_ppp,yearFE FE log-log,1.9684141530082022,0.43481942334383294,548,28
+scaling_M2b,lower-sec completion (logit) ~ lgdp,within FE log-logit,1.127452687442167e-16,0.04880474130185367,629,28
+scaling_M2b,lower-sec completion (logit) ~ lgdp,yearFE FE log-logit,-9.324676464177543,1.7976267924231009,629,28
+scaling_M2b,lower-sec completion (logit) ~ lgdp_ppp,within FE log-logit,1.379336854948818e-16,0.012155313054549517,548,28
+scaling_M2b,lower-sec completion (logit) ~ lgdp_ppp,yearFE FE log-logit,-12.600767802927681,2.3881114123759897,548,28
+scaling_M2b,secondary GER ~ lgdp,within FE log-log,3.905640190988513e-16,0.013347527607365848,1042,30
+scaling_M2b,secondary GER ~ lgdp,yearFE FE log-log,1.5996975071672066,0.3651982332604354,1042,30
+scaling_M2b,secondary GER ~ lgdp_ppp,within FE log-log,4.1955969998822064e-16,0.0012051394956572353,740,30
+scaling_M2b,secondary GER ~ lgdp_ppp,yearFE FE log-log,1.5300118962019096,0.38451085624087533,740,30
+scaling_M2b,tertiary GER ~ lgdp,within FE log-log,-5.7283709385693565e-18,0.020380386392721998,1037,30
+scaling_M2b,tertiary GER ~ lgdp,yearFE FE log-log,-3.4625985175525367,0.6742470251365769,1037,30
+scaling_M2b,tertiary GER ~ lgdp_ppp,within FE log-log,2.8181280769074566e-16,0.004214934863673513,736,30
+scaling_M2b,tertiary GER ~ lgdp_ppp,yearFE FE log-log,-4.053579016393519,0.8082254727977602,736,30
+scaling_M2b,lower-sec completion (logit) ~ lgdp (eci sample),between (M2 estimator),1.3616543150241727,,28,28
