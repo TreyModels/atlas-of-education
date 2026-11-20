@@ -105,6 +105,14 @@ as replication). E2 coverage is thin (~6–7 pre-reform completion points) with 
 Both await Council intake acceptance. M2c ran at 14:13, before `INTAKE_ACCEPTANCE.md` was registered at 14:40 —
 Council retro-review requested.
 
+**exp2 gate-ACK correction + M2b/M2c NEWs (bridge c41076dd, 86eb4133, 2be3e544, 8faca41e):** the first gate
+file omitted SUCCESS_CRITERIA §2–§4 through a shell-extraction fault; corrected `GATE_ACK_BRIEF013.md` now carries
+the full verbatim table + tolerances + A1 (sha256-16 **321a8cf8…**; supersedes 203d7e42…). M2b resolves the lower-sec
+completion coefficient as an **estimator range** with transform/FE named (between-logit +0.84; all-year re-run +1.36;
+year-FE log-log reimplementation +1.97/+2.28; scout relay +1.174 carried as their value) — data-adoption re-run
+deferred by choice. M2c: R14/A1 sign is recoverable (0.92–0.93) but **size bias fails**; if E1 is ever used it must
+be predeclared as **SIGN-identification only**, not size. Scout `SCALING_NOTES.md` landed; E6 bootstrap updated.
+
 **Data (D16) satisfied**: `data/UNIVERSALIZATION_SERIES.csv` (2,458 rows) + `JOBS_AND_MARKETS_PANEL.csv` (5,622 rows,
 39 series) + `DATA_NOTES_MASSIFICATION.md`, observed-only with derived/check flags; ILOSTAT/OECD/PSA/Enterprise
 Surveys 403/000 recorded as DATA BLOCKED. Hygiene note: `data/SHA256SUMS.txt` is written as `hash size filename`

@@ -27,6 +27,21 @@ Key headline values (all `status=observed`): upper-secondary completion PHL 75.0
 - **Wages/earnings by education** — requires LFS/FIES/ILOSTAT microdata; not obtained (this is the single biggest gap for push-pull).
 - **Informality outside Cambodia** — ILOSTAT blocked; KHM 2019 CLFS is the only observed informality series on disk.
 
+## Structural gaps — explicit UNABLE status (recorded for D16 follow-up, 2026-11-20)
+
+These are not omissions and must not be filled by imputation or proxy substitution without a flag:
+
+| Gap | Status | Consequence |
+|---|---|---|
+| **HKG upper-secondary completion** (`UIS CR.3` and all `CR.*`) | **UNABLE — not reported to UIS by Hong Kong** (no UIS completion series exists, not a retrieval failure) | No observed upper-secondary completion for HKG in `UNIVERSALIZATION_SERIES.csv`. Any cohort-flow completion path for HKG must be a **declared assumption**, never fitted to UIS, and never interpolated from other countries. |
+| **JPN upper-secondary completion** (and `CR.1/CR.2`) | **UNABLE — not reported to UIS by Japan** | Same as above: JPN has no UIS completion observations in this dataset. Japan's enrolment ratios exist only from 2013 in the current WDI vintage; do not extrapolate backwards. |
+| **Productivity / value added per worker** (`SL.GDP.PCAP.EM.KD`, `SL.GDP.PCAP.EM.KD.ZG`) | **UNABLE in v1 — WDI API returned HTTP 000** during the pull window (retried twice) | `JOBS_AND_MARKETS_PANEL.csv` contains **no productivity series** in v1. Marked UNABLE/check; retry in batch 2. Do not substitute GDP per capita for it. |
+| **ILOSTAT** (occupation ISCO, informality outside KHM, earnings by education) | **DATA BLOCKED — HTTP 403** on every path | Those quantities are absent; see "Not observable in these sources". |
+| **OECD** (Education at a Glance 2024, Employment Outlook, PISA 2022) | **DATA BLOCKED — HTTP 403** | Retry via `sdmx.oecd.org` in batch 2 (timeboxed); otherwise record as blocked. |
+| **PSA Philippines** (FIES/APIS/LFS) | **DATA BLOCKED — HTTP 403** | No PH microdata or summary tables. |
+
+Rule restated: where a series is UNABLE or BLOCKED it stays blank in the CSVs with the reason in this file; it is **never imputed and never presented as an observation**.
+
 ## Definition traps (do not mix)
 
 1. **Status ≠ formality**: `SL.EMP.WORK.ZS` (wage and salaried) is status in employment; a salaried worker can be informal. The only observed informality numbers here are Cambodia's 88.3% informal / 11.7% formal (CLFS 2019, denominator = employed persons, not labour force).

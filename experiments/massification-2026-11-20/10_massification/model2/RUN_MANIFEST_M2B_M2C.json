@@ -2,7 +2,7 @@
  "phase": "massification",
  "owner": "experiment-runner-2",
  "scope": "10_massification/model2 only",
- "gate_ack": "GATE_ACK_BRIEF013.md sha256-16 203d7e42ea46831e",
+ "gate_ack": "GATE_ACK_BRIEF013.md sha256-16 321a8cf8581aaa8b (corrected: \u00a72-\u00a74 verbatim added)",
  "m2b": {
   "amendment": "AMENDMENT_M2b.md",
   "discrepancy": "estimator range +0.84..+2.3; scout relay +1.174; exact scout script not executable"
@@ -36,5 +36,10 @@
    "rows": 600,
    "sha": "02e233e55e73380b"
   }
- ]
+ ],
+ "bridge": {
+  "m2b": "c41076dd",
+  "m2c": "86eb4133",
+  "ack_task34": "2be3e544"
+ }
 }

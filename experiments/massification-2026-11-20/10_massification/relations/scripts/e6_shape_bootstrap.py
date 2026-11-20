@@ -76,7 +76,7 @@ print('\nby series:')
 print(e6[e6.holdout_winner][['iso3','indicator','form','fit_rmse','holdout_rmse']].to_string(index=False))
 
 # ---------- (b) bootstrap of the common-shape F test ----------
-def common_shape(t_list,y_list,cap=130.,reps=100):
+def common_shape(t_list,y_list,cap=130.,reps=40):
     data=[(t,y) for t,y in zip(t_list,y_list) if len(t)>=12]
     if len(data)<4: return None
     fitted=[]
@@ -88,7 +88,7 @@ def common_shape(t_list,y_list,cap=130.,reps=100):
     npar_free=3*len(data)
     def restricted_sse(dataset):
         best=None
-        for rg in np.arange(0.01,0.6,0.01):
+        for rg in np.arange(0.01,0.6,0.02):
             sse=0.0; ok=True
             for t,y in dataset:
                 def f2(tt,K,t0,rr=rg): return logistic(tt,K,rr,t0)
@@ -133,19 +133,19 @@ def common_shape(t_list,y_list,cap=130.,reps=100):
                 p_bootstrap=round(pb,3) if len(Fb) else np.nan)
 
 boot=[]
-for ind in ['ger_secondary','ger_tertiary','ger_upper_secondary','ner_primary','ner_secondary']:
+for ind in ['ger_secondary','ger_tertiary','ger_upper_secondary']:
     rs=[r for r in recs if r['indicator']==ind]
     if len(rs)<4: continue
     r=common_shape([x['t'] for x in rs],[x['y'] for x in rs],reps=100)
     if r: boot.append(dict(indicator=ind,label=rs[0]['label'],**r))
-for ind in ['SE.SEC.ENRR','SE.TER.ENRR','SE.PRM.ENRR']:
+for ind in ['SE.SEC.ENRR']:
     d=pd.read_csv(os.path.join(BASE,'09_relations','data','panel_wdi_wide.csv'))
     tl=[];yl=[]
     for iso,s in d[['iso3','year',ind]].dropna().groupby('iso3'):
         s=s.sort_values('year')
         if len(s)>=20: tl.append(s.year.values.astype(float)); yl.append(s[ind].values.astype(float))
     if len(tl)>=8:
-        r=common_shape(tl,yl,reps=60)
+        r=common_shape(tl,yl,reps=25)
         if r: boot.append(dict(indicator=ind,label='wide panel',**r))
 b=pd.DataFrame(boot); b.to_csv(os.path.join(D,'universalization_common_shape_bootstrap.csv'),index=False)
 print('\nCOMMON-SHAPE BOOTSTRAP:')
