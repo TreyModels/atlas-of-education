@@ -414,3 +414,23 @@ B1 — pre-run SHA snapshot reconstructed (30/33 match, original hash `89638b39�
   identical); C4 κ PASS (enforced 0/53; realised 20→1; binds 23/53; WINDOW-ONLY); C5 lower register PASS (80.76/80.896;
   m frozen; clip 0). The repair fixes the guard/projection/lower-register defects but the repaired bimodal class is
   **representation-only**; observed-path reproduction remains open (recovery = survival repair 51.63→81.25; q_O inert).
+
+## 2026-11-21 — Council cycle 16 merged (D142–D147): observed-path failure ruled; repair branch closed as artifact
+
+- **Adjudications:** EXP-11 AWC (WINDOW-ONLY stands; κ-STABLE never forward-usable; structural look-ahead reason);
+  EXP-12 ACCEPT clean (40/40 allowance-carried; allowance is a standing level); EXP-13 AWC (JOINT; precedence defect;
+  split unidentified; "fix survival only" barred); EXP-14 ACCEPT clean execution, **PATH-FAILED stands** (closest cell
+  corrected to primary 2013 −15.1463683 pp; C1 resolution failure; C2 repeated a-iv → capability lint; not blind but
+  negative credible).
+- **Scope corrections:** A10/D62 confirmed for untiered floor and **narrowed for bimodal** (phys_cap identical across six
+  values; capacity-bound 3193/6720→0; 1.15 past binding; floor take-up-limited) — D139 does not carry; D140 action
+  corrected; V23 denominator rule.
+- **Next line `(a) narrowed and conditional`:** the level loss is **localised to the participation margin**
+  (demand_official/cohort 0.900000 vs frozen 0.9956438553; admission 0.800000; primary-2024 gap 17.0507 pp; survival
+  identical). **Repair artifacts CLOSED** (no re-run/re-tune/v1.7; tier-menu route closed at 3/33). **Observed-path
+  question OPEN for exactly one conditional cell (EXP-18)** with a pre-committed tree and closing rule. Drift flags
+  named (fourth model-build; three of five slots read-only).
+- **Slate (D145):** EXP-16 PARTPROV (#1 count-blind), EXP-17 JOINT-COVER (#2), EXP-18 PART-REPAIR (#3 conditional),
+  EXP-19 PLACES-BOUND (#4), EXP-20 USE-REG (#5 drop-first; second cut EXP-19). **Four authoring rules binding**
+  (precedence; resolution pretest; arm tuple + capability lint; count-blind diagnostics). HELD unchanged; HKG DEFER;
+  D63 UNABLE; no proxy substitution outside EXP-19.

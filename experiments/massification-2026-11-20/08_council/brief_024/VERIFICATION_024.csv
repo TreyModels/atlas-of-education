@@ -1,0 +1,89 @@
+id,item,value,unit,source_path,column_or_row,derivation,label,verdict_bearing
+V16-a,closest A10 deviation cell,-15.1463683,pp,10_massification/extensions/synthetic_2026-11-20/generator_v1_6_repair/results/observed_path.csv,"deviation_A10_pp, minimum |x|",min over 33 rows; cell = primary 2013 (model 72.30 vs observed 87.45),DERIVED,record-correction
+V16-b,upper 2024 A10 deviation,-17.61957348,pp,10_massification/extensions/synthetic_2026-11-20/generator_v1_6_repair/results/observed_path.csv,deviation_A10_pp row upper_secondary 2024,57.40567982 - 75.0252533,DERIVED,record-correction
+V16-c,A10 cells within +/-5 pp,0,count,10_massification/extensions/synthetic_2026-11-20/generator_v1_6_repair/results/observed_path.csv,within_5pp_A10 == YES,count over 33 rows,DERIVED,yes
+V16-d,A00 cells within +/-5 pp,9,count,10_massification/extensions/synthetic_2026-11-20/generator_v1_6_repair/results/observed_path.csv,within_5pp_A00 == YES,primary 2013/2017/2021/2022/2023/2024 + upper 2022/2023/2024,DERIVED,yes
+V16-e,A10 median deviation by level,"-16.96 / -34.89 / -39.80",pp,10_massification/extensions/synthetic_2026-11-20/generator_v1_6_repair/results/observed_path.csv,deviation_A10_pp by level,median per level (11 rows each),DERIVED,yes
+V16-f,crossing maxima,"81.32282015 / 78.10918357 / 57.89432483",pp,10_massification/extensions/synthetic_2026-11-20/generator_v1_6_repair/results/crossing_check.csv,model_max_pp,three rows primary/lower/upper,DERIVED,yes
+V17-a,A10 primary 2024 completion,0.8125388365,ratio,10_massification/extensions/synthetic_2026-11-20/generator_v1_6_repair/results/panel_A10_repaired.csv,"completion_uis, country=SYN00_PHL_LIKE level=primary year=2024",read,DERIVED,yes
+V17-b,A10 primary 2024 admission rate,0.8,ratio,10_massification/extensions/synthetic_2026-11-20/generator_v1_6_repair/results/panel_A10_repaired.csv,"admitted_official/cohort = 1807869.952/2259837.44",computed,DERIVED,yes
+V17-c,A10 primary 2024 demand share,0.9,ratio,10_massification/extensions/synthetic_2026-11-20/generator_v1_6_repair/results/panel_A10_repaired.csv,"demand_official/cohort = 2033853.696/2259837.44",computed,DERIVED,yes
+V17-d,A10 primary 2024 survival,0.9233395869,ratio,10_massification/extensions/synthetic_2026-11-20/generator_v1_6_repair/results/panel_A10_repaired.csv,survival,read,DERIVED,yes
+V17-e,A10 primary chain,1.1 x 0.8 x 0.9233395869 = 0.8125388,identity,10_massification/extensions/synthetic_2026-11-20/generator_v1_6_repair/results/panel_A10_repaired.csv,completion_uis / measurement_factor / survival,recomputed product,DERIVED,yes
+V17-f,A00 primary 2024 admission = demand,0.9956438553,ratio,10_massification/extensions/synthetic_2026-11-20/generator_v1_6_repair/results/panel_A00_v13cols.csv,"admitted_official = demand_official = 2249993.261 on cohort 2259837.44",computed,DERIVED,yes
+V17-g,A00 primary 2024 survival,0.9233395869,ratio,10_massification/extensions/synthetic_2026-11-20/generator_v1_6_repair/results/panel_A00_v13cols.csv,survival,read,DERIVED,yes
+V17-h,A00 primary 2024 completion,1.0,ratio,10_massification/extensions/synthetic_2026-11-20/generator_v1_6_repair/results/panel_A00_v13cols.csv,completion_uis,read (clip),DERIVED,yes
+V17-i,observed primary 2024,98.30461884,pp,10_massification/extensions/synthetic_2026-11-20/generator_v1_6_repair/results/observed_path.csv,observed_pp row primary 2024,read,OBSERVED,yes
+V17-j,primary 2024 gap (observed - A10),17.0507,pp,10_massification/extensions/synthetic_2026-11-20/generator_v1_6_repair/results/observed_path.csv,observed_pp - model_A10_pp,computed,DERIVED,yes
+V18-a,participation margins,"0.995644 -> 0.900000 -> 0.800000",ratio,10_massification/extensions/synthetic_2026-11-20/generator_v1_6_repair/results/panel_A10_repaired.csv,"demand_official/cohort and admitted_official/cohort vs A00",computed,DERIVED,yes
+V19-a,closing cells,40,count,10_massification/extensions/floor_close_2026-11-20/results/FLOOR_CLOSE_RESULTS.csv,all rows,count,DERIVED,yes
+V19-b,closing cells by level,"primary 14 / lower 19 / upper 7 / tertiary 0",count,10_massification/extensions/floor_close_2026-11-20/results/FLOOR_CLOSE_RESULTS.csv,level,counts,DERIVED,yes
+V19-c,median share_allowance,0.8415227725255,share,10_massification/extensions/floor_close_2026-11-20/results/FLOOR_CLOSE_RESULTS.csv,share_allowance,median of 40,DERIVED,yes
+V19-d,share_allowance min,0.664551836181,share,10_massification/extensions/floor_close_2026-11-20/results/FLOOR_CLOSE_RESULTS.csv,share_allowance,min,DERIVED,yes
+V19-e,share_allowance max,0.980885758489,share,10_massification/extensions/floor_close_2026-11-20/results/FLOOR_CLOSE_RESULTS.csv,share_allowance,max,DERIVED,yes
+V19-f,closing branch,places 40/40,count,10_massification/extensions/floor_close_2026-11-20/results/FLOOR_CLOSE_RESULTS.csv,binding_branch_close,count of places,DERIVED,yes
+V19-g,anchor coverage PHL primary 2019,0.872165715040,places per cohort,10_massification/extensions/floor_close_2026-11-20/results/FLOOR_CLOSE_RESULTS.csv,"seat_coverage_close, country=SYN00_PHL_LIKE level=primary",read,DERIVED,yes
+V19-h,anchor Shapley shares,0.928545937956 / 0.043813549666 / 0.027640512379,share,10_massification/extensions/floor_close_2026-11-20/results/FLOOR_CLOSE_RESULTS.csv,share_allowance / share_places / share_demand anchor row,read,DERIVED,yes
+V19-i,negative shares: places,2,cells,10_massification/extensions/floor_close_2026-11-20/results/FLOOR_CLOSE_RESULTS.csv,share_places < 0,count,DERIVED,no
+V19-j,negative shares: demand,21,cells,10_massification/extensions/floor_close_2026-11-20/results/FLOOR_CLOSE_RESULTS.csv,share_demand < 0,count,DERIVED,no
+V19-k,Shapley efficiency residual,2.7755575615628914e-17,log points,10_massification/extensions/floor_close_2026-11-20/results/FLOOR_CLOSE_PANEL.json,efficiency_max_abs_residual,read,DERIVED,no
+V19-l,cells still binding 2025 / never 3 binding years,"28 / 52",cells,10_massification/extensions/floor_close_2026-11-20/FINDINGS.md,section 3 census table,DELIVERED (quoted),DELIVERED,no
+V20-a,chain identity error at verdict cell,1.91465732158e-11,ratio,10_massification/extensions/lower_def_2026-11-20/results/LOWER_DEF_RESULTS.csv,identity_abs_error_2021,read,DERIVED,yes
+V20-b,chain identity max error 53 cells,2.05882477733e-10,ratio,10_massification/extensions/lower_def_2026-11-20/results/LOWER_DEF_RESULTS.csv,identity_max_abs_error_lower_series,read,DERIVED,yes
+V20-c,lower gap shares,49.297828 / 50.702172 (rationing / survival),percent,10_massification/extensions/lower_def_2026-11-20/results/LOWER_DEF_RESULTS.csv,share_pct_d1 by factor,read,DERIVED,yes
+V20-d,top-minus-second,1.404344,pp,10_massification/extensions/lower_def_2026-11-20/results/LOWER_DEF_RESULTS.csv,share_gap_top_minus_second_pp,read,DERIVED,yes
+V20-e,required admission a*,0.939069193922,ratio,10_massification/extensions/lower_def_2026-11-20/results/LOWER_DEF_RESULTS.csv,required_admission_rate,read,DERIVED,yes
+V20-f,required entry coverage,0.816581907758,places per cohort,10_massification/extensions/lower_def_2026-11-20/results/LOWER_DEF_RESULTS.csv,required_entry_coverage,read,DERIVED,yes
+V20-g,required survival s*,0.936688813872,ratio,10_massification/extensions/lower_def_2026-11-20/results/LOWER_DEF_RESULTS.csv,required_survival,read,DERIVED,yes
+V20-h,survival ceiling at realised coverage,0.784589277801,ratio,10_massification/extensions/lower_def_2026-11-20/results/LOWER_DEF_RESULTS.csv,max_completion_at_surv_max,read,DERIVED,yes
+V20-i,shortfall at surv_max,2.301072,pp,10_massification/extensions/lower_def_2026-11-20/results/LOWER_DEF_RESULTS.csv,shortfall_at_surv_max_pp,read,DERIVED,yes
+V20-j,JOINT weight interval,"[0.466649, 0.525137]",weight,10_massification/extensions/lower_def_2026-11-20/results/LOWER_DEF_RESULTS.csv,joint_split_weight_interval,read,DERIVED,yes
+V20-k,gap path 2017/2022/2024,"+30.479462 / +7.839768 / -5.114640",pp,10_massification/extensions/lower_def_2026-11-20/results/LOWER_DEF_RESULTS.csv,gap_2017_pp / gap_2022_pp / gap_2024_pp,read,DERIVED,no
+V20-l,types short 2021,27,of 30,10_massification/extensions/lower_def_2026-11-20/results/LOWER_DEF_RESULTS.csv,types_with_shortfall_2021,read,DERIVED,no
+V21-a,PHL slope / half shift,"-0.000704 / 2.1348",per yr / pp,10_massification/extensions/kappa_fwd_2026-11-20/results/KAPPA_FWD_RESULTS.csv,slope_ratio_per_year / half_median_shift_pp,read,DERIVED,yes
+V21-b,KOR slope / half shift,"+0.002875 / 0.6354",per yr / pp,10_massification/extensions/kappa_fwd_2026-11-20/results/KAPPA_FWD_RESULTS.csv,slope_ratio_per_year / half_median_shift_pp,read,DERIVED,yes
+V21-c,KHM slope / half shift,"+0.017318 / 7.4361",per yr / pp,10_massification/extensions/kappa_fwd_2026-11-20/results/KAPPA_FWD_RESULTS.csv,slope_ratio_per_year / half_median_shift_pp,read,DERIVED,yes
+V21-d,CHN slope / half shift,"+0.041728 / 25.6573",per yr / pp,10_massification/extensions/kappa_fwd_2026-11-20/results/KAPPA_FWD_RESULTS.csv,slope_ratio_per_year / half_median_shift_pp,read,DERIVED,no
+V21-e,KOR hold-out excesses,"+0.6824 / +0.6506 / +0.5917",pp,10_massification/extensions/kappa_fwd_2026-11-20/results/KAPPA_FWD_SECONDARY.csv,"S-B1, iso3=KOR",read,DERIVED,yes
+V21-f,aggregate within / violations,"3/7 within, 4 violations",cells,10_massification/extensions/kappa_fwd_2026-11-20/results/KAPPA_FWD_RESULTS.csv,OVERALL row n_within_bound / n_violations,read,DERIVED,yes
+V21-g,pairs per half,4 / 9 / 5 / 2,pairs,10_massification/extensions/kappa_fwd_2026-11-20/results/KAPPA_FWD_RESULTS.csv,half_n_per_side,read,DERIVED,no
+V21-h,falsifier tripped flag,TRUE,bool,10_massification/extensions/kappa_fwd_2026-11-20/results/KAPPA_FWD_RESULTS.csv,OVERALL row note,read,DERIVED,yes
+V22-a,enforced violations,0,of 53,10_massification/extensions/synthetic_2026-11-20/generator_v1_6_repair/results/kappa_object_audit.csv,enforced_holds == True,count,DERIVED,yes
+V22-b,realised violations A00,20,of 53,10_massification/extensions/synthetic_2026-11-20/generator_v1_6_repair/results/kappa_object_audit.csv,A00_realised_completion_pp > bound_completion_units_pp,count,DERIVED,yes
+V22-c,realised violations A01D,1,of 53,10_massification/extensions/synthetic_2026-11-20/generator_v1_6_repair/results/kappa_object_audit.csv,realised_completion_pp > bound_completion_units_pp,count,DERIVED,yes
+V22-d,cap binds,23,of 53,10_massification/extensions/synthetic_2026-11-20/generator_v1_6_repair/results/kappa_object_audit.csv,cap_binds == 1,count,DERIVED,yes
+V22-e,max cap cut,27.69777912,pp,10_massification/extensions/synthetic_2026-11-20/generator_v1_6_repair/results/kappa_object_audit.csv,cap_cut_pp,max,DERIVED,yes
+V23-a,unfilled >= 0.10,17,of 30 rows,10_massification/extensions/synthetic_2026-11-20/generator_v1_6_repair/results/representation_cells.csv,unfilled >= 0.10,count,DERIVED,yes
+V23-b,queue >= 1.10,30,of 30 rows,10_massification/extensions/synthetic_2026-11-20/generator_v1_6_repair/results/representation_cells.csv,queue_ratio >= 1.10,count,DERIVED,yes
+V23-c,same-year coexistence,15,of 15 years,10_massification/extensions/synthetic_2026-11-20/generator_v1_6_repair/results/representation_cells.csv,"per year: upper unfilled >= 0.10 and lower queue >= 1.10",count by year,DERIVED,yes
+V23-d,same_level A00 vs A10,"0 vs 15",count,10_massification/extensions/synthetic_2026-11-20/generator_v1_6_repair/results/v1_6_checks.csv,S3 row,read,DERIVED,yes
+V24-a,phys_cap anchor path identical,TRUE,bool,10_massification/extensions/synthetic_2026-11-20/generator_v1_6_repair/results/phys_cap_sensitivity.csv,"primary_2024_pp / lower_2021_pp / upper_2024_pp across 6 values",all equal,DERIVED,yes
+V24-b,capacity-bound cells 1.00 -> 1.05,"3193 (0.4751488095) -> 0",cells,10_massification/extensions/synthetic_2026-11-20/generator_v1_6_repair/results/phys_cap_sensitivity.csv,capacity_bound_cells,read,DERIVED,yes
+V24-c,primary phys_cap/cohort 2024 at 1.15,1.05,ratio,10_massification/extensions/synthetic_2026-11-20/generator_v1_6_repair/results/phys_cap_sensitivity.csv,primary_phys_over_cohort_2024,read,DERIVED,yes
+V24-d,primary phys_cap/cohort 2024 at 1.08,1.0086,ratio,10_massification/extensions/synthetic_2026-11-20/generator_v1_6_repair/results/phys_cap_sensitivity.csv,primary_phys_over_cohort_2024,read,DERIVED,no
+V25-a,C1 child-wage delta,0.000000,pp,10_massification/extensions/synthetic_2026-11-20/generator_v1_6_repair/results/child_wage_A10.csv,"arm=A10, completion_uis upper 2024",read,DERIVED,yes
+V25-b,post-hoc x1.50 delta,-14.67982649,pp,10_massification/extensions/synthetic_2026-11-20/generator_v1_6_repair/results/child_wage_A10.csv,POSTHOC_wchild_x1.50 row,read,DERIVED,no
+V25-c,q_O=1.00 path count,3,of 33,10_massification/extensions/synthetic_2026-11-20/generator_v1_6_repair/results/sensitivity_arms.csv,"S_qO_100 observed_path_count",read,DERIVED,yes
+V25-d,q_O=0.85 upper 2024,76.54090642,pp,10_massification/extensions/synthetic_2026-11-20/generator_v1_6_repair/results/sensitivity_arms.csv,S_qO_085 upper_2024_pp,read,DERIVED,no
+V25-e,h_share +0.10 upper 2024,59.80246544,pp,10_massification/extensions/synthetic_2026-11-20/generator_v1_6_repair/results/sensitivity_arms.csv,S_hshare_plus upper_2024_pp,read,DERIVED,no
+V26-a,counterfactual identity,0,of 598080,10_massification/extensions/synthetic_2026-11-20/generator_v1_6_repair/results/v1_6_checks.csv,G2 row,read; 6720 x 89 = 598080,DERIVED,yes
+V26-b,schooling cells identical,23520,of 23520,10_massification/extensions/synthetic_2026-11-20/generator_v1_6_repair/results/v1_6_checks.csv,G3 row,read,DERIVED,yes
+V27-a,A00 panel sha256,47d4b082f4ba5838cc20fbb09e59dd3dd847ad25393b1ce091069c94496657e3,sha256,10_massification/extensions/synthetic_2026-11-20/generator_v1_6_repair/results/guard_report.json,guards.G1_a00_identity.sha256,read,DECLARED,yes
+V27-b,EXP-14 predeclaration sha256,6a554dc033828835431f65be2e5e218833fcdb56220baad8fbe53c3324e78991,sha256,10_massification/extensions/synthetic_2026-11-20/generator_v1_6_repair/results/guard_report.json,guards.G6.predecl sha256,read,DECLARED,yes
+V28-a,HKG stock-NER predeclaration sha256,6f5d3c169487f4b6e296e4bf1673ec0755e04499cf5d291c9ccd88089c73bb3e,sha256,10_massification/extensions/hkg_stock_ner_2026-11-20/RUN_MANIFEST.json,predeclaration_sha256 and SHA256SUMS line 1,read,DECLARED,yes
+V28-b,HKG design execution flag,false,bool,10_massification/extensions/hkg_stock_ner_2026-11-20/RUN_MANIFEST.json,execution_authorised / construct_test_verdict,read,DECLARED,yes
+V29-a,PHL classroom-student ratio elementary,"39 (2010) / 29 (2019) / 32 (2021)",students per classroom,10_massification/data/SCHOOL_EXPANSION.csv,"indicator, value, year",read,OBSERVED,no
+V29-b,PHL classroom-student ratio JHS,"54 / 39 / 44",students per classroom,10_massification/data/SCHOOL_EXPANSION.csv,indicator = classroom_student_ratio_junior_high_school,read,OBSERVED,no
+V29-c,PHL PTR high school,"37 (2000) / 27 (2014) / 24 (2017)",learners per teacher,10_massification/data/SCHOOL_EXPANSION.csv,indicator = pupil_teacher_ratio_high_school,read,OBSERVED,no
+V29-d,PHL congested-public shares,"90.0 / 76.8 / 66.0 / 60.1 / 57.7",percent,10_massification/data/SCHOOL_EXPANSION.csv,indicator = share_students_in_congested_public_elementary_schools (2021; no region key),read,OBSERVED,no
+V29-e,PHL classrooms backlog / flow,"110954 / 10000",classrooms,10_massification/data/SCHOOL_EXPANSION.csv,classrooms_needed_backlog / classrooms_needed_per_year (2019),read,OBSERVED,no
+V29-f,capacity delivery rows blocked,"number of public schools by year; classroom construction completed by year; number_of_classrooms_by_year; number_of_public_schools_by_year; senior_high_school_capacity_2016_2018",status,10_massification/data/STATE_CAPACITY.csv,status = unable,DELIVERED and re-read,DELIVERED,yes
+V30-a,upper-secondary completion systems,4 (CHN KHM KOR PHL),systems,10_massification/relations/data/UNIVERSALIZATION_TIMING.csv,series = completion_upper_secondary,distinct iso3,DERIVED,yes
+V30-b,upper-secondary pair count,43,pairs (8/19/11/5),10_massification/extensions/pipe_loo_2026-11-20/results/PIPE_LOO_PAIRS.csv,iso3 rows,DELIVERED (D135 quoted),DELIVERED,no
+V31-a,EXP-13 target provenance delta,0.136049,pp,10_massification/extensions/lower_def_2026-11-20/results/LOWER_DEF_RESULTS.csv,observed_minus_required_pp,read,DERIVED,no
+V31-b,observed PHL lower 2021,80.8960494995,percent,10_massification/extensions/lower_def_2026-11-20/results/LOWER_DEF_RESULTS.csv,observed_PHL_lower_2021,read,OBSERVED,no
+V31-c,current-rule completion at 2021 (A00),0.6740731179,ratio,10_massification/extensions/lower_def_2026-11-20/results/LOWER_DEF_RESULTS.csv,realised_chain_2021,read,DERIVED,no
+V31-d,A10 lower 2021,58.61505373,pp,10_massification/extensions/synthetic_2026-11-20/generator_v1_6_repair/results/lower_channel_report.csv,model_completion_pp,read,DERIVED,no
+V31-e,A10 lower 2021 chain,1.10 x 0.681569976 x 0.7818186593 = 0.5861505373,identity,10_massification/extensions/synthetic_2026-11-20/generator_v1_6_repair/results/lower_channel_report.csv,chain_product and chain_pp,read,DERIVED,no
+V32-a,share_allowance quartiles,"0.7908 / 0.8415 / 0.9242",share,10_massification/extensions/floor_close_2026-11-20/FINDINGS.md,section 4 text,DELIVERED (quoted),DELIVERED,no
+V32-b,phi_allowance,0.139762,log points,10_massification/extensions/floor_close_2026-11-20/FINDINGS.md,section 4 (= ln 1.15),DELIVERED (quoted),DELIVERED,no

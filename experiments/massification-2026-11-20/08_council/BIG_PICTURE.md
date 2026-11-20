@@ -400,3 +400,25 @@ imputation as observation. E1 stays PARKED; direction claims EQUIVALENT.
    (guarded by D133 per-system register + CHN non-forward note); (R2) a guard/test defect being mis-read as a model
    failure (guarded by D134's defect-kind distinctions). **If only one thing mattered this week:** EXP-12 FLOOR-CLOSE
    (it can retract a recorded disposition). **Drop-first: EXP-15 CONV-REG.**
+
+## Cycle 16 addendum (observed-path failure ruled; repair branch closed as artifact; D142–D147)
+
+1. **Goal restated:** massification produced by schooling–government–market interaction; the live model line is now
+   **`(a) narrowed and conditional`** — the observed-path failure is **localised to the participation margin**
+   (`demand_official/cohort` 0.900000 vs the frozen block's 0.9956438553; unfilled Tier O removes a further 10 pp;
+   primary-2024 gap 17.0507 pp; **survival identical** 0.9233395869). Phase CLOSED at PARTIAL/DESCRIPTIVE/EQUIVALENT.
+2. **KEEP/PARK/KILL delta.** KEEP — EXP-16 PARTPROV (the one conditional cell that decides whether the generator line
+   continues), EXP-17 JOINT-COVER, EXP-19 PLACES-BOUND (proxy cell, DERIVED only), the representation-only class
+   (closed artifacts, no re-tune), the per-system κ descriptive register, the v1.2 placement label. PARK — the
+   observed-path question (OPEN only for EXP-18, VOID unless EXP-16 licenses it), EXP-20 USE-REG (drop-first), HKG
+   (DEFER-HKG; frozen design unrun), exit-cost/induction layers (D101/D104). KILL — the repair artifacts as live
+   objects (`v1.5`/`v1.6` closed as artifacts: no re-run, no re-tune, no v1.7 with a moved number); the "re-specify the
+   tier menu" route (CLOSED outright: q_O=1.00 reaches only 3/33); "fix survival only" (barred by D140's reachability);
+   the a-iv authoring class (capability lint); count-computing diagnostics; "demand falsified" language.
+3. **One thread:** identify the object that sets the level (EXP-16), then repair it only if the repair is a **declaration**
+   (EXP-18 under its pre-committed tree) — with a **closing rule** that ends the generator line if the bar is missed.
+4. **Drift check (red-flag count 2, named):** (R1) a fourth model-build in four cycles — the shape of a tuning loop;
+   (R2) three of five slots are read-only decompositions/registers — the "process becomes the work" drift. Mitigated by
+   the conditional successor (predeclared only after a measured verdict), no new behavioural parameter, the closing
+   rule, and R27's last-re-specification limit. **If only one thing mattered:** EXP-16. **Drop-first: EXP-20** (second
+   cut EXP-19).

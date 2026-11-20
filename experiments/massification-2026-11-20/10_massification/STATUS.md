@@ -1247,3 +1247,33 @@ in the manifest/guard). Verdict string unchanged; no threshold altered.
   generator face the observed path** (0/33, worse than A00's 9/33) — the bimodal arm is a **representation-only model
   class**; the observed-path question remains open. The whole recovery is the survival repair (primary 51.63 → 81.25);
   q_O is inert. No re-fit; parks stay.
+
+---
+
+## 3ae. Council cycle 16 merged (D142–D147) — observed-path failure ruled; repair branch closed as artifact; one conditional cell
+
+- **Cycle 16 adjudicated** the slate: EXP-11 AWC (WINDOW-ONLY; κ-STABLE must never read forward-usable; structural
+  look-ahead reason added; 3/7 with CHN contributing 0); EXP-12 ACCEPT clean (40/40 allowance-carried; median share
+  84.15%; allowance is a **standing level**, year-to-year mover is places 34/6/0); EXP-13 AWC (JOINT; precedence defect;
+  split unidentified 0.466649–0.525137; "survival loses 50.7%" and "fix survival only" barred); EXP-14 ACCEPT clean
+  execution, **PATH-FAILED stands** (record correction: closest A10 cell is **primary 2013, −15.1463683 pp**; C1 is a
+  **resolution failure**; C2 repeated the a-iv error → **capability lint**; the run was **not blind** — a peek biases
+  toward passing, so the negative is credible, but no "specified without outcome knowledge" claim may be made).
+- **Scope corrections:** **A10/D62** confirmed for the untiered floor gate and **narrowed for the bimodal class** (all
+  six phys_cap values identical at the anchor; capacity-bound 3193/6720 at 1.00 → 0 at ≥1.05; 1.15 is past the binding
+  regime; the bimodal floor is **take-up-limited**) — **D139 does not carry to the bimodal class**; **D140's
+  action-reading** corrected (split unidentified; "fix survival only" barred); V23 denominator rule recorded
+  (17/30 cells vs 15/15 years).
+- **Next model line: `(a) NARROWED AND CONDITIONAL`.** The observed-path loss is **localised to the participation
+  margin** — `demand_official/cohort` **0.900000** vs the frozen block's **0.9956438553**, unfilled Tier O removes a
+  further 10 pp (`admission` 0.800000); primary-2024 gap **17.0507 pp** with **survival identical** (0.9233395869) and
+  m identical. **Repair branch CLOSED as artifacts** (`v1.5`/`v1.6`: no re-run, no re-tune, no v1.7 with a moved
+  number; the "re-specify the tier menu" route CLOSED outright — q_O=1.00 reaches only 3/33). **Observed-path question
+  OPEN for exactly one conditional cell (EXP-18)**, VOID unless EXP-16 returns DUPLICATED-PRIMITIVES or MIXED, with a
+  **pre-committed decision tree and closing rule**. Two drift flags named (fourth model-build in four cycles; three of
+  five slots read-only).
+- **Next slate (D145):** EXP-16 PARTPROV (#1, count-blind; decides whether the generator line continues), EXP-17
+  JOINT-COVER (#2, one declared λ, adopted nothing), EXP-18 PART-REPAIR (#3, conditional), EXP-19 PLACES-BOUND (#4,
+  proxy cell), EXP-20 USE-REG (#5 drop-first; second cut EXP-19). **Four authoring rules binding:** precedence;
+  resolution pretest; arm tuple + capability lint; count-blind diagnostics. HELD unchanged (D146); HKG DEFER; D63 UNABLE;
+  no proxy substitution outside EXP-19.

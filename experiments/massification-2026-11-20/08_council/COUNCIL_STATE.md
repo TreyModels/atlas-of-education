@@ -174,3 +174,20 @@ evidence-spine correction (Z2); see `brief_018/SYNTHESIS_018.md` and `DECISIONS.
    return/take-up margin; test the child-wage shock in A10 (κ OFF) on the pre-cap object; every leg names its arm by the
    full switch tuple; retire the (b) family for the successor in favour of EXP-7's ≥17/33 bar. **No external message sent
    this cycle** (D87).
+
+## Next 3 actions (cycle 16, brief 024 — observed-path failure ruled; D142–D147)
+
+1. **Predeclare and run EXP-16 and EXP-17 in parallel** (Lead): copy their blocks verbatim from
+   `brief_024/SYNTHESIS_024.md` §5; **EXP-16 PARTPROV is count-blind** (the driver must refuse to run if the observed
+   file is opened; no 33-cell count may be computed); **EXP-17 JOINT-COVER** reports λ* and adopts nothing; then
+   **EXP-18 PART-REPAIR only if EXP-16 returns `DUPLICATED-PRIMITIVES` or `MIXED`** (its closing rule: bar missed →
+   generator line closes at representation-only, line becomes (b)+(c)); **EXP-19 after EXP-17**; **EXP-20 last or
+   dropped**. Re-derive every block number from disk before freeze (D113a; VERIFICATION_024.csv).
+2. **Apply the four authoring rules to every new predeclaration** (Lead): precedence stated; resolution pretest (a leg
+   that cannot move ≥1 object is UNFIRABLE-BY-DESIGN, not scored as FAIL); arm tuple + capability lint (build fails if a
+   named object cannot exist in the named arm); count-blind diagnostics. Parks stand: A3 KILLED; exit-cost/induction
+   PARKED; HKG DEFER-HKG; C1–C4 closed; phase verdict untouched. No proxy substitution outside EXP-19; HELD named.
+3. **Record and report** (Lead): the observed-path failure is localised to the participation margin; the repair
+   artifacts are closed as artifacts (no re-run/re-tune); the per-system κ register is descriptive only; the HKG design
+   is preserved unrun. Any successor generator is predeclared only after EXP-16 returns and only under the tree. **No
+   external message sent this cycle** (D87).
