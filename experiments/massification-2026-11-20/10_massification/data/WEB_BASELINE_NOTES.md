@@ -32,3 +32,21 @@ K-12 RA 10533 (signed 2013; first SHS cohort SY2016-17; first K-12 graduates 201
 3. DepEd: try Wayback captures of `deped.gov.ph/datasets/` and the EBEIS pages for school/teacher counts.
 4. PRC: scrape per-examination NLE results pages if an aggregate series is needed (tens of pages; defer).
 5. CHN provinces: needs a Chinese-language NBS provincial yearbook source; not attempted.
+
+## BEPER 2019 — retrieval status (D49): DATA BLOCKED
+
+The named **World Bank *Philippines: Basic Education Public Expenditure Review* (BEPER, 2019)** could not be retrieved from public sources in this pass. Routes tried and results (2026-11-20):
+- `https://documents1.worldbank.org/curated/en/429921603168506339/pdf/Philippines-Basic-Education-Public-Expenditure-Review.pdf` → **HTTP 000**
+- `https://documents.worldbank.org/curated/en/429921603168506339/pdf/...` → **HTTP 403**
+- Wayback `2023id_` of the documents1 URL → **HTTP 404**; of the documents URL → **HTTP 429** (rate-limited)
+- `.docx` variant surfaced in search only; not fetched.
+**No citation of BEPER numbers is made anywhere in this data layer.** If the Council needs BEPER figures, retrieval must be retried from a network that permits documents.worldbank.org (or from the World Bank Open Knowledge Repository page for the same title).
+
+## SCHOOL_EXPANSION.csv v2 (A7/D52) — what changed
+
+`SCHOOL_EXPANSION.csv` is no longer only a blocked ask: **19 observed rows + 2 check rows + 6 unable rows**. Observed values obtained from public PIDS publications (PIDS 2025 education book ch.5; PIDS Discussion Paper 2025-10): classroom-student ratios 2010 vs 2021 (elementary 1:39→1:32, JHS 1:54→1:44), SY2019-20 DepEd ratios (elementary 1:29, JHS 1:39, SHS 1:31), classroom backlog 110,954 rooms, +10,000 rooms/year need, 9,225 non-compliant schools, 28,508 structurally unsafe classrooms, and 2021 congestion shares for five NCR districts/provinces. Teacher-side expansion (PTR 37→27→24; ~200k + ~40k hiring) already present. Still DATA BLOCKED: raw DepEd school/classroom counts by year, DPWH construction figures, SHS capacity 2016–18, HEI openings, BEPER tables.
+
+## AWAITING USER APPROVAL (no requests sent)
+Per status §3h, these external requests are held and have **not** been sent to any agency:
+1. PSA microdata request — FIES / APIS / LFS (PH regional employment, earnings by education, tutoring expenditure items).
+2. World Bank Enterprise Surveys — credential/skills module and PHL 2023 wave access.

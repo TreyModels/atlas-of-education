@@ -1,7 +1,5 @@
-Traceback (most recent call last):
-  File "/Users/treymenefee/Library/Mobile Documents/com~apple~CloudDocs/Downloads/DeepSeek/massification_2026-11-20/10_massification/model/anchor.py", line 186, in <module>
-    main()
-  File "/Users/treymenefee/Library/Mobile Documents/com~apple~CloudDocs/Downloads/DeepSeek/massification_2026-11-20/10_massification/model/anchor.py", line 134, in main
-    cr = dict(M0=crossing(sim['completion_lower'], 50, years), M1=crossing(sim['ger_primary'], 100, years),
-                                                                           ~~~^^^^^^^^^^^^^^^
-KeyError: 'ger_primary'
+demand_led/law_only: fit 2.03 hold 4.42 crossings {'M0': 1960, 'M1': 1966, 'M2': None, 'M3': None, 'M4': 1960} R6fp=False
+demand_led/capacity_gated: fit 1.85 hold 4.51 crossings {'M0': 1960, 'M1': 1966, 'M2': None, 'M3': None, 'M4': 1960} R6fp=False
+demand_led/capacity_only: fit 3.29 hold 4.55 crossings {'M0': 1979, 'M1': 1966, 'M2': 2028, 'M3': 2031, 'M4': 1960} R6fp=False
+demand_led/none: fit 1.05 hold 6.11 crossings {'M0': 1967, 'M1': 1966, 'M2': None, 'M3': None, 'M4': 1960} R6fp=False
+education_led/law_only: fit 2.16 hold 5.19 crossings {'M0': 1960, 'M1': 1966, 'M2': None, 'M3': None, 'M4': 1960} R6fp=False

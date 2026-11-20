@@ -62,3 +62,26 @@ re-set.
 - **Declared limitations:** enforcement is proxied (no attendance/truancy series); per-student/revenue capacity and
   annual classroom construction are DATA BLOCKED (data ask); the gate parameters are declared, not estimated, and
   their sensitivity is reported rather than tuned.
+
+## AMENDMENT A10 / R29 (Council D62–D64; applied before the descriptive run)
+1. **Gate form changed to a power function:** `G(C) = C^κ`, **κ ∈ [0.5, 1.0]** (declared default κ=0.75; sensitivity
+   κ∈{0.5,0.75,1.0}), replacing the earlier logistic. `C` is the **observed** capacity trajectory (never a
+   target/fitted); weights predeclared with sensitivity; missing inputs dropped, not imputed.
+2. **Floor/ceiling split (level-specific, non-monotone):** capacity is a **necessary delivery precondition for FLOOR
+   universalization** (primary/lower-secondary completion, intake) and **not sufficient for CEILING universalization**
+   (upper-secondary/tertiary completion). The capacity-gated push therefore applies fully to floor levels and only a
+   **declared saturating share** (ceiling_share = 0.25, declared) to ceiling levels; the model **may not generate
+   upper-secondary/tertiary universalization the record does not show** (R6/R29). No tuning to rescue.
+3. **Ceiling residual predeclared (report after the run):** observed residual to the ceiling threshold per level —
+   PHL **upper-secondary completion 75.03 vs 90 → residual 14.97 pp**; tertiary GER 52.99 vs 50 → **crossed (mass
+   ceiling reached; residual −2.99 pp, i.e. above threshold)**; lower-secondary completion 92.41 vs 90 → crossed
+   (residual −2.41 pp); primary 98.30 vs 95 → crossed (residual −3.30 pp). Candidate accounts to list/test where an
+   observable exists: (i) foregone income/opportunity cost of upper-secondary attendance; (ii) demand/returns to
+   upper-secondary vs tertiary; (iii) gate structure/credential (transition rules, tertiary selection); (iv)
+   enforcement (compulsory duration/conditionality/penalties). Where no discriminating observable exists, report
+   **UNABLE**, not a story; no direction claim (R13).
+4. **Law-only vs law×capacity requirement:** the capacity-timing claim is credited **only if** the
+   `law × capacity` arm **beats the law-only arm on the crossing-year estimand** (M2/M4 timing and the M3
+   non-crossing). If they tie or capacity-gated performs worse, report **EQUIVALENT/FAIL** — capacity does not earn
+   the claim (R24/R29). The capacity-response function is fixed under portability; thresholds/trajectories remain
+   declared country inputs (R20/R28).

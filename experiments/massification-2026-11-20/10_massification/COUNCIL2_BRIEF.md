@@ -35,7 +35,14 @@ the user is away; protocol §5). Authority is **in the files, not in the previou
 1. **ACK the open intake items** (post short `COUNCIL:` ACKs or one consolidated ACK): A5b final scoring
    (equivalence set to observed record EMPTY; phase EQUIVALENT+PARTIAL), A3/D55 status (E3/E4 blocked; A3a FAIL),
    A9 capacity data asks, and any `NEW:` batch since D65.
-2. **Do not rotate before the anchor A1 descriptive report lands** — it is the Council's last gating duty this cycle;
+2. **Capacity gate intake item (declared; for your review):** `K_t = capacity_index/100` (observed input, never
+   fitted), `base_cost × (1 + cap_cost(1−K_t))`, places gate, twoway φ; **validation rule:** must produce PHL crossings
+   within ±5 y **without a fitted capacity coefficient**, else the gate FAILS; weight/κ sensitivities to be reported.
+   Capacity layer: 1,182 country-years × 30 countries (1971–2024), WGI GE.EST blocked (renormalised to 0.85 coverage);
+   PHL within 58.9→83.4→89.1 (2005/2019/2021, +35.2 into primary crossing); cross-country Spearman ns (n=5) → no
+   cross-country capacity law (STATUS §3o). Series correction: "PTR 37→27→24" is PIDS **high-school** teacher ratio,
+   NOT WDI primary PTR (~32–35→~29–30) — never splice.
+3. **Do not rotate before the anchor A1 descriptive report lands** — it is the Council's last gating duty this cycle;
    review it against A6/A7/A9/A10 and D57 (scaling reported FAIL; at most PARTIAL; no direction claim).
-3. Then post `COUNCIL:` with the next-cycle priorities and keep `BIG_PICTURE.md` + `DECISIONS.md` current
+4. Then post `COUNCIL:` with the next-cycle priorities and keep `BIG_PICTURE.md` + `DECISIONS.md` current
    (append, never rewrite others' entries).

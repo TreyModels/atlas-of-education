@@ -103,13 +103,14 @@ def run(iso, rival='complementary', priors=None, t0=T0, t1=T1, shocks=None):
                               + th.get('m_ter', 0.0) * lg, 0.02, 0.95))
         # STATE-CAPACITY CHANNEL (declared, capacity-gated): effective push series supplied by the runner as an
         # observed-input-derived scalar per year; applied to the affected level only. 0 = channel off.
-        _pv = pr.get('push_series', {}).get(t, 0.0)
-        _lvl = pr.get('push_level', 'upper')
+        _pv = pr.get('push_series', {}).get(t, 0.0)          # floor-level push
+        _pvc = pr.get('push_ceiling', {}).get(t, 0.0)         # ceiling-level push (saturating share, A10)
         if _pv:
-            if _lvl in ('upper', 'all'):
-                p_up = float(np.clip(p_up + _pv, 0.02, 0.98))
-            if _lvl in ('tertiary', 'all'):
-                p_ter = float(np.clip(p_ter + _pv, 0.02, 0.97))
+            p_pri = float(np.clip(p_pri + _pv, 0.02, 0.995))
+            p_low = float(np.clip(p_low + _pv, 0.02, 0.99))
+        if _pvc:
+            p_up = float(np.clip(p_up + _pvc, 0.02, 0.98))
+            p_ter = float(np.clip(p_ter + _pvc, 0.02, 0.97))
         # --- enrolment stocks from cohort flow (synthetic cohort sizes from pop at entry ages)
         ent = pop[6] * intake_rate
         prim = ent * cyc['primary']

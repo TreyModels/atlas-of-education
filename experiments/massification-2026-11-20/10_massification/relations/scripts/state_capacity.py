@@ -44,19 +44,36 @@ def norm(c,v):
     x=(float(v)-lo)/(hi-lo)
     if sg<0: x=1.0-x
     return float(np.clip(x,0,1))
+# within-country bounds (1970-2024) for a trajectory index comparable over TIME but not across countries
+WB={}
+for c,lab,w,sg in COMP:
+    for iso,g in W.groupby('iso3'):
+        s=g[c].dropna()
+        if len(s)>=10:
+            WB[(c,iso)]=(float(s.min()),float(s.max()),sg)
+def norm_within(c,iso,v):
+    lo,hi,sg=WB.get((c,iso),(np.nan,np.nan,1))
+    if pd.isna(v) or pd.isna(lo) or hi<=lo: return np.nan
+    x=(float(v)-lo)/(hi-lo)
+    if sg<0: x=1.0-x
+    return float(np.clip(x,0,1))
 rows=[]
 for _,r in W.iterrows():
-    comps={}
+    comps={}; compw={}
     for c,lab,w,sg in COMP:
-        comps[c]=norm(c,r[c])
+        comps[c]=norm(c,r[c]); compw[c]=norm_within(c,r.iso3,r[c])
     avail=[(c,w) for c,lab,w,sg in COMP if not pd.isna(comps[c])]
-    if not avail: continue
-    tot_w=sum(w for _,w in avail)
+    availw=[(c,w) for c,lab,w,sg in COMP if not pd.isna(compw[c])]
+    if len(avail)<3: continue
+    tot_w=sum(w for _,w in avail); tota=sum(w for _,_,w,_ in COMP)
     idx=sum(w*comps[c] for c,w in avail)/tot_w
+    tot_w2=sum(w for _,w in availw) if availw else np.nan
+    idx_w=sum(w*compw[c] for c,w in availw)/tot_w2 if availw else np.nan
     rows.append(dict(iso3=r.iso3,country=r.country,year=int(r.year),
         **{c:comps[c] for c,_,_,_ in COMP},
-        capacity_index=round(100*idx,2), n_components=len(avail),
-        weight_coverage=round(tot_w/sum(w for _,_,w,_ in COMP),3),
+        capacity_index=round(100*idx,2),
+        capacity_within=(round(100*idx_w,2) if not pd.isna(idx_w) else np.nan),
+        n_components=len(avail), weight_coverage=round(tot_w/tota,3),
         ptr_primary_raw=r.ptr_p, spend_gdp_raw=r.spend_gdp, tax_gdp_raw=r.tax_gdp,
         teachers_total=(r['SE.PRM.TCHR'] if 'SE.PRM.TCHR' in W else np.nan),
         governance_available=False))
@@ -68,12 +85,12 @@ cap.to_csv(os.path.join(D,'state_capacity.csv'),index=False)
 print('capacity panel:',cap.shape,'| countries:',cap.iso3.nunique(),'| years:',int(cap.year.min()),'-',int(cap.year.max()))
 print('six-country index (selected years):')
 piv=cap[cap.iso3.isin(SIX)].pivot_table(index='year',columns='iso3',values='capacity_index')
-print(piv.loc[[1970,1980,1990,2000,2010,2020]].round(1).to_string() if 1970 in piv.index else piv.head().round(1).to_string())
+print(piv.loc[[y for y in [1975,1985,1995,2005,2015,2024] if y in piv.index]].round(1).to_string())
 
 # ---------------- alignment with crossing years ----------------
 al=[]
 for iso in SIX:
-    sub=cap[cap.iso3==iso].set_index('year').sort_index()
+    sub=cap[(cap.iso3==iso)&cap.capacity_within.notna()&(cap.weight_coverage>=0.55)].set_index('year').sort_index()
     for level in ['primary_universal','lower_secondary_universal','upper_secondary_mass','tertiary_mass']:
         h=T[(T.iso3==iso)&(T.level==level)]
         if len(h)==0: continue
@@ -83,7 +100,7 @@ for iso in SIX:
         cy_use=cy if pd.notna(cy) else np.nan
         def at(y):
             if pd.isna(y): return np.nan
-            s=sub.loc[(sub.index>=y-1)&(sub.index<=y+1),'capacity_index']
+            s=sub.loc[(sub.index>=y-1)&(sub.index<=y+1),'capacity_within']
             return round(float(s.mean()),1) if len(s) else np.nan
         c_pre=at(cy_use-5); c_at=at(cy_use); c_post=at(cy_use+5)
         al.append(dict(iso3=iso,level=level,crossing_status=h.status,
@@ -98,7 +115,7 @@ print('\nALIGNMENT (six countries x milestones):'); print(al.to_string(index=Fal
 
 # ---------------- lead-lag: does capacity lead completion? (5-year differences) ----------------
 def spearman_lag(iso,capc,out,milestone):
-    sub=cap[cap.iso3==iso][['year',capc]].dropna().sort_values('year').set_index('year')
+    sub=cap[(cap.iso3==iso)&(cap.weight_coverage>=0.55)][['year',capc]].dropna().sort_values('year').set_index('year')
     Wl=W[W.iso3==iso][['year',out]].dropna().sort_values('year').set_index('year')
     j=sub.join(Wl,how='inner').sort_index()
     if len(j)<15: return []
@@ -117,8 +134,8 @@ def spearman_lag(iso,capc,out,milestone):
     return out_rows
 ll=[]
 for iso in SIX:
-    ll+=spearman_lag(iso,'capacity_index','SE.PRM.CMPT.ZS','primary completion')
-    ll+=spearman_lag(iso,'capacity_index','SE.SEC.CMPT.LO.ZS','lower-secondary completion')
+    ll+=spearman_lag(iso,'capacity_within','SE.PRM.CMPT.ZS','primary completion')
+    ll+=spearman_lag(iso,'capacity_within','SE.SEC.CMPT.LO.ZS','lower-secondary completion')
 ll=pd.DataFrame(ll)
 if len(ll): ll.to_csv(os.path.join(D,'capacity_leadlag.csv'),index=False)
 print('\nLEAD-LAG (5y differences, within country):')
@@ -132,7 +149,7 @@ for level in ['primary_universal','lower_secondary_universal','upper_secondary_m
         h=T[(T.iso3==iso)&(T.level==level)].iloc[0]
         cy=h.crossing_mid if pd.notna(h.crossing_mid) else h.crossing_hi
         if pd.isna(cy): continue
-        c=cap[(cap.iso3==iso)&(cap.year>=1980)&(cap.year<=2000)]['capacity_index'].mean()
+        c=cap[(cap.iso3==iso)&(cap.year>=1980)&(cap.year<=2000)&(cap.weight_coverage>=0.55)]['capacity_within'].mean()
         if pd.isna(c): continue
         xs.append(float(c)); ys.append(float(cy))
     if len(xs)>=4:
@@ -145,6 +162,6 @@ cc=pd.DataFrame(cc); cc.to_csv(os.path.join(D,'capacity_crosscountry.csv'),index
 print('\nCROSS-COUNTRY (capacity 1980-2000 vs crossing year):'); print(cc.to_string(index=False))
 
 # ---------------- PHL narrative numbers ----------------
-phl=cap[cap.iso3=='PHL'][['year','capacity_index','ptr_primary_raw','spend_gdp_raw','tax_gdp_raw']].dropna(subset=['ptr_primary_raw'])
+phl=cap[cap.iso3=='PHL'][['year','capacity_index','capacity_within','weight_coverage','ptr_primary_raw','spend_gdp_raw','tax_gdp_raw']].dropna(subset=['ptr_primary_raw'])
 print('\nPHL PTR path (observed):')
 print(phl[phl.year.isin([1990,1995,2000,2005,2010,2015,2020,2024])].to_string(index=False))

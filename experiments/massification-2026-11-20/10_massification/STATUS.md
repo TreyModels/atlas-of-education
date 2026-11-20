@@ -352,6 +352,29 @@ Rotation log: no rotation has occurred yet. Council rotation is **scheduled** (a
 Rotation rule: when a rotation happens, post `OP: rotation — <role> → <replacement>` with the handoff path and record
 it in CHANGELOG. No rotation has occurred yet.
 
+## 3o. Capacity layer landed + SERIES CORRECTION (scout NEW; data-hunter STATE_CAPACITY)
+
+- **Capacity index built (scout `relations/data/state_capacity.csv` + `CAPACITY_LAYER.md`):** **1,182 country-years
+  × 30 countries, 1971–2024**, declared weights; WGI **GE.EST blocked → index renormalised to 0.85 coverage** (partial
+  index labelled, missing sub-dimensions excluded, never inferred — R28).
+- **PHL within-country capacity path: 58.9 (2005) → 83.4 (2019) → 89.1 (2021)**, i.e. **+35.2 points into the primary
+  ≥90 crossing (2017)** — consistent with capacity as a floor precondition (A9/A10), not a ceiling mechanism.
+- **Cross-country capacity does NOT predict crossing timing:** Spearman **+0.15 / +0.10 / +0.41 / +0.30, all ns,
+  n=5** → country-specific alignment, **not a cross-country law** (no capacity claim; R28).
+- **SERIES CORRECTION (binding):** the **"PTR 37→27→24"** figure is the **PIDS high-school (classroom-based) teacher
+  ratio**, **not** WDI primary PTR (which runs **~32–35 then ~29–30**). Record both separately; **never splice them in
+  any claim**; `SCHOOL_EXPANSION.csv` rows are the **high-school** ratio (data-hunter to mirror this distinction in
+  `DATA_NOTES_MASSIFICATION.md`/`STATE_CAPACITY_NOTES.md`).
+- **Anchor A1 status:** the crash fix **is applied** (`model/anchor.py` updated; run progressing in `model/anchor.log`:
+  demand_led law_only fit 2.03 / hold 4.42, capacity_gated fit 1.85 / hold 4.51, crossings M0 1960, M1 1966, M2/M3
+  None, M4 1960). **`anchor_out/` is still EMPTY → NO anchor result is claimed**; the partial log already indicates a
+  timing miss (crossings ~1960/1966 vs observed primary 2017 / lower-sec 2024 / tertiary 2024–25) and that
+  capacity-gated does **not** beat law-only on crossings (D61 alignment FAIL on this partial run). Final report must
+  come from exp1 with `anchor_out/` populated + A10/R29 requirements in the predeclaration.
+- **Council-2 intake list addition (for rotation after A1):** declared capacity gate (`K_t = capacity_index/100`
+  observed; `base_cost × (1 + cap_cost(1−K_t))`; places gate; twoway φ), **validation rule** (must produce PHL
+  crossings within ±5 y **without a fitted capacity coefficient**, else the gate FAILS), and weight/κ sensitivities.
+
 ## 4. Next three actions for `repo-auditor`
 
 1. **Council gate:** get the Council's final `COUNCIL:` post for brief 013 (SUCCESS_CRITERIA + STOP_RULES are

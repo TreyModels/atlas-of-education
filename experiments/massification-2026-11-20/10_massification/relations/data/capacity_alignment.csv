@@ -1,25 +1,25 @@
 iso3,level,crossing_status,crossing_year_used,capacity_5y_before,capacity_at_crossing,capacity_5y_after,capacity_change_pre,capacity_rising_before,note
-PHL,primary_universal,crossed,2019.0,43.8,57.5,59.0,13.7,yes,
-PHL,lower_secondary_universal,crossed,2023.5,57.0,59.0,,2.0,yes,
-PHL,upper_secondary_mass,censored_above_at_first_obs,1999.0,46.4,45.5,37.7,-0.9,no,censored: uses upper-bound year
-PHL,tertiary_mass,crossed,2024.5,57.6,61.3,,3.7,yes,
+PHL,primary_universal,crossed,2019.0,49.5,84.7,87.5,35.2,yes,
+PHL,lower_secondary_universal,crossed,2023.5,83.1,87.5,,4.4,yes,
+PHL,upper_secondary_mass,censored_above_at_first_obs,1999.0,71.0,74.0,58.0,3.0,yes,censored: uses upper-bound year
+PHL,tertiary_mass,crossed,2024.5,85.7,91.5,,5.8,yes,
 KHM,primary_universal,not_crossed_by_last_obs,,,,,,unknown,censored: uses upper-bound year
 KHM,lower_secondary_universal,not_crossed_by_last_obs,,,,,,unknown,censored: uses upper-bound year
 KHM,upper_secondary_mass,not_crossed_by_last_obs,,,,,,unknown,censored: uses upper-bound year
 KHM,tertiary_mass,not_crossed_by_last_obs,,,,,,unknown,censored: uses upper-bound year
-CHN,primary_universal,crossed,2013.0,68.9,69.2,56.1,0.3,yes,
-CHN,lower_secondary_universal,crossed,2015.0,70.1,67.9,31.9,-2.2,no,
-CHN,upper_secondary_mass,crossed,2011.0,46.3,70.2,67.7,23.9,yes,
-CHN,tertiary_mass,crossed,2016.5,70.3,67.6,31.2,-2.7,no,
-HKG,primary_universal,crossed,1978.5,45.7,52.5,55.4,6.8,yes,
-HKG,lower_secondary_universal,crossed,2015.5,76.8,75.1,68.3,-1.7,no,
-HKG,upper_secondary_mass,censored_above_at_first_obs,2001.0,20.9,75.1,77.5,54.2,yes,censored: uses upper-bound year
-HKG,tertiary_mass,crossed,2007.5,75.7,76.0,77.0,0.3,yes,
-KOR,primary_universal,censored_above_at_first_obs,1971.0,0.0,22.9,22.8,22.9,yes,censored: uses upper-bound year
-KOR,lower_secondary_universal,censored_above_at_first_obs,2003.0,47.0,50.3,62.6,3.3,yes,censored: uses upper-bound year
-KOR,upper_secondary_mass,censored_above_at_first_obs,2000.0,47.4,47.4,54.4,0.0,no,censored: uses upper-bound year
-KOR,tertiary_mass,censored_above_at_first_obs,2000.0,47.4,47.4,54.4,0.0,no,censored: uses upper-bound year
-JPN,primary_universal,censored_above_at_first_obs,1971.0,0.0,36.3,62.5,36.3,yes,censored: uses upper-bound year
-JPN,lower_secondary_universal,censored_above_at_first_obs,2013.0,19.8,59.9,56.7,40.1,yes,censored: uses upper-bound year
-JPN,upper_secondary_mass,censored_above_at_first_obs,1999.0,47.1,42.5,25.8,-4.6,no,censored: uses upper-bound year
-JPN,tertiary_mass,crossed,2006.0,26.8,24.1,29.2,-2.7,no,
+CHN,primary_universal,crossed,2013.0,51.0,45.8,37.6,-5.2,no,
+CHN,lower_secondary_universal,crossed,2015.0,51.0,38.4,,-12.6,no,
+CHN,upper_secondary_mass,crossed,2011.0,45.9,50.3,38.0,4.4,yes,
+CHN,tertiary_mass,crossed,2016.5,50.5,38.0,,-12.5,no,
+HKG,primary_universal,crossed,1978.5,75.0,68.2,63.7,-6.8,no,
+HKG,lower_secondary_universal,crossed,2015.5,50.9,47.0,,-3.9,no,
+HKG,upper_secondary_mass,censored_above_at_first_obs,2001.0,55.9,56.1,54.3,0.2,yes,censored: uses upper-bound year
+HKG,tertiary_mass,crossed,2007.5,60.4,44.4,49.0,-16.0,no,
+KOR,primary_universal,censored_above_at_first_obs,1971.0,,64.5,55.4,,unknown,censored: uses upper-bound year
+KOR,lower_secondary_universal,censored_above_at_first_obs,2003.0,38.7,42.5,41.2,3.8,yes,censored: uses upper-bound year
+KOR,upper_secondary_mass,censored_above_at_first_obs,2000.0,37.3,43.7,40.7,6.4,yes,censored: uses upper-bound year
+KOR,tertiary_mass,censored_above_at_first_obs,2000.0,37.3,43.7,40.7,6.4,yes,censored: uses upper-bound year
+JPN,primary_universal,censored_above_at_first_obs,1971.0,,,,,unknown,censored: uses upper-bound year
+JPN,lower_secondary_universal,censored_above_at_first_obs,2013.0,,36.7,38.0,,unknown,censored: uses upper-bound year
+JPN,upper_secondary_mass,censored_above_at_first_obs,1999.0,20.0,,,,unknown,censored: uses upper-bound year
+JPN,tertiary_mass,crossed,2006.0,,,,,unknown,

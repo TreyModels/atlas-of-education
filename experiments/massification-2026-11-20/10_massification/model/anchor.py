@@ -61,8 +61,11 @@ def capacity_index(years, ptr, fisc):
     return C
 
 
-def gate(C, C0=0.5, s=0.15):
-    return 1.0 / (1.0 + np.exp(-(C - C0) / s))
+KAPPA = 0.75   # A10: G(C) = C^kappa, kappa in [0.5,1.0] declared (sensitivity reported)
+
+
+def gate(C, kappa=KAPPA):
+    return float(max(C, 0.0) ** kappa)
 
 
 def arms(years, C):
@@ -76,10 +79,14 @@ def arms(years, C):
         if 2018 <= t:  m = max(m, 1.0)       # free tertiary
         marks[t] = m
     out = {}
-    out['law_only'] = {t: PUSH * marks[t] for t in years}
-    out['capacity_gated'] = {t: PUSH * marks[t] * gate(C[t]) for t in years}
-    out['capacity_only'] = {t: PUSH * gate(C[t]) for t in years}
-    out['none'] = {t: 0.0 for t in years}
+    CEIL = 0.25   # declared saturating share to ceiling levels (floor-only capacity channel, A10)
+    # floor push: primary/lower-secondary progression; ceiling push: upper/tertiary at CEIL of the gated amount
+    floor = {t: PUSH * marks[t] * gate(C[t]) for t in years}
+    ceil = {t: CEIL * PUSH * marks[t] * gate(C[t]) for t in years}
+    out['law_only'] = {'floor': {t: PUSH * marks[t] for t in years}, 'ceiling': {t: PUSH * marks[t] for t in years}}
+    out['capacity_gated'] = {'floor': floor, 'ceiling': ceil}
+    out['capacity_only'] = {'floor': {t: PUSH * gate(C[t]) for t in years}, 'ceiling': {t: CEIL * PUSH * gate(C[t]) for t in years}}
+    out['none'] = {'floor': {t: 0.0 for t in years}, 'ceiling': {t: 0.0 for t in years}}
     return out
 
 
@@ -116,19 +123,25 @@ def main():
             from scipy.optimize import differential_evolution
             def obj(z):
                 th = theta_from_z(z)
-                th['push_series'] = push; th['push_level'] = 'all'
+                th['push_series'] = {**push['floor'], **{k: push['ceiling'].get(k, 0.0) for k in push['floor']}}
+                th['push_level'] = 'all'
                 h = M.run('PHL', rival=rival, priors=th)
-                sim = {k: {x['year']: x[k] for x in h} for k in K.LEVEL_KEYS}
-                m, n = K.metrics(sim, OBS.get('PHL', {}), (1999, 2013))
+                sim_fit = {k: {x['year']: x[k] for x in h} for k in K.LEVEL_KEYS}
+                m, n = K.metrics(sim_fit, OBS.get('PHL', {}), (1999, 2013))
                 return m if n else 1e6
             res = differential_evolution(obj, bounds=[(0, 1)] * len(K.KEYS), seed=4242, maxiter=18, popsize=6,
                                          tol=1e-3, polish=False, workers=1)
             th = theta_from_z(res.x)
-            th['push_series'] = push; th['push_level'] = 'all'
+            th['push_series'] = {**push['floor']}
+            # ceiling levels receive the saturating share; model applies push to upper/tertiary only via push_ceiling
+            th['push_ceiling'] = push['ceiling']; th['push_level'] = 'all'
             h = M.run('PHL', rival=rival, priors=th)
-            sim = {k: {x['year']: x[k] for x in h} for k in K.LEVEL_KEYS}
-            fr = K.fit_metrics(sim, OBS.get('PHL', {}), (1999, 2013))
-            hr = K.fit_metrics(sim, OBS.get('PHL', {}), (2014, 2024))
+            sim = {k: {x['year']: x[k] for x in h} for k in ('completion_primary', 'completion_lower',
+                                                              'completion_upper', 'ger_primary', 'ger_lower',
+                                                              'ger_upper', 'ger_tertiary')}
+            sim_fit = {k: sim[k] for k in K.LEVEL_KEYS}
+            fr = K.fit_metrics(sim_fit, OBS.get('PHL', {}), (1999, 2013))
+            hr = K.fit_metrics(sim_fit, OBS.get('PHL', {}), (2014, 2024))
             # milestones (official IDs): M0 lower-sec completion >=50; M1 primary GER >=100; M2 lower-sec completion >=90;
             # M3 upper-sec completion >=90 (must NOT cross by 2024); M4 tertiary GER >=50
             cr = dict(M0=crossing(sim['completion_lower'], 50, years), M1=crossing(sim['ger_primary'], 100, years),
