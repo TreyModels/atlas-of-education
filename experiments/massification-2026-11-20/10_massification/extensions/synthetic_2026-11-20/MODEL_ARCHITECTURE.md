@@ -316,8 +316,8 @@ ceiling never did — is read as the junction: **induction at the floor, exit co
 
 | frame element | where it already lives | status |
 |---|---|---|
-| literacy = takeoff prerequisite | `MODEL_ARCHITECTURE.md` Amendment A1 (v1.2 Layer 1c/2b) | declared assumption, now **theory-grounded** by assembly §3.2 — still not evidence |
-| school formats persons (schedule-discipline, numeracy) | A3 household block (school/both/work/neither) | declared assumption, theory-grounded — **not encoded as an "induction" parameter** |
+| literacy = takeoff prerequisite | `MODEL_ARCHITECTURE.md` Amendment A1 (v1.2 Layer 1c/2b) | declared assumption; **candidate grounding — PARKED per D104 (DT1 null); no theory citation** |
+| school formats persons (schedule-discipline, numeracy) | A3 household block (school/both/work/neither) | declared assumption; **candidate grounding — PARKED per D104 (DT1 null); no theory citation** — not encoded as an "induction" parameter |
 | demographic overflow → quality collapse | v1.2 (Amendment A2; `generator_v1_2/`) | declared synthetic mechanism, now being tested |
 | shadow education = niche expansion at the gates | `shadow_module/` (Amendment A3 + W2 frozen predeclaration) | declared design; not yet built/run |
 | credential = junction (competence + asymmetric exit) | WT2/WT4/DT5 tests (descriptive) | test slate, not a model parameter |

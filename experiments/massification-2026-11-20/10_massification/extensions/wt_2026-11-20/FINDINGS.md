@@ -226,3 +226,20 @@ with empty values and **no number is imputed**.
 | `results/run_info.json` | thresholds, input/output hashes, verdict map emitted by the run |
 | `_determinism/run_b/` | second independent run; byte-identical outputs |
 | `RUN_MANIFEST.json` | sha256 of predeclaration, code, inputs, results + determinism evidence |
+
+---
+
+## Council record corrections (cycle 13, D108 — Lead-applied; no re-execution)
+
+1. **WT4 fragility sentence corrected.** The earlier sentence "one more year at 2022 levels would flip it" is **false**
+   under the frozen ≥3-consecutive-observed-years rule: only 2022 is below the 71.433 threshold, so it would take
+   **two** more observed years. The correct fragility statement is: **2023 clears the 5 pp trigger by 0.496 pp** and
+   **2024 clears the 2 pp recovery band by 0.592 pp** — the SUPPORTED verdict is descriptively correct but sits on thin
+   margins.
+2. **WT2 annotated VOID as a test of the paper** (verdict NOT SUPPORTED stands as scored): the decoupling leg compares
+   % growth with a pp change, so it is near-vacuous; on a common pp metric decoupling holds 7/10 (KHM, PHL, VNM reverse);
+   the reversal leg counts dips, not exits (PHL's 2018 tertiary dip recovers to 51.072 by 2025). No interpretive weight
+   either way.
+3. **WT5 NOT SCORED corrected to a Council-side authoring error**: the brief-019 block's 1.889 is cross-year
+   (HKG 2010 senior ÷ 1996 primary); the only same-year primary+senior pair on disk is HKG 1996 = 40/45 = 0.889.
+   The worker's NOT SCORED is upheld; the real shadow test is the v1.3 module (EXP-4 A3-S).

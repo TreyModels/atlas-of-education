@@ -1,0 +1,92 @@
+{
+  "checks_summary": {
+    "c1": "PASS",
+    "c2": "PASS",
+    "c3": "PASS",
+    "c4": "FAIL",
+    "c4a": "FAIL",
+    "c4b": "FAIL",
+    "c4c": "PASS",
+    "c5": "PASS",
+    "c6": "PASS"
+  },
+  "determinism": {
+    "floats": "%.10g",
+    "method": "two clean runs into separate output directories, cmp on every results CSV",
+    "wall_clock_in_outputs": false
+  },
+  "generator": "code/sim_v1_3.py",
+  "hashes": {
+    "ablation": {
+      "_ablation/synthetic_panel_v1_3_shadow_off.csv": "14729c5141a71dd9aaf87a5ad2e973a84b5f04603577aae627f2833276fac5ac"
+    },
+    "code_sha256": "d714a4f4eb657dd880f3800282583d6fd0983fe33ead75dc1c0fceb8ffb3daf8",
+    "frozen_parameters_csv_sha256": "cb49d3197b911451f8b1e32080fbe6d095f181440572e1a2b72005dc4302703a",
+    "params_md_sha256": "2b144985aa5b53a426afec0b9df8646ff3f49d803744dc0f2ae73778f22ff84d",
+    "results": {
+      "shadow_checks_detail_v1_3.csv": "0548b6067d0827a45a4f0aa8c7611dd843582f4fb2f697f4c6dfcc3d3f32a206",
+      "shadow_checks_v1_3.csv": "e6a83de509362fbeb1e1e987e9b2b30dd1ff1e13905d56db0938cab911bd68f1",
+      "shadow_country_inputs_audit.csv": "8620316d3427183c3d22110616ee8f712218d35b42c05ae0d6f07264c2c61f86",
+      "shadow_decomposition_v1_3.csv": "db8b7643d2b35f91954c0951af9a22a8500a1f089c4fd79823c60300af2851a9",
+      "shadow_gates_v1_3.csv": "df3cab007ce5fbe9a48d58b0701d04e6d762591848ca1517a634c8f897edb351",
+      "shadow_sensitivity_v1_3.csv": "49c2d6a9e753513aaa0d0b33367883c1e7d8796a23858ce8fad20db37d70f366",
+      "synthetic_panel_v1_3.csv": "47d4b082f4ba5838cc20fbb09e59dd3dd847ad25393b1ce091069c94496657e3"
+    },
+    "v1_2_code_sha256": "61123aa9370a407487407bf3ff4b97287aea67cac5f90629e540a6e8cc855e7c",
+    "v1_2_panel_sha256": "14729c5141a71dd9aaf87a5ad2e973a84b5f04603577aae627f2833276fac5ac"
+  },
+  "host_gdp_2020": {
+    "SYN00_PHL_LIKE": 6993.894137887697,
+    "SYN18": 890.8479068108974,
+    "SYN28": 48270.81143109761
+  },
+  "host_mapping": {
+    "SYN_HKG_LIKE": "SYN28",
+    "SYN_KHM_LIKE": "SYN18",
+    "SYN_PHL_LIKE": "SYN00_PHL_LIKE"
+  },
+  "host_mapping_rule": "HKG=highest 2020 gdppc; PHL=SYN00_PHL_LIKE; KHM=lowest 2020 gdppc (shadow-blind)",
+  "host_mapping_stable_under_feedback": true,
+  "host_mapping_under_feedback": {
+    "SYN_HKG_LIKE": "SYN28",
+    "SYN_KHM_LIKE": "SYN18",
+    "SYN_PHL_LIKE": "SYN00_PHL_LIKE"
+  },
+  "label": "SYNTHETIC",
+  "numpy": "2.4.6",
+  "panel": {
+    "countries": 30,
+    "levels": [
+      "primary",
+      "lower_secondary",
+      "upper_secondary",
+      "tertiary"
+    ],
+    "rows": 6720,
+    "years": [
+      1970,
+      2025
+    ]
+  },
+  "python": "3.11.17",
+  "rng": "numpy PCG64 (np.random.default_rng), single stream, v1.2 draw order, shadow block draws nothing",
+  "seed": 20261120,
+  "sensitivity": {
+    "cells": 31,
+    "file": "results/shadow_sensitivity_v1_3.csv"
+  },
+  "spec": {
+    "frozen_shadow_predeclaration": "shadow_module/PRE_DECLARATIONS.md",
+    "frozen_shadow_predeclaration_sha256": "cf8c61cb818cd63acfb2ada594bc9541bfcb0711f801e13b7eee3b86508f94f2",
+    "implementation_note": "IMPLEMENTATION_NOTE.md",
+    "implementation_note_n1": "IMPLEMENTATION_NOTE_N1.md",
+    "implementation_note_n1_sha256": "fa12944f75575b5b810140247248d3eee81a4b2e0a738f1593412a5710b20df6",
+    "implementation_note_sha256": "b367b7daa85f126f359b2c9bd2c3fff37e20361700502241402bc2bcee16153a",
+    "inherited_v1_2_predeclaration_sha256": "fde18d405d875167977b350a925c28248c3007d2813dcdb29219d3baf0b95f16",
+    "local_copy": "PRE_DECLARATIONS.md",
+    "local_copy_sha256": "bdb205b236334d8688431c65dd556740ada36426d6fb008f86c28c04c31fddc0",
+    "s1_note": "shadow_module/PRE_DECLARATIONS_S1_NOTE.md",
+    "s1_note_sha256": "af49a616a7b57c4ef23a693c155d022cd17817f66f5acafba4dc6798dedb65eb"
+  },
+  "statement": "Synthetic data from declared assumptions only. Not evidence, not an estimate, not a forecast, no causal or direction claim, no real country modelled. The shadow block is a declared household demand rule evaluated on this generator's own gate/queue state."
+}

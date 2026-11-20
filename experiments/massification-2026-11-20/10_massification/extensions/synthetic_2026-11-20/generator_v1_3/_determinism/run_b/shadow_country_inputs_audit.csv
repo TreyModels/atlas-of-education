@@ -1,0 +1,33 @@
+label,country_type,host_country,quantity,value,unit,provenance,enters,is_behavioural
+SYNTHETIC,SYN_HKG_LIKE,SYN28,phi,0.94,probability,"OBSERVED (WDI/ILO 2019, 1 - vulnerable-employment share; declared interpretation)",V = phi*...,no
+SYNTHETIC,SYN_HKG_LIKE,SYN28,s,0.0305,share of mean monthly income,DERIVED / DECLARED fee share of mean monthly household income (PARAMETERS.csv C04-C06),-b_F ln(1+s/y),no
+SYNTHETIC,SYN_HKG_LIKE,SYN28,sigma,0.55,log units,DECLARED income dispersion; no Gini series on disk (C07-C09),y_q/ybar lay-out,no
+SYNTHETIC,SYN_HKG_LIKE,SYN28,nu,g1=0.10; g2=0.62; g3=0.22,share of cohort,DERIVED from observed UIS out-of-school rates + DECLARED split (C10-C12),D* = sum_g nu_g D_g,no
+SYNTHETIC,SYN_HKG_LIKE,SYN28,oos_upper,5.428,percent,OBSERVED UIS SDG4 2020 (C13),constrains nu,no
+SYNTHETIC,SYN_PHL_LIKE,SYN00_PHL_LIKE,phi,0.677,probability,"OBSERVED (WDI/ILO 2019, 1 - vulnerable-employment share; declared interpretation)",V = phi*...,no
+SYNTHETIC,SYN_PHL_LIKE,SYN00_PHL_LIKE,s,0.04,share of mean monthly income,DERIVED / DECLARED fee share of mean monthly household income (PARAMETERS.csv C04-C06),-b_F ln(1+s/y),no
+SYNTHETIC,SYN_PHL_LIKE,SYN00_PHL_LIKE,sigma,0.8,log units,DECLARED income dispersion; no Gini series on disk (C07-C09),y_q/ybar lay-out,no
+SYNTHETIC,SYN_PHL_LIKE,SYN00_PHL_LIKE,nu,g1=0.30; g2=0.35; g3=0.10,share of cohort,DERIVED from observed UIS out-of-school rates + DECLARED split (C10-C12),D* = sum_g nu_g D_g,no
+SYNTHETIC,SYN_PHL_LIKE,SYN00_PHL_LIKE,oos_upper,24.737,percent,OBSERVED UIS SDG4 2020 (C13),constrains nu,no
+SYNTHETIC,SYN_KHM_LIKE,SYN18,phi,0.464,probability,"OBSERVED (WDI/ILO 2019, 1 - vulnerable-employment share; declared interpretation)",V = phi*...,no
+SYNTHETIC,SYN_KHM_LIKE,SYN18,s,0.021,share of mean monthly income,DERIVED / DECLARED fee share of mean monthly household income (PARAMETERS.csv C04-C06),-b_F ln(1+s/y),no
+SYNTHETIC,SYN_KHM_LIKE,SYN18,sigma,0.75,log units,DECLARED income dispersion; no Gini series on disk (C07-C09),y_q/ybar lay-out,no
+SYNTHETIC,SYN_KHM_LIKE,SYN18,nu,g1=0.28; g2=0.13; g3=0.02,share of cohort,DERIVED from observed UIS out-of-school rates + DECLARED split (C10-C12),D* = sum_g nu_g D_g,no
+SYNTHETIC,SYN_KHM_LIKE,SYN18,oos_upper,56.987,percent,OBSERVED UIS SDG4 2020 (C13),constrains nu,no
+SYNTHETIC,ALL THREE (shared rule),,a_0,-4.8,logit / declared,"DECLARED, frozen (PARAMETERS.csv B01-B23)",Theta / R / V / D*,YES-shared-gate-indexed
+SYNTHETIC,ALL THREE (shared rule),,a_g,-2.8,logit / declared,"DECLARED, frozen (PARAMETERS.csv B01-B23)",Theta / R / V / D*,YES-shared-gate-indexed
+SYNTHETIC,ALL THREE (shared rule),,b_Z,2,logit / declared,"DECLARED, frozen (PARAMETERS.csv B01-B23)",Theta / R / V / D*,YES-shared-gate-indexed
+SYNTHETIC,ALL THREE (shared rule),,b_V,1,logit / declared,"DECLARED, frozen (PARAMETERS.csv B01-B23)",Theta / R / V / D*,YES-shared-gate-indexed
+SYNTHETIC,ALL THREE (shared rule),,b_D,2,logit / declared,"DECLARED, frozen (PARAMETERS.csv B01-B23)",Theta / R / V / D*,YES-shared-gate-indexed
+SYNTHETIC,ALL THREE (shared rule),,b_y,0.6,logit / declared,"DECLARED, frozen (PARAMETERS.csv B01-B23)",Theta / R / V / D*,YES-shared-gate-indexed
+SYNTHETIC,ALL THREE (shared rule),,b_F,0.8,logit / declared,"DECLARED, frozen (PARAMETERS.csv B01-B23)",Theta / R / V / D*,YES-shared-gate-indexed
+SYNTHETIC,ALL THREE (shared rule),,delta,"{0: 0.02, 1: 0.3, 2: 0.3, 3: 0.25, 4: 0.2}",logit / declared,"DECLARED, frozen (PARAMETERS.csv B01-B23)",Theta / R / V / D*,YES-shared-gate-indexed
+SYNTHETIC,ALL THREE (shared rule),,w_Q,0.4,logit / declared,"DECLARED, frozen (PARAMETERS.csv B01-B23)",Theta / R / V / D*,YES-shared-gate-indexed
+SYNTHETIC,ALL THREE (shared rule),,w_pi,0.4,logit / declared,"DECLARED, frozen (PARAMETERS.csv B01-B23)",Theta / R / V / D*,YES-shared-gate-indexed
+SYNTHETIC,ALL THREE (shared rule),,w_kappa,0.2,logit / declared,"DECLARED, frozen (PARAMETERS.csv B01-B23)",Theta / R / V / D*,YES-shared-gate-indexed
+SYNTHETIC,ALL THREE (shared rule),,r_EAP,0.087,logit / declared,"DECLARED, frozen (PARAMETERS.csv B01-B23)",Theta / R / V / D*,YES-shared-gate-indexed
+SYNTHETIC,ALL THREE (shared rule),,H,20,logit / declared,"DECLARED, frozen (PARAMETERS.csv B01-B23)",Theta / R / V / D*,YES-shared-gate-indexed
+SYNTHETIC,ALL THREE (shared rule),,dS,"{0: 0.0, 1: 3.0, 2: 3.0, 3: 4.0, 4: 0.0}",logit / declared,"DECLARED, frozen (PARAMETERS.csv B01-B23)",Theta / R / V / D*,YES-shared-gate-indexed
+SYNTHETIC,ALL THREE (shared rule),,omega,"(0.2, 0.2, 0.2, 0.2, 0.2)",logit / declared,"DECLARED, frozen (PARAMETERS.csv B01-B23)",Theta / R / V / D*,YES-shared-gate-indexed
+SYNTHETIC,ALL THREE (shared rule),,zq,"(-1.2816, -0.5244, 0.0, 0.5244, 1.2816)",logit / declared,"DECLARED, frozen (PARAMETERS.csv B01-B23)",Theta / R / V / D*,YES-shared-gate-indexed
+SYNTHETIC,HOST-MAPPING RULE,,host_assignment,HKG=highest 2020 gdppc; PHL=SYN00_PHL_LIKE; KHM=lowest 2020 gdppc,rule,IMPLEMENTATION_NOTE.md sec.1 (shadow-blind income rule),gate state source only (not a demand-equation term),no

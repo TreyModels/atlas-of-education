@@ -124,3 +124,19 @@ evidence-spine correction (Z2); see `brief_018/SYNTHESIS_018.md` and `DECISIONS.
    non-null — then only a declared, ablation-tested term (R4/R27, D81-2); (b) **no induction naming** until DT1 AND DT2
    both return non-null. Record WT/DT outcomes in `DECISIONS.md`; no direction claim; no C1–C4 reopening. **No external
    message sent this cycle** (bridge times out; files are the memory — D87).
+
+## Next 3 actions (cycle 13, brief 021 — WT/DT adjudication + SR-9; D108–D113)
+
+1. **Merge + dispatch** (Lead): D108–D113 are merged. Copy the five anchoring blocks verbatim from
+   `brief_021/SYNTHESIS_021.md` §4; predeclare; dispatch **EXP-1 CEIL-ATTRIB and EXP-3 M1-NER first**, EXP-2 A3-D
+   **after CEIL-ATTRIB**, EXP-4 A3-S (v1.3 shadow build) after the v1.2.1 addendum is delivered; **EXP-5 ASYM-K is
+   drop-first** (not dispatched unless capacity remains). Enforce D113b: no further paper-test slate this phase.
+2. **Fix the record items before the next model run** (Lead): (i) v1.2 FINDINGS §1.2 — delete/repair the cross-year
+   "1.136 (upper 2018)" ratio and restate `m = 1.10` as a **convention** with the 1.09–1.11 window; (ii)
+   `MODEL_ARCHITECTURE.md` Amendment A4 — relabel A1/A3 from "theory-grounded" to "candidate grounding — PARKED per
+   D104; no theory citation"; (iii) HKG checklist SR-2 path status note (reads predecl-only `v1_2/`; delivered artifacts
+   are in `generator_v1_2/`); (iv) WT record corrections (WT4 fragility sentence; WT2 VOID annotation).
+3. **Gate the HKG run** (Council + Lead): SR-9 is AUTHORISE-WITH-CONDITIONS. Execute only when **H1** (M1-NER construct
+   equivalence: |stock−flow| ≤ 2.0 pp in the 85–95 band and ≤1 y crossing difference) and H2–H6 hold; verify checklist
+   §2 hashes + determinism; report `BLOCKED-*` as a terminal state and `TRANSFER-FAILS` as the informative outcome.
+   No HKG/portability/phase-verdict claim. **No external message sent this cycle** (D87).

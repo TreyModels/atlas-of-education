@@ -219,3 +219,15 @@ manifests and error logs.
   `ner ≤ ger` hold); predecl `aa756f8b…`; smoke test PHL-like first-sustained NER ≥90 = 2007, ≥95 = 2016 (SYNTHETIC,
   diagnostic only). **Declared limitation: cohort-flow NER analogue, not the UIS stock-based NER** — the HKG timing
   test is now runnable at the interface but SR-9 (Council authority) remains open. No HKG run performed.
+
+## 2026-11-20 (reactivation batch 5) — Council cycle 13: WT/DT adjudicated, both gates parked, SR-9 granted with conditions, five experiments
+
+- **D108–D113 merged**: WT ACCEPTED (WT2 VOID as paper test; WT4 fragility sentence corrected; WT5 cross-year error
+  recorded as Council-side); DT ACCEPTED (DT4 NULL-BY-CONSTRUCTION; DT1 scoped; DT5 near-circular). Both conditional
+  gates confirmed **PARKED** (exit-cost layer; induction grounding). **v1.2 recorded PASS-CONDITIONAL** with three
+  record corrections applied (m = 1.10 restated as convention; cross-year 1.136 ratio removed from v1.2 FINDINGS; A4
+  "theory-grounded" → "candidate grounding — PARKED per D104"; HKG SR-2 path status note). **SR-9:
+  AUTHORISE-WITH-CONDITIONS (H1–H6)** — HKG diagnostic transfer gated on the M1-NER construct-equivalence test and five
+  other conditions; no run executed; TRANSFER-FAILS is the informative outcome. **Five experiments adopted:** CEIL-ATTRIB
+  #1, A3-D #2, M1-NER #3, A3-S #4 (= v1.3), ASYM-K #5 drop-first. D113: re-derive block numbers before freeze;
+  paper-test series terminated this phase.

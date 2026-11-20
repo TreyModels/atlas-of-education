@@ -909,3 +909,33 @@ changed is `oos_neither_share` (1,680 tertiary rows); `reproduction_checks_v1_2.
   PHL-like primary first-sustained ≥90 = **2007**, ≥95 = **2016**; series not monotone (11 decreases).
 - **Consequence:** SR-1 is cleared only in the "an NER object exists" sense; **SR-9 (Council authority) remains
   open** and the HKG run has not been executed.
+
+---
+
+## 3z. Council cycle 13 — WT/DT adjudicated, both gates PARKED, SR-9 granted with conditions, five experiments (2026-11-20 ~23:10)
+
+- **Council brief 021 merged as D108–D113.** WT ACCEPTED (verdicts stand; WT2 annotated **VOID as a paper test** — the
+  % growth vs pp comparison is near-vacuous; WT4 SUPPORTED but the worker's "one more year flips it" sentence corrected:
+  under the ≥3-consecutive rule it would take **two** more observed years; the real margins are 2023 clearing the 5 pp
+  trigger by **0.496 pp** and 2024 clearing the recovery band by **0.592 pp**; WT5's cross-year ratio recorded as a
+  **Council-side authoring error**). DT ACCEPTED (DT4 relabelled **NULL-BY-CONSTRUCTION** — the depth proxy is
+  non-monotone; DT1 scoped to its 5-country overlap; DT5 near-circular).
+- **Both gates confirmed PARKED:** D101 (WT1 ∧ WT3 not met) → exit-cost/complementarity layer parked; D104 (DT1 null) →
+  induction grounding parked; A1/A3 keep their declared label. Both papers remain scored rivals/declared assumptions.
+- **v1.2 recorded as PASS-CONDITIONAL** with three record corrections applied: (i) `m = 1.10` restated as a declared
+  **convention** (window ≈ 1.09–1.11; m=1.05 → primary 2022 FAIL; m=1.12 → upper 78.03 FAIL), and the cross-year
+  "1.136 (upper 2018)" ratio **removed** from `generator_v1_2/FINDINGS.md` (the admissible same-year ratios are
+  0.925 / 0.901 / 1.094 / 1.045); (ii) `MODEL_ARCHITECTURE.md` Amendment A4 relabelled from "theory-grounded" to
+  **"candidate grounding — PARKED per D104; no theory citation"**; (iii) `hkg_transfer_2026-11-20/HKG_SR2_PATH_NOTE.md`
+  fixes the SR-2 path to `generator_v1_2/` (frozen predecl untouched).
+- **SR-9 ruling: AUTHORISE-WITH-CONDITIONS (H1–H6).** The HKG diagnostic transfer may run only when: **H1** the
+  cohort-flow NER analogue passes the construct-equivalence test (|stock−flow| ≤ 2.0 pp in every year with the analogue
+  ∈ [85,95], and first-sustained crossing years differ ≤ 1 y; else `BLOCKED-MEASURE(SR-1)`); **H2** v1.2.1 addendum
+  delivered as a full artifact; **H3** SR-2 recorded PASS-CONDITIONAL (no HKG file may say "v1.2 passes"); **H4** declared
+  D7–D9 inputs pre-tabulated/hashed before the run (not referencing 1974/1979); **H5** D75 six constraints + scaling-FAIL
+  banner + closed verdict set (`TRANSFER-HOLDS`/`TRANSFER-FAILS`/`FAIL-RE-FIT`/`BLOCKED-*`, never PASS); **H6** scope
+  (timing only, primary NER only, 1974/1979, ±5 y). **TRANSFER-FAILS is the informative outcome.** No run executed yet.
+- **Five anchored experiments adopted (D112):** **CEIL-ATTRIB #1** (dispatch in progress), **A3-D #2** (dispatch after
+  CEIL-ATTRIB), **M1-NER #3** (dispatch in progress — the H1 gate), **A3-S #4** (= the v1.3 shadow build), **ASYM-K #5
+  drop-first** (not dispatched). **D113 process rules:** anchoring-block numbers must be re-derived from disk before
+  freeze; the paper-test series is **terminated for this phase**.

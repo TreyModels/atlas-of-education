@@ -1,0 +1,40 @@
+check_id,component,value,component_verdict,label
+c1,c1_i_sign_nonneg_all_scored_cells,"619 scored, 53 saturated/NOT-SCORED, min dD/dlnR = 0.3119585309",PASS,SYNTHETIC
+c1,c1_i_cells_scored,619,INFO,SYNTHETIC
+c1,c1_i_cells_saturated_not_scored,53,INFO,SYNTHETIC
+c1,c1_i_max_abs_numeric_minus_analytic,1.457521548e-09,INFO,SYNTHETIC
+c1,c1_ii_R_doubled_g2_gap_SYN_HKG_LIKE,0.3266913803,PASS,SYNTHETIC
+c1,c1_ii_R_doubled_g2_gap_SYN_PHL_LIKE,0.3093485416,PASS,SYNTHETIC
+c1,c1_ii_R_doubled_g2_gap_SYN_KHM_LIKE,0.3010387544,PASS,SYNTHETIC
+c2,c2_i_sign_nonneg_all_scored_cells,"619 scored, 53 saturated/NOT-SCORED, min dD/dln(1+V) = 0.1559792654",PASS,SYNTHETIC
+c2,c2_i_cells_scored,619,INFO,SYNTHETIC
+c2,c2_i_cells_saturated_not_scored,53,INFO,SYNTHETIC
+c2,c2_i_max_abs_numeric_minus_analytic,1.767518548e-09,INFO,SYNTHETIC
+c2,c2_ii_V_plus25pct_g2_gap_SYN_HKG_LIKE,0.04262579944,PASS,SYNTHETIC
+c2,c2_ii_V_plus25pct_g2_gap_SYN_PHL_LIKE,0.03431733536,PASS,SYNTHETIC
+c2,c2_ii_V_plus25pct_g2_gap_SYN_KHM_LIKE,0.02899089655,PASS,SYNTHETIC
+c3,c3_i_max_D_g0_le_0.025,0.020503 at SYN_HKG_LIKE 1979,PASS,SYNTHETIC
+c3,c3_ii_max_Dg0_over_Dg1_le_0.20,0.081622 at SYN_KHM_LIKE 1975,PASS,SYNTHETIC
+c3,c3_country_years_checked,168,INFO,SYNTHETIC
+c4a,c4a_D_HKG_g2_2020_in_band,0.3402146166,FAIL,SYNTHETIC
+c4a,c4a_D_HKG_g2_path_min,0.3057658449,INFO,SYNTHETIC
+c4a,c4a_D_HKG_g2_path_max,0.4462818249,INFO,SYNTHETIC
+c4b,c4b_channel_decomposition_2020,"HKG g1..g3 = 0.3810/0.3402/0.3622, nu = 0.10/0.62/0.22, D* = 0.3287; PHL g1..g3 = 0.2926/0.2606/0.5301, nu = 0.30/0.35/0.10, D* = 0.2320; KHM g1..g3 = 0.2720/0.2276/0.7196, nu = 0.28/0.13/0.02, D* = 0.1201",INFO,SYNTHETIC
+c4b,c4b_gap_Dstar_HKG_minus_PHL_ge_0.10,0.09672390626,FAIL,SYNTHETIC
+c4b,c4b_gap_Dstar_PHL_minus_KHM_ge_0.05,0.111852764,PASS,SYNTHETIC
+c4b,c4b_Dstar_HKG_2020,0.3287079991,INFO,SYNTHETIC
+c4b,c4b_Dstar_PHL_2020,0.2319840928,INFO,SYNTHETIC
+c4b,c4b_Dstar_KHM_2020,0.1201313288,INFO,SYNTHETIC
+c4c,c4c_no_country_specific_behavioural_coefficient,none,PASS,SYNTHETIC
+c5,c5_p_and_D_in_0_1,"p in [0.005907,0.9979], D in [0.01265,0.9958]",PASS,SYNTHETIC
+c5,c5_sum_omega_eq_1,1,PASS,SYNTHETIC
+c5,c5_pi0_pi1_Pi_in_bounds,min pi = 0.01,PASS,SYNTHETIC
+c5,c5_Pi_ge_pi0,-1.110223025e-16,PASS,SYNTHETIC
+c5,c5_S_ge_0,0.0002719957167,PASS,SYNTHETIC
+c5,c5_Dstar_le_exposure,0.4281526572,PASS,SYNTHETIC
+c5,c5_tutored_le_source_cohort_g1_g3,0.4652156152,PASS,SYNTHETIC
+c5,c5_tutored_le_candidates_g4,0.995810742,PASS,SYNTHETIC
+c5,c5_no_nan_or_inf,0,PASS,SYNTHETIC
+c5,c5_Dg0_lt_Dg1_every_year,-0.1992628231,PASS,SYNTHETIC
+c6,c6_sha256_byte_identical,14729c5141a71dd9aaf87a5ad2e973a84b5f04603577aae627f2833276fac5ac,PASS,SYNTHETIC
+c6_ablation,artifact,results/_ablation/synthetic_panel_v1_3_shadow_off.csv,INFO,SYNTHETIC

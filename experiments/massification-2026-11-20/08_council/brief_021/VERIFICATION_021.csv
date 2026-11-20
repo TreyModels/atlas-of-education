@@ -1,0 +1,52 @@
+claim_id,item,source_file,re_derived,reported,match,note
+V01,WT predeclaration sha256,10_massification/extensions/wt_2026-11-20/PRE_DECLARATIONS.md,d3ad365e7a0f71fd1b187f24fe4cb4e9a4a07f2b1827a253bbbe19e016b1a350,d3ad365e...,YES,full hash verified
+V02,DT predeclaration sha256,10_massification/extensions/dt_2026-11-20/PRE_DECLARATIONS.md,6ed67b82be1f9d62e950a77236580996a627fd18c1ded593191788e9e3f4be40,6ed67b82...,YES,full hash verified
+V03,HKG predeclaration sha256,10_massification/extensions/hkg_transfer_2026-11-20/HKG_TRANSFER_PRE_DECLARATIONS.md,99be01d78abee2fa797c02a68a05330a4d53ad43c30960508039708edc98fb5f,99be01d7...,YES,full hash verified
+V04,v1.2 predeclaration sha256,10_massification/extensions/synthetic_2026-11-20/v1_2/PRE_DECLARATIONS.md,fde18d405d875167977b350a925c28248c3007d2813dcdb29219d3baf0b95f16,fde18d40...,YES,full hash verified
+V05,WT determinism RESULTS.csv,wt_2026-11-20/results/RESULTS.csv vs _determinism/run_b/RESULTS.csv,92b4323f10cdb577549df06690c8695594ea41704f8e5293c7c0dd163b3191e2,92b4323f...,YES,byte-identical
+V06,WT determinism DETAIL.csv,wt_2026-11-20/results/DETAIL.csv vs _determinism/run_b/DETAIL.csv,5bfb933f65930f5d4f32396068713265795361dc15c787c039a01140480becf2,5bfb933f...,YES,byte-identical
+V07,DT determinism RESULTS.csv,dt_2026-11-20/results/run1 vs run2,e28935ac64c64c104ce8f5f0fc726b4e607bfbf0ba27722c8c7f39087f052f8e,e28935ac...,YES,byte-identical
+V08,DT determinism DETAIL.csv,dt_2026-11-20/results/run1 vs run2,e0e263d33807bd23f184d63bbbd4580d75fc0bf3c4fb054f2dacb9d27aea2b78,e0e263d3...,YES,byte-identical
+V09,WT1 fall/rise count ratio,wt_2026-11-20/results/DETAIL.csv (117 fall_run / 264 rise_run),0.443182,0.443182,YES,recounted rows
+V10,WT1 median rise depth,wt_2026-11-20/results/DETAIL.csv,11.128309,11.128309,YES,median of rise_run rows
+V11,WT1 median fall depth,wt_2026-11-20/results/DETAIL.csv,6.686363,6.686363,YES,median of fall_run rows
+V12,WT1 depth ratio,wt_2026-11-20/results/DETAIL.csv,0.600843,0.600843,YES,abs medians
+V13,WT1 zero-fall series,wt_2026-11-20/results/DETAIL.csv,42,42,YES,of 96 qualifying series
+V14,WT1 indicator-equal-weight depth ratio,wt_2026-11-20/results/DETAIL.csv (derived here),0.590,not reported,NEW,equal-weighting the 5 indicator medians; still > 0.50
+V15,WT2 decoupled on common pp metric,wt_2026-11-20/results/DETAIL.csv (D_cred_pp_change_DIAGNOSTIC vs D_dest_pp_change),7,10 (reported 10/10),NO,KHM 19.9 vs 43.4; PHL 20.3 vs 21.7; VNM 34.8 vs 44.0 are not decoupled on pp
+V16,WT2 reversal countries,wt_2026-11-20/results/DETAIL.csv,4,4,YES,MNG MYS PHL THA
+V17,WT3 raw Spearman,wt_2026-11-20/results/DETAIL.csv + independent recomputation,0.072527,0.072527,YES,rank-residual recomputation to 6 dp
+V18,WT3 income-partial Spearman,wt_2026-11-20/results/DETAIL.csv + independent recomputation,-0.520072,-0.520072,YES,rank-residual recomputation to 6 dp
+V19,WT4 PHL upper-sec 2017 peak,10_massification/data/UNIVERSALIZATION_SERIES.csv,76.432953,76.432953,YES,PHL completion_upper_secondary
+V20,WT4 PHL upper-sec 2022,10_massification/data/UNIVERSALIZATION_SERIES.csv,68.276512,68.276512,YES,
+V21,WT4 PHL upper-sec 2023,10_massification/data/UNIVERSALIZATION_SERIES.csv,71.929314,71.929314,YES,threshold 71.432953; margin 0.496 pp
+V22,WT4 PHL upper-sec 2024,10_massification/data/UNIVERSALIZATION_SERIES.csv,75.025253,75.025253,YES,recovery band 74.432953; margin 0.592 pp
+V23,WT4 drawdown 2017-2022,derived from V19-V20,8.156441,8.156441,YES,
+V24,WT4 tertiary 2025 recovery,10_massification/data/UNIVERSALIZATION_SERIES.csv,51.071883,51.071883,YES,recovered >= 50 by 2025
+V25,WT5 cross-year ratio,04_data/TARGETS_SHADOW.csv,1.888889,1.888889,YES,85@2010 / 45@1996 — cross-year
+V26,WT5 same-year 1996 ratio,04_data/TARGETS_SHADOW.csv,0.888889,0.888889,YES,40/45 — no gate gradient
+V27,WT5 2010 senior/lower ratio,04_data/TARGETS_SHADOW.csv,1.180556,1.180556,YES,within-secondary
+V28,WT5 2003 S6-7/S1-3 ratio,09_relations/data/shadow_gradients.csv,2.002849,2.003,YES,within-secondary
+V29,DT1 median income-partial rho,dt_2026-11-20/results/DETAIL.csv,0.014610,0.015,YES,median of 5 country rhos
+V30,DT1 median raw rho,dt_2026-11-20/results/DETAIL.csv,0.386690,0.387,YES,
+V31,DT1 countries >= +0.40,dt_2026-11-20/results/DETAIL.csv,2,2,YES,IDN 0.5331 MEX 0.4362
+V32,DT2 E_entrant coefficient,dt_2026-11-20/results/DETAIL.csv,1.605375,1.6054,YES,M2_joint_income_control
+V33,DT2 E_entrant p,dt_2026-11-20/results/DETAIL.csv,0.000359,0.00036,YES,
+V34,DT2 gap0 coefficient,dt_2026-11-20/results/DETAIL.csv,0.326706,0.3267,YES,
+V35,DT2 gap0/E ratio,dt_2026-11-20/results/DETAIL.csv,0.204,0.204,YES,
+V36,DT2 D1 reproduction,dt_2026-11-20/results/DETAIL.csv,2.22e-16,2e-16,YES,abs diff vs on-disk +1.654508
+V37,DT4 partial rho,dt_2026-11-20/results/DETAIL.csv,0.202294,0.2023,YES,
+V38,DT4 top-half zero-reversal,dt_2026-11-20/results/DETAIL.csv,10/11,90.9%,YES,
+V39,DT4 bottom-half >=1 reversal,dt_2026-11-20/results/DETAIL.csv,2/11,18.2%,YES,
+V40,DT4 depth proxy non-monotonicity,dt_2026-11-20/results/DETAIL.csv,COL depth -1.574 vs LAO depth +0.291,not reported,NEW,completion means 106.556 vs 81.116
+V41,DT4 corr(depth; z_cmpt),dt_2026-11-20/results/DETAIL.csv,0.356,0.356,YES,diagnostic row
+V42,DT5 joint share,dt_2026-11-20/results/DETAIL.csv,0.583333,0.583,YES,14/24
+V43,DT5 PHL residual z,dt_2026-11-20/results/DETAIL.csv,-0.507831,-0.508,YES,cut -1.0
+V44,v1.2 same-year completion/GER ratios,10_massification/data/UNIVERSALIZATION_SERIES.csv,0.925/0.901/1.094/1.045,0.925/0.901/1.094/1.045,YES,primary 2017/lower 2017/upper 2017/primary 2024
+V45,v1.2 FINDINGS '1.136 (upper 2018)',derived + UNIVERSALIZATION_SERIES.csv,75.025/66.046 = 1.136,1.136,NO,not a same-year pair: upper completion 2018 not observed
+V46,PHL completion provenance,v1.2 target series,all rows UIS_SDG4_2026_11,not checked,YES,single vintage — no splice within the file
+V47,v1.2.1 NER smoke: first-at-above 90,generator_v1_2_addendum/results/NER_SMOKE.csv,1970,1970,YES,SYN00_PHL_LIKE primary
+V48,v1.2.1 NER smoke: first-sustained 5y,generator_v1_2_addendum/results/NER_SMOKE.csv,2007,2007,YES,
+V49,v1.2.1 NER smoke: minimum / year,generator_v1_2_addendum/results/NER_SMOKE.csv,75.1447 / 1978,75.14 / 1978,YES,11 decreases; non-monotone
+V50,PHL primary shadow 2010,02_lit/SHADOW_TARGETS.csv,23.8,23.8,YES,elementary
+V51,KHM primary shadow 2012-13,02_lit/SHADOW_TARGETS.csv,41.3,41.3,YES,

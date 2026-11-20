@@ -336,3 +336,22 @@ imputation as observation. E1 stays PARKED; direction claims EQUIVALENT.
    layer, ablation-tested per D81-2). **Red-flag count: 1.**
 5. **If only one thing mattered this week:** v1.2 (W1). **Drop-first: DT3** (of DT1–DT5; HELD data); **WT5** remains
    drop-first of WT1–WT5. **No external message sent this cycle** (D87).
+
+## Cycle 13 addendum (WT/DT adjudication + SR-9; D108–D113)
+
+1. **Goal restated:** massification produced by schooling–government–market interaction, each standing the others up,
+   with cohort flows + country/sector variation; PHL anchor → HKG portability; shadow secondary; live line = synthetic
+   v1.2 → v1.3 **entered through CEIL-ATTRIB**. Phase CLOSED at PARTIAL/DESCRIPTIVE/EQUIVALENT.
+2. **KEEP/PARK/KILL delta.** **KEEP** — v1.2 (PASS-CONDITIONAL record), CEIL-ATTRIB (#1), A3-D demand core (#2),
+   M1-NER construct equivalence (#3), A3-S shadow-at-gates (#4), v1.2.1 addendum, HKG diagnostic transfer
+   (AUTHORISE-WITH-CONDITIONS H1–H6). **PARK** — exit-cost/complementarity layer (D101 not met), induction grounding
+   (D104 not met), ASYM-K (drop-first), further paper-test slates (D113b). **KILL** — re-scoring WT/DT cells; treating
+   either paper as evidence; the A4 "theory-grounded" label; unconditional "v1.2 passes"; the cohort-flow NER as the UIS
+   NER without construct equivalence.
+3. **One thread:** v1.2 → v1.3 **through CEIL-ATTRIB** — attribute the ceiling before stacking demand or shadow layers.
+4. **Drift check (red-flag count 3):** (R1) stacking layers on an unattributed ceiling; (R2) **knife-edge laundering** —
+   v1.2's PASS rides on m = 1.10 (window ≈ 1.09–1.11) and on a cross-year 1.136 ratio, now corrected as a convention;
+   (R3) treating the cohort-flow NER as the UIS stock NER before construct equivalence (H1). Written critical-path
+   justification recorded in `brief_021/SYNTHESIS_021.md` §1.
+5. **If only one thing mattered this week:** CEIL-ATTRIB (it decides whether v1.2's ceiling is a mechanism result at
+   all). **Drop-first of the five: ASYM-K** (paper-side; cannot unlock D101 even if positive).

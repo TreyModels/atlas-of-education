@@ -84,10 +84,14 @@ Using the frozen run's cohort-flow series and varying only the declared constant
 | 1.12 | 2018 | 2025 | 78.03 (FAIL > 77) |
 | 1.15 | 2016 | 2025 | 80.12 (FAIL > 77) |
 
-Only `m ≈ 1.09–1.11` satisfies A1 and A3 simultaneously. The observed PHL completion/GER ratios are
-0.925 (primary 2017), 0.901 (lower 2017), 1.094 (upper 2017), 1.045 (primary 2024), and 1.136
-(upper 2018) — i.e. the UIS convention is **not** a stable constant in the observed data. `m = 1.10` is a
-declared mid-range convention, but it is doing real work: this is a **knife-edge** pass.
+Only `m ≈ 1.09–1.11` satisfies A1 and A3 simultaneously. **Correction (Council brief 021 N4 / D110):** the earlier
+text listed "1.136 (upper 2018)" among the observed ratios — that is **not a same-year observed ratio** (upper completion
+is not observed in 2018; 1.136 = 75.025 upper completion 2024 ÷ 66.046 upper GER 2018, the same cross-year class as the
+WT5 error). The admissible same-year completion/GER ratios are 0.925 (primary 2017), 0.901 (lower 2017), 1.094
+(upper 2017) and 1.045 (primary 2024) — i.e. the UIS convention is **not a stable constant** in the observed data, and
+`completion/GER` is not the quantity `m` converts (m is a declared translation from the cohort-flow series to the UIS
+convention). **`m = 1.10` is therefore a declared CONVENTION, not an estimated constant**, and it is doing real work:
+this is a **knife-edge** pass, stated as such.
 
 ---
 
