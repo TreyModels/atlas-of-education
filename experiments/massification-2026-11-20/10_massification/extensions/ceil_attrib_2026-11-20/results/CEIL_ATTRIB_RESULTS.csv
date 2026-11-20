@@ -1,0 +1,29 @@
+test,row_id,variant,switch,statistic,value,unit,baseline_value,delta_pp,threshold,threshold_rule,verdict,component_account,n,label,note
+A,A00,baseline,none,upper_uis_2024_pct,76.639081,percent,76.639081,0.000000,reference,frozen v1.2 parameter block,,reference,1,SYNTHETIC,"SYN00_PHL_LIKE UIS-convention upper-secondary completion, 2024"
+A,A01,gamma0,"P[""gamma""] = 0.0",upper_uis_2024_pct,79.276152,percent,76.639081,2.637070,2.0,>= 2.0 pp (mechanism),,mechanism,1,SYNTHETIC,absolute deviation compared to 2.0 pp / 1.0 pp as declared
+A,A02,work_off,w_child = 0; farm = 0 (child work earnings = 0),upper_uis_2024_pct,82.908916,percent,76.639081,6.269835,2.0,>= 2.0 pp (mechanism),,mechanism,1,SYNTHETIC,absolute deviation compared to 2.0 pp / 1.0 pp as declared
+A,A03,flat_cohort,SYN00 cohort S(t) = S(1970),upper_uis_2024_pct,73.168496,percent,76.639081,-3.470585,2.0,>= 2.0 pp (mechanism),,mechanism,1,SYNTHETIC,absolute deviation compared to 2.0 pp / 1.0 pp as declared
+A,A04,m1.05,"P[""meas_completion_factor""] = 1.05",upper_uis_2024_pct,73.155487,percent,76.639081,-3.483595,2.0,"< 1.0 pp (calibration bar, mechanism-carried clause)",,calibration,1,SYNTHETIC,absolute deviation compared to 2.0 pp / 1.0 pp as declared
+A,A05,m1.10,"P[""meas_completion_factor""] = 1.10 (frozen)",upper_uis_2024_pct,76.639081,percent,76.639081,0.000000,0.0 (reference),"sensitivity, not verdict-bearing",,calibration,1,SYNTHETIC,absolute deviation compared to 2.0 pp / 1.0 pp as declared
+A,A06,m1.12,"P[""meas_completion_factor""] = 1.12",upper_uis_2024_pct,78.032519,percent,76.639081,1.393438,2.0,"< 1.0 pp (calibration bar, mechanism-carried clause)",,calibration,1,SYNTHETIC,absolute deviation compared to 2.0 pp / 1.0 pp as declared
+A,A07,buildout_m5,seat_t50_L - 5 (all four levels),upper_uis_2024_pct,78.719469,percent,76.639081,2.080388,2.0,"< 1.0 pp (calibration bar, mechanism-carried clause)",,calibration,1,SYNTHETIC,absolute deviation compared to 2.0 pp / 1.0 pp as declared
+A,A08,buildout_p5,seat_t50_L + 5 (all four levels),upper_uis_2024_pct,69.077561,percent,76.639081,-7.561520,2.0,"< 1.0 pp (calibration bar, mechanism-carried clause)",,calibration,1,SYNTHETIC,absolute deviation compared to 2.0 pp / 1.0 pp as declared
+A,A09,upper_only_m5,seat_t50[upper] - 5 only,upper_uis_2024_pct,78.719469,percent,76.639081,2.080388,2.0,"sensitivity, not verdict-bearing",,sensitivity,1,SYNTHETIC,declared sensitivity; cannot change the Test A verdict
+A,A10,upper_only_p5,seat_t50[upper] + 5 only,upper_uis_2024_pct,73.719916,percent,76.639081,-2.919165,2.0,"sensitivity, not verdict-bearing",,sensitivity,1,SYNTHETIC,declared sensitivity; cannot change the Test A verdict
+A,A20,mech_hits,,n_mechanism_ablations_with_abs_delta_ge_2pp,3,count,,,2,>= 2 of 3 mechanism ablations,,mechanism,3,SYNTHETIC,"gamma=0, work_off, flat_cohort"
+A,A21,calib_absmax,,max_abs_calibration_delta_pp,7.561520,pp,,,2.0,calibration bar >= 2.0 pp,,calibration,4,SYNTHETIC,"m 1.05/1.12, build-out +/-5 y (m=1.10 is the reference, delta 0)"
+A,A22,calib_lt1,,all_calibration_moves_lt_1pp,FALSE,boolean,,,1.0,mechanism-carried requires every calibration move < 1.0 pp,,calibration,4,SYNTHETIC,
+A,A23,test_A_verdict,,test_A_verdict,MIXED,verdict,,,,frozen three-account Test A bars,MIXED,MIXED,9,SYNTHETIC,neither the mechanism bar nor the calibration bar is met (MIXED)
+B,B01,observed_phl,,n_pairs_lag3,8,pairs,,,n,observed upper years with a lower observation at t-3 or nearest within +/-1 y,,observed_pipeline,8,OBSERVED,pairs dropped where no lower observation lies within the window
+B,B02,observed_phl,,n_in_band_lag3,7,count,,,n,"ratio in [0.90, 1.10]",,observed_pipeline,8,OBSERVED,
+B,B03,observed_phl,,share_in_band_lag3,0.875000,fraction,,,2/3,>= 2/3 of observed pairs -> PIPELINE-CONSISTENT,,observed_pipeline,8,OBSERVED,
+B,B04,observed_phl,,n_below_0.90_lag3,1,count,,,n,ratio < 0.90,,observed_pipeline,8,OBSERVED,
+B,B05,observed_phl,,share_below_0.90_lag3,0.125000,fraction,,,2/3,>= 2/3 of observed pairs -> GATE-LOSS,,observed_pipeline,8,OBSERVED,
+B,B06,observed_phl,,test_B_verdict,PIPELINE-CONSISTENT,verdict,,,,frozen Test B bars,PIPELINE-CONSISTENT,observed_pipeline,8,OBSERVED,declared 3-year lag; +/-1 y nearest observation
+B,B07,observed_phl,,n_pairs_lag2,7,pairs,,,n,lag-2 sensitivity,,observed_pipeline,7,OBSERVED,"sensitivity only, not verdict-changing"
+B,B08,observed_phl,,share_in_band_lag2,0.571429,fraction,,,2/3,"lag-2 sensitivity, not verdict-changing",UNDETERMINED,observed_pipeline,7,OBSERVED,sensitivity only
+B,B09,observed_phl,,n_pairs_lag4,7,pairs,,,n,lag-4 sensitivity,,observed_pipeline,7,OBSERVED,"sensitivity only, not verdict-changing"
+B,B10,observed_phl,,share_in_band_lag4,0.857143,fraction,,,2/3,"lag-4 sensitivity, not verdict-changing",PIPELINE-CONSISTENT,observed_pipeline,7,OBSERVED,sensitivity only
+B,B11,observed_phl,,n_pairs_lag3_unbounded,11,pairs,,,n,nearest lower observation at any distance,,observed_pipeline,11,OBSERVED,sensitivity only: no pair dropped
+B,B12,observed_phl,,share_in_band_lag3_unbounded,0.818182,fraction,,,2/3,"sensitivity, not verdict-changing",PIPELINE-CONSISTENT,observed_pipeline,11,OBSERVED,sensitivity only
+overall,O01,ceil_attrib,,ceil_attrib_decision,PIPELINE-CONSISTENT,verdict,,,,declared ordered matrix rule (PRE_DECLARATIONS 7),PIPELINE-CONSISTENT,PIPELINE-CONSISTENT,,OBSERVED,"overall decision token (Test B observed residual; the Test A component is SYNTHETIC and is MIXED, see rows A*). Matrix (a): residual reclassified as lower-pipeline inheritance; D63 stays UNABLE as to cause"

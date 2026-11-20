@@ -231,3 +231,18 @@ manifests and error logs.
   other conditions; no run executed; TRANSFER-FAILS is the informative outcome. **Five experiments adopted:** CEIL-ATTRIB
   #1, A3-D #2, M1-NER #3, A3-S #4 (= v1.3), ASYM-K #5 drop-first. D113: re-derive block numbers before freeze;
   paper-test series terminated this phase.
+
+## 2026-11-20 (reactivation batch 6) — CEIL-ATTRIB + M1-NER outcomes; v1.3 final snapshot; HKG measure blocker
+
+- **CEIL-ATTRIB** (`ceil_attrib_2026-11-20/`, predecl `ed9b31b9…`, 24/24 SHA): Test A **MIXED** (mechanism ablations
+  ≥2 pp but calibration knobs also ≥2 pp); Test B **PIPELINE-CONSISTENT** (7/8 observed PHL pairs in [0.90,1.10] at a
+  3-year lag) → **overall `PIPELINE-CONSISTENT`**: the upper-secondary ceiling is reclassified as a **lower-secondary
+  pipeline** object (D63 stays UNABLE as to cause); v1.2's "mechanism produces the ceiling" claim is **not licensed**.
+- **M1-NER** (`m1_ner_2026-11-20/`, predecl `9eb35a92…`, 16/16 SHA): **H1 NOT ADMISSIBLE** — max |stock−flow| 2.685 pp
+  (7/15 band years fail), crossing differences 3 y/2 y; the cohort-flow NER analogue leads a stock object by 2–3 years.
+  **HKG diagnostic transfer is `BLOCKED-MEASURE(SR-1)`; D111 authorisation void for this object**; a new predeclaration
+  with a stock NER object (and a new Council decision) would be required. No HKG result.
+- **v1.3 final snapshot re-committed**: thresholds fix + bug disclosures (TUNE_LOG); controller re-verified two clean
+  runs byte-identical and the c6 no-re-fit guard; **c4a/c4b FAIL stand** (HKG level 0.340 vs 0.75–0.95; HKG−PHL gap
+  0.0967 vs 0.10).
+- DECISIONS **D114** (M1-NER/H1 + HKG blocked) and **D115** (CEIL-ATTRIB) recorded. Next: EXP-2 A3-D demand core.

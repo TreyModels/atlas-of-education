@@ -73,7 +73,7 @@ about this generator, not about any country.**
 
 Row counts: panel **6 720** rows (30 countries × 56 years × 4 levels) and 89 columns; gate panel **840** rows
 (3 types × 56 years × 5 gates); decomposition **840** rows; sensitivity **31** cells; country-input audit **32**
-rows; checks 9 rows; detail 38 rows.
+rows; checks 9 rows; detail 39 rows.
 
 `PASS` means "this declared parameterisation can produce this pattern through the declared mechanism" —
 nothing more.

@@ -1,0 +1,243 @@
+label,provenance,window_role,series_id,country,level,threshold,flow_first_at_or_above,flow_first_sustained_5y,stock_first_at_or_above,stock_first_sustained_5y,abs_crossing_difference_y,bar_1y_met,note
+SYNTHETIC,DERIVED,VERDICT,SYN00_PHL_LIKE/primary,SYN00_PHL_LIKE,primary,90,1970,2007,2010,2010,3,NOT MET,
+SYNTHETIC,DERIVED,VERDICT,SYN00_PHL_LIKE/primary,SYN00_PHL_LIKE,primary,95,2016,2016,2018,2018,2,NOT MET,
+SYNTHETIC,DERIVED,SENSITIVITY,SYN00_PHL_LIKE/primary,SYN00_PHL_LIKE,primary,90,1970,2007,2010,2010,3,NOT MET,
+SYNTHETIC,DERIVED,SENSITIVITY,SYN00_PHL_LIKE/primary,SYN00_PHL_LIKE,primary,95,2016,2016,2018,2018,2,NOT MET,
+SYNTHETIC,DERIVED,SENSITIVITY,SYN00_PHL_LIKE/lower_secondary,SYN00_PHL_LIKE,lower_secondary,90,2021,2021,2022,none_by_2025,,ONE-NONE,stock has no 5-year sustained crossing
+SYNTHETIC,DERIVED,SENSITIVITY,SYN00_PHL_LIKE/lower_secondary,SYN00_PHL_LIKE,lower_secondary,95,2023,none_by_2025,2024,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN00_PHL_LIKE/upper_secondary,SYN00_PHL_LIKE,upper_secondary,90,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN00_PHL_LIKE/upper_secondary,SYN00_PHL_LIKE,upper_secondary,95,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN00_PHL_LIKE/tertiary,SYN00_PHL_LIKE,tertiary,90,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN00_PHL_LIKE/tertiary,SYN00_PHL_LIKE,tertiary,95,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN01_TWIN_MFG/primary,SYN01_TWIN_MFG,primary,90,1970,2009,2011,2011,2,NOT MET,
+SYNTHETIC,DERIVED,SENSITIVITY,SYN01_TWIN_MFG/primary,SYN01_TWIN_MFG,primary,95,2022,none_by_2025,2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN01_TWIN_MFG/lower_secondary,SYN01_TWIN_MFG,lower_secondary,90,2024,none_by_2025,2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN01_TWIN_MFG/lower_secondary,SYN01_TWIN_MFG,lower_secondary,95,2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN01_TWIN_MFG/upper_secondary,SYN01_TWIN_MFG,upper_secondary,90,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN01_TWIN_MFG/upper_secondary,SYN01_TWIN_MFG,upper_secondary,95,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN01_TWIN_MFG/tertiary,SYN01_TWIN_MFG,tertiary,90,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN01_TWIN_MFG/tertiary,SYN01_TWIN_MFG,tertiary,95,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN02_TWIN_OFFICE/primary,SYN02_TWIN_OFFICE,primary,90,1970,2009,2011,2011,2,NOT MET,
+SYNTHETIC,DERIVED,SENSITIVITY,SYN02_TWIN_OFFICE/primary,SYN02_TWIN_OFFICE,primary,95,2022,none_by_2025,2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN02_TWIN_OFFICE/lower_secondary,SYN02_TWIN_OFFICE,lower_secondary,90,2024,none_by_2025,2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN02_TWIN_OFFICE/lower_secondary,SYN02_TWIN_OFFICE,lower_secondary,95,2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN02_TWIN_OFFICE/upper_secondary,SYN02_TWIN_OFFICE,upper_secondary,90,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN02_TWIN_OFFICE/upper_secondary,SYN02_TWIN_OFFICE,upper_secondary,95,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN02_TWIN_OFFICE/tertiary,SYN02_TWIN_OFFICE,tertiary,90,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN02_TWIN_OFFICE/tertiary,SYN02_TWIN_OFFICE,tertiary,95,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN03/primary,SYN03,primary,90,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN03/primary,SYN03,primary,95,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN03/lower_secondary,SYN03,lower_secondary,90,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN03/lower_secondary,SYN03,lower_secondary,95,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN03/upper_secondary,SYN03,upper_secondary,90,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN03/upper_secondary,SYN03,upper_secondary,95,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN03/tertiary,SYN03,tertiary,90,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN03/tertiary,SYN03,tertiary,95,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN04/primary,SYN04,primary,90,1970,2009,2012,2012,3,NOT MET,
+SYNTHETIC,DERIVED,SENSITIVITY,SYN04/primary,SYN04,primary,95,2016,2016,2019,2019,3,NOT MET,
+SYNTHETIC,DERIVED,SENSITIVITY,SYN04/lower_secondary,SYN04,lower_secondary,90,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN04/lower_secondary,SYN04,lower_secondary,95,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN04/upper_secondary,SYN04,upper_secondary,90,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN04/upper_secondary,SYN04,upper_secondary,95,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN04/tertiary,SYN04,tertiary,90,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN04/tertiary,SYN04,tertiary,95,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN05/primary,SYN05,primary,90,1970,2011,2014,2014,3,NOT MET,
+SYNTHETIC,DERIVED,SENSITIVITY,SYN05/primary,SYN05,primary,95,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN05/lower_secondary,SYN05,lower_secondary,90,2022,none_by_2025,2023,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN05/lower_secondary,SYN05,lower_secondary,95,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN05/upper_secondary,SYN05,upper_secondary,90,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN05/upper_secondary,SYN05,upper_secondary,95,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN05/tertiary,SYN05,tertiary,90,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN05/tertiary,SYN05,tertiary,95,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN06/primary,SYN06,primary,90,1970,2008,2010,2010,2,NOT MET,
+SYNTHETIC,DERIVED,SENSITIVITY,SYN06/primary,SYN06,primary,95,1970,2015,2018,2018,3,NOT MET,
+SYNTHETIC,DERIVED,SENSITIVITY,SYN06/lower_secondary,SYN06,lower_secondary,90,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN06/lower_secondary,SYN06,lower_secondary,95,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN06/upper_secondary,SYN06,upper_secondary,90,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN06/upper_secondary,SYN06,upper_secondary,95,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN06/tertiary,SYN06,tertiary,90,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN06/tertiary,SYN06,tertiary,95,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN07/primary,SYN07,primary,90,1970,1993,1975,1996,3,NOT MET,
+SYNTHETIC,DERIVED,SENSITIVITY,SYN07/primary,SYN07,primary,95,1970,2005,2006,2006,1,MET,
+SYNTHETIC,DERIVED,SENSITIVITY,SYN07/lower_secondary,SYN07,lower_secondary,90,2017,2017,2018,2018,1,MET,
+SYNTHETIC,DERIVED,SENSITIVITY,SYN07/lower_secondary,SYN07,lower_secondary,95,2019,2019,2020,2020,1,MET,
+SYNTHETIC,DERIVED,SENSITIVITY,SYN07/upper_secondary,SYN07,upper_secondary,90,2012,2012,2014,2014,2,NOT MET,
+SYNTHETIC,DERIVED,SENSITIVITY,SYN07/upper_secondary,SYN07,upper_secondary,95,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN07/tertiary,SYN07,tertiary,90,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN07/tertiary,SYN07,tertiary,95,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN08/primary,SYN08,primary,90,1970,2005,2007,2007,2,NOT MET,
+SYNTHETIC,DERIVED,SENSITIVITY,SYN08/primary,SYN08,primary,95,1970,2008,2011,2011,3,NOT MET,
+SYNTHETIC,DERIVED,SENSITIVITY,SYN08/lower_secondary,SYN08,lower_secondary,90,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN08/lower_secondary,SYN08,lower_secondary,95,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN08/upper_secondary,SYN08,upper_secondary,90,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN08/upper_secondary,SYN08,upper_secondary,95,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN08/tertiary,SYN08,tertiary,90,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN08/tertiary,SYN08,tertiary,95,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN09/primary,SYN09,primary,90,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN09/primary,SYN09,primary,95,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN09/lower_secondary,SYN09,lower_secondary,90,2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN09/lower_secondary,SYN09,lower_secondary,95,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN09/upper_secondary,SYN09,upper_secondary,90,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN09/upper_secondary,SYN09,upper_secondary,95,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN09/tertiary,SYN09,tertiary,90,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN09/tertiary,SYN09,tertiary,95,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN10_BOOM/primary,SYN10_BOOM,primary,90,1970,2007,2010,2010,3,NOT MET,
+SYNTHETIC,DERIVED,SENSITIVITY,SYN10_BOOM/primary,SYN10_BOOM,primary,95,2016,2016,2018,2018,2,NOT MET,
+SYNTHETIC,DERIVED,SENSITIVITY,SYN10_BOOM/lower_secondary,SYN10_BOOM,lower_secondary,90,2021,2021,2022,none_by_2025,,ONE-NONE,stock has no 5-year sustained crossing
+SYNTHETIC,DERIVED,SENSITIVITY,SYN10_BOOM/lower_secondary,SYN10_BOOM,lower_secondary,95,2023,none_by_2025,2024,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN10_BOOM/upper_secondary,SYN10_BOOM,upper_secondary,90,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN10_BOOM/upper_secondary,SYN10_BOOM,upper_secondary,95,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN10_BOOM/tertiary,SYN10_BOOM,tertiary,90,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN10_BOOM/tertiary,SYN10_BOOM,tertiary,95,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN11_FLAT/primary,SYN11_FLAT,primary,90,1970,1997,2000,2000,3,NOT MET,
+SYNTHETIC,DERIVED,SENSITIVITY,SYN11_FLAT/primary,SYN11_FLAT,primary,95,2009,2009,2012,2012,3,NOT MET,
+SYNTHETIC,DERIVED,SENSITIVITY,SYN11_FLAT/lower_secondary,SYN11_FLAT,lower_secondary,90,2022,none_by_2025,2023,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN11_FLAT/lower_secondary,SYN11_FLAT,lower_secondary,95,2024,none_by_2025,2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN11_FLAT/upper_secondary,SYN11_FLAT,upper_secondary,90,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN11_FLAT/upper_secondary,SYN11_FLAT,upper_secondary,95,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN11_FLAT/tertiary,SYN11_FLAT,tertiary,90,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN11_FLAT/tertiary,SYN11_FLAT,tertiary,95,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN12_DECLINE/primary,SYN12_DECLINE,primary,90,1970,1984,1975,1986,2,NOT MET,
+SYNTHETIC,DERIVED,SENSITIVITY,SYN12_DECLINE/primary,SYN12_DECLINE,primary,95,1999,1999,2001,2001,2,NOT MET,
+SYNTHETIC,DERIVED,SENSITIVITY,SYN12_DECLINE/lower_secondary,SYN12_DECLINE,lower_secondary,90,2021,2021,2022,none_by_2025,,ONE-NONE,stock has no 5-year sustained crossing
+SYNTHETIC,DERIVED,SENSITIVITY,SYN12_DECLINE/lower_secondary,SYN12_DECLINE,lower_secondary,95,2022,none_by_2025,2024,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN12_DECLINE/upper_secondary,SYN12_DECLINE,upper_secondary,90,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN12_DECLINE/upper_secondary,SYN12_DECLINE,upper_secondary,95,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN12_DECLINE/tertiary,SYN12_DECLINE,tertiary,90,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN12_DECLINE/tertiary,SYN12_DECLINE,tertiary,95,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN13/primary,SYN13,primary,90,1970,2008,2010,2010,2,NOT MET,
+SYNTHETIC,DERIVED,SENSITIVITY,SYN13/primary,SYN13,primary,95,2016,2016,2018,2018,2,NOT MET,
+SYNTHETIC,DERIVED,SENSITIVITY,SYN13/lower_secondary,SYN13,lower_secondary,90,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN13/lower_secondary,SYN13,lower_secondary,95,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN13/upper_secondary,SYN13,upper_secondary,90,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN13/upper_secondary,SYN13,upper_secondary,95,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN13/tertiary,SYN13,tertiary,90,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN13/tertiary,SYN13,tertiary,95,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN14/primary,SYN14,primary,90,1970,2008,2011,2011,3,NOT MET,
+SYNTHETIC,DERIVED,SENSITIVITY,SYN14/primary,SYN14,primary,95,1970,2018,2021,2021,3,NOT MET,
+SYNTHETIC,DERIVED,SENSITIVITY,SYN14/lower_secondary,SYN14,lower_secondary,90,2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN14/lower_secondary,SYN14,lower_secondary,95,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN14/upper_secondary,SYN14,upper_secondary,90,2022,none_by_2025,2024,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN14/upper_secondary,SYN14,upper_secondary,95,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN14/tertiary,SYN14,tertiary,90,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN14/tertiary,SYN14,tertiary,95,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN15/primary,SYN15,primary,90,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN15/primary,SYN15,primary,95,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN15/lower_secondary,SYN15,lower_secondary,90,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN15/lower_secondary,SYN15,lower_secondary,95,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN15/upper_secondary,SYN15,upper_secondary,90,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN15/upper_secondary,SYN15,upper_secondary,95,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN15/tertiary,SYN15,tertiary,90,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN15/tertiary,SYN15,tertiary,95,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN16/primary,SYN16,primary,90,1970,2008,2011,2011,3,NOT MET,
+SYNTHETIC,DERIVED,SENSITIVITY,SYN16/primary,SYN16,primary,95,2012,2012,2015,2015,3,NOT MET,
+SYNTHETIC,DERIVED,SENSITIVITY,SYN16/lower_secondary,SYN16,lower_secondary,90,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN16/lower_secondary,SYN16,lower_secondary,95,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN16/upper_secondary,SYN16,upper_secondary,90,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN16/upper_secondary,SYN16,upper_secondary,95,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN16/tertiary,SYN16,tertiary,90,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN16/tertiary,SYN16,tertiary,95,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN17/primary,SYN17,primary,90,1970,2008,2010,2010,2,NOT MET,
+SYNTHETIC,DERIVED,SENSITIVITY,SYN17/primary,SYN17,primary,95,2010,2010,2013,2013,3,NOT MET,
+SYNTHETIC,DERIVED,SENSITIVITY,SYN17/lower_secondary,SYN17,lower_secondary,90,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN17/lower_secondary,SYN17,lower_secondary,95,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN17/upper_secondary,SYN17,upper_secondary,90,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN17/upper_secondary,SYN17,upper_secondary,95,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN17/tertiary,SYN17,tertiary,90,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN17/tertiary,SYN17,tertiary,95,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN18/primary,SYN18,primary,90,1970,2007,2009,2009,2,NOT MET,
+SYNTHETIC,DERIVED,SENSITIVITY,SYN18/primary,SYN18,primary,95,1970,2008,2011,2011,3,NOT MET,
+SYNTHETIC,DERIVED,SENSITIVITY,SYN18/lower_secondary,SYN18,lower_secondary,90,2023,none_by_2025,2024,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN18/lower_secondary,SYN18,lower_secondary,95,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN18/upper_secondary,SYN18,upper_secondary,90,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN18/upper_secondary,SYN18,upper_secondary,95,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN18/tertiary,SYN18,tertiary,90,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN18/tertiary,SYN18,tertiary,95,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN19/primary,SYN19,primary,90,1970,1998,1975,2001,3,NOT MET,
+SYNTHETIC,DERIVED,SENSITIVITY,SYN19/primary,SYN19,primary,95,1970,2006,2008,2008,2,NOT MET,
+SYNTHETIC,DERIVED,SENSITIVITY,SYN19/lower_secondary,SYN19,lower_secondary,90,2023,none_by_2025,2024,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN19/lower_secondary,SYN19,lower_secondary,95,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN19/upper_secondary,SYN19,upper_secondary,90,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN19/upper_secondary,SYN19,upper_secondary,95,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN19/tertiary,SYN19,tertiary,90,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN19/tertiary,SYN19,tertiary,95,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN20/primary,SYN20,primary,90,1970,2000,2002,2002,2,NOT MET,
+SYNTHETIC,DERIVED,SENSITIVITY,SYN20/primary,SYN20,primary,95,1970,2011,2014,2014,3,NOT MET,
+SYNTHETIC,DERIVED,SENSITIVITY,SYN20/lower_secondary,SYN20,lower_secondary,90,2022,none_by_2025,2024,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN20/lower_secondary,SYN20,lower_secondary,95,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN20/upper_secondary,SYN20,upper_secondary,90,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN20/upper_secondary,SYN20,upper_secondary,95,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN20/tertiary,SYN20,tertiary,90,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN20/tertiary,SYN20,tertiary,95,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN21/primary,SYN21,primary,90,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN21/primary,SYN21,primary,95,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN21/lower_secondary,SYN21,lower_secondary,90,2019,2019,2021,2021,2,NOT MET,
+SYNTHETIC,DERIVED,SENSITIVITY,SYN21/lower_secondary,SYN21,lower_secondary,95,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN21/upper_secondary,SYN21,upper_secondary,90,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN21/upper_secondary,SYN21,upper_secondary,95,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN21/tertiary,SYN21,tertiary,90,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN21/tertiary,SYN21,tertiary,95,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN22/primary,SYN22,primary,90,1970,2018,2021,2021,3,NOT MET,
+SYNTHETIC,DERIVED,SENSITIVITY,SYN22/primary,SYN22,primary,95,1970,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN22/lower_secondary,SYN22,lower_secondary,90,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN22/lower_secondary,SYN22,lower_secondary,95,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN22/upper_secondary,SYN22,upper_secondary,90,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN22/upper_secondary,SYN22,upper_secondary,95,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN22/tertiary,SYN22,tertiary,90,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN22/tertiary,SYN22,tertiary,95,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN23/primary,SYN23,primary,90,1970,2002,2004,2004,2,NOT MET,
+SYNTHETIC,DERIVED,SENSITIVITY,SYN23/primary,SYN23,primary,95,1970,2006,2009,2009,3,NOT MET,
+SYNTHETIC,DERIVED,SENSITIVITY,SYN23/lower_secondary,SYN23,lower_secondary,90,2015,2015,2016,2016,1,MET,
+SYNTHETIC,DERIVED,SENSITIVITY,SYN23/lower_secondary,SYN23,lower_secondary,95,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN23/upper_secondary,SYN23,upper_secondary,90,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN23/upper_secondary,SYN23,upper_secondary,95,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN23/tertiary,SYN23,tertiary,90,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN23/tertiary,SYN23,tertiary,95,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN24/primary,SYN24,primary,90,1970,2015,2017,2017,2,NOT MET,
+SYNTHETIC,DERIVED,SENSITIVITY,SYN24/primary,SYN24,primary,95,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN24/lower_secondary,SYN24,lower_secondary,90,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN24/lower_secondary,SYN24,lower_secondary,95,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN24/upper_secondary,SYN24,upper_secondary,90,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN24/upper_secondary,SYN24,upper_secondary,95,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN24/tertiary,SYN24,tertiary,90,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN24/tertiary,SYN24,tertiary,95,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN25/primary,SYN25,primary,90,1970,none_by_2025,2024,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN25/primary,SYN25,primary,95,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN25/lower_secondary,SYN25,lower_secondary,90,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN25/lower_secondary,SYN25,lower_secondary,95,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN25/upper_secondary,SYN25,upper_secondary,90,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN25/upper_secondary,SYN25,upper_secondary,95,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN25/tertiary,SYN25,tertiary,90,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN25/tertiary,SYN25,tertiary,95,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN26/primary,SYN26,primary,90,1970,2007,2010,2010,3,NOT MET,
+SYNTHETIC,DERIVED,SENSITIVITY,SYN26/primary,SYN26,primary,95,1970,2011,2014,2014,3,NOT MET,
+SYNTHETIC,DERIVED,SENSITIVITY,SYN26/lower_secondary,SYN26,lower_secondary,90,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN26/lower_secondary,SYN26,lower_secondary,95,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN26/upper_secondary,SYN26,upper_secondary,90,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN26/upper_secondary,SYN26,upper_secondary,95,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN26/tertiary,SYN26,tertiary,90,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN26/tertiary,SYN26,tertiary,95,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN27/primary,SYN27,primary,90,1970,2001,2004,2004,3,NOT MET,
+SYNTHETIC,DERIVED,SENSITIVITY,SYN27/primary,SYN27,primary,95,1970,2007,2009,2009,2,NOT MET,
+SYNTHETIC,DERIVED,SENSITIVITY,SYN27/lower_secondary,SYN27,lower_secondary,90,2019,2019,2021,2021,2,NOT MET,
+SYNTHETIC,DERIVED,SENSITIVITY,SYN27/lower_secondary,SYN27,lower_secondary,95,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN27/upper_secondary,SYN27,upper_secondary,90,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN27/upper_secondary,SYN27,upper_secondary,95,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN27/tertiary,SYN27,tertiary,90,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN27/tertiary,SYN27,tertiary,95,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN28/primary,SYN28,primary,90,1970,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN28/primary,SYN28,primary,95,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN28/lower_secondary,SYN28,lower_secondary,90,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN28/lower_secondary,SYN28,lower_secondary,95,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN28/upper_secondary,SYN28,upper_secondary,90,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN28/upper_secondary,SYN28,upper_secondary,95,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN28/tertiary,SYN28,tertiary,90,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN28/tertiary,SYN28,tertiary,95,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN29/primary,SYN29,primary,90,1970,2004,2005,2005,1,MET,
+SYNTHETIC,DERIVED,SENSITIVITY,SYN29/primary,SYN29,primary,95,1970,2007,2010,2010,3,NOT MET,
+SYNTHETIC,DERIVED,SENSITIVITY,SYN29/lower_secondary,SYN29,lower_secondary,90,2011,2011,2012,2012,1,MET,
+SYNTHETIC,DERIVED,SENSITIVITY,SYN29/lower_secondary,SYN29,lower_secondary,95,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN29/upper_secondary,SYN29,upper_secondary,90,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN29/upper_secondary,SYN29,upper_secondary,95,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN29/tertiary,SYN29,tertiary,90,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025
+SYNTHETIC,DERIVED,SENSITIVITY,SYN29/tertiary,SYN29,tertiary,95,none_by_2025,none_by_2025,none_by_2025,none_by_2025,,BOTH-NONE,neither analogue has a 5-year sustained crossing by 2025

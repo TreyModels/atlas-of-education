@@ -1,0 +1,22 @@
+test,statistic,threshold,verdict,n,label,provenance,series,note
+band_agreement,2.685005,2.0,NOT MET,15,SYNTHETIC,DERIVED,SYN00_PHL_LIKE/primary,"max |stock-flow| in the 85-95 band at 2001 (stock=82.452834, flow=85.137839)"
+band_agreement_violations,7,0,NOT MET,15,SYNTHETIC,DERIVED,SYN00_PHL_LIKE/primary,"years with |stock-flow| > 2.0 pp: 2001, 2002, 2003, 2004, 2005, 2006, 2015"
+band_agreement_max_abs_diff_year,2001,,REPORTED,1,SYNTHETIC,DERIVED,SYN00_PHL_LIKE/primary,year of the maximum |stock-flow|
+band_agreement_years_excluded,2,,REPORTED,2,SYNTHETIC,DERIVED,SYN00_PHL_LIKE/primary,"in-band years excluded because the 6-year stock window is incomplete (1970-1974): 1970, 1971; predeclared exclusion, predecl section 4.1"
+crossing_90,3,1,NOT MET,1,SYNTHETIC,DERIVED,SYN00_PHL_LIKE/primary,"flow first-sustained 2007, stock first-sustained 2010"
+crossing_90_flow_year,2007,,REPORTED,1,SYNTHETIC,DERIVED,SYN00_PHL_LIKE/primary,flow analogue first-sustained 5-year crossing
+crossing_90_stock_year,2010,,REPORTED,1,SYNTHETIC,DERIVED,SYN00_PHL_LIKE/primary,stock analogue first-sustained 5-year crossing
+crossing_95,2,1,NOT MET,1,SYNTHETIC,DERIVED,SYN00_PHL_LIKE/primary,"flow first-sustained 2016, stock first-sustained 2018"
+crossing_95_flow_year,2016,,REPORTED,1,SYNTHETIC,DERIVED,SYN00_PHL_LIKE/primary,flow analogue first-sustained 5-year crossing
+crossing_95_stock_year,2018,,REPORTED,1,SYNTHETIC,DERIVED,SYN00_PHL_LIKE/primary,stock analogue first-sustained 5-year crossing
+h1_overall,0,B and C,NOT ADMISSIBLE,15,SYNTHETIC,DERIVED,SYN00_PHL_LIKE/primary,failed: Condition B (band); Condition C (crossing)
+expected_sign_share_expansion,1.000000,,DESCRIPTIVE,15,SYNTHETIC,DERIVED,SYN00_PHL_LIKE/primary,share of band expansion years with flow >= stock (diff <= 0); counter-sign years: none
+expected_sign_mean_diff_expansion,-1.751664,,DESCRIPTIVE,15,SYNTHETIC,DERIVED,SYN00_PHL_LIKE/primary,mean stock-flow (pp) over band expansion years; negative = flow leads
+expected_sign_counter_years,0,,DESCRIPTIVE,15,SYNTHETIC,DERIVED,SYN00_PHL_LIKE/primary,band expansion years with flow < stock (counter to declared sign)
+sensitivity_max_abs_diff,6.739943,2.0,DESCRIPTIVE,582,SYNTHETIC,DERIVED,all_series,"panel-wide max at SYN04/primary 2008; descriptive only, not verdict-bearing"
+sensitivity_violation_series_years,141,0,DESCRIPTIVE,582,SYNTHETIC,DERIVED,all_series,panel-wide series-years with |stock-flow| > 2.0 pp
+sensitivity_series_with_violation,44,0,DESCRIPTIVE,582,SYNTHETIC,DERIVED,all_series,"series with at least one > 2.0 pp band year: SYN00_PHL_LIKE/lower_secondary, SYN00_PHL_LIKE/primary, SYN01_TWIN_MFG/lower_secondary, SYN01_TWIN_MFG/primary, SYN02_TWIN_OFFICE/lower_secondary, SYN02_TWIN_OFFICE/primary, SYN04/primary, SYN05/lower_secondary, SYN05/primary, SYN06/lower_secondary, SYN06/primary, SYN07/lower_secondary, SYN07/primary, SYN07/upper_secondary, SYN08/lower_secondary, SYN08/primary, SYN09/lower_secondary, SYN10_BOOM/lower_secondary, SYN10_BOOM/primary, SYN11_FLAT/lower_secondary, SYN11_FLAT/primary, SYN12_DECLINE/lower_secondary, SYN13/lower_secondary, SYN13/primary, SYN14/lower_secondary, SYN14/primary, SYN14/upper_secondary, SYN16/primary, SYN17/primary, SYN18/lower_secondary, SYN18/primary, SYN19/lower_secondary, SYN19/primary, SYN20/lower_secondary, SYN20/primary, SYN21/lower_secondary, SYN23/lower_secondary, SYN23/primary, SYN24/primary, SYN26/primary, SYN27/lower_secondary, SYN27/primary, SYN29/lower_secondary, SYN29/primary"
+sensitivity_crossing_90_both_defined_within_1y,4,1,DESCRIPTIVE,30,SYNTHETIC,DERIVED,all_series,of 30 series with both crossings defined; 26 differ by >= 2 y; 3 have exactly one missing; 87 have both missing
+sensitivity_crossing_90_diff_ge_2y,26,1,DESCRIPTIVE,30,SYNTHETIC,DERIVED,all_series,series with both crossings defined and |difference| >= 2 y
+sensitivity_crossing_95_both_defined_within_1y,2,1,DESCRIPTIVE,20,SYNTHETIC,DERIVED,all_series,of 20 series with both crossings defined; 18 differ by >= 2 y; 0 have exactly one missing; 100 have both missing
+sensitivity_crossing_95_diff_ge_2y,18,1,DESCRIPTIVE,20,SYNTHETIC,DERIVED,all_series,series with both crossings defined and |difference| >= 2 y

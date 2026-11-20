@@ -1,0 +1,12 @@
+[ceil_attrib] baseline invariance byte-identical = True
+[ceil_attrib] baseline SYN00 upper UIS 2024 = 76.6391 pp
+  gamma0       upper 2024 =  79.2762  delta = +2.6371 pp
+  work_off     upper 2024 =  82.9089  delta = +6.2698 pp
+  flat_cohort  upper 2024 =  73.1685  delta = -3.4706 pp
+  m1.05        upper 2024 =  73.1555  delta = -3.4836 pp
+  m1.12        upper 2024 =  78.0325  delta = +1.3934 pp
+  buildout_m5  upper 2024 =  78.7195  delta = +2.0804 pp
+  buildout_p5  upper 2024 =  69.0776  delta = -7.5615 pp
+[ceil_attrib] Test A = MIXED (mech_hits=3, calib_absmax=7.5615, calib_lt1=False)
+[ceil_attrib] Test B lag3 = PIPELINE-CONSISTENT (7/8 in band, 1 below 0.90)
+[ceil_attrib] OVERALL = PIPELINE-CONSISTENT

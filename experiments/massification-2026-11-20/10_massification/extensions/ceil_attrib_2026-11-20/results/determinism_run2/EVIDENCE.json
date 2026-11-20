@@ -1,0 +1,216 @@
+{
+  "label": "SYNTHETIC (generator) + OBSERVED (PHL UIS series)",
+  "experiment": "EXP-1 CEIL-ATTRIB",
+  "predeclaration_sha256": "ed9b31b9cfa24ffa3a2285cb769ad9ecae899e392f77ac648e3c55b7dbfef64f",
+  "predeclaration_sha_matches_recorded": true,
+  "frozen_objects": {
+    "code_sha256": "61123aa9370a407487407bf3ff4b97287aea67cac5f90629e540a6e8cc855e7c",
+    "params_sha256": "0d619781c4e059f54cf771fb385475f5f939dceced5036e8a21b6e07a2b315e3",
+    "panel_sha256": "14729c5141a71dd9aaf87a5ad2e973a84b5f04603577aae627f2833276fac5ac",
+    "v12_spec_sha256": "fde18d405d875167977b350a925c28248c3007d2813dcdb29219d3baf0b95f16",
+    "v12_manifest_sha256": "36c40ff95470893a6d6fda21d9afe341ec0f374073a7af56cdf9c55c9b75b876"
+  },
+  "copies": {
+    "code_copy_sha256": "61123aa9370a407487407bf3ff4b97287aea67cac5f90629e540a6e8cc855e7c",
+    "params_copy_sha256": "0d619781c4e059f54cf771fb385475f5f939dceced5036e8a21b6e07a2b315e3",
+    "v12_spec_copy_sha256": "fde18d405d875167977b350a925c28248c3007d2813dcdb29219d3baf0b95f16",
+    "frozen_panel_ref_sha256": "14729c5141a71dd9aaf87a5ad2e973a84b5f04603577aae627f2833276fac5ac",
+    "frozen_manifest_ref_sha256": "36c40ff95470893a6d6fda21d9afe341ec0f374073a7af56cdf9c55c9b75b876"
+  },
+  "copies_byte_identical": {
+    "code_copy_sha256": true,
+    "params_copy_sha256": true,
+    "v12_spec_copy_sha256": true,
+    "frozen_panel_ref_sha256": true,
+    "frozen_manifest_ref_sha256": true
+  },
+  "baseline_invariance": {
+    "required": "unmodified copy reproduces results/synthetic_panel_v1_2.csv byte-for-byte",
+    "panel_sha256": "14729c5141a71dd9aaf87a5ad2e973a84b5f04603577aae627f2833276fac5ac",
+    "frozen_panel_sha256": "14729c5141a71dd9aaf87a5ad2e973a84b5f04603577aae627f2833276fac5ac",
+    "byte_identical": true,
+    "driver_baseline_panel_sha256": "14729c5141a71dd9aaf87a5ad2e973a84b5f04603577aae627f2833276fac5ac",
+    "driver_baseline_byte_identical": true,
+    "resolved": true
+  },
+  "inputs": {
+    "UNIVERSALIZATION_SERIES.csv": "85bc869396ebfcb39e3e1a21a31af219e75a07326c738a51d2bfdbe536737ddb",
+    "panel_wdi_long.csv": "a37629ae5d4f9ed2be4c71e33bfc876131880f65d356c88bd4d047a9bbdeae75"
+  },
+  "variants": {
+    "baseline": {
+      "role": "reference",
+      "switch": "none",
+      "upper_uis_2024": 76.63908112137804,
+      "delta_pp": 0.0
+    },
+    "gamma0": {
+      "role": "mechanism",
+      "switch": "P[\"gamma\"] = 0.0",
+      "upper_uis_2024": 79.27615160210655,
+      "delta_pp": 2.637070480728511
+    },
+    "work_off": {
+      "role": "mechanism",
+      "switch": "w_child = 0; farm = 0 (child work earnings = 0)",
+      "upper_uis_2024": 82.9089159512337,
+      "delta_pp": 6.269834829855654
+    },
+    "flat_cohort": {
+      "role": "mechanism",
+      "switch": "SYN00 cohort S(t) = S(1970)",
+      "upper_uis_2024": 73.16849635549264,
+      "delta_pp": -3.4705847658854054
+    },
+    "m1.05": {
+      "role": "calibration",
+      "switch": "P[\"meas_completion_factor\"] = 1.05",
+      "upper_uis_2024": 73.15548652495177,
+      "delta_pp": -3.483594596426272
+    },
+    "m1.10": {
+      "role": "calibration-reference",
+      "switch": "P[\"meas_completion_factor\"] = 1.10 (frozen)",
+      "upper_uis_2024": 76.63908112137804,
+      "delta_pp": 0.0
+    },
+    "m1.12": {
+      "role": "calibration",
+      "switch": "P[\"meas_completion_factor\"] = 1.12",
+      "upper_uis_2024": 78.03251895994855,
+      "delta_pp": 1.393437838570506
+    },
+    "buildout_m5": {
+      "role": "calibration",
+      "switch": "seat_t50_L - 5 (all four levels)",
+      "upper_uis_2024": 78.71946937721904,
+      "delta_pp": 2.080388255841001
+    },
+    "buildout_p5": {
+      "role": "calibration",
+      "switch": "seat_t50_L + 5 (all four levels)",
+      "upper_uis_2024": 69.07756122633431,
+      "delta_pp": -7.56151989504373
+    },
+    "upper_only_m5": {
+      "role": "sensitivity",
+      "switch": "seat_t50[upper] - 5 only",
+      "upper_uis_2024": 78.71946937721904,
+      "delta_pp": 2.080388255841001
+    },
+    "upper_only_p5": {
+      "role": "sensitivity",
+      "switch": "seat_t50[upper] + 5 only",
+      "upper_uis_2024": 73.71991590782986,
+      "delta_pp": -2.919165213548183
+    }
+  },
+  "test_A": {
+    "baseline_upper_uis_2024": 76.63908112137804,
+    "mech_hits": 3,
+    "calib_absmax_pp": 7.56151989504373,
+    "calib_ge_2pp": true,
+    "calib_all_lt_1pp": false,
+    "mech_all_lt_2pp": false,
+    "verdict": "MIXED"
+  },
+  "test_B": {
+    "declared_lag": 3,
+    "tol_years": 1,
+    "lag3": {
+      "n": 8,
+      "inband": 7,
+      "below": 1,
+      "frac_in": 0.875,
+      "frac_below": 0.125,
+      "verdict": "PIPELINE-CONSISTENT"
+    },
+    "lag2": {
+      "n": 7,
+      "inband": 4,
+      "below": 3,
+      "frac_in": 0.5714285714285714,
+      "frac_below": 0.42857142857142855,
+      "verdict": "UNDETERMINED"
+    },
+    "lag4": {
+      "n": 7,
+      "inband": 6,
+      "below": 1,
+      "frac_in": 0.8571428571428571,
+      "frac_below": 0.14285714285714285,
+      "verdict": "PIPELINE-CONSISTENT"
+    },
+    "lag3_unbounded": {
+      "n": 11,
+      "inband": 9,
+      "below": 2,
+      "frac_in": 0.8181818181818182,
+      "frac_below": 0.18181818181818182,
+      "verdict": "PIPELINE-CONSISTENT"
+    },
+    "pairs_lag3": [
+      {
+        "upper_year": 2003,
+        "lower_year": 2000,
+        "upper": 61.72880554199219,
+        "lower": 65.02691650390625,
+        "ratio": 0.9492808341647887
+      },
+      {
+        "upper_year": 2004,
+        "lower_year": 2000,
+        "upper": 60.36248016357422,
+        "lower": 65.02691650390625,
+        "ratio": 0.9282691446694719
+      },
+      {
+        "upper_year": 2008,
+        "lower_year": 2004,
+        "upper": 64.09,
+        "lower": 66.08350372314453,
+        "ratio": 0.9698335649469152
+      },
+      {
+        "upper_year": 2010,
+        "lower_year": 2008,
+        "upper": 66.1226806640625,
+        "lower": 67.96,
+        "ratio": 0.9729646948802605
+      },
+      {
+        "upper_year": 2013,
+        "lower_year": 2010,
+        "upper": 67.47,
+        "lower": 71.09664154052734,
+        "ratio": 0.9489899739010872
+      },
+      {
+        "upper_year": 2017,
+        "lower_year": 2013,
+        "upper": 76.43295288085938,
+        "lower": 71.27,
+        "ratio": 1.0724421619315192
+      },
+      {
+        "upper_year": 2023,
+        "lower_year": 2021,
+        "upper": 71.92931365966797,
+        "lower": 80.89604949951172,
+        "ratio": 0.8891573087274445
+      },
+      {
+        "upper_year": 2024,
+        "lower_year": 2021,
+        "upper": 75.02525329589844,
+        "lower": 80.89604949951172,
+        "ratio": 0.9274278998797251
+      }
+    ]
+  },
+  "overall_decision": "PIPELINE-CONSISTENT",
+  "no_writes_outside_experiment_dir": true,
+  "rng": "frozen generator's single seeded PCG64 stream (seed 20261120), fixed draw order, identical across variants; driver adds no RNG",
+  "python": "3.11.17",
+  "numpy": "2.4.6"
+}

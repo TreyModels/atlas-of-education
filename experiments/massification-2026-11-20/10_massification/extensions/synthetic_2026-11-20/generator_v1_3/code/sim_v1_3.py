@@ -1914,6 +1914,29 @@ def check_c6(ablation_path, v12_path):
 # --------------------------------------------------------------------------------------
 # outputs
 # --------------------------------------------------------------------------------------
+_THRESH = (
+    ("c1_i_sign_nonneg_all_scored_cells", "dD/dlnR >= 0 in every scored cell"),
+    ("c1_ii_R_doubled_g2_gap_", ">= +0.10 (10.0 pp)"),
+    ("c2_i_sign_nonneg_all_scored_cells", "dD/dln(1+V) >= 0 in every scored cell"),
+    ("c2_ii_V_plus25pct_g2_gap_", ">= +0.02 (2.0 pp)"),
+    ("c3_i_max_D_g0", "<= 0.025"),
+    ("c3_ii_max_Dg0_over_Dg1", "<= 0.20"),
+    ("c4a_D_HKG_g2_2020_in_band", "in [0.75, 0.95]"),
+    ("c4b_gap_Dstar_HKG_minus_PHL", ">= 0.10"),
+    ("c4b_gap_Dstar_PHL_minus_KHM", ">= 0.05"),
+    ("c5_", "identity (no threshold)"),
+    ("c6_sha256", "sha256 equality"),
+    ("c4c_", "zero country-specific behavioural parameters"),
+)
+
+
+def _threshold_for(component):
+    for pref, thr in _THRESH:
+        if component.startswith(pref):
+            return thr
+    return ""
+
+
 def write_checks(checks, outdir):
     cols = ["check_id", "expected_pattern", "synthetic_value", "verdict", "note"]
     with open(Path(outdir) / "shadow_checks_v1_3.csv", "w", newline="") as fh:
@@ -1926,21 +1949,21 @@ def write_checks(checks, outdir):
     # detail
     with open(Path(outdir) / "shadow_checks_detail_v1_3.csv", "w", newline="") as fh:
         w = csv.writer(fh, lineterminator="\n")
-        w.writerow(["check_id", "component", "value", "component_verdict", "label"])
+        w.writerow(["check_id", "component", "value", "threshold", "component_verdict", "label"])
         for c in checks:
             for k, v in c.get("sub", {}).items():
                 val = v[1]
                 if isinstance(val, float):
                     val = f"{val:.10g}"
                 cv = "INFO" if v[0] is None else ("PASS" if v[0] else "FAIL")
-                w.writerow([c["check_id"], k, val, cv, LABEL])
+                w.writerow([c["check_id"], k, val, _threshold_for(k), cv, LABEL])
             for f in c.get("fails", []):
                 w.writerow([c["check_id"] + "_cell_fail",
                             f"{f[0]}|{f[2]}|g{f[1]}|{f[3]}",
                             (f"{f[4]:.10g}" if isinstance(f[4], float) else f[4]),
-                            "FAIL", LABEL])
+                            "its check's threshold", "FAIL", LABEL])
         w.writerow(["c6_ablation", "artifact", "results/_ablation/synthetic_panel_v1_3_shadow_off.csv",
-                    "INFO", LABEL])
+                    "", "INFO", LABEL])
 
 
 def write_gates(w, outdir):

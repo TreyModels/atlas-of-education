@@ -150,7 +150,18 @@ None of these is in `shadow_checks_v1_3.csv`, and none can be promoted into the 
 - Did not widen the c4a band, drop a country from c4b, or switch the c4b statistic to something that passes.
 - Did not report the buggy run (D3) or the superseded run (D4) as results; both are documented here.
 
-## D11 — Run inventory (for audit)
+## D12 — Output-schema fidelity change after the scored run (23:1x)
+
+**What I saw:** `DRY_RUN_PLAN.md` §3.3 asks the check output to carry `check_id, verdict, component,
+value, threshold, note`, while my detail file had `component, value, component_verdict` and no `threshold`
+column. The information was in the RSS values but not in the field the plan names.
+
+**Fix:** added a `threshold` column to `shadow_checks_detail_v1_3.csv` (and the `component_verdict` values for
+informational components now read `INFO`). **No value, verdict or threshold changed** — the panel, gates,
+decomposition, sensitivity, audit and checks files all kept their sha256; only the detail file's schema changed.
+The delivered run was re-executed from the final code and the two-run determinism check repeated (D13).
+
+## D13 — Run inventory (for audit)
 
 | # | what | outcome | kept? |
 |---|---|---|---|
@@ -160,17 +171,18 @@ None of these is in `shadow_checks_v1_3.csv`, and none can be promoted into the 
 | 4 | scored run, + c4a-gap & host diagnostics | same six verdicts | superseded by D9 additions |
 | 5 | scored run, + saturation breakdown | same six verdicts | superseded by D8 fix |
 | 6 | scored run, + sensitivity gap/loop columns | same six verdicts | superseded by D8 fix |
-| 7 | **scored run A, final code** | **c1 PASS · c2 PASS · c3 PASS · c4a FAIL · c4b FAIL · c4c PASS · c4 FAIL · c5 PASS · c6 PASS** | **delivered** |
-| 8 | scored run B, separate dir (determinism) | byte-identical to run 7, including the manifest | evidence |
+| 7 | scored run, final code, pre-D12 | same six verdicts | superseded by D12 (schema only) |
+| 8 | scored run A, final code, + threshold column | **c1 PASS · c2 PASS · c3 PASS · c4a FAIL · c4b FAIL · c4c PASS · c4 FAIL · c5 PASS · c6 PASS** | **delivered** |
+| 9 | scored run B, separate dir (determinism) | byte-identical to run 8, including the manifest | evidence |
 
-**The six verdicts did not change across runs 3–8.** What changed was diagnostics, the c2 max-error figure, the
-loop metric's scope, and two sensitivity columns. That is the honest summary: no verdict was ever "improved" by
+**The six verdicts did not change across any scored run in this log (3–9).** What changed was diagnostics, the c2 max-error figure, the
+loop metric's scope, two sensitivity columns, and the detail file's schema. That is the honest summary: no verdict was ever "improved" by
 a design change, and the one number that moved close to a threshold (c4b) moved **from a PASS to a FAIL** when a
 bug was fixed.
 
 ## Freeze
 
-`code/sim_v1_3.py` sha256 `d714a4f4eb657dd880f3800282583d6fd0983fe33ead75dc1c0fceb8ffb3daf8`;
+`code/sim_v1_3.py` sha256 `70ae8f0eef83358493dad3d3feb2d6a8841c4bb6fad3966627f4eed70e2a9877`;
 `PARAMS.md` sha256 `2b144985aa5b53a426afec0b9df8646ff3f49d803744dc0f2ae73778f22ff84d` (recorded in the code,
 which refuses to run on mismatch). Results hashes are in `RUN_MANIFEST.json` and
 `results/determinism_note.md`.

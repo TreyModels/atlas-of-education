@@ -1,0 +1,95 @@
+row_type,label,provenance,reference_id,country,iso3,indicator,threshold,year,value,contiguous_block,n_obs_in_block,first_at_or_above,first_sustained_5y,note
+observation,OBSERVED-REFERENCE-ONLY,OBSERVED,HKG_ner_primary,"Hong Kong SAR, China",HKG,ner_primary,,1971,88.465490,1971-1985,15,,,observed; no interpolation
+observation,OBSERVED-REFERENCE-ONLY,OBSERVED,HKG_ner_primary,"Hong Kong SAR, China",HKG,ner_primary,,1972,89.634040,1971-1985,15,,,observed; no interpolation
+observation,OBSERVED-REFERENCE-ONLY,OBSERVED,HKG_ner_primary,"Hong Kong SAR, China",HKG,ner_primary,,1973,89.600490,1971-1985,15,,,observed; no interpolation
+observation,OBSERVED-REFERENCE-ONLY,OBSERVED,HKG_ner_primary,"Hong Kong SAR, China",HKG,ner_primary,,1974,91.108550,1971-1985,15,,,observed; no interpolation
+observation,OBSERVED-REFERENCE-ONLY,OBSERVED,HKG_ner_primary,"Hong Kong SAR, China",HKG,ner_primary,,1975,92.748670,1971-1985,15,,,observed; no interpolation
+observation,OBSERVED-REFERENCE-ONLY,OBSERVED,HKG_ner_primary,"Hong Kong SAR, China",HKG,ner_primary,,1976,93.853480,1971-1985,15,,,observed; no interpolation
+observation,OBSERVED-REFERENCE-ONLY,OBSERVED,HKG_ner_primary,"Hong Kong SAR, China",HKG,ner_primary,,1977,95.107250,1971-1985,15,,,observed; no interpolation
+observation,OBSERVED-REFERENCE-ONLY,OBSERVED,HKG_ner_primary,"Hong Kong SAR, China",HKG,ner_primary,,1978,94.687600,1971-1985,15,,,observed; no interpolation
+observation,OBSERVED-REFERENCE-ONLY,OBSERVED,HKG_ner_primary,"Hong Kong SAR, China",HKG,ner_primary,,1979,95.076460,1971-1985,15,,,observed; no interpolation
+observation,OBSERVED-REFERENCE-ONLY,OBSERVED,HKG_ner_primary,"Hong Kong SAR, China",HKG,ner_primary,,1980,99.235930,1971-1985,15,,,observed; no interpolation
+observation,OBSERVED-REFERENCE-ONLY,OBSERVED,HKG_ner_primary,"Hong Kong SAR, China",HKG,ner_primary,,1981,98.947200,1971-1985,15,,,observed; no interpolation
+observation,OBSERVED-REFERENCE-ONLY,OBSERVED,HKG_ner_primary,"Hong Kong SAR, China",HKG,ner_primary,,1982,98.200800,1971-1985,15,,,observed; no interpolation
+observation,OBSERVED-REFERENCE-ONLY,OBSERVED,HKG_ner_primary,"Hong Kong SAR, China",HKG,ner_primary,,1983,97.836360,1971-1985,15,,,observed; no interpolation
+observation,OBSERVED-REFERENCE-ONLY,OBSERVED,HKG_ner_primary,"Hong Kong SAR, China",HKG,ner_primary,,1984,97.163390,1971-1985,15,,,observed; no interpolation
+observation,OBSERVED-REFERENCE-ONLY,OBSERVED,HKG_ner_primary,"Hong Kong SAR, China",HKG,ner_primary,,1985,96.000500,1971-1985,15,,,observed; no interpolation
+observation,OBSERVED-REFERENCE-ONLY,OBSERVED,HKG_ner_primary,"Hong Kong SAR, China",HKG,ner_primary,,1995,93.902610,1995-1996,2,,,observed; no interpolation
+observation,OBSERVED-REFERENCE-ONLY,OBSERVED,HKG_ner_primary,"Hong Kong SAR, China",HKG,ner_primary,,1996,93.807410,1995-1996,2,,,observed; no interpolation
+crossing,OBSERVED-REFERENCE-ONLY,OBSERVED,HKG_ner_primary,"Hong Kong SAR, China",HKG,ner_primary,90,,,1971-1985,15,1974,1974,within this contiguous observed block; 5 consecutive observed years required
+crossing,OBSERVED-REFERENCE-ONLY,OBSERVED,HKG_ner_primary,"Hong Kong SAR, China",HKG,ner_primary,90,,,1995-1996,2,1995,none_by_2025,within this contiguous observed block; 5 consecutive observed years required
+crossing,OBSERVED-REFERENCE-ONLY,OBSERVED,HKG_ner_primary,"Hong Kong SAR, China",HKG,ner_primary,90,,,ALL,17,1974,1974,"earliest across contiguous observed blocks; REFERENCE-ONLY, not validation"
+crossing,OBSERVED-REFERENCE-ONLY,OBSERVED,HKG_ner_primary,"Hong Kong SAR, China",HKG,ner_primary,95,,,1971-1985,15,1977,1979,within this contiguous observed block; 5 consecutive observed years required
+crossing,OBSERVED-REFERENCE-ONLY,OBSERVED,HKG_ner_primary,"Hong Kong SAR, China",HKG,ner_primary,95,,,1995-1996,2,none_by_2025,none_by_2025,within this contiguous observed block; 5 consecutive observed years required
+crossing,OBSERVED-REFERENCE-ONLY,OBSERVED,HKG_ner_primary,"Hong Kong SAR, China",HKG,ner_primary,95,,,ALL,17,1977,1979,"earliest across contiguous observed blocks; REFERENCE-ONLY, not validation"
+observation,OBSERVED-REFERENCE-ONLY,OBSERVED,HKG_aner_primary,"Hong Kong SAR, China",HKG,aner_primary,,1971,88.465490,1971-1985,15,,,observed; no interpolation
+observation,OBSERVED-REFERENCE-ONLY,OBSERVED,HKG_aner_primary,"Hong Kong SAR, China",HKG,aner_primary,,1972,89.634040,1971-1985,15,,,observed; no interpolation
+observation,OBSERVED-REFERENCE-ONLY,OBSERVED,HKG_aner_primary,"Hong Kong SAR, China",HKG,aner_primary,,1973,89.600490,1971-1985,15,,,observed; no interpolation
+observation,OBSERVED-REFERENCE-ONLY,OBSERVED,HKG_aner_primary,"Hong Kong SAR, China",HKG,aner_primary,,1974,91.108550,1971-1985,15,,,observed; no interpolation
+observation,OBSERVED-REFERENCE-ONLY,OBSERVED,HKG_aner_primary,"Hong Kong SAR, China",HKG,aner_primary,,1975,92.748670,1971-1985,15,,,observed; no interpolation
+observation,OBSERVED-REFERENCE-ONLY,OBSERVED,HKG_aner_primary,"Hong Kong SAR, China",HKG,aner_primary,,1976,93.853480,1971-1985,15,,,observed; no interpolation
+observation,OBSERVED-REFERENCE-ONLY,OBSERVED,HKG_aner_primary,"Hong Kong SAR, China",HKG,aner_primary,,1977,95.107250,1971-1985,15,,,observed; no interpolation
+observation,OBSERVED-REFERENCE-ONLY,OBSERVED,HKG_aner_primary,"Hong Kong SAR, China",HKG,aner_primary,,1978,94.687600,1971-1985,15,,,observed; no interpolation
+observation,OBSERVED-REFERENCE-ONLY,OBSERVED,HKG_aner_primary,"Hong Kong SAR, China",HKG,aner_primary,,1979,95.076460,1971-1985,15,,,observed; no interpolation
+observation,OBSERVED-REFERENCE-ONLY,OBSERVED,HKG_aner_primary,"Hong Kong SAR, China",HKG,aner_primary,,1980,99.235930,1971-1985,15,,,observed; no interpolation
+observation,OBSERVED-REFERENCE-ONLY,OBSERVED,HKG_aner_primary,"Hong Kong SAR, China",HKG,aner_primary,,1981,98.947200,1971-1985,15,,,observed; no interpolation
+observation,OBSERVED-REFERENCE-ONLY,OBSERVED,HKG_aner_primary,"Hong Kong SAR, China",HKG,aner_primary,,1982,98.200800,1971-1985,15,,,observed; no interpolation
+observation,OBSERVED-REFERENCE-ONLY,OBSERVED,HKG_aner_primary,"Hong Kong SAR, China",HKG,aner_primary,,1983,97.836360,1971-1985,15,,,observed; no interpolation
+observation,OBSERVED-REFERENCE-ONLY,OBSERVED,HKG_aner_primary,"Hong Kong SAR, China",HKG,aner_primary,,1984,97.163390,1971-1985,15,,,observed; no interpolation
+observation,OBSERVED-REFERENCE-ONLY,OBSERVED,HKG_aner_primary,"Hong Kong SAR, China",HKG,aner_primary,,1985,96.000500,1971-1985,15,,,observed; no interpolation
+observation,OBSERVED-REFERENCE-ONLY,OBSERVED,HKG_aner_primary,"Hong Kong SAR, China",HKG,aner_primary,,1995,93.902610,1995-1996,2,,,observed; no interpolation
+observation,OBSERVED-REFERENCE-ONLY,OBSERVED,HKG_aner_primary,"Hong Kong SAR, China",HKG,aner_primary,,1996,93.807410,1995-1996,2,,,observed; no interpolation
+crossing,OBSERVED-REFERENCE-ONLY,OBSERVED,HKG_aner_primary,"Hong Kong SAR, China",HKG,aner_primary,90,,,1971-1985,15,1974,1974,within this contiguous observed block; 5 consecutive observed years required
+crossing,OBSERVED-REFERENCE-ONLY,OBSERVED,HKG_aner_primary,"Hong Kong SAR, China",HKG,aner_primary,90,,,1995-1996,2,1995,none_by_2025,within this contiguous observed block; 5 consecutive observed years required
+crossing,OBSERVED-REFERENCE-ONLY,OBSERVED,HKG_aner_primary,"Hong Kong SAR, China",HKG,aner_primary,90,,,ALL,17,1974,1974,"earliest across contiguous observed blocks; REFERENCE-ONLY, not validation"
+crossing,OBSERVED-REFERENCE-ONLY,OBSERVED,HKG_aner_primary,"Hong Kong SAR, China",HKG,aner_primary,95,,,1971-1985,15,1977,1979,within this contiguous observed block; 5 consecutive observed years required
+crossing,OBSERVED-REFERENCE-ONLY,OBSERVED,HKG_aner_primary,"Hong Kong SAR, China",HKG,aner_primary,95,,,1995-1996,2,none_by_2025,none_by_2025,within this contiguous observed block; 5 consecutive observed years required
+crossing,OBSERVED-REFERENCE-ONLY,OBSERVED,HKG_aner_primary,"Hong Kong SAR, China",HKG,aner_primary,95,,,ALL,17,1977,1979,"earliest across contiguous observed blocks; REFERENCE-ONLY, not validation"
+observation,OBSERVED-REFERENCE-ONLY,OBSERVED,PHL_ner_primary,Philippines,PHL,ner_primary,,1976,96.792260,1976-1976,1,,,observed; no interpolation
+observation,OBSERVED-REFERENCE-ONLY,OBSERVED,PHL_ner_primary,Philippines,PHL,ner_primary,,1979,96.175310,1979-1979,1,,,observed; no interpolation
+observation,OBSERVED-REFERENCE-ONLY,OBSERVED,PHL_ner_primary,Philippines,PHL,ner_primary,,1981,93.153580,1981-1989,9,,,observed; no interpolation
+observation,OBSERVED-REFERENCE-ONLY,OBSERVED,PHL_ner_primary,Philippines,PHL,ner_primary,,1982,93.165230,1981-1989,9,,,observed; no interpolation
+observation,OBSERVED-REFERENCE-ONLY,OBSERVED,PHL_ner_primary,Philippines,PHL,ner_primary,,1983,91.573760,1981-1989,9,,,observed; no interpolation
+observation,OBSERVED-REFERENCE-ONLY,OBSERVED,PHL_ner_primary,Philippines,PHL,ner_primary,,1984,90.893010,1981-1989,9,,,observed; no interpolation
+observation,OBSERVED-REFERENCE-ONLY,OBSERVED,PHL_ner_primary,Philippines,PHL,ner_primary,,1985,94.438470,1981-1989,9,,,observed; no interpolation
+observation,OBSERVED-REFERENCE-ONLY,OBSERVED,PHL_ner_primary,Philippines,PHL,ner_primary,,1986,93.838030,1981-1989,9,,,observed; no interpolation
+observation,OBSERVED-REFERENCE-ONLY,OBSERVED,PHL_ner_primary,Philippines,PHL,ner_primary,,1987,94.106970,1981-1989,9,,,observed; no interpolation
+observation,OBSERVED-REFERENCE-ONLY,OBSERVED,PHL_ner_primary,Philippines,PHL,ner_primary,,1988,96.147880,1981-1989,9,,,observed; no interpolation
+observation,OBSERVED-REFERENCE-ONLY,OBSERVED,PHL_ner_primary,Philippines,PHL,ner_primary,,1989,97.645270,1981-1989,9,,,observed; no interpolation
+observation,OBSERVED-REFERENCE-ONLY,OBSERVED,PHL_ner_primary,Philippines,PHL,ner_primary,,1992,95.627590,1992-1994,3,,,observed; no interpolation
+observation,OBSERVED-REFERENCE-ONLY,OBSERVED,PHL_ner_primary,Philippines,PHL,ner_primary,,1993,94.677160,1992-1994,3,,,observed; no interpolation
+observation,OBSERVED-REFERENCE-ONLY,OBSERVED,PHL_ner_primary,Philippines,PHL,ner_primary,,1994,93.049130,1992-1994,3,,,observed; no interpolation
+observation,OBSERVED-REFERENCE-ONLY,OBSERVED,PHL_ner_primary,Philippines,PHL,ner_primary,,1996,95.757060,1996-1996,1,,,observed; no interpolation
+observation,OBSERVED-REFERENCE-ONLY,OBSERVED,PHL_ner_primary,Philippines,PHL,ner_primary,,1998,91.858900,1998-1999,2,,,observed; no interpolation
+observation,OBSERVED-REFERENCE-ONLY,OBSERVED,PHL_ner_primary,Philippines,PHL,ner_primary,,1999,88.987210,1998-1999,2,,,observed; no interpolation
+observation,OBSERVED-REFERENCE-ONLY,OBSERVED,PHL_ner_primary,Philippines,PHL,ner_primary,,2001,89.533850,2001-2009,9,,,observed; no interpolation
+observation,OBSERVED-REFERENCE-ONLY,OBSERVED,PHL_ner_primary,Philippines,PHL,ner_primary,,2002,89.632440,2001-2009,9,,,observed; no interpolation
+observation,OBSERVED-REFERENCE-ONLY,OBSERVED,PHL_ner_primary,Philippines,PHL,ner_primary,,2003,89.909120,2001-2009,9,,,observed; no interpolation
+observation,OBSERVED-REFERENCE-ONLY,OBSERVED,PHL_ner_primary,Philippines,PHL,ner_primary,,2004,89.357520,2001-2009,9,,,observed; no interpolation
+observation,OBSERVED-REFERENCE-ONLY,OBSERVED,PHL_ner_primary,Philippines,PHL,ner_primary,,2005,88.554880,2001-2009,9,,,observed; no interpolation
+observation,OBSERVED-REFERENCE-ONLY,OBSERVED,PHL_ner_primary,Philippines,PHL,ner_primary,,2006,86.790770,2001-2009,9,,,observed; no interpolation
+observation,OBSERVED-REFERENCE-ONLY,OBSERVED,PHL_ner_primary,Philippines,PHL,ner_primary,,2007,87.096120,2001-2009,9,,,observed; no interpolation
+observation,OBSERVED-REFERENCE-ONLY,OBSERVED,PHL_ner_primary,Philippines,PHL,ner_primary,,2008,88.123460,2001-2009,9,,,observed; no interpolation
+observation,OBSERVED-REFERENCE-ONLY,OBSERVED,PHL_ner_primary,Philippines,PHL,ner_primary,,2009,89.888610,2001-2009,9,,,observed; no interpolation
+observation,OBSERVED-REFERENCE-ONLY,OBSERVED,PHL_ner_primary,Philippines,PHL,ner_primary,,2014,95.363390,2014-2017,4,,,observed; no interpolation
+observation,OBSERVED-REFERENCE-ONLY,OBSERVED,PHL_ner_primary,Philippines,PHL,ner_primary,,2015,95.075900,2014-2017,4,,,observed; no interpolation
+observation,OBSERVED-REFERENCE-ONLY,OBSERVED,PHL_ner_primary,Philippines,PHL,ner_primary,,2016,94.366040,2014-2017,4,,,observed; no interpolation
+observation,OBSERVED-REFERENCE-ONLY,OBSERVED,PHL_ner_primary,Philippines,PHL,ner_primary,,2017,93.775600,2014-2017,4,,,observed; no interpolation
+crossing,OBSERVED-REFERENCE-ONLY,OBSERVED,PHL_ner_primary,Philippines,PHL,ner_primary,90,,,1976-1976,1,1976,none_by_2025,within this contiguous observed block; 5 consecutive observed years required
+crossing,OBSERVED-REFERENCE-ONLY,OBSERVED,PHL_ner_primary,Philippines,PHL,ner_primary,90,,,1979-1979,1,1979,none_by_2025,within this contiguous observed block; 5 consecutive observed years required
+crossing,OBSERVED-REFERENCE-ONLY,OBSERVED,PHL_ner_primary,Philippines,PHL,ner_primary,90,,,1981-1989,9,1981,1981,within this contiguous observed block; 5 consecutive observed years required
+crossing,OBSERVED-REFERENCE-ONLY,OBSERVED,PHL_ner_primary,Philippines,PHL,ner_primary,90,,,1992-1994,3,1992,none_by_2025,within this contiguous observed block; 5 consecutive observed years required
+crossing,OBSERVED-REFERENCE-ONLY,OBSERVED,PHL_ner_primary,Philippines,PHL,ner_primary,90,,,1996-1996,1,1996,none_by_2025,within this contiguous observed block; 5 consecutive observed years required
+crossing,OBSERVED-REFERENCE-ONLY,OBSERVED,PHL_ner_primary,Philippines,PHL,ner_primary,90,,,1998-1999,2,1998,none_by_2025,within this contiguous observed block; 5 consecutive observed years required
+crossing,OBSERVED-REFERENCE-ONLY,OBSERVED,PHL_ner_primary,Philippines,PHL,ner_primary,90,,,2001-2009,9,none_by_2025,none_by_2025,within this contiguous observed block; 5 consecutive observed years required
+crossing,OBSERVED-REFERENCE-ONLY,OBSERVED,PHL_ner_primary,Philippines,PHL,ner_primary,90,,,2014-2017,4,2014,none_by_2025,within this contiguous observed block; 5 consecutive observed years required
+crossing,OBSERVED-REFERENCE-ONLY,OBSERVED,PHL_ner_primary,Philippines,PHL,ner_primary,90,,,ALL,30,1976,1981,"earliest across contiguous observed blocks; REFERENCE-ONLY, not validation"
+crossing,OBSERVED-REFERENCE-ONLY,OBSERVED,PHL_ner_primary,Philippines,PHL,ner_primary,95,,,1976-1976,1,1976,none_by_2025,within this contiguous observed block; 5 consecutive observed years required
+crossing,OBSERVED-REFERENCE-ONLY,OBSERVED,PHL_ner_primary,Philippines,PHL,ner_primary,95,,,1979-1979,1,1979,none_by_2025,within this contiguous observed block; 5 consecutive observed years required
+crossing,OBSERVED-REFERENCE-ONLY,OBSERVED,PHL_ner_primary,Philippines,PHL,ner_primary,95,,,1981-1989,9,1988,none_by_2025,within this contiguous observed block; 5 consecutive observed years required
+crossing,OBSERVED-REFERENCE-ONLY,OBSERVED,PHL_ner_primary,Philippines,PHL,ner_primary,95,,,1992-1994,3,1992,none_by_2025,within this contiguous observed block; 5 consecutive observed years required
+crossing,OBSERVED-REFERENCE-ONLY,OBSERVED,PHL_ner_primary,Philippines,PHL,ner_primary,95,,,1996-1996,1,1996,none_by_2025,within this contiguous observed block; 5 consecutive observed years required
+crossing,OBSERVED-REFERENCE-ONLY,OBSERVED,PHL_ner_primary,Philippines,PHL,ner_primary,95,,,1998-1999,2,none_by_2025,none_by_2025,within this contiguous observed block; 5 consecutive observed years required
+crossing,OBSERVED-REFERENCE-ONLY,OBSERVED,PHL_ner_primary,Philippines,PHL,ner_primary,95,,,2001-2009,9,none_by_2025,none_by_2025,within this contiguous observed block; 5 consecutive observed years required
+crossing,OBSERVED-REFERENCE-ONLY,OBSERVED,PHL_ner_primary,Philippines,PHL,ner_primary,95,,,2014-2017,4,2014,none_by_2025,within this contiguous observed block; 5 consecutive observed years required
+crossing,OBSERVED-REFERENCE-ONLY,OBSERVED,PHL_ner_primary,Philippines,PHL,ner_primary,95,,,ALL,30,1976,none_by_2025,"earliest across contiguous observed blocks; REFERENCE-ONLY, not validation"

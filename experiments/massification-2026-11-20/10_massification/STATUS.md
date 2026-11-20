@@ -939,3 +939,26 @@ changed is `oos_neither_share` (1,680 tertiary rows); `reproduction_checks_v1_2.
   CEIL-ATTRIB), **M1-NER #3** (dispatch in progress — the H1 gate), **A3-S #4** (= the v1.3 shadow build), **ASYM-K #5
   drop-first** (not dispatched). **D113 process rules:** anchoring-block numbers must be re-derived from disk before
   freeze; the paper-test series is **terminated for this phase**.
+
+### h) EXP-1 CEIL-ATTRIB and EXP-3 M1-NER executed — ceiling reclassified to pipeline; HKG measure gate fails
+
+- **CEIL-ATTRIB** (`ceil_attrib_2026-11-20/`, predecl `ed9b31b9…`, deterministic, 24/24 SHA verify): **Test A = MIXED**
+  (mechanism ablations move synthetic upper UIS 2024 by +2.64 / +6.27 / −3.47 pp — all ≥2 pp — but calibration knobs
+  also move it by −3.48 / +2.08 / −7.56 pp, so neither the mechanism-carried nor the calibration-carried clause holds);
+  **Test B = PIPELINE-CONSISTENT** (observed PHL `upper_t / lower_{t−3}` in [0.90,1.10] in **7/8** pairs). **Overall:
+  `PIPELINE-CONSISTENT`** — the observed upper-secondary ceiling is what a **lower-secondary pipeline one stage
+  earlier** would produce; **D63 reclassified from "upper gate" to "lower pipeline", still `UNABLE` as to cause**.
+  **v1.2's "the mechanism produces the ceiling" is not licensed** (Test A mixed); the ceiling is not declared a
+  calibration artefact either. No re-fit, no direction claim.
+- **M1-NER** (`m1_ner_2026-11-20/`, predecl `9eb35a92…`, deterministic, 16/16 SHA verify): **H1 NOT ADMISSIBLE** —
+  band max |stock−flow| = **2.685 pp** (>2.0; 7/15 band years fail); crossing differences **3 y** (≥90) and **2 y**
+  (≥95) (>1 y). The cohort-flow NER analogue **leads** a stock-style object by 2–3 years — the flattering direction.
+  **Consequence: the HKG diagnostic transfer must return `BLOCKED-MEASURE(SR-1)`; D111's authorisation is void for this
+  object; a future HKG attempt needs a NEW predeclaration with a stock-style NER object and a new Council decision.**
+  Recorded in `hkg_transfer_2026-11-20/HKG_H1_OUTCOME.md` (frozen HKG predecl untouched). Reference-only observed
+  crossings: HKG ≥90 1974 / ≥95 1979; PHL ≥90 1981 / ≥95 none by 2025.
+- **v1.3 current state re-verified and re-committed** (the earlier batch captured a mid-build snapshot; the
+  worker's final thresholds fix and bug disclosures are in `TUNE_LOG.md`; two clean re-runs byte-identical to delivered;
+  the shadow-off ablation still reproduces the v1.2 panel byte-for-byte — c6 no-re-fit guard holds). **c4 FAIL stands**
+  (c4a HKG level 0.340 vs band [0.75,0.95]; c4b gap 0.0967 vs 0.10) — the declared shadow parameterisation does not
+  reproduce the HKG anchor.

@@ -1,0 +1,246 @@
+{
+  "brief": "Council brief 021 (D112 #3), SYNTHESIS_021.md section 4 EXP-3 / section 3.3 H1",
+  "code": [
+    {
+      "path": "10_massification/extensions/m1_ner_2026-11-20/code/run_m1_ner.py",
+      "role": "deterministic analysis (stdlib only)",
+      "sha256": "9cac539f2304f64185b25a579a731200d0929997aa86148167f48ea0331c70c6"
+    }
+  ],
+  "date_local": "2026-11-20",
+  "deliverables": [
+    {
+      "path": "10_massification/extensions/m1_ner_2026-11-20/FINDINGS.md",
+      "sha256": "3ce83f56005a03deaccb107a49da5e061f69142951bfc59fb08ea5f0ca38e4a0"
+    },
+    {
+      "path": "10_massification/extensions/m1_ner_2026-11-20/PRE_DECLARATIONS.md",
+      "sha256": "9eb35a92c8f3f12b723bc0a7bf1240e61bd48580d463b7dc90240512f938d78f"
+    }
+  ],
+  "determinism": {
+    "byte_identical": true,
+    "files": [
+      {
+        "byte_identical_run1_results": true,
+        "byte_identical_run1_run2": true,
+        "file": "results/M1_NER_RESULTS.csv",
+        "sha256_results": "adc01e70d0e69cf936814a83b39a5e63e3b907ca074439cf67b82a3a58f8de2b",
+        "sha256_run1": "adc01e70d0e69cf936814a83b39a5e63e3b907ca074439cf67b82a3a58f8de2b",
+        "sha256_run2": "adc01e70d0e69cf936814a83b39a5e63e3b907ca074439cf67b82a3a58f8de2b"
+      },
+      {
+        "byte_identical_run1_results": true,
+        "byte_identical_run1_run2": true,
+        "file": "results/M1_NER_COMPARISON.csv",
+        "sha256_results": "e2bea87a8d1c0a6df114b9fa070e83bbdd8a1638cbd545b4dd70f4ca74cd9b11",
+        "sha256_run1": "e2bea87a8d1c0a6df114b9fa070e83bbdd8a1638cbd545b4dd70f4ca74cd9b11",
+        "sha256_run2": "e2bea87a8d1c0a6df114b9fa070e83bbdd8a1638cbd545b4dd70f4ca74cd9b11"
+      },
+      {
+        "byte_identical_run1_results": true,
+        "byte_identical_run1_run2": true,
+        "file": "results/M1_NER_CROSSINGS.csv",
+        "sha256_results": "a6e26c7ac448e37978153586447e7d9f4ed2d9b1011ca758de069210fb4cbb94",
+        "sha256_run1": "a6e26c7ac448e37978153586447e7d9f4ed2d9b1011ca758de069210fb4cbb94",
+        "sha256_run2": "a6e26c7ac448e37978153586447e7d9f4ed2d9b1011ca758de069210fb4cbb94"
+      },
+      {
+        "byte_identical_run1_results": true,
+        "byte_identical_run1_run2": true,
+        "file": "results/M1_NER_REFERENCE.csv",
+        "sha256_results": "0d5605ae6a755d01be9ad2b729cffd36577d132db3044f21fb6c7d76dbf8a418",
+        "sha256_run1": "0d5605ae6a755d01be9ad2b729cffd36577d132db3044f21fb6c7d76dbf8a418",
+        "sha256_run2": "0d5605ae6a755d01be9ad2b729cffd36577d132db3044f21fb6c7d76dbf8a418"
+      }
+    ],
+    "method": "two independent runs into _determinism/run1 and _determinism/run2; cmp and sha256; both also compared with results/",
+    "python": "/Users/treymenefee/Library/Application Support/dsh-massification/venv/bin/python",
+    "python_version": "3.11.17",
+    "third_party_packages": "none (Python standard library only)"
+  },
+  "experiment": "EXP-3 M1-NER \u2014 construct equivalence of the cohort-flow NER analogue",
+  "inputs": [
+    {
+      "path": "10_massification/extensions/synthetic_2026-11-20/generator_v1_2_addendum/results/synthetic_panel_v1_2_ner.csv",
+      "role": "v1.2.1 NER panel (test object)",
+      "sha256": "c6d1f9b059b5a48cbd5a4aaf7e1c4611cad781819b74987988897e8d35e40294"
+    },
+    {
+      "path": "10_massification/extensions/synthetic_2026-11-20/generator_v1_2_addendum/PRE_DECLARATIONS.md",
+      "role": "addendum predeclaration (sha aa756f8b... per brief)",
+      "sha256": "aa756f8b463e557eaf72601c23da150e76968ca249e0cc74c1ff30792533eb88"
+    },
+    {
+      "path": "10_massification/extensions/synthetic_2026-11-20/generator_v1_2_addendum/RUN_MANIFEST.json",
+      "role": "addendum manifest",
+      "sha256": "bb918259431d705907c593037961b25dee40dc7c8764ce14f63bd1965866dc5d"
+    },
+    {
+      "path": "10_massification/extensions/synthetic_2026-11-20/generator_v1_2/results/synthetic_panel_v1_2.csv",
+      "role": "frozen v1.2 panel (upstream of NER columns)",
+      "sha256": "14729c5141a71dd9aaf87a5ad2e973a84b5f04603577aae627f2833276fac5ac"
+    },
+    {
+      "path": "10_massification/extensions/synthetic_2026-11-20/generator_v1_2/code/sim_v1_2.py",
+      "role": "frozen v1.2 generator (DVEC source at line 65)",
+      "sha256": "61123aa9370a407487407bf3ff4b97287aea67cac5f90629e540a6e8cc855e7c"
+    },
+    {
+      "path": "10_massification/extensions/synthetic_2026-11-20/generator_v1_2/PARAMS.md",
+      "role": "frozen v1.2 parameters (durations, section 3)",
+      "sha256": "0d619781c4e059f54cf771fb385475f5f939dceced5036e8a21b6e07a2b315e3"
+    },
+    {
+      "path": "08_council/brief_021/SYNTHESIS_021.md",
+      "role": "Council brief 021 (EXP-3 / H1 definitions)",
+      "sha256": "dcc9df11cf23981623145fbdc2d9b3c4bd8863206d5ae28e5f784c8b8751a32b"
+    },
+    {
+      "path": "data/gmr_observed_6countries_1970_2024.csv",
+      "role": "observed HKG NER/ANER (REFERENCE-ONLY)",
+      "sha256": "794a67c11ca052412edb2935c33c3c6e635cbd2e81ca5b9e44345ef9f5326e41"
+    },
+    {
+      "path": "10_massification/data/UNIVERSALIZATION_SERIES.csv",
+      "role": "observed PHL ner_primary (REFERENCE-ONLY)",
+      "sha256": "85bc869396ebfcb39e3e1a21a31af219e75a07326c738a51d2bfdbe536737ddb"
+    }
+  ],
+  "labels": {
+    "claims": "measurement/construct only; no causal or direction claim; no HKG transfer; no portability or phase-verdict claim",
+    "observed_series": "OBSERVED-REFERENCE-ONLY",
+    "test_objects": "SYNTHETIC / DERIVED"
+  },
+  "notes": [
+    "No HKG transfer comparison was run. No file outside 10_massification/extensions/m1_ner_2026-11-20/ was written.",
+    "The test object is a cohort-flow analogue (addendum PRE_DECLARATIONS.md section 2.1), not the UIS stock NER.",
+    "The stock analogue is the brief's declared parameter-free mean of admitted_official/cohort over the last dur years (mean of per-year ratios), using factory DVEC = (6,3,3,4).",
+    "Two in-band years (1970, 1971) were excluded from Condition B because the 6-year stock window is incomplete; this exclusion was declared before the run (predeclaration section 4.1).",
+    "Predeclaration section 8 parenthetical says '24 observations each' for HKG; 24 is the full observed series 1971-2018. Within the declared 1971-1996 window there are 17 observations each (15 in 1971-1985, 2 in 1995-1996). Operative window rule unchanged; no threshold/rule changed; verdict unaffected.",
+    "Observed HKG/PHL crossings are REFERENCE-ONLY and are not validation of the synthetic model."
+  ],
+  "predeclaration": {
+    "path": "10_massification/extensions/m1_ner_2026-11-20/PRE_DECLARATIONS.md",
+    "sha256": "9eb35a92c8f3f12b723bc0a7bf1240e61bd48580d463b7dc90240512f938d78f"
+  },
+  "programme_root": "/Users/treymenefee/massification_live/experiments/massification-2026-11-20",
+  "reference_only_crossings": {
+    "HKG_aner_primary": {
+      "first_at_90": 1974,
+      "first_at_95": 1977,
+      "first_sustained_90": 1974,
+      "first_sustained_95": 1979,
+      "n_obs": 17,
+      "window": "1971-1996"
+    },
+    "HKG_ner_primary": {
+      "first_at_90": 1974,
+      "first_at_95": 1977,
+      "first_sustained_90": 1974,
+      "first_sustained_95": 1979,
+      "n_obs": 17,
+      "window": "1971-1996"
+    },
+    "PHL_ner_primary": {
+      "first_at_90": 1976,
+      "first_at_95": 1976,
+      "first_sustained_90": 1981,
+      "first_sustained_95": null,
+      "n_obs": 30,
+      "window": "1976-2017"
+    },
+    "note": "REFERENCE-ONLY; not validation; not compared with synthetic targets; no interpolation"
+  },
+  "reproduction": {
+    "command": "PYTHONHASHSEED=0 PYTHONDONTWRITEBYTECODE=1 \"<python>\" -B code/run_m1_ner.py --out-dir results",
+    "refusal_checks": [
+      "predeclaration sha256 == 9eb35a92c8f3f12b723bc0a7bf1240e61bd48580d463b7dc90240512f938d78f",
+      "panel sha256 == c6d1f9b059b5a48cbd5a4aaf7e1c4611cad781819b74987988897e8d35e40294",
+      "6720 rows; 120 country-level series; contiguous 1970-2025; every label SYNTHETIC"
+    ],
+    "working_directory": "10_massification/extensions/m1_ner_2026-11-20"
+  },
+  "results": [
+    {
+      "description": "test statistics and verdicts",
+      "n_data_rows": 21,
+      "path": "10_massification/extensions/m1_ner_2026-11-20/results/M1_NER_RESULTS.csv",
+      "sha256": "adc01e70d0e69cf936814a83b39a5e63e3b907ca074439cf67b82a3a58f8de2b"
+    },
+    {
+      "description": "band-year flow vs stock (verdict + sensitivity roles)",
+      "n_data_rows": 599,
+      "path": "10_massification/extensions/m1_ner_2026-11-20/results/M1_NER_COMPARISON.csv",
+      "sha256": "e2bea87a8d1c0a6df114b9fa070e83bbdd8a1638cbd545b4dd70f4ca74cd9b11"
+    },
+    {
+      "description": "first-sustained crossings at 90/95, both analogues, all series",
+      "n_data_rows": 242,
+      "path": "10_massification/extensions/m1_ner_2026-11-20/results/M1_NER_CROSSINGS.csv",
+      "sha256": "a6e26c7ac448e37978153586447e7d9f4ed2d9b1011ca758de069210fb4cbb94"
+    },
+    {
+      "description": "observed HKG/PHL series and crossings, REFERENCE-ONLY",
+      "n_data_rows": 94,
+      "path": "10_massification/extensions/m1_ner_2026-11-20/results/M1_NER_REFERENCE.csv",
+      "sha256": "0d5605ae6a755d01be9ad2b729cffd36577d132db3044f21fb6c7d76dbf8a418"
+    }
+  ],
+  "status": "COMPLETE",
+  "timezone": "Asia/Shanghai",
+  "verdict": {
+    "band_violation_years": [
+      2001,
+      2002,
+      2003,
+      2004,
+      2005,
+      2006,
+      2015
+    ],
+    "band_violations": 7,
+    "band_years_complete": 15,
+    "band_years_excluded_incomplete_window": [
+      1970,
+      1971
+    ],
+    "condition_B_band": "NOT MET",
+    "condition_C_crossing": "NOT MET",
+    "crossing_90": {
+      "difference_y": 3,
+      "flow": 2007,
+      "stock": 2010
+    },
+    "crossing_95": {
+      "difference_y": 2,
+      "flow": 2016,
+      "stock": 2018
+    },
+    "expected_sign": {
+      "band_expansion_years": 15,
+      "counter_sign_years": 0,
+      "flow_ge_stock": 15,
+      "mean_stock_minus_flow_pp": -1.751664
+    },
+    "h1": "NOT ADMISSIBLE",
+    "max_abs_diff_year": 2001,
+    "max_abs_stock_minus_flow_pp": 2.685005,
+    "panel_sensitivity": {
+      "band_series_years": 582,
+      "crossing_90_both_defined": 30,
+      "crossing_90_within_1y": 4,
+      "crossing_95_both_defined": 20,
+      "crossing_95_within_1y": 2,
+      "max_abs_diff_pp": 6.739943,
+      "max_series": "SYN04/primary",
+      "max_year": 2008,
+      "series_total": 120,
+      "series_with_violation": 44,
+      "violating_series_years": 141
+    },
+    "verdict_series": "SYN00_PHL_LIKE/primary",
+    "years": "1970-2025 (band test on complete 6-year windows 1975-2025)"
+  },
+  "worker": "MN"
+}

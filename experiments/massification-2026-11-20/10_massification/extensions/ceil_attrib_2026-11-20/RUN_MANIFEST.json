@@ -1,0 +1,239 @@
+{
+  "label": "SYNTHETIC (generator) + OBSERVED (PHL UIS series)",
+  "experiment": "EXP-1 CEIL-ATTRIB",
+  "brief": "Council brief 021 (D112 #1); SYNTHESIS_021.md section 4, EXP-1, rank #1",
+  "worker": "WORKER CA",
+  "date": "2026-11-20",
+  "status": "COMPLETE",
+  "statement": "Synthetic generator numbers come from declared assumptions only and are not evidence, not an estimate, not a forecast, and license no causal or direction claim. Test B uses the observed PHL UIS completion series and is labelled OBSERVED. D63 is reclassified, not explained.",
+  "predeclaration": {
+    "file": "PRE_DECLARATIONS.md",
+    "sha256": "ed9b31b9cfa24ffa3a2285cb769ad9ecae899e392f77ac648e3c55b7dbfef64f",
+    "recorded_sidecar": "PRE_DECLARATIONS.sha256",
+    "sidecar_sha256": "f2876680f52c49bd4ffefcdbc47cd696e04b2b73c99bcf5b11a75b3bb2ef452d",
+    "hashed_before_any_run": true,
+    "thresholds_changed_after_results": false,
+    "verbatim_source": "08_council/brief_021/SYNTHESIS_021.md section 4 EXP-1 items 2, 5, 6"
+  },
+  "frozen_objects_read_only": {
+    "code": {
+      "file": "../synthetic_2026-11-20/generator_v1_2/code/sim_v1_2.py",
+      "sha256": "61123aa9370a407487407bf3ff4b97287aea67cac5f90629e540a6e8cc855e7c"
+    },
+    "params": {
+      "file": "../synthetic_2026-11-20/generator_v1_2/PARAMS.md",
+      "sha256": "0d619781c4e059f54cf771fb385475f5f939dceced5036e8a21b6e07a2b315e3"
+    },
+    "panel": {
+      "file": "../synthetic_2026-11-20/generator_v1_2/results/synthetic_panel_v1_2.csv",
+      "sha256": "14729c5141a71dd9aaf87a5ad2e973a84b5f04603577aae627f2833276fac5ac"
+    },
+    "v12_spec": {
+      "file": "../synthetic_2026-11-20/v1_2/PRE_DECLARATIONS.md",
+      "sha256": "fde18d405d875167977b350a925c28248c3007d2813dcdb29219d3baf0b95f16"
+    },
+    "v12_manifest": {
+      "file": "../synthetic_2026-11-20/generator_v1_2/RUN_MANIFEST.json",
+      "sha256": "36c40ff95470893a6d6fda21d9afe341ec0f374073a7af56cdf9c55c9b75b876"
+    },
+    "frozen_untouched_verified_after_run": true
+  },
+  "copies_inside_experiment_dir": {
+    "code": {
+      "path": "generator_v1_2/code/sim_v1_2.py",
+      "sha256": "61123aa9370a407487407bf3ff4b97287aea67cac5f90629e540a6e8cc855e7c",
+      "byte_identical_to_frozen": true
+    },
+    "params": {
+      "path": "generator_v1_2/PARAMS.md",
+      "sha256": "0d619781c4e059f54cf771fb385475f5f939dceced5036e8a21b6e07a2b315e3",
+      "byte_identical_to_frozen": true
+    },
+    "v12_spec": {
+      "path": "v1_2/PRE_DECLARATIONS.md",
+      "sha256": "fde18d405d875167977b350a925c28248c3007d2813dcdb29219d3baf0b95f16",
+      "byte_identical_to_frozen": true
+    }
+  },
+  "experiment_code": {
+    "run_script": {
+      "path": "code/run_ceil_attrib.py",
+      "sha256": "617f01ca507b1bef42852b413d799ff863b6ec6615804fe2d0ff2c06392e229e"
+    },
+    "manifest_builder": {
+      "path": "code/make_manifest.py",
+      "sha256": "fea618389274f012a90a06c088d3c22f97499263c78509178883dd456db7dc86"
+    }
+  },
+  "findings": {
+    "path": "FINDINGS.md",
+    "sha256": "69338239cda2bcfee7a937dfcdee0285d83c90125240f7d1992755e19aebfdca"
+  },
+  "inputs": {
+    "UNIVERSALIZATION_SERIES.csv": "85bc869396ebfcb39e3e1a21a31af219e75a07326c738a51d2bfdbe536737ddb",
+    "panel_wdi_long.csv": "a37629ae5d4f9ed2be4c71e33bfc876131880f65d356c88bd4d047a9bbdeae75",
+    "STATE_CAPACITY.csv": "704efacad00f0ba7ddf579459a930d064fdb0f4b882cffbbf44a6cbecd585044",
+    "SCHOOL_EXPANSION.csv": "c218e6c9bd784e135e089ebecefec21112a09e6bf2c778599a33bc81b78c8ea3",
+    "economic_complexity_panel_30ctys.csv": "9657bfd6cc17d3ed7f59939e0ba6af1412c2d070f2dd0c600a514f4b063a7f04",
+    "gmr_observed_6countries_1970_2024.csv": "794a67c11ca052412edb2935c33c3c6e635cbd2e81ca5b9e44345ef9f5326e41"
+  },
+  "baseline_invariance": {
+    "requirement": "unmodified copy reproduces results/synthetic_panel_v1_2.csv byte-for-byte",
+    "reproduced_panel": "results/baseline_reproduction/synthetic_panel_v1_2.csv",
+    "reproduced_panel_sha256": "14729c5141a71dd9aaf87a5ad2e973a84b5f04603577aae627f2833276fac5ac",
+    "frozen_panel_sha256": "14729c5141a71dd9aaf87a5ad2e973a84b5f04603577aae627f2833276fac5ac",
+    "byte_identical": true,
+    "driver_with_no_switch_byte_identical": true,
+    "resolved": true,
+    "checks_csv_sha256": {
+      "reproduction_checks_v1_2.csv": "72a17fb6dcf59db671bbbcdb04111560d1d1aee59791009111dc3861b3f0fba8",
+      "reproduction_checks_detail_v1_2.csv": "0597bafb8f8b90ad03a0164e9c2137cdaaff2186f1d7d0c5e5476462b285706b"
+    }
+  },
+  "results": {
+    "CEIL_ATTRIB_RESULTS.csv": "5ff7f0998794620a3482442effc6726619e4da3690944b721dd68219fc05ec86",
+    "CEIL_ATTRIB_DETAIL.csv": "6d578c67f608225657feb289d1b192f1eb78e639af61f34abfecf3ffb239c763",
+    "ABLATION_PANEL.csv": "aba887ca134f7c85e6b54744a2ef94e59285c31ec265dfc1500c33d4e7f0b240",
+    "EVIDENCE.json": "ed12361c8355131754b9c514a7176bba0ef608aae5fe08bf7ae2b63064c944c3",
+    "console_run1": "ba03df1d56fa953b663270a04bd5d5999caac51077bc61c24380809ecd6aa659",
+    "console_run2": "ba03df1d56fa953b663270a04bd5d5999caac51077bc61c24380809ecd6aa659"
+  },
+  "determinism": {
+    "method": "two full runs (results/ and results/determinism_run2/), byte comparison of every result file",
+    "files": {
+      "CEIL_ATTRIB_RESULTS.csv": {
+        "run1_sha256": "5ff7f0998794620a3482442effc6726619e4da3690944b721dd68219fc05ec86",
+        "run2_sha256": "5ff7f0998794620a3482442effc6726619e4da3690944b721dd68219fc05ec86",
+        "byte_identical": true
+      },
+      "CEIL_ATTRIB_DETAIL.csv": {
+        "run1_sha256": "6d578c67f608225657feb289d1b192f1eb78e639af61f34abfecf3ffb239c763",
+        "run2_sha256": "6d578c67f608225657feb289d1b192f1eb78e639af61f34abfecf3ffb239c763",
+        "byte_identical": true
+      },
+      "ABLATION_PANEL.csv": {
+        "run1_sha256": "aba887ca134f7c85e6b54744a2ef94e59285c31ec265dfc1500c33d4e7f0b240",
+        "run2_sha256": "aba887ca134f7c85e6b54744a2ef94e59285c31ec265dfc1500c33d4e7f0b240",
+        "byte_identical": true
+      },
+      "EVIDENCE.json": {
+        "run1_sha256": "ed12361c8355131754b9c514a7176bba0ef608aae5fe08bf7ae2b63064c944c3",
+        "run2_sha256": "ed12361c8355131754b9c514a7176bba0ef608aae5fe08bf7ae2b63064c944c3",
+        "byte_identical": true
+      },
+      "baseline_reproduction/synthetic_panel_v1_2.csv": {
+        "run1_sha256": "14729c5141a71dd9aaf87a5ad2e973a84b5f04603577aae627f2833276fac5ac",
+        "run2_sha256": "14729c5141a71dd9aaf87a5ad2e973a84b5f04603577aae627f2833276fac5ac",
+        "byte_identical": true
+      }
+    },
+    "all_byte_identical": true,
+    "driver_adds_rng": false,
+    "generator_rng": "numpy PCG64, single stream, seed 20261120, fixed draw order; identical across variants",
+    "wall_clock_or_os_entropy_in_outputs": false
+  },
+  "verdicts": {
+    "test_A": "MIXED",
+    "test_B": "PIPELINE-CONSISTENT",
+    "overall_ceil_attrib": "PIPELINE-CONSISTENT",
+    "matrix_cell": "(a) pipeline-consistent: residual reclassified as lower-pipeline inheritance; D63 stays UNABLE as to cause; no demand/exit-cost claim",
+    "test_A_component": {
+      "baseline_upper_uis_2024": 76.63908112137804,
+      "mech_hits": 3,
+      "calib_absmax_pp": 7.56151989504373,
+      "calib_ge_2pp": true,
+      "calib_all_lt_1pp": false,
+      "mech_all_lt_2pp": false
+    },
+    "test_B_component": {
+      "lag": 3,
+      "n_pairs": 8,
+      "in_band": 7,
+      "below_0_90": 1,
+      "share_in_band": 0.875
+    }
+  },
+  "ablation_variants": {
+    "baseline": {
+      "role": "reference",
+      "switch": "none",
+      "upper_uis_2024": 76.63908112137804,
+      "delta_pp": 0.0
+    },
+    "gamma0": {
+      "role": "mechanism",
+      "switch": "P[\"gamma\"] = 0.0",
+      "upper_uis_2024": 79.27615160210655,
+      "delta_pp": 2.637070480728511
+    },
+    "work_off": {
+      "role": "mechanism",
+      "switch": "w_child = 0; farm = 0 (child work earnings = 0)",
+      "upper_uis_2024": 82.9089159512337,
+      "delta_pp": 6.269834829855654
+    },
+    "flat_cohort": {
+      "role": "mechanism",
+      "switch": "SYN00 cohort S(t) = S(1970)",
+      "upper_uis_2024": 73.16849635549264,
+      "delta_pp": -3.4705847658854054
+    },
+    "m1.05": {
+      "role": "calibration",
+      "switch": "P[\"meas_completion_factor\"] = 1.05",
+      "upper_uis_2024": 73.15548652495177,
+      "delta_pp": -3.483594596426272
+    },
+    "m1.10": {
+      "role": "calibration-reference",
+      "switch": "P[\"meas_completion_factor\"] = 1.10 (frozen)",
+      "upper_uis_2024": 76.63908112137804,
+      "delta_pp": 0.0
+    },
+    "m1.12": {
+      "role": "calibration",
+      "switch": "P[\"meas_completion_factor\"] = 1.12",
+      "upper_uis_2024": 78.03251895994855,
+      "delta_pp": 1.393437838570506
+    },
+    "buildout_m5": {
+      "role": "calibration",
+      "switch": "seat_t50_L - 5 (all four levels)",
+      "upper_uis_2024": 78.71946937721904,
+      "delta_pp": 2.080388255841001
+    },
+    "buildout_p5": {
+      "role": "calibration",
+      "switch": "seat_t50_L + 5 (all four levels)",
+      "upper_uis_2024": 69.07756122633431,
+      "delta_pp": -7.56151989504373
+    },
+    "upper_only_m5": {
+      "role": "sensitivity",
+      "switch": "seat_t50[upper] - 5 only",
+      "upper_uis_2024": 78.71946937721904,
+      "delta_pp": 2.080388255841001
+    },
+    "upper_only_p5": {
+      "role": "sensitivity",
+      "switch": "seat_t50[upper] + 5 only",
+      "upper_uis_2024": 73.71991590782986,
+      "delta_pp": -2.919165213548183
+    }
+  },
+  "environment": {
+    "python": "3.11.17",
+    "numpy": "2.4.6",
+    "platform": "macOS"
+  },
+  "discipline": {
+    "writes_outside_experiment_dir": false,
+    "web_used": false,
+    "external_data_used": false,
+    "server_touched": false,
+    "re_fit_or_parameter_change_after_freeze": false,
+    "c1_c4_reopened": false,
+    "wt4_rescored": false,
+    "direction_or_causal_claim": false
+  }
+}
