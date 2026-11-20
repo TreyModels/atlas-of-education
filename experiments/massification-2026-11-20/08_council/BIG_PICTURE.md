@@ -422,3 +422,22 @@ imputation as observation. E1 stays PARKED; direction claims EQUIVALENT.
    the conditional successor (predeclared only after a measured verdict), no new behavioural parameter, the closing
    rule, and R27's last-re-specification limit. **If only one thing mattered:** EXP-16. **Drop-first: EXP-20** (second
    cut EXP-19).
+
+## Post-generator consolidation (Lead-recorded, 2026-11-21 01:45; D145 slate complete except EXP-20)
+
+1. **The generator line is CLOSED at representation-only** (D150): the licensed consistency repair was made cleanly
+   (participation from the frozen v1.3 four-state block, no new parameter, A17 share = frozen block's own in 45/45
+   cells) and the class still scores **0/33** on the observed path (bar ≥17/33) with crossings 1/3. The pre-committed
+   closing rule fired; **no successor generator is predeclared this phase**. Artifacts `v1.5`, `v1.6`, `v1.7` are closed
+   as artifacts (no re-run, no re-tune, no successor-with-a-moved-number).
+2. **What the programme holds after the close:** a **representation capability** (two-tier coexistence of untaken cheap
+   seats + high-gate queues, 15/15 years in the representation-only class), a **descriptive per-system κ register**
+   (PHL 0.9491 / KOR 0.9898 / KHM 0.5950 / CHN 0.7222; WINDOW-ONLY, never forward-usable), a **labelled placement
+   instrument** (v1.2 crossing/endpoint placement, 9/33), a **localised level failure** (the participation margin;
+   17.0507 pp at primary 2024), and a **measurement position** (required coverage 0.759712/0.873523 stays DECLARED;
+   places not observable on disk — EXP-19 PROXY-SILENT; HELD list unchanged).
+3. **The level question passes to the descriptive + measurement lines** (D144's fallback (b)+(c)). **Parks stand:** A3
+   demand line KILLED; exit-cost/induction PARKED; HKG DEFER-HKG (frozen stock-NER design preserved, unrun). **EXP-20
+   USE-REG remains drop-first** (not run).
+4. **Next:** Council cycle 17 adjudicates EXP-16/17/18/19 and the closing record, and issues the post-generator slate
+   (D89). No new generator is predeclared before that ruling; no re-run/re-score of any delivered cell.

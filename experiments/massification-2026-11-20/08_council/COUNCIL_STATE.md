@@ -191,3 +191,16 @@ evidence-spine correction (Z2); see `brief_018/SYNTHESIS_018.md` and `DECISIONS.
    artifacts are closed as artifacts (no re-run/re-tune); the per-system κ register is descriptive only; the HKG design
    is preserved unrun. Any successor generator is predeclared only after EXP-16 returns and only under the tree. **No
    external message sent this cycle** (D87).
+
+## Immediate next state (post-generator; awaiting Council cycle 17)
+
+1. **Generator line closed at representation-only** (D150); repair artifacts closed; no successor predeclared. The
+   programme's live outputs are the representation capability, the per-system κ descriptive register, the v1.2
+   placement label, the localised participation-margin failure, and the measurement position (required coverage
+   DECLARED; places HELD; EXP-19 PROXY-SILENT).
+2. **Council cycle 17** is being convened to adjudicate EXP-16 (MIXED, EXP-18 licensed), EXP-17 (SINGLE-LEVER-IDENTIFIED,
+   λ* not adopted), EXP-18 (PATH-FAILED, closing rule fired), EXP-19 (PROXY-SILENT) and to issue the post-generator five
+   (D89). **EXP-20 USE-REG remains drop-first.**
+3. **No re-run/re-score, no new generator, no proxy substitution, no proxy adoption, no HKG run** before that ruling.
+   HELD list unchanged (D146/D151). Parks: A3 KILLED; exit-cost/induction PARKED; HKG DEFER; D63 UNABLE; phase verdict
+   (D76/D77) untouched.
