@@ -1,0 +1,44 @@
+{
+  "cluster": "cluster_2_tertiary_crossings",
+  "data_files_read": [
+    {
+      "path": "10_massification/data/UNIVERSALIZATION_SERIES.csv",
+      "sha256": "85bc869396ebfcb39e3e1a21a31af219e75a07326c738a51d2bfdbe536737ddb"
+    },
+    {
+      "path": "10_massification/data/UNIVERSALIZATION_TIMING.csv",
+      "sha256": "6e067ffd76b2c57c7c0363387735750cb9e6f68bc4dfd242b3d0f9c80786f892"
+    },
+    {
+      "path": "10_massification/data/JOBS_AND_MARKETS_PANEL.csv",
+      "sha256": "aaaab2744803989ff0f347e27d5824c9b0086b967914d96d21ecd354329787d3"
+    }
+  ],
+  "code": [
+    {
+      "path": "cluster_2_tertiary_crossings/code/run.py",
+      "sha256": "ca22351a82539ef376d0e210609a5de6b1454b1c3ee0814735687ae5116c146a"
+    }
+  ],
+  "python_version": "3.11.17",
+  "seed": "none (no stochastic steps; fixed for determinism)",
+  "run_utc": "2026-11-20T13:00:00Z",
+  "reproducibility": {
+    "verified_by": "lead consolidation re-run",
+    "byte_identical_rerun": true,
+    "result_hashes": {
+      "cluster_2_tertiary_crossings/results/CLUSTER_RESULTS.csv": "33ef1f97a3fdf23e97ff13110b91ea5dc3b14415dfa7e8e0e33978aaa3ee76f6",
+      "cluster_2_tertiary_crossings/results/X4_crossing_typicality.csv": "6fea8eabf6f4d5779fa7d3d611bf3656a8176cf022a954eb91eda94553e39369",
+      "cluster_2_tertiary_crossings/results/X5_package_contrast.csv": "f113590846b24388dde36e4d9f5fac3d9df319cbc1f445c5ca2a48c4d322a2a8",
+      "cluster_2_tertiary_crossings/results/X6_spacing_structure.csv": "600f35bdde4d7e0008133726b3becaa77c75f9fc62fa38246e0f4741e696db92"
+    }
+  },
+  "results_sha256": {
+    "cluster_2_tertiary_crossings/results/CLUSTER_RESULTS.csv": "33ef1f97a3fdf23e97ff13110b91ea5dc3b14415dfa7e8e0e33978aaa3ee76f6",
+    "cluster_2_tertiary_crossings/results/X4_crossing_typicality.csv": "6fea8eabf6f4d5779fa7d3d611bf3656a8176cf022a954eb91eda94553e39369",
+    "cluster_2_tertiary_crossings/results/X5_package_contrast.csv": "f113590846b24388dde36e4d9f5fac3d9df319cbc1f445c5ca2a48c4d322a2a8",
+    "cluster_2_tertiary_crossings/results/X6_spacing_structure.csv": "600f35bdde4d7e0008133726b3becaa77c75f9fc62fa38246e0f4741e696db92"
+  },
+  "run_utc_original": "2026-11-20T13:00:00Z",
+  "lead_schema_fix": "X4 verdict cell originally 'NOT SUPPORTED/NOT SUPPORTED' (two values); normalised to one verdict per consolidated schema; per-milestone-set verdicts retained in the note. No threshold changed."
+}

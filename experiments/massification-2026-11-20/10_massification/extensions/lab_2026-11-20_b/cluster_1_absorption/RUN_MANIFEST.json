@@ -1,0 +1,64 @@
+{
+  "cluster": "cluster_1_absorption",
+  "predeclared_proxy_definitions": {
+    "ABSORB_F": "SL.EMP.WORK.ZS (wage-and-salaried % employment, ILO modelled)",
+    "ABSORB_S": "SL.SRV.EMPL.ZS",
+    "GRAD_SUPPLY": "SE.TER.CUAT.BA.ZS",
+    "QUEUE": "GRAD_SUPPLY / ABSORB_F * 100 (derived; rows with missing/0 ABSORB_F dropped, never imputed)",
+    "LGDP": "log(NY.GDP.PCAP.PP.CD)",
+    "URBAN": "SP.URB.TOTL.IN.ZS",
+    "TER": "SE.TER.ENRR"
+  },
+  "data_files_read": [
+    {
+      "path": "09_relations/data/panel_wdi_long.csv",
+      "sha256": "a37629ae5d4f9ed2be4c71e33bfc876131880f65d356c88bd4d047a9bbdeae75"
+    },
+    {
+      "path": "09_relations/data/panel_wdi_wide.csv",
+      "sha256": "7fd645cb05fbffde038366a010aea2ffa5f5d1afaaa72642e6760ac5300c4485"
+    }
+  ],
+  "code": [
+    {
+      "path": "cluster_1_absorption/code/run.py",
+      "sha256": "22e3da1591aeb355aaf968b6a0a2ce782a65f93307d5bcbe933134d183417e87"
+    }
+  ],
+  "python_version": "3.11.17",
+  "seed": 0,
+  "run_utc": "2026-11-20T13:03:02Z",
+  "deterministic_note": "Pure-numpy OLS with country-clustered CR1 SEs (G/(G-1)); no randomness (fixed seed 0 for form); fixed absolute input paths; no network; no imputation. Pandas 3.1.1.",
+  "reproducibility": {
+    "verified_by": "lead consolidation re-run",
+    "byte_identical_rerun": true,
+    "result_hashes": {
+      "cluster_1_absorption/results/CLUSTER_RESULTS.csv": "9bf5852096204b303d1eac88b013a50192dbc9ff60b599eb34f12fcea1a4997a",
+      "cluster_1_absorption/results/X1_absorption_6systems.csv": "68c441ba6b6ac71a3a9d5a713568e19a90dd856af606268d98326374ab781706",
+      "cluster_1_absorption/results/X2_absorption_30countries.csv": "cad8ab44845760506ad3031789174eeeb1263dcf8107c878208646a583d8f8e7",
+      "cluster_1_absorption/results/X3_queue_depth.csv": "4626c56b1de07fdc461de554bfe23d46d3228e589029b81c0864bdf828dc3eac"
+    }
+  },
+  "results_sha256": {
+    "cluster_1_absorption/results/CLUSTER_RESULTS.csv": "9bf5852096204b303d1eac88b013a50192dbc9ff60b599eb34f12fcea1a4997a",
+    "cluster_1_absorption/results/X1_absorption_6systems.csv": "68c441ba6b6ac71a3a9d5a713568e19a90dd856af606268d98326374ab781706",
+    "cluster_1_absorption/results/X2_absorption_30countries.csv": "cad8ab44845760506ad3031789174eeeb1263dcf8107c878208646a583d8f8e7",
+    "cluster_1_absorption/results/X3_queue_depth.csv": "4626c56b1de07fdc461de554bfe23d46d3228e589029b81c0864bdf828dc3eac"
+  },
+  "run_utc_original": "2026-11-20T13:03:02Z",
+  "lead_adjudication": {
+    "verdicts_as_reported_by_worker": {
+      "X1": "PARTIAL",
+      "X2": "NOT SUPPORTED",
+      "X3": "SUPPORTED"
+    },
+    "verdicts_final": {
+      "X1": "NOT SUPPORTED",
+      "X2": "NOT SUPPORTED",
+      "X3": "SUPPORTED"
+    },
+    "reason": "X1 predeclaration contains an internal conflict: 'PARTIAL if only one of the two' vs explicit falsifier 'within CI includes 0 -> NOT SUPPORTED'. Falsifier-precedence reading adopted; the alternative PARTIAL reading is recorded in the X1 note. No threshold changed.",
+    "x2_note": "30-country point lies inside the X1 CI but with opposite sign; replication sign criterion fails; conservative verdict NOT SUPPORTED."
+  },
+  "notes_lead": "auto-written code/_manifest_meta.json removed (non-reproducible run_utc); authoritative manifest is this file"
+}

@@ -1,0 +1,4 @@
+experiment,dep_var,spec,coefficient,se,ci_low,ci_high,n,n_clusters,label
+X3,QUEUE,a_levels_countryFE,0.366182,0.085809,0.197997,0.534367,190,26,derived
+X3,log1p(QUEUE),"b_log1p_log (log1p(QUEUE) on log(TER), coefficient reported for log(TER))",0.637044,0.050083,0.538881,0.735207,190,26,derived
+X3,QUEUE,c_first_differences,0.25463,0.122109,0.015297,0.493964,164,24,derived

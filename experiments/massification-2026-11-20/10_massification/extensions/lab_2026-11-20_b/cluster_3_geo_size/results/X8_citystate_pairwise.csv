@@ -1,0 +1,7 @@
+experiment,iso3,estimand,hkg,other,ratio,n_hkg,n_other,note,status
+X8,CHN,duration_15_to_50,19.5,13.0,0.6666666666666666,1,1,"censoring HKG:none/none, CHN:none/none",observed
+X8,CHN,volatility_sd_annual_chg,3.974553642990909,1.9749813019115434,0.49690644014690954,37,51,SD of annual changes in ger_tertiary,observed
+X8,PHL,duration_15_to_50,19.5,,,1,1,UNABLE duration: censored crossing(s); HKG_15=none; HKG_50=none; PHL_15=left; PHL_50=none,UNABLE
+X8,PHL,volatility_sd_annual_chg,3.974553642990909,2.0115013120759024,0.506094895869167,37,50,SD of annual changes in ger_tertiary,observed
+X8,KHM,duration_15_to_50,19.5,,,1,1,UNABLE duration: censored crossing(s); HKG_15=none; HKG_50=none; KHM_15=none; KHM_50=right,UNABLE
+X8,KHM,volatility_sd_annual_chg,3.974553642990909,1.0515565725554943,0.26457224307688115,37,40,SD of annual changes in ger_tertiary,observed

@@ -1,0 +1,21 @@
+region,mys_1960_1964,mys_1990_1994,dMYS,gini_1960_1964,gini_1990_1994,dGini,n_sex_rows_mys,n_sex_rows_gini,experiment
+ARMM,7.05,8.455,1.405,0.42,0.325,-0.095,4,4,X10
+Bicol Region,9.39,10.45,1.06,0.24,0.195,-0.045,4,4,X10
+CALABARZON,10.35,11.53,1.18,0.2,0.15,-0.05,4,4,X10
+CAR,9.435,11.53,2.095,0.255,0.17,-0.085,4,4,X10
+Cagayan Valley,9.31,10.99,1.68,0.26,0.19,-0.07,4,4,X10
+Caraga,9.445,10.48,1.035,0.245,0.2,-0.045,4,4,X10
+Central Luzon,9.88,11.14,1.26,0.215,0.16,-0.055,4,4,X10
+Central Visayas,8.91,10.61,1.7,0.28,0.2,-0.08,4,4,X10
+Davao,9.27,10.56,1.29,0.255,0.2,-0.055,4,4,X10
+Eastern Visayas,9.04,10.225,1.185,0.27,0.22,-0.05,4,4,X10
+Ilocos Region,10.05,11.38,1.33,0.21,0.155,-0.055,4,4,X10
+MIMAROPA,8.985,10.325,1.34,0.265,0.215,-0.05,4,4,X10
+NCR,12.01,12.515,0.505,0.145,0.115,-0.03,4,4,X10
+Northern Mindanao,9.82,10.665,0.845,0.24,0.2,-0.04,4,4,X10
+SOCCSKSARGEN,9.28,10.31,1.03,0.265,0.21,-0.055,4,4,X10
+Western Visayas,9.76,11.005,1.245,0.245,0.19,-0.055,4,4,X10
+Zamboanga Peninsula,9.16,10.23,1.07,0.28,0.225,-0.055,4,4,X10
+
+X10 summary: spearman_rho_dMYS_vs_MYS_initial=-0.443627,n=17,regions_dMYS_gt_0=17/17,verdict=SUPPORTED
+LIMITATION: regional tertiary enrolment is NOT observed on disk; there is no PHL regional tertiary GER/participation series. All cells use regional attainment/inequality proxies and national tertiary GER as CONTEXT ONLY. No causal or policy-effect claim. Cohort comparison is descriptive.

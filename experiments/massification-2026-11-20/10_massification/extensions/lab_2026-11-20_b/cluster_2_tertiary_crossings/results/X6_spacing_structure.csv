@@ -1,0 +1,10 @@
+country_or_stat,kind,tertiary50_year_or_rho,secondary_year_or_n,gap,substitution,secondary_censoring,tertiary_censoring
+Japan,excluded_no_dated_secondary,,,,,,
+Republic of Korea,excluded_tertiary50_censored,,,,,,
+"Hong Kong SAR, China",gap,2007.500000,2011.500000,-4.000000,secondary90_substituted,none,none
+Philippines,gap,2024.500000,1976.500000,48.000000,secondary50,none,none
+China,gap,2016.500000,1972.500000,44.000000,secondary50,none,none
+Cambodia,excluded_tertiary50_censored,,,,,,
+rho_LGDP,,0,,,,,
+rho_URBAN,,0,,,,,
+rho_SVCS,,0,,,,,

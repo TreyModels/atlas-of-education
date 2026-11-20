@@ -1,0 +1,438 @@
+{
+  "battery": "lab_2026-11-20_b",
+  "status": "DESCRIPTIVE / ILLUSTRATIVE; cluster 5 SIMULATED; no causal or direction claims",
+  "phase_state": "CLOSED at PARTIAL/DESCRIPTIVE/EQUIVALENT (D76); C1-C4 not reopened",
+  "run_utc": "2026-11-20T13:08:04Z",
+  "python": "3.11.17",
+  "python_path": "/Users/treymenefee/Library/Application Support/dsh-massification/venv/bin/python",
+  "pandas": "3.1.1",
+  "predeclarations_sha256": "c214dddfe51ef0ff9d0173752fe11f74a91e165605ebba45bc405d9fe6381af6",
+  "data_sha256": {
+    "10_massification/data/UNIVERSALIZATION_SERIES.csv": "85bc869396ebfcb39e3e1a21a31af219e75a07326c738a51d2bfdbe536737ddb",
+    "10_massification/data/UNIVERSALIZATION_TIMING.csv": "6e067ffd76b2c57c7c0363387735750cb9e6f68bc4dfd242b3d0f9c80786f892",
+    "10_massification/data/JOBS_AND_MARKETS_PANEL.csv": "aaaab2744803989ff0f347e27d5824c9b0086b967914d96d21ecd354329787d3",
+    "10_massification/data/BASELINE_SERIES.csv": "5ffc1cbd82187a0cdbb48f5811dd04180e02c6fc65765b327ea956a006536fa5",
+    "09_relations/data/panel_wdi_long.csv": "a37629ae5d4f9ed2be4c71e33bfc876131880f65d356c88bd4d047a9bbdeae75",
+    "09_relations/data/panel_wdi_wide.csv": "7fd645cb05fbffde038366a010aea2ffa5f5d1afaaa72642e6760ac5300c4485",
+    "09_relations/data/economic_complexity_panel_30ctys.csv": "9657bfd6cc17d3ed7f59939e0ba6af1412c2d070f2dd0c600a514f4b063a7f04"
+  },
+  "clusters": {
+    "cluster_1_absorption": {
+      "experiments": [
+        "X1",
+        "X2",
+        "X3"
+      ],
+      "results_files": {
+        "cluster_1_absorption/results/CLUSTER_RESULTS.csv": "9bf5852096204b303d1eac88b013a50192dbc9ff60b599eb34f12fcea1a4997a",
+        "cluster_1_absorption/results/X1_absorption_6systems.csv": "68c441ba6b6ac71a3a9d5a713568e19a90dd856af606268d98326374ab781706",
+        "cluster_1_absorption/results/X2_absorption_30countries.csv": "cad8ab44845760506ad3031789174eeeb1263dcf8107c878208646a583d8f8e7",
+        "cluster_1_absorption/results/X3_queue_depth.csv": "4626c56b1de07fdc461de554bfe23d46d3228e589029b81c0864bdf828dc3eac"
+      },
+      "code": {
+        "cluster_1_absorption/code/run.py": "22e3da1591aeb355aaf968b6a0a2ce782a65f93307d5bcbe933134d183417e87"
+      },
+      "manifest": {
+        "cluster": "cluster_1_absorption",
+        "predeclared_proxy_definitions": {
+          "ABSORB_F": "SL.EMP.WORK.ZS (wage-and-salaried % employment, ILO modelled)",
+          "ABSORB_S": "SL.SRV.EMPL.ZS",
+          "GRAD_SUPPLY": "SE.TER.CUAT.BA.ZS",
+          "QUEUE": "GRAD_SUPPLY / ABSORB_F * 100 (derived; rows with missing/0 ABSORB_F dropped, never imputed)",
+          "LGDP": "log(NY.GDP.PCAP.PP.CD)",
+          "URBAN": "SP.URB.TOTL.IN.ZS",
+          "TER": "SE.TER.ENRR"
+        },
+        "data_files_read": [
+          {
+            "path": "09_relations/data/panel_wdi_long.csv",
+            "sha256": "a37629ae5d4f9ed2be4c71e33bfc876131880f65d356c88bd4d047a9bbdeae75"
+          },
+          {
+            "path": "09_relations/data/panel_wdi_wide.csv",
+            "sha256": "7fd645cb05fbffde038366a010aea2ffa5f5d1afaaa72642e6760ac5300c4485"
+          }
+        ],
+        "code": [
+          {
+            "path": "cluster_1_absorption/code/run.py",
+            "sha256": "22e3da1591aeb355aaf968b6a0a2ce782a65f93307d5bcbe933134d183417e87"
+          }
+        ],
+        "python_version": "3.11.17",
+        "seed": 0,
+        "run_utc": "2026-11-20T13:03:02Z",
+        "deterministic_note": "Pure-numpy OLS with country-clustered CR1 SEs (G/(G-1)); no randomness (fixed seed 0 for form); fixed absolute input paths; no network; no imputation. Pandas 3.1.1.",
+        "reproducibility": {
+          "verified_by": "lead consolidation re-run",
+          "byte_identical_rerun": true,
+          "result_hashes": {
+            "cluster_1_absorption/results/CLUSTER_RESULTS.csv": "9bf5852096204b303d1eac88b013a50192dbc9ff60b599eb34f12fcea1a4997a",
+            "cluster_1_absorption/results/X1_absorption_6systems.csv": "68c441ba6b6ac71a3a9d5a713568e19a90dd856af606268d98326374ab781706",
+            "cluster_1_absorption/results/X2_absorption_30countries.csv": "cad8ab44845760506ad3031789174eeeb1263dcf8107c878208646a583d8f8e7",
+            "cluster_1_absorption/results/X3_queue_depth.csv": "4626c56b1de07fdc461de554bfe23d46d3228e589029b81c0864bdf828dc3eac"
+          }
+        },
+        "results_sha256": {
+          "cluster_1_absorption/results/CLUSTER_RESULTS.csv": "9bf5852096204b303d1eac88b013a50192dbc9ff60b599eb34f12fcea1a4997a",
+          "cluster_1_absorption/results/X1_absorption_6systems.csv": "68c441ba6b6ac71a3a9d5a713568e19a90dd856af606268d98326374ab781706",
+          "cluster_1_absorption/results/X2_absorption_30countries.csv": "cad8ab44845760506ad3031789174eeeb1263dcf8107c878208646a583d8f8e7",
+          "cluster_1_absorption/results/X3_queue_depth.csv": "4626c56b1de07fdc461de554bfe23d46d3228e589029b81c0864bdf828dc3eac"
+        },
+        "run_utc_original": "2026-11-20T13:03:02Z",
+        "lead_adjudication": {
+          "verdicts_as_reported_by_worker": {
+            "X1": "PARTIAL",
+            "X2": "NOT SUPPORTED",
+            "X3": "SUPPORTED"
+          },
+          "verdicts_final": {
+            "X1": "NOT SUPPORTED",
+            "X2": "NOT SUPPORTED",
+            "X3": "SUPPORTED"
+          },
+          "reason": "X1 predeclaration contains an internal conflict: 'PARTIAL if only one of the two' vs explicit falsifier 'within CI includes 0 -> NOT SUPPORTED'. Falsifier-precedence reading adopted; the alternative PARTIAL reading is recorded in the X1 note. No threshold changed.",
+          "x2_note": "30-country point lies inside the X1 CI but with opposite sign; replication sign criterion fails; conservative verdict NOT SUPPORTED."
+        },
+        "notes_lead": "auto-written code/_manifest_meta.json removed (non-reproducible run_utc); authoritative manifest is this file"
+      }
+    },
+    "cluster_2_tertiary_crossings": {
+      "experiments": [
+        "X4",
+        "X5",
+        "X6"
+      ],
+      "results_files": {
+        "cluster_2_tertiary_crossings/results/CLUSTER_RESULTS.csv": "33ef1f97a3fdf23e97ff13110b91ea5dc3b14415dfa7e8e0e33978aaa3ee76f6",
+        "cluster_2_tertiary_crossings/results/X4_crossing_typicality.csv": "6fea8eabf6f4d5779fa7d3d611bf3656a8176cf022a954eb91eda94553e39369",
+        "cluster_2_tertiary_crossings/results/X5_package_contrast.csv": "f113590846b24388dde36e4d9f5fac3d9df319cbc1f445c5ca2a48c4d322a2a8",
+        "cluster_2_tertiary_crossings/results/X6_spacing_structure.csv": "600f35bdde4d7e0008133726b3becaa77c75f9fc62fa38246e0f4741e696db92"
+      },
+      "code": {
+        "cluster_2_tertiary_crossings/code/run.py": "ca22351a82539ef376d0e210609a5de6b1454b1c3ee0814735687ae5116c146a"
+      },
+      "manifest": {
+        "cluster": "cluster_2_tertiary_crossings",
+        "data_files_read": [
+          {
+            "path": "10_massification/data/UNIVERSALIZATION_SERIES.csv",
+            "sha256": "85bc869396ebfcb39e3e1a21a31af219e75a07326c738a51d2bfdbe536737ddb"
+          },
+          {
+            "path": "10_massification/data/UNIVERSALIZATION_TIMING.csv",
+            "sha256": "6e067ffd76b2c57c7c0363387735750cb9e6f68bc4dfd242b3d0f9c80786f892"
+          },
+          {
+            "path": "10_massification/data/JOBS_AND_MARKETS_PANEL.csv",
+            "sha256": "aaaab2744803989ff0f347e27d5824c9b0086b967914d96d21ecd354329787d3"
+          }
+        ],
+        "code": [
+          {
+            "path": "cluster_2_tertiary_crossings/code/run.py",
+            "sha256": "ca22351a82539ef376d0e210609a5de6b1454b1c3ee0814735687ae5116c146a"
+          }
+        ],
+        "python_version": "3.11.17",
+        "seed": "none (no stochastic steps; fixed for determinism)",
+        "run_utc": "2026-11-20T13:00:00Z",
+        "reproducibility": {
+          "verified_by": "lead consolidation re-run",
+          "byte_identical_rerun": true,
+          "result_hashes": {
+            "cluster_2_tertiary_crossings/results/CLUSTER_RESULTS.csv": "33ef1f97a3fdf23e97ff13110b91ea5dc3b14415dfa7e8e0e33978aaa3ee76f6",
+            "cluster_2_tertiary_crossings/results/X4_crossing_typicality.csv": "6fea8eabf6f4d5779fa7d3d611bf3656a8176cf022a954eb91eda94553e39369",
+            "cluster_2_tertiary_crossings/results/X5_package_contrast.csv": "f113590846b24388dde36e4d9f5fac3d9df319cbc1f445c5ca2a48c4d322a2a8",
+            "cluster_2_tertiary_crossings/results/X6_spacing_structure.csv": "600f35bdde4d7e0008133726b3becaa77c75f9fc62fa38246e0f4741e696db92"
+          }
+        },
+        "results_sha256": {
+          "cluster_2_tertiary_crossings/results/CLUSTER_RESULTS.csv": "33ef1f97a3fdf23e97ff13110b91ea5dc3b14415dfa7e8e0e33978aaa3ee76f6",
+          "cluster_2_tertiary_crossings/results/X4_crossing_typicality.csv": "6fea8eabf6f4d5779fa7d3d611bf3656a8176cf022a954eb91eda94553e39369",
+          "cluster_2_tertiary_crossings/results/X5_package_contrast.csv": "f113590846b24388dde36e4d9f5fac3d9df319cbc1f445c5ca2a48c4d322a2a8",
+          "cluster_2_tertiary_crossings/results/X6_spacing_structure.csv": "600f35bdde4d7e0008133726b3becaa77c75f9fc62fa38246e0f4741e696db92"
+        },
+        "run_utc_original": "2026-11-20T13:00:00Z",
+        "lead_schema_fix": "X4 verdict cell originally 'NOT SUPPORTED/NOT SUPPORTED' (two values); normalised to one verdict per consolidated schema; per-milestone-set verdicts retained in the note. No threshold changed."
+      }
+    },
+    "cluster_3_geo_size": {
+      "experiments": [
+        "X7",
+        "X8",
+        "X9"
+      ],
+      "results_files": {
+        "cluster_3_geo_size/results/X7_size_ger.csv": "c0f948de2aa62824716d25470ffbd3e2e61284cd993a90d6d7af8cf6f67a2b7c",
+        "cluster_3_geo_size/results/X8_citystate_pairwise.csv": "5d75ad49f28bf90132f37ff99475abadbc166c7f0677ab6e9ac6c0d15d212bf5",
+        "cluster_3_geo_size/results/X9_markets_ger.csv": "90d36e14bc96b663402e01118d5c5cecb0b376b79f31f3571d56e9fa66ab36f7"
+      },
+      "code": {
+        "cluster_3_geo_size/code/run.py": "1297dfa769ad84bf04669529cc133de3daa3a381c79c0d0a06391383545a6ff6"
+      },
+      "manifest": {
+        "cluster": "3_geo_size_scaling",
+        "data_files_read": [
+          {
+            "path": "/Users/treymenefee/massification_live/experiments/massification-2026-11-20/09_relations/data/panel_wdi_long.csv",
+            "sha256": "a37629ae5d4f9ed2be4c71e33bfc876131880f65d356c88bd4d047a9bbdeae75"
+          },
+          {
+            "path": "/Users/treymenefee/massification_live/experiments/massification-2026-11-20/10_massification/data/UNIVERSALIZATION_TIMING.csv",
+            "sha256": "6e067ffd76b2c57c7c0363387735750cb9e6f68bc4dfd242b3d0f9c80786f892"
+          },
+          {
+            "path": "/Users/treymenefee/massification_live/experiments/massification-2026-11-20/10_massification/data/UNIVERSALIZATION_SERIES.csv",
+            "sha256": "85bc869396ebfcb39e3e1a21a31af219e75a07326c738a51d2bfdbe536737ddb"
+          },
+          {
+            "path": "/Users/treymenefee/massification_live/experiments/massification-2026-11-20/10_massification/data/JOBS_AND_MARKETS_PANEL.csv",
+            "sha256": "aaaab2744803989ff0f347e27d5824c9b0086b967914d96d21ecd354329787d3"
+          }
+        ],
+        "code": [
+          {
+            "path": "/Users/treymenefee/massification_live/experiments/massification-2026-11-20/10_massification/extensions/lab_2026-11-20_b/cluster_3_geo_size/code/run.py",
+            "sha256": "1297dfa769ad84bf04669529cc133de3daa3a381c79c0d0a06391383545a6ff6"
+          }
+        ],
+        "python_version": "3.11.17",
+        "seed": 20261120,
+        "run_utc": "2026-11-20T13:07:33Z",
+        "reproducibility": {
+          "deterministic": true,
+          "estimator": "OLS with CR1 country-clustered SEs",
+          "notes": [
+            "JOBS_AND_MARKETS_PANEL.csv contains no SE.TER.ENRR; TER for the 6-system sample in X9 was taken from panel_wdi_long.csv (same 6 systems, 1995-2024).",
+            "No imputation; complete cases only per specification.",
+            "MARKETS = urban population in millions, a derived proxy, not a count of real markets."
+          ]
+        }
+      }
+    },
+    "cluster_4_regional_proxy": {
+      "experiments": [
+        "X10",
+        "X11",
+        "X12"
+      ],
+      "results_files": {
+        "cluster_4_regional_proxy/results/CLUSTER_RESULTS.csv": "29ecf871ed0cc3519ba1e3dad466cbce6e5c74c6d7d48d1268c8c8a688350ad3",
+        "cluster_4_regional_proxy/results/X10_convergence.csv": "c3c44ed2674074b62679a74e0e3fc824120060ac5346ec0c7dbdfc03fe0da2e0",
+        "cluster_4_regional_proxy/results/X11_gini.csv": "d5e407260ac55e6d819bff2c491ffb12ccaff20963309029d266d9cd21b97feb",
+        "cluster_4_regional_proxy/results/X12_gradient.csv": "6909611c660ecdcbb5d4705d36f8ca6aa05764954e2582d8267fbd5aed6ac99e"
+      },
+      "code": {
+        "cluster_4_regional_proxy/code/run.py": "51b529e819de343358c809d0273e87512a8d21c82d7863ea3bc6129ee2e81f9e"
+      },
+      "manifest": {
+        "cluster": "cluster_4_regional_proxy",
+        "data_files_read": [
+          {
+            "path": "10_massification/data/UNIVERSALIZATION_SERIES.csv",
+            "sha256": "85bc869396ebfcb39e3e1a21a31af219e75a07326c738a51d2bfdbe536737ddb"
+          },
+          {
+            "path": "10_massification/data/BASELINE_SERIES.csv",
+            "sha256": "5ffc1cbd82187a0cdbb48f5811dd04180e02c6fc65765b327ea956a006536fa5"
+          }
+        ],
+        "code": [
+          {
+            "path": "cluster_4_regional_proxy/code/run.py",
+            "sha256": "51b529e819de343358c809d0273e87512a8d21c82d7863ea3bc6129ee2e81f9e"
+          }
+        ],
+        "python_version": "3.11.17",
+        "seed": null,
+        "run_utc": "2026-11-20",
+        "reproducibility": {
+          "verified_by": "lead consolidation re-run",
+          "byte_identical_rerun": true,
+          "result_hashes": {
+            "cluster_4_regional_proxy/results/CLUSTER_RESULTS.csv": "29ecf871ed0cc3519ba1e3dad466cbce6e5c74c6d7d48d1268c8c8a688350ad3",
+            "cluster_4_regional_proxy/results/X10_convergence.csv": "c3c44ed2674074b62679a74e0e3fc824120060ac5346ec0c7dbdfc03fe0da2e0",
+            "cluster_4_regional_proxy/results/X11_gini.csv": "d5e407260ac55e6d819bff2c491ffb12ccaff20963309029d266d9cd21b97feb",
+            "cluster_4_regional_proxy/results/X12_gradient.csv": "6909611c660ecdcbb5d4705d36f8ca6aa05764954e2582d8267fbd5aed6ac99e"
+          }
+        },
+        "binding_limitation": "Regional tertiary enrolment is NOT observed on disk; there is no PHL regional tertiary GER/participation series. All cells use regional attainment/inequality proxies and national tertiary GER as CONTEXT ONLY. No causal or policy-effect claim. The cohort comparison is descriptive.",
+        "verdicts": {
+          "X10": "SUPPORTED",
+          "X11": "SUPPORTED",
+          "X12": "SUPPORTED"
+        },
+        "results_sha256": {
+          "cluster_4_regional_proxy/results/CLUSTER_RESULTS.csv": "29ecf871ed0cc3519ba1e3dad466cbce6e5c74c6d7d48d1268c8c8a688350ad3",
+          "cluster_4_regional_proxy/results/X10_convergence.csv": "c3c44ed2674074b62679a74e0e3fc824120060ac5346ec0c7dbdfc03fe0da2e0",
+          "cluster_4_regional_proxy/results/X11_gini.csv": "d5e407260ac55e6d819bff2c491ffb12ccaff20963309029d266d9cd21b97feb",
+          "cluster_4_regional_proxy/results/X12_gradient.csv": "6909611c660ecdcbb5d4705d36f8ca6aa05764954e2582d8267fbd5aed6ac99e"
+        },
+        "run_utc_original": "2026-11-20"
+      }
+    },
+    "cluster_5_fragmentation_sim": {
+      "experiments": [
+        "X13",
+        "X14",
+        "X15"
+      ],
+      "results_files": {
+        "cluster_5_fragmentation_sim/results/AMENDMENT_B1/X13_seed_detail_B1.csv": "e8d64ef7208607c79f86033d654e3912753010970f11b90ccb30fd9d70d7f66e",
+        "cluster_5_fragmentation_sim/results/AMENDMENT_B1/X13_split_delay_B1.csv": "8200a7add2a55439a155350f2631b1699940f3d970a9c27b4bbd1d5e9aaa945a",
+        "cluster_5_fragmentation_sim/results/AMENDMENT_B1/X14_smoothing_B1.csv": "e0dc03afdc1687cae9006941a51be9b2daeab7c29f0172c318fd430916851398",
+        "cluster_5_fragmentation_sim/results/AMENDMENT_B1/X15_heterogeneity_dose_B1.csv": "ce12851331df3315709633b70485053b9f701ab0ab523adb7027df21e33da742",
+        "cluster_5_fragmentation_sim/results/CLUSTER_RESULTS.csv": "fa0210cfaa9618543da04539b9a1016ec4a52681f3a2322aa6c454efa8310925",
+        "cluster_5_fragmentation_sim/results/X13_seed_detail.csv": "0a79e44a564a6ba05f71ab5da5ead2fdcfcd7e96f29726b11c06efbf77c2d367",
+        "cluster_5_fragmentation_sim/results/X13_split_delay.csv": "61aa3c507031693234af1c2c1b35cb10d0164ef30193b0918b1db5aa50bb7ced",
+        "cluster_5_fragmentation_sim/results/X14_smoothing.csv": "5b0f864fd8bbab53178d4bf997b768990ebf1d2033c52b2622d6bc8769fd3ff0",
+        "cluster_5_fragmentation_sim/results/X15_heterogeneity_dose.csv": "86de83f77d2df83a954662314177d0b88dfd8de1a39ff3b96439ef7b3276b7cd"
+      },
+      "code": {
+        "cluster_5_fragmentation_sim/code/amendment_b1.py": "0bc89bb2dedd9a4b32ecda0e0082a042913da1be308b430bb5f9c750e391e91c",
+        "cluster_5_fragmentation_sim/code/run.py": "de348f4ae3e09eba7c9e1a32c1142f7b7777797b282319311a6942e3b9239a67"
+      },
+      "manifest": {
+        "cluster": "5_geo_fragmentation_sim",
+        "status": "SIMULATED \u2014 stipulated parameters; not calibrated; not evidence",
+        "parameter_vector": {
+          "R": 0.08,
+          "DMAX": 1.1,
+          "D0": 0.1,
+          "T": 80,
+          "crossing_threshold": 0.5,
+          "cap_k": 2.0,
+          "ceil_uniform": [
+            0.35,
+            1.0
+          ],
+          "binding_ceil_X15": 0.4,
+          "base_seed": 20261120,
+          "K_grid_X13_X14": [
+            1,
+            2,
+            4,
+            8,
+            16,
+            32
+          ],
+          "K_X15": 8,
+          "f_grid_X15": [
+            0.0,
+            0.25,
+            0.5,
+            0.75,
+            1.0
+          ],
+          "X14_window": "annual changes Delta A_t for t=1..T*, T* = crossing year, or t=79 if right-censored; SD (ddof=1) of those changes",
+          "demand_path_note": "Stipulated recursion d_{t+1}=d_t*r*(1-d_t/dmax) with r=0.08 (<1) is contractive: d_t decays monotonically from 0.10 and stays below 0.50 for all t, so no crossing can occur under the frozen parameters; all cells are fully right-censored (>80) and censored medians are reported as undefined, never imputed."
+        },
+        "rng": {
+          "generator": "numpy.random.Generator(numpy.random.PCG64(seed))",
+          "seed_formula": "seed = 20261120 + 1000000*block + seed_index; block 1 = X13/X14, block 2 = X15",
+          "call_pattern": "Per seed one uniform draw of size K_MAX=32 for X13/X14 (cell K uses first K entries -> paired across K); for X15 one uniform draw of size 8 plus one rng.permutation(8) per seed to choose binding markets.",
+          "bootstrap": "X13/X14 bootstrap CI: PCG64(20261120+77), 1000 resamples"
+        },
+        "seeds_per_cell": 200,
+        "code": [
+          {
+            "path": "code/run.py",
+            "sha256": "de348f4ae3e09eba7c9e1a32c1142f7b7777797b282319311a6942e3b9239a67"
+          }
+        ],
+        "python_version": "3.11.17",
+        "numpy_version": "2.4.6",
+        "run_utc": "2026-11-20T13:07:36Z",
+        "reproducibility": "Deterministic: fixed seeds, fixed demand path, no observed data read. Re-running code/run.py must reproduce results CSVs byte-identically."
+      }
+    }
+  },
+  "determinism_rerun": {
+    "cluster_1_absorption": {
+      "status": "BYTE_IDENTICAL",
+      "exit_code": 0,
+      "seconds": 0.4,
+      "files": [
+        "CLUSTER_RESULTS.csv",
+        "X1_absorption_6systems.csv",
+        "X2_absorption_30countries.csv",
+        "X3_queue_depth.csv"
+      ]
+    },
+    "cluster_2_tertiary_crossings": {
+      "status": "BYTE_IDENTICAL",
+      "exit_code": 0,
+      "seconds": 0.1,
+      "files": [
+        "CLUSTER_RESULTS.csv",
+        "X4_crossing_typicality.csv",
+        "X5_package_contrast.csv",
+        "X6_spacing_structure.csv"
+      ]
+    },
+    "cluster_3_geo_size": {
+      "status": "BYTE_IDENTICAL",
+      "exit_code": 0,
+      "seconds": 0.4,
+      "files": [
+        "X7_size_ger.csv",
+        "X8_citystate_pairwise.csv",
+        "X9_markets_ger.csv"
+      ]
+    },
+    "cluster_4_regional_proxy": {
+      "status": "BYTE_IDENTICAL",
+      "exit_code": 0,
+      "seconds": 1.2,
+      "files": [
+        "CLUSTER_RESULTS.csv",
+        "X10_convergence.csv",
+        "X11_gini.csv",
+        "X12_gradient.csv"
+      ]
+    },
+    "cluster_5_fragmentation_sim": {
+      "status": "BYTE_IDENTICAL",
+      "exit_code": 0,
+      "seconds": 1.1,
+      "files": [
+        "CLUSTER_RESULTS.csv",
+        "X13_seed_detail.csv",
+        "X13_seed_detail_B1.csv",
+        "X13_split_delay.csv",
+        "X13_split_delay_B1.csv",
+        "X14_smoothing.csv",
+        "X14_smoothing_B1.csv",
+        "X15_heterogeneity_dose.csv",
+        "X15_heterogeneity_dose_B1.csv"
+      ]
+    },
+    "cluster_5_fragmentation_sim/amendment_b1.py": {
+      "status": "BYTE_IDENTICAL",
+      "exit_code": 0,
+      "files": [
+        "X13_seed_detail_B1.csv",
+        "X13_split_delay_B1.csv",
+        "X14_smoothing_B1.csv",
+        "X15_heterogeneity_dose_B1.csv"
+      ]
+    }
+  },
+  "n_experiments": 18,
+  "verdict_counts": {
+    "DATA LIMITED": 1,
+    "NOT SUPPORTED": 5,
+    "PARTIAL": 4,
+    "SIMULATED-THRESHOLD-MISSED": 3,
+    "SUPPORTED": 4,
+    "UNABLE": 1
+  },
+  "verification_errors": [],
+  "labels": {
+    "observed": "on-disk measured series",
+    "derived": "computed from observed series (proxy)",
+    "check": "constraint/check cell",
+    "simulated": "stipulated toy model \u2014 not evidence"
+  }
+}

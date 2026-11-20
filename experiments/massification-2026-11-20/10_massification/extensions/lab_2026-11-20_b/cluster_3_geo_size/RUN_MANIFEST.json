@@ -1,0 +1,39 @@
+{
+  "cluster": "3_geo_size_scaling",
+  "data_files_read": [
+    {
+      "path": "/Users/treymenefee/massification_live/experiments/massification-2026-11-20/09_relations/data/panel_wdi_long.csv",
+      "sha256": "a37629ae5d4f9ed2be4c71e33bfc876131880f65d356c88bd4d047a9bbdeae75"
+    },
+    {
+      "path": "/Users/treymenefee/massification_live/experiments/massification-2026-11-20/10_massification/data/UNIVERSALIZATION_TIMING.csv",
+      "sha256": "6e067ffd76b2c57c7c0363387735750cb9e6f68bc4dfd242b3d0f9c80786f892"
+    },
+    {
+      "path": "/Users/treymenefee/massification_live/experiments/massification-2026-11-20/10_massification/data/UNIVERSALIZATION_SERIES.csv",
+      "sha256": "85bc869396ebfcb39e3e1a21a31af219e75a07326c738a51d2bfdbe536737ddb"
+    },
+    {
+      "path": "/Users/treymenefee/massification_live/experiments/massification-2026-11-20/10_massification/data/JOBS_AND_MARKETS_PANEL.csv",
+      "sha256": "aaaab2744803989ff0f347e27d5824c9b0086b967914d96d21ecd354329787d3"
+    }
+  ],
+  "code": [
+    {
+      "path": "/Users/treymenefee/massification_live/experiments/massification-2026-11-20/10_massification/extensions/lab_2026-11-20_b/cluster_3_geo_size/code/run.py",
+      "sha256": "1297dfa769ad84bf04669529cc133de3daa3a381c79c0d0a06391383545a6ff6"
+    }
+  ],
+  "python_version": "3.11.17",
+  "seed": 20261120,
+  "run_utc": "2026-11-20T13:08:00Z",
+  "reproducibility": {
+    "deterministic": true,
+    "estimator": "OLS with CR1 country-clustered SEs",
+    "notes": [
+      "JOBS_AND_MARKETS_PANEL.csv contains no SE.TER.ENRR; TER for the 6-system sample in X9 was taken from panel_wdi_long.csv (same 6 systems, 1995-2024).",
+      "No imputation; complete cases only per specification.",
+      "MARKETS = urban population in millions, a derived proxy, not a count of real markets."
+    ]
+  }
+}

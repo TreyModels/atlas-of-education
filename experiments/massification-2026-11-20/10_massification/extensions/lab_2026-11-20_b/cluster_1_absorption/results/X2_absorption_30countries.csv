@@ -1,0 +1,3 @@
+experiment,dep_var,spec,coefficient,se,ci_low,ci_high,n,n_clusters,label
+X2,TER,within: TER ~ LGDP+URBAN+ABSORB_F,0.797136,0.611625,-0.40165,1.995921,654,30,derived
+X2,TER,between: TER ~ LGDP+URBAN+ABSORB_F,0.009974,0.218665,-0.41861,0.438557,654,30,derived

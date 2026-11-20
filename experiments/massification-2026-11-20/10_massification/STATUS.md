@@ -513,3 +513,51 @@ Predeclare every run; label observed vs simulated; never impute as observation; 
 1980–2010 fit / 2011–2024 holdout where data permit; no re-fit of closed shadow claims; `NEW:`/`ACK:` loop mandatory
 (no artifact delivered until ACKed); external actions (data requests, publishing, site) need user approval; bridge is
 append-only with per-agent parties via `bridge-agent.sh`.
+
+---
+
+## Recovery marker — 2026-11-20 18:57 +08:00 (Lead, lead-successor)
+
+- **Remote authoritative tip:** `4ba958c`; clean sparse checkout `/Users/treymenefee/massification_live` matches it.
+- **iCloud package corruption:** dataless/zero-byte reads, 272 conflict copies, unreadable worktree `.git`; 272
+  conflicts removed (canonicals verified), closeout file restored; recovered ZIP rebuilt outside iCloud:
+  `/Users/treymenefee/massification_fresh.zip` — 11.9 MB, 1,031 files, sha256 `cc232354…62d9`.
+  Closeout's canonical ZIP remains `5de0b4a6…` (1,187 files, built before the incident).
+- **Codex bundles preserved outside iCloud:** `extensions_archive/codex_2026-11-20/` with `SHA256SUMS.txt`
+  (codex-massification `5eec1147…`, luna `948a07a2…`).
+- **Phase remains CLOSED** — anchor PARTIAL/DESCRIPTIVE/EQUIVALENT; no re-fit, no reopening. No A/B/C started.
+- **Pending user decision** (only the user may reopen): (A) integrate Codex bundles under
+  `10_massification/extensions/codex_2026-11-20/`; (B) C1 correct-sign scaling repair; (C) phase write-up package.
+- **Bridge:** 480 messages; local bridge writes are timing out on iCloud — bridge catches up when sync recovers.
+
+---
+
+## 3t. Lab battery B — 15 predeclared experiments, Z.AI Flash worker fleet (2026-11-20 ~21:07 +08:00)
+
+- **New artefact:** `10_massification/extensions/lab_2026-11-20_b/` — extension of lab battery E1–E10 into five
+  post-secondary clusters (3 experiments each). **Predeclared before running** (`PRE_DECLARATIONS.md`, sha256
+  `c214dddfe51ef0ff9d0173752fe11f74a91e165605ebba45bc405d9fe6381af6`); executed by **five Z.AI GLM-5.3-Flash
+  subagents** with disjoint write scopes (one cluster each); Lead consolidated, re-ran every script and
+  adjudicated. Phase remains **CLOSED** (D76); C1–C4 not reopened; no causal/direction claims.
+- **Results:** `RESULTS.csv` 18 rows = 15 predeclared + 3 `run_tag=amendment_B1` (cluster-5 disclosed post-hoc
+  amendment). Predeclared verdicts: **SUPPORTED 4** (X3 queue-depth, X10/X11/X12 PHL regional), **PARTIAL 1**
+  (X9 markets, one sample only), **NOT SUPPORTED 5** (X1/X2 absorption, X4 tertiary-vs-secondary structure, X7
+  size, X8 city-state), **DATA LIMITED 1** (X5), **UNABLE 1** (X6 n=3), **SIMULATED-THRESHOLD-MISSED 3**
+  (X13–X15 predeclared run — lead predeclaration defect, see below). Amendment B1 (same frozen thresholds,
+  corrected growing demand rule): X13 Δ=+1.0 y PARTIAL, X14 V=1.231 PARTIAL, X15 ρ=1.000 PARTIAL; exploratory
+  extensive margin 77%→100% of seeds cross.
+- **Key findings (see `FINDINGS.md`):** (1) no absorption-proxy association replicates across 6-system and
+  30-country panels, but the derived queue-depth ratio rises with tertiary GER in 3/3 30-country specs;
+  (2) tertiary crossings do not share the secondary structure package and the contrast is DATA LIMITED/UNABLE;
+  (3) system size does not scale schooling cross-sectionally; the HKG-vs-CHN duration ratio is 0.667 (HKG slower)
+  at n≤4; (4) PHL regional record is the cleanest result (17/17 regions improve, Gini falls ≥0.02 in 17/17,
+  mild pro-poor gradient 1.098) — **regional tertiary enrolment unobserved, proxies only**; (5) fragmentation
+  (SIMULATED) moves the extensive margin, not timing.
+- **Disclosures:** X1 predeclaration internal conflict (PARTIAL clause vs falsifier) adjudicated
+  falsifier-precedence → NOT SUPPORTED (worker's PARTIAL reading retained in the note); X2 point inside the X1
+  CI but opposite sign → NOT SUPPORTED; X4 denominator read as ≥4 countries with n=5; X8 HKG volatility inflated
+  by a series break; cluster-5 predeclaration used a **contractive** demand recursion (r=0.08<1) → all-censored,
+  disclosed as a **Lead predeclaration defect** and answered by post-hoc **Amendment B1** under unchanged
+  thresholds.
+- **Determinism:** all five cluster scripts + the amendment script re-ran **byte-identical**; `SHA256SUMS.txt`
+  51/51 verify; `RUN_MANIFEST.json` carries predeclaration/data/code/results hashes and the re-run table.

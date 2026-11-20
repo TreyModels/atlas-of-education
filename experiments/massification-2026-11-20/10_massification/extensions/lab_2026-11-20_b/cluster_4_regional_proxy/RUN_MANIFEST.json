@@ -1,0 +1,45 @@
+{
+  "cluster": "cluster_4_regional_proxy",
+  "data_files_read": [
+    {
+      "path": "10_massification/data/UNIVERSALIZATION_SERIES.csv",
+      "sha256": "85bc869396ebfcb39e3e1a21a31af219e75a07326c738a51d2bfdbe536737ddb"
+    },
+    {
+      "path": "10_massification/data/BASELINE_SERIES.csv",
+      "sha256": "5ffc1cbd82187a0cdbb48f5811dd04180e02c6fc65765b327ea956a006536fa5"
+    }
+  ],
+  "code": [
+    {
+      "path": "cluster_4_regional_proxy/code/run.py",
+      "sha256": "51b529e819de343358c809d0273e87512a8d21c82d7863ea3bc6129ee2e81f9e"
+    }
+  ],
+  "python_version": "3.11.17",
+  "seed": null,
+  "run_utc": "2026-11-20",
+  "reproducibility": {
+    "verified_by": "lead consolidation re-run",
+    "byte_identical_rerun": true,
+    "result_hashes": {
+      "cluster_4_regional_proxy/results/CLUSTER_RESULTS.csv": "29ecf871ed0cc3519ba1e3dad466cbce6e5c74c6d7d48d1268c8c8a688350ad3",
+      "cluster_4_regional_proxy/results/X10_convergence.csv": "c3c44ed2674074b62679a74e0e3fc824120060ac5346ec0c7dbdfc03fe0da2e0",
+      "cluster_4_regional_proxy/results/X11_gini.csv": "d5e407260ac55e6d819bff2c491ffb12ccaff20963309029d266d9cd21b97feb",
+      "cluster_4_regional_proxy/results/X12_gradient.csv": "6909611c660ecdcbb5d4705d36f8ca6aa05764954e2582d8267fbd5aed6ac99e"
+    }
+  },
+  "binding_limitation": "Regional tertiary enrolment is NOT observed on disk; there is no PHL regional tertiary GER/participation series. All cells use regional attainment/inequality proxies and national tertiary GER as CONTEXT ONLY. No causal or policy-effect claim. The cohort comparison is descriptive.",
+  "verdicts": {
+    "X10": "SUPPORTED",
+    "X11": "SUPPORTED",
+    "X12": "SUPPORTED"
+  },
+  "results_sha256": {
+    "cluster_4_regional_proxy/results/CLUSTER_RESULTS.csv": "29ecf871ed0cc3519ba1e3dad466cbce6e5c74c6d7d48d1268c8c8a688350ad3",
+    "cluster_4_regional_proxy/results/X10_convergence.csv": "c3c44ed2674074b62679a74e0e3fc824120060ac5346ec0c7dbdfc03fe0da2e0",
+    "cluster_4_regional_proxy/results/X11_gini.csv": "d5e407260ac55e6d819bff2c491ffb12ccaff20963309029d266d9cd21b97feb",
+    "cluster_4_regional_proxy/results/X12_gradient.csv": "6909611c660ecdcbb5d4705d36f8ca6aa05764954e2582d8267fbd5aed6ac99e"
+  },
+  "run_utc_original": "2026-11-20"
+}

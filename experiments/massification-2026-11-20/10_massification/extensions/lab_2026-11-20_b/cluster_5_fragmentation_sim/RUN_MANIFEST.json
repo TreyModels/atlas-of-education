@@ -1,0 +1,53 @@
+{
+  "cluster": "5_geo_fragmentation_sim",
+  "status": "SIMULATED \u2014 stipulated parameters; not calibrated; not evidence",
+  "parameter_vector": {
+    "R": 0.08,
+    "DMAX": 1.1,
+    "D0": 0.1,
+    "T": 80,
+    "crossing_threshold": 0.5,
+    "cap_k": 2.0,
+    "ceil_uniform": [
+      0.35,
+      1.0
+    ],
+    "binding_ceil_X15": 0.4,
+    "base_seed": 20261120,
+    "K_grid_X13_X14": [
+      1,
+      2,
+      4,
+      8,
+      16,
+      32
+    ],
+    "K_X15": 8,
+    "f_grid_X15": [
+      0.0,
+      0.25,
+      0.5,
+      0.75,
+      1.0
+    ],
+    "X14_window": "annual changes Delta A_t for t=1..T*, T* = crossing year, or t=79 if right-censored; SD (ddof=1) of those changes",
+    "demand_path_note": "Stipulated recursion d_{t+1}=d_t*r*(1-d_t/dmax) with r=0.08 (<1) is contractive: d_t decays monotonically from 0.10 and stays below 0.50 for all t, so no crossing can occur under the frozen parameters; all cells are fully right-censored (>80) and censored medians are reported as undefined, never imputed."
+  },
+  "rng": {
+    "generator": "numpy.random.Generator(numpy.random.PCG64(seed))",
+    "seed_formula": "seed = 20261120 + 1000000*block + seed_index; block 1 = X13/X14, block 2 = X15",
+    "call_pattern": "Per seed one uniform draw of size K_MAX=32 for X13/X14 (cell K uses first K entries -> paired across K); for X15 one uniform draw of size 8 plus one rng.permutation(8) per seed to choose binding markets.",
+    "bootstrap": "X13/X14 bootstrap CI: PCG64(20261120+77), 1000 resamples"
+  },
+  "seeds_per_cell": 200,
+  "code": [
+    {
+      "path": "code/run.py",
+      "sha256": "de348f4ae3e09eba7c9e1a32c1142f7b7777797b282319311a6942e3b9239a67"
+    }
+  ],
+  "python_version": "3.11.17",
+  "numpy_version": "2.4.6",
+  "run_utc": "2026-11-20T13:08:03Z",
+  "reproducibility": "Deterministic: fixed seeds, fixed demand path, no observed data read. Re-running code/run.py must reproduce results CSVs byte-identically."
+}
