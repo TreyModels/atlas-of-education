@@ -1,0 +1,52 @@
+> **SYNTHETIC EXERCISE — DESIGN DOCUMENT.** Panelists are AI-constructed composite personas; nothing here is a
+> statement by, or endorsed by, the named individuals.
+
+# STOP RULES — massification-first phase (declared before fitting)
+
+**Status:** binding alongside `SUCCESS_CRITERIA.md`; declared 2026-11-20 before any fit. Programme starts from the
+prior phase's identification limits (`06_report/LOOP_CLOSEOUT.md`, brief 008); no prior shadow-education rule is
+reopened.
+
+| # | Rule (condition → action) | Evidence cell / trigger |
+|---|---|---|
+| **R1** | **Out-of-sample failure:** held-out MAE > 8 pp, or worse than naive persistence/trend → no country/general claim; report failure | `SUCCESS_CRITERIA.md` §3–§4 |
+| **R2** | **Cohort conservation:** any stock-identity or cohort-conservation residual ≠ 0, or any transition rate outside [0,1], or negative stocks → model invalid; stop and fix; no results from the run | runner's balance checks |
+| **R3** | **Equivalence:** push and pull rivals fit the same moments equally (no predeclared discriminating test survives) → report **observational equivalence**, do not claim a direction | two-shock design / recovery test |
+| **R4** | **Supplied law:** if the model reproduces a scaling relation only because that relation enters as an input schedule/parameter → not a finding; model must generate the relation as output | scaling check design |
+| **R5** | **No new moment:** if an "improvement" comes only from adding/tuning parameters without a new discriminating moment → stop; that is re-parameterisation | fit/check table |
+| **R6** | **Universalization false positive:** model generates universalization where observed series did not → structural failure; no claim until fixed | false-positive test |
+| **R7** | **Measurement/definition break:** series definitions change across the window without harmonisation, or only imputed/modelled cells exist → exclude the series; no claim from it | data ledger |
+| **R8** | **Sector heterogeneity unresolved:** if sector patterns cannot be reconciled by the model (and no data explain the misfit) → descriptive only | sector fit |
+| **R9** | **Iteration budget:** two consecutive iterations without an **identification gain** (defined: a predeclared threshold passed on a moment *not used in fitting*) → stop claiming the mechanism; publish the equivalence/negative map | iteration log |
+| **R10** | **Pre-trend failure:** in event-study designs, if pre-trends reject at the predeclared level → no causal claim; downgrade to correlational/descriptive | event-study diagnostics |
+| **R11** | **Rival exclusion:** if any fair rival is structurally barred (different population, information, shock, or outcome) → the comparison is void; re-specify before reporting | rival-matching audit |
+| **R12** | **No retro-fits:** no target may become a parameter; no post-hoc change of the fit/holdout split; no quiet re-labelling of an out-of-sample miss as a "calibration issue" | predeclaration hashes |
+
+## Publishable results — positive
+
+1. An **identified** push or pull effect with pre-trends passing, placebo outcomes clean, and a predeclared
+   falsifier — e.g., an exogenous demand shock raising schooling in exposed cohorts/regions, or a supply shock raising
+   completions and (or not) employment.
+2. A **scaling regularity validated out of sample** (e.g., logistic shape with country-specific timing beating
+   linear/exponential on held-out countries), reported with its heterogeneity.
+3. A **universalization timing result**: which state-capacity/income/demand conditions predict the crossing year,
+   tested out of country.
+4. A **two-shock interaction** showing complementarity (demand response larger where supply expanded) with the
+   interaction sign predeclared.
+
+## Publishable results — negative
+
+1. **Equivalence**: push and pull are observationally equivalent on all available moments; the honest product is an
+   equivalence/identification-limits map (the prior phase's main output, now for massification).
+2. **Null**: no detectable demand→schooling (or schooling→jobs) response in a well-powered design.
+3. **Model failure**: model loses to naive benchmarks or fails universalization timing out of country.
+4. **Scaling failure**: the logistic/candidate law fails out of sample, or exponents are not stable across
+   countries/sectors → report regularity, not law.
+5. **Data limits**: the needed series do not exist in usable form (definitions, coverage) → publish the measurement
+   gap and the design that would close it.
+
+## Gate
+
+task-37 cannot fit before `SUCCESS_CRITERIA.md` is registered and acknowledged; the runner must copy §2–§4 of that
+file into its own predeclaration and report every R1–R12 trigger in its results table, including the ones that did not
+fire.

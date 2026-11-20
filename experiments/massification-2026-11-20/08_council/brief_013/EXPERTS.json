@@ -1,0 +1,58 @@
+{
+  "brief_id": "brief_013",
+  "brief_file": "08_council/brief_013/BRIEF.md",
+  "material": "Design review for the massification-first push-pull programme: gating success criteria + stop rules (delivered early for task-37), identification design, scaling laws, operational universalization definition, ranked experiment slate.",
+  "synthetic_disclaimer": "SYNTHETIC EXERCISE. Panelists are AI-constructed composite personas whose positions are inferred from the published literature. Nothing here is a statement by, or endorsed by, the named individuals or any living person.",
+  "convened_by": "lead / lead-successor (user reorientation)",
+  "convened_at": "2026-11-20T14:08+08:00",
+  "panel_size": 4,
+  "panel": [
+    {
+      "handle": "LUTZ",
+      "label": "Composite drawing on demography and education-statistics literature",
+      "literature_basis": ["Lutz, Butz & KC, World Population and Human Capital in the Twenty-First Century (2014)", "UIS/OECD education-indicator definitions"],
+      "grounding_basis": ["publication"],
+      "role": "Measurement/series reviewer: cohort series, definitions, fit/check/holdout design, tolerances",
+      "assigned_prior_question": "Q1 (design), Q4 (operational definition)",
+      "steel_man_slot": false
+    },
+    {
+      "handle": "PATRINOS",
+      "label": "Composite drawing on returns-to-education and education-economics literature",
+      "literature_basis": ["Psacharopoulos & Patrinos, decennial returns review (2018)", "Becker, Human Capital (1964)"],
+      "grounding_basis": ["publication"],
+      "role": "Identification reviewer: push-pull designs, fair rivals, equivalence traps, minimal convincing design",
+      "assigned_prior_question": "Q1 (design), Q2 (identification), Q5 (slate)",
+      "steel_man_slot": true
+    },
+    {
+      "handle": "PAGE",
+      "label": "Composite drawing on model-based-reasoning and complexity literature",
+      "literature_basis": ["Page, The Model Thinker (2018)", "Miller & Page, Complex Adaptive Systems (2007)"],
+      "grounding_basis": ["publication"],
+      "role": "Scaling-laws/model reviewer: candidate laws vs regularities, falsifiers, constraints not inputs",
+      "assigned_prior_question": "Q3 (scaling), Q5 (slate)",
+      "steel_man_slot": false
+    },
+    {
+      "handle": "CARTWRIGHT",
+      "label": "Composite drawing on philosophy-of-social-science literature",
+      "literature_basis": ["Cartwright, The Dappled World (1999)", "Cartwright & Hardie, Evidence-Based Policy (2012)"],
+      "grounding_basis": ["publication"],
+      "role": "Falsifiability reviewer: operational definitions, stop rules, publishable positive/negative results",
+      "assigned_prior_question": "Q4 (definition), Q6 (stop rules)",
+      "steel_man_slot": false
+    }
+  ],
+  "composition_check": {
+    "size_3_to_4": true,
+    "mandatory_shadow_education_composite": "not applicable — shadow education demoted to secondary in this phase",
+    "steel_man_slot": "PATRINOS",
+    "all_composites_grounded": true
+  },
+  "intake_notes": [
+    "Gating deliverables (SUCCESS_CRITERIA.md, STOP_RULES.md) written first so task-37 is unblocked.",
+    "10_massification workstreams (34–38) empty/partial at intake — design inputs only; no numbers taken from them.",
+    "Prior phase remains closed: no shadow claim is reopened. New phase starts from its identification limits."
+  ]
+}

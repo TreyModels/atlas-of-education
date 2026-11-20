@@ -1,0 +1,108 @@
+{
+  "brief_id": "brief_001",
+  "brief_file": "08_council/brief_001/BRIEF.md",
+  "source_file": "06_report/COUNCIL_BRIEF_001.md",
+  "source_sha256": "894c4e54e05ed10dd83e9f0aff1b0c4fc0f2ed3c1d42652cde0bbad7ce87377b",
+  "synthetic_disclaimer": "SYNTHETIC EXERCISE. Panelists are AI-constructed composite personas whose positions are inferred from the published literature. Nothing here is a statement by, or endorsed by, the named individuals or any living person. Names in literature_basis identify the work each composite draws on, not participants in a deliberation.",
+  "convened_by": "lead",
+  "convened_at": "2026-11-20T12:26+08:00",
+  "material": "Reproduction of ABM mechanism results (floor/race, graduate-supply shock, actor knockouts, gate clustering) + literature audit (Yoo 2003, Kang, Ghaffarzadegan-Xue-Larson) + citation-claim register",
+  "panel_size": 5,
+  "panel": [
+    {
+      "handle": "PAGE",
+      "label": "Composite drawing on model-based-reasoning and complexity literature",
+      "literature_basis": [
+        "Page, The Model Thinker (2018)",
+        "Page, Diversity and Complexity (2011)",
+        "Miller & Page, Complex Adaptive Systems (2007)"
+      ],
+      "grounding_basis": ["publication", "listed"],
+      "role": "Model-class reviewer: which results are imposed by the coded rules vs invariant across a model class",
+      "why_seated": "The brief turns on whether an ABM result is a discovery or an artifact of the formalization; this composite supplies the model-reasoning checklist.",
+      "assigned_prior_question": "Q1 (imposed vs discovered), Q3 (is C3 a fair beat)",
+      "steel_man_slot": false
+    },
+    {
+      "handle": "COLLINS",
+      "label": "Composite drawing on credential-inflation and positional-competition literature",
+      "literature_basis": [
+        "Collins, The Credential Society (1979; 2nd ed. 2019)",
+        "Thurow, Generating Inequality (1975) — labour-queue tradition",
+        "Brown, Lauder & Ashton, The Global Auction (2011)"
+      ],
+      "grounding_basis": ["publication", "listed"],
+      "role": "Credential/novelty reviewer: whether the mechanism claims are new relative to the inflation/positional tradition",
+      "why_seated": "The paper's intensification claim is the credential-society tradition formalized; this composite states what the tradition already claims.",
+      "assigned_prior_question": "Q2 (novelty vs Yoo), Q6 (citation visibility)",
+      "steel_man_slot": false
+    },
+    {
+      "handle": "PATRINOS",
+      "label": "Composite drawing on returns-to-education and education-economics literature",
+      "literature_basis": [
+        "Psacharopoulos & Patrinos, 'Returns to investment in education: a decennial review' (2018)",
+        "Becker, Human Capital (1964)"
+      ],
+      "grounding_basis": ["publication"],
+      "role": "Economist and steel-man for the competitive/human-capital rival",
+      "why_seated": "C3 claims to separate the account from a competitive market; this composite holds the competitive null at its best.",
+      "assigned_prior_question": "Q1 (rival fairness), Q3 (fair beat), Q4 (evidence needed)",
+      "steel_man_slot": true
+    },
+    {
+      "handle": "BRAY",
+      "label": "Composite drawing on comparative shadow-education literature (mandatory seat: brief includes tutoring claims)",
+      "literature_basis": [
+        "Bray & Lykins, Shadow Education (2012)",
+        "Bray, comparative shadow-education work (HK, Korea, China, Cambodia, Vietnam)",
+        "Bray & Zhang, shadow-education research in China"
+      ],
+      "grounding_basis": ["listed", "publication"],
+      "role": "Shadow-education reviewer",
+      "why_seated": "C5 is a tutoring claim; the mandatory shadow-education seat judges the model's gate shares against comparative evidence.",
+      "assigned_prior_question": "Q1 (is C5 imposed), Q5 (China school-support experiment)",
+      "steel_man_slot": false
+    },
+    {
+      "handle": "CARTWRIGHT",
+      "label": "Composite drawing on philosophy-of-social-science literature",
+      "literature_basis": [
+        "Cartwright, The Dappled World (1999)",
+        "Cartwright & Hardie, Evidence-Based Policy (2012)"
+      ],
+      "grounding_basis": ["publication"],
+      "role": "Method/type reviewer: model implication vs world claim; falsifiability; scope conditions",
+      "why_seated": "The brief's central question — what is imposed by equations — is a philosophy-of-science question about model-to-inference.",
+      "assigned_prior_question": "Q1 (imposed vs discovered), Q4 (evidence thresholds), Q6 (visibility)",
+      "steel_man_slot": false
+    }
+  ],
+  "deviation_from_lead_recommendation": {
+    "lead_recommended": "ABM + LABOR + SEA + PHIL functional profiles",
+    "resolution": "The Lead's functional roles are preserved and staffed by AI composites grounded in matching published literature: model-reasoning (PAGE), labor economics and steel-man (PATRINOS), shadow-education domain (BRAY, mandatory), philosophy of social science (CARTWRIGHT). COLLINS is added for the credential-novelty question (Q2) that no other role covers.",
+    "note": "No real person participated. See synthetic_disclaimer."
+  },
+  "composition_check": {
+    "economist_or_fiscal": "PATRINOS composite",
+    "sociologist_or_methodologist": "PAGE composite, COLLINS composite",
+    "domain_or_gate_specialist": "BRAY composite (mandatory shadow-education seat)",
+    "steel_man_slot": "PATRINOS composite",
+    "bray_mandatory_shadow_ed": true,
+    "size_within_3_to_5": true
+  },
+  "questions_mapping": {
+    "Q1": ["PAGE", "CARTWRIGHT", "PATRINOS"],
+    "Q2": ["COLLINS", "CARTWRIGHT"],
+    "Q3": ["PATRINOS", "PAGE"],
+    "Q4": ["BRAY", "PATRINOS", "CARTWRIGHT"],
+    "Q5": ["BRAY", "PAGE"],
+    "Q6": ["COLLINS", "CARTWRIGHT"]
+  },
+  "notes": [
+    "Panel fixed before reviews were written.",
+    "Grounding searches were run for the issue (Yoo 2003 effort-near-cutoff; credential inflation; shadow-education gate clustering; model-based reasoning). web_fetch returned 'non-public IP address' errors in this environment, so sources are recorded as listed/publication and no verbatim quotes are attributed.",
+    "Composite positions are work-level paraphrases; each review labels the extrapolation.",
+    "Brief 002 composition per Lead: 3–4 composites, each grounded in specific published work, with one mandatory shadow-education composite."
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "brief_id": "brief_002",
+  "brief_file": "08_council/brief_002/BRIEF.md",
+  "source_file": "06_report/COUNCIL_BRIEF_002.md",
+  "source_sha256": "f3f7c57eb57da9b0fdf07ed0c8751844dfdc8dad18ceb46e289b7e05ce0656ce",
+  "synthetic_disclaimer": "SYNTHETIC EXERCISE. Panelists are AI-constructed composite personas whose positions are inferred from the published literature. Nothing here is a statement by, or endorsed by, the named individuals or any living person. Names in literature_basis identify the work each composite draws on, not participants in a deliberation.",
+  "convened_by": "lead",
+  "convened_at": "2026-11-20T12:38+08:00",
+  "material": "New experiment suite batch A: E3 liquidity, E5 memory, E7 gate density, E10 omega, E13/E13b graduate supply + matched rival, E14/E15 knockouts/motives, E18 China school support, E19/E20 pilot country paths; pre-declarations + error log.",
+  "panel_size": 4,
+  "panel": [
+    {
+      "handle": "PAGE",
+      "label": "Composite drawing on model-based-reasoning and complexity literature",
+      "literature_basis": ["Page, The Model Thinker (2018)", "Miller & Page, Complex Adaptive Systems (2007)"],
+      "grounding_basis": ["publication"],
+      "role": "Score-production and model-class reviewer: is C10 an artifact of the coded function; which results are class artifacts",
+      "assigned_prior_question": "Lead Q1 (C10 fairness/score function), Q3 (discovery vs mechanical)",
+      "steel_man_slot": false
+    },
+    {
+      "handle": "BRAY",
+      "label": "Composite drawing on comparative shadow-education literature (mandatory seat)",
+      "literature_basis": ["Bray & Lykins, Shadow Education (2012)", "Bray, comparative shadow-education work", "Bray & Zhang, China shadow-education research"],
+      "grounding_basis": ["listed", "publication"],
+      "role": "Shadow-education reviewer: tutoring claims, bans and re-routing, E18/E7 external validity",
+      "assigned_prior_question": "Lead Q1 (C10 as Double Reduction test), Q4 (E7 residual claim)",
+      "steel_man_slot": false
+    },
+    {
+      "handle": "PATRINOS",
+      "label": "Composite drawing on returns-to-education and education-economics literature",
+      "literature_basis": ["Psacharopoulos & Patrinos, decennial returns review (2018)", "Becker, Human Capital (1964)"],
+      "grounding_basis": ["publication"],
+      "role": "Economist and steel-man for the competitive rival: C16/C17, what Prediction 2 may claim",
+      "assigned_prior_question": "Lead Q2 (C17 consequence), Q5 (four-country claims)",
+      "steel_man_slot": true
+    },
+    {
+      "handle": "CARTWRIGHT",
+      "label": "Composite drawing on philosophy-of-social-science literature",
+      "literature_basis": ["Cartwright, The Dappled World (1999)", "Cartwright & Hardie, Evidence-Based Policy (2012)"],
+      "grounding_basis": ["publication"],
+      "role": "Claim-discipline reviewer: what may be asserted, what must be withdrawn, type confusion",
+      "assigned_prior_question": "Lead Q6 (lead claim and withdrawals), Q5 (calibration disclosure)",
+      "steel_man_slot": false
+    }
+  ],
+  "composition_check": {
+    "size_3_to_4": true,
+    "mandatory_shadow_education_composite": "BRAY",
+    "steel_man_slot": "PATRINOS",
+    "all_composites_grounded": true
+  },
+  "deviation_from_lead": "none: 4 composites as instructed, Bray-composite seated under the mandatory shadow-education rule.",
+  "notes": [
+    "Panel fixed before reviews were written; no real person participated.",
+    "Artifacts read directly: EXPERIMENTS.md, PRE_DECLARATIONS.md, ERROR_LOG.md, runs/E3,E5,E7,E18,E13b/E13, E8 summary.",
+    "Traceability flag carried into the synthesis: the brief's C17 key numbers do not match E13b findings/summary, and the brief lists E13b at reps=1 although the artifact is reps=6."
+  ]
+}
