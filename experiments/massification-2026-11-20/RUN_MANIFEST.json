@@ -1,7 +1,7 @@
 {
  "package": "massification_2026-11-20",
  "title": "Massification, the economy, and shadow education — DeepSeek research execution package",
- "generated_utc": "2026-11-20T06:06:32.261984+00:00",
+ "generated_utc": "2026-11-20T06:07:48.122713+00:00",
  "time_zone": "Asia/Shanghai",
  "prepared_for": "Dr. Trey Menefee (Menefee & Nordtveit working paper, October 2026)",
  "handoff_source_zip": "/Users/treymenefee/Downloads/DeepSeek_Massification_Research_Package.zip",
@@ -466,7 +466,7 @@
   "EXPERIMENTS.md": "df24a7d68a197a07de55816001e7c2dd28ed43f0a8caf69e5aa2be10fcf80f21",
   "OPEN_QUESTIONS.md": "fe4c16428981c1668a2882a173335a5b499d9c6faec042009faf8ccdd4c2f976",
   "PROVENANCE.md": "5a5e584b6d73a6db97dfa2142c8962e742e05f29e2d4234156919232502ba782",
-  "RUN_MANIFEST.json": "2a65e74e559c8ca43c6c9d0ead9a48e98def309bcff0a881f35c0916a5f678c9"
+  "RUN_MANIFEST.json": "5f25acd093855cafe198978e86d1df474e6423daed035a9cdc0a2f222cccb6b1"
  },
  "subtree_hashes": {
   "02_lit": {
