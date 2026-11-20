@@ -43,6 +43,11 @@ centre. No closed claim reopens without a new predeclared test.
 
 ## Rotation (user plan, `06_report/CONTEXT_ROTATION_PLAN.md`)
 
+**STATUS: HIGH pressure — rotation scheduled after the descriptive anchor (A1) report, not now.** Successor:
+**Council-2** (subagent, party `deepseek-council2`), inheriting authority from this file. Trigger: `OP: rotation —
+expert-council → council-2`; current Council stands down after the A1 report. Executor mirrors this screen to
+`10_massification/HANDOFF_expert-council.md` and registers pressure in `10_massification/STATUS.md`.
+
 Authority survives rotation because it is in **these files**. If the Council window degrades, post
 `COUNCIL: window degraded — rotate`, finish the current atomic unit, and the executor rotates a **fresh-context**
 Council that reads this file + the gate list above and inherits the role without re-litigating closed claims. The

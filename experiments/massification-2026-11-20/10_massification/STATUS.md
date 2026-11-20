@@ -344,10 +344,11 @@ actions) and updates it on each delivered batch.
 | data-hunter | repeated web-search batches + acquisition attempts | medium | subagent for bounded public pulls; handoff = DATA_NOTES + SHA256SUMS |
 | pattern-scout | timing/event layers delivered; audits stable | medium–high | subagent re-runs scripts from disk |
 | lit-archivist | RIVAL_MODELS/STATE_CAPACITY/timelines delivered | high | **first candidate for reassignment** if a durable slot is needed |
-| expert-council | high cycle activity; authority is in written A/R/D rules | medium | fresh Council from files if it fills (no authority loss) |
+| expert-council | **HIGH — rotating**: reports high window load; handoff `08_council/COUNCIL_STATE.md` mirrored to `10_massification/HANDOFF_expert-council.md`; D65 logged | low | **rotate at next checkpoint AFTER the anchor A1 descriptive report lands** → fresh-context subagent **council-2** (party `deepseek-council2`, brief `10_massification/COUNCIL2_BRIEF.md`); durable slots full; authority persists via files; Council-2 must ACK open NEWs (A5b equivalence-empty, A3 status, capacity data asks) |
 | lead-successor (stood down) | light context, idle | high | **replacement candidate for Lead/executor role** |
 | repo-auditor (Lead/executor) | long coordination window | watch | successor path: lead-successor reassignment or subagent dispatcher; state = STATUS + commit/zip chain |
 
+Rotation log: no rotation has occurred yet. Council rotation is **scheduled** (after the A1 descriptive report).
 Rotation rule: when a rotation happens, post `OP: rotation — <role> → <replacement>` with the handoff path and record
 it in CHANGELOG. No rotation has occurred yet.
 

@@ -1,0 +1,5 @@
+level,n,spearman_rho,p,reading,identification
+primary_universal,5,0.154,0.805,higher capacity associates with LATER crossing,"DESCRIPTIVE; n<=6, capacity is endogenous to schooling demand and income; cannot identify"
+lower_secondary_universal,5,0.1,0.873,higher capacity associates with LATER crossing,"DESCRIPTIVE; n<=6, capacity is endogenous to schooling demand and income; cannot identify"
+upper_secondary_mass,5,0.41,0.493,higher capacity associates with LATER crossing,"DESCRIPTIVE; n<=6, capacity is endogenous to schooling demand and income; cannot identify"
+tertiary_mass,5,0.3,0.624,higher capacity associates with LATER crossing,"DESCRIPTIVE; n<=6, capacity is endogenous to schooling demand and income; cannot identify"

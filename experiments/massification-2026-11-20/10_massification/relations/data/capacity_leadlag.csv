@@ -1,0 +1,21 @@
+iso3,milestone,driver,outcome,lag_years,r,n,reading
+PHL,primary completion,capacity_index,SE.PRM.CMPT.ZS,-5,0.447,14,completion change LEADS capacity change
+PHL,primary completion,capacity_index,SE.PRM.CMPT.ZS,0,0.178,24,contemporaneous
+PHL,primary completion,capacity_index,SE.PRM.CMPT.ZS,5,-0.434,14,capacity change LEADS completion change
+PHL,lower-secondary completion,capacity_index,SE.SEC.CMPT.LO.ZS,0,-0.174,17,contemporaneous
+KHM,primary completion,capacity_index,SE.PRM.CMPT.ZS,-5,-0.277,12,completion change LEADS capacity change
+KHM,primary completion,capacity_index,SE.PRM.CMPT.ZS,0,-0.76,22,contemporaneous
+KHM,primary completion,capacity_index,SE.PRM.CMPT.ZS,5,0.138,12,capacity change LEADS completion change
+KHM,lower-secondary completion,capacity_index,SE.SEC.CMPT.LO.ZS,-5,0.855,10,completion change LEADS capacity change
+KHM,lower-secondary completion,capacity_index,SE.SEC.CMPT.LO.ZS,0,-0.568,20,contemporaneous
+KHM,lower-secondary completion,capacity_index,SE.SEC.CMPT.LO.ZS,5,0.769,10,capacity change LEADS completion change
+HKG,primary completion,capacity_index,SE.PRM.CMPT.ZS,-5,-0.512,8,completion change LEADS capacity change
+HKG,primary completion,capacity_index,SE.PRM.CMPT.ZS,0,-0.043,18,contemporaneous
+HKG,primary completion,capacity_index,SE.PRM.CMPT.ZS,5,-0.198,8,capacity change LEADS completion change
+HKG,lower-secondary completion,capacity_index,SE.SEC.CMPT.LO.ZS,0,-0.026,16,contemporaneous
+KOR,primary completion,capacity_index,SE.PRM.CMPT.ZS,-5,0.167,10,completion change LEADS capacity change
+KOR,primary completion,capacity_index,SE.PRM.CMPT.ZS,0,0.395,20,contemporaneous
+KOR,primary completion,capacity_index,SE.PRM.CMPT.ZS,5,-0.304,10,capacity change LEADS completion change
+KOR,lower-secondary completion,capacity_index,SE.SEC.CMPT.LO.ZS,-5,-0.253,10,completion change LEADS capacity change
+KOR,lower-secondary completion,capacity_index,SE.SEC.CMPT.LO.ZS,0,0.284,20,contemporaneous
+KOR,lower-secondary completion,capacity_index,SE.SEC.CMPT.LO.ZS,5,-0.134,10,capacity change LEADS completion change
