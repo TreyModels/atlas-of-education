@@ -1071,3 +1071,15 @@ model-specification failure.
 - **Consequence:** **the pipeline link must be built into v1.5**; the v1.5 BIMODAL-GATE predeclaration (in production
   now) carries κ = 0.949 as a declared constraint + the two orthogonal guards (bimodal OFF + κ OFF ⇒ v1.3 panel
   byte-identical; bimodal OFF + κ ON ⇒ linked arm). No re-fit; v1.2 scope (D119) unchanged.
+
+### k) EXP-7 implication for v1.5 (Lead-recorded) — κ structural, no endpoint carry-over
+
+- The κ-link as a **post-processing projection** proves overshoot (20/53 → 0/53) but **does not make the upper level
+  inherited**. **v1.5 must build κ structurally** — a declared system input evaluated **each year** inside the generator's
+  accounting, not a panel censoring.
+- **v1.2's 2024 upper endpoint (76.64) may NOT be carried into v1.5 as a ceiling target**: under the declared link it
+  falls to **63.97** (ratio 2024 = 1.136955; implied required lower-2021 = 80.76 vs generator 67.41 — **the lower series
+  is the defect**).
+- **v1.5 level claims must be scored on the path** (counts over observed cells, D119/EXP-7 leg A), not a single endpoint.
+- Recorded in `MODEL_ARCHITECTURE.md` A5 addendum 2; the v1.5 design deliverable will be checked against this before its
+  predeclaration is frozen (a pre-run S1 amendment is legitimate if needed).

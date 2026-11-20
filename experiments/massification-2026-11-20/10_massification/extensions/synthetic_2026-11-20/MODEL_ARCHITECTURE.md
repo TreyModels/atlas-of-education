@@ -444,3 +444,15 @@ diagnostic may be proposed as if reachable; any future one must be predeclared a
    −27.59 pp; 24–37 pp low before 2021). Any v1.5 statement inheriting v1.2 levels inherits that scope.
 5. **No "demand falsified" language** anywhere; correct label = "the unrationed single-gate model cannot represent a
    bimodal system". No re-tune of A3-D; no fitting to the known PHL outcome.
+
+### A5 addendum 2 (EXP-7 implication, Lead-recorded 2026-11-20) — κ must be structural; no ceiling target carried from v1.2's endpoint
+
+From `repro_path_2026-11-20/` (D126): the κ-link evaluated as a **post-processing projection** shows overshoot (20/53 →
+0/53) but **does not make the upper level inherited**. Therefore:
+1. **κ must be built into v1.5 structurally** — a declared **system input evaluated each year** inside the generator's
+   accounting (upper demand/completion bounded by κ × lagged lower at each step), never a post-hoc censoring of the panel.
+2. **v1.2's 2024 upper endpoint (76.64) may NOT be carried into v1.5 as a ceiling target.** Under the declared link it
+   falls to **63.97**; the upper level is already over-shooting its own lower-cohort history (2022 ratio 1.136955; the
+   implied required lower-2021 value is 80.76 vs the generator's 67.41 — **the lower series is the defect**).
+3. **v1.5 level claims must be scored on the path** (counts over observed year-level cells, per D119/EXP-7 leg A), not
+   on a single 2024 endpoint.
