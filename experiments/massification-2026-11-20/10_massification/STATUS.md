@@ -483,6 +483,20 @@ root (verify stage ≥900 files, SHA256SUMS verifies), `git reset --hard 3e3f705
 in`. No external messages; data queue remains HELD (user quiet mode). Until then, **`3e3f705` is authoritative** and the
 new content lives in `/tmp/massif_new_checkpoint/`.
 
+## 3s. PHASE CLOSEOUT committed; iCloud worktree RETIRED as active checkout (20 Nov)
+
+- **Closeout:** `06_report/MASSIFICATION_CLOSEOUT.md` (authoritative phase summary: headline, limits, re-openers C1–C4,
+  recovery incident, hashes) committed in the recovery checkpoint lineage; pointers added in `LEAD_HANDOFF.md`,
+  `NEXT_LEAD_PROMPT.md` and `06_report/EXTERNAL_CHECKIN.md` read order.
+- **iCloud worktree retired as an active checkout.** The canonical branch tip is the GitHub
+  `experiment/massification-2026-11-20`; checkpoints are built from a **stable-root clone** (`/tmp/massif_repo`, or a
+  durable clone such as `~/massif_work` cloned from GitHub), with the iCloud package kept as a **read-only mirror**
+  (only the ZIP pair is written back at delivery boundaries). Reason: iCloud file-loss/truncation incident during the
+  anchor-closure checkpoint (see §3r) invalidated in-place git operations.
+- **Final delivery pair:** commit and ZIP hashes are in the `OP: checkpoint <sha> — phase closeout committed` bridge post
+  and the adjacent `.sha256`; SHA256SUMS verified in `/tmp` (0 failures) and conflict-name scan 0.
+- Data asks remain **HELD** (nothing sent; user quiet mode); no direction claims; shadow phase closed.
+
 ## 4. Next three actions for `repo-auditor`
 
 1. **Council gate:** get the Council's final `COUNCIL:` post for brief 013 (SUCCESS_CRITERIA + STOP_RULES are

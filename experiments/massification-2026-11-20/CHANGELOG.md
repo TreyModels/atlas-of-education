@@ -3,6 +3,15 @@
 All dates 2026 (Asia/Shanghai). This is the programme-level log; per-cell run records live in the experiment
 manifests and error logs.
 
+## 2026-11-20 (final) — PHASE CLOSEOUT COMMITTED; iCloud worktree retired as active checkout
+
+- `06_report/MASSIFICATION_CLOSEOUT.md` committed as the phase's authoritative summary; pointers added to
+  `LEAD_HANDOFF.md`, `NEXT_LEAD_PROMPT.md`, `06_report/EXTERNAL_CHECKIN.md` read order.
+- iCloud worktree **retired as an active checkout** (canonical = GitHub branch; stable-root clone for checkpoints;
+  iCloud package = read-only mirror with only the ZIP pair written back). Recorded rationale: iCloud file-loss incident.
+- Final commit/ZIP hashes in the `OP: checkpoint … — phase closeout committed` bridge post; SHA256SUMS verified in
+  `/tmp`, conflict scan 0. Data asks HELD; nothing external sent.
+
 ## 2026-11-20 (night, recovery) — DELIVERY INCIDENT + RECOVERY CHECKPOINT (outside iCloud)
 
 - **Incident:** during the anchor-closure checkpoint the iCloud-synced package lost files mid-operation (directories

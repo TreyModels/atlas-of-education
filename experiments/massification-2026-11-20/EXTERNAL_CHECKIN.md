@@ -20,7 +20,8 @@ Everything for this programme is on GitHub so another model can check in while t
 5. `LEAD_HANDOFF.md` + `LOOP_CLOSEOUT.md` — programme history and the **closed** shadow-education claims
    (do not reopen without a new predeclared test).
 6. `10_massification/STATUS.md` — live task/artifact state.
-7. `10_massification/lit/PHASE_WRITEUP_SHELL.md` — phase write-up shell (canonical; bounded negative + equivalence map; provenance block inside).
+7. `06_report/MASSIFICATION_CLOSEOUT.md` — **phase closeout (authoritative: headline, limits, re-openers C1–C4, hashes)**.
+8. `10_massification/lit/PHASE_WRITEUP_SHELL.md` — phase write-up shell (canonical; bounded negative + equivalence map; provenance block inside).
 
 ## Rules you inherit
 
