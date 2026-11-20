@@ -50,3 +50,12 @@ reopened.
 task-37 cannot fit before `SUCCESS_CRITERIA.md` is registered and acknowledged; the runner must copy §2–§4 of that
 file into its own predeclaration and report every R1–R12 trigger in its results table, including the ones that did not
 fire.
+
+
+## Amendment A1 (2026-11-20 14:34) — R13–R14 (forced-ID intake)
+
+| # | Rule | Trigger |
+|---|---|---|
+| **R13** | **Direction claims from cross-country/panel moments are barred:** if a recovery/forced-ID test shows the estimator assigns channels confidently without identification (forced-ID > 0), no push/pull/complementarity claim may be made from those moments; report EQUIVALENT and require E1 (or the predeclared E2+E3 pair) | model2 recovery: forced-ID 1.00, recovery complementary 0.00 |
+| **R14** | **Scaling-exponent reproduction is a gate, not decoration:** if the model cannot generate the classified scaling laws (secondary GER ~ income +0.286; tertiary +0.776; lower-sec completion law) within the estimator range and with country-specific timing, the universalization reproduction claim is capped at PARTIAL | `scaling_classification.csv` |
+| **R15** | **Conditional-labelling:** any reproduction claim made under a declared channel mixture must be labelled PASS-CONDITIONAL; presenting it as identified is a rule violation | A1 §3 |

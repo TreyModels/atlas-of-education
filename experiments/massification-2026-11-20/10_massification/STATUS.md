@@ -23,6 +23,12 @@ ranked slate.
 
 ## 2. Repository / delivery state
 
+- **Checkpoint log:** content checkpoint **`493ebd7`** (20 Nov 2026 ~14:10) = lit/relations/model/model2 batches +
+  governance + this STATUS executor fix. The branch tip may advance only by STATUS/README metadata commits; the
+  **authoritative ZIP sha256 is in the adjacent `.sha256` file** (rebuild after any edit) and the current pair is
+  announced in the `OP:` bridge post.
+
+
 - **Last committed state:** branch `experiment/massification-2026-11-20`; the `lead-fresh` handover checkpoint was
   `80f50cc` (clean, ZIP `85137fad…45221`). The **massification-first checkpoint** that follows supersedes it: it
   commits the `10_massification/` batches (lit theory/push-pull/scaling, universalization fits, model2 scaling
