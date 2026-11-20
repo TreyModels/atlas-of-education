@@ -203,6 +203,28 @@ method, the negative/identification map, and a provider/fee economics question t
 variant and more data. The next round is identification-focused (recovery with outside-set truths,
 holdout) and data-first (close the shadow-incidence data gap), not another incidence fit.
 
+## 4d. Iteration 5: the gate-position story is dropped; one small income-gradient result survives
+
+The Council's top-ranked test was whether **where the binding gate sits** explains the cross-country
+gradients — Korea falling (86.0 / 75.4 / 66.4) and Hong Kong rising (35.1 / 46.6 / 70.3). It was run
+with frozen structural parameters and **no take-up fitting**, gate dates taken from the country cards.
+
+- **E1: FAIL.** Policy-dated assignment (Korea = gate at every transition; Hong Kong = terminal-only)
+  gives six rates 20–59 pp too low: Korea 27.3 / 25.0 / 24.4; Hong Kong 14.4 / 19.7 / 46.7. The
+  *shapes* are right (Korea falls, Hong Kong rises) but the levels are not, so **the gate-position
+  story is dropped, not re-fitted.** This is the programme's decisive negative on its central mechanism.
+- **E1b: the Korea no-fit rescue also fails.** Fitting only three fee multipliers to official Korean fee
+  moments leaves participation at 27.8 / 24.6 / 23.3 vs 86.0 / 75.4 / 66.4. **The stop-rule stands
+  permanently: no incidence claim, not even for Korea.**
+- **E4: a small positive.** The income gradient is monotone and inside the predeclared band, but the
+  model's top/bottom spend ratio is **2.14 vs the observed 3.67** — the demand channel exists and is
+  about 40% too shallow. Hours remain `UNABLE` (no hours object).
+
+What this leaves is a clean negative map plus one conditional demand result. The remaining work is
+data-first: better shadow-incidence and fee/breadth data for PH/KHM/CN, repeated within-country stage
+gradients, provider entry/capacity data, and the empirical-relations layer (`09_relations/`) that plugs
+estimated relationships into the model as parameters with identification grades.
+
 ## 5. Numbers, corrected (this is the “pull the numbers” part)
 
 | claim | verdict | what the source actually says |
