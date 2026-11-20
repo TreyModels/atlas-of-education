@@ -282,6 +282,14 @@ Two external requests are drafted and held; per protocol, external data requests
   Publishable alongside the equivalence/identification map, caveated to this class/implementation; no positive model
   claim.
 
+## 3l0. A5b final scoring (exp2, committed fcff06e) — equivalence set to the observed record is EMPTY
+None of the four testable rivals reproduces PHL's observed milestone ordering/spacing (primary 2017, lower-secondary
+2024, tertiary 2025, upper-secondary never ≥90 by 2024); pairwise equivalence only in the empty sense for
+state-building vs demographic (both predict no crossing in holdout); world-society 2014 vs formal-shapes 2023 primary
+crossings are distinguishable. **Phase verdict: EQUIVALENT + PARTIAL; the ceiling/asymmetry is unreproduced by this
+rival field** (honest negative; no direction claim). Design-only rivals (HC, signalling/MMI) listed in every results
+file as DATA BLOCKED.
+
 ## 3l. Council A9/R28/D59–D61 — STATE CAPACITY as third mechanism dimension (20 Nov 16:30)
 
 - **A9 adopted:** the anchor's third mechanism dimension is **state capacity**, measured (not assumed) in three
@@ -319,6 +327,29 @@ Two external requests are drafted and held; per protocol, external data requests
 - **Anchor A1 first run attempt FAILED (honest record):** `model/anchor.py` crashed with `KeyError: 'ger_primary'` at
   the crossing computation; `anchor_out/` is empty — **no anchor result exists yet**; exp1 is fixing and must add the
   A10 floor/ceiling split + predeclared residual decomposition before the re-run. No result claimed.
+
+## 3n. CONTEXT_PRESSURE register (context-rotation plan; reviewed each checkpoint)
+
+Plan: `06_report/CONTEXT_ROTATION_PLAN.md` (user request). Hard facts: durable teammate cap = 8 (9th spawn fails);
+**subagents do not consume slots** (use `subagent` fresh for bounded rotation, never forklift a heavy window);
+reassign a completed-role teammate as durable successor; spawn fresh durable only when a slot frees. Council
+authority survives rotation because A/R/D rules + `INTAKE_ACCEPTANCE.md` are files. Every durable agent maintains
+`10_massification/HANDOFF_<agent>.md` (≤1 screen: task, live artifacts + sha256-16, decisions, open ASKs, next 3
+actions) and updates it on each delivered batch.
+
+| agent | pressure signal | headroom estimate | planned replacement |
+|---|---|---|---|
+| experiment-runner (exp1) | continuous anchor/repair cycles; several failed-run retries (anchor KeyError); longest active window | low–medium | finish current atomic unit; subagent dispatcher for the anchor re-run if needed; durable successor only when a slot frees |
+| experiment-runner-2 (exp2) | A5b/E6 delivered; still on A3 blocked + portability prep | medium | subagent for bounded portability cells; same slot if rotation needed |
+| data-hunter | repeated web-search batches + acquisition attempts | medium | subagent for bounded public pulls; handoff = DATA_NOTES + SHA256SUMS |
+| pattern-scout | timing/event layers delivered; audits stable | medium–high | subagent re-runs scripts from disk |
+| lit-archivist | RIVAL_MODELS/STATE_CAPACITY/timelines delivered | high | **first candidate for reassignment** if a durable slot is needed |
+| expert-council | high cycle activity; authority is in written A/R/D rules | medium | fresh Council from files if it fills (no authority loss) |
+| lead-successor (stood down) | light context, idle | high | **replacement candidate for Lead/executor role** |
+| repo-auditor (Lead/executor) | long coordination window | watch | successor path: lead-successor reassignment or subagent dispatcher; state = STATUS + commit/zip chain |
+
+Rotation rule: when a rotation happens, post `OP: rotation — <role> → <replacement>` with the handoff path and record
+it in CHANGELOG. No rotation has occurred yet.
 
 ## 4. Next three actions for `repo-auditor`
 
