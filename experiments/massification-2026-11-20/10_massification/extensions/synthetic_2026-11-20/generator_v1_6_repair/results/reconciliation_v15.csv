@@ -1,0 +1,7 @@
+column,cells,identical,max_abs_diff,note
+completion_uis,6720,6720,4.999875514e-11,reconstruction arm A11V15 vs frozen v1.5 A10 panel
+admitted_official,6720,6720,0.0004994752817,reconstruction arm A11V15 vs frozen v1.5 A10 panel
+enrolment,6720,6720,0.0004991721362,reconstruction arm A11V15 vs frozen v1.5 A10 panel
+graduates,6720,6720,0.0004997244105,reconstruction arm A11V15 vs frozen v1.5 A10 panel
+survival,6720,1759,0.1537297848,reconstruction arm A11V15 vs frozen v1.5 A10 panel
+demand_official,6720,6719,170189.2282,reconstruction arm A11V15 vs frozen v1.5 A10 panel

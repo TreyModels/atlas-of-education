@@ -1,0 +1,11 @@
+arm,object,baseline,shocked,delta,declared_sign,observed_sign,leg_holds,verdict_bearing,note
+A10,completion_uis upper 2024 (pp),57.40567982,57.40567982,0,negative,zero,NO,YES,"R5b verdict-bearing leg: sign only. A zero response is BELOW THE BLOCK'S RESOLUTION (15 discrete utility cells), not evidence of inertness -- see the post-hoc scan"
+A01D,demand_official upper 2024 (pp of cohort),80.03108482,79.5534938,-0.4775910188,negative,negative,YES,YES,"R5c pre-cap object in the declared capped arm; A01D is a diagnostic, not a projection"
+A01D,A_H upper 2024,,,,negative,zero,NO,YES,"NOT DEFINED in A01D (bimodal OFF has no tier block). Predeclaration-authoring error of the a-iv class: R5c named an arm that cannot produce two of its three objects. Recorded, not rescued; the post-hoc A11K row below reports the object"
+A01D,Tier-H queue upper 2024,,,,non-positive,zero,NO,YES,"NOT DEFINED in A01D, same authoring error as A_H"
+A01D,completion_uis upper 2024 (pp) under a binding cap,53.50739126,53.50739126,0,not tested,zero,YES,NO,composition effect only (H/O mix x survival); non-verdict-bearing
+POSTHOC_wchild_x1.25,completion_uis upper 2024 (pp),57.40567982,57.40567982,0,negative,zero,NO,NO,"POST-HOC, non-verdict-bearing: locates the step of the 15-cell block"
+POSTHOC_wchild_x1.50,completion_uis upper 2024 (pp),57.40567982,42.72585332,-14.67982649,negative,negative,YES,NO,"POST-HOC, non-verdict-bearing: locates the step of the 15-cell block"
+POSTHOC_A11K,demand_official upper 2024 (pp of cohort),82,82,0,negative,zero,YES,NO,"POST-HOC arm A11K (bimodal ON + kappa ON), not in the frozen arm list; reported so the pre-cap objects the declared capped arm cannot produce are seen"
+POSTHOC_A11K,A_H upper 2024 (pp of cohort),72,72,0,negative,zero,YES,NO,"POST-HOC arm A11K (bimodal ON + kappa ON), not in the frozen arm list; reported so the pre-cap objects the declared capped arm cannot produce are seen"
+POSTHOC_A11K,Tier-H queue ratio upper 2024,0.9107170278,0.9107170278,0,negative,zero,YES,NO,"POST-HOC arm A11K (bimodal ON + kappa ON), not in the frozen arm list; reported so the pre-cap objects the declared capped arm cannot produce are seen"

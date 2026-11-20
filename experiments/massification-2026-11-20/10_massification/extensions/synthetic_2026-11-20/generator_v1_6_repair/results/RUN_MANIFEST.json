@@ -1,0 +1,86 @@
+{
+  "arms": [
+    "A00",
+    "A01D",
+    "A01DW",
+    "A10",
+    "A10W",
+    "A11V15",
+    "D1_survonly",
+    "S_dual",
+    "S_hshare_minus",
+    "S_hshare_plus",
+    "S_kappa0960",
+    "S_qO_040",
+    "S_qO_055",
+    "S_qO_070",
+    "S_qO_085",
+    "S_qO_100",
+    "S_survpen_090",
+    "S_survpen_095",
+    "A00CF"
+  ],
+  "base_model": {
+    "v13_panel_cols": 89,
+    "v13_panel_rows": 6720,
+    "v13_panel_sha256": "47d4b082f4ba5838cc20fbb09e59dd3dd847ad25393b1ce091069c94496657e3",
+    "v15_panel_A10": "e256595d83eb580ca208eecafe25f6118b70a6c53c79e74c36f1be891187585e",
+    "v15_panel_A11": "a3eed3ffc5d835f7552325dca6c3ccdb8e85d21d49407de0beb8a2c127ee4feb",
+    "v15_predecl_sha256": "7178e3d2ee2e367cd7dbb0619f2031305ff446978a43aab9e1f6caefb07ca97f"
+  },
+  "code": {
+    "base_copy": "code/base_v1_3_sim.py",
+    "base_copy_sha256": "70ae8f0eef83358493dad3d3feb2d6a8841c4bb6fad3966627f4eed70e2a9877",
+    "build": "code/build_v16.py",
+    "build_sha256": "38dd9413e3e75ac02f52e332b10afd4e45ef427be855e22cb1e9d39ba1fec890",
+    "path": "code/sim_v1_6_repair.py",
+    "sha256": "9c0e799850fd30bb0b46bb7841e8f301715745a5c73452e7644055122325de56"
+  },
+  "determinism": {
+    "files": 17,
+    "identical": 17,
+    "status": "DETERMINISM-PASS"
+  },
+  "experiment": "EXP-14 V16-REPAIR",
+  "kappa_role": "WINDOW-ONLY (D138): dropped from the projection; A01D is a diagnostic",
+  "label": "SYNTHETIC",
+  "params": {
+    "path": "PARAMS.md",
+    "sha256": "5e15dfbadaa7c025f634b6f57b50857a2adbeb324629db3b13816e8947ffbc2f"
+  },
+  "predecl_inputs": {
+    "kappa_fwd_sha256": "bda79ac4c58306f8dcb1f41dd69d1f301e4d780cbecec8c70341e7aa8cac71b2",
+    "lower_def_sha256": "0ab3a90e3220ef967e64e45f453d2aa7646583146c892fd34165528408f561bd",
+    "observed_sha256": "85bc869396ebfcb39e3e1a21a31af219e75a07326c738a51d2bfdbe536737ddb"
+  },
+  "predeclaration": {
+    "path": "PRE_DECLARATIONS.md",
+    "sha256": "6a554dc033828835431f65be2e5e218833fcdb56220baad8fbe53c3324e78991"
+  },
+  "results": [
+    "RUN_MANIFEST.json",
+    "child_wage_A10.csv",
+    "crossing_check.csv",
+    "decomposition.csv",
+    "determinism_note.md",
+    "guard_report.json",
+    "kappa_object_audit.csv",
+    "lower_channel_report.csv",
+    "observed_path.csv",
+    "panel_A00CF_identity.csv",
+    "panel_A00_v13cols.csv",
+    "panel_A01D_kappa.csv",
+    "panel_A10W_childwage.csv",
+    "panel_A10_repaired.csv",
+    "phys_cap_sensitivity.csv",
+    "propagation_ledger.csv",
+    "reconciliation_v15.csv",
+    "representation_cells.csv",
+    "sensitivity_arms.csv",
+    "v1_6_checks.csv",
+    "v1_6_checks_detail.csv"
+  ],
+  "seed": 20261120,
+  "verdict": "PATH-FAILED",
+  "writes_outside_experiment_dir": []
+}

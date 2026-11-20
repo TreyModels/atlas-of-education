@@ -1228,3 +1228,22 @@ in the manifest/guard). Verdict string unchanged; no threshold altered.
   between 2023 and 2024; 27/30 types short. **Declared limit: the required-state split is not identified** (JOINT for
   weight 0.4666–0.5251). **V16 must fix:** target provenance (80.76 vs observed 80.896, +0.136 pp), both lower channels
   declared together, m frozen 1.10, **scored on 2021 not 2024**, survival ceiling stated, clip boundary declared.
+
+### t) EXP-14 V16-REPAIR — `PATH-FAILED`; the repaired bimodal class is representation-only (D141)
+
+- `generator_v1_6_repair/` (predecl `6a554dc0…`; embedded hash + 26 parameter checks; deterministic; 47/47 SHA).
+  **Scored on A10 (bimodal ON, κ OFF, D138): 0/33 observed cells within ±5 pp vs the ≥17/33 bar** (primary 0/11,
+  lower 0/11, upper 0/11; medians −16.96 / −34.89 / −39.80 pp), against the **A00 comparator 9/33** (EXP-7 construction
+  reproduced → derivation check PASS). Crossings **1/3** (upper passes only because neither crosses). **Representation
+  HOLDS** (unfilled 17/30, queue 30/30, both 15/15, same_level A00 0 vs A10 15).
+- **All guards PASS:** A00 byte-identical to the frozen v1.3 panel `47d4b082…`; **counterfactual identity 0/598,080**;
+  schooling 23,520/23,520; tertiary non-monotone 0; projection order + propagation ledger (0 forbidden in-year economy
+  reads; replay 53/53); frozen 17; no-fit audit 0. **C1 child-wage FAIL** (Δ = 0.000000 pp — the 10% shock flips none of
+  the 15 discrete cells; sign only at ×1.50 post-hoc, non-verdict); **C2 MIXED** with a **predeclaration-authoring error
+  (R5c named A01D for A_H/queue objects bimodal-OFF cannot produce — a-iv class, recorded not rescued)**; **C3 phys_cap
+  PASS** (anchor identical across six values; 1.15 past the binding regime); **C4 κ PASS** (enforced 0/53; realised 20→1;
+  binds 23/53; WINDOW-ONLY diagnostic); **C5 lower register PASS** (80.76 internal / 80.896 observed; m 6720/6720; clip 0).
+- **Disposition:** the repair fixes the guard/projection/lower-register/phys_cap defects but **does not make the
+  generator face the observed path** (0/33, worse than A00's 9/33) — the bimodal arm is a **representation-only model
+  class**; the observed-path question remains open. The whole recovery is the survival repair (primary 51.63 → 81.25);
+  q_O is inert. No re-fit; parks stay.

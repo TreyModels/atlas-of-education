@@ -1,0 +1,291 @@
+{
+  "code": {
+    "base_copy_sha256": "70ae8f0eef83358493dad3d3feb2d6a8841c4bb6fad3966627f4eed70e2a9877",
+    "build_sha256": "38dd9413e3e75ac02f52e332b10afd4e45ef427be855e22cb1e9d39ba1fec890",
+    "sim_sha256": "9c0e799850fd30bb0b46bb7841e8f301715745a5c73452e7644055122325de56"
+  },
+  "experiment": "EXP-14 V16-REPAIR",
+  "files_written_outside_experiment_dir": [],
+  "guards": {
+    "G1_a00_identity": {
+      "expected": "47d4b082f4ba5838cc20fbb09e59dd3dd847ad25393b1ce091069c94496657e3",
+      "holds": true,
+      "sha256": "47d4b082f4ba5838cc20fbb09e59dd3dd847ad25393b1ce091069c94496657e3"
+    },
+    "G2_frozen_files": {
+      "after": {
+        "base_copy": "70ae8f0eef83358493dad3d3feb2d6a8841c4bb6fad3966627f4eed70e2a9877",
+        "build_script": "38dd9413e3e75ac02f52e332b10afd4e45ef427be855e22cb1e9d39ba1fec890",
+        "kappa_predecl": "bda79ac4c58306f8dcb1f41dd69d1f301e4d780cbecec8c70341e7aa8cac71b2",
+        "lower_predecl": "0ab3a90e3220ef967e64e45f453d2aa7646583146c892fd34165528408f561bd",
+        "observed": "85bc869396ebfcb39e3e1a21a31af219e75a07326c738a51d2bfdbe536737ddb",
+        "params_md": "5e15dfbadaa7c025f634b6f57b50857a2adbeb324629db3b13816e8947ffbc2f",
+        "predecl": "6a554dc033828835431f65be2e5e218833fcdb56220baad8fbe53c3324e78991",
+        "sim_code": "9c0e799850fd30bb0b46bb7841e8f301715745a5c73452e7644055122325de56",
+        "v13_code": "70ae8f0eef83358493dad3d3feb2d6a8841c4bb6fad3966627f4eed70e2a9877",
+        "v13_panel": "47d4b082f4ba5838cc20fbb09e59dd3dd847ad25393b1ce091069c94496657e3",
+        "v13_predecl": "bdb205b236334d8688431c65dd556740ada36426d6fb008f86c28c04c31fddc0",
+        "v15_code": "2b699c6b26029a0d946fb8da08a0c553ce36b0b942b544529b317645104bf689",
+        "v15_findings": "8d0e51d6f952add2bf5f6cf1567debb8ae9e5b5300e789d1866977b16dd3c58d",
+        "v15_panel_A10": "e256595d83eb580ca208eecafe25f6118b70a6c53c79e74c36f1be891187585e",
+        "v15_panel_A11": "a3eed3ffc5d835f7552325dca6c3ccdb8e85d21d49407de0beb8a2c127ee4feb",
+        "v15_params": "72327cf799b5e96c68a8e9030f265ef06b3b37a58917d892d87bb6fabcfcb65a",
+        "v15_predecl": "7178e3d2ee2e367cd7dbb0619f2031305ff446978a43aab9e1f6caefb07ca97f"
+      },
+      "before": {
+        "base_copy": "70ae8f0eef83358493dad3d3feb2d6a8841c4bb6fad3966627f4eed70e2a9877",
+        "build_script": "38dd9413e3e75ac02f52e332b10afd4e45ef427be855e22cb1e9d39ba1fec890",
+        "kappa_predecl": "bda79ac4c58306f8dcb1f41dd69d1f301e4d780cbecec8c70341e7aa8cac71b2",
+        "lower_predecl": "0ab3a90e3220ef967e64e45f453d2aa7646583146c892fd34165528408f561bd",
+        "observed": "85bc869396ebfcb39e3e1a21a31af219e75a07326c738a51d2bfdbe536737ddb",
+        "params_md": "5e15dfbadaa7c025f634b6f57b50857a2adbeb324629db3b13816e8947ffbc2f",
+        "predecl": "6a554dc033828835431f65be2e5e218833fcdb56220baad8fbe53c3324e78991",
+        "sim_code": "9c0e799850fd30bb0b46bb7841e8f301715745a5c73452e7644055122325de56",
+        "v13_code": "70ae8f0eef83358493dad3d3feb2d6a8841c4bb6fad3966627f4eed70e2a9877",
+        "v13_panel": "47d4b082f4ba5838cc20fbb09e59dd3dd847ad25393b1ce091069c94496657e3",
+        "v13_predecl": "bdb205b236334d8688431c65dd556740ada36426d6fb008f86c28c04c31fddc0",
+        "v15_code": "2b699c6b26029a0d946fb8da08a0c553ce36b0b942b544529b317645104bf689",
+        "v15_findings": "8d0e51d6f952add2bf5f6cf1567debb8ae9e5b5300e789d1866977b16dd3c58d",
+        "v15_panel_A10": "e256595d83eb580ca208eecafe25f6118b70a6c53c79e74c36f1be891187585e",
+        "v15_panel_A11": "a3eed3ffc5d835f7552325dca6c3ccdb8e85d21d49407de0beb8a2c127ee4feb",
+        "v15_params": "72327cf799b5e96c68a8e9030f265ef06b3b37a58917d892d87bb6fabcfcb65a",
+        "v15_predecl": "7178e3d2ee2e367cd7dbb0619f2031305ff446978a43aab9e1f6caefb07ca97f"
+      },
+      "holds": true,
+      "n": 17
+    },
+    "G3_counterfactual_identity": {
+      "cells": 598080,
+      "differing": 0,
+      "holds": true
+    },
+    "G4_two_exact_checks": {
+      "schooling": {
+        "cells": 23520,
+        "differing": 0,
+        "holds": true
+      },
+      "tertiary": {
+        "cells": 56,
+        "holds": true,
+        "not_non_increasing": 0
+      }
+    },
+    "G5_one_way": {
+      "declares_within_year": [
+        "W1: Tier-O take-up is an equilibrium inside the same level's admission (intra-level market clearing, not economy feedback)",
+        "W2 REMOVED: tertiary tier composition now reads the entry cohort t-3, not the same-year upper-secondary choice shares"
+      ],
+      "forbidden_hits": [],
+      "frozen_note": "the base v1.3 tertiary demand line reads grads_hist[2, t] = admission(t-3) x survival(t): a pipeline flow, not an economy->admission feedback",
+      "n_hits": 0,
+      "region_lines": 111,
+      "replay_cells": 53,
+      "replay_match": 53,
+      "statement": "no within-year feedback from the capped economy into same-year admission of any level"
+    },
+    "G6_determinism": {
+      "files": [
+        {
+          "file": "child_wage_A10.csv",
+          "identical": true,
+          "sha_run1": "198c6e8428d68812adc5c4334709c052d05baebe3327b1e704d680564ff1575a",
+          "sha_run2": "198c6e8428d68812adc5c4334709c052d05baebe3327b1e704d680564ff1575a"
+        },
+        {
+          "file": "crossing_check.csv",
+          "identical": true,
+          "sha_run1": "d5ee2e8dc97e92638ee95a1f0f85656087eb3a42de93ef44c7e78765bf5b6304",
+          "sha_run2": "d5ee2e8dc97e92638ee95a1f0f85656087eb3a42de93ef44c7e78765bf5b6304"
+        },
+        {
+          "file": "decomposition.csv",
+          "identical": true,
+          "sha_run1": "2e17e80ae5aee780012f4b0a0f9eec23c0e68757fecbd7739e5450892bd9e9d2",
+          "sha_run2": "2e17e80ae5aee780012f4b0a0f9eec23c0e68757fecbd7739e5450892bd9e9d2"
+        },
+        {
+          "file": "kappa_object_audit.csv",
+          "identical": true,
+          "sha_run1": "e9ac569233fe14cc87b49c2bcc65b9cdc1914c8cdf1e2ff628c308d17574791d",
+          "sha_run2": "e9ac569233fe14cc87b49c2bcc65b9cdc1914c8cdf1e2ff628c308d17574791d"
+        },
+        {
+          "file": "lower_channel_report.csv",
+          "identical": true,
+          "sha_run1": "059976354639a67862253c6cafeefbeb012a2dbdcce03a94cd4d14395ce83f03",
+          "sha_run2": "059976354639a67862253c6cafeefbeb012a2dbdcce03a94cd4d14395ce83f03"
+        },
+        {
+          "file": "observed_path.csv",
+          "identical": true,
+          "sha_run1": "d7c3cf5a922d08356b76ce0856551d062dc46ea462dc8c76c0d3ea20ccc2af9c",
+          "sha_run2": "d7c3cf5a922d08356b76ce0856551d062dc46ea462dc8c76c0d3ea20ccc2af9c"
+        },
+        {
+          "file": "panel_A00CF_identity.csv",
+          "identical": true,
+          "sha_run1": "a6ea635f1aea7a35572d1b61bc3b1265a0c57025a5148ab1678f83b9d5b6afcc",
+          "sha_run2": "a6ea635f1aea7a35572d1b61bc3b1265a0c57025a5148ab1678f83b9d5b6afcc"
+        },
+        {
+          "file": "panel_A00_v13cols.csv",
+          "identical": true,
+          "sha_run1": "47d4b082f4ba5838cc20fbb09e59dd3dd847ad25393b1ce091069c94496657e3",
+          "sha_run2": "47d4b082f4ba5838cc20fbb09e59dd3dd847ad25393b1ce091069c94496657e3"
+        },
+        {
+          "file": "panel_A01D_kappa.csv",
+          "identical": true,
+          "sha_run1": "a6ea635f1aea7a35572d1b61bc3b1265a0c57025a5148ab1678f83b9d5b6afcc",
+          "sha_run2": "a6ea635f1aea7a35572d1b61bc3b1265a0c57025a5148ab1678f83b9d5b6afcc"
+        },
+        {
+          "file": "panel_A10W_childwage.csv",
+          "identical": true,
+          "sha_run1": "f4297b2da2a0aca7bf9918b6e643b0217e528986e2dbb0a9b12c0bb38cf66244",
+          "sha_run2": "f4297b2da2a0aca7bf9918b6e643b0217e528986e2dbb0a9b12c0bb38cf66244"
+        },
+        {
+          "file": "panel_A10_repaired.csv",
+          "identical": true,
+          "sha_run1": "349cf637f1415b7809c17696dea4e842434f846b6be607c8d24047f9f0d1a8c4",
+          "sha_run2": "349cf637f1415b7809c17696dea4e842434f846b6be607c8d24047f9f0d1a8c4"
+        },
+        {
+          "file": "phys_cap_sensitivity.csv",
+          "identical": true,
+          "sha_run1": "9754f12137df7632d3ba2134e1641f09a779e1c18200f691bc27bfc120fd96f3",
+          "sha_run2": "9754f12137df7632d3ba2134e1641f09a779e1c18200f691bc27bfc120fd96f3"
+        },
+        {
+          "file": "propagation_ledger.csv",
+          "identical": true,
+          "sha_run1": "206208670391cbad64154776bb480e6739495b8faf58ba677a15fc4d7465e14e",
+          "sha_run2": "206208670391cbad64154776bb480e6739495b8faf58ba677a15fc4d7465e14e"
+        },
+        {
+          "file": "representation_cells.csv",
+          "identical": true,
+          "sha_run1": "7133819962b96abe2162eede39332cdf7203935aa254938dc506ff3cff6ae509",
+          "sha_run2": "7133819962b96abe2162eede39332cdf7203935aa254938dc506ff3cff6ae509"
+        },
+        {
+          "file": "sensitivity_arms.csv",
+          "identical": true,
+          "sha_run1": "acb776b03552832bba14fd2870919b9a0f5d63627e6af65176d7c7e1f32ebabd",
+          "sha_run2": "acb776b03552832bba14fd2870919b9a0f5d63627e6af65176d7c7e1f32ebabd"
+        },
+        {
+          "file": "v1_6_checks.csv",
+          "identical": true,
+          "sha_run1": "51639ba1feff5b8656267bf31d25e67200e2a901f1d6a2ae1f19059c03651606",
+          "sha_run2": "51639ba1feff5b8656267bf31d25e67200e2a901f1d6a2ae1f19059c03651606"
+        },
+        {
+          "file": "v1_6_checks_detail.csv",
+          "identical": true,
+          "sha_run1": "30389ccdb7b9697ace05bdc2d09be0ba822777b8a3c23e835357338a4d0bd4d9",
+          "sha_run2": "30389ccdb7b9697ace05bdc2d09be0ba822777b8a3c23e835357338a4d0bd4d9"
+        }
+      ],
+      "n_files": 17,
+      "n_identical": 17,
+      "status": "DETERMINISM-PASS"
+    },
+    "G7_predecl_integrity": {
+      "holds": true,
+      "sha256": "6a554dc033828835431f65be2e5e218833fcdb56220baad8fbe53c3324e78991"
+    }
+  },
+  "kappa": {
+    "binds": 23,
+    "diagnostic_arm": "A01D",
+    "enforced_violations": 0,
+    "kappa": 0.949,
+    "lag": 3,
+    "max_cut_pp": 27.69777912049952,
+    "n_cells": 53,
+    "n_diagnostic_cells": 53,
+    "realised_violations_A00": 20,
+    "realised_violations_A01D": 1,
+    "role": "WINDOW-ONLY, dropped from the projection (D138)"
+  },
+  "label": "SYNTHETIC (generator) / OBSERVED (PHL series) / DECLARED (assumptions)",
+  "m_convention": {
+    "a00_cells": 6720,
+    "a00_clipped": 35,
+    "a00_m_holds": 6685,
+    "cells": 6720,
+    "clipped": 0,
+    "m_holds": 6720,
+    "max_abs_dev": 2.220446049250313e-16
+  },
+  "observed_path": {
+    "count": 0,
+    "crossings": 1,
+    "n": 33
+  },
+  "params_md_sha256": "5e15dfbadaa7c025f634b6f57b50857a2adbeb324629db3b13816e8947ffbc2f",
+  "predecl": {
+    "n_parameter_checks": 26,
+    "path": "PRE_DECLARATIONS.md",
+    "sha256": "6a554dc033828835431f65be2e5e218833fcdb56220baad8fbe53c3324e78991"
+  },
+  "reconciliation_v15": [
+    {
+      "cells": 6720,
+      "column": "completion_uis",
+      "identical": 6720,
+      "max_abs_diff": 4.9998755136115847e-11,
+      "note": "reconstruction arm A11V15 vs frozen v1.5 A10 panel"
+    },
+    {
+      "cells": 6720,
+      "column": "admitted_official",
+      "identical": 6720,
+      "max_abs_diff": 0.0004994752816855907,
+      "note": "reconstruction arm A11V15 vs frozen v1.5 A10 panel"
+    },
+    {
+      "cells": 6720,
+      "column": "enrolment",
+      "identical": 6720,
+      "max_abs_diff": 0.0004991721361875534,
+      "note": "reconstruction arm A11V15 vs frozen v1.5 A10 panel"
+    },
+    {
+      "cells": 6720,
+      "column": "graduates",
+      "identical": 6720,
+      "max_abs_diff": 0.0004997244104743004,
+      "note": "reconstruction arm A11V15 vs frozen v1.5 A10 panel"
+    },
+    {
+      "cells": 6720,
+      "column": "survival",
+      "identical": 1759,
+      "max_abs_diff": 0.1537297847566782,
+      "note": "reconstruction arm A11V15 vs frozen v1.5 A10 panel"
+    },
+    {
+      "cells": 6720,
+      "column": "demand_official",
+      "identical": 6719,
+      "max_abs_diff": 170189.22820443637,
+      "note": "reconstruction arm A11V15 vs frozen v1.5 A10 panel"
+    }
+  ],
+  "representation": {
+    "holds": true,
+    "n_both": 15,
+    "n_both_p4": 15,
+    "n_queue": 30,
+    "n_unfilled": 17,
+    "same_level_A00": 0,
+    "same_level_A10": 15
+  },
+  "seed": 20261120,
+  "verdict": "PATH-FAILED",
+  "wall_clock_in_outputs": false
+}

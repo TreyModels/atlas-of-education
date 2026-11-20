@@ -401,3 +401,16 @@ B1 — pre-run SHA snapshot reconstructed (30/33 match, original hash `89638b39�
   (err 1.9e-11; 53/53 cells). Gate reachable by capacity (a*=0.939069); survival cannot close (s*=0.936689 > surv_max 0.91;
   ceiling 78.46). Split not identified (JOINT for weight 0.4666–0.5251). V16 must fix target provenance (80.76 vs 80.896),
   both channels declared together, m frozen, scored on 2021 not 2024, survival ceiling + clip boundary declared.
+
+## 2026-11-21 — EXP-14 V16-REPAIR: PATH-FAILED (0/33 vs ≥17/33); representation-only class (D141)
+
+- `generator_v1_6_repair/` (predecl `6a554dc0…`, embedded hash + 26 parameter checks; deterministic; 47/47 SHA):
+  **PATH-FAILED** — A10 (bimodal ON, κ OFF) scores **0/33** within ±5 pp vs the ≥17/33 bar (primary 0/11, lower 0/11,
+  upper 0/11; medians −16.96/−34.89/−39.80 pp), against A00's 9/33; crossings 1/3. **Representation HOLDS** (unfilled
+  17/30; queue 30/30; both 15/15). **All guards PASS**: A00 byte-identical (47d4b082…), counterfactual identity
+  0/598,080, schooling 23,520/23,520, tertiary monotone, projection order/ledger, frozen 17, no-fit audit 0. C1
+  child-wage FAIL (Δ=0.000000 — 10% shock flips none of 15 discrete cells; ×1.50 post-hoc −14.68 pp non-verdict); C2
+  MIXED (predecl authoring error R5c/A01D — a-iv class, recorded); C3 phys_cap PASS (1.15 past binding regime; anchor
+  identical); C4 κ PASS (enforced 0/53; realised 20→1; binds 23/53; WINDOW-ONLY); C5 lower register PASS (80.76/80.896;
+  m frozen; clip 0). The repair fixes the guard/projection/lower-register defects but the repaired bimodal class is
+  **representation-only**; observed-path reproduction remains open (recovery = survival repair 51.63→81.25; q_O inert).

@@ -1,0 +1,28 @@
+check,leg,statistic,value,threshold,holds,n_cells,note
+S0,construction_vs_EXP7,A00 observed-path count,9/33,must equal 9/33 (EXP-7 V1 construction),TRUE,33,medians -4.3008 / -29.4351 / -27.5857
+S1,observed_path_count,cells within +/-5 pp (A10),0/33,>= 17/33,FALSE,33,primary 0/11; lower 0/11; upper 0/11
+S1,level_medians_A10,median deviation pp,-16.9625 / -34.8919 / -39.8025,descriptive; negative = model below observed,TRUE,33,
+S2,crossing_primary,observed 2017 / model None (thr 90 pp),gap None y,|gap| <= 5 y or neither crosses,FALSE,1,observed crosses; model never crosses by 2025
+S2,crossing_lower_secondary,observed 2024 / model None (thr 90 pp),gap None y,|gap| <= 5 y or neither crosses,FALSE,1,observed crosses; model never crosses by 2025
+S2,crossing_upper_secondary,observed None / model None (thr 90 pp),gap 0 y,|gap| <= 5 y or neither crosses,TRUE,1,neither crosses by 2025
+S2,crossings_all,legs passed,1/3,3/3,FALSE,3,
+S3,a_i_unfilled,cells unfilled>=0.10,17,>= 15 of 30,TRUE,30,"lower+upper, 2010-2024"
+S3,a_ii_queue,cells queue_ratio>=1.10,30,>= 15 of 30,TRUE,30,
+S3,a_iii_both,years with both,15,>= 8 of 15,TRUE,15,p4<=0.50 in 15/15
+S3,contrast_bimodal,same_level A00 vs A10,0 vs 15,A00 = 0 and A10 >= 8,TRUE,30,corrected contrast (D134(4)); the a-iv A01 leg is NOT re-frozen
+C1,child_wage_A10_sign,upper completion 2024 delta (pp),0.000000,declared sign NEGATIVE (delta < 0),FALSE,1,"sign test only; magnitude reported, no magnitude bar (D134(2))"
+C2,child_wage_precap,"pre-cap objects A01D (demand, A_H, queue)",demand_official delta -0.4776; A_H delta nan; Tier-H delta nan,declared signs <= 0,FALSE,3,"capped-arm completion response reported as a composition effect, non-verdict-bearing"
+C3,phys_cap_sensitivity,observed-path count across the declared grid,"1.00:0, 1.05:0, 1.08:0, 1.15:0, 1.22:0, 1.30:0",reported in full (D139); the scored arm uses 1.15,TRUE,6,floor statements conditional on the declared 1.15 crowding allowance
+C4,kappa_enforced_object,enforced-object violations,0/53,0 (enforced == audited),TRUE,53,A01D diagnostic only; kappa is WINDOW-ONLY and dropped from the projection (D138)
+C4,kappa_realised_object,realised violations A00 -> A01D,20/53 -> 1/53,reported (not a forward constraint),TRUE,53,cap binds in 23/53 diagnostic cells; max cut 27.698 pp
+C5,lower_channels_2021,target provenance and channels,external 80.76 / observed 80.896; JOINT 49.30/50.70; m=1.10 frozen,"both channels together, 2021, both registers",TRUE,1,survival ceiling 0.784589; clip boundaries declared
+C5,m_convention,cells with completion_uis/completion_cohort = 1.10,6720/6720 (A10); clip boundary 0 cells,every non-clipped cell (clip boundary declared),TRUE,6720,"A00: 6685/6720, clip boundary 35 cells"
+G1,a00_identity,sha256(A00 panel),47d4b082...,== 47d4b082f4ba5838cc20fbb09e59dd3dd847ad25393b1ce091069c94496657e3,TRUE,6720,byte-identical; verified in finalize()
+G2,counterfactual_identity,A00CF vs A01D cell-for-cell,0 differing of 598080,0 differing,TRUE,598080,feed A01D's upper admission vector into A00 accounting (R3)
+G3,schooling_cell_identity,primary+lower schooling columns A01D vs A00,0 differing of 23520,0,TRUE,23520,the exact check V11 shows does hold
+G3,tertiary_pool_only,tertiary admission not non-increasing,0,0 cells,TRUE,56,tertiary moves only through the eligibility pool
+G4,one_way_order,same-year economy reads in the admission region,0 hits,0 hits,TRUE,111,static audit + numerical replay 53/53; within-year dependencies declared
+G4,propagation_ledger,columns that move (A10 vs A00),reported in propagation_ledger.csv,every moving column with mechanism and sign,TRUE,0,
+G5,frozen_files,frozen inputs unchanged,17 files,all unchanged,TRUE,17,re-checked in finalize()
+G6,predecl_integrity,sha256(PRE_DECLARATIONS.md),6a554dc033828835431f65be2e5e218833fcdb56220baad8fbe53c3324e78991,== embedded value; 26 parameter checks,TRUE,26,
+G7,no_fit,parameters chosen by reference to a level bar,0,0; declared values only,TRUE,0,q_O=0.55 carried from T05; no grid cell adopted

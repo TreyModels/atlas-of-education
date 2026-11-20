@@ -1,0 +1,171 @@
+arm,column,moves,n_cells_differing,first_diff_year,median_delta,sign,mechanism,relation_to_cap
+A10,country_id,NO,0,,0,none,not in the declared mechanism table,none
+A10,year,NO,0,,0,none,not in the declared mechanism table,none
+A10,cohort,NO,0,,0,none,not in the declared mechanism table,none
+A10,band_population,NO,0,,0,none,not in the declared mechanism table,none
+A10,seats,NO,0,,0,none,not in the declared mechanism table,none
+A10,seat_coverage,NO,0,,0,none,not in the declared mechanism table,none
+A10,congestion_q,NO,0,,0,none,not in the declared mechanism table,none
+A10,quality_q,NO,0,,0,none,not in the declared mechanism table,none
+A10,class_size,NO,0,,0,none,not in the declared mechanism table,none
+A10,teachers,YES,6117,1974,-623.7771378,negative,lagged delivery rule reads enrolment history (cross-year),take-up margin (no cap in A10)
+A10,ptr,YES,6717,1970,-0.2342351734,negative,enrolment / teachers,take-up margin (no cap in A10)
+A10,ptr_system,YES,6720,1970,-0.6199629255,negative,"system enrolment / system teachers (economy channel, cross-year)",take-up margin (no cap in A10)
+A10,enrolment,YES,6709,1970,-30893.63781,negative,= admitted_official + admitted_overage,take-up margin (no cap in A10)
+A10,ger,YES,6709,1970,-2.157600952,negative,admission / cohort (over-age included),take-up margin (no cap in A10)
+A10,demand_share,YES,6720,1970,0.007481853081,positive,applicant share of the eligible cohort,take-up margin (no cap in A10)
+A10,demand_official,YES,6720,1970,-35355.84505,negative,applicant object: A_H + A_O_first (V16 fix D-2),take-up margin (no cap in A10)
+A10,demand_overage,NO,0,,0,none,not in the declared mechanism table,none
+A10,admitted_official,YES,6720,1970,-106640.3025,negative,"direct: admission = admitted_H + T_O (take-up), and kappa in A01D",take-up margin (no cap in A10)
+A10,admitted_overage,YES,3927,1970,102598.8534,positive,over-age top-up after the tier/same admission; never reallocated by kappa,take-up margin (no cap in A10)
+A10,rationed_official,YES,6200,1970,53747.90776,positive,demand_official - admitted_official (applicants not placed),take-up margin (no cap in A10)
+A10,out_of_school,YES,6720,1970,106778.3266,positive,cohort - admitted_official (official age),take-up margin (no cap in A10)
+A10,oos_rate,YES,6720,1970,0.0788891518,positive,out_of_school / cohort,take-up margin (no cap in A10)
+A10,eligibility_pool,YES,3691,1972,-131518.6663,negative,graduates(t) + retention x pool(t-1); the tertiary channel,take-up margin (no cap in A10)
+A10,school_share,YES,6720,1970,0.4367816064,positive,not in the declared mechanism table,take-up margin (no cap in A10)
+A10,both_share,YES,5040,1970,-0.3719456289,negative,not in the declared mechanism table,take-up margin (no cap in A10)
+A10,work_share,YES,5040,1970,0.07141301147,positive,not in the declared mechanism table,take-up margin (no cap in A10)
+A10,neither_share,YES,5040,1970,-0.001873286061,negative,not in the declared mechanism table,take-up margin (no cap in A10)
+A10,oos_work_share,YES,5040,1970,0.02639771568,positive,not in the declared mechanism table,take-up margin (no cap in A10)
+A10,oos_neither_share,YES,5040,1970,-0.02789527174,negative,not in the declared mechanism table,take-up margin (no cap in A10)
+A10,child_labour,YES,5040,1970,25316.96789,positive,out-of-school composition; reads the applicant/rationed objects,take-up margin (no cap in A10)
+A10,child_labour_rate,YES,5040,1970,0.01664456837,positive,not in the declared mechanism table,take-up margin (no cap in A10)
+A10,survival,NO,0,,0,none,"Q law; UNCHANGED by the repair (no tier multiplier, R4c)",none
+A10,dropout_rate,NO,0,,0,none,not in the declared mechanism table,none
+A10,completion_cohort,YES,6240,1973,-0.04186562057,negative,"same, without m",take-up margin (no cap in A10)
+A10,completion_uis,YES,6240,1973,-0.04605218262,negative,admission(t-DVEC) x survival(t) x m; take-up margin moves admission,take-up margin (no cap in A10)
+A10,measurement_factor,NO,0,,0,none,not in the declared mechanism table,none
+A10,graduates,YES,6240,1973,-60994.49132,negative,admission(t-DVEC) count x survival(t),take-up margin (no cap in A10)
+A10,s_ag,YES,5028,1974,0.02470314068,positive,not in the declared mechanism table,take-up margin (no cap in A10)
+A10,s_inf,YES,5788,1974,0.005090571194,positive,not in the declared mechanism table,take-up margin (no cap in A10)
+A10,s_man,YES,5868,1974,-0.004490693123,negative,not in the declared mechanism table,take-up margin (no cap in A10)
+A10,s_srv,YES,5780,1974,-0.02233269559,negative,not in the declared mechanism table,take-up margin (no cap in A10)
+A10,complexity_x,YES,5868,1974,-0.06305835225,negative,not in the declared mechanism table,take-up margin (no cap in A10)
+A10,gdppc,YES,6124,1974,-13.13573312,negative,growth equation reads the graduate/employment channel,take-up margin (no cap in A10)
+A10,urban,NO,0,,0,none,not in the declared mechanism table,none
+A10,literacy,YES,4560,1988,-0.04830028074,negative,lagged primary completion,take-up margin (no cap in A10)
+A10,yos_proxy,YES,6360,1973,-0.3169620387,negative,attainment stock built from completion_cohort,take-up margin (no cap in A10)
+A10,population,NO,0,,0,none,not in the declared mechanism table,none
+A10,rung1_demand,YES,5868,1974,19516.77703,positive,not in the declared mechanism table,take-up margin (no cap in A10)
+A10,rung2_demand,YES,5868,1974,-2852.515643,negative,not in the declared mechanism table,take-up margin (no cap in A10)
+A10,rung3_demand,YES,5824,1974,-46641.32643,negative,not in the declared mechanism table,take-up margin (no cap in A10)
+A10,rung4_demand,YES,5652,1974,-136397.706,negative,not in the declared mechanism table,take-up margin (no cap in A10)
+A10,rung1_emp,YES,5800,1973,-13127.26759,negative,not in the declared mechanism table,take-up margin (no cap in A10)
+A10,rung2_emp,YES,6012,1973,-46889.58712,negative,not in the declared mechanism table,take-up margin (no cap in A10)
+A10,rung3_emp,YES,5980,1973,-64704.17421,negative,not in the declared mechanism table,take-up margin (no cap in A10)
+A10,rung4_emp,YES,5892,1974,39165.24188,positive,rank-rationed hiring from Tier H credential holders (bimodal) or all graduates,take-up margin (no cap in A10)
+A10,queue_total,YES,5024,1973,-98549.83599,negative,rung matching over t's graduates,take-up margin (no cap in A10)
+A10,queue_pressure,YES,5024,1973,-0.01166497708,negative,not in the declared mechanism table,take-up margin (no cap in A10)
+A10,wage_informal,YES,6124,1974,-0.01860417433,negative,wage rule reads growth/lit (t),take-up margin (no cap in A10)
+A10,wage_formal_rung1,YES,6124,1974,-0.02889861286,negative,wage rule reads growth/lit (t),take-up margin (no cap in A10)
+A10,wage_formal_rung2,YES,6280,1973,-0.101341006,negative,wage rule reads growth/lit (t),take-up margin (no cap in A10)
+A10,formal_share,YES,6196,1973,-0.00702059822,negative,not in the declared mechanism table,take-up margin (no cap in A10)
+A10,informal_share,YES,6196,1973,0.00702059822,positive,not in the declared mechanism table,take-up margin (no cap in A10)
+A10,growth,YES,6244,1973,-0.0004047866393,negative,comp_step x dE/LF + sector terms; reads t's graduates,take-up margin (no cap in A10)
+A10,shadow_type,NO,0,,0,none,not in the declared mechanism table,none
+A10,shadow_gate_status,NO,0,,0,none,not in the declared mechanism table,none
+A10,shadow_gate,NO,0,,0,none,not in the declared mechanism table,none
+A10,D_gate,YES,642,1970,-0.007314054465,negative,not in the declared mechanism table,take-up margin (no cap in A10)
+A10,D_cohort,YES,660,1970,-0.01624648636,negative,not in the declared mechanism table,take-up margin (no cap in A10)
+A10,cohort_exposure,NO,0,,0,none,not in the declared mechanism table,none
+A10,R,YES,642,1970,-0.02464376139,negative,not in the declared mechanism table,take-up margin (no cap in A10)
+A10,ln_R,YES,642,1970,-0.0201270426,negative,not in the declared mechanism table,take-up margin (no cap in A10)
+A10,Q_gate,YES,468,1973,-0.09381355646,negative,not in the declared mechanism table,take-up margin (no cap in A10)
+A10,pi0,YES,385,1970,0.02234233001,positive,not in the declared mechanism table,take-up margin (no cap in A10)
+A10,pi1,YES,385,1970,0.015339631,positive,not in the declared mechanism table,take-up margin (no cap in A10)
+A10,Pi,YES,545,1970,1.110223025e-16,positive,not in the declared mechanism table,take-up margin (no cap in A10)
+A10,kappa,YES,105,1975,0.003924606335,positive,not in the declared mechanism table,take-up margin (no cap in A10)
+A10,V,NO,0,,0,none,not in the declared mechanism table,none
+A10,s_g,NO,0,,0,none,not in the declared mechanism table,none
+A10,spend_share,YES,642,1970,-0.000246350917,negative,not in the declared mechanism table,take-up margin (no cap in A10)
+A10,Pi_over_pi0,YES,545,1970,-1.110223025e-16,negative,not in the declared mechanism table,take-up margin (no cap in A10)
+A10,p_q1,YES,642,1970,-0.005054063768,negative,not in the declared mechanism table,take-up margin (no cap in A10)
+A10,p_q2,YES,642,1970,-0.006539251641,negative,not in the declared mechanism table,take-up margin (no cap in A10)
+A10,p_q3,YES,642,1970,-0.00737223693,negative,not in the declared mechanism table,take-up margin (no cap in A10)
+A10,p_q4,YES,642,1970,-0.008318043128,negative,not in the declared mechanism table,take-up margin (no cap in A10)
+A10,p_q5,YES,642,1970,-0.009290557686,negative,not in the declared mechanism table,take-up margin (no cap in A10)
+A01D,country_id,NO,0,,0,none,not in the declared mechanism table,"downstream, cross-year"
+A01D,year,NO,0,,0,none,not in the declared mechanism table,"downstream, cross-year"
+A01D,cohort,NO,0,,0,none,not in the declared mechanism table,"downstream, cross-year"
+A01D,band_population,NO,0,,0,none,not in the declared mechanism table,"downstream, cross-year"
+A01D,seats,NO,0,,0,none,not in the declared mechanism table,"downstream, cross-year"
+A01D,seat_coverage,NO,0,,0,none,not in the declared mechanism table,"downstream, cross-year"
+A01D,congestion_q,NO,0,,0,none,not in the declared mechanism table,"downstream, cross-year"
+A01D,quality_q,NO,0,,0,none,not in the declared mechanism table,"downstream, cross-year"
+A01D,class_size,NO,0,,0,none,not in the declared mechanism table,"downstream, cross-year"
+A01D,teachers,YES,987,1979,-100.6531873,negative,lagged delivery rule reads enrolment history (cross-year),"downstream, cross-year"
+A01D,ptr,YES,1148,1974,0.006060853574,positive,enrolment / teachers,"downstream, cross-year"
+A01D,ptr_system,YES,2564,1974,-0.1464470081,negative,"system enrolment / system teachers (economy channel, cross-year)","downstream, cross-year"
+A01D,enrolment,YES,893,1974,-10555.05389,negative,= admitted_official + admitted_overage,direct (cap reduces upper official admission)
+A01D,ger,YES,893,1974,-0.8081968701,negative,admission / cohort (over-age included),"downstream, cross-year"
+A01D,demand_share,YES,455,1978,-1.83511401e-05,negative,applicant share of the eligible cohort,"downstream, cross-year"
+A01D,demand_official,YES,509,1978,-57.43558533,negative,applicant object: A_H + A_O_first (V16 fix D-2),"downstream, cross-year"
+A01D,demand_overage,NO,0,,0,none,not in the declared mechanism table,"downstream, cross-year"
+A01D,admitted_official,YES,901,1974,-9781.306908,negative,"direct: admission = admitted_H + T_O (take-up), and kappa in A01D",direct (cap reduces upper official admission)
+A01D,admitted_overage,YES,8,1978,641.0025298,positive,over-age top-up after the tier/same admission; never reallocated by kappa,"downstream, cross-year"
+A01D,rationed_official,YES,393,1974,218171.6769,positive,demand_official - admitted_official (applicants not placed),direct (cap reduces upper official admission)
+A01D,out_of_school,YES,901,1974,9781.306908,positive,cohort - admitted_official (official age),"downstream, cross-year"
+A01D,oos_rate,YES,901,1974,0.007782429531,positive,out_of_school / cohort,"downstream, cross-year"
+A01D,eligibility_pool,YES,344,1978,-499.8848894,negative,graduates(t) + retention x pool(t-1); the tertiary channel,"downstream, cross-year"
+A01D,school_share,NO,0,,0,none,not in the declared mechanism table,"downstream, cross-year"
+A01D,both_share,NO,0,,0,none,not in the declared mechanism table,"downstream, cross-year"
+A01D,work_share,NO,0,,0,none,not in the declared mechanism table,"downstream, cross-year"
+A01D,neither_share,NO,0,,0,none,not in the declared mechanism table,"downstream, cross-year"
+A01D,oos_work_share,YES,393,1974,-0.01657060087,negative,not in the declared mechanism table,"downstream, cross-year"
+A01D,oos_neither_share,YES,393,1974,0.01657060087,positive,not in the declared mechanism table,"downstream, cross-year"
+A01D,child_labour,YES,393,1974,42553.22584,positive,out-of-school composition; reads the applicant/rationed objects,"downstream, cross-year"
+A01D,child_labour_rate,YES,393,1974,0.01937611466,positive,not in the declared mechanism table,"downstream, cross-year"
+A01D,survival,NO,0,,0,none,"Q law; UNCHANGED by the repair (no tier multiplier, R4c)","downstream, cross-year"
+A01D,dropout_rate,NO,0,,0,none,not in the declared mechanism table,"downstream, cross-year"
+A01D,completion_cohort,YES,800,1977,-0.004085367905,negative,"same, without m",direct (cap reduces upper official admission)
+A01D,completion_uis,YES,800,1977,-0.004493904696,negative,admission(t-DVEC) x survival(t) x m; take-up margin moves admission,direct (cap reduces upper official admission)
+A01D,measurement_factor,NO,0,,0,none,not in the declared mechanism table,"downstream, cross-year"
+A01D,graduates,YES,800,1977,-4757.015932,negative,admission(t-DVEC) count x survival(t),direct (cap reduces upper official admission)
+A01D,s_ag,YES,1248,1978,4.502473251e-06,positive,not in the declared mechanism table,"downstream, cross-year"
+A01D,s_inf,YES,1768,1978,4.798034131e-06,positive,not in the declared mechanism table,"downstream, cross-year"
+A01D,s_man,YES,1780,1978,-4.389635567e-07,negative,not in the declared mechanism table,"downstream, cross-year"
+A01D,s_srv,YES,1780,1978,-1.588289968e-05,negative,not in the declared mechanism table,"downstream, cross-year"
+A01D,complexity_x,YES,1780,1978,-6.104606775e-05,negative,not in the declared mechanism table,"downstream, cross-year"
+A01D,gdppc,YES,1820,1978,-0.6849764051,negative,growth equation reads the graduate/employment channel,"downstream, cross-year"
+A01D,urban,NO,0,,0,none,not in the declared mechanism table,"downstream, cross-year"
+A01D,literacy,NO,0,,0,none,lagged primary completion,"downstream, cross-year"
+A01D,yos_proxy,YES,2412,1977,-0.008982506886,negative,attainment stock built from completion_cohort,"downstream, cross-year"
+A01D,population,NO,0,,0,none,not in the declared mechanism table,"downstream, cross-year"
+A01D,rung1_demand,YES,1780,1978,78.36490758,positive,not in the declared mechanism table,"downstream, cross-year"
+A01D,rung2_demand,YES,1780,1978,4.106142106,positive,not in the declared mechanism table,"downstream, cross-year"
+A01D,rung3_demand,YES,1780,1978,-5.982286586,negative,not in the declared mechanism table,"downstream, cross-year"
+A01D,rung4_demand,YES,1780,1978,-303.1418562,negative,not in the declared mechanism table,"downstream, cross-year"
+A01D,rung1_emp,YES,1260,1978,7.168828469,positive,not in the declared mechanism table,"downstream, cross-year"
+A01D,rung2_emp,YES,1348,1977,-0.6756330242,negative,not in the declared mechanism table,"downstream, cross-year"
+A01D,rung3_emp,YES,1824,1977,-95.34893647,negative,not in the declared mechanism table,"downstream, cross-year"
+A01D,rung4_emp,YES,1688,1982,-576.288208,negative,rank-rationed hiring from Tier H credential holders (bimodal) or all graduates,"downstream, cross-year"
+A01D,queue_total,YES,1916,1977,-87814.30188,negative,rung matching over t's graduates,"downstream, cross-year"
+A01D,queue_pressure,YES,1916,1977,-0.006963872055,negative,not in the declared mechanism table,"downstream, cross-year"
+A01D,wage_informal,YES,1820,1978,-0.0007468236472,negative,wage rule reads growth/lit (t),"downstream, cross-year"
+A01D,wage_formal_rung1,YES,1820,1978,-0.001506948091,negative,wage rule reads growth/lit (t),"downstream, cross-year"
+A01D,wage_formal_rung2,YES,2376,1977,-0.005946067658,negative,wage rule reads growth/lit (t),"downstream, cross-year"
+A01D,formal_share,YES,1848,1977,-0.0001846422271,negative,not in the declared mechanism table,"downstream, cross-year"
+A01D,informal_share,YES,1848,1977,0.0001897350258,positive,not in the declared mechanism table,"downstream, cross-year"
+A01D,growth,YES,1852,1977,2.596935907e-07,positive,comp_step x dE/LF + sector terms; reads t's graduates,"downstream, cross-year"
+A01D,shadow_type,NO,0,,0,none,not in the declared mechanism table,"downstream, cross-year"
+A01D,shadow_gate_status,NO,0,,0,none,not in the declared mechanism table,"downstream, cross-year"
+A01D,shadow_gate,NO,0,,0,none,not in the declared mechanism table,"downstream, cross-year"
+A01D,D_gate,YES,58,2006,-0.02587280447,negative,not in the declared mechanism table,"downstream, cross-year"
+A01D,D_cohort,YES,144,2006,-0.001700332797,negative,not in the declared mechanism table,"downstream, cross-year"
+A01D,cohort_exposure,NO,0,,0,none,not in the declared mechanism table,"downstream, cross-year"
+A01D,R,YES,58,2006,-0.06592052964,negative,not in the declared mechanism table,"downstream, cross-year"
+A01D,ln_R,YES,58,2006,-0.0450828984,negative,not in the declared mechanism table,"downstream, cross-year"
+A01D,Q_gate,YES,36,2006,-0.2189400083,negative,not in the declared mechanism table,"downstream, cross-year"
+A01D,pi0,YES,45,2006,0.06343642238,positive,not in the declared mechanism table,"downstream, cross-year"
+A01D,pi1,YES,45,2006,0.04757731678,positive,not in the declared mechanism table,"downstream, cross-year"
+A01D,Pi,YES,52,2006,0.03483643274,positive,not in the declared mechanism table,"downstream, cross-year"
+A01D,kappa,YES,41,2010,-0.003473654376,negative,not in the declared mechanism table,"downstream, cross-year"
+A01D,V,NO,0,,0,none,not in the declared mechanism table,"downstream, cross-year"
+A01D,s_g,NO,0,,0,none,not in the declared mechanism table,"downstream, cross-year"
+A01D,spend_share,YES,58,2006,-0.0009929340749,negative,not in the declared mechanism table,"downstream, cross-year"
+A01D,Pi_over_pi0,YES,52,2006,-0.03371238887,negative,not in the declared mechanism table,"downstream, cross-year"
+A01D,p_q1,YES,58,2006,-0.02175393429,negative,not in the declared mechanism table,"downstream, cross-year"
+A01D,p_q2,YES,58,2006,-0.02545393184,negative,not in the declared mechanism table,"downstream, cross-year"
+A01D,p_q3,YES,58,2006,-0.02709874463,negative,not in the declared mechanism table,"downstream, cross-year"
+A01D,p_q4,YES,58,2006,-0.02783124194,negative,not in the declared mechanism table,"downstream, cross-year"
+A01D,p_q5,YES,58,2006,-0.02722616966,negative,not in the declared mechanism table,"downstream, cross-year"

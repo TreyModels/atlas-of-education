@@ -1,0 +1,4 @@
+level,threshold_pp,observed_crossing_year,model_crossing_year,gap_y,tolerance_y,holds,note,model_max_pp
+primary,90,2017,,,5,False,observed crosses; model never crosses by 2025,81.32282015
+lower_secondary,90,2024,,,5,False,observed crosses; model never crosses by 2025,78.10918357
+upper_secondary,90,,,0,5,True,neither crosses by 2025,57.89432483
