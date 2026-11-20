@@ -479,20 +479,20 @@ def recovery():
                                     dlgdp=lgdp[i, t] - lgdp[i, t - 1]))
             P = pd.DataFrame(rec)
             # rival D: education ~ lag income + agri; growth eq: dlgdp ~ lag lger (no push -> only lag? include lag dlgdp? use const+lag lger excluded for D)
-            Xd = np.column_stack([P['lgdp'], P['agri']]); bd, ed, _, _ = ols(Xd, P['lger'].values)
+            Xd = np.column_stack([P['lgdp'], P['agri']]); bd, _, ed, _ = ols(Xd, P['lger'].values)
             ssed = float((ed @ ed))
             # rival S: education ~ lag education + t; growth eq: dlgdp ~ lag education
-            Xs = np.column_stack([P['lger_l'], P['t']]); bs, es, _, _ = ols(Xs, P['lger'].values)
+            Xs = np.column_stack([P['lger_l'], P['t']]); bs, _, es, _ = ols(Xs, P['lger'].values)
             sses = float((es @ es))
             # rival C: education ~ lag income + agri + lag education ; growth eq push
-            Xc = np.column_stack([P['lgdp'], P['agri'], P['lger_l']]); bc, ec, _, _ = ols(Xc, P['lger'].values)
+            Xc = np.column_stack([P['lgdp'], P['agri'], P['lger_l']]); bc, _, ec, _ = ols(Xc, P['lger'].values)
             ssec = float((ec @ ec))
             # growth equations
             gd = P['dlgdp'].values
             Xgd0 = np.column_stack([np.ones(len(P))]); b0, e0, _, _ = ols(np.zeros((len(P), 1)), gd) if False else (np.array([gd.mean()]), np.array([0.0]), gd - gd.mean(), 0.0)
-            Xgs = P[['lger_l']].values; bgs, egs, _, _ = ols(Xgs, gd)
+            Xgs = P[['lger_l']].values; bgs, _, egs, _ = ols(Xgs, gd)
             sse_s_growth = float(egs @ egs); sse_d_growth = float((gd - gd.mean()) @ (gd - gd.mean()))
-            Xgc = P[['lger_l', 'lgdp']].values; bgc, egc, _, _ = ols(Xgc, gd)
+            Xgc = P[['lger_l', 'lgdp']].values; bgc, _, egc, _ = ols(Xgc, gd)
             sse_c_growth = float(egc @ egc)
             n = len(P)
             AIC = {

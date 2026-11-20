@@ -84,11 +84,15 @@ def fit_series(rec):
         if f: alt[nm]=f
     if not alt: return []
     best=min(alt,key=lambda k:alt[k]['aic'])
+    net_rise=float(y[-1]-y[0]) if len(y)>1 else 0.0
     for nm,f in alt.items():
         rows.append({**base,'fit_sample':'full','years':f"{int(t.min())}-{int(t.max())}",'n_obs':f['n'],'model':nm,
             'K':round(f['K'],2),'K_se':round(f['K_se'],2),'r':round(f['r'],4),'r_se':round(f['r_se'],4),
             't0':round(f['t0'],1),'t0_se':round(f['t0_se'],1),'rmse':round(f['rmse'],3),'r2':round(f['r2'],4),
-            'aic':round(f['aic'],1),'better_shape':(nm==best),'ident_flags':f['ident_flags']})
+            'aic':round(f['aic'],1),'better_shape':(nm==best),'ident_flags':f['ident_flags'],
+            'net_rise_pp':round(net_rise,1),
+            'fit_status':('identified' if (('ceiling_at_bound' not in f['ident_flags']) and ('midpoint_outside_window' not in f['ident_flags'])
+                            and f['r2']>0.8 and net_rise>=10) else 'not_identified')})
     # holdout
     tr=(t>=1980)&(t<=2010); te=(t>=2011)
     if tr.sum()>=12 and te.sum()>=3:
@@ -127,9 +131,10 @@ def common_shape_test(recs, shape=logistic, cap=130.0, share_name='GER'):
         for t,y in data:
             def f2(tt,K,t0): return shape(tt,K,rg,t0)
             try:
-                p,_=curve_fit(f2,t,y,p0=[max(float(np.max(y))*1.05,1),float(np.median(t))],
-                              bounds=([max(float(np.max(y))*0.98,1),float(t.min())-30],
-                                      [cap,float(t.max())+30]),maxfev=20000)
+                ymax=float(np.max(y))
+                p,_=curve_fit(f2,t,y,p0=[max(ymax*1.05,1),float(np.median(t))],
+                              bounds=([max(ymax,1.0),float(t.min())-30],
+                                      [max(cap,ymax*1.02),float(t.max())+30]),maxfev=20000)
             except Exception:
                 ok=False; break
             sse+=float(np.sum((y-f2(t,*p))**2))

@@ -1,5 +1,5 @@
 indicator,label,level,measure_type,source,n_countries,N,rmse_free,rmse_common,shared_r,F,df1,df2,p,verdict
-ger_secondary,GER,secondary,GER,GMR observed,5,158,6.971,7.382,0.045,4.34,4,143,0.0024,country-specific slopes REJECT common shape (p<=0.05)
-ger_tertiary,GER,tertiary,GER,GMR observed,6,240,3.837,5.801,0.09,57.049,5,222,0.0,country-specific slopes REJECT common shape (p<=0.05)
-ger_upper_secondary,GER,upper secondary,GER,GMR observed,4,84,5.228,5.503,0.11,2.588,3,72,0.0595,common shape with country-specific timing NOT rejected (p>0.05)
-ner_primary,NER,primary,NER,GMR observed,4,117,4.0,2.674,0.305,-19.36,3,105,1.0,common shape with country-specific timing NOT rejected (p>0.05)
+ger_secondary,GER,secondary,GER,GMR observed,5,158,6.983,7.382,0.045,4.21,4,143,0.003,country-specific slopes REJECT common shape (p<=0.05)
+ger_tertiary,GER,tertiary,GER,GMR observed,6,240,3.85,5.801,0.09,56.361,5,222,0.0,country-specific slopes REJECT common shape (p<=0.05)
+ger_upper_secondary,GER,upper secondary,GER,GMR observed,4,84,5.279,5.503,0.11,2.083,3,72,0.1099,common shape with country-specific timing NOT rejected (p>0.05)
+ner_primary,NER,primary,NER,GMR observed,4,117,3.289,2.674,0.305,-11.869,3,105,1.0,common shape with country-specific timing NOT rejected (p>0.05)

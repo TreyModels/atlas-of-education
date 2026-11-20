@@ -1,0 +1,23 @@
+group,key,exponent,se,n,estimator
+scaling,WDI30:GER secondary vs GDP pc,0.2858,0.0452,30,between
+scaling,WDI30:GER secondary vs GDP pc (5y lag),0.2339,0.0411,30,between
+scaling,WDI30:GER tertiary vs GDP pc,0.7761,0.0864,30,between
+scaling,WDI30:GER primary vs GDP pc,-0.0016,0.02,30,between
+scaling,WDI30:upper-sec completion (logit) vs GDP pc,0.8428,0.1572,30,between
+scaling,WDI30:lower-sec completion (logit) vs GDP pc,1.174,0.1572,28,between
+scaling,WDI30:agriculture share (log) vs GDP pc,-1.3605,0.1676,30,between
+scaling,WDI30:urbanisation (logit) vs GDP pc,1.4879,0.2765,29,between
+scaling,WDI30:upper-sec completion (logit) vs log TFR,-1.1565,0.4317,30,between
+scaling,WDI30:upper-sec completion (logit) vs population growth,-0.4137,0.2604,30,between
+scaling,WDI30:GER secondary vs education spending (%GDP),0.1084,0.0409,29,between
+scaling,UIS6:GER secondary vs GDP pc (UIS6),0.2497,0.0878,6,between
+scaling,UIS6:GER tertiary vs GDP pc (UIS6),0.7212,0.1714,6,between
+scaling,UIS6:upper-sec completion (logit) vs GDP pc (UIS6),2.2258,0.5614,4,between
+scaling,UIS6:agriculture share (log) vs GDP pc (UIS6),-1.4459,0.4193,6,between
+scaling,UIS6:services share (log) vs GDP pc (UIS6),0.3356,0.0728,6,between
+scaling,UIS6:wage-share (log) vs GDP pc (UIS6),0.2539,0.0348,6,between
+scaling,UIS6:urbanisation (logit) vs GDP pc (UIS6),1.1129,0.1087,5,between
+recovery,truth_D,,,5,recovered_share=1.00
+recovery,truth_S,,,5,recovered_share=1.00
+recovery,truth_C,,,5,recovered_share=0.00
+recovery,forced_id_OUTSIDE,,,5,forced_share=1.00

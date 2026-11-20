@@ -1,0 +1,93 @@
+{
+ "phase": "massification",
+ "owner": "experiment-runner-2",
+ "scope": "10_massification/model2 only",
+ "predeclaration": "PRE_DECLARATIONS_M2.md",
+ "label": "observed estimation (Parts 1-3) + SIMULATED recovery (Part 4)",
+ "environment": {
+  "python": "3.11.17",
+  "platform": "macOS-26.6.2-arm64-arm-64bit"
+ },
+ "data_fallback": "10_massification/data|relations empty at run; 04_data + 09_relations/data used; no imputed panel",
+ "commit": "no git push (Lead handles); artifact hashes below",
+ "code_sha": {
+  "code/m2.py": "383e932122bb84be",
+  "code/make_manifest_m2.py": "0e91f9c604287181"
+ },
+ "outputs": [
+  {
+   "path": "runs/findings.txt",
+   "sha256_16": "abb0e7d673deaefb",
+   "bytes": 4909
+  },
+  {
+   "path": "runs/lead_lag.csv",
+   "sha256_16": "f168240f702a0882",
+   "bytes": 182
+  },
+  {
+   "path": "runs/logistic_common_tests.csv",
+   "sha256_16": "65768870a3869ff0",
+   "bytes": 281
+  },
+  {
+   "path": "runs/logistic_fits.csv",
+   "sha256_16": "e7f8c9bf6d92bcb8",
+   "bytes": 20313
+  },
+  {
+   "path": "runs/model2_meta.json",
+   "sha256_16": "9e0918a599b69bdb",
+   "bytes": 542
+  },
+  {
+   "path": "runs/recovery.csv",
+   "sha256_16": "116f18f9824a2451",
+   "bytes": 1644
+  },
+  {
+   "path": "runs/rivals.csv",
+   "sha256_16": "7f627f081a74a707",
+   "bytes": 2882
+  },
+  {
+   "path": "runs/scaling_classification.csv",
+   "sha256_16": "757d5ed47d702772",
+   "bytes": 2017
+  },
+  {
+   "path": "runs/scaling_estimates.csv",
+   "sha256_16": "32c2db22f3d94d0e",
+   "bytes": 10679
+  }
+ ],
+ "key_results": {
+  "scaling_laws": [
+   "WDI30 GER secondary ~ income +0.286 (0.045)",
+   "WDI30 GER tertiary ~ income +0.776 (0.086)",
+   "WDI30 lower-sec completion (logit) ~ income, ratio 1.76"
+  ],
+  "regularities": [
+   "upper-sec completion",
+   "agriculture share",
+   "spending->secondary",
+   "urbanisation sample-flip",
+   "all UIS6 pairs"
+  ],
+  "unidentified": [
+   "GER primary vs income (saturation)",
+   "returns vs schooling (UNABLE)"
+  ],
+  "logistic": "countries do not share a common slope; parameter uncertainty wide",
+  "lead_lag": "NOT IDENTIFIABLE (short panels)",
+  "rivals": "supply-led wins 15/23, demand-led 8/23; push coef +0.026",
+  "recovery": {
+   "demand": 1.0,
+   "supply": 1.0,
+   "complementary": 0.0,
+   "forced_id": 1.0,
+   "equivalence": 0.07
+  },
+  "push_pull": "NOT IDENTIFIABLE"
+ }
+}

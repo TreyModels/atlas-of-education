@@ -1,3 +1,7 @@
+> **SYNTHETIC EXERCISE.** Panelists are AI-constructed composite personas whose positions are inferred from the
+> published literature. Nothing in this file is a statement by, or endorsed by, the named individuals or any living
+> person; names identify the published work each composite draws on, not participants in a deliberation.
+
 # REVIEW — LUTZ composite (demography / education statistics) — brief_013
 
 **Measurement verdict.** The gate is the right instrument, but the series choice needs one correction: **completion

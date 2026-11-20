@@ -1,3 +1,7 @@
+> **SYNTHETIC EXERCISE.** Panelists are AI-constructed composite personas whose positions are inferred from the
+> published literature. Nothing in this file is a statement by, or endorsed by, the named individuals or any living
+> person; names identify the published work each composite draws on, not participants in a deliberation.
+
 # REVIEW — CARTWRIGHT composite (falsifiability / definitions) — brief_013
 
 **Gate verdict.** The operational definition is the right instrument and is properly precommitted: series with roles,

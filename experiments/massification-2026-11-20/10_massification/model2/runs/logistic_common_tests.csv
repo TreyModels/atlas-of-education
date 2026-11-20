@@ -1,0 +1,3 @@
+part,test,countries,sse_sep,sse_common_r,aic_sep,aic_common_r,shared_parameters
+universalization,ger_s: common r vs country-specific,27,22911.68453627878,,3052.880946216923,,False
+universalization,ger_t: common r vs country-specific,28,12041.941982860604,,2503.973813997437,,False

@@ -66,3 +66,11 @@ When a `NEW:` lands, the following must ACK it within one working cycle:
 The shadow-education incidence claim and the five excluded classes from `LOOP_CLOSEOUT.md` stay closed.
 A `STOP:` is mandatory if a new result would appear to reopen one; the Council must then design the test
 before any claim is made.
+
+## 7. Council big-picture step-back (standing order, 20 Nov)
+
+Every Council cycle begins with the five-line step-back in `08_council/BIG_PICTURE_RULE.md`: restate the
+first-order goal (massification produced by schooling–government–market interaction), label every active
+thread KEEP/PARK/KILL, name the one thread that most advances the model, check for drift, and say what would
+be dropped if only one thing mattered this week. The keep/park/kill list lives in `08_council/BIG_PICTURE.md`.
+Two or more red flags force a kill or a written critical-path justification.

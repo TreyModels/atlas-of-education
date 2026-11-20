@@ -1,6 +1,6 @@
 # Handover status — massification-first phase
 
-**Written:** 20 Nov 2026 ~14:12 Asia/Shanghai, by `lead-successor`, handing coordination to **`lead-fresh`**.
+**Written:** 20 Nov 2026 ~14:12 Asia/Shanghai, by `lead-successor`, handing coordination to **`repo-auditor`** (Lead executor; bridge party `deepseek-audit`). `lead-fresh` was never provisioned (fleet member limit) — ignore that name in older drafts.
 **Governance:** the **Synthetic Council of Experts is the authority** for research direction; the Lead executes,
 coordinates, enforces the bridge protocol (`06_report/AGENT_PROTOCOL.md`) and may veto only on safety/evidence
 grounds. **Shadow education is secondary**; the shadow close-out (`LOOP_CLOSEOUT.md`, brief 008) remains valid and
@@ -23,10 +23,15 @@ ranked slate.
 
 ## 2. Repository / delivery state
 
-- **Last committed state:** branch `experiment/massification-2026-11-20` @ **`7897306`** (governance + 10_massification
-  scope + CHANGELOG + AGENT_PROTOCOL + DECISIONS). The 10_massification artifacts above are **newer than the last
-  commit** and are being committed by this handover checkpoint.
-- **Zip:** rebuilt with this checkpoint; hash in the adjacent `.sha256` (authoritative).
+- **Last committed state:** branch `experiment/massification-2026-11-20`; the `lead-fresh` handover checkpoint was
+  `80f50cc` (clean, ZIP `85137fad…45221`). The **massification-first checkpoint** that follows supersedes it: it
+  commits the `10_massification/` batches (lit theory/push-pull/scaling, universalization fits, model2 scaling
+  estimates, push-pull model scaffold + gate predeclarations, data raw payload), the governance files
+  (`08_council/BIG_PICTURE_RULE.md`, `06_report/EXTERNAL_CHECKIN.md`, `AGENT_PROTOCOL.md` §7) and this STATUS file.
+  **Authoritative tip = `git log -1` on the branch**; verify with `git -C 01_sources/atlas-main-55732f4 log --oneline -1`.
+- **Zip:** rebuilt with this checkpoint; sha256 in the adjacent `.sha256` file (authoritative; not inside the ZIP).
+- **Branch self-contained for external check-in:** `06_report/EXTERNAL_CHECKIN.md` is the entry point; the tip holds
+  this STATUS file, `08_council/brief_013/` (current gate) and the commit/zip hashes in the `OP:` bridge post.
 - **Site safety:** nothing under `main`/`src`/`public` touched; results only in
   `experiments/massification-2026-11-20/`.
 - **Governance files:** `06_report/AGENT_PROTOCOL.md` (live), `08_council/DECISIONS.md` (D1–D5; Council owns from
@@ -47,7 +52,7 @@ no "conflicted copy" names, and no `.icloud` placeholders. Actions taken:
   artifacts (listed in §1) plus the packaging guard and this STATUS file — all clean, all committed by this
   checkpoint. `07_logs/` is local-only (excluded from the experimental folder by design; included in the ZIP).
 
-## 4. Next three actions for `lead-fresh`
+## 4. Next three actions for `repo-auditor`
 
 1. **Council gate:** get the Council's final `COUNCIL:` post for brief 013 (SUCCESS_CRITERIA + STOP_RULES are
    drafted); read it, then un-gate task-37 and assign the ranked slate to owners with deadlines.

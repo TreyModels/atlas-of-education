@@ -1,0 +1,22 @@
+{
+ "label": "observed estimation + simulated recovery; no validation language",
+ "data": {
+  "wdi_rows": 1350,
+  "uis6_rows": 154,
+  "fallback": "10_massification data|relations empty at run"
+ },
+ "scaling_rows": 91,
+ "classification_rows": 18,
+ "logistic_rows": 118,
+ "lead_lag_rows": 2,
+ "rivals_rows": 23,
+ "recovery": {
+  "demand-led": 1.0,
+  "supply-led": 1.0,
+  "complementary": 0.0
+ },
+ "forced_id": 1.0,
+ "equivalence": 0.06666666666666667,
+ "identifiable": false,
+ "threshold": "recovery>=0.67 and forced-ID=0 and equivalence<0.34"
+}

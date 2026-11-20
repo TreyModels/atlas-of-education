@@ -4,6 +4,29 @@
 
 # SYNTHESIS 013 — design review: massification-first push-pull programme
 
+## Step-back (mandatory)
+
+1. **First-order goal.** A longitudinal model in which massification/universalization is produced by the
+   interaction of schooling, government and markets — each standing the others up — with cohort flows and
+   country/sector variation; shadow education is secondary and its closed claims are not re-fit.
+2. **Active threads — KEEP / PARK / KILL.** **KEEP:** the gate (SUCCESS_CRITERIA + STOP_RULES); E1 two-shock
+   push-pull; E2 PH K-12 cohort exposure; E3 PH nurse-visa demand; E4 sector-demand Bartik (deferred); E6
+   scaling-form test (constraint); pattern-scout universalization fits and model2 scaling (provisional intake);
+   tasks 34/35 data and lit; country cards/targets. **PARK:** E5 lead-lag panel; E7 staggered reforms; complexity/ECI
+   axis; T1 two-margin paper support; T2 legitimation vignette; the shadow flagship paper rewrite. **KILL:** E8
+   sectoral-transformation descriptive workstream (cannot change whether the model reproduces massification; no
+   discriminating test — appendix at most); shadow-education incidence/mechanism threads (closed by brief 008; cite as
+   prior only).
+3. **The one thread that most advances the model this cycle:** Phase-1 **E2 + E3** execution (supply and demand
+   separately identified), with **E1** as the integration test that follows — without them the model cannot claim the
+   schooling↔market interaction that is the first-order goal.
+4. **Drift check.** The previous cycle was measurement-heavy (T1 Korea decomposition) and this one opened with a
+   definition gate — **one red flag** (measuring vs modelling). Mitigation: the gate is time-boxed to this cycle and
+   the next action is experiment execution, not more measurement. No closed claim reopened; no parameter ordered
+   without a discriminating test; ECI and paper threads are parked and cannot become the niche.
+5. **If only one thing mattered this week:** execute E2 + E3 and predeclare E1; drop E4–E8, ECI and paper tasks
+   until Phase-1 reports. Live list: `08_council/BIG_PICTURE.md`.
+
 **Status.** This is the Council's design verdict and the gating document for the new phase. The **binding gate** is
 `SUCCESS_CRITERIA.md` (operational definition of "reproducing universalization") plus `STOP_RULES.md` (R1–R12),
 both declared before any fit; task-37/38 are cleared on those terms (COUNCIL message posted). Shadow education is

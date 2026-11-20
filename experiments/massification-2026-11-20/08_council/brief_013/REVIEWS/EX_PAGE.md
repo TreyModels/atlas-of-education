@@ -1,3 +1,7 @@
+> **SYNTHETIC EXERCISE.** Panelists are AI-constructed composite personas whose positions are inferred from the
+> published literature. Nothing in this file is a statement by, or endorsed by, the named individuals or any living
+> person; names identify the published work each composite draws on, not participants in a deliberation.
+
 # REVIEW — PAGE composite (model reasoning / scaling) — brief_013
 
 **Scaling verdict.** The on-disk fits (pattern-scout, provisional) show the right lesson: PHL GER-secondary prefers

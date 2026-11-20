@@ -82,11 +82,15 @@ def run(iso, rival='complementary', priors=None, t0=T0, t1=T1, shocks=None):
         # --- schooling block (supply side responds to lagged job opportunities)
         jlag = job_hist[max(0, len(job_hist) - 1 - lag_d)] if len(job_hist) > lag_d else 1.0
         intake_rate = float(np.clip(intake_rate * (1.0 + e_d * (jlag / max(job_opp, 1e-9) - 1.0) * 0.1), 0.2, 1.0))
-        # progression rates: income + urban + job opportunity (declared reduced form)
-        p_pri = float(np.clip(0.86 + 0.04 * np.log(max(gdp, 1e-9)) + 0.05 * urb + 0.02 * e_d * np.log(max(job_opp, 1e-9)), 0.5, 0.99))
-        p_low = float(np.clip(0.78 + 0.05 * np.log(max(gdp, 1e-9)) + 0.05 * urb + 0.02 * e_d * np.log(max(job_opp, 1e-9)), 0.4, 0.98))
-        p_up = float(np.clip(0.70 + 0.06 * np.log(max(gdp, 1e-9)) + 0.04 * urb, 0.3, 0.97))
-        p_ter = float(np.clip(0.35 + 0.06 * np.log(max(gdp, 1e-9)) + 0.03 * urb, 0.1, 0.9))
+        # progression rates: declared reduced form in income, urbanisation and (demand-led) job opportunity.
+        # The intercepts and slopes are the FREE parameters of the calibration (vector theta); no target is a parameter.
+        th = pr  # theta dict
+        lg = np.log(max(gdp, 1e-9)); lj = np.log(max(job_opp, 1e-9))
+        p_pri = float(np.clip(th.get('p_pri0', 0.86) + th.get('g_pri', 0.04) * lg + th.get('u_pri', 0.05) * urb
+                              + (0.02 * e_d * lj if th.get('job_slope', 1) else 0.0), 0.3, 0.995))
+        p_low = float(np.clip(th.get('p_low0', 0.78) + th.get('g_low', 0.05) * lg + th.get('u_low', 0.05) * urb, 0.2, 0.99))
+        p_up = float(np.clip(th.get('p_up0', 0.70) + th.get('g_up', 0.06) * lg + th.get('u_up', 0.04) * urb, 0.1, 0.98))
+        p_ter = float(np.clip(th.get('p_ter0', 0.35) + th.get('g_ter', 0.06) * lg + th.get('u_ter', 0.03) * urb, 0.02, 0.95))
         # --- enrolment stocks from cohort flow (synthetic cohort sizes from pop at entry ages)
         ent = pop[6] * intake_rate
         prim = ent * cyc['primary']
@@ -105,7 +109,14 @@ def run(iso, rival='complementary', priors=None, t0=T0, t1=T1, shocks=None):
         # --- update educated labour share (lagged, education-led channel feeds back through jobs above)
         educ_share = 0.97 * educ_share + 0.03 * min(1.0, (up + ter) / max(prim, 1e-9))
         educ_hist.append(educ_share); job_hist.append(job_opp); gdp_hist.append(gdp)
+        # brief 013: COMPLETION is the fit series; generated from the same cohort flow (declared mapping:
+        # completion_primary = p_pri; lower = p_pri*p_low; upper = p_pri*p_low*p_up of the entering cohort)
+        comp_pri = p_pri
+        comp_low = p_pri * p_low
+        comp_up = p_pri * p_low * p_up
         hist.append(dict(year=t, births=births, pop=float(pop.sum()), intake=intake_rate,
+                         completion_primary=100 * comp_pri, completion_lower=100 * comp_low,
+                         completion_upper=100 * comp_up,
                          ger_primary=100 * prim / max(pop[6:12].sum(), 1e-9),
                          ger_lower=100 * low / max(pop[12:15].sum(), 1e-9),
                          ger_upper=100 * up / max(pop[15:18].sum(), 1e-9),
@@ -126,9 +137,13 @@ def accounting_checks(hist):
             fails.append(f'B3 {h["year"]} sector shares sum {h["agri"]+h["industry"]+h["services"]}')
         if h['pop'] <= 0 or h['births'] < 0:
             fails.append(f'B1 {h["year"]} population/births')
-        for k in ('ger_primary', 'ger_lower', 'ger_upper', 'ger_tertiary'):
+        for k in ('ger_primary', 'ger_lower', 'ger_upper', 'ger_tertiary',
+                  'completion_primary', 'completion_lower', 'completion_upper'):
             if not np.isfinite(h[k]) or h[k] < 0:
                 fails.append(f'B2 {h["year"]} {k}={h[k]}')
+        for k in ('completion_primary', 'completion_lower', 'completion_upper'):
+            if h[k] > 100 + 1e-9:
+                fails.append(f'B3 {h["year"]} {k}={h[k]} > 100')
     # B4: no target coded as a parameter (config keys must not name an observed target series)
     return fails
 

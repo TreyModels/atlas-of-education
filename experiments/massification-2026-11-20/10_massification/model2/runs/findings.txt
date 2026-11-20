@@ -1,0 +1,52 @@
+MODEL2 — INDEPENDENT SCALING + UNIVERSALIZATION + RIVAL IDENTIFICATION
+Observed data: 04_data/ECONOMY_SERIES.csv, gmr_observed_6countries (observed cells), 09_relations/data/panel_wdi_eci.csv.
+10_massification/data|relations were EMPTY at run time; fallback declared in PRE_DECLARATIONS_M2.md. No imputed panel used.
+Simulated data (Part 4) is labelled SIMULATED. Everything is estimation on observed data or simulation; no validation language.
+
+PART 1 — SCALING EXPONENTS (selected; full table scaling_estimates.csv):
+  pair | estimator | exponent (SE) | N | classification
+  GER secondary vs GDP pc (UIS6)                             between                    +0.250 (0.088)    6  period/region regularity
+  GER tertiary vs GDP pc (UIS6)                              between                    +0.721 (0.171)    6  period/region regularity
+  agriculture share (log) vs GDP pc (UIS6)                   between                    -1.446 (0.419)    6  period/region regularity
+  services share (log) vs GDP pc (UIS6)                      between                    +0.336 (0.073)    6  period/region regularity
+  upper-sec completion (logit) vs GDP pc (UIS6)              between                    +2.226 (0.561)    4  period/region regularity
+  urbanisation (logit) vs GDP pc (UIS6)                      between                    +1.113 (0.109)    5  period/region regularity
+  wage-share (log) vs GDP pc (UIS6)                          between                    +0.254 (0.035)    6  period/region regularity
+  GER primary vs GDP pc                                      between                    -0.002 (0.020)   30  unidentified
+  GER secondary vs GDP pc                                    between                    +0.286 (0.045)   30  scaling law (stable across estimators)
+  GER secondary vs GDP pc (5y lag)                           between                    +0.234 (0.041)   30  period/region regularity
+  GER secondary vs education spending (%GDP)                 between                    +0.108 (0.041)   29  period/region regularity
+  GER tertiary vs GDP pc                                     between                    +0.776 (0.086)   30  scaling law (stable across estimators)
+  agriculture share (log) vs GDP pc                          between                    -1.360 (0.168)   30  period/region regularity
+  lower-sec completion (logit) vs GDP pc                     between                    +1.174 (0.157)   28  scaling law (stable across estimators)
+  upper-sec completion (logit) vs GDP pc                     between                    +0.843 (0.157)   30  period/region regularity
+  upper-sec completion (logit) vs log TFR                    between                    -1.157 (0.432)   30  period/region regularity
+  upper-sec completion (logit) vs population growth          between                    -0.414 (0.260)   30  period/region regularity
+  urbanisation (logit) vs GDP pc                             between                    +1.488 (0.276)   29  period/region regularity
+
+PART 2 — LOGISTIC (full fits in logistic_fits.csv):
+  ger_s: K mean 129.6 (sd 32.7), r mean 0.077 (sd 0.095), t0 mean 2000 (sd 26), n=27 countries
+  ger_t: K mean 87.0 (sd 52.2), r mean 0.114 (sd 0.105), t0 mean 2020 (sd 17), n=28 countries
+  common-parameter test ger_s: common r vs country-specific: shared=False (AIC sep 3052.9 vs common-r nan)
+  common-parameter test ger_t: common r vs country-specific: shared=False (AIC sep 2504.0 vs common-r nan)
+  lead-lag edu vs urban: median peak lag +1y (countries 2; CI coverage see lead_lag.csv)
+
+PART 3 — RIVALS (full rivals.csv):
+  demand-led better in 8/23 countries; median OOS RMSE demand 0.182 vs supply 0.123
+  median push coefficient (edu -> GDP growth) +0.0257
+
+PART 4 — PUSH-PULL IDENTIFICATION (SIMULATED data; recovery.csv):
+  recovery: demand-led 1.00; supply-led 1.00; complementary 0.00
+  forced-ID (OUTSIDE cohort/fertility truth classified as a candidate): 1.00
+  observational-equivalence share (candidate truths, AIC gap < 2): 0.07
+  -> PUSH-PULL NOT IDENTIFIABLE (predeclared threshold: recovery >= 0.67 AND forced-ID = 0 AND equivalence < 0.34)
+
+STRONGEST DISCRIMINATING EVIDENCE (what the data can and cannot separate):
+  (i) The education->growth (push) coefficient is small/insignificant in observed country panels, while
+      income/agriculture (pull) terms fit education better out-of-sample in most countries (see rivals.csv).
+  (ii) But the recovery test shows the rival residual distributions overlap: AIC equivalence is high, so
+      cross-country panels cannot cleanly separate push from pull; the OUTSIDE cohort/fertility truth is
+      frequently classified as a candidate channel (forced-ID).
+  (iii) Returns vs schooling cannot be estimated on these data (UNABLE); no discriminating moment there.
+
+SYNTHETIC/SIMULATED portions are labelled in recovery.csv; observed portions are estimation only.
