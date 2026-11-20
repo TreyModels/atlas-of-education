@@ -1,0 +1,60 @@
+{
+  "brief_id": "brief_005",
+  "brief_file": "08_council/brief_005/BRIEF.md",
+  "material": "Iteration-2 PARTIAL results: country cards (6), shadow target register, target sets, loop-2 batch-B two-way + endogenous shadow module (L2/L2_uncalibrated); runner-1 calibration table and cohort ledger PENDING.",
+  "synthetic_disclaimer": "SYNTHETIC EXERCISE. Panelists are AI-constructed composite personas whose positions are inferred from the published literature. Nothing here is a statement by, or endorsed by, the named individuals or any living person. Names in literature_basis identify the work each composite draws on, not participants in a deliberation.",
+  "convened_by": "lead",
+  "convened_at": "2026-11-20T13:16+08:00",
+  "panel_size": 4,
+  "panel": [
+    {
+      "handle": "BRAY",
+      "label": "Composite drawing on comparative shadow-education literature (mandatory seat)",
+      "literature_basis": ["Bray & Lykins, Shadow Education (2012)", "Bray, comparative shadow-education work", "Bray & Zhang, China shadow-education research"],
+      "grounding_basis": ["listed", "publication"],
+      "role": "Shadow-incidence reviewer: stage/provider/country take-up vs literature; provider mix; industry expansion",
+      "assigned_prior_question": "Lead Q1 (shadow where literature says), Q4 (restatement test)",
+      "steel_man_slot": false
+    },
+    {
+      "handle": "PAGE",
+      "label": "Composite drawing on model-based-reasoning and complexity literature",
+      "literature_basis": ["Page, The Model Thinker (2018)", "Miller & Page, Complex Adaptive Systems (2007)"],
+      "grounding_basis": ["publication"],
+      "role": "Model-class reviewer: two-way imposition, provider entry dynamics, direction classifier power",
+      "assigned_prior_question": "Lead Q3 (two-way identified/imposed), Q5 (next experiments)",
+      "steel_man_slot": false
+    },
+    {
+      "handle": "PATRINOS",
+      "label": "Composite drawing on returns-to-education and education-economics literature",
+      "literature_basis": ["Psacharopoulos & Patrinos, decennial returns review (2018)", "Becker, Human Capital (1964)"],
+      "grounding_basis": ["publication"],
+      "role": "Identification/econometrics reviewer: restatement test, fit/check discipline, holdout/recovery, cohort flows",
+      "assigned_prior_question": "Lead Q2 (cohort flows), Q4 (restatement), Q5 (next experiments)",
+      "steel_man_slot": true
+    },
+    {
+      "handle": "CARTWRIGHT",
+      "label": "Composite drawing on philosophy-of-social-science literature",
+      "literature_basis": ["Cartwright, The Dappled World (1999)", "Cartwright & Hardie, Evidence-Based Policy (2012)"],
+      "grounding_basis": ["publication"],
+      "role": "Claim-discipline reviewer: sign-off vs amendments; what may be said; UNABLE-TO-ASSESS list",
+      "assigned_prior_question": "Lead Q5 (sign-off/amendments)",
+      "steel_man_slot": false
+    }
+  ],
+  "composition_check": {
+    "size_3_to_4": true,
+    "mandatory_shadow_education_composite": "BRAY",
+    "steel_man_slot": "PATRINOS",
+    "all_composites_grounded": true
+  },
+  "intake_notes": [
+    "PARTIAL set: runner-1 loop2 (CALIBRATION_TABLE.csv, country configs, cohort ledger) absent — marked UNABLE TO ASSESS.",
+    "SHADOW_TARGETS.csv has 11 use_as_model_target=YES rows, not 6 as stated in the signal.",
+    "Provider-entry effect verified at 54–67 pp (PH 66.5, HK 53.8, KHM 62.9), not 46–66 pp.",
+    "One literature shadow rate (HK senior-secondary 0.85) is the single fitted moment (Amendment L2-3); no other YES row is checked in the module."
+  ],
+  "deviation_from_lead": "none: 4 composites; Bray under the mandatory shadow-education rule."
+}

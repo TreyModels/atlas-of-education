@@ -1,7 +1,7 @@
 {
  "package": "massification_2026-11-20",
  "title": "Massification, the economy, and shadow education — DeepSeek research execution package",
- "generated_utc": "2026-11-20T05:08:32.413114+00:00",
+ "generated_utc": "2026-11-20T05:16:40.463344+00:00",
  "time_zone": "Asia/Shanghai",
  "prepared_for": "Dr. Trey Menefee (Menefee & Nordtveit working paper, October 2026)",
  "handoff_source_zip": "/Users/treymenefee/Downloads/DeepSeek_Massification_Research_Package.zip",
@@ -174,6 +174,18 @@
      "c2_floorworld.csv",
      "findings.txt",
      "run_C2.py",
+     "run_meta.json"
+    ],
+    "has_findings": true
+   },
+   {
+    "id": "C3",
+    "files": [
+     "README.md",
+     "c3_residuals.csv",
+     "c3_search.csv",
+     "findings.txt",
+     "run_C3.py",
      "run_meta.json"
     ],
     "has_findings": true
@@ -405,6 +417,26 @@
   "github_path": "experiments/massification-2026-11-20/",
   "site_safety": "vite build reads src/ + public/ only; experiments/ is not imported by the site"
  },
+ "iteration2_artifacts": {
+  "05_experiments/loop2": [],
+  "05b_experiments/loop2": [
+   "ERROR_LOG_L2.md",
+   "EXPERIMENTS_L2.md",
+   "PRE_DECLARATIONS_L2.md",
+   "RUN_MANIFEST_L2.json",
+   "SUMMARY_L2.csv",
+   "code",
+   "runs"
+  ],
+  "02_lit/COUNTRY_CARDS": [
+   "CHN.md",
+   "HKG.md",
+   "JPN.md",
+   "KHM.md",
+   "KOR.md",
+   "PHL.md"
+  ]
+ },
  "deliverable_hashes": {
   "SUMMARY_FOR_TREY.md": "cedae18ba453ed3440392ab083562b498a4516354d7f7229998eea8b2953fae9",
   "RESULTS_README.md": "73e89ffbaff7a318dd81630ab7aa4a33d9cc9529df9acc749660063a22f7f8b8",
@@ -414,7 +446,7 @@
   "EXPERIMENTS.md": "df24a7d68a197a07de55816001e7c2dd28ed43f0a8caf69e5aa2be10fcf80f21",
   "OPEN_QUESTIONS.md": "fe4c16428981c1668a2882a173335a5b499d9c6faec042009faf8ccdd4c2f976",
   "PROVENANCE.md": "5a5e584b6d73a6db97dfa2142c8962e742e05f29e2d4234156919232502ba782",
-  "RUN_MANIFEST.json": "1464d37ae941bbe040d3ac5e7f1cb68669758f7d5bd18bb90e015b16514e6989"
+  "RUN_MANIFEST.json": "d7d9d8e6cbea8077901a9d1c03ace45aad40c1b44c8b4747af1f24cab2dc0438"
  },
  "subtree_hashes": {
   "02_lit": {
@@ -435,12 +467,40 @@
     "bytes": 30894
    },
    "02_lit/README.md": {
-    "sha256": "3733f4dceb4db9df11ad76eaa2e404505f3ddbb95e88f027c1607281a2f95bc5",
-    "bytes": 4412
+    "sha256": "cd0c1bea12e1d55435861ab92203006d5f506e3929490d6219dda55226d77360",
+    "bytes": 5686
+   },
+   "02_lit/SHADOW_TARGETS.csv": {
+    "sha256": "3c613137d82830f3108e3c610922b8af57d3a8155d9baf7c96ec89994a8dc06f",
+    "bytes": 6320
    },
    "02_lit/SOURCES.json": {
-    "sha256": "4f648693e0171f735b8375247fb9a6d0e10f0482ab140dc5dad073ad12343e63",
-    "bytes": 11103
+    "sha256": "509747ff575cdb2f8df711f6b41efdfc4eb367300cf2983502192afe2c8857fc",
+    "bytes": 14846
+   },
+   "02_lit/COUNTRY_CARDS/CHN.md": {
+    "sha256": "c1a382abf66bfe3847d0c13ae579b3cb3147df3c05126e6c1f7bd7164538c812",
+    "bytes": 4444
+   },
+   "02_lit/COUNTRY_CARDS/HKG.md": {
+    "sha256": "d8c0c6a213fb6d8de24b808925a37f4f84ca7d2b9f27e72382d29bd07d77c769",
+    "bytes": 3839
+   },
+   "02_lit/COUNTRY_CARDS/JPN.md": {
+    "sha256": "f238121c6c27dd055d2bd9bb50987ac5156e1b1c68a9451beda130fa0f36a3c4",
+    "bytes": 4088
+   },
+   "02_lit/COUNTRY_CARDS/KHM.md": {
+    "sha256": "0e7ea4fdd05b320cedf8d9c9121ec676c82648532613a1d5aeb3a94b6299104a",
+    "bytes": 5406
+   },
+   "02_lit/COUNTRY_CARDS/KOR.md": {
+    "sha256": "c158a3b1fe718cabce01c382a1721674dfa795a0622a8374e92d2221f72eb84a",
+    "bytes": 4543
+   },
+   "02_lit/COUNTRY_CARDS/PHL.md": {
+    "sha256": "63b58cca1fc69e9c360dd49fb0b558291358797162d74c59c6186dacb0e1c389",
+    "bytes": 5792
    },
    "02_lit/notes/fetch_manifest.json": {
     "sha256": "e408fd0741e69ff62c124c31e678bee7d79a76de5a1d5b6cdc5b1c07fd06e4a7",
@@ -839,6 +899,30 @@
    "05_experiments/runs/C2/run_meta.json": {
     "sha256": "80f19b6fb332f1df3e8b7bd0921aeca5ac0c8d509d4627d902b81f4e82b0d0f2",
     "bytes": 462
+   },
+   "05_experiments/runs/C3/README.md": {
+    "sha256": "21d7324d0049c538d1d270d463988803f5faa1de2b0aba3e9d08c8380c1f3cbf",
+    "bytes": 1893
+   },
+   "05_experiments/runs/C3/c3_residuals.csv": {
+    "sha256": "091825ce0a823a1d4255373c22595fa5caeb2262b77007313950e1ee919db775",
+    "bytes": 10554
+   },
+   "05_experiments/runs/C3/c3_search.csv": {
+    "sha256": "bbde20c2156141e043e181bbb004c5455b16f4631bcdbd5e6dff4a1520f0fe08",
+    "bytes": 1241
+   },
+   "05_experiments/runs/C3/findings.txt": {
+    "sha256": "2afcc78fa92c540fa3683fcdafc6095cfe58b410243d3818ffe242611df72f8e",
+    "bytes": 1469
+   },
+   "05_experiments/runs/C3/run_C3.py": {
+    "sha256": "8bd07ce12a41093614405866745e9cc618ddacac55bfa2bea18a9740a3e7e1b2",
+    "bytes": 8154
+   },
+   "05_experiments/runs/C3/run_meta.json": {
+    "sha256": "eaf053bbbb35083c30286116c0836759406b0a6c008d277548fc84d9aeebcdc6",
+    "bytes": 390
    },
    "05_experiments/runs/E0_phase0/README.md": {
     "sha256": "3be049542c53df7dd24cbd7416ec6ace9fdbcadc5a35a3a412dd4fac0670dbff",

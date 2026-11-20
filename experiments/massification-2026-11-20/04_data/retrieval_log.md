@@ -142,3 +142,18 @@ Request: "some snapshots of the country pages in GMR's across this time period. 
 | `https://www.education-inequalities.org/countries/<slug>` (WIDE, the GMR team's equity database) | **HTTP 200** for all six countries. Pages are Next.js/RSC; indicator values are embedded in the payload. Captured raw HTML + extracted text/indicator lists for all six. Slugs: cambodia, china, japan, hong-kong-china, philippines, rep-of-korea (korea-rep and republic-of-korea are 404). |
 
 **Outcome.** 4 GMR-2007 country-profile PDFs + 6 WIDE country pages + 1 index captured, hashed and logged. Gaps recorded rather than guessed: unesdoc blocked (so the sample is 2 of 6 countries for the 2007 profiles), Cambodia/China/Japan profiles not in the archived batch, later editions not sampled, no pre-2002 country pages exist for this series.
+
+## 11. Iteration-2 target sets (2026-11-20 13:05–13:30 HKT)
+
+Task-11: build `TARGETS_SHADOW.csv`, `TARGETS_FLOW.csv`, `ECONOMY_SERIES.csv`, `TARGETS_README.md`.
+
+| Attempt | Result |
+|---|---|
+| 23 WDI indicator pulls for PHL;KHM;HKG;CHN;KOR;JPN, 1991–2024 (`raw/worldbank_economy/`) + per-indicator metadata for definitions | HTTP 200 each (one transient HTTP 000 on `SL.EMP.TOTL.SP.ZS`, retried OK). Used for GDP p.c., urbanisation, remittances, sector/status employment, unemployment/NEET/LFPR, population. |
+| WDI indicator *catalogue* (`per_page=25000`) | **Truncated at 25,000 entries ending at `SE.TER.TCHR.…`** — the `SL.*` labour codes are beyond the first page, so status-employment definitions were fetched per indicator instead. Noted because it silently limits catalogue-based lookups. |
+| KEDI/MODS Korea private-education press release (`mods.go.kr`, 2023 survey) | HTTP 200 but the page body is navigation only (content in an attachment); participation rates not extractable. Korea tutoring remains **unresolved**. |
+| DMW/POEA overseas deployment | **Not retrieved.** PSA remains HTTP 403; DMW pages not machine-readable in this pass. Recorded as unresolved rows in `ECONOMY_SERIES.csv`; remittances are the only migration-side series included. |
+| Tutoring participation, all countries except Hong Kong | **No verified survey retrieved.** CFPS/CEPS, KEDI, APIS/FIES, Brehm & Silova (2014) tables not accessible here. Recorded as unresolved rows with the blocker named. |
+| Transition / repetition / dropout / wage premium | **Not available** in UIS SDG4 bulk or WDI; UIS core education indicators are API-key only. Unresolved rows. |
+
+**Outcome:** 747 flow rows (540 target, 172 check, 35 unresolved), 13 shadow rows (7 HK student-participation targets covering 1996 and 2010 stage-by-stage; 1 HK parent-level check; 5 unresolved country placeholders for PHL, KHM, CHN, KOR, JPN), 4,031 economy rows. Matrix and the "calibratable vs check vs unusable" split in `TARGETS_README.md`.

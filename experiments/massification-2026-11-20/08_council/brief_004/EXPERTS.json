@@ -1,0 +1,55 @@
+{
+  "brief_id": "brief_004",
+  "brief_file": "08_council/brief_004/BRIEF.md",
+  "material": "Iteration-2 research-loop DESIGN review (pre-results): 06_report/RESEARCH_LOOP.md; 05_experiments/runs/C1/findings.txt; C2/findings.txt; C_STATUS.md; OPEN_QUESTIONS.md",
+  "synthetic_disclaimer": "SYNTHETIC EXERCISE. Panelists are AI-constructed composite personas whose positions are inferred from the published literature. Nothing here is a statement by, or endorsed by, the named individuals or any living person. Names in literature_basis identify the work each composite draws on, not participants in a deliberation.",
+  "convened_by": "lead",
+  "convened_at": "2026-11-20T13:08+08:00",
+  "panel_size": 4,
+  "panel": [
+    {
+      "handle": "PAGE",
+      "label": "Composite drawing on model-based-reasoning and complexity literature",
+      "literature_basis": ["Page, The Model Thinker (2018)", "Miller & Page, Complex Adaptive Systems (2007)"],
+      "grounding_basis": ["publication"],
+      "role": "Loop-as-inference-machine reviewer: model class, identification sequencing, iteration rule",
+      "assigned_prior_question": "Lead Qa (design soundness), Qb (anti-re-parameterisation)",
+      "steel_man_slot": false
+    },
+    {
+      "handle": "BRAY",
+      "label": "Composite drawing on comparative shadow-education literature (mandatory seat)",
+      "literature_basis": ["Bray & Lykins, Shadow Education (2012)", "Bray, comparative shadow-education work", "Bray & Zhang, China shadow-education research"],
+      "grounding_basis": ["listed", "publication"],
+      "role": "Shadow-education-as-outcome reviewer: country cards, take-up ranges, provider mix and industry expansion",
+      "assigned_prior_question": "Lead Qb (shadow incidence), Qd (variable)",
+      "steel_man_slot": false
+    },
+    {
+      "handle": "PATRINOS",
+      "label": "Composite drawing on returns-to-education and education-economics literature",
+      "literature_basis": ["Psacharopoulos & Patrinos, decennial returns review (2018)", "Becker, Human Capital (1964)"],
+      "grounding_basis": ["publication"],
+      "role": "Identification/econometrics reviewer: moment vector, holdout, recovery, what counts as evidence",
+      "assigned_prior_question": "Lead Qb (identification), Qc (publishability)",
+      "steel_man_slot": true
+    },
+    {
+      "handle": "CARTWRIGHT",
+      "label": "Composite drawing on philosophy-of-social-science literature",
+      "literature_basis": ["Cartwright, The Dappled World (1999)", "Cartwright & Hardie, Evidence-Based Policy (2012)"],
+      "grounding_basis": ["publication"],
+      "role": "Falsification/stopping reviewer: stop rules, imposed-vs-generated, stage publishability",
+      "assigned_prior_question": "Lead Qc (stopping criteria), Qd (variable)",
+      "steel_man_slot": false
+    }
+  ],
+  "composition_check": {
+    "size_3_to_4": true,
+    "mandatory_shadow_education_composite": "BRAY",
+    "steel_man_slot": "PATRINOS",
+    "all_composites_grounded": true
+  },
+  "intake_note": "RESEARCH_LOOP.md was absent when the task arrived and appeared minutes later; the review treats it as the design object at its 13:07 state. No iteration-2 artifacts exist yet.",
+  "deviation_from_lead": "none: 4 composites; Bray under the mandatory shadow-education rule."
+}

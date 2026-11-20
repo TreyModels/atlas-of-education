@@ -1,0 +1,29 @@
+# C3 — Philippines calibration to OBSERVED-only GER (finish of the batch-C cell)
+
+Command: `PYTHONPATH=<work>/massabm MASSRUN_EXP=<work>/exp "$PY" exp/run_C3.py --draws 96 --best 6 --N 2000 --Nfine 4000 --out <out>`
+
+Status: **completed** (150 s). CALIBRATION, not validation — the same observed targets are used to fit
+and to report residuals. Predeclared in `PRE_DECLARATIONS_C.md`, never re-specified after results.
+
+C3 PHILIPPINES CALIBRATION TO OBSERVED-ONLY GER (calibration, NOT validation)
+draws=96 at N=2000, best 6 re-evaluated at N=4000; wall=188s
+Data: 04_data/data/gmr_observed_6countries_1970_2024.csv, PHL observed cells only (imputed never used).
+Same targets used for fitting and for residuals; no holdout claim.
+
+FITTED PARAMETERS:
+  cost_col=0.530  cost_shs=0.064  bar_college=0.146  bar_basic=-1.310  apex_mult=1.666  hc_school=0.002
+  search-loss (mean squared pp over levels) 79.3
+
+PRE-FIT (defaults) vs POST-FIT residuals per level:
+  level           MAE pre  MAE post  bias pre  bias post  corr pre  corr post  obs mean model mean
+  ger_primary         3.4       4.8      -2.4       -4.0     0.065     -0.341     102.1       98.1
+  ger_secondary      12.6       9.6      +7.6       +4.0    -0.313     -0.076      72.3       76.3
+  ger_tertiary        5.9       5.9      -3.1       -4.0    -0.443     -0.376      27.3       23.3
+
+DECISION (predeclared): a level "succeeds" if post-fit MAE < 5 pp and |bias| < 5 pp.
+  ger_primary    FITS (MAE 4.8 pp, bias -4.0 pp, corr -0.341)
+  ger_secondary  UNFIXABLE MISS within these bounds (MAE 9.6 pp, bias +4.0 pp, corr -0.076)
+  ger_tertiary   UNFIXABLE MISS within these bounds (MAE 5.9 pp, bias -4.0 pp, corr -0.376)
+
+CAVEAT: the fit is to three aggregate GER series; it is not a structural estimate and cannot identify
+mechanisms. A good fit does not validate the model (see 02_modeling_standards.md, quality control 6).

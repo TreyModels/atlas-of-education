@@ -1,0 +1,166 @@
+{
+ "loop": "2",
+ "owner": "experiment-runner-2",
+ "scope": "05b_experiments/loop2 only",
+ "module": "code/twoway.py (NEW; not massabm/floorworld/triad/paper reproduction)",
+ "environment": {
+  "python": "3.11.17",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "numpy": "2.4.6",
+  "executable": "/Users/treymenefee/Library/Application Support/dsh-massification/venv/bin/python",
+  "policy": "numpy-only, no multiprocessing; PYTHONDONTWRITEBYTECODE=1"
+ },
+ "predeclaration": "PRE_DECLARATIONS_L2.md",
+ "data_targets": {
+  "gmr_observed": "../04_data/data/gmr_observed_6countries_1970_2024.csv",
+  "national_headlines": "../04_data/data/national_headline_figures.csv",
+  "rule": "only observed cells used as targets; no imputed cell cited"
+ },
+ "code_sha": {
+  "code/twoway.py": "c6b634e39afaf4db",
+  "../code/bcommon.py": "70b68126ed8a7a51",
+  "code/make_manifest_l2.py": "05f98f1cb40c8655"
+ },
+ "meta": {
+  "module": "twoway.py (NEW; not massabm/floorworld/triad/paper reproduction)",
+  "countries": [
+   "PH-like",
+   "HK-like",
+   "KHM-like"
+  ],
+  "regimes": [
+   "R1_demand_led",
+   "R2_education_led",
+   "R3_complementary",
+   "R4_frozen_schooling",
+   "R5_frozen_returns",
+   "R6_fixed_supply",
+   "R7_no_tutoring",
+   "R8_edled_frozen",
+   "R9_demand_led_frozen",
+   "R10_frozen_economy"
+  ],
+  "seeds": [
+   0,
+   1,
+   2,
+   3,
+   4
+  ],
+  "years": 40,
+  "burn_in": 15,
+  "failures": [],
+  "direction": {
+   "PH-like": {
+    "ed_dir": -0.00082527310386038,
+    "ec_dir": -0.0003880611920255017,
+    "ed_sd": 6.817272784628442e-05,
+    "ec_sd": 0.01790954060411683,
+    "verdict": "neither identified at this N/sd",
+    "supplied_jobs": 4.7005563844061555,
+    "generated_jobs": 4.2308683083781204,
+    "complex_share_y40": 0.25216124324101197,
+    "formal_share_y40": 0.37984052887351644,
+    "take_S_y40": 0.8836769992963454,
+    "take_C_y40": 0.8994419271319348,
+    "price_y40": 0.2980106888641485,
+    "n_cm": 23.00440949973533,
+    "n_tt": 72.36113515449048,
+    "complex_jobs_y40": 135.4323200702165
+   },
+   "HK-like": {
+    "ed_dir": -0.07140896892441118,
+    "ec_dir": 0.09834335095350452,
+    "ed_sd": 0.009584723337697557,
+    "ec_sd": 0.006914149165041509,
+    "verdict": "demand-led",
+    "supplied_jobs": -53.09575316495949,
+    "generated_jobs": -55.276258931531714,
+    "complex_share_y40": 0.3515685625230659,
+    "formal_share_y40": 0.577455445831335,
+    "take_S_y40": 0.8653695153113578,
+    "take_C_y40": 0.9543303687204453,
+    "price_y40": 0.5511468023980169,
+    "n_cm": 14.251165686557481,
+    "n_tt": 87.15048122954185,
+    "complex_jobs_y40": 181.09723096948215
+   },
+   "KHM-like": {
+    "ed_dir": 0.0007931670475785635,
+    "ec_dir": -0.011893750664412575,
+    "ed_sd": 3.804505095196404e-05,
+    "ec_sd": 0.016022552108621812,
+    "verdict": "education-led",
+    "supplied_jobs": 2.8653857028609337,
+    "generated_jobs": 3.3198171960430614,
+    "complex_share_y40": 0.24145937424552963,
+    "formal_share_y40": 0.2566228562644105,
+    "take_S_y40": 0.8871225479160618,
+    "take_C_y40": 0.7934221873093671,
+    "price_y40": 0.13337940011923433,
+    "n_cm": 1.9886864966737803,
+    "n_tt": 76.49279754912233,
+    "complex_jobs_y40": 83.13406286824485
+   }
+  },
+  "target_sources": {
+   "PH-like": {
+    "completion": "GMR observed 2024",
+    "tertiary_ger": "GMR observed 2026 (GER)"
+   },
+   "HK-like": {
+    "tutoring_senior_sec": "Kwo & Bray 2011 (2010, caveat: not statistically robust)",
+    "degree_attainment": "EDB 2025 observed",
+    "postsec_attainment": "EDB 2025 observed"
+   },
+   "KHM-like": {
+    "completion": "GMR observed 2023",
+    "formal_share": "CLFS 2019 observed",
+    "university_attainment": "CLFS 2019 observed"
+   }
+  }
+ },
+ "outputs": [
+  {
+   "path": "runs/L2/findings.txt",
+   "sha16": "d4b19ead8eb44254",
+   "bytes": 3703
+  },
+  {
+   "path": "runs/L2/l2_checkpoints.csv",
+   "sha16": "f0b08d1fd1dd60b6",
+   "bytes": 54021
+  },
+  {
+   "path": "runs/L2/l2_raw.csv",
+   "sha16": "85bba1a3353121a7",
+   "bytes": 2481774
+  },
+  {
+   "path": "runs/L2/run_meta.json",
+   "sha16": "4033aa4b9616ab65",
+   "bytes": 2689
+  },
+  {
+   "path": "runs/L2_uncalibrated/findings.txt",
+   "sha16": "88058d9786ad438c",
+   "bytes": 3718
+  },
+  {
+   "path": "runs/L2_uncalibrated/l2_checkpoints.csv",
+   "sha16": "31cbc1435bbf2325",
+   "bytes": 54610
+  },
+  {
+   "path": "runs/L2_uncalibrated/l2_raw.csv",
+   "sha16": "9d5eaf7750845dbf",
+   "bytes": 2503580
+  },
+  {
+   "path": "runs/L2_uncalibrated/run_meta.json",
+   "sha16": "f535a60304e525a4",
+   "bytes": 2656
+  }
+ ],
+ "logs": []
+}

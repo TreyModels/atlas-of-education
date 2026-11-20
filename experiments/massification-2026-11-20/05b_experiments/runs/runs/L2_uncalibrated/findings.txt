@@ -1,0 +1,39 @@
+LOOP 2 — BIDIRECTIONAL EDUCATION-ECONOMY + ENDOGENOUS SHADOW SECTOR (NEW declared module)
+countries=['PH-like', 'HK-like', 'KHM-like'] regimes=['R1_demand_led', 'R2_education_led', 'R3_complementary', 'R4_frozen_schooling', 'R5_frozen_returns', 'R6_fixed_supply', 'R7_no_tutoring', 'R8_edled_frozen', 'R9_demand_led_frozen', 'R10_frozen_economy'] seeds=[0, 1, 2, 3, 4] horizon=40y burn-in=15y
+twoway.py; see PRE_DECLARATIONS_L2.md. All numbers are stylized model output, not country estimates.
+failed trajectories: 0
+
+DIRECTION DECOMPOSITION AT YEAR 40 (sd across seeds in brackets) and 20/40 checkpoints:
+  PH-like: ed_dir(complex share, ed-led vs frozen) = -0.0023 (2sd 0.0002); ec_dir(degree share, returns on vs off) = +0.0117 (2sd 0.0353)
+    -> direction verdict: neither identified at this N/sd
+    y40: complex-job share 0.251 (sd 0.000), formal share 0.379 (sd 0.015), complex jobs/cohort 134.9
+    generated-vs-supplied complex jobs/cohort: supplied-by-demand +4.70; generated-by-schooling +3.15
+    y40 shadow: take-up S 0.643 (sd 0.009), C 0.649 (sd 0.016), price 0.20, providers commercial 4.5 / teacher 22.9, spend/pupil 0.13
+  HK-like: ed_dir(complex share, ed-led vs frozen) = -0.0737 (2sd 0.0194); ec_dir(degree share, returns on vs off) = +0.1117 (2sd 0.0130)
+    -> direction verdict: demand-led
+    y40: complex-job share 0.349 (sd 0.010), formal share 0.572 (sd 0.012), complex jobs/cohort 179.4
+    generated-vs-supplied complex jobs/cohort: supplied-by-demand -54.71; generated-by-schooling -57.09
+    y40 shadow: take-up S 0.581 (sd 0.008), C 0.801 (sd 0.005), price 0.50, providers commercial 6.0 / teacher 53.3, spend/pupil 0.40
+  KHM-like: ed_dir(complex share, ed-led vs frozen) = -0.0017 (2sd 0.0030); ec_dir(degree share, returns on vs off) = +0.0045 (2sd 0.0309)
+    -> direction verdict: neither identified at this N/sd
+    y40: complex-job share 0.240 (sd 0.001), formal share 0.257 (sd 0.011), complex jobs/cohort 82.5
+    generated-vs-supplied complex jobs/cohort: supplied-by-demand +2.66; generated-by-schooling +2.16
+    y40 shadow: take-up S 0.670 (sd 0.012), C 0.459 (sd 0.029), price 0.10, providers commercial 0.9 / teacher 20.2, spend/pupil 0.05
+
+TARGET MISSES (model y40 vs observed literature/data targets; targets are NOT fitted):
+  PH-like: upper-secondary completion model 0.628 vs target 0.750 -> miss -0.122
+  HK-like: senior-secondary tutoring take-up model 0.581 vs target 0.850 (Kwo & Bray 2011, caveat) -> miss -0.269
+  HK-like: degree attainment proxy (degree share of new entrants) 0.349 vs post-sec attainment target 0.364 (degree 0.276) -> proxy miss
+  KHM-like: upper-secondary completion model 0.353 vs target 0.279 -> miss +0.074
+  KHM-like: formal-job share model 0.257 vs target 0.117 -> miss +0.140
+  KHM-like: university attainment proxy (complex-job share) 0.240 vs target 0.066 -> miss +0.174
+
+POSITIONAL RESPONSE TEST (R3, within-trajectory): tutoring take-up when college-gate competition R_C is above vs below its 40-year median:
+  PH-like: take-up_C high-R_C 0.608 vs low-R_C 0.583 -> delta +0.024 (2sd of take-up 0.093) -> not distinguishable
+  HK-like: take-up_C high-R_C 0.778 vs low-R_C 0.780 -> delta -0.002 (2sd of take-up 0.078) -> not distinguishable
+  KHM-like: take-up_C high-R_C 0.362 vs low-R_C 0.343 -> delta +0.019 (2sd of take-up 0.127) -> not distinguishable
+
+SHADOW SECTOR AS INDUSTRY (R3 vs R6 fixed supply, y40):
+  PH-like: take-up S endo 0.643 vs fixed supply 0.216; price 0.20 vs 5.00; complex share 0.251 vs 0.249
+  HK-like: take-up S endo 0.581 vs fixed supply 0.322; price 0.50 vs 5.44; complex share 0.349 vs 0.347
+  KHM-like: take-up S endo 0.670 vs fixed supply 0.260; price 0.10 vs 2.50; complex share 0.240 vs 0.235

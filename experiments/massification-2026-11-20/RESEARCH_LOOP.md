@@ -57,6 +57,35 @@ Iteration 1 produced 23 executed cells and one reproduction audit. Three results
                         next iteration (change one variable)
 ```
 
+## 1a. Amended loop (binding after Council brief 004)
+
+The Council's design review rejected fit-first sequencing: calibration must be preceded by
+falsification design, not followed by a review. The following are now binding on iteration 2.
+
+**Before calibration, label every target row `fit` or `check`, with a predicted sign per candidate
+world (surplus / competitive / Yoo).** A calibration target may never double as a check.
+
+**Six anti-re-parameterisation requirements**
+
+1. Add moments with *different* predictions across candidate worlds: formal-access response to
+   graduate supply; stage/provider shadow take-up; wage-premium dynamics; informality transitions.
+   At least two must be real-data and excluded from the fit.
+2. Fit 1980–2010, hold out 2011–2024 (and leave one country/stage untouched). Report out-of-sample
+   misses, not just in-sample fit.
+3. Carry a truth *outside* the candidate set each round; report the forced-identification rate.
+   (C1's baseline: outside truth forced into the surplus world 2/2.)
+4. Replace at least one behavioural schedule rather than recalibrating it, and show the generated
+   path is stable (B4's endogenous collapse is the warning).
+5. Symmetric two-way test: freeze schooling — does the job path rise? Freeze wages/jobs — does
+   attainment rise? If neither moves, the two-way claim is a schedule, not a model.
+6. Shadow take-up and provider mix are **checks, never fitted shares**. Fitted objects are household
+   demand, provider entry cost, and teacher-tutor capacity. If matching a literature rate requires
+   setting the tutoring rule to that rate, the result is a restatement and must be labelled.
+
+**The structural variable for iteration 2 is provider supply/entry, including teacher-tutor
+capacity** — the change that creates a new checkable moment, endogenises the economy→education leg,
+and addresses the paper's nursing failure (0.25 versus ~9 licensed per migrant).
+
 ## 2. What "shadow education appears where the literature says" means operationally
 
 It is **not** "the model has a tutoring rule". It is:
@@ -92,7 +121,7 @@ The economy side must be a *model*, not a schedule:
 | iteration | what ran | what changed | what it forced |
 |---|---|---|---|
 | 1 (20 Nov, AM) | 23 cells: floor/race, grad supply, liquidity, memory, gates, actor knockouts, state, China support, information, trajectories, child states, recovery, floorworld, PH benchmark | established the mechanism suite; reproduction audit | C1 no identification; C2 one-way economy; shadow incidence untested |
-| 2 (20 Nov, PM) | country cards; target sets; country configs + calibration loop; two-way economy + endogenous shadow sector; Council design review and results review | changed variable: **endogenous economy feedback + provider supply** (not parameter tweaks) | (to be recorded) |
+| 2 (20 Nov, PM) | 6 country cards + 21-row shadow target table; WDI/UIS target sets; two-way economy module with provider entry/teacher-tutor capacity (150 trajectories, 0 failures); calibration loop + cohort ledger (in progress); Council design review (004) and results review (005) | changed variable: **provider supply/entry + endogenous two-way economy** | **Two-way test: the job side is still ~a supplied schedule** (freezing schooling still lets complex vacancies rise; schooling adds only 3–4% of jobs). **Economy→education is the dominant direction** (+6.7–11.8pp live vs +2.2–2.8pp frozen), with a 20–40% residual shadow-supply channel. **Shadow pattern not identified by one moment**: fitting HK 0.85 forces PH/KHM to 0.88–0.89 with no target to check. Teacher-tutors dominate supply (76–97%); endogenous entry raises take-up 46–66pp. Positional response is a null in this specification. |
 | 3 | (to be designed from iteration 2's misses) | one variable at a time | |
 
 ## 5. Stopping and falsification criteria (declared before iteration 2 results)
@@ -108,6 +137,16 @@ The program stops claiming a mechanism when any of these is true:
 4. **Cohort flows do not balance** or require impossible transition rates to hit targets.
 5. **The target was coded as a parameter**: if matching the literature rate requires setting the
    tutoring rule to that rate directly, the result is a restatement, not a finding.
+
+Additional stop rules (Council brief 004):
+
+6. **Out-of-sample miss**: if held-out 2011–2024 misses exceed a declared threshold, no country claim.
+7. **Sign instability of an unmeasured parameter** ⇒ withdraw the claim (the substitution elasticity
+   is the live case; E18/E18b already show the sign flipping by specification).
+8. **Institutional-parameter audit**: if a country result depends on hand-set floors, readers or
+   regulation parameters rather than behaviour, it is description, not mechanism.
+9. **Iteration budget**: two iterations without an identification gain ⇒ stop claiming the mechanism
+   and publish the equivalence/negative map (which is itself the contribution).
 
 A stage is **publishable** when it has: executed cells, a predeclared comparison, a disclosed miss, and
 one result that a referee could try to replicate.

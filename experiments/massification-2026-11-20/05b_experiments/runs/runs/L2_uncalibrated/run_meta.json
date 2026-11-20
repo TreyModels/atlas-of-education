@@ -1,0 +1,99 @@
+{
+ "module": "twoway.py (NEW; not massabm/floorworld/triad/paper reproduction)",
+ "countries": [
+  "PH-like",
+  "HK-like",
+  "KHM-like"
+ ],
+ "regimes": [
+  "R1_demand_led",
+  "R2_education_led",
+  "R3_complementary",
+  "R4_frozen_schooling",
+  "R5_frozen_returns",
+  "R6_fixed_supply",
+  "R7_no_tutoring",
+  "R8_edled_frozen",
+  "R9_demand_led_frozen",
+  "R10_frozen_economy"
+ ],
+ "seeds": [
+  0,
+  1,
+  2,
+  3,
+  4
+ ],
+ "years": 40,
+ "burn_in": 15,
+ "failures": [],
+ "direction": {
+  "PH-like": {
+   "ed_dir": -0.0023248055543542145,
+   "ec_dir": 0.011656538179452752,
+   "ed_sd": 8.531382816451486e-05,
+   "ec_sd": 0.01765066995914858,
+   "verdict": "neither identified at this N/sd",
+   "supplied_jobs": 4.7005563844061555,
+   "generated_jobs": 3.150347278266139,
+   "complex_share_y40": 0.2514108089357864,
+   "formal_share_y40": 0.3785033879460439,
+   "take_S_y40": 0.6427655544654779,
+   "take_C_y40": 0.6490579607123242,
+   "price_y40": 0.2,
+   "n_cm": 4.495059798528481,
+   "n_tt": 22.850740326594387,
+   "complex_jobs_y40": 134.89390868528199
+  },
+  "HK-like": {
+   "ed_dir": -0.07369996415328056,
+   "ec_dir": 0.11169997244358211,
+   "ed_sd": 0.009689853804393073,
+   "ec_sd": 0.006501897981559429,
+   "verdict": "demand-led",
+   "supplied_jobs": -54.70602318375148,
+   "generated_jobs": -57.08838458323095,
+   "complex_share_y40": 0.349408034203196,
+   "formal_share_y40": 0.572202569330283,
+   "take_S_y40": 0.5809694876014044,
+   "take_C_y40": 0.801470127097447,
+   "price_y40": 0.5,
+   "n_cm": 6.038784075312909,
+   "n_tt": 53.25806012495548,
+   "complex_jobs_y40": 179.3869732248798
+  },
+  "KHM-like": {
+   "ed_dir": -0.0017084438632227195,
+   "ec_dir": 0.004495764942895414,
+   "ed_sd": 0.0014870513948418316,
+   "ec_sd": 0.015433787595786301,
+   "verdict": "neither identified at this N/sd",
+   "supplied_jobs": 2.662352477165655,
+   "generated_jobs": 2.159528414367017,
+   "complex_share_y40": 0.24001197997359647,
+   "formal_share_y40": 0.25658668803052176,
+   "take_S_y40": 0.6702512500935713,
+   "take_C_y40": 0.45866593102226255,
+   "price_y40": 0.1,
+   "n_cm": 0.8573217912408136,
+   "n_tt": 20.247497789232405,
+   "complex_jobs_y40": 82.46326916797825
+  }
+ },
+ "target_sources": {
+  "PH-like": {
+   "completion": "GMR observed 2024",
+   "tertiary_ger": "GMR observed 2026 (GER)"
+  },
+  "HK-like": {
+   "tutoring_senior_sec": "Kwo & Bray 2011 (2010, caveat: not statistically robust)",
+   "degree_attainment": "EDB 2025 observed",
+   "postsec_attainment": "EDB 2025 observed"
+  },
+  "KHM-like": {
+   "completion": "GMR observed 2023",
+   "formal_share": "CLFS 2019 observed",
+   "university_attainment": "CLFS 2019 observed"
+  }
+ }
+}

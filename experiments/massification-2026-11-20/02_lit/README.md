@@ -39,3 +39,13 @@
 3. Ng & Yip (2020) existence and DOI — or a decision to rest the intensification claim on Kang (2026) + Yoo (2003) and cite Gee (2012) only for framing.
 4. Abarcar & Theoharides (2024) — the ≈9-nurses figure is the benchmark the project's own model fails against.
 5. Stange (2012) — decide whether the option-value framing keeps a number or not.
+
+---
+
+## Iteration 2 additions (2026-11-20, task-10)
+- **`COUNTRY_CARDS/{PHL,KHM,HKG,CHN,KOR,JPN}.md`** — six country cards (shadow education, gates, cohort flows, economy, policy timeline, disagreements). Every number carries source + access status; "NOT FOUND" is explicit throughout.
+- **`SHADOW_TARGETS.csv`** — 21 rows, one per country x stage x provider, with `rate_pct / low / high / year / source / source_access / confidence / use_as_model_target / note`.
+- **The 6 calibration targets** (use_as_model_target=YES): KOR 78.5% all levels 2023 (official, high); HKG 85% senior-secondary c.2011 (second-hand quote, medium-high); JPN 41.8% grade-6 juku (high); KHM 68.4% grade-9 and 41.3% primary, urban 60.5% vs rural 26.4% (case study); PHL 46.5% all basic 2010 (select sample, medium).
+- **Data-thin: CHN** (no verified rate; IAFOR 403, CNKI paywall) **and PHL** (one 2010 select-sample survey; no national rate, no quintile gradient, nothing post-K-12).
+- New full texts archived in `raw/`: Brehm & Silova WP39 (Cambodia), de Castro & de Guzman 2010 (Philippines), Rappleye & Komatsu 2020 (Japan), SEA-PLM 2024 Cambodia report (useful negative: no shadow-education module).
+- Bridge status posted as party `deepseek-research` with `SHADOW_TARGETS.csv` attached.

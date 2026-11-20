@@ -1,0 +1,17 @@
+{
+ "eid": "C3",
+ "draws": 96,
+ "N": 2000,
+ "Nfine": 4000,
+ "best_loss": 79.2695740031278,
+ "fitted": {
+  "cost_col": 0.5296381395112483,
+  "cost_shs": 0.06376620180110475,
+  "bar_college": 0.1463600823444109,
+  "bar_basic": -1.3097768943636554,
+  "apex_mult": 1.6658907167636579,
+  "hc_school": 0.001760834137421656
+ },
+ "wall": 187.9678270816803,
+ "status": "calibration, not validation"
+}

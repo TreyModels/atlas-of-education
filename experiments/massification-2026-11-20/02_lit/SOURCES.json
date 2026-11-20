@@ -1,7 +1,7 @@
 {
-  "generated_utc": "2026-11-20T05:10:00Z",
+  "generated_utc": "2026-11-20T05:41:00Z",
   "workspace": "/Users/treymenefee/Library/Mobile Documents/com~apple~CloudDocs/Downloads/DeepSeek/massification_2026-11-20",
-  "note": "Retrieval records for the Massification literature ledger. Saved files under 02_lit/raw/ are working copies for verification, not for redistribution. Access status vocabulary: full-text (retrieved and read), full-text-unread (retrieved, not yet mined), abstract-only (metadata/abstract only), landing-only (DOI/IDEAS/ERIC record; no abstract), blocked (HTTP 403/404/SSL).",
+  "note": "Retrieval records for the Massification literature ledger. Saved files under 02_lit/raw/ are working copies for verification, not for redistribution. Access status vocabulary: full-text (retrieved and read), full-text-unread (retrieved, not yet mined), abstract-only (metadata/abstract only), landing-only (DOI/IDEAS/ERIC record; no abstract), blocked (HTTP 403/404/SSL). Iteration 2 additions: Brehm & Silova WP39, de Castro & de Guzman 2010, Rappleye & Komatsu 2020, SEA-PLM 2024 KHM, plus recorded blocks (ADB book 404, IAFOR 403).",
   "records": [
     {
       "key": "yoo2003",
@@ -287,6 +287,74 @@
       "retrieved_utc": "2026-11-20T05:07:00Z",
       "saved_as": null,
       "note": "AEA paywall; PDF not retrieved. Abstract/metadata not independently verified this session."
+    },
+    {
+      "key": "brehm_silova_wp39",
+      "url": "http://www.willbrehm.com/wp-content/uploads/2013/11/WP39_Hidden_Privatization_Public_Education_Cambodia.pdf",
+      "http_status": 200,
+      "content_type": "application/pdf",
+      "retrieved_utc": "2026-11-20T05:09:00Z",
+      "saved_as": "02_lit/raw/brehm_silova2014_wp39_cambodia.pdf",
+      "access_status": "full-text",
+      "note": "Brehm & Silova working-paper version (44 pp.) of the JERO 2014 article. Source of all Cambodia shadow-education numbers. FULL-TEXT.",
+      "sha256": "93ea844beba6abe4de6954d7b9fa78fbad73342a0e014b6cdd0db6403b5a039f",
+      "bytes": 556551
+    },
+    {
+      "key": "decastro_deguzman2010",
+      "url": "https://www.kedi.re.kr/eng/kedi/cmmn/file/fileDown.do?menuNo=200067&atchFileId=FILE_000000000003485&fileSn=1&bbsId=",
+      "http_status": 200,
+      "content_type": "application/pdf",
+      "retrieved_utc": "2026-11-20T05:09:00Z",
+      "saved_as": "02_lit/raw/decastro_deguzman2010_kjep_philippines.pdf",
+      "access_status": "full-text",
+      "note": "de Castro & de Guzman (2010), KEDI Journal of Educational Policy 7(1):43-66. The only retrievable Philippines shadow-education survey. n=1,235, select sample. FULL-TEXT.",
+      "sha256": "d6e6a1b1f40bc801fb217beb4d48c1b9ce6f81b0b3e3e957936458e86f28b526",
+      "bytes": 412761
+    },
+    {
+      "key": "rappleye_komatsu2020",
+      "url": "https://epaa.asu.edu/index.php/epaa/article/download/4990/2432/0",
+      "http_status": 200,
+      "content_type": "application/pdf",
+      "retrieved_utc": "2026-11-20T05:09:00Z",
+      "saved_as": "02_lit/raw/rappleye_komatsu2020_epaa_japan.pdf",
+      "access_status": "full-text",
+      "note": "Rappleye & Komatsu (2020), EPAA 28(67). Japan juku attendance data (Table 2) AND the source of the dispute over the OECD 2012 juku time series. FULL-TEXT.",
+      "sha256": "8843359439b1a66137e1dc47777e7d7f0486330270267613f194a17337b663b6",
+      "bytes": 623299
+    },
+    {
+      "key": "seaplm2024_khm",
+      "url": "https://www.seaplm.org/images/Publication/2026/Cambodia-SEA-PLM-2024-National-Report_KHM.pdf",
+      "http_status": 200,
+      "content_type": "application/pdf",
+      "retrieved_utc": "2026-11-20T05:09:00Z",
+      "saved_as": "02_lit/raw/seaplm2024_cambodia_national_report.pdf",
+      "access_status": "full-text",
+      "note": "SEA-PLM 2024 Cambodia national report, 104 pp. USEFUL NEGATIVE RESULT: full-text search finds no shadow-education module; cannot supply a Cambodia target.",
+      "sha256": "8f2559f3ef013f03bd7ac05a3b349cb8c568820a4b1232855b1c5c703cc3e2c3",
+      "bytes": 2161277
+    },
+    {
+      "key": "adb_bray_lykins_2012",
+      "url": "https://www.adb.org/sites/default/files/publication/29704/shadow-education.pdf",
+      "http_status": 404,
+      "content_type": "text/html",
+      "retrieved_utc": "2026-11-20T05:09:00Z",
+      "saved_as": null,
+      "access_status": "blocked",
+      "note": "Bray & Lykins 2012 ADB book PDF: two candidate URLs both 404. Book NOT read. The 85% HK / ~90% Korea figures are therefore SECOND-HAND, quoted verbatim from p. X by Dierkes (Jukupedia, 2012-05-19) - see raw/jukupedia.html."
+    },
+    {
+      "key": "iafor_china_xian",
+      "url": "https://papers.iafor.org/wp-content/uploads/papers/seace2025/SEACE2025_87824.pdf",
+      "http_status": 403,
+      "content_type": "text/html",
+      "retrieved_utc": "2026-11-20T05:09:00Z",
+      "saved_as": null,
+      "access_status": "blocked",
+      "note": "China Double Reduction Xi'an participation study - 403. No China rate obtained."
     }
   ]
 }
