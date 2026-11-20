@@ -1,0 +1,58 @@
+{
+  "experiment": "EXP-8 GATE-LOCUS",
+  "label": "SYNTHETIC",
+  "brief": "SYNTHESIS_022.md section 6 EXP-8, threshold + falsifier, item 5",
+  "predeclaration": {
+    "file": "PRE_DECLARATIONS.md",
+    "sha256": "a8566fbfbca5cc5231ef78c35adffbf62264f82bbefe830683616105434c547d",
+    "thresholds_changed_after_freeze": false
+  },
+  "falsifier_text_verbatim": "if any upper/tertiary level-year has p_off < 0.50 in >20% of its years, the architecture conclusion is reversed and RUNG-PROB (EXP-9) is not dispatched",
+  "measure": {
+    "p_off": "admitted_official / demand_official",
+    "rationed_conjunct": "NONE (the falsifier clause states only p_off < 0.50)",
+    "deep_bar": 0.5,
+    "share_threshold": 0.2,
+    "levels_checked": [
+      "upper_secondary",
+      "tertiary"
+    ]
+  },
+  "primary_reading": {
+    "levels": [
+      {
+        "level": "upper_secondary",
+        "n_cells": 1680,
+        "count_p_off_lt050": 0,
+        "share_pct": 0.0,
+        "threshold_share_pct": 20.0,
+        "comparison": "share > 20% (strict)",
+        "trips": false
+      },
+      {
+        "level": "tertiary",
+        "n_cells": 1680,
+        "count_p_off_lt050": 0,
+        "share_pct": 0.0,
+        "threshold_share_pct": 20.0,
+        "comparison": "share > 20% (strict)",
+        "trips": false
+      }
+    ],
+    "levels_tripped": [],
+    "tripped": false,
+    "outcome": "NOT TRIPPED"
+  },
+  "secondary_reading_non_verdict_bearing": {
+    "note": "per-country per-level series; reported for transparency only and it cannot change the outcome, the branch or the dispatch record",
+    "n_series_checked": 60,
+    "n_series_exceeding_20pct": 0,
+    "series_exceeding_20pct": [],
+    "detail_file": "results/GATE_LOCUS_SECONDARY_S3.csv"
+  },
+  "consequence": {
+    "architecture_conclusion": "NOT REVERSED",
+    "statement": "Falsifier does not trip: the architecture conclusion is not reversed by this clause, and EXP-9 is not blocked by it. Dispatch remains the Lead's action.",
+    "exp9_rung_prob": "NOT BLOCKED BY FALSIFIER"
+  }
+}

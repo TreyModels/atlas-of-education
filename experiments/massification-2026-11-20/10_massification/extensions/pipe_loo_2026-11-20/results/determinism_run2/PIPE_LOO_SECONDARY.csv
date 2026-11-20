@@ -1,0 +1,28 @@
+screen_id,entity,item,value,unit,verdict_bearing,label,note
+S1,Philippines,n_pairs,8,count,NO,DERIVED,pairs built from observed completion series
+S1,Philippines,n_upper_years_dropped,3,count,NO,DERIVED,upper years with no lower observation within +/-1 y of t-3
+S1,"Korea, Rep.",n_pairs,19,count,NO,DERIVED,pairs built from observed completion series
+S1,"Korea, Rep.",n_upper_years_dropped,5,count,NO,DERIVED,upper years with no lower observation within +/-1 y of t-3
+S1,Cambodia,n_pairs,11,count,NO,DERIVED,pairs built from observed completion series
+S1,Cambodia,n_upper_years_dropped,7,count,NO,DERIVED,upper years with no lower observation within +/-1 y of t-3
+S1,China,n_pairs,5,count,NO,DERIVED,pairs built from observed completion series
+S1,China,n_upper_years_dropped,1,count,NO,DERIVED,upper years with no lower observation within +/-1 y of t-3
+S1,ALL,n_pairs_total,43,count,NO,DERIVED,brief declares 43
+S1,"Hong Kong SAR, China",n_pairs,0,count,NO,OBSERVED (absence),"zero completion pairs; declared non-entrant, cannot enter"
+S1,Japan,n_pairs,0,count,NO,OBSERVED (absence),"zero completion pairs; declared non-entrant, cannot enter"
+S2,Philippines,lower_annualised_delta_1999_2000,6.17,pp/year,NO,DERIVED,(65.03 - 58.86) / 1y; lower-secondary completion
+S2,Philippines,lower_annualised_delta_2000_2004,0.26,pp/year,NO,DERIVED,(66.08 - 65.03) / 4y; lower-secondary completion
+S2,Philippines,lower_annualised_delta_2004_2008,0.47,pp/year,NO,DERIVED,(67.96 - 66.08) / 4y; lower-secondary completion
+S2,Philippines,lower_annualised_delta_2008_2010,1.57,pp/year,NO,DERIVED,(71.10 - 67.96) / 2y; lower-secondary completion
+S2,Philippines,lower_annualised_delta_2010_2013,0.06,pp/year,NO,DERIVED,(71.27 - 71.10) / 3y; lower-secondary completion
+S2,Philippines,lower_annualised_delta_2013_2017,2.50,pp/year,NO,DERIVED,(81.25 - 71.27) / 4y; lower-secondary completion
+S2,Philippines,lower_annualised_delta_2017_2021,-0.09,pp/year,NO,DERIVED,(80.90 - 81.25) / 4y; lower-secondary completion
+S2,Philippines,lower_annualised_delta_2021_2022,3.27,pp/year,NO,DERIVED,(84.16 - 80.90) / 1y; lower-secondary completion
+S2,Philippines,lower_annualised_delta_2022_2023,4.28,pp/year,NO,DERIVED,(88.44 - 84.16) / 1y; lower-secondary completion
+S2,Philippines,lower_annualised_delta_2023_2024,3.97,pp/year,NO,DERIVED,(92.41 - 88.44) / 1y; lower-secondary completion
+S2,Philippines,lower_annualised_delta_mean,2.25,pp/year,NO,DERIVED,mean over 10 consecutive intervals
+S2,Philippines,lower_annualised_delta_sd_sample,2.14,pp/year,NO,DERIVED,sample SD (ddof=1)
+S3,Philippines,n_pairs_upper_2022_2024,2,count,NO,DERIVED-DESCRIPTIVE-NOT-VERDICT,pairs whose UPPER year is in 2022-2024
+S3,Philippines,n_pairs_upper_2003_2017,6,count,NO,DERIVED-DESCRIPTIVE-NOT-VERDICT,pairs whose UPPER year is in 2003-2017
+S3,Philippines,loo_median_abs_error_2003_2017_subset,1.37,pp,NO,DERIVED-DESCRIPTIVE-NOT-VERDICT,"LOO recomputed on the 2003-2017 upper-year subset only; NO threshold applied, NO verdict derived; the verdict uses all 8 PHL pairs only"
+S3,Philippines,loo_pct_within_5pp_2003_2017_subset,83.33,percent,NO,DERIVED-DESCRIPTIVE-NOT-VERDICT,5/6 within +/-5 pp on that subset; descriptive only

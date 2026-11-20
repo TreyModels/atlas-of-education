@@ -319,3 +319,16 @@ manifests and error logs.
   utilisation/quality — proxies only, DERIVED, distortions stated. Scope honesty: current stack already has 0.1418 spare
   upper places + a binding job gate, so "bimodal" = three declared absences.
 - **Not run**; parks intact until the v1.5 build/run. No re-tune of A3-D; no fitting to the known outcome.
+
+## 2026-11-21 — EXP-6 PIPE-LOO (PREDICTIVE 3/4; per-system κ) and EXP-8 GATE-LOCUS (floor gate; upper-gate line closed)
+
+- **EXP-6** (`pipe_loo_2026-11-20/`, predecl `97033df0…`, 13/13 SHA, deterministic): **PREDICTIVE (3/4)** at the declared
+  boundary — PHL n=8, median |LOO error| 1.50 pp, 87.5% within ±5 pp; KOR 0.48 pp/89.5%; KHM 2.17 pp/90.9%; CHN
+  14.48 pp/0.0% (fails). **Per-system κ: PHL 0.949, KOR 0.990, KHM 0.595, CHN 0.722** — a single κ misstates KHM by
+  ~0.40. Thin/uneven pass; D63 stays UNABLE; no direction claim.
+- **EXP-8** (`gate_locus_2026-11-20/`, predecl `a8566fbf…`, 25/25 SHA, deterministic): school gate binds at
+  **primary 79.1%/87.4%** and **lower 91.3%/93.3%** of country-years (0.95/0.99 bars) but **upper 4.7%/6.6%** and
+  **tertiary 0%/0%** → **upper-gate line CLOSED**; anchor upper `p_off=1.0000` all 56 years; rung-4 absorption median
+  **0.151**. Falsifier not tripped; A3-D d2 and A3-S c4a explained, not reopened; **EXP-9 dispatched**. Caveat: v1.3 g3
+  panel vs flow panel tertiary p_off ≡ 1.0 disclosed.
+- D128/D129 recorded; STATUS 3ac(m)/(n).

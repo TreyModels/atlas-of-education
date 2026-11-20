@@ -1101,3 +1101,26 @@ model-specification failure.
   absences**, not literal absence.
 - **Not run.** Parks stay intact until the v1.5 build/run (next worker job). No re-tune of A3-D; no fitting to the known
   outcome.
+
+### m) EXP-6 PIPE-LOO — the transition ratio IS a (weak) system object; κ must be per-system (D128)
+
+- `pipe_loo_2026-11-20/` (predecl `97033df0…`; deterministic; 13/13 SHA). **Verdict `PREDICTIVE (3/4)`** — exactly at the
+  declared boundary. LOO prediction of `upper_t` from the median of the other pairs × `lower_{t−3}`: **PHL** n=8, median
+  |error| **1.50 pp**, **87.5%** within ±5 pp PASS; **KOR** n=19, **0.48 pp**, **89.5%** PASS; **KHM** n=11, **2.17 pp**,
+  **90.9%** PASS; **CHN** n=5, **14.48 pp**, **0.0%** FAIL. 43 pairs (8/19/11/5); 16 upper years dropped by rule;
+  HKG/JPN zero-pair non-entrants.
+- **The declared κ must be PER-SYSTEM:** PHL **0.949**, KOR **0.990**, KHM **0.595**, CHN **0.722** — a single κ = 0.949
+  misstates KHM by ~0.40. Caveats: thin and uneven (KOR near-vacuous at saturation; CHN fails systematically, ratio
+  0.645→0.966 during expansion; PHL carried by 2003–2017). D63 stays `UNABLE`; no causal/direction claim.
+
+### n) EXP-8 GATE-LOCUS — the generator's school gate binds at the FLOOR; the upper-gate line is CLOSED (D129)
+
+- `gate_locus_2026-11-20/` (predecl `a8566fbf…`; deterministic; 25/25 SHA). Per level (n=1,680 country-years), share
+  `p_off < bar` & `rationed_official > 0`: primary **79.11% / 87.38%** (0.95/0.99 bars) **GATE BINDS**; lower-secondary
+  **91.31% / 93.33%** **GATE BINDS**; upper-secondary **4.70% / 6.55%** **UNRATIONED**; tertiary **0.00% / 0.00%**
+  **UNRATIONED** (accounting identity, flagged). Anchor type upper `p_off = 1.0000`, `rationed_official = 0` in all 56
+  years; **no binding school gate at any level by 2024**; rung-4 absorption p4 = 0.068/0.110/0.166/0.185 (2010+ median
+  **0.151**; panel 0.507). **Falsifier NOT tripped** (0/1680 upper, 0/1680 tertiary below 0.50; 0/60 series) →
+  architecture not reversed; **the "ceiling as upper gate" line is CLOSED**; A3-D's d2 and A3-S's c4a are
+  **explained, not reopened**; **EXP-9 dispatched** (dispatch-eligible). Disclosed caveat: v1.3 gate panel disagrees at g3
+  (PHL-like pi0 0.43–0.71) vs flow tertiary p_off ≡ 1.0 — secondary leg only.

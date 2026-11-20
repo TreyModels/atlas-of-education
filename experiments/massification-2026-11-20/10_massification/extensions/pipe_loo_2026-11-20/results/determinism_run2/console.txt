@@ -1,0 +1,107 @@
+====================================================================================================
+EXP-6 PIPE-LOO  |  worker PL  |  Council brief 022 (D122 #1); SYNTHESIS_022.md section 6, EXP-6 PIPE-LOO, rank #1
+predeclaration sha256 : 97033df0c5693f50784bac52f6373b5f04dfebe964d0d6334dca0d5ffc0ed278
+====================================================================================================
+
+[guards] before any computation
+  OK   PRE_DECLARATIONS.md
+        declared 97033df0c5693f50784bac52f6373b5f04dfebe964d0d6334dca0d5ffc0ed278
+        on-disk  97033df0c5693f50784bac52f6373b5f04dfebe964d0d6334dca0d5ffc0ed278
+  OK   10_massification/data/UNIVERSALIZATION_SERIES.csv
+        declared 85bc869396ebfcb39e3e1a21a31af219e75a07326c738a51d2bfdbe536737ddb
+        on-disk  85bc869396ebfcb39e3e1a21a31af219e75a07326c738a51d2bfdbe536737ddb
+  OK   08_council/brief_022/SYNTHESIS_022.md
+        declared 9508dd55be8dd64da8322a8277c8342a4f50be6790a3d287e39e7004537c109b
+        on-disk  9508dd55be8dd64da8322a8277c8342a4f50be6790a3d287e39e7004537c109b
+
+[data] UNIVERSALIZATION_SERIES.csv parsed: 2458 data rows total; completion_*_secondary status=observed subset:
+
+[pairs] built under the declared rule (t-3 exact, else nearest within +/-1 y, else drop):
+
+  PHL  Philippines   upper years: [1999, 2000, 2003, 2004, 2008, 2010, 2013, 2017, 2022, 2023, 2024]
+       lower years: [1999, 2000, 2004, 2008, 2010, 2013, 2017, 2021, 2022, 2023, 2024]
+       pairs: 8   dropped upper years: [1999, 2000, 2022]
+       t=2003  lower@2000 (EXACT, offset +0y)  upper=61.73 lower=65.03  ratio=0.9493  LOO kappa=0.9490  pred=61.71  err=-0.02  |err|=0.02  in5=TRUE
+       t=2004  lower@2000 (NEAREST_1Y, offset -1y)  upper=60.36 lower=65.03  ratio=0.9283  LOO kappa=0.9493  pred=61.73  err=+1.37  |err|=1.37  in5=TRUE
+       t=2008  lower@2004 (NEAREST_1Y, offset -1y)  upper=64.09 lower=66.08  ratio=0.9698  LOO kappa=0.9490  pred=62.71  err=-1.38  |err|=1.38  in5=TRUE
+       t=2010  lower@2008 (NEAREST_1Y, offset +1y)  upper=66.12 lower=67.96  ratio=0.9730  LOO kappa=0.9490  pred=64.49  err=-1.63  |err|=1.63  in5=TRUE
+       t=2013  lower@2010 (EXACT, offset +0y)  upper=67.47 lower=71.10  ratio=0.9490  LOO kappa=0.9493  pred=67.49  err=+0.02  |err|=0.02  in5=TRUE
+       t=2017  lower@2013 (NEAREST_1Y, offset -1y)  upper=76.43 lower=71.27  ratio=1.0724  LOO kappa=0.9490  pred=67.63  err=-8.80  |err|=8.80  in5=FALSE
+       t=2023  lower@2021 (NEAREST_1Y, offset +1y)  upper=71.93 lower=80.90  ratio=0.8892  LOO kappa=0.9493  pred=76.79  err=+4.86  |err|=4.86  in5=TRUE
+       t=2024  lower@2021 (EXACT, offset +0y)  upper=75.03 lower=80.90  ratio=0.9274  LOO kappa=0.9493  pred=76.79  err=+1.77  |err|=1.77  in5=TRUE
+
+  KOR  Korea, Rep.   upper years: [2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023]
+       lower years: [2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023]
+       pairs: 19   dropped upper years: [2000, 2001, 2002, 2003, 2004]
+       t=2005  lower@2003 (NEAREST_1Y, offset +1y)  upper=98.47 lower=99.94  ratio=0.9853  LOO kappa=0.9901  pred=98.95  err=+0.48  |err|=0.48  in5=TRUE
+       t=2006  lower@2003 (EXACT, offset +0y)  upper=93.16 lower=99.94  ratio=0.9322  LOO kappa=0.9901  pred=98.95  err=+5.79  |err|=5.79  in5=FALSE
+       t=2007  lower@2004 (EXACT, offset +0y)  upper=98.99 lower=99.95  ratio=0.9903  LOO kappa=0.9893  pred=98.89  err=-0.10  |err|=0.10  in5=TRUE
+       t=2008  lower@2005 (EXACT, offset +0y)  upper=83.04 lower=99.96  ratio=0.8308  LOO kappa=0.9901  pred=98.96  err=+15.92  |err|=15.92  in5=FALSE
+       t=2009  lower@2006 (EXACT, offset +0y)  upper=98.92 lower=99.94  ratio=0.9898  LOO kappa=0.9896  pred=98.91  err=-0.01  |err|=0.01  in5=TRUE
+       t=2010  lower@2007 (EXACT, offset +0y)  upper=97.97 lower=99.98  ratio=0.9799  LOO kappa=0.9901  pred=98.98  err=+1.01  |err|=1.01  in5=TRUE
+       t=2011  lower@2008 (EXACT, offset +0y)  upper=99.20 lower=99.99  ratio=0.9921  LOO kappa=0.9893  pred=98.93  err=-0.28  |err|=0.28  in5=TRUE
+       t=2012  lower@2009 (EXACT, offset +0y)  upper=98.57 lower=99.96  ratio=0.9861  LOO kappa=0.9901  pred=98.96  err=+0.39  |err|=0.39  in5=TRUE
+       t=2013  lower@2010 (EXACT, offset +0y)  upper=99.31 lower=99.96  ratio=0.9935  LOO kappa=0.9893  pred=98.90  err=-0.41  |err|=0.41  in5=TRUE
+       t=2014  lower@2011 (EXACT, offset +0y)  upper=98.30 lower=99.95  ratio=0.9835  LOO kappa=0.9901  pred=98.95  err=+0.65  |err|=0.65  in5=TRUE
+       t=2015  lower@2012 (EXACT, offset +0y)  upper=98.84 lower=100.00  ratio=0.9884  LOO kappa=0.9901  pred=99.01  err=+0.16  |err|=0.16  in5=TRUE
+       t=2016  lower@2013 (EXACT, offset +0y)  upper=97.65 lower=99.99  ratio=0.9766  LOO kappa=0.9901  pred=99.00  err=+1.35  |err|=1.35  in5=TRUE
+       t=2017  lower@2014 (EXACT, offset +0y)  upper=98.88 lower=99.99  ratio=0.9889  LOO kappa=0.9901  pred=99.00  err=+0.11  |err|=0.11  in5=TRUE
+       t=2018  lower@2015 (EXACT, offset +0y)  upper=99.05 lower=99.90  ratio=0.9915  LOO kappa=0.9893  pred=98.84  err=-0.22  |err|=0.22  in5=TRUE
+       t=2019  lower@2016 (EXACT, offset +0y)  upper=99.24 lower=99.99  ratio=0.9925  LOO kappa=0.9893  pred=98.93  err=-0.32  |err|=0.32  in5=TRUE
+       t=2020  lower@2017 (EXACT, offset +0y)  upper=99.47 lower=99.92  ratio=0.9956  LOO kappa=0.9893  pred=98.85  err=-0.62  |err|=0.62  in5=TRUE
+       t=2021  lower@2018 (EXACT, offset +0y)  upper=99.51 lower=99.96  ratio=0.9955  LOO kappa=0.9893  pred=98.89  err=-0.61  |err|=0.61  in5=TRUE
+       t=2022  lower@2019 (EXACT, offset +0y)  upper=99.50 lower=99.99  ratio=0.9952  LOO kappa=0.9893  pred=98.92  err=-0.58  |err|=0.58  in5=TRUE
+       t=2023  lower@2020 (EXACT, offset +0y)  upper=99.46 lower=100.00  ratio=0.9946  LOO kappa=0.9893  pred=98.93  err=-0.52  |err|=0.52  in5=TRUE
+
+  KHM  Cambodia   upper years: [1996, 1997, 2000, 2001, 2005, 2008, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2019, 2020, 2021, 2023]
+       lower years: [1996, 2000, 2005, 2008, 2010, 2014, 2019, 2021]
+       pairs: 11   dropped upper years: [1996, 1997, 2001, 2005, 2015, 2019, 2020]
+       t=2000  lower@1996 (NEAREST_1Y, offset -1y)  upper=4.36 lower=31.38  ratio=0.1389  LOO kappa=0.6013  pred=18.87  err=+14.51  |err|=14.51  in5=FALSE
+       t=2008  lower@2005 (EXACT, offset +0y)  upper=13.07 lower=26.76  ratio=0.4883  LOO kappa=0.6013  pred=16.09  err=+3.02  |err|=3.02  in5=TRUE
+       t=2010  lower@2008 (NEAREST_1Y, offset +1y)  upper=16.98 lower=31.83  ratio=0.5332  LOO kappa=0.6013  pred=19.14  err=+2.17  |err|=2.17  in5=TRUE
+       t=2011  lower@2008 (EXACT, offset +0y)  upper=21.10 lower=31.83  ratio=0.6628  LOO kappa=0.5880  pred=18.72  err=-2.38  |err|=2.38  in5=TRUE
+       t=2012  lower@2008 (NEAREST_1Y, offset -1y)  upper=22.00 lower=31.83  ratio=0.6910  LOO kappa=0.5880  pred=18.72  err=-3.28  |err|=3.28  in5=TRUE
+       t=2013  lower@2010 (EXACT, offset +0y)  upper=21.82 lower=36.68  ratio=0.5950  LOO kappa=0.5943  pred=21.80  err=-0.03  |err|=0.03  in5=TRUE
+       t=2014  lower@2010 (NEAREST_1Y, offset -1y)  upper=21.23 lower=36.68  ratio=0.5787  LOO kappa=0.6013  pred=22.06  err=+0.83  |err|=0.83  in5=TRUE
+       t=2016  lower@2014 (NEAREST_1Y, offset +1y)  upper=25.41 lower=40.52  ratio=0.6271  LOO kappa=0.5880  pred=23.83  err=-1.58  |err|=1.58  in5=TRUE
+       t=2017  lower@2014 (EXACT, offset +0y)  upper=27.24 lower=40.52  ratio=0.6722  LOO kappa=0.5880  pred=23.83  err=-3.41  |err|=3.41  in5=TRUE
+       t=2021  lower@2019 (NEAREST_1Y, offset +1y)  upper=26.65 lower=45.87  ratio=0.5810  LOO kappa=0.6013  pred=27.58  err=+0.93  |err|=0.93  in5=TRUE
+       t=2023  lower@2019 (NEAREST_1Y, offset -1y)  upper=27.87 lower=45.87  ratio=0.6076  LOO kappa=0.5880  pred=26.97  err=-0.90  |err|=0.90  in5=TRUE
+
+  CHN  China   upper years: [2010, 2012, 2014, 2016, 2018, 2020]
+       lower years: [2010, 2012, 2014, 2016, 2018, 2020]
+       pairs: 5   dropped upper years: [2010]
+       t=2012  lower@2010 (NEAREST_1Y, offset +1y)  upper=54.77 lower=84.94  ratio=0.6448  LOO kappa=0.8153  pred=69.25  err=+14.48  |err|=14.48  in5=FALSE
+       t=2014  lower@2010 (NEAREST_1Y, offset -1y)  upper=60.87 lower=84.94  ratio=0.7166  LOO kappa=0.8153  pred=69.25  err=+8.38  |err|=8.38  in5=FALSE
+       t=2016  lower@2012 (NEAREST_1Y, offset -1y)  upper=61.23 lower=84.78  ratio=0.7222  LOO kappa=0.8125  pred=68.88  err=+7.65  |err|=7.65  in5=FALSE
+       t=2018  lower@2014 (NEAREST_1Y, offset -1y)  upper=74.99 lower=82.56  ratio=0.9084  LOO kappa=0.7194  pred=59.40  err=-15.60  |err|=15.60  in5=FALSE
+       t=2020  lower@2016 (NEAREST_1Y, offset -1y)  upper=87.52 lower=90.58  ratio=0.9662  LOO kappa=0.7194  pred=65.17  err=-22.35  |err|=22.35  in5=FALSE
+
+[counts] total pairs = 43  (brief expects 43; MATCH)  | per country: PHL 8, KOR 19, KHM 11, CHN 5
+
+[verdict] per-country bars: median|LOO err| <= 3.0 pp AND >= 75% of pairs within +/-5 pp
+  iso    n  n_in5  median|err|  pct_in5  bar_T1  bar_T2  pass   brief_calibration
+  PHL    8      7         1.50    87.5%    TRUE    TRUE  PASS          1.50 (7/8)
+       brief pre-freeze calibration median 1.50 vs recomputed 1.50 -> AGREE
+  KOR   19     17         0.48    89.5%    TRUE    TRUE  PASS        0.48 (17/19)
+       brief pre-freeze calibration median 0.48 vs recomputed 0.48 -> AGREE
+  KHM   11     10         2.17    90.9%    TRUE    TRUE  PASS        2.17 (10/11)
+       brief pre-freeze calibration median 2.17 vs recomputed 2.17 -> AGREE
+  CHN    5      0        14.48     0.0%   FALSE   FALSE  FAIL         14.48 (0/5)
+       brief pre-freeze calibration median 14.48 vs recomputed 14.48 -> AGREE
+
+  countries passing: 3/4  ->  VERDICT: PREDICTIVE
+  rule: PREDICTIVE iff >= 3/4 countries pass; NOT PREDICTIVE iff <= 2/4
+
+[secondary] declared NON-VERDICT-BEARING screens
+  S1 pair counts: PHL 8, KOR 19, KHM 11, CHN 5, total 43; non-entrants HKG 0, JPN 0 (zero completion pairs)
+  S2 PHL lower-secondary annualised deltas (pp/yr), 10 intervals:
+       6.17 / 0.26 / 0.47 / 1.57 / 0.06 / 2.50 / -0.09 / 3.27 / 4.28 / 3.97
+       mean 2.25  SD(sample) 2.14
+  S3 PHL pair-year composition: 2 pairs with upper year 2022-2024 [2023, 2024], 6 with upper year 2003-2017 [2003, 2004, 2008, 2010, 2013, 2017]
+     2003-2017 subset LOO (DESCRIPTIVE-NOT-VERDICT, no threshold applied): median|err| 1.37 pp, 5/6 within +/-5 pp
+     kappa medians (DERIVED, descriptive, NOT fitted): PHL 0.9491, KOR 0.9898, KHM 0.5950, CHN 0.7222
+
+[out] PIPE_LOO_PAIRS.csv      43 pair rows + header
+[out] PIPE_LOO_RESULTS.csv    4 country rows + 2 non-entrant rows + 1 overall row
+[out] PIPE_LOO_SECONDARY.csv  non-verdict-bearing screens S1/S2/S3

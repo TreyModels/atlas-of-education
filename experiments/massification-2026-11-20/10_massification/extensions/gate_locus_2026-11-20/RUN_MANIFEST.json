@@ -1,0 +1,216 @@
+{
+  "label": "SYNTHETIC (generator panels only; no observed series read)",
+  "experiment": "EXP-8 GATE-LOCUS",
+  "brief": "Council brief 022 (D122 #3); SYNTHESIS_022.md section 6, EXP-8 GATE-LOCUS, rank #3",
+  "worker": "WORKER GL",
+  "date": "2026-11-20",
+  "status": "COMPLETE",
+  "statement": "Descriptive census of where the frozen generator's school gates bind, at two predeclared bars, with the predeclared falsifier. Read-only on frozen panels: no re-fit, no new layer, no re-run of A3-S, no reopening of A3-D's verdict or A3-S's c4a. No causal claim and no direction claim; D63 remains UNABLE as to cause. No threshold was changed after results.",
+  "predeclaration": {
+    "file": "PRE_DECLARATIONS.md",
+    "sha256": "a8566fbfbca5cc5231ef78c35adffbf62264f82bbefe830683616105434c547d",
+    "recorded_sidecar": "PRE_DECLARATIONS.sha256",
+    "sidecar_sha256": "e7b832bd844e48aa011b9887bc1daeacf4cb00ab6bff211c05b186e9e9de27bc",
+    "hashed_before_any_run": true,
+    "thresholds_changed_after_results": false,
+    "verbatim_source": "SYNTHESIS_022.md lines 370-393 (section 6, EXP-8), spliced by code/build_predeclarations.py",
+    "verbatim_verified_by": "code/verify_predecl_verbatim.py"
+  },
+  "dependency_precondition": {
+    "rule": "brief section 4.4: EXP-7 -> EXP-6 -> EXP-8 -> EXP-9 -> EXP-10",
+    "exp7_returned": true,
+    "exp7_verdict": "ENDPOINT-ONLY + b2 + BASELINE-GUARD-PASS",
+    "exp6_on_disk_at_freeze": false,
+    "note": "EXP-8 consumes no EXP-6 output and shares no estimand with it; no threshold here depends on EXP-6."
+  },
+  "frozen_inputs_read_only": {
+    "frozen_panel": {
+      "path": "10_massification/extensions/synthetic_2026-11-20/generator_v1_2/results/synthetic_panel_v1_2.csv",
+      "sha256": "14729c5141a71dd9aaf87a5ad2e973a84b5f04603577aae627f2833276fac5ac",
+      "matches_declared": true,
+      "read_only": true
+    },
+    "shadow_gate_panel": {
+      "path": "10_massification/extensions/synthetic_2026-11-20/generator_v1_3/results/shadow_gates_v1_3.csv",
+      "sha256": "df3cab007ce5fbe9a48d58b0701d04e6d762591848ca1517a634c8f897edb351",
+      "matches_declared": true,
+      "read_only": true
+    },
+    "council_brief": {
+      "path": "08_council/brief_022/SYNTHESIS_022.md",
+      "sha256": "9508dd55be8dd64da8322a8277c8342a4f50be6790a3d287e39e7004537c109b",
+      "matches_declared": true,
+      "read_only": true
+    }
+  },
+  "declared_constants": {
+    "bar_95": 0.95,
+    "bar_99": 0.99,
+    "gate_binds_at_share": 0.5,
+    "unrationed_at_share": 0.1,
+    "deep_bar": 0.5,
+    "deep_share_max": 0.2,
+    "p_off": "admitted_official / demand_official",
+    "levels": [
+      "primary",
+      "lower_secondary",
+      "upper_secondary",
+      "tertiary"
+    ],
+    "levels_checked_by_falsifier": [
+      "upper_secondary",
+      "tertiary"
+    ],
+    "country_set": "all 30 country_id values",
+    "years": "1970-2025 (56 per country-level)",
+    "cells_per_level": 1680
+  },
+  "verdicts": [
+    {
+      "level": "primary",
+      "n_cells": 1680,
+      "share_lt095_pct": 79.1071,
+      "verdict_bar95": "GATE BINDS",
+      "share_lt099_pct": 87.381,
+      "verdict_bar99": "GATE BINDS",
+      "class_stable": true,
+      "headline_verdict": "GATE BINDS"
+    },
+    {
+      "level": "lower_secondary",
+      "n_cells": 1680,
+      "share_lt095_pct": 91.3095,
+      "verdict_bar95": "GATE BINDS",
+      "share_lt099_pct": 93.3333,
+      "verdict_bar99": "GATE BINDS",
+      "class_stable": true,
+      "headline_verdict": "GATE BINDS"
+    },
+    {
+      "level": "upper_secondary",
+      "n_cells": 1680,
+      "share_lt095_pct": 4.7024,
+      "verdict_bar95": "UNRATIONED",
+      "share_lt099_pct": 6.5476,
+      "verdict_bar99": "UNRATIONED",
+      "class_stable": true,
+      "headline_verdict": "UNRATIONED"
+    },
+    {
+      "level": "tertiary",
+      "n_cells": 1680,
+      "share_lt095_pct": 0.0,
+      "verdict_bar95": "UNRATIONED",
+      "share_lt099_pct": 0.0,
+      "verdict_bar99": "UNRATIONED",
+      "class_stable": true,
+      "headline_verdict": "UNRATIONED"
+    }
+  ],
+  "falsifier": {
+    "outcome": "NOT TRIPPED",
+    "tripped": false,
+    "levels": [
+      {
+        "level": "upper_secondary",
+        "n_cells": 1680,
+        "count_p_off_lt050": 0,
+        "share_pct": 0.0,
+        "threshold_share_pct": 20.0,
+        "comparison": "share > 20% (strict)",
+        "trips": false
+      },
+      {
+        "level": "tertiary",
+        "n_cells": 1680,
+        "count_p_off_lt050": 0,
+        "share_pct": 0.0,
+        "threshold_share_pct": 20.0,
+        "comparison": "share > 20% (strict)",
+        "trips": false
+      }
+    ],
+    "n_country_series_exceeding_20pct": 0,
+    "architecture_conclusion": "NOT REVERSED"
+  },
+  "branch": {
+    "state": "POSITIVE",
+    "rule": "upper_secondary and tertiary UNRATIONED at both bars (PRE_DECLARATIONS.md section 7)",
+    "consequence": "the 'ceiling as upper gate' line is CLOSED; any future demand/shadow layer must be re-declared at the binding gate or the upper gate must be given a capacity constraint first; A3-D and c4a are explained, not rescued"
+  },
+  "exp9_rung_prob": {
+    "dispatch": "DISPATCH-ELIGIBLE (Lead action; falsifier clean)",
+    "conditions_recorded": [
+      "arm A's P = pi0(g2) ~ 0.999 is the gate probability both on-disk constructs agree is ~1 for the anchor type",
+      "arm B substitutes the absorption ratio 0.151 for a probability: no anchor gate-year has pi0 in [0.14, 0.16]"
+    ]
+  },
+  "determinism": {
+    "rng_free": true,
+    "clock_free": true,
+    "second_run": "results/determinism_run2/",
+    "artifacts_compared": 8,
+    "all_byte_identical": true,
+    "per_file": {
+      "GATE_LOCUS_RESULTS.csv": true,
+      "GATE_LOCUS_ANCHOR.csv": true,
+      "GATE_LOCUS_FALSIFIER.json": true,
+      "GATE_LOCUS_SECONDARY_S1.csv": true,
+      "GATE_LOCUS_SECONDARY_S1B.csv": true,
+      "GATE_LOCUS_SECONDARY_S2.csv": true,
+      "GATE_LOCUS_SECONDARY_S3.csv": true,
+      "console.txt": true
+    },
+    "method": "cmp on each artifact; see code/make_manifest.py"
+  },
+  "results": {
+    "GATE_LOCUS_RESULTS.csv": {
+      "sha256": "4c48887e5cc2f6ac6800d70572561d730bc9242ffdd27ac28ef39c8848ca3d3b",
+      "bytes": 1460,
+      "deterministic": true
+    },
+    "GATE_LOCUS_ANCHOR.csv": {
+      "sha256": "70a39e76e1d05051f84db9968f7f9c68ac839206ed186f2f2baf60b3e6a490f7",
+      "bytes": 3362,
+      "deterministic": true
+    },
+    "GATE_LOCUS_FALSIFIER.json": {
+      "sha256": "8d84f34fe01879dd1bad707de340139611c7238eea8191a304a99f9cf21329c9",
+      "bytes": 2033,
+      "deterministic": true
+    },
+    "GATE_LOCUS_SECONDARY_S1.csv": {
+      "sha256": "93ea37f1d5f978ae0767a9299a61517e9291d5967a9778ee7d5138994aeca871",
+      "bytes": 1829,
+      "deterministic": true
+    },
+    "GATE_LOCUS_SECONDARY_S1B.csv": {
+      "sha256": "2430deb3b5c0f49ca0bac428aca69269c0654ca9c851683383ba1abda4d5477b",
+      "bytes": 42712,
+      "deterministic": true
+    },
+    "GATE_LOCUS_SECONDARY_S2.csv": {
+      "sha256": "876e534a1f06b4fb9d80c089d587604896ea6e24f453cb6cd280248b8a46a8fb",
+      "bytes": 24931,
+      "deterministic": true
+    },
+    "GATE_LOCUS_SECONDARY_S3.csv": {
+      "sha256": "ffabbcb712f30cf2e192022556a583679738b3263618abb942340d2add92e877",
+      "bytes": 14720,
+      "deterministic": true
+    },
+    "console.txt": {
+      "sha256": "280a7ca06c6d7a2150c212d636a0600dd730baae28028ef3cabe255ccad02272",
+      "bytes": 6159,
+      "deterministic": true
+    }
+  },
+  "findings": {
+    "file": "FINDINGS.md",
+    "sha256": "4579c6b7a84c7e22f24591b39928615397940b3e2dc0719db8bb000eabaf268c",
+    "label": "SYNTHETIC"
+  },
+  "no_writes_outside_experiment_dir": true,
+  "web_used": false,
+  "server_touched": false
+}

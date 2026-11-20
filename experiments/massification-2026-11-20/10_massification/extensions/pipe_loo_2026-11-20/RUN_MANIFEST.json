@@ -1,0 +1,186 @@
+{
+  "experiment": "EXP-6 PIPE-LOO",
+  "brief": "Council brief 022 (D122 #1); SYNTHESIS_022.md section 6, EXP-6 PIPE-LOO, rank #1",
+  "worker": "PL",
+  "date": "2026-11-20",
+  "status": "COMPLETE",
+  "label": "OBSERVED (completion series) + DERIVED (ratio, LOO prediction, error, median, share)",
+  "statement": "Measurement audit of an observed series. The lower->upper one-stage transition ratio is tested as a PREDICTIVE object (out-of-sample, leave-one-out, within country) and is NOT asserted to cause anything. No causal claim; no direction claim. D63 remains UNABLE as to cause. No C1-C4 reopening; EXP-1 is not re-scored (same pairing rule, different estimand). No threshold, bar, pairing rule or verdict string was changed after results; no re-fit; no second estimand. VERDICT: PREDICTIVE (3/4 countries pass).",
+  "verdict": {
+    "verdict": "PREDICTIVE",
+    "n_countries_pass": 3,
+    "n_countries_total": 4,
+    "rule": "per country PASS iff median|LOO error| <= 3.0 pp AND >=75% of pairs within +/-5 pp; PREDICTIVE iff >=3/4 countries pass; NOT PREDICTIVE iff <=2/4",
+    "n_pairs_total": 43,
+    "branch_fired": "PREDICTIVE -> per-system kappa becomes a declared input (never fitted); the ceiling question becomes 'what sets kappa?'; the D115 reclassification is NOT downgraded. D63 stays UNABLE as to cause.",
+    "per_country": {
+      "PHL": {
+        "n_pairs": 8,
+        "n_within_5pp": 7,
+        "median_abs_loo_error_pp": 1.5,
+        "pct_within_5pp": 87.5,
+        "pass_": "PASS",
+        "kappa_median_ratio": 0.9491
+      },
+      "KOR": {
+        "n_pairs": 19,
+        "n_within_5pp": 17,
+        "median_abs_loo_error_pp": 0.48,
+        "pct_within_5pp": 89.47,
+        "pass_": "PASS",
+        "kappa_median_ratio": 0.9898
+      },
+      "KHM": {
+        "n_pairs": 11,
+        "n_within_5pp": 10,
+        "median_abs_loo_error_pp": 2.17,
+        "pct_within_5pp": 90.91,
+        "pass_": "PASS",
+        "kappa_median_ratio": 0.595
+      },
+      "CHN": {
+        "n_pairs": 5,
+        "n_within_5pp": 0,
+        "median_abs_loo_error_pp": 14.48,
+        "pct_within_5pp": 0.0,
+        "pass_": "FAIL",
+        "kappa_median_ratio": 0.7222
+      }
+    },
+    "non_entrants": [
+      "HKG",
+      "JPN"
+    ],
+    "non_entrant_reason": "zero completion_lower_secondary / completion_upper_secondary rows in the frozen file; cannot enter; no proxy numerator (D118); never imputed"
+  },
+  "predeclaration": {
+    "file": "PRE_DECLARATIONS.md",
+    "sha256": "97033df0c5693f50784bac52f6373b5f04dfebe964d0d6334dca0d5ffc0ed278",
+    "recorded_sidecar": "PRE_DECLARATIONS.sha256",
+    "sidecar_sha256": "620313118d43799850578a3f5b66a71e094742858e5b888aff825aa5a88ec2c9",
+    "hashed_before_any_run": true,
+    "thresholds_changed_after_results": false,
+    "script_refuses_to_run_on_hash_mismatch": true,
+    "verbatim_source": "08_council/brief_022/SYNTHESIS_022.md section 6 EXP-6, heading and items 1-7, quoted character-for-character and verified line-by-line against the source"
+  },
+  "frozen_inputs_read_only": {
+    "observed_series": {
+      "path": "10_massification/data/UNIVERSALIZATION_SERIES.csv",
+      "sha256": "85bc869396ebfcb39e3e1a21a31af219e75a07326c738a51d2bfdbe536737ddb",
+      "declared_sha256": "85bc869396ebfcb39e3e1a21a31af219e75a07326c738a51d2bfdbe536737ddb",
+      "matches_declared": true
+    },
+    "council_brief": {
+      "path": "08_council/brief_022/SYNTHESIS_022.md",
+      "sha256": "9508dd55be8dd64da8322a8277c8342a4f50be6790a3d287e39e7004537c109b",
+      "declared_sha256": "9508dd55be8dd64da8322a8277c8342a4f50be6790a3d287e39e7004537c109b",
+      "matches_declared": true
+    }
+  },
+  "declared_parameters": {
+    "lag_years": 3,
+    "tolerance_years": 1,
+    "tie_break": "nearest lower year to t-3 within +/-1 y, ties toward the earlier year (min over (|y-target|, y), the EXP-1 build_pairs convention)",
+    "loo_estimator": "median of the country's other pairs' ratios; prediction = that median * the pair's own lower value; kappa never fitted, never pooled across countries",
+    "bar_median_abs_error_pp": 3.0,
+    "bar_share_within_5pp": 0.75,
+    "band_pp": 5.0,
+    "countries_pass_needed": 3,
+    "countries_total": 4,
+    "countries": [
+      "PHL",
+      "KOR",
+      "KHM",
+      "CHN"
+    ],
+    "declared_non_entrants": [
+      "HKG",
+      "JPN"
+    ],
+    "rng": "none"
+  },
+  "results": {
+    "files": {
+      "results/PIPE_LOO_PAIRS.csv": "692ca7c01b8b3a7105e84339a87f97029b6a50e277681bdcdbe0f02bf027600f",
+      "results/PIPE_LOO_RESULTS.csv": "7c4faa427f48485393e58a234d1f1cbd2302bbfc11e81d55454cc56b5e5eff6c",
+      "results/PIPE_LOO_SECONDARY.csv": "0f30229335734987b8feaf61f74675cdc47d4ee0206314a7eed8841d98c1fdb2",
+      "results/console.txt": "b21706b4218e23243304aba6254dffc5286194c493b853f15b2307fb3a588fe3",
+      "results/determinism_run2/PIPE_LOO_PAIRS.csv": "692ca7c01b8b3a7105e84339a87f97029b6a50e277681bdcdbe0f02bf027600f",
+      "results/determinism_run2/PIPE_LOO_RESULTS.csv": "7c4faa427f48485393e58a234d1f1cbd2302bbfc11e81d55454cc56b5e5eff6c",
+      "results/determinism_run2/PIPE_LOO_SECONDARY.csv": "0f30229335734987b8feaf61f74675cdc47d4ee0206314a7eed8841d98c1fdb2",
+      "results/determinism_run2/console.txt": "b21706b4218e23243304aba6254dffc5286194c493b853f15b2307fb3a588fe3"
+    },
+    "n_pairs_reported": 43,
+    "all_pairs_reported": true,
+    "brief_pre_freeze_calibration": {
+      "PHL": "1.50 (7/8)",
+      "KOR": "0.48 (17/19)",
+      "KHM": "2.17 (10/11)",
+      "CHN": "14.48 (0/5)"
+    },
+    "brief_calibration_reproduced": true,
+    "brief_calibration_note": "all four medians reproduce to 2 dp and all four pair counts reproduce exactly; recorded as agreement about the construction, never used to choose a rule"
+  },
+  "determinism": {
+    "two_runs_byte_identical": true,
+    "run1_dir": "results/",
+    "run2_dir": "results/determinism_run2/",
+    "per_file": {
+      "PIPE_LOO_PAIRS.csv": {
+        "run1_sha256": "692ca7c01b8b3a7105e84339a87f97029b6a50e277681bdcdbe0f02bf027600f",
+        "run2_sha256": "692ca7c01b8b3a7105e84339a87f97029b6a50e277681bdcdbe0f02bf027600f",
+        "byte_identical": true
+      },
+      "PIPE_LOO_RESULTS.csv": {
+        "run1_sha256": "7c4faa427f48485393e58a234d1f1cbd2302bbfc11e81d55454cc56b5e5eff6c",
+        "run2_sha256": "7c4faa427f48485393e58a234d1f1cbd2302bbfc11e81d55454cc56b5e5eff6c",
+        "byte_identical": true
+      },
+      "PIPE_LOO_SECONDARY.csv": {
+        "run1_sha256": "0f30229335734987b8feaf61f74675cdc47d4ee0206314a7eed8841d98c1fdb2",
+        "run2_sha256": "0f30229335734987b8feaf61f74675cdc47d4ee0206314a7eed8841d98c1fdb2",
+        "byte_identical": true
+      },
+      "console.txt": {
+        "run1_sha256": "b21706b4218e23243304aba6254dffc5286194c493b853f15b2307fb3a588fe3",
+        "run2_sha256": "b21706b4218e23243304aba6254dffc5286194c493b853f15b2307fb3a588fe3",
+        "byte_identical": true
+      }
+    },
+    "note": "no RNG, no clock-dependent output in any result file; the only non-deterministic field anywhere is the build time of this manifest, which is not a result"
+  },
+  "declared_limits": [
+    "43 pairs across 4 systems; 16 of 59 upper years dropped by the declared pairing rule",
+    "verdict sits exactly at the declared boundary (3 of 4 required); no headroom",
+    "HKG and JPN have zero completion pairs and cannot enter; no proxy numerator, no imputation",
+    "KOR's pass is near an arithmetic identity at saturation (both series ~100%); PHL, KHM and CHN carry the informative content",
+    "PHL's pass rests mainly on 2003-2017 pairs; the two late pairs (2023, 2024) are in band but upper 2022 is dropped by the rule",
+    "completion-only measure (D118, one admissible numerator); no GER substitution",
+    "realised lags run 2-4 years under the +/-1 y tolerance, so 'one-stage' is approximate per pair",
+    "pooled (all-43) medians in the results CSV are DESCRIPTIVE only and carry no verdict"
+  ],
+  "closed_claims": [
+    "no C1-C4 reopening",
+    "does not re-score EXP-1 (out-of-sample prediction, not in-band share)",
+    "no causal claim; no direction claim",
+    "D63 remains UNABLE as to cause",
+    "no re-fit, no re-parameterisation, no second estimand",
+    "does not re-test or re-run CEIL-ATTRIB ablations, the generator, or any WT/DT cell"
+  ],
+  "writes_outside_experiment_dir": "none; all inputs opened read-only",
+  "files": {
+    "FINDINGS.md": "2e37159103874214edd95f1cc91533f3ece374f6e8c39d9196470ae8f741d12b",
+    "PRE_DECLARATIONS.md": "97033df0c5693f50784bac52f6373b5f04dfebe964d0d6334dca0d5ffc0ed278",
+    "PRE_DECLARATIONS.sha256": "620313118d43799850578a3f5b66a71e094742858e5b888aff825aa5a88ec2c9",
+    "code/make_manifest.py": "9a8b65029748948fbfd047954e92d09975fa530e1a48f390cd3cdced419ee218",
+    "code/run_pipe_loo.py": "14796254c4cfb240ced6879e7b4cf9e87f5b1315a12f74692f66e8646c1b94d1",
+    "results/PIPE_LOO_PAIRS.csv": "692ca7c01b8b3a7105e84339a87f97029b6a50e277681bdcdbe0f02bf027600f",
+    "results/PIPE_LOO_RESULTS.csv": "7c4faa427f48485393e58a234d1f1cbd2302bbfc11e81d55454cc56b5e5eff6c",
+    "results/PIPE_LOO_SECONDARY.csv": "0f30229335734987b8feaf61f74675cdc47d4ee0206314a7eed8841d98c1fdb2",
+    "results/console.txt": "b21706b4218e23243304aba6254dffc5286194c493b853f15b2307fb3a588fe3",
+    "results/determinism_run2/PIPE_LOO_PAIRS.csv": "692ca7c01b8b3a7105e84339a87f97029b6a50e277681bdcdbe0f02bf027600f",
+    "results/determinism_run2/PIPE_LOO_RESULTS.csv": "7c4faa427f48485393e58a234d1f1cbd2302bbfc11e81d55454cc56b5e5eff6c",
+    "results/determinism_run2/PIPE_LOO_SECONDARY.csv": "0f30229335734987b8feaf61f74675cdc47d4ee0206314a7eed8841d98c1fdb2",
+    "results/determinism_run2/console.txt": "b21706b4218e23243304aba6254dffc5286194c493b853f15b2307fb3a588fe3"
+  }
+}

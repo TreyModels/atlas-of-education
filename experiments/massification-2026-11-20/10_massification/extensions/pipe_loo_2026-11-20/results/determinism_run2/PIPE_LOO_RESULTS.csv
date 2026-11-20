@@ -1,0 +1,8 @@
+row_type,entity,iso3,n_pairs,n_dropped_upper_years,n_within_5pp,median_abs_loo_error_pp,pct_within_5pp,bar_median_abs_le_3.0pp,bar_pct_within_5pp_ge_75,country_pass,kappa_median_ratio,n_countries_pass,n_countries_total,verdict,brief_calibration,label,note
+COUNTRY,Philippines,PHL,8,3,7,1.50,87.50,TRUE,TRUE,PASS,0.9491,,,,1.50 (7/8),DERIVED,median|LOO error| and share within +/-5 pp over this country's own pairs
+COUNTRY,"Korea, Rep.",KOR,19,5,17,0.48,89.47,TRUE,TRUE,PASS,0.9898,,,,0.48 (17/19),DERIVED,median|LOO error| and share within +/-5 pp over this country's own pairs
+COUNTRY,Cambodia,KHM,11,7,10,2.17,90.91,TRUE,TRUE,PASS,0.5950,,,,2.17 (10/11),DERIVED,median|LOO error| and share within +/-5 pp over this country's own pairs
+COUNTRY,China,CHN,5,1,0,14.48,0.00,FALSE,FALSE,FAIL,0.7222,,,,14.48 (0/5),DERIVED,median|LOO error| and share within +/-5 pp over this country's own pairs
+NON-ENTRANT,"Hong Kong SAR, China",HKG,0,0,,,,,,NON-ENTRANT,,,,,n/a,OBSERVED (absence),zero completion_lower/upper_secondary rows in the frozen file; cannot enter; no proxy numerator (D118); never imputed
+NON-ENTRANT,Japan,JPN,0,0,,,,,,NON-ENTRANT,,,,,n/a,OBSERVED (absence),zero completion_lower/upper_secondary rows in the frozen file; cannot enter; no proxy numerator (D118); never imputed
+OVERALL,ALL,,43,16,34,1.01,79.07,,,,,3,4,PREDICTIVE,,DERIVED (verdict) / DERIVED-DESCRIPTIVE (pooled medians),"verdict = count of per-country passes (3/4); pooled columns are DESCRIPTIVE only and carry no verdict; 'PREDICTIVE' iff >=3/4, 'NOT PREDICTIVE' iff <=2/4"
