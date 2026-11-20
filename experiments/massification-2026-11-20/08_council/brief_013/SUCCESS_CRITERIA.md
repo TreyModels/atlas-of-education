@@ -227,3 +227,30 @@ primary completion 83.16 (1999) → 91.92 (**first ≥90 in 2017**) → 98.30 (2
 5. **Report-layer rule:** anchor claims must rest on **observed on-disk evidence**; blocked sources (OECD/ILO/PSA) may
    not be load-bearing; UNREAD documents (e.g., BEPER 2019) are registered and retrieved from public sources before
    use — no citation of unread material.
+
+
+## Amendment A7 (2026-11-20 15:50) — timing alignment: laws are candidate markers only where they align
+
+**Trigger:** scout event windows (`10_massification/relations/data/event_windows.csv`, EVENT_WINDOWS.md; descriptive,
+naive SE ignoring serial correlation, quality A/B/C, no controls). PHL discrete state pushes do **not** align with its
+universalization crossings: 1987 Constitution → primary universal crossed 2017–21 (**31 y later**, shift −0.22 pp,
+t=−0.15); RA 10533 K-12 (effective 2016) → upper-secondary **mass** already crossed ≤1999, GER shift +0.42 pp
+(t=0.50); RA 10931 free tuition (2018) → tertiary GER shift −5.39 pp (t=−3.00), K-12 cohort delay confounds; 4Ps (2008)
+→ −2.49 pp (t=−1.27). Portability cases do show dated pushes moving levels: HKG 12-year free education 2009 →
+upper-secondary NER **+9.08 pp (t=5.20)**; CHN 1999 higher-ed expansion → tertiary GER **+4.70 pp (t=7.94)**; but
+CHN 1986 compulsory law misses the primary crossing by **27 y**.
+
+1. **The model's target is the observed crossing years and their spacing** (A6), not the laws. Laws enter as
+   **candidate timing markers** where a computable event window aligns with the crossing within the declared tolerance;
+   elsewhere they are context, not mechanism. **The anchor's state-push mechanism must be justified by timing
+   alignment or abandoned/re-specified** — it may not be assumed from a law's existence.
+2. **Alignment rule:** a candidate marker is admitted to the mechanism test only if (i) the event window is computable
+   on the affected level's observed series (not UNABLE), (ii) the shift's sign is the predicted one, (iii) the
+   event-to-crossing gap is within ±5 y (or the crossing is inside the post window), and (iv) the affected-cohort
+   definition is declared and transition cohorts excluded. The events above fail (i)–(iii) for PHL; HKG 2009 and
+   CHN 1999 pass (i) and (iii) at their levels.
+3. **No causal claim from these windows:** naive SEs, no control groups, quality A/B/C; R13/EQUIVALENT; the windows are
+   never supplied to the model as schedules (R4/R14).
+4. **Quality C inferred episodes are not policy dates:** `SCHOOL_EXPANSION.csv` is missing; teacher-stock/tertiary-
+   enrolment episodes (PHL 1997/2003; KHM 1991; CHN 1975) are inferred top-decile-growth years and may not be used as
+   event-window evidence. A named expansion file is a DATA ASK.

@@ -91,3 +91,11 @@ fire.
 | # | Rule | Trigger |
 |---|---|---|
 | **R23** | **Single-curve / symmetric-universalization failure:** for the anchor, if the model cannot reproduce the milestone **ordering and gaps** (primary ~2017, lower-secondary ~2024, upper-secondary never by 2024, tertiary GER ~2024–25), the anchor reproduction claim is at most PARTIAL; a single shared curve/timing is a structural miss, and generating upper-secondary universalization the record does not show is a false-positive failure (R6) | A6; verified PHL completion series |
+
+
+## Amendment A6 (2026-11-20 15:50) — R24–R25 (timing alignment; event-window evidence)
+
+| # | Rule | Trigger |
+|---|---|---|
+| **R24** | **Timing-alignment rule:** a state-push law may be presented as a mechanism only if its event window is computable on the affected level's observed series, the shift sign matches the prediction, and the event-to-crossing gap is within ±5 y (or the crossing is inside the post window), with affected cohorts declared. Otherwise it is a candidate marker/context, not a mechanism; the anchor's state push must be justified this way or abandoned (A7) | event_windows.csv: PHL 1987 (−31 y), PHL K-12 (mass ≤1999), PHL 2018 (negative, confounded), CHN 1986 (−27 y) |
+| **R25** | **Event-window evidence is descriptive:** naive SEs ignore serial correlation; no control groups; quality A/B/C. No causal claim (R13), never supplied as model schedules (R4/R14). Quality C inferred episodes (SCHOOL_EXPANSION missing) may not serve as event evidence | EVENT_WINDOWS.md §1/§6 |

@@ -96,3 +96,19 @@ teacher series ASKed); (3) demographic/cohort contrast (PHL cohort still growing
 (5) human capital — PSA returns by education (FIES/APIS/LFS microdata, 403-blocked; external request needs user
 approval); (6) signalling/MMI — employer requirement series + household surveys (Enterprise Surveys credential/skills
 module). No rival may be dropped silently; design-only rivals are listed in every results file.
+
+
+## B4. Event-window verdict (A7/R24) — laws are candidate markers only
+
+Event windows (scout, descriptive; quality A/B/C; naive SE; no controls) show the PHL discrete state pushes **do not
+align** with the observed crossings: 1987 Constitution → primary universal 2017–21 (**31 y later**, −0.22 pp,
+t=−0.15); K-12 (2016 effective) → upper-secondary **mass** already crossed ≤1999 (GER +0.42 pp, t=0.50); free tuition
+(2018) → tertiary GER −5.39 pp (t=−3.00), confounded by the K-12 cohort delay; 4Ps → −2.49 pp (t=−1.27).
+**Consequences:** (i) the anchor model's target is the crossing years and their spacing (A6), not the laws; (ii) the
+state-push mechanism is **not established by timing for PHL** and may not be assumed — the model must justify any
+state-push channel by alignment (R24) or abandon it; (iii) portability evidence is mixed and treated the same way: HKG
+2009 free senior secondary shows **+9.08 pp (t=5.20)** at the expected level, CHN 1999 expansion **+4.70 pp (t=7.94)**
+on tertiary GER, while CHN 1986 compulsory misses the primary crossing by 27 y; (iv) `SCHOOL_EXPANSION.csv` is missing —
+teacher-stock/tertiary-enrolment expansion episodes are quality-C inferred and may not serve as event evidence (R25);
+a named expansion file is a DATA ASK; (v) the HKG lower-secondary NER "crossing" 2015–16 is a measure artefact (series
+dip) and is not a portability test until a completion series exists.

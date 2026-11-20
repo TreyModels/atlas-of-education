@@ -109,3 +109,15 @@ imputation as observation. E1 stays PARKED; direction claims EQUIVALENT.
   not placeholders.
 - **Report layer:** blocked sources (OECD/ILO/PSA) are not load-bearing; BEPER 2019 retrieved from public sources before
   use; no citation of unread material.
+
+
+## Cycle 5 addendum 3 (event-window alignment)
+
+- **A7 adopted:** laws are candidate timing markers only where an event window aligns with the observed crossing
+  (computable on the affected observed series, predicted sign, gap <=5 y, cohorts declared) — R24. PH discrete state
+  pushes do not align (1987 -> +31y; K-12 after upper-sec mass; 2018 negative/confounded); HKG 2009 (+9.08) and CHN
+  1999 (+4.70) do align at their levels; CHN 1986 misses primary by 27y.
+- **Anchor's state-push mechanism:** not established by timing; may not be assumed. Model target = crossing years and
+  spacing (A6); any state-push channel must pass R24 or be abandoned/re-specified.
+- **Evidence quality:** event windows are descriptive (naive SE, no controls, quality A/B/C); `SCHOOL_EXPANSION.csv`
+  missing -> expansion episodes are quality-C inferred and not event evidence (R25); named expansion file is a DATA ASK.
