@@ -421,7 +421,8 @@ def write_outputs(outdir, per_level, detail, ident, pre16, verdict):
                          fnum(p["unfilled_share_min"]), fnum(p["unfilled_share_max"]),
                          p["label"] if arm == "P1" else "", p["both_applicable"],
                          "verdict-bearing" if arm == "P1" else
-                         ("comparator (as built)" if arm == "P0" else "report-only, never adopted")])
+                         ("comparator (as built); movement vs itself is not a movement"
+                          if arm == "P0" else "report-only, never adopted")])
         agg = verdict["aggregate"] if arm == "P1" else ""
         rows.append([arm, "ALL", "YES" if arm == "P1" else "NO", len(YEARS), "", "", "", "", "", "",
                      "", "", "", "", "", "", "", "", agg, "", agg_note[arm]])
@@ -453,6 +454,24 @@ def write_outputs(outdir, per_level, detail, ident, pre16, verdict):
                 "K_H_over_cohort", "K_O_over_cohort", "admitted_H_over_cohort",
                 "T_O_over_cohort", "V_O_over_cohort", "unfilled_share",
                 "admitted_official_over_cohort", "queue_H_over_cohort"], drows)
+
+
+def import_provenance(guard_meta, norm):
+    """Declared import set: every module loaded from the cell or the synthetic tree."""
+    imported = {}
+    for name, mod in list(sys.modules.items()):
+        f = getattr(mod, "__file__", None)
+        if not f:
+            continue
+        rp = os.path.abspath(f)
+        if rp.startswith(str(CELL)) or rp.startswith(str(SYNTH)):
+            imported[name] = norm(rp)
+    guard_meta["imports"] = dict(sorted(imported.items()))
+    declared = {"arms", "run_partprov", "__main__", "sim_v1_6_repair", "sim_v1_3"}
+    extra = sorted(set(imported) - declared)
+    if extra:
+        raise SystemExit("REFUSED: IMPORT-SET %r" % (extra,))
+    return imported
 
 
 def write_audit(outdir, audit):
@@ -637,19 +656,7 @@ def main(argv=None):
         body = run_pipeline(outdir, log, guard_meta)
 
         # ---- module provenance ---------------------------------------------------------
-        imported = {}
-        for name, mod in list(sys.modules.items()):
-            f = getattr(mod, "__file__", None)
-            if not f:
-                continue
-            rp = os.path.abspath(f)
-            if rp.startswith(str(CELL)) or rp.startswith(str(SYNTH)):
-                imported[name] = guard.norm(rp)
-        guard_meta["imports"] = dict(sorted(imported.items()))
-        declared_imports = {"arms", "run_partprov", "__main__", "sim_v1_6_repair", "sim_v1_3"}
-        extra = sorted(set(imported) - declared_imports)
-        if extra:
-            raise SystemExit("REFUSED: IMPORT-SET %r" % (extra,))
+        import_provenance(guard_meta, guard.norm)
 
         body["audit"] = build_audit(log, guard_meta, body["ident"],
                                     {"sha256": sha256_file(V16_PREDECL),
@@ -668,6 +675,7 @@ def main(argv=None):
             static_checks(gm2, A)
             guard_selftest(det_dir, gm2, g2, log2)
             body2 = run_pipeline(det_dir, log2, gm2)
+            import_provenance(gm2, g2.norm)
             body2["audit"] = build_audit(log2, gm2, body2["ident"],
                                          {"sha256": sha256_file(V16_PREDECL),
                                           "n_checked": body2["n_checked"]},
@@ -702,7 +710,7 @@ def main(argv=None):
             if rel in ("RUN_MANIFEST.json", "SHA256SUMS.txt"):
                 continue
             files.append(rel)
-    files.sort()
+    files = ["FINDINGS.md", "PRE_DECLARATIONS.md"] + files
     manifest = {
         "cell": "EXP-16-PARTPROV",
         "label": LABEL,
@@ -734,14 +742,16 @@ def main(argv=None):
         json.dump(manifest, fh, indent=2, sort_keys=True)
         fh.write("\n")
 
-    sums = []
-    for rel in files + ["RUN_MANIFEST.json"]:
+    sums = {}
+    for rel in files + ["PRE_DECLARATIONS.sha256", "RUN_MANIFEST.json",
+                        "code/run_partprov.py", "code/arms.py",
+                        "code/frozen/sim_v1_6_repair.py", "code/frozen/sim_v1_3.py"]:
         p = CELL / rel
         if p.exists():
-            sums.append("%s  %s" % (sha256_file(p), rel))
-    sums.append("%s  %s" % (sha256_file(CELL / "PRE_DECLARATIONS.md"), "PRE_DECLARATIONS.md"))
+            sums[rel] = sha256_file(p)
     with open(CELL / "SHA256SUMS.txt", "w") as fh:
-        fh.write("\n".join(sorted(sums)) + "\n")
+        for rel in sorted(sums):
+            fh.write("%s  %s\n" % (sums[rel], rel))
 
     print("verdict: %s  per-level: %r" % (body["verdict"]["aggregate"], body["verdict"]["per_level"]))
     print("determinism: %s (%d/%d)" % (det["status"], det["n_identical"], det["n"]))

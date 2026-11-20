@@ -1300,3 +1300,10 @@ in the manifest/guard). Verdict string unchanged; no threshold altered.
   EXP-18 LICENSED** (consistency-only repair, observed path as the only target, ≥17/33 ±5 pp + ±5 y crossings,
   representation carried forward, A00 guard, counterfactual identity, no-fit audit, count-blind; **closing rule: bar
   missed → generator line closes at representation-only**).
+
+**EXP-16 post-run details (Lead-recorded; no re-score):** P1's participation share equals the frozen block's
+**bit-identically in 45/45 level-years** (max Δ 0.0); the **upper residual is the eligibility factor** (0.5973 vs 0.6870
+in 2010), not a menu object; **P2** zeroes unfilled 15/15 at primary/lower, survives at upper; **P1 also zeroes unfilled
+at primary 12/15 and lower 13/15 — a representation risk flagged for EXP-18's unfilled≥0.10 condition**; count-blind
+audit: observed file opened false, 0 bytes read, 1 blocked self-test attempt, own-code AST rule PASS; S-IDENT P0 ≡
+frozen A10 at 4.44e-10; determinism 3/3; final SHA256SUMS 14/14.

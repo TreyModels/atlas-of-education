@@ -2,7 +2,7 @@
   "cell": "EXP-16-PARTPROV",
   "code": {
     "arms.py": "c29e19e2c188547992d76e4f279603b5bfe2218ea5026a1f70f7c3d4edf182fb",
-    "run_partprov.py": "5b24cfa65edceab81b50f768273afea90c3d009d50b68ff903a2fef7152f3ea9"
+    "run_partprov.py": "240c5d8af5d03ed4aa4f6ea80d2b256bd5ec7f2f3d0dad689ae38ebc82c480b0"
   },
   "count_blind": {
     "blocked_attempts": 1,
@@ -22,6 +22,8 @@
     "status": "BYTE-IDENTICAL"
   },
   "files": [
+    "FINDINGS.md",
+    "PRE_DECLARATIONS.md",
     "results/COUNT_BLIND_AUDIT.json",
     "results/PARTPROV_DETAIL.csv",
     "results/PARTPROV_RESULTS.csv",

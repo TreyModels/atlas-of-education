@@ -19,7 +19,7 @@
         },
         {
           "kind": "string-33",
-          "lineno": 487,
+          "lineno": 510,
           "text": "n_33cell_counts_emitted"
         }
       ],
@@ -36,7 +36,7 @@
           "text": "UNIVERSALIZATION_SERIES.csv"
         }
       ],
-      "n_lines": 744,
+      "n_lines": 764,
       "open_calls": [
         {
           "call": "read_text",
@@ -68,38 +68,38 @@
         },
         {
           "call": "open",
-          "enclosing_function": "run_pipeline",
+          "enclosing_function": "write_audit",
           "first_arg": "<expr>",
           "first_arg_name": "",
-          "lineno": 398
+          "lineno": 478
         },
         {
           "call": "open",
           "enclosing_function": "emit_void",
           "first_arg": "<expr>",
           "first_arg_name": "",
-          "lineno": 530
+          "lineno": 557
         },
         {
           "call": "open",
           "enclosing_function": "guard_selftest",
           "first_arg": "",
           "first_arg_name": "OBSERVED",
-          "lineno": 585
+          "lineno": 612
         },
         {
           "call": "open",
           "enclosing_function": "main",
           "first_arg": "<expr>",
           "first_arg_name": "",
-          "lineno": 723
+          "lineno": 741
         },
         {
           "call": "open",
           "enclosing_function": "main",
           "first_arg": "<expr>",
           "first_arg_name": "",
-          "lineno": 733
+          "lineno": 752
         },
         {
           "call": "read_bytes",
@@ -113,17 +113,17 @@
           "enclosing_function": "main",
           "first_arg": "",
           "first_arg_name": "",
-          "lineno": 678
+          "lineno": 696
         },
         {
           "call": "open",
           "enclosing_function": "main",
           "first_arg": "",
           "first_arg_name": "p",
-          "lineno": 680
+          "lineno": 698
         }
       ],
-      "sha256": "5b24cfa65edceab81b50f768273afea90c3d009d50b68ff903a2fef7152f3ea9"
+      "sha256": "240c5d8af5d03ed4aa4f6ea80d2b256bd5ec7f2f3d0dad689ae38ebc82c480b0"
     },
     {
       "count_like_literals": [
@@ -453,6 +453,13 @@
       "sha256": "70ae8f0eef83358493dad3d3feb2d6a8841c4bb6fad3966627f4eed70e2a9877"
     }
   ],
+  "blocked_attempts_detail": [
+    {
+      "count": 1,
+      "op": "open:rb",
+      "path": "<PROG>/10_massification/data/UNIVERSALIZATION_SERIES.csv"
+    }
+  ],
   "capability_lint": "PASS",
   "cell": "EXP-16-PARTPROV",
   "count_blind": {
@@ -470,91 +477,71 @@
   "determinism": "BYTE-IDENTICAL",
   "files_opened": [
     {
-      "allowed": true,
       "count": 1,
       "op": "open:w",
       "path": "<OUT>/PARTPROV_DETAIL.csv"
     },
     {
-      "allowed": true,
       "count": 1,
       "op": "open:w",
       "path": "<OUT>/PARTPROV_RESULTS.csv"
     },
     {
-      "allowed": false,
-      "count": 1,
-      "op": "open:rb",
-      "path": "<PROG>/10_massification/data/UNIVERSALIZATION_SERIES.csv"
-    },
-    {
-      "allowed": true,
       "count": 3,
       "op": "io.open:r",
       "path": "<PROG>/10_massification/extensions/partprov_2026-11-20/code/arms.py"
     },
     {
-      "allowed": true,
       "count": 1,
       "op": "io.open:rb",
       "path": "<PROG>/10_massification/extensions/partprov_2026-11-20/code/arms.py"
     },
     {
-      "allowed": true,
       "count": 1,
       "op": "io.open:r",
       "path": "<PROG>/10_massification/extensions/partprov_2026-11-20/code/frozen/sim_v1_3.py"
     },
     {
-      "allowed": true,
       "count": 1,
       "op": "io.open:rb",
       "path": "<PROG>/10_massification/extensions/partprov_2026-11-20/code/frozen/sim_v1_3.py"
     },
     {
-      "allowed": true,
       "count": 1,
       "op": "io.open:r",
       "path": "<PROG>/10_massification/extensions/partprov_2026-11-20/code/frozen/sim_v1_6_repair.py"
     },
     {
-      "allowed": true,
       "count": 1,
       "op": "io.open:rb",
       "path": "<PROG>/10_massification/extensions/partprov_2026-11-20/code/frozen/sim_v1_6_repair.py"
     },
     {
-      "allowed": true,
       "count": 3,
       "op": "io.open:r",
       "path": "<PROG>/10_massification/extensions/partprov_2026-11-20/code/run_partprov.py"
     },
     {
-      "allowed": true,
       "count": 1,
       "op": "io.open:rb",
       "path": "<PROG>/10_massification/extensions/partprov_2026-11-20/code/run_partprov.py"
     },
     {
-      "allowed": true,
       "count": 2,
       "op": "open:r",
       "path": "<PROG>/10_massification/extensions/synthetic_2026-11-20/generator_v1_3/results/synthetic_panel_v1_3.csv"
     },
     {
-      "allowed": true,
       "count": 1,
       "op": "io.open:r",
       "path": "<PROG>/10_massification/extensions/synthetic_2026-11-20/generator_v1_6_repair/PRE_DECLARATIONS.md"
     },
     {
-      "allowed": true,
-      "count": 2,
+      "count": 3,
       "op": "io.open:rb",
       "path": "<PROG>/10_massification/extensions/synthetic_2026-11-20/generator_v1_6_repair/PRE_DECLARATIONS.md"
     },
     {
-      "allowed": true,
       "count": 1,
       "op": "open:r",
       "path": "<PROG>/10_massification/extensions/synthetic_2026-11-20/generator_v1_6_repair/results/panel_A10_repaired.csv"
@@ -590,7 +577,12 @@
     "observed_path_resolved": "<PROG>/10_massification/data/UNIVERSALIZATION_SERIES.csv",
     "void": false
   },
-  "imports": {},
+  "imports": {
+    "__main__": "<PROG>/10_massification/extensions/partprov_2026-11-20/code/run_partprov.py",
+    "arms": "<PROG>/10_massification/extensions/partprov_2026-11-20/code/arms.py",
+    "sim_v1_3": "<PROG>/10_massification/extensions/partprov_2026-11-20/code/frozen/sim_v1_3.py",
+    "sim_v1_6_repair": "<PROG>/10_massification/extensions/partprov_2026-11-20/code/frozen/sim_v1_6_repair.py"
+  },
   "label": "SYNTHETIC",
   "own_code_rule": {
     "guard_names": [
@@ -633,6 +625,7 @@
     }
   },
   "static_refusals": [],
+  "target_read_order": "both comparison objects (frozen v1.3 panel, frozen A10 panel) are read only AFTER all three arms have finished; no target value is passed to any arm",
   "verdict": "MIXED",
   "verdict_per_level": {
     "lower_secondary": "DUPLICATED-PRIMITIVES",

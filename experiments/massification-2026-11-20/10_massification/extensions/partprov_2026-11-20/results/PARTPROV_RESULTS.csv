@@ -1,7 +1,7 @@
 arm,level,verdict_bearing,n_years,years_within_1pp,years_moved_le_0.5pp,mean_gap_pp,max_gap_pp,mean_move_pp,max_move_pp,mean_demand_over_cohort,mean_target_demand_over_cohort,mean_secondary_gap_pp,max_secondary_gap_pp,years_unfilled_zero,years_unfilled_ge_0.10,unfilled_share_min,unfilled_share_max,verdict,both_applicable,note
-P0,primary,NO,15,0,,9.567735,9.576937,0.000000,0.000000,0.9,0.9956773471,9.567735,9.576937,3,5,0,0.1686653242,,0,comparator (as built)
-P0,lower_secondary,NO,15,0,,12.763614,15.656053,0.000000,0.000000,0.8266666667,0.9543028081,12.763614,15.656053,12,2,0,0.1782184695,,0,comparator (as built)
-P0,upper_secondary,NO,15,0,,5.709341,8.645120,0.000000,0.000000,0.6472867217,0.6945521335,2.095259,8.446812,0,15,0.5173762014,0.712672302,,0,comparator (as built)
+P0,primary,NO,15,0,,9.567735,9.576937,0.000000,0.000000,0.9,0.9956773471,9.567735,9.576937,3,5,0,0.1686653242,,0,comparator (as built); movement vs itself is not a movement
+P0,lower_secondary,NO,15,0,,12.763614,15.656053,0.000000,0.000000,0.8266666667,0.9543028081,12.763614,15.656053,12,2,0,0.1782184695,,0,comparator (as built); movement vs itself is not a movement
+P0,upper_secondary,NO,15,0,,5.709341,8.645120,0.000000,0.000000,0.6472867217,0.6945521335,2.095259,8.446812,0,15,0.5173762014,0.712672302,,0,comparator (as built); movement vs itself is not a movement
 P0,ALL,NO,15,,,,,,,,,,,,,,,,,"comparator, as built; movement is a self-comparison"
 P1,primary,YES,15,15,0,0.000000,0.000000,9.567735,9.576937,0.9956773471,0.9956773471,0.000000,0.000000,12,0,0,0.04762857985,DUPLICATED-PRIMITIVES,0,verdict-bearing
 P1,lower_secondary,YES,15,15,0,0.000000,0.000000,12.763614,15.656053,0.9543028081,0.9543028081,0.000000,0.000000,13,0,0,0.09024895572,DUPLICATED-PRIMITIVES,0,verdict-bearing
