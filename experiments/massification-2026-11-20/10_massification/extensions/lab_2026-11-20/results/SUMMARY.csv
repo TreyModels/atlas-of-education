@@ -1,0 +1,25 @@
+experiment,estimand,estimate,se,n,clusters,threshold,verdict,note
+E1,within slope upper-sec GER on log GDP,56.06607671957182,19.557976340892633,93,5,CI excl 0 in within & between; strong if >=3,strong (>=3 pp per log point),
+E2,crossings inside GDP IQR (lower secondary 90),0.5,,4,4,frac>=4/6,not typical,
+E2,crossings inside GDP IQR (primary 50),0.3333333333333333,,3,3,frac>=4/6,not typical,
+E2,crossings inside GDP IQR (primary 90),0.3333333333333333,,3,3,frac>=4/6,not typical,
+E2,crossings inside GDP IQR (primary 95),0.3333333333333333,,3,3,frac>=4/6,not typical,
+E2,crossings inside GDP IQR (secondary 50),0.5,,4,4,frac>=4/6,not typical,
+E2,crossings inside GDP IQR (secondary 90),0.6,,5,5,frac>=4/6,not typical,
+E2,crossings inside GDP IQR (tertiary 15),0.5,,4,4,frac>=4/6,not typical,
+E2,crossings inside GDP IQR (tertiary 50),0.6,,5,5,frac>=4/6,not typical,
+E2,crossings inside GDP IQR (upper secondary 50),0.5,,4,4,frac>=4/6,not typical,
+E3,Gini~MYS slope (cohort 1960-1964),-0.05509417063815073,0.00397367721456732,17,0,negative slop & >=10/17 regions improve,equalizing,regions improved=17
+E3,Gini~MYS slope (cohort 1990-1994),-0.05106444681890425,0.0027795727322561248,17,0,negative slop & >=10/17 regions improve,equalizing,regions improved=17
+E4,duration ratio large/HKG,1.1,,4,1,>=1.5 city-state faster,no clear difference,
+E4,volatility ratio large/HKG,0.32605788540212316,,4,1,>=2 city-state smoother; <=0.5 large smoother,large countries smoother,
+E5,within slope tertiary GER on services share,-0.4945146108733649,0.2165803708259499,358,15,CI excl 0 and sign stable,association,
+E5,services slope sign stability across specs,,,358,15,sign stable,not robust (sign unstable),within_no_lgdp=+1.82; within_no_urb=+0.42
+E6,within corr completion~wage lag0,0.6448355038878071,,59,4,|r|>=0.4 at lag5,not established,
+E6,within corr completion~wage lag5,0.5856558843532294,,39,4,|r|>=0.4 at lag5,association,
+E7,capacity delta around lower-sec crossing (SD units),-0.15178162891587324,,3,3,>=0.25 SD in >=2/3 dims,DATA LIMITED (only 1 dimension with coverage),delivery_capacity=-0.15
+E8,PHL dPTR on dGER,0.24461625906546314,0.18509544146785523,35,1,>1.0,no strain,
+E9,remittance assoc: spend,-0.046126063014701194,0.031065322927542226,117,6,CI excl 0 & sign consistent,no association,
+E9,remittance assoc: ger_sec_growth,-0.0006910876484727875,0.0012777891846102742,116,6,CI excl 0 & sign consistent,no association,
+E9,remittance assoc: ger_ter_growth,-0.002449499798203427,0.001364974811323611,139,6,CI excl 0 & sign consistent,no association,
+E10,E1 within slope inside 30-country CI,14.739659112199083,8.315565755793981,14,0,inside CI and same sign,does not replicate,"E1=+56.066, 30cty CI=[-1.559,+31.038]"

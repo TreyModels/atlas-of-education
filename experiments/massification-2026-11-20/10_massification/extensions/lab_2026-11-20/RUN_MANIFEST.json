@@ -1,0 +1,30 @@
+{
+  "experiments": 10,
+  "outputs": [
+    "E10_replication.csv",
+    "E1_income_gradient.csv",
+    "E1_robustness.csv",
+    "E2_crossing_structure.csv",
+    "E3_regional_equalization.csv",
+    "E4_scale_shape.csv",
+    "E5_robustness.csv",
+    "E5_tertiary_structure.csv",
+    "E6_formalisation_completion.csv",
+    "E7_capacity_around_crossings.csv",
+    "E8_phl_strain.csv",
+    "E9_remittances.csv",
+    "SUMMARY.csv"
+  ],
+  "data_hashes": {
+    "10_massification/data/UNIVERSALIZATION_SERIES.csv": "85bc869396ebfcb39e3e1a21a31af219e75a07326c738a51d2bfdbe536737ddb",
+    "10_massification/data/UNIVERSALIZATION_TIMING.csv": "6e067ffd76b2c57c7c0363387735750cb9e6f68bc4dfd242b3d0f9c80786f892",
+    "10_massification/data/BASELINE_SERIES.csv": "5ffc1cbd82187a0cdbb48f5811dd04180e02c6fc65765b327ea956a006536fa5",
+    "10_massification/data/STATE_CAPACITY.csv": "704efacad00f0ba7ddf579459a930d064fdb0f4b882cffbbf44a6cbecd585044",
+    "10_massification/data/SCHOOL_EXPANSION.csv": "c218e6c9bd784e135e089ebecefec21112a09e6bf2c778599a33bc81b78c8ea3",
+    "09_relations/data/panel_wdi_wide.csv": "7fd645cb05fbffde038366a010aea2ffa5f5d1afaaa72642e6760ac5300c4485",
+    "09_relations/data/economic_complexity_panel_30ctys.csv": "9657bfd6cc17d3ed7f59939e0ba6af1412c2d070f2dd0c600a514f4b063a7f04"
+  },
+  "code_sha256": "03c9f3fec1a4a51e0076332455ed925173c4074bd6e33237c305b354409cd3ad",
+  "seeds": "deterministic (no RNG)",
+  "label": "OBSERVED/DERIVED from source status; descriptive only"
+}
