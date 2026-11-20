@@ -1,0 +1,39 @@
+A5b — PHL ANCHOR RIVAL RE-SCORE: crossing ordering/spacing + mechanism-implied ordering (fit 1999-2013, holdout 2014-2024).
+Observed signature: primary completion >=90 in 2017; lower-secondary >=90 in 2024; upper-secondary NEVER >=90 by 2024; tertiary GER >=50 2025.
+No direction/causal claim (R13/R24/R25). Design-only rivals listed separately (not modelled, not claimed as tested, D48).
+
+rival                primary   lower   upper tertiary order_ok   gap1   gap2  FP_up  equiv shared
+  demographic_cohort      none    none    none     none    False   none   none  False  False  False
+  formal_shapes         2023.0    none    none     none    False   none   none  False  False  False
+  state_building          none    none    none     none    False   none   none  False  False  False
+  world_society         2014.0    none    none     none    False   none   none  False  False  False
+
+MECHANISM-IMPLIED ORDERING (predeclared):
+  world_society: near-simultaneous across levels (shared timing; R23 structural-miss check)
+  state_building: policy-sequence: primary before lower before upper; upper may not cross
+  demographic_cohort: cohort compression: primary earliest, then lower, upper later
+  formal_shapes: independent per-level shapes; order data-determined
+
+EVENT-BREAK SCORES (2013->2024 observed vs predicted change; pp; no rival gets event dummies):
+  world_society        upper_secondary  obs   +7.6 pred   +3.6 err   -4.0
+  world_society        tertiary_ger     obs  +15.5 pred   -0.6 err  -16.1
+  state_building       upper_secondary  obs   +7.6 pred   +nan err   +nan
+  state_building       tertiary_ger     obs  +15.5 pred  -12.9 err  -28.5
+  demographic_cohort   upper_secondary  obs   +7.6 pred -122.1 err -129.7
+  demographic_cohort   tertiary_ger     obs  +15.5 pred  +11.1 err   -4.5
+  formal_shapes        upper_secondary  obs   +7.6 pred   +6.4 err   -1.2
+  formal_shapes        tertiary_ger     obs  +15.5 pred   -0.8 err  -16.4
+
+TIMING ALIGNMENT (R24; PHL events):
+  PHL 1987 compulsory-primary lineage    affected primary          crossing 2017.0 gap -30.0 post-window False -> context, not mechanism
+  PHL K-12 2013 (RA 10533)               affected upper_secondary  crossing nan gap nan post-window False -> context, not mechanism
+  PHL free SHS 2016                      affected upper_secondary  crossing nan gap nan post-window False -> context, not mechanism
+  PHL free tertiary 2018                 affected tertiary_ger     crossing 2025.0 gap -7.0 post-window False -> context, not mechanism
+
+DESIGN-ONLY RIVALS (D48; blocked, not modelled here — listed in every results file):
+  human_capital: PSA returns by education (FIES/APIS/LFS) — DATA BLOCKED; external request needs approval [design-only]
+  signalling_MMI: Enterprise Surveys employer credential/skills module — DATA BLOCKED; external request needs approval [design-only]
+
+VERDICT: see a5b_scores.csv; any rival without order_ok and within ±5y on all crossings is NOT equivalent (R3);
+a shared-curve rival (single timing) is a structural miss (R23). Anchor-vs-rival comparison remains deferred to A1.
+No direction/causal claim; event evidence descriptive (R24/R25). No git writes.

@@ -258,6 +258,23 @@ Two external requests are drafted and held; per protocol, external data requests
   iteration is to be attempted without a new Council decision. Unrepaired results retained alongside (R12).
   Routed to Council for formal adjudication under D26/D31.
 
+## 3k. Council repair-failure ruling (D56–D58, R27; 20 Nov 16:15) — phase cap confirmed
+
+- **Repair FAIL confirmed under the predeclared gate** (R14/R17/R1): generated OOS exponents remain wrong-sign and
+  outside the A3 estimator range; `signs_ok` 1/3, contained 0/3, within-1se-A1 0/3; PHL fit MAE 6.16–7.43 (>5 pp),
+  holdout 4.80–6.26 but loses to the linear-trend benchmark 4.35. **Timebox consequence confirmed:** the phase stands
+  at **conditional reproduction + observational equivalence**; universalization reproduction is capped at **PARTIAL**;
+  **no further scaling-repair iteration** without a new Council decision + new predeclaration + intake (R27: one cell).
+- **Anchor A1 re-scoped (D57):** may run for **descriptive/mechanism-crossing reporting only** — A6 crossing
+  years/spacing, A7/R24 event-window alignment, R26 capacity (level-specific), PIDS equity (check-only), A5 rivals.
+  It must report the **scaling criterion as FAIL explicitly** and must not fit around it; verdict at most
+  **PARTIAL/DESCRIPTIVE**; no PASS; no direction claim.
+- **Publishable object updated (D58):** the failure is a **bounded negative result** — this cohort-flow model
+  class/implementation cannot generate the observed positive income-scaling sign without an exogenous supply channel
+  (0/3 contained across rivals; six added parameters did not rescue it; fit MAE >5 pp; holdout loses to linear trend).
+  Publishable alongside the equivalence/identification map, caveated to this class/implementation; no positive model
+  claim.
+
 ## 4. Next three actions for `repo-auditor`
 
 1. **Council gate:** get the Council's final `COUNCIL:` post for brief 013 (SUCCESS_CRITERIA + STOP_RULES are

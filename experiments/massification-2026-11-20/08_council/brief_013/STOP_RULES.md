@@ -106,3 +106,10 @@ fire.
 | # | Rule | Trigger |
 |---|---|---|
 | **R26** | **Capacity channel (teacher supply/PTR) is provisional and level-specific:** it may be a R24 candidate only where the affected level's observed series and a computable capacity path align with that level's crossing; it is an **expansion marker** (not a universalization mechanism) where the level never crossed the universalization threshold; approximate hiring counts must be labelled `check`/medium and never treated as exact policy events; school/classroom counts remain UNABLE (DATA ASK) | SCHOOL_EXPANSION.csv batch-1: HS PTR 37→27→24; ~200k/40k hires; DepEd 403 |
+
+
+## Amendment A8 (2026-11-20 16:15) — R27 (repair budget exhausted)
+
+| # | Rule | Trigger |
+|---|---|---|
+| **R27** | **Repair budget exhausted:** after a predeclared repair fails, no further scaling-repair iteration may run without a new Council decision, a new predeclaration and intake acceptance; the standing phase verdict is PARTIAL + EQUIVALENT and the anchor is descriptive-only. Re-running the failed cell, retuning, or presenting its level fit as PASS is a rule violation (R5/R12/R14/R17) | repair cell FAIL: signs_ok 1/3, contained 0/3; D56 |

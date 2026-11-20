@@ -1,0 +1,14 @@
+rival,outcome,threshold,pred_cross,obs_cross,implied
+world_society,primary,90,2014.0,2017.0,shared timing
+world_society,lower_secondary,90,,2024.0,shared timing
+world_society,upper_secondary,90,,,shared timing
+world_society,tertiary_ger,50,,2025.0,shared timing
+state_building,tertiary_ger,50,,2025.0,
+demographic_cohort,primary,90,,2017.0,
+demographic_cohort,lower_secondary,90,,2024.0,
+demographic_cohort,upper_secondary,90,,,
+demographic_cohort,tertiary_ger,50,,2025.0,
+formal_shapes,primary,90,2023.0,2017.0,
+formal_shapes,lower_secondary,90,,2024.0,
+formal_shapes,upper_secondary,90,,,
+formal_shapes,tertiary_ger,50,,2025.0,

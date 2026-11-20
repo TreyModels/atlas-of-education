@@ -1,0 +1,5 @@
+rival,primary,lower_secondary,upper_secondary,tertiary,order_ok,gap_primary_to_lower,gap_lower_to_tertiary,upper_false_positive,equivalent_R3,single_shared_curve_R23
+demographic_cohort,,,,,False,,,False,False,False
+formal_shapes,2023.0,,,,False,,,False,False,False
+state_building,,,,,False,,,False,False,False
+world_society,2014.0,,,,False,,,False,False,False

@@ -131,3 +131,12 @@ imputation as observation. E1 stays PARKED; direction claims EQUIVALENT.
 - **PIDS regional equity = CHECK-only** (mean years/Gini NCR vs ARMM; direction predeclared; never fitted).
 - **E4 stays DATA BLOCKED** (PSA 403; **no national-share proxy allowed**); **E3 demand-pull = unverified context**
   (nurse-visa 2005–06 not verified in POLICY_TIMELINE).
+
+
+## Cycle 6 step-back (repair FAILED — phase stands at PARTIAL + EQUIVALENT)
+
+1. **Goal restated:** a model in which massification is produced by schooling–government–market interaction, with cohort flows and country/sector variation; for the anchor, the outcome is the **crossing years and their spacing** (A6) and which candidate mechanisms align (A7/R24); shadow secondary.
+2. **Threads:** **KEEP** — anchor A1 **descriptive/mechanism-crossing only** (scaling reported FAIL, no fitting around), A2 capacity/aligned-marker battery (R24/R26), A5 rivals, A8 baseline data, A6/A7 checks; **PARK** — portability A6/A7 until the descriptive anchor report exists, E4 (DATA BLOCKED), E3 (unverified context), E5/E7, ECI, T1/T2 papers; **KILL** — further scaling-repair iterations (R27), E8, shadow threads; **E1** parked.
+3. **One thread this cycle:** write the **descriptive anchor report** (crossings + alignment + capacity + rivals) and the **bounded negative result** on the scaling failure; that is the phase's honest product. Do not tune.
+4. **Drift check:** after the repair failure the temptation is another iteration or a level-only victory — both barred by R27/R14. The failure is a result; report it. No parameter additions without a discriminating test.
+5. **If only one thing mattered:** the descriptive anchor + negative result, not another repair.

@@ -33,7 +33,7 @@ def cross_year(years_vals, threshold, start=1999, end=2050):
         if y in ys and v[ys.index(y)]>=threshold: return y
     return None
 def main():
-    S=load(); T=pd.DataFrame({'year':np.arange(1995,2025)}).set_index('year')
+    S=load(); T=pd.DataFrame({'year':np.arange(1995,2027)}).set_index('year')
     for k,v in S.items(): T[k]=v.reindex(T.index)
     T['lcohort']=np.log(T['cohort']); T['lpop']=np.log(T['pop'])
     outcomes={'primary':('completion_primary',90),'lower_secondary':('completion_lower_secondary',90),
@@ -45,18 +45,21 @@ def main():
         z=T[col].dropna(); obs[name]={'cross':next((y for y in z.index if z.loc[y]>=thr),None),'thr':thr,'last':float(z.loc[z.index<=2024].iloc[-1]) if len(z) else np.nan}
     rivals={}; R=[]
     # 1 world-society: shared r,t0 across levels, level-specific K
-    def model_shared(years, r, t0, *K):
-        yrs=np.asarray(years,float); out=np.concatenate([logistic(yrs,K[i],r,t0) for i in range(len(K))]); return out
-    ys=np.concatenate([fit.index.values.astype(float) for _ in outcomes])
-    yv=np.concatenate([fit[col].values.astype(float) for _,(col,thr) in outcomes.items()])
-    ok=np.isfinite(yv); ys2, yv2 = ys[ok], yv[ok]
-    p0=[0.05,2005]+[float(fit[col].max()) for _,(col,thr) in outcomes.items()]
-    lo=[0.001,1960]+[10]*len(outcomes); hi=[0.5,2030]+[160]*len(outcomes)
-    try:
-        pw,_=curve_fit(model_shared, ys2, yv2, p0=p0, bounds=(lo,hi), maxfev=80000)
-        rivals['world_society']={'r':pw[0],'t0':pw[1],'K':list(pw[2:])}
-    except Exception as e:
-        rivals['world_society']={'error':str(e)[:80]}
+    # world-society: shared r,t0; level K solved by least squares given r,t0; grid search
+    best=None
+    for r in np.linspace(0.005,0.20,60):
+        for t0 in np.linspace(1985,2024,80):
+            tot=0.0; Ks=[]
+            for (name,(col,thr)) in outcomes.items():
+                z=fit[col].dropna(); y=z.values.astype(float); yr=z.index.values.astype(float)
+                shape=logistic(yr,1.0,r,t0); den=(shape*shape).sum()
+                if den<=0: tot=1e9; break
+                K=float((y*shape).sum()/den); Ks.append(K); tot+=float(((y-K*shape)**2).sum())
+            if best is None or tot<best[0]: best=(tot,r,t0,Ks)
+    if best and np.isfinite(best[0]):
+        rivals['world_society']={'r':best[1],'t0':best[2],'K':best[3],'sse':best[0]}
+    else:
+        rivals['world_society']={'error':'grid fail'}
     # 2 state building & 3 demographic & 4 formal shapes: per outcome
     def fit_linear(df, col, xs):
         d=df[[col]+xs].dropna()
@@ -100,7 +103,9 @@ def main():
     rows=[]
     for rname,r in rivals.items():
         if 'error' in r: continue
+        if rname=='world_society' and 'K' not in r: continue
         if rname=='world_society':
+            if 'K' not in r: continue
             pw=r; yrs=np.arange(2014,2051,dtype=float)
             for i,(name,(col,thr)) in enumerate(outcomes.items()):
                 pred=pd.Series(logistic(yrs,pw['K'][i],pw['r'],pw['t0']),index=yrs.astype(int))
@@ -130,6 +135,10 @@ def main():
         scored.append(dict(rival=rname,primary=pc,lower_secondary=lc,upper_secondary=uc,tertiary=tc,
                            order_ok=order_ok,gap_primary_to_lower=gap1,gap_lower_to_tertiary=gap2,
                            upper_false_positive=fp_upper,equivalent_R3=equiv,single_shared_curve_R23=shared))
+    if 'K' not in rivals.get('world_society',{}):
+        scored.append(dict(rival='world_society',primary=None,lower_secondary=None,upper_secondary=None,tertiary=None,
+                           order_ok=False,gap_primary_to_lower=np.nan,gap_lower_to_tertiary=np.nan,
+                           upper_false_positive=False,equivalent_R3=False,single_shared_curve_R23=False))
     Sc=pd.DataFrame(scored)
     # mechanism-implied ordering text (declared)
     implied={'world_society':'near-simultaneous across levels (shared timing; R23 structural-miss check)',
@@ -142,7 +151,9 @@ def main():
         for name in ['upper_secondary','tertiary_ger']:
             col,thr=outcomes[name]; o=obs[name]['last']; o13=float(T[col].loc[2013]) if pd.notna(T[col].loc[2013]) else np.nan
             if rname=='world_society':
-                i=list(outcomes).index(name); p24=logistic(2024,rivals['world_society']['K'][i],rivals['world_society']['r'],rivals['world_society']['t0'])
+                if 'K' not in rivals['world_society']: p24=np.nan
+                else:
+                    i=list(outcomes).index(name); p24=logistic(2024,rivals['world_society']['K'][i],rivals['world_society']['r'],rivals['world_society']['t0'])
             else:
                 rr=rivals[rname].get(name); p24=float(rr['pred'].loc[2024]) if rr and 2024 in rr['pred'].index else np.nan
             ev.append(dict(rival=rname,outcome=name,obs_change=(o-o13) if np.isfinite(o) and np.isfinite(o13) else np.nan,

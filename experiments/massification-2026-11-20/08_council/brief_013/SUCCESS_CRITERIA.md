@@ -280,3 +280,26 @@ school and classroom counts remain **UNABLE** — DepEd/PSA 403). Also on disk: 
    predeclared direction/ordering (NCR > ARMM; gap narrowing 4.53→3.95 mean years; Gini gap 0.24→0.21), never fitted,
    never a target; label derived/reconstructed; regional education data are the first subnational observables on disk
    but they do not field E4 (see D54).
+
+
+## Amendment A8 (2026-11-20 16:15) — post-repair status: phase at PARTIAL + EQUIVALENT; anchor re-scoped
+
+**Trigger:** income-scaling repair cell FAILED its predeclared gate (`10_massification/model/calib/repair_scaling.csv`,
+`repair_table.csv`; D26/D31/R14/R17). Generated OOS exponents remain wrong-sign and outside the A3 range: secondary
+−2.73/−2.53/−1.03 vs A3 +0.090…+0.215 (A1 +0.286±0.045); tertiary −0.32/−1.32/−0.39 vs A3 +0.567…+0.848 (A1
++0.776±0.086); lower-sec completion law +11.46/+1.87/+2.55 vs A3 +0.169…+0.247. `signs_ok` 1/3, contained 0/3,
+within-1se-A1 0/3. PHL fit MAE 6.16–7.43 (>5 pp); holdout 4.80–6.26 (≤8 but loses to the linear-trend benchmark 4.35);
+CHN fit/holdout 7.03–8.83.
+
+1. **Verdict:** the repair FAILS; universalization reproduction is capped at **PARTIAL** (R14/R17); the phase's standing
+   result is **conditional reproduction + observational equivalence** (R3/R13). **No further scaling-repair iteration**
+   without a new Council decision, a new predeclaration and intake acceptance (one-cell timebox; R5/R12).
+2. **Anchor A1 is re-scoped to descriptive/mechanism-crossing reporting only.** It may run to test A6 (crossing years
+   and spacing), A7/R24 (event-window alignment: which candidate markers align), R26 (capacity channel, level-specific),
+   the equity check (PIDS regional, check-only) and A5 rivals. It must report the **scaling criterion as FAIL** —
+   explicitly, in the results file — and must not fit around it, tune it, or present a level-only victory. Its verdict is
+   at most **PARTIAL/DESCRIPTIVE**; it cannot PASS and it cannot support a direction claim.
+3. **Publishable object:** the failure itself is a bounded negative result (see D58) — this cohort-flow model
+   class/implementation cannot generate the observed positive income-scaling sign without an exogenous supply channel
+   (0/3 contained across rivals; adding six parameters did not rescue it). It does not prove that no cohort-flow model
+   can; it is a result about this class/implementation and is publishable as such, alongside the equivalence map.

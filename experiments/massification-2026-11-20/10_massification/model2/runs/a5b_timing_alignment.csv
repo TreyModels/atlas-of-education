@@ -1,0 +1,5 @@
+event,event_year,affected,observed_cross,event_to_crossing_gap,crossing_in_post_window,timing_aligned_R24,verdict
+PHL 1987 compulsory-primary lineage,1987,primary,2017.0,-30.0,False,False,"context, not mechanism"
+PHL K-12 2013 (RA 10533),2013,upper_secondary,,,False,False,"context, not mechanism"
+PHL free SHS 2016,2016,upper_secondary,,,False,False,"context, not mechanism"
+PHL free tertiary 2018,2018,tertiary_ger,2025.0,-7.0,False,False,"context, not mechanism"

@@ -1,0 +1,28 @@
+{
+ "obs": {
+  "primary": {
+   "cross": 2017,
+   "thr": 90,
+   "last": 98.30461883544922
+  },
+  "lower_secondary": {
+   "cross": 2024,
+   "thr": 90,
+   "last": 92.4139633178711
+  },
+  "upper_secondary": {
+   "cross": null,
+   "thr": 90,
+   "last": 75.02525329589844
+  },
+  "tertiary_ger": {
+   "cross": 2025,
+   "thr": 50,
+   "last": 47.41349962
+  }
+ },
+ "design_only": [
+  "human_capital",
+  "signalling_MMI"
+ ]
+}
