@@ -1,0 +1,642 @@
+{
+  "ast_scan": [
+    {
+      "count_like_literals": [
+        {
+          "kind": "string-33",
+          "lineno": 3,
+          "text": "RUN_PARTPROV -- EXP-16 PARTPROV: the count-blind provenance diagnostic.\n\nThree d"
+        },
+        {
+          "kind": "string-33",
+          "lineno": 41,
+          "text": "d7c81309e8f21ab5e338fafe10adf34691445876ec99b98f3458a2ad7ade49cf"
+        },
+        {
+          "kind": "string-33",
+          "lineno": 261,
+          "text": "6a554dc033828835431f65be2e5e218833fcdb56220baad8fbe53c3324e78991"
+        },
+        {
+          "kind": "string-33",
+          "lineno": 487,
+          "text": "n_33cell_counts_emitted"
+        }
+      ],
+      "data_path_refs": [
+        {
+          "lineno": 253
+        }
+      ],
+      "file": "run_partprov.py",
+      "forbidden_literal_hits": [
+        {
+          "enclosing_function": "<module>",
+          "lineno": 49,
+          "text": "UNIVERSALIZATION_SERIES.csv"
+        }
+      ],
+      "n_lines": 744,
+      "open_calls": [
+        {
+          "call": "read_text",
+          "enclosing_function": "declared_block",
+          "first_arg": "",
+          "first_arg_name": "",
+          "lineno": 162
+        },
+        {
+          "call": "open",
+          "enclosing_function": "write_rows",
+          "first_arg": "",
+          "first_arg_name": "path",
+          "lineno": 154
+        },
+        {
+          "call": "open",
+          "enclosing_function": "read_v13_targets",
+          "first_arg": "",
+          "first_arg_name": "V13_PANEL",
+          "lineno": 199
+        },
+        {
+          "call": "open",
+          "enclosing_function": "read_a10_identity",
+          "first_arg": "",
+          "first_arg_name": "A10_PANEL",
+          "lineno": 222
+        },
+        {
+          "call": "open",
+          "enclosing_function": "run_pipeline",
+          "first_arg": "<expr>",
+          "first_arg_name": "",
+          "lineno": 398
+        },
+        {
+          "call": "open",
+          "enclosing_function": "emit_void",
+          "first_arg": "<expr>",
+          "first_arg_name": "",
+          "lineno": 530
+        },
+        {
+          "call": "open",
+          "enclosing_function": "guard_selftest",
+          "first_arg": "",
+          "first_arg_name": "OBSERVED",
+          "lineno": 585
+        },
+        {
+          "call": "open",
+          "enclosing_function": "main",
+          "first_arg": "<expr>",
+          "first_arg_name": "",
+          "lineno": 723
+        },
+        {
+          "call": "open",
+          "enclosing_function": "main",
+          "first_arg": "<expr>",
+          "first_arg_name": "",
+          "lineno": 733
+        },
+        {
+          "call": "read_bytes",
+          "enclosing_function": "sha256_file",
+          "first_arg": "",
+          "first_arg_name": "",
+          "lineno": 138
+        },
+        {
+          "call": "read_text",
+          "enclosing_function": "main",
+          "first_arg": "",
+          "first_arg_name": "",
+          "lineno": 678
+        },
+        {
+          "call": "open",
+          "enclosing_function": "main",
+          "first_arg": "",
+          "first_arg_name": "p",
+          "lineno": 680
+        }
+      ],
+      "sha256": "5b24cfa65edceab81b50f768273afea90c3d009d50b68ff903a2fef7152f3ea9"
+    },
+    {
+      "count_like_literals": [
+        {
+          "kind": "string-33",
+          "lineno": 3,
+          "text": "ARMS -- EXP-16 PARTPROV (count-blind provenance diagnostic).\n\nEvery object here "
+        },
+        {
+          "kind": "string-33",
+          "lineno": 181,
+          "text": "33"
+        },
+        {
+          "kind": "string-33",
+          "lineno": 182,
+          "text": "string-33"
+        }
+      ],
+      "data_path_refs": [],
+      "file": "arms.py",
+      "forbidden_literal_hits": [],
+      "n_lines": 278,
+      "open_calls": [
+        {
+          "call": "open",
+          "enclosing_function": "declared_demographic_path",
+          "first_arg": "",
+          "first_arg_name": "v13_panel",
+          "lineno": 59
+        },
+        {
+          "call": "read_text",
+          "enclosing_function": "ast_scan_files",
+          "first_arg": "",
+          "first_arg_name": "",
+          "lineno": 169
+        },
+        {
+          "call": "read_text",
+          "enclosing_function": "own_code_rule",
+          "first_arg": "",
+          "first_arg_name": "",
+          "lineno": 223
+        },
+        {
+          "call": "read_text",
+          "enclosing_function": "ast_called_names",
+          "first_arg": "",
+          "first_arg_name": "",
+          "lineno": 267
+        },
+        {
+          "call": "read_bytes",
+          "enclosing_function": "_sha",
+          "first_arg": "",
+          "first_arg_name": "",
+          "lineno": 278
+        }
+      ],
+      "sha256": "c29e19e2c188547992d76e4f279603b5bfe2218ea5026a1f70f7c3d4edf182fb"
+    },
+    {
+      "count_like_literals": [
+        {
+          "kind": "string-33",
+          "lineno": 220,
+          "text": "6a554dc033828835431f65be2e5e218833fcdb56220baad8fbe53c3324e78991"
+        },
+        {
+          "kind": "string-33",
+          "lineno": 222,
+          "text": "70ae8f0eef83358493dad3d3feb2d6a8841c4bb6fad3966627f4eed70e2a9877"
+        }
+      ],
+      "data_path_refs": [
+        {
+          "lineno": 88
+        },
+        {
+          "lineno": 731
+        },
+        {
+          "lineno": 766
+        }
+      ],
+      "file": "sim_v1_6_repair.py",
+      "forbidden_literal_hits": [
+        {
+          "enclosing_function": "load_observed_phl_paths",
+          "lineno": 731,
+          "text": "UNIVERSALIZATION_SERIES.csv"
+        }
+      ],
+      "n_lines": 2892,
+      "open_calls": [
+        {
+          "call": "read_text",
+          "enclosing_function": "declared_block",
+          "first_arg": "",
+          "first_arg_name": "",
+          "lineno": 407
+        },
+        {
+          "call": "read_csv",
+          "enclosing_function": "load_observed_phl_paths",
+          "first_arg": "<expr>",
+          "first_arg_name": "",
+          "lineno": 731
+        },
+        {
+          "call": "read_csv",
+          "enclosing_function": "load_observed_phl_paths",
+          "first_arg": "<expr>",
+          "first_arg_name": "",
+          "lineno": 766
+        },
+        {
+          "call": "open",
+          "enclosing_function": "write_panel",
+          "first_arg": "",
+          "first_arg_name": "path",
+          "lineno": 1579
+        },
+        {
+          "call": "open",
+          "enclosing_function": "write_panel_v13",
+          "first_arg": "",
+          "first_arg_name": "path",
+          "lineno": 2007
+        },
+        {
+          "call": "open",
+          "enclosing_function": "write_checks",
+          "first_arg": "<expr>",
+          "first_arg_name": "",
+          "lineno": 2439
+        },
+        {
+          "call": "open",
+          "enclosing_function": "write_checks",
+          "first_arg": "<expr>",
+          "first_arg_name": "",
+          "lineno": 2447
+        },
+        {
+          "call": "open",
+          "enclosing_function": "write_gates",
+          "first_arg": "",
+          "first_arg_name": "path",
+          "lineno": 2472
+        },
+        {
+          "call": "open",
+          "enclosing_function": "write_decomposition",
+          "first_arg": "",
+          "first_arg_name": "path",
+          "lineno": 2502
+        },
+        {
+          "call": "open",
+          "enclosing_function": "write_country_inputs_audit",
+          "first_arg": "",
+          "first_arg_name": "path",
+          "lineno": 2545
+        },
+        {
+          "call": "open",
+          "enclosing_function": "run_sensitivity",
+          "first_arg": "<expr>",
+          "first_arg_name": "",
+          "lineno": 2641
+        },
+        {
+          "call": "read_text",
+          "enclosing_function": "guard_hashes",
+          "first_arg": "",
+          "first_arg_name": "",
+          "lineno": 2668
+        },
+        {
+          "call": "open",
+          "enclosing_function": "load_observed_phl_paths",
+          "first_arg": "",
+          "first_arg_name": "path",
+          "lineno": 728
+        },
+        {
+          "call": "read_bytes",
+          "enclosing_function": "sha256_file",
+          "first_arg": "",
+          "first_arg_name": "",
+          "lineno": 518
+        },
+        {
+          "call": "read_text",
+          "enclosing_function": "guard_hashes",
+          "first_arg": "",
+          "first_arg_name": "",
+          "lineno": 2670
+        }
+      ],
+      "sha256": "9c0e799850fd30bb0b46bb7841e8f301715745a5c73452e7644055122325de56"
+    },
+    {
+      "count_like_literals": [],
+      "data_path_refs": [
+        {
+          "lineno": 79
+        },
+        {
+          "lineno": 429
+        },
+        {
+          "lineno": 464
+        }
+      ],
+      "file": "sim_v1_3.py",
+      "forbidden_literal_hits": [
+        {
+          "enclosing_function": "load_observed_phl_paths",
+          "lineno": 429,
+          "text": "UNIVERSALIZATION_SERIES.csv"
+        }
+      ],
+      "n_lines": 2395,
+      "open_calls": [
+        {
+          "call": "read_csv",
+          "enclosing_function": "load_observed_phl_paths",
+          "first_arg": "<expr>",
+          "first_arg_name": "",
+          "lineno": 429
+        },
+        {
+          "call": "read_csv",
+          "enclosing_function": "load_observed_phl_paths",
+          "first_arg": "<expr>",
+          "first_arg_name": "",
+          "lineno": 464
+        },
+        {
+          "call": "open",
+          "enclosing_function": "write_panel",
+          "first_arg": "",
+          "first_arg_name": "path",
+          "lineno": 1082
+        },
+        {
+          "call": "open",
+          "enclosing_function": "write_panel_v13",
+          "first_arg": "",
+          "first_arg_name": "path",
+          "lineno": 1510
+        },
+        {
+          "call": "open",
+          "enclosing_function": "write_checks",
+          "first_arg": "<expr>",
+          "first_arg_name": "",
+          "lineno": 1942
+        },
+        {
+          "call": "open",
+          "enclosing_function": "write_checks",
+          "first_arg": "<expr>",
+          "first_arg_name": "",
+          "lineno": 1950
+        },
+        {
+          "call": "open",
+          "enclosing_function": "write_gates",
+          "first_arg": "",
+          "first_arg_name": "path",
+          "lineno": 1975
+        },
+        {
+          "call": "open",
+          "enclosing_function": "write_decomposition",
+          "first_arg": "",
+          "first_arg_name": "path",
+          "lineno": 2005
+        },
+        {
+          "call": "open",
+          "enclosing_function": "write_country_inputs_audit",
+          "first_arg": "",
+          "first_arg_name": "path",
+          "lineno": 2048
+        },
+        {
+          "call": "open",
+          "enclosing_function": "run_sensitivity",
+          "first_arg": "<expr>",
+          "first_arg_name": "",
+          "lineno": 2144
+        },
+        {
+          "call": "read_text",
+          "enclosing_function": "guard_hashes",
+          "first_arg": "",
+          "first_arg_name": "",
+          "lineno": 2171
+        },
+        {
+          "call": "open",
+          "enclosing_function": "load_observed_phl_paths",
+          "first_arg": "",
+          "first_arg_name": "path",
+          "lineno": 426
+        },
+        {
+          "call": "read_bytes",
+          "enclosing_function": "sha256_file",
+          "first_arg": "",
+          "first_arg_name": "",
+          "lineno": 216
+        },
+        {
+          "call": "read_text",
+          "enclosing_function": "guard_hashes",
+          "first_arg": "",
+          "first_arg_name": "",
+          "lineno": 2173
+        }
+      ],
+      "sha256": "70ae8f0eef83358493dad3d3feb2d6a8841c4bb6fad3966627f4eed70e2a9877"
+    }
+  ],
+  "capability_lint": "PASS",
+  "cell": "EXP-16-PARTPROV",
+  "count_blind": {
+    "count_computed": false,
+    "n_33cell_counts_emitted": 0,
+    "n_observed_files_referenced_in_code": 0,
+    "observed_values_in_outputs": 0
+  },
+  "demographic_input": {
+    "n_band_rows": 56,
+    "observed_file_used": false,
+    "reconstruction": "S_path = band_population(primary,t)/band_share[0]; Pop_path = population(t)",
+    "source": "<PROG>/10_massification/extensions/synthetic_2026-11-20/generator_v1_3/results/synthetic_panel_v1_3.csv"
+  },
+  "determinism": "BYTE-IDENTICAL",
+  "files_opened": [
+    {
+      "allowed": true,
+      "count": 1,
+      "op": "open:w",
+      "path": "<OUT>/PARTPROV_DETAIL.csv"
+    },
+    {
+      "allowed": true,
+      "count": 1,
+      "op": "open:w",
+      "path": "<OUT>/PARTPROV_RESULTS.csv"
+    },
+    {
+      "allowed": false,
+      "count": 1,
+      "op": "open:rb",
+      "path": "<PROG>/10_massification/data/UNIVERSALIZATION_SERIES.csv"
+    },
+    {
+      "allowed": true,
+      "count": 3,
+      "op": "io.open:r",
+      "path": "<PROG>/10_massification/extensions/partprov_2026-11-20/code/arms.py"
+    },
+    {
+      "allowed": true,
+      "count": 1,
+      "op": "io.open:rb",
+      "path": "<PROG>/10_massification/extensions/partprov_2026-11-20/code/arms.py"
+    },
+    {
+      "allowed": true,
+      "count": 1,
+      "op": "io.open:r",
+      "path": "<PROG>/10_massification/extensions/partprov_2026-11-20/code/frozen/sim_v1_3.py"
+    },
+    {
+      "allowed": true,
+      "count": 1,
+      "op": "io.open:rb",
+      "path": "<PROG>/10_massification/extensions/partprov_2026-11-20/code/frozen/sim_v1_3.py"
+    },
+    {
+      "allowed": true,
+      "count": 1,
+      "op": "io.open:r",
+      "path": "<PROG>/10_massification/extensions/partprov_2026-11-20/code/frozen/sim_v1_6_repair.py"
+    },
+    {
+      "allowed": true,
+      "count": 1,
+      "op": "io.open:rb",
+      "path": "<PROG>/10_massification/extensions/partprov_2026-11-20/code/frozen/sim_v1_6_repair.py"
+    },
+    {
+      "allowed": true,
+      "count": 3,
+      "op": "io.open:r",
+      "path": "<PROG>/10_massification/extensions/partprov_2026-11-20/code/run_partprov.py"
+    },
+    {
+      "allowed": true,
+      "count": 1,
+      "op": "io.open:rb",
+      "path": "<PROG>/10_massification/extensions/partprov_2026-11-20/code/run_partprov.py"
+    },
+    {
+      "allowed": true,
+      "count": 2,
+      "op": "open:r",
+      "path": "<PROG>/10_massification/extensions/synthetic_2026-11-20/generator_v1_3/results/synthetic_panel_v1_3.csv"
+    },
+    {
+      "allowed": true,
+      "count": 1,
+      "op": "io.open:r",
+      "path": "<PROG>/10_massification/extensions/synthetic_2026-11-20/generator_v1_6_repair/PRE_DECLARATIONS.md"
+    },
+    {
+      "allowed": true,
+      "count": 2,
+      "op": "io.open:rb",
+      "path": "<PROG>/10_massification/extensions/synthetic_2026-11-20/generator_v1_6_repair/PRE_DECLARATIONS.md"
+    },
+    {
+      "allowed": true,
+      "count": 1,
+      "op": "open:r",
+      "path": "<PROG>/10_massification/extensions/synthetic_2026-11-20/generator_v1_6_repair/results/panel_A10_repaired.csv"
+    }
+  ],
+  "frozen_forbidden_literal_functions": [
+    {
+      "file": "sim_v1_6_repair.py",
+      "functions": [
+        "load_observed_phl_paths"
+      ],
+      "n": 1
+    },
+    {
+      "file": "sim_v1_3.py",
+      "functions": [
+        "load_observed_phl_paths"
+      ],
+      "n": 1
+    }
+  ],
+  "frozen_loader_shadowed": "S.load_observed_phl_paths replaced by arms.declared_demographic_path stub before any arm (PRE_DECLARATIONS.md sec.6)",
+  "frozen_v16_predecl": {
+    "n_parameters_checked": 26,
+    "sha256": "6a554dc033828835431f65be2e5e218833fcdb56220baad8fbe53c3324e78991"
+  },
+  "guard": {
+    "blocked_attempts": 1,
+    "forbidden_basename": "UNIVERSALIZATION_SERIES.csv",
+    "guard_selftest": "BLOCKED-AS-REQUIRED",
+    "observed_bytes_read": 0,
+    "observed_file_opened": false,
+    "observed_path_resolved": "<PROG>/10_massification/data/UNIVERSALIZATION_SERIES.csv",
+    "void": false
+  },
+  "imports": {},
+  "label": "SYNTHETIC",
+  "own_code_rule": {
+    "guard_names": [
+      "OBSERVED"
+    ],
+    "open_calls_on_guard_name": 1,
+    "rule": "the forbidden basename may appear only as the module-level guard constant OBSERVED, with exactly ONE open site (the guard self-test)",
+    "verdict": "PASS",
+    "violations": []
+  },
+  "predeclaration": {
+    "frozen_sha256_declared": "d7c81309e8f21ab5e338fafe10adf34691445876ec99b98f3458a2ad7ade49cf",
+    "sha256": "d7c81309e8f21ab5e338fafe10adf34691445876ec99b98f3458a2ad7ade49cf",
+    "verified": true
+  },
+  "reachability_lint": {
+    "A": [
+      "ast_called_names",
+      "ast_scan_files",
+      "declared_demographic_path",
+      "make_arms",
+      "own_code_rule"
+    ],
+    "S": [
+      "run_arm_full",
+      "verify_predecl"
+    ]
+  },
+  "s_ident_p0_vs_frozen_a10": {
+    "max_rel": 4.441941735685292e-10,
+    "n_cells_compared": 315,
+    "passes": true,
+    "tol_rel": 1e-08,
+    "worst": {
+      "column": "admitted_official",
+      "frozen": "1026133.277",
+      "level": "upper_secondary",
+      "run": "1026133.277",
+      "year": 2016
+    }
+  },
+  "static_refusals": [],
+  "verdict": "MIXED",
+  "verdict_per_level": {
+    "lower_secondary": "DUPLICATED-PRIMITIVES",
+    "primary": "DUPLICATED-PRIMITIVES",
+    "upper_secondary": "MIXED"
+  }
+}

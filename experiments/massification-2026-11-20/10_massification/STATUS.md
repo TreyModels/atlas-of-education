@@ -1288,3 +1288,15 @@ in the manifest/guard). Verdict string unchanged; no threshold altered.
   participation-limited gate — citable only as **`REQUIRED-STATE (EXP-17)`** with the **`DERIVED`** target **0.8076**
   (internal-consistency, not a policy target/forecast). **EXP-19 inputs:** required seats/cohort 0.759712 (2018),
   0.873523 (2021); observed-reference variant +0.079/+0.090 pp. **No λ adopted.**
+
+### v) EXP-16 PARTPROV — `MIXED`: duplicated primitives at primary/lower, structural at upper; EXP-18 LICENSED (D149)
+
+- `partprov_2026-11-20/` (predecl `d7c81309…`; count-blind; deterministic; 8/8 SHA). P1 (frozen v1.3 outside-option
+  primitives substituted unchanged) brings `demand_official/cohort` within **±1.0 pp** in **15/15** years at primary
+  and lower-secondary (**gap 0.000000 pp**) → `DUPLICATED-PRIMITIVES`; upper-secondary **4/15** (mean gap 5.992 pp) →
+  `MIXED`. P0 comparator gaps 9.568/12.764/5.709 pp; P2 report-only. P1 unfilled-≥0.10 years: primary 0, lower 0, upper
+  15. **Count-blind guard PASS** (no observed read, no 33-cell count).
+- **D144 tree (MIXED → consistency part only; structural part declared and reported as sensitivity; same closing rule) →
+  EXP-18 LICENSED** (consistency-only repair, observed path as the only target, ≥17/33 ±5 pp + ±5 y crossings,
+  representation carried forward, A00 guard, counterfactual identity, no-fit audit, count-blind; **closing rule: bar
+  missed → generator line closes at representation-only**).

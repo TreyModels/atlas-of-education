@@ -1,0 +1,58 @@
+{
+  "cell": "EXP-16-PARTPROV",
+  "code": {
+    "arms.py": "c29e19e2c188547992d76e4f279603b5bfe2218ea5026a1f70f7c3d4edf182fb",
+    "run_partprov.py": "5b24cfa65edceab81b50f768273afea90c3d009d50b68ff903a2fef7152f3ea9"
+  },
+  "count_blind": {
+    "blocked_attempts": 1,
+    "count_computed": false,
+    "guard_selftest": "BLOCKED-AS-REQUIRED",
+    "observed_file_opened": false
+  },
+  "date": "2026-11-21",
+  "determinism": {
+    "files": [
+      "PARTPROV_RESULTS.csv",
+      "PARTPROV_DETAIL.csv",
+      "COUNT_BLIND_AUDIT.json"
+    ],
+    "n": 3,
+    "n_identical": 3,
+    "status": "BYTE-IDENTICAL"
+  },
+  "files": [
+    "results/COUNT_BLIND_AUDIT.json",
+    "results/PARTPROV_DETAIL.csv",
+    "results/PARTPROV_RESULTS.csv",
+    "results/determinism_run2/COUNT_BLIND_AUDIT.json",
+    "results/determinism_run2/PARTPROV_DETAIL.csv",
+    "results/determinism_run2/PARTPROV_RESULTS.csv"
+  ],
+  "frozen_inputs": {
+    "copied_sim_v1_3.py": "70ae8f0eef83358493dad3d3feb2d6a8841c4bb6fad3966627f4eed70e2a9877",
+    "copied_sim_v1_6_repair.py": "9c0e799850fd30bb0b46bb7841e8f301715745a5c73452e7644055122325de56",
+    "panel_A10_repaired.csv": "349cf637f1415b7809c17696dea4e842434f846b6be607c8d24047f9f0d1a8c4",
+    "sim_v1_3.py": "70ae8f0eef83358493dad3d3feb2d6a8841c4bb6fad3966627f4eed70e2a9877",
+    "sim_v1_6_repair.py": "9c0e799850fd30bb0b46bb7841e8f301715745a5c73452e7644055122325de56",
+    "synthetic_panel_v1_3.csv": "47d4b082f4ba5838cc20fbb09e59dd3dd847ad25393b1ce091069c94496657e3",
+    "v16_PRE_DECLARATIONS.md": "6a554dc033828835431f65be2e5e218833fcdb56220baad8fbe53c3324e78991"
+  },
+  "label": "SYNTHETIC",
+  "p2_status": "reported, never adopted",
+  "predeclaration": {
+    "file": "PRE_DECLARATIONS.md",
+    "n_declared_scalars_checked": 18,
+    "sha256": "d7c81309e8f21ab5e338fafe10adf34691445876ec99b98f3458a2ad7ade49cf"
+  },
+  "question": "is the participation margin a duplicated parameterisation or a structural consequence of the declared tier menu?",
+  "verdict": {
+    "aggregate": "MIXED",
+    "aggregation_rule": "unanimous_else_MIXED",
+    "per_level": {
+      "lower_secondary": "DUPLICATED-PRIMITIVES",
+      "primary": "DUPLICATED-PRIMITIVES",
+      "upper_secondary": "MIXED"
+    }
+  }
+}
