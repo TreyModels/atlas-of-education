@@ -379,3 +379,11 @@ B1 — pre-run SHA snapshot reconstructed (30/33 match, original hash `89638b39�
   frozen design artifact is preserved).
 - Next slate: EXP-11 KAPPA-FWD, EXP-12 FLOOR-CLOSE, EXP-13 LOWER-DEF (parallel), EXP-14 V16-REPAIR (after 11+13),
   EXP-15 CONV-REG (drop-first). HELD queue complete; no proxy substitution.
+
+## 2026-11-21 — EXP-11 KAPPA-FWD: WINDOW-ONLY; κ is not a forward constraint (D138)
+
+- `kappa_fwd_2026-11-20/` (predecl `bda79ac4…`, deterministic, 14/14 SHA): PHL slope −0.000704 (pass) but half-shift
+  2.13 pp (fail) → κ-TRENDING, hold-out 2/2; KOR slope +0.002875 / shift 0.64 pass → κ-STABLE but 0/3 forward cells; KHM
+  slope +0.017318 / shift 7.44 fail; CHN reported only. Aggregate 3/7 within strict bound, 4 violations → BOUND-BREAKS;
+  falsifier tripped; verdict invariant. **V16-REPAIR: κ may not be a forward constraint** — within-window trajectory only
+  (never extrapolated) or dropped. No re-fit.

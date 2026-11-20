@@ -1195,3 +1195,13 @@ in the manifest/guard). Verdict string unchanged; no threshold altered.
   preserved).
 - **Next slate (D136):** EXP-11 KAPPA-FWD (#1), EXP-12 FLOOR-CLOSE (#2), EXP-13 LOWER-DEF (#3), EXP-14 V16-REPAIR (#4,
   after 11+13), EXP-15 CONV-REG (#5 drop-first). HELD ask queue complete (D135); no proxy substitution.
+
+### q) EXP-11 KAPPA-FWD — `WINDOW-ONLY`: the per-system transition ratio is a within-window description, not a forward constraint (D138)
+
+- `kappa_fwd_2026-11-20/` (predecl `bda79ac4…`; deterministic; 14/14 SHA). **PHL** slope **−0.000704** (stationarity
+  slope passes) but half-median shift **2.13 pp** (fails ≤2.0) → `κ-TRENDING`, hold-out 2/2; **KOR** slope **+0.002875**
+  and shift **0.64 pp** pass → `κ-STABLE` but **0/3** forward cells; **KHM** slope **+0.017318** and shift **7.44 pp**
+  fail → `κ-TRENDING`, hold-out 1/2; **CHN** reported only (D133). **Aggregate 3/7 within strict bound, 4 violations →
+  `BOUND-BREAKS`; falsifier tripped**; verdict invariant across declared readings.
+- **V16-REPAIR: κ may NOT be a forward constraint** — only a declared within-window trajectory (never extrapolated) or
+  dropped. The D133 per-system register stays the descriptive record, not a projection input.

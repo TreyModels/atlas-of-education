@@ -1,0 +1,254 @@
+{
+  "experiment": "EXP-11 KAPPA-FWD",
+  "brief": "Council brief 023 (D136 #1); SYNTHESIS_023.md section 6.1 EXP-11 KAPPA-FWD, rank #1",
+  "worker": "KF",
+  "date": "2026-11-21",
+  "status": "COMPLETE",
+  "label": "OBSERVED (completion series) + DERIVED (ratio, slope, median, bound, excess, verdict)",
+  "statement": "Measurement audit of an observed series. The per-system lower->upper transition ratio kappa is tested for forward-usability (leg (a) stationarity; leg (b) temporal hold-out on the 7 post-2020 cells with the pre-2021 kappa) and is NOT asserted to cause anything. No causal claim; no direction claim. D63 remains UNABLE as to cause. EXP-6 is not re-scored (different estimand). No threshold, bar, split rule, pairing rule or verdict string was changed after results; no re-fit; one estimand. VERDICT: WINDOW-ONLY.",
+  "predeclaration": {
+    "file": "PRE_DECLARATIONS.md",
+    "sha256": "bda79ac4c58306f8dcb1f41dd69d1f301e4d780cbecec8c70341e7aa8cac71b2",
+    "frozen_before_run": true,
+    "hash_file": "PRE_DECLARATIONS.sha256",
+    "embedded_in_script": "code/run_kappa_fwd.py PREDECL_SHA256",
+    "no_threshold_change_after_results": true
+  },
+  "inputs": [
+    {
+      "path": "10_massification/data/UNIVERSALIZATION_SERIES.csv",
+      "sha256": "85bc869396ebfcb39e3e1a21a31af219e75a07326c738a51d2bfdbe536737ddb"
+    },
+    {
+      "path": "10_massification/extensions/pipe_loo_2026-11-20/results/PIPE_LOO_PAIRS.csv",
+      "sha256": "692ca7c01b8b3a7105e84339a87f97029b6a50e277681bdcdbe0f02bf027600f"
+    },
+    {
+      "path": "08_council/brief_023/SYNTHESIS_023.md",
+      "sha256": "39e666cffbe3950d43460ba177a36501d53fd0ec8083cd5c9abcbd1c7aeed44c"
+    },
+    {
+      "path": "08_council/DECISIONS.md",
+      "sha256": "15c564cffb1d9994386873b7daf9793407745da5477d437ef3adcb9efba8771c"
+    }
+  ],
+  "verdict": {
+    "verdict": "WINDOW-ONLY",
+    "rule": "FORWARD-USABLE iff PHL and KOR and KHM are each kappa-STABLE AND the hold-out is BOUND-HOLDS (>=6 of 7); otherwise WINDOW-ONLY. UNDETERMINED only on a mechanical block.",
+    "leg_a_stationarity": "FAIL (not all of PHL/KOR/KHM are kappa-STABLE)",
+    "leg_b_holdout": "BOUND-BREAKS (3/7 within)",
+    "n_holdout_cells": 7,
+    "n_within_bound": 3,
+    "n_violations": 4,
+    "falsifier_tripped": true,
+    "falsifier_arms": ">=2 hold-out violations (V=4); the PHL-slope arm did NOT fire (PHL slope -0.000704/yr)",
+    "branch_fired": "WINDOW-ONLY -> kappa may NOT enter V16-REPAIR as a forward constraint; it may enter only as a declared within-window trajectory input (never extrapolated) or not at all; every 2025+ statement inherits the limit and must be labelled scenario/trajectory.",
+    "no_single_global_kappa": "D133: a single kappa overstates KHM by 0.354; no global kappa is computed or used",
+    "chn_status": "reported, NOT a forward constraint (D133 non-stationary); 0 post-2020 cells; excluded from the conjunction, the 7-cell denominator and the falsifier"
+  },
+  "per_system": {
+    "PHL": {
+      "n_pairs": 8,
+      "n_pre2021": 6,
+      "n_holdout": 2,
+      "slope_ratio_per_year": -0.000704,
+      "slope_within_bar_0p005": true,
+      "kappa_half1": 0.959557,
+      "kappa_half2": 0.938209,
+      "half_median_shift_pp": 2.1348,
+      "half_within_bar_2p0pp": false,
+      "leg_a_stationarity": "kappa-TRENDING",
+      "kappa_full": 0.949135,
+      "kappa_pre2021": 0.959557,
+      "kappa_full_declared": 0.9491,
+      "kappa_full_matches_declared": true,
+      "n_within_bound": 2,
+      "n_holdout_violations": 0,
+      "forward_constraint": "FORWARD-CONSTRAINT-ELIGIBLE",
+      "note": "leg (a) per S4.4; leg (b) per S5.2-S5.4; slope is OLS of ratio on upper_year, unweighted, no pair removed"
+    },
+    "KOR": {
+      "n_pairs": 19,
+      "n_pre2021": 16,
+      "n_holdout": 3,
+      "slope_ratio_per_year": 0.002875,
+      "slope_within_bar_0p005": true,
+      "kappa_half1": 0.986141,
+      "kappa_half2": 0.992495,
+      "half_median_shift_pp": 0.6354,
+      "half_within_bar_2p0pp": true,
+      "leg_a_stationarity": "kappa-STABLE",
+      "kappa_full": 0.989758,
+      "kappa_pre2021": 0.988665,
+      "kappa_full_declared": 0.9898,
+      "kappa_full_matches_declared": true,
+      "n_within_bound": 0,
+      "n_holdout_violations": 3,
+      "forward_constraint": "FORWARD-CONSTRAINT-ELIGIBLE",
+      "note": "leg (a) per S4.4; leg (b) per S5.2-S5.4; slope is OLS of ratio on upper_year, unweighted, no pair removed"
+    },
+    "KHM": {
+      "n_pairs": 11,
+      "n_pre2021": 9,
+      "n_holdout": 2,
+      "slope_ratio_per_year": 0.017318,
+      "slope_within_bar_0p005": false,
+      "kappa_half1": 0.53323,
+      "kappa_half2": 0.607591,
+      "half_median_shift_pp": 7.4361,
+      "half_within_bar_2p0pp": false,
+      "leg_a_stationarity": "kappa-TRENDING",
+      "kappa_full": 0.594984,
+      "kappa_pre2021": 0.594984,
+      "kappa_full_declared": 0.595,
+      "kappa_full_matches_declared": true,
+      "n_within_bound": 1,
+      "n_holdout_violations": 1,
+      "forward_constraint": "FORWARD-CONSTRAINT-ELIGIBLE",
+      "note": "leg (a) per S4.4; leg (b) per S5.2-S5.4; slope is OLS of ratio on upper_year, unweighted, no pair removed"
+    },
+    "CHN": {
+      "n_pairs": 5,
+      "n_pre2021": 5,
+      "n_holdout": 0,
+      "slope_ratio_per_year": 0.041728,
+      "slope_within_bar_0p005": false,
+      "kappa_half1": 0.680716,
+      "kappa_half2": 0.937288,
+      "half_median_shift_pp": 25.6573,
+      "half_within_bar_2p0pp": false,
+      "leg_a_stationarity": "kappa-TRENDING",
+      "kappa_full": 0.722222,
+      "kappa_pre2021": 0.722222,
+      "kappa_full_declared": 0.7222,
+      "kappa_full_matches_declared": true,
+      "n_within_bound": null,
+      "n_holdout_violations": null,
+      "forward_constraint": "NOT-A-FORWARD-CONSTRAINT (D133: CHN non-stationary)",
+      "note": "leg (a) per S4.4; leg (b) per S5.2-S5.4; slope is OLS of ratio on upper_year, unweighted, no pair removed; CHN reported in full, excluded from the forward conjunction, the 7-cell denominator and the falsifier (S6); leg (b) N/A -- no post-2020 cell"
+    }
+  },
+  "checks": {
+    "verbatim_block_synthesis_023_lines_403_434": "IDENTICAL (byte-for-byte, re-checked by the script on every run)",
+    "pairing_structure": "43 pairs (PHL 8, KOR 19, KHM 11, CHN 5), 16 upper years dropped -- MATCH",
+    "crosscheck_pipe_loo_pairs": "43/43 ratio, lower_year_used and year_offset_used reproduce (4 dp tolerance)",
+    "declared_medians_reconciliation": "8/8 MATCH at 4 dp (kappa_full and kappa_pre, all four systems)",
+    "labels": "OBSERVED series; DERIVED quantities; no fitted parameter anywhere",
+    "non_entrants": [
+      "HKG",
+      "JPN"
+    ]
+  },
+  "determinism": {
+    "rng": "none",
+    "network": "none",
+    "clock_in_results": "none",
+    "runs": 2,
+    "byte_identical": true,
+    "files": [
+      {
+        "file": "results/KAPPA_FWD_RESULTS.csv",
+        "run1_sha256": "da5a78e2113a618da9f4b315bbecbbd8be6227c33e1cb572493d669244ac67a4",
+        "run2_sha256": "da5a78e2113a618da9f4b315bbecbbd8be6227c33e1cb572493d669244ac67a4",
+        "byte_identical": true
+      },
+      {
+        "file": "results/KAPPA_FWD_DETAIL.csv",
+        "run1_sha256": "a52c322726c8a20b2867e5468e052ba20ff302f8b1f8a3d9f970d12948cce004",
+        "run2_sha256": "a52c322726c8a20b2867e5468e052ba20ff302f8b1f8a3d9f970d12948cce004",
+        "byte_identical": true
+      },
+      {
+        "file": "results/KAPPA_FWD_SECONDARY.csv",
+        "run1_sha256": "d0ef0a56f515d8126f97480ec75bf77e32823ff1cfb7f7612bd2eb8ffb9fa774",
+        "run2_sha256": "d0ef0a56f515d8126f97480ec75bf77e32823ff1cfb7f7612bd2eb8ffb9fa774",
+        "byte_identical": true
+      },
+      {
+        "file": "results/console.txt",
+        "run1_sha256": "a8c361e6dfc74d2c09d6dbdff681da2f239d7f1f27f7128c28bd5ed9637c5a95",
+        "run2_sha256": "a8c361e6dfc74d2c09d6dbdff681da2f239d7f1f27f7128c28bd5ed9637c5a95",
+        "byte_identical": true
+      }
+    ]
+  },
+  "outputs": [
+    {
+      "path": "FINDINGS.md",
+      "bytes": 15340,
+      "sha256": "024d049b763eda29635ab68c954c0850e8ecd22df5daf42421e480ccf443603c"
+    },
+    {
+      "path": "PRE_DECLARATIONS.md",
+      "bytes": 29961,
+      "sha256": "bda79ac4c58306f8dcb1f41dd69d1f301e4d780cbecec8c70341e7aa8cac71b2"
+    },
+    {
+      "path": "PRE_DECLARATIONS.sha256",
+      "bytes": 86,
+      "sha256": "f521c98ab5881ebe9b89c8d7c4dfe3af03abda1edbddbabbd652985ae0899d83"
+    },
+    {
+      "path": "code/make_manifest.py",
+      "bytes": 9788,
+      "sha256": "3561923be20b56bd409694c09b8520f0d969ba040dbe96e4ce1defc682c915c7"
+    },
+    {
+      "path": "code/run_kappa_fwd.py",
+      "bytes": 35459,
+      "sha256": "1e68ec850dfb85535c976455c2e5a4ea2fc734a39c063c9bf62afe8238d615eb"
+    },
+    {
+      "path": "results/KAPPA_FWD_DETAIL.csv",
+      "bytes": 7412,
+      "sha256": "a52c322726c8a20b2867e5468e052ba20ff302f8b1f8a3d9f970d12948cce004"
+    },
+    {
+      "path": "results/KAPPA_FWD_RESULTS.csv",
+      "bytes": 2733,
+      "sha256": "da5a78e2113a618da9f4b315bbecbbd8be6227c33e1cb572493d669244ac67a4"
+    },
+    {
+      "path": "results/KAPPA_FWD_SECONDARY.csv",
+      "bytes": 15683,
+      "sha256": "d0ef0a56f515d8126f97480ec75bf77e32823ff1cfb7f7612bd2eb8ffb9fa774"
+    },
+    {
+      "path": "results/console.txt",
+      "bytes": 5915,
+      "sha256": "a8c361e6dfc74d2c09d6dbdff681da2f239d7f1f27f7128c28bd5ed9637c5a95"
+    },
+    {
+      "path": "results/determinism_run2/KAPPA_FWD_DETAIL.csv",
+      "bytes": 7412,
+      "sha256": "a52c322726c8a20b2867e5468e052ba20ff302f8b1f8a3d9f970d12948cce004"
+    },
+    {
+      "path": "results/determinism_run2/KAPPA_FWD_RESULTS.csv",
+      "bytes": 2733,
+      "sha256": "da5a78e2113a618da9f4b315bbecbbd8be6227c33e1cb572493d669244ac67a4"
+    },
+    {
+      "path": "results/determinism_run2/KAPPA_FWD_SECONDARY.csv",
+      "bytes": 15683,
+      "sha256": "d0ef0a56f515d8126f97480ec75bf77e32823ff1cfb7f7612bd2eb8ffb9fa774"
+    },
+    {
+      "path": "results/determinism_run2/console.txt",
+      "bytes": 5915,
+      "sha256": "a8c361e6dfc74d2c09d6dbdff681da2f239d7f1f27f7128c28bd5ed9637c5a95"
+    }
+  ],
+  "write_scope": "this directory only; no existing repository file modified",
+  "limits": [
+    "n per system 8/19/11/5 pairs; half-sample medians rest on 4/9/5/2 pairs per side",
+    "PHL half-sample shift 2.1348 pp vs the 2.0 pp bar -- a boundary call, not a large drift",
+    "KHM leg (a) label is carried substantially by the 2000 collapse pair (ratio 0.1389); a POST-HOC, non-verdict-bearing exclusion gives slope +0.0037/yr and shift 1.26 pp; the pair was NOT removed (that would be a re-fit) and the verdict does not depend on it",
+    "leg (b) is one-sided: it can only detect upward breaches; PHL's downward drift is invisible to it",
+    "KOR breaches occur at saturation (lower series 99.90-100.00); no second saturation-regime system is on disk (D135 HELD ask, not requested)",
+    "hold-out horizon is 1-4 years past the 2020 cut, 2-3 cells per system; no extrapolation computed",
+    "18/43 pairs use a +/-1 y offset; the literal lower_{t-3} is unobservable in 4 of 7 hold-out cells and was NOT imputed",
+    "four systems, one data vintage; HKG/JPN non-entrant; no representativeness claim",
+    "WINDOW-ONLY bounds the use of kappa; it is not a falsification of the pipeline reclassification (brief 6.1 item 6)"
+  ]
+}

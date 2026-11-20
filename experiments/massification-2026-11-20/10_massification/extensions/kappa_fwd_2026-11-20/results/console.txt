@@ -1,0 +1,78 @@
+====================================================================================================
+EXP-11 KAPPA-FWD -- worker KF
+brief: Council brief 023 (D136 #1); SYNTHESIS_023.md section 6.1, EXP-11 KAPPA-FWD, rank #1
+====================================================================================================
+
+[PRE-FLIGHT] predeclaration + input hash verification (S11)
+  PRE_DECLARATIONS.md sha256 : bda79ac4c58306f8dcb1f41dd69d1f301e4d780cbecec8c70341e7aa8cac71b2
+  embedded constant          : bda79ac4c58306f8dcb1f41dd69d1f301e4d780cbecec8c70341e7aa8cac71b2
+  OK (predeclaration is the one this script implements)
+  08_council/DECISIONS.md                                                        15c564cffb1d9994... OK
+  08_council/brief_023/SYNTHESIS_023.md                                          39e666cffbe3950d... OK
+  10_massification/data/UNIVERSALIZATION_SERIES.csv                              85bc869396ebfcb3... OK
+  10_massification/extensions/pipe_loo_2026-11-20/results/PIPE_LOO_PAIRS.csv     692ca7c01b8b3a71... OK
+
+[VERBATIM CHECK] PRE_DECLARATIONS.md fence body vs SYNTHESIS_023.md lines 403-434: IDENTICAL (32 lines)
+
+[DATA] observed completion series loaded (status=observed only; no interpolation)
+  PHL  upper years=11  lower years=11
+  KOR  upper years=24  lower years=21
+  KHM  upper years=18  lower years= 8
+  CHN  upper years= 6  lower years= 6
+  NON-ENTRANT (declared, zero completion pairs, never imputed): HKG, JPN
+
+[PAIRING] rule: t-3 exact, else nearest within +/-1 y (ties -> earlier year), else drop
+  PHL pairs= 8 dropped= 3  (u1999y, u2000y, u2022y)
+  KOR pairs=19 dropped= 5  (u2000y, u2001y, u2002y, u2003y, u2004y)
+  KHM pairs=11 dropped= 7  (u1996y, u1997y, u2001y, u2005y, u2015y, u2019y, u2020y)
+  CHN pairs= 5 dropped= 1  (u2010y)
+  TOTAL pairs=43 dropped=16  (declared: 43 / 16)
+  structure check: MATCH
+[CROSSCHECK] re-derived pairs vs PIPE_LOO_PAIRS.csv (4 dp tolerance 5e-05, years exact): 43/43 match
+  the recomputed value stands; this checks the INPUT pairs, it does not re-score EXP-6 (S9).
+
+[LEG (a)] stationarity (both bars conjunctive; slope bar 0.005/yr, half bar 2.0 pp)
+  PHL n= 8  slope=-0.000704/yr (r2=0.0111)  |slope|<=bar:TRUE   half h=4 middle=n/a  k1=0.959557 k2=0.938209 shift=2.1348 pp  <=bar:FALSE  -> kappa-TRENDING
+  KOR n=19  slope=+0.002875/yr (r2=0.1780)  |slope|<=bar:TRUE   half h=9 middle=2014  k1=0.986141 k2=0.992495 shift=0.6354 pp  <=bar:TRUE   -> kappa-STABLE
+  KHM n=11  slope=+0.017318/yr (r2=0.5135)  |slope|<=bar:FALSE  half h=5 middle=2013  k1=0.533230 k2=0.607591 shift=7.4361 pp  <=bar:FALSE  -> kappa-TRENDING
+  CHN n= 5  slope=+0.041728/yr (r2=0.9151)  |slope|<=bar:FALSE  half h=2 middle=2016  k1=0.680716 k2=0.937288 shift=25.6573 pp  <=bar:FALSE  -> kappa-TRENDING
+
+[LEG (b)] temporal hold-out: train kappa on upper_year<=2020, bound = kappa_pre * lower_used
+  PHL kappa_pre=0.959557 (n_pre=6)  hold-out cells=2  within bound=2  violations=0
+      2023: upper=   71.9293  lower_used=2021=80.8960  bound=   77.6244  excess= -5.6951  within
+      2024: upper=   75.0253  lower_used=2021=80.8960  bound=   77.6244  excess= -2.5991  within
+  KOR kappa_pre=0.988665 (n_pre=16)  hold-out cells=3  within bound=0  violations=3
+      2021: upper=   99.5051  lower_used=2018=99.9557  bound=   98.8226  excess= +0.6824  VIOLATION
+      2022: upper=   99.5028  lower_used=2019=99.9856  bound=   98.8523  excess= +0.6506  VIOLATION
+      2023: upper=   99.4582  lower_used=2020=100.0000  bound=   98.8665  excess= +0.5917  VIOLATION
+  KHM kappa_pre=0.594984 (n_pre=9)  hold-out cells=2  within bound=1  violations=1
+      2021: upper=   26.6530  lower_used=2019=45.8744  bound=   27.2945  excess= -0.6415  within
+      2023: upper=   27.8729  lower_used=2019=45.8744  bound=   27.2945  excess= +0.5783  VIOLATION
+  CHN kappa_pre=0.722222 (n_pre=5)  hold-out cells=0  within bound=0  violations=0  [N/A -- no post-2020 cell]
+  AGGREGATE over the 7-cell denominator (PHL+KOR+KHM; CHN contributes 0, D133): within=3/7  violations=4  -> BOUND-BREAKS
+  leg (a) all of PHL/KOR/KHM kappa-STABLE: FALSE
+
+[SENSITIVITIES] declared non-verdict-bearing (S4.3, S5.5)
+  PHL S-A1 (LOO-kappa median shift)=0.0291 pp   S-A2 (median|LOO err| shift)=1.9439 pp   primary half shift=2.1348 pp
+  KOR S-A1 (LOO-kappa median shift)=0.0709 pp   S-A2 (median|LOO err| shift)=0.1128 pp   primary half shift=0.6354 pp
+  KHM S-A1 (LOO-kappa median shift)=1.3296 pp   S-A2 (median|LOO err| shift)=2.0936 pp   primary half shift=7.4361 pp
+  CHN S-A1 (LOO-kappa median shift)=9.5868 pp   S-A2 (median|LOO err| shift)=7.5458 pp   primary half shift=25.6573 pp
+  S-B1 (±5.0 pp slack band, EXP-6 convention): 7/7 cells within -> BOUND-HOLDS (primary strict: 3/7 -> BOUND-BREAKS)
+
+[RECONCILIATION] recomputed vs declared medians (4 dp; the RECOMPUTED value stands -- S3)
+  PHL kappa_full=0.9491 vs declared 0.9491 [MATCH]   kappa_pre=0.9596 vs declared 0.9596 [MATCH]
+  KOR kappa_full=0.9898 vs declared 0.9898 [MATCH]   kappa_pre=0.9887 vs declared 0.9887 [MATCH]
+  KHM kappa_full=0.5950 vs declared 0.5950 [MATCH]   kappa_pre=0.5950 vs declared 0.5950 [MATCH]
+  CHN kappa_full=0.7222 vs declared 0.7222 [MATCH]   kappa_pre=0.7222 vs declared 0.7222 [MATCH]
+
+[VERDICT] WINDOW-ONLY
+  rule: FORWARD-USABLE iff PHL & KOR & KHM all kappa-STABLE AND BOUND-HOLDS (>= 6 of 7); else WINDOW-ONLY (S7.1)
+  legs: leg (a) = FAIL ; leg (b) = BOUND-BREAKS
+  falsifier tripped: TRUE  arms: >=2 hold-out violations (V=4)
+  consequence (S7.4): kappa may not be a forward constraint in V16-REPAIR; it may enter only as a declared within-window trajectory input, or not at all.
+  labels: OBSERVED series; every ratio/slope/median/bound/error is DERIVED. No causal claim, no direction claim. D63 stays UNABLE as to cause. EXP-6 not re-scored.
+
+[WRITE] 3 result files written to the output directory
+  KAPPA_FWD_RESULTS.csv
+  KAPPA_FWD_DETAIL.csv
+  KAPPA_FWD_SECONDARY.csv

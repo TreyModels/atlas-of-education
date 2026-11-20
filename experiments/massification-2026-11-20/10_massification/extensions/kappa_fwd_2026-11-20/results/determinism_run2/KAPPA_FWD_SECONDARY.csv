@@ -1,0 +1,79 @@
+row_type,iso3,entity,year,statistic,value,unit,label,note
+S-A1,PHL,Philippines,,"median LOO-kappa shift, first vs second half",0.0291,pp,DERIVED (declared non-verdict-bearing),"S4.3: median of each half's per-pair LOO kappa. DEGENERATE BY CONSTRUCTION: LOO kappa is the median of the other n-1 pairs, so it tracks the full-sample kappa in every pair; reported to expose the degeneracy, never used for a label"
+S-A2,PHL,Philippines,,"median |LOO error| shift, first vs second half",1.9439,pp,DERIVED (declared non-verdict-bearing),"S4.3: accuracy drift over time, NOT kappa's level drift; not the leg (a) object"
+PRIMARY-HALF,PHL,Philippines,,|median ratio(second half) - median ratio(first half)| x 100,2.1348,pp,"DERIVED (verdict-bearing, S4.3)",k1=0.959557 k2=0.938209 | bar 2.0 pp | FAIL
+S-A1,KOR,"Korea, Rep.",,"median LOO-kappa shift, first vs second half",0.0709,pp,DERIVED (declared non-verdict-bearing),"S4.3: median of each half's per-pair LOO kappa. DEGENERATE BY CONSTRUCTION: LOO kappa is the median of the other n-1 pairs, so it tracks the full-sample kappa in every pair; reported to expose the degeneracy, never used for a label"
+S-A2,KOR,"Korea, Rep.",,"median |LOO error| shift, first vs second half",0.1128,pp,DERIVED (declared non-verdict-bearing),"S4.3: accuracy drift over time, NOT kappa's level drift; not the leg (a) object"
+PRIMARY-HALF,KOR,"Korea, Rep.",,|median ratio(second half) - median ratio(first half)| x 100,0.6354,pp,"DERIVED (verdict-bearing, S4.3)",k1=0.986141 k2=0.992495 | bar 2.0 pp | PASS
+S-A1,KHM,Cambodia,,"median LOO-kappa shift, first vs second half",1.3296,pp,DERIVED (declared non-verdict-bearing),"S4.3: median of each half's per-pair LOO kappa. DEGENERATE BY CONSTRUCTION: LOO kappa is the median of the other n-1 pairs, so it tracks the full-sample kappa in every pair; reported to expose the degeneracy, never used for a label"
+S-A2,KHM,Cambodia,,"median |LOO error| shift, first vs second half",2.0936,pp,DERIVED (declared non-verdict-bearing),"S4.3: accuracy drift over time, NOT kappa's level drift; not the leg (a) object"
+PRIMARY-HALF,KHM,Cambodia,,|median ratio(second half) - median ratio(first half)| x 100,7.4361,pp,"DERIVED (verdict-bearing, S4.3)",k1=0.533230 k2=0.607591 | bar 2.0 pp | FAIL
+S-A1,CHN,China,,"median LOO-kappa shift, first vs second half",9.5868,pp,DERIVED (declared non-verdict-bearing),"S4.3: median of each half's per-pair LOO kappa. DEGENERATE BY CONSTRUCTION: LOO kappa is the median of the other n-1 pairs, so it tracks the full-sample kappa in every pair; reported to expose the degeneracy, never used for a label"
+S-A2,CHN,China,,"median |LOO error| shift, first vs second half",7.5458,pp,DERIVED (declared non-verdict-bearing),"S4.3: accuracy drift over time, NOT kappa's level drift; not the leg (a) object"
+PRIMARY-HALF,CHN,China,,|median ratio(second half) - median ratio(first half)| x 100,25.6573,pp,"DERIVED (verdict-bearing, S4.3)",k1=0.680716 k2=0.937288 | bar 2.0 pp | FAIL
+S-B1,PHL,Philippines,2023,excess over kappa_pre bound,-5.6951,pp,DERIVED (declared non-verdict-bearing),strict violation: FALSE | within +/-5.0 pp slack: TRUE | primary verdict uses the strict reading
+S-B1,PHL,Philippines,2024,excess over kappa_pre bound,-2.5991,pp,DERIVED (declared non-verdict-bearing),strict violation: FALSE | within +/-5.0 pp slack: TRUE | primary verdict uses the strict reading
+S-B1,KOR,"Korea, Rep.",2021,excess over kappa_pre bound,+0.6824,pp,DERIVED (declared non-verdict-bearing),strict violation: TRUE | within +/-5.0 pp slack: TRUE | primary verdict uses the strict reading
+S-B1,KOR,"Korea, Rep.",2022,excess over kappa_pre bound,+0.6506,pp,DERIVED (declared non-verdict-bearing),strict violation: TRUE | within +/-5.0 pp slack: TRUE | primary verdict uses the strict reading
+S-B1,KOR,"Korea, Rep.",2023,excess over kappa_pre bound,+0.5917,pp,DERIVED (declared non-verdict-bearing),strict violation: TRUE | within +/-5.0 pp slack: TRUE | primary verdict uses the strict reading
+S-B1,KHM,Cambodia,2021,excess over kappa_pre bound,-0.6415,pp,DERIVED (declared non-verdict-bearing),strict violation: FALSE | within +/-5.0 pp slack: TRUE | primary verdict uses the strict reading
+S-B1,KHM,Cambodia,2023,excess over kappa_pre bound,+0.5783,pp,DERIVED (declared non-verdict-bearing),strict violation: TRUE | within +/-5.0 pp slack: TRUE | primary verdict uses the strict reading
+S-B2,PHL,Philippines,2023,literal t-3 lower observation,UNAVAILABLE_NO_OBSERVED_LOWER_AT_T_MINUS_3,,OBSERVED (availability) / DERIVED,literal lower=n/a literal bound=n/a ; primary uses the pairing-rule lower (2021) for every cell; an unobserved t-3 is NOT imputed (S5.3)
+S-B2,PHL,Philippines,2024,literal t-3 lower observation,AVAILABLE,,OBSERVED (availability) / DERIVED,literal lower=80.8960 literal bound=77.6244 ; primary uses the pairing-rule lower (2021) for every cell; an unobserved t-3 is NOT imputed (S5.3)
+S-B2,KOR,"Korea, Rep.",2021,literal t-3 lower observation,AVAILABLE,,OBSERVED (availability) / DERIVED,literal lower=99.9557 literal bound=98.8226 ; primary uses the pairing-rule lower (2018) for every cell; an unobserved t-3 is NOT imputed (S5.3)
+S-B2,KOR,"Korea, Rep.",2022,literal t-3 lower observation,AVAILABLE,,OBSERVED (availability) / DERIVED,literal lower=99.9856 literal bound=98.8523 ; primary uses the pairing-rule lower (2019) for every cell; an unobserved t-3 is NOT imputed (S5.3)
+S-B2,KOR,"Korea, Rep.",2023,literal t-3 lower observation,AVAILABLE,,OBSERVED (availability) / DERIVED,literal lower=100.0000 literal bound=98.8665 ; primary uses the pairing-rule lower (2020) for every cell; an unobserved t-3 is NOT imputed (S5.3)
+S-B2,KHM,Cambodia,2021,literal t-3 lower observation,UNAVAILABLE_NO_OBSERVED_LOWER_AT_T_MINUS_3,,OBSERVED (availability) / DERIVED,literal lower=n/a literal bound=n/a ; primary uses the pairing-rule lower (2019) for every cell; an unobserved t-3 is NOT imputed (S5.3)
+S-B2,KHM,Cambodia,2023,literal t-3 lower observation,UNAVAILABLE_NO_OBSERVED_LOWER_AT_T_MINUS_3,,OBSERVED (availability) / DERIVED,literal lower=n/a literal bound=n/a ; primary uses the pairing-rule lower (2019) for every cell; an unobserved t-3 is NOT imputed (S5.3)
+S-B3,PHL,Philippines,2023,ratio - kappa_pre,-0.070400,ratio,DERIVED (descriptive),dimensionless; direction of the cell's miss only -- no direction claim about causes
+S-B3,PHL,Philippines,2024,ratio - kappa_pre,-0.032129,ratio,DERIVED (descriptive),dimensionless; direction of the cell's miss only -- no direction claim about causes
+S-B3,KOR,"Korea, Rep.",2021,ratio - kappa_pre,+0.006827,ratio,DERIVED (descriptive),dimensionless; direction of the cell's miss only -- no direction claim about causes
+S-B3,KOR,"Korea, Rep.",2022,ratio - kappa_pre,+0.006507,ratio,DERIVED (descriptive),dimensionless; direction of the cell's miss only -- no direction claim about causes
+S-B3,KOR,"Korea, Rep.",2023,ratio - kappa_pre,+0.005917,ratio,DERIVED (descriptive),dimensionless; direction of the cell's miss only -- no direction claim about causes
+S-B3,KHM,Cambodia,2021,ratio - kappa_pre,-0.013985,ratio,DERIVED (descriptive),dimensionless; direction of the cell's miss only -- no direction claim about causes
+S-B3,KHM,Cambodia,2023,ratio - kappa_pre,+0.012607,ratio,DERIVED (descriptive),dimensionless; direction of the cell's miss only -- no direction claim about causes
+CROSSCHECK,PHL,Philippines,2003,ratio vs PIPE_LOO_PAIRS.csv,-0.00001917,ratio,DERIVED (reproducibility check; recomputed value stands),status=MATCH ref_lower_year=2000 our_lower_year=2000
+CROSSCHECK,PHL,Philippines,2004,ratio vs PIPE_LOO_PAIRS.csv,-0.00003086,ratio,DERIVED (reproducibility check; recomputed value stands),status=MATCH ref_lower_year=2000 our_lower_year=2000
+CROSSCHECK,PHL,Philippines,2008,ratio vs PIPE_LOO_PAIRS.csv,0.00003356,ratio,DERIVED (reproducibility check; recomputed value stands),status=MATCH ref_lower_year=2004 our_lower_year=2004
+CROSSCHECK,PHL,Philippines,2010,ratio vs PIPE_LOO_PAIRS.csv,-0.00003531,ratio,DERIVED (reproducibility check; recomputed value stands),status=MATCH ref_lower_year=2008 our_lower_year=2008
+CROSSCHECK,PHL,Philippines,2013,ratio vs PIPE_LOO_PAIRS.csv,-0.00001003,ratio,DERIVED (reproducibility check; recomputed value stands),status=MATCH ref_lower_year=2010 our_lower_year=2010
+CROSSCHECK,PHL,Philippines,2017,ratio vs PIPE_LOO_PAIRS.csv,0.00004216,ratio,DERIVED (reproducibility check; recomputed value stands),status=MATCH ref_lower_year=2013 our_lower_year=2013
+CROSSCHECK,PHL,Philippines,2023,ratio vs PIPE_LOO_PAIRS.csv,-0.00004269,ratio,DERIVED (reproducibility check; recomputed value stands),status=MATCH ref_lower_year=2021 our_lower_year=2021
+CROSSCHECK,PHL,Philippines,2024,ratio vs PIPE_LOO_PAIRS.csv,0.00002790,ratio,DERIVED (reproducibility check; recomputed value stands),status=MATCH ref_lower_year=2021 our_lower_year=2021
+CROSSCHECK,KOR,"Korea, Rep.",2005,ratio vs PIPE_LOO_PAIRS.csv,-0.00001388,ratio,DERIVED (reproducibility check; recomputed value stands),status=MATCH ref_lower_year=2003 our_lower_year=2003
+CROSSCHECK,KOR,"Korea, Rep.",2006,ratio vs PIPE_LOO_PAIRS.csv,-0.00003582,ratio,DERIVED (reproducibility check; recomputed value stands),status=MATCH ref_lower_year=2003 our_lower_year=2003
+CROSSCHECK,KOR,"Korea, Rep.",2007,ratio vs PIPE_LOO_PAIRS.csv,0.00004409,ratio,DERIVED (reproducibility check; recomputed value stands),status=MATCH ref_lower_year=2004 our_lower_year=2004
+CROSSCHECK,KOR,"Korea, Rep.",2008,ratio vs PIPE_LOO_PAIRS.csv,-0.00004316,ratio,DERIVED (reproducibility check; recomputed value stands),status=MATCH ref_lower_year=2005 our_lower_year=2005
+CROSSCHECK,KOR,"Korea, Rep.",2009,ratio vs PIPE_LOO_PAIRS.csv,-0.00004243,ratio,DERIVED (reproducibility check; recomputed value stands),status=MATCH ref_lower_year=2006 our_lower_year=2006
+CROSSCHECK,KOR,"Korea, Rep.",2010,ratio vs PIPE_LOO_PAIRS.csv,0.00002429,ratio,DERIVED (reproducibility check; recomputed value stands),status=MATCH ref_lower_year=2007 our_lower_year=2007
+CROSSCHECK,KOR,"Korea, Rep.",2011,ratio vs PIPE_LOO_PAIRS.csv,0.00002007,ratio,DERIVED (reproducibility check; recomputed value stands),status=MATCH ref_lower_year=2008 our_lower_year=2008
+CROSSCHECK,KOR,"Korea, Rep.",2012,ratio vs PIPE_LOO_PAIRS.csv,0.00004104,ratio,DERIVED (reproducibility check; recomputed value stands),status=MATCH ref_lower_year=2009 our_lower_year=2009
+CROSSCHECK,KOR,"Korea, Rep.",2013,ratio vs PIPE_LOO_PAIRS.csv,-0.00004514,ratio,DERIVED (reproducibility check; recomputed value stands),status=MATCH ref_lower_year=2010 our_lower_year=2010
+CROSSCHECK,KOR,"Korea, Rep.",2014,ratio vs PIPE_LOO_PAIRS.csv,0.00003607,ratio,DERIVED (reproducibility check; recomputed value stands),status=MATCH ref_lower_year=2011 our_lower_year=2011
+CROSSCHECK,KOR,"Korea, Rep.",2015,ratio vs PIPE_LOO_PAIRS.csv,0.00000317,ratio,DERIVED (reproducibility check; recomputed value stands),status=MATCH ref_lower_year=2012 our_lower_year=2012
+CROSSCHECK,KOR,"Korea, Rep.",2016,ratio vs PIPE_LOO_PAIRS.csv,-0.00001201,ratio,DERIVED (reproducibility check; recomputed value stands),status=MATCH ref_lower_year=2013 our_lower_year=2013
+CROSSCHECK,KOR,"Korea, Rep.",2017,ratio vs PIPE_LOO_PAIRS.csv,0.00002641,ratio,DERIVED (reproducibility check; recomputed value stands),status=MATCH ref_lower_year=2014 our_lower_year=2014
+CROSSCHECK,KOR,"Korea, Rep.",2018,ratio vs PIPE_LOO_PAIRS.csv,0.00002187,ratio,DERIVED (reproducibility check; recomputed value stands),status=MATCH ref_lower_year=2015 our_lower_year=2015
+CROSSCHECK,KOR,"Korea, Rep.",2019,ratio vs PIPE_LOO_PAIRS.csv,-0.00000468,ratio,DERIVED (reproducibility check; recomputed value stands),status=MATCH ref_lower_year=2016 our_lower_year=2016
+CROSSCHECK,KOR,"Korea, Rep.",2020,ratio vs PIPE_LOO_PAIRS.csv,-0.00002602,ratio,DERIVED (reproducibility check; recomputed value stands),status=MATCH ref_lower_year=2017 our_lower_year=2017
+CROSSCHECK,KOR,"Korea, Rep.",2021,ratio vs PIPE_LOO_PAIRS.csv,-0.00000777,ratio,DERIVED (reproducibility check; recomputed value stands),status=MATCH ref_lower_year=2018 our_lower_year=2018
+CROSSCHECK,KOR,"Korea, Rep.",2022,ratio vs PIPE_LOO_PAIRS.csv,-0.00002858,ratio,DERIVED (reproducibility check; recomputed value stands),status=MATCH ref_lower_year=2019 our_lower_year=2019
+CROSSCHECK,KOR,"Korea, Rep.",2023,ratio vs PIPE_LOO_PAIRS.csv,-0.00001847,ratio,DERIVED (reproducibility check; recomputed value stands),status=MATCH ref_lower_year=2020 our_lower_year=2020
+CROSSCHECK,KHM,Cambodia,2000,ratio vs PIPE_LOO_PAIRS.csv,0.00003112,ratio,DERIVED (reproducibility check; recomputed value stands),status=MATCH ref_lower_year=1996 our_lower_year=1996
+CROSSCHECK,KHM,Cambodia,2008,ratio vs PIPE_LOO_PAIRS.csv,-0.00001920,ratio,DERIVED (reproducibility check; recomputed value stands),status=MATCH ref_lower_year=2005 our_lower_year=2005
+CROSSCHECK,KHM,Cambodia,2010,ratio vs PIPE_LOO_PAIRS.csv,0.00002960,ratio,DERIVED (reproducibility check; recomputed value stands),status=MATCH ref_lower_year=2008 our_lower_year=2008
+CROSSCHECK,KHM,Cambodia,2011,ratio vs PIPE_LOO_PAIRS.csv,-0.00001452,ratio,DERIVED (reproducibility check; recomputed value stands),status=MATCH ref_lower_year=2008 our_lower_year=2008
+CROSSCHECK,KHM,Cambodia,2012,ratio vs PIPE_LOO_PAIRS.csv,0.00001610,ratio,DERIVED (reproducibility check; recomputed value stands),status=MATCH ref_lower_year=2008 our_lower_year=2008
+CROSSCHECK,KHM,Cambodia,2013,ratio vs PIPE_LOO_PAIRS.csv,-0.00001608,ratio,DERIVED (reproducibility check; recomputed value stands),status=MATCH ref_lower_year=2010 our_lower_year=2010
+CROSSCHECK,KHM,Cambodia,2014,ratio vs PIPE_LOO_PAIRS.csv,0.00004623,ratio,DERIVED (reproducibility check; recomputed value stands),status=MATCH ref_lower_year=2010 our_lower_year=2010
+CROSSCHECK,KHM,Cambodia,2016,ratio vs PIPE_LOO_PAIRS.csv,-0.00000329,ratio,DERIVED (reproducibility check; recomputed value stands),status=MATCH ref_lower_year=2014 our_lower_year=2014
+CROSSCHECK,KHM,Cambodia,2017,ratio vs PIPE_LOO_PAIRS.csv,0.00004805,ratio,DERIVED (reproducibility check; recomputed value stands),status=MATCH ref_lower_year=2014 our_lower_year=2014
+CROSSCHECK,KHM,Cambodia,2021,ratio vs PIPE_LOO_PAIRS.csv,-0.00000065,ratio,DERIVED (reproducibility check; recomputed value stands),status=MATCH ref_lower_year=2019 our_lower_year=2019
+CROSSCHECK,KHM,Cambodia,2023,ratio vs PIPE_LOO_PAIRS.csv,-0.00000922,ratio,DERIVED (reproducibility check; recomputed value stands),status=MATCH ref_lower_year=2019 our_lower_year=2019
+CROSSCHECK,CHN,China,2012,ratio vs PIPE_LOO_PAIRS.csv,0.00000810,ratio,DERIVED (reproducibility check; recomputed value stands),status=MATCH ref_lower_year=2010 our_lower_year=2010
+CROSSCHECK,CHN,China,2014,ratio vs PIPE_LOO_PAIRS.csv,0.00002350,ratio,DERIVED (reproducibility check; recomputed value stands),status=MATCH ref_lower_year=2010 our_lower_year=2010
+CROSSCHECK,CHN,China,2016,ratio vs PIPE_LOO_PAIRS.csv,0.00002222,ratio,DERIVED (reproducibility check; recomputed value stands),status=MATCH ref_lower_year=2012 our_lower_year=2012
+CROSSCHECK,CHN,China,2018,ratio vs PIPE_LOO_PAIRS.csv,-0.00004083,ratio,DERIVED (reproducibility check; recomputed value stands),status=MATCH ref_lower_year=2014 our_lower_year=2014
+CROSSCHECK,CHN,China,2020,ratio vs PIPE_LOO_PAIRS.csv,0.00001771,ratio,DERIVED (reproducibility check; recomputed value stands),status=MATCH ref_lower_year=2016 our_lower_year=2016
+NON-ENTRANT,HKG,"Hong Kong SAR, China",,completion pairs on disk,0,pairs,OBSERVED (absence),no completion_lower/upper_secondary rows; cannot enter; no proxy (D118)
+NON-ENTRANT,JPN,Japan,,completion pairs on disk,0,pairs,OBSERVED (absence),no completion_lower/upper_secondary rows; cannot enter; no proxy (D118)
