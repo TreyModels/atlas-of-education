@@ -1,0 +1,210 @@
+{
+  "experiment": "EXP-10 STOCK-NER-D",
+  "title": "Design + frozen pre-declaration of a stock-style NER object for the HKG diagnostic transfer",
+  "worker": "WORKER SN",
+  "date_local": "2026-11-21",
+  "timezone": "Asia/Shanghai",
+  "programme_root": "/Users/treymenefee/massification_live/experiments/massification-2026-11-20",
+  "directory": "10_massification/extensions/hkg_stock_ner_2026-11-20",
+  "status": "DESIGN-ONLY / FROZEN / NOT RUN",
+  "design_verdict": "PRE_DECL-FROZEN",
+  "construct_test_verdict": "NOT-RUN-NOT-AUTHORISED",
+  "execution_authorised": false,
+  "runs": [],
+  "results": [],
+  "target_years_read_by_object": "NONE",
+  "predeclaration_sha256": "6f5d3c169487f4b6e296e4bf1673ec0755e04499cf5d291c9ccd88089c73bb3e",
+  "authority": [
+    "D114 (DECISIONS.md:128) - H1 NOT ADMISSIBLE on the cohort-flow analogue; a stock-style object in a new predeclaration is the only forward HKG path",
+    "D120 (DECISIONS.md:136) - DESIGN-ONLY STOCK-NER PREDECLARATION, conditions N1-N6, execution NOT authorised",
+    "D122 / SYNTHESIS_022.md section 6.10 (lines 421-446) - EXP-10 rank #5 / DROP-FIRST, design verdict, construct-test threshold, falsifier",
+    "D111 (DECISIONS.md:124) - SR-9 authority, H2-H6, the standing banner, the licensing limits (carried verbatim)",
+    "D75 (DECISIONS.md:84) - the six constraints on any later HKG run (carried verbatim)",
+    "D115 / D117-D119 - measurement context only, re-scored nowhere",
+    "D131 (DECISIONS.md:153) - v1.5 state recorded as context, not used as a premise"
+  ],
+  "spec_files": {
+    "10_massification/extensions/hkg_stock_ner_2026-11-20/PRE_DECLARATIONS.md": "6f5d3c169487f4b6e296e4bf1673ec0755e04499cf5d291c9ccd88089c73bb3e",
+    "10_massification/extensions/hkg_stock_ner_2026-11-20/STOCK_NER_DESIGN.md": "54e9bc2d37720ad30244a24642e83e776bceb5f3a63d863b095e6dae68849333",
+    "10_massification/extensions/hkg_stock_ner_2026-11-20/DRY_RUN_PLAN.md": "ea5cee69c66a8a320263b38b906c5469f8cb40f6914f5452aeb7874a238c4ea5"
+  },
+  "inputs": {
+    "08_council/DECISIONS.md": "b214171f82538580e615c68ccde73d94a22dec84f4a71449754141089ce62cd8",
+    "08_council/brief_022/SYNTHESIS_022.md": "9508dd55be8dd64da8322a8277c8342a4f50be6790a3d287e39e7004537c109b",
+    "10_massification/extensions/m1_ner_2026-11-20/PRE_DECLARATIONS.md": "9eb35a92c8f3f12b723bc0a7bf1240e61bd48580d463b7dc90240512f938d78f",
+    "10_massification/extensions/m1_ner_2026-11-20/FINDINGS.md": "3ce83f56005a03deaccb107a49da5e061f69142951bfc59fb08ea5f0ca38e4a0",
+    "10_massification/extensions/hkg_transfer_2026-11-20/HKG_TRANSFER_PRE_DECLARATIONS.md": "99be01d78abee2fa797c02a68a05330a4d53ad43c30960508039708edc98fb5f",
+    "10_massification/extensions/hkg_transfer_2026-11-20/HKG_H1_OUTCOME.md": "93993d6b61be49894900b74c9cb26cae3c481e40fb4d07c19598a6a4e3d95523",
+    "10_massification/extensions/hkg_transfer_2026-11-20/HKG_INVENTORY.md": "254d4a5e9af6841ddb750e899b27bb891c1cefafbfa3177f7d01491188dc8bc9",
+    "10_massification/extensions/hkg_transfer_2026-11-20/HKG_CHECKLIST.md": "3baf5a29a159745c7d7a8dd5b266a916a61636437e9b79410e132fd878c2f932",
+    "10_massification/extensions/synthetic_2026-11-20/generator_v1_2/results/synthetic_panel_v1_2.csv": "14729c5141a71dd9aaf87a5ad2e973a84b5f04603577aae627f2833276fac5ac",
+    "10_massification/extensions/synthetic_2026-11-20/generator_v1_2/PARAMS.md": "0d619781c4e059f54cf771fb385475f5f939dceced5036e8a21b6e07a2b315e3",
+    "10_massification/extensions/synthetic_2026-11-20/generator_v1_2/code/sim_v1_2.py": "61123aa9370a407487407bf3ff4b97287aea67cac5f90629e540a6e8cc855e7c",
+    "10_massification/extensions/synthetic_2026-11-20/generator_v1_2/RUN_MANIFEST.json": "36c40ff95470893a6d6fda21d9afe341ec0f374073a7af56cdf9c55c9b75b876",
+    "10_massification/extensions/synthetic_2026-11-20/generator_v1_2_addendum/PRE_DECLARATIONS.md": "aa756f8b463e557eaf72601c23da150e76968ca249e0cc74c1ff30792533eb88",
+    "10_massification/extensions/synthetic_2026-11-20/generator_v1_2_addendum/results/synthetic_panel_v1_2_ner.csv": "c6d1f9b059b5a48cbd5a4aaf7e1c4611cad781819b74987988897e8d35e40294",
+    "10_massification/extensions/synthetic_2026-11-20/generator_v1_2_addendum/RUN_MANIFEST.json": "bb918259431d705907c593037961b25dee40dc7c8764ce14f63bd1965866dc5d",
+    "10_massification/data/UNIVERSALIZATION_SERIES.csv": "85bc869396ebfcb39e3e1a21a31af219e75a07326c738a51d2bfdbe536737ddb"
+  },
+  "input_roles": [
+    {
+      "path": "10_massification/extensions/synthetic_2026-11-20/generator_v1_2/results/synthetic_panel_v1_2.csv",
+      "role": "THE object's only data input (SYNTHETIC). Read-only. Supplies admitted_official, cohort, survival, band identity, label.",
+      "read_by_object": true
+    },
+    {
+      "path": "10_massification/extensions/synthetic_2026-11-20/generator_v1_2_addendum/results/synthetic_panel_v1_2_ner.csv",
+      "role": "display-precision cross-check of the re-derived comparator only; the object never reads its ner* columns",
+      "read_by_object": "cross-check only"
+    },
+    {
+      "path": "10_massification/extensions/synthetic_2026-11-20/generator_v1_2/code/sim_v1_2.py",
+      "role": "source of DVEC (declared level durations) and of the completion identity that fixes w_d = survival",
+      "read_by_object": false
+    },
+    {
+      "path": "10_massification/extensions/synthetic_2026-11-20/generator_v1_2/PARAMS.md",
+      "role": "declared parameter list and the survival definition",
+      "read_by_object": false
+    },
+    {
+      "path": "10_massification/extensions/synthetic_2026-11-20/generator_v1_2_addendum/PRE_DECLARATIONS.md",
+      "role": "the cohort-flow NER analogue that the construct test compares against (its declared limitation quoted in the design)",
+      "read_by_object": false
+    },
+    {
+      "path": "10_massification/extensions/m1_ner_2026-11-20/PRE_DECLARATIONS.md",
+      "role": "the failed construct test whose bars are reused unchanged and whose object is NOT reused",
+      "read_by_object": false
+    },
+    {
+      "path": "10_massification/extensions/m1_ner_2026-11-20/FINDINGS.md",
+      "role": "the measured 2-3 y flow lead and the 2.685 pp band maximum, cited for the pre-registered direction only",
+      "read_by_object": false
+    },
+    {
+      "path": "10_massification/extensions/hkg_transfer_2026-11-20/HKG_TRANSFER_PRE_DECLARATIONS.md",
+      "role": "the frozen HKG transfer specification this object was designed against (sha256 99be01d7...); not edited",
+      "read_by_object": false
+    },
+    {
+      "path": "10_massification/extensions/hkg_transfer_2026-11-20/HKG_CHECKLIST.md",
+      "role": "the section 2 read-only hash-verification procedure reproduced in DRY_RUN_PLAN.md section 2.2",
+      "read_by_object": false
+    },
+    {
+      "path": "10_massification/extensions/hkg_transfer_2026-11-20/HKG_H1_OUTCOME.md",
+      "role": "the terminal BLOCKED-MEASURE(SR-1) record that this design answers",
+      "read_by_object": false
+    },
+    {
+      "path": "10_massification/extensions/hkg_transfer_2026-11-20/HKG_INVENTORY.md",
+      "role": "the no-NER-object interface blocker and the HKG data limits",
+      "read_by_object": false
+    },
+    {
+      "path": "08_council/DECISIONS.md",
+      "role": "D75, D111, D114, D120, D131 - authority; carried verbatim where N4 requires it",
+      "read_by_object": false
+    },
+    {
+      "path": "08_council/brief_022/SYNTHESIS_022.md",
+      "role": "sections 5.2 (N1-N6) and 6.10 (EXP-10), copied verbatim",
+      "read_by_object": false
+    },
+    {
+      "path": "10_massification/data/UNIVERSALIZATION_SERIES.csv",
+      "role": "REFERENCE ONLY (HKG ner_primary / ger_primary coverage for N5). NEVER read by the object or by the construct test. No target-year value is read",
+      "read_by_object": false
+    },
+    {
+      "path": "10_massification/extensions/synthetic_2026-11-20/generator_v1_2/RUN_MANIFEST.json",
+      "role": "provenance of the frozen v1.2 panel",
+      "read_by_object": false
+    },
+    {
+      "path": "10_massification/extensions/synthetic_2026-11-20/generator_v1_2_addendum/RUN_MANIFEST.json",
+      "role": "provenance of the v1.2.1 NER panel used for the comparator cross-check",
+      "read_by_object": false
+    }
+  ],
+  "object": {
+    "id": "STOCK-NER-D/v1",
+    "definition": "STOCK(c,L,t) = 100 * SUM_{k=0..d-1} A(c,L,t-k) * survival(c,L,t)^(k/d) / SUM_{k=0..d-1} C(c,L,t-k)",
+    "symbols": {
+      "A": "admitted_official",
+      "C": "cohort",
+      "d": "declared level duration (DVEC = 6/3/3/4); primary d = 6 for the construct test",
+      "survival": "the level-year's declared through-level survival rate"
+    },
+    "class": "ratio of two stocks (reconstructed pupil stock / reconstructed official-age band)",
+    "level_scored": "primary",
+    "durations_source": "10_massification/extensions/synthetic_2026-11-20/generator_v1_2/code/sim_v1_2.py:65 (DVEC)",
+    "parameter_free": true,
+    "free_parameters": [],
+    "declared_choices": [
+      "constant-hazard holding weights between the fixed endpoints w_0 = 1 and w_d = survival",
+      "denominator is the sum of the d entry cohorts (not band_population, which imposes stationarity)"
+    ],
+    "repeaters": "not represented (the frozen generator has no grade structure and no repeater state); a repeater is representable only as an over-age admission, which is excluded. Declared downward bias; not corrected, not imputed.",
+    "over_age": "excluded from the numerator everywhere (official-age NER); admitted_overage never read",
+    "left_edge": "no stock value before a complete d-year window (primary: 1975); no truncated window, no imputation",
+    "target_series_read": "none"
+  },
+  "construct_test": {
+    "status": "NOT-RUN-NOT-AUTHORISED",
+    "test_types": [
+      {"id": "T1", "country": "SYN00_PHL_LIKE", "level": "primary", "role": "verdict"},
+      {"id": "T2", "country": "SYN28", "level": "primary", "role": "verdict", "why": "highest-2020-GDPpc synthetic type (gdppc 2020 = 48270.81143, rank 1 of 30); the generator's SYN_HKG_LIKE host"}
+    ],
+    "band_condition": "|STOCK - FLOW| <= 2.0 pp in every year with 85.0 <= FLOW <= 95.0 and a complete window",
+    "crossing_condition": "first-sustained (5 consecutive years >= T) crossing years differ by <= 1 y at T = 90 and T = 95",
+    "band": [85.0, 95.0],
+    "bar_pp": 2.0,
+    "bar_years": 1,
+    "float_epsilon": 1e-09,
+    "both_test_types_required": true,
+    "pass_token": "CONSTRUCT-EQUIVALENT",
+    "fail_tokens": [
+      "BLOCKED-MEASURE(N2-BAND)",
+      "BLOCKED-MEASURE(N2-CROSSING)",
+      "BLOCKED-MEASURE(N2-BOTH)",
+      "BLOCKED-MEASURE(N2-EMPTY)"
+    ],
+    "terminal": "BLOCKED-* is terminal and is not re-specified",
+    "expected_direction": "stock crossings later than flow crossings; a TRANSFER-FAILS on this object is expected and confirmatory (N3)"
+  },
+  "pre_registered_expectation": {
+    "sign": "systematically negative (stock below flow) in band years",
+    "mechanism": "dominated by the holding-weight (attrition) term, with a smaller backward-window/ramp term",
+    "magnitude": "NOT predicted, NOT computed at any band year in this design",
+    "consequence": "a BLOCKED-MEASURE outcome on the construct test is a live possibility accepted in advance; it is terminal and the object is not re-specified"
+  },
+  "forbidden_output_strings": [
+    "PASS",
+    "SUPPORTED",
+    "NOT SUPPORTED",
+    "REPRODUCED",
+    "VALIDATED",
+    "CONFIRMED",
+    "PORTABLE",
+    "HOLDS (bare; TRANSFER-HOLDS is part of the allowed DIAGNOSTIC-TRANSFER vocabulary)"
+  ],
+  "banner": "SCALING: FAIL (standing, A12/B02) — DIAGNOSTIC-TRANSFER ONLY — NOT EVIDENCE",
+  "labels": [
+    "SYNTHETIC for every model-derived value",
+    "DERIVED for arithmetic on the frozen panel",
+    "OBSERVED-REFERENCE-ONLY for the HKG series cited in N5 (never read by the object)",
+    "DIAGNOSTIC-TRANSFER vocabulary only",
+    "BLOCKED-* is terminal",
+    "No causal, direction, portability, capacity-timing, or phase-verdict claim"
+  ],
+  "notes": [
+    "No stock value, band year, difference, crossing, or verdict has been computed. results/ does not exist.",
+    "The construct test is not executed here and is not authorised here (D120: execution is a further controller action after the freeze and the section 2 hash verification).",
+    "No observed series, and in particular no HKG series or target-year value, is read by the object or by the construct test (PRE_DECLARATIONS.md section 3.6; guard G6).",
+    "DRY_RUN_PLAN.md Appendix A carries a reference listing that was syntax-checked only (compile() in memory, no execution, no file written); it is not shipped as a .py file.",
+    "HKG_CHECKLIST.md section 2 was verified as expected at this freeze: the HKG RUN_MANIFEST lists 11 inputs and 11/11 hashes match on disk, so its section 2.1 would print ALL INPUTS MATCH. The checklist's section 1b TABLE entry for 08_council/DECISIONS.md (7bfba877...) is stale because D131 was appended after the checklist was written; the operative section 2.1 iteration does not include that file, so the check is unaffected. The actual hash recorded here is b214171f...",
+    "No file outside this directory was created, edited, moved, or deleted."
+  ]
+}

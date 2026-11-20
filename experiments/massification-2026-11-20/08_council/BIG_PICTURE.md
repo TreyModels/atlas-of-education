@@ -378,3 +378,25 @@ imputation as observation. E1 stays PARKED; direction claims EQUIVALENT.
 5. **If only one thing mattered this week:** **EXP-7** (does the generator reproduce the observed path at all?) — every
    synthetic level statement currently rides on a panel that is 24–37 pp low before 2021. **Drop-first of the five:
    EXP-10** (no number this cycle; design continues under D120).
+
+## Cycle 15 addendum (model-line batch adjudicated; v1.5 defects ruled; per-system κ; D132–D137)
+
+1. **Goal restated:** massification produced by schooling–government–market interaction; the live model line is now the
+   **per-system transition ratio** κ (PHL 0.9491 / KOR 0.9898 / KHM 0.5950 / CHN 0.7222 — never global) and a **repaired
+   v1.5 representation-only model class**; D63 stays UNABLE as to cause; HKG is **DEFER-HKG**. Phase CLOSED at
+   PARTIAL/DESCRIPTIVE/EQUIVALENT.
+2. **KEEP/PARK/KILL delta.** KEEP — EXP-6 per-system κ (PREDICTIVE 3/4 at the boundary), EXP-7 path audit (ENDPOINT-ONLY;
+   κ-link b2), EXP-8 floor-gate closure (upper-gate line CLOSED), EXP-9 kill of the A3 demand line, v1.5 model class
+   **REPRESENTATION ONLY**, the Council slate EXP-11…EXP-15, the frozen EXP-10 stock-NER design (artifact only, HKG
+   deferred), v1.2 crossing/endpoint label (final), A5/A3/A1 declared assumptions, the one-way ratchet (D125). PARK —
+   A3 demand line (KILLED), exit-cost/complementarity layer (D101), induction grounding (D104), HKG (DEFER-HKG; new
+   Council decision required), the v1.5 level claim (representation only). KILL — re-runs/re-scores of delivered cells;
+   whole-panel κ cell-identity guard; completion-level sign tests under a binding cap; grid searches for Tier O quality;
+   the "(b) family" level bars for the successor; "demand falsified" language; literal modelling of the user's
+   illustrative examples.
+3. **One thread:** make κ a legitimate declared input (EXP-11) while FLOOR-CLOSE/LOWER-DEF measure what closes the floor
+   and what loses the lower series; then V16-REPAIR faces the observed path.
+4. **Drift check (red-flag count 2):** (R1) a coefficient at its exact boundary becoming a parameter without its scope
+   (guarded by D133 per-system register + CHN non-forward note); (R2) a guard/test defect being mis-read as a model
+   failure (guarded by D134's defect-kind distinctions). **If only one thing mattered this week:** EXP-12 FLOOR-CLOSE
+   (it can retract a recorded disposition). **Drop-first: EXP-15 CONV-REG.**

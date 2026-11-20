@@ -1167,3 +1167,31 @@ declared; (iv) `D_O` year-invariant by construction; (v) κ-binding reduction or
 manufactures unfilled Tier O); (vi) **process error B1:** the pre-run SHA snapshot was overwritten by smoke runs, so
 `FROZEN_BEFORE_SHA256SUMS.txt` is a reconstruction of 33 recorded pairs (30/33 match; original hash `89638b39…` recorded
 in the manifest/guard). Verdict string unchanged; no threshold altered.
+
+---
+
+## 3ad. Council cycle 15 merged (D132–D137); EXP-10 stock-NER design delivered; HKG DEFER-HKG
+
+- **Cycle 15 adjudicated** the model-line batch: all five verdicts stand, no re-runs. **EXP-6** PREDICTIVE 3/4 at its
+  exact boundary — **κ is PER-SYSTEM: PHL 0.9491 / KOR 0.9898 / KHM 0.5950 / CHN 0.7222** (single κ overstates KHM by
+  0.354; CHN not forward-usable); **EXP-7** ENDPOINT-ONLY with the κ-link b2 (63.97 is an **admission-cohort bound**, realised
+  endpoint 55.66); **EXP-8** floor gate binds, upper-gate line **CLOSED** (falsifier measure-dependent, disclosed);
+  **EXP-9** NOT DEMAND-DERIVABLE → **A3 line KILLED** (model-side only; banned phrasing stands); **v1.5** admitted for
+  **REPRESENTATION ONLY** with four defect rulings.
+- **D134 defect rulings (binding on V16):** (1) the κ cell-identity **guard was mis-specified** — unsatisfiable for any
+  binding link; fix = bound completion units with survival explicit + declared projection order + counterfactual-identity
+  guard + one cap register; (2) the child-wage sign test was **structurally unfirable** under a binding cap — re-specify
+  the object (test in A10 κ OFF, pre-cap object), not the bar; (3) **Tier O quality collapse** — move the discount to the
+  **return/take-up** margin, never grid-search; retire the (b) family for the successor (use ≥17/33 within ±5 pp);
+  (4) the a-iv leg was a **pre-run label error** (A00 0 vs A11 15; A01 is κ ON) — FAIL stands, contrast is A00 vs A11.
+- **A10/D62 scope:** floor universalization arrives at `seat_coverage` **0.8722** via the declared **phys_cap = 1.15**
+  convention — claim conditional until FLOOR-CLOSE. **D63** gains an observed-side necessary condition (not a cause):
+  under κ=0.9491 upper 90 needs lower(t−3) ≥ 94.827; observed lower max 92.414 → κ-implied upper max for 2027 = 87.710;
+  observed 2024 upper 75.025 sits 1.75 pp inside its own bound.
+- **EXP-10 stock-NER design delivered** (`hkg_stock_ner_2026-11-20/`, predecl `6f5d3c16…`, design verdict
+  **PRE_DECL-FROZEN**, 20/20 SHA; object = ratio of reconstructed stocks; target never read — G6 AST guard; N2 on both
+  SYN00_PHL_LIKE and SYN28; run-ready **not run**). **It landed after cycle 15's cut, so per D120's timing rule the
+  reversion fired: HKG = `DEFER-HKG`** (a new Council decision is required to re-open; the frozen design artifact is
+  preserved).
+- **Next slate (D136):** EXP-11 KAPPA-FWD (#1), EXP-12 FLOOR-CLOSE (#2), EXP-13 LOWER-DEF (#3), EXP-14 V16-REPAIR (#4,
+  after 11+13), EXP-15 CONV-REG (#5 drop-first). HELD ask queue complete (D135); no proxy substitution.

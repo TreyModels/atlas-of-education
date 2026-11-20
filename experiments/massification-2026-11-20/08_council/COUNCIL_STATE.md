@@ -156,3 +156,21 @@ evidence-spine correction (Z2); see `brief_018/SYNTHESIS_018.md` and `DECISIONS.
    go untaken + rationed high-quality gates incl. the rung-4 credential queue), explicit outside option, κ-link
    precondition, no free taste parameter, checks (a)–(e) from D124, no-re-fit guard; HELD data named, never
    fabricated; no re-tune of A3-D, no fitting to the known outcome. **No external message sent this cycle** (D87).
+
+## Next 3 actions (cycle 15, brief 023 — model-line adjudication + v1.5 defect rulings; D132–D137)
+
+1. **Predeclare and run the slate in the binding order** (Lead): copy EXP-11/EXP-12/EXP-13/EXP-14/EXP-15 blocks verbatim
+   from `brief_023/SYNTHESIS_023.md` §6; **EXP-11 KAPPA-FWD, EXP-12 FLOOR-CLOSE, EXP-13 LOWER-DEF in parallel first**;
+   **EXP-14 V16-REPAIR only after EXP-11 and EXP-13 return** (carry D134's three design obligations and the child-wage
+   re-specification verbatim); **EXP-15 CONV-REG last or dropped**. Re-derive every block number from disk before freeze
+   (D113a; VERIFICATION_023.csv).
+2. **Record the per-system κ register + A10 scope + DEFER-HKG** (Lead): κ = PHL 0.9491 / KOR 0.9898 / KHM 0.5950 / CHN
+   0.7222 (CHN not forward-usable); "capacity buys the floor" is conditional on the declared `phys_cap = 1.15` convention
+   until FLOOR-CLOSE; HKG is **DEFER-HKG** (the predeclared reversion fired; the frozen EXP-10 design artifact is kept
+   but un-fires nothing; a new Council decision is required). The HELD ask queue is complete and named (D135) — no proxy
+   substitution.
+3. **Repair, don't re-tune** (Lead): V16 carries D134's obligations — bound completion units with survival explicit;
+   declared projection order + propagation ledger + counterfactual-identity guard; locate Tier O quality at the
+   return/take-up margin; test the child-wage shock in A10 (κ OFF) on the pre-cap object; every leg names its arm by the
+   full switch tuple; retire the (b) family for the successor in favour of EXP-7's ≥17/33 bar. **No external message sent
+   this cycle** (D87).

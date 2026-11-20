@@ -359,3 +359,23 @@ school state; as an outside value it dominates Tier O 15/15 cells → would driv
 per cell); outside option at cell income; tertiary tier-choice has no equilibrium in the frozen child block → declared
 carry-forward; `D_O` year-invariant by construction; κ-binding reduction order over-age → Tier H → Tier O; process error
 B1 — pre-run SHA snapshot reconstructed (30/33 match, original hash `89638b39…` recorded). No threshold altered.
+
+## 2026-11-21 — Council cycle 15 merged (D132–D137); per-system κ; v1.5 defect rulings; EXP-10 design (HKG DEFER)
+
+- **Cycle 15**: all model-line verdicts stand, no re-runs. **Per-system κ: PHL 0.9491 / KOR 0.9898 / KHM 0.5950 / CHN
+  0.7222** (single κ overstates KHM by 0.354; CHN not forward-usable). EXP-7's 63.97 is an admission-cohort bound
+  (realised endpoint 55.66). EXP-8 floor gate binds; upper-gate line CLOSED (falsifier measure-dependent). EXP-9 →
+  **A3 line KILLED** (model-side only). v1.5 admitted for **REPRESENTATION ONLY**.
+- **D134 v1.5 defect rulings (binding on V16):** κ cell-identity guard **mis-specified** (completion units + survival
+  explicit; projection order + propagation ledger + counterfactual identity; one cap register); child-wage sign test
+  **structurally unfirable** under a binding cap (re-specify object: A10 κ OFF, pre-cap object); Tier O quality belongs at
+  the **return/take-up** margin (no grid search; retire the (b) family for ≥17/33 ±5 pp); a-iv leg is a pre-run label
+  error (A00 0 vs A11 15; contrast A00 vs A11).
+- **A10/D62 scope:** floor universalization at seat_coverage 0.8722 via declared phys_cap=1.15 — conditional until
+  FLOOR-CLOSE. **D63** observed-side necessary condition recorded (κ-implied upper max 2027 = 87.710; observed 2024 upper
+  1.75 pp inside its bound).
+- **EXP-10 stock-NER design** delivered (predecl `6f5d3c16…`, PRE_DECL-FROZEN, 20/20 SHA, target never read; run-ready
+  not run) — but after cycle 15's cut, so **HKG = DEFER-HKG** per D120's timing rule (new Council decision required; the
+  frozen design artifact is preserved).
+- Next slate: EXP-11 KAPPA-FWD, EXP-12 FLOOR-CLOSE, EXP-13 LOWER-DEF (parallel), EXP-14 V16-REPAIR (after 11+13),
+  EXP-15 CONV-REG (drop-first). HELD queue complete; no proxy substitution.
