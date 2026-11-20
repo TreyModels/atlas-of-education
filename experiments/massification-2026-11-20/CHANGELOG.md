@@ -463,3 +463,23 @@ B1 — pre-run SHA snapshot reconstructed (30/33 match, original hash `89638b39�
   on-disk PHL class-size/PTR/enrolment description (norms {40,45,50} declared, none adopted) does not bound EXP-17's
   REQUIRED-STATE (0.759712 / 0.873523; DERIVED target 0.8076) → **PROXY-SILENT**. Required state stays DECLARED; HELD
   places ask stays HELD; no norm/path/λ adopted; no causal/direction claim.
+
+## 2026-11-21 — Council cycle 17 merged (D152–D159): closing record ruled; post-generator DESCRIPTIVE-CONSOLIDATION
+
+- **Adjudications:** EXP-16 AWC (MIXED; per-level split mandatory; repair's price recorded — P1 zeroed unfilled 12/15
+  primary, 13/15 lower; digest 14/14, RESULTS.csv hash RECORDED-NOT-ENFORCED); EXP-17 ACCEPT clean (λ*=1.11465019198434;
+  0.8076 DERIVED; REQUIRED-STATE only); EXP-18 ACCEPT clean execution, **PATH-FAILED stands, closing rule fired**
+  (corrections: surviving representation is **single-tier** — strict both-level coexistence 0/15, lower unfilled 0/15;
+  localisation class-specific — v1.6 participation margin, v1.7 tier capacity 0.8628866495 + Tier-O margin; miss size not
+  decomposable until CONV-REG — constant m=1.1 vs observed completion/GER crossing 1.0); EXP-19 AWC (**PROXY-SILENT =
+  NOT-IDENTIFIED**; 2/3 norms above; nearest cell not corroboration; proxy route closed).
+- **Closing record (D154):** correctly closed at representation-only, no successor; conditions single-tier / class- and
+  phase-specific (re-entry needs a measured HELD object + new decision) / miss size not decomposable; named forbidden
+  re-entries; not a verdict on the world, the theory frame, the representation object, or the phase verdict.
+- **Post-generator line (D155):** DESCRIPTIVE-CONSOLIDATION, one cycle, deliverable = write-up; no generator/proxy/HKG;
+  sunset clause; seven authoring rules (D158).
+- **D63 (D153):** residual split 58.6008% pipeline / 41.3992% transition ratio; required lower 97.042584 vs record max
+  92.4139633; required ratio 0.973879 vs observed 8-pair range 0.889–1.072; D63 stays UNABLE; "structural ceiling" barred.
+- **Slate (D156):** EXP-21 CONV-REG (#1), EXP-22 PART-MARGIN-DESC (#2), EXP-23 D63-BOUNDS (#3), EXP-24 KAPPA-WRITE (#4),
+  EXP-25 V-SPINE (#5 drop-first; second cut EXP-24). HELD unchanged (D157); no proxy substitution; no experiment against
+  a HELD object; parks stand.

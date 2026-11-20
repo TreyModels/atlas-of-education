@@ -1334,3 +1334,33 @@ frozen A10 at 4.44e-10; determinism 3/3; final SHA256SUMS 14/14.
   **not** discriminate EXP-17's REQUIRED-STATE (required seats/cohort **0.759712** (2018) / **0.873523** (2021); DERIVED
   target 0.8076; λ* NOT adopted) → **`PROXY-SILENT`**. The required state stays **DECLARED**; the **HELD places ask stays
   HELD**; no norm, path or λ adopted.
+
+---
+
+## 3af. Council cycle 17 merged (D152–D159) — closing record ruled; post-generator line = DESCRIPTIVE-CONSOLIDATION
+
+- **Adjudications:** EXP-16 AWC (MIXED stands; per-level split mandatory; the repair's **price** recorded — P1 zeroed
+  unfilled at primary 12/15 and lower 13/15; digest 14/14 not 8/8; RESULTS.csv hash RECORDED-NOT-ENFORCED); EXP-17
+  ACCEPT clean (λ* 1.11465019198434; 0.8076 DERIVED; REQUIRED-STATE only); EXP-18 ACCEPT clean execution, **PATH-FAILED
+  stands and the closing rule fired** — with three corrections: the surviving representation is **single-tier** (upper
+  unfilled 15/15 + queue 30/30, **strict both-level coexistence 0/15**, lower unfilled 0/15); the level localisation is
+  **class-specific** (v1.6 participation margin; v1.7 tier capacity — admitted/cohort = seats/cohort =
+  0.8628866495 — plus Tier-O margin; D143(viii) "take-up-limited" is v1.6 only); the **size** of the miss is not
+  decomposable until CONV-REG (constant m=1.1 vs observed completion/GER crossing 1.0); EXP-19 AWC (PROXY-SILENT =
+  **NOT-IDENTIFIED**, never "consistent"; 2/3 norms above; nearest cell may never be cited as corroboration; proxy route
+  closed).
+- **Closing record (D154):** **correctly closed at representation-only; no successor generator admissible this phase** —
+  procedural (the act performed was the act licensed; 110→110; repair 45/45; guards pass), substantive (residual = two
+  declared objects; moving either against the observed path is a fit), constitutional (the pre-committed rule closed the
+  line, not the Council). Conditions: single-tier representation; class- and phase-specific close (re-entry needs a
+  **measured HELD object + a new Council decision**); miss size not decomposable. **Forbidden re-entries named**
+  (descriptive/measurement-informed/calibration-free generator, v1.8, new tier menu, any grid search, any re-run/re-score).
+- **Post-generator line (D155):** **`DESCRIPTIVE-CONSOLIDATION`, one cycle, deliverable = the write-up**; no generator,
+  no proxy, no HKG; **sunset clause**; seven authoring rules (D158).
+- **D63 bound split (D153(xiii)):** upper 2024 75.02525329589844 vs 90 = **14.974747 pp**; ln(90/75.025) =
+  ln(90/80.896)+ln(80.896/75.025) → **58.6008% pipeline / 41.3992% transition ratio**; required lower at the 2024 ratio
+  97.042584 (above record max 92.4139633); required ratio at the record's 2024 lower 0.973879 (inside observed 8-pair
+  range 0.889–1.072); D63 stays UNABLE; "the upper-secondary ceiling is structural" barred.
+- **Next slate (D156):** EXP-21 CONV-REG (#1), EXP-22 PART-MARGIN-DESC (#2), EXP-23 D63-BOUNDS (#3), EXP-24 KAPPA-WRITE
+  (#4), EXP-25 V-SPINE (#5 drop-first; second cut EXP-24). HELD unchanged (D157); no proxy substitution; no experiment
+  against a HELD object.

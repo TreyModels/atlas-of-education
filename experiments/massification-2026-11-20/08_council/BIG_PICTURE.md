@@ -441,3 +441,29 @@ imputation as observation. E1 stays PARKED; direction claims EQUIVALENT.
    USE-REG remains drop-first** (not run).
 4. **Next:** Council cycle 17 adjudicates EXP-16/17/18/19 and the closing record, and issues the post-generator slate
    (D89). No new generator is predeclared before that ruling; no re-run/re-score of any delivered cell.
+
+## Cycle 17 addendum (closing record ruled; post-generator line = DESCRIPTIVE-CONSOLIDATION; D152–D159)
+
+1. **Goal restated:** massification produced by schooling–government–market interaction; the generator line is
+   **correctly closed at representation-only** (D154) — the licensed repair was executed exactly (110→110; repair in
+   force 45/45; every guard passes) and the bar was missed at **0/33**, so the pre-committed rule closed the line, not
+   the Council. Phase CLOSED at PARTIAL/DESCRIPTIVE/EQUIVALENT (D76/D77 untouched).
+2. **KEEP/PARK/KILL delta.** KEEP — the **single-tier representation capability** (upper unfilled + both-level queue;
+   strict both-level coexistence **0/15**), the **per-system κ descriptive register** (WINDOW-ONLY; KOR bars
+   "κ-STABLE is forward-usable"), the **v1.2 placement label** (9/33), the **localised level failure** (class-specific:
+   v1.6 participation margin; v1.7 tier capacity + upper Tier-O margin), the **D63 bound split** (58.6008% pipeline /
+   41.3992% transition ratio; D63 stays UNABLE), the **measurement position** (required coverage REQUIRED-STATE, not
+   adopted; places HELD; proxy route closed), the **descriptive-consolidation cycle** and its five cells. PARK — HKG
+   (DEFER-HKG; frozen design unrun; re-entry needs a measured HELD object + a new decision), exit-cost/induction layers
+   (D101/D104), A3 demand line (KILLED). KILL — any successor generator (named forbidden re-entries, D154: descriptive/
+   measurement-informed/calibration-free generator, v1.8, new tier menu, any grid search, any re-run/re-score); proxy
+   construction against the required state (closed with EXP-19); "demand falsified"; the barred sentences list.
+3. **One thread:** finish the record — a register for every number (EXP-21 CONV-REG), a descriptive object for the
+   participation margin (EXP-22), the D63 bound split (EXP-23), the κ write-up instrument (EXP-24), and the spine
+   correction (EXP-25, drop-first). **Sunset clause:** if the deliverables are not on disk by the next cycle, the
+   descriptive line reverts to the existing closeout.
+4. **Drift check (red-flag count 1):** the risk is now a **write-up that outruns its registers**, not a fifth build — the
+   seven authoring rules (D158: hash enforcement at verdict time; object identity before comparison; register before
+   sentence; level-symmetric legs; class tags; banned sentences register; REQUIRED-STATE/DERIVED label discipline) are
+   the guard. **If only one thing mattered:** EXP-21 (the register is the precondition for every level sentence).
+   **Drop-first: EXP-25** (second cut EXP-24).

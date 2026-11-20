@@ -204,3 +204,21 @@ evidence-spine correction (Z2); see `brief_018/SYNTHESIS_018.md` and `DECISIONS.
 3. **No re-run/re-score, no new generator, no proxy substitution, no proxy adoption, no HKG run** before that ruling.
    HELD list unchanged (D146/D151). Parks: A3 KILLED; exit-cost/induction PARKED; HKG DEFER; D63 UNABLE; phase verdict
    (D76/D77) untouched.
+
+## Next 3 actions (cycle 17, brief 025 — closing record ruled; D152–D159)
+
+1. **Predeclare and run the descriptive-consolidation slate** (Lead): copy blocks verbatim from
+   `brief_025/SYNTHESIS_025.md` §6; **EXP-21 CONV-REG first** (rank #1; the register is the precondition for every level
+   sentence; identification gate: <3 same-year pairs = THIN, no label), then **EXP-22 PART-MARGIN-DESC**,
+   **EXP-23 D63-BOUNDS**, **EXP-24 KAPPA-WRITE**, and **EXP-25 V-SPINE last or dropped** (drop-first; second cut EXP-24).
+   Re-derive every block number from disk before freeze (D113a; VERIFICATION_025.csv). **Sunset clause:** if the
+   deliverables are not on disk by the next cycle, the descriptive line reverts to the existing closeout.
+2. **Enforce the seven authoring rules (D158) in every new predeclaration** — hash enforcement at verdict time; object
+   identity before comparison; register before sentence; level-symmetric legs; class tags; banned sentences register;
+   REQUIRED-STATE/DERIVED label discipline. **No successor generator** (forbidden re-entries named in D154); no proxy
+   against the required state; no experiment against a HELD object; HELD list unchanged (D157); D63 UNABLE; HKG DEFER;
+   parks stand.
+3. **Write-up posture** (Lead): the phase write-up shell predates the closed line (0 occurrences of v1.5/v1.6/v1.7/
+   bimodal/κ/WINDOW-ONLY; headline "Conditional level reproduction…") — EXP-25 must replace it with the closed-line
+   state, the single-tier representation sentence, the class tags, the REQUIRED-STATE provenance and the banned-sentence
+   register. **No external message sent this cycle** (D87).
