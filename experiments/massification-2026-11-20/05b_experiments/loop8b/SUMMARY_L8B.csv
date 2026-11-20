@@ -1,0 +1,6 @@
+target,loop6_inside,loop8_inside,loop8b_inside,delta_vs_loop6
+KOR_gradient,0,0,0,0
+HKG_gradient,0,1,2,+2
+KOR_fee,28,27,27,-1
+KOR_income,117,87,82,-35
+KOR_two_margin_joint,0,0,0,0

@@ -1,0 +1,146 @@
+{
+ "label": "SYNTHETIC/POSSIBILITY ONLY",
+ "before": {
+  "KOR_gradient": 0,
+  "HKG_gradient": 0,
+  "KOR_fee": 28,
+  "HKG_fee": 134,
+  "KOR_income": 117,
+  "KOR_provider": 42,
+  "PHL_completion": 36,
+  "KHM_completion": 73
+ },
+ "after": {
+  "KOR_gradient": 0,
+  "HKG_gradient": 2,
+  "KOR_fee": 27,
+  "HKG_fee": 137,
+  "KOR_income": 82,
+  "KOR_provider": 47,
+  "PHL_completion": 0,
+  "KHM_completion": 251
+ },
+ "shrink_targets": [
+  "HKG_gradient"
+ ],
+ "eps_arm_summary": {
+  "-1.035": {
+   "PH-like": 5,
+   "KHM-like": 5
+  },
+  "0.0": {
+   "PH-like": 5,
+   "KHM-like": 5
+  },
+  "0.3": {
+   "PH-like": 5,
+   "KHM-like": 5
+  },
+  "0.6": {
+   "PH-like": 5,
+   "KHM-like": 5
+  }
+ },
+ "two_margin": {
+  "joint": 0,
+  "part_only": 0,
+  "inten_only": 229,
+  "neither": 27
+ },
+ "ranges": {
+  "stakes_scale": [
+   0.5,
+   2.0
+  ],
+  "pub": [
+   0.1,
+   0.9
+  ],
+  "income": [
+   0.5,
+   3.0
+  ],
+  "returns_scale": [
+   0.6,
+   1.4
+  ],
+  "cost_mult": [
+   0.4,
+   3.0
+  ],
+  "teacher_cap": [
+   0.05,
+   0.95
+  ],
+  "delta": [
+   -4.0,
+   4.0
+  ],
+  "fee_mult_scale": [
+   0.5,
+   2.0
+  ],
+  "eps_ec": [
+   -1.035,
+   0.6
+  ],
+  "b01": [
+   0.01,
+   0.189
+  ],
+  "b04": [
+   0.281,
+   1.075
+  ],
+  "b07": [
+   0.1,
+   0.3
+  ],
+  "b21": [
+   0.4,
+   1.0
+  ],
+  "b22": [
+   0.6,
+   1.3
+  ],
+  "b23": [
+   0.1,
+   0.6
+  ],
+  "r24": [
+   2.29,
+   2.62
+  ],
+  "B_FEE_scale": [
+   0.5,
+   2.0
+  ],
+  "births_ratio": [
+   0.6,
+   1.3
+  ],
+  "spend_ratio": [
+   0.8,
+   1.6
+  ],
+  "b_eci_stake": [
+   0.05,
+   0.25
+  ],
+  "b_eci_ret": [
+   0.05,
+   0.2
+  ],
+  "b_eci_comp": [
+   0.05,
+   0.2
+  ],
+  "b_eci_formal": [
+   0.05,
+   0.2
+  ]
+ },
+ "eci": "PENDING (04_data/complexity not on disk)",
+ "decision": "shrink = target 0/256 -> >=1/256"
+}

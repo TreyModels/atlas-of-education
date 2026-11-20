@@ -1,0 +1,69 @@
+{
+ "loop": "8b",
+ "owner": "experiment-runner-2",
+ "scope": "05b_experiments/loop8b only",
+ "label": "SYNTHETIC/POSSIBILITY ONLY; programme CLOSED",
+ "eci_metric": "eci_hs92 (eci_sitc robustness only; no ranks/growth_proj/HS12)",
+ "eci_values": {
+  "KOR": 1.754,
+  "HKG": 1.218,
+  "PHL": 0.718,
+  "KHM": -0.281,
+  "ref": 0.852
+ },
+ "environment": {
+  "python": "3.11.17",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "numpy": "2.4.6"
+ },
+ "predeclaration": "PRE_DECLARATIONS_L8B.md",
+ "deviation": "L8B-1 run launched before predeclare file committed (contents fixed beforehand)",
+ "unscoreable": [
+  "R44",
+  "R45",
+  "R46",
+  "R47",
+  "R48",
+  "R49",
+  "CX-01",
+  "CX-02",
+  "CX-03",
+  "CX-04"
+ ],
+ "code_sha": {
+  "code/synth_wired_eci.py": "141557c826b4d229",
+  "code/make_manifest_l8b.py": "c24e4604ec12d775"
+ },
+ "outputs": [
+  {
+   "path": "runs/eps_ec_arm.csv",
+   "sha16": "f572edfdbd1fc628",
+   "bytes": 2903
+  },
+  {
+   "path": "runs/findings.txt",
+   "sha16": "7f4e9794cba6a134",
+   "bytes": 2132
+  },
+  {
+   "path": "runs/frontier_before_after.csv",
+   "sha16": "2f6de022e7f38f02",
+   "bytes": 246
+  },
+  {
+   "path": "runs/kor_two_margin.csv",
+   "sha16": "a55856e4104bd316",
+   "bytes": 83
+  },
+  {
+   "path": "runs/synth_wired_draws.csv",
+   "sha16": "bf83bea96129e5f3",
+   "bytes": 1244748
+  },
+  {
+   "path": "runs/synth_wired_meta.json",
+   "sha16": "7ef7e1fbefcef7eb",
+   "bytes": 1725
+  }
+ ]
+}

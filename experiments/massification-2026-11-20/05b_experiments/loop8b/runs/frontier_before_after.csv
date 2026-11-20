@@ -1,0 +1,9 @@
+target,loop6_inside,loop8_inside,delta,shrink
+KOR_gradient,0,0,0,no
+HKG_gradient,0,2,2,YES
+KOR_fee,28,27,-1,no
+HKG_fee,134,137,3,no
+KOR_income,117,82,-35,no
+KOR_provider,42,47,5,no
+PHL_completion,36,0,-36,no
+KHM_completion,73,251,178,no
