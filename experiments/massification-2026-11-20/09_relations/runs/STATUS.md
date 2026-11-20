@@ -35,3 +35,34 @@
 - All panel numbers: WDI live API access 2026-11-20, raw payloads archived. Observed cells only — `value is None` rows are dropped, never filled.
 - The 04_data files (`gmr_observed_6countries_1970_2024.csv`) were used **observed-only**; the imputed companion file was never read as observations.
 - Shadow numbers are copied from `04_data/shadow_round2/` with their original source, table and confidence; case-study (KHM) and low-confidence (China 2022) rows are labelled as such.
+
+---
+
+# ADDENDUM A1 (2026-11-20, after task close): literacy × GDP × ECI + population pyramids
+
+Requested by Dr. Menefee after the task closed: *"a correlation between literacy rates and GDP and ECI... a lot of lit rate increases are just old illiterates dying. we need pop size and pyramids too."*
+
+## COMPLETE for the addendum
+
+| Deliverable | Status | Content |
+|---|---|---|
+| `LITERACY_ECI_DEMOGRAPHY.md` | **complete** | ECI (Growth Lab, Harvard Dataverse, CC0) × GDP × literacy tests E1–E17; cohort-replacement decomposition D1–D2; population pyramids; caveats. |
+| `RELATION_CANDIDATES.csv` | **extended to 40 rows** (R31–R40) | literacy×GDP, ECI×GDP, ECI×flow vs stock, ECI→growth null, Growth-Lab-projection null, cohort replacement, youth-literacy production, pyramid measurement caveat, within-cohort residual. |
+| `data/` | **complete** | `panel_wdi_eci.csv`, `eci_literacy_results.csv`, `eci_growth_crosssection.csv`, `literacy_cohort_decomposition.csv`, `literacy_decomposition_regressions.csv`, `population_pyramids.csv`, `literacy_country_examples.csv`. |
+| `raw/` | **complete** | `eci_growth_proj_rankings.csv` (Growth Lab), `eci_data_dictionary.csv`, plus the new WDI payloads (literacy, CBR/CDR/LE, population). |
+| `scripts/analyze_literacy_eci.py`, `scripts/append_register_literacy_eci.py` | **complete** | end-to-end reproducible. |
+
+## Headline of the addendum
+
+1. **Median 62–66% of observed adult-literacy gains is cohort replacement**, not learning (24 countries, 241 country-periods; entrant-flow coefficient 1.655, se 0.526). A literacy rise is largely old illiterates dying and young literates entering.
+2. **Literacy does not track GDP within country** (3.91, se 2.67, ns) and **does not track ECI** (0.001, se 0.005, ns), while **ECI does track the schooling FLOW** — primary completion t−10: 0.593 (se 0.176). Flow, not stock.
+3. **ECI's published growth premium does not replicate here**: 10y growth on ECI = −0.068 (se 0.067, year-FE cross-section) and −0.158 (0.101, two-way FE); the Growth Lab `growth_proj` also fails (−0.004, se 0.020). Sample/period-specific or wrong; do not use ECI as a growth driver without resolving.
+4. **Pyramid caveat**: PHL 1980→2020 literacy +15.2pp while 0–14 share fell 44.3→30.7; CHN +31.2pp with 65+ 4.6→12.6. Report attainment by cohort, never as an aggregate rate alone.
+
+## PARTIAL / blocked in the addendum
+
+- **5-year age bands unavailable**: WDI API v2 does not serve `SP.POP.1519.TO.ZS` / `SP.POP.2024.TO.ZS` (invalid value), so the pyramid is 3-band and the 15–24 share is proxied from births 15 years earlier (derived, flagged).
+- **China literacy too sparse** in WDI (one usable period) — needs the census series 1982/1990/2000/2010/2020.
+- **No adult literacy series for KOR/JPN/HKG** — the developed benchmarks are absent from the literacy decomposition.
+- **The exit component is bounded, not estimated** (the dying cohort's literacy is unobserved); the 0.62–0.66 replacement share is conditional on that bound.
+- **KHM/LAO/LKA/VNM show replacement >1** — within-cohort literacy loss or series revision; cannot separate the two without the original census tabulations.

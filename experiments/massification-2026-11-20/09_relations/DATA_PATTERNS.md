@@ -307,3 +307,8 @@ LAO, MNG, IND, BGD, PAK, LKA, NPL); non-Asia = 11 (TUR, MEX, BRA, EGY, NGA, KEN,
 | `data/shadow_gradients.csv` | observed shadow-education gradients |
 | `data/country_typology.csv` | country baseline groups (1985–2000 means) |
 | `raw/wdi/*.json` | raw API payloads, one file per indicator × country chunk |
+
+
+## 8. Addendum A1 — literacy, ECI and population pyramids
+
+A separate analysis file, **`LITERACY_ECI_DEMOGRAPHY.md`**, extends this layer with the ECI (Growth Lab / Harvard Dataverse, CC0) and literacy/pyramid data: tests E1–E17 (ECI × GDP × literacy × growth), the cohort-replacement decomposition D1–D2, and the population pyramids. Headline: **62–66% of observed adult-literacy gains is cohort replacement, not learning**; ECI tracks the schooling *flow* (completion t−10, 0.593) but not the literacy *stock*; and the published ECI growth premium does not replicate in this 30-country 1995–2024 panel (−0.068, se 0.067). Register rows R31–R40.

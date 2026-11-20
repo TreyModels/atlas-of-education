@@ -17,6 +17,7 @@ never reused; a re-review of the same batch gets a new number and a `supersedes`
 | 006 | 2026-11-20 | lead | Loop-3 STOP-RULE adjudication + withdrawal sign-off | loop3 PRE_DECL/EXPERIMENTS/SUMMARY/runs s1,s2,s3; SUMMARY_FOR_TREY §4b/§6; RESEARCH_LOOP §2/§4/§5/§6; loop4 pending | BRAY, PATRINOS, PAGE, CARTWRIGHT (AI composites) | Stop rule 1; withdrawal scope; publishable objects; rescue; sign-off | **Stop rule 1 FIRED**: S1 3/3 assessable outside; S2 no defensible PH reproduction (11.7pp); S3 UNABLE; loop4 U1/U1b/U2/U3 read later | Shadow-incidence WITHDRAWN; publishable = method+negative map+measurement; KOR no-fit rescue | [brief](brief_006/BRIEF.md) · [deliberation](brief_006/COUNCIL_DELIBERATION_006.md) · [synthesis](brief_006/SYNTHESIS_006.md) |
 | 007 | 2026-11-20 | lead | COUNTRY-EVIDENCE-DRIVEN EXPERIMENT SLATE (iteration 5) | country cards; SHADOW_TARGETS; TARGETS_*/ECONOMY_SERIES; shadow_round2; loop2 calibration+ledger; loop3; loop4 U1/U1b/U2/U3; 09_relations PENDING | BRAY, PATRINOS, PAGE (AI composites) | Q1–Q5 | 7-experiment slate; E1 gate-architecture gradient #1; provider tech #2; JPN within-country #3; data-first list; relations PENDING | — | E1 gate-gradient (KOR fall vs HKG rise; ±5pp; 30–45 min) | [brief](brief_007/BRIEF.md) · [deliberation](brief_007/COUNCIL_DELIBERATION_007.md) · [synthesis](brief_007/SYNTHESIS_007.md) |
 | 008 | 2026-11-20 | lead | FINAL LOOP ADJUDICATION + close-out | loop5 E1/E1b/E2/E3/E4; loop2-4 cumulative; PARAMETER_MAP (8 obs/10 not); 09_relations PENDING; briefs 003-007; RESEARCH_LOOP §5 | CARTWRIGHT, PATRINOS, PAGE, BRAY (AI composites) | Q1–Q6 | **IDENTIFICATION LIMITS ESTABLISHED (scoped)**: 5 classes excluded; 8/9 stop rules fired (rule 4 not fired); rule 9 confirmed; P1 negative map (equivalence), P2 measurement, P3 KOR fee/income note | — | PSA FIES/APIS/LFS microdata (data-first #1) | [brief](brief_008/BRIEF.md) · [deliberation](brief_008/COUNCIL_DELIBERATION_008.md) · [synthesis](brief_008/SYNTHESIS_008.md) |
+| 009 | 2026-11-20 | lead | SYNTHETIC ASSUMPTION-SPACE MAP (iteration 6): 49 params / 7 families / 74-row prediction register | ECON_LIT+ECON_TARGETS; SHADOW_TARGETS; PARAMETER_MAP; shadow_round2; loop2-5; 09_relations (R01-R24, typology) | PAGE, PATRINOS, BRAY (AI composites) | Q: families + register + support/impossibility + data-first | **Assumption-space map only**: 7 families; predicted F2 inside HKG, F3 inside PHL/KHM-primary; KOR 4-stage & KHM 68.4/41.3 predeclared impossible; complexity axis PENDING (04_data/complexity absent); support ≠ validation | none (predeclared, not results) | P17 credential requirement share (collapse #1); P18 second | [brief](brief_009/BRIEF.md) · [families](brief_009/SCENARIO_FAMILIES.md) · [register](brief_009/PREDICTION_REGISTER.csv) · [synthesis](brief_009/SYNTHESIS_009.md) |
 
 ## Standing-verdict watchlist
 
@@ -61,10 +62,14 @@ append-only, left as posted; a one-line signpost can be posted under the correct
 | Identification limits established | 008 | **YES (scoped)**: gate architecture, provider-tech-as-missing-channel, cross-country incidence, mechanism classification, completion forecasting all excluded | reopen only via ranked data acquisitions (brief 008 §4) |
 | Rule 9 (two iterations without identification gain) | 008 | **CONFIRMED** (definition: predeclared threshold on out-of-fit moment) | closed |
 
+| Economic complexity axis | 009 | PENDING: 04_data/complexity absent; raw ECI in 09_relations/raw; P46-P49 assumed; CX-01..04 direction-only | land ECI/COI pull + scout complexity relations; re-rank families |
+| Synthetic family map | 009 | Predeclared: 7 families, 74-row register (hashes 93cbc563…/84e6f649…); HK 0.85 excluded; support ≠ validation | runner-2 consumes register; report per-family inside/outside |
+
 ## Cycle log
 
 | # | Convened | Completed | Lead report sent | Notes |
 |---|---|---|---|---|
+| 009 | 2026-11-20 13:52 | 2026-11-20 14:06 | yes (families + register) + bridge post | Assumption-space map; complexity amendment added pre-finalisation; data PENDING. |
 | 008 | 2026-11-20 13:38 | 2026-11-20 13:44 | yes (brief 008 FINAL) + bridge post | FINAL. Limits established; close-out draft; data-first program. Council closes. |
 | 007 | 2026-11-20 13:29 | 2026-11-20 13:37 | yes (brief 007 slate) + bridge post | Slate of 7; E1 gate-gradient first; relation layer PENDING. |
 | 006 | 2026-11-20 13:23 | 2026-11-20 13:31 | yes (brief 006) + bridge post | Stop rule 1 confirmed; incidence withdrawn; sign-off amendments for SUMMARY+R RESEARCH_LOOP. |

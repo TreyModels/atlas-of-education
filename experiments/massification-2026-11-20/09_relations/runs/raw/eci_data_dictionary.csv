@@ -1,0 +1,12 @@
+column_name,data_type,description,notes
+country_id,integer,Numerical country identification code assigned by the Growth Lab,Augmented version of UN M49 codes.
+country_iso3_code,string,Three letter country identification code,Augmented version of ISO 3166-1 alpha-3 codes.
+year,integer,Year of record,
+growth_proj,float,Economic Complexity Growth Projection,"A prediction of how much a country will grow over the following 10 years based on its current ECI and COI, as compared to its current income level in GDP per capita and expected natural resource exports."
+in_rankings,boolean,Country included in Growth Projections and ECI rankings,"Flags if a country meets trade volume, population, and data quality requirements to be included in current Growth Lab rankings analysis."
+eci_sitc,float,Economic Complexity Index calculated using SITC product classification,"A measure of the knowledge in a society as expressed in the products it makes. The economic complexity of a country is calculated based on the diversity of exports a country produces and their ubiquity, or the number of the countries able to produce them (and those countries’ complexity)."
+eci_rank_sitc,integer,Economic Complexity Index rank calculated using SITC product classification,Rank of country among peers included in analysis based on the diversification and complexity of their export basket. 
+eci_hs92,float,Economic Complexity Index calculated using HS92 product classification,"A measure of the knowledge in a society as expressed in the products it makes. The economic complexity of a country is calculated based on the diversity of exports a country produces and their ubiquity, or the number of the countries able to produce them (and those countries’ complexity)."
+eci_rank_hs92,integer,Economic Complexity Index rank calculated using HS92 product classification,Rank of country among peers included in analysis based on the diversification and complexity of their export basket. 
+eci_hs12,float,Economic Complexity Index calculated using HS12 product classification,"A measure of the knowledge in a society as expressed in the products it makes. The economic complexity of a country is calculated based on the diversity of exports a country produces and their ubiquity, or the number of the countries able to produce them (and those countries’ complexity)."
+eci_rank_hs12,integer,Economic Complexity Index rank calculated using HS12 product classification,Rank of country among peers included in analysis based on the diversification and complexity of their export basket. 
