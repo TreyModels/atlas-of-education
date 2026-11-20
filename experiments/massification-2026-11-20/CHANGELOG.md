@@ -210,3 +210,12 @@ manifests and error logs.
   declared assumptions with no theory citation.**
 - DECISIONS D106–D107 record both outcomes. Queue: v1.3 shadow build, v1.2.1 NER object (W4 in progress), A3 demand
   implementation; HKG run still needs explicit Council authority (SR-9).
+
+## 2026-11-20 (reactivation batch 4) — v1.2.1 NER output object (HKG interface blocker cleared, with a declared limitation)
+
+- `synthetic_2026-11-20/generator_v1_2_addendum/`: adds NER columns to the frozen v1.2 panel by **age-structure
+  derivation** (`ner = 100 × admitted_official / cohort`); 6,720 rows, 67 columns unchanged, 10 appended; invariance 3/3
+  PASS (v1.2 re-runs byte-identical, rows/keys preserved, `enrolment = admitted_official + admitted_overage` and
+  `ner ≤ ger` hold); predecl `aa756f8b…`; smoke test PHL-like first-sustained NER ≥90 = 2007, ≥95 = 2016 (SYNTHETIC,
+  diagnostic only). **Declared limitation: cohort-flow NER analogue, not the UIS stock-based NER** — the HKG timing
+  test is now runnable at the interface but SR-9 (Council authority) remains open. No HKG run performed.

@@ -1,0 +1,198 @@
+{
+  "addendum": "generator_v1_2_addendum",
+  "code": {
+    "bytes": 14627,
+    "description": "deterministic panel transformer; reads the frozen panel, appends NER columns",
+    "path": "code/add_ner.py",
+    "sha256": "e4eedc3fa33620f5dfaacdcab6778072e5a778e8c3f8a88dafcee9ebe04a1753"
+  },
+  "code_sha256": "e4eedc3fa33620f5dfaacdcab6778072e5a778e8c3f8a88dafcee9ebe04a1753",
+  "created_date": "2026-11-20",
+  "documents": {
+    "FINDINGS.md": {
+      "bytes": 13052,
+      "description": "post-run findings and disclosures",
+      "path": "FINDINGS.md",
+      "sha256": "d5905e8fa0c441d2070a28a2cc8cb500eec6b5074055bc09751203b78e632bf0"
+    }
+  },
+  "environment": {
+    "add_ner_python": "3.12.14 (standard library only)",
+    "note": "the v1.2 result CSVs are byte-identical across these environments; no exact Python 3.11.17/NumPy 2.4.6 environment was available to this worker.",
+    "v1_2_delivered_manifest_numpy": "2.4.6",
+    "v1_2_delivered_manifest_python": "3.11.17",
+    "v1_2_rerun_numpy": "2.3.5",
+    "v1_2_rerun_python": "3.12.14"
+  },
+  "frozen_input_panel_sha256": "14729c5141a71dd9aaf87a5ad2e973a84b5f04603577aae627f2833276fac5ac",
+  "frozen_v1_2": {
+    "code": {
+      "bytes": 63078,
+      "description": "frozen v1.2 generator",
+      "path": "../generator_v1_2/code/sim_v1_2.py",
+      "sha256": "61123aa9370a407487407bf3ff4b97287aea67cac5f90629e540a6e8cc855e7c"
+    },
+    "git_commit": "c3d0353e14732b1f6a33be3f552fb55aa72134ea",
+    "git_status": "clean for generator_v1_2/ and v1_2/ at that commit",
+    "params": {
+      "bytes": 23735,
+      "description": "frozen v1.2 human-readable parameter mirror",
+      "path": "../generator_v1_2/PARAMS.md",
+      "sha256": "0d619781c4e059f54cf771fb385475f5f939dceced5036e8a21b6e07a2b315e3"
+    },
+    "predeclaration": {
+      "bytes": 10579,
+      "description": "frozen v1.2 spec (sha256 also embedded in sim_v1_2.py)",
+      "path": "../v1_2/PRE_DECLARATIONS.md",
+      "sha256": "fde18d405d875167977b350a925c28248c3007d2813dcdb29219d3baf0b95f16"
+    },
+    "results": {
+      "determinism_note.md": "b2d317b2bb2fe781dbc02d43bbac9fd2ea5f3b7c91f216564a366add5f2613eb",
+      "reproduction_checks_detail_v1_2.csv": "0597bafb8f8b90ad03a0164e9c2137cdaaff2186f1d7d0c5e5476462b285706b",
+      "reproduction_checks_v1_2.csv": "72a17fb6dcf59db671bbbcdb04111560d1d1aee59791009111dc3861b3f0fba8",
+      "synthetic_panel_v1_2.csv": "14729c5141a71dd9aaf87a5ad2e973a84b5f04603577aae627f2833276fac5ac"
+    },
+    "run_manifest": {
+      "bytes": 8598,
+      "description": "frozen v1.2 run manifest",
+      "path": "../generator_v1_2/RUN_MANIFEST.json",
+      "sha256": "36c40ff95470893a6d6fda21d9afe341ec0f374073a7af56cdf9c55c9b75b876"
+    }
+  },
+  "frozen_v1_2_predeclaration_sha256": "fde18d405d875167977b350a925c28248c3007d2813dcdb29219d3baf0b95f16",
+  "invariance": {
+    "a_v1_2_generator_rerun": {
+      "delivered_input_panel_sha256": "14729c5141a71dd9aaf87a5ad2e973a84b5f04603577aae627f2833276fac5ac",
+      "method": "sim_v1_2.py run twice into separate directories inside the addendum; cmp against delivered CSVs and against each other",
+      "note": "all three result CSVs byte-identical; rerun manifests differ only in recorded Python/NumPy versions (3.12.14/2.3.5 vs delivered 3.11.17/2.4.6)",
+      "record": "results/INVARIANCE_RERUNS.json",
+      "result": "PASS"
+    },
+    "b_panel_pass_through": {
+      "method": "re-read output; same row count, same key order, all 67 pre-existing columns identical string-for-string; only appended columns differ",
+      "record": "results/INVARIANCE_CHECKS.json",
+      "result": "PASS"
+    },
+    "c_add_ner_determinism": {
+      "method": "two clean runs; sha256 equality of panel, smoke table and invariance record",
+      "record": "results/INVARIANCE_RERUNS.json",
+      "result": "PASS"
+    }
+  },
+  "label": "SYNTHETIC",
+  "manifest_note": "This manifest does not hash itself; all other delivered files are hashed above.",
+  "ner_object": {
+    "basis": "derived-from-age-structure",
+    "columns": [
+      "ner",
+      "ner_basis",
+      "ner_primary",
+      "ner_lower_secondary",
+      "ner_upper_secondary",
+      "ner_tertiary",
+      "ner_primary_basis",
+      "ner_lower_secondary_basis",
+      "ner_upper_secondary_basis",
+      "ner_tertiary_basis"
+    ],
+    "definition": "ner_L(c,t) = 100 * admitted_official_L(c,t) / cohort_L(c,t)",
+    "input_columns": 67,
+    "input_columns_used": [
+      "country",
+      "country_id",
+      "year",
+      "level",
+      "label",
+      "cohort",
+      "admitted_official",
+      "admitted_overage",
+      "enrolment",
+      "ger"
+    ],
+    "is_observed": false,
+    "is_uis_stock_ner": false,
+    "levels": [
+      "primary",
+      "lower_secondary",
+      "upper_secondary",
+      "tertiary"
+    ],
+    "limitation": "v1.2 is a cohort-flow simulator; this is a cohort-flow NER analogue, internally consistent with the model ger, not the UIS stock NER.",
+    "output_columns": 77,
+    "rows": 6720
+  },
+  "no_causality": "SYNTHETIC / DERIVED \u2014 not observed, not an estimate, not a forecast, not evidence about any country; no causal or direction claim; no policy claim.",
+  "panel": {
+    "input": {
+      "bytes": 5086014,
+      "description": "frozen v1.2 input panel",
+      "path": "../generator_v1_2/results/synthetic_panel_v1_2.csv",
+      "sha256": "14729c5141a71dd9aaf87a5ad2e973a84b5f04603577aae627f2833276fac5ac"
+    },
+    "output": {
+      "bytes": 5649344,
+      "description": "addendum output panel",
+      "path": "results/synthetic_panel_v1_2_ner.csv",
+      "sha256": "c6d1f9b059b5a48cbd5a4aaf7e1c4611cad781819b74987988897e8d35e40294"
+    }
+  },
+  "predeclaration": {
+    "bytes": 13084,
+    "description": "frozen before add_ner.py was first run",
+    "path": "PRE_DECLARATIONS.md",
+    "sha256": "aa756f8b463e557eaf72601c23da150e76968ca249e0cc74c1ff30792533eb88"
+  },
+  "predeclaration_sha256": "aa756f8b463e557eaf72601c23da150e76968ca249e0cc74c1ff30792533eb88",
+  "provenance": "DERIVED",
+  "results_sha256": {
+    "results/INVARIANCE_CHECKS.json": "ca41790cf4f6a4b3b8f8f7ae4a3a077b94f730c8e4c448f33b9d7a58b79eecb5",
+    "results/INVARIANCE_RERUNS.json": "7a8a83317701d720bb682baa556a357ebac0f554193cfe013f35d111ce28eb18",
+    "results/NER_SMOKE.csv": "987f9200c5218f9417b6850e8f2b561e216e2665280bb7fc87826c3be5f803e4",
+    "results/synthetic_panel_v1_2_ner.csv": "c6d1f9b059b5a48cbd5a4aaf7e1c4611cad781819b74987988897e8d35e40294"
+  },
+  "smoke_test": {
+    "country": "SYN00_PHL_LIKE",
+    "crossing_rule": "first-at-above; first-sustained = first year y with y..y+4 all >= threshold",
+    "hkg_comparison": "none",
+    "is_monotone_non_decreasing": false,
+    "label": "SYNTHETIC",
+    "level": "primary",
+    "measure": "ner_primary",
+    "n_decreases": 11,
+    "note": "Smoke test only. No comparison to HKG, no use of HKG target years, no tolerance, no verdict, no claim about any real country.",
+    "provenance": "DERIVED",
+    "result_file": "results/NER_SMOKE.csv",
+    "series_max": 99.57100547,
+    "series_max_year": 2023,
+    "series_min": 75.14471392,
+    "series_min_year": 1978,
+    "series_years": [
+      1970,
+      2025
+    ],
+    "thresholds": {
+      "90": {
+        "first_at_or_above_year": 1970,
+        "first_sustained_5y_year": 2007,
+        "n_years_ge_threshold": 20,
+        "pct_years_ge_threshold": 35.71428571
+      },
+      "95": {
+        "first_at_or_above_year": 2016,
+        "first_sustained_5y_year": 2016,
+        "n_years_ge_threshold": 10,
+        "pct_years_ge_threshold": 17.85714286
+      }
+    },
+    "verdict_token": null
+  },
+  "statement": "NER object added at the v1.2 panel interface. The NER columns are derived from the frozen v1.2 panel and are not observed, estimated, fitted, forecast, or evidence about any country. No causal or direction claim. No HKG comparison.",
+  "what_it_does_not_license": [
+    "It does not change any v1.2 check, parameter, result, or file.",
+    "It does not pass, fail, or pre-judge the HKG transfer; no HKG comparison is made.",
+    "It does not turn the synthetic NER into an observed NER or evidence about any country.",
+    "It does not establish that the cohort-flow NER analogue is the UIS stock NER.",
+    "It does not clear SR-2 (v1.2 PHL precondition) or SR-9 (Council authority).",
+    "It does not license a causal, direction, portability, or policy claim."
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "a_v1_2_generator_rerun": {
+    "commands": {
+      "run_a": "PYTHONDONTWRITEBYTECODE=1 python -B code/sim_v1_2.py --out ../generator_v1_2_addendum/results/_invariance/run_a --manifest ../generator_v1_2_addendum/results/_invariance/run_a/manifest.json",
+      "run_b": "PYTHONDONTWRITEBYTECODE=1 python -B code/sim_v1_2.py --out ../generator_v1_2_addendum/results/_invariance/run_b --manifest ../generator_v1_2_addendum/results/_invariance/run_b/manifest.json"
+    },
+    "environment": {
+      "delivered_manifest_numpy": "2.4.6",
+      "delivered_manifest_python": "3.11.17",
+      "manifest_top_level_differences": [
+        "numpy",
+        "python"
+      ],
+      "note": "The rerun manifests differ from the delivered RUN_MANIFEST.json only in the recorded Python/NumPy versions. All three result CSVs are byte-identical.",
+      "numpy_used_for_reruns": "2.3.5",
+      "python_used_for_reruns": "3.12.14"
+    },
+    "files": {
+      "reproduction_checks_detail_v1_2.csv": {
+        "a_vs_b": "IDENTICAL",
+        "bytes": 1547,
+        "delivered_sha256": "0597bafb8f8b90ad03a0164e9c2137cdaaff2186f1d7d0c5e5476462b285706b",
+        "delivered_vs_a": "IDENTICAL",
+        "delivered_vs_b": "IDENTICAL",
+        "run_a_sha256": "0597bafb8f8b90ad03a0164e9c2137cdaaff2186f1d7d0c5e5476462b285706b",
+        "run_b_sha256": "0597bafb8f8b90ad03a0164e9c2137cdaaff2186f1d7d0c5e5476462b285706b"
+      },
+      "reproduction_checks_v1_2.csv": {
+        "a_vs_b": "IDENTICAL",
+        "bytes": 4379,
+        "delivered_sha256": "72a17fb6dcf59db671bbbcdb04111560d1d1aee59791009111dc3861b3f0fba8",
+        "delivered_vs_a": "IDENTICAL",
+        "delivered_vs_b": "IDENTICAL",
+        "run_a_sha256": "72a17fb6dcf59db671bbbcdb04111560d1d1aee59791009111dc3861b3f0fba8",
+        "run_b_sha256": "72a17fb6dcf59db671bbbcdb04111560d1d1aee59791009111dc3861b3f0fba8"
+      },
+      "synthetic_panel_v1_2.csv": {
+        "a_vs_b": "IDENTICAL",
+        "bytes": 5086014,
+        "delivered_sha256": "14729c5141a71dd9aaf87a5ad2e973a84b5f04603577aae627f2833276fac5ac",
+        "delivered_vs_a": "IDENTICAL",
+        "delivered_vs_b": "IDENTICAL",
+        "run_a_sha256": "14729c5141a71dd9aaf87a5ad2e973a84b5f04603577aae627f2833276fac5ac",
+        "run_b_sha256": "14729c5141a71dd9aaf87a5ad2e973a84b5f04603577aae627f2833276fac5ac"
+      }
+    },
+    "generator": "generator_v1_2/code/sim_v1_2.py",
+    "generator_sha256": "61123aa9370a407487407bf3ff4b97287aea67cac5f90629e540a6e8cc855e7c",
+    "predeclaration": "v1_2/PRE_DECLARATIONS.md",
+    "predeclaration_sha256": "fde18d405d875167977b350a925c28248c3007d2813dcdb29219d3baf0b95f16",
+    "result": "PASS"
+  },
+  "c_add_ner_rerun": {
+    "code": "generator_v1_2_addendum/code/add_ner.py",
+    "code_sha256": "e4eedc3fa33620f5dfaacdcab6778072e5a778e8c3f8a88dafcee9ebe04a1753",
+    "commands": {
+      "run_1": "PYTHONDONTWRITEBYTECODE=1 python -B code/add_ner.py",
+      "run_2": "PYTHONDONTWRITEBYTECODE=1 python -B code/add_ner.py --out-dir results/_invariance/add_ner_run_b"
+    },
+    "files": {
+      "INVARIANCE_CHECKS.json": {
+        "bytes": 2006,
+        "run_1_sha256": "ca41790cf4f6a4b3b8f8f7ae4a3a077b94f730c8e4c448f33b9d7a58b79eecb5",
+        "run_1_vs_run_2": "IDENTICAL",
+        "run_2_sha256": "ca41790cf4f6a4b3b8f8f7ae4a3a077b94f730c8e4c448f33b9d7a58b79eecb5"
+      },
+      "NER_SMOKE.csv": {
+        "bytes": 831,
+        "run_1_sha256": "987f9200c5218f9417b6850e8f2b561e216e2665280bb7fc87826c3be5f803e4",
+        "run_1_vs_run_2": "IDENTICAL",
+        "run_2_sha256": "987f9200c5218f9417b6850e8f2b561e216e2665280bb7fc87826c3be5f803e4"
+      },
+      "synthetic_panel_v1_2_ner.csv": {
+        "bytes": 5649344,
+        "run_1_sha256": "c6d1f9b059b5a48cbd5a4aaf7e1c4611cad781819b74987988897e8d35e40294",
+        "run_1_vs_run_2": "IDENTICAL",
+        "run_2_sha256": "c6d1f9b059b5a48cbd5a4aaf7e1c4611cad781819b74987988897e8d35e40294"
+      }
+    },
+    "result": "PASS"
+  },
+  "check": "invariance_a_and_c_reruns",
+  "label": "SYNTHETIC",
+  "rerun_artifacts_note": "The transient rerun CSV directories were compared byte-for-byte and then removed to avoid duplicating the frozen v1.2 artifacts; the sha256 values above are the record.",
+  "rerun_artifacts_retained": false,
+  "statement": "Invariance evidence only. No model result is claimed; the v1.2 reruns are the frozen generator run twice into separate directories and compared byte-for-byte with the delivered artifacts."
+}

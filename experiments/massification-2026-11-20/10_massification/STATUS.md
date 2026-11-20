@@ -894,3 +894,18 @@ gained a `results_sha256` block (contract completeness). **Controller verificati
 changed is `oos_neither_share` (1,680 tertiary rows); `reproduction_checks_v1_2.csv` and
 `reproduction_checks_detail_v1_2.csv` are **byte-identical** to the committed versions; the revised code re-runs
 **two clean times byte-identical to the delivered files**. No parameter, threshold or check value changed.
+
+### g) v1.2.1 NER output object DELIVERED (W4) — HKG interface blocker cleared with a declared limitation
+
+- `synthetic_2026-11-20/generator_v1_2_addendum/` (predecl sha256 `aa756f8b…`): adds NER columns to the frozen v1.2
+  panel by **age-structure derivation**, `ner_L = 100 × admitted_official_L / cohort_L` (v1.2 does model the official-
+  vs over-age split; the numerator is the model's official-age admission, not a declared share). Panel 6,720 rows,
+  67 old columns unchanged, 10 appended; two addendum runs byte-identical.
+- **Invariance 3/3 PASS:** v1.2 code re-runs twice → all three result CSVs byte-identical to delivered; addendum output
+  preserves rows/keys/columns; `enrolment = admitted_official + admitted_overage` and `ner ≤ ger + 1e-6` 0 violations.
+- **Declared limitation:** this is a **cohort-flow NER analogue** (same denominator as the model's GER), **not the UIS
+  stock-based NER** (`NER.1.cp`). It makes the HKG timing test *runnable at the interface*; it does not establish that
+  the model's NER is comparable to the observed HKG NER. Smoke test (SYNTHETIC, diagnostic only, no HKG comparison):
+  PHL-like primary first-sustained ≥90 = **2007**, ≥95 = **2016**; series not monotone (11 decreases).
+- **Consequence:** SR-1 is cleared only in the "an NER object exists" sense; **SR-9 (Council authority) remains
+  open** and the HKG run has not been executed.

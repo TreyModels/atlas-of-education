@@ -1,0 +1,60 @@
+{
+  "all_rows_label_SYNTHETIC": true,
+  "basis": "derived-from-age-structure",
+  "checks": {
+    "b_panel_pass_through": "PASS",
+    "c_addendum_deterministic_by_construction": "two clean runs compared by sha256"
+  },
+  "enrolment_identity_tolerance": 1e-06,
+  "enrolment_identity_violations": 0,
+  "input_file": "synthetic_panel_v1_2.csv",
+  "input_sha256": "14729c5141a71dd9aaf87a5ad2e973a84b5f04603577aae627f2833276fac5ac",
+  "label": "SYNTHETIC",
+  "n_cohort_nonpositive": 0,
+  "n_columns_input": 67,
+  "n_columns_output": 77,
+  "n_negative_admitted": 0,
+  "n_ner_negative": 0,
+  "n_rows_input": 6720,
+  "n_rows_output": 6720,
+  "n_tertiary_ner_gt_100": 0,
+  "ner_ge_ger_tolerance": 1e-06,
+  "ner_ge_ger_violations": 0,
+  "ner_max_by_level": {
+    "lower_secondary": 96.91710924449093,
+    "primary": 99.73769672374098,
+    "tertiary": 73.08398476118663,
+    "upper_secondary": 93.51124722623274
+  },
+  "ner_min_by_level": {
+    "lower_secondary": 47.353244606774595,
+    "primary": 66.23964018742387,
+    "tertiary": 0.6598175818323386,
+    "upper_secondary": 2.9342601676913214
+  },
+  "new_columns": [
+    "ner",
+    "ner_basis",
+    "ner_primary",
+    "ner_lower_secondary",
+    "ner_upper_secondary",
+    "ner_tertiary",
+    "ner_primary_basis",
+    "ner_lower_secondary_basis",
+    "ner_upper_secondary_basis",
+    "ner_tertiary_basis"
+  ],
+  "output_file": "synthetic_panel_v1_2_ner.csv",
+  "output_sha256": "c6d1f9b059b5a48cbd5a4aaf7e1c4611cad781819b74987988897e8d35e40294",
+  "pre_existing_columns_identical": true,
+  "provenance": "DERIVED",
+  "row_order_identical": true,
+  "smoke_file": "NER_SMOKE.csv",
+  "smoke_sha256": "987f9200c5218f9417b6850e8f2b561e216e2665280bb7fc87826c3be5f803e4",
+  "smoke_sustained_rule": ">= 5 consecutive years at/above",
+  "smoke_thresholds": [
+    "90",
+    "95"
+  ],
+  "statement": "NER is derived from the frozen v1.2 panel's official-age admission / official-age cohort split. Not observed, not an estimate, not a forecast, no causal or direction claim."
+}
