@@ -298,3 +298,11 @@ manifests and error logs.
   sustained exits, fragile), strong claim **untestable**; recorded in `THEORY_FRAME.md` + MODEL_ARCHITECTURE A4.
 - Next model line object = transition ratio + declared κ=0.949 link; sequencing EXP-7 → EXP-6 → EXP-8 → EXP-9 →
   EXP-10; **EXP-7 dispatched** (gates downstream predeclarations). DOMUS noted, not integrated.
+
+## 2026-11-20 — EXP-7 REPRO-PATH: v1.2 ENDPOINT-ONLY; κ-link valid; pipeline to be built into v1.5 (D126)
+
+- `repro_path_2026-11-20/` (predecl `74f9d0e0…`, deterministic, baseline guard PASS): **leg A `ENDPOINT-ONLY`** —
+  9/33 within ±5 pp vs the ≥17/33 bar (medians −4.30/−29.44/−27.59; worst upper 1999 −36.62); **leg B κ-link VALID**
+  (κ = 0.949 declared from the observed median; 20/53 → 0/53 violations; guards pass) with class **b2** (linked upper
+  2024 63.97, delta −12.67 pp). The pipeline link must be built into v1.5; v1.5 BIMODAL-GATE predeclaration (κ + two
+  orthogonal no-refit guards) in production. No re-fit; no causal/direction claim.

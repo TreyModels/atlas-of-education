@@ -1,0 +1,187 @@
+{
+  "label": "SYNTHETIC (generator panel) + OBSERVED (PHL UIS completion series)",
+  "experiment": "EXP-7 REPRO-PATH",
+  "brief": "Council brief 022 (D122 #2); SYNTHESIS_022.md section 6, EXP-7 REPRO-PATH, rank #2",
+  "dependency_role": "precondition for the v1.5 BIMODAL-GATE predeclaration (brief 022 section 4.4)",
+  "worker": "WORKER RP",
+  "date": "2026-11-20",
+  "status": "COMPLETE",
+  "statement": "Descriptive/diagnostic audit of a declared-assumption simulator. No causal and no direction claim; D63 remains UNABLE as to cause. The kappa link is a declared accounting constraint taken from an observed median (never fitted), not an estimated relationship. m = 1.10 and v1.2's scope (crossing/endpoint placement) are unchanged. No threshold was changed after results.",
+  "predeclaration": {
+    "file": "PRE_DECLARATIONS.md",
+    "sha256": "74f9d0e0ece9680eaba470f3979f5d1e6042d7851585962cb1cdf7d365b3db12",
+    "recorded_sidecar": "PRE_DECLARATIONS.sha256",
+    "sidecar_sha256": "8c8a7dda91e459d4e72225a92df12f5fd2be0ae97ab1b0cc737b5817554c609a",
+    "hashed_before_any_run": true,
+    "thresholds_changed_after_results": false,
+    "verbatim_source": "08_council/brief_022/SYNTHESIS_022.md section 6 EXP-7 items 2 and 5"
+  },
+  "frozen_inputs_read_only": {
+    "panel": {
+      "path": "10_massification/extensions/synthetic_2026-11-20/generator_v1_2/results/synthetic_panel_v1_2.csv",
+      "sha256": "14729c5141a71dd9aaf87a5ad2e973a84b5f04603577aae627f2833276fac5ac",
+      "matches_declared": true
+    },
+    "sim_code": {
+      "path": "10_massification/extensions/synthetic_2026-11-20/generator_v1_2/code/sim_v1_2.py",
+      "sha256": "61123aa9370a407487407bf3ff4b97287aea67cac5f90629e540a6e8cc855e7c",
+      "matches_declared": true
+    },
+    "params": {
+      "path": "10_massification/extensions/synthetic_2026-11-20/generator_v1_2/PARAMS.md",
+      "sha256": "0d619781c4e059f54cf771fb385475f5f939dceced5036e8a21b6e07a2b315e3",
+      "matches_declared": true
+    },
+    "generator_manifest": {
+      "path": "10_massification/extensions/synthetic_2026-11-20/generator_v1_2/RUN_MANIFEST.json",
+      "sha256": "36c40ff95470893a6d6fda21d9afe341ec0f374073a7af56cdf9c55c9b75b876",
+      "matches_declared": true
+    },
+    "observed_series": {
+      "path": "10_massification/data/UNIVERSALIZATION_SERIES.csv",
+      "sha256": "85bc869396ebfcb39e3e1a21a31af219e75a07326c738a51d2bfdbe536737ddb",
+      "matches_declared": true
+    },
+    "council_brief": {
+      "path": "08_council/brief_022/SYNTHESIS_022.md",
+      "sha256": "9508dd55be8dd64da8322a8277c8342a4f50be6790a3d287e39e7004537c109b",
+      "matches_declared": true
+    }
+  },
+  "copies_inside_experiment_dir": {
+    "unlinked_panel": {
+      "path": "results/BASELINE_UNLINKED_PANEL.csv",
+      "sha256": "14729c5141a71dd9aaf87a5ad2e973a84b5f04603577aae627f2833276fac5ac",
+      "byte_identical_to_frozen": true
+    },
+    "generator_code_copied": false,
+    "note": "No generator code was copied or edited: leg (b) is an in-memory projection on a byte copy of the frozen panel. No file under generator_v1_2/ was written or modified."
+  },
+  "declared_parameters": {
+    "kappa_verdict_bearing": 0.949,
+    "kappa_provenance": "median of the 8 observed PHL upper_t/lower_{t-3} pairs; re-derived 0.94914 -> 0.949",
+    "kappa_sensitivity_non_verdict": 0.96,
+    "kappa_sensitivity_provenance": "pre-2018 median; re-derived 0.95956 -> 0.960",
+    "lag_years": 3,
+    "lag_rule": "exact t-3; no nearest-year matching in leg (b)",
+    "within_pp": 5.0,
+    "within_bar": "17/33",
+    "anchor_type": "SYN00_PHL_LIKE",
+    "class_boundaries": {
+      "b1": "[73,77]",
+      "b2": "< 71",
+      "b3": "|delta| < 1.0 pp",
+      "precedence": "b2 > b3 > b1"
+    },
+    "no_fit": true,
+    "no_rng": true
+  },
+  "construction": {
+    "leg_a_comparisons": 33,
+    "leg_a_cells_by_level": {
+      "primary": 11,
+      "lower_secondary": 11,
+      "upper_secondary": 11
+    },
+    "leg_a_missing_cells": 0,
+    "leg_a_missing_rule": "MISSING retained in denominator; never imputed, dropped or nearest-year substituted",
+    "leg_b_scored_cells": 53,
+    "leg_b_not_scorable": [
+      1970,
+      1971,
+      1972
+    ],
+    "leg_b_not_scorable_rule": "no lower_{t-3} in panel; excluded from denominator; never imputed"
+  },
+  "verdicts": {
+    "leg_a": "ENDPOINT-ONLY",
+    "leg_a_components": {
+      "within_5pp": "9/33",
+      "within_10pp": "13/33",
+      "median_primary_pp": "-4.3008",
+      "median_lower_pp": "-29.4351",
+      "median_upper_pp": "-27.5857",
+      "max_miss_pp": "-36.6190",
+      "construction_check_vs_V1": "MATCH"
+    },
+    "leg_b_class": "b2",
+    "leg_b_components": {
+      "violations_before": "20/53",
+      "violations_after": "0/53",
+      "max_violation_margin_pp": "18.3111",
+      "upper_2024_unlinked_pct": "76.6391",
+      "bound_2024_pct": "63.9695",
+      "upper_2024_linked_pct": "63.9695",
+      "delta_2024_pp": "-12.6695",
+      "ratio_2024": "1.136955",
+      "sensitivity_kappa_0.960_linked_2024_pct": "64.7110"
+    },
+    "baseline_guard": "BASELINE-GUARD-PASS",
+    "falsifier_triggered": false,
+    "combined": "ENDPOINT-ONLY + b2 + BASELINE-GUARD-PASS"
+  },
+  "results_files": {
+    "results/PATH_COMPARISONS.csv": "33 rows; every comparison with year, level, synthetic, observed, deviation pp, within flags",
+    "results/KAPPA_LINK.csv": "56 rows (53 SCORED + 3 NOT-SCORABLE); upper_t, lower_{t-3}, ratio, bound, violation, linked value, delta, class",
+    "results/REPRO_PATH_RESULTS.csv": "long-format (test, statistic, value, threshold, verdict, components)",
+    "results/BASELINE_GUARD.json": "G1-G4 with hashes and pre/post comparison",
+    "results/console.txt": "captured console of run 1 (byte-identical to run 2)",
+    "results/BASELINE_UNLINKED_PANEL.csv": "byte copy of the frozen panel (5 086 014 bytes)"
+  },
+  "determinism": {
+    "method": "two clean runs of the same RNG-free, timestamp-free script into results/ and results/determinism_run2/, then sha256 and byte comparison of all six artifacts",
+    "rng": "none",
+    "timestamps_in_outputs": false,
+    "artifacts": [
+      {
+        "artifact": "results/PATH_COMPARISONS.csv",
+        "run1_sha256": "33107d2d575610564073d3859923eb50b35117f68eebee4459783608ef3ab3b2",
+        "run2_sha256": "33107d2d575610564073d3859923eb50b35117f68eebee4459783608ef3ab3b2",
+        "byte_identical": true
+      },
+      {
+        "artifact": "results/KAPPA_LINK.csv",
+        "run1_sha256": "671962dc585bcc833215ecc22823fb46d26f65b8a181dd9a6d8aa96dfb6b1e38",
+        "run2_sha256": "671962dc585bcc833215ecc22823fb46d26f65b8a181dd9a6d8aa96dfb6b1e38",
+        "byte_identical": true
+      },
+      {
+        "artifact": "results/REPRO_PATH_RESULTS.csv",
+        "run1_sha256": "8666492c396afb6beda094b50e3a414542dd50f5fd49702015b873e6284df227",
+        "run2_sha256": "8666492c396afb6beda094b50e3a414542dd50f5fd49702015b873e6284df227",
+        "byte_identical": true
+      },
+      {
+        "artifact": "results/BASELINE_GUARD.json",
+        "run1_sha256": "23d8ba722ebb7de1f5db2d43b4687425c05d29bbaff22d39fb1696c432694e9a",
+        "run2_sha256": "23d8ba722ebb7de1f5db2d43b4687425c05d29bbaff22d39fb1696c432694e9a",
+        "byte_identical": true
+      },
+      {
+        "artifact": "results/console.txt",
+        "run1_sha256": "bbdd63216845a0cee1969c3346d89efb3b149e0c25059d7e5192a6c60e69a390",
+        "run2_sha256": "bbdd63216845a0cee1969c3346d89efb3b149e0c25059d7e5192a6c60e69a390",
+        "byte_identical": true
+      },
+      {
+        "artifact": "results/BASELINE_UNLINKED_PANEL.csv",
+        "run1_sha256": "14729c5141a71dd9aaf87a5ad2e973a84b5f04603577aae627f2833276fac5ac",
+        "run2_sha256": "14729c5141a71dd9aaf87a5ad2e973a84b5f04603577aae627f2833276fac5ac",
+        "byte_identical": true
+      }
+    ],
+    "all_byte_identical": true,
+    "verdict": "DETERMINISTIC"
+  },
+  "discipline": {
+    "no_writes_outside_experiment_dir": true,
+    "generator_files_unchanged_verified": true,
+    "no_re_fit": true,
+    "no_threshold_change": true,
+    "no_causal_or_direction_claim": true,
+    "labels": "SYNTHETIC on generator numbers; OBSERVED on PHL completion numbers",
+    "web_used": false,
+    "server_touched": false
+  },
+  "implication_for_v1_5_bimodal_gate": "The pipeline link must be built into v1.5 as a structural accounting constraint evaluated inside the model each year, with kappa a declared system input, not applied as post-processing. v1.2's 2024 upper endpoint (76.64) may not be carried into v1.5 as a ceiling target or as evidence of inheritance: under the declared link it falls to 63.97 (delta -12.67 pp). v1.5 level claims must be scored on the path (a count over observed year-level cells), not on a single endpoint."
+}

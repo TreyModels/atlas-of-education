@@ -1,0 +1,24 @@
+EXP-7 REPRO-PATH — deterministic run
+label: SYNTHETIC (panel) / OBSERVED (PHL completion series)
+predeclaration sha256: 74f9d0e0ece9680eaba470f3979f5d1e6042d7851585962cb1cdf7d365b3db12 (verified)
+frozen panel sha256:   14729c5141a71dd9aaf87a5ad2e973a84b5f04603577aae627f2833276fac5ac (verified)
+
+LEG (a) — 33 observed cells vs SYN00_PHL_LIKE
+  within +/-5 pp: 9/33  -> ENDPOINT-ONLY
+  within +/-10 pp: 13/33
+  medians (pp): primary -4.3008 | lower -29.4351 | upper -27.5857
+  worst miss: -36.6190 pp (upper_secondary 1999)
+  construction check vs V1: MATCH
+
+LEG (b) — declared link upper_t <= 0.949 * lower_{t-3}
+  scored cells: 53 (NOT-SCORABLE: 1970-1972)
+  violations before: 20/53
+  violations after:  0/53
+  max violation margin: 18.3111 pp (2022)
+  kappa provenance: n_pairs=8 median=0.94914 pre2018=0.95956 MATCH
+  upper 2024: unlinked 76.6391 | bound 63.9695 | linked 63.9695 | delta -12.6695 | ratio 1.136955
+  class (kappa 0.949, verdict-bearing): b2
+  class (kappa 0.960, sensitivity only): b2 (linked 64.7110)
+  baseline guard: BASELINE-GUARD-PASS (G1 True G2 True G3 True G4 True)
+
+VERDICT: ENDPOINT-ONLY + b2 + BASELINE-GUARD-PASS

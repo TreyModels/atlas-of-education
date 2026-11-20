@@ -1,0 +1,29 @@
+experiment,test,statistic,value,threshold,verdict,components
+EXP-7 REPRO-PATH,leg_a,comparisons_reported,33,= 33; all reported; no subset,ENDPOINT-ONLY,11 observed year-level cells per level x 3 levels = 33
+EXP-7 REPRO-PATH,leg_a,cells_by_level,primary 11; lower_secondary 11; upper_secondary 11,= 33,ENDPOINT-ONLY,year sets differ by level (2003 upper only; 2021 primary+lower only)
+EXP-7 REPRO-PATH,leg_a,within_5pp_count,9/33,>= 17/33 (51.5%),ENDPOINT-ONLY,primary 6/11; lower_secondary 0/11; upper_secondary 3/11
+EXP-7 REPRO-PATH,leg_a,within_5pp_share_pct,27.27,>= 51.5,ENDPOINT-ONLY,V1's published count is 9/33 = 27.3%; re-derived here
+EXP-7 REPRO-PATH,leg_a,within_10pp_count,13/33,descriptive (no bar),-,V1 companion statistic
+EXP-7 REPRO-PATH,leg_a,median_deviation_primary_pp,-4.3008,descriptive (no bar),-,SYNTHETIC minus OBSERVED; signed
+EXP-7 REPRO-PATH,leg_a,median_deviation_lower_secondary_pp,-29.4351,descriptive (no bar),-,SYNTHETIC minus OBSERVED; signed
+EXP-7 REPRO-PATH,leg_a,median_deviation_upper_secondary_pp,-27.5857,descriptive (no bar),-,SYNTHETIC minus OBSERVED; signed
+EXP-7 REPRO-PATH,leg_a,max_abs_miss_pp,-36.6190,descriptive (no bar),-,upper_secondary 1999 (largest negative deviation)
+EXP-7 REPRO-PATH,leg_a,comparisons_above_observed,6,descriptive (no bar),-,count of cells where SYNTHETIC > OBSERVED
+EXP-7 REPRO-PATH,leg_a,missing_synthetic_cells,0,0 expected; MISSING kept in denominator 33,-,no imputation and no nearest-year substitution
+EXP-7 REPRO-PATH,leg_a,construction_check_vs_V1,MATCH,9/33; 13/33; medians -4.30/-29.44/-27.59; worst -36.62 upper 1999,-,independent re-derivation reproduces the Council's V1 construction
+EXP-7 REPRO-PATH,leg_b,scored_cells,53,= 53 (t = 1973..2025),-,anchor type SYN00_PHL_LIKE; exact 3-year lag; no nearest-year matching
+EXP-7 REPRO-PATH,leg_b,not_scorable_cells,3 (1970-1972),"declared NOT-SCORABLE, not imputed",-,no lower_{t-3} inside the panel
+EXP-7 REPRO-PATH,leg_b,violations_before,20/53,descriptive; zero not required,-,"upper_t > 0.949*lower_{t-3}, strict, no tolerance"
+EXP-7 REPRO-PATH,leg_b,violations_after,0/53,must be 0/53 (implementation check),-,"projection min(upper_t, bound) applied in memory; no other change"
+EXP-7 REPRO-PATH,leg_b,max_violation_margin_pp,18.3111,descriptive (no bar),-,"largest excess above the bound, year 2022"
+EXP-7 REPRO-PATH,leg_b,anchor_years_ratio_gt_1.10,12,descriptive (no bar),-,"V2 re-derived: years 2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024"
+EXP-7 REPRO-PATH,leg_b,kappa_0.949,0.949,declared = median of 8 observed PHL pairs,-,provenance check: n_pairs=8 median=0.94914 pre2018_median=0.95956 -> MATCH
+EXP-7 REPRO-PATH,leg_b,upper_2024_unlinked_pct,76.6391,baseline value (frozen panel),-,SYN00_PHL_LIKE completion_uis x 100
+EXP-7 REPRO-PATH,leg_b,bound_2024_pct_kappa_0.949,63.9695,0.949 * lower_2021,-,lower_2021 = 67.4073 pct
+EXP-7 REPRO-PATH,leg_b,upper_2024_linked_pct,63.9695,b1 in [73..77] / b2 < 71,b2,"after = min(76.6391, 63.9695) under the declared projection"
+EXP-7 REPRO-PATH,leg_b,delta_2024_pp,-12.6695,b3 if |delta| < 1.0,-,linked minus unlinked at 2024
+EXP-7 REPRO-PATH,leg_b,ratio_2024,1.136955,descriptive (no bar),-,upper_2024 / lower_2021
+EXP-7 REPRO-PATH,leg_b,outcome_class,b2,b1 [73..77] / b2 < 71 / b3 |delta|<1.0; precedence b2>b3>b1,b2,components: unlinked 76.6391; bound 63.9695; linked 63.9695; delta -12.6695; ratio 1.136955
+EXP-7 REPRO-PATH,leg_b,sensitivity_kappa_0.960_upper_2024_linked_pct,64.7110,non-verdict-bearing,-,"delta -11.9281 pp; class b2 (sensitivity, NOT the verdict)"
+EXP-7 REPRO-PATH,leg_b,baseline_guard,BASELINE-GUARD-PASS,copy sha256 == 14729c51...acf5ac; generator files unchanged,BASELINE-GUARD-PASS,G1 True; G2 True; G3 True; G4 True
+EXP-7 REPRO-PATH,leg_b,verdict_b,b2,class plus guard,b2,"link VALID; 20/53 violations before, 0/53 after"

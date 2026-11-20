@@ -1,0 +1,42 @@
+{
+  "experiment": "EXP-7 REPRO-PATH",
+  "label": "SYNTHETIC (panel) / OBSERVED (PHL series)",
+  "statement": "Descriptive/diagnostic. No causal and no direction claim. The unlinked arm must reproduce the frozen panel byte-for-byte; this is the block's falsifier for leg (b).",
+  "declared_panel_sha256": "14729c5141a71dd9aaf87a5ad2e973a84b5f04603577aae627f2833276fac5ac",
+  "G1_frozen_panel_hash_equals_declared": true,
+  "G1_observed_sha256": "85bc869396ebfcb39e3e1a21a31af219e75a07326c738a51d2bfdbe536737ddb",
+  "G2_copy_inside_experiment_dir": {
+    "path": "results/BASELINE_UNLINKED_PANEL.csv",
+    "sha256": "14729c5141a71dd9aaf87a5ad2e973a84b5f04603577aae627f2833276fac5ac",
+    "byte_identical_to_frozen": true,
+    "bytes": 5086014,
+    "rows_including_header": 6721
+  },
+  "G3_unlinked_arm_cells_equal_frozen_cells": {
+    "cells_compared": 112,
+    "match": true,
+    "note": "values used in KAPPA_LINK.csv are read from the byte-identical copy, then checked cell-by-cell against the frozen original"
+  },
+  "G4_generator_files_unchanged_after_run": {
+    "before": {
+      "panel": "14729c5141a71dd9aaf87a5ad2e973a84b5f04603577aae627f2833276fac5ac",
+      "sim_code": "61123aa9370a407487407bf3ff4b97287aea67cac5f90629e540a6e8cc855e7c",
+      "params": "0d619781c4e059f54cf771fb385475f5f939dceced5036e8a21b6e07a2b315e3",
+      "generator_manifest": "36c40ff95470893a6d6fda21d9afe341ec0f374073a7af56cdf9c55c9b75b876",
+      "observed": "85bc869396ebfcb39e3e1a21a31af219e75a07326c738a51d2bfdbe536737ddb"
+    },
+    "after": {
+      "panel": "14729c5141a71dd9aaf87a5ad2e973a84b5f04603577aae627f2833276fac5ac",
+      "sim_code": "61123aa9370a407487407bf3ff4b97287aea67cac5f90629e540a6e8cc855e7c",
+      "params": "0d619781c4e059f54cf771fb385475f5f939dceced5036e8a21b6e07a2b315e3",
+      "generator_manifest": "36c40ff95470893a6d6fda21d9afe341ec0f374073a7af56cdf9c55c9b75b876",
+      "observed": "85bc869396ebfcb39e3e1a21a31af219e75a07326c738a51d2bfdbe536737ddb"
+    },
+    "equal": true,
+    "generator_sim_sha256_expected": "61123aa9370a407487407bf3ff4b97287aea67cac5f90629e540a6e8cc855e7c"
+  },
+  "generator_files_written_by_this_experiment": [],
+  "writes_outside_experiment_dir": [],
+  "verdict": "BASELINE-GUARD-PASS",
+  "falsifier_triggered": false
+}

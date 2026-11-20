@@ -1058,3 +1058,16 @@ model-specification failure.
   reversal diagnostic must be predeclared and labelled descriptive. The Manila→hill-tribe examples are thought
   experiments and must not be modelled literally.
 - **DOMUS noted but not integrated** (separate programme workspace; no action).
+
+### j) EXP-7 REPRO-PATH executed — v1.2 is ENDPOINT-ONLY; the κ-link is valid and the pipeline must be built into v1.5 (D126)
+
+- **`repro_path_2026-11-20/`** (predecl `74f9d0e0…`; deterministic; baseline guard PASS): **leg A = `ENDPOINT-ONLY`** —
+  **9/33** year-level comparisons within ±5 pp against the predeclared **≥17/33** bar; medians **−4.30** primary /
+  **−29.44** lower / **−27.59** upper; worst miss upper 1999 **−36.62**; no missing synthetic cells and no substitution;
+  independently reproduces Council V1. **Leg B: κ-link VALID** — κ = **0.949** (median of 8 observed PHL pairs; declared,
+  never fitted); **20/53** violations before projection → **0/53** after; baseline unlinked arm byte-identical to the
+  frozen panel `14729c51…acf5ac`; outcome class **b2** (linked upper 2024 **63.97** vs unlinked 76.64, delta **−12.67
+  pp**; sensitivity κ = 0.960 unchanged).
+- **Consequence:** **the pipeline link must be built into v1.5**; the v1.5 BIMODAL-GATE predeclaration (in production
+  now) carries κ = 0.949 as a declared constraint + the two orthogonal guards (bimodal OFF + κ OFF ⇒ v1.3 panel
+  byte-identical; bimodal OFF + κ ON ⇒ linked arm). No re-fit; v1.2 scope (D119) unchanged.
