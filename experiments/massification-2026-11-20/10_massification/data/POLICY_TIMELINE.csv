@@ -1,0 +1,14 @@
+country,iso3,year,event,detail,source,confidence,status
+Japan,JPN,1872,Education system established (Gakusei),first modern national school system; not compulsory in practice,well-established historical fact,fact (not re-verified this pass),policy_fact
+Japan,JPN,1886,Compulsory education: 4 years,Primary school order; 4-year compulsory; extended to 6 years in 1907,well-established historical fact,fact (not re-verified this pass),policy_fact
+Japan,JPN,1947,Fundamental Law of Education / School Education Law,9-year compulsory education (6 primary + 3 lower secondary),well-established historical fact,fact (not re-verified this pass),policy_fact
+Republic of Korea,KOR,1953,Compulsory primary education,6-year primary compulsory (completed mid-1950s-1970s),well-established historical fact,fact (not re-verified this pass),policy_fact
+Republic of Korea,KOR,1985,Middle-school compulsory education begins,phased free/compulsory middle school 1985-2004 (rural first),well-established historical fact,fact (not re-verified this pass),policy_fact
+"Hong Kong SAR, China",HKG,1971,6-year free primary education,free primary schooling policy,well-established historical fact,fact (not re-verified this pass),policy_fact
+"Hong Kong SAR, China",HKG,1978,9-year free compulsory education,primary 6 + junior secondary 3 became free and compulsory,well-established historical fact,fact (not re-verified this pass),policy_fact
+"Hong Kong SAR, China",HKG,2008,12-year free education rolled out,free senior secondary from 2008/09 academic year,well-established historical fact,fact (not re-verified this pass),policy_fact
+"Hong Kong SAR, China",HKG,2012,3-3-4 academic structure reform,secondary reduced to 6 years; 4-year undergraduate degrees; first HKDSE 2012,workspace ledger; 04_data/DATA_LEDGER.md,fact,policy_fact
+Philippines,PHL,1987,1987 Constitution: free public primary and secondary education,constitutional mandate for free public basic education,well-established historical fact,fact (not re-verified this pass),policy_fact
+Philippines,PHL,2013,RA 10533 K-12 reform,basic education extended from 10 to 12 years (+ kindergarten); first SHS cohort 2016-2018,workspace papers: 00_handoff/papers/01_june_bjorn.txt; 04_data ledger,fact,policy_fact
+China,CHN,1986,Compulsory Education Law,9-year compulsory education (6 primary + 3 junior secondary),well-established historical fact,fact (not re-verified this pass),policy_fact
+Cambodia,KHM,1996,9-year compulsory education policy,constitutional/legal basis for 9-year basic education after PRK period,well-established policy fact,fact (not re-verified this pass),policy_fact

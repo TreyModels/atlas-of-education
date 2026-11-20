@@ -1,0 +1,75 @@
+E6 — INDEPENDENT TIMING COMPARISON (observed only; crossing = holdout; no direction claim).
+Data: UNIVERSALIZATION_TIMING.csv (bands) + UNIVERSALIZATION_SERIES.csv (observed); reconstructed excluded from primary.
+
+  logistic     scored  6 | PASS  2 | median |err|   5.5y | false crossings 0
+  gompertz     scored  6 | PASS  1 | median |err|   8.0y | false crossings 0
+  linear       scored  6 | PASS  0 | median |err| 178.5y | false crossings 0
+  exponential  scored  6 | PASS  0 | median |err|  43.8y | false crossings 0
+
+PREDECLARED RULE: timing reproduced iff >=2/3 scored PASS for a bounded form AND 0 false crossings.
+  -> E6 timing FAIL = STRUCTURAL TIMING MISS (R19); cycle closes PARTIAL+EQUIVALENT with explicit timing miss (D36)
+
+Per-milestone table (primary rows):
+  CHN  lower_secondary_universal  logistic  obs 2015.0 pred nan err nan tol +/-3.0 -> UNABLE
+  CHN  lower_secondary_universal  gompertz  obs 2015.0 pred nan err nan tol +/-3.0 -> UNABLE
+  CHN  primary_universal          logistic  obs 2013.0 pred nan err nan tol +/-3.0 -> UNABLE
+  CHN  primary_universal          gompertz  obs 2013.0 pred nan err nan tol +/-3.0 -> UNABLE
+  CHN  tertiary_mass              logistic  obs 2016.5 pred 2017.0 err 0.5 tol +/-3.0 -> PASS
+  CHN  tertiary_mass              gompertz  obs 2016.5 pred 2018.0 err 1.5 tol +/-3.0 -> PASS
+  CHN  upper_secondary_mass       logistic  obs 2011.0 pred nan err nan tol +/-3.0 -> UNABLE
+  CHN  upper_secondary_mass       gompertz  obs 2011.0 pred nan err nan tol +/-3.0 -> UNABLE
+  CHN  upper_secondary_universal  logistic  obs nan pred nan err nan tol +/-5.0 -> UNABLE
+  CHN  upper_secondary_universal  gompertz  obs nan pred nan err nan tol +/-5.0 -> UNABLE
+  HKG  lower_secondary_universal  logistic  obs 2015.5 pred nan err nan tol +/-3.0 -> NO-PRED-CROSSING
+  HKG  lower_secondary_universal  gompertz  obs 2015.5 pred nan err nan tol +/-3.0 -> NO-PRED-CROSSING
+  HKG  primary_universal          logistic  obs 1978.5 pred nan err nan tol +/-3.0 -> UNABLE
+  HKG  primary_universal          gompertz  obs 1978.5 pred nan err nan tol +/-3.0 -> UNABLE
+  HKG  tertiary_mass              logistic  obs 2007.5 pred 2018.0 err 10.5 tol +/-3.0 -> FAIL
+  HKG  tertiary_mass              gompertz  obs 2007.5 pred 2019.0 err 11.5 tol +/-3.0 -> FAIL
+  HKG  upper_secondary_mass       logistic  obs nan pred 2018.0 err nan tol +/-5.0 -> LEFT-CENSORED
+  HKG  upper_secondary_mass       gompertz  obs nan pred 2018.0 err nan tol +/-5.0 -> LEFT-CENSORED
+  HKG  upper_secondary_universal  logistic  obs nan pred 2021.0 err nan tol +/-5.0 -> NO-CROSSING-OK
+  HKG  upper_secondary_universal  gompertz  obs nan pred 2022.0 err nan tol +/-5.0 -> NO-CROSSING-OK
+  JPN  lower_secondary_universal  logistic  obs nan pred 2024.0 err nan tol +/-5.0 -> LEFT-CENSORED
+  JPN  lower_secondary_universal  gompertz  obs nan pred 2024.0 err nan tol +/-5.0 -> LEFT-CENSORED
+  JPN  primary_universal          logistic  obs nan pred 2024.0 err nan tol +/-5.0 -> LEFT-CENSORED
+  JPN  primary_universal          gompertz  obs nan pred 2024.0 err nan tol +/-5.0 -> LEFT-CENSORED
+  JPN  tertiary_mass              logistic  obs 2006.0 pred 2011.0 err 5.0 tol +/-5.0 -> PASS
+  JPN  tertiary_mass              gompertz  obs 2006.0 pred 2014.0 err 8.0 tol +/-5.0 -> PARTIAL
+  JPN  upper_secondary_mass       logistic  obs nan pred 2024.0 err nan tol +/-5.0 -> LEFT-CENSORED
+  JPN  upper_secondary_mass       gompertz  obs nan pred 2024.0 err nan tol +/-5.0 -> LEFT-CENSORED
+  JPN  upper_secondary_universal  logistic  obs nan pred 2024.0 err nan tol +/-5.0 -> LEFT-CENSORED
+  JPN  upper_secondary_universal  gompertz  obs nan pred 2024.0 err nan tol +/-5.0 -> LEFT-CENSORED
+  KHM  lower_secondary_universal  logistic  obs nan pred 2041.0 err nan tol +/-5.0 -> NO-CROSSING-OK
+  KHM  lower_secondary_universal  gompertz  obs nan pred 2048.0 err nan tol +/-5.0 -> NO-CROSSING-OK
+  KHM  primary_universal          logistic  obs nan pred nan err nan tol +/-5.0 -> NO-CROSSING-OK
+  KHM  primary_universal          gompertz  obs nan pred nan err nan tol +/-5.0 -> NO-CROSSING-OK
+  KHM  tertiary_mass              logistic  obs nan pred nan err nan tol +/-5.0 -> NO-CROSSING-OK
+  KHM  tertiary_mass              gompertz  obs nan pred nan err nan tol +/-5.0 -> NO-CROSSING-OK
+  KHM  upper_secondary_mass       logistic  obs nan pred nan err nan tol +/-5.0 -> NO-CROSSING-OK
+  KHM  upper_secondary_mass       gompertz  obs nan pred nan err nan tol +/-5.0 -> NO-CROSSING-OK
+  KHM  upper_secondary_universal  logistic  obs nan pred nan err nan tol +/-5.0 -> NO-CROSSING-OK
+  KHM  upper_secondary_universal  gompertz  obs nan pred nan err nan tol +/-5.0 -> NO-CROSSING-OK
+  KOR  lower_secondary_universal  logistic  obs nan pred 2023.0 err nan tol +/-5.0 -> LEFT-CENSORED
+  KOR  lower_secondary_universal  gompertz  obs nan pred 2023.0 err nan tol +/-5.0 -> LEFT-CENSORED
+  KOR  primary_universal          logistic  obs nan pred 2017.0 err nan tol +/-5.0 -> LEFT-CENSORED
+  KOR  primary_universal          gompertz  obs nan pred 2017.0 err nan tol +/-5.0 -> LEFT-CENSORED
+  KOR  tertiary_mass              logistic  obs nan pred 2024.0 err nan tol +/-5.0 -> LEFT-CENSORED
+  KOR  tertiary_mass              gompertz  obs nan pred 2024.0 err nan tol +/-5.0 -> LEFT-CENSORED
+  KOR  upper_secondary_mass       logistic  obs nan pred 2023.0 err nan tol +/-5.0 -> LEFT-CENSORED
+  KOR  upper_secondary_mass       gompertz  obs nan pred 2023.0 err nan tol +/-5.0 -> LEFT-CENSORED
+  KOR  upper_secondary_universal  logistic  obs nan pred 2023.0 err nan tol +/-5.0 -> LEFT-CENSORED
+  KOR  upper_secondary_universal  gompertz  obs nan pred 2023.0 err nan tol +/-5.0 -> LEFT-CENSORED
+  PHL  lower_secondary_universal  logistic  obs 2023.5 pred 2029.0 err 5.5 tol +/-3.0 -> PARTIAL
+  PHL  lower_secondary_universal  gompertz  obs 2023.5 pred 2030.0 err 6.5 tol +/-3.0 -> FAIL
+  PHL  primary_universal          logistic  obs 2019.0 pred nan err nan tol +/-5.0 -> UNABLE
+  PHL  primary_universal          gompertz  obs 2019.0 pred nan err nan tol +/-5.0 -> UNABLE
+  PHL  tertiary_mass              logistic  obs 2024.5 pred 2054.0 err 29.5 tol +/-3.0 -> FAIL
+  PHL  tertiary_mass              gompertz  obs 2024.5 pred 2058.0 err 33.5 tol +/-3.0 -> FAIL
+  PHL  upper_secondary_mass       logistic  obs nan pred 2024.0 err nan tol +/-5.0 -> LEFT-CENSORED
+  PHL  upper_secondary_mass       gompertz  obs nan pred 2024.0 err nan tol +/-5.0 -> LEFT-CENSORED
+  PHL  upper_secondary_universal  logistic  obs nan pred nan err nan tol +/-5.0 -> NO-CROSSING-OK
+  PHL  upper_secondary_universal  gompertz  obs nan pred nan err nan tol +/-5.0 -> NO-CROSSING-OK
+
+SCOUT COMPARISON (cell-level, same iso3/level/form where both define a predicted crossing):
+  comparable cells: 9; agree within 1y: 0 (0%)

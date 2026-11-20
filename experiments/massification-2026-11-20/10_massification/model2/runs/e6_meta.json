@@ -1,0 +1,31 @@
+{
+ "decision": "structural timing miss (R19)",
+ "bounded_forms": [],
+ "aggregate": {
+  "logistic": {
+   "scored": 6,
+   "pass_": 2,
+   "median_abs_err": 5.5,
+   "false_cross": 0
+  },
+  "gompertz": {
+   "scored": 6,
+   "pass_": 1,
+   "median_abs_err": 8.0,
+   "false_cross": 0
+  },
+  "linear": {
+   "scored": 6,
+   "pass_": 0,
+   "median_abs_err": 178.5,
+   "false_cross": 0
+  },
+  "exponential": {
+   "scored": 6,
+   "pass_": 0,
+   "median_abs_err": 43.75,
+   "false_cross": 0
+  }
+ },
+ "scored_milestones": 24
+}

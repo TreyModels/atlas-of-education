@@ -75,3 +75,12 @@ fire.
 | # | Rule | Trigger |
 |---|---|---|
 | **R19** | **Timing miss is a structural miss:** for near-universal systems, if the model does not reproduce the observed universalization crossing years within the declared timing tolerances (or violates a left-censored boundary / produces a false crossing), the reproduction claim is FAIL for that country/milestone; report the timing miss explicitly. No level-only victory may be reported as reproducing universalization in a near-universal system. | `UNIVERSALIZATION_MILESTONES.md`; A4 |
+
+
+## Amendment A4 (2026-11-20 15:20) — R20–R22 (anchor/portability)
+
+| # | Rule | Trigger |
+|---|---|---|
+| **R20** | **Portability requires fixed behaviour:** if the transferred model needs behavioural re-fitting, extra free parameters, or target fitting to match HKG/CHN, portability FAILS; report which parameter had to move. Only declared country inputs may re-set | A5 §3 |
+| **R21** | **Mechanism events are exogenous, predeclared and falsifiable:** state-push/demand-pull dates enter as inputs; the model's event break must be predeclared (sign, band, placebo); fitting an event's effect to the outcome is a rule violation (R4/R12); a trajectory match without event breaks is not "mechanisms shown" | A5 §2 |
+| **R22** | **Anchor-first:** no portability claim before the anchor (PHL) passes its trajectory, scaling, timing and mechanism-event criteria; E1-class identification stays secondary until then | user directive; A5 §1 |

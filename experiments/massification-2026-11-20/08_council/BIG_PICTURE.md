@@ -1,7 +1,7 @@
 # BIG_PICTURE — live keep/park/kill list (Council authority)
 
 **Owner:** Council of Experts. **Rule:** `08_council/BIG_PICTURE_RULE.md` (standing order, user, 20 Nov 2026).
-**Updated:** 2026-11-20 15:02 (cycle 4: user timing directive; scaling-repair intake; E2/M2c adjudication). Update at the top of every Council
+**Updated:** 2026-11-20 15:20 (cycle 5: user anchor-system pivot; PHL anchor; portability protocol). Update at the top of every Council
 cycle, before ordering experiments.
 
 ## First-order goal (restated every cycle)
@@ -88,3 +88,12 @@ education is secondary; the shadow phase's identification limits stand and are n
 E9 (crossing-year reconstruction for censored JPN/KOR/HKG series) is **KEEP, rank #3** and is a data-first prerequisite
 for E6's timing comparison (#2). N = ±5 y (±3 y narrow-band). Censored-ratio reconstruction rule recorded; no
 imputation as observation. E1 stays PARKED; direction claims EQUIVALENT.
+
+
+## Cycle 5 step-back (anchor-system pivot)
+
+1. **Goal restated:** stand up ONE system (PHL) where massification is produced by schooling–government–market interaction, show the mechanisms (state push, demand pull, supply push) against rivals, then test portability to CHN/HKG; near-universal systems judged on timing; shadow secondary.
+2. **Threads:** **KEEP (critical path)** — anchor model (A1), state-push battery (A2), demand-pull battery (A3), supply/absorption test (A4), rival comparison (A5), baseline-data web pull (A8), plus the accepted income-scaling repair and the milestone-timing cells (E6/E9) as anchor-model components. **PORTABILITY (after anchor)** — CHN (A6), HKG (A7). **PARK** — E1 two-shock (secondary per directive), E4 Bartik (fold into A3), E5/E7, complexity/ECI, T1/T2 papers, shadow paper. **KILL** — E8, shadow threads.
+3. **One thread that most advances the model:** the **anchor model itself** (A1) — trajectory + scaling laws + milestone timing on PHL, with the state-push battery (A2) as the mechanism audition. Everything else is secondary until PHL works.
+4. **Drift check:** anchor focus is the anti-niche move; the risk now is data-first drift (endless web pulls). Time-box A8 to one week and feed directly into A1–A3. No target fitting; events exogenous (R21).
+5. **If only one thing mattered this week:** A1 anchor model + A2 state-push battery on PHL; drop portability and all other experiments until the anchor's trajectory/scaling/timing/event breaks are in.

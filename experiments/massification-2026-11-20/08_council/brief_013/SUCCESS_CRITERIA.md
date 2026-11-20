@@ -172,3 +172,23 @@ M0 massification = cohort completion ≥50% (expanding systems); universalizatio
 UIS ratios may be reconstructed from observed headcounts + documented population denominators, labelled
 "reconstructed (not UIS)" with method/uncertainty and two-denominator sensitivity; never imputed as observation.
 See `UNIVERSALIZATION_MILESTONES.md` C1.
+
+
+## Amendment A5 (2026-11-20 15:20) — single-system anchor + portability (user design pivot)
+
+1. **Anchor = PHL** (data-sufficiency argument in `ANCHOR_SYSTEM.md`). The programme's first product is a PHL model
+   that shows the mechanisms; portability to CHN (massifying; state-push battery) then HKG (near-universal timing) is
+   the test, not the starting point.
+2. **Extra PHL success criteria:** (i) mechanism event reproduction for predeclared exogenous events — state push
+   (K-12 2013; free SHS 2016; free tertiary 2018; places/teacher expansion) and demand pull (nurse visa 2005–06; BPO
+   regional growth; remittances) — break sign/magnitude inside a predeclared band, pre-trend clean, placebos null;
+   (ii) rival comparison: ≥3 fair rivals on the same PHL record and events, anchor must beat them on the event-break
+   estimand and out-of-sample trajectory, else report EQUIVALENT; (iii) events are **exogenous inputs**, never fitted
+   (R4/R12).
+3. **Portability:** behavioural core + PHL parameter values transfer unchanged; only declared country inputs may be
+   re-set (initial cohorts, observed economy series, policy-event dates/capacity, level-gate mapping, measurement
+   definitions). Any behavioural re-fit = FAIL (R20). HKG levels are check-only (timing regime).
+4. **Web baseline data:** researcher agents may and should search public sources (UNESCO UIS, World Bank, national
+   statistical offices) for baseline series to fill the anchor's missing pre-1999 completion and the event/place
+   series — each series recorded with source, vintage, observed flag; no imputation as observation; external
+   *requests* still need user approval (site/data rules).
