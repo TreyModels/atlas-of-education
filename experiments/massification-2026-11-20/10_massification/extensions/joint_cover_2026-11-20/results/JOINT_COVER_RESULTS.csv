@@ -1,0 +1,87 @@
+record_type,item,value,unit,label,note
+meta,experiment,EXP-17 JOINT-COVER,,DECLARED,brief 024 section 5.2; D145 #2 rank #2
+meta,scored_cell,SYN00_PHL_LIKE|lower_secondary|2021,,SYNTHETIC,single verdict-bearing cell; entry year 2018 (DVEC lower = 3)
+meta,predeclaration_sha256,3394e3f4f085d73e62fa5b07e11270dcc53357516935f2f6975129d3c15ee271,,DECLARED,PRE_DECLARATIONS.md; embedded in code and verified before the run
+meta,panel_sha256,14729c5141a71dd9aaf87a5ad2e973a84b5f04603577aae627f2833276fac5ac,,SYNTHETIC,synthetic_panel_v1_2.csv
+meta,frozen_identity,"m=1.10, phys_cap=1.15, overage_cap=1.05, surv_max=0.91, gamma=0.55, theta=1.0, DVEC=3",,CONVENTION/DECLARED,no constant re-chosen; no generator run
+target,value,0.8076,fraction,DERIVED,76.6391/0.949 = 80.7577 -> 80.76 at 2 dp (D133/D140): the lower-2021 value that would hold the model's own delivered upper-2024 76.6391 under kappa=0.949
+target,provenance,INTERNAL-CONSISTENCY,,DERIVED,"not an external standard, not a policy target, not a forecast, not the Philippines"
+target,observed_reference,0.808960494995,fraction,OBSERVED,"UNIVERSALIZATION_SERIES.csv completion_lower_secondary PHL 2021; reference only, never in the verdict path"
+input,cohort_entry_2018,2435636.21,persons,SYNTHETIC,panel cohort
+input,seats_entry_2018,1660056.513,persons,SYNTHETIC,panel seats
+input,coverage_entry_2018,0.681569976,seats/cohort,SYNTHETIC,panel seat_coverage
+input,cohort_completion_2021,2376200.54,persons,SYNTHETIC,panel cohort
+input,seats_completion_2021,1862168.339,persons,SYNTHETIC,panel seats
+input,coverage_completion_2021,0.7836747394,seats/cohort,SYNTHETIC,panel seat_coverage
+input,q_completion_2021,1.276039599,cohort/seats,SYNTHETIC,panel congestion_q
+input,panel_survival_2021,0.7818186593,fraction,SYNTHETIC,panel survival
+input,panel_completion_uis_2021,0.6740731179,fraction,SYNTHETIC,panel completion_uis; the falsifier's reference
+input,demand_official_entry_pct_cohort,95.4773346467862,percent,SYNTHETIC,used by the capacity-regime scope check only
+input,admitted_official_entry_pct_cohort,78.3805472328727,percent,SYNTHETIC,realised gate at the entry year (context)
+falsifier,lambda_1_chain,0.674073117898974,fraction,SYNTHETIC,m * gate(2018) * surv(2021) at lambda=1
+falsifier,lambda_1_gate,0.783805472308198,fraction,SYNTHETIC,binding branch: phys_cap
+falsifier,lambda_1_survival,0.781818659341494,fraction,SYNTHETIC,law value; panel stores 0.7818186593
+falsifier,abs_error,1.02584607475364e-12,fraction,DERIVED,|chain - panel completion_uis|
+falsifier,tolerance,1e-09,fraction,DECLARED,block clause 5
+falsifier,pass,TRUE,,DERIVED,TRUE = accounting is the one executed
+falsifier,survival_diagnostic_abs_error,4.1493808389248e-11,fraction,DERIVED,law survival vs panel survival at lambda=1; diagnostic only
+falsifier,survival_diagnostic_pass,TRUE,,DERIVED,reporting-defect note if FALSE
+anchor,f_value_at_lambda_1,0.674073117898974,fraction,SYNTHETIC,D142 delivered chain
+anchor,gap_pp,13.3526882101026,percentage points,DERIVED,target - F(1); D142's 13.3527 pp
+anchor,gap_log,0.180728297880653,log,DERIVED,ln(target) - ln(F(1))
+root,count,1,roots,DERIVED,"sign changes 1, exact grid zeros 0, plateau intervals 0"
+root,lambda_star,1.11465019198434,multiplier,DERIVED,required state; NOT a parameter and NOT adopted (section 8)
+root,lambda_star_bisect,1.11465019198434,multiplier,DERIVED,bisection on the sign-change bracket
+root,lambda_star_newton,1.11465019198435,multiplier,DERIVED,"Newton on the binding branch, seed 1.2"
+root,method_abs_diff,5.77315972805081e-15,multiplier,DERIVED,tolerance 1e-09
+root,method_agreement_pass,TRUE,,DERIVED,section 4.4
+root,bracket_lo,1.1145,multiplier,DERIVED,from the grid scan
+root,bracket_hi,1.11475,multiplier,DERIVED,from the grid scan
+root,bracket_width_final,5.81756864903582e-14,multiplier,DERIVED,tolerance 1e-12
+root,residual_at_root,-6.88338275267597e-15,fraction,DERIVED,tolerance 1e-12
+root,bisection_iterations,33,count,DERIVED,max 300
+root,monotonicity_decreases,0,grid intervals,DERIVED,intervals where F falls by > 1e-12; must be 0
+law,max_over_bracket,1.05105,fraction,DERIVED,"max of F over [0.5, 2.0]"
+law,analytic_max,1.05105,fraction,DERIVED,m*overage_cap*surv_max = 1.10*1.05*0.91
+law,F_at_0.5,0.167062773116792,fraction,DERIVED,bracket end
+law,F_at_2.0,1.05105,fraction,DERIVED,bracket end
+law,lambda_cap,1.33961810308353,multiplier,DERIVED,gate reaches overage_cap at or above this lambda
+law,lambda_survival_flat,1.27603959869495,multiplier,DERIVED,survival reaches surv_max at or above this lambda (q(2021))
+law,lambda_demand_bind,1.21812538978095,multiplier,DERIVED,implied gate reaches the panel's own 2018 demand share here
+law,clip_inactive,TRUE,,DERIVED,"survival clip [0.02, 0.995] never binds on bracket"
+implied,coverage_2018,0.759712104599164,seats/cohort,DERIVED,lambda* * panel coverage at the entry year
+implied,coverage_2021,0.87352319872549,seats/cohort,DERIVED,lambda* * panel coverage at the completion year
+implied,seats_2018,1850382.31092031,persons,DERIVED,lambda* * panel seats
+implied,seats_2021,2075666.29657352,persons,DERIVED,lambda* * panel seats
+implied,a_gate,0.873668920186712,fraction,DERIVED,implied entry admission (the gate channel)
+implied,s_survival,0.840343293916087,fraction,DERIVED,implied completion survival (the law channel)
+implied,product_m_a_s,0.807599999999993,fraction,DERIVED,must equal the target
+implied,phys_cap_times_coverage_2018,0.873668920289039,fraction,DERIVED,1.15 * lambda* * coverage at entry; equals a to print rounding on the phys_cap branch
+implied,q_completion,1.14478928714245,cohort/seats,DERIVED,congestion at the root
+implied,lambda_minus_one,0.114650191984343,multiplier,DERIVED,uplift size
+implied,coverage_uplift_pp_2018,7.81421285991641,percentage points,DERIVED,(lambda*-1) * coverage at entry
+implied,coverage_uplift_pp_2021,8.984845932549,percentage points,DERIVED,(lambda*-1) * coverage at completion
+implied,required_vs_realised_gap_pp,13.3526882101026,percentage points,DERIVED,target - F(1); the gap lambda* closes by one lever
+check,root_in_capacity_regime,TRUE,,DERIVED,lambda* < lambda_demand; if FALSE the implied a is an equation artefact
+check,implied_a_flag,NONE,,DERIVED,non-verdict-bearing scope flag (section 6.2 item 2)
+check,resolution_pretest,TRUE,,DECLARED,"dG/dlam=0.783805, dS/dlam=0.425861, |F(+0.01)-F(-0.01)|=0.0236143"
+check,law_max_matches_analytic,TRUE,,DERIVED,grid max 1.05105 vs analytic 1.05105
+check,count_blind,TRUE,,DECLARED,no observed-path count computed; no 33-cell object read; observed series appears as one reference row only
+verdict,verdict_label,SINGLE-LEVER-IDENTIFIED,,DECLARED-RULE,no flags
+verdict,verdict_precedence,UNDETERMINED > MULTIPLE > LAW-INCOMPATIBLE > SINGLE-LEVER-IDENTIFIED,,DECLARED,section 5.1; the block stated none
+verdict,adoption,NONE,,DECLARED,"no lambda adopted; lambda* is a REQUIRED STATE, usable only with the DERIVED target 0.8076 attached"
+secondary,reference_target,0.808960494995,fraction,OBSERVED,reference only; NOT the requirement; section 6.2 item 5
+secondary,reference_lambda_star,1.11580230365248,multiplier,DERIVED,same solve against the observed reference; non-verdict-bearing
+secondary,reference_provenance_delta_pp,0.136049,percentage points,OBSERVED,D142: observed minus internal requirement
+context,year_2017_lambda_star,1.31363463193763,multiplier,DERIVED,context only; SINGLE-LEVER-IDENTIFIED; F(1)=0.50280538
+context,year_2017_a_s,0.88372911 / 0.830777,fraction,DERIVED,"implied (a, s) at 2017"
+context,year_2019_lambda_star,1.21793372946713,multiplier,DERIVED,context only; SINGLE-LEVER-IDENTIFIED; F(1)=0.57746167
+context,year_2019_a_s,0.87789059 / 0.83630218,fraction,DERIVED,"implied (a, s) at 2019"
+context,year_2020_lambda_star,1.16653828144589,multiplier,DERIVED,context only; SINGLE-LEVER-IDENTIFIED; F(1)=0.6230949
+context,year_2020_a_s,0.87613402 / 0.83797889,fraction,DERIVED,"implied (a, s) at 2020"
+context,year_2022_lambda_star,1.0639910338512,multiplier,DERIVED,context only; SINGLE-LEVER-IDENTIFIED; F(1)=0.72920232
+context,year_2022_a_s,0.87091205 / 0.8430034,fraction,DERIVED,"implied (a, s) at 2022"
+context,year_2023_lambda_star,1.01334046539644,multiplier,DERIVED,context only; SINGLE-LEVER-IDENTIFIED; F(1)=0.79036154
+context,year_2023_a_s,0.86873949 / 0.8451116,fraction,DERIVED,"implied (a, s) at 2023"
+context,year_2024_lambda_star,0.962596751376201,multiplier,DERIVED,context only; SINGLE-LEVER-IDENTIFIED; F(1)=0.8587464
+context,year_2024_a_s,0.86751717 / 0.84630235,fraction,DERIVED,"implied (a, s) at 2024"

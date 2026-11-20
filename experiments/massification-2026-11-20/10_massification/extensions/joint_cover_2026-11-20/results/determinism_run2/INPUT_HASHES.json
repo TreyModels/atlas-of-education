@@ -1,0 +1,42 @@
+{
+  "experiment": "EXP-17 JOINT-COVER",
+  "inputs": {
+    "DECISIONS.md": {
+      "bytes": 174473,
+      "path": "08_council/DECISIONS.md",
+      "sha256": "eae722d8bf09d97b7d91a1c8ef19ecf29c69916ea4c1f00ab0a257079158b339"
+    },
+    "LOWER_DEF_RESULTS.csv": {
+      "bytes": 8132,
+      "path": "10_massification/extensions/lower_def_2026-11-20/results/LOWER_DEF_RESULTS.csv",
+      "sha256": "10d44743564d8023fb436916d320903aa279e7026549d7541ac302c315ef8743"
+    },
+    "PARAMS.md": {
+      "bytes": 23735,
+      "path": "10_massification/extensions/synthetic_2026-11-20/generator_v1_2/PARAMS.md",
+      "sha256": "0d619781c4e059f54cf771fb385475f5f939dceced5036e8a21b6e07a2b315e3"
+    },
+    "PRE_DECLARATIONS.md": {
+      "bytes": 35078,
+      "path": "10_massification/extensions/joint_cover_2026-11-20/PRE_DECLARATIONS.md",
+      "sha256": "3394e3f4f085d73e62fa5b07e11270dcc53357516935f2f6975129d3c15ee271"
+    },
+    "SYNTHESIS_024.md": {
+      "bytes": 67613,
+      "path": "08_council/brief_024/SYNTHESIS_024.md",
+      "sha256": "6c6aea4576098c7df68bb1a2d1ee858ec989f45b5e725d5acffc4373ef84babe"
+    },
+    "sim_v1_2.py": {
+      "bytes": 63078,
+      "path": "10_massification/extensions/synthetic_2026-11-20/generator_v1_2/code/sim_v1_2.py",
+      "sha256": "61123aa9370a407487407bf3ff4b97287aea67cac5f90629e540a6e8cc855e7c"
+    },
+    "synthetic_panel_v1_2.csv": {
+      "bytes": 5086014,
+      "path": "10_massification/extensions/synthetic_2026-11-20/generator_v1_2/results/synthetic_panel_v1_2.csv",
+      "sha256": "14729c5141a71dd9aaf87a5ad2e973a84b5f04603577aae627f2833276fac5ac"
+    }
+  },
+  "predeclaration_sha256_embedded": "3394e3f4f085d73e62fa5b07e11270dcc53357516935f2f6975129d3c15ee271",
+  "role": "read-only inputs; no input file was modified; no generator was run"
+}

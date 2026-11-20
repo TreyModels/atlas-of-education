@@ -1,0 +1,259 @@
+{
+  "authority": {
+    "brief": "08_council/brief_024/SYNTHESIS_024.md section 5.2 (verbatim in PRE_DECLARATIONS.md section 1)",
+    "decision": "D145 #2 (rank #2); D142 (EXP-13 chain, target provenance); D143 (scope corrections); D147 (four authoring rules)",
+    "rank": 2
+  },
+  "closed_claims": [
+    "no re-fit",
+    "no new parameter",
+    "no lambda adopted (lambda* is a required state, not a parameter)",
+    "no generator re-run; no model code imported",
+    "no re-scoring of EXP-13 or EXP-14; D140's shares and label untouched",
+    "no causal claim",
+    "no direction claim",
+    "no observed-path count computed (count-blind)",
+    "D63 remains UNABLE as to cause",
+    "phase verdict and scaling FAIL untouched"
+  ],
+  "code": {
+    "clock_in_outputs": false,
+    "deterministic": true,
+    "environment": {
+      "implementation": "CPython",
+      "python": "3.11.17"
+    },
+    "manifest_builder": {
+      "bytes": 17074,
+      "entry_point": "code/make_manifest.py",
+      "path": "code/make_manifest.py",
+      "sha256": "f8259399829481a8f3594760cc8310bafae7b180d9366f329ffd90f5bf5807c7"
+    },
+    "network": "none",
+    "rng": "none",
+    "runner": {
+      "bytes": 37084,
+      "entry_point": "code/run_joint_cover.py --outdir results",
+      "path": "code/run_joint_cover.py",
+      "sha256": "134b1e297b7757f6d233892a3e28b8f5674df56ac000769c0dbaa3a083b19235"
+    }
+  },
+  "determinism": {
+    "files": {
+      "INPUT_HASHES.json": {
+        "byte_identical": true,
+        "run1_sha256": "85430a1f42b2bfd6ec313c2c51180f8186c1866100aa2afda9cde56ba899c39c",
+        "run2_sha256": "85430a1f42b2bfd6ec313c2c51180f8186c1866100aa2afda9cde56ba899c39c"
+      },
+      "JOINT_COVER_DETAIL.csv": {
+        "byte_identical": true,
+        "run1_sha256": "0e46899cab6a431e61b70014a3334165cf55338ddcb843e6b5ebba2f15bbaad2",
+        "run2_sha256": "0e46899cab6a431e61b70014a3334165cf55338ddcb843e6b5ebba2f15bbaad2"
+      },
+      "JOINT_COVER_RESULTS.csv": {
+        "byte_identical": true,
+        "run1_sha256": "9d5afc9a4483d135ed671392489a5b813a5e1200e27c22b17f3af2076a27f46a",
+        "run2_sha256": "9d5afc9a4483d135ed671392489a5b813a5e1200e27c22b17f3af2076a27f46a"
+      }
+    },
+    "method": "sha256 per file between results/ and results/determinism_run2/ (two independent executions)",
+    "result": "byte-identical in all three result files",
+    "runs": 2
+  },
+  "experiment": "EXP-17 JOINT-COVER",
+  "inputs": {
+    "DECISIONS.md": {
+      "bytes": 174473,
+      "mode": "read-only",
+      "path": "08_council/DECISIONS.md",
+      "sha256": "eae722d8bf09d97b7d91a1c8ef19ecf29c69916ea4c1f00ab0a257079158b339"
+    },
+    "LOWER_DEF_RESULTS.csv": {
+      "bytes": 8132,
+      "mode": "read-only",
+      "path": "10_massification/extensions/lower_def_2026-11-20/results/LOWER_DEF_RESULTS.csv",
+      "sha256": "10d44743564d8023fb436916d320903aa279e7026549d7541ac302c315ef8743"
+    },
+    "PARAMS.md": {
+      "bytes": 23735,
+      "mode": "read-only",
+      "path": "10_massification/extensions/synthetic_2026-11-20/generator_v1_2/PARAMS.md",
+      "sha256": "0d619781c4e059f54cf771fb385475f5f939dceced5036e8a21b6e07a2b315e3"
+    },
+    "PRE_DECLARATIONS.md": {
+      "bytes": 35078,
+      "mode": "read-only",
+      "path": "10_massification/extensions/joint_cover_2026-11-20/PRE_DECLARATIONS.md",
+      "sha256": "3394e3f4f085d73e62fa5b07e11270dcc53357516935f2f6975129d3c15ee271"
+    },
+    "SYNTHESIS_024.md": {
+      "bytes": 67613,
+      "mode": "read-only",
+      "path": "08_council/brief_024/SYNTHESIS_024.md",
+      "sha256": "6c6aea4576098c7df68bb1a2d1ee858ec989f45b5e725d5acffc4373ef84babe"
+    },
+    "sim_v1_2.py": {
+      "bytes": 63078,
+      "mode": "read-only",
+      "path": "10_massification/extensions/synthetic_2026-11-20/generator_v1_2/code/sim_v1_2.py",
+      "sha256": "61123aa9370a407487407bf3ff4b97287aea67cac5f90629e540a6e8cc855e7c"
+    },
+    "synthetic_panel_v1_2.csv": {
+      "bytes": 5086014,
+      "mode": "read-only",
+      "path": "10_massification/extensions/synthetic_2026-11-20/generator_v1_2/results/synthetic_panel_v1_2.csv",
+      "sha256": "14729c5141a71dd9aaf87a5ad2e973a84b5f04603577aae627f2833276fac5ac"
+    }
+  },
+  "inputs_role": "read-only; no input file was modified; no generator was run; no model code was imported",
+  "labels": {
+    "implied_state": "DERIVED from SYNTHETIC panel values",
+    "laws_and_constants": "DECLARED / CONVENTION (no value re-chosen)",
+    "observed_reference": "OBSERVED (reference only)",
+    "panel_arithmetic": "SYNTHETIC",
+    "required_value": "DERIVED (76.6391/0.949)",
+    "verdict_rule": "DECLARED in PRE_DECLARATIONS.md section 5"
+  },
+  "notes": [
+    "The equation was solved on the frozen v1.2 panel, where the 2018 lower gate is capacity-limited (0.783805 = 1.15 x coverage). It does NOT carry to the A10 two-tier arm, whose gate is participation-limited (0.681570); see FINDINGS.md section 6.",
+    "The requirement 0.8076 is DERIVED (76.6391/0.949), an internal-consistency object of the declared generator line; the observed reference 80.8960494995 sits +0.136049 pp away and is reported once, never used in a computation.",
+    "Lambda* at the observed reference would be 1.115802; required coverage would be +0.079 pp (2018) and +0.090 pp (2021) higher. Non-verdict-bearing.",
+    "completion_uis is clipped to [0, 1] by the generator; the clip does not bind at this cell (m x completion_cohort = 0.6741) and the survival clip does not bind anywhere on [0.5, 2.0].",
+    "The two console captures differ only in the printed output directory (run2 names results/determinism_run2); the three data artefacts are byte-identical. Consoles are not compared artifacts.",
+    "The verdict label is largely implied by the declared law's monotonicity in lambda; this is disclosed in PRE_DECLARATIONS.md section 7 before the run. The cell's information is lambda*, the implied (a, s) and coverage at both years, and the falsifier."
+  ],
+  "outputs": {
+    "INPUT_HASHES.json": {
+      "bytes": 1794,
+      "contents": "sha256 of every input read",
+      "path": "results/INPUT_HASHES.json",
+      "sha256": "85430a1f42b2bfd6ec313c2c51180f8186c1866100aa2afda9cde56ba899c39c"
+    },
+    "JOINT_COVER_DETAIL.csv": {
+      "bytes": 628467,
+      "contents": "function evaluation grid (N=6001, step 2.5e-4), sign-change brackets, bisection trace, Newton trace, critical lambda points, anchor row",
+      "path": "results/JOINT_COVER_DETAIL.csv",
+      "sha256": "0e46899cab6a431e61b70014a3334165cf55338ddcb843e6b5ebba2f15bbaad2"
+    },
+    "JOINT_COVER_RESULTS.csv": {
+      "bytes": 8533,
+      "contents": "falsifier, root set and lambda*, implied coverage/seats/(a,s), law maximum, scope checks, verdict, observed-reference row, by-year context (86 data rows)",
+      "path": "results/JOINT_COVER_RESULTS.csv",
+      "sha256": "9d5afc9a4483d135ed671392489a5b813a5e1200e27c22b17f3af2076a27f46a"
+    }
+  },
+  "predeclaration": {
+    "blindness_disclosure": "no evaluation of the equation at any lambda was executed before the freeze; the value at lambda=1 (0.6740731179) is D142's delivered chain, and the monotonicity of the law in lambda is stated in section 7 of the predeclaration rather than claimed as a discovery (EXP-14 C-5 lesson)",
+    "bytes": 35078,
+    "frozen_sha256_file": "PRE_DECLARATIONS.sha256",
+    "note": "written and hashed BEFORE code/run_joint_cover.py was executed; definitions, thresholds, precedence, root-finding protocol and tolerance frozen; the hash is embedded in the script, which refuses to run on a mismatch",
+    "path": "PRE_DECLARATIONS.md",
+    "sha256": "3394e3f4f085d73e62fa5b07e11270dcc53357516935f2f6975129d3c15ee271"
+  },
+  "question": "Is there ONE declared coverage path that satisfies BOTH lower channels at once? (lower-secondary, SYN00_PHL_LIKE, completion 2021 / entry 2018)",
+  "verdict": {
+    "adoption": "NONE",
+    "cell": "SYN00_PHL_LIKE|lower_secondary|2021",
+    "checks": {
+      "clip_inactive": true,
+      "count_blind": true,
+      "implied_a_flag": "NONE",
+      "law_max_matches_analytic": true,
+      "resolution_pretest": true,
+      "root_in_capacity_regime": true
+    },
+    "context_by_year": {
+      "2017": 1.31363463193763,
+      "2019": 1.21793372946713,
+      "2020": 1.16653828144589,
+      "2022": 1.0639910338512,
+      "2023": 1.01334046539644,
+      "2024": 0.962596751376201
+    },
+    "falsifier": {
+      "abs_error": 1.02584607475364e-12,
+      "chain_at_lambda_1": 0.674073117898974,
+      "declared": "lambda = 1 must reproduce the panel's 2021 completion_uis to 1e-9",
+      "panel_completion_uis": 0.6740731179,
+      "pass": true,
+      "survival_diagnostic_abs_error": 4.1493808389248e-11,
+      "tolerance": 1e-09
+    },
+    "flags": "no flags",
+    "implied": {
+      "a_gate": 0.873668920186712,
+      "coverage_2018": 0.759712104599164,
+      "coverage_2021": 0.87352319872549,
+      "coverage_uplift_pp_2018": 7.81421285991641,
+      "coverage_uplift_pp_2021": 8.984845932549,
+      "lambda_minus_one": 0.114650191984343,
+      "phys_cap_times_coverage_2018": 0.873668920289039,
+      "product_m_a_s": 0.807599999999993,
+      "required_vs_realised_gap_pp": 13.3526882101026,
+      "s_survival": 0.840343293916087,
+      "seats_2018": 1850382.31092031,
+      "seats_2021": 2075666.29657352
+    },
+    "label": "SINGLE-LEVER-IDENTIFIED",
+    "law": {
+      "F_at_0.5": 0.167062773116792,
+      "F_at_2.0": 1.05105,
+      "analytic_max": 1.05105,
+      "lambda_cap": 1.33961810308353,
+      "lambda_demand_bind": 1.21812538978095,
+      "lambda_survival_flat": 1.27603959869495,
+      "max_over_bracket": 1.05105
+    },
+    "not_identified": "the split of the required product between the gate and the survival law; D140's shares remain reported and unidentified (weight [0.466649, 0.525137])",
+    "reference_only": {
+      "lambda_star": 1.11580230365248,
+      "note": "non-verdict-bearing; the observed reference is not the requirement (D142 C-4)",
+      "target": 0.808960494995
+    },
+    "root": {
+      "bisection_iterations": 33,
+      "bracket": [
+        1.1145,
+        1.11475
+      ],
+      "bracket_width_final": 5.81756864903582e-14,
+      "count": 1,
+      "lambda_star": 1.11465019198434,
+      "lambda_star_bisect": 1.11465019198434,
+      "lambda_star_newton": 1.11465019198435,
+      "method_abs_diff": 5.77315972805081e-15,
+      "monotonicity_decreases": 0,
+      "residual_at_root": -6.88338275267597e-15
+    },
+    "target": {
+      "derivation": "76.6391/0.949 = 80.7577 -> 80.76 at 2 dp (D133/D140)",
+      "label": "DERIVED",
+      "observed_reference": 0.808960494995,
+      "observed_reference_label": "OBSERVED (reference only; never in the verdict path)",
+      "provenance": "INTERNAL-CONSISTENCY",
+      "value": 0.8076
+    }
+  },
+  "worker": "JC",
+  "writes": {
+    "files": [
+      "PRE_DECLARATIONS.md",
+      "PRE_DECLARATIONS.sha256",
+      "FINDINGS.md",
+      "RUN_MANIFEST.json",
+      "SHA256SUMS.txt",
+      "code/run_joint_cover.py",
+      "code/make_manifest.py",
+      "results/JOINT_COVER_RESULTS.csv",
+      "results/JOINT_COVER_DETAIL.csv",
+      "results/INPUT_HASHES.json",
+      "results/run1_console.txt",
+      "results/determinism_run2/JOINT_COVER_RESULTS.csv",
+      "results/determinism_run2/JOINT_COVER_DETAIL.csv",
+      "results/determinism_run2/INPUT_HASHES.json",
+      "results/determinism_run2/console.txt"
+    ],
+    "outside_scope_writes": "none",
+    "scope": "10_massification/extensions/joint_cover_2026-11-20/ only"
+  }
+}

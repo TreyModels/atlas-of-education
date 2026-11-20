@@ -1277,3 +1277,14 @@ in the manifest/guard). Verdict string unchanged; no threshold altered.
   proxy cell), EXP-20 USE-REG (#5 drop-first; second cut EXP-19). **Four authoring rules binding:** precedence;
   resolution pretest; arm tuple + capability lint; count-blind diagnostics. HELD unchanged (D146); HKG DEFER; D63 UNABLE;
   no proxy substitution outside EXP-19.
+
+### u) EXP-17 JOINT-COVER — `SINGLE-LEVER-IDENTIFIED`; λ* is a REQUIRED-STATE, not an installed parameter (D148)
+
+- `joint_cover_2026-11-20/` (predecl `3394e3f4…`; deterministic; 14/14 SHA). Exactly one root in [0.5, 2.0]:
+  **λ\* = 1.11465019198434** (bisection; Newton 5.8e-15 agreement). Implied coverage **0.759712** (2018, +7.81 pp) and
+  **0.873523** (2021, +8.98 pp); **(a, s) = (0.8736689, 0.8403433)** product **0.8076**; seats **+190,326 / +213,498
+  (+11.465%)**; law max 1.05105; λ_demand 1.218125. Falsifier PASS (|chain − panel| = **1.03e-12**).
+- **Scope flag:** λ\* holds where the gate is **capacity-limited** (v1.2 panel); it does **not** transfer to A10's
+  participation-limited gate — citable only as **`REQUIRED-STATE (EXP-17)`** with the **`DERIVED`** target **0.8076**
+  (internal-consistency, not a policy target/forecast). **EXP-19 inputs:** required seats/cohort 0.759712 (2018),
+  0.873523 (2021); observed-reference variant +0.079/+0.090 pp. **No λ adopted.**
