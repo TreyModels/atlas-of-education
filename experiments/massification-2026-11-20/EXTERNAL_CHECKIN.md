@@ -40,3 +40,17 @@ Everything for this programme is on GitHub so another model can check in while t
 - If you review results, use the Council's step-back vocabulary: is this on the critical path to a model of
   massification, or should it be killed/parked?
 - Do not push to `main` and do not rewrite files others own without an `ASK:`.
+
+## Canonical working copies (iCloud incident, 2026-11-20)
+
+The iCloud copy of this package became dataless/evicted and then read as zero bytes. Do not rely on it.
+Canonical locations:
+
+1. **Git (authoritative):** `~/massification_live` — clone of `TreyModels/atlas-of-education`,
+   branch `experiment/massification-2026-11-20` (tip `3129bc5` at the incident; closeout at `4ba958c`).
+2. **Full package mirror:** `~/massification_package/massification-2026-11-20` (1,271 files, verified),
+   plus an iCloud mirror at `Downloads/DeepSeek/massification_2026-11-20_RESTORED/` if present.
+3. **Recovered ZIP:** `~/massification_fresh.zip` (closeout snapshot).
+
+Recovery guidance: `Downloads/DeepSeek/START_HERE_CANONICAL.md`. If an iCloud file reads empty, copy from
+the full package mirror or `git -C ~/massification_live pull`; never re-derive from iCloud.
