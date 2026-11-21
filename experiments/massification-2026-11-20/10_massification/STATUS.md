@@ -1481,3 +1481,26 @@ frozen A10 at 4.44e-10; determinism 3/3; final SHA256SUMS 14/14.
   sha `1138d453…`; **not under the programme root**), plus the **arm-vs-trend reading hazard** (`complementary ·
   capacity_gated` hold_mae 4.014780434743067 < `naive_trend` 4.352883341604888; different tables/objects, not
   re-scored), Q-1…Q-7 and the **redesign question recorded, unanswered**. Write-up **unedited**.
+
+---
+
+## 3aj. DEBUG-MODE RULINGS APPLIED (D175) — CAP-04 disclosed; Q-5 resolved; B-1 prospective; handoff packet written
+
+- **CAP-04 (undeclared survival floor 0.02, 24 tertiary 1970–72 cells):** **disclosed, not fixed**; sensitivity on copies
+  (floor 0.02 vs 0.00): 2024 endpoints Δ **0.000000 / 0.000000 / 0.000000 / −0.000003 pp** (primary/lower/upper/tertiary,
+  anchor), **max |Δ| = 0.000228 pp** across 30 countries × 4 levels, **0 cells > 0.01 pp** → **"burn-in dissipated by
+  2024"**; delivered panels untouched.
+- **Q-5 resolved — (iii) comparing different tables/objects:** the write-up's **4.352883341604888** is the
+  **calibration-table** trend (fit 1980–2010 / hold 2011–2024, n=17); the 12-arm range is on the **anchor** windows (fit
+  1999–2013 / hold 2014–2024, n=14). **Like-for-like trend on the anchor windows = 5.614935464535336 pp**; **7/12 arms
+  beat it** (best 4.014780434743067) and **5/12 lose** (worst 6.122199101442962) → the class does **not** uniformly lose.
+  **Corrected sentence + gate re-run prepared** (`q5_resolution/Q5_RESOLUTION.md`), flagged as a correction,
+  **`applied = false`**; no arm re-scored.
+- **B-1 prospective** (`applied = false`): trend/persistence = **humility floor, not a dynamic test**; **0/10** inventoried
+  results identify a dynamic; recommended as a **one-footnote framing amendment**; write-up unedited.
+- **Redesign question:** recorded, **unanswered** (external reviewer); no redesign experiment run/predeclared/dispatched;
+  D167 stands.
+- **Handoff packet:** `model_debug_2026-11-21/HANDOFF_PACKET.md` — (a) paper two on-disk paths + sha `1138d453…`
+  (canonical iCloud path + package mirror; **not** under the programme root), (b) **18 claims: 0 SHOWN / 3 PARTIALLY
+  SHOWN / 15 NOT SHOWN** with the binding caveat, (c) CAP-04 disclosure + sensitivity, (d) Q-5 hazard + resolution,
+  (e) B-1 note. Lead's external file **not overwritten**. Delivered panels and gate-passed write-up **byte-identical**.

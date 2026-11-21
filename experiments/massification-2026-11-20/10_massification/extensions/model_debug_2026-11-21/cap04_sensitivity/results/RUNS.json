@@ -1,0 +1,15 @@
+{
+  "label": "DEBUG",
+  "runs": {
+    "floor002": {
+      "path": "/Users/treymenefee/massification_live/experiments/massification-2026-11-20/10_massification/extensions/model_debug_2026-11-21/cap04_sensitivity/results/panels/synthetic_panel_v1_3_floor002.csv",
+      "n_rows": 6720,
+      "seed": 20261120
+    },
+    "floor000": {
+      "path": "/Users/treymenefee/massification_live/experiments/massification-2026-11-20/10_massification/extensions/model_debug_2026-11-21/cap04_sensitivity/results/panels/synthetic_panel_v1_3_floor000.csv",
+      "n_rows": 6720,
+      "seed": 20261120
+    }
+  }
+}

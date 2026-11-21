@@ -569,3 +569,19 @@ B1 — pre-run SHA snapshot reconstructed (30/33 match, original hash `89638b39�
   3 PARTIAL / 15 NOT SHOWN) from the iCloud path (377 lines, sha `1138d453…`, not under programme root), plus Q-1…Q-7,
   the arm-vs-trend hazard (4.014780434743067 < 4.352883341604888; not re-scored) and the redesign question recorded.
   Write-up unedited.
+
+## 2026-11-21 15:50 — DEBUG-MODE RULINGS APPLIED (D175): CAP-04 disclosed; Q-5 resolved; B-1 prospective; handoff packet
+
+- **CAP-04** (undeclared survival floor 0.02, 24 tertiary 1970–72 cells): disclosed, **not retro-fixed**; floor
+  0.02-vs-0.00 sensitivity on copies → 2024 endpoints **max |Δ| = 0.000228 pp**, **0 cells > 0.01 pp** →
+  **"burn-in dissipated by 2024"**; delivered panels untouched.
+- **Q-5** resolved as **(iii) comparing different tables/objects + class claim not supportable as stated**: the 4.352883…
+  trend is the calibration table (fit 1980–2010 / hold 2011–2024, n=17); the 12-arm range is on the anchor windows (fit
+  1999–2013 / hold 2014–2024, n=14). **Like-for-like anchor-window trend = 5.614935464535336**; **7/12 arms beat** (best
+  4.014780434743067), **5/12 lose** (worst 6.122199101442962). Corrected sentence + gate re-run prepared
+  (`q5_resolution/Q5_RESOLUTION.md`), **applied = false**, flagged as correction; no arm re-scored.
+- **B-1** recorded prospective (`applied = false`): trend = humility floor, not dynamic; 0/10 results identify a dynamic;
+  recommended one-footnote framing amendment; write-up unedited.
+- **Redesign** recorded, unanswered; no redesign experiment run/predeclared/dispatched; D167 stands.
+- **HANDOFF_PACKET.md** written (paper two paths + sha 1138d453…; 18 claims 0 SHOWN/3 PARTIAL/15 NOT SHOWN with caveat;
+  CAP-04; Q-5; B-1); Lead's external file not overwritten; delivered panels/write-up byte-identical.
