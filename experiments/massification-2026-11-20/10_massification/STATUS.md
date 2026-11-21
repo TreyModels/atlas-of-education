@@ -1564,3 +1564,22 @@ frozen A10 at 4.44e-10; determinism 3/3; final SHA256SUMS 14/14.
   formal wage −0.357 (11.5%), β −0.232 (6.4%)**; Yang slope/anchor nearly inert (−0.036/+0.078). Descriptive, not
   causal. **Recommendation:** wire the same MC + paired-seed test into the coevolution city-size block (predeclare;
   inert set as boundary condition).
+
+---
+
+## 3an. COEVOLVE v0.1-YANG (D179) — `NOT WIREABLE AS SPECIFIED`; no MC run; clean design mismatch reported
+
+- New extension `coevolve_2026-11-21/v0_1_yang/`; **coevolve v0 and its frozen predeclaration untouched**
+  (`7d25e176…` verified). **Predeclared feasibility criterion** (`v0_1_yang/PRE_DECLARATIONS.md` sha256
+  `3dea4786…`): the requested wiring (g(N) = share of upper-secondary/tertiary gate places carrying a credential
+  requirement, existing gates unchanged) is implementable iff some gate applicants **lack** the required credential;
+  zero → `INERT-BY-CONSTRUCTION` → STOP.
+- **Audit (read-only import of v0; 2 seeds):** selective gate **12,516 applicants / 0 lacking**; university/post-sec
+  gate **12,455 / 0**; allocation **447,098 candidates / 0 lacking** in every level → **`INERT-BY-CONSTRUCTION`**.
+  Evidence: `coevolve_v0.py:713` advancement requires `cred == c` (via `NEXT_AFTER_CRED`, `:60`), so every gate
+  applicant already holds the prerequisite credential; `_allocate`/`_selective_gate`/`_university_gate` act on those
+  candidates; gates are residence / exam+rank / exam+fee+rank — **no gate-place credential-requirement object**.
+- **No MC run** (would be zero by construction; the declared stop rule forbids forcing it); no per-draw/MC findings,
+  no boundary contingency. **What would be needed (new predeclaration + approval):** (a) a per-gate `cred_req`
+  threshold applied to a share `g(N)` of places; (b) an allocation-controller mix; (c) the declared **alternative**
+  `g(N) × C_value` (runnable now, but a different object) — recommended given D178's return-side finding.

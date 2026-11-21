@@ -324,6 +324,11 @@
    "sha256": "5615f58ca890b1f7131a4a8e0fbc87be2515e95e5c1d07c316c096f40cb25415"
   }
  ],
+ "inventory": {
+  "n_files": 98,
+  "note": "includes v0_1_yang extension and all delivered results",
+  "total_bytes": 73092467
+ },
  "label": "SIMULATED",
  "must_not_claim": "No observed input, no fitting, no causal or direction claim; model-internal results only.",
  "output_labels": {
@@ -403,6 +408,17 @@
   "within_limit": true
  },
  "title": "COEVOLUTION v0 \u2014 mutual adjustment (towns, providers, gates, cohorts) \u2014 SIMULATED",
+ "v0_1_yang": {
+  "audit_code": "a2cf225da68166b6b1e9b325c6c2c3c1c4ae1516f75436476e031d04c2600ac7",
+  "audit_results": "6198d4947f5f005b51c15ad4e0b8684aedb4c5afbd5c8bf3686c2db720e6f51d",
+  "closed_records_untouched": true,
+  "findings": "9abf00283f5b5e9df63043f0c11503822a0501cdbc22eddf56c59c55895eea28",
+  "mc_run": false,
+  "predeclaration": "3dea47863726ad13d541d170f1f29bbdf0eb7c6bb7d14d9e70f9426f7e24430c",
+  "reason": "coevolve v0 has no gate-place credential-requirement object; every gate applicant already holds the prerequisite credential (advancing requires cred == c), so a share g of 'credential-required' places cannot change any admission. Evidence: v0_1_yang/FINDINGS_MISMATCH.md; audit counts 0 lacking at all six levels/gates.",
+  "status": "STOPPED \u2014 NOT WIREABLE AS SPECIFIED (design mismatch)",
+  "verdict": "INERT-BY-CONSTRUCTION"
+ },
  "verdicts": {
   "COEXISTENCE": "COEXISTENT",
   "COEXISTENCE_primary_seed": "COEXISTENT",

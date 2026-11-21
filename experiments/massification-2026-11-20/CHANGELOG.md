@@ -618,3 +618,15 @@ B1 — pre-run SHA snapshot reconstructed (30/33 match, original hash `89638b39�
   (6.4%)**; Yang slope/anchor barely move the gap. **Recommendation:** wire the same MC/paired-seed test into the
   coevolution city-size block (predeclare; inert set as boundary condition). ILLUSTRATIVE/EXPLORATORY/SIMULATED; no
   country or causal claims.
+
+## 2026-11-21 20:40 — Coevolve v0.1-YANG: NOT WIREABLE AS SPECIFIED (D179), no MC run
+
+- New extension `coevolve_2026-11-21/v0_1_yang/` (coevolve v0 untouched). Predeclared feasibility criterion: the
+  requested g(N)-share-of-credential-required-places wiring is implementable iff some gate applicants lack the
+  required credential; zero → INERT-BY-CONSTRUCTION → STOP. Audit (read-only, 2 seeds): selective 12,516/0 lacking;
+  university 12,455/0; allocation 447,098/0 in all six levels → INERT-BY-CONSTRUCTION (advancement requires cred==c;
+  gates are residence/exam/fee; no gate-place credential-requirement object). **No MC run** (would be zero by
+  construction). Options require a new predeclaration: (a) per-gate `cred_req` threshold with share g; (b)
+  allocation-controller mix; (c) the declared alternative `g×C_value` (runnable now; recommended given D178's
+  return-side finding). Labels SIMULATED/DERIVED/ILLUSTRATIVE; no country/causal claims; no tuning; closed records
+  untouched.
