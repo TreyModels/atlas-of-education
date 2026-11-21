@@ -1,0 +1,219 @@
+{
+ "agent": "Agent 1 (CAP AUDIT)",
+ "cell": "DEBUG-CAP-AUDIT",
+ "classification_counts": {
+  "declared_convention": 30,
+  "implementation_artefact": 1,
+  "total": 34,
+  "undetermined": 3
+ },
+ "contract": {
+  "note": "the contract was amended mid-audit (AMENDMENT 1, measure-aware); versions 748335cf... (dispatch) and 7d8bade9... (amended) are both licensed and both were read",
+  "path": "10_massification/extensions/model_debug_2026-11-21/PRE_DECLARATIONS.md",
+  "sha256": "7d8bade95407a2fe76c95a740e0c98a74f34962117b33846df37a7d6a48f56a9",
+  "version": "v1 + AMENDMENT 1 (measure-aware)"
+ },
+ "counts": {
+  "capped_cells_cr_above_ger": 0,
+  "completion_cohort_cap_binding": {
+   "A17": 0,
+   "v1.2": 0,
+   "v1.3": 0
+  },
+  "completion_uis_cap_binding": {
+   "A17": 0,
+   "v1.2": 35,
+   "v1.3": 35
+  },
+  "completion_uis_cap_max_uncapped": {
+   "A17": 0.9402099553333854,
+   "v1.2": 1.0446777281034663,
+   "v1.3": 1.0446777281034663
+  },
+  "ger_cap_binding": {
+   "A17": 0,
+   "v1.2": 27,
+   "v1.3": 27
+  },
+  "panels": {
+   "A17": 6720,
+   "v1.2": 6720,
+   "v1.3": 6720
+  },
+  "survival_floor_binding": {
+   "A17": 24,
+   "v1.2": 24,
+   "v1.3": 24
+  }
+ },
+ "date": "2026-11-21",
+ "determinism": {
+  "compared": [
+   "results/CAP_AUDIT.md vs results/determinism_run2/CAP_AUDIT.md",
+   "results/CAP_AUDIT_TABLE.csv vs results/determinism_run2/CAP_AUDIT_TABLE.csv",
+   "results/CAP_AUDIT_CELLS.csv vs results/determinism_run2/CAP_AUDIT_CELLS.csv",
+   "results/console.txt vs results/determinism_run2/console.txt"
+  ],
+  "n_files": 4,
+  "n_identical": 4,
+  "status": "BYTE-IDENTICAL"
+ },
+ "discipline": {
+  "labels": [
+   "DEBUG"
+  ],
+  "no_existing_repo_file_overwritten": true,
+  "no_experiment_rerun": true,
+  "no_fit": true,
+  "no_generator_run": true,
+  "no_model_code_modified": true,
+  "no_rng": true,
+  "no_threshold_change": true,
+  "wall_clock": false,
+  "write_scope": "10_massification/extensions/model_debug_2026-11-21/cap_audit"
+ },
+ "fidelity": {
+  "A17": {
+   "cohort_recon_max_abs_resid": 4.808847764437019e-10,
+   "uis_recon_max_abs_resid": 4.989731960947097e-10
+  },
+  "v1.2": {
+   "cohort_recon_max_abs_resid": 6.613770642260874e-10,
+   "uis_recon_max_abs_resid": 6.975147126553338e-10
+  },
+  "v1.3": {
+   "cohort_recon_max_abs_resid": 6.613770642260874e-10,
+   "uis_recon_max_abs_resid": 6.975147126553338e-10
+  }
+ },
+ "inputs": [
+  {
+   "path": "10_massification/extensions/model_debug_2026-11-21/PRE_DECLARATIONS.md",
+   "role": "contract",
+   "sha256": "7d8bade95407a2fe76c95a740e0c98a74f34962117b33846df37a7d6a48f56a9",
+   "version": "v1 + AMENDMENT 1 (measure-aware)"
+  },
+  {
+   "path": "10_massification/extensions/synthetic_2026-11-20/generator_v1_2/code/sim_v1_2.py",
+   "role": "audited source",
+   "sha256": "61123aa9370a407487407bf3ff4b97287aea67cac5f90629e540a6e8cc855e7c"
+  },
+  {
+   "path": "10_massification/extensions/synthetic_2026-11-20/generator_v1_2/results/synthetic_panel_v1_2.csv",
+   "role": "frozen panel (v1.2)",
+   "rows": 6720,
+   "sha256": "14729c5141a71dd9aaf87a5ad2e973a84b5f04603577aae627f2833276fac5ac"
+  },
+  {
+   "path": "10_massification/extensions/synthetic_2026-11-20/generator_v1_3/code/sim_v1_3.py",
+   "role": "audited source",
+   "sha256": "70ae8f0eef83358493dad3d3feb2d6a8841c4bb6fad3966627f4eed70e2a9877"
+  },
+  {
+   "path": "10_massification/extensions/synthetic_2026-11-20/generator_v1_3/results/synthetic_panel_v1_3.csv",
+   "role": "frozen panel (v1.3)",
+   "rows": 6720,
+   "sha256": "47d4b082f4ba5838cc20fbb09e59dd3dd847ad25393b1ce091069c94496657e3"
+  },
+  {
+   "path": "10_massification/extensions/synthetic_2026-11-20/generator_v1_4_demand/code/sim_v1_4_demand.py",
+   "role": "audited source",
+   "sha256": "6e4a6761fa32325c61f138037a1e5c8d5e578e19f8a2ee2519e73e8f2332b2d1"
+  },
+  {
+   "path": "10_massification/extensions/synthetic_2026-11-20/generator_v1_5_bimodal/code/sim_v1_5_bimodal.py",
+   "role": "audited source",
+   "sha256": "2b699c6b26029a0d946fb8da08a0c553ce36b0b942b544529b317645104bf689"
+  },
+  {
+   "path": "10_massification/extensions/synthetic_2026-11-20/generator_v1_6_repair/code/sim_v1_6_repair.py",
+   "role": "audited source",
+   "sha256": "9c0e799850fd30bb0b46bb7841e8f301715745a5c73452e7644055122325de56"
+  },
+  {
+   "path": "10_massification/extensions/synthetic_2026-11-20/generator_v1_7_partrepair/code/frozen/sim_v1_6_repair.py",
+   "role": "audited source",
+   "sha256": "9c0e799850fd30bb0b46bb7841e8f301715745a5c73452e7644055122325de56"
+  },
+  {
+   "path": "10_massification/extensions/synthetic_2026-11-20/generator_v1_7_partrepair/results/panel_A17.csv",
+   "role": "frozen panel (A17)",
+   "rows": 6720,
+   "sha256": "e955f02d49e78d52ddf0d7125ba3746c18629ea6b7714375d5e940daa1c4afcf"
+  },
+  {
+   "path": "10_massification/model/anchor.py",
+   "role": "audited source",
+   "sha256": "bd96f06745f2157026c947f7e9ca7d332331aa303adb95eafb4d9325fabdc592"
+  },
+  {
+   "path": "10_massification/model/pushpull.py",
+   "role": "audited source",
+   "sha256": "0cf3dceb93e280570f030c6a791c5c80b9d10413f1a549d99a8582bc71d11445"
+  },
+  {
+   "path": "10_massification/model/repair.py",
+   "role": "audited source",
+   "sha256": "07c8f6848baec89c3ffdd8d5bb8ccbba15f2e2d88e17132624cd87d69745dadb"
+  }
+ ],
+ "label": "DEBUG",
+ "minimal_defect_set": [
+  "CAP-01"
+ ],
+ "mode": "model-debug (audit only)",
+ "not_in_minimal_set": [
+  "CAP-04 (survival floor 0.02)"
+ ],
+ "objective": "enumerate and classify every clamp/ceiling/floor/renormalisation in the completion pipeline; report before any fix",
+ "outputs": [
+  {
+   "path": "CAP_AUDIT.md",
+   "sha256": "93d4292039572fe9c451fbadd7edd87fb4d1e08c7442e6ce676425299362f12a"
+  },
+  {
+   "path": "CAP_AUDIT_TABLE.csv",
+   "sha256": "e96bc28bd2fa8afe678e9d0eb3c498c54465eb8d8bcced6ae46f44d09235016d"
+  },
+  {
+   "path": "CAP_AUDIT_CELLS.csv",
+   "sha256": "32c230ead363f2c001f7264fdd7d4aba065d06bb58228c8cce9cbb042516d318"
+  },
+  {
+   "path": "code/audit_caps.py",
+   "sha256": "7e658dfe81c8c53bf6d7243cc2ff4ac278306dbf5c5b019cff71738d0bb05e76"
+  },
+  {
+   "path": "results/CAP_AUDIT.md",
+   "sha256": "93d4292039572fe9c451fbadd7edd87fb4d1e08c7442e6ce676425299362f12a"
+  },
+  {
+   "path": "results/CAP_AUDIT_TABLE.csv",
+   "sha256": "e96bc28bd2fa8afe678e9d0eb3c498c54465eb8d8bcced6ae46f44d09235016d"
+  },
+  {
+   "path": "results/CAP_AUDIT_CELLS.csv",
+   "sha256": "32c230ead363f2c001f7264fdd7d4aba065d06bb58228c8cce9cbb042516d318"
+  },
+  {
+   "path": "results/console.txt",
+   "sha256": "af7807235d0f10e8d3cf87a3f3e1f401adcd81d9c8d2fe60096027d8b3453225"
+  },
+  {
+   "path": "results/determinism_run2/CAP_AUDIT.md",
+   "sha256": "93d4292039572fe9c451fbadd7edd87fb4d1e08c7442e6ce676425299362f12a"
+  },
+  {
+   "path": "results/determinism_run2/CAP_AUDIT_TABLE.csv",
+   "sha256": "e96bc28bd2fa8afe678e9d0eb3c498c54465eb8d8bcced6ae46f44d09235016d"
+  },
+  {
+   "path": "results/determinism_run2/CAP_AUDIT_CELLS.csv",
+   "sha256": "32c230ead363f2c001f7264fdd7d4aba065d06bb58228c8cce9cbb042516d318"
+  },
+  {
+   "path": "results/determinism_run2/console.txt",
+   "sha256": "af7807235d0f10e8d3cf87a3f3e1f401adcd81d9c8d2fe60096027d8b3453225"
+  }
+ ]
+}

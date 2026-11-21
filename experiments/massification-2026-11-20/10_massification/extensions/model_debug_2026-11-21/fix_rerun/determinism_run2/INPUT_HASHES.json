@@ -1,0 +1,25 @@
+{
+  "cell": "EXP-21 CONV-REG",
+  "inputs": [
+    {
+      "path": "10_massification/data/UNIVERSALIZATION_SERIES.csv",
+      "sha256": "85bc869396ebfcb39e3e1a21a31af219e75a07326c738a51d2bfdbe536737ddb"
+    },
+    {
+      "path": "10_massification/extensions/model_debug_2026-11-21/fix_rerun/results/panels/synthetic_panel_v1_3_repaired.csv",
+      "sha256": "48113e4e6e7040418d76f04e4a6021c5ffbd295024059be56b2459be5fe1ad5e"
+    },
+    {
+      "path": "10_massification/extensions/model_debug_2026-11-21/fix_rerun/results/panels/synthetic_panel_v1_2_repaired.csv",
+      "sha256": "de44a994ab01909349efee39a033503455177122426b03123910abf471f99daf"
+    },
+    {
+      "path": "10_massification/extensions/synthetic_2026-11-20/generator_v1_7_partrepair/results/panel_A17.csv",
+      "sha256": "e955f02d49e78d52ddf0d7125ba3746c18629ea6b7714375d5e940daa1c4afcf"
+    },
+    {
+      "path": "10_massification/extensions/synthetic_2026-11-20/generator_v1_2/PARAMS.md",
+      "sha256": "0d619781c4e059f54cf771fb385475f5f939dceced5036e8a21b6e07a2b315e3"
+    }
+  ]
+}

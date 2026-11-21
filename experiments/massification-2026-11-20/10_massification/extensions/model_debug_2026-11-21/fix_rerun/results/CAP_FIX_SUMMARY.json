@@ -1,0 +1,76 @@
+{
+  "a17_binding_cells": 0,
+  "declared_m": "1.10",
+  "label": "DEBUG",
+  "measure": {
+    "cr_minus_ger_pp_max": -0.5322272,
+    "cr_minus_ger_pp_min": -4.9741293,
+    "ger_values_at_fixed_cells": [
+      "105"
+    ],
+    "n_cr_le_ger": 70,
+    "n_cr_over_ger": 0,
+    "n_fix_rows": 70,
+    "question": "do the repaired capped cells have CR > GER? (AMENDMENT 1; audit section 5 item 4)",
+    "repaired_cr_pp_max": 104.46777279999999,
+    "repaired_cr_pp_min": 100.0258707,
+    "verdict": "NOT-A-CR-ABOVE-GER-CASE: every repaired capped cell is CR <= the model's own GER"
+  },
+  "n_fix_rows_by_panel": {
+    "v1.2": 35,
+    "v1.3": 35
+  },
+  "n_fix_rows_total": 70,
+  "panels": {
+    "A17": {
+      "delivered_path": "10_massification/extensions/synthetic_2026-11-20/generator_v1_7_partrepair/results/panel_A17.csv",
+      "delivered_sha256": "e955f02d49e78d52ddf0d7125ba3746c18629ea6b7714375d5e940daa1c4afcf",
+      "max_delivered": 0.9402099553,
+      "max_uncapped": null,
+      "n_cells_capped_at_1": 0,
+      "n_cells_where_uncapped_gt_1": 0,
+      "n_columns": 106,
+      "n_rows": 6720
+    },
+    "v1.2": {
+      "columns_that_differ": [
+        "completion_uis"
+      ],
+      "delivered_path": "10_massification/extensions/synthetic_2026-11-20/generator_v1_2/results/synthetic_panel_v1_2.csv",
+      "delivered_sha256": "14729c5141a71dd9aaf87a5ad2e973a84b5f04603577aae627f2833276fac5ac",
+      "max_delivered": 1.0,
+      "max_repaired": 1.044677728,
+      "max_uncapped": 1.0446777281600002,
+      "n_cells_capped_at_1": 35,
+      "n_cells_where_uncapped_gt_1": 35,
+      "n_columns": 67,
+      "n_completion_uis_cells_changed": 35,
+      "n_panel_cells_cr_over_ger_delivered": 15,
+      "n_panel_cells_cr_over_ger_repaired": 15,
+      "n_rows": 6720,
+      "n_rows_where_uncapped_gt_1": 35,
+      "repaired_file": "synthetic_panel_v1_2_repaired.csv",
+      "repaired_sha256": "de44a994ab01909349efee39a033503455177122426b03123910abf471f99daf"
+    },
+    "v1.3": {
+      "columns_that_differ": [
+        "completion_uis"
+      ],
+      "delivered_path": "10_massification/extensions/synthetic_2026-11-20/generator_v1_3/results/synthetic_panel_v1_3.csv",
+      "delivered_sha256": "47d4b082f4ba5838cc20fbb09e59dd3dd847ad25393b1ce091069c94496657e3",
+      "max_delivered": 1.0,
+      "max_repaired": 1.044677728,
+      "max_uncapped": 1.0446777281600002,
+      "n_cells_capped_at_1": 35,
+      "n_cells_where_uncapped_gt_1": 35,
+      "n_columns": 89,
+      "n_completion_uis_cells_changed": 35,
+      "n_panel_cells_cr_over_ger_delivered": 15,
+      "n_panel_cells_cr_over_ger_repaired": 15,
+      "n_rows": 6720,
+      "n_rows_where_uncapped_gt_1": 35,
+      "repaired_file": "synthetic_panel_v1_3_repaired.csv",
+      "repaired_sha256": "48113e4e6e7040418d76f04e4a6021c5ffbd295024059be56b2459be5fe1ad5e"
+    }
+  }
+}

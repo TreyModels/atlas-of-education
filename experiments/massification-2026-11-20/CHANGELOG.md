@@ -546,3 +546,26 @@ B1 — pre-run SHA snapshot reconstructed (30/33 match, original hash `89638b39�
   748 numeric tokens mapped; no model run, no new number; untagged D77 headline 0 occurrences; D76/D77 applied not amended;
   no SPINE-REPLACED verdict; Lead checks the gate. Phase CLOSED at PARTIAL/DESCRIPTIVE/EQUIVALENT; experiment programme
   CLOSED at 0 new cells (D167); parks stand.
+
+## 2026-11-21 15:22–15:45 — MODEL-DEBUG MODE (D171–D174): ceiling-cap defect fixed; benchmark critique recorded
+
+- **Contract:** `model_debug_2026-11-21/PRE_DECLARATIONS.md` (sha `748335cf…` → amended `7d8bade9…`, AMENDMENT 1
+  measure-aware: GER may exceed 100; NER ≤ 100 definitional; UIS CR older-cohort denominator not bounded by GER);
+  DEBUG; no reproduction claims; no successor generator; closed line stays closed except the defect fix; write-up
+  unedited; user critique recorded verbatim.
+- **CAP AUDIT:** 34 sites — 30 declared / **1 artefact (CAP-01 `completion_uis ≤ 1.0`)** / 3 undetermined.
+  CAP-01 binds **35/6,720 on v1.3 and 35 on v1.2, 0 on A17**, all primary, five countries, 2012–2025, uncapped
+  1.000259–1.044678; **0 of the 35 are legitimate CR > GER** (GER = 105 there); `v1.2/FINDINGS.md:191` independent
+  corroboration. **CAP-04** undeclared survival floor 0.02 binds 24 tertiary burn-in cells — recorded, not fixed,
+  needs adjudication.
+- **FIX + RE-RUN:** one-sided floor `max(0, m × comp_coh)` in copies; 35+35 cells uncapped to 1.000259–1.044678; only
+  `completion_uis` changes; delivered inputs 12/12 unchanged. (a) m now **CONSTANT on all three** (A17 8.8395e-10;
+  repaired 9.6647e-10); (b) old **4.7043695535e-02 wholly cap-induced** (= 1/0.9497070256 − 1.10); (c) register
+  counts unchanged (**4 INTER / 6 NOT / 2 THIN, REGISTER-BINDING**; T observed/GER); (d) **zero published-number
+  changes** — prospective amendments only (C-13, Table A-1 rows, "A17-only" sentence, Table G-1 row 10); "35/6,720"
+  true as-delivered. Determinism 12/12; 0/70 repaired cells CR > GER.
+- **BENCHMARK NOTE:** trend = **humility floor, not dynamic**; **0/10 results identify a dynamic** (4 dynamic-type,
+  6 floor-only); **B-1 prospective** (`applied = false`); handoff packet quotes the paper's **18 claims** (0 SHOWN /
+  3 PARTIAL / 15 NOT SHOWN) from the iCloud path (377 lines, sha `1138d453…`, not under programme root), plus Q-1…Q-7,
+  the arm-vs-trend hazard (4.014780434743067 < 4.352883341604888; not re-scored) and the redesign question recorded.
+  Write-up unedited.

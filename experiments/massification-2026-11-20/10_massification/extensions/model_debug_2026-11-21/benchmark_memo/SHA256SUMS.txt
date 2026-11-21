@@ -1,0 +1,12 @@
+# SHA256SUMS — benchmark_memo (LABEL: DEBUG)
+# Regenerated 2026-11-21 (Asia/Shanghai) after section 7 — the handoff packet — was appended to the memo.
+# Hash algorithm: sha256. Verify with: shasum -a 256 -c SHA256SUMS.txt
+# Scope: the three authored artifacts of this directory. No pre-existing repo file was modified;
+# 10_massification/lit/PHASE_WRITEUP.md remains at d0820eb8311c315d04610e872c44b9f9e257cb6817e057d80f050704384a251e
+# (un-edited; re-hashed at write time).
+# Cited by section 7 but not part of this directory:
+# 00_handoff/papers/02_october_massification.md at 1138d453a79243f573b57f971369a61f598aecc6f4882f7ff052fd1ea90228cf
+# (handoff tree, 377 lines; hash corroborated by that tree's 00_handoff/MANIFEST.sha256 line 9).
+f1133f74fd1da6e1e2ee01470b3bcf2e1b20f7e824514739fe5289c5014d6b5d  BENCHMARK_MEMO.md
+f4dd2708a3b88c2bcd34f03eeadfba46ed9f21bc066c23572af68902a3b0a043  BENCHMARK_INVENTORY.csv
+8f27cfe1b0907b03d12c07dada6ebb39e3e2c5cc4d995f45e7e3fbe1d89a8570  RUN_MANIFEST.json

@@ -1,0 +1,111 @@
+AUDIT_CAPS  LABEL=DEBUG  deterministic, no RNG, no generator run
+PRE_DECLARATIONS sha256 7d8bade95407a2fe76c95a740e0c98a74f34962117b33846df37a7d6a48f56a9  [v1 + AMENDMENT 1 (measure-aware)]
+panels: v1.3=6720 rows | v1.2=6720 rows | A17=6720 rows
+fidelity (max |recon - panel|): v1.3 cohort=6.61e-10 uis=6.98e-10 | v1.2 cohort=6.61e-10 uis=6.98e-10 | A17 cohort=4.81e-10 uis=4.99e-10
+sites enumerated: 34
+CAP-01   b   completion_uis (UIS-convention completion)                 v1.3=35     v1.2=35     A17=0      fix=YES
+CAP-02   a   completion_cohort (cohort-flow completion)                 v1.3=0      v1.2=0      A17=0      fix=no
+CAP-03   a   survival                                                   v1.3=0      v1.2=0      A17=0      fix=no
+CAP-04   c   survival                                                   v1.3=24     v1.2=24     A17=24     fix=no
+CAP-05   a   measurement_factor                                         v1.3=6720   v1.2=6720   A17=6720   fix=no
+CAP-06   a   GER                                                        v1.3=27     v1.2=27     A17=0      fix=no
+CAP-07   a   physical admission capacity                                v1.3=125    v1.2=125    A17=125    fix=no
+CAP-08   a   admitted_official (rationing)                              v1.3=3189   v1.2=3189   A17=5733   fix=no
+CAP-09   a   admitted_overage                                           v1.3=3543   v1.2=3543   A17=332    fix=no
+CAP-10   a   demand_official (tertiary)                                 v1.3=116    v1.2=112    A17=79     fix=no
+CAP-11   a   eligibility_pool                                           v1.3=77     v1.2=77     A17=62     fix=no
+CAP-12   a   eligibility share                                          v1.3=1655   v1.2=1651   A17=1079   fix=no
+CAP-13   a   both_share mass                                            v1.3=3531   v1.2=3531   A17=987    fix=no
+CAP-14   c   ptr                                                        v1.3=0      v1.2=0      A17=0      fix=no
+CAP-15   a   growth                                                     v1.3=0      v1.2=0      A17=0      fix=no
+CAP-16   a   queue carry-over                                           v1.3=n/a    v1.2=n/a    A17=n/a    fix=no
+CAP-17   a   formal employment by rung                                  v1.3=n/a    v1.2=n/a    A17=n/a    fix=no
+CAP-18   a   school/both/work/neither shares                            v1.3=5040   v1.2=5040   A17=5040   fix=no
+CAP-19   a   s_ag / s_inf / s_man / s_srv                               v1.3=2188   v1.2=2188   A17=1980   fix=no
+CAP-20   c   sigmoid argument                                           v1.3=n/a    v1.2=n/a    A17=n/a    fix=no
+CAP-21   a   Q_gate / pi0 / kappa / R                                   v1.3=622    v1.2=n/a    A17=664    fix=no
+CAP-22   a   tier_K_H / tier_K_O                                        v1.3=n/a    v1.2=n/a    A17=5738   fix=no
+CAP-23   a   tier_p_adv_H                                               v1.3=n/a    v1.2=n/a    A17=1059   fix=no
+CAP-24   a   upper-secondary admitted (A17 only)                        v1.3=0      v1.2=0      A17=0      fix=no
+MOD-01   a   capacity index C_t                                         v1.3=n/a    v1.2=n/a    A17=n/a    fix=no
+MOD-02   a   capacity index                                             v1.3=n/a    v1.2=n/a    A17=n/a    fix=no
+MOD-03   a   G(C) = C^kappa                                             v1.3=n/a    v1.2=n/a    A17=n/a    fix=no
+MOD-04   a   K-12 / free-SHS / free-tertiary markers                    v1.3=n/a    v1.2=n/a    A17=n/a    fix=no
+MOD-05   a   ceiling-level saturating share                             v1.3=n/a    v1.2=n/a    A17=n/a    fix=no
+MOD-06   a   intake rate                                                v1.3=n/a    v1.2=n/a    A17=n/a    fix=no
+MOD-07   a   level participation probabilities                          v1.3=n/a    v1.2=n/a    A17=n/a    fix=no
+MOD-08   a   agri / services / formal shares                            v1.3=n/a    v1.2=n/a    A17=n/a    fix=no
+MOD-09   a   ger_primary..ger_tertiary                                  v1.3=n/a    v1.2=n/a    A17=n/a    fix=no
+MOD-10   a   completion share entering a logit                          v1.3=n/a    v1.2=n/a    A17=n/a    fix=no
+cells enumerated in CAP_AUDIT_CELLS.csv: 1846 rows (6 clamps)
+-- CAP-01 cells (35 + 35) --
+v1.3  SYN00_PHL_LIKE|primary|2024                  SYN00_PHL_LIKE   2024  unc=1.007872814 cap=1
+v1.3  SYN00_PHL_LIKE|primary|2025                  SYN00_PHL_LIKE   2025  unc=1.012100626 cap=1
+v1.3  SYN07|primary|2012                           SYN07            2012  unc=1.021562378 cap=1
+v1.3  SYN07|primary|2013                           SYN07            2013  unc=1.024419085 cap=1
+v1.3  SYN07|primary|2014                           SYN07            2014  unc=1.026848233 cap=1
+v1.3  SYN07|primary|2015                           SYN07            2015  unc=1.029132381 cap=1
+v1.3  SYN07|primary|2016                           SYN07            2016  unc=1.031181344 cap=1
+v1.3  SYN07|primary|2017                           SYN07            2017  unc=1.033020552 cap=1
+v1.3  SYN07|primary|2018                           SYN07            2018  unc=1.03478075 cap=1
+v1.3  SYN07|primary|2019                           SYN07            2019  unc=1.036491602 cap=1
+v1.3  SYN07|primary|2020                           SYN07            2020  unc=1.038026441 cap=1
+v1.3  SYN07|primary|2021                           SYN07            2021  unc=1.039598906 cap=1
+v1.3  SYN07|primary|2022                           SYN07            2022  unc=1.040924918 cap=1
+v1.3  SYN07|primary|2023                           SYN07            2023  unc=1.042294719 cap=1
+v1.3  SYN07|primary|2024                           SYN07            2024  unc=1.043526713 cap=1
+v1.3  SYN07|primary|2025                           SYN07            2025  unc=1.044677728 cap=1
+v1.3  SYN10_BOOM|primary|2024                      SYN10_BOOM       2024  unc=1.007872814 cap=1
+v1.3  SYN10_BOOM|primary|2025                      SYN10_BOOM       2025  unc=1.012243007 cap=1
+v1.3  SYN19|primary|2021                           SYN19            2021  unc=1.000258707 cap=1
+v1.3  SYN19|primary|2022                           SYN19            2022  unc=1.002139499 cap=1
+v1.3  SYN19|primary|2023                           SYN19            2023  unc=1.003760561 cap=1
+v1.3  SYN19|primary|2024                           SYN19            2024  unc=1.005260823 cap=1
+v1.3  SYN19|primary|2025                           SYN19            2025  unc=1.006906441 cap=1
+v1.3  SYN23|primary|2014                           SYN23            2014  unc=1.000725684 cap=1
+v1.3  SYN23|primary|2015                           SYN23            2015  unc=1.003058032 cap=1
+v1.3  SYN23|primary|2016                           SYN23            2016  unc=1.004980004 cap=1
+v1.3  SYN23|primary|2017                           SYN23            2017  unc=1.006200129 cap=1
+v1.3  SYN23|primary|2018                           SYN23            2018  unc=1.007354951 cap=1
+v1.3  SYN23|primary|2019                           SYN23            2019  unc=1.009288069 cap=1
+v1.3  SYN23|primary|2020                           SYN23            2020  unc=1.01079208 cap=1
+v1.3  SYN23|primary|2021                           SYN23            2021  unc=1.011791208 cap=1
+v1.3  SYN23|primary|2022                           SYN23            2022  unc=1.01345436 cap=1
+v1.3  SYN23|primary|2023                           SYN23            2023  unc=1.013733751 cap=1
+v1.3  SYN23|primary|2024                           SYN23            2024  unc=1.014961009 cap=1
+v1.3  SYN23|primary|2025                           SYN23            2025  unc=1.016108897 cap=1
+v1.2  SYN00_PHL_LIKE|primary|2024                  SYN00_PHL_LIKE   2024  unc=1.007872814 cap=1
+v1.2  SYN00_PHL_LIKE|primary|2025                  SYN00_PHL_LIKE   2025  unc=1.012100626 cap=1
+v1.2  SYN07|primary|2012                           SYN07            2012  unc=1.021562378 cap=1
+v1.2  SYN07|primary|2013                           SYN07            2013  unc=1.024419085 cap=1
+v1.2  SYN07|primary|2014                           SYN07            2014  unc=1.026848233 cap=1
+v1.2  SYN07|primary|2015                           SYN07            2015  unc=1.029132381 cap=1
+v1.2  SYN07|primary|2016                           SYN07            2016  unc=1.031181344 cap=1
+v1.2  SYN07|primary|2017                           SYN07            2017  unc=1.033020552 cap=1
+v1.2  SYN07|primary|2018                           SYN07            2018  unc=1.03478075 cap=1
+v1.2  SYN07|primary|2019                           SYN07            2019  unc=1.036491602 cap=1
+v1.2  SYN07|primary|2020                           SYN07            2020  unc=1.038026441 cap=1
+v1.2  SYN07|primary|2021                           SYN07            2021  unc=1.039598906 cap=1
+v1.2  SYN07|primary|2022                           SYN07            2022  unc=1.040924918 cap=1
+v1.2  SYN07|primary|2023                           SYN07            2023  unc=1.042294719 cap=1
+v1.2  SYN07|primary|2024                           SYN07            2024  unc=1.043526713 cap=1
+v1.2  SYN07|primary|2025                           SYN07            2025  unc=1.044677728 cap=1
+v1.2  SYN10_BOOM|primary|2024                      SYN10_BOOM       2024  unc=1.007872814 cap=1
+v1.2  SYN10_BOOM|primary|2025                      SYN10_BOOM       2025  unc=1.012243007 cap=1
+v1.2  SYN19|primary|2021                           SYN19            2021  unc=1.000258707 cap=1
+v1.2  SYN19|primary|2022                           SYN19            2022  unc=1.002139499 cap=1
+v1.2  SYN19|primary|2023                           SYN19            2023  unc=1.003760561 cap=1
+v1.2  SYN19|primary|2024                           SYN19            2024  unc=1.005260823 cap=1
+v1.2  SYN19|primary|2025                           SYN19            2025  unc=1.006906441 cap=1
+v1.2  SYN23|primary|2014                           SYN23            2014  unc=1.000725684 cap=1
+v1.2  SYN23|primary|2015                           SYN23            2015  unc=1.003058032 cap=1
+v1.2  SYN23|primary|2016                           SYN23            2016  unc=1.004980004 cap=1
+v1.2  SYN23|primary|2017                           SYN23            2017  unc=1.006200129 cap=1
+v1.2  SYN23|primary|2018                           SYN23            2018  unc=1.007354951 cap=1
+v1.2  SYN23|primary|2019                           SYN23            2019  unc=1.009288069 cap=1
+v1.2  SYN23|primary|2020                           SYN23            2020  unc=1.01079208 cap=1
+v1.2  SYN23|primary|2021                           SYN23            2021  unc=1.011791208 cap=1
+v1.2  SYN23|primary|2022                           SYN23            2022  unc=1.01345436 cap=1
+v1.2  SYN23|primary|2023                           SYN23            2023  unc=1.013733751 cap=1
+v1.2  SYN23|primary|2024                           SYN23            2024  unc=1.014961009 cap=1
+v1.2  SYN23|primary|2025                           SYN23            2025  unc=1.016108897 cap=1

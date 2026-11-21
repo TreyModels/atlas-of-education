@@ -1,0 +1,95 @@
+{
+  "all_identical": true,
+  "artifacts": [
+    {
+      "artifact": "synthetic_panel_v1_3_repaired.csv",
+      "byte_identical": true,
+      "kind": "panel",
+      "sha256_run1": "48113e4e6e7040418d76f04e4a6021c5ffbd295024059be56b2459be5fe1ad5e",
+      "sha256_run2": "48113e4e6e7040418d76f04e4a6021c5ffbd295024059be56b2459be5fe1ad5e"
+    },
+    {
+      "artifact": "synthetic_panel_v1_2_repaired.csv",
+      "byte_identical": true,
+      "kind": "panel",
+      "sha256_run1": "de44a994ab01909349efee39a033503455177122426b03123910abf471f99daf",
+      "sha256_run2": "de44a994ab01909349efee39a033503455177122426b03123910abf471f99daf"
+    },
+    {
+      "artifact": "CONV_REG.csv",
+      "byte_identical": true,
+      "kind": "register",
+      "sha256_run1": "cb35c8e99b9c7ea0dbb4827b2461b4d62875de047248e7ffdab3454da17ecf56",
+      "sha256_run2": "cb35c8e99b9c7ea0dbb4827b2461b4d62875de047248e7ffdab3454da17ecf56"
+    },
+    {
+      "artifact": "CONV_REG_DETAIL.csv",
+      "byte_identical": true,
+      "kind": "register",
+      "sha256_run1": "587ade715e82f1dcefa4df10529f2257f486fb1e892430f20505a26e78312886",
+      "sha256_run2": "587ade715e82f1dcefa4df10529f2257f486fb1e892430f20505a26e78312886"
+    },
+    {
+      "artifact": "CONV_REG_SYSTEM.csv",
+      "byte_identical": true,
+      "kind": "register",
+      "sha256_run1": "5796131779ad26a3dd82020b38a5a8a5867230d6d1c8b76095920c46f2a38ade",
+      "sha256_run2": "5796131779ad26a3dd82020b38a5a8a5867230d6d1c8b76095920c46f2a38ade"
+    },
+    {
+      "artifact": "M_CONSTANCY.csv",
+      "byte_identical": true,
+      "kind": "register",
+      "sha256_run1": "48c620728551bd0f570c2707b62fe6c4937021fa2eff4810e89aa52e60f42e23",
+      "sha256_run2": "48c620728551bd0f570c2707b62fe6c4937021fa2eff4810e89aa52e60f42e23"
+    },
+    {
+      "artifact": "VERDICT.json",
+      "byte_identical": true,
+      "kind": "register",
+      "sha256_run1": "364e0556e64b682ecde2b9dc6359bba3077ff87d87161697d73e976e112c8b8f",
+      "sha256_run2": "364e0556e64b682ecde2b9dc6359bba3077ff87d87161697d73e976e112c8b8f"
+    },
+    {
+      "artifact": "console.txt",
+      "byte_identical": true,
+      "kind": "register",
+      "sha256_run1": "dbebc27a4e94345ccac85f866ab8c4cdc2a4d4ba8127b10025ba3ebd712984aa",
+      "sha256_run2": "dbebc27a4e94345ccac85f866ab8c4cdc2a4d4ba8127b10025ba3ebd712984aa"
+    },
+    {
+      "artifact": "INPUT_HASHES.json",
+      "byte_identical": true,
+      "kind": "register",
+      "sha256_run1": "05f2add66fe0655deb5ce00870821b8d9b664a177363e3e4ce50b8953a2ec68c",
+      "sha256_run2": "05f2add66fe0655deb5ce00870821b8d9b664a177363e3e4ce50b8953a2ec68c"
+    },
+    {
+      "artifact": "CAP_FIX_CELLS.csv",
+      "byte_identical": true,
+      "kind": "cap_fix",
+      "sha256_run1": "5fc05ce1718da4e1a60de6a4b196ba8ad5f3d4358d05f5766a07158fcb6d7f43",
+      "sha256_run2": "5fc05ce1718da4e1a60de6a4b196ba8ad5f3d4358d05f5766a07158fcb6d7f43"
+    },
+    {
+      "artifact": "CAP_FIX_SUMMARY.json",
+      "byte_identical": true,
+      "kind": "cap_fix",
+      "sha256_run1": "5ac0d6284ddabeb3934a47dd727fd9f35e06c3ef8bdff0ed3ad5560182c22290",
+      "sha256_run2": "5ac0d6284ddabeb3934a47dd727fd9f35e06c3ef8bdff0ed3ad5560182c22290"
+    },
+    {
+      "artifact": "IDENTITY_CHECK.json",
+      "byte_identical": true,
+      "kind": "cap_fix",
+      "sha256_run1": "a2c04de93b9e2d89916d427ee5337d05c08fedc103a6ccf873c203a98f03bea1",
+      "sha256_run2": "a2c04de93b9e2d89916d427ee5337d05c08fedc103a6ccf873c203a98f03bea1"
+    }
+  ],
+  "delivered_inputs_unchanged": true,
+  "label": "DEBUG",
+  "method": "two runs, SHA-256 per artifact",
+  "n_artifacts": 12,
+  "note": "panels are produced by an independent second execution of each generator; the register is a second execution on the byte-identical panel set, so its panel_path provenance column is also identical",
+  "verdict": "DETERMINISTIC"
+}

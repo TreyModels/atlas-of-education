@@ -1,0 +1,649 @@
+{
+  "adoption": "NONE",
+  "authority": {
+    "decisions": "08_council/DECISIONS.md D160, D164 (EXP-21 clause and its conditions)",
+    "defect": "CAP-01, 10_massification/extensions/model_debug_2026-11-21/cap_audit/results/CAP_AUDIT.md section 1",
+    "model_debug_contract": {
+      "amendment_1": "measures are different objects: GER may exceed 100; NER <= 100 definitional; UIS CR denominator is the 3-5-years-above-grade older cohort, so CR is not bounded by GER and may exceed it",
+      "path": "10_massification/extensions/model_debug_2026-11-21/PRE_DECLARATIONS.md",
+      "sha256": "7d8bade95407a2fe76c95a740e0c98a74f34962117b33846df37a7d6a48f56a9"
+    },
+    "user_directive": "MODEL-DEBUG MODE licensed after EXP-21/D160; measure-aware per the Lead's correction; the gate-passed write-up is not edited"
+  },
+  "cell": "model_debug_2026-11-21/fix_rerun",
+  "checks": {
+    "A1_measure_cr_vs_ger": "MEASURED \u2014 0 of 70 repaired capped cells have CR > GER; all 70 CR <= the model's own GER (105.0)",
+    "T1_panel_identity": "PASS \u2014 only completion_uis differs; 35 cells per panel; each = 1.10*cohort and > 1",
+    "T2_m_constancy": "PASS \u2014 CONSTANT on repaired v1.3, repaired v1.2, A17",
+    "T3_cap_induced": "PASS \u2014 4.7043695535e-02 -> 9.6646846082e-10; uncapped max unchanged",
+    "T4_register_invariance": "PASS \u2014 counts 4/6/2 unchanged; detail 90/90 and system 6/6 identical",
+    "T5_determinism": "PASS \u2014 12/12 artifacts byte-identical",
+    "T6_delivered_unchanged": "PASS \u2014 12/12 delivered inputs unchanged"
+  },
+  "closed_claims": [
+    "no_reproduction_claim",
+    "no_successor_generator",
+    "no_reopening_of_the_closed_line",
+    "no_threshold_change",
+    "no_fitting",
+    "no_new_parameter",
+    "no_causal_claim",
+    "no_direction_claim",
+    "no_write_up_edit",
+    "no_write_outside_cell_dir",
+    "no_web",
+    "no_server_interaction"
+  ],
+  "code": {
+    "clock_in_outputs": false,
+    "deterministic": true,
+    "entry_point": "code/run_all_debug.py --run1 results --run2 determinism_run2",
+    "environment": {
+      "implementation": "CPython",
+      "numpy": "2.4.6",
+      "python": "3.11.17"
+    },
+    "files": {
+      "make_manifest.py": {
+        "bytes": 15129,
+        "path": "code/make_manifest.py",
+        "sha256": "85b23746d764632e3220808b363af40cf037abba00afefc0979cee391dd73c80"
+      },
+      "run_all_debug.py": {
+        "bytes": 8158,
+        "path": "code/run_all_debug.py",
+        "sha256": "0fcd8605f2ea54577196977b31850251588a101defab408dc065476728854773"
+      },
+      "run_conv_reg_repaired.py": {
+        "bytes": 26493,
+        "path": "code/run_conv_reg_repaired.py",
+        "sha256": "1d5de59629d248f0cd1ccd202db81278b0ba8ad85e05877136f997375281055c"
+      },
+      "run_repaired.py": {
+        "bytes": 4874,
+        "path": "code/run_repaired.py",
+        "sha256": "83c01f8f9b4cb12beb90716fdf1f7e27c12768744d0d0f149c303b4e5a7e8534"
+      },
+      "sim_v1_2_fix.py": {
+        "bytes": 63390,
+        "path": "code/sim_v1_2_fix.py",
+        "sha256": "2c7c17e6dc822d7a9eedf5d21de34ee923dc49ad4f69f588eca65ddffd749c7f"
+      },
+      "sim_v1_3_fix.py": {
+        "bytes": 123002,
+        "path": "code/sim_v1_3_fix.py",
+        "sha256": "7f868e44a74ea281d4a775808e84efec1d573df861ea98ca759aafefb61edb7e"
+      },
+      "uncap_cells.py": {
+        "bytes": 9783,
+        "path": "code/uncap_cells.py",
+        "sha256": "f8d6430ada42d56e1b60dfcd944750b96a0ee8cc2a602cb964e2cdadaba7dac3"
+      },
+      "verify_identity.py": {
+        "bytes": 3475,
+        "path": "code/verify_identity.py",
+        "sha256": "a59bcb9fd826d3eff136e4847f7165036aa2333dd23cdc38d85635618f09b34b"
+      }
+    },
+    "manifest_builder": "code/make_manifest.py",
+    "network": "none",
+    "rng": "inherited seed 20261120, single PCG64 stream, draw order unchanged"
+  },
+  "declared_convention": {
+    "bounded_by_1": false,
+    "bounded_by_ger": false,
+    "denominator": "population 3-5 years above the official graduation age of the grade (older cohort)",
+    "m": {
+      "status": "DECLARED measurement factor \u2014 a point convention, not a conversion",
+      "value": "1.10"
+    },
+    "ner": "NER <= 100 is definitional; no NER statistic is computed here",
+    "object": "UIS completion rate (CR)",
+    "repeaters_overage": "counted across years; over-age completion is included"
+  },
+  "delivered_inputs_unchanged": {
+    "10_massification/extensions/conv_reg_2026-11-20/PRE_DECLARATIONS.md": true,
+    "10_massification/extensions/conv_reg_2026-11-20/code/run_conv_reg.py": true,
+    "10_massification/extensions/conv_reg_2026-11-20/results/CONV_REG.csv": true,
+    "10_massification/extensions/conv_reg_2026-11-20/results/M_CONSTANCY.csv": true,
+    "10_massification/extensions/model_debug_2026-11-21/PRE_DECLARATIONS.md": true,
+    "10_massification/extensions/model_debug_2026-11-21/cap_audit/results/CAP_AUDIT.md": true,
+    "10_massification/extensions/synthetic_2026-11-20/generator_v1_2/code/sim_v1_2.py": true,
+    "10_massification/extensions/synthetic_2026-11-20/generator_v1_2/results/synthetic_panel_v1_2.csv": true,
+    "10_massification/extensions/synthetic_2026-11-20/generator_v1_3/code/sim_v1_3.py": true,
+    "10_massification/extensions/synthetic_2026-11-20/generator_v1_3/results/synthetic_panel_v1_3.csv": true,
+    "10_massification/extensions/synthetic_2026-11-20/generator_v1_7_partrepair/results/panel_A17.csv": true,
+    "10_massification/lit/PHASE_WRITEUP.md": true
+  },
+  "determinism": {
+    "all_identical": true,
+    "artifacts": {
+      "cap_fix/CAP_FIX_CELLS.csv": {
+        "byte_identical": true,
+        "run1_sha256": "5fc05ce1718da4e1a60de6a4b196ba8ad5f3d4358d05f5766a07158fcb6d7f43",
+        "run2_sha256": "5fc05ce1718da4e1a60de6a4b196ba8ad5f3d4358d05f5766a07158fcb6d7f43"
+      },
+      "cap_fix/CAP_FIX_SUMMARY.json": {
+        "byte_identical": true,
+        "run1_sha256": "5ac0d6284ddabeb3934a47dd727fd9f35e06c3ef8bdff0ed3ad5560182c22290",
+        "run2_sha256": "5ac0d6284ddabeb3934a47dd727fd9f35e06c3ef8bdff0ed3ad5560182c22290"
+      },
+      "cap_fix/IDENTITY_CHECK.json": {
+        "byte_identical": true,
+        "run1_sha256": "a2c04de93b9e2d89916d427ee5337d05c08fedc103a6ccf873c203a98f03bea1",
+        "run2_sha256": "a2c04de93b9e2d89916d427ee5337d05c08fedc103a6ccf873c203a98f03bea1"
+      },
+      "panel/synthetic_panel_v1_2_repaired.csv": {
+        "byte_identical": true,
+        "run1_sha256": "de44a994ab01909349efee39a033503455177122426b03123910abf471f99daf",
+        "run2_sha256": "de44a994ab01909349efee39a033503455177122426b03123910abf471f99daf"
+      },
+      "panel/synthetic_panel_v1_3_repaired.csv": {
+        "byte_identical": true,
+        "run1_sha256": "48113e4e6e7040418d76f04e4a6021c5ffbd295024059be56b2459be5fe1ad5e",
+        "run2_sha256": "48113e4e6e7040418d76f04e4a6021c5ffbd295024059be56b2459be5fe1ad5e"
+      },
+      "register/CONV_REG.csv": {
+        "byte_identical": true,
+        "run1_sha256": "cb35c8e99b9c7ea0dbb4827b2461b4d62875de047248e7ffdab3454da17ecf56",
+        "run2_sha256": "cb35c8e99b9c7ea0dbb4827b2461b4d62875de047248e7ffdab3454da17ecf56"
+      },
+      "register/CONV_REG_DETAIL.csv": {
+        "byte_identical": true,
+        "run1_sha256": "587ade715e82f1dcefa4df10529f2257f486fb1e892430f20505a26e78312886",
+        "run2_sha256": "587ade715e82f1dcefa4df10529f2257f486fb1e892430f20505a26e78312886"
+      },
+      "register/CONV_REG_SYSTEM.csv": {
+        "byte_identical": true,
+        "run1_sha256": "5796131779ad26a3dd82020b38a5a8a5867230d6d1c8b76095920c46f2a38ade",
+        "run2_sha256": "5796131779ad26a3dd82020b38a5a8a5867230d6d1c8b76095920c46f2a38ade"
+      },
+      "register/INPUT_HASHES.json": {
+        "byte_identical": true,
+        "run1_sha256": "05f2add66fe0655deb5ce00870821b8d9b664a177363e3e4ce50b8953a2ec68c",
+        "run2_sha256": "05f2add66fe0655deb5ce00870821b8d9b664a177363e3e4ce50b8953a2ec68c"
+      },
+      "register/M_CONSTANCY.csv": {
+        "byte_identical": true,
+        "run1_sha256": "48c620728551bd0f570c2707b62fe6c4937021fa2eff4810e89aa52e60f42e23",
+        "run2_sha256": "48c620728551bd0f570c2707b62fe6c4937021fa2eff4810e89aa52e60f42e23"
+      },
+      "register/VERDICT.json": {
+        "byte_identical": true,
+        "run1_sha256": "364e0556e64b682ecde2b9dc6359bba3077ff87d87161697d73e976e112c8b8f",
+        "run2_sha256": "364e0556e64b682ecde2b9dc6359bba3077ff87d87161697d73e976e112c8b8f"
+      },
+      "register/console.txt": {
+        "byte_identical": true,
+        "run1_sha256": "dbebc27a4e94345ccac85f866ab8c4cdc2a4d4ba8127b10025ba3ebd712984aa",
+        "run2_sha256": "dbebc27a4e94345ccac85f866ab8c4cdc2a4d4ba8127b10025ba3ebd712984aa"
+      }
+    },
+    "file": "results/DETERMINISM.json",
+    "method": "two clean runs; panels from an independent second execution of each generator; the register run a second time on the byte-identical panel set",
+    "n_artifacts": 12,
+    "result": "deterministic in all 12 artifacts"
+  },
+  "experiment": "EXP-21 CONV-REG \u2014 repaired re-run",
+  "files": [
+    {
+      "bytes": 30122,
+      "path": "FIX_RERUN.md",
+      "sha256": "4408ca6d77e1c9b9538422f8cdf0e836e9d223794462c0bbe9b927d3d5c02e07"
+    },
+    {
+      "bytes": 12634,
+      "path": "PRE_DECLARATIONS.md",
+      "sha256": "5d7fb5c36aecc420e5e4839e6e48a43ed81fca5697a0bb0cb64df4ed3c7283e8"
+    },
+    {
+      "bytes": 86,
+      "path": "PRE_DECLARATIONS.sha256",
+      "sha256": "73f8c1a74a99dfe0d7b9ef2829ca8d81fd839083190f5f1438839467c2751e4a"
+    },
+    {
+      "bytes": 15129,
+      "path": "code/make_manifest.py",
+      "sha256": "85b23746d764632e3220808b363af40cf037abba00afefc0979cee391dd73c80"
+    },
+    {
+      "bytes": 8158,
+      "path": "code/run_all_debug.py",
+      "sha256": "0fcd8605f2ea54577196977b31850251588a101defab408dc065476728854773"
+    },
+    {
+      "bytes": 26493,
+      "path": "code/run_conv_reg_repaired.py",
+      "sha256": "1d5de59629d248f0cd1ccd202db81278b0ba8ad85e05877136f997375281055c"
+    },
+    {
+      "bytes": 4874,
+      "path": "code/run_repaired.py",
+      "sha256": "83c01f8f9b4cb12beb90716fdf1f7e27c12768744d0d0f149c303b4e5a7e8534"
+    },
+    {
+      "bytes": 63390,
+      "path": "code/sim_v1_2_fix.py",
+      "sha256": "2c7c17e6dc822d7a9eedf5d21de34ee923dc49ad4f69f588eca65ddffd749c7f"
+    },
+    {
+      "bytes": 123002,
+      "path": "code/sim_v1_3_fix.py",
+      "sha256": "7f868e44a74ea281d4a775808e84efec1d573df861ea98ca759aafefb61edb7e"
+    },
+    {
+      "bytes": 9783,
+      "path": "code/uncap_cells.py",
+      "sha256": "f8d6430ada42d56e1b60dfcd944750b96a0ee8cc2a602cb964e2cdadaba7dac3"
+    },
+    {
+      "bytes": 3475,
+      "path": "code/verify_identity.py",
+      "sha256": "a59bcb9fd826d3eff136e4847f7165036aa2333dd23cdc38d85635618f09b34b"
+    },
+    {
+      "bytes": 15539,
+      "path": "determinism_run2/CAP_FIX_CELLS.csv",
+      "sha256": "5fc05ce1718da4e1a60de6a4b196ba8ad5f3d4358d05f5766a07158fcb6d7f43"
+    },
+    {
+      "bytes": 2827,
+      "path": "determinism_run2/CAP_FIX_SUMMARY.json",
+      "sha256": "5ac0d6284ddabeb3934a47dd727fd9f35e06c3ef8bdff0ed3ad5560182c22290"
+    },
+    {
+      "bytes": 6215,
+      "path": "determinism_run2/CONV_REG.csv",
+      "sha256": "cb35c8e99b9c7ea0dbb4827b2461b4d62875de047248e7ffdab3454da17ecf56"
+    },
+    {
+      "bytes": 19829,
+      "path": "determinism_run2/CONV_REG_DETAIL.csv",
+      "sha256": "587ade715e82f1dcefa4df10529f2257f486fb1e892430f20505a26e78312886"
+    },
+    {
+      "bytes": 466,
+      "path": "determinism_run2/CONV_REG_SYSTEM.csv",
+      "sha256": "5796131779ad26a3dd82020b38a5a8a5867230d6d1c8b76095920c46f2a38ade"
+    },
+    {
+      "bytes": 841,
+      "path": "determinism_run2/IDENTITY_CHECK.json",
+      "sha256": "a2c04de93b9e2d89916d427ee5337d05c08fedc103a6ccf873c203a98f03bea1"
+    },
+    {
+      "bytes": 1056,
+      "path": "determinism_run2/INPUT_HASHES.json",
+      "sha256": "05f2add66fe0655deb5ce00870821b8d9b664a177363e3e4ce50b8953a2ec68c"
+    },
+    {
+      "bytes": 1020,
+      "path": "determinism_run2/M_CONSTANCY.csv",
+      "sha256": "48c620728551bd0f570c2707b62fe6c4937021fa2eff4810e89aa52e60f42e23"
+    },
+    {
+      "bytes": 3122,
+      "path": "determinism_run2/VERDICT.json",
+      "sha256": "364e0556e64b682ecde2b9dc6359bba3077ff87d87161697d73e976e112c8b8f"
+    },
+    {
+      "bytes": 3939,
+      "path": "determinism_run2/console.txt",
+      "sha256": "dbebc27a4e94345ccac85f866ab8c4cdc2a4d4ba8127b10025ba3ebd712984aa"
+    },
+    {
+      "bytes": 586,
+      "path": "determinism_run2/panels/RUN_META.json",
+      "sha256": "95732d8a9d76179720be223b217068185d274cb6eda57c97b4c7725f99f6a859"
+    },
+    {
+      "bytes": 5086361,
+      "path": "determinism_run2/panels/synthetic_panel_v1_2_repaired.csv",
+      "sha256": "de44a994ab01909349efee39a033503455177122426b03123910abf471f99daf"
+    },
+    {
+      "bytes": 5493135,
+      "path": "determinism_run2/panels/synthetic_panel_v1_3_repaired.csv",
+      "sha256": "48113e4e6e7040418d76f04e4a6021c5ffbd295024059be56b2459be5fe1ad5e"
+    },
+    {
+      "bytes": 15539,
+      "path": "results/CAP_FIX_CELLS.csv",
+      "sha256": "5fc05ce1718da4e1a60de6a4b196ba8ad5f3d4358d05f5766a07158fcb6d7f43"
+    },
+    {
+      "bytes": 2827,
+      "path": "results/CAP_FIX_SUMMARY.json",
+      "sha256": "5ac0d6284ddabeb3934a47dd727fd9f35e06c3ef8bdff0ed3ad5560182c22290"
+    },
+    {
+      "bytes": 6215,
+      "path": "results/CONV_REG.csv",
+      "sha256": "cb35c8e99b9c7ea0dbb4827b2461b4d62875de047248e7ffdab3454da17ecf56"
+    },
+    {
+      "bytes": 19829,
+      "path": "results/CONV_REG_DETAIL.csv",
+      "sha256": "587ade715e82f1dcefa4df10529f2257f486fb1e892430f20505a26e78312886"
+    },
+    {
+      "bytes": 466,
+      "path": "results/CONV_REG_SYSTEM.csv",
+      "sha256": "5796131779ad26a3dd82020b38a5a8a5867230d6d1c8b76095920c46f2a38ade"
+    },
+    {
+      "bytes": 3847,
+      "path": "results/DETERMINISM.json",
+      "sha256": "6837991308c7ccb2a059f1dfd255b9b9d77aa26810048eef6944807be00580ab"
+    },
+    {
+      "bytes": 841,
+      "path": "results/IDENTITY_CHECK.json",
+      "sha256": "a2c04de93b9e2d89916d427ee5337d05c08fedc103a6ccf873c203a98f03bea1"
+    },
+    {
+      "bytes": 1056,
+      "path": "results/INPUT_HASHES.json",
+      "sha256": "05f2add66fe0655deb5ce00870821b8d9b664a177363e3e4ce50b8953a2ec68c"
+    },
+    {
+      "bytes": 4669,
+      "path": "results/INPUT_HASHES_DEBUG.json",
+      "sha256": "dde70addbf0338df6379944b35581cc7408feab047f352ee6006b7dea4113263"
+    },
+    {
+      "bytes": 1020,
+      "path": "results/M_CONSTANCY.csv",
+      "sha256": "48c620728551bd0f570c2707b62fe6c4937021fa2eff4810e89aa52e60f42e23"
+    },
+    {
+      "bytes": 6215,
+      "path": "results/REPAIRED_CONV_REG.csv",
+      "sha256": "cb35c8e99b9c7ea0dbb4827b2461b4d62875de047248e7ffdab3454da17ecf56"
+    },
+    {
+      "bytes": 1020,
+      "path": "results/REPAIRED_M_CONSTANCY.csv",
+      "sha256": "48c620728551bd0f570c2707b62fe6c4937021fa2eff4810e89aa52e60f42e23"
+    },
+    {
+      "bytes": 3122,
+      "path": "results/VERDICT.json",
+      "sha256": "364e0556e64b682ecde2b9dc6359bba3077ff87d87161697d73e976e112c8b8f"
+    },
+    {
+      "bytes": 3939,
+      "path": "results/console.txt",
+      "sha256": "dbebc27a4e94345ccac85f866ab8c4cdc2a4d4ba8127b10025ba3ebd712984aa"
+    },
+    {
+      "bytes": 586,
+      "path": "results/panels/RUN_META.json",
+      "sha256": "95732d8a9d76179720be223b217068185d274cb6eda57c97b4c7725f99f6a859"
+    },
+    {
+      "bytes": 5086361,
+      "path": "results/panels/synthetic_panel_v1_2_repaired.csv",
+      "sha256": "de44a994ab01909349efee39a033503455177122426b03123910abf471f99daf"
+    },
+    {
+      "bytes": 5493135,
+      "path": "results/panels/synthetic_panel_v1_3_repaired.csv",
+      "sha256": "48113e4e6e7040418d76f04e4a6021c5ffbd295024059be56b2459be5fe1ad5e"
+    }
+  ],
+  "files_excluded_from_manifest": [
+    "RUN_MANIFEST.json",
+    "SHA256SUMS.txt"
+  ],
+  "fix": {
+    "defect": "completion_uis capped at 1.0 (CAP-01); 35/6,720 cells on v1.3 and v1.2, 0 on A17",
+    "installed": "out[\"comp_uis\"][L, t] = max(0.0, P[\"meas_completion_factor\"] * comp_coh)",
+    "no_fitting": true,
+    "no_new_parameter": true,
+    "no_parameter_change": true,
+    "no_threshold_change": true,
+    "other_hunk": "path block only (copy resolves frozen inputs from the original generator dir)",
+    "removed": "out[\"comp_uis\"][L, t] = clip(P[\"meas_completion_factor\"] * comp_coh, 0.0, 1.0)",
+    "sites": {
+      "v1.2": {
+        "original": "generator_v1_2/code/sim_v1_2.py:610",
+        "repaired_copy": "code/sim_v1_2_fix.py:613"
+      },
+      "v1.3": {
+        "original": "generator_v1_3/code/sim_v1_3.py:832",
+        "repaired_copy": "code/sim_v1_3_fix.py:835"
+      }
+    },
+    "unchanged": [
+      "comp_coh cohort-flow clip (CAP-02)",
+      "GER/overage_cap Z1 gate (CAP-06)",
+      "capacity gates (CAP-07/08/09)",
+      "survival clip incl. the CAP-04 0.02 floor (recorded, not fixed)",
+      "share renormalisations",
+      "all thresholds",
+      "all parameters",
+      "seed",
+      "draw order"
+    ]
+  },
+  "inherited_register_predeclaration": {
+    "hash_enforced_at_run_time": true,
+    "path": "10_massification/extensions/conv_reg_2026-11-20/PRE_DECLARATIONS.md",
+    "sha256": "1dd86bd139a81c22e0ba2918728818fe7184775d925211a28fdd2be00b975410",
+    "thresholds_inherited_unchanged": true
+  },
+  "inputs": [
+    {
+      "path": "10_massification/extensions/synthetic_2026-11-20/generator_v1_3/results/synthetic_panel_v1_3.csv",
+      "sha256": "47d4b082f4ba5838cc20fbb09e59dd3dd847ad25393b1ce091069c94496657e3"
+    },
+    {
+      "path": "10_massification/extensions/synthetic_2026-11-20/generator_v1_2/results/synthetic_panel_v1_2.csv",
+      "sha256": "14729c5141a71dd9aaf87a5ad2e973a84b5f04603577aae627f2833276fac5ac"
+    },
+    {
+      "path": "10_massification/extensions/synthetic_2026-11-20/generator_v1_7_partrepair/results/panel_A17.csv",
+      "sha256": "e955f02d49e78d52ddf0d7125ba3746c18629ea6b7714375d5e940daa1c4afcf"
+    },
+    {
+      "path": "10_massification/extensions/conv_reg_2026-11-20/PRE_DECLARATIONS.md",
+      "sha256": "1dd86bd139a81c22e0ba2918728818fe7184775d925211a28fdd2be00b975410"
+    },
+    {
+      "path": "10_massification/extensions/conv_reg_2026-11-20/code/run_conv_reg.py",
+      "sha256": "2e7125f09aee9df2061bd2b983cdf34b8a74a6d576ec394a18f132e4ead95876"
+    },
+    {
+      "path": "10_massification/extensions/conv_reg_2026-11-20/results/CONV_REG.csv",
+      "sha256": "f53d8e707d929843dad36ef66e230933de25430eaf8b70a683a925b70c8d4b0b"
+    },
+    {
+      "path": "10_massification/extensions/conv_reg_2026-11-20/results/M_CONSTANCY.csv",
+      "sha256": "32cac91be20d2b1a5498f409a27285198189eb0a599840ddcaa64555bd8f58e5"
+    },
+    {
+      "path": "10_massification/extensions/synthetic_2026-11-20/generator_v1_3/code/sim_v1_3.py",
+      "sha256": "70ae8f0eef83358493dad3d3feb2d6a8841c4bb6fad3966627f4eed70e2a9877"
+    },
+    {
+      "path": "10_massification/extensions/synthetic_2026-11-20/generator_v1_2/code/sim_v1_2.py",
+      "sha256": "61123aa9370a407487407bf3ff4b97287aea67cac5f90629e540a6e8cc855e7c"
+    },
+    {
+      "path": "10_massification/lit/PHASE_WRITEUP.md",
+      "sha256": "d0820eb8311c315d04610e872c44b9f9e257cb6817e057d80f050704384a251e"
+    },
+    {
+      "path": "10_massification/extensions/model_debug_2026-11-21/PRE_DECLARATIONS.md",
+      "sha256": "7d8bade95407a2fe76c95a740e0c98a74f34962117b33846df37a7d6a48f56a9"
+    },
+    {
+      "path": "10_massification/extensions/model_debug_2026-11-21/cap_audit/results/CAP_AUDIT.md",
+      "sha256": "93d4292039572fe9c451fbadd7edd87fb4d1e08c7442e6ce676425299362f12a"
+    },
+    {
+      "path": "10_massification/extensions/model_debug_2026-11-21/fix_rerun/PRE_DECLARATIONS.md",
+      "sha256": "5d7fb5c36aecc420e5e4839e6e48a43ed81fca5697a0bb0cb64df4ed3c7283e8"
+    },
+    {
+      "path": "10_massification/extensions/model_debug_2026-11-21/fix_rerun/code/sim_v1_3_fix.py",
+      "sha256": "7f868e44a74ea281d4a775808e84efec1d573df861ea98ca759aafefb61edb7e"
+    },
+    {
+      "path": "10_massification/extensions/model_debug_2026-11-21/fix_rerun/code/sim_v1_2_fix.py",
+      "sha256": "2c7c17e6dc822d7a9eedf5d21de34ee923dc49ad4f69f588eca65ddffd749c7f"
+    },
+    {
+      "path": "10_massification/extensions/model_debug_2026-11-21/fix_rerun/code/run_conv_reg_repaired.py",
+      "sha256": "1d5de59629d248f0cd1ccd202db81278b0ba8ad85e05877136f997375281055c"
+    },
+    {
+      "path": "10_massification/extensions/model_debug_2026-11-21/fix_rerun/results/panels/synthetic_panel_v1_3_repaired.csv",
+      "sha256": "48113e4e6e7040418d76f04e4a6021c5ffbd295024059be56b2459be5fe1ad5e"
+    },
+    {
+      "path": "10_massification/extensions/model_debug_2026-11-21/fix_rerun/results/panels/synthetic_panel_v1_2_repaired.csv",
+      "sha256": "de44a994ab01909349efee39a033503455177122426b03123910abf471f99daf"
+    }
+  ],
+  "label": "DEBUG",
+  "labels": {
+    "cell": "DEBUG",
+    "m": "DECLARED / CONVENTION",
+    "observed_inputs": "OBSERVED",
+    "panels": "SYNTHETIC",
+    "register_values": "DERIVED"
+  },
+  "notes": [
+    "The CAP-04 survival floor 0.02 (24 tertiary burn-in cells) is recorded, not fixed; it is not the named defect.",
+    "CAP-14 / CAP-20 are non-binding guards: recorded, no action.",
+    "The repaired panels are a DEBUG diagnostic object; they do not replace or modify any delivered panel.",
+    "The register CSV's predecl_sha256_12 column names the governing DEBUG predeclaration (5d7fb5c36aec); the inherited threshold predeclaration 1dd86bd1 is enforced at run time and recorded in VERDICT.json.",
+    "PROVENANCE NOTE: the parent contract carries AMENDMENT 1 and hashes 7d8bade95407a2fe...; CAP_AUDIT.md records both that amended hash and the dispatch hash 748335cf915394c3... and states the contract was amended mid-audit. Neither file was edited by this cell (both unchanged before/after).",
+    "A17's frozen v1.6 copy was not repaired: 0 cells bind there, the A17 panel is the frozen comparison object, and the write scope names the v1.3/v1.2 copies; the output would be byte-identical."
+  ],
+  "predeclaration": {
+    "enforced_pre_input": true,
+    "enforced_pre_verdict_write": true,
+    "enforcement": "code/run_conv_reg_repaired.py checks the hash before reading any input and re-checks it immediately before VERDICT.json is written; mismatch aborts with exit 2 and writes no verdict",
+    "frozen_before_execution": true,
+    "path": "PRE_DECLARATIONS.md",
+    "sha256": "5d7fb5c36aecc420e5e4839e6e48a43ed81fca5697a0bb0cb64df4ed3c7283e8",
+    "sha256_file": "PRE_DECLARATIONS.sha256"
+  },
+  "results": {
+    "answers": {
+      "a_after": {
+        "A17": "CONSTANT",
+        "v1.2": "CONSTANT",
+        "v1.3": "CONSTANT"
+      },
+      "a_m_constant_only_on_A17": false,
+      "b_non_constancy": "cap-induced (wholly); analytic: 1/0.9497070256 - 1.10 = -0.047043695535 = -4.7043695535e-02",
+      "c_counts": "unchanged 4 INTER / 6 NOT / 2 THIN",
+      "c_why": "T is observed completion / observed GER; the model panels enter only the m-constancy block",
+      "d_capped_statement": "as-delivered: 35/6,720 per panel (true, unchanged); repaired copies: 0/6,720",
+      "d_level_sentences": "none change; prospective amendments only (C-13, Table A-1 rows, the A17-only condition); zero published-number changes",
+      "measure": {
+        "cr_minus_ger_pp_max": -0.5322272,
+        "cr_minus_ger_pp_min": -4.9741293,
+        "ger_values_at_fixed_cells": [
+          "105"
+        ],
+        "n_cr_le_ger": 70,
+        "n_cr_over_ger": 0,
+        "n_fix_rows": 70,
+        "question": "do the repaired capped cells have CR > GER? (AMENDMENT 1; audit section 5 item 4)",
+        "repaired_cr_pp_max": 104.46777279999999,
+        "repaired_cr_pp_min": 100.0258707,
+        "verdict": "NOT-A-CR-ABOVE-GER-CASE: every repaired capped cell is CR <= the model's own GER"
+      }
+    },
+    "cap_fix": {
+      "a17_binding_cells": 0,
+      "file": "results/CAP_FIX_CELLS.csv",
+      "max_delivered": "1",
+      "max_repaired": "1.044677728",
+      "max_uncapped": "1.044677728",
+      "n_fix_rows_by_panel": {
+        "v1.2": 35,
+        "v1.3": 35
+      },
+      "n_fix_rows_total": 70
+    },
+    "m_constancy": {
+      "after": {
+        "A17": {
+          "max_abs_dev_ratio": "8.8395202269e-10",
+          "source": "results/REPAIRED_M_CONSTANCY.csv",
+          "verdict": "CONSTANT"
+        },
+        "v1.2": {
+          "max_abs_dev_ratio": "9.6646846082e-10",
+          "source": "results/REPAIRED_M_CONSTANCY.csv",
+          "verdict": "CONSTANT"
+        },
+        "v1.3": {
+          "max_abs_dev_ratio": "9.6646846082e-10",
+          "source": "results/REPAIRED_M_CONSTANCY.csv",
+          "verdict": "CONSTANT"
+        }
+      },
+      "before": {
+        "A17": {
+          "max_abs_dev_ratio": "8.8395202269e-10",
+          "source": "10_massification/extensions/conv_reg_2026-11-20/results/M_CONSTANCY.csv",
+          "verdict": "CONSTANT"
+        },
+        "v1.2": {
+          "max_abs_dev_ratio": "4.7043695535e-02",
+          "source": "10_massification/extensions/conv_reg_2026-11-20/results/M_CONSTANCY.csv",
+          "verdict": "NOT-CONSTANT"
+        },
+        "v1.3": {
+          "max_abs_dev_ratio": "4.7043695535e-02",
+          "source": "10_massification/extensions/conv_reg_2026-11-20/results/M_CONSTANCY.csv",
+          "verdict": "NOT-CONSTANT"
+        }
+      },
+      "file": "results/REPAIRED_M_CONSTANCY.csv",
+      "in_memory_identity_max_abs_diff": {
+        "v1.2": "0.0000000000e+00",
+        "v1.3": "0.0000000000e+00"
+      }
+    },
+    "register": {
+      "after_counts": {
+        "cells_frozen": 12,
+        "cells_interchangeable": 4,
+        "cells_no_completion_series": 0,
+        "cells_not_interchangeable": 6,
+        "cells_thin": 2,
+        "cells_total": 18,
+        "cells_untraceable": 0,
+        "cells_with_crossing": 6
+      },
+      "after_verdict": "REGISTER-BINDING",
+      "before_counts": {
+        "cells_frozen": 12,
+        "cells_interchangeable": 4,
+        "cells_no_completion_series": 0,
+        "cells_not_interchangeable": 6,
+        "cells_thin": 2,
+        "cells_total": 18,
+        "cells_untraceable": 0,
+        "cells_with_crossing": 6
+      },
+      "before_verdict": "REGISTER-BINDING",
+      "detail_rows_identical": true,
+      "file": "results/REPAIRED_CONV_REG.csv",
+      "register_rows_identical_except": [
+        "predecl_sha256_12"
+      ]
+    }
+  },
+  "statement": "Synthetic data from declared assumptions only. Not evidence, not an estimate, not a forecast, no causal or direction claim, no real country modelled.",
+  "status": "DEBUG \u2014 one named defect repaired; register re-run on repaired copies",
+  "worker": "DEBUG AGENT 2 (fix + re-run)"
+}

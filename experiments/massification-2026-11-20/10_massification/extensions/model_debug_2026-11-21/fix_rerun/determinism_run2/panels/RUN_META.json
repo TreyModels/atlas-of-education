@@ -1,0 +1,14 @@
+{
+  "fix": "out[\"comp_uis\"][L, t] = max(0.0, P[\"meas_completion_factor\"] * comp_coh)  # was clip(..., 0.0, 1.0)",
+  "frozen_hashes_enforced": {
+    "frozen_predeclaration_sha256": "fde18d405d875167977b350a925c28248c3007d2813dcdb29219d3baf0b95f16"
+  },
+  "generator": "sim_v1_2_fix.py (copy of generator_v1_2/code/sim_v1_2.py)",
+  "label": "DEBUG",
+  "n_rows": 6720,
+  "no_clock_in_outputs": true,
+  "no_rng_change": true,
+  "panel_file": "synthetic_panel_v1_2_repaired.csv",
+  "panel_sha256": "de44a994ab01909349efee39a033503455177122426b03123910abf471f99daf",
+  "seed": 20261120
+}

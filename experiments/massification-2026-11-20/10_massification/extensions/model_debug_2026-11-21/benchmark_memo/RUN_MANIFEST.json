@@ -1,0 +1,430 @@
+{
+  "schema": "massification/model_debug_2026-11-21/benchmark_memo/run_manifest/v1",
+  "artifact_set": "BENCHMARK MEMO — the benchmark hierarchy (debug cell 3 of 3, MODEL-DEBUG MODE)",
+  "generated_local": "2026-11-21T15:26:19+08:00",
+  "revised_local": "2026-11-21T15:38:34+08:00",
+  "revision": "section 7 — Handoff packet (for the stronger reviewer, Opus/Sol) appended under PRE_DECLARATIONS.md section 6 (AMENDMENT 1); sections 0-6 of the memo are unchanged",
+  "timezone": "Asia/Shanghai",
+  "agent": "DEBUG AGENT 3 (BENCHMARK NOTE)",
+  "parent_agent_id": "d1377bf3-358e-4d19-887f-6b04f1c64ec6",
+  "authority": {
+    "contract": "10_massification/extensions/model_debug_2026-11-21/PRE_DECLARATIONS.md",
+    "contract_sha256": "748335cf915394c3f0dc0241fa2c5b6eaaae9c0af201dba97d3c2de24d8f6553",
+    "contract_sha256_current": "7d8bade95407a2fe76c95a740e0c98a74f34962117b33846df37a7d6a48f56a9",
+    "contract_version_note": "748335cf is contract v1 (cited in the memo header and in this manifest); 7d8bade9 is v1 + AMENDMENT 1 (measure-aware), under which section 7 is written. The header citation is NOT patched; the difference is recorded in memo section 7.8 limit 5",
+    "cell": "section 3 item 3 — BENCHMARK NOTE (Agent 3)",
+    "packet_basis": "same contract, section 6 (AMENDMENT 1) — the four-list handoff packet for a stronger reviewer"
+  },
+  "label": "DEBUG",
+  "mode": "read-only audit memo; authorship only",
+  "write_scope": "10_massification/extensions/model_debug_2026-11-21/benchmark_memo/",
+  "non_actions": [
+    "no model run",
+    "no re-run and no re-score of any delivered cell",
+    "no new number, no new cell, no threshold change, no fitting",
+    "no reproduction claim",
+    "no causal claim and no direction claim",
+    "no existing repo file modified or overwritten (the gate-passed PHASE_WRITEUP.md is not retro-edited)",
+    "no git write, no external message, no data request"
+  ],
+  "directive": {
+    "verbatim": "Of course what happened last year predicts what happens next year… I'm questioning who the fuck cares — that doesn't identify any dynamic other than 'line goes up'.",
+    "attribution": "the user's critique of the \"lost to a straight line\" framing, relayed by the Lead (2026-11-21)",
+    "source_file": "10_massification/extensions/model_debug_2026-11-21/PRE_DECLARATIONS.md",
+    "source_section": "section 2 — User directive (verbatim)",
+    "source_sha256": "748335cf915394c3f0dc0241fa2c5b6eaaae9c0af201dba97d3c2de24d8f6553",
+    "memo_location": "BENCHMARK_MEMO.md section 1"
+  },
+  "hierarchy_rule": {
+    "floor": "persistence / linear-trend benchmarks are a HUMILITY FLOOR, not a dynamic test",
+    "licensed_by_a_floor_result": "the model adds (or fails to add) predictive content over extrapolation — nothing more",
+    "sufficiency": "necessary benchmark only; never sufficient evidence of a dynamic",
+    "dynamic_claims_rest_on": [
+      "transitions",
+      "asymmetries",
+      "crossing timing",
+      "distributional change"
+    ]
+  },
+  "inventory": {
+    "path": "BENCHMARK_INVENTORY.csv",
+    "n_rows": 10,
+    "n_dynamic_type": 4,
+    "n_floor_only": 6,
+    "n_identifying_a_dynamic": 0,
+    "dynamic_rows": [
+      "R3",
+      "R4",
+      "R7",
+      "R8"
+    ],
+    "floor_only_rows": [
+      "R1",
+      "R2",
+      "R5",
+      "R6",
+      "R9",
+      "R10"
+    ],
+    "criteria_reference": "BENCHMARK_MEMO.md section 4.1 (D-1 object, D-2 out-of-window, D-3 counterfactual or distributional shift, D-4 non-level falsifier)"
+  },
+  "prospective_amendment": {
+    "applied": false,
+    "status": "PROSPECTIVE — proposed text only; the user may approve later",
+    "target_document": "10_massification/lit/PHASE_WRITEUP.md",
+    "target_document_sha256": "d0820eb8311c315d04610e872c44b9f9e257cb6817e057d80f050704384a251e",
+    "target_document_gate": "10_massification/lit/PHASE_WRITEUP_GATE.md",
+    "target_document_gate_sha256": "cee5b0c84602fd431b34e3097d37c60217329fd0e4eaabfc606e634aa375196d",
+    "gate_result": "WRITE-UP-GATE: PASS",
+    "target_section": "W-1.3, immediately after the C-04 benchmark-bounded clause",
+    "proposed_id": "B-1",
+    "proposed_sentence": "The linear-trend and persistence comparators are a humility floor, not a dynamic test: losing to the 4.35 pp trend says only that the A1 anchor class adds no predictive content over extrapolation, and beating it would have said no more about dynamics — the programme's dynamic claims rest on transitions, asymmetries, crossing timing and distributional change, none of which a level benchmark can supply.",
+    "optional_status_line_id": "B-2",
+    "optional_status_line": "Benchmark frame: the trend/persistence comparators are stated as a humility floor; this sentence is a prospective amendment, changes no number, label or verdict, and WRITE-UP-GATE: PASS stands as issued on the un-amended document.",
+    "changes_if_approved": "the reading of the benchmark sentence and one inserted scope sentence; no number, label, verdict, threshold or cell"
+  },
+  "handoff_packet": {
+    "section": "BENCHMARK_MEMO.md section 7 — Handoff packet (for the stronger reviewer, Opus/Sol)",
+    "added_under": "PRE_DECLARATIONS.md section 6 (AMENDMENT 1); memo sections 0-6 unchanged",
+    "addressee": "a stronger reviewer (Opus/Sol), by the Lead's relay of the user's directive",
+    "recorded_user_views": {
+      "experiments_may_have_to_be_redesigned": "recorded as the user's view and not argued, answered or acted on (memo 7.1 T-1; 7.5 Q-7)",
+      "packet_is_for_a_stronger_reviewer": "recorded (memo 7.1 T-2)",
+      "gate_passed_writeup_not_edited_without_user_approval": "applied as a constraint (memo 7.1 T-3); 10_massification/lit/PHASE_WRITEUP.md sha256 unchanged at d0820eb8311c315d04610e872c44b9f9e257cb6817e057d80f050704384a251e"
+    },
+    "paper": {
+      "path_instruction": "00_handoff/papers/02_october_massification.md",
+      "found": true,
+      "found_at": "/Users/treymenefee/Library/Mobile Documents/com~apple~CloudDocs/Downloads/DeepSeek/massification_2026-11-20/00_handoff/papers/02_october_massification.md",
+      "located_outside_programme_root": true,
+      "location_note": "the live programme root has no 00_handoff/ and no 01_sources/ directory; the handoff tree that the programme's own documents cite (PROVENANCE.md line 13; 02_lit/MANUSCRIPT_COMPARISON.md line 9; RESULTS_README.md section 5) lives one bundle over in the working copy",
+      "sha256": "1138d453a79243f573b57f971369a61f598aecc6f4882f7ff052fd1ea90228cf",
+      "bytes": 84592,
+      "lines": 377,
+      "hash_corroboration": "recorded for papers/02_october_massification.md at line 9 of that tree's 00_handoff/MANIFEST.sha256, where it verifies OK; byte-identical to the massification_2026-11-20_RESTORED copy",
+      "fallback_used": false,
+      "fallback_note": "the instruction's fallback (list the write-up's W-1/W-2 claims instead) was not used"
+    },
+    "list_a_paper_claims": {
+      "rows": 18,
+      "shown": 0,
+      "partially_shown": 3,
+      "not_shown": 15,
+      "partially_shown_rows": ["P-11", "P-13", "P-17"],
+      "lines_quoted": [8, 26, 147, 164, 170, 172, 176, 180, 186, 192, 198, 214, 216, 263, 277],
+      "quotation_method": "taken mechanically from the paper file by offset, not retyped; all quoted fragments re-verified against the cited lines at write time",
+      "status_meaning": "SHOWN / PARTIALLY SHOWN / NOT SHOWN state what THIS RECORD established; NOT SHOWN is not a statement that a claim is false"
+    },
+    "list_b_results": {
+      "rows": 10,
+      "labels": {
+        "DYNAMIC-type": 3,
+        "FLOOR-ONLY": 2,
+        "REPRESENTATION": 1,
+        "BOUNDED": 1,
+        "NULL": 3
+      },
+      "memo_binary_over_the_nine_inventoried_rows": {
+        "DYNAMIC": 4,
+        "FLOOR-ONLY": 5
+      },
+      "identifying_a_dynamic": 0,
+      "note": "one characteristic handoff label per row; the memo's DYNAMIC/FLOOR-ONLY binary is carried beside it; HKG is NULL because no result exists"
+    },
+    "list_c_open_questions": {
+      "n": 7,
+      "ids": [
+        "Q-1 D63 cause",
+        "Q-2 kappa dynamics (WINDOW-ONLY)",
+        "Q-3 participation object identity (NO-OBSERVED-COUNTERPART)",
+        "Q-4 HKG measurement (DEFER)",
+        "Q-5 12-arm holdout-vs-trend reading hazard",
+        "Q-6 ceiling-cap question, being fixed in this debug run",
+        "Q-7 the user's question whether the experiments may have to be redesigned"
+      ]
+    },
+    "list_d_benchmark_critique": {
+      "floor_rule": "trend / persistence = a humility floor, not a dynamic test",
+      "identifying_a_dynamic": "0 of 10 under D-1..D-4",
+      "four_conditions": [
+        "D-1 dynamic-type object",
+        "D-2 out-of-window",
+        "D-3 counterfactual or distributional shift",
+        "D-4 non-level falsifier"
+      ],
+      "amendment": "B-1 (and optional B-2), prospective, applied = false"
+    },
+    "discipline": {
+      "labels": "DEBUG on the section and on every table caption; inherited labels preserved where a number is quoted",
+      "no_new_numbers": true,
+      "no_reproduction_claim": true,
+      "no_causal_or_direction_claim": true,
+      "writeup_edited": false
+    }
+  },
+  "outputs": [
+    {
+      "path": "BENCHMARK_MEMO.md",
+      "bytes": 78400,
+      "lines": 565,
+      "sha256": "f1133f74fd1da6e1e2ee01470b3bcf2e1b20f7e824514739fe5289c5014d6b5d",
+      "role": "the memo: verbatim directive, hierarchy, inventory Table 3.1, dynamic-test definition, prospective amendment box, provenance Appendix A; plus section 7, the handoff packet (paper claims line by line, one line per result, open questions, benchmark critique)"
+    },
+    {
+      "path": "BENCHMARK_INVENTORY.csv",
+      "bytes": 7305,
+      "lines": 11,
+      "sha256": "f4dd2708a3b88c2bcd34f03eeadfba46ed9f21bc066c23572af68902a3b0a043",
+      "role": "machine-readable twin of Table 3.1: result x classification DYNAMIC/FLOOR-ONLY x evidence path"
+    },
+    {
+      "path": "SHA256SUMS.txt",
+      "role": "hashes of the three artifacts of this directory (listed there, after this file was written)"
+    }
+  ],
+  "inputs": [
+    {
+      "path": "10_massification/extensions/model_debug_2026-11-21/PRE_DECLARATIONS.md",
+      "sha256": "748335cf915394c3f0dc0241fa2c5b6eaaae9c0af201dba97d3c2de24d8f6553",
+      "role": "debug-mode contract; verbatim directive; floor rule; this cell's scope"
+    },
+    {
+      "path": "10_massification/lit/PHASE_WRITEUP.md",
+      "sha256": "d0820eb8311c315d04610e872c44b9f9e257cb6817e057d80f050704384a251e",
+      "role": "the shipped write-up — quoted (C-01, W-1.1 block, C-04 clause), never edited"
+    },
+    {
+      "path": "10_massification/lit/PHASE_WRITEUP_GATE.md",
+      "sha256": "cee5b0c84602fd431b34e3097d37c60217329fd0e4eaabfc606e634aa375196d",
+      "role": "A-1..A-8 self-check; overall WRITE-UP-GATE: PASS"
+    },
+    {
+      "path": "MASSIFICATION_CLOSEOUT.md",
+      "sha256": "15170aa6fc2c515320f538f4bf0af8d9a568903ff077e23760932dd881c372ea",
+      "role": "programme closeout; D-1 corrected 12-arm range and the loss to the 4.35 pp linear trend"
+    },
+    {
+      "path": "08_council/DECISIONS.md",
+      "sha256": "dc5751caa5116e7db0fde0cb9dddf4c62742753d3978cc242128d62eefeb109c",
+      "role": "D76/D77, D138, D150/D154, D153(xiii), D160, D164-D169"
+    },
+    {
+      "path": "10_massification/model/anchor_out/anchor_table.csv",
+      "sha256": "2a6d4e8ea76f49d7cf218f861685edc4bc026a87628b5a30f2005e17713b43d4",
+      "role": "row R1 (fit_mae, hold_mae, scaling_verdict) and row R3 (M2, M3)"
+    },
+    {
+      "path": "10_massification/model/calib/calibration_table.csv",
+      "sha256": "552e0cce04bd148d87de258190674609abea21b7efdd7b9f5717d230927e062b",
+      "role": "row R1 benchmarks: naive_trend 4.352883341604888, naive_persistence 8.599852941176476 (iso = PHL)"
+    },
+    {
+      "path": "10_massification/extensions/conv_reg_2026-11-20/results/CONV_REG.csv",
+      "sha256": "f53d8e707d929843dad36ef66e230933de25430eaf8b70a683a925b70c8d4b0b",
+      "role": "row R5 conversion register; crossing-year objects named in section 4.3"
+    },
+    {
+      "path": "10_massification/extensions/conv_reg_2026-11-20/results/M_CONSTANCY.csv",
+      "sha256": "32cac91be20d2b1a5498f409a27285198189eb0a599840ddcaa64555bd8f58e5",
+      "role": "row R5 m-constancy (A17 CONSTANT 8.8395202269e-10; v1.3/v1.2 NOT-CONSTANT 4.7043695535e-02; 35/6720)"
+    },
+    {
+      "path": "10_massification/extensions/part_margin_desc_2026-11-20/results/PART_MARGIN_DESC.csv",
+      "sha256": "611cd8298f6466341569e48ee0f4eb9f9f90641c78c3f7704d3835cd7459b549",
+      "role": "row R6 participation spans"
+    },
+    {
+      "path": "10_massification/extensions/part_margin_desc_2026-11-20/results/OBJECT_IDENTITY_AUDIT.csv",
+      "sha256": "bc7ade8026dbd8ccfb318b3d2774759af1c868c01b5456904e5a6ea56fcf9e63",
+      "role": "row R6 identity negative (0 matching lines)"
+    },
+    {
+      "path": "10_massification/extensions/d63_bounds_2026-11-20/results/D63_BOUNDS_RESULTS.csv",
+      "sha256": "0f627046238482ffab94152cbd00952f7d052b7c7d7fd5457509b2d5517328c1",
+      "role": "row R7 D63 split, t-3 caveat, B1-B3"
+    },
+    {
+      "path": "10_massification/extensions/kappa_write_2026-11-20/results/KAPPA_WRITE_REGISTER.csv",
+      "sha256": "53c8f6d74f9d5304f92880f0a0923d9ea6f3f30f3bce2b3175317dd565bd9338",
+      "role": "row R8 kappa register (windows, slope, half-shift, hold-out)"
+    },
+    {
+      "path": "10_massification/extensions/kappa_write_2026-11-20/results/KAPPA_WRITE_SUMMARY.csv",
+      "sha256": "0c14f361c9b0924db023b5b4e0f5fa7a47cbe602ffd6c1b8d0e6ece21e27aec6",
+      "role": "row R8 use counts and universe (17 of 193 files)"
+    },
+    {
+      "path": "10_massification/extensions/repro_path_2026-11-20/results/PATH_COMPARISONS.csv",
+      "sha256": "33107d2d575610564073d3859923eb50b35117f68eebee4459783608ef3ab3b2",
+      "role": "row R4 EXP-7 per-cell comparisons"
+    },
+    {
+      "path": "10_massification/extensions/repro_path_2026-11-20/FINDINGS.md",
+      "sha256": "eb868567669e434282be68eaeec4138a7961a4485e767511f558a613cc45ab52",
+      "role": "row R4 verdict ENDPOINT-ONLY and the 2020 split"
+    },
+    {
+      "path": "10_massification/extensions/synthetic_2026-11-20/generator_v1_7_partrepair/results/observed_path_A17.csv",
+      "sha256": "16a4190a3f65557f979a22f49840c0597130105a7359fbcf4294f8f24902c7a1",
+      "role": "row R3 placement 9/33 (within_5pp_A00)"
+    },
+    {
+      "path": "10_massification/extensions/synthetic_2026-11-20/generator_v1_7_partrepair/results/v1_7_checks.csv",
+      "sha256": "22f0a1bbca5b273796cde38ca7ceafdb0d914a5bf2b10f5df911b7cdc4d65097",
+      "role": "row R9 representation checks (rows S1-S3)"
+    },
+    {
+      "path": "10_massification/extensions/synthetic_2026-11-20/THEORY_FRAME.md",
+      "sha256": "7bc96f4bc61d567672a58aa15efd94c4b84104d095a84212f8dab7e56316359a",
+      "role": "row R10 declared theory (one-way ratchet, bimodal-gate)"
+    },
+    {
+      "path": "10_massification/model2/runs/recovery.csv",
+      "sha256": "116f18f9824a24516be8eed2ccd1286c5b7e00ce2d7b6c80f04627f105df922b",
+      "role": "row R2 forced-ID (truth = OUT, best in {S, C}, 5/5)"
+    },
+    {
+      "path": "10_massification/model2/A5B_REPORT.md",
+      "sha256": "unhashed",
+      "role": "row R2 equivalence-set-empty statement (read, not quoted by number)"
+    },
+    {
+      "path": "10_massification/extensions/wt_2026-11-20/FINDINGS.md",
+      "sha256": "unhashed",
+      "role": "adjacent note only: WT4 exit episodes = 0, descriptive non-event (section 3.4 row 10, section 3.5)"
+    },
+    {
+      "path": "10_massification/extensions/hkg_transfer_2026-11-20/HKG_H1_OUTCOME.md",
+      "sha256": "unhashed",
+      "role": "adjacent note only: BLOCKED-MEASURE(SR-1), no HKG result exists (section 3.5)"
+    },
+    {
+      "path": "10_massification/extensions/edu_eci_2026-11-20/FINDINGS.md",
+      "sha256": "unhashed",
+      "role": "adjacent note only: descriptive/associational panel, excluded from the inventory (section 3.5)"
+    },
+    {
+      "path": "00_handoff/papers/02_october_massification.md (handoff tree; absolute path in handoff_packet.paper.found_at)",
+      "sha256": "1138d453a79243f573b57f971369a61f598aecc6f4882f7ff052fd1ea90228cf",
+      "role": "section 7.3: the October paper's claims quoted line by line (18 rows, lines 8-277); quoted, never edited; 377 lines / 84592 bytes; hash corroborated by 00_handoff/MANIFEST.sha256 line 9"
+    },
+    {
+      "path": "04_data/CLAIM_VERIFICATION.md",
+      "sha256": "7d7514676a421bbb9a44d46a920fa4032df63e58e54cf22621971d1d93067b96",
+      "role": "section 7.3 rows P-14 and P-17: PSA microdata blocked (section 7 item 2); RA 10533 (2013) verified as policy fact (section 6)"
+    },
+    {
+      "path": "10_massification/extensions/model_debug_2026-11-21/cap_audit/results/CAP_AUDIT.md",
+      "sha256": "93d4292039572fe9c451fbadd7edd87fb4d1e08c7442e6ce676425299362f12a",
+      "role": "section 7.5 Q-6: completion_uis cap binds 35/6720 on v1.3 and 35/6720 on v1.2 and 0/6720 on A17; 34 clamp sites (30 declared / 1 artefact / 3 undetermined); 0 of 70 rows a legitimate CR > GER case (Agent 1's audit, read not re-run)"
+    },
+    {
+      "path": "PROVENANCE.md; 02_lit/MANUSCRIPT_COMPARISON.md; RESULTS_README.md",
+      "sha256": "unhashed",
+      "role": "section 7.2 location citations only: the paper at 377 lines (PROVENANCE.md line 13; MANUSCRIPT_COMPARISON.md line 9); the 00_handoff/01_sources layout and the read-only massification_project source (RESULTS_README.md section 5)"
+    }
+  ],
+  "discipline_checks": [
+    {
+      "check": "no model run or re-run in this memo",
+      "result": true
+    },
+    {
+      "check": "no number computed in this memo (all quoted with path + column)",
+      "result": true
+    },
+    {
+      "check": "no reproduction claim",
+      "result": true
+    },
+    {
+      "check": "no causal claim, no direction claim",
+      "result": true
+    },
+    {
+      "check": "gate-passed write-up not modified (sha256 unchanged before and after)",
+      "result": true,
+      "sha256": "d0820eb8311c315d04610e872c44b9f9e257cb6817e057d80f050704384a251e"
+    },
+    {
+      "check": "no pre-existing repo file created, edited or deleted outside this directory",
+      "result": true
+    },
+    {
+      "check": "every artifact carries label DEBUG; inherited labels preserved per row",
+      "result": true
+    },
+    {
+      "check": "inventory CSV parses to 10 rows x 12 columns",
+      "result": true
+    },
+    {
+      "check": "amendment recorded as proposed and applied = false",
+      "result": true
+    },
+    {
+      "check": "section 7 added as ONE appended section; memo sections 0-6 unchanged (pure insertion before Appendix A)",
+      "result": true
+    },
+    {
+      "check": "every paper quotation verified against its cited line in 00_handoff/papers/02_october_massification.md at sha256 1138d453... (20/20 fragments; 0 mismatches)",
+      "result": true
+    },
+    {
+      "check": "the paper's location recorded: found outside the live programme root, hash corroborated by the handoff manifest; the W-1/W-2 fallback not used",
+      "result": true
+    },
+    {
+      "check": "no file outside this directory written by the section-7 extension (the gate-passed write-up re-hashed unchanged)",
+      "result": true
+    },
+    {
+      "check": "section-7 handoff packet carries the four labelled lists (a)-(d) and the three recorded handoff terms T-1..T-3",
+      "result": true
+    }
+  ],
+  "determinism": {
+    "method": "no computation and no RNG; the files are authored text, written once and hashed; the section-7 quotations were sliced from the paper file by offset, so the same input yields the same text",
+    "wall_clock_in_content": false,
+    "re_write_is_byte_identical": true,
+    "hash_algorithm": "sha256"
+  },
+  "decisions_relied_on": [
+    "D76",
+    "D77",
+    "D101",
+    "D122",
+    "D124",
+    "D125",
+    "D138",
+    "D141",
+    "D143",
+    "D144",
+    "D150",
+    "D153",
+    "D154",
+    "D160",
+    "D164",
+    "D165",
+    "D166",
+    "D167",
+    "D168",
+    "D169",
+    "D170"
+  ],
+  "phase_state_at_write": {
+    "phase_verdict": "CLOSED at PARTIAL / DESCRIPTIVE / EQUIVALENT (D76/D77, untouched)",
+    "experiment_programme": "CLOSED — 0 new cells (D167)",
+    "writeup_gate": "WRITE-UP-GATE: PASS (A-1..A-8)",
+    "parks": "A3 KILLED; exit-cost/induction PARKED; HKG DEFER-HKG; D63 UNABLE as to cause; C1-C4 closed"
+  },
+  "reading_hazards": [
+    {
+      "id": "H-1",
+      "recorded_in": "BENCHMARK_MEMO.md section 3.4 item 1; BENCHMARK_INVENTORY.csv row R1 note",
+      "what": "the arm-level holdout cell for complementary / capacity_gated is 4.014780434743067 (anchor_table.csv column hold_mae), numerically below the linear-trend comparator 4.352883341604888 (calibration_table.csv column naive_trend, iso = PHL), while the write-up sentence compares the 12-arm class against that trend",
+      "status": "RECORDED, NOT ADJUDICATED — different tables and different objects; this memo does not re-score the comparison and does not call the shipped sentence wrong",
+      "why_it_matters": "a floor verdict that can move with the arm set is a fragile level object, which is one more reason it cannot carry a dynamic claim"
+    }
+  ]
+}

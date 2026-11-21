@@ -1,0 +1,23 @@
+{
+  "declared_m": "1.10",
+  "generators": {
+    "v1.2": {
+      "max_abs_diff_in_memory": "0.0000000000e+00",
+      "max_rel_residual_in_memory": "0.0000000000e+00",
+      "max_uis_in_memory": "1.044677728",
+      "max_uncapped_in_memory": "1.044677728",
+      "n_cells": 6720,
+      "n_cells_uis_gt_1": 35
+    },
+    "v1.3": {
+      "max_abs_diff_in_memory": "0.0000000000e+00",
+      "max_rel_residual_in_memory": "0.0000000000e+00",
+      "max_uis_in_memory": "1.044677728",
+      "max_uncapped_in_memory": "1.044677728",
+      "n_cells": 6720,
+      "n_cells_uis_gt_1": 35
+    }
+  },
+  "interpretation": "in-memory the repaired object satisfies completion_uis = 1.10 * completion_cohort exactly; the ~1e-9 ratio deviation reported on the panels is the %.10g serialisation, the same order as A17's 8.8395202269e-10",
+  "label": "DEBUG"
+}

@@ -1445,3 +1445,39 @@ frozen A10 at 4.44e-10; determinism 3/3; final SHA256SUMS 14/14.
   cells; **no model run, no re-run, no re-score, no new number**; the untagged D77 headline occurs **0** times; D76/D77
   applied, not amended; no `SPINE-REPLACED` verdict; **Lead checks the gate**. The phase stays **CLOSED at
   PARTIAL/DESCRIPTIVE/EQUIVALENT**; the experiment programme stays **CLOSED at 0 new cells** (D167); parks stand.
+
+---
+
+## 3ai. MODEL-DEBUG MODE (D171–D174) — ceiling-cap defect fixed; benchmark critique recorded; write-up unedited
+
+- **Contract:** `10_massification/extensions/model_debug_2026-11-21/PRE_DECLARATIONS.md` (sha `748335cf…`, amended
+  `7d8bade9…` by **AMENDMENT 1 — measures are different objects**: GER may exceed 100; NER ≤ 100 is definitional; the
+  UIS completion rate uses the **older (3–5-years-above-grade)** cohort and is **not bounded by GER**). DEBUG label;
+  no reproduction claims; no successor generator; the closed line stays closed except this defect fix; every fix
+  justified by the defect, not a result; gate-passed write-up **unedited**. The user's critique is recorded verbatim in
+  the contract and the benchmark memo.
+- **CAP AUDIT (Agent 1): 34 clamp/ceiling/floor/renormalisation sites — 30 declared conventions / 1 implementation
+  artefact / 3 undetermined.** The artefact is **CAP-01**: `clip(m × comp_coh, 0.0, 1.0)` at `sim_v1_3.py:832` (and
+  copies), binding **35/6,720 cells on v1.3 and 35 on v1.2, 0 on A17** — all primary, five countries, 2012–2025,
+  uncapped **1.000259–1.044678**. **0 of the 35 are legitimate CR > GER cases** (GER = 105 there; CR sits below it);
+  the repair must not touch the GER/Z1 gate or add an NER cap. **CAP-04** — an undeclared survival floor **0.02**
+  binding **24 tertiary burn-in cells (1970–72)** — is recorded, **not fixed**, and needs adjudication before any level
+  sentence is called clean. `generator_v1_2/FINDINGS.md:191` already called the cap "a ceiling artifact of m ×
+  cohort-flow clipping".
+- **FIX + RE-RUN (Agent 2):** one-sided floor `max(0.0, m × comp_coh)` in **copies** of v1.3/v1.2; every other clamp,
+  threshold, seed and draw order untouched; delivered files untouched (12/12 input hashes unchanged). **35+35 cells
+  uncapped** (values 1.000258707–1.044677728; only `completion_uis` changes). **(a)** m = 1.10 now **CONSTANT on all
+  three** panels (A17 8.8395202269e-10; repaired v1.3/v1.2 9.6646846082e-10). **(b)** the old v1.3/v1.2
+  **NOT-CONSTANT 4.7043695535e-02 is wholly cap-induced** (exactly 1/0.9497070256 − 1.10). **(c)** the register counts
+  are **unchanged — 4 INTER / 6 NOT / 2 THIN, REGISTER-BINDING** (T is observed completion/GER; panels enter only
+  m-constancy). **(d)** **no level sentence changes and zero published-number changes** — affected items are
+  **prospective amendments only** (C-13, Table A-1 rows, the "CONSTANT is A17-only" sentence, Table G-1 row 10);
+  "35/6,720" remains true of the as-delivered panels. **Determinism 12/12**; measure check: 0/70 repaired cells have
+  CR > GER.
+- **BENCHMARK NOTE + HANDOFF PACKET (Agent 3/3B):** trend/persistence = **humility floor, not a dynamic test**;
+  **0 of 10 inventoried results identify a dynamic** (4 dynamic-type, 6 floor-only); **prospective amendment B-1**
+  (`applied = false`); §7 handoff packet quotes the paper's **18 claims line-by-line (0 SHOWN / 3 PARTIAL /
+  15 NOT SHOWN)** from `…/DeepSeek/massification_2026-11-20/00_handoff/papers/02_october_massification.md` (377 lines,
+  sha `1138d453…`; **not under the programme root**), plus the **arm-vs-trend reading hazard** (`complementary ·
+  capacity_gated` hold_mae 4.014780434743067 < `naive_trend` 4.352883341604888; different tables/objects, not
+  re-scored), Q-1…Q-7 and the **redesign question recorded, unanswered**. Write-up **unedited**.
