@@ -1545,3 +1545,22 @@ frozen A10 at 4.44e-10; determinism 3/3; final SHA256SUMS 14/14.
   per-cell check r=0.965; OOS = "out of level"; 624 truncated-band cells; 24 NaN literals in RUNS.json; four pre-suite
   bug fixes disclosed; no post-result changes). **No observed data, no country/causal claims, no fitting; closed
   records untouched; Q-5 correction and B-1 footnote remain `applied=false`.**
+
+---
+
+## 3am. YANG FACTORY TOY v2.1 + PARAMETER MONTE CARLO (D178) — `ACTIVE`, robust in 68.3% of draws; wage premium is the driver
+
+- **v2.1 cleanups (no parameter/threshold changed):** explicit factory/formal/informal/farm classification (replaces
+  `formal()`), `unfilled = POSTS − factoryJobs`, pre-shock y=20–22 match check **PASS**, saved grid output, two runs
+  byte-identical; Lead's working copy preserved. **Grid 200 seeds** (4,800 runs, 12.7 s): completion gap vs `none`
+  **0.000/+0.005/+0.192/+0.531/+1.226/+1.652** (50k→2m); **predeclared falsifier `ACTIVE` at 3/6 sizes** (500k
+  marginal 0.531). `yang_endog` raises gaps at every size.
+- **MC contract frozen** (`MC_PRE_DECLARATIONS.md` sha `6f9d8c35…`): **1,000 parameter draws × paired seeds {0,1,2} ×
+  sizes {50k,200k,500k,1m,2m} × designs {none,yang,yang_endog} = 45,000 runs**, draw seed 20261121, CRN, pre-shock
+  PASS, **two runs byte-identical**, runtime **151.8/155.6 s**.
+- **Results:** **robust-ACTIVE 68.3% (yang) / 82.3% (yang_endog)**; **inert 18.1%** (lower factory-wage multiplier,
+  higher formal wage; across all three mappings); pooled completion gap **+0.666** (p5 +0.118, p95 +1.385), leaving
+  **+0.894**; by size +0.015/+0.337/+0.674/+1.030/+1.274. **Top-3 load-bearing: factory wage +0.784 (71.6% R² share),
+  formal wage −0.357 (11.5%), β −0.232 (6.4%)**; Yang slope/anchor nearly inert (−0.036/+0.078). Descriptive, not
+  causal. **Recommendation:** wire the same MC + paired-seed test into the coevolution city-size block (predeclare;
+  inert set as boundary condition).

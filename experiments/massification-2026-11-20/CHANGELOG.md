@@ -603,3 +603,18 @@ B1 — pre-run SHA snapshot reconstructed (30/33 match, original hash `89638b39�
   bug ≈8% dilution); report card B mandate/fees/degrees numbers with **`ARM-NOT-TESTING-GLUT`**. **Harness 21 PASS/0
   FAIL/11 descriptive.** Limitations disclosed; no observed data, no country/causal claims, no fitting; closed records
   untouched; Q-5 correction and B-1 footnote `applied=false`.
+
+## 2026-11-21 20:05 — Yang factory toy v2.1 + parameter MC (D178): ACTIVE, robust in 68.3% of draws
+
+- v2.1 cleanups: explicit classification block, fixed `unfilled`, pre-shock y=20–22 check PASS, saved grid, two runs
+  byte-identical; original Lead-run copy preserved; no parameter/threshold changed.
+- Grid 200 seeds (4,800 runs, 12.7 s): completion gap vs none 0.000/+0.005/+0.192/+0.531/+1.226/+1.652; predeclared
+  falsifier **ACTIVE at 3/6 sizes** (500k marginal 0.531); `yang_endog` raises gaps at every size.
+- MC contract frozen (`6f9d8c35…`): 1,000 draws × paired seeds {0,1,2} × 5 sizes × 3 designs = **45,000 runs**; CRN;
+  pre-shock PASS; two runs byte-identical; runtime 151.8/155.6 s.
+- **Robust-ACTIVE 68.3% (yang) / 82.3% (yang_endog); inert 18.1%** (lower factory wage, higher formal wage); pooled
+  completion gap +0.666 (p5 +0.118, p95 +1.385), leaving +0.894; by size +0.015/+0.337/+0.674/+1.030/+1.274.
+- **Top-3 load-bearing: factory-wage multiplier +0.784 (71.6% R² share), formal-wage −0.357 (11.5%), β −0.232
+  (6.4%)**; Yang slope/anchor barely move the gap. **Recommendation:** wire the same MC/paired-seed test into the
+  coevolution city-size block (predeclare; inert set as boundary condition). ILLUSTRATIVE/EXPLORATORY/SIMULATED; no
+  country or causal claims.
