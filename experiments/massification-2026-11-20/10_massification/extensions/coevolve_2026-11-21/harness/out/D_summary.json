@@ -1,0 +1,161 @@
+{
+ "checks": [
+  {
+   "item": "D1 delivered spillback table reproduced from panel",
+   "n_disagreements": 0,
+   "n_rows": 12,
+   "tolerance": 5e-09,
+   "verdict": "PASS"
+  },
+  {
+   "delivered_run_values": [
+    5.1366,
+    0.6584,
+    -6.3908
+   ],
+   "item": "D2 DiD recomputed (delivered control definition)",
+   "mean_pp": -0.197,
+   "n_seeds_ge_threshold": 1,
+   "n_value_mismatches": 0,
+   "per_seed_pp": [
+    5.14,
+    0.66,
+    -6.39
+   ],
+   "verdict": "PASS"
+  },
+  {
+   "delivered": {
+    "pp": [
+     5.14,
+     0.66,
+     -6.39
+    ],
+    "seeds_clearing": 1,
+    "verdict": "NO-SPILLBACK"
+   },
+   "excl_treated": {
+    "pp": [
+     5.59,
+     0.72,
+     -6.74
+    ],
+    "seeds_clearing": 1,
+    "verdict": "NO-SPILLBACK"
+   },
+   "item": "D3 verdict under each control definition",
+   "pure_villages": {
+    "pp": [
+     6.4,
+     1.02,
+     -6.88
+    ],
+    "seeds_clearing": 1,
+    "verdict": "NO-SPILLBACK"
+   },
+   "rule": "present iff every paired seed >= 5 pp (code: all(...))",
+   "threshold_pp": 5.0,
+   "verdict": "PASS-CONSISTENT",
+   "vs_baseline_arm": {
+    "pp": [
+     3.93,
+     1.77,
+     -6.15
+    ],
+    "seeds_clearing": 0,
+    "verdict": "NO-SPILLBACK"
+   }
+  },
+  {
+   "control_village_primary_persistence": [
+    {
+     "baseline": 0.5008210180623974,
+     "group": "young",
+     "seed": 20261121,
+     "spillback": 0.5902207626345557
+    },
+    {
+     "baseline": 0.5090676883780332,
+     "group": "old",
+     "seed": 20261121,
+     "spillback": 0.6150702426564496
+    },
+    {
+     "baseline": 0.5103083378945448,
+     "group": "young",
+     "seed": 20261122,
+     "spillback": 0.6040868454661558
+    },
+    {
+     "baseline": 0.503448275862069,
+     "group": "old",
+     "seed": 20261122,
+     "spillback": 0.589272030651341
+    },
+    {
+     "baseline": 0.511177086971708,
+     "group": "young",
+     "seed": 20261123,
+     "spillback": 0.6206776108976598
+    },
+    {
+     "baseline": 0.5198044009779951,
+     "group": "old",
+     "seed": 20261123,
+     "spillback": 0.6117359413202934
+    }
+   ],
+   "item": "D4 response-(b) switch moves persistence district-wide",
+   "verdict": "DESCRIPTIVE"
+  }
+ ],
+ "delivered_table_mismatches": [],
+ "label": "SIMULATED",
+ "rows": [
+  {
+   "delivered_value": 0.05136573392243493,
+   "did_delivered": 0.05136573392243493,
+   "did_excl_treated": 0.055882938084244715,
+   "did_pure": 0.06402473775385265,
+   "did_vs_baseline": 0.039318114874815846,
+   "n_control_young": 8400,
+   "n_treated_young": 679,
+   "p_control_old": 0.6235,
+   "p_control_young": 0.6113095238095239,
+   "p_treated_old": 0.6,
+   "p_treated_young": 0.6391752577319587,
+   "seed": 20261121,
+   "treated_village": 5
+  },
+  {
+   "delivered_value": 0.006584437898870976,
+   "did_delivered": 0.006584437898870976,
+   "did_excl_treated": 0.007163486381364548,
+   "did_pure": 0.010222004036437138,
+   "did_vs_baseline": 0.017679675994109023,
+   "n_control_young": 8400,
+   "n_treated_young": 679,
+   "p_control_old": 0.6033333333333334,
+   "p_control_young": 0.6217857142857143,
+   "p_treated_old": 0.6082474226804123,
+   "p_treated_young": 0.6332842415316642,
+   "seed": 20261122,
+   "treated_village": 5
+  },
+  {
+   "delivered_value": -0.06390783410138251,
+   "did_delivered": -0.06390783410138251,
+   "did_excl_treated": -0.06738963174135243,
+   "did_pure": -0.06884950367874892,
+   "did_vs_baseline": -0.0615030721966206,
+   "n_control_young": 8400,
+   "n_treated_young": 434,
+   "p_control_old": 0.6185,
+   "p_control_young": 0.6225,
+   "p_treated_old": 0.5,
+   "p_treated_young": 0.4400921658986175,
+   "seed": 20261123,
+   "treated_village": 8
+  }
+ ]
+}

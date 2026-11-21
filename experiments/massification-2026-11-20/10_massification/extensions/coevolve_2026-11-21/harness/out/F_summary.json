@@ -1,0 +1,76 @@
+{
+ "checks": [
+  {
+   "frozen": "7d25e17631a39f556a17ac62a53de12701d60dca6d09a05e2b080d8d3184799d",
+   "item": "F1/F2 hashes: manifest + frozen predeclaration",
+   "n_files": 62,
+   "n_mismatch": 0,
+   "predeclaration_sha256": "7d25e17631a39f556a17ac62a53de12701d60dca6d09a05e2b080d8d3184799d",
+   "verdict": "PASS"
+  },
+  {
+   "item": "F3 RUNS.json metrics recomputed from delivered tables",
+   "n_disagreements": 0,
+   "n_values": 264,
+   "verdict": "PASS"
+  },
+  {
+   "all_stages_ok": true,
+   "item": "F4 D0_CHECK internal consistency + read audit",
+   "n_disallowed_reads": 0,
+   "n_source_reads": 13,
+   "predeclaration_field_matches": true,
+   "release_blocking": true,
+   "verdict": "PASS",
+   "verdict_field": "PASS"
+  },
+  {
+   "arms": 8,
+   "item": "F5 labels / no wall-clock / suite shape",
+   "n_csv": 51,
+   "n_missing_label": 0,
+   "n_with_date_string": 0,
+   "runs": 24,
+   "runtime_seconds": 17.93,
+   "runtime_under_limit": true,
+   "seeds": [
+    20261121,
+    20261122,
+    20261123
+   ],
+   "verdict": "PASS"
+  },
+  {
+   "git_root": "/Users/treymenefee/massification_live/experiments/massification-2026-11-20",
+   "item": "F6 closed 2026-11-20 records untouched",
+   "modified_tracked": [],
+   "n_modified_tracked": 0,
+   "note": "only untracked new directories; no tracked file modified",
+   "untracked_new": [
+    "?? experiments/massification-2026-11-20/10_massification/extensions/bridge_tasks_2026-11-21/",
+    "?? experiments/massification-2026-11-20/10_massification/extensions/coevolve_2026-11-21/"
+   ],
+   "verdict": "PASS"
+  },
+  {
+   "files_compared": 5,
+   "identical": true,
+   "item": "F7 determinism evidence (delivered, not re-run)",
+   "note": "the harness did not re-run the simulator; the two _det_* directories are not delivered, so byte-identity is accepted from DETERMINISM.json only",
+   "seed": 20261121,
+   "verdict": "ACCEPTED-EVIDENCE"
+  },
+  {
+   "coexistence": "COEXISTENT",
+   "delivered": "PASS",
+   "different_families": "SAME-RESPONSE",
+   "endogeneity": "OK",
+   "item": "F8 verdicts recomputed vs delivered",
+   "ner_ceiling": "OK",
+   "note": "each verdict is re-derived in checks A/B/C/D; this row restates the delivered label for the report",
+   "spillback": "NO-SPILLBACK",
+   "verdict": "SEE-INDIVIDUAL-CHECKS"
+  }
+ ],
+ "label": "SIMULATED"
+}

@@ -1,0 +1,104 @@
+{
+ "checks": [
+  {
+   "anchor_above_model_share": true,
+   "g0": 0.2,
+   "implication": "(share_t - g0) < 0 in every measured year, so the declared requirement rule lowers the requirement and raises the return as graduates accumulate",
+   "item": "E1 model's own graduate share vs the declared anchor g0",
+   "max_share_18_29": 0.114611,
+   "mean_share_18_29": 0.110778,
+   "verdict": "DEFECT-CONFIRMED"
+  },
+  {
+   "item": "E2 implied employer rule inside the arm",
+   "req_range": [
+    2.865067,
+    2.878667
+   ],
+   "requirement_below_baseline": true,
+   "ret_range": [
+    1.06825,
+    1.0759
+   ],
+   "return_above_baseline": true,
+   "used_range": [
+    0.031333,
+    0.048333
+   ],
+   "verdict": "DEFECT-CONFIRMED",
+   "years_measured": [
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29
+   ]
+  },
+  {
+   "completion_tertiary": {
+    "baseline": 0.004306,
+    "degrees": 0.005301,
+    "diff": 0.000995
+   },
+   "completion_upper": {
+    "baseline": 0.115023,
+    "degrees": 0.123727,
+    "diff": 0.008704
+   },
+   "credential_object": {
+    "baseline": 0.909167,
+    "degrees": 0.936181,
+    "diff": 0.027014
+   },
+   "item": "E3 what the arm did to attainment (mean over 3 seeds)",
+   "mean_years": {
+    "baseline": 5.090972,
+    "degrees": 5.151759,
+    "diff": 0.060787
+   },
+   "verdict": "DESCRIPTIVE"
+  },
+  {
+   "access_mapping_req_3_0": [
+    0.55,
+    0.55,
+    1.0,
+    1.0,
+    1.0
+   ],
+   "access_mapping_req_in_arm": [
+    0.55,
+    0.55,
+    1.0,
+    1.0,
+    1.0
+   ],
+   "access_penalty": 0.55,
+   "implication": "req moves inside (2,3] and credentials are integers, so the credential-access mapping is unchanged; the only live channel is return_t = 1.068..1.076, i.e. a uniform credential premium",
+   "item": "E5 the requirement channel is inert (step at integer credentials)",
+   "mappings_identical": true,
+   "verdict": "DEFECT-CONFIRMED"
+  },
+  {
+   "change_year_effective_only_from": 8,
+   "code_uses_of_degrees_double": "one: _employer_rule rescales (share_t - g0) by 2.0",
+   "degrees_double_from_year": 8,
+   "item": "E4 implementation audit: is a supply growth process changed?",
+   "response_c_on_from": "t=-11 (whole run): _arm_flags sets response_c=1 for the arm",
+   "supply_objects_changed": [],
+   "verdict": "DEFECT-CONFIRMED"
+  }
+ ],
+ "defect_id": "ARM-NOT-TESTING-GLUT",
+ "label": "SIMULATED",
+ "v0_1_requirements": [
+  "declare g0 from the model's own baseline steady-state share (or declare it as an external institutional constant with a pre-declared sensitivity range), before any result is seen",
+  "declare an explicit graduate-supply instrument (a tertiary-place expansion path, a cohort-size shock, or a K_uni path) instead of rescaling the argument of the employer rule",
+  "pre-declare the expected sign of req_t and return_t under the arm and fail the arm loudly if the run moves them the other way",
+  "run a pre-outcome manipulation check that the arm moves the declared object (graduate supply) before reading attainment",
+  "declare the response-(c) switch separately from the supply shock so the arm remains a one-change counterfactual (\u00a78.3/\u00a78.4 rule)"
+ ]
+}

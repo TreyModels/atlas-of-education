@@ -1,0 +1,135 @@
+{
+ "checks": [
+  {
+   "item": "L1 algebra of aggregates_*.csv",
+   "n_cells": 8640,
+   "n_cells_with_truncated_age_band": 624,
+   "n_violations": 0,
+   "tolerance": 1e-09,
+   "verdict": "PASS",
+   "worst": {
+    "ger_identity": 4.84848827753126e-11,
+    "ner_identity": 4.84848827753126e-11
+   }
+  },
+  {
+   "item": "L2 cohort table recomputed from panel_*.csv",
+   "max_abs_diff": 3.33333360913457e-10,
+   "n_disagreements": 0,
+   "n_values": 2304,
+   "tolerance": 5e-09,
+   "verdict": "PASS",
+   "worst": [
+    "baseline",
+    [
+     20261121,
+     6
+    ],
+    "mean_years_completed"
+   ]
+  },
+  {
+   "item": "L2b family means/gains recomputed from panel_*.csv",
+   "max_abs_diff": 4.974882727992735e-10,
+   "n_disagreements": 0,
+   "n_values": 180,
+   "tolerance": 5e-09,
+   "verdict": "PASS",
+   "worst": [
+    "mandate_before_funding",
+    [
+     20261121,
+     "town",
+     1
+    ],
+    "mean_years_completed"
+   ]
+  },
+  {
+   "acceptance": "consistency band for a declared 1-in-32 sample: |mean z|<=0.30; 0.70<=sd(z)<=1.35; >=99.5% within 4 sigma; r>=0.95; mean|diff|<=0.05.  Exact reproduction is NOT testable: the full pupil-year table was not delivered.",
+   "item": "L3 NER recomputed from 1-in-32 pupil-year sample",
+   "max_abs_z": 5.9502313859921845,
+   "mean_abs_diff": 0.03869410468996303,
+   "mean_z": 0.15548544563108008,
+   "n_cells": 8496,
+   "pearson_r": 0.9646456057350337,
+   "sd_z": 0.9277224725994899,
+   "share_within_3sigma": 0.9888182674199624,
+   "share_within_4sigma": 0.9977636534839924,
+   "verdict": "PASS-CONSISTENCY",
+   "worst": {
+    "arm": "degrees_outrun_jobs",
+    "level": "tertiary",
+    "location": "town",
+    "ner_file": 0.01125,
+    "ner_sample": 0.1,
+    "seed": 20261122,
+    "year": 9
+   }
+  },
+  {
+   "item": "L3b total enrolment = 32 x sampled pupil-years",
+   "max_ratio": 39.91379310344828,
+   "mean_ratio": 31.963466676660246,
+   "min_ratio": 25.611940298507463,
+   "n_outside_4sigma": 0,
+   "n_years": 720,
+   "verdict": "PASS"
+  },
+  {
+   "item": "gate accounting (transitions) + admission structure (panel)",
+   "n_admissions_in_panel": 10204,
+   "n_disagreements": 0,
+   "n_gate_values": 9840,
+   "n_structure_violations": 0,
+   "verdict": "PASS"
+  },
+  {
+   "declared_leaving_age": 17,
+   "item": "coverage / definitional measurements (descriptive)",
+   "lower_secondary_oos_that_is_children_still_in_primary_share_mean": 0.07828680440486026,
+   "max_ger": 0.9068181818,
+   "max_ner": 0.7302083333,
+   "max_over_age": 797,
+   "max_repeaters": 937,
+   "n_cell_rows": 8640,
+   "n_ger_over_100": 0,
+   "share_of_upper_secondary_oos_that_is_selective_mean": 0.0003865074073100969,
+   "tertiary_band": [
+    18,
+    22
+   ],
+   "tertiary_band_width": 5,
+   "upper_secondary_selective_share_of_level_mean": 0.012886969946026556,
+   "verdict": "DESCRIPTIVE"
+  }
+ ],
+ "declared_bands": {
+  "lower_secondary": [
+   12,
+   15
+  ],
+  "post_secondary_non_tertiary": [
+   18,
+   19
+  ],
+  "primary": [
+   6,
+   11
+  ],
+  "tertiary": [
+   18,
+   22
+  ],
+  "upper_secondary": [
+   16,
+   17
+  ],
+  "upper_selective": [
+   16,
+   17
+  ]
+ },
+ "label": "SIMULATED",
+ "note": "Every number is SIMULATED (model) or DERIVED (arithmetic on SIMULATED pupil records). No observed series is used."
+}

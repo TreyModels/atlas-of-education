@@ -1,0 +1,13 @@
+label,basis,arm,seed,group,villages,treated_village,n_children,primary_persistence
+SIMULATED,DERIVED from SIMULATED pupil records,spillback,20261121,younger_cohorts,treated_village,5,679,0.6391752577
+SIMULATED,DERIVED from SIMULATED pupil records,spillback,20261121,younger_cohorts,control_villages,5,8400,0.6113095238
+SIMULATED,DERIVED from SIMULATED pupil records,spillback,20261121,older_cohorts,treated_village,5,485,0.6
+SIMULATED,DERIVED from SIMULATED pupil records,spillback,20261121,older_cohorts,control_villages,5,6000,0.6235
+SIMULATED,DERIVED from SIMULATED pupil records,spillback,20261122,younger_cohorts,treated_village,5,679,0.6332842415
+SIMULATED,DERIVED from SIMULATED pupil records,spillback,20261122,younger_cohorts,control_villages,5,8400,0.6217857143
+SIMULATED,DERIVED from SIMULATED pupil records,spillback,20261122,older_cohorts,treated_village,5,485,0.6082474227
+SIMULATED,DERIVED from SIMULATED pupil records,spillback,20261122,older_cohorts,control_villages,5,6000,0.6033333333
+SIMULATED,DERIVED from SIMULATED pupil records,spillback,20261123,younger_cohorts,treated_village,8,434,0.4400921659
+SIMULATED,DERIVED from SIMULATED pupil records,spillback,20261123,younger_cohorts,control_villages,8,8400,0.6225
+SIMULATED,DERIVED from SIMULATED pupil records,spillback,20261123,older_cohorts,treated_village,8,310,0.5
+SIMULATED,DERIVED from SIMULATED pupil records,spillback,20261123,older_cohorts,control_villages,8,6000,0.6185

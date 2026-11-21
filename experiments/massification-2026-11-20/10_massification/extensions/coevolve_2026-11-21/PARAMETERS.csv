@@ -1,0 +1,130 @@
+name,value,units,provenance,label,note
+n_villages,8,count,DECLARED,SIMULATED,eight villages around one district town (§1)
+village_distances_km,2;4;6;8;10;12;15;18,km,DECLARED,SIMULATED,declared road distance of each village from the town (§1)
+village_sizes,176;150;132;114;97;79;70;62,children/cohort,DECLARED,SIMULATED,"declared village population weights (§1), summing to 880; declining with distance as a design choice, not an estimate"
+town_cohort_size,320,children/cohort,DECLARED,SIMULATED,"town share of the 1,200 cohort (§1)"
+cohort_size,1200,children/cohort,DECLARED,SIMULATED,children entering primary per cohort (§1)
+n_cohorts,24,cohorts,DECLARED,SIMULATED,cohorts entering primary in years 0..23 are followed (§1)
+n_burnin_cohorts,11,cohorts,DECLARED,SIMULATED,burn-in cohorts entering years -11..-1; they fill the pipeline at t=0 with the model's own history instead of a declared enrolment guess
+years,30,years,DECLARED,SIMULATED,t = 0..29 (§1)
+primary_years,6,years,DECLARED,SIMULATED,level duration (§1)
+lower_secondary_years,4,years,DECLARED,SIMULATED,level duration (§1)
+upper_secondary_years,2,years,DECLARED,SIMULATED,level duration (§1)
+post_secondary_years,2,years,DECLARED,SIMULATED,"post-secondary non-tertiary, 1–2 years; 2 used (§1)"
+tertiary_years,4,years,DECLARED,SIMULATED,level duration (§1)
+age_band_primary,6;11,years,DECLARED,SIMULATED,"official age band, primary (§7)"
+age_band_lower_secondary,12;15,years,DECLARED,SIMULATED,official age band (§7)
+age_band_upper_secondary,16;17,years,DECLARED,SIMULATED,official age band (§7)
+age_band_post_secondary,18;19,years,DECLARED,SIMULATED,"official age band, post-secondary non-tertiary (§7)"
+age_band_tertiary,18;22,years,DECLARED,SIMULATED,standard five-year age group immediately after the official secondary leaving age 17 (§7)
+min_entry_age,6;11;15;15;16;17,years,DECLARED,SIMULATED,minimum age for entry to each level code (0..5)
+max_entry_age,8;13;17;17;19;20,years,DECLARED,SIMULATED,latest age for a FIRST entry to each level code (0..5); re-entry to a level already attended is governed by max_level_age
+max_level_age,15;18;20;20;21;24,years,DECLARED,SIMULATED,latest age at which a pupil may still attend each level (level start + duration + 3 years of repetition/re-entry slack)
+weight_knowledge,0.25,weight,DECLARED,SIMULATED,"w_K (§0, §11)"
+weight_education,0.35,weight,DECLARED,SIMULATED,"w_E (§0, §11)"
+weight_credential,0.4,weight,DECLARED,SIMULATED,"w_C (§0, §11); the three weights are declared, not fitted"
+theta_child_labour,0.5,share,DECLARED,SIMULATED,"θ, share of child wage forgone while attending (§2, §11)"
+child_wage_rural,0.8;1.4;1.8;2.0,index/yr,DECLARED,SIMULATED,"rural child wage at ages <12, 12-15, 16-18, 19+ (adult informal wage = 1)"
+child_wage_urban,0.6;1.0;1.3;1.5,index/yr,DECLARED,SIMULATED,town child wage by the same age bands
+home_value_bands,0.25;0.40;0.45,index/yr,DECLARED,SIMULATED,"value of the home branch at ages <12, 12-15, 16+"
+income_poor,1.6,index/yr,DECLARED,SIMULATED,"mean household income, poor class (lognormal)"
+income_nonpoor,3.8,index/yr,DECLARED,SIMULATED,"mean household income, non-poor class"
+income_sigma,0.35,log sd,DECLARED,SIMULATED,lognormal dispersion of household income
+poor_share_town,0.2,share,DECLARED,SIMULATED,"declared poor share, town"
+poor_share_village,0.45,share,DECLARED,SIMULATED,"declared poor share, villages"
+ability_mean,50.0,points,DECLARED,SIMULATED,declared ability distribution; independent of household income by declaration
+ability_sd,16.0,points,DECLARED,SIMULATED,declared ability distribution
+ability_clip,5;95,points,DECLARED,SIMULATED,declared support of the ability distribution
+siblings_mean,2.0,count,DECLARED,SIMULATED,declared Poisson mean sibling count
+beta_option,0.55,weight,DECLARED,SIMULATED,"β, weight on the declared continuation value (§2)"
+option_value_primary,2.2,index,DECLARED,SIMULATED,"declared continuation value of keeping the next gate open, while at primary"
+option_value_lower,2.6,index,DECLARED,SIMULATED,"as above, lower secondary"
+option_value_upper,2.0,index,DECLARED,SIMULATED,"as above, upper secondary"
+option_value_postsec,1.2,index,DECLARED,SIMULATED,"as above, post-secondary non-tertiary"
+option_value_tertiary,1.5,index,DECLARED,SIMULATED,"as above, tertiary"
+K_value_by_level,1.0;1.3;1.8;1.9;1.8;2.6,index,DECLARED,SIMULATED,declared knowledge/learning value K_L per level code (§2)
+E_value_by_level,1.2;1.6;2.2;2.3;2.0;3.0,index,DECLARED,SIMULATED,declared education/experience value E_L per level
+C_value_by_level,0.8;1.6;3.0;3.4;2.6;5.0,index,DECLARED,SIMULATED,declared credential/option value C_L per level (§2); multiplied by the gate-pass probability
+taste_scale,0.55,index,DECLARED,SIMULATED,scale of the household taste shock ε (logistic)
+max_school_spend_share,0.45,share of income,DECLARED,SIMULATED,declared cash constraint: fees + travel + tutoring may not exceed this share of household income
+tutor_budget_share,0.25,share of income,DECLARED,SIMULATED,declared tutoring budget
+mastery_gain,11.0,points/yr,DECLARED,SIMULATED,"declared mastery gain of one passed school year at ability 100, quality 1"
+exam_noise_sd,5.0,points,DECLARED,SIMULATED,declared dispersion of the annual attainment draw (exam noise)
+reentry_cost,0.4,index,DECLARED,SIMULATED,declared cost of re-entering after a year out (§2)
+reentry_window,2,years,DECLARED,SIMULATED,declared re-entry window after leaving a level
+travel_cost_per_km,0.03,index/km/yr,DECLARED,SIMULATED,"declared annual travel/boarding cost per km, villages; the TRAVEL-CUT arm halves it (§8.3)"
+travel_cost_town,0.0,index/yr,DECLARED,SIMULATED,town households face no travel cost to town providers
+fee_town_by_level,0.10;0.22;0.35;0.60;0.55;1.20,index/yr,DECLARED,SIMULATED,declared annual fee per level (0..5) in town
+fee_village_by_level,0.06;0.15;0.28;0.60;0.55;1.20,index/yr,DECLARED,SIMULATED,declared annual fee per level in villages
+private_fee_multiplier,1.6,multiple,DECLARED,SIMULATED,private provider fee = multiplier x declared public fee
+private_fee_add,0.1,index/yr,DECLARED,SIMULATED,private provider fee surcharge
+pass_threshold,45.0,points,DECLARED,SIMULATED,"grade-pass / catch-up trigger threshold (§5, §11)"
+selective_exam_threshold,60.0,points,DECLARED,SIMULATED,"selective gate exam threshold (§4, §11)"
+university_exam_threshold,65.0,points,DECLARED,SIMULATED,"university gate exam threshold (§4, §11)"
+postsec_complete_threshold,50.0,points,DECLARED,SIMULATED,post-secondary non-tertiary completion convention (§4)
+max_repetitions,1,count,DECLARED,SIMULATED,declared repetition allowance; the next failure exits (declared failure exit)
+K_sel,38,places/yr,DECLARED,SIMULATED,"selective places, institutional constraint (§4, §11): 12% of the 320 town cohort, rounded down"
+K_uni,13,places/yr,DECLARED,SIMULATED,"university places, declared (§4, §11): 35% of K_sel, rounded down; rationed by rank"
+reach_primary_km,3.0,km,DECLARED,SIMULATED,residence controller: maximum distance to a primary place (§4)
+reach_lower_secondary_km,6.0,km,DECLARED,SIMULATED,maximum distance to a lower-secondary place
+reach_upper_secondary_km,10.0,km,DECLARED,SIMULATED,maximum distance to an upper-secondary place
+reach_post_secondary_km,20.0,km,DECLARED,SIMULATED,maximum distance to a post-secondary place
+reach_tertiary_km,20.0,km,DECLARED,SIMULATED,maximum distance to a university place
+tutoring_price_catchup,0.003,index/hour,DECLARED,SIMULATED,p_c (§5)
+tutoring_price_gate,0.006,index/hour,DECLARED,SIMULATED,p_g (§5)
+catchup_hours,24.0,hours/yr,DECLARED,SIMULATED,declared catch-up block bought when the trigger fires (§5)
+gate_hours,60.0,hours/yr,DECLARED,SIMULATED,declared gate block bought when the margin is in band (§5)
+catchup_trigger,45.0,points,DECLARED,SIMULATED,"catch-up trigger: expected score below this (§5, §11)"
+gate_band,8.0,points,DECLARED,SIMULATED,"gate motive: admission shortfall at most this many points (§5, §11)"
+tutoring_access_km,12.0,km,DECLARED,SIMULATED,"declared tutoring access limit (distance-constrained, §5)"
+catchup_attain_boost,6.0,points,DECLARED,SIMULATED,catch-up effect on the year's attainment
+catchup_mastery_mult,1.1,multiple,DECLARED,SIMULATED,catch-up effect on the year's mastery gain
+gate_attain_coef,14.0,points,DECLARED,SIMULATED,gate tutoring raises attainment by coef x (1 - exp(-hours/scale))
+gate_attain_scale,50.0,hours,DECLARED,SIMULATED,diminishing-returns scale of gate tutoring
+selective_app_floor,45.0,points,DECLARED,SIMULATED,declared application floor for the selective gate
+university_app_floor,50.0,points,DECLARED,SIMULATED,declared application floor for the university gate
+budget_per_child,0.055,index/child/yr,DECLARED,SIMULATED,"declared per-capita budget rule, children aged 6-17; NOT a seat path (§3)"
+quality_reserve_share,0.15,share,DECLARED,SIMULATED,declared share of the budget reserved for quality before any opening
+recurring_cost_section,1.8,index/section/yr,DECLARED,SIMULATED,declared operating cost of an existing section
+capital_cost_section,20.0,index/section,DECLARED,SIMULATED,declared cost of opening one section
+quality_effect,0.35,quality index,DECLARED,SIMULATED,declared effect of unspent budget on the district quality index (§3c)
+K_class,40,pupils,DECLARED,SIMULATED,"declared class size / opening threshold (§3, §11)"
+K_class_open_expansion,30,pupils,DECLARED,SIMULATED,K_class -25% for the ORDINARY-EXPANSION arm only (§8.3)
+postsec_initial_capacity,20,places,DECLARED,SIMULATED,declared initial post-secondary non-tertiary capacity
+sections_town_primary,48,sections,DECLARED,SIMULATED,"declared INITIAL stock at burn-in start t=-11 (initial condition, not a path)"
+sections_town_lower,32,sections,DECLARED,SIMULATED,"declared initial stock, town lower secondary"
+sections_town_upper,16,sections,DECLARED,SIMULATED,"declared initial stock, town upper secondary"
+initial_village_primary_max_km,6.0,km,DECLARED,SIMULATED,"declared initial condition: villages within this distance have a primary school; others do not (uneven provision, §1)"
+private_fixed_cost,3.0,index/yr,DECLARED,SIMULATED,declared private provider fixed cost per class
+private_var_cost,0.05,index/pupil/yr,DECLARED,SIMULATED,declared private provider variable cost
+private_pay_share,0.7,share,DECLARED,SIMULATED,declared share of unserved children the provider expects to be able to pay
+private_exit_years,3,years,DECLARED,SIMULATED,K_exit consecutive loss years before a private provider exits (§3)
+response_a_completers,1,switch,DECLARED,SIMULATED,"response (a) completers create next-level demand: structural in the supply rule (§3), so always on"
+response_b_nearby,0,switch,DECLARED,SIMULATED,response (b) nearby secondary raises primary persistence: OFF in the baseline economy-steady start (§6); ON in SPILLBACK
+response_c_employer,0,switch,DECLARED,SIMULATED,response (c) employer requirement/returns: OFF in the baseline (§6); ON in DEGREES-OUTRUN-JOBS
+nearby_secondary_bonus,0.8,index,DECLARED,SIMULATED,declared bonus to the primary continuation value when a secondary place is within reach (response b)
+employer_req_0,3,credential level,DECLARED,SIMULATED,req_0: credential level read by the employer (3 = upper secondary)
+graduate_share_0,0.2,share,DECLARED,SIMULATED,"g0, the steady-state graduate share the employer rule is anchored on"
+lambda_req,0.8,index,DECLARED,SIMULATED,λ_req in req_t = req_0 + λ_req (share_t - g0)
+lambda_ret,0.45,index,DECLARED,SIMULATED,λ_ret in return_t = return_0 (1 - λ_ret (share_t - g0))
+return_0,1.0,index,DECLARED,SIMULATED,return_0
+credential_access_penalty,0.55,multiple,DECLARED,SIMULATED,declared credential payoff multiplier when the held level is below the employer requirement
+degrees_double_from_year,8,year,DECLARED,SIMULATED,DEGREES-OUTRUN-JOBS: graduate supply growth doubled from this year (§8.4)
+mandate_year,8,year,DECLARED,SIMULATED,MANDATE-BEFORE-FUNDING: required years raised at this year (§8.4)
+mandate_grades_baseline,6,grades,DECLARED,SIMULATED,baseline required years = 6 (primary completion)
+mandate_grades_raised,9,grades,DECLARED,SIMULATED,one step = lower-secondary completion (9 grades)
+cohort_window_entry_years,6;17,years,DECLARED,SIMULATED,the 12 scored cohorts (§8.2)
+coexistence_unused_share,0.1,share,DECLARED,SIMULATED,criterion 1 threshold (§8.2)
+coexistence_early_leave_share,0.05,share,DECLARED,SIMULATED,criterion 2 threshold (§8.2)
+coexistence_qualified_per_place,1.2,ratio,DECLARED,SIMULATED,criterion 3 threshold (§8.2)
+coexistence_gate_catchup_ratio,2.0,ratio,DECLARED,SIMULATED,criterion 4 threshold (§8.2)
+coexistence_gate_household_share,0.2,share,DECLARED,SIMULATED,criterion 4 second threshold (§8.2)
+families_ratio,1.5,ratio,DECLARED,SIMULATED,argmax gain must be >= 1.5x another type (§8.3)
+families_corr,0.95,correlation,DECLARED,SIMULATED,pairwise correlation falsifier (§8.3)
+travel_cut_multiplier,0.5,multiple,DECLARED,SIMULATED,TRAVEL-CUT arm (§8.3)
+selective_expansion_multiplier,1.5,multiple,DECLARED,SIMULATED,SELECTIVE-EXPANSION arm (§8.3)
+spillback_year,8,year,DECLARED,SIMULATED,SPILLBACK treated class opens (§9)
+spillback_gain_pp,0.05,share,DECLARED,SIMULATED,spillback present iff treated younger-cohort gain >= 5 pp (§9)
+pupilyear_sample_mod,32,1-in-n,DECLARED,SIMULATED,declared compact sample of pupil-year records for the report-card harness
+determinism_seed,20261121,seed,DECLARED,SIMULATED,determinism check seed (§10)
+seed_base,20261121,seed,DECLARED,SIMULATED,base seed (§10)

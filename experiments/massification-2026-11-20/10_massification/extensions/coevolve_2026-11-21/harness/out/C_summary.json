@@ -1,0 +1,112 @@
+{
+ "checks": [
+  {
+   "item": "C1 gain vectors recomputed from families_*.csv",
+   "n_disagreements": 0,
+   "n_values": 12,
+   "verdict": "PASS"
+  },
+  {
+   "argmax": {
+    "ordinary_expansion": "village_poor",
+    "selective_expansion": "village_poor",
+    "travel_cut": "village_poor"
+   },
+   "differs_across_arms": false,
+   "item": "C2 argmax family type",
+   "verdict": "PASS"
+  },
+  {
+   "any_at_or_above_threshold": true,
+   "correlations": {
+    "ordinary_expansion_vs_selective_expansion": 0.333407,
+    "travel_cut_vs_ordinary_expansion": 0.990733,
+    "travel_cut_vs_selective_expansion": 0.261045
+   },
+   "falsifier_threshold": 0.95,
+   "item": "C3 pairwise correlations of the gain vectors",
+   "verdict": "PASS"
+  },
+  {
+   "argmax_differs_across_arms": false,
+   "corr_falsifier_triggered": true,
+   "delivered_verdict": "SAME-RESPONSE",
+   "item": "C4 declared rule applied to the recomputed numbers",
+   "ratio_ok_literal_reading": true,
+   "ratio_ok_strict_positive_reading": false,
+   "verdict": "PASS",
+   "verdict_applied": "SAME-RESPONSE"
+  },
+  {
+   "argmax_per_seed": {
+    "ordinary_expansion": [
+     "village_nonpoor",
+     "village_poor",
+     "village_poor"
+    ],
+    "selective_expansion": [
+     "town_poor",
+     "town_nonpoor",
+     "village_poor"
+    ],
+    "travel_cut": [
+     "village_nonpoor",
+     "town_poor",
+     "village_poor"
+    ]
+   },
+   "item": "C5 robustness: per-seed correlations / argmax",
+   "n_seeds_with_corr_ge_threshold": {
+    "ordinary_expansion_vs_selective_expansion": 0,
+    "travel_cut_vs_ordinary_expansion": 1,
+    "travel_cut_vs_selective_expansion": 1
+   },
+   "per_seed_correlations": {
+    "ordinary_expansion_vs_selective_expansion": [
+     -0.6169,
+     0.7146,
+     0.858
+    ],
+    "travel_cut_vs_ordinary_expansion": [
+     0.9629,
+     0.3627,
+     0.8352
+    ],
+    "travel_cut_vs_selective_expansion": [
+     -0.3861,
+     0.8476,
+     0.9721
+    ]
+   },
+   "verdict": "DESCRIPTIVE"
+  }
+ ],
+ "family_type_order": [
+  "town_nonpoor",
+  "town_poor",
+  "village_nonpoor",
+  "village_poor"
+ ],
+ "label": "SIMULATED",
+ "mismatches": [],
+ "seed_mean_gain_vectors": {
+  "ordinary_expansion": [
+   0.07199133166666687,
+   -0.09807359433333367,
+   0.08567882233333328,
+   0.18270231933333334
+  ],
+  "selective_expansion": [
+   0.02083749933333312,
+   0.004867517333333164,
+   -0.021013550999999946,
+   0.03007640533333304
+  ],
+  "travel_cut": [
+   0.04704177499999999,
+   -0.10563938800000017,
+   0.05706323433333319,
+   0.10950536900000014
+  ]
+ }
+}

@@ -1,0 +1,42 @@
+{
+ "dirs": [
+  "results/_det_a",
+  "results/_det_b"
+ ],
+ "files": [
+  {
+   "artifact": "aggregates",
+   "identical": true,
+   "sha256_a": "805a1bb5c0a615424c6c67118032d22094c722806b312cdc45555d9306506e3c",
+   "sha256_b": "805a1bb5c0a615424c6c67118032d22094c722806b312cdc45555d9306506e3c"
+  },
+  {
+   "artifact": "coexistence",
+   "identical": true,
+   "sha256_a": "6666efce790b19f557eda8a77ddec6eee0fe8868606749b8b41b1cf05ede0e00",
+   "sha256_b": "6666efce790b19f557eda8a77ddec6eee0fe8868606749b8b41b1cf05ede0e00"
+  },
+  {
+   "artifact": "cohorts",
+   "identical": true,
+   "sha256_a": "9c301f10c80db9e500c5ba82ecb3754bcc64f401b54ef33ee40b9ec3ea08d6a6",
+   "sha256_b": "9c301f10c80db9e500c5ba82ecb3754bcc64f401b54ef33ee40b9ec3ea08d6a6"
+  },
+  {
+   "artifact": "panel",
+   "identical": true,
+   "sha256_a": "9f2e8291a5102f12e4db663ce212386fb0713cb19cabcf387ca77f911da31295",
+   "sha256_b": "9f2e8291a5102f12e4db663ce212386fb0713cb19cabcf387ca77f911da31295"
+  },
+  {
+   "artifact": "pupilyear",
+   "identical": true,
+   "sha256_a": "a018b0ed215ffeeb9ede24ec7cb2bbeef700b680ed76a2fd61956f48b5b65417",
+   "sha256_b": "a018b0ed215ffeeb9ede24ec7cb2bbeef700b680ed76a2fd61956f48b5b65417"
+  }
+ ],
+ "identical": true,
+ "label": "SIMULATED",
+ "method": "same seed run twice into separate directories; every artifact compared by sha256; floats written at %.10g; no wall-clock/hostname/PID in outputs",
+ "seed": 20261121
+}

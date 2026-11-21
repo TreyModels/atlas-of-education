@@ -1,0 +1,803 @@
+{
+ "arms": [
+  {
+   "arm": "baseline",
+   "arm_label": "baseline"
+  },
+  {
+   "arm": "travel_cut",
+   "arm_label": "TRAVEL-CUT"
+  },
+  {
+   "arm": "ordinary_expansion",
+   "arm_label": "ORDINARY-EXPANSION"
+  },
+  {
+   "arm": "selective_expansion",
+   "arm_label": "SELECTIVE-EXPANSION"
+  },
+  {
+   "arm": "mandate_before_funding",
+   "arm_label": "MANDATE-BEFORE-FUNDING"
+  },
+  {
+   "arm": "fees_abolished",
+   "arm_label": "FEES-ABOLISHED-TRAVEL-REMAINS"
+  },
+  {
+   "arm": "degrees_outrun_jobs",
+   "arm_label": "DEGREES-OUTRUN-JOBS"
+  },
+  {
+   "arm": "spillback",
+   "arm_label": "SPILLBACK"
+  }
+ ],
+ "determinism": {
+  "dirs": [
+   "results/_det_a",
+   "results/_det_b"
+  ],
+  "files": [
+   {
+    "artifact": "aggregates",
+    "identical": true,
+    "sha256_a": "805a1bb5c0a615424c6c67118032d22094c722806b312cdc45555d9306506e3c",
+    "sha256_b": "805a1bb5c0a615424c6c67118032d22094c722806b312cdc45555d9306506e3c"
+   },
+   {
+    "artifact": "coexistence",
+    "identical": true,
+    "sha256_a": "6666efce790b19f557eda8a77ddec6eee0fe8868606749b8b41b1cf05ede0e00",
+    "sha256_b": "6666efce790b19f557eda8a77ddec6eee0fe8868606749b8b41b1cf05ede0e00"
+   },
+   {
+    "artifact": "cohorts",
+    "identical": true,
+    "sha256_a": "9c301f10c80db9e500c5ba82ecb3754bcc64f401b54ef33ee40b9ec3ea08d6a6",
+    "sha256_b": "9c301f10c80db9e500c5ba82ecb3754bcc64f401b54ef33ee40b9ec3ea08d6a6"
+   },
+   {
+    "artifact": "panel",
+    "identical": true,
+    "sha256_a": "9f2e8291a5102f12e4db663ce212386fb0713cb19cabcf387ca77f911da31295",
+    "sha256_b": "9f2e8291a5102f12e4db663ce212386fb0713cb19cabcf387ca77f911da31295"
+   },
+   {
+    "artifact": "pupilyear",
+    "identical": true,
+    "sha256_a": "a018b0ed215ffeeb9ede24ec7cb2bbeef700b680ed76a2fd61956f48b5b65417",
+    "sha256_b": "a018b0ed215ffeeb9ede24ec7cb2bbeef700b680ed76a2fd61956f48b5b65417"
+   }
+  ],
+  "identical": true,
+  "label": "SIMULATED",
+  "method": "same seed run twice into separate directories; every artifact compared by sha256; floats written at %.10g; no wall-clock/hostname/PID in outputs",
+  "seed": 20261121
+ },
+ "generated_by": "code/coevolve_v0.py",
+ "label": "SIMULATED",
+ "notes": [
+  "Every number in this file is SIMULATED. No observed series was read or fitted.",
+  "Coexistence cell = district x cohort-entry-year; criteria evaluated in the cohort's upper-secondary window (entry+9..entry+11).",
+  "DIFFERENT-FAMILIES uses mean years completed by 4 family types vs the baseline, averaged over the 3 paired seeds."
+ ],
+ "parameters_sha256": "3faa7394f2192e8474cd748e170d89abb2af6b39063e3b304474dfc3b5cafa1b",
+ "predeclaration_sha256": "7d25e17631a39f556a17ac62a53de12701d60dca6d09a05e2b080d8d3184799d",
+ "runs": [
+  {
+   "arm": "baseline",
+   "arm_label": "baseline",
+   "label": "SIMULATED",
+   "metrics": {
+    "coexistence_all_four": true,
+    "completion_lower_secondary": 0.2154861111111111,
+    "completion_primary": 0.54125,
+    "completion_tertiary": 0.0043055555555555555,
+    "completion_upper_secondary": 0.12006944444444445,
+    "gate_household_share_mean": 0.20523660865630228,
+    "gate_to_catchup_ratio_mean": 4.835683164671194,
+    "left_secondary_early_share_mean": 0.17629327315431423,
+    "mean_years_completed": 5.117916666666667,
+    "ner_ceiling_ok": true,
+    "ner_lower_secondary_final_year": 0.19247159090909088,
+    "ner_primary_final_year": NaN,
+    "ner_upper_secondary_final_year": 0.07571022727272728,
+    "selective_qualified_per_place_mean": 5.4561403508771935,
+    "selective_turned_away_total": 5080,
+    "unused_accessible_share_mean": 0.2593546755988959
+   },
+   "n_pupils": 14400,
+   "n_pupilyear_sample": 5085,
+   "seed": 20261121
+  },
+  {
+   "arm": "baseline",
+   "arm_label": "baseline",
+   "label": "SIMULATED",
+   "metrics": {
+    "coexistence_all_four": true,
+    "completion_lower_secondary": 0.21131944444444445,
+    "completion_primary": 0.5372916666666666,
+    "completion_tertiary": 0.004097222222222223,
+    "completion_upper_secondary": 0.11076388888888888,
+    "gate_household_share_mean": 0.20237416680876527,
+    "gate_to_catchup_ratio_mean": 4.943600443957148,
+    "left_secondary_early_share_mean": 0.17106502046066804,
+    "mean_years_completed": 5.052361111111111,
+    "ner_ceiling_ok": true,
+    "ner_lower_secondary_final_year": 0.20514914772727272,
+    "ner_primary_final_year": NaN,
+    "ner_upper_secondary_final_year": 0.06548295454545454,
+    "selective_qualified_per_place_mean": 5.219298245614033,
+    "selective_turned_away_total": 4810,
+    "unused_accessible_share_mean": 0.2573432360222079
+   },
+   "n_pupils": 14400,
+   "n_pupilyear_sample": 4987,
+   "seed": 20261122
+  },
+  {
+   "arm": "baseline",
+   "arm_label": "baseline",
+   "label": "SIMULATED",
+   "metrics": {
+    "coexistence_all_four": true,
+    "completion_lower_secondary": 0.21229166666666666,
+    "completion_primary": 0.5440972222222222,
+    "completion_tertiary": 0.0045138888888888885,
+    "completion_upper_secondary": 0.11423611111111111,
+    "gate_household_share_mean": 0.2009096370565525,
+    "gate_to_catchup_ratio_mean": 4.368991083357021,
+    "left_secondary_early_share_mean": 0.16704774929490537,
+    "mean_years_completed": 5.1026388888888885,
+    "ner_ceiling_ok": true,
+    "ner_lower_secondary_final_year": 0.18227982954545455,
+    "ner_primary_final_year": NaN,
+    "ner_upper_secondary_final_year": 0.08252840909090908,
+    "selective_qualified_per_place_mean": 5.2412280701754375,
+    "selective_turned_away_total": 4835,
+    "unused_accessible_share_mean": 0.26053316287466377
+   },
+   "n_pupils": 14400,
+   "n_pupilyear_sample": 5006,
+   "seed": 20261123
+  },
+  {
+   "arm": "travel_cut",
+   "arm_label": "TRAVEL-CUT",
+   "label": "SIMULATED",
+   "metrics": {
+    "coexistence_all_four": true,
+    "completion_lower_secondary": 0.2296527777777778,
+    "completion_primary": 0.5463194444444445,
+    "completion_tertiary": 0.0042361111111111115,
+    "completion_upper_secondary": 0.12395833333333334,
+    "gate_household_share_mean": 0.1994176197384488,
+    "gate_to_catchup_ratio_mean": 4.490426249967471,
+    "left_secondary_early_share_mean": 0.14048784564230568,
+    "mean_years_completed": 5.170625,
+    "ner_ceiling_ok": true,
+    "ner_lower_secondary_final_year": 0.20653409090909092,
+    "ner_primary_final_year": NaN,
+    "ner_upper_secondary_final_year": 0.0807528409090909,
+    "selective_qualified_per_place_mean": 5.3429824561403505,
+    "selective_turned_away_total": 4951,
+    "unused_accessible_share_mean": 0.2424195059448315
+   },
+   "n_pupils": 14400,
+   "n_pupilyear_sample": 5037,
+   "seed": 20261121
+  },
+  {
+   "arm": "travel_cut",
+   "arm_label": "TRAVEL-CUT",
+   "label": "SIMULATED",
+   "metrics": {
+    "coexistence_all_four": true,
+    "completion_lower_secondary": 0.22229166666666667,
+    "completion_primary": 0.5458333333333333,
+    "completion_tertiary": 0.004722222222222222,
+    "completion_upper_secondary": 0.12166666666666667,
+    "gate_household_share_mean": 0.19452627658452437,
+    "gate_to_catchup_ratio_mean": 5.488057853962619,
+    "left_secondary_early_share_mean": 0.15798679983258482,
+    "mean_years_completed": 5.165416666666666,
+    "ner_ceiling_ok": true,
+    "ner_lower_secondary_final_year": 0.19698153409090907,
+    "ner_primary_final_year": NaN,
+    "ner_upper_secondary_final_year": 0.07386363636363637,
+    "selective_qualified_per_place_mean": 5.492982456140352,
+    "selective_turned_away_total": 5122,
+    "unused_accessible_share_mean": 0.2419488622601396
+   },
+   "n_pupils": 14400,
+   "n_pupilyear_sample": 5058,
+   "seed": 20261122
+  },
+  {
+   "arm": "travel_cut",
+   "arm_label": "TRAVEL-CUT",
+   "label": "SIMULATED",
+   "metrics": {
+    "coexistence_all_four": true,
+    "completion_lower_secondary": 0.21569444444444444,
+    "completion_primary": 0.5456944444444445,
+    "completion_tertiary": 0.004930555555555555,
+    "completion_upper_secondary": 0.11895833333333333,
+    "gate_household_share_mean": 0.20823391109791842,
+    "gate_to_catchup_ratio_mean": 5.334272630998072,
+    "left_secondary_early_share_mean": 0.15508551584328548,
+    "mean_years_completed": 5.126527777777778,
+    "ner_ceiling_ok": true,
+    "ner_lower_secondary_final_year": 0.19108664772727274,
+    "ner_primary_final_year": NaN,
+    "ner_upper_secondary_final_year": 0.08231534090909091,
+    "selective_qualified_per_place_mean": 5.264912280701754,
+    "selective_turned_away_total": 4862,
+    "unused_accessible_share_mean": 0.24469141038097014
+   },
+   "n_pupils": 14400,
+   "n_pupilyear_sample": 5021,
+   "seed": 20261123
+  },
+  {
+   "arm": "ordinary_expansion",
+   "arm_label": "ORDINARY-EXPANSION",
+   "label": "SIMULATED",
+   "metrics": {
+    "coexistence_all_four": true,
+    "completion_lower_secondary": 0.2276388888888889,
+    "completion_primary": 0.5352777777777777,
+    "completion_tertiary": 0.004166666666666667,
+    "completion_upper_secondary": 0.11875,
+    "gate_household_share_mean": 0.20616674270930185,
+    "gate_to_catchup_ratio_mean": 5.462578104959308,
+    "left_secondary_early_share_mean": 0.17336295243595087,
+    "mean_years_completed": 5.149166666666667,
+    "ner_ceiling_ok": true,
+    "ner_lower_secondary_final_year": 0.1900213068181818,
+    "ner_primary_final_year": NaN,
+    "ner_upper_secondary_final_year": 0.0734375,
+    "selective_qualified_per_place_mean": 5.592105263157894,
+    "selective_turned_away_total": 5235,
+    "unused_accessible_share_mean": 0.26312496261925966
+   },
+   "n_pupils": 14400,
+   "n_pupilyear_sample": 5170,
+   "seed": 20261121
+  },
+  {
+   "arm": "ordinary_expansion",
+   "arm_label": "ORDINARY-EXPANSION",
+   "label": "SIMULATED",
+   "metrics": {
+    "coexistence_all_four": true,
+    "completion_lower_secondary": 0.22784722222222223,
+    "completion_primary": 0.5402777777777777,
+    "completion_tertiary": 0.0044444444444444444,
+    "completion_upper_secondary": 0.11930555555555555,
+    "gate_household_share_mean": 0.19484850736979367,
+    "gate_to_catchup_ratio_mean": 5.006620407881834,
+    "left_secondary_early_share_mean": 0.1664417060159444,
+    "mean_years_completed": 5.179513888888889,
+    "ner_ceiling_ok": true,
+    "ner_lower_secondary_final_year": 0.1962002840909091,
+    "ner_primary_final_year": NaN,
+    "ner_upper_secondary_final_year": 0.07208806818181818,
+    "selective_qualified_per_place_mean": 5.7096491228070185,
+    "selective_turned_away_total": 5369,
+    "unused_accessible_share_mean": 0.25880609041950037
+   },
+   "n_pupils": 14400,
+   "n_pupilyear_sample": 4953,
+   "seed": 20261122
+  },
+  {
+   "arm": "ordinary_expansion",
+   "arm_label": "ORDINARY-EXPANSION",
+   "label": "SIMULATED",
+   "metrics": {
+    "coexistence_all_four": true,
+    "completion_lower_secondary": 0.23777777777777778,
+    "completion_primary": 0.5492361111111111,
+    "completion_tertiary": 0.005486111111111111,
+    "completion_upper_secondary": 0.12048611111111111,
+    "gate_household_share_mean": 0.1907230696650559,
+    "gate_to_catchup_ratio_mean": 5.242678001644943,
+    "left_secondary_early_share_mean": 0.15457268439538246,
+    "mean_years_completed": 5.258263888888889,
+    "ner_ceiling_ok": true,
+    "ner_lower_secondary_final_year": 0.19286221590909092,
+    "ner_primary_final_year": NaN,
+    "ner_upper_secondary_final_year": 0.08877840909090909,
+    "selective_qualified_per_place_mean": 5.800877192982455,
+    "selective_turned_away_total": 5473,
+    "unused_accessible_share_mean": 0.25787167843558406
+   },
+   "n_pupils": 14400,
+   "n_pupilyear_sample": 5213,
+   "seed": 20261123
+  },
+  {
+   "arm": "selective_expansion",
+   "arm_label": "SELECTIVE-EXPANSION",
+   "label": "SIMULATED",
+   "metrics": {
+    "coexistence_all_four": true,
+    "completion_lower_secondary": 0.21173611111111112,
+    "completion_primary": 0.5388888888888889,
+    "completion_tertiary": 0.0045138888888888885,
+    "completion_upper_secondary": 0.1125,
+    "gate_household_share_mean": 0.2754898124696096,
+    "gate_to_catchup_ratio_mean": 7.1466410357919505,
+    "left_secondary_early_share_mean": 0.17518487477763375,
+    "mean_years_completed": 5.0846527777777775,
+    "ner_ceiling_ok": true,
+    "ner_lower_secondary_final_year": 0.19261363636363638,
+    "ner_primary_final_year": NaN,
+    "ner_upper_secondary_final_year": 0.060156249999999994,
+    "selective_qualified_per_place_mean": 3.5122807017543867,
+    "selective_turned_away_total": 4296,
+    "unused_accessible_share_mean": 0.25694089510828994
+   },
+   "n_pupils": 14400,
+   "n_pupilyear_sample": 5039,
+   "seed": 20261121
+  },
+  {
+   "arm": "selective_expansion",
+   "arm_label": "SELECTIVE-EXPANSION",
+   "label": "SIMULATED",
+   "metrics": {
+    "coexistence_all_four": true,
+    "completion_lower_secondary": 0.21965277777777778,
+    "completion_primary": 0.5372222222222223,
+    "completion_tertiary": 0.004166666666666667,
+    "completion_upper_secondary": 0.10881944444444444,
+    "gate_household_share_mean": 0.26803882935064643,
+    "gate_to_catchup_ratio_mean": 6.62486341366689,
+    "left_secondary_early_share_mean": 0.17334603733203732,
+    "mean_years_completed": 5.102222222222222,
+    "ner_ceiling_ok": true,
+    "ner_lower_secondary_final_year": 0.2043678977272727,
+    "ner_primary_final_year": NaN,
+    "ner_upper_secondary_final_year": 0.0768465909090909,
+    "selective_qualified_per_place_mean": 3.5578947368421057,
+    "selective_turned_away_total": 4374,
+    "unused_accessible_share_mean": 0.2620810753115111
+   },
+   "n_pupils": 14400,
+   "n_pupilyear_sample": 5044,
+   "seed": 20261122
+  },
+  {
+   "arm": "selective_expansion",
+   "arm_label": "SELECTIVE-EXPANSION",
+   "label": "SIMULATED",
+   "metrics": {
+    "coexistence_all_four": true,
+    "completion_lower_secondary": 0.20902777777777778,
+    "completion_primary": 0.5432638888888889,
+    "completion_tertiary": 0.005694444444444445,
+    "completion_upper_secondary": 0.11395833333333333,
+    "gate_household_share_mean": 0.2721614602817192,
+    "gate_to_catchup_ratio_mean": 7.053980276720808,
+    "left_secondary_early_share_mean": 0.1889434245817846,
+    "mean_years_completed": 5.104444444444445,
+    "ner_ceiling_ok": true,
+    "ner_lower_secondary_final_year": 0.18643465909090912,
+    "ner_primary_final_year": NaN,
+    "ner_upper_secondary_final_year": 0.08373579545454546,
+    "selective_qualified_per_place_mean": 3.4070175438596495,
+    "selective_turned_away_total": 4116,
+    "unused_accessible_share_mean": 0.26306851340678794
+   },
+   "n_pupils": 14400,
+   "n_pupilyear_sample": 5019,
+   "seed": 20261123
+  },
+  {
+   "arm": "mandate_before_funding",
+   "arm_label": "MANDATE-BEFORE-FUNDING",
+   "label": "SIMULATED",
+   "metrics": {
+    "coexistence_all_four": false,
+    "completion_lower_secondary": 0.4996527777777778,
+    "completion_primary": 0.6158333333333333,
+    "completion_tertiary": 0.004652777777777777,
+    "completion_upper_secondary": 0.38340277777777776,
+    "gate_household_share_mean": 0.1310009354631614,
+    "gate_to_catchup_ratio_mean": 10.582030945842797,
+    "left_secondary_early_share_mean": 0.029036952689576512,
+    "mean_years_completed": 6.896319444444444,
+    "ner_ceiling_ok": true,
+    "ner_lower_secondary_final_year": 0.4100497159090909,
+    "ner_primary_final_year": NaN,
+    "ner_upper_secondary_final_year": 0.1966619318181818,
+    "selective_qualified_per_place_mean": 13.055263157894737,
+    "selective_turned_away_total": 13743,
+    "unused_accessible_share_mean": 0.1659217915490664
+   },
+   "n_pupils": 14400,
+   "n_pupilyear_sample": 5858,
+   "seed": 20261121
+  },
+  {
+   "arm": "mandate_before_funding",
+   "arm_label": "MANDATE-BEFORE-FUNDING",
+   "label": "SIMULATED",
+   "metrics": {
+    "coexistence_all_four": false,
+    "completion_lower_secondary": 0.5034027777777778,
+    "completion_primary": 0.6192361111111111,
+    "completion_tertiary": 0.003611111111111111,
+    "completion_upper_secondary": 0.38381944444444444,
+    "gate_household_share_mean": 0.13071519418658262,
+    "gate_to_catchup_ratio_mean": 16.362667820108275,
+    "left_secondary_early_share_mean": 0.033456903123542055,
+    "mean_years_completed": 6.917847222222222,
+    "ner_ceiling_ok": true,
+    "ner_lower_secondary_final_year": 0.4067826704545454,
+    "ner_primary_final_year": NaN,
+    "ner_upper_secondary_final_year": 0.21697443181818182,
+    "selective_qualified_per_place_mean": 12.556140350877195,
+    "selective_turned_away_total": 13174,
+    "unused_accessible_share_mean": 0.163199621395991
+   },
+   "n_pupils": 14400,
+   "n_pupilyear_sample": 5695,
+   "seed": 20261122
+  },
+  {
+   "arm": "mandate_before_funding",
+   "arm_label": "MANDATE-BEFORE-FUNDING",
+   "label": "SIMULATED",
+   "metrics": {
+    "coexistence_all_four": false,
+    "completion_lower_secondary": 0.5122916666666667,
+    "completion_primary": 0.6184027777777777,
+    "completion_tertiary": 0.005,
+    "completion_upper_secondary": 0.39381944444444444,
+    "gate_household_share_mean": 0.13038270260814888,
+    "gate_to_catchup_ratio_mean": 27.95741169690196,
+    "left_secondary_early_share_mean": 0.031202344056808967,
+    "mean_years_completed": 6.941041666666667,
+    "ner_ceiling_ok": true,
+    "ner_lower_secondary_final_year": 0.4212002840909091,
+    "ner_primary_final_year": NaN,
+    "ner_upper_secondary_final_year": 0.2077414772727273,
+    "selective_qualified_per_place_mean": 12.987719298245615,
+    "selective_turned_away_total": 13666,
+    "unused_accessible_share_mean": 0.16538269994157473
+   },
+   "n_pupils": 14400,
+   "n_pupilyear_sample": 5839,
+   "seed": 20261123
+  },
+  {
+   "arm": "fees_abolished",
+   "arm_label": "FEES-ABOLISHED-TRAVEL-REMAINS",
+   "label": "SIMULATED",
+   "metrics": {
+    "coexistence_all_four": true,
+    "completion_lower_secondary": 0.25381944444444443,
+    "completion_primary": 0.5643055555555555,
+    "completion_tertiary": 0.006875,
+    "completion_upper_secondary": 0.16534722222222223,
+    "gate_household_share_mean": 0.19662814109166782,
+    "gate_to_catchup_ratio_mean": 6.12868241599613,
+    "left_secondary_early_share_mean": 0.09025147801895335,
+    "mean_years_completed": 5.469444444444444,
+    "ner_ceiling_ok": true,
+    "ner_lower_secondary_final_year": 0.22869318181818182,
+    "ner_primary_final_year": NaN,
+    "ner_upper_secondary_final_year": 0.09382102272727272,
+    "selective_qualified_per_place_mean": 5.5403508771929815,
+    "selective_turned_away_total": 5176,
+    "unused_accessible_share_mean": 0.19813362837998255
+   },
+   "n_pupils": 14400,
+   "n_pupilyear_sample": 5210,
+   "seed": 20261121
+  },
+  {
+   "arm": "fees_abolished",
+   "arm_label": "FEES-ABOLISHED-TRAVEL-REMAINS",
+   "label": "SIMULATED",
+   "metrics": {
+    "coexistence_all_four": true,
+    "completion_lower_secondary": 0.24930555555555556,
+    "completion_primary": 0.5614583333333333,
+    "completion_tertiary": 0.007013888888888889,
+    "completion_upper_secondary": 0.16354166666666667,
+    "gate_household_share_mean": 0.19765962981134017,
+    "gate_to_catchup_ratio_mean": 5.2058720840696235,
+    "left_secondary_early_share_mean": 0.08822008364025481,
+    "mean_years_completed": 5.4325,
+    "ner_ceiling_ok": true,
+    "ner_lower_secondary_final_year": 0.22258522727272728,
+    "ner_primary_final_year": NaN,
+    "ner_upper_secondary_final_year": 0.08686079545454545,
+    "selective_qualified_per_place_mean": 5.482456140350877,
+    "selective_turned_away_total": 5110,
+    "unused_accessible_share_mean": 0.19718268933923924
+   },
+   "n_pupils": 14400,
+   "n_pupilyear_sample": 5009,
+   "seed": 20261122
+  },
+  {
+   "arm": "fees_abolished",
+   "arm_label": "FEES-ABOLISHED-TRAVEL-REMAINS",
+   "label": "SIMULATED",
+   "metrics": {
+    "coexistence_all_four": true,
+    "completion_lower_secondary": 0.25166666666666665,
+    "completion_primary": 0.5647222222222222,
+    "completion_tertiary": 0.007291666666666667,
+    "completion_upper_secondary": 0.1675,
+    "gate_household_share_mean": 0.20179797628647497,
+    "gate_to_catchup_ratio_mean": 6.057581029848125,
+    "left_secondary_early_share_mean": 0.08334171751013192,
+    "mean_years_completed": 5.482708333333333,
+    "ner_ceiling_ok": true,
+    "ner_lower_secondary_final_year": 0.21825284090909092,
+    "ner_primary_final_year": NaN,
+    "ner_upper_secondary_final_year": 0.07997159090909091,
+    "selective_qualified_per_place_mean": 5.335964912280702,
+    "selective_turned_away_total": 4943,
+    "unused_accessible_share_mean": 0.19589960368813678
+   },
+   "n_pupils": 14400,
+   "n_pupilyear_sample": 5239,
+   "seed": 20261123
+  },
+  {
+   "arm": "degrees_outrun_jobs",
+   "arm_label": "DEGREES-OUTRUN-JOBS",
+   "label": "SIMULATED",
+   "metrics": {
+    "coexistence_all_four": true,
+    "completion_lower_secondary": 0.21583333333333332,
+    "completion_primary": 0.5459722222222222,
+    "completion_tertiary": 0.004722222222222222,
+    "completion_upper_secondary": 0.12305555555555556,
+    "gate_household_share_mean": 0.205879955248232,
+    "gate_to_catchup_ratio_mean": 5.541657253315182,
+    "left_secondary_early_share_mean": 0.14895571377195585,
+    "mean_years_completed": 5.107777777777778,
+    "ner_ceiling_ok": true,
+    "ner_lower_secondary_final_year": 0.19488636363636364,
+    "ner_primary_final_year": NaN,
+    "ner_upper_secondary_final_year": 0.07478693181818181,
+    "selective_qualified_per_place_mean": 5.363157894736843,
+    "selective_turned_away_total": 4974,
+    "unused_accessible_share_mean": 0.24791959858304796
+   },
+   "n_pupils": 14400,
+   "n_pupilyear_sample": 5052,
+   "seed": 20261121
+  },
+  {
+   "arm": "degrees_outrun_jobs",
+   "arm_label": "DEGREES-OUTRUN-JOBS",
+   "label": "SIMULATED",
+   "metrics": {
+    "coexistence_all_four": true,
+    "completion_lower_secondary": 0.2245138888888889,
+    "completion_primary": 0.5407638888888889,
+    "completion_tertiary": 0.005555555555555556,
+    "completion_upper_secondary": 0.124375,
+    "gate_household_share_mean": 0.18961323036748226,
+    "gate_to_catchup_ratio_mean": 4.766552683662258,
+    "left_secondary_early_share_mean": 0.14710732258892267,
+    "mean_years_completed": 5.176527777777777,
+    "ner_ceiling_ok": true,
+    "ner_lower_secondary_final_year": 0.19378551136363636,
+    "ner_primary_final_year": NaN,
+    "ner_upper_secondary_final_year": 0.06796875,
+    "selective_qualified_per_place_mean": 5.526315789473684,
+    "selective_turned_away_total": 5160,
+    "unused_accessible_share_mean": 0.24844911301657252
+   },
+   "n_pupils": 14400,
+   "n_pupilyear_sample": 5051,
+   "seed": 20261122
+  },
+  {
+   "arm": "degrees_outrun_jobs",
+   "arm_label": "DEGREES-OUTRUN-JOBS",
+   "label": "SIMULATED",
+   "metrics": {
+    "coexistence_all_four": true,
+    "completion_lower_secondary": 0.22666666666666666,
+    "completion_primary": 0.545625,
+    "completion_tertiary": 0.005625,
+    "completion_upper_secondary": 0.12375,
+    "gate_household_share_mean": 0.19825264788726527,
+    "gate_to_catchup_ratio_mean": 4.453652696182958,
+    "left_secondary_early_share_mean": 0.15189352981905654,
+    "mean_years_completed": 5.170972222222222,
+    "ner_ceiling_ok": true,
+    "ner_lower_secondary_final_year": 0.19804687499999998,
+    "ner_primary_final_year": NaN,
+    "ner_upper_secondary_final_year": 0.08153409090909092,
+    "selective_qualified_per_place_mean": 5.473684210526315,
+    "selective_turned_away_total": 5100,
+    "unused_accessible_share_mean": 0.24832295845250585
+   },
+   "n_pupils": 14400,
+   "n_pupilyear_sample": 5054,
+   "seed": 20261123
+  },
+  {
+   "arm": "spillback",
+   "arm_label": "SPILLBACK",
+   "label": "SIMULATED",
+   "metrics": {
+    "coexistence_all_four": false,
+    "completion_lower_secondary": 0.40541666666666665,
+    "completion_primary": 0.6163888888888889,
+    "completion_tertiary": 0.004375,
+    "completion_upper_secondary": 0.2226388888888889,
+    "gate_household_share_mean": 0.10600686372538445,
+    "gate_to_catchup_ratio_mean": 11.572169768817025,
+    "left_secondary_early_share_mean": 0.1460792685275921,
+    "mean_years_completed": 6.273263888888889,
+    "ner_ceiling_ok": true,
+    "ner_lower_secondary_final_year": 0.3351917613636364,
+    "ner_primary_final_year": NaN,
+    "ner_upper_secondary_final_year": 0.11761363636363636,
+    "selective_qualified_per_place_mean": 10.837719298245615,
+    "selective_turned_away_total": 11215,
+    "spillback_did_pp": 0.05136573392243493,
+    "unused_accessible_share_mean": 0.25624463189211094
+   },
+   "n_pupils": 14400,
+   "n_pupilyear_sample": 5756,
+   "seed": 20261121
+  },
+  {
+   "arm": "spillback",
+   "arm_label": "SPILLBACK",
+   "label": "SIMULATED",
+   "metrics": {
+    "coexistence_all_four": false,
+    "completion_lower_secondary": 0.39729166666666665,
+    "completion_primary": 0.6140972222222222,
+    "completion_tertiary": 0.004166666666666667,
+    "completion_upper_secondary": 0.19090277777777778,
+    "gate_household_share_mean": 0.10816222787136329,
+    "gate_to_catchup_ratio_mean": 14.585022261045488,
+    "left_secondary_early_share_mean": 0.1581128182845903,
+    "mean_years_completed": 6.155347222222222,
+    "ner_ceiling_ok": true,
+    "ner_lower_secondary_final_year": 0.32865767045454547,
+    "ner_primary_final_year": NaN,
+    "ner_upper_secondary_final_year": 0.1090909090909091,
+    "selective_qualified_per_place_mean": 10.85175438596491,
+    "selective_turned_away_total": 11231,
+    "spillback_did_pp": 0.006584437898870976,
+    "unused_accessible_share_mean": 0.2618319913736895
+   },
+   "n_pupils": 14400,
+   "n_pupilyear_sample": 5534,
+   "seed": 20261122
+  },
+  {
+   "arm": "spillback",
+   "arm_label": "SPILLBACK",
+   "label": "SIMULATED",
+   "metrics": {
+    "coexistence_all_four": false,
+    "completion_lower_secondary": 0.40805555555555556,
+    "completion_primary": 0.6208333333333333,
+    "completion_tertiary": 0.004791666666666666,
+    "completion_upper_secondary": 0.19541666666666666,
+    "gate_household_share_mean": 0.11088379373688807,
+    "gate_to_catchup_ratio_mean": 38.36953610841569,
+    "left_secondary_early_share_mean": 0.14813720227189262,
+    "mean_years_completed": 6.242986111111111,
+    "ner_ceiling_ok": true,
+    "ner_lower_secondary_final_year": 0.3333096590909091,
+    "ner_primary_final_year": NaN,
+    "ner_upper_secondary_final_year": 0.10319602272727274,
+    "selective_qualified_per_place_mean": 11.29736842105263,
+    "selective_turned_away_total": 11739,
+    "spillback_did_pp": -0.06390783410138251,
+    "unused_accessible_share_mean": 0.2606156678688919
+   },
+   "n_pupils": 14400,
+   "n_pupilyear_sample": 5525,
+   "seed": 20261123
+  }
+ ],
+ "seeds": [
+  20261121,
+  20261122,
+  20261123
+ ],
+ "verdicts": {
+  "COEXISTENCE": "COEXISTENT",
+  "COEXISTENCE_primary_seed": "COEXISTENT",
+  "D0": "PASS",
+  "DETERMINISM": "BYTE-IDENTICAL",
+  "DIFFERENT-FAMILIES": "SAME-RESPONSE",
+  "DIFFERENT-FAMILIES_detail": {
+   "argmax": {
+    "ordinary_expansion": [
+     "village",
+     1
+    ],
+    "selective_expansion": [
+     "village",
+     1
+    ],
+    "travel_cut": [
+     "village",
+     1
+    ]
+   },
+   "argmax_differs": false,
+   "argmax_ratios": {
+    "ordinary_expansion": 2.1324093292664403,
+    "selective_expansion": 1.4433788211231073,
+    "travel_cut": 1.9190179127509437
+   },
+   "corr_falsifier_ok": false,
+   "family_type_order": [
+    [
+     "town",
+     0
+    ],
+    [
+     "town",
+     1
+    ],
+    [
+     "village",
+     0
+    ],
+    [
+     "village",
+     1
+    ]
+   ],
+   "gain_vectors": {
+    "ordinary_expansion": [
+     0.07199133178053312,
+     -0.09807359462206862,
+     0.08567882205741384,
+     0.18270231947578855
+    ],
+    "selective_expansion": [
+     0.02083749916515476,
+     0.004867517259902421,
+     -0.02101355111095386,
+     0.03007640498015481
+    ],
+    "travel_cut": [
+     0.0470417748948441,
+     -0.105639388303621,
+     0.057063234308907695,
+     0.10950536879829809
+    ]
+   },
+   "pairwise_correlations": {
+    "ordinary_expansion_vs_selective_expansion": 0.33340663687144806,
+    "travel_cut_vs_ordinary_expansion": 0.9907331776171978,
+    "travel_cut_vs_selective_expansion": 0.2610451181641993
+   }
+  },
+  "ENDOGENEITY": "OK",
+  "NER-CEILING": "OK",
+  "SPILLBACK": "NO-SPILLBACK",
+  "spillback_did_pp": [
+   0.05136573392243493,
+   0.006584437898870976,
+   -0.06390783410138251
+  ],
+  "spillback_mean_pp": -0.001985887426692201
+ }
+}

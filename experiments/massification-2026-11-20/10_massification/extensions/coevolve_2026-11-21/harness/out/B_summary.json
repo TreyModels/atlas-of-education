@@ -1,0 +1,214 @@
+{
+ "cells": {
+  "baseline|20261121": {
+   "n_all_four": 12,
+   "n_cells": 12
+  },
+  "baseline|20261122": {
+   "n_all_four": 10,
+   "n_cells": 12
+  },
+  "baseline|20261123": {
+   "n_all_four": 10,
+   "n_cells": 12
+  },
+  "degrees_outrun_jobs|20261121": {
+   "n_all_four": 11,
+   "n_cells": 12
+  },
+  "degrees_outrun_jobs|20261122": {
+   "n_all_four": 8,
+   "n_cells": 12
+  },
+  "degrees_outrun_jobs|20261123": {
+   "n_all_four": 7,
+   "n_cells": 12
+  },
+  "fees_abolished|20261121": {
+   "n_all_four": 10,
+   "n_cells": 12
+  },
+  "fees_abolished|20261122": {
+   "n_all_four": 12,
+   "n_cells": 12
+  },
+  "fees_abolished|20261123": {
+   "n_all_four": 8,
+   "n_cells": 12
+  },
+  "mandate_before_funding|20261121": {
+   "n_all_four": 0,
+   "n_cells": 12
+  },
+  "mandate_before_funding|20261122": {
+   "n_all_four": 0,
+   "n_cells": 12
+  },
+  "mandate_before_funding|20261123": {
+   "n_all_four": 0,
+   "n_cells": 12
+  },
+  "ordinary_expansion|20261121": {
+   "n_all_four": 10,
+   "n_cells": 12
+  },
+  "ordinary_expansion|20261122": {
+   "n_all_four": 8,
+   "n_cells": 12
+  },
+  "ordinary_expansion|20261123": {
+   "n_all_four": 7,
+   "n_cells": 12
+  },
+  "selective_expansion|20261121": {
+   "n_all_four": 12,
+   "n_cells": 12
+  },
+  "selective_expansion|20261122": {
+   "n_all_four": 12,
+   "n_cells": 12
+  },
+  "selective_expansion|20261123": {
+   "n_all_four": 12,
+   "n_cells": 12
+  },
+  "spillback|20261121": {
+   "n_all_four": 0,
+   "n_cells": 12
+  },
+  "spillback|20261122": {
+   "n_all_four": 0,
+   "n_cells": 12
+  },
+  "spillback|20261123": {
+   "n_all_four": 0,
+   "n_cells": 12
+  },
+  "travel_cut|20261121": {
+   "n_all_four": 10,
+   "n_cells": 12
+  },
+  "travel_cut|20261122": {
+   "n_all_four": 8,
+   "n_cells": 12
+  },
+  "travel_cut|20261123": {
+   "n_all_four": 8,
+   "n_cells": 12
+  }
+ },
+ "checks": [
+  {
+   "item": "B1 coexistence arithmetic",
+   "n_values": 6480,
+   "n_violations": 0,
+   "tolerance": 1e-09,
+   "verdict": "PASS"
+  },
+  {
+   "baseline_any_all_four": true,
+   "baseline_cells_all_four": [
+    12,
+    10,
+    10
+   ],
+   "baseline_cells_total": [
+    12,
+    12,
+    12
+   ],
+   "item": "B2 four-criteria cell evaluation (declared thresholds)",
+   "n_cells": 288,
+   "n_cells_arms_seeds": 24,
+   "n_verdict_mismatches": 0,
+   "verdict": "PASS",
+   "verdict_rule": "COEXISTENT iff at least one baseline district x cohort cell has all four"
+  },
+  {
+   "item": "B4 early-leaving (criterion b) from pupil records",
+   "max_abs_diff": 4.9831638815334145e-11,
+   "n_disagreements": 0,
+   "n_values": 288,
+   "tolerance": 5e-09,
+   "verdict": "PASS"
+  },
+  {
+   "catchup_dose_modes": [
+    24.0,
+    48.0,
+    72.0
+   ],
+   "catchup_zero_share": 0.4379398148148148,
+   "gate_dose_modes": [
+    60.0,
+    120.0
+   ],
+   "gate_zero_share": 0.9574768518518518,
+   "item": "B5 what has two peaks (measured separately)",
+   "qpp_first": 3.228070175333334,
+   "qpp_last": 6.228070175333333,
+   "qpp_local_maxima": [
+    [
+     2,
+     4.079
+    ],
+    [
+     10,
+     5.263
+    ],
+    [
+     18,
+     6.5
+    ],
+    [
+     21,
+     6.009
+    ],
+    [
+     25,
+     6.307
+    ]
+   ],
+   "qpp_max": 6.5,
+   "qpp_min": 3.228070175333334,
+   "qpp_prominent_maxima": [
+    [
+     18,
+     6.5
+    ]
+   ],
+   "verdict": "DESCRIPTIVE",
+   "years_completed_n_modes": 5,
+   "years_completed_top_buckets": [
+    {
+     "count": 12728,
+     "share": 0.29462962962962963,
+     "years": 0
+    },
+    {
+     "count": 12318,
+     "share": 0.2851388888888889,
+     "years": 6
+    },
+    {
+     "count": 3963,
+     "share": 0.09173611111111112,
+     "years": 10
+    },
+    {
+     "count": 2651,
+     "share": 0.06136574074074074,
+     "years": 5
+    }
+   ]
+  }
+ ],
+ "label": "SIMULATED",
+ "thresholds": {
+  "early": 0.05,
+  "gshare": 0.2,
+  "qpp": 1.2,
+  "ratio": 2.0,
+  "unused": 0.1
+ }
+}

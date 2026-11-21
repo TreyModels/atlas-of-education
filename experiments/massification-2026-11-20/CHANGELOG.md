@@ -585,3 +585,21 @@ B1 — pre-run SHA snapshot reconstructed (30/33 match, original hash `89638b39�
 - **Redesign** recorded, unanswered; no redesign experiment run/predeclared/dispatched; D167 stands.
 - **HANDOFF_PACKET.md** written (paper two paths + sha 1138d453…; 18 claims 0 SHOWN/3 PARTIAL/15 NOT SHOWN with caveat;
   CAP-04; Q-5; B-1); Lead's external file not overwritten; delivered panels/write-up byte-identical.
+
+## 2026-11-21 18:29–19:07 — Bridge tasks done (D176); Coevolution v0 predeclared, built, run and harness-verified (D177)
+
+- **Bridge (D176):** ACK `ddfa8a61` verified; **A6 = LABEL COLLISION** — sealed `fba20146…` (365 artifacts, six cells,
+  GATE A6 CLOSED) is the **Domus A6** package, not massification; codex queue A6 (Massification) is an **open
+  atlas-models assignment** with no delivered package; canonical for massification = closed phase record; massabm =
+  fenced external; codex's reversion sentence = Atlas-models battery, not ours; **rural entry UNRESOLVED** (capacity
+  paths exogenous). Memos: `AUDIT_EDUCATION_EXPANSION.md` (seat/tier paths in advance; no budget decision; provider
+  decision absent; failed expansions retained; massabm matched reversions) and `AUDIT_SHADOW.md` (stage/gate + KHM
+  provider distinguishable; price/income/timing and **catch-up vs exam-prep not separable from expenditure**).
+  Post sent `53e8585d…` from deepseek-massification (2026-11-21T10:56:09Z). China/Tilly not adopted.
+- **Coevolution v0 (D177):** frozen predeclaration `7d25e176…`; deterministic simulator (2,370 lines, 128 DECLARED
+  params), 24 runs in 17.9 s; **D0 PASS**; determinism byte-identical; **report card A PASS** (8,640 cells, 0 identity
+  violations). **COEXISTENT 32/36 cells** (not 12/12); two peaks = **years completed**; selective track near-empty;
+  **`SAME-RESPONSE`** (argmax village poor; r=0.9907) and **`NO-SPILLBACK`** (0/3 seeds clear 5 pp; control-village
+  bug ≈8% dilution); report card B mandate/fees/degrees numbers with **`ARM-NOT-TESTING-GLUT`**. **Harness 21 PASS/0
+  FAIL/11 descriptive.** Limitations disclosed; no observed data, no country/causal claims, no fitting; closed records
+  untouched; Q-5 correction and B-1 footnote `applied=false`.

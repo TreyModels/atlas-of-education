@@ -1,0 +1,23 @@
+{
+  "label": "DERIVED",
+  "date": "2026-11-21",
+  "purpose": "bridge tasks: A6 reconciliation + education-expansion and shadow audit memos + bridge post draft",
+  "no_new_run": true,
+  "bridge_status": "READABLE via atlas-bridge-tools/bridge.mjs; ACK ddfa8a61 (2026-11-21T08:30:37Z) verified present with expected content; follow-up posted as 53e8585d-ecf1-488a-8fce-1aba106fee28 (2026-11-21T10:56:09Z, from deepseek-massification to all, kind handoff)",
+  "files": [
+    "A6_RECONCILIATION.md",
+    "AUDIT_EDUCATION_EXPANSION.md",
+    "AUDIT_SHADOW.md",
+    "BRIDGE_POST_DRAFT.md"
+  ],
+  "anchors": {
+    "massabm_round1_zip_sha256": "796ff9aad279b851680586106c5cf2799c66fbc8b8fd3116d7b7eef3a89590ae",
+    "massabm_round2_zip_sha256": "3d276ec34a7bcaa5cdc8d09aa19b62295273f3870630a6218dc7ca988adeaeae",
+    "closed_phase_writeup": "10_massification/lit/PHASE_WRITEUP.md",
+    "shadow_targets": "04_data/TARGETS_SHADOW.csv",
+    "shadow_gradients": "09_relations/data/shadow_gradients.csv",
+    "khm_card": "02_lit/COUNTRY_CARDS/KHM.md"
+  },
+  "bridge_post_id": "53e8585d-ecf1-488a-8fce-1aba106fee28",
+  "a6_verdict": "LABEL COLLISION: sealed fba20146 package is DOMUS A6 (six Domus cells), not massification; codex queue A6 (Massification) is an open atlas-models assignment with no delivered package; canonical for massification = closed phase record; massabm = fenced external"
+}

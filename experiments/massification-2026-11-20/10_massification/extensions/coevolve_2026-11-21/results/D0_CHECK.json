@@ -1,0 +1,186 @@
+{
+ "check": "D0-INPUT-SEATS (\u00a78.1) \u2014 no seat/capacity path is an input",
+ "label": "SIMULATED",
+ "predeclaration_sha256": "7d25e17631a39f556a17ac62a53de12701d60dca6d09a05e2b080d8d3184799d",
+ "release_blocking": true,
+ "stages": {
+  "post_run": {
+   "checks": {
+    "decision_lead_time": {
+     "ok": true
+    },
+    "provider_origins": {
+     "detail": [],
+     "ok": true
+    },
+    "seat_replay": {
+     "mismatches": [],
+     "ok": true
+    },
+    "supply_fact_keys": {
+     "ok": true
+    }
+   },
+   "ok": true
+  },
+  "pre_run": {
+   "checks": {
+    "banned_fact_rejected": {
+     "ok": true
+    },
+    "lead_time": {
+     "ok": true,
+     "violations": 0
+    },
+    "no_outcome_fact_keys": {
+     "detail": [],
+     "ok": true
+    },
+    "no_seat_path_tokens": {
+     "detail": [],
+     "method": "AST identifiers/attributes/keywords, not text",
+     "ok": true
+    },
+    "predeclaration_sha256": {
+     "ok": true,
+     "value": "7d25e17631a39f556a17ac62a53de12701d60dca6d09a05e2b080d8d3184799d"
+    },
+    "provider_origins": {
+     "detail": [],
+     "ok": true
+    },
+    "seat_replay": {
+     "mismatches": [],
+     "ok": true
+    },
+    "source_reads": {
+     "detail": [
+      {
+       "allowed": true,
+       "arg": "path",
+       "call": "open",
+       "function": "sha256_file",
+       "line": 252,
+       "mode": "'rb'"
+      },
+      {
+       "allowed": true,
+       "arg": "path",
+       "call": "read_csv",
+       "function": "load_parameters",
+       "line": 287
+      },
+      {
+       "allowed": true,
+       "arg": "os.path.abspath(__file__)",
+       "call": "open",
+       "function": "d0_pre",
+       "line": 1631,
+       "mode": "'r'"
+      },
+      {
+       "allowed": true,
+       "arg": "os.path.join(RESULTS_DIR, 'D0_CHECK.json')",
+       "call": "open",
+       "function": "main",
+       "line": 1864,
+       "mode": "'w'"
+      },
+      {
+       "allowed": true,
+       "arg": "os.path.join(RESULTS_DIR, 'D0_CHECK.json')",
+       "call": "open",
+       "function": "run_suite",
+       "line": 1981,
+       "mode": "'w'"
+      },
+      {
+       "allowed": true,
+       "arg": "os.path.join(RESULTS_DIR, 'console.txt')",
+       "call": "open",
+       "function": "run_suite",
+       "line": 1984,
+       "mode": "'w'"
+      },
+      {
+       "allowed": true,
+       "arg": "os.path.join(RESULTS_DIR, 'D0_CHECK.json')",
+       "call": "open",
+       "function": "run_suite",
+       "line": 2154,
+       "mode": "'w'"
+      },
+      {
+       "allowed": true,
+       "arg": "os.path.join(RESULTS_DIR, 'RUNS.json')",
+       "call": "open",
+       "function": "run_suite",
+       "line": 2179,
+       "mode": "'w'"
+      },
+      {
+       "allowed": true,
+       "arg": "os.path.join(RESULTS_DIR, 'console.txt')",
+       "call": "open",
+       "function": "run_suite",
+       "line": 2182,
+       "mode": "'w'"
+      },
+      {
+       "allowed": true,
+       "arg": "os.path.join(RESULTS_DIR, 'DETERMINISM.json')",
+       "call": "open",
+       "function": "determinism_check",
+       "line": 2218,
+       "mode": "'w'"
+      },
+      {
+       "allowed": true,
+       "arg": "os.path.join(RESULTS_DIR, 'CORE_SUMMARY.md')",
+       "call": "open",
+       "function": "write_core_summary",
+       "line": 2296,
+       "mode": "'w'"
+      },
+      {
+       "allowed": true,
+       "arg": "os.path.join(EXT, 'RUN_MANIFEST.json')",
+       "call": "open",
+       "function": "write_manifest",
+       "line": 2361,
+       "mode": "'w'"
+      },
+      {
+       "allowed": true,
+       "arg": "os.path.join(EXT, 'SHA256SUMS.txt')",
+       "call": "open",
+       "function": "write_manifest",
+       "line": 2364,
+       "mode": "'w'"
+      }
+     ],
+     "ok": true
+    },
+    "supply_reads_whitelist_only": {
+     "ok": true,
+     "reads": [
+      "K_class_open",
+      "budget_per_child",
+      "capital_cost_section",
+      "prior_declines_cost",
+      "prior_unserved",
+      "private_costs",
+      "providers",
+      "quality_effect",
+      "quality_reserve_share",
+      "recurring_cost_section",
+      "school_age_population"
+     ]
+    }
+   },
+   "ok": true
+  }
+ },
+ "statement": "Seats in every simulated year are produced only by the district and private decisions of \u00a73 from prior-year demand facts (children with no place, and cost-blocked declines). No exogenous seat total, no capacity path and no same-year enrolment/NER/GER target is read by the supply decision; the declared initial provision at the burn-in start t=-11 is an initial condition, not a path. Seat counts are replayed bit-for-bit from the decision log.",
+ "verdict": "PASS"
+}

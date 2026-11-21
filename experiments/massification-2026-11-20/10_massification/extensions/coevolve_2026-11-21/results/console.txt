@@ -1,0 +1,33 @@
+COEVOLUTION v0 — SIMULATED — suite log (no wall-clock in any output file)
+predeclaration sha256: 7d25e17631a39f556a17ac62a53de12701d60dca6d09a05e2b080d8d3184799d (verified)
+arms: baseline, travel_cut, ordinary_expansion, selective_expansion, mandate_before_funding, fees_abolished, degrees_outrun_jobs, spillback
+seeds: 20261121,20261122,20261123
+label: every line below is SIMULATED
+D0 pre-run checks: PASS (banned_fact_rejected, lead_time, no_outcome_fact_keys, no_seat_path_tokens, predeclaration_sha256, provider_origins, seat_replay, source_reads, supply_reads_whitelist_only)
+run baseline                 seed 20261121  coexistence_all_four=True  ner_ok=True  mean_years=5.1179  early_leave=0.1763
+run baseline                 seed 20261122  coexistence_all_four=True  ner_ok=True  mean_years=5.0524  early_leave=0.1711
+run baseline                 seed 20261123  coexistence_all_four=True  ner_ok=True  mean_years=5.1026  early_leave=0.1670
+run travel_cut               seed 20261121  coexistence_all_four=True  ner_ok=True  mean_years=5.1706  early_leave=0.1405
+run travel_cut               seed 20261122  coexistence_all_four=True  ner_ok=True  mean_years=5.1654  early_leave=0.1580
+run travel_cut               seed 20261123  coexistence_all_four=True  ner_ok=True  mean_years=5.1265  early_leave=0.1551
+run ordinary_expansion       seed 20261121  coexistence_all_four=True  ner_ok=True  mean_years=5.1492  early_leave=0.1734
+run ordinary_expansion       seed 20261122  coexistence_all_four=True  ner_ok=True  mean_years=5.1795  early_leave=0.1664
+run ordinary_expansion       seed 20261123  coexistence_all_four=True  ner_ok=True  mean_years=5.2583  early_leave=0.1546
+run selective_expansion      seed 20261121  coexistence_all_four=True  ner_ok=True  mean_years=5.0847  early_leave=0.1752
+run selective_expansion      seed 20261122  coexistence_all_four=True  ner_ok=True  mean_years=5.1022  early_leave=0.1733
+run selective_expansion      seed 20261123  coexistence_all_four=True  ner_ok=True  mean_years=5.1044  early_leave=0.1889
+run mandate_before_funding   seed 20261121  coexistence_all_four=False  ner_ok=True  mean_years=6.8963  early_leave=0.0290
+run mandate_before_funding   seed 20261122  coexistence_all_four=False  ner_ok=True  mean_years=6.9178  early_leave=0.0335
+run mandate_before_funding   seed 20261123  coexistence_all_four=False  ner_ok=True  mean_years=6.9410  early_leave=0.0312
+run fees_abolished           seed 20261121  coexistence_all_four=True  ner_ok=True  mean_years=5.4694  early_leave=0.0903
+run fees_abolished           seed 20261122  coexistence_all_four=True  ner_ok=True  mean_years=5.4325  early_leave=0.0882
+run fees_abolished           seed 20261123  coexistence_all_four=True  ner_ok=True  mean_years=5.4827  early_leave=0.0833
+run degrees_outrun_jobs      seed 20261121  coexistence_all_four=True  ner_ok=True  mean_years=5.1078  early_leave=0.1490
+run degrees_outrun_jobs      seed 20261122  coexistence_all_four=True  ner_ok=True  mean_years=5.1765  early_leave=0.1471
+run degrees_outrun_jobs      seed 20261123  coexistence_all_four=True  ner_ok=True  mean_years=5.1710  early_leave=0.1519
+run spillback                seed 20261121  coexistence_all_four=False  ner_ok=True  mean_years=6.2733  early_leave=0.1461
+run spillback                seed 20261122  coexistence_all_four=False  ner_ok=True  mean_years=6.1553  early_leave=0.1581
+run spillback                seed 20261123  coexistence_all_four=False  ner_ok=True  mean_years=6.2430  early_leave=0.1481
+D0 pre-run: PASS; post-run structural: PASS
+verdicts: {"COEXISTENCE": "COEXISTENT", "COEXISTENCE_primary_seed": "COEXISTENT", "D0": "PASS", "DIFFERENT-FAMILIES": "SAME-RESPONSE", "ENDOGENEITY": "OK", "NER-CEILING": "OK", "SPILLBACK": "NO-SPILLBACK"}
+determinism: BYTE-IDENTICAL (5 files compared, seed 20261121)

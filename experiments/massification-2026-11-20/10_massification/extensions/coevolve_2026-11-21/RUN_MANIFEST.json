@@ -1,0 +1,416 @@
+{
+ "closed_records_untouched": [
+  "10_massification/lit/PHASE_WRITEUP.md",
+  "10_massification/data/DATA_NOTES_MASSIFICATION.md",
+  "PRE_DECLARATIONS.md (read-only; hash enforced)"
+ ],
+ "d0_check": "results/D0_CHECK.json",
+ "determinism": {
+  "evidence": "results/DETERMINISM.json",
+  "files_compared": 5,
+  "identical": true
+ },
+ "environment": {
+  "executable": "/Users/treymenefee/Library/Application Support/dsh-massification/venv/bin/python",
+  "note": "runtime recorded here only; no output artifact carries wall-clock",
+  "numpy": "2.4.6",
+  "pandas": "3.1.1",
+  "python": "3.11.17"
+ },
+ "files": [
+  {
+   "bytes": 9488,
+   "path": "DESIGN_BRIEF.md",
+   "sha256": "7a585f4ed07edc76ff2e0ccae281d40315c4b74ee0da04f8648e8fa4ff20bdbb"
+  },
+  {
+   "bytes": 13530,
+   "path": "PARAMETERS.csv",
+   "sha256": "3faa7394f2192e8474cd748e170d89abb2af6b39063e3b304474dfc3b5cafa1b"
+  },
+  {
+   "bytes": 19434,
+   "path": "PRE_DECLARATIONS.md",
+   "sha256": "7d25e17631a39f556a17ac62a53de12701d60dca6d09a05e2b080d8d3184799d"
+  },
+  {
+   "bytes": 86,
+   "path": "PRE_DECLARATIONS.sha256",
+   "sha256": "21559ae1ec2ef771700c2c340e9298feacc8ca82801c8514fc6ff334d2b00072"
+  },
+  {
+   "bytes": 126579,
+   "path": "code/coevolve_v0.py",
+   "sha256": "656408a3b59e535884a1818f0a31178e586dbf3353095a6f64967b39237f2b73"
+  },
+  {
+   "bytes": 2446,
+   "path": "results/CORE_SUMMARY.md",
+   "sha256": "10eb2968d514fa2cb2f4ce659c18a32c3a2a342383e3a3386772a89d7070bd5d"
+  },
+  {
+   "bytes": 4588,
+   "path": "results/D0_CHECK.json",
+   "sha256": "fa7aeb1dc96b9692e76dbda4a9c5c89ced8f22426739211ba52ff78a9805c4f0"
+  },
+  {
+   "bytes": 1410,
+   "path": "results/DETERMINISM.json",
+   "sha256": "aab77f864778f8563f096300ad7b8aa3032f5610026b96df5f69a4540012771a"
+  },
+  {
+   "bytes": 28058,
+   "path": "results/RUNS.json",
+   "sha256": "272296c4476325ae129cdb0c600687d57f7aa2b6652783f118493dfd0dd3e4d1"
+  },
+  {
+   "bytes": 146662,
+   "path": "results/aggregates_baseline.csv",
+   "sha256": "3265c16e9ea93f8afe130d246014409d46105e0cd5187aae4f2ede5a45e72cf9"
+  },
+  {
+   "bytes": 158456,
+   "path": "results/aggregates_degrees_outrun_jobs.csv",
+   "sha256": "2e431e71010a6aeba0f4ed234740d03576e243c70c91384515e91721dbe034ea"
+  },
+  {
+   "bytes": 154676,
+   "path": "results/aggregates_fees_abolished.csv",
+   "sha256": "1c9b0672679450e6731f9e4476a9dd7eaa75ce33a496e194faffeb3eeb0fb4ea"
+  },
+  {
+   "bytes": 162088,
+   "path": "results/aggregates_mandate_before_funding.csv",
+   "sha256": "7d8ce6242dadca79f800e6b07632c6930212449e758d284da227d76f47ef9d35"
+  },
+  {
+   "bytes": 157828,
+   "path": "results/aggregates_ordinary_expansion.csv",
+   "sha256": "040bb4f39bbd9169cc60cf144495c92dbbb547383270d5b1b21761757b72345e"
+  },
+  {
+   "bytes": 158598,
+   "path": "results/aggregates_selective_expansion.csv",
+   "sha256": "8d7655f6c0f4dcea6a6d209c27effb89ca5deefcf5cdc3deebe357c3635dba24"
+  },
+  {
+   "bytes": 149054,
+   "path": "results/aggregates_spillback.csv",
+   "sha256": "1e3ebe09ec5e56ec2b51c99444a0398c68767f2e7e8a90999e1f8b76b2bc0f78"
+  },
+  {
+   "bytes": 148697,
+   "path": "results/aggregates_travel_cut.csv",
+   "sha256": "3681e7c849e0f7aa245fe3f8595d31eed1ab125b7b59d4722f09dec5b15fcfc8"
+  },
+  {
+   "bytes": 16960,
+   "path": "results/coexistence_baseline.csv",
+   "sha256": "f453f492b98b808942ae34ce77831a503da8a7e6a7ee1c9532c5688692ac5876"
+  },
+  {
+   "bytes": 17923,
+   "path": "results/coexistence_degrees_outrun_jobs.csv",
+   "sha256": "fea28f93bddb63cdcc8bc6ec2498ad088a04d12baac45788d5076cb63897dede"
+  },
+  {
+   "bytes": 17446,
+   "path": "results/coexistence_fees_abolished.csv",
+   "sha256": "580b0b9e49bd313235fec1cb8e06730265d71f11458f49c95faf8f046e61f159"
+  },
+  {
+   "bytes": 18297,
+   "path": "results/coexistence_mandate_before_funding.csv",
+   "sha256": "a1beb7e447eabfe1ccac35a08c32a6fba99056b3fa6329eba8459ab27c597432"
+  },
+  {
+   "bytes": 17957,
+   "path": "results/coexistence_ordinary_expansion.csv",
+   "sha256": "30314469609bb13699c4b745c08138bf558d1d95568c2712e971139c6c3ef75f"
+  },
+  {
+   "bytes": 17985,
+   "path": "results/coexistence_selective_expansion.csv",
+   "sha256": "db01304700120b2740927592bb8e87db10773455b40aef599794d9c18b237563"
+  },
+  {
+   "bytes": 17192,
+   "path": "results/coexistence_spillback.csv",
+   "sha256": "d7f0867d0046912b25995aed77f003ba51298232de7796c5a17182a5a53bbc24"
+  },
+  {
+   "bytes": 17201,
+   "path": "results/coexistence_travel_cut.csv",
+   "sha256": "609f7e3f7b79d9eb20103fc3de97319a3c610c5f0c4459171e3c88065fcf3400"
+  },
+  {
+   "bytes": 5941,
+   "path": "results/cohorts_baseline.csv",
+   "sha256": "180c79444c6a6c6c48e8c81e3ed276254fcb6c9e312d6e7ea2b55333fc5a005c"
+  },
+  {
+   "bytes": 6313,
+   "path": "results/cohorts_degrees_outrun_jobs.csv",
+   "sha256": "2830f4a9776b8161bf56aa29347e6a1137e6d3b3cee35c18884e213d1a6ada56"
+  },
+  {
+   "bytes": 6125,
+   "path": "results/cohorts_fees_abolished.csv",
+   "sha256": "6db3e1eac6631b137f185d3b9e1c2de6b14c13a967cad1f89df28c858c446fdb"
+  },
+  {
+   "bytes": 6456,
+   "path": "results/cohorts_mandate_before_funding.csv",
+   "sha256": "3ffd558b69146fed55f19a06110933fb81476ae938e461cf5e2e01c34b921954"
+  },
+  {
+   "bytes": 6294,
+   "path": "results/cohorts_ordinary_expansion.csv",
+   "sha256": "577e9fb23f590af359209353b6e4853bde52f01dcb0b2a4ea2b4bceee5d2ec46"
+  },
+  {
+   "bytes": 6290,
+   "path": "results/cohorts_selective_expansion.csv",
+   "sha256": "1e91ebae6aebf0cddabfcd01dcac931107225f98ebe212fc7bbf8edad16288c8"
+  },
+  {
+   "bytes": 6041,
+   "path": "results/cohorts_spillback.csv",
+   "sha256": "13aeccba3290a18a7e535cce296d4c13a1e7c87769058843267d9d623a1f6af4"
+  },
+  {
+   "bytes": 6184,
+   "path": "results/cohorts_travel_cut.csv",
+   "sha256": "ed8a0126347a7b8cae8ec85718d5302be9d54cccb503d22665b2db126373d905"
+  },
+  {
+   "bytes": 3832,
+   "path": "results/console.txt",
+   "sha256": "00cf6abd204636e8f4c32561b9a0d1e6801d09ac9e6063dc68549299a1ac06bb"
+  },
+  {
+   "bytes": 1111,
+   "path": "results/families_baseline.csv",
+   "sha256": "2fbd41b5d32e27c4d5e36222369750aac1b253e31b0d824385e0b2a08b7e8214"
+  },
+  {
+   "bytes": 1395,
+   "path": "results/families_degrees_outrun_jobs.csv",
+   "sha256": "7a17ad72dfc544b019c139ec890a4dcd731f561e8f6fe78e43949af1e7ab5592"
+  },
+  {
+   "bytes": 1323,
+   "path": "results/families_fees_abolished.csv",
+   "sha256": "86c92e482cf1d843822112469e725d3b73413908006281a84d30b6fb2c69e50d"
+  },
+  {
+   "bytes": 1407,
+   "path": "results/families_mandate_before_funding.csv",
+   "sha256": "bdc881f312a9983f65eb6d102e32fe1c7a059a8a5761f35b997da05b178db307"
+  },
+  {
+   "bytes": 1384,
+   "path": "results/families_ordinary_expansion.csv",
+   "sha256": "792784d5bcf3d4e82fbf1a9029df9dedeb07340488e4345e21cffbacbbca8f9f"
+  },
+  {
+   "bytes": 1394,
+   "path": "results/families_selective_expansion.csv",
+   "sha256": "a7d1bbb3d4d667fa3f515b5549c66e5bbe42a62bb165aff1b202dc803661580a"
+  },
+  {
+   "bytes": 1254,
+   "path": "results/families_spillback.csv",
+   "sha256": "1124cea1cb9e762e0c7fab2889e7d06dd349eb379d0d78483caaa3cc2c8ec111"
+  },
+  {
+   "bytes": 1284,
+   "path": "results/families_travel_cut.csv",
+   "sha256": "040b4b224c8f01f0e099cbf6783730004891ef76b7e9152dc52779fe11fe717a"
+  },
+  {
+   "bytes": 7340,
+   "path": "results/objects_all_arms.csv",
+   "sha256": "224d6333b98fa570f14f37e0c794dd70a324293ab0f14390b2499789beaf9041"
+  },
+  {
+   "bytes": 6427177,
+   "path": "results/panel_baseline.csv",
+   "sha256": "0164c4d08d55ea64f7c575d67dc613d4ea059b4c453d7e91802dd7db5c5c7903"
+  },
+  {
+   "bytes": 6895517,
+   "path": "results/panel_degrees_outrun_jobs.csv",
+   "sha256": "28f95bd90340eec701c4756015b25a746087d24b704f700cec8f57ea1e3a9ba8"
+  },
+  {
+   "bytes": 6642564,
+   "path": "results/panel_fees_abolished.csv",
+   "sha256": "10dce8c8d34a4fc0eb5e002b732d648dec963414d7f7d6a3d14ce6f32d8434d8"
+  },
+  {
+   "bytes": 6864160,
+   "path": "results/panel_mandate_before_funding.csv",
+   "sha256": "48c4a0e779c3f3f6f1b9a9821b231852c4fcc002d60ca8848e2b166d1b838d4a"
+  },
+  {
+   "bytes": 6852063,
+   "path": "results/panel_ordinary_expansion.csv",
+   "sha256": "778ea28a29e57be56c287646e2d5b16dc18e68f847c0ef0ad07abd3906e5869f"
+  },
+  {
+   "bytes": 6904317,
+   "path": "results/panel_selective_expansion.csv",
+   "sha256": "0feb569c94c905df0b0706a5f56958c1d4020a33f48f1711d1e5d4b70a28c276"
+  },
+  {
+   "bytes": 6365429,
+   "path": "results/panel_spillback.csv",
+   "sha256": "61da7a536254de2f3866b6eaab402c7cd5e417c9b2d1b5d8983dbaea2b35939c"
+  },
+  {
+   "bytes": 6507796,
+   "path": "results/panel_travel_cut.csv",
+   "sha256": "306ef2f24b9620eb55d39a6ff92fc8aaa3544f7d2a63649a448e56fe75b3870a"
+  },
+  {
+   "bytes": 1904280,
+   "path": "results/pupilyear_baseline.csv",
+   "sha256": "fdf0ae2a51d1a0e8ae7b203e680180813e75a885948db983f21e0343a26473ce"
+  },
+  {
+   "bytes": 2081253,
+   "path": "results/pupilyear_degrees_outrun_jobs.csv",
+   "sha256": "abf5fdf315846103f1570c973bfb6c9f0a366713ab849b38a6b0515ee009f49c"
+  },
+  {
+   "bytes": 2048691,
+   "path": "results/pupilyear_fees_abolished.csv",
+   "sha256": "3fae2a1807cd192264cb76aaa2edf277f9d601ad6de018fd83cdbbc569db4de5"
+  },
+  {
+   "bytes": 2458660,
+   "path": "results/pupilyear_mandate_before_funding.csv",
+   "sha256": "282bda634f5fa231ba8b1d058ba39de355ca90beb144bb0d70ff679afb8144d9"
+  },
+  {
+   "bytes": 2091760,
+   "path": "results/pupilyear_ordinary_expansion.csv",
+   "sha256": "2add9004f9a72c7b1cd87924d91f2d40cf5f69ee31f7db6e1351ab7454abc093"
+  },
+  {
+   "bytes": 2073585,
+   "path": "results/pupilyear_selective_expansion.csv",
+   "sha256": "95d56953675b034ac1c21067a118f8eed28e278ed9d6af93498d35bdc97a58f2"
+  },
+  {
+   "bytes": 2158871,
+   "path": "results/pupilyear_spillback.csv",
+   "sha256": "04baf5201fe402f9052809c490c9ce9f7dda9b358aac4b37dd87c4075259ee2f"
+  },
+  {
+   "bytes": 1940073,
+   "path": "results/pupilyear_travel_cut.csv",
+   "sha256": "99ff867a340ac705f02a665359ae11b495de8ca74a95bb9f5f8feb05b75a130b"
+  },
+  {
+   "bytes": 1451,
+   "path": "results/spillback_SPILLBACK.csv",
+   "sha256": "9fd074f64dbb56f713e03961f2e0ffb1d11256215ee90973d079b91d94f251a7"
+  },
+  {
+   "bytes": 195004,
+   "path": "results/transitions_all_arms.csv",
+   "sha256": "5615f58ca890b1f7131a4a8e0fbc87be2515e95e5c1d07c316c096f40cb25415"
+  }
+ ],
+ "label": "SIMULATED",
+ "must_not_claim": "No observed input, no fitting, no causal or direction claim; model-internal results only.",
+ "output_labels": {
+  "derived_columns": "DERIVED from SIMULATED",
+  "every_artifact": "SIMULATED",
+  "observed_series_read": false
+ },
+ "package": "coevolve_2026-11-21",
+ "parameters": {
+  "corrections_before_the_declared_suite": [
+   {
+    "change": "added max_level_age (15;18;20;20;21;24); max_entry_age 8;13;16;16;18;19 -> 8;13;17;17;19;20",
+    "what": "age caps",
+    "when": "smoke run, no suite result seen",
+    "why": "the level entry-age cap was also expelling pupils re-entering a level they already attended, and the fresh-entry caps for upper/selective/post-secondary were below the model's own completion ages; the pipeline collapsed for arithmetic rather than behavioural reasons"
+   },
+   {
+    "change": "the window now applies only to re-entry into a level already attended; advancement waits until max_level_age",
+    "what": "re-entry window",
+    "when": "smoke run, no suite result seen",
+    "why": "the 2-year re-entry window was applied to children waiting for the NEXT level, deleting legitimate demand before the supply rule could observe it"
+   },
+   {
+    "change": "1-in-16 -> 1-in-32 sampled pupil-year rows; no model equation touched",
+    "what": "pupil-year sample density",
+    "when": "before the declared suite",
+    "why": "disk headroom (declared results budget under 100 MB)"
+   },
+   {
+    "change": "travel-cost multiplier was overwritten after arm setup (TRAVEL-CUT was a no-op); gate score lookup used positional instead of pupil indices; unplaced children were not recorded as out of school, so the supply rule saw no unserved demand; seat replay read final instead of declared initial section counts",
+    "what": "bugs fixed before any suite result",
+    "when": "smoke run"
+   }
+  ],
+  "frozen_before_runs": true,
+  "no_value_chosen_after_a_suite_result": true,
+  "path": "PARAMETERS.csv",
+  "provenance": "DECLARED",
+  "sha256": "3faa7394f2192e8474cd748e170d89abb2af6b39063e3b304474dfc3b5cafa1b",
+  "values_changed_after_first_run": false
+ },
+ "predeclaration": {
+  "enforced_by_code": true,
+  "path": "PRE_DECLARATIONS.md",
+  "refusal_mode": "exit 3 on hash mismatch, before any D0 check or run",
+  "sha256": "7d25e17631a39f556a17ac62a53de12701d60dca6d09a05e2b080d8d3184799d"
+ },
+ "suite": {
+  "arm_labels": {
+   "baseline": "baseline",
+   "degrees_outrun_jobs": "DEGREES-OUTRUN-JOBS",
+   "fees_abolished": "FEES-ABOLISHED-TRAVEL-REMAINS",
+   "mandate_before_funding": "MANDATE-BEFORE-FUNDING",
+   "ordinary_expansion": "ORDINARY-EXPANSION",
+   "selective_expansion": "SELECTIVE-EXPANSION",
+   "spillback": "SPILLBACK",
+   "travel_cut": "TRAVEL-CUT"
+  },
+  "arms": [
+   "baseline",
+   "travel_cut",
+   "ordinary_expansion",
+   "selective_expansion",
+   "mandate_before_funding",
+   "fees_abolished",
+   "degrees_outrun_jobs",
+   "spillback"
+  ],
+  "runs": 24,
+  "runtime_limit_seconds": 120,
+  "runtime_seconds": 17.93,
+  "seeds": [
+   20261121,
+   20261122,
+   20261123
+  ],
+  "within_limit": true
+ },
+ "title": "COEVOLUTION v0 \u2014 mutual adjustment (towns, providers, gates, cohorts) \u2014 SIMULATED",
+ "verdicts": {
+  "COEXISTENCE": "COEXISTENT",
+  "COEXISTENCE_primary_seed": "COEXISTENT",
+  "D0": "PASS",
+  "DETERMINISM": "BYTE-IDENTICAL",
+  "DIFFERENT-FAMILIES": "SAME-RESPONSE",
+  "ENDOGENEITY": "OK",
+  "NER-CEILING": "OK",
+  "SPILLBACK": "NO-SPILLBACK"
+ }
+}

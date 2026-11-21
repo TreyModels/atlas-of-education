@@ -1504,3 +1504,44 @@ frozen A10 at 4.44e-10; determinism 3/3; final SHA256SUMS 14/14.
   (canonical iCloud path + package mirror; **not** under the programme root), (b) **18 claims: 0 SHOWN / 3 PARTIALLY
   SHOWN / 15 NOT SHOWN** with the binding caveat, (c) CAP-04 disclosure + sensitivity, (d) Q-5 hazard + resolution,
   (e) B-1 note. Lead's external file **not overwritten**. Delivered panels and gate-passed write-up **byte-identical**.
+
+---
+
+## 3ak. BRIDGE TASKS (D176) — ACK verified; A6 label collision; expansion/shadow memos; post sent
+
+- **ACK verified:** `ddfa8a61` (2026-11-21T08:30:37Z, deepseek-massification) present with expected content.
+- **A6 reconciliation = LABEL COLLISION.** The sealed package **`fba20146…`** (365 artifacts, six cells, GATE A6
+  CLOSED, D77/D86) is the **DOMUS A6** package (F4/C26 bridge, M-H3, A6-PASS, Angkor, FFS, Domus Notes) — **not
+  massification**. Codex queue A6 = Massification is an **open assignment** (claimed atlas-models A6–A15,
+  `e4a0d7d6`) with no delivered package. **Canonical for massification = our closed phase record**; Domus A6 =
+  canonical for Domus; **massabm = fenced external** (`796ff9aa…`/`3d276ec3…`), not the phase record.
+- Codex's "first battery collapsed → matched-seed single reversions" = an **Atlas-models/massification battery**,
+  not the Domus A6 package and not our massabm; our matched reversions are the **massabm round-2 audit**
+  (`adult_age=16` flips −0.072→+0.063; `diploma_by_years` makes K-12 size definitional; per-stage dropout −13.3→−6.5;
+  weak pressure valve lets 58–100% of states reform without the architecture). **Rural entry = UNRESOLVED**;
+  capacity paths exogenous; **coevolve v0** is the predeclared (unrun-at-post-time) answer.
+- **Memos:** `bridge_tasks_2026-11-21/AUDIT_EDUCATION_EXPANSION.md` and `AUDIT_SHADOW.md` (shadow: corpus can
+  distinguish stage/gate and KHM provider; **cannot** separate catch-up from exam-prep from expenditure).
+- **Post sent:** `53e8585d-ecf1-488a-8fce-1aba106fee28` from `deepseek-massification` to `all` (2026-11-21T10:56:09Z).
+  China/Tilly **not adopted** (outside this record).
+
+## 3al. COEVOLUTION v0 (D177) — frozen predeclaration, model built and run, harness-verified; two falsifiers fire
+
+- **Predeclaration frozen before code:** sha256 **`7d25e17631a39f556a17ac62a53de12701d60dca6d09a05e2b080d8d3184799d`**.
+  New modelling phase (user brief `coevolve_2026-11-21/DESIGN_BRIEF.md`); three demand objects distinct;
+  town+8 villages; household next-year choice with real alternative; **endogenous supply** (no seat totals in
+  inputs); four gates; catch-up/gate tutoring with concentration as output; three cohort-feedback responses;
+  report cards A/B; coexistence test + 3 one-change counterfactuals + spillback; 8 arms × 3 paired seeds.
+- **Build/run:** deterministic simulator (2,370 lines), 128 DECLARED parameters, 24 runs in **17.9 s**; **D0 PASS**
+  (release-blocking; tamper test exits 3); determinism byte-identical; **report card A PASS** (8,640 cells, 0 identity
+  violations; NER ≤1; max GER 0.907; 2,484 values recomputed to 3e-10).
+- **Results (harness-corrected):** **COEXISTENT 32/36 baseline cells** (12/12 seed 20261121; 10/12 others; binding leg
+  = gate-household share 0.203 vs 0.20); **two peaks = years completed** (0 yrs 29.5%, 6 yrs 28.5%); selective track
+  **near-empty** (41–71 pupil-years, 4–6% of places — criterion (c) is a gate queue, not demand). **`SAME-RESPONSE`**
+  (all three arms argmax **village poor**; gains +0.110/+0.183/+0.030; r=0.9907) and **`NO-SPILLBACK`**
+  (+5.14/+0.66/−6.39 pp; 0/3 seeds clear 5 pp; control-village string-vs-int bug ≈8% dilution). **Report card B:**
+  mandate +1.83 yrs, fees +0.37, degrees +0.06 but **`ARM-NOT-TESTING-GLUT`** (g0=0.20 > own share 0.111–0.115;
+  requirement channel inert). **Harness: 21 PASS, 0 FAIL, 11 descriptive.** Limitations disclosed (sample-only
+  per-cell check r=0.965; OOS = "out of level"; 624 truncated-band cells; 24 NaN literals in RUNS.json; four pre-suite
+  bug fixes disclosed; no post-result changes). **No observed data, no country/causal claims, no fitting; closed
+  records untouched; Q-5 correction and B-1 footnote remain `applied=false`.**

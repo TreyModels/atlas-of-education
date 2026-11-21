@@ -1,0 +1,13 @@
+label,basis,arm,seed,loc_type,poor,mean_years_completed,gain_vs_baseline
+SIMULATED,DERIVED from SIMULATED pupil records,fees_abolished,20261121,town,0,6.722733246,0.2756241787
+SIMULATED,DERIVED from SIMULATED pupil records,fees_abolished,20261121,town,1,6.939698492,0.506281407
+SIMULATED,DERIVED from SIMULATED pupil records,fees_abolished,20261121,village,0,5.016282695,0.3173393383
+SIMULATED,DERIVED from SIMULATED pupil records,fees_abolished,20261121,village,1,4.97451431,0.4152914142
+SIMULATED,DERIVED from SIMULATED pupil records,fees_abolished,20261122,town,0,6.785367433,0.5895111687
+SIMULATED,DERIVED from SIMULATED pupil records,fees_abolished,20261122,town,1,6.62849534,0.7336884154
+SIMULATED,DERIVED from SIMULATED pupil records,fees_abolished,20261122,village,0,4.944263977,0.2043084288
+SIMULATED,DERIVED from SIMULATED pupil records,fees_abolished,20261122,village,1,4.960942475,0.404797283
+SIMULATED,DERIVED from SIMULATED pupil records,fees_abolished,20261123,town,0,6.904964076,0.4500326584
+SIMULATED,DERIVED from SIMULATED pupil records,fees_abolished,20261123,town,1,6.600257069,0.5102827763
+SIMULATED,DERIVED from SIMULATED pupil records,fees_abolished,20261123,village,0,4.982919255,0.2670807453
+SIMULATED,DERIVED from SIMULATED pupil records,fees_abolished,20261123,village,1,4.994122586,0.4513014274
