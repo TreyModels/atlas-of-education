@@ -1,8 +1,8 @@
 {
   "exploration": "yang_2026-11-21",
-  "status": "EXPLORATORY/ILLUSTRATIVE; no observed city data; no country claims",
+  "status": "ILLUSTRATIVE/EXPLORATORY; no observed city data; no country claims",
   "source": "Yang et al. 2026 PNAS doi:10.1073/pnas.2509729123; plus user-supplied pathways_factory.cjs toy",
-  "files": {
+  "v1": {
     "FINDINGS.md": "eb5816b585102308445349adb1a78f86dc3d2bef4fc84abeb6d653bc135e5bef",
     "code/pathways_factory.cjs": "6a6511fcdacba9c729d879f890a9de0b48c9bb9e7a3418933231f9790c44114f",
     "code/yang_play.py": "c41d20c3f0295df96d4ebcb597b61463cf16b6530cc29602014cff9f2b07f292",
@@ -11,5 +11,46 @@
     "results/yang_play.csv": "d684c8baba74cc26a9e7a684ca50f44643ca37722ca390d67b03ef2331da00df",
     "results/yang_play_summary.json": "6d8003c3d223b6bebd309d9b6a812ae180c5a7275e5b46bcf1f43b9a5b7f526e"
   },
-  "generated_utc": "2026-11-21T11:53:15Z"
+  "v2": {
+    "design_predeclaration": "4e76fcd5fb9f193bb99c5beff1c0f30fc5ab004d4913d127df1f83473a67f4ec",
+    "mc_predeclaration": "6f9d8c35cb3c4786494c43fa1a1eb834259e71149fe87ffe411ab5d13f19fc32",
+    "mc_predeclaration_sha256_file": "135084d65c2f5d5afb997535334f8db2bd32097335a9ab9154679fc1fda80423",
+    "code_v21": "1e3bb3b87ce165ffbb3e8ea06934425ccbe7c6df7c0df58b41b577205e3c1519",
+    "code_original_leadrun": "47ada006061570d9f838233918b8f1214a049e3a17c31871ccf52182cabdaf51",
+    "mc_code": "a3ec316a00932aaa621ac09393647f8385dca759d720a6fc4a44f50d38f6739e",
+    "findings_mc": "e3ccdc2951aaa4c2bcb23ac7b185a868de2dc2f9cff98294c41afa60dbe3246e",
+    "grid_200seeds_csv": "9a2a251a58d38f80312f1d1188902d6b277baf88142202a3aaf75c90c8419baf",
+    "grid_200seeds_console": "1418b7bf8a3d8de72992930ac43c58d21fc54242a79072b1ec542e5fcff76235",
+    "mc_results_json": "90e5f913c113fc0a9228ce1cb6cd1845842e5bea7dabdddb42699b5968a66f2f",
+    "mc_per_draw_csv": "230333b6081f72550eeb2d18f51da6629f15b1c8cdd23d83ec8a03a9328f23bc",
+    "mc_console": "801c22659dadba63704dd9ab3c02d722166fc025d00450e9da46976da7afeb34"
+  },
+  "labels": {
+    "toy": "ILLUSTRATIVE",
+    "mc": "SIMULATED",
+    "sensitivity": "DERIVED"
+  },
+  "headline": {
+    "grid_200seeds_predeclared_falsifier": "ACTIVE (3 of 6 sizes; 500k +0.531, 1m +1.226, 2m +1.652)",
+    "mc_robust_active_share_yang": 0.683,
+    "mc_robust_active_share_yang_endog": 0.823,
+    "mc_inert_share": 0.181,
+    "top3_parameters": [
+      "wageFactory (+0.784)",
+      "wageFormal (-0.357)",
+      "beta (-0.232)"
+    ],
+    "runtime_seconds": [
+      151.8,
+      155.6
+    ],
+    "determinism": "two complete MC runs byte-identical (results JSON and per-draw CSV)",
+    "pre_shock": "PASS (0 failures across 45,000-run pre-shock checks)"
+  },
+  "recommendation": "Wire the same parameter-MC + paired-seed test into the coevolution model's city-size block (predeclare before any run; carry the inert-draw set as a boundary condition). Not run here.",
+  "inventory": {
+    "n_files": 21,
+    "total_bytes": 422045
+  },
+  "generated_utc": "2026-11-21T12:10:00Z"
 }

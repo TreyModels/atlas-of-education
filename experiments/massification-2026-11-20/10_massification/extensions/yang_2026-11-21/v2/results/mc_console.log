@@ -1,0 +1,9 @@
+MC: 1000 draws x 3 paired seeds x 5 sizes x 3 designs = 45000 runs
+pre-shock match: PASS (n_failures=0)
+robust-ACTIVE share (yang): 0.6830
+robust-ACTIVE share (yang_endog): 0.8230
+inert-draw share: 0.1810
+pooled completion gap: mean 0.6661 p5 0.1177 p95 1.3849
+pooled leaving gap: mean 0.8935 p5 -0.2103 p95 1.9746
+top3 params (completion Spearman): [{"param":"wageFactory","rho":0.7844793450803526},{"param":"wageFormal","rho":-0.3573564802387841},{"param":"beta","rho":-0.23188470014614607}]
+runtime_ms=151774
