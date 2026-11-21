@@ -1,0 +1,16 @@
+{
+  "exploration": "yang_2026-11-21",
+  "status": "EXPLORATORY/DERIVED/SIMULATED; no observed city data; no country claims",
+  "source": "Yang et al. 2026 PNAS doi:10.1073/pnas.2509729123 (arXiv:2208.06487)",
+  "adopted": {
+    "b": 128.0,
+    "delta": 0.0071
+  },
+  "files": {
+    "FINDINGS.md": "de26a2933e350dfc9f3cf6bd9af610e20146c5292525b3ed0b67b046c742ca1e",
+    "code/yang_play.py": "c41d20c3f0295df96d4ebcb597b61463cf16b6530cc29602014cff9f2b07f292",
+    "results/yang_play.csv": "d684c8baba74cc26a9e7a684ca50f44643ca37722ca390d67b03ef2331da00df",
+    "results/yang_play_summary.json": "6d8003c3d223b6bebd309d9b6a812ae180c5a7275e5b46bcf1f43b9a5b7f526e"
+  },
+  "generated_utc": "2026-11-21T11:47:08Z"
+}

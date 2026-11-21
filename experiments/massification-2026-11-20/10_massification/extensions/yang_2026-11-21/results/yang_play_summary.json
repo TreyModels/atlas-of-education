@@ -1,0 +1,30 @@
+{
+  "source": "Yang et al. 2026 PNAS doi:10.1073/pnas.2509729123 (arXiv:2208.06487)",
+  "adopted": {
+    "b": 128.0,
+    "delta": 0.0071,
+    "N_ref": 1000000.0,
+    "D_refs": [
+      300.0,
+      500.0,
+      700.0
+    ],
+    "note": "b and delta adopted verbatim from the paper; c is a DECLARED anchor (D(N_ref)=D_ref) with sensitivity; no city data read."
+  },
+  "residual_speed": {
+    "formula": "dD/dt = delta*b",
+    "value": 0.9088,
+    "unit": "occupations/year"
+  },
+  "six_year_variety_growth": 5.453,
+  "six_year_variety_growth_pct_of_867": 0.6289,
+  "credential_growth_over_same_window": 2.5068,
+  "interpretation": "At the paper's own urban growth rate, occupation-driven variety grows by single digits of occupations in six years; the observed credential-count increase is two orders of magnitude larger, so credentials are not occupational categories (consistent with the Domus E4 two-law correction, pending the reviewer's retraction of 1.88/5.04/181%).",
+  "limits": [
+    "EXPLORATORY: adopts b from the paper, does not re-estimate it.",
+    "c is a declared anchor with sensitivity over D_ref in {300,500,700}.",
+    "Zipf and rural-variety parameters are DECLARED for illustration only.",
+    "No observed city-size or occupational data are read; no claim about any country.",
+    "The credential-growth comparison uses the Domus package's numbers as given; the reviewer has flagged those numbers as partly invalid."
+  ]
+}
