@@ -1,0 +1,6 @@
+scenario,Q,L,E,R,unique_applicants,unmet_effective_demand,physical_empty_seats,accessible_empty_seats,status
+joint_choice_binding_public,5,5,5,4,5.0,1.0,0.0,0.0,illustrative synthetic known-answer test
+zero_capacity,5,5,5,0,5.0,5.0,0.0,0.0,illustrative synthetic known-answer test
+continuing_reservation,5,5,5,1,5.0,4.0,0.0,0.0,illustrative synthetic known-answer test
+cost_exclusion_despite_vacancy,2,2,1,1,2.0,0.0,1.0,1.0,illustrative synthetic known-answer test
+geographic_mismatch,1,1,1,1,1.0,0.0,3.0,0.0,illustrative synthetic known-answer test

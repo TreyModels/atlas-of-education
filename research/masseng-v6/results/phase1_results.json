@@ -1,0 +1,7 @@
+[
+  {"scenario":"joint_choice_binding_public","status":"illustrative synthetic known-answer test","Q":5,"L":5,"E":5,"R":4,"unique_applicants":5.0,"unmet_effective_demand":1.0,"physical_empty_seats":0.0,"accessible_empty_seats":0.0,"assignments":{"a0":"public","a1":"public","a2":"private","a3":"private"}},
+  {"scenario":"zero_capacity","status":"illustrative synthetic known-answer test","Q":5,"L":5,"E":5,"R":0,"unique_applicants":5.0,"unmet_effective_demand":5.0,"physical_empty_seats":0.0,"accessible_empty_seats":0.0,"assignments":{}},
+  {"scenario":"continuing_reservation","status":"illustrative synthetic known-answer test","Q":5,"L":5,"E":5,"R":1,"unique_applicants":5.0,"unmet_effective_demand":4.0,"physical_empty_seats":0.0,"accessible_empty_seats":0.0,"assignments":{"a0":"public"}},
+  {"scenario":"cost_exclusion_despite_vacancy","status":"illustrative synthetic known-answer test","Q":2,"L":2,"E":1,"R":1,"unique_applicants":2.0,"unmet_effective_demand":0.0,"physical_empty_seats":1.0,"accessible_empty_seats":1.0,"assignments":{"rich":"public"}},
+  {"scenario":"geographic_mismatch","status":"illustrative synthetic known-answer test","Q":1,"L":1,"E":1,"R":1,"unique_applicants":1.0,"unmet_effective_demand":0.0,"physical_empty_seats":3.0,"accessible_empty_seats":0.0,"assignments":{"rural":"urban_public"}}
+]
