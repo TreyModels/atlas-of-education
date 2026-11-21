@@ -630,3 +630,18 @@ B1 — pre-run SHA snapshot reconstructed (30/33 match, original hash `89638b39�
   allocation-controller mix; (c) the declared alternative `g×C_value` (runnable now; recommended given D178's
   return-side finding). Labels SIMULATED/DERIVED/ILLUSTRATIVE; no country/causal claims; no tuning; closed records
   untouched.
+
+## 2026-11-21 20:55 — Coevolve v0.2 return-side Yang wiring + MC (D180): ACTIVE 100%, β dominates
+
+- New extension `coevolve_2026-11-21/v0_2_yangreturn/` (simulator copied; v0 and v0.1 frozen). Wiring
+  `C_eff=C_L·(1+α·g(N))`, N enters only via Yang g; return-side, not gate incidence. Predecl `3c527ce4…`; 150 draws
+  × paired seeds {0,1} × 4 sizes × 3 designs = 3,600 runs; identity guard PASS (none ≡ v0 baseline byte-identical);
+  two runs byte-identical; runtime 1,115 s (run 2 1,780 s under contention).
+- **Robust-ACTIVE 100% (yang) / 98% (endog); inert 0%.** Completion gap by size (median/p5/p95): 200k
+  +2.927/+1.331/+5.930; 500k +4.490/+2.029/+7.196; 1m +5.672/+2.784/+7.827; 2m +6.674/+3.610/+9.418; pooled yang
+  +4.956 (median +5.109; p5 +2.468; p95 +7.192); endog +6.125. Leaving gap yang −8.633 pp.
+- **Top-3: β/future-weight +0.722 (65.3% share), child-wage −0.324 (14.7%), premium multiplier +0.249 (6.0%)**;
+  Yang slope +0.097 / anchor +0.028 nearly inert. **Boundary contingency 0/14/0/136 → the Yang-toy wage-premium
+  boundary does NOT reproduce.** Coexistence at 2m yang vs none: unused accessible 0.171 vs 0.266; qualified/place
+  6.843 vs 5.422; gate-tutoring share 0.189 vs 0.208. Recommendation: next test targets the β channel, not the
+  premium multiplier. Labels SIMULATED/ILLUSTRATIVE; no country/causal claims; no tuning; closed records untouched.

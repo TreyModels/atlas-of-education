@@ -1583,3 +1583,24 @@ frozen A10 at 4.44e-10; determinism 3/3; final SHA256SUMS 14/14.
   no boundary contingency. **What would be needed (new predeclaration + approval):** (a) a per-gate `cred_req`
   threshold applied to a share `g(N)` of places; (b) an allocation-controller mix; (c) the declared **alternative**
   `g(N) × C_value` (runnable now, but a different object) — recommended given D178's return-side finding.
+
+---
+
+## 3ao. COEVOLVE v0.2-YANGRETURN (D180) — return-side wiring ACTIVE in 100% of draws; β dominates, Yang premium third; wage-premium boundary does NOT reproduce
+
+- New extension `coevolve_2026-11-21/v0_2_yangreturn/` (simulator copied; v0 and v0.1 untouched). **Wiring:**
+  `C_eff(L,N)=C_L·(1+α·g(N))`, Yang `D(N)`/`g(N)`, N enters **only** via g; return-side (not gate incidence; v0.1
+  showed that reading inert by construction). Designs none/yang/yang_endog (endog: one-year-lag bounded step ±0.05 on
+  applicants/place, bounds [0.25,1.50]). **Contract frozen** (`PRE_DECLARATIONS.md` `3c527ce4…`); 150 draws × paired
+  seeds {0,1} × 4 sizes × 3 designs = 3,600 runs; 6 workers; **identity guard PASS** (`none` ≡ v0 baseline
+  byte-identically); **two runs byte-identical**; runtime 1,115 s (run 2 1,780 s under contention), no draw reduction.
+- **Results:** **(a)** robust-ACTIVE `yang` **100%**, `yang_endog` **98%**, inert **0%**. **(b)** completion gap by
+  size (median/p5/p95): 200k +2.927/+1.331/+5.930; 500k +4.490/+2.029/+7.196; 1m +5.672/+2.784/+7.827;
+  2m +6.674/+3.610/+9.418; pooled yang **+4.956** (median +5.109; p5 +2.468; p95 +7.192); endog pooled +6.125.
+  Leaving gap yang **−8.633** pp. **(c)** top-3: **β/future-weight +0.722 (65.3% share)**, **child-wage −0.324
+  (14.7%)**, **premium multiplier +0.249 (6.0%)**; Yang slope +0.097 / anchor +0.028 (nearly inert). **(d)** boundary
+  contingency **0/14/0/136** → the Yang-toy wage-premium boundary **does not reproduce** (all 14 toy-inert draws are
+  coevolve-active; none inactive). **(e)** coexistence: at 2m `yang` vs none — unused accessible 0.171 vs 0.266;
+  qualified/place 6.843 vs 5.422; gate-tutoring share 0.189 vs 0.208 (`none` identical across sizes by construction).
+  **(f)** runtime as above. **Recommendation:** the Yang map is necessary but not load-bearing; next predeclared test
+  should target the **β/future-weight channel**, not the premium multiplier.

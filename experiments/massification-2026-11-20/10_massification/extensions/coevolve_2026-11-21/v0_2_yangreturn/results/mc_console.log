@@ -1,0 +1,7 @@
+v0.2 MC: 150 draws x 2 seeds x 4 sizes x 3 designs = 3600 runs; workers=6; runtime=1115.0s
+identity guard: PASS
+robust-ACTIVE share: yang 1.0000 | yang_endog 0.9800 | inert(yang) 0.0000
+yang pooled completion gap: mean +4.9562 median +5.1094 p5 +2.4682 p95 +7.1920
+yang_endog pooled completion gap: mean +6.1253 median +6.5187 p5 +1.8018 p95 +9.0207
+top3: [{"param": "beta_mult", "spearman_completion": 0.7221992088537268, "spearman_leaving": 0.8437619449753323, "r2_completion": 0.5472372034027705, "variance_share": 0.6527479405494873}, {"param": "child_wage_mult", "spearman_completion": -0.32382416996310953, "spearman_leaving": -0.4676243388595049, "r2_completion": 0.12348280538291871, "variance_share": 0.14729105844006157}, {"param": "premium_mult", "spearman_completion": 0.24934619316414064, "spearman_leaving": -0.14582870349793323, "r2_completion": 0.05061318909713648, "variance_share": 0.060371726816756004}]
+boundary contingency: {"yang_toy_inert_and_co_inert": 0, "yang_toy_inert_and_co_active": 14, "yang_toy_active_and_co_inert": 0, "yang_toy_active_and_co_active": 136}

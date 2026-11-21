@@ -325,9 +325,9 @@
   }
  ],
  "inventory": {
-  "n_files": 98,
-  "note": "includes v0_1_yang extension and all delivered results",
-  "total_bytes": 73092467
+  "n_files": 107,
+  "note": "includes v0_1_yang (mismatch) and v0_2_yangreturn (MC) extensions",
+  "total_bytes": 73305040
  },
  "label": "SIMULATED",
  "must_not_claim": "No observed input, no fitting, no causal or direction claim; model-internal results only.",
@@ -418,6 +418,58 @@
   "reason": "coevolve v0 has no gate-place credential-requirement object; every gate applicant already holds the prerequisite credential (advancing requires cred == c), so a share g of 'credential-required' places cannot change any admission. Evidence: v0_1_yang/FINDINGS_MISMATCH.md; audit counts 0 lacking at all six levels/gates.",
   "status": "STOPPED \u2014 NOT WIREABLE AS SPECIFIED (design mismatch)",
   "verdict": "INERT-BY-CONSTRUCTION"
+ },
+ "v0_2_yangreturn": {
+  "code_mc": "5b2021749dca8c3887ef3d6f126e8cdef6a725e72b9435d9d692b36be2b9d485",
+  "code_simulator": "79cf330bc8fe3414b5e3c1a1e5503460d833313bbedae63cb13e03c4ba234f27",
+  "headline": {
+   "boundary_contingency": {
+    "yang_toy_active_and_co_active": 136,
+    "yang_toy_active_and_co_inert": 0,
+    "yang_toy_inert_and_co_active": 14,
+    "yang_toy_inert_and_co_inert": 0
+   },
+   "inert_share_yang": 0.0,
+   "pooled_completion_gap_yang": {
+    "mean": 4.9562,
+    "median": 5.1094,
+    "p5": 2.4682,
+    "p95": 7.192
+   },
+   "robust_active_share_yang": 1.0,
+   "robust_active_share_yang_endog": 0.98,
+   "top3": [
+    {
+     "param": "beta_mult",
+     "spearman_completion": 0.7222,
+     "variance_share": 0.6527
+    },
+    {
+     "param": "child_wage_mult",
+     "spearman_completion": -0.3238,
+     "variance_share": 0.1473
+    },
+    {
+     "param": "premium_mult",
+     "spearman_completion": 0.2493,
+     "variance_share": 0.0604
+    }
+   ],
+   "yang_toy_boundary_reproduces": false
+  },
+  "identity_guard": "PASS (none design with alpha*g=0 reproduces v0 baseline byte-identically on panel and pupil-year tables)",
+  "mc_design": "150 draws x paired seeds {0,1} x sizes {200k,500k,1m,2m} x designs {none,yang,yang_endog} = 3600 runs; draw seed 20261121; CRN; 6 workers",
+  "mc_findings": "17f8acd9e3cad48fcdbf6a28348766921a8dd4acd7b406ad3d048a8905a1ec41",
+  "mc_per_draw": "fae57157382b5fe818ecaa707de86dc9239af7efcc2833f670e8c374f81638d2",
+  "mc_results": "5501799c49153d8c1dac98659b737c3315f3f8933f21b15c85a7dcec31a13677",
+  "predeclaration": "3c527ce49046a7fb01db797d9fd5271c8ea6c98446027ae1276a2dc231e15da7",
+  "runtime_seconds": {
+   "note": "run2 under CPU contention; results byte-identical",
+   "run1": 1115.0,
+   "run2": 1779.9
+  },
+  "status": "RUN \u2014 return-side Yang wiring, MC complete (SIMULATED/ILLUSTRATIVE)",
+  "wiring": "C_eff(L,N) = C_L * (1 + alpha*g(N)); city size N enters only through Yang g(N); return-side, not gate incidence"
  },
  "verdicts": {
   "COEXISTENCE": "COEXISTENT",
