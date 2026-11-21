@@ -1,0 +1,9 @@
+population,scaling,extra_types_require_diploma,types,annual_leaving,annual_secondary_completions,annual_factory_hires
+50000,false,false,2,57.948,33.289,9.826
+50000,false,true,2,57.948,33.289,9.826
+50000,true,false,2,57.948,33.289,9.826
+50000,true,true,2,57.948,33.289,9.826
+200000,false,false,2,57.948,33.289,9.826
+200000,false,true,2,57.948,33.289,9.826
+200000,true,false,4,57.948,33.289,9.826
+200000,true,true,4,59.572,34.117,10.635

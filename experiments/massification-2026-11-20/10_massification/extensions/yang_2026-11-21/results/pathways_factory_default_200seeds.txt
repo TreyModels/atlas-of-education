@@ -1,0 +1,13 @@
+Assumptions: toy annual income units; farm 1.0, informal 1.4, formal 2.0, factory 2.3; students earn farm income but incur equal farm-labor opportunity cost. Factory opens y=23; factory16 eligible age >=16, factorySecondary eligible age >=16 with 12 completed grades. Choices use illustrative study-value rule; no calibration.
+Matched common seeds: 200. Pre-shock match check compares baseline and both policy arms for y=20..22: population, leaving, completion, jobs, and income.
+pre-shock y=20: matched=true
+pre-shock y=21: matched=true
+pre-shock y=22: matched=true
+
+Mean outcomes across seeds; years 23–35 (post opening):
+scenario,leaving,secondary_completion,factory_jobs,farm_workers,informal_workers,formal_workers,household_income,farm_labor_opportunity_cost
+baseline,54.522,35.678,0.000,0.000,2.079,52.443,949.047,841.251
+factory16,57.210,33.803,7.978,0.000,2.005,47.227,945.582,829.972
+factorySecondary,60.352,35.678,9.750,0.000,2.079,48.523,952.115,829.734
+
+Limitation: this is an illustrative behavioral toy, with a deterministic choice rule and stylized income values; it does not estimate real wage, learning, capacity, or household responses.

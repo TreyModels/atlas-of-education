@@ -61,3 +61,47 @@ people are employed in them or what credentials they require.
 3. **Paper side:** use the δ·b benchmark as a bound in the "offered vs paid vs required" paper — it
    says how fast the *occupational* margin can move, which makes the credential-offering explosion
    even harder to attribute to occupational change.
+
+---
+
+## Addendum — user-supplied `pathways_factory.cjs` toy (factory-opening extension of the Yang law)
+
+**Status: ILLUSTRATIVE TOY — user-supplied code, run as given; not evidence; no calibration.** Code saved at
+`code/pathways_factory.cjs` (deterministic; 100-seed reruns byte-identical; 500-seed sweep stable). 64 arrivals/yr
+(50/50 urban/rural), 36 years, factory opens at y=23 with 12 posts; income units: farm 1.0, informal 1.4, formal
+2.0, factory 2.3; pre-shock y=20–22 matched across arms (verified). The "Yang" mapping is `types = 2 + log2(N/50k)`,
+clamped to 1–12; the credential gate applies only to occupation index ≥ 2.
+
+**Default mode (200 seeds; means over years 23–35):**
+
+| scenario | leaving | secondary completion | factory hires | formal workers | household income |
+|---|---|---|---|---|---|
+| baseline | 54.019 | 36.069 | 0.000 | 52.084 | 950.030 |
+| factory16 | 56.500 | 34.209 | 7.797 | 46.844 | 946.523 |
+| factorySecondary (diploma for all posts) | 59.781 | 36.069 | 9.750 | 48.097 | 953.058 |
+
+Reading: opening factory posts **pulls children out earlier and lowers secondary completion** (factory16); requiring
+the diploma for the posts **restores completion to baseline** but raises leaving further; income effects are small.
+
+**Yang sweep (500 seeds, `--yang`):** almost completely **inert**. At N=50k the mapping gives 2 types and the gate
+never binds (needs occupation ≥2); N=200k without scaling gives 2 types — identical. Only **N=200k + scaling + gate**
+moves: types 2→4, half the slots gated; leaving 57.95→59.57, completion 33.29→34.12, hires 9.83→10.64. The gate can
+*raise* hires in this cell — a composition artefact of *who* gets selected, not a benefit of gating.
+
+**Diagnosis (why it is inert):**
+1. The Yang mapping is a token gesture, not the published law: Yang et al. fit **D = 128·ln N + c** (hundreds of
+   occupations, R²=0.94); this toy moves **2→4 types** over 50k→200k (Yang implies ≈+177 occupations over that
+   range), then clamps at 12. City size therefore enters only through a 0/2/4-type step.
+2. The study/work rule is **static** (studyValue does not include future gate-clearing or the factory/formal wage),
+   so choice responses are myopic and hires never reach 12.
+3. No employer endogeneity (fixed 12 posts, fixed credential rule), no commute/travel, no capacity/quality — so it
+   cannot generate the coevolution brief's coexistence/differentiated-response test.
+
+**Concrete fixes:** (a) map Yang properly — let the **gated share** be a continuous function of D(N)=128 ln N + c
+(anchor D(10⁶)≈500), rather than a 2-type step; (b) endogenise the credential rule (top-m types gated, m rising with
+applicant surplus); (c) give studying a dynamic return (expected future wage × gate probability); (d) add travel cost
+and the rural/urban split to test unused places + selective queues; (e) grid over city sizes and gate designs.
+
+**Honest bottom line:** the toy shows the right *direction* — factory posts reduce completion, a diploma gate protects
+it — but its Yang component barely bites. The thing to chase is not city size per se but **how many rungs carry
+credentials**; that is where the leverage is.
