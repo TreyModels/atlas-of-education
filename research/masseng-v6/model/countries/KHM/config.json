@@ -1,0 +1,220 @@
+{
+ "country": "Cambodia",
+ "iso3": "KHM",
+ "years": {
+  "simulate_from": 1979,
+  "simulate_to": 2024,
+  "train": [
+   1995,
+   2010
+  ],
+  "test": [
+   2011,
+   2024
+  ]
+ },
+ "demography": {
+  "pre_data_pop_growth": 0.02,
+  "gini_default": 0.36,
+  "_note": "WDI has no Gini for Cambodia; 0.36 is DECLARED (order of CSES-based estimates). Simulation starts in 1979, when schools reopened after the Khmer Rouge period: earlier cohorts have no schooling history in the model."
+ },
+ "wdi_repairs": {
+  "NY.GDP.PCAP.KD": {
+   "drop_before": 1994,
+   "why": "WDI constant-dollar GDP per head falls from 845 (1993) to 514 (1994), a series break, not a 39% collapse. Values before 1994 are dropped and the 1994 value is held flat backwards (DECLARED)."
+  }
+ },
+ "structure": {
+  "primary_grades": 6,
+  "lower_secondary_grades": 3,
+  "upper_secondary_grades": 3,
+  "upper_secondary_from": 0,
+  "tertiary_years": 4,
+  "max_age": 29,
+  "late_entry_max_age": 12,
+  "late_entry_hazard": 0.15,
+  "_note": "6+3+3 from 1994 (MoEYS; 5+3+3 in 1987-94 is not modelled). Late entry up to age 12 at 15% a year of the never-entered (DECLARED) because overage entry is a defining feature of the Cambodian series."
+ },
+ "catch_up_entry": {
+  "years": [
+   1979,
+   1990
+  ],
+  "max_age": 14,
+  "rate": 0.35,
+  "_note": "Post-conflict reopening: never-entered children up to 14 enter at 35% a year (DECLARED). Produces the 1980s overage bulge; not fitted."
+ },
+ "entry_age": {
+  "share_at_6": {
+   "1979": 0.6,
+   "2024": 0.8
+  },
+  "_note": "DECLARED."
+ },
+ "repetition": {
+  "primary": 0.1,
+  "secondary": 0.05,
+  "_note": "DECLARED, order of MoEYS rates in the 2000s."
+ },
+ "costs_share_of_gdppc": {
+  "_note": "DECLARED. Includes informal fees (about 8.7% of family income per child in 2007, NEP via UNDP), materials and forgone earnings. Public HEIs charge fees in Cambodia.",
+  "primary": {
+   "public": 0.14,
+   "private": 0.6
+  },
+  "secondary": {
+   "public": 0.3,
+   "private": 0.8
+  },
+  "upper_secondary": {
+   "public": 0.4,
+   "private": 0.9
+  },
+  "tertiary": {
+   "public": 0.9,
+   "private": 1.1
+  }
+ },
+ "policy_events": [
+  {
+   "year": 2001,
+   "what": "Priority Action Program: registration and other start-of-year fees abolished in primary and lower secondary, replaced by school operating grants (SY2000/01).",
+   "level": "primary",
+   "sector": "public",
+   "cost_change": -0.06
+  },
+  {
+   "year": 2001,
+   "what": "Priority Action Program, lower secondary fee abolition.",
+   "level": "secondary",
+   "sector": "public",
+   "cost_change": -0.06
+  }
+ ],
+ "transfers": [
+  {
+   "year": 2004,
+   "ramp_years": 4,
+   "what": "Lower secondary scholarships for poor students (PAP 12 and JFPR, 13,938 recipients in 2003-04 rising to 25,872 in 2007-08).",
+   "deciles": [
+    0,
+    1,
+    2
+   ],
+   "levels": [
+    "secondary"
+   ],
+   "value": 0.03
+  }
+ ],
+ "tertiary_entry_exam": {
+  "_note": "Grade 12 national exam (Bac II) first-sitting pass rates, press reports of MoEYS figures (see facts.md). 2014 uses the post-resit 40.67. 2020: exam cancelled, all passed. Before 2012 DECLARED 80.",
+  "default_before_data": 80,
+  "pass_rate": {
+   "2012": 86.48,
+   "2013": 86.77,
+   "2014": 40.67,
+   "2015": 55.87,
+   "2016": 62.18,
+   "2017": 63.84,
+   "2018": 67.07,
+   "2019": 68.62,
+   "2020": 100.0,
+   "2021": 65.65,
+   "2022": 72.33,
+   "2023": 72.89,
+   "2024": 79.0
+  }
+ },
+ "tertiary_public_capacity": {
+  "rule": "unconstrained",
+  "anchor_year": 2000,
+  "_note": "Fixed before any Cambodian fit: the supply rule preferred in the Philippine test (PROTOCOL A5)."
+ },
+ "targets": {
+  "income_gradient_2010": {
+   "_role": "train",
+   "_note": "DHS 2010 Table 2.5 quintile net attendance, from sources/demand_costs.md. Quintile ratio used as registered gradient proxy.",
+   "primary": {"poorest":79.3,"richest":86.0},
+   "secondary": {"poorest":20.2,"richest":65.8}
+  },
+  "income_gradient_2012": {
+   "_note": "CSES 2012, UNICEF/MoEYS/UIS out-of-school study 2016. QUINTILES, ages 12-14 net attendance in lower secondary. Direction and rough size only.",
+   "secondary": {
+    "poorest": 17.3,
+    "richest": 57.6
+   }
+  }
+ },
+ "v5": {
+  "_note": "Inputs used only by engine5. DECLARED unless a source is given.",
+  "years": {
+   "simulate_from": 1979,
+   "simulate_to": 2024,
+   "train": [
+    1995,
+    2010
+   ],
+   "test": [
+    2011,
+    2024
+   ]
+  },
+  "direct_costs_share_of_gdppc": {
+   "_note": "Anchored to CSES 2019/20 average annual education expenses per pupil by level (thousand riel: primary 651, lower secondary 1,142, upper secondary 2,272, tertiary 5,548; sources/demand_costs.json) divided by GDP per head (~6.8 million riel in 2019, WDI current US$ x ~4,050 riel/$). Public/private split DECLARED (private about 3x for basic levels).",
+   "primary": {
+    "public": 0.09,
+    "private": 0.3
+   },
+   "secondary": {
+    "public": 0.16,
+    "private": 0.45
+   },
+   "upper_secondary": {
+    "public": 0.32,
+    "private": 0.7
+   },
+   "tertiary": {
+    "public": 0.75,
+    "private": 0.9
+   }
+  },
+  "forgone_earnings_share_of_gdppc": {
+   "_note": "DECLARED",
+   "primary": 0.02,
+   "secondary": 0.1,
+   "upper_secondary": 0.2,
+   "tertiary": 0.35
+  },
+  "policy_events": [
+   {
+    "year": 2001,
+    "level": "primary",
+    "sector": "public",
+    "direct_cost_change": -0.04,
+    "what": "Priority Action Program: start-of-year fees abolished; informal fees persist (Bray)."
+   },
+   {
+    "year": 2001,
+    "level": "secondary",
+    "sector": "public",
+    "direct_cost_change": -0.04,
+    "what": "Priority Action Program, lower secondary."
+   }
+  ],
+  "driver_map": {
+   "premium_secondary": "premium_secondary",
+   "premium_tertiary": "premium_tertiary",
+   "relational": "occ_credential_share"
+  },
+  "target_map": {
+   "cses_household_education_share": {"model":"edu_share_hh","all_test":true,"only_years":[2019]}
+  },
+  "fixed_params": {
+   "c_scale": 1.0,
+   "_why": "No household-spending target in the 1995-2010 training window; the cost schedule is in data units (CSES)."
+  },
+  "household_consumption_share_of_gdp": 0.8,
+  "max_defer_age": 25
+ }
+}
