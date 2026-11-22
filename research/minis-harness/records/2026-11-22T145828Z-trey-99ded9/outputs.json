@@ -1,0 +1,36 @@
+{
+  "schema": 1,
+  "run_id": "2026-11-22T145828Z-trey-99ded9",
+  "files": [
+    {
+      "path": "research/minis-harness/HARNESS.md",
+      "sha256": "5c21c1695ca68cbbf1fd8c79e358440e2d4218741dca842bc0f551c510527a43",
+      "bytes": 5091,
+      "kind": "authored"
+    },
+    {
+      "path": "research/minis-harness/harness.py",
+      "sha256": "0bf219feb44dfb92850906f9eab596ceed7db41f3224a7edd3f8922667e03e50",
+      "bytes": 8436,
+      "kind": "authored"
+    },
+    {
+      "path": "research/minis-harness/make_run_md.py",
+      "sha256": "668d283943d6393698e47625e2529ba4e498dd26fabf954ea40aa04d604b6393",
+      "bytes": 3293,
+      "kind": "authored"
+    },
+    {
+      "path": "research/minis-harness/records/2026-11-22T145828Z-trey-99ded9/run.json",
+      "sha256": "75b11a77597b45471957d68ae731e36f0867b38a28259b4c5249e5fb9be2ade6",
+      "bytes": 681,
+      "kind": "authored"
+    },
+    {
+      "path": "research/minis-harness/test_harness.py",
+      "sha256": "fc8b328f52f792aac1d7b203797449e9dc089c33047e9d920d48891873323afa",
+      "bytes": 3919,
+      "kind": "authored"
+    }
+  ]
+}

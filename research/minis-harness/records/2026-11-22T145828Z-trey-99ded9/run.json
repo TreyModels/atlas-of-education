@@ -1,0 +1,21 @@
+{
+  "schema": 1,
+  "run_id": "2026-11-22T145828Z-trey-99ded9",
+  "started_utc": "2026-11-22T14:58:28Z",
+  "actor": "trey",
+  "operator": "agent",
+  "model": "minis/agent-loop",
+  "harness": "minis",
+  "harness_version": "2026-11-22",
+  "session": "9C92A7CD-AF1D-42B4-AE5D-44401652CA4C",
+  "intent": "Scaffold the Minis run-record harness under research/minis-harness/ with HARNESS.md, harness.py, make_run_md.py and unit tests.",
+  "scope": [
+    "research/minis-harness/"
+  ],
+  "repo_head": "55732f4728a13adb3aec5173d8bc7f3a4ac7f926",
+  "source_digest": "45fff331b05df27167ff832ae98bf965af3da9320ba98d9d704ba82f7cc99f86",
+  "network": [
+    "api.github.com"
+  ],
+  "notes": ""
+}
