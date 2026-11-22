@@ -1,0 +1,80 @@
+194 countries, 13 features, 0 blanks filled
+
+choosing how many groups
+  3 groups: separation 0.260
+  4 groups: separation 0.208
+  5 groups: separation 0.214
+  6 groups: separation 0.176
+  7 groups: separation 0.180
+chosen: 3 groups (separation 0.260)
+
+================================================================================
+THE GROUPS
+================================================================================
+
+GROUP 1 — 37 countries
+   lsc                   95.8   (all countries      70.6)
+   sec                  104.8   (all countries      72.6)
+   ter                   63.8   (all countries      29.7)
+   gpi_ter                1.2   (all countries       1.0)
+   u5mr                  10.4   (all countries      51.1)
+   gdppc_log          39796.4   (all countries   12358.0)
+   urban                 80.3   (all countries      54.7)
+   flfp                  51.3   (all countries      50.0)
+   electricity           99.9   (all countries      77.9)
+   lsc change            25.4   (all countries      25.5)
+   ter change            18.2   (all countries      20.4)
+   u5mr change          -10.4   (all countries     -45.4)
+   gdppc_log change   15208.9   (all countries    3981.1)
+   AUT, BEL, BMU, CHE, CHL, CYM, CYP, CZE, DNK, ESP, EST, FIN, FRA, GBR, GRC, HKG, IRL, ISL, ISR, ITA, KOR, LTU, LUX, LVA, MAC, MCO, MLT, NOR, POL, PRI, PRT, QAT, SGP, SMR, SVN, SWE, USA
+
+GROUP 2 — 101 countries
+   lsc                   80.8   (all countries      70.6)
+   sec                   81.9   (all countries      72.6)
+   ter                   30.0   (all countries      29.7)
+   gpi_ter                1.2   (all countries       1.0)
+   u5mr                  29.7   (all countries      51.1)
+   gdppc_log           8441.1   (all countries   12358.0)
+   urban                 58.0   (all countries      54.7)
+   flfp                  45.6   (all countries      50.0)
+   electricity           93.1   (all countries      77.9)
+   lsc change            24.4   (all countries      25.5)
+   ter change            26.0   (all countries      20.4)
+   u5mr change          -27.3   (all countries     -45.4)
+   gdppc_log change    1791.4   (all countries    3981.1)
+   ABW, ALB, AND, ARE, ARG, ARM, ATG, AZE, BGR, BHR, BHS, BIH, BLR, BLZ, BOL, BRB, BRN, BWA, CHN, COL, CPV, CRI, CUB, DMA, DOM, DZA, ECU, EGY, FJI, FSM, GEO, GIB, GRD, GTM, GUY, HND, HRV, HUN, IDN, IRN, IRQ, JAM, JOR, KAZ, KGZ, KIR, KNA, KWT, LBN, LCA, LIE, LKA, MAR, MDA, MDV, MEX, MHL, MKD, MNE, MNG, MUS, MYS, NAM, NCL, NIC, NRU, OMN, PAN, PER, PHL, PLW, PRY, PSE, PYF, ROU, RUS, SAU, SLV, SRB, SUR, SVK, SXM, SYC, SYR, TCA, THA, TJK, TON, TTO, TUN, TUR, TUV, UKR, URY, UZB, VCT, VEN, VGB, VNM, WSM, ZAF
+
+GROUP 3 — 56 countries
+   lsc                   35.5   (all countries      70.6)
+   sec                   34.3   (all countries      72.6)
+   ter                    6.5   (all countries      29.7)
+   gpi_ter                0.6   (all countries       1.0)
+   u5mr                 116.5   (all countries      51.1)
+   gdppc_log           1293.6   (all countries   12358.0)
+   urban                 31.7   (all countries      54.7)
+   flfp                  56.9   (all countries      50.0)
+   electricity           35.8   (all countries      77.9)
+   lsc change            27.7   (all countries      25.5)
+   ter change            11.7   (all countries      20.4)
+   u5mr change         -101.0   (all countries     -45.4)
+   gdppc_log change     512.2   (all countries    3981.1)
+   AFG, AGO, BDI, BEN, BFA, BGD, BTN, CAF, CIV, CMR, COD, COG, COM, ERI, ETH, GAB, GHA, GIN, GMB, GNB, GNQ, HTI, IND, KEN, KHM, LAO, LBR, LSO, MDG, MLI, MMR, MOZ, MRT, MWI, NER, NGA, NPL, PAK, PNG, RWA, SDN, SEN, SLB, SLE, SSD, STP, SWZ, TCD, TGO, TLS, TZA, UGA, VUT, YEM, ZMB, ZWE
+
+================================================================================
+HOW THESE CUT ACROSS WORLD BANK REGIONS
+================================================================================
+                                            G1    G2    G3
+East Asia & Pacific                          4    19     7
+Europe & Central Asia                       25    25     0
+Latin America & Caribbean                    3    34     1
+Middle East, North Africa, Afghanistan       3    15     3
+North America                                2     0     0
+South Asia                                   0     2     4
+Sub-Saharan Africa                           0     6    41
+
+================================================================================
+SCHOOLING -> FERTILITY, INSIDE EACH GROUP
+================================================================================
+  GROUP 1: n=  340,  32 countries   estimate +0.007 (±0.003) 
+  GROUP 2: n= 1638, 100 countries   estimate +0.013 (±0.002) **
+  GROUP 3: n=  950,  56 countries   estimate -0.007 (±0.003) **

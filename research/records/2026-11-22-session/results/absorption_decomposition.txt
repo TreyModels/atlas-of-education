@@ -1,0 +1,31 @@
+============================================================================
+1. HOW CORRELATED ARE THE THREE? (country means, 1990-2020)
+============================================================================
+  n = 181 countries
+  electricity vs cities   r = +0.69
+  electricity vs paid jobs r = +0.80
+  cities vs paid jobs      r = +0.74
+
+============================================================================
+2. ENTER THEM IN EVERY ORDER — does the winner change?
+   (upper-secondary completion as the outcome)
+============================================================================
+  higher-ed effect with NO controls: +0.106
+  + electricity                        +0.102  (n=1516)
+  + urban                              +0.035  (n=2629)
+  + wage_emp                           +0.049  (n=1618)
+  + electricity, urban                 +0.079  (n=1516)
+  + electricity, wage_emp              +0.088  (n=1455)
+  + urban, wage_emp                    +0.017  (n=1618)
+  + electricity, urban, wage_emp       +0.066  (n=1455)
+
+  every ordering, final value after all three:
+    always lands between +0.066 and +0.066  (mean +0.066)
+
+============================================================================
+3. WHICH DIRECTION? each variable against higher education
+============================================================================
+  electricity  -> higher ed: +0.040 (±0.093)   higher ed -> electricity: -0.014 (±0.016)
+  urban        -> higher ed: +0.525 (±0.165)   higher ed -> urban: -0.009 (±0.016)
+  wage_emp     -> higher ed: +1.418 (±0.410)   higher ed -> wage_emp: +0.009 (±0.036)
+  gdppc_log    -> higher ed: +0.000 (±0.000)   higher ed -> gdppc_log: +95.548 (±23.918)

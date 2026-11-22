@@ -1,0 +1,36 @@
+
+==============================================================================
+EFFECT OF HIGHER-ED GROWTH ON PRIMARY completion
+==============================================================================
+  nothing               -0.080 (±0.032)**  n= 1965, 157 countries
+  + income              -0.081 (±0.032)**  n= 1961, 156 countries
+  + power & cities      -0.149 (±0.041)**  n= 1961, 156 countries
+  + paid jobs           -0.145 (±0.042)**  n= 1932, 147 countries
+  + child survival      -0.128 (±0.034)**  n= 1907, 145 countries
+  + MARRIAGE AGE        -0.149 (±0.040)**  n= 1533, 115 countries
+  + ROADS               -0.165 (±0.146)    n=  700,  42 countries
+  + everything          -0.083 (±0.178)    n=  669,  40 countries
+
+==============================================================================
+EFFECT OF HIGHER-ED GROWTH ON LOWER-secondary completion
+==============================================================================
+  nothing               -0.026 (±0.051)    n= 1491, 154 countries
+  + income              -0.025 (±0.051)    n= 1490, 153 countries
+  + power & cities      -0.095 (±0.045)**  n= 1490, 153 countries
+  + paid jobs           -0.094 (±0.045)**  n= 1466, 144 countries
+  + child survival      -0.070 (±0.041)    n= 1443, 142 countries
+  + MARRIAGE AGE        -0.116 (±0.044)**  n= 1130, 113 countries
+  + ROADS               +0.075 (±0.262)    n=  443,  39 countries
+  + everything          +0.009 (±0.231)    n=  411,  38 countries
+
+==============================================================================
+EFFECT OF HIGHER-ED GROWTH ON UPPER-secondary completion
+==============================================================================
+  nothing               +0.106 (±0.056)    n= 2629, 182 countries
+  + income              +0.102 (±0.056)    n= 2623, 181 countries
+  + power & cities      +0.027 (±0.048)    n= 2623, 181 countries
+  + paid jobs           +0.024 (±0.048)    n= 2573, 168 countries
+  + child survival      +0.070 (±0.049)    n= 2543, 164 countries
+  + MARRIAGE AGE        +0.060 (±0.060)    n= 2023, 127 countries
+  + ROADS               +0.224 (±0.274)    n=  730,  47 countries
+  + everything          +0.223 (±0.297)    n=  696,  45 countries
