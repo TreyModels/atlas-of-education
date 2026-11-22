@@ -1,0 +1,102 @@
+58 variables, 6612 jobs
+EVERY-VARIABLE SWEEP: 58 variables, 3306 ordered pairs, 310 robust (both halves). 57s.
+
+[pre_ger] (schooling) robust predictors of its 10-yr change: +lit_adult(+5.07)
+[prm_ner] (schooling) robust predictors of its 10-yr change: 
+[prm_cmp] (schooling) robust predictors of its 10-yr change: -u5mr(-6.16), +prm_ner(+5.48)
+[sec_ner] (schooling) robust predictors of its 10-yr change: -u5mr(-5.47), +prm_cmp(+4.96), +electricity(+4.47), +prm_ner(+2.85), -fertility(-2.79), -agri_va(-1.90), -young_share(-1.88)
+[ptr_prm] (schooling) robust predictors of its 10-yr change: +fertility(+3.27), -life_exp(-3.10), +u5mr(+2.94), -wage_emp(-1.89), -prm_cmp(-1.87), -gdppc_log(-1.77), +young_share(+1.74), -sec(-1.54), -lsc(-1.04), -gov_cons(-0.56)
+[ptr_sec] (schooling) robust predictors of its 10-yr change: +ptr_prm(+3.07), -lsc(-2.37), -sec_ner(-2.13), -prm_cmp(-1.67), +pop_log(+0.65)
+[edu_xpd_gdp] (schooling) robust predictors of its 10-yr change: +sec_ner(+0.32), +urban(+0.13)
+[edu_xpd_gov] (schooling) robust predictors of its 10-yr change: +gini(+1.35), +young_share(+1.26), +poverty(+0.88), -gov_xpn(-0.56), -pre_ger(-0.53), -gdppc_log(-0.45), -life_exp(-0.28)
+[priv_prm] (schooling) robust predictors of its 10-yr change: +urban(+2.27), -lit_adult(-1.39), +fdi(+0.82)
+[priv_sec] (schooling) robust predictors of its 10-yr change: 
+[gpi_sec] (schooling) robust predictors of its 10-yr change: -u5mr(-0.06), +prm_cmp(+0.04), +prm_ner(+0.04), +life_exp(+0.03), +investment(+0.01), -sec_ner(-0.01), +young_share(+0.01), -ter(-0.01)
+[gpi_ter] (schooling) robust predictors of its 10-yr change: -u5mr(-0.13), +gpi_sec(+0.09), +electricity(+0.07), +wage_emp(+0.05), -internet(-0.02), +emp_ind(+0.02), -ter(-0.01)
+[repeat_prm] (schooling) robust predictors of its 10-yr change: +fertility(+0.66), +flfp(+0.30), +tax(+0.28), +young_share(+0.05)
+[lit_adult] (skills) robust predictors of its 10-yr change: -u5mr(-2.10), -fdi(-0.25)
+[lab_adv_edu] (skills) robust predictors of its 10-yr change: -unemp_adv_edu(-1.60)
+[unemp_adv_edu] (skills) robust predictors of its 10-yr change: -flfp(-2.14), -pre_ger(-2.07)
+[unemp_basic_edu] (skills) robust predictors of its 10-yr change: -poverty(-1.68), -vuln_emp(-1.48), +wage_emp(+1.47), -unemp_adv_edu(-1.23), +emp_ind(+0.88), +gov_cons(+0.19)
+[emp_agri] (employment) robust predictors of its 10-yr change: +fertility(+1.67), -prm_cmp(-1.57), +poverty(+1.54), -lsc(-1.05), -emp_ind(-0.93), -manuf_va(-0.59)
+[emp_ind] (employment) robust predictors of its 10-yr change: -pre_ger(-1.17), -eci_pct(-0.71), -gdppc_log(-0.62), -srv_va(-0.60), -fdi(-0.51), +emp_agri(+0.50), +unemp_adv_edu(+0.45), -exports(-0.44), -emp_srv(-0.40), -internet(-0.38)
+[emp_srv] (employment) robust predictors of its 10-yr change: +wage_emp(+2.64), -vuln_emp(-2.26), +gdppc_log(+2.14), +electricity(+1.84), +prm_cmp(+1.46)
+[wage_emp] (employment) robust predictors of its 10-yr change: +electricity(+2.13), -poverty(-1.13), +prm_cmp(+1.08), +prm_ner(+0.64), -fertility(-0.30), -inflation(-0.18)
+[vuln_emp] (employment) robust predictors of its 10-yr change: +poverty(+1.29), -prm_cmp(-1.17)
+[employers] (employment) robust predictors of its 10-yr change: -ter(-0.15), -sec_ner(-0.12)
+[unemp] (employment) robust predictors of its 10-yr change: -unemp_basic_edu(-1.42), -debt_service(-0.51), +gpi_sec(+0.19), +inflation(+0.04)
+[unemp_youth] (employment) robust predictors of its 10-yr change: -unemp_basic_edu(-1.81), -debt_service(-1.00), +investment(+1.00), +gpi_sec(+0.88)
+[flfp] (employment) robust predictors of its 10-yr change: +emp_srv(+1.39), -neet(-1.32), +urban(+1.18), +srv_va(+1.01), +exports(+0.88), -fertility(-0.80), +fdi(+0.80)
+[neet] (employment) robust predictors of its 10-yr change: +young_share(+4.52), -internet(-3.48), -exports(-1.47)
+[gdppc_log] (economy) robust predictors of its 10-yr change: -fertility(-0.16), -u5mr(-0.14), +electricity(+0.13), +lit_adult(+0.11), +wage_emp(+0.10), +growth(+0.07)
+[growth] (economy) robust predictors of its 10-yr change: +manuf_va(+1.28), -emp_srv(-1.27), -internet(-1.19), -priv_prm(-1.14), +agri_va(+0.69), +emp_agri(+0.58), -gpi_ter(-0.45), +ptr_prm(+0.28), +poverty(+0.00)
+[agri_va] (economy) robust predictors of its 10-yr change: +u5mr(+2.33), -lit_adult(-2.18), +fertility(+2.00), +vuln_emp(+1.60), -wage_emp(-1.54), -gpi_ter(-1.48), -eci_pct(-1.34), +young_share(+1.24), +emp_agri(+0.80), +ptr_prm(+0.52)
+[manuf_va] (economy) robust predictors of its 10-yr change: -srv_va(-0.42), -gov_cons(-0.33), -emp_srv(-0.15)
+[srv_va] (economy) robust predictors of its 10-yr change: +emp_srv(+2.73), -vuln_emp(-2.46), +gdppc_log(+2.35), +life_exp(+2.35), +wage_emp(+2.32), +lit_adult(+2.08), -emp_agri(-2.05), +urban(+1.99), -u5mr(-1.89), -fertility(-1.83)
+[exports] (economy) robust predictors of its 10-yr change: -young_share(-4.18), -fertility(-3.68), +fdi(+3.49), +life_exp(+3.46), +sec(+2.88), +pre_ger(+2.66), +ter(+2.16), +gdppc_log(+1.52), -agri_va(-1.14), -priv_prm(-0.81)
+[fdi] (economy) robust predictors of its 10-yr change: +exports(+6.24), -pop_log(-3.58)
+[remit] (economy) robust predictors of its 10-yr change: +agri_va(+1.10), +hh_cons(+0.93), +poverty(+0.71), -gov_cons(-0.71), -tax(-0.40)
+[rents] (economy) robust predictors of its 10-yr change: +poverty(+1.23), -eci_pct(-1.05), +agri_va(+0.79), +vuln_emp(+0.76), -wage_emp(-0.71), +emp_agri(+0.67), -gdppc_log(-0.41)
+[gini] (economy) robust predictors of its 10-yr change: -sec_ner(-0.82)
+[poverty] (economy) robust predictors of its 10-yr change: -electricity(-9.76), -lsc(-5.68), +fertility(+5.13), +flfp(+1.30), +gov_cons(+0.65)
+[inflation] (economy) robust predictors of its 10-yr change: +pop_log(+10.09), -gov_cons(-4.75), -edu_xpd_gdp(-4.38)
+[investment] (economy) robust predictors of its 10-yr change: +poverty(+1.08), +growth(+0.92), -pre_ger(-0.80)
+[hh_cons] (economy) robust predictors of its 10-yr change: -fdi(-0.98), +repeat_prm(+0.93)
+[tax] (state) robust predictors of its 10-yr change: 
+[gov_cons] (state) robust predictors of its 10-yr change: +emp_srv(+1.03), +urban(+0.81), -remit(-0.48), +internet(+0.42)
+[gov_xpn] (state) robust predictors of its 10-yr change: -young_share(-5.93), +ter(+5.00), -fertility(-4.43), -u5mr(-4.26), +electricity(+4.06), -emp_agri(-4.06), -vuln_emp(-3.95), +wage_emp(+3.39), +gdppc_log(+3.24), -agri_va(-2.78)
+[military] (state) robust predictors of its 10-yr change: 
+[electricity] (state) robust predictors of its 10-yr change: -ter(-2.64), -gdppc_log(-2.52), +investment(+1.88)
+[internet] (state) robust predictors of its 10-yr change: -young_share(-12.66), +gdppc_log(+11.85), -poverty(-11.57), +electricity(+10.92), +life_exp(+10.05), -u5mr(-9.99), +prm_cmp(+8.70), +emp_srv(+8.01), -agri_va(-7.64), +gpi_sec(+3.61)
+[debt_service] (state) robust predictors of its 10-yr change: -young_share(-1.37), +ter(+1.30), -repeat_prm(-1.26), -edu_xpd_gov(-1.20)
+[urban] (demography) robust predictors of its 10-yr change: +vuln_emp(+1.62), -wage_emp(-1.48), +gini(+1.03), -eci_pct(-0.92), +investment(+0.92), +ptr_sec(+0.46), -unemp_basic_edu(-0.44)
+[fertility] (demography) robust predictors of its 10-yr change: +u5mr(+0.34), -young_share(-0.33), -life_exp(-0.29), -gpi_sec(-0.12), +ter(+0.09), +unemp_basic_edu(+0.07), -investment(-0.06), +tax(+0.02)
+[young_share] (demography) robust predictors of its 10-yr change: +fertility(+4.42), -life_exp(-2.18), +u5mr(+1.97), -prm_cmp(-1.43), -prm_ner(-1.30), -lit_adult(-1.17), -gpi_sec(-1.02), -emp_ind(-0.64), -gini(-0.23), -manuf_va(-0.22)
+[life_exp] (demography) robust predictors of its 10-yr change: +eci_pct(+0.54), +gdppc_log(+0.52)
+[u5mr] (demography) robust predictors of its 10-yr change: 
+[pop_log] (demography) robust predictors of its 10-yr change: +fertility(+0.10), -electricity(-0.06), -wage_emp(-0.05), +rents(+0.05), -unemp(-0.03), +military(+0.02), -hh_cons(-0.02), +exports(+0.02), -remit(-0.01), -gov_xpn(-0.01)
+[eci_pct] (economy) robust predictors of its 10-yr change: +gdppc_log(+0.06), -fertility(-0.04), +emp_ind(+0.03), +manuf_va(+0.02)
+[ter] (schooling) robust predictors of its 10-yr change: +lsc(+6.36), -young_share(-6.12), +electricity(+5.43), +sec(+5.26), +life_exp(+5.22), -poverty(-5.17), +sec_ner(+5.02), -fertility(-4.93), +prm_cmp(+4.15), -u5mr(-3.90)
+[sec] (schooling) robust predictors of its 10-yr change: +lit_adult(+5.09), +prm_ner(+4.51), -fdi(-0.87)
+[lsc] (schooling) robust predictors of its 10-yr change: -u5mr(-7.05), -fertility(-4.99), -ptr_prm(-4.62), +prm_ner(+3.66), -hh_cons(-1.48)
+
+ONE-WAY LEADS BY BLOCK (count of robust X->Y with no robust Y->X):
+   economy    -> economy    26
+   schooling  -> schooling  24
+   demography -> schooling  24
+   demography -> economy    17
+   economy    -> employment 16
+   employment -> economy    16
+   schooling  -> economy    16
+   economy    -> schooling  12
+   economy    -> demography 12
+   schooling  -> employment 11
+   schooling  -> state      10
+   demography -> state      9
+   state      -> economy    8
+   employment -> state      7
+   state      -> schooling  6
+   demography -> employment 6
+   employment -> employment 6
+   state      -> employment 6
+   economy    -> state      6
+   employment -> schooling  5
+   employment -> demography 5
+   demography -> demography 5
+   skills     -> schooling  4
+   employment -> skills     4
+   schooling  -> demography 4
+   state      -> demography 4
+   skills     -> employment 3
+   skills     -> economy    3
+   state      -> state      3
+   skills     -> demography 3
+   economy    -> skills     2
+   skills     -> skills     2
+   demography -> skills     1
+   schooling  -> skills     1
+   state      -> skills     1
+MOST-LEADING variables (one-way out-degree): u5mr(15), fertility(15), prm_cmp(13), young_share(12), wage_emp(11), gdppc_log(11), poverty(11), prm_ner(9), agri_va(9), electricity(9), life_exp(9), lit_adult(8), sec_ner(8), urban(8), vuln_emp(8)
+MOST-FOLLOWING variables (one-way in-degree): srv_va(19), gov_xpn(16), ter(14), agri_va(11), internet(11), emp_ind(10), exports(10), pop_log(10), ptr_prm(9), growth(9), young_share(8), sec_ner(7), edu_xpd_gov(7), gpi_sec(7), gpi_ter(7)
+
+Associations only; 10-year horizon; country-split replicated. Mechanical links (e.g. a cohort-size denominator) are not removed.

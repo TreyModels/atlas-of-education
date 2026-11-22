@@ -1,0 +1,15 @@
+TRIAD GLOBAL SENSITIVITY: 4000 sample-seeds (2000 parameter samples).
+Pipeline emerged (baseline end tertiary >= 0.02): 58% of runs.
+
+household  necessary in 100% of emerged runs; tertiary after removal / baseline: median 0.01 (10-90%: 0.00-0.03)
+           governed most by: cost_scale (-0.63), disc (+0.39), theta_s (-0.26), formal1 (+0.18), formal0 (+0.12), borrow (-0.10)
+employer   necessary in 50% of emerged runs; tertiary after removal / baseline: median 0.53 (10-90%: 0.00-1.01)
+           governed most by: cost_scale (-0.46), disc (+0.34), theta_s (+0.23), test_noise (-0.12), trust_bonus (-0.10), subsist (-0.05)
+state      necessary in 28% of emerged runs; tertiary after removal / baseline: median 0.62 (10-90%: 0.04-0.79)
+           governed most by: cost_scale (-0.46), y_sigma (+0.20), tax (-0.15), borrow (+0.15), theta_s (+0.14), theta_a (+0.10)
+
+Baseline tertiary share governed most by: cost_scale (-0.55), borrow (+0.41), disc (+0.35), theta_s (+0.26), subsist (-0.14), formal1 (-0.11), tax (+0.08), kin0 (-0.06)
+
+Read: 'necessary' = removing the actor cuts end-state tertiary by half or more. A share near 100% means the
+necessity result is robust across the sampled space; a low share means it depends on particular parameter values.
+Spearman signs: positive = higher parameter values make the knockout LESS damaging.

@@ -1,0 +1,54 @@
+IDENT PHL truth=H rep1: winner=H
+IDENT PHL truth=H rep10: winner=HE
+IDENT PHL truth=H rep12: winner=H
+IDENT PHL truth=H rep7: winner=H
+IDENT PHL truth=H rep0: winner=H
+IDENT PHL truth=H rep11: winner=H
+IDENT PHL truth=H rep3: winner=H
+IDENT PHL truth=H rep6: winner=H
+IDENT PHL truth=H rep9: winner=H
+IDENT PHL truth=H rep5: winner=H
+IDENT PHL truth=H rep2: winner=H
+IDENT PHL truth=H rep4: winner=H
+IDENT PHL truth=HE rep0: winner=HE
+IDENT PHL truth=H rep8: winner=HS
+IDENT PHL truth=H rep15: winner=HS
+IDENT PHL truth=H rep19: winner=HS
+IDENT PHL truth=H rep17: winner=H
+IDENT PHL truth=H rep13: winner=H
+IDENT PHL truth=H rep14: winner=H
+IDENT PHL truth=H rep16: winner=H
+IDENT PHL truth=HE rep3: winner=HE
+IDENT PHL truth=H rep18: winner=HS
+IDENT PHL truth=HE rep6: winner=HE
+IDENT PHL truth=HE rep10: winner=HE
+IDENT PHL truth=HE rep1: winner=HES
+IDENT PHL truth=HE rep9: winner=HE
+IDENT PHL truth=HE rep14: winner=HE
+IDENT PHL truth=HE rep2: winner=HE
+IDENT PHL truth=HE rep5: winner=HE
+IDENT PHL truth=HE rep4: winner=HES
+IDENT PHL truth=HE rep19: winner=HE
+IDENT PHL truth=HE rep8: winner=HE
+IDENT PHL truth=HE rep11: winner=HE
+IDENT PHL truth=HE rep7: winner=HE
+IDENT PHL truth=HE rep13: winner=HE
+IDENT PHL truth=HE rep16: winner=HE
+IDENT PHL truth=HE rep12: winner=HE
+IDENT PHL truth=HS rep2: winner=HES
+IDENT PHL truth=HS rep0: winner=HS
+IDENT PHL truth=HS rep1: winner=HS
+IDENT PHL truth=HS rep5: winner=HS
+Terminated
+Terminated
+Terminated
+Terminated
+Terminated
+Terminated
+Terminated
+Terminated
+Terminated
+Terminated
+Terminated
+Terminated
+Terminated

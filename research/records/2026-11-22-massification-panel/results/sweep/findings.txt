@@ -1,0 +1,84 @@
+WIDE SWEEP: 55 predictors, outcomes = 10-yr change in tertiary GER (ter), secondary GER (sec), lower-sec completion (lsc).
+ROBUST = Sala-i-Martin CDF(0) >= 0.95, same sign, in BOTH the discovery and confirmation halves of countries.
+
+[ter] robust predictors (11 of 55):
+   - young_share      (demography) coef disc -7.05 / conf -5.79  cdf 1.0/1.0
+   + life_exp         (demography) coef disc +5.78 / conf +4.51  cdf 1.0/1.0
+   - fertility        (demography) coef disc -5.50 / conf -5.55  cdf 1.0/1.0
+   + electricity      (state     ) coef disc +5.24 / conf +6.09  cdf 0.973/0.996
+   - poverty          (economy   ) coef disc -4.62 / conf -3.93  cdf 0.989/1.0
+   + prm_cmp          (schooling ) coef disc +4.31 / conf +5.15  cdf 0.991/1.0
+   + urban            (demography) coef disc +3.63 / conf +3.34  cdf 0.999/0.99
+   + gdppc_log        (economy   ) coef disc +2.84 / conf +1.78  cdf 0.994/1.0
+   + prm_ner          (schooling ) coef disc +2.57 / conf +3.02  cdf 0.984/0.974
+   - agri_va          (economy   ) coef disc -1.74 / conf -2.17  cdf 0.95/0.995
+   - remit            (economy   ) coef disc -1.39 / conf -0.38  cdf 0.999/0.957
+   discovery-only (failed to replicate): manuf_va, ptr_prm, ptr_sec
+
+[sec] robust predictors (3 of 55):
+   + prm_ner          (schooling ) coef disc +4.26 / conf +5.56  cdf 1.0/1.0
+   - fertility        (demography) coef disc -3.84 / conf -5.99  cdf 0.957/0.984
+   - debt_service     (state     ) coef disc -0.94 / conf -0.56  cdf 0.991/0.986
+   discovery-only (failed to replicate): eci_pct, edu_xpd_gdp, gov_xpn, growth, investment, lab_adv_edu, pre_ger, ptr_prm, ptr_sec
+
+[lsc] robust predictors (4 of 55):
+   - fertility        (demography) coef disc -4.43 / conf -8.53  cdf 0.999/0.998
+   - ptr_prm          (schooling ) coef disc -3.98 / conf -2.88  cdf 0.991/0.989
+   + gpi_sec          (schooling ) coef disc +3.47 / conf +4.32  cdf 0.96/0.971
+   - internet         (state     ) coef disc -2.30 / conf -1.32  cdf 0.999/0.96
+   discovery-only (failed to replicate): exports, inflation, investment, prm_cmp, vuln_emp
+
+<asia> (43 countries) strongest stable associations (cdf0 >= 0.95, sign stable in >= 90% of specs):
+   ter: -young_share(-4.2), -fertility(-3.5), +urban(+3.3), +fdi(+2.6), -u5mr(-1.4)
+   sec: +gpi_sec(+5.2), -fertility(-3.4), +prm_cmp(+2.9), +investment(+2.8), +urban(+2.1), +gdppc_log(+1.3)
+   lsc: 
+
+<se_asia> (11 countries) strongest stable associations (cdf0 >= 0.95, sign stable in >= 90% of specs):
+   ter: 
+   sec: 
+   lsc: 
+
+<ne_asia> (7 countries) strongest stable associations (cdf0 >= 0.95, sign stable in >= 90% of specs):
+   ter: 
+   sec: 
+   lsc: 
+
+<s_asia> (8 countries) strongest stable associations (cdf0 >= 0.95, sign stable in >= 90% of specs):
+   ter: 
+   sec: 
+   lsc: 
+
+<early_massifier> (36 countries) strongest stable associations (cdf0 >= 0.95, sign stable in >= 90% of specs):
+   ter: -young_share(-4.4), +pre_ger(+3.9), -fertility(-3.9), +prm_cmp(+3.6), -remit(-3.0), -employers(-2.8), +urban(+2.6), -agri_va(-1.6)
+   sec: -young_share(-3.6), +gdppc_log(+3.4), -ptr_prm(-3.2), +pre_ger(+2.9), +gpi_ter(+2.9), -fertility(-2.3), -employers(-2.1), -remit(-1.3)
+   lsc: -young_share(-3.4), +pre_ger(+2.5), +exports(+2.1)
+
+<late_massifier> (120 countries) strongest stable associations (cdf0 >= 0.95, sign stable in >= 90% of specs):
+   ter: -young_share(-5.0), +electricity(+4.7), +sec_ner(+4.7), +life_exp(+4.6), +neet(+4.2), -fertility(-3.9), +prm_cmp(+3.4), -u5mr(-3.4)
+   sec: -u5mr(-6.4), +life_exp(+5.3), +gdppc_log(+3.5), +prm_ner(+3.3), -agri_va(-3.3), -fertility(-2.9), +investment(+2.0), -young_share(-2.0)
+   lsc: +prm_cmp(+5.7), +investment(+3.5), +prm_ner(+3.1), +priv_prm(+0.8), +tax(+0.6)
+
+<over_complex> (26 countries) strongest stable associations (cdf0 >= 0.95, sign stable in >= 90% of specs):
+   ter: -young_share(-10.2), -fertility(-6.8), +life_exp(+4.3), -u5mr(-4.1), +urban(+4.1), +gdppc_log(+3.8), -agri_va(-3.2), +gov_cons(+2.7)
+   sec: -u5mr(-7.7), +life_exp(+6.8), +gdppc_log(+5.3), +eci_pct(+2.9), +growth(+1.9)
+   lsc: 
+
+<under_complex> (26 countries) strongest stable associations (cdf0 >= 0.95, sign stable in >= 90% of specs):
+   ter: 
+   sec: 
+   lsc: 
+
+<resource_state> (48 countries) strongest stable associations (cdf0 >= 0.95, sign stable in >= 90% of specs):
+   ter: -fertility(-4.1), +life_exp(+3.7), +gpi_ter(+3.5), +gpi_sec(+3.3), +urban(+3.3), -young_share(-3.3), +prm_cmp(+3.3), -flfp(-3.1)
+   sec: +life_exp(+9.8), -u5mr(-7.8), +gpi_ter(+6.8), +gpi_sec(+6.1), +prm_ner(+5.8), +prm_cmp(+5.3), +urban(+5.1), -ptr_prm(-4.9)
+   lsc: +life_exp(+9.1), +gpi_ter(+8.5), -u5mr(-8.2), +prm_cmp(+8.0), +gdppc_log(+6.8), -repeat_prm(-6.7), -ptr_prm(-6.3), +gpi_sec(+6.0)
+
+LEAD-LAG (all countries): which moves first?
+   ter: X leads enrolment: emp_agri, gdppc_log, gpi_ter, life_exp, lit_adult, poverty, pre_ger, prm_cmp, prm_ner, repeat_prm, sec_ner, u5mr, unemp, unemp_youth, vuln_emp, wage_emp
+   ter: enrolment leads X:  debt_service, edu_xpd_gdp, edu_xpd_gov, employers, exports, flfp, gov_cons, gov_xpn, internet, investment, pop_log, remit, rents, srv_va, tax, unemp_adv_edu, unemp_basic_edu
+   sec: X leads enrolment: electricity, emp_srv, gpi_sec, inflation, life_exp, lit_adult, prm_cmp, prm_ner
+   sec: enrolment leads X:  debt_service, edu_xpd_gov, exports, flfp, gov_cons, manuf_va, neet, poverty, rents, sec_ner, srv_va, tax, unemp, unemp_adv_edu, unemp_basic_edu
+   lsc: X leads enrolment: electricity, emp_srv, fdi, fertility, gpi_sec, investment, life_exp, lit_adult, prm_cmp, prm_ner, repeat_prm, u5mr
+   lsc: enrolment leads X:  debt_service, eci_pct, edu_xpd_gdp, edu_xpd_gov, emp_agri, exports, gov_cons, gov_xpn, neet, pop_log, poverty, rents, srv_va, unemp_basic_edu, unemp_youth, vuln_emp, wage_emp
+
+Associations only. Group results are not split-validated (groups are small); treat them as hypotheses.

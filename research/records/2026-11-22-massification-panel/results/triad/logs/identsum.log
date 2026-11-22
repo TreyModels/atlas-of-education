@@ -1,0 +1,23 @@
+== PHL confusion (truth -> chosen):
+  H    {'H': 15, 'HE': 1, 'HS': 4, 'HES': 0}
+  HE   {'H': 0, 'HE': 15, 'HS': 0, 'HES': 2}
+  HS   {'H': 0, 'HE': 0, 'HS': 3, 'HES': 1}
+  HES  {'H': 0, 'HE': 0, 'HS': 0, 'HES': 0}
+  H:eta      truth=2.727 med=2.732 within25=1.0 hits=0/20 -> identified (software diagnostic)
+  H:kappa    truth=15.447 med=15.246 within25=1.0 hits=0/20 -> identified (software diagnostic)
+  HE:eta     truth=1.193 med=1.159 within25=1.0 hits=0/17 -> identified (software diagnostic)
+  HE:kappa   truth=3.245 med=3.007 within25=0.9411764705882353 hits=0/17 -> identified (software diagnostic)
+  HE:b_e     truth=4.976 med=5.188 within25=1.0 hits=0/17 -> identified (software diagnostic)
+  HS:eta     truth=1.710 med=1.673 within25=1.0 hits=0/4 -> identified (software diagnostic)
+  HS:kappa   truth=4.715 med=4.348 within25=1.0 hits=0/4 -> identified (software diagnostic)
+  HS:b_s     truth=4.658 med=4.644 within25=1.0 hits=0/4 -> identified (software diagnostic)
+== KHM confusion (truth -> chosen):
+  H    {'H': 0, 'HE': 0, 'HS': 0, 'HES': 0}
+  HE   {'H': 0, 'HE': 0, 'HS': 0, 'HES': 0}
+  HS   {'H': 0, 'HE': 0, 'HS': 0, 'HES': 0}
+  HES  {'H': 0, 'HE': 0, 'HS': 0, 'HES': 0}
+== HKG confusion (truth -> chosen):
+  H    {'H': 0, 'HE': 0, 'HS': 0, 'HES': 0}
+  HE   {'H': 0, 'HE': 0, 'HS': 0, 'HES': 0}
+  HS   {'H': 0, 'HE': 0, 'HS': 0, 'HES': 0}
+  HES  {'H': 0, 'HE': 0, 'HS': 0, 'HES': 0}

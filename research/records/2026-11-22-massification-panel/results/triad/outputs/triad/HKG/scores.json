@@ -1,0 +1,295 @@
+{
+  "iso": "HKG",
+  "split": [
+    2011,
+    2024
+  ],
+  "primary_series": [
+    "ner_primary",
+    "ner_secondary",
+    "ger_tertiary"
+  ],
+  "n_test_primary": 27,
+  "ranking": [
+    "trend",
+    "logistic",
+    "page_ensemble",
+    "silver_blend",
+    "HE",
+    "H",
+    "HES",
+    "HS",
+    "persistence"
+  ],
+  "table": {
+    "H": {
+      "primary_rmse": 18.294209961223974,
+      "by_series": {
+        "ner_primary": 1.7338448377920062,
+        "ner_secondary": 3.168168810978869,
+        "ger_tertiary": 26.23122714524336,
+        "ger_primary": 4.6666976315449755,
+        "ger_secondary": 6.9728800499739565
+      }
+    },
+    "HE": {
+      "primary_rmse": 18.29420518909243,
+      "by_series": {
+        "ner_primary": 1.7338448378013476,
+        "ner_secondary": 3.1681750725911746,
+        "ger_tertiary": 26.23121982563692,
+        "ger_primary": 4.666697631534591,
+        "ger_secondary": 6.972870751668032
+      }
+    },
+    "HS": {
+      "primary_rmse": 18.294274451352507,
+      "by_series": {
+        "ner_primary": 1.7338448378072313,
+        "ner_secondary": 3.168170919287576,
+        "ger_tertiary": 26.23132042142659,
+        "ger_primary": 4.666697631528164,
+        "ger_secondary": 6.972876546542138
+      }
+    },
+    "HES": {
+      "primary_rmse": 18.294210828271858,
+      "by_series": {
+        "ner_primary": 1.733844837791512,
+        "ner_secondary": 3.168170537159883,
+        "ger_tertiary": 26.231228288891955,
+        "ger_primary": 4.666697631545514,
+        "ger_secondary": 6.972877600906018
+      }
+    },
+    "persistence": {
+      "primary_rmse": 21.17663235826313,
+      "by_series": {
+        "ner_primary": 1.3822982932162522,
+        "ner_secondary": 13.002932932886438,
+        "ger_tertiary": 28.971118739185755,
+        "ger_primary": 1.5078260565020976,
+        "ger_secondary": 18.698958230785667
+      }
+    },
+    "trend": {
+      "primary_rmse": 9.746377244543327,
+      "by_series": {
+        "ner_primary": 5.084469716065785,
+        "ner_secondary": 11.608068615653625,
+        "ger_tertiary": 10.52684059789186,
+        "ger_primary": 3.254665151578607,
+        "ger_secondary": 12.276290751064803
+      }
+    },
+    "logistic": {
+      "primary_rmse": 10.489717462715618,
+      "by_series": {
+        "ner_primary": null,
+        "ner_secondary": 11.861529236383557,
+        "ger_tertiary": 9.670781999137507,
+        "ger_primary": 2.205630490370568,
+        "ger_secondary": 14.04431187614416
+      }
+    },
+    "page_ensemble": {
+      "primary_rmse": 15.207715747813074,
+      "by_series": {
+        "ner_primary": 1.7338448377980236,
+        "ner_secondary": 2.5906567833024354,
+        "ger_tertiary": 21.796948709812572,
+        "ger_primary": 3.7958485069669488,
+        "ger_secondary": 8.293605565472442
+      }
+    },
+    "silver_blend": {
+      "primary_rmse": 17.95531040513186,
+      "by_series": {
+        "ner_primary": 0.9486903204067356,
+        "ner_secondary": 7.2410751503435185,
+        "ger_tertiary": 25.31536985023813,
+        "ger_primary": 2.3834525444906776,
+        "ger_secondary": 13.454593151329465
+      }
+    }
+  },
+  "fits": {
+    "H": {
+      "best_seed": 5,
+      "train_cost": 29.140006420285996,
+      "n_train": 47,
+      "starts": 6,
+      "start_costs": [
+        29.14,
+        29.14,
+        29.14,
+        29.14,
+        29.14,
+        33.704
+      ],
+      "dials": {
+        "eta": 2.8272808987040725,
+        "kappa": 6.246658877607759e-09
+      },
+      "dials_at_bounds": [
+        "kappa"
+      ],
+      "aic": 24.110245197295292,
+      "drivers": {
+        "employer": "nonagri_employment_share",
+        "state": "gov_edu_spend_gdp",
+        "employer_years": [
+          1961,
+          2025
+        ],
+        "state_years": [
+          1971,
+          2024
+        ]
+      }
+    },
+    "HE": {
+      "best_seed": 4,
+      "train_cost": 29.14000638460719,
+      "n_train": 47,
+      "starts": 6,
+      "start_costs": [
+        29.14,
+        29.14,
+        29.14,
+        29.14,
+        29.14,
+        51.45
+      ],
+      "dials": {
+        "eta": 2.827283182940688,
+        "kappa": 3.1810647729567804e-12,
+        "b_e": 2.4293392978049552e-08
+      },
+      "dials_at_bounds": [
+        "kappa",
+        "b_e"
+      ],
+      "aic": 26.11024513974884,
+      "drivers": {
+        "employer": "nonagri_employment_share",
+        "state": "gov_edu_spend_gdp",
+        "employer_years": [
+          1961,
+          2025
+        ],
+        "state_years": [
+          1971,
+          2024
+        ]
+      }
+    },
+    "HS": {
+      "best_seed": 3,
+      "train_cost": 29.140006370976547,
+      "n_train": 47,
+      "starts": 6,
+      "start_costs": [
+        29.14,
+        29.14,
+        29.14,
+        29.14,
+        29.14,
+        51.451
+      ],
+      "dials": {
+        "eta": 2.8272840613479824,
+        "kappa": 7.961832773743211e-09,
+        "b_s": 2.2368567678996327e-13
+      },
+      "dials_at_bounds": [
+        "kappa",
+        "b_s"
+      ],
+      "aic": 26.110245117763938,
+      "drivers": {
+        "employer": "nonagri_employment_share",
+        "state": "gov_edu_spend_gdp",
+        "employer_years": [
+          1961,
+          2025
+        ],
+        "state_years": [
+          1971,
+          2024
+        ]
+      }
+    },
+    "HES": {
+      "best_seed": 1,
+      "train_cost": 29.140006412020377,
+      "n_train": 47,
+      "starts": 6,
+      "start_costs": [
+        29.14,
+        29.14,
+        29.14,
+        29.14,
+        29.14,
+        53.668
+      ],
+      "dials": {
+        "eta": 2.827280790262427,
+        "kappa": 2.454774400509923e-15,
+        "b_e": 5.2907106317577745e-11,
+        "b_s": 3.5388980758503347e-13
+      },
+      "dials_at_bounds": [
+        "kappa",
+        "b_e",
+        "b_s"
+      ],
+      "aic": 28.110245183963645,
+      "drivers": {
+        "employer": "nonagri_employment_share",
+        "state": "gov_edu_spend_gdp",
+        "employer_years": [
+          1961,
+          2025
+        ],
+        "state_years": [
+          1971,
+          2024
+        ]
+      }
+    }
+  },
+  "page_ensemble_members": [
+    "H",
+    "HE",
+    "HS",
+    "HES",
+    "logistic"
+  ],
+  "best_naive_rmse": 9.746377244543327,
+  "beats_naive": {
+    "trend": false,
+    "logistic": false,
+    "page_ensemble": false,
+    "silver_blend": false,
+    "HE": false,
+    "H": false,
+    "HES": false,
+    "HS": false,
+    "persistence": false
+  },
+  "actor_verdict": {
+    "employer": {
+      "improves_on_H": true,
+      "beats_logistic": false,
+      "dial_off_bound": false,
+      "supported": false
+    },
+    "state": {
+      "improves_on_H": false,
+      "beats_logistic": false,
+      "dial_off_bound": false,
+      "supported": false
+    }
+  }
+}

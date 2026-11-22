@@ -1,0 +1,45 @@
+== PHL primary=['ner_primary', 'ner_secondary', 'ger_tertiary'] n_test=56
+  silver_blend     2.81
+  H                5.26
+  page_ensemble    5.71
+  persistence      5.71
+  trend            6.03
+  logistic         6.43
+  HS               7.84
+  HE              10.93
+  HES             10.93
+  H: cost=25.35 dials={'eta': 2.727, 'kappa': 15.447} at_bounds=[] drivers={'employer': 'nonagri_employment_share', 'state': 'gov_edu_spend_gdp', 'employer_years': [1956, 2025], 'state_years': [1980, 2025]}
+  HE: cost=18.79 dials={'eta': 1.193, 'kappa': 3.245, 'b_e': 4.976} at_bounds=[] drivers={'employer': 'nonagri_employment_share', 'state': 'gov_edu_spend_gdp', 'employer_years': [1956, 2025], 'state_years': [1980, 2025]}
+  HS: cost=23.46 dials={'eta': 1.71, 'kappa': 4.715, 'b_s': 4.658} at_bounds=[] drivers={'employer': 'nonagri_employment_share', 'state': 'gov_edu_spend_gdp', 'employer_years': [1956, 2025], 'state_years': [1980, 2025]}
+  HES: cost=18.79 dials={'eta': 1.193, 'kappa': 3.243, 'b_e': 4.977, 'b_s': 0.0} at_bounds=['b_s'] drivers={'employer': 'nonagri_employment_share', 'state': 'gov_edu_spend_gdp', 'employer_years': [1956, 2025], 'state_years': [1980, 2025]}
+  actors: {'employer': {'improves_on_H': False, 'beats_logistic': False, 'dial_off_bound': True, 'supported': False}, 'state': {'improves_on_H': False, 'beats_logistic': False, 'dial_off_bound': True, 'supported': False}}
+== KHM primary=['ner_primary', 'ger_secondary', 'ger_tertiary'] n_test=25
+  silver_blend     2.94
+  persistence      6.05
+  H                6.84
+  HE               7.21
+  HS               7.56
+  HES              7.86
+  page_ensemble    9.27
+  trend           17.17
+  logistic        30.59
+  H: cost=86.22 dials={'eta': 6.0, 'kappa': 36.719} at_bounds=['eta'] drivers={'employer': 'nonagri_employment_share', 'state': 'gov_edu_spend_gdp', 'employer_years': [1991, 2025], 'state_years': [1998, 2023]}
+  HE: cost=85.92 dials={'eta': 6.0, 'kappa': 40.0, 'b_e': 2.672} at_bounds=['eta', 'kappa'] drivers={'employer': 'nonagri_employment_share', 'state': 'gov_edu_spend_gdp', 'employer_years': [1991, 2025], 'state_years': [1998, 2023]}
+  HS: cost=85.66 dials={'eta': 6.0, 'kappa': 35.082, 'b_s': 12.449} at_bounds=['eta'] drivers={'employer': 'nonagri_employment_share', 'state': 'gov_edu_spend_gdp', 'employer_years': [1991, 2025], 'state_years': [1998, 2023]}
+  HES: cost=85.58 dials={'eta': 6.0, 'kappa': 39.999, 'b_e': 3.256, 'b_s': 13.936} at_bounds=['eta', 'kappa'] drivers={'employer': 'nonagri_employment_share', 'state': 'gov_edu_spend_gdp', 'employer_years': [1991, 2025], 'state_years': [1998, 2023]}
+  actors: {'employer': {'improves_on_H': False, 'beats_logistic': True, 'dial_off_bound': False, 'supported': False}, 'state': {'improves_on_H': False, 'beats_logistic': True, 'dial_off_bound': False, 'supported': False}}
+== HKG primary=['ner_primary', 'ner_secondary', 'ger_tertiary'] n_test=27
+  trend            9.75
+  logistic        10.49
+  page_ensemble   15.21
+  silver_blend    17.96
+  HE              18.29
+  H               18.29
+  HES             18.29
+  HS              18.29
+  persistence     21.18
+  H: cost=29.14 dials={'eta': 2.827, 'kappa': 0.0} at_bounds=['kappa'] drivers={'employer': 'nonagri_employment_share', 'state': 'gov_edu_spend_gdp', 'employer_years': [1961, 2025], 'state_years': [1971, 2024]}
+  HE: cost=29.14 dials={'eta': 2.827, 'kappa': 0.0, 'b_e': 0.0} at_bounds=['kappa', 'b_e'] drivers={'employer': 'nonagri_employment_share', 'state': 'gov_edu_spend_gdp', 'employer_years': [1961, 2025], 'state_years': [1971, 2024]}
+  HS: cost=29.14 dials={'eta': 2.827, 'kappa': 0.0, 'b_s': 0.0} at_bounds=['kappa', 'b_s'] drivers={'employer': 'nonagri_employment_share', 'state': 'gov_edu_spend_gdp', 'employer_years': [1961, 2025], 'state_years': [1971, 2024]}
+  HES: cost=29.14 dials={'eta': 2.827, 'kappa': 0.0, 'b_e': 0.0, 'b_s': 0.0} at_bounds=['kappa', 'b_e', 'b_s'] drivers={'employer': 'nonagri_employment_share', 'state': 'gov_edu_spend_gdp', 'employer_years': [1961, 2025], 'state_years': [1971, 2024]}
+  actors: {'employer': {'improves_on_H': True, 'beats_logistic': False, 'dial_off_bound': False, 'supported': False}, 'state': {'improves_on_H': False, 'beats_logistic': False, 'dial_off_bound': False, 'supported': False}}

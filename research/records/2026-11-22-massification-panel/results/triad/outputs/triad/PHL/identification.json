@@ -1,0 +1,96 @@
+{
+  "iso": "PHL",
+  "rule": "winner = lowest AIC on simulated training data; rows = truth, cols = chosen",
+  "confusion": {
+    "H": {
+      "H": 15,
+      "HE": 1,
+      "HS": 4,
+      "HES": 0
+    },
+    "HE": {
+      "H": 0,
+      "HE": 15,
+      "HS": 0,
+      "HES": 2
+    },
+    "HS": {
+      "H": 0,
+      "HE": 0,
+      "HS": 3,
+      "HES": 1
+    },
+    "HES": {
+      "H": 0,
+      "HE": 0,
+      "HS": 0,
+      "HES": 0
+    }
+  },
+  "recovery": {
+    "H:eta": {
+      "truth": 2.7272570684411006,
+      "median": 2.731540288409912,
+      "within_25pct": 1.0,
+      "bound_hits": 0,
+      "n": 20,
+      "label": "identified (software diagnostic)"
+    },
+    "H:kappa": {
+      "truth": 15.446970041816696,
+      "median": 15.24589511393911,
+      "within_25pct": 1.0,
+      "bound_hits": 0,
+      "n": 20,
+      "label": "identified (software diagnostic)"
+    },
+    "HE:eta": {
+      "truth": 1.1934789278158708,
+      "median": 1.1590918934543333,
+      "within_25pct": 1.0,
+      "bound_hits": 0,
+      "n": 17,
+      "label": "identified (software diagnostic)"
+    },
+    "HE:kappa": {
+      "truth": 3.244882945642965,
+      "median": 3.0068587044706696,
+      "within_25pct": 0.9411764705882353,
+      "bound_hits": 0,
+      "n": 17,
+      "label": "identified (software diagnostic)"
+    },
+    "HE:b_e": {
+      "truth": 4.976450887467335,
+      "median": 5.188498976766863,
+      "within_25pct": 1.0,
+      "bound_hits": 0,
+      "n": 17,
+      "label": "identified (software diagnostic)"
+    },
+    "HS:eta": {
+      "truth": 1.7098915547087516,
+      "median": 1.6732473743178726,
+      "within_25pct": 1.0,
+      "bound_hits": 0,
+      "n": 4,
+      "label": "identified (software diagnostic)"
+    },
+    "HS:kappa": {
+      "truth": 4.7149719541991075,
+      "median": 4.348493342645737,
+      "within_25pct": 1.0,
+      "bound_hits": 0,
+      "n": 4,
+      "label": "identified (software diagnostic)"
+    },
+    "HS:b_s": {
+      "truth": 4.657505324592821,
+      "median": 4.644429130677856,
+      "within_25pct": 1.0,
+      "bound_hits": 0,
+      "n": 4,
+      "label": "identified (software diagnostic)"
+    }
+  }
+}

@@ -1,0 +1,51 @@
+/root/autodl-tmp/takeoff/takeoff.py:180: RuntimeWarning: invalid value encountered in sqrt
+  return b, np.sqrt(np.diag(cov)), p
+/root/autodl-tmp/takeoff/takeoff.py:180: RuntimeWarning: invalid value encountered in sqrt
+  return b, np.sqrt(np.diag(cov)), p
+/root/autodl-tmp/takeoff/takeoff.py:180: RuntimeWarning: invalid value encountered in sqrt
+  return b, np.sqrt(np.diag(cov)), p
+TAKEOFF TEST. Takeoff = first year tertiary GER crosses 15.0% (Trow). Conditions measured 5 years earlier.
+ECI source: eci_owid_rank.csv:oec_eci_ranking__observatory_of_economic_complexity__2016
+
+[main_ECI_govcons] 56 countries, 1419 country-years at risk, 39 takeoffs
+  out-of-sample log loss (lower=better, 10-fold by country): H=0.1260, add=0.1222, conj=0.1280, add_conj=0.1225, count=0.1309
+  best = add; conjunction adds to additive model out of sample: False
+  takeoff rate by number of conditions present (0-3): 0:2/260, 1:6/392, 2:16/561, 3:15/206
+  share of takeoffs with condition present: H=85%, E=74%, S=54%, all3=38%
+  bootstrap (2000): conjunction coef 90% CI [-0.13, 0.6, 1.46], positive in 91%
+     log-odds jump 2->3 conditions [0.34, 0.99, 1.64] vs 1->2 [0.13, 0.81, 1.67]; accelerating in 58%
+  threshold Monte Carlo (1000 draws, 30th-70th pct): conjunction coef positive in 90%, z>1.645 in 18%
+
+[alt_nonagri_govcons] 87 countries, 2298 country-years at risk, 51 takeoffs
+  out-of-sample log loss (lower=better, 10-fold by country): H=0.1023, add=0.1025, conj=0.1068, add_conj=0.1040, count=0.1047
+  best = H; conjunction adds to additive model out of sample: False
+  takeoff rate by number of conditions present (0-3): 0:2/539, 1:7/622, 2:19/586, 3:23/551
+  share of takeoffs with condition present: H=86%, E=84%, S=53%, all3=45%
+  bootstrap (2000): conjunction coef 90% CI [-0.86, -0.07, 0.71], positive in 45%
+     log-odds jump 2->3 conditions [-0.22, 0.3, 0.84] vs 1->2 [0.4, 1.12, 2.02]; accelerating in 10%
+  threshold Monte Carlo (1000 draws, 30th-70th pct): conjunction coef positive in 70%, z>1.645 in 0%
+
+[alt_ECI_tax] 40 countries, 583 country-years at risk, 25 takeoffs
+  out-of-sample log loss (lower=better, 10-fold by country): H=0.1882, add=0.1942, conj=0.1929, add_conj=0.2036, count=0.1851
+  best = count; conjunction adds to additive model out of sample: False
+  takeoff rate by number of conditions present (0-3): 0:2/138, 1:3/186, 2:8/86, 3:12/173
+  share of takeoffs with condition present: H=88%, E=76%, S=56%, all3=48%
+  bootstrap (2000): conjunction coef 90% CI [-1.02, 0.19, 1.97], positive in 61%
+     log-odds jump 2->3 conditions [-1.35, -0.45, 0.5] vs 1->2 [1.07, 2.22, 4.09]; accelerating in 1%
+  threshold Monte Carlo (1000 draws, 30th-70th pct): conjunction coef positive in 42%, z>1.645 in 13%
+
+Cases (year condition crossed main median threshold, measured 5 yrs earlier; takeoff year):
+  PHL: H 1972  E 1969  S 2002  takeoff None  latest tertiary GER 47.4134996154186
+  KHM: H 2017  E 1969  S None  takeoff 2023  latest tertiary GER 21.4437426836662
+  HKG: H 1966  E 1969  S None  takeoff None  latest tertiary GER 120.08978583196
+  KOR: H 1970  E 1969  S 1965  takeoff None  latest tertiary GER 111.853302001953
+  THA: H 1982  E 1974  S 1986  takeoff 1982  latest tertiary GER 44.9845744019321
+  VNM: H 2007  E 1969  S None  takeoff 2005  latest tertiary GER 37.5923642016718
+  IDN: H 1993  E 1995  S None  takeoff 2003  latest tertiary GER 44.8813034886441
+  MYS: H 1966  E 1969  S 1965  takeoff 1996  latest tertiary GER 38.5013945445142
+  CHN: H 1999  E 1969  S 1965  takeoff 2004  latest tertiary GER 76.8757843123403
+  IND: H 2016  E 1969  S None  takeoff 2008  latest tertiary GER 34.4184659748952
+Lock-in (post-takeoff, tertiary GER falls >=25% within 5 yrs): {"condition_dropped": {"country_years": 370, "reversals": 3, "rate": 0.008108108108108109}, "no_drop": {"country_years": 357, "reversals": 11, "rate": 0.03081232492997199}}
+
+Read: the boot-up claim predicts (1) add_conj or count beats add out of sample, (2) the 2->3 jump exceeds 1->2,
+(3) nearly all takeoffs happen with all three present, (4) few reversals even when a condition later drops.

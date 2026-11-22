@@ -1,0 +1,486 @@
+{
+  "eci_source": "eci_owid_rank.csv:oec_eci_ranking__observatory_of_economic_complexity__2016",
+  "trow": 15.0,
+  "lag": 5,
+  "main_ECI_govcons": {
+    "n_rows": 1419,
+    "n_countries": 56,
+    "n_takeoffs": 39,
+    "thresholds_median": [
+      7.152527168104394,
+      0.2525252525252525,
+      12.355633653124
+    ],
+    "cv_logloss": {
+      "H": 0.1259624850694231,
+      "add": 0.12222252524353223,
+      "conj": 0.12797069217296148,
+      "add_conj": 0.12250173282390725,
+      "count": 0.1309039964526597
+    },
+    "cv_best": "add",
+    "cv_conj_beats_add": false,
+    "fits": {
+      "H": {
+        "coef_tail": [
+          0.7368427773527418
+        ],
+        "se_tail": [
+          0.14193682383968131
+        ]
+      },
+      "add": {
+        "coef_tail": [
+          0.8003205125478268,
+          0.7692886606826757,
+          -0.17666888850449214
+        ],
+        "se_tail": [
+          0.16313005147743548,
+          0.17752939409950313,
+          0.1953664059130332
+        ]
+      },
+      "conj": {
+        "coef_tail": [
+          1.4406259856174997
+        ],
+        "se_tail": [
+          0.34804952393237676
+        ]
+      },
+      "add_conj": {
+        "coef_tail": [
+          0.7530259901163509,
+          0.6984070831255715,
+          -0.31028441766404535,
+          0.5674941438731343
+        ],
+        "se_tail": [
+          0.1697430042046941,
+          0.19188046422761504,
+          0.2355699158773793,
+          0.47679443629876395
+        ]
+      },
+      "count": {
+        "coef_tail": [
+          0.9813940871713368,
+          1.7627086432564059,
+          2.711684447274449
+        ],
+        "se_tail": [
+          0.8256054320897503,
+          0.7682664713652925,
+          0.7739488607996354
+        ]
+      }
+    },
+    "necessity_share_of_takeoffs_with_condition_present": {
+      "H": 0.8461538461538461,
+      "E": 0.7435897435897436,
+      "S": 0.5384615384615384,
+      "all3": 0.38461538461538464
+    },
+    "hazard_by_number_of_conditions": {
+      "0": {
+        "n": 260,
+        "events": 2,
+        "rate": 0.007692307692307693
+      },
+      "1": {
+        "n": 392,
+        "events": 6,
+        "rate": 0.015306122448979591
+      },
+      "2": {
+        "n": 561,
+        "events": 16,
+        "rate": 0.0285204991087344
+      },
+      "3": {
+        "n": 206,
+        "events": 15,
+        "rate": 0.07281553398058252
+      }
+    },
+    "bootstrap": {
+      "n": 2000,
+      "conj_coef_ci90": [
+        -0.12637141871521815,
+        0.6000668390631163,
+        1.4628091804155745
+      ],
+      "share_conj_coef_pos": 0.9125,
+      "jump_2to3_ci90": [
+        0.33917946224600826,
+        0.9899246521416443,
+        1.6379560540246543
+      ],
+      "jump_1to2_ci90": [
+        0.1349175381139624,
+        0.8119536942633271,
+        1.6705225608466643
+      ],
+      "share_accelerating": 0.5755
+    },
+    "threshold_mc": {
+      "n": 1000,
+      "share_conj_coef_pos": 0.895,
+      "share_conj_z_gt_1_645": 0.18,
+      "median_conj_coef": 0.4180591682426083
+    }
+  },
+  "alt_nonagri_govcons": {
+    "n_rows": 2298,
+    "n_countries": 87,
+    "n_takeoffs": 51,
+    "thresholds_median": [
+      6.993329193509933,
+      75.07583313076961,
+      13.243310167296599
+    ],
+    "cv_logloss": {
+      "H": 0.10227596397076298,
+      "add": 0.10252226936812035,
+      "conj": 0.10680458619555086,
+      "add_conj": 0.10397234547108918,
+      "count": 0.10469008436890574
+    },
+    "cv_best": "H",
+    "cv_conj_beats_add": false,
+    "fits": {
+      "H": {
+        "coef_tail": [
+          0.6791258507588817
+        ],
+        "se_tail": [
+          0.10473285026097269
+        ]
+      },
+      "add": {
+        "coef_tail": [
+          0.46082118110090126,
+          0.4313898277665211,
+          0.0031072306240942133
+        ],
+        "se_tail": [
+          0.1670696469285555,
+          0.26890516078429355,
+          0.13535219310197402
+        ]
+      },
+      "conj": {
+        "coef_tail": [
+          0.9986158324845086
+        ],
+        "se_tail": [
+          0.28792252716910927
+        ]
+      },
+      "add_conj": {
+        "coef_tail": [
+          0.4677773039347477,
+          0.4521820387853633,
+          0.01543915169552682,
+          -0.10062271577419697
+        ],
+        "se_tail": [
+          0.1683587780599078,
+          0.2785203247666318,
+          0.1374625109812697,
+          0.3713783875812225
+        ]
+      },
+      "count": {
+        "coef_tail": [
+          0.9915340036510802,
+          2.0828359303009734,
+          2.392986886543722
+        ],
+        "se_tail": [
+          0.8064170940612979,
+          0.7481909840891763,
+          0.741630783226311
+        ]
+      }
+    },
+    "necessity_share_of_takeoffs_with_condition_present": {
+      "H": 0.8627450980392157,
+      "E": 0.8431372549019608,
+      "S": 0.5294117647058824,
+      "all3": 0.45098039215686275
+    },
+    "hazard_by_number_of_conditions": {
+      "0": {
+        "n": 539,
+        "events": 2,
+        "rate": 0.0037105751391465678
+      },
+      "1": {
+        "n": 622,
+        "events": 7,
+        "rate": 0.011254019292604502
+      },
+      "2": {
+        "n": 586,
+        "events": 19,
+        "rate": 0.032423208191126277
+      },
+      "3": {
+        "n": 551,
+        "events": 23,
+        "rate": 0.041742286751361164
+      }
+    },
+    "bootstrap": {
+      "n": 2000,
+      "conj_coef_ci90": [
+        -0.8593988003500656,
+        -0.06606268103065804,
+        0.7138923156697707
+      ],
+      "share_conj_coef_pos": 0.4465,
+      "jump_2to3_ci90": [
+        -0.22134522743064253,
+        0.2962348400132818,
+        0.8402438842535831
+      ],
+      "jump_1to2_ci90": [
+        0.4025987942263226,
+        1.1231713131019503,
+        2.021524417394675
+      ],
+      "share_accelerating": 0.103
+    },
+    "threshold_mc": {
+      "n": 1000,
+      "share_conj_coef_pos": 0.701,
+      "share_conj_z_gt_1_645": 0.002,
+      "median_conj_coef": 0.09429260868415854
+    }
+  },
+  "alt_ECI_tax": {
+    "n_rows": 583,
+    "n_countries": 40,
+    "n_takeoffs": 25,
+    "thresholds_median": [
+      7.11863860599025,
+      0.2222222222222222,
+      11.35090253394464
+    ],
+    "cv_logloss": {
+      "H": 0.18824645895910005,
+      "add": 0.19417976819769864,
+      "conj": 0.19285861630829879,
+      "add_conj": 0.20358659044863303,
+      "count": 0.1851481791165463
+    },
+    "cv_best": "count",
+    "cv_conj_beats_add": false,
+    "fits": {
+      "H": {
+        "coef_tail": [
+          0.6917710606322702
+        ],
+        "se_tail": [
+          0.22077488294794098
+        ]
+      },
+      "add": {
+        "coef_tail": [
+          0.5890387125113155,
+          0.2433996305029838,
+          -0.33035187222476764
+        ],
+        "se_tail": [
+          0.24660575300906937,
+          0.2455141728123089,
+          0.6632421972829908
+        ]
+      },
+      "conj": {
+        "coef_tail": [
+          0.9321916704237955
+        ],
+        "se_tail": [
+          0.4316468861526053
+        ]
+      },
+      "add_conj": {
+        "coef_tail": [
+          0.5751420094830624,
+          0.23082179376695994,
+          -0.3591949365702671,
+          0.08897547931735718
+        ],
+        "se_tail": [
+          0.26188893079257414,
+          0.2588252031701258,
+          0.7453891281984332,
+          0.5311356609507922
+        ]
+      },
+      "count": {
+        "coef_tail": [
+          0.28862246326358615,
+          2.3537118814682367,
+          1.9177560102043745
+        ],
+        "se_tail": [
+          0.9290096579794953,
+          0.8246440417532485,
+          0.7976707410993233
+        ]
+      }
+    },
+    "necessity_share_of_takeoffs_with_condition_present": {
+      "H": 0.88,
+      "E": 0.76,
+      "S": 0.56,
+      "all3": 0.48
+    },
+    "hazard_by_number_of_conditions": {
+      "0": {
+        "n": 138,
+        "events": 2,
+        "rate": 0.014492753623188406
+      },
+      "1": {
+        "n": 186,
+        "events": 3,
+        "rate": 0.016129032258064516
+      },
+      "2": {
+        "n": 86,
+        "events": 8,
+        "rate": 0.09302325581395349
+      },
+      "3": {
+        "n": 173,
+        "events": 12,
+        "rate": 0.06936416184971098
+      }
+    },
+    "bootstrap": {
+      "n": 2000,
+      "conj_coef_ci90": [
+        -1.019457835527622,
+        0.1911600511908646,
+        1.9656761429552445
+      ],
+      "share_conj_coef_pos": 0.607,
+      "jump_2to3_ci90": [
+        -1.3529528010263205,
+        -0.44758757620047185,
+        0.5010666828291431
+      ],
+      "jump_1to2_ci90": [
+        1.0740439612467603,
+        2.2200101270307018,
+        4.0924428918605935
+      ],
+      "share_accelerating": 0.0135
+    },
+    "threshold_mc": {
+      "n": 1000,
+      "share_conj_coef_pos": 0.418,
+      "share_conj_z_gt_1_645": 0.133,
+      "median_conj_coef": -0.295332493295551
+    }
+  },
+  "cases": {
+    "PHL": {
+      "H_cross_year": 1972,
+      "E_cross_year": 1969,
+      "S_cross_year": 2002,
+      "note": "cross years are for conditions measured 5 years earlier",
+      "takeoff_year": null,
+      "latest_ter_ger": 47.4134996154186
+    },
+    "KHM": {
+      "H_cross_year": 2017,
+      "E_cross_year": 1969,
+      "S_cross_year": null,
+      "note": "cross years are for conditions measured 5 years earlier",
+      "takeoff_year": 2023,
+      "latest_ter_ger": 21.4437426836662
+    },
+    "HKG": {
+      "H_cross_year": 1966,
+      "E_cross_year": 1969,
+      "S_cross_year": null,
+      "note": "cross years are for conditions measured 5 years earlier",
+      "takeoff_year": null,
+      "latest_ter_ger": 120.08978583196
+    },
+    "KOR": {
+      "H_cross_year": 1970,
+      "E_cross_year": 1969,
+      "S_cross_year": 1965,
+      "note": "cross years are for conditions measured 5 years earlier",
+      "takeoff_year": null,
+      "latest_ter_ger": 111.853302001953
+    },
+    "THA": {
+      "H_cross_year": 1982,
+      "E_cross_year": 1974,
+      "S_cross_year": 1986,
+      "note": "cross years are for conditions measured 5 years earlier",
+      "takeoff_year": 1982,
+      "latest_ter_ger": 44.9845744019321
+    },
+    "VNM": {
+      "H_cross_year": 2007,
+      "E_cross_year": 1969,
+      "S_cross_year": null,
+      "note": "cross years are for conditions measured 5 years earlier",
+      "takeoff_year": 2005,
+      "latest_ter_ger": 37.5923642016718
+    },
+    "IDN": {
+      "H_cross_year": 1993,
+      "E_cross_year": 1995,
+      "S_cross_year": null,
+      "note": "cross years are for conditions measured 5 years earlier",
+      "takeoff_year": 2003,
+      "latest_ter_ger": 44.8813034886441
+    },
+    "MYS": {
+      "H_cross_year": 1966,
+      "E_cross_year": 1969,
+      "S_cross_year": 1965,
+      "note": "cross years are for conditions measured 5 years earlier",
+      "takeoff_year": 1996,
+      "latest_ter_ger": 38.5013945445142
+    },
+    "CHN": {
+      "H_cross_year": 1999,
+      "E_cross_year": 1969,
+      "S_cross_year": 1965,
+      "note": "cross years are for conditions measured 5 years earlier",
+      "takeoff_year": 2004,
+      "latest_ter_ger": 76.8757843123403
+    },
+    "IND": {
+      "H_cross_year": 2016,
+      "E_cross_year": 1969,
+      "S_cross_year": null,
+      "note": "cross years are for conditions measured 5 years earlier",
+      "takeoff_year": 2008,
+      "latest_ter_ger": 34.4184659748952
+    }
+  },
+  "lockin": {
+    "condition_dropped": {
+      "country_years": 370,
+      "reversals": 3,
+      "rate": 0.008108108108108109
+    },
+    "no_drop": {
+      "country_years": 357,
+      "reversals": 11,
+      "rate": 0.03081232492997199
+    }
+  }
+}

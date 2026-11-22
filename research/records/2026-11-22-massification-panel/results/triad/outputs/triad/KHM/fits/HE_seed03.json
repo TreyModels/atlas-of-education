@@ -1,0 +1,79 @@
+{
+  "iso": "KHM",
+  "spec": "HE",
+  "seed": 3,
+  "names": [
+    "a_prim",
+    "a_sec",
+    "a_sec_entry",
+    "a_ter",
+    "a_ter_entry",
+    "eta",
+    "kappa",
+    "b_e"
+  ],
+  "x": [
+    14.193154628558425,
+    15.999983535504406,
+    6.706668825164231,
+    15.99999999949675,
+    10.87915790707502,
+    5.999999961447009,
+    39.99999990189089,
+    2.6717899842375457
+  ],
+  "params": {
+    "a_prim": 14.193154628558425,
+    "a_sec": 15.999983535504406,
+    "a_sec_entry": 6.706668825164231,
+    "a_ter": 15.99999999949675,
+    "a_ter_entry": 10.87915790707502,
+    "b_h": 0.0,
+    "b_p": 0.0,
+    "b_r": 0.0,
+    "eta": 5.999999961447009,
+    "eta_x": 0.0,
+    "kappa": 39.99999990189089,
+    "lam": 0.0,
+    "c_scale": 1.0,
+    "mu_basic": -2.5,
+    "mu_ter": 1.0,
+    "nu": 0.5,
+    "h_def": 0.2,
+    "late": 0.15,
+    "rep_prim": 0.04,
+    "rep_sec": 0.02,
+    "nu_basic": 0.5,
+    "nu_ter": 0.5,
+    "s0_sat": 0.25,
+    "b_e": 2.6717899842375457
+  },
+  "cost": 85.91655635754576,
+  "n_train": 58,
+  "nfev": 28,
+  "status": 2,
+  "hit_nfev_cap": false,
+  "at_bounds": [
+    "a_sec",
+    "a_ter",
+    "eta",
+    "kappa"
+  ],
+  "dials_at_bounds": [
+    "eta",
+    "kappa"
+  ],
+  "drivers": {
+    "employer": "nonagri_employment_share",
+    "state": "gov_edu_spend_gdp",
+    "employer_years": [
+      1991,
+      2025
+    ],
+    "state_years": [
+      1998,
+      2023
+    ]
+  },
+  "seconds": 22.2
+}

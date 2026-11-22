@@ -1,0 +1,74 @@
+{
+  "iso": "PHL",
+  "spec": "HS",
+  "seed": 1,
+  "names": [
+    "a_prim",
+    "a_sec",
+    "a_sec_entry",
+    "a_ter",
+    "a_ter_entry",
+    "eta",
+    "kappa",
+    "b_s"
+  ],
+  "x": [
+    4.724410268831085,
+    15.999999999999996,
+    0.37381451129254445,
+    15.999999999786858,
+    -0.636737666350352,
+    1.710036263908963,
+    4.715981102196176,
+    4.657053030513124
+  ],
+  "params": {
+    "a_prim": 4.724410268831085,
+    "a_sec": 15.999999999999996,
+    "a_sec_entry": 0.37381451129254445,
+    "a_ter": 15.999999999786858,
+    "a_ter_entry": -0.636737666350352,
+    "b_h": 0.0,
+    "b_p": 0.0,
+    "b_r": 0.0,
+    "eta": 1.710036263908963,
+    "eta_x": 0.0,
+    "kappa": 4.715981102196176,
+    "lam": 0.0,
+    "c_scale": 1.0,
+    "mu_basic": -2.5,
+    "mu_ter": 1.0,
+    "nu": 0.5,
+    "h_def": 0.2,
+    "late": 0.15,
+    "rep_prim": 0.04,
+    "rep_sec": 0.02,
+    "nu_basic": 0.5,
+    "nu_ter": 0.5,
+    "s0_sat": 0.25,
+    "b_s": 4.657053030513124
+  },
+  "cost": 23.464452816039312,
+  "n_train": 91,
+  "nfev": 22,
+  "status": 2,
+  "hit_nfev_cap": false,
+  "at_bounds": [
+    "a_sec",
+    "a_ter"
+  ],
+  "dials_at_bounds": [],
+  "drivers": {
+    "employer": "nonagri_employment_share",
+    "state": "gov_edu_spend_gdp",
+    "employer_years": [
+      1956,
+      2025
+    ],
+    "state_years": [
+      1980,
+      2025
+    ]
+  },
+  "seconds": 38.7
+}

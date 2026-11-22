@@ -34,9 +34,16 @@ Every number lives in a result file listed below. Following the house rule, this
 - **Every-variable sweep.** Each of 58 variables in turn as the outcome, giving a directed "who leads whom" map.
   - Files: `scripts/sweep_all.py`, `results/sweep_all/findings.txt`, `results/sweep_all/matrix.csv`, `results/sweep_all/leads.csv`.
 
+### 4. Tighter tests (run after the sweeps; design fixed in the script header before running)
+- **Within-country lead-lag.** Country fixed effects with a split-panel jackknife correction, plus a cluster-bootstrap test of whether X→Y is stronger than Y→X.
+- **Split stability.** 200 random country splits instead of one.
+- **Takeoff functional form.** Smooth, threshold, count and hybrid hazard models compared by cross-validation across 20 fold seeds.
+- Files: `scripts/tight_tests.py`, `results/tight/findings.txt`, `results/tight/results.json`.
+- Reading note: within-country coefficients on levels pick up floor and ceiling dynamics. Some signs are implausible (for example, income "leading" rising child mortality), so read them as noisy.
+
 ## Source data
-- `sources/` holds every series downloaded from the World Bank API (WDI, which includes UIS and ILO-modelled indicators), the OEC economic-complexity ranks via Our World in Data, the Harvard Growth Lab complexity rankings file, and the hand-collected triad driver data.
-  - Each WDI file is a JSON list of `[iso3, year, value]` rows.
+- `sources/wdi_takeoff/` and `sources/wdi_sweep/` hold every series downloaded from the World Bank API (WDI, which includes UIS and ILO-modelled indicators), the OEC economic-complexity ranks via Our World in Data, the Harvard Growth Lab complexity rankings file, and the hand-collected triad driver data.
+  - Each WDI file is a JSON list of `[iso3, year, value]` rows. Files over 200 KB are gzipped (`.json.gz`); the scripts expect them unzipped in `data/` (takeoff) and `data_sweep/` (sweeps).
   - The driver data are `triad_drivers.json` and `triad_drivers.md`. They list sources, read status and gaps.
 - The four World Governance Indicator series failed to download (API source parameter). They are absent from the sweeps.
 

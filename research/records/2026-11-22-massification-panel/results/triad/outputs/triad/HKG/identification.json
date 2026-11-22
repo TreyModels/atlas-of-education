@@ -1,0 +1,31 @@
+{
+  "iso": "HKG",
+  "rule": "winner = lowest AIC on simulated training data; rows = truth, cols = chosen",
+  "confusion": {
+    "H": {
+      "H": 0,
+      "HE": 0,
+      "HS": 0,
+      "HES": 0
+    },
+    "HE": {
+      "H": 0,
+      "HE": 0,
+      "HS": 0,
+      "HES": 0
+    },
+    "HS": {
+      "H": 0,
+      "HE": 0,
+      "HS": 0,
+      "HES": 0
+    },
+    "HES": {
+      "H": 0,
+      "HE": 0,
+      "HS": 0,
+      "HES": 0
+    }
+  },
+  "recovery": {}
+}

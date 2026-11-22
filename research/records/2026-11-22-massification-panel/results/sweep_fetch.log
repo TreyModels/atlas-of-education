@@ -1,0 +1,75 @@
+ter              SE.TER.ENRR            7158
+sec              SE.SEC.ENRR            8111
+lsc              SE.SEC.CMPT.LO.ZS      5790
+pre_ger          SE.PRE.ENRR            8112
+prm_ner          SE.PRM.NENR            5905
+prm_cmp          SE.PRM.CMPT.ZS         6645
+sec_ner          SE.SEC.NENR            3902
+ptr_prm          SE.PRM.ENRL.TC.ZS      7872
+ptr_sec          SE.SEC.ENRL.TC.ZS      6140
+edu_xpd_gdp      SE.XPD.TOTL.GD.ZS      6263
+edu_xpd_gov      SE.XPD.TOTL.GB.ZS      5590
+priv_prm         SE.PRM.PRIV.ZS         6165
+priv_sec         SE.SEC.PRIV.ZS         3059
+gpi_sec          SE.ENR.SECO.FM.ZS      8059
+gpi_ter          SE.ENR.TERT.FM.ZS      6382
+repeat_prm       SE.PRM.REPT.ZS         6673
+wage_emp         SL.EMP.WORK.ZS         7845
+unemp            SL.UEM.TOTL.ZS         7845
+unemp_youth      SL.UEM.1524.ZS         7845
+flfp             SL.TLF.CACT.FE.ZS      8076
+neet             SL.UEM.NEET.ZS         2846
+child_work       SL.TLF.0714.ZS         281
+gdppc_log        NY.GDP.PCAP.KD         14074
+p_ind          SL.IND.EMPL.ZS         7845
+emp_srv          SL.SRV.EMPL.ZS         7845
+wage_emp         SL.EMP.WORK.ZS         7845
+vuln_emp         SL.EMP.VULN.ZS         7845
+employers        SL.EMP.MPYR.ZS         7845
+unemp            SL.UEM.TOTL.ZS         7845
+unemp_youth      SL.UEM.1524.ZS         7845
+flfp             SL.TLF.CACT.FE.ZS      8076
+neet             SL.UEM.NEET.ZS         2846
+neet             SL.UEM.NEET.ZS         2846
+child_work       SL.TLF.0714.ZS         281
+gdppc_log        NY.GDP.PCAP.KD         14074
+child_work       SL.TLF.0714.ZS         281
+growth           NY.GDP.PCAP.KD.ZG      13905
+agri_va          NV.AGR.TOTL.ZS         11008
+manuf_va         NV.IND.MANF.ZS         9799
+srv_va           NV.SRV.TOTL.ZS         10426
+exports          NE.EXP.GNFS.ZS         11033
+fdi              BX.KLT.DINV.WD.GD.ZS   11608
+remit            BX.TRF.PWKR.DT.GD.ZS   8871
+rents            NY.GDP.TOTL.RT.ZS      11504
+gini             SI.POV.GINI            2430
+poverty          SI.POV.DDAY            2860
+inflation        FP.CPI.TOTL.ZG         11152
+hitech_exp       TX.VAL.TECH.MF.ZS      3300
+investment       NE.GDI.TOTL.ZS         10562
+hh_cons          NE.CON.PRVT.ZS         10678
+tax              GC.TAX.TOTL.GD.ZS      5601
+  retry 0 https://api.worldbank.org/v2/country/all/indicator/NE.CON.GOVT.ZS?format=json&per_page=20000&date=19 The read operation timed out
+gov_cons         NE.CON.GOVT.ZS         10683
+gov_xpn          GC.XPN.TOTL.GD.ZS      5156
+military         MS.MIL.XPND.GD.ZS      10486
+birth_reg        SP.REG.BRTH.ZS         649
+electricity      EG.ELC.ACCS.ZS         8005
+  retry 0 https://api.worldbank.org/v2/country/all/indicator/IT.NET.USER.ZS?format=json&per_page=20000&date=19 The read operation timed out
+internet         IT.NET.USER.ZS         6774
+debt_service     DT.TDS.DECT.GN.ZS      6956
+FAILED gov_eff GE.EST@3 list index out of range
+gov_eff          GE.EST@3               0
+FAILED reg_quality RQ.EST@3 list index out of range
+reg_quality      RQ.EST@3               0
+FAILED rule_law RL.EST@3 list index out of range
+rule_law         RL.EST@3               0
+FAILED corruption CC.EST@3 list index out of range
+corruption       CC.EST@3               0
+urban            SP.URB.TOTL.IN.ZS      16965
+fertility        SP.DYN.TFRT.IN         16933
+young_share      SP.POP.0014.TO.ZS      16965
+life_exp         SP.DYN.LE00.IN         16931
+u5mr             SH.DYN.MORT            13401
+pop_log          SP.POP.TOTL            16935
+eci_pct 5653
