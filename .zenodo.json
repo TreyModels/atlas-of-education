@@ -1,9 +1,0 @@
-{
-  "title": "Atlas Worlds: narrated, downloadable models of education, history and society",
-  "upload_type": "software",
-  "description": "A collection of computational models, each published with its code, data, assumptions and development status: published foundations, mechanism explorations, teaching models and models still in development. Every model can be downloaded, modified and re-run. Created by Dr. Trey Menefee.",
-  "creators": [{ "name": "Menefee, Trey" }],
-  "license": "cc-by-nc-4.0",
-  "access_right": "open",
-  "keywords": ["agent-based modelling", "education", "computational social science", "Angkor", "shadow education", "teaching models"]
-}

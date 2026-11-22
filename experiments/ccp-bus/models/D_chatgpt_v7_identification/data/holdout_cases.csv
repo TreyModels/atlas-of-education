@@ -1,7 +1,0 @@
-year,geography,variable,value,unit,source_id,status,note
-2020,China,cases_filed,618000.0,cases,ccdi_2020,verified_official_release,
-2021,China,cases_filed,631000.0,cases,ccdi_2021,verified_official_release,
-2022,China,cases_filed,596000.0,cases,ccdi_2022,verified_official_release,
-2023,China,cases_filed,626000.0,cases,ccdi_2023,verified_official_release,
-2024,China,cases_filed,877000.0,cases,ccdi_2024,verified_official_release,
-2025,China,cases_filed,1012000.0,cases,ccdi_2025,verified_official_release,
