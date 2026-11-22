@@ -41,6 +41,17 @@ Every number lives in a result file listed below. Following the house rule, this
 - Files: `scripts/tight_tests.py`, `results/tight/findings.txt`, `results/tight/results.json`.
 - Reading note: within-country coefficients on levels pick up floor and ceiling dynamics. Some signs are implausible (for example, income "leading" rising child mortality), so read them as noisy.
 
+### 5. Final tests (design fixed in the script header before running; one rerun after a crash, see below)
+- **Within-country lead-lag on the log-odds scale.** Same method as section 4, with every bounded percentage variable converted to log-odds and its 10-year change recomputed on that scale.
+- **Model averaging with a demographic block.** Fertility, child mortality, youth share and life expectancy are combined into one principal component, then BIC-approximated model averaging runs over all subsets of 12 candidates. Benjamini–Yekutieli false-discovery control covers every ordered-pair test.
+- **Fee-abolition event study.** Primary GER in Sub-Saharan Africa, two-way fixed effects, 12 abolitions, plus a placebo with every date moved 6 years earlier. The abolition dates are taken from the literature and not yet verified against primary sources.
+- Files: `scripts/final_tests.py`, `results/final/findings.txt`. The full `results.json` is in the server archive.
+- **Rerun note.** The first run crashed because World Bank region labels carry a trailing space (`'Sub-Saharan Africa '`). The script now strips the label and saves tests 1–2 before running the event study. The design is otherwise unchanged.
+
+### How to read the edge files
+- `results/sweep_all/matrix.csv` and `leads.csv` are **between-country** associations: pooled, with no country effects. Each regression includes Y's own starting level and decade dummies; only the X coefficient is reported.
+- For sequence **within** countries, use `results/tight/` (levels) and `results/final/` (log-odds).
+
 ## Source data
 - `sources/wdi_takeoff/` and `sources/wdi_sweep/` hold every series downloaded from the World Bank API (WDI, which includes UIS and ILO-modelled indicators), the OEC economic-complexity ranks via Our World in Data, the Harvard Growth Lab complexity rankings file, and the hand-collected triad driver data.
   - Each WDI file is a JSON list of `[iso3, year, value]` rows. Files over 200 KB are gzipped (`.json.gz`); the scripts expect them unzipped in `data/` (takeoff) and `data_sweep/` (sweeps).
