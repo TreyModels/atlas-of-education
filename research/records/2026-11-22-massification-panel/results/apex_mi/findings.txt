@@ -1,0 +1,78 @@
+APEX v1.1 MULTIPLE IMPUTATION (M=20) (210s)
+
+C1. Pooled base edges, Rubin-combined |t|>2.58 (p<0.01). [CC] = robust in the complete-case sweep:
+   ter: life_exp(+0.48), u5mr(-0.42), fertility(-0.45), ptr_prm(-0.29), young_share(-0.40), gdppc_log(+0.33), prm_cmp(+0.32), gpi_sec(+0.19), pre_ger(+0.29), poverty(-0.32), sec(+0.34), gpi_ter(+0.21), agri_va(-0.23), sec_ner(+0.38), prm_ner(+0.25), repeat_prm(-0.19), ptr_sec(-0.15), lsc(+0.31)
+   ter: complete-case robust edges NOT significant after imputation: none
+   sec: life_exp(+0.68), fertility(-0.68), agri_va(-0.46), gdppc_log(+0.55), u5mr(-0.55), gpi_sec(+0.35), ptr_prm(-0.43), young_share(-0.59), gpi_ter(+0.44), prm_ner(+0.35), wage_emp(+0.57), prm_cmp(+0.40), pre_ger(+0.34), emp_agri(-0.52), sec_ner(+0.80), vuln_emp(-0.54), ptr_sec(-0.20), lit_adult(+0.54)
+   sec: complete-case robust edges NOT significant after imputation: none
+   lsc: life_exp(+0.78), fertility(-0.81), u5mr(-0.67), ptr_prm(-0.56), gdppc_log(+0.54), sec_ner(+0.93), young_share(-0.64), repeat_prm(-0.54), prm_cmp(+0.68), agri_va(-0.42), ptr_sec(-0.33), prm_ner(+0.39), urban(+0.33), gpi_sec(+0.39), eci_pct(+0.48), sec(+0.69), gpi_ter(+0.46), electricity(+0.76)
+   lsc: complete-case robust edges NOT significant after imputation: none
+   (Note: the '*CC' marker did not print because the complete-case robust_table.csv was not present on the second server;
+    the 'NOT significant after imputation: none' lines are therefore uninformative. Compare against results/sweep/ by hand.)
+
+C2. Within-country (country FE, log-odds) edges among focus vars, Rubin-combined |t|>2.58:
+   fertility->young_share     b=+0.165 t=+12.4   reverse t=-9.9
+   young_share->fertility     b=-0.739 t=-9.9   reverse t=+12.4
+   fertility->poverty         b=+0.776 t=+5.6   reverse t=+1.0
+   tax->wage_emp              b=+0.009 t=+5.6   reverse t=-1.1
+   electricity->fertility     b=-0.240 t=-4.4   reverse t=-3.8
+   edu_xpd_gdp->sec           b=+0.266 t=+4.3   reverse t=+0.2
+   fertility->lsc             b=-0.724 t=-4.1   reverse t=-1.2
+   urban->young_share         b=-0.078 t=-4.0   reverse t=+0.8
+   young_share->poverty       b=+0.925 t=+3.8   reverse t=+0.6
+   fertility->electricity     b=-0.609 t=-3.8   reverse t=-4.4
+   fertility->sec             b=-0.546 t=-3.8   reverse t=-2.8
+   wage_emp->fertility        b=-0.504 t=-3.8   reverse t=-2.2
+   fertility->prm_cmp         b=-0.709 t=-3.7   reverse t=-2.0
+   tax->young_share           b=+0.006 t=+3.6   reverse t=+0.8
+   urban->sec                 b=+0.816 t=+3.5   reverse t=-0.5
+   urban->fertility           b=-0.450 t=-3.5   reverse t=-2.6
+   tax->fertility             b=+0.017 t=+3.5   reverse t=-1.9
+   young_share->sec           b=-0.515 t=-3.4   reverse t=-1.1
+   prm_ner->prm_cmp           b=+0.361 t=+3.3   reverse t=-0.3
+   fertility->emp_agri        b=+0.119 t=+3.3   reverse t=-1.0
+   prm_ner->fertility         b=-0.102 t=-3.3   reverse t=-1.2
+   gdppc_log->ter             b=+0.512 t=+3.3   reverse t=-0.9
+   young_share->gov_cons      b=-2.221 t=-3.1   reverse t=-1.0
+   sec->ter                   b=+0.319 t=+3.0   reverse t=+2.6
+   prm_cmp->sec               b=+0.264 t=+2.9   reverse t=+0.4
+   sec->electricity           b=+0.211 t=+2.9   reverse t=+1.0
+   young_share->emp_agri      b=+0.127 t=+2.8   reverse t=+0.6
+   ter->young_share           b=-0.033 t=-2.8   reverse t=-2.6
+   sec->fertility             b=-0.118 t=-2.8   reverse t=-3.8
+   lsc->ter                   b=+0.292 t=+2.8   reverse t=+1.9
+   wage_emp->urban            b=+0.254 t=+2.8   reverse t=-0.5
+   wage_emp->ter              b=+0.927 t=+2.8   reverse t=+0.4
+   electricity->young_share   b=-0.038 t=-2.7   reverse t=-2.7
+   young_share->electricity   b=-0.362 t=-2.7   reverse t=-2.7
+   edu_xpd_gdp->ter           b=+0.229 t=+2.7   reverse t=-1.0
+   wage_emp->gdppc_log        b=-0.220 t=-2.7   reverse t=-0.0
+   urban->lsc                 b=+0.829 t=+2.6   reverse t=+1.4
+   prm_ner->young_share       b=-0.022 t=-2.6   reverse t=+1.4
+   young_share->ter           b=-0.358 t=-2.6   reverse t=-2.8
+   fertility->urban           b=-0.070 t=-2.6   reverse t=-3.5
+
+C3. Exact BMA PIPs averaged over imputations (pooled | within):
+   ter: demo_pc 1.00|0.95, urban 0.73|0.87, prm_cmp 0.10|0.14, wage_emp 0.56|0.93, electricity 0.04|0.34, gdppc_log 0.05|0.03, gov_cons 0.03|0.04, eci_pct 0.03|0.03, exports 0.26|0.03, fdi 0.05|0.05, remit 0.25|0.05, agri_va 0.07|0.03
+   sec: demo_pc 1.00|0.04, urban 0.15|0.91, prm_cmp 0.20|0.10, wage_emp 0.03|0.04, electricity 0.06|0.02, gdppc_log 0.77|0.06, gov_cons 0.08|0.02, eci_pct 0.03|0.02, exports 0.20|0.44, fdi 0.04|0.02, remit 0.24|0.07, agri_va 0.04|0.02
+   lsc: demo_pc 0.98|0.33, urban 0.09|0.69, prm_cmp 0.43|0.13, wage_emp 0.03|0.02, electricity 0.34|0.04, gdppc_log 0.04|0.05, gov_cons 0.34|0.02, eci_pct 0.07|0.03, exports 0.02|0.07, fdi 0.04|0.04, remit 0.04|0.04, agri_va 0.04|0.02
+
+C4. Takeoff hazard on imputed panel: {'n_imputations': 20, 'mean_logloss': {'additive': 0.14277614180434553, 'threshold': 0.14984372234048385, 'count': 0.15379448138781865, 'joint': 0.1434853975578259}, 'best_share': {'additive': 1.0, 'threshold': 0.0, 'count': 0.0, 'joint': 0.0}, 'n_rows': 1385, 'events': 58}
+
+D. Expected vs actual 2015 (mean over imputations), Asia + selected:
+   ter: BRN 29 vs 57 (-29); BTN 11 vs 34 (-23); MDV 31 vs 52 (-22); LKA 18 vs 40 (-21); JPN 62 vs 76 (-13); NPL 12 vs 23 (-10); VNM 30 vs 40 (-10); CHN 47 vs 56 (-9); THA 46 vs 55 (-9); KHM 14 vs 22 (-8); BGD 16 vs 23 (-8); MYS 44 vs 52 (-7); PAK 8 vs 13 (-4); LAO 18 vs 21 (-3); MMR 18 vs 20 (-2); IDN 32 vs 34 (-2); AFG 7 vs 6 (+0); IND 27 vs 25 (+3); PHL 36 vs 26 (+9); SGP 93 vs 82 (+11); TLS 26 vs 13 (+13); KOR 94 vs 73 (+21); MNG 70 vs 32 (+39)
+   sec: PAK 35 vs 70 (-35); KHM 50 vs 77 (-27); MDV 73 vs 98 (-24); LAO 62 vs 82 (-20); BGD 59 vs 77 (-18); MYS 82 vs 97 (-16); IND 75 vs 82 (-8); MMR 65 vs 72 (-7); BRN 93 vs 99 (-6); BTN 85 vs 91 (-6); VNM 89 vs 94 (-5); CHN 93 vs 98 (-4); PHL 82 vs 86 (-4); IDN 88 vs 91 (-3); NPL 69 vs 70 (-1); KOR 99 vs 99 (-1); LKA 94 vs 94 (+0); JPN 100 vs 99 (+0); SGP 100 vs 99 (+0); THA 100 vs 97 (+2); MNG 93 vs 88 (+6); TLS 73 vs 65 (+8); AFG 53 vs 41 (+12)
+   lsc: PAK 40 vs 69 (-30); KHM 47 vs 69 (-22); LAO 60 vs 78 (-18); BTN 73 vs 87 (-15); THA 81 vs 96 (-15); MYS 82 vs 95 (-13); MMR 58 vs 65 (-7); BGD 66 vs 71 (-6); PHL 76 vs 80 (-4); MDV 93 vs 97 (-3); AFG 45 vs 46 (-1); VNM 94 vs 93 (+1); KOR 100 vs 98 (+2); SGP 99 vs 97 (+2); BRN 100 vs 97 (+2); LKA 94 vs 91 (+3); CHN 100 vs 96 (+4); IDN 96 vs 88 (+8); IND 86 vs 78 (+8); MNG 97 vs 81 (+16); TLS 80 vs 61 (+19); NPL 87 vs 64 (+23)
+
+B. Long-run splice: first run failed (URL path doubled -> HTTP 404). Rerun separately (same session) with the correct URL
+   https://barrolee.github.io/BarroLeeDataSet/OUP/OUP_enrol_MF_v1.csv (Lee & Lee 2016; 89 countries; 5-yearly; column 'ter').
+   Splice: Lee & Lee up to 2010, WDI after 2010 or where Lee & Lee is missing.
+   Countries reaching tertiary 15% before 1970: 6.
+   First year >= 15%: PHL 1965, USA 1960, JPN 1970, TWN 1970, FRA 1970, GBR 1975, KOR 1980, THA 1982, HKG 1990, MYS 1998,
+   IDN 2000, CHN 2004, VNM 2005, IND 2008, LAO 2009, SGP 2010, LKA 2010, BGD 2015, MMR 2018, KHM 2023, PAK not yet.
+   Lee & Lee tertiary, Philippines: 1930 0.9, 1940 1.4, 1950 7.0, 1955 6.0, 1960 12.7, 1965 18.8, 1970 19.9, 1975 18.4.
+   Lee & Lee tertiary, Korea: 1950 1.6, 1960 4.7, 1970 8.0, 1975 10.3, 1980 15.8, 1985 34.0, 1990 38.6.
+   Caution: Lee & Lee and UIS use different denominators; crossing years near a splice point (e.g. SGP 2010, HKG 1990) may
+   reflect the definition change rather than expansion.
+
+Imputation is model-based; results are associations. Imputed values never extend more than 5 years beyond a country's observed range.

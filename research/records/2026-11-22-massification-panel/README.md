@@ -54,6 +54,15 @@ Every number lives in a result file listed below. Following the house rule, this
 - **B3. Child labour (for Nordtveit).** ILO/UCW series via WDI: children aged 7–14 in employment, the work-only and study-and-work shares, and the share in agriculture. Three analyses: correlates of the employment level, whether child employment predicts later completion, and the Southeast Asian country points. B3(c) is invalid; the note at the end of the findings file explains why.
 - Files: `scripts/bayes.py`, `results/bayes/findings.txt`. This was run on a second AutoDL instance (8 cores) from this branch's own source files.
 
+### 7. APEX v1.1: multiple imputation and long-run splice (branch `research/apex-v1.1-mi-2026-11-22`)
+- **Imputation.** 20 imputed annual panels (1970–2020). Each fill is a country-specific trend plus demographic, urban and income anchors, with a residual bootstrap and per-cell noise. Nothing is extrapolated more than 5 years beyond a country's observed range.
+- **Core tests rerun on every imputation**, combined with Rubin's rules: pooled edges, within-country edges, exact model averaging (pooled and within) and takeoff functional form.
+- **Expected-vs-actual enrolment (2015)** for Asian countries.
+- **Long-run splice.** Lee & Lee (2016) tertiary enrolment back to 1930–1950.
+- Files: `scripts/apex_mi.py`, `results/apex_mi/findings.txt`.
+- Not in the repo: the imputed panel (`imputed_m01.csv`, 3.6 MB) and the Lee & Lee CSV. Both are on the AutoDL instance and should be added from the server archive.
+- **Amendment.** The first imputation version (dense dummies) was too slow and was replaced before any result was read; the script header records this. The long-run step's URL bug was fixed in a separate same-session rerun.
+
 ### How to read the edge files
 - `results/sweep_all/matrix.csv` and `leads.csv` are **between-country** associations: pooled, with no country effects. Each regression includes Y's own starting level and decade dummies; only the X coefficient is reported.
 - For sequence **within** countries, use `results/tight/` (levels) and `results/final/` (log-odds).
