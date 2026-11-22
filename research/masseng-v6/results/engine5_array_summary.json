@@ -1,0 +1,48 @@
+{
+  "PHL": {
+    "status": "DECLARED CAPACITY SENSITIVITY; not observed supply, not an R0-R5 fit",
+    "capacity_coverage": {
+      "public": [0.95, 0.8, 0.67, 0.24],
+      "private": [0.15, 0.24, 0.38, 0.65]
+    },
+    "tertiary_ger_2024_unconstrained": 27.175507211920948,
+    "tertiary_ger_2024_capped": 24.392283474864286,
+    "unmet_effective_entrants_2024": {
+      "primary": 0.0,
+      "secondary": 0.0,
+      "upper_secondary": 0.0,
+      "tertiary": 0.0
+    },
+    "realised_entrants_2024": {
+      "primary": 2176590.215839579,
+      "secondary": 1851843.0014268232,
+      "upper_secondary": 1146470.9646639093,
+      "tertiary": 724153.7308034982
+    },
+    "max_absolute_cohort_share_conservation_residual": 0.040570477297712154,
+    "max_funnel_violation_persons": 5.820766091346741e-11
+  },
+  "KHM": {
+    "status": "DECLARED CAPACITY SENSITIVITY; not observed supply, not an R0-R5 fit",
+    "capacity_coverage": {
+      "public": [0.86, 0.65, 0.53, 0.2],
+      "private": [0.11, 0.18, 0.17, 0.42]
+    },
+    "tertiary_ger_2024_unconstrained": 8.577601510867842,
+    "tertiary_ger_2024_capped": 7.643717814987649,
+    "unmet_effective_entrants_2024": {
+      "primary": 18541.2305255906,
+      "secondary": 0.0,
+      "upper_secondary": 0.0,
+      "tertiary": 0.0
+    },
+    "realised_entrants_2024": {
+      "primary": 359367.63207696297,
+      "secondary": 208783.38427806835,
+      "upper_secondary": 96026.59395628008,
+      "tertiary": 33962.78722841127
+    },
+    "max_absolute_cohort_share_conservation_residual": 0.007267959738610746,
+    "max_funnel_violation_persons": 7.275957614183426e-12
+  }
+}
