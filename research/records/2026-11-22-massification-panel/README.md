@@ -48,6 +48,12 @@ Every number lives in a result file listed below. Following the house rule, this
 - Files: `scripts/final_tests.py`, `results/final/findings.txt`. The full `results.json` is in the server archive.
 - **Rerun note.** The first run crashed because World Bank region labels carry a trailing space (`'Sub-Saharan Africa '`). The script now strips the label and saves tests 1–2 before running the event study. The design is otherwise unchanged.
 
+### 6. Bayesian analyses and child labour (design fixed in the script header before running)
+- **B1. Hierarchical Bayesian regressions.** A Gibbs sampler written in the script (4 chains, R-hat reported), with country random intercepts and partially pooled region-specific slopes. Asia slopes are reported separately.
+- **B2. Exact Bayesian model averaging.** Zellner g-prior (BRIC) with a beta-binomial model-size prior, over all subsets of 12 candidates, run both pooled and within countries.
+- **B3. Child labour (for Nordtveit).** ILO/UCW series via WDI: children aged 7–14 in employment, the work-only and study-and-work shares, and the share in agriculture. Three analyses: correlates of the employment level, whether child employment predicts later completion, and the Southeast Asian country points. B3(c) is invalid; the note at the end of the findings file explains why.
+- Files: `scripts/bayes.py`, `results/bayes/findings.txt`. This was run on a second AutoDL instance (8 cores) from this branch's own source files.
+
 ### How to read the edge files
 - `results/sweep_all/matrix.csv` and `leads.csv` are **between-country** associations: pooled, with no country effects. Each regression includes Y's own starting level and decade dummies; only the X coefficient is reported.
 - For sequence **within** countries, use `results/tight/` (levels) and `results/final/` (log-odds).
