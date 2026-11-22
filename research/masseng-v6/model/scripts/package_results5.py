@@ -75,6 +75,10 @@ def main():
     shutil.copy2(state, BUNDLE / 'SESSION_STATE.md')
     shutil.copytree(PR_RESEARCH, BUNDLE / 'research' / 'masseng-v6',
                     ignore=shutil.ignore_patterns('__pycache__', '.pytest_cache', '*.pyc', '.DS_Store'))
+    originals = BUNDLE / 'original_handoffs'
+    originals.mkdir()
+    for name in ('MASSENG_v6_surplus_motor_CONTEXT_HANDOFF.zip', 'masseng-handoff-kimi.zip'):
+        shutil.copy2(WORKSPACE / name, originals / name)
     files = {}
     for path in sorted(BUNDLE.rglob('*')):
         if path.is_file():

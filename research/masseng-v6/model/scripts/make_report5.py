@@ -32,7 +32,8 @@ def markdown_block(scores, recovery=None):
     for spec, v in rivals.items():
         g = v['three_ger_rmse']
         evaluations = v.get('total_nfev', v['nfev'])
-        cap = ' (last stage cap)' if v['nfev'] >= 250 else ''
+        stage_limit = 500 if v.get('total_nfev', v['nfev']) > v['nfev'] else 250
+        cap = ' (last stage cap)' if v['nfev'] >= stage_limit else ''
         L.append(f"| {spec} | {f(g['model'])} | {f(g['model_minus_R0'])} | {f(g['persistence'])} | {f(g['trend'])} | "
                  f"{f(v['train_cost'])} | {evaluations}{cap} | {', '.join(v['at_bounds']) or 'none'} |")
     model_loss = rivals[winner]['three_ger_rmse']['model']
@@ -107,7 +108,7 @@ def markdown_block(scores, recovery=None):
             if v['status'] == 'not in rival':
                 L.append(f"| {name} | — | — | — | — | — | not in rival |")
             else:
-                L.append(f"| {name} | {f(recovery['truth'][name])} | {f(v['median'])} | {f(v['q05'])}–{f(v['q95'])} | "
+                L.append(f"| {name} | {f(recovery['truth'][name])} | {f(v['median'])} | {f(v['q05'])} to {f(v['q95'])} | "
                          f"{f(v['within_25pct_share'], 2)} | {v.get('bound_hit_replicates', '—')} | **{v['status']}** |")
         L.append('')
     return L

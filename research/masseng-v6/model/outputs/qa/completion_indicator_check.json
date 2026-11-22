@@ -1,0 +1,17 @@
+{
+  "checked_on": "2026-11-22",
+  "result": "RESOLVED AS UNLIKE INDICATORS, NOT A NUMERICAL CONTRADICTION TO BE AVERAGED",
+  "qbedp": {
+    "source": "https://planipolis.iiep.unesco.org/sites/default/files/ressources/Philippines_Quality-Basic-Education-Development-Plan-QBEDP-2025-to-2035-29-July-2025.pdf",
+    "baseline_school_year": "2023-24",
+    "senior_high_net_enrolment_rate_pct": 67,
+    "senior_high_completion_rate_pct": 73
+  },
+  "uis": {
+    "source": "https://download.uis.unesco.org/SDG4/SDG4-Profile-Philippines.pdf",
+    "reference_year": 2022,
+    "upper_secondary_completion_rate_pct": 72.6,
+    "definition_note": "SDG 4.1.2 household-survey completion is not the same measure as administrative net enrolment. Reference years also differ."
+  },
+  "use": "Use 67% only for SHS NER and approximately 73% only for completion, with school year/reference year and source attached. Do not describe 67% as a competing UIS completion estimate and do not average 67 with 73."
+}

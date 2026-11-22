@@ -1,0 +1,59 @@
+{
+  "params": {
+    "a_prim": 4.6905883742052,
+    "a_sec": 3.85707635100285,
+    "a_sec_entry": 3.334747761230875,
+    "a_ter": 5.3816216013466,
+    "a_ter_entry": 5.903751071711594,
+    "b_h": -5.999765171164789,
+    "b_p": 0.0,
+    "b_r": 0.0,
+    "eta": 0.0,
+    "eta_x": 1.5945542328685073e-13,
+    "kappa": 1.865048837129614,
+    "lam": 0.0,
+    "c_scale": 1.14050289514391,
+    "mu_basic": -3.409717076327585,
+    "mu_ter": 3.522592962862173,
+    "nu": 7.9997713382177675,
+    "h_def": 0.2,
+    "late": 0.15,
+    "rep_prim": 0.04,
+    "rep_sec": 0.02
+  },
+  "fitted": [
+    "a_prim",
+    "a_sec",
+    "a_sec_entry",
+    "a_ter",
+    "a_ter_entry",
+    "eta_x",
+    "kappa",
+    "c_scale",
+    "mu_basic",
+    "mu_ter",
+    "nu",
+    "b_h"
+  ],
+  "cost": 382.87532387649253,
+  "nfev": 82,
+  "spec": "R2",
+  "at_bounds": [
+    "eta_x",
+    "nu",
+    "b_h"
+  ],
+  "preflight": {
+    "country": "PHL",
+    "ready": true,
+    "errors": [],
+    "warnings": [
+      "unverified targets excluded: ['fies_all 2023']",
+      "PHL premium_tertiary combines methods; interpolation across 1995-2013 is a declared comparability limitation",
+      "PHL relational driver is formal_share; short occupation series are not spliced"
+    ],
+    "train_rows": 121,
+    "test_rows": 164,
+    "diagnostic_rows": 5
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "params": {
+    "a_prim": -1.6461292969114378,
+    "a_sec": -2.4523377360600094,
+    "a_sec_entry": 2.7042043146467205,
+    "a_ter": 3.8402928733486075,
+    "a_ter_entry": 2.1677348309045805,
+    "b_h": -3.6806529374054255,
+    "b_p": 8.04000852623464,
+    "b_r": 7.255682042111764,
+    "eta": 0.0,
+    "eta_x": 1.9883799860144271,
+    "kappa": 22.755701111415586,
+    "lam": 2.2851918361220505,
+    "c_scale": 1.1117836551444313,
+    "mu_basic": -3.932280108422626,
+    "mu_ter": 0.974625904419102,
+    "nu": 7.736723870753956,
+    "h_def": 0.2,
+    "late": 0.15,
+    "rep_prim": 0.04,
+    "rep_sec": 0.02
+  },
+  "fitted": [
+    "a_prim",
+    "a_sec",
+    "a_sec_entry",
+    "a_ter",
+    "a_ter_entry",
+    "eta_x",
+    "kappa",
+    "c_scale",
+    "mu_basic",
+    "mu_ter",
+    "nu",
+    "b_h",
+    "b_p",
+    "b_r",
+    "lam"
+  ],
+  "cost": 135.7059284936088,
+  "nfev": 88,
+  "spec": "R5",
+  "at_bounds": [],
+  "preflight": {
+    "country": "PHL",
+    "ready": true,
+    "errors": [],
+    "warnings": [
+      "unverified targets excluded: ['fies_all 2023']",
+      "PHL premium_tertiary combines methods; interpolation across 1995-2013 is a declared comparability limitation",
+      "PHL relational driver is formal_share; short occupation series are not spliced"
+    ],
+    "train_rows": 121,
+    "test_rows": 164,
+    "diagnostic_rows": 5
+  }
+}

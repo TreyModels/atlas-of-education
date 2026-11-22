@@ -1,0 +1,753 @@
+{
+ "income|fiscal": {
+  "train_cost": 25.97683888618078,
+  "params": {
+   "eta": 1.5866366508383523,
+   "kappa": 25.098066603513974,
+   "a_prim": 11.012225305908604,
+   "a_sec": 7.7415495296633745,
+   "a_sec_entry": 7.885015156091071,
+   "a_ter": 15.999748100133413,
+   "a_ter_entry": 7.8946749378550996,
+   "mu_basic": -2.098887027442851,
+   "mu_ter": 3.0476507096131042,
+   "nu": 4.004327923278523,
+   "k_ter": 0.05078403216336522
+  },
+  "table": {
+   "ger_primary": {
+    "n": 25,
+    "model": 7.4225054035261575,
+    "persistence": 4.737306724289657,
+    "trend": 10.873381315034512
+   },
+   "ger_secondary": {
+    "n": 24,
+    "model": 7.031826161122946,
+    "persistence": 7.792879631967462,
+    "trend": 16.761632522891016
+   },
+   "ger_tertiary": {
+    "n": 26,
+    "model": 8.101491943108275,
+    "persistence": 6.929850936347764,
+    "trend": 5.310911971203852
+   },
+   "ner_primary": {
+    "n": 16,
+    "model": 6.562283342803905,
+    "persistence": 3.6532317114439947,
+    "trend": 4.632356873731707
+   },
+   "ner_secondary": {
+    "n": 14,
+    "model": 8.130294289205235,
+    "persistence": 5.114415104109447,
+    "trend": 8.264371155863264
+   },
+   "priv_lower_secondary": {
+    "n": 1,
+    "model": 3.4423662503541976,
+    "persistence": NaN,
+    "trend": NaN
+   },
+   "priv_primary": {
+    "n": 21,
+    "model": 2.3677017221107963,
+    "persistence": 0.7799411149933969,
+    "trend": 0.6312411794454911
+   },
+   "priv_secondary": {
+    "n": 17,
+    "model": 8.645905673505053,
+    "persistence": NaN,
+    "trend": NaN
+   },
+   "priv_tertiary": {
+    "n": 6,
+    "model": 25.562417690908113,
+    "persistence": 9.710732893728121,
+    "trend": 9.710732893728121
+   },
+   "priv_upper_secondary": {
+    "n": 1,
+    "model": 10.46931158384377,
+    "persistence": NaN,
+    "trend": NaN
+   }
+  },
+  "mean_test_rmse_ger": 7.518607835919126,
+  "separating": {
+   "ger_secondary 1983->1987": {
+    "model": -1.9774229500829392,
+    "observed": 3.590999999999994
+   },
+   "ger_tertiary 1983->1987": {
+    "model": -2.364931684345649,
+    "observed": -2.062000000000001
+   },
+   "ger_secondary 1997->1999": {
+    "model": -3.3063233835163146,
+    "observed": -2.9279999999999973
+   },
+   "ger_tertiary 1997->1999": {
+    "model": -0.37972964414724686,
+    "observed": null
+   },
+   "ger_secondary 2009->2016": {
+    "model": 15.855864006530467,
+    "observed": 2.608000000000004
+   },
+   "ger_tertiary 2009->2016": {
+    "model": 3.5238710821762638,
+    "observed": 11.738999999999997
+   },
+   "ched_total_2018_vs_2016": {
+    "observed": 0.7264113275033065
+   },
+   "ched_total_2020_vs_2016": {
+    "observed": 0.830342758708559
+   }
+  },
+  "income_gradient": {
+   "primary": {
+    "model_ratio": 1.001199378175609,
+    "survey_ratio": 1.0360262008733625
+   },
+   "secondary": {
+    "model_ratio": 21.246541842915402,
+    "survey_ratio": 1.205128205128205
+   },
+   "tertiary": {
+    "model_ratio": 41722855113.15597,
+    "survey_ratio": 2.5731707317073176
+   }
+  }
+ },
+ "income|responsive": {
+  "train_cost": 24.646227034877292,
+  "params": {
+   "eta": 1.5262440094320988,
+   "kappa": 23.65142611556399,
+   "a_prim": 10.601568413844188,
+   "a_sec": 7.545522472205776,
+   "a_sec_entry": 7.378997395278723,
+   "a_ter": 15.999999999999998,
+   "a_ter_entry": 11.993151705311417,
+   "mu_basic": -2.7509073027667013,
+   "mu_ter": -1.8004917277228658,
+   "nu": 4.537796617603791,
+   "k_ter": 0.005000000000000001,
+   "k_resp": 0.006559665318466277
+  },
+  "table": {
+   "ger_primary": {
+    "n": 25,
+    "model": 7.370508661794867,
+    "persistence": 4.737306724289657,
+    "trend": 10.873381315034512
+   },
+   "ger_secondary": {
+    "n": 24,
+    "model": 7.085654824109107,
+    "persistence": 7.792879631967462,
+    "trend": 16.761632522891016
+   },
+   "ger_tertiary": {
+    "n": 26,
+    "model": 6.908149272328801,
+    "persistence": 6.929850936347764,
+    "trend": 5.310911971203852
+   },
+   "ner_primary": {
+    "n": 16,
+    "model": 6.402225141245924,
+    "persistence": 3.6532317114439947,
+    "trend": 4.632356873731707
+   },
+   "ner_secondary": {
+    "n": 14,
+    "model": 8.236277499470539,
+    "persistence": 5.114415104109447,
+    "trend": 8.264371155863264
+   },
+   "priv_lower_secondary": {
+    "n": 1,
+    "model": 2.7200691523286267,
+    "persistence": NaN,
+    "trend": NaN
+   },
+   "priv_primary": {
+    "n": 21,
+    "model": 2.5918497890261647,
+    "persistence": 0.7799411149933969,
+    "trend": 0.6312411794454911
+   },
+   "priv_secondary": {
+    "n": 17,
+    "model": 8.285368203000674,
+    "persistence": NaN,
+    "trend": NaN
+   },
+   "priv_tertiary": {
+    "n": 6,
+    "model": 15.449758095082215,
+    "persistence": 9.710732893728121,
+    "trend": 9.710732893728121
+   },
+   "priv_upper_secondary": {
+    "n": 1,
+    "model": 9.780464507022131,
+    "persistence": NaN,
+    "trend": NaN
+   }
+  },
+  "mean_test_rmse_ger": 7.121437586077593,
+  "separating": {
+   "ger_secondary 1983->1987": {
+    "model": -1.9944366141371646,
+    "observed": 3.590999999999994
+   },
+   "ger_tertiary 1983->1987": {
+    "model": -1.8404471175693615,
+    "observed": -2.062000000000001
+   },
+   "ger_secondary 1997->1999": {
+    "model": -3.3033162487338927,
+    "observed": -2.9279999999999973
+   },
+   "ger_tertiary 1997->1999": {
+    "model": -0.2929053166595459,
+    "observed": null
+   },
+   "ger_secondary 2009->2016": {
+    "model": 15.69805067358763,
+    "observed": 2.608000000000004
+   },
+   "ger_tertiary 2009->2016": {
+    "model": 4.332707428295706,
+    "observed": 11.738999999999997
+   },
+   "ched_total_2018_vs_2016": {
+    "observed": 0.7264113275033065
+   },
+   "ched_total_2020_vs_2016": {
+    "observed": 0.830342758708559
+   }
+  },
+  "income_gradient": {
+   "primary": {
+    "model_ratio": 1.0015684514889245,
+    "survey_ratio": 1.0360262008733625
+   },
+   "secondary": {
+    "model_ratio": 20.414636916704332,
+    "survey_ratio": 1.205128205128205
+   },
+   "tertiary": {
+    "model_ratio": 41722877694.10571,
+    "survey_ratio": 2.5731707317073176
+   }
+  }
+ },
+ "income|trend": {
+  "train_cost": 22.727680347671694,
+  "params": {
+   "eta": 1.6520956994893423,
+   "kappa": 26.32812095534765,
+   "a_prim": 11.388144904934174,
+   "a_sec": 8.113223246907173,
+   "a_sec_entry": 8.129447168871403,
+   "a_ter": 15.999998189398054,
+   "a_ter_entry": 9.407605739448098,
+   "mu_basic": -2.418171061457789,
+   "mu_ter": 1.9331980087485237,
+   "nu": 4.431463041940479,
+   "k_ter": 0.07622601368939476,
+   "k_growth": 0.2040547608163724
+  },
+  "table": {
+   "ger_primary": {
+    "n": 25,
+    "model": 7.468137489557853,
+    "persistence": 4.737306724289657,
+    "trend": 10.873381315034512
+   },
+   "ger_secondary": {
+    "n": 24,
+    "model": 7.009691848867599,
+    "persistence": 7.792879631967462,
+    "trend": 16.761632522891016
+   },
+   "ger_tertiary": {
+    "n": 26,
+    "model": 6.035383025478034,
+    "persistence": 6.929850936347764,
+    "trend": 5.310911971203852
+   },
+   "ner_primary": {
+    "n": 16,
+    "model": 6.695864816996366,
+    "persistence": 3.6532317114439947,
+    "trend": 4.632356873731707
+   },
+   "ner_secondary": {
+    "n": 14,
+    "model": 8.183773292582693,
+    "persistence": 5.114415104109447,
+    "trend": 8.264371155863264
+   },
+   "priv_lower_secondary": {
+    "n": 1,
+    "model": 3.380720757434826,
+    "persistence": NaN,
+    "trend": NaN
+   },
+   "priv_primary": {
+    "n": 21,
+    "model": 2.433542661214638,
+    "persistence": 0.7799411149933969,
+    "trend": 0.6312411794454911
+   },
+   "priv_secondary": {
+    "n": 17,
+    "model": 8.477447761456597,
+    "persistence": NaN,
+    "trend": NaN
+   },
+   "priv_tertiary": {
+    "n": 6,
+    "model": 13.661887426758708,
+    "persistence": 9.710732893728121,
+    "trend": 9.710732893728121
+   },
+   "priv_upper_secondary": {
+    "n": 1,
+    "model": 10.162151488927911,
+    "persistence": NaN,
+    "trend": NaN
+   }
+  },
+  "mean_test_rmse_ger": 6.837737454634496,
+  "separating": {
+   "ger_secondary 1983->1987": {
+    "model": -1.9713804868244793,
+    "observed": 3.590999999999994
+   },
+   "ger_tertiary 1983->1987": {
+    "model": -0.05417711828960492,
+    "observed": -2.062000000000001
+   },
+   "ger_secondary 1997->1999": {
+    "model": -3.322809632222288,
+    "observed": -2.9279999999999973
+   },
+   "ger_tertiary 1997->1999": {
+    "model": -0.9276309194763996,
+    "observed": null
+   },
+   "ger_secondary 2009->2016": {
+    "model": 16.07211114877356,
+    "observed": 2.608000000000004
+   },
+   "ger_tertiary 2009->2016": {
+    "model": 3.407820484218419,
+    "observed": 11.738999999999997
+   },
+   "ched_total_2018_vs_2016": {
+    "observed": 0.7264113275033065
+   },
+   "ched_total_2020_vs_2016": {
+    "observed": 0.830342758708559
+   }
+  },
+  "income_gradient": {
+   "primary": {
+    "model_ratio": 1.0009441413304854,
+    "survey_ratio": 1.0360262008733625
+   },
+   "secondary": {
+    "model_ratio": 24.841553240005567,
+    "survey_ratio": 1.205128205128205
+   },
+   "tertiary": {
+    "model_ratio": 41723713052.01535,
+    "survey_ratio": 2.5731707317073176
+   }
+  }
+ },
+ "income|unconstrained": {
+  "train_cost": 26.39791148344941,
+  "params": {
+   "eta": 1.7173188146608565,
+   "kappa": 24.347392299488792,
+   "a_prim": 11.05646366375477,
+   "a_sec": 7.590867518399436,
+   "a_sec_entry": 7.831143023999508,
+   "a_ter": 15.999999999741037,
+   "a_ter_entry": 6.853697890523711,
+   "mu_basic": -0.49042696477007025,
+   "mu_ter": 4.119064200251681,
+   "nu": 2.2484901269931976
+  },
+  "table": {
+   "ger_primary": {
+    "n": 25,
+    "model": 7.415123465046744,
+    "persistence": 4.737306724289657,
+    "trend": 10.873381315034512
+   },
+   "ger_secondary": {
+    "n": 24,
+    "model": 7.0123410563184905,
+    "persistence": 7.792879631967462,
+    "trend": 16.761632522891016
+   },
+   "ger_tertiary": {
+    "n": 26,
+    "model": 8.991760286649718,
+    "persistence": 6.929850936347764,
+    "trend": 5.310911971203852
+   },
+   "ner_primary": {
+    "n": 16,
+    "model": 6.52390780895097,
+    "persistence": 3.6532317114439947,
+    "trend": 4.632356873731707
+   },
+   "ner_secondary": {
+    "n": 14,
+    "model": 8.16208026148986,
+    "persistence": 5.114415104109447,
+    "trend": 8.264371155863264
+   },
+   "priv_lower_secondary": {
+    "n": 1,
+    "model": 5.606222056506947,
+    "persistence": NaN,
+    "trend": NaN
+   },
+   "priv_primary": {
+    "n": 21,
+    "model": 1.4903162149078233,
+    "persistence": 0.7799411149933969,
+    "trend": 0.6312411794454911
+   },
+   "priv_secondary": {
+    "n": 17,
+    "model": 10.074025322425582,
+    "persistence": NaN,
+    "trend": NaN
+   },
+   "priv_tertiary": {
+    "n": 6,
+    "model": 25.910836489026618,
+    "persistence": 9.710732893728121,
+    "trend": 9.710732893728121
+   },
+   "priv_upper_secondary": {
+    "n": 1,
+    "model": 13.521733910715696,
+    "persistence": NaN,
+    "trend": NaN
+   }
+  },
+  "mean_test_rmse_ger": 7.806408269338317,
+  "separating": {
+   "ger_secondary 1983->1987": {
+    "model": -2.1565094152446136,
+    "observed": 3.590999999999994
+   },
+   "ger_tertiary 1983->1987": {
+    "model": -1.431170762253096,
+    "observed": -2.062000000000001
+   },
+   "ger_secondary 1997->1999": {
+    "model": -3.290614108905615,
+    "observed": -2.9279999999999973
+   },
+   "ger_tertiary 1997->1999": {
+    "model": -0.5857453583539645,
+    "observed": null
+   },
+   "ger_secondary 2009->2016": {
+    "model": 15.823062797142583,
+    "observed": 2.608000000000004
+   },
+   "ger_tertiary 2009->2016": {
+    "model": 3.2608793573258374,
+    "observed": 11.738999999999997
+   },
+   "ched_total_2018_vs_2016": {
+    "observed": 0.7264113275033065
+   },
+   "ched_total_2020_vs_2016": {
+    "observed": 0.830342758708559
+   }
+  },
+  "income_gradient": {
+   "primary": {
+    "model_ratio": 1.0012679481148632,
+    "survey_ratio": 1.0360262008733625
+   },
+   "secondary": {
+    "model_ratio": 20.448369031771463,
+    "survey_ratio": 1.205128205128205
+   },
+   "tertiary": {
+    "model_ratio": 41719815882.19335,
+    "survey_ratio": 2.5731707317073176
+   }
+  }
+ },
+ "none|fiscal": {
+  "train_cost": 27.70448820843157,
+  "params": {
+   "eta": 4.449218055504836e-12,
+   "kappa": 19.168007331641277,
+   "a_prim": 7.528917705379185,
+   "a_sec": 5.243912032995893,
+   "a_sec_entry": 6.796863719905218,
+   "a_ter": 15.999531853186877,
+   "a_ter_entry": 8.613977830563691,
+   "mu_basic": -6.051291920069238,
+   "mu_ter": -0.18833890075662663,
+   "nu": 7.437945559241329,
+   "k_ter": 0.0509322826216486
+  },
+  "table": {
+   "ger_primary": {
+    "n": 25,
+    "model": 6.834730785582011,
+    "persistence": 4.737306724289657,
+    "trend": 10.873381315034512
+   },
+   "ger_secondary": {
+    "n": 24,
+    "model": 9.117857347780946,
+    "persistence": 7.792879631967462,
+    "trend": 16.761632522891016
+   },
+   "ger_tertiary": {
+    "n": 26,
+    "model": 7.788840863494451,
+    "persistence": 6.929850936347764,
+    "trend": 5.310911971203852
+   },
+   "ner_primary": {
+    "n": 16,
+    "model": 5.260556397082333,
+    "persistence": 3.6532317114439947,
+    "trend": 4.632356873731707
+   },
+   "ner_secondary": {
+    "n": 14,
+    "model": 6.8597997067186745,
+    "persistence": 5.114415104109447,
+    "trend": 8.264371155863264
+   },
+   "priv_lower_secondary": {
+    "n": 1,
+    "model": 0.5774530879771262,
+    "persistence": NaN,
+    "trend": NaN
+   },
+   "priv_primary": {
+    "n": 21,
+    "model": 3.2669617563495374,
+    "persistence": 0.7799411149933969,
+    "trend": 0.6312411794454911
+   },
+   "priv_secondary": {
+    "n": 17,
+    "model": 7.281897145813152,
+    "persistence": NaN,
+    "trend": NaN
+   },
+   "priv_tertiary": {
+    "n": 6,
+    "model": 21.57034079730043,
+    "persistence": 9.710732893728121,
+    "trend": 9.710732893728121
+   },
+   "priv_upper_secondary": {
+    "n": 1,
+    "model": 3.0335469857500215,
+    "persistence": NaN,
+    "trend": NaN
+   }
+  },
+  "mean_test_rmse_ger": 7.913809665619136,
+  "separating": {
+   "ger_secondary 1983->1987": {
+    "model": -0.029353523556601147,
+    "observed": 3.590999999999994
+   },
+   "ger_tertiary 1983->1987": {
+    "model": -2.6354217051683975,
+    "observed": -2.062000000000001
+   },
+   "ger_secondary 1997->1999": {
+    "model": -3.0584494295556652,
+    "observed": -2.9279999999999973
+   },
+   "ger_tertiary 1997->1999": {
+    "model": -0.3307005309577349,
+    "observed": null
+   },
+   "ger_secondary 2009->2016": {
+    "model": 12.637777769634027,
+    "observed": 2.608000000000004
+   },
+   "ger_tertiary 2009->2016": {
+    "model": 5.710990650628663,
+    "observed": 11.738999999999997
+   },
+   "ched_total_2018_vs_2016": {
+    "observed": 0.7264113275033065
+   },
+   "ched_total_2020_vs_2016": {
+    "observed": 0.830342758708559
+   }
+  },
+  "income_gradient": {
+   "primary": {
+    "model_ratio": 1.005326262777297,
+    "survey_ratio": 1.0360262008733625
+   },
+   "secondary": {
+    "model_ratio": 5.770204271608638,
+    "survey_ratio": 1.205128205128205
+   },
+   "tertiary": {
+    "model_ratio": 41694059464.85054,
+    "survey_ratio": 2.5731707317073176
+   }
+  }
+ },
+ "trend|fiscal": {
+  "train_cost": 27.704044552642824,
+  "params": {
+   "eta": 1.1823534060708695e-11,
+   "kappa": 18.99059961850639,
+   "a_prim": 7.498646405926016,
+   "a_sec": 5.218591735928163,
+   "a_sec_entry": 6.725082850315316,
+   "a_ter": 15.999939686895335,
+   "a_ter_entry": 8.596169850809183,
+   "mu_basic": -6.150628117077838,
+   "mu_ter": -0.269489716318288,
+   "nu": 7.5233896110935445,
+   "k_ter": 0.05095993917787121
+  },
+  "table": {
+   "ger_primary": {
+    "n": 25,
+    "model": 6.8279265875860204,
+    "persistence": 4.737306724289657,
+    "trend": 10.873381315034512
+   },
+   "ger_secondary": {
+    "n": 24,
+    "model": 9.140555306190263,
+    "persistence": 7.792879631967462,
+    "trend": 16.761632522891016
+   },
+   "ger_tertiary": {
+    "n": 26,
+    "model": 7.7524465928674475,
+    "persistence": 6.929850936347764,
+    "trend": 5.310911971203852
+   },
+   "ner_primary": {
+    "n": 16,
+    "model": 5.239898547914999,
+    "persistence": 3.6532317114439947,
+    "trend": 4.632356873731707
+   },
+   "ner_secondary": {
+    "n": 14,
+    "model": 6.876666630481029,
+    "persistence": 5.114415104109447,
+    "trend": 8.264371155863264
+   },
+   "priv_lower_secondary": {
+    "n": 1,
+    "model": 0.6777470533112577,
+    "persistence": NaN,
+    "trend": NaN
+   },
+   "priv_primary": {
+    "n": 21,
+    "model": 3.2893890797003063,
+    "persistence": 0.7799411149933969,
+    "trend": 0.6312411794454911
+   },
+   "priv_secondary": {
+    "n": 17,
+    "model": 7.253505152304694,
+    "persistence": NaN,
+    "trend": NaN
+   },
+   "priv_tertiary": {
+    "n": 6,
+    "model": 21.616755285756714,
+    "persistence": 9.710732893728121,
+    "trend": 9.710732893728121
+   },
+   "priv_upper_secondary": {
+    "n": 1,
+    "model": 2.944752826889932,
+    "persistence": NaN,
+    "trend": NaN
+   }
+  },
+  "mean_test_rmse_ger": 7.906976162214577,
+  "separating": {
+   "ger_secondary 1983->1987": {
+    "model": -0.034481913388894725,
+    "observed": 3.590999999999994
+   },
+   "ger_tertiary 1983->1987": {
+    "model": -2.6568208536003297,
+    "observed": -2.062000000000001
+   },
+   "ger_secondary 1997->1999": {
+    "model": -3.057563331450126,
+    "observed": -2.9279999999999973
+   },
+   "ger_tertiary 1997->1999": {
+    "model": -0.32702443478535415,
+    "observed": null
+   },
+   "ger_secondary 2009->2016": {
+    "model": 12.616031353958348,
+    "observed": 2.608000000000004
+   },
+   "ger_tertiary 2009->2016": {
+    "model": 5.756832863507913,
+    "observed": 11.738999999999997
+   },
+   "ched_total_2018_vs_2016": {
+    "observed": 0.7264113275033065
+   },
+   "ched_total_2020_vs_2016": {
+    "observed": 0.830342758708559
+   }
+  },
+  "income_gradient": {
+   "primary": {
+    "model_ratio": 1.0054398983854418,
+    "survey_ratio": 1.0360262008733625
+   },
+   "secondary": {
+    "model_ratio": 5.752176693779123,
+    "survey_ratio": 1.205128205128205
+   },
+   "tertiary": {
+    "model_ratio": 41694943764.55024,
+    "survey_ratio": 2.5731707317073176
+   }
+  }
+ }
+}

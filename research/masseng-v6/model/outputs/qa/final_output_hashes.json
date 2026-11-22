@@ -1,0 +1,13 @@
+{
+  "outputs/PHL/v5/figures/demand_rivals.png": "bf405269ef8560b81d7ff43d17b25eb89a95cc3c3417beb08dd62c28aa0953db",
+  "outputs/PHL/v5/figures/fit_and_test.png": "5c3758ea9c98a9b95526b59be3b2095435f160d10108d83890ebfc3e9420e837",
+  "outputs/PHL/v5/fit_R0.json": "b6e355ba0ceba9c438f6641243ef10ecb1d054383bdde686df0413e77828407c",
+  "outputs/PHL/v5/fit_R1.json": "e0690737d0570e719c20a946b50036d3290a6d1d70689f019ea89ab2d33ef796",
+  "outputs/PHL/v5/fit_R2.json": "add2073e9c894a2961ded5e036c0dfe007dd9e190d4202dec18f2cb2cc440ef4",
+  "outputs/PHL/v5/fit_R3.json": "052ab5631e2a1f5c0eca534b8db143e689ee8e14521ab9a3cc73e02f826d9fbf",
+  "outputs/PHL/v5/fit_R4.json": "c894c501814e7049be82f3d35aa1843748168c13ca75f0479bf9ee2f287ff5df",
+  "outputs/PHL/v5/fit_R5.json": "2b00a64bedefc57e68b49e31db3851a09ace18c1d1b109bffeab5dd00df17938",
+  "outputs/PHL/v5/recovery_R2.json": "49bf2672de82852b1ccb419c70872991e4fdbccd96bc207218c79130b2cbcf71",
+  "outputs/PHL/v5/report.md": "9d883ff405a6d448eb7d2a7937c936dec3569422b8429edc4a1b3f6350955143",
+  "outputs/PHL/v5/scores.json": "c6bc205157c58543980756421e27c07f05e96568747a7ca6449877001d210069"
+}
