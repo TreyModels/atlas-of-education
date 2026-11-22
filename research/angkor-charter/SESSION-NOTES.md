@@ -177,3 +177,28 @@ create forks.
    rather than measured.
 5. Can a charter state be distinguished archaeologically from a collapsed one? If not, the
    relocation framing is unfalsifiable and the whole exercise is literary.
+
+---
+
+## 10. Local reproduction (server down)
+
+Re-run after the compute server was taken down, single-core under emulation, to confirm the
+headline numbers are not machine artefacts:
+
+| run | n | median peak year | P(peak 1000–1300) | P(full pattern) |
+|---|---|---|---|---|
+| v8 stock, server (x86) | 300 | 877 | 2% | 1% |
+| **v8 stock, local (emulated)** | **200** | **879** | **3%** | **1%** |
+| v12 agent, server (x86) | 240 | 857 | 2% | 0% |
+| **v12 agent, local (emulated)** | **8** | **859** | — | — |
+
+The stock model reproduces to within 2 years and the agent model to within 2 years on 8 draws
+(6.9 s per run emulated against ~0.2 s native). The negative result is a property of the
+model, not of the machine.
+
+Also measured locally: only **36%** of prior draws produce a land area that can feed the
+700,000 people Carter et al. treat as a lower bound. That is a second, independent way of
+saying the same thing — the land/yield/diet identity is at the edge of consistency across
+most of the defensible parameter space.
+
+Raw output: `results/p1_local.csv`, `results/p2_local.csv`.
