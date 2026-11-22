@@ -1,0 +1,109 @@
+{
+  "topic": "Household (out-of-pocket) costs of schooling, Philippines",
+  "compiled": "2026-11-22",
+  "note": "All values were read via WebFetch summaries of the cited pages; none invented. Items marked reliability=low need checking against the original document. Peso values are as stated in each source (current prices unless noted).",
+  "fies_education_share_of_family_expenditure": [
+    {"year": 2003, "group": "all families", "value_pct": 4.0, "unit": "% of total family expenditure", "source": "https://psa.gov.ph/sites/default/files/iesd/2022-12/TABLE%25203%2520%2520Percent%2520Distribution%2520of%2520Family%2520Expenditure.pdf", "reliability": "high (PSA/NSO table, 2006 FIES preliminary results, revised 19 May 2008)"},
+    {"year": 2003, "group": "bottom 30% income", "value_pct": 1.3, "unit": "%", "source": "same as above", "reliability": "high"},
+    {"year": 2003, "group": "upper 70% income", "value_pct": 4.3, "unit": "%", "source": "same as above", "reliability": "high"},
+    {"year": 2006, "group": "all families", "value_pct": 4.4, "unit": "%", "source": "same as above", "reliability": "high (preliminary)"},
+    {"year": 2006, "group": "bottom 30% income", "value_pct": 1.3, "unit": "%", "source": "same as above", "reliability": "high (preliminary)"},
+    {"year": 2006, "group": "upper 70% income", "value_pct": 4.7, "unit": "%", "source": "same as above", "reliability": "high (preliminary)"},
+    {"year": 2012, "group": "all families", "value_pct": 4.1, "unit": "%", "source": "https://rtei.okfn.org/documents/Statistical_Tables_on_Family_Income_and_Expenditure_Survey_FIES.pdf", "reliability": "medium (PSA/NSO Table 9 hosted on third-party site)"},
+    {"year": 2012, "group": "family income under PHP 40,000", "value_pct": 0.4, "unit": "%", "source": "same as above", "reliability": "medium"},
+    {"year": 2012, "group": "PHP 40,000-59,999", "value_pct": 0.8, "unit": "%", "source": "same as above", "reliability": "medium"},
+    {"year": 2012, "group": "PHP 60,000-99,999", "value_pct": 1.6, "unit": "%", "source": "same as above", "reliability": "medium"},
+    {"year": 2012, "group": "PHP 100,000-249,999", "value_pct": 2.6, "unit": "%", "source": "same as above", "reliability": "medium"},
+    {"year": 2012, "group": "PHP 250,000 and over", "value_pct": 5.4, "unit": "%", "source": "same as above", "reliability": "medium"},
+    {"year": 2015, "group": "PIDS income clusters Poor/Lower/Lower-middle/Middle-middle/Upper-middle/Upper/Rich", "value_pct": [2,3,4,5,5,5,5], "unit": "% of total expenditure (rounded to integer)", "source": "https://pidswebs.pids.gov.ph/CDN/PUBLICATIONS/pidsdps1820.pdf (Table 7, FIES-LFS 2015)", "reliability": "medium (integer-rounded, PIDS income-class definitions)"},
+    {"year": 2023, "group": "all families", "value_pct": 2.6, "unit": "%", "source": "https://psa.gov.ph/sites/default/files/infographics/2023%20FIES%20Infographics_0.pdf", "reliability": "LOW (infographic text scrambled; label matching by position; verify)"}
+  ],
+  "fies_education_total_and_average": [
+    {"year": 1997, "item": "total family expenditure on education", "value": 52836121, "unit": "PHP thousand (table reports totals; unit inferred as thousands: 52.8 bn)", "source": "https://psa.gov.ph/sites/default/files/iesd/2022-12/TABLE%25201.%2520%2520TOTAL%2520AND%2520AVERAGE%2520FAMILY%2520EXPENDITURES%2520FOR%2520EDUCATION%25201997%2520AND%25202000.pdf", "reliability": "medium (unit not stated; 'average' appears per reporting family, not per all families; 2000 total conflicts with 2000/2003 table below)"},
+    {"year": 1997, "item": "average education expenditure (all education)", "value": 5297, "unit": "PHP", "source": "same", "reliability": "medium"},
+    {"year": 1997, "item": "average education fees", "value": 3809, "unit": "PHP", "source": "same", "reliability": "medium"},
+    {"year": 2000, "item": "total family expenditure on education, current prices", "value": 76078087, "unit": "PHP thousand (inferred)", "source": "same", "reliability": "medium"},
+    {"year": 2000, "item": "average education expenditure, current prices", "value": 6894, "unit": "PHP", "source": "same", "reliability": "medium"},
+    {"year": 2000, "item": "average education expenditure at 1997 prices", "value": 5651, "unit": "PHP 1997 prices", "source": "same", "reliability": "medium"},
+    {"year": 2000, "item": "average education fees (current)", "value": 5113, "unit": "PHP", "source": "same", "reliability": "medium"},
+    {"year": 2000, "item": "total education expenditure (second NSO table)", "value": 75742, "unit": "PHP million", "source": "https://psa.gov.ph/sites/default/files/iesd/2022-12/Table%25201%2520Total%2520and%2520Percent%2520Family%2520Expenditure%2520for%2520Education.pdf", "reliability": "high (but differs slightly from 76,078 in 1997/2000 table; revised vs. original)"},
+    {"year": 2003, "item": "total education expenditure current", "value": 82161, "unit": "PHP million", "source": "same as above", "reliability": "high"},
+    {"year": 2003, "item": "composition of education spending", "value": {"education fees_pct": 70.4, "allowance_for_member_studying_away_pct": 17.0, "books_pct": 4.5, "school_supplies_pct": 7.2, "other_education_supplies_pct": 1.0}, "unit": "% of education spending", "source": "same as above", "reliability": "high"},
+    {"year": 2000, "item": "composition of education spending", "value": {"education fees_pct": 70.4, "allowance_pct": 18.3, "books_pct": 4.7, "school_supplies_pct": 5.7, "other_pct": 1.0}, "unit": "% of education spending", "source": "same as above", "reliability": "medium (2000 fees share printed identical to 2003 at 70.4; components sum >100 so possible typo)"}
+  ],
+  "world_bank_per_school_age_member_2006_NCR_prices": [
+    {"year": 2012, "total_education_php": 3568.7, "tuition_php": 2672.6, "allowance_php": 509.0, "other_educational_php": 356.8},
+    {"year": 2015, "total_education_php": 3213.1, "tuition_php": 2364.5, "allowance_php": 483.9, "other_educational_php": 343.1, "pct_change_total": -10.0}
+  ],
+  "world_bank_per_school_age_member_meta": {"unit": "PHP per school-age household member, 2006 NCR prices (annual presumed, not stated)", "source": "https://openknowledge.worldbank.org/bitstreams/9a5890af-ae22-53c8-8df6-1af98ac4273f/download (Philippines Basic Education Public Expenditure Review, Table 6, Ch.3)", "reliability": "medium-high; Figure 48 (education share by quintile 2012, 2015) exists but values not extractable from text"},
+  "national_transfer_accounts_private_education": {
+    "source": "https://pidswebs.pids.gov.ph/CDN/PUBLICATIONS/pidsdps1234.pdf (Racelis, Abrigo, Salas, PIDS DP 2012-34, Tables 1-2, Fig 11)",
+    "reliability": "medium-high (NTA estimates; uses APIS for budget shares)",
+    "table1_current_prices": [
+      {"year": 1991, "private_php_bn": 35.5, "private_share_of_total_education_pct": 47, "private_pct_of_PCE": 3.6},
+      {"year": 1994, "private_php_bn": 58.8, "private_share_of_total_education_pct": 55, "private_pct_of_PCE": 4.4},
+      {"year": 1998, "private_php_bn": 111.4, "private_share_of_total_education_pct": 51, "private_pct_of_PCE": 4.7},
+      {"year": 2002, "private_php_bn": 157.7, "private_share_of_total_education_pct": 55, "private_pct_of_PCE": 5.1},
+      {"year": 2007, "private_php_bn": 226.0, "private_share_of_total_education_pct": 58, "private_pct_of_PCE": 4.5},
+      {"year": 2010, "private_php_bn": 320.4, "private_share_of_total_education_pct": 59, "private_pct_of_PCE": 5.0}
+    ],
+    "table2_per_capita_age_6_24_2000_prices_php": [
+      {"year": 1991, "private": 2444, "public": 2717},
+      {"year": 1994, "private": 2957, "public": 2387},
+      {"year": 1998, "private": 3897, "public": 3807},
+      {"year": 2002, "private": 4251, "public": 3495},
+      {"year": 2007, "private": 4445, "public": 3285},
+      {"year": 2010, "private": 5067, "public": 3559}
+    ],
+    "fig11_2007_distribution_by_income_tercile_pct": {"bottom": {"total": 23.2, "public": 45.0, "private": 8.1}, "middle": {"total": 24.8, "public": 34.8, "private": 17.8}, "top": {"total": 52.0, "public": 20.2, "private": 74.1}, "reliability_note": "read from chart labels; bar-to-group mapping inferred; approximate"}
+  },
+  "household_education_spending_php_bn_2012_prices": {
+    "source": "https://pidswebs.pids.gov.ph/CDN/PUBLICATIONS/pidsdps2127.pdf (Abrigo, PIDS DP 2021-27, Table 1)",
+    "values": {"2005": 289.0, "2010": 360.0, "2015": 453.5, "2017": 518.8, "2019": 636.1},
+    "household_share_of_total_education_spending_pct": {"2005": 59.3, "2019": 54.5},
+    "text_total_2019_php_bn_psa": 753,
+    "reliability": "medium (paper does not reconcile 636.1 with 753)"
+  },
+  "private_enrollment_and_class": [
+    {"item": "APIS 2017 private elementary attendance: low-income 2% vs middle-income 22%", "source": "https://pidswebs.pids.gov.ph/CDN/PUBLICATIONS/pidsdps1820.pdf", "reliability": "medium"},
+    {"item": "Private schools 15% of total basic enrollment 2017; ~10.7% of JHS+SHS", "source": "World Bank PER (URL above)", "reliability": "medium"}
+  ],
+  "tutoring": [
+    {"item": "Share of students receiving private tutoring, Grade 6", "value_pct": 40.7, "year": 2010, "sample": "1,235 students in 23 schools", "original": "De Castro, B.V. & de Guzman, A.B. (2010) 'Push and Pull Factors Affecting Filipino Students' Shadow Education (SE) Participation', KEDI Journal of Educational Policy 7(1): 43-66", "secondary": "https://cerc.edu.hku.hk/wp-content/uploads/shadow-education.pdf (Bray & Lykins 2012, ADB/CERC Box 1); https://www.gmanetwork.com/news/topstories/nation/264270/adb-private-tutoring-more-bane-than-boon/story/", "reliability": "medium (small purposive sample, not nationally representative; survey year not stated in Bray & Lykins, 2010 is publication year)"},
+    {"item": "Share of students receiving private tutoring, Grade 10", "value_pct": 46.5, "year": 2010, "same source": true, "reliability": "medium"},
+    {"item": "Tutoring amounts inversely correlated with family size", "source": "Bray & Lykins 2012 summarising De Castro & de Guzman", "reliability": "medium"},
+    {"item": "PISA 2018/2022 tutoring items for Philippines", "value": null, "status": "NOT FOUND (OECD country notes fetched do not report)"}
+  ],
+  "no_collection_policy": [
+    {"item": "DepEd Order 41 s.2012 (24 May 2012): no fees from K-Grade 4 for SY2012-13; Grade 5-HS no fees Jun-Jul, voluntary contributions only afterwards; teachers may not collect; non-payment cannot bar admission/promotion/clearance", "source": "https://deped.gov.ph/?p=8273", "reliability": "high"},
+    {"item": "DepEd Memorandum 41 (signed 2 Aug 2024, Sec. Angara) reiterating prohibition on selling tickets/collecting contributions 'in any form', citing RA 4206; penalty one month imprisonment or fine", "source": "https://philstar.com/headlines/2024/08/05/2375531/deped-reminds-schools-no-collection-policy", "reliability": "medium (news report)"}
+  ],
+  "tertiary": [
+    {"item": "Average tuition per unit AY2017-18 (as of 8 Jun 2018), PHP", "value": {"SUC": 275.11, "LUC": 254.29, "OGS": 372.37, "private": 742.23, "overall": 565.19}, "source": "https://legacy.ched.gov.ph/average-tuition-fee-per-unit-by-institution-type-and-region-ay-2017-18/", "reliability": "medium (HEI directory, includes pre-bac to doctoral, tuition range 20-3,500)"},
+    {"item": "Average tuition per unit AY2018-19 (as of 8 Aug 2019), PHP", "value": {"SUC": 274.62, "LUC": 308.66, "OGS": 435.97, "private": 759.43, "overall": 568.77}, "source": "https://legacy.ched.gov.ph/average-tuition-fee-per-unit-by-institution-type-and-region-ay-2018-19/", "reliability": "medium (AY label not on page)"},
+    {"item": "NCR AY2018-19 private 1,361.15; SUC 412.80", "source": "same", "reliability": "medium"},
+    {"item": "RA 10931 coverage: free tuition and other school fees in SUCs and CHED-recognised LUCs for first undergraduate degree; TES up to PHP 40,000 (public) / 60,000 (private) per year; private HEIs only via TES; not covered: living costs/transport/books (TES 2 partially)", "source": "https://pidswebs.pids.gov.ph/CDN/PUBLICATIONS/pidsdps1936.pdf; https://www.adb.org/sites/default/files/publication/946661/adbi-tuition-fee-or-tuition-free-case-public-higher-education-philippines.pdf", "reliability": "medium-high"},
+    {"item": "FHE budget: PHP 40 bn (2018 GAA); PHP 49.7 bn cited for 2022; ~1.3 million beneficiaries AY2018-19", "source": "ADBI case study URL above", "reliability": "medium"}
+  ],
+  "child_labour_working_children_5_17": [
+    {"year": 2019, "working_children_pct_of_5_17": 3.4, "child_laborers": 640000, "source": "https://psa.gov.ph/content/working-children-situation", "reliability": "high"},
+    {"year": 2020, "working_children": 872000, "pct_of_5_17": 2.8, "child_laborers": 597000, "share_aged_15_17_of_working": 68.9, "source": "https://www.psa.gov.ph/system/files/iesd/Special-Release-on-Working-Children-2020-2022.pdf", "reliability": "high"},
+    {"year": 2021, "working_children": 1370000, "pct_of_5_17": 4.3, "child_laborers": 935000, "share_aged_15_17_of_working": 63.8, "source": "same", "reliability": "high"},
+    {"year": 2022, "working_children": 1480000, "pct_of_5_17": 4.7, "child_laborers": 828000, "share_aged_15_17_of_working": 59.7, "source": "same", "reliability": "high"},
+    {"year": 2023, "working_children": 1090000, "pct_of_5_17": 3.5, "child_laborers": 678360, "share_aged_15_17_of_working": 72.5, "source": "https://gmanetwork.com/news/topstories/nation/995075/working-children-rise-to-868-540-in-2025-psa/story", "reliability": "medium (news report of PSA; series break vs 2022 likely due to LFS revision)"},
+    {"year": 2024, "working_children": 861450, "pct_of_5_17": 2.7, "child_laborers": 509160, "share_aged_15_17_of_working": 74.5, "source": "same", "reliability": "medium"},
+    {"year": 2025, "working_children": 868540, "pct_of_5_17": 3.1, "child_laborers": 513650, "share_aged_15_17_of_working": 73.5, "source": "same", "reliability": "medium"}
+  ],
+  "unesco_gem_2021": {"item": "At least 36% of Filipino families borrow to pay for children's education, highest of countries surveyed", "source": "https://newsinfo.inquirer.net/?p=1528071", "reliability": "low-medium (news report of GEM Report; survey year not stated)"},
+  "anecdotal_low_reliability": [
+    {"item": "Davao parents: basic supplies about PHP1,000/child; uniforms+shoes about PHP5,000/child; transport PHP100/week; meals PHP500/week (public school)", "source": "https://davaotoday.com/headline/families-still-spend-thousands-in-free-public-education/", "reliability": "LOW (three interviews, news article)"}
+  ],
+  "not_found": [
+    "FIES education share by decile for 1985-2000, 2009, 2015 (official), 2018, 2021, 2023 (PSA tables not machine-readable here)",
+    "APIS per-pupil cost by level and public/private",
+    "Bray 1996 Philippine household-cost figures (Counting the Full Cost; only Figure 1 chart in Maglen & Manasan 1999 cited)",
+    "PISA tutoring items for Philippines",
+    "Survey on Children 2011 working children (not retrieved)",
+    "CHED tuition time series before 2017-18 and other-cost-of-attendance"
+  ]
+}

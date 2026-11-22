@@ -1,0 +1,20 @@
+{
+  "note": "A1.3 restart seed 4 (hit nfev cap 250; not converged); post-inspection, not eligible for selection",
+  "three_ger_rmse": 11.117540365940263,
+  "per_series": {
+    "edu_share_hh": 0.1348395672352325,
+    "enrol_tertiary": 0.2792606964441866,
+    "ger_primary": 6.934917306129143,
+    "ger_secondary": 5.828158424033754,
+    "ger_tertiary": 16.70148830111216,
+    "hh_share_total_spending": 7.2902882664543815,
+    "ner_primary": 4.14944316608486,
+    "ner_secondary": 4.272491755049483,
+    "priv_lower_secondary": 20.312979275190965,
+    "priv_primary": 14.954052283920808,
+    "priv_secondary": 10.346084499626917,
+    "priv_tertiary": 12.541251064310979,
+    "priv_upper_secondary": 9.84087702994379,
+    "trans_lsec_usec": 6.697145190452687
+  }
+}

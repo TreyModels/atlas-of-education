@@ -1,0 +1,13 @@
+{
+  "country": "PHL",
+  "ready": true,
+  "errors": [],
+  "warnings": [
+    "unverified targets excluded: ['fies_all 2023']",
+    "PHL premium_tertiary combines methods; interpolation across 1995-2013 is a declared comparability limitation",
+    "PHL relational driver is formal_share; short occupation series are not spliced"
+  ],
+  "train_rows": 121,
+  "test_rows": 164,
+  "diagnostic_rows": 5
+}

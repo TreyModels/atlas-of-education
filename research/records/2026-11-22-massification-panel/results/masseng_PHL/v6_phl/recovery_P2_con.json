@@ -1,0 +1,48 @@
+{
+  "spec": "P2_con",
+  "replicates": 20,
+  "note": "Synthetic recovery is a software/design diagnostic, not proof of historical identification.",
+  "optimizer_cap_replicates": 0,
+  "parameters": {
+    "b_h": {
+      "truth": 9.936908752444326e-11,
+      "truth_at_bound": true,
+      "median": 2.377402813770984e-07,
+      "q05": 4.738015884031771e-10,
+      "q95": 0.5998944315646909,
+      "within_25pct_share": null,
+      "bound_hit_replicates": 16,
+      "status": "boundary-censored / not cleanly identified"
+    },
+    "b_p": {
+      "truth": 4.657838594964915,
+      "truth_at_bound": false,
+      "median": 4.520719551330494,
+      "q05": 4.13508731902265,
+      "q95": 4.824355149561019,
+      "within_25pct_share": 1.0,
+      "bound_hit_replicates": 0,
+      "status": "identified (software diagnostic only)"
+    },
+    "eta_x": {
+      "truth": 1.4402432084216814e-08,
+      "truth_at_bound": true,
+      "median": 0.020077170419155497,
+      "q05": 2.585570136753936e-13,
+      "q95": 0.30554524274913497,
+      "within_25pct_share": null,
+      "bound_hit_replicates": 10,
+      "status": "boundary-censored / not cleanly identified"
+    },
+    "kappa": {
+      "truth": 2.9178119630946227,
+      "truth_at_bound": false,
+      "median": 2.7168899206234687,
+      "q05": 1.993227633036392,
+      "q95": 3.407668071594778,
+      "within_25pct_share": 0.75,
+      "bound_hit_replicates": 0,
+      "status": "not identified"
+    }
+  }
+}

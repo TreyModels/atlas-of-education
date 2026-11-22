@@ -1,0 +1,121 @@
+{
+ "country": "Hong Kong SAR, China",
+ "iso3": "HKG",
+ "years": {
+  "simulate_from": 1965,
+  "simulate_to": 2024,
+  "train": [1985, 2011],
+  "test": [2012, 2024]
+ },
+ "demography": {
+  "pre_data_pop_growth": 0.02,
+  "gini_default": 0.45,
+  "u5mr_default": 3.0,
+  "_note": "WDI has no Gini or u5mr for HKG; 0.45 Gini and 3/1000 u5mr are declared approximations."
+ },
+ "structure": {
+  "primary_grades": 6,
+  "lower_secondary_grades": 3,
+  "upper_secondary_grades": 4,
+  "upper_secondary_from": 0,
+  "tertiary_years": 3,
+  "max_age": 29,
+  "cycle_reform": {
+   "year": 2012,
+   "old_secondary_grades": 7,
+   "new_secondary_grades": 6,
+   "old_tertiary_years": 3,
+   "new_tertiary_years": 4,
+   "double_cohort_year": 2012,
+   "_note": "NSS 3-3-4 reform: first HKDSE in 2012 coincided with final HKALE F7 cohort (double cohort, 30,000 UGC funded places)."
+  }
+ },
+ "entry_age": {
+  "share_at_6": {
+   "1965": 0.9,
+   "2024": 0.98
+  }
+ },
+ "repetition": {
+  "primary": 0.01,
+  "secondary": 0.02
+ },
+ "v5": {
+  "years": {
+   "simulate_from": 1965,
+   "simulate_to": 2024,
+   "train": [1985, 2011],
+   "test": [2012, 2024]
+  },
+  "direct_costs_share_of_gdppc": {
+   "primary": {"public": 0.015, "private": 0.18},
+   "secondary": {"public": 0.025, "private": 0.22},
+   "upper_secondary": {"public": 0.03, "private": 0.25},
+   "tertiary": {"public": 0.11, "private": 0.28}
+  },
+  "forgone_earnings_share_of_gdppc": {
+   "primary": 0.0,
+   "secondary": 0.04,
+   "upper_secondary": 0.12,
+   "tertiary": 0.28
+  },
+  "policy_events": [
+   {"year": 1971, "level": "primary", "sector": "public", "direct_cost_change": -0.01, "what": "Free compulsory primary (6 years)"},
+   {"year": 1978, "level": "secondary", "sector": "public", "direct_cost_change": -0.015, "what": "9-year free compulsory education"},
+   {"year": 2008, "level": "upper_secondary", "sector": "public", "direct_cost_change": -0.02, "what": "12-year free public schooling"}
+  ],
+  "driver_map": {
+   "premium_secondary": "premium_secondary",
+   "premium_tertiary": "premium_tertiary",
+   "relational": "formal_share"
+  },
+  "household_consumption_share_of_gdp": 0.66,
+  "max_defer_age": 24,
+  "funded_tertiary_quota": {
+   "1985": 5000,
+   "1990": 9500,
+   "1994": 14500,
+   "2007": 14500,
+   "2011": 14620,
+   "2012": 30000,
+   "2013": 15000,
+   "2024": 15000,
+   "_source": "UGC FYFD places from countries/HKG/facts.json (LCQ3 2007, LegCo ed1114 2011, ISSH16/18-19)."
+  },
+  "self_financed_capacity": {
+   "1994": 4000,
+   "2000": 8000,
+   "2005": 24000,
+   "2011": 36000,
+   "2012": 48000,
+   "2016": 44000,
+   "2024": 38000,
+   "_source": "Self-financing FYFD + sub-degree intake expansion after 2000 Policy Address 60% target (EDB TF_SFPE 2017)."
+  },
+  "abroad_cost_share_of_gdppc": 0.85,
+  "exam_gate_pass_rate": {
+   "1994": 38.0,
+   "2011": 40.0,
+   "2012": 37.7,
+   "2017": 41.0,
+   "2021": 42.5,
+   "2024": 44.3,
+   "_source": "HKDSE day-school 3322/332A22 rates from HKEAA via countries/HKG/facts.json."
+  }
+ },
+ "targets": {
+  "tutoring_prevalence": {
+   "1999": {"S1-3": 35.1, "S4-5": 46.6, "S6-7": 70.3, "overall": 48.8, "source": "Bray & Kwok 2003"},
+   "2012": {"S3": 53.8, "S6": 71.8, "overall": 61.1, "source": "Bray et al. 2014 / Zhan et al. 2013"}
+  },
+  "edb_s6_pathway_outside_hk_pct": {
+   "2012": 7.1,
+   "2015": 10.8,
+   "2019": 10.0,
+   "2020": 14.5,
+   "2022": 12.4,
+   "2024": 7.8
+  },
+  "hes_2019_education_share_pct": 4.6
+ }
+}

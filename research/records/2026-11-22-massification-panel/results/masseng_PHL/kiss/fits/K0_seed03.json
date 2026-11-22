@@ -1,0 +1,58 @@
+{
+  "spec": "K0",
+  "seed": 3,
+  "x": [
+    6.366921228419894,
+    15.99995542789922,
+    4.687882706770601,
+    8.06464008213218,
+    11.999999999999998,
+    4.401853050609561,
+    26.73738390610609
+  ],
+  "names": [
+    "a_prim",
+    "a_sec",
+    "a_sec_entry",
+    "a_ter",
+    "a_ter_entry",
+    "eta",
+    "kappa"
+  ],
+  "params": {
+    "a_prim": 6.366921228419894,
+    "a_sec": 15.99995542789922,
+    "a_sec_entry": 4.687882706770601,
+    "a_ter": 8.06464008213218,
+    "a_ter_entry": 11.999999999999998,
+    "b_h": 0.0,
+    "b_p": 0.0,
+    "b_r": 0.0,
+    "eta": 4.401853050609561,
+    "eta_x": 0.0,
+    "kappa": 26.73738390610609,
+    "lam": 0.0,
+    "c_scale": 1.0,
+    "mu_basic": -2.5,
+    "mu_ter": 1.0,
+    "nu": 0.5,
+    "h_def": 0.2,
+    "late": 0.15,
+    "rep_prim": 0.04,
+    "rep_sec": 0.02,
+    "nu_basic": 0.5,
+    "nu_ter": 0.5,
+    "s0_sat": 0.25
+  },
+  "cost": 16.025630185185484,
+  "nfev": 45,
+  "status": 3,
+  "message": "`xtol` termination condition is satisfied.",
+  "hit_nfev_cap": false,
+  "at_bounds": [
+    "a_sec",
+    "a_ter_entry"
+  ],
+  "dials_at_bounds": [],
+  "seconds": 62.4
+}

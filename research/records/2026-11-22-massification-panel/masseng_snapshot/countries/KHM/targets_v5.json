@@ -1,0 +1,6 @@
+{
+  "_source": "Registered from existing sources/demand_costs.json; no new empirical values introduced.",
+  "rows": [
+    {"series":"cses_household_education_share","year":2019,"value":2.1,"verified":true,"source":"NIS CSES 2019/20 Executive Summary; education share of household consumption"}
+  ]
+}

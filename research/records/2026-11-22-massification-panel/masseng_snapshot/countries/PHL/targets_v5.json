@@ -1,0 +1,25 @@
+{
+  "_source": "Registered from existing PHL/sources/household_costs.json, government_and_flows.json and ched_enrolment_2015_2020.json. No new empirical values introduced.",
+  "rows": [
+    {"series":"fies_all","year":2003,"value":4.0,"verified":true,"source":"PSA/NSO FIES Table 3; household_costs.json"},
+    {"series":"fies_bottom30","year":2003,"value":1.3,"verified":true,"source":"PSA/NSO FIES Table 3; household_costs.json"},
+    {"series":"fies_upper70","year":2003,"value":4.3,"verified":true,"source":"PSA/NSO FIES Table 3; household_costs.json"},
+    {"series":"fies_all","year":2006,"value":4.4,"verified":true,"source":"PSA/NSO FIES Table 3 preliminary; household_costs.json"},
+    {"series":"fies_bottom30","year":2006,"value":1.3,"verified":true,"source":"PSA/NSO FIES Table 3 preliminary; household_costs.json"},
+    {"series":"fies_upper70","year":2006,"value":4.7,"verified":true,"source":"PSA/NSO FIES Table 3 preliminary; household_costs.json"},
+    {"series":"fies_all","year":2012,"value":4.1,"verified":true,"source":"PSA/NSO FIES Table 9 mirrored by RTEI; household_costs.json"},
+    {"series":"fies_all","year":2023,"value":2.6,"verified":false,"source":"PSA FIES infographic; label matching requires verification"},
+    {"series":"nta_household_share","year":1991,"value":47.0,"verified":true,"source":"PIDS DP2012-34 Table 1; household_costs.json"},
+    {"series":"nta_household_share","year":1994,"value":55.0,"verified":true,"source":"PIDS DP2012-34 Table 1; household_costs.json"},
+    {"series":"nta_household_share","year":1998,"value":51.0,"verified":true,"source":"PIDS DP2012-34 Table 1; household_costs.json"},
+    {"series":"nta_household_share","year":2002,"value":55.0,"verified":true,"source":"PIDS DP2012-34 Table 1; household_costs.json"},
+    {"series":"nta_household_share","year":2007,"value":58.0,"verified":true,"source":"PIDS DP2012-34 Table 1; household_costs.json"},
+    {"series":"nta_household_share","year":2010,"value":59.0,"verified":true,"source":"PIDS DP2012-34 Table 1; household_costs.json"},
+    {"series":"ched_total_index","year":2016,"value":4.104841,"verified":true,"scale":1000.0,"source":"CHED Table 1 AY2015-16; ched_enrolment_2015_2020.json"},
+    {"series":"ched_total_index","year":2017,"value":3.589484,"verified":true,"scale":1000.0,"source":"CHED Table 1 AY2016-17; ched_enrolment_2015_2020.json"},
+    {"series":"ched_total_index","year":2018,"value":2.981803,"verified":true,"scale":1000.0,"source":"CHED Table 1 AY2017-18; ched_enrolment_2015_2020.json"},
+    {"series":"ched_total_index","year":2019,"value":3.212542,"verified":true,"scale":1000.0,"source":"CHED Table 1 AY2018-19; ched_enrolment_2015_2020.json"},
+    {"series":"ched_total_index","year":2020,"value":3.408425,"verified":true,"scale":1000.0,"source":"CHED Table 1 AY2019-20; ched_enrolment_2015_2020.json"},
+    {"series":"grade10_to_grade11","year":2018,"value":93.3,"verified":true,"source":"Grade 10 SY2016-17 to Grade 11 SY2017-18, reference year 2018; PIDS SHS seminar slide 31"}
+  ]
+}

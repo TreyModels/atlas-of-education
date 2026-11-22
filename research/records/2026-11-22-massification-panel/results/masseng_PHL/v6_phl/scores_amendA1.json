@@ -1,0 +1,62 @@
+{
+  "P0h_con": {
+    "status": "Amendment A1 run (post-inspection); not eligible as registered winner",
+    "train_cost": 171.19149269546523,
+    "at_bounds": [
+      "nu_basic",
+      "eta",
+      "b_h"
+    ],
+    "dials_at_bounds": [
+      "eta",
+      "b_h"
+    ],
+    "b_h": 4.523373831154097e-09,
+    "eta": 5.999999999999999,
+    "three_ger_rmse": 14.227559310618455,
+    "per_ger": {
+      "ger_primary": 7.439687339958455,
+      "ger_secondary": 13.05212588806711,
+      "ger_tertiary": 19.324598550540298
+    },
+    "private_share_rmse": {
+      "priv_lower_secondary": 17.92830816238985,
+      "priv_primary": 13.698008270029701,
+      "priv_secondary": 7.295561033484145,
+      "priv_tertiary": 17.18357213548895,
+      "priv_upper_secondary": 5.928098317642046
+    },
+    "tertiary_ger_2013": 56.05330343309281,
+    "tertiary_ger_2024": 79.19022595673003
+  },
+  "P0h_unc": {
+    "status": "Amendment A1 run (post-inspection); not eligible as registered winner",
+    "train_cost": 162.34221318121791,
+    "at_bounds": [
+      "nu_basic",
+      "eta",
+      "b_h"
+    ],
+    "dials_at_bounds": [
+      "eta",
+      "b_h"
+    ],
+    "b_h": -5.9999999942411115,
+    "eta": 5.999999999999999,
+    "three_ger_rmse": 14.179088369911748,
+    "per_ger": {
+      "ger_primary": 7.445586110171967,
+      "ger_secondary": 12.886071345068629,
+      "ger_tertiary": 19.322517930949093
+    },
+    "private_share_rmse": {
+      "priv_lower_secondary": 17.014089725485977,
+      "priv_primary": 13.309373448816311,
+      "priv_secondary": 6.932015122949649,
+      "priv_tertiary": 19.3882381867905,
+      "priv_upper_secondary": 6.409588826207518
+    },
+    "tertiary_ger_2013": 54.89134802164796,
+    "tertiary_ger_2024": 79.46619365035494
+  }
+}

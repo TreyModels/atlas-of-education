@@ -1,0 +1,61 @@
+{
+  "status": "ILLUSTRATIVE ONLY \u2014 declared capacity assumptions, NOT observed physical school supply and NOT calibrated",
+  "spec": "P2_con",
+  "year": 2024,
+  "ter_ger_unconstrained": 52.53380217835212,
+  "ter_ger_declared_capacity": 34.902578200584905,
+  "by_level": {
+    "primary": {
+      "qualified_Q": 2190915.831968655,
+      "latent_L": 2186320.845826728,
+      "effective_E": 2185688.8548299246,
+      "admitted_R": 2185688.8548299246,
+      "unmet_effective": 0.0,
+      "declared_capacity_public": 2054184.415761644,
+      "declared_capacity_private": 432459.87700245134,
+      "admitted_public": 1753228.9778274733,
+      "admitted_private": 432459.8770024514,
+      "accessible_unfilled_public": 300955.4379341707,
+      "accessible_unfilled_private": 0.0
+    },
+    "secondary": {
+      "qualified_Q": 2408459.9463204187,
+      "latent_L": 2165656.1488553714,
+      "effective_E": 2138197.8241152866,
+      "admitted_R": 2138197.8241152866,
+      "unmet_effective": 0.0,
+      "declared_capacity_public": 2108894.459142355,
+      "declared_capacity_private": 744315.6914620076,
+      "admitted_public": 1393882.1326532792,
+      "admitted_private": 744315.6914620076,
+      "accessible_unfilled_public": 715012.3264890756,
+      "accessible_unfilled_private": 0.0
+    },
+    "upper_secondary": {
+      "qualified_Q": 2019281.447801393,
+      "latent_L": 1750024.7648891618,
+      "effective_E": 1701687.0287873931,
+      "admitted_R": 1701687.0287873931,
+      "unmet_effective": 0.0,
+      "declared_capacity_public": 1429237.39800096,
+      "declared_capacity_private": 1071928.0485007202,
+      "admitted_public": 629758.9802866727,
+      "admitted_private": 1071928.0485007204,
+      "accessible_unfilled_public": 799478.4177142873,
+      "accessible_unfilled_private": 0.0
+    },
+    "tertiary": {
+      "qualified_Q": 2207876.0154281147,
+      "latent_L": 2055907.0273522525,
+      "effective_E": 1993147.0133072485,
+      "admitted_R": 1271376.6504854502,
+      "unmet_effective": 721770.3628217987,
+      "declared_capacity_public": 462318.7819947092,
+      "declared_capacity_private": 809057.8684907409,
+      "admitted_public": 462318.7819947093,
+      "admitted_private": 809057.8684907409,
+      "accessible_unfilled_public": 0.0,
+      "accessible_unfilled_private": 0.0
+    }
+  }
+}

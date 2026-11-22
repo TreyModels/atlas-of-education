@@ -1,0 +1,85 @@
+{
+  "params": {
+    "a_prim": 6.0832480120482515,
+    "a_sec": 2.4536416862991026,
+    "a_sec_entry": 4.322693561891358,
+    "a_ter": 4.269178996518394,
+    "a_ter_entry": 3.553324567944066,
+    "b_h": 0.0,
+    "b_p": 0.0,
+    "b_r": 0.0,
+    "eta": 5.999999999999999,
+    "eta_x": 1.4292818155893734,
+    "kappa": 5.2505657910377295,
+    "lam": 0.0,
+    "c_scale": 1.2047451627583021,
+    "mu_basic": -4.316851890094507,
+    "mu_ter": 1.6762235062702828,
+    "nu": 0.5,
+    "h_def": 0.2,
+    "late": 0.15,
+    "rep_prim": 0.04,
+    "rep_sec": 0.02,
+    "nu_basic": 7.999999999980487,
+    "nu_ter": 7.466908047038786,
+    "s0_sat": 0.25
+  },
+  "fitted": [
+    "a_prim",
+    "a_sec",
+    "a_sec_entry",
+    "a_ter",
+    "a_ter_entry",
+    "c_scale",
+    "mu_basic",
+    "mu_ter",
+    "nu_basic",
+    "nu_ter",
+    "eta",
+    "eta_x",
+    "kappa"
+  ],
+  "substantive_dials": [
+    "eta",
+    "eta_x",
+    "kappa"
+  ],
+  "intercepts": [
+    "a_prim",
+    "a_sec",
+    "a_sec_entry",
+    "a_ter",
+    "a_ter_entry",
+    "c_scale",
+    "mu_basic",
+    "mu_ter",
+    "nu_basic",
+    "nu_ter"
+  ],
+  "cost": 171.18624774445283,
+  "nfev": 149,
+  "status": 3,
+  "message": "`xtol` termination condition is satisfied.",
+  "spec": "P0",
+  "constrained": true,
+  "at_bounds": [
+    "nu_basic",
+    "eta"
+  ],
+  "dials_at_bounds": [
+    "eta"
+  ],
+  "preflight": {
+    "country": "PHL",
+    "ready": true,
+    "errors": [],
+    "warnings": [
+      "unverified targets excluded: ['fies_all 2023']",
+      "PHL premium_tertiary combines methods; interpolation across 1995-2013 is a declared comparability limitation",
+      "PHL relational driver is formal_share; short occupation series are not spliced"
+    ],
+    "train_rows": 121,
+    "test_rows": 164,
+    "diagnostic_rows": 5
+  }
+}

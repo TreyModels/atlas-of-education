@@ -1,0 +1,58 @@
+{
+  "spec": "K0",
+  "seed": 1,
+  "x": [
+    6.484154894939298,
+    15.999967449857571,
+    4.9766277563661,
+    15.999999999999986,
+    7.786024817952047,
+    4.588001825591928,
+    28.718608776687713
+  ],
+  "names": [
+    "a_prim",
+    "a_sec",
+    "a_sec_entry",
+    "a_ter",
+    "a_ter_entry",
+    "eta",
+    "kappa"
+  ],
+  "params": {
+    "a_prim": 6.484154894939298,
+    "a_sec": 15.999967449857571,
+    "a_sec_entry": 4.9766277563661,
+    "a_ter": 15.999999999999986,
+    "a_ter_entry": 7.786024817952047,
+    "b_h": 0.0,
+    "b_p": 0.0,
+    "b_r": 0.0,
+    "eta": 4.588001825591928,
+    "eta_x": 0.0,
+    "kappa": 28.718608776687713,
+    "lam": 0.0,
+    "c_scale": 1.0,
+    "mu_basic": -2.5,
+    "mu_ter": 1.0,
+    "nu": 0.5,
+    "h_def": 0.2,
+    "late": 0.15,
+    "rep_prim": 0.04,
+    "rep_sec": 0.02,
+    "nu_basic": 0.5,
+    "nu_ter": 0.5,
+    "s0_sat": 0.25
+  },
+  "cost": 15.681121328056063,
+  "nfev": 21,
+  "status": 2,
+  "message": "`ftol` termination condition is satisfied.",
+  "hit_nfev_cap": false,
+  "at_bounds": [
+    "a_sec",
+    "a_ter"
+  ],
+  "dials_at_bounds": [],
+  "seconds": 33.9
+}

@@ -1,0 +1,216 @@
+{
+  "protocol": "PROTOCOL_kiss_phl.md",
+  "status": "retrospective, inspected; not blind",
+  "primary_metric": "held-out RMSE pooled over ner_primary, ner_secondary, ger_tertiary",
+  "page_ensemble_members": [
+    "K0",
+    "K1",
+    "K2",
+    "logistic"
+  ],
+  "silver_blend": "0.5*persistence + 0.5*page_ensemble (weights fixed in advance)",
+  "ranking": [
+    "page_ensemble",
+    "silver_blend",
+    "K0",
+    "persistence",
+    "K2",
+    "trend",
+    "logistic",
+    "K1"
+  ],
+  "table": {
+    "K0": {
+      "primary_rmse": 5.392818261288105,
+      "by_series": {
+        "ner_primary": 4.481842398334676,
+        "ner_secondary": 7.204032837928426,
+        "ger_tertiary": 4.725770366195652,
+        "ger_primary": 7.402853673593004,
+        "ger_secondary": 10.16859249296932
+      }
+    },
+    "K1": {
+      "primary_rmse": 6.409653847655788,
+      "by_series": {
+        "ner_primary": 4.35557849049154,
+        "ner_secondary": 6.3722178317232805,
+        "ger_tertiary": 7.41276402280001,
+        "ger_primary": 6.49447190876184,
+        "ger_secondary": 5.753540670511404
+      }
+    },
+    "K2": {
+      "primary_rmse": 5.932858088318133,
+      "by_series": {
+        "ner_primary": 4.55816779491747,
+        "ner_secondary": 7.636212892516093,
+        "ger_tertiary": 5.623912969424728,
+        "ger_primary": 7.426150483462876,
+        "ger_secondary": 10.199630077945201
+      }
+    },
+    "persistence": {
+      "primary_rmse": 5.713912690280003,
+      "by_series": {
+        "ner_primary": 3.6532317114439947,
+        "ner_secondary": 5.114415104109447,
+        "ger_tertiary": 6.929850936347764,
+        "ger_primary": 4.737306724289657,
+        "ger_secondary": 7.792879631967462
+      }
+    },
+    "trend": {
+      "primary_rmse": 6.025078166103269,
+      "by_series": {
+        "ner_primary": 4.632356873731707,
+        "ner_secondary": 8.264371155863264,
+        "ger_tertiary": 5.310911971203852,
+        "ger_primary": 10.873381315034512,
+        "ger_secondary": 16.761632522891016
+      }
+    },
+    "logistic": {
+      "primary_rmse": 6.325468623151271,
+      "by_series": {
+        "ner_primary": 4.568801656430151,
+        "ner_secondary": 7.817667240010129,
+        "ger_tertiary": 6.358038257767819,
+        "ger_primary": 6.389277508394297,
+        "ger_secondary": 8.402989956343308
+      }
+    },
+    "page_ensemble": {
+      "primary_rmse": 3.751912010883839,
+      "by_series": {
+        "ner_primary": 3.018197791893508,
+        "ner_secondary": 4.643031435359406,
+        "ger_tertiary": 3.620149752443605,
+        "ger_primary": 6.869767069858842,
+        "ger_secondary": 7.437589926304966
+      }
+    },
+    "silver_blend": {
+      "primary_rmse": 3.7672863752311136,
+      "by_series": {
+        "ner_primary": 2.317101164610064,
+        "ner_secondary": 2.9166649414313492,
+        "ger_tertiary": 4.762742443687524,
+        "ger_primary": 5.300455885537256,
+        "ger_secondary": 3.7878920892905703
+      }
+    }
+  },
+  "fits": {
+    "K0": {
+      "best_seed": 1,
+      "train_cost": 15.681121328056063,
+      "starts": 10,
+      "start_costs": [
+        15.681,
+        15.681,
+        15.681,
+        15.681,
+        15.681,
+        15.681,
+        15.681,
+        15.681,
+        16.026,
+        16.026
+      ],
+      "dials": {
+        "eta": 4.588001825591928,
+        "kappa": 28.718608776687713
+      },
+      "dials_at_bounds": [],
+      "hit_nfev_cap": false
+    },
+    "K1": {
+      "best_seed": 8,
+      "train_cost": 8.109511866447907,
+      "starts": 10,
+      "start_costs": [
+        8.11,
+        8.11,
+        8.116,
+        8.116,
+        8.116,
+        8.116,
+        8.116,
+        8.116,
+        8.116,
+        8.116
+      ],
+      "dials": {
+        "eta": 0.38724938515778534,
+        "kappa": 14.976426597737188,
+        "b_p": 4.214778025532078
+      },
+      "dials_at_bounds": [],
+      "hit_nfev_cap": false
+    },
+    "K2": {
+      "best_seed": 8,
+      "train_cost": 14.998730340285862,
+      "starts": 10,
+      "start_costs": [
+        14.999,
+        14.999,
+        15.201,
+        15.201,
+        15.201,
+        15.201,
+        15.201,
+        15.201,
+        15.201,
+        15.201
+      ],
+      "dials": {
+        "eta": 5.291974102149573,
+        "kappa": 34.947711346301986,
+        "b_h": 11.999929051490827
+      },
+      "dials_at_bounds": [
+        "b_h"
+      ],
+      "hit_nfev_cap": false
+    }
+  },
+  "logistic": {
+    "ner_primary": {
+      "L": 94.37727227021216,
+      "k": 0.4624759023061501,
+      "t0": 1908.8877452406214
+    },
+    "ner_secondary": {
+      "L": 99.99999999995731,
+      "k": 0.03036964472568591,
+      "t0": 1984.08143020434
+    },
+    "ger_tertiary": {
+      "L": 28.325938682557524,
+      "k": 0.0976242528356883,
+      "t0": 1969.7635206159016
+    },
+    "ger_primary": {
+      "L": 103.88911807002077,
+      "k": 0.15791040115853977,
+      "t0": 1955.0707570768625
+    },
+    "ger_secondary": {
+      "L": 105.1670553555238,
+      "k": 0.05174765979352004,
+      "t0": 1977.7009519747278
+    }
+  },
+  "beats_persistence": {
+    "page_ensemble": true,
+    "silver_blend": true,
+    "K0": true,
+    "persistence": false,
+    "K2": false,
+    "trend": false,
+    "logistic": false,
+    "K1": false
+  }
+}

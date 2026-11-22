@@ -1,0 +1,76 @@
+{
+  "params": {
+    "a_prim": 1.8106947750983178,
+    "a_sec": 1.4017765505258306,
+    "a_sec_entry": -1.52521767598863,
+    "a_ter": -0.421437389581294,
+    "a_ter_entry": -0.2608291088422744,
+    "b_h": 2.675227830470482e-07,
+    "b_p": 4.3860082905703965,
+    "b_r": 0.0,
+    "eta": 0.0,
+    "eta_x": 1.2775848232700738e-12,
+    "kappa": 3.257485045645888,
+    "lam": 0.0,
+    "c_scale": 1.022086388962278,
+    "mu_basic": -3.447822291188875,
+    "mu_ter": 2.019938276948579,
+    "nu": 0.5,
+    "h_def": 0.2,
+    "late": 0.15,
+    "rep_prim": 0.04,
+    "rep_sec": 0.02,
+    "nu_basic": 7.95422561026412,
+    "nu_ter": 7.999999999993511,
+    "s0_sat": 0.25
+  },
+  "fitted": [
+    "a_prim",
+    "a_sec",
+    "a_sec_entry",
+    "a_ter",
+    "a_ter_entry",
+    "c_scale",
+    "mu_basic",
+    "mu_ter",
+    "nu_basic",
+    "nu_ter",
+    "b_h",
+    "b_p",
+    "eta_x",
+    "kappa"
+  ],
+  "substantive_dials": [
+    "b_h",
+    "b_p",
+    "eta_x",
+    "kappa"
+  ],
+  "intercepts": [
+    "a_prim",
+    "a_sec",
+    "a_sec_entry",
+    "a_ter",
+    "a_ter_entry",
+    "c_scale",
+    "mu_basic",
+    "mu_ter",
+    "nu_basic",
+    "nu_ter"
+  ],
+  "cost": 5.352478925602964,
+  "nfev": 89,
+  "status": 3,
+  "message": "`xtol` termination condition is satisfied.",
+  "spec": "P2_con",
+  "constrained": true,
+  "at_bounds": [
+    "nu_ter",
+    "b_h",
+    "eta_x"
+  ],
+  "dials_at_bounds": [
+    "b_h",
+    "eta_x"
+  ]
+}

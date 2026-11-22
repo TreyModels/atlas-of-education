@@ -1,0 +1,41 @@
+{
+ "_source": "Anchored to countries/HKG/facts.json (LCQ15 C&SD cohort earnings ratios 1.60 in 1994 -> 1.33 in 2019; WDI SL.EMP.WORK.ZS wage/salary share).",
+ "series": {
+  "premium_tertiary": {
+   "units": "log_points",
+   "points": {
+    "1985": 0.78,
+    "1994": 0.470,
+    "1999": 0.379,
+    "2004": 0.299,
+    "2009": 0.457,
+    "2014": 0.308,
+    "2019": 0.288,
+    "2024": 0.280
+   }
+  },
+  "premium_secondary": {
+   "units": "log_points",
+   "points": {
+    "1985": 0.35,
+    "1994": 0.28,
+    "2004": 0.24,
+    "2014": 0.20,
+    "2024": 0.18
+   }
+  },
+  "formal_share": {
+   "units": "percent",
+   "points": {
+    "1991": 89.3,
+    "1995": 90.3,
+    "2000": 90.6,
+    "2005": 88.8,
+    "2010": 90.1,
+    "2015": 91.1,
+    "2020": 91.3,
+    "2024": 92.2
+   }
+  }
+ }
+}

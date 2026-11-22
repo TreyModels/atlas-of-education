@@ -1,0 +1,1002 @@
+{
+ "meta": {
+  "country": "KHM",
+  "compiled": "2026-11-22",
+  "note": "Values read via summarising WebFetch tool; not independently verified against PDFs unless stated. Missing items listed under not_found."
+ },
+ "worldbank_wdi": {
+  "SE.XPD.TOTL.GD.ZS": {
+   "label": "Government expenditure on education, % of GDP",
+   "url": "https://api.worldbank.org/v2/country/KHM/indicator/SE.XPD.TOTL.GD.ZS?format=json&per_page=100",
+   "series": [
+    {
+     "year": 2023,
+     "value": 2.1809128340295
+    },
+    {
+     "year": 2022,
+     "value": 1.95793279576416
+    },
+    {
+     "year": 2021,
+     "value": 1.96232691812756
+    },
+    {
+     "year": 2020,
+     "value": 2.2476462495972
+    },
+    {
+     "year": 2019,
+     "value": 2.13345387893978
+    },
+    {
+     "year": 2018,
+     "value": 1.60336995124817
+    },
+    {
+     "year": 2014,
+     "value": 1.44690001010895
+    },
+    {
+     "year": 2013,
+     "value": 1.57648003101349
+    },
+    {
+     "year": 2012,
+     "value": 1.23062002658844
+    },
+    {
+     "year": 2011,
+     "value": 1.20887994766235
+    },
+    {
+     "year": 2010,
+     "value": 1.24872994422913
+    },
+    {
+     "year": 2009,
+     "value": 1.38576996326447
+    },
+    {
+     "year": 2007,
+     "value": 1.36423003673553
+    },
+    {
+     "year": 2004,
+     "value": 1.56035995483398
+    },
+    {
+     "year": 2002,
+     "value": 1.62863004207611
+    },
+    {
+     "year": 2001,
+     "value": 1.6550600528717
+    },
+    {
+     "year": 2000,
+     "value": 1.64869999885559
+    },
+    {
+     "year": 1998,
+     "value": 1.25907003879547
+    }
+   ],
+   "note": "nulls omitted; gaps 1999,2003,2005,2006,2008,2015-2017 are null"
+  },
+  "SE.XPD.TOTL.GB.ZS": {
+   "label": "Government expenditure on education, % of government expenditure",
+   "url": "https://api.worldbank.org/v2/country/KHM/indicator/SE.XPD.TOTL.GB.ZS?format=json&per_page=100",
+   "series": [
+    {
+     "year": 2025,
+     "value": 11.5512463566271
+    },
+    {
+     "year": 2024,
+     "value": 11.233932287853
+    },
+    {
+     "year": 2023,
+     "value": 12.0143851118856
+    },
+    {
+     "year": 2022,
+     "value": 11.6742808441972
+    },
+    {
+     "year": 2021,
+     "value": 9.34959951214734
+    },
+    {
+     "year": 2020,
+     "value": 11.0687719907488
+    },
+    {
+     "year": 2019,
+     "value": 12.1311067347546
+    },
+    {
+     "year": 2018,
+     "value": 9.97500991821289
+    },
+    {
+     "year": 2014,
+     "value": 8.79160022735596
+    },
+    {
+     "year": 2013,
+     "value": 9.59706974029541
+    },
+    {
+     "year": 2012,
+     "value": 7.19985008239746
+    },
+    {
+     "year": 2011,
+     "value": 7.33540010452271
+    },
+    {
+     "year": 2010,
+     "value": 7.33747005462646
+    },
+    {
+     "year": 2009,
+     "value": 8.16524028778076
+    },
+    {
+     "year": 2007,
+     "value": 11.1035099029541
+    },
+    {
+     "year": 2004,
+     "value": 12.4043102264404
+    },
+    {
+     "year": 2002,
+     "value": 10.1375703811646
+    },
+    {
+     "year": 2001,
+     "value": 11.3807897567749
+    },
+    {
+     "year": 2000,
+     "value": 11.0790100097656
+    },
+    {
+     "year": 1998,
+     "value": 9.39200019836426
+    }
+   ],
+   "note": "nulls omitted; gaps 1999,2003,2005,2006,2008,2015-2017"
+  },
+  "SE.COM.DURS": {
+   "label": "Compulsory education, duration (years)",
+   "url": "https://api.worldbank.org/v2/country/KHM/indicator/SE.COM.DURS?format=json&per_page=100",
+   "series": [],
+   "note": "All values null 1960-2025 (nothing reported)."
+  }
+ },
+ "household_spending": [
+  {
+   "id": "cses_edu_expense_by_level",
+   "survey": "CSES",
+   "years": [
+    2014,
+    "2019/20"
+   ],
+   "unit": "thousand riel per year, average annual education expenses (per student; exact denominator not stated in text read)",
+   "values": {
+    "pre_primary": {
+     "2014": 356,
+     "2019/20": 618
+    },
+    "primary": {
+     "2014": 314,
+     "2019/20": 651
+    },
+    "lower_secondary": {
+     "2014": 669,
+     "2019/20": 1142
+    },
+    "upper_secondary": {
+     "2014": 1214,
+     "2019/20": 2272
+    },
+    "technical_vocational": {
+     "2014": 2062,
+     "2019/20": 3075
+    },
+    "undergrad_grad": {
+     "2014": 3837,
+     "2019/20": 5548
+    }
+   },
+   "table": "Table 24",
+   "url": "https://www.nis.gov.kh/nis/CSES/Final%20Report%20of%20Cambodia%20Socio-Economic%20Survey%202019-20_EN.pdf"
+  },
+  {
+   "id": "cses_edu_expense_by_domain",
+   "unit": "thousand riel per year",
+   "values": {
+    "Cambodia": {
+     "2014": 759,
+     "2019/20": 1266
+    },
+    "Phnom Penh": {
+     "2014": 1643,
+     "2019/20": 3132
+    },
+    "Other urban": {
+     "2014": 1179,
+     "2019/20": 1312
+    },
+    "Other rural": {
+     "2014": 578,
+     "2019/20": 821
+    }
+   },
+   "table": "Table 25",
+   "url": "https://www.nis.gov.kh/nis/CSES/Final%20Report%20of%20Cambodia%20Socio-Economic%20Survey%202019-20_EN.pdf"
+  },
+  {
+   "id": "cses_edu_share_consumption",
+   "year": "2019/20",
+   "value": 2.1,
+   "unit": "% of household consumption",
+   "url": "https://www.nis.gov.kh/nis/CSES/Final%20Report%20of%20Cambodia%20Socio-Economic%20Survey%202019-20_EN.pdf"
+  },
+  {
+   "id": "wb2005_primary_cost_per_pupil",
+   "year": "2004 survey (Bray & Seng); 1997/98 baseline",
+   "unit": "riel per pupil per year",
+   "values": {
+    "urban_g1_total": 116900,
+    "urban_g6_total": 214200,
+    "rural_g1_total": 42500,
+    "rural_g6_total": 107200,
+    "urban_g1_tutoring": 21000,
+    "urban_g6_tutoring": 48700,
+    "rural_g6_tutoring": 3300
+   },
+   "table": "Table 18",
+   "url": "https://openknowledge.worldbank.org/server/api/core/bitstreams/b747a216-e865-5bae-837e-caf3f2aad33c/content"
+  },
+  {
+   "id": "wb2005_lss_cost_per_pupil",
+   "unit": "riel per pupil per year",
+   "values": {
+    "urban_g7": 379300,
+    "urban_g8": 402700,
+    "urban_g9": 559500,
+    "rural_g7": 191300,
+    "rural_g8": 200600,
+    "rural_g9": 275200,
+    "urban_g9_tutoring": 211400,
+    "rural_g9_tutoring": 63500
+   },
+   "table": "Table 19",
+   "exchange_rate": "US$1 = 3,835 riel (end Jan 2005)",
+   "url": "https://openknowledge.worldbank.org/server/api/core/bitstreams/b747a216-e865-5bae-837e-caf3f2aad33c/content"
+  },
+  {
+   "id": "ses1997_burden_by_quintile",
+   "year": 1997,
+   "values": {
+    "primary_poorest_pct_nonfood": 26.2,
+    "primary_richest_pct_nonfood": 11.9,
+    "secondary_poorest_pct_nonfood": 56.2,
+    "secondary_richest_pct_nonfood": 26.2
+   },
+   "unit": "% of non-food spending, average schooling spending per pupil",
+   "note": "as extracted; the extract's wording is ambiguous on which group the shares refer to",
+   "url": "https://openknowledge.worldbank.org/server/api/core/bitstreams/b747a216-e865-5bae-837e-caf3f2aad33c/content"
+  },
+  {
+   "id": "wb2005_household_share_resources",
+   "values": {
+    "primary_hh_share_2004_pct": 55.6,
+    "primary_hh_share_1997_98_pct": 76.9,
+    "lss_hh_share_2004_pct": 65.9,
+    "parental_share_total_edu_exp_2002_pct": 37,
+    "parental_share_alt_pct": 34
+   },
+   "url": "https://openknowledge.worldbank.org/server/api/core/bitstreams/b747a216-e865-5bae-837e-caf3f2aad33c/content",
+   "note": "37% to 34% as given (2002, WB/ADB 2003)"
+  },
+  {
+   "id": "wb2005_rural_cost_share_poverty_line_1999",
+   "values": {
+    "g1": 5.3,
+    "g6": 14.2,
+    "g7": 25.5,
+    "g9": 37.8
+   },
+   "unit": "% of 1999 poverty line",
+   "url": "https://openknowledge.worldbank.org/server/api/core/bitstreams/b747a216-e865-5bae-837e-caf3f2aad33c/content"
+  },
+  {
+   "id": "wb2005_grade9_total_direct_cost",
+   "value": "over 1,000,000 riel per year (about US$250) at grade 9, mainly tutoring and opportunity costs",
+   "url": "https://openknowledge.worldbank.org/server/api/core/bitstreams/b747a216-e865-5bae-837e-caf3f2aad33c/content"
+  },
+  {
+   "id": "bray_bunly_2005_tutoring_share",
+   "values": {
+    "hh_survey_1997_98_tutoring_share_of_hh_edu_exp_pct_range": "1 to 19 by quintile",
+    "nep_2006_survey_tutoring_share_pct": 78,
+    "nep_2006_n": "210 households, 4 provinces",
+    "bray_2012_tutoring_g9_pct": 68.4,
+    "bray_2012_tutoring_g6_pct": 41.3,
+    "bray_2012_n": "444 students, 6 schools, one province"
+   },
+   "url": "https://discovery-pp.ucl.ac.uk/10087648/1/Brehm_All%20education%20for%20some.%20International%20development%20and%20shadow%20education%20in%20Cambodia_AAM.pdf",
+   "note": "secondary citation (Brehm & Silova)"
+  },
+  {
+   "id": "tertiary_hh_cost_2019",
+   "unit": "median annual cost, riel",
+   "values": {
+    "bottom_quintile": 4165000,
+    "top_quintile": 6856000,
+    "gap_pct": 65,
+    "real_increase_hh_exp_2010_2019_pct": 47,
+    "real_increase_individual_cost_2010_2019_pct": 62
+   },
+   "source_survey": "CSES 2019",
+   "url": "https://openknowledge.worldbank.org/bitstreams/b9d36ecb-f91b-49b3-ad34-c09e1043e1a7/download"
+  }
+ ],
+ "attendance_by_quintile": [
+  {
+   "survey": "DHS 2010",
+   "table": "Table 2.5",
+   "unit": "%",
+   "url": "https://dhsprogram.com/pubs/pdf/FR249/FR249.pdf",
+   "primary_NAR_total": {
+    "lowest": 79.3,
+    "second": 85.4,
+    "middle": 86.5,
+    "fourth": 88.9,
+    "highest": 86.0
+   },
+   "primary_GAR_total": {
+    "lowest": 96.1,
+    "second": 101.4,
+    "middle": 104.7,
+    "fourth": 102.6,
+    "highest": 95.2
+   },
+   "secondary_NAR_total": {
+    "lowest": 20.2,
+    "second": 32.1,
+    "middle": 43.8,
+    "fourth": 54.7,
+    "highest": 65.8
+   },
+   "secondary_GAR_total": {
+    "lowest": 24.1,
+    "second": 38.7,
+    "middle": 52.7,
+    "fourth": 66.7,
+    "highest": 83.1
+   }
+  },
+  {
+   "survey": "CSES 2012 (via UNICEF/MoEYS/UIS 2016)",
+   "unit": "%",
+   "url": "https://www.allinschool.org/media/3456/file/Country-Study-Cambodia-2016.pdf",
+   "values": {
+    "adj_NAR_6_11": {
+     "Q1": 79.9,
+     "Q5": 94.4
+    },
+    "lower_sec_NAR_12_14": {
+     "Q1": 17.3,
+     "Q5": 57.6
+    },
+    "any_schooling_12_14": {
+     "Q1": 75.8,
+     "Q5": 96.8
+    }
+   },
+   "note": "from facts.md; not re-fetched"
+  }
+ ],
+ "attendance_national_nonquintile": [
+  {
+   "survey": "DHS 2005",
+   "table": "Table 2.5",
+   "primary_NAR": 77.3,
+   "primary_GAR": 110.2,
+   "secondary_NAR": 28.3,
+   "secondary_GAR": 35.3,
+   "urban_primary_NAR": 78.0,
+   "rural_primary_NAR": 77.1,
+   "urban_secondary_NAR": 45.0,
+   "rural_secondary_NAR": 25.2,
+   "url": "https://www.dhsprogram.com/pubs/pdf/FR185/FR185[April-27-2011].pdf",
+   "note": "no wealth-quintile breakdown in DHS 2005 Table 2.5"
+  },
+  {
+   "survey": "DHS 2000 (text comparison in DHS 2005)",
+   "primary_NAR": 68,
+   "secondary_NAR": 16,
+   "female_secondary_NAR": 12,
+   "url": "https://www.dhsprogram.com/pubs/pdf/FR185/FR185[April-27-2011].pdf"
+  },
+  {
+   "survey": "CSES 2019/20",
+   "primary_NAR_6_11": 90.1,
+   "lower_sec_NAR_12_14": 47.5,
+   "upper_sec_NAR_15_17": 30.9,
+   "rural_primary": 89.2,
+   "rural_lower_sec": 44.9,
+   "rural_upper_sec": 25.1,
+   "phnom_penh_upper_sec": 53.9,
+   "tables": "Tables 9-11",
+   "url": "https://www.nis.gov.kh/nis/CSES/Final%20Report%20of%20Cambodia%20Socio-Economic%20Survey%202019-20_EN.pdf"
+  },
+  {
+   "survey": "WB Poverty Assessment 2013 (CSES, strict grade-for-age net enrolment)",
+   "primary_2004": 30.6,
+   "primary_2011": 48.8,
+   "secondary_2004": 8.1,
+   "secondary_2011": 20.0,
+   "url": "https://openknowledge.worldbank.org/bitstreams/e737a9a0-7f2f-5d6e-9f7b-7258ce0e16f3/download",
+   "note": "strict definition; not comparable to administrative NER"
+  }
+ ],
+ "returns_to_education": [
+  {
+   "source": "Sakellariou 2008 (NTU EGC WP 0805), SES 1997 and 2003-04",
+   "unit": "log hourly wage per year of schooling, wage employees 22-65",
+   "values": {
+    "OLS_2003_04_male": 0.065,
+    "OLS_2003_04_female": 0.062,
+    "OLS_1997_male": 0.031,
+    "OLS_1997_female": 0.015,
+    "public_male_2003_04": 0.047,
+    "private_male_2003_04": 0.11,
+    "public_female": 0.046,
+    "private_female": 0.088,
+    "IV_male_simple": 0.096,
+    "university_annualised_male_pct": 10,
+    "university_annualised_female_pct": 12
+   },
+   "url": "https://web.hss.ntu.edu.sg/egc/wp/2008/2008-05.pdf"
+  },
+  {
+   "source": "World Bank 2024 Reimagining Higher Education, Table 3.3 (2019)",
+   "unit": "%",
+   "values": {
+    "mincer_per_year": 4.7,
+    "primary_vs_none": 17.0,
+    "secondary_vs_none": 38.0,
+    "tertiary_vs_none": 68.0,
+    "secondary_vs_primary": 21.0,
+    "tertiary_vs_secondary": 30.0,
+    "annualised_primary": 5.7,
+    "annualised_secondary": 3.5,
+    "annualised_tertiary": 7.5,
+    "annualised_tertiary_2008_montenegro_patrinos": 20.7
+   },
+   "url": "https://openknowledge.worldbank.org/bitstreams/b9d36ecb-f91b-49b3-ad34-c09e1043e1a7/download"
+  },
+  {
+   "source": "World Bank 2024, Table 3.4 OLS log wage 2019 (n=9,377), ref no formal education",
+   "values": {
+    "primary": 0.0421,
+    "secondary": 0.1596,
+    "tertiary": 0.3647
+   },
+   "url": "https://openknowledge.worldbank.org/bitstreams/b9d36ecb-f91b-49b3-ad34-c09e1043e1a7/download"
+  },
+  {
+   "source": "Ridao-Cano (2004) with 2001 LFS, in WB 2005 Tables 20-21",
+   "unit": "% in paid employment by schooling: none/primary/lower sec/upper sec/tertiary",
+   "values": {
+    "paid_employment": [
+     56.2,
+     66.6,
+     72.9,
+     85.4,
+     95.8
+    ],
+    "wage_employment": [
+     27.0,
+     25.9,
+     32.3,
+     55.5,
+     90.8
+    ]
+   },
+   "url": "https://openknowledge.worldbank.org/server/api/core/bitstreams/b747a216-e865-5bae-837e-caf3f2aad33c/content"
+  }
+ ],
+ "labour_force_education_2019_20": {
+  "unit": "% of labour force 15-64",
+  "columns": [
+   "none/some",
+   "primary incomplete",
+   "primary complete",
+   "lower secondary",
+   "upper secondary",
+   "post-secondary"
+  ],
+  "both": [
+   12.4,
+   31.8,
+   26.4,
+   14.9,
+   7.2,
+   7.4
+  ],
+  "women": [
+   15.2,
+   34.0,
+   25.1,
+   13.4,
+   6.3,
+   5.9
+  ],
+  "men": [
+   9.5,
+   29.6,
+   27.7,
+   16.3,
+   8.2,
+   8.8
+  ],
+  "age_15_19": [
+   3.5,
+   24.3,
+   40.9,
+   26.1,
+   4.2,
+   1.1
+  ],
+  "age_25_34": [
+   7.3,
+   25.2,
+   28.9,
+   16.1,
+   9.8,
+   12.8
+  ],
+  "age_55_64": [
+   28.9,
+   46.6,
+   12.8,
+   8.5,
+   1.9,
+   1.3
+  ],
+  "url": "https://www.nis.gov.kh/nis/CSES/Final%20Report%20of%20Cambodia%20Socio-Economic%20Survey%202019-20_EN.pdf",
+  "note": "Tables 5-6 of the labour force section"
+ },
+ "esp_targets": [
+  {
+   "plan": "EFA National Plan 2003-2015",
+   "items": [
+    {
+     "ind": "primary NER",
+     "baseline": "87.0% (2001-02)",
+     "target": "95% (2005)"
+    },
+    {
+     "ind": "9 years basic education universal access",
+     "target": "2010"
+    },
+    {
+     "ind": "progression/transition rates",
+     "target": "100% by 2010"
+    },
+    {
+     "ind": "parental/community share of basic education costs",
+     "baseline": "22%",
+     "target": "0% (2015)"
+    },
+    {
+     "ind": "basic education spend per student",
+     "baseline": "108,000 riel (2002)",
+     "target": "184,000 riel (2015)"
+    },
+    {
+     "ind": "education share of budget",
+     "target": "max 24% (2010), ~21% (2015)"
+    },
+    {
+     "ind": "5-year-olds in ECCD",
+     "target": "75% by 2015"
+    }
+   ],
+   "url": "https://planipolis.iiep.unesco.org/sites/default/files/ressources/cambodia_npa_efa_english.pdf"
+  },
+  {
+   "plan": "ESP 2001-2005 (via ESP 2006-10 Table 1: 2004-05 targets)",
+   "items": [
+    {
+     "ind": "primary NER",
+     "baseline": "83.8% (2000-01)",
+     "actual": "91.9% (2004-05)",
+     "target": "92% (2004-05)"
+    },
+    {
+     "ind": "lower sec NER",
+     "baseline": "16.6%",
+     "actual": "26.1%",
+     "target": "40%"
+    },
+    {
+     "ind": "upper sec NER",
+     "baseline": "7.7%",
+     "actual": "9.3%",
+     "target": "15%"
+    },
+    {
+     "ind": "transition to lower sec",
+     "baseline": "77.3%",
+     "actual": "81.9%",
+     "target": "87%"
+    },
+    {
+     "ind": "edu share of recurrent budget",
+     "baseline": "13.9% (2000-01)",
+     "actual": "17.3% (2004-05)",
+     "target": "19.5%"
+    },
+    {
+     "ind": "public HE students",
+     "baseline": 7291,
+     "actual": 7953,
+     "target": 20000
+    },
+    {
+     "ind": "private HE students",
+     "baseline": 18125,
+     "actual": 38882,
+     "target": 49000
+    }
+   ],
+   "url": "https://planipolis.iiep.unesco.org/sites/default/files/ressources/cambodia_education_strategic_plan_2006-2010.pdf",
+   "note": "ESP 2001-05 document itself not read"
+  },
+  {
+   "plan": "ESP 2006-2010",
+   "items": [
+    {
+     "ind": "edu share of recurrent budget path",
+     "target": "17.74% (2006), 19.22% (2007), 19.70% (2008), 20.62% (2009), 20.85% (2010)"
+    }
+   ],
+   "url": "https://planipolis.iiep.unesco.org/sites/default/files/ressources/cambodia_education_strategic_plan_2006-2010.pdf",
+   "note": "NER/transition 2010 targets not found in text read"
+  },
+  {
+   "plan": "ESP 2009-2013",
+   "items": [
+    {
+     "ind": "primary NER",
+     "baseline": "94.4% (2008-09)",
+     "target": "98% (2013-14)"
+    },
+    {
+     "ind": "lower sec NER",
+     "baseline": "32% (2009-10)",
+     "target": "51% (2013-14)"
+    },
+    {
+     "ind": "upper sec enrolment rate",
+     "baseline": "32%",
+     "target": "40%"
+    },
+    {
+     "ind": "primary completion",
+     "baseline": "85.5% (2008-09)",
+     "target": "100%"
+    },
+    {
+     "ind": "grade 9 to 10 transition",
+     "baseline": "73%",
+     "target": "85%"
+    },
+    {
+     "ind": "HE enrolment all",
+     "baseline": "137,000 (2008-09)",
+     "target": "195,617 (2013-14)"
+    },
+    {
+     "ind": "HE enrolment public",
+     "baseline": "46,395",
+     "target": "84,035"
+    },
+    {
+     "ind": "scholarships lower sec",
+     "target": "10% of enrolment/yr, 60% female"
+    },
+    {
+     "ind": "scholarships upper sec",
+     "target": "3% of enrolment/yr"
+    },
+    {
+     "ind": "scholarships HE",
+     "target": "15% of upper secondary graduates from 2011"
+    },
+    {
+     "ind": "edu share of recurrent budget",
+     "baseline": "17.0% (2009)"
+    }
+   ],
+   "url": "https://healtheducationresources.unesco.org/sites/default/files/resources/Education_Strategic_Plan.pdf"
+  },
+  {
+   "plan": "ESP 2014-2018 (mid-term review 2016)",
+   "items": [
+    {
+     "ind": "primary NER",
+     "baseline": "97% (2013-14)",
+     "achieved": "97.9% (2014-15), 98.4% (2015-16)",
+     "target": "100% (2018)"
+    },
+    {
+     "ind": "primary completion",
+     "baseline": "88.9%",
+     "achieved": "84.1%, 80.6%",
+     "target": "100%"
+    },
+    {
+     "ind": "transition to lower sec",
+     "baseline": "76.8%",
+     "achieved": "78.7%, 82.1%",
+     "target": "94% (2018)"
+    },
+    {
+     "ind": "primary scholarship students",
+     "achieved": "68,234 (2014-15)"
+    }
+   ],
+   "url": "https://planipolis.iiep.unesco.org/sites/default/files/ressources/cambodia_2016_mid-term-review_esp_2014-2018.pdf"
+  },
+  {
+   "plan": "ESP 2019-2023",
+   "items": [
+    {
+     "ind": "primary NER",
+     "baseline": "97.8% (2018)",
+     "target": "98.5% (2023)"
+    },
+    {
+     "ind": "primary completion",
+     "baseline": "82.7% (2017/18)",
+     "target": "86.2% (2022/23)"
+    },
+    {
+     "ind": "transition primary to lower sec",
+     "baseline": "86.0%",
+     "target": "89.0%"
+    },
+    {
+     "ind": "lower sec completion",
+     "baseline": "46.5% (2017/18)",
+     "target": "52.6% (2022/23)"
+    },
+    {
+     "ind": "upper sec completion",
+     "baseline": "23.6% (2018)",
+     "target": "32.5% (2023); 45% (2030)"
+    },
+    {
+     "ind": "HE GER 18-22",
+     "baseline": "11.6% (2017/18)",
+     "target": "16.0% (2022/23) (roadmap table: 16.9%)"
+    },
+    {
+     "ind": "primary scholarship students",
+     "baseline": 86126,
+     "target": 100000
+    },
+    {
+     "ind": "edu share of current budget",
+     "baseline": "15.5% (2013) to 18.3% (2017)",
+     "target": "20%, no year"
+    }
+   ],
+   "url": "https://planipolis.iiep.unesco.org/sites/default/files/ressources/cambodia_education_sector_plan_2019-2023_0.pdf"
+  }
+ ],
+ "scholarships": [
+  {
+   "year": "2003-04",
+   "level": "lower secondary",
+   "value": 13938,
+   "note": "from facts.md (ADB PCR)"
+  },
+  {
+   "year": "2007-08",
+   "level": "lower secondary",
+   "value": 25872,
+   "note": "from facts.md (ADB PCR)"
+  },
+  {
+   "year": "2014-15",
+   "level": "primary",
+   "value": 68234,
+   "url": "https://planipolis.iiep.unesco.org/sites/default/files/ressources/cambodia_2016_mid-term-review_esp_2014-2018.pdf"
+  },
+  {
+   "year": "2018",
+   "level": "primary baseline",
+   "value": 86126,
+   "url": "https://planipolis.iiep.unesco.org/sites/default/files/ressources/cambodia_education_sector_plan_2019-2023_0.pdf"
+  },
+  {
+   "year": 2018,
+   "level": "all (UNICEF)",
+   "value": "over 200,000",
+   "coverage_pct_enrolment": "6-7",
+   "budget_KHR_bn": 46,
+   "url": "https://www.unicef.org/cambodia/media/8146/file/English-Education Budget Brief 2022.pdf"
+  },
+  {
+   "year": 2022,
+   "level": "all (planned)",
+   "value": 253900,
+   "budget_KHR_bn": 64.2,
+   "url": "https://www.unicef.org/cambodia/media/8146/file/English-Education Budget Brief 2022.pdf"
+  }
+ ],
+ "moeys_budget": {
+  "share_of_GDP_pct": {
+   "2015": 2.47,
+   "2018": 3.45,
+   "2020": 3.38,
+   "2021": 2.87,
+   "2022": 2.62
+  },
+  "share_of_national_budget_2022_pct": 11.24,
+  "url": "https://www.unicef.org/cambodia/media/8146/file/English-Education Budget Brief 2022.pdf",
+  "note": "MoEYS budget/GDP differs from WDI SE.XPD.TOTL.GD.ZS (e.g. 2018 WDI 1.60 vs 3.45 here); definitions differ, not reconciled"
+ },
+ "tertiary": {
+  "totals": [
+   {
+    "year": "2000-01",
+    "public": 7291,
+    "private": 18125,
+    "url": "ESP 2006-10 Table 1"
+   },
+   {
+    "year": "2004-05",
+    "public": 7953,
+    "private": 38882,
+    "url": "ESP 2006-10 Table 1",
+    "note": "public = public HE students; private = 'private supported HE students'"
+   },
+   {
+    "year": "2008-09",
+    "all": 137000,
+    "public": 46395,
+    "url": "ESP 2009-13"
+   },
+   {
+    "year": 2015,
+    "all": 183000,
+    "url": "https://openknowledge.worldbank.org/bitstreams/b9d36ecb-f91b-49b3-ad34-c09e1043e1a7/download"
+   },
+   {
+    "year": 2019,
+    "all": 179000,
+    "url": "same"
+   },
+   {
+    "year": 2022,
+    "all": 175962,
+    "public": 62991,
+    "private": 112971,
+    "private_share_pct": 64.2,
+    "url": "same, Table 1.2"
+   },
+   {
+    "year": "2006-07 to 2011-12",
+    "range": "about 117,000 to over 245,000",
+    "url": "https://www.phnompenhpost.com/post-weekend/degrees-difficulty-cost-cheating",
+    "note": "citing CDRI 2013"
+   },
+   {
+    "year": 2015,
+    "first_year_starters": 56301,
+    "url": "https://www.phnompenhpost.com/post-weekend/degrees-difficulty-cost-cheating"
+   }
+  ],
+  "gross_enrolment": {
+   "2017-18": 11.6,
+   "2019-20": 13.3,
+   "2020-21": 12.43,
+   "url": "ESP 2019-23; Education Congress 2021-22"
+  }
+ },
+ "bac2": {
+  "candidates": [
+   {
+    "year": 2014,
+    "registered": 91373,
+    "note": "as the 'previous year' registrants in PPP 26 Jun 2015",
+    "url": "https://phnompenhpost.com/national/thousands-drop-out-national-exams"
+   },
+   {
+    "year": 2014,
+    "sat": "about 90,000 (89,937 in facts.md)"
+   },
+   {
+    "year": 2015,
+    "registered": 88488,
+    "url": "https://phnompenhpost.com/national/thousands-drop-out-national-exams"
+   },
+   {
+    "year": 2015,
+    "sat": 83341,
+    "note": "facts.md, Cambodia Daily"
+   },
+   {
+    "year": 2017,
+    "candidates": 103112,
+    "url": "https://www.pressreader.com/cambodia/the-phnom-penh-post/20180821/281509342036242",
+    "note": "'last year' relative to article dated 2018-08-21; level inferred as grade 12"
+   },
+   {
+    "year": 2018,
+    "candidates": 117062,
+    "url": "same"
+   },
+   {
+    "year": 2021,
+    "registered": 114180,
+    "url": "https://opendevelopmentcambodia.net/news/over-114100-candidates-to-take-2021s-upper-secondary-school-exam/"
+   },
+   {
+    "year": 2023,
+    "candidates": 137412,
+    "url": "https://opendevelopmentcambodia.net/news/annual-high-school-exam-to-be-held-today-nationwide/"
+   },
+   {
+    "year": 2024,
+    "passed": 106351
+   },
+   {
+    "year": 2025,
+    "sat": 144848,
+    "passed": 122473,
+    "registered": 146720,
+    "pass_rate_pct": 84.5,
+    "url": "https://www.thestar.com.my/aseanplus/aseanplus-news/2026/08/11/over-151000-students-take-cambodia039s-high-school-exit-exam",
+    "note": "146,720 registered from Cambodianess; 85% quoted there"
+   },
+   {
+    "year": 2026,
+    "candidates": 151238,
+    "url": "same"
+   }
+  ],
+  "post_reform_2014_fate_of_failers": {
+   "source": "Phnom Penh Post 26 Jun 2015",
+   "url": "https://phnompenhpost.com/national/thousands-drop-out-national-exams",
+   "repeat_senior_year_decided": 11686,
+   "registered_for_2015": 4695,
+   "associate_degrees": 15635,
+   "technical_training": 17586
+  }
+ },
+ "not_found": [
+  "CSES education expenditure by consumption quintile (any year)",
+  "Bray 1999 primary source tables (only via WB 2005 and secondary citations)",
+  "national tutoring prevalence figure",
+  "DHS 2000/2005/2014/2021-22 wealth-quintile attendance (2010 found; 2005 table lacks quintile; FR312 and FR377 fetch failed)",
+  "Bac II candidate counts for 2016, 2019, 2022 and before 2014",
+  "public/private tertiary split 2009-2021 by year",
+  "quantified evidence on repeating or delaying university entry beyond the 2015 PPP figures",
+  "ESP 2001-2005 and ESP 2006-2010 2010 targets from the plans themselves",
+  "scholarship coverage 2009-2013 and 2019-2023 as year series"
+ ]
+}

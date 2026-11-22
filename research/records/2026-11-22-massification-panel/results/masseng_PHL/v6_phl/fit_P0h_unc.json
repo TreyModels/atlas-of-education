@@ -1,0 +1,89 @@
+{
+  "params": {
+    "a_prim": 6.0610861361976935,
+    "a_sec": 4.271392044322329,
+    "a_sec_entry": 11.122901885741872,
+    "a_ter": 10.704829641424437,
+    "a_ter_entry": 10.076441964986527,
+    "b_h": -5.9999999942411115,
+    "b_p": 0.0,
+    "b_r": 0.0,
+    "eta": 5.999999999999999,
+    "eta_x": 1.2465277416729534,
+    "kappa": 7.405628568669929,
+    "lam": 0.0,
+    "c_scale": 1.190942959294195,
+    "mu_basic": -4.0974719759152896,
+    "mu_ter": 2.7769885673450037,
+    "nu": 0.5,
+    "h_def": 0.2,
+    "late": 0.15,
+    "rep_prim": 0.04,
+    "rep_sec": 0.02,
+    "nu_basic": 7.999999999999999,
+    "nu_ter": 7.969295571918936,
+    "s0_sat": 0.25
+  },
+  "fitted": [
+    "a_prim",
+    "a_sec",
+    "a_sec_entry",
+    "a_ter",
+    "a_ter_entry",
+    "c_scale",
+    "mu_basic",
+    "mu_ter",
+    "nu_basic",
+    "nu_ter",
+    "eta",
+    "eta_x",
+    "kappa",
+    "b_h"
+  ],
+  "substantive_dials": [
+    "eta",
+    "eta_x",
+    "kappa",
+    "b_h"
+  ],
+  "intercepts": [
+    "a_prim",
+    "a_sec",
+    "a_sec_entry",
+    "a_ter",
+    "a_ter_entry",
+    "c_scale",
+    "mu_basic",
+    "mu_ter",
+    "nu_basic",
+    "nu_ter"
+  ],
+  "cost": 162.34221318121791,
+  "nfev": 246,
+  "status": 2,
+  "message": "`ftol` termination condition is satisfied.",
+  "spec": "P0h_unc",
+  "constrained": false,
+  "at_bounds": [
+    "nu_basic",
+    "eta",
+    "b_h"
+  ],
+  "dials_at_bounds": [
+    "eta",
+    "b_h"
+  ],
+  "preflight": {
+    "country": "PHL",
+    "ready": true,
+    "errors": [],
+    "warnings": [
+      "unverified targets excluded: ['fies_all 2023']",
+      "PHL premium_tertiary combines methods; interpolation across 1995-2013 is a declared comparability limitation",
+      "PHL relational driver is formal_share; short occupation series are not spliced"
+    ],
+    "train_rows": 121,
+    "test_rows": 164,
+    "diagnostic_rows": 5
+  }
+}
