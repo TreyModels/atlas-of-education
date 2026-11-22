@@ -207,7 +207,7 @@ def _es_core(panel, events, isos, years, ks, K):
 def test3():
     prm = _fetch_prm()
     meta = json.load(open(os.path.join(S.DATA, "meta.json")))
-    ssa = sorted(i for i, m in meta.items() if m["region"].strip() == "Sub-Saharan Africa" and i in prm)
+    ssa = sorted(i for i, m in meta.items() if m["region"] == "Sub-Saharan Africa" and i in prm)
     years = list(range(1985, 2016))
     real = _es(prm, {c: y for c, y in FEE.items() if c in ssa}, ssa, years, seed=1)
     plac = _es(prm, {c: y - 6 for c, y in FEE.items() if c in ssa}, ssa, list(range(1980, 2000)), K=(-5, 4), seed=2)
@@ -216,17 +216,18 @@ def test3():
 
 def main(workers=21):
     os.makedirs(OUT, exist_ok=True); t0 = time.time()
-    r1 = test1(workers); r2 = test2()
-    json.dump(dict(logodds_within=r1, bma_fdr=r2), open(os.path.join(OUT, "partial.json"), "w"), default=float)
-    try:
-        r3 = test3()
-    except Exception as e:
-        r3 = dict(treated=[], n_ssa=0, error=repr(e), real=dict(event_time=[], coef=[], ci90_lo=[], ci90_hi=[]), placebo_minus6=dict(event_time=[], coef=[], ci90_lo=[], ci90_hi=[]))
+    r1 = test1(workers); r2 = test2(); r3 = test3()
     L = [f"FINAL TESTS ({round(time.time() - t0)}s)", "", "1. WITHIN-COUNTRY on LOG-ODDS scale (FE + split-panel jackknife + asymmetry bootstrap):"]
+    ks = list(r1); pv = np.array([r1[k]["p_lead"] for k in ks]); m = len(pv); o = np.argsort(pv)
+    for nm, cm in (("q_bh", 1.0), ("q_by", float(np.sum(1.0 / np.arange(1, m + 1))))):
+        q = np.minimum.accumulate((pv[o] * m * cm / np.arange(1, m + 1))[::-1])[::-1].clip(max=1)
+        for i, j in enumerate(o):
+            r1[ks[j]][nm] = float(q[i])
     lead = sorted([(k, d) for k, d in r1.items() if d["x_leads_within"]], key=lambda kv: -abs(kv[1]["b_xy"]))
-    L.append(f"   {len(lead)} of {len(r1)} ordered pairs show a within-country lead.")
+    L.append(f"   {len(lead)} of {len(r1)} ordered pairs pass the raw CI rule; {sum(d['x_leads_within'] and d['q_bh'] < .10 for d in r1.values())} at BH q<0.10, "
+             f"{sum(d['x_leads_within'] and d['q_by'] < .10 for d in r1.values())} at BY q<0.10 (p_lead = max(p_b, p_diff), bootstrap; b in SD-of-change per SD; A2 2026-11-22).")
     for k, d in lead:
-        L.append(f"   {k:28s} b={d['b_xy']:+.3f} CI({d['ci_xy'][0]:+.3f},{d['ci_xy'][1]:+.3f}) diff CI({d['ci_diff'][0]:+.3f},{d['ci_diff'][1]:+.3f})")
+        L.append(f"   {k:28s} b={d['b_xy']:+.3f} CI({d['ci_xy'][0]:+.3f},{d['ci_xy'][1]:+.3f}) diff CI({d['ci_diff'][0]:+.3f},{d['ci_diff'][1]:+.3f}) q_bh={d['q_bh']:.3f} q_by={d['q_by']:.3f}")
     L += ["", f"2a. Demographic block loadings: {r2['demo_pc_loadings']} (higher = earlier in the transition)", "2b. BMA posterior inclusion probabilities (starts 1990-2010, all subsets of 12 candidates):"]
     for o in S.OUTCOMES:
         d = r2.get(o, {})

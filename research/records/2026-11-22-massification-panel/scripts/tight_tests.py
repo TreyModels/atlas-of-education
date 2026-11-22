@@ -48,7 +48,8 @@ def _fe_b(y, x, yl, dec, g):
 def _pair_data(a, b):
     A = G["A"]; y = A[f"d_{b}"]; x = A[a]; yl = A[f"{b}_0"]
     m = np.isfinite(y) & np.isfinite(x) & np.isfinite(yl)
-    return y[m], x[m], yl[m], G["dec"][m], G["iso"][m], G["t"][m]
+    yy = y[m]; yy = (yy - yy.mean()) / (yy.std() or 1)  # A2 fix: outcome standardized so b_xy and b_yx share SD units
+    return yy, x[m], yl[m], G["dec"][m], G["iso"][m], G["t"][m]
 
 
 def _spj(y, x, yl, dec, g, t):
@@ -88,7 +89,10 @@ def _job_pair(args):
     B1, D = np.array(B1), np.array(D)
     ci1, ciD = np.percentile(B1, [5, 95]), np.percentile(D, [5, 95])
     lead = bool((ci1[0] > 0 or ci1[1] < 0) and (ciD[0] > 0 or ciD[1] < 0) and np.sign(np.median(D)) == np.sign(b1))
-    return (a, b, dict(b_xy=float(b1), b_yx=float(b2), ci_xy=ci1.tolist(), ci_diff=ciD.tolist(), x_leads_within=lead, n=int(len(d1[0]))))
+    bp = lambda Z: float(max(2 * min((Z <= 0).mean(), (Z >= 0).mean()), 1 / len(Z)))
+    p_xy, p_diff = bp(B1), bp(D * np.sign(b1))
+    return (a, b, dict(b_xy=float(b1), b_yx=float(b2), ci_xy=ci1.tolist(), ci_diff=ciD.tolist(), x_leads_within=lead, n=int(len(d1[0])),
+                       p_xy=p_xy, p_diff=p_diff, p_lead=max(p_xy, p_diff)))
 
 
 def _job_split(args):
