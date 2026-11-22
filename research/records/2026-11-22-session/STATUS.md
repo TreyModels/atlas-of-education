@@ -138,3 +138,38 @@ and are recorded above as failures of the hypothesis rather than quietly deleted
 The most important line in this file is the caveat on +1.43. If someone cites that
 number without reading the specification curve, they will be citing a result that
 holds in roughly a quarter of defensible specifications.
+
+---
+
+# ADDENDUM — the input-price shock (added 23:50)
+
+The FAO index tested in `results/food_price_exposure.txt` measures the price of what
+farms **sell**. Boppart et al. (2023) argue the operative variable is the price of
+what farms **buy, relative to what labour costs**. That is a different quantity and
+it was tested separately in `results/input_price_shock.txt`.
+
+**Construction.** World Bank Pink Sheet real prices (1960–2024) for phosphate rock,
+DAP and potassium chloride, averaged into a fertiliser index, divided by GDP per
+head. The ratio measures the affordability of an input in units of domestic output.
+Because the price is global it carries no cross-country variation, so it is
+interacted with baseline farm dependence (a shift-share design).
+
+| Outcome | interaction | n |
+|---|---|---|
+| Farm employment share | **+0.445 (±0.082)** | 4,297 / 184 |
+| Paid employment share | **−0.243 (±0.096)** | 4,297 / 184 |
+| Births per woman | −0.006 (±0.010), n.s. | 8,419 / 184 |
+
+**Tier A-conditional.** The signs are right and significant for the two labour-market
+outcomes: falling input prices relative to income accelerate farm exit and accelerate
+the growth of paid employment. The fertility outcome is a clean null.
+
+**What this changes.** It locates the break in the four-link chain. Links 1 and 2
+(input prices → farm exit → wage employment) are confirmed. Link 4 (→ fertility)
+is not. So the mechanisation story is a labour-market story and stops there, at
+least within ten years.
+
+**Caveats that belong with the citation.** Fertilisers are one input; Boppart's
+measure also covers machinery and capital. GDP per head is a crude stand-in for an
+agricultural wage. Single design family, not yet run through a specification curve.
+Cite as suggestive, not settled.

@@ -1,0 +1,29 @@
+/root/macbundle/input_prices.py:131: RuntimeWarning: divide by zero encountered in scalar divide
+  star = "**" if abs(b[k] / se[k]) > 1.96 else "  "
+fertiliser columns: ['Phosphate rock', 'DAP', 'Potassium chloride']
+fertiliser price, real: 1960-2024, 65 years
+  first/last: 108.4 341.9
+
+==============================================================================
+FARM EMPLOYMENT SHARE  (n=4297, 184 countries)
+==============================================================================
+   own level                                      -0.5136 (±0.0579) **
+   FERTILISER PRICE / INCOME  x  farm share       +0.4453 (±0.0824) **
+   farm share                                     +0.0000 (±0.0000) **
+   cities                                         -0.1169 (±0.0531) **
+
+==============================================================================
+PAID EMPLOYMENT SHARE  (n=4297, 184 countries)
+==============================================================================
+   own level                                      -0.6369 (±0.0690) **
+   FERTILISER PRICE / INCOME  x  farm share       -0.2425 (±0.0964) **
+   farm share                                     +0.0000 (±0.0000) **
+   cities                                         +0.1039 (±0.0389) **
+
+==============================================================================
+BIRTHS PER WOMAN  (n=8419, 184 countries)
+==============================================================================
+   own level                                      -0.4027 (±0.0251) **
+   FERTILISER PRICE / INCOME  x  farm share       -0.0060 (±0.0103)   
+   farm share                                     -0.0000 (±0.0000) **
+   cities                                         -0.0242 (±0.0043) **
