@@ -24,7 +24,7 @@ for folder in ('masseng', 'scripts', 'tests', 'countries', 'docs'):
     for path in sorted((ROOT / folder).rglob('*')):
         if path.is_file() and path.suffix in ('.py', '.json', '.md') and '__pycache__' not in path.parts:
             sources[str(path.relative_to(ROOT))] = digest(path)
-for name in ('PROTOCOL.md', 'PROTOCOL_v5.md', 'HANDOFF_v5.md', 'README.md', 'requirements-v5.txt'):
+for name in ('PROTOCOL.md', 'PROTOCOL_v5.md', 'HANDOFF_v5.md', 'README.md', 'requirements-v5.txt', 'pytest.ini'):
     sources[name] = digest(ROOT / name)
 requirements = {
     'python': platform.python_version(), 'numpy': numpy.__version__, 'scipy': scipy.__version__,

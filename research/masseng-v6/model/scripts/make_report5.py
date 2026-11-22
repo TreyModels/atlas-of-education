@@ -35,6 +35,16 @@ def markdown_block(scores, recovery=None):
         cap = ' (last stage cap)' if v['nfev'] >= 250 else ''
         L.append(f"| {spec} | {f(g['model'])} | {f(g['model_minus_R0'])} | {f(g['persistence'])} | {f(g['trend'])} | "
                  f"{f(v['train_cost'])} | {evaluations}{cap} | {', '.join(v['at_bounds']) or 'none'} |")
+    model_loss = rivals[winner]['three_ger_rmse']['model']
+    if model_loss >= min(persistence, trend):
+        L += ['', f"**Benchmark failure:** {winner} does not beat the best naive rule on the three GERs. Its selection among rivals is not forecasting validation."]
+    else:
+        L += ['', f"**Benchmark result:** {winner} beats both naive rules on the three GERs. This remains a retrospective inspected result, not blind validation."]
+    if winner == 'R2':
+        L += [f"**Mechanism warning:** R2's fitted `b_h` is {f(rivals['R2']['parameters']['b_h'])} and hits a bound. "
+              'It therefore does not estimate a positive human-capital effect; its lower RMSE must not be presented as support for the earnings-return account.']
+    if rivals[winner]['at_bounds']:
+        L += ['Bound-hitting estimates are reported as computational/red-flag results, not clean structural measurements.']
     L += ['', '### Held-out losses for the selected rival', '',
           '| series | n | model | R0 | persistence | trend |', '|---|---:|---:|---:|---:|---:|']
     for series, v in rivals[winner]['series_losses'].items():
@@ -58,6 +68,13 @@ def markdown_block(scores, recovery=None):
     for spec, v in rivals.items():
         s = v['separating_observations']['recession_secondary_ger']
         L.append(f"| {spec} | {f(s['1984'])} | {f(s['1985'])} | {f(s['1986'])} | {f(s['1998'])} |")
+    if scores.get('separating_test_outcomes'):
+        L += ['', '### Separating-test decisions', '',
+              '| test | observed years | lowest-error rival | RMSE |', '|---|---|---|---:|']
+        for name, outcome in scores['separating_test_outcomes'].items():
+            best = outcome['supported_rival']
+            loss = outcome['rmse'].get(best) if best else None
+            L.append(f"| {name} | {', '.join(map(str, outcome['years'])) or 'none'} | {best or 'not scored'} | {f(loss)} |")
     for series, title in (
         ('enrol_tertiary', 'K-12 recovery: CHED tertiary headcount index (2016 = 1)'),
         ('edu_share_hh', 'FIES household education spending share'),
@@ -83,14 +100,15 @@ def markdown_block(scores, recovery=None):
     if recovery:
         L += ['### Synthetic recovery on the selected rival', '',
               f"Declared Gaussian noise; {recovery['replicates']} replicates. A parameter passes only if at least 80% of recoveries fall within ±25% of a nonzero truth.", '',
-              '| parameter | truth | median | 5th–95th percentile | share within ±25% | status |',
-              '|---|---:|---:|---:|---:|---|']
+              f"Optimiser-cap replicates: {recovery.get('optimizer_cap_replicates', 'not recorded')}.", '',
+              '| parameter | truth | median | 5th–95th percentile | share within ±25% | bound-hit replicates | status |',
+              '|---|---:|---:|---:|---:|---:|---|']
         for name, v in recovery['parameters'].items():
             if v['status'] == 'not in rival':
-                L.append(f"| {name} | — | — | — | — | not in rival |")
+                L.append(f"| {name} | — | — | — | — | — | not in rival |")
             else:
                 L.append(f"| {name} | {f(recovery['truth'][name])} | {f(v['median'])} | {f(v['q05'])}–{f(v['q95'])} | "
-                         f"{f(v['within_25pct_share'], 2)} | **{v['status']}** |")
+                         f"{f(v['within_25pct_share'], 2)} | {v.get('bound_hit_replicates', '—')} | **{v['status']}** |")
         L.append('')
     return L
 

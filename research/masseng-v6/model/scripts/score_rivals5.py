@@ -69,6 +69,25 @@ def main(iso='PHL'):
             'grade10_to_grade11_2018': float(res.ind['trans_lsec_usec'][years.index(2018)]),
             'recession_secondary_ger': {str(y): float(res.ind['ger_secondary'][years.index(y)]) for y in (1984, 1985, 1986, 1998)},
         }
+    separating = {}
+    for key, series, target_years in (
+        ('tertiary_2013_2024', 'ger_tertiary', [2013, 2024]),
+        ('recession_secondary', 'ger_secondary', [1984, 1985, 1986, 1998]),
+        ('grade10_to_grade11_2018', 'trans_lsec_usec', [2018]),
+    ):
+        base = output['rivals']['R0']['series_losses'][series]
+        selected = [i for i, y in enumerate(base['years']) if y in target_years]
+        observed = [base['obs'][i] for i in selected]
+        years = [base['years'][i] for i in selected]
+        losses = {}
+        for spec in results:
+            table = output['rivals'][spec]['series_losses'][series]
+            by_year = dict(zip(table['years'], table['pred']))
+            losses[spec] = rmse([by_year[y] for y in years], observed)
+        separating[key] = {'series': series, 'years': years, 'observed': observed, 'rmse': losses,
+                           'supported_rival': min(losses, key=lambda s: losses[s]) if years and all(v is not None for v in losses.values()) else None,
+                           'rule': 'lowest error on this observation; no support claim if observations are absent'}
+    output['separating_test_outcomes'] = separating
     winner = min(output['rivals'], key=lambda s: output['rivals'][s]['three_ger_rmse']['model'])
     output['winner_by_preregistered_rule'] = winner
     path = root / 'scores.json'

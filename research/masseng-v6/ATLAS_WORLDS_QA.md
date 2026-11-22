@@ -22,7 +22,7 @@
 - [x] Bray 1999, *The Private Costs of Public Schooling*, original UNESCO full text checked. Takeo Grade 1–6 household-cost percentages and the 1996 rural/urban quintile table were verified; sample-specific figures are not presented as national administrative accounts.
 - [x] Bray & Kwo 2013 original checked; it contains no Cambodia spending numbers.
 - [x] Tutoring distinguishes remedial, enrichment/consolidation and examination preparation in the source-check notes.
-- [ ] Siem Reap tutoring study is credited to Bray, Kobakhidze, Liu and Zhang / their team; the original fetch returned 403, so original verification remains open.
+- [x] Siem Reap tutoring study checked against the publisher's original article sections: Bray, Kobakhidze, Liu and Zhang (2016), with This Life Cambodia and a University of Hong Kong team; six schools; 81.9% of sampled students reported tutoring. Credit remains with the full team, not Bray alone.
 
 ## 4. Paper fixes
 
@@ -34,10 +34,10 @@
 ## 5. Reproducibility
 
 - [ ] Fresh copy runs on the Mac.
-- [x] Current model test directory passes: 34 passed. A repository-wide pytest collection also collects the stand-alone `scripts/recovery_test.py` and fails for missing CLI arguments; the supported command is `python -m pytest -q tests`.
+- [x] Current model test directory and repository-root pytest both pass: 34 passed. `pytest.ini` restricts discovery to `tests` so the stand-alone recovery script is not collected as a test.
 - [ ] Results regenerate byte-identically, with hashes compared.
 - [ ] Final requirements and code hashes recorded. Exact requirements and the generator are present; final hashes await final outputs.
 
 ## Current gate
 
-**NOT READY.** R4 and the computational continuation of R1 are running; scoring, recovery, final figure generation and fresh-copy reproduction remain incomplete. CHED and Siem Reap original-source access are still open. No Atlas Worlds release is authorised by this document.
+**NOT READY.** R4 is complete; the computational continuation of R1 is still running. Final scoring, recovery, figure generation and fresh-copy reproduction remain incomplete. CHED original-source access is still open. No Atlas Worlds release is authorised by this document.

@@ -32,15 +32,15 @@ def main():
         for r, value, sd in zip(train, synthetic, noise):
             q = dict(r); q['value'] = float(value + rng.normal(0, sd)); perturbed.append(q)
         fit = C.fit(c, perturbed, args.spec, start=truth, max_nfev=args.max_nfev)
-        recovered.append(fit['params'])
-        print('replicate', i + 1, 'cost', fit['cost'], flush=True)
+        recovered.append(fit)
+        print('replicate', i + 1, 'cost', fit['cost'], 'nfev', fit['nfev'], 'bounds', fit['at_bounds'], flush=True)
     summary = {'spec': args.spec, 'replicates': args.replicates, 'noise': 'declared Gaussian recovery noise',
-               'truth': truth, 'parameters': {}}
+               'truth': truth, 'parameters': {}, 'optimizer_cap_replicates': sum(r['nfev'] >= args.max_nfev for r in recovered)}
     for name in ('b_h', 'b_p', 'kappa'):
         if name not in C.fitted_names(args.spec):
             summary['parameters'][name] = {'status': 'not in rival'}
             continue
-        vals = np.array([r[name] for r in recovered]); base = truth[name]
+        vals = np.array([r['params'][name] for r in recovered]); base = truth[name]
         if abs(base) < 1e-8:
             status = 'not identified: zero true value prevents relative recovery criterion'
             success = None
@@ -48,7 +48,8 @@ def main():
             success = float(np.mean(np.abs(vals - base) <= .25 * abs(base)))
             status = 'identified' if success >= .8 else 'not identified'
         summary['parameters'][name] = {'median': float(np.median(vals)), 'q05': float(np.quantile(vals, .05)),
-                                       'q95': float(np.quantile(vals, .95)), 'within_25pct_share': success, 'status': status}
+                                       'q95': float(np.quantile(vals, .95)), 'within_25pct_share': success,
+                                       'bound_hit_replicates': sum(name in r['at_bounds'] for r in recovered), 'status': status}
     path = Path('outputs/PHL/v5') / f'recovery_{args.spec}.json'
     path.write_text(json.dumps(summary, indent=2) + '\n')
     print(json.dumps(summary['parameters'], indent=2))

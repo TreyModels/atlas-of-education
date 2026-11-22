@@ -80,6 +80,101 @@ All fitted rivals (demand|supply), mean held-out RMSE on the three GERs (trainin
 - `none|unconstrained`: 11.83 (114.3)
 - `trend|unconstrained`: 12.15 (80.8)
 
+## PHL v5 — retrospective rival test
+
+**Losses first. Status: not calibrated. This was a retrospective, inspected test, not a blind validation.**
+
+The pre-registered winner is **R2**, with three-GER held-out RMSE **7.458**. R0 is **14.230**, persistence **6.600**, and linear trend **11.794**. Lower is better; selection uses the three GERs only, not training cost.
+
+| rival | three-GER RMSE | minus R0 | persistence | trend | training cost | evaluations | at bounds |
+|---|---:|---:|---:|---:|---:|---:|---|
+| R0 | 14.230 | 0.000 | 6.600 | 11.794 | 171.173 | 77 | nu, eta |
+| R1 | 16.145 | 1.915 | 6.600 | 11.794 | 118.714 | 250 (last stage cap) | none |
+| R2 | 7.458 | -6.771 | 6.600 | 11.794 | 382.875 | 82 | eta_x, nu, b_h |
+| R3 | 15.184 | 0.955 | 6.600 | 11.794 | 160.465 | 49 | none |
+| R4 | 12.194 | -2.036 | 6.600 | 11.794 | 110.426 | 278 | none |
+| R5 | 16.543 | 2.314 | 6.600 | 11.794 | 135.706 | 88 | none |
+
+### Held-out losses for the selected rival
+
+| series | n | model | R0 | persistence | trend |
+|---|---:|---:|---:|---:|---:|
+| edu_share_hh | 1 | 0.343 | 1.107 | — | — |
+| enrol_tertiary | 5 | 0.182 | 0.155 | — | — |
+| ger_primary | 25 | 5.874 | 7.440 | 4.737 | 10.873 |
+| ger_secondary | 24 | 11.130 | 13.049 | 7.793 | 16.762 |
+| ger_tertiary | 26 | 3.597 | 19.331 | 6.930 | 5.311 |
+| hh_share_total_spending | 6 | 7.363 | 6.659 | — | — |
+| ner_primary | 16 | 4.708 | 4.807 | 3.653 | 4.632 |
+| ner_secondary | 14 | 8.354 | 5.693 | 5.114 | 8.264 |
+| priv_lower_secondary | 1 | 36.406 | 17.908 | — | — |
+| priv_primary | 21 | 19.640 | 13.693 | 0.780 | 0.631 |
+| priv_secondary | 17 | 19.016 | 7.289 | — | — |
+| priv_tertiary | 6 | 37.982 | 17.297 | 23.552 | 23.552 |
+| priv_upper_secondary | 1 | 22.046 | 5.929 | — | — |
+| trans_lsec_usec | 1 | 92.420 | 92.305 | — | — |
+
+### Separating observations
+
+The protocol pairs tertiary GER in 2013 and 2024 with a college-premium fall from 0.88 to 0.59 log points. The table reports model predictions against the held-out GER observations; it does not infer causation from the timing.
+
+| rival | tertiary GER 2013 | tertiary GER 2024 | Grade 10→11, 2018 |
+|---|---:|---:|---:|
+| R0 | 56.075 | 79.167 | 0.995 |
+| R1 | 62.769 | 75.634 | 1.000 |
+| R2 | 34.633 | 44.005 | 0.880 |
+| R3 | 56.186 | 80.090 | 0.999 |
+| R4 | 57.585 | 68.248 | 0.942 |
+| R5 | 61.073 | 80.807 | 1.000 |
+| **observed** | **31.870** | **47.413** | **93.300** |
+
+Recession secondary GER predictions (observations, where available, remain in `scores.json`):
+
+| rival | 1984 | 1985 | 1986 | 1998 |
+|---|---:|---:|---:|---:|
+| R0 | 64.517 | 56.153 | 53.578 | 63.289 |
+| R1 | 57.814 | 58.908 | 60.130 | 75.004 |
+| R2 | 60.229 | 59.242 | 58.907 | 62.956 |
+| R3 | 57.987 | 58.488 | 59.540 | 71.280 |
+| R4 | 60.999 | 61.948 | 62.930 | 69.171 |
+| R5 | 57.416 | 57.878 | 58.815 | 71.577 |
+
+### K-12 recovery: CHED tertiary headcount index (2016 = 1)
+
+| year | observed | R0 | R1 | R2 | R3 | R4 | R5 |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| 2016 | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 |
+| 2017 | 0.874 | 0.782 | 0.786 | 0.772 | 0.799 | 0.787 | 0.789 |
+| 2018 | 0.726 | 0.559 | 0.563 | 0.552 | 0.589 | 0.566 | 0.573 |
+| 2019 | 0.783 | 0.593 | 0.580 | 0.562 | 0.630 | 0.571 | 0.604 |
+| 2020 | 0.830 | 0.613 | 0.598 | 0.556 | 0.665 | 0.576 | 0.632 |
+
+### FIES household education spending share
+
+| year | observed | R0 | R1 | R2 | R3 | R4 | R5 |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| 2012 | 4.100 | 5.207 | 4.931 | 4.443 | 4.850 | 5.027 | 4.949 |
+
+### PIDS NTA household share of total education spending
+
+| year | observed | R0 | R1 | R2 | R3 | R4 | R5 |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| 1991 | 47.000 | 51.228 | 49.255 | 51.847 | 50.307 | 50.994 | 50.377 |
+| 1994 | 55.000 | 47.371 | 46.368 | 47.600 | 46.749 | 47.659 | 47.032 |
+| 1998 | 51.000 | 39.778 | 39.334 | 39.515 | 39.346 | 40.263 | 39.619 |
+| 2002 | 55.000 | 47.334 | 47.404 | 46.426 | 46.957 | 47.909 | 47.296 |
+| 2007 | 58.000 | 55.901 | 55.145 | 53.342 | 54.796 | 55.473 | 55.152 |
+| 2010 | 59.000 | 58.065 | 56.856 | 54.539 | 56.443 | 57.232 | 56.845 |
+
+### Protocol and interpretation limits
+
+- Protocol amendments: none.
+- Post-1995 enrolment was not fitted. The explicitly registered FIES and APIS training exceptions were retained.
+- Unverified FIES 2023 was excluded. The DepEd transition is reference year 2018 (SY2017–18), not 2017.
+- PHL premiums mix methods and interpolate 1995–2013. The relational driver is wage/salary employment (`formal_share`), not a spliced occupation series.
+- The occupational-threshold driver is exogenous here; aggregate timing cannot identify whether requirements drove enrolment or enrolment drove requirements.
+- These are model comparisons, not proof of the relational account or causal estimates of policy effects.
+
 ## Recovery test (PHL v3)
 
 Rule: eta and kappa within +-25% of truth in >= 80% of replicates. **Accepted: False** (20 replicates).
@@ -109,6 +204,21 @@ python3 scripts/fit_one.py KHM v3 income unconstrained && python3 scripts/score_
 python3 scripts/make_figures.py PHL v3 "income|unconstrained"
 python3 scripts/make_assumptions.py && python3 scripts/make_readme.py
 ```
+
+PHL v5 (run two fits at a time; R1 and R4 need the recorded computational continuation):
+
+```
+python3 -m pytest -q
+python3 scripts/fit_rivals5.py PHL R0  # repeat for R1 R2 R3 R4 R5
+python3 scripts/fit_rivals5.py PHL R1 --continue-existing --max-nfev 500
+python3 scripts/fit_rivals5.py PHL R4 --continue-existing --max-nfev 500
+python3 scripts/score_rivals5.py PHL
+python3 scripts/recover_rival5.py <WINNER> --replicates 20
+python3 scripts/make_report5.py && python3 scripts/make_figures5.py && python3 scripts/make_readme.py
+python3 scripts/record_reproducibility5.py
+```
+
+Use `requirements-v5.txt`, with OPENBLAS_NUM_THREADS=1 and OMP_NUM_THREADS=1 for byte-stable fits.
 
 Requires Python 3.10+, numpy, scipy, matplotlib. Runs are deterministic. Data: World Bank WDI (fetched
 2026-11-21, transcribed into `countries/*/wdi_series.json`), CHED, DepEd, PIDS, press reports of MoEYS pass rates.
