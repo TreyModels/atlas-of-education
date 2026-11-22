@@ -1,0 +1,26 @@
+components observed together for 122 countries (2000-2020)
+
+correlation among the components:
+          electrici      water      sanit   internet
+electric       1.00       0.81       0.65       0.73
+   water       0.81       1.00       0.81       0.88
+   sanit       0.65       0.81       1.00       0.81
+internet       0.73       0.88       0.81       1.00
+
+PC1 loadings: electricity=+0.47, water=+0.52, sanit=+0.49, internet=+0.51
+variance explained by PC1: 83.7%
+
+time-varying index built for 6129 country-years (median components per observation: 3)
+
+============================================================================================
+EACH SCHOOLING OUTCOME, BY THE BUNDLE AND BY ITS PARTS
+(coefficient per one standard deviation of the predictor, within country)
+============================================================================================
+outcome          BUNDLE  electricity        water   sanitation     internet
+prm_cmp      -2.498      +9.510*     +4.708      -0.789      -2.670*  
+lsc          -2.144      +9.598*     -5.543      +2.153      -2.631*  
+sec          +5.624*    +12.045*     +5.099      +7.369*     +0.937   
+ter         +10.218      -5.267      -0.458     +12.257*     +6.877*  
+
+  * significant at 5%. Country and decade fixed effects; own starting level,
+  income and urbanisation controlled throughout.

@@ -1,0 +1,33 @@
+interpolation error, estimated leave-one-out on dense series:
+  electricity  sd = 1.658  (from 6261 held-out observations)
+  water        sd = 0.100  (from 3360 held-out observations)
+  sanit        sd = 0.142  (from 3204 held-out observations)
+  internet     sd = 1.913  (from 5646 held-out observations)
+
+====================================================================================
+COMPLETE CASES vs MULTIPLE IMPUTATION (M=20), lower-secondary completion
+====================================================================================
+
+  lsc
+    complete cases  electricity    +9.598 (±2.391)  n= 1414, 163 countries
+    complete cases  bundle         -2.050 (±1.866)  n= 1360, 163 countries
+    imputed (M=20) electricity    +9.627 (±2.398) *  n= 1414, 163 countries
+    imputed (M=20) bundle         -0.572 (±1.816)    n= 1414, 163 countries
+
+  sec
+    complete cases  electricity   +12.045 (±2.454)  n= 1974, 179 countries
+    complete cases  bundle         +4.183 (±2.015)  n= 1867, 176 countries
+    imputed (M=20) electricity   +12.081 (±2.461) *  n= 1974, 179 countries
+    imputed (M=20) bundle         +4.917 (±2.056) *  n= 1971, 177 countries
+
+  ter
+    complete cases  electricity    -5.267 (±4.643)  n= 1733, 159 countries
+    complete cases  bundle         +8.410 (±3.872)  n= 1631, 157 countries
+    imputed (M=20) electricity    -5.274 (±4.657)    n= 1735, 159 countries
+    imputed (M=20) bundle         +7.759 (±4.406)    n= 1729, 157 countries
+
+  pov_215
+    complete cases  electricity   -12.384 (±2.577)  n= 1050, 102 countries
+    complete cases  bundle         +1.020 (±0.577)  n= 1023, 100 countries
+    imputed (M=20) electricity   -12.419 (±2.598) *  n= 1051, 102 countries
+    imputed (M=20) bundle         +1.069 (±0.529) *  n= 1051, 102 countries

@@ -1,0 +1,35 @@
+====================================================================================
+THE STATE-PRESENCE BUNDLE: does it cohere?
+====================================================================================
+2126 country-years where all four are observed, 148 countries
+
+                      electrici      beds      phys  security
+  across countries:
+    electricit        1.00      0.42      0.62     -0.00
+          beds        0.42      1.00      0.66      0.20
+          phys        0.62      0.66      1.00      0.15
+      security       -0.00      0.20      0.15      1.00
+  within countries:
+    electricit        1.00      0.03      0.13      0.03
+          beds        0.03      1.00     -0.14     -0.17
+          phys        0.13     -0.14      1.00      0.10
+      security        0.03     -0.17      0.10      1.00
+
+  PC1 loadings: electricity=+0.53, beds=+0.56, phys=+0.61, security=+0.17
+  variance explained: 54.2%
+
+  time-varying bundle built for 3707 country-years
+
+======================================================================================
+SCHOOLING AND POVERTY, BY THE STATE-PRESENCE BUNDLE AND ITS PARTS
+(per SD, within country; income and urbanisation controlled)
+======================================================================================
+outcome          BUNDLE  electricityhospital beds   physicians     security
+lsc           -0.29       +9.60*      +1.58       -0.76       -1.17   
+sec           +0.10      +12.05*      -2.19       +1.01       -1.08   
+ter           -1.04       -5.27       -4.25*     +10.94*      -0.55   
+pov_215       +0.15      -12.38*      +0.50       -0.31       -0.19   
+
+  roads added (subsample where the series exists, 1990-2010):
+    lsc    bundle controlling for roads: too few
+    sec    bundle controlling for roads: too few
