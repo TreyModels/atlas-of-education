@@ -45,3 +45,11 @@ def test_percent_premium_fails_unit_check():
     report = audit(c)
     assert not report['ready']
     assert any('requires log points' in e for e in report['errors'])
+
+
+def test_transition_prediction_uses_registered_percent_units():
+    res = type('Result', (), {})()
+    res.years = np.array([2018])
+    res.ind = {'trans_lsec_usec': np.array([0.88])}
+    rows = [{'series': 'trans_lsec_usec', 'year': 2018}]
+    assert C._pred(res, rows)[0] == pytest.approx(88.0)

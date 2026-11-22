@@ -59,6 +59,8 @@ def _pred(res, rows):
         v = float(s[yrs.index(r['year'])])
         if r.get('transform') == 'index_2016':          # e.g. CHED headcount relative to AY2015-16
             v = v / float(s[yrs.index(2016)])
+        if r['series'] == 'trans_lsec_usec':             # engine fraction; registered target is percent
+            v *= 100.0
         out.append(v)
     return np.array(out)
 
