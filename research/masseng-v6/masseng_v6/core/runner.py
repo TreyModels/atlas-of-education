@@ -37,10 +37,11 @@ def run_admissions_year(
     before = state.copy()
     after = state.copy()
     allocation = clear_admissions(people, market_tuple)
-    for applicant_id, market_id in allocation.assignments.items():
+    for applicant_id, admitted_by_market in allocation.assignments.items():
         source = applicant_sources[applicant_id]
-        target = replace(source, sector=sectors[market_id], education_status=EducationStatus.ATTENDING)
-        after.move(source, target, 1.0)
+        for market_id, admitted_mass in admitted_by_market.items():
+            target = replace(source, sector=sectors[market_id], education_status=EducationStatus.ATTENDING)
+            after.move(source, target, admitted_mass)
     ledger = reconcile_states(before, after)
     return YearResult(after, allocation, ledger)
 
