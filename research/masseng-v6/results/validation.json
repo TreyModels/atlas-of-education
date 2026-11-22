@@ -1,0 +1,8 @@
+{
+  "archived_v3_v5_tests": {"passed": 18, "failed": 0},
+  "array_and_legacy_tests": {"passed": 26, "failed": 0},
+  "reference_kernel_tests": {"passed": 24, "failed": 0},
+  "array_reference_random_cases": 100,
+  "array_reference_max_absolute_difference": 2.220446049250313e-16,
+  "experiment_status": "illustrative declared-capacity scenarios; no empirical calibration or causal validation"
+}

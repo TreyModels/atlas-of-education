@@ -1,0 +1,49 @@
+{
+  "spec": "R2",
+  "replicates": 20,
+  "noise": "declared Gaussian recovery noise",
+  "truth": {
+    "a_prim": 4.6905883742052,
+    "a_sec": 3.85707635100285,
+    "a_sec_entry": 3.334747761230875,
+    "a_ter": 5.3816216013466,
+    "a_ter_entry": 5.903751071711594,
+    "b_h": -5.999765171164789,
+    "b_p": 0.0,
+    "b_r": 0.0,
+    "eta": 0.0,
+    "eta_x": 1.5945542328685073e-13,
+    "kappa": 1.865048837129614,
+    "lam": 0.0,
+    "c_scale": 1.14050289514391,
+    "mu_basic": -3.409717076327585,
+    "mu_ter": 3.522592962862173,
+    "nu": 7.9997713382177675,
+    "h_def": 0.2,
+    "late": 0.15,
+    "rep_prim": 0.04,
+    "rep_sec": 0.02
+  },
+  "parameters": {
+    "b_h": {
+      "median": -5.999876059844956,
+      "q05": -5.999999995778233,
+      "q95": -4.467661632479969,
+      "within_25pct_share": 0.95,
+      "bound_hit_replicates": 15,
+      "status": "identified"
+    },
+    "b_p": {
+      "status": "not in rival"
+    },
+    "kappa": {
+      "median": 1.7068493373145923,
+      "q05": 0.948743329241883,
+      "q95": 2.463697591115543,
+      "within_25pct_share": 0.6,
+      "bound_hit_replicates": 0,
+      "status": "not identified"
+    }
+  },
+  "optimizer_cap_replicates": 0
+}

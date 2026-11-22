@@ -1,0 +1,62 @@
+{
+  "params": {
+    "a_prim": 0.7005724054402822,
+    "a_sec": -0.9347906385006848,
+    "a_sec_entry": -2.8147941663866085,
+    "a_ter": 2.672982547174232,
+    "a_ter_entry": -0.15348034412144143,
+    "b_h": 2.4890869637746245,
+    "b_p": 0.0,
+    "b_r": 9.193411964939573,
+    "eta": 0.0,
+    "eta_x": 1.2287670228199554,
+    "kappa": 39.995406221196006,
+    "lam": 4.261227603984243,
+    "c_scale": 1.2203999133650436,
+    "mu_basic": -2.9200668429212815,
+    "mu_ter": 2.6886599896883623,
+    "nu": 3.4961668076853187,
+    "h_def": 0.2,
+    "late": 0.15,
+    "rep_prim": 0.04,
+    "rep_sec": 0.02
+  },
+  "fitted": [
+    "a_prim",
+    "a_sec",
+    "a_sec_entry",
+    "a_ter",
+    "a_ter_entry",
+    "eta_x",
+    "kappa",
+    "c_scale",
+    "mu_basic",
+    "mu_ter",
+    "nu",
+    "b_h",
+    "b_r",
+    "lam"
+  ],
+  "cost": 110.42572366119805,
+  "nfev": 28,
+  "spec": "R4",
+  "at_bounds": [],
+  "continued_from": {
+    "cost": 113.78606876389063,
+    "nfev": 250
+  },
+  "total_nfev": 278,
+  "preflight": {
+    "country": "PHL",
+    "ready": true,
+    "errors": [],
+    "warnings": [
+      "unverified targets excluded: ['fies_all 2023']",
+      "PHL premium_tertiary combines methods; interpolation across 1995-2013 is a declared comparability limitation",
+      "PHL relational driver is formal_share; short occupation series are not spliced"
+    ],
+    "train_rows": 121,
+    "test_rows": 164,
+    "diagnostic_rows": 5
+  }
+}

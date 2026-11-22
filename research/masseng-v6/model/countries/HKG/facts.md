@@ -1,0 +1,349 @@
+# Hong Kong facts (see facts.json for full structured detail)
+
+Compiled 2026-11 via WebFetch/WebSearch; figures extracted by a summarising fetch tool - spot-verify before publication. Items marked NOT FOUND were not retrieved.
+
+## structure_and_dates
+
+- **_status**: NOT YET SOURCED from web in this session; user-provided description only (6-yr primary; old system F1-5 HKCEE, F6-7 HKALE, 3-yr degrees; NSS 3-3-4 first S4 2009, first HKDSE 2012, 2012 double cohort; free+compulsory primary 1971, 9-yr 1978; 12-yr free 2008). WDI corroborates SE.SEC.DURS=7 through 2011 and 6 from 2012, primary 6 yrs.
+
+## university_places
+
+### fyfd_ugc_places
+
+- {"claim": "UGC-funded FYFD places 'maintained at 14,500 since the 1994-1995 school year'", "year": "1994/95-2006/07", "source": "https://www.info.gov.hk/gia/general/200703/14/P200703140153_print.htm", "definition": "Government LCQ3 reply, 14 Mar 2007", "reliability": "high (official); no per-year series given"}
+- {"claim": "14,620 per cohort in 2011/12; 15,000 per cohort 2012/13-2014/15; double cohort 2012/13 = 15,000 (3-yr programme cohort) + 15,000 (4-yr programme cohort) = 30,000 FYFD places; senior-year undergrad places 3,974 (2011/12), 4,474 (2012/13), 5,474 (2013/14), 6,987 (2014/15) [Annex A]; intakes 2,487/2,987/4,000 per para 5(b), target 8,000/yr", "year": "2011-2014", "source": "https://www.legco.gov.hk/yr11-12/english/panels/ed/papers/ed1114-edbhecr5204108-e.pdf", "definition": "EDB LegCo Panel paper Nov 2011, FTE places", "reliability": "high; paragraph 5(b) and Annex A senior-year figures differ (intake vs places) - read the PDF before use"}
+- {"claim": "UGC-funded FYFD 15,000 each year 2013-2022; potential demand 27,080 (2013), 26,332 (2014), 24,587 (2015), 23,698 (2016), 20,949 (2017), 21,321 (2018), forecasts 19,200/18,200/17,500/17,200 (2019-22)", "year": "2013-2022", "source": "https://www.legco.gov.hk/research-publications/english/1819issh16-publicly-funded-higher-education-20190123-e.pdf", "definition": "LegCo Research Office ISSH16/18-19, Fig 1", "reliability": "medium-high; 2019+ are forecasts"}
+- {"claim": "UGC-funded universities offered 14,500 subsidised undergraduate places in 2000; total full-time undergraduate intake ~15,000 (2001/02) to ~24,000 (2016/17); ~1/3 of 24,000 FYFD places in 2017/18 self-financing; self-financing share of intake 2016/17: ~40% of FYFD, ~72% top-up, ~68% sub-degree; sub-degree intake ~13,000 (2001/02) to ~32,000 (2016/17); new top-up degree intake 4,100 (2008/09) to 12,600 (2016/17)", "year": "2000-2017", "source": "https://www.edb.gov.hk/attachment/en/about-edb/press/consultation/TF_SFPE_Consultation Doc_Eng.pdf", "definition": "EDB Task Force on Self-financing Post-secondary Education consultation doc (2017)", "reliability": "high; text notes sub-degree places differ between sections (32,000 vs ~35,000)"}
+- {"claim": "2007 plan: ~2,300 self-financed FYFD + 1,500 top-up degree places; 2011 paper: ~4,500 self-financing FYFD and ~3,800 top-up places per year", "year": "2007, 2011", "source": "https://www.info.gov.hk/gia/general/200703/14/P200703140153_print.htm ; legco ed1114 paper above", "reliability": "high"}
+- {"claim": "Pre-1994 FYFD series (1980s-1993): NOT FOUND in this session"}
+
+### target_60pct
+
+- **claim**: 2000 Policy Address aimed for 60% of senior secondary school leavers to receive tertiary education within ten years (i.e. by 2010); participation ~33% in 2000/01, estimated 66% in 2005/06; target 'met' ~5 years after 2001 per EDB task force doc
+- **year**: 2000-2006
+- **source**: https://www.legco.gov.hk/yr05-06/english/panels/ed/papers/ed0327cb2-1449-01e.pdf ; EDB TF_SFPE doc
+- **reliability**: high for the stated figures; denominator definition (age cohort vs S6 leavers) differs between papers - check
+
+### participation_rates
+
+- **claim**: Post-secondary participation reached 70% in 2015/16 incl. 45% degree-level; 72% in 2016/17 (38% publicly-funded: 21% UG + 17% sub-degree; rest self-financing). 2011 plan: by 2014/15 over 1/3 of relevant age cohort could get degree places, over 2/3 any post-secondary
+- **source**: EDB TF_SFPE doc; legco ed1114 paper
+- **reliability**: high (official, but participation rates count places 'opportunities', not enrolments)
+
+### non_local_students_ugc
+
+- **claim**: Non-local students in UGC-funded universities: 8,392 (2008), 9,333 (2009), 10,072 (2010), 10,770 (2011), 13,661 (2012), 14,510 (2013), 15,151 (2014), 15,727 (2015), 16,474 (2016), 17,050 (2017); mainland share 92% (2008) -> 71% (2017)
+- **source**: LegCo ISSH16/18-19
+- **reliability**: medium (values extracted via summarising tool; verify)
+
+
+## exam_statistics
+
+### hkdse_day_school_entries
+
+- **2015**: 61136
+- **2016**: 56112
+- **2017**: 51192
+- **2018**: 50642
+- **2019**: 47005
+- **2020**: 44521
+- **2021**: 42386
+- **2022**: 41610
+- **2023**: 41465
+- **2024**: 40965
+- **source**: HKEAA Table 7a https://www.hkeaa.edu.hk/DocLibrary/HKDSE/Exam_Report/Examination_Statistics/dseexamstat24_7.pdf
+- **definition**: day school entries (not candidates; later tables give candidates e.g. 40,666 in 2024)
+- **reliability**: high
+
+### hkdse_core_3322_day_school
+
+#### 2016_approx
+
+- **pct**: 42.3
+- **note**: derived: SCMP says 2017 = ~41%, 1.3 pts lower than last year
+
+#### 2017
+
+- **candidates**: 51008
+- **met**: 20885
+- **pct**: 41.0
+- **source**: https://amp.scmp.com/news/hong-kong/education-community/article/2102243/fewer-hong-kong-students-make-grade-local
+
+#### 2021
+
+- **candidates**: 42028
+- **met**: 17867
+- **pct**: 42.5
+- **source**: HKEAA dseexamstat21_3.pdf Table 3d
+
+#### 2023
+
+- **candidates**: 41121
+- **met**: 17494
+- **pct**: 42.5
+- **source**: HKEAA dseexamstat23_3.pdf Table 3d
+
+#### 2024
+
+- **candidates**: 40666
+- **met_3322_core_332A**: 18376
+- **pct_332A**: 45.2
+- **met_332A22**: 18027
+- **pct_332A22**: 44.3
+- **source**: HKEAA dseexamstat24_3.pdf Tables 3d,3f
+
+- **definition**: core subjects Chinese L3, English L3, Maths L2, LS L2 (3322); from 2024 LS replaced by Citizenship and Social Development graded attained (A)
+- **other_years_2012_2020_2022**: NOT FOUND (HKEAA 2012 PDF unreadable via fetch); 2017 article labels figure as 'about 41%'
+- **reliability**: high for HKEAA, medium for SCMP-derived 2016/2017. Note 33222 in user wording = 3322 + 2 electives at L2 in practice; HKEAA table 3d gives core only; 3f (332A)22 adds elective
+
+- **hkdse_core_subject_rates_day_school**: Chinese L3+ / English L3+ / Maths CP L2+ : 2015 52.7/52.4/81.8; 2018 57.3/53.8/82.5; 2021 60.0/54.2/81.8; 2024 65.3/56.4/83.0 (HKEAA dseexamstat24_7.pdf Table 7c/7e)
+- **hkcee_hkale**: NOT FOUND yet
+- **jupas**: NOT FOUND yet. SCMP 2017: 15,000 subsidised FYFD places, >5,800 eligible may go self-financing. SCMP 2025 headline: 61% of eligible candidates admitted to public universities, down from 70% (page not retrievable).
+### hkdse_2012
+
+- **candidates_total**: 73074
+- **school_candidates_pct**: 98.2
+- **day_school_met_3322_pct**: 37.7
+- **day_school_met_3322_n**: 26431
+- **source**: https://www.news.gov.hk/en/categories/school_work/html/2012/07/20120719_141020.shtml
+- **reliability**: official govt news; 47,831 day-school candidates had 5 subjects at L2+ incl Chinese & English
+
+### hkale_2011_2012
+
+#### school_candidates
+
+- **2011**: 32135
+- **2012**: 31666
+
+#### private
+
+- **2011**: 9934
+- **2012**: 9906
+
+#### pass_rate_AL_all_E_or_above
+
+- **2011**: 76.0
+- **2012**: 76.3
+
+#### day_school_first_attempters_AL
+
+- **2011**: 77.6
+- **2012**: 78.0
+
+- **source**: https://www.hkeaa.edu.hk/doclibrary/media/pr/20120628_hkale_results_eng_full.pdf
+- **reliability**: high, provisional
+
+- **hkcee**: NOT FOUND (final HKCEE 2010 only mentioned in search results)
+
+## private_tutoring
+
+### bray_kwok_2003
+
+- **survey**: 1998/99, 630 pupils, 6 schools (Kwok 2001 data)
+#### prevalence
+
+- **S1-3**: 35.1
+- **S4-5**: 46.6
+- **S6-7**: 70.3
+- **overall**: 48.8
+
+- **spending**: ~1/3 spent <HK$500/month; 28.1% >HK$1,000; 8.5% >HK$2,000
+- **source**: https://web.edu.hku.hk/f/staff/376/Bray_%26_Kwok_Tutoring_EER_1.pdf
+- **reliability**: peer-reviewed but small non-random school sample
+
+### bray_et_al_2014
+
+- **survey**: 2011/12, 1,624 students in 16 secondary schools (967 S3, 657 S6)
+#### prevalence_past_12_months
+
+- **all**: 61.1
+- **S3**: 53.8
+- **S6**: 71.8
+
+- **modes_among_tutored**: S6: large-group live lecture 54.2%, video lecture 61.7%, small group 29.0%, one-on-one 31.1%; S3: small group 53.5%, one-on-one 44.2%
+- **subjects**: English 65.2% / Maths 52.7% / Chinese 31.8% (of tutored)
+- **source**: https://hub.hku.hk/bitstream/10722/184784/1/Content.pdf?accept=1+
+- **reliability**: peer-reviewed (Econ. of Education Review 38); school-based convenience sample; no spending reported
+
+### csd_2004_05
+
+- **claim**: Government survey 2004/05: 36.0% primary, 28.0% lower secondary, 33.6% upper secondary, 48.1% sixth form (as cited in Bray et al 2014)
+- **reliability**: SECONDARY CITATION only; C&SD report itself not retrieved; the figures look low vs other surveys - possibly share receiving tutoring in the reference week/particular definition. Verify at C&SD Thematic Household Survey before use
+
+### caritas_2010
+
+- **claim**: 898 secondary students: 72.5% lower secondary, 81.9% middle secondary, 85.5% senior secondary had tutoring
+- **source**: cited in Bray & Lykins 2012 Box 1 (https://cerc.edu.hku.hk/wp-content/uploads/shadow-education.pdf) and Bray et al 2014 (73.5% of secondary students overall)
+- **reliability**: secondary citation; Caritas original not retrieved
+
+### ngai_cheung_2009
+
+- **claim**: 2009 telephone survey of 521 students: 72.5% of upper primary students had received tutoring
+- **source**: Bray & Lykins 2012 Box 1
+- **reliability**: secondary; small phone sample. HKFYG: 521 students P5-F7 in 2009
+
+### hkfyg_yrc
+
+- **claim**: Prevalence among students (P5-S6) just over 34% (1996, n=507, aged 10-19), 2009 (n=521) value only in chart, over 63% (2012, n=524, phone survey Dec 2012); hours/week ~3 (2009) -> ~5 (2012). YRC also cited: over 50% of secondary and 22.1% of P3-or-below tutored (2012)
+- **source**: https://yrc.hkfyg.org.hk/wp-content/uploads/sites/56/2017/12/201303_Private-Tutoring-of-Students-in-Hong-Kong.pdf ; https://cps.hkfyg.org.hk/2023/06/27/a-snapshot-of-private-tutoring-in-hong-kong/
+- **reliability**: small phone samples; no grade breakdown in text; spending not given
+
+- **claim_85pct_verification**: VERIFIED AS TRACED, WITH CAVEAT: 'about 85% of senior secondary students' appears in Bray & Lykins (2012) 'Shadow Education: Private Supplementary Tutoring and Its Implications for Policy Makers in Asia' (ADB/CERC), Executive Summary, uncited; Box 1 attributes the figure to Caritas (2010): 85.5% senior secondary (81.9% middle, 72.5% lower), n=898 secondary students. It is a 2010 NGO survey figure, not a census; Bray et al 2014 (2011/12) measured 71.8% for S6 (past 12 months) and Bray & Kwok found 70.3% for S6-7 in 1998/99. So 85% is the high end; 70-85% range for senior secondary is defensible.
+### industry_size
+
+- **claim**: Market size ~HK$1,984 million (US$255m) for businesses serving secondary students on local curriculum, 2010 survey (Synovate 2011); chain outlets grew 38 to 106 between 2005/06 and 2009/10 and claimed 54% of secondary tutoring capacity (Modern Education Group 2011); Ipsos 2016: up to 3,300 schools/centres target primary, ~2,900 secondary
+- **source**: https://cerc.edu.hku.hk/wp-content/uploads/shadow-education.pdf; cps.hkfyg.org.hk snapshot
+- **reliability**: commercial market research via secondary citation; excludes one-to-one private tutors so likely understates
+
+- **household_spending_per_student**: NOT FOUND (only Bray&Kwok 1998/99 monthly fee bands)
+- **post_2012_post_2019**: NOT FOUND for rigorous survey; HKFYG blog 2023 cites only 2012 and 2016 items; a magazine survey (n=342 students, year unstated) 96.7% ever tutored - unreliable
+
+## household_spending_on_education
+
+### hes_2019_20
+
+- **claim**: Average monthly household expenditure HK$30,230 (all households; public 15,018; subsidised 27,631; private 37,895). School fees HK$1,357 (public 759, subsidised 993, private 1,728); other educational charges HK$47; textbooks HK$117
+- **computed_share**: (1357+47)/30230 = 4.6% (my arithmetic)
+- **source**: C&SD table 140-09005 https://www.censtatd.gov.hk/api/get.php?id=140-09005&lang=en&full_series=1
+- **reliability**: official; Oct 2019-Sep 2020, COVID-affected; 'school fees' group may include tuition/tutoring fees - check HES definition
+
+- **earlier_hes_years**: NOT FOUND (1994/95, 1999/2000, 2004/05, 2009/10, 2014/15)
+- **legco_note**: 2005-2014 private consumption expenditure on education services grew 5.5%/yr vs 3.1% for public education expenditure (LegCo ISSH11/16-17, https://www.legco.gov.hk/research-publications/english/1617issh11-education-expenditure-in-hong-kong-20161125-e.pdf)
+
+## outbound_mobility
+
+- **primary_source**: EDB 'Secondary 6 Students' Pathway Survey' (annual since 2012; S6 graduates of the DSE cohort, status as at Sept/Oct). PDFs: https://www.edb.gov.hk/attachment/en/about-edb/publications-stat/figures/S6_<YY>.pdf (12,15,19,20,22,24,25 read; 13,17,18,23 exist, not read). Reliability: high (official, ~96-97% response); non-respondents (mostly likely working or abroad) mean overseas study 'likely underestimated' (EDB note); covers S6 DSE day-school graduates only, not sub-degree/other entrants or non-S6 routes; 'bachelor's' include programmes outside HK.
+### by_year
+
+#### 2012
+
+- **responded**: 59871
+- **full_time_study**: 52565
+- **bachelors_all**: 18964
+- **outside_HK_total**: 4234
+- **outside_bachelors**: 2827
+- **outside_postsec**: 1407
+- **share_of_bachelors_outside_pct**: 14.9
+- **share_outside_of_all_responded_pct**: 7.1
+- **destinations**: UK 1081, Mainland 929, Australia 579, Taiwan 565, US 551, Canada 201, other 328
+
+#### 2015
+
+- **responded**: 58747
+- **full_time_study**: 51583
+- **bachelors_all**: 20832
+- **outside_HK_total**: 5548
+- **outside_bachelors**: 4521
+- **share_of_fulltime_outside_pct**: 10.8
+- **share_of_bachelors_outside_pct**: 21.7
+- **destinations**: Taiwan 1737, UK 1044, Mainland 944, Australia 830, US 363, Canada 223, other 407
+
+#### 2019
+
+- **responded**: 46372
+- **full_time_study**: 42683
+- **bachelors_all**: 19509
+- **outside_HK_total**: 4249
+- **outside_bachelors**: 3518
+- **share_of_fulltime_outside_pct**: 10.0
+- **share_of_bachelors_outside_pct**: 18.0
+- **destinations**: Mainland 1229, Taiwan 897, UK 891, Australia 494, US 207, Canada 135, other 396
+
+#### 2020
+
+- **responded**: 44186
+- **full_time_study**: 41487
+- **bachelors_all**: 20215
+- **outside_HK_total**: 6009
+- **outside_bachelors**: 5170
+- **share_of_fulltime_outside_pct**: 14.5
+- **share_of_bachelors_outside_pct**: 25.6
+- **destinations**: Mainland 1877, Taiwan 1577, UK 1071, Australia 652, Canada 270, US 157, other 405
+
+#### 2022
+
+- **responded**: 41222
+- **full_time_study**: 38610
+- **bachelors_all**: 19062
+- **outside_HK_total**: 4789
+- **outside_bachelors**: 3954
+- **share_of_fulltime_outside_pct**: 12.4
+- **share_of_bachelors_outside_pct**: 20.7
+- **destinations**: Mainland 1869, UK 1113, Taiwan 794, Australia 421, Canada 251, US 107, other 234
+
+#### 2023
+
+- **responded**: 40951
+- **outside_HK_total**: 3609
+- **share_of_fulltime_outside_pct**: 9.0
+- **source**: SCMP https://scmp.com/yp/discover/news/hong-kong/article/3261139/... (secondary; EDB S6_23.pdf not read); US 87
+
+#### 2024
+
+- **responded**: 41385
+- **full_time_study**: 39129
+- **bachelors_all**: 19025
+- **outside_HK_total**: 3061
+- **outside_bachelors**: 2676
+- **share_of_fulltime_outside_pct**: 7.8
+- **share_of_bachelors_outside_pct**: 14.1
+- **destinations**: Mainland 1339, UK 647, Australia 338, Taiwan 309, Canada 149, US 67, other 212
+
+#### 2025
+
+- **responded**: 43561
+- **full_time_study**: 40948
+- **bachelors_all**: 18934
+- **outside_HK_total**: 2671
+- **outside_bachelors**: 2394
+- **share_of_fulltime_outside_pct**: 6.5
+- **share_of_bachelors_outside_pct**: 12.6
+- **destinations**: Mainland 1259, UK 480, Australia 363, Taiwan 196, Canada 78, US 77, other 218
+
+
+- **note_computation**: share_of_bachelors_outside_pct = outside_bachelors / bachelors_all, my arithmetic from EDB tables; 2013,2014,2016,2017,2018,2021 not retrieved (SCMP: 2021 14.3% of full-time students outside HK; 2020 peak 14.5%).
+- **trend**: Outside-HK share of S6 leavers' full-time study peaked at 14.5% (2020), fell to 6.5% (2025); absolute outside count peaked ~6,009 (2020), 2,671 in 2025. Mainland's share of those going out rose from ~22% (2012) / 17% (2015) to 47% (2025); Taiwan fell from 31% (2015) to 7% (2025).
+- **assessment_of_half_claim**: NOT SUPPORTED by EDB data for S6 school leavers. Even in the 2020 peak, 25.6% of S6 leavers' bachelor's places were outside HK and 14.5% of all full-time students; in 2024-25 it is 13-14% of bachelor's places and 6.5-7.8% of full-time students. Caveats: (1) EDB survey undercounts leavers who went abroad and did not respond; (2) it excludes non-S6 routes (IB/international school students, who skew abroad) and repeaters later going abroad; (3) 'about half' might be true for IB/international-school pupils or for elite/high-scoring pupils, or might refer to Mainland-origin/other subgroup - not tested. Could also be a mix-up with 1980s-90s emigration/overseas study when the local degree supply was ~2-3% then ~18% of cohort (not verified).
+- **uis_outbound_counts**: NOT FOUND (UIS table not retrievable via search; britishcouncil/nationmaster pages surfaced but not read)
+- **uis_outbound_ratio**: NOT FOUND
+- **mainland_admission_exemption_scheme**: NOT FOUND (not searched beyond EDB survey which counts Mainland as 'outside HK': 929 in 2012, 1,877 in 2020, 1,259 in 2025)
+
+## sspa_dss
+
+- **sspa**: EDB Notes for Parents 2024: 18 school nets; Central Allocation Part A 10% (3 choices any net), Part B 90% (30 choices own net); students split into 3 equal-sized bands (Territory Bands in Part A, Net Bands in Part B) based on internal assessment scaled by pre-S1 attainment tests; discretionary places (10% per LegCo reply 2001) ; results announced 9 July 2024. Earlier history (5 bands to 2000, 3 bands from 2001, HK$) NOT VERIFIED here. Out-of-district allocation 1998/99 10.9%, 1999/00 12.1%, 2000/01 12.6% of P6 (LegCo 2001 reply https://www.edb.gov.hk/en/about-edb/press/legco/replies-written/2012/20040225117681.html). Source: https://www.edb.gov.hk/attachment/en/edu-system/primary-secondary/spa-systems/secondary-spa/general-info/NotesForParents_en_2024.pdf
+### dss_secondary_schools_count
+
+- **2013**: 62
+- **2019**: 59
+- **2023**: 59
+
+### dss_enrolment
+
+- **2013**: 49103
+- **2016**: 46356
+- **2019**: 46049
+- **2023**: 45870
+
+### secondary_day_total_enrolment
+
+- **2013**: 395345
+- **2016**: 338152
+- **2019**: 327394
+- **2023**: 328474
+
+### dss_share_pct_derived
+
+- **2013**: 12.4
+- **2023**: 14.0
+
+- **source**: EDB Enrol_2023.pdf https://edb.gov.hk/attachment/en/about-edb/publications-stat/figures/Enrol_2023.pdf Tables 1.1,1.3
+- **reliability**: high; shares are my arithmetic. DSS scheme start (1991) and pre-2013 shares NOT FOUND here
+
+## returns_to_education
+
+- **csd_cohort_earnings**: Average monthly earnings (constant 2018 HK$) at age 20-24 by cohort: upper sec / sub-degree / bachelor's / postgrad: 1994: 12,100/14,800/19,400/26,100; 1999: 11,700/14,300/17,100/21,100; 2004: 10,600/11,600/14,300/19,600; 2009: 10,700/11,600/16,900/19,900; 2014: 11,900/12,200/16,200/18,300; 2019: 13,500/14,400/18,000/19,400. Implied bachelor/upper-sec ratio 1.60 (1994) -> 1.33 (2019) (my arithmetic)
+- **source**: https://www.info.gov.hk/gia/general/202105/05/P2021050400273.htm (LCQ15, May 2021; full-time employees)
+- **reliability**: official; averages sensitive to outliers
+- ** median_1985_86**: C&SD table 210-06315 medians HK$: 1985 total 2,500, secondary 2,500, degree 7,000; 1986 total 2,800, secondary 3,000, degree 7,000 (degree/secondary 2.8x then 2.3x). Full series in https://www.censtatd.gov.hk/api/get.php?id=210-06315&lang=en&full_series=1 (2M chars; not extracted)
+- **graduate_share_of_labour_force**: NOT FOUND
+- **academic_mincer_estimates**: NOT FOUND

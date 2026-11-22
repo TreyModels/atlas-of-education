@@ -1,0 +1,755 @@
+{
+ "country": "PHL",
+ "compiled": "2026-11-22",
+ "values": [
+  {
+   "series": "earnings_index_college_grad_elem100",
+   "year": 1988,
+   "value": 264.28,
+   "unit": "index",
+   "definition": "Earnings index, elementary grad=100, LFS Oct wage workers 19-65",
+   "source_url": "https://pre.econ.upd.edu.ph/index.php/pre/article/download/574/761",
+   "reliability": "high"
+  },
+  {
+   "series": "earnings_index_secondary_grad_elem100",
+   "year": 1988,
+   "value": 137.4,
+   "unit": "index",
+   "definition": "same",
+   "source_url": "https://pre.econ.upd.edu.ph/index.php/pre/article/download/574/761",
+   "reliability": "high"
+  },
+  {
+   "series": "loggap_college_vs_secondary_derived",
+   "year": 1988,
+   "value": 0.654,
+   "unit": "log points",
+   "definition": "ln(college index/secondary index) derived from Gerochi Table 6",
+   "source_url": "https://pre.econ.upd.edu.ph/index.php/pre/article/download/574/761",
+   "reliability": "medium (derived)"
+  },
+  {
+   "series": "loggap_secondary_vs_elementary_derived",
+   "year": 1988,
+   "value": 0.318,
+   "unit": "log points",
+   "definition": "ln(secondary index/100) derived",
+   "source_url": "https://pre.econ.upd.edu.ph/index.php/pre/article/download/574/761",
+   "reliability": "medium (derived)"
+  },
+  {
+   "series": "earnings_index_college_grad_elem100",
+   "year": 1990,
+   "value": 270.78,
+   "unit": "index",
+   "definition": "Earnings index, elementary grad=100, LFS Oct wage workers 19-65",
+   "source_url": "https://pre.econ.upd.edu.ph/index.php/pre/article/download/574/761",
+   "reliability": "high"
+  },
+  {
+   "series": "earnings_index_secondary_grad_elem100",
+   "year": 1990,
+   "value": 136.59,
+   "unit": "index",
+   "definition": "same",
+   "source_url": "https://pre.econ.upd.edu.ph/index.php/pre/article/download/574/761",
+   "reliability": "high"
+  },
+  {
+   "series": "loggap_college_vs_secondary_derived",
+   "year": 1990,
+   "value": 0.684,
+   "unit": "log points",
+   "definition": "ln(college index/secondary index) derived from Gerochi Table 6",
+   "source_url": "https://pre.econ.upd.edu.ph/index.php/pre/article/download/574/761",
+   "reliability": "medium (derived)"
+  },
+  {
+   "series": "loggap_secondary_vs_elementary_derived",
+   "year": 1990,
+   "value": 0.312,
+   "unit": "log points",
+   "definition": "ln(secondary index/100) derived",
+   "source_url": "https://pre.econ.upd.edu.ph/index.php/pre/article/download/574/761",
+   "reliability": "medium (derived)"
+  },
+  {
+   "series": "earnings_index_college_grad_elem100",
+   "year": 1995,
+   "value": 287.5,
+   "unit": "index",
+   "definition": "Earnings index, elementary grad=100, LFS Oct wage workers 19-65",
+   "source_url": "https://pre.econ.upd.edu.ph/index.php/pre/article/download/574/761",
+   "reliability": "high"
+  },
+  {
+   "series": "earnings_index_secondary_grad_elem100",
+   "year": 1995,
+   "value": 134.6,
+   "unit": "index",
+   "definition": "same",
+   "source_url": "https://pre.econ.upd.edu.ph/index.php/pre/article/download/574/761",
+   "reliability": "high"
+  },
+  {
+   "series": "loggap_college_vs_secondary_derived",
+   "year": 1995,
+   "value": 0.759,
+   "unit": "log points",
+   "definition": "ln(college index/secondary index) derived from Gerochi Table 6",
+   "source_url": "https://pre.econ.upd.edu.ph/index.php/pre/article/download/574/761",
+   "reliability": "medium (derived)"
+  },
+  {
+   "series": "loggap_secondary_vs_elementary_derived",
+   "year": 1995,
+   "value": 0.297,
+   "unit": "log points",
+   "definition": "ln(secondary index/100) derived",
+   "source_url": "https://pre.econ.upd.edu.ph/index.php/pre/article/download/574/761",
+   "reliability": "medium (derived)"
+  },
+  {
+   "series": "private_IRR_elem_vs_none_FAPE",
+   "year": 1988,
+   "value": 13.9,
+   "unit": "%",
+   "definition": "IRR, complete cycle, both sexes, FAPE direct costs",
+   "source_url": "https://pre.econ.upd.edu.ph/index.php/pre/article/download/574/761",
+   "reliability": "high"
+  },
+  {
+   "series": "private_IRR_secondary_vs_elem_FAPE",
+   "year": 1988,
+   "value": 13.2,
+   "unit": "%",
+   "definition": "same",
+   "source_url": "https://pre.econ.upd.edu.ph/index.php/pre/article/download/574/761",
+   "reliability": "high"
+  },
+  {
+   "series": "private_IRR_college_vs_secondary_FAPE",
+   "year": 1988,
+   "value": 11.8,
+   "unit": "%",
+   "definition": "same",
+   "source_url": "https://pre.econ.upd.edu.ph/index.php/pre/article/download/574/761",
+   "reliability": "high"
+  },
+  {
+   "series": "private_IRR_elem_vs_none_FAPE",
+   "year": 1990,
+   "value": 16.9,
+   "unit": "%",
+   "definition": "IRR, complete cycle, both sexes, FAPE direct costs",
+   "source_url": "https://pre.econ.upd.edu.ph/index.php/pre/article/download/574/761",
+   "reliability": "high"
+  },
+  {
+   "series": "private_IRR_secondary_vs_elem_FAPE",
+   "year": 1990,
+   "value": 12.5,
+   "unit": "%",
+   "definition": "same",
+   "source_url": "https://pre.econ.upd.edu.ph/index.php/pre/article/download/574/761",
+   "reliability": "high"
+  },
+  {
+   "series": "private_IRR_college_vs_secondary_FAPE",
+   "year": 1990,
+   "value": 12.8,
+   "unit": "%",
+   "definition": "same",
+   "source_url": "https://pre.econ.upd.edu.ph/index.php/pre/article/download/574/761",
+   "reliability": "high"
+  },
+  {
+   "series": "private_IRR_elem_vs_none_FAPE",
+   "year": 1995,
+   "value": 17.1,
+   "unit": "%",
+   "definition": "IRR, complete cycle, both sexes, FAPE direct costs",
+   "source_url": "https://pre.econ.upd.edu.ph/index.php/pre/article/download/574/761",
+   "reliability": "high"
+  },
+  {
+   "series": "private_IRR_secondary_vs_elem_FAPE",
+   "year": 1995,
+   "value": 12.8,
+   "unit": "%",
+   "definition": "same",
+   "source_url": "https://pre.econ.upd.edu.ph/index.php/pre/article/download/574/761",
+   "reliability": "high"
+  },
+  {
+   "series": "private_IRR_college_vs_secondary_FAPE",
+   "year": 1995,
+   "value": 14.0,
+   "unit": "%",
+   "definition": "same",
+   "source_url": "https://pre.econ.upd.edu.ph/index.php/pre/article/download/574/761",
+   "reliability": "high"
+  },
+  {
+   "series": "mincer_coef_ln_earnings_OLS_both",
+   "year": 1988,
+   "value": 13.81,
+   "unit": "% per year schooling",
+   "definition": "OLS schooling coefficient, ln earnings, All, as printed",
+   "source_url": "https://pre.econ.upd.edu.ph/index.php/pre/article/download/574/761",
+   "reliability": "medium (looks high; table garbled)"
+  },
+  {
+   "series": "mincer_coef_ln_earnings_OLS_both",
+   "year": 1990,
+   "value": 14.24,
+   "unit": "% per year schooling",
+   "definition": "OLS schooling coefficient, ln earnings, All, as printed",
+   "source_url": "https://pre.econ.upd.edu.ph/index.php/pre/article/download/574/761",
+   "reliability": "medium (looks high; table garbled)"
+  },
+  {
+   "series": "mincer_coef_ln_earnings_OLS_both",
+   "year": 1995,
+   "value": 14.01,
+   "unit": "% per year schooling",
+   "definition": "OLS schooling coefficient, ln earnings, All, as printed",
+   "source_url": "https://pre.econ.upd.edu.ph/index.php/pre/article/download/574/761",
+   "reliability": "medium (looks high; table garbled)"
+  },
+  {
+   "series": "mincer_coef_cited_in_gerochi",
+   "year": 1982,
+   "value": 8.0,
+   "unit": "%",
+   "definition": "Schooling coefficient from other studies cited in Gerochi Table 4 (1998 = Schady, male only)",
+   "source_url": "https://pre.econ.upd.edu.ph/index.php/pre/article/download/574/761",
+   "reliability": "medium (secondary citation)"
+  },
+  {
+   "series": "mincer_coef_cited_in_gerochi",
+   "year": 1985,
+   "value": 8.1,
+   "unit": "%",
+   "definition": "Schooling coefficient from other studies cited in Gerochi Table 4 (1998 = Schady, male only)",
+   "source_url": "https://pre.econ.upd.edu.ph/index.php/pre/article/download/574/761",
+   "reliability": "medium (secondary citation)"
+  },
+  {
+   "series": "mincer_coef_cited_in_gerochi",
+   "year": 1988,
+   "value": 8.0,
+   "unit": "%",
+   "definition": "Schooling coefficient from other studies cited in Gerochi Table 4 (1998 = Schady, male only)",
+   "source_url": "https://pre.econ.upd.edu.ph/index.php/pre/article/download/574/761",
+   "reliability": "medium (secondary citation)"
+  },
+  {
+   "series": "mincer_coef_cited_in_gerochi",
+   "year": 1994,
+   "value": 7.3,
+   "unit": "%",
+   "definition": "Schooling coefficient from other studies cited in Gerochi Table 4 (1998 = Schady, male only)",
+   "source_url": "https://pre.econ.upd.edu.ph/index.php/pre/article/download/574/761",
+   "reliability": "medium (secondary citation)"
+  },
+  {
+   "series": "mincer_coef_cited_in_gerochi",
+   "year": 1998,
+   "value": 12.6,
+   "unit": "%",
+   "definition": "Schooling coefficient from other studies cited in Gerochi Table 4 (1998 = Schady, male only)",
+   "source_url": "https://pre.econ.upd.edu.ph/index.php/pre/article/download/574/761",
+   "reliability": "medium (secondary citation)"
+  },
+  {
+   "series": "mincer_coef_philippines",
+   "year": 2000,
+   "value": 12.6,
+   "unit": "% per year",
+   "definition": "Basic Mincer private return, Kaboski (2003), via Psacharopoulos & Patrinos 2018 annex",
+   "source_url": "https://openknowledge.worldbank.org/server/api/core/bitstreams/270b9d54-6dcb-571d-b449-9b4143738dd3/content",
+   "reliability": "medium"
+  },
+  {
+   "series": "loggap_college_vs_HS_WB11163",
+   "year": 2013,
+   "value": 0.88,
+   "unit": "log points",
+   "definition": "Composition-adjusted mean log weekly wage gap college vs HS, LFS wage workers (peak)",
+   "source_url": "https://openknowledge.worldbank.org/server/api/core/bitstreams/e8465aa0-d45d-49bf-9cff-db624f4bc034/content",
+   "reliability": "high"
+  },
+  {
+   "series": "loggap_college_vs_HS_WB11163",
+   "year": 2024,
+   "value": 0.59,
+   "unit": "log points",
+   "definition": "same (about 80% higher wages)",
+   "source_url": "https://openknowledge.worldbank.org/server/api/core/bitstreams/e8465aa0-d45d-49bf-9cff-db624f4bc034/content",
+   "reliability": "high"
+  },
+  {
+   "series": "loggap_somecollege_vs_HS_WB11163",
+   "year": 2024,
+   "value": 0.53,
+   "unit": "stated as % higher",
+   "definition": "some college vs HS",
+   "source_url": "https://openknowledge.worldbank.org/server/api/core/bitstreams/e8465aa0-d45d-49bf-9cff-db624f4bc034/content",
+   "reliability": "medium (unit ambiguous in text)"
+  },
+  {
+   "series": "RIF_coef_college_and_above_Q10",
+   "year": "2002-2011",
+   "value": 0.24,
+   "unit": "log points",
+   "definition": "RIF quantile regression coefficient, base HS grad, Table 2A, LFS",
+   "source_url": "https://openknowledge.worldbank.org/server/api/core/bitstreams/e8465aa0-d45d-49bf-9cff-db624f4bc034/content",
+   "reliability": "high"
+  },
+  {
+   "series": "RIF_coef_college_and_above_Q50",
+   "year": "2002-2011",
+   "value": 0.525,
+   "unit": "log points",
+   "definition": "RIF quantile regression coefficient, base HS grad, Table 2A, LFS",
+   "source_url": "https://openknowledge.worldbank.org/server/api/core/bitstreams/e8465aa0-d45d-49bf-9cff-db624f4bc034/content",
+   "reliability": "high"
+  },
+  {
+   "series": "RIF_coef_college_and_above_Q90",
+   "year": "2002-2011",
+   "value": 0.763,
+   "unit": "log points",
+   "definition": "RIF quantile regression coefficient, base HS grad, Table 2A, LFS",
+   "source_url": "https://openknowledge.worldbank.org/server/api/core/bitstreams/e8465aa0-d45d-49bf-9cff-db624f4bc034/content",
+   "reliability": "high"
+  },
+  {
+   "series": "RIF_coef_college_and_above_Q10",
+   "year": "2012-2016",
+   "value": 0.323,
+   "unit": "log points",
+   "definition": "RIF quantile regression coefficient, base HS grad, Table 2A, LFS",
+   "source_url": "https://openknowledge.worldbank.org/server/api/core/bitstreams/e8465aa0-d45d-49bf-9cff-db624f4bc034/content",
+   "reliability": "high"
+  },
+  {
+   "series": "RIF_coef_college_and_above_Q50",
+   "year": "2012-2016",
+   "value": 0.478,
+   "unit": "log points",
+   "definition": "RIF quantile regression coefficient, base HS grad, Table 2A, LFS",
+   "source_url": "https://openknowledge.worldbank.org/server/api/core/bitstreams/e8465aa0-d45d-49bf-9cff-db624f4bc034/content",
+   "reliability": "high"
+  },
+  {
+   "series": "RIF_coef_college_and_above_Q90",
+   "year": "2012-2016",
+   "value": 0.877,
+   "unit": "log points",
+   "definition": "RIF quantile regression coefficient, base HS grad, Table 2A, LFS",
+   "source_url": "https://openknowledge.worldbank.org/server/api/core/bitstreams/e8465aa0-d45d-49bf-9cff-db624f4bc034/content",
+   "reliability": "high"
+  },
+  {
+   "series": "RIF_coef_college_and_above_Q10",
+   "year": "2017-2024",
+   "value": 0.365,
+   "unit": "log points",
+   "definition": "RIF quantile regression coefficient, base HS grad, Table 2A, LFS",
+   "source_url": "https://openknowledge.worldbank.org/server/api/core/bitstreams/e8465aa0-d45d-49bf-9cff-db624f4bc034/content",
+   "reliability": "high"
+  },
+  {
+   "series": "RIF_coef_college_and_above_Q50",
+   "year": "2017-2024",
+   "value": 0.297,
+   "unit": "log points",
+   "definition": "RIF quantile regression coefficient, base HS grad, Table 2A, LFS",
+   "source_url": "https://openknowledge.worldbank.org/server/api/core/bitstreams/e8465aa0-d45d-49bf-9cff-db624f4bc034/content",
+   "reliability": "high"
+  },
+  {
+   "series": "RIF_coef_college_and_above_Q90",
+   "year": "2017-2024",
+   "value": 0.659,
+   "unit": "log points",
+   "definition": "RIF quantile regression coefficient, base HS grad, Table 2A, LFS",
+   "source_url": "https://openknowledge.worldbank.org/server/api/core/bitstreams/e8465aa0-d45d-49bf-9cff-db624f4bc034/content",
+   "reliability": "high"
+  },
+  {
+   "series": "sauler_return_per_year_college",
+   "year": 2008,
+   "value": 20.66,
+   "unit": "%",
+   "definition": "Heckman-corrected 'private return per additional year' at level; LFS Oct",
+   "source_url": "https://www.dlsu.edu.ph/wp-content/uploads/pdf/conferences/research-congress-proceedings/2017/SEP/SEP-I-005.pdf",
+   "reliability": "low-medium; artefact-prone"
+  },
+  {
+   "series": "sauler_return_per_year_highschool",
+   "year": 2008,
+   "value": 5.705,
+   "unit": "%",
+   "definition": "same",
+   "source_url": "https://www.dlsu.edu.ph/wp-content/uploads/pdf/conferences/research-congress-proceedings/2017/SEP/SEP-I-005.pdf",
+   "reliability": "low-medium"
+  },
+  {
+   "series": "sauler_return_per_year_elementary",
+   "year": 2008,
+   "value": -3.243,
+   "unit": "%",
+   "definition": "same",
+   "source_url": "https://www.dlsu.edu.ph/wp-content/uploads/pdf/conferences/research-congress-proceedings/2017/SEP/SEP-I-005.pdf",
+   "reliability": "low-medium"
+  },
+  {
+   "series": "sauler_return_per_year_college",
+   "year": 2009,
+   "value": 21.17,
+   "unit": "%",
+   "definition": "Heckman-corrected 'private return per additional year' at level; LFS Oct",
+   "source_url": "https://www.dlsu.edu.ph/wp-content/uploads/pdf/conferences/research-congress-proceedings/2017/SEP/SEP-I-005.pdf",
+   "reliability": "low-medium; artefact-prone"
+  },
+  {
+   "series": "sauler_return_per_year_highschool",
+   "year": 2009,
+   "value": 6.205,
+   "unit": "%",
+   "definition": "same",
+   "source_url": "https://www.dlsu.edu.ph/wp-content/uploads/pdf/conferences/research-congress-proceedings/2017/SEP/SEP-I-005.pdf",
+   "reliability": "low-medium"
+  },
+  {
+   "series": "sauler_return_per_year_elementary",
+   "year": 2009,
+   "value": -3.746,
+   "unit": "%",
+   "definition": "same",
+   "source_url": "https://www.dlsu.edu.ph/wp-content/uploads/pdf/conferences/research-congress-proceedings/2017/SEP/SEP-I-005.pdf",
+   "reliability": "low-medium"
+  },
+  {
+   "series": "sauler_return_per_year_college",
+   "year": 2010,
+   "value": 22.21,
+   "unit": "%",
+   "definition": "Heckman-corrected 'private return per additional year' at level; LFS Oct",
+   "source_url": "https://www.dlsu.edu.ph/wp-content/uploads/pdf/conferences/research-congress-proceedings/2017/SEP/SEP-I-005.pdf",
+   "reliability": "low-medium; artefact-prone"
+  },
+  {
+   "series": "sauler_return_per_year_highschool",
+   "year": 2010,
+   "value": 5.377,
+   "unit": "%",
+   "definition": "same",
+   "source_url": "https://www.dlsu.edu.ph/wp-content/uploads/pdf/conferences/research-congress-proceedings/2017/SEP/SEP-I-005.pdf",
+   "reliability": "low-medium"
+  },
+  {
+   "series": "sauler_return_per_year_elementary",
+   "year": 2010,
+   "value": -3.506,
+   "unit": "%",
+   "definition": "same",
+   "source_url": "https://www.dlsu.edu.ph/wp-content/uploads/pdf/conferences/research-congress-proceedings/2017/SEP/SEP-I-005.pdf",
+   "reliability": "low-medium"
+  },
+  {
+   "series": "sauler_return_per_year_college",
+   "year": 2011,
+   "value": 22.98,
+   "unit": "%",
+   "definition": "Heckman-corrected 'private return per additional year' at level; LFS Oct",
+   "source_url": "https://www.dlsu.edu.ph/wp-content/uploads/pdf/conferences/research-congress-proceedings/2017/SEP/SEP-I-005.pdf",
+   "reliability": "low-medium; artefact-prone"
+  },
+  {
+   "series": "sauler_return_per_year_highschool",
+   "year": 2011,
+   "value": 5.307,
+   "unit": "%",
+   "definition": "same",
+   "source_url": "https://www.dlsu.edu.ph/wp-content/uploads/pdf/conferences/research-congress-proceedings/2017/SEP/SEP-I-005.pdf",
+   "reliability": "low-medium"
+  },
+  {
+   "series": "sauler_return_per_year_elementary",
+   "year": 2011,
+   "value": -3.298,
+   "unit": "%",
+   "definition": "same",
+   "source_url": "https://www.dlsu.edu.ph/wp-content/uploads/pdf/conferences/research-congress-proceedings/2017/SEP/SEP-I-005.pdf",
+   "reliability": "low-medium"
+  },
+  {
+   "series": "sauler_return_per_year_college",
+   "year": 2012,
+   "value": 21.8,
+   "unit": "%",
+   "definition": "Heckman-corrected 'private return per additional year' at level; LFS Oct",
+   "source_url": "https://www.dlsu.edu.ph/wp-content/uploads/pdf/conferences/research-congress-proceedings/2017/SEP/SEP-I-005.pdf",
+   "reliability": "low-medium; artefact-prone"
+  },
+  {
+   "series": "sauler_return_per_year_highschool",
+   "year": 2012,
+   "value": 7.24,
+   "unit": "%",
+   "definition": "same",
+   "source_url": "https://www.dlsu.edu.ph/wp-content/uploads/pdf/conferences/research-congress-proceedings/2017/SEP/SEP-I-005.pdf",
+   "reliability": "low-medium"
+  },
+  {
+   "series": "sauler_return_per_year_elementary",
+   "year": 2012,
+   "value": -2.443,
+   "unit": "%",
+   "definition": "same",
+   "source_url": "https://www.dlsu.edu.ph/wp-content/uploads/pdf/conferences/research-congress-proceedings/2017/SEP/SEP-I-005.pdf",
+   "reliability": "low-medium"
+  },
+  {
+   "series": "QR_median_college_vs_no_grade",
+   "year": 2008,
+   "value": 0.8853,
+   "unit": "log daily wage",
+   "definition": "Quantile regression median coefficient vs no grade completed",
+   "source_url": "https://www.dlsu.edu.ph/wp-content/uploads/pdf/conferences/research-congress-proceedings/2017/SEP/SEP-I-005.pdf",
+   "reliability": "medium"
+  },
+  {
+   "series": "QR_median_college_vs_no_grade",
+   "year": 2009,
+   "value": 0.8897,
+   "unit": "log daily wage",
+   "definition": "Quantile regression median coefficient vs no grade completed",
+   "source_url": "https://www.dlsu.edu.ph/wp-content/uploads/pdf/conferences/research-congress-proceedings/2017/SEP/SEP-I-005.pdf",
+   "reliability": "medium"
+  },
+  {
+   "series": "QR_median_college_vs_no_grade",
+   "year": 2010,
+   "value": 0.9043,
+   "unit": "log daily wage",
+   "definition": "Quantile regression median coefficient vs no grade completed",
+   "source_url": "https://www.dlsu.edu.ph/wp-content/uploads/pdf/conferences/research-congress-proceedings/2017/SEP/SEP-I-005.pdf",
+   "reliability": "medium"
+  },
+  {
+   "series": "QR_median_college_vs_no_grade",
+   "year": 2011,
+   "value": 0.9613,
+   "unit": "log daily wage",
+   "definition": "Quantile regression median coefficient vs no grade completed",
+   "source_url": "https://www.dlsu.edu.ph/wp-content/uploads/pdf/conferences/research-congress-proceedings/2017/SEP/SEP-I-005.pdf",
+   "reliability": "medium"
+  },
+  {
+   "series": "QR_median_college_vs_no_grade",
+   "year": 2012,
+   "value": 1.012,
+   "unit": "log daily wage",
+   "definition": "Quantile regression median coefficient vs no grade completed",
+   "source_url": "https://www.dlsu.edu.ph/wp-content/uploads/pdf/conferences/research-congress-proceedings/2017/SEP/SEP-I-005.pdf",
+   "reliability": "medium"
+  },
+  {
+   "series": "returns_college_PIDS",
+   "year": 2010,
+   "value": 141.4,
+   "unit": "%",
+   "definition": "'returns for college graduates' (PIDS PN 2024-09, definition not verified)",
+   "source_url": "https://dailyguardian.com.ph/?p=365083",
+   "reliability": "medium (press report)"
+  },
+  {
+   "series": "returns_college_PIDS",
+   "year": 2022,
+   "value": 93.7,
+   "unit": "%",
+   "definition": "same",
+   "source_url": "https://dailyguardian.com.ph/?p=365083",
+   "reliability": "medium (press report)"
+  },
+  {
+   "series": "change_returns_college_PIDS",
+   "year": "2005-2022",
+   "value": -33.7,
+   "unit": "percentage points",
+   "definition": "full sample",
+   "source_url": "https://dailyguardian.com.ph/?p=365083",
+   "reliability": "medium"
+  },
+  {
+   "series": "change_returns_college_PIDS_age25_34",
+   "year": "2005-2022",
+   "value": -30.8,
+   "unit": "percentage points",
+   "definition": "",
+   "source_url": "https://dailyguardian.com.ph/?p=365083",
+   "reliability": "medium"
+  },
+  {
+   "series": "change_returns_college_PIDS",
+   "year": "2001-2010",
+   "value": 46,
+   "unit": "percentage points",
+   "definition": "",
+   "source_url": "https://dailyguardian.com.ph/?p=365083",
+   "reliability": "medium"
+  },
+  {
+   "series": "change_returns_college_Yee2023",
+   "year": "2005-2019",
+   "value": -36,
+   "unit": "percentage points",
+   "definition": "relative to no completed grade; low-wage college -69pp",
+   "source_url": "https://archium.ateneo.edu/gbseald-edu-lead-faculty-pubs/3",
+   "reliability": "high"
+  },
+  {
+   "series": "SHS_wage_premium_vs_JHS",
+   "year": 2023,
+   "value": 18.6,
+   "unit": "%",
+   "definition": "workers aged 19-22, natural experiment cohorts",
+   "source_url": "https://pidswebs.pids.gov.ph/CDN/document/pidspn2315.pdf",
+   "reliability": "high"
+  },
+  {
+   "series": "share_college_in_wage_employment_hours",
+   "year": 2002,
+   "value": 21,
+   "unit": "%",
+   "definition": "college degree or higher, WB11163",
+   "source_url": "https://openknowledge.worldbank.org/server/api/core/bitstreams/e8465aa0-d45d-49bf-9cff-db624f4bc034/content",
+   "reliability": "high"
+  },
+  {
+   "series": "share_college_in_wage_employment_hours",
+   "year": 2024,
+   "value": 27,
+   "unit": "%",
+   "definition": "same",
+   "source_url": "https://openknowledge.worldbank.org/server/api/core/bitstreams/e8465aa0-d45d-49bf-9cff-db624f4bc034/content",
+   "reliability": "high"
+  },
+  {
+   "series": "share_lt_HS_in_wage_employment_hours",
+   "year": 2002,
+   "value": 38,
+   "unit": "%",
+   "definition": "",
+   "source_url": "https://openknowledge.worldbank.org/server/api/core/bitstreams/e8465aa0-d45d-49bf-9cff-db624f4bc034/content",
+   "reliability": "high"
+  },
+  {
+   "series": "share_lt_HS_in_wage_employment_hours",
+   "year": 2024,
+   "value": 26,
+   "unit": "%",
+   "definition": "",
+   "source_url": "https://openknowledge.worldbank.org/server/api/core/bitstreams/e8465aa0-d45d-49bf-9cff-db624f4bc034/content",
+   "reliability": "high"
+  },
+  {
+   "series": "share_some_college_plus_age25plus",
+   "year": "late 1980s",
+   "value": 20,
+   "unit": "%",
+   "definition": "approx",
+   "source_url": "https://openknowledge.worldbank.org/server/api/core/bitstreams/e8465aa0-d45d-49bf-9cff-db624f4bc034/content",
+   "reliability": "medium"
+  },
+  {
+   "series": "share_some_college_plus_age25plus",
+   "year": 2024,
+   "value": 30,
+   "unit": "%",
+   "definition": "approx",
+   "source_url": "https://openknowledge.worldbank.org/server/api/core/bitstreams/e8465aa0-d45d-49bf-9cff-db624f4bc034/content",
+   "reliability": "medium"
+  },
+  {
+   "series": "unemp_rate_college_grads_25_34",
+   "year": 2024,
+   "value": 6.7,
+   "unit": "%",
+   "definition": "vs 4.4% for lower-educated peers",
+   "source_url": "https://openknowledge.worldbank.org/server/api/core/bitstreams/e8465aa0-d45d-49bf-9cff-db624f4bc034/content",
+   "reliability": "high"
+  },
+  {
+   "series": "unemp_rate_lower_educ_25_34",
+   "year": 2024,
+   "value": 4.4,
+   "unit": "%",
+   "definition": "",
+   "source_url": "https://openknowledge.worldbank.org/server/api/core/bitstreams/e8465aa0-d45d-49bf-9cff-db624f4bc034/content",
+   "reliability": "high"
+  },
+  {
+   "series": "share_of_unemployed_college_grads",
+   "year": "2020-01",
+   "value": 26.9,
+   "unit": "% of jobless",
+   "definition": "PSA LFS via Habito",
+   "source_url": "https://opinion.inquirer.net/?p=180729",
+   "reliability": "medium"
+  },
+  {
+   "series": "share_of_unemployed_college_grads",
+   "year": "late 2024",
+   "value": 35.6,
+   "unit": "% of jobless",
+   "definition": "PSA LFS via Habito",
+   "source_url": "https://opinion.inquirer.net/?p=180729",
+   "reliability": "medium"
+  },
+  {
+   "series": "share_of_unemployed_any_college",
+   "year": "2020-01",
+   "value": 36.9,
+   "unit": "% of jobless",
+   "definition": "",
+   "source_url": "https://opinion.inquirer.net/?p=180729",
+   "reliability": "medium"
+  },
+  {
+   "series": "share_of_unemployed_any_college",
+   "year": "late 2024",
+   "value": 44.1,
+   "unit": "% of jobless",
+   "definition": "",
+   "source_url": "https://opinion.inquirer.net/?p=180729",
+   "reliability": "medium"
+  },
+  {
+   "series": "CSC_QS",
+   "year": "1993-10-28",
+   "value": "2 years college (first level assistant); bachelor's (second-level confidential)",
+   "unit": "text",
+   "definition": "CSC MC 46 s.1993",
+   "source_url": "https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/10/54639",
+   "reliability": "high"
+  }
+ ],
+ "not_found": [
+  "Schady numeric premia",
+  "Montenegro-Patrinos PHL values",
+  "P&P 1994/2004 PHL entries",
+  "annual college/HS premium series 2002-2024 (only in figures)",
+  "PSA LFS employed by education annual table",
+  "underemployment by education",
+  "CSC date bachelor's first required",
+  "job-posting education requirement trends",
+  "OFW credential requirements"
+ ]
+}

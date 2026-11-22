@@ -1,0 +1,41 @@
+{
+ "params": {
+  "eta": 1.1823534060708695e-11,
+  "kappa": 18.99059961850639,
+  "a_prim": 7.498646405926016,
+  "a_sec": 5.218591735928163,
+  "a_sec_entry": 6.725082850315316,
+  "a_ter": 15.999939686895335,
+  "a_ter_entry": 8.596169850809183,
+  "late": 0.15,
+  "rep_prim": 0.04,
+  "rep_sec": 0.02,
+  "mu_basic": -6.150628117077838,
+  "mu_ter": -0.269489716318288,
+  "nu": 7.5233896110935445,
+  "k_ter": 0.05095993917787121,
+  "k_growth": 0.03,
+  "k_resp": 0.1
+ },
+ "fitted": [
+  "eta",
+  "kappa",
+  "a_prim",
+  "a_sec",
+  "a_sec_entry",
+  "a_ter",
+  "a_ter_entry",
+  "mu_basic",
+  "mu_ter",
+  "nu",
+  "k_ter"
+ ],
+ "cost": 27.704044552642824,
+ "nfev": 87,
+ "success": true,
+ "supply_rule": "fiscal",
+ "demand_form": "trend",
+ "switches": {},
+ "burden_form": "log",
+ "seconds": 205.31455373764038
+}

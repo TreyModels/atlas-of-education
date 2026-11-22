@@ -1,0 +1,912 @@
+{
+ "_meta": {
+  "country": "PHL",
+  "compiled": "2026-11-22",
+  "note": "World Bank values copied verbatim from API via WebFetch extraction (one URL per indicator). Everything else sourced inline. Null/missing years omitted. Compiled by a data-collection agent; no values invented; not found items listed in 'not_found'."
+ },
+ "worldbank": {
+  "_source": "World Bank WDI via https://api.worldbank.org/v2/country/PHL/indicator/<CODE>?format=json&per_page=100 (fetched 2026-11-22)",
+  "SE.XPD.TOTL.GD.ZS": {
+   "2025": 3.96922646675346,
+   "2024": 3.92501087473821,
+   "2023": 3.6236863467978,
+   "2022": 3.57960089528426,
+   "2021": 3.87249754784633,
+   "2020": 3.85829051308063,
+   "2019": 3.40748649142134,
+   "2018": 3.85502760745456,
+   "2017": 3.96384087403915,
+   "2016": 3.30128109042443,
+   "2015": 2.83052303785203,
+   "2014": 2.66454238129968,
+   "2009": 2.53777003288269,
+   "2008": 2.58282995223999,
+   "2007": 2.48518991470337,
+   "2006": 2.42579007148743,
+   "2005": 2.32806992530823,
+   "2004": 2.46983003616333,
+   "2003": 2.93517994880676,
+   "2002": 2.89222002029419,
+   "2001": 2.92463994026184,
+   "2000": 3.16440010070801,
+   "1998": 3.69745993614197,
+   "1997": 3.07755994796753,
+   "1996": 2.94357991218567,
+   "1995": 2.66400003433227,
+   "1986": 1.51701998710632,
+   "1983": 1.483029961586,
+   "1982": 1.82588994503021,
+   "1980": 1.51271998882294
+  },
+  "SE.XPD.TOTL.GB.ZS": {
+   "2025": 15.1952376979373,
+   "2024": 16.5494857826479,
+   "2023": 16.7279840736522,
+   "2022": 15.6964005295008,
+   "2021": 16.6816593430981,
+   "2020": 16.8932648780488,
+   "2019": 18.1630919978121,
+   "2018": 18.6920129280595,
+   "2017": 19.5904269552239,
+   "2016": 16.6420963421947,
+   "2015": 15.1455329623945,
+   "2014": 15.5159407407407,
+   "2009": 13.2111597061157,
+   "2008": 14.4419898986816,
+   "2007": 13.6670198440552,
+   "2006": 13.2685298919678,
+   "2005": 12.4223604202271,
+   "2004": 12.7508497238159,
+   "2003": 14.380220413208,
+   "2002": 14.0689296722412,
+   "2001": 13.9159097671509,
+   "2000": 15.2067604064941,
+   "1998": 18.1809902191162,
+   "1997": 15.170129776001,
+   "1996": 17.5665702819824,
+   "1995": 15.2429800033569,
+   "1986": 0.0,
+   "1983": 0.0,
+   "1982": 0.0
+  },
+  "SE.XPD.PRIM.PC.ZS": {
+   "2008": 9.0567,
+   "2007": 8.73217,
+   "2005": 8.37287,
+   "2004": 9.0319,
+   "2003": 11.47354,
+   "2002": 10.81386,
+   "2001": 11.36434,
+   "2000": 12.0753,
+   "1997": 12.48937
+  },
+  "SE.XPD.SECO.PC.ZS": {
+   "2008": 9.19364,
+   "2007": 8.8309,
+   "2005": 8.90511,
+   "2004": 8.84724,
+   "2003": 9.83623,
+   "2002": 8.92556,
+   "2001": 9.08819,
+   "2000": 10.31704,
+   "1997": 10.66986
+  },
+  "SE.XPD.TERT.PC.ZS": {
+   "2009": 10.56665,
+   "2008": 9.71651,
+   "2007": 9.28273,
+   "2005": 11.19786,
+   "2004": 12.17696,
+   "2003": 13.7761,
+   "2002": 14.11128,
+   "2001": 13.42389,
+   "2000": 14.47821,
+   "1997": 18.4768
+  },
+  "SE.COM.DURS": {
+   "1998": 10,
+   "1999": 10,
+   "2000": 10,
+   "2001": 10,
+   "2002": 10,
+   "2003": 10,
+   "2004": 10,
+   "2005": 10,
+   "2006": 10,
+   "2007": 10,
+   "2008": 10,
+   "2009": 10,
+   "2010": 10,
+   "2011": 10,
+   "2012": 11,
+   "2013": 11,
+   "2014": 11,
+   "2015": 11,
+   "2016": 11,
+   "2017": 11,
+   "2018": 13,
+   "2019": 13,
+   "2020": 13,
+   "2021": 13,
+   "2022": 13,
+   "2023": 13,
+   "2024": 13,
+   "2025": 13
+  },
+  "SE.PRM.TCHR": {
+   "2024": 527504,
+   "2023": 534351,
+   "2022": 523741,
+   "2021": 527228,
+   "2020": 524646,
+   "2019": 514231,
+   "2018": 495636,
+   "2017": 482743,
+   "2016": 493084,
+   "2015": 470194,
+   "2014": 467270,
+   "2013": 457884,
+   "2012": 442652,
+   "2011": 440084,
+   "2010": 423035,
+   "2009": 435385,
+   "2008": 397468,
+   "2007": 390432,
+   "2006": 375978,
+   "2005": 373035,
+   "2004": 376988,
+   "2003": 371384,
+   "2002": 362431,
+   "2001": 362427,
+   "2000": 359798,
+   "1999": 360357,
+   "1998": 354568,
+   "1997": 341183,
+   "1996": 334822,
+   "1995": 323414,
+   "1994": 320634,
+   "1993": 317012,
+   "1992": 314722,
+   "1991": 317023,
+   "1990": 314838,
+   "1989": 302195,
+   "1988": 301530,
+   "1987": 292602,
+   "1986": 289251,
+   "1985": 286246,
+   "1984": 281456,
+   "1983": 272134,
+   "1982": 273492,
+   "1981": 264241,
+   "1980": 252338,
+   "1978": 256370,
+   "1977": 252862,
+   "1976": 261817,
+   "1975": 259833,
+   "1974": 256906,
+   "1973": 250783,
+   "1972": 247106,
+   "1971": 243833
+  },
+  "SE.SEC.TCHR": {
+   "2024": 495843,
+   "2023": 486422,
+   "2022": 477598,
+   "2021": 480061.867613277,
+   "2020": 474605,
+   "2019": 450760.857621,
+   "2018": 421823.857621,
+   "2017": 377174,
+   "2016": 314482,
+   "2015": 279052,
+   "2014": 267515,
+   "2009": 194373,
+   "2007": 181193,
+   "2006": 169075,
+   "2005": 167749,
+   "2004": 168058,
+   "2003": 163646,
+   "2002": 151750,
+   "2001": 148033,
+   "1999": 150212,
+   "1998": 149450,
+   "1997": 154705,
+   "1995": 131831,
+   "1994": 134898,
+   "1992": 129700,
+   "1991": 121887,
+   "1990": 118805,
+   "1989": 111734,
+   "1988": 102611,
+   "1987": 101082,
+   "1986": 99468,
+   "1985": 103493,
+   "1984": 91602,
+   "1983": 90266,
+   "1982": 85465,
+   "1981": 85779,
+   "1978": 80192,
+   "1976": 72778,
+   "1975": 70947,
+   "1974": 69167,
+   "1973": 64303,
+   "1972": 59473,
+   "1971": 51979
+  },
+  "_notes": {
+   "SE.XPD.TOTL.GB.ZS": "1982, 1983, 1986 values are 0 in the API: almost certainly missing-data artefacts, not true zeros; do not use.",
+   "SE.XPD.TOTL.GD.ZS": "Government expenditure on education, % of GDP. Compare PIDS/World Bank basic-education-only figures (2.2-3.6% 2010-2019) which differ in coverage.",
+   "SE.COM.DURS": "Compulsory education duration, years (WB/UIS). 10 through 2011; 11 in 2012-2017 (kindergarten compulsory from RA 10157, +6 elementary +4 JHS); 13 from 2018 (+2 SHS). Year of step (2018) reflects UIS coding lag vs law (SHS Grade 11 began SY2016-17).",
+   "SE.PRM.TCHR": "Primary school teachers, headcount. 2013-2017 and secondary series show breaks around the 2016-2018 SHS transition (SE.SEC.TCHR rises 267,515 (2014) -> 421,824 (2018) as SHS teachers added).",
+   "SE.XPD.PRIM.PC.ZS": "% of government education expenditure going to primary. Last obs 2008. SE.XPD.SECO.PC.ZS last 2008; SE.XPD.TERT.PC.ZS last 2009."
+  }
+ },
+ "plan_targets": [
+  {
+   "plan": "Philippine Development Plan 2017-2022, Ch.10 Accelerating Human Capital Development (results matrix)",
+   "url": "https://depdev.gov.ph/wp-content/uploads/2019/05/10-Chapter-10-Accelerating-Human-Capital-Development-1.14.2019.pdf",
+   "target_year": 2022,
+   "items": [
+    {
+     "level": "Kindergarten",
+     "indicator": "net enrolment rate",
+     "baseline_2015": 74.65,
+     "target": 95.0
+    },
+    {
+     "level": "Elementary",
+     "indicator": "net enrolment rate",
+     "baseline_2015": 91.05,
+     "target": 95.0
+    },
+    {
+     "level": "Junior high",
+     "indicator": "net enrolment rate",
+     "baseline_2015": 68.15,
+     "target": 75.44
+    },
+    {
+     "level": "Senior high",
+     "indicator": "net enrolment rate",
+     "baseline": "TBD",
+     "target": "TBD"
+    },
+    {
+     "level": "Elementary",
+     "indicator": "completion rate",
+     "baseline_2015": 83.43,
+     "target": 90.0
+    },
+    {
+     "level": "Junior high",
+     "indicator": "completion rate",
+     "baseline_2015": 73.97,
+     "target": 78.48
+    },
+    {
+     "level": "Senior high",
+     "indicator": "completion rate",
+     "baseline": "TBD",
+     "target": "TBD"
+    },
+    {
+     "level": "All",
+     "indicator": "mean years of schooling",
+     "baseline_2014": 8.9,
+     "target": 11.3
+    },
+    {
+     "level": "Higher ed",
+     "indicator": "students awarded scholarships/grants, %",
+     "baseline_2015": 5,
+     "target": 10
+    },
+    {
+     "level": "Higher ed",
+     "indicator": "tertiary graduates in science/engineering/manufacturing/construction, %",
+     "baseline_2015": 26,
+     "target": 40
+    },
+    {
+     "level": "Youth",
+     "indicator": "NEET %",
+     "baseline_2015": 22.7,
+     "target": "15-18"
+    },
+    {
+     "level": "Youth",
+     "indicator": "school-to-work transition, college grads (years)",
+     "baseline_2008": 2,
+     "target": "0.5-0.75"
+    },
+    {
+     "level": "Financial aid",
+     "indicator": "PESFA grantees per year 2019-2022",
+     "target": 25000
+    }
+   ],
+   "reliability": "Extracted by WebFetch summariser from PDF; two unlabeled rows (probably survival/dropout) omitted. No explicit tertiary participation/enrolment target found."
+  },
+  {
+   "plan": "Philippine EFA 2015 National Plan of Action (SDC-CL Resolution No. 2 s.2006, approved 1 Feb 2006, signed 16 Feb 2006)",
+   "url": "https://rtei.okfn.org/documents/Philippine_Education_For_All_EFA_2015_National_Plan_of_Action.pdf",
+   "target_year": 2015,
+   "items": [
+    {
+     "level": "Elementary",
+     "indicator": "participation/completion",
+     "target": "universal (100%), no numeric interim targets in the document"
+    },
+    {
+     "level": "Elementary",
+     "indicator": "baseline SY2002-03 participation ages 6-11",
+     "value": 90.32
+    },
+    {
+     "level": "Elementary",
+     "indicator": "baseline per 1000 Grade 1 entrants: finish Grade 6 (any time)/graduate in 6 yrs",
+     "value": "249 finish in avg 9.6 yrs; 439 in 6 yrs; 312 leave before Gr6 (as reported)"
+    },
+    {
+     "level": "Secondary",
+     "indicator": "baseline per 1000 first-year entrants: leave before 4 yrs 389; graduate in 4 yrs 248"
+    }
+   ],
+   "reliability": "Moderate; summariser output, figures as extracted."
+  },
+  {
+   "plan": "DepEd policy brief 'K to 12: The Key to Quality' (Senate Economic Planning Office PB 2011-02)",
+   "url": "https://web.senate.gov.ph/publications/PB%202011-02%20-%20K%20to%2012%20The%20Key%20to%20Quality.pdf",
+   "target_year": 2015,
+   "items": [
+    {
+     "level": "Elementary",
+     "indicator": "commitment: 100% net enrolment by 2015 (EFA/MDG); brief judges unlikely",
+     "target": 100
+    },
+    {
+     "level": "Basic ed",
+     "indicator": "years of basic education",
+     "target": 12,
+     "rationale": "Philippines only country in Asia with 10-year cycle; Washington Accord (1989) requires 12 years for engineering recognition; Bologna Accord (1999); graduates under 18 too young to work"
+    }
+   ],
+   "baselines": {
+    "net_elementary_participation_2002": 90.1,
+    "net_elementary_participation_2010": 88.1,
+    "net_participation_2007_all": {
+     "elementary": 89.0,
+     "secondary": 65.1,
+     "tertiary": 21.6
+    },
+    "net_participation_2007_poor": {
+     "elementary": 85.9,
+     "secondary": 51.4,
+     "tertiary": 8.7
+    },
+    "classroom_shortage_SY2011_12": 152569,
+    "teacher_shortage_SY2011_12": 103599,
+    "DepEd_share_of_2011_national_budget_pct": 12.6,
+    "DepEd_budget_pct_GDP_2011": 2.7
+   },
+   "reliability": "Advocacy document; costs are DepEd preliminary estimates."
+  },
+  {
+   "plan": "Quality Basic Education Development Plan (QBEDP) 2025-2035",
+   "url": "https://planipolis.iiep.unesco.org/sites/default/files/ressources/Philippines_Quality-Basic-Education-Development-Plan-QBEDP-2025-to-2035-29-July-2025.pdf",
+   "target_year": "2028/2031/2034",
+   "items": [
+    {
+     "level": "Kinder",
+     "indicator": "NER",
+     "baseline_SY2023_24": 78,
+     "t2028": 96,
+     "t2031": 97,
+     "t2034": 98
+    },
+    {
+     "level": "Elementary",
+     "indicator": "NER",
+     "baseline_SY2023_24": 86,
+     "t2028": 89,
+     "t2031": 92,
+     "t2034": 97
+    },
+    {
+     "level": "JHS",
+     "indicator": "NER",
+     "baseline_SY2023_24": 78,
+     "t2028": 81,
+     "t2031": 83,
+     "t2034": 84
+    },
+    {
+     "level": "SHS",
+     "indicator": "NER",
+     "baseline_SY2023_24": 67,
+     "t2028": 69,
+     "t2031": 71,
+     "t2034": 71
+    },
+    {
+     "level": "Elementary",
+     "indicator": "completion",
+     "baseline_SY2023_24": 92,
+     "t2028": 96,
+     "t2031": 98,
+     "t2034": 100
+    },
+    {
+     "level": "JHS",
+     "indicator": "completion",
+     "baseline_SY2023_24": 82,
+     "t2028": 88,
+     "t2031": 94,
+     "t2034": 100
+    },
+    {
+     "level": "SHS",
+     "indicator": "completion",
+     "baseline_SY2023_24": 73,
+     "t2028": 84,
+     "t2031": 92,
+     "t2034": 100
+    }
+   ],
+   "reliability": "Extracted by summariser; plan document states no adoption date in extract."
+  }
+ ],
+ "laws_and_policies": [
+  {
+   "name": "Commonwealth Act 586 (Education Act of 1940)",
+   "date": "approved 6 Aug 1940",
+   "content": "Revision of system of public elementary education incl. financing; compulsory attendance ages/grades not found in extract",
+   "url": "https://ldr.senate.gov.ph/subject/education-act-of-1940"
+  },
+  {
+   "name": "RA 10157 Kindergarten Education Act",
+   "date": "20 Jan 2012 (per lawyerly.ph title 'REPUBLIC ACT NO. 10157, January 20, 2012')",
+   "content": "'kindergarten education shall be made mandatory and compulsory for entrance to Grade 1'",
+   "url": "https://lpr.adb.org/resource/kindergarten-education-act-republic-act-no-10157-philippines",
+   "second_url": "https://lawyerly.ph/laws/view/l9270"
+  },
+  {
+   "name": "RA 10533 Enhanced Basic Education Act of 2013",
+   "date": "approved 15 May 2013",
+   "content": "At least 1 year kindergarten + 6 years elementary + 6 years secondary (4 JHS + 2 SHS). Elementary and secondary described as stages of 'compulsory basic education'. Text does not say '12 years' literally. Declares quality education 'globally competitive'/'at par with international standards'.",
+   "url": "https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/2/55631"
+  },
+  {
+   "name": "RA 10931 Universal Access to Quality Tertiary Education Act (free tuition in SUCs/LUCs)",
+   "date": "signed 3 Aug 2017 (news dated 4 Aug 2017)",
+   "content": "Free tuition/fees in SUCs and LUCs; later effects: CHED chair reported enrolment 2.9M (2017) -> 4.1M (2022); shift from private to public",
+   "url": "https://www.philstar.com/headlines/2017/08/04/1725170/headlines",
+   "second_url": "https://www.abs-cbn.com/news/05/18/23/ched-reports-higher-enrollment-graduation-drop-out-rates-unchanged"
+  },
+  {
+   "name": "CSC Resolution No. 2500229 (qualification standards)",
+   "date": "promulgated March 2025, announced 8 May 2025",
+   "content": "SHS graduates eligible for first-level government positions that previously required at least 2 years of college; JHS grads eligible for positions formerly requiring pre-2016 HS diploma. Illustrates credential-reward rule linking K-12 to public employment.",
+   "url": "https://www.philstar.com/headlines/2025/05/09/2441826/k-12-graduates-now-eligible-first-level-government-jobs"
+  },
+  {
+   "name": "Pantawid Pamilyang Pilipino Program (4Ps)",
+   "date": "pilot 2007; national rollout 2008",
+   "content": "Conditional cash transfer; children 0-14 targeted 2013, 0-18 from 2014/2015; school attendance is a condition",
+   "url": "https://documents1.worldbank.org/curated/en/457071570046480804/pdf/Pantawid-Pamilya-2017-Assessment-An-Update-of-the-Philippine-Conditional-Cash-Transfer-s-Implementation-Performance.pdf"
+  }
+ ],
+ "pantawid_4ps_households": {
+  "2007_pilot": 6000,
+  "2008": 340391,
+  "2012_dec": 3121530,
+  "2014_approx": 4400000,
+  "2018_regular_cct": 3949855,
+  "2018_regular_plus_MCCT": 4236739,
+  "2019_dec_active": 4250272,
+  "2019_dec_registered_cumulative": 5066892,
+  "_sources": [
+   "2007,2014,2018: https://documents1.worldbank.org/curated/en/457071570046480804/pdf/Pantawid-Pamilya-2017-Assessment-An-Update-of-the-Philippine-Conditional-Cash-Transfer-s-Implementation-Performance.pdf",
+   "2008,2012: https://pidswebs.pids.gov.ph/CDN/PUBLICATIONS/pidsrp1501.pdf",
+   "2019: https://pantawid.dswd.gov.ph/wp-content/uploads/2022/03/4Ps_AnnualReport2019.pdf"
+  ],
+  "_reliability": "Point values only; annual series 2009-2011, 2013, 2015-2017 not found in extractable text (exists as chart/figures)."
+ },
+ "esc_voucher_grantees": {
+  "ESC_grantees_SY2017_18": 975229,
+  "ESC_grantees_SY2018_19": 1044399,
+  "ESC_subsidy_PHP_SY2017_18": 8303753555.47,
+  "ESC_subsidy_PHP_SY2018_19": 9633756972.3,
+  "ESC_schools_SY2017_18": 3320,
+  "ESC_schools_SY2018_19": 3481,
+  "SHS_voucher_recipients_SY2017_18": 1290000,
+  "SHS_voucher_value_PHP_range": "17,500-22,500",
+  "_sources": [
+   "https://peac.org.ph/wp-content/uploads/2020/03/PEAC-Biennial-Report-SY-2017-2018-to-SY-2018-2019.pdf (ESC)",
+   "https://pidswebs.pids.gov.ph/CDN/PUBLICATIONS/pidsdps1913.pdf and https://pidswebs.pids.gov.ph/CDN/EVENTS/20200212_shs_process_evaluation_public_seminar.pdf (1.29M SHS voucher/ESC private-school grantees; note the PIDS seminar slide describes 1.29M as 'ESC and SHS Voucher' combined)"
+  ],
+  "_reliability": "ESC series before SY2017-18 not found. GASTPE total of P86B cited in COA coverage (Manila Bulletin 2019-03-11) not verified."
+ },
+ "higher_ed_enrolment": {
+  "_note": "Total HEI enrolment (all programme levels). Definitions differ by source; see md.",
+  "pids_dp1203_public_private": {
+   "1999-00": [
+    717445,
+    1656041,
+    2373486
+   ],
+   "2000-01": [
+    771162,
+    1659680,
+    2430842
+   ],
+   "2001-02": [
+    808321,
+    1657735,
+    2466056
+   ],
+   "2002-03": [
+    815595,
+    1611381,
+    2426976
+   ],
+   "2003-04": [
+    829181,
+    1591675,
+    2420856
+   ],
+   "2004-05": [
+    819251,
+    1583064,
+    2402315
+   ],
+   "2005-06": [
+    849669,
+    1633605,
+    2483274
+   ],
+   "2006-07": [
+    881656,
+    1722793,
+    2604449
+   ],
+   "2007-08": [
+    915191,
+    1739103,
+    2654294
+   ],
+   "2008-09": [
+    982701,
+    1642684,
+    2625385
+   ],
+   "2009-10": [
+    1083194,
+    1687771,
+    2770965
+   ],
+   "_columns": [
+    "public",
+    "private",
+    "total"
+   ],
+   "_source": "https://pidswebs.pids.gov.ph/CDN/PUBLICATIONS/pidsdps1203.pdf Table 1"
+  },
+  "ched_total_via_pids_seminar": {
+   "2010-11": 2951195,
+   "2011-12": 3044218,
+   "2012-13": 3317265,
+   "2013-14": 3563396,
+   "2014-15": 3811726,
+   "2015-16": 4104841,
+   "2016-17": 3589484,
+   "_source": "https://pidswebs.pids.gov.ph/CDN/EVENTS/20200213_ra_10931_pe_pids_public_seminar.pdf slide 17"
+  },
+  "ched_indicators_2019": {
+   "2016-17": {
+    "total": 3589484,
+    "public": 1641607,
+    "private": 1947877
+   },
+   "2017-18": {
+    "total": 2981803,
+    "public": 1385458,
+    "private": 1596345
+   },
+   "2018-19": {
+    "total": 3212542,
+    "public": 1519512,
+    "private": 1693030
+   },
+   "_source": "https://legacy.ched.gov.ph/higher-education-indicators-2019/"
+  },
+  "public_private_2013_14": {
+   "public": 1539000,
+   "private": 2025000,
+   "total": 3564000,
+   "_source": "https://pre.econ.upd.edu.ph/index.php/pre/article/download/958/847 Table 1 (thousands)"
+  },
+  "ched_chair_statements_2023": {
+   "2017": 2900000,
+   "2022": 4100000,
+   "_source": "https://www.abs-cbn.com/news/05/18/23/ched-reports-higher-enrollment-graduation-drop-out-rates-unchanged"
+  },
+  "snapshot_jan_2024": {
+   "total": 4792160,
+   "private": 2465628,
+   "public": 2326532,
+   "HEIs": 1977,
+   "_source": "https://pidswebs.pids.gov.ph/CDN/document/pidsdps2441.pdf"
+  },
+  "graduates_ched": {
+   "2015-16": 645973,
+   "2016-17": 703327,
+   "2017-18": 751310,
+   "_source": "https://legacy.ched.gov.ph/higher-education-indicators-2019/"
+  },
+  "public_share_of_enrolment_1994_95_vs_2018_19": {
+   "public_1994_95_pct": 21,
+   "public_2018_19_pct": 47,
+   "_source": "PIDS seminar slide 15 (start year label garbled 'AY1994-85')"
+  },
+  "1990s": "NOT FOUND (source tables report n.d. for 1990/91)"
+ },
+ "first_year_enrolment": {
+  "counts_by_year": "NOT FOUND in accessible text. CHED 'Facts and Figures' tables (A2) and FOI requests exist but figures not extractable via fetch; FOI replies denied/duplicate.",
+  "public_share_of_first_year_enrolment_pct": {
+   "2011": 58.9,
+   "2013": 58.4,
+   "2014": 55.4,
+   "2016": 57.1,
+   "2017": 74.6,
+   "_source": "https://pidswebs.pids.gov.ph/CDN/EVENTS/20200213_ra_10931_pe_pids_public_seminar.pdf slide 16 (APIS); public/private assignment inferred by summariser"
+  },
+  "ched_statement_2017": "Freshman enrolment dropped only 20-25% after SHS added (CHED, Inquirer 2017); 'significant increase in freshmen who had not enrolled previously but later chose to attend'; acceleration programmes at some private/public schools produced early graduates entering college. Source: https://newsinfo.inquirer.net/907322/ched-worst-fears-over-for-k-12-program",
+  "hei_enrolment_2018_19_vs_2015_16_pct": {
+   "public": 83,
+   "private": 74,
+   "_source": "PIDS seminar slide 39"
+  }
+ },
+ "sucs": {
+  "main_campus_SUCs": {
+   "1980": 48,
+   "1999-00": 107,
+   "2000-01": 107,
+   "2001-02": 111,
+   "2002-03": 111,
+   "2003-04": 111,
+   "2004-05": 111,
+   "2005-06": 111,
+   "2006-07": 110,
+   "2007-08": 110,
+   "2008-09": 110,
+   "2009-10": 109,
+   "2013-14": 112,
+   "_sources": [
+    "https://pidswebs.pids.gov.ph/CDN/PUBLICATIONS/pidsdps1203.pdf Table 2 (1999-2010)",
+    "https://pre.econ.upd.edu.ph/index.php/pre/article/download/958/847 (1980, 2013-14)"
+   ]
+  },
+  "SUC_satellite_campuses": {
+   "2001-02": 247,
+   "2013-14": 451
+  },
+  "public_HEIs_total": {
+   "1980": 298,
+   "1990-91": 174,
+   "2001-02": 405,
+   "2013-14": 673,
+   "Jan_2024": 263
+  },
+  "total_HEIs": {
+   "1999-00": 1404,
+   "2000-01": 1380,
+   "2001-02": 1428,
+   "2002-03": 1489,
+   "2003-04": 1540,
+   "2004-05": 1619,
+   "2005-06": 1683,
+   "2006-07": 1710,
+   "2007-08": 1701,
+   "2008-09": 1741,
+   "2009-10": 1791,
+   "Jan_2024": 1977
+  }
+ },
+ "budgets_php_million_nominal": {
+  "_source": "PIDS Policy Note 2021-05 (DBM GAA appropriations) https://pidswebs.pids.gov.ph/CDN/PUBLICATIONS/pidspn2105.pdf Table 1; nominal, no real series available",
+  "DepEd": {
+   "2010": 174966,
+   "2011": 207271,
+   "2012": 238766,
+   "2013": 293401,
+   "2014": 309415,
+   "2015": 367122,
+   "2016": 433383,
+   "2017": 568436,
+   "2018": 580632,
+   "2019": 531565,
+   "2020": 554213
+  },
+  "CHED": {
+   "2010": 2539,
+   "2011": 1695,
+   "2012": 2207,
+   "2013": 3604,
+   "2014": 8012,
+   "2015": 3402,
+   "2016": 9657,
+   "2017": 19576,
+   "2018": 50534,
+   "2019": 52436,
+   "2020": 47907
+  },
+  "SUCs": {
+   "2010": 22477,
+   "2011": 25097,
+   "2012": 27307,
+   "2013": 34924,
+   "2014": 38075,
+   "2015": 44397,
+   "2016": 49661,
+   "2017": 61440,
+   "2018": 65245,
+   "2019": 68338,
+   "2020": 77352
+  },
+  "note_2017": "Over PHP100B of DepEd funds transferred to DPWH (Basic Education Facilities Fund) in 2017, so DepEd 2017 appropriation understates basic-ed spending in practice.",
+  "total_SUC_budget_pids_dp1203": {
+   "2005": 16667,
+   "2006": 15712,
+   "2007": 17815,
+   "2008": 19638,
+   "2009": 22829,
+   "2010": 22402
+  },
+  "basic_education_spending_total_WB2020": {
+   "2010": {
+    "national": 191118,
+    "local": 13526,
+    "pct_gdp": 2.2
+   },
+   "2011": {
+    "national": 218817,
+    "local": 14435,
+    "pct_gdp": 2.3
+   },
+   "2012": {
+    "national": 240238,
+    "local": 16232,
+    "pct_gdp": 2.3
+   },
+   "2013": {
+    "national": 291030,
+    "local": 16654,
+    "pct_gdp": 2.6
+   },
+   "2014": {
+    "national": 284606,
+    "local": 15976,
+    "pct_gdp": 2.3
+   },
+   "2015": {
+    "national": 365202,
+    "local": 15984,
+    "pct_gdp": 2.7
+   },
+   "2016": {
+    "national": 430048,
+    "local": 16468,
+    "pct_gdp": 3.0
+   },
+   "2017": {
+    "national": 577924,
+    "local": 18889,
+    "pct_gdp": 3.6
+   },
+   "2018": {
+    "national": 567092,
+    "local": 20868,
+    "pct_gdp": 3.0
+   },
+   "2019": {
+    "national": 500272,
+    "local": 24018,
+    "pct_gdp": 2.8
+   }
+  }
+ },
+ "depEd_flows": {
+  "senior_high_modeling_2013_14": {
+   "grade11": 5756,
+   "grade12": 4246,
+   "schools": 54,
+   "_source": "https://newsinfo.inquirer.net/?p=628212"
+  },
+  "senior_high_modeling_2014_15": {
+   "students_over": 10000,
+   "_source": "https://newsinfo.inquirer.net/?p=628212"
+  },
+  "SHS_enrolment_SY2016_17": {
+   "total_Grade11": 1445107,
+   "public": 783452,
+   "private": 661655,
+   "_source": "https://www.slideshare.net/slideshow/basic-education-reforms-and-the-k-to-12-program-in-the-philippines/90843382 slide 14; earlier early count 1,300,938 as of 28 Jun 2016 (Inquirer 793017); 1,193,002 as of 2 Aug 2016 slide 33 (likely different cut: DepEd+private actuals)"
+  },
+  "grade10_completers_SY2015_16_approx": 1500000,
+  "grade10_completers_SY2016_17": 1587416,
+  "grade11_enrolment_SY2017_18": 1481103,
+  "transition_G10_to_G11": 93.3,
+  "_transition_source": "https://www.gmanetwork.com/news/news/nation/652960/93-of-grade-10-students-transitioned-to-grade-11-says-deped/story/?amp (10 May 2018) ; PIDS SHS seminar slide 31 confirms 93.3%",
+  "SHS_enrolment_SY2017_18": {
+   "grade11": 1500000,
+   "grade12": 1200000,
+   "total": 2700000,
+   "share_grade11_DepEd_private_SUCLUC_pct": [
+    52,
+    45,
+    3
+   ],
+   "_source": "https://pidswebs.pids.gov.ph/CDN/EVENTS/20200212_shs_process_evaluation_public_seminar.pdf slide 14"
+  },
+  "first_SHS_graduates_2018": 1200000,
+  "pre_K12_expectation": "~1.5M G10 completers expected 2016; ~400k not expected to proceed (Philstar 11 May 2018, https://philstar.com/headlines/2018/05/11/1814173/senior-high-school-results-exceeded-expectations-deped)",
+  "pre_K12_college_progression": "about 50 percent of high school completers went on to college (Inquirer 29 Jun 2016, https://newsinfo.inquirer.net/793017/1-3m-students-join-senior-high-fears-unfounded-deped-claims)",
+  "secondary_enrolment_total": {
+   "2008-09": 6763858,
+   "2009-10": 6806079,
+   "2010-11": 6954946,
+   "2011-12": 7049877,
+   "2012-13": 7110944,
+   "_source": "https://rtei.okfn.org/documents/Basic_Education_Statistics_in_the_Philippines.html"
+  },
+  "secondary_completion_rate_pct": {
+   "2008-09": 75.24,
+   "2009-10": 73.55,
+   "2010-11": 75.06,
+   "2011-12": 74.23,
+   "2012-13": 74.81,
+   "_source": "same"
+  },
+  "enrolment_millions_SY": {
+   "kindergarten": {
+    "2013": 2.3,
+    "2014": 2.2,
+    "2015": 2.1,
+    "2016": 1.8,
+    "2017": 2.2
+   },
+   "elementary": {
+    "2013": 14.5,
+    "2014": 14.5,
+    "2015": 14.4,
+    "2016": 14.1,
+    "2017": 13.6
+   },
+   "junior_high": {
+    "2013": 7.2,
+    "2014": 7.3,
+    "2015": 7.4,
+    "2016": 7.6,
+    "2017": 8.0
+   },
+   "_source": "slideshare basic-education-reforms slide 12; years are school-year start, rounded"
+  },
+  "hs_graduates_pre2016_counts": "NOT FOUND"
+ },
+ "not_found": [
+  "WB SE.XPD.* sub-level shares after 2008/2009",
+  "Explicit tertiary participation target in PDP 2017-2022 and PDP 2023-2028 (results-matrix tables not extractable)",
+  "PDP 1978-2016 and BESRA numeric targets, CHED higher education roadmap numeric targets",
+  "Compulsory attendance ages in CA 586 / 1987 Constitution wording (Official Gazette fetch failed)",
+  "ESC grantee series before SY2017-18; GASTPE totals by year",
+  "4Ps annual households 2009-2011, 2013, 2015-2018",
+  "CHED first-year enrolment counts 2010-2023; first-year by age",
+  "Tertiary enrolment 1990s (source tables n.d.)",
+  "Pre-2016 high-school graduate counts",
+  "Age of college entrants / share of older first-years; CHED memos on 2016-18 transition",
+  "School building programme totals by year (only 2011 shortage and QBEDP PPP counts)",
+  "Real (deflated) DepEd/CHED/SUC budgets"
+ ]
+}

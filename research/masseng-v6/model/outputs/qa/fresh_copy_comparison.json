@@ -1,0 +1,110 @@
+{
+  "fresh_copy": "/Users/treymenefee/Documents/kimi/tasks/2026-11-22/02-12-49-aeead9e5/repro-pr33/research/masseng-v6/model",
+  "all_byte_identical": true,
+  "files": [
+    {
+      "file": "fit_R0.json",
+      "original_exists": true,
+      "fresh_exists": true,
+      "original_sha256": "b6e355ba0ceba9c438f6641243ef10ecb1d054383bdde686df0413e77828407c",
+      "fresh_sha256": "b6e355ba0ceba9c438f6641243ef10ecb1d054383bdde686df0413e77828407c",
+      "byte_identical": true
+    },
+    {
+      "file": "fit_R1.json",
+      "original_exists": true,
+      "fresh_exists": true,
+      "original_sha256": "e0690737d0570e719c20a946b50036d3290a6d1d70689f019ea89ab2d33ef796",
+      "fresh_sha256": "e0690737d0570e719c20a946b50036d3290a6d1d70689f019ea89ab2d33ef796",
+      "byte_identical": true
+    },
+    {
+      "file": "fit_R2.json",
+      "original_exists": true,
+      "fresh_exists": true,
+      "original_sha256": "add2073e9c894a2961ded5e036c0dfe007dd9e190d4202dec18f2cb2cc440ef4",
+      "fresh_sha256": "add2073e9c894a2961ded5e036c0dfe007dd9e190d4202dec18f2cb2cc440ef4",
+      "byte_identical": true
+    },
+    {
+      "file": "fit_R3.json",
+      "original_exists": true,
+      "fresh_exists": true,
+      "original_sha256": "052ab5631e2a1f5c0eca534b8db143e689ee8e14521ab9a3cc73e02f826d9fbf",
+      "fresh_sha256": "052ab5631e2a1f5c0eca534b8db143e689ee8e14521ab9a3cc73e02f826d9fbf",
+      "byte_identical": true
+    },
+    {
+      "file": "fit_R4.json",
+      "original_exists": true,
+      "fresh_exists": true,
+      "original_sha256": "c894c501814e7049be82f3d35aa1843748168c13ca75f0479bf9ee2f287ff5df",
+      "fresh_sha256": "c894c501814e7049be82f3d35aa1843748168c13ca75f0479bf9ee2f287ff5df",
+      "byte_identical": true
+    },
+    {
+      "file": "fit_R5.json",
+      "original_exists": true,
+      "fresh_exists": true,
+      "original_sha256": "2b00a64bedefc57e68b49e31db3851a09ace18c1d1b109bffeab5dd00df17938",
+      "fresh_sha256": "2b00a64bedefc57e68b49e31db3851a09ace18c1d1b109bffeab5dd00df17938",
+      "byte_identical": true
+    },
+    {
+      "file": "scores.json",
+      "original_exists": true,
+      "fresh_exists": true,
+      "original_sha256": "c6bc205157c58543980756421e27c07f05e96568747a7ca6449877001d210069",
+      "fresh_sha256": "c6bc205157c58543980756421e27c07f05e96568747a7ca6449877001d210069",
+      "byte_identical": true
+    },
+    {
+      "file": "report.md",
+      "original_exists": true,
+      "fresh_exists": true,
+      "original_sha256": "9d883ff405a6d448eb7d2a7937c936dec3569422b8429edc4a1b3f6350955143",
+      "fresh_sha256": "9d883ff405a6d448eb7d2a7937c936dec3569422b8429edc4a1b3f6350955143",
+      "byte_identical": true
+    },
+    {
+      "file": "figures/fit_and_test.png",
+      "original_exists": true,
+      "fresh_exists": true,
+      "original_sha256": "5c3758ea9c98a9b95526b59be3b2095435f160d10108d83890ebfc3e9420e837",
+      "fresh_sha256": "5c3758ea9c98a9b95526b59be3b2095435f160d10108d83890ebfc3e9420e837",
+      "byte_identical": true
+    },
+    {
+      "file": "figures/demand_rivals.png",
+      "original_exists": true,
+      "fresh_exists": true,
+      "original_sha256": "bf405269ef8560b81d7ff43d17b25eb89a95cc3c3417beb08dd62c28aa0953db",
+      "fresh_sha256": "bf405269ef8560b81d7ff43d17b25eb89a95cc3c3417beb08dd62c28aa0953db",
+      "byte_identical": true
+    },
+    {
+      "file": "recovery_R2.json",
+      "original_exists": true,
+      "fresh_exists": true,
+      "original_sha256": "49bf2672de82852b1ccb419c70872991e4fdbccd96bc207218c79130b2cbcf71",
+      "fresh_sha256": "49bf2672de82852b1ccb419c70872991e4fdbccd96bc207218c79130b2cbcf71",
+      "byte_identical": true
+    },
+    {
+      "file": "README.md",
+      "original_exists": true,
+      "fresh_exists": true,
+      "original_sha256": "922504b674f360f1b844ab82cc30bf1591b0fb3635ed030b835cd160950c4c61",
+      "fresh_sha256": "922504b674f360f1b844ab82cc30bf1591b0fb3635ed030b835cd160950c4c61",
+      "byte_identical": true
+    },
+    {
+      "file": "manuscripts/Philippine_demand_rivals.md",
+      "original_exists": true,
+      "fresh_exists": true,
+      "original_sha256": "67fc75204e7de1dc1c258a27ca4aaba234bdf230c1a61395319afda0d19bde74",
+      "fresh_sha256": "67fc75204e7de1dc1c258a27ca4aaba234bdf230c1a61395319afda0d19bde74",
+      "byte_identical": true
+    }
+  ]
+}

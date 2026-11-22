@@ -1,0 +1,83 @@
+{
+ "fit": {
+  "eta": 0.9895335999398623,
+  "kappa": 9.992653451269385,
+  "a_prim": 7.3638540366117775,
+  "a_sec": 4.944313294466781,
+  "a_sec_entry": 4.132132930640425,
+  "a_ter": 9.461039998375393,
+  "a_ter_entry": 3.39416895505461,
+  "late": 0.15,
+  "rep_prim": 0.04,
+  "rep_sec": 0.02,
+  "mu_basic": -2.3416027221876567,
+  "mu_ter": 2.3574264604434867,
+  "nu": 2.870479690285065,
+  "k_ter": 0.0514277806004552,
+  "k_growth": 0.03,
+  "k_resp": 0.1
+ },
+ "table": {
+  "ger_primary": {
+   "n": 25,
+   "model": 6.945202607108064,
+   "persistence": 4.737306724289657,
+   "trend": 10.873381315034512
+  },
+  "ger_secondary": {
+   "n": 24,
+   "model": 8.279698718971053,
+   "persistence": 7.792879631967462,
+   "trend": 16.761632522891016
+  },
+  "ger_tertiary": {
+   "n": 26,
+   "model": 8.38787523511154,
+   "persistence": 6.929850936347764,
+   "trend": 5.310911971203852
+  },
+  "ner_primary": {
+   "n": 16,
+   "model": 5.024738334731467,
+   "persistence": 3.6532317114439947,
+   "trend": 4.632356873731707
+  },
+  "ner_secondary": {
+   "n": 14,
+   "model": 8.792731784023385,
+   "persistence": 5.114415104109447,
+   "trend": 8.264371155863264
+  },
+  "priv_lower_secondary": {
+   "n": 1,
+   "model": 1.62330226410349,
+   "persistence": NaN,
+   "trend": NaN
+  },
+  "priv_primary": {
+   "n": 21,
+   "model": 2.726669958797097,
+   "persistence": 0.7799411149933969,
+   "trend": 0.6312411794454911
+  },
+  "priv_secondary": {
+   "n": 17,
+   "model": 8.907314174261073,
+   "persistence": NaN,
+   "trend": NaN
+  },
+  "priv_tertiary": {
+   "n": 6,
+   "model": 27.570220893800887,
+   "persistence": 9.710732893728121,
+   "trend": 9.710732893728121
+  },
+  "priv_upper_secondary": {
+   "n": 1,
+   "model": 13.200715814108705,
+   "persistence": NaN,
+   "trend": NaN
+  }
+ },
+ "note": "First scored run, v1 engine, before any amendment. Kept as the record."
+}

@@ -1,0 +1,138 @@
+
+== income|fiscal  train cost 25.98  mean test RMSE (GER) 7.52
+   loss ger_primary            n=25 model   7.42  persistence   4.74  trend  10.87
+   WIN  ger_secondary          n=24 model   7.03  persistence   7.79  trend  16.76
+   loss ger_tertiary           n=26 model   8.10  persistence   6.93  trend   5.31
+   loss ner_primary            n=16 model   6.56  persistence   3.65  trend   4.63
+   loss ner_secondary          n=14 model   8.13  persistence   5.11  trend   8.26
+     -  priv_lower_secondary   n= 1 model   3.44  persistence    nan  trend    nan
+   loss priv_primary           n=21 model   2.37  persistence   0.78  trend   0.63
+     -  priv_secondary         n=17 model   8.65  persistence    nan  trend    nan
+   loss priv_tertiary          n= 6 model  25.56  persistence   9.71  trend   9.71
+     -  priv_upper_secondary   n= 1 model  10.47  persistence    nan  trend    nan
+   sep ger_secondary 1983->1987 {'model': -1.98, 'observed': 3.59}
+   sep ger_tertiary 1983->1987 {'model': -2.36, 'observed': -2.06}
+   sep ger_secondary 1997->1999 {'model': -3.31, 'observed': -2.93}
+   sep ger_tertiary 1997->1999 {'model': -0.38, 'observed': None}
+   sep ger_secondary 2009->2016 {'model': 15.86, 'observed': 2.61}
+   sep ger_tertiary 2009->2016 {'model': 3.52, 'observed': 11.74}
+   sep ched_total_2018_vs_2016 {'observed': 0.73}
+   sep ched_total_2020_vs_2016 {'observed': 0.83}
+   gradient primary {'model_ratio': 1.0, 'survey_ratio': 1.04}
+   gradient secondary {'model_ratio': 21.25, 'survey_ratio': 1.21}
+   gradient tertiary {'model_ratio': 41722855113.16, 'survey_ratio': 2.57}
+
+== income|responsive  train cost 24.65  mean test RMSE (GER) 7.12
+   loss ger_primary            n=25 model   7.37  persistence   4.74  trend  10.87
+   WIN  ger_secondary          n=24 model   7.09  persistence   7.79  trend  16.76
+   loss ger_tertiary           n=26 model   6.91  persistence   6.93  trend   5.31
+   loss ner_primary            n=16 model   6.40  persistence   3.65  trend   4.63
+   loss ner_secondary          n=14 model   8.24  persistence   5.11  trend   8.26
+     -  priv_lower_secondary   n= 1 model   2.72  persistence    nan  trend    nan
+   loss priv_primary           n=21 model   2.59  persistence   0.78  trend   0.63
+     -  priv_secondary         n=17 model   8.29  persistence    nan  trend    nan
+   loss priv_tertiary          n= 6 model  15.45  persistence   9.71  trend   9.71
+     -  priv_upper_secondary   n= 1 model   9.78  persistence    nan  trend    nan
+   sep ger_secondary 1983->1987 {'model': -1.99, 'observed': 3.59}
+   sep ger_tertiary 1983->1987 {'model': -1.84, 'observed': -2.06}
+   sep ger_secondary 1997->1999 {'model': -3.3, 'observed': -2.93}
+   sep ger_tertiary 1997->1999 {'model': -0.29, 'observed': None}
+   sep ger_secondary 2009->2016 {'model': 15.7, 'observed': 2.61}
+   sep ger_tertiary 2009->2016 {'model': 4.33, 'observed': 11.74}
+   sep ched_total_2018_vs_2016 {'observed': 0.73}
+   sep ched_total_2020_vs_2016 {'observed': 0.83}
+   gradient primary {'model_ratio': 1.0, 'survey_ratio': 1.04}
+   gradient secondary {'model_ratio': 20.41, 'survey_ratio': 1.21}
+   gradient tertiary {'model_ratio': 41722877694.11, 'survey_ratio': 2.57}
+
+== income|trend  train cost 22.73  mean test RMSE (GER) 6.84
+   loss ger_primary            n=25 model   7.47  persistence   4.74  trend  10.87
+   WIN  ger_secondary          n=24 model   7.01  persistence   7.79  trend  16.76
+   loss ger_tertiary           n=26 model   6.04  persistence   6.93  trend   5.31
+   loss ner_primary            n=16 model   6.70  persistence   3.65  trend   4.63
+   loss ner_secondary          n=14 model   8.18  persistence   5.11  trend   8.26
+     -  priv_lower_secondary   n= 1 model   3.38  persistence    nan  trend    nan
+   loss priv_primary           n=21 model   2.43  persistence   0.78  trend   0.63
+     -  priv_secondary         n=17 model   8.48  persistence    nan  trend    nan
+   loss priv_tertiary          n= 6 model  13.66  persistence   9.71  trend   9.71
+     -  priv_upper_secondary   n= 1 model  10.16  persistence    nan  trend    nan
+   sep ger_secondary 1983->1987 {'model': -1.97, 'observed': 3.59}
+   sep ger_tertiary 1983->1987 {'model': -0.05, 'observed': -2.06}
+   sep ger_secondary 1997->1999 {'model': -3.32, 'observed': -2.93}
+   sep ger_tertiary 1997->1999 {'model': -0.93, 'observed': None}
+   sep ger_secondary 2009->2016 {'model': 16.07, 'observed': 2.61}
+   sep ger_tertiary 2009->2016 {'model': 3.41, 'observed': 11.74}
+   sep ched_total_2018_vs_2016 {'observed': 0.73}
+   sep ched_total_2020_vs_2016 {'observed': 0.83}
+   gradient primary {'model_ratio': 1.0, 'survey_ratio': 1.04}
+   gradient secondary {'model_ratio': 24.84, 'survey_ratio': 1.21}
+   gradient tertiary {'model_ratio': 41723713052.02, 'survey_ratio': 2.57}
+
+== income|unconstrained  train cost 26.40  mean test RMSE (GER) 7.81
+   loss ger_primary            n=25 model   7.42  persistence   4.74  trend  10.87
+   WIN  ger_secondary          n=24 model   7.01  persistence   7.79  trend  16.76
+   loss ger_tertiary           n=26 model   8.99  persistence   6.93  trend   5.31
+   loss ner_primary            n=16 model   6.52  persistence   3.65  trend   4.63
+   loss ner_secondary          n=14 model   8.16  persistence   5.11  trend   8.26
+     -  priv_lower_secondary   n= 1 model   5.61  persistence    nan  trend    nan
+   loss priv_primary           n=21 model   1.49  persistence   0.78  trend   0.63
+     -  priv_secondary         n=17 model  10.07  persistence    nan  trend    nan
+   loss priv_tertiary          n= 6 model  25.91  persistence   9.71  trend   9.71
+     -  priv_upper_secondary   n= 1 model  13.52  persistence    nan  trend    nan
+   sep ger_secondary 1983->1987 {'model': -2.16, 'observed': 3.59}
+   sep ger_tertiary 1983->1987 {'model': -1.43, 'observed': -2.06}
+   sep ger_secondary 1997->1999 {'model': -3.29, 'observed': -2.93}
+   sep ger_tertiary 1997->1999 {'model': -0.59, 'observed': None}
+   sep ger_secondary 2009->2016 {'model': 15.82, 'observed': 2.61}
+   sep ger_tertiary 2009->2016 {'model': 3.26, 'observed': 11.74}
+   sep ched_total_2018_vs_2016 {'observed': 0.73}
+   sep ched_total_2020_vs_2016 {'observed': 0.83}
+   gradient primary {'model_ratio': 1.0, 'survey_ratio': 1.04}
+   gradient secondary {'model_ratio': 20.45, 'survey_ratio': 1.21}
+   gradient tertiary {'model_ratio': 41719815882.19, 'survey_ratio': 2.57}
+
+== none|fiscal  train cost 27.70  mean test RMSE (GER) 7.91
+   loss ger_primary            n=25 model   6.83  persistence   4.74  trend  10.87
+   loss ger_secondary          n=24 model   9.12  persistence   7.79  trend  16.76
+   loss ger_tertiary           n=26 model   7.79  persistence   6.93  trend   5.31
+   loss ner_primary            n=16 model   5.26  persistence   3.65  trend   4.63
+   loss ner_secondary          n=14 model   6.86  persistence   5.11  trend   8.26
+     -  priv_lower_secondary   n= 1 model   0.58  persistence    nan  trend    nan
+   loss priv_primary           n=21 model   3.27  persistence   0.78  trend   0.63
+     -  priv_secondary         n=17 model   7.28  persistence    nan  trend    nan
+   loss priv_tertiary          n= 6 model  21.57  persistence   9.71  trend   9.71
+     -  priv_upper_secondary   n= 1 model   3.03  persistence    nan  trend    nan
+   sep ger_secondary 1983->1987 {'model': -0.03, 'observed': 3.59}
+   sep ger_tertiary 1983->1987 {'model': -2.64, 'observed': -2.06}
+   sep ger_secondary 1997->1999 {'model': -3.06, 'observed': -2.93}
+   sep ger_tertiary 1997->1999 {'model': -0.33, 'observed': None}
+   sep ger_secondary 2009->2016 {'model': 12.64, 'observed': 2.61}
+   sep ger_tertiary 2009->2016 {'model': 5.71, 'observed': 11.74}
+   sep ched_total_2018_vs_2016 {'observed': 0.73}
+   sep ched_total_2020_vs_2016 {'observed': 0.83}
+   gradient primary {'model_ratio': 1.01, 'survey_ratio': 1.04}
+   gradient secondary {'model_ratio': 5.77, 'survey_ratio': 1.21}
+   gradient tertiary {'model_ratio': 41694059464.85, 'survey_ratio': 2.57}
+
+== trend|fiscal  train cost 27.70  mean test RMSE (GER) 7.91
+   loss ger_primary            n=25 model   6.83  persistence   4.74  trend  10.87
+   loss ger_secondary          n=24 model   9.14  persistence   7.79  trend  16.76
+   loss ger_tertiary           n=26 model   7.75  persistence   6.93  trend   5.31
+   loss ner_primary            n=16 model   5.24  persistence   3.65  trend   4.63
+   loss ner_secondary          n=14 model   6.88  persistence   5.11  trend   8.26
+     -  priv_lower_secondary   n= 1 model   0.68  persistence    nan  trend    nan
+   loss priv_primary           n=21 model   3.29  persistence   0.78  trend   0.63
+     -  priv_secondary         n=17 model   7.25  persistence    nan  trend    nan
+   loss priv_tertiary          n= 6 model  21.62  persistence   9.71  trend   9.71
+     -  priv_upper_secondary   n= 1 model   2.94  persistence    nan  trend    nan
+   sep ger_secondary 1983->1987 {'model': -0.03, 'observed': 3.59}
+   sep ger_tertiary 1983->1987 {'model': -2.66, 'observed': -2.06}
+   sep ger_secondary 1997->1999 {'model': -3.06, 'observed': -2.93}
+   sep ger_tertiary 1997->1999 {'model': -0.33, 'observed': None}
+   sep ger_secondary 2009->2016 {'model': 12.62, 'observed': 2.61}
+   sep ger_tertiary 2009->2016 {'model': 5.76, 'observed': 11.74}
+   sep ched_total_2018_vs_2016 {'observed': 0.73}
+   sep ched_total_2020_vs_2016 {'observed': 0.83}
+   gradient primary {'model_ratio': 1.01, 'survey_ratio': 1.04}
+   gradient secondary {'model_ratio': 5.75, 'survey_ratio': 1.21}
+   gradient tertiary {'model_ratio': 41694943764.55, 'survey_ratio': 2.57}

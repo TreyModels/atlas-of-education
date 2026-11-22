@@ -1,0 +1,264 @@
+{
+ "country": "Philippines",
+ "iso3": "PHL",
+ "years": {
+  "simulate_from": 1950,
+  "simulate_to": 2024,
+  "train": [
+   1971,
+   1995
+  ],
+  "test": [
+   1996,
+   2024
+  ]
+ },
+ "structure": {
+  "_note": "Grades are numbered 1-12 for basic education and T1-T4 for tertiary. 'periods' switch the cycle structure by reference year (UIS convention: the year in which the school year ends).",
+  "primary_grades": 6,
+  "lower_secondary_grades": 4,
+  "upper_secondary_grades": 2,
+  "upper_secondary_from": 2017,
+  "upper_secondary_note": "K-12 (RA 10533, 2013): Grade 11 first offered SY2016/17 (reference year 2017), Grade 12 SY2017/18. Grade-10 completers from reference year 2016 onward go to Grade 11 instead of tertiary.",
+  "tertiary_years": 4,
+  "max_age": 29
+ },
+ "entry_age": {
+  "_note": "Share of children who START Grade 1 at age 6 (rest at 7). WDI official entrance age is 7 to 1997 and 6 from 1998, but actual entry shifted gradually; universal kindergarten (RA 10157, 2012) completed the shift. DECLARED ramp.",
+  "share_at_6": {
+   "1950": 0.1,
+   "1997": 0.1,
+   "2005": 0.45,
+   "2012": 0.9,
+   "2024": 0.95
+  }
+ },
+ "costs_share_of_gdppc": {
+  "_note": "Annual household cost of a year of schooling (fees, uniforms, transport, materials, plus forgone earnings of the child), as a share of GDP per capita. DECLARED, order-of-magnitude, documented in docs/assumptions.md. Only ratios between sectors/levels and the dated policy changes matter for identification; the overall scale is absorbed by the cost coefficient.",
+  "primary": {
+   "public": 0.05,
+   "private": 0.3
+  },
+  "secondary": {
+   "public": 0.18,
+   "private": 0.45
+  },
+  "upper_secondary": {
+   "public": 0.25,
+   "private": 0.55
+  },
+  "tertiary": {
+   "public": 0.45,
+   "private": 0.8
+  }
+ },
+ "policy_events": [
+  {
+   "year": 1989,
+   "what": "Free Public Secondary Education Act (RA 6655, 1988): public secondary tuition abolished from SY1988/89.",
+   "level": "secondary",
+   "sector": "public",
+   "cost_change": -0.07
+  },
+  {
+   "year": 1990,
+   "what": "GASTPE / Education Service Contracting subsidies for private secondary places (RA 6728, 1989).",
+   "level": "secondary",
+   "sector": "private",
+   "cost_change": -0.05
+  },
+  {
+   "year": 2017,
+   "what": "Senior high school vouchers for public JHS completers enrolling in private SHS (DepEd voucher programme).",
+   "level": "upper_secondary",
+   "sector": "private",
+   "cost_change": -0.12
+  },
+  {
+   "year": 2018,
+   "what": "Free tuition in state and local universities and colleges (RA 10931, 2017; first applied AY2017/18).",
+   "level": "tertiary",
+   "sector": "public",
+   "cost_change": -0.1
+  }
+ ],
+ "tertiary_public_capacity": {
+  "_note": "Public (SUC/LUC) first-year places as a share of the population at tertiary entry age. Rationed; private institutions absorb the rest at private cost. The growth rule is a competing hypothesis (fiscal | responsive | trend), see docs/model.md.",
+  "rule": "fiscal",
+  "anchor_year": 1985
+ },
+ "targets": {
+  "_note": "Non-WDI observed targets. Each entry names its source.",
+  "tertiary_private_share": {
+   "1985": {
+    "value": 79.0,
+    "source": "PIDS RA 10931 process evaluation seminar, CHED basic data (private share 79% AY1984-85)"
+   },
+   "2000": {
+    "value": 68.0,
+    "source": "UP CIDS HERPRP 2022: private share 68% in 2000"
+   },
+   "2015": {
+    "value": 48.0,
+    "source": "UP CIDS HERPRP 2022: private share 48% in 2015",
+    "note": "CONFLICT: CHED Table 1 gives 54.1% private for AY2015-16 (2,219,857 of 4,104,841). The 48% secondary-source figure is kept but flagged; CHED is preferred where both exist."
+   },
+   "2019": {
+    "value": 53.0,
+    "source": "PIDS RA 10931 process evaluation seminar, CHED basic data (53% AY2018-19); note IPPA paper gives 47% for 2018"
+   }
+  },
+  "income_gradient_2019": {
+   "_note": "PIDS DP 2021-42 (Reyes), preliminary APIS 2019 participation, poorest vs richest decile. Age bands and denominators not stated: used only as a directional ratio, never as a level.",
+   "primary": {
+    "poorest": 91.6,
+    "richest": 94.9
+   },
+   "secondary": {
+    "poorest": 78.0,
+    "richest": 94.0
+   },
+   "tertiary": {
+    "poorest": 16.4,
+    "richest": 42.2
+   },
+   "_role": "train",
+   "_moved": "Moved from test to calibration on 2026-11-21 (PROTOCOL amendment A3): the only observation that pins the cross-sectional income gradient separately from demand growth over time."
+  },
+  "shs_private_share_2019": {
+   "value": 47.1,
+   "source": "DepEd SY2018-19: senior high total 3,022,841, DepEd public 1,599,637 (52.9%); remainder private, SUC/LUC and overseas"
+  },
+  "jhs_private_share_2019": {
+   "value": 17.8,
+   "source": "DepEd SY2018-19: junior high total 8,320,627, DepEd public 6,840,249 (82.2%)"
+  },
+  "ched_tertiary": {
+   "2015-16": {
+    "total": 4104841,
+    "private_share": 54.1
+   },
+   "2016-17": {
+    "total": 3589484,
+    "private_share": 54.3
+   },
+   "2017-18": {
+    "total": 2981803,
+    "private_share": 53.5
+   },
+   "2018-19": {
+    "total": 3212542,
+    "private_share": 52.7
+   },
+   "2019-20": {
+    "total": 3408425,
+    "private_share": 53.8
+   }
+  },
+  "ched_tertiary_source": "https://legacy.ched.gov.ph/wp-content/uploads/Higher-Education-Data-and-Indicators-AY-2009-10-to-AY-2019-20.pdf"
+ },
+ "transfers": [
+  {
+   "year": 2009,
+   "ramp_years": 4,
+   "what": "Pantawid Pamilyang Pilipino Program (4Ps) conditional cash transfers to poor households with children in school (pilot 2008, scaled up 2010-2013; institutionalised RA 11310, 2019). Modelled as a cost reduction for the poorest three deciles.",
+   "deciles": [
+    0,
+    1,
+    2
+   ],
+   "levels": [
+    "primary",
+    "secondary"
+   ],
+   "value": 0.04
+  }
+ ],
+ "v5": {
+  "_note": "Inputs used only by engine5 (PROTOCOL_v5). DECLARED unless a source is given.",
+  "years": {
+   "simulate_from": 1940,
+   "simulate_to": 2024,
+   "train": [
+    1971,
+    1995
+   ],
+   "test": [
+    1996,
+    2024
+   ]
+  },
+  "direct_costs_share_of_gdppc": {
+   "_note": "Out-of-pocket cost per pupil-year as a share of GDP per head, before c_scale (fitted to FIES 2003/2006 education shares). Relative schedule DECLARED from: CHED tuition per unit AY2018-19 (SUC ~PHP 275, private ~PHP 760; ~42 units/yr) against GDP per head; DepEd no-collection policy; FIES composition (fees ~70%, allowance ~17%, supplies/books ~11%).",
+   "primary": {
+    "public": 0.02,
+    "private": 0.2
+   },
+   "secondary": {
+    "public": 0.06,
+    "private": 0.25
+   },
+   "upper_secondary": {
+    "public": 0.03,
+    "private": 0.3
+   },
+   "tertiary": {
+    "public": 0.15,
+    "private": 0.35
+   }
+  },
+  "forgone_earnings_share_of_gdppc": {
+   "_note": "DECLARED: forgone child or youth earnings per school year, share of GDP per head. Enters the burden, not spending.",
+   "primary": 0.0,
+   "secondary": 0.05,
+   "upper_secondary": 0.12,
+   "tertiary": 0.25
+  },
+  "policy_events": [
+   {
+    "year": 1989,
+    "level": "secondary",
+    "sector": "public",
+    "direct_cost_change": -0.04,
+    "what": "RA 6655 free public secondary tuition; other costs remain (Bray: fee-free is not cost-free)."
+   },
+   {
+    "year": 1990,
+    "level": "secondary",
+    "sector": "private",
+    "direct_cost_change": -0.05,
+    "what": "ESC/GASTPE subsidies for private secondary places."
+   },
+   {
+    "year": 2017,
+    "level": "upper_secondary",
+    "sector": "private",
+    "direct_cost_change": -0.12,
+    "what": "SHS voucher (PHP 17,500-22,500 vs GDP per head ~PHP 150k)."
+   },
+   {
+    "year": 2018,
+    "level": "tertiary",
+    "sector": "public",
+    "direct_cost_change": -0.08,
+    "what": "RA 10931 free tuition and fees at SUCs/LUCs; living costs, books, transport remain."
+   }
+  ],
+  "driver_map": {
+   "premium_secondary": "premium_secondary",
+   "premium_tertiary": "premium_tertiary",
+   "relational": "formal_share",
+   "_relational_note": "Wage/salary employment proxy. Occupation series are short, classification-break series and are not spliced."
+  },
+  "target_map": {
+   "fies_all": {"model":"edu_share_hh","train_years":[2003,2006]},
+   "fies_bottom30": {"model":"edu_share_bottom30","train_years":[2003,2006]},
+   "fies_upper70": {"model":"edu_share_top70","train_years":[2003,2006]},
+   "nta_household_share": {"model":"hh_share_total_spending","all_test":true},
+   "ched_total_index": {"model":"enrol_tertiary","all_test":true,"transform":"index_2016"},
+   "grade10_to_grade11": {"model":"trans_lsec_usec","all_test":true,"only_years":[2018]}
+  },
+  "household_consumption_share_of_gdp": 0.72,
+  "max_defer_age": 25
+ }
+}

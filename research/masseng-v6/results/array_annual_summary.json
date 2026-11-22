@@ -1,0 +1,7 @@
+{
+  "array_reference_equivalence": {"cases": 100, "max_absolute_admitted_mass_difference": 2.220446049250313e-16, "seed": 20261122},
+  "countries": {
+    "PHL": {"status": "illustrative declared-capacity scenario, not observed supply or a fitted forecast", "tertiary_ger_2024_default": 71.70020955496696, "tertiary_ger_2024_annual_market": 63.833580846841194, "effective_entrants_2024": 8501064.358250417, "admitted_entrants_2024": 8501064.358250415, "unmet_effective_entrants_2024": 0.0, "maximum_stock_conservation_residual": 6.938893903907228e-17},
+    "KHM": {"status": "illustrative declared-capacity scenario, not observed supply or a fitted forecast", "tertiary_ger_2024_default": 17.196206966651268, "tertiary_ger_2024_annual_market": 16.638662113126593, "effective_entrants_2024": 991831.0494028237, "admitted_entrants_2024": 970052.7454426863, "unmet_effective_entrants_2024": 21778.303960137288, "maximum_stock_conservation_residual": 1.5265566588595902e-16}
+  }
+}
