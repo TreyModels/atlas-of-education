@@ -8,7 +8,7 @@ import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
 RESEARCH = ROOT.parent
-WORKSPACE = RESEARCH.parents[1]
+WORKSPACE = ROOT.parents[1]
 PR_RESEARCH = WORKSPACE / 'atlas-pr33' / 'research' / 'masseng-v6'
 OUT = ROOT / 'outputs' / 'PHL' / 'v5'
 DELIVERY = WORKSPACE / 'deliverables'
