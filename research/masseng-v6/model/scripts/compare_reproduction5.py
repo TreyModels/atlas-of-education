@@ -18,9 +18,15 @@ def digest(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
+pairs = [(ORIGINAL / name, OTHER / name, name) for name in EXPECTED]
+pairs += [
+    (ROOT / 'README.md', FRESH / 'README.md', 'README.md'),
+    (ROOT.parent / 'manuscripts' / 'Philippine_demand_rivals.md',
+     FRESH.parent / 'manuscripts' / 'Philippine_demand_rivals.md',
+     'manuscripts/Philippine_demand_rivals.md'),
+]
 rows = []
-for name in EXPECTED:
-    a, b = ORIGINAL / name, OTHER / name
+for a, b, name in pairs:
     row = {'file': name, 'original_exists': a.exists(), 'fresh_exists': b.exists()}
     if a.exists() and b.exists():
         row['original_sha256'] = digest(a)

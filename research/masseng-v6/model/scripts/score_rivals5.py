@@ -66,7 +66,7 @@ def main(iso='PHL'):
         output['rivals'][spec]['separating_observations'] = {
             'tertiary_ger_2013': float(res.ind['ger_tertiary'][years.index(2013)]),
             'tertiary_ger_2024': float(res.ind['ger_tertiary'][years.index(2024)]),
-            'grade10_to_grade11_2018': float(res.ind['trans_lsec_usec'][years.index(2018)]),
+            'grade10_to_grade11_2018': 100.0 * float(res.ind['trans_lsec_usec'][years.index(2018)]),
             'recession_secondary_ger': {str(y): float(res.ind['ger_secondary'][years.index(y)]) for y in (1984, 1985, 1986, 1998)},
         }
     separating = {}
