@@ -567,14 +567,15 @@ historical sequencing tests, not more country panels.
 
 ## Final tranche — the evening's remaining tests
 
-### Battery: 10.45 million regressions (task-21)
+### Battery: 57.3 million regressions (task-21)
 
-The pre-registered battery ran **10,447,698 regressions in 3,018 seconds** (50.3 min) at 3,462 regressions/s on 10 cores, after resuming from a midpoint checkpoint (a dispatch-signature bug cost wall time, not work). The real grouping pass versus **800+ random country re-partitions**:
+The pre-registered battery executed **57,291,101 regressions in 3,018 seconds** (50.3 min) at 10 cores — 10,447,698 recorded result rows from a **13,800-partition** transportability design (each partition × 6 groups × 342 pairs × 2 relations = 56.1M) plus the 936,657-cell grid, bootstraps, thresholds and placebos — after resuming from a midpoint checkpoint (a dispatch-signature bug cost wall time, not work). The real grouping pass versus the 13,800 random country re-partitions:
 
-- Average share of negative-significant links: real **0.225** vs random **0.227 ± 0.007** in levels; real **0.110** vs random **0.111 ± 0.005** in decade changes. On the average pair, the real groupings are indistinguishable from random ones.
-- The headline pair is unambiguous: fertility on lower-secondary completion is negative and significant in **98.7%** of random partitions in levels and **0.1%** in decade changes; secondary enrolment **97.9%** vs 0.1%; female attainment **91.5%** vs 0.0%; primary completion 99.0% vs 2.8%; tertiary 71.5% vs 0.2%.
+- **Transportability:** the schooling–fertility pairs reproduce a negative-significant estimate in **71–99%** of random partitions in levels and **0–7%** in decade changes. Matrix-wide the shares are **22.7% [21.4–23.9]** vs **11.1% [10.3–12.0]** — so the global between-country property is specific to the schooling–fertility relation, not to all 342 links. That is an honest nuance, not a weakening of the headline.
+- **The relation itself:** all eight schooling measures are negative-significant in levels (women's years **−0.129 ± 0.029**; total **−0.227 ± 0.042**; secondary **−0.0213 ± 0.0037**); every decade-change estimate flips positive (women's **+0.115 ± 0.046**; total's +0.189 ± 0.054) with **no** negative-significant change cell. Threshold: **−0.326 [−0.405, −0.248]** below 6 years, −0.092 [−0.175, −0.013] at 6–9, +0.112 [0.057, 0.171] above 9.
+- **The placebo is not null:** future schooling predicts current fertility **52.9%** of the time versus **58.8%** at the correct time — about 90% as strong. The development-gradient caveat therefore survives the larger grid: the level relation stays descriptive, and a causal reading is rejected.
 
-So the schooling–fertility relation in levels is a **global property** present in essentially any partition of the world, while the change relation is absent in essentially all of them. That is the cleanest statement of the levels-versus-changes result we have.
+So the schooling–fertility relation in levels is a **global property** present in essentially any partition of the world, while the change relation is absent in essentially all of them — and the causal claim remains unsupported.
 
 ### θ/γ estimation attempt (task-24, fd691a6)
 
