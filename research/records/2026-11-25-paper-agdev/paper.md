@@ -120,16 +120,20 @@ The follow-up exercise asks a different question: when the two transitions happe
 
 ### 4.2 The result
 
-**Table 3. Country event sequencing (subsistence-v2@ce66cfc, results/sequencing.txt and sequencing.json).**
+**Table 3. Country event sequencing (subsistence-v2@ce66cfc; the fertility ordering is recomputed strictly from `results/event_dates.csv`, canonical recomputation at `research/paper-massification-2026-11-25` @ `95dc135`).**
 
 | Ordering | Share of 64 countries | Bootstrap 95% CI |
 |---|---|---|
 | Schooling before agricultural labour release | **61/64 = 95%** | — |
 | Release before schooling | 5% (3/64) | [0, 11]% |
-| Schooling before fertility | 69% | [58, 80]% |
-| Release before fertility | 6% | [0, 11]% |
+| Schooling before fertility (strict: take-off strictly earlier) | **37.5% (24/64)** | [26.6, 50.0]% |
+| Schooling and fertility take off in the same year | 31.3% (20/64) | — |
+| Fertility before schooling | 31.3% (20/64) | — |
+| Release before fertility | 6.25% (4/64; no ties) | — |
 
 Median gap release → schooling: **−26 years** (bootstrap 95% CI −26 to −22): schooling take-off comes a generation *before* the large farm-labour release. The individual country dates are in `event_dates.csv`; the list spans Albania, Bangladesh, Belize, Brazil, Chile, China, Côte d'Ivoire, Colombia, Costa Rica, Cuba, the Dominican Republic, Algeria, Ecuador, Egypt, Spain, Fiji, Ghana, Guatemala, Guyana, Honduras, and 41 more.
+
+**A correction on the fertility ordering.** An earlier version of the source record reported "schooling before fertility" as 69%. That field (`pct_schooling_before_fertility` = 68.75 in `sequencing.json`) counts the 20 simultaneous take-offs as schooling-first and must not be cited as the ordering (the record is annotated at `subsistence-v2` @ `8caaeac`). The strict recomputation gives 24/64 = 37.5% (bootstrap 95% CI 26.6-50.0%), 20 simultaneous (31.3%), 20 fertility-first (31.3%), median gap 0 years (IQR −5 to +8); across all 81 countries with both dates it is 29/81 = 35.8% (25.9-45.7%). For release versus fertility, 4/64 = 6.25% have release first with no ties, so in 60/64 = 93.75% the fertility decline precedes the farm-labour release. The schooling-fertility ordering is therefore much weaker than the schooling-release ordering: the robust sequence in these data is schooling before release and fertility before release, not a clean schooling → fertility → release order.
 
 ### 4.3 What is new here, and what is not
 
