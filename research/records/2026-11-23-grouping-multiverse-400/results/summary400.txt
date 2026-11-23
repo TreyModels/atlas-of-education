@@ -1,0 +1,188 @@
+GROUPING MULTIVERSE, 400 RANDOM DRAWS - EMPIRICAL INFERENCE
+draws 400; empirical p floor 1/401 = 0.00249; links 272; a LONE link needs p <= 1.838e-04 (272 tests) / 3.676e-04 (136) to be certified, i.e. 5440 / 2720 draws; but BH is a step-up rule, so the 30 links tied at the floor are certified at 400 draws
+strict empirical test, BH<0.05: up 35 certified (BH272; 35 under BH136), down 19, both-spec 0, flip 15, heterogeneity 53; 30 up are at the resolution ceiling and BH rejects them through its step-up line (k*=35, p_(k*)=0.00499 <= k*alpha/n=0.00643)
+same 400 draws, normal approximation: 46 up links certified at BH272 (this is the approximation, not the draws)
+old 74-draw normal-approx reproduction: 43 significant vs old committed 43; max relative q difference 4.04e-04 (CSV rounding)
+old committed counts: beats 43, worse 21, flip 36, robust 5 of 24 survivors
+at-ceiling links (real above every one of the 400 random draws): up 30, down 19, flip 15 of 272; expected by chance 0.68; Poisson p up 1.71e-38, flip 1.2e-15, down 2.71e-21
+strong no-better-than-random (p_up>0.05: more than 20 of 400 draws at least as high): 214
+of the 43 old beats-random links: still above all 400 draws 30, moved off the ceiling 13, of which 0 now clearly no better than random
+halves (200+200): ceiling both 30, one 8, neither 234; flip-ceiling both 15, one 8; no-better agreement 211, disagreement 5; rank corr of p 0.994; null-share corr 0.9998; max share diff 0.0076
+null mean: 74 draws vs 400 draws max abs difference 0.0089
+determinism vs old 74-run: {'common_replicates': 74, 'max_abs_diff_z': 0.0, 'max_abs_diff_Qp': 0.0, 'flip_mismatches': 0, 'real_pass_z_identical': True, 'real_pass_full_identical': True}
+runtime 3710.6 s on 16 workers, 38,420,908 regressions
+
+== TIER 1 (strict): empirical p from the 400 draws + BH ==
+  certified: up 35/272 (BH272) and 35/272 (BH136 per parity); down 19; both-spec 0; flip 15
+  resolution: smallest attainable empirical p = 1/401 = 0.00249; BH line = 1.838e-04 (272) / 3.676e-04 (136)
+  a single link on its own cannot be certified at 400 draws: even beating all 400 draws gives 1/401 = 0.00249, above the first BH step 1.84e-04; a lone finding would need 5440 draws
+  but BH is a step-up rule: p_(k) <= k*0.05/272. With 30 links pinned at the floor the 14th-smallest clears its line (14*0.05/272=0.00257 > 0.00249), so BH rejects the whole floor cluster: k*=35, p_(k*)=0.00499, and 35 up links are certified
+  required draws as a function of the number j of links truly at the ceiling: R+1 >= 272/(0.05*j); j=1 -> 5440, j=5 -> 1088, j=14 -> 389, j=30 -> 182 (observed cluster 30)
+  BH bookkeeping check: q values are monotone and q >= p; statsmodels multipletests fdr_bh on the same p-values gives {'up': 35, 'dn': 19, 'flip': 15, 'matches': True}
+  old 43 beats-random under the strict test: 34 still certified, 9 not; new (not old beats): 1
+== TIER 2 (main inference): smoothed null fitted to the 400 draws ==
+  normal fit: 46 of 272 links significant (BH272), 46 (BH136); t fit (median df 157): 42 / 42; normal/t agree on 42, disagree on 4
+  old 43 re-tested under the 400-draw normal null: survive 42, die 1, new 4
+  old 21 worse-than-random re-tested: 20 of 21 still below their smoothed null; old 36 more-sign-flipping: 32 of 36 still more sign-flipping
+  verdict classes at 400 draws (smoothed null): beats random, no clear group 30, group-specific 76, no better than random 161, robust everywhere 5
+  (t version: survive 40, die 3, new 2)
+  DIED (old beats-random, now q>=0.05 with the better-estimated null): emp_agri->gpi_ter
+  NEW (not old beats-random, now q<0.05): wage_emp->u5mr, sec->wage_emp, flfp->sec, fertility->life_exp
+  halves normal fit: A 43 sig, B 49, both 42, one 8, jaccard 0.84; agreement with full400 A 267/272, B 269/272
+== TIER 3 (descriptive): above every one of the 400 draws ==
+  up 30/272 (expected by chance 0.68; Poisson p 1.7e-38), down 19, flip 15
+  nominal p<=0.05 (uncorrected): up 58 vs 13.6 expected (binomial p 7.1e-21); flip 39 (p 4.2e-09); same with the 400-draw normal fit: 60
+  binomial uncertainty of a share from 400 draws: worst-case 95% half-width 0.049; a 0/400 ceiling means the true chance is below about 0.0075 (95%).
+  share significant with the same sign (family-balanced): real median 0.091 vs random median 0.086; real above the random mean for 48.2% of the 272 links; median binomial se 0.014
+
+== old beats-random links (43): status at 400 draws ==
+  u5mr       ->life_exp    TR t  -3.0 share 0.63 null 0.48 (p95 0.53) draws>=real   0/400 ceil Y p_emp 0.0025 p_norm400 2.8e-06 q_old 8.1e-05 -> robust everywhere
+  agri_va    ->gdppc_log   TR t  -2.6 share 0.53 null 0.37 (p95 0.42) draws>=real   0/400 ceil Y p_emp 0.0025 p_norm400 2.7e-09 q_old 3.0e-07 -> robust everywhere
+  u5mr       ->ter         TR t  +2.6 share 0.43 null 0.31 (p95 0.37) draws>=real   0/400 ceil Y p_emp 0.0025 p_norm400 4.6e-04 q_old 8.3e-03 -> group-specific
+  life_exp   ->ter         TR t  -2.7 share 0.40 null 0.28 (p95 0.33) draws>=real   0/400 ceil Y p_emp 0.0025 p_norm400 3.7e-04 q_old 5.6e-03 -> group-specific
+  u5mr       ->gpi_sec     TR t  -1.9 share 0.37 null 0.24 (p95 0.30) draws>=real   0/400 ceil Y p_emp 0.0025 p_norm400 2.3e-04 q_old 4.9e-03 -> group-specific
+  ter        ->fertility   TR t  +1.9 share 0.36 null 0.20 (p95 0.25) draws>=real   0/400 ceil Y p_emp 0.0025 p_norm400 1.3e-07 q_old 2.1e-06 -> beats random, no clear group
+  urban      ->fertility   TR t  -2.1 share 0.30 null 0.20 (p95 0.26) draws>=real   0/400 ceil Y p_emp 0.0025 p_norm400 7.8e-04 q_old 4.0e-03 -> group-specific
+  u5mr       ->urban       TR t  -0.8 share 0.27 null 0.09 (p95 0.14) draws>=real   0/400 ceil Y p_emp 0.0025 p_norm400 3.1e-11 q_old 8.3e-08 -> group-specific
+  electricity->agri_va     TR t  +2.0 share 0.26 null 0.18 (p95 0.23) draws>=real   0/400 ceil Y p_emp 0.0025 p_norm400 2.0e-03 q_old 1.6e-02 -> beats random, no clear group
+  tax        ->gdppc_log   TR t  -1.7 share 0.25 null 0.21 (p95 0.24) draws>=real   4/400 ceil - p_emp 0.0125 p_norm400 6.4e-03 q_old 2.8e-02 -> group-specific
+  electricity->tax         TR t  -0.4 share 0.25 null 0.17 (p95 0.22) draws>=real   1/400 ceil - p_emp 0.0050 p_norm400 2.2e-03 q_old 4.9e-03 -> group-specific
+  life_exp   ->gpi_sec     TR t  +0.9 share 0.25 null 0.10 (p95 0.15) draws>=real   0/400 ceil Y p_emp 0.0025 p_norm400 1.8e-07 q_old 3.3e-06 -> beats random, no clear group
+  gdppc_log  ->wage_emp    TR t  +1.8 share 0.24 null 0.14 (p95 0.19) draws>=real   0/400 ceil Y p_emp 0.0025 p_norm400 7.2e-04 q_old 8.3e-03 -> beats random, no clear group
+  sec        ->lsc         TR t  -1.3 share 0.23 null 0.13 (p95 0.18) draws>=real   1/400 ceil - p_emp 0.0050 p_norm400 5.9e-04 q_old 6.5e-03 -> beats random, no clear group
+  fertility  ->agri_va     TR t  +0.4 share 0.22 null 0.10 (p95 0.14) draws>=real   0/400 ceil Y p_emp 0.0025 p_norm400 1.8e-06 q_old 9.6e-06 -> group-specific
+  sec        ->electricity TR t  +1.3 share 0.22 null 0.07 (p95 0.11) draws>=real   0/400 ceil Y p_emp 0.0025 p_norm400 3.7e-10 q_old 1.7e-09 -> group-specific
+  fertility  ->emp_agri    TR t  +1.0 share 0.20 null 0.06 (p95 0.10) draws>=real   0/400 ceil Y p_emp 0.0025 p_norm400 1.9e-10 q_old 3.6e-08 -> group-specific
+  life_exp   ->urban       TR t  +0.7 share 0.19 null 0.11 (p95 0.16) draws>=real   4/400 ceil - p_emp 0.0125 p_norm400 2.6e-03 q_old 4.3e-02 -> beats random, no clear group
+  lsc        ->prm_cmp     TR t  -1.2 share 0.18 null 0.10 (p95 0.14) draws>=real   1/400 ceil - p_emp 0.0050 p_norm400 1.8e-04 q_old 6.7e-04 -> group-specific
+  electricity->u5mr        TR t  +1.6 share 0.18 null 0.10 (p95 0.14) draws>=real   0/400 ceil Y p_emp 0.0025 p_norm400 9.0e-04 q_old 1.0e-02 -> group-specific
+  emp_agri   ->gpi_ter     TR t  +0.8 share 0.17 null 0.11 (p95 0.16) draws>=real  13/400 ceil - p_emp 0.0349 p_norm400 1.5e-02 q_old 4.1e-02 -> no better than random
+  tax        ->gpi_ter     TR t  +0.2 share 0.16 null 0.08 (p95 0.12) draws>=real   4/400 ceil - p_emp 0.0125 p_norm400 1.1e-03 q_old 4.9e-02 -> beats random, no clear group
+  electricity->lsc         TR t  +0.5 share 0.16 null 0.03 (p95 0.06) draws>=real   0/400 ceil Y p_emp 0.0025 p_norm400 1.0e-12 q_old 1.4e-10 -> group-specific
+  electricity->gdppc_log   TR t  -1.2 share 0.15 null 0.09 (p95 0.13) draws>=real   0/400 ceil Y p_emp 0.0025 p_norm400 2.7e-03 q_old 1.6e-02 -> group-specific
+  electricity->ter         TR t  -1.1 share 0.15 null 0.03 (p95 0.06) draws>=real   0/400 ceil Y p_emp 0.0025 p_norm400 1.0e-12 q_old 1.4e-10 -> group-specific
+  agri_va    ->ter         TR t  -0.5 share 0.14 null 0.05 (p95 0.08) draws>=real   0/400 ceil Y p_emp 0.0025 p_norm400 6.7e-08 q_old 3.0e-07 -> group-specific
+  gpi_ter    ->urban       TR t  -1.1 share 0.14 null 0.06 (p95 0.09) draws>=real   0/400 ceil Y p_emp 0.0025 p_norm400 7.1e-06 q_old 1.0e-04 -> beats random, no clear group
+  gdppc_log  ->electricity TR t  +1.1 share 0.14 null 0.04 (p95 0.07) draws>=real   0/400 ceil Y p_emp 0.0025 p_norm400 5.7e-10 q_old 3.0e-07 -> group-specific
+  tax        ->urban       TR t  -0.5 share 0.13 null 0.06 (p95 0.10) draws>=real   3/400 ceil - p_emp 0.0100 p_norm400 9.3e-04 q_old 1.1e-02 -> beats random, no clear group
+  agri_va    ->electricity TR t  -0.6 share 0.12 null 0.06 (p95 0.10) draws>=real   5/400 ceil - p_emp 0.0150 p_norm400 4.0e-03 q_old 4.7e-02 -> beats random, no clear group
+  fertility  ->gpi_sec     TR t  +0.5 share 0.12 null 0.04 (p95 0.06) draws>=real   0/400 ceil Y p_emp 0.0025 p_norm400 8.2e-08 q_old 2.1e-07 -> group-specific
+  gdppc_log  ->prm_cmp     TR t  +0.4 share 0.12 null 0.05 (p95 0.09) draws>=real   0/400 ceil Y p_emp 0.0025 p_norm400 9.7e-04 q_old 9.9e-03 -> beats random, no clear group
+  gdppc_log  ->life_exp    TR t  -0.5 share 0.11 null 0.05 (p95 0.08) draws>=real   0/400 ceil Y p_emp 0.0025 p_norm400 4.9e-04 q_old 5.2e-03 -> group-specific
+  electricity->urban       TR t  -0.4 share 0.11 null 0.03 (p95 0.05) draws>=real   0/400 ceil Y p_emp 0.0025 p_norm400 6.4e-09 q_old 5.6e-08 -> beats random, no clear group
+  agri_va    ->prm_cmp     TR t  +0.3 share 0.10 null 0.04 (p95 0.08) draws>=real   0/400 ceil Y p_emp 0.0025 p_norm400 8.4e-04 q_old 3.2e-03 -> beats random, no clear group
+  gpi_ter    ->gdppc_log   TR t  +0.2 share 0.10 null 0.05 (p95 0.08) draws>=real   8/400 ceil - p_emp 0.0224 p_norm400 5.7e-03 q_old 7.7e-03 -> group-specific
+  flfp       ->gdppc_log   TR t  +0.7 share 0.09 null 0.02 (p95 0.05) draws>=real   0/400 ceil Y p_emp 0.0025 p_norm400 2.1e-06 q_old 3.2e-05 -> group-specific
+  life_exp   ->flfp        TR t  -1.1 share 0.09 null 0.02 (p95 0.04) draws>=real   0/400 ceil Y p_emp 0.0025 p_norm400 2.8e-07 q_old 3.1e-06 -> beats random, no clear group
+  urban      ->life_exp    TR t  +0.0 share 0.09 null 0.02 (p95 0.05) draws>=real   0/400 ceil Y p_emp 0.0025 p_norm400 1.7e-06 q_old 4.1e-05 -> group-specific
+  gpi_sec    ->emp_agri    TR t  -0.0 share 0.08 null 0.02 (p95 0.04) draws>=real   0/400 ceil Y p_emp 0.0025 p_norm400 4.1e-09 q_old 8.4e-08 -> beats random, no clear group
+  agri_va    ->fertility   TR t  -0.1 share 0.08 null 0.03 (p95 0.06) draws>=real   1/400 ceil - p_emp 0.0050 p_norm400 8.2e-04 q_old 3.2e-03 -> beats random, no clear group
+  sec        ->gdppc_log   TR t  -0.2 share 0.07 null 0.03 (p95 0.05) draws>=real   5/400 ceil - p_emp 0.0150 p_norm400 4.2e-03 q_old 1.2e-02 -> beats random, no clear group
+  gpi_ter    ->electricity TR t  +0.4 share 0.06 null 0.03 (p95 0.05) draws>=real   9/400 ceil - p_emp 0.0249 p_norm400 7.9e-03 q_old 4.6e-02 -> beats random, no clear group
+
+== old worse-than-random links (21) ==
+  flfp       ->prm_cmp     share 0.01 null 0.08 draws<=real   0/400 p_dn 0.0025 ceil_dn Y q_old 2.8e-02
+  fertility  ->ter         share 0.01 null 0.08 draws<=real   0/400 p_dn 0.0025 ceil_dn Y q_old 2.8e-02
+  tax        ->emp_agri    share 0.04 null 0.15 draws<=real   0/400 p_dn 0.0025 ceil_dn Y q_old 2.6e-07
+  tax        ->electricity share 0.05 null 0.15 draws<=real   0/400 p_dn 0.0025 ceil_dn Y q_old 6.7e-04
+  prm_cmp    ->gdppc_log   share 0.05 null 0.13 draws<=real   1/400 p_dn 0.0050 ceil_dn - q_old 2.8e-02
+  emp_agri   ->flfp        share 0.08 null 0.20 draws<=real   1/400 p_dn 0.0050 ceil_dn - q_old 3.7e-03
+  flfp       ->u5mr        share 0.10 null 0.26 draws<=real   0/400 p_dn 0.0025 ceil_dn Y q_old 5.7e-07
+  emp_agri   ->lsc         share 0.15 null 0.23 draws<=real   1/400 p_dn 0.0050 ceil_dn - q_old 2.9e-02
+  u5mr       ->gdppc_log   share 0.16 null 0.27 draws<=real   0/400 p_dn 0.0025 ceil_dn Y q_old 1.6e-02
+  emp_agri   ->u5mr        share 0.16 null 0.34 draws<=real   0/400 p_dn 0.0025 ceil_dn Y q_old 2.6e-07
+  wage_emp   ->gdppc_log   share 0.18 null 0.29 draws<=real   0/400 p_dn 0.0025 ceil_dn Y q_old 2.9e-02
+  sec        ->ter         share 0.19 null 0.31 draws<=real   0/400 p_dn 0.0025 ceil_dn Y q_old 8.3e-03
+  fertility  ->prm_cmp     share 0.25 null 0.39 draws<=real   0/400 p_dn 0.0025 ceil_dn Y q_old 1.2e-03
+  urban      ->sec         share 0.28 null 0.37 draws<=real   0/400 p_dn 0.0025 ceil_dn Y q_old 1.6e-02
+  fertility  ->electricity share 0.34 null 0.43 draws<=real   0/400 p_dn 0.0025 ceil_dn Y q_old 1.2e-03
+  fertility  ->sec         share 0.34 null 0.43 draws<=real   0/400 p_dn 0.0025 ceil_dn Y q_old 2.0e-02
+  fertility  ->gdppc_log   share 0.37 null 0.53 draws<=real   0/400 p_dn 0.0025 ceil_dn Y q_old 6.7e-05
+  electricity->emp_agri    share 0.39 null 0.52 draws<=real   0/400 p_dn 0.0025 ceil_dn Y q_old 1.2e-03
+  fertility  ->lsc         share 0.45 null 0.57 draws<=real   1/400 p_dn 0.0050 ceil_dn - q_old 1.4e-02
+  prm_cmp    ->agri_va     share 0.46 null 0.53 draws<=real   6/400 p_dn 0.0175 ceil_dn - q_old 3.9e-02
+  life_exp   ->fertility   share 0.81 null 0.93 draws<=real   0/400 p_dn 0.0025 ceil_dn Y q_old 8.6e-09
+
+== old more-sign-flipping links (36) ==
+  u5mr       ->ter         flip real 0.04 null 0.00 draws<=real 385/400 p 0.0399 ceilF - q_old 2.2e-04
+  ter        ->electricity flip real 0.05 null 0.01 draws<=real 394/400 p 0.0175 ceilF - q_old 1.2e-04
+  flfp       ->u5mr        flip real 0.05 null 0.00 draws<=real 399/400 p 0.0050 ceilF - q_old 2.5e-11
+  ter        ->agri_va     flip real 0.06 null 0.00 draws<=real 399/400 p 0.0050 ceilF - q_old 1.6e-06
+  gdppc_log  ->u5mr        flip real 0.06 null 0.00 draws<=real 399/400 p 0.0050 ceilF - q_old 5.4e-05
+  sec        ->wage_emp    flip real 0.06 null 0.01 draws<=real 391/400 p 0.0324 ceilF - q_old 3.0e-02
+  electricity->wage_emp    flip real 0.07 null 0.02 draws<=real 383/400 p 0.0449 ceilF - q_old 1.4e-02
+  u5mr       ->gpi_ter     flip real 0.07 null 0.01 draws<=real 395/400 p 0.0224 ceilF - q_old 2.8e-02
+  gpi_ter    ->u5mr        flip real 0.07 null 0.01 draws<=real 396/400 p 0.0125 ceilF - q_old 6.5e-04
+  electricity->emp_agri    flip real 0.07 null 0.00 draws<=real 400/400 p 0.0025 ceilF Y q_old 2.5e-11
+  life_exp   ->flfp        flip real 0.07 null 0.00 draws<=real 399/400 p 0.0050 ceilF - q_old 1.5e-06
+  ter        ->prm_cmp     flip real 0.08 null 0.01 draws<=real 399/400 p 0.0050 ceilF - q_old 1.2e-04
+  electricity->urban       flip real 0.09 null 0.02 draws<=real 395/400 p 0.0150 ceilF - q_old 3.0e-02
+  emp_agri   ->urban       flip real 0.10 null 0.02 draws<=real 398/400 p 0.0075 ceilF - q_old 2.7e-03
+  electricity->life_exp    flip real 0.11 null 0.01 draws<=real 398/400 p 0.0075 ceilF - q_old 9.8e-09
+  prm_cmp    ->gpi_sec     flip real 0.11 null 0.00 draws<=real 400/400 p 0.0025 ceilF Y q_old 2.5e-11
+  prm_cmp    ->fertility   flip real 0.12 null 0.02 draws<=real 398/400 p 0.0075 ceilF - q_old 2.0e-04
+  prm_cmp    ->electricity flip real 0.12 null 0.02 draws<=real 400/400 p 0.0025 ceilF Y q_old 4.9e-05
+  electricity->gpi_sec     flip real 0.12 null 0.01 draws<=real 400/400 p 0.0025 ceilF Y q_old 2.5e-11
+  prm_cmp    ->u5mr        flip real 0.13 null 0.01 draws<=real 398/400 p 0.0075 ceilF - q_old 1.6e-04
+  flfp       ->gdppc_log   flip real 0.13 null 0.02 draws<=real 400/400 p 0.0025 ceilF Y q_old 8.8e-06
+  flfp       ->agri_va     flip real 0.14 null 0.00 draws<=real 400/400 p 0.0025 ceilF Y q_old 2.5e-11
+  electricity->agri_va     flip real 0.14 null 0.02 draws<=real 400/400 p 0.0025 ceilF Y q_old 1.8e-07
+  fertility  ->life_exp    flip real 0.15 null 0.02 draws<=real 398/400 p 0.0075 ceilF - q_old 8.7e-07
+  flfp       ->gpi_sec     flip real 0.15 null 0.04 draws<=real 398/400 p 0.0075 ceilF - q_old 6.8e-03
+  gdppc_log  ->life_exp    flip real 0.17 null 0.02 draws<=real 400/400 p 0.0025 ceilF Y q_old 2.5e-11
+  fertility  ->gpi_sec     flip real 0.19 null 0.08 draws<=real 395/400 p 0.0150 ceilF - q_old 3.4e-02
+  life_exp   ->gpi_sec     flip real 0.20 null 0.05 draws<=real 399/400 p 0.0050 ceilF - q_old 2.4e-04
+  u5mr       ->urban       flip real 0.21 null 0.04 draws<=real 400/400 p 0.0025 ceilF Y q_old 2.3e-06
+  electricity->u5mr        flip real 0.21 null 0.02 draws<=real 400/400 p 0.0025 ceilF Y q_old 2.5e-11
+  electricity->gpi_ter     flip real 0.22 null 0.02 draws<=real 400/400 p 0.0025 ceilF Y q_old 2.5e-11
+  gdppc_log  ->emp_agri    flip real 0.22 null 0.01 draws<=real 400/400 p 0.0025 ceilF Y q_old 2.5e-11
+  electricity->gdppc_log   flip real 0.23 null 0.01 draws<=real 400/400 p 0.0025 ceilF Y q_old 2.5e-11
+  gdppc_log  ->wage_emp    flip real 0.24 null 0.04 draws<=real 400/400 p 0.0025 ceilF Y q_old 6.7e-08
+  electricity->tax         flip real 0.30 null 0.04 draws<=real 400/400 p 0.0025 ceilF Y q_old 2.5e-11
+  gpi_sec    ->tax         flip real 0.38 null 0.21 draws<=real 393/400 p 0.0200 ceilF - q_old 3.0e-02
+
+== 24 base-matrix survivors ==
+  sec        ->ter         share 0.19 fam_min 0.07 flip 0.00 nullflip 0.01 robust - old c_no_better_than_random -> no better than random
+  sec        ->agri_va     share 0.47 fam_min 0.30 flip 0.00 nullflip 0.00 robust - old c_no_better_than_random -> no better than random
+  ter        ->lsc         share 0.27 fam_min 0.08 flip 0.00 nullflip 0.00 robust - old c_no_better_than_random -> no better than random
+  ter        ->prm_cmp     share 0.13 fam_min 0.00 flip 0.08 nullflip 0.01 robust - old c_no_better_than_random -> no better than random
+  prm_cmp    ->gpi_sec     share 0.53 fam_min 0.00 flip 0.11 nullflip 0.00 robust - old b_group_specific -> group-specific
+  gdppc_log  ->sec         share 0.19 fam_min 0.08 flip 0.00 nullflip 0.01 robust - old c_no_better_than_random -> no better than random
+  gdppc_log  ->urban       share 0.52 fam_min 0.25 flip 0.00 nullflip 0.00 robust Y old a_robust_everywhere -> robust everywhere
+  urban      ->sec         share 0.28 fam_min 0.00 flip 0.04 nullflip 0.02 robust - old c_no_better_than_random -> no better than random
+  tax        ->agri_va     share 0.29 fam_min 0.04 flip 0.12 nullflip 0.18 robust - old c_no_better_than_random -> no better than random
+  agri_va    ->gdppc_log   share 0.53 fam_min 0.51 flip 0.01 nullflip 0.01 robust Y old a_robust_everywhere -> robust everywhere
+  emp_agri   ->tax         share 0.29 fam_min 0.18 flip 0.04 nullflip 0.03 robust - old c_no_better_than_random -> no better than random
+  life_exp   ->electricity share 0.12 fam_min 0.00 flip 0.00 nullflip 0.01 robust - old c_no_better_than_random -> no better than random
+  life_exp   ->gdppc_log   share 0.31 fam_min 0.28 flip 0.00 nullflip 0.01 robust - old c_no_better_than_random -> no better than random
+  life_exp   ->gpi_ter     share 0.31 fam_min 0.00 flip 0.00 nullflip 0.02 robust - old b_group_specific -> group-specific
+  life_exp   ->fertility   share 0.81 fam_min 0.58 flip 0.00 nullflip 0.00 robust Y old a_robust_everywhere -> robust everywhere
+  u5mr       ->life_exp    share 0.63 fam_min 0.44 flip 0.00 nullflip 0.00 robust Y old a_robust_everywhere -> robust everywhere
+  u5mr       ->gpi_ter     share 0.47 fam_min 0.37 flip 0.07 nullflip 0.01 robust - old b_group_specific -> group-specific
+  u5mr       ->fertility   share 0.95 fam_min 0.85 flip 0.00 nullflip 0.00 robust Y old a_robust_everywhere -> robust everywhere
+  gpi_ter    ->lsc         share 0.13 fam_min 0.00 flip 0.00 nullflip 0.04 robust - old c_no_better_than_random -> no better than random
+  fertility  ->electricity share 0.34 fam_min 0.03 flip 0.00 nullflip 0.00 robust - old c_no_better_than_random -> no better than random
+  fertility  ->lsc         share 0.45 fam_min 0.22 flip 0.00 nullflip 0.00 robust - old c_no_better_than_random -> no better than random
+  fertility  ->sec         share 0.34 fam_min 0.22 flip 0.00 nullflip 0.01 robust - old b_group_specific -> no better than random
+  fertility  ->prm_cmp     share 0.25 fam_min 0.14 flip 0.00 nullflip 0.01 robust - old c_no_better_than_random -> no better than random
+  fertility  ->gdppc_log   share 0.37 fam_min 0.15 flip 0.00 nullflip 0.00 robust - old b_group_specific -> group-specific
+
+== new verdict counts ==
+  beats random, no clear group               30
+  group-specific                             76
+  no better than random                      161
+  robust everywhere                          5
+
+== explicit changes of verdict category ==
+  BEATS-RANDOM lost: wage_emp->emp_agri -> no better than random
+  BEATS-RANDOM gained: wage_emp->u5mr (share 0.14, old share-vs-null was not significant)
+  BEATS-RANDOM lost: lsc->gdppc_log -> no better than random
+  GROUP-SPECIFIC lost: sec->fertility -> beats random, no clear group
+  BEATS-RANDOM gained: gdppc_log->flfp (share 0.06, old share-vs-null was not significant)
+  GROUP-SPECIFIC lost: tax->emp_agri -> no better than random
+  GROUP-SPECIFIC lost: emp_agri->gpi_ter -> no better than random
+  BEATS-RANDOM gained: flfp->wage_emp (share 0.03, old share-vs-null was not significant)
+  BEATS-RANDOM gained: flfp->sec (share 0.11, old share-vs-null was not significant)
+  GROUP-SPECIFIC lost: gpi_ter->ter -> no better than random
+  GROUP-SPECIFIC lost: gpi_ter->u5mr -> no better than random
+  GROUP-SPECIFIC lost: fertility->sec -> no better than random

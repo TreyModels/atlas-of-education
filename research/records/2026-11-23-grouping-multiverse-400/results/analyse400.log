@@ -1,0 +1,19 @@
+GROUPING MULTIVERSE, 400 RANDOM DRAWS - EMPIRICAL INFERENCE
+draws 400; empirical p floor 1/401 = 0.00249; links 272; a LONE link needs p <= 1.838e-04 (272 tests) / 3.676e-04 (136) to be certified, i.e. 5440 / 2720 draws; but BH is a step-up rule, so the 30 links tied at the floor are certified at 400 draws
+strict empirical test, BH<0.05: up 35 certified (BH272; 35 under BH136), down 19, both-spec 0, flip 15, heterogeneity 53; 30 up are at the resolution ceiling and BH rejects them through its step-up line (k*=35, p_(k*)=0.00499 <= k*alpha/n=0.00643)
+same 400 draws, normal approximation: 46 up links certified at BH272 (this is the approximation, not the draws)
+old 74-draw normal-approx reproduction: 43 significant vs old committed 43; max relative q difference 4.04e-04 (CSV rounding)
+old committed counts: beats 43, worse 21, flip 36, robust 5 of 24 survivors
+at-ceiling links (real above every one of the 400 random draws): up 30, down 19, flip 15 of 272; expected by chance 0.68; Poisson p up 1.71e-38, flip 1.2e-15, down 2.71e-21
+strong no-better-than-random (p_up>0.05: more than 20 of 400 draws at least as high): 214
+of the 43 old beats-random links: still above all 400 draws 30, moved off the ceiling 13, of which 0 now clearly no better than random
+halves (200+200): ceiling both 30, one 8, neither 234; flip-ceiling both 15, one 8; no-better agreement 211, disagreement 5; rank corr of p 0.994; null-share corr 0.9998; max share diff 0.0076
+null mean: 74 draws vs 400 draws max abs difference 0.0089
+determinism vs old 74-run: {'common_replicates': 74, 'max_abs_diff_z': 0.0, 'max_abs_diff_Qp': 0.0, 'flip_mismatches': 0, 'real_pass_z_identical': True, 'real_pass_full_identical': True}
+runtime 3710.6 s on 16 workers, 38,420,908 regressions
+
+== TIER 1 (strict): empirical p from the 400 draws + BH ==
+  certified: up 35/272 (BH272) and 35/272 (BH136 per parity); down 19; both-spec 0; flip 15
+  resolution: smallest attainable empirical p = 1/401 = 0.00249; BH line = 1.838e-04 (272) / 3.676e-04 (136)
+  a single link on its own cannot be certified at 400 draws: even beating all 400 draws gives 1/401 = 0.00249, above the first BH step 1.84e-04; a lone finding would need 5440 draws
+... wrote out/results400

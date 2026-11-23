@@ -1,0 +1,12 @@
+DETERMINISM CHECKS (falsifier a)
+(a) same code, same seed, fresh process -> identical output?
+  replicate 7: recomputed in 34.4s  identical=True  max|dz|=0.00e+00  max|dQp|=0.00e+00  flip mismatches=0
+  replicate 250: recomputed in 34.7s  identical=True  max|dz|=0.00e+00  max|dQp|=0.00e+00  flip mismatches=0
+  replicate 400: recomputed in 37.0s  identical=True  max|dz|=0.00e+00  max|dQp|=0.00e+00  flip mismatches=0
+  real-grouping pass: recomputed in 41.5s  pooled b identical=True  all 179 cells identical=True
+
+(b) cross-run: earlier 74-replicate run, same seeds (1000+r)
+  overlapping replicates: 74  z mismatches: 0  max|dz|=0.00e+00  max|dQp|=0.00e+00  flip mismatches: 0
+  real-grouping pass identical to old run: True
+
+total check time 148s
