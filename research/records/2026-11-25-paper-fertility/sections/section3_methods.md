@@ -53,6 +53,8 @@ association is not identified.
 
 Every workstream was pre-registered before its analysis code ran: specification grid, sample splits, bootstrap
 counts, and decision thresholds were committed to the branch before the runs, and the paper cites the commits.
+The rules used in this paper are compiled, with their provenance commits, in `PREREGISTRATION.md` on this record
+(a dated compilation, not a new pre-registration).
 Every number traces to a record path (branch @ commit, file, field) in `data/claims_sources.csv`; each record's
 README states its deviations (unreachable sources, estimable-cell counts, load-driven extensions) rather than
 hiding them. The synthesis's conventions: bold in tables means |t| > 1.96; "significant" means the
