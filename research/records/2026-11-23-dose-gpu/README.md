@@ -97,12 +97,11 @@ recovery evidence.
 
 ### Methods finding: the previous fitting code was arithmetically broken
 The particle population's importance weights collapsed to a single draw: the largest weight was **0.995 of
-the total and the effective sample size was 1.01 of 600 kept draws** in scenario A, and 4.79 in scenario B.
-Cause: the particle density was accumulated in linear space; with a 31-dimensional parameter vector the
-exponential underflows to exactly zero for distant particles, every collapsed particle receives the same
-maximum weight, and one of them takes all the mass. Recomputing the same quantity in log space did **not**
-rescue it (effective sample size 2.5 of 600), because the prior-over-proposal ratio is genuinely explosive
-in 31 dimensions. The fix was to abandon importance weights: draw from the prior, keep every draw within a
+the total and the effective sample size 1.01 of 600 kept draws** in scenario A, 4.79 in scenario B. Cause:
+the particle density was accumulated in linear space; with a 31-dimensional parameter vector the exponential
+underflows to zero for distant particles, every collapsed particle receives the same maximum weight, and one
+takes all the mass. Recomputing in log space did **not** rescue it (2.5 of 600): the prior-over-proposal
+ratio is genuinely explosive in 31 dimensions. The fix was to abandon importance weights: draw from the prior, keep every draw within a
 fixed distance, give every kept draw equal weight (effective sample size = number of accepted draws by
 construction). All numbers above come from that equal-weight run. **Implication: last session's
 "posterior indistinguishable from the prior" was at least partly this arithmetic failure, so the earlier
@@ -111,35 +110,29 @@ posterior intervals should not be read as evidence about the model.**
 ## The GPU engine
 The kernel reproduces its own reference exactly: for the same seed and parameter vector, woman-level states
 (married, separated, parity, age at marriage, births by 30 and 35, age at first birth) agree with maximum
-absolute difference 0 and zero mismatched women over 6 configurations, and the four fitted target series
-differ by 0.0 (`results/port_test.json`). Throughput: on the T4, about **2.0 million simulated women per second** (1.9-2.2 million at 320 thousand
+absolute difference 0, zero mismatched women over 6 configurations, and target series differing by 0.0. Throughput: on the T4, about **2.0 million simulated women per second** (1.9-2.2 million at 320 thousand
 to 1.3 million women per launch); on the RTX 2080 Ti, **5.8 million women per second** at 10.1 million
 women in one launch (1.75 s), which is 143 parameter draws per second and 1.1 GB of engine state. One
 parameter draw of 24 runs costs 12.5 ms on the T4. Callable interface in `scripts/abm_dose.py`,
 deterministic for a given seed (`results/bench_scale_2080ti.log`).
 
-It is a **different engine** from the published one in its marriage market (a deterministic priority claim
-instead of a serial random permutation), and that difference is measured, not assumed: with 200 seeds per
-country it marries women -0.21 years differently on average (t = -5.4) at the two-round setting, +0.09 at
-one round, unchanged at three or four, varying by country and period (Philippines -0.19 to -0.58, China
--0.04 to -0.22, Egypt -0.08 to -0.23), while total and adolescent fertility are indistinguishable
-(`results/PORT_NOTES.md`, `results/market_bias_postfix_17-31.json`). It is therefore **not a rerun of the
-published model and no bias correction is applied**: it is the second engine that tests whether the
-A-versus-B verdict depends on the engine. The identical A/B protocol was then run on this engine as the kill test for the market channel:
+It is a **different engine** in its marriage market (a deterministic priority claim instead of a serial
+random permutation), and the difference is measured, not assumed: with 200 seeds per country it marries
+women -0.21 years differently on average (t = -5.4) at the two-round setting, +0.09 at one round, unchanged
+at three or four, varying by country and period, while total and adolescent fertility are indistinguishable
+(`results/PORT_NOTES.md`). It is **not a rerun of the published model and no bias correction is applied**;
+its role is to test whether the A-versus-B verdict depends on the engine. The identical A/B protocol was then run on this engine as the kill test for the market channel:
 it gives **A 25.5 against B 21.7, difference +3.8 with 95% interval -2.6 to +12.0, A better in 3 of 6
 held-out countries** — indistinguishable from the exact engine's +3.3 (-3.8 to +11.1, 3 of 6). **The
 A-versus-B verdict does not depend on the engine**, so the null in section (1) is not an artefact of the
 GPU market's semantics. Both engines' fits are 3,000 and 5,000 prior draws respectively at the same
 tolerance, and the comparison is a paired out-of-sample contest on the same six countries.
 
-## What is weak
-The fit is poor in absolute terms for every scenario. The tolerance is the prior-predictive 20th percentile
-because stricter tolerances returned an empty posterior (zero of 750 prior draws reached the pilot
-tolerance), so the posteriors are coarse ABC summaries, not posterior-precision claims. Six held-out
-countries is a small sample for the comparison in (1). The delayed-versus-never-born split is a structural
-property of the model, not an estimate. The GPU engine's market semantics are disclosed and not corrected.
-The equal-weight tolerance is loose by construction, and the individuation posterior's advantage in-sample
-does not translate out of sample.
+## Limits
+The fit is poor in absolute terms; the tolerance is the prior-predictive 20th percentile because stricter
+tolerances returned an empty posterior (zero of 750 prior draws reached the pilot tolerance), so these are
+coarse ABC summaries, not posterior-precision claims; six held-out countries is a small sample; and the
+delayed-versus-never-born split is a structural property of the model rather than an estimate.
 
 ## Files
 `scripts/`: `kernel.cu`, `engine.py`, `dosecore.py`, `abm_dose.py`, `bench_scale.py` (the GPU engine, its
