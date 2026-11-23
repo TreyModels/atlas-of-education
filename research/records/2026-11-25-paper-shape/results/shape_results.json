@@ -1,0 +1,522 @@
+{
+ "data": {
+  "source": "World Bank WDI annual 1960-2023, pulled fresh 25 Nov 2026",
+  "countries": 217,
+  "transition_countries": 105,
+  "transition_rule": ">=40 annual TFR observations; peak TFR >= 4.0; fall >= 1.5; floor <= 3.2; duration 1-70 years"
+ },
+ "shape_descriptors": {
+  "onset": {
+   "median": 1967.0,
+   "iqr": [
+    1964.0,
+    1970.0
+   ],
+   "mean": 1968.3333333333333,
+   "sd": 5.722201477018242,
+   "p10": 1963.0,
+   "p90": 1977.0
+  },
+  "midpoint": {
+   "median": 1982.0,
+   "iqr": [
+    1976.0,
+    1990.0
+   ],
+   "mean": 1983.3809523809523,
+   "sd": 8.933925134845172,
+   "p10": 1973.0,
+   "p90": 1995.0
+  },
+  "duration": {
+   "median": 35.0,
+   "iqr": [
+    28.0,
+    41.0
+   ],
+   "mean": 34.15238095238095,
+   "sd": 9.892480586848384,
+   "p10": 20.4,
+   "p90": 47.0
+  },
+  "speed": {
+   "median": 0.18963999999999998,
+   "iqr": [
+    0.15696000000000004,
+    0.23235999999999998
+   ],
+   "mean": 0.20781333333333332,
+   "sd": 0.07704188085144473,
+   "p10": 0.13787199999999997,
+   "p90": 0.308808
+  },
+  "floor": {
+   "median": 1.948,
+   "iqr": [
+    1.5550000000000002,
+    2.446
+   ],
+   "mean": 1.9844,
+   "sd": 0.567832117659924,
+   "p10": 1.37056,
+   "p90": 2.79412
+  },
+  "fall": {
+   "median": 4.347200000000001,
+   "iqr": [
+    3.6673333333333336,
+    4.896599999999999
+   ],
+   "mean": 4.293050634920635,
+   "sd": 0.8237392491676301,
+   "p10": 3.2170533333333333,
+   "p90": 5.362266666666667
+  },
+  "curvature": {
+   "median": 1.380443823613448,
+   "iqr": [
+    1.1722194821208372,
+    1.832443612725303
+   ],
+   "mean": 1.606545515471569,
+   "sd": 0.6268565743893828,
+   "p10": 1.0577430566248247,
+   "p90": 2.3990301320440075
+  }
+ },
+ "functional_forms": {
+  "best_form_counts": {
+   "exponential": 51,
+   "gompertz": 30,
+   "linear_kink": 15,
+   "logistic": 7,
+   "spline": 2
+  },
+  "mean_holdout_rmse": {
+   "logistic": 0.4756367973575938,
+   "gompertz": 0.3564564924230756,
+   "exponential": 0.3072609134581947,
+   "linear_kink": 0.39427991903580295
+  },
+  "note": "AIC/BIC from full-series fits; hold-out fits 1960-2012 and predicts 2013-2023"
+ },
+ "path_uniformity": {
+  "curve_pca_var": [
+   1.0,
+   1.3287201497988694e-33,
+   1.5628642950314015e-65
+  ],
+  "across_country_sd_by_grid": [
+   0.01714906382284556,
+   0.01714906382284556,
+   0.01714906382284556,
+   0.01714906382284556,
+   0.01714906382284556,
+   0.01714906382284556,
+   0.01714906382284556,
+   0.01714906382284556,
+   0.01714906382284556,
+   0.01714906382284556,
+   0.01714906382284556
+  ],
+  "mean_abs_deviation_from_mean_curve": 0.010831289339110803,
+  "note": "aligned curves share onset and 10%-remaining endpoints; low residual variation means the decline PATH is a near-universal family and heterogeneity is in timing/pace/level"
+ },
+ "clustering": {
+  "k_best": 2,
+  "silhouette": 0.274880139753241,
+  "silhouette_by_k": {
+   "2": 0.274880139753241,
+   "3": 0.2393287557376279,
+   "4": 0.26049675119454874,
+   "5": 0.21925781856540527,
+   "6": 0.23277176317892562
+  },
+  "descriptor_pca_var": [
+   0.4349948911728046,
+   0.2617964418889266,
+   0.1497952745468082
+  ],
+  "null_test": {
+   "random_partition_p": 0.0,
+   "null_mean": 0.00010805957395440252,
+   "null_sd": 0.008823177921265983,
+   "draws": 500
+  },
+  "cluster_profiles": {
+   "0": {
+    "n": 58,
+    "mean": {
+     "onset": 1964.7068965517242,
+     "midpoint": 1977.4137931034484,
+     "duration": 37.241379310344826,
+     "speed": 0.2192158620689655,
+     "floor": 1.6824999999999999,
+     "curvature": 1.8891130611236264
+    },
+    "example_countries": [
+     "Aruba",
+     "Albania",
+     "Armenia",
+     "American Samoa",
+     "Antigua and Barbuda",
+     "Azerbaijan",
+     "Bahrain",
+     "Bahamas, The",
+     "Brazil",
+     "Barbados"
+    ]
+   },
+   "1": {
+    "n": 47,
+    "mean": {
+     "onset": 1972.8085106382978,
+     "midpoint": 1990.7446808510638,
+     "duration": 30.340425531914892,
+     "speed": 0.19374212765957458,
+     "floor": 2.356957446808511,
+     "curvature": 1.2578451399860515
+    },
+    "example_countries": [
+     "United Arab Emirates",
+     "Bangladesh",
+     "Belize",
+     "Bolivia",
+     "Bhutan",
+     "Botswana",
+     "Cabo Verde",
+     "Djibouti",
+     "Algeria",
+     "Micronesia, Fed. Sts."
+    ]
+   }
+  },
+  "cluster_sizes": {
+   "0": 58,
+   "1": 47
+  }
+ },
+ "determinants": {
+  "onset": {
+   "school_lead": {
+    "n": 90,
+    "label": "schooling expansion timing (onset minus year female primary completion reached 50%; left-censored at first observation)",
+    "coef": [
+     0.049029483763346704,
+     0.04092858283551115
+    ],
+    "p": 0.2309451586149408,
+    "r2": 0.01023215163540625
+   },
+   "mortality_lead": {
+    "n": 101,
+    "label": "mortality-decline timing (onset minus year female life expectancy gained 10 years)",
+    "coef": [
+     0.24009392251439,
+     0.03608007464887105
+    ],
+    "p": 2.843148015034189e-11,
+    "r2": 0.37009670830539343
+   },
+   "log_gdp_onset": {
+    "n": 18,
+    "note": "too few complete cases",
+    "label": "log GDP per capita at onset (PPP)"
+   },
+   "urban_onset": {
+    "n": 105,
+    "label": "urban share at onset",
+    "coef": [
+     -0.052020456569296325,
+     0.024895741098376365
+    ],
+    "p": 0.03665982842127365,
+    "r2": 0.0444218016738418
+   },
+   "school_level": {
+    "n": 30,
+    "label": "female upper-secondary completion at onset (%)",
+    "coef": [
+     -0.2461743026079546,
+     0.09746901849315838
+    ],
+    "p": 0.011547881779339042,
+    "r2": 0.1451559104216279
+   },
+   "multivariate": {
+    "n": 4,
+    "note": "too few complete cases"
+   }
+  },
+  "midpoint": {
+   "school_lead": {
+    "n": 90,
+    "label": "schooling expansion timing (onset minus year female primary completion reached 50%; left-censored at first observation)",
+    "coef": [
+     -0.0632243668898056,
+     0.08468188704763195
+    ],
+    "p": 0.4552988449223293,
+    "r2": 0.007504270345010666
+   },
+   "mortality_lead": {
+    "n": 101,
+    "label": "mortality-decline timing (onset minus year female life expectancy gained 10 years)",
+    "coef": [
+     0.30118735540718516,
+     0.045822735402008694
+    ],
+    "p": 4.9351127856819276e-11,
+    "r2": 0.24147935709723822
+   },
+   "log_gdp_onset": {
+    "n": 18,
+    "note": "too few complete cases",
+    "label": "log GDP per capita at onset (PPP)"
+   },
+   "urban_onset": {
+    "n": 105,
+    "label": "urban share at onset",
+    "coef": [
+     -0.14644459457768733,
+     0.0358695190717291
+    ],
+    "p": 4.4514890340668475e-05,
+    "r2": 0.14442295090151658
+   },
+   "school_level": {
+    "n": 30,
+    "label": "female upper-secondary completion at onset (%)",
+    "coef": [
+     -0.29091743524050173,
+     0.11597767394503529
+    ],
+    "p": 0.012128213832327232,
+    "r2": 0.0974361168707859
+   },
+   "multivariate": {
+    "n": 4,
+    "note": "too few complete cases"
+   }
+  },
+  "duration": {
+   "school_lead": {
+    "n": 90,
+    "label": "schooling expansion timing (onset minus year female primary completion reached 50%; left-censored at first observation)",
+    "coef": [
+     -0.07198175949394514,
+     0.10064197474997595
+    ],
+    "p": 0.4744693905907331,
+    "r2": 0.00802693993294068
+   },
+   "mortality_lead": {
+    "n": 101,
+    "label": "mortality-decline timing (onset minus year female life expectancy gained 10 years)",
+    "coef": [
+     -0.16765344012186129,
+     0.06780103371938742
+    ],
+    "p": 0.013408656425086669,
+    "r2": 0.06266720622545807
+   },
+   "log_gdp_onset": {
+    "n": 18,
+    "note": "too few complete cases",
+    "label": "log GDP per capita at onset (PPP)"
+   },
+   "urban_onset": {
+    "n": 105,
+    "label": "urban share at onset",
+    "coef": [
+     -0.04248710076595326,
+     0.04541371669312066
+    ],
+    "p": 0.3495015471207982,
+    "r2": 0.009914662154005383
+   },
+   "school_level": {
+    "n": 30,
+    "label": "female upper-secondary completion at onset (%)",
+    "coef": [
+     0.5828965634114334,
+     0.1999150332078572
+    ],
+    "p": 0.003548670956135124,
+    "r2": 0.2327237541642846
+   },
+   "multivariate": {
+    "n": 4,
+    "note": "too few complete cases"
+   }
+  },
+  "speed": {
+   "school_lead": {
+    "n": 90,
+    "label": "schooling expansion timing (onset minus year female primary completion reached 50%; left-censored at first observation)",
+    "coef": [
+     0.0002715363618639101,
+     0.00043285239490152653
+    ],
+    "p": 0.530450408204642,
+    "r2": 0.0023511941141928228
+   },
+   "mortality_lead": {
+    "n": 101,
+    "label": "mortality-decline timing (onset minus year female life expectancy gained 10 years)",
+    "coef": [
+     0.00042970374666554984,
+     0.000608946346421947
+    ],
+    "p": 0.48040504848745647,
+    "r2": 0.006448408483653134
+   },
+   "log_gdp_onset": {
+    "n": 18,
+    "note": "too few complete cases",
+    "label": "log GDP per capita at onset (PPP)"
+   },
+   "urban_onset": {
+    "n": 105,
+    "label": "urban share at onset",
+    "coef": [
+     0.00034469640073423407,
+     0.0003446901729020171
+    ],
+    "p": 0.3173017641296809,
+    "r2": 0.010759544435303137
+   },
+   "school_level": {
+    "n": 30,
+    "label": "female upper-secondary completion at onset (%)",
+    "coef": [
+     -0.00019905941174411853,
+     0.0008161289072109202
+    ],
+    "p": 0.8073029820729403,
+    "r2": 0.00076040879963446
+   },
+   "multivariate": {
+    "n": 4,
+    "note": "too few complete cases"
+   }
+  },
+  "floor": {
+   "school_lead": {
+    "n": 90,
+    "label": "schooling expansion timing (onset minus year female primary completion reached 50%; left-censored at first observation)",
+    "coef": [
+     -0.0001212408743311473,
+     0.005687753479339528
+    ],
+    "p": 0.9829934794417905,
+    "r2": 6.2525618392816895e-06
+   },
+   "mortality_lead": {
+    "n": 101,
+    "label": "mortality-decline timing (onset minus year female life expectancy gained 10 years)",
+    "coef": [
+     0.005088883469139553,
+     0.0038474408930784143
+    ],
+    "p": 0.18594611079713808,
+    "r2": 0.016941349926063776
+   },
+   "log_gdp_onset": {
+    "n": 18,
+    "note": "too few complete cases",
+    "label": "log GDP per capita at onset (PPP)"
+   },
+   "urban_onset": {
+    "n": 105,
+    "label": "urban share at onset",
+    "coef": [
+     -0.003960635296377593,
+     0.002682103077388365
+    ],
+    "p": 0.13975870365736814,
+    "r2": 0.02614953317145674
+   },
+   "school_level": {
+    "n": 30,
+    "label": "female upper-secondary completion at onset (%)",
+    "coef": [
+     -0.024080915922358125,
+     0.016754796434659755
+    ],
+    "p": 0.15064553373697354,
+    "r2": 0.10036200560399045
+   },
+   "multivariate": {
+    "n": 4,
+    "note": "too few complete cases"
+   }
+  },
+  "curvature": {
+   "school_lead": {
+    "n": 90,
+    "label": "schooling expansion timing (onset minus year female primary completion reached 50%; left-censored at first observation)",
+    "coef": [
+     -0.0036053014697505397,
+     0.005710486466447808
+    ],
+    "p": 0.5278133220275327,
+    "r2": 0.005641287316896837
+   },
+   "mortality_lead": {
+    "n": 101,
+    "label": "mortality-decline timing (onset minus year female life expectancy gained 10 years)",
+    "coef": [
+     -0.013889978328900267,
+     0.0036444647535714718
+    ],
+    "p": 0.00013826399718290744,
+    "r2": 0.11269286184662686
+   },
+   "log_gdp_onset": {
+    "n": 18,
+    "note": "too few complete cases",
+    "label": "log GDP per capita at onset (PPP)"
+   },
+   "urban_onset": {
+    "n": 105,
+    "label": "urban share at onset",
+    "coef": [
+     1.3733246015286524e-05,
+     0.003243890046531303
+    ],
+    "p": 0.9966221073846702,
+    "r2": 2.579788900280988e-07
+   },
+   "school_level": {
+    "n": 30,
+    "label": "female upper-secondary completion at onset (%)",
+    "coef": [
+     0.02434463059570623,
+     0.008996038627463275
+    ],
+    "p": 0.006806827720626468,
+    "r2": 0.2587429927675201
+   },
+   "multivariate": {
+    "n": 4,
+    "note": "too few complete cases"
+   }
+  }
+ },
+ "covariate_coverage": {
+  "school_50": 90,
+  "mort_10": 101,
+  "imr_half": 73,
+  "log_gdp_onset": 18,
+  "urban_onset": 105,
+  "school_level": 30
+ },
+ "figures": [
+  "figures/fig1_fitted_shapes.png",
+  "figures/fig2_clusters.png",
+  "figures/fig3_distributions.png",
+  "figures/fig4_norm_curves.png"
+ ],
+ "caveat": "descriptors are observed-series quantities, not causal estimates; cross-country correlations only"
+}
