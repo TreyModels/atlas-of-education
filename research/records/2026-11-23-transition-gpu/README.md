@@ -57,6 +57,21 @@ and 10.08 million women, so it is not simulation noise. The counterfactual does 
 fertility (5.08 against 5.02 at the 1930 cohort) — it just adds births roughly evenly and cannot stop a fall
 that is driven by the schooling rise.
 
+### The same test in the development-only scenario
+Repeating the whole thing with the rival (development-only) specification gives a **larger** collapse —
+cohort fertility 5.22 -> 2.08, a fall of 3.14 births against 1.35 in the individuation scenario — and freezing
+child mortality at its pre-antibiotic level removes **2.0% of it** (against 3.2% in the individuation
+scenario). So the answer to "was it mortality-led?" is the same under both specifications of the model: no, and
+the development-only scenario is if anything more mortality-independent because its fertility response runs
+through income and schooling alone. This also means the earlier A-versus-B tie in the dose record is not
+reproduced here in levels: over the full arc the development-only engine falls further, closer to the observed
+trajectories (figure).
+
+**Figure.** `figures/transition_figure.png`: simulated period total fertility, 1950-2050, for the eight
+countries, solid = historical child mortality and dashed = child mortality frozen at its pre-antibiotic level,
+with observed total fertility as black dots (left: individuation scenario, right: development-only). The
+dashed and solid lines lie on top of each other, which is the counterfactual result in one picture.
+
 ### The pre-antibiotic arc: only partly reachable
 Run on cohorts 1890-1955 (reproductive years 1905-2004), the model **does not generate a transition at all**:
 cohort fertility goes 4.01 (1890) -> 4.94 (1920) -> 4.64 (1955), a rise of 0.63 of a birth rather than a fall.

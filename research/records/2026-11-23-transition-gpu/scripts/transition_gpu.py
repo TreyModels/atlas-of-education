@@ -33,6 +33,7 @@ ap.add_argument("--gy0", type=int, default=1900)
 ap.add_argument("--bcm", type=float, default=0.0067, help="births per woman per point of child mortality/100")
 ap.add_argument("--band", type=float, default=0.5, help="fractional sensitivity band on bcm")
 ap.add_argument("--cmref", type=float, default=5.0)
+ap.add_argument("--scen", default="A", choices=["A","B"], help="individuation (A) or development-only (B)")
 ap.add_argument("--force-bcm", type=float, default=None, help="override the coefficient (power check)")
 ap.add_argument("--fit", default="/root/work/dose_gpu/results/rej_fitA.json", help="use the weighted posterior medians of this fit as the parameter vector")
 ap.add_argument("--tmax", type=int, default=2010)
@@ -131,16 +132,23 @@ if __name__ == "__main__":
         for arm, cmv in (("history", cm), ("frozen", np.full(NGY, cm_pre))):
             for bc, tag in ((a.bcm * (1 - a.band), "lo"), (a.bcm, "mid"), (a.bcm * (1 + a.band), "hi")):
                 if a.force_bcm is not None: bc, tag = a.force_bcm, "forced"
-                specs.append(dict(prep=dc.prepare(pc, P, 0, 1234, len(specs), gy0=a.gy0), P=P, fc=0.0,
+                specs.append(dict(prep=dc.prepare(pc, P, 0 if a.scen == "A" else 1, 1234, len(specs), gy0=a.gy0), P=P, fc=0.0,
                                   gap=3.0, cm=cmv.tolist(), bcm=bc, cmref=a.cmref))
                 meta.append(dict(iso=iso, arm=arm, band=tag, bcm=bc, cm_pre=cm_pre))
     print("runs:", len(specs), "women per run:", 28 * 5 * a.nW, "total women:", len(specs) * 28 * 5 * a.nW, flush=True)
     eng = GPUDose(nW=a.nW, seed=7, max_runs=len(specs), tmax=a.tmax)
     eng.coh0 = a.coh0; eng.gy0 = a.gy0; eng.my0 = a.coh0; eng.t0 = a.gy0 + 15
-    t0 = time.time(); eng.load(specs); acc = eng.run(0); wall = time.time() - t0
+    t0 = time.time(); eng.load(specs); acc = eng.run(0 if a.scen == "A" else 1); wall = time.time() - t0
     coh = acc["coh"]                                     # [run, 14, 7, 8]
+    births, expo = acc["births"], acc["expo"]            # [run, 101, 35]
+    with np.errstate(all="ignore"):
+        rr = births / expo
+        tfr_year = np.where((expo > 0).all(-1), np.nansum(np.where(expo > 0, rr, 0.0), axis=-1), np.nan)
+    years_abs = list(range(1950, 1951 + 100))
     women = len(specs) * 28 * 5 * a.nW
-    res = dict(coh0=a.coh0, gy0=a.gy0, tmax=a.tmax, nW=a.nW, women=women, runs=len(specs),
+    res = dict(tfr_years=years_abs,
+               tfr=[[[None if np.isnan(v) else float(v) for v in tfr_year[i]] for i in range(acc["births"].shape[0])]][0],
+               scen=a.scen, coh0=a.coh0, gy0=a.gy0, tmax=a.tmax, nW=a.nW, women=women, runs=len(specs),
                woman_years=women * 35, wall_sec=wall, throughput_women_per_sec=women / wall,
                cohorts=[a.coh0 + 5 * c for c in range(NC)], meta=meta,
                rows=[])
