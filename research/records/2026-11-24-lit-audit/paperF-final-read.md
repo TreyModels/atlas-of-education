@@ -57,3 +57,28 @@ The paper's centrepiece claim is **INCREMENTAL — a new assembly, not a new cor
 draft says so consistently. Once the four fixes above are in, the argument read passes: no drift, placebo caveat
 correctly placed, §7 subordinate. The remaining risk is not framing but the missing pre-registration artefact
 (fix 1), which a methods-minded referee will ask about given how often the word is used.
+
+---
+
+## Addendum — rebuilt Paper F at f9dd325: all four fixes VERIFIED; SIGNED OFF
+
+- **Fix 1 (PREREGISTRATION artefact)**: `research/records/2026-11-25-paper-fertility/PREREGISTRATION.md` exists and
+  is exactly right in kind: it states it is a **compilation with provenance, not a new pre-registration** ("written
+  after the results exist, which is why each rule cites the earlier commit that fixed it before estimation"), and
+  it documents the 336-specification grid (288 period + 48 cohort), the ≥80% negative / ≥50% negative-significant
+  decision rule, the transportability grid, and the placebo 80% rule with source commits. This is the honest
+  artefact a methods referee needs.
+- **Fix 2 (§8.2)**: now "a property of the calibrated model, not an identified fact about the world."
+- **Fix 3 (§7.1.5)**: the attenuation is now a finding in its own right and explicitly "does not uniquely support
+  the development-gradient reading, because saturation, composition change and ceiling effects would produce
+  attenuation too."
+- **Fix 4 (verdict claim 6)**: now "The gradient is steepest at the massification margin (shape), with conventional
+  hinge locations — S (shape) / C (hinge locations)."
+- Consistency re-scan: abstract still ends "descriptive, not causal"; §1.4 non-claims intact; §7 still explicitly
+  "subordinate to the centrepiece audit"; conclusion still "a structural demonstration about a known correlation,
+  not a new correlation"; no drift phrases reintroduced. Word count 18,032.
+- **One optional polish (not a fix):** §3.5 says "the paper cites the commits" but does not name
+  `PREREGISTRATION.md`; adding one clause ("compiled with provenance in `PREREGISTRATION.md`") would point the
+  referee at the artefact from the place where the word is defined.
+
+**Paper F: SIGNED OFF.** The four fixes are closed and the rebuild introduced no new framing problems.
