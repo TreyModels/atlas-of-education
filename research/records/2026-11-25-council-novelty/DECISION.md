@@ -13,12 +13,16 @@ two into them, and stop three.
 Panel mean 3.8 (highest). Draft: Paper M, 17,371 words, branch `research/paper-massification-2026-11-25`
 @ `753e102`. Closest competitor: Porzio, Rossi & Santangelo (2021, NBER w29390, W). Why publish: a systematic
 multi-country sequencing with supply/demand decomposition and an agricultural floor that nobody has assembled in
-this form — the panel's economic historian scored it 5. Binding conditions: (i) **the retracted 68.75%/69% ordering
-figure must not appear**; the corrected numbers are strict schooling-first **37.5% [26.6–50.0]**, simultaneous
-**31.3%**, and the separate fertility-first sequence **60/64 = 93.75%** with 4/64 release-first (AFG, LBR, MWI,
-ZMB); (ii) the paper must frame the sequence as a dating-and-assembly result, not a causal claim, because schooling
-and agricultural release are jointly determined by industrialisation; (iii) endogeneity/coarse-dating objections
-get a dedicated paragraph, not a footnote.
+this form — the panel's economic historian scored it 5. Binding conditions: (i) the retracted 68.75%/69% ordering figure must not appear — **already corrected at
+`research/paper-massification-2026-11-25` @ `95dc135`, then `76d929a` (17,433 words), verified by run-lead's
+independent recomputation**: the six corrected locations report strict schooling-first **37.5% (24/64, CI
+26.6–50.0)**, simultaneous **31.3% (20/64)**, fertility-first **31.3% (20/64)**, and the all-81 variant **35.8%**,
+with the tie-counting artefact explained; the source record is annotated at `subsistence-v2` @ `8caaeac`. Keep the
+two orderings separate: those are **schooling-vs-fertility** figures; the **release-vs-fertility** metric is a
+different count — 60/64 = 93.75% fertility-first, 4/64 = 6.25% release-first (AFG, LBR, MWI, ZMB); (ii) the paper
+must frame the sequence as a dating-and-assembly result, not a causal claim, because schooling and agricultural
+release are jointly determined by industrialisation; (iii) endogeneity/coarse-dating objections get a dedicated
+paragraph, not a footnote.
 
 **2. Paper F — the levels-vs-changes/transportability schooling–fertility audit — NEW ASSEMBLY, INCREMENTAL.**
 Panel mean 3.2; already drafted and audited (branch `research/paper-fertility-2026-11-25` @ `f9dd325`, 17,310 words
@@ -29,7 +33,10 @@ placebo that measures the development-gradient caveat. Binding condition: never 
 framing "quantified audit of a known correlation" is the contribution (the PREREGISTRATION.md artefact now exists
 with provenance).
 
-**3. The GPU full-transition counterfactual — NEW ASSEMBLY / DEMONSTRATION.** Panel mean 3.2. Evidence:
+**3. The GPU full-transition counterfactual — NEW ASSEMBLY / DEMONSTRATION.** Panel mean 3.2.
+**Status: the only paper-carrying candidate with no draft.** The evidence and a section draft exist
+(`research/paper-boppart-2026-11-24` @ `90feb1e`, folded into Paper F §7.3), but no standalone paper exists; the
+next session owns writing it. Evidence:
 `research/transition-gpu` @ `f9f2f18`, `dose-gpu` @ `774085c`, `dose-tolerance` @ `baadfe6`; section drafted at
 `90feb1e`. Closest prior: SOCSIM-era microsimulation (U) and the Galor–Weil/Doepke mortality mechanisms (V).
 Why publish: the mortality-freeze removes only 3.2% of the collapse in a fitted individual-level engine, and the
@@ -68,7 +75,7 @@ rather than asserting the rule's generality. Venue: methods journal, not a demog
 | Care-work loop / tipping point / diminishing returns as findings | Pre-registered nulls of known mechanisms (England & Folbre 1999; Scheffer et al. 2009, V; Dakos et al. 2012, V). Nulls are valuable inside Paper F; not a paper. |
 | Scaling/Heaps/regime break | Audits of known scaling results, one new negative (no regime break); not a new law (scaling `fd691a6`). AUDIT. |
 | Marriage-age / UN living-arrangements | Known UN data; the levels-vs-change artefact is a methods lesson (un-marriage `b2b18d5`). KNOWN. |
-| The 69% "schooling precedes fertility" ordering | **UNRESOLVED** — source record's JSON 68.75% counted ties as schooling-first; a recomputation from its own event CSV gives 35.8%; Paper M's corrected strict ordering is 37.5% [26.6–50.0] with 31.3% simultaneous. No paper may cite the 69% figure; Paper M's three quotations are being corrected. |
+| The 69% "schooling precedes fertility" ordering | **RETRACTED, CORRECTION VERIFIED** — the source JSON's 68.75% counted ties as schooling-first; events-CSV recomputation gives 35.8%; Paper M corrected all six locations at `95dc135`/`76d929a` to strict schooling-first 37.5% (24/64, CI 26.6–50.0), simultaneous 31.3% (20/64), fertility-first 31.3% (20/64), all-81 35.8%, and the source record is annotated at `subsistence-v2` @ `8caaeac`. No paper may cite the 69% figure. Do not conflate the schooling-vs-fertility count with the separate **release-vs-fertility** sequence (60/64 = 93.75% fertility-first; 4/64 = 6.25% release-first: AFG, LBR, MWI, ZMB). |
 
 ## If forced to pick three
 
@@ -78,8 +85,10 @@ the counterfactual stands alone with the model-structural framing. There is no f
 
 ## Immediate actions
 
-1. Paper M: replace every 68.75%/69% quotation with 37.5% [26.6–50.0] + 31.3% simultaneous; add the dating/
-   endogeneity paragraph; keep "late-industrialiser regularity, not universal law".
+1. Paper M: ordering correction **done and verified** at `95dc135`/`76d929a` (strict 37.5% [26.6–50.0];
+   simultaneous 31.3%; fertility-first 31.3%; all-81 35.8%; source record annotated at `subsistence-v2` @
+   `8caaeac`). Remaining: keep the schooling-vs-fertility and release-vs-fertility counts separate and keep the
+   dating/endogeneity paragraph and the "late-industrialiser regularity, not universal law" framing.
 2. Paper F: cover letter and abstract lead with the audit framing and the placebo caveat; the PREREGISTRATION.md
    provenance artefact is in place; close the auditor's four fixes (now pushed at f9dd325).
 3. Methods paper: state the draw-count rule's assumptions; submit to a methods venue.
