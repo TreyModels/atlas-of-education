@@ -2,8 +2,12 @@
 
 Worker `un-data`, branch `research/matrix-marriage-2026-11-23`, 23 Nov 2026. Same estimator as
 `research/records/2026-11-23-handoff-run/scripts/full_matrix_trends.py`; **income is logged** at load in every
-script (`np.log` of the level file), per the session rule. Server `/root/work/matrix_marriage` on `autodl2`
-(box2, 6 workers for the matrix; the run takes ~1 minute). Full matrix in `data/matrix20.csv` / `.json`.
+script (`np.log` of the level file), per the session rule. **Server: box2 only** (`ssh autodl2`), directory
+`/root/work/matrix_marriage` (6 workers; the matrix runs in ~1 minute). The box1 copy of that directory is retired
+with box1 and is not needed: every number in this record was produced on box2, and the committed
+`data/`/`results/` files are the durable record. Series used by the falsifiers are on box2 at
+`/root/work/undata/{out,raw}`; the panel is at `/root/work/data` (migrated copy under `/root/autodl-tmp/migrated/`).
+Full matrix in `data/matrix20.csv` / `.json`.
 
 **Short answer.** The three UN marriage measures entered the matrix as variables (never as controls), giving
 380 ordered links. With income logged, the 272 old links are **bit-identical** to the corrected logged
