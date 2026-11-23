@@ -76,9 +76,10 @@ def simulate_ref(prep, P, scen, seed, fc, gap, nW=12, tmax=2012):
         ub, _ = uniforms(idx, np.full(WPT, 1 + (t - 1900), np.uint32), seed, 1)
         ubirth = ub[:, 0]                       # birth uniform is slot 0 of the year stream (round 0)
         ROUNDS = getattr(simulate_ref, "rounds", 2)
+        NBLK = (13 + 4 * Kc + 3) // 4
         for rnd in range(ROUNDS):
             u24, raw24 = uniforms(idx, np.full(WPT, 1 + (t - 1900) + (400 if rnd else 0), np.uint32),
-                                  seed, 6)
+                                  seed, NBLK)
             if rnd == 0:
                 sep = past & (st == 1) & (u24[:, 1] < dsep)
                 st[sep] = 2
@@ -92,34 +93,40 @@ def simulate_ref(prep, P, scen, seed, fc, gap, nW=12, tmax=2012):
             K = K0 * sy_exp(-th_k * Ind)
             sh = np.where(a <= 28, 1.0, sy_exp(-.15 * (a - 28).astype(np.float64)))
             parr = 1.0 - sy_exp(-a0 * Efc * K * sh)
-            arr_go = st0 & (u24[:, 2] < parr)
-            jm_a = np.floor(u24[:, 3] * nm).astype(np.int64)
-            mo = cell * nmax + jm_a
-            agem = t - mb[mo]
-            lo = np.maximum(mexc[mo], 20)
-            ok_arr = arr_go & (mav[mo] == 1) & (agem >= lo) & (agem <= 55)
-            claimed = np.where(ok_arr, jm_a, -1)
-            is_arr = ok_arr.copy()
+            # --- arranged path: the original retries up to 8 times for an eligible man
+            claimed = np.full(WPT, -1); is_arr = np.zeros(WPT, bool)
+            go_arr = st0 & (u24[:, 2] < parr) if rnd == 0 else np.zeros(WPT, bool)  # one arranged attempt per year
+            for k in range(8):
+                jm_a = np.floor(u24[:, 3 + k] * nm).astype(np.int64)
+                mo = cell * nmax + jm_a
+                agem = t - mb[mo]
+                lo = np.maximum(mexc[mo], 20)
+                ok = go_arr & (claimed < 0) & (mav[mo] == 1) & (agem >= lo) & (agem <= 55)
+                claimed = np.where(ok, jm_a, claimed); is_arr = np.where(ok, True, is_arr)
+            # --- market: sample up to 3*Kc men to get Kc available-and-eligible ones
             need = st0 & (claimed < 0) & (a >= mk) & (a <= 45)
             s_ = 1.0 + lam_s * Ind
             Rw = R0 + rho_a * (a - mk).astype(np.float64)
-            bu = np.full(WPT, -1e9); jb = np.full(WPT, -1)
-            for cc in range(Kc):
-                jm_c = np.floor(u24[:, 5 + 2 * cc] * nm).astype(np.int64)
+            bu = np.full(WPT, -1e9); jb = np.full(WPT, -1); nv = np.zeros(WPT, np.int64)
+            for k in range(3 * Kc):
+                val = need & (nv < Kc) & (mav[cell * nmax + np.floor(u24[:, 12 + k] * nm).astype(np.int64)] == 1)
+                jm_c = np.floor(u24[:, 12 + k] * nm).astype(np.int64)
                 moc = cell * nmax + jm_c
                 agemc = t - mb[moc]
                 loc = np.maximum(mexc[moc], 20)
-                val = need & (mav[moc] == 1) & (agemc >= loc) & (agemc <= 55)
+                val = need & (nv < Kc) & (mav[moc] == 1) & (agemc >= loc) & (agemc <= 55)
+                if not val.any(): continue
+                nois = np.take_along_axis(u24, (12 + 3 * Kc + np.minimum(nv, Kc - 1))[:, None], axis=1)[:, 0]
                 g = (yrs[med[moc]] - yrs[ed]) / 12.0
-                un = u24[:, 6 + 2 * cc]
-                uu = -al_d * s_ * np.maximum(-g, 0.) - al_u * np.maximum(g, 0.) + 0.5 * sy_log(un / (1.0 - un))
+                uu = -al_d * s_ * np.maximum(-g, 0.) - al_u * np.maximum(g, 0.) + 0.5 * sy_log(nois / (1.0 - nois))
                 better = val & (uu > bu)
                 bu = np.where(better, uu, bu); jb = np.where(better, jm_c, jb)
+                nv = nv + val
             mkt = need & (jb >= 0) & (bu + Rw > 0.0)
             jbs = np.maximum(jb, 0)
             mob = cell * nmax + jbs
             g2 = (yrs[ed] - yrs[med[mob]]) / 12.0
-            un2 = u24[:, 5 + 2 * Kc]
+            un2 = u24[:, 12 + 4 * Kc]
             um_acc = -al_m * np.maximum(g2, 0.) + Rm + 0.5 * sy_log(un2 / (1.0 - un2))
             acc = mkt & (um_acc > 0.0)
             claimed = np.where(acc, jb, claimed)
@@ -127,7 +134,7 @@ def simulate_ref(prep, P, scen, seed, fc, gap, nW=12, tmax=2012):
             co = claimed >= 0
             mgid = cell * nmax + np.maximum(claimed, 0)
             key = (((t - 1900) << 39) | (is_arr.astype(np.uint64) << 38)
-                   | (raw24[:, 4].astype(np.uint64) << 6) | within.astype(np.uint64)) + np.uint64(1)
+                   | (raw24[:, 11].astype(np.uint64) << 6) | within.astype(np.uint64)) + np.uint64(1)
             mkey = np.zeros(MPT, np.uint64)
             np.maximum.at(mkey, mgid[co], key[co])
             win = co & (mkey[mgid] == key)

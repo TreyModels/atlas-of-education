@@ -81,9 +81,13 @@ __device__ __forceinline__ void philox(unsigned c0i, unsigned c1i, unsigned c2i,
 }
 __device__ __forceinline__ double uni_from(unsigned x) { return ((double)x + 0.5) * (1.0 / 4294967296.0); }
 
-// uniform slot table -- MUST match ref_numpy.py
-//  0 birth | 1 separation | 2 arranged trigger | 3 arranged man index | 4 priority
-//  5+2c man index candidate c | 6+2c woman logit noise candidate c | 5+2*Kc man acceptance noise
+// uniform slot table -- MUST match ref_numpy.py.  Laid out to mirror the ORIGINAL model's draw order:
+//  0 birth | 1 separation | 2 arranged trigger | 3..10 the 8 arranged-marriage man draws
+//  11 priority | 12..12+3Kc-1 the market's up-to-3Kc man draws
+//  12+3Kc .. 12+4Kc-1 woman logit noises for the Kc available-and-eligible men
+//  12+4Kc man acceptance noise
+// The original draws the arranged man up to 8 times until one is eligible, and samples up to 3*Kc men
+// to get Kc eligible ones; both loops are reproduced here, which is what removes the marriage-age bias.
 __device__ __forceinline__ void draw_uniforms(unsigned long long wid, unsigned aux,
                                              unsigned seed0, unsigned seed1, int nb,
                                              double *u, unsigned *raw) {
@@ -156,7 +160,7 @@ __device__ __forceinline__ double ind_of(int scen, int r, int t, int q, int U,
 
 // ---------------------------------------------------------------- init
 extern "C" __global__ void k_init(
-    int nW, int scen, unsigned seed0, unsigned seed1,
+    int nW, int scen, const unsigned long long *seedv,
     const double *PWc, const double *PMc, const double *wcell, const double *dosen,
     const double *Zc, const double *gdp, const double *Pd,
     const double *yrs, int WPC, int WPT, int MPT, int nmax,
@@ -172,6 +176,7 @@ extern "C" __global__ void k_init(
         int cell = local / WPC; int within = local - cell * WPC;
         int c = cell >> 1, U = cell & 1, q = within / nW;
         int y0 = 1930 + 5 * c;
+        unsigned seed0 = (unsigned)seedv[r], seed1 = (unsigned)(seedv[r] >> 32);
         double u[8]; unsigned raw[8];
         draw_uniforms((unsigned long long)local, (unsigned)(r * 1024), seed0, seed1, 2, u, raw);
         int b = y0 + (int)(u[0] * 5.0);
@@ -200,6 +205,7 @@ extern "C" __global__ void k_init(
         int c = cell >> 1;
         int y0 = 1930 + 5 * c;
         int nm = (int)(5.0 * (double)nW * PD_(r, P_SEXR) + 0.5);
+        unsigned seed0 = (unsigned)seedv[r], seed1 = (unsigned)(seedv[r] >> 32);
         if (j >= nm) { m_av[midx] = 0; m_key[midx] = 0ULL; m_born[midx] = 0; m_edm[midx] = 0; m_exm[midx] = 0; return; }
         double u[4]; unsigned raw[4];
         draw_uniforms((unsigned long long)(nWtot + local), (unsigned)(r * 1024), seed0, seed1, 1, u, raw);
@@ -215,7 +221,7 @@ extern "C" __global__ void k_init(
 // separation needs the parameter block; kept in k_claim together with the marriage market so that a
 // woman's year is decided in one place.
 extern "C" __global__ void k_claim(
-    int t, int rnd, int nW, int scen, unsigned seed0, unsigned seed1,
+    int t, int rnd, int nW, int scen, const unsigned long long *seedv,
     const double *PWc, const double *PMc, const double *wcell, const double *dosen,
     const double *Zc, const double *gdp, const double *Pd, const int *Kci, const double *yrs,
     int WPC, int WPT, int MPT, int nmax,
@@ -230,6 +236,7 @@ extern "C" __global__ void k_claim(
     int r = idx / WPT; int local = idx - r * WPT;
     int cell = local / WPC; int within = local - cell * WPC;
     int U = cell & 1, q = within / nW;
+    unsigned seed0 = (unsigned)seedv[r], seed1 = (unsigned)(seedv[r] >> 32);
     w_claim[idx] = -1; w_key[idx] = 0ULL;             // never read stale claim state
     int a = t - w_born[idx];
     if (rnd > 0) {                                    // later rounds: only women still single re-enter
@@ -253,8 +260,10 @@ extern "C" __global__ void k_claim(
         return;
     }
     if (w_st[idx] != 0) return;
-    double u[24]; unsigned raw[24];
-    draw_uniforms((unsigned long long)local, YEAR_AUX(t) + (rnd > 0 ? 400u : 0u), seed0, seed1, 6, u, raw);
+    double u[56]; unsigned raw[56];
+    int Kcb = Kci[r];
+    int nb = (12 + 4 * Kcb + 1 + 3) / 4;
+    draw_uniforms((unsigned long long)local, YEAR_AUX(t) + (rnd > 0 ? 400u : 0u), seed0, seed1, nb, u, raw);
     double Ind = ind_of(scen, r, t, q, U, gdp, Pd, w_ind0[idx]);
     double K0 = 1.0 / (1.0 + sy_exp(-(PD_(r, P_K0) + PD_(r, P_FC))));
     double K = K0 * sy_exp(-PD_(r, P_THK) * Ind);
@@ -262,40 +271,43 @@ extern "C" __global__ void k_claim(
     int claimed = -1, is_arranged = 0;
     double sh = (a <= 28) ? 1.0 : sy_exp(-.15 * (double)(a - 28));
     double parr = 1.0 - sy_exp(-PD_(r, P_A0) * PD_(r, P_EFC) * K * sh);
-    if (u[2] < parr) {
-        int jm = (int)(u[3] * (double)nm);
-        if (MAV_(r, cell, jm)) {
+    if (rnd == 0 && u[2] < parr) {           // the family arranges at most one attempt per year
+        for (int k = 0; k < 8; k++) {              // the original retries up to 8 times
+            int jm = (int)(u[3 + k] * (double)nm);
+            if (!MAV_(r, cell, jm)) continue;
             int age_m = t - MB_(r, cell, jm);
             int lo = MEX_(r, cell, jm) > 20 ? MEX_(r, cell, jm) : 20;
-            if (age_m >= lo && age_m <= 55) { claimed = jm; is_arranged = 1; }
+            if (age_m >= lo && age_m <= 55) { claimed = jm; is_arranged = 1; break; }
         }
     }
     if (claimed < 0 && a >= w_mk[idx] && a <= 45) {
         int Kc = Kci[r];
         double s_ = 1.0 + PD_(r, P_LAMS) * Ind;
         double Rw = PD_(r, P_R0) + PD_(r, P_RHOA) * (double)(a - w_mk[idx]);
-        double bu = -1e9; int jb = -1;
-        for (int cc = 0; cc < Kc; cc++) {
-            int jm = (int)(u[5 + 2 * cc] * (double)nm);
+        double bu = -1e9; int jb = -1, nv = 0;
+        for (int k = 0; k < 3 * Kc; k++) {
+            int jm = (int)(u[12 + k] * (double)nm);
             if (!MAV_(r, cell, jm)) continue;
             int age_m = t - MB_(r, cell, jm);
             int lo = MEX_(r, cell, jm) > 20 ? MEX_(r, cell, jm) : 20;
             if (!(age_m >= lo && age_m <= 55)) continue;
             double g = (yrs[MED_(r, cell, jm)] - yrs[w_ed[idx]]) / 12.0;
             double uu = -PD_(r, P_ALD) * s_ * (-g > 0. ? -g : 0.) - PD_(r, P_ALU) * (g > 0. ? g : 0.)
-                        + logit_noise(u[6 + 2 * cc]);
+                        + logit_noise(u[12 + 3 * Kc + nv]);
+            nv++;
             if (uu > bu) { bu = uu; jb = jm; }
+            if (nv >= Kc) break;
         }
         if (jb >= 0 && bu + Rw > 0.0) {
             double g = (yrs[w_ed[idx]] - yrs[MED_(r, cell, jb)]) / 12.0;
-            double um = -PD_(r, P_ALM) * (g > 0. ? g : 0.) + PD_(r, P_RM) + logit_noise(u[5 + 2 * Kc]);
+            double um = -PD_(r, P_ALM) * (g > 0. ? g : 0.) + PD_(r, P_RM) + logit_noise(u[12 + 4 * Kc]);
             if (um > 0.0) { claimed = jb; is_arranged = 0; }
         }
     }
     if (claimed >= 0) {
         unsigned long long key = ((unsigned long long)(t - 1900) << 39)
                                | ((unsigned long long)is_arranged << 38)
-                               | ((unsigned long long)raw[4] << 6)
+                               | ((unsigned long long)raw[11] << 6)
                                | (unsigned long long)within;
         key += 1ULL;                                  // 0 means "unclaimed"
         w_claim[idx] = (int)MGID(r, cell, claimed);
@@ -326,7 +338,7 @@ extern "C" __global__ void k_resolve(
 
 // ---------------------------------------------------------------- births
 extern "C" __global__ void k_birth(
-    int t, int nW, int scen, unsigned seed0, unsigned seed1,
+    int t, int nW, int scen, const unsigned long long *seedv,
     const double *PWc, const double *PMc, const double *wcell, const double *dosen,
     const double *Zc, const double *gdp, const double *Pd, const double *hut,
     int WPC, int WPT,
@@ -339,6 +351,7 @@ extern "C" __global__ void k_birth(
     int r = idx / WPT; int local = idx - r * WPT;
     int cell = local / WPC; int within = local - cell * WPC;
     int U = cell & 1, q = within / nW;
+    unsigned seed0 = (unsigned)seedv[r], seed1 = (unsigned)(seedv[r] >> 32);
     int a = t - w_born[idx];
     if (a < 15 || a > 49) return;
     if (a < w_ex[idx]) return;

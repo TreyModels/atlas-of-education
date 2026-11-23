@@ -92,6 +92,7 @@ class GPUDose:
         self.w_key = cp.zeros(n * W, cp.uint64)
         self.m_born = I(n * M); self.m_edm = I(n * M); self.m_exm = I(n * M); self.m_av = I(n * M)
         self.m_key = cp.zeros(n * M, cp.uint64)
+        self.seedv = cp.zeros(n, cp.uint64)
         self.PWc = F(n * 980); self.PMc = F(n * 196); self.wcell = F(n * 140)
         self.Pd = F(n * 23); self.Kci = I(n); self.dosen = F(n * 7); self.Zc = F(n * 14)
         self.gdp = F(n * 126)
@@ -129,6 +130,7 @@ class GPUDose:
         self.wcell[:n * 140] = F(WC.reshape(-1)).ravel(); self.Pd[:n * 23] = F(PD.reshape(-1)).ravel()
         self.Kci[:n] = cp.asarray(KC); self.dosen[:n * 7] = F(DO.reshape(-1)).ravel()
         self.Zc[:n * 14] = F(ZC.reshape(-1)).ravel(); self.gdp[:n * 126] = F(GD.reshape(-1)).ravel()
+        self.seedv[:n] = cp.asarray(np.full(n, self.seed, np.uint64))   # default: one seed for the batch
         self.births[:n * 3535] = 0; self.expo[:n * 3535] = 0; self.sing[:n * 3535] = 0
         self.afb_s[:n * 101] = 0; self.afb_n[:n * 101] = 0
         self.m18n[:n * 80] = 0; self.m18d[:n * 80] = 0; self.coh[:n * 784] = 0
@@ -143,10 +145,9 @@ class GPUDose:
         self.births[:n * 3535] = 0; self.expo[:n * 3535] = 0; self.sing[:n * 3535] = 0
         self.afb_s[:n * 101] = 0; self.afb_n[:n * 101] = 0
         self.m18n[:n * 80] = 0; self.m18d[:n * 80] = 0; self.coh[:n * 784] = 0
-        s0 = np.uint32(self.seed & 0xFFFFFFFF); s1 = np.uint32((self.seed >> 32) & 0xFFFFFFFF)
         g1 = ((nWtot + BLOCK - 1) // BLOCK,); g2 = ((nWtot + nMtot + BLOCK - 1) // BLOCK,)
         f = self.fn
-        f["k_init"](g2, (BLOCK,), (nW, scen, s0, s1,
+        f["k_init"](g2, (BLOCK,), (nW, scen, self.seedv,
             self.PWc, self.PMc, self.wcell, self.dosen, self.Zc, self.gdp, self.Pd, self.yrs,
             WPC, W, MPT, nmax,
             self.w_born, self.w_ed, self.w_ex, self.w_mk, self.w_st, self.w_par, self.w_afm,
@@ -156,7 +157,7 @@ class GPUDose:
         claim = f["k_claim"]; resolve = f["k_resolve"]; birth = f["k_birth"]
         for t in range(1945, tmax + 1):
             for rnd in range(self.rounds):
-                claim(g1, (BLOCK,), (t, rnd, nW, scen, s0, s1,
+                claim(g1, (BLOCK,), (t, rnd, nW, scen, self.seedv,
                     self.PWc, self.PMc, self.wcell, self.dosen, self.Zc, self.gdp, self.Pd, self.Kci,
                     self.yrs, WPC, W, MPT, nmax,
                     self.w_born, self.w_ed, self.w_ex, self.w_mk, self.w_st, self.w_q, self.w_U,
@@ -164,7 +165,7 @@ class GPUDose:
                     self.m_born, self.m_edm, self.m_exm, self.m_av, self.m_key, self.w_key, nWtot))
                 resolve(g1, (BLOCK,), (t, W, self.w_born, self.w_ex, self.w_st, self.w_afm,
                     self.w_claim, self.w_key, self.m_key, self.m_av, nWtot))
-            birth(g1, (BLOCK,), (t, nW, scen, s0, s1,
+            birth(g1, (BLOCK,), (t, nW, scen, self.seedv,
                 self.PWc, self.PMc, self.wcell, self.dosen, self.Zc, self.gdp, self.Pd, self.hut,
                 WPC, W, self.w_born, self.w_ed, self.w_ex, self.w_st, self.w_par, self.w_afbw,
                 self.w_b30, self.w_b35, self.w_q, self.w_U, self.w_wt, self.w_ind0,
@@ -172,13 +173,22 @@ class GPUDose:
         f["k_final"](g1, (BLOCK,), (tmax, WPC, W, self.w_born, self.w_ed, self.w_afm, self.w_par,
             self.w_afbw, self.w_b30, self.w_b35, self.w_wt, self.m18n, self.m18d, self.coh, nWtot))
 
-    def run(self, scen, tmax=None, use_graph=True):
+    def set_seeds(self, seeds):
+        """One RNG seed per run.  Reusing a single seed across parameter draws is deliberate:
+        common random numbers make ABC distance comparisons much less noisy."""
+        seeds = np.asarray(seeds, dtype=np.uint64).ravel()
+        if seeds.size == 1: seeds = np.full(self.runs, seeds[0], np.uint64)
+        self.seedv[:self.runs] = cp.asarray(seeds[:self.runs])
+        self._gkey = None if False else self._gkey
+
+    def run(self, scen, tmax=None, use_graph=True, seeds=None):
         """Run the batch.  With use_graph the launch sequence is captured once into a CUDA graph and
         replayed, which removes ~0.4 ms of Python/driver overhead per kernel launch (about 200 launches
         per run at tmax=2012)."""
         tmax = self.tmax if tmax is None else int(tmax)
         self.last_tmax = tmax
-        key = (self.runs, tmax, int(scen), self.rounds, self.seed)
+        if seeds is not None: self.set_seeds(seeds)
+        key = (self.runs, tmax, int(scen), self.rounds)
         if use_graph:
             if self._gkey != key:
                 self._launch(scen, tmax); cp.cuda.Stream.null.synchronize()   # warm up / compile
