@@ -144,16 +144,12 @@ coarse ABC summaries, not posterior-precision claims; six held-out countries is 
 delayed-versus-never-born split is a structural property of the model rather than an estimate.
 
 ## Files
-`scripts/`: `kernel.cu`, `engine.py`, `dosecore.py`, `abm_dose.py`, `bench_scale.py` (the GPU engine, its
-callable interface and scale benchmark); `ref_numpy.py` and `test_port.py` (independent reference and the
-porting test); `test_market.py` (200-seed engine-difference measurement); `reject_abc.py` (the quoted
-equal-weight fitter, with the synthetic-recovery option), `recover_coverage.py`, `falsifiers.py`,
-`falsifier_perm.py`; `analyze_cpu.py` (posteriors, diagnostics, held-out, tempo/quantum, stability); and the
-superseded `fit_cpu.py` / `fit_gpu.py`.
-`results/`: quoted fits `rej_fitA.json`, `rej_fitB.json`, `rej_fitA_rep.json`, `rec_fitA.json`; engine
-artefacts `port_test.json`, `PORT_NOTES.md`, `market_bias_postfix_17-31.json`, `bench_scale.json`,
-`bench_scale_2080ti.log`; analyses `analysis_holdout.json`, `analysis_holdout_gpuengine.json`,
-`analysis_decomp.json`, `analysis_stability.json`, `stability_A.md`, `summary_A.md`; falsifiers
-`falsifiers.json`, `falsifier_perm.json`; and the superseded `cpu_fit*` / `fix_fit*` /
-`market_bias_prefix_17-30_superseded.json` from the broken-weight attempts, kept so the methods trail is
-auditable.
+`scripts/`: `kernel.cu`, `engine.py`, `dosecore.py`, `abm_dose.py`, `bench_scale.py` (GPU engine, interface,
+scale benchmark), `ref_numpy.py` + `test_port.py` (porting test), `test_market.py` (engine-difference
+measurement), `reject_abc.py` + `recover_coverage.py` (the quoted equal-weight fitter and its coverage check),
+`falsifiers.py`, `falsifier_perm.py`, `analyze_cpu.py`, and the superseded `fit_cpu.py` / `fit_gpu.py`.
+`results/`: quoted fits (`rej_fitA/B/A_rep.json`, `rec_fitA.json`), engine artefacts (`port_test.json`,
+`PORT_NOTES.md`, `market_bias_postfix_17-31.json`, `bench_scale.json`, `bench_scale_2080ti.log`), analyses
+(`analysis_holdout.json`, `analysis_holdout_gpuengine.json`, `analysis_decomp.json`, `analysis_stability.json`,
+`stability_A.md`, `summary_A.md`), falsifiers (`falsifiers.json`, `falsifier_perm.json`), and the superseded
+`cpu_fit*` / `fix_fit*` / `market_bias_prefix_17-30_superseded.json` kept so the methods trail is auditable.
