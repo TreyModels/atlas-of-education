@@ -29,32 +29,34 @@ and female mean years of schooling. **342 ordered pairs** (19 × 18; a measure n
 
 For each ordered pair: outcome y, predictor x, lag L ∈ {0, 5, 10, 15, 20, 25} (years between x at t and y at
 t+L), controls C ∈ {none; income; income + urbanisation}, sample S ∈ {all years; 1960–1990; 1990–2024;
-7 regions; 4 income groups} (14 samples), and fixed-effect designs:
+7 regions; 4 income groups; 7 decades; the 7 regions × 4 income groups} (**49 samples**), and fixed-effect designs:
 - LEVELS (outcome = y level): (i) decade FE; (ii) decade + region FE; (iii) country FE (within); (iv) country
   FE + country-specific linear trends.
 - CHANGES (outcome = ten-year change in y): (i) country FE (within); (ii) country FE + country trends;
   (iii) decade + region FE.
-Spec count per pair: levels 4 × 3 × 6 × 14 = 1,008; changes 3 × 3 × 6 × 14 = 756; **1,764 per pair**;
-**603,288 total regressions**. Country-clustered standard errors throughout. Estimates are recorded for every
-specification, no selection.
+Spec count per pair: levels 4 × 3 × 6 × 49 = 3,528; changes 3 × 3 × 6 × 49 = 2,646; **6,174 per pair**;
+**2,111,508 total regressions**. Country-clustered standard errors throughout. Estimates are recorded for every
+specification, no selection. (The sample axis was widened from 14 to 49 while this file was still being
+written and before any code ran, to fill the box for the mandated 45–60 minutes.)
 
 ## Grid B — transportability (fixed)
 
-Random re-partitions of countries: **400 partitions**, each into **6 groups** with the region-family group
+Random re-partitions of countries: **800 partitions**, each into **6 groups** with the region-family group
 sizes (the same kind of nesting/size matching used in the earlier multiverse work; every country appears in
 exactly one group per partition). Within every (partition, group): the levels relation and the changes
 relation for **all 342 pairs**, baseline design (decade FE for levels, country FE for changes; controls income
-+ urbanisation; lag 0). That is 400 × 6 × 342 × 2 = **1,641,600 regressions**. Real-group comparison: the same
++ urbanisation; lag 0). That is 800 × 6 × 342 × 2 = **3,283,200 regressions**. Real-group comparison: the same
 statistic computed within the 6 real regions, the 4 income groups, and the 7 regions × 6 decade cells.
 Statistic: share of group × pair estimates that are negative and significant (|t| > 1.96), and the same for
 changes. Checkpoint partial pickles every ~2 minutes.
 
 ## Grid C — bootstrap and placebo (fixed)
 
-- **Country-clustered bootstrap, 500 reps** for every pair's headline levels relation (outcome y level,
-  predictor x, lag 0, decade + region FE, income + urbanisation, all years): 342 × 500 = **171,000
-  regressions**; report bootstrap 5th–95th percentile of the coefficient and the share of pairs whose bootstrap
-  interval excludes zero.
+- **Country-clustered bootstrap, 500 reps** for every pair, across a pre-registered bootstrap sub-grid rather
+  than a single cell: 4 fixed-effect designs × 3 control sets × 4 sample settings (all years, 1960–1990,
+  1990–2024, 7 regions pooled as one setting with region fixed effects) × 500 reps = 342 × 500 × 24 =
+  **4,104,000 regressions**; report bootstrap 5th–95th percentiles and the share of cells whose interval
+  excludes zero.
 - **Threshold-shape bootstrap, 500 reps** for the four schooling measures (total mean years, female mean years,
   secondary enrolment, lower-secondary completion) on the spline with knots at 6 and 9 years: **2,000
   regressions**; report bootstrap intervals for the below-6, 6–9 and above-9 slopes.
@@ -63,9 +65,11 @@ changes. Checkpoint partial pickles every ~2 minutes.
   samples: 342 × 4 × 3 × 2 × 14 = **114,912 regressions**. The same battery is run with the correct-time x for
   the identical design cells, so the placebo is compared like-for-like, not asserted.
 
-**Planned total: about 2.53 million regressions.** (If the actual runtime is below the 45–60 minute target
-after Grid A+B+C, Grid B partitions are increased from 400 towards 800 with the same pre-registered statistic;
-if it is above, checkpoint at 45 minutes and report what completed — the target is load, not a number.)
+**Planned total: about 9.51 million regressions** (A 2.11M + B 3.28M + C 4.28M, including placebo). If the
+measured throughput implies more than 60 minutes, bootstrap repetitions are reduced to 250 and the run is
+checkpointed and reported with what completed; if it implies under 35 minutes, bootstrap repetitions are
+raised to 1,000 with the same cells. The target is genuinely loaded cores for 45–60 minutes, and the exact
+count actually run will be reported.
 
 ## Decision thresholds (fixed in advance)
 
