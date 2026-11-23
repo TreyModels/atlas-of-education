@@ -1,0 +1,14 @@
+series: u5mr 11861, fertility 14073, income 11347, urban 14105
+derived: level 8265, volatility 8265
+actual volatility coefficient -0.00220 (clustered se 0.00384, n=7531, countries=193)
+series-swap country placebo: {
+ "actual": -0.0022043448285578512,
+ "clustered_se": 0.0038449090083782084,
+ "p": 0.12,
+ "q05": 5.5345881738266486e-05,
+ "q50": 0.0007323249498750253,
+ "q95": 0.003108299093162345,
+ "draws": 200,
+ "mean_n": 7044
+}
+wrote /root/work/level_vol/out/placebo_swap.json

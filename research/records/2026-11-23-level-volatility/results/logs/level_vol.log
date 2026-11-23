@@ -1,0 +1,33 @@
+series: u5mr 11861, fertility 14073, income 11347, urban 14105
+derived: level 8265, volatility 8265
+
+=== main specifications (10-year change in births per woman) ===
+level_only   FE     level=+0.00723 (se 0.00067) n=7533 countries=194 decades=6
+level_only   trend  level=+0.00674 (se 0.00153) n=7531 countries=193 decades=6
+vol_only     FE     vol=+0.00195 (se 0.00234) n=7533 countries=194 decades=6
+vol_only     trend  vol=+0.00201 (se 0.00198) n=7531 countries=193 decades=6
+both         FE     level=+0.00732 (se 0.00070) vol=-0.00267 (se 0.00345) n=7533 countries=194 decades=6
+both         trend  level=+0.00696 (se 0.00165) vol=-0.00220 (se 0.00384) n=7531 countries=193 decades=6
+shock_only   FE     shock=-0.00124 (se 0.00101) n=7533 countries=194 decades=6
+shock_only   trend  shock=-0.00019 (se 0.00081) n=7531 countries=193 decades=6
+volrel_only  FE     volrel=-0.01191 (se 0.02619) n=7533 countries=194 decades=6
+volrel_only  trend  volrel=+0.01319 (se 0.02965) n=7531 countries=193 decades=6
+
+corr(level, volatility) raw = 0.288
+circular-shift permutation level: |b|=0.00696 p=0.000 null q95=0.00076 (200 draws)
+circular-shift permutation vol: |b|=0.00220 p=0.290 null q95=0.00415 (200 draws)
+country placebo (volatility): |b|=0.00220 p=0.000 null q95=0.00058
+
+MDE (80% power, 95% two-sided = 2.802 x se):
+  level_only|fe        [0.00187]
+  level_only|trend     [0.0043]
+  vol_only|fe          [0.00656]
+  vol_only|trend       [0.00555]
+  both|fe              [0.00195, 0.00968]
+  both|trend           [0.00461, 0.01077]
+  shock_only|fe        [0.00283]
+  shock_only|trend     [0.00228]
+  volrel_only|fe       [0.07338]
+  volrel_only|trend    [0.08308]
+
+wrote /root/work/level_vol/out/level_vol.json

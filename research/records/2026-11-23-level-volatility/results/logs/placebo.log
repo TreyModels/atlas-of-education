@@ -1,0 +1,13 @@
+series: u5mr 11861, fertility 14073, income 11347, urban 14105
+derived: level 8265, volatility 8265
+actual volatility coefficient -0.00220 (se 0.00384, n=7531, countries=193)
+variance-matched placeholder placebo: {
+ "actual": -0.0022043448285578512,
+ "se": 0.0038449090083782084,
+ "p": 0.0,
+ "q05": 4.077784691509066e-05,
+ "q50": 0.000455372570922756,
+ "q95": 0.0012777471195909373,
+ "draws": 200
+}
+wrote /root/work/level_vol/out/placebo_variance_matched.json
