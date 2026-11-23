@@ -1,0 +1,79 @@
+{
+ "free_bytes_before": 11358699520,
+ "reserve_bytes": 230686720,
+ "bytes_per_run": 276600.56,
+ "first_candidate": 40231,
+ "attempts": [
+  {
+   "runs": 40231,
+   "women": 67588080,
+   "alloc_sec": 0.018,
+   "state_bytes": 11127734132,
+   "free_after_alloc_bytes": 199753728,
+   "largest_array_bytes": 1137732680,
+   "ok": false,
+   "error": "OutOfMemoryError: Out of memory allocating 315,411,456 bytes (allocated so far: 11,127,740,928 bytes).",
+   "gpu": "10799 MiB, 11264 MiB, 9 %, 38, 1860 MHz, 71.84 W"
+  },
+  {
+   "runs": 39731,
+   "women": 66748080,
+   "alloc_sec": 0.004,
+   "state_bytes": 10989436132,
+   "free_after_alloc_bytes": 222822400,
+   "largest_array_bytes": 1123592680,
+   "ok": false,
+   "error": "OutOfMemoryError: Out of memory allocating 311,491,072 bytes (allocated so far: 11,127,740,928 bytes).",
+   "gpu": "10799 MiB, 11264 MiB, 2 %, 37, 1350 MHz, 53.00 W"
+  },
+  {
+   "runs": 39231,
+   "women": 65908080,
+   "alloc_sec": 0.003,
+   "state_bytes": 10851138132,
+   "free_after_alloc_bytes": 222822400,
+   "largest_array_bytes": 1109452680,
+   "ok": false,
+   "error": "OutOfMemoryError: Out of memory allocating 307,571,200 bytes (allocated so far: 11,127,740,928 bytes).",
+   "gpu": "10799 MiB, 11264 MiB, 2 %, 37, 1350 MHz, 53.04 W"
+  },
+  {
+   "runs": 38731,
+   "women": 65068080,
+   "alloc_sec": 0.003,
+   "state_bytes": 10712840132,
+   "free_after_alloc_bytes": 222822400,
+   "largest_array_bytes": 1095312680,
+   "ok": false,
+   "error": "OutOfMemoryError: Out of memory allocating 303,651,328 bytes (allocated so far: 11,127,740,928 bytes).",
+   "gpu": "10799 MiB, 11264 MiB, 2 %, 37, 1350 MHz, 52.94 W"
+  },
+  {
+   "runs": 38231,
+   "women": 64228080,
+   "alloc_sec": 0.003,
+   "state_bytes": 10574542132,
+   "free_after_alloc_bytes": 222822400,
+   "largest_array_bytes": 1081172680,
+   "ok": false,
+   "error": "OutOfMemoryError: Out of memory allocating 299,731,456 bytes (allocated so far: 11,125,487,616 bytes).",
+   "gpu": "10795 MiB, 11264 MiB, 2 %, 37, 1350 MHz, 53.00 W"
+  },
+  {
+   "runs": 37731,
+   "women": 63388080,
+   "alloc_sec": 0.003,
+   "state_bytes": 10436244132,
+   "free_after_alloc_bytes": 227016704,
+   "largest_array_bytes": 1067032680,
+   "ok": false,
+   "error": "OutOfMemoryError: Out of memory allocating 295,811,072 bytes (allocated so far: 11,125,487,616 bytes).",
+   "gpu": "10795 MiB, 11264 MiB, 2 %, 37, 1350 MHz, 53.34 W"
+  }
+ ],
+ "max_runs": null,
+ "max_women": null,
+ "state_bytes": null,
+ "bytes_per_woman": null,
+ "gpu_at_end": "10795 MiB, 11264 MiB, 2 %, 37, 1350 MHz, 53.09 W"
+}

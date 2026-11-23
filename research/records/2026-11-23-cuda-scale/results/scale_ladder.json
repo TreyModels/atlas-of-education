@@ -1,0 +1,75 @@
+{
+ "job": "cuda-scale",
+ "host": "box2 (AutoDL)",
+ "gpu": "NVIDIA RTX 2080 Ti 11GB",
+ "nW": 12,
+ "women_per_run": 1680,
+ "tmax": 2012,
+ "years": 68,
+ "free_bytes_at_start": 11381768192,
+ "total_bytes": 11546394624,
+ "gpu_at_start": "157 MiB, 11264 MiB, 0 %, 32, 1350 MHz, 26.85 W",
+ "note": "A run = 14 cohorts x 2 urban/rural x 5 wealth quintiles x 12 women. Times include the device->host collection that eng.run() performs unless stated.",
+ "bytes_per_run": 276600.56,
+ "bytes_per_woman": 164.64319047619048,
+ "engine_arrays": 40,
+ "results": [
+  {
+   "target_women": 100000,
+   "runs": 60,
+   "women": 100800,
+   "alloc_sec": 0.012,
+   "load_sec": 0.003,
+   "first_run_sec": 0.108,
+   "replay_sec": [
+    0.0508,
+    0.0489,
+    0.0486
+   ],
+   "replay_median_sec": 0.0489,
+   "women_per_sec": 2060550,
+   "state_bytes": 16596216,
+   "bytes_per_woman": 164.65,
+   "free_after_alloc_bytes": 11339825152,
+   "gpu": "197 MiB, 11264 MiB, 0 %, 33, 1485 MHz, 69.71 W"
+  },
+  {
+   "target_women": 1000000,
+   "runs": 595,
+   "women": 999600,
+   "alloc_sec": 0.007,
+   "load_sec": 0.022,
+   "first_run_sec": 0.371,
+   "replay_sec": [
+    0.2094,
+    0.2159,
+    0.2121
+   ],
+   "replay_median_sec": 0.2121,
+   "women_per_sec": 4712505,
+   "state_bytes": 164575076,
+   "bytes_per_woman": 164.64,
+   "free_after_alloc_bytes": 11163664384,
+   "gpu": "365 MiB, 11264 MiB, 73 %, 35, 1875 MHz, 115.81 W"
+  },
+  {
+   "target_women": 10000000,
+   "runs": 5952,
+   "women": 9999360,
+   "alloc_sec": 0.009,
+   "load_sec": 0.186,
+   "first_run_sec": 3.317,
+   "replay_sec": [
+    1.946,
+    1.954,
+    1.9427
+   ],
+   "replay_median_sec": 1.946,
+   "women_per_sec": 5138289,
+   "state_bytes": 1646299848,
+   "bytes_per_woman": 164.64,
+   "free_after_alloc_bytes": 9611771904,
+   "gpu": "1845 MiB, 11264 MiB, 90 %, 38, 1860 MHz, 72.07 W"
+  }
+ ]
+}

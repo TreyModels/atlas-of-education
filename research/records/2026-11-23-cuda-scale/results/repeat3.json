@@ -1,0 +1,106 @@
+{
+ "runs": 5952,
+ "women": 9999360,
+ "target_women": 10000000.0,
+ "note": "three independent engine instances, same 5952 specs, seed=5; each: load, one warm launch (includes capture), then 3 timed replays",
+ "reps": [
+  {
+   "trial": 0,
+   "alloc_sec": 0.025,
+   "load_sec": 0.199,
+   "warm_sec": 3.168,
+   "replay_sec": [
+    1.954,
+    1.8078,
+    1.9337
+   ],
+   "replay_median_sec": 1.9337,
+   "women_per_sec": 5171146,
+   "births_digest": "8ef86ba34d97f941",
+   "expo_digest": "efbeb388dd59d68f",
+   "gpu_before": "203 MiB, 11264 MiB, 0 %, 33, 300 MHz, 21.82 W",
+   "gpu_after": "1869 MiB, 11264 MiB, 0 %, 39, 1860 MHz, 72.06 W"
+  },
+  {
+   "trial": 1,
+   "alloc_sec": 0.009,
+   "load_sec": 0.209,
+   "warm_sec": 3.166,
+   "replay_sec": [
+    1.9438,
+    1.792,
+    1.94
+   ],
+   "replay_median_sec": 1.94,
+   "women_per_sec": 5154260,
+   "births_digest": "c35f4e207dbc28cc",
+   "expo_digest": "a222d36d3cc7a5e2",
+   "gpu_before": "203 MiB, 11264 MiB, 0 %, 38, 1350 MHz, 54.00 W",
+   "gpu_after": "1869 MiB, 11264 MiB, 2 %, 42, 1860 MHz, 73.08 W"
+  },
+  {
+   "trial": 2,
+   "alloc_sec": 0.009,
+   "load_sec": 0.248,
+   "warm_sec": 3.108,
+   "replay_sec": [
+    1.8551,
+    1.7382,
+    1.8459
+   ],
+   "replay_median_sec": 1.8459,
+   "women_per_sec": 5417089,
+   "births_digest": "3f944491306e136f",
+   "expo_digest": "b50393fe088f7fd4",
+   "gpu_before": "203 MiB, 11264 MiB, 2 %, 41, 1350 MHz, 68.53 W",
+   "gpu_after": "1869 MiB, 11264 MiB, 2 %, 43, 1860 MHz, 74.13 W"
+  }
+ ],
+ "gpu_telemetry": [
+  {
+   "before": "203 MiB, 11264 MiB, 0 %, 33, 300 MHz, 21.82 W",
+   "after": "1869 MiB, 11264 MiB, 0 %, 39, 1860 MHz, 72.06 W"
+  },
+  {
+   "before": "203 MiB, 11264 MiB, 0 %, 38, 1350 MHz, 54.00 W",
+   "after": "1869 MiB, 11264 MiB, 2 %, 42, 1860 MHz, 73.08 W"
+  },
+  {
+   "before": "203 MiB, 11264 MiB, 2 %, 41, 1350 MHz, 68.53 W",
+   "after": "1869 MiB, 11264 MiB, 2 %, 43, 1860 MHz, 74.13 W"
+  }
+ ],
+ "replay_sec_all9": [
+  1.954,
+  1.8078,
+  1.9337,
+  1.9438,
+  1.792,
+  1.94,
+  1.8551,
+  1.7382,
+  1.8459
+ ],
+ "replay_mean_sec": 1.8678,
+ "replay_sd_sec": 0.0787,
+ "replay_cv_pct": 4.21,
+ "rep_median_sec": [
+  1.9337,
+  1.94,
+  1.8459
+ ],
+ "rep_median_mean_sec": 1.9065,
+ "rep_median_sd_sec": 0.0526,
+ "max_minus_min_sec": 0.2158,
+ "births_digests": [
+  "8ef86ba34d97f941",
+  "c35f4e207dbc28cc",
+  "3f944491306e136f"
+ ],
+ "expo_digests": [
+  "efbeb388dd59d68f",
+  "a222d36d3cc7a5e2",
+  "b50393fe088f7fd4"
+ ],
+ "same_aggregates_across_repeats": false
+}
