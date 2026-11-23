@@ -1,0 +1,70 @@
+{
+ "lsc": {
+  "observed": 0.256881305268402,
+  "after": 0.5909204135010586,
+  "horizon": 15,
+  "kappa": 2.0,
+  "countries_modelled": 190,
+  "countries_total": 217
+ },
+ "sec": {
+  "observed": 0.38373396437912566,
+  "after": 0.724623240752273,
+  "horizon": 15,
+  "kappa": 2.0,
+  "countries_modelled": 205,
+  "countries_total": 217
+ },
+ "ter": {
+  "observed": 0.3269398430688753,
+  "after": 0.5886785402914435,
+  "horizon": 10,
+  "kappa": 1.5,
+  "countries_modelled": 197,
+  "countries_total": 217
+ },
+ "prm_cmp": {
+  "observed": 0.30682525843816166,
+  "after": 0.4818781915556109,
+  "horizon": 5,
+  "kappa": 2.0,
+  "countries_modelled": 192,
+  "countries_total": 217
+ },
+ "gpi_sec": {
+  "observed": 0.3748910200523104,
+  "after": 0.5546145223564578,
+  "horizon": 3,
+  "kappa": 2.0,
+  "countries_modelled": 200,
+  "countries_total": 217
+ },
+ "gpi_ter": {
+  "observed": 0.2793623116203761,
+  "after": 0.6262921908083199,
+  "horizon": 15,
+  "kappa": 1.5,
+  "countries_modelled": 195,
+  "countries_total": 217
+ },
+ "fertility": {
+  "observed": 0.8628720886785403,
+  "after": 0.9993772574417735
+ },
+ "life_exp": {
+  "observed": 0.862747540166895,
+  "after": 0.9993772574417735
+ },
+ "u5mr": {
+  "observed": 0.7264291941711296,
+  "after": 0.9032258064516129
+ },
+ "urban": {
+  "observed": 0.8648648648648649,
+  "after": 0.9993772574417735
+ },
+ "gdppc_log": {
+  "observed": 0.6942334039108232,
+  "after": 0.8613775065387969
+ }
+}

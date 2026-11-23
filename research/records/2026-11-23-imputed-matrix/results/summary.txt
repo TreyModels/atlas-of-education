@@ -1,0 +1,319 @@
+=== counts of significant links (272 ordered pairs; nominal |t|>1.96) ===
+country effects: obs 127, imputed 127, mean-imputation 158, observed-cells-only 129
+country trends: obs 42, imputed 45, mean-imputation 80, observed-cells-only 44
+significant in BOTH country effects and country trends, same sign: obs 24, imputed 35
+
+=== survivors (both country effects and country trends, same sign) ===
+-- obs
+   sec        ->ter         FE +0.228 (0.059) n=2456 nc=169 | tr +0.099 (0.047) n=2419 nc=146
+   sec        ->agri_va     FE +0.039 (0.016) n=3851 nc=190 | tr +0.057 (0.018) n=3824 nc=178
+   ter        ->lsc         FE -0.090 (0.042) n=1465 nc=151 | tr -0.155 (0.060) n=1403 nc=120
+   ter        ->prm_cmp     FE -0.127 (0.046) n=1932 nc=154 | tr -0.108 (0.050) n=1887 nc=129
+   prm_cmp    ->gpi_sec     FE +0.003 (0.001) n=1761 nc=162 | tr +0.001 (0.000) n=1710 nc=133
+   gdppc_log  ->sec         FE +5.969 (2.364) n=3407 nc=192 | tr +4.515 (2.035) n=3390 nc=181
+   gdppc_log  ->urban       FE +1.176 (0.575) n=9274 nc=211 | tr +2.319 (0.582) n=9272 nc=210
+   urban      ->sec         FE +0.779 (0.171) n=3407 nc=192 | tr +0.633 (0.232) n=3390 nc=181
+   tax        ->agri_va     FE +0.013 (0.002) n=2866 nc=152 | tr +0.031 (0.013) n=2848 nc=142
+   agri_va    ->gdppc_log   FE -0.005 (0.002) n=6842 nc=201 | tr -0.004 (0.002) n=6832 nc=197
+   emp_agri   ->tax         FE -0.108 (0.048) n=2140 nc=135 | tr -0.099 (0.044) n=2120 nc=124
+   life_exp   ->electricity FE +0.688 (0.177) n=4281 nc=209 | tr +0.146 (0.071) n=4279 nc=208
+   life_exp   ->gdppc_log   FE +0.008 (0.002) n=9233 nc=210 | tr +0.008 (0.004) n=9231 nc=209
+   life_exp   ->gpi_ter     FE +0.014 (0.002) n=2231 nc=169 | tr +0.010 (0.004) n=2171 nc=135
+   life_exp   ->fertility   FE -0.049 (0.007) n=9268 nc=211 | tr -0.047 (0.008) n=9266 nc=210
+   u5mr       ->life_exp    FE -0.027 (0.006) n=8567 nc=194 | tr -0.026 (0.009) n=8565 nc=193
+   u5mr       ->gpi_ter     FE -0.002 (0.000) n=2184 nc=163 | tr -0.002 (0.001) n=2128 nc=131
+   u5mr       ->fertility   FE +0.008 (0.001) n=8569 nc=194 | tr +0.006 (0.001) n=8567 nc=193
+   gpi_ter    ->lsc         FE +14.036 (4.993) n=1335 nc=149 | tr +7.088 (3.178) n=1272 nc=117
+   fertility  ->electricity FE -3.415 (0.962) n=4281 nc=209 | tr -2.151 (0.778) n=4279 nc=208
+   fertility  ->lsc         FE -4.788 (1.290) n=1932 nc=171 | tr -3.408 (0.956) n=1873 nc=142
+   fertility  ->sec         FE -4.429 (0.850) n=3407 nc=192 | tr -3.303 (1.234) n=3390 nc=181
+   fertility  ->prm_cmp     FE -2.976 (1.179) n=2608 nc=175 | tr -2.732 (1.260) n=2566 nc=154
+   fertility  ->gdppc_log   FE -0.065 (0.013) n=9235 nc=210 | tr -0.068 (0.020) n=9233 nc=209
+-- imp
+   wage_emp   ->gdppc_log   FE -0.012 (0.004) n=4175 nc=184 | tr -0.005 (0.003) n=4175 nc=184
+   sec        ->u5mr        FE +0.171 (0.082) n=8698 nc=192 | tr +0.091 (0.039) n=8697 nc=191
+   prm_cmp    ->sec         FE +0.167 (0.046) n=5730 nc=189 | tr +0.069 (0.033) n=5719 nc=183
+   prm_cmp    ->gpi_sec     FE +0.001 (0.000) n=4499 nc=178 | tr +0.001 (0.000) n=4491 nc=173
+   gdppc_log  ->urban       FE +1.048 (0.518) n=11744 nc=211 | tr +2.908 (0.706) n=11744 nc=211
+   urban      ->sec         FE +0.735 (0.125) n=8909 nc=200 | tr +0.589 (0.231) n=8908 nc=199
+   urban      ->gpi_ter     FE +0.008 (0.002) n=7862 nc=191 | tr +0.006 (0.003) n=7862 nc=191
+   urban      ->fertility   FE -0.021 (0.003) n=11744 nc=211 | tr -0.017 (0.006) n=11744 nc=211
+   tax        ->agri_va     FE +0.013 (0.002) n=2866 nc=152 | tr +0.031 (0.013) n=2848 nc=142
+   agri_va    ->gdppc_log   FE -0.005 (0.002) n=6705 nc=201 | tr -0.005 (0.002) n=6697 nc=197
+   emp_agri   ->tax         FE -0.108 (0.048) n=2140 nc=135 | tr -0.099 (0.044) n=2120 nc=124
+   life_exp   ->electricity FE +0.688 (0.176) n=4347 nc=209 | tr +0.147 (0.071) n=4347 nc=209
+   life_exp   ->lsc         FE +0.950 (0.181) n=7298 nc=186 | tr +0.470 (0.222) n=7298 nc=186
+   life_exp   ->prm_cmp     FE +1.134 (0.208) n=5493 nc=187 | tr +0.457 (0.198) n=5484 nc=183
+   life_exp   ->gdppc_log   FE +0.008 (0.003) n=11722 nc=210 | tr +0.015 (0.003) n=11722 nc=210
+   life_exp   ->urban       FE +0.147 (0.038) n=11744 nc=211 | tr +0.100 (0.050) n=11744 nc=211
+   life_exp   ->u5mr        FE +1.728 (0.381) n=11225 nc=194 | tr +1.154 (0.429) n=11225 nc=194
+   life_exp   ->gpi_ter     FE +0.008 (0.002) n=7862 nc=191 | tr +0.005 (0.002) n=7862 nc=191
+   life_exp   ->fertility   FE -0.054 (0.005) n=11744 nc=211 | tr -0.046 (0.007) n=11744 nc=211
+   u5mr       ->lsc         FE -0.103 (0.021) n=7156 nc=181 | tr -0.085 (0.030) n=7156 nc=181
+   u5mr       ->prm_cmp     FE -0.192 (0.020) n=5397 nc=181 | tr -0.113 (0.032) n=5388 nc=177
+   u5mr       ->gdppc_log   FE -0.001 (0.000) n=11207 nc=193 | tr -0.002 (0.000) n=11207 nc=193
+   u5mr       ->life_exp    FE -0.025 (0.006) n=11225 nc=194 | tr -0.039 (0.008) n=11225 nc=194
+   u5mr       ->gpi_sec     FE -0.002 (0.000) n=6175 nc=186 | tr -0.001 (0.000) n=6167 nc=182
+   u5mr       ->gpi_ter     FE -0.001 (0.000) n=7674 nc=184 | tr -0.001 (0.000) n=7674 nc=184
+   u5mr       ->fertility   FE +0.006 (0.000) n=11225 nc=194 | tr +0.006 (0.001) n=11225 nc=194
+   gpi_sec    ->sec         FE +13.950 (4.550) n=6443 nc=194 | tr +5.573 (2.786) n=6435 nc=190
+   gpi_sec    ->gpi_ter     FE +0.196 (0.056) n=5910 nc=186 | tr +0.095 (0.039) n=5901 nc=181
+   gpi_sec    ->fertility   FE -0.605 (0.147) n=7109 nc=197 | tr -0.245 (0.107) n=7102 nc=192
+   fertility  ->electricity FE -3.427 (0.932) n=4347 nc=209 | tr -2.152 (0.765) n=4347 nc=209
+   fertility  ->lsc         FE -6.230 (0.986) n=7298 nc=186 | tr -6.170 (1.611) n=7298 nc=186
+   fertility  ->sec         FE -4.562 (0.983) n=8909 nc=200 | tr -3.302 (1.586) n=8908 nc=199
+   fertility  ->gdppc_log   FE -0.064 (0.014) n=11722 nc=210 | tr -0.050 (0.020) n=11722 nc=210
+   fertility  ->u5mr        FE -3.699 (1.526) n=11225 nc=194 | tr -3.198 (1.584) n=11225 nc=194
+   fertility  ->gpi_ter     FE -0.053 (0.012) n=7862 nc=191 | tr -0.048 (0.017) n=7862 nc=191
+
+=== changed verdicts sorted by the three labels ===
+country effects: added long-run rows=8, estimate moved=14, stochastic-imputation (unreliable)=6
+country trends: added long-run rows=10, estimate moved=23
+precision-vs-shift rule: |imputed estimate - observed estimate| <= 0.5 * observed standard error = 'precision only' (the estimate did not really move, only its certainty); otherwise 'estimate moved'.
+country effects: estimate moved=18, precision only=10
+country trends: estimate moved=24, precision only=9
+dashboard groups: coverage-driven (zero imputation spread)=13, genuine estimate movement=24, precision only=18, unreliable imputation=6
+mechanical/definitional pairs flagged: lsc->sec(country effects, cumulative schooling ladder), sec->ter(country effects, cumulative schooling ladder), sec->ter(country trends, cumulative schooling ladder), ter->lsc(country effects, cumulative schooling ladder), ter->lsc(country trends, cumulative schooling ladder), life_exp->u5mr(country trends, same UN WPP life-table source), fertility->u5mr(country effects, same UN WPP life-table source), fertility->u5mr(country trends, same UN WPP life-table source)
+
+=== changed verdicts, by spec and group ===
+country effects: gained=14, lost=14
+country trends: gained=18, lost=15
+   country effects / fertility / gained: 2
+   country effects / massification / gained: 10
+   country effects / massification / lost: 13
+   country effects / other / gained: 2
+   country effects / other / lost: 1
+   country trends / fertility / gained: 4
+   country trends / fertility / lost: 1
+   country trends / massification / gained: 10
+   country trends / massification / lost: 13
+   country trends / other / gained: 4
+   country trends / other / lost: 1
+
+=== per-imputation spread ===
+lambda (share of total variance from between-imputation spread): median 0.138, 90th 0.588, max 0.942; cells lambda>0.5: 76 of 544
+changed-verdict cells: median number of the 20 single-imputation runs giving the same verdict: 17.0 of 20
+changed-verdict cells where all 20 imputations individually significant same sign: 17 of 61
+changed-verdict cells where NO single imputation is significant: 4 of 61
+country effects: changed cells with education involved 23, fertility links 2, other 3
+country trends: changed cells with education involved 23, fertility links 5, other 5
+
+=== education links whose verdict rests on imputation spread (lambda >= 0.8) ===
+  lambda=0.94 country effects sec        ->lsc         obs null +0.122(0.082) -> imp null +0.109(0.124)
+  lambda=0.94 country effects sec        ->ter         obs sig+ +0.228(0.059) -> imp null +0.104(0.100)
+  lambda=0.93 country effects tax        ->lsc         obs null -0.099(0.207) -> imp null -0.020(0.029)
+  lambda=0.91 country effects sec        ->gpi_ter     obs sig+ +0.002(0.001) -> imp null +0.000(0.001)
+  lambda=0.91 country effects tax        ->gpi_ter     obs null -0.003(0.003) -> imp null +0.000(0.000)
+  lambda=0.91 country effects lsc        ->sec         obs sig+ +0.125(0.058) -> imp null +0.098(0.071)
+  lambda=0.88 country effects lsc        ->gpi_ter     obs null -0.000(0.001) -> imp null +0.000(0.001)
+  lambda=0.87 country trends  sec        ->fertility   obs null -0.001(0.002) -> imp null -0.001(0.002)
+  lambda=0.82 country trends  sec        ->gpi_ter     obs null +0.001(0.001) -> imp null +0.000(0.001)
+  lambda=0.82 country effects gpi_ter    ->ter         obs sig+ +18.445(4.253) -> imp null +9.525(5.096)
+  lambda=0.81 country effects gpi_ter    ->lsc         obs sig+ +14.036(4.993) -> imp null +10.095(6.115)
+  lambda=0.81 country effects sec        ->u5mr        obs sig+ +0.280(0.062) -> imp sig+ +0.171(0.082)
+  lambda=0.81 country effects tax        ->gpi_sec     obs sig- -0.002(0.001) -> imp null -0.000(0.000)
+  lambda=0.81 country trends  sec        ->lsc         obs null -0.059(0.048) -> imp null +0.003(0.060)
+  14 of 544 cells
+
+=== where a changed verdict comes from: education gap-fill vs macro long-run splice ===
+links involving education: 49 changed cells; verdict reproduced by education-only panel 41, by macro-only panel 6
+links with no education series: 12 changed cells; verdict reproduced by education-only panel 0, by macro-only panel 12
+if a changed education link is NOT reproduced by the education-only panel, its change is from the macro splice, not the schooling imputation
+
+=== every changed verdict (obs -> imputed) ===
+ lost       country effects wage_emp   ->ter         obs sig+ +1.083(0.46) n=1874 -> imp null +0.503(0.32) n=3765 lam=0.04 | eduonly +0.513? macroonly +1.082? | estimate moved | estimate moved
+ lost       country effects lsc        ->sec         obs sig+ +0.125(0.06) n=1943 -> imp null +0.098(0.07) n=7280 lam=0.91 | eduonly +0.099? macroonly +0.130? | stochastic-imputation (unreliable) | precision only | MECHANICAL
+ lost       country effects sec        ->ter         obs sig+ +0.228(0.06) n=2456 -> imp null +0.104(0.10) n=7126 lam=0.94 | eduonly +0.109? macroonly +0.200? | stochastic-imputation (unreliable) | estimate moved | MECHANICAL
+ lost       country effects sec        ->agri_va     obs sig+ +0.039(0.02) n=3851 -> imp null +0.017(0.02) n=6285 lam=0.60 | eduonly +0.018? macroonly +0.039? | estimate moved | estimate moved
+ gained     country effects sec        ->life_exp    obs null -0.007(0.01) n=4548 -> imp sig- -0.011(0.01) n=8969 lam=0.56 | eduonly -0.006? macroonly -0.009? | estimate moved | precision only
+ lost       country effects sec        ->gpi_ter     obs sig+ +0.002(0.00) n=1935 -> imp null +0.000(0.00) n=7750 lam=0.91 | eduonly +0.001? macroonly +0.002? | stochastic-imputation (unreliable) | estimate moved
+ lost       country effects ter        ->lsc         obs sig- -0.090(0.04) n=1465 -> imp null -0.028(0.07) n=6355 lam=0.55 | eduonly -0.032? macroonly -0.100? | estimate moved | estimate moved | MECHANICAL
+ gained     country effects ter        ->flfp        obs null +0.039(0.02) n=2434 -> imp sig+ +0.031(0.01) n=4185 lam=0.13 | eduonly +0.030? macroonly +0.038? | estimate moved | precision only
+ gained     country effects ter        ->life_exp    obs null -0.017(0.01) n=3854 -> imp sig- -0.019(0.01) n=7423 lam=0.27 | eduonly -0.017? macroonly -0.022? | added long-run rows | precision only
+ lost       country effects prm_cmp    ->urban       obs sig+ +0.033(0.01) n=3561 -> imp null +0.009(0.01) n=5766 lam=0.17 | eduonly +0.009? macroonly +0.033? | estimate moved | estimate moved
+ gained     country effects prm_cmp    ->u5mr        obs null +0.140(0.08) n=3485 -> imp sig+ +0.107(0.05) n=5655 lam=0.25 | eduonly +0.086? macroonly +0.148? | estimate moved | precision only
+ gained     country effects gdppc_log  ->ter         obs null +4.121(2.40) n=2857 -> imp sig+ +5.544(2.46) n=7248 lam=0.55 | eduonly +5.314? macroonly +3.827? | estimate moved | estimate moved
+ gained     country effects gdppc_log  ->life_exp    obs null -0.427(0.30) n=9270 -> imp sig- -0.677(0.27) n=11744 lam=0.00 | eduonly -0.427? macroonly -0.677? | added long-run rows | estimate moved
+ gained     country effects gdppc_log  ->gpi_sec     obs null -0.033(0.02) n=3290 -> imp sig- -0.044(0.02) n=6297 lam=0.14 | eduonly -0.038? macroonly -0.039? | estimate moved | estimate moved
+ lost       country effects tax        ->gpi_sec     obs sig- -0.002(0.00) n=1773 -> imp null -0.000(0.00) n=2710 lam=0.81 | eduonly -0.000? macroonly -0.002? | stochastic-imputation (unreliable) | estimate moved
+ gained     country effects agri_va    ->u5mr        obs null +0.284(0.18) n=6583 -> imp sig+ +0.415(0.20) n=6558 lam=0.00 | eduonly +0.284? macroonly +0.415? | added long-run rows | estimate moved
+ gained     country effects agri_va    ->gpi_sec     obs null -0.003(0.00) n=2688 -> imp sig- -0.003(0.00) n=4855 lam=0.08 | eduonly -0.003? macroonly -0.003? | estimate moved | precision only
+ gained     country effects agri_va    ->gpi_ter     obs null -0.002(0.00) n=2041 -> imp sig- -0.003(0.00) n=5716 lam=0.13 | eduonly -0.003? macroonly -0.003? | estimate moved | precision only
+ lost       country effects emp_agri   ->gdppc_log   obs sig- -0.008(0.00) n=4305 -> imp null -0.005(0.00) n=4175 lam=0.00 | eduonly -0.008? macroonly -0.005? | added long-run rows | estimate moved
+ lost       country effects emp_agri   ->gpi_sec     obs sig- -0.003(0.00) n=1841 -> imp null -0.003(0.00) n=3173 lam=0.23 | eduonly -0.003? macroonly -0.002? | added long-run rows | precision only
+ lost       country effects emp_agri   ->gpi_ter     obs sig- -0.006(0.00) n=1645 -> imp null -0.002(0.00) n=3871 lam=0.20 | eduonly -0.002? macroonly -0.006? | estimate moved | estimate moved
+ gained     country effects gpi_sec    ->flfp        obs null -4.797(2.58) n=2878 -> imp sig- -3.681(1.76) n=3880 lam=0.07 | eduonly -3.778? macroonly -4.623? | estimate moved | precision only
+ lost       country effects gpi_ter    ->lsc         obs sig+ +14.036(4.99) n=1335 -> imp null +10.095(6.11) n=6608 lam=0.81 | eduonly +10.329? macroonly +14.047? | stochastic-imputation (unreliable) | estimate moved
+ lost       country effects gpi_ter    ->sec         obs sig+ +10.684(3.14) n=2146 -> imp null +5.831(4.61) n=7814 lam=0.79 | eduonly +7.690? macroonly +9.856? | estimate moved | estimate moved
+ lost       country effects gpi_ter    ->ter         obs sig+ +18.445(4.25) n=2385 -> imp null +9.525(5.10) n=7042 lam=0.82 | eduonly +10.518? macroonly +17.945? | stochastic-imputation (unreliable) | estimate moved
+ gained     country effects gpi_ter    ->u5mr        obs null +9.481(4.91) n=3125 -> imp sig+ +13.318(5.33) n=7763 lam=0.65 | eduonly +5.048? macroonly +11.717? | added long-run rows | estimate moved
+ gained     country effects fertility  ->wage_emp    obs null -0.560(0.32) n=4326 -> imp sig- -0.655(0.32) n=4370 lam=0.00 | eduonly -0.560? macroonly -0.655? | added long-run rows | precision only
+ gained     country effects fertility  ->u5mr        obs null -0.556(1.77) n=8569 -> imp sig- -3.699(1.53) n=11225 lam=0.00 | eduonly -0.556? macroonly -3.699? | added long-run rows | estimate moved | MECHANICAL
+ lost       country trends  electricity->gpi_ter     obs sig- -0.002(0.00) n=1515 -> imp null -0.001(0.00) n=3650 lam=0.44 | eduonly -0.001? macroonly -0.002? | estimate moved | estimate moved
+ gained     country trends  wage_emp   ->gdppc_log   obs null -0.004(0.00) n=4303 -> imp sig- -0.005(0.00) n=4175 lam=0.00 | eduonly -0.004? macroonly -0.005? | added long-run rows | estimate moved
+ lost       country trends  sec        ->ter         obs sig+ +0.099(0.05) n=2419 -> imp null +0.011(0.03) n=7125 lam=0.59 | eduonly +0.026? macroonly +0.092? | estimate moved | estimate moved | MECHANICAL
+ lost       country trends  sec        ->agri_va     obs sig+ +0.057(0.02) n=3824 -> imp null +0.019(0.02) n=6282 lam=0.67 | eduonly +0.020? macroonly +0.055? | estimate moved | estimate moved
+ gained     country trends  sec        ->u5mr        obs null +0.093(0.06) n=4407 -> imp sig+ +0.091(0.04) n=8697 lam=0.32 | eduonly +0.115? macroonly +0.116? | estimate moved | precision only
+ lost       country trends  ter        ->lsc         obs sig- -0.155(0.06) n=1403 -> imp null -0.116(0.09) n=6355 lam=0.76 | eduonly -0.098? macroonly -0.165? | estimate moved | estimate moved | MECHANICAL
+ lost       country trends  ter        ->prm_cmp     obs sig- -0.108(0.05) n=1887 -> imp null -0.094(0.07) n=5125 lam=0.57 | eduonly -0.092? macroonly -0.126? | estimate moved | precision only
+ lost       country trends  ter        ->urban       obs sig- -0.034(0.01) n=3818 -> imp null -0.012(0.01) n=7419 lam=0.56 | eduonly -0.016? macroonly -0.025? | added long-run rows | estimate moved
+ lost       country trends  ter        ->agri_va     obs sig+ +0.032(0.01) n=3278 -> imp null +0.021(0.01) n=5764 lam=0.59 | eduonly +0.023? macroonly +0.029? | estimate moved | estimate moved
+ gained     country trends  prm_cmp    ->sec         obs null +0.017(0.04) n=2351 -> imp sig+ +0.069(0.03) n=5719 lam=0.57 | eduonly +0.065? macroonly +0.002? | estimate moved | estimate moved
+ lost       country trends  prm_cmp    ->u5mr        obs sig+ +0.150(0.07) n=3473 -> imp null +0.062(0.03) n=5647 lam=0.26 | eduonly +0.065? macroonly +0.152? | estimate moved | estimate moved
+ lost       country trends  gdppc_log  ->sec         obs sig+ +4.515(2.03) n=3390 -> imp null +3.928(2.20) n=8908 lam=0.38 | eduonly +3.068? macroonly +6.067? | estimate moved | precision only
+ lost       country trends  urban      ->flfp        obs sig+ +0.122(0.05) n=4499 -> imp null +0.100(0.05) n=4550 lam=0.00 | eduonly +0.122? macroonly +0.100? | added long-run rows | precision only
+ gained     country trends  urban      ->gpi_ter     obs null +0.005(0.01) n=2171 -> imp sig+ +0.006(0.00) n=7862 lam=0.11 | eduonly +0.005? macroonly +0.007? | estimate moved | precision only
+ gained     country trends  urban      ->fertility   obs null -0.014(0.01) n=9270 -> imp sig- -0.017(0.01) n=11744 lam=0.00 | eduonly -0.014? macroonly -0.017? | added long-run rows | precision only
+ lost       country trends  emp_agri   ->prm_cmp     obs sig+ +0.617(0.23) n=1745 -> imp null +0.366(0.21) n=3199 lam=0.31 | eduonly +0.367? macroonly +0.617? | estimate moved | estimate moved
+ gained     country trends  life_exp   ->lsc         obs null +0.052(0.22) n=1873 -> imp sig+ +0.470(0.22) n=7298 lam=0.33 | eduonly +0.529? macroonly +0.039? | estimate moved | estimate moved
+ lost       country trends  life_exp   ->ter         obs sig- -0.518(0.20) n=2811 -> imp null -0.116(0.09) n=7248 lam=0.08 | eduonly -0.196? macroonly -0.383? | estimate moved | estimate moved
+ gained     country trends  life_exp   ->prm_cmp     obs null +0.280(0.29) n=2566 -> imp sig+ +0.457(0.20) n=5484 lam=0.12 | eduonly +0.459? macroonly +0.269? | estimate moved | estimate moved
+ gained     country trends  life_exp   ->urban       obs null +0.032(0.05) n=9268 -> imp sig+ +0.100(0.05) n=11744 lam=0.00 | eduonly +0.032? macroonly +0.100? | added long-run rows | estimate moved
+ gained     country trends  life_exp   ->u5mr        obs null +0.739(0.38) n=8565 -> imp sig+ +1.154(0.43) n=11225 lam=0.00 | eduonly +0.739? macroonly +1.154? | added long-run rows | estimate moved | MECHANICAL
+ gained     country trends  u5mr       ->lsc         obs null -0.062(0.05) n=1840 -> imp sig- -0.085(0.03) n=7156 lam=0.37 | eduonly -0.091? macroonly -0.062? | estimate moved | estimate moved
+ gained     country trends  u5mr       ->prm_cmp     obs null -0.090(0.05) n=2520 -> imp sig- -0.113(0.03) n=5388 lam=0.08 | eduonly -0.107? macroonly -0.096? | estimate moved | precision only
+ gained     country trends  u5mr       ->gdppc_log   obs null -0.001(0.00) n=8543 -> imp sig- -0.002(0.00) n=11207 lam=0.00 | eduonly -0.001? macroonly -0.002? | added long-run rows | estimate moved
+ gained     country trends  u5mr       ->gpi_sec     obs null -0.001(0.00) n=3203 -> imp sig- -0.001(0.00) n=6167 lam=0.10 | eduonly -0.001? macroonly -0.001? | added long-run rows | estimate moved
+ gained     country trends  gpi_sec    ->sec         obs null +1.258(2.56) n=2944 -> imp sig+ +5.573(2.79) n=6435 lam=0.26 | eduonly +4.839? macroonly +2.021? | estimate moved | estimate moved
+ lost       country trends  gpi_sec    ->agri_va     obs sig- -3.924(1.94) n=3991 -> imp null -1.874(1.69) n=5499 lam=0.46 | eduonly -1.801? macroonly -4.057? | estimate moved | estimate moved
+ gained     country trends  gpi_sec    ->gpi_ter     obs null +0.065(0.09) n=1733 -> imp sig+ +0.095(0.04) n=5901 lam=0.36 | eduonly +0.082? macroonly +0.083? | estimate moved | precision only
+ gained     country trends  gpi_sec    ->fertility   obs null -0.308(0.16) n=4887 -> imp sig- -0.245(0.11) n=7102 lam=0.17 | eduonly -0.285? macroonly -0.241? | estimate moved | precision only
+ lost       country trends  gpi_ter    ->lsc         obs sig+ +7.088(3.18) n=1272 -> imp null +4.512(4.96) n=6605 lam=0.76 | eduonly +2.958? macroonly +7.088? | estimate moved | estimate moved
+ lost       country trends  fertility  ->prm_cmp     obs sig- -2.732(1.26) n=2566 -> imp null -1.985(1.46) n=5484 lam=0.16 | eduonly -2.384? macroonly -2.508? | added long-run rows | estimate moved
+ gained     country trends  fertility  ->u5mr        obs null -0.828(1.84) n=8567 -> imp sig- -3.198(1.58) n=11225 lam=0.00 | eduonly -0.828? macroonly -3.198? | added long-run rows | estimate moved | MECHANICAL
+ gained     country trends  fertility  ->gpi_ter     obs null -0.024(0.03) n=2171 -> imp sig- -0.048(0.02) n=7862 lam=0.17 | eduonly -0.032? macroonly -0.038? | estimate moved | estimate moved
+
+=== unique links whose verdict changed in at least one spec ===
+  massification electricity->gpi_ter     trends=lost
+  massification wage_emp   ->ter         effects=lost
+  other         wage_emp   ->gdppc_log   trends=gained
+  massification lsc        ->sec         effects=lost
+  massification sec        ->ter         effects=lost trends=lost
+  massification sec        ->agri_va     effects=lost trends=lost
+  massification sec        ->life_exp    effects=gained
+  massification sec        ->u5mr        trends=gained
+  massification sec        ->gpi_ter     effects=lost
+  massification ter        ->lsc         effects=lost trends=lost
+  massification ter        ->prm_cmp     trends=lost
+  massification ter        ->urban       trends=lost
+  massification ter        ->agri_va     trends=lost
+  massification ter        ->flfp        effects=gained
+  massification ter        ->life_exp    effects=gained
+  massification prm_cmp    ->sec         trends=gained
+  massification prm_cmp    ->urban       effects=lost
+  massification prm_cmp    ->u5mr        effects=gained trends=lost
+  massification gdppc_log  ->sec         trends=lost
+  massification gdppc_log  ->ter         effects=gained
+  other         gdppc_log  ->life_exp    effects=gained
+  massification gdppc_log  ->gpi_sec     effects=gained
+  other         urban      ->flfp        trends=lost
+  massification urban      ->gpi_ter     trends=gained
+  fertility     urban      ->fertility   trends=gained
+  massification tax        ->gpi_sec     effects=lost
+  other         agri_va    ->u5mr        effects=gained
+  massification agri_va    ->gpi_sec     effects=gained
+  massification agri_va    ->gpi_ter     effects=gained
+  massification emp_agri   ->prm_cmp     trends=lost
+  other         emp_agri   ->gdppc_log   effects=lost
+  massification emp_agri   ->gpi_sec     effects=lost
+  massification emp_agri   ->gpi_ter     effects=lost
+  massification life_exp   ->lsc         trends=gained
+  massification life_exp   ->ter         trends=lost
+  massification life_exp   ->prm_cmp     trends=gained
+  other         life_exp   ->urban       trends=gained
+  other         life_exp   ->u5mr        trends=gained
+  massification u5mr       ->lsc         trends=gained
+  massification u5mr       ->prm_cmp     trends=gained
+  other         u5mr       ->gdppc_log   trends=gained
+  massification u5mr       ->gpi_sec     trends=gained
+  massification gpi_sec    ->sec         trends=gained
+  massification gpi_sec    ->agri_va     trends=lost
+  massification gpi_sec    ->flfp        effects=gained
+  massification gpi_sec    ->gpi_ter     trends=gained
+  fertility     gpi_sec    ->fertility   trends=gained
+  massification gpi_ter    ->lsc         effects=lost trends=lost
+  massification gpi_ter    ->sec         effects=lost
+  massification gpi_ter    ->ter         effects=lost
+  massification gpi_ter    ->u5mr        effects=gained
+  fertility     fertility  ->wage_emp    effects=gained
+  fertility     fertility  ->prm_cmp     trends=lost
+  fertility     fertility  ->u5mr        effects=gained trends=gained
+  fertility     fertility  ->gpi_ter     trends=gained
+
+=== for every lost-significance cell: did n fall (power) or did the estimate shrink? ===
+country effects: 14 lost; n fell in 1; |estimate| shrank in 13; n change median 3545 (range -130..5815)
+   wage_emp   ->ter         obs +1.083(0.458) n=1874 -> imp +0.503(0.318) n=3765  dn=+1891
+   lsc        ->sec         obs +0.125(0.058) n=1943 -> imp +0.098(0.071) n=7280  dn=+5337
+   sec        ->ter         obs +0.228(0.059) n=2456 -> imp +0.104(0.100) n=7126  dn=+4670
+   sec        ->agri_va     obs +0.039(0.016) n=3851 -> imp +0.017(0.016) n=6285  dn=+2434
+   sec        ->gpi_ter     obs +0.002(0.001) n=1935 -> imp +0.000(0.001) n=7750  dn=+5815
+   ter        ->lsc         obs -0.090(0.042) n=1465 -> imp -0.028(0.067) n=6355  dn=+4890
+   prm_cmp    ->urban       obs +0.033(0.015) n=3561 -> imp +0.009(0.010) n=5766  dn=+2205
+   tax        ->gpi_sec     obs -0.002(0.001) n=1773 -> imp -0.000(0.000) n=2710  dn=+937
+   emp_agri   ->gdppc_log   obs -0.008(0.004) n=4305 -> imp -0.005(0.005) n=4175  dn=-130
+   emp_agri   ->gpi_sec     obs -0.003(0.001) n=1841 -> imp -0.003(0.002) n=3173  dn=+1332
+   emp_agri   ->gpi_ter     obs -0.006(0.003) n=1645 -> imp -0.002(0.002) n=3871  dn=+2226
+   gpi_ter    ->lsc         obs +14.036(4.993) n=1335 -> imp +10.095(6.115) n=6608  dn=+5273
+   gpi_ter    ->sec         obs +10.684(3.143) n=2146 -> imp +5.831(4.611) n=7814  dn=+5668
+   gpi_ter    ->ter         obs +18.445(4.253) n=2385 -> imp +9.525(5.096) n=7042  dn=+4657
+country trends: 15 lost; n fell in 0; |estimate| shrank in 15; n change median 2918 (range 51..5518)
+   electricity->gpi_ter     obs -0.002(0.001) n=1515 -> imp -0.001(0.001) n=3650  dn=+2135
+   sec        ->ter         obs +0.099(0.047) n=2419 -> imp +0.011(0.031) n=7125  dn=+4706
+   sec        ->agri_va     obs +0.057(0.018) n=3824 -> imp +0.019(0.015) n=6282  dn=+2458
+   ter        ->lsc         obs -0.155(0.060) n=1403 -> imp -0.116(0.091) n=6355  dn=+4952
+   ter        ->prm_cmp     obs -0.108(0.050) n=1887 -> imp -0.094(0.069) n=5125  dn=+3238
+   ter        ->urban       obs -0.034(0.015) n=3818 -> imp -0.012(0.012) n=7419  dn=+3601
+   ter        ->agri_va     obs +0.032(0.013) n=3278 -> imp +0.021(0.015) n=5764  dn=+2486
+   prm_cmp    ->u5mr        obs +0.150(0.068) n=3473 -> imp +0.062(0.034) n=5647  dn=+2174
+   gdppc_log  ->sec         obs +4.515(2.035) n=3390 -> imp +3.928(2.197) n=8908  dn=+5518
+   urban      ->flfp        obs +0.122(0.053) n=4499 -> imp +0.100(0.055) n=4550  dn=+51
+   emp_agri   ->prm_cmp     obs +0.617(0.233) n=1745 -> imp +0.366(0.208) n=3199  dn=+1454
+   life_exp   ->ter         obs -0.518(0.195) n=2811 -> imp -0.116(0.086) n=7248  dn=+4437
+   gpi_sec    ->agri_va     obs -3.924(1.943) n=3991 -> imp -1.874(1.687) n=5499  dn=+1508
+   gpi_ter    ->lsc         obs +7.088(3.178) n=1272 -> imp +4.512(4.961) n=6605  dn=+5333
+   fertility  ->prm_cmp     obs -2.732(1.260) n=2566 -> imp -1.985(1.457) n=5484  dn=+2918
+
+=== future-treatment placebo (supposed cause measured 20 years AFTER the outcome window) ===
+placebo obs: estimable 544, significant 212 (39.0%), by group {'other': 69, 'massification': 109, 'fertility': 34}
+placebo imp: estimable 544, significant 212 (39.0%), by group {'other': 68, 'massification': 110, 'fertility': 34}
+main matrix obs: estimable 544, significant 169 (31.1%)
+main matrix imp: estimable 544, significant 172 (31.6%)
+prior-project placebo link electricity->tax:
+   main country effects, obs: +0.0549 (0.0273) sig+
+   main country effects, imp: +0.0549 (0.0273) sig+
+   PLACEBO country effects, obs: +0.0326 (0.0315) null
+   PLACEBO country effects, imp: +0.0308 (0.0316) null
+   main country trends, obs: -0.0183 (0.0388) null
+   main country trends, imp: -0.0183 (0.0388) null
+   PLACEBO country trends, obs: -0.0312 (0.0419) null
+   PLACEBO country trends, imp: -0.0317 (0.0419) null
+
+=== coverage (country x year cells, 1950-2023 grid) ===
+electricity observed   6532 ( 40.7%)  long-run     0 ( 0.0%)  modelled      0 (  0.0%)  missing   9526 ( 59.3%)
+wage_emp    observed   6167 ( 38.4%)  long-run     0 ( 0.0%)  modelled      0 (  0.0%)  missing   9891 ( 61.6%)
+lsc         observed   4125 ( 25.7%)  long-run     0 ( 0.0%)  modelled   5364 ( 33.4%)  missing   6569 ( 40.9%)
+sec         observed   6162 ( 38.4%)  long-run     0 ( 0.0%)  modelled   5474 ( 34.1%)  missing   4422 ( 27.5%)
+ter         observed   5250 ( 32.7%)  long-run     0 ( 0.0%)  modelled   4203 ( 26.2%)  missing   6605 ( 41.1%)
+prm_cmp     observed   4927 ( 30.7%)  long-run     0 ( 0.0%)  modelled   2811 ( 17.5%)  missing   8320 ( 51.8%)
+gdppc_log   observed  11148 ( 69.4%)  long-run  2684 (16.7%)  modelled      0 (  0.0%)  missing   2226 ( 13.9%)
+urban       observed  13888 ( 86.5%)  long-run  2160 (13.5%)  modelled      0 (  0.0%)  missing     10 (  0.1%)
+tax         observed   4615 ( 28.7%)  long-run     0 ( 0.0%)  modelled      0 (  0.0%)  missing  11443 ( 71.3%)
+agri_va     observed   8743 ( 54.4%)  long-run     0 ( 0.0%)  modelled      0 (  0.0%)  missing   7315 ( 45.6%)
+emp_agri    observed   6167 ( 38.4%)  long-run     0 ( 0.0%)  modelled      0 (  0.0%)  missing   9891 ( 61.6%)
+flfp        observed   6354 ( 39.6%)  long-run     0 ( 0.0%)  modelled      0 (  0.0%)  missing   9704 ( 60.4%)
+life_exp    observed  13854 ( 86.3%)  long-run  2194 (13.7%)  modelled      0 (  0.0%)  missing     10 (  0.1%)
+u5mr        observed  11665 ( 72.6%)  long-run  2839 (17.7%)  modelled      0 (  0.0%)  missing   1554 (  9.7%)
+gpi_sec     observed   6020 ( 37.5%)  long-run     0 ( 0.0%)  modelled   2886 ( 18.0%)  missing   7152 ( 44.5%)
+gpi_ter     observed   4486 ( 27.9%)  long-run     0 ( 0.0%)  modelled   5571 ( 34.7%)  missing   6001 ( 37.4%)
+fertility   observed  13856 ( 86.3%)  long-run  2192 (13.7%)  modelled      0 (  0.0%)  missing     10 (  0.1%)
+
+=== rows used per matrix cell ===
+country effects, links involving education: rows obs median 2266 -> imputed median 5530 (added median 2885, range 500..5815)
+country effects, links involving neither education nor fertility: rows obs median 4305 -> imputed median 4218 (added median 10, range -146..2662)
+country trends, links involving education: rows obs median 2230 -> imputed median 5522 (added median 2918, range 503..5867)
+country trends, links involving neither education nor fertility: rows obs median 4303 -> imputed median 4218 (added median 10, range -144..2664)
+
+=== verification against out/matrix_results.json (pre-existing 16:07 run) ===
+cells compared obs 544, imp 544; max |difference| in estimate/SE vs old run: obs 0.00e+00, imp 0.00e+00
+observed-cells-only vs observed-data matrix: max |difference| 5.024 over 544 cells; verdict differs in 8 cells
+(the reference observed matrix includes a few 2024 endpoints in 6 series; the 1950-2023 gap-filled grid cannot use them, so ~130 rows of the parity links drop. That, not masking, is the source of this residual.)
