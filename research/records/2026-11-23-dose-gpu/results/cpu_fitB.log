@@ -1,0 +1,41 @@
+  round 0: 500/3000 draws, 28s elapsed, 18.03 draws/s
+  round 0: 1000/3000 draws, 53s elapsed, 18.73 draws/s
+  round 0: 1500/3000 draws, 79s elapsed, 18.97 draws/s
+  round 0: 2000/3000 draws, 105s elapsed, 19.06 draws/s
+  round 0: 2500/3000 draws, 132s elapsed, 18.90 draws/s
+  round 0: 3000/3000 draws, 159s elapsed, 18.85 draws/s
+{'round': 0, 'n': 3000, 'eps': 22.9016647575059, 'best': 13.817133906727403, 'median_kept': 20.572612771072382, 'elapsed': 159.1173586845398}
+ROUND 0 complete: n=3000 best=13.8171 eps(keep max)=22.9017 elapsed=159s rate=18.85 draws/s
+  round 1: 500/3000 draws, 190s elapsed, 2.63 draws/s
+  round 1: 1000/3000 draws, 218s elapsed, 4.58 draws/s
+  round 1: 1500/3000 draws, 247s elapsed, 6.08 draws/s
+  round 1: 2000/3000 draws, 278s elapsed, 7.20 draws/s
+  round 1: 2500/3000 draws, 311s elapsed, 8.05 draws/s
+  round 1: 3000/3000 draws, 332s elapsed, 9.04 draws/s
+{'round': 1, 'n': 3000, 'eps': 19.719639483527025, 'best': 11.434959602643922, 'median_kept': 17.823174525161242, 'elapsed': 331.79583382606506}
+ROUND 1 complete: n=3000 best=11.4350 eps(keep max)=19.7196 elapsed=332s rate=9.04 draws/s
+  round 2: 500/3000 draws, 351s elapsed, 1.42 draws/s
+  round 2: 1000/3000 draws, 366s elapsed, 2.73 draws/s
+  round 2: 1500/3000 draws, 381s elapsed, 3.94 draws/s
+  round 2: 2000/3000 draws, 396s elapsed, 5.06 draws/s
+  round 2: 2500/3000 draws, 411s elapsed, 6.09 draws/s
+  round 2: 3000/3000 draws, 425s elapsed, 7.05 draws/s
+{'round': 2, 'n': 3000, 'eps': 18.15043939473621, 'best': 14.195546550348055, 'median_kept': 17.222799412328317, 'elapsed': 425.3997061252594}
+ROUND 2 complete: n=3000 best=14.1955 eps(keep max)=18.1504 elapsed=425s rate=7.05 draws/s
+  round 3: 500/3000 draws, 445s elapsed, 1.12 draws/s
+  round 3: 1000/3000 draws, 459s elapsed, 2.18 draws/s
+  round 3: 1500/3000 draws, 475s elapsed, 3.16 draws/s
+  round 3: 2000/3000 draws, 489s elapsed, 4.09 draws/s
+  round 3: 2500/3000 draws, 504s elapsed, 4.96 draws/s
+  round 3: 3000/3000 draws, 518s elapsed, 5.79 draws/s
+{'round': 3, 'n': 3000, 'eps': 18.46768399377823, 'best': 13.174806314218607, 'median_kept': 17.204455623300852, 'elapsed': 518.435075044632}
+ROUND 3 complete: n=3000 best=13.1748 eps(keep max)=18.4677 elapsed=518s rate=5.79 draws/s
+  round 4: 500/3000 draws, 538s elapsed, 0.93 draws/s
+  round 4: 1000/3000 draws, 553s elapsed, 1.81 draws/s
+  round 4: 1500/3000 draws, 568s elapsed, 2.64 draws/s
+  round 4: 2000/3000 draws, 583s elapsed, 3.43 draws/s
+  round 4: 2500/3000 draws, 598s elapsed, 4.18 draws/s
+  round 4: 3000/3000 draws, 613s elapsed, 4.90 draws/s
+{'round': 4, 'n': 3000, 'eps': 17.58018093507402, 'best': 13.271406734330368, 'median_kept': 16.476830055971156, 'elapsed': 612.6190683841705}
+ROUND 4 complete: n=3000 best=13.2714 eps(keep max)=17.5802 elapsed=613s rate=4.90 draws/s
+done 613s

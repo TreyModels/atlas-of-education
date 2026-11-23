@@ -1,0 +1,21 @@
+  250/5000 draws, 0 accepted (0.0%), 12s, 20.93 draws/s
+  500/5000 draws, 0 accepted (0.0%), 23s, 21.95 draws/s
+  750/5000 draws, 0 accepted (0.0%), 34s, 22.06 draws/s
+  1000/5000 draws, 0 accepted (0.0%), 45s, 22.22 draws/s
+  1250/5000 draws, 0 accepted (0.0%), 56s, 22.36 draws/s
+  1500/5000 draws, 0 accepted (0.0%), 67s, 22.44 draws/s
+  1750/5000 draws, 0 accepted (0.0%), 78s, 22.50 draws/s
+  2000/5000 draws, 0 accepted (0.0%), 89s, 22.58 draws/s
+  2250/5000 draws, 0 accepted (0.0%), 100s, 22.51 draws/s
+  2500/5000 draws, 0 accepted (0.0%), 111s, 22.46 draws/s
+  2750/5000 draws, 0 accepted (0.0%), 122s, 22.47 draws/s
+  3000/5000 draws, 0 accepted (0.0%), 133s, 22.53 draws/s
+  3250/5000 draws, 0 accepted (0.0%), 144s, 22.49 draws/s
+  3500/5000 draws, 0 accepted (0.0%), 155s, 22.56 draws/s
+  3750/5000 draws, 0 accepted (0.0%), 167s, 22.51 draws/s
+  4000/5000 draws, 0 accepted (0.0%), 177s, 22.57 draws/s
+  4250/5000 draws, 0 accepted (0.0%), 188s, 22.57 draws/s
+  4500/5000 draws, 0 accepted (0.0%), 199s, 22.58 draws/s
+  4750/5000 draws, 0 accepted (0.0%), 210s, 22.61 draws/s
+  5000/5000 draws, 0 accepted (0.0%), 221s, 22.59 draws/s
+DONE drawn=5000 accepted=1044 (20.9%) ESS=1044 wrote results/rej_fitA.json

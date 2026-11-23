@@ -1,0 +1,4 @@
+{'runs': 192, 'param_draws': 8, 'women': 322560, 'load_sec': 0.006, 'run_sec': 0.0974, 'women_per_sec': 3312665, 'draws_per_sec': 82.2, 'mem_MB': 35}
+{'runs': 384, 'param_draws': 16, 'women': 645120, 'load_sec': 0.013, 'run_sec': 0.1465, 'women_per_sec': 4402067, 'draws_per_sec': 109.2, 'mem_MB': 70}
+{'runs': 768, 'param_draws': 32, 'women': 1290240, 'load_sec': 0.023, 'run_sec': 0.2756, 'women_per_sec': 4680877, 'draws_per_sec': 116.1, 'mem_MB': 141}
+{'runs': 1536, 'param_draws': 64, 'women': 2580480, 'load_sec': 0.044, 'run_sec': 0.4592, 'women_per_sec': 5619507, 'draws_per_sec': 139.4, 'mem_MB': 282}

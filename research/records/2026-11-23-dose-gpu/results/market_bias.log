@@ -1,0 +1,6 @@
+cpu done 43.5s
+rounds=1 pooled: tfr -0.0059 (t=-0.13) smam +0.4102 (t=+11.86) m18 -0.0505 (t=-12.51) asfr -0.0093 (t=-3.28)
+rounds=2 pooled: tfr +0.0241 (t=+0.61) smam +0.0762 (t=+3.06) m18 -0.0123 (t=-2.97) asfr -0.0021 (t=-0.78)
+rounds=3 pooled: tfr +0.0242 (t=+0.61) smam +0.0721 (t=+2.92) m18 -0.0115 (t=-2.78) asfr -0.0020 (t=-0.74)
+rounds=4 pooled: tfr +0.0242 (t=+0.61) smam +0.0721 (t=+2.92) m18 -0.0115 (t=-2.78) asfr -0.0020 (t=-0.74)
+wrote ../results/market_bias.json

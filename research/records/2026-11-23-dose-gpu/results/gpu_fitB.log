@@ -1,0 +1,23 @@
+  round0: 160/1000 draws, 15s, 10.83 draws/s
+  round0: 320/1000 draws, 29s, 10.86 draws/s
+  round0: 480/1000 draws, 45s, 10.56 draws/s
+  round0: 640/1000 draws, 60s, 10.65 draws/s
+  round0: 800/1000 draws, 75s, 10.73 draws/s
+  round0: 960/1000 draws, 89s, 10.78 draws/s
+ROUND 0 done: {'round': 0, 'n': 1000, 'eps': 31.003318392682605, 'best': 13.98870376546815, 'median_kept': 23.93817573609946, 'elapsed': 92.71002292633057}
+  round1: 160/1000 draws, 108s, 1.48 draws/s
+  round1: 320/1000 draws, 123s, 2.60 draws/s
+  round1: 480/1000 draws, 138s, 3.48 draws/s
+  round1: 640/1000 draws, 153s, 4.18 draws/s
+  round1: 800/1000 draws, 168s, 4.77 draws/s
+  round1: 960/1000 draws, 182s, 5.26 draws/s
+ROUND 1 done: {'round': 1, 'n': 1000, 'eps': 23.940777952759163, 'best': 14.522819396422799, 'median_kept': 20.688108699397425, 'elapsed': 185.96172308921814}
+  round2: 160/1000 draws, 201s, 0.79 draws/s
+  round2: 320/1000 draws, 216s, 1.48 draws/s
+  round2: 480/1000 draws, 230s, 2.08 draws/s
+  round2: 640/1000 draws, 245s, 2.61 draws/s
+  round2: 800/1000 draws, 260s, 3.08 draws/s
+  round2: 960/1000 draws, 275s, 3.50 draws/s
+ROUND 2 done: {'round': 2, 'n': 1000, 'eps': 23.30653953190749, 'best': 13.745875251319218, 'median_kept': 20.410401579589717, 'elapsed': 278.2423086166382}
+done 278s
+GPUDONE

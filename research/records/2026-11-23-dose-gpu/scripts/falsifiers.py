@@ -21,6 +21,8 @@ ap = argparse.ArgumentParser()
 ap.add_argument("--dir", default="../results"); ap.add_argument("--panel", default="data/panel.json")
 ap.add_argument("--n", type=int, default=150); ap.add_argument("--procs", type=int, default=6)
 ap.add_argument("--what", default="all")
+ap.add_argument("--afile", default="rej_fitA.json")
+ap.add_argument("--bfile", default="rej_fitB.json")
 a = ap.parse_args()
 D = a.dir
 PAN = json.load(open(a.panel)); FIT, HOLD = PAN["FIT"], PAN["HOLD"]
@@ -29,7 +31,7 @@ REPORT = ["th_k", "th_f", "kappa", "gam", "lam_s"]
 
 
 def load(s):
-    p = os.path.join(D, f"cpu_fit{s}.json")
+    p = os.path.join(D, a.afile if s == "A" else a.bfile)
     return json.load(open(p)) if os.path.exists(p) else None
 
 

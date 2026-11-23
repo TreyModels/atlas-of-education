@@ -43,13 +43,24 @@ if __name__ == "__main__":
             U = rng.random((n, D_)); logw = np.zeros(n)
         else:
             Uo, Wo = pop["u"], pop["w"]; Z = logit(Uo); mu = (Wo[:, None] * Z).sum(0)
-            cov = 2 * np.cov(Z.T, aweights=Wo) + 1e-6 * np.eye(D_); L = np.linalg.cholesky(cov)
+            cov = 1.0 * np.cov(Z.T, aweights=Wo) + 1e-6 * np.eye(D_); L = np.linalg.cholesky(cov)
             idx = rng.choice(len(Wo), n, p=Wo); U = expit(Z[idx] + rng.normal(size=(n, D_)) @ L.T)
-            Zi = logit(U); invC = np.linalg.inv(cov); ldet = np.linalg.slogdet(cov)[1]; dens = np.zeros(n)
+            # importance weight = prior / previous-particle density, ALL IN LOG SPACE.
+            # The previous version did this in linear space and np.exp(-0.5*m) underflowed to 0 for far
+            # particles in ~30 dimensions; dens then hit the 1e-300 floor, every collapsed particle got the
+            # same huge log-weight and one of them took all the mass (ESS 1.01 of 600).  logsumexp removes
+            # the underflow entirely.
+            Zi = logit(U); invC = np.linalg.inv(cov)
+            logWo = np.log(np.maximum(Wo, 1e-300))
+            logdens = np.empty(n)
             for j0 in range(0, n, 500):
                 dz = Zi[j0:j0 + 500, None, :] - Z[None, :, :]
-                m = np.einsum("nki,ij,nkj->nk", dz, invC, dz); dens[j0:j0 + 500] = (Wo[None, :] * np.exp(-.5 * m)).sum(1)
-            jac = (U * (1 - U)).prod(1); logw = -np.log(dens / (np.exp(.5 * ldet) * jac) + 1e-300)
+                m = np.einsum("nki,ij,nkj->nk", dz, invC, dz)
+                t = logWo[None, :] - 0.5 * m
+                mx = t.max(1, keepdims=True)
+                logdens[j0:j0 + 500] = (mx[:, 0] + np.log(np.exp(t - mx).sum(1)))
+            logjac = np.log(np.maximum(U * (1 - U), 1e-300)).sum(1)
+            logw = logjac - logdens
         seeds = rng.integers(1, 10**7, n)
         res = []
         for i, x in enumerate(pool.imap_unordered(evaluate, list(zip(U, seeds)), chunksize=4)):
@@ -58,12 +69,13 @@ if __name__ == "__main__":
                 print("  round %d: %d/%d draws, %.0fs elapsed, %.2f draws/s" % (r, i + 1, n, time.time() - t0, (i + 1) / (time.time() - t0)), flush=True)
         D = np.array([x[0] for x in res]); Dc = np.array([x[1] for x in res]); fb = np.array([x[2] for x in res])
         keep = np.argsort(D)[:a.keep]; w = np.exp(logw[keep] - logw[keep].max()); w /= w.sum()
+        ess = float(1.0 / np.sum(w ** 2))
         pop = dict(u=U[keep], w=w, D=D[keep], Dc=Dc[keep], f=fb[keep], seed=seeds[keep])
         eps = float(D[keep].max())
-        hist.append(dict(round=r, n=int(n), eps=eps, best=float(D.min()), median_kept=float(np.median(D[keep])), elapsed=time.time() - t0))
+        hist.append(dict(round=r, n=int(n), eps=eps, best=float(D.min()), median_kept=float(np.median(D[keep])), ess=ess, elapsed=time.time() - t0))
         print(hist[-1], flush=True)
-        print("ROUND %d complete: n=%d best=%.4f eps(keep max)=%.4f elapsed=%.0fs rate=%.2f draws/s" % (
-            r, n, hist[-1]["best"], eps, hist[-1]["elapsed"], n / max(hist[-1]["elapsed"], 1e-9)), flush=True)
+        print("ROUND %d complete: n=%d best=%.4f eps=%.4f ESS=%.1f/%.0f elapsed=%.0fs rate=%.2f draws/s" % (
+            r, n, hist[-1]["best"], eps, ess, a.keep, hist[-1]["elapsed"], n / max(hist[-1]["elapsed"], 1e-9)), flush=True)
         json.dump(dict(scen=a.scen, names=M.PN, lo=M.LO.tolist(), hi=M.HI.tolist(), u=pop["u"].tolist(), w=pop["w"].tolist(),
                        D=pop["D"].tolist(), Dc=pop["Dc"].tolist(), f=pop["f"].tolist(), seed=pop["seed"].tolist(),
                        fit=FIT, hist=hist, engine="original-numba", nW=a.nW, synthetic=False), open(a.out, "w"))

@@ -1,0 +1,29 @@
+{
+ "real_gradient": {
+  "mean": 21.62633335396745,
+  "median": 17.388586781852485,
+  "sd": 14.633439044240099
+ },
+ "permuted_gradient": {
+  "mean": 22.292133270369188,
+  "median": 17.6451346399906,
+  "sd": 14.996137167345587
+ },
+ "worse_when_permuted": 0.665799916401737,
+ "diff_ci": [
+  0.30717010815886364,
+  1.0696052389275772
+ ],
+ "countries_worse": 7,
+ "n_particles": 120,
+ "countries": [
+  "PHL",
+  "THA",
+  "CHN",
+  "IDN",
+  "VNM",
+  "IND",
+  "BGD",
+  "EGY"
+ ]
+}
