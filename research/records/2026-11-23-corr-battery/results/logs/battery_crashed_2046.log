@@ -1,0 +1,17 @@
+[20:41:17 +    0.0s] start workers=10 partitions=800 boot_reps=500 cells=1 pairs=342 target=50.0min
+[20:41:18 +    0.1s] base: starting 1830 task units
+[20:41:38 +   20.5s] progress tag=base passA=116 passB=0 passP=0 passC=0 passT=0 regs=317,985 elapsed=20s rate=15,516.9 regs/s
+[20:41:58 +   40.6s] progress tag=base passA=224 passB=0 passP=0 passC=0 passT=0 regs=621,858 elapsed=41s rate=15,332.2 regs/s
+[20:42:18 +   61.0s] progress tag=base passA=342 passB=1 passP=0 passC=0 passT=0 regs=937,338 elapsed=61s rate=15,365.6 regs/s
+[20:42:39 +   81.2s] progress tag=base passA=342 passB=94 passP=0 passC=0 passT=0 regs=1,000,755 elapsed=81s rate=12,319.2 regs/s
+[20:42:59 +  101.4s] progress tag=base passA=342 passB=185 passP=0 passC=0 passT=0 regs=1,062,796 elapsed=101s rate=10,483.6 regs/s
+[20:43:19 +  121.5s] progress tag=base passA=342 passB=278 passP=0 passC=0 passT=0 regs=1,126,225 elapsed=122s rate=9,268.0 regs/s
+[20:43:39 +  141.6s] progress tag=base passA=342 passB=368 passP=0 passC=0 passT=0 regs=1,187,596 elapsed=142s rate=8,389.2 regs/s
+[20:43:59 +  161.6s] progress tag=base passA=342 passB=459 passP=0 passC=0 passT=0 regs=1,249,646 elapsed=162s rate=7,732.6 regs/s
+[20:44:19 +  181.8s] progress tag=base passA=342 passB=552 passP=0 passC=0 passT=0 regs=1,313,063 elapsed=182s rate=7,220.7 regs/s
+[20:44:39 +  201.9s] progress tag=base passA=342 passB=647 passP=0 passC=0 passT=0 regs=1,377,844 elapsed=202s rate=6,823.8 regs/s
+[20:45:00 +  222.3s] progress tag=base passA=342 passB=740 passP=0 passC=0 passT=0 regs=1,441,274 elapsed=222s rate=6,484.7 regs/s
+[20:45:20 +  242.3s] progress tag=base passA=342 passB=800 passP=342 passC=2 passT=0 regs=1,582,288 elapsed=242s rate=6,530.2 regs/s
+[20:45:40 +  262.8s] progress tag=base passA=342 passB=800 passP=342 passC=116 passT=0 regs=1,582,402 elapsed=263s rate=6,022.2 regs/s
+[20:46:00 +  282.9s] progress tag=base passA=342 passB=800 passP=342 passC=216 passT=0 regs=1,582,502 elapsed=283s rate=5,594.6 regs/s
+[20:46:20 +  303.0s] progress tag=base passA=342 passB=800 passP=342 passC=316 passT=0 regs=1,582,602 elapsed=303s rate=5,223.7 regs/s
