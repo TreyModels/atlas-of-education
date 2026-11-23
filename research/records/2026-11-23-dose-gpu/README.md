@@ -144,12 +144,14 @@ does not translate out of sample.
 
 ## Files
 `scripts/`: `kernel.cu` and `engine.py` (GPU engine), `dosecore.py` (counter RNG, bit-exact math, schooling
-imputation), `ref_numpy.py` (independent reference), `test_port.py` (porting test), `test_market.py`
-(200-seed engine-difference measurement), `reject_abc.py` (equal-weight ABC, the quoted fitter),
-`fit_cpu.py` and `fit_gpu.py` (particle ABC, the broken-weight attempt and the GPU protocol),
-`analyze_cpu.py` (posteriors, diagnostics, held-out, tempo/quantum, stability), `falsifiers.py` (recovery and
-scenario falsifiers), `falsifier_perm.py` (permutation), `abm_dose.py` (callable interface), `bench_scale.py`.
-`results/`: `rej_fitA.json`, `rej_fitB.json`, `rej_fitA_rep.json` (the quoted fits), `port_test.json`,
-`PORT_NOTES.md`, `market_bias_postfix_17-31.json`, `bench_scale.json`, `analysis_holdout.json`,
-`analysis_decomp.json`, `analysis_stability.json`, `stability_A.md`, `summary_A.md`, `falsifiers.json`,
-`falsifier_perm.json`, and the superseded `cpu_fit*.json` / `fix_fit*.json` from the broken-weight attempts.
+imputation), `ref_numpy.py` and `test_port.py` (independent reference and the porting test), `test_market.py`
+(200-seed engine-difference measurement), `reject_abc.py` (the quoted equal-weight fitter, with the synthetic
+recovery option), `recover_coverage.py`, `fit_cpu.py` and `fit_gpu.py` (particle ABC, superseded and the GPU
+protocol), `analyze_cpu.py` (posteriors, diagnostics, held-out, tempo/quantum, stability), `falsifiers.py`,
+`falsifier_perm.py`, `abm_dose.py` (callable interface), `bench_scale.py`.
+`results/`: the quoted fits `rej_fitA.json`, `rej_fitB.json`, `rej_fitA_rep.json`, `rec_fitA.json`;
+`port_test.json`, `PORT_NOTES.md`, `market_bias_postfix_17-31.json`; `analysis_holdout.json`,
+`analysis_holdout_gpuengine.json`, `analysis_decomp.json`, `analysis_stability.json`, `stability_A.md`,
+`summary_A.md`; `falsifiers.json`, `falsifier_perm.json`; `bench_scale.json`, `bench_scale_2080ti.log`; and
+the superseded `cpu_fit*.json` / `fix_fit*.json` / `market_bias_prefix_17-30_superseded.json` from the
+broken-weight attempts, kept so the methods trail is auditable.
