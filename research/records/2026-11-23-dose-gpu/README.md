@@ -115,8 +115,12 @@ one round, unchanged at three or four, varying by country and period (Philippine
 -0.04 to -0.22, Egypt -0.08 to -0.23), while total and adolescent fertility are indistinguishable
 (`results/PORT_NOTES.md`, `results/market_bias_postfix_17-31.json`). It is therefore **not a rerun of the
 published model and no bias correction is applied**: it is the second engine that tests whether the
-A-versus-B verdict depends on the engine. Owing to the stop-clock, the identical A/B protocol on this
-engine was not completed; the engine is delivered for that purpose.
+A-versus-B verdict depends on the engine. The identical A/B protocol was then run on this engine as the kill test for the market channel:
+it gives **A 25.5 against B 21.7, difference +3.8 with 95% interval -2.6 to +12.0, A better in 3 of 6
+held-out countries** — indistinguishable from the exact engine's +3.3 (-3.8 to +11.1, 3 of 6). **The
+A-versus-B verdict does not depend on the engine**, so the null in section (1) is not an artefact of the
+GPU market's semantics. Both engines' fits are 3,000 and 5,000 prior draws respectively at the same
+tolerance, and the comparison is a paired out-of-sample contest on the same six countries.
 
 ## What is weak
 The fit is poor in absolute terms for every scenario. The tolerance is the prior-predictive 20th percentile
@@ -124,7 +128,8 @@ because stricter tolerances returned an empty posterior (zero of 750 prior draws
 tolerance), so the posteriors are coarse ABC summaries, not posterior-precision claims. Six held-out
 countries is a small sample for the comparison in (1). The delayed-versus-never-born split is a structural
 property of the model, not an estimate. The GPU engine's market semantics are disclosed and not corrected.
-And the engine-dependence test of the A-versus-B verdict is left unfinished.
+The equal-weight tolerance is loose by construction, and the individuation posterior's advantage in-sample
+does not translate out of sample.
 
 ## Files
 `scripts/`: `kernel.cu` and `engine.py` (GPU engine), `dosecore.py` (counter RNG, bit-exact math, schooling
