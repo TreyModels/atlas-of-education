@@ -432,7 +432,9 @@ result, framed as suggestive and limited.
 - **Marriage data**: the change-on-change test is what killed the positive timing result; any future "marriage
   timing matters" claim must survive it.
 
-## Branches produced this session (all on origin)
+## Branches produced this session
+
+### First wave (all on origin)
 - research/dose-gpu-2026-11-23 (774085c)
 - research/dose-tolerance-2026-11-23 (baadfe6)
 - research/imputed-matrix-2026-11-23 (5e4602b)
@@ -448,6 +450,26 @@ result, framed as suggestive and limited.
 - research/novelty-2026-11-23 (390db8d)
 - research/dashboard-2026-11-23 (this report)
 - research/methods-multiverse-paper-2026-11-23 (f9673a9; pushed — paper.md 12.3k words, traceability merged from the 400-draw record; public visibility pending Dr. Menefee's decision)
+
+### Second wave (all on origin; every record pre-registration-first unless marked as a run log)
+
+- research/corr-rebuild-2026-11-23 (161b563)
+- research/dhs-micro-2026-11-23 (31ded00)
+- research/care-credential-2026-11-23 (e626cb8)
+- research/policy-foreclosure-2026-11-23 (63691a2)
+- research/scaling-2026-11-23 (fd691a6)
+- research/subsistence-2026-11-23 (41f6429)
+- research/subsistence-v2-2026-11-23 (ce66cfc)
+- research/supply-demand-2026-11-23 (963e5e5)
+- research/sfi-scan-2026-11-23 (fd4cfd2)
+- research/scaling-laws-catalogue-2026-11-23 (cfe372f)
+- research/corr-battery-2026-11-23 (9363079)
+- research/early-warning-2026-11-23 (7e64f61)
+- research/historical-sequence-2026-11-23 (ab658c7)
+- research/scaling-data-hunt-2026-11-23 (9e15b6d)
+- research/handoff-run-2026-11-23 (7efcb81; status/audit run log, contract-exempt)
+- research/recompute-2026-11-23 (1a82f94; recompute log, contract-exempt)
+- research/theta-gamma-2026-11-23 — no branch: task-24 closed as superseded by the θ/γ section of research/scaling-2026-11-23 (fd691a6), honestly absent rather than proxied
 
 ## Still not known (honest list)
 - **The individuation mechanism.** The dose model now has a valid posterior and does NOT beat development-only out
