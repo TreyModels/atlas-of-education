@@ -122,7 +122,8 @@ Job numbers follow the project brief; the shared task board uses task ids (given
 - **One real engine limitation, disclosed:** results **depend on the launch batch size** - total fertility can move
   by up to 1.13 births and mean marriage age by 1.74 years - because the random-number streams are keyed on a
   woman's position within the launch and on the total women in it. The fix is operational: pin the batch size and
-  report it. This contradicts an earlier docstring claim of full determinism and is reported prominently in job 10.
+  report it. This contradicts an earlier docstring claim of full determinism; the interface note is being corrected and the
+dose record must state which batch size the GPU A-vs-B comparison used.
 - One check previously labelled "parameter recovery" compared the real-data intervals with the numbers used to
   generate synthetic data; it refits nothing. It has been relabelled in the results file so it cannot be mistaken
   for recovery evidence.
@@ -175,9 +176,11 @@ Job numbers follow the project brief; the shared task board uses task ids (given
 - **The mortality channel is calibrated to our own estimate, not assumed.** Desired births rise by 0.0067 per point
   of child mortality per 100 (the country-level estimate from job 8), so the whole 40-point mortality fall accounts
   for about 0.25 births - not the ad-hoc ~1.6x multiplier first proposed.
-- **Result: the collapse survives without the mortality decline.** Historical arm: fertility falls 1.36 births per
-  woman (5.02 to 3.66). Frozen-mortality arm: falls 1.31. **Freezing the mortality decline removes only 3.2% of the
-  fall** (country range -8.2% to +1.8%), and raises the *level* by only about 0.06 births. Falsifiers: plus or minus
+- **Result: the collapse survives without the mortality decline.** Historical arm: fertility falls 1.357 births per
+  woman (means 4.96 to 3.61). Frozen-mortality arm: falls 1.312 (5.01 to 3.71). **Freezing the mortality decline
+  removes only about 3% of the fall** (country range -8.2% to +1.8%), and raises the *level* by only about 0.05-0.06
+  births. (These are the committed means; earlier drafts of the worker's report quoted levels about 0.06 higher -
+  the changes are identical and the dashboard uses the committed numbers.) Falsifiers: plus or minus
   50% on the calibrated coefficient moves the answer by 1-5%; a 4.5x power check reaches only 10%; two population
   sizes agree. So no plausible calibration of that channel flips the verdict.
 - **Read it as a decomposition of this model, not a causal finding.** The published model was calibrated to reproduce
@@ -189,8 +192,9 @@ Job numbers follow the project brief; the shared task board uses task ids (given
   country-level link is not causal. That tension is unresolved and is the most important thing the counterfactual
   surfaced.
 - **Honest negative: the pre-antibiotic arc is unreachable.** On cohorts 1890-1955 the model produces no transition
-  at all (fertility 4.07, then 4.98, then 4.58 - a rise), and the most generous arm reaches 6.5 births at the 1890
-  cohort against a historical ~5. The model has no mechanism for the early high-fertility plateau. **The historical
+  at all (fertility 4.01, then 4.94, then 4.64 - a rise), and the highest simulated level is 5.20 births (5.42 in
+  the forced-band run) against a historical ~5, so even the model's ceiling is too low. The model has no mechanism
+  for the early high-fertility plateau. **The historical
   arc from 1800 is shown by job 11's data and figures; the simulation only covers 1930 onward.**
 - Labels: model extension, not the published model; with the mortality channel off and the published cohort base the
   engine reproduces the published model exactly (state difference 0, target series 0.0), and that check is in the
