@@ -1,0 +1,428 @@
+{
+ "R": 400,
+ "floor": 0.0024937655860349127,
+ "n_links": 272,
+ "alpha": 0.05,
+ "bh_min_p": {
+  "BH272": 0.0001838235294117647,
+  "BH136": 0.0003676470588235294
+ },
+ "share_summary": {
+  "median_share_TR": 0.09091145833333333,
+  "median_null_TR": 0.08594232080853174,
+  "mean_share_TR": 0.1406441756390056,
+  "mean_null_TR": 0.13861403336725317,
+  "frac_real_above_null_mean": 0.48161764705882354,
+  "binom_se_at_50": 0.025,
+  "binom_halfwidth95_at_50": 0.049,
+  "binom_se_at_90": 0.015,
+  "ceiling_upper95_rule_of_three": 0.0075,
+  "median_bin_se": 0.013875161114538024
+ },
+ "draws_needed_for_BH": {
+  "BH272": 5440,
+  "BH136": 2720
+ },
+ "old_counts": {
+  "beats": 43,
+  "worse": 21,
+  "flip": 36,
+  "robust": 5,
+  "survivors": 24
+ },
+ "new_counts": {
+  "certified_up_BH272": 35,
+  "certified_up_BH136": 35,
+  "certified_dn_BH272": 19,
+  "certified_upB_BH272": 0,
+  "certified_flip": 15,
+  "certified_het_Q": 53,
+  "normal_approx_same_400draws_certified_up": 46,
+  "ceiling_up": 30,
+  "ceiling_dn": 19,
+  "ceiling_flip": 15,
+  "no_better_up": 214,
+  "robust": 5
+ },
+ "expected_ceiling_by_chance": 0.6783042394014962,
+ "poisson_p_up": 1.7143264040180966e-38,
+ "poisson_p_flip": 1.1996322953839154e-15,
+ "poisson_p_dn": 2.7061204352637646e-21,
+ "old_beats_moved_off_ceiling": 13,
+ "old_beats_to_no_better": 0,
+ "class_new": {
+  "group-specific": 76,
+  "no better than random": 161,
+  "beats random, no clear group": 30,
+  "robust everywhere": 5
+ },
+ "tier2_retest": {
+  "beats": 57,
+  "worse": 20,
+  "flips": 32,
+  "t_version_disagrees": 15,
+  "old_worse_still": 20,
+  "old_flip_still": 32
+ },
+ "halves": {
+  "both_ceiling": 30,
+  "one_ceiling": 8,
+  "neither": 234,
+  "both_flip_ceiling": 15,
+  "one_flip_ceiling": 8,
+  "both_no_better": 211,
+  "disagree_no_better": 5,
+  "normal_fit_halves": {
+   "A": 43,
+   "B": 49,
+   "both": 42,
+   "one": 8,
+   "neither": 222,
+   "jaccard": 0.84,
+   "full_agreeA": 267,
+   "full_agreeB": 269
+  },
+  "spearman_p": 0.9943525906348941,
+  "pearson_null_share": 0.9998022822243353,
+  "max_abs_diff_null_share": 0.007617460317460356,
+  "half_floor": 0.004975124378109453
+ },
+ "null_mean_74_vs_400_max_abs_diff": 0.008889900726619493,
+ "statsmodels_bh_crosscheck": {
+  "up": 35,
+  "dn": 19,
+  "flip": 15,
+  "matches": true
+ },
+ "empirical_floor_check": {
+  "min_p_up": 0.0024937655860349127,
+  "min_p_dn": 0.0024937655860349127,
+  "n_at_floor_up": 30,
+  "n_at_floor_dn": 19,
+  "n_at_floor_flip": 15,
+  "certified_up": 35,
+  "k_star_up": 35,
+  "p_at_k_star": 0.004987531172069825,
+  "k_star_threshold": 0.006433823529411764,
+  "first_bh_step": 0.0001838235294117647,
+  "draws_for_lone_link": 5440,
+  "draws_for_cluster": {
+   "1": 5440,
+   "5": 1088,
+   "10": 544,
+   "14": 389,
+   "20": 272,
+   "30": 182,
+   "35": 156
+  },
+  "note": "BH step-up rejects the floor cluster; a lone link would need 5,440 draws"
+ },
+ "old74_reproduction": {
+  "old_significant": 43,
+  "reproduced_significant": 43,
+  "max_rel_q_diff": 0.00040393783683503746
+ },
+ "tier2_main": {
+  "normal_272": 46,
+  "t_272": 42,
+  "normal_136": 46,
+  "t_136": 42,
+  "agree_272": 42,
+  "disagree_272": 4,
+  "median_df": 156.78202658896942,
+  "median_scale": 0.024375338512736336,
+  "median_normal_vs_empirical_95_gap": 0.005551067815735881
+ },
+ "movement_tier2": {
+  "normal": {
+   "survive": 42,
+   "died": 1,
+   "new": 4,
+   "survive_names": [
+    [
+     "electricity",
+     "lsc"
+    ],
+    [
+     "electricity",
+     "ter"
+    ],
+    [
+     "electricity",
+     "gdppc_log"
+    ],
+    [
+     "electricity",
+     "urban"
+    ],
+    [
+     "electricity",
+     "tax"
+    ],
+    [
+     "electricity",
+     "agri_va"
+    ],
+    [
+     "electricity",
+     "u5mr"
+    ],
+    [
+     "lsc",
+     "prm_cmp"
+    ],
+    [
+     "sec",
+     "electricity"
+    ],
+    [
+     "sec",
+     "lsc"
+    ],
+    [
+     "sec",
+     "gdppc_log"
+    ],
+    [
+     "ter",
+     "fertility"
+    ],
+    [
+     "gdppc_log",
+     "electricity"
+    ],
+    [
+     "gdppc_log",
+     "wage_emp"
+    ],
+    [
+     "gdppc_log",
+     "prm_cmp"
+    ],
+    [
+     "gdppc_log",
+     "life_exp"
+    ],
+    [
+     "urban",
+     "life_exp"
+    ],
+    [
+     "urban",
+     "fertility"
+    ],
+    [
+     "tax",
+     "gdppc_log"
+    ],
+    [
+     "tax",
+     "urban"
+    ],
+    [
+     "tax",
+     "gpi_ter"
+    ],
+    [
+     "agri_va",
+     "electricity"
+    ],
+    [
+     "agri_va",
+     "ter"
+    ],
+    [
+     "agri_va",
+     "prm_cmp"
+    ],
+    [
+     "agri_va",
+     "gdppc_log"
+    ],
+    [
+     "agri_va",
+     "fertility"
+    ],
+    [
+     "flfp",
+     "gdppc_log"
+    ],
+    [
+     "life_exp",
+     "ter"
+    ],
+    [
+     "life_exp",
+     "urban"
+    ],
+    [
+     "life_exp",
+     "flfp"
+    ],
+    [
+     "life_exp",
+     "gpi_sec"
+    ],
+    [
+     "u5mr",
+     "ter"
+    ],
+    [
+     "u5mr",
+     "urban"
+    ],
+    [
+     "u5mr",
+     "life_exp"
+    ],
+    [
+     "u5mr",
+     "gpi_sec"
+    ],
+    [
+     "gpi_sec",
+     "emp_agri"
+    ],
+    [
+     "gpi_ter",
+     "electricity"
+    ],
+    [
+     "gpi_ter",
+     "gdppc_log"
+    ],
+    [
+     "gpi_ter",
+     "urban"
+    ],
+    [
+     "fertility",
+     "agri_va"
+    ],
+    [
+     "fertility",
+     "emp_agri"
+    ],
+    [
+     "fertility",
+     "gpi_sec"
+    ]
+   ],
+   "died_names": [
+    [
+     "emp_agri",
+     "gpi_ter"
+    ]
+   ],
+   "new_names": [
+    [
+     "wage_emp",
+     "u5mr"
+    ],
+    [
+     "sec",
+     "wage_emp"
+    ],
+    [
+     "flfp",
+     "sec"
+    ],
+    [
+     "fertility",
+     "life_exp"
+    ]
+   ]
+  },
+  "t": {
+   "survive": 40,
+   "died": 3,
+   "new": 2,
+   "died_names": [
+    [
+     "tax",
+     "gdppc_log"
+    ],
+    [
+     "emp_agri",
+     "gpi_ter"
+    ],
+    [
+     "gpi_ter",
+     "electricity"
+    ]
+   ],
+   "new_names": [
+    [
+     "wage_emp",
+     "u5mr"
+    ],
+    [
+     "flfp",
+     "sec"
+    ]
+   ]
+  }
+ },
+ "n_tags": 61,
+ "n_cells": 179,
+ "strict_movement": {
+  "survive": 34,
+  "lost": 9,
+  "new": 1,
+  "lost_names": [
+   [
+    "sec",
+    "gdppc_log"
+   ],
+   [
+    "tax",
+    "gdppc_log"
+   ],
+   [
+    "tax",
+    "urban"
+   ],
+   [
+    "tax",
+    "gpi_ter"
+   ],
+   [
+    "agri_va",
+    "electricity"
+   ],
+   [
+    "emp_agri",
+    "gpi_ter"
+   ],
+   [
+    "life_exp",
+    "urban"
+   ],
+   [
+    "gpi_ter",
+    "electricity"
+   ],
+   [
+    "gpi_ter",
+    "gdppc_log"
+   ]
+  ],
+  "new_names": [
+   [
+    "flfp",
+    "sec"
+   ]
+  ]
+ },
+ "determinism_vs_old_run": {
+  "common_replicates": 74,
+  "max_abs_diff_z": 0.0,
+  "max_abs_diff_Qp": 0.0,
+  "flip_mismatches": 0,
+  "real_pass_z_identical": true,
+  "real_pass_full_identical": true
+ },
+ "runtime_seconds": 3710.6,
+ "total_fits": 38420908,
+ "nproc": 16
+}

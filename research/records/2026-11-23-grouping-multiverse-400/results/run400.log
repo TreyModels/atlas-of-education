@@ -1,0 +1,30 @@
+50 groupings, 179 cells, 544 edge-specs, R=400 replicates, 16 workers
+/root/work/groups/scripts/run_multiverse400.py:38: RuntimeWarning: invalid value encountered in divide
+  z_cells.append(b / se)
+/root/work/groups/scripts/run_multiverse400.py:42: RuntimeWarning: divide by zero encountered in divide
+  w = np.where(ok, 1 / ss ** 2, 0)
+/root/work/groups/scripts/run_multiverse400.py:46: RuntimeWarning: invalid value encountered in divide
+  z = bs / ss
+done 12/401  106s  fits so far 1149423  eta 3445s
+done 20/401  243s  fits so far 1915779  eta 4633s
+done 40/401  410s  fits so far 3831846  eta 3704s
+done 60/401  585s  fits so far 5747955  eta 3326s
+done 80/401  767s  fits so far 7663906  eta 3079s
+done 100/401  1051s  fits so far 9579791  eta 3163s
+done 120/401  1231s  fits so far 11496428  eta 2882s
+done 140/401  1419s  fits so far 13412971  eta 2646s
+done 160/401  1612s  fits so far 15328851  eta 2427s
+done 180/401  1780s  fits so far 17244972  eta 2186s
+done 200/401  1929s  fits so far 19161005  eta 1938s
+done 220/401  2047s  fits so far 21077124  eta 1684s
+done 240/401  2186s  fits so far 22994384  eta 1467s
+done 260/401  2336s  fits so far 24910050  eta 1267s
+done 280/401  2494s  fits so far 26826311  eta 1078s
+done 300/401  2660s  fits so far 28742273  eta 895s
+done 320/401  2848s  fits so far 30658763  eta 721s
+done 340/401  3090s  fits so far 32575847  eta 554s
+done 360/401  3320s  fits so far 34491887  eta 378s
+done 380/401  3543s  fits so far 36408390  eta 196s
+done 400/401  3707s  fits so far 38324368  eta 9s
+TOTAL REGRESSIONS 38420908  wall 3711s  per-replicate mean 146.50s min 89.99s max 207.60s
+saved out/final400.pkl
