@@ -34,7 +34,7 @@ The two questions this session is answering:
 | 11 (task-12) | Full transition: pre-antibiotic equilibrium to fertility collapse | research/transition-2026-11-23 | **DONE and verified** (b13fde8): mortality leads fertility by ~12 years; schooling follows |
 | 12 (task-14) | Novelty literature review: is any of this actually new? | research/novelty-2026-11-23 | **DONE and verified** (390db8d): 4 new / 8 incremental / 11 known |
 | 13 (task-13) | Full transition in the GPU ABM: holds fertility up without the mortality decline? | research/transition-gpu-2026-11-23 | **DONE and verified** (f9f2f18): collapse survives without mortality decline (in this model) |
-| - (task-6) | Methodology paper on the multiverse method | research/methods-multiverse-paper-2026-11-23 | **DONE and pushed** (d9e760c; paper.md 12.3k words, claims→files map, refs with Crossref status; 400-draw record merged in for traceability). Visibility decision pending Dr. Menefee |
+| - (task-6) | Methodology paper on the multiverse method — "Which Countries Does the Coefficient Describe? A Grouping Multiverse for Cross-National Panel Claims" | research/methods-multiverse-paper-2026-11-23 | **DONE, pushed and verified** (d9e760c; paper.md 12.3k words / 468 lines; claims→files map; refs with per-entry Crossref status; 400-draw record merged in so every number is traceable from one branch; run-lead recomputed the resolution arithmetic and class counts). Publishable after Dr. Menefee's read. Public visibility decision pending Dr. Menefee |
 
 Job numbers follow the project brief; the shared task board uses task ids (given in brackets).
 
