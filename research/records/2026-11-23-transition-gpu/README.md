@@ -54,7 +54,7 @@ Falsifiers that could have killed this and did not: (a) the ±50% coefficient ba
 only from 0.9% to 4.7%, so the answer does not depend on the coefficient; (b) the 4.5x power check moves it to
 only 10%, so even a wildly larger mortality channel would not flip the verdict; (c) the same answer at 3.36
 and 10.08 million women, so it is not simulation noise. The counterfactual does raise the *level* of
-fertility (5.08 against 5.02 at the 1930 cohort) — it just adds births roughly evenly and cannot stop a fall
+fertility (5.01 against 4.96 at the 1930 cohort) — it just adds births roughly evenly and cannot stop a fall
 that is driven by the schooling rise.
 
 ### The same test in the development-only scenario
