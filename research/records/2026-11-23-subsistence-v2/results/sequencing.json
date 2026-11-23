@@ -7,5 +7,19 @@
   "fertility_onset": 1957,
   "schooling_onset": 1955,
   "farm_onset": 1910
+ },
+ "_correction_note": "pct_schooling_before_fertility=68.75 counts the 20/64 simultaneous schooling-fertility take-offs as schooling-first; do not cite as the ordering.",
+ "_correction_strict": {
+  "schooling_before_fertility_strict": 24,
+  "n_three_event_countries": 64,
+  "share_pct": 37.5,
+  "bootstrap_ci95_pct": [
+   26.56,
+   50.0
+  ],
+  "ties": 20,
+  "fertility_first": 20,
+  "all_81_share_pct": 35.8,
+  "recomputation": "research/paper-massification-2026-11-25 @ 95dc135: scripts/recompute_fertility_ordering.py, data/recompute_fertility_ordering.json"
  }
 }

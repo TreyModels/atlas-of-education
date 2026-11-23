@@ -5,6 +5,13 @@ median gap release->schooling: -26 years; schooling->fertility: +0; release->fer
 bootstrap 95% intervals (1000 resamples of countries): release<=schooling [0, 11]%; schooling<=fertility [58, 80]%; gap release->schooling [-26, -22] yrs
 countries where schooling precedes release: 61 of 64 (ALB, BGD, BLZ, BRA, CHL, CHN, CIV, COL, CRI, CUB, DOM, DZA, ECU, EGY, ESP, FJI, GHA, GTM, GUY, HND)
 
+**[Correction note, 30 Nov 2026]** The 'schooling before fertility: 69%' line above and the JSON field
+`pct_schooling_before_fertility` = 68.75 are NOT a strict ordering: they count the 20 of 64 countries whose
+schooling and fertility take-offs fall in the same year as schooling-first. Strict recomputation from
+`event_dates.csv`: 24/64 = 37.5% (bootstrap 95% interval 26.6-50.0%); 31.3% simultaneous, 31.3% fertility-first;
+all 81 with both dates 29/81 = 35.8% (25.9-45.7%). Do not cite 68.75% as the ordering. Recomputation:
+research/paper-massification-2026-11-25 @ 95dc135, scripts/recompute_fertility_ordering.py.
+
 === C5: US historical laboratory ===
 Data availability: OWID long-run fertility (1800+) and mean years of schooling (1870+) are usable.
 A long-run US agricultural-employment-share series was NOT obtainable (OWID share-of-employment series
