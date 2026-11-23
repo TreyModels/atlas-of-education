@@ -1,11 +1,11 @@
 # Lead–lag matrix on the gap-filled panel, 23 Nov 2026
-Server `/root/work/impute`; scripts in `scripts/`, results in `results/`. Panel `/root/work/data_imputed`
-(217 countries x 74 years, 1950–2023: 20 draws `m01`–`m20`, `mean/`, `flags/`); observed data `/root/work/data`.
+Server box2 (`ssh autodl2`), `/root/work/impute`; scripts in `scripts/`, results in `results/`. Panel
+`/root/work/data_imputed` (migrated copy under `/root/autodl-tmp/migrated/`; 217 countries x 74 years,
+1950–2023: 20 draws `m01`–`m20`, `mean/`, `flags/`); observed data `/root/work/data`.
 Estimator = recompute-branch matrix: each of 17 measures against every other (272 ordered pairs), the ten-year
 change of the outcome regressed on the cause's starting level, own starting level, logged income, urbanisation,
 country effects, decade effects, errors clustered by country; a second version adds a country trend. Income is
 logged (the file holds levels). Threshold |t|>1.96.
-
 ## Is the existing run sound? Yes — verified by full rerun
 The 16:07 `matrix_results.json` is sound: server scripts byte-identical to the branch, panel written (15:39)
 before the matrix ran (16:07), and my from-scratch rerun (`matrix_ext.py`) reproduces its observed and imputed
