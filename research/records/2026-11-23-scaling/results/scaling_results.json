@@ -1,0 +1,285 @@
+{
+ "data_availability": [
+  {
+   "series": "fertility",
+   "rows": 16933,
+   "year_min": 1960,
+   "year_max": 2024,
+   "used_in": ""
+  },
+  {
+   "series": "sec",
+   "rows": 8111,
+   "year_min": 1970,
+   "year_max": 2024,
+   "used_in": ""
+  },
+  {
+   "series": "gpi_sec",
+   "rows": 8059,
+   "year_min": 1970,
+   "year_max": 2022,
+   "used_in": ""
+  },
+  {
+   "series": "urban",
+   "rows": 16965,
+   "year_min": 1960,
+   "year_max": 2024,
+   "used_in": ""
+  },
+  {
+   "series": "gdppc_levels",
+   "rows": 14074,
+   "year_min": 1960,
+   "year_max": 2024,
+   "used_in": ""
+  },
+  {
+   "series": "tax",
+   "rows": 5601,
+   "year_min": 1972,
+   "year_max": 2024,
+   "used_in": ""
+  }
+ ],
+ "sections": {
+  "urban_income": {
+   "question": "Is urbanisation vs income a logistic S-curve or a power law / log-linear relation?",
+   "nobs": 10986,
+   "ncountries": 208,
+   "logistic": {
+    "a": -4.693394021842529,
+    "b": 0.5722405050507471,
+    "b_se": 0.029906801584324336,
+    "a_se": 0.24098389090261596,
+    "midpoint_log_income": 8.201785753398061,
+    "midpoint_income_levels": 3647.457955513911,
+    "rmse_share": 0.15091960513829922
+   },
+   "log_linear": {
+    "slope": 0.12658506288541574,
+    "slope_se": 0.005191039212527522,
+    "r2": 0.6017154078880094,
+    "rmse_share": 0.15204620888630968
+   },
+   "power_law": {
+    "A": 0.07454605727109849,
+    "exponent": 0.22558491800466343,
+    "rmse_share": 0.15852759383605294
+   },
+   "out_of_sample_rmse_share": {
+    "logistic": 0.15227063122610973,
+    "log_linear": 0.15316636063444786,
+    "power": 0.15979932415267578
+   },
+   "verdict": "logistic"
+  },
+  "schooling_income": {
+   "question": "Country-level weak Mincer proxy: is log schooling linear in log income?",
+   "n": 5925,
+   "ncountries": 202,
+   "slope": 0.37802905206215254,
+   "slope_se": 0.027454849353615224,
+   "r2": 0.4579581339318437,
+   "caveat": "country-year aggregates, not individual earnings; not an individual Mincer return"
+  },
+  "wagner": {
+   "question": "Wagner: does the tax/spending share rise with income (elasticity > 1)?",
+   "n": 4699,
+   "ncountries": 161,
+   "elasticity": 0.10302750089903655,
+   "se": 0.030338943966769474,
+   "r2": 0.06908404903063292,
+   "caveat": "the stored series is a single tax-revenue share whose exact definition is not documented in the data bundle; treat the elasticity as indicative"
+  },
+  "fertility_income": {
+   "question": "Is fertility vs income a simple power law or curved?",
+   "n": 11345,
+   "ncountries": 213,
+   "power_law": {
+    "exponent": -0.2630902138118354,
+    "se": 0.012980793380160068,
+    "r2": 0.5024153982377793
+   },
+   "quadratic": {
+    "linear": -0.5641202091330895,
+    "linear_se": 0.13423462776907527,
+    "squared": 0.017776384580588257,
+    "squared_se": 0.008000049794188103,
+    "r2": 0.5082710555982748
+   },
+   "oos_rmse_logtfr": {
+    "power_law": 0.39789309760407066,
+    "quadratic": 0.3971293855313261
+   }
+  },
+  "collapse": {
+   "question": "Do fertility and female attainment across countries and cohorts fall on ONE common curve?",
+   "cohort_definition": "cohort born c: female secondary completion (%) at year c+20, total fertility at year c+28",
+   "female_attainment_note": "female attainment = gross secondary completion x 2*gpi/(1+gpi) (approximation; the stored series is both-sexes, the parity index supplies the female/male ratio)",
+   "n": 4033,
+   "ncountries": 158,
+   "cohorts": [
+    1950,
+    1996
+   ],
+   "fits": {
+    "exponential": {
+     "a": 1.1278510927444636,
+     "a_se": 0.26044540146791834,
+     "b": 5.967777296280878,
+     "b_se": 0.23979215739517573,
+     "decay": 0.019668483863724745,
+     "decay_se": 0.0024933976834705445,
+     "r2": 0.7801452124518511
+    },
+    "linear": {
+     "slope": -0.0418476842613606,
+     "se": 0.0004107112937039516,
+     "r2": 0.7203166181705593
+    },
+    "power": {
+     "exponent": -0.4215536435921505,
+     "se": 0.004963915728772664,
+     "r2": 0.3368010023169886
+    },
+    "aic_tfr_scale": {
+     "exponential": -1333.7061035199845,
+     "linear": -364.9996539892201,
+     "power": 3117.160737224963
+    }
+   },
+   "collapse_quality": {
+    "residual_sd": 0.8469674661731197,
+    "fertility_range": 7.548000000000001,
+    "residual_sd_over_range": 0.11221084607487011,
+    "r2_pooled": 0.7801452124518511,
+    "r2_country_intercepts": 0.9136360081668398,
+    "r2_country_slopes": 0.9551853627515943,
+    "country_variance_share_of_residual": 0.7162686820651684,
+    "r2_country_mult_rescale": 0.9422850162264756,
+    "residual_sd_rescaled": 0.43395335844577276,
+    "F_country_slopes_vs_pooled": {
+     "F": 46.383766926435996,
+     "df": [
+      313,
+      3717
+     ]
+    },
+    "F_country_slopes_given_intercepts": {
+     "F": 21.95014054182314,
+     "df": [
+      157,
+      3717
+     ]
+    }
+   },
+   "oos_rmse_tfr": {
+    "exponential": 0.8555440911007446,
+    "linear": 0.9626990137881689,
+    "power": 1.5213668306505392
+   },
+   "residual_structure": {
+    "by_attainment_bucket": {
+     "primary-dominant (<50%)": {
+      "n": 1688,
+      "mean_resid": -0.03457630168047135,
+      "sd_resid": 0.9493350877938698
+     },
+     "secondary (50-80%)": {
+      "n": 760,
+      "mean_resid": 0.14817770488618803,
+      "sd_resid": 0.8482295669123011
+     },
+     "universal (>80%)": {
+      "n": 1585,
+      "mean_resid": -0.03422742165836986,
+      "sd_resid": 0.7133484707825214
+     }
+    },
+    "by_income_group": {
+     "High income": {
+      "n": 1193,
+      "mean_resid": -0.11179079708126934
+     },
+     "Low income": {
+      "n": 540,
+      "mean_resid": 0.39980045106158907
+     },
+     "Lower middle income": {
+      "n": 1053,
+      "mean_resid": -0.06596491322351103
+     },
+     "Upper middle income": {
+      "n": 1247,
+      "mean_resid": -0.01047712420416651
+     }
+    },
+    "by_cohort_band": {
+     "1950": {
+      "n": 665,
+      "mean_resid": 0.2873963704025767
+     },
+     "1960": {
+      "n": 695,
+      "mean_resid": 0.1722448912605072
+     },
+     "1970": {
+      "n": 601,
+      "mean_resid": -0.17292323868764642
+     },
+     "1980": {
+      "n": 1240,
+      "mean_resid": -0.09587558720902613
+     },
+     "1990": {
+      "n": 832,
+      "mean_resid": -0.10578893750594608
+     }
+    }
+   },
+   "country_slope_median": -0.035714210644348716,
+   "country_slope_iqr": [
+    -0.054500242302598145,
+    -0.012845624360065082
+   ],
+   "verdict": "country structure remains"
+  },
+  "heaps": {
+   "status": "ok",
+   "classification_depth": "ISCO-08 1-digit major groups (10 categories) \u2014 2-/3-digit ILOSTAT indicators are deprecated in the public API",
+   "ncountries": 151,
+   "npoints": 11712,
+   "heaps_exponent": 0.3329279304343961,
+   "se": 0.011343359321747315,
+   "per_country_median": 0.37368526756586523,
+   "per_country_iqr": [
+    0.318721307667209,
+    0.4684862824650733
+   ],
+   "raw_count_vs_workforce_exponent": -0.001693367208263034,
+   "literature_range": [
+    0.4,
+    0.6
+   ],
+   "test_vs_literature": {
+    "z_0_4": -5.912892967871904,
+    "z_0_6": -23.544354189113747
+   },
+   "test_vs_1_proportional": -58.80727663159743,
+   "caveat": "10-category ceiling truncates the accumulation curve; the exponent is estimated where the curve is still rising (samples up to 30% of the workforce)"
+  },
+  "zipf": {
+   "status": "unavailable"
+  },
+  "unavailable": {
+   "bettencourt_output": "no city-level GDP/wages/patents/infrastructure on box2; city output scaling (beta~1.15) and infrastructure (beta~0.85) cannot be tested \u2014 documented as data-limited",
+   "gibrat": "needs two city-population waves (WUP); WUP files not reachable from box2, GeoNames has one vintage \u2014 documented as data-limited",
+   "credential_vs_occupation": "no Credential Engine or BLS SOC series on box2; US credential:occupation time-series test cannot be run \u2014 documented as a gap",
+   "gravity_migration": "no clean bilateral migration matrix + distance on box2 within the time budget \u2014 gap",
+   "teacher_student_ratio": "no school-level data on box2 \u2014 gap"
+  }
+ },
+ "notes": "A scaling regularity is not a causal identification. Rarefaction is applied to all category-count claims; exponents carry clustered SEs; nulls are reported."
+}

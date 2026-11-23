@@ -1,0 +1,19 @@
+part,pair,sample,n_sig,sign_stable,magnitude_ratio,classification
+classification,GER secondary vs GDP pc (UIS6),UIS6,5,True,3.2159628504352424,period/region regularity
+classification,GER tertiary vs GDP pc (UIS6),UIS6,5,True,2.4838790920161613,period/region regularity
+classification,agriculture share (log) vs GDP pc (UIS6),UIS6,5,True,10.391655180158411,period/region regularity
+classification,services share (log) vs GDP pc (UIS6),UIS6,5,True,2.898932491089336,period/region regularity
+classification,upper-sec completion (logit) vs GDP pc (UIS6),UIS6,5,True,4.48316891021694,period/region regularity
+classification,urbanisation (logit) vs GDP pc (UIS6),UIS6,5,True,3.0790443716798266,period/region regularity
+classification,wage-share (log) vs GDP pc (UIS6),UIS6,5,True,2.6591561185588533,period/region regularity
+classification,GER primary vs GDP pc,WDI30,0,False,30.02242309397659,unidentified
+classification,GER secondary vs GDP pc,WDI30,5,True,1.7380160008958987,scaling law (stable across estimators)
+classification,GER secondary vs GDP pc (5y lag),WDI30,4,False,14.343597450216865,period/region regularity
+classification,GER secondary vs education spending (%GDP),WDI30,2,True,16.54611520593214,period/region regularity
+classification,GER tertiary vs GDP pc,WDI30,5,True,1.8878027821552015,scaling law (stable across estimators)
+classification,agriculture share (log) vs GDP pc,WDI30,4,True,11.220936885519837,period/region regularity
+classification,lower-sec completion (logit) vs GDP pc,WDI30,5,True,1.7638354700296701,scaling law (stable across estimators)
+classification,upper-sec completion (logit) vs GDP pc,WDI30,5,True,2.9713595741367524,period/region regularity
+classification,upper-sec completion (logit) vs log TFR,WDI30,4,False,52.23270913190258,period/region regularity
+classification,upper-sec completion (logit) vs population growth,WDI30,3,True,23.300560771740162,period/region regularity
+classification,urbanisation (logit) vs GDP pc,WDI30,2,False,46.0179359853635,period/region regularity

@@ -1,0 +1,37 @@
+{
+ "curvature": {
+  "squared_coef": -0.05831246782705798,
+  "squared_se": 0.001782215083491444,
+  "linear_coef": 0.7271970127232511,
+  "linear_se": 0.011102243218295917,
+  "npoints": 1208,
+  "ncountries": 151,
+  "verdict": "negative curvature (saturating)"
+ },
+ "threshold_split": {
+  "groups": {
+   "<50%": {
+    "n": 27,
+    "mean": 0.36002982120331095,
+    "sd": 0.0876044308942334
+   },
+   "50-80%": {
+    "n": 24,
+    "mean": 0.4031983132503889,
+    "sd": 0.1304196049541454
+   },
+   ">80%": {
+    "n": 85,
+    "mean": 0.387378172172303,
+    "sd": 0.12958357201412649
+   }
+  },
+  "welch": {
+   "t": -1.2459496923641753,
+   "p": 0.21725616642741405,
+   "df": 64.98381620452813
+  },
+  "verdict": "no significant difference by stage"
+ },
+ "female_attainment_proxy": "gross secondary completion x 2*gpi/(1+gpi), latest available year"
+}
