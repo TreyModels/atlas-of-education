@@ -110,6 +110,24 @@ for d in range(R):
 null_counts_272 = np.array(null_counts_272)
 null_counts_meff = np.array(null_counts_meff)
 
+# ---- Benjamini-Yekutieli (arbitrary dependence) ---------------------------------
+H_M = float(np.sum(1.0 / np.arange(1, M + 1)))
+alpha = ALPHA
+# BY: sort p, largest k with p_(k) <= k*alpha/(M*H_M)
+ps = np.sort(p)
+ks = np.arange(1, len(ps) + 1)
+passing_by = np.where(ps <= ks * alpha / (M * H_M))[0]
+certified_by = int(passing_by.max() + 1) if len(passing_by) else 0
+by_threshold_rank1 = alpha / (M * H_M)
+by_draws = {"lone": int(np.ceil(M * H_M / alpha)),
+            "cluster_30": int(np.ceil(M * H_M / (alpha * 30))),
+            "cluster_35": int(np.ceil(M * H_M / (alpha * 35)))}
+by_info = dict(H_M=round(H_M, 4), threshold_rank1=round(by_threshold_rank1, 8),
+               certified=certified_by, draws_needed=by_draws,
+               min_rank_needed_at_floor=int(np.ceil((1.0/(R+1)) / by_threshold_rank1)),
+               n_at_floor=n_floor,
+               note="BY controls FDR under arbitrary dependence; at 400 draws the p floor is above its first-step threshold, so certification requires a floor cluster of at least the stated rank.")
+
 out = dict(
     source_matrix=f"{BASE}/null_shares_TR.csv.gz",
     source_real=f"{BASE}/edge_table400.csv (column share_TR)",
@@ -117,6 +135,7 @@ out = dict(
     certification=dict(M_baseline=272, certified_baseline=cert.get("272"), certified_by_M=cert,
                        n_at_floor=n_floor, floor=round(floor, 8), k_star=k_star),
     draws_needed=draws,
+    benjamini_yekutieli=by_info,
     permutation_null_of_certified_count=dict(
         M=272, mean=float(null_counts_272.mean()), p95=float(np.percentile(null_counts_272, 95)),
         p99=float(np.percentile(null_counts_272, 99)), max=int(null_counts_272.max()),

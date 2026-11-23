@@ -49,6 +49,19 @@
    "cluster_35": 58
   }
  },
+ "benjamini_yekutieli": {
+  "H_M": 6.1849,
+  "threshold_rank1": 2.972e-05,
+  "certified": 0,
+  "draws_needed": {
+   "lone": 33646,
+   "cluster_30": 1122,
+   "cluster_35": 962
+  },
+  "min_rank_needed_at_floor": 84,
+  "n_at_floor": 30,
+  "note": "BY controls FDR under arbitrary dependence; at 400 draws the p floor is above its first-step threshold, so certification requires a floor cluster of at least the stated rank."
+ },
  "permutation_null_of_certified_count": {
   "M": 272,
   "mean": 0.0,
