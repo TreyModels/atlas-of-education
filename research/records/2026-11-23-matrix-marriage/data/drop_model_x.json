@@ -1,0 +1,134 @@
+{
+ "smam_f->fertility": {
+  "fe": {
+   "full_b": 0.02594835481759562,
+   "full_se": 0.0067448780133382066,
+   "filt_b": 0.02223287998830145,
+   "filt_se": 0.008655407957265052,
+   "filt_n": 1212,
+   "filt_nc": 200,
+   "same_sign": true,
+   "still_sig": true
+  },
+  "trend": {
+   "full_b": 0.01976367276563492,
+   "full_se": 0.005641367761209284,
+   "filt_b": 0.01399125870873592,
+   "filt_se": 0.005593809608313035,
+   "filt_n": 1108,
+   "filt_nc": 155,
+   "same_sign": true,
+   "still_sig": true
+  }
+ },
+ "smam_gap->prm_cmp": {
+  "fe": {
+   "full_b": 2.6336158907948053,
+   "full_se": 0.7782116897772163,
+   "filt_b": 1.972552668282741,
+   "filt_se": 1.1600340854307007,
+   "filt_n": 385,
+   "filt_nc": 147,
+   "same_sign": true,
+   "still_sig": false
+  },
+  "trend": {
+   "full_b": 2.778235213953255,
+   "full_se": 0.8256539629544253,
+   "filt_b": -0.1434431785706236,
+   "filt_se": 1.419580328380023,
+   "filt_n": 189,
+   "filt_nc": 36,
+   "same_sign": false,
+   "still_sig": false
+  }
+ },
+ "smam_gap->u5mr": {
+  "fe": {
+   "full_b": -0.7189499132881154,
+   "full_se": 0.6754154927947208,
+   "filt_b": 0.09337893324031805,
+   "filt_se": 1.003290890514862,
+   "filt_n": 956,
+   "filt_nc": 185,
+   "same_sign": false,
+   "still_sig": false
+  },
+  "trend": {
+   "full_b": -1.086278339199342,
+   "full_se": 0.44434702082930577,
+   "filt_b": 0.26509066855372515,
+   "filt_se": 0.7863227019105957,
+   "filt_n": 835,
+   "filt_nc": 135,
+   "same_sign": false,
+   "still_sig": false
+  }
+ },
+ "smam_gap->electricity": {
+  "fe": {
+   "full_b": -0.6557712518096406,
+   "full_se": 0.3693044543977045,
+   "filt_b": 0.751469213341168,
+   "filt_se": 0.3270126131644027,
+   "filt_n": 648,
+   "filt_nc": 191,
+   "same_sign": false,
+   "still_sig": true
+  },
+  "trend": {
+   "full_b": -0.43148754294339126,
+   "full_se": 0.1308622518898015,
+   "filt_b": 0.2926884509626707,
+   "filt_se": 0.20830786030382975,
+   "filt_n": 378,
+   "filt_nc": 72,
+   "same_sign": false,
+   "still_sig": false
+  }
+ },
+ "nevermar_f_4549->emp_agri": {
+  "fe": {
+   "full_b": 0.08693662502718774,
+   "full_se": 0.025193086854628413,
+   "filt_b": 0.05126484217190529,
+   "filt_se": 0.023888226009455966,
+   "filt_n": 804,
+   "filt_nc": 182,
+   "same_sign": true,
+   "still_sig": true
+  },
+  "trend": {
+   "full_b": 0.056204532123758706,
+   "full_se": 0.024962020783416746,
+   "filt_b": 0.054593664857249743,
+   "filt_se": 0.028123626710096824,
+   "filt_n": 637,
+   "filt_nc": 111,
+   "same_sign": true,
+   "still_sig": false
+  }
+ },
+ "nevermar_f_4549->tax": {
+  "fe": {
+   "full_b": 0.04997109314195466,
+   "full_se": 0.04959256561604294,
+   "filt_b": -0.01512891634114869,
+   "filt_se": 0.04355027005039192,
+   "filt_n": 460,
+   "filt_nc": 126,
+   "same_sign": false,
+   "still_sig": false
+  },
+  "trend": {
+   "full_b": -0.09902780433121292,
+   "full_se": 0.0465003923098109,
+   "filt_b": -0.04591796024306993,
+   "filt_se": 0.03978165839834827,
+   "filt_n": 321,
+   "filt_nc": 56,
+   "same_sign": true,
+   "still_sig": false
+  }
+ }
+}

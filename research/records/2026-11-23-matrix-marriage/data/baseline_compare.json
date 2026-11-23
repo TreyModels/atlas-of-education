@@ -1,0 +1,15 @@
+{
+ "n_compared": 544,
+ "n_missing_baseline": 0,
+ "n_missing_new": 0,
+ "max_abs_b": 0.0,
+ "max_abs_se": 0.0,
+ "max_abs_n": 0.0,
+ "max_abs_countries": 0.0,
+ "n_exact": 544,
+ "handoff_counts": {
+  "sig_fe": 127,
+  "sig_trends": 42,
+  "survivors_both": 24
+ }
+}

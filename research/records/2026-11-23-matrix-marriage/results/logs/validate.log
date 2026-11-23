@@ -1,0 +1,12 @@
+17 variables, 272 ordered pairs
+{
+ "n_compared": 544,
+ "n_missing_baseline": 0,
+ "n_missing_new": 0,
+ "max_abs_b": 0.0,
+ "max_abs_se": 0.0,
+ "max_abs_n": 0.0,
+ "max_abs_countries": 0.0,
+ "n_exact": 544
+}
+handoff baseline: significant with FE 127, with trends 42, survivors both 24 (corrected logged baseline expected: 127 / 42 / 24; the handoff README's 126 / 45 / 25 came from income entered in levels)

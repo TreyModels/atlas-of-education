@@ -1,0 +1,14 @@
+series available: [('agri_va', 8930), ('alone_60plus', 968), ('coresid_60plus', 705), ('coresid_60plus_f', 704), ('electricity', 6747), ('emp_agri', 6349), ('fertility', 14073), ('flfp', 6536), ('gdppc_log', 11347), ('gpi_sec', 6020), ('gpi_ter', 4580), ('life_exp', 14071), ('lsc', 4233), ('multigen_60plus', 674), ('nevermar_f_4549', 2060), ('nevermar_m_4549', 1867), ('prm_cmp', 5038), ('sec', 6271), ('smam_f', 2073), ('smam_gap', 1845), ('smam_m', 1848), ('tax', 4708), ('ter', 5344), ('u5mr', 11861), ('urban', 14105), ('wage_emp', 6349)]
+smam_f->fertility                fe    full=0.02594835481759562 filt=0.02223287998830145 n=1212 same_sign=True still_sig=True
+smam_f->fertility                trend full=0.01976367276563492 filt=0.01399125870873592 n=1108 same_sign=True still_sig=True
+smam_gap->prm_cmp                fe    full=2.6336158907948053 filt=1.972552668282741 n=385 same_sign=True still_sig=False
+smam_gap->prm_cmp                trend full=2.778235213953255 filt=-0.1434431785706236 n=189 same_sign=False still_sig=False
+smam_gap->u5mr                   fe    full=-0.7189499132881154 filt=0.09337893324031805 n=956 same_sign=False still_sig=False
+smam_gap->u5mr                   trend full=-1.086278339199342 filt=0.26509066855372515 n=835 same_sign=False still_sig=False
+smam_gap->electricity            fe    full=-0.6557712518096406 filt=0.751469213341168 n=648 same_sign=False still_sig=True
+smam_gap->electricity            trend full=-0.43148754294339126 filt=0.2926884509626707 n=378 same_sign=False still_sig=False
+nevermar_f_4549->emp_agri        fe    full=0.08693662502718774 filt=0.05126484217190529 n=804 same_sign=True still_sig=True
+nevermar_f_4549->emp_agri        trend full=0.056204532123758706 filt=0.054593664857249743 n=637 same_sign=True still_sig=False
+nevermar_f_4549->tax             fe    full=0.04997109314195466 filt=-0.01512891634114869 n=460 same_sign=False still_sig=False
+nevermar_f_4549->tax             trend full=-0.09902780433121292 filt=-0.04591796024306993 n=321 same_sign=True still_sig=False
+wrote out/drop_model_x.json

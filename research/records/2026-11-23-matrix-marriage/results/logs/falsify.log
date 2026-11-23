@@ -1,0 +1,30 @@
+series available: [('agri_va', 8930), ('alone_60plus', 968), ('coresid_60plus', 705), ('coresid_60plus_f', 704), ('electricity', 6747), ('emp_agri', 6349), ('fertility', 14073), ('flfp', 6536), ('gdppc_log', 11347), ('gpi_sec', 6020), ('gpi_ter', 4580), ('life_exp', 14071), ('lsc', 4233), ('multigen_60plus', 674), ('nevermar_f_4549', 2060), ('nevermar_m_4549', 1867), ('prm_cmp', 5038), ('sec', 6271), ('smam_f', 2073), ('smam_gap', 1845), ('smam_m', 1848), ('tax', 4708), ('ter', 5344), ('u5mr', 11861), ('urban', 14105), ('wage_emp', 6349)]
+interesting marriage links for permutation: 15
+  fertility->nevermar_f_4549   b=+1.6779 se=0.4265 circ p=0.067 (null q95=1.7320, 60 draws)
+  smam_f->fertility            b=+0.0198 se=0.0056 circ p=0.000 (null q95=0.0086, 60 draws)
+  ter->smam_f                  b=+0.0711 se=0.0205 circ p=0.500 (null q95=0.1559, 60 draws)
+  smam_gap->prm_cmp            b=+2.7782 se=0.8257 circ p=0.000 (null q95=1.9333, 60 draws)
+  smam_gap->electricity        b=-0.4315 se=0.1309 circ p=0.100 (null q95=0.5273, 60 draws)
+  gpi_ter->nevermar_f_4549     b=-4.6228 se=1.4896 circ p=0.583 (null q95=9.4312, 60 draws)
+  fertility->smam_f            b=-0.5661 se=0.1865 circ p=0.250 (null q95=1.1073, 60 draws)
+  nevermar_f_4549->smam_f      b=-0.0721 se=0.0254 circ p=0.267 (null q95=0.1132, 60 draws)
+  agri_va->nevermar_f_4549     b=-0.1261 se=0.0450 circ p=0.017 (null q95=0.0947, 60 draws)
+  smam_gap->u5mr               b=-1.0863 se=0.4443 circ p=0.033 (null q95=0.8925, 60 draws)
+  smam_f->wage_emp             b=-0.0582 se=0.0252 circ p=0.050 (null q95=0.0578, 60 draws)
+  u5mr->smam_gap               b=-0.0081 se=0.0035 circ p=0.167 (null q95=0.0114, 60 draws)
+  nevermar_f_4549->emp_agri    b=+0.0562 se=0.0250 circ p=0.000 (null q95=0.0256, 60 draws)
+  gpi_sec->smam_gap            b=+1.0695 se=0.4795 circ p=0.183 (null q95=1.4697, 60 draws)
+  smam_gap->fertility          b=-0.0347 se=0.0159 circ p=0.017 (null q95=0.0233, 60 draws)
+
+running drop-model-rows ...
+  marriage links whose trend-setting sign flips without UN estimates: 12 of 57
+
+running change-on-change ...
+  smam_f           -> fertility (country_fe=True): b=-0.0273 se=0.0097 n=1360 countries=196
+  smam_f           -> fertility (country_fe=False): b=+0.0184 se=0.0120 n=1360 countries=196
+  nevermar_f_4549  -> fertility (country_fe=True): b=+0.0013 se=0.0046 n=1346 countries=195
+  nevermar_f_4549  -> fertility (country_fe=False): b=+0.0233 se=0.0059 n=1346 countries=195
+  smam_gap         -> fertility (country_fe=True): b=-0.0967 se=0.0260 n=1194 countries=190
+  smam_gap         -> fertility (country_fe=False): b=-0.0756 se=0.0279 n=1194 countries=190
+
+wrote out/falsify_matrix.json

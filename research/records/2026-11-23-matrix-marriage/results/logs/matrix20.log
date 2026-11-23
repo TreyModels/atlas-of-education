@@ -1,0 +1,16 @@
+series available: [('agri_va', 8930), ('alone_60plus', 968), ('coresid_60plus', 705), ('coresid_60plus_f', 704), ('electricity', 6747), ('emp_agri', 6349), ('fertility', 14073), ('flfp', 6536), ('gdppc_log', 11347), ('gpi_sec', 6020), ('gpi_ter', 4580), ('life_exp', 14071), ('lsc', 4233), ('multigen_60plus', 674), ('nevermar_f_4549', 2060), ('nevermar_m_4549', 1867), ('prm_cmp', 5038), ('sec', 6271), ('smam_f', 2073), ('smam_gap', 1845), ('smam_m', 1848), ('tax', 4708), ('ter', 5344), ('u5mr', 11861), ('urban', 14105), ('wage_emp', 6349)]
+20 measures, 380 ordered links
+fe    : estimable 380/380, sig 154, BH<0.05 116
+trend : estimable 379/380, sig 64, BH<0.05 16
+survive both FE and trends (same sign): 31
+  of which marriage-involving: 7
+BASELINE 17-measure survivors (income logged; corrected handoff baseline is 24): 24
+
+marriage-involving links surviving both, by |t| with trends:
+  fertility->nevermar_f_4549   FE +1.0764±0.3702  TR +1.6779±0.4265 n=1100 countries=112 BHq=0.006330594000779356
+  smam_f->fertility            FE +0.0259±0.0067  TR +0.0198±0.0056 n=1698 countries=170 BHq=0.020030503678088254
+  ter->smam_f                  FE +0.0414±0.0097  TR +0.0711±0.0205 n=398 countries=57 BHq=0.020030503678088254
+  smam_gap->prm_cmp            FE +2.6336±0.7782  TR +2.7782±0.8257 n=384 countries=56 BHq=0.026383233669517628
+  nevermar_f_4549->emp_agri    FE +0.0869±0.0252  TR +0.0562±0.0250 n=989 countries=132 BHq=0.21362166652785025
+  electricity->smam_f          FE -0.0376±0.0170  TR -0.0303±0.0140 n=529 countries=70 BHq=0.22353659752828559
+  nevermar_f_4549->gdppc_log   FE -0.0031±0.0014  TR -0.0036±0.0017 n=1681 countries=170 BHq=0.23749739749062937
