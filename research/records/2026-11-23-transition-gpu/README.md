@@ -40,15 +40,18 @@ Yes, almost entirely. Cohorts 1930 to 1995, mean over the eight countries, birth
 
 | arm | 1930 cohort | 1995 cohort | change |
 |---|---|---|---|
-| history (child mortality follows history) | 5.02 | 3.66 | **-1.36** |
-| frozen (child mortality held at its pre-antibiotic level) | 5.08 | 3.75 | **-1.31** |
+| history (child mortality follows history) | 4.96 | 3.60 | **-1.36** |
+| frozen (child mortality held at its pre-antibiotic level) | 5.01 | 3.70 | **-1.31** |
 
-Freezing the mortality decline at its pre-antibiotic level removes **3.2% of the fall** (country range -8.2%
-to +1.8%; Bangladesh -8.2%, Egypt -7.3%, India -0.3%, Vietnam +1.8%). In other words: in this model, with the
-mortality channel set to the observed country-level relationship, **the fertility collapse is schooling-led,
-not mortality-led** — the mortality decline accounts for a few percent of it at most.
+Levels are the mean over the eight countries of births by age 49; the 3.36-million-woman and
+10.08-million-woman runs agree within 0.02, and the change is -1.357 against -1.312.
+
+Freezing the mortality decline at its pre-antibiotic level removes **3.2% of the fall** (country range -1.8%
+to +8.2%: Bangladesh +8.2%, Egypt +7.3%, Indonesia +4.8%, India +0.3%, Vietnam -1.8%). In other words: in this
+model, with the mortality channel set to the observed country-level relationship, **the fertility collapse is
+schooling-led, not mortality-led** — the mortality decline accounts for a few percent of it at most.
 Falsifiers that could have killed this and did not: (a) the ±50% coefficient band moves the share removed
-only from 1% to 5%, so the answer does not depend on the coefficient; (b) the 4.5x power check moves it to
+only from 0.9% to 4.7%, so the answer does not depend on the coefficient; (b) the 4.5x power check moves it to
 only 10%, so even a wildly larger mortality channel would not flip the verdict; (c) the same answer at 3.36
 and 10.08 million women, so it is not simulation noise. The counterfactual does raise the *level* of
 fertility (5.08 against 5.02 at the 1930 cohort) — it just adds births roughly evenly and cannot stop a fall
@@ -56,13 +59,24 @@ that is driven by the schooling rise.
 
 ### The pre-antibiotic arc: only partly reachable
 Run on cohorts 1890-1955 (reproductive years 1905-2004), the model **does not generate a transition at all**:
-cohort fertility goes 4.07 (1890) -> 4.98 (1925) -> 4.58 (1955), a rise of half a birth rather than a fall.
-With the channel at its most generous, the highest pre-antibiotic fertility the model reaches is 6.5 births
-(1890 cohort, frozen mortality, high coefficient) against a historical national total fertility of about 5,
-and 4.1 at the calibrated settings. So the model **cannot stand in for the pre-antibiotic equilibrium**: its
-collapse is produced by mass schooling in cohorts born after about 1930, and before that it has no mechanism
-that produces the early high-fertility plateau. This is a structural limit of the published model, not a
-data problem, and it means the "whole arc" deliverable is met only from the 1930 cohort onward.
+cohort fertility goes 4.01 (1890) -> 4.94 (1920) -> 4.64 (1955), a rise of 0.63 of a birth rather than a fall.
+The highest cohort fertility anywhere in the committed runs is 5.20 (1890 cohort, frozen mortality, high
+coefficient) and 5.42 in the 4.5x power check, against a historical national total fertility of about 5; at
+the calibrated settings the 1890 cohort sits at 4.01. So the model **cannot stand in for the pre-antibiotic
+equilibrium**: its collapse is produced by mass schooling in cohorts born after about 1930, and before that
+it has no mechanism that produces the early high-fertility plateau. This is a structural limit of the
+published model, not a data problem. It means the **simulated arc covers 1930 onward only**; the full
+1800-onward arc is un-data's historical reconstruction (job 11), not this engine.
+
+### Two things this result does not say
+First, "schooling-led" here is a decomposition **of this model**, and the published model's core mechanism *is*
+the schooling dose: it was calibrated to reproduce the decline through its schooling and income channels, so
+a small calibrated mortality term could hardly overturn that structure. The result therefore shows what
+carries the decline *inside the model*, not independent evidence about the world.
+Second, it sits in real tension with the country-level result, where child survival is the most robust
+correlate of fertility in the project. The honest statement is that **either the model mis-specifies what
+carries the decline, or the country-level link is not causal — this is unresolved and needs micro data.**
+The two cannot both be the whole story.
 
 ## (2) Massification
 This is the clearest evidence in the job that the massification channel is what moves fertility. In the same

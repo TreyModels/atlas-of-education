@@ -121,12 +121,21 @@ random permutation), and the difference is measured, not assumed: with 200 seeds
 women -0.21 years differently on average (t = -5.4) at the two-round setting, +0.09 at one round, unchanged
 at three or four, varying by country and period, while total and adolescent fertility are indistinguishable
 (`results/PORT_NOTES.md`). It is **not a rerun of the published model and no bias correction is applied**;
-its role is to test whether the A-versus-B verdict depends on the engine. The identical A/B protocol was then run on this engine as the kill test for the market channel:
-it gives **A 25.5 against B 21.7, difference +3.8 with 95% interval -2.6 to +12.0, A better in 3 of 6
-held-out countries** — indistinguishable from the exact engine's +3.3 (-3.8 to +11.1, 3 of 6). **The
-A-versus-B verdict does not depend on the engine**, so the null in section (1) is not an artefact of the
-GPU market's semantics. Both engines' fits are 3,000 and 5,000 prior draws respectively at the same
-tolerance, and the comparison is a paired out-of-sample contest on the same six countries.
+its role is to test whether the A-versus-B verdict depends on the engine. The same A-and-B protocol was then run with the GPU engine *fitting* the parameters (batches of 8 parameter
+draws = 192 runs per launch, `fit_gpu.py --batch 8`, 3,000 prior draws per scenario), and its fitted
+populations were scored out of sample: **A 25.5 against B 21.7, difference +3.8 with 95% interval -2.6 to
++12.0, A better in 3 of 6 held-out countries**, against the exact engine's +3.3 (-3.8 to +11.1, 3 of 6).
+**Precision about what this tests:** those held-out predictions were computed with the published CPU model in
+both arms, so this shows that *the fitted population* and the A-versus-B verdict do not depend on which engine
+did the fitting; it does not test prediction on the GPU engine itself (the transition record does that,
+separately). What it does rule out is the worry that the GPU market's semantics were driving the fitted
+answer. Both fits used the same tolerance and the same target protocol.
+
+**Batch layout matters and is recorded here.** The engine is deterministic for a fixed seed *and a fixed
+batch layout*: each woman's random stream is keyed on her position within the launch, so regrouping the same
+runs changes their random numbers (up to 1.13 births in total fertility and 1.74 years in mean marriage age
+between one 12-run launch and batches of 5, 7 and 12; audit in the cuda-scale record's `determinism_v2.json`).
+The GPU fits above therefore pin `--batch 8` and record it.
 
 ## Limits
 The fit is poor in absolute terms; the tolerance is the prior-predictive 20th percentile because stricter

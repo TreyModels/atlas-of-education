@@ -9,8 +9,13 @@ is a list of panel country codes, and the return value is a dict of numpy arrays
                      age at first birth, ever-first-birth weight)
 plus 'fb' (the country-effect index that was used per country and draw).
 
-Deterministic for a given seed: every random draw is keyed on (woman, run, year), so results do not
-depend on batch composition.
+Deterministic for a given seed and a PINNED BATCH LAYOUT.  Each woman's random stream is keyed on her
+position within the launch and each man's on the number of women in the launch, so changing how a fixed set
+of runs is grouped changes the random numbers each run receives: the same twelve parameter draws gave total
+fertility differences of up to 1.13 births and mean marriage age differences of up to 1.74 years when
+launched as one batch versus batches of 5, 7 and 12 (audited in the cuda-scale record, determinism_v2.json).
+Operational rule: reproduce a run by pinning the batch size (this module's `batch` argument) and recording
+it with the results.  Two instances with the same seed and the same layout are bit-identical per woman.
 """
 import os, sys
 import numpy as np
