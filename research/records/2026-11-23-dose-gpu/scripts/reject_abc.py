@@ -15,6 +15,8 @@ ap.add_argument("--eps", type=float, required=True); ap.add_argument("--n", type
 ap.add_argument("--procs", type=int, default=6); ap.add_argument("--seed", type=int, default=5)
 ap.add_argument("--nW", type=int, default=12); ap.add_argument("--timecap", type=int, default=2400)
 ap.add_argument("--panel", default="data/panel.json")
+ap.add_argument("--truth", default=None, help="replace the observed targets by synthetic data from these known parameters")
+ap.add_argument("--truthseed", type=int, default=None)
 a = ap.parse_args()
 SCEN = 0 if a.scen == "A" else 1
 PAN = json.load(open(a.panel)); FIT = PAN["FIT"]
@@ -35,7 +37,22 @@ def evaluate(job):
     return float(np.mean(Dc)), Dc, fb
 
 
+def make_synthetic(tr):
+    """Exactly the synthetic-data recipe used by the previous session's recovery check."""
+    th = np.array(tr["theta"]); sc = 0 if tr["scen"] == "A" else 1
+    rr = np.random.default_rng(a.truthseed if a.truthseed is not None else tr["seed"])
+    for iso in FIT:
+        pc = PAN["countries"][iso]
+        S = M.summaries(M.simulate(pc, th, sc, int(rr.integers(1e9)), tr["f"][iso], nW=40))
+        for g, key, sd in (("tfr", "tfr", .10), ("asfr", "asfr1519", .004), ("smam", "smam", .4), ("m18", "m18", .015)):
+            pc[key] = {y: float(S[g][int(y)] + rr.normal(0, sd)) for y in pc[key]
+                       if not np.isnan(S[g].get(int(y), np.nan))}
+
+
 if __name__ == "__main__":
+    if a.truth:
+        make_synthetic(json.load(open(a.truth)))
+        print("synthetic observations installed from", a.truth, flush=True)
     rng = np.random.default_rng(a.seed); t0 = time.time()
     U = rng.random((a.n, D_)); pool = Pool(a.procs)
     res, acc = [], []

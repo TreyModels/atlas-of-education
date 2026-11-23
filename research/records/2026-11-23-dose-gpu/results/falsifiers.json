@@ -1,5 +1,5 @@
 {
- "F1_parameter_recovery": {
+ "F1_realdata_intervals_vs_generator_truths__NOT_a_recovery_test": {
   "A": {
    "th_k": {
     "truth": 2.2,
@@ -73,6 +73,28 @@
     "q95": 4.699736286439276,
     "covered": true
    }
+  }
+ },
+ "F2_scenario_recovery__IS_the_recovery_test": {
+  "A": {
+   "A": 15.384299178901431,
+   "B": 17.600376093901144,
+   "diff_A_minus_B": -2.216076914999716,
+   "diff_ci": [
+    -6.541602731344954,
+    1.7055819028658714
+   ],
+   "right_scenario_wins": true
+  },
+  "B": {
+   "A": 18.27372917002422,
+   "B": 12.071164679445813,
+   "diff_A_minus_B": 6.202564490578407,
+   "diff_ci": [
+    4.49755563459298,
+    7.908411365886241
+   ],
+   "right_scenario_wins": true
   }
  }
 }

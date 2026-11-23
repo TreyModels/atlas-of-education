@@ -1,0 +1,22 @@
+synthetic observations installed from data/truth_A.json
+  250/5000 draws, 0 accepted (0.0%), 8s, 30.16 draws/s
+  500/5000 draws, 0 accepted (0.0%), 15s, 32.36 draws/s
+  750/5000 draws, 0 accepted (0.0%), 23s, 33.03 draws/s
+  1000/5000 draws, 0 accepted (0.0%), 30s, 33.43 draws/s
+  1250/5000 draws, 0 accepted (0.0%), 38s, 33.12 draws/s
+  1500/5000 draws, 0 accepted (0.0%), 45s, 33.41 draws/s
+  1750/5000 draws, 0 accepted (0.0%), 52s, 33.46 draws/s
+  2000/5000 draws, 0 accepted (0.0%), 60s, 33.60 draws/s
+  2250/5000 draws, 0 accepted (0.0%), 67s, 33.54 draws/s
+  2500/5000 draws, 0 accepted (0.0%), 74s, 33.66 draws/s
+  2750/5000 draws, 0 accepted (0.0%), 81s, 33.82 draws/s
+  3000/5000 draws, 0 accepted (0.0%), 89s, 33.84 draws/s
+  3250/5000 draws, 0 accepted (0.0%), 96s, 33.78 draws/s
+  3500/5000 draws, 0 accepted (0.0%), 103s, 33.94 draws/s
+  3750/5000 draws, 0 accepted (0.0%), 111s, 33.90 draws/s
+  4000/5000 draws, 0 accepted (0.0%), 118s, 33.92 draws/s
+  4250/5000 draws, 0 accepted (0.0%), 125s, 33.89 draws/s
+  4500/5000 draws, 0 accepted (0.0%), 133s, 33.95 draws/s
+  4750/5000 draws, 0 accepted (0.0%), 140s, 33.94 draws/s
+  5000/5000 draws, 0 accepted (0.0%), 147s, 33.96 draws/s
+DONE drawn=5000 accepted=4911 (98.2%) ESS=4911 wrote results/rec_fitA.json

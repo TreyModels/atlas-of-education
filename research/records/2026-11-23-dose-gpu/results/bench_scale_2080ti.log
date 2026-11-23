@@ -1,0 +1,10 @@
+{'runs': 192, 'param_draws': 8, 'women': 322560, 'load_sec': 0.007, 'run_sec': 0.0765, 'women_per_sec': 4215063, 'draws_per_sec': 104.5, 'mem_MB': 35}
+{'runs': 384, 'param_draws': 16, 'women': 645120, 'load_sec': 0.011, 'run_sec': 0.1311, 'women_per_sec': 4921938, 'draws_per_sec': 122.1, 'mem_MB': 70}
+{'runs': 768, 'param_draws': 32, 'women': 1290240, 'load_sec': 0.022, 'run_sec': 0.2436, 'women_per_sec': 5297153, 'draws_per_sec': 131.4, 'mem_MB': 141}
+{'runs': 1536, 'param_draws': 64, 'women': 2580480, 'load_sec': 0.044, 'run_sec': 0.4545, 'women_per_sec': 5677326, 'draws_per_sec': 140.8, 'mem_MB': 282}
+{'runs': 3000, 'param_draws': 125, 'women': 5040000, 'load_sec': 0.081, 'run_sec': 0.8751, 'women_per_sec': 5759025, 'draws_per_sec': 142.8, 'mem_MB': 551}
+{'runs': 6000, 'param_draws': 250, 'women': 10080000, 'load_sec': 0.165, 'run_sec': 1.7511, 'women_per_sec': 5756288, 'draws_per_sec': 142.8, 'mem_MB': 1103}
+Traceback (most recent call last):
+  File "/root/work/dose_gpu/src/bench_scale.py", line 40, in <module>
+    json.dump(dict(results=res, nW=12, women_per_run=1680), open(os.path.join(os.environ.get("RESULTS", "../results"), "bench_scale.json"), "w"), indent=1)
+FileNotFoundError: [Errno 2] No such file or directory: '../results/bench_scale.json'
