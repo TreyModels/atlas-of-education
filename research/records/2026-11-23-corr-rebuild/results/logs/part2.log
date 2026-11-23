@@ -1,0 +1,21 @@
+=== Analysis 2: transportability of the level relation ===
+  region           groups=  6 level share neg.sig=0.5 | change groups=  6 share neg.sig=0.0
+  income           groups=  4 level share neg.sig=0.75 | change groups=  4 share neg.sig=0.0
+  decade           groups=  4 level share neg.sig=1.0 | change groups=  3 share neg.sig=0.0
+  region_x_decade  groups= 21 level share neg.sig=0.42857142857142855 | change groups= 15 share neg.sig=0.06666666666666667
+  random repartitions (k=6, 400 draws): level share neg.sig mean=0.90 [5-95%: 0.67-1.00]; change mean=0.01 [0.00-0.17]
+
+=== Analysis 4: pre-registered specification curve ===
+  all 360-ish: {'n': 336, 'share_negative': 0.9613095238095238, 'share_negative_significant': 0.8184523809523809, 'share_positive_significant': 0.03571428571428571, 'median_b': -0.36404568138364124}
+  period TFR: {'n': 288, 'share_negative': 0.9965277777777778, 'share_negative_significant': 0.9131944444444444, 'share_positive_significant': 0.0, 'median_b': -0.47514069695528494}
+  cohort fertility: {'n': 48, 'share_negative': 0.75, 'share_negative_significant': 0.25, 'share_positive_significant': 0.25, 'median_b': -0.09958655321721496}
+
+=== placebos ===
+  future schooling -> current fertility: {'n': 24, 'share_negative': 1.0, 'share_negative_significant': 1.0, 'share_positive_significant': 0.0, 'median_b': -0.678721777841873}
+  schooling -> backward fertility change: {'n': 12, 'share_negative': 0.3333333333333333, 'share_negative_significant': 0.0, 'share_positive_significant': 0.25, 'median_b': 0.008192110236095338}
+
+=== income as rival predictor, separately and jointly ===
+  mys_female: schooling -0.1292 (se 0.0290); log income -0.2311 (se 0.0626); n=5915
+  mys_total: schooling -0.2275 (se 0.0422); log income -0.1417 (se 0.0872); n=1394
+
+wrote /root/work/corr_rebuild/out/results_part2.json

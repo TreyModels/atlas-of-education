@@ -1,0 +1,621 @@
+{
+ "transport": {
+  "region": {
+   "n_groups_level": 6,
+   "share_level_neg_sig": 0.5,
+   "n_groups_change": 6,
+   "share_change_neg_sig": 0.0,
+   "level": [
+    {
+     "group": "Latin America & Caribbean",
+     "b": -0.16383637335147425,
+     "se": 0.05332817045981453,
+     "n": 1038,
+     "nc": 33,
+     "neg_sig": true
+    },
+    {
+     "group": "Middle East, North Africa, Afghanistan & Pakistan",
+     "b": -0.10732011368948097,
+     "se": 0.07377706844203602,
+     "n": 704,
+     "nc": 23,
+     "neg_sig": false
+    },
+    {
+     "group": "Sub-Saharan Africa",
+     "b": -0.26378951348384777,
+     "se": 0.0667779978719265,
+     "n": 1415,
+     "nc": 47,
+     "neg_sig": true
+    },
+    {
+     "group": "Europe & Central Asia",
+     "b": 0.0387009035595665,
+     "se": 0.045327014761220794,
+     "n": 1611,
+     "nc": 51,
+     "neg_sig": false
+    },
+    {
+     "group": "East Asia & Pacific",
+     "b": 0.060678242780813824,
+     "se": 0.059457025974718546,
+     "n": 905,
+     "nc": 30,
+     "neg_sig": false
+    },
+    {
+     "group": "South Asia",
+     "b": -0.12740705113761175,
+     "se": 0.03731834781665448,
+     "n": 174,
+     "nc": 6,
+     "neg_sig": true
+    }
+   ],
+   "change": [
+    {
+     "group": "Latin America & Caribbean",
+     "b": 0.1443445613268592,
+     "se": 0.03490845596809837,
+     "n": 741,
+     "nc": 32,
+     "neg_sig": false
+    },
+    {
+     "group": "Middle East, North Africa, Afghanistan & Pakistan",
+     "b": 0.11144138904332063,
+     "se": 0.04790816080024922,
+     "n": 503,
+     "nc": 23,
+     "neg_sig": false
+    },
+    {
+     "group": "Sub-Saharan Africa",
+     "b": 0.012763068687033387,
+     "se": 0.06538296710897205,
+     "n": 1016,
+     "nc": 46,
+     "neg_sig": false
+    },
+    {
+     "group": "Europe & Central Asia",
+     "b": 0.126822081949642,
+     "se": 0.02843796266645983,
+     "n": 1160,
+     "nc": 50,
+     "neg_sig": false
+    },
+    {
+     "group": "East Asia & Pacific",
+     "b": -0.03196516485529515,
+     "se": 0.07597259147515312,
+     "n": 635,
+     "nc": 30,
+     "neg_sig": false
+    },
+    {
+     "group": "South Asia",
+     "b": -0.10458524460139555,
+     "se": 0.14351851749558067,
+     "n": 120,
+     "nc": 6,
+     "neg_sig": false
+    }
+   ]
+  },
+  "income": {
+   "n_groups_level": 4,
+   "share_level_neg_sig": 0.75,
+   "n_groups_change": 4,
+   "share_change_neg_sig": 0.0,
+   "level": [
+    {
+     "group": "High income",
+     "b": -0.15365801868143675,
+     "se": 0.04362764707061347,
+     "n": 2051,
+     "nc": 64,
+     "neg_sig": true
+    },
+    {
+     "group": "Low income",
+     "b": -0.28544003814720964,
+     "se": 0.1246080859934436,
+     "n": 656,
+     "nc": 24,
+     "neg_sig": true
+    },
+    {
+     "group": "Lower middle income",
+     "b": -0.17454566639783012,
+     "se": 0.04374990490054382,
+     "n": 1453,
+     "nc": 47,
+     "neg_sig": true
+    },
+    {
+     "group": "Upper middle income",
+     "b": -0.07882869041932108,
+     "se": 0.058354316049892586,
+     "n": 1755,
+     "nc": 57,
+     "neg_sig": false
+    }
+   ],
+   "change": [
+    {
+     "group": "High income",
+     "b": 0.14770291387280393,
+     "se": 0.0287527877491055,
+     "n": 1483,
+     "nc": 63,
+     "neg_sig": false
+    },
+    {
+     "group": "Low income",
+     "b": -0.04132347310768988,
+     "se": 0.13987559060049853,
+     "n": 470,
+     "nc": 23,
+     "neg_sig": false
+    },
+    {
+     "group": "Lower middle income",
+     "b": 0.06433839398899772,
+     "se": 0.06061476678725772,
+     "n": 1030,
+     "nc": 47,
+     "neg_sig": false
+    },
+    {
+     "group": "Upper middle income",
+     "b": 0.1879629632549395,
+     "se": 0.041020580116790085,
+     "n": 1242,
+     "nc": 56,
+     "neg_sig": false
+    }
+   ]
+  },
+  "decade": {
+   "n_groups_level": 4,
+   "share_level_neg_sig": 1.0,
+   "n_groups_change": 3,
+   "share_change_neg_sig": 0.0,
+   "level": [
+    {
+     "group": "1990",
+     "b": -0.33065084123794364,
+     "se": 0.038005396194970446,
+     "n": 1496,
+     "nc": 155,
+     "neg_sig": true
+    },
+    {
+     "group": "2000",
+     "b": -0.27065817731219144,
+     "se": 0.0281860167591423,
+     "n": 1791,
+     "nc": 184,
+     "neg_sig": true
+    },
+    {
+     "group": "2010",
+     "b": -0.166066708086273,
+     "se": 0.030042441822769234,
+     "n": 1879,
+     "nc": 191,
+     "neg_sig": true
+    },
+    {
+     "group": "2020",
+     "b": -0.12132236541283692,
+     "se": 0.030277743900728828,
+     "n": 749,
+     "nc": 188,
+     "neg_sig": true
+    }
+   ],
+   "change": [
+    {
+     "group": "1990",
+     "b": 0.35222743618423297,
+     "se": 0.03511128782443733,
+     "n": 1496,
+     "nc": 155,
+     "neg_sig": false
+    },
+    {
+     "group": "2000",
+     "b": -0.02181344286585182,
+     "se": 0.032428098915533575,
+     "n": 1791,
+     "nc": 184,
+     "neg_sig": false
+    },
+    {
+     "group": "2010",
+     "b": -0.009172157676453492,
+     "se": 0.023144463423026687,
+     "n": 938,
+     "nc": 189,
+     "neg_sig": false
+    }
+   ]
+  },
+  "region_x_decade": {
+   "n_groups_level": 21,
+   "share_level_neg_sig": 0.42857142857142855,
+   "n_groups_change": 15,
+   "share_change_neg_sig": 0.06666666666666667,
+   "level": [
+    {
+     "group": "('Latin America & Caribbean', 1990)",
+     "b": -0.26903470479575153,
+     "se": 0.10583961270850649,
+     "n": 270,
+     "nc": 27,
+     "neg_sig": true
+    },
+    {
+     "group": "('Latin America & Caribbean', 2000)",
+     "b": -0.1736828307441853,
+     "se": 0.0637967121987316,
+     "n": 311,
+     "nc": 32,
+     "neg_sig": true
+    },
+    {
+     "group": "('Latin America & Caribbean', 2010)",
+     "b": -0.09303573914278768,
+     "se": 0.036996484980718336,
+     "n": 325,
+     "nc": 33,
+     "neg_sig": true
+    },
+    {
+     "group": "('Latin America & Caribbean', 2020)",
+     "b": -0.06879602387813663,
+     "se": 0.030282503011174616,
+     "n": 132,
+     "nc": 33,
+     "neg_sig": true
+    },
+    {
+     "group": "('Middle East, North Africa, Afghanistan & Pakistan', 1990)",
+     "b": -0.2960576744279697,
+     "se": 0.09931989490135447,
+     "n": 180,
+     "nc": 18,
+     "neg_sig": true
+    },
+    {
+     "group": "('Middle East, North Africa, Afghanistan & Pakistan', 2000)",
+     "b": -0.15789395678781118,
+     "se": 0.11369962712889206,
+     "n": 211,
+     "nc": 22,
+     "neg_sig": false
+    },
+    {
+     "group": "('Middle East, North Africa, Afghanistan & Pakistan', 2010)",
+     "b": -0.030867332966754264,
+     "se": 0.06413535144544034,
+     "n": 226,
+     "nc": 23,
+     "neg_sig": false
+    },
+    {
+     "group": "('Middle East, North Africa, Afghanistan & Pakistan', 2020)",
+     "b": -0.004147409220076115,
+     "se": 0.04423505624419648,
+     "n": 87,
+     "nc": 22,
+     "neg_sig": false
+    },
+    {
+     "group": "('Sub-Saharan Africa', 1990)",
+     "b": -0.38232220057945254,
+     "se": 0.0701916120018753,
+     "n": 352,
+     "nc": 37,
+     "neg_sig": true
+    },
+    {
+     "group": "('Sub-Saharan Africa', 2000)",
+     "b": -0.31276807079983443,
+     "se": 0.07684864152562033,
+     "n": 437,
+     "nc": 46,
+     "neg_sig": true
+    },
+    {
+     "group": "('Sub-Saharan Africa', 2010)",
+     "b": -0.25158562036606513,
+     "se": 0.07746770491946589,
+     "n": 448,
+     "nc": 46,
+     "neg_sig": true
+    },
+    {
+     "group": "('Sub-Saharan Africa', 2020)",
+     "b": -0.15722840188915688,
+     "se": 0.07362020140341502,
+     "n": 178,
+     "nc": 45,
+     "neg_sig": true
+    },
+    {
+     "group": "('Europe & Central Asia', 1990)",
+     "b": 0.03658755281955856,
+     "se": 0.06053874173429092,
+     "n": 413,
+     "nc": 44,
+     "neg_sig": false
+    },
+    {
+     "group": "('Europe & Central Asia', 2000)",
+     "b": 0.04147272415603604,
+     "se": 0.04078529962522457,
+     "n": 497,
+     "nc": 50,
+     "neg_sig": false
+    },
+    {
+     "group": "('Europe & Central Asia', 2010)",
+     "b": 0.05208007617796177,
+     "se": 0.04451303226454954,
+     "n": 501,
+     "nc": 51,
+     "neg_sig": false
+    },
+    {
+     "group": "('Europe & Central Asia', 2020)",
+     "b": 0.055660241397329474,
+     "se": 0.045147436241526215,
+     "n": 200,
+     "nc": 50,
+     "neg_sig": false
+    },
+    {
+     "group": "('East Asia & Pacific', 1990)",
+     "b": 0.040257863727449376,
+     "se": 0.07001183654068178,
+     "n": 221,
+     "nc": 23,
+     "neg_sig": false
+    },
+    {
+     "group": "('East Asia & Pacific', 2000)",
+     "b": 0.016026040051970135,
+     "se": 0.07251651542022013,
+     "n": 265,
+     "nc": 27,
+     "neg_sig": false
+    },
+    {
+     "group": "('East Asia & Pacific', 2010)",
+     "b": 0.08895758178656057,
+     "se": 0.06329983491124098,
+     "n": 299,
+     "nc": 30,
+     "neg_sig": false
+    },
+    {
+     "group": "('East Asia & Pacific', 2020)",
+     "b": 0.10472716948982685,
+     "se": 0.055618839392277825,
+     "n": 120,
+     "nc": 30,
+     "neg_sig": false
+    },
+    {
+     "group": "('South Asia', 2010)",
+     "b": 0.007029086438569896,
+     "se": 0.022491460716373618,
+     "n": 60,
+     "nc": 6,
+     "neg_sig": false
+    }
+   ],
+   "change": [
+    {
+     "group": "('Latin America & Caribbean', 1990)",
+     "b": 0.2338556525174963,
+     "se": 0.06968177365911342,
+     "n": 270,
+     "nc": 27,
+     "neg_sig": false
+    },
+    {
+     "group": "('Latin America & Caribbean', 2000)",
+     "b": 0.09805976254331876,
+     "se": 0.04427552749598955,
+     "n": 311,
+     "nc": 32,
+     "neg_sig": false
+    },
+    {
+     "group": "('Latin America & Caribbean', 2010)",
+     "b": 0.06079771073218933,
+     "se": 0.04754352717801765,
+     "n": 160,
+     "nc": 32,
+     "neg_sig": false
+    },
+    {
+     "group": "('Middle East, North Africa, Afghanistan & Pakistan', 1990)",
+     "b": 0.28579065852509233,
+     "se": 0.06014338997623039,
+     "n": 180,
+     "nc": 18,
+     "neg_sig": false
+    },
+    {
+     "group": "('Middle East, North Africa, Afghanistan & Pakistan', 2000)",
+     "b": 0.11144372904535946,
+     "se": 0.060166407251009225,
+     "n": 211,
+     "nc": 22,
+     "neg_sig": false
+    },
+    {
+     "group": "('Middle East, North Africa, Afghanistan & Pakistan', 2010)",
+     "b": -0.06516771012136116,
+     "se": 0.036744095353652834,
+     "n": 112,
+     "nc": 23,
+     "neg_sig": false
+    },
+    {
+     "group": "('Sub-Saharan Africa', 1990)",
+     "b": 0.20454041195649358,
+     "se": 0.06824409634659594,
+     "n": 352,
+     "nc": 37,
+     "neg_sig": false
+    },
+    {
+     "group": "('Sub-Saharan Africa', 2000)",
+     "b": -0.11301173730744568,
+     "se": 0.07648653498259715,
+     "n": 437,
+     "nc": 46,
+     "neg_sig": false
+    },
+    {
+     "group": "('Sub-Saharan Africa', 2010)",
+     "b": 0.034768519059559494,
+     "se": 0.05151643016772265,
+     "n": 227,
+     "nc": 46,
+     "neg_sig": false
+    },
+    {
+     "group": "('Europe & Central Asia', 1990)",
+     "b": 0.3688105011097598,
+     "se": 0.04010687908599184,
+     "n": 413,
+     "nc": 44,
+     "neg_sig": false
+    },
+    {
+     "group": "('Europe & Central Asia', 2000)",
+     "b": -0.04918133868974191,
+     "se": 0.0379253922937881,
+     "n": 497,
+     "nc": 50,
+     "neg_sig": false
+    },
+    {
+     "group": "('Europe & Central Asia', 2010)",
+     "b": -0.026418663863775924,
+     "se": 0.04354058590061754,
+     "n": 250,
+     "nc": 50,
+     "neg_sig": false
+    },
+    {
+     "group": "('East Asia & Pacific', 1990)",
+     "b": 0.3282306955163303,
+     "se": 0.13971227698674032,
+     "n": 221,
+     "nc": 23,
+     "neg_sig": false
+    },
+    {
+     "group": "('East Asia & Pacific', 2000)",
+     "b": -0.20879055147250894,
+     "se": 0.0683016200052789,
+     "n": 265,
+     "nc": 27,
+     "neg_sig": true
+    },
+    {
+     "group": "('East Asia & Pacific', 2010)",
+     "b": -0.004213673821880026,
+     "se": 0.09915800510230573,
+     "n": 149,
+     "nc": 30,
+     "neg_sig": false
+    }
+   ]
+  }
+ },
+ "random_yardstick": {
+  "k_groups": 6,
+  "level_mean": 0.899,
+  "level_q05": 0.6666666666666666,
+  "level_q95": 1.0,
+  "change_mean": 0.012916666666666665,
+  "change_q05": 0.0,
+  "change_q95": 0.16666666666666666,
+  "draws": 400
+ },
+ "spec_curve": {
+  "all": {
+   "n": 336,
+   "share_negative": 0.9613095238095238,
+   "share_negative_significant": 0.8184523809523809,
+   "share_positive_significant": 0.03571428571428571,
+   "median_b": -0.36404568138364124
+  },
+  "period": {
+   "n": 288,
+   "share_negative": 0.9965277777777778,
+   "share_negative_significant": 0.9131944444444444,
+   "share_positive_significant": 0.0,
+   "median_b": -0.47514069695528494
+  },
+  "cohort": {
+   "n": 48,
+   "share_negative": 0.75,
+   "share_negative_significant": 0.25,
+   "share_positive_significant": 0.25,
+   "median_b": -0.09958655321721496
+  }
+ },
+ "placebo_future": {
+  "n": 24,
+  "share_negative": 1.0,
+  "share_negative_significant": 1.0,
+  "share_positive_significant": 0.0,
+  "median_b": -0.678721777841873
+ },
+ "placebo_backward": {
+  "n": 12,
+  "share_negative": 0.3333333333333333,
+  "share_negative_significant": 0.0,
+  "share_positive_significant": 0.25,
+  "median_b": 0.008192110236095338
+ },
+ "joint_income": {
+  "mys_female": {
+   "schooling": {
+    "b": -0.12916582582342398,
+    "se": 0.02902873090220369
+   },
+   "log_income": {
+    "b": -0.23106119590877813,
+    "se": 0.06262463939325288
+   },
+   "n": 5915,
+   "nc": 192
+  },
+  "mys_total": {
+   "schooling": {
+    "b": -0.22745836147084678,
+    "se": 0.042166886912195396
+   },
+   "log_income": {
+    "b": -0.1416564541048996,
+    "se": 0.0871568830973381
+   },
+   "n": 1394,
+   "nc": 144
+  }
+ }
+}

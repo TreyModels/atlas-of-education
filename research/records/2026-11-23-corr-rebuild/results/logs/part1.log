@@ -1,0 +1,64 @@
+=== Analysis 1: levels vs changes, all schooling measures ===
+  prm_cmp    LEVEL(dec+reg)  b=-0.0239 se=0.0033 t=-7.14 n=4878 countries=193
+  prm_cmp    LEVEL(dec)      b=-0.0337 se=0.0033 t=-10.31 n=4878 countries=193
+  prm_cmp    CHANGE(FE)      b=+0.0006 se=0.0019 t=+0.31 n=3546 countries=176
+  prm_cmp    CHANGE(trends)  b=-0.0003 se=0.0019 t=-0.14 n=3546 countries=176
+  sec        LEVEL(dec+reg)  b=-0.0213 se=0.0037 t=-5.80 n=5927 countries=202
+  sec        LEVEL(dec)      b=-0.0330 se=0.0036 t=-9.06 n=5927 countries=202
+  sec        CHANGE(FE)      b=+0.0084 se=0.0018 t=+4.54 n=4535 countries=191
+  sec        CHANGE(trends)  b=+0.0030 se=0.0026 t=+1.15 n=4535 countries=191
+  lsc        LEVEL(dec+reg)  b=-0.0224 se=0.0035 t=-6.34 n=4106 countries=193
+  lsc        LEVEL(dec)      b=-0.0332 se=0.0033 t=-10.00 n=4106 countries=193
+  lsc        CHANGE(FE)      b=+0.0118 se=0.0020 t=+6.04 n=2798 countries=168
+  lsc        CHANGE(trends)  b=+0.0066 se=0.0031 t=+2.12 n=2798 countries=168
+  ter        LEVEL(dec+reg)  b=-0.0040 se=0.0020 t=-2.05 n=5126 countries=198
+  ter        LEVEL(dec)      b=-0.0194 se=0.0033 t=-5.93 n=5126 countries=198
+  ter        CHANGE(FE)      b=+0.0089 se=0.0029 t=+3.04 n=3818 countries=176
+  ter        CHANGE(trends)  b=-0.0044 se=0.0026 t=-1.68 n=3818 countries=176
+  gpi_sec    LEVEL(dec+reg)  b=-1.9685 se=0.2775 t=-7.09 n=5708 countries=199
+  gpi_sec    LEVEL(dec)      b=-2.6436 se=0.3376 t=-7.83 n=5708 countries=199
+  gpi_sec    CHANGE(FE)      b=-0.0959 se=0.1812 t=-0.53 n=4887 countries=187
+  gpi_sec    CHANGE(trends)  b=+0.0563 se=0.1886 t=+0.30 n=4887 countries=187
+  gpi_ter    LEVEL(dec+reg)  b=-1.2653 se=0.1974 t=-6.41 n=4455 countries=198
+  gpi_ter    LEVEL(dec)      b=-1.7205 se=0.2796 t=-6.15 n=4455 countries=198
+  gpi_ter    CHANGE(FE)      b=+0.4241 se=0.1295 t=+3.28 n=3158 countries=172
+  gpi_ter    CHANGE(trends)  b=+0.0006 se=0.2067 t=+0.00 n=3158 countries=172
+  mys_total  LEVEL(dec+reg)  b=-0.2275 se=0.0422 t=-5.39 n=1394 countries=144
+  mys_total  LEVEL(dec)      b=-0.3569 se=0.0417 t=-8.55 n=1394 countries=144
+  mys_total  CHANGE(FE)      b=+0.1322 se=0.0326 t=+4.06 n=1104 countries=108
+  mys_total  CHANGE(trends)  b=+0.1895 se=0.0546 t=+3.47 n=1104 countries=108
+  mys_female LEVEL(dec+reg)  b=-0.1292 se=0.0290 t=-4.45 n=5915 countries=192
+  mys_female LEVEL(dec)      b=-0.2344 se=0.0275 t=-8.52 n=5915 countries=192
+  mys_female CHANGE(FE)      b=+0.1183 se=0.0240 t=+4.92 n=4223 countries=188
+  mys_female CHANGE(trends)  b=+0.1110 se=0.0454 t=+2.44 n=4223 countries=188
+  mys_male   LEVEL(dec+reg)  b=-0.1253 se=0.0343 t=-3.66 n=5915 countries=192
+  mys_male   LEVEL(dec)      b=-0.2409 se=0.0321 t=-7.52 n=5915 countries=192
+  mys_male   CHANGE(FE)      b=+0.1142 se=0.0302 t=+3.78 n=4223 countries=188
+  mys_male   CHANGE(trends)  b=+0.1126 se=0.0506 t=+2.23 n=4223 countries=188
+  gpi_adj    LEVEL(dec+reg)  b=-1.7879 se=0.3318 t=-5.39 n=1534 countries=193
+  gpi_adj    LEVEL(dec)      b=-2.5535 se=0.3834 t=-6.66 n=1534 countries=193
+  gpi_adj    CHANGE(FE)      b=+1.4850 se=0.4214 t=+3.52 n=824 countries=93
+  gpi_adj    CHANGE(trends)  b=+0.1085 se=0.4261 t=+0.25 n=824 countries=93
+
+=== rival predictor: income in the same level specs ===
+  log income -> fertility level: b=-0.3177 se=0.0660 n=11345 countries=213
+
+=== Analysis 3: lags, female vs total attainment, thresholds ===
+  mys_female: lag0=-0.129  lag10=-0.090  lag15=-0.075  lag20=-0.062  lag25=-0.055
+  mys_total: lag0=-0.227  lag10=-0.223  lag15=-0.204  lag20=-0.189  lag25=-0.180
+  mys_male: lag0=-0.125  lag10=-0.082  lag15=-0.063  lag20=-0.048  lag25=-0.039
+  sec: lag0=-0.021  lag10=-0.021  lag15=-0.018  lag20=-0.014  lag25=-0.012
+  lsc: lag0=-0.022  lag10=-0.020  lag15=-0.017  lag20=-0.015  lag25=-0.016
+  prm_cmp: lag0=-0.024  lag10=-0.025  lag15=-0.023  lag20=-0.021  lag25=-0.018
+  gpi_ter: lag0=-1.265  lag10=-1.128  lag15=-0.955  lag20=-0.838  lag25=-0.772
+  gpi_adj: lag0=-1.788  lag10=-1.556  lag15=-1.471  lag20=-1.351  lag25=-1.206
+
+=== threshold/spline (knots 6 and 9 years) ===
+  mys_female: slope<6y -0.329 (se 0.047); 6-9y -0.090 (se 0.051); >9y +0.111 (se 0.034); n=5915
+  mys_total: slope<6y -0.380 (se 0.056); 6-9y -0.272 (se 0.055); >9y +0.179 (se 0.042); n=1394
+
+=== cohort fertility vs attainment measured at cohort age 25 ===
+  mys_total: b=-0.0011 se=0.0278 n=202 countries=24
+  mys_female: b=+0.0507 se=0.0194 n=223 countries=27
+
+wrote /root/work/corr_rebuild/out/results_part1.json
