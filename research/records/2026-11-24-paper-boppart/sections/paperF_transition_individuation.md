@@ -79,8 +79,8 @@ reported with their 5th-95th percentile intervals (`research/dose-gpu-2026-11-23
 
 Every channel points in the theory's direction and the intervals exclude zero at the 5th percentile, with 1,044
 of 5,000 draws accepted (20.9 per cent) in the primary fit and a replicate fit giving a kin-support median of
-2.73 (0.37-4.78), so the rank ordering is stable. **But the intervals are wide**: they cover 56 to 91 per cent
-of the prior range, and that width is the next section's subject.
+2.73 (0.37-4.78), so the rank ordering is stable. **But the intervals are wide**: at the primary tolerance they cover 88 to 100 per cent of the prior range
+(and 71 to 101 per cent across the three rungs of the ladder), and that width is the next section's subject.
 
 ## 4. Out of sample: individuation against development-only
 
