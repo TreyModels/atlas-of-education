@@ -30,8 +30,8 @@ The two questions this session is answering:
 | 7 (task-8) | Why fertility tracks child survival: literature review + experiment plan | research/mechanisms-2026-11-23 | **DONE and verified** (28479c1) |
 | 8 (task-9) | E1: child-mortality level versus volatility | research/level-volatility-2026-11-23 | **DONE and verified** (935632e) |
 | 9 (task-10) | Dose tolerance ladder: is the strength identifiable? | research/dose-tolerance-2026-11-23 | RUNNING |
-| 10 (task-11) | GPU engine scale and robustness audit | research/cuda-scale-2026-11-23 | RUNNING |
-| 11 (task-12) | Full transition: pre-antibiotic equilibrium to fertility collapse | research/transition-2026-11-23 | RUNNING |
+| 10 (task-11) | GPU engine scale and robustness audit | research/cuda-scale-2026-11-23 | **DONE and verified** locally (7f92799); push blocked by network outage |
+| 11 (task-12) | Full transition: pre-antibiotic equilibrium to fertility collapse | research/transition-2026-11-23 | **DONE and verified** locally (c1c6efb, b13fde8); push blocked by network outage |
 | - (task-6) | Methodology paper on the multiverse method | research/methods-multiverse-paper-2026-11-23 | DRAFTING (held by Dr. Menefee) |
 
 Job numbers follow the project brief; the shared task board uses task ids (given in brackets).
@@ -106,9 +106,15 @@ Job numbers follow the project brief; the shared task board uses task ids (given
   numbers inside the 90% intervals only because the intervals are nearly as wide as the priors - a test that could
   hardly have failed. It is reported as passed trivially, not passed; recovery of the strengths is not
   demonstrated.
-- **GPU engine as a deliverable**: reproduces its own CPU reference exactly; 5.8 million simulated women per second
-  and 10.08 million women in a single launch on the RTX 2080 Ti (2.0 million/s on the T4); deterministic for a
-  seed; callable interface. This is the ABM engine for larger runs, with the market-semantics deviation documented.
+- **GPU engine as a deliverable**: reproduces its own CPU reference exactly; about 5.1-5.3 million simulated women
+  per second at scale, and a measured ceiling of **66.8 million women in a single launch** on the 11 GB card
+  (12.7 seconds, 4.54 billion woman-years); 100 million women in two launches takes 18.4 seconds of compute
+  (51 seconds end-to-end); memory is a flat 164.6 bytes per woman. It is deterministic for a fixed batch size and
+  seed, and CUDA-graph replay and allocation size do not change results.
+- **One real engine limitation, disclosed:** results **depend on the launch batch size** - total fertility can move
+  by up to 1.13 births and mean marriage age by 1.74 years - because the random-number streams are keyed on a
+  woman's position within the launch and on the total women in it. The fix is operational: pin the batch size and
+  report it. This contradicts an earlier docstring claim of full determinism and is reported prominently in job 10.
 - One check previously labelled "parameter recovery" compared the real-data intervals with the numbers used to
   generate synthetic data; it refits nothing. It has been relabelled in the results file so it cannot be mistaken
   for recovery evidence.
@@ -130,6 +136,27 @@ Job numbers follow the project brief; the shared task board uses task ids (given
   highest remaining identification value is **replacement vs insurance in birth spacing after a child death**
   (needs DHS/WFS micro data; minimum detectable effect about 3 percentage points in the chance of a next birth);
   mortality shocks are most convincing in principle but underpowered for a 10-point mortality fall.
+
+### The full transition, pre-antibiotic equilibrium to collapse (job 11) — DONE (push pending)
+- **The corners of the arc, quantified.** In 1800-1850 the typical country had **41.6 child deaths per 100 live births**
+  (interquartile range 38.0-44.4, 184 countries) and life expectancy of **39.7 years**. By 1980-2024 it was
+  **2.8 child deaths per 100** and **70.7 years**, with effective fertility of 2.55 surviving children per woman.
+- **Mortality decline leads fertility decline.** Using real observation years only, the mortality turning point comes a
+  median of **12 years before** the fertility turning point (interquartile range 3-19; 78% of countries positive;
+  190 countries; 81% among late transitioners). Around each country's own mortality onset, fertility falls to 0.85 of
+  its pre-onset level after 20 years, 0.66 after 30 and 0.59 after 40. The long-run reconstruction version implies a
+  52-year lead and is documented as an artefact of the reconstruction, not used.
+- **What it cannot say.** The antibiotic era is dated (penicillin mass production 1944-45, streptomycin 1947, DDT
+  mid-1940s, WHO 1948, measles vaccine 1963, oral rehydration in the 1970s-80s) but it arrives entangled with
+  sanitation, income, schooling and state capacity, so it is **not** treated as an identified causal break. This is a
+  description of the sequence, not a causal estimate of antibiotics.
+- **Where schooling sits: behind, not ahead.** Two years of schooling precedes the fertility decline by a median of
+  15 years in 67% of countries, while six years of schooling *follows* it by 18 years in 81% of countries. Mass
+  schooling is a follower of the fertility collapse, not its trigger - which is consistent with the country-level
+  finding that schooling does not drive births once development is allowed for.
+- Four figures are committed on the branch (mortality-fertility phase diagram with country trajectories, long-run
+  time series for early and late transitioners, the distribution of mortality-to-fertility lags, and the annotated
+  pre-antibiotic/collapse corners).
 
 ### Country-level fertility links after gap-filling (job 2) — DONE
 - Seven fertility-block cells change significance. **Four are precision-only, not new effects**: urbanisation
@@ -351,8 +378,9 @@ See the paragraph above the massification section: the same control exercise, so
   of sample; its strengths are stable across runs but no narrower than the priors, and parameter recovery is
   passed only trivially. So the mechanism is neither supported nor excluded: the data identify its direction, not
   its size. The decisive test is micro data (birth spacing after a child death), not another country panel.
-- **Why fertility tracks child survival and life expectancy.** The association is robust and the level-versus-
-  volatility test (job 8) shows the level matters, not the riskiness - which favours replacement/quantity-quality
+- **Why fertility tracks child survival and life expectancy.** The association is robust; the full-transition
+  record (job 11) shows mortality decline leading the fertility decline by about 12 years across 190 countries; the
+  level-versus-volatility test (job 8) shows the level matters, not the riskiness - which favours replacement/quantity-quality
   over pure insurance at country level. But a common development cause predicts the same pattern and is not
   excluded, and the decisive household test (birth spacing after a child death) needs micro data we do not have.
 - **Whether the schooling-fertility null is a measurement limit or a real absence.** No country-level test so far
