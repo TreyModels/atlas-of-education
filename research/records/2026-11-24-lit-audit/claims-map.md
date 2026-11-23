@@ -329,3 +329,30 @@ Coale & Watkins (1986); Galor & Weil (2000); Doepke (2005); Lee (2003); Granovet
 - Anderson (1979) gravity and Gibrat (1931): **no DOI located**; pre-DOI works, cite by hand and mark unverified.
 - Paper M branch was still not pushed at final checkpoint; its prior-work list was sent to the lead directly, and
   the diff remains the one open item for this audit.
+
+---
+
+## No-DOI / no-Crossref-match citations — status register (lead request)
+
+| Citation | Status | Note |
+|---|---|---|
+| Sandberg (1979) | **V** 10.1017/s0022050700096418 | Verified journal article. |
+| Timmer (1988), "The agricultural transformation", Handbook of Development Economics | **V** 10.1016/s1573-4471(88)01011-3 | Verified chapter. |
+| Foster & Rosenzweig (1995), JPE | **V** 10.1086/601447 | Verified. |
+| Kuznets, *Modern Economic Growth* (1966) | **U** | Book; only reviews resolve (10.2307/2552017; 10.2307/2229582). Do not use a review DOI. |
+| Diebolt et al. (2005) | **U** | Paper M's run: NO_MATCH (10.21825/sartoniana.99187 does not resolve cleanly). |
+| Flora & Alber (1981) | **U** | Book chapter; no Crossref result. |
+| Flora, Kraus & Pfenning (1983) | **V** 10.1007/978-1-349-06936-1 | Verified book DOI. |
+| Schleunes (1989) | **V** 10.2307/1430768 | Resolves (book record). |
+| Sanderson (1999) | **V** 10.1017/cbo9781139171199 | Verified book DOI. |
+| Newcastle Commission (1861) | **U** | Primary source/report; cite by hand. |
+| US Historical Statistics (H-598+) | **U** | Primary data series; cite by hand. |
+| Alesina & Reich (2013) | **V** 10.3386/w18839 | NBER WP version. |
+| Restuccia & Rogerson (2008) | **U** | Handbook chapter; no DOI located in-session. |
+| Ngai & Pissarides (2007) | **V** 10.1257/aer.97.1.429 | Verified journal article. |
+| Zipf (1949) / Heaps (1978) / Gibrat (1931) | **U** | Books; no DOI. |
+| Yang et al. (2026) | **W** arXiv 2208.06487; PNAS DOI not verified | Do not present as fitted/tested. |
+| Levine & Renelt (1992) | **U** | AER, pre-DOI. |
+| Thevenon (2011) | **U** | PDR; no DOI found in-session. |
+| Rutstein & Johnson (2004) | **U** | DHS Comparative Report 6. |
+| Razavi (2007) / Folbre (2001) | **U** | UNRISD report / book. |

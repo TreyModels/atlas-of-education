@@ -83,3 +83,31 @@ integrity; all verified directly against Crossref DOI lookup.
 | 9 | Scaling / credential | Scaling labelled diagnostic (θ/γ not fitted); credential prior work added and contribution limited to measurement. | FIXED |
 | 10 | Closest competitor missing | Porzio, Rossi & Santangelo (2021) "The Human Side of Structural Transformation" (NBER w29390; SSRN 10.2139/ssrn.3949187) is the closest systematic schooling→structural-change paper and was absent from their list. | OPEN |
 | 11 | Implications/future research | Paper needs the referee-expected content: sequencing is order not causation; date source table; alternative thresholds; instruments (compulsory-schooling laws, church-state competition, colonial policy); extend Porzio et al. with event-ordering data; subnational Prussia/Britain/France. | OPEN (recommendation) |
+
+## Closure update — 24 Nov, second pass (Paper F @ 9c81c81, Paper M @ aa48594, N1/N3 checks)
+
+### Paper F — all auditor items CLOSED
+| Item | Status | Evidence |
+|---|---|---|
+| 7 wrong-title entries (notestein1945, davis1963, becker1960, schultz1961, trow1974, chen2010, bongaarts2011) | **FIXED** | Each removed/relabelled in `lit/REFS_CLOSURE.md`; bongaarts1978 now 10.2307/1972149 V; Davis 1963 10.2307/2732014 V; Davis & Blake 1956 10.1086/449714 V; hand-cited classics marked U. |
+| 15 missing works | **FIXED** | Added and DOI-marked in REFS_CLOSURE.md and `refs.md` (126 lines, 119 entries). Spot-verified: Coall & Hertwig closure lists 10.1017/s0140525x09991105, which resolves to Coall & Hertwig (2010) "Grandparental investment: Past, present, and future" — a companion BBS paper by the same authors; acceptable, but if they intend "Toward an integrative framework" the DOI is 10.1017/s0140525x10000014. |
+| Framing (levels-vs-changes standard; "not aware" restricted to the audit combination) | **FIXED** | §2 concedes the principle, cites Robinson/Nickell/Brock-Durlauf/Eberhardt-Teal, and ties "not aware" to the specific test combination with SEARCH_STRATEGY.md. |
+| Additional verified refs | fine | Corsi 2012 10.1093/ije/dys184 V; Silberzahn 2018 10.1177/2515245917747646 V; Ainsworth et al. 1996 10.1093/wber/10.1.85 V; Baird et al. 2011 10.1093/qje/qjr032 V; Gauthier 2007 10.1007/s11113-007-9033-x V; Breierova & Duflo 10.3386/w10513 W. |
+| Hand-cited classics (lead request) | verified/unresolved | Mincer 1958 **V 10.1086/258055** (the other DOI 10.1086/258116 resolves to a different JPE review — do not use); Notestein 1945 **U** (no DOI); Becker 1960 **U** (NBER chapter, no DOI); Schultz 1961 **U** (AER 1961, no DOI); Trow 1974 **U** (Carnegie report); Levine & Renelt 1992 **U** (AER, pre-DOI); Thevenon 2011 **U** (PDR, no DOI found); Rutstein & Johnson 2004 **U** (DHS report); Razavi 2007 / Folbre 2001 **U** (books/reports). |
+
+### Paper M — auditor items CLOSED except two named
+DOI integrity items 1-5 from the earlier table are **FIXED** at aa48594 (re-queried: Boli 10.1086/446504, Meyer 1992 10.2307/2112679, Benavot-Riddle 10.2307/2112627, Soysal-Strang 10.2307/2112831; book review DOIs removed or corrected; Becker 1960 and Nelson-Phelps marked UNVERIFIED; Mincer 10.1086/258055). Porzio-Rossi-Santangelo 2021 added as closest competitor (10.3386/w29390). Section 12 Implications and Section 13 Future research added. **OPEN:** (a) alternative-threshold recoding and date-by-date source table (lead says blocked by the downed box) — named as vulnerability; (b) Part C re-verification in their own Crossref run before submission.
+
+### NEW INTEGRITY ITEM — the 69% schooling-before-fertility figure (affects Paper M)
+Paper N1 (7f73ff1, PAPER.md 458-459; claims-to-source.md 25) documents a project-record discrepancy:
+`sequencing.json` reports schooling-before-fertility = **68.75%**, but a direct recomputation from the same record's
+`event_dates.csv` gives **35.8%**; N1 flags it in its limitations and does not use it in claims.
+**Paper M nonetheless quotes it as a headline in three places**: `paper.md` line 77 ("69% of those countries
+(58–80%)"), `claims-to-source-map.md` line 11 (claim 3), and `README.md` line 42. **Status: OPEN — must be
+corrected or removed before submission.** Sent to lead and run-lead; panel-matrix to fix.
+
+### Paper N3 (ag-dev, a7afb9a) — four flagged refs, verified
+Sandberg 1979 **V 10.1017/s0022050700096418**; Timmer 1988 "Chapter 8 The agricultural transformation", Handbook of
+Development Economics **V 10.1016/s1573-4471(88)01011-3**; Foster & Rosenzweig 1995 JPE "Learning by Doing and
+Learning from Others" **V 10.1086/601447**; Kuznets, *Modern Economic Growth: Rate, Structure and Spread* — **U**
+(book; only reviews resolve, 10.2307/2552017 and 10.2307/2229582; do not cite a review DOI as the book).
