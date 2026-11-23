@@ -562,3 +562,54 @@ gradient is a development relationship, not a demonstrated causal lever, and the
 names — care work, credential inflation, pronatalist escape, agricultural labour release — either do not show up
 in the available data or cannot be ordered in time by it. The decisive next tests are the cohort-level and
 historical sequencing tests, not more country panels.
+
+---
+
+## Final tranche — the evening's remaining tests
+
+### Battery: 10.45 million regressions (task-21)
+
+The pre-registered battery ran **10,447,698 regressions in 3,018 seconds** (50.3 min) at 3,462 regressions/s on 10 cores, after resuming from a midpoint checkpoint (a dispatch-signature bug cost wall time, not work). The real grouping pass versus **800+ random country re-partitions**:
+
+- Average share of negative-significant links: real **0.225** vs random **0.227 ± 0.007** in levels; real **0.110** vs random **0.111 ± 0.005** in decade changes. On the average pair, the real groupings are indistinguishable from random ones.
+- The headline pair is unambiguous: fertility on lower-secondary completion is negative and significant in **98.7%** of random partitions in levels and **0.1%** in decade changes; secondary enrolment **97.9%** vs 0.1%; female attainment **91.5%** vs 0.0%; primary completion 99.0% vs 2.8%; tertiary 71.5% vs 0.2%.
+
+So the schooling–fertility relation in levels is a **global property** present in essentially any partition of the world, while the change relation is absent in essentially all of them. That is the cleanest statement of the levels-versus-changes result we have.
+
+### θ/γ estimation attempt (task-24, fd691a6)
+
+**Not estimable, and the test that was possible is negative.** θ and γ are model primitives, not measured variables; income and region are not relabelled as θ/γ. The observable the formalism implies — the rarefied diversity–size curve — gives a Heaps exponent of **0.349 (95% CI 0.331–0.368)**, with no income-group difference (0.010, CI −0.043 to 0.062), no regional difference (Kruskal p = 0.26), and negative curvature in every group. No two-regime pattern; but also no real test of the θ/γ mechanism. Both statements belong together.
+
+### Early-warning / tipping-point test (task-25, 7e64f61)
+
+**No tipping-point signature survives.** 80 countries with dated fertility transitions and usable pre-event windows: lag-1 autocorrelation **falls** before the event (−0.025, SE 0.008, t = −3.3 — the wrong sign for critical slowing down); variance rises slightly (+0.079, SE 0.034) but 42% of 16,000 surrogates match it; MDE 0.095. The one positive: diminishing returns is real (marginal effect of schooling on fertility **−0.0099 at p10, +0.0214 at p90**, turning point ~39 of 100 completion) — but a concave response and an arithmetic floor are observationally equivalent, so it is a boundary condition, not a ratchet.
+
+### Subsistence v2 (task-26, ce66cfc)
+
+The agricultural-share failure is repaired (**17.6% vs 19.4%** in 2020, v1 8.1%); the population failure flips (**1.58 vs 2.92**, still too slow); only 2 of 5 parameters are identified. Counterfactuals: freeze mechanisation → agriculture 39.9%, schooling 0.2 years, fertility 3.29; freeze the pipeline → schooling 3.0, fertility 2.94; freeze the mortality decline → population 0.39, fertility 3.96. In the model the **mortality decline is the first mover**, mechanisation empties agriculture, and the pipeline converts the release into schooling and lower fertility.
+
+The sharper test fired against "the floor falls first": **schooling take-off precedes agricultural labour release in 61 of 64 countries** (release-first 5%, bootstrap 95% CI 0–11%), median gap 26 years; schooling before fertility in 69% (58–80%). The twentieth-century US ordering (farm decline 1910 → schooling 1955 → fertility 1957) is consistent, but 19th-century US/UK series were not obtainable and are documented as gaps.
+
+### Supply-led or demand-led? (task-28, 963e5e5)
+
+Raw timing looks demand-led (**73%** demand-first) but the demand dates come from broad development proxies (income, urbanisation); **labour-market demand** (wage premia, paid employment) precedes schooling in only **7%**. In the fair sample (33 countries) supply precedes schooling in **76%** and demand in **79%** — they turn together. Horse race on ten-year changes: supply block **+0.456 (SE 0.174)**, demand **+0.006 (0.203)**; enrolment +0.307 (0.146), education spending +0.125 (0.058); every demand measure null (n = 78, 51 countries). Verdict: **supply-led is the better description**; not a causal claim (policy, state capacity and income are jointly determined).
+
+### Historical sequencing (task-29, ab658c7)
+
+Split verdict, and the split is the finding. **Prussia** supply-led: the 1763/1812 school regulations precede industrialisation and the farm exodus by **80–120 years**, half the school-age population enrolled by 1800. **France** statute-led but attainment demand-following: Guizot 1833 creates the schools, attainment takes off with Ferry 1881–82, arriving with the exodus. **Britain** is the counterexample that matters: the industrial revolution and the farm exodus precede mass schooling by **40–90 years** (1870 Act; near-universal attendance only by 1900). **US North** supply-led in the local-public-goods sense, community-demand-driven. Implication: the 61/64 panel result is a **late-industrialiser regularity, not a universal law** — evidence about who built the pipeline and when. Literature dates in the record are marked **unverified**; our own long-run series cannot adjudicate (schooling data start 1870).
+
+### Data hunt for the canonical scaling laws (task-27, 9e15b6d)
+
+Two of five unlocked, no proxies used. **Zipf/rank-size**: median exponent **0.859** (bootstrap 95% CI 0.746–0.978), Wilcoxon against 1 p = 0.23 — consistent with Zipf, weakly (crowdsourced places, large-country selection). **Gravity**: PPML with origin and destination fixed effects gives distance **−0.970 (SE 0.076)**, OLS FE −1.306 (0.053), n = 8,020 pairs; size elasticities 0.46–0.64, below the conventional ~1. **Still blocked with exact errors: Bettencourt's superlinear urban exponent (BEA zips unavailable, WUP 404) and the credential:occupation ratio (BLS 403, Credential Engine Cloudflare 403).**
+
+### Branches added in this tranche
+
+- research/corr-battery-2026-11-23 (task-21: 772650a, 6a1927f pre-reg; results pushed after)
+- research/theta-gamma-2026-11-23 (fd691a6)
+- research/early-warning-2026-11-23 (e12249b pre-reg → 7e64f61)
+- research/subsistence-v2-2026-11-23 (62730fc pre-reg → ce66cfc)
+- research/supply-demand-2026-11-23 (f7b38f3 pre-reg → 963e5e5)
+- research/historical-sequence-2026-11-23 (74e0fe2 → ab658c7)
+- research/scaling-data-hunt-2026-11-23 (5e0b11a pre-reg → 9e15b6d)
+
+**What the final tranche changes.** The theory's "pipeline first" claim survives as a **state-led-moderniser regularity** (Prussia, France, US North) and fails where demand led (Britain); its "floor falls first" version is refuted in the late-industrialiser panel. The schooling–fertility relation is a **global level gradient**, not a change mechanism. The tipping-point version of "terminal enclosure" fails; the θ/γ mechanism is untested (not supported, not refuted); the canonical scaling laws are weakly consistent (Zipf, gravity) or out of reach (Bettencourt, credential ratio). The two decisive open tests remain cohort-level sequencing and the historical lead/lag with proper 19th-century series.
