@@ -77,3 +77,24 @@ curves are aligned on the same endpoints; the informative number is the 0.017 sp
 The paper's headline is **INCREMENTAL — a measurement/replication contribution** (better-fitting functional
 forms on the observed window; path uniformity once aligned; two poles of a continuum; associations only), and the
 draft says so consistently. With Fix 1 and Fix 2 it survives a demography referee; Fix 3 is polish.
+
+---
+
+## Addendum — fix (1) VERIFIED at 657877a (24 Nov)
+
+Re-read of `PAPER.md` at 657877a confirms fix (1) is applied and coherent:
+- **Abstract** now states the truncated-window caveat verbatim: "With truncated 1960–2023 series we cannot
+  distinguish a genuinely non-logistic form from a logistic that the window leaves unidentified; the claim is that
+  the exponential-to-floor family describes the available transition data better, **not that the S-curve is
+  refuted**."
+- **§5.1** opens with a dedicated "Identification caveat, stated first because it bounds every claim in this
+  subsection": a logistic fitted to this window "can be *unidentified* rather than wrong"; the comparison is "a
+  statement about the **estimable window** … not as a refutation of the S-curve as a description of the underlying
+  process"; the caveat is explicitly extended to Gompertz and linear-kink; and the closing paragraph adds "the
+  window cannot tell 'not logistic' from 'logistic left unidentified'".
+- **§2.4** states the unidentified-vs-wrong distinction; **§1** and the **conclusion** are softened ("usually
+  assumed rather than tested", "not the best description of the available annual data").
+- The old drift phrases ("S-curve is over-claimed", "does not survive contact with the annual data", "not the one
+  usually drawn") are gone from the record.
+Fixes (2) five classic works and (3) the PC1 tautology clause were not yet in 657877a at re-read; cuda-scale is
+applying them. Fix (1): **CLOSED**.
