@@ -1,0 +1,6 @@
+Q1 same-batch repeat: per-woman state identical = True max aggregate diff = 7.105427357601002e-15
+Q2 graph vs plain: per-woman state identical = True max aggregate diff = 5.329070518200751e-15
+Q3 batch composition: {'run0_state_identical': False, 'run1_state_identical': False, 'runs_identical': [], 'note': 'run 0 is at the same stream position (local index 0) in both layouts; every other run moves stream position and its draws change'}
+Q4 simulate batch sensitivity: [(5, 0.9214709908269807), (7, 0.9529440868324488), (12, 1.1274865257300828)]
+wrote /root/work/cuda_scale/results/determinism_v2.json
+DONE determinism v2

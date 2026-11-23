@@ -1,0 +1,43 @@
+{
+ "batch_runs": 30000,
+ "batches": 2,
+ "planned_women": 100800000,
+ "bytes_per_run": 276641.6,
+ "per_batch_state_bytes": 8299247999,
+ "free_bytes_before": 11333533696,
+ "gpu_before": "203 MiB, 11264 MiB, 2 %, 43, 1860 MHz, 76.11 W",
+ "batches_run": [
+  {
+   "batch": 0,
+   "runs": 30000,
+   "women": 50400000,
+   "alloc_sec": 0.027,
+   "load_sec": 0.865,
+   "first_run_incl_capture_sec": 15.58,
+   "replay_sec": 9.267,
+   "women_per_sec": 5438375,
+   "state_bytes": 8297880456,
+   "births": 1672190,
+   "gpu": "8391 MiB, 11264 MiB, 8 %, 43, 1350 MHz, 54.68 W"
+  },
+  {
+   "batch": 1,
+   "runs": 30000,
+   "women": 50400000,
+   "alloc_sec": 0.026,
+   "load_sec": 0.939,
+   "first_run_incl_capture_sec": 15.353,
+   "replay_sec": 9.082,
+   "women_per_sec": 5549346,
+   "state_bytes": 8297880456,
+   "births": 1672190,
+   "gpu": "8391 MiB, 11264 MiB, 12 %, 46, 1350 MHz, 55.11 W"
+  }
+ ],
+ "note": "each batch = 14 cohorts x 2 x 5 x 12 women = 1680 women per run; 50.4M women per launch, two launches = 100.8M women; 6,000 distinct prepared parameter draws cycled over the 60,000 runs (timing does not depend on values)",
+ "women_total": 100800000,
+ "steady_state_launch_sec_sum": 18.349,
+ "steady_state_women_per_sec": 5493487,
+ "end_to_end_wall_sec": 51.14,
+ "gpu_after": "203 MiB, 11264 MiB, 5 %, 46, 1845 MHz, 57.60 W"
+}

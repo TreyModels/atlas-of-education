@@ -1,0 +1,20 @@
+built 4000 distinct prepared draws; gpu: 0 MiB, 11264 MiB, 0 %, 35, 300 MHz, 21.99 W
+free=11382MB bytes/run=276601 reserve-based candidate below
+candidate 38495 runs = 64.6716 M women
+PROBE 38495 ok= True 
+PROBE 38745 ok= True 
+PROBE 38995 ok= True 
+PROBE 39245 ok= True 
+PROBE 39495 ok= True 
+PROBE 39745 ok= True 
+PROBE 39995 ok= False OutOfMemoryError: Out of memory allocating 313,561,088 bytes (allocated so far: 11,062,466,560 bytes).
+CEILING {'max_runs': 39745, 'max_women': 66771600, 'state_bytes': 10993308476, 'bytes_per_woman': 164.64}
+GIANT {'runs': 39745, 'women': 66771600, 'run_sec_replay': 12.701, 'women_per_sec': 5257192, 'state_bytes': 10993308476, 'woman_years_simulated': 4540468800, 'total_births': 2222987}
+wrote /root/work/cuda_scale/results/ceiling_giant.json
+DONE ceiling+giant; gpu: 179 MiB, 11264 MiB, 2 %, 44, 1350 MHz, 56.84 W
+Traceback (most recent call last):
+  File "/root/work/cuda_scale/run_determinism2.py", line 42, in <module>
+    st_a, acc_a = state_run(specs, nruns)
+  File "/root/work/cuda_scale/run_determinism2.py", line 35, in state_run
+    acc = eng.run(0, use_graph=graph, state=True)
+TypeError: GPUDose.run() got an unexpected keyword argument 'state'

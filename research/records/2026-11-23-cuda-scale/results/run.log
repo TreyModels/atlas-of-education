@@ -1,0 +1,43 @@
+GPU at start: 157 MiB, 11264 MiB, 0 %, 32, 1350 MHz, 26.85 W
+free/total bytes: 11381768192 11546394624
+state: 276601 bytes/run, 164.6 bytes/woman, 40 device arrays
+built 60000 specs, gpu: 157 MiB, 11264 MiB, 0 %, 32, 300 MHz, 21.62 W
+LADDER {'target_women': 100000, 'runs': 60, 'women': 100800, 'alloc_sec': 0.012, 'load_sec': 0.003, 'first_run_sec': 0.108, 'replay_sec': [0.0508, 0.0489, 0.0486], 'replay_median_sec': 0.0489, 'women_per_sec': 2060550, 'state_bytes': 16596216, 'bytes_per_woman': 164.65, 'free_after_alloc_bytes': 11339825152, 'gpu': '197 MiB, 11264 MiB, 0 %, 33, 1485 MHz, 69.71 W'}
+wrote /root/work/cuda_scale/results/scale_ladder.json
+LADDER {'target_women': 1000000, 'runs': 595, 'women': 999600, 'alloc_sec': 0.007, 'load_sec': 0.022, 'first_run_sec': 0.371, 'replay_sec': [0.2094, 0.2159, 0.2121], 'replay_median_sec': 0.2121, 'women_per_sec': 4712505, 'state_bytes': 164575076, 'bytes_per_woman': 164.64, 'free_after_alloc_bytes': 11163664384, 'gpu': '365 MiB, 11264 MiB, 73 %, 35, 1875 MHz, 115.81 W'}
+wrote /root/work/cuda_scale/results/scale_ladder.json
+LADDER {'target_women': 10000000, 'runs': 5952, 'women': 9999360, 'alloc_sec': 0.009, 'load_sec': 0.186, 'first_run_sec': 3.317, 'replay_sec': [1.946, 1.954, 1.9427], 'replay_median_sec': 1.946, 'women_per_sec': 5138289, 'state_bytes': 1646299848, 'bytes_per_woman': 164.64, 'free_after_alloc_bytes': 9611771904, 'gpu': '1845 MiB, 11264 MiB, 90 %, 38, 1860 MHz, 72.07 W'}
+wrote /root/work/cuda_scale/results/scale_ladder.json
+=== ceiling search ===
+free=11359MB, bytes/run=276601, candidate=40231 runs (67.59M women)
+CEILING try 40231 ok= False OutOfMemoryError: Out of memory allocating 315,411,456 bytes (allocated so far: 11,127,740,928 bytes).
+CEILING try 39731 ok= False OutOfMemoryError: Out of memory allocating 311,491,072 bytes (allocated so far: 11,127,740,928 bytes).
+CEILING try 39231 ok= False OutOfMemoryError: Out of memory allocating 307,571,200 bytes (allocated so far: 11,127,740,928 bytes).
+CEILING try 38731 ok= False OutOfMemoryError: Out of memory allocating 303,651,328 bytes (allocated so far: 11,127,740,928 bytes).
+CEILING try 38231 ok= False OutOfMemoryError: Out of memory allocating 299,731,456 bytes (allocated so far: 11,125,487,616 bytes).
+CEILING try 37731 ok= False OutOfMemoryError: Out of memory allocating 295,811,072 bytes (allocated so far: 11,125,487,616 bytes).
+CEILING RESULT {'max_runs': None, 'max_women': None, 'state_bytes': None, 'bytes_per_woman': None}
+wrote /root/work/cuda_scale/results/ceiling.json
+DONE ladder+ceiling+giant; gpu: 10795 MiB, 11264 MiB, 2 %, 37, 1350 MHz, 53.09 W
+=== A. determinism ===
+batch 1 bitwise identical: False
+batch 5 bitwise identical: False
+batch 7 bitwise identical: False
+batch 12 bitwise identical: False
+batch 500 bitwise identical: False
+graph vs plain bitwise identical: False
+allocation invariance bitwise identical: False
+wrote /root/work/cuda_scale/results/determinism.json
+DETERMINISM all_identical = False
+=== B. repeat x3 (thermal/clock stability + seed determinism) ===
+REP 0 median 1.9337 s  digest 8ef86ba34d97f941  gpu 1869 MiB, 11264 MiB, 0 %, 39, 1860 MHz, 72.06 W
+REP 1 median 1.94 s  digest c35f4e207dbc28cc  gpu 1869 MiB, 11264 MiB, 2 %, 42, 1860 MHz, 73.08 W
+REP 2 median 1.8459 s  digest 3f944491306e136f  gpu 1869 MiB, 11264 MiB, 2 %, 43, 1860 MHz, 74.13 W
+REPEAT summary: {'replay_mean_sec': 1.8678, 'replay_sd_sec': 0.0787, 'replay_cv_pct': 4.21, 'rep_median_mean_sec': 1.9065, 'rep_median_sd_sec': 0.0526, 'same_aggregates_across_repeats': False}
+wrote /root/work/cuda_scale/results/repeat3.json
+=== C. 10^8 women as two batched launches ===
+BATCH100M {'batch': 0, 'runs': 30000, 'women': 50400000, 'alloc_sec': 0.027, 'load_sec': 0.865, 'first_run_incl_capture_sec': 15.58, 'replay_sec': 9.267, 'women_per_sec': 5438375, 'state_bytes': 8297880456, 'births': 1672190, 'gpu': '8391 MiB, 11264 MiB, 8 %, 43, 1350 MHz, 54.68 W'}
+BATCH100M {'batch': 1, 'runs': 30000, 'women': 50400000, 'alloc_sec': 0.026, 'load_sec': 0.939, 'first_run_incl_capture_sec': 15.353, 'replay_sec': 9.082, 'women_per_sec': 5549346, 'state_bytes': 8297880456, 'births': 1672190, 'gpu': '8391 MiB, 11264 MiB, 12 %, 46, 1350 MHz, 55.11 W'}
+BATCH100M summary: {'women_total': 100800000, 'steady_state_launch_sec_sum': 18.349, 'steady_state_women_per_sec': 5493487, 'end_to_end_wall_sec': 51.14}
+wrote /root/work/cuda_scale/results/batch100m.json
+DONE audit; gpu: 203 MiB, 11264 MiB, 5 %, 47, 1845 MHz, 57.60 W

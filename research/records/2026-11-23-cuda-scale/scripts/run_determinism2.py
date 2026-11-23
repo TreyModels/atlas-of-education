@@ -32,7 +32,8 @@ for i in range(theta.shape[0]):
 def state_run(spec_list, max_runs, seed=7, graph=True):
     eng = GPUDose(nW=NW, seed=seed, max_runs=max_runs, tmax=TMAX)
     eng.load(spec_list)
-    acc = eng.run(0, use_graph=graph, state=True)
+    eng.run(0, use_graph=graph)
+    acc = eng.collect(state=True)
     st = acc["state"]
     del eng; gc.collect(); free_pool()
     return st, acc
