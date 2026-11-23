@@ -42,3 +42,12 @@ direction, and the dates/coding vulnerability is stated as the central one.
 2. Date-by-date source table with page references for the historical cases (Section 13.2).
 3. Re-verify Part C auditor-supplied DOIs in this paper's own Crossref run.
 4. Paper F's refs.json Mincer line (relayed; un-data to fix).
+
+## E. Closest competitor identified by the auditor (24 Nov 2026)
+
+Porzio, Rossi and Santangelo (2021), *The Human Side of Structural Transformation* (NBER WP 29390, Crossref ✓
+10.3386/w29390, re-verified in this pass) is the closest prior claim in direction: human capital accumulation as a
+driver of structural transformation. Status: **FIXED** — cited in Section 1 and in `claims-prior-art.md` Claim 1 as
+the closest competitor, with the design difference stated (their quantitative model + micro evidence on skill
+reallocation vs our cross-country event ordering and supply/demand decomposition). Their work is complementary;
+no precedence is claimed.

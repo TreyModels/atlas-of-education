@@ -257,3 +257,5 @@ re-verified in this paper's own Crossref run before submission. The paper's own 
 - Yang, V. C., et al. (2026). Scaling laws for function diversity and specialization. arXiv 2208.06487; PNAS DOI not verified. **V for arXiv**.
 - Zipf, G. K. (1949). *Human Behavior and the Principle of Least Effort*; Heaps, H. S. (1978). *Information Retrieval*; Ngai, L. R., & Pissarides, C. A. (2007). Structural change in a multi-sector model. **U** (books/working paper without DOI in-session).
 - Positive micro literature on electrification and schooling (cited as the counterweight to the country-panel null; auditor-supplied, status to be re-verified): rural electrification/human capital in China, 10.1080/00220388.2026.2727160; small-hydropower/girls' education (ScienceDirect S0304387826001458); energy poverty/gender, 10.1016/j.techfore.2024.123274.
+
+- Porzio, T., Rossi, F., & Santangelo, G. (2021). *The Human Side of Structural Transformation*. NBER WP 29390. **V** 10.3386/w29390 (re-verified against Crossref in this pass: title/authors/year match).

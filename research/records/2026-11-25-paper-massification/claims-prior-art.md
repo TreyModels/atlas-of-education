@@ -21,7 +21,15 @@ The search strategy is recorded in `search-strategy.md`.
 | Benavot & Riddle (1988), *Sociology of Education* 61(3):191–210 | primary expansion 1870–1940 loosely coupled with development | Crossref WEAK (title/year) 10.2307/2112627 | replicated |
 | Goldin & Katz (2008), *The Race between Education and Technology* | US high-school movement; demand-led reading | no DOI (book) | contrast case: demand-led in the first industrialiser |
 | Boppart, Kiernan, Krusell & Malmberg (2023), NBER WP 31101 | agricultural labour share as equilibrium outcome of relative input prices | Crossref ✓ 10.3386/w31101 | framing + mechanism, not the event ordering |
+| Porzio, Rossi & Santangelo (2021), NBER WP 29390, *The Human Side of Structural Transformation* | human capital accumulation as a driver of structural transformation — education leading sectoral reallocation | Crossref ✓ 10.3386/w29390 (re-verified 24 Nov 2026) | **closest competitor**: same direction (education before reallocation) but a different design — a quantitative model with micro evidence on skill reallocation, not a cross-country event comparison with bootstrap intervals; the two are complementary, and this paper's contribution is the assembly and the supply/demand decomposition |
 | **This paper** | **common pre-registered event comparison of schooling take-off vs agricultural release across 64 countries, with bootstrap intervals and a fairness correction** | — | **new assembly**: the event-ordering comparison at this scale; the institutionalist claim tested as timing rather than diffusion |
+
+**Closest competitor.** Porzio, Rossi and Santangelo (2021), *The Human Side of Structural Transformation* (NBER
+WP 29390, Crossref ✓ 10.3386/w29390), is the closest prior claim in direction: they argue human capital
+accumulation drives structural transformation, i.e. education before sectoral reallocation. Our ordering result is
+consistent with that, but the designs differ: theirs is a quantitative model with micro evidence on skill
+reallocation, ours is a common cross-country event comparison with bootstrap intervals and a supply/demand
+decomposition. The paper treats them as complementary and does not claim precedence.
 
 **Not previously assembled in this form (as far as we know; search recorded):** the specific event-ordering
 comparison of schooling take-offs against agricultural-labour-release dates across a common country panel. The
