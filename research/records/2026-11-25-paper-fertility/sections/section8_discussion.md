@@ -41,8 +41,8 @@ Three things remain open, and the paper names them rather than resolving them. T
 open because the DHS microdata were not obtainable; the survey-level gradient is consistent with an individual
 gradient but cannot confirm it. The historical driver question is open in the sense that the transition model's
 mortality counterfactual removes only 3.2 per cent of the collapse while the development-only rival ties the
-individuation model out of sample; the magnitudes say the collapse is schooling-led within the model, and the
-model is calibrated, not identified. The causal question is open by design: no observational design in the
+individuation model out of sample; the model attributes most of the collapse to its schooling-side mechanisms —
+a property of the calibrated model, not an identified fact about the world. The causal question is open by design: no observational design in the
 project identifies the effect of schooling on fertility, and the paper's most useful contribution to the causal
 literature may be the specification of what a credible design would need (Section 6).
 

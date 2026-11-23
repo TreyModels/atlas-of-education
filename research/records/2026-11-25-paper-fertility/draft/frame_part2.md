@@ -72,9 +72,9 @@ relation, on one panel, with every specification reported.
 The threshold analysis is the synthesis's bridge between the cross-section and the transition. The gradient is
 steepest in the first six years of schooling — the minimal-to-lower-secondary margin that the massification of
 schooling traversed in the twentieth century — flattens between six and nine years, and reverses above nine.
-That shape is consistent with the development-gradient reading: the first six years of schooling are where the
-indicators of development diverge most, and the reversal at the top is the well-known high-development
-J-shape. It also means that "more schooling" has no constant meaning: a two-year increase at the bottom of the
+That shape is what both the development-gradient reading and a quantity-quality reading predict; the first six
+years of schooling are where the indicators of development diverge most, and the reversal at the top is the
+well-known high-development J-shape, so the shape alone is not evidence for either story. It also means that "more schooling" has no constant meaning: a two-year increase at the bottom of the
 distribution and a two-year increase at the top sit on different parts of the gradient. The massification of
 schooling and the fertility transition overlapped at the bottom of the distribution, which is where the
 association is largest; the twenty-first-century fertility transition is happening among highly schooled

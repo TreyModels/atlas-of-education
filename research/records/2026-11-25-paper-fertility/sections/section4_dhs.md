@@ -79,9 +79,10 @@ possibility that Section 3's country-level gradient is an artefact of national a
 *negative* results — cohort attenuation and pipeline attenuation in the opposite direction from the
 pre-registered predictions — that matter for the massification interpretation. If the gradient were purely a
 development-level marker, one might expect it to weaken as schooling spreads; the survey data show exactly that
-attenuation (from −2.50 in the 1940s cohorts to −1.80 in the 1970s), which is consistent with the
-development-gradient reading even though the composition caveat means it cannot be stated as an individual-level
-fact. What it does not add: the individual-level test, the wealth horse-race, the community placebo, and the
+attenuation (from −2.50 in the 1940s cohorts to −1.80 in the 1970s), which is a finding worth reporting in its
+own right. It does not uniquely support the development-gradient reading, because saturation, composition change
+and ceiling effects would produce attenuation too, and the composition caveat means it cannot be stated as an
+individual-level fact. What it does not add: the individual-level test, the wealth horse-race, the community placebo, and the
 quantum/tempo decomposition, all of which require microdata. The record states the data gap and the manual
 download procedure (a free DHS account, dataset-access request, Individual Recode Stata files, and the
 specified variables) rather than substituting country aggregates for the missing test. A synthesis that claimed
