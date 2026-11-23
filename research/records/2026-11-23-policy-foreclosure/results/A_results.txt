@@ -1,0 +1,14 @@
+events with TFR at introduction: 38; saturated (<1.6): 38
+BOUND TEST (saturated events, country-years in the 10 years after introduction): 34 of 396 country-years above TFR 1.6 = 8.586%; one-sided 95% upper bound 11.266%
+  events where TFR exceeds 1.6 at all within 10y: 10 of 38
+  events with 3+ CONSECUTIVE years above 1.6 (pre-registered falsifier): 5 of 38
+  those events: RUS 2007 (max 1.78, 6 yrs); RUS 2011 (max 1.78, 6 yrs); CZE 2008 (max 1.71, 3 yrs); EST 2004 (max 1.72, 5 yrs); BLR 2007 (max 1.73, 5 yrs)
+PRE/POST: max TFR in 10 years after minus 5-year pre mean: median +0.151, mean +0.177 (n=38); events reaching above 1.6: 10/38
+  highest TFR reached after any introduction: 1.78 (RUS); never near replacement 2.1
+EVENT STUDY (first saturated introduction per country, n=467 country-years, 25 countries, country+calendar-year FE): post-introduction TFR shift +0.035 (SE 0.025, 95% CI -0.014 to +0.083)
+  POWER for the absence claim: minimum detectable shift (80% power, alpha .05) = 0.070 births per woman
+  mean TFR by event year: t+0:1.31, t+1:1.32, t+2:1.35, t+3:1.39, t+4:1.41, t+5:1.44, t+6:1.45, t+7:1.46, t+8:1.46, t+9:1.46, t+10:1.44
+RIVALS: baseline post-introduction shift (no controls): +0.028 (SE 0.028)
+RIVALS: post-introduction TFR shift with income, urbanisation and net migration controlled: +0.028 (SE 0.028) over 392 country-years, 25 countries
+RIVALS: post-introduction shift with country-specific trends: +0.017 (SE 0.010)
+THAILAND (1997 reversal, case study): TFR 1990:2.06, 1997:1.84, 2000:1.73, 2005:1.64, 2010:1.56, 2015:1.45, 2020:1.26, 2023:1.21; change 1997-2023 -0.63; no recovery above 1.6 after the reversal

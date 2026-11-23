@@ -1,0 +1,10 @@
+{
+ "lines": [
+  "B2 expanded sample: 237 country-decade windows, 153 countries, decades [2000, 2010]",
+  "B2 PRIMARY (core, no controls): coverage/10pp +0.09 (SE 0.11); interaction per 10pp coverage x 10pp farm -0.01 (SE 0.02, 95% CI -0.06 to +0.04), n=237",
+  "B2 with income+urban controls: interaction -0.01 (SE 0.03), n=237",
+  "B2 RIVALS (coverage x income, coverage x urban added): farm interaction -0.01 (SE 0.04); x income -0.02 (SE 0.07); x urban +0.00 (SE 0.00), n=237",
+  "B2 GRADIENT: coverage effect high-farm minus low-farm third: -0.08 (SE 0.15), n=237; story predicts positive",
+  "B2 random-split null (400 splits): real gradient at 9.8% percentile, null mean -0.00 (sd 0.06)"
+ ]
+}
