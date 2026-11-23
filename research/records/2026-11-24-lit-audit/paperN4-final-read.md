@@ -98,3 +98,19 @@ Re-read of `PAPER.md` at 657877a confirms fix (1) is applied and coherent:
   usually drawn") are gone from the record.
 Fixes (2) five classic works and (3) the PC1 tautology clause were not yet in 657877a at re-read; cuda-scale is
 applying them. Fix (1): **CLOSED**.
+
+---
+
+## Addendum 2 — fixes (2) and (3) VERIFIED at 3b73bc1; N4 SIGNED OFF
+
+- Fix (2): the five classics are in. PAPER.md §2.1–2.3 cites Thompson (1929), Landry (1934), Chesnais (1992),
+  Coale and Watkins (1986), and Bongaarts and Watkins (1996); refs.md entries 20–24 and claims-prior-art
+  Claims 1/2/4/7 carry them with statuses. I independently verified two of the DOIs: Thompson 1929 AJS
+  "Population" **10.1086/214874 V**; Chesnais 1992 **10.1093/oso/9780198286592.001.0001 V**. Coale & Watkins
+  reissue 10.1515/9781400886692 and Bongaarts & Watkins 10.2307/2137804 were verified earlier in this audit.
+- Fix (3): §5.3 now says "The variance share is unsurprising once the curves are aligned on the same endpoints;
+  the informative number is the 0.017 cross-country spread, not the variance share."
+- Fix (1) re-confirmed at 3b73bc1, now also explicit in §9 limitations ("a logistic fitted to it may be
+  misspecified or poorly identified; the model comparison is a goodness-of-fit statement about the observed
+  window, not a refutation of the S-curve as a description of complete transitions").
+- Word count 7,657; numbers and SOURCES map unchanged. **N4: SIGNED OFF, all three fixes closed.**
