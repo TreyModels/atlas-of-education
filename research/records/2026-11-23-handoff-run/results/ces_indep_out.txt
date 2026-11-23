@@ -1,0 +1,14 @@
+panel: 6444 country-years, 129 countries, 59 years
+
+fitting the real data (4 chains):
+  mu_sigma (average elasticity) : +0.429  95% CrI [+0.305, +0.556]
+  tau_sigma  (SD across countries): 0.698  95% CrI [0.612, 0.796]
+  P(mu_sigma > 1) = 0.0%   P(mu_sigma > 0) = 100.0%
+  between-chain spread in the mean: 0.0019
+
+recovery study: 200 simulations per true value
+ true sigma  mean est    bias  coverage
+        0.0     0.002  +0.002     97.5%
+        0.5     0.500  -0.000     94.0%
+        1.0     0.996  -0.004     95.0%
+        1.5     1.500  +0.000     95.0%

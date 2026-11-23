@@ -1,0 +1,28 @@
+fertiliser columns: ['Phosphate rock', 'DAP', 'Potassium chloride']
+real fertiliser price index 1960-2024; first/last 108.4/341.9
+
+================================================================================================
+FARM EMPLOYMENT SHARE
+specification                                                      FE only       with country trends
+RATIO, no income control (orig. construction)         +0.0239 (±0.0086)* n=4297    +0.0056 (±0.0054)* n=4295
+RATIO + income controls                               +0.0117 (±0.0081)* n=4297    +0.0071 (±0.0049)* n=4295
+PRICE only (world price shock), no income control     +0.0093 (±0.0085)* n=4297    +0.0062 (±0.0050)* n=4295
+PRICE only + income controls                          +0.0117 (±0.0081)* n=4297    +0.0071 (±0.0049)* n=4295
+
+================================================================================================
+PAID EMPLOYMENT SHARE
+specification                                                      FE only       with country trends
+RATIO, no income control (orig. construction)         -0.0140 (±0.0095)* n=4297    -0.0004 (±0.0042)  n=4295
+RATIO + income controls                               -0.0023 (±0.0051)  n=4297    -0.0011 (±0.0034)  n=4295
+PRICE only (world price shock), no income control     -0.0017 (±0.0056)  n=4297    +0.0004 (±0.0040)  n=4295
+PRICE only + income controls                          -0.0023 (±0.0051)  n=4297    -0.0011 (±0.0034)  n=4295
+
+================================================================================================
+BIRTHS PER WOMAN
+specification                                                      FE only       with country trends
+RATIO, no income control (orig. construction)         +0.0003 (±0.0009)  n=8419    +0.0001 (±0.0007)  n=8417
+RATIO + income controls                               +0.0001 (±0.0008)  n=8419    -0.0000 (±0.0006)  n=8417
+PRICE only (world price shock), no income control     -0.0001 (±0.0008)  n=8419    -0.0002 (±0.0006)  n=8417
+PRICE only + income controls                          +0.0001 (±0.0008)  n=8419    -0.0000 (±0.0006)  n=8417
+
+(± is a 95% interval half-width; * = interval excludes zero.)

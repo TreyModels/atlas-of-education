@@ -1,0 +1,4 @@
+countries 149; pooled out-of-sample MSE (births^2): markets-only 1.1354, markets+schooling 0.6952
+median MSE: M0 0.1824  M1 0.2164; share where fitted alpha=0: 68%
+M1 better in 15% of countries, worse in 16%
+mean paired diff +0.4402, se 0.2233

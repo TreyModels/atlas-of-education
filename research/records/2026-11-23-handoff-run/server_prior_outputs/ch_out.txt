@@ -1,0 +1,4 @@
+  File "/root/work/cohort_huge.py", line 156
+    global PG
+    ^^^^^^^^^
+SyntaxError: name 'PG' is assigned to before global declaration

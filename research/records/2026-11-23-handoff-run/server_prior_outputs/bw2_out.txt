@@ -1,0 +1,14 @@
+observed moments used for calibration: {'ly_sd': 1.174163117640011, 'ea_mean': 28.58827022738193, 'ea_sd': 22.51986444211299, 'el_mean': 81.5431078628136}
+simulating 100 panels of 120 countries x 55 years, sigma = 1.5 (Boppart's claim)
+
+========================================================================================
+IN A WORLD WHERE BOPPART IS RIGHT AND ELECTRICITY HAS NO CAUSAL ROLE
+========================================================================================
+relationship      median coef  % significant  % significant w/ trends
+elec->lsc              +0.127          98.0%                     4.0%
+elec->sec              +0.146          99.0%                     7.0%
+wage->ter              +0.036          59.0%                     7.0%
+farm->fert             +0.004          75.0%                     6.0%
+
+The simulated world contains NO causal path from electricity to schooling.
+Any significance above is the same latent process appearing twice.

@@ -1,0 +1,30 @@
+countries with usable cohort paths: 151
+countries fitted with out-of-sample test: 149
+
+==================================================================================
+OUT-OF-SAMPLE: DOES SCHOOLING IMPROVE PREDICTION OF THE LAST TWO COHORTS?
+==================================================================================
+  median gain            :   +0.0%
+  countries helped (>0)  :  15.4%
+  helped by >20%         :  12.8%
+  made worse (<0)        :  16.1%
+
+  by region (median out-of-sample gain):
+    Latin America & Caribbean                n= 31    +0.0%
+    Europe & Central Asia                    n= 39    +0.0%
+    Middle East, North Africa, Afghanistan   n= 18    +0.0%
+    Sub-Saharan Africa                       n= 36    +0.0%
+    South Asia                               n=  5    +0.0%
+    North America                            n=  1    +0.0%
+    East Asia & Pacific                      n= 19    +0.0%
+
+bootstrapping over countries (500 draws):
+  mean gain -459.8%   95% CI [-840.7%, -192.5%]
+  P(the schooling channel helps) = 0.0%
+
+recovery / power study: 400 worlds per true alpha
+  true alpha   median gain   share >0  share >10%
+        0.00        -49.5%         2%          0%
+        0.05        -36.9%        16%          6%
+        0.15         70.0%        90%         90%
+        0.40         82.9%        96%         96%

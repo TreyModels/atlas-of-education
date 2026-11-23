@@ -1,0 +1,17 @@
+moments: {'ly_sd': 1.174163117640011, 'ea_mean': 28.58827022738193, 'ea_sd': 22.51986444211299, 'el_mean': 81.5431078628136}
+500 panels, 120 countries x 55 years, effect sizes (pts per 0->100% electricity): [0.0, 5.0, 10.0, 20.0, 40.0]
+
+DETECTION RATE = share of panels where the electricity coefficient is significant (|t|>1.96) AND positive
+world   true E  outcome  median coef FE  detect FE  median coef trend  detect trend
+A            0      lsc           0.127      97.6%              0.006          4.0%
+A            0      sec           0.145      98.0%              0.008          6.8%
+B            0      lsc          -0.000       2.4%             -0.001          2.8%
+B            0      sec           0.000       3.0%             -0.000          2.4%
+B            5      lsc           0.008       8.2%              0.011         16.6%
+B            5      sec           0.009       8.8%              0.012         15.4%
+B           10      lsc           0.016      20.0%              0.023         44.6%
+B           10      sec           0.017      20.2%              0.024         38.8%
+B           20      lsc           0.033      49.4%              0.046         90.8%
+B           20      sec           0.035      51.2%              0.047         84.6%
+B           40      lsc           0.065      72.8%              0.095        100.0%
+B           40      sec           0.071      81.4%              0.094         99.6%
