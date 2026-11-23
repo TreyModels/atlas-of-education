@@ -33,6 +33,7 @@ The two questions this session is answering:
 | 10 (task-11) | GPU engine scale and robustness audit | research/cuda-scale-2026-11-23 | **DONE and verified** locally (7f92799); push blocked by network outage |
 | 11 (task-12) | Full transition: pre-antibiotic equilibrium to fertility collapse | research/transition-2026-11-23 | **DONE and verified** locally (c1c6efb, b13fde8); push blocked by network outage |
 | 12 (task-14) | Novelty literature review: is any of this actually new? | research/novelty-2026-11-23 | **DONE and verified** locally (390db8d); push blocked by network outage |
+| 13 (task-13) | Full transition in the GPU ABM: holds fertility up without the mortality decline? | research/transition-gpu-2026-11-23 | **DONE and verified** locally (69f0b1d); push blocked by network outage |
 | - (task-6) | Methodology paper on the multiverse method | research/methods-multiverse-paper-2026-11-23 | DRAFTING (held by Dr. Menefee) |
 
 Job numbers follow the project brief; the shared task board uses task ids (given in brackets).
@@ -164,6 +165,37 @@ Job numbers follow the project brief; the shared task board uses task ids (given
 - Four figures are committed on the branch (mortality-fertility phase diagram with country trajectories, long-run
   time series for early and late transitioners, the distribution of mortality-to-fertility lags, and the annotated
   pre-antibiotic/collapse corners).
+
+### The mortality counterfactual in the GPU ABM (job 13) — DONE (push pending)
+- **Design.** Eight countries, cohorts 1930-1995 (reproductive years 1945-2045). Both arms use exactly the same
+  history of schooling, income and urbanisation; the only difference is child survival. Arm 1 lets child survival
+  follow history; arm 2 freezes it at the pre-antibiotic level (42 child deaths per 100 instead of 3). Scale:
+  **10.08 million simulated women, 353 million woman-years, 48 runs, 3.03 seconds** on the 2080 Ti (3.3 million
+  women/s; a 3.36-million-woman version gives identical results).
+- **The mortality channel is calibrated to our own estimate, not assumed.** Desired births rise by 0.0067 per point
+  of child mortality per 100 (the country-level estimate from job 8), so the whole 40-point mortality fall accounts
+  for about 0.25 births - not the ad-hoc ~1.6x multiplier first proposed.
+- **Result: the collapse survives without the mortality decline.** Historical arm: fertility falls 1.36 births per
+  woman (5.02 to 3.66). Frozen-mortality arm: falls 1.31. **Freezing the mortality decline removes only 3.2% of the
+  fall** (country range -8.2% to +1.8%), and raises the *level* by only about 0.06 births. Falsifiers: plus or minus
+  50% on the calibrated coefficient moves the answer by 1-5%; a 4.5x power check reaches only 10%; two population
+  sizes agree. So no plausible calibration of that channel flips the verdict.
+- **Read it as a decomposition of this model, not a causal finding.** The published model was calibrated to reproduce
+  the fertility decline through its own schooling/income/development channels; a small calibrated mortality term
+  cannot overturn that structure. So "schooling-led" here means "in this model, the schooling and income channels
+  carry the fall". It does **not** show that mortality decline was unimportant in the world. It also sits in real
+  tension with the country-level evidence, where the child-survival link is the most robust fertility relationship in
+  the project - either the model is mis-specified (attributing to schooling what is really survival), or the
+  country-level link is not causal. That tension is unresolved and is the most important thing the counterfactual
+  surfaced.
+- **Honest negative: the pre-antibiotic arc is unreachable.** On cohorts 1890-1955 the model produces no transition
+  at all (fertility 4.07, then 4.98, then 4.58 - a rise), and the most generous arm reaches 6.5 births at the 1890
+  cohort against a historical ~5. The model has no mechanism for the early high-fertility plateau. **The historical
+  arc from 1800 is shown by job 11's data and figures; the simulation only covers 1930 onward.**
+- Labels: model extension, not the published model; with the mortality channel off and the published cohort base the
+  engine reproduces the published model exactly (state difference 0, target series 0.0), and that check is in the
+  record. Pre-1950 schooling and the income rescale are documented assumptions; the engine's market-semantics
+  deviation stays labelled.
 
 ### Country-level fertility links after gap-filling (job 2) — DONE
 - Seven fertility-block cells change significance. **Four are precision-only, not new effects**: urbanisation
@@ -410,7 +442,10 @@ result, framed as suggestive and limited.
   its size. The decisive test is micro data (birth spacing after a child death), not another country panel.
 - **Why fertility tracks child survival and life expectancy.** The association is robust; the full-transition
   record (job 11) shows mortality decline leading the fertility decline by about 12 years across 190 countries; the
-  level-versus-volatility test (job 8) shows the level matters, not the riskiness - which favours replacement/quantity-quality
+  level-versus-volatility test (job 8) shows the level matters, not the riskiness. But the individual-level
+  counterfactual (job 13) says the model's own schooling/income channels can generate the collapse without the
+  mortality decline - which is either a mis-specification of the model or evidence that the country-level link is
+  not causal. Resolving that tension needs micro data, not another panel. - which favours replacement/quantity-quality
   over pure insurance at country level. But a common development cause predicts the same pattern and is not
   excluded, and the decisive household test (birth spacing after a child death) needs micro data we do not have.
 - **Whether the schooling-fertility null is a measurement limit or a real absence.** No country-level test so far
