@@ -384,17 +384,20 @@ if med2 is not None:
 fig.tight_layout(); fig.savefig(os.path.join(FIG, "fig_c_lag_distribution.png"), dpi=170)
 plt.close(fig)
 
-OFFSETS = {"GBR": (5, -9), "SWE": (5, 5), "FRA": (-6, 6), "JPN": (-6, -12),
-           "IND": (6, 4), "CHN": (6, -10), "KEN": (6, 2), "BRA": (6, -10)}
+# small label offsets only (no leader lines); the colour legend identifies the
+# five early transitioners that converge in the collapse corner
+LBL = {"CHN": (8, -13), "IND": (8, 6), "KEN": (8, 6), "BRA": (8, -12)}
 fig, ax = plt.subplots(figsize=(8.8, 5.9))
 for iso, name in COUNTRIES8.items():
     pts = xy(iso, CM, EFR)
     if not pts:
         continue
-    ax.plot([p[1] for p in pts], [p[2] for p in pts], "-", color=COLORS[iso], lw=1.0, alpha=0.45)
+    ax.plot([p[1] for p in pts], [p[2] for p in pts], "-", color=COLORS[iso], lw=1.0,
+            alpha=0.55, label=name)
     ax.scatter([pts[-1][1]], [pts[-1][2]], color=COLORS[iso], s=30, zorder=6)
-    ax.annotate(name, (pts[-1][1], pts[-1][2]), fontsize=8, color=COLORS[iso],
-                xytext=OFFSETS.get(iso, (5, 3)), textcoords="offset points")
+    if iso in LBL:
+        ax.annotate(name, (pts[-1][1], pts[-1][2]), fontsize=8, color=COLORS[iso],
+                    xytext=LBL[iso], textcoords="offset points")
 ax.axvspan(25, 45, color="#f2f2f2", zorder=0)
 ax.axvspan(0, 2.5, color="#e9e9e9", zorder=0)
 ax.text(35, 5.9, "PRE-ANTIBIOTIC CORNER\nhigh child mortality, moderate-to-high\nfertility; most countries before c. 1940",
@@ -406,6 +409,7 @@ ax.annotate("China/Kenya jumps: source splice", xy=(30, 4.6), xytext=(33, 3.6), 
 ax.set_xlabel("under-5 mortality (deaths per 100 live births)")
 ax.set_ylabel("effective fertility (surviving children per woman)")
 ax.set_title("The two corners of the transition, annotated (larger dot = latest observation)")
+ax.legend(fontsize=7, loc="center left", bbox_to_anchor=(1.005, 0.5), frameon=False)
 ax.set_xlim(0, 50); ax.set_ylim(0.5, 6.3)
 fig.tight_layout(); fig.savefig(os.path.join(FIG, "fig_d_corners_annotated.png"), dpi=170)
 plt.close(fig)
