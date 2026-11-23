@@ -129,11 +129,10 @@ did the fitting; it does not test prediction on the GPU engine itself (the trans
 separately). What it does rule out is the worry that the GPU market's semantics were driving the fitted
 answer. Both fits used the same tolerance and the same target protocol.
 
-**Batch layout matters and is recorded here.** The engine is deterministic for a fixed seed *and a fixed
-batch layout*: each woman's random stream is keyed on her position within the launch, so regrouping the same
-runs changes their random numbers (up to 1.13 births in total fertility and 1.74 years in mean marriage age
-between one 12-run launch and batches of 5, 7 and 12; audit in the cuda-scale record's `determinism_v2.json`).
-The GPU fits above therefore pin `--batch 8` and record it.
+**Batch layout matters.** The engine is deterministic for a fixed seed *and a fixed batch layout*: each
+woman's random stream is keyed on her position in the launch, so regrouping the same runs changes their
+draws (up to 1.13 births and 1.74 years between one 12-run launch and batches of 5, 7, 12; audit in the
+cuda-scale record's `determinism_v2.json`). The fits above pin and record `--batch 8`.
 
 ## Limits
 The fit is poor in absolute terms and the tolerance is the prior-predictive 20th percentile (stricter cut the
