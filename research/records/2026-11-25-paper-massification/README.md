@@ -5,7 +5,7 @@ Lead: panel-matrix (task-37). This record consolidates everything the project fo
 synthesis-length paper (target 12,000–18,000 words) with an exhaustive, DOI-verified literature review.
 
 ## Deliverables
-- **`paper.md`** — full draft, **13,986 words** (within the 12,000–18,000 target), with abstract, introduction,
+- **`paper.md`** — full draft, **17,142 words** (within the 12,000–18,000 target), restructured around the finding (Section 2) with explicit Implications (12) and Future research (13), with abstract, introduction,
   four-literature theory section, data and measurement, empirical strategy, six results sections, synthesis and
   "What we know now" box, limitations/referee objections, conclusion, and three appendices (evidence labels,
   reproduction, data gaps). Every number carries sample and uncertainty; the historical dates are labelled
@@ -34,6 +34,17 @@ synthesis-length paper (target 12,000–18,000 words) with an exhaustive, DOI-ve
 | 9 Scaling, θ/γ, drivers null | scaling @ fd691a6; grouping-multiverse-400 @ 1152cec | cuda-scale; multiverse-400 | panel-matrix |
 | 10 Credential inflation, care loop | care-credential @ e626cb8 | multiverse-400 | panel-matrix |
 | 11–13 Synthesis, limitations, conclusion | all of the above | panel-matrix | panel-matrix |
+
+## Project brief headings (mandatory record sort)
+
+The project brief asks every record to be sortable under **(1) Fertility** and **(2) Massification**. The paper
+keeps its journal structure; this map gives the sort:
+- **(1) Fertility**: Section 2 (headline: schooling precedes the fertility decline in 69%, 58-80%); Section 6
+  (sequencing result and the schooling-before-fertility ordering); Section 11 (credential/care fertility
+  mechanisms); plus the DHS ecological-gradient contribution in `contributions/` for Paper F.
+- **(2) Massification**: Sections 1-8 and 10-16 (everything about schooling expansion, the supply/demand
+  decomposition, the historical cases, the agricultural floor, scaling and drivers, implications and future
+  research).
 
 ## Verification status
 - **Numbers**: every number in the paper is a field in a verified branch at a named commit (see

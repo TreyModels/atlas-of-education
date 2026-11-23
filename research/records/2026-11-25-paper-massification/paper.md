@@ -10,7 +10,8 @@ verified or unverified throughout.
 
 ## Abstract
 
-Most theories of mass schooling are demand stories. Families invest in education because returns rise,
+
+Most theories of mass schooling are demand stories. This paper is built around one ordering claim, stated before the theory: in late-industrialising countries, the schooling take-off precedes the release of agricultural labour, and the labour-market demand variables the human-capital theory names turn on later. Families invest in education because returns rise,
 employers demand literate workers, and the labour market pulls children through school. The timing of the
 historical record is awkward for this account in much of the world: in a panel of 64 late-industrialising
 countries where both events can be dated, the take-off in schooling **precedes** the release of labour out of
@@ -44,7 +45,6 @@ sequencing; late industrialisation.
 ---
 
 ## 1. Introduction
-
 The central fact of modern social history is that whole populations became literate and schooled within about
 a century and a half, and that the process began at very different income levels and at very different times.
 The standard economic explanation is that schooling is an investment: families and governments buy it because
@@ -112,16 +112,7 @@ industrialisation came first; and this is a late-industrialiser regularity, not 
 is explicit about which parts are replicated from the existing literature, which parts are new in this
 assembly, and which parts the data cannot decide.
 
-**Roadmap.** Section 2 sets out the four literatures and what each predicts about timing. Section 3 describes
-the data, the event definitions and the data-availability problem. Section 4 sets out the empirical strategy,
-including the pre-registered definitions and the limits of the design. Section 5 reports the sequencing result
-and Section 6 the supply-versus-demand comparison and horse race. Section 7 reports the four historical cases
-with date provenance. Section 8 reports the agricultural-floor mechanism (the corrected Boppart et al. test and
-the joint demography–agriculture model) because it is the strongest version of the demand story and deserves a
-fair test. Section 9 reports what scaling regularities can and cannot tell us, including the failed test of a
-universal fertility–attainment collapse curve and the diversity formalism the theory invokes. Section 10 reports
-the credential-inflation and care-work mechanisms. Section 11 draws the synthesis and includes the
-"What we know now" box; Section 12 lists limitations and referee objections; Section 13 concludes.
+**Roadmap.** Section 2 states the finding and the claim discipline; Section 3 reviews the literature around the question the finding raises; Sections 4-8 develop the evidence (data, strategy, sequencing, supply versus demand, historical typology); Sections 9-11 report the supporting evidence (agricultural floor; scaling and drivers; credential and care); Section 12 draws the implications for the debate, the classic cases and policy; Section 13 sets out the future research; Section 14 collects the synthesis; Section 15 lists the limitations including the central vulnerability; Section 16 concludes.
 
 Two reading conventions. First, **every number carries its sample and its uncertainty**; where a number comes
 from a project record rather than a published source, the claims-to-source map at `claims-to-source-map.md`
@@ -135,8 +126,77 @@ are all established. What is new here is the assembly: a common, pre-registered 
 between measured supply and measured demand, and a joint reading of the historical cases and the cross-country
 panel under one rule.
 
-## 2. What the literature predicts
 
+## 2. The finding
+The paper is built around one ordering claim, and it is worth stating plainly before the literature, the data or
+the qualifications. In the 64 late-industrialising countries where the three events — the take-off in schooling,
+the release of labour out of agriculture, and the fertility decline — can all be dated in the common 1965-2010
+window, **the schooling take-off precedes the release of agricultural labour in 61 countries (95.3%)**, with a
+median lead of **26 years** (bootstrap 95% interval for the median 22-26 years; interquartile range 16-29 years across all 64 gaps (17-29 years across the 61 forward cases)). The reverse ordering — the farm exodus first, which is what the demand-led
+account requires — occurs in **3 countries (4.7%; bootstrap 95% interval 0-11%)**. The schooling take-off also
+precedes the fertility decline in **69%** of the same countries (95% interval 58-80%). The result is not carried
+by one region: Latin America, South Asia, East Asia, North Africa and Sub-Saharan Africa are all represented
+among the forward cases.
+
+**The demand variables, measured the way the human-capital theory measures them, do not lead.** The labour-market
+demand block — the wage premium of non-agricultural over agricultural work and the paid-employment share —
+precedes the schooling take-off in only **7% of 58 countries**. The raw event comparison that looks demand-led
+(demand onset before schooling in 73% of 89 countries) is an artefact of data availability: 61 of 108 schooling
+dates sit on the first year of the common window, and the education spending, teacher and enrolment series begin
+in the median country only in 1975. In the fair comparison sample of 33 countries, supply precedes schooling in
+76% and demand in 79%, and the two sides turn together. The sharper test, the horse race in ten-year changes with
+country and period fixed effects and country-clustered errors, puts the conditional association on the supply
+side: **supply +0.456 (SE 0.174) against demand +0.006 (SE 0.203)** (n=78 country-periods, 51 countries), with
+enrolment capacity (+0.307, SE 0.146) and education spending (+0.125, SE 0.058) individually significant and every
+demand measure null.
+
+**The classic cases show why the regularity is conditional, not universal.** Prussia is the supply-led
+paradigm: compulsory schooling from 1763, near-universal enrolment by the 1860s, industrialisation from the
+1840s-70s — schooling ahead of industrialisation and the farm exodus by **80-120 years**. Britain is the
+counterexample: the industrial revolution and the agricultural exodus precede national mass schooling by
+**40-90 years**, and the 1870 Education Act arrives after the economy had already been transformed. France sits
+between the two: the Guizot statute of 1833 precedes the farm exodus by half a century, but measured attainment
+lags until the Ferry laws of 1881-82 arrive with it. The northern United States is supply-led in the
+local-public-goods sense: publicly funded common schools from the 1830s precede the national farm exodus, while
+the high-school movement (1910-40) coincides with it. **Every historical date is UNVERIFIED literature standard**
+— a standard secondary date that this pass did not check against a primary source — and the paper says so wherever
+the dates appear.
+
+**The claim is an ordering claim, not a new correlation.** The negative association between schooling and
+fertility, the positive association between schooling and income, and the rise of mass education are among the
+most replicated facts in social science; nothing in this paper claims to discover them. The paper's claim is
+that the **order of events** in late-industrialising countries is systematically the opposite of what the
+demand-led account requires, that this ordering had not been assembled as a common, pre-registered, cross-country
+event comparison before this project (as far as our recorded search can find; the search is documented), and
+that the ordering is conditional on who supplied the schooling — state-built pipeline first in Prussia, market
+first in Britain. The contribution is the systematic measurement of a pattern that has been argued case by case
+for decades, plus the decomposition that shows the association sitting with supply measures rather than the
+labour-market demand variables, plus the demonstration that the strongest demand-side mechanism (the agricultural
+floor) does not deliver the sequence the theory needs.
+
+**What the finding does not say.** It does not say that schooling caused the release of labour, or growth, or the
+fertility decline; the evidence is timing plus conditional association, not causal identification. It does not
+say that the demand story is wrong for the first industrialisers — Britain is exactly where demand led. It does
+not say that institutions always lead — France and the United States are mixed cases, and the four historical
+cases are a dated argument, not a sample. It does not say the regularity is universal — the sample is the
+late-industrialisers the post-1965 data can see, and the framing throughout is **a late-industrialiser
+regularity, not a universal law**. What it does say is that in the countries where the question can be measured,
+the schooling system is better described as moving ahead of labour-market demand than as following it, and that
+this is a fact about who built the pipeline and when.
+
+**How the rest of the paper is organised.** Section 3 reviews the literature around the question the finding
+raises — has anyone established this ordering systematically, and what do the classic cases actually show? —
+rather than as a generic survey. Section 4 describes the data and the event definitions; Section 5 sets out the
+empirical strategy and the claim discipline. Section 6 reports the sequencing result with its coding robustness;
+Section 7 the supply-versus-demand comparison and the horse race; Section 8 the historical cases as a typology
+(Prussia versus Britain as the two poles). Sections 9-11 report the supporting evidence, subordinate to the
+ordering claim: the agricultural-floor mechanism, the scaling regularities and the driver nulls, and the
+credential and care mechanisms. Section 12 draws the implications for the massification debate, for how the
+classic cases are read, and for policy; Section 13 sets out the future research that would settle what this
+design cannot; Section 14 collects the synthesis in the "What we know now" box; Section 15 lists the
+limitations, including the central vulnerability; Section 16 concludes.
+
+## 3. What the literature predicts - and has anyone established this ordering?
 ### 2.1 Human capital and the demand for schooling
 
 The economics of education begins with the idea that schooling is an investment in productive capacity.
@@ -205,7 +265,7 @@ The state-building literature supplies the mechanism that makes supply-led massi
 ambitions and capacity can build schools before there is an economic return, because the return it seeks is
 political and administrative. It also supplies the key comparative prediction: supply-led massification should
 be most visible where the state was strong relative to the market — Prussia is the paradigm — and least visible
-where the market led — Britain. This is the prediction the historical cases in Section 7 test.
+where the market led — Britain. This is the prediction the historical cases in Section 8 test.
 
 ### 2.4 The economic history of the sequence
 
@@ -245,8 +305,8 @@ and Buera, Kaboski and Rogerson (2022) link skill-biased structural change to th
 If the demand story is right, the release of labour from agriculture is the event that should precede schooling:
 the farm exodus creates the wage-labour demand, and the schooling system responds. If mass schooling precedes
 the agricultural release, the demand story's central event ordering is wrong for that country. The project
-therefore tested both: the agricultural-floor mechanism itself (Section 8) and its timing relative to schooling
-(Section 5).
+therefore tested both: the agricultural-floor mechanism itself (Section 9) and its timing relative to schooling
+(Section 6).
 
 ### 2.6 Scaling, credentialing and the institutional reading
 
@@ -254,11 +314,11 @@ Two further literatures bear on massification. The scaling literature asks wheth
 power laws — urban output superlinear, infrastructure sublinear, city sizes Zipf, distinct categories Heaps —
 and the project's theory invokes a diversity formalism in which systems diversify functionally as they scale
 (Bettencourt et al. 2007; Bettencourt 2013; Zipf 1949; Gibrat 1931; Heaps 1978; Ortman et al. 2014;
-Yang et al. 2026). Section 9 reports what could and could not be estimated; the relevant point for this paper
+Yang et al. 2026). Section 10 reports what could and could not be estimated; the relevant point for this paper
 is that a scaling regularity is not a causal identification, and that between-country regularities need not
 hold within countries as they grow. The credentialing literature — Spence (1973), Collins (1979), Bills (2004)
 — supplies the complementary reading of massification as positional competition: schooling expands because it
-certifies, and the credential ratchet can outrun the skill content of jobs. Section 10 tests the
+certifies, and the credential ratchet can outrun the skill content of jobs. Section 11 tests the
 credential-inflation and care-work mechanisms and finds them unsupported in the available cross-country data.
 
 ### 2.7 What is unresolved, and the question this paper asks
@@ -269,10 +329,10 @@ expands. The institutionalist and state-building literatures predict the reverse
 the supplier. The economic-history literature suggests the answer differs by country. The question this paper
 asks is therefore simple to state and hard to answer: **relative to the take-off in schooling, which side turns
 first — the supply-side conditions that build school systems, or the demand-side conditions that the human-
-capital story requires — and does the answer depend on who industrialised first?** Section 3 describes the data
+capital story requires — and does the answer depend on who industrialised first?** Section 4 describes the data
 that let us answer it, and the data-availability problems that almost produced the wrong answer.
-## 3. Data and measurement
 
+## 4. Data and measurement
 ### 3.1 The country panel and the long-run sources
 
 The spine of the paper is a country–year panel assembled by the project (the "Atlas panel"). It combines a
@@ -286,7 +346,7 @@ and the horse-race variables used in this paper are in the records listed in the
 Two facts about the panel constrain what can be measured. First, its long-run schooling series (mean years of
 schooling for the population aged 15–64) begins in **1870** for the early industrialisers and in the 1950s for
 most countries, so the take-off of the countries we care about most — Prussia, France, Britain before 1870 — is
-**not observable in our own data**; the historical cases in Section 7 must rest on the literature and are
+**not observable in our own data**; the historical cases in Section 8 must rest on the literature and are
 labelled accordingly. Second, the reliable cross-country agricultural employment shares begin only around
 1960–70 (ILO/WDI modelling), which sets the common event window for the modern panel to 1965–2010. These are
 data limits, not design choices, and they motivate the careful measurement rules below.
@@ -333,7 +393,7 @@ problems stack:
 - **Different measurement of "demand".** Income and urbanisation are available from 1960 and rise almost
   everywhere; the labour-market variables the human-capital theory actually names (wage premia, paid jobs) have
   much shorter coverage.
-The consequence is that the raw ordering is biased **against supply and in favour of demand**. Section 6 reports
+The consequence is that the raw ordering is biased **against supply and in favour of demand**. Section 7 reports
 the raw ordering, then the fair-sample comparison (countries whose schooling take-off is after the window start
 and whose supply data begin before the take-off), then the horse race, which does not depend on event dating.
 This ordering of evidence — raw, corrected, then horse race — was fixed in advance and is reported in that
@@ -362,7 +422,7 @@ each supply and demand measure, enter the supply and demand blocks separately an
 and period fixed effects, and cluster the standard errors by country. Regressors are standardized so that the
 coefficients are comparable within blocks. The sample is limited by supply-data coverage: 78 country-period
 observations from 51 countries in the joint specification; the demand-only specification has 300 observations
-from 103 countries. What this design can and cannot identify is stated in Section 4.3: it identifies conditional
+from 103 countries. What this design can and cannot identify is stated in Section 5.3: it identifies conditional
 associations and timing, not causal elasticities.
 
 ### 3.5 Historical cases and their evidence classes
@@ -374,7 +434,7 @@ at least ten years with the take-off statute-driven; a **demand-led** verdict re
 precede the schooling take-off by at least ten years with enrolment rising as industrial jobs pull families in;
 otherwise the case is **simultaneous or undated**. Every date is assigned an evidence class: **VERIFIED**
 (dated in a primary or near-primary source read in this pass), **UNVERIFIED literature standard** (a standard
-secondary date not re-checked against a primary source here) or **CONTESTED**. Every date in Section 7 is
+secondary date not re-checked against a primary source here) or **CONTESTED**. Every date in Section 8 is
 **UNVERIFIED literature standard**, and the text says so at each case. The primary series that would promote
 them to verified are named: Prussian enrolment 1800–1870 (Flora et al. 1983; Lindert 2004), UK school attendance
 1850–1900 (Newcastle Commission 1861; Board of Education annual reports), French primary enrolment 1830–1900
@@ -391,8 +451,8 @@ income, and the project's prior jobs-and-markets panel (checked but not usable b
 countries and has no sex-specific care series). The data-availability statements for each are in the relevant
 records and are repeated in Sections 9–10 where they matter.
 
-## 4. Empirical strategy
 
+## 5. Empirical strategy: an ordering claim, not a new correlation
 ### 4.1 Pre-registration
 
 Every empirical exercise in this paper had its definitions, thresholds, samples and verdict rules committed
@@ -400,9 +460,9 @@ Every empirical exercise in this paper had its definitions, thresholds, samples 
 `62730fc` (sequencing event definitions and falsifiers), supply-demand `f7b38f3` (supply/demand measures, fair
 sample, horse race), historical-sequence `74e0fe2` (`DEFINITIONS.md`), scaling `f8f782f` (scaling rules and
 verdicts), care-credential `7356e76` (care and credential mechanisms), and the grouping-multiverse
-pre-registration. Where a pre-registered test came out against the framing, it is reported as such (Section 6
-reports the raw ordering that favoured demand before the correction; Section 9 reports the rejected collapse
-curve; Section 10 reports the null care and credential mechanisms). No analysis in this paper was added after
+pre-registration. Where a pre-registered test came out against the framing, it is reported as such (Section 7
+reports the raw ordering that favoured demand before the correction; Section 10 reports the rejected collapse
+curve; Section 11 reports the null care and credential mechanisms). No analysis in this paper was added after
 seeing a result in order to rescue a claim; the sensitivity checks that were added are labelled as such.
 
 ### 4.2 Event-ordering statistics
@@ -426,7 +486,7 @@ absorbed. It does **not** identify a causal effect of either block. Education po
 and schooling are jointly determined, and there is no instrument here. The design can distinguish a timing
 pattern and a conditional correlation; it cannot tell us whether spending "caused" schooling or schooling caused
 spending. We therefore use the horse race only to arbitrate between the two theories' *descriptions* — which
-block carries the association when both are present — and never as a causal estimate. Section 12 returns to
+block carries the association when both are present — and never as a causal estimate. Section 15 returns to
 this.
 
 ### 4.4 Multiple comparisons and honesty rules
@@ -440,8 +500,8 @@ headline share is carried by a few countries. "No first" is a rule, not a courte
 literature is recorded in `search-strategy.md`, and the prior-art tables state what is new and what is
 replicated for every claim.
 
-## 5. The sequence: schools before factories
 
+## 6. The sequence: schools before factories
 ### 5.1 The headline result
 
 Among the 64 countries where all three events — schooling take-off, agricultural labour release and fertility
@@ -456,7 +516,7 @@ gap of about **0 years** (the two tend to be close, but schooling first more oft
 The 64 countries are not a random sample: they are the countries where the events are dated at all, which
 over-represents the later industrialisers that dominate the post-1965 data. This is a limitation, and it is also
 the point of the paper: the regularity is a late-industrialiser regularity because late industrialisers are
-what the modern data can see. The historical cases in Section 7 are how we check whether it extends backwards.
+what the modern data can see. The historical cases in Section 8 are how we check whether it extends backwards.
 
 ### 5.2 What the result does and does not mean
 
@@ -480,19 +540,19 @@ in the same window, countries whose schooling take-off is exactly at the window 
 more than 26 years or by less; the bootstrap interval on the median (22–26 years) already reflects the
 imprecision of dates. A second concern is that the agricultural employment series are ILO-modelled for many
 countries, and modelled shares can lag real sectoral change; if the effect were large it would shorten the
-measured lead, and the lead is large enough to survive it. **Coding robustness (computed for this paper from the committed event dates).** Because the dates are the paper's central vulnerability, we report how the headline count behaves under date perturbation, using the committed event-date file (alternative-threshold re-detection was not possible after the box went down; it is stated as remaining work). In the 64-country three-event sample the gap distribution is: median **26 years**, interquartile range **17-29 years**; **61 of 61** forward cases have a positive gap, **59 of 61 (97%)** exceed 5 years, **57 of 61 (93%)** exceed 10 years, **52 of 61 (85%)** exceed 15 years, **43 of 61 (70%)** exceed 20 years and **13 of 61 (21%)** exceed 30 years. If every gap were overstated by a uniform 5 years, 59 of 61 forward cases would remain; by 10 years, 57; by 15 years, 52. The headline count therefore takes a systematic error of more than 15 years in the same direction to cut the forward share materially. What this does not do is re-detect the events under alternative definitions (statute vs enrolment, 1 vs 2 years of schooling, 3 vs 5 points of agricultural decline); that recoding is the paper's main empirical vulnerability and the first item for the next pass. Source: `subsistence-v2 @ ce66cfc`, `results/event_dates.csv`, columns `schooling` and `release`; the counts are arithmetic on that file, not a new estimate. The reliability of the result therefore rests on the
+measured lead, and the lead is large enough to survive it. **Coding robustness (computed for this paper from the committed event dates).** Because the dates are the paper's central vulnerability, we report how the headline count behaves under date perturbation, using the committed event-date file (alternative-threshold re-detection was not possible after the box went down; it is stated as remaining work). In the 64-country three-event sample the gap distribution is: median **26 years**, interquartile range **16-29 years** across all 64 gaps (**17-29 years** across the 61 forward cases); **61 of 61** forward cases have a positive gap, **59 of 61 (97%)** exceed 5 years, **57 of 61 (93%)** exceed 10 years, **52 of 61 (85%)** exceed 15 years, **43 of 61 (70%)** exceed 20 years and **13 of 61 (21%)** exceed 30 years. If every gap were overstated by a uniform 5 years, 59 of 61 forward cases would remain; by 10 years, 57; by 15 years, 52. The headline count therefore takes a systematic error of more than 15 years in the same direction to cut the forward share materially. What this does not do is re-detect the events under alternative definitions (statute vs enrolment, 1 vs 2 years of schooling, 3 vs 5 points of agricultural decline); that recoding is the paper's main empirical vulnerability and the first item for the next pass. Source: `subsistence-v2 @ ce66cfc`, `results/event_dates.csv`, columns `schooling` and `release`; the counts are arithmetic on that file, not a new estimate. The reliability of the result therefore rests on the
 magnitude of the gap rather than on the exact dates, and on the fact that the reverse ordering is rare.
 
 ### 5.4 The demand variables, measured the way the theory measures them
 
 The sequencing result says the labour release comes later; it does not yet say anything about labour-market
-**demand**. Section 6 fills that in with the wage premium and paid-employment measures. But the sequencing
+**demand**. Section 7 fills that in with the wage premium and paid-employment measures. But the sequencing
 result already constrains the demand story: if the wage-labor demand that is supposed to pull schooling had
 turned on a generation earlier, it would have to be demand that was not associated with the release of
 agricultural labour — a form of demand the agricultural-floor version of the story does not predict.
 
-## 6. Supply versus demand
 
+## 7. Supply versus demand: the horse race
 ### 6.1 The raw event ordering looks demand-led
 
 The raw comparison of supply and demand onsets against the schooling take-off appears to favour demand. Among
@@ -544,7 +604,7 @@ blocks are measured — but within that period, the association with schooling e
 
 The narrowest and most theory-relevant demand measure — the wage premium and the paid-employment share, without
 income or urbanisation — precedes the schooling take-off in only **7% of 58 countries**. The demand-first
-appearance of Section 6.1 is carried entirely by broad development indicators, not by the variables the
+appearance of Section 7.1 is carried entirely by broad development indicators, not by the variables the
 human-capital story actually names. This is the result that makes the demand-led account hard to maintain for
 late industrialisers: the wage premium and paid jobs do not turn on before the schools do; if anything, they
 turn on after.
@@ -561,8 +621,8 @@ institutionalist as well as demand accounts. What the evidence supports is the *
 late industrialisers the schooling system is not waiting for the labour market: it is being built by states
 with their own reasons, and the labour market arrives later. That is the supply-led/institutional reading, and
 it is a description of the data, not a causal identification. A referee should read the horse race as a **decomposition, not a test**: both blocks correlate with development, state capacity and the demographic transition. What would make it a test is exogenous variation in the supply of schooling - compulsory-schooling-law adoption, church-state competition over schooling, colonial schooling policy, or a school-construction programme with a credible instrument - and none is used here. The demand side has its own theory (Galor and Moav 2006) that deserves the same fairness.
-## 7. The historical cases: where the state built the pipeline
 
+## 8. The historical cases as a typology: Prussia and Britain as the two poles
 *This section integrates the historical-sequence record (`research/historical-sequence-2026-11-23` @ `ab658c7`,
 definitions first committed at `74e0fe2`), drafted for this paper by the historical-sequence lead and edited into
 the paper's voice. All historical dates are UNVERIFIED literature standard; the evidence labels are stated at
@@ -637,8 +697,8 @@ conditional on the state being the supplier. They do not establish a causal effe
 exodus; the cases show sequence and political economy, not identification. The next section turns to the
 strongest theoretical version of the demand story — the agricultural floor — and tests it on its own terms.
 
-## 8. The agricultural floor: testing the demand story's own object
 
+## 9. Supporting evidence I: the agricultural floor and the joint model
 *This section integrates the two subsistence records (`research/subsistence-2026-11-23` @ `41f6429`,
 pre-registered at `d47e5ed`; `research/subsistence-v2-2026-11-23` @ `ce66cfc`, pre-registered at `62730fc`),
 drafted for this paper by the subsistence lead and edited into the paper's voice.*
@@ -717,8 +777,8 @@ two ends of the mechanism converge on each other, the downstream effects at ten 
 joint model that reproduces the qualitative path fits the population badly and identifies only two of five
 parameters. The floor is real; the timing story built on it is not established.
 
-## 9. Scaling regularities, the diversity formalism, and what actually drives massification
 
+## 10. Supporting evidence II: scaling regularities, the diversity formalism, and what drives massification
 *This section integrates the scaling records (`research/scaling-2026-11-23` @ `fd691a6`, pre-registered at
 `f8f782f`; `research/scaling-data-hunt-2026-11-23` @ `9e15b6d`; `research/scaling-laws-catalogue-2026-11-23` @
 `cfe372f`; `research/sfi-scan-2026-11-23` @ `fd4cfd2`) and the grouping-multiverse record
@@ -817,8 +877,8 @@ the individual. The substantive conclusion stands from the earlier 74-draw run: 
 driver among the development variables the project has; the drivers are group-specific or fragile, and the
 strongest candidate (electricity) is exactly the one that dies under country trends. **This is a between-country panel result, not evidence that electrification does not matter.** The micro literature finds positive effects of rural electrification and energy access on schooling (e.g. the rural-electrification-and-human-capital work in China and the small-hydropower and energy-poverty studies reported by the independent audit); those estimates come from local variation our panel cannot see. The correct reading is that country-level electricity access is not separable from development here, not that energy access is irrelevant to households.
 
-## 10. Credential inflation and the care loop: two mechanisms the data do not support
 
+## 11. Supporting evidence III: credential inflation and the care loop
 *This section integrates the care-credential record (`research/care-credential-2026-11-23` @ `e626cb8`,
 pre-registered at `7356e76`).*
 
@@ -853,8 +913,182 @@ it says that two candidate mechanisms (positional credentialing and care absorpt
 cross-country data, and that the institutional reading must rest on the timing evidence of Sections 5–7 rather
 than on these channels. The nulls are reported with the same prominence as the positive findings because they
 are part of the paper's answer.
-## 11. What we know now: synthesis and the "what we know now" box
 
+## 12. Implications
+The finding matters in three places: for the theoretical debate about why mass schooling spread, for how the
+classic historical cases should be read, and for the policy question of what lever actually moves massification.
+It does not settle the first, and the paper is explicit about that; an ordering claim can shift the burden of
+argument without identifying the mechanism.
+
+### 12.1 For the massification debate: supply-led versus demand-led
+
+The human-capital account and the world-culture account have been argued for four decades, largely from
+different kinds of evidence: returns-to-schooling estimates and earnings functions on one side, diffusion
+patterns and institutional case histories on the other. The ordering evidence speaks to the debate on the
+world-culture side, but in a specific and limited way.
+
+For **world-culture theory** (Meyer 1977; Boli, Ramirez and Meyer 1985; Ramirez and Boli 1987; Soysal and Strang
+1989; Meyer, Ramirez and Soysal 1992; Schofer and Meyer 2005), the finding supplies something the tradition has
+usually lacked: a timing fact at scale. The tradition has argued that mass education is an institutional project
+that spreads through states and international models, not a local response to economic demand; the sequencing
+result shows that in late industrialisers the school system does indeed move before the labour market's own
+demand variables, and that the expansion is associated with supply-side measures. That is consistent with the
+tradition's prediction. But consistency is not identification. The world-culture account predicts that
+**legitimacy and diffusion** drive expansion; our data show **timing and conditional association**, and cannot
+separate a state that built schools because it believed in the school as the form of the modern state from a
+state that built schools because it expected future demand, had fiscal capacity, or was competing with a
+neighbour. The finding also does not test the diffusion mechanism — it is a country-level ordering, not a
+diffusion study — and it would be a mistake to present it as proof that world culture caused massification.
+
+For **human-capital theory** (Schultz 1961; Becker 1964; Mincer 1958, 1974; Goldin and Katz 2008; Acemoglu and
+Autor 2011), the finding is not a refutation but a boundary condition. The theory's core mechanism — returns to
+schooling shape investment in schooling, and technology raises those returns — is well supported by the returns
+literature and by the micro evidence; nothing here overturns it. What the ordering shows is that the theory's
+**general equilibrium prediction about the timing of mass expansion** does not hold for late industrialisers: the
+labour-market demand variables the theory names (wage premia, paid jobs) turn on **after** schooling does, not
+before. The most defensible synthesis is that the demand story describes the **first industrialiser** — Britain,
+where industrialisation and the farm exodus precede mass schooling by 40-90 years — while the supply story
+describes the **late industrialisers**, whose states built the pipeline in anticipation of, or for reasons
+independent of, demand that had not yet arrived. That is a more interesting result than either side's polemic:
+the theory is right where it was developed, and the world it was developed in is not the world most countries
+industrialised in.
+
+### 12.2 Reading Prussia and Britain as a typology
+
+The two classic cases are usually told as rival stories. The finding suggests they are better read as the two
+poles of a typology of massification, with the sequence following from who supplied the schooling.
+
+| dimension | state-built pipeline (Prussia pole) | market-led (Britain pole) |
+|---|---|---|
+| who supplied | state, with compulsory statutes and an administrative apparatus | private, charitable and local provision, national statute late |
+| timing relative to industrialisation | schools before industrialisation and before the farm exodus (80-120 years in Prussia) | industrialisation and farm exodus before national mass schooling (40-90 years in Britain) |
+| what the statute does | creates schools and compels attendance; enforcement varies but the pipeline exists | ratifies and extends provision that demand has already created; 1870 Act after the transformation |
+| the mixed cases | France: statute-led (1833) but attainment follows demand until the 1880s; US North: local public goods, supply-led before the national farm exodus, high schools coincident with it | |
+
+The typology is descriptive, not a theory: with four cases it cannot establish that the supplier determines the
+sequence, only that the two poles show the sequence following the supplier. It is nonetheless useful because it
+tells a referee where to look: if the typology is right, the ordering should weaken in the early-industrialiser
+set and hold in the state-building set, and cases where the state was weak relative to the market should look
+more like Britain. France is the instructive middle: the statute can lead without attainment following, which is
+why the paper keeps the policy date and the attainment date separate. A future study with proper historical
+series (Section 13) could test the typology rather than illustrate it.
+
+### 12.3 For policy: state capacity versus labour-market demand as the lever
+
+If the ordering is right, the policy implication is a sequencing one: **in a late-industrialising country, waiting
+for labour-market demand to pull schooling is waiting for the wrong signal**, because the demand variables the
+theory names turn on after the schools do. The lever that historically moved massification was state capacity to
+build and staff a school system — finance, teachers, a compulsory-law framework, an administrative apparatus —
+not the wage premium. That is consistent with the state-building literature (Lindert 2004; Alesina and Reich 2013;
+Gradstein and Justman 2002) and with the practical experience of countries that expanded schooling ahead of
+industrial demand.
+
+Three cautions are essential, and the paper takes them seriously. First, **there is no causal estimate here**: the
+policy inference is about the sequencing logic, not about effect sizes, and it would be overreach to say that
+building schools "causes" development from this evidence. Second, **supply without quality is not massification**:
+the paper's supply measures are spending, teachers and enrolment capacity, and it cannot speak to learning
+outcomes, which the growth literature shows matter more than years of schooling. Third, **credential inflation is
+a real risk of supply-led expansion**: the credential literature (Collins 1979; Spence 1973; Arrow 1973) and the
+project's own credential test (Section 11) warn that expansion can outrun the jobs that justify it, and the care
+loop and gap tests come back null rather than reassuring. The policy reading is therefore "build the pipeline
+early, and watch the quality and the credential gap", not "build schools and growth follows".
+
+### 12.4 What the implications are not
+
+They are not a claim that schooling caused the agricultural transition, the fertility decline or growth; the
+evidence is ordering and conditional association. They are not a claim that institutions always lead; Britain is
+the counterexample, and France and the United States are mixed. They are not a claim that the demand story is
+wrong in general; it is the better description of the first industrialiser. And they are not a claim that the
+paper has identified the mechanism; it has identified the order of events, which is the first thing a mechanism
+has to explain.
+
+## 13. Future research: what would settle it
+The paper's central vulnerability is that its dates are ours — literature-standard dates and our own event
+definitions — and its central claim is an ordering claim. Future work should attack both, in the order of what
+would most change the conclusion.
+
+### 13.1 The ordering itself: recoding and re-detection
+
+Before any new data, the ordering claim needs a robustness pass that this session could not complete (the raw
+series were on a server that went down, so alternative-threshold recoding was not possible). Concretely: re-detect
+the three events under alternative definitions — statute versus measured enrolment for schooling; 1 versus 2
+years of schooling per decade; 3 versus 5 points of agricultural-employment decline; different windows and
+smoothing rules — and report how many of the 61 forward cases flip under each. A second coder should code a
+sample of countries blind to the first coder's dates, with a pre-registered agreement threshold, and a
+date-by-date source table with page references should be published for every country in the headline table. What
+this would settle: whether the 61/64 count is a property of the events or of our definitions. What it would not
+settle: causality.
+
+### 13.2 Historical enrolment series: measuring the classic cases properly
+
+The four historical cases are the paper's weakest evidence because their dates are literature-standard. Four
+series would turn them into measurements:
+
+- **Prussian enrolment 1800-1870** from Flora, Kraus and Pfenning (1983) and Lindert (2004), checked against the
+  Prussian statistical yearbooks where possible. What it identifies: the date at which enrolment take-off precedes
+  industrialisation and the farm exodus — the 80-120 year lead — on a measured series rather than a statute date.
+- **French primary enrolment 1830-1900** from Diebolt's series and the ministry's *Statistique de l'enseignement
+  primaire*. What it identifies: the gap between the 1833 statute and the attainment take-off, which is the
+  France case's whole point, and which literature dates only bound.
+- **UK school attendance 1850-1900** from the Newcastle Commission (1861) and the Board of Education annual
+  reports. What it identifies: attendance before and after 1870, i.e. whether the Act ratified demand or created
+  supply.
+- **US high-school enrolment 1890-1940** from US Historical Statistics, series H-598 onward. What it identifies:
+  the timing of the high-school movement relative to the national farm exodus, which the paper currently states
+  from literature dates only.
+
+What these series would not do: identify causal effects. They would date the events better, and they would allow
+the lead/lag to be quantified with the uncertainty of each series rather than as point dates. Definitional
+changes in the series (who counts as enrolled, attendance versus registration) are themselves a research problem,
+not a nuisance.
+
+### 13.3 Compulsory-schooling-law dates as treatment
+
+The strongest design the project can see is to use the staggered adoption of compulsory-schooling laws as a
+natural experiment. The data exist in Flora and Alber (1981), Flora, Kraus and Pfenning (1983) and the subsequent
+literature; the design is an event study or difference-in-differences around law adoption, with pre-trends and
+heterogeneity by enforcement. What it identifies: the effect of a **law**, not of schooling per se, on enrolment,
+attainment, fertility and labour supply — a policy-relevant parameter, and a test of whether state action moved
+the pipeline. Threats: laws are endogenous to demand and to state capacity, enforcement varied enormously (the
+Prussian case is a warning), adoption is bundled with other reforms, and anticipation can shift effects earlier.
+A credible design would need enforcement variation (e.g. district-level enforcement intensity) and would have to
+be pre-registered.
+
+### 13.4 Subnational school-construction variation
+
+The most promising design for the mechanism is subnational: district-level school openings or school-construction
+programmes, matched to census attainment, fertility and employment. What it identifies: local effects of school
+supply on attainment and on the labour market, with better control of national policy and income; spillovers and
+migration are the main threats, and they are measurable. Data needs: school registers or construction records,
+census microdata, and boundary maps. The project does not have these data, but the design is the natural next
+step for a country-level research programme, and it is the design that could turn "supply-led" from a description
+into an estimate.
+
+### 13.5 Cohort-linked microdata for the generational claim
+
+The theory's generational wording — a cohort that entered school as the farm exodus accelerated had fewer
+children — needs cohort-linked microdata: DHS or IPUMS samples with attainment, fertility and employment for the
+same women. What it identifies: the individual-level relationship, the wealth horse race, and the quantum-tempo
+decomposition that the project's cell-level (ecological) DHS gradient could not test. The data gap is documented
+in the record (the public DHS API exposes aggregates only; individual recodes sit behind registration).
+
+### 13.6 What the current evidence cannot claim
+
+Stated plainly, so that no reader mistakes the paper for more than it is:
+
+- The historical **dates are literature-standard, not verified** in this pass; every one is labelled UNVERIFIED,
+  and a referee should spot-check two.
+- The **event definitions are ours** (1 year of schooling per decade; 3 points of agricultural decline; 10-year
+  windows), chosen in advance but not given by nature; alternative thresholds have not been run.
+- There is **no causal identification**: the horse race is a decomposition, the event ordering is timing, and the
+  policy implications are about sequencing logic, not effect sizes.
+- The data are **period series, not cohorts**; the generational claim is not tested here.
+- The 64-country sample is **selected on data availability**, and the historical cases are a **dated argument,
+  not a sample**.
+- The literature search could not use subscription databases (no Scopus/Web of Science/EconLit), so "as far as
+  our recorded search can find" is a real qualification, not boilerplate.
+
+## 14. What we know now: synthesis and the "what we know now" box
 ### 11.1 The synthesis verdict
 
 The paper set out to test the timing prediction that separates the demand-led and institutional accounts of
@@ -925,8 +1159,8 @@ demonstration that the strongest demand-side mechanism (the agricultural floor) 
 the theory needs. The paper's contribution to the empirical literature is a set of verified, traceable results
 and a set of honest nulls.
 
-## 12. Limitations and referee objections
 
+## 15. Limitations and referee objections
 We state the objections a domain referee would make, and whether the current evidence answers them.
 
 **1. "Your event dates are period data, not cohorts; you cannot speak about a cohort's own outcomes."** True and
@@ -937,12 +1171,12 @@ take-off precedes labour release", not "the cohort that entered as mechanisation
 fertility". The cohort-level test is stated as future work; the event ordering is the strongest claim the data
 can carry.
 
-**2. "The dates are the paper - a different coding gives a different count."** Yes. Section 5.3 reports the perturbation exercise: 93% of forward cases exceed a 10-year gap and a systematic 15-year error is needed to cut the forward share materially. But we did **not** re-detect the events under alternative definitions (statute vs enrolment; 1 vs 2 years of schooling; 3 vs 5 points of agricultural decline), because the raw series were unreachable after the box went down. That recoding is the paper's central empirical vulnerability and the first item for the next pass; a date-by-date source table with page references is also owed for the historical cases.
+**2. "The dates are the paper - a different coding gives a different count."** Yes. Section 6.3 reports the perturbation exercise: 93% of forward cases exceed a 10-year gap and a systematic 15-year error is needed to cut the forward share materially. But we did **not** re-detect the events under alternative definitions (statute vs enrolment; 1 vs 2 years of schooling; 3 vs 5 points of agricultural decline), because the raw series were unreachable after the box went down. That recoding is the paper's central empirical vulnerability and the first item for the next pass; a date-by-date source table with page references is also owed for the historical cases.
 
 **2b. "Your headline sequencing result is a selection of the countries that happen to have data."** Partly true.
 The 64 countries are those where all three events are detectable in the 1965–2010 window; they over-represent
 late industrialisers, which is exactly the population the paper claims to describe. The historical cases
-(Section 7) are how we check backwards, and they show the regularity does not extend to the first
+(Section 8) are how we check backwards, and they show the regularity does not extend to the first
 industrialiser. The paper says "late-industrialiser regularity" throughout for this reason.
 
 **3. "Your supply-versus-demand raw ordering is demand-led; you overturned it with a small fair sample."** The
@@ -952,13 +1186,13 @@ on event dating — is the primary supply-demand evidence, and the horse race pu
 The honest statement is that the raw ordering is uninformative because of censoring, not that it is wrong.
 
 **4. "The horse race is endogenous — education spending responds to schooling and income."** Yes. We do not
-claim causality, and Section 4.3 says so explicitly. The horse race is used only to arbitrate between the two
+claim causality, and Section 5.3 says so explicitly. The horse race is used only to arbitrate between the two
 theories' **descriptions**, and the paper's causal language is restrained accordingly. An instrument for
 education spending or state capacity would be the next step, and none is available here.
 
 **5. "The historical dates are unverified."** Yes — every one is labelled UNVERIFIED literature standard, and
 the primary series that would verify them are named. The four cases are a dated argument, not a measurement.
-A referee should read Section 7 as a synthesis of the historical literature under one set of definitions, not as
+A referee should read Section 8 as a synthesis of the historical literature under one set of definitions, not as
 new archival work.
 
 **6. "The agricultural-floor test contradicts a well-known paper."** No: the cross-section **replicates** BKKM's
@@ -988,8 +1222,8 @@ Economic History* as a standalone archival paper, because the historical section
 dates, not new archival measurement; that is a deliberate division of labour with the historical record, which
 names the archival work needed.
 
-## 13. Conclusion
 
+## 16. Conclusion
 Massification is usually told as a demand story: factories and cities raise the return to schooling, and
 schooling follows. This paper tested the timing that story requires across 64 late-industrialising countries and
 found the opposite ordering: the schooling take-off precedes the release of labour from agriculture in 61 of
@@ -1007,8 +1241,8 @@ pass turn the correlation into identification.
 
 ---
 
-## Appendix A. Evidence labels and verification status
 
+## Appendix A. Evidence labels and verification status
 | section | evidence | label |
 |---|---|---|
 | 5 | 61/64 sequencing, median 26 years, bootstrap CI | project data, verified in record (`subsistence-v2 @ ce66cfc`) |
@@ -1019,8 +1253,8 @@ pass turn the correlation into identification.
 | 10 | credential gap and care loop numbers | project data, verified in record (`care-credential @ e626cb8`) |
 | 2 | all literature claims | in-text citations; DOI and Crossref status in `claims-prior-art.md` and `refs.md` |
 
-## Appendix B. Reproduction and provenance
 
+## Appendix B. Reproduction and provenance
 Every number in Sections 5–6, 8–10 is a field in a results file on a named branch at a named commit; the
 claims-to-source map (`claims-to-source-map.md`) lists claim, number, branch @ commit, file and field. The
 scripts that produce the numbers are in the corresponding records, and the pre-registrations are the first
@@ -1029,8 +1263,8 @@ of verified records plus the reference-verification run (Crossref API, this bran
 strategy is recorded in `search-strategy.md`; the prior-art tables and reference list are
 `claims-prior-art.md` and `refs.md`.
 
-## Appendix C. Data gaps, stated not proxied
 
+## Appendix C. Data gaps, stated not proxied
 1. **Cohort-linked microdata** (the theory's generational claim): not available in this project; DHS/other
    microdata were not obtainable without registration (documented in the massification record).
 2. **Compulsory-schooling-law dates** across countries: only the project's six-system policy timeline and the

@@ -15,10 +15,10 @@ The search strategy is recorded in `search-strategy.md`.
 
 | work | what it shows | status | new vs replicated |
 |---|---|---|---|
-| Boli, Ramirez & Meyer (1985), *Comparative Education Review* 29(2):145–170 | origins and expansion of mass education are not driven by industrial demand; nation-state model | Crossref ✓ 10.1086/447306 | **replicated**: mass schooling can precede economic demand |
-| Soysal & Strang (1989), *Sociology of Education* 62(4):277–288 | first mass education systems in 19th-c. Europe follow state-building, with uneven economic demand | Crossref ✓ 10.2307/2112832 | replicated (European cases) |
-| Meyer, Ramirez & Soysal (1992), *Sociology of Education* 65(2):128–149 | world expansion of mass education 1870–1980 | Crossref ✓ 10.2307/2112690 | replicated (diffusion) |
-| Benavot & Riddle (1988), *Sociology of Education* 61(3):191–210 | primary expansion 1870–1940 loosely coupled with development | Crossref WEAK (title/year) 10.2307/2112628 | replicated |
+| Boli, Ramirez & Meyer (1985), *Comparative Education Review* 29(2):145–170 | origins and expansion of mass education are not driven by industrial demand; nation-state model | Crossref ✓ 10.1086/446504 | **replicated**: mass schooling can precede economic demand |
+| Soysal & Strang (1989), *Sociology of Education* 62(4):277–288 | first mass education systems in 19th-c. Europe follow state-building, with uneven economic demand | Crossref ✓ 10.2307/2112831 | replicated (European cases) |
+| Meyer, Ramirez & Soysal (1992), *Sociology of Education* 65(2):128–149 | world expansion of mass education 1870–1980 | Crossref ✓ 10.2307/2112679 | replicated (diffusion) |
+| Benavot & Riddle (1988), *Sociology of Education* 61(3):191–210 | primary expansion 1870–1940 loosely coupled with development | Crossref WEAK (title/year) 10.2307/2112627 | replicated |
 | Goldin & Katz (2008), *The Race between Education and Technology* | US high-school movement; demand-led reading | no DOI (book) | contrast case: demand-led in the first industrialiser |
 | Boppart, Kiernan, Krusell & Malmberg (2023), NBER WP 31101 | agricultural labour share as equilibrium outcome of relative input prices | Crossref ✓ 10.3386/w31101 | framing + mechanism, not the event ordering |
 | **This paper** | **common pre-registered event comparison of schooling take-off vs agricultural release across 64 countries, with bootstrap intervals and a fairness correction** | — | **new assembly**: the event-ordering comparison at this scale; the institutionalist claim tested as timing rather than diffusion |
@@ -34,7 +34,7 @@ case narratives (economic history). No "first" is claimed.
 |---|---|---|---|
 | Schultz (1961), *American Economic Review* 51(1):1–17 | human capital investment; demand-side logic | Crossref WEAK 10.2307/2551855 | the theory being tested |
 | Becker (1964), *Human Capital* | investment calculus; returns drive schooling | no DOI (book) | theory |
-| Mincer (1958), *Journal of Political Economy* 66(4):281–302 | earnings function; returns estimated from schooling | Crossref ✓ 10.1086/258116 | method behind demand measures |
+| Mincer (1958), *Journal of Political Economy* 66(4):281–302 | earnings function; returns estimated from schooling | Crossref ✓ 10.1086/258055 | method behind demand measures |
 | Goldin & Katz (2008) | US: education raced technology; demand-led | no DOI (book) | the strongest demand-led case, which the US case supports |
 | Acemoglu & Autor (2011), *Handbook of Labor Economics* | skill-biased technical change | Crossref ✓ 10.1016/S0169-7218(11)02410-5 | theory of labour demand for schooling |
 | Psacharopoulos & Patrinos (2018), *Education Economics* 26(5) | returns to schooling ~8-9% | Crossref ✓ 10.1596/30154 (WP) | benchmark: returns exist; our result is about *timing* |

@@ -12,15 +12,15 @@ care, agriculture/history) are appended in Part B with their own status marks.
 ## Part A. References verified in this paper's Crossref run
 
 - Schultz, T. W. (1961). *Investment in human capital*. American Economic Review. https://doi.org/10.2307/2551855 — **Crossref WEAK**.
-- Becker, G. S. (1964). *Human capital: A theoretical and empirical analysis, with special reference to education*. Book. https://doi.org/10.2307/2229541 — **Crossref ✓ MATCH**.
-- Becker, G. S. (1960). *An economic analysis of fertility*. Book chapter. https://doi.org/10.3386/w1793 — **Crossref NO_MATCH (bibliographic details from knowledge; not DOI-verified)**.
+- Becker, G. S. (1964). *Human capital: A theoretical and empirical analysis, with special reference to education*. Book. **No book DOI** — a DOI previously listed (10.2307/2229541) resolved to a 1966 *Economic Journal* review of the book, so it was removed by the independent DOI audit (24 Nov 2026).
+- Becker, G. S. (1960). *An economic analysis of fertility*. Book chapter. **No reliable DOI** — a previously listed DOI (10.3386/w1793) resolved to a different 1986 paper; removed by the independent DOI audit. Cited as a book chapter, **UNVERIFIED**.
 - Mincer, J. (1958). *Investment in human capital and personal income distribution*. Journal of Political Economy. https://doi.org/10.1086/258055 — **Crossref ✓ MATCH**.
 - Mincer, J. (1974). *Schooling, experience and earnings*. Book. https://doi.org/10.2307/2521600 — **Crossref ✓ MATCH**.
 - Goldin, C. (1998). *America's graduation from high school: The evolution and spread of secondary schooling in the twentieth century*. Journal of Economic History. https://doi.org/10.1017/s0022050700020544 — **Crossref ✓ MATCH**.
 - Goldin, C., & Katz, L. F. (2008). *The race between education and technology*. Book. https://doi.org/10.2307/j.ctvjf9x5x — **Crossref ✓ MATCH**.
 - Acemoglu, D., & Autor, D. (2011). *Skills, tasks and technologies: Implications for employment and earnings*. Handbook of Labor Economics. https://doi.org/10.3386/w16082 — **Crossref ✓ MATCH**.
 - Autor, D. H. (2014). *Skills, education, and the rise of earnings inequality among the other 99 percent*. Science. https://doi.org/10.1126/science.1251868 — **Crossref ✓ MATCH**.
-- Nelson, R. R., & Phelps, E. S. (1966). *Investment in humans, technological diffusion, and economic growth*. American Economic Review. https://doi.org/10.58837/chula.taic.522 — **Crossref ✓ MATCH**.
+- Nelson, R. R., & Phelps, E. S. (1966). *Investment in humans, technological diffusion, and economic growth*. American Economic Review. **No DOI used** — a previously listed DOI (10.58837/chula.taic.522) resolved to an unrelated 1965 repository item; removed by the independent DOI audit. Cited without DOI, **UNVERIFIED**.
 - Becker, G. S., & Lewis, H. G. (1973). *On the interaction between the quantity and quality of children*. Journal of Political Economy. https://doi.org/10.1086/260166 — **Crossref ✓ MATCH**.
 - Meyer, J. W. (1977). *The effects of education as an institution*. American Journal of Sociology. https://doi.org/10.1086/226506 — **Crossref ✓ MATCH**.
 - Meyer, J. W., Ramirez, F. O., & Soysal, Y. N. (1992). *World expansion of mass education, 1870-1980*. Sociology of Education. https://doi.org/10.2307/2112679 — **Crossref ✓ MATCH**.
@@ -31,10 +31,10 @@ care, agriculture/history) are appended in Part B with their own status marks.
 - Schofer, E., & Meyer, J. W. (2005). *The worldwide expansion of higher education in the twentieth century*. American Sociological Review. https://doi.org/10.1177/000312240507000602 — **Crossref ✓ MATCH**.
 - Meyer, J. W., & Rowan, B. (1977). *Institutionalized organizations: Formal structure as myth and ceremony*. American Journal of Sociology. https://doi.org/10.1086/226550 — **Crossref ✓ MATCH**.
 - DiMaggio, P. J., & Powell, W. W. (1983). *The iron cage revisited: Institutional isomorphism and collective rationality in organizational fields*. American Sociological Review. https://doi.org/10.2307/2095101 — **Crossref ✓ MATCH**.
-- Soysal, Y. N. (1994). *Limits of citizenship: Migrants and postnational membership in Europe*. Book. https://doi.org/10.2307/2077636 — **Crossref ✓ MATCH**.
+- Soysal, Y. N. (1994). *Limits of citizenship: Migrants and postnational membership in Europe*. Book. **No book DOI** — a previously listed DOI (10.2307/2077636) resolved to a 1995 *Contemporary Sociology* review; removed by the independent DOI audit.
 - Flora, P., & Alber, J. (1981). *Modernization, democratization, and the development of welfare states in Western Europe*. Book chapter. — **no Crossref result (bibliographic details from knowledge)**.
 - Flora, P., Kraus, F., & Pfenning, W. (1983). *State, economy, and society in Western Europe 1815-1975: A data handbook*. Book. https://doi.org/10.1007/978-1-349-06936-1 — **Crossref ✓ MATCH**.
-- Lindert, P. H. (2004). *Growing public: Social spending and economic growth since the eighteenth century*. Book. https://doi.org/10.1086/531331 — **Crossref NO_MATCH (bibliographic details from knowledge; not DOI-verified)**.
+- Lindert, P. H. (2004). *Growing public: Social spending and economic growth since the eighteenth century*. Book. https://doi.org/10.1017/cbo9780511510717 — **Crossref ✓ (book DOI, verified by the independent audit; the previously listed 10.1086/531331 resolved to a 2005 *American Historical Review* review and was removed)**. (Bibliographic details from knowledge; not DOI-verified)**.
 - Alesina, A., & Reich, B. (2013). *Nation building and education*. Working paper. https://doi.org/10.3386/w18839 — **Crossref ✓ MATCH**.
 - Gradstein, M., & Justman, M. (2002). *Education, social cohesion, and economic growth*. American Economic Review. https://doi.org/10.1257/00028280260344722 — **Crossref ✓ MATCH**.
 - Gradstein, M., Justman, M., & Meier, V. (2005). *The political economy of education: Implications for growth and inequality*. Book. https://doi.org/10.1111/j.1467-9620.2005.00617.x — **Crossref ✓ MATCH**.
@@ -54,7 +54,7 @@ care, agriculture/history) are appended in Part B with their own status marks.
 - Adamopoulos, T., & Restuccia, D. (2014). *The size distribution of farms and international productivity differences*. American Economic Review. https://doi.org/10.1257/aer.104.6.1667 — **Crossref ✓ MATCH**.
 - Herrendorf, B., Rogerson, R., & Valentinyi, A. (2014). *Growth and structural transformation*. Handbook of Economic Growth. https://doi.org/10.3386/w18996 — **Crossref ✓ MATCH**.
 - Caselli, F. (2005). *Accounting for cross-country income differences*. Handbook of Economic Growth. https://doi.org/10.3386/w10828 — **Crossref ✓ MATCH**.
-- Schultz, T. W. (1964). *Transforming traditional agriculture*. Book. https://doi.org/10.2307/2228861 — **Crossref ✓ MATCH**.
+- Schultz, T. W. (1964). *Transforming traditional agriculture*. Book. **No book DOI** — a previously listed DOI (10.2307/2228861) resolved to a 1964 *Economic Journal* review; removed by the independent DOI audit.
 - Matsuyama, K. (1992). *Agricultural productivity, comparative advantage, and economic growth*. Journal of Economic Theory. https://doi.org/10.1016/0022-0531(92)90057-o — **Crossref ✓ MATCH**.
 - Buera, F. J., Kaboski, J. P., & Rogerson, R. (2022). *Skill-biased structural change*. Review of Economic Studies. https://doi.org/10.1093/restud/rdab035 — **Crossref ✓ MATCH**.
 - Doepke, M. (2005). *Child mortality and fertility decline: Does the Barro-Becker model fit the facts?*. Journal of Population Economics. https://doi.org/10.1007/s00148-004-0208-z — **Crossref ✓ MATCH**.

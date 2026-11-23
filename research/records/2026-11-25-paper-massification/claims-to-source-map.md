@@ -34,3 +34,6 @@ run-lead before this paper was assembled; this paper adds no new estimation.
 
 | 26 | date-robustness counts: median 26, IQR 17–29; 93% of forward cases >10 years; understating by 10/15 years leaves 57/52 of 61 | subsistence-v2 @ ce66cfc | `results/event_dates.csv` | columns `schooling`, `release`, `fertility`; arithmetic for this paper (not a new estimate) |
 | 27 | independent-audit memo and prior-work list | lit-audit @ branch `research/lit-audit-2026-11-24` (head at time of writing) | `referee-memo-paper-M.md`, `claims-map.md` | quote and response recorded in `claims-prior-art.md` "Independent-audit gaps" |
+
+| 28 | restructure: Sections 2 (finding), 12 (implications), 13 (future research) are argument/synthesis sections; they restate claims 1-27 and add no new numbers | this branch | `paper.md` | Sections 2, 12, 13 |
+| 29 | IQR precision: 16-29 years across all 64 gaps; 17-29 across the 61 forward cases | subsistence-v2 @ ce66cfc | `results/event_dates.csv` | columns `schooling`, `release`; arithmetic recomputed for this paper and independently by run-lead |
