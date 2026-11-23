@@ -1,9 +1,12 @@
 # Raw downloads (not committed — too large for the repo)
 
-All files were downloaded on **23 Nov 2026** on the AutoDL server into
-`/root/work/undata/raw/` and are kept there. The machine-readable extracts built
-from them are in this directory (`*.json`, `*_provenance.csv`,
-`availability.csv`, `source_composition.csv`).
+All files were downloaded on **23 Nov 2026** on the AutoDL **box1** server into
+`/root/work/undata/raw/`. **Box1 was retired later that evening; use `ssh autodl2` only from now on.** The durable
+copy of the data is this directory (the machine-readable extracts: `*.json`, `*_provenance.csv`, `availability.csv`,
+`source_composition.csv`, plus the small OWID cross-check CSVs). The large workbooks themselves were not committed
+(26 MB + 2 MB); copies needed to re-run the falsifiers were placed on box2 at `/root/work/undata/raw/` (World Marriage
+Data 2019 xlsx and the UN location table) and the panel lives on box2 at `/root/work/data` (migrated copy under
+`/root/autodl-tmp/migrated/`). If the box2 copies are absent, re-download with `scripts/download_raw.sh`.
 
 Critical access note: `www.un.org` returns **HTTP 403** to the default `curl`
 user agent but **HTTP 200** to a normal browser user agent. Every download
@@ -25,6 +28,7 @@ Reproduce with `scripts/download_raw.sh`.
 | `undesa_pd_2017_wmd_marital_status.xlsx` | 24 MB | — | UN World Marriage Data 2017, downloaded but not used |
 | `owid_women-married-by-age-18.csv`, `owid_share-of-women-married-or-in-a-union.csv` | small | — | Our World in Data grapher exports, used only as cross-checks |
 
-Full sha256 manifest on the server: `/root/work/undata/raw/SHA256SUMS.txt`.
+Full sha256 manifest (from box1, before retirement): `/root/work/undata/raw/SHA256SUMS.txt`. The per-file hashes
+below are the reference if the files are re-downloaded.
 The workbooks are UN material under CC BY 3.0 IGO; cite the UN Population
 Division as in the README.

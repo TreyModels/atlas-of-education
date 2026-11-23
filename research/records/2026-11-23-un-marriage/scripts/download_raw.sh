@@ -1,6 +1,7 @@
 #!/bin/bash
 # Exact downloads for the UN marriage / living-arrangement data, run on the
-# AutoDL server in /root/work/undata on 2026-11-23.
+# AutoDL box1 server in /root/work/undata on 2026-11-23. Box1 is RETIRED: run this on box2.
+# The paths work unchanged on box2 (create /root/work/undata first).
 #
 # KEY FINDING: www.un.org and population.un.org return HTTP 403 to the default
 # curl user-agent but HTTP 200 to a normal browser user-agent.  Without -A the

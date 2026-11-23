@@ -14,7 +14,8 @@ changes) and is demoted to a robustness note. Marriage age is on the causal path
 ## Provenance, and which downloads failed
 
 The reported blocker — "un.org returns 403" — is a **user-agent block, not an IP block**: the default `curl` user agent gets 403 from
-`www.un.org`, a browser user agent gets 200. Exact call, run on the AutoDL server on 23 Nov 2026 (also in `scripts/download_raw.sh`):
+`www.un.org`, a browser user agent gets 200. Exact call, run on the AutoDL **box1** server on 23 Nov 2026; box1 was retired later that evening (use `ssh autodl2`
+now, where the same command in `scripts/download_raw.sh` works unchanged):
 
 ```
 curl -sS -L -A "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36" \
