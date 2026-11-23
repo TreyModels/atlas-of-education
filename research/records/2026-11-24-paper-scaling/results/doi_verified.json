@@ -1,0 +1,182 @@
+[
+ {
+  "doi": "10.1073/pnas.0610172104",
+  "ok": true,
+  "title": "Growth, innovation, scaling, and the pace of life in cities",
+  "journal": "Proceedings of the National Academy of Sciences",
+  "year": 2007,
+  "authors": "Bettencourt; Lobo; Helbing; K\u00fchnert"
+ },
+ {
+  "doi": "10.1126/science.1235823",
+  "ok": true,
+  "title": "The Origins of Scaling in Cities",
+  "journal": "Science",
+  "year": 2013,
+  "authors": "Bettencourt"
+ },
+ {
+  "doi": "10.1038/467912a",
+  "ok": true,
+  "title": "A unified theory of urban living",
+  "journal": "Nature",
+  "year": 2010,
+  "authors": "Bettencourt; West"
+ },
+ {
+  "doi": "10.1371/journal.pone.0087902",
+  "ok": true,
+  "title": "The Pre-History of Urban Scaling",
+  "journal": "PLoS ONE",
+  "year": 2014,
+  "authors": "Ortman; Cabaniss; Sturm; Bettencourt"
+ },
+ {
+  "doi": "10.1126/sciadv.1400066",
+  "ok": true,
+  "title": "Settlement scaling and increasing returns in an ancient society",
+  "journal": "Science Advances",
+  "year": 2015,
+  "authors": "Ortman; Cabaniss; Sturm; Bettencourt"
+ },
+ {
+  "doi": "10.1073/pnas.2509729123",
+  "ok": true,
+  "title": "Scaling laws for function diversity and specialization across socioeconomic and biological complex systems",
+  "journal": "Proceedings of the National Academy of Sciences",
+  "year": 2026,
+  "authors": "Yang; Holehouse; Youn; Arroyo"
+ },
+ {
+  "doi": "10.1098/rsif.2014.0745",
+  "ok": true,
+  "title": "Constructing cities, deconstructing scaling laws",
+  "journal": "Journal of The Royal Society Interface",
+  "year": 2015,
+  "authors": "Arcaute; Hatna; Ferguson; Youn"
+ },
+ {
+  "doi": "10.1098/rsos.150649",
+  "ok": true,
+  "title": "Is this scaling nonlinear?",
+  "journal": "Royal Society Open Science",
+  "year": 2016,
+  "authors": "Leit\u00e3o; Miotto; Gerlach; Altmann"
+ },
+ {
+  "doi": "10.1371/journal.pone.0183919",
+  "ok": true,
+  "title": "MetaZipf. A dynamic meta-analysis of city size distributions",
+  "journal": "PLOS ONE",
+  "year": 2017,
+  "authors": "Cottineau"
+ },
+ {
+  "doi": "10.1103/PhysRevLett.106.088701",
+  "ok": false,
+  "error": "Expecting value: line 1 column 1 (char 0)"
+ },
+ {
+  "doi": "10.1073/pnas.1406485111",
+  "ok": false,
+  "error": "Expecting value: line 1 column 1 (char 0)"
+ },
+ {
+  "doi": "10.1038/nature08227",
+  "ok": true,
+  "title": "Early-warning signals for critical transitions",
+  "journal": "Nature",
+  "year": 2009,
+  "authors": "Scheffer; Bascompte; Brock; Brovkin"
+ },
+ {
+  "doi": "10.1126/science.284.5411.107",
+  "ok": true,
+  "title": "Complexity and the Economy",
+  "journal": "Science",
+  "year": 1999,
+  "authors": "Arthur"
+ },
+ {
+  "doi": "10.1080/09645292.2018.1484426",
+  "ok": true,
+  "title": "Returns to investment in education: a decennial review of the global literature",
+  "journal": "Education Economics",
+  "year": 2018,
+  "authors": "Psacharopoulos; Patrinos"
+ },
+ {
+  "doi": "10.1016/j.jdeveco.2013.08.003",
+  "ok": true,
+  "title": "Keeping the doctor away: Experimental evidence on investment in preventative health products",
+  "journal": "Journal of Development Economics",
+  "year": 2013,
+  "authors": "Meredith; Robinson; Walker; Wydick"
+ },
+ {
+  "doi": "10.1257/aer.90.5.1160",
+  "ok": false,
+  "error": "Expecting value: line 1 column 1 (char 0)"
+ },
+ {
+  "doi": "10.1007/s10887-012-9084-7",
+  "ok": true,
+  "title": "The economic value of virtue",
+  "journal": "Journal of Economic Growth",
+  "year": 2012,
+  "authors": "Mariani"
+ },
+ {
+  "doi": "10.1162/003355399556061",
+  "ok": true,
+  "title": "Using Maimonides' Rule to Estimate the Effect of Class Size on Scholastic Achievement",
+  "journal": "The Quarterly Journal of Economics",
+  "year": 1999,
+  "authors": "Angrist; Lavy"
+ },
+ {
+  "doi": "10.1177/000312240507000602",
+  "ok": true,
+  "title": "The Worldwide Expansion of Higher Education in the Twentieth Century",
+  "journal": "American Sociological Review",
+  "year": 2005,
+  "authors": "Schofer; Meyer"
+ },
+ {
+  "doi": "10.1111/twec.12265",
+  "ok": true,
+  "title": "A Practitioners\u2019 Guide to Gravity Models of International Migration",
+  "journal": "The World Economy",
+  "year": 2015,
+  "authors": "Beine; Bertoli; Fern\u00e1ndez\u2010Huertas Moraga"
+ },
+ {
+  "doi": "10.1038/s41597-019-0089-3",
+  "ok": true,
+  "title": "Bilateral international migration flow estimates for 200 countries",
+  "journal": "Scientific Data",
+  "year": 2019,
+  "authors": "Abel; Cohen"
+ },
+ {
+  "doi": "10.1006/juec.1996.0028",
+  "ok": true,
+  "title": "Peak-Load Pricing of a Transportation Route with an Unpriced Substitute",
+  "journal": "Journal of Urban Economics",
+  "year": 1996,
+  "authors": "Braid"
+ },
+ {
+  "doi": "10.1098/rsif.2016.0005",
+  "ok": false,
+  "error": "Expecting value: line 1 column 1 (char 0)"
+ },
+ {
+  "doi": "10.1038/srep00667",
+  "ok": true,
+  "title": "Cerebrospinal Fluid Metabolome in Mood Disorders-Remission State has a Unique Metabolic Profile",
+  "journal": "Scientific Reports",
+  "year": 2012,
+  "authors": "Kaddurah-Daouk; Yuan; Boyle; Matson"
+ }
+]

@@ -1,0 +1,202 @@
+{
+ "rozenfeld": [
+  {
+   "doi": "10.1073/pnas.0807435105",
+   "title": "Laws of population growth",
+   "journal": "Proceedings of the National Academy of Sciences",
+   "year": 2008
+  },
+  {
+   "doi": "10.3386/w15409",
+   "title": "The Area and Population of Cities: New Insights from a Different Perspective on Cities",
+   "journal": "",
+   "year": 2009
+  },
+  {
+   "doi": "10.1073/pnas.0902667106",
+   "title": "Scaling laws of human interaction activity",
+   "journal": "Proceedings of the National Academy of Sciences",
+   "year": 2009
+  }
+ ],
+ "lee_demtrans": [
+  {
+   "doi": "10.1257/089533003772034943",
+   "title": "The Demographic Transition: Three Centuries of Fundamental Change",
+   "journal": "Journal of Economic Perspectives",
+   "year": 2003
+  },
+  {
+   "doi": "10.7208/chicago/9780226386881.003.0002",
+   "title": "The Demographic Transition and Economic Growth in the Pacific Rim",
+   "journal": "The Economic Consequences of Demographic Change in East Asia",
+   "year": 2010
+  },
+  {
+   "doi": "10.3386/w1384",
+   "title": "The Heights of Americans in Three Centuries:  Some Economic and Demographic Implications",
+   "journal": "",
+   "year": 1984
+  }
+ ],
+ "brewster": [
+  {
+   "doi": "10.1146/annurev.soc.26.1.271",
+   "title": "Fertility and Women's Employment in Industrialized Nations",
+   "journal": "Annual Review of Sociology",
+   "year": 2000
+  },
+  {
+   "doi": "10.2307/2808014",
+   "title": "Childrearing and Fertility",
+   "journal": "Population and Development Review",
+   "year": 1996
+  },
+  {
+   "doi": "10.1093/oso/9780198294399.003.0007",
+   "title": "Women, Work, and Children: Behavioural and ldeational Change in the United States",
+   "journal": "Dynamics of Values in Fertility Change",
+   "year": 1999
+  }
+ ],
+ "dinkelman": [
+  {
+   "doi": "10.1257/aer.101.7.3078",
+   "title": "The Effects of Rural Electrification on Employment: New Evidence from South Africa",
+   "journal": "American Economic Review",
+   "year": 2011
+  },
+  {
+   "doi": "10.31222/osf.io/zhn9b",
+   "title": "Effects of Rural Electrification on Employment: A Comment on Dinkelman (2011)",
+   "journal": "",
+   "year": 2020
+  },
+  {
+   "doi": "10.3386/w19756",
+   "title": "Mitigating Long-run Health Effects of Drought: Evidence from South Africa",
+   "journal": "",
+   "year": 2013
+  }
+ ],
+ "boppart": [
+  {
+   "doi": "10.2139/ssrn.1782676",
+   "title": "Structural Change and the Kaldor Facts in a Growth Model with Relative Price Effects and Non-Gorman Preferences",
+   "journal": "",
+   "year": 2011
+  },
+  {
+   "doi": "10.3982/ecta11354",
+   "title": "Structural Change and the Kaldor Facts in a Growth Model With Relative Price Effects and Non-Gorman Preferences",
+   "journal": "Econometrica",
+   "year": 2014
+  },
+  {
+   "doi": "10.2139/ssrn.304602",
+   "title": "Structural Change and the Kaldor Facts of Economic Growth",
+   "journal": "",
+   "year": 2002
+  }
+ ],
+ "soares_mortality": [
+  {
+   "doi": "10.1016/s0304-3878(00)00073-0",
+   "title": "Mortality decline, human capital investment, and economic growth",
+   "journal": "Journal of Development Economics",
+   "year": 2000
+  },
+  {
+   "doi": "10.2139/ssrn.361461",
+   "title": "Mortality Decline, Human Capital Investment and Economic Growth",
+   "journal": "",
+   "year": 2003
+  },
+  {
+   "doi": "10.7176/jesd/11-18-05",
+   "title": "Human Capital Investment and Economic Growth in Nigeria: An Econometrics Analysis, 1981-2019",
+   "journal": "Journal of Economics and Sustainable Development",
+   "year": 2020
+  }
+ ],
+ "becker": [
+  {
+   "doi": "10.3386/w3414",
+   "title": "Human Capital, Fertility, and Economic Growth",
+   "journal": "",
+   "year": 1990
+  },
+  {
+   "doi": "10.1086/704747",
+   "title": "Preference Formation within Families",
+   "journal": "Journal of Human Capital",
+   "year": 2019
+  },
+  {
+   "doi": "10.2307/144593",
+   "title": "Gary Becker's Human Capital: A Review Article",
+   "journal": "The Journal of Human Resources",
+   "year": 1967
+  }
+ ],
+ "spence": [
+  {
+   "doi": "10.2307/1882010",
+   "title": "Job Market Signaling",
+   "journal": "The Quarterly Journal of Economics",
+   "year": 1973
+  },
+  {
+   "doi": "10.2307/1882035",
+   "title": "Time and Communication in Economic and Social Interaction",
+   "journal": "The Quarterly Journal of Economics",
+   "year": 1973
+  },
+  {
+   "doi": "10.2307/1885323",
+   "title": "Informational Aspects of Market Structure: An Introduction",
+   "journal": "The Quarterly Journal of Economics",
+   "year": 1976
+  }
+ ],
+ "goldin_katz": [
+  {
+   "doi": "10.2307/j.ctvjf9x5x",
+   "title": "The Race between Education and Technology",
+   "journal": "",
+   "year": 2010
+  },
+  {
+   "doi": "10.3386/w26705",
+   "title": "Extending the Race between Education and Technology",
+   "journal": "",
+   "year": 2020
+  },
+  {
+   "doi": "10.3386/w12984",
+   "title": "The Race between Education and Technology: The Evolution of U.S. Educational Wage Differentials, 1890 to 2005",
+   "journal": "",
+   "year": 2007
+  }
+ ],
+ "alesina": [
+  {
+   "doi": "10.3386/w18839",
+   "title": "Nation-Building and Education",
+   "journal": "",
+   "year": 2013
+  },
+  {
+   "doi": "10.3386/w23435",
+   "title": "Nation-Building, Nationalism and Wars",
+   "journal": "",
+   "year": 2017
+  },
+  {
+   "doi": "10.1093/ej/ueab001",
+   "title": "Nation-Building and Education",
+   "journal": "The Economic Journal",
+   "year": 2021
+  }
+ ]
+}

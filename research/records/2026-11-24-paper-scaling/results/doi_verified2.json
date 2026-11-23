@@ -1,0 +1,68 @@
+[
+ {
+  "doi": "10.1038/srep05890",
+  "ok": true,
+  "title": "The dynamics of correlated novelties",
+  "journal": "Scientific Reports",
+  "year": 2014,
+  "authors": "Tria; Loreto; Servedio"
+ },
+ {
+  "doi": "10.1103/PhysRevE.83.036111",
+  "ok": true,
+  "title": "Testing the Pareto against the lognormal distributions with the uniformly most powerful unbiased test applied to the distribution of cities",
+  "journal": "Physical Review E",
+  "year": 2011,
+  "authors": "Malevergne; Pisarenko; Sornette"
+ },
+ {
+  "doi": "10.1073/pnas.0804631105",
+  "ok": false,
+  "error": "no valid Crossref response"
+ },
+ {
+  "doi": "10.1098/rsif.2016.0005",
+  "ok": true,
+  "title": "Urban scaling in Europe",
+  "journal": "Journal of The Royal Society Interface",
+  "year": 2016,
+  "authors": "Bettencourt; Lobo"
+ },
+ {
+  "doi": "10.1073/pnas.1406485111",
+  "ok": false,
+  "error": "no valid Crossref response"
+ },
+ {
+  "doi": "10.1257/aer.90.5.1160",
+  "ok": true,
+  "title": "Does Schooling Cause Growth?",
+  "journal": "American Economic Review",
+  "year": 2000,
+  "authors": "Bils; Klenow"
+ },
+ {
+  "doi": "10.1023/A:1022860800744",
+  "ok": true,
+  "title": "The Urbanization Process and Economic Growth: The So-What Question",
+  "journal": "Journal of Economic Growth",
+  "year": 2003,
+  "authors": "Henderson"
+ },
+ {
+  "doi": "10.1016/j.jdeveco.2012.10.001",
+  "ok": true,
+  "title": "A new data set of educational attainment in the world, 1950\u20132010",
+  "journal": "Journal of Development Economics",
+  "year": 2013,
+  "authors": "Barro; Lee"
+ },
+ {
+  "doi": "10.7312/coll19234",
+  "ok": true,
+  "title": "The Credential Society",
+  "journal": "",
+  "year": 2019,
+  "authors": "Collins"
+ }
+]
