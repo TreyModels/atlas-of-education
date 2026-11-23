@@ -37,7 +37,7 @@ the number must be checked against; this inventory deliberately includes the rec
 | # | claim | number / effect | status | record @ commit |
 |---|---|---|---|---|
 | M1 | Grouping multiverse, 400 groupings | 38,420,908 regressions; no driver robust in every grouping; electricity strong under country effects, dead under country trends (+0.07 baseline; +16.05 is one specification); paid employment clean null; child mortality/life expectancy the only robust links (fertility side) | V/N | grouping-multiverse-400 `1152cec` |
-| M2 | Multiverse resolution arithmetic | lone link needs ~5,440 draws; a 30-link cluster ~182; at 400 draws 35 links certified via Benjamini–Hochberg cluster | V (method) | methods-multiverse-paper `f9673a9`; novelty `390db8d` |
+| M2 | Multiverse resolution arithmetic | lone link needs ~5,440 draws; a 30-link cluster ~182; at 400 draws 35 links certified via Benjamini–Hochberg cluster; **dependence assumption unresolved (BH independence fails under correlated re-partitions; BY/effective-tests correction not yet done)** | V (design arithmetic; border-NEW) | methods-multiverse-paper `f9673a9`; novelty `390db8d` |
 | M3 | Gap-filled panel | 61/544 links change significance over 55 links, zero sign flips; 6 unreliable, 13 coverage-driven, 18 precision-only; 127/45/35 significant (observed 127/42/24) | V/A | imputed-matrix `5e4602b`; imputed-panel |
 | M4 | Added controls | 217 cells changed; 120 pure composition, 94 genuine; conclusions unchanged or strengthened; 3 sign flips are collinearity artefacts | V/A | controls `5ea58af` |
 | M5 | Supply vs demand for schooling | decomposition of enrolment growth; demand-side development dominates; supply-side (school construction) not identified as driver | V | supply-demand `963e5e5` |
@@ -67,6 +67,8 @@ the number must be checked against; this inventory deliberately includes the rec
 | X3 | Circular-shift permutation vs year-shuffle: year-shuffle is anti-conservative; circular-shift preserves autocorrelation | D (methods lesson) | un-marriage `b2b18d5`; level-volatility `935632e` |
 | X4 | UN marriage data are obtainable (403 was a UA block, not access denial) | D | un-marriage `b2b18d5` |
 | X5 | Income must be logged; handoff 126/45/25 counts came from a levels bug | D | matrix-marriage `559a4e9` |
+| X6 | GPU results are not bitwise allocation-invariant (`all_identical=False`); batch layout moves TFR up to 1.13 births / marriage age 1.74 years; pin batch size | D (negative audit) | cuda-scale `e600763` |
+| X7 | ABC importance weights collapsed (max 0.995, ESS ≈1/600); equal-weight rejection ABC corrected it | D (audit value) | dose-gpu `774085c` |
 
 **Inventory totals: 21 fertility claims, 10 massification claims, 6 synthesis records, 5 infrastructure claims.**
 No claim in this inventory is rated NEW CORRELATION; the classification and killing are in `CANDIDATES.md` and

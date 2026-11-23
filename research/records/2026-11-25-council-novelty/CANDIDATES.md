@@ -8,7 +8,7 @@ ASSEMBLY**, **(c) NEW METHOD**, **(d) KNOWN/REPLICATION**. No candidate is class
 programme is a relationship the field has not documented. DOI status: V = Crossref resolves matching metadata;
 W = working-paper/pre-publication version; U = no DOI, hand-cited.
 
-## Candidate 1 — Multiverse resolution arithmetic / the grouping-multiverse design rule — **(c) NEW METHOD**
+## Candidate 1 — Multiverse resolution arithmetic / the grouping-multiverse design rule — **(c) NEW METHOD, DOWNGRADED: INCREMENTAL / border-NEW (design arithmetic)**
 
 **Claim.** How many random re-groupings a cross-national multiverse needs is a function of how many links pile
 up at the p-value floor: a lone link needs ~5,440 draws; a cluster of ~30 links needs ~182; at 400 draws, 35
@@ -25,11 +25,19 @@ Gangestad (2021) multiverse guide, 10.1177/2515245920954925, **V**. Silberzahn e
 10.1177/2515245917747646, **V**. Benjamini & Hochberg (1995), 10.1111/j.2517-6161.1995.tb02031.x, **V**; Phipson
 & Smyth (2010), 10.2202/1544-6115.1585, **V** (the two statistics the rule combines).
 
-**Closest competitor:** Patel et al. (2015).
-**What is new:** the explicit *draw-count* rule linking certifiable-link count to needed random groupings, and
-the demonstration that the rule predicts what 400 draws certified — an unstated design rule rather than a new
-statistic. **What is replicated:** every component statistic; the multiverse framing. **Verdict: NEW METHOD,
-incremental-new.** Referee risk: the rule's dependence structure (cluster homogeneity) is an assumption to state.
+**Closest competitor:** Patel et al. (2015); for inference over all reasonable specifications also Simonsohn,
+Simmons & Nelson (2015/2020) and Klau et al. (2020).
+**What is new (revised after the auditor's diff):** the explicit *draw-count* rule applied to a **random-partition**
+multiverse (lone link ~5,440; 30-link cluster ~182; BH ceiling 35 at 400 draws). Everything else — the
+specification-curve/inference framing (Simonsohn et al., 2020, 10.1038/s41562-020-0912-z, V; Simonsohn et al.,
+2015, 10.2139/ssrn.2694998, V), vibration of effects (Patel et al., 2015, V), multiverse analysis (Steegen et al.,
+2016, V), sampling uncertainty in multiverses (Klau et al., 2020, 10.1093/ije/dyaa164, V) — is established. The
+honest verdict is therefore **INCREMENTAL (design arithmetic), border-NEW, not NEW METHOD**.
+**Referee kill shot (accepted):** random re-partitions of the same countries are highly correlated, so
+Benjamini–Hochberg's independence/PRDS assumption does not hold; the 5,440/182 figures assume independent tests.
+The rule needs Benjamini–Yekutieli (2001, 10.1214/aos/1013699998, V) or an effective-number-of-tests correction
+(Galwey, 2009, 10.1002/gepi.20408, V; Cheverud, 2001, 10.1046/j.1365-2540.2001.00901.x, V; Li & Ji, 2005,
+10.1038/sj.hdy.6800717, V), or it is a methods-note observation, not a design rule. **Rank below sequencing.**
 
 ## Candidate 2 — "Schools before factories": the schooling-before-agricultural-release sequence — **(b) NEW ASSEMBLY**
 
@@ -149,11 +157,18 @@ NEW ASSEMBLY, weak** — publishable only inside the mechanisms paper; not a sta
 | Marriage age / UN data | Known UN data; the levels-vs-change artefact is a methods lesson, not a finding. **KNOWN.** |
 | "Schooling precedes fertility" as an ordering percentage | The 68.75%/69% figure is **UNRESOLVED and retracted**; Paper M's corrected strict ordering is 37.5% [26.6–50.0] with 31.3% simultaneous. No candidate may use the retracted number. **U.** |
 
-## Ranking (before the panel)
+## Audit-value items the auditor flagged as missed from the candidate list (not paper candidates)
 
-1. Candidate 1 — multiverse resolution arithmetic (NEW METHOD; unstated design rule).
-2. Candidate 2 — schools before factories (NEW ASSEMBLY; strongest empirical assembly, ordering figure must be corrected).
-3. Candidate 3 — GPU transition counterfactual (NEW ASSEMBLY/DEMONSTRATION; model-structural).
+| item | what it is | status |
+|---|---|---|
+| GPU determinism audit | `cuda-scale` @ `e600763`: results are **not** bitwise allocation-invariant (`all_identical=False`); batch layout moves total fertility by up to 1.13 births and mean marriage age by 1.74 years; fix is operational (pin batch size and report it). | negative methodological result, audit value |
+| ABC importance-weight collapse | `dose-gpu` @ `774085c`: particle-filter ABC produced max weight 0.995 and ESS ≈1/600 (2.5/600 after log-space attempt); equal-weight rejection ABC fixed it. | known pathology, but the recorded correction is audit value |
+
+## Ranking (revised after the auditor's dependence objection)
+
+1. Candidate 2 — schools before factories (NEW ASSEMBLY; strongest empirical assembly; ordering figures corrected and verified).
+2. Candidate 1 — multiverse resolution arithmetic (**INCREMENTAL / border-NEW design arithmetic**, not NEW METHOD; dependence correction required before it can be called a rule).
+3. Candidate 3 — GPU transition counterfactual (NEW ASSEMBLY/DEMONSTRATION; model-structural; no draft yet).
 4. Candidate 4 — Paper F audit (NEW ASSEMBLY; already audited incremental).
 5. Candidate 5 — rebound ceiling (NEW ASSEMBLY; replication-plus-extension risk).
 6. Candidate 6 — child-mortality volatility (weak assembly; inside mechanisms paper).

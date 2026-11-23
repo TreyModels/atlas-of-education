@@ -9,7 +9,7 @@ two into them, and stop three.
 
 ## The four that carry a paper
 
-**1. "Schools before factories": schooling take-off precedes agricultural labour release — NEW ASSEMBLY.**
+**1. "Schools before factories": schooling take-off precedes agricultural labour release — NEW ASSEMBLY (rank 1).**
 Panel mean 3.8 (highest). Draft: Paper M, 17,371 words, branch `research/paper-massification-2026-11-25`
 @ `753e102`. Closest competitor: Porzio, Rossi & Santangelo (2021, NBER w29390, W). Why publish: a systematic
 multi-country sequencing with supply/demand decomposition and an agricultural floor that nobody has assembled in
@@ -45,14 +45,17 @@ negative result plus a demonstration. Binding conditions: model-structural frami
 conclusion; the unresolved tension with the country-level child-survival link gets its own section; the
 pre-antibiotic arc's failure is reported as a scope limit, not hidden.
 
-**4. The multiverse resolution arithmetic — NEW METHOD.** Panel mean 2.4 but the methodologist's 5 and the earlier
-novelty ledger's "strongest novelty candidate" agree: it is the only unstated contribution. Evidence: Paper N2 /
-methods paper `research/methods-multiverse-paper-2026-11-23` @ `f9673a9` (12.3k words, already written), and
-`research/novelty-2026-11-23` @ `390db8d`. Closest competitor: Patel, Burford & Ioannidis (2015,
-10.1016/j.jclinepi.2015.05.029, V). Why publish: the explicit draw-count rule (a lone link needs ~5,440 groupings;
-a 30-link cluster ~182; 400 draws certified 35 links through a BH-cleared cluster) is a design rule, not a
-statistic. Binding condition: state the dependence-structure assumptions and show the cluster-homogeneity case
-rather than asserting the rule's generality. Venue: methods journal, not a demography journal.
+**4. The multiverse resolution arithmetic — INCREMENTAL / border-NEW design arithmetic (NOT a headline NEW METHOD).**
+Panel mean 2.2 after the auditor's correction. Evidence: Paper N2 / methods paper
+`research/methods-multiverse-paper-2026-11-23` @ `f9673a9`, novelty ledger `390db8d`. Closest competitors:
+Patel, Burford & Ioannidis (2015, 10.1016/j.jclinepi.2015.05.029, V); Simonsohn, Simmons & Nelson (2020,
+10.1038/s41562-020-0912-z, V; the 2015 SSRN version, 10.2139/ssrn.2694998, V); Steegen et al. (2016, V); Klau et
+al. (2020, 10.1093/ije/dyaa164, V). What is new: the explicit draw-count rule applied to a random-partition
+multiverse — nothing more. **Accepted referee kill shot:** random re-partitions are correlated, so BH's
+independence/PRDS assumption fails and the 5,440/182 figures assume independent tests; the rule needs
+Benjamini–Yekutieli (2001, 10.1214/aos/1013699998, V) or an effective-number-of-tests correction (Galwey 2009,
+10.1002/gepi.20408, V; Cheverud 2001, 10.1046/j.1365-2540.2001.00901.x, V; Li & Ji 2005, 10.1038/sj.hdy.6800717, V).
+Without that correction it is a methods-note observation; rank it below this paper and below Paper F.
 
 ## Folded, not standalone
 
@@ -79,9 +82,9 @@ rather than asserting the rule's generality. Venue: methods journal, not a demog
 
 ## If forced to pick three
 
-Drop the GPU counterfactual to a section inside Paper M (it is already a Paper F/M-adjacent section) and keep:
-**(1) schools before factories; (2) Paper F audit; (3) multiverse rule (methods).** If four papers are wanted,
-the counterfactual stands alone with the model-structural framing. There is no fifth.
+Keep **(1) schools before factories; (2) Paper F audit; (3) the GPU counterfactual** (the negative out-of-sample
+result is the publishable part), and publish the multiverse arithmetic only as a methods note after a BY /
+effective-number-of-tests correction — otherwise drop it from the paper list. There is no fifth paper.
 
 ## Immediate actions
 

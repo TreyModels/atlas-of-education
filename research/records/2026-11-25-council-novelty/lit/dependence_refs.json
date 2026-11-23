@@ -1,0 +1,94 @@
+{
+ "benjamini_yekutieli2001": {
+  "doi": "10.1214/aos/1013699998",
+  "title": "The control of the false discovery rate in multiple testing under dependency",
+  "authors": [
+   "Yoav Benjamini",
+   "Daniel Yekutieli"
+  ],
+  "year": 2001,
+  "journal": "The Annals of Statistics",
+  "volume": "29",
+  "issue": "4",
+  "pages": "1165-1188",
+  "type": "journal-article",
+  "status": "verified"
+ },
+ "galwey2009": {
+  "doi": "10.1002/gepi.20408",
+  "title": "A new measure of the effective number of tests, a practical tool for comparing families of non\u2010independent significance tests",
+  "authors": [
+   "Nicholas W. Galwey"
+  ],
+  "year": 2009,
+  "journal": "Genetic Epidemiology",
+  "volume": "33",
+  "issue": "7",
+  "pages": "559-568",
+  "type": "journal-article",
+  "status": "verified"
+ },
+ "cheverud2001": {
+  "doi": "10.1046/j.1365-2540.2001.00901.x",
+  "title": "A simple correction for multiple comparisons in interval mapping genome scans",
+  "authors": [
+   "James M Cheverud"
+  ],
+  "year": 2001,
+  "journal": "Heredity",
+  "volume": "87",
+  "issue": "1",
+  "pages": "52-58",
+  "type": "journal-article",
+  "status": "verified"
+ },
+ "li_ji2005": {
+  "doi": "10.1038/sj.hdy.6800717",
+  "title": "Adjusting multiple testing in multilocus analyses using the eigenvalues of a correlation matrix",
+  "authors": [
+   "J Li",
+   "L Ji"
+  ],
+  "year": 2005,
+  "journal": "Heredity",
+  "volume": "95",
+  "issue": "3",
+  "pages": "221-227",
+  "type": "journal-article",
+  "status": "verified"
+ },
+ "klau2020": {
+  "doi": "10.1093/ije/dyaa164",
+  "title": "Examining the robustness of observational associations to model, measurement and sampling uncertainty with the vibration of effects framework",
+  "authors": [
+   "Simon Klau",
+   "Sabine Hoffmann",
+   "Chirag J Patel",
+   "John PA Ioannidis",
+   "Anne-Laure Boulesteix"
+  ],
+  "year": 2020,
+  "journal": "International Journal of Epidemiology",
+  "volume": "50",
+  "issue": "1",
+  "pages": "266-278",
+  "type": "journal-article",
+  "status": "verified"
+ },
+ "simonsohn2015": {
+  "doi": "10.2139/ssrn.2694998",
+  "title": "Specification Curve: Descriptive and Inferential Statistics on All Reasonable Specifications",
+  "authors": [
+   "Uri Simonsohn",
+   "Joseph P. Simmons",
+   "Leif D. Nelson"
+  ],
+  "year": 2015,
+  "journal": "",
+  "volume": null,
+  "issue": null,
+  "pages": null,
+  "type": "posted-content",
+  "status": "verified"
+ }
+}

@@ -42,7 +42,7 @@ are evidence.
 
 | candidate | score | strongest objection |
 |---|---|---|
-| 1 | **5** | The explicit draw-count rule is the only genuinely unstated contribution in the programme. Objection: the rule's validity depends on the dependence structure of links; the paper must state the assumptions and show the cluster-homogeneity case rather than assert it. |
+| 1 | **4** | The explicit draw-count rule applied to a random-partition multiverse is the only unstated piece, but the audit's dependence objection is decisive: re-partitions are correlated, BH independence fails, and 5,440/182 assume independent tests. Without BY/effective-number-of-tests it is design arithmetic, not a method. |
 | 2 | 2 | An assembly, not a method. |
 | 3 | 3 | The ABC estimator failure and the tolerance ladder are useful diagnostics; the counterfactual itself is model-dependent. |
 | 4 | 4 | The specification-curve + transportability + placebo combination is a defensible audit design; the "pre-registered" claim needs the artefact (now present as PREREGISTRATION.md). |
@@ -64,8 +64,8 @@ are evidence.
 
 | candidate | P1 | P2 | P3 | P4 | P5 | mean | verdict |
 |---|---|---|---|---|---|---|---|
-| 1 multiverse rule | 2 | 2 | 1 | 5 | 2 | 2.4 | **NEW METHOD** — publish as methods note, not as fertility paper |
-| 2 schools before factories | 4 | 5 | 4 | 2 | 4 | **3.8** | **NEW ASSEMBLY** — strongest empirical paper, with dating/endogeneity caveats |
+| 1 multiverse rule | 2 | 2 | 1 | 4 | 2 | 2.2 | **INCREMENTAL / border-NEW design arithmetic** — methods note only after a BY/effective-tests correction |
+| 2 schools before factories | 4 | 5 | 4 | 2 | 4 | **3.8** | **NEW ASSEMBLY** — strongest paper, rank 1; dating/endogeneity caveats |
 | 3 GPU transition counterfactual | 4 | 4 | 2 | 3 | 3 | 3.2 | **NEW ASSEMBLY/DEMONSTRATION** — paper only with explicit model-structural framing |
 | 4 Paper F audit | 4 | 2 | 3 | 4 | 3 | 3.2 | **NEW ASSEMBLY, INCREMENTAL** — publish; framing is the contribution |
 | 5 rebound ceiling | 3 | 2 | 3 | 3 | 2 | 2.6 | replication-plus-extension; not a standalone paper |
