@@ -1,0 +1,31 @@
+{
+ "all_three": {
+  "n": 64,
+  "forward": 61,
+  "reverse": 3,
+  "forward_pct": 95.31,
+  "median_lead": 26.0,
+  "q1": 16.5,
+  "q3": 29.5,
+  "share_gt10": 93.44,
+  "share_gt15": 85.25,
+  "still_forward_after_plus15_error": 52,
+  "still_forward_after_plus15_pct": 81.25,
+  "median_lead_all": 26.0
+ },
+ "schooling_and_release": {
+  "n": 81,
+  "forward": 76,
+  "reverse": 5,
+  "forward_pct": 93.83,
+  "median_lead": 26.0,
+  "q1": 18.0,
+  "q3": 29.0,
+  "share_gt10": 94.74,
+  "share_gt15": 86.84,
+  "still_forward_after_plus15_error": 66,
+  "still_forward_after_plus15_pct": 81.48,
+  "median_lead_all": 26.0
+ },
+ "note": "lead = release - schooling; positive = schooling first. all_three is the paper's 64-country panel."
+}
