@@ -150,7 +150,7 @@ dose record must state which batch size the GPU A-vs-B comparison used.
   (needs DHS/WFS micro data; minimum detectable effect about 3 percentage points in the chance of a next birth);
   mortality shocks are most convincing in principle but underpowered for a 10-point mortality fall.
 
-### The full transition, pre-antibiotic equilibrium to collapse (job 11) — DONE (push pending)
+### The full transition, pre-antibiotic equilibrium to collapse (job 11) — DONE and verified (b13fde8)
 - **The corners of the arc, quantified.** In 1800-1850 the typical country had **41.6 child deaths per 100 live births**
   (interquartile range 38.0-44.4, 184 countries) and life expectancy of **39.7 years**. By 1980-2024 it was
   **2.8 child deaths per 100** and **70.7 years**, with effective fertility of 2.55 surviving children per woman.
@@ -171,7 +171,7 @@ dose record must state which batch size the GPU A-vs-B comparison used.
   time series for early and late transitioners, the distribution of mortality-to-fertility lags, and the annotated
   pre-antibiotic/collapse corners).
 
-### The mortality counterfactual in the GPU ABM (job 13) — DONE (push pending)
+### The mortality counterfactual in the GPU ABM (job 13) — DONE and verified (f9f2f18)
 - **Design.** Eight countries, cohorts 1930-1995 (reproductive years 1945-2045). Both arms use exactly the same
   history of schooling, income and urbanisation; the only difference is child survival. Arm 1 lets child survival
   follow history; arm 2 freezes it at the pre-antibiotic level (42 child deaths per 100 instead of 3). Scale:
@@ -402,7 +402,7 @@ findings are known, one is a genuine methods increment, and one potential new de
 | Multiverse resolution arithmetic (lone link ~5,440 draws; cluster of 30 ~182; 35 certified at 400) | **INCREMENTAL, border-NEW** | The two ingredients are textbook (the 1/(R+1) permutation floor, and Benjamini-Hochberg's step-up rule), but the **stated design rule** - how many random groupings a transportability multiverse needs depends on how many links sit on the p-value ceiling - appears unstated in this form. This is the session's strongest novelty candidate, publishable as a methods note. |
 | Child-mortality level vs volatility | **INCREMENTAL** | The level effect is the 1976 "child survival hypothesis" (Population Studies); insurance/uncertainty is old (Cain 1981; Kalemli-Ozcan 2003). The **country-level level-versus-volatility discrimination** is a new application, not a new theory, and the caveats (common cause, household insurance) stand. |
 | Individuation does not beat development-only out of sample | **INCREMENTAL (project result, not field result)** | That is a result about **one model with poor fit and unidentified strengths**, not a field verdict on Caldwell's wealth flows or Henrich's WEIRD thesis. The weight-collapse correction is a valuable internal audit of a known ABC pathology, not a new method. |
-| Full transition in the GPU ABM with a no-mortality-decline counterfactual | **potentially NEW (pending)** | The transition question and individual-level microsimulation are decades old (SOCSIM; unified growth theory; FLAME GPU). The plausible novelty is the **combination**: an individual-level model calibrated to a real country panel, run across the pre-antibiotic-to-collapse arc at millions of women, with the mortality counterfactual. A new demonstration, not a new theory. |
+| Full transition in the GPU ABM with a no-mortality-decline counterfactual | **potentially NEW** | The transition question and individual-level microsimulation are decades old (SOCSIM; unified growth theory; FLAME GPU). The plausible novelty is the **combination**: an individual-level model calibrated to a real country panel, run across the pre-antibiotic-to-collapse arc at millions of women, with the mortality counterfactual. A new demonstration, not a new theory. |
 | Engine capability (5 million women/s; 66.8 million per launch) | **NEW capability (engineering, not science)** | Genuinely useful; not a scientific claim. |
 
 **Do not present as discoveries:** that electricity does not drive schooling; that child survival drives fertility;
@@ -554,7 +554,7 @@ the absorber and test the sequencing at cohort level and in the historical US.
 - research/scaling-laws-catalogue-2026-11-23 (d78a623 → cfe372f cross-ref)
 - research/sfi-scan-2026-11-23 (fd4cfd2)
 - research/subsistence-2026-11-23 (d47e5ed pre-reg → 41f6429)
-- research/corr-battery-2026-11-23 (task-21: 772650a, 6a1927f pre-reg; results pending)
+- research/corr-battery-2026-11-23 (task-21: 772650a, 6a1927f pre-reg; results 9363079, verified)
 
 **What the second wave changes.** The thesis is now sharper and more falsifiable: schooling and fertility are
 bound by a large, global, level-based gradient that was previously hidden by the change specification; but the
