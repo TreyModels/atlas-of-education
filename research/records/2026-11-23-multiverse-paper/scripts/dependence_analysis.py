@@ -122,11 +122,23 @@ by_threshold_rank1 = alpha / (M * H_M)
 by_draws = {"lone": int(np.ceil(M * H_M / alpha)),
             "cluster_30": int(np.ceil(M * H_M / (alpha * 30))),
             "cluster_35": int(np.ceil(M * H_M / (alpha * 35)))}
-by_info = dict(H_M=round(H_M, 4), threshold_rank1=round(by_threshold_rank1, 8),
-               certified=certified_by, draws_needed=by_draws,
-               min_rank_needed_at_floor=int(np.ceil((1.0/(R+1)) / by_threshold_rank1)),
-               n_at_floor=n_floor,
-               note="BY controls FDR under arbitrary dependence; at 400 draws the p floor is above its first-step threshold, so certification requires a floor cluster of at least the stated rank.")
+by_info = dict(
+    family_size=M,
+    family_members="one trends-specification p-value per directed link (272); the committed analysis forms BH over bh(p_up[J]) with J = np.arange(1, NE, 2), NE = 544 specs, i.e. 272 values",
+    direction="up; the down, sign-flip and heterogeneity counts in the strict tier are three further separate BH procedures, each over the same 272-link family, not a single joint 122-test family",
+    H_M=round(H_M, 4), threshold_rank1=round(by_threshold_rank1, 8),
+    certified=certified_by, draws_needed=by_draws,
+    min_rank_needed_at_floor=int(np.ceil((1.0/(R+1)) / by_threshold_rank1)),
+    n_at_floor=n_floor,
+    per_procedure_by_zero=dict(
+        up=0, down=0, flip=0, het=0,
+        floor_clusters=dict(up=30, down=19, flip=15, het=53),
+        note="Each of the four procedures has family size 272, so each needs rank >= 84 at the 400-draw floor; every floor cluster is below 84, so BY certifies zero in every procedure. The down/flip/het null matrices were not saved with the committed record, so these are floor-size deductions, not recomputations."),
+    hypothetical_per_direction_68=dict(
+        certified=35,
+        draws_needed=dict(lone=6533, cluster_30=218, cluster_35=186),
+        note="NOT the committed family. A hypothetical 272/4 = 68-link family would give BY=35 and budgets 6,533/218/186, but no 68-link family appears in analyse400.py; this row is recorded only to reconcile the three readings in the audit."),
+    note="BY controls FDR under arbitrary dependence; at 400 draws the p floor is above its first-step threshold, so certification requires a floor cluster of at least the stated rank.")
 
 out = dict(
     source_matrix=f"{BASE}/null_shares_TR.csv.gz",
