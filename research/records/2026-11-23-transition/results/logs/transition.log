@@ -1,0 +1,251 @@
+implied TFR by period (derived, not observed): {
+ "1800-1850": {
+  "n_country_years": 124,
+  "median": 3.61
+ },
+ "1850-1900": {
+  "n_country_years": 424,
+  "median": 3.95
+ },
+ "1900-1940": {
+  "n_country_years": 491,
+  "median": 3.16
+ },
+ "1940-1980": {
+  "n_country_years": 6077,
+  "median": 5.44
+ },
+ "1980-2024": {
+  "n_country_years": 8668,
+  "median": 2.77
+ }
+}
+pre-antibiotic / period stats: {
+ "1700-1800": {
+  "n_countries_cm": 1,
+  "median_cm": 31.6,
+  "iqr_cm": [
+   31.6,
+   31.6
+  ],
+  "n_countries_efr": 1,
+  "median_efr": 2.42,
+  "n_countries_le": 3,
+  "median_le": 36.8
+ },
+ "1800-1850": {
+  "n_countries_cm": 184,
+  "median_cm": 41.6,
+  "iqr_cm": [
+   38.0,
+   44.4
+  ],
+  "n_countries_efr": 6,
+  "median_efr": 2.54,
+  "n_countries_le": 9,
+  "median_le": 39.7
+ },
+ "1850-1900": {
+  "n_countries_cm": 184,
+  "median_cm": 41.3,
+  "iqr_cm": [
+   36.1,
+   44.0
+  ],
+  "n_countries_efr": 10,
+  "median_efr": 2.94,
+  "n_countries_le": 25,
+  "median_le": 39.5
+ },
+ "1900-1940": {
+  "n_countries_cm": 184,
+  "median_cm": 38.9,
+  "iqr_cm": [
+   25.8,
+   41.9
+  ],
+  "n_countries_efr": 15,
+  "median_efr": 2.71,
+  "n_countries_le": 66,
+  "median_le": 39.4
+ },
+ "1940-1980": {
+  "n_countries_cm": 197,
+  "median_cm": 14.6,
+  "iqr_cm": [
+   7.4,
+   24.8
+  ],
+  "n_countries_efr": 215,
+  "median_efr": 4.26,
+  "n_countries_le": 215,
+  "median_le": 58.2
+ },
+ "1980-2024": {
+  "n_countries_cm": 197,
+  "median_cm": 2.8,
+  "iqr_cm": [
+   1.2,
+   7.8
+  ],
+  "n_countries_efr": 215,
+  "median_efr": 2.55,
+  "n_countries_le": 215,
+  "median_le": 70.7
+ }
+}
+lag stats: {
+ "observed_1950plus": {
+  "n": 190,
+  "median": 12.0,
+  "q25": 3.0,
+  "q75": 19.0,
+  "share_positive": 0.7789473684210526,
+  "min": -33.0,
+  "max": 47.0
+ },
+ "long_run_implied": {
+  "n": 194,
+  "median": 52.0,
+  "q25": 36.0,
+  "q75": 73.0,
+  "share_positive": 0.9948453608247423,
+  "min": -2.0,
+  "max": 169.0
+ },
+ "long_run_pre1950_onset": {
+  "n": 179,
+  "median": 54.0,
+  "q25": 40.5,
+  "q75": 74.5,
+  "share_positive": 0.994413407821229,
+  "min": -2.0,
+  "max": 169.0
+ },
+ "long_run_post1950_onset": {
+  "n": 15,
+  "median": 12.0,
+  "q25": 4.5,
+  "q75": 17.0,
+  "share_positive": 1.0,
+  "min": 1.0,
+  "max": 35.0
+ },
+ "clean_observed_both_onsets_1950plus": {
+  "n": 190,
+  "median": 12.0,
+  "q25": 3.0,
+  "q75": 19.0,
+  "share_positive": 0.7789473684210526,
+  "min": -33.0,
+  "max": 47.0
+ },
+ "late_transitioners_only": {
+  "n": 142,
+  "median": 12.0,
+  "q25": 4.0,
+  "q75": 23.5,
+  "share_positive": 0.8098591549295775,
+  "min": -31.0,
+  "max": 47.0
+ },
+ "by_region": {
+  "East Asia & Pacific": {
+   "n": 30,
+   "median": 9.0
+  },
+  "Europe & Central Asia": {
+   "n": 51,
+   "median": 3.0
+  },
+  "Latin America & Caribbean": {
+   "n": 35,
+   "median": 11.0
+  },
+  "Middle East, North Africa, Afghanistan & Pakistan": {
+   "n": 23,
+   "median": 10.0
+  },
+  "South Asia": {
+   "n": 6,
+   "median": 17.5
+  },
+  "Sub-Saharan Africa": {
+   "n": 43,
+   "median": 26.0
+  }
+ }
+}
+cross-correlation summary: {
+ "observed_tfr": {
+  "n": 197,
+  "median_best_lag": -5.0,
+  "share_best_lag_positive": 0.37055837563451777,
+  "median_corr_lag0": 0.38799191660103133,
+  "share_corr_lag0_above_half": 0.43147208121827413
+ },
+ "implied_tfr": {
+  "n": 197,
+  "median_best_lag": 0.0,
+  "share_best_lag_positive": 0.3756345177664975,
+  "median_corr_lag0": 0.3696813979208785,
+  "share_corr_lag0_above_half": 0.4263959390862944
+ }
+}
+schooling vs fertility onset: {
+ "school_crosses_2.0y": {
+  "n": 140,
+  "median_gap": 15.0,
+  "q25": -11.0,
+  "q75": 45.25,
+  "share_after_fertility_onset": 0.32857142857142857
+ },
+ "school_crosses_6.0y": {
+  "n": 124,
+  "median_gap": -18.0,
+  "q25": -32.25,
+  "q75": -4.75,
+  "share_after_fertility_onset": 0.8064516129032258
+ }
+}
+/root/miniconda3/lib/python3.10/site-packages/numpy/core/fromnumeric.py:3464: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/root/miniconda3/lib/python3.10/site-packages/numpy/core/_methods.py:192: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+event study (fertility / pre-onset baseline by years since mortality onset): {
+ "-10": {
+  "n": 3,
+  "mean_ratio": 0.9688444535785316
+ },
+ "0": {
+  "n": 18,
+  "mean_ratio": 1.012170620328362
+ },
+ "10": {
+  "n": 18,
+  "mean_ratio": 0.9755663404005018
+ },
+ "20": {
+  "n": 18,
+  "mean_ratio": 0.8455872140570658
+ },
+ "30": {
+  "n": 18,
+  "mean_ratio": 0.6569874103200493
+ },
+ "40": {
+  "n": 18,
+  "mean_ratio": 0.5902077330711686
+ },
+ "50": {
+  "n": 18,
+  "mean_ratio": 0.540998550190255
+ },
+ "60": {
+  "n": 17,
+  "mean_ratio": 0.5307440861790779
+ }
+}
+
+figures: ['fig_a_phase_diagram.png', 'fig_b_time_series.png', 'fig_c_lag_distribution.png', 'fig_d_corners_annotated.png']
+wrote /root/work/transition/out and /root/work/transition/figures

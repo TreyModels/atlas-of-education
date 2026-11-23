@@ -1,0 +1,6295 @@
+{
+ "corners": {
+  "1700-1800": {
+   "n_countries_cm": 1,
+   "median_cm": 31.6,
+   "iqr_cm": [
+    31.6,
+    31.6
+   ],
+   "n_countries_efr": 1,
+   "median_efr": 2.42,
+   "n_countries_le": 3,
+   "median_le": 36.8
+  },
+  "1800-1850": {
+   "n_countries_cm": 184,
+   "median_cm": 41.6,
+   "iqr_cm": [
+    38.0,
+    44.4
+   ],
+   "n_countries_efr": 6,
+   "median_efr": 2.54,
+   "n_countries_le": 9,
+   "median_le": 39.7
+  },
+  "1850-1900": {
+   "n_countries_cm": 184,
+   "median_cm": 41.3,
+   "iqr_cm": [
+    36.1,
+    44.0
+   ],
+   "n_countries_efr": 10,
+   "median_efr": 2.94,
+   "n_countries_le": 25,
+   "median_le": 39.5
+  },
+  "1900-1940": {
+   "n_countries_cm": 184,
+   "median_cm": 38.9,
+   "iqr_cm": [
+    25.8,
+    41.9
+   ],
+   "n_countries_efr": 15,
+   "median_efr": 2.71,
+   "n_countries_le": 66,
+   "median_le": 39.4
+  },
+  "1940-1980": {
+   "n_countries_cm": 197,
+   "median_cm": 14.6,
+   "iqr_cm": [
+    7.4,
+    24.8
+   ],
+   "n_countries_efr": 215,
+   "median_efr": 4.26,
+   "n_countries_le": 215,
+   "median_le": 58.2
+  },
+  "1980-2024": {
+   "n_countries_cm": 197,
+   "median_cm": 2.8,
+   "iqr_cm": [
+    1.2,
+    7.8
+   ],
+   "n_countries_efr": 215,
+   "median_efr": 2.55,
+   "n_countries_le": 215,
+   "median_le": 70.7
+  }
+ },
+ "implied_tfr_periods": {
+  "1800-1850": {
+   "n_country_years": 124,
+   "median": 3.61
+  },
+  "1850-1900": {
+   "n_country_years": 424,
+   "median": 3.95
+  },
+  "1900-1940": {
+   "n_country_years": 491,
+   "median": 3.16
+  },
+  "1940-1980": {
+   "n_country_years": 6077,
+   "median": 5.44
+  },
+  "1980-2024": {
+   "n_country_years": 8668,
+   "median": 2.77
+  }
+ },
+ "onsets": {
+  "AFG": {
+   "mort_long": {
+    "onset": 1941,
+    "peak": 48.281,
+    "peak_year": 1894,
+    "value": 43.351997,
+    "share_fall": 0.10208991114517096
+   },
+   "mort_obs": {
+    "onset": 1964,
+    "peak": 36.81966,
+    "peak_year": 1957,
+    "value": 32.97476,
+    "share_fall": 0.1044251902380412
+   },
+   "fert_obs": {
+    "onset": 2005,
+    "peak": 7.767,
+    "peak_year": 1994,
+    "value": 6.858,
+    "share_fall": 0.11703360370799543
+   },
+   "fert_implied": {
+    "onset": 2004,
+    "peak": 7.6477065539739035,
+    "peak_year": 1985,
+    "value": 6.8486595557384735,
+    "share_fall": 0.10448191135422535
+   },
+   "region": "Middle East, North Africa, Afghanistan & Pakistan"
+  },
+  "AGO": {
+   "mort_long": {
+    "onset": 1934,
+    "peak": 48.568,
+    "peak_year": 1800,
+    "value": 43.357998,
+    "share_fall": 0.10727231922253322
+   },
+   "mort_obs": {
+    "onset": 1996,
+    "peak": 23.281082,
+    "peak_year": 1980,
+    "value": 20.734695,
+    "share_fall": 0.10937580134806457
+   },
+   "fert_obs": {
+    "onset": 1998,
+    "peak": 7.5,
+    "peak_year": 1974,
+    "value": 6.732,
+    "share_fall": 0.10239999999999994
+   },
+   "fert_implied": {
+    "onset": 2007,
+    "peak": 6.761193400319467,
+    "peak_year": 1979,
+    "value": 6.034359731848653,
+    "share_fall": 0.1075007954123115
+   },
+   "region": "Sub-Saharan Africa"
+  },
+  "ALB": {
+   "mort_long": {
+    "onset": 1933,
+    "peak": 37.52,
+    "peak_year": 1800,
+    "value": 33.689003,
+    "share_fall": 0.10210546375266538
+   },
+   "mort_obs": {
+    "onset": 1980,
+    "peak": 9.657535,
+    "peak_year": 1978,
+    "value": 8.159032,
+    "share_fall": 0.15516412832052895
+   },
+   "fert_obs": {
+    "onset": 1964,
+    "peak": 6.541,
+    "peak_year": 1955,
+    "value": 5.714,
+    "share_fall": 0.1264332670845436
+   },
+   "fert_implied": {
+    "onset": 1964,
+    "peak": 6.68322911611229,
+    "peak_year": 1955,
+    "value": 5.864020803237859,
+    "share_fall": 0.12257672131865704
+   },
+   "region": "Europe & Central Asia"
+  },
+  "AND": {
+   "mort_long": {
+    "onset": 1952,
+    "peak": 7.693,
+    "peak_year": 1950,
+    "value": 6.8190002,
+    "share_fall": 0.11360974912257893
+   },
+   "mort_obs": {
+    "onset": 1987,
+    "peak": 1.7181612,
+    "peak_year": 1985,
+    "value": 1.5379422,
+    "share_fall": 0.10489062376685021
+   },
+   "fert_obs": {
+    "onset": 1975,
+    "peak": 2.905,
+    "peak_year": 1972,
+    "value": 2.458,
+    "share_fall": 0.15387263339070556
+   },
+   "fert_implied": {
+    "onset": 1975,
+    "peak": 2.9207818114428075,
+    "peak_year": 1972,
+    "value": 2.4687327321919015,
+    "share_fall": 0.15476988985616935
+   },
+   "region": "Europe & Central Asia"
+  },
+  "ARE": {
+   "mort_long": {
+    "onset": 1946,
+    "peak": 43.446,
+    "peak_year": 1800,
+    "value": 36.567,
+    "share_fall": 0.15833448418726692
+   },
+   "mort_obs": {
+    "onset": 1962,
+    "peak": 20.129076,
+    "peak_year": 1960,
+    "value": 18.025423,
+    "share_fall": 0.10450817513928612
+   },
+   "fert_obs": {
+    "onset": 1981,
+    "peak": 6.529,
+    "peak_year": 1968,
+    "value": 5.814,
+    "share_fall": 0.1095114106294991
+   },
+   "fert_implied": {
+    "onset": 1980,
+    "peak": 6.631793287694106,
+    "peak_year": 1960,
+    "value": 5.927706523997506,
+    "share_fall": 0.10616838208800872
+   },
+   "region": "Middle East, North Africa, Afghanistan & Pakistan"
+  },
+  "ARG": {
+   "mort_long": {
+    "onset": 1899,
+    "peak": 40.979,
+    "peak_year": 1885,
+    "value": 36.629997,
+    "share_fall": 0.1061276019424583
+   },
+   "mort_obs": {
+    "onset": 1975,
+    "peak": 7.2561903,
+    "peak_year": 1969,
+    "value": 6.3301544,
+    "share_fall": 0.1276201231932962
+   },
+   "fert_obs": {
+    "onset": 1989,
+    "peak": 3.359,
+    "peak_year": 1977,
+    "value": 3.022,
+    "share_fall": 0.10032747841619538
+   },
+   "fert_implied": {
+    "onset": 1985,
+    "peak": 3.367103426970482,
+    "peak_year": 1977,
+    "value": 3.0295334975267503,
+    "share_fall": 0.10025528967711483
+   },
+   "region": "Latin America & Caribbean"
+  },
+  "ARM": {
+   "mort_long": {
+    "onset": 1881,
+    "peak": 37.120003,
+    "peak_year": 1800,
+    "value": 33.389,
+    "share_fall": 0.10051192614397131
+   },
+   "mort_obs": {
+    "onset": 1979,
+    "peak": 8.704162,
+    "peak_year": 1976,
+    "value": 7.6747084,
+    "share_fall": 0.11827142004020608
+   },
+   "fert_obs": {
+    "onset": 1963,
+    "peak": 4.918,
+    "peak_year": 1957,
+    "value": 4.345,
+    "share_fall": 0.11651077673851162
+   },
+   "fert_implied": {
+    "onset": 1963,
+    "peak": 4.752720021869522,
+    "peak_year": 1958,
+    "value": 4.249445213642359,
+    "share_fall": 0.10589195364156889
+   },
+   "region": "Europe & Central Asia"
+  },
+  "ATG": {
+   "mort_long": {
+    "onset": 1813,
+    "peak": 47.36,
+    "peak_year": 1800,
+    "value": 42.616,
+    "share_fall": 0.10016891891891888
+   },
+   "mort_obs": {
+    "onset": 1954,
+    "peak": 11.880733,
+    "peak_year": 1950,
+    "value": 10.493473,
+    "share_fall": 0.11676552280065544
+   },
+   "fert_obs": {
+    "onset": 1960,
+    "peak": 5.124,
+    "peak_year": 1950,
+    "value": 4.602,
+    "share_fall": 0.1018735362997657
+   },
+   "fert_implied": {
+    "onset": 1961,
+    "peak": 5.072087378640776,
+    "peak_year": 1950,
+    "value": 4.552381347965809,
+    "share_fall": 0.10246393484140626
+   },
+   "region": "Latin America & Caribbean"
+  },
+  "AUS": {
+   "mort_long": {
+    "onset": 1862,
+    "peak": 39.099,
+    "peak_year": 1800,
+    "value": 33.086998,
+    "share_fall": 0.15376357451597222
+   },
+   "mort_obs": {
+    "onset": 1955,
+    "peak": 3.1583087,
+    "peak_year": 1950,
+    "value": 2.796117,
+    "share_fall": 0.11467900525366626
+   },
+   "fert_obs": {
+    "onset": 1964,
+    "peak": 3.542,
+    "peak_year": 1961,
+    "value": 3.146,
+    "share_fall": 0.11180124223602483
+   },
+   "fert_implied": {
+    "onset": 1926,
+    "peak": 3.350102883623987,
+    "peak_year": 1921,
+    "value": 2.980625176098312,
+    "share_fall": 0.11028846586526064
+   },
+   "region": "East Asia & Pacific"
+  },
+  "AUT": {
+   "mort_long": {
+    "onset": 1803,
+    "peak": 38.732002,
+    "peak_year": 1800,
+    "value": 34.595,
+    "share_fall": 0.10681095183254408
+   },
+   "mort_obs": {
+    "onset": 1952,
+    "peak": 7.1553574,
+    "peak_year": 1950,
+    "value": 6.282343,
+    "share_fall": 0.12200849673840186
+   },
+   "fert_obs": {
+    "onset": 1969,
+    "peak": 2.817,
+    "peak_year": 1963,
+    "value": 2.484,
+    "share_fall": 0.1182108626198084
+   },
+   "fert_implied": {
+    "onset": 1949,
+    "peak": 2.397873227501271,
+    "peak_year": 1947,
+    "value": 2.1154578810579423,
+    "share_fall": 0.11777743010109942
+   },
+   "region": "Europe & Central Asia"
+  },
+  "AZE": {
+   "mort_long": {
+    "onset": 1852,
+    "peak": 38.4,
+    "peak_year": 1800,
+    "value": 34.523003,
+    "share_fall": 0.10096346354166652
+   },
+   "mort_obs": {
+    "onset": 1987,
+    "peak": 11.062663,
+    "peak_year": 1982,
+    "value": 9.857016,
+    "share_fall": 0.10898343373562047
+   },
+   "fert_obs": {
+    "onset": 1968,
+    "peak": 5.961,
+    "peak_year": 1962,
+    "value": 5.213,
+    "share_fall": 0.12548230162724383
+   },
+   "fert_implied": {
+    "onset": 1968,
+    "peak": 5.759607526905917,
+    "peak_year": 1963,
+    "value": 5.109151388379035,
+    "share_fall": 0.11293410800793036
+   },
+   "region": "Europe & Central Asia"
+  },
+  "BDI": {
+   "mort_long": {
+    "onset": 1936,
+    "peak": 42.395,
+    "peak_year": 1800,
+    "value": 37.978,
+    "share_fall": 0.10418681448283995
+   },
+   "mort_obs": {
+    "onset": 1973,
+    "peak": 31.747414,
+    "peak_year": 1972,
+    "value": 25.018673,
+    "share_fall": 0.21194611315428713
+   },
+   "fert_obs": {
+    "onset": 2007,
+    "peak": 7.387,
+    "peak_year": 1989,
+    "value": 6.588,
+    "share_fall": 0.10816298903479082
+   },
+   "fert_implied": {
+    "onset": 2009,
+    "peak": 6.784870687668076,
+    "peak_year": 1972,
+    "value": 6.066854152456138,
+    "share_fall": 0.10582611935655284
+   },
+   "region": "Sub-Saharan Africa"
+  },
+  "BEL": {
+   "mort_long": {
+    "onset": 1835,
+    "peak": 32.239998,
+    "peak_year": 1800,
+    "value": 27.16,
+    "share_fall": 0.15756818595336142
+   },
+   "mort_obs": {
+    "onset": 1952,
+    "peak": 6.008348,
+    "peak_year": 1950,
+    "value": 5.3772273,
+    "share_fall": 0.10504063679400721
+   },
+   "fert_obs": {
+    "onset": 1967,
+    "peak": 2.702,
+    "peak_year": 1964,
+    "value": 2.409,
+    "share_fall": 0.10843819393042198
+   },
+   "fert_implied": {
+    "onset": 1883,
+    "peak": 4.775001311339636,
+    "peak_year": 1876,
+    "value": 4.217527055838933,
+    "share_fall": 0.1167485031212071
+   },
+   "region": "Europe & Central Asia"
+  },
+  "BEN": {
+   "mort_long": {
+    "onset": 1942,
+    "peak": 43.045998,
+    "peak_year": 1800,
+    "value": 38.64,
+    "share_fall": 0.10235557786347516
+   },
+   "mort_obs": {
+    "onset": 1959,
+    "peak": 34.699776,
+    "peak_year": 1950,
+    "value": 31.217712,
+    "share_fall": 0.10034831348767215
+   },
+   "fert_obs": {
+    "onset": 1995,
+    "peak": 7.056,
+    "peak_year": 1981,
+    "value": 6.33,
+    "share_fall": 0.10289115646258506
+   },
+   "fert_implied": {
+    "onset": 1995,
+    "peak": 6.624461041218661,
+    "peak_year": 1982,
+    "value": 5.87852522949541,
+    "share_fall": 0.11260324531790522
+   },
+   "region": "Sub-Saharan Africa"
+  },
+  "BFA": {
+   "mort_long": {
+    "onset": 1941,
+    "peak": 45.469,
+    "peak_year": 1800,
+    "value": 40.763,
+    "share_fall": 0.10349908729024182
+   },
+   "mort_obs": {
+    "onset": 1961,
+    "peak": 37.916138,
+    "peak_year": 1950,
+    "value": 33.905544,
+    "share_fall": 0.10577538250335516
+   },
+   "fert_obs": {
+    "onset": 2000,
+    "peak": 7.256,
+    "peak_year": 1981,
+    "value": 6.519,
+    "share_fall": 0.10157111356119075
+   },
+   "fert_implied": {
+    "onset": 2002,
+    "peak": 6.701557217731666,
+    "peak_year": 1981,
+    "value": 6.029417748201528,
+    "share_fall": 0.1002960129552759
+   },
+   "region": "Sub-Saharan Africa"
+  },
+  "BGD": {
+   "mort_long": {
+    "onset": 1921,
+    "peak": 56.622997,
+    "peak_year": 1904,
+    "value": 50.635998,
+    "share_fall": 0.10573440681707469
+   },
+   "mort_obs": {
+    "onset": 1954,
+    "peak": 35.482075,
+    "peak_year": 1950,
+    "value": 31.28322,
+    "share_fall": 0.11833735766580733
+   },
+   "fert_obs": {
+    "onset": 1982,
+    "peak": 6.839,
+    "peak_year": 1970,
+    "value": 6.118,
+    "share_fall": 0.10542476970317294
+   },
+   "fert_implied": {
+    "onset": 1972,
+    "peak": 7.769755659902735,
+    "peak_year": 1971,
+    "value": 6.536112892880052,
+    "share_fall": 0.1587749758192688
+   },
+   "region": "South Asia"
+  },
+  "BGR": {
+   "mort_long": {
+    "onset": 1874,
+    "peak": 37.041,
+    "peak_year": 1800,
+    "value": 33.237,
+    "share_fall": 0.10269701141977794
+   },
+   "mort_obs": {
+    "onset": 1952,
+    "peak": 13.928445,
+    "peak_year": 1950,
+    "value": 12.093784,
+    "share_fall": 0.13172044689841544
+   },
+   "fert_obs": {
+    "onset": 1958,
+    "peak": 2.482,
+    "peak_year": 1950,
+    "value": 2.207,
+    "share_fall": 0.11079774375503637
+   },
+   "fert_implied": {
+    "onset": 1950,
+    "peak": 3.438484145199964,
+    "peak_year": 1948,
+    "value": 2.5347579626108625,
+    "share_fall": 0.2628269157066436
+   },
+   "region": "Europe & Central Asia"
+  },
+  "BHR": {
+   "mort_long": {
+    "onset": 1937,
+    "peak": 43.979,
+    "peak_year": 1800,
+    "value": 39.259,
+    "share_fall": 0.1073239500670774
+   },
+   "mort_obs": {
+    "onset": 1957,
+    "peak": 29.843328,
+    "peak_year": 1955,
+    "value": 25.333277,
+    "share_fall": 0.15112426469326745
+   },
+   "fert_obs": {
+    "onset": 1970,
+    "peak": 7.295,
+    "peak_year": 1958,
+    "value": 6.428,
+    "share_fall": 0.11884852638793697
+   },
+   "fert_implied": {
+    "onset": 1968,
+    "peak": 7.613329611766107,
+    "peak_year": 1955,
+    "value": 6.7159821039579075,
+    "share_fall": 0.11786531695953162
+   },
+   "region": "Middle East, North Africa, Afghanistan & Pakistan"
+  },
+  "BHS": {
+   "mort_long": {
+    "onset": 1813,
+    "peak": 47.104,
+    "peak_year": 1800,
+    "value": 42.081,
+    "share_fall": 0.10663637907608692
+   },
+   "mort_obs": {
+    "onset": 1984,
+    "peak": 3.1361973,
+    "peak_year": 1974,
+    "value": 2.815274,
+    "share_fall": 0.10232879800004935
+   },
+   "fert_obs": {
+    "onset": 1968,
+    "peak": 5.156,
+    "peak_year": 1961,
+    "value": 4.556,
+    "share_fall": 0.11636927851047318
+   },
+   "fert_implied": {
+    "onset": 1968,
+    "peak": 4.873644862921853,
+    "peak_year": 1961,
+    "value": 4.358442014757249,
+    "share_fall": 0.10571202101413046
+   },
+   "region": "Latin America & Caribbean"
+  },
+  "BIH": {
+   "mort_long": {
+    "onset": 1924,
+    "peak": 37.879997,
+    "peak_year": 1800,
+    "value": 33.502,
+    "share_fall": 0.1155754315397649
+   },
+   "mort_obs": {
+    "onset": 1986,
+    "peak": 2.942395,
+    "peak_year": 1984,
+    "value": 2.4893923,
+    "share_fall": 0.1539571335595662
+   },
+   "fert_obs": {
+    "onset": 1956,
+    "peak": 5.069,
+    "peak_year": 1950,
+    "value": 4.361,
+    "share_fall": 0.13967251923456303
+   },
+   "fert_implied": {
+    "onset": 1956,
+    "peak": 5.183140818851387,
+    "peak_year": 1952,
+    "value": 4.537109073454603,
+    "share_fall": 0.12464097889201253
+   },
+   "region": "Europe & Central Asia"
+  },
+  "BLR": {
+   "mort_long": {
+    "onset": 1906,
+    "peak": 36.567,
+    "peak_year": 1800,
+    "value": 32.257,
+    "share_fall": 0.11786583531599537
+   },
+   "mort_obs": {
+    "onset": 1959,
+    "peak": 5.572641,
+    "peak_year": 1958,
+    "value": 4.9920034,
+    "share_fall": 0.1041943308388249
+   },
+   "fert_obs": {
+    "onset": 1963,
+    "peak": 2.763,
+    "peak_year": 1959,
+    "value": 2.479,
+    "share_fall": 0.10278682591386168
+   },
+   "fert_implied": {
+    "onset": 1963,
+    "peak": 2.7421227158743426,
+    "peak_year": 1959,
+    "value": 2.452908186575843,
+    "share_fall": 0.10547103804808444
+   },
+   "region": "Europe & Central Asia"
+  },
+  "BLZ": {
+   "mort_long": {
+    "onset": 1815,
+    "peak": 46.72,
+    "peak_year": 1800,
+    "value": 41.967003,
+    "share_fall": 0.1017336686643836
+   },
+   "mort_obs": {
+    "onset": 1970,
+    "peak": 11.491754,
+    "peak_year": 1967,
+    "value": 10.027728,
+    "share_fall": 0.12739795857098934
+   },
+   "fert_obs": {
+    "onset": 1979,
+    "peak": 6.69,
+    "peak_year": 1950,
+    "value": 5.992,
+    "share_fall": 0.1043348281016443
+   },
+   "fert_implied": {
+    "onset": 1980,
+    "peak": 6.4763140593100115,
+    "peak_year": 1951,
+    "value": 5.79199355110052,
+    "share_fall": 0.10566512092256375
+   },
+   "region": "Latin America & Caribbean"
+  },
+  "BOL": {
+   "mort_long": {
+    "onset": 1941,
+    "peak": 40.469,
+    "peak_year": 1800,
+    "value": 36.076,
+    "share_fall": 0.10855222515999907
+   },
+   "mort_obs": {
+    "onset": 1965,
+    "peak": 28.535477,
+    "peak_year": 1960,
+    "value": 25.587856,
+    "share_fall": 0.10329671377142224
+   },
+   "fert_obs": {
+    "onset": 1978,
+    "peak": 6.276,
+    "peak_year": 1959,
+    "value": 5.61,
+    "share_fall": 0.10611854684512423
+   },
+   "fert_implied": {
+    "onset": 1973,
+    "peak": 6.118191838628365,
+    "peak_year": 1959,
+    "value": 5.474398374615007,
+    "share_fall": 0.10522609963758345
+   },
+   "region": "Latin America & Caribbean"
+  },
+  "BRA": {
+   "mort_long": {
+    "onset": 1931,
+    "peak": 41.744,
+    "peak_year": 1800,
+    "value": 22.3,
+    "share_fall": 0.46579149099271755
+   },
+   "mort_obs": {
+    "onset": 1955,
+    "peak": 21.897474,
+    "peak_year": 1950,
+    "value": 19.516266,
+    "share_fall": 0.10874350164772417
+   },
+   "fert_obs": {
+    "onset": 1967,
+    "peak": 6.122,
+    "peak_year": 1950,
+    "value": 5.336,
+    "share_fall": 0.128389415223783
+   },
+   "fert_implied": {
+    "onset": 1967,
+    "peak": 6.029611777104466,
+    "peak_year": 1950,
+    "value": 5.302793636880508,
+    "share_fall": 0.1205414489509622
+   },
+   "region": "Latin America & Caribbean"
+  },
+  "BRB": {
+   "mort_long": {
+    "onset": 1907,
+    "peak": 68.21,
+    "peak_year": 1906,
+    "value": 49.04,
+    "share_fall": 0.2810438352147778
+   },
+   "mort_obs": {
+    "onset": 1953,
+    "peak": 18.404804,
+    "peak_year": 1950,
+    "value": 16.103092,
+    "share_fall": 0.12506039184117357
+   },
+   "fert_obs": {
+    "onset": 1961,
+    "peak": 4.706,
+    "peak_year": 1960,
+    "value": 4.153,
+    "share_fall": 0.11750956226094367
+   },
+   "fert_implied": {
+    "onset": 1961,
+    "peak": 4.690477818334197,
+    "peak_year": 1960,
+    "value": 4.136651049762462,
+    "share_fall": 0.1180747015596002
+   },
+   "region": "Latin America & Caribbean"
+  },
+  "BRN": {
+   "mort_long": {
+    "onset": 1915,
+    "peak": 45.469,
+    "peak_year": 1800,
+    "value": 40.519,
+    "share_fall": 0.10886538080890285
+   },
+   "mort_obs": {
+    "onset": 1952,
+    "peak": 20.070683,
+    "peak_year": 1950,
+    "value": 17.181572,
+    "share_fall": 0.14394682034487816
+   },
+   "fert_obs": {
+    "onset": 1965,
+    "peak": 7.476,
+    "peak_year": 1957,
+    "value": 6.647,
+    "share_fall": 0.11088817549491703
+   },
+   "fert_implied": {
+    "onset": 1965,
+    "peak": 7.293316614491694,
+    "peak_year": 1957,
+    "value": 6.489745077809303,
+    "share_fall": 0.11017916527656402
+   },
+   "region": "East Asia & Pacific"
+  },
+  "BTN": {
+   "mort_long": {
+    "onset": 1927,
+    "peak": 46.336,
+    "peak_year": 1800,
+    "value": 41.682,
+    "share_fall": 0.10044026243093918
+   },
+   "mort_obs": {
+    "onset": 1973,
+    "peak": 27.570213,
+    "peak_year": 1968,
+    "value": 24.352118,
+    "share_fall": 0.116723617623121
+   },
+   "fert_obs": {
+    "onset": 1986,
+    "peak": 6.848,
+    "peak_year": 1950,
+    "value": 6.103,
+    "share_fall": 0.10879088785046731
+   },
+   "fert_implied": {
+    "onset": 1987,
+    "peak": 6.637711203053294,
+    "peak_year": 1950,
+    "value": 5.925006554017016,
+    "share_fall": 0.10737204847183457
+   },
+   "region": "South Asia"
+  },
+  "BWA": {
+   "mort_long": {
+    "onset": 1936,
+    "peak": 39.72,
+    "peak_year": 1800,
+    "value": 35.487,
+    "share_fall": 0.10657099697885186
+   },
+   "mort_obs": {
+    "onset": 1958,
+    "peak": 20.144695,
+    "peak_year": 1954,
+    "value": 17.83231,
+    "share_fall": 0.11478878186043517
+   },
+   "fert_obs": {
+    "onset": 1983,
+    "peak": 6.624,
+    "peak_year": 1958,
+    "value": 5.785,
+    "share_fall": 0.12666062801932365
+   },
+   "fert_implied": {
+    "onset": 1982,
+    "peak": 6.191819421643809,
+    "peak_year": 1951,
+    "value": 5.5635659499289005,
+    "share_fall": 0.10146508302855506
+   },
+   "region": "Sub-Saharan Africa"
+  },
+  "CAF": {
+   "mort_long": {
+    "onset": 1936,
+    "peak": 44.379,
+    "peak_year": 1800,
+    "value": 39.633,
+    "share_fall": 0.10694247279118496
+   },
+   "mort_obs": {
+    "onset": 1965,
+    "peak": 29.059427,
+    "peak_year": 1959,
+    "value": 25.669046,
+    "share_fall": 0.11667060744177782
+   },
+   "fert_obs": null,
+   "fert_implied": {
+    "onset": 2010,
+    "peak": 8.560784806288847,
+    "peak_year": 2009,
+    "value": 5.537973460556441,
+    "share_fall": 0.35309979331705843
+   },
+   "region": "Sub-Saharan Africa"
+  },
+  "CAN": {
+   "mort_long": {
+    "onset": 1866,
+    "peak": 33.347,
+    "peak_year": 1800,
+    "value": 29.98,
+    "share_fall": 0.10096860287282217
+   },
+   "mort_obs": {
+    "onset": 1953,
+    "peak": 4.8636117,
+    "peak_year": 1950,
+    "value": 4.174715,
+    "share_fall": 0.14164303042531123
+   },
+   "fert_obs": {
+    "onset": 1964,
+    "peak": 3.855,
+    "peak_year": 1959,
+    "value": 3.424,
+    "share_fall": 0.11180285343709473
+   },
+   "fert_implied": {
+    "onset": 1924,
+    "peak": 4.1976226877169625,
+    "peak_year": 1921,
+    "value": 3.7735960659854215,
+    "share_fall": 0.10101589715824699
+   },
+   "region": "North America"
+  },
+  "CHE": {
+   "mort_long": {
+    "onset": 1871,
+    "peak": 34.476997,
+    "peak_year": 1800,
+    "value": 30.851002,
+    "share_fall": 0.10517142777835309
+   },
+   "mort_obs": {
+    "onset": 1953,
+    "peak": 3.857628,
+    "peak_year": 1950,
+    "value": 3.4453273,
+    "share_fall": 0.10687933102932679
+   },
+   "fert_obs": {
+    "onset": 1968,
+    "peak": 2.653,
+    "peak_year": 1964,
+    "value": 2.289,
+    "share_fall": 0.13720316622691286
+   },
+   "fert_implied": {
+    "onset": 1883,
+    "peak": 4.083260099943181,
+    "peak_year": 1877,
+    "value": 3.569905722660892,
+    "share_fall": 0.1257216941162853
+   },
+   "region": "Europe & Central Asia"
+  },
+  "CHL": {
+   "mort_long": {
+    "onset": 1902,
+    "peak": 55.22,
+    "peak_year": 1901,
+    "value": 43.85,
+    "share_fall": 0.20590365809489308
+   },
+   "mort_obs": {
+    "onset": 1963,
+    "peak": 15.462539,
+    "peak_year": 1959,
+    "value": 13.58616,
+    "share_fall": 0.12134999303801275
+   },
+   "fert_obs": {
+    "onset": 1966,
+    "peak": 4.836,
+    "peak_year": 1950,
+    "value": 4.259,
+    "share_fall": 0.11931348221670801
+   },
+   "fert_implied": {
+    "onset": 1954,
+    "peak": 5.368846409259083,
+    "peak_year": 1950,
+    "value": 4.736877297601513,
+    "share_fall": 0.11771040992487314
+   },
+   "region": "Latin America & Caribbean"
+  },
+  "CHN": {
+   "mort_long": {
+    "onset": 1862,
+    "peak": 50.035,
+    "peak_year": 1856,
+    "value": 44.651,
+    "share_fall": 0.10760467672629148
+   },
+   "mort_obs": {
+    "onset": 1972,
+    "peak": 11.79943,
+    "peak_year": 1969,
+    "value": 10.078334,
+    "share_fall": 0.1458626391274832
+   },
+   "fert_obs": {
+    "onset": 1964,
+    "peak": 7.513,
+    "peak_year": 1963,
+    "value": 6.672,
+    "share_fall": 0.1119393052043125
+   },
+   "fert_implied": {
+    "onset": 1956,
+    "peak": 7.242416575284839,
+    "peak_year": 1952,
+    "value": 6.2792077527742,
+    "share_fall": 0.132995501225053
+   },
+   "region": "East Asia & Pacific"
+  },
+  "CIV": {
+   "mort_long": {
+    "onset": 1952,
+    "peak": 42.786,
+    "peak_year": 1800,
+    "value": 38.377,
+    "share_fall": 0.10304772589164679
+   },
+   "mort_obs": {
+    "onset": 1960,
+    "peak": 36.1963,
+    "peak_year": 1955,
+    "value": 31.930134,
+    "share_fall": 0.11786193616474616
+   },
+   "fert_obs": {
+    "onset": 1987,
+    "peak": 7.942,
+    "peak_year": 1972,
+    "value": 7.09,
+    "share_fall": 0.10727776378745912
+   },
+   "fert_implied": {
+    "onset": 1987,
+    "peak": 7.3459552778691215,
+    "peak_year": 1970,
+    "value": 6.583478679025258,
+    "share_fall": 0.10379543163582117
+   },
+   "region": "Sub-Saharan Africa"
+  },
+  "CMR": {
+   "mort_long": {
+    "onset": 1937,
+    "peak": 46.021,
+    "peak_year": 1800,
+    "value": 41.292,
+    "share_fall": 0.10275743682232019
+   },
+   "mort_obs": {
+    "onset": 1956,
+    "peak": 35.87083,
+    "peak_year": 1953,
+    "value": 32.16359,
+    "share_fall": 0.10334971340222676
+   },
+   "fert_obs": {
+    "onset": 1995,
+    "peak": 6.613,
+    "peak_year": 1980,
+    "value": 5.919,
+    "share_fall": 0.10494480568577058
+   },
+   "fert_implied": {
+    "onset": 1996,
+    "peak": 6.189920382362774,
+    "peak_year": 1981,
+    "value": 5.553322660039666,
+    "share_fall": 0.1028442504910072
+   },
+   "region": "Sub-Saharan Africa"
+  },
+  "COD": {
+   "mort_long": {
+    "onset": 1941,
+    "peak": 42.265,
+    "peak_year": 1800,
+    "value": 37.572,
+    "share_fall": 0.1110375014787649
+   },
+   "mort_obs": {
+    "onset": 1976,
+    "peak": 24.783972,
+    "peak_year": 1969,
+    "value": 22.199389,
+    "share_fall": 0.10428445448534229
+   },
+   "fert_obs": null,
+   "fert_implied": null,
+   "region": "Sub-Saharan Africa"
+  },
+  "COG": {
+   "mort_long": {
+    "onset": 1935,
+    "peak": 40.851,
+    "peak_year": 1800,
+    "value": 36.498,
+    "share_fall": 0.10655797899684227
+   },
+   "mort_obs": {
+    "onset": 1954,
+    "peak": 27.730068,
+    "peak_year": 1950,
+    "value": 24.6224,
+    "share_fall": 0.11206853153046725
+   },
+   "fert_obs": {
+    "onset": 1983,
+    "peak": 6.444,
+    "peak_year": 1972,
+    "value": 5.758,
+    "share_fall": 0.10645561762880196
+   },
+   "fert_implied": {
+    "onset": 1984,
+    "peak": 5.918130708128726,
+    "peak_year": 1972,
+    "value": 5.287386278437385,
+    "share_fall": 0.10657832021604308
+   },
+   "region": "Sub-Saharan Africa"
+  },
+  "COL": {
+   "mort_long": {
+    "onset": 1916,
+    "peak": 41.744,
+    "peak_year": 1800,
+    "value": 36.18,
+    "share_fall": 0.13328861632809508
+   },
+   "mort_obs": {
+    "onset": 1956,
+    "peak": 17.818338,
+    "peak_year": 1952,
+    "value": 15.571507,
+    "share_fall": 0.1260965528883783
+   },
+   "fert_obs": {
+    "onset": 1967,
+    "peak": 6.737,
+    "peak_year": 1959,
+    "value": 5.957,
+    "share_fall": 0.11577853644055225
+   },
+   "fert_implied": {
+    "onset": 1967,
+    "peak": 6.679902071430251,
+    "peak_year": 1960,
+    "value": 5.919546244054173,
+    "share_fall": 0.11382739136672348
+   },
+   "region": "Latin America & Caribbean"
+  },
+  "COM": {
+   "mort_long": {
+    "onset": 1946,
+    "peak": 41.616,
+    "peak_year": 1800,
+    "value": 35.554,
+    "share_fall": 0.14566512879661664
+   },
+   "mort_obs": {
+    "onset": 1974,
+    "peak": 23.212404,
+    "peak_year": 1970,
+    "value": 20.84082,
+    "share_fall": 0.10216882318608611
+   },
+   "fert_obs": {
+    "onset": 1991,
+    "peak": 7.165,
+    "peak_year": 1973,
+    "value": 6.354,
+    "share_fall": 0.11318911374738305
+   },
+   "fert_implied": {
+    "onset": 1991,
+    "peak": 6.829845640486931,
+    "peak_year": 1980,
+    "value": 6.102784717288167,
+    "share_fall": 0.10645349272446047
+   },
+   "region": "Sub-Saharan Africa"
+  },
+  "CPV": {
+   "mort_long": {
+    "onset": 1938,
+    "peak": 39.471,
+    "peak_year": 1800,
+    "value": 34.851997,
+    "share_fall": 0.11702270021028094
+   },
+   "mort_obs": {
+    "onset": 1955,
+    "peak": 20.90491,
+    "peak_year": 1950,
+    "value": 18.704294,
+    "share_fall": 0.10526790117728324
+   },
+   "fert_obs": {
+    "onset": 1981,
+    "peak": 6.993,
+    "peak_year": 1965,
+    "value": 6.273,
+    "share_fall": 0.10296010296010305
+   },
+   "fert_implied": {
+    "onset": 1982,
+    "peak": 6.826897477952887,
+    "peak_year": 1967,
+    "value": 6.104299175629197,
+    "share_fall": 0.10584578201991224
+   },
+   "region": "Sub-Saharan Africa"
+  },
+  "CRI": {
+   "mort_long": {
+    "onset": 1898,
+    "peak": 44.112,
+    "peak_year": 1800,
+    "value": 39.31,
+    "share_fall": 0.1088592673195502
+   },
+   "mort_obs": {
+    "onset": 1956,
+    "peak": 13.126608,
+    "peak_year": 1950,
+    "value": 11.702365,
+    "share_fall": 0.10850045952465392
+   },
+   "fert_obs": {
+    "onset": 1965,
+    "peak": 6.731,
+    "peak_year": 1959,
+    "value": 5.96,
+    "share_fall": 0.11454464418362797
+   },
+   "fert_implied": {
+    "onset": 1965,
+    "peak": 6.697043116532689,
+    "peak_year": 1959,
+    "value": 5.965634228113413,
+    "share_fall": 0.10921370456965995
+   },
+   "region": "Latin America & Caribbean"
+  },
+  "CUB": {
+   "mort_long": {
+    "onset": 1822,
+    "peak": 41.489002,
+    "peak_year": 1800,
+    "value": 37.161,
+    "share_fall": 0.10431685004136759
+   },
+   "mort_obs": {
+    "onset": 1969,
+    "peak": 4.4527793,
+    "peak_year": 1962,
+    "value": 3.9648943,
+    "share_fall": 0.10956864626099938
+   },
+   "fert_obs": {
+    "onset": 1970,
+    "peak": 4.559,
+    "peak_year": 1963,
+    "value": 3.981,
+    "share_fall": 0.12678218907655192
+   },
+   "fert_implied": {
+    "onset": 1970,
+    "peak": 4.362780085169024,
+    "peak_year": 1963,
+    "value": 3.8911350708179815,
+    "share_fall": 0.10810652958519906
+   },
+   "region": "Latin America & Caribbean"
+  },
+  "CYP": {
+   "mort_long": {
+    "onset": 1900,
+    "peak": 33.912,
+    "peak_year": 1800,
+    "value": 30.232,
+    "share_fall": 0.10851615947157345
+   },
+   "mort_obs": {
+    "onset": 1976,
+    "peak": 3.689125,
+    "peak_year": 1971,
+    "value": 3.2153387,
+    "share_fall": 0.1284278250262596
+   },
+   "fert_obs": {
+    "onset": 1952,
+    "peak": 3.871,
+    "peak_year": 1950,
+    "value": 3.467,
+    "share_fall": 0.10436579695169201
+   },
+   "fert_implied": {
+    "onset": 1955,
+    "peak": 3.7325394559855694,
+    "peak_year": 1950,
+    "value": 3.35131655264732,
+    "share_fall": 0.10213499624951405
+   },
+   "region": "Europe & Central Asia"
+  },
+  "CZE": {
+   "mort_long": {
+    "onset": 1898,
+    "peak": 37.999,
+    "peak_year": 1800,
+    "value": 33.881,
+    "share_fall": 0.10837127292823501
+   },
+   "mort_obs": {
+    "onset": 1951,
+    "peak": 7.162515,
+    "peak_year": 1950,
+    "value": 6.044407,
+    "share_fall": 0.15610550204781426
+   },
+   "fert_obs": {
+    "onset": 1957,
+    "peak": 2.818,
+    "peak_year": 1950,
+    "value": 2.482,
+    "share_fall": 0.11923349893541513
+   },
+   "fert_implied": {
+    "onset": 1957,
+    "peak": 2.8114515218618386,
+    "peak_year": 1950,
+    "value": 2.461487121251226,
+    "share_fall": 0.12447819138594085
+   },
+   "region": "Europe & Central Asia"
+  },
+  "DEU": {
+   "mort_long": {
+    "onset": 1853,
+    "peak": 51.64,
+    "peak_year": 1842,
+    "value": 46.28,
+    "share_fall": 0.10379550735863674
+   },
+   "mort_obs": {
+    "onset": 1972,
+    "peak": 2.7125754,
+    "peak_year": 1968,
+    "value": 2.4019964,
+    "share_fall": 0.11449598783502946
+   },
+   "fert_obs": {
+    "onset": 1969,
+    "peak": 2.525,
+    "peak_year": 1964,
+    "value": 2.2,
+    "share_fall": 0.1287128712871286
+   },
+   "fert_implied": {
+    "onset": 1969,
+    "peak": 2.5178609403770844,
+    "peak_year": 1964,
+    "value": 2.192381045563154,
+    "share_fall": 0.12926841573910963
+   },
+   "region": "Europe & Central Asia"
+  },
+  "DJI": {
+   "mort_long": {
+    "onset": 1946,
+    "peak": 44.515,
+    "peak_year": 1800,
+    "value": 38.03,
+    "share_fall": 0.14568123104571495
+   },
+   "mort_obs": {
+    "onset": 1980,
+    "peak": 16.951666,
+    "peak_year": 1976,
+    "value": 15.09446,
+    "share_fall": 0.10955890707143479
+   },
+   "fert_obs": {
+    "onset": 1985,
+    "peak": 6.882,
+    "peak_year": 1971,
+    "value": 6.192,
+    "share_fall": 0.10026155187445507
+   },
+   "fert_implied": {
+    "onset": 1986,
+    "peak": 6.334334692725531,
+    "peak_year": 1968,
+    "value": 5.693207608594549,
+    "share_fall": 0.10121458925548477
+   },
+   "region": "Middle East, North Africa, Afghanistan & Pakistan"
+  },
+  "DMA": {
+   "mort_long": {
+    "onset": 1954,
+    "peak": 19.397,
+    "peak_year": 1950,
+    "value": 17.34,
+    "share_fall": 0.10604732690622254
+   },
+   "mort_obs": {
+    "onset": 1962,
+    "peak": 13.639801,
+    "peak_year": 1960,
+    "value": 11.325522,
+    "share_fall": 0.16967102379279586
+   },
+   "fert_obs": {
+    "onset": 1969,
+    "peak": 6.183,
+    "peak_year": 1959,
+    "value": 5.412,
+    "share_fall": 0.12469674915089757
+   },
+   "fert_implied": {
+    "onset": 1968,
+    "peak": 6.26205728214213,
+    "peak_year": 1959,
+    "value": 5.514217360849184,
+    "share_fall": 0.1194239987911967
+   },
+   "region": "Latin America & Caribbean"
+  },
+  "DNK": {
+   "mort_long": {
+    "onset": 1827,
+    "peak": 37.999,
+    "peak_year": 1800,
+    "value": 34.051003,
+    "share_fall": 0.10389739203663251
+   },
+   "mort_obs": {
+    "onset": 1954,
+    "peak": 3.3992999,
+    "peak_year": 1950,
+    "value": 3.0505517,
+    "share_fall": 0.10259412533739665
+   },
+   "fert_obs": {
+    "onset": 1967,
+    "peak": 2.655,
+    "peak_year": 1963,
+    "value": 2.351,
+    "share_fall": 0.11450094161958568
+   },
+   "fert_implied": {
+    "onset": 1837,
+    "peak": 4.158764703251487,
+    "peak_year": 1835,
+    "value": 3.6367178181516278,
+    "share_fall": 0.12552931515738375
+   },
+   "region": "Europe & Central Asia"
+  },
+  "DOM": {
+   "mort_long": {
+    "onset": 1934,
+    "peak": 44.515,
+    "peak_year": 1800,
+    "value": 40.023003,
+    "share_fall": 0.10090973829046379
+   },
+   "mort_obs": {
+    "onset": 1967,
+    "peak": 14.909714,
+    "peak_year": 1958,
+    "value": 13.28745,
+    "share_fall": 0.1088058429558072
+   },
+   "fert_obs": {
+    "onset": 1967,
+    "peak": 7.675,
+    "peak_year": 1956,
+    "value": 6.755,
+    "share_fall": 0.11986970684039089
+   },
+   "fert_implied": {
+    "onset": 1969,
+    "peak": 6.971915696910321,
+    "peak_year": 1960,
+    "value": 6.14716959200279,
+    "share_fall": 0.11829547871226065
+   },
+   "region": "Latin America & Caribbean"
+  },
+  "DZA": {
+   "mort_long": {
+    "onset": 1929,
+    "peak": 46.021,
+    "peak_year": 1800,
+    "value": 41.244,
+    "share_fall": 0.10380043893005364
+   },
+   "mort_obs": {
+    "onset": 1974,
+    "peak": 24.524498,
+    "peak_year": 1967,
+    "value": 21.654247,
+    "share_fall": 0.11703607551926243
+   },
+   "fert_obs": {
+    "onset": 1981,
+    "peak": 7.712,
+    "peak_year": 1967,
+    "value": 6.845,
+    "share_fall": 0.11242219917012453
+   },
+   "fert_implied": {
+    "onset": 1982,
+    "peak": 7.624997973465914,
+    "peak_year": 1971,
+    "value": 6.740915694144046,
+    "share_fall": 0.11594524777558879
+   },
+   "region": "Middle East, North Africa, Afghanistan & Pakistan"
+  },
+  "ECU": {
+   "mort_long": {
+    "onset": 1936,
+    "peak": 40.596,
+    "peak_year": 1800,
+    "value": 36.491,
+    "share_fall": 0.10111833678194893
+   },
+   "mort_obs": {
+    "onset": 1959,
+    "peak": 20.800066,
+    "peak_year": 1955,
+    "value": 18.173285,
+    "share_fall": 0.1262871473580902
+   },
+   "fert_obs": {
+    "onset": 1971,
+    "peak": 6.767,
+    "peak_year": 1955,
+    "value": 6.011,
+    "share_fall": 0.11171863455002218
+   },
+   "fert_implied": {
+    "onset": 1971,
+    "peak": 6.8017232883817424,
+    "peak_year": 1955,
+    "value": 6.024738223268782,
+    "share_fall": 0.11423355996268691
+   },
+   "region": "Latin America & Caribbean"
+  },
+  "EGY": {
+   "mort_long": {
+    "onset": 1937,
+    "peak": 40.869,
+    "peak_year": 1929,
+    "value": 35.484,
+    "share_fall": 0.131762460544667
+   },
+   "mort_obs": {
+    "onset": 1959,
+    "peak": 37.40441,
+    "peak_year": 1955,
+    "value": 33.47044,
+    "share_fall": 0.10517396210767649
+   },
+   "fert_obs": {
+    "onset": 1966,
+    "peak": 7.086,
+    "peak_year": 1953,
+    "value": 6.308,
+    "share_fall": 0.10979395992097096
+   },
+   "fert_implied": {
+    "onset": 1965,
+    "peak": 7.244636425416242,
+    "peak_year": 1955,
+    "value": 6.388427329085586,
+    "share_fall": 0.1181852402319088
+   },
+   "region": "Middle East, North Africa, Afghanistan & Pakistan"
+  },
+  "ERI": {
+   "mort_long": {
+    "onset": 1946,
+    "peak": 44.112,
+    "peak_year": 1800,
+    "value": 38.782,
+    "share_fall": 0.12082879941965918
+   },
+   "mort_obs": {
+    "onset": 1976,
+    "peak": 25.459114,
+    "peak_year": 1975,
+    "value": 21.032682,
+    "share_fall": 0.17386433793414802
+   },
+   "fert_obs": {
+    "onset": 1995,
+    "peak": 6.646,
+    "peak_year": 1983,
+    "value": 5.939,
+    "share_fall": 0.10637977730965997
+   },
+   "fert_implied": {
+    "onset": 1986,
+    "peak": 6.5940906096967264,
+    "peak_year": 1985,
+    "value": 5.901577330062201,
+    "share_fall": 0.10502028568066268
+   },
+   "region": "Sub-Saharan Africa"
+  },
+  "ESP": {
+   "mort_long": {
+    "onset": 1851,
+    "peak": 45.06,
+    "peak_year": 1800,
+    "value": 39.248,
+    "share_fall": 0.12898357745228595
+   },
+   "mort_obs": {
+    "onset": 1951,
+    "peak": 10.339274,
+    "peak_year": 1950,
+    "value": 9.227166,
+    "share_fall": 0.10756151737539787
+   },
+   "fert_obs": {
+    "onset": 1977,
+    "peak": 2.998,
+    "peak_year": 1964,
+    "value": 2.653,
+    "share_fall": 0.11507671781187467
+   },
+   "fert_implied": {
+    "onset": 1916,
+    "peak": 4.3177260679192235,
+    "peak_year": 1908,
+    "value": 3.59446905238572,
+    "share_fall": 0.16750877757329607
+   },
+   "region": "Europe & Central Asia"
+  },
+  "EST": {
+   "mort_long": {
+    "onset": 1878,
+    "peak": 36.215,
+    "peak_year": 1800,
+    "value": 32.572,
+    "share_fall": 0.10059367665332042
+   },
+   "mort_obs": {
+    "onset": 1960,
+    "peak": 3.9543993,
+    "peak_year": 1958,
+    "value": 3.5037124,
+    "share_fall": 0.11397101451034553
+   },
+   "fert_obs": {
+    "onset": 1956,
+    "peak": 2.273,
+    "peak_year": 1950,
+    "value": 1.973,
+    "share_fall": 0.13198416190057194
+   },
+   "fert_implied": {
+    "onset": 1956,
+    "peak": 2.3585219051513944,
+    "peak_year": 1950,
+    "value": 1.9940394539508353,
+    "share_fall": 0.15453850583472228
+   },
+   "region": "Europe & Central Asia"
+  },
+  "ETH": {
+   "mort_long": {
+    "onset": 1937,
+    "peak": 44.788002,
+    "peak_year": 1800,
+    "value": 40.092003,
+    "share_fall": 0.10484948625303714
+   },
+   "mort_obs": {
+    "onset": 1976,
+    "peak": 28.90264,
+    "peak_year": 1972,
+    "value": 24.70055,
+    "share_fall": 0.1453877569661457
+   },
+   "fert_obs": {
+    "onset": 2001,
+    "peak": 7.356,
+    "peak_year": 1984,
+    "value": 6.579,
+    "share_fall": 0.10562805872756931
+   },
+   "fert_implied": {
+    "onset": 1998,
+    "peak": 7.246718365520842,
+    "peak_year": 1986,
+    "value": 6.500245118654251,
+    "share_fall": 0.10300845282165716
+   },
+   "region": "Sub-Saharan Africa"
+  },
+  "FIN": {
+   "mort_long": {
+    "onset": 1814,
+    "peak": 42.004,
+    "peak_year": 1800,
+    "value": 37.52,
+    "share_fall": 0.10675173792972081
+   },
+   "mort_obs": {
+    "onset": 1953,
+    "peak": 4.520756,
+    "peak_year": 1950,
+    "value": 3.9096284,
+    "share_fall": 0.13518261105001028
+   },
+   "fert_obs": {
+    "onset": 1958,
+    "peak": 3.153,
+    "peak_year": 1950,
+    "value": 2.682,
+    "share_fall": 0.14938154138915316
+   },
+   "fert_implied": {
+    "onset": 1889,
+    "peak": 4.638983804661097,
+    "peak_year": 1886,
+    "value": 4.01789097769692,
+    "share_fall": 0.13388553465957864
+   },
+   "region": "Europe & Central Asia"
+  },
+  "FJI": {
+   "mort_long": {
+    "onset": 1927,
+    "peak": 49.888,
+    "peak_year": 1800,
+    "value": 44.295998,
+    "share_fall": 0.11209112411802435
+   },
+   "mort_obs": {
+    "onset": 1953,
+    "peak": 12.666079,
+    "peak_year": 1950,
+    "value": 11.237912,
+    "share_fall": 0.11275525756629179
+   },
+   "fert_obs": {
+    "onset": 1965,
+    "peak": 6.602,
+    "peak_year": 1956,
+    "value": 5.763,
+    "share_fall": 0.12708270221145113
+   },
+   "fert_implied": {
+    "onset": 1964,
+    "peak": 6.414792923245638,
+    "peak_year": 1956,
+    "value": 5.754586370498167,
+    "share_fall": 0.10291938658768618
+   },
+   "region": "East Asia & Pacific"
+  },
+  "FRA": {
+   "mort_long": {
+    "onset": 1807,
+    "peak": 41.234,
+    "peak_year": 1800,
+    "value": 36.766,
+    "share_fall": 0.10835718096716307
+   },
+   "mort_obs": {
+    "onset": 1952,
+    "peak": 5.711518,
+    "peak_year": 1950,
+    "value": 4.97074,
+    "share_fall": 0.12969896969597217
+   },
+   "fert_obs": {
+    "onset": 1967,
+    "peak": 2.965,
+    "peak_year": 1950,
+    "value": 2.649,
+    "share_fall": 0.10657672849915678
+   },
+   "fert_implied": {
+    "onset": 1832,
+    "peak": 3.660914740016449,
+    "peak_year": 1819,
+    "value": 3.242070663493008,
+    "share_fall": 0.11440967798161805
+   },
+   "region": "Europe & Central Asia"
+  },
+  "FSM": {
+   "mort_long": {
+    "onset": 1816,
+    "peak": 45.056,
+    "peak_year": 1800,
+    "value": 40.538002,
+    "share_fall": 0.10027516867897723
+   },
+   "mort_obs": {
+    "onset": 1961,
+    "peak": 13.664264,
+    "peak_year": 1958,
+    "value": 12.003401,
+    "share_fall": 0.12154792969456674
+   },
+   "fert_obs": {
+    "onset": 1982,
+    "peak": 6.971,
+    "peak_year": 1973,
+    "value": 6.164,
+    "share_fall": 0.11576531344140017
+   },
+   "fert_implied": {
+    "onset": 1982,
+    "peak": 6.707212961350975,
+    "peak_year": 1973,
+    "value": 5.917175905624659,
+    "share_fall": 0.11778917119208121
+   },
+   "region": "East Asia & Pacific"
+  },
+  "GAB": {
+   "mort_long": {
+    "onset": 1933,
+    "peak": 43.579002,
+    "peak_year": 1800,
+    "value": 39.217003,
+    "share_fall": 0.10009405447146325
+   },
+   "mort_obs": {
+    "onset": 1954,
+    "peak": 29.96329,
+    "peak_year": 1950,
+    "value": 26.513597,
+    "share_fall": 0.11513064820318464
+   },
+   "fert_obs": {
+    "onset": 1994,
+    "peak": 5.759,
+    "peak_year": 1983,
+    "value": 5.044,
+    "share_fall": 0.12415349887133198
+   },
+   "fert_implied": {
+    "onset": 1994,
+    "peak": 5.490223086783457,
+    "peak_year": 1983,
+    "value": 4.855510409928628,
+    "share_fall": 0.11560781170855605
+   },
+   "region": "Sub-Saharan Africa"
+  },
+  "GBR": {
+   "mort_long": {
+    "onset": 1834,
+    "peak": 32.904,
+    "peak_year": 1800,
+    "value": 29.131,
+    "share_fall": 0.11466690979820093
+   },
+   "mort_obs": {
+    "onset": 1953,
+    "peak": 3.6592407,
+    "peak_year": 1950,
+    "value": 3.2108312,
+    "share_fall": 0.12254167920683656
+   },
+   "fert_obs": {
+    "onset": 1968,
+    "peak": 2.931,
+    "peak_year": 1964,
+    "value": 2.592,
+    "share_fall": 0.1156601842374616
+   },
+   "fert_implied": {
+    "onset": 1925,
+    "peak": 2.569030061413313,
+    "peak_year": 1922,
+    "value": 2.299741626248217,
+    "share_fall": 0.10482105258704177
+   },
+   "region": "Europe & Central Asia"
+  },
+  "GEO": {
+   "mort_long": {
+    "onset": 1851,
+    "peak": 39.68,
+    "peak_year": 1800,
+    "value": 35.662,
+    "share_fall": 0.10126008064516134
+   },
+   "mort_obs": {
+    "onset": 1978,
+    "peak": 7.0679073,
+    "peak_year": 1975,
+    "value": 6.3312964,
+    "share_fall": 0.10421909466752621
+   },
+   "fert_obs": {
+    "onset": 1972,
+    "peak": 2.983,
+    "peak_year": 1950,
+    "value": 2.674,
+    "share_fall": 0.10358699296010732
+   },
+   "fert_implied": {
+    "onset": 1972,
+    "peak": 2.9705802007382918,
+    "peak_year": 1950,
+    "value": 2.671245854115019,
+    "share_fall": 0.10076629021794392
+   },
+   "region": "Europe & Central Asia"
+  },
+  "GHA": {
+   "mort_long": {
+    "onset": 1928,
+    "peak": 47.138,
+    "peak_year": 1800,
+    "value": 42.236,
+    "share_fall": 0.10399253256396113
+   },
+   "mort_obs": {
+    "onset": 1955,
+    "peak": 25.27368,
+    "peak_year": 1950,
+    "value": 22.613424,
+    "share_fall": 0.10525796005963517
+   },
+   "fert_obs": {
+    "onset": 1983,
+    "peak": 6.954,
+    "peak_year": 1969,
+    "value": 6.227,
+    "share_fall": 0.10454414725337924
+   },
+   "fert_implied": {
+    "onset": 1985,
+    "peak": 6.376720370013491,
+    "peak_year": 1971,
+    "value": 5.713072108252832,
+    "share_fall": 0.10407360261263188
+   },
+   "region": "Sub-Saharan Africa"
+  },
+  "GIN": {
+   "mort_long": {
+    "onset": 1930,
+    "peak": 45.06,
+    "peak_year": 1800,
+    "value": 40.517998,
+    "share_fall": 0.10079897913892599
+   },
+   "mort_obs": {
+    "onset": 1971,
+    "peak": 35.57897,
+    "peak_year": 1952,
+    "value": 31.766304,
+    "share_fall": 0.10716066260490387
+   },
+   "fert_obs": {
+    "onset": 2001,
+    "peak": 6.571,
+    "peak_year": 1987,
+    "value": 5.834,
+    "share_fall": 0.11215948866230407
+   },
+   "fert_implied": {
+    "onset": 2001,
+    "peak": 6.0959715498420195,
+    "peak_year": 1989,
+    "value": 5.459483698945583,
+    "share_fall": 0.10441122398494984
+   },
+   "region": "Sub-Saharan Africa"
+  },
+  "GMB": {
+   "mort_long": {
+    "onset": 1948,
+    "peak": 46.021,
+    "peak_year": 1800,
+    "value": 41.376,
+    "share_fall": 0.10093218313378682
+   },
+   "mort_obs": {
+    "onset": 1962,
+    "peak": 38.982197,
+    "peak_year": 1956,
+    "value": 34.63841,
+    "share_fall": 0.11143002022179505
+   },
+   "fert_obs": {
+    "onset": 1999,
+    "peak": 6.434,
+    "peak_year": 1976,
+    "value": 5.772,
+    "share_fall": 0.10289089213552993
+   },
+   "fert_implied": {
+    "onset": 2001,
+    "peak": 5.999740809036868,
+    "peak_year": 1984,
+    "value": 5.377438173171867,
+    "share_fall": 0.10372158659382136
+   },
+   "region": "Sub-Saharan Africa"
+  },
+  "GNB": {
+   "mort_long": {
+    "onset": 1941,
+    "peak": 41.744,
+    "peak_year": 1800,
+    "value": 37.507,
+    "share_fall": 0.10149961671138374
+   },
+   "mort_obs": {
+    "onset": 1991,
+    "peak": 24.594017,
+    "peak_year": 1985,
+    "value": 21.898272,
+    "share_fall": 0.10960978842943803
+   },
+   "fert_obs": {
+    "onset": 1997,
+    "peak": 6.739,
+    "peak_year": 1985,
+    "value": 6.06,
+    "share_fall": 0.10075678884107442
+   },
+   "fert_implied": {
+    "onset": 1999,
+    "peak": 6.363370333815556,
+    "peak_year": 1987,
+    "value": 5.726715787111493,
+    "share_fall": 0.10004989703660971
+   },
+   "region": "Sub-Saharan Africa"
+  },
+  "GNQ": {
+   "mort_long": {
+    "onset": 1946,
+    "peak": 44.651,
+    "peak_year": 1800,
+    "value": 39.131,
+    "share_fall": 0.12362545071778919
+   },
+   "mort_obs": {
+    "onset": 1989,
+    "peak": 19.858437,
+    "peak_year": 1982,
+    "value": 17.811567,
+    "share_fall": 0.10307306662654259
+   },
+   "fert_obs": {
+    "onset": 2008,
+    "peak": 5.987,
+    "peak_year": 1990,
+    "value": 5.363,
+    "share_fall": 0.10422582261566726
+   },
+   "fert_implied": {
+    "onset": 2009,
+    "peak": 5.756088518800127,
+    "peak_year": 1996,
+    "value": 5.1645112266468605,
+    "share_fall": 0.10277418254099102
+   },
+   "region": "Sub-Saharan Africa"
+  },
+  "GRC": {
+   "mort_long": {
+    "onset": 1899,
+    "peak": 36.097,
+    "peak_year": 1800,
+    "value": 32.414,
+    "share_fall": 0.10203063966534609
+   },
+   "mort_obs": {
+    "onset": 1955,
+    "peak": 5.772569,
+    "peak_year": 1951,
+    "value": 5.144449,
+    "share_fall": 0.10881117228741655
+   },
+   "fert_obs": {
+    "onset": 1958,
+    "peak": 2.574,
+    "peak_year": 1950,
+    "value": 2.308,
+    "share_fall": 0.10334110334110336
+   },
+   "fert_implied": {
+    "onset": 1981,
+    "peak": 2.510733691368275,
+    "peak_year": 1950,
+    "value": 2.1625198240582932,
+    "share_fall": 0.13869008429970753
+   },
+   "region": "Europe & Central Asia"
+  },
+  "GRD": {
+   "mort_long": {
+    "onset": 1815,
+    "peak": 47.232002,
+    "peak_year": 1800,
+    "value": 42.301003,
+    "share_fall": 0.10439953402779756
+   },
+   "mort_obs": {
+    "onset": 1953,
+    "peak": 14.940027,
+    "peak_year": 1950,
+    "value": 13.334247,
+    "share_fall": 0.10748173346674683
+   },
+   "fert_obs": {
+    "onset": 1964,
+    "peak": 6.792,
+    "peak_year": 1959,
+    "value": 5.906,
+    "share_fall": 0.1304475853945819
+   },
+   "fert_implied": {
+    "onset": 1964,
+    "peak": 6.651238631982401,
+    "peak_year": 1958,
+    "value": 5.733696576802779,
+    "share_fall": 0.1379505541671039
+   },
+   "region": "Latin America & Caribbean"
+  },
+  "GTM": {
+   "mort_long": {
+    "onset": 1935,
+    "peak": 50.336,
+    "peak_year": 1800,
+    "value": 44.39,
+    "share_fall": 0.11812619198982832
+   },
+   "mort_obs": {
+    "onset": 1962,
+    "peak": 23.758541,
+    "peak_year": 1957,
+    "value": 21.036564,
+    "share_fall": 0.11456835670170162
+   },
+   "fert_obs": {
+    "onset": 1978,
+    "peak": 7.015,
+    "peak_year": 1957,
+    "value": 6.261,
+    "share_fall": 0.10748396293656448
+   },
+   "fert_implied": {
+    "onset": 1983,
+    "peak": 6.574369787717968,
+    "peak_year": 1957,
+    "value": 5.883328300430256,
+    "share_fall": 0.10511144179609333
+   },
+   "region": "Latin America & Caribbean"
+  },
+  "GUY": {
+   "mort_long": {
+    "onset": 1898,
+    "peak": 42.916,
+    "peak_year": 1800,
+    "value": 37.826,
+    "share_fall": 0.11860378413645256
+   },
+   "mort_obs": {
+    "onset": 1953,
+    "peak": 15.534496,
+    "peak_year": 1950,
+    "value": 13.397364,
+    "share_fall": 0.13757330781764665
+   },
+   "fert_obs": {
+    "onset": 1969,
+    "peak": 6.339,
+    "peak_year": 1961,
+    "value": 5.581,
+    "share_fall": 0.11957722038176366
+   },
+   "fert_implied": {
+    "onset": 1969,
+    "peak": 6.123254195978508,
+    "peak_year": 1961,
+    "value": 5.404893809357847,
+    "share_fall": 0.11731676713543104
+   },
+   "region": "Latin America & Caribbean"
+  },
+  "HKG": {
+   "mort_long": {
+    "onset": 1954,
+    "peak": 9.489,
+    "peak_year": 1950,
+    "value": 8.143,
+    "share_fall": 0.1418484561070713
+   },
+   "mort_obs": null,
+   "fert_obs": {
+    "onset": 1966,
+    "peak": 5.177,
+    "peak_year": 1962,
+    "value": 4.464,
+    "share_fall": 0.13772455089820346
+   },
+   "fert_implied": {
+    "onset": 1966,
+    "peak": 5.145649522121547,
+    "peak_year": 1962,
+    "value": 4.441445934981778,
+    "share_fall": 0.13685416857723065
+   },
+   "region": "East Asia & Pacific"
+  },
+  "HND": {
+   "mort_long": {
+    "onset": 1933,
+    "peak": 39.346,
+    "peak_year": 1800,
+    "value": 35.242,
+    "share_fall": 0.10430539317846799
+   },
+   "mort_obs": {
+    "onset": 1960,
+    "peak": 23.577496,
+    "peak_year": 1956,
+    "value": 20.644348,
+    "share_fall": 0.1244045593306431
+   },
+   "fert_obs": {
+    "onset": 1977,
+    "peak": 7.513,
+    "peak_year": 1955,
+    "value": 6.732,
+    "share_fall": 0.10395314787701315
+   },
+   "fert_implied": {
+    "onset": 1978,
+    "peak": 7.280027863777089,
+    "peak_year": 1965,
+    "value": 6.550266811255323,
+    "share_fall": 0.10024151915033264
+   },
+   "region": "Latin America & Caribbean"
+  },
+  "HRV": {
+   "mort_long": {
+    "onset": 1923,
+    "peak": 36.684,
+    "peak_year": 1800,
+    "value": 32.281,
+    "share_fall": 0.12002507905353832
+   },
+   "mort_obs": {
+    "onset": 1984,
+    "peak": 2.1876526,
+    "peak_year": 1981,
+    "value": 1.9061522,
+    "share_fall": 0.12867692064087322
+   },
+   "fert_obs": {
+    "onset": 1954,
+    "peak": 2.933,
+    "peak_year": 1950,
+    "value": 2.629,
+    "share_fall": 0.10364814183429927
+   },
+   "fert_implied": {
+    "onset": 1954,
+    "peak": 2.907641297480774,
+    "peak_year": 1950,
+    "value": 2.6138895936009887,
+    "share_fall": 0.10102749061044647
+   },
+   "region": "Europe & Central Asia"
+  },
+  "HTI": {
+   "mort_long": {
+    "onset": 1934,
+    "peak": 48.64,
+    "peak_year": 1800,
+    "value": 43.242,
+    "share_fall": 0.11097861842105272
+   },
+   "mort_obs": {
+    "onset": 1963,
+    "peak": 31.48752,
+    "peak_year": 1956,
+    "value": 27.994663,
+    "share_fall": 0.1109282979415337
+   },
+   "fert_obs": {
+    "onset": 1979,
+    "peak": 6.251,
+    "peak_year": 1950,
+    "value": 5.594,
+    "share_fall": 0.10510318349064152
+   },
+   "fert_implied": {
+    "onset": 1979,
+    "peak": 5.918797601015896,
+    "peak_year": 1956,
+    "value": 5.303707762091637,
+    "share_fall": 0.10392141789384479
+   },
+   "region": "Latin America & Caribbean"
+  },
+  "HUN": {
+   "mort_long": {
+    "onset": 1865,
+    "peak": 43.52,
+    "peak_year": 1855,
+    "value": 36.41,
+    "share_fall": 0.16337316176470607
+   },
+   "mort_obs": {
+    "onset": 1952,
+    "peak": 10.023205,
+    "peak_year": 1950,
+    "value": 8.245401,
+    "share_fall": 0.17736881566325358
+   },
+   "fert_obs": {
+    "onset": 1956,
+    "peak": 2.964,
+    "peak_year": 1954,
+    "value": 2.607,
+    "share_fall": 0.12044534412955454
+   },
+   "fert_implied": {
+    "onset": 1956,
+    "peak": 2.947591560595876,
+    "peak_year": 1954,
+    "value": 2.590386596827039,
+    "share_fall": 0.12118536656979217
+   },
+   "region": "Europe & Central Asia"
+  },
+  "IDN": {
+   "mort_long": {
+    "onset": 1930,
+    "peak": 44.379,
+    "peak_year": 1800,
+    "value": 39.659,
+    "share_fall": 0.1063566101083846
+   },
+   "mort_obs": {
+    "onset": 1955,
+    "peak": 29.33485,
+    "peak_year": 1951,
+    "value": 26.015375,
+    "share_fall": 0.1131580696679888
+   },
+   "fert_obs": {
+    "onset": 1975,
+    "peak": 5.593,
+    "peak_year": 1965,
+    "value": 5.032,
+    "share_fall": 0.10030395136778114
+   },
+   "fert_implied": {
+    "onset": 1974,
+    "peak": 5.73078850503942,
+    "peak_year": 1965,
+    "value": 5.015510097161365,
+    "share_fall": 0.12481326212772781
+   },
+   "region": "East Asia & Pacific"
+  },
+  "IND": {
+   "mort_long": {
+    "onset": 1904,
+    "peak": 53.721996,
+    "peak_year": 1901,
+    "value": 46.558,
+    "share_fall": 0.13335312410953604
+   },
+   "mort_obs": {
+    "onset": 1960,
+    "peak": 26.819702,
+    "peak_year": 1953,
+    "value": 24.13476,
+    "share_fall": 0.10011080660031191
+   },
+   "fert_obs": {
+    "onset": 1974,
+    "peak": 5.979,
+    "peak_year": 1964,
+    "value": 5.325,
+    "share_fall": 0.10938283993978926
+   },
+   "fert_implied": {
+    "onset": 1975,
+    "peak": 5.5384747105750884,
+    "peak_year": 1963,
+    "value": 4.950263295464689,
+    "share_fall": 0.10620458625319296
+   },
+   "region": "South Asia"
+  },
+  "IRL": {
+   "mort_long": {
+    "onset": 1847,
+    "peak": 51.542,
+    "peak_year": 1846,
+    "value": 44.379,
+    "share_fall": 0.13897404058825824
+   },
+   "mort_obs": {
+    "onset": 1953,
+    "peak": 5.42025,
+    "peak_year": 1950,
+    "value": 4.7150645,
+    "share_fall": 0.1301020248143535
+   },
+   "fert_obs": {
+    "onset": 1974,
+    "peak": 4.079,
+    "peak_year": 1964,
+    "value": 3.588,
+    "share_fall": 0.12037264035302764
+   },
+   "fert_implied": {
+    "onset": 1974,
+    "peak": 4.0535332871371095,
+    "peak_year": 1964,
+    "value": 3.5768787729960914,
+    "share_fall": 0.11758988526221403
+   },
+   "region": "Europe & Central Asia"
+  },
+  "IRN": {
+   "mort_long": {
+    "onset": 1941,
+    "peak": 50.638,
+    "peak_year": 1800,
+    "value": 45.396,
+    "share_fall": 0.10351909633081868
+   },
+   "mort_obs": {
+    "onset": 1974,
+    "peak": 18.919418,
+    "peak_year": 1971,
+    "value": 16.300394,
+    "share_fall": 0.1384304739183837
+   },
+   "fert_obs": {
+    "onset": 1970,
+    "peak": 7.571,
+    "peak_year": 1959,
+    "value": 6.798,
+    "share_fall": 0.1021001188746532
+   },
+   "fert_implied": {
+    "onset": 1970,
+    "peak": 8.029103012783898,
+    "peak_year": 1959,
+    "value": 7.04059402376095,
+    "share_fall": 0.12311574374485523
+   },
+   "region": "Middle East, North Africa, Afghanistan & Pakistan"
+  },
+  "IRQ": {
+   "mort_long": {
+    "onset": 1944,
+    "peak": 56.86,
+    "peak_year": 1942,
+    "value": 50.68,
+    "share_fall": 0.10868800562785785
+   },
+   "mort_obs": {
+    "onset": 1952,
+    "peak": 35.548492,
+    "peak_year": 1950,
+    "value": 31.37737,
+    "share_fall": 0.11733611653625153
+   },
+   "fert_obs": {
+    "onset": 1955,
+    "peak": 6.844,
+    "peak_year": 1953,
+    "value": 6.0,
+    "share_fall": 0.12331969608416138
+   },
+   "fert_implied": {
+    "onset": 1955,
+    "peak": 7.0430185394459555,
+    "peak_year": 1952,
+    "value": 6.075009934794169,
+    "share_fall": 0.1374422911469343
+   },
+   "region": "Middle East, North Africa, Afghanistan & Pakistan"
+  },
+  "ISL": {
+   "mort_long": {
+    "onset": 1841,
+    "peak": 43.86,
+    "peak_year": 1839,
+    "value": 32.38,
+    "share_fall": 0.26174190606475145
+   },
+   "mort_obs": {
+    "onset": 1953,
+    "peak": 3.0597007,
+    "peak_year": 1950,
+    "value": 2.6442683,
+    "share_fall": 0.13577550248624004
+   },
+   "fert_obs": {
+    "onset": 1965,
+    "peak": 4.259,
+    "peak_year": 1960,
+    "value": 3.72,
+    "share_fall": 0.1265555294670111
+   },
+   "fert_implied": {
+    "onset": 1844,
+    "peak": 4.675870232515394,
+    "peak_year": 1840,
+    "value": 3.6760296149498277,
+    "share_fall": 0.21382984724700116
+   },
+   "region": "Europe & Central Asia"
+  },
+  "ISR": {
+   "mort_long": {
+    "onset": 1904,
+    "peak": 44.8,
+    "peak_year": 1800,
+    "value": 39.661,
+    "share_fall": 0.11470982142857133
+   },
+   "mort_obs": {
+    "onset": 1955,
+    "peak": 6.6541786,
+    "peak_year": 1952,
+    "value": 5.9188347,
+    "share_fall": 0.11050859079736752
+   },
+   "fert_obs": {
+    "onset": 1961,
+    "peak": 4.741,
+    "peak_year": 1952,
+    "value": 4.148,
+    "share_fall": 0.12507909723686983
+   },
+   "fert_implied": {
+    "onset": 1958,
+    "peak": 4.7758957760155365,
+    "peak_year": 1952,
+    "value": 4.297856635309839,
+    "share_fall": 0.10009413168235404
+   },
+   "region": "Middle East, North Africa, Afghanistan & Pakistan"
+  },
+  "ITA": {
+   "mort_long": {
+    "onset": 1873,
+    "peak": 45.741,
+    "peak_year": 1800,
+    "value": 40.99,
+    "share_fall": 0.103867427472071
+   },
+   "mort_obs": {
+    "onset": 1952,
+    "peak": 8.8652725,
+    "peak_year": 1950,
+    "value": 7.5314927,
+    "share_fall": 0.15044994950803814
+   },
+   "fert_obs": {
+    "onset": 1972,
+    "peak": 2.662,
+    "peak_year": 1964,
+    "value": 2.351,
+    "share_fall": 0.1168294515401953
+   },
+   "fert_implied": {
+    "onset": 1898,
+    "peak": 5.026949004194604,
+    "peak_year": 1887,
+    "value": 4.465532233883059,
+    "share_fall": 0.11168141348620908
+   },
+   "region": "Europe & Central Asia"
+  },
+  "JAM": {
+   "mort_long": {
+    "onset": 1872,
+    "peak": 38.976997,
+    "peak_year": 1800,
+    "value": 34.725,
+    "share_fall": 0.10908990756778914
+   },
+   "mort_obs": {
+    "onset": 1954,
+    "peak": 12.562757,
+    "peak_year": 1952,
+    "value": 11.284583,
+    "share_fall": 0.1017431125986119
+   },
+   "fert_obs": {
+    "onset": 1972,
+    "peak": 5.79,
+    "peak_year": 1964,
+    "value": 5.06,
+    "share_fall": 0.12607944732297072
+   },
+   "fert_implied": {
+    "onset": 1972,
+    "peak": 5.719676364895873,
+    "peak_year": 1964,
+    "value": 4.998684628919085,
+    "share_fall": 0.12605463840608655
+   },
+   "region": "Latin America & Caribbean"
+  },
+  "JOR": {
+   "mort_long": {
+    "onset": 1936,
+    "peak": 42.134,
+    "peak_year": 1800,
+    "value": 37.752,
+    "share_fall": 0.10400151896330745
+   },
+   "mort_obs": {
+    "onset": 1952,
+    "peak": 27.47869,
+    "peak_year": 1950,
+    "value": 24.629707,
+    "share_fall": 0.10367972417899107
+   },
+   "fert_obs": {
+    "onset": 1980,
+    "peak": 8.192,
+    "peak_year": 1969,
+    "value": 7.287,
+    "share_fall": 0.1104736328125
+   },
+   "fert_implied": {
+    "onset": 1980,
+    "peak": 8.064698398526868,
+    "peak_year": 1969,
+    "value": 7.215246039519632,
+    "share_fall": 0.10532971191612095
+   },
+   "region": "Middle East, North Africa, Afghanistan & Pakistan"
+  },
+  "JPN": {
+   "mort_long": {
+    "onset": 1906,
+    "peak": 36.332,
+    "peak_year": 1800,
+    "value": 32.586,
+    "share_fall": 0.10310470108994829
+   },
+   "mort_obs": {
+    "onset": 1952,
+    "peak": 9.147113,
+    "peak_year": 1950,
+    "value": 7.490842,
+    "share_fall": 0.18107035520387682
+   },
+   "fert_obs": {
+    "onset": 1951,
+    "peak": 3.615,
+    "peak_year": 1950,
+    "value": 3.225,
+    "share_fall": 0.10788381742738595
+   },
+   "fert_implied": {
+    "onset": 1950,
+    "peak": 4.95443567642424,
+    "peak_year": 1947,
+    "value": 3.63289097681659,
+    "share_fall": 0.2667397027468217
+   },
+   "region": "East Asia & Pacific"
+  },
+  "KAZ": {
+   "mort_long": {
+    "onset": 1890,
+    "peak": 53.725,
+    "peak_year": 1868,
+    "value": 48.282,
+    "share_fall": 0.10131223825034907
+   },
+   "mort_obs": {
+    "onset": 1976,
+    "peak": 8.562428,
+    "peak_year": 1971,
+    "value": 7.6510406,
+    "share_fall": 0.1064402994104009
+   },
+   "fert_obs": {
+    "onset": 1964,
+    "peak": 4.678,
+    "peak_year": 1958,
+    "value": 4.071,
+    "share_fall": 0.1297563061137239
+   },
+   "fert_implied": {
+    "onset": 1964,
+    "peak": 4.6190743949076545,
+    "peak_year": 1958,
+    "value": 4.0162952791825335,
+    "share_fall": 0.130497814971255
+   },
+   "region": "Europe & Central Asia"
+  },
+  "KEN": {
+   "mort_long": {
+    "onset": 1936,
+    "peak": 50.788002,
+    "peak_year": 1800,
+    "value": 45.538002,
+    "share_fall": 0.10337087093916397
+   },
+   "mort_obs": {
+    "onset": 1954,
+    "peak": 30.024164,
+    "peak_year": 1952,
+    "value": 26.787714,
+    "share_fall": 0.10779484151498764
+   },
+   "fert_obs": {
+    "onset": 1984,
+    "peak": 7.955,
+    "peak_year": 1966,
+    "value": 7.083,
+    "share_fall": 0.1096165933375236
+   },
+   "fert_implied": {
+    "onset": 1984,
+    "peak": 7.30128424824493,
+    "peak_year": 1966,
+    "value": 6.536736376365164,
+    "share_fall": 0.1047141634108475
+   },
+   "region": "Sub-Saharan Africa"
+  },
+  "KGZ": {
+   "mort_long": {
+    "onset": 1910,
+    "peak": 38.272,
+    "peak_year": 1800,
+    "value": 34.418,
+    "share_fall": 0.10070025083612033
+   },
+   "mort_obs": {
+    "onset": 1980,
+    "peak": 11.345249,
+    "peak_year": 1975,
+    "value": 10.047953,
+    "share_fall": 0.1143470716244307
+   },
+   "fert_obs": {
+    "onset": 1974,
+    "peak": 5.479,
+    "peak_year": 1963,
+    "value": 4.891,
+    "share_fall": 0.10731885380543893
+   },
+   "fert_implied": {
+    "onset": 1974,
+    "peak": 5.4059785153058435,
+    "peak_year": 1963,
+    "value": 4.844174270072993,
+    "share_fall": 0.10392276692225555
+   },
+   "region": "Europe & Central Asia"
+  },
+  "KHM": {
+   "mort_long": {
+    "onset": 1946,
+    "peak": 37.999,
+    "peak_year": 1800,
+    "value": 33.045002,
+    "share_fall": 0.13037179925787534
+   },
+   "mort_obs": {
+    "onset": 1979,
+    "peak": 55.126854,
+    "peak_year": 1976,
+    "value": 20.728067,
+    "share_fall": 0.6239932900941527
+   },
+   "fert_obs": {
+    "onset": 1973,
+    "peak": 6.53,
+    "peak_year": 1950,
+    "value": 5.559,
+    "share_fall": 0.14869831546707502
+   },
+   "fert_implied": {
+    "onset": 1989,
+    "peak": 6.065695504252734,
+    "peak_year": 1975,
+    "value": 5.416160654910684,
+    "share_fall": 0.10708332604013049
+   },
+   "region": "East Asia & Pacific"
+  },
+  "KIR": {
+   "mort_long": {
+    "onset": 1829,
+    "peak": 45.312,
+    "peak_year": 1800,
+    "value": 40.75,
+    "share_fall": 0.10067973163841804
+   },
+   "mort_obs": {
+    "onset": 1961,
+    "peak": 21.949099,
+    "peak_year": 1950,
+    "value": 19.418415,
+    "share_fall": 0.11529785345630816
+   },
+   "fert_obs": {
+    "onset": 1970,
+    "peak": 6.477,
+    "peak_year": 1961,
+    "value": 5.706,
+    "share_fall": 0.11903659101435848
+   },
+   "fert_implied": {
+    "onset": 1970,
+    "peak": 6.1939908186881665,
+    "peak_year": 1961,
+    "value": 5.473635696705793,
+    "share_fall": 0.116299029667425
+   },
+   "region": "East Asia & Pacific"
+  },
+  "KNA": {
+   "mort_long": {
+    "onset": 1953,
+    "peak": 21.034,
+    "peak_year": 1950,
+    "value": 18.460001,
+    "share_fall": 0.12237325282875344
+   },
+   "mort_obs": {
+    "onset": 1978,
+    "peak": 6.1679454,
+    "peak_year": 1973,
+    "value": 5.4841485,
+    "share_fall": 0.11086299499343821
+   },
+   "fert_obs": {
+    "onset": 1961,
+    "peak": 7.26,
+    "peak_year": 1958,
+    "value": 6.272,
+    "share_fall": 0.13608815426997234
+   },
+   "fert_implied": {
+    "onset": 1960,
+    "peak": 7.202336077532803,
+    "peak_year": 1957,
+    "value": 6.338509114016104,
+    "share_fall": 0.1199370529530479
+   },
+   "region": "Latin America & Caribbean"
+  },
+  "KOR": {
+   "mort_long": {
+    "onset": 1917,
+    "peak": 53.161,
+    "peak_year": 1908,
+    "value": 47.482002,
+    "share_fall": 0.10682639528978011
+   },
+   "mort_obs": {
+    "onset": 1951,
+    "peak": 36.944477,
+    "peak_year": 1950,
+    "value": 31.294304,
+    "share_fall": 0.15293687876539708
+   },
+   "fert_obs": {
+    "onset": 1963,
+    "peak": 6.178,
+    "peak_year": 1957,
+    "value": 5.334,
+    "share_fall": 0.13661379087083203
+   },
+   "fert_implied": {
+    "onset": 1959,
+    "peak": 6.6459008523397225,
+    "peak_year": 1950,
+    "value": 5.974690497852199,
+    "share_fall": 0.10099614324688888
+   },
+   "region": "East Asia & Pacific"
+  },
+  "KWT": {
+   "mort_long": {
+    "onset": 1940,
+    "peak": 50.035,
+    "peak_year": 1800,
+    "value": 42.607998,
+    "share_fall": 0.14843613470570594
+   },
+   "mort_obs": {
+    "onset": 1961,
+    "peak": 15.216924,
+    "peak_year": 1959,
+    "value": 13.220767,
+    "share_fall": 0.13118005978080727
+   },
+   "fert_obs": {
+    "onset": 1973,
+    "peak": 7.34,
+    "peak_year": 1966,
+    "value": 6.43,
+    "share_fall": 0.12397820163487738
+   },
+   "fert_implied": {
+    "onset": 1972,
+    "peak": 7.384819948604421,
+    "peak_year": 1966,
+    "value": 6.645108152185577,
+    "share_fall": 0.10016653101456252
+   },
+   "region": "Middle East, North Africa, Afghanistan & Pakistan"
+  },
+  "LAO": {
+   "mort_long": {
+    "onset": 1941,
+    "peak": 41.874,
+    "peak_year": 1800,
+    "value": 37.161,
+    "share_fall": 0.11255194153890247
+   },
+   "mort_obs": {
+    "onset": 1982,
+    "peak": 21.277454,
+    "peak_year": 1978,
+    "value": 19.002525,
+    "share_fall": 0.10691735016792892
+   },
+   "fert_obs": {
+    "onset": 1994,
+    "peak": 6.376,
+    "peak_year": 1983,
+    "value": 5.598,
+    "share_fall": 0.12202007528230874
+   },
+   "fert_implied": {
+    "onset": 1994,
+    "peak": 6.161625239959115,
+    "peak_year": 1984,
+    "value": 5.4778269065183505,
+    "share_fall": 0.11097694306466799
+   },
+   "region": "East Asia & Pacific"
+  },
+  "LBN": {
+   "mort_long": {
+    "onset": 1933,
+    "peak": 44.788002,
+    "peak_year": 1800,
+    "value": 39.554,
+    "share_fall": 0.11686169880942665
+   },
+   "mort_obs": {
+    "onset": 1960,
+    "peak": 8.54236,
+    "peak_year": 1956,
+    "value": 7.4538097,
+    "share_fall": 0.1274296915606461
+   },
+   "fert_obs": {
+    "onset": 1970,
+    "peak": 5.905,
+    "peak_year": 1963,
+    "value": 5.188,
+    "share_fall": 0.12142252328535152
+   },
+   "fert_implied": {
+    "onset": 1969,
+    "peak": 5.73808952708178,
+    "peak_year": 1963,
+    "value": 5.146625162071515,
+    "share_fall": 0.10307687989508707
+   },
+   "region": "Middle East, North Africa, Afghanistan & Pakistan"
+  },
+  "LBR": {
+   "mort_long": {
+    "onset": 1935,
+    "peak": 42.916,
+    "peak_year": 1800,
+    "value": 38.254997,
+    "share_fall": 0.10860758225370482
+   },
+   "mort_obs": {
+    "onset": 1972,
+    "peak": 31.012285,
+    "peak_year": 1961,
+    "value": 27.684765,
+    "share_fall": 0.10729683414169577
+   },
+   "fert_obs": {
+    "onset": 1994,
+    "peak": 6.919,
+    "peak_year": 1979,
+    "value": 6.21,
+    "share_fall": 0.1024714554126318
+   },
+   "fert_implied": {
+    "onset": 2001,
+    "peak": 6.433776350075138,
+    "peak_year": 1979,
+    "value": 5.710928224163574,
+    "share_fall": 0.11235207544992176
+   },
+   "region": "Sub-Saharan Africa"
+  },
+  "LBY": {
+   "mort_long": {
+    "onset": 1940,
+    "peak": 40.469,
+    "peak_year": 1800,
+    "value": 36.306,
+    "share_fall": 0.10286886258617711
+   },
+   "mort_obs": {
+    "onset": 1958,
+    "peak": 35.86955,
+    "peak_year": 1956,
+    "value": 31.497414,
+    "share_fall": 0.12188990383208032
+   },
+   "fert_obs": {
+    "onset": 1982,
+    "peak": 8.096,
+    "peak_year": 1971,
+    "value": 7.162,
+    "share_fall": 0.11536561264822132
+   },
+   "fert_implied": {
+    "onset": 1982,
+    "peak": 8.098746644041794,
+    "peak_year": 1971,
+    "value": 7.08821344758542,
+    "share_fall": 0.12477649207606933
+   },
+   "region": "Middle East, North Africa, Afghanistan & Pakistan"
+  },
+  "LCA": {
+   "mort_long": {
+    "onset": 1817,
+    "peak": 45.952,
+    "peak_year": 1800,
+    "value": 41.355,
+    "share_fall": 0.10003917130919227
+   },
+   "mort_obs": {
+    "onset": 1955,
+    "peak": 17.447784,
+    "peak_year": 1950,
+    "value": 15.660995,
+    "share_fall": 0.10240779000932143
+   },
+   "fert_obs": {
+    "onset": 1970,
+    "peak": 6.835,
+    "peak_year": 1961,
+    "value": 6.101,
+    "share_fall": 0.10738844184345286
+   },
+   "fert_implied": {
+    "onset": 1970,
+    "peak": 6.766563326151516,
+    "peak_year": 1961,
+    "value": 6.022638030155115,
+    "share_fall": 0.1099413779401528
+   },
+   "region": "Latin America & Caribbean"
+  },
+  "LIE": {
+   "mort_long": {
+    "onset": 1953,
+    "peak": 5.459,
+    "peak_year": 1950,
+    "value": 4.704,
+    "share_fall": 0.13830371862978563
+   },
+   "mort_obs": null,
+   "fert_obs": {
+    "onset": 1967,
+    "peak": 2.963,
+    "peak_year": 1965,
+    "value": 2.477,
+    "share_fall": 0.1640229497131287
+   },
+   "fert_implied": {
+    "onset": 1967,
+    "peak": 2.978023863636685,
+    "peak_year": 1965,
+    "value": 2.4966365698226123,
+    "share_fall": 0.16164655350552337
+   },
+   "region": "Europe & Central Asia"
+  },
+  "LKA": {
+   "mort_long": {
+    "onset": 1922,
+    "peak": 43.626,
+    "peak_year": 1911,
+    "value": 38.617,
+    "share_fall": 0.11481685233576311
+   },
+   "mort_obs": {
+    "onset": 1956,
+    "peak": 13.20243,
+    "peak_year": 1951,
+    "value": 11.804529,
+    "share_fall": 0.10588209897723366
+   },
+   "fert_obs": {
+    "onset": 1966,
+    "peak": 5.462,
+    "peak_year": 1950,
+    "value": 4.828,
+    "share_fall": 0.1160746979128523
+   },
+   "fert_implied": {
+    "onset": 1966,
+    "peak": 5.335856579523879,
+    "peak_year": 1959,
+    "value": 4.765017339649268,
+    "share_fall": 0.1069817434871061
+   },
+   "region": "South Asia"
+  },
+  "LSO": {
+   "mort_long": {
+    "onset": 1935,
+    "peak": 40.724,
+    "peak_year": 1800,
+    "value": 36.543,
+    "share_fall": 0.10266673214811894
+   },
+   "mort_obs": {
+    "onset": 1955,
+    "peak": 23.256279,
+    "peak_year": 1952,
+    "value": 20.855522,
+    "share_fall": 0.10323048669995738
+   },
+   "fert_obs": {
+    "onset": 1987,
+    "peak": 5.871,
+    "peak_year": 1976,
+    "value": 5.222,
+    "share_fall": 0.11054334866291948
+   },
+   "fert_implied": {
+    "onset": 1968,
+    "peak": 5.6563718247428545,
+    "peak_year": 1950,
+    "value": 5.058902173641163,
+    "share_fall": 0.10562771854710129
+   },
+   "region": "Sub-Saharan Africa"
+  },
+  "LTU": {
+   "mort_long": {
+    "onset": 1879,
+    "peak": 45.881,
+    "peak_year": 1800,
+    "value": 40.851,
+    "share_fall": 0.10963143785009044
+   },
+   "mort_obs": {
+    "onset": 1959,
+    "peak": 6.34815,
+    "peak_year": 1958,
+    "value": 5.545029,
+    "share_fall": 0.12651260603482906
+   },
+   "fert_obs": {
+    "onset": 1963,
+    "peak": 2.713,
+    "peak_year": 1950,
+    "value": 2.35,
+    "share_fall": 0.13380022115739032
+   },
+   "fert_implied": {
+    "onset": 1955,
+    "peak": 2.9431170638372346,
+    "peak_year": 1950,
+    "value": 2.6196149184662847,
+    "share_fall": 0.10991820520695428
+   },
+   "region": "Europe & Central Asia"
+  },
+  "LUX": {
+   "mort_long": {
+    "onset": 1886,
+    "peak": 35.745003,
+    "peak_year": 1800,
+    "value": 31.804,
+    "share_fall": 0.11025325693775989
+   },
+   "mort_obs": {
+    "onset": 1953,
+    "peak": 5.5772395,
+    "peak_year": 1950,
+    "value": 5.002518,
+    "share_fall": 0.10304766363359508
+   },
+   "fert_obs": {
+    "onset": 1968,
+    "peak": 2.397,
+    "peak_year": 1965,
+    "value": 2.12,
+    "share_fall": 0.11556111806424685
+   },
+   "fert_implied": {
+    "onset": 1968,
+    "peak": 2.368861094184113,
+    "peak_year": 1965,
+    "value": 2.0965755818735095,
+    "share_fall": 0.11494363809642638
+   },
+   "region": "Europe & Central Asia"
+  },
+  "LVA": {
+   "mort_long": {
+    "onset": 1871,
+    "peak": 40.469,
+    "peak_year": 1800,
+    "value": 35.98,
+    "share_fall": 0.11092441127776831
+   },
+   "mort_obs": {
+    "onset": 1960,
+    "peak": 3.7651212,
+    "peak_year": 1958,
+    "value": 3.3237674,
+    "share_fall": 0.11722167137674078
+   },
+   "fert_obs": {
+    "onset": 1963,
+    "peak": 2.075,
+    "peak_year": 1950,
+    "value": 1.851,
+    "share_fall": 0.10795180722891573
+   },
+   "fert_implied": {
+    "onset": 1953,
+    "peak": 2.168953714676885,
+    "peak_year": 1950,
+    "value": 1.8825881839896133,
+    "share_fall": 0.13202934149746592
+   },
+   "region": "Europe & Central Asia"
+  },
+  "MAR": {
+   "mort_long": {
+    "onset": 1940,
+    "peak": 40.344,
+    "peak_year": 1800,
+    "value": 36.168,
+    "share_fall": 0.10350981558596073
+   },
+   "mort_obs": {
+    "onset": 1962,
+    "peak": 26.597115,
+    "peak_year": 1956,
+    "value": 23.509665,
+    "share_fall": 0.11608213898387099
+   },
+   "fert_obs": {
+    "onset": 1975,
+    "peak": 7.046,
+    "peak_year": 1962,
+    "value": 6.299,
+    "share_fall": 0.1060175986375248
+   },
+   "fert_implied": {
+    "onset": 1977,
+    "peak": 6.725249868490268,
+    "peak_year": 1962,
+    "value": 5.962099414145074,
+    "share_fall": 0.11347540526646804
+   },
+   "region": "Middle East, North Africa, Afghanistan & Pakistan"
+  },
+  "MCO": {
+   "mort_long": {
+    "onset": 1958,
+    "peak": 2.002,
+    "peak_year": 1951,
+    "value": 1.7450001,
+    "share_fall": 0.12837157842157831
+   },
+   "mort_obs": {
+    "onset": 1988,
+    "peak": 0.9714573,
+    "peak_year": 1985,
+    "value": 0.84818906,
+    "share_fall": 0.1268900238847347
+   },
+   "fert_obs": {
+    "onset": 1962,
+    "peak": 3.07,
+    "peak_year": 1951,
+    "value": 2.756,
+    "share_fall": 0.10228013029315963
+   },
+   "fert_implied": {
+    "onset": 1963,
+    "peak": 2.999769940451496,
+    "peak_year": 1952,
+    "value": 2.69187054383054,
+    "share_fall": 0.10264100338795112
+   },
+   "region": "Europe & Central Asia"
+  },
+  "MDA": {
+   "mort_long": {
+    "onset": 1857,
+    "peak": 39.68,
+    "peak_year": 1800,
+    "value": 35.693,
+    "share_fall": 0.10047883064516139
+   },
+   "mort_obs": {
+    "onset": 1975,
+    "peak": 6.3777747,
+    "peak_year": 1971,
+    "value": 5.6988163,
+    "share_fall": 0.10645694335988376
+   },
+   "fert_obs": {
+    "onset": 1962,
+    "peak": 3.534,
+    "peak_year": 1953,
+    "value": 3.043,
+    "share_fall": 0.1389360498019241
+   },
+   "fert_implied": {
+    "onset": 1962,
+    "peak": 3.4611933802937216,
+    "peak_year": 1953,
+    "value": 2.998663129025748,
+    "share_fall": 0.13363317227560478
+   },
+   "region": "Europe & Central Asia"
+  },
+  "MDG": {
+   "mort_long": {
+    "onset": 1941,
+    "peak": 43.713,
+    "peak_year": 1800,
+    "value": 38.808,
+    "share_fall": 0.11220918262301838
+   },
+   "mort_obs": {
+    "onset": 1983,
+    "peak": 30.479315,
+    "peak_year": 1982,
+    "value": 23.946335,
+    "share_fall": 0.21434143122967164
+   },
+   "fert_obs": {
+    "onset": 1983,
+    "peak": 7.433,
+    "peak_year": 1953,
+    "value": 6.626,
+    "share_fall": 0.10856989102650338
+   },
+   "fert_implied": {
+    "onset": 1967,
+    "peak": 7.084069161976556,
+    "peak_year": 1950,
+    "value": 6.361554006012449,
+    "share_fall": 0.10199154461141868
+   },
+   "region": "Sub-Saharan Africa"
+  },
+  "MDV": {
+   "mort_long": {
+    "onset": 1869,
+    "peak": 45.823997,
+    "peak_year": 1800,
+    "value": 41.225,
+    "share_fall": 0.10036219668921498
+   },
+   "mort_obs": {
+    "onset": 1966,
+    "peak": 33.40872,
+    "peak_year": 1962,
+    "value": 29.74456,
+    "share_fall": 0.10967675505077723
+   },
+   "fert_obs": {
+    "onset": 1988,
+    "peak": 7.399,
+    "peak_year": 1973,
+    "value": 6.583,
+    "share_fall": 0.11028517367211788
+   },
+   "fert_implied": {
+    "onset": 1988,
+    "peak": 7.505996064143819,
+    "peak_year": 1973,
+    "value": 6.650589420880548,
+    "share_fall": 0.1139631084206868
+   },
+   "region": "South Asia"
+  },
+  "MEX": {
+   "mort_long": {
+    "onset": 1895,
+    "peak": 54.203003,
+    "peak_year": 1893,
+    "value": 45.055,
+    "share_fall": 0.16877299215322072
+   },
+   "mort_obs": {
+    "onset": 1953,
+    "peak": 24.32066,
+    "peak_year": 1951,
+    "value": 21.869808,
+    "share_fall": 0.10077242969557576
+   },
+   "fert_obs": {
+    "onset": 1973,
+    "peak": 6.833,
+    "peak_year": 1964,
+    "value": 6.121,
+    "share_fall": 0.10420020488804327
+   },
+   "fert_implied": {
+    "onset": 1973,
+    "peak": 6.778369375273045,
+    "peak_year": 1951,
+    "value": 6.099666156270606,
+    "share_fall": 0.10012780086583872
+   },
+   "region": "Latin America & Caribbean"
+  },
+  "MHL": {
+   "mort_long": {
+    "onset": 1961,
+    "peak": 13.367,
+    "peak_year": 1950,
+    "value": 11.55,
+    "share_fall": 0.13593177227500564
+   },
+   "mort_obs": {
+    "onset": 1962,
+    "peak": 12.731875,
+    "peak_year": 1959,
+    "value": 11.021126,
+    "share_fall": 0.13436740464385644
+   },
+   "fert_obs": {
+    "onset": 1980,
+    "peak": 8.199,
+    "peak_year": 1966,
+    "value": 7.37,
+    "share_fall": 0.10110989145017679
+   },
+   "fert_implied": {
+    "onset": 1980,
+    "peak": 7.801015713681587,
+    "peak_year": 1966,
+    "value": 7.002145516365749,
+    "share_fall": 0.10240592079756516
+   },
+   "region": "East Asia & Pacific"
+  },
+  "MKD": {
+   "mort_long": {
+    "onset": 1908,
+    "peak": 39.68,
+    "peak_year": 1800,
+    "value": 35.616,
+    "share_fall": 0.10241935483870968
+   },
+   "mort_obs": {
+    "onset": 1984,
+    "peak": 5.6762643,
+    "peak_year": 1981,
+    "value": 5.076867,
+    "share_fall": 0.1055971442344571
+   },
+   "fert_obs": {
+    "onset": 1953,
+    "peak": 5.138,
+    "peak_year": 1950,
+    "value": 4.554,
+    "share_fall": 0.11366290385363953
+   },
+   "fert_implied": {
+    "onset": 1955,
+    "peak": 4.727571069465479,
+    "peak_year": 1950,
+    "value": 4.028193520043415,
+    "share_fall": 0.1479359144782012
+   },
+   "region": "Europe & Central Asia"
+  },
+  "MLI": {
+   "mort_long": {
+    "onset": 1927,
+    "peak": 49.448,
+    "peak_year": 1800,
+    "value": 44.28,
+    "share_fall": 0.10451383271315318
+   },
+   "mort_obs": {
+    "onset": 1970,
+    "peak": 43.24064,
+    "peak_year": 1963,
+    "value": 38.512367,
+    "share_fall": 0.10934789586833127
+   },
+   "fert_obs": {
+    "onset": 2008,
+    "peak": 7.365,
+    "peak_year": 1980,
+    "value": 6.624,
+    "share_fall": 0.10061099796334017
+   },
+   "fert_implied": {
+    "onset": 1963,
+    "peak": 7.399033848466759,
+    "peak_year": 1960,
+    "value": 6.577580288351515,
+    "share_fall": 0.11102173296388784
+   },
+   "region": "Sub-Saharan Africa"
+  },
+  "MLT": {
+   "mort_long": {
+    "onset": 1853,
+    "peak": 45.952,
+    "peak_year": 1800,
+    "value": 41.333,
+    "share_fall": 0.10051793175487467
+   },
+   "mort_obs": {
+    "onset": 1951,
+    "peak": 10.94132,
+    "peak_year": 1950,
+    "value": 9.533164,
+    "share_fall": 0.1287007417752154
+   },
+   "fert_obs": {
+    "onset": 1957,
+    "peak": 4.226,
+    "peak_year": 1950,
+    "value": 3.681,
+    "share_fall": 0.12896355892096545
+   },
+   "fert_implied": {
+    "onset": 1957,
+    "peak": 4.37409544596776,
+    "peak_year": 1950,
+    "value": 3.6996622677364863,
+    "share_fall": 0.15418803420327665
+   },
+   "region": "Middle East, North Africa, Afghanistan & Pakistan"
+  },
+  "MMR": {
+   "mort_long": {
+    "onset": 1948,
+    "peak": 43.313,
+    "peak_year": 1800,
+    "value": 38.026,
+    "share_fall": 0.12206496894696739
+   },
+   "mort_obs": {
+    "onset": 1974,
+    "peak": 17.990078,
+    "peak_year": 1968,
+    "value": 15.9106455,
+    "share_fall": 0.11558774230995561
+   },
+   "fert_obs": {
+    "onset": 1974,
+    "peak": 5.943,
+    "peak_year": 1950,
+    "value": 5.341,
+    "share_fall": 0.10129564193168428
+   },
+   "fert_implied": {
+    "onset": 1972,
+    "peak": 5.902131321381999,
+    "peak_year": 1960,
+    "value": 5.277730059097751,
+    "share_fall": 0.1057925058397452
+   },
+   "region": "East Asia & Pacific"
+  },
+  "MNE": {
+   "mort_long": {
+    "onset": 1923,
+    "peak": 37.52,
+    "peak_year": 1800,
+    "value": 33.037,
+    "share_fall": 0.11948294243070368
+   },
+   "mort_obs": {
+    "onset": 1986,
+    "peak": 2.725304,
+    "peak_year": 1984,
+    "value": 2.2544184,
+    "share_fall": 0.17278277946240128
+   },
+   "fert_obs": {
+    "onset": 1955,
+    "peak": 4.626,
+    "peak_year": 1951,
+    "value": 4.157,
+    "share_fall": 0.10138348465196723
+   },
+   "fert_implied": {
+    "onset": 1956,
+    "peak": 4.682475936278849,
+    "peak_year": 1951,
+    "value": 4.106730703765718,
+    "share_fall": 0.12295743541410997
+   },
+   "region": "Europe & Central Asia"
+  },
+  "MNG": {
+   "mort_long": {
+    "onset": 1946,
+    "peak": 42.004,
+    "peak_year": 1800,
+    "value": 35.329002,
+    "share_fall": 0.15891338920102838
+   },
+   "mort_obs": {
+    "onset": 1981,
+    "peak": 17.260553,
+    "peak_year": 1978,
+    "value": 15.485481,
+    "share_fall": 0.10283981052055524
+   },
+   "fert_obs": {
+    "onset": 1978,
+    "peak": 7.409,
+    "peak_year": 1966,
+    "value": 6.62,
+    "share_fall": 0.10649210419759747
+   },
+   "fert_implied": {
+    "onset": 1979,
+    "peak": 7.533949446710579,
+    "peak_year": 1968,
+    "value": 6.561196425292281,
+    "share_fall": 0.1291159475251078
+   },
+   "region": "East Asia & Pacific"
+  },
+  "MOZ": {
+   "mort_long": {
+    "onset": 1934,
+    "peak": 43.979,
+    "peak_year": 1800,
+    "value": 39.357998,
+    "share_fall": 0.10507292116692046
+   },
+   "mort_obs": {
+    "onset": 1982,
+    "peak": 30.941507,
+    "peak_year": 1981,
+    "value": 26.01858,
+    "share_fall": 0.15910430607016013
+   },
+   "fert_obs": {
+    "onset": 1995,
+    "peak": 6.701,
+    "peak_year": 1971,
+    "value": 6.019,
+    "share_fall": 0.10177585435009695
+   },
+   "fert_implied": {
+    "onset": 2002,
+    "peak": 6.176456507898008,
+    "peak_year": 1981,
+    "value": 5.512171530886303,
+    "share_fall": 0.10755114622150497
+   },
+   "region": "Sub-Saharan Africa"
+  },
+  "MRT": {
+   "mort_long": {
+    "onset": 1940,
+    "peak": 41.744,
+    "peak_year": 1800,
+    "value": 33.77,
+    "share_fall": 0.1910214641625143
+   },
+   "mort_obs": {
+    "onset": 1957,
+    "peak": 31.039257,
+    "peak_year": 1950,
+    "value": 27.642914,
+    "share_fall": 0.10942088594453137
+   },
+   "fert_obs": {
+    "onset": 1994,
+    "peak": 6.736,
+    "peak_year": 1977,
+    "value": 6.058,
+    "share_fall": 0.10065320665083133
+   },
+   "fert_implied": {
+    "onset": 1987,
+    "peak": 6.846482368710932,
+    "peak_year": 1974,
+    "value": 6.122132820399576,
+    "share_fall": 0.10579878969990508
+   },
+   "region": "Sub-Saharan Africa"
+  },
+  "MUS": {
+   "mort_long": {
+    "onset": 1863,
+    "peak": 42.786,
+    "peak_year": 1800,
+    "value": 36.876,
+    "share_fall": 0.1381292946290844
+   },
+   "mort_obs": {
+    "onset": 1957,
+    "peak": 14.428225,
+    "peak_year": 1956,
+    "value": 12.210478,
+    "share_fall": 0.15370892815990878
+   },
+   "fert_obs": {
+    "onset": 1965,
+    "peak": 6.18,
+    "peak_year": 1963,
+    "value": 5.508,
+    "share_fall": 0.10873786407766983
+   },
+   "fert_implied": {
+    "onset": 1965,
+    "peak": 6.11657986974934,
+    "peak_year": 1963,
+    "value": 5.423844286533963,
+    "share_fall": 0.1132553809427761
+   },
+   "region": "Sub-Saharan Africa"
+  },
+  "MWI": {
+   "mort_long": {
+    "onset": 1945,
+    "peak": 43.979,
+    "peak_year": 1800,
+    "value": 39.488,
+    "share_fall": 0.10211691943882306
+   },
+   "mort_obs": {
+    "onset": 1973,
+    "peak": 35.846825,
+    "peak_year": 1961,
+    "value": 32.242348,
+    "share_fall": 0.10055219674266835
+   },
+   "fert_obs": {
+    "onset": 1990,
+    "peak": 7.518,
+    "peak_year": 1980,
+    "value": 6.74,
+    "share_fall": 0.10348496940675711
+   },
+   "fert_implied": {
+    "onset": 2000,
+    "peak": 6.78155810484939,
+    "peak_year": 1980,
+    "value": 6.034317526789013,
+    "share_fall": 0.11018715264358447
+   },
+   "region": "Sub-Saharan Africa"
+  },
+  "MYS": {
+   "mort_long": {
+    "onset": 1932,
+    "peak": 43.579002,
+    "peak_year": 1800,
+    "value": 37.804,
+    "share_fall": 0.1325179957081165
+   },
+   "mort_obs": {
+    "onset": 1952,
+    "peak": 17.142567,
+    "peak_year": 1950,
+    "value": 15.287549,
+    "share_fall": 0.10821121480814389
+   },
+   "fert_obs": {
+    "onset": 1966,
+    "peak": 6.468,
+    "peak_year": 1957,
+    "value": 5.635,
+    "share_fall": 0.12878787878787878
+   },
+   "fert_implied": {
+    "onset": 1965,
+    "peak": 6.428471124550431,
+    "peak_year": 1957,
+    "value": 5.777243797895831,
+    "share_fall": 0.10130360921550274
+   },
+   "region": "East Asia & Pacific"
+  },
+  "NAM": {
+   "mort_long": {
+    "onset": 1932,
+    "peak": 41.234,
+    "peak_year": 1800,
+    "value": 36.746,
+    "share_fall": 0.10884221758742785
+   },
+   "mort_obs": {
+    "onset": 1984,
+    "peak": 10.313254,
+    "peak_year": 1979,
+    "value": 9.208772,
+    "share_fall": 0.10709345469431863
+   },
+   "fert_obs": {
+    "onset": 1985,
+    "peak": 6.552,
+    "peak_year": 1974,
+    "value": 5.877,
+    "share_fall": 0.10302197802197799
+   },
+   "fert_implied": {
+    "onset": 1990,
+    "peak": 5.718998425019687,
+    "peak_year": 1976,
+    "value": 5.084371191678273,
+    "share_fall": 0.11096824761570545
+   },
+   "region": "Sub-Saharan Africa"
+  },
+  "NER": {
+   "mort_long": {
+    "onset": 1946,
+    "peak": 43.313,
+    "peak_year": 1800,
+    "value": 37.95,
+    "share_fall": 0.12381963844573218
+   },
+   "mort_obs": {
+    "onset": 1993,
+    "peak": 34.46083,
+    "peak_year": 1974,
+    "value": 30.635004,
+    "share_fall": 0.11101955466539848
+   },
+   "fert_obs": null,
+   "fert_implied": null,
+   "region": "Sub-Saharan Africa"
+  },
+  "NGA": {
+   "mort_long": {
+    "onset": 1946,
+    "peak": 43.846,
+    "peak_year": 1800,
+    "value": 38.652,
+    "share_fall": 0.11846006477215698
+   },
+   "mort_obs": {
+    "onset": 1971,
+    "peak": 40.67637,
+    "peak_year": 1968,
+    "value": 27.631657,
+    "share_fall": 0.32069511119109195
+   },
+   "fert_obs": {
+    "onset": 1996,
+    "peak": 6.921,
+    "peak_year": 1978,
+    "value": 6.217,
+    "share_fall": 0.10171940471030205
+   },
+   "fert_implied": {
+    "onset": 1971,
+    "peak": 6.982003909360748,
+    "peak_year": 1968,
+    "value": 5.790285459795711,
+    "share_fall": 0.17068429995682255
+   },
+   "region": "Sub-Saharan Africa"
+  },
+  "NIC": {
+   "mort_long": {
+    "onset": 1927,
+    "peak": 50.939003,
+    "peak_year": 1800,
+    "value": 45.101997,
+    "share_fall": 0.11458814771070414
+   },
+   "mort_obs": {
+    "onset": 1968,
+    "peak": 19.913765,
+    "peak_year": 1955,
+    "value": 17.876219,
+    "share_fall": 0.10231847167022423
+   },
+   "fert_obs": {
+    "onset": 1975,
+    "peak": 7.163,
+    "peak_year": 1959,
+    "value": 6.445,
+    "share_fall": 0.10023733072734886
+   },
+   "fert_implied": {
+    "onset": 1978,
+    "peak": 6.8670406405953415,
+    "peak_year": 1964,
+    "value": 6.030610751739115,
+    "share_fall": 0.12180354429702511
+   },
+   "region": "Latin America & Caribbean"
+  },
+  "NLD": {
+   "mort_long": {
+    "onset": 1836,
+    "peak": 32.35,
+    "peak_year": 1800,
+    "value": 28.820002,
+    "share_fall": 0.10911894899536334
+   },
+   "mort_obs": {
+    "onset": 1953,
+    "peak": 3.1889918,
+    "peak_year": 1950,
+    "value": 2.7650998,
+    "share_fall": 0.13292351520000767
+   },
+   "fert_obs": {
+    "onset": 1967,
+    "peak": 3.207,
+    "peak_year": 1961,
+    "value": 2.799,
+    "share_fall": 0.12722170252572496
+   },
+   "fert_implied": {
+    "onset": 1897,
+    "peak": 5.126765290089236,
+    "peak_year": 1886,
+    "value": 4.5920671063651595,
+    "share_fall": 0.10429542869023556
+   },
+   "region": "Europe & Central Asia"
+  },
+  "NOR": {
+   "mort_long": {
+    "onset": 1826,
+    "peak": 33.573,
+    "peak_year": 1800,
+    "value": 29.98,
+    "share_fall": 0.10702052244363025
+   },
+   "mort_obs": {
+    "onset": 1952,
+    "peak": 3.2882705,
+    "peak_year": 1950,
+    "value": 2.910688,
+    "share_fall": 0.1148270800714235
+   },
+   "fert_obs": {
+    "onset": 1970,
+    "peak": 2.962,
+    "peak_year": 1964,
+    "value": 2.512,
+    "share_fall": 0.1519243754220122
+   },
+   "fert_implied": {
+    "onset": 1867,
+    "peak": 4.250061070907921,
+    "peak_year": 1863,
+    "value": 3.735294600153957,
+    "share_fall": 0.12111978208444829
+   },
+   "region": "Europe & Central Asia"
+  },
+  "NPL": {
+   "mort_long": {
+    "onset": 1940,
+    "peak": 40.724,
+    "peak_year": 1800,
+    "value": 36.61,
+    "share_fall": 0.1010215106571063
+   },
+   "mort_obs": {
+    "onset": 1964,
+    "peak": 34.342796,
+    "peak_year": 1950,
+    "value": 30.821318,
+    "share_fall": 0.10253905942894104
+   },
+   "fert_obs": {
+    "onset": 1985,
+    "peak": 6.093,
+    "peak_year": 1961,
+    "value": 5.457,
+    "share_fall": 0.10438207779419006
+   },
+   "fert_implied": {
+    "onset": 1991,
+    "peak": 5.637552350361356,
+    "peak_year": 1962,
+    "value": 5.058992250780182,
+    "share_fall": 0.10262611566597502
+   },
+   "region": "South Asia"
+  },
+  "NRU": {
+   "mort_long": {
+    "onset": 1954,
+    "peak": 13.232,
+    "peak_year": 1950,
+    "value": 11.905001,
+    "share_fall": 0.10028710701330101
+   },
+   "mort_obs": {
+    "onset": 1988,
+    "peak": 8.575135,
+    "peak_year": 1985,
+    "value": 7.392597,
+    "share_fall": 0.13790313505268426
+   },
+   "fert_obs": {
+    "onset": 1970,
+    "peak": 5.476,
+    "peak_year": 1965,
+    "value": 4.74,
+    "share_fall": 0.13440467494521546
+   },
+   "fert_implied": {
+    "onset": 1969,
+    "peak": 5.26961240519191,
+    "peak_year": 1964,
+    "value": 4.715872950495755,
+    "share_fall": 0.10508162880263838
+   },
+   "region": "East Asia & Pacific"
+  },
+  "NZL": {
+   "mort_long": {
+    "onset": 1853,
+    "peak": 39.099,
+    "peak_year": 1800,
+    "value": 34.607998,
+    "share_fall": 0.11486232384459949
+   },
+   "mort_obs": {
+    "onset": 1955,
+    "peak": 3.5514352,
+    "peak_year": 1950,
+    "value": 3.1347964,
+    "share_fall": 0.11731561369893495
+   },
+   "fert_obs": {
+    "onset": 1964,
+    "peak": 4.306,
+    "peak_year": 1961,
+    "value": 3.776,
+    "share_fall": 0.1230840687412913
+   },
+   "fert_implied": {
+    "onset": 1964,
+    "peak": 4.262215822445699,
+    "peak_year": 1961,
+    "value": 3.744774111388401,
+    "share_fall": 0.12140204358783158
+   },
+   "region": "East Asia & Pacific"
+  },
+  "OMN": {
+   "mort_long": {
+    "onset": 1960,
+    "peak": 41.361,
+    "peak_year": 1800,
+    "value": 37.08,
+    "share_fall": 0.10350330021034304
+   },
+   "mort_obs": {
+    "onset": 1962,
+    "peak": 38.850033,
+    "peak_year": 1959,
+    "value": 33.89791,
+    "share_fall": 0.12746766521408104
+   },
+   "fert_obs": {
+    "onset": 1988,
+    "peak": 7.904,
+    "peak_year": 1981,
+    "value": 6.953,
+    "share_fall": 0.12031882591093113
+   },
+   "fert_implied": {
+    "onset": 1987,
+    "peak": 8.012112941337625,
+    "peak_year": 1980,
+    "value": 7.182057801625671,
+    "share_fall": 0.10360002982850813
+   },
+   "region": "Middle East, North Africa, Afghanistan & Pakistan"
+  },
+  "PAK": {
+   "mort_long": {
+    "onset": 1926,
+    "peak": 56.996002,
+    "peak_year": 1921,
+    "value": 51.063,
+    "share_fall": 0.10409505564969268
+   },
+   "mort_obs": {
+    "onset": 1953,
+    "peak": 38.13718,
+    "peak_year": 1950,
+    "value": 33.532146,
+    "share_fall": 0.12074920064881578
+   },
+   "fert_obs": {
+    "onset": 1993,
+    "peak": 6.812,
+    "peak_year": 1975,
+    "value": 6.112,
+    "share_fall": 0.10275983558426305
+   },
+   "fert_implied": {
+    "onset": 1994,
+    "peak": 6.657055783344244,
+    "peak_year": 1950,
+    "value": 5.943050752733242,
+    "share_fall": 0.10725537742937674
+   },
+   "region": "Middle East, North Africa, Afghanistan & Pakistan"
+  },
+  "PAN": {
+   "mort_long": {
+    "onset": 1924,
+    "peak": 40.596,
+    "peak_year": 1800,
+    "value": 36.43,
+    "share_fall": 0.102620947876638
+   },
+   "mort_obs": {
+    "onset": 1955,
+    "peak": 12.161476,
+    "peak_year": 1951,
+    "value": 10.80331,
+    "share_fall": 0.11167772727586689
+   },
+   "fert_obs": {
+    "onset": 1970,
+    "peak": 5.872,
+    "peak_year": 1962,
+    "value": 5.175,
+    "share_fall": 0.11869891008174394
+   },
+   "fert_implied": {
+    "onset": 1970,
+    "peak": 5.782297463515175,
+    "peak_year": 1962,
+    "value": 5.134053691565535,
+    "share_fall": 0.11210834033355999
+   },
+   "region": "Latin America & Caribbean"
+  },
+  "PER": {
+   "mort_long": {
+    "onset": 1941,
+    "peak": 37.161,
+    "peak_year": 1800,
+    "value": 32.891,
+    "share_fall": 0.11490541158741696
+   },
+   "mort_obs": {
+    "onset": 1955,
+    "peak": 31.01311,
+    "peak_year": 1952,
+    "value": 27.16263,
+    "share_fall": 0.12415652606268768
+   },
+   "fert_obs": {
+    "onset": 1971,
+    "peak": 6.962,
+    "peak_year": 1956,
+    "value": 6.207,
+    "share_fall": 0.108445848893996
+   },
+   "fert_implied": {
+    "onset": 1967,
+    "peak": 7.339674300717875,
+    "peak_year": 1952,
+    "value": 6.545506490902713,
+    "share_fall": 0.1082020505647624
+   },
+   "region": "Latin America & Caribbean"
+  },
+  "PHL": {
+   "mort_long": {
+    "onset": 1903,
+    "peak": 75.629,
+    "peak_year": 1902,
+    "value": 42.954002,
+    "share_fall": 0.4320432373824855
+   },
+   "mort_obs": {
+    "onset": 1956,
+    "peak": 13.606038,
+    "peak_year": 1953,
+    "value": 12.016608,
+    "share_fall": 0.11681798918979946
+   },
+   "fert_obs": {
+    "onset": 1969,
+    "peak": 7.129,
+    "peak_year": 1950,
+    "value": 6.333,
+    "share_fall": 0.1116566138308317
+   },
+   "fert_implied": {
+    "onset": 1967,
+    "peak": 7.133218241445455,
+    "peak_year": 1950,
+    "value": 6.39651323283823,
+    "share_fall": 0.10327806940306672
+   },
+   "region": "East Asia & Pacific"
+  },
+  "PLW": {
+   "mort_long": {
+    "onset": 1969,
+    "peak": 9.7,
+    "peak_year": 1965,
+    "value": 8.41,
+    "share_fall": 0.13298969072164946
+   },
+   "mort_obs": {
+    "onset": 1969,
+    "peak": 9.700778,
+    "peak_year": 1965,
+    "value": 8.40637,
+    "share_fall": 0.13343342152557236
+   },
+   "fert_obs": {
+    "onset": 1970,
+    "peak": 7.191,
+    "peak_year": 1959,
+    "value": 6.387,
+    "share_fall": 0.11180642469753865
+   },
+   "fert_implied": {
+    "onset": 1971,
+    "peak": 6.825434904287474,
+    "peak_year": 1965,
+    "value": 5.987337250961202,
+    "share_fall": 0.12279036648636277
+   },
+   "region": "East Asia & Pacific"
+  },
+  "PNG": {
+   "mort_long": {
+    "onset": 1935,
+    "peak": 42.395,
+    "peak_year": 1800,
+    "value": 37.903,
+    "share_fall": 0.10595589102488512
+   },
+   "mort_obs": {
+    "onset": 1952,
+    "peak": 28.420197,
+    "peak_year": 1951,
+    "value": 24.992678,
+    "share_fall": 0.1206015215165468
+   },
+   "fert_obs": {
+    "onset": 1982,
+    "peak": 6.258,
+    "peak_year": 1969,
+    "value": 5.587,
+    "share_fall": 0.10722275487376165
+   },
+   "fert_implied": {
+    "onset": 1982,
+    "peak": 5.971526516961299,
+    "peak_year": 1969,
+    "value": 5.341283575715345,
+    "share_fall": 0.10554134515786473
+   },
+   "region": "East Asia & Pacific"
+  },
+  "POL": {
+   "mort_long": {
+    "onset": 1896,
+    "peak": 36.920998,
+    "peak_year": 1800,
+    "value": 33.117,
+    "share_fall": 0.1030307468936782
+   },
+   "mort_obs": {
+    "onset": 1952,
+    "peak": 13.70687,
+    "peak_year": 1950,
+    "value": 11.757304,
+    "share_fall": 0.14223276357038483
+   },
+   "fert_obs": {
+    "onset": 1959,
+    "peak": 3.701,
+    "peak_year": 1951,
+    "value": 3.248,
+    "share_fall": 0.12239935152661441
+   },
+   "fert_implied": {
+    "onset": 1958,
+    "peak": 3.7938769581183474,
+    "peak_year": 1951,
+    "value": 3.384952851320491,
+    "share_fall": 0.10778528437060086
+   },
+   "region": "Europe & Central Asia"
+  },
+  "PRK": {
+   "mort_long": {
+    "onset": 1917,
+    "peak": 53.161,
+    "peak_year": 1908,
+    "value": 47.482002,
+    "share_fall": 0.10682639528978011
+   },
+   "mort_obs": {
+    "onset": 1951,
+    "peak": 46.31871,
+    "peak_year": 1950,
+    "value": 40.49095,
+    "share_fall": 0.12581870263658046
+   },
+   "fert_obs": {
+    "onset": 1951,
+    "peak": 4.994,
+    "peak_year": 1950,
+    "value": 2.597,
+    "share_fall": 0.4799759711653985
+   },
+   "fert_implied": {
+    "onset": 1951,
+    "peak": 6.130375142717339,
+    "peak_year": 1950,
+    "value": 3.14283352265556,
+    "share_fall": 0.4873342251511099
+   },
+   "region": "East Asia & Pacific"
+  },
+  "PRT": {
+   "mort_long": {
+    "onset": 1902,
+    "peak": 37.281,
+    "peak_year": 1800,
+    "value": 33.27,
+    "share_fall": 0.10758831576406203
+   },
+   "mort_obs": {
+    "onset": 1954,
+    "peak": 14.993178,
+    "peak_year": 1950,
+    "value": 13.090307,
+    "share_fall": 0.12691578796703418
+   },
+   "fert_obs": {
+    "onset": 1972,
+    "peak": 3.233,
+    "peak_year": 1962,
+    "value": 2.857,
+    "share_fall": 0.1163006495515001
+   },
+   "fert_implied": {
+    "onset": 1950,
+    "peak": 3.563663523344914,
+    "peak_year": 1948,
+    "value": 3.1915791931601825,
+    "share_fall": 0.10441062343492158
+   },
+   "region": "Europe & Central Asia"
+  },
+  "PRY": {
+   "mort_long": {
+    "onset": 1933,
+    "peak": 37.4,
+    "peak_year": 1800,
+    "value": 32.476997,
+    "share_fall": 0.13163109625668457
+   },
+   "mort_obs": {
+    "onset": 1971,
+    "peak": 8.645186,
+    "peak_year": 1956,
+    "value": 7.7262983,
+    "share_fall": 0.10628894508458242
+   },
+   "fert_obs": {
+    "onset": 1969,
+    "peak": 6.511,
+    "peak_year": 1957,
+    "value": 5.837,
+    "share_fall": 0.10351712486561204
+   },
+   "fert_implied": {
+    "onset": 1970,
+    "peak": 6.268754190988139,
+    "peak_year": 1961,
+    "value": 5.597953648106222,
+    "share_fall": 0.10700699412432668
+   },
+   "region": "Latin America & Caribbean"
+  },
+  "PSE": {
+   "mort_long": {
+    "onset": 1932,
+    "peak": 43.52,
+    "peak_year": 1800,
+    "value": 38.309,
+    "share_fall": 0.11973805147058836
+   },
+   "mort_obs": {
+    "onset": 1977,
+    "peak": 10.897134,
+    "peak_year": 1975,
+    "value": 9.626697,
+    "share_fall": 0.11658450744938986
+   },
+   "fert_obs": {
+    "onset": 1983,
+    "peak": 7.841,
+    "peak_year": 1951,
+    "value": 7.042,
+    "share_fall": 0.10190026782298178
+   },
+   "fert_implied": {
+    "onset": 1984,
+    "peak": 7.754502335465986,
+    "peak_year": 1962,
+    "value": 6.9406683426263145,
+    "share_fall": 0.10494986752631708
+   },
+   "region": "Middle East, North Africa, Afghanistan & Pakistan"
+  },
+  "QAT": {
+   "mort_long": {
+    "onset": 1941,
+    "peak": 43.313,
+    "peak_year": 1800,
+    "value": 36.698997,
+    "share_fall": 0.1527024911689332
+   },
+   "mort_obs": {
+    "onset": 1971,
+    "peak": 7.0333605,
+    "peak_year": 1969,
+    "value": 6.141496,
+    "share_fall": 0.12680488935552214
+   },
+   "fert_obs": {
+    "onset": 1975,
+    "peak": 6.55,
+    "peak_year": 1952,
+    "value": 5.861,
+    "share_fall": 0.10519083969465648
+   },
+   "fert_implied": {
+    "onset": 1973,
+    "peak": 6.689600830423705,
+    "peak_year": 1960,
+    "value": 6.005225229055505,
+    "share_fall": 0.10230440032471322
+   },
+   "region": "Middle East, North Africa, Afghanistan & Pakistan"
+  },
+  "ROU": {
+   "mort_long": {
+    "onset": 1865,
+    "peak": 39.8,
+    "peak_year": 1864,
+    "value": 35.6,
+    "share_fall": 0.10552763819095468
+   },
+   "mort_obs": {
+    "onset": 1960,
+    "peak": 10.1374855,
+    "peak_year": 1955,
+    "value": 8.798535,
+    "share_fall": 0.13207915315883811
+   },
+   "fert_obs": {
+    "onset": 1957,
+    "peak": 3.076,
+    "peak_year": 1950,
+    "value": 2.711,
+    "share_fall": 0.11866059817945396
+   },
+   "fert_implied": {
+    "onset": 1956,
+    "peak": 3.308916412156411,
+    "peak_year": 1951,
+    "value": 2.8719143582485227,
+    "share_fall": 0.13206802453589195
+   },
+   "region": "Europe & Central Asia"
+  },
+  "RUS": {
+   "mort_long": {
+    "onset": 1870,
+    "peak": 48.56,
+    "peak_year": 1868,
+    "value": 40.29,
+    "share_fall": 0.17030477759472817
+   },
+   "mort_obs": {
+    "onset": 1960,
+    "peak": 5.238598,
+    "peak_year": 1958,
+    "value": 4.5612364,
+    "share_fall": 0.12930207662431803
+   },
+   "fert_obs": {
+    "onset": 1960,
+    "peak": 2.926,
+    "peak_year": 1950,
+    "value": 2.633,
+    "share_fall": 0.1001367053998633
+   },
+   "fert_implied": {
+    "onset": 1958,
+    "peak": 3.0103597529280557,
+    "peak_year": 1950,
+    "value": 2.652213909758479,
+    "share_fall": 0.11897111061932808
+   },
+   "region": "Europe & Central Asia"
+  },
+  "RWA": {
+   "mort_long": {
+    "onset": 1933,
+    "peak": 42.004,
+    "peak_year": 1800,
+    "value": 37.389,
+    "share_fall": 0.10987048852490222
+   },
+   "mort_obs": {
+    "onset": 1960,
+    "peak": 24.548399,
+    "peak_year": 1956,
+    "value": 21.766869,
+    "share_fall": 0.1133080002488146
+   },
+   "fert_obs": {
+    "onset": 1987,
+    "peak": 8.288,
+    "peak_year": 1959,
+    "value": 7.426,
+    "share_fall": 0.10400579150579148
+   },
+   "fert_implied": {
+    "onset": 1988,
+    "peak": 7.361654667009515,
+    "peak_year": 1981,
+    "value": 6.538132100490986,
+    "share_fall": 0.11186650335678727
+   },
+   "region": "Sub-Saharan Africa"
+  },
+  "SAU": {
+   "mort_long": {
+    "onset": 1946,
+    "peak": 41.616,
+    "peak_year": 1800,
+    "value": 35.329002,
+    "share_fall": 0.1510716551326412
+   },
+   "mort_obs": {
+    "onset": 1974,
+    "peak": 15.942194,
+    "peak_year": 1972,
+    "value": 13.920381,
+    "share_fall": 0.1268215027366998
+   },
+   "fert_obs": {
+    "onset": 1983,
+    "peak": 7.672,
+    "peak_year": 1964,
+    "value": 6.875,
+    "share_fall": 0.10388425443169969
+   },
+   "fert_implied": {
+    "onset": 1983,
+    "peak": 7.661413282931958,
+    "peak_year": 1970,
+    "value": 6.863721001221001,
+    "share_fall": 0.10411816361454496
+   },
+   "region": "Middle East, North Africa, Afghanistan & Pakistan"
+  },
+  "SDN": {
+   "mort_long": {
+    "onset": 1935,
+    "peak": 42.525,
+    "peak_year": 1800,
+    "value": 38.208,
+    "share_fall": 0.10151675485008815
+   },
+   "mort_obs": {
+    "onset": 1960,
+    "peak": 20.009989,
+    "peak_year": 1953,
+    "value": 17.887733,
+    "share_fall": 0.10605982841869632
+   },
+   "fert_obs": {
+    "onset": 1985,
+    "peak": 7.019,
+    "peak_year": 1971,
+    "value": 6.279,
+    "share_fall": 0.10542812366433962
+   },
+   "fert_implied": {
+    "onset": 1989,
+    "peak": 7.383690776771127,
+    "peak_year": 1988,
+    "value": 5.825682617050194,
+    "share_fall": 0.21100669120954807
+   },
+   "region": "Sub-Saharan Africa"
+  },
+  "SEN": {
+   "mort_long": {
+    "onset": 1935,
+    "peak": 51.24,
+    "peak_year": 1800,
+    "value": 46.107998,
+    "share_fall": 0.10015616705698671
+   },
+   "mort_obs": {
+    "onset": 1957,
+    "peak": 33.744556,
+    "peak_year": 1950,
+    "value": 30.117958,
+    "share_fall": 0.10747209120191126
+   },
+   "fert_obs": {
+    "onset": 1989,
+    "peak": 7.292,
+    "peak_year": 1980,
+    "value": 6.479,
+    "share_fall": 0.11149204607789354
+   },
+   "fert_implied": {
+    "onset": 1989,
+    "peak": 7.050638480016356,
+    "peak_year": 1981,
+    "value": 6.240412937443765,
+    "share_fall": 0.11491520163301738
+   },
+   "region": "Sub-Saharan Africa"
+  },
+  "SGP": {
+   "mort_long": {
+    "onset": 1823,
+    "peak": 45.605,
+    "peak_year": 1800,
+    "value": 40.469,
+    "share_fall": 0.1126192303475495
+   },
+   "mort_obs": {
+    "onset": 1956,
+    "peak": 7.7972155,
+    "peak_year": 1954,
+    "value": 6.6480007,
+    "share_fall": 0.14738784634078672
+   },
+   "fert_obs": {
+    "onset": 1960,
+    "peak": 6.444,
+    "peak_year": 1956,
+    "value": 5.765,
+    "share_fall": 0.10536933581626329
+   },
+   "fert_implied": {
+    "onset": 1960,
+    "peak": 6.428301990613368,
+    "peak_year": 1956,
+    "value": 5.74495551592034,
+    "share_fall": 0.1063027959313132
+   },
+   "region": "East Asia & Pacific"
+  },
+  "SLB": {
+   "mort_long": {
+    "onset": 1943,
+    "peak": 50.487,
+    "peak_year": 1800,
+    "value": 28.06,
+    "share_fall": 0.4442133618555272
+   },
+   "mort_obs": {
+    "onset": 1954,
+    "peak": 23.20848,
+    "peak_year": 1950,
+    "value": 20.643995,
+    "share_fall": 0.11049775771614523
+   },
+   "fert_obs": {
+    "onset": 1985,
+    "peak": 7.159,
+    "peak_year": 1952,
+    "value": 6.375,
+    "share_fall": 0.10951250174605387
+   },
+   "fert_implied": {
+    "onset": 1986,
+    "peak": 6.829640761178995,
+    "peak_year": 1975,
+    "value": 6.0685916024928135,
+    "share_fall": 0.11143326351982275
+   },
+   "region": "East Asia & Pacific"
+  },
+  "SLE": {
+   "mort_long": {
+    "onset": 1947,
+    "peak": 51.391,
+    "peak_year": 1800,
+    "value": 45.502,
+    "share_fall": 0.11459204919149257
+   },
+   "mort_obs": {
+    "onset": 1964,
+    "peak": 41.382675,
+    "peak_year": 1956,
+    "value": 36.716465,
+    "share_fall": 0.11275757306650669
+   },
+   "fert_obs": {
+    "onset": 2004,
+    "peak": 6.609,
+    "peak_year": 1987,
+    "value": 5.919,
+    "share_fall": 0.10440308669995468
+   },
+   "fert_implied": {
+    "onset": 2006,
+    "peak": 6.235697538100821,
+    "peak_year": 1996,
+    "value": 5.592533182361451,
+    "share_fall": 0.10314232719107408
+   },
+   "region": "Sub-Saharan Africa"
+  },
+  "SLV": {
+   "mort_long": {
+    "onset": 1932,
+    "peak": 46.16,
+    "peak_year": 1800,
+    "value": 40.453,
+    "share_fall": 0.12363518197573642
+   },
+   "mort_obs": {
+    "onset": 1960,
+    "peak": 22.431463,
+    "peak_year": 1955,
+    "value": 20.087534,
+    "share_fall": 0.10449291693546692
+   },
+   "fert_obs": {
+    "onset": 1973,
+    "peak": 6.69,
+    "peak_year": 1963,
+    "value": 5.929,
+    "share_fall": 0.11375186846038865
+   },
+   "fert_implied": {
+    "onset": 1973,
+    "peak": 6.434094532601339,
+    "peak_year": 1964,
+    "value": 5.785408215462581,
+    "share_fall": 0.10082014086860025
+   },
+   "region": "Latin America & Caribbean"
+  },
+  "SMR": {
+   "mort_long": {
+    "onset": 1952,
+    "peak": 12.844,
+    "peak_year": 1950,
+    "value": 11.349,
+    "share_fall": 0.1163967611336032
+   },
+   "mort_obs": {
+    "onset": 1987,
+    "peak": 2.0210667,
+    "peak_year": 1985,
+    "value": 1.6783493,
+    "share_fall": 0.16957253315786158
+   },
+   "fert_obs": {
+    "onset": 1955,
+    "peak": 2.821,
+    "peak_year": 1950,
+    "value": 2.507,
+    "share_fall": 0.11130804679191775
+   },
+   "fert_implied": {
+    "onset": 1953,
+    "peak": 3.1826310444896797,
+    "peak_year": 1950,
+    "value": 2.8416900625739614,
+    "share_fall": 0.10712551255541047
+   },
+   "region": "Europe & Central Asia"
+  },
+  "SOM": {
+   "mort_long": {
+    "onset": 1935,
+    "peak": 45.196,
+    "peak_year": 1800,
+    "value": 40.399,
+    "share_fall": 0.1061377113018851
+   },
+   "mort_obs": {
+    "onset": 1990,
+    "peak": 20.381243,
+    "peak_year": 1982,
+    "value": 18.043913,
+    "share_fall": 0.11468044417114309
+   },
+   "fert_obs": null,
+   "fert_implied": {
+    "onset": 1994,
+    "peak": 9.275086993796963,
+    "peak_year": 1993,
+    "value": 6.845211740870683,
+    "share_fall": 0.2619787021460115
+   },
+   "region": "Sub-Saharan Africa"
+  },
+  "SRB": {
+   "mort_long": {
+    "onset": 1881,
+    "peak": 37.4,
+    "peak_year": 1800,
+    "value": 32.071,
+    "share_fall": 0.14248663101604275
+   },
+   "mort_obs": {
+    "onset": 1987,
+    "peak": 4.073778,
+    "peak_year": 1984,
+    "value": 3.6300933,
+    "share_fall": 0.10891234132051375
+   },
+   "fert_obs": {
+    "onset": 1954,
+    "peak": 2.928,
+    "peak_year": 1950,
+    "value": 2.548,
+    "share_fall": 0.1297814207650273
+   },
+   "fert_implied": {
+    "onset": 1954,
+    "peak": 2.9356859348209143,
+    "peak_year": 1950,
+    "value": 2.6029890362723553,
+    "share_fall": 0.11332850513822235
+   },
+   "region": "Europe & Central Asia"
+  },
+  "SSD": {
+   "mort_long": {
+    "onset": 1921,
+    "peak": 49.008,
+    "peak_year": 1800,
+    "value": 44.082,
+    "share_fall": 0.10051420176297754
+   },
+   "mort_obs": {
+    "onset": 1971,
+    "peak": 41.08612,
+    "peak_year": 1966,
+    "value": 31.769564,
+    "share_fall": 0.22675677333367084
+   },
+   "fert_obs": {
+    "onset": 2002,
+    "peak": 7.386,
+    "peak_year": 1987,
+    "value": 6.515,
+    "share_fall": 0.11792580557812082
+   },
+   "fert_implied": {
+    "onset": 1971,
+    "peak": 6.01640001443314,
+    "peak_year": 1970,
+    "value": 5.285545324581495,
+    "share_fall": 0.12147707733833346
+   },
+   "region": "Sub-Saharan Africa"
+  },
+  "STP": {
+   "mort_long": {
+    "onset": 1825,
+    "peak": 44.928,
+    "peak_year": 1800,
+    "value": 40.341,
+    "share_fall": 0.10209668803418792
+   },
+   "mort_obs": {
+    "onset": 1996,
+    "peak": 11.475046,
+    "peak_year": 1986,
+    "value": 10.139526,
+    "share_fall": 0.11638471863206479
+   },
+   "fert_obs": {
+    "onset": 1990,
+    "peak": 6.534,
+    "peak_year": 1974,
+    "value": 5.828,
+    "share_fall": 0.1080501989592898
+   },
+   "fert_implied": {
+    "onset": 1994,
+    "peak": 6.052628138365058,
+    "peak_year": 1975,
+    "value": 5.429807953927082,
+    "share_fall": 0.10290078461787244
+   },
+   "region": "Sub-Saharan Africa"
+  },
+  "SUR": {
+   "mort_long": {
+    "onset": 1927,
+    "peak": 40.596,
+    "peak_year": 1800,
+    "value": 36.275,
+    "share_fall": 0.10643905803527443
+   },
+   "mort_obs": {
+    "onset": 1987,
+    "peak": 5.664699,
+    "peak_year": 1983,
+    "value": 4.9605703,
+    "share_fall": 0.12430116763485577
+   },
+   "fert_obs": {
+    "onset": 1968,
+    "peak": 6.59,
+    "peak_year": 1960,
+    "value": 5.863,
+    "share_fall": 0.11031866464339901
+   },
+   "fert_implied": {
+    "onset": 1968,
+    "peak": 6.3820916666262235,
+    "peak_year": 1960,
+    "value": 5.685148395495436,
+    "share_fall": 0.10920295532188962
+   },
+   "region": "Latin America & Caribbean"
+  },
+  "SVK": {
+   "mort_long": {
+    "onset": 1905,
+    "peak": 36.332,
+    "peak_year": 1800,
+    "value": 32.64,
+    "share_fall": 0.10161840801497302
+   },
+   "mort_obs": {
+    "onset": 1951,
+    "peak": 12.169838,
+    "peak_year": 1950,
+    "value": 10.363323,
+    "share_fall": 0.14844199240778722
+   },
+   "fert_obs": {
+    "onset": 1958,
+    "peak": 3.608,
+    "peak_year": 1950,
+    "value": 3.188,
+    "share_fall": 0.11640798226164073
+   },
+   "fert_implied": {
+    "onset": 1958,
+    "peak": 3.615611628739335,
+    "peak_year": 1950,
+    "value": 3.1680766971553243,
+    "share_fall": 0.12377848550621406
+   },
+   "region": "Europe & Central Asia"
+  },
+  "SVN": {
+   "mort_long": {
+    "onset": 1922,
+    "peak": 36.097,
+    "peak_year": 1800,
+    "value": 32.36,
+    "share_fall": 0.10352660885946208
+   },
+   "mort_obs": {
+    "onset": 1984,
+    "peak": 1.7768538,
+    "peak_year": 1981,
+    "value": 1.5275885,
+    "share_fall": 0.1402846424393498
+   },
+   "fert_obs": {
+    "onset": 1954,
+    "peak": 2.992,
+    "peak_year": 1950,
+    "value": 2.599,
+    "share_fall": 0.13135026737967903
+   },
+   "fert_implied": {
+    "onset": 1954,
+    "peak": 2.804448328126225,
+    "peak_year": 1950,
+    "value": 2.492480601874549,
+    "share_fall": 0.11124031886161212
+   },
+   "region": "Europe & Central Asia"
+  },
+  "SWE": {
+   "mort_long": {
+    "onset": 1759,
+    "peak": 35.97,
+    "peak_year": 1752,
+    "value": 28.5,
+    "share_fall": 0.20767306088407
+   },
+   "mort_obs": {
+    "onset": 1952,
+    "peak": 2.7112596,
+    "peak_year": 1950,
+    "value": 2.43421,
+    "share_fall": 0.10218482951614072
+   },
+   "fert_obs": {
+    "onset": 1968,
+    "peak": 2.448,
+    "peak_year": 1964,
+    "value": 2.074,
+    "share_fall": 0.1527777777777778
+   },
+   "fert_implied": {
+    "onset": 1757,
+    "peak": 4.305682987771582,
+    "peak_year": 1752,
+    "value": 3.852683079250745,
+    "share_fall": 0.10520976806870963
+   },
+   "region": "Europe & Central Asia"
+  },
+  "SWZ": {
+   "mort_long": {
+    "onset": 1941,
+    "peak": 41.361,
+    "peak_year": 1800,
+    "value": 35.729,
+    "share_fall": 0.1361669205290007
+   },
+   "mort_obs": {
+    "onset": 1958,
+    "peak": 23.993643,
+    "peak_year": 1950,
+    "value": 21.523254,
+    "share_fall": 0.10296014656882235
+   },
+   "fert_obs": {
+    "onset": 1986,
+    "peak": 6.804,
+    "peak_year": 1963,
+    "value": 6.106,
+    "share_fall": 0.1025867136978249
+   },
+   "fert_implied": {
+    "onset": 1985,
+    "peak": 6.192575837850321,
+    "peak_year": 1950,
+    "value": 5.561457827602949,
+    "share_fall": 0.10191526543604801
+   },
+   "region": "Sub-Saharan Africa"
+  },
+  "SYC": {
+   "mort_long": {
+    "onset": 1812,
+    "peak": 44.672,
+    "peak_year": 1800,
+    "value": 40.170002,
+    "share_fall": 0.10077896669054442
+   },
+   "mort_obs": {
+    "onset": 1960,
+    "peak": 11.62464,
+    "peak_year": 1950,
+    "value": 10.425267,
+    "share_fall": 0.10317506606656202
+   },
+   "fert_obs": {
+    "onset": 1969,
+    "peak": 6.126,
+    "peak_year": 1966,
+    "value": 5.479,
+    "share_fall": 0.10561540972902383
+   },
+   "fert_implied": {
+    "onset": 1969,
+    "peak": 6.108849459014204,
+    "peak_year": 1966,
+    "value": 5.475014813351768,
+    "share_fall": 0.10375679576244112
+   },
+   "region": "Sub-Saharan Africa"
+  },
+  "SYR": {
+   "mort_long": {
+    "onset": 1935,
+    "peak": 42.916,
+    "peak_year": 1800,
+    "value": 38.433,
+    "share_fall": 0.10445987510485588
+   },
+   "mort_obs": {
+    "onset": 1955,
+    "peak": 26.298891,
+    "peak_year": 1953,
+    "value": 23.161242,
+    "share_fall": 0.11930727421167686
+   },
+   "fert_obs": {
+    "onset": 1982,
+    "peak": 7.634,
+    "peak_year": 1955,
+    "value": 6.811,
+    "share_fall": 0.10780717841236576
+   },
+   "fert_implied": {
+    "onset": 1980,
+    "peak": 7.847995645007636,
+    "peak_year": 1950,
+    "value": 6.989957703798092,
+    "share_fall": 0.10933211230250484
+   },
+   "region": "Middle East, North Africa, Afghanistan & Pakistan"
+  },
+  "TCA": {
+   "mort_long": {
+    "onset": 1961,
+    "peak": 14.73,
+    "peak_year": 1959,
+    "value": 12.8,
+    "share_fall": 0.13102511880515955
+   },
+   "mort_obs": {
+    "onset": 1961,
+    "peak": 14.726637,
+    "peak_year": 1959,
+    "value": 12.803844,
+    "share_fall": 0.13056565460260894
+   },
+   "fert_obs": {
+    "onset": 1965,
+    "peak": 6.171,
+    "peak_year": 1955,
+    "value": 5.502,
+    "share_fall": 0.10841030627126891
+   },
+   "fert_implied": {
+    "onset": 1965,
+    "peak": 6.121011850066231,
+    "peak_year": 1959,
+    "value": 5.452615582670995,
+    "share_fall": 0.10919702228447803
+   },
+   "region": "Latin America & Caribbean"
+  },
+  "TCD": {
+   "mort_long": {
+    "onset": 1940,
+    "peak": 43.179,
+    "peak_year": 1800,
+    "value": 38.742,
+    "share_fall": 0.10275828527756559
+   },
+   "mort_obs": {
+    "onset": 1973,
+    "peak": 27.8674,
+    "peak_year": 1950,
+    "value": 25.074287,
+    "share_fall": 0.10022869015408675
+   },
+   "fert_obs": null,
+   "fert_implied": null,
+   "region": "Sub-Saharan Africa"
+  },
+  "TGO": {
+   "mort_long": {
+    "onset": 1941,
+    "peak": 42.655,
+    "peak_year": 1800,
+    "value": 37.684,
+    "share_fall": 0.11653967881842697
+   },
+   "mort_obs": {
+    "onset": 1963,
+    "peak": 27.982359,
+    "peak_year": 1950,
+    "value": 25.139545,
+    "share_fall": 0.10159307869647449
+   },
+   "fert_obs": {
+    "onset": 1987,
+    "peak": 7.089781,
+    "peak_year": 1974,
+    "value": 6.303876,
+    "share_fall": 0.11085039157062826
+   },
+   "fert_implied": {
+    "onset": 1985,
+    "peak": 6.539315066720164,
+    "peak_year": 1974,
+    "value": 5.871881691713807,
+    "share_fall": 0.10206472209957484
+   },
+   "region": "Sub-Saharan Africa"
+  },
+  "THA": {
+   "mort_long": {
+    "onset": 1931,
+    "peak": 43.846,
+    "peak_year": 1800,
+    "value": 39.165,
+    "share_fall": 0.10676002371938142
+   },
+   "mort_obs": {
+    "onset": 1954,
+    "peak": 20.737677,
+    "peak_year": 1950,
+    "value": 18.062336,
+    "share_fall": 0.12900871201726227
+   },
+   "fert_obs": {
+    "onset": 1969,
+    "peak": 6.416,
+    "peak_year": 1953,
+    "value": 5.704,
+    "share_fall": 0.11097256857855375
+   },
+   "fert_implied": {
+    "onset": 1970,
+    "peak": 6.164706626230929,
+    "peak_year": 1963,
+    "value": 5.322428725483588,
+    "share_fall": 0.13662903229870416
+   },
+   "region": "East Asia & Pacific"
+  },
+  "TJK": {
+   "mort_long": {
+    "onset": 1848,
+    "peak": 38.144,
+    "peak_year": 1800,
+    "value": 34.301003,
+    "share_fall": 0.10074971161912749
+   },
+   "mort_obs": {
+    "onset": 1976,
+    "peak": 15.373613,
+    "peak_year": 1972,
+    "value": 13.457403,
+    "share_fall": 0.12464278891370562
+   },
+   "fert_obs": {
+    "onset": 1980,
+    "peak": 6.912,
+    "peak_year": 1968,
+    "value": 6.212,
+    "share_fall": 0.10127314814814814
+   },
+   "fert_implied": {
+    "onset": 1980,
+    "peak": 6.873662840421903,
+    "peak_year": 1971,
+    "value": 6.163456001857441,
+    "share_fall": 0.10332290876822658
+   },
+   "region": "Europe & Central Asia"
+  },
+  "TKM": {
+   "mort_long": {
+    "onset": 1904,
+    "peak": 49.792,
+    "peak_year": 1800,
+    "value": 44.493,
+    "share_fall": 0.10642271850899743
+   },
+   "mort_obs": {
+    "onset": 1980,
+    "peak": 13.031836,
+    "peak_year": 1977,
+    "value": 11.656858,
+    "share_fall": 0.10550915465787014
+   },
+   "fert_obs": {
+    "onset": 1974,
+    "peak": 6.788,
+    "peak_year": 1963,
+    "value": 6.087,
+    "share_fall": 0.10327047731290517
+   },
+   "fert_implied": {
+    "onset": 1974,
+    "peak": 6.940889230100816,
+    "peak_year": 1964,
+    "value": 6.238761562166618,
+    "share_fall": 0.10115817219633105
+   },
+   "region": "Europe & Central Asia"
+  },
+  "TLS": {
+   "mort_long": {
+    "onset": 1945,
+    "peak": 45.98,
+    "peak_year": 1900,
+    "value": 41.34,
+    "share_fall": 0.1009134406263591
+   },
+   "mort_obs": {
+    "onset": 1988,
+    "peak": 27.175018,
+    "peak_year": 1985,
+    "value": 24.303371,
+    "share_fall": 0.10567231271015176
+   },
+   "fert_obs": {
+    "onset": 1966,
+    "peak": 6.605,
+    "peak_year": 1950,
+    "value": 5.932,
+    "share_fall": 0.10189250567751706
+   },
+   "fert_implied": {
+    "onset": 1962,
+    "peak": 5.776630642530181,
+    "peak_year": 1950,
+    "value": 5.161165712954499,
+    "share_fall": 0.10654392978570393
+   },
+   "region": "East Asia & Pacific"
+  },
+  "TON": {
+   "mort_long": {
+    "onset": 1814,
+    "peak": 44.544,
+    "peak_year": 1800,
+    "value": 39.91,
+    "share_fall": 0.10403196839080464
+   },
+   "mort_obs": {
+    "onset": 1965,
+    "peak": 7.8679667,
+    "peak_year": 1963,
+    "value": 6.895462,
+    "share_fall": 0.12360305236167302
+   },
+   "fert_obs": {
+    "onset": 1971,
+    "peak": 6.702,
+    "peak_year": 1953,
+    "value": 5.958,
+    "share_fall": 0.11101163831692029
+   },
+   "fert_implied": {
+    "onset": 1970,
+    "peak": 6.604157350258253,
+    "peak_year": 1955,
+    "value": 5.934399484018313,
+    "share_fall": 0.10141458337811249
+   },
+   "region": "East Asia & Pacific"
+  },
+  "TTO": {
+   "mort_long": {
+    "onset": 1833,
+    "peak": 40.596,
+    "peak_year": 1800,
+    "value": 35.863,
+    "share_fall": 0.11658784116661736
+   },
+   "mort_obs": {
+    "onset": 1957,
+    "peak": 8.613276,
+    "peak_year": 1953,
+    "value": 7.5435953,
+    "share_fall": 0.12418976240863533
+   },
+   "fert_obs": {
+    "onset": 1966,
+    "peak": 5.405,
+    "peak_year": 1960,
+    "value": 4.62,
+    "share_fall": 0.14523589269195192
+   },
+   "fert_implied": {
+    "onset": 1966,
+    "peak": 5.324363034947951,
+    "peak_year": 1960,
+    "value": 4.5402844006357945,
+    "share_fall": 0.1472624291705198
+   },
+   "region": "Latin America & Caribbean"
+  },
+  "TUN": {
+   "mort_long": {
+    "onset": 1929,
+    "peak": 46.021,
+    "peak_year": 1800,
+    "value": 41.244,
+    "share_fall": 0.10380043893005364
+   },
+   "mort_obs": {
+    "onset": 1965,
+    "peak": 27.251871,
+    "peak_year": 1962,
+    "value": 23.617163,
+    "share_fall": 0.1333746222415334
+   },
+   "fert_obs": {
+    "onset": 1970,
+    "peak": 7.17,
+    "peak_year": 1963,
+    "value": 6.426,
+    "share_fall": 0.10376569037656902
+   },
+   "fert_implied": {
+    "onset": 1969,
+    "peak": 7.537954624680456,
+    "peak_year": 1961,
+    "value": 6.74555679357804,
+    "share_fall": 0.1051210667291601
+   },
+   "region": "Middle East, North Africa, Afghanistan & Pakistan"
+  },
+  "TUR": {
+   "mort_long": {
+    "onset": 1946,
+    "peak": 37.999,
+    "peak_year": 1800,
+    "value": 33.427,
+    "share_fall": 0.1203189557619938
+   },
+   "mort_obs": {
+    "onset": 1960,
+    "peak": 29.034376,
+    "peak_year": 1953,
+    "value": 25.470343,
+    "share_fall": 0.12275218175861613
+   },
+   "fert_obs": {
+    "onset": 1970,
+    "peak": 6.477,
+    "peak_year": 1953,
+    "value": 5.775,
+    "share_fall": 0.1083835108846688
+   },
+   "fert_implied": {
+    "onset": 1969,
+    "peak": 6.655131981761044,
+    "peak_year": 1952,
+    "value": 5.943875174072667,
+    "share_fall": 0.10687343386091175
+   },
+   "region": "Europe & Central Asia"
+  },
+  "TUV": {
+   "mort_long": {
+    "onset": 1957,
+    "peak": 22.51,
+    "peak_year": 1954,
+    "value": 19.93,
+    "share_fall": 0.1146157263438472
+   },
+   "mort_obs": {
+    "onset": 1957,
+    "peak": 22.505003,
+    "peak_year": 1954,
+    "value": 19.931465,
+    "share_fall": 0.11435403941070343
+   },
+   "fert_obs": {
+    "onset": 1964,
+    "peak": 5.417,
+    "peak_year": 1950,
+    "value": 4.826,
+    "share_fall": 0.10910097840132915
+   },
+   "fert_implied": {
+    "onset": 1965,
+    "peak": 5.0634951288560455,
+    "peak_year": 1954,
+    "value": 4.505334944669558,
+    "share_fall": 0.1102321953477593
+   },
+   "region": "East Asia & Pacific"
+  },
+  "TZA": {
+   "mort_long": {
+    "onset": 1939,
+    "peak": 41.489002,
+    "peak_year": 1800,
+    "value": 37.286,
+    "share_fall": 0.10130400340793921
+   },
+   "mort_obs": {
+    "onset": 1965,
+    "peak": 25.674633,
+    "peak_year": 1951,
+    "value": 23.002974,
+    "share_fall": 0.10405831312174951
+   },
+   "fert_obs": {
+    "onset": 1987,
+    "peak": 7.123,
+    "peak_year": 1974,
+    "value": 6.406,
+    "share_fall": 0.1006598343394638
+   },
+   "fert_implied": {
+    "onset": 1993,
+    "peak": 6.492030594304635,
+    "peak_year": 1974,
+    "value": 5.789479488364176,
+    "share_fall": 0.1082174668980761
+   },
+   "region": "Sub-Saharan Africa"
+  },
+  "UGA": {
+   "mort_long": {
+    "onset": 1934,
+    "peak": 51.09,
+    "peak_year": 1800,
+    "value": 45.53,
+    "share_fall": 0.10882755920923859
+   },
+   "mort_obs": {
+    "onset": 1959,
+    "peak": 25.390852,
+    "peak_year": 1953,
+    "value": 22.647747,
+    "share_fall": 0.10803516951695835
+   },
+   "fert_obs": {
+    "onset": 2006,
+    "peak": 7.201,
+    "peak_year": 1975,
+    "value": 6.429,
+    "share_fall": 0.10720733231495616
+   },
+   "fert_implied": {
+    "onset": 2009,
+    "peak": 6.769148371775762,
+    "peak_year": 1988,
+    "value": 6.0390252338911585,
+    "share_fall": 0.10786041282960812
+   },
+   "region": "Sub-Saharan Africa"
+  },
+  "UKR": {
+   "mort_long": {
+    "onset": 1922,
+    "peak": 36.097,
+    "peak_year": 1800,
+    "value": 30.661,
+    "share_fall": 0.15059423220766266
+   },
+   "mort_obs": {
+    "onset": 1975,
+    "peak": 3.2825642,
+    "peak_year": 1971,
+    "value": 2.9143476,
+    "share_fall": 0.11217346487846291
+   },
+   "fert_obs": {
+    "onset": 1961,
+    "peak": 2.447,
+    "peak_year": 1950,
+    "value": 2.197,
+    "share_fall": 0.10216591744993875
+   },
+   "fert_implied": {
+    "onset": 1962,
+    "peak": 2.41870999304154,
+    "peak_year": 1950,
+    "value": 2.1684309994899587,
+    "share_fall": 0.10347623083032542
+   },
+   "region": "Europe & Central Asia"
+  },
+  "URY": {
+   "mort_long": {
+    "onset": 1912,
+    "peak": 40.596,
+    "peak_year": 1800,
+    "value": 36.372,
+    "share_fall": 0.10404966006503091
+   },
+   "mort_obs": {
+    "onset": 1966,
+    "peak": 6.408496,
+    "peak_year": 1959,
+    "value": 5.7434216,
+    "share_fall": 0.1037801069080796
+   },
+   "fert_obs": {
+    "onset": 1979,
+    "peak": 3.017,
+    "peak_year": 1975,
+    "value": 2.711,
+    "share_fall": 0.1014252568776931
+   },
+   "fert_implied": {
+    "onset": 1979,
+    "peak": 3.030829803086748,
+    "peak_year": 1975,
+    "value": 2.7017744800260646,
+    "share_fall": 0.10856938344923128
+   },
+   "region": "Latin America & Caribbean"
+  },
+  "USA": {
+   "mort_long": {
+    "onset": 1886,
+    "peak": 32.904,
+    "peak_year": 1800,
+    "value": 29.141,
+    "share_fall": 0.11436299538050099
+   },
+   "mort_obs": {
+    "onset": 1954,
+    "peak": 3.7622483,
+    "peak_year": 1950,
+    "value": 3.3790617,
+    "share_fall": 0.10185042810704448
+   },
+   "fert_obs": {
+    "onset": 1964,
+    "peak": 3.754,
+    "peak_year": 1958,
+    "value": 3.258,
+    "share_fall": 0.1321257325519446
+   },
+   "fert_implied": {
+    "onset": 1964,
+    "peak": 3.712923202766647,
+    "peak_year": 1958,
+    "value": 3.222282239848174,
+    "share_fall": 0.1321441182927987
+   },
+   "region": "North America"
+  },
+  "UZB": {
+   "mort_long": {
+    "onset": 1912,
+    "peak": 38.144,
+    "peak_year": 1800,
+    "value": 34.144,
+    "share_fall": 0.10486577181208057
+   },
+   "mort_obs": {
+    "onset": 1981,
+    "peak": 12.580931,
+    "peak_year": 1979,
+    "value": 10.907658,
+    "share_fall": 0.13300072943727292
+   },
+   "fert_obs": {
+    "onset": 1973,
+    "peak": 6.878,
+    "peak_year": 1962,
+    "value": 6.162,
+    "share_fall": 0.10410002907822047
+   },
+   "fert_implied": {
+    "onset": 1973,
+    "peak": 7.046535865246634,
+    "peak_year": 1962,
+    "value": 6.322246900522945,
+    "share_fall": 0.10278652923571518
+   },
+   "region": "Europe & Central Asia"
+  },
+  "VCT": {
+   "mort_long": {
+    "onset": 1819,
+    "peak": 46.336,
+    "peak_year": 1800,
+    "value": 41.585,
+    "share_fall": 0.10253366712707179
+   },
+   "mort_obs": {
+    "onset": 1978,
+    "peak": 7.7046914,
+    "peak_year": 1974,
+    "value": 6.4905415,
+    "share_fall": 0.15758579246924798
+   },
+   "fert_obs": {
+    "onset": 1967,
+    "peak": 7.359,
+    "peak_year": 1955,
+    "value": 6.533,
+    "share_fall": 0.11224351134665034
+   },
+   "fert_implied": {
+    "onset": 1963,
+    "peak": 7.483422092460544,
+    "peak_year": 1954,
+    "value": 6.648479142608469,
+    "share_fall": 0.11157234478237832
+   },
+   "region": "Latin America & Caribbean"
+  },
+  "VEN": {
+   "mort_long": {
+    "onset": 1922,
+    "peak": 41.489002,
+    "peak_year": 1800,
+    "value": 36.034,
+    "share_fall": 0.13148067528835716
+   },
+   "mort_obs": {
+    "onset": 1954,
+    "peak": 11.883263,
+    "peak_year": 1951,
+    "value": 10.330761,
+    "share_fall": 0.1306461028422916
+   },
+   "fert_obs": {
+    "onset": 1966,
+    "peak": 6.635,
+    "peak_year": 1950,
+    "value": 5.87,
+    "share_fall": 0.11529766390354179
+   },
+   "fert_implied": {
+    "onset": 1967,
+    "peak": 6.331937606405006,
+    "peak_year": 1951,
+    "value": 5.606488792870645,
+    "share_fall": 0.11456979816107804
+   },
+   "region": "Latin America & Caribbean"
+  },
+  "VGB": {
+   "mort_long": {
+    "onset": 1957,
+    "peak": 12.21,
+    "peak_year": 1955,
+    "value": 10.83,
+    "share_fall": 0.11302211302211307
+   },
+   "mort_obs": {
+    "onset": 1957,
+    "peak": 12.212373,
+    "peak_year": 1955,
+    "value": 10.832093,
+    "share_fall": 0.11302307913457921
+   },
+   "fert_obs": {
+    "onset": 1961,
+    "peak": 5.303,
+    "peak_year": 1955,
+    "value": 4.667,
+    "share_fall": 0.11993211389779368
+   },
+   "fert_implied": {
+    "onset": 1961,
+    "peak": 5.346289780406381,
+    "peak_year": 1955,
+    "value": 4.697631549917265,
+    "share_fall": 0.121328670373683
+   },
+   "region": "Latin America & Caribbean"
+  },
+  "VNM": {
+   "mort_long": {
+    "onset": 1933,
+    "peak": 41.744,
+    "peak_year": 1800,
+    "value": 37.1,
+    "share_fall": 0.11124952088922957
+   },
+   "mort_obs": {
+    "onset": 1971,
+    "peak": 12.013442,
+    "peak_year": 1968,
+    "value": 10.76264,
+    "share_fall": 0.10411687175082718
+   },
+   "fert_obs": {
+    "onset": 1975,
+    "peak": 6.385,
+    "peak_year": 1963,
+    "value": 5.621,
+    "share_fall": 0.11965544244322623
+   },
+   "fert_implied": {
+    "onset": 1975,
+    "peak": 6.270511582463276,
+    "peak_year": 1963,
+    "value": 5.6060862474689435,
+    "share_fall": 0.10596030742571771
+   },
+   "region": "East Asia & Pacific"
+  },
+  "VUT": {
+   "mort_long": {
+    "onset": 1819,
+    "peak": 42.624,
+    "peak_year": 1800,
+    "value": 38.315,
+    "share_fall": 0.10109328078078084
+   },
+   "mort_obs": {
+    "onset": 1958,
+    "peak": 17.881128,
+    "peak_year": 1952,
+    "value": 16.006393,
+    "share_fall": 0.1048443364423095
+   },
+   "fert_obs": {
+    "onset": 1971,
+    "peak": 7.042,
+    "peak_year": 1954,
+    "value": 6.293,
+    "share_fall": 0.1063618290258449
+   },
+   "fert_implied": {
+    "onset": 1974,
+    "peak": 6.611247230213626,
+    "peak_year": 1956,
+    "value": 5.940833388922243,
+    "share_fall": 0.10140504778395942
+   },
+   "region": "East Asia & Pacific"
+  },
+  "WSM": {
+   "mort_long": {
+    "onset": 1816,
+    "peak": 47.104,
+    "peak_year": 1800,
+    "value": 42.18,
+    "share_fall": 0.10453464673913038
+   },
+   "mort_obs": {
+    "onset": 1954,
+    "peak": 15.493113,
+    "peak_year": 1950,
+    "value": 13.612231,
+    "share_fall": 0.12140116708630477
+   },
+   "fert_obs": {
+    "onset": 1973,
+    "peak": 7.787,
+    "peak_year": 1959,
+    "value": 6.908,
+    "share_fall": 0.11288044176191081
+   },
+   "fert_implied": {
+    "onset": 1973,
+    "peak": 7.656585488096594,
+    "peak_year": 1964,
+    "value": 6.779902780311403,
+    "share_fall": 0.1145004792473272
+   },
+   "region": "East Asia & Pacific"
+  },
+  "YEM": {
+   "mort_long": {
+    "onset": 1936,
+    "peak": 54.044,
+    "peak_year": 1800,
+    "value": 48.438,
+    "share_fall": 0.10373029383465315
+   },
+   "mort_obs": {
+    "onset": 1964,
+    "peak": 45.632248,
+    "peak_year": 1957,
+    "value": 40.381203,
+    "share_fall": 0.1150731167134259
+   },
+   "fert_obs": {
+    "onset": 1994,
+    "peak": 8.864,
+    "peak_year": 1985,
+    "value": 7.795,
+    "share_fall": 0.12060018050541521
+   },
+   "fert_implied": {
+    "onset": 1994,
+    "peak": 8.742765444133058,
+    "peak_year": 1984,
+    "value": 7.707698016693119,
+    "share_fall": 0.11839130696735478
+   },
+   "region": "Middle East, North Africa, Afghanistan & Pakistan"
+  },
+  "ZAF": {
+   "mort_long": {
+    "onset": 1932,
+    "peak": 39.845,
+    "peak_year": 1800,
+    "value": 35.813,
+    "share_fall": 0.10119211946291873
+   },
+   "mort_obs": {
+    "onset": 1976,
+    "peak": 13.225743,
+    "peak_year": 1974,
+    "value": 11.775458,
+    "share_fall": 0.1096562212043587
+   },
+   "fert_obs": {
+    "onset": 1972,
+    "peak": 6.143,
+    "peak_year": 1958,
+    "value": 5.49,
+    "share_fall": 0.10629985349177917
+   },
+   "fert_implied": {
+    "onset": 1968,
+    "peak": 6.129443941514432,
+    "peak_year": 1958,
+    "value": 5.492015753408844,
+    "share_fall": 0.10399445597149803
+   },
+   "region": "Sub-Saharan Africa"
+  },
+  "ZMB": {
+   "mort_long": {
+    "onset": 1937,
+    "peak": 40.979,
+    "peak_year": 1800,
+    "value": 36.647,
+    "share_fall": 0.10571268210546869
+   },
+   "mort_obs": {
+    "onset": 1958,
+    "peak": 23.754622,
+    "peak_year": 1952,
+    "value": 21.304682,
+    "share_fall": 0.10313529720658154
+   },
+   "fert_obs": {
+    "onset": 1989,
+    "peak": 7.421,
+    "peak_year": 1975,
+    "value": 6.635,
+    "share_fall": 0.10591564479180704
+   },
+   "fert_implied": {
+    "onset": 2002,
+    "peak": 6.401083701610761,
+    "peak_year": 1975,
+    "value": 5.714851547768239,
+    "share_fall": 0.10720562108410481
+   },
+   "region": "Sub-Saharan Africa"
+  },
+  "ZWE": {
+   "mort_long": {
+    "onset": 1935,
+    "peak": 39.595,
+    "peak_year": 1800,
+    "value": 35.519,
+    "share_fall": 0.10294229069326932
+   },
+   "mort_obs": {
+    "onset": 1962,
+    "peak": 16.691462,
+    "peak_year": 1954,
+    "value": 14.708005,
+    "share_fall": 0.11883063329024146
+   },
+   "fert_obs": {
+    "onset": 1981,
+    "peak": 7.231,
+    "peak_year": 1962,
+    "value": 6.445,
+    "share_fall": 0.1086986585534504
+   },
+   "fert_implied": {
+    "onset": 1970,
+    "peak": 6.634958784725238,
+    "peak_year": 1951,
+    "value": 5.910328954209851,
+    "share_fall": 0.10921391586992268
+   },
+   "region": "Sub-Saharan Africa"
+  }
+ },
+ "lag_stats": {
+  "observed_1950plus": {
+   "n": 190,
+   "median": 12.0,
+   "q25": 3.0,
+   "q75": 19.0,
+   "share_positive": 0.7789473684210526,
+   "min": -33.0,
+   "max": 47.0
+  },
+  "long_run_implied": {
+   "n": 194,
+   "median": 52.0,
+   "q25": 36.0,
+   "q75": 73.0,
+   "share_positive": 0.9948453608247423,
+   "min": -2.0,
+   "max": 169.0
+  },
+  "long_run_pre1950_onset": {
+   "n": 179,
+   "median": 54.0,
+   "q25": 40.5,
+   "q75": 74.5,
+   "share_positive": 0.994413407821229,
+   "min": -2.0,
+   "max": 169.0
+  },
+  "long_run_post1950_onset": {
+   "n": 15,
+   "median": 12.0,
+   "q25": 4.5,
+   "q75": 17.0,
+   "share_positive": 1.0,
+   "min": 1.0,
+   "max": 35.0
+  },
+  "clean_observed_both_onsets_1950plus": {
+   "n": 190,
+   "median": 12.0,
+   "q25": 3.0,
+   "q75": 19.0,
+   "share_positive": 0.7789473684210526,
+   "min": -33.0,
+   "max": 47.0
+  },
+  "late_transitioners_only": {
+   "n": 142,
+   "median": 12.0,
+   "q25": 4.0,
+   "q75": 23.5,
+   "share_positive": 0.8098591549295775,
+   "min": -31.0,
+   "max": 47.0
+  },
+  "by_region": {
+   "East Asia & Pacific": {
+    "n": 30,
+    "median": 9.0
+   },
+   "Europe & Central Asia": {
+    "n": 51,
+    "median": 3.0
+   },
+   "Latin America & Caribbean": {
+    "n": 35,
+    "median": 11.0
+   },
+   "Middle East, North Africa, Afghanistan & Pakistan": {
+    "n": 23,
+    "median": 10.0
+   },
+   "South Asia": {
+    "n": 6,
+    "median": 17.5
+   },
+   "Sub-Saharan Africa": {
+    "n": 43,
+    "median": 26.0
+   }
+  }
+ },
+ "cross_correlation": {
+  "observed_tfr": {
+   "n": 197,
+   "median_best_lag": -5.0,
+   "share_best_lag_positive": 0.37055837563451777,
+   "median_corr_lag0": 0.38799191660103133,
+   "share_corr_lag0_above_half": 0.43147208121827413
+  },
+  "implied_tfr": {
+   "n": 197,
+   "median_best_lag": 0.0,
+   "share_best_lag_positive": 0.3756345177664975,
+   "median_corr_lag0": 0.3696813979208785,
+   "share_corr_lag0_above_half": 0.4263959390862944
+  }
+ },
+ "schooling": {
+  "school_crosses_2.0y": {
+   "n": 140,
+   "median_gap": 15.0,
+   "q25": -11.0,
+   "q75": 45.25,
+   "share_after_fertility_onset": 0.32857142857142857
+  },
+  "school_crosses_6.0y": {
+   "n": 124,
+   "median_gap": -18.0,
+   "q25": -32.25,
+   "q75": -4.75,
+   "share_after_fertility_onset": 0.8064516129032258
+  }
+ },
+ "event_study": {
+  "-10": {
+   "n": 3,
+   "mean_ratio": 0.9688444535785316
+  },
+  "0": {
+   "n": 18,
+   "mean_ratio": 1.012170620328362
+  },
+  "10": {
+   "n": 18,
+   "mean_ratio": 0.9755663404005018
+  },
+  "20": {
+   "n": 18,
+   "mean_ratio": 0.8455872140570658
+  },
+  "30": {
+   "n": 18,
+   "mean_ratio": 0.6569874103200493
+  },
+  "40": {
+   "n": 18,
+   "mean_ratio": 0.5902077330711686
+  },
+  "50": {
+   "n": 18,
+   "mean_ratio": 0.540998550190255
+  },
+  "60": {
+   "n": 17,
+   "mean_ratio": 0.5307440861790779
+  }
+ }
+}
