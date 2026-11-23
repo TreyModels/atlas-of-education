@@ -8,7 +8,7 @@ import model as M
 ap = argparse.ArgumentParser(); ap.add_argument("scen"); ap.add_argument("out")
 ap.add_argument("--truth"); ap.add_argument("--rounds", default="8000,5000,5000,5000"); ap.add_argument("--keep", type=int, default=500)
 ap.add_argument("--procs", type=int, default=24); ap.add_argument("--seed", type=int, default=1); ap.add_argument("--nW", type=int, default=12)
-ap.add_argument("--panel", default="data/panel.json")
+ap.add_argument("--panel", default="data/panel.json"); ap.add_argument("--init")
 args = ap.parse_args()
 SCEN = 0 if args.scen == "A" else 1
 PAN = json.load(open(args.panel)); FIT = PAN["FIT"]
@@ -47,8 +47,10 @@ if __name__ == "__main__":
     rng = np.random.default_rng(args.seed); sizes = [int(s) for s in args.rounds.split(",")]
     t0 = time.time(); pool = Pool(args.procs); hist = []
     pop = None
+    if args.init:
+        z = json.load(open(args.init)); pop = dict(u=np.array(z['u']), w=np.ones(len(z['u'])) / len(z['u']))
     for r, n in enumerate(sizes):
-        if pop is None: U = rng.random((n, D_)); logw_prop = np.zeros(n)
+        if pop is None or (args.init and r == 0 and False): U = rng.random((n, D_)); logw_prop = np.zeros(n)
         else:
             Uo, Wo = pop["u"], pop["w"]; Z = logit(Uo); mu = (Wo[:, None] * Z).sum(0)
             cov = 2 * np.cov(Z.T, aweights=Wo) + 1e-6 * np.eye(D_); L = np.linalg.cholesky(cov)

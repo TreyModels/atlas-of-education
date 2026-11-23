@@ -1,0 +1,9 @@
+/root/work/dose/analyze.py:122: RuntimeWarning: Mean of empty slice
+  arr = np.array([f(p) for p in per]); return np.nanmean(arr, 0), np.nanquantile(arr, .05, 0), np.nanquantile(arr, .95, 0)
+/root/miniconda3/lib/python3.10/site-packages/numpy/lib/nanfunctions.py:1577: RuntimeWarning: All-NaN slice encountered
+  result = np.apply_along_axis(_nanquantile_1d, axis, a, q,
+/root/work/dose/analyze.py:137: RuntimeWarning: Mean of empty slice
+  out["decomp"][str(late)] = {k: dict(quantum=float(np.nanmean([d[k][0] for d in dd])), tempo=float(np.nanmean([d[k][1] for d in dd])),
+/root/miniconda3/lib/python3.10/site-packages/numpy/lib/nanfunctions.py:1556: RuntimeWarning: All-NaN slice encountered
+  return function_base._ureduce(a,
+A vs B held-out: {'countries': ['KOR', 'MYS', 'KEN', 'BRA', 'TUR', 'MEX'], 'D_A': [8.526327469802645, 9.383401091448196, 50.563633585572006, 8.244320461588032, 15.820159595302153, 8.20917223302664], 'D_B': [2.6595188300589023, 10.120601860031744, 60.37033774757103, 15.29823963357921, 7.714774656042385, 23.116341625999013], 'mean_D_A': 16.791169072789945, 'mean_D_B': 19.879969058880384, 'diff_A_minus_B': -3.0887999860904345, 'boot_q025': -9.427527254733814, 'boot_q975': 3.126000077098373, 'countries_A_better': 4, 'ensemble_tfr_rmse': {'A': 1.1751065878639342, 'B': 1.7039286095060586}}
