@@ -645,7 +645,7 @@ Seven manuscripts were mined from the verified branches, each with a claim-by-cl
 
 | Paper | Branch @ head | Words | Status |
 |---|---|---|---|
-| Methods — "Which Countries Does the Coefficient Describe?" | research/methods-multiverse-paper-2026-11-23 @ f9673a9 | 12.3k | Ready to submit |
+| Methods — "Which Countries Does the Coefficient Describe?" | research/methods-multiverse-paper-2026-11-23 @ 734d055 | 12.5k | Ready to submit; dependence revision added (§6.6: mean |r| 0.041, Li–Ji effective tests ≈157, lone-link draws 5,440 → ~3,140, permutation null 0/400; claim downgraded to a conditional design rule) |
 | Paper F — fertility omnibus (levels-vs-changes centrepiece) | research/paper-fertility-2026-11-25 @ 6f4d6fb | 18.0k | Signed off (auditor); §3.5 pre-reg pointer added |
 | Paper M — massification omnibus (sequencing centrepiece) | research/paper-massification-2026-11-25 @ 76d929a | 17.4k | Signed off; two declared opens |
 | N1 — schools before factories (sequencing, standalone) | research/paper-sequencing-novel-2026-11-25 @ 7f73ff1 | 6.0k | Verified |
