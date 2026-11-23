@@ -1,0 +1,11 @@
+  1000/10000 draws, 102 accepted (10.2%), 74s, 13.44 draws/s
+  2000/10000 draws, 201 accepted (10.1%), 147s, 13.60 draws/s
+  3000/10000 draws, 297 accepted (9.9%), 220s, 13.66 draws/s
+  4000/10000 draws, 404 accepted (10.1%), 293s, 13.66 draws/s
+  5000/10000 draws, 510 accepted (10.2%), 366s, 13.67 draws/s
+  6000/10000 draws, 623 accepted (10.4%), 439s, 13.67 draws/s
+  7000/10000 draws, 714 accepted (10.2%), 512s, 13.68 draws/s
+  8000/10000 draws, 813 accepted (10.2%), 584s, 13.70 draws/s
+  9000/10000 draws, 916 accepted (10.2%), 657s, 13.71 draws/s
+  10000/10000 draws, 1012 accepted (10.1%), 729s, 13.72 draws/s
+DONE drawn=10000 accepted=1012 (10.1%) ESS=1012 wrote results/lad_A_eps10.json

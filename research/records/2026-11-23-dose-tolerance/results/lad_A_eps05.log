@@ -1,0 +1,13 @@
+  1000/12000 draws, 57 accepted (5.7%), 51s, 19.77 draws/s
+  2000/12000 draws, 107 accepted (5.3%), 101s, 19.81 draws/s
+  3000/12000 draws, 162 accepted (5.4%), 151s, 19.90 draws/s
+  4000/12000 draws, 218 accepted (5.5%), 200s, 20.00 draws/s
+  5000/12000 draws, 275 accepted (5.5%), 250s, 19.99 draws/s
+  6000/12000 draws, 329 accepted (5.5%), 300s, 20.02 draws/s
+  7000/12000 draws, 380 accepted (5.4%), 349s, 20.07 draws/s
+  8000/12000 draws, 443 accepted (5.5%), 399s, 20.06 draws/s
+  9000/12000 draws, 505 accepted (5.6%), 448s, 20.08 draws/s
+  10000/12000 draws, 554 accepted (5.5%), 497s, 20.10 draws/s
+  11000/12000 draws, 613 accepted (5.6%), 547s, 20.10 draws/s
+  12000/12000 draws, 660 accepted (5.5%), 597s, 20.10 draws/s
+DONE drawn=12000 accepted=660 (5.5%) ESS=660 wrote results/lad_A_eps05.json
