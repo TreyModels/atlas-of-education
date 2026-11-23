@@ -1,0 +1,327 @@
+=== baseline (no added controls; income logged, urbanisation controlled) ===
+country effects: 127 of 272 links significant (absolute t) -> recompute reference is 127 / 42
+country trends: 42 of 272 links significant (absolute t) -> recompute reference is 127 / 42
+significant in both specs with same sign: 24 (recompute reference 24)
+
+=== mediator rule: which added controls may be used ===
+child mortality is a mediator (x -> child mortality -> y) for 28 links; it is x or y for 32 links; usable for 212
+women's work is a mediator for 42 links; it is x or y for 32 links; usable for 198
+both controls usable together for 172 links
+women's-work mediators (first 40): electricity->gdppc_log, electricity->life_exp, electricity->u5mr, electricity->fertility, wage_emp->gdppc_log, wage_emp->life_exp, wage_emp->u5mr, wage_emp->fertility, lsc->gdppc_log, lsc->life_exp, lsc->u5mr, lsc->fertility, sec->gdppc_log, sec->life_exp, sec->u5mr, sec->fertility, ter->gdppc_log, ter->life_exp, ter->u5mr, ter->fertility, prm_cmp->gdppc_log, prm_cmp->life_exp, prm_cmp->u5mr, prm_cmp->fertility, gdppc_log->life_exp, gdppc_log->u5mr, gdppc_log->fertility, urban->gdppc_log, urban->life_exp, urban->u5mr, urban->fertility, gpi_sec->gdppc_log, gpi_sec->life_exp, gpi_sec->u5mr, gpi_sec->fertility, gpi_ter->gdppc_log, gpi_ter->life_exp, gpi_ter->u5mr, gpi_ter->fertility, fertility->gdppc_log
+child-mortality mediators: electricity->life_exp, electricity->fertility, lsc->life_exp, lsc->fertility, sec->life_exp, sec->fertility, ter->life_exp, ter->fertility, prm_cmp->life_exp, prm_cmp->fertility, gdppc_log->life_exp, gdppc_log->fertility, urban->life_exp, urban->fertility, tax->life_exp, tax->fertility, agri_va->life_exp, agri_va->fertility, emp_agri->life_exp, emp_agri->fertility, flfp->life_exp, flfp->fertility, life_exp->fertility, gpi_sec->life_exp, gpi_sec->fertility, gpi_ter->life_exp, gpi_ter->fertility, fertility->life_exp
+
+=== verdict changes vs baseline (only rule-allowed control uses) ===
+country effects, +u5mr: 51 verdict changes of 212 usable tests (9 gained, 42 lost, 0 sign flips)
+country effects, +flfp: 37 verdict changes of 198 usable tests (12 gained, 25 lost, 0 sign flips)
+country effects, +both: 59 verdict changes of 172 usable tests (11 gained, 46 lost, 2 sign flips)
+country trends, +u5mr: 8 verdict changes of 212 usable tests (1 gained, 7 lost, 0 sign flips)
+country trends, +flfp: 34 verdict changes of 198 usable tests (10 gained, 24 lost, 0 sign flips)
+country trends, +both: 28 verdict changes of 172 usable tests (8 gained, 19 lost, 1 sign flips)
+
+=== every changed verdict ===
+ lost      +u5mr country effects electricity->gdppc_log   base sig+ +0.004(0.002) n=4246 -> null +0.003(0.002) n=3973
+ lost      +both country effects electricity->urban       base sig+ +0.067(0.020) n=4281 -> null +0.044(0.023) n=3707
+ lost      +u5mr country effects electricity->tax         base sig+ +0.055(0.027) n=2077 -> null +0.048(0.027) n=2058
+ lost      +both country effects electricity->tax         base sig+ +0.055(0.027) n=2077 -> null +0.053(0.027) n=2015
+ lost      +u5mr country effects electricity->emp_agri    base sig- -0.080(0.030) n=3760 -> null -0.053(0.029) n=3632
+ lost      +both country effects electricity->emp_agri    base sig- -0.080(0.030) n=3760 -> null -0.054(0.028) n=3632
+ lost      +u5mr country effects electricity->gpi_sec     base sig+ +0.003(0.001) n=1763 -> null +0.001(0.001) n=1725
+ lost      +both country effects electricity->gpi_sec     base sig+ +0.003(0.001) n=1763 -> null +0.001(0.001) n=1674
+ lost      +u5mr country effects wage_emp   ->urban       base sig+ +0.148(0.075) n=4335 -> null +0.140(0.075) n=4207
+ lost      +flfp country effects wage_emp   ->urban       base sig+ +0.148(0.075) n=4335 -> null +0.145(0.075) n=4335
+ lost      +both country effects wage_emp   ->urban       base sig+ +0.148(0.075) n=4335 -> null +0.139(0.074) n=4207
+ lost      +flfp country effects lsc        ->sec         base sig+ +0.125(0.058) n=1943 -> null +0.045(0.046) n=1363
+ lost      +both country effects lsc        ->sec         base sig+ +0.125(0.058) n=1943 -> null +0.075(0.052) n=1336
+ gained    +flfp country effects lsc        ->urban       base null +0.014(0.017) n=2830 -> sig+ +0.041(0.018) n=1968
+ gained    +both country effects lsc        ->urban       base null +0.014(0.017) n=2830 -> sig+ +0.038(0.018) n=1939
+ gained    +flfp country effects lsc        ->tax         base null +0.031(0.016) n=1138 -> sig+ +0.055(0.016) n=1046
+ gained    +both country effects lsc        ->tax         base null +0.031(0.016) n=1138 -> sig+ +0.049(0.017) n=1032
+ gained    +u5mr country effects lsc        ->gpi_sec     base null -0.001(0.000) n=1424 -> sig- -0.001(0.000) n=1386
+ lost      +u5mr country effects sec        ->electricity base sig+ +0.057(0.025) n=2532 -> null +0.038(0.023) n=2460
+ lost      +both country effects sec        ->electricity base sig+ +0.057(0.025) n=2532 -> null +0.042(0.027) n=2315
+ lost      +flfp country trends  sec        ->ter         base sig+ +0.099(0.047) n=2419 -> null +0.048(0.065) n=1583
+ lost      +both country trends  sec        ->ter         base sig+ +0.099(0.047) n=2419 -> null +0.045(0.067) n=1552
+ gained    +flfp country effects sec        ->prm_cmp     base null -0.040(0.054) n=2309 -> sig- -0.118(0.057) n=1584
+ gained    +both country effects sec        ->prm_cmp     base null -0.040(0.054) n=2309 -> sig- -0.119(0.052) n=1557
+ lost      +flfp country trends  sec        ->prm_cmp     base sig- -0.115(0.054) n=2253 -> null -0.089(0.062) n=1532
+ lost      +both country trends  sec        ->prm_cmp     base sig- -0.115(0.054) n=2253 -> null -0.081(0.061) n=1505
+ gained    +flfp country effects sec        ->urban       base null -0.011(0.015) n=4548 -> sig+ +0.048(0.020) n=2712
+ gained    +both country effects sec        ->urban       base null -0.011(0.015) n=4548 -> sig+ +0.044(0.021) n=2674
+ lost      +flfp country trends  sec        ->agri_va     base sig+ +0.057(0.018) n=3824 -> null +0.020(0.015) n=2499
+ lost      +both country trends  sec        ->agri_va     base sig+ +0.057(0.018) n=3824 -> null +0.021(0.017) n=2479
+ gained    +u5mr country effects sec        ->gpi_sec     base null -0.000(0.001) n=2430 -> sig- -0.001(0.001) n=2383
+ lost      +u5mr country effects sec        ->gpi_ter     base sig+ +0.002(0.001) n=1935 -> null +0.001(0.001) n=1894
+ lost      +both country effects sec        ->gpi_ter     base sig+ +0.002(0.001) n=1935 -> null +0.001(0.001) n=1411
+ lost      +u5mr country effects ter        ->lsc         base sig- -0.090(0.042) n=1465 -> null -0.064(0.041) n=1437
+ lost      +flfp country trends  ter        ->lsc         base sig- -0.155(0.060) n=1403 -> null -0.086(0.053) n=1111
+ lost      +both country trends  ter        ->lsc         base sig- -0.155(0.060) n=1403 -> null -0.085(0.056) n=1088
+ lost      +flfp country trends  ter        ->prm_cmp     base sig- -0.108(0.050) n=1887 -> null -0.059(0.037) n=1363
+ lost      +both country trends  ter        ->prm_cmp     base sig- -0.108(0.050) n=1887 -> null -0.068(0.042) n=1338
+ gained    +u5mr country effects ter        ->gdppc_log   base null +0.002(0.001) n=3845 -> sig+ +0.002(0.001) n=3767
+ lost      +flfp country trends  ter        ->agri_va     base sig+ +0.032(0.013) n=3278 -> null +0.021(0.011) n=2251
+ lost      +both country trends  ter        ->agri_va     base sig+ +0.032(0.013) n=3278 -> null +0.021(0.011) n=2231
+ lost      +flfp country effects ter        ->gpi_sec     base sig- -0.002(0.000) n=1806 -> null -0.001(0.000) n=1174
+ lost      +both country effects ter        ->gpi_sec     base sig- -0.002(0.000) n=1806 -> null -0.001(0.000) n=1154
+ lost      +both country effects prm_cmp    ->lsc         base sig+ +0.201(0.063) n=1753 -> null +0.098(0.053) n=1322
+ lost      +flfp country effects prm_cmp    ->sec         base sig+ +0.218(0.051) n=2392 -> null +0.114(0.062) n=1590
+ lost      +both country effects prm_cmp    ->sec         base sig+ +0.218(0.051) n=2392 -> null +0.039(0.065) n=1563
+ lost      +u5mr country effects prm_cmp    ->gdppc_log   base sig+ +0.002(0.001) n=3546 -> null +0.001(0.001) n=3470
+ lost      +u5mr country effects prm_cmp    ->urban       base sig+ +0.033(0.015) n=3561 -> null +0.013(0.016) n=3485
+ lost      +flfp country effects prm_cmp    ->urban       base sig+ +0.033(0.015) n=3561 -> null +0.032(0.017) n=2357
+ lost      +both country effects prm_cmp    ->urban       base sig+ +0.033(0.015) n=3561 -> null +0.022(0.018) n=2329
+ lost      +flfp country trends  prm_cmp    ->agri_va     base sig+ +0.054(0.016) n=3176 -> null +0.026(0.014) n=2219
+ lost      +both country trends  prm_cmp    ->agri_va     base sig+ +0.054(0.016) n=3176 -> null +0.028(0.015) n=2205
+ lost      +both country effects prm_cmp    ->gpi_sec     base sig+ +0.003(0.001) n=1761 -> null +0.001(0.001) n=1131
+ lost      +flfp country trends  prm_cmp    ->gpi_sec     base sig+ +0.001(0.000) n=1710 -> null +0.000(0.000) n=1105
+ lost      +both country trends  prm_cmp    ->gpi_sec     base sig+ +0.001(0.000) n=1710 -> null -0.000(0.000) n=1083
+ lost      +u5mr country effects prm_cmp    ->gpi_ter     base sig+ +0.002(0.001) n=1636 -> null +0.000(0.001) n=1599
+ lost      +both country effects prm_cmp    ->gpi_ter     base sig+ +0.002(0.001) n=1636 -> null +0.000(0.001) n=1242
+ gained    +flfp country trends  prm_cmp    ->gpi_ter     base null +0.001(0.001) n=1586 -> sig+ +0.001(0.001) n=1208
+ lost      +u5mr country trends  gdppc_log  ->sec         base sig+ +4.515(2.035) n=3390 -> null +3.887(2.023) n=3321
+ lost      +flfp country trends  gdppc_log  ->sec         base sig+ +4.515(2.035) n=3390 -> null +4.100(2.538) n=2108
+ lost      +both country trends  gdppc_log  ->sec         base sig+ +4.515(2.035) n=3390 -> null +3.815(2.538) n=2081
+ gained    +flfp country effects gdppc_log  ->ter         base null +4.121(2.400) n=2857 -> sig+ +9.253(4.392) n=1926
+ gained    +both country effects gdppc_log  ->prm_cmp     base null -0.941(2.439) n=2608 -> sig- -5.057(2.370) n=1790
+ gained    +flfp country trends  gdppc_log  ->agri_va     base null +1.548(1.167) n=6757 -> sig+ +2.925(0.630) n=4010
+ gained    +both country trends  gdppc_log  ->agri_va     base null +1.548(1.167) n=6757 -> sig+ +2.926(0.640) n=3957
+ gained    +both country effects gdppc_log  ->gpi_sec     base null -0.033(0.021) n=3290 -> sig- -0.034(0.014) n=1887
+ lost      +flfp country effects gdppc_log  ->gpi_ter     base sig+ +0.104(0.035) n=2231 -> null +0.050(0.050) n=1670
+ lost      +both country effects gdppc_log  ->gpi_ter     base sig+ +0.104(0.035) n=2231 -> null +0.013(0.045) n=1637
+ gained    +flfp country trends  gdppc_log  ->gpi_ter     base null -0.051(0.041) n=2171 -> sig- -0.118(0.031) n=1611
+ gained    +both country trends  gdppc_log  ->gpi_ter     base null -0.051(0.041) n=2171 -> sig- -0.124(0.032) n=1578
+ lost      +flfp country trends  urban      ->sec         base sig+ +0.633(0.232) n=3390 -> null +0.173(0.268) n=2108
+ lost      +both country trends  urban      ->sec         base sig+ +0.633(0.232) n=3390 -> null +0.208(0.263) n=2081
+ lost      +flfp country effects urban      ->ter         base sig+ +0.491(0.178) n=2857 -> null +0.514(0.301) n=1926
+ lost      +both country effects urban      ->ter         base sig+ +0.491(0.178) n=2857 -> null +0.567(0.311) n=1893
+ lost      +u5mr country effects urban      ->prm_cmp     base sig+ +0.349(0.127) n=2608 -> null +0.072(0.102) n=2562
+ lost      +both country effects urban      ->prm_cmp     base sig+ +0.349(0.127) n=2608 -> null +0.379(0.222) n=1790
+ lost      +flfp country trends  urban      ->agri_va     base sig+ +0.154(0.069) n=6757 -> null +0.112(0.074) n=4010
+ lost      +both country trends  urban      ->agri_va     base sig+ +0.154(0.069) n=6757 -> null +0.112(0.078) n=3957
+ lost      +u5mr country effects urban      ->emp_agri    base sig- -0.107(0.053) n=4326 -> null -0.057(0.054) n=4198
+ lost      +both country effects urban      ->emp_agri    base sig- -0.107(0.053) n=4326 -> null -0.071(0.054) n=4198
+ lost      +u5mr country effects urban      ->gpi_sec     base sig+ +0.003(0.001) n=3290 -> null +0.000(0.001) n=3228
+ lost      +u5mr country effects urban      ->gpi_ter     base sig+ +0.007(0.002) n=2231 -> null +0.003(0.002) n=2184
+ gained    +flfp country effects tax        ->ter         base null +0.526(0.303) n=1414 -> sig+ +0.983(0.293) n=1203
+ gained    +both country effects tax        ->ter         base null +0.526(0.303) n=1414 -> sig+ +0.790(0.298) n=1189
+ gained    +u5mr country effects tax        ->gdppc_log   base null +0.000(0.000) n=3400 -> sig+ +0.001(0.000) n=3379
+ gained    +flfp country effects tax        ->gdppc_log   base null +0.000(0.000) n=3400 -> sig+ +0.001(0.000) n=2512
+ gained    +both country effects tax        ->gdppc_log   base null +0.000(0.000) n=3400 -> sig+ +0.001(0.000) n=2493
+ gained    +flfp country trends  tax        ->gdppc_log   base null -0.001(0.001) n=3381 -> sig- -0.002(0.000) n=2491
+ gained    +both country trends  tax        ->gdppc_log   base null -0.001(0.001) n=3381 -> sig- -0.002(0.000) n=2472
+ lost      +flfp country trends  tax        ->agri_va     base sig+ +0.031(0.013) n=2848 -> null +0.028(0.016) n=2314
+ lost      +both country trends  tax        ->agri_va     base sig+ +0.031(0.013) n=2848 -> null +0.028(0.016) n=2314
+ gained    +u5mr country effects tax        ->emp_agri    base null -0.001(0.002) n=2430 -> sig- -0.006(0.003) n=2411
+ gained    +both country effects tax        ->emp_agri    base null -0.001(0.002) n=2430 -> sig- -0.006(0.003) n=2411
+ gained    +flfp country trends  tax        ->u5mr        base null +0.045(0.025) n=3361 -> sig+ +0.052(0.008) n=2472
+ lost      +u5mr country effects tax        ->gpi_sec     base sig- -0.002(0.001) n=1773 -> null -0.001(0.001) n=1760
+ lost      +flfp country effects tax        ->gpi_sec     base sig- -0.002(0.001) n=1773 -> null -0.001(0.001) n=1269
+ lost      +both country effects tax        ->gpi_sec     base sig- -0.002(0.001) n=1773 -> null -0.002(0.001) n=1256
+ gained    +flfp country trends  tax        ->gpi_sec     base null -0.000(0.001) n=1740 -> sig- -0.001(0.001) n=1239
+ gained    +both country trends  tax        ->gpi_sec     base null -0.000(0.001) n=1740 -> sig- -0.002(0.001) n=1226
+ lost      +u5mr country effects agri_va    ->lsc         base sig- -0.320(0.111) n=1802 -> null -0.183(0.101) n=1778
+ lost      +flfp country effects agri_va    ->lsc         base sig- -0.320(0.111) n=1802 -> null -0.175(0.150) n=1416
+ lost      +both country effects agri_va    ->lsc         base sig- -0.320(0.111) n=1802 -> null -0.151(0.140) n=1405
+ lost      +u5mr country effects agri_va    ->sec         base sig- -0.258(0.105) n=2959 -> null -0.069(0.101) n=2902
+ lost      +flfp country effects agri_va    ->sec         base sig- -0.258(0.105) n=2959 -> null -0.139(0.114) n=2017
+ lost      +both country effects agri_va    ->sec         base sig- -0.258(0.105) n=2959 -> null -0.069(0.110) n=2002
+ lost      +u5mr country effects agri_va    ->prm_cmp     base sig- -0.298(0.082) n=2385 -> null -0.131(0.076) n=2353
+ lost      +flfp country effects agri_va    ->prm_cmp     base sig- -0.298(0.082) n=2385 -> null -0.057(0.133) n=1744
+ lost      +both country effects agri_va    ->prm_cmp     base sig- -0.298(0.082) n=2385 -> null -0.021(0.105) n=1731
+ lost      +flfp country trends  agri_va    ->gdppc_log   base sig- -0.004(0.002) n=6832 -> null -0.002(0.001) n=4037
+ lost      +both country trends  agri_va    ->gdppc_log   base sig- -0.004(0.002) n=6832 -> null -0.002(0.001) n=3976
+ lost      +u5mr country effects agri_va    ->emp_agri    base sig+ +0.107(0.046) n=3932 -> null +0.051(0.045) n=3873
+ lost      +both country effects agri_va    ->emp_agri    base sig+ +0.107(0.046) n=3932 -> null +0.040(0.044) n=3873
+ gained    +flfp country effects agri_va    ->life_exp    base null -0.035(0.027) n=6867 -> sig- -0.045(0.018) n=4066
+ lost      +flfp country effects agri_va    ->fertility   base sig+ +0.010(0.003) n=6867 -> null +0.000(0.003) n=4066
+ gained    +flfp country effects emp_agri   ->lsc         base null -0.293(0.171) n=1453 -> sig- -0.322(0.160) n=1453
+ lost      +u5mr country effects emp_agri   ->gdppc_log   base sig- -0.008(0.004) n=4305 -> null -0.006(0.004) n=4182
+ lost      +flfp country effects emp_agri   ->gdppc_log   base sig- -0.008(0.004) n=4305 -> null -0.007(0.004) n=4305
+ lost      +both country effects emp_agri   ->gdppc_log   base sig- -0.008(0.004) n=4305 -> null -0.006(0.004) n=4182
+ lost      +u5mr country trends  emp_agri   ->tax         base sig- -0.099(0.044) n=2120 -> null -0.077(0.042) n=2101
+ lost      +both country trends  emp_agri   ->tax         base sig- -0.099(0.044) n=2120 -> null -0.086(0.046) n=2101
+ lost      +u5mr country effects emp_agri   ->gpi_sec     base sig- -0.003(0.001) n=1841 -> null -0.000(0.001) n=1814
+ lost      +flfp country effects emp_agri   ->gpi_sec     base sig- -0.003(0.001) n=1841 -> null -0.002(0.001) n=1841
+ lost      +both country effects emp_agri   ->gpi_sec     base sig- -0.003(0.001) n=1841 -> null -0.000(0.001) n=1814
+ lost      +u5mr country effects emp_agri   ->gpi_ter     base sig- -0.006(0.003) n=1645 -> null -0.001(0.003) n=1612
+ lost      +both country effects emp_agri   ->gpi_ter     base sig- -0.006(0.003) n=1645 -> null -0.001(0.003) n=1612
+ lost      +u5mr country effects flfp       ->electricity base sig- -0.171(0.053) n=3839 -> null -0.059(0.063) n=3707
+ lost      +u5mr country effects flfp       ->wage_emp    base sig- -0.094(0.045) n=4326 -> null -0.086(0.048) n=4198
+ gained    +u5mr country effects flfp       ->lsc         base null +0.240(0.175) n=1479 -> sig+ +0.399(0.162) n=1454
+ lost      +u5mr country effects life_exp   ->electricity base sig+ +0.688(0.177) n=4281 -> null -0.058(0.138) n=3999
+ lost      +both country effects life_exp   ->electricity base sig+ +0.688(0.177) n=4281 -> null -0.025(0.146) n=3707
+ lost      +u5mr country trends  life_exp   ->electricity base sig+ +0.146(0.071) n=4279 -> null +0.151(0.118) n=3997
+ lost      +both country trends  life_exp   ->electricity base sig+ +0.146(0.071) n=4279 -> null +0.141(0.118) n=3705
+ lost      +u5mr country effects life_exp   ->wage_emp    base sig+ +0.082(0.038) n=4326 -> null -0.006(0.064) n=4198
+ lost      +both country effects life_exp   ->wage_emp    base sig+ +0.082(0.038) n=4326 -> null +0.039(0.062) n=4198
+ lost      +u5mr country effects life_exp   ->lsc         base sig+ +0.594(0.274) n=1932 -> null +0.139(0.452) n=1894
+ lost      +flfp country effects life_exp   ->lsc         base sig+ +0.594(0.274) n=1932 -> null +0.316(0.399) n=1479
+ sign flip +both country effects life_exp   ->lsc         base sig+ +0.594(0.274) n=1932 -> sig- -1.043(0.511) n=1454
+ gained    +u5mr country trends  life_exp   ->lsc         base null +0.052(0.223) n=1873 -> sig- -0.624(0.288) n=1840
+ gained    +both country trends  life_exp   ->lsc         base null +0.052(0.223) n=1873 -> sig- -1.007(0.300) n=1408
+ lost      +u5mr country effects life_exp   ->sec         base sig+ +0.854(0.195) n=3407 -> null +0.164(0.291) n=3335
+ lost      +flfp country effects life_exp   ->sec         base sig+ +0.854(0.195) n=3407 -> null +0.431(0.298) n=2136
+ lost      +both country effects life_exp   ->sec         base sig+ +0.854(0.195) n=3407 -> null -0.532(0.364) n=2107
+ lost      +flfp country effects life_exp   ->ter         base sig+ +0.475(0.140) n=2857 -> null +0.321(0.264) n=1926
+ lost      +both country effects life_exp   ->ter         base sig+ +0.475(0.140) n=2857 -> null +0.779(0.452) n=1893
+ lost      +u5mr country trends  life_exp   ->ter         base sig- -0.518(0.195) n=2811 -> null -0.198(0.235) n=2768
+ lost      +flfp country trends  life_exp   ->ter         base sig- -0.518(0.195) n=2811 -> null -0.660(0.339) n=1866
+ lost      +u5mr country effects life_exp   ->prm_cmp     base sig+ +0.882(0.306) n=2608 -> null -0.459(0.316) n=2562
+ lost      +flfp country effects life_exp   ->prm_cmp     base sig+ +0.882(0.306) n=2608 -> null +0.567(0.416) n=1817
+ sign flip +both country effects life_exp   ->prm_cmp     base sig+ +0.882(0.306) n=2608 -> sig- -1.014(0.453) n=1790
+ lost      +both country effects life_exp   ->gdppc_log   base sig+ +0.008(0.002) n=9233 -> null +0.005(0.005) n=4353
+ lost      +flfp country trends  life_exp   ->gdppc_log   base sig+ +0.008(0.004) n=9231 -> null -0.001(0.003) n=4478
+ lost      +both country trends  life_exp   ->gdppc_log   base sig+ +0.008(0.004) n=9231 -> null -0.002(0.004) n=4351
+ lost      +u5mr country effects life_exp   ->urban       base sig+ +0.112(0.047) n=9270 -> null -0.062(0.079) n=8567
+ lost      +flfp country effects life_exp   ->urban       base sig+ +0.112(0.047) n=9270 -> null +0.081(0.058) n=4510
+ lost      +both country effects life_exp   ->urban       base sig+ +0.112(0.047) n=9270 -> null -0.126(0.083) n=4378
+ lost      +u5mr country effects life_exp   ->agri_va     base sig- -0.160(0.051) n=6764 -> null -0.019(0.048) n=6499
+ lost      +flfp country effects life_exp   ->agri_va     base sig- -0.160(0.051) n=6764 -> null -0.071(0.055) n=4015
+ lost      +both country effects life_exp   ->agri_va     base sig- -0.160(0.051) n=6764 -> null +0.064(0.077) n=3962
+ lost      +u5mr country effects life_exp   ->emp_agri    base sig- -0.252(0.067) n=4326 -> null -0.012(0.074) n=4198
+ lost      +both country effects life_exp   ->emp_agri    base sig- -0.252(0.067) n=4326 -> null -0.083(0.074) n=4198
+ gained    +u5mr country effects life_exp   ->flfp        base null -0.054(0.073) n=4501 -> sig+ +0.338(0.104) n=4369
+ lost      +u5mr country effects life_exp   ->gpi_sec     base sig+ +0.009(0.001) n=3290 -> null -0.004(0.002) n=3228
+ lost      +both country effects life_exp   ->gpi_sec     base sig+ +0.009(0.001) n=3290 -> null -0.003(0.002) n=1887
+ lost      +u5mr country effects life_exp   ->gpi_ter     base sig+ +0.014(0.002) n=2231 -> null -0.001(0.003) n=2184
+ lost      +both country effects life_exp   ->gpi_ter     base sig+ +0.014(0.002) n=2231 -> null -0.010(0.006) n=1637
+ lost      +u5mr country trends  life_exp   ->gpi_ter     base sig+ +0.010(0.004) n=2171 -> null -0.001(0.004) n=2128
+ lost      +flfp country trends  life_exp   ->gpi_ter     base sig+ +0.010(0.004) n=2171 -> null -0.008(0.004) n=1611
+ sign flip +both country trends  life_exp   ->gpi_ter     base sig+ +0.010(0.004) n=2171 -> sig- -0.018(0.006) n=1578
+ lost      +flfp country trends  life_exp   ->fertility   base sig- -0.047(0.008) n=9266 -> null -0.005(0.003) n=4508
+ lost      +flfp country effects u5mr       ->wage_emp    base sig- -0.013(0.006) n=4198 -> null -0.010(0.006) n=4198
+ gained    +flfp country trends  u5mr       ->lsc         base null -0.062(0.046) n=1840 -> sig- -0.133(0.055) n=1408
+ lost      +flfp country trends  u5mr       ->ter         base sig+ +0.079(0.031) n=2768 -> null +0.015(0.035) n=1833
+ lost      +flfp country effects u5mr       ->agri_va     base sig+ +0.023(0.007) n=6499 -> null +0.016(0.009) n=3962
+ lost      +flfp country trends  u5mr       ->life_exp    base sig- -0.026(0.009) n=8565 -> null -0.011(0.014) n=4376
+ lost      +flfp country trends  u5mr       ->gpi_ter     base sig- -0.002(0.001) n=2128 -> null -0.001(0.001) n=1578
+ lost      +flfp country trends  u5mr       ->fertility   base sig+ +0.006(0.001) n=8567 -> null +0.000(0.000) n=4376
+ lost      +u5mr country effects gpi_sec    ->electricity base sig+ +14.150(4.473) n=2724 -> null +7.560(4.288) n=2647
+ lost      +both country effects gpi_sec    ->electricity base sig+ +14.150(4.473) n=2724 -> null +8.124(4.515) n=2538
+ lost      +u5mr country effects gpi_sec    ->lsc         base sig+ +15.548(6.775) n=1583 -> null +8.711(6.017) n=1545
+ lost      +u5mr country effects gpi_sec    ->sec         base sig+ +12.462(5.448) n=2976 -> null +2.774(4.610) n=2908
+ lost      +flfp country effects gpi_sec    ->sec         base sig+ +12.462(5.448) n=2976 -> null +11.965(7.010) n=1937
+ lost      +both country effects gpi_sec    ->sec         base sig+ +12.462(5.448) n=2976 -> null +2.148(7.157) n=1909
+ lost      +u5mr country effects gpi_sec    ->prm_cmp     base sig+ +16.062(5.693) n=2104 -> null -2.165(4.679) n=2058
+ lost      +both country effects gpi_sec    ->prm_cmp     base sig+ +16.062(5.693) n=2104 -> null +10.281(7.538) n=1440
+ lost      +u5mr country effects gpi_sec    ->urban       base sig+ +3.425(1.599) n=4900 -> null +1.735(1.682) n=4754
+ lost      +u5mr country trends  gpi_sec    ->agri_va     base sig- -3.924(1.943) n=3991 -> null -2.896(1.899) n=3913
+ lost      +flfp country trends  gpi_sec    ->agri_va     base sig- -3.924(1.943) n=3991 -> null -2.057(1.388) n=2631
+ lost      +both country trends  gpi_sec    ->agri_va     base sig- -3.924(1.943) n=3991 -> null -2.041(1.395) n=2612
+ lost      +u5mr country effects gpi_sec    ->emp_agri    base sig- -6.671(2.255) n=2781 -> null -3.435(2.539) n=2740
+ lost      +both country effects gpi_sec    ->emp_agri    base sig- -6.671(2.255) n=2781 -> null -2.718(2.518) n=2740
+ lost      +u5mr country effects gpi_sec    ->gpi_ter     base sig+ +0.347(0.086) n=1793 -> null +0.144(0.092) n=1752
+ lost      +both country effects gpi_ter    ->lsc         base sig+ +14.036(4.993) n=1335 -> null +6.898(4.203) n=1074
+ lost      +flfp country trends  gpi_ter    ->lsc         base sig+ +7.088(3.178) n=1272 -> null -4.157(3.690) n=1032
+ lost      +both country trends  gpi_ter    ->lsc         base sig+ +7.088(3.178) n=1272 -> null -3.671(3.474) n=1009
+ lost      +flfp country effects gpi_ter    ->sec         base sig+ +10.684(3.143) n=2146 -> null +6.877(4.416) n=1497
+ lost      +both country effects gpi_ter    ->sec         base sig+ +10.684(3.143) n=2146 -> null +5.704(4.094) n=1470
+ lost      +flfp country effects gpi_ter    ->ter         base sig+ +18.445(4.253) n=2385 -> null +13.246(7.252) n=1708
+ lost      +both country effects gpi_ter    ->ter         base sig+ +18.445(4.253) n=2385 -> null +10.276(7.235) n=1675
+ gained    +flfp country trends  gpi_ter    ->prm_cmp     base null +2.913(3.481) n=1654 -> sig- -9.061(2.689) n=1256
+ gained    +both country trends  gpi_ter    ->prm_cmp     base null +2.913(3.481) n=1654 -> sig- -9.289(2.771) n=1231
+ gained    +flfp country trends  gpi_ter    ->agri_va     base null -0.024(0.868) n=2774 -> sig+ +1.557(0.695) n=2000
+ gained    +both country trends  gpi_ter    ->agri_va     base null -0.024(0.868) n=2774 -> sig+ +1.593(0.698) n=1980
+ gained    +u5mr country effects gpi_ter    ->gpi_sec     base null -0.080(0.047) n=1585 -> sig- -0.137(0.038) n=1558
+ gained    +flfp country effects gpi_ter    ->gpi_sec     base null -0.080(0.047) n=1585 -> sig+ +0.067(0.031) n=1078
+ lost      +flfp country trends  fertility  ->sec         base sig- -3.303(1.234) n=3390 -> null -3.237(1.671) n=2108
+ lost      +both country trends  fertility  ->sec         base sig- -3.303(1.234) n=3390 -> null -3.180(1.650) n=2081
+ lost      +both country effects fertility  ->prm_cmp     base sig- -2.976(1.179) n=2608 -> null -1.999(1.617) n=1790
+ lost      +u5mr country trends  fertility  ->prm_cmp     base sig- -2.732(1.260) n=2566 -> null -2.148(1.309) n=2520
+ gained    +flfp country effects fertility  ->urban       base null -0.274(0.191) n=9272 -> sig- -1.164(0.298) n=4510
+ gained    +both country effects fertility  ->urban       base null -0.274(0.191) n=9272 -> sig- -0.900(0.301) n=4378
+ gained    +flfp country effects fertility  ->tax         base null -0.150(0.251) n=3007 -> sig- -1.392(0.488) n=2199
+ gained    +both country effects fertility  ->tax         base null -0.150(0.251) n=3007 -> sig- -1.382(0.497) n=2180
+ lost      +both country effects fertility  ->agri_va     base sig+ +1.127(0.278) n=6764 -> null +0.751(0.397) n=3962
+ gained    +flfp country trends  fertility  ->agri_va     base null +0.083(0.516) n=6757 -> sig+ +0.967(0.465) n=4010
+ gained    +both country trends  fertility  ->agri_va     base null +0.083(0.516) n=6757 -> sig+ +0.966(0.468) n=3957
+ gained    +u5mr country effects fertility  ->gpi_sec     base null -0.004(0.011) n=3290 -> sig+ +0.023(0.009) n=3228
+ lost      +both country effects fertility  ->gpi_ter     base sig- -0.072(0.015) n=2231 -> null -0.036(0.035) n=1637
+
+=== did a changed verdict come from the CONTROL or from the smaller sample? ===
+baseline re-estimated on exactly the rows each control variant used (common-sample baseline).
+sample = baseline verdict already changes on the restricted rows (the control's coverage changed the sample);
+control = the added control changes the verdict relative to that same-row baseline.
+changed verdicts by origin: both=3, control effect only=94, sample composition only=120
+control effect only: 94
+   country effects +u5mr electricity->gdppc_log: full-rows base sig+ +0.004 -> same-rows base sig+ +0.004 -> variant null +0.003
+   country effects +both electricity->urban: full-rows base sig+ +0.067 -> same-rows base sig+ +0.062 -> variant null +0.044
+   country effects +u5mr electricity->emp_agri: full-rows base sig- -0.080 -> same-rows base sig- -0.079 -> variant null -0.053
+   country effects +both electricity->emp_agri: full-rows base sig- -0.080 -> same-rows base sig- -0.079 -> variant null -0.054
+   country effects +u5mr electricity->gpi_sec: full-rows base sig+ +0.003 -> same-rows base sig+ +0.003 -> variant null +0.001
+   country effects +both electricity->gpi_sec: full-rows base sig+ +0.003 -> same-rows base sig+ +0.003 -> variant null +0.001
+   country effects +flfp wage_emp->urban: full-rows base sig+ +0.148 -> same-rows base sig+ +0.148 -> variant null +0.145
+   country effects +u5mr lsc->gpi_sec: full-rows base null -0.001 -> same-rows base null -0.001 -> variant sig- -0.001
+   country effects +u5mr sec->electricity: full-rows base sig+ +0.057 -> same-rows base sig+ +0.058 -> variant null +0.038
+   country effects +both sec->electricity: full-rows base sig+ +0.057 -> same-rows base sig+ +0.061 -> variant null +0.042
+   country effects +u5mr sec->gpi_sec: full-rows base null -0.000 -> same-rows base null -0.000 -> variant sig- -0.001
+   country effects +u5mr sec->gpi_ter: full-rows base sig+ +0.002 -> same-rows base sig+ +0.002 -> variant null +0.001
+sample composition only: 120
+   country effects +u5mr electricity->tax: full-rows base sig+ +0.055 -> same-rows base null +0.049 -> variant null +0.048
+   country effects +both electricity->tax: full-rows base sig+ +0.055 -> same-rows base null +0.052 -> variant null +0.053
+   country effects +u5mr wage_emp->urban: full-rows base sig+ +0.148 -> same-rows base null +0.142 -> variant null +0.140
+   country effects +both wage_emp->urban: full-rows base sig+ +0.148 -> same-rows base null +0.142 -> variant null +0.139
+   country effects +flfp lsc->sec: full-rows base sig+ +0.125 -> same-rows base null +0.051 -> variant null +0.045
+   country effects +both lsc->sec: full-rows base sig+ +0.125 -> same-rows base null +0.055 -> variant null +0.075
+   country effects +flfp lsc->urban: full-rows base null +0.014 -> same-rows base sig+ +0.041 -> variant sig+ +0.041
+   country effects +both lsc->urban: full-rows base null +0.014 -> same-rows base sig+ +0.041 -> variant sig+ +0.038
+   country effects +flfp lsc->tax: full-rows base null +0.031 -> same-rows base sig+ +0.056 -> variant sig+ +0.055
+   country effects +both lsc->tax: full-rows base null +0.031 -> same-rows base sig+ +0.053 -> variant sig+ +0.049
+   country trends  +flfp sec->ter: full-rows base sig+ +0.099 -> same-rows base null +0.053 -> variant null +0.048
+   country trends  +both sec->ter: full-rows base sig+ +0.099 -> same-rows base null +0.045 -> variant null +0.045
+both: 3
+   country effects +both life_exp->lsc: full-rows base sig+ +0.594 -> same-rows base null +0.312 -> variant sig- -1.043
+   country effects +both life_exp->prm_cmp: full-rows base sig+ +0.882 -> same-rows base null +0.568 -> variant sig- -1.014
+   country trends  +both life_exp->gpi_ter: full-rows base sig+ +0.010 -> same-rows base null -0.008 -> variant sig- -0.018
+
+=== power check: could a meaningful change have been seen where the verdict did not move? ===
++u5mr, country effects: 212 usable; a change of >= the printed MDC (2.8 x its SE) would be detected; median MDC 0.02743, as share of |baseline estimate| median 37%; 121 of 212 links show a change that large
++u5mr, country trends: 212 usable; a change of >= the printed MDC (2.8 x its SE) would be detected; median MDC 0.005571, as share of |baseline estimate| median 17%; 62 of 212 links show a change that large
++flfp, country effects: 198 usable; a change of >= the printed MDC (2.8 x its SE) would be detected; median MDC 0.01178, as share of |baseline estimate| median 14%; 118 of 198 links show a change that large
++flfp, country trends: 198 usable; a change of >= the printed MDC (2.8 x its SE) would be detected; median MDC 0.006637, as share of |baseline estimate| median 18%; 113 of 198 links show a change that large
++u5mr, country effects: of 161 unchanged links, 117 could hide a 20%-of-baseline change at 80% power
++u5mr, country trends: of 204 unchanged links, 88 could hide a 20%-of-baseline change at 80% power
++flfp, country effects: of 161 unchanged links, 56 could hide a 20%-of-baseline change at 80% power
++flfp, country trends: of 164 unchanged links, 86 could hide a 20%-of-baseline change at 80% power
+
+=== collinearity of the added controls ===
++u5mr, country effects: VIF median 1.37, max 4.4; partial R2 median 0.27, max 0.77
++u5mr, country trends: VIF median 8.02, max 33.0; partial R2 median 0.88, max 0.97
++flfp, country effects: VIF median 1.04, max 1.1; partial R2 median 0.04, max 0.11
++flfp, country trends: VIF median 4.72, max 6.5; partial R2 median 0.79, max 0.85
+both controls: 344 usable tests; median n 1893 vs baseline 2430 (rows lost to control availability)
+
+=== leave-one-control-out: does the conclusion depend on which control is added? ===
+country effects: 114 of 172 links give the same verdict with child mortality only, women's work only and both; 46 differ between the two single-control versions
+   electricity->tax: +u5mr null, +flfp sig+, both null
+   electricity->emp_agri: +u5mr null, +flfp sig-, both null
+   electricity->gpi_sec: +u5mr null, +flfp sig+, both null
+   lsc->sec: +u5mr sig+, +flfp null, both null
+   lsc->urban: +u5mr null, +flfp sig+, both sig+
+   lsc->tax: +u5mr null, +flfp sig+, both sig+
+   lsc->gpi_sec: +u5mr sig-, +flfp null, both null
+   sec->electricity: +u5mr null, +flfp sig+, both null
+   sec->prm_cmp: +u5mr null, +flfp sig-, both sig-
+   sec->urban: +u5mr null, +flfp sig+, both sig+
+country trends: 143 of 172 links give the same verdict with child mortality only, women's work only and both; 27 differ between the two single-control versions
+   sec->ter: +u5mr sig+, +flfp null, both null
+   sec->prm_cmp: +u5mr sig-, +flfp null, both null
+   sec->agri_va: +u5mr sig+, +flfp null, both null
+   ter->lsc: +u5mr sig-, +flfp null, both null
+   ter->prm_cmp: +u5mr sig-, +flfp null, both null
+   ter->agri_va: +u5mr sig+, +flfp null, both null
+   prm_cmp->agri_va: +u5mr sig+, +flfp null, both null
+   prm_cmp->gpi_sec: +u5mr sig+, +flfp null, both null
+   prm_cmp->gpi_ter: +u5mr null, +flfp sig+, both null
+   gdppc_log->agri_va: +u5mr null, +flfp sig+, both sig+
+
+=== negative control: deliberately control a MEDIATOR (rule violation) and let the estimate collapse ===
+   country effects, electricity->gdppc_log controlling its mediator flfp: sig+ +0.004(0.002) n=4246 -> sig+ +0.004(0.002) n=3809  (estimate shrinks 4%)
+   country effects, electricity->life_exp controlling its mediator u5mr: sig+ +0.068(0.017) n=4281 -> sig+ +0.043(0.020) n=3999  (estimate shrinks 36%)
+   country effects, electricity->life_exp controlling its mediator flfp: sig+ +0.068(0.017) n=4281 -> sig+ +0.069(0.018) n=3839  (estimate shrinks -2%)
+   country effects, electricity->u5mr controlling its mediator flfp: sig- -0.421(0.130) n=3999 -> sig- -0.429(0.133) n=3707  (estimate shrinks -2%)
+   country effects, electricity->fertility controlling its mediator u5mr: sig- -0.009(0.002) n=4281 -> sig- -0.005(0.002) n=3999  (estimate shrinks 40%)
+   country effects, electricity->fertility controlling its mediator flfp: sig- -0.009(0.002) n=4281 -> sig- -0.008(0.002) n=3839  (estimate shrinks 9%)
+   country effects, wage_emp->gdppc_log controlling its mediator flfp: sig- -0.011(0.004) n=4305 -> sig- -0.011(0.004) n=4305  (estimate shrinks -3%)
+   country effects, lsc->u5mr controlling its mediator flfp: sig+ +0.183(0.059) n=2762 -> null +0.047(0.045) n=1939  (estimate shrinks 74%)
+   country effects, sec->u5mr controlling its mediator flfp: sig+ +0.280(0.062) n=4417 -> null +0.034(0.063) n=2674  (estimate shrinks 88%)
+   country effects, ter->u5mr controlling its mediator flfp: sig+ +0.216(0.055) n=3776 -> sig+ +0.126(0.045) n=2407  (estimate shrinks 42%)
