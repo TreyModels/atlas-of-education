@@ -43,8 +43,10 @@ The rule needs Benjamini–Yekutieli (2001, 10.1214/aos/1013699998, V) or an eff
 
 **Claim.** Across 61 of 64 country cases, mass schooling take-off precedes the release of labour out of
 agriculture; the programme calls this a **late-industrialiser regularity, not a universal law**, and Paper M's
-own corrected ordering figure is **strict schooling-first 37.5% [26.6–50.0], simultaneous 31.3%** (the source
-JSON's 68.75% counted ties as schooling-first and is **not used**). The assembly combines supply/demand
+own corrected ordering figure on the 64 three-event countries is **strict schooling-first 37.5% [26.6–50.0],
+simultaneous 31.25% (20/64), fertility-first 31.25% (20/64)** (the source JSON's 68.75% counted the 20 ties as
+schooling-first and is **not used**); the separate release-vs-fertility analysis is 60/64 = 93.75% fertility-first,
+4/64 = 6.25% release-first. The assembly combines supply/demand
 decomposition, historical case sequencing, the agricultural floor/Boppart model, and the 400-grouping multiverse.
 
 **Independent prior art.** Porzio, Rossi & Santangelo (2021) "The Human Side of Structural Transformation",
@@ -64,7 +66,8 @@ survey. Lewis (1954), 10.1111/j.1467-9957.1954.tb00021.x, **V**; Timmer (1988) a
 release, with a supply/demand decomposition and a quantified agricultural floor; the pieces are known but the
 assembled sequence is not. **What is replicated:** each component (education demand, world culture, state
 building, structural change). **Verdict: NEW ASSEMBLY, incremental-new** — but the candidate **must not** use
-the retracted 69% figure; the corrected 37.5% strict ordering with 31.3% simultaneous is the number to carry,
+the retracted 69% figure; the corrected 37.5% strict ordering with 31.25% simultaneous and 31.25% fertility-first
+(on the 64 three-event countries) is the number to carry,
 and a referee will ask whether ties reflect genuine simultaneity or dating resolution.
 
 ## Candidate 3 — GPU full-transition counterfactual (mortality-freeze on the individuation model) — **(b)/(c) NEW ASSEMBLY / DEMONSTRATION**
@@ -155,13 +158,13 @@ NEW ASSEMBLY, weak** — publishable only inside the mechanisms paper; not a sta
 | Care-work loop / tipping point / diminishing returns | Pre-registered mechanism tests that returned nulls; the mechanism hypotheses are known (England & Folbre 1999; Scheffer 2009; Dakos 2012). **KNOWN, null tests.** |
 | Scaling laws / Heaps exponent / regime break | Audits of known scaling results with a new negative (no regime break); not a new law. **AUDIT.** |
 | Marriage age / UN data | Known UN data; the levels-vs-change artefact is a methods lesson, not a finding. **KNOWN.** |
-| "Schooling precedes fertility" as an ordering percentage | The 68.75%/69% figure is **UNRESOLVED and retracted**; Paper M's corrected strict ordering is 37.5% [26.6–50.0] with 31.3% simultaneous. No candidate may use the retracted number. **U.** |
+| "Schooling precedes fertility" as an ordering percentage | The 68.75%/69% figure is **RETRACTED and corrected**; Paper M's corrected strict ordering is 37.5% [26.6–50.0] with 31.25% simultaneous and 31.25% fertility-first on the 64 three-event countries (all-81 35.8%; the 68.75% was 24 + 20 ties), separate from the release-vs-fertility 60/64. No candidate may use the retracted number. **U (retracted).** |
 
 ## Audit-value items the auditor flagged as missed from the candidate list (not paper candidates)
 
 | item | what it is | status |
 |---|---|---|
-| GPU determinism audit | `cuda-scale` @ `e600763`: results are **not** bitwise allocation-invariant (`all_identical=False`); batch layout moves total fertility by up to 1.13 births and mean marriage age by 1.74 years; fix is operational (pin batch size and report it). | negative methodological result, audit value |
+| GPU determinism audit | `cuda-scale` @ `e600763`: results are **not** bitwise allocation-invariant (`all_identical=False`); batch layout moves total fertility by up to 1.13 births and mean marriage age by 1.74 years; fix is operational (pin batch size and report it). Classified **(d) KNOWN/audit — a negative methodological result about simulation reproducibility**, worth reporting in the engine methods note, not a paper-carrying novelty. | audit value (negative result) |
 | ABC importance-weight collapse | `dose-gpu` @ `774085c`: particle-filter ABC produced max weight 0.995 and ESS ≈1/600 (2.5/600 after log-space attempt); equal-weight rejection ABC fixed it. | known pathology, but the recorded correction is audit value |
 
 ## Ranking (revised after the auditor's dependence objection)

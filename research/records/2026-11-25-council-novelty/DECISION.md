@@ -1,9 +1,11 @@
 # Decision: what is genuinely novel, what carries a paper, and what to stop doing
 
-**Council verdict, 25 Nov 2026.** After a 42-claim inventory, independent Crossref verification of prior art for
-every candidate, and a five-perspective panel, the answer to Dr. Menefee's question is blunt: **the programme
-contains no new correlation**. It contains one genuine methodological contribution, two new assemblies that
-already have drafts, and one model-based demonstration with a strong negative result. Everything else is a
+**Council verdict, 25 Nov 2026 (revised after the auditor's diff).** After a 42-claim inventory, independent
+Crossref verification of prior art for every candidate, and a five-perspective panel, the answer to Dr. Menefee's
+question is blunt: **the programme contains no new correlation**. It contains one **conditional** methodological
+contribution — the multiverse draw-count arithmetic, which counts as a rule only once the dependence /
+effective-number-of-tests correction is formalised — two new assemblies that already have drafts, and one
+model-based demonstration with a strong negative result. Everything else is a
 replication, a null test of a known hypothesis, or an audit. The right response is to publish four things, fold
 two into them, and stop three.
 
@@ -15,11 +17,14 @@ Panel mean 3.8 (highest). Draft: Paper M, 17,371 words, branch `research/paper-m
 multi-country sequencing with supply/demand decomposition and an agricultural floor that nobody has assembled in
 this form — the panel's economic historian scored it 5. Binding conditions: (i) the retracted 68.75%/69% ordering figure must not appear — **already corrected at
 `research/paper-massification-2026-11-25` @ `95dc135`, then `76d929a` (17,433 words), verified by run-lead's
-independent recomputation**: the six corrected locations report strict schooling-first **37.5% (24/64, CI
-26.6–50.0)**, simultaneous **31.3% (20/64)**, fertility-first **31.3% (20/64)**, and the all-81 variant **35.8%**,
-with the tie-counting artefact explained; the source record is annotated at `subsistence-v2` @ `8caaeac`. Keep the
-two orderings separate: those are **schooling-vs-fertility** figures; the **release-vs-fertility** metric is a
-different count — 60/64 = 93.75% fertility-first, 4/64 = 6.25% release-first (AFG, LBR, MWI, ZMB); (ii) the paper
+independent recomputation**: on the **64 three-event countries** (schooling take-off, farm-exit and fertility
+turning points all dated), the six corrected locations report strict schooling-first **37.5% (24/64, CI
+26.6–50.0)**, simultaneous **31.25% (20/64)**, fertility-first **31.25% (20/64)**, median gap 0 (IQR −5/+8); the
+all-81 variant with both dates is **35.8% (29/81)**; the 68.75% was 24 + 20 ties counted as schooling-first. The
+source record is annotated at `subsistence-v2` @ `8caaeac`. Keep the two orderings separate: those are
+**schooling-vs-fertility** figures; the **release-vs-fertility** metric is a different analysis on the 64 countries
+with both a farm-exit and a fertility date — **60/64 = 93.75% fertility-first, 4/64 = 6.25% release-first (AFG,
+LBR, MWI, ZMB)**, 0 ties; (ii) the paper
 must frame the sequence as a dating-and-assembly result, not a causal claim, because schooling and agricultural
 release are jointly determined by industrialisation; (iii) endogeneity/coarse-dating objections get a dedicated
 paragraph, not a footnote.
@@ -78,7 +83,7 @@ Without that correction it is a methods-note observation; rank it below this pap
 | Care-work loop / tipping point / diminishing returns as findings | Pre-registered nulls of known mechanisms (England & Folbre 1999; Scheffer et al. 2009, V; Dakos et al. 2012, V). Nulls are valuable inside Paper F; not a paper. |
 | Scaling/Heaps/regime break | Audits of known scaling results, one new negative (no regime break); not a new law (scaling `fd691a6`). AUDIT. |
 | Marriage-age / UN living-arrangements | Known UN data; the levels-vs-change artefact is a methods lesson (un-marriage `b2b18d5`). KNOWN. |
-| The 69% "schooling precedes fertility" ordering | **RETRACTED, CORRECTION VERIFIED** — the source JSON's 68.75% counted ties as schooling-first; events-CSV recomputation gives 35.8%; Paper M corrected all six locations at `95dc135`/`76d929a` to strict schooling-first 37.5% (24/64, CI 26.6–50.0), simultaneous 31.3% (20/64), fertility-first 31.3% (20/64), all-81 35.8%, and the source record is annotated at `subsistence-v2` @ `8caaeac`. No paper may cite the 69% figure. Do not conflate the schooling-vs-fertility count with the separate **release-vs-fertility** sequence (60/64 = 93.75% fertility-first; 4/64 = 6.25% release-first: AFG, LBR, MWI, ZMB). |
+| The 69% "schooling precedes fertility" ordering | **RETRACTED, CORRECTION VERIFIED** — the source JSON's 68.75% counted ties as schooling-first; events-CSV recomputation gives 35.8%; Paper M corrected all six locations at `95dc135`/`76d929a` to strict schooling-first 37.5% (24/64, CI 26.6–50.0), simultaneous 31.25% (20/64), fertility-first 31.25% (20/64) on the **64 three-event countries** (median gap 0, IQR −5/+8; all-81 variant 35.8% = 29/81), and the source record is annotated at `subsistence-v2` @ `8caaeac`. No paper may cite the 69% figure. Do not conflate this with the separate **release-vs-fertility** analysis, on the 64 countries with both a farm-exit and a fertility date, where 60/64 = 93.75% fertility-first and 4/64 = 6.25% release-first (AFG, LBR, MWI, ZMB), 0 ties. |
 
 ## If forced to pick three
 
