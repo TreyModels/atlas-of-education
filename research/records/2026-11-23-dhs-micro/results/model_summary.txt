@@ -1,0 +1,67 @@
+=== data provenance and shape ===
+rows 81962, indicators: ED_EDUC_W_MYR, ED_EDUC_W_NED, ED_EDUC_W_SEH, ED_EDUC_W_SSC, ED_EDUC_W_TOT, FE_AAFB_W_M25, FE_CEBA_W_MNC, FE_FRTY_W_MNC
+surveys 377, countries 87, years 1985-2025
+
+=== A. completed fertility (women 40-49) on education, country x survey FE ===
+cells 1291, surveys 369, countries 86, median women per cell 401
+  edu_primary    -0.570 children (SE 0.058) sig-
+  edu_secondary  -1.622 children (SE 0.170) sig-
+  edu_higher     -2.536 children (SE 0.235) sig-
+
+=== B. per-survey gradient: secondary+ minus none/primary (children ever born) ===
+surveys 346, countries 80; median -1.900, IQR -2.475 to -1.425; 99% negative
+
+=== C. does the gradient steepen in later cohorts? (cohort = survey year - 44.5) ===
+cells 1291, cohorts 1940-1980
+  primary  : level -0.637 (SE 0.177); change per decade -0.017 (SE 0.073) null
+  secondary: level -1.053 (SE 0.325); change per decade +0.262 (SE 0.127) sig+
+  higher   : level -1.661 (SE 0.462); change per decade +0.396 (SE 0.161) sig+
+  earlier cohorts (<=median): sec+higher vs none: edu_primary -0.605(0.101), edu_secondary -1.959(0.181), edu_higher -2.989(0.203)
+  later cohorts (>median): sec+higher vs none: edu_primary -0.579(0.066), edu_secondary -1.499(0.164), edu_higher -2.347(0.242)
+  (cohort median split at birth year 1964)
+
+=== D. does the gradient steepen where the schooling pipeline is denser? ===
+pipeline = share of women with secondary or higher at the survey (national, ED_EDUC_W_SEH); cells 1205, surveys 341
+  primary  : level -0.543 (SE 0.047); change per +10pp pipeline +0.023 (SE 0.027) null
+  secondary: level -1.656 (SE 0.122); change per +10pp pipeline +0.130 (SE 0.050) sig+
+  higher   : level -2.638 (SE 0.204); change per +10pp pipeline +0.162 (SE 0.053) sig+
+  low-pipeline surveys: edu_primary -0.572(0.100), edu_secondary -1.976(0.144), edu_higher -3.116(0.147)
+  high-pipeline surveys: edu_primary -0.559(0.064), edu_secondary -1.530(0.167), edu_higher -2.438(0.243)
+  (pipeline median split at 35.9%)
+
+=== E. wealth gradient for the same outcome (not a horse race: the API does not cross education x wealth) ===
+cells 1585, surveys 317, countries 77
+  wq_second   -0.454 (SE 0.049) sig-
+  wq_middle   -0.875 (SE 0.083) sig-
+  wq_fourth   -1.307 (SE 0.101) sig-
+  wq_highest  -1.993 (SE 0.159) sig-
+
+=== F. tempo: median age at first birth (women 25-29) on education, same FE ===
+cells 996, surveys 333, countries 86
+  edu_primary    +0.535 years (SE 0.095) sig+
+  edu_secondary  +2.648 years (SE 0.149) sig+
+  edu_higher     +5.272 years (SE 0.389) sig+
+
+=== F2. cohort-specific per-survey gradient (secondary+ minus none/primary, children) ===
+  cohort  n_surveys  median_gradient  IQR
+  1940s    48       -2.500         -2.800 to -1.800
+  1950s    78       -1.900         -2.475 to -1.425
+  1960s   122       -1.850         -2.300 to -1.400
+  1970s    95       -1.800         -2.300 to -1.400
+  1980s     3       -1.500         -1.700 to -1.350
+
+=== F3. per-survey gradient by pipeline tercile (share of women with secondary+) ===
+  low    : n=108 median -2.100 IQR -2.600 to -1.600; pipeline 16%
+  middle : n=108 median -2.000 IQR -2.300 to -1.600; pipeline 34%
+  high   : n=108 median -1.600 IQR -1.925 to -1.175; pipeline 63%
+
+=== F4. tempo vs quantum: same model, two outcomes ===
+  education level      completed fertility (children)   median age at first birth (years)
+  secondary vs none  -1.622 (0.170)                +2.648 (0.149)
+  higher vs none     -2.536 (0.235)                +5.272 (0.389)
+
+=== G. sanity check: median children ever born by age group (all women) ===
+  15-19 0.18, 20-24 1.05, 25-29 2.26, 30-34 3.45, 35-39 4.54, 40-44 5.32, 45-49 5.77
+
+=== H. pipeline indicator coverage ===
+pipeline (DHS own, weighted ED_EDUC_W_SEH): 348 surveys; range 2% to 100%, median 34%

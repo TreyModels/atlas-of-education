@@ -1,0 +1,997 @@
+IndicatorId,Indicator,CountryName,DHS_CountryCode,SurveyId,SurveyYear,SurveyType,CharacteristicId,CharacteristicCategory,CharacteristicLabel,Value,DenominatorWeighted,DenominatorUnweighted,CILow,CIHigh,IsPreferred,IsTotal,survey,country,cohort,w,edu_primary,edu_secondary,edu_higher
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Afghanistan,AF,AF2015DHS,2015,DHS,4000,Education,No education,19.6,,,,,1,0,AF2015DHS,AF,1970.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Afghanistan,AF,AF2015DHS,2015,DHS,4001,Education,Primary,19.9,,,,,1,0,AF2015DHS,AF,1970.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Afghanistan,AF,AF2015DHS,2015,DHS,4002,Education,Secondary,21.8,,,,,1,0,AF2015DHS,AF,1970.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Albania,AL,AL2008DHS,2008,DHS,4001,Education,Primary,22.3,,,,,1,0,AL2008DHS,AL,1963.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Albania,AL,AL2008DHS,2008,DHS,4002,Education,Secondary,22.9,,,,,1,0,AL2008DHS,AL,1963.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Albania,AL,AL2017DHS,2017,DHS,4000,Education,No education,21.5,,,,,1,0,AL2017DHS,AL,1972.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Albania,AL,AL2017DHS,2017,DHS,4001,Education,Primary,21.9,,,,,1,0,AL2017DHS,AL,1972.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Albania,AL,AL2017DHS,2017,DHS,4002,Education,Secondary,23.6,,,,,1,0,AL2017DHS,AL,1972.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Armenia,AM,AM2000DHS,2000,DHS,4002,Education,Secondary,20.7,,,,,1,0,AM2000DHS,AM,1955.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Armenia,AM,AM2000DHS,2000,DHS,4003,Education,Higher,24.4,,,,,1,0,AM2000DHS,AM,1955.5,1.0,0.0,0.0,1.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Armenia,AM,AM2005DHS,2005,DHS,4001,Education,Primary,23.4,,,,,1,0,AM2005DHS,AM,1960.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Armenia,AM,AM2005DHS,2005,DHS,4002,Education,Secondary,21.2,,,,,1,0,AM2005DHS,AM,1960.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Armenia,AM,AM2010DHS,2010,DHS,4001,Education,Primary,21.4,,,,,1,0,AM2010DHS,AM,1965.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Armenia,AM,AM2010DHS,2010,DHS,4002,Education,Secondary,21.6,,,,,1,0,AM2010DHS,AM,1965.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Armenia,AM,AM2016DHS,2016,DHS,4001,Education,Primary,22.7,,,,,1,0,AM2016DHS,AM,1971.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Armenia,AM,AM2016DHS,2016,DHS,4002,Education,Secondary,22.6,,,,,1,0,AM2016DHS,AM,1971.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Angola,AO,AO2011MIS,2011,MIS,4000,Education,No education,18.6,,,,,1,0,AO2011MIS,AO,1966.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Angola,AO,AO2011MIS,2011,MIS,4001,Education,Primary,18.8,,,,,1,0,AO2011MIS,AO,1966.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Angola,AO,AO2011MIS,2011,MIS,4002,Education,Secondary,22.0,,,,,1,0,AO2011MIS,AO,1966.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Angola,AO,AO2015DHS,2015,DHS,4000,Education,No education,18.4,,,,,1,0,AO2015DHS,AO,1970.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Angola,AO,AO2015DHS,2015,DHS,4001,Education,Primary,18.3,,,,,1,0,AO2015DHS,AO,1970.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Angola,AO,AO2015DHS,2015,DHS,4002,Education,Secondary,19.9,,,,,1,0,AO2015DHS,AO,1970.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Angola,AO,AO2023DHS,2023,DHS,4000,Education,No education,18.2,,,,,1,0,AO2023DHS,AO,1978.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Angola,AO,AO2023DHS,2023,DHS,4001,Education,Primary,17.7,,,,,1,0,AO2023DHS,AO,1978.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Angola,AO,AO2023DHS,2023,DHS,4002,Education,Secondary,19.8,,,,,1,0,AO2023DHS,AO,1978.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Azerbaijan,AZ,AZ2006DHS,2006,DHS,4000,Education,No education,20.9,,,,,1,0,AZ2006DHS,AZ,1961.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Azerbaijan,AZ,AZ2006DHS,2006,DHS,4001,Education,Primary,20.6,,,,,1,0,AZ2006DHS,AZ,1961.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Azerbaijan,AZ,AZ2006DHS,2006,DHS,4002,Education,Secondary,22.8,,,,,1,0,AZ2006DHS,AZ,1961.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Bangladesh,BD,BD1994DHS,1994,DHS,4000,Education,No education,17.5,,,,,1,0,BD1994DHS,BD,1949.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Bangladesh,BD,BD1994DHS,1994,DHS,4001,Education,Primary,17.7,,,,,1,0,BD1994DHS,BD,1949.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Bangladesh,BD,BD1994DHS,1994,DHS,4002,Education,Secondary,18.7,,,,,1,0,BD1994DHS,BD,1949.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Bangladesh,BD,BD1994DHS,1994,DHS,4003,Education,Higher,22.9,,,,,1,0,BD1994DHS,BD,1949.5,1.0,0.0,0.0,1.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Bangladesh,BD,BD1997DHS,1997,DHS,4000,Education,No education,16.8,,,,,1,0,BD1997DHS,BD,1952.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Bangladesh,BD,BD1997DHS,1997,DHS,4001,Education,Primary,17.1,,,,,1,0,BD1997DHS,BD,1952.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Bangladesh,BD,BD1997DHS,1997,DHS,4002,Education,Secondary,19.3,,,,,1,0,BD1997DHS,BD,1952.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Bangladesh,BD,BD1997DHS,1997,DHS,4003,Education,Higher,24.6,,,,,1,0,BD1997DHS,BD,1952.5,1.0,0.0,0.0,1.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Bangladesh,BD,BD2000DHS,2000,DHS,4000,Education,No education,17.4,,,,,1,0,BD2000DHS,BD,1955.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Bangladesh,BD,BD2000DHS,2000,DHS,4001,Education,Primary,17.6,,,,,1,0,BD2000DHS,BD,1955.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Bangladesh,BD,BD2000DHS,2000,DHS,4002,Education,Secondary,20.1,,,,,1,0,BD2000DHS,BD,1955.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Bangladesh,BD,BD2000DHS,2000,DHS,4003,Education,Higher,24.1,,,,,1,0,BD2000DHS,BD,1955.5,1.0,0.0,0.0,1.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Bangladesh,BD,BD2004DHS,2004,DHS,4000,Education,No education,16.8,,,,,1,0,BD2004DHS,BD,1959.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Bangladesh,BD,BD2004DHS,2004,DHS,4001,Education,Primary,17.2,,,,,1,0,BD2004DHS,BD,1959.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Bangladesh,BD,BD2004DHS,2004,DHS,4002,Education,Secondary,18.6,,,,,1,0,BD2004DHS,BD,1959.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Bangladesh,BD,BD2004DHS,2004,DHS,4003,Education,Higher,24.6,,,,,1,0,BD2004DHS,BD,1959.5,1.0,0.0,0.0,1.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Bangladesh,BD,BD2007DHS,2007,DHS,4000,Education,No education,17.1,,,,,1,0,BD2007DHS,BD,1962.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Bangladesh,BD,BD2007DHS,2007,DHS,4001,Education,Primary,17.5,,,,,1,0,BD2007DHS,BD,1962.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Bangladesh,BD,BD2007DHS,2007,DHS,4002,Education,Secondary,18.8,,,,,1,0,BD2007DHS,BD,1962.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Bangladesh,BD,BD2007DHS,2007,DHS,4003,Education,Higher,23.3,,,,,1,0,BD2007DHS,BD,1962.5,1.0,0.0,0.0,1.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Bangladesh,BD,BD2011DHS,2011,DHS,4000,Education,No education,17.0,,,,,1,0,BD2011DHS,BD,1966.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Bangladesh,BD,BD2011DHS,2011,DHS,4001,Education,Primary,17.1,,,,,1,0,BD2011DHS,BD,1966.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Bangladesh,BD,BD2011DHS,2011,DHS,4002,Education,Secondary,18.6,,,,,1,0,BD2011DHS,BD,1966.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Bangladesh,BD,BD2011DHS,2011,DHS,4003,Education,Higher,23.8,,,,,1,0,BD2011DHS,BD,1966.5,1.0,0.0,0.0,1.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Bangladesh,BD,BD2014DHS,2014,DHS,4000,Education,No education,17.0,,,,,1,0,BD2014DHS,BD,1969.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Bangladesh,BD,BD2014DHS,2014,DHS,4001,Education,Primary,17.3,,,,,1,0,BD2014DHS,BD,1969.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Bangladesh,BD,BD2014DHS,2014,DHS,4002,Education,Secondary,18.7,,,,,1,0,BD2014DHS,BD,1969.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Bangladesh,BD,BD2014DHS,2014,DHS,4003,Education,Higher,24.6,,,,,1,0,BD2014DHS,BD,1969.5,1.0,0.0,0.0,1.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Bangladesh,BD,BD2017DHS,2017,DHS,4000,Education,No education,17.4,,,,,1,0,BD2017DHS,BD,1972.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Bangladesh,BD,BD2017DHS,2017,DHS,4001,Education,Primary,17.8,,,,,1,0,BD2017DHS,BD,1972.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Bangladesh,BD,BD2017DHS,2017,DHS,4002,Education,Secondary,18.4,,,,,1,0,BD2017DHS,BD,1972.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Bangladesh,BD,BD2017DHS,2017,DHS,4003,Education,Higher,23.4,,,,,1,0,BD2017DHS,BD,1972.5,1.0,0.0,0.0,1.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Bangladesh,BD,BD2022DHS,2022,DHS,4000,Education,No education,18.8,,,,,1,0,BD2022DHS,BD,1977.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Bangladesh,BD,BD2022DHS,2022,DHS,4001,Education,Primary,18.4,,,,,1,0,BD2022DHS,BD,1977.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Bangladesh,BD,BD2022DHS,2022,DHS,4002,Education,Secondary,18.9,,,,,1,0,BD2022DHS,BD,1977.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Bangladesh,BD,BD2022DHS,2022,DHS,4003,Education,Higher,23.4,,,,,1,0,BD2022DHS,BD,1977.5,1.0,0.0,0.0,1.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Burkina Faso,BF,BF1993DHS,1993,DHS,4000,Education,No education,18.9,,,,,1,0,BF1993DHS,BF,1948.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Burkina Faso,BF,BF1993DHS,1993,DHS,4001,Education,Primary,19.0,,,,,1,0,BF1993DHS,BF,1948.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Burkina Faso,BF,BF1993DHS,1993,DHS,4002,Education,Secondary,21.7,,,,,1,0,BF1993DHS,BF,1948.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Burkina Faso,BF,BF1999DHS,1999,DHS,4000,Education,No education,18.9,,,,,1,0,BF1999DHS,BF,1954.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Burkina Faso,BF,BF1999DHS,1999,DHS,4001,Education,Primary,19.0,,,,,1,0,BF1999DHS,BF,1954.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Burkina Faso,BF,BF1999DHS,1999,DHS,4002,Education,Secondary,24.0,,,,,1,0,BF1999DHS,BF,1954.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Burkina Faso,BF,BF2003DHS,2003,DHS,4000,Education,No education,19.0,,,,,1,0,BF2003DHS,BF,1958.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Burkina Faso,BF,BF2003DHS,2003,DHS,4001,Education,Primary,20.0,,,,,1,0,BF2003DHS,BF,1958.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Burkina Faso,BF,BF2003DHS,2003,DHS,4002,Education,Secondary,22.3,,,,,1,0,BF2003DHS,BF,1958.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Burkina Faso,BF,BF2010DHS,2010,DHS,4000,Education,No education,19.0,,,,,1,0,BF2010DHS,BF,1965.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Burkina Faso,BF,BF2010DHS,2010,DHS,4001,Education,Primary,20.2,,,,,1,0,BF2010DHS,BF,1965.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Burkina Faso,BF,BF2010DHS,2010,DHS,4002,Education,Secondary,23.5,,,,,1,0,BF2010DHS,BF,1965.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Burkina Faso,BF,BF2021DHS,2021,DHS,4000,Education,No education,19.1,,,,,1,0,BF2021DHS,BF,1976.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Burkina Faso,BF,BF2021DHS,2021,DHS,4001,Education,Primary,20.0,,,,,1,0,BF2021DHS,BF,1976.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Burkina Faso,BF,BF2021DHS,2021,DHS,4002,Education,Secondary,21.9,,,,,1,0,BF2021DHS,BF,1976.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Benin,BJ,BJ1996DHS,1996,DHS,4000,Education,No education,19.3,,,,,1,0,BJ1996DHS,BJ,1951.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Benin,BJ,BJ1996DHS,1996,DHS,4001,Education,Primary,20.0,,,,,1,0,BJ1996DHS,BJ,1951.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Benin,BJ,BJ1996DHS,1996,DHS,4002,Education,Secondary,22.7,,,,,1,0,BJ1996DHS,BJ,1951.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Benin,BJ,BJ2001DHS,2001,DHS,4000,Education,No education,19.3,,,,,1,0,BJ2001DHS,BJ,1956.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Benin,BJ,BJ2001DHS,2001,DHS,4001,Education,Primary,21.1,,,,,1,0,BJ2001DHS,BJ,1956.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Benin,BJ,BJ2001DHS,2001,DHS,4002,Education,Secondary,24.8,,,,,1,0,BJ2001DHS,BJ,1956.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Benin,BJ,BJ2006DHS,2006,DHS,4000,Education,No education,19.3,,,,,1,0,BJ2006DHS,BJ,1961.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Benin,BJ,BJ2006DHS,2006,DHS,4001,Education,Primary,20.7,,,,,1,0,BJ2006DHS,BJ,1961.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Benin,BJ,BJ2006DHS,2006,DHS,4002,Education,Secondary,24.8,,,,,1,0,BJ2006DHS,BJ,1961.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Benin,BJ,BJ2012DHS,2012,DHS,4000,Education,No education,19.4,,,,,1,0,BJ2012DHS,BJ,1967.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Benin,BJ,BJ2012DHS,2012,DHS,4001,Education,Primary,21.0,,,,,1,0,BJ2012DHS,BJ,1967.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Benin,BJ,BJ2012DHS,2012,DHS,4002,Education,Secondary,23.7,,,,,1,0,BJ2012DHS,BJ,1967.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Benin,BJ,BJ2017DHS,2017,DHS,4000,Education,No education,19.6,,,,,1,0,BJ2017DHS,BJ,1972.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Benin,BJ,BJ2017DHS,2017,DHS,4001,Education,Primary,20.7,,,,,1,0,BJ2017DHS,BJ,1972.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Benin,BJ,BJ2017DHS,2017,DHS,4002,Education,Secondary,22.2,,,,,1,0,BJ2017DHS,BJ,1972.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Bolivia,BO,BO1989DHS,1989,DHS,4000,Education,No education,19.8,,,,,1,0,BO1989DHS,BO,1944.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Bolivia,BO,BO1989DHS,1989,DHS,4001,Education,Primary,20.0,,,,,1,0,BO1989DHS,BO,1944.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Bolivia,BO,BO1989DHS,1989,DHS,4002,Education,Secondary,20.8,,,,,1,0,BO1989DHS,BO,1944.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Bolivia,BO,BO1994DHS,1994,DHS,4000,Education,No education,20.3,,,,,1,0,BO1994DHS,BO,1949.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Bolivia,BO,BO1994DHS,1994,DHS,4001,Education,Primary,20.2,,,,,1,0,BO1994DHS,BO,1949.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Bolivia,BO,BO1994DHS,1994,DHS,4002,Education,Secondary,21.1,,,,,1,0,BO1994DHS,BO,1949.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Bolivia,BO,BO1998DHS,1998,DHS,4000,Education,No education,19.7,,,,,1,0,BO1998DHS,BO,1953.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Bolivia,BO,BO1998DHS,1998,DHS,4001,Education,Primary,19.6,,,,,1,0,BO1998DHS,BO,1953.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Bolivia,BO,BO1998DHS,1998,DHS,4002,Education,Secondary,21.0,,,,,1,0,BO1998DHS,BO,1953.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Bolivia,BO,BO2003DHS,2003,DHS,4000,Education,No education,19.7,,,,,1,0,BO2003DHS,BO,1958.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Bolivia,BO,BO2003DHS,2003,DHS,4001,Education,Primary,19.5,,,,,1,0,BO2003DHS,BO,1958.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Bolivia,BO,BO2003DHS,2003,DHS,4002,Education,Secondary,21.7,,,,,1,0,BO2003DHS,BO,1958.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Bolivia,BO,BO2008DHS,2008,DHS,4000,Education,No education,19.7,,,,,1,0,BO2008DHS,BO,1963.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Bolivia,BO,BO2008DHS,2008,DHS,4001,Education,Primary,19.4,,,,,1,0,BO2008DHS,BO,1963.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Bolivia,BO,BO2008DHS,2008,DHS,4002,Education,Secondary,20.9,,,,,1,0,BO2008DHS,BO,1963.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Brazil,BR,BR1986DHS,1986,DHS,4000,Education,No education,20.3,,,,,1,0,BR1986DHS,BR,1941.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Brazil,BR,BR1986DHS,1986,DHS,4001,Education,Primary,21.1,,,,,1,0,BR1986DHS,BR,1941.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Brazil,BR,BR1996DHS,1996,DHS,4000,Education,No education,18.6,,,,,1,0,BR1996DHS,BR,1951.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Brazil,BR,BR1996DHS,1996,DHS,4001,Education,Primary,20.0,,,,,1,0,BR1996DHS,BR,1951.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Brazil,BR,BR1996DHS,1996,DHS,4002,Education,Secondary,22.9,,,,,1,0,BR1996DHS,BR,1951.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Botswana,BT,BT1988DHS,1988,DHS,4000,Education,No education,18.5,,,,,1,0,BT1988DHS,BT,1943.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Botswana,BT,BT1988DHS,1988,DHS,4001,Education,Primary,19.1,,,,,1,0,BT1988DHS,BT,1943.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Botswana,BT,BT1988DHS,1988,DHS,4002,Education,Secondary,20.2,,,,,1,0,BT1988DHS,BT,1943.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Botswana,BT,BT1988DHS,1988,DHS,4003,Education,Higher,21.8,,,,,1,0,BT1988DHS,BT,1943.5,1.0,0.0,0.0,1.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Burundi,BU,BU1987DHS,1987,DHS,4000,Education,No education,20.8,,,,,1,0,BU1987DHS,BU,1942.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Burundi,BU,BU1987DHS,1987,DHS,4001,Education,Primary,21.3,,,,,1,0,BU1987DHS,BU,1942.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Burundi,BU,BU1987DHS,1987,DHS,4002,Education,Secondary,24.3,,,,,1,0,BU1987DHS,BU,1942.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Burundi,BU,BU2010DHS,2010,DHS,4000,Education,No education,20.9,,,,,1,0,BU2010DHS,BU,1965.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Burundi,BU,BU2010DHS,2010,DHS,4001,Education,Primary,21.2,,,,,1,0,BU2010DHS,BU,1965.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Burundi,BU,BU2016DHS,2016,DHS,4000,Education,No education,20.4,,,,,1,0,BU2016DHS,BU,1971.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Burundi,BU,BU2016DHS,2016,DHS,4001,Education,Primary,21.1,,,,,1,0,BU2016DHS,BU,1971.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Congo Democratic Republic,CD,CD2007DHS,2007,DHS,4000,Education,No education,19.7,,,,,1,0,CD2007DHS,CD,1962.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Congo Democratic Republic,CD,CD2007DHS,2007,DHS,4001,Education,Primary,19.3,,,,,1,0,CD2007DHS,CD,1962.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Congo Democratic Republic,CD,CD2007DHS,2007,DHS,4002,Education,Secondary,21.4,,,,,1,0,CD2007DHS,CD,1962.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Congo Democratic Republic,CD,CD2013DHS,2013,DHS,4000,Education,No education,19.3,,,,,1,0,CD2013DHS,CD,1968.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Congo Democratic Republic,CD,CD2013DHS,2013,DHS,4001,Education,Primary,19.1,,,,,1,0,CD2013DHS,CD,1968.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Congo Democratic Republic,CD,CD2013DHS,2013,DHS,4002,Education,Secondary,20.7,,,,,1,0,CD2013DHS,CD,1968.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Congo Democratic Republic,CD,CD2023DHS,2023,DHS,4000,Education,No education,18.7,,,,,1,0,CD2023DHS,CD,1978.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Congo Democratic Republic,CD,CD2023DHS,2023,DHS,4001,Education,Primary,18.5,,,,,1,0,CD2023DHS,CD,1978.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Congo Democratic Republic,CD,CD2023DHS,2023,DHS,4002,Education,Secondary,20.1,,,,,1,0,CD2023DHS,CD,1978.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Central African Republic,CF,CF1994DHS,1994,DHS,4000,Education,No education,19.8,,,,,1,0,CF1994DHS,CF,1949.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Central African Republic,CF,CF1994DHS,1994,DHS,4001,Education,Primary,18.9,,,,,1,0,CF1994DHS,CF,1949.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Central African Republic,CF,CF1994DHS,1994,DHS,4002,Education,Secondary,19.0,,,,,1,0,CF1994DHS,CF,1949.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Central African Republic,CF,CF1994DHS,1994,DHS,4003,Education,Higher,19.5,,,,,1,0,CF1994DHS,CF,1949.5,1.0,0.0,0.0,1.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Congo,CG,CG2005DHS,2005,DHS,4000,Education,No education,18.2,,,,,1,0,CG2005DHS,CG,1960.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Congo,CG,CG2005DHS,2005,DHS,4001,Education,Primary,18.8,,,,,1,0,CG2005DHS,CG,1960.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Congo,CG,CG2005DHS,2005,DHS,4002,Education,Secondary,20.2,,,,,1,0,CG2005DHS,CG,1960.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Congo,CG,CG2011DHS,2011,DHS,4000,Education,No education,19.0,,,,,1,0,CG2011DHS,CG,1966.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Congo,CG,CG2011DHS,2011,DHS,4001,Education,Primary,18.7,,,,,1,0,CG2011DHS,CG,1966.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Congo,CG,CG2011DHS,2011,DHS,4002,Education,Secondary,20.0,,,,,1,0,CG2011DHS,CG,1966.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Cote d'Ivoire,CI,CI1994DHS,1994,DHS,4000,Education,No education,18.5,,,,,1,0,CI1994DHS,CI,1949.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Cote d'Ivoire,CI,CI1994DHS,1994,DHS,4001,Education,Primary,18.1,,,,,1,0,CI1994DHS,CI,1949.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Cote d'Ivoire,CI,CI1994DHS,1994,DHS,4002,Education,Secondary,19.8,,,,,1,0,CI1994DHS,CI,1949.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Cote d'Ivoire,CI,CI1998DHS,1998,DHS,4000,Education,No education,18.6,,,,,1,0,CI1998DHS,CI,1953.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Cote d'Ivoire,CI,CI1998DHS,1998,DHS,4001,Education,Primary,19.3,,,,,1,0,CI1998DHS,CI,1953.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Cote d'Ivoire,CI,CI1998DHS,1998,DHS,4002,Education,Secondary,20.2,,,,,1,0,CI1998DHS,CI,1953.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Cote d'Ivoire,CI,CI2005AIS,2005,AIS,4000,Education,No education,19.1,,,,,1,0,CI2005AIS,CI,1960.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Cote d'Ivoire,CI,CI2005AIS,2005,AIS,4001,Education,Primary,20.1,,,,,1,0,CI2005AIS,CI,1960.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Cote d'Ivoire,CI,CI2005AIS,2005,AIS,4002,Education,Secondary,21.2,,,,,1,0,CI2005AIS,CI,1960.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Cote d'Ivoire,CI,CI2012DHS,2012,DHS,4000,Education,No education,19.2,,,,,1,0,CI2012DHS,CI,1967.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Cote d'Ivoire,CI,CI2012DHS,2012,DHS,4001,Education,Primary,19.4,,,,,1,0,CI2012DHS,CI,1967.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Cote d'Ivoire,CI,CI2012DHS,2012,DHS,4002,Education,Secondary,22.2,,,,,1,0,CI2012DHS,CI,1967.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Cote d'Ivoire,CI,CI2021DHS,2021,DHS,4000,Education,No education,19.5,,,,,1,0,CI2021DHS,CI,1976.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Cote d'Ivoire,CI,CI2021DHS,2021,DHS,4001,Education,Primary,19.5,,,,,1,0,CI2021DHS,CI,1976.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Cote d'Ivoire,CI,CI2021DHS,2021,DHS,4002,Education,Secondary,21.6,,,,,1,0,CI2021DHS,CI,1976.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Cameroon,CM,CM1991DHS,1991,DHS,4000,Education,No education,17.0,,,,,1,0,CM1991DHS,CM,1946.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Cameroon,CM,CM1991DHS,1991,DHS,4001,Education,Primary,18.6,,,,,1,0,CM1991DHS,CM,1946.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Cameroon,CM,CM1991DHS,1991,DHS,4002,Education,Secondary,20.2,,,,,1,0,CM1991DHS,CM,1946.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Cameroon,CM,CM1998DHS,1998,DHS,4000,Education,No education,17.8,,,,,1,0,CM1998DHS,CM,1953.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Cameroon,CM,CM1998DHS,1998,DHS,4001,Education,Primary,18.6,,,,,1,0,CM1998DHS,CM,1953.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Cameroon,CM,CM1998DHS,1998,DHS,4002,Education,Secondary,19.8,,,,,1,0,CM1998DHS,CM,1953.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Cameroon,CM,CM2004DHS,2004,DHS,4000,Education,No education,17.4,,,,,1,0,CM2004DHS,CM,1959.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Cameroon,CM,CM2004DHS,2004,DHS,4001,Education,Primary,18.8,,,,,1,0,CM2004DHS,CM,1959.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Cameroon,CM,CM2004DHS,2004,DHS,4002,Education,Secondary,21.0,,,,,1,0,CM2004DHS,CM,1959.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Cameroon,CM,CM2011DHS,2011,DHS,4000,Education,No education,18.1,,,,,1,0,CM2011DHS,CM,1966.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Cameroon,CM,CM2011DHS,2011,DHS,4001,Education,Primary,18.9,,,,,1,0,CM2011DHS,CM,1966.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Cameroon,CM,CM2011DHS,2011,DHS,4002,Education,Secondary,20.8,,,,,1,0,CM2011DHS,CM,1966.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Cameroon,CM,CM2018DHS,2018,DHS,4000,Education,No education,18.7,,,,,1,0,CM2018DHS,CM,1973.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Cameroon,CM,CM2018DHS,2018,DHS,4001,Education,Primary,18.9,,,,,1,0,CM2018DHS,CM,1973.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Cameroon,CM,CM2018DHS,2018,DHS,4002,Education,Secondary,20.8,,,,,1,0,CM2018DHS,CM,1973.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Colombia,CO,CO1986DHS,1986,DHS,4000,Education,No education,18.5,,,,,1,0,CO1986DHS,CO,1941.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Colombia,CO,CO1986DHS,1986,DHS,4001,Education,Primary,20.3,,,,,1,0,CO1986DHS,CO,1941.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Colombia,CO,CO1986DHS,1986,DHS,4002,Education,Secondary,22.5,,,,,1,0,CO1986DHS,CO,1941.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Colombia,CO,CO1990DHS,1990,DHS,4000,Education,No education,21.1,,,,,1,0,CO1990DHS,CO,1945.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Colombia,CO,CO1990DHS,1990,DHS,4001,Education,Primary,20.2,,,,,1,0,CO1990DHS,CO,1945.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Colombia,CO,CO1990DHS,1990,DHS,4002,Education,Secondary,23.4,,,,,1,0,CO1990DHS,CO,1945.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Colombia,CO,CO1995DHS,1995,DHS,4000,Education,No education,17.7,,,,,1,0,CO1995DHS,CO,1950.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Colombia,CO,CO1995DHS,1995,DHS,4001,Education,Primary,19.7,,,,,1,0,CO1995DHS,CO,1950.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Colombia,CO,CO1995DHS,1995,DHS,4002,Education,Secondary,22.8,,,,,1,0,CO1995DHS,CO,1950.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Colombia,CO,CO2000DHS,2000,DHS,4000,Education,No education,20.5,,,,,1,0,CO2000DHS,CO,1955.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Colombia,CO,CO2000DHS,2000,DHS,4001,Education,Primary,19.4,,,,,1,0,CO2000DHS,CO,1955.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Colombia,CO,CO2000DHS,2000,DHS,4002,Education,Secondary,22.1,,,,,1,0,CO2000DHS,CO,1955.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Colombia,CO,CO2005DHS,2005,DHS,4000,Education,No education,18.5,,,,,1,0,CO2005DHS,CO,1960.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Colombia,CO,CO2005DHS,2005,DHS,4001,Education,Primary,19.2,,,,,1,0,CO2005DHS,CO,1960.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Colombia,CO,CO2005DHS,2005,DHS,4002,Education,Secondary,21.0,,,,,1,0,CO2005DHS,CO,1960.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Colombia,CO,CO2010DHS,2010,DHS,4000,Education,No education,17.9,,,,,1,0,CO2010DHS,CO,1965.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Colombia,CO,CO2010DHS,2010,DHS,4001,Education,Primary,18.5,,,,,1,0,CO2010DHS,CO,1965.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Colombia,CO,CO2010DHS,2010,DHS,4002,Education,Secondary,20.5,,,,,1,0,CO2010DHS,CO,1965.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Colombia,CO,CO2015DHS,2015,DHS,4000,Education,No education,19.2,,,,,1,0,CO2015DHS,CO,1970.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Colombia,CO,CO2015DHS,2015,DHS,4001,Education,Primary,18.2,,,,,1,0,CO2015DHS,CO,1970.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Colombia,CO,CO2015DHS,2015,DHS,4002,Education,Secondary,20.0,,,,,1,0,CO2015DHS,CO,1970.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Dominican Republic,DR,DR1986DHS,1986,DHS,4000,Education,No education,18.3,,,,,1,0,DR1986DHS,DR,1941.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Dominican Republic,DR,DR1986DHS,1986,DHS,4001,Education,Primary,19.2,,,,,1,0,DR1986DHS,DR,1941.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Dominican Republic,DR,DR1986DHS,1986,DHS,4002,Education,Secondary,23.6,,,,,1,0,DR1986DHS,DR,1941.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Dominican Republic,DR,DR1991DHS,1991,DHS,4000,Education,No education,17.5,,,,,1,0,DR1991DHS,DR,1946.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Dominican Republic,DR,DR1991DHS,1991,DHS,4001,Education,Primary,19.1,,,,,1,0,DR1991DHS,DR,1946.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Dominican Republic,DR,DR1991DHS,1991,DHS,4002,Education,Secondary,22.9,,,,,1,0,DR1991DHS,DR,1946.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Dominican Republic,DR,DR1996DHS,1996,DHS,4000,Education,No education,17.6,,,,,1,0,DR1996DHS,DR,1951.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Dominican Republic,DR,DR1996DHS,1996,DHS,4001,Education,Primary,19.2,,,,,1,0,DR1996DHS,DR,1951.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Dominican Republic,DR,DR1996DHS,1996,DHS,4002,Education,Secondary,22.7,,,,,1,0,DR1996DHS,DR,1951.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Dominican Republic,DR,DR1999DHS,1999,DHS,4000,Education,No education,19.7,,,,,1,0,DR1999DHS,DR,1954.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Dominican Republic,DR,DR1999DHS,1999,DHS,4001,Education,Primary,18.8,,,,,1,0,DR1999DHS,DR,1954.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Dominican Republic,DR,DR1999DHS,1999,DHS,4002,Education,Secondary,21.6,,,,,1,0,DR1999DHS,DR,1954.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Dominican Republic,DR,DR2002DHS,2002,DHS,4000,Education,No education,17.8,,,,,1,0,DR2002DHS,DR,1957.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Dominican Republic,DR,DR2002DHS,2002,DHS,4001,Education,Primary,18.7,,,,,1,0,DR2002DHS,DR,1957.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Dominican Republic,DR,DR2002DHS,2002,DHS,4002,Education,Secondary,21.1,,,,,1,0,DR2002DHS,DR,1957.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Dominican Republic,DR,DR2007DHS,2007,DHS,4000,Education,No education,17.8,,,,,1,0,DR2007DHS,DR,1962.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Dominican Republic,DR,DR2007DHS,2007,DHS,4001,Education,Primary,18.0,,,,,1,0,DR2007DHS,DR,1962.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Dominican Republic,DR,DR2007DHS,2007,DHS,4002,Education,Secondary,20.5,,,,,1,0,DR2007DHS,DR,1962.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Dominican Republic,DR,DR2013DHS,2013,DHS,4000,Education,No education,19.3,,,,,1,0,DR2013DHS,DR,1968.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Dominican Republic,DR,DR2013DHS,2013,DHS,4001,Education,Primary,17.8,,,,,1,0,DR2013DHS,DR,1968.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Dominican Republic,DR,DR2013DHS,2013,DHS,4002,Education,Secondary,20.4,,,,,1,0,DR2013DHS,DR,1968.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Ecuador,EC,EC1987DHS,1987,DHS,4000,Education,No education,18.7,,,,,1,0,EC1987DHS,EC,1942.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Ecuador,EC,EC1987DHS,1987,DHS,4001,Education,Primary,19.7,,,,,1,0,EC1987DHS,EC,1942.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Ecuador,EC,EC1987DHS,1987,DHS,4002,Education,Secondary,21.4,,,,,1,0,EC1987DHS,EC,1942.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Egypt,EG,EG1988DHS,1988,DHS,4000,Education,No education,19.3,,,,,1,0,EG1988DHS,EG,1943.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Egypt,EG,EG1988DHS,1988,DHS,4001,Education,Primary,20.6,,,,,1,0,EG1988DHS,EG,1943.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Egypt,EG,EG1992DHS,1992,DHS,4000,Education,No education,19.5,,,,,1,0,EG1992DHS,EG,1947.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Egypt,EG,EG1992DHS,1992,DHS,4001,Education,Primary,20.8,,,,,1,0,EG1992DHS,EG,1947.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Egypt,EG,EG1992DHS,1992,DHS,4002,Education,Secondary,23.7,,,,,1,0,EG1992DHS,EG,1947.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Egypt,EG,EG1995DHS,1995,DHS,4000,Education,No education,19.3,,,,,1,0,EG1995DHS,EG,1950.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Egypt,EG,EG1995DHS,1995,DHS,4001,Education,Primary,20.3,,,,,1,0,EG1995DHS,EG,1950.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Egypt,EG,EG1995DHS,1995,DHS,4002,Education,Secondary,24.5,,,,,1,0,EG1995DHS,EG,1950.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Egypt,EG,EG2000DHS,2000,DHS,4000,Education,No education,20.3,,,,,1,0,EG2000DHS,EG,1955.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Egypt,EG,EG2000DHS,2000,DHS,4001,Education,Primary,21.1,,,,,1,0,EG2000DHS,EG,1955.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Egypt,EG,EG2000DHS,2000,DHS,4002,Education,Secondary,23.0,,,,,1,0,EG2000DHS,EG,1955.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Egypt,EG,EG2003DHS,2003,DHS,4000,Education,No education,20.4,,,,,1,0,EG2003DHS,EG,1958.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Egypt,EG,EG2003DHS,2003,DHS,4001,Education,Primary,20.3,,,,,1,0,EG2003DHS,EG,1958.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Egypt,EG,EG2003DHS,2003,DHS,4002,Education,Secondary,22.7,,,,,1,0,EG2003DHS,EG,1958.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Egypt,EG,EG2005DHS,2005,DHS,4000,Education,No education,20.8,,,,,1,0,EG2005DHS,EG,1960.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Egypt,EG,EG2005DHS,2005,DHS,4001,Education,Primary,20.9,,,,,1,0,EG2005DHS,EG,1960.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Egypt,EG,EG2005DHS,2005,DHS,4002,Education,Secondary,22.7,,,,,1,0,EG2005DHS,EG,1960.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Egypt,EG,EG2008DHS,2008,DHS,4000,Education,No education,20.5,,,,,1,0,EG2008DHS,EG,1963.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Egypt,EG,EG2008DHS,2008,DHS,4001,Education,Primary,20.8,,,,,1,0,EG2008DHS,EG,1963.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Egypt,EG,EG2008DHS,2008,DHS,4002,Education,Secondary,22.4,,,,,1,0,EG2008DHS,EG,1963.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Egypt,EG,EG2014DHS,2014,DHS,4000,Education,No education,21.1,,,,,1,0,EG2014DHS,EG,1969.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Egypt,EG,EG2014DHS,2014,DHS,4001,Education,Primary,21.1,,,,,1,0,EG2014DHS,EG,1969.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Egypt,EG,EG2014DHS,2014,DHS,4002,Education,Secondary,21.8,,,,,1,0,EG2014DHS,EG,1969.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Eritrea,ER,ER1995DHS,1995,DHS,4000,Education,No education,20.3,,,,,1,0,ER1995DHS,ER,1950.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Eritrea,ER,ER1995DHS,1995,DHS,4001,Education,Primary,22.1,,,,,1,0,ER1995DHS,ER,1950.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Eritrea,ER,ER1995DHS,1995,DHS,4002,Education,Secondary,24.0,,,,,1,0,ER1995DHS,ER,1950.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Eritrea,ER,ER2002DHS,2002,DHS,4000,Education,No education,19.7,,,,,1,0,ER2002DHS,ER,1957.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Eritrea,ER,ER2002DHS,2002,DHS,4001,Education,Primary,20.1,,,,,1,0,ER2002DHS,ER,1957.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Eritrea,ER,ER2002DHS,2002,DHS,4002,Education,Secondary,24.3,,,,,1,0,ER2002DHS,ER,1957.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Ethiopia,ET,ET2000DHS,2000,DHS,4000,Education,No education,19.6,,,,,1,0,ET2000DHS,ET,1955.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Ethiopia,ET,ET2000DHS,2000,DHS,4001,Education,Primary,20.3,,,,,1,0,ET2000DHS,ET,1955.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Ethiopia,ET,ET2000DHS,2000,DHS,4002,Education,Secondary,24.0,,,,,1,0,ET2000DHS,ET,1955.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Ethiopia,ET,ET2005DHS,2005,DHS,4000,Education,No education,18.8,,,,,1,0,ET2005DHS,ET,1960.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Ethiopia,ET,ET2005DHS,2005,DHS,4001,Education,Primary,18.7,,,,,1,0,ET2005DHS,ET,1960.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Ethiopia,ET,ET2011DHS,2011,DHS,4000,Education,No education,19.0,,,,,1,0,ET2011DHS,ET,1966.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Ethiopia,ET,ET2011DHS,2011,DHS,4001,Education,Primary,20.1,,,,,1,0,ET2011DHS,ET,1966.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Ethiopia,ET,ET2011DHS,2011,DHS,4002,Education,Secondary,24.8,,,,,1,0,ET2011DHS,ET,1966.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Ethiopia,ET,ET2016DHS,2016,DHS,4000,Education,No education,18.5,,,,,1,0,ET2016DHS,ET,1971.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Ethiopia,ET,ET2016DHS,2016,DHS,4001,Education,Primary,20.7,,,,,1,0,ET2016DHS,ET,1971.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Ethiopia,ET,ET2019DHS,2019,DHS,4000,Education,No education,18.1,,,,,1,0,ET2019DHS,ET,1974.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Ethiopia,ET,ET2019DHS,2019,DHS,4001,Education,Primary,19.8,,,,,1,0,ET2019DHS,ET,1974.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Ethiopia,ET,ET2019DHS,2019,DHS,4002,Education,Secondary,22.8,,,,,1,0,ET2019DHS,ET,1974.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Ethiopia,ET,ET2024DHS,2024,DHS,4000,Education,No education,19.1,,,,,1,0,ET2024DHS,ET,1979.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Ethiopia,ET,ET2024DHS,2024,DHS,4001,Education,Primary,20.4,,,,,1,0,ET2024DHS,ET,1979.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Ethiopia,ET,ET2024DHS,2024,DHS,4002,Education,Secondary,23.4,,,,,1,0,ET2024DHS,ET,1979.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Gabon,GA,GA2000DHS,2000,DHS,4000,Education,No education,18.5,,,,,1,0,GA2000DHS,GA,1955.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Gabon,GA,GA2000DHS,2000,DHS,4001,Education,Primary,18.1,,,,,1,0,GA2000DHS,GA,1955.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Gabon,GA,GA2000DHS,2000,DHS,4002,Education,Secondary,18.8,,,,,1,0,GA2000DHS,GA,1955.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Gabon,GA,GA2000DHS,2000,DHS,4003,Education,Higher,22.0,,,,,1,0,GA2000DHS,GA,1955.5,1.0,0.0,0.0,1.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Gabon,GA,GA2012DHS,2012,DHS,4000,Education,No education,19.4,,,,,1,0,GA2012DHS,GA,1967.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Gabon,GA,GA2012DHS,2012,DHS,4001,Education,Primary,19.7,,,,,1,0,GA2012DHS,GA,1967.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Gabon,GA,GA2012DHS,2012,DHS,4002,Education,Secondary,19.7,,,,,1,0,GA2012DHS,GA,1967.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Gabon,GA,GA2019DHS,2019,DHS,4000,Education,No education,23.6,,,,,1,0,GA2019DHS,GA,1974.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Gabon,GA,GA2019DHS,2019,DHS,4001,Education,Primary,18.9,,,,,1,0,GA2019DHS,GA,1974.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Gabon,GA,GA2019DHS,2019,DHS,4002,Education,Secondary,19.4,,,,,1,0,GA2019DHS,GA,1974.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Gabon,GA,GA2019DHS,2019,DHS,4003,Education,Higher,24.7,,,,,1,0,GA2019DHS,GA,1974.5,1.0,0.0,0.0,1.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Ghana,GH,GH1988DHS,1988,DHS,4000,Education,No education,19.4,,,,,1,0,GH1988DHS,GH,1943.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Ghana,GH,GH1988DHS,1988,DHS,4001,Education,Primary,20.1,,,,,1,0,GH1988DHS,GH,1943.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Ghana,GH,GH1988DHS,1988,DHS,4002,Education,Secondary,22.8,,,,,1,0,GH1988DHS,GH,1943.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Ghana,GH,GH1993DHS,1993,DHS,4000,Education,No education,19.6,,,,,1,0,GH1993DHS,GH,1948.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Ghana,GH,GH1993DHS,1993,DHS,4001,Education,Primary,20.1,,,,,1,0,GH1993DHS,GH,1948.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Ghana,GH,GH1993DHS,1993,DHS,4002,Education,Secondary,24.6,,,,,1,0,GH1993DHS,GH,1948.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Ghana,GH,GH1998DHS,1998,DHS,4000,Education,No education,19.6,,,,,1,0,GH1998DHS,GH,1953.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Ghana,GH,GH1998DHS,1998,DHS,4001,Education,Primary,20.2,,,,,1,0,GH1998DHS,GH,1953.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Ghana,GH,GH1998DHS,1998,DHS,4002,Education,Secondary,22.2,,,,,1,0,GH1998DHS,GH,1953.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Ghana,GH,GH2003DHS,2003,DHS,4000,Education,No education,19.8,,,,,1,0,GH2003DHS,GH,1958.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Ghana,GH,GH2003DHS,2003,DHS,4001,Education,Primary,19.4,,,,,1,0,GH2003DHS,GH,1958.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Ghana,GH,GH2003DHS,2003,DHS,4002,Education,Secondary,22.9,,,,,1,0,GH2003DHS,GH,1958.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Ghana,GH,GH2008DHS,2008,DHS,4000,Education,No education,19.3,,,,,1,0,GH2008DHS,GH,1963.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Ghana,GH,GH2008DHS,2008,DHS,4001,Education,Primary,19.5,,,,,1,0,GH2008DHS,GH,1963.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Ghana,GH,GH2008DHS,2008,DHS,4002,Education,Secondary,22.7,,,,,1,0,GH2008DHS,GH,1963.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Ghana,GH,GH2014DHS,2014,DHS,4000,Education,No education,19.7,,,,,1,0,GH2014DHS,GH,1969.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Ghana,GH,GH2014DHS,2014,DHS,4001,Education,Primary,19.1,,,,,1,0,GH2014DHS,GH,1969.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Ghana,GH,GH2014DHS,2014,DHS,4002,Education,Secondary,23.3,,,,,1,0,GH2014DHS,GH,1969.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Ghana,GH,GH2022DHS,2022,DHS,4000,Education,No education,20.3,,,,,1,0,GH2022DHS,GH,1977.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Ghana,GH,GH2022DHS,2022,DHS,4001,Education,Primary,19.7,,,,,1,0,GH2022DHS,GH,1977.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Ghana,GH,GH2022DHS,2022,DHS,4002,Education,Secondary,22.9,,,,,1,0,GH2022DHS,GH,1977.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Gambia,GM,GM2013DHS,2013,DHS,4000,Education,No education,19.4,,,,,1,0,GM2013DHS,GM,1968.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Gambia,GM,GM2013DHS,2013,DHS,4001,Education,Primary,20.0,,,,,1,0,GM2013DHS,GM,1968.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Gambia,GM,GM2013DHS,2013,DHS,4002,Education,Secondary,22.7,,,,,1,0,GM2013DHS,GM,1968.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Gambia,GM,GM2019DHS,2019,DHS,4000,Education,No education,19.4,,,,,1,0,GM2019DHS,GM,1974.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Gambia,GM,GM2019DHS,2019,DHS,4001,Education,Primary,19.8,,,,,1,0,GM2019DHS,GM,1974.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Gambia,GM,GM2019DHS,2019,DHS,4002,Education,Secondary,23.1,,,,,1,0,GM2019DHS,GM,1974.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Guinea,GN,GN1999DHS,1999,DHS,4000,Education,No education,18.3,,,,,1,0,GN1999DHS,GN,1954.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Guinea,GN,GN1999DHS,1999,DHS,4001,Education,Primary,19.0,,,,,1,0,GN1999DHS,GN,1954.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Guinea,GN,GN1999DHS,1999,DHS,4002,Education,Secondary,19.8,,,,,1,0,GN1999DHS,GN,1954.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Guinea,GN,GN1999DHS,1999,DHS,4003,Education,Higher,24.1,,,,,1,0,GN1999DHS,GN,1954.5,1.0,0.0,0.0,1.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Guinea,GN,GN2005DHS,2005,DHS,4000,Education,No education,18.7,,,,,1,0,GN2005DHS,GN,1960.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Guinea,GN,GN2005DHS,2005,DHS,4001,Education,Primary,19.4,,,,,1,0,GN2005DHS,GN,1960.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Guinea,GN,GN2005DHS,2005,DHS,4002,Education,Secondary,21.2,,,,,1,0,GN2005DHS,GN,1960.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Guinea,GN,GN2012DHS,2012,DHS,4000,Education,No education,18.1,,,,,1,0,GN2012DHS,GN,1967.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Guinea,GN,GN2012DHS,2012,DHS,4001,Education,Primary,19.3,,,,,1,0,GN2012DHS,GN,1967.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Guinea,GN,GN2012DHS,2012,DHS,4002,Education,Secondary,22.6,,,,,1,0,GN2012DHS,GN,1967.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Guinea,GN,GN2018DHS,2018,DHS,4000,Education,No education,18.9,,,,,1,0,GN2018DHS,GN,1973.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Guinea,GN,GN2018DHS,2018,DHS,4001,Education,Primary,19.5,,,,,1,0,GN2018DHS,GN,1973.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Guinea,GN,GN2018DHS,2018,DHS,4002,Education,Secondary,20.6,,,,,1,0,GN2018DHS,GN,1973.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Guinea,GN,GN2024DHS,2024,DHS,4000,Education,No education,19.1,,,,,1,0,GN2024DHS,GN,1979.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Guinea,GN,GN2024DHS,2024,DHS,4001,Education,Primary,18.9,,,,,1,0,GN2024DHS,GN,1979.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Guinea,GN,GN2024DHS,2024,DHS,4002,Education,Secondary,19.9,,,,,1,0,GN2024DHS,GN,1979.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Guatemala,GU,GU1987DHS,1987,DHS,4000,Education,No education,19.0,,,,,1,0,GU1987DHS,GU,1942.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Guatemala,GU,GU1987DHS,1987,DHS,4001,Education,Primary,19.5,,,,,1,0,GU1987DHS,GU,1942.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Guatemala,GU,GU1987DHS,1987,DHS,4002,Education,Secondary,23.3,,,,,1,0,GU1987DHS,GU,1942.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Guatemala,GU,GU1987DHS,1987,DHS,4003,Education,Higher,24.3,,,,,1,0,GU1987DHS,GU,1942.5,1.0,0.0,0.0,1.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Guatemala,GU,GU1995DHS,1995,DHS,4000,Education,No education,18.7,,,,,1,0,GU1995DHS,GU,1950.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Guatemala,GU,GU1995DHS,1995,DHS,4001,Education,Primary,19.8,,,,,1,0,GU1995DHS,GU,1950.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Guatemala,GU,GU1995DHS,1995,DHS,4002,Education,Secondary,22.2,,,,,1,0,GU1995DHS,GU,1950.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Guatemala,GU,GU1999DHS,1999,DHS,4000,Education,No education,19.3,,,,,1,0,GU1999DHS,GU,1954.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Guatemala,GU,GU1999DHS,1999,DHS,4001,Education,Primary,19.6,,,,,1,0,GU1999DHS,GU,1954.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Guatemala,GU,GU1999DHS,1999,DHS,4002,Education,Secondary,22.8,,,,,1,0,GU1999DHS,GU,1954.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Guatemala,GU,GU2015DHS,2015,DHS,4000,Education,No education,19.0,,,,,1,0,GU2015DHS,GU,1970.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Guatemala,GU,GU2015DHS,2015,DHS,4001,Education,Primary,19.9,,,,,1,0,GU2015DHS,GU,1970.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Guatemala,GU,GU2015DHS,2015,DHS,4002,Education,Secondary,22.5,,,,,1,0,GU2015DHS,GU,1970.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Guyana,GY,GY2005AIS,2005,AIS,4000,Education,No education,17.2,,,,,1,0,GY2005AIS,GY,1960.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Guyana,GY,GY2005AIS,2005,AIS,4001,Education,Primary,18.8,,,,,1,0,GY2005AIS,GY,1960.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Guyana,GY,GY2005AIS,2005,AIS,4002,Education,Secondary,20.7,,,,,1,0,GY2005AIS,GY,1960.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Guyana,GY,GY2009DHS,2009,DHS,4000,Education,No education,18.2,,,,,1,0,GY2009DHS,GY,1964.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Guyana,GY,GY2009DHS,2009,DHS,4001,Education,Primary,18.7,,,,,1,0,GY2009DHS,GY,1964.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Guyana,GY,GY2009DHS,2009,DHS,4002,Education,Secondary,20.9,,,,,1,0,GY2009DHS,GY,1964.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Honduras,HN,HN2005DHS,2005,DHS,4000,Education,No education,18.7,,,,,1,0,HN2005DHS,HN,1960.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Honduras,HN,HN2005DHS,2005,DHS,4001,Education,Primary,19.2,,,,,1,0,HN2005DHS,HN,1960.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Honduras,HN,HN2005DHS,2005,DHS,4002,Education,Secondary,21.6,,,,,1,0,HN2005DHS,HN,1960.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Honduras,HN,HN2011DHS,2011,DHS,4000,Education,No education,18.1,,,,,1,0,HN2011DHS,HN,1966.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Honduras,HN,HN2011DHS,2011,DHS,4001,Education,Primary,19.1,,,,,1,0,HN2011DHS,HN,1966.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Honduras,HN,HN2011DHS,2011,DHS,4002,Education,Secondary,21.8,,,,,1,0,HN2011DHS,HN,1966.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Haiti,HT,HT1994DHS,1994,DHS,4000,Education,No education,19.9,,,,,1,0,HT1994DHS,HT,1949.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Haiti,HT,HT1994DHS,1994,DHS,4001,Education,Primary,21.3,,,,,1,0,HT1994DHS,HT,1949.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Haiti,HT,HT2000DHS,2000,DHS,4000,Education,No education,19.7,,,,,1,0,HT2000DHS,HT,1955.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Haiti,HT,HT2000DHS,2000,DHS,4001,Education,Primary,20.4,,,,,1,0,HT2000DHS,HT,1955.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Haiti,HT,HT2006DHS,2006,DHS,4000,Education,No education,19.2,,,,,1,0,HT2006DHS,HT,1961.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Haiti,HT,HT2006DHS,2006,DHS,4001,Education,Primary,20.4,,,,,1,0,HT2006DHS,HT,1961.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Haiti,HT,HT2012DHS,2012,DHS,4000,Education,No education,19.2,,,,,1,0,HT2012DHS,HT,1967.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Haiti,HT,HT2012DHS,2012,DHS,4001,Education,Primary,20.2,,,,,1,0,HT2012DHS,HT,1967.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Haiti,HT,HT2012DHS,2012,DHS,4002,Education,Secondary,24.4,,,,,1,0,HT2012DHS,HT,1967.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Haiti,HT,HT2016DHS,2016,DHS,4000,Education,No education,19.5,,,,,1,0,HT2016DHS,HT,1971.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Haiti,HT,HT2016DHS,2016,DHS,4001,Education,Primary,19.9,,,,,1,0,HT2016DHS,HT,1971.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Haiti,HT,HT2016DHS,2016,DHS,4002,Education,Secondary,23.8,,,,,1,0,HT2016DHS,HT,1971.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,India,IA,IA1993DHS,1993,DHS,4000,Education,No education,18.5,,,,,1,0,IA1993DHS,IA,1948.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,India,IA,IA1993DHS,1993,DHS,4001,Education,Primary,19.5,,,,,1,0,IA1993DHS,IA,1948.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,India,IA,IA1993DHS,1993,DHS,4002,Education,Secondary,21.4,,,,,1,0,IA1993DHS,IA,1948.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,India,IA,IA1999DHS,1999,DHS,4000,Education,No education,18.1,,,,,1,0,IA1999DHS,IA,1954.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,India,IA,IA1999DHS,1999,DHS,4001,Education,Primary,18.8,,,,,1,0,IA1999DHS,IA,1954.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,India,IA,IA1999DHS,1999,DHS,4002,Education,Secondary,20.4,,,,,1,0,IA1999DHS,IA,1954.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,India,IA,IA1999DHS,1999,DHS,4003,Education,Higher,23.5,,,,,1,0,IA1999DHS,IA,1954.5,1.0,0.0,0.0,1.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,India,IA,IA2006DHS,2006,DHS,4000,Education,No education,18.4,,,,,1,0,IA2006DHS,IA,1961.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,India,IA,IA2006DHS,2006,DHS,4001,Education,Primary,19.1,,,,,1,0,IA2006DHS,IA,1961.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,India,IA,IA2006DHS,2006,DHS,4002,Education,Secondary,21.1,,,,,1,0,IA2006DHS,IA,1961.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,India,IA,IA2015DHS,2015,DHS,4000,Education,No education,20.1,,,,,1,0,IA2015DHS,IA,1970.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,India,IA,IA2015DHS,2015,DHS,4001,Education,Primary,20.1,,,,,1,0,IA2015DHS,IA,1970.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,India,IA,IA2015DHS,2015,DHS,4002,Education,Secondary,21.5,,,,,1,0,IA2015DHS,IA,1970.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,India,IA,IA2020DHS,2020,DHS,4000,Education,No education,19.9,,,,,1,0,IA2020DHS,IA,1975.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,India,IA,IA2020DHS,2020,DHS,4001,Education,Primary,20.0,,,,,1,0,IA2020DHS,IA,1975.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,India,IA,IA2020DHS,2020,DHS,4002,Education,Secondary,21.3,,,,,1,0,IA2020DHS,IA,1975.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Indonesia,ID,ID1987DHS,1987,DHS,4000,Education,No education,19.8,,,,,1,0,ID1987DHS,ID,1942.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Indonesia,ID,ID1987DHS,1987,DHS,4001,Education,Primary,19.4,,,,,1,0,ID1987DHS,ID,1942.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Indonesia,ID,ID1987DHS,1987,DHS,4002,Education,Secondary,23.4,,,,,1,0,ID1987DHS,ID,1942.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Indonesia,ID,ID1991DHS,1991,DHS,4000,Education,No education,18.8,,,,,1,0,ID1991DHS,ID,1946.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Indonesia,ID,ID1991DHS,1991,DHS,4001,Education,Primary,19.5,,,,,1,0,ID1991DHS,ID,1946.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Indonesia,ID,ID1991DHS,1991,DHS,4002,Education,Secondary,23.5,,,,,1,0,ID1991DHS,ID,1946.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Indonesia,ID,ID1994DHS,1994,DHS,4000,Education,No education,19.2,,,,,1,0,ID1994DHS,ID,1949.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Indonesia,ID,ID1994DHS,1994,DHS,4001,Education,Primary,19.5,,,,,1,0,ID1994DHS,ID,1949.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Indonesia,ID,ID1994DHS,1994,DHS,4002,Education,Secondary,23.4,,,,,1,0,ID1994DHS,ID,1949.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Indonesia,ID,ID1997DHS,1997,DHS,4000,Education,No education,19.5,,,,,1,0,ID1997DHS,ID,1952.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Indonesia,ID,ID1997DHS,1997,DHS,4001,Education,Primary,20.0,,,,,1,0,ID1997DHS,ID,1952.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Indonesia,ID,ID1997DHS,1997,DHS,4002,Education,Secondary,23.3,,,,,1,0,ID1997DHS,ID,1952.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Indonesia,ID,ID2003DHS,2003,DHS,4000,Education,No education,19.4,,,,,1,0,ID2003DHS,ID,1958.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Indonesia,ID,ID2003DHS,2003,DHS,4001,Education,Primary,19.9,,,,,1,0,ID2003DHS,ID,1958.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Indonesia,ID,ID2003DHS,2003,DHS,4002,Education,Secondary,23.0,,,,,1,0,ID2003DHS,ID,1958.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Indonesia,ID,ID2007DHS,2007,DHS,4000,Education,No education,21.1,,,,,1,0,ID2007DHS,ID,1962.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Indonesia,ID,ID2007DHS,2007,DHS,4001,Education,Primary,20.4,,,,,1,0,ID2007DHS,ID,1962.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Indonesia,ID,ID2007DHS,2007,DHS,4002,Education,Secondary,23.3,,,,,1,0,ID2007DHS,ID,1962.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Indonesia,ID,ID2012DHS,2012,DHS,4000,Education,No education,20.3,,,,,1,0,ID2012DHS,ID,1967.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Indonesia,ID,ID2012DHS,2012,DHS,4001,Education,Primary,20.5,,,,,1,0,ID2012DHS,ID,1967.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Indonesia,ID,ID2012DHS,2012,DHS,4002,Education,Secondary,22.7,,,,,1,0,ID2012DHS,ID,1967.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Indonesia,ID,ID2017DHS,2017,DHS,4000,Education,No education,21.4,,,,,1,0,ID2017DHS,ID,1972.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Indonesia,ID,ID2017DHS,2017,DHS,4001,Education,Primary,20.8,,,,,1,0,ID2017DHS,ID,1972.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Indonesia,ID,ID2017DHS,2017,DHS,4002,Education,Secondary,22.2,,,,,1,0,ID2017DHS,ID,1972.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Jordan,JO,JO1990DHS,1990,DHS,4000,Education,No education,20.7,,,,,1,0,JO1990DHS,JO,1945.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Jordan,JO,JO1990DHS,1990,DHS,4001,Education,Primary,20.6,,,,,1,0,JO1990DHS,JO,1945.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Jordan,JO,JO1990DHS,1990,DHS,4002,Education,Secondary,21.7,,,,,1,0,JO1990DHS,JO,1945.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Jordan,JO,JO1997DHS,1997,DHS,4001,Education,Primary,23.6,,,,,1,0,JO1997DHS,JO,1952.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Jordan,JO,JO1997DHS,1997,DHS,4002,Education,Secondary,22.8,,,,,1,0,JO1997DHS,JO,1952.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Jordan,JO,JO2002DHS,2002,DHS,4000,Education,No education,23.8,,,,,1,0,JO2002DHS,JO,1957.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Jordan,JO,JO2002DHS,2002,DHS,4002,Education,Secondary,22.6,,,,,1,0,JO2002DHS,JO,1957.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Jordan,JO,JO2007DHS,2007,DHS,4001,Education,Primary,22.8,,,,,1,0,JO2007DHS,JO,1962.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Jordan,JO,JO2007DHS,2007,DHS,4002,Education,Secondary,22.8,,,,,1,0,JO2007DHS,JO,1962.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Jordan,JO,JO2009DHS,2009,DHS,4001,Education,Primary,22.9,,,,,1,0,JO2009DHS,JO,1964.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Jordan,JO,JO2009DHS,2009,DHS,4002,Education,Secondary,22.7,,,,,1,0,JO2009DHS,JO,1964.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Jordan,JO,JO2012DHS,2012,DHS,4001,Education,Primary,22.7,,,,,1,0,JO2012DHS,JO,1967.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Jordan,JO,JO2012DHS,2012,DHS,4002,Education,Secondary,22.4,,,,,1,0,JO2012DHS,JO,1967.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Jordan,JO,JO2017DHS,2017,DHS,4001,Education,Primary,21.7,,,,,1,0,JO2017DHS,JO,1972.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Jordan,JO,JO2017DHS,2017,DHS,4002,Education,Secondary,21.6,,,,,1,0,JO2017DHS,JO,1972.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Jordan,JO,JO2023DHS,2023,DHS,4001,Education,Primary,19.7,,,,,1,0,JO2023DHS,JO,1978.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Jordan,JO,JO2023DHS,2023,DHS,4002,Education,Secondary,22.0,,,,,1,0,JO2023DHS,JO,1978.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Kenya,KE,KE1989DHS,1989,DHS,4000,Education,No education,17.3,,,,,1,0,KE1989DHS,KE,1944.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Kenya,KE,KE1989DHS,1989,DHS,4001,Education,Primary,18.3,,,,,1,0,KE1989DHS,KE,1944.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Kenya,KE,KE1989DHS,1989,DHS,4002,Education,Secondary,20.3,,,,,1,0,KE1989DHS,KE,1944.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Kenya,KE,KE1989DHS,1989,DHS,4003,Education,Higher,22.3,,,,,1,0,KE1989DHS,KE,1944.5,1.0,0.0,0.0,1.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Kenya,KE,KE1993DHS,1993,DHS,4000,Education,No education,17.2,,,,,1,0,KE1993DHS,KE,1948.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Kenya,KE,KE1993DHS,1993,DHS,4001,Education,Primary,18.7,,,,,1,0,KE1993DHS,KE,1948.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Kenya,KE,KE1993DHS,1993,DHS,4002,Education,Secondary,20.8,,,,,1,0,KE1993DHS,KE,1948.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Kenya,KE,KE1998DHS,1998,DHS,4000,Education,No education,17.1,,,,,1,0,KE1998DHS,KE,1953.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Kenya,KE,KE1998DHS,1998,DHS,4001,Education,Primary,18.6,,,,,1,0,KE1998DHS,KE,1953.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Kenya,KE,KE1998DHS,1998,DHS,4002,Education,Secondary,21.7,,,,,1,0,KE1998DHS,KE,1953.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Kenya,KE,KE1998DHS,1998,DHS,4003,Education,Higher,23.9,,,,,1,0,KE1998DHS,KE,1953.5,1.0,0.0,0.0,1.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Kenya,KE,KE2003DHS,2003,DHS,4000,Education,No education,18.7,,,,,1,0,KE2003DHS,KE,1958.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Kenya,KE,KE2003DHS,2003,DHS,4001,Education,Primary,19.3,,,,,1,0,KE2003DHS,KE,1958.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Kenya,KE,KE2003DHS,2003,DHS,4002,Education,Secondary,21.9,,,,,1,0,KE2003DHS,KE,1958.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Kenya,KE,KE2008DHS,2008,DHS,4000,Education,No education,18.6,,,,,1,0,KE2008DHS,KE,1963.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Kenya,KE,KE2008DHS,2008,DHS,4001,Education,Primary,19.0,,,,,1,0,KE2008DHS,KE,1963.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Kenya,KE,KE2008DHS,2008,DHS,4002,Education,Secondary,21.2,,,,,1,0,KE2008DHS,KE,1963.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Kenya,KE,KE2014DHS,2014,DHS,4000,Education,No education,18.4,,,,,1,0,KE2014DHS,KE,1969.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Kenya,KE,KE2014DHS,2014,DHS,4001,Education,Primary,19.0,,,,,1,0,KE2014DHS,KE,1969.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Kenya,KE,KE2014DHS,2014,DHS,4002,Education,Secondary,21.2,,,,,1,0,KE2014DHS,KE,1969.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Kenya,KE,KE2022DHS,2022,DHS,4000,Education,No education,18.8,,,,,1,0,KE2022DHS,KE,1977.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Kenya,KE,KE2022DHS,2022,DHS,4001,Education,Primary,18.5,,,,,1,0,KE2022DHS,KE,1977.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Kenya,KE,KE2022DHS,2022,DHS,4002,Education,Secondary,21.2,,,,,1,0,KE2022DHS,KE,1977.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Kenya,KE,KE2022DHS,2022,DHS,4003,Education,Higher,24.5,,,,,1,0,KE2022DHS,KE,1977.5,1.0,0.0,0.0,1.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Kenya,KE,KE2025DHS,2025,DHS,4000,Education,No education,20.1,,,,,1,0,KE2025DHS,KE,1980.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Kenya,KE,KE2025DHS,2025,DHS,4001,Education,Primary,18.7,,,,,1,0,KE2025DHS,KE,1980.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Kenya,KE,KE2025DHS,2025,DHS,4002,Education,Secondary,21.1,,,,,1,0,KE2025DHS,KE,1980.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Kenya,KE,KE2025DHS,2025,DHS,4003,Education,Higher,24.2,,,,,1,0,KE2025DHS,KE,1980.5,1.0,0.0,0.0,1.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Cambodia,KH,KH2000DHS,2000,DHS,4000,Education,No education,20.8,,,,,1,0,KH2000DHS,KH,1955.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Cambodia,KH,KH2000DHS,2000,DHS,4001,Education,Primary,21.6,,,,,1,0,KH2000DHS,KH,1955.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Cambodia,KH,KH2000DHS,2000,DHS,4002,Education,Secondary,22.1,,,,,1,0,KH2000DHS,KH,1955.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Cambodia,KH,KH2005DHS,2005,DHS,4000,Education,No education,21.5,,,,,1,0,KH2005DHS,KH,1960.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Cambodia,KH,KH2005DHS,2005,DHS,4001,Education,Primary,21.5,,,,,1,0,KH2005DHS,KH,1960.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Cambodia,KH,KH2005DHS,2005,DHS,4002,Education,Secondary,23.1,,,,,1,0,KH2005DHS,KH,1960.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Cambodia,KH,KH2010DHS,2010,DHS,4000,Education,No education,21.5,,,,,1,0,KH2010DHS,KH,1965.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Cambodia,KH,KH2010DHS,2010,DHS,4001,Education,Primary,22.4,,,,,1,0,KH2010DHS,KH,1965.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Cambodia,KH,KH2010DHS,2010,DHS,4002,Education,Secondary,24.0,,,,,1,0,KH2010DHS,KH,1965.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Cambodia,KH,KH2014DHS,2014,DHS,4000,Education,No education,21.4,,,,,1,0,KH2014DHS,KH,1969.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Cambodia,KH,KH2014DHS,2014,DHS,4001,Education,Primary,22.0,,,,,1,0,KH2014DHS,KH,1969.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Cambodia,KH,KH2014DHS,2014,DHS,4002,Education,Secondary,23.8,,,,,1,0,KH2014DHS,KH,1969.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Cambodia,KH,KH2021DHS,2021,DHS,4000,Education,No education,20.6,,,,,1,0,KH2021DHS,KH,1976.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Cambodia,KH,KH2021DHS,2021,DHS,4001,Education,Primary,22.1,,,,,1,0,KH2021DHS,KH,1976.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Cambodia,KH,KH2021DHS,2021,DHS,4002,Education,Secondary,23.0,,,,,1,0,KH2021DHS,KH,1976.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Kazakhstan,KK,KK1995DHS,1995,DHS,4002,Education,Secondary,21.9,,,,,1,0,KK1995DHS,KK,1950.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Kazakhstan,KK,KK1995DHS,1995,DHS,4003,Education,Higher,24.0,,,,,1,0,KK1995DHS,KK,1950.5,1.0,0.0,0.0,1.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Kazakhstan,KK,KK1999DHS,1999,DHS,4002,Education,Secondary,21.5,,,,,1,0,KK1999DHS,KK,1954.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Kazakhstan,KK,KK1999DHS,1999,DHS,4003,Education,Higher,23.6,,,,,1,0,KK1999DHS,KK,1954.5,1.0,0.0,0.0,1.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Comoros,KM,KM1996DHS,1996,DHS,4000,Education,No education,21.2,,,,,1,0,KM1996DHS,KM,1951.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Comoros,KM,KM1996DHS,1996,DHS,4001,Education,Primary,21.8,,,,,1,0,KM1996DHS,KM,1951.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Comoros,KM,KM2012DHS,2012,DHS,4000,Education,No education,20.6,,,,,1,0,KM2012DHS,KM,1967.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Comoros,KM,KM2012DHS,2012,DHS,4001,Education,Primary,20.5,,,,,1,0,KM2012DHS,KM,1967.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Kyrgyz Republic,KY,KY1997DHS,1997,DHS,4002,Education,Secondary,21.3,,,,,1,0,KY1997DHS,KY,1952.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Kyrgyz Republic,KY,KY1997DHS,1997,DHS,4003,Education,Higher,23.2,,,,,1,0,KY1997DHS,KY,1952.5,1.0,0.0,0.0,1.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Kyrgyz Republic,KY,KY2012DHS,2012,DHS,4001,Education,Primary,20.5,,,,,1,0,KY2012DHS,KY,1967.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Kyrgyz Republic,KY,KY2012DHS,2012,DHS,4002,Education,Secondary,21.7,,,,,1,0,KY2012DHS,KY,1967.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Kyrgyz Republic,KY,KY2012DHS,2012,DHS,4003,Education,Higher,23.5,,,,,1,0,KY2012DHS,KY,1967.5,1.0,0.0,0.0,1.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Liberia,LB,LB1986DHS,1986,DHS,4000,Education,No education,19.3,,,,,1,0,LB1986DHS,LB,1941.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Liberia,LB,LB1986DHS,1986,DHS,4001,Education,Primary,17.9,,,,,1,0,LB1986DHS,LB,1941.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Liberia,LB,LB1986DHS,1986,DHS,4002,Education,Secondary,18.7,,,,,1,0,LB1986DHS,LB,1941.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Liberia,LB,LB1986DHS,1986,DHS,4003,Education,Higher,20.5,,,,,1,0,LB1986DHS,LB,1941.5,1.0,0.0,0.0,1.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Liberia,LB,LB2007DHS,2007,DHS,4000,Education,No education,18.7,,,,,1,0,LB2007DHS,LB,1962.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Liberia,LB,LB2007DHS,2007,DHS,4001,Education,Primary,18.9,,,,,1,0,LB2007DHS,LB,1962.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Liberia,LB,LB2007DHS,2007,DHS,4002,Education,Secondary,19.9,,,,,1,0,LB2007DHS,LB,1962.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Liberia,LB,LB2007DHS,2007,DHS,4003,Education,Higher,23.8,,,,,1,0,LB2007DHS,LB,1962.5,1.0,0.0,0.0,1.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Liberia,LB,LB2009MIS,2009,MIS,4000,Education,No education,18.4,,,,,1,0,LB2009MIS,LB,1964.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Liberia,LB,LB2009MIS,2009,MIS,4001,Education,Primary,18.8,,,,,1,0,LB2009MIS,LB,1964.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Liberia,LB,LB2009MIS,2009,MIS,4002,Education,Secondary,20.2,,,,,1,0,LB2009MIS,LB,1964.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Liberia,LB,LB2009MIS,2009,MIS,4003,Education,Higher,22.6,,,,,1,0,LB2009MIS,LB,1964.5,1.0,0.0,0.0,1.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Liberia,LB,LB2013DHS,2013,DHS,4000,Education,No education,18.6,,,,,1,0,LB2013DHS,LB,1968.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Liberia,LB,LB2013DHS,2013,DHS,4001,Education,Primary,18.9,,,,,1,0,LB2013DHS,LB,1968.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Liberia,LB,LB2013DHS,2013,DHS,4002,Education,Secondary,19.3,,,,,1,0,LB2013DHS,LB,1968.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Liberia,LB,LB2013DHS,2013,DHS,4003,Education,Higher,23.8,,,,,1,0,LB2013DHS,LB,1968.5,1.0,0.0,0.0,1.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Liberia,LB,LB2019DHS,2019,DHS,4000,Education,No education,17.9,,,,,1,0,LB2019DHS,LB,1974.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Liberia,LB,LB2019DHS,2019,DHS,4001,Education,Primary,18.3,,,,,1,0,LB2019DHS,LB,1974.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Liberia,LB,LB2019DHS,2019,DHS,4002,Education,Secondary,19.8,,,,,1,0,LB2019DHS,LB,1974.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Liberia,LB,LB2019DHS,2019,DHS,4003,Education,Higher,23.8,,,,,1,0,LB2019DHS,LB,1974.5,1.0,0.0,0.0,1.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Sri Lanka,LK,LK1987DHS,1987,DHS,4000,Education,No education,20.8,,,,,1,0,LK1987DHS,LK,1942.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Sri Lanka,LK,LK1987DHS,1987,DHS,4001,Education,Primary,20.5,,,,,1,0,LK1987DHS,LK,1942.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Sri Lanka,LK,LK1987DHS,1987,DHS,4002,Education,Secondary,21.9,,,,,1,0,LK1987DHS,LK,1942.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Sri Lanka,LK,LK1987DHS,1987,DHS,4003,Education,Higher,24.9,,,,,1,0,LK1987DHS,LK,1942.5,1.0,0.0,0.0,1.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Lesotho,LS,LS2004DHS,2004,DHS,4000,Education,No education,19.1,,,,,1,0,LS2004DHS,LS,1959.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Lesotho,LS,LS2004DHS,2004,DHS,4001,Education,Primary,20.0,,,,,1,0,LS2004DHS,LS,1959.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Lesotho,LS,LS2004DHS,2004,DHS,4002,Education,Secondary,21.6,,,,,1,0,LS2004DHS,LS,1959.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Lesotho,LS,LS2004DHS,2004,DHS,4003,Education,Higher,23.9,,,,,1,0,LS2004DHS,LS,1959.5,1.0,0.0,0.0,1.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Lesotho,LS,LS2009DHS,2009,DHS,4000,Education,No education,18.9,,,,,1,0,LS2009DHS,LS,1964.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Lesotho,LS,LS2009DHS,2009,DHS,4001,Education,Primary,20.2,,,,,1,0,LS2009DHS,LS,1964.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Lesotho,LS,LS2009DHS,2009,DHS,4002,Education,Secondary,22.4,,,,,1,0,LS2009DHS,LS,1964.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Lesotho,LS,LS2014DHS,2014,DHS,4000,Education,No education,23.0,,,,,1,0,LS2014DHS,LS,1969.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Lesotho,LS,LS2014DHS,2014,DHS,4001,Education,Primary,19.8,,,,,1,0,LS2014DHS,LS,1969.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Lesotho,LS,LS2014DHS,2014,DHS,4002,Education,Secondary,21.6,,,,,1,0,LS2014DHS,LS,1969.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Lesotho,LS,LS2023DHS,2023,DHS,4000,Education,No education,21.0,,,,,1,0,LS2023DHS,LS,1978.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Lesotho,LS,LS2023DHS,2023,DHS,4001,Education,Primary,19.4,,,,,1,0,LS2023DHS,LS,1978.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Lesotho,LS,LS2023DHS,2023,DHS,4002,Education,Secondary,21.5,,,,,1,0,LS2023DHS,LS,1978.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Morocco,MA,MA1987DHS,1987,DHS,4000,Education,No education,21.2,,,,,1,0,MA1987DHS,MA,1942.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Morocco,MA,MA1992DHS,1992,DHS,4000,Education,No education,22.2,,,,,1,0,MA1992DHS,MA,1947.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Morocco,MA,MA2003DHS,2003,DHS,4000,Education,No education,23.4,,,,,1,0,MA2003DHS,MA,1958.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Moldova,MB,MB2005DHS,2005,DHS,4000,Education,No education,23.5,,,,,1,0,MB2005DHS,MB,1960.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Moldova,MB,MB2005DHS,2005,DHS,4001,Education,Primary,17.9,,,,,1,0,MB2005DHS,MB,1960.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Moldova,MB,MB2005DHS,2005,DHS,4002,Education,Secondary,21.4,,,,,1,0,MB2005DHS,MB,1960.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Moldova,MB,MB2005DHS,2005,DHS,4003,Education,Higher,24.9,,,,,1,0,MB2005DHS,MB,1960.5,1.0,0.0,0.0,1.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Madagascar,MD,MD1992DHS,1992,DHS,4000,Education,No education,17.9,,,,,1,0,MD1992DHS,MD,1947.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Madagascar,MD,MD1992DHS,1992,DHS,4001,Education,Primary,18.8,,,,,1,0,MD1992DHS,MD,1947.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Madagascar,MD,MD1992DHS,1992,DHS,4002,Education,Secondary,21.7,,,,,1,0,MD1992DHS,MD,1947.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Madagascar,MD,MD1997DHS,1997,DHS,4000,Education,No education,18.3,,,,,1,0,MD1997DHS,MD,1952.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Madagascar,MD,MD1997DHS,1997,DHS,4001,Education,Primary,19.1,,,,,1,0,MD1997DHS,MD,1952.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Madagascar,MD,MD1997DHS,1997,DHS,4002,Education,Secondary,21.2,,,,,1,0,MD1997DHS,MD,1952.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Madagascar,MD,MD2004DHS,2004,DHS,4000,Education,No education,19.0,,,,,1,0,MD2004DHS,MD,1959.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Madagascar,MD,MD2004DHS,2004,DHS,4001,Education,Primary,19.3,,,,,1,0,MD2004DHS,MD,1959.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Madagascar,MD,MD2004DHS,2004,DHS,4002,Education,Secondary,21.6,,,,,1,0,MD2004DHS,MD,1959.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Madagascar,MD,MD2008DHS,2008,DHS,4000,Education,No education,18.2,,,,,1,0,MD2008DHS,MD,1963.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Madagascar,MD,MD2008DHS,2008,DHS,4001,Education,Primary,19.2,,,,,1,0,MD2008DHS,MD,1963.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Madagascar,MD,MD2008DHS,2008,DHS,4002,Education,Secondary,20.9,,,,,1,0,MD2008DHS,MD,1963.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Madagascar,MD,MD2021DHS,2021,DHS,4000,Education,No education,17.3,,,,,1,0,MD2021DHS,MD,1976.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Madagascar,MD,MD2021DHS,2021,DHS,4001,Education,Primary,18.5,,,,,1,0,MD2021DHS,MD,1976.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Madagascar,MD,MD2021DHS,2021,DHS,4002,Education,Secondary,20.6,,,,,1,0,MD2021DHS,MD,1976.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Mali,ML,ML1987DHS,1987,DHS,4000,Education,No education,19.0,,,,,1,0,ML1987DHS,ML,1942.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Mali,ML,ML1987DHS,1987,DHS,4001,Education,Primary,18.7,,,,,1,0,ML1987DHS,ML,1942.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Mali,ML,ML1987DHS,1987,DHS,4002,Education,Secondary,24.0,,,,,1,0,ML1987DHS,ML,1942.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Mali,ML,ML1987DHS,1987,DHS,4003,Education,Higher,16.0,,,,,1,0,ML1987DHS,ML,1942.5,1.0,0.0,0.0,1.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Mali,ML,ML1996DHS,1996,DHS,4000,Education,No education,18.5,,,,,1,0,ML1996DHS,ML,1951.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Mali,ML,ML1996DHS,1996,DHS,4001,Education,Primary,18.6,,,,,1,0,ML1996DHS,ML,1951.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Mali,ML,ML1996DHS,1996,DHS,4002,Education,Secondary,21.0,,,,,1,0,ML1996DHS,ML,1951.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Mali,ML,ML2001DHS,2001,DHS,4000,Education,No education,18.5,,,,,1,0,ML2001DHS,ML,1956.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Mali,ML,ML2001DHS,2001,DHS,4001,Education,Primary,18.6,,,,,1,0,ML2001DHS,ML,1956.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Mali,ML,ML2001DHS,2001,DHS,4002,Education,Secondary,22.2,,,,,1,0,ML2001DHS,ML,1956.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Mali,ML,ML2006DHS,2006,DHS,4000,Education,No education,18.4,,,,,1,0,ML2006DHS,ML,1961.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Mali,ML,ML2006DHS,2006,DHS,4001,Education,Primary,18.6,,,,,1,0,ML2006DHS,ML,1961.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Mali,ML,ML2006DHS,2006,DHS,4002,Education,Secondary,23.0,,,,,1,0,ML2006DHS,ML,1961.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Mali,ML,ML2012DHS,2012,DHS,4000,Education,No education,18.6,,,,,1,0,ML2012DHS,ML,1967.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Mali,ML,ML2012DHS,2012,DHS,4001,Education,Primary,18.1,,,,,1,0,ML2012DHS,ML,1967.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Mali,ML,ML2012DHS,2012,DHS,4002,Education,Secondary,20.9,,,,,1,0,ML2012DHS,ML,1967.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Mali,ML,ML2018DHS,2018,DHS,4000,Education,No education,18.6,,,,,1,0,ML2018DHS,ML,1973.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Mali,ML,ML2018DHS,2018,DHS,4001,Education,Primary,18.4,,,,,1,0,ML2018DHS,ML,1973.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Mali,ML,ML2018DHS,2018,DHS,4002,Education,Secondary,20.4,,,,,1,0,ML2018DHS,ML,1973.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Mali,ML,ML2018DHS,2018,DHS,4003,Education,Higher,24.7,,,,,1,0,ML2018DHS,ML,1973.5,1.0,0.0,0.0,1.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Mali,ML,ML2023DHS,2023,DHS,4000,Education,No education,18.8,,,,,1,0,ML2023DHS,ML,1978.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Mali,ML,ML2023DHS,2023,DHS,4001,Education,Primary,18.8,,,,,1,0,ML2023DHS,ML,1978.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Mali,ML,ML2023DHS,2023,DHS,4002,Education,Secondary,19.9,,,,,1,0,ML2023DHS,ML,1978.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Myanmar,MM,MM2016DHS,2016,DHS,4000,Education,No education,20.6,,,,,1,0,MM2016DHS,MM,1971.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Myanmar,MM,MM2016DHS,2016,DHS,4001,Education,Primary,23.3,,,,,1,0,MM2016DHS,MM,1971.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Mauritania,MR,MR2000DHS,2000,DHS,4000,Education,No education,19.4,,,,,1,0,MR2000DHS,MR,1955.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Mauritania,MR,MR2000DHS,2000,DHS,4001,Education,Primary,23.4,,,,,1,0,MR2000DHS,MR,1955.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Mauritania,MR,MR2020DHS,2020,DHS,4000,Education,No education,19.6,,,,,1,0,MR2020DHS,MR,1975.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Mauritania,MR,MR2020DHS,2020,DHS,4001,Education,Primary,20.6,,,,,1,0,MR2020DHS,MR,1975.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Mauritania,MR,MR2020DHS,2020,DHS,4002,Education,Secondary,23.7,,,,,1,0,MR2020DHS,MR,1975.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Maldives,MV,MV2009DHS,2009,DHS,4000,Education,No education,22.4,,,,,1,0,MV2009DHS,MV,1964.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Maldives,MV,MV2009DHS,2009,DHS,4001,Education,Primary,20.7,,,,,1,0,MV2009DHS,MV,1964.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Maldives,MV,MV2009DHS,2009,DHS,4002,Education,Secondary,24.8,,,,,1,0,MV2009DHS,MV,1964.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Maldives,MV,MV2016DHS,2016,DHS,4000,Education,No education,21.9,,,,,1,0,MV2016DHS,MV,1971.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Maldives,MV,MV2016DHS,2016,DHS,4001,Education,Primary,22.1,,,,,1,0,MV2016DHS,MV,1971.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Maldives,MV,MV2016DHS,2016,DHS,4002,Education,Secondary,23.6,,,,,1,0,MV2016DHS,MV,1971.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Malawi,MW,MW1992DHS,1992,DHS,4000,Education,No education,18.0,,,,,1,0,MW1992DHS,MW,1947.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Malawi,MW,MW1992DHS,1992,DHS,4001,Education,Primary,19.0,,,,,1,0,MW1992DHS,MW,1947.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Malawi,MW,MW1992DHS,1992,DHS,4002,Education,Secondary,22.7,,,,,1,0,MW1992DHS,MW,1947.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Malawi,MW,MW2000DHS,2000,DHS,4000,Education,No education,18.9,,,,,1,0,MW2000DHS,MW,1955.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Malawi,MW,MW2000DHS,2000,DHS,4001,Education,Primary,19.1,,,,,1,0,MW2000DHS,MW,1955.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Malawi,MW,MW2000DHS,2000,DHS,4002,Education,Secondary,22.2,,,,,1,0,MW2000DHS,MW,1955.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Malawi,MW,MW2004DHS,2004,DHS,4000,Education,No education,18.2,,,,,1,0,MW2004DHS,MW,1959.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Malawi,MW,MW2004DHS,2004,DHS,4001,Education,Primary,18.9,,,,,1,0,MW2004DHS,MW,1959.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Malawi,MW,MW2004DHS,2004,DHS,4002,Education,Secondary,21.4,,,,,1,0,MW2004DHS,MW,1959.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Malawi,MW,MW2010DHS,2010,DHS,4000,Education,No education,17.8,,,,,1,0,MW2010DHS,MW,1965.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Malawi,MW,MW2010DHS,2010,DHS,4001,Education,Primary,18.5,,,,,1,0,MW2010DHS,MW,1965.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Malawi,MW,MW2010DHS,2010,DHS,4002,Education,Secondary,20.5,,,,,1,0,MW2010DHS,MW,1965.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Malawi,MW,MW2015DHS,2015,DHS,4000,Education,No education,18.0,,,,,1,0,MW2015DHS,MW,1970.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Malawi,MW,MW2015DHS,2015,DHS,4001,Education,Primary,18.2,,,,,1,0,MW2015DHS,MW,1970.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Malawi,MW,MW2015DHS,2015,DHS,4002,Education,Secondary,20.8,,,,,1,0,MW2015DHS,MW,1970.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Malawi,MW,MW2024DHS,2024,DHS,4000,Education,No education,18.1,,,,,1,0,MW2024DHS,MW,1979.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Malawi,MW,MW2024DHS,2024,DHS,4001,Education,Primary,18.5,,,,,1,0,MW2024DHS,MW,1979.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Malawi,MW,MW2024DHS,2024,DHS,4002,Education,Secondary,21.0,,,,,1,0,MW2024DHS,MW,1979.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Mexico,MX,MX1987DHS,1987,DHS,4000,Education,No education,18.0,,,,,1,0,MX1987DHS,MX,1942.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Mexico,MX,MX1987DHS,1987,DHS,4001,Education,Primary,20.0,,,,,1,0,MX1987DHS,MX,1942.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Mexico,MX,MX1987DHS,1987,DHS,4002,Education,Secondary,23.3,,,,,1,0,MX1987DHS,MX,1942.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Mozambique,MZ,MZ1997DHS,1997,DHS,4000,Education,No education,18.4,,,,,1,0,MZ1997DHS,MZ,1952.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Mozambique,MZ,MZ1997DHS,1997,DHS,4001,Education,Primary,18.7,,,,,1,0,MZ1997DHS,MZ,1952.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Mozambique,MZ,MZ1997DHS,1997,DHS,4002,Education,Secondary,21.2,,,,,1,0,MZ1997DHS,MZ,1952.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Mozambique,MZ,MZ2003DHS,2003,DHS,4000,Education,No education,18.6,,,,,1,0,MZ2003DHS,MZ,1958.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Mozambique,MZ,MZ2003DHS,2003,DHS,4001,Education,Primary,18.7,,,,,1,0,MZ2003DHS,MZ,1958.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Mozambique,MZ,MZ2003DHS,2003,DHS,4002,Education,Secondary,22.1,,,,,1,0,MZ2003DHS,MZ,1958.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Mozambique,MZ,MZ2011DHS,2011,DHS,4000,Education,No education,18.6,,,,,1,0,MZ2011DHS,MZ,1966.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Mozambique,MZ,MZ2011DHS,2011,DHS,4001,Education,Primary,18.5,,,,,1,0,MZ2011DHS,MZ,1966.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Mozambique,MZ,MZ2011DHS,2011,DHS,4002,Education,Secondary,20.0,,,,,1,0,MZ2011DHS,MZ,1966.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Mozambique,MZ,MZ2022DHS,2022,DHS,4000,Education,No education,18.8,,,,,1,0,MZ2022DHS,MZ,1977.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Mozambique,MZ,MZ2022DHS,2022,DHS,4001,Education,Primary,17.7,,,,,1,0,MZ2022DHS,MZ,1977.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Mozambique,MZ,MZ2022DHS,2022,DHS,4002,Education,Secondary,18.9,,,,,1,0,MZ2022DHS,MZ,1977.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Nicaragua,NC,NC1998DHS,1998,DHS,4000,Education,No education,17.5,,,,,1,0,NC1998DHS,NC,1953.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Nicaragua,NC,NC1998DHS,1998,DHS,4001,Education,Primary,18.4,,,,,1,0,NC1998DHS,NC,1953.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Nicaragua,NC,NC1998DHS,1998,DHS,4002,Education,Secondary,20.8,,,,,1,0,NC1998DHS,NC,1953.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Nicaragua,NC,NC2001DHS,2001,DHS,4000,Education,No education,17.9,,,,,1,0,NC2001DHS,NC,1956.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Nicaragua,NC,NC2001DHS,2001,DHS,4001,Education,Primary,18.6,,,,,1,0,NC2001DHS,NC,1956.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Nicaragua,NC,NC2001DHS,2001,DHS,4002,Education,Secondary,20.6,,,,,1,0,NC2001DHS,NC,1956.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Nicaragua,NC,NC2001DHS,2001,DHS,4003,Education,Higher,24.8,,,,,1,0,NC2001DHS,NC,1956.5,1.0,0.0,0.0,1.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Nigeria,NG,NG1990DHS,1990,DHS,4000,Education,No education,18.2,,,,,1,0,NG1990DHS,NG,1945.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Nigeria,NG,NG1990DHS,1990,DHS,4001,Education,Primary,19.9,,,,,1,0,NG1990DHS,NG,1945.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Nigeria,NG,NG1990DHS,1990,DHS,4002,Education,Secondary,22.8,,,,,1,0,NG1990DHS,NG,1945.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Nigeria,NG,NG2003DHS,2003,DHS,4000,Education,No education,18.0,,,,,1,0,NG2003DHS,NG,1958.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Nigeria,NG,NG2003DHS,2003,DHS,4001,Education,Primary,19.5,,,,,1,0,NG2003DHS,NG,1958.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Nigeria,NG,NG2003DHS,2003,DHS,4002,Education,Secondary,22.9,,,,,1,0,NG2003DHS,NG,1958.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Nigeria,NG,NG2008DHS,2008,DHS,4000,Education,No education,18.0,,,,,1,0,NG2008DHS,NG,1963.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Nigeria,NG,NG2008DHS,2008,DHS,4001,Education,Primary,19.5,,,,,1,0,NG2008DHS,NG,1963.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Nigeria,NG,NG2008DHS,2008,DHS,4002,Education,Secondary,23.2,,,,,1,0,NG2008DHS,NG,1963.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Nigeria,NG,NG2010MIS,2010,MIS,4000,Education,No education,17.8,,,,,1,0,NG2010MIS,NG,1965.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Nigeria,NG,NG2010MIS,2010,MIS,4001,Education,Primary,19.5,,,,,1,0,NG2010MIS,NG,1965.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Nigeria,NG,NG2010MIS,2010,MIS,4002,Education,Secondary,22.6,,,,,1,0,NG2010MIS,NG,1965.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Nigeria,NG,NG2013DHS,2013,DHS,4000,Education,No education,17.8,,,,,1,0,NG2013DHS,NG,1968.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Nigeria,NG,NG2013DHS,2013,DHS,4001,Education,Primary,19.1,,,,,1,0,NG2013DHS,NG,1968.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Nigeria,NG,NG2013DHS,2013,DHS,4002,Education,Secondary,22.7,,,,,1,0,NG2013DHS,NG,1968.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Nigeria,NG,NG2018DHS,2018,DHS,4000,Education,No education,17.9,,,,,1,0,NG2018DHS,NG,1973.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Nigeria,NG,NG2018DHS,2018,DHS,4001,Education,Primary,18.8,,,,,1,0,NG2018DHS,NG,1973.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Nigeria,NG,NG2018DHS,2018,DHS,4002,Education,Secondary,21.9,,,,,1,0,NG2018DHS,NG,1973.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Nigeria,NG,NG2024DHS,2024,DHS,4000,Education,No education,18.6,,,,,1,0,NG2024DHS,NG,1979.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Nigeria,NG,NG2024DHS,2024,DHS,4001,Education,Primary,19.1,,,,,1,0,NG2024DHS,NG,1979.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Nigeria,NG,NG2024DHS,2024,DHS,4002,Education,Secondary,21.8,,,,,1,0,NG2024DHS,NG,1979.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Nigeria,NG,NG2025DHS,2025,DHS,4000,Education,No education,18.7,,,,,1,0,NG2025DHS,NG,1980.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Nigeria,NG,NG2025DHS,2025,DHS,4001,Education,Primary,19.2,,,,,1,0,NG2025DHS,NG,1980.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Nigeria,NG,NG2025DHS,2025,DHS,4002,Education,Secondary,22.3,,,,,1,0,NG2025DHS,NG,1980.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Niger,NI,NI1992DHS,1992,DHS,4000,Education,No education,17.5,,,,,1,0,NI1992DHS,NI,1947.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Niger,NI,NI1992DHS,1992,DHS,4001,Education,Primary,19.2,,,,,1,0,NI1992DHS,NI,1947.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Niger,NI,NI1992DHS,1992,DHS,4002,Education,Secondary,21.2,,,,,1,0,NI1992DHS,NI,1947.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Niger,NI,NI1992DHS,1992,DHS,4003,Education,Higher,24.0,,,,,1,0,NI1992DHS,NI,1947.5,1.0,0.0,0.0,1.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Niger,NI,NI1998DHS,1998,DHS,4000,Education,No education,17.7,,,,,1,0,NI1998DHS,NI,1953.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Niger,NI,NI1998DHS,1998,DHS,4001,Education,Primary,18.5,,,,,1,0,NI1998DHS,NI,1953.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Niger,NI,NI1998DHS,1998,DHS,4002,Education,Secondary,21.8,,,,,1,0,NI1998DHS,NI,1953.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Niger,NI,NI2006DHS,2006,DHS,4000,Education,No education,17.8,,,,,1,0,NI2006DHS,NI,1961.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Niger,NI,NI2006DHS,2006,DHS,4001,Education,Primary,19.1,,,,,1,0,NI2006DHS,NI,1961.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Niger,NI,NI2006DHS,2006,DHS,4002,Education,Secondary,22.6,,,,,1,0,NI2006DHS,NI,1961.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Niger,NI,NI2012DHS,2012,DHS,4000,Education,No education,17.8,,,,,1,0,NI2012DHS,NI,1967.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Niger,NI,NI2012DHS,2012,DHS,4001,Education,Primary,18.8,,,,,1,0,NI2012DHS,NI,1967.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Niger,NI,NI2012DHS,2012,DHS,4002,Education,Secondary,22.8,,,,,1,0,NI2012DHS,NI,1967.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Namibia,NM,NM1992DHS,1992,DHS,4000,Education,No education,19.5,,,,,1,0,NM1992DHS,NM,1947.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Namibia,NM,NM1992DHS,1992,DHS,4001,Education,Primary,20.0,,,,,1,0,NM1992DHS,NM,1947.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Namibia,NM,NM1992DHS,1992,DHS,4002,Education,Secondary,23.3,,,,,1,0,NM1992DHS,NM,1947.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Namibia,NM,NM2000DHS,2000,DHS,4000,Education,No education,19.9,,,,,1,0,NM2000DHS,NM,1955.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Namibia,NM,NM2000DHS,2000,DHS,4001,Education,Primary,19.5,,,,,1,0,NM2000DHS,NM,1955.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Namibia,NM,NM2000DHS,2000,DHS,4002,Education,Secondary,21.8,,,,,1,0,NM2000DHS,NM,1955.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Namibia,NM,NM2006DHS,2006,DHS,4000,Education,No education,19.9,,,,,1,0,NM2006DHS,NM,1961.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Namibia,NM,NM2006DHS,2006,DHS,4001,Education,Primary,19.1,,,,,1,0,NM2006DHS,NM,1961.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Namibia,NM,NM2006DHS,2006,DHS,4002,Education,Secondary,22.0,,,,,1,0,NM2006DHS,NM,1961.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Namibia,NM,NM2013DHS,2013,DHS,4000,Education,No education,18.2,,,,,1,0,NM2013DHS,NM,1968.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Namibia,NM,NM2013DHS,2013,DHS,4001,Education,Primary,19.0,,,,,1,0,NM2013DHS,NM,1968.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Namibia,NM,NM2013DHS,2013,DHS,4002,Education,Secondary,21.8,,,,,1,0,NM2013DHS,NM,1968.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Nepal,NP,NP1996DHS,1996,DHS,4000,Education,No education,19.0,,,,,1,0,NP1996DHS,NP,1951.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Nepal,NP,NP1996DHS,1996,DHS,4001,Education,Primary,19.5,,,,,1,0,NP1996DHS,NP,1951.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Nepal,NP,NP1996DHS,1996,DHS,4002,Education,Secondary,20.8,,,,,1,0,NP1996DHS,NP,1951.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Nepal,NP,NP2001DHS,2001,DHS,4000,Education,No education,19.4,,,,,1,0,NP2001DHS,NP,1956.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Nepal,NP,NP2001DHS,2001,DHS,4001,Education,Primary,19.6,,,,,1,0,NP2001DHS,NP,1956.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Nepal,NP,NP2001DHS,2001,DHS,4002,Education,Secondary,20.9,,,,,1,0,NP2001DHS,NP,1956.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Nepal,NP,NP2001DHS,2001,DHS,4003,Education,Higher,22.9,,,,,1,0,NP2001DHS,NP,1956.5,1.0,0.0,0.0,1.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Nepal,NP,NP2006DHS,2006,DHS,4000,Education,No education,19.1,,,,,1,0,NP2006DHS,NP,1961.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Nepal,NP,NP2006DHS,2006,DHS,4001,Education,Primary,19.3,,,,,1,0,NP2006DHS,NP,1961.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Nepal,NP,NP2006DHS,2006,DHS,4002,Education,Secondary,20.8,,,,,1,0,NP2006DHS,NP,1961.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Nepal,NP,NP2006DHS,2006,DHS,4003,Education,Higher,23.9,,,,,1,0,NP2006DHS,NP,1961.5,1.0,0.0,0.0,1.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Nepal,NP,NP2011DHS,2011,DHS,4000,Education,No education,18.9,,,,,1,0,NP2011DHS,NP,1966.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Nepal,NP,NP2011DHS,2011,DHS,4001,Education,Primary,19.1,,,,,1,0,NP2011DHS,NP,1966.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Nepal,NP,NP2011DHS,2011,DHS,4002,Education,Secondary,20.9,,,,,1,0,NP2011DHS,NP,1966.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Nepal,NP,NP2016DHS,2016,DHS,4000,Education,No education,19.2,,,,,1,0,NP2016DHS,NP,1971.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Nepal,NP,NP2016DHS,2016,DHS,4001,Education,Primary,19.4,,,,,1,0,NP2016DHS,NP,1971.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Nepal,NP,NP2016DHS,2016,DHS,4002,Education,Secondary,21.0,,,,,1,0,NP2016DHS,NP,1971.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Nepal,NP,NP2016DHS,2016,DHS,4003,Education,Higher,24.8,,,,,1,0,NP2016DHS,NP,1971.5,1.0,0.0,0.0,1.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Nepal,NP,NP2022DHS,2022,DHS,4000,Education,No education,19.0,,,,,1,0,NP2022DHS,NP,1977.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Nepal,NP,NP2022DHS,2022,DHS,4001,Education,Primary,19.4,,,,,1,0,NP2022DHS,NP,1977.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Nepal,NP,NP2022DHS,2022,DHS,4002,Education,Secondary,22.4,,,,,1,0,NP2022DHS,NP,1977.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Peru,PE,PE1986DHS,1986,DHS,4000,Education,No education,19.2,,,,,1,0,PE1986DHS,PE,1941.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Peru,PE,PE1986DHS,1986,DHS,4001,Education,Primary,19.4,,,,,1,0,PE1986DHS,PE,1941.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Peru,PE,PE1986DHS,1986,DHS,4002,Education,Secondary,22.5,,,,,1,0,PE1986DHS,PE,1941.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Peru,PE,PE1992DHS,1992,DHS,4000,Education,No education,19.0,,,,,1,0,PE1992DHS,PE,1947.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Peru,PE,PE1992DHS,1992,DHS,4001,Education,Primary,19.6,,,,,1,0,PE1992DHS,PE,1947.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Peru,PE,PE1992DHS,1992,DHS,4002,Education,Secondary,21.6,,,,,1,0,PE1992DHS,PE,1947.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Peru,PE,PE1996DHS,1996,DHS,4000,Education,No education,18.4,,,,,1,0,PE1996DHS,PE,1951.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Peru,PE,PE1996DHS,1996,DHS,4001,Education,Primary,19.6,,,,,1,0,PE1996DHS,PE,1951.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Peru,PE,PE1996DHS,1996,DHS,4002,Education,Secondary,21.3,,,,,1,0,PE1996DHS,PE,1951.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Peru,PE,PE2000DHS,2000,DHS,4000,Education,No education,19.6,,,,,1,0,PE2000DHS,PE,1955.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Peru,PE,PE2000DHS,2000,DHS,4001,Education,Primary,19.4,,,,,1,0,PE2000DHS,PE,1955.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Peru,PE,PE2000DHS,2000,DHS,4002,Education,Secondary,21.4,,,,,1,0,PE2000DHS,PE,1955.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Peru,PE,PE2004DHS,2004,DHS,4000,Education,No education,18.8,,,,,1,0,PE2004DHS,PE,1959.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Peru,PE,PE2004DHS,2004,DHS,4001,Education,Primary,19.3,,,,,1,0,PE2004DHS,PE,1959.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Peru,PE,PE2004DHS,2004,DHS,4002,Education,Secondary,20.9,,,,,1,0,PE2004DHS,PE,1959.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Peru,PE,PE2007DHS,2007,DHS,4000,Education,No education,19.6,,,,,1,0,PE2007DHS,PE,1962.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Peru,PE,PE2007DHS,2007,DHS,4001,Education,Primary,19.0,,,,,1,0,PE2007DHS,PE,1962.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Peru,PE,PE2007DHS,2007,DHS,4002,Education,Secondary,21.0,,,,,1,0,PE2007DHS,PE,1962.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Peru,PE,PE2009DHS,2009,DHS,4000,Education,No education,18.5,,,,,1,0,PE2009DHS,PE,1964.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Peru,PE,PE2009DHS,2009,DHS,4001,Education,Primary,18.7,,,,,1,0,PE2009DHS,PE,1964.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Peru,PE,PE2009DHS,2009,DHS,4002,Education,Secondary,21.2,,,,,1,0,PE2009DHS,PE,1964.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Peru,PE,PE2010DHS,2010,DHS,4000,Education,No education,18.6,,,,,1,0,PE2010DHS,PE,1965.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Peru,PE,PE2010DHS,2010,DHS,4001,Education,Primary,18.9,,,,,1,0,PE2010DHS,PE,1965.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Peru,PE,PE2010DHS,2010,DHS,4002,Education,Secondary,20.9,,,,,1,0,PE2010DHS,PE,1965.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Peru,PE,PE2011DHS,2011,DHS,4000,Education,No education,20.4,,,,,1,0,PE2011DHS,PE,1966.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Peru,PE,PE2011DHS,2011,DHS,4001,Education,Primary,19.2,,,,,1,0,PE2011DHS,PE,1966.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Peru,PE,PE2011DHS,2011,DHS,4002,Education,Secondary,21.0,,,,,1,0,PE2011DHS,PE,1966.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Peru,PE,PE2012DHS,2012,DHS,4000,Education,No education,18.7,,,,,1,0,PE2012DHS,PE,1967.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Peru,PE,PE2012DHS,2012,DHS,4001,Education,Primary,18.9,,,,,1,0,PE2012DHS,PE,1967.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Peru,PE,PE2012DHS,2012,DHS,4002,Education,Secondary,21.0,,,,,1,0,PE2012DHS,PE,1967.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Papua New Guinea,PG,PG2017DHS,2017,DHS,4000,Education,No education,20.4,,,,,1,0,PG2017DHS,PG,1972.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Papua New Guinea,PG,PG2017DHS,2017,DHS,4001,Education,Primary,20.7,,,,,1,0,PG2017DHS,PG,1972.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Papua New Guinea,PG,PG2017DHS,2017,DHS,4002,Education,Secondary,23.2,,,,,1,0,PG2017DHS,PG,1972.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Philippines,PH,PH1993DHS,1993,DHS,4000,Education,No education,19.8,,,,,1,0,PH1993DHS,PH,1948.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Philippines,PH,PH1993DHS,1993,DHS,4001,Education,Primary,20.8,,,,,1,0,PH1993DHS,PH,1948.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Philippines,PH,PH1993DHS,1993,DHS,4002,Education,Secondary,22.4,,,,,1,0,PH1993DHS,PH,1948.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Philippines,PH,PH1998DHS,1998,DHS,4000,Education,No education,19.9,,,,,1,0,PH1998DHS,PH,1953.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Philippines,PH,PH1998DHS,1998,DHS,4001,Education,Primary,20.9,,,,,1,0,PH1998DHS,PH,1953.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Philippines,PH,PH1998DHS,1998,DHS,4002,Education,Secondary,23.0,,,,,1,0,PH1998DHS,PH,1953.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Philippines,PH,PH2003DHS,2003,DHS,4000,Education,No education,19.7,,,,,1,0,PH2003DHS,PH,1958.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Philippines,PH,PH2003DHS,2003,DHS,4001,Education,Primary,20.5,,,,,1,0,PH2003DHS,PH,1958.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Philippines,PH,PH2003DHS,2003,DHS,4002,Education,Secondary,22.1,,,,,1,0,PH2003DHS,PH,1958.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Philippines,PH,PH2008DHS,2008,DHS,4000,Education,No education,18.0,,,,,1,0,PH2008DHS,PH,1963.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Philippines,PH,PH2008DHS,2008,DHS,4001,Education,Primary,20.8,,,,,1,0,PH2008DHS,PH,1963.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Philippines,PH,PH2008DHS,2008,DHS,4002,Education,Secondary,22.0,,,,,1,0,PH2008DHS,PH,1963.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Philippines,PH,PH2013DHS,2013,DHS,4000,Education,No education,19.6,,,,,1,0,PH2013DHS,PH,1968.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Philippines,PH,PH2013DHS,2013,DHS,4001,Education,Primary,20.3,,,,,1,0,PH2013DHS,PH,1968.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Philippines,PH,PH2013DHS,2013,DHS,4002,Education,Secondary,21.8,,,,,1,0,PH2013DHS,PH,1968.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Philippines,PH,PH2017DHS,2017,DHS,4000,Education,No education,19.0,,,,,1,0,PH2017DHS,PH,1972.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Philippines,PH,PH2017DHS,2017,DHS,4001,Education,Primary,20.0,,,,,1,0,PH2017DHS,PH,1972.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Philippines,PH,PH2017DHS,2017,DHS,4002,Education,Secondary,21.2,,,,,1,0,PH2017DHS,PH,1972.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Philippines,PH,PH2022DHS,2022,DHS,4001,Education,Primary,19.2,,,,,1,0,PH2022DHS,PH,1977.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Philippines,PH,PH2022DHS,2022,DHS,4002,Education,Secondary,21.2,,,,,1,0,PH2022DHS,PH,1977.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Pakistan,PK,PK1991DHS,1991,DHS,4000,Education,No education,19.7,,,,,1,0,PK1991DHS,PK,1946.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Pakistan,PK,PK1991DHS,1991,DHS,4001,Education,Primary,20.3,,,,,1,0,PK1991DHS,PK,1946.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Pakistan,PK,PK1991DHS,1991,DHS,4002,Education,Secondary,21.6,,,,,1,0,PK1991DHS,PK,1946.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Pakistan,PK,PK2006DHS,2006,DHS,4000,Education,No education,21.2,,,,,1,0,PK2006DHS,PK,1961.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Pakistan,PK,PK2006DHS,2006,DHS,4001,Education,Primary,22.5,,,,,1,0,PK2006DHS,PK,1961.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Pakistan,PK,PK2006DHS,2006,DHS,4002,Education,Secondary,23.9,,,,,1,0,PK2006DHS,PK,1961.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Pakistan,PK,PK2012DHS,2012,DHS,4000,Education,No education,21.5,,,,,1,0,PK2012DHS,PK,1967.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Pakistan,PK,PK2012DHS,2012,DHS,4001,Education,Primary,22.3,,,,,1,0,PK2012DHS,PK,1967.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Pakistan,PK,PK2012DHS,2012,DHS,4002,Education,Secondary,24.5,,,,,1,0,PK2012DHS,PK,1967.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Pakistan,PK,PK2017DHS,2017,DHS,4000,Education,No education,21.5,,,,,1,0,PK2017DHS,PK,1972.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Pakistan,PK,PK2017DHS,2017,DHS,4001,Education,Primary,22.5,,,,,1,0,PK2017DHS,PK,1972.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Pakistan,PK,PK2017DHS,2017,DHS,4002,Education,Secondary,23.6,,,,,1,0,PK2017DHS,PK,1972.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Paraguay,PY,PY1990DHS,1990,DHS,4000,Education,No education,18.1,,,,,1,0,PY1990DHS,PY,1945.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Paraguay,PY,PY1990DHS,1990,DHS,4001,Education,Primary,20.1,,,,,1,0,PY1990DHS,PY,1945.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Paraguay,PY,PY1990DHS,1990,DHS,4002,Education,Secondary,23.0,,,,,1,0,PY1990DHS,PY,1945.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Rwanda,RW,RW1992DHS,1992,DHS,4000,Education,No education,21.0,,,,,1,0,RW1992DHS,RW,1947.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Rwanda,RW,RW1992DHS,1992,DHS,4001,Education,Primary,22.1,,,,,1,0,RW1992DHS,RW,1947.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Rwanda,RW,RW1992DHS,1992,DHS,4002,Education,Secondary,24.1,,,,,1,0,RW1992DHS,RW,1947.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Rwanda,RW,RW2000DHS,2000,DHS,4000,Education,No education,20.8,,,,,1,0,RW2000DHS,RW,1955.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Rwanda,RW,RW2000DHS,2000,DHS,4001,Education,Primary,22.1,,,,,1,0,RW2000DHS,RW,1955.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Rwanda,RW,RW2000DHS,2000,DHS,4002,Education,Secondary,22.7,,,,,1,0,RW2000DHS,RW,1955.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Rwanda,RW,RW2005DHS,2005,DHS,4000,Education,No education,20.8,,,,,1,0,RW2005DHS,RW,1960.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Rwanda,RW,RW2005DHS,2005,DHS,4001,Education,Primary,21.6,,,,,1,0,RW2005DHS,RW,1960.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Rwanda,RW,RW2005DHS,2005,DHS,4002,Education,Secondary,23.2,,,,,1,0,RW2005DHS,RW,1960.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Rwanda,RW,RW2008DHS,2008,DHS,4000,Education,No education,21.0,,,,,1,0,RW2008DHS,RW,1963.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Rwanda,RW,RW2008DHS,2008,DHS,4001,Education,Primary,22.3,,,,,1,0,RW2008DHS,RW,1963.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Rwanda,RW,RW2010DHS,2010,DHS,4000,Education,No education,22.3,,,,,1,0,RW2010DHS,RW,1965.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Rwanda,RW,RW2010DHS,2010,DHS,4001,Education,Primary,22.7,,,,,1,0,RW2010DHS,RW,1965.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Rwanda,RW,RW2015DHS,2015,DHS,4000,Education,No education,21.4,,,,,1,0,RW2015DHS,RW,1970.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Rwanda,RW,RW2015DHS,2015,DHS,4001,Education,Primary,22.7,,,,,1,0,RW2015DHS,RW,1970.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Rwanda,RW,RW2019DHS,2019,DHS,4000,Education,No education,20.9,,,,,1,0,RW2019DHS,RW,1974.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Rwanda,RW,RW2019DHS,2019,DHS,4001,Education,Primary,22.0,,,,,1,0,RW2019DHS,RW,1974.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Rwanda,RW,RW2019DHS,2019,DHS,4002,Education,Secondary,24.5,,,,,1,0,RW2019DHS,RW,1974.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Rwanda,RW,RW2025DHS,2025,DHS,4000,Education,No education,22.0,,,,,1,0,RW2025DHS,RW,1980.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Rwanda,RW,RW2025DHS,2025,DHS,4001,Education,Primary,21.9,,,,,1,0,RW2025DHS,RW,1980.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Rwanda,RW,RW2025DHS,2025,DHS,4002,Education,Secondary,24.0,,,,,1,0,RW2025DHS,RW,1980.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Sudan,SD,SD1990DHS,1990,DHS,4000,Education,No education,19.6,,,,,1,0,SD1990DHS,SD,1945.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Sudan,SD,SD1990DHS,1990,DHS,4001,Education,Primary,21.3,,,,,1,0,SD1990DHS,SD,1945.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Sierra Leone,SL,SL2008DHS,2008,DHS,4000,Education,No education,18.6,,,,,1,0,SL2008DHS,SL,1963.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Sierra Leone,SL,SL2008DHS,2008,DHS,4001,Education,Primary,19.1,,,,,1,0,SL2008DHS,SL,1963.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Sierra Leone,SL,SL2008DHS,2008,DHS,4002,Education,Secondary,20.9,,,,,1,0,SL2008DHS,SL,1963.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Sierra Leone,SL,SL2013DHS,2013,DHS,4000,Education,No education,18.5,,,,,1,0,SL2013DHS,SL,1968.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Sierra Leone,SL,SL2013DHS,2013,DHS,4001,Education,Primary,19.1,,,,,1,0,SL2013DHS,SL,1968.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Sierra Leone,SL,SL2013DHS,2013,DHS,4002,Education,Secondary,21.8,,,,,1,0,SL2013DHS,SL,1968.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Sierra Leone,SL,SL2019DHS,2019,DHS,4000,Education,No education,18.8,,,,,1,0,SL2019DHS,SL,1974.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Sierra Leone,SL,SL2019DHS,2019,DHS,4001,Education,Primary,18.7,,,,,1,0,SL2019DHS,SL,1974.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Sierra Leone,SL,SL2019DHS,2019,DHS,4002,Education,Secondary,20.4,,,,,1,0,SL2019DHS,SL,1974.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Sierra Leone,SL,SL2019DHS,2019,DHS,4003,Education,Higher,24.6,,,,,1,0,SL2019DHS,SL,1974.5,1.0,0.0,0.0,1.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Senegal,SN,SN1986DHS,1986,DHS,4000,Education,No education,18.6,,,,,1,0,SN1986DHS,SN,1941.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Senegal,SN,SN1986DHS,1986,DHS,4001,Education,Primary,19.9,,,,,1,0,SN1986DHS,SN,1941.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Senegal,SN,SN1986DHS,1986,DHS,4002,Education,Secondary,20.8,,,,,1,0,SN1986DHS,SN,1941.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Senegal,SN,SN1993DHS,1993,DHS,4000,Education,No education,18.7,,,,,1,0,SN1993DHS,SN,1948.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Senegal,SN,SN1993DHS,1993,DHS,4001,Education,Primary,20.5,,,,,1,0,SN1993DHS,SN,1948.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Senegal,SN,SN1993DHS,1993,DHS,4002,Education,Secondary,23.0,,,,,1,0,SN1993DHS,SN,1948.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Senegal,SN,SN1997DHS,1997,DHS,4000,Education,No education,19.4,,,,,1,0,SN1997DHS,SN,1952.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Senegal,SN,SN1997DHS,1997,DHS,4001,Education,Primary,21.6,,,,,1,0,SN1997DHS,SN,1952.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Senegal,SN,SN2005DHS,2005,DHS,4000,Education,No education,19.9,,,,,1,0,SN2005DHS,SN,1960.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Senegal,SN,SN2005DHS,2005,DHS,4001,Education,Primary,22.8,,,,,1,0,SN2005DHS,SN,1960.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Senegal,SN,SN2008MIS,2008,MIS,4000,Education,No education,19.8,,,,,1,0,SN2008MIS,SN,1963.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Senegal,SN,SN2008MIS,2008,MIS,4001,Education,Primary,22.2,,,,,1,0,SN2008MIS,SN,1963.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Senegal,SN,SN2010DHS,2010,DHS,4000,Education,No education,19.9,,,,,1,0,SN2010DHS,SN,1965.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Senegal,SN,SN2010DHS,2010,DHS,4001,Education,Primary,22.7,,,,,1,0,SN2010DHS,SN,1965.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Senegal,SN,SN2012DHS,2012,DHS,4000,Education,No education,20.6,,,,,1,0,SN2012DHS,SN,1967.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Senegal,SN,SN2012DHS,2012,DHS,4001,Education,Primary,23.1,,,,,1,0,SN2012DHS,SN,1967.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Senegal,SN,SN2014DHS,2014,DHS,4000,Education,No education,19.9,,,,,1,0,SN2014DHS,SN,1969.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Senegal,SN,SN2014DHS,2014,DHS,4001,Education,Primary,21.7,,,,,1,0,SN2014DHS,SN,1969.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Senegal,SN,SN2015DHS,2015,DHS,4000,Education,No education,19.9,,,,,1,0,SN2015DHS,SN,1970.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Senegal,SN,SN2015DHS,2015,DHS,4001,Education,Primary,21.9,,,,,1,0,SN2015DHS,SN,1970.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Senegal,SN,SN2016DHS,2016,DHS,4000,Education,No education,19.8,,,,,1,0,SN2016DHS,SN,1971.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Senegal,SN,SN2016DHS,2016,DHS,4001,Education,Primary,22.4,,,,,1,0,SN2016DHS,SN,1971.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Senegal,SN,SN2016DHS,2016,DHS,4002,Education,Secondary,24.0,,,,,1,0,SN2016DHS,SN,1971.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Senegal,SN,SN2017DHS,2017,DHS,4000,Education,No education,20.1,,,,,1,0,SN2017DHS,SN,1972.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Senegal,SN,SN2017DHS,2017,DHS,4001,Education,Primary,21.9,,,,,1,0,SN2017DHS,SN,1972.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Senegal,SN,SN2017DHS,2017,DHS,4002,Education,Secondary,24.6,,,,,1,0,SN2017DHS,SN,1972.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Senegal,SN,SN2018DHS,2018,DHS,4000,Education,No education,20.1,,,,,1,0,SN2018DHS,SN,1973.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Senegal,SN,SN2018DHS,2018,DHS,4001,Education,Primary,21.7,,,,,1,0,SN2018DHS,SN,1973.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Senegal,SN,SN2018DHS,2018,DHS,4002,Education,Secondary,24.4,,,,,1,0,SN2018DHS,SN,1973.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Senegal,SN,SN2019DHS,2019,DHS,4000,Education,No education,20.2,,,,,1,0,SN2019DHS,SN,1974.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Senegal,SN,SN2019DHS,2019,DHS,4001,Education,Primary,21.3,,,,,1,0,SN2019DHS,SN,1974.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Senegal,SN,SN2023DHS,2023,DHS,4000,Education,No education,19.9,,,,,1,0,SN2023DHS,SN,1978.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Senegal,SN,SN2023DHS,2023,DHS,4001,Education,Primary,21.2,,,,,1,0,SN2023DHS,SN,1978.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Senegal,SN,SN2023DHS,2023,DHS,4002,Education,Secondary,23.3,,,,,1,0,SN2023DHS,SN,1978.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Sao Tome and Principe,ST,ST2008DHS,2008,DHS,4000,Education,No education,17.9,,,,,1,0,ST2008DHS,ST,1963.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Sao Tome and Principe,ST,ST2008DHS,2008,DHS,4001,Education,Primary,18.8,,,,,1,0,ST2008DHS,ST,1963.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Sao Tome and Principe,ST,ST2008DHS,2008,DHS,4002,Education,Secondary,21.6,,,,,1,0,ST2008DHS,ST,1963.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Eswatini,SZ,SZ2006DHS,2006,DHS,4000,Education,No education,18.0,,,,,1,0,SZ2006DHS,SZ,1961.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Eswatini,SZ,SZ2006DHS,2006,DHS,4001,Education,Primary,18.2,,,,,1,0,SZ2006DHS,SZ,1961.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Eswatini,SZ,SZ2006DHS,2006,DHS,4002,Education,Secondary,19.9,,,,,1,0,SZ2006DHS,SZ,1961.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Eswatini,SZ,SZ2006DHS,2006,DHS,4003,Education,Higher,24.3,,,,,1,0,SZ2006DHS,SZ,1961.5,1.0,0.0,0.0,1.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Chad,TD,TD1997DHS,1997,DHS,4000,Education,No education,18.0,,,,,1,0,TD1997DHS,TD,1952.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Chad,TD,TD1997DHS,1997,DHS,4001,Education,Primary,18.7,,,,,1,0,TD1997DHS,TD,1952.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Chad,TD,TD1997DHS,1997,DHS,4002,Education,Secondary,20.1,,,,,1,0,TD1997DHS,TD,1952.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Chad,TD,TD2004DHS,2004,DHS,4000,Education,No education,17.7,,,,,1,0,TD2004DHS,TD,1959.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Chad,TD,TD2004DHS,2004,DHS,4001,Education,Primary,19.1,,,,,1,0,TD2004DHS,TD,1959.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Chad,TD,TD2004DHS,2004,DHS,4002,Education,Secondary,20.3,,,,,1,0,TD2004DHS,TD,1959.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Chad,TD,TD2014DHS,2014,DHS,4000,Education,No education,17.6,,,,,1,0,TD2014DHS,TD,1969.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Chad,TD,TD2014DHS,2014,DHS,4001,Education,Primary,17.8,,,,,1,0,TD2014DHS,TD,1969.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Chad,TD,TD2014DHS,2014,DHS,4002,Education,Secondary,19.9,,,,,1,0,TD2014DHS,TD,1969.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Chad,TD,TD2014DHS,2014,DHS,4003,Education,Higher,23.7,,,,,1,0,TD2014DHS,TD,1969.5,1.0,0.0,0.0,1.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Togo,TG,TG1988DHS,1988,DHS,4000,Education,No education,18.7,,,,,1,0,TG1988DHS,TG,1943.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Togo,TG,TG1988DHS,1988,DHS,4001,Education,Primary,19.5,,,,,1,0,TG1988DHS,TG,1943.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Togo,TG,TG1988DHS,1988,DHS,4002,Education,Secondary,21.6,,,,,1,0,TG1988DHS,TG,1943.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Togo,TG,TG1998DHS,1998,DHS,4000,Education,No education,19.8,,,,,1,0,TG1998DHS,TG,1953.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Togo,TG,TG1998DHS,1998,DHS,4001,Education,Primary,19.6,,,,,1,0,TG1998DHS,TG,1953.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Togo,TG,TG1998DHS,1998,DHS,4002,Education,Secondary,23.6,,,,,1,0,TG1998DHS,TG,1953.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Togo,TG,TG2013DHS,2013,DHS,4000,Education,No education,19.3,,,,,1,0,TG2013DHS,TG,1968.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Togo,TG,TG2013DHS,2013,DHS,4001,Education,Primary,20.5,,,,,1,0,TG2013DHS,TG,1968.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Togo,TG,TG2013DHS,2013,DHS,4002,Education,Secondary,22.9,,,,,1,0,TG2013DHS,TG,1968.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Togo,TG,TG2017MIS,2017,MIS,4000,Education,No education,23.5,,,,,1,0,TG2017MIS,TG,1972.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Togo,TG,TG2017MIS,2017,MIS,4001,Education,Primary,24.3,,,,,1,0,TG2017MIS,TG,1972.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Thailand,TH,TH1987DHS,1987,DHS,4000,Education,No education,22.3,,,,,1,0,TH1987DHS,TH,1942.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Thailand,TH,TH1987DHS,1987,DHS,4001,Education,Primary,21.7,,,,,1,0,TH1987DHS,TH,1942.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Tajikistan,TJ,TJ2012DHS,2012,DHS,4000,Education,No education,23.5,,,,,1,0,TJ2012DHS,TJ,1967.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Tajikistan,TJ,TJ2012DHS,2012,DHS,4001,Education,Primary,22.8,,,,,1,0,TJ2012DHS,TJ,1967.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Tajikistan,TJ,TJ2012DHS,2012,DHS,4002,Education,Secondary,22.6,,,,,1,0,TJ2012DHS,TJ,1967.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Tajikistan,TJ,TJ2012DHS,2012,DHS,4003,Education,Higher,23.5,,,,,1,0,TJ2012DHS,TJ,1967.5,1.0,0.0,0.0,1.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Tajikistan,TJ,TJ2017DHS,2017,DHS,4000,Education,No education,23.4,,,,,1,0,TJ2017DHS,TJ,1972.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Tajikistan,TJ,TJ2017DHS,2017,DHS,4001,Education,Primary,22.0,,,,,1,0,TJ2017DHS,TJ,1972.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Tajikistan,TJ,TJ2017DHS,2017,DHS,4002,Education,Secondary,21.7,,,,,1,0,TJ2017DHS,TJ,1972.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Tajikistan,TJ,TJ2017DHS,2017,DHS,4003,Education,Higher,23.0,,,,,1,0,TJ2017DHS,TJ,1972.5,1.0,0.0,0.0,1.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Tajikistan,TJ,TJ2023DHS,2023,DHS,4000,Education,No education,21.7,,,,,1,0,TJ2023DHS,TJ,1978.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Tajikistan,TJ,TJ2023DHS,2023,DHS,4001,Education,Primary,21.1,,,,,1,0,TJ2023DHS,TJ,1978.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Tajikistan,TJ,TJ2023DHS,2023,DHS,4002,Education,Secondary,20.7,,,,,1,0,TJ2023DHS,TJ,1978.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Tajikistan,TJ,TJ2023DHS,2023,DHS,4003,Education,Higher,22.6,,,,,1,0,TJ2023DHS,TJ,1978.5,1.0,0.0,0.0,1.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Timor-Leste,TL,TL2009DHS,2009,DHS,4000,Education,No education,21.7,,,,,1,0,TL2009DHS,TL,1964.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Timor-Leste,TL,TL2009DHS,2009,DHS,4001,Education,Primary,20.7,,,,,1,0,TL2009DHS,TL,1964.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Timor-Leste,TL,TL2009DHS,2009,DHS,4002,Education,Secondary,22.6,,,,,1,0,TL2009DHS,TL,1964.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Timor-Leste,TL,TL2016DHS,2016,DHS,4000,Education,No education,21.7,,,,,1,0,TL2016DHS,TL,1971.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Timor-Leste,TL,TL2016DHS,2016,DHS,4001,Education,Primary,21.1,,,,,1,0,TL2016DHS,TL,1971.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Timor-Leste,TL,TL2016DHS,2016,DHS,4002,Education,Secondary,22.6,,,,,1,0,TL2016DHS,TL,1971.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Turkmenistan,TM,TM2000DHS,2000,DHS,4000,Education,No education,21.8,,,,,1,0,TM2000DHS,TM,1955.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Turkmenistan,TM,TM2000DHS,2000,DHS,4001,Education,Primary,19.9,,,,,1,0,TM2000DHS,TM,1955.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Turkmenistan,TM,TM2000DHS,2000,DHS,4002,Education,Secondary,23.1,,,,,1,0,TM2000DHS,TM,1955.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Tunisia,TN,TN1988DHS,1988,DHS,4000,Education,No education,23.4,,,,,1,0,TN1988DHS,TN,1943.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Tunisia,TN,TN1988DHS,1988,DHS,4001,Education,Primary,24.6,,,,,1,0,TN1988DHS,TN,1943.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Turkey,TR,TR1993DHS,1993,DHS,4000,Education,No education,19.7,,,,,1,0,TR1993DHS,TR,1948.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Turkey,TR,TR1993DHS,1993,DHS,4001,Education,Primary,21.2,,,,,1,0,TR1993DHS,TR,1948.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Turkey,TR,TR1993DHS,1993,DHS,4002,Education,Secondary,23.6,,,,,1,0,TR1993DHS,TR,1948.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Turkey,TR,TR1998DHS,1998,DHS,4000,Education,No education,19.8,,,,,1,0,TR1998DHS,TR,1953.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Turkey,TR,TR1998DHS,1998,DHS,4001,Education,Primary,21.5,,,,,1,0,TR1998DHS,TR,1953.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Turkey,TR,TR1998DHS,1998,DHS,4002,Education,Secondary,23.2,,,,,1,0,TR1998DHS,TR,1953.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Turkey,TR,TR2003DHS,2003,DHS,4000,Education,No education,20.2,,,,,1,0,TR2003DHS,TR,1958.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Turkey,TR,TR2003DHS,2003,DHS,4001,Education,Primary,21.6,,,,,1,0,TR2003DHS,TR,1958.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Turkey,TR,TR2003DHS,2003,DHS,4002,Education,Secondary,23.2,,,,,1,0,TR2003DHS,TR,1958.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Turkey,TR,TR2008DHS,2008,DHS,4000,Education,No education,23.8,,,,,1,0,TR2008DHS,TR,1963.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Turkey,TR,TR2008DHS,2008,DHS,4001,Education,Primary,23.0,,,,,1,0,TR2008DHS,TR,1963.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Turkey,TR,TR2008DHS,2008,DHS,4002,Education,Secondary,24.8,,,,,1,0,TR2008DHS,TR,1963.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Turkey,TR,TR2013DHS,2013,DHS,4000,Education,No education,21.9,,,,,1,0,TR2013DHS,TR,1968.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Turkey,TR,TR2013DHS,2013,DHS,4001,Education,Primary,21.8,,,,,1,0,TR2013DHS,TR,1968.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Turkey,TR,TR2013DHS,2013,DHS,4002,Education,Secondary,23.1,,,,,1,0,TR2013DHS,TR,1968.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Trinidad and Tobago,TT,TT1987DHS,1987,DHS,4001,Education,Primary,21.1,,,,,1,0,TT1987DHS,TT,1942.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Trinidad and Tobago,TT,TT1987DHS,1987,DHS,4002,Education,Secondary,23.7,,,,,1,0,TT1987DHS,TT,1942.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Tanzania,TZ,TZ1992DHS,1992,DHS,4000,Education,No education,17.9,,,,,1,0,TZ1992DHS,TZ,1947.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Tanzania,TZ,TZ1992DHS,1992,DHS,4001,Education,Primary,19.9,,,,,1,0,TZ1992DHS,TZ,1947.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Tanzania,TZ,TZ1992DHS,1992,DHS,4002,Education,Secondary,23.0,,,,,1,0,TZ1992DHS,TZ,1947.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Tanzania,TZ,TZ1996DHS,1996,DHS,4000,Education,No education,18.8,,,,,1,0,TZ1996DHS,TZ,1951.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Tanzania,TZ,TZ1996DHS,1996,DHS,4001,Education,Primary,19.4,,,,,1,0,TZ1996DHS,TZ,1951.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Tanzania,TZ,TZ1996DHS,1996,DHS,4002,Education,Secondary,23.7,,,,,1,0,TZ1996DHS,TZ,1951.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Tanzania,TZ,TZ1999DHS,1999,DHS,4000,Education,No education,19.2,,,,,1,0,TZ1999DHS,TZ,1954.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Tanzania,TZ,TZ1999DHS,1999,DHS,4001,Education,Primary,19.3,,,,,1,0,TZ1999DHS,TZ,1954.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Tanzania,TZ,TZ1999DHS,1999,DHS,4002,Education,Secondary,23.5,,,,,1,0,TZ1999DHS,TZ,1954.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Tanzania,TZ,TZ2004DHS,2004,DHS,4000,Education,No education,19.2,,,,,1,0,TZ2004DHS,TZ,1959.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Tanzania,TZ,TZ2004DHS,2004,DHS,4001,Education,Primary,19.4,,,,,1,0,TZ2004DHS,TZ,1959.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Tanzania,TZ,TZ2004DHS,2004,DHS,4002,Education,Secondary,23.4,,,,,1,0,TZ2004DHS,TZ,1959.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Tanzania,TZ,TZ2007AIS,2007,AIS,4000,Education,No education,19.0,,,,,1,0,TZ2007AIS,TZ,1962.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Tanzania,TZ,TZ2007AIS,2007,AIS,4001,Education,Primary,19.3,,,,,1,0,TZ2007AIS,TZ,1962.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Tanzania,TZ,TZ2007AIS,2007,AIS,4002,Education,Secondary,22.9,,,,,1,0,TZ2007AIS,TZ,1962.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Tanzania,TZ,TZ2010DHS,2010,DHS,4000,Education,No education,18.4,,,,,1,0,TZ2010DHS,TZ,1965.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Tanzania,TZ,TZ2010DHS,2010,DHS,4001,Education,Primary,19.6,,,,,1,0,TZ2010DHS,TZ,1965.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Tanzania,TZ,TZ2010DHS,2010,DHS,4002,Education,Secondary,23.2,,,,,1,0,TZ2010DHS,TZ,1965.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Tanzania,TZ,TZ2015DHS,2015,DHS,4000,Education,No education,18.2,,,,,1,0,TZ2015DHS,TZ,1970.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Tanzania,TZ,TZ2015DHS,2015,DHS,4001,Education,Primary,19.4,,,,,1,0,TZ2015DHS,TZ,1970.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Tanzania,TZ,TZ2015DHS,2015,DHS,4002,Education,Secondary,24.1,,,,,1,0,TZ2015DHS,TZ,1970.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Tanzania,TZ,TZ2022DHS,2022,DHS,4000,Education,No education,18.7,,,,,1,0,TZ2022DHS,TZ,1977.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Tanzania,TZ,TZ2022DHS,2022,DHS,4001,Education,Primary,19.3,,,,,1,0,TZ2022DHS,TZ,1977.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Tanzania,TZ,TZ2022DHS,2022,DHS,4002,Education,Secondary,21.9,,,,,1,0,TZ2022DHS,TZ,1977.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Ukraine,UA,UA2007DHS,2007,DHS,4002,Education,Secondary,21.7,,,,,1,0,UA2007DHS,UA,1962.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Ukraine,UA,UA2007DHS,2007,DHS,4003,Education,Higher,23.9,,,,,1,0,UA2007DHS,UA,1962.5,1.0,0.0,0.0,1.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Uganda,UG,UG1988DHS,1988,DHS,4000,Education,No education,18.3,,,,,1,0,UG1988DHS,UG,1943.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Uganda,UG,UG1988DHS,1988,DHS,4001,Education,Primary,18.1,,,,,1,0,UG1988DHS,UG,1943.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Uganda,UG,UG1988DHS,1988,DHS,4002,Education,Secondary,20.2,,,,,1,0,UG1988DHS,UG,1943.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Uganda,UG,UG1995DHS,1995,DHS,4000,Education,No education,18.1,,,,,1,0,UG1995DHS,UG,1950.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Uganda,UG,UG1995DHS,1995,DHS,4001,Education,Primary,18.8,,,,,1,0,UG1995DHS,UG,1950.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Uganda,UG,UG1995DHS,1995,DHS,4002,Education,Secondary,20.1,,,,,1,0,UG1995DHS,UG,1950.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Uganda,UG,UG2000DHS,2000,DHS,4000,Education,No education,18.2,,,,,1,0,UG2000DHS,UG,1955.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Uganda,UG,UG2000DHS,2000,DHS,4001,Education,Primary,18.6,,,,,1,0,UG2000DHS,UG,1955.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Uganda,UG,UG2000DHS,2000,DHS,4002,Education,Secondary,20.3,,,,,1,0,UG2000DHS,UG,1955.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Uganda,UG,UG2000DHS,2000,DHS,4003,Education,Higher,23.9,,,,,1,0,UG2000DHS,UG,1955.5,1.0,0.0,0.0,1.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Uganda,UG,UG2006DHS,2006,DHS,4000,Education,No education,18.4,,,,,1,0,UG2006DHS,UG,1961.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Uganda,UG,UG2006DHS,2006,DHS,4001,Education,Primary,18.3,,,,,1,0,UG2006DHS,UG,1961.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Uganda,UG,UG2006DHS,2006,DHS,4002,Education,Secondary,20.1,,,,,1,0,UG2006DHS,UG,1961.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Uganda,UG,UG2006DHS,2006,DHS,4003,Education,Higher,24.1,,,,,1,0,UG2006DHS,UG,1961.5,1.0,0.0,0.0,1.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Uganda,UG,UG2009MIS,2009,MIS,4000,Education,No education,17.5,,,,,1,0,UG2009MIS,UG,1964.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Uganda,UG,UG2009MIS,2009,MIS,4001,Education,Primary,18.0,,,,,1,0,UG2009MIS,UG,1964.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Uganda,UG,UG2009MIS,2009,MIS,4002,Education,Secondary,19.9,,,,,1,0,UG2009MIS,UG,1964.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Uganda,UG,UG2009MIS,2009,MIS,4003,Education,Higher,22.8,,,,,1,0,UG2009MIS,UG,1964.5,1.0,0.0,0.0,1.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Uganda,UG,UG2011DHS,2011,DHS,4000,Education,No education,17.7,,,,,1,0,UG2011DHS,UG,1966.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Uganda,UG,UG2011DHS,2011,DHS,4001,Education,Primary,18.2,,,,,1,0,UG2011DHS,UG,1966.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Uganda,UG,UG2011DHS,2011,DHS,4002,Education,Secondary,20.1,,,,,1,0,UG2011DHS,UG,1966.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Uganda,UG,UG2011DHS,2011,DHS,4003,Education,Higher,24.8,,,,,1,0,UG2011DHS,UG,1966.5,1.0,0.0,0.0,1.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Uganda,UG,UG2016DHS,2016,DHS,4000,Education,No education,18.3,,,,,1,0,UG2016DHS,UG,1971.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Uganda,UG,UG2016DHS,2016,DHS,4001,Education,Primary,18.5,,,,,1,0,UG2016DHS,UG,1971.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Uganda,UG,UG2016DHS,2016,DHS,4002,Education,Secondary,20.5,,,,,1,0,UG2016DHS,UG,1971.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Uganda,UG,UG2016DHS,2016,DHS,4003,Education,Higher,24.0,,,,,1,0,UG2016DHS,UG,1971.5,1.0,0.0,0.0,1.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Uzbekistan,UZ,UZ1996DHS,1996,DHS,4001,Education,Primary,18.7,,,,,1,0,UZ1996DHS,UZ,1951.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Uzbekistan,UZ,UZ1996DHS,1996,DHS,4002,Education,Secondary,21.3,,,,,1,0,UZ1996DHS,UZ,1951.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Uzbekistan,UZ,UZ1996DHS,1996,DHS,4003,Education,Higher,23.0,,,,,1,0,UZ1996DHS,UZ,1951.5,1.0,0.0,0.0,1.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Vietnam,VN,VN1997DHS,1997,DHS,4000,Education,No education,22.3,,,,,1,0,VN1997DHS,VN,1952.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Vietnam,VN,VN1997DHS,1997,DHS,4001,Education,Primary,21.1,,,,,1,0,VN1997DHS,VN,1952.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Vietnam,VN,VN1997DHS,1997,DHS,4002,Education,Secondary,23.0,,,,,1,0,VN1997DHS,VN,1952.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Vietnam,VN,VN2002DHS,2002,DHS,4000,Education,No education,19.9,,,,,1,0,VN2002DHS,VN,1957.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Vietnam,VN,VN2002DHS,2002,DHS,4001,Education,Primary,21.5,,,,,1,0,VN2002DHS,VN,1957.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Vietnam,VN,VN2002DHS,2002,DHS,4002,Education,Secondary,22.5,,,,,1,0,VN2002DHS,VN,1957.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Yemen,YE,YE1991DHS,1991,DHS,4000,Education,No education,19.5,,,,,1,0,YE1991DHS,YE,1946.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Yemen,YE,YE1991DHS,1991,DHS,4001,Education,Primary,20.5,,,,,1,0,YE1991DHS,YE,1946.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Yemen,YE,YE1997DHS,1997,DHS,4000,Education,No education,18.8,,,,,1,0,YE1997DHS,YE,1952.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Yemen,YE,YE1997DHS,1997,DHS,4001,Education,Primary,18.8,,,,,1,0,YE1997DHS,YE,1952.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Yemen,YE,YE1997DHS,1997,DHS,4002,Education,Secondary,22.3,,,,,1,0,YE1997DHS,YE,1952.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Yemen,YE,YE2013DHS,2013,DHS,4000,Education,No education,20.3,,,,,1,0,YE2013DHS,YE,1968.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Yemen,YE,YE2013DHS,2013,DHS,4001,Education,Primary,20.8,,,,,1,0,YE2013DHS,YE,1968.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Yemen,YE,YE2013DHS,2013,DHS,4002,Education,Secondary,22.3,,,,,1,0,YE2013DHS,YE,1968.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,South Africa,ZA,ZA1998DHS,1998,DHS,4000,Education,No education,19.5,,,,,1,0,ZA1998DHS,ZA,1953.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,South Africa,ZA,ZA1998DHS,1998,DHS,4001,Education,Primary,19.3,,,,,1,0,ZA1998DHS,ZA,1953.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,South Africa,ZA,ZA1998DHS,1998,DHS,4002,Education,Secondary,21.3,,,,,1,0,ZA1998DHS,ZA,1953.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,South Africa,ZA,ZA2016DHS,2016,DHS,4001,Education,Primary,19.4,,,,,1,0,ZA2016DHS,ZA,1971.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,South Africa,ZA,ZA2016DHS,2016,DHS,4002,Education,Secondary,20.9,,,,,1,0,ZA2016DHS,ZA,1971.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Zambia,ZM,ZM1992DHS,1992,DHS,4000,Education,No education,18.8,,,,,1,0,ZM1992DHS,ZM,1947.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Zambia,ZM,ZM1992DHS,1992,DHS,4001,Education,Primary,18.2,,,,,1,0,ZM1992DHS,ZM,1947.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Zambia,ZM,ZM1992DHS,1992,DHS,4002,Education,Secondary,20.2,,,,,1,0,ZM1992DHS,ZM,1947.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Zambia,ZM,ZM1992DHS,1992,DHS,4003,Education,Higher,23.6,,,,,1,0,ZM1992DHS,ZM,1947.5,1.0,0.0,0.0,1.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Zambia,ZM,ZM1996DHS,1996,DHS,4000,Education,No education,18.4,,,,,1,0,ZM1996DHS,ZM,1951.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Zambia,ZM,ZM1996DHS,1996,DHS,4001,Education,Primary,18.5,,,,,1,0,ZM1996DHS,ZM,1951.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Zambia,ZM,ZM1996DHS,1996,DHS,4002,Education,Secondary,20.3,,,,,1,0,ZM1996DHS,ZM,1951.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Zambia,ZM,ZM2002DHS,2002,DHS,4000,Education,No education,18.5,,,,,1,0,ZM2002DHS,ZM,1957.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Zambia,ZM,ZM2002DHS,2002,DHS,4001,Education,Primary,18.6,,,,,1,0,ZM2002DHS,ZM,1957.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Zambia,ZM,ZM2002DHS,2002,DHS,4002,Education,Secondary,19.7,,,,,1,0,ZM2002DHS,ZM,1957.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Zambia,ZM,ZM2007DHS,2007,DHS,4000,Education,No education,18.6,,,,,1,0,ZM2007DHS,ZM,1962.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Zambia,ZM,ZM2007DHS,2007,DHS,4001,Education,Primary,18.6,,,,,1,0,ZM2007DHS,ZM,1962.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Zambia,ZM,ZM2007DHS,2007,DHS,4002,Education,Secondary,20.1,,,,,1,0,ZM2007DHS,ZM,1962.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Zambia,ZM,ZM2013DHS,2013,DHS,4000,Education,No education,18.3,,,,,1,0,ZM2013DHS,ZM,1968.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Zambia,ZM,ZM2013DHS,2013,DHS,4001,Education,Primary,18.4,,,,,1,0,ZM2013DHS,ZM,1968.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Zambia,ZM,ZM2013DHS,2013,DHS,4002,Education,Secondary,20.0,,,,,1,0,ZM2013DHS,ZM,1968.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Zambia,ZM,ZM2013DHS,2013,DHS,4003,Education,Higher,24.3,,,,,1,0,ZM2013DHS,ZM,1968.5,1.0,0.0,0.0,1.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Zambia,ZM,ZM2018DHS,2018,DHS,4000,Education,No education,17.9,,,,,1,0,ZM2018DHS,ZM,1973.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Zambia,ZM,ZM2018DHS,2018,DHS,4001,Education,Primary,18.2,,,,,1,0,ZM2018DHS,ZM,1973.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Zambia,ZM,ZM2018DHS,2018,DHS,4002,Education,Secondary,20.0,,,,,1,0,ZM2018DHS,ZM,1973.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Zambia,ZM,ZM2024DHS,2024,DHS,4000,Education,No education,17.7,,,,,1,0,ZM2024DHS,ZM,1979.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Zambia,ZM,ZM2024DHS,2024,DHS,4001,Education,Primary,18.1,,,,,1,0,ZM2024DHS,ZM,1979.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Zambia,ZM,ZM2024DHS,2024,DHS,4002,Education,Secondary,20.2,,,,,1,0,ZM2024DHS,ZM,1979.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Zimbabwe,ZW,ZW1988DHS,1988,DHS,4000,Education,No education,18.4,,,,,1,0,ZW1988DHS,ZW,1943.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Zimbabwe,ZW,ZW1988DHS,1988,DHS,4001,Education,Primary,19.3,,,,,1,0,ZW1988DHS,ZW,1943.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Zimbabwe,ZW,ZW1988DHS,1988,DHS,4002,Education,Secondary,21.1,,,,,1,0,ZW1988DHS,ZW,1943.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Zimbabwe,ZW,ZW1988DHS,1988,DHS,4003,Education,Higher,23.0,,,,,1,0,ZW1988DHS,ZW,1943.5,1.0,0.0,0.0,1.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Zimbabwe,ZW,ZW1994DHS,1994,DHS,4000,Education,No education,17.4,,,,,1,0,ZW1994DHS,ZW,1949.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Zimbabwe,ZW,ZW1994DHS,1994,DHS,4001,Education,Primary,18.5,,,,,1,0,ZW1994DHS,ZW,1949.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Zimbabwe,ZW,ZW1994DHS,1994,DHS,4002,Education,Secondary,20.8,,,,,1,0,ZW1994DHS,ZW,1949.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Zimbabwe,ZW,ZW1999DHS,1999,DHS,4000,Education,No education,17.9,,,,,1,0,ZW1999DHS,ZW,1954.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Zimbabwe,ZW,ZW1999DHS,1999,DHS,4001,Education,Primary,18.8,,,,,1,0,ZW1999DHS,ZW,1954.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Zimbabwe,ZW,ZW1999DHS,1999,DHS,4002,Education,Secondary,20.8,,,,,1,0,ZW1999DHS,ZW,1954.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Zimbabwe,ZW,ZW2005DHS,2005,DHS,4000,Education,No education,18.2,,,,,1,0,ZW2005DHS,ZW,1960.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Zimbabwe,ZW,ZW2005DHS,2005,DHS,4001,Education,Primary,18.9,,,,,1,0,ZW2005DHS,ZW,1960.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Zimbabwe,ZW,ZW2005DHS,2005,DHS,4002,Education,Secondary,20.7,,,,,1,0,ZW2005DHS,ZW,1960.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Zimbabwe,ZW,ZW2005DHS,2005,DHS,4003,Education,Higher,24.0,,,,,1,0,ZW2005DHS,ZW,1960.5,1.0,0.0,0.0,1.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Zimbabwe,ZW,ZW2010DHS,2010,DHS,4000,Education,No education,19.3,,,,,1,0,ZW2010DHS,ZW,1965.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Zimbabwe,ZW,ZW2010DHS,2010,DHS,4001,Education,Primary,18.7,,,,,1,0,ZW2010DHS,ZW,1965.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Zimbabwe,ZW,ZW2010DHS,2010,DHS,4002,Education,Secondary,20.9,,,,,1,0,ZW2010DHS,ZW,1965.5,1.0,0.0,1.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Zimbabwe,ZW,ZW2010DHS,2010,DHS,4003,Education,Higher,25.0,,,,,1,0,ZW2010DHS,ZW,1965.5,1.0,0.0,0.0,1.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Zimbabwe,ZW,ZW2015DHS,2015,DHS,4000,Education,No education,18.6,,,,,1,0,ZW2015DHS,ZW,1970.5,1.0,0.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Zimbabwe,ZW,ZW2015DHS,2015,DHS,4001,Education,Primary,18.6,,,,,1,0,ZW2015DHS,ZW,1970.5,1.0,1.0,0.0,0.0
+FE_AAFB_W_M25,Median age at first birth for women age 25-29,Zimbabwe,ZW,ZW2015DHS,2015,DHS,4002,Education,Secondary,20.3,,,,,1,0,ZW2015DHS,ZW,1970.5,1.0,0.0,1.0,0.0

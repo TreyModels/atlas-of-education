@@ -1,0 +1,11 @@
+DHS individual-level microdata probing, box2, 2026-11-23T11:50:36.374826Z
+ATTEMPT DHS API indicators (aggregates only): HTTP 200, type application/json;charset=UTF-8, first bytes b'{"TotalPages":1,"Data":[{"IndicatorId":"FE_FRTR_W_A10","IndicatorOldId":"","Label":"Age specific fertility rate: 10-14",'
+ATTEMPT DHS API datasets metadata (file names and sizes; no download link): HTTP 200, type application/json;charset=UTF-8, first bytes b'{"TotalPages":3104,"Data":[{"FileName":"AFCH66DT.ZIP","CountryName":"Afghanistan","SurveyYear":"2010","SurveyYearLabel":'
+ATTEMPT DHS dataset by flat-file name (returns the metadata list, not the file): HTTP 200, type application/json;charset=UTF-8, first bytes b'{"TotalPages":4,"Data":[{"FileName":"AFCH66DT.ZIP","CountryName":"Afghanistan","SurveyYear":"2010","SurveyYearLabel":"20'
+ATTEMPT DHS direct flat-file URL /data/dataset/AFIR66FL.ZIP: ERROR HTTP Error 404: Not Found
+ATTEMPT DHS direct flat-file URL /data/AFIR66FL.ZIP: ERROR HTTP Error 404: Not Found
+ATTEMPT DHS dataset landing page (account login required for download): HTTP 200, type text/html;charset=UTF-8, first bytes b'<!DOCTYPE html> <html lang="en"> <!-- Content Copyright Macro International -->\n<!-- Page generated 2026-11-23 06:50:43 '
+ATTEMPT IPUMS-DHS landing: HTTP 200, type text/html, first bytes b'<!doctype html>\n<html lang="en">\n<head>\n\t<title>IPUMS-DHS</title>\n\t<meta name="description" content="IPUMS-DHS facilitat'
+ATTEMPT IPUMS API extract endpoint (requires key): ERROR HTTP Error 403: Forbidden
+ATTEMPT Zenodo search API for DHS recode: ERROR HTTP Error 403: Forbidden
+ATTEMPT Harvard Dataverse search for DHS individual recode: HTTP 200, type application/json;charset=UTF-8, first bytes b'{"status":"OK","data":{"q":"DHS individual recode","total_count":48453,"start":0,"spelling_alternatives":{},"items":[{"n'
