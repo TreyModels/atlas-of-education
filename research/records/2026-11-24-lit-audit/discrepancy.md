@@ -49,7 +49,7 @@ Coale & Watkins 1986 (reissue 10.1515/9781400886692); Lesthaeghe 2010 (10.1111/j
   the decomposition itself as new. The lead has not yet replied — status OPEN (framing recommendation sent).
 - The DHS ecological caveat is the highest-risk item; flagged in the referee memo, status OPEN.
 
-## Paper M (massification omnibus) — PENDING branch
+## Paper M (massification omnibus) — branch read at 753e102 (24 Nov)
 
 The branch was not pushed at this checkpoint. Preliminary: the sibling `research/paper-boppart-2026-11-24` branch
 has a careful refs.md that already Crossref-verifies its DOIs, and my independent structural-change list
@@ -63,3 +63,23 @@ diffed against theirs when pushed; the credential-inflation list (Collins 10.731
 10.2307/1882010; Arrow 10.1016/0047-2727(73)90013-3; Bills-Brown 10.1016/j.rssm.2011.01.004) and the scaling
 list (Bettencourt 10.1073/pnas.0610172104; Yang arXiv 2208.06487; Head-Mayer 10.1016/b978-0-444-54314-1.00003-3)
 likewise.
+
+## Paper M (massification omnibus) — branch read at 753e102 (24 Nov)
+
+The lead's `claims-prior-art.md` and `refs.md` are strong and already respond to my referee memo (framing, dates as
+unverified, decomposition not test, scaling diagnostic, credential/prior-work added). Remaining items are record
+integrity; all verified directly against Crossref DOI lookup.
+
+| # | Item | My finding | Status |
+|---|---|---|---|
+| 1 | Internal inconsistency: same works carry different DOIs in `claims-prior-art.md` vs `refs.md` | `claims-prior-art.md` uses 10.1086/447306 (resolves to an unrelated 1995 CER article), 10.2307/2112690 (different article), 10.2307/2112628 (404), 10.2307/2112832 (404). `refs.md` uses the correct 10.1086/446504, 10.2307/2112679, 10.2307/2112627, 10.2307/2112831. Reconcile to the refs.md set. | OPEN |
+| 2 | Books cited with review-article DOIs | Becker 1964 10.2307/2229541 = 1966 Economic Journal review; Schultz 1964 10.2307/2228861 = 1964 EJ review; Soysal 1994 10.2307/2077636 = 1995 Contemporary Sociology review; Lindert 2004 10.1086/531331 = 2005 American Historical Review review (book DOI 10.1017/cbo9780511510717). | OPEN |
+| 3 | Wrong DOI: Becker 1960 | 10.3386/w1793 resolves to "A Reformulation of the Economic Theory of Fertility" (1986), not Becker 1960. | OPEN |
+| 4 | Wrong DOI: Nelson & Phelps 1966 | 10.58837/chula.taic.522 resolves to a 1965 repository item, not the AER 1966 article; marked MATCH incorrectly. | OPEN |
+| 5 | Mincer 1958 DOI | Correct is 10.1086/258055 (their refs.md); Paper F's refs.json line resolves 10.1086/258116 to a Japanese-economy book review — flag to Paper F. | OPEN (F) |
+| 6 | Sequencing prior-work coverage | Sandberg 1979, Mitch 1992, Goldin-Katz, Lindert, world-polity, Squicciarini-Voigtländer, de Pleijt-van Zanden, Graff are now cited and the contribution reframed as the systematic 61/64 coding. MATCHES my memo. | FIXED |
+| 7 | Date robustness | Paper reports date-perturbation (median 26, IQR 17-29; 93% >10y) and names date-by-date source table + alternative-threshold recoding as remaining vulnerability. | FIXED (as vulnerability named) |
+| 8 | Horse race framing | Relabelled a decomposition not a test, with named natural experiments. | FIXED |
+| 9 | Scaling / credential | Scaling labelled diagnostic (θ/γ not fitted); credential prior work added and contribution limited to measurement. | FIXED |
+| 10 | Closest competitor missing | Porzio, Rossi & Santangelo (2021) "The Human Side of Structural Transformation" (NBER w29390; SSRN 10.2139/ssrn.3949187) is the closest systematic schooling→structural-change paper and was absent from their list. | OPEN |
+| 11 | Implications/future research | Paper needs the referee-expected content: sequencing is order not causation; date source table; alternative thresholds; instruments (compulsory-schooling laws, church-state competition, colonial policy); extend Porzio et al. with event-ordering data; subnational Prussia/Britain/France. | OPEN (recommendation) |
