@@ -27,6 +27,8 @@ were aimed at *shape and typology*, not at fertility determinants in general.
 
 | work | what it shows | Crossref status | update |
 |---|---|---|---|
+| Thompson (1929), *American Journal of Sociology* 34(6):959–975, "Population" | the original three-stage statement | 10.1086/214874 — Crossref ✓ | benchmark |
+| Landry (1934), *La révolution démographique* (Sirey) | early French formulation of the transition stages | book; no DOI | benchmark |
 | Notestein (1945), "Population — the long view", in *Food for the World* (ed. T. W. Schultz), University of Chicago Press | classic three-stage transition, S-shaped diagram | book chapter; no DOI | benchmark |
 | Davis (1963), *Population Index* 29(4):345–366, "The theory of change and response in modern demographic history" | transition as social response, not mechanical curve | 10.2307/2732014 — Crossref ✓ | benchmark |
 | Coale (1973), "The demographic transition reconsidered", IUSSP Proceedings | conditions for transition, timing differs | no DOI | benchmark |
@@ -46,6 +48,8 @@ The claim is about the estimable window only.
 | work | what it shows | Crossref status | update |
 |---|---|---|---|
 | Cleland & Wilson (1987), *Population Studies* 41(1):5–30, "Demand theories of the fertility transition: an iconoclastic view" | demand accounts incomplete; diffusion matters | 10.1080/0032472031000142516 — Crossref ✓ | replicated direction |
+| Chesnais (1992), *The Demographic Transition: Stages, Patterns and Economic Implications* (Oxford University Press) | canonical stage typology incl. fast/slow transitions | 10.1093/oso/9780198286592.001.0001 — Crossref ✓ (book) | benchmark |
+| Coale & Watkins (eds.) (1986), *The Decline of Fertility in Europe* (Princeton University Press) | classic regional pattern/shape-typology precedent | 10.1515/9781400886692 — Crossref ✓ (reissue) | benchmark |
 | Reher (2004), *Population, Space and Place* 10(1):9–24, "The demographic transition revisited as a global process" | transitions cluster by region/era | 10.1002/psp.313 — Crossref ✓ | replicated |
 | Bongaarts (2008), *Studies in Family Planning* 39(4):303–310, "Fertility transitions in developing countries: progress or stagnation?" | many transitions stalled | 10.1111/j.1728-4465.2008.00157.x — Crossref ✓ | replicated (floors vary) |
 | Bongaarts & Casterline (2013), *Population and Development Review* 39(2):299–312, "Fertility transition: is sub-Saharan Africa different?" | slow vs fast transitions are structurally different | 10.1111/j.1728-4457.2013.00557.x — Crossref ✓ | replicated (two poles) |
@@ -75,6 +79,7 @@ parameters.
 | work | what it shows | Crossref status | update |
 |---|---|---|---|
 | Cleland & Wilson (1987) | diffusion of ideas, not only demand | 10.1080/0032472031000142516 — Crossref ✓ | context |
+| Bongaarts & Watkins (1996), *Population and Development Review* 22(4):639–682, "Social interactions and contemporary fertility transitions" | social-interaction/diffusion model of transition timing and pace; the rival to mortality/demand explanations when timing is the outcome | 10.2307/2137804 — Crossref ✓ | not directly tested; mortality-timing association is consistent with it but is not a test |
 | Montgomery & Casterline (1993), *Population Studies* 47(3):457–479, "The diffusion of fertility control" / "Modelling diffusion effects in fertility transition" | formal diffusion models of transition | 10.1080/0032472031000146786 — Crossref ✓ | not directly tested |
 | Reher (2004) | regional timing clusters consistent with diffusion | 10.1002/psp.313 — Crossref ✓ | context |
 
@@ -113,6 +118,7 @@ coverage.
 |---|---|---|---|
 | Bongaarts (2008) | stalled/slow transitions contradict an S-curve | 10.1111/j.1728-4465.2008.00157.x — Crossref ✓ | replicated |
 | Bongaarts & Casterline (2013) | sub-Saharan African slow transitions as a distinct regime | 10.1111/j.1728-4457.2013.00557.x — Crossref ✓ | replicated |
+| Chesnais (1992) | canonical fast/slow and stage typology | 10.1093/oso/9780198286592.001.0001 — Crossref ✓ | benchmark |
 | Reher (2004) | regional/era typology | 10.1002/psp.313 — Crossref ✓ | replicated |
 
 **Our status: two poles, reported as a continuum.** The late–shallow–linear class (47 countries) matches the

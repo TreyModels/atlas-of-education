@@ -96,7 +96,10 @@ limitations; Section 10 concludes.
 ### 2.1 Classic transition theory and its S-curve
 
 The classic accounts describe the transition as a sequence — high stationary, early expanding, late expanding,
-low stationary — driven by mortality decline followed by fertility decline (Notestein 1945; Davis 1963). The
+low stationary — driven by mortality decline followed by fertility decline. The three-stage statement is
+usually traced to Thompson's (1929) "Population" and Landry's (1934) *La révolution démographique*, with
+Notestein's (1945) essay the version that became canonical and Davis's (1963) change-and-response
+reformulation the most influential critique. The
 S-curve enters less as an estimated functional form than as a diagram: fertility falls slowly at first, then
 rapidly, then slowly again. Coale's reformulation sharpened the conditions under which a transition occurs and
 why its timing differs across societies (Coale 1973), and the model-schedule tradition formalised the age
@@ -111,24 +114,30 @@ transitions better than alternatives.
 
 The comparative literature has repeatedly emphasised that transitions differ. Cleland and Wilson's
 iconoclastic review argued that demand-side accounts miss the diffusion of ideas and that transition timing
-and pace reflect social interaction as much as economic change (Cleland & Wilson 1987). Bongaarts documented
+and pace reflect social interaction as much as economic change (Cleland & Wilson 1987); the diffusion account
+was formalised as a social-interaction model by Bongaarts and Watkins (1996), which is the rival to
+mortality- and demand-based explanations when the outcome is timing. Bongaarts documented
 that many developing-country transitions stalled or slowed in the 1990s, contradicting a smooth S-curve
 (Bongaarts 2008). Bongaarts and Casterline contrasted the fast transitions of East Asia with the slow
 transitions of sub-Saharan Africa and argued that the difference is structural, not a matter of being at a
 different point on the same curve (Bongaarts & Casterline 2013). Reher proposed a global-process reading in
 which timing clusters by region and historical era (Reher 2004), and Lesthaeghe's second-demographic-transition
-account adds a later, distinct regime (Lesthaeghe 2010). Dyson's synthesis treats the transition as a set of
-regional sequences rather than one curve (Dyson 2010). The mortality channel has its own literature: improved
+account adds a later, distinct regime (Lesthaeghe 2010). Chesnais (1992) provided the canonical stage typology,
+including the contrast between fast and slow transitions, and Coale and Watkins's (1986) edited volume on
+Europe is the classic precedent for documenting regional patterns of transition timing and structure.
+Dyson's synthesis treats the transition as a set of regional sequences rather than one curve (Dyson 2010). The mortality channel has its own literature: improved
 survival changes the returns to childbearing and can precede or accompany fertility decline (Cleland 2001;
 Soares 2000), which is why mortality timing is a natural candidate for explaining transition timing.
 
 ### 2.3 Shape work and what is missing
 
-Two strands come closest to the question of functional form. The projection literature imposes a form and
+Three strands come closest to the question of functional form. The projection literature imposes a form and
 estimates its parameters (Alkema et al. 2011; Raftery et al. 2014; Ševčíková et al. 2016), but does not
-compare forms or test the imposed shape against alternatives. The comparative literature describes types —
-early/late, fast/slow, stalled — but does not fit a common set of forms to every country and compare their
-parameters on a common scale. We found no prior study that (i) fits several parametric forms plus a flexible
+compare forms or test the imposed shape against alternatives. The typological books — Coale and Watkins
+(1986) on Europe and Chesnais (1992) — come closest to a shape clustering, but they cluster countries by
+historical narrative and regional pattern rather than by fitted parameters, and they do not compare
+functional forms. The comparative literature describes types — early/late, fast/slow, stalled — but does not
+fit a common set of forms to every country and compare their parameters on a common scale. We found no prior study that (i) fits several parametric forms plus a flexible
 alternative to every transition, (ii) compares them out of sample, (iii) extracts shape descriptors on a common
 scale and (iv) tests the resulting clustering against random partitions. That is the gap this paper addresses;
 it is a gap of measurement and comparison, not a claim of a new theory.
@@ -327,7 +336,8 @@ deviation of the aligned curve is **0.017 at every point of the path**, and the 
 the mean curve is **0.011** on a 0–1 scale. The first principal component of the aligned curves explains
 essentially **all** of their variance (the second component is numerically zero), which means that the
 variation that remains after alignment is a single, small, common deviation rather than several distinct path
-types.
+types. The variance share is unsurprising once the curves are aligned on the same endpoints; the informative
+number is the **0.017 cross-country spread**, not the variance share.
 
 This is the paper's central decomposition. The literature correctly documents enormous heterogeneity, but that
 heterogeneity is **horizontal and vertical**, not in the shape of the path: transitions start at different
@@ -557,8 +567,11 @@ not a forecasting evaluation.
 
 The results are descriptive and correlational. Five limitations matter. (i) **Period TFR**: annual period TFR
 is affected by tempo and by birth timing; cohort fertility would be the cleaner object for some purposes.
-(ii) **Left-censoring**: 1960 start and left-censored schooling timing mean that early transitions and early
-schooling expansions are under-observed. (iii) **Coverage**: income at onset is available for only 18
+(ii) **Left-censoring and incomplete transitions**: the 1960 start and left-censored schooling timing mean that
+early transitions and early schooling expansions are under-observed. Because the 1960–2023 window misses the
+pre-transition plateau and often the final floor, a logistic fitted to it may be misspecified or poorly
+identified; the model comparison is a goodness-of-fit statement about the observed window, not a refutation of
+the S-curve as a description of complete transitions. (iii) **Coverage**: income at onset is available for only 18
 countries and female secondary attainment for 30; the schooling-level results are therefore hypotheses.
 (iv) **Clustering**: the two-class solution is better than random but weak in absolute separation; the
 continuum reading is the honest one. (v) **No causal identification**: the mortality-timing and urbanisation

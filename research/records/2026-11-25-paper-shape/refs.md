@@ -46,6 +46,18 @@ are standard citations, not DOI-verified entries. Every entry cited in `PAPER.md
 19. Soares, R. R. (2000). Mortality decline, human capital investment, and economic growth. *Journal of
     Development Economics* 62(1), 1–23. DOI 10.1016/s0304-3878(00)00073-0 — Crossref ✓
 
+20. Thompson, W. S. (1929). Population. *American Journal of Sociology* 34(6), 959–975.
+    DOI 10.1086/214874 — Crossref ✓
+21. Landry, A. (1934). *La révolution démographique: études et essais sur les problèmes de la population*.
+    Sirey. Book; no DOI — standard citation (a 1934 review exists at DOI 10.2307/2603337, not the book).
+22. Chesnais, J.-C. (1992). *The Demographic Transition: Stages, Patterns and Economic Implications*.
+    Oxford University Press. DOI 10.1093/oso/9780198286592.001.0001 — Crossref ✓ (book)
+23. Coale, A. J. & Watkins, S. C. (eds.) (1986). *The Decline of Fertility in Europe*. Princeton University
+    Press. Reissue DOI 10.1515/9781400886692 — Crossref ✓ (book; the 1986 first edition has no separate
+    DOI, the Crossref record is the Princeton reissue)
+24. Bongaarts, J. & Watkins, S. C. (1996). Social interactions and contemporary fertility transitions.
+    *Population and Development Review* 22(4), 639–682. DOI 10.2307/2137804 — Crossref ✓
+
 World Bank (2024 release). *World Development Indicators*: total fertility rate (`SP.DYN.TFRT.IN`), female
 life expectancy (`SP.DYN.LE00.FE.IN`), infant mortality (`SP.DYN.IMRT.IN`), urban population share
 (`SP.URB.TOTL.IN.ZS`), GDP per capita PPP (`NY.GDP.PCAP.PP.KD`), female primary/lower-secondary/upper-secondary
