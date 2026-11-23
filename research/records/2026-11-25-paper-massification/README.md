@@ -5,7 +5,7 @@ Lead: panel-matrix (task-37). This record consolidates everything the project fo
 synthesis-length paper (target 12,000–18,000 words) with an exhaustive, DOI-verified literature review.
 
 ## Deliverables
-- **`paper.md`** — full draft, **17,371 words** (within the 12,000–18,000 target), restructured around the finding (Section 2) with explicit Implications (12) and Future research (13), with abstract, introduction,
+- **`paper.md`** — full draft, **17,400 words** (within the 12,000–18,000 target), restructured around the finding (Section 2) with explicit Implications (12) and Future research (13), with abstract, introduction,
   four-literature theory section, data and measurement, empirical strategy, six results sections, synthesis and
   "What we know now" box, limitations/referee objections, conclusion, and three appendices (evidence labels,
   reproduction, data gaps). Every number carries sample and uncertainty; the historical dates are labelled

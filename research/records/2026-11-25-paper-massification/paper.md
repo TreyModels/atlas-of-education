@@ -516,6 +516,10 @@ to +8). The source record's JSON reports **68.75%** for this ordering because it
 as schooling-first; a direct recomputation from the same record's event CSV gives **37.5%** among the 64 three-event
 countries (**35.8%** across all 81 countries with both dates), and this paper reports the strict ordering and the
 discrepancy rather than the JSON figure (recomputation: `scripts/recompute_fertility_ordering.py`, output
+`data/recompute_fertility_ordering.json`). The related but **different** ordering of the farm exodus against the fertility decline is not used as a claim
+in this paper: computed from the same event file it is **4/64 = 6.25%** release-first (no ties; the fertility
+decline comes first in **60/64 = 93.75%**), and it must not be conflated with the 20/64 simultaneity in the
+schooling-versus-fertility comparison (recomputation: `scripts/recompute_fertility_ordering.py`,
 `data/recompute_fertility_ordering.json`).
 
 The 64 countries are not a random sample: they are the countries where the events are dated at all, which

@@ -75,3 +75,22 @@ headline anywhere. The recomputation is committed: `scripts/recompute_fertility_
 
 **Status: FIXED.** The record-level JSON field remains wrong upstream; Paper M flags it rather than propagating it,
 and the record owner should correct `sequencing.json`/`sequencing.txt` for future users.
+
+## G. Release-vs-fertility ordering check (30 Nov 2026)
+
+Surfaced by gpu-dose while fixing N3: the **release-vs-fertility** ordering is a different comparison from
+**schooling-vs-fertility**, and its 4/64 = 6.25% must not be mixed up with the schooling–fertility tie count.
+Checked every Paper M file for a release-vs-fertility claim: **none is used**. The only "release-first" mention is
+paper.md line 76, which refers to agricultural release before **schooling** (the 4.7% reverse case), not release
+before fertility; the fertility-ordering passages (paper.md lines 77, 137, 513-517, 1106-1107) are all
+schooling-vs-fertility; claims-to-source-map claim 3 is schooling-vs-fertility; there was no release-vs-fertility
+row. The source record's `sequencing.txt` line "release before fertility: 6%" is consistent with the strict
+recomputation.
+
+Independent recomputation from the committed `data/event_dates_subsistence_v2.csv` (same code path,
+`scripts/recompute_fertility_ordering.py` class of arithmetic): **release-first 4/64 = 6.25%** (bootstrap not
+reported; zero ties), **fertility-first 60/64 = 93.75%**; across all 95 countries with both dates 9/95 = 9.47%
+release-first, 0 ties, 90.53% fertility-first. This matches gpu-dose's independent recomputation exactly
+(release-first AFG, LBR, MWI, ZMB). Action taken: a clarifying sentence was added to Section 6 distinguishing the
+two orderings, and claims-to-source-map row 31 records the check. No existing claim or number was changed.
+**Status: VERIFIED, not used as a claim.**

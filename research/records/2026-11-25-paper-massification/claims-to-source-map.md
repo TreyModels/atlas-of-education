@@ -37,3 +37,5 @@ run-lead before this paper was assembled; this paper adds no new estimation.
 
 | 28 | restructure: Sections 2 (finding), 12 (implications), 13 (future research) are argument/synthesis sections; they restate claims 1-27 and add no new numbers | this branch | `paper.md` | Sections 2, 12, 13 |
 | 29 | IQR precision: 16-29 years across all 64 gaps; 17-29 across the 61 forward cases | subsistence-v2 @ ce66cfc | `results/event_dates.csv` | columns `schooling`, `release`; arithmetic recomputed for this paper and independently by run-lead |
+
+| 31 | release-vs-fertility ordering check (NOT used as a claim in the paper): release-first 4/64 = 6.25% (0 ties; fertility-first 60/64 = 93.75%); all 95 countries with both dates 9/95 = 9.47% (0 ties) | subsistence-v2 @ ce66cfc | `results/event_dates.csv` (committed copy `data/event_dates_subsistence_v2.csv`); `scripts/recompute_fertility_ordering.py` | recomputed for Paper M; distinct from the schooling-vs-fertility ordering (claim 3) whose 20/64 ties belong only to this comparison. Verified 30 Nov 2026 against gpu-dose's independent recomputation (4/64 = 6.25%, 0 ties, 60/64 = 93.75%) |
