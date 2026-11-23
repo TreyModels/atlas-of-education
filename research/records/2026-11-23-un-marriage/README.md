@@ -144,5 +144,5 @@ finding.
 
 `scripts/`: `download_raw.sh`, `extract_un.py` (workbook → series, availability, provenance), `edge_marriage.py` (estimator reuse),
 `falsify.py`, `block_perm.py`, `robust_extra.py`, `nolevel_check.py`, `change_test.py`. `data/`: series JSONs, `*_provenance.csv`, `availability.csv`,
-`source_composition.csv`, `crosscheck_nevermar_f.csv`. `results/`: `results_edges.json`, `results_falsifiers.json`,
+`source_composition.csv`, `crosscheck_nevermar_f.csv`; one-page plain-words summary `TOP5_PLAIN.md`. `results/`: `results_edges.json`, `results_falsifiers.json`,
 `results_robust_extra.json`, `results_nolevel.json`, `results_change_test.json`, `results_block_perm.json`, run logs.
