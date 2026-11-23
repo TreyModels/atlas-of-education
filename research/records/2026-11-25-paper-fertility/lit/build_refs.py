@@ -101,7 +101,8 @@ for r in rows:
     if k in seen: continue
     seen.add(k); uniq.append(r)
 uniq.sort(key=lambda r: r["apa"].lower())
-json.dump(uniq, open(os.path.join(HERE, "refs_unified.json"), "w"), indent=1)
+json.dump(uniq, open(os.path.join(HERE, "refs_all.json"), "w"), indent=1)
+json.dump(uniq, open(os.path.join(HERE, "refs_final.json"), "w"), indent=1)
 with open(os.path.join(HERE, "refs.md"), "w") as f:
     f.write("# References (APA 7th; Crossref status per entry)\n\n")
     f.write("Generated from `refs_unified.json` (Crossref batches 1-4, DOI-verified, plus hand-cited classics). ")

@@ -1,0 +1,482 @@
+[
+ {
+  "key": "angristpischke2009",
+  "apa": "Angrist, J. D., & Pischke, J.-S. (2009). Mostly Harmless Econometrics. Princeton University Press. https://doi.org/10.1515/9781400829828",
+  "doi": "10.1515/9781400829828",
+  "status": "V (Crossref)",
+  "title": "Mostly Harmless Econometrics",
+  "authors": [
+   "Joshua D. Angrist",
+   "J\u00f6rn-Steffen Pischke"
+  ],
+  "year": 2009,
+  "journal": "",
+  "volume": null,
+  "issue": null,
+  "pages": null,
+  "publisher": "Princeton University Press"
+ },
+ {
+  "key": "bareinboim2013",
+  "apa": "Bareinboim, E., & Pearl, J. (2013). A General Algorithm for Deciding Transportability of Experimental Results. Journal of Causal Inference, 1(1), 107-134. https://doi.org/10.1515/jci-2012-0004",
+  "doi": "10.1515/jci-2012-0004",
+  "status": "V (Crossref)"
+ },
+ {
+  "key": "barrolee2013",
+  "apa": "Barro, R. J., & Lee, J. W. (2013). A new data set of educational attainment in the world, 1950\u20132010. Journal of Development Economics, 104, 184-198. https://doi.org/10.1016/j.jdeveco.2012.10.001",
+  "doi": "10.1016/j.jdeveco.2012.10.001",
+  "status": "V (Crossref)"
+ },
+ {
+  "key": "basu2002",
+  "apa": "Basu, A. M. (2002). Why does Education Lead to Lower Fertility? A Critical Review of Some of the Possibilities. World Development, 30(10), 1779-1790. https://doi.org/10.1016/s0305-750x(02)00072-4",
+  "doi": "10.1016/s0305-750x(02)00072-4",
+  "status": "V (Crossref)"
+ },
+ {
+  "key": "manual_1960",
+  "apa": "Becker, G. S. (1960). An economic analysis of fertility. In Demographic and economic change in developed countries (pp. 209\u2013231). Princeton University Press.",
+  "doi": "",
+  "status": "U (no DOI; hand-cited)"
+ },
+ {
+  "key": "beckerlewis1973",
+  "apa": "Becker, G. S., & Lewis, H. G. (1973). On the Interaction between the Quantity and Quality of Children. Journal of Political Economy, 81(2, Part 2), S279-S288. https://doi.org/10.1086/260166",
+  "doi": "10.1086/260166",
+  "status": "V (Crossref)"
+ },
+ {
+  "key": "beckerbarro1988",
+  "apa": "Becker, G., & Barro, R. (1986). A Reformulation of the Economic Theory of Fertility. National Bureau of Economic Research. https://doi.org/10.3386/w1793",
+  "doi": "10.3386/w1793",
+  "status": "V (Crossref)"
+ },
+ {
+  "key": "belljones2015",
+  "apa": "Bell, A., & Jones, K. (2014). Explaining Fixed Effects: Random Effects Modeling of Time-Series Cross-Sectional and Panel Data. Political Science Research and Methods, 3(1), 133-153. https://doi.org/10.1017/psrm.2014.7",
+  "doi": "10.1017/psrm.2014.7",
+  "status": "V (Crossref)"
+ },
+ {
+  "key": "boettiger2012",
+  "apa": "Boettiger, C., & Hastings, A. (2012). Early warning signals and the prosecutor's fallacy. Proceedings of the Royal Society B: Biological Sciences, 279(1748), 4734-4739. https://doi.org/10.1098/rspb.2012.2085",
+  "doi": "10.1098/rspb.2012.2085",
+  "status": "V (Crossref)",
+  "title": "Early warning signals and the prosecutor's fallacy",
+  "authors": [
+   "Carl Boettiger",
+   "Alan Hastings"
+  ],
+  "year": 2012,
+  "journal": "Proceedings of the Royal Society B: Biological Sciences",
+  "volume": "279",
+  "issue": "1748",
+  "pages": "4734-4739",
+  "publisher": "The Royal Society"
+ },
+ {
+  "key": "bongaarts1978",
+  "apa": "Bongaarts, J. (1978). A Framework for Analyzing the Proximate Determinants of Fertility. Population and Development Review, 4(1), 105. https://doi.org/10.2307/1972149",
+  "doi": "10.2307/1972149",
+  "status": "V (Crossref)"
+ },
+ {
+  "key": "bongaarts1998",
+  "apa": "Bongaarts, J., & Feeney, G. (1998). On the quantum and tempo of fertility. Population Council. https://doi.org/10.31899/pgy6.1010",
+  "doi": "10.31899/pgy6.1010",
+  "status": "V (Crossref)"
+ },
+ {
+  "key": "bongaarts1996",
+  "apa": "Bongaarts, J., & Watkins, S. C. (1996). Social Interactions and Contemporary Fertility Transitions. Population and Development Review, 22(4), 639. https://doi.org/10.2307/2137804",
+  "doi": "10.2307/2137804",
+  "status": "V (Crossref)"
+ },
+ {
+  "key": "breierova2004",
+  "apa": "Breierova, L., & Duflo, E. (2004). The Impact of Education on Fertility and Child Mortality: Do Fathers Really Matter Less Than Mothers?. National Bureau of Economic Research. https://doi.org/10.3386/w10513",
+  "doi": "10.3386/w10513",
+  "status": "V (Crossref)"
+ },
+ {
+  "key": "brock2001",
+  "apa": "Brock, W. A., & Durlauf, S. N. (2001). Growth Empirics and Reality. Washington, DC:  World Bank. https://doi.org/10.1596/17447",
+  "doi": "10.1596/17447",
+  "status": "V (Crossref)"
+ },
+ {
+  "key": "caldwell1976",
+  "apa": "Caldwell, J. C. (1976). Toward A Restatement of Demographic Transition Theory. Population and Development Review, 2(3/4), 321. https://doi.org/10.2307/1971615",
+  "doi": "10.2307/1971615",
+  "status": "V (Crossref)"
+ },
+ {
+  "key": "caldwell1980",
+  "apa": "Caldwell, J. C. (1980). Mass Education as a Determinant of the Timing of Fertility Decline. Population and Development Review, 6(2), 225. https://doi.org/10.2307/1972729",
+  "doi": "10.2307/1972729",
+  "status": "V (Crossref)"
+ },
+ {
+  "key": "chicoine2012",
+  "apa": "Chicoine, L. (2012). Education and Fertility: Evidence from a Policy Change in Kenya. SSRN Electronic Journal. https://doi.org/10.2139/ssrn.2157920",
+  "doi": "10.2139/ssrn.2157920",
+  "status": "V (Crossref)"
+ },
+ {
+  "key": "clelandrodriguez1988",
+  "apa": "Cleland, J., & Rodr\u00edguez, G. (1988). The Effect of Parental Education on Marital Fertility in Developing Countries. Population Studies, 42(3), 419-442. https://doi.org/10.1080/0032472031000143566",
+  "doi": "10.1080/0032472031000143566",
+  "status": "V (Crossref)"
+ },
+ {
+  "key": "cleland1987",
+  "apa": "Cleland, J., & Wilson, C. (1987). Demand Theories of the Fertility Transition: An Iconoclastic View. Population Studies, 41(1), 5-30. https://doi.org/10.1080/0032472031000142516",
+  "doi": "10.1080/0032472031000142516",
+  "status": "V (Crossref)"
+ },
+ {
+  "key": "coalewatkins1986",
+  "apa": "Coale, A. J. (1986). The Decline of Fertility in Europe. Princeton University Press. https://doi.org/10.1515/9781400886692",
+  "doi": "10.1515/9781400886692",
+  "status": "V (Crossref)",
+  "title": "The Decline of Fertility in Europe",
+  "authors": [
+   "Ansley Johnson Coale"
+  ],
+  "year": 1986,
+  "journal": "",
+  "volume": null,
+  "issue": null,
+  "pages": null,
+  "publisher": "Princeton University Press"
+ },
+ {
+  "key": "coall2010",
+  "apa": "Coall, D. A., & Hertwig, R. (2010). Grandparental investment: Past, present, and future. Behavioral and Brain Sciences, 33(1), 1-19. https://doi.org/10.1017/s0140525x09991105",
+  "doi": "10.1017/s0140525x09991105",
+  "status": "V (Crossref)"
+ },
+ {
+  "key": "dakos2012",
+  "apa": "Dakos, V., Carpenter, S. R., Brock, W. A., Ellison, A. M., Guttal, V., Ives, A. R., K\u00e9fi, S., Livina, V., Seekell, D. A., Nes, E. H. v., & Scheffer, M. (2012). Methods for Detecting Early Warnings of Critical Transitions in Time Series Illustrated Using Simulated Ecological Data. PLoS ONE, 7(7), e41010. https://doi.org/10.1371/journal.pone.0041010",
+  "doi": "10.1371/journal.pone.0041010",
+  "status": "V (Crossref)"
+ },
+ {
+  "key": "manual_1963",
+  "apa": "Davis, K. (1963). The theory of change and response in modern demographic history. Population Index, 29(4), 345\u2013366. https://doi.org/10.2307/2732014",
+  "doi": "10.2307/2732014",
+  "status": "V (Crossref)"
+ },
+ {
+  "key": "deaton2010",
+  "apa": "Deaton, A. (2010). Instruments, Randomization, and Learning about Development. Journal of Economic Literature, 48(2), 424-455. https://doi.org/10.1257/jel.48.2.424",
+  "doi": "10.1257/jel.48.2.424",
+  "status": "V (Crossref)"
+ },
+ {
+  "key": "ditlevsen2010",
+  "apa": "Ditlevsen, P. D., & Johnsen, S. J. (2010). Tipping points: Early warning and wishful thinking. Geophysical Research Letters, 37(19). https://doi.org/10.1029/2010gl044486",
+  "doi": "10.1029/2010gl044486",
+  "status": "V (Crossref)",
+  "title": "Tipping points: Early warning and wishful thinking",
+  "authors": [
+   "Peter D. Ditlevsen",
+   "Sigfus J. Johnsen"
+  ],
+  "year": 2010,
+  "journal": "Geophysical Research Letters",
+  "volume": "37",
+  "issue": "19",
+  "pages": null,
+  "publisher": "American Geophysical Union (AGU)"
+ },
+ {
+  "key": "doepke2004",
+  "apa": "Doepke, M. (2001). Accounting for Fertility Decline During the Transition to Growth. Elsevier BV. https://doi.org/10.2139/ssrn.279519",
+  "doi": "10.2139/ssrn.279519",
+  "status": "V (Crossref)"
+ },
+ {
+  "key": "doepke2005",
+  "apa": "Doepke, M. (2003). Child Mortality and Fertility Decline: Does the Barro-Becker\r\nModel Fit the Facts?. Elsevier BV. https://doi.org/10.2139/ssrn.350700",
+  "doi": "10.2139/ssrn.350700",
+  "status": "V (Crossref)"
+ },
+ {
+  "key": "duflo2001",
+  "apa": "Duflo, E. (2000). Schooling and Labor Market Consequences of School Construction in Indonesia: Evidence from an Unusual Policy Experiment. National Bureau of Economic Research. https://doi.org/10.3386/w7860",
+  "doi": "10.3386/w7860",
+  "status": "V (Crossref)"
+ },
+ {
+  "key": "duflo2012",
+  "apa": "Duflo, E. (2012). Women Empowerment and Economic Development. Journal of Economic Literature, 50(4), 1051-1079. https://doi.org/10.1257/jel.50.4.1051",
+  "doi": "10.1257/jel.50.4.1051",
+  "status": "V (Crossref)"
+ },
+ {
+  "key": "easterlin1975",
+  "apa": "Easterlin, R. A. (1975). An Economic Framework for Fertility Analysis. Studies in Family Planning, 6(3), 54. https://doi.org/10.2307/1964934",
+  "doi": "10.2307/1964934",
+  "status": "V (Crossref)",
+  "title": "An Economic Framework for Fertility Analysis",
+  "authors": [
+   "Richard A. Easterlin"
+  ],
+  "year": 1975,
+  "journal": "Studies in Family Planning",
+  "volume": "6",
+  "issue": "3",
+  "pages": "54",
+  "publisher": "JSTOR"
+ },
+ {
+  "key": "eberhardt2011",
+  "apa": "Eberhardt, M., & Teal, F. (2011). ECONOMETRICS FOR GRUMBLERS: A NEW LOOK AT THE LITERATURE ON CROSS-COUNTRY GROWTH EMPIRICS. Journal of Economic Surveys, 25(1), 109-155. https://doi.org/10.1111/j.1467-6419.2010.00624.x",
+  "doi": "10.1111/j.1467-6419.2010.00624.x",
+  "status": "V (Crossref)"
+ },
+ {
+  "key": "frejka2008",
+  "apa": "Frejka, T., & Sobotka, T. (2008). Overview Chapter 1: Fertility in Europe. Demographic Research, 19, 15-46. https://doi.org/10.4054/demres.2008.19.3",
+  "doi": "10.4054/demres.2008.19.3",
+  "status": "V (Crossref)",
+  "title": "Overview Chapter 1: Fertility in Europe",
+  "authors": [
+   "Tomas Frejka",
+   "Tom\u00e1\u0161 Sobotka"
+  ],
+  "year": 2008,
+  "journal": "Demographic Research",
+  "volume": "19",
+  "issue": null,
+  "pages": "15-46",
+  "publisher": "Max Planck Institute for Demographic Research"
+ },
+ {
+  "key": "galorweil2000",
+  "apa": "Galor, O., & Weil, D. (1998). Population, Technology, and Growth:  From the Malthusian Regime to the  Demographic Transition and Beyond. National Bureau of Economic Research. https://doi.org/10.3386/w6811",
+  "doi": "10.3386/w6811",
+  "status": "V (Crossref)"
+ },
+ {
+  "key": "gauthier2007",
+  "apa": "Gauthier, A. H. (2007). The impact of family policies on fertility in industrialized countries: a review of the literature. Population Research and Policy Review, 26(3), 323-346. https://doi.org/10.1007/s11113-007-9033-x",
+  "doi": "10.1007/s11113-007-9033-x",
+  "status": "V (Crossref)"
+ },
+ {
+  "key": "delgiudice2021",
+  "apa": "Giudice, M. D., & Gangestad, S. W. (2021). A Traveler\u2019s Guide to the Multiverse: Promises, Pitfalls, and a Framework for the Evaluation of Analytic Decisions. Advances in Methods and Practices in Psychological Science, 4(1). https://doi.org/10.1177/2515245920954925",
+  "doi": "10.1177/2515245920954925",
+  "status": "V (Crossref)"
+ },
+ {
+  "key": "guinnane2011",
+  "apa": "Guinnane, T. W. (2010). The Historical Fertility Transition: A Guide for Economists. Elsevier BV. https://doi.org/10.2139/ssrn.1692848",
+  "doi": "10.2139/ssrn.1692848",
+  "status": "V (Crossref)"
+ },
+ {
+  "key": "hanushek1992",
+  "apa": "Hanushek, E. A. (1992). The Trade-off between Child Quantity and Quality. Journal of Political Economy, 100(1), 84-117. https://doi.org/10.1086/261808",
+  "doi": "10.1086/261808",
+  "status": "V (Crossref)"
+ },
+ {
+  "key": "hastings2010",
+  "apa": "Hastings, A., & Wysham, D. B. (2010). Regime shifts in ecological systems can occur with no warning. Ecology Letters, 13(4), 464-472. https://doi.org/10.1111/j.1461-0248.2010.01439.x",
+  "doi": "10.1111/j.1461-0248.2010.01439.x",
+  "status": "V (Crossref)",
+  "title": "Regime shifts in ecological systems can occur with no warning",
+  "authors": [
+   "Alan Hastings",
+   "Derin B. Wysham"
+  ],
+  "year": 2010,
+  "journal": "Ecology Letters",
+  "volume": "13",
+  "issue": "4",
+  "pages": "464-472",
+  "publisher": "Wiley"
+ },
+ {
+  "key": "hausmantaylor1981",
+  "apa": "Hausman, J. A., & Taylor, W. E. (1981). Panel Data and Unobservable Individual Effects. Econometrica, 49(6), 1377. https://doi.org/10.2307/1911406",
+  "doi": "10.2307/1911406",
+  "status": "V (Crossref)"
+ },
+ {
+  "key": "kc2017",
+  "apa": "KC, S., & Lutz, W. (2017). The human core of the shared socioeconomic pathways: Population scenarios by age, sex and level of education for all countries to 2100. Global Environmental Change, 42, 181-192. https://doi.org/10.1016/j.gloenvcha.2014.06.004",
+  "doi": "10.1016/j.gloenvcha.2014.06.004",
+  "status": "V (Crossref)"
+ },
+ {
+  "key": "koytcheva2008",
+  "apa": "Koytcheva, E., & Philipov, D. (2008). Bulgaria: Ethnic differentials in rapidly declining fertility. Demographic Research, 19, 361-402. https://doi.org/10.4054/demres.2008.19.13",
+  "doi": "10.4054/demres.2008.19.13",
+  "status": "V (Crossref)",
+  "title": "Bulgaria: Ethnic differentials in rapidly declining fertility",
+  "authors": [
+   "Elena Koytcheva",
+   "Dimiter Philipov"
+  ],
+  "year": 2008,
+  "journal": "Demographic Research",
+  "volume": "19",
+  "issue": null,
+  "pages": "361-402",
+  "publisher": "Max Planck Institute for Demographic Research"
+ },
+ {
+  "key": "kravdal2002",
+  "apa": "Kravdal, O. (2002). Education and Fertility in Sub-Saharan Africa: Individual and Community Effects. Demography, 39(2), 233. https://doi.org/10.2307/3088337",
+  "doi": "10.2307/3088337",
+  "status": "V (Crossref)"
+ },
+ {
+  "key": "lesthaeghe1983",
+  "apa": "Lesthaeghe, R. (1983). A Century of Demographic and Cultural Change in Western Europe: An Exploration of Underlying Dimensions. Population and Development Review, 9(3), 411. https://doi.org/10.2307/1973316",
+  "doi": "10.2307/1973316",
+  "status": "V (Crossref)"
+ },
+ {
+  "key": "manual_1992",
+  "apa": "Levine, R., & Renelt, D. (1992). A sensitivity analysis of cross-country growth regressions. American Economic Review, 82(4), 942\u2013963.",
+  "doi": "",
+  "status": "U (no DOI; hand-cited)"
+ },
+ {
+  "key": "lutz2011",
+  "apa": "Lutz, W., & KC, S. (2011). Global Human Capital: Integrating Education and Population. Science, 333(6042), 587-592. https://doi.org/10.1126/science.1206964",
+  "doi": "10.1126/science.1206964",
+  "status": "V (Crossref)"
+ },
+ {
+  "key": "martinjuarez1995",
+  "apa": "Martin, T. C., & Juarez, F. (1995). The Impact of Women's Education on Fertility In Latin America: Searching for Explanations. International Family Planning Perspectives, 21(2), 52. https://doi.org/10.2307/2133523",
+  "doi": "10.2307/2133523",
+  "status": "V (Crossref)"
+ },
+ {
+  "key": "mincer1958",
+  "apa": "Mincer, J. (1958). Investment in Human Capital and Personal Income Distribution. Journal of Political Economy, 66(4), 281-302. https://doi.org/10.1086/258055",
+  "doi": "10.1086/258055",
+  "status": "V (Crossref)"
+ },
+ {
+  "key": "murtin2013",
+  "apa": "Murtin, F. (2013). Long-Term Determinants of the Demographic Transition, 1870\u20132000. Review of Economics and Statistics, 95(2), 617-631. https://doi.org/10.1162/rest_a_00302",
+  "doi": "10.1162/rest_a_00302",
+  "status": "V (Crossref)"
+ },
+ {
+  "key": "nickell1981",
+  "apa": "Nickell, S. (1981). Biases in Dynamic Models with Fixed Effects. Econometrica, 49(6), 1417. https://doi.org/10.2307/1911408",
+  "doi": "10.2307/1911408",
+  "status": "V (Crossref)"
+ },
+ {
+  "key": "manual_1945",
+  "apa": "Notestein, F. W. (1945). Population \u2014 the long view. In T. W. Schultz (Ed.), Food for the world (pp. 36\u201357). University of Chicago Press.",
+  "doi": "",
+  "status": "U (no DOI; hand-cited)"
+ },
+ {
+  "key": "osili2008",
+  "apa": "Osili, U. O., & Long, B. T. (2007). Does Female Schooling Reduce Fertility? Evidence from Nigeria. National Bureau of Economic Research. https://doi.org/10.3386/w13070",
+  "doi": "10.3386/w13070",
+  "status": "V (Crossref)"
+ },
+ {
+  "key": "pearl2011",
+  "apa": "Pearl, J., & Bareinboim, E. (2011). Transportability of Causal and Statistical Relations: A Formal Approach. 2011 IEEE 11th International Conference on Data Mining Workshops, 540-547. https://doi.org/10.1109/icdmw.2011.169",
+  "doi": "10.1109/icdmw.2011.169",
+  "status": "V (Crossref)"
+ },
+ {
+  "key": "psach2004",
+  "apa": "Psacharopoulos, G., & *, H. A. P. (2004). Returns to investment in education: a further update. Education Economics, 12(2), 111-134. https://doi.org/10.1080/0964529042000239140",
+  "doi": "10.1080/0964529042000239140",
+  "status": "V (Crossref)"
+ },
+ {
+  "key": "robinson1950",
+  "apa": "Robinson, W. S. (1950). Ecological Correlations and the Behavior of Individuals. American Sociological Review, 15(3), 351. https://doi.org/10.2307/2087176",
+  "doi": "10.2307/2087176",
+  "status": "V (Crossref)"
+ },
+ {
+  "key": "roth2022",
+  "apa": "Roth, J. (2022). Pretest with Caution: Event-Study Estimates after Testing for Parallel Trends. American Economic Review: Insights, 4(3), 305-322. https://doi.org/10.1257/aeri.20210236",
+  "doi": "10.1257/aeri.20210236",
+  "status": "V (Crossref)"
+ },
+ {
+  "key": "manual_2004",
+  "apa": "Rutstein, S. O., & Johnson, K. (2004). The DHS wealth index (DHS Comparative Reports No. 6). ORC Macro.",
+  "doi": "",
+  "status": "U (no DOI; hand-cited)"
+ },
+ {
+  "key": "sala1997",
+  "apa": "Sala-i-Martin, X. (1997). I Just Ran Four Million Regressions. National Bureau of Economic Research. https://doi.org/10.3386/w6252",
+  "doi": "10.3386/w6252",
+  "status": "V (Crossref)"
+ },
+ {
+  "key": "manual_1961",
+  "apa": "Schultz, T. W. (1961). Investment in human capital. American Economic Review, 51(1), 1\u201317.",
+  "doi": "",
+  "status": "U (no DOI; hand-cited)"
+ },
+ {
+  "key": "silberzahn2018",
+  "apa": "Silberzahn, R., Uhlmann, E. L., Martin, D. P., Anselmi, P., Aust, F., Awtrey, E., Bahn\u00edk, \u0160., Bai, F., Bannard, C., Bonnier, E., Carlsson, R., Cheung, F., Christensen, G., Clay, R., Craig, M. A., Rosa, A. D., Dam, L., Evans, M. H., Cervantes, I. F., Fong, N., Gamez-Djokic, M., Glenz, A., Gordon-McKeon, S., Heaton, T. J., Hederos, K., Heene, M., Mohr, A. J. H., H\u00f6gden, F., Hui, K., Johannesson, M., Kalodimos, J., Kaszubowski, E., Kennedy, D. M., Lei, R., Lindsay, T. A., Liverani, S., Madan, C. R., Molden, D., Molleman, E., Morey, R. D., Mulder, L. B., Nijstad, B. R., Pope, N. G., Pope, B., Prenoveau, J. M., Rink, F., Robusto, E., Roderique, H., Sandberg, A., Schl\u00fcter, E., Sch\u00f6nbrodt, F. D., Sherman, M. F., Sommer, S. A., Sotak, K., Spain, S., Sp\u00f6rlein, C., Stafford, T., Stefanutti, L., Tauber, S., Ullrich, J., Vianello, M., Wagenmakers, E.-J., Witkowiak, M., Yoon, S., & Nosek, B. A. (2018). Many Analysts, One Data Set: Making Transparent How Variations in Analytic Choices Affect Results. Advances in Methods and Practices in Psychological Science, 1(3), 337-356. https://doi.org/10.1177/2515245917747646",
+  "doi": "10.1177/2515245917747646",
+  "status": "V (Crossref)"
+ },
+ {
+  "key": "skirbekk2008",
+  "apa": "Skirbekk, V. (2008). Fertility trends by social status. Demographic Research, 18, 145-180. https://doi.org/10.4054/demres.2008.18.5",
+  "doi": "10.4054/demres.2008.18.5",
+  "status": "V (Crossref)"
+ },
+ {
+  "key": "thevenongauthier2011",
+  "apa": "Th\u00e9venon, O., & Gauthier, A. H. (2011). Family policies in developed countries: a \u2018fertility-booster\u2019 with side-effects. Community, Work &amp; Family, 14(2), 197-216. https://doi.org/10.1080/13668803.2011.571400",
+  "doi": "10.1080/13668803.2011.571400",
+  "status": "V (Crossref)"
+ },
+ {
+  "key": "manual_1974",
+  "apa": "Trow, M. (1974). Problems in the transition from elite to mass higher education. Carnegie Commission on Higher Education.",
+  "doi": "",
+  "status": "U (no DOI; hand-cited)"
+ },
+ {
+  "key": "vivalt2020",
+  "apa": "Vivalt, E. (2020). How Much Can We Generalize From Impact Evaluations?. Journal of the European Economic Association, 18(6), 3045-3089. https://doi.org/10.1093/jeea/jvaa019",
+  "doi": "10.1093/jeea/jvaa019",
+  "status": "V (Crossref)"
+ },
+ {
+  "key": "zakharov2008",
+  "apa": "Zakharov, S. (2008). Russian Federation: From the first to second demographic transition. Demographic Research, 19, 907-972. https://doi.org/10.4054/demres.2008.19.24",
+  "doi": "10.4054/demres.2008.19.24",
+  "status": "V (Crossref)",
+  "title": "Russian Federation: From the first to second demographic transition",
+  "authors": [
+   "Sergei Zakharov"
+  ],
+  "year": 2008,
+  "journal": "Demographic Research",
+  "volume": "19",
+  "issue": null,
+  "pages": "907-972",
+  "publisher": "Max Planck Institute for Demographic Research"
+ }
+]

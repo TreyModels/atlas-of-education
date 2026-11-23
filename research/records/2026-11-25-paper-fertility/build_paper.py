@@ -24,14 +24,14 @@ d = d.replace("# Section 4. The survey-level gradient: what DHS says about schoo
 d = re.sub(r"^## 4\.(\d)", r"### 7.1.\1", d, flags=re.M)
 parts.append(d)
 c = read("sections/section3_care_nulls.md")
+c = re.sub(r"^## (\d)\.", r"### 7.2.\1", c, flags=re.M)
 c = c.replace("# Paper F section (for un-data): care work, policy bounds, and tipping points",
               "## 7.2 Care work, policy bounds, and tipping points: three falsifiable mechanisms")
-c = re.sub(r"^## (\d)\.", r"### 7.2.\1", c, flags=re.M)
 parts.append(c)
 t = read("sections/section4_transition.md")
+t = re.sub(r"^## (\d)\.", r"### 7.3.\1", t, flags=re.M)
 t = t.replace("# Paper F (Fertility) — Section: the transition engine, the individuation (dose) model, and the tolerance ladder",
               "## 7.3 The transition engine, the individuation model, and the tolerance ladder")
-t = re.sub(r"^## (\d)\.", r"### 7.3.\1", t, flags=re.M)
 parts.append(t)
 h = read("sections/section5_threshold.md")
 h = h.replace("# Section 5. Where in the schooling distribution the gradient lives: the threshold shape and the massification margin",

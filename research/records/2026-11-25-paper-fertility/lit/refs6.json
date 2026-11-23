@@ -1,0 +1,166 @@
+{
+ "angristpischke2009": {
+  "doi": "10.1515/9781400829828",
+  "title": "Mostly Harmless Econometrics",
+  "authors": [
+   "Joshua D. Angrist",
+   "J\u00f6rn-Steffen Pischke"
+  ],
+  "year": 2009,
+  "journal": "",
+  "volume": null,
+  "issue": null,
+  "pages": null,
+  "publisher": "Princeton University Press",
+  "type": "edited-book",
+  "url": "https://doi.org/10.1515/9781400829828",
+  "status": "verified"
+ },
+ "coalewatkins1986": {
+  "doi": "10.1515/9781400886692",
+  "title": "The Decline of Fertility in Europe",
+  "authors": [
+   "Ansley Johnson Coale"
+  ],
+  "year": 2017,
+  "journal": "",
+  "volume": null,
+  "issue": null,
+  "pages": null,
+  "publisher": "Princeton University Press",
+  "type": "edited-book",
+  "url": "https://doi.org/10.1515/9781400886692",
+  "status": "verified"
+ },
+ "easterlin1975": {
+  "doi": "10.2307/1964934",
+  "title": "An Economic Framework for Fertility Analysis",
+  "authors": [
+   "Richard A. Easterlin"
+  ],
+  "year": 1975,
+  "journal": "Studies in Family Planning",
+  "volume": "6",
+  "issue": "3",
+  "pages": "54",
+  "publisher": "JSTOR",
+  "type": "journal-article",
+  "url": "https://doi.org/10.2307/1964934",
+  "status": "verified"
+ },
+ "frejka2008": {
+  "doi": "10.4054/demres.2008.19.3",
+  "title": "Overview Chapter 1: Fertility in Europe",
+  "authors": [
+   "Tomas Frejka",
+   "Tom\u00e1\u0161 Sobotka"
+  ],
+  "year": 2008,
+  "journal": "Demographic Research",
+  "volume": "19",
+  "issue": null,
+  "pages": "15-46",
+  "publisher": "Max Planck Institute for Demographic Research",
+  "type": "journal-article",
+  "url": "https://doi.org/10.4054/demres.2008.19.3",
+  "status": "verified"
+ },
+ "koytcheva2008": {
+  "doi": "10.4054/demres.2008.19.13",
+  "title": "Bulgaria: Ethnic differentials in rapidly declining fertility",
+  "authors": [
+   "Elena Koytcheva",
+   "Dimiter Philipov"
+  ],
+  "year": 2008,
+  "journal": "Demographic Research",
+  "volume": "19",
+  "issue": null,
+  "pages": "361-402",
+  "publisher": "Max Planck Institute for Demographic Research",
+  "type": "journal-article",
+  "url": "https://doi.org/10.4054/demres.2008.19.13",
+  "status": "verified"
+ },
+ "zakharov2008": {
+  "doi": "10.4054/demres.2008.19.24",
+  "title": "Russian Federation: From the first to second demographic transition",
+  "authors": [
+   "Sergei Zakharov"
+  ],
+  "year": 2008,
+  "journal": "Demographic Research",
+  "volume": "19",
+  "issue": null,
+  "pages": "907-972",
+  "publisher": "Max Planck Institute for Demographic Research",
+  "type": "journal-article",
+  "url": "https://doi.org/10.4054/demres.2008.19.24",
+  "status": "verified"
+ },
+ "boettiger2012": {
+  "doi": "10.1098/rspb.2012.2085",
+  "title": "Early warning signals and the prosecutor's fallacy",
+  "authors": [
+   "Carl Boettiger",
+   "Alan Hastings"
+  ],
+  "year": 2012,
+  "journal": "Proceedings of the Royal Society B: Biological Sciences",
+  "volume": "279",
+  "issue": "1748",
+  "pages": "4734-4739",
+  "publisher": "The Royal Society",
+  "type": "journal-article",
+  "url": "https://doi.org/10.1098/rspb.2012.2085",
+  "status": "verified"
+ },
+ "ditlevsen2010": {
+  "doi": "10.1029/2010gl044486",
+  "title": "Tipping points: Early warning and wishful thinking",
+  "authors": [
+   "Peter D. Ditlevsen",
+   "Sigfus J. Johnsen"
+  ],
+  "year": 2010,
+  "journal": "Geophysical Research Letters",
+  "volume": "37",
+  "issue": "19",
+  "pages": null,
+  "publisher": "American Geophysical Union (AGU)",
+  "type": "journal-article",
+  "url": "https://doi.org/10.1029/2010gl044486",
+  "status": "verified"
+ },
+ "hastings2010": {
+  "doi": "10.1111/j.1461-0248.2010.01439.x",
+  "title": "Regime shifts in ecological systems can occur with no warning",
+  "authors": [
+   "Alan Hastings",
+   "Derin B. Wysham"
+  ],
+  "year": 2010,
+  "journal": "Ecology Letters",
+  "volume": "13",
+  "issue": "4",
+  "pages": "464-472",
+  "publisher": "Wiley",
+  "type": "journal-article",
+  "url": "https://doi.org/10.1111/j.1461-0248.2010.01439.x",
+  "status": "verified"
+ },
+ "kefi2013": {
+  "doi": "10.1098/rsos.231767/v1/review1",
+  "title": "Review for \"Optimal sampling of spatial patterns improves deep learning-based early warning signals of critical transitions\"",
+  "authors": [],
+  "year": 2023,
+  "journal": "",
+  "volume": null,
+  "issue": null,
+  "pages": null,
+  "publisher": "The Royal Society",
+  "type": "peer-review",
+  "url": "https://doi.org/10.1098/rsos.231767/v1/review1",
+  "status": "verified"
+ }
+}
