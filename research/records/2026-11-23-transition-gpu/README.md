@@ -67,10 +67,9 @@ through income and schooling alone. This also means the earlier A-versus-B tie i
 reproduced here in levels: over the full arc the development-only engine falls further, closer to the observed
 trajectories (figure).
 
-**Figure.** `figures/transition_figure.png`: simulated period total fertility, 1950-2050, for the eight
-countries, solid = historical child mortality and dashed = child mortality frozen at its pre-antibiotic level,
-with observed total fertility as black dots (left: individuation scenario, right: development-only). The
-dashed and solid lines lie on top of each other, which is the counterfactual result in one picture.
+**Figure** (`figures/transition_figure.png`): simulated period fertility for the eight countries, solid =
+historical child mortality, dashed = frozen at its pre-antibiotic level, black dots = observed. The two line
+styles lie on top of each other, which is the counterfactual result in one picture.
 
 ### The pre-antibiotic arc: only partly reachable
 Run on cohorts 1890-1955 (reproductive years 1905-2004), the model **does not generate a transition at all**:
