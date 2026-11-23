@@ -1,0 +1,2 @@
+Crossref verification run 24 Nov 2026, api.crossref.org, query.bibliographic, title-similarity + year filter.
+MATCH 50, WEAK 2, NO 5, total 57
