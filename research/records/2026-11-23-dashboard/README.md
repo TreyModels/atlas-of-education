@@ -106,7 +106,11 @@ Job numbers follow the project brief; the shared task board uses task ids (given
   construction (deterministic priority marriage market instead of a serial random permutation; measured at -0.21
   years of marriage age on average over 200 seeds, disclosed, not corrected). Running the identical A-versus-B
   protocol on it gives A 25.5 against B 21.7, difference +3.8 (95% -2.6 to +12.0), A better in 3 of 6 - the same
-  verdict as the exact engine. So the reversal is not an artefact of either engine.
+  verdict as the exact engine. **One scope limit:** in that comparison the GPU engine fitted the parameters but the
+  held-out predictions were made by the published CPU model in both arms, so it shows that the **fitted answer does
+  not depend on which engine did the fitting** - ruling out the worry that the GPU market semantics drove the
+  result - **not** that prediction on the GPU engine itself was tested. The GPU engine's own predictions are
+  exercised in job 13.
 - **Recovery: scenario choice recovers, parameter strengths do not.** Synthetic data generated from known A
   values are predicted better by the A posterior (15.4 against 17.6, difference -2.2, 95% -6.5 to +1.7); synthetic
   data from known B values are predicted clearly better by the B posterior (12.1 against 18.3, +6.2, +4.5 to +7.9).
@@ -176,13 +180,17 @@ dose record must state which batch size the GPU A-vs-B comparison used.
 - **The mortality channel is calibrated to our own estimate, not assumed.** Desired births rise by 0.0067 per point
   of child mortality per 100 (the country-level estimate from job 8), so the whole 40-point mortality fall accounts
   for about 0.25 births - not the ad-hoc ~1.6x multiplier first proposed.
-- **Result: the collapse survives without the mortality decline.** Historical arm: fertility falls 1.357 births per
-  woman (means 4.96 to 3.61). Frozen-mortality arm: falls 1.312 (5.01 to 3.71). **Freezing the mortality decline
-  removes only about 3% of the fall** (country range -8.2% to +1.8%), and raises the *level* by only about 0.05-0.06
+- **Result: the collapse survives without the mortality decline.** Historical arm: fertility falls 1.36 births per
+  woman (means 4.96 to 3.60). Frozen-mortality arm: falls 1.31 (5.01 to 3.70). **Freezing the mortality decline
+  removes only 3.2% of the fall** (country range -1.8% to +8.2%), and raises the *level* by only about 0.05-0.06
   births. (These are the committed means; earlier drafts of the worker's report quoted levels about 0.06 higher -
   the changes are identical and the dashboard uses the committed numbers.) Falsifiers: plus or minus
   50% on the calibrated coefficient moves the answer by 1-5%; a 4.5x power check reaches only 10%; two population
   sizes agree. So no plausible calibration of that channel flips the verdict.
+- **The verdict is not scenario-specific.** Running the same frozen-mortality counterfactual on the development-only
+  scenario removes 2.0% of *its* collapse (from 5.2 to 2.1 births), against 3.2% under individuation. So whichever
+  scenario is fitted, freezing mortality does not stop the fall - the mortality channel is small in both.
+- A figure with the counterfactual lines overlaid on observed fertility is committed on the branch.
 - **Read it as a decomposition of this model, not a causal finding.** The published model was calibrated to reproduce
   the fertility decline through its own schooling/income/development channels; a small calibrated mortality term
   cannot overturn that structure. So "schooling-led" here means "in this model, the schooling and income channels
