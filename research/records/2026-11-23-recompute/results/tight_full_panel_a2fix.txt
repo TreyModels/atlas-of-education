@@ -1,0 +1,98 @@
+TIGHT TESTS (7905s)
+
+A. WITHIN-COUNTRY (country FE, split-panel jackknife, cluster bootstrap) lead-lag among focus variables:
+   79 of 380 ordered pairs show a within-country lead with a significant asymmetry.
+   tax->ter                     b=+3.31 (CI +0.29,+6.61)  diff CI (+0.36,+6.66)  pooled: not a pooled one-way lead
+   electricity->poverty         b=-1.93 (CI -2.34,-1.44)  diff CI (-2.38,-1.37)  pooled: not a pooled one-way lead
+   wage_emp->ter                b=+1.81 (CI +0.43,+3.25)  diff CI (+0.51,+3.50)  pooled: not a pooled one-way lead
+   young_share->fertility       b=-1.75 (CI -2.05,-1.45)  diff CI (-3.46,-2.57)  pooled: not a pooled one-way lead
+   wage_emp->urban              b=+1.73 (CI +0.63,+2.77)  diff CI (+0.03,+2.43)  pooled: not a pooled one-way lead
+   gdppc_log->prm_ner           b=-1.63 (CI -2.40,-0.94)  diff CI (-2.59,-1.09)  pooled: not a pooled one-way lead
+   urban->lsc                   b=+1.62 (CI +0.81,+2.47)  diff CI (+0.65,+2.32)  pooled: not a pooled one-way lead
+   wage_emp->eci_pct            b=+1.56 (CI +0.53,+2.41)  diff CI (+0.17,+2.37)  pooled: not a pooled one-way lead
+   young_share->u5mr            b=-1.44 (CI -1.74,-1.11)  diff CI (-2.31,-1.64)  pooled: not a pooled one-way lead
+   urban->poverty               b=-1.40 (CI -2.48,-0.62)  diff CI (-2.67,-0.37)  pooled: not a pooled one-way lead
+   young_share->ter             b=-1.30 (CI -1.74,-0.85)  diff CI (-2.34,-1.27)  pooled: not a pooled one-way lead
+   fertility->young_share       b=+1.28 (CI +0.99,+1.58)  diff CI (+2.59,+3.51)  pooled: not a pooled one-way lead
+   electricity->sec             b=+1.26 (CI +0.89,+1.66)  diff CI (+0.50,+1.35)  pooled: not a pooled one-way lead
+   u5mr->prm_ner                b=-1.26 (CI -1.82,-0.71)  diff CI (-2.06,-0.75)  pooled: not a pooled one-way lead
+   electricity->lsc             b=+1.21 (CI +0.92,+1.65)  diff CI (+0.71,+1.51)  pooled: not a pooled one-way lead
+   young_share->prm_ner         b=+1.20 (CI +0.64,+1.76)  diff CI (+0.91,+2.08)  pooled: not a pooled one-way lead
+   u5mr->prm_cmp                b=-1.19 (CI -1.47,-0.91)  diff CI (-2.24,-1.36)  pooled: not a pooled one-way lead
+   emp_agri->eci_pct            b=-1.16 (CI -1.72,-0.62)  diff CI (-2.06,-0.73)  pooled: not a pooled one-way lead
+   lsc->ter                     b=+1.12 (CI +0.46,+1.79)  diff CI (+0.86,+2.05)  pooled: not a pooled one-way lead
+   sec->prm_ner                 b=-1.10 (CI -1.68,-0.60)  diff CI (-2.17,-1.07)  pooled: not a pooled one-way lead
+   fertility->poverty           b=+1.09 (CI +0.66,+1.75)  diff CI (+0.46,+1.95)  pooled: not a pooled one-way lead
+   gdppc_log->u5mr              b=+1.07 (CI +0.41,+1.71)  diff CI (+0.68,+2.04)  pooled: not a pooled one-way lead
+   u5mr->fertility              b=+1.05 (CI +0.82,+1.25)  diff CI (+1.12,+1.98)  pooled: not a pooled one-way lead
+   young_share->prm_cmp         b=+1.02 (CI +0.68,+1.36)  diff CI (+1.13,+1.87)  pooled: not a pooled one-way lead
+   u5mr->poverty                b=+1.02 (CI +0.56,+1.47)  diff CI (+0.38,+1.46)  pooled: not a pooled one-way lead
+   sec->u5mr                    b=+0.98 (CI +0.72,+1.28)  diff CI (+1.24,+2.07)  pooled: not a pooled one-way lead
+   electricity->prm_cmp         b=+0.96 (CI +0.64,+1.33)  diff CI (+0.16,+0.99)  pooled: not a pooled one-way lead
+   prm_ner->prm_cmp             b=+0.92 (CI +0.60,+1.31)  diff CI (+1.18,+2.50)  pooled: not a pooled one-way lead
+   wage_emp->gdppc_log          b=-0.90 (CI -1.47,-0.18)  diff CI (-1.65,-0.03)  pooled: not a pooled one-way lead
+   ter->prm_cmp                 b=-0.90 (CI -1.25,-0.62)  diff CI (-1.57,-0.73)  pooled: not a pooled one-way lead
+   electricity->young_share     b=-0.89 (CI -1.19,-0.63)  diff CI (-1.44,-0.62)  pooled: not a pooled one-way lead
+   lsc->u5mr                    b=+0.89 (CI +0.58,+1.15)  diff CI (+0.81,+1.58)  pooled: not a pooled one-way lead
+   prm_cmp->sec                 b=+0.88 (CI +0.60,+1.15)  diff CI (+1.21,+2.18)  pooled: not a pooled one-way lead
+   prm_cmp->prm_ner             b=-0.87 (CI -1.24,-0.44)  diff CI (-2.37,-1.18)  pooled: not a pooled one-way lead
+   fertility->lsc               b=-0.83 (CI -1.42,-0.28)  diff CI (-1.50,-0.23)  pooled: not a pooled one-way lead
+   gdppc_log->eci_pct           b=+0.81 (CI +0.31,+1.31)  diff CI (+0.42,+1.56)  pooled: not a pooled one-way lead
+   sec->prm_cmp                 b=-0.81 (CI -1.16,-0.43)  diff CI (-2.17,-1.21)  pooled: not a pooled one-way lead
+   ter->prm_ner                 b=-0.80 (CI -1.20,-0.46)  diff CI (-1.25,-0.25)  pooled: not a pooled one-way lead
+   urban->sec                   b=+0.79 (CI +0.09,+1.61)  diff CI (+0.31,+1.85)  pooled: not a pooled one-way lead
+   lsc->prm_ner                 b=-0.79 (CI -1.25,-0.34)  diff CI (-1.75,-0.65)  pooled: not a pooled one-way lead
+   eci_pct->prm_ner             b=-0.71 (CI -1.07,-0.34)  diff CI (-1.03,-0.09)  pooled: not a pooled one-way lead
+   prm_cmp->lsc                 b=+0.70 (CI +0.29,+1.19)  diff CI (+0.74,+1.86)  pooled: not a pooled one-way lead
+   u5mr->sec                    b=-0.66 (CI -0.97,-0.32)  diff CI (-2.04,-1.24)  pooled: not a pooled one-way lead
+   ter->fertility               b=+0.66 (CI +0.44,+0.89)  diff CI (+0.34,+1.36)  pooled: not a pooled one-way lead
+   fertility->emp_agri          b=+0.66 (CI +0.39,+0.95)  diff CI (+0.08,+0.95)  pooled: not a pooled one-way lead
+   prm_cmp->u5mr                b=+0.62 (CI +0.34,+0.92)  diff CI (+1.33,+2.25)  pooled: not a pooled one-way lead
+   prm_cmp->fertility           b=-0.61 (CI -0.86,-0.39)  diff CI (-1.19,-0.03)  pooled: not a pooled one-way lead
+   electricity->wage_emp        b=+0.60 (CI +0.25,+0.98)  diff CI (+0.01,+1.11)  pooled: not a pooled one-way lead
+   sec->gdppc_log               b=-0.58 (CI -0.90,-0.30)  diff CI (-1.50,-0.19)  pooled: not a pooled one-way lead
+   sec->young_share             b=-0.58 (CI -0.95,-0.22)  diff CI (-1.54,-0.34)  pooled: not a pooled one-way lead
+   u5mr->young_share            b=+0.58 (CI +0.34,+0.77)  diff CI (+1.62,+2.30)  pooled: not a pooled one-way lead
+   lsc->young_share             b=-0.57 (CI -0.82,-0.28)  diff CI (-1.18,-0.21)  pooled: not a pooled one-way lead
+   fertility->u5mr              b=-0.56 (CI -0.96,-0.14)  diff CI (-2.07,-1.11)  pooled: not a pooled one-way lead
+   prm_ner->sec                 b=+0.55 (CI +0.33,+0.81)  diff CI (+1.11,+2.22)  pooled: not a pooled one-way lead
+   lsc->prm_cmp                 b=-0.55 (CI -0.87,-0.25)  diff CI (-1.90,-0.68)  pooled: not a pooled one-way lead
+   prm_ner->fertility           b=-0.54 (CI -0.78,-0.35)  diff CI (-1.37,-0.35)  pooled: not a pooled one-way lead
+   young_share->urban           b=+0.50 (CI +0.21,+0.80)  diff CI (+0.39,+1.32)  pooled: not a pooled one-way lead
+   young_share->eci_pct         b=-0.50 (CI -0.86,-0.07)  diff CI (-1.44,-0.20)  pooled: not a pooled one-way lead
+   ter->young_share             b=+0.50 (CI +0.22,+0.74)  diff CI (+1.22,+2.39)  pooled: not a pooled one-way lead
+   prm_cmp->young_share         b=-0.48 (CI -0.73,-0.26)  diff CI (-1.86,-1.08)  pooled: not a pooled one-way lead
+   u5mr->emp_agri               b=+0.48 (CI +0.24,+0.77)  diff CI (+0.31,+1.12)  pooled: not a pooled one-way lead
+   gdppc_log->gov_cons          b=+0.48 (CI +0.06,+1.13)  diff CI (+0.10,+1.20)  pooled: not a pooled one-way lead
+   ter->sec                     b=-0.45 (CI -0.78,-0.13)  diff CI (-1.29,-0.29)  pooled: not a pooled one-way lead
+   young_share->edu_xpd_gdp     b=+0.45 (CI +0.01,+0.87)  diff CI (+0.07,+0.95)  pooled: not a pooled one-way lead
+   ter->gov_cons                b=+0.43 (CI +0.18,+0.65)  diff CI (+0.10,+0.76)  pooled: not a pooled one-way lead
+   ter->gdppc_log               b=-0.41 (CI -0.69,-0.11)  diff CI (-1.18,-0.00)  pooled: not a pooled one-way lead
+   prm_ner->lsc                 b=+0.41 (CI +0.08,+0.82)  diff CI (+0.71,+1.73)  pooled: not a pooled one-way lead
+   eci_pct->fertility           b=+0.36 (CI +0.02,+0.74)  diff CI (+0.07,+1.03)  pooled: not a pooled one-way lead
+   ter->urban                   b=-0.35 (CI -0.60,-0.04)  diff CI (-1.32,-0.16)  pooled: not a pooled one-way lead
+   prm_ner->young_share         b=-0.35 (CI -0.52,-0.15)  diff CI (-2.08,-0.95)  pooled: not a pooled one-way lead
+   tax->unemp_adv_edu           b=+0.35 (CI +0.02,+0.76)  diff CI (+0.02,+0.79)  pooled: not a pooled one-way lead
+   u5mr->gdppc_log              b=-0.31 (CI -0.44,-0.17)  diff CI (-2.03,-0.71)  pooled: not a pooled one-way lead
+   u5mr->urban                  b=-0.28 (CI -0.45,-0.07)  diff CI (-1.01,-0.07)  pooled: not a pooled one-way lead
+   fertility->gov_cons          b=+0.27 (CI +0.01,+0.60)  diff CI (+0.03,+0.64)  pooled: not a pooled one-way lead
+   eci_pct->electricity         b=-0.25 (CI -0.46,-0.04)  diff CI (-1.10,-0.10)  pooled: not a pooled one-way lead
+   prm_ner->gdppc_log           b=+0.22 (CI +0.03,+0.44)  diff CI (+1.11,+2.63)  pooled: not a pooled one-way lead
+   prm_ner->wage_emp            b=+0.16 (CI +0.02,+0.29)  diff CI (+0.17,+1.98)  pooled: not a pooled one-way lead
+   edu_xpd_gdp->u5mr            b=+0.16 (CI +0.02,+0.31)  diff CI (+0.02,+0.51)  pooled: not a pooled one-way lead
+   ter->tax                     b=-0.08 (CI -0.12,-0.01)  diff CI (-6.57,-0.34)  pooled: not a pooled one-way lead
+   pooled one-way leads among focus vars that do NOT survive within-country: none
+
+B. SPLIT STABILITY (share of 200 random country splits with same-sign p<0.05 in both halves; base model):
+   ter: prm_ner(100%), prm_cmp(100%), sec_ner(100%), ptr_prm(100%), repeat_prm(100%), agri_va(100%), poverty(100%), urban(100%), fertility(100%), young_share(100%), life_exp(100%), u5mr(100%)
+   sec: prm_ner(100%), gpi_sec(100%), gdppc_log(100%), fertility(100%), life_exp(100%), u5mr(100%), agri_va(100%), prm_cmp(99%), ptr_prm(98%), gpi_ter(96%), urban(90%), lit_adult(88%)
+   lsc: gpi_sec(100%), life_exp(100%), u5mr(100%), prm_cmp(100%), fertility(99%), ptr_prm(98%), prm_ner(98%), repeat_prm(86%), urban(84%), gpi_ter(80%), gdppc_log(70%), fdi(60%)
+
+C. TAKEOFF FUNCTIONAL FORM (10-fold country CV log loss, 20 fold seeds; lower = better):
+   threshold  0.1215 (sd 0.0011)  best in 55% of seeds
+   linear     0.1222 (sd 0.0027)  best in 40% of seeds
+   smooth     0.1233 (sd 0.0025)  best in 5% of seeds
+   hybrid     0.1238 (sd 0.0026)  best in 0% of seeds
+   count      0.1264 (sd 0.0019)  best in 0% of seeds
+
+Associations only. Within-country tests remove stable country traits but not time-varying confounders.
