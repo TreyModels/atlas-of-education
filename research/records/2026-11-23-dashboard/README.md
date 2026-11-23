@@ -32,6 +32,7 @@ The two questions this session is answering:
 | 9 (task-10) | Dose tolerance ladder: is the strength identifiable? | research/dose-tolerance-2026-11-23 | RUNNING |
 | 10 (task-11) | GPU engine scale and robustness audit | research/cuda-scale-2026-11-23 | **DONE and verified** locally (7f92799); push blocked by network outage |
 | 11 (task-12) | Full transition: pre-antibiotic equilibrium to fertility collapse | research/transition-2026-11-23 | **DONE and verified** locally (c1c6efb, b13fde8); push blocked by network outage |
+| 12 (task-14) | Novelty literature review: is any of this actually new? | research/novelty-2026-11-23 | **DONE and verified** locally (390db8d); push blocked by network outage |
 | - (task-6) | Methodology paper on the multiverse method | research/methods-multiverse-paper-2026-11-23 | DRAFTING (held by Dr. Menefee) |
 
 Job numbers follow the project brief; the shared task board uses task ids (given in brackets).
@@ -339,6 +340,29 @@ Job numbers follow the project brief; the shared task board uses task ids (given
 See the paragraph above the massification section: the same control exercise, sorted there.
 
 ---
+
+## Novelty check — what is actually new (job 12)
+
+An external literature review tested every candidate claim against prior work. The blunt answer: **most of today's
+findings are known, one is a genuine methods increment, and one potential new demonstration is still running.**
+
+| Claim | Verdict | Closest prior work / what is actually new |
+|---|---|---|
+| "Electricity stops predicting schooling once country trends are allowed" | **KNOWN** | Textbook panel econometrics on trending regressors and common factors (Pesaran's common correlated effects; Eberhardt & Teal on growth empirics). The micro literature on electricity and education is large and mostly positive. Our increment is the **power-calibrated interval reading** ("cannot separate from development at this power", not "zero") and the single-specification +16.05 case study. |
+| Multiverse resolution arithmetic (lone link ~5,440 draws; cluster of 30 ~182; 35 certified at 400) | **INCREMENTAL, border-NEW** | The two ingredients are textbook (the 1/(R+1) permutation floor, and Benjamini-Hochberg's step-up rule), but the **stated design rule** - how many random groupings a transportability multiverse needs depends on how many links sit on the p-value ceiling - appears unstated in this form. This is the session's strongest novelty candidate, publishable as a methods note. |
+| Child-mortality level vs volatility | **INCREMENTAL** | The level effect is the 1976 "child survival hypothesis" (Population Studies); insurance/uncertainty is old (Cain 1981; Kalemli-Ozcan 2003). The **country-level level-versus-volatility discrimination** is a new application, not a new theory, and the caveats (common cause, household insurance) stand. |
+| Individuation does not beat development-only out of sample | **INCREMENTAL (project result, not field result)** | That is a result about **one model with poor fit and unidentified strengths**, not a field verdict on Caldwell's wealth flows or Henrich's WEIRD thesis. The weight-collapse correction is a valuable internal audit of a known ABC pathology, not a new method. |
+| Full transition in the GPU ABM with a no-mortality-decline counterfactual | **potentially NEW (pending)** | The transition question and individual-level microsimulation are decades old (SOCSIM; unified growth theory; FLAME GPU). The plausible novelty is the **combination**: an individual-level model calibrated to a real country panel, run across the pre-antibiotic-to-collapse arc at millions of women, with the mortality counterfactual. A new demonstration, not a new theory. |
+| Engine capability (5 million women/s; 66.8 million per launch) | **NEW capability (engineering, not science)** | Genuinely useful; not a scientific claim. |
+
+**Do not present as discoveries:** that electricity does not drive schooling; that child survival drives fertility;
+that individuation is refuted; that the engine is a bit-exact rerun of the published model; or any causal
+identification. Use "we are not aware of", never "first".
+
+**The honest paper from this session** is: (i) the multiverse resolution methods note; (ii) a power-calibrated
+fragility audit of cross-country education-development links, with +16.05 as the cautionary case; (iii) if it
+validates, the GPU full-transition counterfactual as a demonstration; optionally (iv) the level-versus-volatility
+result, framed as suggestive and limited.
 
 ## What would change our minds (falsifiers to watch)
 
