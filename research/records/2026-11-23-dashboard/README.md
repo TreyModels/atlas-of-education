@@ -34,7 +34,7 @@ The two questions this session is answering:
 | 11 (task-12) | Full transition: pre-antibiotic equilibrium to fertility collapse | research/transition-2026-11-23 | **DONE and verified** (b13fde8): mortality leads fertility by ~12 years; schooling follows |
 | 12 (task-14) | Novelty literature review: is any of this actually new? | research/novelty-2026-11-23 | **DONE and verified** (390db8d): 4 new / 8 incremental / 11 known |
 | 13 (task-13) | Full transition in the GPU ABM: holds fertility up without the mortality decline? | research/transition-gpu-2026-11-23 | **DONE and verified** (f9f2f18): collapse survives without mortality decline (in this model) |
-| - (task-6) | Methodology paper on the multiverse method | research/methods-multiverse-paper-2026-11-23 | DRAFTING (held by Dr. Menefee) |
+| - (task-6) | Methodology paper on the multiverse method | research/methods-multiverse-paper-2026-11-23 | **DONE and pushed** (d9e760c; paper.md 12.3k words, claims→files map, refs with Crossref status; 400-draw record merged in for traceability). Visibility decision pending Dr. Menefee |
 
 Job numbers follow the project brief; the shared task board uses task ids (given in brackets).
 
@@ -447,7 +447,7 @@ result, framed as suggestive and limited.
 - research/cuda-scale-2026-11-23 (e600763)
 - research/novelty-2026-11-23 (390db8d)
 - research/dashboard-2026-11-23 (this report)
-- research/methods-multiverse-paper-2026-11-23 (NOT pushed; held by Dr. Menefee)
+- research/methods-multiverse-paper-2026-11-23 (d9e760c; pushed — paper.md 12.3k words, traceability merged from the 400-draw record; public visibility pending Dr. Menefee's decision)
 
 ## Still not known (honest list)
 - **The individuation mechanism.** The dose model now has a valid posterior and does NOT beat development-only out
