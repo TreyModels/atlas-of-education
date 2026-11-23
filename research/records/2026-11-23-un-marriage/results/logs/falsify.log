@@ -1,0 +1,44 @@
+series available: [('agri_va', 8930), ('alone_60plus', 968), ('coresid_60plus', 705), ('coresid_60plus_f', 704), ('electricity', 6747), ('emp_agri', 6349), ('fertility', 14073), ('flfp', 6536), ('gdppc_log', 11347), ('gpi_sec', 6020), ('gpi_ter', 4580), ('life_exp', 14071), ('lsc', 4233), ('multigen_60plus', 674), ('nevermar_f_4549', 2060), ('nevermar_m_4549', 1867), ('prm_cmp', 5038), ('sec', 6271), ('smam_f', 2073), ('smam_gap', 1845), ('smam_m', 1848), ('tax', 4708), ('ter', 5344), ('u5mr', 11861), ('urban', 14105), ('wage_emp', 6349)]
+=== permutation + jackknife falsifiers (all with country trends) ===
+smam_f           -> fertility        b=+0.0200 (se 0.0058, n=1698, 170 countries)
+    permutation p=0.000 null |b| q05=0.0001 median=0.0015 q95=0.0047 actual|b|=0.0200 (draws=200)
+    jackknife: drop-one-country b range +0.0172 to +0.0213; same sign in 100% of drops
+smam_gap         -> fertility        b=-0.0352 (se 0.0164, n=1453, 156 countries)
+    permutation p=0.000 null |b| q05=0.0004 median=0.0061 q95=0.0207 actual|b|=0.0352 (draws=200)
+    jackknife: drop-one-country b range -0.0463 to -0.0278; same sign in 100% of drops
+nevermar_f_4549  -> fertility        b=-0.0045 (se 0.0027, n=1684, 170 countries)
+    permutation p=0.000 null |b| q05=0.0001 median=0.0009 q95=0.0023 actual|b|=0.0045 (draws=200)
+    jackknife: drop-one-country b range -0.0053 to -0.0032; same sign in 100% of drops
+coresid_60plus   -> fertility        b=+0.0021 (se 0.0022, n=402, 70 countries)
+    permutation p=0.230 null |b| q05=0.0001 median=0.0013 q95=0.0034 actual|b|=0.0021 (draws=200)
+    jackknife: drop-one-country b range +0.0009 to +0.0034; same sign in 100% of drops
+sec              -> smam_f           b=-0.0357 (se 0.0225, n=435, 63 countries)
+    permutation p=0.220 null |b| q05=0.0011 median=0.0204 q95=0.0572 actual|b|=0.0357 (draws=200)
+    jackknife: drop-one-country b range -0.0474 to -0.0201; same sign in 100% of drops
+sec              -> nevermar_f_4549  b=-0.0574 (se 0.0419, n=428, 63 countries)
+    permutation p=0.530 null |b| q05=0.0056 median=0.0608 q95=0.1526 actual|b|=0.0574 (draws=200)
+    jackknife: drop-one-country b range -0.0705 to -0.0226; same sign in 100% of drops
+sec              -> smam_gap         b=-0.0183 (se 0.0100, n=329, 51 countries)
+    permutation p=0.095 null |b| q05=0.0008 median=0.0069 q95=0.0221 actual|b|=0.0183 (draws=200)
+    jackknife: drop-one-country b range -0.0259 to -0.0122; same sign in 100% of drops
+
+=== sample-selection check: sec -> fertility (country trends) ===
+  full                       b=-0.0015 se=0.0016 n=4535 countries=191
+  marriage_smam_sample       b=-0.0018 se=0.0020 n=780 countries=104
+  marriage_nevermar_sample   b=-0.0018 se=0.0021 n=776 countries=105
+
+=== heterogeneity: sec -> fertility by marriage regime (country trends) ===
+  split at never-married 45-49 = 4.9% (low group 106 countries, high group 105)
+  low_never_married    b=-0.0037 se=0.0026 n=2554 countries=97
+  high_never_married   b=+0.0002 se=0.0021 n=1946 countries=92
+
+=== income logged (session rule) vs levels, country trends ===
+  smam_f->fertility                  b=+0.0198 se=0.0056 n=1698
+  smam_gap->fertility                b=-0.0347 se=0.0159 n=1453
+  nevermar_f_4549->fertility         b=-0.0040 se=0.0026 n=1684
+  coresid_60plus->fertility          b=+0.0016 se=0.0021 n=402
+  sec->smam_f                        b=-0.0371 se=0.0227 n=435
+  sec->nevermar_f_4549               b=-0.0619 se=0.0415 n=428
+  sec->smam_gap                      b=-0.0176 se=0.0097 n=329
+
+wrote /root/work/undata/results_falsifiers.json

@@ -1,0 +1,664 @@
+country,year,value,year_start,year_end,data_process,data_catalog,detail
+Afghanistan,2010,0.72,2010,2011,Survey,2010-2011 MICS,direct share never married at 45-49
+Afghanistan,2016,0.33,2015,2016,Survey,2015 DHS,direct share never married at 45-49
+Afghanistan,2016,0.0,2015,2016,Survey,2015 DHS,direct share never married at 45-49
+Albania,2000,1.85,2000,2000,Survey,2000 MICS,direct share never married at 45-49
+Albania,2000,2.27,2000,2000,Survey,2000 MICS_HH,direct share never married at 45-49
+Albania,2005,2.05,2005,2005,Survey,2005 MICS,direct share never married at 45-49
+Albania,2008,1.8,2008,2009,Survey,2008-2009 DHS,direct share never married at 45-49
+Albania,2008,1.2,2008,2009,Survey,2008-2009 DHS,direct share never married at 45-49
+Albania,2018,6.72,2017,2018,Survey,2017-2018 DHS,direct share never married at 45-49
+Albania,2018,3.0,2017,2018,Survey,2017-2018 DHS,direct share never married at 45-49
+Algeria,2012,7.86,2012,2013,Survey,2012 MICS,direct share never married at 45-49
+Algeria,2012,9.18,2012,2013,Survey,2012 MICS_HH,direct share never married at 45-49
+Angola,2001,6.78,2001,2001,Survey,2001 MICS,direct share never married at 45-49
+Angola,2001,6.26,2001,2001,Survey,2001 MICS_HH,direct share never married at 45-49
+Angola,2016,5.91,2015,2016,Survey,2015-2016 DHS,direct share never married at 45-49
+Angola,2016,9.0,2015,2016,Survey,2015-2016 DHS,direct share never married at 45-49
+Armenia,2000,5.7,2000,2000,Survey,2000 DHS,direct share never married at 45-49
+Armenia,2005,4.6,2005,2005,Survey,2005 DHS,direct share never married at 45-49
+Armenia,2010,5.2,2010,2010,Survey,2010 DHS,direct share never married at 45-49
+Armenia,2010,4.4,2010,2010,Survey,2010 DHS,direct share never married at 45-49
+Armenia,2016,6.8,2015,2016,Survey,2015 DHS,direct share never married at 45-49
+Armenia,2016,6.0,2015,2016,Survey,2015 DHS,direct share never married at 45-49
+Austria,2008,8.85,2008,2009,Survey,2008-2009 GGS,direct share never married at 45-49
+Austria,2012,8.41,2012,2013,Survey,2012-2013 GGS,direct share never married at 45-49
+Azerbaijan,2000,4.05,2000,2000,Survey,2000 MICS,direct share never married at 45-49
+Azerbaijan,2000,4.39,2000,2000,Survey,2000 MICS_HH,direct share never married at 45-49
+Azerbaijan,2006,6.1,2006,2006,Survey,2006 DHS,direct share never married at 45-49
+Azerbaijan,2006,5.6,2006,2006,Survey,2006 DHS,direct share never married at 45-49
+Bangladesh,1994,0.2,1993,1994,Survey,1993-1994 DHS,direct share never married at 45-49
+Bangladesh,1996,0.0,1996,1997,Survey,1996-1997 DHS,direct share never married at 45-49
+Bangladesh,2000,0.0,1999,2000,Survey,1999-2000 DHS,direct share never married at 45-49
+Bangladesh,2004,0.0,2004,2004,Survey,2004 DHS,direct share never married at 45-49
+Bangladesh,2004,0.0,2004,2004,Survey,2004 DHS,direct share never married at 45-49
+Bangladesh,2006,0.36,2006,2006,Survey,2006 MICS,direct share never married at 45-49
+Bangladesh,2007,0.8,2007,2007,Survey,2007 DHS,direct share never married at 45-49
+Bangladesh,2011,0.2,2011,2011,Survey,2011 DHS,direct share never married at 45-49
+Bangladesh,2012,0.35,2012,2013,Survey,2012-2013 MICS,direct share never married at 45-49
+Bangladesh,2014,0.2,2014,2014,Survey,2014 DHS,direct share never married at 45-49
+Barbados,2012,14.12,2012,2012,Survey,2012 MICS,direct share never married at 45-49
+Belarus,2005,3.0,2005,2005,Survey,2005 MICS,direct share never married at 45-49
+Belarus,2012,3.14,2012,2012,Survey,2012 MICS,direct share never married at 45-49
+Belgium,2009,3.61,2008,2010,Survey,2008-2010 GGS,direct share never married at 45-49
+Belize,2011,6.75,2011,2011,Survey,2011 MICS,direct share never married at 45-49
+Belize,2015,7.41,2015,2015,Survey,2015-2016 MICS,direct share never married at 45-49
+Benin,1996,0.3,1996,1996,Survey,1996 DHS,direct share never married at 45-49
+Benin,2001,1.0,2001,2001,Survey,2001 DHS,direct share never married at 45-49
+Benin,2006,2.3,2006,2006,Survey,2006 DHS,direct share never married at 45-49
+Benin,2006,0.9,2006,2006,Survey,2006 DHS,direct share never married at 45-49
+Benin,2012,2.1,2011,2012,Survey,2011-2012 DHS,direct share never married at 45-49
+Benin,2012,2.4,2011,2012,Survey,2011-2012 DHS,direct share never married at 45-49
+Benin,2014,1.61,2014,2014,Survey,2014 MICS,direct share never married at 45-49
+Benin,2018,0.78,2017,2018,Survey,2017-2018 DHS,direct share never married at 45-49
+Benin,2018,1.4,2017,2018,Survey,2017-2018 DHS,direct share never married at 45-49
+Bhutan,2010,2.15,2010,2010,Survey,2010 MICS,direct share never married at 45-49
+Bolivia (Plurinational State of),1989,4.1,1989,1989,Survey,1989 DHS,direct share never married at 45-49
+Bolivia (Plurinational State of),1994,4.3,1993,1994,Survey,1994 DHS,direct share never married at 45-49
+Bolivia (Plurinational State of),1998,3.7,1998,1998,Survey,1998 DHS,direct share never married at 45-49
+Bolivia (Plurinational State of),2000,4.36,2000,2000,Survey,2000 MICS,direct share never married at 45-49
+Bolivia (Plurinational State of),2000,4.98,2000,2000,Survey,2000 MICS_HH,direct share never married at 45-49
+Bolivia (Plurinational State of),2004,3.1,2003,2004,Survey,2003 DHS,direct share never married at 45-49
+Bolivia (Plurinational State of),2008,4.3,2008,2008,Survey,2008 DHS,direct share never married at 45-49
+Bosnia and Herzegovina,2000,3.41,2000,2000,Survey,2000 MICS,direct share never married at 45-49
+Bosnia and Herzegovina,2000,3.32,2000,2000,Survey,2000 MICS_HH,direct share never married at 45-49
+Bosnia and Herzegovina,2006,4.88,2006,2006,Survey,2006 MICS,direct share never married at 45-49
+Bosnia and Herzegovina,2012,2.38,2011,2012,Survey,2011-2012 MICS,direct share never married at 45-49
+Botswana,1988,20.2,1988,1988,Survey,1988 DHS,direct share never married at 45-49
+Brazil,1996,5.2,1996,1996,Survey,1996 DHS,direct share never married at 45-49
+Bulgaria,2004,8.07,2004,2005,Survey,2004-2005 GGS,direct share never married at 45-49
+Bulgaria,2007,5.7,2007,2007,Survey,2007 GGS,direct share never married at 45-49
+Burkina Faso,1992,0.3,1992,1993,Survey,1993 DHS,direct share never married at 45-49
+Burkina Faso,1992,0.1,1992,1993,Survey,1993 DHS,direct share never married at 45-49
+Burkina Faso,1998,0.6,1998,1999,Survey,1998-1999 DHS,direct share never married at 45-49
+Burkina Faso,1998,0.2,1998,1999,Survey,1998-1999 DHS,direct share never married at 45-49
+Burkina Faso,2003,0.1,2003,2003,Survey,2003 DHS,direct share never married at 45-49
+Burkina Faso,2006,0.0,2006,2006,Survey,2006 MICS,direct share never married at 45-49
+Burkina Faso,2010,0.3,2010,2011,Survey,2010 DHS-MICS,direct share never married at 45-49
+Burkina Faso,2010,0.2,2010,2011,Survey,2010 DHS-MICS,direct share never married at 45-49
+Burundi,1987,1.2,1987,1987,Survey,1987 DHS,direct share never married at 45-49
+Burundi,2000,2.57,2000,2000,Survey,2000 MICS_HH,direct share never married at 45-49
+Burundi,2005,3.67,2005,2005,Survey,2005 MICS,direct share never married at 45-49
+Burundi,2005,3.46,2005,2005,Survey,2005 MICS_HH,direct share never married at 45-49
+Burundi,2010,2.1,2010,2011,Survey,2010 DHS,direct share never married at 45-49
+Burundi,2010,1.8,2010,2011,Survey,2010 DHS,direct share never married at 45-49
+Burundi,2016,2.41,2016,2017,Survey,2016 DHS,direct share never married at 45-49
+Burundi,2016,3.2,2016,2017,Survey,2016 DHS,direct share never married at 45-49
+Cambodia,2000,5.0,2000,2000,Survey,2000 DHS,direct share never married at 45-49
+Cambodia,2006,4.2,2005,2006,Survey,2005 DHS,direct share never married at 45-49
+Cambodia,2006,4.1,2005,2006,Survey,2005 DHS,direct share never married at 45-49
+Cambodia,2010,6.7,2010,2011,Survey,2010 DHS,direct share never married at 45-49
+Cambodia,2010,6.1,2010,2011,Survey,2010 DHS,direct share never married at 45-49
+Cambodia,2014,4.28,2014,2014,Survey,2014 DHS,direct share never married at 45-49
+Cambodia,2014,4.2,2014,2014,Survey,2014 DHS,direct share never married at 45-49
+Cameroon,1991,0.7,1991,1991,Survey,1991 DHS,direct share never married at 45-49
+Cameroon,1998,1.5,1998,1998,Survey,1998 DHS,direct share never married at 45-49
+Cameroon,2000,2.31,2000,2000,Survey,2000 MICS_HH,direct share never married at 45-49
+Cameroon,2004,0.7,2004,2004,Survey,2004 DHS,direct share never married at 45-49
+Cameroon,2006,1.86,2006,2006,Survey,2006 MICS,direct share never married at 45-49
+Cameroon,2011,3.0,2011,2011,Survey,2011 DHS-MICS,direct share never married at 45-49
+Cameroon,2011,1.7,2011,2011,Survey,2011 DHS-MICS,direct share never married at 45-49
+Cameroon,2014,3.6,2014,2014,Survey,2014 MICS,direct share never married at 45-49
+Central African Republic,1994,1.9,1994,1995,Survey,1994-1995 DHS,direct share never married at 45-49
+Central African Republic,2000,0.43,2000,2000,Survey,2000 MICS,direct share never married at 45-49
+Central African Republic,2000,1.02,2000,2000,Survey,2000 MICS_HH,direct share never married at 45-49
+Central African Republic,2006,0.7,2006,2006,Survey,2006 MICS,direct share never married at 45-49
+Central African Republic,2010,1.75,2010,2010,Survey,2010 MICS,direct share never married at 45-49
+Chad,1996,0.1,1996,1997,Survey,1996-1997 DHS,direct share never married at 45-49
+Chad,2000,0.5,2000,2000,Survey,2000 MICS,direct share never married at 45-49
+Chad,2000,0.49,2000,2000,Survey,2000 MICS_HH,direct share never married at 45-49
+Chad,2004,0.0,2004,2004,Survey,2004 DHS,direct share never married at 45-49
+Chad,2010,0.5,2010,2010,Survey,2010 MICS,direct share never married at 45-49
+Chad,2014,0.03,2014,2014,Survey,2014 DHS,direct share never married at 45-49
+Chad,2014,0.4,2014,2015,Survey,2014-2015 DHS-MICS,direct share never married at 45-49
+Colombia,1986,4.6,1986,1986,Survey,1986 DHS,direct share never married at 45-49
+Colombia,1990,7.0,1990,1990,Survey,1990 DHS,direct share never married at 45-49
+Colombia,1995,11.7,1995,1995,Survey,1995 DHS,direct share never married at 45-49
+Colombia,1995,8.1,1995,1995,Survey,1995 DHS,direct share never married at 45-49
+Colombia,2000,9.6,2000,2000,Survey,2000 DHS,direct share never married at 45-49
+Colombia,2000,7.6,2000,2000,Survey,2000 DHS,direct share never married at 45-49
+Colombia,2004,11.5,2004,2005,Survey,2005 DHS,direct share never married at 45-49
+Colombia,2004,8.3,2004,2005,Survey,2005 DHS,direct share never married at 45-49
+Colombia,2010,11.5,2009,2010,Survey,2010 DHS,direct share never married at 45-49
+Colombia,2010,9.4,2009,2010,Survey,2010 DHS,direct share never married at 45-49
+Colombia,2016,11.61,2015,2016,Survey,2015 DHS,direct share never married at 45-49
+Colombia,2016,8.2,2015,2016,Survey,2015 DHS,direct share never married at 45-49
+Comoros,1996,0.0,1996,1996,Survey,1996 DHS,direct share never married at 45-49
+Comoros,2000,2.09,2000,2000,Survey,2000 MICS,direct share never married at 45-49
+Comoros,2000,2.3,2000,2000,Survey,2000 MICS_HH,direct share never married at 45-49
+Comoros,2012,0.7,2012,2012,Survey,2012 DHS-MICS,direct share never married at 45-49
+Comoros,2012,0.3,2012,2012,Survey,2012 DHS-MICS,direct share never married at 45-49
+Congo,2005,1.6,2005,2005,Survey,2005 DHS,direct share never married at 45-49
+Congo,2009,5.0,2009,2009,Survey,2009 AIS,direct share never married at 45-49
+Congo,2009,4.3,2009,2009,Survey,2009 AIS,direct share never married at 45-49
+Congo,2012,3.6,2011,2012,Survey,2011-2012 DHS,direct share never married at 45-49
+Congo,2012,2.2,2011,2012,Survey,2011-2012 DHS,direct share never married at 45-49
+Congo,2014,6.69,2014,2015,Survey,2014-2015 MICS,direct share never married at 45-49
+Costa Rica,2011,6.3,2011,2011,Survey,2011 MICS,direct share never married at 45-49
+Côte d'Ivoire,1994,0.7,1994,1994,Survey,1994 DHS,direct share never married at 45-49
+Côte d'Ivoire,1998,0.7,1998,1999,Survey,1998-1999 DHS,direct share never married at 45-49
+Côte d'Ivoire,2000,4.03,2000,2000,Survey,2000 MICS,direct share never married at 45-49
+Côte d'Ivoire,2000,4.39,2000,2000,Survey,2000 MICS_HH,direct share never married at 45-49
+Côte d'Ivoire,2005,3.8,2005,2005,Survey,2005 EIS,direct share never married at 45-49
+Côte d'Ivoire,2006,21.1,2006,2006,Survey,2006 MICS,direct share never married at 45-49
+Côte d'Ivoire,2012,4.8,2011,2012,Survey,2011-2012 DHS-MICS,direct share never married at 45-49
+Côte d'Ivoire,2012,2.8,2011,2012,Survey,2011-2012 DHS-MICS,direct share never married at 45-49
+Côte d'Ivoire,2016,4.34,2016,2016,Survey,2016 MICS,direct share never married at 45-49
+Cuba,2010,3.0,2010,2011,Survey,2010-2011 MICS,direct share never married at 45-49
+Cuba,2014,2.63,2014,2014,Survey,2014 MICS,direct share never married at 45-49
+Czechia,2005,7.09,2005,2005,Survey,2005 GGS,direct share never married at 45-49
+Czechia,2008,6.2,2008,2008,Survey,2008 GGS,direct share never married at 45-49
+Democratic Republic of the Congo,2001,5.35,2001,2001,Survey,2001 MICS,direct share never married at 45-49
+Democratic Republic of the Congo,2001,1.45,2001,2001,Survey,2001 MICS_HH,direct share never married at 45-49
+Democratic Republic of the Congo,2007,1.1,2007,2007,Survey,2007 DHS,direct share never married at 45-49
+Democratic Republic of the Congo,2007,1.0,2007,2007,Survey,2007 DHS,direct share never married at 45-49
+Democratic Republic of the Congo,2010,1.93,2010,2010,Survey,2010 MICS,direct share never married at 45-49
+Democratic Republic of the Congo,2014,2.0,2013,2014,Survey,2013-2014 DHS,direct share never married at 45-49
+Democratic Republic of the Congo,2014,2.2,2013,2014,Survey,2013-2014 DHS,direct share never married at 45-49
+Djibouti,2006,8.03,2006,2006,Survey,2006 MICS,direct share never married at 45-49
+Dominican Republic,1986,1.6,1986,1986,Survey,1986 DHS,direct share never married at 45-49
+Dominican Republic,1991,1.0,1991,1991,Survey,1991 DHS,direct share never married at 45-49
+Dominican Republic,1996,1.1,1996,1996,Survey,1996 DHS,direct share never married at 45-49
+Dominican Republic,1999,1.4,1999,1999,Survey,1999 DHS,direct share never married at 45-49
+Dominican Republic,2000,1.15,2000,2000,Survey,2000 MICS,direct share never married at 45-49
+Dominican Republic,2000,1.6,2000,2000,Survey,2000 MICS_HH,direct share never married at 45-49
+Dominican Republic,2002,4.3,2002,2002,Survey,2002 DHS,direct share never married at 45-49
+Dominican Republic,2002,1.5,2002,2002,Survey,2002 DHS,direct share never married at 45-49
+Dominican Republic,2007,2.8,2007,2007,Survey,2007 DHS,direct share never married at 45-49
+Dominican Republic,2007,2.1,2007,2007,Survey,2007 DHS,direct share never married at 45-49
+Dominican Republic,2013,6.1,2013,2013,Survey,2013 DHS,direct share never married at 45-49
+Dominican Republic,2013,2.4,2013,2013,Survey,2013 DHS,direct share never married at 45-49
+Dominican Republic,2014,2.36,2014,2014,Survey,2014 MICS,direct share never married at 45-49
+Ecuador,1987,2.7,1987,1987,Survey,1987 DHS,direct share never married at 45-49
+Ecuador,2004,4.2,2004,2004,Survey,2004 ENDEMAIN,direct share never married at 45-49
+Egypt,1988,1.8,1988,1989,Survey,1988 DHS,direct share never married at 45-49
+Egypt,1992,1.2,1992,1992,Survey,1992 DHS,direct share never married at 45-49
+Egypt,1992,0.9,1992,1992,Survey,1992 DHS,direct share never married at 45-49
+Egypt,1996,1.1,1995,1996,Survey,1995 DHS,direct share never married at 45-49
+Egypt,1996,1.2,1995,1996,Survey,1995 DHS,direct share never married at 45-49
+Egypt,2000,1.3,2000,2000,Survey,2000 DHS,direct share never married at 45-49
+Egypt,2000,1.5,2000,2000,Survey,2000 DHS,direct share never married at 45-49
+Egypt,2003,1.5,2003,2003,Survey,2003 DHS Interim,direct share never married at 45-49
+Egypt,2003,1.6,2003,2003,Survey,2003 DHS Interim,direct share never married at 45-49
+Egypt,2005,1.9,2005,2005,Survey,2005 DHS,direct share never married at 45-49
+Egypt,2005,1.7,2005,2005,Survey,2005 DHS,direct share never married at 45-49
+Egypt,2008,1.8,2008,2008,Survey,2008 DHS,direct share never married at 45-49
+Egypt,2008,1.9,2008,2008,Survey,2008 DHS,direct share never married at 45-49
+Egypt,2014,1.7,2014,2014,Survey,2014 DHS,direct share never married at 45-49
+Egypt,2014,1.7,2014,2014,Survey,2014 DHS,direct share never married at 45-49
+El Salvador,1985,3.2,1985,1985,Survey,1985 DHS,direct share never married at 45-49
+El Salvador,2002,4.1,2002,2003,Survey,2002-2003 FESAL,direct share never married at 45-49
+El Salvador,2014,5.42,2014,2014,Survey,2014 MICS,direct share never married at 45-49
+Equatorial Guinea,2000,7.03,2000,2000,Survey,2000 MICS,direct share never married at 45-49
+Equatorial Guinea,2000,10.9,2000,2000,Survey,2000 MICS_HH,direct share never married at 45-49
+Eritrea,1995,2.25,1995,1995,Survey,1995 DHS,direct share never married at 45-49
+Eritrea,1996,1.9,1995,1996,Survey,1995 DHS,direct share never married at 45-49
+Eritrea,2002,1.45,2002,2002,Survey,2002 DHS,direct share never married at 45-49
+Eritrea,2002,0.9,2002,2002,Survey,2002 DHS,direct share never married at 45-49
+Estonia,2004,7.39,2004,2005,Survey,2005 GGS,direct share never married at 45-49
+Ethiopia,2000,0.1,2000,2000,Survey,2000 DHS,direct share never married at 45-49
+Ethiopia,2005,0.4,2005,2005,Survey,2005 DHS,direct share never married at 45-49
+Ethiopia,2010,1.2,2010,2011,Survey,2011 DHS,direct share never married at 45-49
+Ethiopia,2010,0.6,2010,2011,Survey,2011 DHS,direct share never married at 45-49
+Ethiopia,2016,1.08,2016,2016,Survey,2016 DHS,direct share never married at 45-49
+Ethiopia,2016,1.1,2016,2016,Survey,2016 DHS,direct share never married at 45-49
+France,2005,10.49,2005,2005,Survey,2005 GGS,direct share never married at 45-49
+France,2008,8.57,2008,2008,Survey,2008 GGS,direct share never married at 45-49
+Gabon,2000,1.8,2000,2000,Survey,2000 DHS,direct share never married at 45-49
+Gabon,2012,9.8,2012,2012,Survey,2012 DHS,direct share never married at 45-49
+Gabon,2012,7.4,2012,2012,Survey,2012 DHS,direct share never married at 45-49
+Gambia,2000,0.09,2000,2000,Survey,2000 MICS,direct share never married at 45-49
+Gambia,2000,0.61,2000,2000,Survey,2000 MICS_HH,direct share never married at 45-49
+Gambia,2006,0.75,2005,2006,Survey,2005-2006 MICS,direct share never married at 45-49
+Gambia,2013,0.9,2013,2013,Survey,2013 DHS,direct share never married at 45-49
+Gambia,2013,0.6,2013,2013,Survey,2013 DHS,direct share never married at 45-49
+Georgia,2005,7.22,2005,2005,Survey,2005 MICS,direct share never married at 45-49
+Georgia,2006,9.31,2006,2006,Survey,2006 GGS,direct share never married at 45-49
+Georgia,2009,11.8,2009,2009,Survey,2009 GGS,direct share never married at 45-49
+Germany,2005,6.24,2005,2005,Survey,2005 GGS,direct share never married at 45-49
+Germany,2008,7.98,2008,2008,Survey,2008 GGS,direct share never married at 45-49
+Ghana,1988,0.0,1988,1988,Survey,1988 DHS,direct share never married at 45-49
+Ghana,1994,0.0,1993,1994,Survey,1993 DHS,direct share never married at 45-49
+Ghana,1994,0.0,1993,1994,Survey,1993 DHS,direct share never married at 45-49
+Ghana,1998,0.6,1998,1999,Survey,1998 DHS,direct share never married at 45-49
+Ghana,1998,1.4,1998,1999,Survey,1998 DHS,direct share never married at 45-49
+Ghana,2003,0.4,2003,2003,Survey,2003 DHS,direct share never married at 45-49
+Ghana,2006,0.36,2006,2006,Survey,2006 MICS,direct share never married at 45-49
+Ghana,2008,1.1,2008,2008,Survey,2008 DHS,direct share never married at 45-49
+Ghana,2008,0.5,2008,2008,Survey,2008 DHS,direct share never married at 45-49
+Ghana,2011,0.19,2011,2011,Survey,2011 MICS,direct share never married at 45-49
+Ghana,2014,1.1,2014,2014,Survey,2014 DHS,direct share never married at 45-49
+Ghana,2014,1.0,2014,2014,Survey,2014 DHS,direct share never married at 45-49
+Guatemala,1995,5.1,1995,1995,Survey,1995 DHS,direct share never married at 45-49
+Guatemala,1998,4.6,1998,1999,Survey,1998-1999 DHS Interim,direct share never married at 45-49
+Guatemala,2002,4.8,2002,2002,Survey,2002 ENSMI,direct share never married at 45-49
+Guatemala,2014,5.96,2014,2015,Survey,2014-2015 DHS,direct share never married at 45-49
+Guatemala,2014,5.3,2014,2015,Survey,2014-2015 DHS,direct share never married at 45-49
+Guinea,1999,0.0,1999,1999,Survey,1999 DHS,direct share never married at 45-49
+Guinea,2005,0.2,2005,2005,Survey,2005 DHS,direct share never married at 45-49
+Guinea,2012,0.1,2012,2012,Survey,2012 DHS,direct share never married at 45-49
+Guinea,2012,0.2,2012,2012,Survey,2012 DHS,direct share never married at 45-49
+Guinea-Bissau,2000,0.22,2000,2000,Survey,2000 MICS,direct share never married at 45-49
+Guinea-Bissau,2000,1.09,2000,2000,Survey,2000 MICS_HH,direct share never married at 45-49
+Guinea-Bissau,2006,1.55,2006,2006,Survey,2006 MICS,direct share never married at 45-49
+Guinea-Bissau,2014,1.86,2014,2014,Survey,2014 MICS,direct share never married at 45-49
+Guyana,2000,2.91,2000,2000,Survey,2000 MICS,direct share never married at 45-49
+Guyana,2000,3.6,2000,2000,Survey,2000 MICS_HH,direct share never married at 45-49
+Guyana,2005,6.7,2005,2005,Survey,2005 AIS,direct share never married at 45-49
+Guyana,2006,8.36,2006,2007,Survey,2006 MICS,direct share never married at 45-49
+Guyana,2009,14.2,2009,2009,Survey,2009 DHS,direct share never married at 45-49
+Guyana,2009,9.4,2009,2009,Survey,2009 DHS,direct share never married at 45-49
+Guyana,2014,6.46,2014,2014,Survey,2014 MICS,direct share never married at 45-49
+Haiti,1994,1.5,1994,1995,Survey,1994-1995 DHS,direct share never married at 45-49
+Haiti,2000,2.0,2000,2000,Survey,2000 DHS,direct share never married at 45-49
+Haiti,2006,1.7,2005,2006,Survey,2005-2006 DHS,direct share never married at 45-49
+Haiti,2006,1.7,2005,2006,Survey,2005-2006 DHS,direct share never married at 45-49
+Haiti,2012,2.3,2012,2012,Survey,2012 DHS-MICS,direct share never married at 45-49
+Haiti,2012,1.7,2012,2012,Survey,2012 DHS-MICS,direct share never married at 45-49
+Haiti,2016,1.99,2016,2017,Survey,2016 DHS,direct share never married at 45-49
+Haiti,2016,2.7,2016,2017,Survey,2016 DHS,direct share never married at 45-49
+Honduras,2006,3.0,2005,2006,Survey,2005-2006 DHS,direct share never married at 45-49
+Honduras,2012,4.7,2011,2012,Survey,2011-2012 DHS,direct share never married at 45-49
+Hungary,2002,4.76,2001,2002,Survey,2001-2002 GGS,direct share never married at 45-49
+India,1992,0.7,1992,1993,Survey,1992-1993 NFHS,direct share never married at 45-49
+India,1992,0.6,1992,1993,Survey,1992-1993 NFHS,direct share never married at 45-49
+India,1998,0.8,1998,1999,Survey,1998-1999 NFHS,direct share never married at 45-49
+India,1998,0.8,1998,1999,Survey,1998-1999 NFHS,direct share never married at 45-49
+India,2006,0.7,2005,2006,Survey,2005-2006 NFHS,direct share never married at 45-49
+India,2006,0.6,2005,2006,Survey,2005-2006 NFHS,direct share never married at 45-49
+India,2016,1.13,2015,2016,Survey,2015-2016 NFHS,direct share never married at 45-49
+India,2016,0.9,2015,2016,Survey,2015-2016 NFHS,direct share never married at 45-49
+Indonesia,1987,1.6,1987,1987,Survey,1987 CPS,direct share never married at 45-49
+Indonesia,1991,1.4,1991,1991,Survey,1991 DHS,direct share never married at 45-49
+Indonesia,1994,1.8,1994,1994,Survey,1994 DHS,direct share never married at 45-49
+Indonesia,1997,1.7,1997,1997,Survey,1997 DHS,direct share never married at 45-49
+Indonesia,2000,1.44,2000,2000,Survey,2000 MICS_HH,direct share never married at 45-49
+Indonesia,2002,1.9,2002,2003,Survey,2002-2003 DHS,direct share never married at 45-49
+Indonesia,2002,2.0,2002,2003,Survey,2002-2003 DHS,direct share never married at 45-49
+Indonesia,2008,1.9,2007,2008,Survey,2007 DHS,direct share never married at 45-49
+Indonesia,2008,1.8,2007,2008,Survey,2007 DHS,direct share never married at 45-49
+Indonesia,2012,2.1,2012,2012,Survey,2012 DHS Special,direct share never married at 45-49
+Indonesia,2012,2.0,2012,2012,Survey,2012 DHS Special,direct share never married at 45-49
+Indonesia,2017,2.58,2017,2017,Survey,2017 DHS,direct share never married at 45-49
+Iraq,2000,3.99,2000,2000,Survey,2000 MICS,direct share never married at 45-49
+Iraq,2000,4.02,2000,2000,Survey,2000 MICS_HH,direct share never married at 45-49
+Iraq,2006,5.19,2006,2006,Survey,2006 MICS,direct share never married at 45-49
+Iraq,2011,7.91,2011,2011,Survey,2011 MICS,direct share never married at 45-49
+Italy,2004,9.49,2003,2004,Survey,2003-2004 GGS,direct share never married at 45-49
+Italy,2007,9.23,2007,2007,Survey,2007 GGS,direct share never married at 45-49
+Jamaica,2005,21.03,2005,2005,Survey,2005 MICS,direct share never married at 45-49
+Jamaica,2011,22.91,2011,2011,Survey,2011 MICS ,direct share never married at 45-49
+Jordan,1990,2.3,1990,1990,Survey,1990 DHS,direct share never married at 45-49
+Jordan,1990,2.0,1990,1990,Survey,1990 DHS,direct share never married at 45-49
+Jordan,1997,3.9,1997,1997,Survey,1997 DHS,direct share never married at 45-49
+Jordan,1997,3.9,1997,1997,Survey,1997 DHS,direct share never married at 45-49
+Jordan,2002,4.7,2002,2002,Survey,2002 DHS,direct share never married at 45-49
+Jordan,2002,4.6,2002,2002,Survey,2002 DHS,direct share never married at 45-49
+Jordan,2007,4.2,2007,2007,Survey,2007 DHS,direct share never married at 45-49
+Jordan,2007,4.1,2007,2007,Survey,2007 DHS,direct share never married at 45-49
+Jordan,2009,8.4,2009,2009,Survey,2009 DHS Interim,direct share never married at 45-49
+Jordan,2009,8.5,2009,2009,Survey,2009 DHS Interim,direct share never married at 45-49
+Jordan,2012,8.0,2012,2012,Survey,2012 DHS,direct share never married at 45-49
+Jordan,2012,8.0,2012,2012,Survey,2012 DHS,direct share never married at 45-49
+Jordan,2018,8.88,2017,2018,Survey,2017-2018 DHS,direct share never married at 45-49
+Jordan,2018,8.7,2017,2018,Survey,2017-2018 DHS,direct share never married at 45-49
+Kazakhstan,1995,2.7,1995,1995,Survey,1995 DHS,direct share never married at 45-49
+Kazakhstan,1999,5.9,1999,1999,Survey,1999 DHS,direct share never married at 45-49
+Kazakhstan,2006,3.52,2006,2006,Survey,2006 MICS,direct share never married at 45-49
+Kazakhstan,2010,5.77,2010,2011,Survey,2010-2011 MICS,direct share never married at 45-49
+Kazakhstan,2015,3.89,2015,2015,Survey,2015 MICS,direct share never married at 45-49
+Kenya,1988,2.4,1988,1989,Survey,1989 DHS,direct share never married at 45-49
+Kenya,1993,2.8,1993,1993,Survey,1993 DHS,direct share never married at 45-49
+Kenya,1998,1.7,1998,1998,Survey,1998 DHS,direct share never married at 45-49
+Kenya,2000,2.28,2000,2000,Survey,2000 MICS_HH,direct share never married at 45-49
+Kenya,2003,3.3,2003,2003,Survey,2003 DHS,direct share never married at 45-49
+Kenya,2008,4.1,2008,2009,Survey,2008-2009 DHS,direct share never married at 45-49
+Kenya,2008,4.7,2008,2009,Survey,2008-2009 DHS,direct share never married at 45-49
+Kenya,2014,4.8,2014,2014,Survey,2014 DHS,direct share never married at 45-49
+Kyrgyzstan,1997,1.6,1997,1997,Survey,1997 DHS,direct share never married at 45-49
+Kyrgyzstan,2006,1.38,2005,2006,Survey,2005-2006 MICS,direct share never married at 45-49
+Kyrgyzstan,2012,1.8,2012,2012,Survey,2012 DHS,direct share never married at 45-49
+Kyrgyzstan,2012,1.6,2012,2012,Survey,2012 DHS,direct share never married at 45-49
+Kyrgyzstan,2014,0.96,2014,2014,Survey,2014 MICS,direct share never married at 45-49
+Lao People's Dem. Republic,2017,3.22,2017,2017,Survey,2017 DHS-MICS Special,direct share never married at 45-49
+Lao People's Democratic Republic,2000,4.12,2000,2000,Survey,2000 MICS_HH,direct share never married at 45-49
+Lao People's Democratic Republic,2012,2.63,2011,2012,Survey,2011-2012 DHS-MICS Special,direct share never married at 45-49
+Lesotho,2000,2.33,2000,2000,Survey,2000 MICS,direct share never married at 45-49
+Lesotho,2000,2.45,2000,2000,Survey,2000 MICS_HH,direct share never married at 45-49
+Lesotho,2004,3.1,2004,2005,Survey,2004 DHS,direct share never married at 45-49
+Lesotho,2010,3.2,2009,2010,Survey,2009 DHS,direct share never married at 45-49
+Lesotho,2010,4.6,2009,2010,Survey,2009 DHS,direct share never married at 45-49
+Lesotho,2014,5.3,2014,2014,Survey,2014 DHS,direct share never married at 45-49
+Lesotho,2014,5.6,2014,2014,Survey,2014 DHS,direct share never married at 45-49
+Liberia,1986,0.5,1986,1986,Survey,1986 DHS,direct share never married at 45-49
+Liberia,2006,1.0,2006,2007,Survey,2007 DHS,direct share never married at 45-49
+Liberia,2006,0.5,2006,2007,Survey,2007 DHS,direct share never married at 45-49
+Liberia,2013,0.7,2013,2013,Survey,2013 DHS,direct share never married at 45-49
+Liberia,2013,0.7,2013,2013,Survey,2013 DHS,direct share never married at 45-49
+Lithuania,2006,6.14,2006,2006,Survey,2006 GGS,direct share never married at 45-49
+Madagascar,1992,2.9,1992,1992,Survey,1992 DHS,direct share never married at 45-49
+Madagascar,1997,1.3,1997,1997,Survey,1997 DHS,direct share never married at 45-49
+Madagascar,2000,1.01,2000,2000,Survey,2000 MICS,direct share never married at 45-49
+Madagascar,2000,0.97,2000,2000,Survey,2000 MICS_HH,direct share never married at 45-49
+Madagascar,2004,3.9,2003,2004,Survey,2003-2004 DHS,direct share never married at 45-49
+Madagascar,2008,2.1,2008,2009,Survey,2008-2009 DHS,direct share never married at 45-49
+Madagascar,2008,1.5,2008,2009,Survey,2008-2009 DHS,direct share never married at 45-49
+Malawi,1992,0.0,1992,1992,Survey,1992 DHS,direct share never married at 45-49
+Malawi,2000,0.0,2000,2000,Survey,2000 DHS,direct share never married at 45-49
+Malawi,2004,0.4,2004,2005,Survey,2004 DHS,direct share never married at 45-49
+Malawi,2006,0.43,2006,2006,Survey,2006 MICS,direct share never married at 45-49
+Malawi,2010,0.1,2010,2010,Survey,2010 DHS,direct share never married at 45-49
+Malawi,2014,0.1,2013,2014,Survey,2013-2014 MICS,direct share never married at 45-49
+Malawi,2016,0.65,2015,2016,Survey,2015-2016 DHS,direct share never married at 45-49
+Malawi,2016,0.6,2015,2016,Survey,2015-2016 DHS,direct share never married at 45-49
+Maldives,2009,1.6,2009,2009,Survey,2009 DHS,direct share never married at 45-49
+Maldives,2009,1.9,2009,2009,Survey,2009 DHS,direct share never married at 45-49
+Maldives,2016,1.62,2016,2017,Survey,2016-2017 DHS,direct share never married at 45-49
+Maldives,2016,0.7,2016,2017,Survey,2016-2017 DHS,direct share never married at 45-49
+Mali,1987,0.0,1987,1987,Survey,1987 DHS,direct share never married at 45-49
+Mali,1996,0.2,1995,1996,Survey,1995-1996 DHS,direct share never married at 45-49
+Mali,2001,0.0,2001,2001,Survey,2001 DHS,direct share never married at 45-49
+Mali,2006,0.1,2006,2006,Survey,2006 DHS,direct share never married at 45-49
+Mali,2010,0.41,2009,2010,Survey,2009-2010 MICS,direct share never married at 45-49
+Mali,2012,0.5,2012,2013,Survey,2012-2013 DHS ,direct share never married at 45-49
+Mali,2012,0.7,2012,2013,Survey,2012-2013 DHS ,direct share never married at 45-49
+Mali,2015,0.46,2015,2015,Survey,2015 MICS,direct share never married at 45-49
+Mali,2018,0.68,2018,2018,Survey,2018 DHS,direct share never married at 45-49
+Mauritania,2000,2.0,2000,2001,Survey,2000-2001 DHS,direct share never married at 45-49
+Mauritania,2007,2.73,2007,2007,Survey,2007 MICS,direct share never married at 45-49
+Mauritania,2011,2.37,2011,2011,Survey,2011 MICS,direct share never married at 45-49
+Mauritania,2011,2.44,2011,2011,Survey,2011 MICS_HH,direct share never married at 45-49
+Mauritania,2015,1.59,2015,2015,Survey,2015 MICS,direct share never married at 45-49
+Mexico,1987,4.7,1987,1987,Survey,1987 DHS,direct share never married at 45-49
+Mexico,2015,8.18,2015,2015,Survey,2015 MICS,direct share never married at 45-49
+Mongolia,2000,2.31,2000,2000,Survey,2000 MICS,direct share never married at 45-49
+Mongolia,2000,2.22,2000,2000,Survey,2000 MICS_HH,direct share never married at 45-49
+Mongolia,2005,3.05,2005,2005,Survey,2005 MICS,direct share never married at 45-49
+Mongolia,2010,2.3,2010,2010,Survey,2010 MICS,direct share never married at 45-49
+Mongolia,2014,2.56,2013,2014,Survey,2013 MICS,direct share never married at 45-49
+Montenegro,2006,6.86,2005,2006,Survey,2005-2006 MICS,direct share never married at 45-49
+Montenegro,2013,5.94,2013,2013,Survey,2013 MICS,direct share never married at 45-49
+Morocco,1987,1.2,1987,1987,Survey,1987 DHS,direct share never married at 45-49
+Morocco,1992,0.4,1992,1992,Survey,1992 DHS,direct share never married at 45-49
+Morocco,2004,4.6,2003,2004,Survey,2003-2004 DHS,direct share never married at 45-49
+Mozambique,1997,2.9,1997,1997,Survey,1997 DHS,direct share never married at 45-49
+Mozambique,2003,1.3,2003,2003,Survey,2003 DHS,direct share never married at 45-49
+Mozambique,2008,0.17,2008,2008,Survey,2008 MICS,direct share never married at 45-49
+Mozambique,2009,0.7,2009,2009,Survey,2009 AIS,direct share never married at 45-49
+Mozambique,2009,0.5,2009,2009,Survey,2009 AIS,direct share never married at 45-49
+Mozambique,2011,1.2,2011,2011,Survey,2011 DHS,direct share never married at 45-49
+Mozambique,2011,2.3,2011,2011,Survey,2011 DHS,direct share never married at 45-49
+Mozambique,2015,1.4,2015,2015,Survey,2015 AIS,direct share never married at 45-49
+Myanmar,2000,12.86,2000,2000,Survey,2000 MICS,direct share never married at 45-49
+Myanmar,2000,12.51,2000,2000,Survey,2000 MICS_HH,direct share never married at 45-49
+Myanmar,2016,14.68,2015,2016,Survey,2015-16 MDHS,direct share never married at 45-49
+Myanmar,2016,13.5,2015,2016,Survey,2015-2016 DHS,direct share never married at 45-49
+Namibia,1992,11.9,1992,1992,Survey,1992 DHS,direct share never married at 45-49
+Namibia,2000,13.1,2000,2000,Survey,2000 DHS,direct share never married at 45-49
+Namibia,2006,22.9,2006,2007,Survey,2006-2007 DHS,direct share never married at 45-49
+Namibia,2006,17.1,2006,2007,Survey,2006-2007 DHS,direct share never married at 45-49
+Namibia,2013,28.6,2013,2013,Survey,2013 DHS,direct share never married at 45-49
+Namibia,2013,24.1,2013,2013,Survey,2013 DHS,direct share never married at 45-49
+Nepal,1996,1.5,1996,1996,Survey,1996 DHS,direct share never married at 45-49
+Nepal,1996,1.4,1996,1996,Survey,1996 DHS,direct share never married at 45-49
+Nepal,2001,1.4,2001,2001,Survey,2001 DHS,direct share never married at 45-49
+Nepal,2006,1.4,2006,2006,Survey,2006 DHS,direct share never married at 45-49
+Nepal,2006,1.2,2006,2006,Survey,2006 DHS,direct share never married at 45-49
+Nepal,2011,0.9,2011,2011,Survey,2011 DHS,direct share never married at 45-49
+Nepal,2011,1.3,2011,2011,Survey,2011 DHS,direct share never married at 45-49
+Nepal,2014,0.69,2014,2014,Survey,2014 MICS,direct share never married at 45-49
+Nepal,2016,1.48,2016,2017,Survey,2016 DHS,direct share never married at 45-49
+Nepal,2016,1.3,2016,2017,Survey,2016 DHS,direct share never married at 45-49
+Netherlands,2003,6.17,2002,2004,Survey,2002-2004 GGS,direct share never married at 45-49
+Nicaragua,1998,2.23,1998,1998,Survey,1997-1998 DHS,direct share never married at 45-49
+Nicaragua,1998,2.3,1998,1999,Survey,1998-1999 LSMS,direct share never married at 45-49
+Nicaragua,1998,2.4,1998,1999,Survey,1998-1999 LSMS,direct share never married at 45-49
+Nicaragua,2001,6.9,2001,2001,Survey,2001 DHS,direct share never married at 45-49
+Nicaragua,2001,3.1,2001,2001,Survey,2001 DHS,direct share never married at 45-49
+Niger,1992,0.0,1992,1992,Survey,1992 DHS,direct share never married at 45-49
+Niger,1992,0.0,1992,1992,Survey,1992 DHS,direct share never married at 45-49
+Niger,1998,0.2,1998,1998,Survey,1998 DHS,direct share never married at 45-49
+Niger,2000,0.07,2000,2000,Survey,2000 MICS,direct share never married at 45-49
+Niger,2000,0.41,2000,2000,Survey,2000 MICS_HH,direct share never married at 45-49
+Niger,2006,0.2,2006,2006,Survey,2006 DHS,direct share never married at 45-49
+Niger,2012,0.9,2012,2012,Survey,2012 DHS-MICS,direct share never married at 45-49
+Niger,2012,0.5,2012,2012,Survey,2012 DHS-MICS,direct share never married at 45-49
+Nigeria,1990,0.1,1990,1990,Survey,1990 DHS,direct share never married at 45-49
+Nigeria,2003,0.9,2003,2003,Survey,2003 DHS,direct share never married at 45-49
+Nigeria,2007,3.83,2007,2007,Survey,2007 MICS,direct share never married at 45-49
+Nigeria,2008,0.9,2008,2008,Survey,2008 DHS,direct share never married at 45-49
+Nigeria,2008,0.8,2008,2008,Survey,2008 DHS,direct share never married at 45-49
+Nigeria,2011,1.78,2011,2011,Survey,2011 MICS,direct share never married at 45-49
+Nigeria,2013,1.2,2013,2013,Survey,2013 DHS,direct share never married at 45-49
+Nigeria,2013,0.7,2013,2013,Survey,2013 DHS,direct share never married at 45-49
+Pakistan,1990,2.0,1990,1991,Survey,1990-1991 DHS,direct share never married at 45-49
+Pakistan,1990,2.1,1990,1991,Survey,1990-1991 DHS,direct share never married at 45-49
+Pakistan,2006,1.3,2006,2007,Survey,2006-2007 DHS,direct share never married at 45-49
+Pakistan,2006,1.4,2006,2007,Survey,2006-2007 DHS,direct share never married at 45-49
+Pakistan,2012,1.3,2012,2013,Survey,2012-2013 DHS,direct share never married at 45-49
+Pakistan,2012,1.3,2012,2013,Survey,2012-2013 DHS,direct share never married at 45-49
+Pakistan,2018,2.04,2017,2018,Survey,2017 DHS,direct share never married at 45-49
+Pakistan,2018,1.9,2017,2018,Survey,2017 DHS,direct share never married at 45-49
+Panama,2013,9.78,2013,2013,Survey,2013 MICS,direct share never married at 45-49
+Paraguay,1990,7.4,1990,1990,Survey,1990 DHS,direct share never married at 45-49
+Paraguay,2016,8.25,2016,2016,Survey,2016 MICS,direct share never married at 45-49
+Peru,1986,4.0,1986,1986,Survey,1986 DHS,direct share never married at 45-49
+Peru,1992,5.0,1991,1992,Survey,1991-1992 DHS,direct share never married at 45-49
+Peru,1996,4.3,1996,1996,Survey,1996 DHS,direct share never married at 45-49
+Peru,2000,6.6,2000,2000,Survey,2000 DHS,direct share never married at 45-49
+Peru,2004,7.9,2003,2006,Survey,2004-2006 DHS,direct share never married at 45-49
+Peru,2004,5.1,2003,2006,Survey,2004-2006 DHS,direct share never married at 45-49
+Peru,2008,7.9,2007,2008,Survey,2007-2008 DHS,direct share never married at 45-49
+Peru,2008,6.0,2007,2008,Survey,2007-2008 DHS,direct share never married at 45-49
+Peru,2009,8.5,2009,2009,Survey,2009 DHS,direct share never married at 45-49
+Peru,2009,7.7,2009,2009,Survey,2009 DHS,direct share never married at 45-49
+Peru,2010,8.5,2010,2010,Survey,2010 DHS,direct share never married at 45-49
+Peru,2010,7.3,2010,2010,Survey,2010 DHS,direct share never married at 45-49
+Peru,2011,6.6,2011,2011,Survey,2011 DHS,direct share never married at 45-49
+Peru,2011,6.3,2011,2011,Survey,2011 DHS,direct share never married at 45-49
+Peru,2012,7.6,2012,2012,Survey,2012 DHS,direct share never married at 45-49
+Peru,2012,6.5,2012,2012,Survey,2012 DHS,direct share never married at 45-49
+Philippines,1993,6.3,1993,1993,Survey,1993 DHS,direct share never married at 45-49
+Philippines,1998,6.6,1998,1998,Survey,1998 DHS,direct share never married at 45-49
+Philippines,1999,6.04,1999,1999,Survey,1999 MICS,direct share never married at 45-49
+Philippines,1999,7.28,1999,1999,Survey,1999 MICS_HH,direct share never married at 45-49
+Philippines,2003,4.5,2003,2003,Survey,2003 DHS,direct share never married at 45-49
+Philippines,2008,5.0,2008,2008,Survey,2008 DHS,direct share never married at 45-49
+Philippines,2013,6.3,2013,2013,Survey,2013 DHS,direct share never married at 45-49
+Philippines,2017,6.67,2017,2017,Survey,2017 DHS,direct share never married at 45-49
+Philippines,2017,8.2,2017,2017,Survey,2017 DHS,direct share never married at 45-49
+Poland,2010,7.63,2010,2011,Survey,2010-2011 GGS,direct share never married at 45-49
+Republic of Moldova,2000,1.13,2000,2000,Survey,2000 MICS,direct share never married at 45-49
+Republic of Moldova,2000,1.47,2000,2000,Survey,2000 MICS_HH,direct share never married at 45-49
+Republic of Moldova,2005,1.3,2005,2005,Survey,2005 DHS,direct share never married at 45-49
+Republic of Moldova,2012,1.24,2012,2012,Survey,2012 MICS,direct share never married at 45-49
+Russian Federation,2006,3.59,2004,2008,Survey,2004-2008 GGS,direct share never married at 45-49
+Russian Federation,2007,4.67,2007,2007,Survey,2007 GGS,direct share never married at 45-49
+Rwanda,1992,0.7,1992,1992,Survey,1992 DHS,direct share never married at 45-49
+Rwanda,2000,1.1,2000,2000,Survey,2000 DHS,direct share never married at 45-49
+Rwanda,2000,0.89,2000,2000,Survey,2000 MICS_HH,direct share never married at 45-49
+Rwanda,2005,2.0,2005,2005,Survey,2005 DHS,direct share never married at 45-49
+Rwanda,2005,1.7,2005,2005,Survey,2005 DHS,direct share never married at 45-49
+Rwanda,2008,2.3,2007,2008,Survey,2007-2008 DHS Interim,direct share never married at 45-49
+Rwanda,2008,3.4,2007,2008,Survey,2007-2008 DHS Interim,direct share never married at 45-49
+Rwanda,2011,2.0,2011,2011,Survey,2010 DHS,direct share never married at 45-49
+Rwanda,2011,1.9,2011,2011,Survey,2010 DHS,direct share never married at 45-49
+Rwanda,2014,4.04,2014,2015,Survey,2014-2015 DHS,direct share never married at 45-49
+Rwanda,2014,3.5,2014,2015,Survey,2014-2015 DHS,direct share never married at 45-49
+Saint Lucia,2012,5.77,2012,2012,Survey,2012 MICS,direct share never married at 45-49
+Sao Tome and Principe,2000,0.64,2000,2000,Survey,2000 MICS,direct share never married at 45-49
+Sao Tome and Principe,2000,2.08,2000,2000,Survey,2000 MICS_HH,direct share never married at 45-49
+Sao Tome and Principe,2008,0.0,2008,2009,Survey,2008-2009 DHS,direct share never married at 45-49
+Sao Tome and Principe,2008,1.3,2008,2009,Survey,2008-2009 DHS,direct share never married at 45-49
+Sao Tome and Principe,2014,1.0,2014,2014,Survey,2014 MICS,direct share never married at 45-49
+Senegal,1986,0.0,1986,1986,Survey,1986 DHS,direct share never married at 45-49
+Senegal,1992,0.8,1992,1993,Survey,1992-1993 DHS,direct share never married at 45-49
+Senegal,1997,0.1,1997,1997,Survey,1997 DHS,direct share never married at 45-49
+Senegal,2000,0.51,2000,2000,Survey,2000 MICS,direct share never married at 45-49
+Senegal,2000,0.89,2000,2000,Survey,2000 MICS_HH,direct share never married at 45-49
+Senegal,2005,0.6,2005,2005,Survey,2005 DHS,direct share never married at 45-49
+Senegal,2010,3.2,2010,2011,Survey,2010-2011 DHS-MICS,direct share never married at 45-49
+Senegal,2010,3.0,2010,2011,Survey,2010-2011 DHS-MICS,direct share never married at 45-49
+Senegal,2012,3.1,2012,2013,Survey,2012-2013 DHS,direct share never married at 45-49
+Senegal,2012,2.5,2012,2013,Survey,2012-2013 DHS,direct share never married at 45-49
+Senegal,2013,3.0,2012,2014,Survey,2012-2014 DHS,direct share never married at 45-49
+Senegal,2014,2.9,2014,2014,Survey,2014 DHS,direct share never married at 45-49
+Senegal,2014,2.6,2014,2014,Survey,2014 DHS,direct share never married at 45-49
+Senegal,2015,2.86,2015,2015,Survey,2015 DHS,direct share never married at 45-49
+Senegal,2015,2.6,2015,2015,Survey,2015 DHS,direct share never married at 45-49
+Senegal,2016,3.25,2016,2016,Survey,2016 DHS,direct share never married at 45-49
+Senegal,2016,2.1,2016,2016,Survey,2016 DHS,direct share never married at 45-49
+Senegal,2017,2.36,2017,2017,Survey,2017 DHS,direct share never married at 45-49
+Senegal,2017,2.3,2017,2017,Survey,2017 DHS,direct share never married at 45-49
+Serbia,2006,4.62,2005,2006,Survey,2005-2006 MICS,direct share never married at 45-49
+Serbia,2010,2.42,2010,2010,Survey,2010 MICS,direct share never married at 45-49
+Serbia,2014,5.86,2014,2014,Survey,2014 MICS,direct share never married at 45-49
+Sierra Leone,2000,1.72,2000,2000,Survey,2000 MICS,direct share never married at 45-49
+Sierra Leone,2000,3.03,2000,2000,Survey,2000 MICS_HH,direct share never married at 45-49
+Sierra Leone,2006,1.36,2005,2006,Survey,2005 MICS,direct share never married at 45-49
+Sierra Leone,2008,0.9,2008,2008,Survey,2008 DHS,direct share never married at 45-49
+Sierra Leone,2008,1.3,2008,2008,Survey,2008 DHS,direct share never married at 45-49
+Sierra Leone,2010,2.94,2010,2010,Survey,2010 MICS,direct share never married at 45-49
+Sierra Leone,2013,1.1,2013,2013,Survey,2013 DHS,direct share never married at 45-49
+Sierra Leone,2013,1.3,2013,2013,Survey,2013 DHS,direct share never married at 45-49
+Sierra Leone,2017,5.84,2017,2017,Survey,2017 MICS,direct share never married at 45-49
+Somalia,2006,0.58,2006,2006,Survey,2006 MICS,direct share never married at 45-49
+South Africa,1998,11.5,1998,1998,Survey,1998 DHS,direct share never married at 45-49
+South Africa,2016,32.07,2016,2016,Survey,2016 DHS,direct share never married at 45-49
+South Africa,2016,31.3,2016,2016,Survey,2016 DHS,direct share never married at 45-49
+South Sudan,2010,0.88,2010,2010,Survey,2010 MICS,direct share never married at 45-49
+South Sudan,2010,1.16,2010,2010,Survey,2010 MICS_HH,direct share never married at 45-49
+Sri Lanka,1987,3.6,1987,1987,Survey,1987 DHS,direct share never married at 45-49
+State of Palestine,2010,8.07,2010,2010,Survey,2010 MICS_HH,direct share never married at 45-49
+State of Palestine,2014,8.64,2014,2014,Survey,2014 MICS,direct share never married at 45-49
+Sudan,1990,1.3,1989,1990,Survey,1989-1990 DHS,direct share never married at 45-49
+Sudan,2000,1.74,2000,2000,Survey,2000 MICS_HH,direct share never married at 45-49
+Sudan,2010,4.32,2010,2010,Survey,2010 MICS,direct share never married at 45-49
+Sudan,2010,5.11,2010,2010,Survey,2010 MICS_HH,direct share never married at 45-49
+Sudan,2014,5.81,2014,2014,Survey,2014 MICS,direct share never married at 45-49
+Suriname,2000,5.11,1999,2000,Survey,2000 MICS,direct share never married at 45-49
+Suriname,2000,7.01,1999,2000,Survey,2000 MICS_HH,direct share never married at 45-49
+Suriname,2006,8.15,2006,2006,Survey,2006 MICS,direct share never married at 45-49
+Suriname,2010,8.19,2010,2010,Survey,2010 MICS,direct share never married at 45-49
+Eswatini,2000,10.27,2000,2000,Survey,2000 MICS,direct share never married at 45-49
+Eswatini,2000,12.89,2000,2000,Survey,2000 MICS_HH,direct share never married at 45-49
+Eswatini,2006,14.5,2006,2007,Survey,2006-2007 DHS,direct share never married at 45-49
+Eswatini,2006,8.7,2006,2007,Survey,2006-2007 DHS,direct share never married at 45-49
+Eswatini,2010,10.46,2010,2010,Survey,2010 MICS,direct share never married at 45-49
+Eswatini,2014,11.47,2014,2014,Survey,2014 MICS,direct share never married at 45-49
+Sweden,2012,8.84,2012,2013,Survey,2012-2013 GGS,direct share never married at 45-49
+Syrian Arab Republic,2006,5.29,2006,2006,Survey,2006 MICS,direct share never married at 45-49
+Tajikistan,2000,0.74,2000,2000,Survey,2000 MICS,direct share never married at 45-49
+Tajikistan,2000,0.73,2000,2000,Survey,2000 MICS_HH,direct share never married at 45-49
+Tajikistan,2005,0.41,2005,2005,Survey,2005 MICS,direct share never married at 45-49
+Tajikistan,2012,0.6,2012,2012,Survey,2012 DHS,direct share never married at 45-49
+Tajikistan,2012,0.5,2012,2012,Survey,2012 DHS,direct share never married at 45-49
+Tajikistan,2017,1.57,2017,2017,Survey,2017 DHS,direct share never married at 45-49
+Tajikistan,2017,2.2,2017,2017,Survey,2017 DHS,direct share never married at 45-49
+TFYR Macedonia,2011,1.4,2011,2011,Survey,2011 MICS,direct share never married at 45-49
+Thailand,1987,3.9,1987,1987,Survey,1987 DHS,direct share never married at 45-49
+Thailand,2006,6.57,2005,2006,Survey,2005-2006 MICS,direct share never married at 45-49
+Thailand,2012,7.15,2012,2013,Survey,2012 MICS,direct share never married at 45-49
+Timor-Leste,2010,3.3,2009,2010,Survey,2009-2010 DHS,direct share never married at 45-49
+Timor-Leste,2010,3.2,2009,2010,Survey,2009-2010 DHS,direct share never married at 45-49
+Timor-Leste,2016,4.24,2016,2016,Survey,2016 DHS,direct share never married at 45-49
+Timor-Leste,2016,5.7,2016,2016,Survey,2016 DHS,direct share never married at 45-49
+Togo,1988,0.0,1988,1988,Survey,1988 DHS,direct share never married at 45-49
+Togo,1998,0.3,1998,1998,Survey,1998 DHS,direct share never married at 45-49
+Togo,2000,0.0,2000,2000,Survey,2000 MICS,direct share never married at 45-49
+Togo,2000,0.0,2000,2000,Survey,2000 MICS_HH,direct share never married at 45-49
+Togo,2010,1.49,2010,2010,Survey,2010 MICS,direct share never married at 45-49
+Togo,2014,1.2,2013,2014,Survey,2013-2014 DHS-MICS,direct share never married at 45-49
+Togo,2014,1.5,2013,2014,Survey,2013-2014 DHS-MICS,direct share never married at 45-49
+Trinidad and Tobago,1987,1.4,1987,1987,Survey,1987 DHS,direct share never married at 45-49
+Trinidad and Tobago,2000,16.4,2000,2000,Survey,2000 MICS,direct share never married at 45-49
+Trinidad and Tobago,2000,15.11,2000,2000,Survey,2000 MICS_HH,direct share never married at 45-49
+Trinidad and Tobago,2006,11.32,2006,2006,Survey,2006 MICS,direct share never married at 45-49
+Tunisia,1988,8.4,1988,1988,Survey,1988 DHS,direct share never married at 45-49
+Tunisia,2012,10.2,2011,2012,Survey,2011-2012 MICS,direct share never married at 45-49
+Turkey,1993,0.95,1993,1993,Survey,1993 DHS,direct share never married at 45-49
+Turkey,1993,0.9,1993,1993,Survey,1993 DHS,direct share never married at 45-49
+Turkey,1998,1.8,1998,1998,Survey,1998 DHS,direct share never married at 45-49
+Turkey,1998,1.7,1998,1998,Survey,1998 DHS,direct share never married at 45-49
+Turkey,2004,1.6,2003,2004,Survey,2003 DHS,direct share never married at 45-49
+Turkey,2004,1.5,2003,2004,Survey,2003 DHS,direct share never married at 45-49
+Turkey,2008,2.16,2008,2008,Survey,2008 DHS,direct share never married at 45-49
+Turkey,2008,0.1,2008,2008,Survey,2008 DHS,direct share never married at 45-49
+Turkey,2014,3.05,2013,2014,Survey,2013 NDHS,direct share never married at 45-49
+Turkey,2014,3.3,2013,2014,Survey,2013 NDHS,direct share never married at 45-49
+Turkmenistan,2000,0.5,2000,2000,Survey,2000 DHS,direct share never married at 45-49
+Turkmenistan,2006,1.7,2006,2006,Survey,2006 MICS,direct share never married at 45-49
+Turkmenistan,2015,1.72,2015,2015,Survey,2015 MICS,direct share never married at 45-49
+Uganda,1988,0.9,1988,1989,Survey,1988-1989 DHS,direct share never married at 45-49
+Uganda,1995,1.4,1995,1995,Survey,1995 DHS,direct share never married at 45-49
+Uganda,2000,0.5,2000,2001,Survey,2000-2001 DHS,direct share never married at 45-49
+Uganda,2004,1.2,2004,2005,Survey,2004-2005 AIS,direct share never married at 45-49
+Uganda,2006,2.0,2006,2006,Survey,2006 DHS,direct share never married at 45-49
+Uganda,2006,0.7,2006,2006,Survey,2006 DHS,direct share never married at 45-49
+Uganda,2011,1.7,2011,2011,Survey,2011 AIS,direct share never married at 45-49
+Uganda,2011,2.3,2011,2011,Survey,2011 DHS,direct share never married at 45-49
+Uganda,2011,2.2,2011,2011,Survey,2011 DHS,direct share never married at 45-49
+Uganda,2016,1.32,2016,2016,Survey,2016 DHS,direct share never married at 45-49
+Uganda,2016,1.5,2016,2016,Survey,2016 DHS,direct share never married at 45-49
+Ukraine,2005,2.1,2005,2005,Survey,2005 MICS,direct share never married at 45-49
+Ukraine,2007,2.5,2007,2007,Survey,2007 DHS,direct share never married at 45-49
+Ukraine,2012,3.23,2012,2012,Survey,2012 MICS,direct share never married at 45-49
+United Republic of Tanzania,1992,0.4,1991,1992,Survey,1991-1992 DHS,direct share never married at 45-49
+United Republic of Tanzania,1996,0.7,1996,1996,Survey,1996 DHS,direct share never married at 45-49
+United Republic of Tanzania,1999,0.8,1999,1999,Survey,1999 RCHS,direct share never married at 45-49
+United Republic of Tanzania,2004,2.4,2004,2005,Survey,2004-2005 DHS,direct share never married at 45-49
+United Republic of Tanzania,2008,2.7,2007,2008,Survey,2007-2008 AIS,direct share never married at 45-49
+United Republic of Tanzania,2008,2.8,2007,2008,Survey,2007-2008 AIS,direct share never married at 45-49
+United Republic of Tanzania,2010,5.7,2009,2010,Survey,2010 DHS,direct share never married at 45-49
+United Republic of Tanzania,2010,1.3,2009,2010,Survey,2010 DHS,direct share never married at 45-49
+United Republic of Tanzania,2012,3.5,2011,2012,Survey,2011-2012 AIS,direct share never married at 45-49
+United Republic of Tanzania,2012,2.3,2011,2012,Survey,2011-2012 AIS,direct share never married at 45-49
+United Republic of Tanzania,2015,2.13,2015,2015,Survey,2015-2016 DHS,direct share never married at 45-49
+United Republic of Tanzania,2016,1.6,2015,2016,Survey,2015-2016 DHS,direct share never married at 45-49
+Uruguay,2012,4.07,2012,2013,Survey,2012-2013 MICS,direct share never married at 45-49
+Uzbekistan,1996,1.4,1996,1996,Survey,1996 DHS,direct share never married at 45-49
+Uzbekistan,2000,0.69,2000,2000,Survey,2000 MICS,direct share never married at 45-49
+Uzbekistan,2000,0.84,2000,2000,Survey,2000 MICS_HH,direct share never married at 45-49
+Uzbekistan,2006,1.25,2006,2006,Survey,2006 MICS,direct share never married at 45-49
+Vanuatu,2008,3.1,2007,2008,Survey,2007 MICS,direct share never married at 45-49
+Venezuela (Bolivarian Republic of),2000,9.91,2000,2000,Survey,2000 MICS,direct share never married at 45-49
+Venezuela (Bolivarian Republic of),2000,9.68,2000,2000,Survey,2000 MICS_HH,direct share never married at 45-49
+Viet Nam,1997,5.2,1997,1997,Survey,1997 DHS,direct share never married at 45-49
+Viet Nam,1997,9.9,1997,1997,Survey,1997 DHS,direct share never married at 45-49
+Viet Nam,2000,5.0,2000,2000,Survey,2000 MICS,direct share never married at 45-49
+Viet Nam,2000,4.93,2000,2000,Survey,2000 MICS_HH,direct share never married at 45-49
+Viet Nam,2002,5.2,2002,2002,Survey,2002 DHS,direct share never married at 45-49
+Viet Nam,2002,5.1,2002,2002,Survey,2002 DHS,direct share never married at 45-49
+Viet Nam,2005,5.0,2005,2005,Survey,2005 AIS,direct share never married at 45-49
+Viet Nam,2005,4.0,2005,2005,Survey,2005 AIS,direct share never married at 45-49
+Viet Nam,2006,5.62,2006,2006,Survey,2006 MICS,direct share never married at 45-49
+Viet Nam,2010,4.33,2010,2011,Survey,2011 MICS,direct share never married at 45-49
+Viet Nam,2014,3.63,2013,2014,Survey,2013-2014 MICS,direct share never married at 45-49
+Yemen,1992,1.1,1991,1992,Survey,1991-1992 DHS,direct share never married at 45-49
+Yemen,1992,0.0,1991,1992,Survey,1991-1992 DHS,direct share never married at 45-49
+Yemen,1997,0.8,1997,1997,Survey,1997 DHS,direct share never married at 45-49
+Yemen,2006,1.39,2006,2006,Survey,2006 MICS_HH,direct share never married at 45-49
+Yemen,2013,2.2,2013,2013,Survey,2013 DHS,direct share never married at 45-49
+Yemen,2013,1.8,2013,2013,Survey,2013 DHS,direct share never married at 45-49
+Zambia,1992,0.0,1992,1992,Survey,1992 DHS,direct share never married at 45-49
+Zambia,1996,0.3,1996,1997,Survey,1996 DHS,direct share never married at 45-49
+Zambia,1996,0.7,1996,1997,Survey,1996 DHS,direct share never married at 45-49
+Zambia,1999,1.21,1999,1999,Survey,1999 MICS,direct share never married at 45-49
+Zambia,1999,1.16,1999,1999,Survey,1999 MICS_HH,direct share never married at 45-49
+Zambia,2002,0.2,2001,2002,Survey,2001-2002 DHS,direct share never married at 45-49
+Zambia,2007,0.5,2007,2007,Survey,2007 DHS,direct share never married at 45-49
+Zambia,2007,0.7,2007,2007,Survey,2007 DHS,direct share never married at 45-49
+Zambia,2014,1.6,2013,2014,Survey,2013-2014 DHS,direct share never married at 45-49
+Zambia,2014,0.6,2013,2014,Survey,2013-2014 DHS,direct share never married at 45-49
+Zimbabwe,1988,1.4,1988,1989,Survey,1988 DHS,direct share never married at 45-49
+Zimbabwe,1994,0.6,1994,1994,Survey,1994 DHS,direct share never married at 45-49
+Zimbabwe,1999,0.6,1999,1999,Survey,1999 DHS,direct share never married at 45-49
+Zimbabwe,2006,1.4,2005,2006,Survey,2005-2006 DHS,direct share never married at 45-49
+Zimbabwe,2006,0.9,2005,2006,Survey,2005-2006 DHS,direct share never married at 45-49
+Zimbabwe,2009,1.1,2009,2009,Survey,2009 MICS,direct share never married at 45-49
+Zimbabwe,2009,1.18,2009,2009,Survey,2009 MICS_HH,direct share never married at 45-49
+Zimbabwe,2010,1.4,2010,2011,Survey,2010-2011 DHS,direct share never married at 45-49
+Zimbabwe,2010,1.6,2010,2011,Survey,2010-2011 DHS,direct share never married at 45-49
+Zimbabwe,2014,2.41,2014,2014,Survey,2014 MICS,direct share never married at 45-49
+Zimbabwe,2015,2.93,2015,2015,Survey,2015 DHS,direct share never married at 45-49
+Zimbabwe,2015,4.3,2015,2015,Survey,2015 DHS,direct share never married at 45-49

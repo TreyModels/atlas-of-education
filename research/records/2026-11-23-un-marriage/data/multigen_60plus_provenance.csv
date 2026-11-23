@@ -1,0 +1,691 @@
+country,year,value,year_start,year_end,data_process,data_catalog,detail
+Afghanistan,2011,85.71,2011,2011,MICS,4983,Afghanistan 2010-2011 Multiple Indicator Cluster Survey
+Afghanistan,2015,89.6,2015,2015,DHS,5689,Afghanistan 2015 Demographic and Health Survey
+Afghanistan,2023,88.86,2023,2023,MICS,9218,Afghanistan 2022-2023 Multiple Indicator Cluster Survey
+Albania,2005,65.12,2005,2005,MICS,1906,Albania 2005 Multiple Indicator Cluster Survey
+Albania,2009,61.7,2009,2009,DHS,4483,Albania 2008-2009 Demographic and Health Survey
+Albania,2017,50.9,2017,2017,DHS,7474,Albania 2017-2018 Demographic and Health Survey
+Algeria,2012,91.44,2012,2012,MICS,4984,Algeria 2012-2013 Multiple Indicator Cluster Survey
+Algeria,2019,84.79,2019,2019,MICS,7573,Algeria 2018-2019 Multiple Indicator Cluster Survey
+Angola,2007,57.78,2007,2007,DHS,2272,Angola 2006-2007 Malaria Indicators Survey
+Angola,2011,45.03,2011,2011,DHS,5077,Angola 2011 Malaria Indicators Survey
+Angola,2016,37.04,2016,2016,DHS,5805,Angola 2015-2016 Demographic and Health Survey
+Angola,2023,42.99,2023,2023,DHS,9204,Angola 2023-2024 Demographic and Health Survey
+Argentina,1980,48.0,1980,1980,IPUMS,1505,Argentina 1980 Census
+Argentina,2001,45.54,2001,2001,IPUMS,99,Argentina 2001 Census
+Argentina,2010,44.42,2010,2010,IPUMS,4763,Argentina 2010 Census
+Argentina,2011,38.62,2011,2011,MICS,4985,Argentina 2011-2012 Multiple Indicator Cluster Survey
+Argentina,2020,37.09,2020,2020,MICS,7574,Argentina 2019-2020 Multiple Indicator Cluster Survey
+Armenia,2000,71.23,2000,2000,DHS,1848,Armenia 2000 Demographic and Health Survey
+Armenia,2001,69.88,2001,2001,IPUMS,1298,Armenia 2001 Census
+Armenia,2005,63.31,2005,2005,DHS,1843,Armenia 2005 Demographic and Health Survey
+Armenia,2010,61.44,2010,2010,DHS,5046,Armenia 2010 Demographic and Health Survey
+Armenia,2011,71.18,2011,2011,IPUMS,4774,Armenia 2011 Census
+Armenia,2016,61.45,2016,2016,DHS,5806,Armenia 2015-16 Demographic and Health Survey
+Azerbaijan,2006,74.38,2006,2006,DHS,179,Azerbaijan 2006 Demographic and Health Survey
+Azerbaijan,2023,68.56,2023,2023,MICS,7790,Azerbaijan 2023 Multiple Indicator Cluster Survey
+Bangladesh,1994,81.01,1994,1994,DHS,1814,Bangladesh 1993-1994 Demographic and Health Survey
+Bangladesh,1997,80.32,1997,1997,DHS,1815,Bangladesh 1996-1997 Demographic and Health Survey
+Bangladesh,2000,80.27,2000,2000,DHS,1816,Bangladesh 1999-2000 Demographic and Health Survey
+Bangladesh,2004,78.59,2004,2004,DHS,1813,Bangladesh 2004 Demographic and Health Survey
+Bangladesh,2006,77.1,2006,2006,MICS,2286,Bangladesh 2006 Multiple Indicator Cluster Survey
+Bangladesh,2007,76.28,2007,2007,DHS,1840,Bangladesh 2007 Demographic and Health Survey
+Bangladesh,2011,77.01,2011,2011,DHS,5048,Bangladesh 2011 Demographic and Health Survey
+Bangladesh,2013,76.66,2013,2013,MICS,5595,Bangladesh 2012-2013 Multiple Indicator Cluster Survey
+Bangladesh,2014,75.47,2014,2014,DHS,5787,Bangladesh 2014 Demographic and Health Survey
+Bangladesh,2018,74.67,2018,2018,DHS,7475,Bangladesh 2017-2018 Demographic and Health Survey
+Bangladesh,2019,73.57,2019,2019,MICS,7575,Bangladesh 2019 Multiple Indicator Cluster Survey
+Bangladesh,2022,74.12,2022,2022,DHS,9449,Bangladesh 2022 Demographic and Health Survey
+Barbados,2012,50.81,2012,2012,MICS,4986,Barbados 2012 Multiple Indicator Cluster Survey
+Belarus,1999,29.2,1999,1999,IPUMS,1668,Belarus 1999 Census
+Belarus,2005,29.69,2005,2005,MICS,666,Belarus 2005 Multiple Indicator Cluster Survey
+Belarus,2009,34.32,2009,2009,IPUMS,2308,Belarus 2009 Census
+Belarus,2012,29.39,2012,2012,MICS,4987,Belarus 2012 Multiple Indicator Cluster Survey
+Belarus,2019,25.6,2019,2019,MICS,7576,Belarus 2019 Multiple Indicator Cluster Survey
+Belize,2006,47.94,2006,2006,MICS,2299,Belize 2006 Multiple Indicator Cluster Survey
+Belize,2011,47.83,2011,2011,MICS,4988,Belize 2011 Multiple Indicator Cluster Survey
+Belize,2015,49.33,2015,2015,MICS,5761,Belize 2015-2016 Multiple Indicator Cluster Survey
+Benin,1996,55.43,1996,1996,DHS,1780,Benin 1996 Demographic and Health Survey
+Benin,2001,52.65,2001,2001,DHS,1761,Benin 2001 Demographic and Health Survey
+Benin,2006,47.68,2006,2006,DHS,694,Benin 2006 Demographic and Health Survey
+Benin,2012,43.88,2012,2012,DHS,4493,Benin 2011-2012 Demographic and Health Survey
+Benin,2013,61.16,2013,2013,IPUMS,4705,Benin 2013 Census
+Benin,2014,50.42,2014,2014,MICS,5665,Benin 2014 Multiple Indicator Cluster Survey
+Benin,2018,55.7,2018,2018,DHS,6055,Benin 2017-2018 Demographic and Health Survey
+Benin,2021,50.22,2021,2021,MICS,9222,Benin 2021 Multiple Indicator Cluster Survey
+Bhutan,2010,76.64,2010,2010,MICS,4989,Bhutan 2010 Multiple Indicator Survey
+Bolivia (Plurinational State of),1976,47.95,1976,1976,IPUMS,1261,Bolivia 1976 Census
+Bolivia (Plurinational State of),1994,50.26,1994,1994,DHS,1769,Bolivia 1994 Demographic and Health Survey
+Bolivia (Plurinational State of),1998,46.44,1998,1998,DHS,1766,Bolivia 1998 Demographic and Health Survey
+Bolivia (Plurinational State of),2003,35.76,2003,2003,DHS,1844,Bolivia 2003 Demographic and Health Survey
+Bolivia (Plurinational State of),2008,45.82,2008,2008,DHS,4492,Bolivia 2008 Demographic and Health Survey
+Bolivia (Plurinational State of),2012,47.95,2012,2012,IPUMS,5280,Bolivia 2012 Census
+Bosnia and Herzegovina,2006,43.46,2006,2006,MICS,2296,Bosnia and Herzegovina 2006 Multiple Indicator Cluster Survey
+Bosnia and Herzegovina,2012,54.41,2012,2012,MICS,4990,Bosnia and Herzegovina 2011-2012 Multiple Indicator Cluster Survey
+Botswana,2000,64.61,2000,2000,MICS,1927,Botswana 2000 Multiple Indicator Cluster Survey
+Botswana,2001,61.97,2001,2001,IPUMS,1012,Botswana 2001 Census
+Botswana,2011,60.76,2011,2011,IPUMS,4706,Botswana 2011 Census
+Brazil,1991,56.36,1991,1991,IPUMS,1072,Brazil 1991 Census
+Brazil,1996,55.9,1996,1996,DHS,1868,Brazil 1996 Demographic and Health Survey
+Brazil,2010,52.9,2010,2010,IPUMS,4765,Brazil 2010 Census
+Burkina Faso,1993,49.19,1993,1993,DHS,1776,Burkina Faso 1993 Demographic and Health Survey
+Burkina Faso,1999,48.72,1999,1999,DHS,1777,Burkina Faso 1998-1999 Demographic and Health Survey
+Burkina Faso,2003,52.6,2003,2003,DHS,1787,Burkina Faso 2003 Demographic and Health Survey
+Burkina Faso,2006,61.07,2006,2006,MICS,136,Burkina Faso 2006 Multiple Indicator Cluster Survey
+Burkina Faso,2010,47.09,2010,2010,DHS,4494,Burkina Faso 2010 Demographic and Health Survey
+Burkina Faso,2014,56.19,2014,2014,DHS,5777,Burkina Faso 2014 Malaria Indicators Survey
+Burundi,2005,40.05,2005,2005,MICS,148,Burundi 2005 Multiple Indicator Cluster Survey
+Burundi,2010,41.2,2010,2010,DHS,4950,Burundi 2010 Demographic and Health Survey
+Burundi,2012,39.71,2012,2012,DHS,5464,Burundi 2012 Malaria Indicators Survey
+Burundi,2016,42.66,2016,2016,DHS,6056,Burundi 2016 Demographic and Health Survey
+Cambodia,2000,74.68,2000,2000,DHS,1825,Cambodia 2000 Demographic and Health Survey
+Cambodia,2004,72.34,2004,2004,IPUMS,198,Cambodia 2004 Intercensal Population Survey
+Cambodia,2005,72.79,2005,2005,DHS,1812,Cambodia 2005 Demographic and Health Survey
+Cambodia,2010,73.68,2010,2010,DHS,4951,Cambodia 2010 Demographic and Health Survey
+Cambodia,2013,76.56,2013,2013,IPUMS,5515,Cambodia 2013 Intercensal Population Survey
+Cambodia,2014,72.16,2014,2014,DHS,5566,Cambodia 2014 Demographic and Health Survey
+Cambodia,2021,66.57,2021,2021,DHS,7793,Cambodia 2021-2022 Demographic and Health Survey
+Cameroon,1991,49.07,1991,1991,DHS,1798,Cameroon 1991 Demographic and Health Survey
+Cameroon,1998,55.11,1998,1998,DHS,1674,Cameroon 1998 Demographic and Health Survey
+Cameroon,2004,47.8,2004,2004,DHS,1786,Cameroon 2004 Demographic and Health Survey
+Cameroon,2005,52.15,2005,2005,IPUMS,882,Cameroon 2005 Census
+Cameroon,2006,43.53,2006,2006,MICS,2312,Cameroon 2006 Multiple Indicator Cluster Survey
+Cameroon,2011,50.79,2011,2011,DHS,4686,Cameroon 2011 Demographic and Health Survey
+Cameroon,2014,48.68,2014,2014,MICS,5641,Cameroon 2014 Multiple Indicator Cluster Survey
+Cameroon,2018,55.19,2018,2018,DHS,7684,Cameroon 2018 Demographic and Health Survey
+Cameroon,2022,56.05,2022,2022,DHS,7794,Cameroon 2022 Malaria Indicators Survey
+Central African Republic,1994,41.93,1994,1994,DHS,1732,Central African Republic 1994-1995 Demographic and Health Survey
+Central African Republic,2006,42.76,2006,2006,MICS,54,Central African Republic 2006 Multiple Indicator Cluster Survey
+Central African Republic,2010,51.42,2010,2010,MICS,4991,Central African Republic 2010 Multiple Indicator Cluster Survey
+Central African Republic,2019,57.33,2019,2019,MICS,7500,Central African Republic 2018-2019 Multiple Indicator Cluster Survey
+Chad,1997,42.29,1997,1997,DHS,1675,Chad 1996-1997 Demographic and Health Survey
+Chad,2004,45.78,2004,2004,DHS,1762,Chad 2004 Demographic and Health Survey
+Chad,2010,38.68,2010,2010,MICS,4992,Chad 2010 Multiple Indicator Cluster Survey
+Chad,2015,42.77,2015,2015,DHS,5564,Chad 2014-2015 Demographic and Health Survey
+Chad,2019,47.96,2019,2019,MICS,7577,Chad 2019 Multiple Indicator Cluster Survey
+Chile,1982,56.72,1982,1982,IPUMS,1593,Chile 1982 Census
+Chile,1992,57.64,1992,1992,IPUMS,861,Chile 1992 Census
+Chile,2002,55.18,2002,2002,IPUMS,1037,Chile 2002 Census
+Chile,2017,49.78,2017,2017,IPUMS,7105,Chile 2017 Census
+China,1982,68.62,1982,1982,IPUMS,1619,China 1982 Census
+China,1990,68.79,1990,1990,IPUMS,1569,China 1990 Census
+China,2000,60.11,2000,2000,IPUMS,272,China 2000 Census
+Colombia,1985,65.8,1985,1985,IPUMS,257,Colombia 1985 Census
+Colombia,1990,67.39,1990,1990,DHS,1860,Colombia 1990 Demographic and Health Survey
+Colombia,1993,66.03,1993,1993,IPUMS,1359,Colombia 1993 Census
+Colombia,1995,66.82,1995,1995,DHS,1862,Colombia 1995 Demographic and Health Survey
+Colombia,2000,65.76,2000,2000,DHS,1861,Colombia 2000 Demographic and Health Survey
+Colombia,2005,67.09,2005,2005,DHS,1859,Colombia 2005 Demographic and Health Survey
+Colombia,2005,60.71,2005,2005,IPUMS,407,Colombia 2005 Census
+Colombia,2010,62.1,2010,2010,DHS,4945,Colombia 2010 Demographic and Health Survey
+Colombia,2015,58.73,2015,2015,DHS,5788,Colombia 2015 Demographic and Health Survey
+Comoros,1996,63.12,1996,1996,DHS,1707,Comoros 1996 Demographic and Health Survey
+Comoros,2012,66.84,2012,2012,DHS,5459,Comoros 2012 Demographic and Health Survey
+Comoros,2022,68.8,2022,2022,MICS,9220,Comoros 2022 Multiple Indicator Cluster Survey
+Congo,2005,61.41,2005,2005,DHS,1709,Congo 2005 Demographic and Health Survey
+Congo,2009,53.39,2009,2009,DHS,4946,Congo 2009 HIV-AIDS Indicator Survey
+Congo,2011,49.47,2011,2011,DHS,5050,Congo 2011-2012 Demographic and Health Survey
+Congo,2015,57.06,2015,2015,MICS,5642,Congo 2014-2015 Multiple Indicator Cluster Survey
+Costa Rica,1984,62.3,1984,1984,IPUMS,990,Costa Rica 1984 Census
+Costa Rica,2000,59.08,2000,2000,IPUMS,1590,Costa Rica 2000 Census
+Costa Rica,2011,56.73,2011,2011,IPUMS,4741,Costa Rica 2011 Census
+Costa Rica,2011,57.45,2011,2011,MICS,4993,Costa Rica 2011 Multiple Indicator Cluster Survey
+Costa Rica,2018,54.73,2018,2018,MICS,5762,Costa Rica 2018 Multiple Indicator Cluster Survey
+Cuba,2002,60.49,2002,2002,IPUMS,346,Cuba 2002 Census
+Cuba,2011,59.11,2011,2011,MICS,4994,Cuba 2010-2011 Multiple Indicator Cluster Survey
+Cuba,2012,54.27,2012,2012,IPUMS,4742,Cuba 2012 Census
+Cuba,2014,51.54,2014,2014,MICS,5673,Cuba 2014 Multiple Indicator Cluster Survey
+Cuba,2019,47.18,2019,2019,MICS,7578,Cuba 2019 Multiple Indicator Cluster Survey
+Côte d'Ivoire,1994,61.22,1994,1994,DHS,1779,Cote d'Ivoire 1994 Demographic and Health Survey
+Côte d'Ivoire,1998,65.95,1998,1998,DHS,1778,Côte d'Ivoire 1998-1999 Demographic and Health Survey
+Côte d'Ivoire,2005,63.22,2005,2005,DHS,733,Côte d'Ivoire 2005 Enquête sur les indicateurs du sida
+Côte d'Ivoire,2012,55.73,2012,2012,DHS,4687,Côte d'Ivoire 2011-2012 Demographic and Health Survey
+Côte d'Ivoire,2016,58.37,2016,2016,MICS,5635,Côte d'Ivoire 2016 Multiple Indicator Cluster Survey
+Côte d'Ivoire,2021,53.37,2021,2021,DHS,9289,"Enquête Démographique et de Santé de Côte d’Ivoire, 2021."
+Democratic Republic of the Congo,2001,64.44,2001,2001,MICS,1935,Democratic Republic of the Congo 2001 Multiple Indicator Cluster Survey
+Democratic Republic of the Congo,2007,58.04,2007,2007,DHS,1888,Democratic Republic of the Congo 2007 Demographic and Health Survey
+Democratic Republic of the Congo,2010,51.78,2010,2010,MICS,4996,Democratic Republic of the Congo 2010 Multiple Indicator Cluster Survey
+Democratic Republic of the Congo,2013,48.49,2013,2013,DHS,5612,Democratic Republic of the Congo 2013-2014 Demographic and Health Survey
+Democratic Republic of the Congo,2018,53.47,2018,2018,MICS,7798,Democratic Republic of the Congo 2017-2018 Multiple Indicator Cluster Survey
+Democratic Republic of the Congo,2023,52.78,2023,2023,DHS,9206,Democratic Republic of the Congo 2023-2024 Demographic and Health Survey
+Djibouti,2006,78.62,2006,2006,MICS,1922,Djibouti 2006 Multiple Indicator Cluster Survey
+Dominican Republic,1991,62.73,1991,1991,DHS,1671,Dominican Republic 1991 Demographic and Health Survey
+Dominican Republic,1996,58.69,1996,1996,DHS,1685,Dominican Republic 1996 Demographic and Health Survey
+Dominican Republic,1999,58.51,1999,1999,DHS,1684,Dominican Republic 1999 Demographic and Health Survey
+Dominican Republic,2002,47.28,2002,2002,DHS,1710,Dominican Republic 2002 Demographic and Health Survey
+Dominican Republic,2002,58.54,2002,2002,IPUMS,910,Dominican Republic 2002 Census
+Dominican Republic,2007,47.35,2007,2007,DHS,49,Dominican Republic 2007 Demographic and Health Survey
+Dominican Republic,2010,55.73,2010,2010,IPUMS,4744,Dominican Republic 2010 Census
+Dominican Republic,2013,48.01,2013,2013,DHS,5710,Dominican Republic 2013 Demographic and Health Survey
+Dominican Republic,2014,53.4,2014,2014,MICS,5674,Dominican Republic 2014 Multiple Indicator Cluster Survey
+Dominican Republic,2019,51.0,2019,2019,MICS,7596,Dominican Republic 2019 Multiple Indicator Cluster Survey
+Ecuador,1974,59.5,1974,1974,IPUMS,1379,Ecuador 1974 Census
+Ecuador,1982,56.94,1982,1982,IPUMS,1440,Ecuador 1982 Census
+Ecuador,1990,58.34,1990,1990,IPUMS,921,Ecuador 1990 Census
+Ecuador,2001,53.55,2001,2001,IPUMS,1162,Ecuador 2001 Census
+Ecuador,2010,55.34,2010,2010,IPUMS,4768,Ecuador 2010 Census
+Egypt,1993,75.02,1993,1993,DHS,1832,Egypt 1992 Demographic and Health Survey
+Egypt,1995,71.87,1995,1995,DHS,1829,Egypt 1995 Demographic and Health Survey
+Egypt,2000,71.22,2000,2000,DHS,1830,Egypt 2000 Demographic and Health Survey
+Egypt,2003,71.58,2003,2003,DHS,778,Egypt 2003 Demographic and Health Survey (Interim)
+Egypt,2005,68.5,2005,2005,DHS,1806,Egypt 2005 Demographic and Health Survey
+Egypt,2006,56.58,2006,2006,IPUMS,1563,Egypt 2006 Census
+Egypt,2008,64.26,2008,2008,DHS,4685,Egypt 2008 Demographic and Health Survey
+Egypt,2014,55.17,2014,2014,DHS,5711,Egypt 2014 Demographic and Health Survey
+El Salvador,1992,53.6,1992,1992,IPUMS,895,El Salvador 1992 Census
+El Salvador,2007,61.43,2007,2007,IPUMS,1096,El Salvador 2007 Census
+El Salvador,2014,61.19,2014,2014,MICS,5561,El Salvador 2014 MICS
+Eswatini,2006,63.89,2006,2006,DHS,1695,Eswatini 2006-2007 Demographic and Health Survey
+Eswatini,2010,62.46,2010,2010,MICS,5031,Eswatini 2010 Multiple Indicator Cluster Survey
+Eswatini,2014,61.19,2014,2014,MICS,5584,Eswatini 2014 Multiple Indicator Cluster Survey
+Eswatini,2021,63.61,2021,2021,MICS,9221,Eswatini 2021-2022 Multiple Indicator Cluster Survey
+Ethiopia,2000,51.0,2000,2000,DHS,1694,Ethiopia 2000 Demographic and Health Survey
+Ethiopia,2005,51.11,2005,2005,DHS,1858,Ethiopia 2005 Demographic and Health Survey
+Ethiopia,2011,48.42,2011,2011,DHS,5053,Ethiopia 2011 Demographic and Health Survey
+Ethiopia,2016,48.76,2016,2016,DHS,5808,Ethiopia 2016 Demographic and Health Survey
+Ethiopia,2019,55.2,2019,2019,DHS,7685,Ethiopia 2019 Demographic and Health Survey
+Fiji,1976,68.08,1976,1976,IPUMS,969,Fiji 1976 Census
+Fiji,1986,71.74,1986,1986,IPUMS,1361,Fiji 1986 Census
+Fiji,1996,70.74,1996,1996,IPUMS,1571,Fiji 1996 Census
+Fiji,2007,69.01,2007,2007,IPUMS,1064,Fiji 2007 Census
+Fiji,2017,70.95,2017,2017,IPUMS,7225,Fiji 2017 Census
+Fiji,2021,64.42,2021,2021,MICS,7803,Fiji 2021 Multiple Indicator Cluster Survey
+Gabon,2000,46.49,2000,2000,DHS,1737,Gabon 2000 Demographic and Health Survey
+Gabon,2012,48.33,2012,2012,DHS,5054,Gabon 2012 Demographic and Health Survey
+Gabon,2020,52.13,2020,2020,DHS,7622,Gabon 2019-2021 Demographic and Health Survey
+Gambia,2006,77.85,2006,2006,MICS,736,Gambia 2005-2006 Multiple Indicator Cluster Survey
+Gambia,2010,80.73,2010,2010,MICS,4998,Gambia 2010 Multiple Indicator Cluster Survey
+Gambia,2013,81.52,2013,2013,DHS,5462,Gambia 2013 Demographic and Health Survey
+Gambia,2018,80.18,2018,2018,MICS,7579,Gambia 2018 Multiple Indicator Cluster Survey
+Gambia,2020,79.65,2020,2020,DHS,7686,Gambia 2019-2020 Demographic and Health Survey
+Georgia,2005,63.52,2005,2005,MICS,1900,Georgia 2005 Multiple Indicator Cluster Survey
+Georgia,2018,63.98,2018,2018,MICS,7580,Georgia 2018 Multiple Indicator Cluster Survey
+Ghana,1984,58.46,1984,1984,IPUMS,953,Ghana 1984 Census
+Ghana,1993,31.49,1993,1993,DHS,1754,Ghana 1993 Demographic and Health Survey
+Ghana,1999,40.08,1999,1999,DHS,1751,Ghana 1998 Demographic and Health Survey
+Ghana,2000,53.75,2000,2000,IPUMS,1585,Ghana 2000 Census
+Ghana,2003,45.97,2003,2003,DHS,1752,Ghana 2003 Demographic and Health Survey
+Ghana,2006,52.38,2006,2006,MICS,166,Ghana 2006 Multiple Indicator Cluster Survey
+Ghana,2008,48.2,2008,2008,DHS,4688,Ghana 2008 Demographic and Health Survey
+Ghana,2010,59.67,2010,2010,IPUMS,4714,Ghana 2010 Census
+Ghana,2011,44.15,2011,2011,MICS,5000,Ghana 2011 Multiple Indicator Cluster Survey
+Ghana,2014,40.36,2014,2014,DHS,5778,Ghana 2014 Demographic and Health Survey
+Ghana,2017,61.84,2017,2017,MICS,5636,Ghana 2017-2018 Multiple Indicator Cluster Survey
+Ghana,2019,57.07,2019,2019,DHS,7806,Ghana 2019 Malaria Indicators Survey
+Ghana,2022,49.13,2022,2022,DHS,9479,Ghana 2022 Demographic and Health Survey
+Guatemala,1981,60.13,1981,1981,IPUMS,1416,Guatemala 1981 Census
+Guatemala,1994,60.68,1994,1994,IPUMS,1519,Guatemala 1994 Census
+Guatemala,1995,61.89,1995,1995,DHS,1770,Guatemala 1995 Demographic and Health Survey
+Guatemala,1999,62.5,1999,1999,DHS,207,Guatemala 1998-1999 Demographic and Health Survey (Interim)
+Guatemala,2002,65.9,2002,2002,IPUMS,1150,Guatemala 2002 Census
+Guatemala,2015,67.09,2015,2015,DHS,5790,Guatemala 2014-2015 Encuesta Nacional de Salud Materno Infantil
+Guinea,1999,61.76,1999,1999,DHS,1739,Guinea 1999 Demographic and Health Survey
+Guinea,2005,55.61,2005,2005,DHS,1740,Guinea 2005 Demographic and Health Survey
+Guinea,2012,59.59,2012,2012,DHS,5422,Guinea 2012 Demographic and Health Survey
+Guinea,2014,61.33,2014,2014,IPUMS,5254,Guinea 2014 Census
+Guinea,2016,57.75,2016,2016,MICS,5676,Guinea 2016 Multiple Indicator Cluster Survey
+Guinea,2021,66.51,2021,2021,DHS,7809,Guinea 2021 Malaria Indicators Survey
+Guinea-Bissau,2006,77.01,2006,2006,MICS,176,Guinea-Bissau 2006 Multiple Indicator Cluster Survey
+Guinea-Bissau,2014,72.01,2014,2014,MICS,5637,Guinea-Bissau 2014 Multiple Indicator Cluster Survey
+Guinea-Bissau,2019,75.33,2019,2019,MICS,7571,Guinea-Bissau 2018-2019 Multiple Indicator Cluster Survey
+Guyana,2005,55.7,2005,2005,DHS,139,Guyana 2005 HIV-AIDS Indicator Survey
+Guyana,2006,54.52,2006,2006,MICS,1893,Guyana 2006-2007 Multiple Indicator Cluster Survey
+Guyana,2009,50.75,2009,2009,DHS,4701,Guyana 2009 Demographic and Health Survey
+Guyana,2014,53.08,2014,2014,MICS,5675,Guyana 2014 Multiple Indicator Cluster Survey
+Guyana,2019,51.42,2019,2019,MICS,7811,Guyana 2019-2020 Multiple Indicator Cluster Survey
+Haiti,1982,49.31,1982,1982,IPUMS,1024,Haiti 1982 Census
+Haiti,1994,52.92,1994,1994,DHS,1764,Haiti 1994-1995 Demographic and Health Survey
+Haiti,2000,49.7,2000,2000,DHS,1765,Haiti 2000 Demographic and Health Survey
+Haiti,2003,53.46,2003,2003,IPUMS,1034,Haiti 2003 Census
+Haiti,2006,52.87,2006,2006,DHS,1785,Haiti 2005-2006 Demographic and Health Survey
+Haiti,2012,53.15,2012,2012,DHS,5451,Haiti 2012 Demographic and Health Survey
+Haiti,2017,55.29,2017,2017,DHS,5825,Haiti 2016-2017 Demographic and Health Survey
+Honduras,1988,61.88,1988,1988,IPUMS,1342,Honduras 1988 Census
+Honduras,2001,64.61,2001,2001,IPUMS,1486,Honduras 2001 Census
+Honduras,2006,64.78,2006,2006,DHS,1788,Honduras 2005-2006 Demographic and Health Survey
+Honduras,2012,68.0,2012,2012,DHS,5056,Honduras 2011-2012 Demographic and Health Survey
+Honduras,2013,64.83,2013,2013,IPUMS,4749,Honduras 2013 Census
+Honduras,2019,61.87,2019,2019,MICS,7581,Honduras 2019 Multiple Indicator Cluster Survey
+India,1983,76.67,1983,1983,IPUMS,9487,India 1983 Employment Survey
+India,1987,76.94,1987,1987,IPUMS,9488,India 1987 Employment Survey
+India,1993,82.91,1993,1993,DHS,1789,India 1992-1993 Demographic and Health Survey
+India,1993,76.91,1993,1993,IPUMS,9489,India 1993 Employment Survey
+India,1999,81.82,1999,1999,DHS,1790,India 1998-1999 Demographic and Health Survey
+India,1999,77.46,1999,1999,IPUMS,9490,India 1999 Employment Survey
+India,2004,76.7,2004,2004,IPUMS,9491,India 2004 Employment Survey
+India,2006,75.02,2006,2006,DHS,1792,India 2005-2006 Demographic and Health Survey
+India,2009,74.4,2009,2009,IPUMS,9492,India 2009 Employment Survey
+India,2015,76.37,2015,2015,DHS,5565,India 2015-2016 Demographic and Health Survey
+India,2020,74.53,2020,2020,DHS,9090,India 2019-2021 National Family Health Survey
+Indonesia,1971,57.2,1971,1971,IPUMS,65,Indonesia 1971 Census
+Indonesia,1976,57.91,1976,1976,IPUMS,144,Indonesia 1976 Intercensal Survey
+Indonesia,1980,59.49,1980,1980,IPUMS,1304,Indonesia 1980 Census
+Indonesia,1985,59.76,1985,1985,IPUMS,686,Indonesia 1985 Intercensal Population Survey
+Indonesia,1990,59.73,1990,1990,IPUMS,1263,Indonesia 1990 Census
+Indonesia,1991,61.07,1991,1991,DHS,1687,Indonesia 1991 Demographic and Health Survey
+Indonesia,1994,60.14,1994,1994,DHS,1688,Indonesia 1994 Demographic and Health Survey
+Indonesia,1995,59.08,1995,1995,IPUMS,6,Indonesia 1995 Intercensal Population Survey
+Indonesia,1997,59.17,1997,1997,DHS,1690,Indonesia 1997 Demographic and Health Survey
+Indonesia,2003,63.88,2003,2003,DHS,1689,Indonesia 2002-2003 Demographic and Health Survey
+Indonesia,2005,58.92,2005,2005,IPUMS,9,Indonesia 2005 Intercensal Population Survey
+Indonesia,2007,63.12,2007,2007,DHS,739,Indonesia 2007 Demographic and Health Survey
+Indonesia,2010,60.13,2010,2010,IPUMS,4785,Indonesia 2010 Census
+Indonesia,2012,64.93,2012,2012,DHS,5458,Indonesia 2012 Demographic and Health Survey (Special)
+Indonesia,2017,63.26,2017,2017,DHS,7363,Indonesia 2017 Demographic and Health Survey
+Iran (Islamic Republic of),2006,59.27,2006,2006,IPUMS,1097,Iran (Islamic Republic of) 2006 Census
+Iran (Islamic Republic of),2011,55.15,2011,2011,IPUMS,4786,Iran (Islamic Republic of) 2011 Census
+Iraq,1997,86.58,1997,1997,IPUMS,251,Iraq 1997 Census
+Iraq,2006,82.71,2006,2006,MICS,151,Iraq 2006 Multiple Indicator Cluster Survey
+Iraq,2011,85.89,2011,2011,MICS,5334,Iraq 2011 Multiple Indicator Cluster Survey
+Iraq,2018,87.11,2018,2018,MICS,5586,Iraq 2018 Multiple Indicator Cluster Survey
+Ireland,1991,36.88,1991,1991,IPUMS,1080,Ireland 1991 Census
+Ireland,2006,34.9,2006,2006,IPUMS,1098,Ireland 2006 Census
+Ireland,2011,32.89,2011,2011,IPUMS,4827,Ireland 2011 Census
+Israel,1972,33.35,1972,1972,IPUMS,249,Israel 1972 Census
+Israel,1983,24.31,1983,1983,IPUMS,1079,Israel 1983 Census
+Israel,1995,27.65,1995,1995,IPUMS,1504,Israel 1995 Census
+Italy,2001,36.32,2001,2001,IPUMS,1428,Italy 2001 Census
+Italy,2011,33.53,2011,2011,IPUMS,4828,Italy 2011 Census
+Jamaica,1982,38.73,1982,1982,IPUMS,948,Jamaica 1982 Census
+Jamaica,1991,44.81,1991,1991,IPUMS,1184,Jamaica 1991 Census
+Jamaica,2001,45.73,2001,2001,IPUMS,53,Jamaica 2001 Census
+Jamaica,2005,45.67,2005,2005,MICS,122,Jamaica 2005 Multiple Indicator Cluster Survey
+Jamaica,2011,45.08,2011,2011,MICS,5005,Jamaica 2011 Multiple Indicator Cluster Survey
+Jamaica,2022,47.82,2022,2022,MICS,7817,Jamaica 2022 Multiple Indicator Cluster Survey
+Jordan,1997,78.12,1997,1997,DHS,1724,Jordan 1997 Demographic and Health Survey
+Jordan,2002,77.18,2002,2002,DHS,1725,Jordan 2002 Demographic and Health Survey
+Jordan,2007,72.64,2007,2007,DHS,2407,Jordan 2007 Demographic and Health Survey
+Jordan,2009,70.27,2009,2009,DHS,4698,Jordan 2009 Demographic and Health Survey (Interim)
+Jordan,2012,68.55,2012,2012,DHS,5339,Jordan 2012 Demographic and Health Survey
+Jordan,2017,67.95,2017,2017,DHS,7364,Jordan 2017-2018 Demographic and Health Survey
+Jordan,2023,68.76,2023,2023,DHS,9210,Jordan 2023 Demographic and Health Survey
+Kazakhstan,1995,50.75,1995,1995,DHS,1826,Kazakhstan 1995 Demographic and Health Survey
+Kazakhstan,1999,46.91,1999,1999,DHS,1669,Kazakhstan 1999 Demographic and Health Survey
+Kazakhstan,2006,54.66,2006,2006,MICS,1882,Kazakhstan 2006 Multiple Indicator Cluster Survey
+Kazakhstan,2010,53.57,2010,2010,MICS,5006,Kazakhstan 2010-2011 Multiple Indicator Cluster Survey
+Kazakhstan,2015,53.73,2015,2015,MICS,5666,Kazakhstan 2015 Multiple Indicator Cluster Survey
+Kazakhstan,2024,42.51,2024,2024,MICS,7606,Kazakhstan 2024 Multiple Indicator Cluster Survey
+Kenya,1993,45.89,1993,1993,DHS,1823,Kenya 1993 Demographic and Health Survey
+Kenya,1998,38.53,1998,1998,DHS,1824,Kenya 1998 Demographic and Health Survey
+Kenya,2003,46.59,2003,2003,DHS,1692,Kenya 2003 Demographic and Health Survey
+Kenya,2009,47.54,2009,2009,DHS,4689,Kenya 2008-2009 Demographic and Health Survey
+Kenya,2014,45.18,2014,2014,DHS,5780,Kenya 2014 Demographic and Health Survey
+Kenya,2015,40.36,2015,2015,DHS,5811,Kenya 2015 Malaria Indicators Survey
+Kenya,2020,45.02,2020,2020,DHS,7822,Kenya 2020 Malaria Indicators Survey
+Kenya,2022,45.39,2022,2022,DHS,9211,Kenya 2022 Demographic and Health Survey
+Kiribati,2018,78.63,2018,2018,MICS,7823,Kiribati 2018-2019 Multiple Indicator Cluster Survey
+Kosovo (under UNSC res. 1244),2014,85.27,2014,2014,MICS,5667,Kosovo 2013-2014 Multiple Indicator Cluster Survey
+Kosovo (under UNSC res. 1244),2020,81.44,2020,2020,MICS,7824,Kosovo 2019-2020 Multiple Indicator Cluster Survey
+Kyrgyzstan,1997,67.28,1997,1997,DHS,1782,Kyrgyzstan 1997 Demographic and Health Survey
+Kyrgyzstan,1999,62.76,1999,1999,IPUMS,336,Kyrgyzstan 1999 Census
+Kyrgyzstan,2009,70.5,2009,2009,IPUMS,2413,Kyrgyzstan 2009 Census
+Kyrgyzstan,2012,67.31,2012,2012,DHS,5457,Kyrgyzstan 2012 Demographic and Health Survey
+Kyrgyzstan,2014,68.39,2014,2014,MICS,5577,Kyrgyzstan 2014 Multiple Indicator Cluster Survey
+Kyrgyzstan,2018,64.28,2018,2018,MICS,7582,Kyrgyzstan 2018 Multiple Indicator Cluster Survey
+Kyrgyzstan,2023,64.07,2023,2023,MICS,9227,Kyrgyzstan 2023 Multiple Indicator Cluster Survey
+Lao People's Democratic Republic,2000,74.22,2000,2000,MICS,4440,Lao People's Democratic Republic 2000 Multiple Indicator Cluster Survey
+Lao People's Democratic Republic,2006,84.48,2006,2006,MICS,2415,Lao People's Democratic Republic 2006 Multiple Indicator Cluster Survey
+Lao People's Democratic Republic,2011,81.26,2011,2011,MICS,5062,Lao People's Democratic Republic 2011-2012 Social Indicator Survey (MICS/DHS)
+Lao People's Democratic Republic,2015,86.19,2015,2015,IPUMS,5981,Lao People's Democratic Republic 2015 Census
+Lao People's Democratic Republic,2017,76.99,2017,2017,MICS,7348,Lao People's Democratic Republic 2017 Social Indicator Survey II
+Lao People's Democratic Republic,2023,78.24,2023,2023,MICS,9224,Lao People's Democratic Republic 2023 Multiple Indicator Cluster Survey III
+Lesotho,1996,61.8,1996,1996,IPUMS,1066,Lesotho 1996 Census
+Lesotho,2004,45.79,2004,2004,DHS,1808,Lesotho 2004 Demographic and Health Survey
+Lesotho,2006,59.76,2006,2006,IPUMS,1425,Lesotho 2006 Census
+Lesotho,2009,46.2,2009,2009,DHS,4947,Lesotho 2009 Demographic and Health Survey
+Lesotho,2014,43.34,2014,2014,DHS,5769,Lesotho 2014 Demographic and Health Survey
+Lesotho,2018,59.18,2018,2018,MICS,7583,Lesotho 2018 Multiple Indicator Cluster Survey
+Lesotho,2023,44.72,2023,2023,DHS,9437,Lesotho 2023-2024 DHS
+Liberia,2007,59.24,2007,2007,DHS,647,Liberia 2007 Demographic and Health Survey
+Liberia,2009,65.59,2009,2009,DHS,4690,Liberia 2009 Malaria Indicators Survey
+Liberia,2011,48.35,2011,2011,DHS,5079,Liberia 2011 Malaria Indicators Survey
+Liberia,2013,59.6,2013,2013,DHS,5469,Liberia 2013 Demographic and Health Survey
+Liberia,2019,59.02,2019,2019,DHS,7832,Liberia 2019-2020 Demographic and Health Survey
+Liberia,2022,70.31,2022,2022,DHS,9212,Liberia 2022 Malaria Indicators Survey
+Madagascar,1992,54.16,1992,1992,DHS,1708,Madagascar 1992 Demographic and Health Survey
+Madagascar,1997,52.59,1997,1997,DHS,1729,Madagascar 1997 Demographic and Health Survey
+Madagascar,2004,50.57,2004,2004,DHS,1734,Madagascar 2003-2004 Demographic and Health Survey
+Madagascar,2009,48.79,2009,2009,DHS,4691,Madagascar 2008-2009 Demographic and Health Survey
+Madagascar,2011,55.19,2011,2011,DHS,5080,Madagascar 2011 Malaria Indicators Survey
+Madagascar,2018,49.49,2018,2018,MICS,7586,Madagascar 2018 Multiple Indicator Cluster Survey
+Madagascar,2021,46.85,2021,2021,DHS,7833,Madagascar 2021 Demographic and Health Survey
+Malawi,1992,39.47,1992,1992,DHS,1834,Malawi 1992 Demographic and Health Survey
+Malawi,2000,38.88,2000,2000,DHS,1833,Malawi 2000 Demographic and Health Survey
+Malawi,2004,32.64,2004,2004,DHS,1885,Malawi 2004 Demographic and Health Survey
+Malawi,2006,30.98,2006,2006,MICS,1845,Malawi 2006 Multiple Indicator Cluster Survey
+Malawi,2010,39.0,2010,2010,DHS,4692,Malawi 2010 Demographic and Health Survey
+Malawi,2014,24.47,2014,2014,DHS,5793,Malawi 2014 Malaria Indicators Survey
+Malawi,2014,37.45,2014,2014,MICS,5582,Malawi 2013-2014 Multiple Indicator Cluster Survey
+Malawi,2015,39.17,2015,2015,DHS,5952,Malawi 2015-2016 Demographic and Health Survey
+Malawi,2018,40.4,2018,2018,IPUMS,7167,Malawi 2018 Census
+Malawi,2020,39.68,2020,2020,MICS,7834,Malawi 2019-2020 Multiple Indicator Cluster Survey
+Malawi,2024,40.86,2024,2024,DHS,9453,Malawi 2024 Demographic and Health Survey
+Malaysia,1980,65.68,1980,1980,IPUMS,1205,Malaysia 1980 Census
+Malaysia,1991,68.84,1991,1991,IPUMS,1466,Malaysia 1991 Census
+Malaysia,2000,68.3,2000,2000,IPUMS,1612,Malaysia 2000 Census
+Maldives,2009,82.31,2009,2009,DHS,4699,Maldives 2009 Demographic and Health Survey
+Maldives,2017,80.59,2017,2017,DHS,5953,Maldives 2016-2017 Demographic and Health Survey
+Mali,1996,42.08,1996,1996,DHS,1715,Mali 1995-1996 Demographic and Health Survey
+Mali,2001,33.23,2001,2001,DHS,1714,Mali 2001 Demographic and Health Survey
+Mali,2006,45.95,2006,2006,DHS,1682,Mali 2006 Demographic and Health Survey
+Mali,2009,57.95,2009,2009,IPUMS,2441,Mali 2009 Census
+Mali,2010,79.9,2010,2010,MICS,5011,Mali 2009-2010 Multiple Indicator Cluster Survey
+Mali,2012,44.13,2012,2012,DHS,5460,Mali 2012-2013 Demographic and Health Survey
+Mali,2015,79.29,2015,2015,MICS,5677,Mali 2015 Multiple Indicator Cluster Survey
+Mali,2018,53.34,2018,2018,DHS,7626,Mali 2018 Demographic and Health Survey
+Mali,2021,83.41,2021,2021,DHS,9190,Mali 2021 Malaria Indicators Survey
+Mali,2024,79.1,2024,2024,DHS,9450,Mali 2023-2024 Demographic and Health Survey
+Mauritania,2007,65.28,2007,2007,MICS,2443,Mauritania 2007 Multiple Indicator Cluster Survey
+Mauritania,2011,72.16,2011,2011,MICS,5012,Mauritania 2011 Multiple Indicator Cluster Survey
+Mauritania,2015,70.6,2015,2015,MICS,5638,Mauritania 2015 Multiple Indicator Cluster Survey
+Mauritius,1990,70.02,1990,1990,IPUMS,1559,Mauritius 1990 Census
+Mauritius,2000,68.69,2000,2000,IPUMS,1445,Mauritius 2000 Census
+Mauritius,2011,61.2,2011,2011,IPUMS,5259,Mauritius 2011 Census
+Mexico,1990,58.01,1990,1990,IPUMS,1350,Mexico 1990 Census
+Mexico,2000,61.04,2000,2000,IPUMS,226,Mexico 2000 Census
+Mexico,2010,59.08,2010,2010,IPUMS,5271,Mexico 2010 Census
+Mexico,2015,58.31,2015,2015,IPUMS,7250,Mexico 2015 Intercensal Survey
+Mexico,2015,59.08,2015,2015,MICS,7339,"Mexico 2015 Encuesta Nacional de Niños, Niñas y Mujeres"
+Mexico,2020,58.2,2020,2020,IPUMS,7280,Mexico 2020 Census
+Mongolia,1989,49.92,1989,1989,IPUMS,867,Mongolia 1989 Census
+Mongolia,2000,62.18,2000,2000,IPUMS,871,Mongolia 2000 Census
+Mongolia,2010,56.42,2010,2010,IPUMS,4793,Mongolia 2010 Census
+Mongolia,2010,50.62,2010,2010,MICS,5014,Mongolia 2010-2011 Multiple Indicator Cluster Survey
+Mongolia,2013,47.9,2013,2013,MICS,5579,Mongolia 2013 Multiple Indicator Cluster Survey
+Mongolia,2018,51.89,2018,2018,MICS,7588,Mongolia 2018 Multiple Indicator Cluster Survey
+Mongolia,2020,50.27,2020,2020,IPUMS,7210,Mongolia 2020 Census
+Montenegro,2005,61.23,2005,2005,MICS,2456,Montenegro 2005-2006 Multiple Indicator Cluster Survey
+Montenegro,2013,56.36,2013,2013,MICS,5015,Montenegro 2013 Multiple Indicator Cluster Survey
+Montenegro,2018,53.51,2018,2018,MICS,7589,Montenegro 2018 Multiple Indicator Cluster Survey
+Morocco,1992,73.31,1992,1992,DHS,1797,Morocco 1992 Demographic and Health Survey
+Morocco,1994,75.02,1994,1994,IPUMS,230,Morocco 1994 Census
+Morocco,2003,81.58,2003,2003,DHS,1866,Morocco 2003-2004 Demographic and Health Survey
+Morocco,2004,82.19,2004,2004,IPUMS,376,Morocco 2004 Census
+Morocco,2014,76.89,2014,2014,IPUMS,4718,Morocco 2014 Census
+Mozambique,1997,38.16,1997,1997,DHS,1767,Mozambique 1997 Demographic and Health Survey
+Mozambique,1997,34.6,1997,1997,IPUMS,1414,Mozambique 1997 Census
+Mozambique,2003,38.61,2003,2003,DHS,1758,Mozambique 2003 Demographic and Health Survey
+Mozambique,2007,34.64,2007,2007,IPUMS,1267,Mozambique 2007 Census
+Mozambique,2008,37.66,2008,2008,MICS,4871,Mozambique 2008 Multiple Indicator Cluster Survey
+Mozambique,2009,30.28,2009,2009,DHS,4693,Mozambique 2009 HIV-AIDS Indicator Survey
+Mozambique,2011,34.78,2011,2011,DHS,5064,Mozambique 2011 Demographic and Health Survey
+Mozambique,2017,34.91,2017,2017,IPUMS,7173,Mozambique 2017 Census
+Mozambique,2018,43.76,2018,2018,DHS,7627,Mozambique 2018 Malaria Indicators Survey
+Mozambique,2022,37.2,2022,2022,DHS,7843,Mozambique 2022-2023 Demographic and Health Survey
+Myanmar,2014,74.92,2014,2014,IPUMS,5295,Myanmar 2014 Census
+Myanmar,2016,73.49,2016,2016,DHS,6084,Myanmar 2015-2016 Demographic and Health Survey
+Namibia,1992,57.72,1992,1992,DHS,1799,Namibia 1992 Demographic and Health Survey
+Namibia,2000,57.79,2000,2000,DHS,1807,Namibia 2000 Demographic and Health Survey
+Namibia,2007,60.89,2007,2007,DHS,43,Namibia 2006-2007 Demographic and Health Survey
+Namibia,2013,57.66,2013,2013,DHS,5616,Namibia 2013 Demographic and Health Survey
+Nauru,2023,73.6,2023,2023,MICS,7845,Nauru 2023 Multiple Indicator Cluster Survey
+Nepal,1996,76.79,1996,1996,DHS,1801,Nepal 1996 Demographic and Health Survey
+Nepal,2001,74.0,2001,2001,DHS,1800,Nepal 2001 Demographic and Health Survey
+Nepal,2006,72.44,2006,2006,DHS,1851,Nepal 2006 Demographic and Health Survey
+Nepal,2011,72.99,2011,2011,DHS,5065,Nepal 2011 Demographic and Health Survey
+Nepal,2011,75.13,2011,2011,IPUMS,4794,Nepal 2011 Census
+Nepal,2014,75.22,2014,2014,MICS,5672,Nepal 2014 Multiple Indicator Cluster Survey
+Nepal,2016,70.91,2016,2016,DHS,6086,Nepal 2016 Demographic and Health Survey
+Nepal,2019,73.61,2019,2019,MICS,7598,Nepal 2019 Multiple Indicator Cluster Survey
+Nepal,2022,69.86,2022,2022,DHS,9483,Nepal 2022 Demographic and Health Survey
+Nepal,2025,68.09,2025,2025,MICS,9454,Nepal 2024-2025 Multiple Indicator Cluster Survey
+Nicaragua,1995,69.61,1995,1995,IPUMS,1252,Nicaragua 1995 Census
+Nicaragua,1998,69.23,1998,1998,DHS,1775,Nicaragua 1998 Demographic and Health Survey
+Nicaragua,2001,68.63,2001,2001,DHS,1759,Nicaragua 2001 Demographic and Health Survey
+Nicaragua,2005,69.74,2005,2005,IPUMS,1189,Nicaragua 2005 Census
+Niger,1992,57.7,1992,1992,DHS,1731,Niger 1992 Demographic and Health Survey
+Niger,1998,55.8,1998,1998,DHS,1680,Niger 1998 Demographic and Health Survey
+Niger,2006,53.42,2006,2006,DHS,1736,Niger 2006 Demographic and Health Survey
+Niger,2012,39.39,2012,2012,DHS,5413,Niger 2012 Demographic and Health Survey
+Niger,2021,59.53,2021,2021,DHS,9198,Niger 2021 Malaria Indicator Survey
+Nigeria,1990,49.04,1990,1990,DHS,1742,Nigeria 1990 Demographic and Health Survey
+Nigeria,1999,52.09,1999,1999,DHS,1828,Nigeria 1999 Demographic and Health Survey
+Nigeria,2003,54.59,2003,2003,DHS,1884,Nigeria 2003 Demographic and Health Survey
+Nigeria,2007,42.81,2007,2007,MICS,2478,Nigeria 2007 Multiple Indicator Cluster Survey
+Nigeria,2008,46.06,2008,2008,DHS,4695,Nigeria 2008 Demographic and Health Survey
+Nigeria,2010,52.21,2010,2010,DHS,5081,Nigeria 2010 Malaria Indicators Survey
+Nigeria,2011,49.58,2011,2011,MICS,5018,Nigeria 2011 Multiple Indicator Cluster Survey
+Nigeria,2013,47.46,2013,2013,DHS,5447,Nigeria 2013 Demographic and Health Survey
+Nigeria,2015,51.26,2015,2015,DHS,5931,Nigeria 2015 Malaria Indicators Survey
+Nigeria,2016,49.56,2016,2016,MICS,5640,Nigeria 2016-2017 Multiple Indicator Cluster Survey
+Nigeria,2018,46.56,2018,2018,DHS,7628,Nigeria 2018 Demographic and Health Survey
+Nigeria,2021,58.23,2021,2021,DHS,9197,Nigeria 2021 Malaria Indicators Survey
+Nigeria,2021,54.7,2021,2021,MICS,7849,Nigeria 2021 Multiple Indicator Cluster Survey
+Nigeria,2024,46.86,2024,2024,DHS,9213,Nigeria 2024 Demographic and Health Survey
+North Macedonia,2005,89.13,2005,2005,MICS,1902,North Macedonia 2005 Multiple Indicator Cluster Survey
+North Macedonia,2011,58.84,2011,2011,MICS,5035,North Macedonia 2011 Multiple Indicator Cluster Survey
+North Macedonia,2019,57.95,2019,2019,MICS,7584,North Macedonia 2018-2019 Multiple Indicator Cluster Survey
+Pakistan,1981,66.72,1981,1981,IPUMS,1364,Pakistan 1981 Census
+Pakistan,1991,82.31,1991,1991,DHS,1827,Pakistan 1990-1991 Demographic and Health Survey
+Pakistan,2006,88.68,2006,2006,DHS,180,Pakistan 2006-2007 Demographic and Health Survey
+Pakistan,2013,88.78,2013,2013,DHS,5461,Pakistan 2012-2013 Demographic and Health Survey
+Panama,1980,57.5,1980,1980,IPUMS,291,Panama 1980 Census
+Panama,1990,59.37,1990,1990,IPUMS,63,Panama 1990 Census
+Panama,2000,60.57,2000,2000,IPUMS,1203,Panama 2000 Census
+Panama,2010,58.38,2010,2010,IPUMS,4754,Panama 2010 Census
+Panama,2013,56.09,2013,2013,MICS,5023,Panama 2013 Multiple Indicator Cluster Survey
+Paraguay,1982,58.71,1982,1982,IPUMS,1384,Paraguay 1982 Census
+Paraguay,1990,63.63,1990,1990,DHS,1686,Paraguay 1990 Demographic and Health Survey
+Paraguay,1992,58.59,1992,1992,IPUMS,1268,Paraguay 1992 Census
+Paraguay,2002,63.5,2002,2002,IPUMS,1257,Paraguay 2002 Census
+Paraguay,2016,61.4,2016,2016,MICS,7496,Paraguay 2016 Multiple Indicator Cluster Survey
+Peru,1993,61.57,1993,1993,IPUMS,1021,Peru 1993 Census
+Peru,1996,65.55,1996,1996,DHS,1773,Peru 1996 Demographic and Health Survey
+Peru,2000,63.57,2000,2000,DHS,1774,Peru 2000 Demographic and Health Survey
+Peru,2006,58.41,2006,2006,DHS,2515,Peru 2004-2006 Demographic and Health Survey (Continuous)
+Peru,2007,61.32,2007,2007,IPUMS,354,Peru 2007 Census
+Peru,2009,58.38,2009,2009,DHS,4702,Peru 2009 Demographic and Health Survey (Continuous)
+Peru,2010,56.24,2010,2010,DHS,2516,Peru 2010 Demographic and Health Survey (Continuous)
+Peru,2011,54.6,2011,2011,DHS,5373,Peru 2011 Demographic and Health Survey (Continuous)
+Peru,2012,56.43,2012,2012,DHS,5555,Peru 2012 Demographic and Health Survey (Continuous)
+Peru,2017,54.64,2017,2017,IPUMS,7299,Peru 2017 Census
+Philippines,1990,63.43,1990,1990,IPUMS,1539,Philippines 1990 Census
+Philippines,1993,67.75,1993,1993,DHS,1836,Philippines 1993 Demographic and Health Survey
+Philippines,1995,64.68,1995,1995,IPUMS,912,Philippines 1995 Census
+Philippines,1998,66.19,1998,1998,DHS,1837,Philippines 1998 Demographic and Health Survey
+Philippines,1999,65.97,1999,1999,MICS,4443,Philippines 1999 Multiple Indicator Cluster Survey
+Philippines,2000,63.89,2000,2000,IPUMS,1297,Philippines 2000 Census
+Philippines,2003,65.81,2003,2003,DHS,1850,Philippines 2003 Demographic and Health Survey
+Philippines,2008,66.6,2008,2008,DHS,4700,Philippines 2008 Demographic and Health Survey
+Philippines,2010,63.49,2010,2010,IPUMS,5297,Philippines 2010 Census
+Philippines,2013,66.7,2013,2013,DHS,5613,Philippines 2013 Demographic and Health Survey
+Philippines,2017,62.18,2017,2017,DHS,7369,Philippines 2017 Demographic and Health Survey
+Philippines,2022,65.66,2022,2022,DHS,9195,Philippines 2022 Demographic and Health Survey
+Poland,2002,40.1,2002,2002,IPUMS,943,Poland 2002 Census
+Portugal,1981,29.52,1981,1981,IPUMS,1471,Portugal 1981 Census
+Portugal,1991,35.82,1991,1991,IPUMS,1067,Portugal 1991 Census
+Portugal,2001,34.3,2001,2001,IPUMS,1664,Portugal 2001 Census
+Portugal,2011,31.87,2011,2011,IPUMS,4838,Portugal 2011 Census
+Puerto Rico,1970,48.67,1970,1970,IPUMS,1204,Puerto Rico 1970 Census
+Puerto Rico,1980,44.39,1980,1980,IPUMS,1131,Puerto Rico 1980 Census
+Puerto Rico,1990,36.58,1990,1990,IPUMS,391,Puerto Rico 1990 Census
+Puerto Rico,2000,39.59,2000,2000,IPUMS,1626,Puerto Rico 2000 Census
+Puerto Rico,2010,35.34,2010,2010,IPUMS,4755,Puerto Rico 2010 Census
+Puerto Rico,2015,32.86,2015,2015,IPUMS,9520,Puerto Rico 2015 Community Survey
+Puerto Rico,2020,31.28,2020,2020,IPUMS,9521,Puerto Rico 2020 Community Survey
+Qatar,2012,78.24,2012,2012,MICS,5463,Qatar 2012 Multiple Indicator Cluster Survey
+Qatar,2023,78.84,2023,2023,MICS,9230,Qatar 2023 Multiple Indicator Cluster Survey
+Republic of Moldova,2005,31.93,2005,2005,DHS,1820,Moldova 2005 Demographic and Health Survey
+Republic of Moldova,2012,26.76,2012,2012,MICS,5013,Moldova 2012 Multiple Indicator Cluster Survey
+Romania,1977,36.02,1977,1977,IPUMS,835,Romania 1977 Census
+Romania,1992,33.71,1992,1992,IPUMS,1273,Romania 1992 Census
+Romania,2002,37.38,2002,2002,IPUMS,327,Romania 2002 Census
+Russian Federation,2002,40.67,2002,2002,IPUMS,214,Russian Federation 2002 Census
+Russian Federation,2010,40.96,2010,2010,IPUMS,4841,Russian Federation 2010 Census
+Rwanda,1992,50.03,1992,1992,DHS,1854,Rwanda 1992 Demographic and Health Survey
+Rwanda,2000,40.54,2000,2000,DHS,1855,Rwanda 2000 Demographic and Health Survey
+Rwanda,2005,49.96,2005,2005,DHS,1717,Rwanda 2005 Demographic and Health Survey
+Rwanda,2008,42.5,2008,2008,DHS,2524,Rwanda 2007-2008 Demographic and Health Survey (Interim)
+Rwanda,2010,48.43,2010,2010,DHS,5066,Rwanda 2010 Demographic and Health Survey
+Rwanda,2013,49.7,2013,2013,DHS,5610,Rwanda 2013 Malaria Indicators Survey
+Rwanda,2015,50.53,2015,2015,DHS,5796,Rwanda 2014-2015 Demographic and Health Survey
+Rwanda,2020,52.63,2020,2020,DHS,7862,Rwanda 2019-2020 Demographic and Health Survey
+Rwanda,2023,40.39,2023,2023,DHS,9214,Rwanda 2023 Malaria Indicators Survey
+Saint Lucia,2012,45.32,2012,2012,MICS,5027,Saint Lucia 2012 Multiple Indicator Cluster Survey
+Samoa,2019,79.38,2019,2019,MICS,7864,Samoa 2019-2020 Multiple Indicator Cluster Survey
+Sao Tome and Principe,2008,31.05,2008,2008,DHS,2556,Sao Tome and Principe 2008-2009 Demographic and Health Survey
+Sao Tome and Principe,2014,34.97,2014,2014,MICS,5644,Sao Tome and Principe 2014 Multiple Indicator Cluster Survey
+Sao Tome and Principe,2019,43.34,2019,2019,MICS,7599,Sao Tome and Principe 2019 Multiple Indicator Cluster Survey
+Senegal,1993,77.05,1993,1993,DHS,1730,Senegal 1992-1993 Demographic and Health Survey
+Senegal,1997,79.44,1997,1997,DHS,1795,Senegal 1997 Demographic and Health Survey
+Senegal,2005,87.65,2005,2005,DHS,1705,Senegal 2005 Demographic and Health Survey
+Senegal,2006,85.6,2006,2006,DHS,4486,Senegal 2006 Malaria Indicators Survey
+Senegal,2009,85.34,2009,2009,DHS,4886,Senegal 2008-2009 Malaria Indicators Survey
+Senegal,2011,84.6,2011,2011,DHS,5274,Senegal 2010-2011 Enquête Démographique et de Santé à Indicateurs Multiples
+Senegal,2013,84.57,2013,2013,DHS,5490,Senegal 2012-2013 Enquête Démographique et de Santé Continue
+Senegal,2013,83.92,2013,2013,DHS,5951,Senegal 2012-2014 Continuous Demographic and Health Survey
+Senegal,2013,73.79,2013,2013,IPUMS,4723,Senegal 2013 Census
+Senegal,2014,83.22,2014,2014,DHS,5779,Senegal 2014 Demographic and Health Survey
+Senegal,2015,81.61,2015,2015,DHS,5955,Senegal 2015 Demographic and Health Survey
+Senegal,2016,83.24,2016,2016,DHS,7370,Senegal 2016 Demographic and Health Survey
+Senegal,2017,84.13,2017,2017,DHS,7630,Senegal 2017 Demographic and Health Survey
+Senegal,2023,82.35,2023,2023,DHS,9203,Senegal 2023 Demographic and Health Survey
+Serbia,2005,50.28,2005,2005,MICS,2557,Serbia 2005-2006 Multiple Indicator Cluster Survey
+Serbia,2010,54.57,2010,2010,MICS,5024,Serbia 2010 Multiple Indicator Cluster Survey
+Serbia,2014,54.89,2014,2014,MICS,5578,Serbia 2014 Multiple Indicator Cluster Survey
+Serbia,2019,50.16,2019,2019,MICS,7600,Serbia 2019 Multiple Indicator Cluster Survey
+Sierra Leone,2005,67.83,2005,2005,MICS,41,Sierra Leone 2005-2006 Multiple Indicator Cluster Survey
+Sierra Leone,2008,61.72,2008,2008,DHS,4550,Sierra Leone 2008 Demographic and Health Survey
+Sierra Leone,2010,71.53,2010,2010,MICS,5025,Sierra Leone 2010 Multiple Indicator Cluster Survey
+Sierra Leone,2013,64.73,2013,2013,DHS,5556,Sierra Leone 2013 Demographic and Health Survey
+Sierra Leone,2017,60.48,2017,2017,MICS,5679,Sierra Leone 2017 Multiple Indicator Cluster Survey
+Sierra Leone,2019,63.16,2019,2019,DHS,7631,Sierra Leone 2019 Demographic and Health Survey
+Somalia,2006,60.84,2006,2006,MICS,141,Somalia 2006 Multiple Indicator Cluster Survey
+Somalia,2011,58.75,2011,2011,MICS,5026,Somalia 2011 Multiple Indicator Cluster Survey (Northeast)
+Somalia,2011,68.11,2011,2011,MICS,5574,Somalia 2011 Multiple Indicator Cluster Survey (Somaliland)
+South Africa,1998,57.56,1998,1998,DHS,1721,South Africa 1998 Demographic and Health Survey
+South Africa,2001,58.85,2001,2001,IPUMS,1536,South Africa 2001 Census
+South Africa,2007,58.8,2007,2007,IPUMS,4469,South Africa 2007 Community Survey
+South Africa,2011,50.46,2011,2011,IPUMS,4725,South Africa 2011 Census
+South Africa,2016,54.28,2016,2016,DHS,5797,South Africa 2016 Demographic and Health Survey
+South Africa,2016,54.07,2016,2016,IPUMS,9006,South Africa 2016 Community Survey
+South Sudan,2008,52.05,2008,2008,IPUMS,5241,South Sudan 2008 Census
+South Sudan,2010,60.36,2010,2010,MICS,5560,South Sudan 2010 Household Health Survey Second Round
+Spain,1991,45.46,1991,1991,IPUMS,1113,Spain 1991 Census
+State of Palestine,1997,74.42,1997,1997,IPUMS,998,State of Palestine 1997 Census
+State of Palestine,2007,66.26,2007,2007,IPUMS,2364,State of Palestine 2007 Census
+State of Palestine,2010,72.44,2010,2010,MICS,5019,State of Palestine 2010 Family Health Survey
+State of Palestine,2014,69.36,2014,2014,MICS,5563,State of Palestine 2014 MICS
+State of Palestine,2017,62.66,2017,2017,IPUMS,7214,State of Palestine 2017 Census
+State of Palestine,2020,61.99,2020,2020,MICS,7872,State of Palestine 2019-2020 MICS
+Sudan,2008,67.75,2008,2008,IPUMS,5224,Sudan 2008 Census
+Sudan,2010,72.13,2010,2010,MICS,5355,Sudan 2010 Household Health Survey Second Round
+Sudan,2014,72.42,2014,2014,MICS,5593,Sudan 2014 Multiple Indicator Cluster Survey
+Suriname,2006,55.68,2006,2006,MICS,1919,Suriname 2006 Multiple Indicator Cluster Survey
+Suriname,2010,53.51,2010,2010,MICS,5030,Suriname 2010 Multiple Indicator Cluster Survey
+Suriname,2012,47.79,2012,2012,IPUMS,5282,Suriname 2012 Census
+Suriname,2018,58.77,2018,2018,MICS,7591,Suriname 2018 Multiple Indicator Cluster Survey
+Syrian Arab Republic,2006,73.81,2006,2006,MICS,51,Syrian Arab Republic 2006 Multiple Indicator Cluster Survey
+Tajikistan,2005,86.17,2005,2005,MICS,724,Tajikistan 2005 Multiple Indicator Cluster Survey
+Tajikistan,2012,90.46,2012,2012,DHS,5070,Tajikistan 2012 Demographic and Health Survey
+Tajikistan,2017,88.72,2017,2017,DHS,7371,Tajikistan 2017 Demographic and Health Survey
+Tajikistan,2023,87.08,2023,2023,DHS,9215,Tajikistan 2023 Demographic and Health Survey
+Thailand,1970,62.11,1970,1970,IPUMS,288,Thailand 1970 Census
+Thailand,1980,75.21,1980,1980,IPUMS,1432,Thailand 1980 Census
+Thailand,1990,75.72,1990,1990,IPUMS,356,Thailand 1990 Census
+Thailand,2006,63.28,2006,2006,MICS,175,Thailand 2005-2006 Multiple Indicator Cluster Survey
+Thailand,2012,57.29,2012,2012,MICS,5034,Thailand 2012-2013 Multiple Indicator Cluster Survey
+Thailand,2016,58.52,2016,2016,MICS,5669,Thailand 2015-2016 Multiple Indicator Cluster Survey
+Thailand,2019,52.02,2019,2019,MICS,7879,Thailand 2019 Multiple Indicator Cluster Survey
+Thailand,2022,50.72,2022,2022,MICS,9219,Thailand 2022 Multiple Indicator Cluster Survey
+Timor-Leste,2009,66.21,2009,2009,DHS,4948,Timor-Leste 2009-2010 Demographic and Health Survey
+Timor-Leste,2016,58.77,2016,2016,DHS,6097,Timor-Leste 2016 Demographic and Health Survey
+Togo,1970,46.4,1970,1970,IPUMS,267,Togo 1970 Census
+Togo,1998,57.26,1998,1998,DHS,1735,Togo 1998 Demographic and Health Survey
+Togo,2006,55.59,2006,2006,MICS,669,Togo 2006 Multiple Indicator Cluster Survey
+Togo,2010,54.13,2010,2010,MICS,5036,Togo 2010 Multiple Indicator Cluster Survey
+Togo,2014,54.91,2014,2014,DHS,5071,Togo 2013-2014 Demographic and Health Survey
+Togo,2017,53.3,2017,2017,MICS,7502,Togo 2017 Multiple Indicator Cluster Survey
+Tonga,2019,74.08,2019,2019,MICS,7881,Tonga 2019 Multiple Indicator Cluster Survey
+Trinidad and Tobago,2006,59.27,2006,2006,MICS,1915,Trinidad and Tobago 2006 Multiple Indicator Cluster Survey
+Trinidad and Tobago,2011,56.3,2011,2011,MICS,5037,Trinidad and Tobago 2011 Multiple Indicator Cluster Survey
+Trinidad and Tobago,2022,54.65,2022,2022,MICS,7882,Trinidad and Tobago 2022 Multiple Indicator Cluster Survey
+Tunisia,2012,69.54,2012,2012,MICS,5038,Tunisia 2011-2012 Multiple Indicator Cluster Survey
+Tunisia,2018,67.36,2018,2018,MICS,7592,Tunisia 2018 Multiple Indicator Cluster Survey
+Tunisia,2023,61.47,2023,2023,MICS,9231,Tunisia 2023 Multiple Indicator Cluster Survey
+Turkmenistan,2006,82.19,2006,2006,MICS,5,Turkmenistan 2006 Multiple Indicator Cluster Survey
+Turkmenistan,2015,87.2,2015,2015,MICS,5731,Turkmenistan 2015-2016 Multiple Indicator Cluster Survey
+Turkmenistan,2019,88.41,2019,2019,MICS,7603,Turkmenistan 2019 Multiple Indicator Cluster Survey
+Turkmenistan,2024,89.04,2024,2024,MICS,9451,Turkmenistan 2024 Multiple Indicator Cluster Survey
+Turks and Caicos Islands,2020,40.61,2020,2020,MICS,7885,Turks and Caicos Islands 2019-2020 Multiple Indicator Cluster Survey
+Tuvalu,2020,77.63,2020,2020,MICS,7886,Tuvalu 2019-2020 Multiple Indicator Cluster Survey
+Türkiye,1985,58.07,1985,1985,IPUMS,80,Turkey 1985 Census
+Türkiye,1990,57.24,1990,1990,IPUMS,1411,Turkey 1990 Census
+Türkiye,1993,59.56,1993,1993,DHS,1757,Turkey 1993 Demographic and Health Survey
+Türkiye,1998,56.73,1998,1998,DHS,1756,Turkey 1998 Demographic and Health Survey
+Türkiye,2000,54.68,2000,2000,IPUMS,1192,Turkey 2000 Census
+Türkiye,2004,53.24,2004,2004,DHS,1755,Turkey 2003 Demographic and Health Survey
+Türkiye,2018,43.9,2018,2018,DHS,7733,Turkey 2018 Demographic and Health Survey
+Uganda,1995,37.5,1995,1995,DHS,1723,Uganda 1995 Demographic and Health Survey
+Uganda,2000,33.47,2000,2000,DHS,1886,Uganda 2000-2001 Demographic and Health Survey
+Uganda,2006,40.57,2006,2006,DHS,1887,Uganda 2006 Demographic and Health Survey
+Uganda,2009,34.48,2009,2009,DHS,4696,Uganda 2009 Malaria Indicators Survey
+Uganda,2011,43.67,2011,2011,DHS,5072,Uganda 2011 Demographic and Health Survey
+Uganda,2015,50.03,2015,2015,DHS,5781,Uganda 2014-2015 Malaria Indicators Survey
+Uganda,2016,40.58,2016,2016,DHS,6099,Uganda 2016 Demographic and Health Survey
+Uganda,2019,45.26,2019,2019,DHS,6058,Uganda 2018-2019 Malaria Indicators Survey
+Uganda,2024,49.24,2024,2024,DHS,9296,Uganda 2024-2025 Malaria Indicators Survey
+Ukraine,2005,57.23,2005,2005,MICS,1904,Ukraine 2005 Multiple Indicator Cluster Survey
+Ukraine,2007,34.75,2007,2007,DHS,170,Ukraine 2007 Demographic and Health Survey
+Ukraine,2012,37.22,2012,2012,MICS,5040,Ukraine 2012 Multiple Indicator Cluster Survey
+United Kingdom,1991,15.99,1991,1991,IPUMS,1074,United Kingdom 1991 Census
+United Republic of Tanzania,1992,51.67,1992,1992,DHS,1678,United Republic of Tanzania 1991-1992 Demographic and Health Survey
+United Republic of Tanzania,1996,48.53,1996,1996,DHS,1679,United Republic of Tanzania 1996 Demographic and Health Survey
+United Republic of Tanzania,1999,51.16,1999,1999,DHS,831,United Republic of Tanzania 1999 Reproductive and Child Health Survey
+United Republic of Tanzania,2004,52.77,2004,2004,DHS,2939,United Republic of Tanzania 2003-2004 HIV-AIDS Indicator Survey
+United Republic of Tanzania,2004,51.48,2004,2004,DHS,1838,United Republic of Tanzania 2004-2005 Demographic and Health Survey
+United Republic of Tanzania,2007,51.93,2007,2007,DHS,4485,United Republic of Tanzania 2007-2008 HIV/AIDS and Malaria Indicator Survey
+United Republic of Tanzania,2010,52.75,2010,2010,DHS,4697,United Republic of Tanzania 2010 Demographic and Health Survey
+United Republic of Tanzania,2012,55.36,2012,2012,DHS,5075,United Republic of Tanzania 2011 HIV-AIDS Indicator Survey
+United Republic of Tanzania,2015,52.51,2015,2015,DHS,5957,United Republic of Tanzania 2015-2016 Demographic and Health Survey
+United Republic of Tanzania,2022,48.3,2022,2022,DHS,9216,United Republic of Tanzania 2022 Demographic and Health Survey
+United States of America,1960,27.14,1960,1960,IPUMS,1509,United States of America 1960 Census
+United States of America,1970,21.79,1970,1970,IPUMS,321,United States of America 1970 Census
+United States of America,1980,19.2,1980,1980,IPUMS,1228,United States of America 1980 Census
+United States of America,1990,20.02,1990,1990,IPUMS,886,United States of America 1990 Census
+United States of America,2000,20.49,2000,2000,IPUMS,959,United States of America 2000 Census
+United States of America,2005,18.64,2005,2005,IPUMS,7747,United States of America 2005 American Community Survey
+United States of America,2010,20.28,2010,2010,IPUMS,9523,United States of America 2010 American Community Survey
+United States of America,2015,21.01,2015,2015,IPUMS,7748,United States of America 2015 American Community Survey
+United States of America,2020,20.76,2020,2020,IPUMS,9317,United States of America 2020 American Community Survey
+Uruguay,1996,40.73,1996,1996,IPUMS,1091,Uruguay 1996 Census
+Uruguay,2006,36.21,2006,2006,IPUMS,7613,Uruguay 2006 Extended National Survey of Homes
+Uruguay,2011,34.89,2011,2011,IPUMS,5283,Uruguay 2011 Census
+Uruguay,2013,29.91,2013,2013,MICS,5041,Uruguay 2013 Multiple Indicator Cluster Survey
+Uzbekistan,1996,75.16,1996,1996,DHS,1781,Uzbekistan 1996 Demographic and Health Survey
+Uzbekistan,2006,82.01,2006,2006,MICS,721,Uzbekistan 2006 Multiple Indicator Cluster Survey
+Uzbekistan,2021,83.72,2021,2021,MICS,5961,Uzbekistan 2021-2022 Multiple Indicator Cluster Survey
+Vanuatu,2007,55.89,2007,2007,MICS,2476,Vanuatu 2007-2008 Multiple Indicator Cluster Survey
+Vanuatu,2023,36.42,2023,2023,MICS,9225,Vanuatu 2023 Multiple Indicator Cluster Survey
+Venezuela (Bolivarian Republic of),1981,63.07,1981,1981,IPUMS,1122,Venezuela (Bolivarian Republic of) 1981 Census
+Venezuela (Bolivarian Republic of),1990,64.81,1990,1990,IPUMS,1499,Venezuela (Bolivarian Republic of) 1990 Census
+Venezuela (Bolivarian Republic of),2001,67.85,2001,2001,IPUMS,1005,Venezuela (Bolivarian Republic of) 2001 Census
+Viet Nam,1989,71.72,1989,1989,IPUMS,299,Viet Nam 1989 Census
+Viet Nam,1997,78.88,1997,1997,DHS,1821,Viet Nam 1997 Demographic and Health Survey
+Viet Nam,2002,73.97,2002,2002,DHS,1743,Viet Nam 2002 Demographic and Health Survey
+Viet Nam,2005,72.77,2005,2005,DHS,4467,Viet Nam 2005 Population and AIDS Indicator Survey
+Viet Nam,2006,70.99,2006,2006,MICS,1929,Viet Nam 2006 Multiple Indicator Cluster Survey
+Viet Nam,2010,67.21,2010,2010,MICS,5043,Viet Nam 2010-2011 Multiple Indicator Cluster Survey
+Viet Nam,2014,66.03,2014,2014,MICS,5580,Viet Nam 2013-2014 Multiple Indicator Cluster Survey
+Viet Nam,2020,58.88,2020,2020,MICS,7889,Viet Nam 2020-2021 Multiple Indicator Cluster Survey
+Yemen,1991,64.83,1991,1991,DHS,1703,Yemen 1991-1992 Demographic and Health Survey
+Yemen,2006,77.3,2006,2006,MICS,2623,Yemen 2006 Multiple Indicator Cluster Survey
+Yemen,2013,79.33,2013,2013,DHS,5615,Yemen 2013 Demographic and Health Survey
+Yemen,2023,86.04,2023,2023,MICS,7891,Yemen 2022-2023 Multiple Indicator Cluster Survey
+Zambia,1992,47.35,1992,1992,DHS,1947,Zambia 1992 Demographic and Health Survey
+Zambia,1996,48.04,1996,1996,DHS,1699,Zambia 1996 Demographic and Health Survey
+Zambia,2000,52.73,2000,2000,IPUMS,324,Zambia 2000 Census
+Zambia,2002,47.38,2002,2002,DHS,1696,Zambia 2001-2002 Demographic and Health Survey
+Zambia,2007,42.26,2007,2007,DHS,645,Zambia 2007 Demographic and Health Survey
+Zambia,2010,55.28,2010,2010,IPUMS,4729,Zambia 2010 Census
+Zambia,2013,45.39,2013,2013,DHS,5659,Zambia 2013-2014 Demographic and Health Survey
+Zambia,2018,51.35,2018,2018,DHS,7633,Zambia 2018 Demographic and Health Survey
+Zambia,2024,52.11,2024,2024,DHS,9217,Zambia 2024 Demographic and Health Survey
+Zimbabwe,1994,53.08,1994,1994,DHS,1701,Zimbabwe 1994 Demographic and Health Survey
+Zimbabwe,1999,47.02,1999,1999,DHS,1700,Zimbabwe 1999 Demographic and Health Survey
+Zimbabwe,2005,51.05,2005,2005,DHS,1698,Zimbabwe 2005-2006 Demographic and Health Survey
+Zimbabwe,2009,57.76,2009,2009,MICS,5044,Zimbabwe 2009 Multiple Indicator Cluster Survey
+Zimbabwe,2010,50.58,2010,2010,DHS,5073,Zimbabwe 2010-2011 Demographic and Health Survey
+Zimbabwe,2014,47.24,2014,2014,MICS,5585,Zimbabwe 2014 Multiple Indicator Cluster Survey
+Zimbabwe,2015,45.41,2015,2015,DHS,5798,Zimbabwe 2015 Demographic and Health Survey
+Zimbabwe,2019,47.77,2019,2019,MICS,7593,Zimbabwe 2019 Multiple Indicator Cluster Survey

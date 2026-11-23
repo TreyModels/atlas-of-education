@@ -1,0 +1,27 @@
+smam_f                     rows=  2073 countries= 210 years=1960-2019 non_panel_dropped=57
+smam_m                     rows=  1848 countries= 209 years=1960-2019 non_panel_dropped=54
+smam_gap                   rows=  1845 countries= 209 years=1960-2019 non_panel_dropped=46
+nevermar_f_4549            rows=  2060 countries= 211 years=1960-2019 non_panel_dropped=52
+nevermar_m_4549            rows=  1867 countries= 210 years=1960-2019 non_panel_dropped=50
+nevermar_f_4549_direct     rows=   469 countries= 129 years=1985-2018 non_panel_dropped=0
+nevermar_m_4549_direct     rows=   323 countries= 106 years=1990-2018 non_panel_dropped=0
+coresid_60plus             rows=   705 countries= 143 years=1960-2025 non_panel_dropped=0
+multigen_60plus            rows=   674 countries= 138 years=1960-2025 non_panel_dropped=0
+alone_60plus               rows=   968 countries= 174 years=1959-2025 non_panel_dropped=14
+coresid_60plus_f           rows=   704 countries= 143 years=1960-2025 non_panel_dropped=0
+multigen_60plus_f          rows=   673 countries= 138 years=1960-2025 non_panel_dropped=0
+alone_60plus_f             rows=   964 countries= 174 years=1959-2025 non_panel_dropped=14
+cross-check never-married female: 459 matched country-years, median abs diff=0.00 pp, max=20.62
+AVAIL ['alone_60plus', 968, 174, 1959, 2025, '1950:1 1960:10 1970:38 1980:53 1990:145 2000:293 2010:321 2020:107']
+AVAIL ['alone_60plus_f', 964, 174, 1959, 2025, '1950:1 1960:10 1970:38 1980:53 1990:145 2000:290 2010:320 2020:107']
+AVAIL ['coresid_60plus', 705, 143, 1960, 2025, '1960:3 1970:15 1980:38 1990:121 2000:208 2010:256 2020:64']
+AVAIL ['coresid_60plus_f', 704, 143, 1960, 2025, '1960:3 1970:15 1980:38 1990:121 2000:207 2010:256 2020:64']
+AVAIL ['multigen_60plus', 674, 138, 1960, 2025, '1960:1 1970:11 1980:29 1990:114 2000:198 2010:257 2020:64']
+AVAIL ['multigen_60plus_f', 673, 138, 1960, 2025, '1960:1 1970:11 1980:29 1990:114 2000:197 2010:257 2020:64']
+AVAIL ['nevermar_f_4549', 2060, 211, 1960, 2019, '1960:14 1970:279 1980:341 1990:397 2000:528 2010:501']
+AVAIL ['nevermar_f_4549_direct', 469, 129, 1985, 2018, '1980:24 1990:82 2000:200 2010:163']
+AVAIL ['nevermar_m_4549', 1867, 210, 1960, 2019, '1960:14 1970:273 1980:309 1990:354 2000:469 2010:448']
+AVAIL ['nevermar_m_4549_direct', 323, 106, 1990, 2018, '1990:54 2000:151 2010:118']
+AVAIL ['smam_f', 2073, 210, 1960, 2019, '1960:14 1970:281 1980:345 1990:402 2000:531 2010:500']
+AVAIL ['smam_gap', 1845, 209, 1960, 2019, '1960:14 1970:273 1980:308 1990:345 2000:461 2010:444']
+AVAIL ['smam_m', 1848, 209, 1960, 2019, '1960:14 1970:273 1980:308 1990:347 2000:462 2010:444']

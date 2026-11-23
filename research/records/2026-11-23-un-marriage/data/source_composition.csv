@@ -1,0 +1,14 @@
+series,observations,data_process_counts
+alone_60plus,1043,IPUMS:335,DHS:315,MICS:221,DYB:144,LFS:26,China Population Census Yearbook 2010:1,China Population Census Yearbook 2020:1
+alone_60plus_f,1037,IPUMS:331,DHS:315,MICS:221,DYB:142,LFS:26,China Population Census Yearbook 2010:1,China Population Census Yearbook 2020:1
+coresid_60plus,721,DHS:315,IPUMS:219,MICS:187
+coresid_60plus_f,719,DHS:315,IPUMS:217,MICS:187
+multigen_60plus,690,DHS:315,IPUMS:189,MICS:186
+multigen_60plus_f,688,DHS:315,IPUMS:187,MICS:186
+nevermar_f_4549,2416,Survey:846,Census:813,Estimate:753,Dual record:2,Multiround surv:1,GGS:1
+nevermar_f_4549_direct,663,Survey:663
+nevermar_m_4549,2108,Census:804,Estimate:753,Survey:547,Dual record:2,Multiround surv:1,GGS:1
+nevermar_m_4549_direct,425,Survey:425
+smam_f,2439,Survey:862,Census:820,Estimate:753,Dual record:2,Multiround surv:1,GGS:1
+smam_gap,1974,Census:797,Estimate:749,Survey:424,Dual record:2,Multiround surv:1,GGS:1
+smam_m,2094,Census:807,Estimate:750,Survey:533,Dual record:2,Multiround surv:1,GGS:1
