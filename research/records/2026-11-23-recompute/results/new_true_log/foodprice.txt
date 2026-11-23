@@ -1,0 +1,51 @@
+/root/work/recompute/new/foodprice.py:153: RuntimeWarning: divide by zero encountered in scalar divide
+  f"{'**' if abs(b[j]/se[j])>1.96 else ''}")
+food price index: 1990-2018, columns ['Food Price Index', 'Meat Price Index', 'Dairy Price Index', 'Cereals Price Index', 'Oils Price Index', 'Sugar Price Index']
+
+==========================================================================
+FARM EMPLOYMENT SHARE  vs  overall food price x farm dependence   (n=3232, 183 countries)
+==========================================================================
+   farm share x price change         -0.6643  (±0.0835) **
+   farm share (level)                -0.6860  (±0.1054) **
+   income                            -0.0000  (±0.0000) 
+   cities                            +0.2866  (±0.8674) 
+
+==========================================================================
+FARM EMPLOYMENT SHARE  vs  cereal price x farm dependence   (n=3232, 183 countries)
+==========================================================================
+   farm share x price change         -0.6346  (±0.0861) **
+   farm share (level)                -0.2481  (±0.0657) **
+   income                            -0.0000  (±0.0000) **
+   cities                            +0.4852  (±0.8087) 
+
+==========================================================================
+BIRTHS PER WOMAN  vs  overall food price x farm dependence   (n=3407, 183 countries)
+==========================================================================
+   farm share x price change         -0.7258  (±0.0429) **
+   farm share (level)                -0.0555  (±0.0109) **
+   income                            +0.0000  (±0.0000) **
+   cities                            +0.0143  (±0.0680) 
+
+==========================================================================
+BIRTHS PER WOMAN  vs  cereal price x farm dependence   (n=3407, 183 countries)
+==========================================================================
+   farm share x price change         -0.7066  (±0.0444) **
+   farm share (level)                -0.0242  (±0.0067) **
+   income                            +0.0000  (±0.0000) 
+   cities                            +0.0160  (±0.0766) 
+
+==========================================================================
+PAID EMPLOYMENT SHARE  vs  overall food price x farm dependence   (n=3232, 183 countries)
+==========================================================================
+   farm share x price change         -0.7295  (±0.1247) **
+   farm share (level)                +0.1562  (±0.0749) **
+   income                            +0.0000  (±0.0000) **
+   cities                            -0.0511  (±0.9229) 
+
+==========================================================================
+PAID EMPLOYMENT SHARE  vs  cereal price x farm dependence   (n=3232, 183 countries)
+==========================================================================
+   farm share x price change         -0.7237  (±0.1243) **
+   farm share (level)                +0.0235  (±0.0420) 
+   income                            -0.0000  (±0.0000) 
+   cities                            -0.0856  (±0.9084) 

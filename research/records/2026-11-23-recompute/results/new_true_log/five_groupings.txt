@@ -1,0 +1,110 @@
+
+================================================================================
+A. WHEN THE TRANSITION BEGAN (diffusion)
+================================================================================
+
+  a) began by 1960  — 72 countries
+     basic schooling 95 | higher ed 56 | child deaths 11 | income 10 | women working 52 | electricity 99
+     mainly: Europe & Central Asia (49), Latin America & Caribbean (11), East Asia & Pacific (6)
+     schooling->births: +0.0059 (±0.0055)   n=659, 57 countries
+
+  b) 1961-75  — 38 countries
+     basic schooling 82 | higher ed 36 | child deaths 24 | income 9 | women working 51 | electricity 95
+     mainly: Latin America & Caribbean (16), East Asia & Pacific (14), Europe & Central Asia (4)
+     schooling->births: +0.0127 (±0.0015) **  n=503, 33 countries
+
+  c) 1976-90  — 41 countries
+     basic schooling 75 | higher ed 24 | child deaths 40 | income 8 | women working 43 | electricity 85
+     mainly: Latin America & Caribbean (12), Middle East, North Africa, Afghanistan & Pakistan (10), East Asia & Pacific (9)
+     schooling->births: +0.0169 (±0.0028) **  n=671, 35 countries
+
+  d) 1991-2005  — 31 countries
+     basic schooling 61 | higher ed 14 | child deaths 55 | income 8 | women working 42 | electricity 66
+     mainly: Sub-Saharan Africa (9), Middle East, North Africa, Afghanistan & Pakistan (8), East Asia & Pacific (7)
+     schooling->births: +0.0065 (±0.0016) **  n=497, 30 countries
+
+  e) after 2005  — 28 countries
+     basic schooling 31 | higher ed 6 | child deaths 122 | income 7 | women working 58 | electricity 30
+     mainly: Sub-Saharan Africa (25), Middle East, North Africa, Afghanistan & Pakistan (2), East Asia & Pacific (1)
+     schooling->births: -0.0179 (±0.0037) **  n=496, 28 countries
+
+  e) not yet below 5  — 7 countries
+     basic schooling 18 | higher ed 3 | child deaths 164 | income 6 | women working 59 | electricity 19
+     mainly: Sub-Saharan Africa (7)
+     schooling->births: -0.0352 (±0.0110) **  n=103, 6 countries
+
+================================================================================
+B. SCHOOLING RELATIVE TO INCOME (pent-up pressure)
+================================================================================
+
+  a) less schooling than income predicts  — 60 countries
+     basic schooling 47 | higher ed 17 | child deaths 75 | income 8 | women working 53 | electricity 59
+     mainly: Sub-Saharan Africa (27), Latin America & Caribbean (11), Middle East, North Africa, Afghanistan & Pakistan (9)
+     schooling->births: +0.0042 (±0.0027)   n=1125, 60 countries
+
+  b) as predicted  — 97 countries
+     basic schooling 79 | higher ed 42 | child deaths 39 | income 9 | women working 49 | electricity 86
+     mainly: Europe & Central Asia (28), Latin America & Caribbean (20), East Asia & Pacific (18)
+     schooling->births: +0.0109 (±0.0033) **  n=964, 69 countries
+
+  c) more schooling than income predicts  — 60 countries
+     basic schooling 90 | higher ed 36 | child deaths 31 | income 8 | women working 48 | electricity 89
+     mainly: Europe & Central Asia (24), East Asia & Pacific (13), Latin America & Caribbean (11)
+     schooling->births: +0.0123 (±0.0016) **  n=840, 60 countries
+
+================================================================================
+C. GATE TIGHTNESS (how few reach tertiary)
+================================================================================
+
+  a) tight gate (few reach tertiary)  — 57 countries
+     basic schooling 53 | higher ed 8 | child deaths 78 | income 8 | women working 55 | electricity 52
+     mainly: Sub-Saharan Africa (32), Latin America & Caribbean (8), East Asia & Pacific (8)
+     schooling->births: +0.0061 (±0.0026) **  n=1003, 57 countries
+
+  b) middling gate  — 58 countries
+     basic schooling 72 | higher ed 25 | child deaths 46 | income 8 | women working 43 | electricity 84
+     mainly: Latin America & Caribbean (14), Middle East, North Africa, Afghanistan & Pakistan (14), Sub-Saharan Africa (10)
+     schooling->births: +0.0126 (±0.0022) **  n=1022, 58 countries
+
+  c) open gate  — 57 countries
+     basic schooling 92 | higher ed 62 | child deaths 13 | income 9 | women working 50 | electricity 98
+     mainly: Europe & Central Asia (35), Latin America & Caribbean (10), East Asia & Pacific (7)
+     schooling->births: +0.0116 (±0.0037) **  n=755, 53 countries
+
+================================================================================
+D. WOMEN'S OUTSIDE OPTIONS (bargaining)
+================================================================================
+
+  a) few outside options for women  — 58 countries
+     basic schooling 50 | higher ed 12 | child deaths 81 | income 7 | women working 43 | electricity 57
+     mainly: Sub-Saharan Africa (27), Middle East, North Africa, Afghanistan & Pakistan (14), East Asia & Pacific (7)
+     schooling->births: +0.0087 (±0.0033) **  n=1134, 57 countries
+
+  b) middling  — 101 countries
+     basic schooling 78 | higher ed 32 | child deaths 43 | income 9 | women working 53 | electricity 82
+     mainly: Europe & Central Asia (31), Latin America & Caribbean (25), Sub-Saharan Africa (20)
+     schooling->births: +0.0100 (±0.0020) **  n=1097, 86 countries
+
+  c) many outside options  — 58 countries
+     basic schooling 89 | higher ed 56 | child deaths 17 | income 10 | women working 53 | electricity 96
+     mainly: Europe & Central Asia (24), Latin America & Caribbean (15), East Asia & Pacific (10)
+     schooling->births: +0.0095 (±0.0024) **  n=698, 46 countries
+
+================================================================================
+E. STATE REACH (infrastructural power)
+================================================================================
+
+  a) thin state reach  — 52 countries
+     basic schooling 46 | higher ed 10 | child deaths 87 | income 7 | women working 55 | electricity 46
+     mainly: Sub-Saharan Africa (30), East Asia & Pacific (7), Middle East, North Africa, Afghanistan & Pakistan (6)
+     schooling->births: +0.0046 (±0.0027)   n=961, 51 countries
+
+  b) middling reach  — 113 countries
+     basic schooling 76 | higher ed 32 | child deaths 42 | income 9 | women working 47 | electricity 87
+     mainly: Latin America & Caribbean (32), Europe & Central Asia (26), East Asia & Pacific (22)
+     schooling->births: +0.0105 (±0.0020) **  n=1387, 91 countries
+
+  c) deep state reach  — 52 countries
+     basic schooling 92 | higher ed 54 | child deaths 16 | income 10 | women working 49 | electricity 97
+     mainly: Europe & Central Asia (32), East Asia & Pacific (8), Latin America & Caribbean (5)
+     schooling->births: +0.0143 (±0.0032) **  n=581, 47 countries

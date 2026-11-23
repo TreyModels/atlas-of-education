@@ -1,0 +1,3 @@
+observed share explained (lsc -> 10-yr fertility change, country+year effects): 11.97%
+  time-shift null (original)         median 0.165%  99th pct 2.192%  max 4.569%  reached observed: 0 of 20000
+  other-country swap null (harder)   median 1.058%  99th pct 6.892%  max 13.121%  reached observed: 6 of 20000

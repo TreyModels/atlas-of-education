@@ -1,0 +1,28 @@
+====================================================================================
+6d  LEAD TEST — does FUTURE electricity predict CURRENT schooling change?
+====================================================================================
+outcome        standard X(t)      lead X(t+10)    ratio   verdict
+lsc          +0.333±0.08      +0.285±0.07     0.86   PRE-TREND
+sec          +0.418±0.09      +0.361±0.07     0.86   PRE-TREND
+ter          -0.183±0.16      -0.142±0.09     0.78   PRE-TREND
+
+  same test for paid employment -> tertiary:
+    standard +1.133±0.38   lead +0.978±0.22   ratio 0.86
+
+====================================================================================
+6c  NEGATIVE CONTROLS — should be nothing
+====================================================================================
+  electricity -> tax          +0.0312 (±0.0275)  clean  n=2077
+  electricity -> agri_va      -0.0205 (±0.0287)  clean  n=3762
+
+====================================================================================
+6a  E-VALUES — how strong must a confounder be to explain this away?
+====================================================================================
+  electricity -> lower-sec   standardised d = +1.073   E-value (point)  4.75   E-value (CI bound)  2.68
+  electricity -> upper-sec   standardised d = +1.417   E-value (point)  6.72   E-value (CI bound)  3.76
+  paid jobs -> tertiary      standardised d = +2.692   E-value (point) 22.66   E-value (CI bound)  4.10
+
+  Reading: the E-value is the factor by which an unmeasured confounder would
+  have to be associated with BOTH the predictor and the outcome, above the
+  measured covariates, to reduce the estimate to zero. The CI-bound column is
+  the honest one.

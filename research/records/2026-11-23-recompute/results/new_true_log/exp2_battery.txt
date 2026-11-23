@@ -1,0 +1,17 @@
+tasks: 8000
+
+============================================================================================
+EVERY CANDIDATE DRIVER vs A PURE COMMON CAUSE
+(points of higher-ed growth per SD of the driver)
+============================================================================================
+driver              observed        common-cause 95%             chain 95%   verdict
+wage_emp          +3.196±0.92     -1.25 to +1.28     +6.21 to +11.67   outside both
+urban             +3.214±1.01     -1.04 to +0.99    +10.13 to +15.50   outside both
+electricity       +0.194±0.45     -1.30 to +1.27     +4.90 to +9.95   indistinguishable from trend
+gdppc_log         +2.073±0.74     -1.18 to +1.17    +10.02 to +15.22   outside both
+u5mr              -2.086±0.61     -1.08 to +0.99    +10.52 to +15.66   outside both
+prm_cmp           +2.044±0.42     -1.45 to +1.18     +7.98 to +13.76   outside both
+lsc               +4.005±0.86     -1.43 to +1.37     +7.15 to +14.02   outside both
+sec               +3.791±0.84     -1.15 to +1.25     +9.27 to +15.14   outside both
+flfp              -0.138±0.77     -1.22 to +1.27     +6.67 to +12.13   indistinguishable from trend
+life_exp          +2.692±0.63     -1.04 to +0.99    +10.13 to +15.50   outside both

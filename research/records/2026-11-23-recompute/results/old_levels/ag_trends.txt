@@ -1,0 +1,11 @@
+fertiliser series: 1960-2024, 65 years
+
+======================================================================================
+THE AG PAPER'S FIVE CLAIMS, WITH AND WITHOUT COUNTRY TRENDS
+======================================================================================
+claim                                      FE only         with trends   verdict
+L1 input prices -> farm exit      +0.0239±0.004   +0.0056±0.003   SURVIVES
+L2 input prices -> wage jobs      -0.0140±0.005   -0.0004±0.002   dies
+L3 input prices -> births         +0.0003±0.000   +0.0001±0.000   dies
+L4 fertility -> farm exit         +1.3871±0.449   +0.0029±0.455   dies
+L5 farm exit -> births            -0.0006±0.004   -0.0022±0.003   dies

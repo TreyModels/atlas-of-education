@@ -1,0 +1,67 @@
+tasks: 880
+
+==================================================================================
+ONSET COHORT
+==================================================================================
+
+  early (by 1975) — 110 countries, 110 pairs computed
+     -> higher ed    (none)
+        higher ed    -> lowsec comp(+0.14), F/M higher(+0.00)
+     -> upper sec comp (none)
+        upper sec comp -> child surv(-0.13)
+     -> lowsec comp  higher ed(+0.14)
+        lowsec comp  -> primary comp(+0.33)
+
+  just starting (after 2005) — 28 countries, 110 pairs computed
+     -> higher ed    (none)
+        higher ed    -> child surv(-1.91), cities(+0.28)
+     -> upper sec comp (none)
+     -> lowsec comp  (none)
+
+  late (1991-2005) — 31 countries, 110 pairs computed
+     -> higher ed    (none)
+        higher ed    -> primary comp(+0.86), child surv(-0.76), lowsec comp(+0.72), upper sec comp(+0.71)
+     -> upper sec comp higher ed(+0.71)
+        upper sec comp -> primary comp(+0.50), child surv(-0.28), cities(+0.08)
+     -> lowsec comp  higher ed(+0.72)
+        lowsec comp  -> primary comp(+0.32), child surv(-0.30), cities(+0.07)
+
+  middle (1976-90) — 41 countries, 110 pairs computed
+     -> higher ed    F/M higher(+2.91), upper sec comp(+0.11)
+     -> upper sec comp (none)
+        upper sec comp -> lowsec comp(+0.29), primary comp(+0.17), higher ed(+0.11), cities(+0.06), income(+0.00)
+     -> lowsec comp  upper sec comp(+0.29)
+        lowsec comp  -> primary comp(+0.23)
+
+  never yet — 7 countries, 0 pairs computed
+     -> higher ed    (none)
+     -> upper sec comp (none)
+     -> lowsec comp  (none)
+
+==================================================================================
+GATE TIGHTNESS
+==================================================================================
+
+  middling gate — 56 countries, 110 pairs computed
+     -> higher ed    (none)
+        higher ed    -> primary comp(+0.33), lowsec comp(+0.29), child surv(-0.26), upper sec comp(+0.26), cities(+0.10)
+     -> upper sec comp higher ed(+0.26)
+        upper sec comp -> primary comp(+0.34), child surv(-0.20)
+     -> lowsec comp  higher ed(+0.29), women work(+0.14)
+        lowsec comp  -> primary comp(+0.30), child surv(-0.17)
+
+  open gate — 52 countries, 110 pairs computed
+     -> higher ed    electricity(+0.50), paid jobs(+0.45)
+        higher ed    -> lowsec comp(+0.28), primary comp(+0.16)
+     -> upper sec comp F/M higher(+13.32), paid jobs(+0.56), lowsec comp(+0.24)
+        upper sec comp -> primary comp(+0.19)
+     -> lowsec comp  higher ed(+0.28)
+        lowsec comp  -> primary comp(+0.27), upper sec comp(+0.24)
+
+  tight gate — 78 countries, 110 pairs computed
+     -> higher ed    (none)
+        higher ed    -> child surv(-1.74), primary comp(+0.82), F/M higher(+0.01)
+     -> upper sec comp (none)
+        upper sec comp -> child surv(-0.63), primary comp(+0.50), cities(+0.07), F/M higher(+0.00)
+     -> lowsec comp  (none)
+        lowsec comp  -> child surv(-0.55), primary comp(+0.45), cities(+0.05)

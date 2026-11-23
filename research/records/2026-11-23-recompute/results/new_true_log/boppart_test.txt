@@ -1,0 +1,19 @@
+{'pwt_pli': 10230, 'pwt_tfp': 6342, 'pwt_labsh': 7901, 'pwt_hc': 8568, 'pwt_yw': 9386, 'emp_agri': 6349, 'agri_va': 8930, 'wage_emp': 6349, 'fertility': 14073, 'lsc': 4233, 'gdppc_log': 11347, 'urban': 14105}
+
+========================================================================================
+DOES THE RELATIVE PRICE OF INVESTMENT GOODS PREDICT FARM EMPLOYMENT?
+(positive = expensive capital keeps people on the land, as Boppart predicts)
+========================================================================================
+  investment price -> farm share, FE only          +0.0718 (±0.2027)   n= 3989, 168 countries
+  investment price -> farm share, + country trends   -0.0607 (±0.0716)   n= 3987, 167 countries
+
+  and on farm output share:
+  investment price -> farm output, FE only         +0.1674 (±0.2221)   n= 6196, 177 countries
+  investment price -> farm output, + trends        +0.0751 (±0.1816)   n= 6191, 175 countries
+
+========================================================================================
+THE INPUT-INTENSITY ELASTICITY (the parameter they estimate above unity)
+========================================================================================
+  elasticity of farm-employment share to the wage/capital-price ratio
+  -0.3002 (±0.0499)  n=3828, 132 countries
+  (a positive value means cheap capital pulls labour off the farm)

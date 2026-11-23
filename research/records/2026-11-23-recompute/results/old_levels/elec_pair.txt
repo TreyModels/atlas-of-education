@@ -1,0 +1,12 @@
+electricity -> lsc FE b=+0.3333 se=0.0830 n=1414 nc=163
+electricity -> lsc trend b=+0.0520 se=0.0975 n=1343 nc=129
+electricity -> sec FE b=+0.4183 se=0.0852 n=1974 nc=179
+electricity -> sec trend b=-0.0165 se=0.0622 n=1915 nc=151
+wage_emp -> ter FE b=+1.1329 se=0.3778 n=1874 nc=156
+wage_emp -> ter trend b=+0.5919 se=0.3772 n=1819 nc=127
+ter -> sec FE b=+0.0510 se=0.0486 n=2553 nc=178
+ter -> sec trend b=-0.0348 se=0.0448 n=2505 nc=152
+gdppc_log -> lsc FE b=-0.0003 se=0.0002 n=1932 nc=171
+gdppc_log -> lsc trend b=-0.0002 se=0.0001 n=1873 nc=142
+lsc -> gdppc_log FE b=+5.8833 se=24.1828 n=2817 nc=184
+lsc -> gdppc_log trend b=-3.2594 se=7.6366 n=2783 nc=167

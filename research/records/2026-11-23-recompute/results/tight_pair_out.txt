@@ -1,0 +1,10 @@
+panel gdppc_log (true log applied in sweep.build): median 8.24, range 4.98..11.86
+ORIG electricity->lsc: b_xy=+16.048 CI(+12.17,+21.73) b_yx=+1.478 diffCI(+10.36,+20.47) leads=True n=471  sd(X)=33.02
+ORIG electricity->sec: b_xy=+15.377 CI(+10.85,+20.26) b_yx=+3.123 diffCI(+7.32,+17.13) leads=True n=577  sd(X)=31.64
+ORIG wage_emp->ter: b_xy=+21.961 CI(+5.26,+39.40) b_yx=-0.609 diffCI(+5.59,+40.85) leads=True n=562  sd(X)=27.11
+ORIG urban->lsc: b_xy=+21.087 CI(+10.59,+32.20) b_yx=+0.610 diffCI(+9.98,+30.60) leads=True n=673  sd(X)=23.88
+panel gdppc_log (true log applied in sweep.build): median 8.24, range 4.98..11.86
+A2   electricity->lsc: b_xy=+1.215 CI(+0.92,+1.65) b_yx=+0.155 diffCI(+0.71,+1.51) leads=True n=471  sd(X)=33.02
+A2   electricity->sec: b_xy=+1.261 CI(+0.89,+1.66) b_yx=+0.319 diffCI(+0.50,+1.35) leads=True n=577  sd(X)=31.64
+A2   wage_emp->ter: b_xy=+1.810 CI(+0.43,+3.25) b_yx=-0.174 diffCI(+0.51,+3.50) leads=True n=562  sd(X)=27.11
+A2   urban->lsc: b_xy=+1.619 CI(+0.81,+2.47) b_yx=+0.137 diffCI(+0.65,+2.32) leads=True n=673  sd(X)=23.88

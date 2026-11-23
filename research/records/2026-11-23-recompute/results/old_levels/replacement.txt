@@ -1,0 +1,77 @@
+119 countries fell below replacement; 75 never did
+
+====================================================================================
+THE CLUB, in order of arrival
+====================================================================================
+  1960s: CZE, DNK, EST, FIN, HRV, HUN, JPN, LUX, LVA, MLT, ROU, RUS, SRB, SWE, UKR
+  1970s: AND, AUS, AUT, BEL, BIH, BLR, BMU, BRB, CAN, CHE, CHI, CUB, DEU, FRA, GBR, IMN, ITA, LIE, LTU, MAC, NLD, NOR, NZL, SGP, SMR, USA
+  1980s: ATG, BGR, CYM, ESP, GRC, HKG, IRL, ISL, KOR, MCO, MNE, POL, PRT, SVK, SVN, SXM, VGB
+  1990s: ABW, ARM, AZE, CHL, CHN, CYP, GEO, IRN, KAZ, MDA, MKD, MNP, MUS, PLW, PRI, PRK, SYC, THA, TTO, TUN, VNM
+  2000s: ALB, ARE, BHR, BHS, BRA, BRN, COL, CRI, CUW, DMA, GIB, GRD, JAM, KNA, LCA, TCA, URY, VCT
+  2010s: ARG, BTN, CPV, ECU, GRL, KWT, LKA, MDV, MEX, MYS, NCL, NPL, PER, PYF, QAT, SLV, TUR, VIR, XKX
+  2020s: BLZ, IND, PHL
+
+====================================================================================
+WHAT THEY LOOKED LIKE 20 / 10 / 5 YEARS BEFORE CROSSING
+====================================================================================
+                                    20 yrs before    10 yrs    5 yrs  never-crossed
+  girls+boys finishing lower sec             55.2      77.2     85.2           44.0
+  secondary completion                       65.3      79.6     82.1           49.1
+  young people in higher ed                   5.6      18.5     16.7            7.0
+  women per man in higher ed                  1.0       1.1      1.2            0.7
+  child deaths per 1000                      44.5      27.3     22.2           67.3
+  income per person                        5125.4   10019.3   9849.1         1328.8
+  % in cities                                51.6      59.6     61.8           39.4
+  women in labour force %                    42.4      45.4     47.7           55.7
+  % homes with power                         95.5      97.1     99.0           44.4
+  life expectancy                            69.0      70.8     71.3           61.3
+  % jobs that are paid                       59.4      66.9     67.8           31.4
+
+====================================================================================
+HOW FAST THINGS WERE MOVING IN THE 10 YEARS BEFORE CROSSING
+====================================================================================
+  girls+boys finishing lower sec   median change    +13.7   (25th-75th: +3.2 to +21.6)
+  secondary completion             median change    +10.3   (25th-75th: +2.9 to +22.5)
+  young people in higher ed        median change     +8.4   (25th-75th: +4.6 to +12.7)
+  women per man in higher ed       median change     +0.1   (25th-75th: +0.0 to +0.2)
+  child deaths per 1000            median change     -7.1   (25th-75th: -13.5 to -5.1)
+  income per person                median change  +1825.1   (25th-75th: +696.6 to +5701.5)
+  % in cities                      median change     +3.6   (25th-75th: +1.0 to +6.4)
+  women in labour force %          median change     +1.7   (25th-75th: -0.1 to +4.8)
+  % homes with power               median change     +1.5   (25th-75th: +0.0 to +7.9)
+  life expectancy                  median change     +2.0   (25th-75th: +1.0 to +3.5)
+  % jobs that are paid             median change     +0.8   (25th-75th: -0.0 to +2.9)
+
+====================================================================================
+THE ODD ONES: crossed below replacement while still POOR or UNDER-SCHOOLED
+====================================================================================
+  lowest income at crossing:
+    ARM  crossed 1994  at $857 per head, lower-secondary 86%
+    CHN  crossed 1991  at $990 per head, lower-secondary 58%
+    NPL  crossed 2019  at $1,077 per head, lower-secondary 100%
+    VNM  crossed 1998  at $1,110 per head, lower-secondary 64%
+    GEO  crossed 1992  at $1,514 per head, lower-secondary 82%
+    IND  crossed 2020  at $1,807 per head, lower-secondary 89%
+    ALB  crossed 2002  at $2,297 per head, lower-secondary 90%
+    BTN  crossed 2012  at $2,655 per head, lower-secondary 68%
+  lowest basic schooling at crossing:
+    CRI  crossed 2003  with lower-secondary 44%, $8,207 per head
+    CUB  crossed 1978  with lower-secondary 50%, $3,786 per head
+    TUN  crossed 1999  with lower-secondary 55%, $2,767 per head
+    CHN  crossed 1991  with lower-secondary 58%, $990 per head
+    VNM  crossed 1998  with lower-secondary 64%, $1,110 per head
+    BTN  crossed 2012  with lower-secondary 68%, $2,655 per head
+    MUS  crossed 1997  with lower-secondary 69%, $5,024 per head
+    BLZ  crossed 2020  with lower-secondary 70%, $5,006 per head
+
+====================================================================================
+HOW MANY HAD EACH CONDITION ALREADY TRUE 10 YEARS BEFORE
+====================================================================================
+  income above $5,000                   57 of  79   ( 72%)
+  income above $10,000                  40 of  79   ( 51%)
+  lower-secondary above 70%             19 of  29   ( 66%)
+  lower-secondary above 50%             25 of  29   ( 86%)
+  child deaths below 50                 70 of  86   ( 81%)
+  city share above 50%                  80 of 111   ( 72%)
+  women outnumber men in higher ed      18 of  34   ( 53%)
+  electricity above 90%                 28 of  42   ( 67%)

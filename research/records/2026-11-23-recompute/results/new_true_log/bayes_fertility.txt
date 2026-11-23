@@ -1,0 +1,39 @@
+============================================================================
+BAYES 1   WHEN DOES THE FERTILITY FALL BEGIN?
+          outcome: the year a country first drops below 5 children per woman
+          predictors measured 20 years earlier
+============================================================================
+  22 countries with every predictor available
+
+============================================================================
+BAYES 2   WHAT TRACKS THE 10-YEAR FALL IN BIRTHS, COUNTRY BY COUNTRY?
+============================================================================
+  1156 country-decades, 147 countries
+   inclusion probability (how often the model wants it):
+     homes with electricity             1.00 ########################################
+     girls finishing lower secondary    1.00 ########################################
+     children dying before 5            1.00 ########################################
+     income per person                  0.97 #######################################
+     women in the labour force          0.86 ##################################
+     young people in higher ed          0.45 ##################
+     secondary completion               0.04 ##
+     cities                             0.03 #
+     women vs men in higher ed          0.03 #
+   most probable single model: girls finishing lower secondary, children dying before 5, income per person, women in the labour force, homes with electricity
+
+============================================================================
+BAYES 3   HIERARCHICAL MODEL — each country gets its own baseline
+          10-yr change in births, country random intercepts, Gibbs sampler
+============================================================================
+   coefficient, 95% credible interval, probability the effect is positive
+     girls finishing lower secondary    +0.061  [+0.042, +0.081]  P(>0)=1.00 ***
+     secondary completion               +0.011  [-0.012, +0.034]  P(>0)=0.83 
+     young people in higher ed          -0.023  [-0.040, -0.005]  P(>0)=0.01 ***
+     women vs men in higher ed          +0.003  [-0.013, +0.019]  P(>0)=0.63 
+     children dying before 5            +0.042  [+0.026, +0.058]  P(>0)=1.00 ***
+     income per person                  -0.033  [-0.053, -0.013]  P(>0)=0.00 ***
+     women in the labour force          +0.025  [+0.010, +0.039]  P(>0)=1.00 ***
+     cities                             -0.001  [-0.019, +0.018]  P(>0)=0.46 
+     homes with electricity             +0.065  [+0.046, +0.084]  P(>0)=1.00 ***
+
+done.

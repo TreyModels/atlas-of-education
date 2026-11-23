@@ -1,0 +1,33 @@
+==============================================================================
+1. DOES THE FARM SHARE PREDICT THE FALL IN BIRTHS?
+   (positive = more farming goes with a SLOWER fall)
+==============================================================================
+  farm employment share   nothing            +0.0011 (±0.0041)    n=4488, 187 countries
+  farm employment share   + income           +0.0013 (±0.0047)    n=4335, 185 countries
+  farm employment share   + cities           +0.0000 (±0.0044)    n=4335, 185 countries
+  farm employment share   + schooling        +0.0056 (±0.0060)    n=1928, 165 countries
+  farm employment share   + child survival   +0.0003 (±0.0050)    n=1899, 162 countries
+  farm employment share   + paid jobs        -0.0012 (±0.0056)    n=1899, 162 countries
+
+  farm OUTPUT share (value added) instead:
+  farm output share       nothing            +0.0128 (±0.0030)**  n=6960, 203 countries
+  farm output share       + income & cities  +0.0105 (±0.0029)**  n=6867, 202 countries
+  farm output share       + schooling & survival -0.0046 (±0.0042)    n=2564, 174 countries
+
+==============================================================================
+2. WHICH DIRECTION?
+==============================================================================
+  farm share -> births:      +0.0011 (±0.0041)
+  births -> farm share:      +1.5359 (±0.4059)
+
+==============================================================================
+3. DOES IT BEAT THE OTHER CANDIDATES? (all in one model)
+==============================================================================
+  n=1899, 162 countries
+    farm share         -0.0012  (±0.0056) 
+    own births         -0.6503  (±0.0524) **
+    income             +0.1142  (±0.0804) 
+    cities             -0.0051  (±0.0050) 
+    schooling          -0.0005  (±0.0016) 
+    child survival     +0.0067  (±0.0018) **
+    paid jobs          -0.0053  (±0.0063) 

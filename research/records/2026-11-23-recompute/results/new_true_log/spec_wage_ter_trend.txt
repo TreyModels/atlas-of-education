@@ -1,0 +1,47 @@
+X=wage_emp Y=ter controls=['gdppc_log', 'urban', 'electricity', 'lsc', 'u5mr']
+specifications defined: 2304
+
+==========================================================================
+THE HEADLINE RESULT ACROSS EVERY DEFENSIBLE SPECIFICATION
+==========================================================================
+  specifications estimable: 2,112 of 2,304 defined
+  median estimate:       +0.009
+  middle 50%:            -0.005 to +0.561
+  range (5-95%):         -0.238 to +1.246
+  positive in:           66.4% of specifications
+  significant & positive:16.6%
+  significant & negative:1.3%
+  [country        ] n= 704 median +0.014  sig&pos 24.7%  sig&neg 0.0%
+  [country+decade ] n= 704 median +0.014  sig&pos 25.0%  sig&neg 0.0%
+  [country+trend  ] n= 704 median -0.003  sig&pos 0.0%  sig&neg 4.0%
+  (units: 'level' specs are in outcome points per point of X; 'log' specs are in log points per point of X, so medians must not be pooled across transforms; t-statistics are unit-free)
+  [transform level] n=1056 median b +0.563  median t +1.25  sig&pos 29.7%  sig&neg 1.7%
+  [transform log  ] n=1056 median b +0.003  median t +0.22  sig&pos 3.4%  sig&neg 0.9%
+  [level x country        ] n= 352 median b +0.821  sig&pos 44.9%  sig&neg 0.0%
+  [level x country+decade ] n= 352 median b +0.779  sig&pos 44.3%  sig&neg 0.0%
+  [level x country+trend  ] n= 352 median b -0.081  sig&pos 0.0%  sig&neg 5.1%
+  [log   x country        ] n= 352 median b +0.005  sig&pos 4.5%  sig&neg 0.0%
+  [log   x country+decade ] n= 352 median b +0.004  sig&pos 5.7%  sig&neg 0.0%
+  [log   x country+trend  ] n= 352 median b -0.002  sig&pos 0.0%  sig&neg 2.8%
+
+  which analyst choices move the answer:
+    lag            0: +0.02   10: -0.00   15: +0.01   5: +0.00
+    controls       0 controls: +0.01   1 controls: +0.01   2 controls: +0.01   3 controls: +0.01   4 controls: +0.01   5 controls: +0.01
+    fixed effects  country: +0.01   country+decade: +0.01   country+trend: -0.00
+    sample         all: +0.01   non-rich: +0.01   post1980: +0.01
+    transform      level: +0.56   log: +0.00
+
+==========================================================================
+LEAVE-ONE-COUNTRY-OUT
+==========================================================================
+  full sample: +1.083 (±0.458)
+  dropping one country changes it to: +0.688 (TUR) to +1.184 (GEO)
+  most influential (largest upward pull when dropped):
+    drop GEO: +1.184
+    drop MKD: +1.182
+    drop MNG: +1.174
+  most influential (largest downward pull when dropped):
+    drop TUR: +0.688
+    drop CUB: +0.906
+    drop CYP: +0.961
+  share of the 203 jackknife estimates that stay positive: 100.0%

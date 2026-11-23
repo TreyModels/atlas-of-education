@@ -1,0 +1,34 @@
+specifications: 1536
+
+==========================================================================
+THE HEADLINE RESULT ACROSS EVERY DEFENSIBLE SPECIFICATION
+==========================================================================
+  specifications:        1,408
+  median estimate:       +0.014
+  middle 50%:            -0.001 to +0.858
+  range (5-95%):         -0.040 to +1.371
+  positive in:           73.7% of specifications
+  significant & positive:27.9%
+  significant & negative:0.3%
+
+  which analyst choices move the answer:
+    lag            0: +0.39   10: -0.00   15: +0.02   5: +0.19
+    controls       0 controls: +0.12   1 controls: +0.02   2 controls: +0.01   3 controls: +0.01   4 controls: +0.01   5 controls: +0.01
+    fixed effects  country: +0.01   country+decade: +0.01
+    sample         all: +0.01   non-rich: +0.07   post1980: +0.01
+    transform      level: +0.86   log: +0.00
+
+==========================================================================
+LEAVE-ONE-COUNTRY-OUT
+==========================================================================
+  full sample: +1.133 (±0.378)
+  dropping one country changes it to: +0.830 (TUR) to +1.220 (MKD)
+  most influential (largest upward pull when dropped):
+    drop MKD: +1.220
+    drop MNG: +1.219
+    drop BWA: +1.199
+  most influential (largest downward pull when dropped):
+    drop TUR: +0.830
+    drop CUB: +0.970
+    drop CYP: +1.039
+  share of the 203 jackknife estimates that stay positive: 100.0%

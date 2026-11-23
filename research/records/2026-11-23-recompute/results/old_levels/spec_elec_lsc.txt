@@ -1,0 +1,47 @@
+X=electricity Y=lsc controls=['gdppc_log', 'urban', 'wage_emp', 'ter', 'u5mr']
+specifications defined: 2304
+
+==========================================================================
+THE HEADLINE RESULT ACROSS EVERY DEFENSIBLE SPECIFICATION
+==========================================================================
+  specifications estimable: 2,208 of 2,304 defined
+  median estimate:       +0.004
+  middle 50%:            -0.000 to +0.208
+  range (5-95%):         -0.095 to +0.378
+  positive in:           74.7% of specifications
+  significant & positive:25.4%
+  significant & negative:5.1%
+  [country        ] n= 736 median +0.007  sig&pos 37.2%  sig&neg 0.0%
+  [country+decade ] n= 736 median +0.007  sig&pos 36.8%  sig&neg 0.0%
+  [country+trend  ] n= 736 median +0.000  sig&pos 2.2%  sig&neg 15.2%
+  (units: 'level' specs are in outcome points per point of X; 'log' specs are in log points per point of X, so medians must not be pooled across transforms; t-statistics are unit-free)
+  [transform level] n=1104 median b +0.209  median t +1.69  sig&pos 45.9%  sig&neg 2.9%
+  [transform log  ] n=1104 median b +0.001  median t +0.33  sig&pos 4.9%  sig&neg 7.2%
+  [level x country        ] n= 368 median b +0.279  sig&pos 66.3%  sig&neg 0.0%
+  [level x country+decade ] n= 368 median b +0.278  sig&pos 67.1%  sig&neg 0.0%
+  [level x country+trend  ] n= 368 median b +0.051  sig&pos 4.3%  sig&neg 8.7%
+  [log   x country        ] n= 368 median b +0.002  sig&pos 8.2%  sig&neg 0.0%
+  [log   x country+decade ] n= 368 median b +0.001  sig&pos 6.5%  sig&neg 0.0%
+  [log   x country+trend  ] n= 368 median b -0.000  sig&pos 0.0%  sig&neg 21.7%
+
+  which analyst choices move the answer:
+    lag            0: +0.00   10: +0.03   15: -0.00   5: +0.03
+    controls       0 controls: +0.00   1 controls: +0.00   2 controls: +0.00   3 controls: +0.00   4 controls: +0.00   5 controls: +0.01
+    fixed effects  country: +0.01   country+decade: +0.01   country+trend: +0.00
+    sample         all: +0.00   non-rich: +0.00   post1980: +0.00
+    transform      level: +0.21   log: +0.00
+
+==========================================================================
+LEAVE-ONE-COUNTRY-OUT
+==========================================================================
+  full sample: +0.333 (±0.083)
+  dropping one country changes it to: +0.300 (MAR) to +0.384 (BTN)
+  most influential (largest upward pull when dropped):
+    drop BTN: +0.384
+    drop BOL: +0.357
+    drop BHR: +0.348
+  most influential (largest downward pull when dropped):
+    drop MAR: +0.300
+    drop BLR: +0.304
+    drop SYR: +0.310
+  share of the 197 jackknife estimates that stay positive: 100.0%

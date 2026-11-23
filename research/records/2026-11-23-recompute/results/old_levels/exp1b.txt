@@ -1,0 +1,19 @@
+1880 country-decades, 157 countries
+within-country sd: higher ed 9.43, paid jobs 2.24
+
+OBSERVED: paid jobs -> higher ed +1.425 (±0.410)   |   higher ed -> paid jobs +0.010 (±0.042)
+
+--- World chain  (1200 panels)
+  forward:  median +2.201   5-95% +1.543 to +2.885
+  backward: median -0.053   5-95% -0.078 to -0.027
+  share of panels inside the observed 95% interval: 52.2%
+
+--- World common cause  (1200 panels)
+  forward:  median +0.000   5-95% -0.260 to +0.255
+  backward: median -0.001   5-95% -0.045 to +0.045
+  share of panels inside the observed 95% interval: 0.0%
+
+======================================================================
+  chain mean +2.213   common-cause mean -0.003
+  overlap of 5-95% ranges: 0.000
+  => the level CAN separate the two worlds

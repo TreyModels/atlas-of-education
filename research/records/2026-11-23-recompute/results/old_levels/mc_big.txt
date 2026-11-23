@@ -1,0 +1,18 @@
+========================================================================
+LUCK TEST — 20,000 simulated worlds where education has NO effect
+========================================================================
+  actual share explained: 11.97%
+  no-effect worlds: median 0.165%, 99th percentile 2.192%, maximum 4.569%
+  worlds that reached the real value: 0 of 20,000
+
+========================================================================
+COUNTRY RESAMPLE — 2,000 different sets of countries
+========================================================================
+  children dying before 5                  first 56.0%   top three 99.8%
+  finishing lower secondary                first 44.0%   top three 99.8%
+  young people in higher ed                first 0.1%   top three 32.9%
+  secondary completion                     first 0.0%   top three 12.7%
+  women vs men in higher ed                first 0.0%   top three 33.0%
+  income per person                        first 0.0%   top three 0.0%
+  women in the labour force                first 0.0%   top three 0.0%
+  homes with electricity                   first 0.0%   top three 0.2%

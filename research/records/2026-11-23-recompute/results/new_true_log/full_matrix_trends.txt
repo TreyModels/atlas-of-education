@@ -1,0 +1,38 @@
+17 variables, 272 ordered pairs
+
+pairs estimable without trends: 272
+pairs estimable with trends:    272
+pairs estimable both ways:      272
+
+significant with country FE only:   127
+significant with country trends:    42
+significant in BOTH, same sign:     24
+  => 18.9% of FE edges survive trends
+
+====================================================================================
+EDGES THAT SURVIVE BOTH COUNTRY FE AND COUNTRY TRENDS
+====================================================================================
+  life_exp     -> fertility     FE   -0.049  trends   -0.047 (±0.008)  n=9266
+  u5mr         -> fertility     FE   +0.008  trends   +0.006 (±0.001)  n=8567
+  prm_cmp      -> gpi_sec       FE   +0.003  trends   +0.001 (±0.000)  n=1710
+  gdppc_log    -> urban         FE   +1.176  trends   +2.319 (±0.582)  n=9272
+  fertility    -> lsc           FE   -4.788  trends   -3.408 (±0.956)  n=1873
+  fertility    -> gdppc_log     FE   -0.065  trends   -0.068 (±0.020)  n=9233
+  sec          -> agri_va       FE   +0.039  trends   +0.057 (±0.018)  n=3824
+  u5mr         -> life_exp      FE   -0.027  trends   -0.026 (±0.009)  n=8565
+  fertility    -> electricity   FE   -3.415  trends   -2.151 (±0.778)  n=4279
+  agri_va      -> gdppc_log     FE   -0.005  trends   -0.004 (±0.002)  n=6832
+  urban        -> sec           FE   +0.779  trends   +0.633 (±0.232)  n=3390
+  fertility    -> sec           FE   -4.429  trends   -3.303 (±1.234)  n=3390
+  ter          -> lsc           FE   -0.090  trends   -0.155 (±0.060)  n=1403
+  u5mr         -> gpi_ter       FE   -0.002  trends   -0.002 (±0.001)  n=2128
+  tax          -> agri_va       FE   +0.013  trends   +0.031 (±0.013)  n=2848
+  life_exp     -> gpi_ter       FE   +0.014  trends   +0.010 (±0.004)  n=2171
+  emp_agri     -> tax           FE   -0.108  trends   -0.099 (±0.044)  n=2120
+  gpi_ter      -> lsc           FE  +14.036  trends   +7.088 (±3.178)  n=1272
+  gdppc_log    -> sec           FE   +5.969  trends   +4.515 (±2.035)  n=3390
+  fertility    -> prm_cmp       FE   -2.976  trends   -2.732 (±1.260)  n=2566
+  life_exp     -> gdppc_log     FE   +0.008  trends   +0.008 (±0.004)  n=9231
+  ter          -> prm_cmp       FE   -0.127  trends   -0.108 (±0.050)  n=1887
+  sec          -> ter           FE   +0.228  trends   +0.099 (±0.047)  n=2419
+  life_exp     -> electricity   FE   +0.688  trends   +0.146 (±0.071)  n=4279
