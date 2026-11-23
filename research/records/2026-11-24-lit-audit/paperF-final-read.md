@@ -82,3 +82,13 @@ correctly placed, §7 subordinate. The remaining risk is not framing but the mis
   referee at the artefact from the place where the word is defined.
 
 **Paper F: SIGNED OFF.** The four fixes are closed and the rebuild introduced no new framing problems.
+
+---
+
+## Addendum 3 — rebuilt Paper F at 6f4d6fb: SIGNED OFF (unchanged fixes + §3.5 pointer)
+
+Re-read of the assembled artefact at 6f4d6fb (18,056 words): all four fixes still present and unique
+(§8.2 calibrated-model sentence 1 hit; §7.1.5 "does not uniquely support the development-gradient reading" 1 hit;
+verdict claim 6 "S (shape) / C (hinge locations)" 1 hit), and the optional polish is now in: §3.5 points to
+`PREREGISTRATION.md` on the record (line 364). No drift reintroduced; framing, placebo caveat and §7 subordination
+unchanged. **Paper F: SIGNED OFF at 6f4d6fb.**
