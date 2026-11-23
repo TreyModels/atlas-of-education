@@ -1,0 +1,50 @@
+{
+ "DEU": {
+  "sch_plus1": 1870,
+  "sch_plus2": 1895,
+  "urb_plus10": null,
+  "urb_plus20": null,
+  "sch_1800": NaN,
+  "sch_1850": NaN,
+  "sch_1900": 3.48,
+  "urb_1800": NaN,
+  "urb_1850": NaN,
+  "urb_1900": NaN
+ },
+ "FRA": {
+  "sch_plus1": 1870,
+  "sch_plus2": 1955,
+  "urb_plus10": 1950,
+  "urb_plus20": null,
+  "sch_1800": NaN,
+  "sch_1850": NaN,
+  "sch_1900": 2.35,
+  "urb_1800": NaN,
+  "urb_1850": NaN,
+  "urb_1900": NaN
+ },
+ "GBR": {
+  "sch_plus1": 1870,
+  "sch_plus2": 1875,
+  "urb_plus10": null,
+  "urb_plus20": null,
+  "sch_1800": NaN,
+  "sch_1850": NaN,
+  "sch_1900": 2.55,
+  "urb_1800": NaN,
+  "urb_1850": NaN,
+  "urb_1900": NaN
+ },
+ "USA": {
+  "sch_plus1": 1870,
+  "sch_plus2": 1870,
+  "urb_plus10": null,
+  "urb_plus20": null,
+  "sch_1800": NaN,
+  "sch_1850": NaN,
+  "sch_1900": 6.38,
+  "urb_1800": NaN,
+  "urb_1850": NaN,
+  "urb_1900": NaN
+ }
+}
