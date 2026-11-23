@@ -13,7 +13,7 @@ the number must be checked against; this inventory deliberately includes the rec
 | F1 | Schooling–fertility gradient in levels (all 8 measures) | women's years −0.129 (0.029), n=5,915/192; total −0.228 (0.042); sec −0.0213 (0.0037); all 8 negative-significant | V | corr-rebuild `161b563` |
 | F2 | Same relation in decade changes | women's years +0.111 (0.045); total +0.190 (0.055); 0/8 negative-significant; 3/8 positive-significant | V | corr-rebuild `161b563` |
 | F3 | Specification curve, 336 specs | 99.7% negative, 91.3% negative-significant, 0% positive-significant, median −0.475 (288 period specs) | V | corr-rebuild `161b563` |
-| F4 | Transportability, 400 random 6-group re-partitions | levels negative-significant in 90% (67–100%) of groups; changes 1% (0–17%) | V | corr-rebuild `161b563` |
+| F4 | Transportability, 400 random 6-group re-partitions | levels negative-significant in 90% (67–100%) of groups; changes 1% (0–17%) — **separate battery from F5; do not merge percentages** | V | corr-rebuild `161b563` |
 | F5 | Extended battery: 13,800 partitions, 342 pairs, 57.3M regressions | focal pairs levels 71–99% vs changes 0–7%; matrix-wide 0.227 [0.214,0.239] vs 0.111 [0.103,0.120]; 0/8 change measures negative-significant | V | corr-battery `9363079` |
 | F6 | Future-schooling placebo | 52.9% vs 58.8% negative-significant; median −0.0179 vs −0.0224 (~90% as strong) → development gradient | V/A | corr-battery `9363079`; corr-rebuild `161b563` |
 | F7 | Threshold shape (6/9-year hinges) | −0.33 / −0.09 / +0.11 (rebuild); bootstrap −0.326 [−0.405,−0.248], −0.092 [−0.175,−0.013], +0.112 [+0.057,+0.171] | V (shape) / U (hinges conventional) | corr-rebuild `161b563`; corr-battery `9363079` |
@@ -21,8 +21,8 @@ the number must be checked against; this inventory deliberately includes the rec
 | F9 | UN marriage/living-arrangements data | age at marriage ~19→26 across surveys; cross-country −0.65 but within +0.007; living arrangements null; school→fertility edge null −0.0015 (0.0016) | V/N | un-marriage `b2b18d5` |
 | F10 | Why fertility tracks child survival (mechanisms) | rival mechanisms observationally equivalent at country level; 7 pre-registered experiments designed | review | mechanisms `28479c1` |
 | F11 | Child-mortality level vs volatility (E1) | level +0.0067 (0.0015) with trends, +0.0072 (0.0007) FE; volatility +0.0020 (0.0020) null; circular-shift p<0.005 level, p=0.29 volatility | V/N | level-volatility `935632e` |
-| F12 | Long-run transition corners and ordering | 1800–1850: 41.6 child deaths/100, LE 39.7y; 1980–2024: 2.8, 70.7y, TFR 2.55; mortality leads fertility by 12y median (IQR 3–19; n=190; 78% positive) | V | transition `b13fde8` |
-| F13 | Schooling's place in the transition | 2y of schooling precedes fertility decline by 15y in 67% of countries; 6y follows by 18y in 81%; long-run 52y lead is a reconstruction artefact | V | transition `b13fde8` |
+| F12 | Long-run transition corners and ordering | 1800–1850: 41.6 child deaths/100, LE 39.7y; 1980–2024: 2.8, 70.7y, TFR 2.55; mortality leads fertility by 12y median (IQR 3–19; n=190; 78% positive) | V (project-record; **auditor did not independently recompute**) | transition `b13fde8` |
+| F13 | Schooling's place in the transition | 2y of schooling precedes fertility decline by 15y in 67% of countries; 6y follows by 18y in 81%; long-run 52y lead is a reconstruction artefact | V (project-record; **auditor did not independently recompute**) | transition `b13fde8` |
 | F14 | Mortality counterfactual in GPU ABM | freezing pre-antibiotic mortality removes 3.2% of the fall (range −1.8 to +8.2%); development-only arm 2.0%; pre-antibiotic arc unreachable (4.01→4.94→4.64, max 5.20/5.42) | M | transition-gpu `f9f2f18` |
 | F15 | Individuation vs development-only out of sample | 24.43 vs 21.10, diff +3.32 [−3.76,+11.14], A better 3/6; GPU variant +3.80 [−2.60,+11.96] | N (tie) | dose-gpu `774085c` |
 | F16 | Dose-model identification / tolerance ladder | 4/5 parameter spreads 0.87–1.01 of prior width across tolerances; career delay narrows 0.88→0.71–0.76; wide intervals = identification limit | V (negative) | dose-tolerance `baadfe6` |
@@ -41,7 +41,7 @@ the number must be checked against; this inventory deliberately includes the rec
 | M3 | Gap-filled panel | 61/544 links change significance over 55 links, zero sign flips; 6 unreliable, 13 coverage-driven, 18 precision-only; 127/45/35 significant (observed 127/42/24) | V/A | imputed-matrix `5e4602b`; imputed-panel |
 | M4 | Added controls | 217 cells changed; 120 pure composition, 94 genuine; conclusions unchanged or strengthened; 3 sign flips are collinearity artefacts | V/A | controls `5ea58af` |
 | M5 | Supply vs demand for schooling | decomposition of enrolment growth; demand-side development dominates; supply-side (school construction) not identified as driver | V | supply-demand `963e5e5` |
-| M6 | "Schools before factories": schooling precedes agricultural labour release | 61/64 country cases; late-industrialiser regularity, not universal law. **Ordering figures, two separate analyses: schooling-vs-fertility on 64 three-event countries — strict schooling-first 37.5% (24/64, CI 26.6–50.0), simultaneous 31.25% (20/64), fertility-first 31.25% (20/64), median gap 0 (IQR −5/+8), all-81 variant 35.8% (29/81); release-vs-fertility on the 64 countries with both a farm-exit and a fertility date — 60/64 = 93.75% fertility-first, 4/64 = 6.25% release-first (AFG, LBR, MWI, ZMB), 0 ties.** The source JSON's 68.75% counted ties as schooling-first and is RETRACTED; correction verified at paper-massification `95dc135`/`76d929a`, source record annotated at subsistence-v2 `8caaeac` | V (assembly) / **U (69% figure, retracted — correction verified)** | historical-sequence `ab658c7`; subsistence-v2 `ce66cfc`; paper-massification `95dc135` |
+| M6 | "Schools before factories": schooling precedes agricultural labour release | 61/64 country cases; late-industrialiser regularity, not universal law. **Ordering figures, two separate analyses: schooling-vs-fertility on 64 three-event countries — strict schooling-first 37.5% (24/64, CI 26.6–50.0), simultaneous 31.25% (20/64), fertility-first 31.25% (20/64), median gap 0 (IQR −5/+8), all-81 variant 35.8% (29/81); release-vs-fertility on the **64 three-event countries** — 60/64 = 93.75% fertility-first, 4/64 = 6.25% release-first (AFG, LBR, MWI, ZMB), 0 ties — and on the **95 countries with both a farm-exit and a fertility date** (no schooling requirement) — 86/95 = 90.53% fertility-first, 9/95 = 9.47% release-first (the 4 plus BDI, BFA, ERI, NGA, TLS), 0 ties.** The source JSON's 68.75% counted ties as schooling-first and is RETRACTED; correction verified at paper-massification `95dc135`/`76d929a`, source record annotated at subsistence-v2 `8caaeac`; **both orderings independently recomputed in this record** by `lit/recompute_release_fertility_ordering.py` → `lit/release_fertility_ordering.json` (CSV from paper-massification `76d929a`, sha256 recorded) | V (assembly) / **U (69% figure, retracted — correction verified)** | historical-sequence `ab658c7`; subsistence-v2 `ce66cfc`; paper-massification `95dc135` |
 | M7 | Agricultural floor / Boppart joint model | agricultural subsistence constraint quantifies a floor; joint model rejects pure demand story | M | subsistence `41f6429`; subsistence-v2 `ce66cfc` |
 | M8 | Scaling laws of education/occupations | Heaps exponent 0.333 (0.011), 151 countries, 11,712 points (z=−5.9 vs 0.4 benchmark); no universalisation regime break (Welch p=0.22); education–income exponents shrink within countries (secondary 0.215→0.090) | A (audit) / N (new negative) | scaling `fd691a6` |
 | M9 | GPU engine scale/robustness | 66.8M simulated women per launch (12.7s); batch-layout dependence up to 1.13 births documented | D | cuda-scale `e600763` |
@@ -51,8 +51,8 @@ the number must be checked against; this inventory deliberately includes the rec
 
 | # | deliverable | status | record @ commit |
 |---|---|---|---|
-| P1 | Paper F — levels-vs-changes/transportability audit | DRAFT pushed (bf3997b; fixes 2864528); audited INCREMENTAL new assembly | paper-fertility `2864528` |
-| P2 | Paper M — "Schools before factories" omnibus massification synthesis | DRAFT pushed (17,371 words); sequencing assembly | paper-massification `753e102` |
+| P1 | Paper F — levels-vs-changes/transportability audit | **SIGNED OFF by audit at f9dd325** (four fixes closed; §3.5 polish 6f4d6fb); audited INCREMENTAL new assembly | paper-fertility `6f4d6fb` |
+| P2 | Paper M — "Schools before factories" omnibus massification synthesis | **corrected at 95dc135/76d929a (17,433 words), independently verified by the auditor**; two declared opens remain (threshold recoding, date-source table) | paper-massification `76d929a` |
 | P3 | Paper N1/N2 — nulls and multiverse resolution arithmetic | DRAFT pushed (28cf691) | paper-nulls `28cf691` |
 | P4 | Paper S / BOPPART sections — scaling audit and transition/individuation sections | section drafts pushed (`cuda-scale`, `90feb1e`) | paper-scaling `24 Nov`; paper-boppart `90feb1e` |
 | P5 | Earlier novelty ledger | 4 new / 8 incremental / 11 known; three defensible contributions (multiverse arithmetic; power-calibrated trend audit; GPU transition counterfactual, then pending) | novelty `390db8d` |
@@ -74,3 +74,20 @@ the number must be checked against; this inventory deliberately includes the rec
 No claim in this inventory is rated NEW CORRELATION; the classification and killing are in `CANDIDATES.md` and
 `DECISION.md`. The sequencing ordering percentage is the only **U** that has already been retracted by its own
 paper (M6): any candidate that cites "69%" or "68.75%" is rejected on sight.
+
+## E. Auditor marks on this inventory (novelty-review, `research/lit-audit-2026-11-24` @ `ead3a81`)
+
+The auditor marked every block against its own claims-map (`council-inventory-marks.md`). Summary:
+- **AGREE:** F1-F3, F6-F11, F14-F21, M1-M5, M7-M10, X1-X7 (with prior-art notes attached: Caldwell 1980,
+  Cleland-Rodríguez 1988, Kravdal 2002 for the fertility level side; Durlauf et al. 2005/Eberhardt-Teal 2011 for
+  the levels-vs-changes method; Steegen 2016/Simonsohn 2020/Patel 2015/Klau 2020/BY 2001 for the multiverse;
+  Porzio-Rossi-Santangelo 2021 plus the world-polity school for M5-M6; Boppart et al. 2023 for M7; Heaps
+  0.333's 1-digit-ILOSTAT caveat for M8; Collins/Spence/Arrow for credential inflation).
+- **ADJUST:** F12-F13 — project-record findings the auditor did not independently recompute; they are now marked
+  "project-record, auditor not reconfirmed" above.
+- **VERIFY:** M6 — both orderings independently re-derived from the committed CSV; matches this record's figures.
+- **NOTE/residual flag:** F4 vs F5 are separate batteries (never merge percentages); the 60/64 release ordering
+  now has the committed recompute artefact in this record, with the 95-country both-dates sample labelled
+  explicitly (86/9).
+- **P1/P2 updates** folded above: Paper F signed off at `f9dd325` (polish `6f4d6fb`); Paper M corrected at
+  `95dc135`/`76d929a`, two declared opens remain.

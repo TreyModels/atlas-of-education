@@ -45,8 +45,10 @@ The rule needs Benjamini–Yekutieli (2001, 10.1214/aos/1013699998, V) or an eff
 agriculture; the programme calls this a **late-industrialiser regularity, not a universal law**, and Paper M's
 own corrected ordering figure on the 64 three-event countries is **strict schooling-first 37.5% [26.6–50.0],
 simultaneous 31.25% (20/64), fertility-first 31.25% (20/64)** (the source JSON's 68.75% counted the 20 ties as
-schooling-first and is **not used**); the separate release-vs-fertility analysis is 60/64 = 93.75% fertility-first,
-4/64 = 6.25% release-first. The assembly combines supply/demand
+schooling-first and is **not used**); the separate release-vs-fertility analysis has two samples: 64 three-event countries, 60/64 = 93.75%
+fertility-first / 4/64 = 6.25% release-first (AFG, LBR, MWI, ZMB), and 95 countries with both a farm-exit and a
+fertility date, 86/95 = 90.53% / 9/95 = 9.47% (the 4 plus BDI, BFA, ERI, NGA, TLS), 0 ties in both; both reproduced
+by `lit/recompute_release_fertility_ordering.py` + JSON with CSV sha256. The assembly combines supply/demand
 decomposition, historical case sequencing, the agricultural floor/Boppart model, and the 400-grouping multiverse.
 
 **Independent prior art.** Porzio, Rossi & Santangelo (2021) "The Human Side of Structural Transformation",

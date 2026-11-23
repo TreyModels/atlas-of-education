@@ -22,9 +22,13 @@ turning points all dated), the six corrected locations report strict schooling-f
 26.6–50.0)**, simultaneous **31.25% (20/64)**, fertility-first **31.25% (20/64)**, median gap 0 (IQR −5/+8); the
 all-81 variant with both dates is **35.8% (29/81)**; the 68.75% was 24 + 20 ties counted as schooling-first. The
 source record is annotated at `subsistence-v2` @ `8caaeac`. Keep the two orderings separate: those are
-**schooling-vs-fertility** figures; the **release-vs-fertility** metric is a different analysis on the 64 countries
-with both a farm-exit and a fertility date — **60/64 = 93.75% fertility-first, 4/64 = 6.25% release-first (AFG,
-LBR, MWI, ZMB)**, 0 ties; (ii) the paper
+**schooling-vs-fertility** figures; the **release-vs-fertility** metric is a different analysis and has **two samples**: the **64 three-event countries** —
+60/64 = 93.75% fertility-first, 4/64 = 6.25% release-first (AFG, LBR, MWI, ZMB), 0 ties — and the **95 countries
+with both a farm-exit and a fertility date** (no schooling requirement) — 86/95 = 90.53% fertility-first, 9/95 =
+9.47% release-first (the 4 above plus BDI, BFA, ERI, NGA, TLS), 0 ties. Both are reproduced by the committed
+artefact `research/records/2026-11-25-council-novelty/lit/recompute_release_fertility_ordering.py` (output
+`lit/release_fertility_ordering.json`, CSV sha256 recorded; source CSV from `research/paper-massification-2026-11-25`
+@ `76d929a`); (ii) the paper
 must frame the sequence as a dating-and-assembly result, not a causal claim, because schooling and agricultural
 release are jointly determined by industrialisation; (iii) endogeneity/coarse-dating objections get a dedicated
 paragraph, not a footnote.
@@ -83,7 +87,7 @@ Without that correction it is a methods-note observation; rank it below this pap
 | Care-work loop / tipping point / diminishing returns as findings | Pre-registered nulls of known mechanisms (England & Folbre 1999; Scheffer et al. 2009, V; Dakos et al. 2012, V). Nulls are valuable inside Paper F; not a paper. |
 | Scaling/Heaps/regime break | Audits of known scaling results, one new negative (no regime break); not a new law (scaling `fd691a6`). AUDIT. |
 | Marriage-age / UN living-arrangements | Known UN data; the levels-vs-change artefact is a methods lesson (un-marriage `b2b18d5`). KNOWN. |
-| The 69% "schooling precedes fertility" ordering | **RETRACTED, CORRECTION VERIFIED** — the source JSON's 68.75% counted ties as schooling-first; events-CSV recomputation gives 35.8%; Paper M corrected all six locations at `95dc135`/`76d929a` to strict schooling-first 37.5% (24/64, CI 26.6–50.0), simultaneous 31.25% (20/64), fertility-first 31.25% (20/64) on the **64 three-event countries** (median gap 0, IQR −5/+8; all-81 variant 35.8% = 29/81), and the source record is annotated at `subsistence-v2` @ `8caaeac`. No paper may cite the 69% figure. Do not conflate this with the separate **release-vs-fertility** analysis, on the 64 countries with both a farm-exit and a fertility date, where 60/64 = 93.75% fertility-first and 4/64 = 6.25% release-first (AFG, LBR, MWI, ZMB), 0 ties. |
+| The 69% "schooling precedes fertility" ordering | **RETRACTED, CORRECTION VERIFIED** — the source JSON's 68.75% counted ties as schooling-first; events-CSV recomputation gives 35.8%; Paper M corrected all six locations at `95dc135`/`76d929a` to strict schooling-first 37.5% (24/64, CI 26.6–50.0), simultaneous 31.25% (20/64), fertility-first 31.25% (20/64) on the **64 three-event countries** (median gap 0, IQR −5/+8; all-81 variant 35.8% = 29/81), and the source record is annotated at `subsistence-v2` @ `8caaeac`. No paper may cite the 69% figure. Do not conflate this with the separate **release-vs-fertility** analysis, which has two samples: 64 three-event countries, 60/64 = 93.75% fertility-first and 4/64 = 6.25% release-first (AFG, LBR, MWI, ZMB), 0 ties; and 95 countries with both a farm-exit and a fertility date, 86/95 = 90.53% fertility-first and 9/95 = 9.47% release-first (the 4 plus BDI, BFA, ERI, NGA, TLS), 0 ties. Both reproduced by `lit/recompute_release_fertility_ordering.py` (JSON with CSV sha256). |
 
 ## If forced to pick three
 
