@@ -30,14 +30,19 @@ memory, to establish the ceiling honestly.
 
 ## What is reliable, and what is not
 
-- **Reliable:** run the same settings twice with the same seed and the same batch size, and every
-  simulated woman gets exactly the same life. The raw outputs are identical to the last digit.
-- **Reliable:** turning the graphics-card optimization on or off does not change any woman's life.
-- **NOT reliable:** changing how many women are bundled into one pass changes the answers — by up to
-  1.1 births per woman and 1.7 years of marriage age in a controlled test. The random numbers are
-  tied to position inside the pass. **A reproducible analysis must fix the pass size.** This is a
-  real limitation, found by this audit, and it contradicts a comment in the engine's own notes; the
-  note should be corrected.
+- **Reliable:** two independent starts with the same seed and the same pass size give every
+  simulated woman exactly the same life, identical to the last digit. Turning the graphics-card
+  optimization on or off changes nothing either. So the engine is deterministic once the pass size
+  is pinned. That is the important distinction: it is not random, it is *pass-size dependent*.
+- **NOT reliable:** changing how many women are bundled into one pass changes the answers. In a
+  controlled test with 12 settings, compared with putting one setting in each pass: passes of five
+  moved total fertility by up to 0.92 births per woman and marriage age by 1.36 years; passes of
+  seven, 0.95 and 1.42; all 12 in one pass, 1.13 and 1.74.
+- **The engine's own note is wrong on this point.** It says "results do not depend on batch
+  composition". That is false and must be read as: **results are exactly reproducible only if the
+  pass size is pinned.** A reproducible analysis must fix the pass size and record it; any result
+  from this engine must state the pass size it used, because results from different pass sizes are
+  not comparable.
 - **Stable:** the card does not overheat or slow down across repeated runs (temperature 39–46 °C, no
   downward trend; variation is 4%, from start-up and copying results, not heat).
 
@@ -53,8 +58,9 @@ memory, to establish the ceiling honestly.
 
 ## Ready to be called from a larger pipeline?
 
-Yes, with one condition: fix the batch size in the configuration. The engine is called like an
-ordinary function — settings in, results out — and the caller needs no graphics-card knowledge. It
-was repeatedly started fresh, given different amounts of memory, and asked for the same answers; it
-delivered them exactly. The batch-size caveat is the one thing a caller must respect to get
-reproducible results.
+Yes, with one condition: fix the pass size in the configuration and record it with the result. The
+engine is called like an ordinary function — settings in, results out — and the caller needs no
+graphics-card knowledge. It was repeatedly started fresh, given different amounts of memory, and
+asked for the same answers; it delivered them exactly. The pass-size caveat is the one thing a
+caller must respect, and it is a requirement, not a footnote: results from different pass sizes
+differ by up to 1.13 births per woman.

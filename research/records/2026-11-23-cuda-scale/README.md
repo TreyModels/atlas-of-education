@@ -58,16 +58,30 @@ scheduling-dependent order — the same documented property the port reported. C
 versus plain kernel launches: per-woman state **bit-identical**, aggregates within 5.3 × 10^-15.
 Enlarging the pre-allocated engine from 12 to 4,096 runs does not change results either.
 
-**What is not repeatable.** Results **do depend on batch size**, and this is a real limitation, not
-rounding. For the same 12 parameter draws, simulating all 12 in one launch versus in batches of 5,
-7, or 12 changes the answers: total fertility moves by up to **1.13 births per woman** and mean age
-at marriage by up to **1.74 years** (`determinism_v2.json`, question 4). The cause is visible in the
-kernel: each woman's random stream is keyed on her *within-launch* position, and each man's stream on
-the *total number of women in the launch* as well. Change how a fixed set of draws is grouped, and
-different random numbers are handed out. The engine's own interface note claims the opposite
-("results do not depend on batch composition"); that claim is false as written and should be
-corrected. **Operational consequence: a reproducible run must fix the batch size.** Once it is
-fixed, everything above is exactly reproducible.
+**What depends on the layout.** The engine is deterministic given a pinned layout; what changes
+with the layout is which random numbers each run receives. Two independent instances with the same
+seed and the same batch layout are bit-identical per woman (question 1 above), so this is layout
+dependence, not nondeterminism. For the same 12 parameter draws, grouping them differently across
+launches changes the answers (`determinism_v2.json`, question 4; each row compared with the
+one-run-per-launch layout):
+
+| launch layout | max change in total fertility (births/woman) | max change in mean marriage age (years) |
+|---|---|---|
+| batches of 5 | 0.92 | 1.36 |
+| batches of 7 | 0.95 | 1.42 |
+| batches of 12 | **1.13** | **1.74** |
+
+The cause is visible in the kernel: each woman's random stream is keyed on her *within-launch*
+position, and each man's stream on the *total number of women in the launch* as well. Change how a
+fixed set of draws is grouped, and different random numbers are handed out.
+
+**Correction to the engine's own note.** `abm_dose.py` says "results do not depend on batch
+composition". That statement is false and must be read as: **results are exactly reproducible only
+if the launch batch size is pinned.** Operational consequence: a reproducible ABM run must fix the
+launch batch size and record it in its run configuration; any downstream result produced with this
+GPU engine (including runs made by the near-port) must state the batch size it used, because results
+computed at different batch sizes are not comparable at the level shown above. Once the batch size
+is pinned, everything above is exactly reproducible.
 
 **Clock/thermal stability.** Repeating the 10-million-woman benchmark nine times (three fresh
 instances × three timed replays): mean **1.868 s**, standard deviation **0.079 s** (**4.2%**),
@@ -96,8 +110,9 @@ the speed, size and memory figures are the reproducible claims.
 
 The engine makes feasible a massified ABM: one launch can carry **66.8 million women** (10.99 GB of
 state, 12.7 s), and 100 million women fit in **two launches, 18.4 s of compute, 51 s end to end**.
-For orchestration it is ready with one condition: the caller must pin the batch size, because batch
-size changes the random numbers each run receives (above). The callable interface
+For orchestration it is ready with one condition: the caller must pin the batch size and record it,
+because batch size changes the random numbers each run receives (above; e.g. 1.13 births per woman
+between the one-run-per-launch and all-in-one-launch layouts). The callable interface
 (`abm_dose.simulate`: parameters in, arrays out) is deterministic given a fixed layout and needs no
 GPU knowledge from the caller. The limits are honest: one consumer card, one GPU, no checkpointing
 mid-run, and the 165 bytes/woman ceiling is hard — larger populations must be batched, not grown.
