@@ -191,8 +191,8 @@ source and a page/table; cross-national series (Benavot & Riddle; Lindert's data
 | # | Work | Status | Why |
 |---|---|---|---|
 | 1 | Boppart, T., Kiernan, P., Krusell, P. & Malmberg, H. (2023). The macroeconomics of intensive agriculture. NBER WP 31101. | [V] 10.3386/w31101 | The paper's target. |
-| 2 | Herrendorf, Rogerson & Valentinyi (2014). Growth and structural transformation. *Handbook of Economic Growth*. | [U] DOI not located in-session | Standard structural-change frame. |
-| 3 | Ngai, L. R. & Pissarides, C. (2007). Structural change in a multisector model of growth. *AER* 97(1). | [U] no DOI located | Sectoral reallocation mechanics. |
+| 2 | Herrendorf, Rogerson & Valentinyi (2014). Growth and structural transformation. *Handbook of Economic Growth*. | [W] 10.3386/w18996 (NBER WP version; published Handbook chapter DOI not located in-session) | Standard structural-change frame. |
+| 3 | Ngai, L. R. & Pissarides, C. (2007). Structural change in a multisector model of growth. *AER* 97(1). | [V] 10.1257/aer.97.1.429 | Sectoral reallocation mechanics. |
 | 4 | Acemoglu, D. & Restrepo, P. (2018). The race between man and machine. *AER* 108(6). | [V] 10.1257/aer.20160696 | Mechanisation/labour displacement. |
 | 5 | Gollin, Parente & Rogerson (2002). The role of agriculture in development. *AER* 92(2). | [V] 10.1257/000282802320189177 | Agriculture-as-floor. |
 | 6 | Restuccia, Yang & Zhu (2008). Agriculture and aggregate productivity. *JME* 55(2). | [V] 10.1016/j.jmoneco.2007.11.006 | Cross-country agricultural productivity. |
@@ -314,3 +314,18 @@ Cleland & Rodríguez (1988); Kravdal (2002); Kravdal (2012); Martin & Juárez (1
 Coale & Watkins (1986); Galor & Weil (2000); Doepke (2005); Lee (2003); Granovetter (1978); Scheffer et al.
 (2009); Sear, Mace & McGregor (2003); Coall & Hertwig (2010); Beaumont et al. (2002/2009); Del Moral et al.
 (2012). Each is DOI-verified in the family tables above.
+
+---
+
+## Additional Crossref verifications (24 Nov, after the main tables)
+
+- Ngai & Pissarides (2007) *AER* 97(1): **resolved** 10.1257/aer.97.1.429.
+- Herrendorf, Rogerson & Valentinyi (2014) Handbook chapter: only the NBER WP version resolves (10.3386/w18996,
+  2013). Cite the NBER WP as verified, or the Handbook chapter as unverified until its DOI is confirmed.
+- Goldin & Katz, *The Race between Education and Technology* (book): **resolved** 10.2307/jctvf9x5x.
+- Trow, "Reflections on the transition from elite to mass to universal access": a Springer handbook chapter resolves
+  (10.1007/978-1-4020-4012-2_13) but with no year in Crossref; the 1974 original is a conference/working paper —
+  cite the chapter with its year checked by hand.
+- Anderson (1979) gravity and Gibrat (1931): **no DOI located**; pre-DOI works, cite by hand and mark unverified.
+- Paper M branch was still not pushed at final checkpoint; its prior-work list was sent to the lead directly, and
+  the diff remains the one open item for this audit.
