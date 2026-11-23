@@ -2,7 +2,7 @@
 
 **Status:** complete draft, 23 November 2026. The manuscript is `paper.md` in this directory. It incorporates **both** runs: the 74-draw run (`research/records/2026-11-23-grouping-multiverse/`) and the 400-draw run (`research/records/2026-11-23-grouping-multiverse-400/`). No placeholders remain. This record is the paper's public face, so every number in it is traceable to a named results file below.
 
-**Reviewer-facing verdict (honest):** 3.5/5 — a method that finds only five robust links out of 272, and finds that they are the least surprising five, is a method that is working. The paper's strength is methodological (the resolution analysis and the transportability framing), not the substantive payoff; the group-specific labels are hypotheses, not findings.
+**Reviewer-facing verdict (honest):** 3.5/5 — a method that finds only five robust links out of 272, and finds that they are the least surprising five, is a method that is working. The paper's strength is methodological (the resolution analysis and the transportability framing), not the substantive payoff; the group-specific labels are hypotheses, not findings. The resolution analysis is reported as a **design rule with an explicit dependence caveat**, not a calibrated test: the 272 links' null series share draws and are neither independent nor uniformly positively dependent, so §6.6 reports the effective-tests correction (about 157 effective tests; 44 certified rather than 35) and a dependence-aware permutation null (zero certified in 400 pseudo-runs).
 
 **Branch:** `research/methods-multiverse-paper-2026-11-23` (off `research/grouping-multiverse-2026-11-23`). The 400-draw record directory `research/records/2026-11-23-grouping-multiverse-400/` is merged into this branch (from branch `research/grouping-multiverse-400-2026-11-23` @ `1152cec`), so every results file cited by the paper is present on this branch and a reader who clones it can trace every number without switching branches.
 
@@ -14,6 +14,8 @@
 - `lit-review.md` — prior-art search and standing assessment (23 Nov 2026): closest work (multiverse, vibration of effects, cross-national multiverse applications, heterogeneity critique), what is genuinely ours vs borrowed, an honest strength score for each result, a use/don't-use checklist for other researchers, and the situating patch (nine verified references; applied in this revision to §2.1 and §2.8 of the paper — see commit 45b2ad5).
 - `scripts/verify_refs.py` — Crossref DOI checker used for the bibliography (prints bibliographic fields only).
 - `scripts/find_refs.py` — Crossref bibliographic search used to recover DOIs for the entries whose DOI was uncertain.
+- `scripts/dependence_analysis.py` — dependence analysis for the resolution rule: correlation structure of the 272 null-share series, Li–Ji effective number of tests, BH certification under an effective-tests sensitivity grid, draws-needed scaling, and a dependence-aware permutation null for the certified count.
+- `results/dependence_analysis.json` — the outputs of that script (the numbers cited in paper §6.6).
 
 ## Verified vs provisional
 
@@ -35,13 +37,14 @@
 - Determinism: bit-identical replicates 7/250/400 and real pass; 74 overlapping draws identical — `...400/results/determinism.txt`; `headline.json`, `determinism_vs_old_run`.
 - Runtime: 3,711 s, 38,420,908 regressions, 16 workers, ~9.2 s/draw — `...400/results/run400.log`; `headline.json`, `runtime_seconds` / `total_fits`.
 - 74-draw runtime total 7,185,790 regressions — `2026-11-23-grouping-multiverse/results/summary.txt` line 1.
+- Dependence and effective-tests analysis (§6.6): mean absolute off-diagonal correlation 0.041 (51% positive / 49% negative, max 0.44); Li–Ji effective tests ≈157 (162 PCs for 90% variance); certified 35 at M=272, 44 at M_eff=157, 46/52/60 at M=150/100/50; lone-link draws 5,440 → 3,140 at M_eff; cluster-30 draws 182 → 105; dependence-aware permutation null of the certified count = 0 in all 400 pseudo-runs — `results/dependence_analysis.json`; script `scripts/dependence_analysis.py`; input matrix `2026-11-23-grouping-multiverse-400/results/null_shares_TR.csv.gz`.
 
 **Provisional / weakest claims (flagged in the paper):**
 
 - **Group-specific labels are the least certain verdicts.** They rest on a smoothed-null test across ~16,600 tag-by-link comparisons; at 400 draws a single tag claim cannot be certified strictly (same floor arithmetic). Treat as descriptions of where a link is concentrated, not certified claims.
 - **Single-region and single-class claims** (e.g. farm output → lower-secondary completion in Latin America) are the weakest evidence in the run.
 - **The 4 new beats-random links** (wage employment→child mortality, secondary completion→wage employment, female labour participation→secondary completion, birth rate→life expectancy) are new at 400 draws and depend on the normal fit; the t-fit version keeps 2 of them.
-- **The strict-tier count (35) depends on BH's positive-dependence assumption** for the shared 400 draws; a dependence-free (Bonferroni) rule would certify fewer, more draws would certify slightly more.
+- **The strict-tier count is a bound, not a point.** The 272 links' tests are dependent (mean absolute correlation 0.041) and the dependence is not uniformly positive, so BH's PRDS assumption is not established. The nominal count is 35; an effective-tests correction gives 44 at M_eff≈157 and up to 60 at M=50; the dependence-aware permutation null certifies 0 in 400 pseudo-runs. The paper reports the rule as a pre-specified draw-budget/certification-ceiling design conditional on independence or positive dependence.
 - **The t-fit tier** certifies 42 links against 46 for the normal fit (median fitted df 157; they agree on 42, disagree on 4).
 - **Data provenance is a working compilation, not a published dataset.** Per-series sources are carried in the panel metadata but were not re-verified series-by-series for this paper; confirm before submission.
 
@@ -53,7 +56,7 @@
 
 ## Plain-words summary of the paper
 
-The paper asks a simple question about a common kind of cross-country claim: a single number from a panel of countries is an average over countries that may not share the relationship at all. It answers by cutting the countries into groups 50 different ways (region, income, birth rate, schooling, farm economy, taxes, data-driven clusters, trajectory classes), rerunning the whole analysis inside every group, and comparing with random cuts of the same sizes. Random cuts are the yardstick for what chance alone produces. Two things follow: the method can tell claims that travel across country types from claims that only hold in some types, and the number of random cuts is a hard ceiling on how strong the evidence can be. In the two applications, two demographic links travel (child mortality and life expectancy to fewer births), no schooling-expansion driver travels, and paid employment is a clean null. The honest limit: 400 random cuts can vouch for a cluster of very strong findings but not for one finding on its own; a lone finding would need about 5,440 cuts.
+The paper asks a simple question about a common kind of cross-country claim: a single number from a panel of countries is an average over countries that may not share the relationship at all. It answers by cutting the countries into groups 50 different ways (region, income, birth rate, schooling, farm economy, taxes, data-driven clusters, trajectory classes), rerunning the whole analysis inside every group, and comparing with random cuts of the same sizes. Random cuts are the yardstick for what chance alone produces. Two things follow: the method can tell claims that travel across country types from claims that only hold in some types, and the number of random cuts is a hard ceiling on how strong the evidence can be. In the two applications, two demographic links travel (child mortality and life expectancy to fewer births), no schooling-expansion driver travels, and paid employment is a clean null. The honest limit: 400 random cuts can vouch for a cluster of very strong findings but not for one finding on its own; a lone finding would need about 5,440 cuts (about 3,140 once the overlap among the 272 links is taken into account). And the cluster rule is a design rule with a stated caveat — the 272 links are not independent tests — not a calibrated test.
 
 ## Files behind each headline number (quick map)
 
@@ -72,6 +75,10 @@ The paper asks a simple question about a common kind of cross-country claim: a s
 | halves stability (42 both; 267/269 agree; ρ 0.994) | 400 record `results/headline.json` | `halves` |
 | determinism (max diff 0) | 400 record `results/determinism.txt` | all blocks |
 | runtime 3,711 s / 38,420,908 regressions | 400 record `results/run400.log`; `headline.json` | last line; `runtime_seconds`, `total_fits` |
+| dependence: mean |r| 0.041; M_eff ≈157 | `results/dependence_analysis.json` | `dependence.mean_abs_offdiag_r`, `.m_eff_li_ji` |
+| certified 35 (M=272) → 44 (M_eff) → 60 (M=50) | `results/dependence_analysis.json` | `certification.certified_by_M` |
+| draws 5,440→3,140 (lone); 182→105 (cluster-30) | `results/dependence_analysis.json` | `draws_needed` |
+| dependence-aware null: 0 certified in 400 pseudo-runs | `results/dependence_analysis.json` | `permutation_null_of_certified_count` |
 
 ## Report format compliance
 

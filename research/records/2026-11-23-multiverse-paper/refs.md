@@ -102,3 +102,11 @@ Menefee, T. (2026). *Grouping multiverse with 400 random groupings, 23 November 
 2. Leamer (1983) and Sala-i-Martin (1997) are cited only to name the robustness tradition against which the heterogeneity critique is contrasted. Both are PARTLY VERIFIED; if either record cannot be confirmed before submission, the sentence can be rewritten to cite Brock and Durlauf (2001) alone without weakening the argument.
 3. The repository's earlier bibliography (`research/methods-paper/REFERENCES_VERIFIED.md`) covers the executable-models paper, not this one; it was used only for the Hedström and Manzo (2015) entry.
 4. Unverified entries introduced later (if any) must be added here with an UNVERIFIED flag before the paper is submitted.
+
+## Added by the dependence revision (30 November 2026) — cited in §6.6
+
+Both records were resolved against Crossref on 30 November 2026 (DOI lookup; bibliographic fields only).
+
+Benjamini, Y., & Yekutieli, D. (2001). The control of the false discovery rate in multiple testing under dependency. *The Annals of Statistics, 29*(4), 1165–1188. https://doi.org/10.1214/aos/1013699998 — VERIFIED.
+
+Li, J., & Ji, L. (2005). Adjusting multiple testing in multilocus analyses using the eigenvalues of a correlation matrix. *Heredity, 95*(3), 221–227. https://doi.org/10.1038/sj.hdy.6800717 — VERIFIED.

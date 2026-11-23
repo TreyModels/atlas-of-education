@@ -1,0 +1,66 @@
+{
+ "source_matrix": "../2026-11-23-grouping-multiverse-400/results/null_shares_TR.csv.gz",
+ "source_real": "../2026-11-23-grouping-multiverse-400/results/edge_table400.csv (column share_TR)",
+ "dependence": {
+  "n_links": 272,
+  "n_draws": 400,
+  "mean_offdiag_r": 0.001249611437899947,
+  "mean_abs_offdiag_r": 0.040986706340351405,
+  "median_offdiag_r": 0.0011950471245373582,
+  "frac_positive": 0.5093336227479922,
+  "frac_negative": 0.4906663772520078,
+  "max_abs_r": 0.4409716157550753,
+  "m_eff_li_ji": 157.03,
+  "pcs_for_90pct_variance": 162
+ },
+ "certification": {
+  "M_baseline": 272,
+  "certified_baseline": 35,
+  "certified_by_M": {
+   "50": 60,
+   "100": 52,
+   "150": 46,
+   "157": 44,
+   "272": 35
+  },
+  "n_at_floor": 30,
+  "floor": 0.00249377,
+  "k_star": 35
+ },
+ "draws_needed": {
+  "272": {
+   "lone": 5440,
+   "cluster_30": 182,
+   "cluster_35": 156
+  },
+  "157": {
+   "lone": 3140,
+   "cluster_30": 105,
+   "cluster_35": 90
+  },
+  "150": {
+   "lone": 3000,
+   "cluster_30": 100,
+   "cluster_35": 86
+  },
+  "100": {
+   "lone": 2000,
+   "cluster_30": 67,
+   "cluster_35": 58
+  }
+ },
+ "permutation_null_of_certified_count": {
+  "M": 272,
+  "mean": 0.0,
+  "p95": 0.0,
+  "p99": 0.0,
+  "max": 0,
+  "n_ge_35": 0,
+  "M_eff": {
+   "mean": 0.0,
+   "p95": 0.0,
+   "max": 0
+  }
+ },
+ "notes": "Family-balanced random shares; real share from edge_table400.share_TR. Li & Ji (2005) effective-tests formula on the correlation matrix of the 272 null-share series. The permutation null treats each of the 400 draws as pseudo-real and compares it with the other 399."
+}
