@@ -1,6 +1,6 @@
 # Research dashboard — 23 November 2026
 
-**Status: FINAL for the main session** (the methods paper is still being drafted separately; follow-up jobs 9-11 are running). Every number below is
+**Status: FINAL.** All thirteen jobs are complete, verified and pushed to origin. The methods paper is the only item still with Dr. Menefee and is not pushed. Every number below is
 traceable to the results file named in the job's own record. Plain words, no variable names.
 
 **Server note.** Two rented boxes were used; one is retained. All remaining work and data are on box2
@@ -21,7 +21,7 @@ The two questions this session is answering:
 
 | Job (task id) | What it tests | Branch | Status |
 |---|---|---|---|
-| 1 (task-1) | GPU rewrite of the dose model, then a converged fit and the A-vs-B test | research/dose-gpu-2026-11-23 | **DONE and verified** (cfb448e): individuation does **not** beat development-only out of sample |
+| 1 (task-1) | GPU rewrite of the dose model, then a converged fit and the A-vs-B test | research/dose-gpu-2026-11-23 | **DONE and verified** (774085c): individuation does **not** beat development-only out of sample |
 | 2 (task-2) | Lead-lag matrix on the gap-filled panel | research/imputed-matrix-2026-11-23 | **DONE and verified** (5e4602b) |
 | 3 (task-3) | Grouping multiverse at 400 random groupings (was 74) | research/grouping-multiverse-400-2026-11-23 | **DONE and verified** (1152cec; 38,420,908 regressions) |
 | 4 (task-5) | Added controls: child mortality, women's work | research/controls-2026-11-23 | **DONE and verified** (5ea58af) |
@@ -29,11 +29,11 @@ The two questions this session is answering:
 | 6 (task-7) | Marriage age inside the 20-measure matrix (380 links) | research/matrix-marriage-2026-11-23 | **DONE and verified** (559a4e9) |
 | 7 (task-8) | Why fertility tracks child survival: literature review + experiment plan | research/mechanisms-2026-11-23 | **DONE and verified** (28479c1) |
 | 8 (task-9) | E1: child-mortality level versus volatility | research/level-volatility-2026-11-23 | **DONE and verified** (935632e) |
-| 9 (task-10) | Dose tolerance ladder: is the strength identifiable? | research/dose-tolerance-2026-11-23 | **DONE and verified** locally; push blocked by network outage |
-| 10 (task-11) | GPU engine scale and robustness audit | research/cuda-scale-2026-11-23 | **DONE and verified** locally (7f92799); push blocked by network outage |
-| 11 (task-12) | Full transition: pre-antibiotic equilibrium to fertility collapse | research/transition-2026-11-23 | **DONE and verified** locally (c1c6efb, b13fde8); push blocked by network outage |
-| 12 (task-14) | Novelty literature review: is any of this actually new? | research/novelty-2026-11-23 | **DONE and verified** locally (390db8d); push blocked by network outage |
-| 13 (task-13) | Full transition in the GPU ABM: holds fertility up without the mortality decline? | research/transition-gpu-2026-11-23 | **DONE and verified** locally (69f0b1d); push blocked by network outage |
+| 9 (task-10) | Dose tolerance ladder: is the strength identifiable? | research/dose-tolerance-2026-11-23 | **DONE and verified** (baadfe6): identification limit, not a tolerance artefact |
+| 10 (task-11) | GPU engine scale and robustness audit | research/cuda-scale-2026-11-23 | **DONE and verified** (e600763): 66.8M women per launch; batch-layout dependence documented |
+| 11 (task-12) | Full transition: pre-antibiotic equilibrium to fertility collapse | research/transition-2026-11-23 | **DONE and verified** (b13fde8): mortality leads fertility by ~12 years; schooling follows |
+| 12 (task-14) | Novelty literature review: is any of this actually new? | research/novelty-2026-11-23 | **DONE and verified** (390db8d): 4 new / 8 incremental / 11 known |
+| 13 (task-13) | Full transition in the GPU ABM: holds fertility up without the mortality decline? | research/transition-gpu-2026-11-23 | **DONE and verified** (f9f2f18): collapse survives without mortality decline (in this model) |
 | - (task-6) | Methodology paper on the multiverse method | research/methods-multiverse-paper-2026-11-23 | DRAFTING (held by Dr. Menefee) |
 
 Job numbers follow the project brief; the shared task board uses task ids (given in brackets).
@@ -432,20 +432,22 @@ result, framed as suggestive and limited.
 - **Marriage data**: the change-on-change test is what killed the positive timing result; any future "marriage
   timing matters" claim must survive it.
 
-## Branches produced this session
-- research/dose-gpu-2026-11-23 (complete, cfb448e)
-- research/imputed-matrix-2026-11-23 (complete, 5e4602b)
-- research/grouping-multiverse-400-2026-11-23 (complete, 1152cec)
-- research/controls-2026-11-23 (complete, 5ea58af)
-- research/un-marriage-2026-11-23 (complete, b2b18d5)
-- research/matrix-marriage-2026-11-23 (complete, 559a4e9)
-- research/mechanisms-2026-11-23 (complete, 28479c1)
-- research/level-volatility-2026-11-23 (complete, 935632e)
-- research/dose-tolerance-2026-11-23 (running)
-- research/cuda-scale-2026-11-23 (running)
-- research/transition-2026-11-23 (running)
-- research/methods-multiverse-paper-2026-11-23 (drafting, held by Dr. Menefee)
+## Branches produced this session (all on origin)
+- research/dose-gpu-2026-11-23 (774085c)
+- research/dose-tolerance-2026-11-23 (baadfe6)
+- research/imputed-matrix-2026-11-23 (5e4602b)
+- research/controls-2026-11-23 (5ea58af)
+- research/grouping-multiverse-400-2026-11-23 (1152cec)
+- research/un-marriage-2026-11-23 (b2b18d5)
+- research/matrix-marriage-2026-11-23 (559a4e9)
+- research/mechanisms-2026-11-23 (28479c1)
+- research/level-volatility-2026-11-23 (935632e)
+- research/transition-2026-11-23 (b13fde8)
+- research/transition-gpu-2026-11-23 (f9f2f18)
+- research/cuda-scale-2026-11-23 (e600763)
+- research/novelty-2026-11-23 (390db8d)
 - research/dashboard-2026-11-23 (this report)
+- research/methods-multiverse-paper-2026-11-23 (NOT pushed; held by Dr. Menefee)
 
 ## Still not known (honest list)
 - **The individuation mechanism.** The dose model now has a valid posterior and does NOT beat development-only out
