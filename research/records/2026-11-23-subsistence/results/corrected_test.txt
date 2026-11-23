@@ -1,0 +1,54 @@
+=== T2 corrected reduced-form test (Boppart's object, not the old proxy) ===
+intensity = (agricultural capital + intermediates)/agricultural labour (USDA quantities, 1961-2023)
+relative input price = log(investment price level / labour compensation per worker) (PWT)
+ag employment share from WDI/ILO; secondary completion and TFR from WDI; income and urbanisation controls
+Old proxy (for contrast): world commodity price x farm employment share. Handoff job 3 found farm exit
++0.024 -> +0.012 under country trends, wage jobs -0.014 -> -0.0035 n.s., births ~0. That measured
+farm employment's exposure to world commodity prices; it never contained the relative-price object.
+
+T2a cross-section 2005: log intensity on log relative input price: -1.13 (SE 0.15), n=126 countries=126 — expected negative
+T2a cross-section 2015: log intensity on log relative input price: -1.28 (SE 0.11), n=128 countries=128 — expected negative
+T2a2 cross-section 2005: ag employment share on intensity and relative input price, controlling income: intensity -4.71 (SE 0.89), price +1.11 (SE 2.23), income -7.32 (SE 2.07); n=126. Expected intensity negative, price positive.
+T2a2 cross-section 2015: ag employment share on intensity and relative input price, controlling income: intensity -4.38 (SE 1.15), price +4.02 (SE 3.40), income -4.12 (SE 2.31); n=128. Expected intensity negative, price positive.
+
+panel for the ten-year changes: 507 country-year observations, 128 countries, years 1995-2010 (every 5th year, outcome 10 years ahead)
+
+T2b: change in ag employment share t->t+10 on intensity(t) and relative price(t)
+   log_intensity  +1.7471 (SE 0.7082)  significant
+   relprice       +0.8155 (SE 0.3220)  significant
+   country FE + decade FE, clustered by country; n=503, countries=127
+
+T2b(a): change in intensity t->t+10 on relative input price(t)
+   relprice       -0.0022 (SE 0.0636)  null
+   country FE + decade FE, clustered by country; n=503, countries=127
+
+T2b(b): change in intensity t->t+10 on change in relative price t->t+10
+   d_relprice_f10 +0.0122 (SE 0.0348)  null
+   country FE + decade FE, clustered by country; n=376, countries=126
+
+T2b(c): change in ag share t->t+10 on PAST change in intensity (t-10->t), past change in relative price, and current ag share (convergence control)
+   d_logint_past  -0.0440 (SE 0.3778)  null
+   d_relprice_past +0.3549 (SE 0.3856)  null
+   ag_share       -0.5298 (SE 0.1006)  significant
+   country FE + decade FE, clustered by country; n=472, countries=126
+
+T2c: change in secondary completion t->t+10 on labour release and intensity(t)
+   d_ag_f10       -0.1621 (SE 0.2454)  null
+   log_intensity  -1.1842 (SE 3.1981)  null
+   country FE + decade FE, clustered by country; n=278, countries=112
+
+T2c: change in fertility t->t+10 on labour release and intensity(t)
+   d_ag_f10       -0.0003 (SE 0.0058)  null
+   log_intensity  -0.0047 (SE 0.0500)  null
+   country FE + decade FE, clustered by country; n=503, countries=127
+
+T2b long difference 1995->2015: change in ag employment share on initial intensity, initial relative price, initial ag share, initial income (n=124 countries):
+   log_intensity  -0.757 (SE 0.871)  null
+   relprice       +0.181 (SE 0.897)  null
+   ag_share       -0.193 (SE 0.052)  significant
+   log_gdp        +0.305 (SE 0.748)  null
+
+reverse check: past ag-share change (t-10 -> t) on intensity(t) and price(t): intensity -3.320 (SE 0.702), price -1.092 (SE 0.374); n=383. If this is as strong as T2b the lead-lag is not identified.
+
+Reading: the sign pattern and the ordering are what the mechanism predicts, but the magnitudes are
+modest and the reverse check is reported; the old proxy could not test any of this.

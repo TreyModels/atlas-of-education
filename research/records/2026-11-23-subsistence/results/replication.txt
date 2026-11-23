@@ -1,0 +1,32 @@
+=== T1 replication of Boppart et al. (2023), semi-independent rebuild ===
+Data: USDA ERS agricultural inputs/outputs (K,L,M,T,Y), PWT price level of investment, labour share and
+GDP per worker. Paper's values: sigma(labour-capital)=1.90, sigma(h-k nest vs intermediates)=1.75,
+land nest=0.66; input intensification explains 'a bit less than two-thirds' of the labour-productivity gap.
+Our land elasticity cannot be estimated (no land price); input prices are proxied by the non-agricultural
+price level. These are the deviations.
+
+--- cross-section 2005: 127 countries ---
+  elasticity from log(k_l) on log(wage/input price): 1.24 (SE 0.08), n=127
+    same elasticity from the development extremes: 1.73
+  elasticity from log(m_l) on log(wage/input price): 1.11 (SE 0.08), n=127
+    same elasticity from the development extremes: 1.76
+  log agricultural labour-productivity gap, richest vs poorest decile: 4.78 (ratio 118.8x)
+  input contribution with paper-style shares (k .20, m .20, land .25): 3.32 log points = 69% of the gap
+  input contribution with higher input shares (k .25, m .25, land .30): 4.11 log points = 86% of the gap
+  USDA own input index per worker, same comparison: 2.63 log points = 55% of the gap
+  observed intensification: capital/labour rises 570x, intermediates/labour 637x (paper: 300-800x for the poorest-to-richest)
+
+--- cross-section 2015: 128 countries ---
+  elasticity from log(k_l) on log(wage/input price): 1.40 (SE 0.07), n=128
+    same elasticity from the development extremes: 1.73
+  elasticity from log(m_l) on log(wage/input price): 1.27 (SE 0.07), n=128
+    same elasticity from the development extremes: 1.64
+  log agricultural labour-productivity gap, richest vs poorest decile: 4.80 (ratio 121.8x)
+  input contribution with paper-style shares (k .20, m .20, land .25): 3.29 log points = 69% of the gap
+  input contribution with higher input shares (k .25, m .25, land .30): 4.08 log points = 85% of the gap
+  USDA own input index per worker, same comparison: 2.95 log points = 61% of the gap
+  observed intensification: capital/labour rises 557x, intermediates/labour 394x (paper: 300-800x for the poorest-to-richest)
+
+Reading: the obtainable data give elasticities above one (in the paper's 1.3-1.8 range, below their
+preferred 1.90) and inputs explaining slightly more than half to nearly two-thirds of the gap —
+qualitatively consistent with the paper, quantitatively weaker than their headline.

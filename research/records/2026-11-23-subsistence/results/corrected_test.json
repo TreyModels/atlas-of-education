@@ -1,0 +1,64 @@
+{
+ "T2b: change in ag employment share t->t+10 on intensity(t) and relative price(t)": {
+  "log_intensity": [
+   1.7471077695207424,
+   0.708229865079767
+  ],
+  "relprice": [
+   0.815507386979876,
+   0.32197034224439564
+  ],
+  "n": 503
+ },
+ "T2b(a): change in intensity t->t+10 on relative input price(t)": {
+  "relprice": [
+   -0.002186877013298772,
+   0.06356324527090798
+  ],
+  "n": 503
+ },
+ "T2b(b): change in intensity t->t+10 on change in relative price t->t+10": {
+  "d_relprice_f10": [
+   0.012188406814781965,
+   0.03483898155916836
+  ],
+  "n": 376
+ },
+ "T2b(c): change in ag share t->t+10 on PAST change in intensity (t-10->t), past change in relative price, and current ag share (convergence control)": {
+  "d_logint_past": [
+   -0.04400697349531807,
+   0.37784944481271954
+  ],
+  "d_relprice_past": [
+   0.3549025098873604,
+   0.3855703828511384
+  ],
+  "ag_share": [
+   -0.5298460336598975,
+   0.10064657399725509
+  ],
+  "n": 472
+ },
+ "T2c: change in secondary completion t->t+10 on labour release and intensity(t)": {
+  "d_ag_f10": [
+   -0.1620809025327267,
+   0.2454358390195866
+  ],
+  "log_intensity": [
+   -1.184165971405756,
+   3.198081314525602
+  ],
+  "n": 278
+ },
+ "T2c: change in fertility t->t+10 on labour release and intensity(t)": {
+  "d_ag_f10": [
+   -0.00029462658693479903,
+   0.0057835949119865076
+  ],
+  "log_intensity": [
+   -0.004745496702717383,
+   0.050029867154950516
+  ],
+  "n": 503
+ }
+}

@@ -1,0 +1,25 @@
+{
+ "params": {
+  "lam_q": 3.6045319419056656,
+  "lam_r": 1.303320502340054e-12,
+  "gJ": 0.017311376317211802
+ },
+ "calibrated": {
+  "N0": 3.18,
+  "kappa": 0.124
+ },
+ "recovery": {
+  "lam_q": 1.1719697089193348,
+  "lam_r": 2.508856068993712e-09,
+  "gJ": 0.020105099421118988
+ },
+ "constants": {
+  "sigma": 1.5,
+  "beta_intensity": 0.5,
+  "food_scale": 0.5,
+  "food_income_elasticity": 0.15,
+  "alpha_nonag": 0.4,
+  "investment_rate": 0.2,
+  "depreciation_5y": 0.4
+ }
+}

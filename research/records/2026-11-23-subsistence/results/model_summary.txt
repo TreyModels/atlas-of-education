@@ -1,0 +1,36 @@
+=== T3 joint demography-agriculture-absorber demonstration model ===
+3 free parameters calibrated jointly on 1950-2020 stylised-country paths (cross-country medians);
+Boppart inputs: sigma = 1.5 (estimated in T1); observed agricultural labour productivity is split
+into TFP and input intensity; food demand has a subsistence floor and a low income elasticity.
+N0 and kappa are calibrated directly from the TFR/survival/schooling endpoints (not free). A
+demonstration model, not an estimate of any country's history.
+
+free parameters (calibrated):
+   queue weight in schooling                        3.605
+   wage-premium weight in schooling                 0.000
+   wage-job share growth per 5 years                0.017
+   scaled root-mean-square fit residual: 0.494
+
+model vs data (selected years):
+  year   ag share model/data   TFR model/data   schooling model/data   pop index model/data   wage share model/data
+  1900    58.9 / 30.58       5.27 /  6.01     0.49 /  0.39      1.41 /  1.00      39.62 /    na
+  1950    33.8 / 30.58       3.59 /  6.01     2.53 /  2.44      2.11 /  1.00      56.93 /    na
+  1970    25.3 / 30.58       3.08 /  5.64     3.23 /  4.14      2.57 /  1.25      63.86 /    na
+  1990    16.9 / 30.58       2.81 /  3.44     4.00 /  6.85      3.29 /  1.95      70.78 /    na
+  2010     9.3 / 24.27       2.25 /  2.38     7.85 /  8.71      4.02 /  2.66      62.62 / 62.62
+  2020     8.1 / 19.44       2.19 /  2.06     8.24 /  9.57      4.43 /  2.92      62.23 / 62.23
+
+counterfactual: freeze input intensification after 1960 (relative input prices held at the 1960 level;
+TFP path unchanged) - the 'no more ag jobs / no mechanisation' comparison.
+  1980: ag labour share  21.8% vs  28.3% frozen; wage-employment share 67.3% vs 67.3%; schooling  3.4 vs  1.5 yrs; TFR 2.96 vs 3.21
+  2000: ag labour share  14.9% vs  22.7% frozen; wage-employment share 58.1% vs 58.1%; schooling  7.0 vs  5.1 yrs; TFR 2.38 vs 2.63
+  2020: ag labour share   8.1% vs  17.9% frozen; wage-employment share 62.2% vs 62.2%; schooling  8.2 vs  5.6 yrs; TFR 2.19 vs 2.52
+
+timing: population growth peaks around 1980 at 1.3%/yr; agricultural labour
+peaks in 1800 (level 0.76); the ag labour share
+falls from 31% in 1960 to 8% in 2020.
+
+recovery test (simulate from known parameters, re-fit all four series):
+   lam_q  true 1.20 recovered 1.17 (error 0.03)
+   lam_r  true 0.40 recovered 0.00 (error 0.40)
+   gJ     true 0.02 recovered 0.02 (error 0.00)
