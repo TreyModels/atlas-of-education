@@ -1,6 +1,6 @@
 # Research dashboard — 23 November 2026
 
-**Status: FINAL.** All thirteen jobs are complete, verified and pushed to origin. The methods paper is the only item still with Dr. Menefee and is not pushed. Every number below is
+**Status: FINAL for the first wave; second wave appended at the end.** All thirteen first-wave jobs are complete, verified and pushed to origin. The methods paper is the only item still with Dr. Menefee and is not pushed. A second wave of eleven jobs (tasks 15–26) was run later the same evening to test the theory at the level it claims: those records are summarised in the "Second wave" section at the end, each with a pre-registration as its first commit. Every number below is
 traceable to the results file named in the job's own record. Plain words, no variable names.
 
 **Server note.** Two rented boxes were used; one is retained. All remaining work and data are on box2
@@ -469,3 +469,96 @@ result, framed as suggestive and limited.
 - **The methods paper's central claim.** The resolution arithmetic was corrected: certification depends on how many
   links share the p-value ceiling (a lone link needs ~5,440 draws; a cluster of 30 needs ~182), and 400 draws did
   certify 35 links. That corrected statement, not the earlier "400 can certify nothing", is the paper's novelty.
+
+---
+
+## Second wave — testing the Networked Domus theory directly (evening, 23 November)
+
+**Why.** The first wave tested corollaries at the wrong level: decade changes with country fixed effects remove the
+between-country and between-cohort variation the theory is about. This wave rebuilt the tests at the levels the
+theory claims, and added the dynamics it names (care work, credential inflation, pronatalist policy, subsistence
+transition, scaling). Pre-registration was the first commit on every branch.
+
+### (1) Fertility
+
+**The correlation is real and was mis-tested before (task-15, 161b563).** In levels, female attainment predicts
+**−0.129 births per woman per year of schooling** (SE 0.029; 5,915 observations; 192 countries); total attainment
+−0.228; secondary enrolment −0.0213 per point. Of 288 period specifications **99.7% are negative and 91.3%
+negative-significant**, 0% positive-significant. In decade changes the sign flips (female **+0.111**): the earlier
+null was a level-of-analysis artefact. Threshold: the slope is −0.33 below six years of schooling, −0.09 between
+six and nine, and +0.11 above nine — most of the association is the move from minimal schooling to lower-secondary.
+**Honest caveat:** the pre-registered future-schooling placebo fails (schooling ten years later predicts current
+fertility 24/24, median −0.68), so this is a between-country **development gradient, not identified causality**.
+
+**The gradient is global, not regional (ad-hoc levels multiverse, 2.89M regressions).** Across 100 random
+re-partitions of countries, the schooling–fertility relation is significant in **90–95%** of groupings; the real
+geographic/income groupings do not beat random (secondary 89.8% vs 94.5% ± 1.7%). Country-specific trends cut it to
+19% (secondary). By contrast, income, tax capacity, female participation, child mortality and life expectancy show
+**real grouping heterogeneity** (z up to +10.8) — the development context is heterogeneous; schooling is the
+uniform part.
+
+**DHS: the individual-level test could not be run (task-16, 31ded00).** Individual Recode files are login-gated
+(2,005 records listed, no download; IPUMS 403; Zenodo 403). Published ecological cells (81,962 cells, 377 surveys,
+87 countries) show a large gradient — completed fertility **−0.57 primary, −1.62 secondary, −2.54 higher**
+children; **99% of 346 survey gradients negative**, median −1.90 — but two pre-registered predictions are
+**contradicted**: the gradient attenuates in later cohorts (1940s −2.50 → 1970s −1.80) and is shallower where the
+pipeline is denser. Present as ecological, not individual.
+
+**Care work and credential inflation are null (task-17, e626cb8).** The care share of female employment is large
+(18.3%, vs 5.9% for men, 148 countries) and rises with attainment (8.1/19.0/28.4% by tercile), but that association
+is fully absorbed by income and urbanisation (attainment +0.009, t 0.17); placebos are decisive (male care +0.18,
+t 2.1; manufacturing −0.19, t −3.5). The credential–occupation gap correlates −0.15 with fertility vs −0.62 for
+attainment, and predicts worse in high-attainment countries. What survives is the plain attainment channel.
+
+**No off-switch: strong form falsified, weak form supported (task-18, 63691a2).** Across 38 pronatalist
+introductions, 8.6% of post-introduction years exceed 1.6 (95% upper 11.3%), but the persistence falsifier fires:
+5/38 show 3+ consecutive years above 1.6 within ten years (Bulgaria ten straight years to 1.81). Average effect
++0.035 (SE 0.025); the highest fertility reached anywhere is **1.83**, nowhere near replacement; Thailand's 1997
+reversal was followed by decline (1.84 → 1.21). Alternatives-foreclosure interaction is a clean null (−0.01, SE
+0.02; strict sample opposite sign), with only the 2000/2010 decades usable.
+
+### (2) Massification
+
+**Scaling: no new law (task-19, 8243dd9).** Most education/income "scaling laws" are **between-country
+regularities** (secondary enrolment 0.215 between vs 0.090 within, SE 0.124; education stock 1.176 vs 0.051); only
+tertiary enrolment, lower-secondary completion, services share and urban share survive both layers. The
+rarefaction-corrected Heaps exponent is **0.333 (SE 0.011)** — sublinear but below the 0.4–0.6 literature band
+(10-category ISCO depth is the binding limit); there is curvature (−0.058, SE 0.002) but **no universalisation
+threshold break** (p = 0.22). The "universal fertility collapse with female attainment" curve is **rejected**:
+pooled R² 0.78 but country effects explain 72% of the residual and slopes differ (F = 46.4).
+
+**SFI scan (task-20/23, fd4cfd2).** Catalogue of 13 sources and the three most promising leads: estimate the
+θ/γ diversity formalism rather than invoke it; Ortman's archaeological settlement scaling as a deep-time test; and
+early-warning/collapse signatures for "terminal enclosure". Running now as tasks 24 and 25.
+
+**Subsistence transition: the earlier test was wrong; the correction is in (task-22, 41f6429).** The old test used
+a world commodity-price index × farm-employment share — it measured exposure to a common world price, not
+Boppart et al.'s object. Rebuilt from USDA/PWT/WDI: elasticities **1.24/1.11** OLS (**1.73/1.76** at the
+development extremes) vs the paper's 1.90/1.75; input intensity rises **570×/637×**; inputs explain **55–69%** of
+the agricultural labour-productivity gap (paper ~2/3). The corrected reduced form confirms input price → intensity
+and intensity → agricultural employment share, but the **dynamic lead-lag is not identified** (reverse stronger),
+and labour release → schooling/fertility is a **precise ten-year-panel null** (n = 503, MDE 0.016 births). The
+three-parameter joint demography–agriculture–absorber model reproduces fertility (5.3→2.2 vs 6.0→2.1) and
+schooling (0.5→8.2 vs 0.4→9.6) but **fails on agricultural employment (8.1% vs 19.4% in 2020) and population
+growth (4.4 vs 2.9)**; the mechanisation-freeze counterfactual leaves agriculture at 17.9%, schooling at 5.6 years
+and fertility at 2.52 (vs 8.1%, 8.2 years, 2.19). Model labelled a demonstration, not history; v2 queued to repair
+the absorber and test the sequencing at cohort level and in the historical US.
+
+### Second-wave branches
+
+- research/corr-rebuild-2026-11-23 (c077672 pre-reg → 366214a results → 161b563 labels)
+- research/dhs-micro-2026-11-23 (283e34c pre-reg → 31ded00)
+- research/care-credential-2026-11-23 (7356e76 pre-reg → e626cb8)
+- research/policy-foreclosure-2026-11-23 (7ad44d5 pre-reg → 63691a2)
+- research/scaling-2026-11-23 (f8f782f pre-reg → 8243dd9)
+- research/scaling-laws-catalogue-2026-11-23 (d78a623 → cfe372f cross-ref)
+- research/sfi-scan-2026-11-23 (fd4cfd2)
+- research/subsistence-2026-11-23 (d47e5ed pre-reg → 41f6429)
+- research/corr-battery-2026-11-23 (task-21: 772650a, 6a1927f pre-reg; results pending)
+
+**What the second wave changes.** The thesis is now sharper and more falsifiable: schooling and fertility are
+bound by a large, global, level-based gradient that was previously hidden by the change specification; but the
+gradient is a development relationship, not a demonstrated causal lever, and the specific dynamics the theory
+names — care work, credential inflation, pronatalist escape, agricultural labour release — either do not show up
+in the available data or cannot be ordered in time by it. The decisive next tests are the cohort-level and
+historical sequencing tests, not more country panels.
