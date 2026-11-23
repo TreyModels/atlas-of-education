@@ -636,3 +636,25 @@ Two of five unlocked, no proxies used. **Zipf/rank-size**: median exponent **0.8
 - research/scaling-data-hunt-2026-11-23 (5e0b11a pre-reg → 9e15b6d)
 
 **What the final tranche changes.** The theory's "pipeline first" claim survives as a **state-led-moderniser regularity** (Prussia, France, US North) and fails where demand led (Britain); its "floor falls first" version is refuted in the late-industrialiser panel. The schooling–fertility relation is a **global level gradient**, not a change mechanism. The tipping-point version of "terminal enclosure" fails; the θ/γ mechanism is untested (not supported, not refuted); the canonical scaling laws are weakly consistent (Zipf, gravity) or out of reach (Bettencourt, credential ratio). The two decisive open tests remain cohort-level sequencing and the historical lead/lag with proper 19th-century series.
+
+---
+
+## Papers produced after the dashboard (25 November 2026)
+
+Seven manuscripts were mined from the verified branches, each with a claim-by-claim prior-art file (DOI + Crossref status, new-vs-replicated), a claims-to-source map, and a pre-registration where new analysis was needed. The literature review on every claim was independently audited by a separate reviewer, and a Synthetic Council of Experts adjudicated novelty across the whole programme.
+
+| Paper | Branch @ head | Words | Status |
+|---|---|---|---|
+| Methods — "Which Countries Does the Coefficient Describe?" | research/methods-multiverse-paper-2026-11-23 @ f9673a9 | 12.3k | Ready to submit |
+| Paper F — fertility omnibus (levels-vs-changes centrepiece) | research/paper-fertility-2026-11-25 @ f9dd325 | 17.3k | Auditor fixes verified |
+| Paper M — massification omnibus (sequencing centrepiece) | research/paper-massification-2026-11-25 @ 76d929a | 17.4k | Signed off; two declared opens |
+| N1 — schools before factories (sequencing, standalone) | research/paper-sequencing-novel-2026-11-25 @ 7f73ff1 | 6.0k | Verified |
+| N2 — the level-of-analysis trap (standalone) | research/paper-levels-novel-2026-11-25 @ 4ebe07b | 6.0k | Verified |
+| N3 — agricultural floor / subsistence transition (ag-dev) | research/paper-agdev-2026-11-25 @ 12df7c1 | 7.4k | Verified |
+| N4 — shape of the demographic transition | research/paper-shape-2026-11-25 @ 3b73bc1 | 7.7k | Signed off |
+
+**Synthetic Council verdict (research/council-novelty-2026-11-25 @ b59ca32; 42 claims inventoried, 9 killed):** the programme has **no new correlation**. It has one genuine method contribution (the multiverse resolution rule), two new assemblies (schools-before-factories sequencing, 3.8/5; the levels-vs-changes audit, 3.2/5), and one model-based demonstration (the GPU transition counterfactual, 3.2/5, publishable only around the negative result and the identification limit). Killed: electricity→schooling as a driver; "child survival drives fertility"; "individuation refuted"; credential inflation; threshold hinges as a discovery; care/tipping nulls as findings; the scaling/Heaps audit; the marriage-age data; and the retracted 69% ordering figure.
+
+**Corrections made during the wave (all documented):** the 68.75%-vs-37.5% schooling-before-fertility figure (a tie-counting artefact; strict ordering is 37.5%, CI 26.6–50.0%) in Paper M and its source record; four wrong world-polity DOIs and book-as-article DOIs in Paper M; wrong-title references in Paper F; the release-vs-fertility ordering (6.25% release-first) verified separate from schooling-vs-fertility; and a commit-message overclaim in Paper F, corrected by rebuilding and grepping the assembled draft.
+
+**Open for the next session:** DHS Individual Recode acquisition (the biggest available upgrade to Paper F); the GPU negative-result paper (the only paper-carrying candidate without a draft); Paper M's alternative-threshold recoding and date-by-source table (blocked by the downed box); Part C DOI re-verification; and the auditor's request to stress-test the multiverse draw-count rule before the methods paper goes out.
