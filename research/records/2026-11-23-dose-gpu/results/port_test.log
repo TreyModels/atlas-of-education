@@ -1,0 +1,22 @@
+RNG: {'bits_equal': True, 'bits_max_diff': 0, 'u_max_abs_diff': 0.0}
+MATH: {'exp_bits_equal': True, 'exp_max_rel': 0.0, 'exp_vs_libm': 3.06919580741429e-16, 'log_bits_equal': True, 'log_max_abs': 0.0, 'log_vs_libm': 1.2964829014901808e-12}
+EQUIV state max |diff| = 0
+  scen A seed 1 mismatch {} agg {'births': 0.0, 'expo': 0.0, 'sing': 0.0, 'afb_s': 2e-15, 'afb_n': 0.0, 'm18n': 0.0, 'm18d': 0.0, 'coh': 4e-15} tgt {'tfr': 0.0, 'asfr1519': 0.0, 'smam': 0.0, 'm18': 0.0}
+  scen A seed 2 mismatch {} agg {'births': 0.0, 'expo': 0.0, 'sing': 0.0, 'afb_s': 2e-15, 'afb_n': 0.0, 'm18n': 0.0, 'm18d': 0.0, 'coh': 4e-15} tgt {'tfr': 0.0, 'asfr1519': 0.0, 'smam': 0.0, 'm18': 0.0}
+  scen A seed 3 mismatch {} agg {'births': 0.0, 'expo': 0.0, 'sing': 0.0, 'afb_s': 1e-15, 'afb_n': 0.0, 'm18n': 0.0, 'm18d': 0.0, 'coh': 3e-15} tgt {'tfr': 0.0, 'asfr1519': 0.0, 'smam': 0.0, 'm18': 0.0}
+  scen B seed 1 mismatch {} agg {'births': 0.0, 'expo': 0.0, 'sing': 0.0, 'afb_s': 2e-15, 'afb_n': 0.0, 'm18n': 0.0, 'm18d': 0.0, 'coh': 4e-15} tgt {'tfr': 0.0, 'asfr1519': 0.0, 'smam': 0.0, 'm18': 0.0}
+  scen B seed 2 mismatch {} agg {'births': 0.0, 'expo': 0.0, 'sing': 0.0, 'afb_s': 2e-15, 'afb_n': 0.0, 'm18n': 0.0, 'm18d': 0.0, 'coh': 4e-15} tgt {'tfr': 0.0, 'asfr1519': 0.0, 'smam': 0.0, 'm18': 0.0}
+  scen B seed 3 mismatch {} agg {'births': 0.0, 'expo': 0.0, 'sing': 0.0, 'afb_s': 3e-15, 'afb_n': 0.0, 'm18n': 0.0, 'm18d': 0.0, 'coh': 3e-15} tgt {'tfr': 0.0, 'asfr1519': 0.0, 'smam': 0.0, 'm18': 0.0}
+GRAPHS: {'no_graph_repeatable': 3.552713678800501e-15, 'graph_vs_plain': 3.552713678800501e-15, 'graph_repeatable': 3.552713678800501e-15}
+BENCH: {'nRuns': 48, 'gpu_sec': 0.09844104448954265, 'gpu_runs_per_sec': 487.60149030213734, 'load_plus_run_sec': 0.09713077545166016, 'cpu_sec_per_run': 0.04773610830307007, 'speedup_per_core': 23.276197549801196, 'gpu_sec_per_param_draw_24runs': 0.049220522244771324}
+running distributional check vs original model ...
+  PHL_tfr diff [-0.1305, 0.0507, 0.2584, 0.584, 0.2248, -0.0276, -0.0951] t= 1.03
+  PHL_asfr diff [-0.0248, 0.0344, 0.0168, 0.0012, -0.0064, -0.0054, 0.0238] t= 0.77
+  PHL_smam diff [0.518, 0.1169, -0.1196, -0.9259, -0.0784, -0.6861, -0.4782] t= -0.71
+  CHN_tfr diff [-0.1846, 0.0806, 0.1423, 0.3183, 0.0728, 0.2357, -0.1799] t= 0.4
+  CHN_asfr diff [-0.0553, 0.0226, -0.0071, 0.004, -0.014, 0.0039, -0.013] t= -0.92
+  CHN_smam diff [0.464, 0.2733, -0.1393, 0.268, 0.3381, -0.0819, 0.4529] t= 1.25
+  EGY_tfr diff [0.2879, 0.1391, -0.0203, -0.0508, -0.0357, -0.1808, -0.0166] t= -0.01
+  EGY_asfr diff [-0.0435, 0.022, -0.0432, -0.0085, 0.0047, -0.0227, 0.0299] t= -0.69
+  EGY_smam diff [0.4514, -0.049, 0.2103, 0.5593, 0.6288, -0.0404, 0.126] t= 2.12
+wrote ../results/port_test.json

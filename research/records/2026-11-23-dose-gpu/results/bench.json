@@ -1,0 +1,69 @@
+{
+ "sweep": [
+  {
+   "R": 24,
+   "run_sec": 0.09954,
+   "load_run_sec": 0.1001,
+   "runs_per_sec": 241.1,
+   "sec_per_draw_24runs": 0.09954,
+   "nWtot": 40320
+  },
+  {
+   "R": 48,
+   "run_sec": 0.09998,
+   "load_run_sec": 0.09993,
+   "runs_per_sec": 480.1,
+   "sec_per_draw_24runs": 0.04999,
+   "nWtot": 80640
+  },
+  {
+   "R": 96,
+   "run_sec": 0.10005,
+   "load_run_sec": 0.09957,
+   "runs_per_sec": 959.5,
+   "sec_per_draw_24runs": 0.02501,
+   "nWtot": 161280
+  },
+  {
+   "R": 192,
+   "run_sec": 0.09859,
+   "load_run_sec": 0.14414,
+   "runs_per_sec": 1947.5,
+   "sec_per_draw_24runs": 0.01232,
+   "nWtot": 322560
+  },
+  {
+   "R": 384,
+   "run_sec": 0.30145,
+   "load_run_sec": 0.34521,
+   "runs_per_sec": 1273.8,
+   "sec_per_draw_24runs": 0.01884,
+   "nWtot": 645120
+  },
+  {
+   "tmax": 1960,
+   "R": 192,
+   "run_sec": 0.08589,
+   "runs_per_sec": 2235.5
+  },
+  {
+   "tmax": 1985,
+   "R": 192,
+   "run_sec": 0.10062,
+   "runs_per_sec": 1908.2
+  },
+  {
+   "tmax": 2012,
+   "R": 192,
+   "run_sec": 0.09835,
+   "runs_per_sec": 1952.2
+  },
+  {
+   "tmax": 2050,
+   "R": 192,
+   "run_sec": 0.10299,
+   "runs_per_sec": 1864.2
+  }
+ ],
+ "cpu_sec_per_run_min": 0.00948643684387207
+}
