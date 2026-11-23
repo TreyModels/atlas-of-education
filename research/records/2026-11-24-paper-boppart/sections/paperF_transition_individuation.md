@@ -109,15 +109,19 @@ prior-predictive distance distribution, with equal-weight rejection sampling onl
 (`research/dose-tolerance-2026-11-23` @ `baadfe6`, `results/ladder.json`, fields `drawn`, `accepted`,
 `acceptance`, `params.<name>.spread`):
 
-| tolerance | drawn | accepted | acceptance | kin-support spread | downward-flow spread | pickiness spread | cohort spread | career spread |
+| tolerance | drawn | accepted | acceptance | kin (th_k) | downward flow (th_f) | cohort (kappa) | career (gam) | pickiness (lam_s) |
 |---|---|---|---|---|---|---|---|---|
-| 20th pct (eps 21.5) | 5,000 | 1,044 | 20.9% | 0.96 | 1.00 | 0.99 | 0.89 | 0.83 |
-| 10th pct (eps 18.33) | 10,000 | 1,012 | 10.1% | 0.89 | 0.89 | 0.89 | 0.86 | 0.64 |
-| 5th pct (eps 16.59) | 12,000 | 660 | 5.5% | 0.87 | 0.91 | 0.90 | 0.80 | 0.76 |
+| 20th pct (eps 21.5) | 5,000 | 1,044 | 20.9% | 0.96 | 1.00 | 0.98 | 0.88 | 0.98 |
+| 10th pct (eps 18.33) | 10,000 | 1,012 | 10.1% | 0.98 | 1.00 | 0.94 | 0.71 | 0.97 |
+| 5th pct (eps 16.59) | 12,000 | 660 | 5.5% | 0.96 | 1.01 | 0.87 | 0.76 | 1.00 |
 
+Spread columns are `params.<name>.spread` from `ladder.json`, in the order of the ladder file (th_k, th_f, kappa, gam, lam_s), and the labels are the file's own `pretty` names.
 "Spread" is the width of the 90 per cent interval relative to the prior width. Tightening the tolerance from the
-20th to the 5th percentile leaves the spreads between 0.80 and 1.00 — the intervals do **not** narrow toward the
-data. In the rival arm the tight tolerance accepts only **32 of 4,000 draws (0.8 per cent)**, at which point the
+20th to the 5th percentile leaves **four of the five** spreads between 0.87 and 1.01, essentially unchanged; the
+one that moves is career delay, from 0.88 to 0.71-0.76, a slight tightening that does not bring the posterior near
+the data. The point medians are similarly stable for kin support, downward flow and pickiness (2.80/2.82/2.82;
+2.62/2.63/2.74; 2.41/2.47/2.61) but drift for cohort deepening (1.58/1.58/1.31) and career delay
+(5.32/6.05/6.35), which is a further reason to treat those two channels cautiously. In the rival arm the tight tolerance accepts only **32 of 4,000 draws (0.8 per cent)**, at which point the
 posterior cannot be interpreted. The conclusion is that the wide dose intervals reflect **a genuine
 identification limit of this design**, not a loose tolerance, and that reporting them as though a larger
 simulation would tighten them would be wrong.
