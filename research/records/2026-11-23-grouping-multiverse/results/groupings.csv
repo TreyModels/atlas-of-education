@@ -1,0 +1,180 @@
+grouping,family,group,tag,countries
+World Bank region,geography,East Asia & Pacific,World Bank region=East Asia & Pacific,37
+World Bank region,geography,Europe & Central Asia,World Bank region=Europe & Central Asia,58
+World Bank region,geography,Latin America & Caribbean,World Bank region=Latin America & Caribbean,42
+World Bank region,geography,"Middle East, North Africa, Afghanistan & Pakistan","World Bank region=Middle East, North Africa, Afghanistan & Pakistan",23
+World Bank region,geography,North America,World Bank region=North America,3
+World Bank region,geography,South Asia,World Bank region=South Asia,6
+World Bank region,geography,Sub-Saharan Africa,World Bank region=Sub-Saharan Africa,48
+Continent,geography,Africa,Continent=Africa,54
+Continent,geography,Americas,Continent=Americas,45
+Continent,geography,Asia,Continent=Asia,50
+Continent,geography,Europe,Continent=Europe,49
+Continent,geography,Oceania,Continent=Oceania,19
+World Bank income group,geography,High income,World Bank income group=High income,86
+World Bank income group,geography,Low income,World Bank income group=Low income,25
+World Bank income group,geography,Lower middle income,World Bank income group=Lower middle income,47
+World Bank income group,geography,Upper middle income,World Bank income group=Upper middle income,59
+log income 1990 x2,income,log income 1990 group 1/2,log income 1990:low,99
+log income 1990 x2,income,log income 1990 group 2/2,log income 1990:high,98
+log income 1990 x3,income,log income 1990 group 1/3,log income 1990:low,66
+log income 1990 x3,income,log income 1990 group 2/3,log income 1990:mid,66
+log income 1990 x3,income,log income 1990 group 3/3,log income 1990:high,65
+log income 1990 x4,income,log income 1990 group 1/4,log income 1990:low,50
+log income 1990 x4,income,log income 1990 group 2/4,log income 1990:mid,49
+log income 1990 x4,income,log income 1990 group 3/4,log income 1990:mid,49
+log income 1990 x4,income,log income 1990 group 4/4,log income 1990:high,49
+log income 1990 x5,income,log income 1990 group 1/5,log income 1990:low,40
+log income 1990 x5,income,log income 1990 group 2/5,log income 1990:mid,40
+log income 1990 x5,income,log income 1990 group 3/5,log income 1990:mid,39
+log income 1990 x5,income,log income 1990 group 4/5,log income 1990:mid,39
+log income 1990 x5,income,log income 1990 group 5/5,log income 1990:high,39
+fertility 1990 x2,demography,fertility 1990 group 1/2,fertility 1990:low,109
+fertility 1990 x2,demography,fertility 1990 group 2/2,fertility 1990:high,108
+fertility 1990 x3,demography,fertility 1990 group 1/3,fertility 1990:low,73
+fertility 1990 x3,demography,fertility 1990 group 2/3,fertility 1990:mid,72
+fertility 1990 x3,demography,fertility 1990 group 3/3,fertility 1990:high,72
+fertility 1990 x4,demography,fertility 1990 group 1/4,fertility 1990:low,55
+fertility 1990 x4,demography,fertility 1990 group 2/4,fertility 1990:mid,54
+fertility 1990 x4,demography,fertility 1990 group 3/4,fertility 1990:mid,54
+fertility 1990 x4,demography,fertility 1990 group 4/4,fertility 1990:high,54
+fertility 1990 x5,demography,fertility 1990 group 1/5,fertility 1990:low,44
+fertility 1990 x5,demography,fertility 1990 group 2/5,fertility 1990:mid,44
+fertility 1990 x5,demography,fertility 1990 group 3/5,fertility 1990:mid,43
+fertility 1990 x5,demography,fertility 1990 group 4/5,fertility 1990:mid,43
+fertility 1990 x5,demography,fertility 1990 group 5/5,fertility 1990:high,43
+child mortality 1990 x2,demography,child mortality 1990 group 1/2,child mortality 1990:low,98
+child mortality 1990 x2,demography,child mortality 1990 group 2/2,child mortality 1990:high,98
+child mortality 1990 x3,demography,child mortality 1990 group 1/3,child mortality 1990:low,66
+child mortality 1990 x3,demography,child mortality 1990 group 2/3,child mortality 1990:mid,65
+child mortality 1990 x3,demography,child mortality 1990 group 3/3,child mortality 1990:high,65
+child mortality 1990 x4,demography,child mortality 1990 group 1/4,child mortality 1990:low,49
+child mortality 1990 x4,demography,child mortality 1990 group 2/4,child mortality 1990:mid,49
+child mortality 1990 x4,demography,child mortality 1990 group 3/4,child mortality 1990:mid,49
+child mortality 1990 x4,demography,child mortality 1990 group 4/4,child mortality 1990:high,49
+life expectancy 1990 x3,demography,life expectancy 1990 group 1/3,life expectancy 1990:low,73
+life expectancy 1990 x3,demography,life expectancy 1990 group 2/3,life expectancy 1990:mid,72
+life expectancy 1990 x3,demography,life expectancy 1990 group 3/3,life expectancy 1990:high,72
+replacement crossing x3,demography,crossing bin 1/3,crossing time(early=low):low,63
+replacement crossing x3,demography,crossing bin 2/3,crossing time(early=low):mid,39
+replacement crossing x3,demography,crossing bin 3/3,crossing time(early=low):high,115
+replacement crossing x4,demography,crossing bin 1/4,crossing time(early=low):low,32
+replacement crossing x4,demography,crossing bin 2/4,crossing time(early=low):mid,31
+replacement crossing x4,demography,crossing bin 3/4,crossing time(early=low):mid,39
+replacement crossing x4,demography,crossing bin 4/4,crossing time(early=low):high,115
+secondary completion 1990 x2,schooling,secondary completion 1990 group 1/2,secondary completion 1990:low,70
+secondary completion 1990 x2,schooling,secondary completion 1990 group 2/2,secondary completion 1990:high,69
+secondary completion 1990 x3,schooling,secondary completion 1990 group 1/3,secondary completion 1990:low,47
+secondary completion 1990 x3,schooling,secondary completion 1990 group 2/3,secondary completion 1990:mid,46
+secondary completion 1990 x3,schooling,secondary completion 1990 group 3/3,secondary completion 1990:high,46
+secondary completion 1990 x4,schooling,secondary completion 1990 group 1/4,secondary completion 1990:low,35
+secondary completion 1990 x4,schooling,secondary completion 1990 group 2/4,secondary completion 1990:mid,35
+secondary completion 1990 x4,schooling,secondary completion 1990 group 3/4,secondary completion 1990:mid,35
+secondary completion 1990 x4,schooling,secondary completion 1990 group 4/4,secondary completion 1990:high,34
+secondary completion 1990 x5,schooling,secondary completion 1990 group 1/5,secondary completion 1990:low,28
+secondary completion 1990 x5,schooling,secondary completion 1990 group 2/5,secondary completion 1990:mid,28
+secondary completion 1990 x5,schooling,secondary completion 1990 group 3/5,secondary completion 1990:mid,28
+secondary completion 1990 x5,schooling,secondary completion 1990 group 4/5,secondary completion 1990:mid,28
+secondary completion 1990 x5,schooling,secondary completion 1990 group 5/5,secondary completion 1990:high,27
+lower-secondary completion 1990 x2,schooling,lower-secondary completion 1990 group 1/2,lower-secondary completion 1990:low,54
+lower-secondary completion 1990 x2,schooling,lower-secondary completion 1990 group 2/2,lower-secondary completion 1990:high,53
+lower-secondary completion 1990 x3,schooling,lower-secondary completion 1990 group 1/3,lower-secondary completion 1990:low,36
+lower-secondary completion 1990 x3,schooling,lower-secondary completion 1990 group 2/3,lower-secondary completion 1990:mid,36
+lower-secondary completion 1990 x3,schooling,lower-secondary completion 1990 group 3/3,lower-secondary completion 1990:high,35
+lower-secondary completion 1990 x4,schooling,lower-secondary completion 1990 group 1/4,lower-secondary completion 1990:low,27
+lower-secondary completion 1990 x4,schooling,lower-secondary completion 1990 group 2/4,lower-secondary completion 1990:mid,27
+lower-secondary completion 1990 x4,schooling,lower-secondary completion 1990 group 3/4,lower-secondary completion 1990:mid,27
+lower-secondary completion 1990 x4,schooling,lower-secondary completion 1990 group 4/4,lower-secondary completion 1990:high,26
+agriculture share of output 1990 x2,economy,agriculture share of output 1990 group 1/2,agriculture share of output 1990:low,88
+agriculture share of output 1990 x2,economy,agriculture share of output 1990 group 2/2,agriculture share of output 1990:high,87
+agriculture share of output 1990 x3,economy,agriculture share of output 1990 group 1/3,agriculture share of output 1990:low,59
+agriculture share of output 1990 x3,economy,agriculture share of output 1990 group 2/3,agriculture share of output 1990:mid,58
+agriculture share of output 1990 x3,economy,agriculture share of output 1990 group 3/3,agriculture share of output 1990:high,58
+agriculture share of output 1990 x4,economy,agriculture share of output 1990 group 1/4,agriculture share of output 1990:low,44
+agriculture share of output 1990 x4,economy,agriculture share of output 1990 group 2/4,agriculture share of output 1990:mid,44
+agriculture share of output 1990 x4,economy,agriculture share of output 1990 group 3/4,agriculture share of output 1990:mid,44
+agriculture share of output 1990 x4,economy,agriculture share of output 1990 group 4/4,agriculture share of output 1990:high,43
+urban share 1990 x2,economy,urban share 1990 group 1/2,urban share 1990:low,109
+urban share 1990 x2,economy,urban share 1990 group 2/2,urban share 1990:high,108
+urban share 1990 x3,economy,urban share 1990 group 1/3,urban share 1990:low,73
+urban share 1990 x3,economy,urban share 1990 group 2/3,urban share 1990:mid,72
+urban share 1990 x3,economy,urban share 1990 group 3/3,urban share 1990:high,72
+urban share 1990 x4,economy,urban share 1990 group 1/4,urban share 1990:low,55
+urban share 1990 x4,economy,urban share 1990 group 2/4,urban share 1990:mid,54
+urban share 1990 x4,economy,urban share 1990 group 3/4,urban share 1990:mid,54
+urban share 1990 x4,economy,urban share 1990 group 4/4,urban share 1990:high,54
+agricultural employment share 1990 x3,economy,agricultural employment share 1990 group 1/3,agricultural employment share 1990:low,63
+agricultural employment share 1990 x3,economy,agricultural employment share 1990 group 2/3,agricultural employment share 1990:mid,62
+agricultural employment share 1990 x3,economy,agricultural employment share 1990 group 3/3,agricultural employment share 1990:high,62
+electricity access 1990 x3,economy,electricity access 1990 group 1/3,electricity access 1990:low,54
+electricity access 1990 x3,economy,electricity access 1990 group 2/3,electricity access 1990:mid,53
+electricity access 1990 x3,economy,electricity access 1990 group 3/3,electricity access 1990:high,53
+tax share 1990 x2,institutions,tax share 1990 group 1/2,tax share 1990:low,51
+tax share 1990 x2,institutions,tax share 1990 group 2/2,tax share 1990:high,51
+tax share 1990 x3,institutions,tax share 1990 group 1/3,tax share 1990:low,34
+tax share 1990 x3,institutions,tax share 1990 group 2/3,tax share 1990:mid,34
+tax share 1990 x3,institutions,tax share 1990 group 3/3,tax share 1990:high,34
+tax share 1990 x4,institutions,tax share 1990 group 1/4,tax share 1990:low,26
+tax share 1990 x4,institutions,tax share 1990 group 2/4,tax share 1990:mid,26
+tax share 1990 x4,institutions,tax share 1990 group 3/4,tax share 1990:mid,25
+tax share 1990 x4,institutions,tax share 1990 group 4/4,tax share 1990:high,25
+k-means k=2,kmeans,cluster 1/2 (by fertility),kmeans-fertility-order:low,125
+k-means k=2,kmeans,cluster 2/2 (by fertility),kmeans-fertility-order:high,64
+k-means k=3,kmeans,cluster 1/3 (by fertility),kmeans-fertility-order:low,73
+k-means k=3,kmeans,cluster 2/3 (by fertility),kmeans-fertility-order:mid,67
+k-means k=3,kmeans,cluster 3/3 (by fertility),kmeans-fertility-order:high,49
+k-means k=4,kmeans,cluster 1/4 (by fertility),kmeans-fertility-order:low,61
+k-means k=4,kmeans,cluster 2/4 (by fertility),kmeans-fertility-order:mid,52
+k-means k=4,kmeans,cluster 3/4 (by fertility),kmeans-fertility-order:mid,37
+k-means k=4,kmeans,cluster 4/4 (by fertility),kmeans-fertility-order:high,39
+k-means k=5,kmeans,cluster 1/5 (by fertility),kmeans-fertility-order:low,51
+k-means k=5,kmeans,cluster 2/5 (by fertility),kmeans-fertility-order:mid,26
+k-means k=5,kmeans,cluster 3/5 (by fertility),kmeans-fertility-order:mid,49
+k-means k=5,kmeans,cluster 4/5 (by fertility),kmeans-fertility-order:mid,36
+k-means k=5,kmeans,cluster 5/5 (by fertility),kmeans-fertility-order:high,27
+k-means k=6,kmeans,cluster 1/6 (by fertility),kmeans-fertility-order:low,39
+k-means k=6,kmeans,cluster 2/6 (by fertility),kmeans-fertility-order:mid,16
+k-means k=6,kmeans,cluster 3/6 (by fertility),kmeans-fertility-order:mid,24
+k-means k=6,kmeans,cluster 4/6 (by fertility),kmeans-fertility-order:mid,47
+k-means k=6,kmeans,cluster 5/6 (by fertility),kmeans-fertility-order:mid,36
+k-means k=6,kmeans,cluster 6/6 (by fertility),kmeans-fertility-order:high,27
+GFE fertility G=2,gfe,GFE class 1/2 (by fertility),gfe-fertility-order:low,117
+GFE fertility G=2,gfe,GFE class 2/2 (by fertility),gfe-fertility-order:high,99
+GFE fertility G=3,gfe,GFE class 1/3 (by fertility),gfe-fertility-order:low,78
+GFE fertility G=3,gfe,GFE class 2/3 (by fertility),gfe-fertility-order:mid,75
+GFE fertility G=3,gfe,GFE class 3/3 (by fertility),gfe-fertility-order:high,63
+GFE fertility G=4,gfe,GFE class 1/4 (by fertility),gfe-fertility-order:low,74
+GFE fertility G=4,gfe,GFE class 2/4 (by fertility),gfe-fertility-order:mid,53
+GFE fertility G=4,gfe,GFE class 3/4 (by fertility),gfe-fertility-order:mid,46
+GFE fertility G=4,gfe,GFE class 4/4 (by fertility),gfe-fertility-order:high,43
+GFE fertility G=5,gfe,GFE class 1/5 (by fertility),gfe-fertility-order:low,50
+GFE fertility G=5,gfe,GFE class 2/5 (by fertility),gfe-fertility-order:mid,29
+GFE fertility G=5,gfe,GFE class 3/5 (by fertility),gfe-fertility-order:mid,50
+GFE fertility G=5,gfe,GFE class 4/5 (by fertility),gfe-fertility-order:mid,44
+GFE fertility G=5,gfe,GFE class 5/5 (by fertility),gfe-fertility-order:high,43
+GFE fertility G=6,gfe,GFE class 1/6 (by fertility),gfe-fertility-order:low,49
+GFE fertility G=6,gfe,GFE class 2/6 (by fertility),gfe-fertility-order:mid,29
+GFE fertility G=6,gfe,GFE class 3/6 (by fertility),gfe-fertility-order:mid,41
+GFE fertility G=6,gfe,GFE class 4/6 (by fertility),gfe-fertility-order:mid,33
+GFE fertility G=6,gfe,GFE class 5/6 (by fertility),gfe-fertility-order:mid,29
+GFE fertility G=6,gfe,GFE class 6/6 (by fertility),gfe-fertility-order:high,35
+GFE log income G=2,gfe,GFE class 1/2 (by log income),gfe-log income-order:low,113
+GFE log income G=2,gfe,GFE class 2/2 (by log income),gfe-log income-order:high,90
+GFE log income G=3,gfe,GFE class 1/3 (by log income),gfe-log income-order:low,59
+GFE log income G=3,gfe,GFE class 2/3 (by log income),gfe-log income-order:mid,87
+GFE log income G=3,gfe,GFE class 3/3 (by log income),gfe-log income-order:high,57
+GFE log income G=4,gfe,GFE class 1/4 (by log income),gfe-log income-order:low,47
+GFE log income G=4,gfe,GFE class 2/4 (by log income),gfe-log income-order:mid,59
+GFE log income G=4,gfe,GFE class 3/4 (by log income),gfe-log income-order:mid,44
+GFE log income G=4,gfe,GFE class 4/4 (by log income),gfe-log income-order:high,53
+GFE log income G=5,gfe,GFE class 1/5 (by log income),gfe-log income-order:low,34
+GFE log income G=5,gfe,GFE class 2/5 (by log income),gfe-log income-order:mid,44
+GFE log income G=5,gfe,GFE class 3/5 (by log income),gfe-log income-order:mid,50
+GFE log income G=5,gfe,GFE class 4/5 (by log income),gfe-log income-order:mid,36
+GFE log income G=5,gfe,GFE class 5/5 (by log income),gfe-log income-order:high,39
+GFE log income G=6,gfe,GFE class 1/6 (by log income),gfe-log income-order:low,24
+GFE log income G=6,gfe,GFE class 2/6 (by log income),gfe-log income-order:mid,29
+GFE log income G=6,gfe,GFE class 3/6 (by log income),gfe-log income-order:mid,42
+GFE log income G=6,gfe,GFE class 4/6 (by log income),gfe-log income-order:mid,41
+GFE log income G=6,gfe,GFE class 5/6 (by log income),gfe-log income-order:mid,28
+GFE log income G=6,gfe,GFE class 6/6 (by log income),gfe-log income-order:high,39

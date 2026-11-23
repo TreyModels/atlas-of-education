@@ -1,0 +1,319 @@
+Total regressions run: 7,185,790 (real cells + 74 random-partition replicates + whole-sample reference)
+Groupings: 50 in 8 families (demography, economy, geography, gfe, income, institutions, kmeans, schooling); cells: 179; random partition replicates: 74
+Whole sample: significant with FE 127, with trends 43, both same sign 26 (earlier matrix: 127 / 42 / 24)
+Edges beating the random-partition null (BH q<0.05, one-sided): FE 43, trends 43, both-specs 27 of 272
+Edges BELOW the null (BH q<0.05): trends 21
+Edges whose sign-flip rate beats null (q<0.05): 36; heterogeneity-rate beats null: 62
+
+Class counts by topic:
+  fertility      a_robust_everywhere              2
+  fertility      b_group_specific                 15
+  fertility      c_no_better_than_random          13
+  fertility      d_beats_random_no_clear_group    2
+  massification  b_group_specific                 32
+  massification  c_no_better_than_random          52
+  massification  d_beats_random_no_clear_group    6
+  other          a_robust_everywhere              3
+  other          b_group_specific                 34
+  other          c_no_better_than_random          94
+  other          d_beats_random_no_clear_group    19
+
+============================== FERTILITY ==============================
+
+-- a_robust_everywhere
+  u5mr       ->fertility   pooled t FE +13.6 TR  +5.4 | share sig FE 0.97 TR 0.95 (null 1.00/0.93) qNull TR 0.474 | base:Y flipfam:-
+        holds in: gfe-log income-order:high[z=+7.9,sig=100%,cells=5];tax share 1990:high[z=+6.8,sig=100%,cells=3]
+  life_exp   ->fertility   pooled t FE  -7.4 TR  -6.1 | share sig FE 0.88 TR 0.81 (null 0.95/0.93) qNull TR 1.000 | base:Y flipfam:-
+
+-- b_group_specific
+  fertility  ->gdppc_log   pooled t FE  -5.1 TR  -3.5 | share sig FE 0.71 TR 0.37 (null 0.76/0.53) qNull TR 1.000 | base:Y flipfam:-
+        holds in: gfe-fertility-order:low[z=+4.0,sig=100%,cells=5]
+  fertility  ->sec         pooled t FE  -5.2 TR  -2.9 | share sig FE 0.79 TR 0.34 (null 0.79/0.43) qNull TR 1.000 | base:Y flipfam:-
+        holds in: kmeans-fertility-order:high[z=+3.5,sig=80%,cells=5]
+  urban      ->fertility   pooled t FE  -6.5 TR  -2.1 | share sig FE 0.85 TR 0.30 (null 0.89/0.20) qNull TR 0.004 | base:- flipfam:-
+        holds in: kmeans-fertility-order:low[z=+3.4,sig=80%,cells=5];gfe-fertility-order:low[z=+3.0,sig=80%,cells=5]
+  fertility  ->agri_va     pooled t FE  +4.1 TR  +0.4 | share sig FE 0.63 TR 0.22 (null 0.58/0.09) qNull TR 0.000 | base:- flipfam:institutions
+        holds in: electricity access 1990:high[z=+4.5,sig=100%,cells=1];crossing time(early=low):low[z=+3.8,sig=100%,cells=2];gfe-log income-order:high[z=+3.0,sig=80%,cells=5];gfe-fertility-order:low[z=+2.1,sig=80%,cells=5];kmeans-fertility-order:low[z=+2.0,sig=80%,cells=5]
+  fertility  ->emp_agri    pooled t FE  +3.5 TR  +1.0 | share sig FE 0.50 TR 0.20 (null 0.53/0.06) qNull TR 0.000 | base:- flipfam:-
+        holds in: World Bank income group=High income[z=+4.0,sig=100%,cells=1];child mortality 1990:low[z=+3.4,sig=100%,cells=3];electricity access 1990:high[z=+3.2,sig=100%,cells=1];kmeans-fertility-order:low[z=+3.1,sig=80%,cells=5]
+  fertility  ->gpi_ter     pooled t FE  -4.8 TR  -1.0 | share sig FE 0.78 TR 0.17 (null 0.81/0.23) qNull TR 1.000 | base:- flipfam:-
+        holds in: gfe-fertility-order:low[z=+2.9,sig=100%,cells=5]
+  prm_cmp    ->fertility   pooled t FE  -5.0 TR  -1.9 | share sig FE 0.59 TR 0.14 (null 0.75/0.13) qNull TR 0.800 | base:- flipfam:demography;schooling
+        holds in: gfe-log income-order:high[z=+3.5,sig=80%,cells=5]
+        opposite sign in: gfe-fertility-order:low[z=-3.4,cells=5];crossing time(early=low):low[z=-2.3,cells=2]
+  sec        ->fertility   pooled t FE  -1.3 TR  -0.7 | share sig FE 0.29 TR 0.13 (null 0.11/0.08) qNull TR 0.101 | base:- flipfam:-
+        holds in: World Bank income group=High income[z=+3.3,sig=100%,cells=1]
+  fertility  ->gpi_sec     pooled t FE  -0.3 TR  +0.5 | share sig FE 0.20 TR 0.12 (null 0.09/0.04) qNull TR 0.000 | base:- flipfam:schooling
+        opposite sign in: gfe-log income-order:low[z=-2.2,cells=5]
+  fertility  ->life_exp    pooled t FE  -1.5 TR  -0.5 | share sig FE 0.21 TR 0.09 (null 0.08/0.04) qNull TR 0.053 | base:- flipfam:demography;gfe;kmeans
+        holds in: crossing time(early=low):low[z=+3.4,sig=100%,cells=2];fertility 1990:low[z=+3.3,sig=100%,cells=4];gfe-fertility-order:low[z=+2.2,sig=80%,cells=5]
+        opposite sign in: child mortality 1990:mid[z=-2.2,cells=3]
+  electricity->fertility   pooled t FE  -3.8 TR  +0.8 | share sig FE 0.31 TR 0.06 (null 0.48/0.05) qNull TR 0.870 | base:- flipfam:schooling
+        opposite sign in: child mortality 1990:low[z=-2.7,cells=3]
+  lsc        ->fertility   pooled t FE  +0.9 TR  +0.4 | share sig FE 0.04 TR 0.05 (null 0.09/0.03) qNull TR 0.623 | base:- flipfam:-
+        holds in: gfe-fertility-order:low[z=+3.2,sig=80%,cells=5]
+  tax        ->fertility   pooled t FE  +3.4 TR  +0.3 | share sig FE 0.12 TR 0.04 (null 0.25/0.07) qNull TR 1.000 | base:- flipfam:-
+        opposite sign in: gfe-fertility-order:high[z=-4.4,cells=5]
+  gpi_ter    ->fertility   pooled t FE  -1.0 TR  -0.7 | share sig FE 0.14 TR 0.03 (null 0.09/0.05) qNull TR 1.000 | base:- flipfam:-
+        opposite sign in: gfe-fertility-order:low[z=-2.1,cells=5]
+  fertility  ->ter         pooled t FE  -3.0 TR  +0.9 | share sig FE 0.52 TR 0.01 (null 0.47/0.09) qNull TR 1.000 | base:- flipfam:-
+        opposite sign in: kmeans-fertility-order:high[z=-2.8,cells=5];lower-secondary completion 1990:low[z=-2.4,cells=3]
+
+-- d_beats_random_no_clear_group
+  ter        ->fertility   pooled t FE  +3.2 TR  +1.9 | share sig FE 0.29 TR 0.36 (null 0.46/0.20) qNull TR 0.000 | base:- flipfam:-
+  agri_va    ->fertility   pooled t FE  +3.6 TR  -0.1 | share sig FE 0.36 TR 0.08 (null 0.49/0.03) qNull TR 0.003 | base:- flipfam:-
+
+-- c_no_better_than_random: 13 edges (see edge_table.csv)
+
+============================== MASSIFICATION ==============================
+
+-- a_robust_everywhere
+
+-- b_group_specific
+  prm_cmp    ->gpi_sec     pooled t FE  +5.1 TR  +4.3 | share sig FE 0.78 TR 0.53 (null 0.80/0.52) qNull TR 0.970 | base:Y flipfam:geography;gfe
+        holds in: fertility 1990:high[z=+5.5,sig=100%,cells=4];gfe-fertility-order:high[z=+4.6,sig=100%,cells=5]
+  u5mr       ->gpi_ter     pooled t FE  -8.4 TR  -2.6 | share sig FE 0.90 TR 0.47 (null 0.97/0.43) qNull TR 0.428 | base:Y flipfam:geography;kmeans
+        holds in: crossing time(early=low):low[z=+7.0,sig=50%,cells=2];agricultural employment share 1990:mid[z=+4.6,sig=100%,cells=1]
+  u5mr       ->ter         pooled t FE  -1.6 TR  +2.6 | share sig FE 0.50 TR 0.43 (null 0.09/0.31) qNull TR 0.008 | base:- flipfam:demography
+        holds in: agriculture share of output 1990:low[z=+5.1,sig=100%,cells=3];urban share 1990:high[z=+4.2,sig=100%,cells=3];gfe-log income-order:high[z=+3.3,sig=100%,cells=5];kmeans-fertility-order:low[z=+2.9,sig=80%,cells=5];kmeans-fertility-order:mid[z=+2.5,sig=60%,cells=10];gfe-fertility-order:mid[z=+2.5,sig=60%,cells=10]
+        opposite sign in: fertility 1990:low[z=-2.1,cells=4]
+  life_exp   ->ter         pooled t FE  +3.4 TR  -2.7 | share sig FE 0.62 TR 0.40 (null 0.37/0.29) qNull TR 0.006 | base:- flipfam:-
+        holds in: Continent=Europe[z=+4.7,sig=100%,cells=1];gfe-fertility-order:low[z=+3.9,sig=100%,cells=5]
+  u5mr       ->gpi_sec     pooled t FE -11.5 TR  -1.9 | share sig FE 0.76 TR 0.37 (null 0.97/0.25) qNull TR 0.005 | base:- flipfam:-
+        holds in: Continent=Asia[z=+8.1,sig=100%,cells=1];gfe-log income-order:high[z=+8.1,sig=80%,cells=5];electricity access 1990:high[z=+7.1,sig=100%,cells=1];log income 1990:high[z=+5.5,sig=75%,cells=4];secondary completion 1990:mid[z=+3.7,sig=83%,cells=6];gfe-log income-order:mid[z=+2.5,sig=50%,cells=10]
+  electricity->gpi_ter     pooled t FE  +6.0 TR  -1.9 | share sig FE 0.61 TR 0.36 (null 0.86/0.28) qNull TR 0.053 | base:- flipfam:economy;gfe;income
+        opposite sign in: log income 1990:high[z=-4.1,cells=4];gfe-log income-order:high[z=-4.0,cells=5];agriculture share of output 1990:low[z=-2.5,cells=3]
+  life_exp   ->gpi_ter     pooled t FE  +7.4 TR  +2.3 | share sig FE 0.81 TR 0.31 (null 0.92/0.32) qNull TR 1.000 | base:Y flipfam:-
+        holds in: gfe-fertility-order:mid[z=+2.4,sig=70%,cells=10]
+  u5mr       ->prm_cmp     pooled t FE  -9.8 TR  -1.9 | share sig FE 0.90 TR 0.30 (null 0.98/0.26) qNull TR 0.439 | base:- flipfam:-
+        holds in: Continent=Asia[z=+8.5,sig=100%,cells=1];gfe-log income-order:high[z=+5.2,sig=100%,cells=5];kmeans-fertility-order:low[z=+3.1,sig=80%,cells=5]
+  agri_va    ->lsc         pooled t FE  -2.9 TR  -1.0 | share sig FE 0.53 TR 0.26 (null 0.45/0.19) qNull TR 0.053 | base:- flipfam:economy
+        holds in: Continent=Americas[z=+8.1,sig=100%,cells=1];World Bank region=Latin America & Caribbean[z=+8.1,sig=100%,cells=1]
+  life_exp   ->prm_cmp     pooled t FE  +2.9 TR  +0.9 | share sig FE 0.73 TR 0.25 (null 0.58/0.21) qNull TR 0.387 | base:- flipfam:-
+        holds in: tax share 1990:low[z=+5.7,sig=100%,cells=3]
+        opposite sign in: agriculture share of output 1990:mid[z=-2.8,cells=3]
+  u5mr       ->lsc         pooled t FE  -2.5 TR  -1.3 | share sig FE 0.56 TR 0.21 (null 0.65/0.18) qNull TR 0.623 | base:- flipfam:-
+        holds in: Continent=Asia[z=+7.2,sig=100%,cells=1]
+  u5mr       ->sec         pooled t FE  -5.7 TR  -1.9 | share sig FE 0.93 TR 0.20 (null 0.94/0.18) qNull TR 0.792 | base:- flipfam:kmeans
+        holds in: fertility 1990:low[z=+4.1,sig=50%,cells=4];gfe-log income-order:high[z=+3.3,sig=60%,cells=5]
+  gpi_sec    ->prm_cmp     pooled t FE  +2.8 TR  +1.9 | share sig FE 0.43 TR 0.19 (null 0.43/0.18) qNull TR 0.882 | base:- flipfam:-
+        holds in: World Bank income group=High income[z=+4.2,sig=100%,cells=1];gfe-log income-order:high[z=+3.7,sig=100%,cells=5];log income 1990:high[z=+3.5,sig=100%,cells=4];kmeans-fertility-order:low[z=+2.5,sig=60%,cells=5]
+  lsc        ->prm_cmp     pooled t FE  -1.6 TR  -1.2 | share sig FE 0.11 TR 0.18 (null 0.22/0.09) qNull TR 0.001 | base:- flipfam:-
+        holds in: World Bank income group=High income[z=+4.0,sig=100%,cells=1]
+  emp_agri   ->gpi_ter     pooled t FE  -2.2 TR  +0.8 | share sig FE 0.18 TR 0.17 (null 0.28/0.11) qNull TR 0.041 | base:- flipfam:-
+        holds in: gfe-log income-order:high[z=+2.2,sig=60%,cells=5]
+  life_exp   ->sec         pooled t FE  +4.4 TR  +0.9 | share sig FE 0.79 TR 0.17 (null 0.73/0.13) qNull TR 0.387 | base:- flipfam:kmeans
+        holds in: gfe-log income-order:high[z=+2.7,sig=80%,cells=5];kmeans-fertility-order:low[z=+2.1,sig=60%,cells=5]
+  electricity->lsc         pooled t FE  +4.1 TR  +0.5 | share sig FE 0.46 TR 0.16 (null 0.67/0.03) qNull TR 0.000 | base:- flipfam:-
+        holds in: gfe-fertility-order:low[z=+3.1,sig=80%,cells=5]
+        opposite sign in: gfe-log income-order:high[z=-3.5,cells=3]
+  gpi_ter    ->gpi_sec     pooled t FE  -1.7 TR  -0.3 | share sig FE 0.16 TR 0.15 (null 0.30/0.14) qNull TR 0.800 | base:- flipfam:demography;gfe
+        holds in: crossing time(early=low):mid[z=+4.1,sig=67%,cells=3]
+  electricity->ter         pooled t FE  -1.7 TR  -1.1 | share sig FE 0.32 TR 0.15 (null 0.26/0.03) qNull TR 0.000 | base:- flipfam:-
+        holds in: World Bank region=Europe & Central Asia[z=+9.2,sig=100%,cells=1];child mortality 1990:low[z=+8.3,sig=100%,cells=3];gfe-log income-order:high[z=+7.1,sig=80%,cells=5];Continent=Europe[z=+6.9,sig=100%,cells=1];gfe-fertility-order:low[z=+5.6,sig=80%,cells=5];electricity access 1990:high[z=+5.5,sig=100%,cells=1]
+  agri_va    ->ter         pooled t FE  -1.2 TR  -0.5 | share sig FE 0.28 TR 0.14 (null 0.07/0.05) qNull TR 0.000 | base:- flipfam:demography
+        holds in: gfe-fertility-order:low[z=+3.8,sig=80%,cells=5];child mortality 1990:low[z=+3.4,sig=100%,cells=3]
+  wage_emp   ->prm_cmp     pooled t FE  -0.5 TR  -1.3 | share sig FE 0.05 TR 0.14 (null 0.02/0.12) qNull TR 0.623 | base:- flipfam:kmeans
+        opposite sign in: lower-secondary completion 1990:low[z=-2.4,cells=3];kmeans-fertility-order:high[z=-2.3,cells=5]
+  urban      ->lsc         pooled t FE  +6.6 TR  +0.1 | share sig FE 0.71 TR 0.09 (null 0.92/0.06) qNull TR 0.438 | base:- flipfam:-
+        opposite sign in: gfe-fertility-order:low[z=-2.1,cells=5]
+  electricity->prm_cmp     pooled t FE  +3.8 TR  +0.0 | share sig FE 0.49 TR 0.08 (null 0.61/0.06) qNull TR 0.569 | base:- flipfam:-
+        opposite sign in: gfe-log income-order:high[z=-3.8,cells=5];log income 1990:high[z=-3.0,cells=4]
+  electricity->gpi_sec     pooled t FE  +3.6 TR  -0.8 | share sig FE 0.16 TR 0.07 (null 0.50/0.06) qNull TR 0.623 | base:- flipfam:demography;geography
+        opposite sign in: gfe-fertility-order:low[z=-2.8,cells=5];kmeans-fertility-order:low[z=-2.0,cells=5]
+  ter        ->gpi_sec     pooled t FE  -3.2 TR  -0.1 | share sig FE 0.20 TR 0.07 (null 0.53/0.06) qNull TR 0.870 | base:- flipfam:-
+        opposite sign in: lower-secondary completion 1990:high[z=-5.0,cells=3]
+  life_exp   ->lsc         pooled t FE  +2.2 TR  +0.1 | share sig FE 0.58 TR 0.06 (null 0.57/0.04) qNull TR 0.551 | base:- flipfam:geography
+        opposite sign in: gfe-fertility-order:low[z=-2.6,cells=5];kmeans-fertility-order:high[z=-2.1,cells=5]
+  wage_emp   ->gpi_ter     pooled t FE  +0.6 TR  +0.0 | share sig FE 0.10 TR 0.05 (null 0.09/0.05) qNull TR 0.999 | base:- flipfam:-
+        opposite sign in: gfe-fertility-order:low[z=-2.4,cells=5];gfe-log income-order:high[z=-2.2,cells=5]
+  gpi_ter    ->ter         pooled t FE  +4.3 TR  +0.1 | share sig FE 0.66 TR 0.04 (null 0.70/0.05) qNull TR 1.000 | base:- flipfam:demography
+        opposite sign in: fertility 1990:high[z=-2.4,cells=4]
+  flfp       ->lsc         pooled t FE  +1.4 TR  +0.8 | share sig FE 0.24 TR 0.03 (null 0.12/0.05) qNull TR 1.000 | base:- flipfam:-
+        opposite sign in: gfe-log income-order:high[z=-2.1,cells=5]
+  gpi_sec    ->sec         pooled t FE  +2.3 TR  +0.5 | share sig FE 0.39 TR 0.03 (null 0.36/0.05) qNull TR 1.000 | base:- flipfam:-
+        opposite sign in: gfe-fertility-order:low[z=-2.1,cells=5]
+  prm_cmp    ->sec         pooled t FE  +4.3 TR  +0.4 | share sig FE 0.49 TR 0.02 (null 0.66/0.08) qNull TR 1.000 | base:- flipfam:-
+        holds in: gfe-fertility-order:low[z=+2.0,sig=60%,cells=5]
+  agri_va    ->sec         pooled t FE  -2.5 TR  +0.0 | share sig FE 0.29 TR 0.01 (null 0.37/0.05) qNull TR 1.000 | base:- flipfam:-
+        opposite sign in: gfe-fertility-order:low[z=-2.2,cells=5]
+
+-- d_beats_random_no_clear_group
+  life_exp   ->gpi_sec     pooled t FE  +6.2 TR  +0.9 | share sig FE 0.74 TR 0.25 (null 0.90/0.10) qNull TR 0.000 | base:- flipfam:income;schooling
+  sec        ->lsc         pooled t FE  +1.5 TR  -1.3 | share sig FE 0.12 TR 0.23 (null 0.17/0.12) qNull TR 0.007 | base:- flipfam:-
+  tax        ->gpi_ter     pooled t FE  -1.3 TR  +0.2 | share sig FE 0.05 TR 0.16 (null 0.12/0.08) qNull TR 0.049 | base:- flipfam:-
+  ter        ->sec         pooled t FE  +0.6 TR  -1.0 | share sig FE 0.17 TR 0.14 (null 0.04/0.16) qNull TR 1.000 | base:- flipfam:-
+  gdppc_log  ->prm_cmp     pooled t FE  -0.4 TR  +0.4 | share sig FE 0.10 TR 0.12 (null 0.07/0.06) qNull TR 0.010 | base:- flipfam:-
+  agri_va    ->prm_cmp     pooled t FE  -3.6 TR  +0.3 | share sig FE 0.38 TR 0.10 (null 0.52/0.04) qNull TR 0.003 | base:- flipfam:geography
+
+-- c_no_better_than_random: 52 edges (see edge_table.csv)
+
+============================== OTHER ==============================
+
+-- a_robust_everywhere
+  u5mr       ->life_exp    pooled t FE  -4.1 TR  -3.0 | share sig FE 0.57 TR 0.63 (null 0.71/0.49) qNull TR 0.000 | base:Y flipfam:-
+        holds in: agricultural employment share 1990:mid[z=+7.1,sig=100%,cells=1];life expectancy 1990:mid[z=+6.7,sig=100%,cells=1];electricity access 1990:mid[z=+6.6,sig=100%,cells=1];crossing time(early=low):mid[z=+6.3,sig=100%,cells=3];Continent=Americas[z=+5.2,sig=100%,cells=1];child mortality 1990:mid[z=+4.6,sig=100%,cells=3]
+  agri_va    ->gdppc_log   pooled t FE  -3.1 TR  -2.6 | share sig FE 0.44 TR 0.53 (null 0.47/0.37) qNull TR 0.000 | base:Y flipfam:-
+        holds in: gfe-fertility-order:low[z=+4.1,sig=100%,cells=5];gfe-fertility-order:mid[z=+2.6,sig=90%,cells=10]
+  gdppc_log  ->urban       pooled t FE  +2.0 TR  +4.0 | share sig FE 0.38 TR 0.52 (null 0.16/0.49) qNull TR 0.591 | base:Y flipfam:-
+
+-- b_group_specific
+  gdppc_log  ->emp_agri    pooled t FE  -0.9 TR  -3.2 | share sig FE 0.25 TR 0.32 (null 0.14/0.32) qNull TR 1.000 | base:- flipfam:demography;economy;geography;kmeans
+        holds in: World Bank income group=Low income[z=+6.3,sig=100%,cells=1]
+  u5mr       ->agri_va     pooled t FE  +3.2 TR  +1.7 | share sig FE 0.54 TR 0.31 (null 0.52/0.23) qNull TR 0.078 | base:- flipfam:-
+        holds in: crossing time(early=low):low[z=+8.9,sig=100%,cells=2];fertility 1990:low[z=+7.8,sig=100%,cells=4]
+  prm_cmp    ->u5mr        pooled t FE  +1.7 TR  +2.3 | share sig FE 0.06 TR 0.30 (null 0.19/0.29) qNull TR 0.792 | base:- flipfam:demography;economy;gfe;schooling
+        opposite sign in: gfe-fertility-order:low[z=-2.2,cells=5]
+  agri_va    ->urban       pooled t FE  -4.6 TR  -1.5 | share sig FE 0.71 TR 0.29 (null 0.77/0.25) qNull TR 0.403 | base:- flipfam:-
+        holds in: electricity access 1990:high[z=+5.2,sig=100%,cells=1];kmeans-fertility-order:low[z=+2.7,sig=80%,cells=5]
+  life_exp   ->u5mr        pooled t FE  +3.5 TR  +2.1 | share sig FE 0.34 TR 0.29 (null 0.55/0.23) qNull TR 0.146 | base:- flipfam:-
+        holds in: Continent=Europe[z=+8.6,sig=100%,cells=1];World Bank region=Europe & Central Asia[z=+4.9,sig=100%,cells=1];crossing time(early=low):low[z=+4.8,sig=100%,cells=2];life expectancy 1990:high[z=+4.7,sig=100%,cells=1];fertility 1990:low[z=+4.2,sig=50%,cells=4];gfe-fertility-order:low[z=+4.1,sig=80%,cells=5]
+  u5mr       ->urban       pooled t FE  -3.5 TR  -0.8 | share sig FE 0.16 TR 0.27 (null 0.53/0.10) qNull TR 0.000 | base:- flipfam:economy;kmeans
+        holds in: urban share 1990:high[z=+4.3,sig=100%,cells=3];gfe-fertility-order:low[z=+2.0,sig=80%,cells=5]
+        opposite sign in: urban share 1990:low[z=-2.3,cells=3]
+  tax        ->gdppc_log   pooled t FE  +0.9 TR  -1.7 | share sig FE 0.24 TR 0.25 (null 0.21/0.21) qNull TR 0.028 | base:- flipfam:-
+        holds in: World Bank income group=Low income[z=+18.0,sig=100%,cells=1];World Bank region=Sub-Saharan Africa[z=+17.6,sig=100%,cells=1];Continent=Africa[z=+15.1,sig=100%,cells=1];electricity access 1990:low[z=+14.2,sig=100%,cells=1];agriculture share of output 1990:high[z=+12.5,sig=100%,cells=3];gfe-fertility-order:high[z=+5.7,sig=100%,cells=5]
+  electricity->tax         pooled t FE  +2.0 TR  -0.4 | share sig FE 0.17 TR 0.25 (null 0.17/0.16) qNull TR 0.005 | base:- flipfam:demography;geography;gfe;kmeans;schooling
+        opposite sign in: child mortality 1990:low[z=-6.5,cells=3];kmeans-fertility-order:low[z=-3.3,cells=5];gfe-fertility-order:low[z=-2.5,cells=5]
+  gpi_ter    ->tax         pooled t FE  -0.3 TR  -1.1 | share sig FE 0.11 TR 0.22 (null 0.10/0.20) qNull TR 0.754 | base:- flipfam:-
+        holds in: gfe-log income-order:low[z=+3.6,sig=100%,cells=4];kmeans-fertility-order:high[z=+3.4,sig=100%,cells=2]
+  sec        ->electricity pooled t FE  +2.3 TR  +1.3 | share sig FE 0.23 TR 0.22 (null 0.17/0.07) qNull TR 0.000 | base:- flipfam:-
+        holds in: gfe-fertility-order:high[z=+2.4,sig=60%,cells=5]
+  electricity->u5mr        pooled t FE  -3.2 TR  +1.6 | share sig FE 0.55 TR 0.18 (null 0.77/0.10) qNull TR 0.010 | base:- flipfam:demography;economy;geography;gfe;income
+        holds in: gfe-log income-order:low[z=+2.3,sig=80%,cells=5]
+        opposite sign in: agriculture share of output 1990:low[z=-2.4,cells=3]
+  gpi_sec    ->tax         pooled t FE  +0.9 TR  +0.3 | share sig FE 0.03 TR 0.16 (null 0.07/0.17) qNull TR 1.000 | base:- flipfam:geography;kmeans
+        opposite sign in: kmeans-fertility-order:high[z=-5.0,cells=2];gfe-log income-order:low[z=-3.1,cells=4]
+  agri_va    ->life_exp    pooled t FE  -1.3 TR  -0.6 | share sig FE 0.19 TR 0.16 (null 0.26/0.12) qNull TR 0.361 | base:- flipfam:-
+        holds in: electricity access 1990:high[z=+9.2,sig=100%,cells=1]
+  electricity->gdppc_log   pooled t FE  +2.3 TR  -1.2 | share sig FE 0.37 TR 0.15 (null 0.35/0.08) qNull TR 0.016 | base:- flipfam:demography;gfe;income
+        holds in: gfe-fertility-order:high[z=+2.2,sig=80%,cells=5]
+        opposite sign in: gfe-log income-order:high[z=-8.9,cells=5];log income 1990:high[z=-5.1,cells=4];agriculture share of output 1990:low[z=-2.5,cells=3]
+  agri_va    ->u5mr        pooled t FE  +1.6 TR  +1.7 | share sig FE 0.17 TR 0.15 (null 0.11/0.19) qNull TR 1.000 | base:- flipfam:-
+        holds in: electricity access 1990:high[z=+8.3,sig=100%,cells=1];log income 1990:high[z=+5.6,sig=75%,cells=4];gfe-log income-order:high[z=+5.6,sig=100%,cells=5]
+  gdppc_log  ->electricity pooled t FE  +1.8 TR  +1.1 | share sig FE 0.27 TR 0.14 (null 0.07/0.04) qNull TR 0.000 | base:- flipfam:-
+        holds in: World Bank income group=Lower middle income[z=+3.6,sig=100%,cells=1];kmeans-fertility-order:high[z=+2.1,sig=60%,cells=5]
+  urban      ->tax         pooled t FE  +3.7 TR  +1.0 | share sig FE 0.61 TR 0.12 (null 0.58/0.11) qNull TR 0.770 | base:- flipfam:-
+        holds in: gfe-log income-order:low[z=+3.6,sig=80%,cells=5]
+  electricity->life_exp    pooled t FE  +3.9 TR  -0.7 | share sig FE 0.40 TR 0.12 (null 0.60/0.12) qNull TR 0.999 | base:- flipfam:economy;income
+        opposite sign in: gfe-log income-order:high[z=-6.4,cells=5];agriculture share of output 1990:low[z=-2.3,cells=3];log income 1990:high[z=-2.1,cells=4]
+  gdppc_log  ->life_exp    pooled t FE  -1.4 TR  -0.5 | share sig FE 0.16 TR 0.11 (null 0.14/0.05) qNull TR 0.005 | base:- flipfam:gfe;income
+        holds in: gfe-log income-order:low[z=+2.1,sig=100%,cells=5]
+        opposite sign in: log income 1990:high[z=-2.5,cells=4]
+  electricity->wage_emp    pooled t FE  +3.0 TR  +1.2 | share sig FE 0.44 TR 0.11 (null 0.39/0.08) qNull TR 0.355 | base:- flipfam:demography
+        opposite sign in: child mortality 1990:low[z=-2.0,cells=3]
+  gpi_ter    ->gdppc_log   pooled t FE  +1.4 TR  +0.2 | share sig FE 0.27 TR 0.10 (null 0.19/0.05) qNull TR 0.008 | base:- flipfam:demography
+        holds in: kmeans-fertility-order:high[z=+2.2,sig=80%,cells=5]
+  prm_cmp    ->electricity pooled t FE  +3.3 TR  +1.5 | share sig FE 0.38 TR 0.09 (null 0.58/0.09) qNull TR 0.870 | base:- flipfam:demography;gfe;kmeans
+        holds in: gfe-fertility-order:high[z=+2.4,sig=60%,cells=5]
+  flfp       ->gdppc_log   pooled t FE  -1.8 TR  +0.7 | share sig FE 0.17 TR 0.09 (null 0.17/0.02) qNull TR 0.000 | base:- flipfam:demography;gfe
+        opposite sign in: child mortality 1990:low[z=-2.2,cells=3]
+  urban      ->life_exp    pooled t FE  +2.9 TR  +0.0 | share sig FE 0.24 TR 0.09 (null 0.35/0.03) qNull TR 0.000 | base:- flipfam:-
+        holds in: electricity access 1990:high[z=+3.9,sig=100%,cells=1]
+  u5mr       ->electricity pooled t FE  -4.0 TR  -1.7 | share sig FE 0.57 TR 0.08 (null 0.80/0.11) qNull TR 1.000 | base:- flipfam:-
+        holds in: Continent=Europe[z=+5.8,sig=100%,cells=1];fertility 1990:low[z=+4.4,sig=75%,cells=4];gfe-fertility-order:low[z=+3.7,sig=80%,cells=5]
+  ter        ->gdppc_log   pooled t FE  +1.7 TR  -0.9 | share sig FE 0.38 TR 0.08 (null 0.17/0.13) qNull TR 1.000 | base:- flipfam:-
+        opposite sign in: kmeans-fertility-order:high[z=-2.0,cells=5]
+  emp_agri   ->urban       pooled t FE  -1.6 TR  -1.1 | share sig FE 0.03 TR 0.07 (null 0.10/0.05) qNull TR 0.792 | base:- flipfam:geography
+        opposite sign in: agriculture share of output 1990:low[z=-2.5,cells=3]
+  gdppc_log  ->tax         pooled t FE  -1.3 TR  -0.5 | share sig FE 0.09 TR 0.05 (null 0.10/0.04) qNull TR 0.754 | base:- flipfam:-
+        holds in: gfe-fertility-order:high[z=+3.9,sig=80%,cells=5];kmeans-fertility-order:high[z=+2.8,sig=60%,cells=5]
+  prm_cmp    ->gdppc_log   pooled t FE  +2.6 TR  +1.7 | share sig FE 0.26 TR 0.05 (null 0.32/0.12) qNull TR 1.000 | base:- flipfam:-
+        opposite sign in: gfe-log income-order:high[z=-2.9,cells=5];log income 1990:high[z=-2.3,cells=4]
+  gpi_ter    ->u5mr        pooled t FE  +1.9 TR  +0.2 | share sig FE 0.06 TR 0.04 (null 0.20/0.05) qNull TR 1.000 | base:- flipfam:kmeans;schooling
+        opposite sign in: crossing time(early=low):low[z=-2.1,cells=2]
+  wage_emp   ->electricity pooled t FE  -0.6 TR  -1.8 | share sig FE 0.09 TR 0.04 (null 0.04/0.07) qNull TR 1.000 | base:- flipfam:-
+        opposite sign in: crossing time(early=low):low[z=-2.0,cells=2]
+  tax        ->emp_agri    pooled t FE  -0.5 TR  +1.1 | share sig FE 0.19 TR 0.04 (null 0.08/0.16) qNull TR 1.000 | base:- flipfam:-
+        holds in: kmeans-fertility-order:high[z=+3.0,sig=60%,cells=5]
+  ter        ->electricity pooled t FE  -2.9 TR  -1.4 | share sig FE 0.20 TR 0.03 (null 0.34/0.04) qNull TR 1.000 | base:- flipfam:kmeans
+        opposite sign in: urban share 1990:high[z=-3.3,cells=3]
+  life_exp   ->emp_agri    pooled t FE  -3.8 TR  -1.2 | share sig FE 0.58 TR 0.00 (null 0.65/0.04) qNull TR 1.000 | base:- flipfam:-
+        opposite sign in: secondary completion 1990:high[z=-2.2,cells=4]
+
+-- d_beats_random_no_clear_group
+  prm_cmp    ->agri_va     pooled t FE  +0.4 TR  +3.4 | share sig FE 0.08 TR 0.46 (null 0.04/0.54) qNull TR 1.000 | base:- flipfam:-
+  ter        ->agri_va     pooled t FE  -0.7 TR  +2.9 | share sig FE 0.14 TR 0.44 (null 0.02/0.36) qNull TR 0.051 | base:- flipfam:gfe;income
+  electricity->agri_va     pooled t FE  -0.7 TR  +2.0 | share sig FE 0.05 TR 0.26 (null 0.07/0.18) qNull TR 0.016 | base:- flipfam:demography;geography;income
+  gdppc_log  ->wage_emp    pooled t FE  +0.6 TR  +1.8 | share sig FE 0.14 TR 0.24 (null 0.15/0.14) qNull TR 0.008 | base:- flipfam:demography;economy;gfe;kmeans
+  life_exp   ->urban       pooled t FE  +2.4 TR  +0.7 | share sig FE 0.23 TR 0.19 (null 0.33/0.12) qNull TR 0.042 | base:- flipfam:-
+  gpi_ter    ->urban       pooled t FE  -0.5 TR  -1.1 | share sig FE 0.06 TR 0.14 (null 0.04/0.06) qNull TR 0.000 | base:- flipfam:-
+  sec        ->wage_emp    pooled t FE  +1.9 TR  +0.6 | share sig FE 0.20 TR 0.14 (null 0.16/0.08) qNull TR 0.069 | base:- flipfam:kmeans
+  tax        ->urban       pooled t FE  -0.2 TR  -0.5 | share sig FE 0.01 TR 0.13 (null 0.06/0.06) qNull TR 0.011 | base:- flipfam:kmeans
+  agri_va    ->electricity pooled t FE  -3.8 TR  -0.6 | share sig FE 0.38 TR 0.12 (null 0.53/0.07) qNull TR 0.047 | base:- flipfam:-
+  electricity->urban       pooled t FE  +3.4 TR  -0.4 | share sig FE 0.23 TR 0.11 (null 0.47/0.02) qNull TR 0.000 | base:- flipfam:demography;gfe
+  life_exp   ->flfp        pooled t FE  -0.7 TR  -1.1 | share sig FE 0.01 TR 0.09 (null 0.05/0.02) qNull TR 0.000 | base:- flipfam:demography;income
+  gpi_sec    ->emp_agri    pooled t FE  -3.0 TR  -0.0 | share sig FE 0.21 TR 0.08 (null 0.42/0.02) qNull TR 0.000 | base:- flipfam:-
+  ter        ->tax         pooled t FE  -0.0 TR  -0.0 | share sig FE 0.17 TR 0.08 (null 0.07/0.07) qNull TR 0.870 | base:- flipfam:-
+  sec        ->gdppc_log   pooled t FE  -0.8 TR  -0.2 | share sig FE 0.08 TR 0.07 (null 0.06/0.03) qNull TR 0.012 | base:- flipfam:-
+  lsc        ->gdppc_log   pooled t FE  +1.1 TR  -0.5 | share sig FE 0.22 TR 0.07 (null 0.18/0.04) qNull TR 0.374 | base:- flipfam:-
+  gpi_ter    ->electricity pooled t FE  +1.0 TR  +0.4 | share sig FE 0.04 TR 0.06 (null 0.07/0.03) qNull TR 0.046 | base:- flipfam:-
+  ter        ->emp_agri    pooled t FE  -0.1 TR  +0.5 | share sig FE 0.21 TR 0.05 (null 0.02/0.06) qNull TR 1.000 | base:- flipfam:-
+  sec        ->urban       pooled t FE  -0.8 TR  +0.3 | share sig FE 0.09 TR 0.04 (null 0.07/0.05) qNull TR 1.000 | base:- flipfam:-
+  wage_emp   ->emp_agri    pooled t FE  -0.3 TR  -0.5 | share sig FE 0.10 TR 0.01 (null 0.04/0.04) qNull TR 1.000 | base:- flipfam:-
+
+-- c_no_better_than_random: 94 edges (see edge_table.csv)
+
+== Sign flips by family (real rate vs null mean), edges with q_flip<0.05 (trends)
+  electricity->wage_emp: demography 0.20 vs 0.01; economy 0.12 vs 0.01; kmeans 0.20 vs 0.03
+  electricity->gdppc_log: demography 0.20 vs 0.00; economy 0.12 vs 0.01; gfe 0.60 vs 0.01; income 0.75 vs 0.01; kmeans 0.20 vs 0.02
+  electricity->urban: demography 0.20 vs 0.02; gfe 0.30 vs 0.03; kmeans 0.20 vs 0.03
+  electricity->tax: demography 0.60 vs 0.03; geography 0.67 vs 0.07; gfe 0.40 vs 0.04; kmeans 0.60 vs 0.06; schooling 0.14 vs 0.01
+  electricity->agri_va: demography 0.20 vs 0.01; geography 0.67 vs 0.05; income 0.25 vs 0.01
+  electricity->emp_agri: economy 0.25 vs 0.00; gfe 0.10 vs 0.00; income 0.25 vs 0.00
+  electricity->life_exp: economy 0.25 vs 0.00; gfe 0.10 vs 0.02; income 0.50 vs 0.02
+  electricity->u5mr: demography 0.10 vs 0.01; economy 0.25 vs 0.00; geography 0.33 vs 0.01; gfe 0.50 vs 0.02; income 0.50 vs 0.01
+  electricity->gpi_sec: demography 0.20 vs 0.00; geography 0.67 vs 0.01; gfe 0.10 vs 0.01
+  electricity->gpi_ter: demography 0.10 vs 0.01; economy 0.25 vs 0.01; geography 0.33 vs 0.03; gfe 0.60 vs 0.03; income 0.50 vs 0.02
+  sec->wage_emp: gfe 0.10 vs 0.02; kmeans 0.40 vs 0.02
+  ter->electricity: kmeans 0.40 vs 0.01
+  ter->prm_cmp: geography 0.33 vs 0.01; schooling 0.29 vs 0.02
+  ter->agri_va: gfe 0.20 vs 0.00; income 0.25 vs 0.00
+  prm_cmp->electricity: demography 0.20 vs 0.02; gfe 0.20 vs 0.02; kmeans 0.40 vs 0.02; schooling 0.14 vs 0.02
+  prm_cmp->u5mr: demography 0.10 vs 0.00; economy 0.12 vs 0.01; geography 0.33 vs 0.05; gfe 0.30 vs 0.02; schooling 0.14 vs 0.01
+  prm_cmp->gpi_sec: geography 0.67 vs 0.00; gfe 0.20 vs 0.00
+  prm_cmp->fertility: demography 0.20 vs 0.02; gfe 0.10 vs 0.03; kmeans 0.20 vs 0.02; schooling 0.43 vs 0.01
+  gdppc_log->wage_emp: demography 0.40 vs 0.05; economy 0.25 vs 0.02; gfe 0.30 vs 0.06; income 0.25 vs 0.04; institutions 0.33 vs 0.04; kmeans 0.40 vs 0.03
+  gdppc_log->emp_agri: demography 0.40 vs 0.00; economy 0.12 vs 0.01; geography 0.67 vs 0.00; kmeans 0.60 vs 0.00
+  gdppc_log->life_exp: economy 0.12 vs 0.01; gfe 0.50 vs 0.03; income 0.75 vs 0.01
+  gdppc_log->u5mr: gfe 0.20 vs 0.01; income 0.25 vs 0.00
+  emp_agri->urban: geography 0.67 vs 0.03; schooling 0.14 vs 0.01
+  flfp->gdppc_log: demography 0.20 vs 0.01; economy 0.12 vs 0.02; gfe 0.30 vs 0.02; income 0.25 vs 0.02; kmeans 0.20 vs 0.03
+  flfp->agri_va: demography 0.10 vs 0.00; income 0.25 vs 0.00; institutions 0.33 vs 0.01; kmeans 0.40 vs 0.00
+  flfp->u5mr: demography 0.10 vs 0.00; geography 0.33 vs 0.00
+  flfp->gpi_sec: economy 0.25 vs 0.01; gfe 0.30 vs 0.05; income 0.25 vs 0.05; schooling 0.43 vs 0.06
+  life_exp->flfp: demography 0.10 vs 0.00; income 0.50 vs 0.00
+  life_exp->gpi_sec: income 0.50 vs 0.07; institutions 0.33 vs 0.02; kmeans 0.20 vs 0.06; schooling 0.57 vs 0.07
+  u5mr->ter: demography 0.30 vs 0.00
+  u5mr->urban: economy 0.25 vs 0.02; gfe 0.20 vs 0.06; income 0.25 vs 0.03; kmeans 0.80 vs 0.06; schooling 0.14 vs 0.06
+  u5mr->gpi_ter: geography 0.33 vs 0.02; kmeans 0.20 vs 0.01
+  gpi_sec->tax: demography 0.20 vs 0.19; geography 1.00 vs 0.23; gfe 0.20 vs 0.23; income 0.50 vs 0.21; kmeans 0.60 vs 0.21; schooling 0.57 vs 0.41
+  gpi_ter->u5mr: demography 0.10 vs 0.01; gfe 0.10 vs 0.01; kmeans 0.20 vs 0.01; schooling 0.14 vs 0.00
+  fertility->life_exp: demography 0.40 vs 0.01; gfe 0.40 vs 0.03; kmeans 0.40 vs 0.03
+  fertility->gpi_sec: demography 0.20 vs 0.07; economy 0.25 vs 0.05; geography 0.33 vs 0.12; gfe 0.10 vs 0.10; kmeans 0.20 vs 0.08; schooling 0.43 vs 0.08
+
+== Base-matrix survivors (24): where they stand here
+  sec        ->ter         share TR 0.19 null 0.31 fam_min 0.07 flip 0.00 class c_no_better_than_random
+  sec        ->agri_va     share TR 0.47 null 0.46 fam_min 0.30 flip 0.00 class c_no_better_than_random
+  ter        ->lsc         share TR 0.27 null 0.37 fam_min 0.08 flip 0.00 class c_no_better_than_random
+  ter        ->prm_cmp     share TR 0.13 null 0.17 fam_min 0.00 flip 0.08 class c_no_better_than_random
+  prm_cmp    ->gpi_sec     share TR 0.53 null 0.52 fam_min 0.00 flip 0.11 class b_group_specific
+  gdppc_log  ->sec         share TR 0.19 null 0.25 fam_min 0.08 flip 0.00 class c_no_better_than_random
+  gdppc_log  ->urban       share TR 0.52 null 0.49 fam_min 0.25 flip 0.00 class a_robust_everywhere
+  urban      ->sec         share TR 0.28 null 0.37 fam_min 0.00 flip 0.04 class c_no_better_than_random
+  tax        ->agri_va     share TR 0.29 null 0.28 fam_min 0.04 flip 0.12 class c_no_better_than_random
+  agri_va    ->gdppc_log   share TR 0.53 null 0.37 fam_min 0.51 flip 0.01 class a_robust_everywhere
+  emp_agri   ->tax         share TR 0.29 null 0.30 fam_min 0.18 flip 0.04 class c_no_better_than_random
+  life_exp   ->electricity share TR 0.12 null 0.13 fam_min 0.00 flip 0.00 class c_no_better_than_random
+  life_exp   ->gdppc_log   share TR 0.31 null 0.35 fam_min 0.28 flip 0.00 class c_no_better_than_random
+  life_exp   ->gpi_ter     share TR 0.31 null 0.32 fam_min 0.00 flip 0.00 class b_group_specific
+  life_exp   ->fertility   share TR 0.81 null 0.93 fam_min 0.58 flip 0.00 class a_robust_everywhere
+  u5mr       ->life_exp    share TR 0.63 null 0.49 fam_min 0.44 flip 0.00 class a_robust_everywhere
+  u5mr       ->gpi_ter     share TR 0.47 null 0.43 fam_min 0.37 flip 0.07 class b_group_specific
+  u5mr       ->fertility   share TR 0.95 null 0.93 fam_min 0.85 flip 0.00 class a_robust_everywhere
+  gpi_ter    ->lsc         share TR 0.13 null 0.20 fam_min 0.00 flip 0.00 class c_no_better_than_random
+  fertility  ->electricity share TR 0.34 null 0.44 fam_min 0.03 flip 0.00 class c_no_better_than_random
+  fertility  ->lsc         share TR 0.45 null 0.58 fam_min 0.22 flip 0.00 class c_no_better_than_random
+  fertility  ->sec         share TR 0.34 null 0.43 fam_min 0.22 flip 0.00 class b_group_specific
+  fertility  ->prm_cmp     share TR 0.25 null 0.39 fam_min 0.14 flip 0.00 class c_no_better_than_random
+  fertility  ->gdppc_log   share TR 0.37 null 0.53 fam_min 0.15 flip 0.00 class b_group_specific

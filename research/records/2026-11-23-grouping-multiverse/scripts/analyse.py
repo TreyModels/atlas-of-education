@@ -7,6 +7,7 @@ PKL, OUTDIR, SURV = sys.argv[1], sys.argv[2], sys.argv[3]
 D = pickle.load(open(PKL, "rb"))
 meta, specs, res = D["meta"], D["specs"], D["res"]
 R = len(res) - 1
+IDS = sorted(k for k in res if k != 0)
 NE = len(specs)
 SCH = {"lsc", "sec", "ter", "prm_cmp", "gpi_sec", "gpi_ter"}
 
@@ -54,9 +55,9 @@ import warnings; warnings.filterwarnings("ignore")
 Zr = res[0]["z"]
 Tr_sig, Fr_sig, _ = shares(sigmat(Zr))
 Tr_both, _, _ = shares(both(Zr))
-nullT = np.array([shares(sigmat(res[r]["z"]))[0] for r in range(1, R + 1)])
-nullF = np.array([shares(sigmat(res[r]["z"]))[1] for r in range(1, R + 1)])
-nullB = np.array([shares(both(res[r]["z"]))[0] for r in range(1, R + 1)])
+nullT = np.array([shares(sigmat(res[r]["z"]))[0] for r in IDS])
+nullF = np.array([shares(sigmat(res[r]["z"]))[1] for r in IDS])
+nullB = np.array([shares(both(res[r]["z"]))[0] for r in IDS])
 
 from scipy.stats import norm
 def _z(real, null):
@@ -92,9 +93,9 @@ def rate(arr):  # groupings x NE -> family balanced share
 Qr = np.where(np.isfinite(res[0]["Qp"]), (res[0]["Qp"] < 0.05).astype(float), np.nan)
 flr = np.where(np.isfinite(res[0]["Qp"]), res[0]["flip"].astype(float), np.nan)
 QR, QRf = rate(Qr); FR, FRf = rate(flr)
-nQ = np.array([rate(np.where(np.isfinite(res[r]["Qp"]), (res[r]["Qp"] < 0.05).astype(float), np.nan))[0] for r in range(1, R + 1)])
+nQ = np.array([rate(np.where(np.isfinite(res[r]["Qp"]), (res[r]["Qp"] < 0.05).astype(float), np.nan))[0] for r in IDS])
 nF = []; nFf = []
-for r in range(1, R + 1):
+for r in IDS:
     a, b_ = rate(np.where(np.isfinite(res[r]["Qp"]), res[r]["flip"].astype(float), np.nan)); nF.append(a); nFf.append(b_)
 nF = np.array(nF); nFf = np.array(nFf)
 p_Q = pup(QR, nQ); p_F = pup(FR, nF)
@@ -115,7 +116,7 @@ tag_p_up = {}; tag_p_dn = {}; tag_obs = {}
 for t in tag_names:
     m = tags == t
     mu, sh, nn = tagstat(Zr, m)
-    nul = np.array([tagstat(res[r]["z"], m)[0] for r in range(1, R + 1)])
+    nul = np.array([tagstat(res[r]["z"], m)[0] for r in IDS])
     tag_obs[t] = (mu, sh, nn)
     tag_p_up[t] = pup(mu, nul); tag_p_dn[t] = pdn(mu, nul)
 # BH over all tag x edge tests, separately per spec and direction
