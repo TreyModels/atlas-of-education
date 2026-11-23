@@ -423,6 +423,11 @@ if __name__ == "__main__":
 
     # ---- figures ----
     lvc = json.load(open(os.path.join(OUT, "results_part1.json")))["levels_vs_changes"]
+    PLAIN = {"mys_female": "women's mean years", "mys_total": "total mean years",
+             "sec": "secondary enrolment", "lsc": "lower-secondary completion",
+             "prm_cmp": "primary completion", "ter": "tertiary enrolment",
+             "gpi_sec": "parity index, secondary", "gpi_ter": "parity index, tertiary",
+             "gpi_adj": "parity index (25+)"}
     fig, axes = plt.subplots(1, 2, figsize=(11, 4.4))
     groups = [("mys_female", "mys_total", "lsc", "sec", "prm_cmp", "ter"),
               ("gpi_sec", "gpi_ter", "gpi_adj")]
@@ -433,7 +438,7 @@ if __name__ == "__main__":
             C = lvc[m]["change_trends"]
             if not L or not C:
                 continue
-            ys.append(len(names)); names.append(m)
+            ys.append(len(names)); names.append(PLAIN.get(m, m))
             lev.append((L["b"], 1.96 * L["se"]))
             chg.append((C["b"], 1.96 * C["se"]))
         y = np.arange(len(names))
