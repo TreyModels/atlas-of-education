@@ -29,7 +29,7 @@ The two questions this session is answering:
 | 6 (task-7) | Marriage age inside the 20-measure matrix (380 links) | research/matrix-marriage-2026-11-23 | **DONE and verified** (559a4e9) |
 | 7 (task-8) | Why fertility tracks child survival: literature review + experiment plan | research/mechanisms-2026-11-23 | **DONE and verified** (28479c1) |
 | 8 (task-9) | E1: child-mortality level versus volatility | research/level-volatility-2026-11-23 | **DONE and verified** (935632e) |
-| 9 (task-10) | Dose tolerance ladder: is the strength identifiable? | research/dose-tolerance-2026-11-23 | RUNNING |
+| 9 (task-10) | Dose tolerance ladder: is the strength identifiable? | research/dose-tolerance-2026-11-23 | **DONE and verified** locally; push blocked by network outage |
 | 10 (task-11) | GPU engine scale and robustness audit | research/cuda-scale-2026-11-23 | **DONE and verified** locally (7f92799); push blocked by network outage |
 | 11 (task-12) | Full transition: pre-antibiotic equilibrium to fertility collapse | research/transition-2026-11-23 | **DONE and verified** locally (c1c6efb, b13fde8); push blocked by network outage |
 | 12 (task-14) | Novelty literature review: is any of this actually new? | research/novelty-2026-11-23 | **DONE and verified** locally (390db8d); push blocked by network outage |
@@ -69,9 +69,15 @@ Job numbers follow the project brief; the shared task board uses task ids (given
   (0.15-2.85) and 1.62 (0.22-2.87); career-first delay 5.32 years (1.10-7.71) and 5.14 (0.98-7.67); marriage-market
   pickiness 2.41 (0.25-4.70) and 2.54 (0.33-4.77). Every strength agrees across the two independent runs to a
   tenth of a standard deviation, and all intervals overlap.
-- **But the data identify direction, not strength.** The priors span 0-5 and 0-3 on those strengths; the 90%
-  intervals are only slightly narrower than the priors. These are coarse rejection-ABC intervals at a loose,
-  pre-set tolerance (the prior-predictive 20th percentile), and must be labelled coarse.
+- **The data identify direction, not strength - and that is now tested, not assumed.** The priors span 0-5 and 0-3
+  on those strengths; the 90% intervals are only slightly narrower than the priors. The tolerance ladder (job 9)
+  re-ran the same fit at the 20th, 10th and 5th prior-predictive percentiles, with 1,044, 1,012 and 660 accepted
+  draws respectively. Four of the five strengths stay at **0.80-0.91 of the prior width at every tolerance**, with
+  no monotone improvement: kin-support loss 0.88 / 0.89 / 0.87, downward money flow 0.89 / 0.89 / 0.91, cohort
+  deepening 0.90 / 0.85 / 0.80, pickiness 0.89 / 0.89 / 0.90. Only career delay narrows (0.82 / 0.64 / 0.76) and
+  it partly widens again at the tightest tolerance. So the identification limit is real, not an artefact of a
+  loose tolerance. Scenario B at the 5th percentile accepted only 32 of 4,000 draws (0.8%) and is reported as
+  **not interpretable at that tolerance**, not quoted. The 10th-percentile run is the cleaner comparison.
 - **Methods finding worth its own paragraph:** particle-filter ABC was producing a degenerate posterior - the
   largest importance weight 0.995 and an effective sample size of about 1 of 600, and it stayed at 2.5 of 600
   even after an attempt at log-space weighting. So last session's "posterior looks like the prior, search has not
