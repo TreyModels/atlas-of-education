@@ -51,3 +51,27 @@ driver of structural transformation. Status: **FIXED** — cited in Section 1 an
 the closest competitor, with the design difference stated (their quantitative model + micro evidence on skill
 reallocation vs our cross-country event ordering and supply/demand decomposition). Their work is complementary;
 no precedence is claimed.
+
+## F. Fertility-ordering figure: 68.75% vs direct recomputation (30 Nov 2026 — blocking fix for submission)
+
+**The discrepancy.** The source record `subsistence-v2 @ ce66cfc` reports
+`pct_schooling_before_fertility = 68.75` in `results/sequencing.json` (and `sequencing.txt`: "schooling before
+fertility: 69%"). A direct recomputation from the same record's `results/event_dates.csv` does **not** reproduce
+it: under a strict ordering (schooling take-off year < fertility decline year) it is **24/64 = 37.5%** in the
+64-country three-event sample (bootstrap 95% interval 26.6–50.0%), with **20/64 = 31.3% simultaneous** (both
+take-offs in the same year) and **20/64 = 31.3% fertility-first**; across all 81 countries with both dates it is
+**29/81 = 35.8%** (CI 25.9–45.7%), ties 33.3%. The JSON's 68.75% is obtained by counting the 20 simultaneous cases
+as schooling-first (24 + 20 = 44; 44/64 = 68.75%). Paper N1 (`research/paper-fertility-2026-11-25` @ `7f73ff1`)
+independently found the same discrepancy (its PAPER.md lines 458–459 and claims-to-source.md line 25) and does not
+use the 68.75% figure.
+
+**Resolution.** Paper M adopts route (a): it now reports the **strict ordering (37.5%, 95% interval 26.6–50.0%;
+31.3% simultaneous, 31.3% fertility-first; median gap 0, IQR −5 to +8)** and states the JSON/CSV discrepancy
+explicitly, in the abstract (paper.md line 77), Section 2 (line 137), Section 6 (line 513), the "What we know now"
+box (line 1101), README line 42, and claims-to-source-map claim 3. The 69/68.75% figure is not presented as a
+headline anywhere. The recomputation is committed: `scripts/recompute_fertility_ordering.py` (input
+`data/event_dates_subsistence_v2.csv`, a verbatim copy of the committed event CSV; output
+`data/recompute_fertility_ordering.json`, seed 7, 1,000 bootstrap resamples of countries).
+
+**Status: FIXED.** The record-level JSON field remains wrong upstream; Paper M flags it rather than propagating it,
+and the record owner should correct `sequencing.json`/`sequencing.txt` for future users.

@@ -1,0 +1,44 @@
+{
+ "source_csv": "data/event_dates_subsistence_v2.csv",
+ "source_record": "subsistence-v2 @ ce66cfc, results/event_dates.csv",
+ "definition": "schooling_first = schooling take-off year < fertility decline year (strict; ties simultaneous)",
+ "json_field_in_record": "pct_schooling_before_fertility = 68.75 (44/64; counts the 20 ties as schooling-first)",
+ "three_event_sample": {
+  "label": "64 countries with all three events",
+  "n": 64,
+  "schooling_first": 24,
+  "share": 37.5,
+  "share_ci95": [
+   26.56,
+   50.0
+  ],
+  "ties": 20,
+  "ties_share": 31.25,
+  "fertility_first": 20,
+  "fertility_first_share": 31.25,
+  "median_gap_fertility_minus_schooling": 0.0,
+  "iqr_gap": [
+   -5.0,
+   8.0
+  ]
+ },
+ "all_with_both_dates": {
+  "label": "all countries with schooling and fertility dates",
+  "n": 81,
+  "schooling_first": 29,
+  "share": 35.8,
+  "share_ci95": [
+   25.93,
+   45.68
+  ],
+  "ties": 27,
+  "ties_share": 33.33,
+  "fertility_first": 25,
+  "fertility_first_share": 30.86,
+  "median_gap_fertility_minus_schooling": 0.0,
+  "iqr_gap": [
+   -5.0,
+   6.0
+  ]
+ }
+}

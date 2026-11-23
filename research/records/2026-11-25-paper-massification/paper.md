@@ -74,7 +74,7 @@ across late-industrialising countries.
 **The finding, in one paragraph.** Among 64 countries where all three events — schooling take-off, agricultural
 labour release, fertility decline — can be dated in a common 1965–2010 window, schooling precedes agricultural
 labour release in 61 (95%; release-first 5%, bootstrap 95% interval 0–11%), with a median lead of 26 years (22–26
-years). Schooling also precedes the fertility decline in 69% of those countries (58–80%). The raw supply-versus-
+years). Schooling also precedes the fertility decline in only 37.5% of those 64 countries under a strict ordering (bootstrap 95% interval 26.6–50.0%; 31.3% simultaneous, 31.3% fertility-first); the source record's JSON reported 68.75% only by counting the 20 simultaneous take-offs as schooling-first, and that figure is not used. The raw supply-versus-
 demand event comparison initially looks demand-led — demand onset precedes schooling in 73% of 89 countries
 (64–82%) while supply onset does so in 28% (19–37%) — but that comparison is contaminated by data availability:
 61 of 108 schooling dates sit on the first year of the common window, and the education-spending, pupil-teacher
@@ -134,7 +134,7 @@ the release of labour out of agriculture, and the fertility decline — can all 
 window, **the schooling take-off precedes the release of agricultural labour in 61 countries (95.3%)**, with a
 median lead of **26 years** (bootstrap 95% interval for the median 22-26 years; interquartile range 16-29 years across all 64 gaps (17-29 years across the 61 forward cases)). The reverse ordering — the farm exodus first, which is what the demand-led
 account requires — occurs in **3 countries (4.7%; bootstrap 95% interval 0-11%)**. The schooling take-off also
-precedes the fertility decline in **69%** of the same countries (95% interval 58-80%). The result is not carried
+precedes the fertility decline in **37.5%** of the same countries under a strict ordering (95% interval 26.6-50.0%; 31.3% simultaneous, 31.3% fertility-first; the source record's JSON reported 68.75% by counting the simultaneous cases as schooling-first, and that figure is not used). The result is not carried
 by one region: Latin America, South Asia, East Asia, North Africa and Sub-Saharan Africa are all represented
 among the forward cases.
 
@@ -510,8 +510,13 @@ labour release in **61 countries (95.3%)**, with a median lead of **26 years** (
 median 22–26 years; full record `subsistence-v2 @ ce66cfc`, `results/sequencing.txt`, fields
 `pct_release_before_schooling` and `median gap release->schooling`). The reverse ordering — the farm exodus
 first, the demand-led prediction — occurs in **3 countries, 4.7%** (bootstrap 95% interval 0–11%). The schooling
-take-off also precedes the fertility decline in **69%** of those countries (95% interval 58–80%), with a median
-gap of about **0 years** (the two tend to be close, but schooling first more often than not).
+take-off also precedes the fertility decline in **37.5%** of those countries under a strict ordering (95% interval
+26.6–50.0%; 31.3% simultaneous, 31.3% fertility-first), with a median gap of **0 years** (interquartile range −5
+to +8). The source record's JSON reports **68.75%** for this ordering because it counts the 20 simultaneous cases
+as schooling-first; a direct recomputation from the same record's event CSV gives **37.5%** among the 64 three-event
+countries (**35.8%** across all 81 countries with both dates), and this paper reports the strict ordering and the
+discrepancy rather than the JSON figure (recomputation: `scripts/recompute_fertility_ordering.py`, output
+`data/recompute_fertility_ordering.json`).
 
 The 64 countries are not a random sample: they are the countries where the events are dated at all, which
 over-represents the later industrialisers that dominate the post-1965 data. This is a limitation, and it is also
@@ -1098,8 +1103,9 @@ massification. The evidence, taken together, supports a conditional synthesis:
 
 1. **In the late-industrialising countries where the modern panel can date the events, schooling precedes the
    release of labour from agriculture**: 61 of 64 countries, a median lead of 26 years (bootstrap 22–26 years),
-   reverse ordering 5% (0–11%). Schooling also precedes the fertility decline in 69% (58–80%) of those
-   countries. The sequencing is not a cohort-level measurement — the data are period series — but it is a
+   reverse ordering 5% (0–11%). Schooling precedes the fertility decline in only 37.5% of those countries under a strict ordering (26.6–50.0%;
+   31.3% simultaneous, 31.3% fertility-first; the record JSON's 68.75% counted simultaneous take-offs as
+   schooling-first and is not used). The sequencing is not a cohort-level measurement — the data are period series — but it is a
    systematic event-ordering, not a handful of cases.
 2. **Labour-market demand, measured the way the human-capital theory measures it, does not lead schooling**:
    the wage premium and paid-employment share precede the schooling take-off in only 7% of 58 countries. The
