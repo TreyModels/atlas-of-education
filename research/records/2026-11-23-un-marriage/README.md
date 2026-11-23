@@ -3,13 +3,13 @@
 Worker `un-data`, branch `research/un-marriage-2026-11-23`, 23 Nov 2026. Scripts in `scripts/`, series + provenance in `data/`, model
 outputs in `results/`; raw workbooks (26 MB + 2 MB) stay on the server — see `data/RAW_NOT_COMMITTED.md`.
 
-**Short answer.** The UN data were obtained from the UN's own workbooks for 211 countries and turned into three marriage series and
-three living-arrangement series with no interpolation. The honest core: the never-married share by 45-49 does **not** predict later
-fertility change; school expansion did **not** predict later marriage or more never-married women; the school → fertility edge itself
-is indistinguishable from zero with and without country trends; living arrangements add nothing measurable (thin data). The one
-counterintuitive positive coefficient — later female marriage age "predicting" a smaller future fertility fall — **did not survive the
-kill test** (it reverses sign when both sides are changes) and is demoted to a robustness note. Marriage age is on the causal path and
-is **never a control** in school → fertility.
+**Short answer.** The UN data were obtained from the UN's own workbooks for 211 countries and turned into three marriage series
+and three living-arrangement series with no interpolation. The honest core: the never-married share by 45-49 shows no significant
+association with later fertility change and no stable sign (undetermined, not a clean null); school expansion did **not** predict
+later marriage or more never-married women; the school → fertility edge itself is indistinguishable from zero with and without
+country trends; living arrangements add nothing measurable (thin data). The one counterintuitive positive coefficient — later female
+marriage age "predicting" a smaller future fertility fall — **did not survive the kill test** (it reverses sign when both sides are
+changes) and is demoted to a robustness note. Marriage age is on the causal path and is **never a control** in school → fertility.
 
 ## Provenance, and which downloads failed
 
@@ -74,19 +74,22 @@ correlation −0.65, decade-fixed-effect slope −0.30 births per woman per year
 / 6.46 births; 1970s 22.0 / 3.96; 1980s 23.6 / 3.31; 1990s 24.4 / 3.30; 2000s 24.9 / 3.00; 2010s 26.2 / 2.63. So the level association
 is negative, as expected; the positive sign above only appeared conditional on the starting level and country trends.
 
-**Null: the never-married share does not predict later fertility change.** Level estimator: −0.0045 births per percentage point ±
-0.0027 (n=1,684, 170 countries, with trends; not significant). In the change-on-change test the within-country coefficient is +0.001 ±
-0.005 (n=1,346, 195 countries). No association. (Without the starting-level control the level version is −0.011 ± 0.005; that
-specification sensitivity is why this is reported as a null, not as a negative finding.)
+**Undetermined: the never-married share and later fertility change.** The level coefficient is −0.0045 births per percentage point
+(standard error 0.0027; n=1,684, 170 countries, with country trends) — not significant at conventional levels — but the tests do not
+support treating it as exactly zero either: a within-country year shuffle gives p<0.005, while a **circular-shift permutation that
+preserves each country's serial correlation gives p=0.08**, and the clustered interval is the primary inference. The sign is not
+stable across specifications (without the starting-level control the coefficient is −0.011 ± 0.005; the change-on-change version is
++0.001 ± 0.005, n=1,346, 195 countries). Single consistent statement: **no significant association, not established as zero, sign
+not robust — undetermined.**
 
 **Provisional: a narrower female-minus-male marriage-age gap goes with a larger fall.** Level estimator −0.035 ± 0.016 (n=1,453, 156
 countries, trends); change-on-change −0.097 ± 0.026 with country effects (n=1,194, 190 countries) — but the level sign flips to +0.018
 ± 0.019 when the starting-level control is removed, so it is not robust. Provisional.
 
-**Null (weak data): living arrangements add nothing.** Share of 60+ living with adult children: +0.0021 ± 0.0022 births per percentage
-point (402 rows, 70 countries, trends); multi-generation households the same. The interval rules out effects above ~0.004 births per
-point, but on 402 rows/70 countries this is a weak null (permutation p=0.23: shuffled years match it easily; without the starting-level
-control +0.011 ± 0.004 — specification-dependent).
+**Null (weak data): living arrangements add nothing.** Share of 60+ living with adult children: +0.0021 ± 0.0022 births per
+percentage point (402 rows, 70 countries, trends); multi-generation households the same. The interval rules out effects above ~0.004
+births per point, but on 402 rows/70 countries this is a weak null (circular-shift permutation p=0.29 and year-shuffle p=0.23, both
+consistent with no association; without the starting-level control +0.011 ± 0.004 — specification-dependent).
 
 **The rule that matters.** Marriage age is on the causal path from schooling to fertility, so it is never a control in that regression;
 nothing here estimates "the effect of schooling holding marriage age fixed". The marriage variables appear only as outcomes or as
@@ -118,23 +121,28 @@ panel — so the marriage merge does not change the schooling conclusion either 
 
 ## Falsifiers, per headline
 
-Within-country permutation of the sparse series across survey years (200 draws; kills the "survey-year matching artefact" reading,
-`results/results_falsifiers.json` latest run at 17:24); drop-one-country jackknife; dropping the UN's model-based estimate rows; income
-logged vs in levels (the handoff estimator used levels); the **change-on-change test** that killed the positive level coefficient;
-removing the starting-fertility-level control (shows which results are specification-dependent); and a cross-check of the never-married
-construction — 100 minus the ever-married share matches the workbook's direct "Never married" tabulation on 459 country-years (median
-absolute difference 0.0 points, 90th percentile 0.2, one 20.6-point outlier; `data/crosscheck_nevermar_f.csv`).
+**Permutation tests and their limitation.** The simple within-country permutation reshuffles the sparse series' values across survey
+years at random. That destroys each country's serial correlation, so the null distribution is too narrow and the test **rejects too
+easily** (anti-conservative) — the p<0.005 values in `results/results_falsifiers.json` must be read that way. We therefore also ran a
+**circular-shift permutation** within country (`scripts/block_perm.py`, `results/results_block_perm.json`): the country's values keep
+their order and spacing and only their alignment to calendar years rotates, which preserves serial correlation. Under that scheme:
+never-married p=0.08 (the year-shuffle p<0.005 was an artefact of the broken autocorrelation), female marriage age p<0.005, gap
+p=0.03, co-residence p=0.29 (consistent with its year-shuffle p=0.23 and with the null). Other falsifiers: drop-one-country
+jackknife; dropping the UN's model-based estimate rows; income logged vs in levels (the handoff estimator used levels); the
+**change-on-change test** that killed the positive level coefficient; removing the starting-fertility-level control (shows which
+results are specification-dependent); and a cross-check of the never-married construction — 100 minus the ever-married share matches
+the workbook's direct "Never married" tabulation on 459 country-years (median absolute difference 0.0 points, 90th percentile 0.2,
+one 20.6-point outlier; `data/crosscheck_nevermar_f.csv`).
 
 ## What this does not support
 
 No causal claim about marriage age and fertility. The male marriage-age series is built but untested. Living arrangements are
-cross-sectional survey snapshots and thin. Kinship intensity and WVS/EVS items are not obtained and not proxied. The gap edge and the
-never-married results are provisional because they move with the starting-level control. The positive level coefficient is not a
+cross-sectional survey snapshots and thin. Kinship intensity and WVS/EVS items are not obtained and not proxied. The gap edge and the never-married results are not stable across specifications. The positive level coefficient is not a
 finding.
 
 ## Files
 
 `scripts/`: `download_raw.sh`, `extract_un.py` (workbook → series, availability, provenance), `edge_marriage.py` (estimator reuse),
-`falsify.py`, `robust_extra.py`, `nolevel_check.py`, `change_test.py`. `data/`: series JSONs, `*_provenance.csv`, `availability.csv`,
+`falsify.py`, `block_perm.py`, `robust_extra.py`, `nolevel_check.py`, `change_test.py`. `data/`: series JSONs, `*_provenance.csv`, `availability.csv`,
 `source_composition.csv`, `crosscheck_nevermar_f.csv`. `results/`: `results_edges.json`, `results_falsifiers.json`,
-`results_robust_extra.json`, `results_nolevel.json`, `results_change_test.json`, run logs.
+`results_robust_extra.json`, `results_nolevel.json`, `results_change_test.json`, `results_block_perm.json`, run logs.

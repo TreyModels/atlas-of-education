@@ -1,0 +1,10 @@
+series available: [('agri_va', 8930), ('alone_60plus', 968), ('coresid_60plus', 705), ('coresid_60plus_f', 704), ('electricity', 6747), ('emp_agri', 6349), ('fertility', 14073), ('flfp', 6536), ('gdppc_log', 11347), ('gpi_sec', 6020), ('gpi_ter', 4580), ('life_exp', 14071), ('lsc', 4233), ('multigen_60plus', 674), ('nevermar_f_4549', 2060), ('nevermar_m_4549', 1867), ('prm_cmp', 5038), ('sec', 6271), ('smam_f', 2073), ('smam_gap', 1845), ('smam_m', 1848), ('tax', 4708), ('ter', 5344), ('u5mr', 11861), ('urban', 14105), ('wage_emp', 6349)]
+nevermar_f_4549  -> fertility  b=-0.0045 se=0.0027 n=1684 countries=170
+    circular-shift permutation p=0.080 (draws=200; null |b| q05=0.0001 median=0.0014 q95=0.0048; actual |b|=0.0045)
+smam_f           -> fertility  b=+0.0200 se=0.0058 n=1698 countries=170
+    circular-shift permutation p=0.000 (draws=200; null |b| q05=0.0003 median=0.0037 q95=0.0100; actual |b|=0.0200)
+smam_gap         -> fertility  b=-0.0352 se=0.0164 n=1453 countries=156
+    circular-shift permutation p=0.030 (draws=100; null |b| q05=0.0009 median=0.0114 q95=0.0326; actual |b|=0.0352)
+coresid_60plus   -> fertility  b=+0.0021 se=0.0022 n=402 countries=70
+    circular-shift permutation p=0.290 (draws=100; null |b| q05=0.0002 median=0.0015 q95=0.0035; actual |b|=0.0021)
+wrote /root/work/undata/results_block_perm.json
