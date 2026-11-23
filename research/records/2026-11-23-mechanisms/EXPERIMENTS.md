@@ -21,7 +21,8 @@ ten-year change in births per woman on the trend level and the lagged volatility
 effects, logged income and urbanisation, with and without country trends, clustered by country. Report the two
 coefficients and their difference. Also run the reverse decomposition for life expectancy.
 
-**Data.** Have: annual child mortality and total fertility (panel, observed arm). Need: nothing.
+**Data.** Have: annual child mortality and total fertility (panel, observed arm; box2 `/root/work/data`, migrated copy under
+`/root/autodl-tmp/migrated/`). Need: nothing.
 
 **Estimand.** The difference in births per woman over the next ten years caused by a one-unit higher mortality *level*
 versus a one-unit higher mortality *volatility*, holding the other fixed.

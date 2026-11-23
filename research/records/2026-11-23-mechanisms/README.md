@@ -1,6 +1,9 @@
 # Why fertility tracks child survival and life expectancy: literature, what we can test, and a pre-registered experiment plan
 
 Worker `un-data`, branch `research/mechanisms-2026-11-23`, 23 Nov 2026. Design and literature only — nothing was run.
+**Server note:** box1 (`ssh autodl`) is retired as of 23 Nov 2026; every reference to "the server" in this record and its
+companions means **box2** (`ssh autodl2`), where the panel is at `/root/work/data` (migrated copy also at
+`/root/autodl-tmp/migrated/`).
 Companion files: `LITERATURE.md` (fuller map with verification status and URLs) and `EXPERIMENTS.md` (full specs).
 
 **Short answer.** The two links are real in our data and big, but country-level data cannot tell the rival explanations
@@ -109,7 +112,7 @@ missing mediator: no marriage-timing link survives the matrix's falsifiers at co
 | 7 | Common cause / state capacity | mortality link with state-capacity controls and technology-diffusion instruments | coefficient collapses → development artefact | 0.008-0.010 (collinearity) | need vaccination, health spending, governance data |
 
 **Run first: E1 (level vs volatility).** It costs almost nothing (annual child-mortality and fertility series are
-already on the server), its estimand and falsifier can be frozen before touching the data, and the answer decides how
+already on box2 at `/root/work/data`), its estimand and falsifier can be frozen before touching the data, and the answer decides how
 E2 must be designed. If volatility matters, the insurance mechanism becomes the leading explanation and E2 must model
 the risk margin explicitly; if it does not, E2 becomes the single highest-value study and should start immediately.
 E4 is the most convincing test in principle but needs new data and is likely underpowered at country level; E6 should
