@@ -34,10 +34,12 @@ were aimed at *shape and typology*, not at fertility determinants in general.
 | Alkema, Raftery, Gerland & Clark (2011), *Demography* 48(3):815–839, "Probabilistic projections of the total fertility rate for all countries" | double-logistic S-curve imposed in the UN projection model | 10.1007/s13524-011-0040-5 — Crossref ✓ | **audit target** |
 | Raftery, Alkema & Gerland (2014), *Statistical Science* 29(1):1–15, "Bayesian population projections for the United Nations" | same family, Bayesian estimation | 10.1214/13-sts419 — Crossref ✓ | audit target |
 
-**Our status: audit.** The S-curve is not the best-supported form for annual historical data: the logistic wins
-for 7 of 105 countries and is the worst of four parametric forms out of sample (RMSE 0.48 vs 0.31 for the
-exponential). This does not refute the projection literature, whose objective differs; it refutes the reading
-of the S-curve as the historical form.
+**Our status: audit.** The S-curve is not the best-supported form for the estimable annual window: the logistic
+wins for 7 of 105 countries and is the worst of four parametric forms out of sample (RMSE 0.48 vs 0.31 for the
+exponential). This does not refute the projection literature, whose objective differs, and — because the
+1960–2023 series are truncated — it does not refute the S-curve as a description of the underlying process
+either: the window cannot distinguish a genuinely non-logistic form from a logistic it leaves unidentified.
+The claim is about the estimable window only.
 
 ## Claim 2 — transitions differ in type/regime (heterogeneity)
 

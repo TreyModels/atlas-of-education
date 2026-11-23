@@ -12,9 +12,12 @@ logistic, Gompertz, exponential decay to a floor, linear-decline-with-kink, and 
 total fertility for 105 countries over 1960–2023, compare them by information criteria and a last-decade
 hold-out, extract six shape descriptors (onset, midpoint, speed, duration, floor, curvature), test whether the
 shapes cluster, and ask which covariates predict the shape. Three results stand out. First, the canonical
-S-curve is not the best description: an exponential decline to a floor fits best for 49% of countries and
-Gompertz for 29%, while the logistic wins for only 7% and is the worst of the four parametric forms out of
-sample (last-decade RMSE 0.48 births per woman, against 0.31 for the exponential). Second, once each
+S-curve is not the best description of the estimable window: an exponential decline to a floor fits best for
+49% of countries and Gompertz for 29%, while the logistic wins for only 7% and is the worst of the four
+parametric forms out of sample (last-decade RMSE 0.48 births per woman, against 0.31 for the exponential).
+**With truncated 1960–2023 series we cannot distinguish a genuinely non-logistic form from a logistic that
+the window leaves unidentified; the claim is that the exponential-to-floor family describes the available
+transition data better, not that the S-curve is refuted.** Second, once each
 transition is aligned on its own onset and duration, the *path* is nearly universal (country-to-country
 standard deviation of the aligned curve 0.017; the first principal component explains essentially all
 remaining variance), so the heterogeneity documented in cross-country fertility studies lives almost entirely
@@ -59,7 +62,7 @@ them by AIC/BIC and by a hold-out of the last decade, extract descriptors from t
 whether the normalised decline paths differ (they barely do), cluster the timing-and-pace descriptors (they
 do, weakly, into two poles), and regress the descriptors on covariates.
 
-Four findings organise the paper. First, **the S-curve is over-claimed**. An exponential decay to a floor and
+Four findings organise the paper. First, **the S-curve is usually assumed rather than tested, and in the estimable window it is not the best-fitting form**. An exponential decay to a floor and
 the Gompertz curve both beat the logistic in most countries; the logistic is the worst of the four parametric
 forms in out-of-sample prediction. The transition, as measured annually, is more often a decelerating decline
 than a symmetric S. Second, **the path is near-universal once timing is removed**. Aligned on onset and on the
@@ -143,9 +146,11 @@ changing the ordering of countries. Third, **annexation and boundary changes** a
 the TFR refers and can create spurious curvature; this is a general problem for long country series and is
 listed as a limitation rather than corrected. Fourth, **the functional form is partly imposed by the fitting
 window**: a logistic fitted to a series that starts at the peak and ends at the floor is not the same object
-as one fitted to the whole transition including the pre-transition plateau. We address this by fitting from
-the full available series and by testing the forms out of sample on the last decade, which is a harder test
-than in-sample fit.
+as one fitted to the whole transition including the pre-transition plateau. With truncated 1960–2023 series
+we cannot distinguish a genuinely non-logistic form from a logistic that the window leaves unidentified; a
+poor fit in this window is evidence about the estimable window, not a refutation of the S-curve. We address
+this by fitting from the full available series and by testing the forms out of sample on the last decade,
+which is a harder test than in-sample fit.
 
 ### 2.5 What this paper does not claim
 
@@ -242,8 +247,17 @@ than dropped silently. All coefficients are correlations, not causal effects.
 
 ### 5.1 Which functional form wins?
 
-Table 1 reports the model-selection counts and the out-of-sample errors. The S-curve picture does not survive
-contact with the annual data. The exponential decline to a floor is the best-supported form for **51 of 105
+Table 1 reports the model-selection counts and the out-of-sample errors. The S-curve picture is not the best
+description of the available annual data.
+
+**Identification caveat, stated first because it bounds every claim in this subsection.** The annual series
+begin near the 1960s peak and end in a partial decline, so the lower asymptote and the early phase of the
+curve are only partly observed. A logistic fitted to such a window can be *unidentified* rather than wrong:
+the data cannot always separate a genuinely non-logistic decline from a logistic whose parameters the window
+does not pin down. We therefore read the model comparison as a statement about the **estimable window** — the
+exponential-to-floor family describes the available transition data and transports better out of sample —
+not as a refutation of the S-curve as a description of the underlying process. The same caveat applies to the
+Gompertz and linear-kink results. The exponential decline to a floor is the best-supported form for **51 of 105
 countries (49%)**, the Gompertz for **30 (29%)**, the linear-decline-with-kink for **15 (14%)**, the logistic
 for **7 (7%)** and the flexible spline for **2 (2%)**. The same ordering appears out of sample: fitting on
 1960–2012 and predicting 2013–2023, the average root-mean-squared error is **0.31 births per woman for the
@@ -260,9 +274,10 @@ than the logistic but less well than the exponential. The linear kink wins where
 straight, which is more common than the S-curve tradition would suggest.
 
 This is a descriptive result, not an argument against using logistic models in projection. A projection model
-optimises different objectives, and a parametric S-curve may still be a useful smoothing device. But the
-common claim that the historical transition *is* an S-shaped curve, in a way that an exponential or a
-kinked-linear decline is not, is not supported by these annual series.
+optimises different objectives, and a parametric S-curve may still be a useful smoothing device. Nor is it a
+refutation of the S-curve as a description of some underlying process: the window cannot tell "not logistic"
+from "logistic left unidentified". What the annual series do not support is the stronger claim that the
+historical transition *is* an S-shaped curve in a way that an exponential or kinked-linear decline is not.
 
 **Table 1. Functional-form comparison (105 countries, annual TFR 1960–2023).**
 
@@ -471,7 +486,7 @@ contribution of this paper.
 ### 7.1 For forecasting
 
 Three implications follow. First, the commonly imposed S-curve is not the best-supported functional form for
-historical annual data; an exponential or Gompertz family, or a flexible spline, transports better. Projection
+historical annual data in this estimable window; an exponential or Gompertz family, or a flexible spline, transports better. Projection
 models that impose an S-curve should test the imposed form against these alternatives rather than treating it
 as given. Second, because the path is near-universal once timing is fixed, the key forecasting problem is not
 the shape of the decline but the **timing and the floor**. Forecast uncertainty should be concentrated on
@@ -552,10 +567,11 @@ is plausible. The paper's claims are about functional form and measurement, not 
 
 ## 10. Conclusion
 
-The demographic transition has a shape, and the shape is not the one usually drawn. Across 105 countries,
-annual total fertility is better described as an exponential or Gompertz decline to a floor than as a
-logistic S-curve; the S-curve is the worst of the four parametric forms out of sample and wins in only seven
-countries. Once transitions are aligned on their own onset and duration, their paths are almost identical: the
+The demographic transition has a shape, and the shape is not quite the one usually drawn. Across 105
+countries, annual total fertility in the estimable window is better described as an exponential or Gompertz
+decline to a floor than as a logistic S-curve; the logistic is the worst of the four parametric forms out of
+sample and wins in only seven countries, though the truncation of the series means this is evidence about the
+window rather than a refutation of the S-curve. Once transitions are aligned on their own onset and duration, their paths are almost identical: the
 heterogeneity that the comparative literature documents is in timing, pace and floor, not in the path. That
 heterogeneity has two poles — early, deep, curved transitions and late, shallow, near-linear ones — which are
 better than random partitions but weak enough to describe a continuum. Mortality-decline timing is the
