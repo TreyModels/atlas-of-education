@@ -1265,7 +1265,7 @@ data, with the missing observation named.
 | 3 | The level relation is a global between-country property | S (this relation) | 71–99% of 13,800 random six-group partitions negative-significant vs 0–7% in changes |
 | 4 | The standard change design erases or reverses the relation | S | women's attainment +0.111 (0.045); 0/8 negative-significant; 3/8 positive-significant |
 | 5 | The level relation is a development gradient, not an identified schooling effect | S | future-schooling placebo 52.9% vs 58.8% negative-significant (~90% as strong) |
-| 6 | The gradient is steepest at the massification margin | S | below 6y −0.326 [−0.405, −0.248]; 6–9y −0.092 [−0.175, −0.013]; >9y +0.112 [+0.057, +0.171] |
+| 6 | The gradient is steepest at the massification margin (shape), with conventional hinge locations | S (shape) / C (hinge locations) | below 6y −0.326 [−0.405, −0.248]; 6–9y −0.092 [−0.175, −0.013]; >9y +0.112 [+0.057, +0.171]; hinges at 6 and 9 years are conventional, not data-searched |
 | 7 | A survey-level (DHS) negative gradient exists across 86 countries | S (ecological) | primary −0.57 (0.06), secondary −1.62 (0.17), higher −2.54 (0.24); 99% of 346 surveys negative |
 | 8 | The gradient steepens in later cohorts and denser pipelines | F | attenuates instead: cohort +0.26 (0.13); pipeline +0.13 (0.05) |
 | 9 | Individual-level and wealth-controlled tests of the gradient | C | DHS Individual Recodes not publicly obtainable |
