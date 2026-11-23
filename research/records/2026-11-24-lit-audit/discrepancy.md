@@ -111,3 +111,20 @@ Sandberg 1979 **V 10.1017/s0022050700096418**; Timmer 1988 "Chapter 8 The agricu
 Development Economics **V 10.1016/s1573-4471(88)01011-3**; Foster & Rosenzweig 1995 JPE "Learning by Doing and
 Learning from Others" **V 10.1086/601447**; Kuznets, *Modern Economic Growth: Rate, Structure and Spread* — **U**
 (book; only reviews resolve, 10.2307/2552017 and 10.2307/2229582; do not cite a review DOI as the book).
+
+## CLOSURE — fertility-ordering figure (Paper M @ 95dc135): FIXED and independently re-verified
+
+Panel-matrix recomputed the figure from the committed event CSV and edited every affected location. My independent
+recomputation from `data/event_dates_subsistence_v2.csv` reproduces their numbers exactly:
+- 64 countries with all three events: **24 schooling-first (37.5%)**, 20 simultaneous (31.25%), 20 fertility-first
+  (31.25%), median gap 0 years, IQR −5 to +8.
+- All 81 countries with schooling and fertility dates: **29 schooling-first (35.8%)**, 27 ties, 25 fertility-first;
+  median gap 0, IQR −5 to +6.
+The record's 68.75% was 44/64 = 24 + the 20 simultaneous cases counted as schooling-first — now documented as a
+tie-counting artefact and explicitly "not used" in paper.md (lines 77, 137, 513-516, 1106-1107), README line 42,
+claims-to-source-map claim 3 and discrepancy.md section F. Code/input/output committed
+(`scripts/recompute_fertility_ordering.py`, `data/event_dates_subsistence_v2.csv`,
+`data/recompute_fertility_ordering.json`, seed 7, 1000 resamples). A grep of paper.md finds no remaining
+69%/58-80% fertility-ordering claim; the only 55-69% figures left are agricultural intensification, unrelated.
+**Status: FIXED.** Remaining Paper M open items unchanged: alternative-threshold recoding + date-source table
+(named central vulnerability) and Part C re-verification.
