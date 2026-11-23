@@ -34,13 +34,14 @@ def evaluate(U, seeds, t0, ntot, tag):
     for i0 in range(0, n, B):
         idx = list(range(i0, min(i0 + B, n)))
         pad = idx + [idx[-1]] * (B - len(idx))
-        specs, sd = [], []
+        specs = []
         for j, di in enumerate(pad):
             for k, iso in enumerate(FIT):
                 pc = PAN["countries"][iso]
+                ds0 = j * len(FIT) * len(FGRID) + k * len(FGRID)
+                prep = dc.prepare(pc, P[di], SCEN, 1000 + int(seeds[di]) % 100000, ds0)   # once per draw x country
                 for fi, f in enumerate(FGRID):
-                    ds = (j * len(FIT) * len(FGRID) + k * len(FGRID) + fi)
-                    specs.append(make_spec(pc, P[di], SCEN, f, pc["age_gap"], 1000 + seeds[di] % 100000, ds))
+                    specs.append(dict(prep=prep, P=P[di], fc=f, gap=pc["age_gap"]))
         ENG.load(specs)
         acc = ENG.run(SCEN)
         S = targets_array(acc)
