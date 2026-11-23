@@ -1,0 +1,3362 @@
+{
+ "robinson1950": {
+  "publisher": "SAGE Publications",
+  "issue": "3",
+  "DOI": "10.2307/2087176",
+  "type": "journal-article",
+  "page": "351",
+  "title": [
+   "Ecological Correlations and the Behavior of Individuals"
+  ],
+  "volume": "15",
+  "author": [
+   {
+    "given": "W. S.",
+    "family": "Robinson",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "container-title": [
+   "American Sociological Review"
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     1950,
+     6
+    ]
+   ]
+  },
+  "URL": "https://doi.org/10.2307/2087176"
+ },
+ "nickell1981": {
+  "publisher": "JSTOR",
+  "issue": "6",
+  "DOI": "10.2307/1911408",
+  "type": "journal-article",
+  "page": "1417",
+  "title": [
+   "Biases in Dynamic Models with Fixed Effects"
+  ],
+  "volume": "49",
+  "author": [
+   {
+    "given": "Stephen",
+    "family": "Nickell",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "container-title": [
+   "Econometrica"
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     1981,
+     11
+    ]
+   ]
+  },
+  "URL": "https://doi.org/10.2307/1911408"
+ },
+ "angristpischke2009": {
+  "DOI": "10.1515/9781400829828",
+  "title": [
+   "Mostly Harmless Econometrics"
+  ],
+  "author": [
+   {
+    "given": "Joshua D.",
+    "family": "Angrist",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "J\u00f6rn-Steffen",
+    "family": "Pischke",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2009,
+     12,
+     31
+    ]
+   ]
+  },
+  "publisher": "Princeton University Press",
+  "type": "edited-book",
+  "URL": "https://doi.org/10.1515/9781400829828"
+ },
+ "belljones2015": {
+  "publisher": "Cambridge University Press (CUP)",
+  "issue": "1",
+  "DOI": "10.1017/psrm.2014.7",
+  "type": "journal-article",
+  "page": "133-153",
+  "title": [
+   "Explaining Fixed Effects: Random Effects Modeling of Time-Series Cross-Sectional and Panel Data"
+  ],
+  "volume": "3",
+  "author": [
+   {
+    "given": "Andrew",
+    "family": "Bell",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Kelvyn",
+    "family": "Jones",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "container-title": [
+   "Political Science Research and Methods"
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2014,
+     5,
+     1
+    ]
+   ]
+  },
+  "URL": "https://doi.org/10.1017/psrm.2014.7"
+ },
+ "hausmantaylor1981": {
+  "publisher": "JSTOR",
+  "issue": "6",
+  "DOI": "10.2307/1911406",
+  "type": "journal-article",
+  "page": "1377",
+  "title": [
+   "Panel Data and Unobservable Individual Effects"
+  ],
+  "volume": "49",
+  "author": [
+   {
+    "given": "Jerry A.",
+    "family": "Hausman",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "William E.",
+    "family": "Taylor",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "container-title": [
+   "Econometrica"
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     1981,
+     11
+    ]
+   ]
+  },
+  "URL": "https://doi.org/10.2307/1911406"
+ },
+ "steegen2016": {
+  "publisher": "SAGE Publications",
+  "issue": "5",
+  "DOI": "10.1177/1745691616658637",
+  "type": "journal-article",
+  "page": "702-712",
+  "title": [
+   "Increasing Transparency Through a Multiverse Analysis"
+  ],
+  "volume": "11",
+  "author": [
+   {
+    "given": "Sara",
+    "family": "Steegen",
+    "sequence": "first",
+    "affiliation": [
+     {
+      "name": "KU Leuven, University of Leuven"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Francis",
+    "family": "Tuerlinckx",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "KU Leuven, University of Leuven"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Andrew",
+    "family": "Gelman",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Columbia University"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Wolf",
+    "family": "Vanpaemel",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "KU Leuven, University of Leuven"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "container-title": [
+   "Perspectives on Psychological Science"
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2016,
+     9
+    ]
+   ]
+  },
+  "URL": "https://doi.org/10.1177/1745691616658637"
+ },
+ "simonsohn2020": {
+  "publisher": "Springer Science and Business Media LLC",
+  "issue": "11",
+  "DOI": "10.1038/s41562-020-0912-z",
+  "type": "journal-article",
+  "page": "1208-1214",
+  "title": [
+   "Specification curve analysis"
+  ],
+  "volume": "4",
+  "author": [
+   {
+    "ORCID": "https://orcid.org/0000-0002-8601-7211",
+    "authenticated-orcid": false,
+    "given": "Uri",
+    "family": "Simonsohn",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Joseph P.",
+    "family": "Simmons",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "ORCID": "https://orcid.org/0000-0003-1148-4461",
+    "authenticated-orcid": false,
+    "given": "Leif D.",
+    "family": "Nelson",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "container-title": [
+   "Nature Human Behaviour"
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2020,
+     7,
+     27
+    ]
+   ]
+  },
+  "URL": "https://doi.org/10.1038/s41562-020-0912-z"
+ },
+ "delgiudice2021": {
+  "publisher": "SAGE Publications",
+  "issue": "1",
+  "DOI": "10.1177/2515245920954925",
+  "type": "journal-article",
+  "title": [
+   "A Traveler\u2019s Guide to the Multiverse: Promises, Pitfalls, and a Framework for the Evaluation of Analytic Decisions"
+  ],
+  "volume": "4",
+  "author": [
+   {
+    "ORCID": "https://orcid.org/0000-0001-8526-1573",
+    "authenticated-orcid": false,
+    "given": "Marco",
+    "family": "Del Giudice",
+    "sequence": "first",
+    "affiliation": [
+     {
+      "name": "Department of Psychology, University of New Mexico"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Steven W.",
+    "family": "Gangestad",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Department of Psychology, University of New Mexico"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "container-title": [
+   "Advances in Methods and Practices in Psychological Science"
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2021,
+     1
+    ]
+   ]
+  },
+  "URL": "https://doi.org/10.1177/2515245920954925"
+ },
+ "silberzahn2018": {
+  "publisher": "Frontiers Media SA",
+  "DOI": "10.3389/fpsyg.2023.1094150",
+  "type": "journal-article",
+  "title": [
+   "One data set, many analysts: Implications for practicing scientists"
+  ],
+  "volume": "14",
+  "author": [
+   {
+    "given": "Erich",
+    "family": "Kummerfeld",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Galin L.",
+    "family": "Jones",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "container-title": [
+   "Frontiers in Psychology"
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2023,
+     2,
+     14
+    ]
+   ]
+  },
+  "URL": "https://doi.org/10.3389/fpsyg.2023.1094150"
+ },
+ "vivalt2020": {
+  "publisher": "Oxford University Press (OUP)",
+  "issue": "6",
+  "DOI": "10.1093/jeea/jvaa019",
+  "type": "journal-article",
+  "page": "3045-3089",
+  "title": [
+   "How Much Can We Generalize From Impact Evaluations?"
+  ],
+  "volume": "18",
+  "author": [
+   {
+    "given": "Eva",
+    "family": "Vivalt",
+    "sequence": "first",
+    "affiliation": [
+     {
+      "name": "Australian National University and University of Toronto"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "container-title": [
+   "Journal of the European Economic Association"
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2020,
+     9,
+     19
+    ]
+   ]
+  },
+  "URL": "https://doi.org/10.1093/jeea/jvaa019"
+ },
+ "deaton2010": {
+  "publisher": "American Economic Association",
+  "issue": "2",
+  "DOI": "10.1257/jel.48.2.424",
+  "type": "journal-article",
+  "page": "424-455",
+  "title": [
+   "Instruments, Randomization, and Learning about Development"
+  ],
+  "volume": "48",
+  "author": [
+   {
+    "given": "Angus",
+    "family": "Deaton",
+    "sequence": "first",
+    "affiliation": [
+     {
+      "name": "Princeton University."
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "container-title": [
+   "Journal of Economic Literature"
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2010,
+     6,
+     1
+    ]
+   ]
+  },
+  "URL": "https://doi.org/10.1257/jel.48.2.424"
+ },
+ "bareinboim2013": {
+  "publisher": "Walter de Gruyter GmbH",
+  "issue": "1",
+  "DOI": "10.1515/jci-2012-0004",
+  "type": "journal-article",
+  "page": "107-134",
+  "title": [
+   "A General Algorithm for Deciding Transportability of Experimental Results"
+  ],
+  "volume": "1",
+  "author": [
+   {
+    "given": "Elias",
+    "family": "Bareinboim",
+    "sequence": "first",
+    "affiliation": [
+     {
+      "name": "Department of Computer Science, University of California, Los Angeles, CA, USA"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Judea",
+    "family": "Pearl",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Department of Computer Science, University of California, Los Angeles, CA, USA"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "container-title": [
+   "Journal of Causal Inference"
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2013,
+     5,
+     29
+    ]
+   ]
+  },
+  "URL": "https://doi.org/10.1515/jci-2012-0004"
+ },
+ "roth2022": {
+  "publisher": "American Economic Association",
+  "issue": "3",
+  "DOI": "10.1257/aeri.20210236",
+  "type": "journal-article",
+  "page": "305-322",
+  "title": [
+   "Pretest with Caution: Event-Study Estimates after Testing for Parallel Trends"
+  ],
+  "volume": "4",
+  "author": [
+   {
+    "given": "Jonathan",
+    "family": "Roth",
+    "sequence": "first",
+    "affiliation": [
+     {
+      "name": "Brown University (email: )"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "container-title": [
+   "American Economic Review: Insights"
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2022,
+     9,
+     1
+    ]
+   ]
+  },
+  "URL": "https://doi.org/10.1257/aeri.20210236"
+ },
+ "caldwell1980": {
+  "publisher": "JSTOR",
+  "issue": "2",
+  "DOI": "10.2307/1972729",
+  "type": "journal-article",
+  "page": "225",
+  "title": [
+   "Mass Education as a Determinant of the Timing of Fertility Decline"
+  ],
+  "volume": "6",
+  "author": [
+   {
+    "given": "John C.",
+    "family": "Caldwell",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "container-title": [
+   "Population and Development Review"
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     1980,
+     6
+    ]
+   ]
+  },
+  "URL": "https://doi.org/10.2307/1972729"
+ },
+ "caldwell1976": {
+  "publisher": "JSTOR",
+  "issue": "3/4",
+  "DOI": "10.2307/1971615",
+  "type": "journal-article",
+  "page": "321",
+  "title": [
+   "Toward A Restatement of Demographic Transition Theory"
+  ],
+  "volume": "2",
+  "author": [
+   {
+    "given": "John C.",
+    "family": "Caldwell",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "container-title": [
+   "Population and Development Review"
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     1976,
+     9
+    ]
+   ]
+  },
+  "URL": "https://doi.org/10.2307/1971615"
+ },
+ "bongaarts1978": {
+  "publisher": "JSTOR",
+  "issue": "1",
+  "DOI": "10.2307/1972149",
+  "type": "journal-article",
+  "page": "105",
+  "title": [
+   "A Framework for Analyzing the Proximate Determinants of Fertility"
+  ],
+  "volume": "4",
+  "author": [
+   {
+    "given": "John",
+    "family": "Bongaarts",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "container-title": [
+   "Population and Development Review"
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     1978,
+     3
+    ]
+   ]
+  },
+  "URL": "https://doi.org/10.2307/1972149"
+ },
+ "bongaarts1996": {
+  "publisher": "JSTOR",
+  "issue": "4",
+  "DOI": "10.2307/2137804",
+  "type": "journal-article",
+  "page": "639",
+  "title": [
+   "Social Interactions and Contemporary Fertility Transitions"
+  ],
+  "volume": "22",
+  "author": [
+   {
+    "given": "John",
+    "family": "Bongaarts",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Susan Cotts",
+    "family": "Watkins",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "container-title": [
+   "Population and Development Review"
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     1996,
+     12
+    ]
+   ]
+  },
+  "URL": "https://doi.org/10.2307/2137804"
+ },
+ "cleland1987": {
+  "publisher": "Informa UK Limited",
+  "issue": "1",
+  "DOI": "10.1080/0032472031000142516",
+  "type": "journal-article",
+  "page": "5-30",
+  "title": [
+   "Demand Theories of the Fertility Transition: An Iconoclastic View"
+  ],
+  "volume": "41",
+  "author": [
+   {
+    "given": "John",
+    "family": "Cleland",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Christopher",
+    "family": "Wilson",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "container-title": [
+   "Population Studies"
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     1987,
+     3
+    ]
+   ]
+  },
+  "URL": "https://doi.org/10.1080/0032472031000142516"
+ },
+ "lutz2011": {
+  "publisher": "American Association for the Advancement of Science (AAAS)",
+  "issue": "6042",
+  "DOI": "10.1126/science.1206964",
+  "type": "journal-article",
+  "page": "587-592",
+  "title": [
+   "Global Human Capital: Integrating Education and Population"
+  ],
+  "volume": "333",
+  "author": [
+   {
+    "given": "Wolfgang",
+    "family": "Lutz",
+    "sequence": "first",
+    "affiliation": [
+     {
+      "name": "Wittgenstein Centre for Demography and Global Human Capital, Vienna A1090, Austria."
+     },
+     {
+      "name": "World Population Program, International Institute for Applied Systems Analysis (IIASA), Laxenburg A2361, Austria."
+     },
+     {
+      "name": "Vienna Institute of Demography of the Austrian Academy of Sciences, Vienna A1040, Austria."
+     },
+     {
+      "name": "Department of Applied Statistics and Research Institute on Human Capital and Development, Vienna University of Economics and Business, Vienna A1090, Austria."
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Samir",
+    "family": "KC",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Wittgenstein Centre for Demography and Global Human Capital, Vienna A1090, Austria."
+     },
+     {
+      "name": "World Population Program, International Institute for Applied Systems Analysis (IIASA), Laxenburg A2361, Austria."
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "container-title": [
+   "Science"
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2011,
+     7,
+     29
+    ]
+   ]
+  },
+  "URL": "https://doi.org/10.1126/science.1206964"
+ },
+ "skirbekk2008": {
+  "publisher": "Max Planck Institute for Demographic Research",
+  "DOI": "10.4054/demres.2008.18.5",
+  "type": "journal-article",
+  "page": "145-180",
+  "title": [
+   "Fertility trends by social status"
+  ],
+  "volume": "18",
+  "author": [
+   {
+    "given": "Vegard",
+    "family": "Skirbekk",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "container-title": [
+   "Demographic Research"
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2008,
+     3,
+     28
+    ]
+   ]
+  },
+  "URL": "https://doi.org/10.4054/demres.2008.18.5"
+ },
+ "barrolee2013": {
+  "DOI": "10.3386/w15902",
+  "title": [
+   "A New Data Set of Educational Attainment in the World, 1950-2010"
+  ],
+  "author": [
+   {
+    "given": "Robert",
+    "family": "Barro",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Jong-Wha",
+    "family": "Lee",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2010,
+     4
+    ]
+   ]
+  },
+  "publisher": "National Bureau of Economic Research",
+  "type": "report",
+  "URL": "https://doi.org/10.3386/w15902"
+ },
+ "barrolee1994": {
+  "publisher": "Elsevier BV",
+  "DOI": "10.1016/0167-2231(94)90002-7",
+  "type": "journal-article",
+  "page": "1-46",
+  "title": [
+   "Sources of economic growth"
+  ],
+  "volume": "40",
+  "author": [
+   {
+    "given": "Robert J.",
+    "family": "Barro",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Jong-Wha",
+    "family": "Lee",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "container-title": [
+   "Carnegie-Rochester Conference Series on Public Policy"
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     1994,
+     6
+    ]
+   ]
+  },
+  "URL": "https://doi.org/10.1016/0167-2231(94)90002-7"
+ },
+ "mincer1958": {
+  "publisher": "University of Chicago Press",
+  "issue": "4",
+  "DOI": "10.1086/258055",
+  "type": "journal-article",
+  "page": "281-302",
+  "title": [
+   "Investment in Human Capital and Personal Income Distribution"
+  ],
+  "volume": "66",
+  "author": [
+   {
+    "given": "Jacob",
+    "family": "Mincer",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "container-title": [
+   "Journal of Political Economy"
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     1958,
+     8
+    ]
+   ]
+  },
+  "URL": "https://doi.org/10.1086/258055"
+ },
+ "psach2004": {
+  "DOI": "10.1596/1813-9450-2881",
+  "title": [
+   "Returns to Investment in Education: A Further Update"
+  ],
+  "author": [
+   {
+    "given": "George",
+    "family": "Psacharopoulos",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Harry Anthony",
+    "family": "Patrinos",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2002,
+     9
+    ]
+   ]
+  },
+  "publisher": "World Bank, Washington, DC",
+  "type": "book",
+  "URL": "https://doi.org/10.1596/1813-9450-2881"
+ },
+ "psach2018": {
+  "DOI": "10.1596/30154",
+  "title": [
+   "Returns to Investment in Education: A Decennial Review of the Global Literature"
+  ],
+  "author": [
+   {
+    "given": "George",
+    "family": "Psacharopoulos",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Harry Anthony",
+    "family": "Patrinos",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2018,
+     6,
+     7
+    ]
+   ]
+  },
+  "publisher": "Taylor and Francis",
+  "type": "book",
+  "URL": "https://doi.org/10.1596/30154"
+ },
+ "pritchett2001": {
+  "DOI": "10.1596/17434",
+  "title": [
+   "Where Has All the Education Gone?"
+  ],
+  "author": [
+   {
+    "given": "Lant",
+    "family": "Pritchett",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2001,
+     9
+    ]
+   ]
+  },
+  "publisher": "Washington, DC:  World Bank",
+  "type": "book",
+  "URL": "https://doi.org/10.1596/17434"
+ },
+ "duflo2012": {
+  "publisher": "American Economic Association",
+  "issue": "4",
+  "DOI": "10.1257/jel.50.4.1051",
+  "type": "journal-article",
+  "page": "1051-1079",
+  "title": [
+   "Women Empowerment and Economic Development"
+  ],
+  "volume": "50",
+  "author": [
+   {
+    "given": "Esther",
+    "family": "Duflo",
+    "sequence": "first",
+    "affiliation": [
+     {
+      "name": "Massachusetts Institute of Technology."
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "container-title": [
+   "Journal of Economic Literature"
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2012,
+     12,
+     1
+    ]
+   ]
+  },
+  "URL": "https://doi.org/10.1257/jel.50.4.1051"
+ },
+ "beckerlewis1973": {
+  "publisher": "University of Chicago Press",
+  "issue": "2, Part 2",
+  "DOI": "10.1086/260166",
+  "type": "journal-article",
+  "page": "S279-S288",
+  "title": [
+   "On the Interaction between the Quantity and Quality of Children"
+  ],
+  "volume": "81",
+  "author": [
+   {
+    "given": "Gary S.",
+    "family": "Becker",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "H. Gregg",
+    "family": "Lewis",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "container-title": [
+   "Journal of Political Economy"
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     1973,
+     3
+    ]
+   ]
+  },
+  "URL": "https://doi.org/10.1086/260166"
+ },
+ "becker2010": {
+  "DOI": "10.2139/ssrn.1476206",
+  "title": [
+   "The Trade-off between Fertility and Education: Evidence from before the Demographic Transition"
+  ],
+  "author": [
+   {
+    "ORCID": "https://orcid.org/0000-0002-0672-4865",
+    "authenticated-orcid": true,
+    "given": "Sascha O.",
+    "family": "Becker",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Francesco",
+    "family": "Cinnirella",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Ludger",
+    "family": "Woessmann",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2009
+    ]
+   ]
+  },
+  "publisher": "Elsevier BV",
+  "type": "posted-content",
+  "URL": "https://doi.org/10.2139/ssrn.1476206"
+ },
+ "becker2013": {
+  "DOI": "10.2139/ssrn.1831121",
+  "title": [
+   "Does Parental Education Affect Fertility? Evidence from Pre-Demographic Transition Prussia"
+  ],
+  "author": [
+   {
+    "ORCID": "https://orcid.org/0000-0002-0672-4865",
+    "authenticated-orcid": true,
+    "given": "Sascha O.",
+    "family": "Becker",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Francesco",
+    "family": "Cinnirella",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Ludger",
+    "family": "Woessmann",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2011
+    ]
+   ]
+  },
+  "publisher": "Elsevier BV",
+  "type": "posted-content",
+  "URL": "https://doi.org/10.2139/ssrn.1831121"
+ },
+ "hanushek1992": {
+  "publisher": "University of Chicago Press",
+  "issue": "1",
+  "DOI": "10.1086/261808",
+  "type": "journal-article",
+  "page": "84-117",
+  "title": [
+   "The Trade-off between Child Quantity and Quality"
+  ],
+  "volume": "100",
+  "author": [
+   {
+    "given": "Eric A.",
+    "family": "Hanushek",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "container-title": [
+   "Journal of Political Economy"
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     1992,
+     2
+    ]
+   ]
+  },
+  "URL": "https://doi.org/10.1086/261808"
+ },
+ "black2005": {
+  "publisher": "Oxford University Press (OUP)",
+  "issue": "2",
+  "DOI": "10.1162/0033553053970179",
+  "type": "journal-article",
+  "page": "669-700",
+  "title": [
+   "The More the Merrier? The Effect of Family Size and Birth Order on Children's Education*"
+  ],
+  "volume": "120",
+  "author": [
+   {
+    "given": "Sandra E.",
+    "family": "Black",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Paul J.",
+    "family": "Devereux",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Kjell G.",
+    "family": "Salvanes",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "container-title": [
+   "Quarterly Journal of Economics"
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2005,
+     5
+    ]
+   ]
+  },
+  "URL": "https://doi.org/10.1162/0033553053970179"
+ },
+ "herzer2012": {
+  "publisher": "Springer Science and Business Media LLC",
+  "issue": "4",
+  "DOI": "10.1007/s10887-012-9085-6",
+  "type": "journal-article",
+  "page": "357-385",
+  "title": [
+   "The long-run determinants of fertility: one century of demographic change 1900\u20131999"
+  ],
+  "volume": "17",
+  "author": [
+   {
+    "given": "Dierk",
+    "family": "Herzer",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Holger",
+    "family": "Strulik",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Sebastian",
+    "family": "Vollmer",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "container-title": [
+   "Journal of Economic Growth"
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2012,
+     10,
+     10
+    ]
+   ]
+  },
+  "URL": "https://doi.org/10.1007/s10887-012-9085-6"
+ },
+ "durlauf2001": {
+  "publisher": "Elsevier BV",
+  "issue": "1",
+  "DOI": "10.1016/s0304-4076(00)00055-5",
+  "type": "journal-article",
+  "page": "65-69",
+  "title": [
+   "Manifesto for a growth econometrics"
+  ],
+  "volume": "100",
+  "author": [
+   {
+    "given": "Steven N",
+    "family": "Durlauf",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "container-title": [
+   "Journal of Econometrics"
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2001,
+     1
+    ]
+   ]
+  },
+  "URL": "https://doi.org/10.1016/s0304-4076(00)00055-5"
+ },
+ "brock2001": {
+  "DOI": "10.1596/17447",
+  "title": [
+   "Growth Empirics and Reality"
+  ],
+  "author": [
+   {
+    "given": "William A.",
+    "family": "Brock",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Steven N.",
+    "family": "Durlauf",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2001,
+     5
+    ]
+   ]
+  },
+  "publisher": "Washington, DC:  World Bank",
+  "type": "book",
+  "URL": "https://doi.org/10.1596/17447"
+ },
+ "durlauf2005": {
+  "publisher": "Elsevier",
+  "DOI": "10.1016/s1574-0684(05)01008-7",
+  "type": "book-chapter",
+  "page": "555-677",
+  "title": [
+   "Chapter 8 Growth Econometrics"
+  ],
+  "author": [
+   {
+    "given": "Steven N.",
+    "family": "Durlauf",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Paul A.",
+    "family": "Johnson",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Jonathan R.W.",
+    "family": "Temple",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "container-title": [
+   "Handbook of Economic Growth"
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2005
+    ]
+   ]
+  },
+  "URL": "https://doi.org/10.1016/s1574-0684(05)01008-7"
+ },
+ "levine1992": {
+  "DOI": "10.2139/ssrn.2432519",
+  "title": [
+   "A Robust Sensitivity Analysis of Cross-Country Finance-Growth Regressions"
+  ],
+  "author": [
+   {
+    "given": "Arshad",
+    "family": "Bhatti",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2014
+    ]
+   ]
+  },
+  "publisher": "Elsevier BV",
+  "type": "posted-content",
+  "URL": "https://doi.org/10.2139/ssrn.2432519"
+ },
+ "sala1997": {
+  "DOI": "10.3386/w6252",
+  "title": [
+   "I Just Ran Four Million Regressions"
+  ],
+  "author": [
+   {
+    "given": "Xavier",
+    "family": "Sala-i-Martin",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     1997,
+     11
+    ]
+   ]
+  },
+  "publisher": "National Bureau of Economic Research",
+  "type": "report",
+  "URL": "https://doi.org/10.3386/w6252"
+ },
+ "schofer2005": {
+  "publisher": "SAGE Publications",
+  "issue": "6",
+  "DOI": "10.1177/000312240507000602",
+  "type": "journal-article",
+  "page": "898-920",
+  "title": [
+   "The Worldwide Expansion of Higher Education in the Twentieth Century"
+  ],
+  "volume": "70",
+  "author": [
+   {
+    "given": "Evan",
+    "family": "Schofer",
+    "sequence": "first",
+    "affiliation": [
+     {
+      "name": "University of Minnesota"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "John W.",
+    "family": "Meyer",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "Stanford University"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "container-title": [
+   "American Sociological Review"
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2005,
+     12
+    ]
+   ]
+  },
+  "URL": "https://doi.org/10.1177/000312240507000602"
+ },
+ "meyer1992": {
+  "publisher": "JSTOR",
+  "issue": "2",
+  "DOI": "10.2307/2112679",
+  "type": "journal-article",
+  "page": "128",
+  "title": [
+   "World Expansion of Mass Education, 1870-1980"
+  ],
+  "volume": "65",
+  "author": [
+   {
+    "given": "John W.",
+    "family": "Meyer",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Francisco O.",
+    "family": "Ramirez",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Yasemin Nuhoglu",
+    "family": "Soysal",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "container-title": [
+   "Sociology of Education"
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     1992,
+     4
+    ]
+   ]
+  },
+  "URL": "https://doi.org/10.2307/2112679"
+ },
+ "davis1945": {
+  "publisher": "SAGE Publications",
+  "issue": "1",
+  "DOI": "10.1177/000271624523700102",
+  "type": "journal-article",
+  "page": "1-11",
+  "title": [
+   "The World Demographic Transition"
+  ],
+  "volume": "237",
+  "author": [
+   {
+    "given": "Kingsley",
+    "family": "Davis",
+    "sequence": "first",
+    "affiliation": [
+     {
+      "name": "School of Public and International Affairs"
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "container-title": [
+   "The ANNALS of the American Academy of Political and Social Science"
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     1945,
+     1
+    ]
+   ]
+  },
+  "URL": "https://doi.org/10.1177/000271624523700102"
+ },
+ "bongaarts1998": {
+  "DOI": "10.31899/pgy6.1010",
+  "title": [
+   "On the quantum and tempo of fertility"
+  ],
+  "author": [
+   {
+    "given": "John",
+    "family": "Bongaarts",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ]
+   },
+   {
+    "given": "Griffith",
+    "family": "Feeney",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ]
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     1998
+    ]
+   ]
+  },
+  "publisher": "Population Council",
+  "type": "report",
+  "URL": "https://doi.org/10.31899/pgy6.1010"
+ },
+ "lesthaeghe2010": {
+  "publisher": "Wiley",
+  "issue": "2",
+  "DOI": "10.1111/j.1728-4457.2010.00328.x",
+  "type": "journal-article",
+  "page": "211-251",
+  "title": [
+   "The Unfolding Story of the Second Demographic Transition"
+  ],
+  "volume": "36",
+  "author": [
+   {
+    "given": "Ron",
+    "family": "Lesthaeghe",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "container-title": [
+   "Population and Development Review"
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2010,
+     6
+    ]
+   ]
+  },
+  "URL": "https://doi.org/10.1111/j.1728-4457.2010.00328.x"
+ },
+ "basu2002": {
+  "publisher": "Elsevier BV",
+  "issue": "10",
+  "DOI": "10.1016/s0305-750x(02)00072-4",
+  "type": "journal-article",
+  "page": "1779-1790",
+  "title": [
+   "Why does Education Lead to Lower Fertility? A Critical Review of Some of the Possibilities"
+  ],
+  "volume": "30",
+  "author": [
+   {
+    "given": "Alaka Malwade",
+    "family": "Basu",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "container-title": [
+   "World Development"
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2002,
+     10
+    ]
+   ]
+  },
+  "URL": "https://doi.org/10.1016/s0305-750x(02)00072-4"
+ },
+ "angeles2010": {
+  "publisher": "IEEE",
+  "DOI": "10.1109/icee.2010.246",
+  "type": "proceedings-article",
+  "page": "951-953",
+  "title": [
+   "Human Capital, Fertility Rate and Labor Productivity of Agricultural Scale of Operation: Evidence from China 1980-2007"
+  ],
+  "author": [
+   {
+    "given": "Zhang",
+    "family": "Ping",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ]
+   }
+  ],
+  "container-title": [
+   "2010 International Conference on E-Business and E-Government"
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2010,
+     5
+    ]
+   ]
+  },
+  "URL": "https://doi.org/10.1109/icee.2010.246"
+ },
+ "kc2017": {
+  "publisher": "Elsevier BV",
+  "DOI": "10.1016/j.gloenvcha.2014.06.004",
+  "type": "journal-article",
+  "page": "181-192",
+  "title": [
+   "The human core of the shared socioeconomic pathways: Population scenarios by age, sex and level of education for all countries to 2100"
+  ],
+  "volume": "42",
+  "author": [
+   {
+    "given": "Samir",
+    "family": "KC",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Wolfgang",
+    "family": "Lutz",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "container-title": [
+   "Global Environmental Change"
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2017,
+     1
+    ]
+   ]
+  },
+  "URL": "https://doi.org/10.1016/j.gloenvcha.2014.06.004"
+ },
+ "chicoine2012": {
+  "DOI": "10.2139/ssrn.2157920",
+  "title": [
+   "Education and Fertility: Evidence from a Policy Change in Kenya"
+  ],
+  "author": [
+   {
+    "given": "Luke",
+    "family": "Chicoine",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2012
+    ]
+   ]
+  },
+  "container-title": [
+   "SSRN Electronic Journal"
+  ],
+  "publisher": "Elsevier BV",
+  "type": "journal-article",
+  "URL": "https://doi.org/10.2139/ssrn.2157920"
+ },
+ "duflo2001": {
+  "DOI": "10.3386/w7860",
+  "title": [
+   "Schooling and Labor Market Consequences of School Construction in Indonesia: Evidence from an Unusual Policy Experiment"
+  ],
+  "author": [
+   {
+    "given": "Esther",
+    "family": "Duflo",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2000,
+     8
+    ]
+   ]
+  },
+  "publisher": "National Bureau of Economic Research",
+  "type": "report",
+  "URL": "https://doi.org/10.3386/w7860"
+ },
+ "king1997": {
+  "DOI": "10.3886/icpsr01132",
+  "title": [
+   "Solution to the Ecological Inference Problem: Reconstructing Individual Behavior from Aggregate Data"
+  ],
+  "author": [
+   {
+    "given": "Gary",
+    "family": "King",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     1997,
+     5,
+     16
+    ]
+   ]
+  },
+  "container-title": [
+   "ICPSR Data Holdings"
+  ],
+  "publisher": "Inter-university Consortium for Political and Social Research (ICPSR)",
+  "type": "dataset",
+  "URL": "https://doi.org/10.3886/icpsr01132"
+ },
+ "mankiw1992": {
+  "DOI": "10.3386/w3541",
+  "title": [
+   "A Contribution to the Empirics of Economic Growth"
+  ],
+  "author": [
+   {
+    "given": "N. Gregory",
+    "family": "Mankiw",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "David",
+    "family": "Romer",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "David",
+    "family": "Weil",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     1990,
+     12
+    ]
+   ]
+  },
+  "publisher": "National Bureau of Economic Research",
+  "type": "report",
+  "URL": "https://doi.org/10.3386/w3541"
+ },
+ "benhabib1994": {
+  "publisher": "Elsevier BV",
+  "issue": "2",
+  "DOI": "10.1016/0304-3932(94)90047-7",
+  "type": "journal-article",
+  "page": "143-173",
+  "title": [
+   "The role of human capital in economic development evidence from aggregate cross-country data"
+  ],
+  "volume": "34",
+  "author": [
+   {
+    "given": "Jess",
+    "family": "Benhabib",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Mark M.",
+    "family": "Spiegel",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "container-title": [
+   "Journal of Monetary Economics"
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     1994,
+     10
+    ]
+   ]
+  },
+  "URL": "https://doi.org/10.1016/0304-3932(94)90047-7"
+ },
+ "temple1999": {
+  "publisher": "American Economic Association",
+  "issue": "1",
+  "DOI": "10.1257/jel.37.1.112",
+  "type": "journal-article",
+  "page": "112-156",
+  "title": [
+   "The New Growth Evidence"
+  ],
+  "volume": "37",
+  "author": [
+   {
+    "given": "Jonathan",
+    "family": "Temple",
+    "sequence": "first",
+    "affiliation": [
+     {
+      "name": "Hertford College, and Institute of Economics and Statistics, Oxford University."
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "container-title": [
+   "Journal of Economic Literature"
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     1999,
+     3,
+     1
+    ]
+   ]
+  },
+  "URL": "https://doi.org/10.1257/jel.37.1.112"
+ },
+ "rosenzweig1990": {
+  "publisher": "University of Chicago Press",
+  "issue": "5, Part 2",
+  "DOI": "10.1086/261724",
+  "type": "journal-article",
+  "page": "S38-S70",
+  "title": [
+   "Population Growth and Human Capital Investments: Theory and Evidence"
+  ],
+  "volume": "98",
+  "author": [
+   {
+    "given": "Mark R.",
+    "family": "Rosenzweig",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "container-title": [
+   "Journal of Political Economy"
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     1990,
+     10
+    ]
+   ]
+  },
+  "URL": "https://doi.org/10.1086/261724"
+ },
+ "schultz1997": {
+  "publisher": "Elsevier",
+  "DOI": "10.1016/s1574-003x(97)80025-6",
+  "type": "book-chapter",
+  "page": "349-430",
+  "title": [
+   "Chapter 8 Demand for children in low income countries"
+  ],
+  "author": [
+   {
+    "given": "T. Paul",
+    "family": "Schultz",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "container-title": [
+   "Handbook of Population and Family Economics",
+   "Handbook of Population and Family Economics Volume 1"
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     1997
+    ]
+   ]
+  },
+  "URL": "https://doi.org/10.1016/s1574-003x(97)80025-6"
+ },
+ "bertrand2004": {
+  "DOI": "10.3386/w8841",
+  "title": [
+   "How Much Should We Trust Differences-in-Differences Estimates?"
+  ],
+  "author": [
+   {
+    "given": "Marianne",
+    "family": "Bertrand",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Esther",
+    "family": "Duflo",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Sendhil",
+    "family": "Mullainathan",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2002,
+     3
+    ]
+   ]
+  },
+  "publisher": "National Bureau of Economic Research",
+  "type": "report",
+  "URL": "https://doi.org/10.3386/w8841"
+ },
+ "lutz2007": {
+  "publisher": "Osterreichische Akademie der Wissenschaften, Verlag",
+  "DOI": "10.1553/populationyearbook2007s193",
+  "type": "journal-article",
+  "page": "193-235",
+  "title": [
+   "Reconstruction of populations by age, sex and level of educational attainment for 120 countries for 1970-2000"
+  ],
+  "volume": "2007",
+  "author": [
+   {
+    "given": "Wolfgang",
+    "family": "Lutz",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "container-title": [
+   "Vienna Yearbook of Population Research"
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2007
+    ]
+   ]
+  },
+  "URL": "https://doi.org/10.1553/populationyearbook2007s193"
+ },
+ "freedman1999": {
+  "DOI": "10.1007/978-94-007-0753-5_101076",
+  "title": [
+   "Ecological Inference Fallacy"
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2014
+    ]
+   ]
+  },
+  "container-title": [
+   "Encyclopedia of Quality of Life and Well-Being Research"
+  ],
+  "page": "1779-1779",
+  "publisher": "Springer Netherlands",
+  "type": "book-chapter",
+  "URL": "https://doi.org/10.1007/978-94-007-0753-5_101076"
+ },
+ "cochrane1979": {
+  "publisher": "JSTOR",
+  "issue": "3",
+  "DOI": "10.2307/1972087",
+  "type": "journal-article",
+  "page": "545",
+  "title": [
+   "Fertility and Education: What Do We Really Know?"
+  ],
+  "volume": "5",
+  "author": [
+   {
+    "given": "M. P.",
+    "family": "T.",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ]
+   },
+   {
+    "given": "Susan Hill",
+    "family": "Cochrane",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ]
+   }
+  ],
+  "container-title": [
+   "Population and Development Review"
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     1979,
+     9
+    ]
+   ]
+  },
+  "URL": "https://doi.org/10.2307/1972087"
+ },
+ "trow1974": {
+  "publisher": "Springer Netherlands",
+  "DOI": "10.1007/978-1-4020-4012-2_13",
+  "type": "book-chapter",
+  "page": "243-280",
+  "title": [
+   "Reflections on the Transition from Elite to Mass to Universal Access: Forms and Phases of Higher Education in Modern Societies since WWII"
+  ],
+  "author": [
+   {
+    "given": "Martin",
+    "family": "Trow",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "container-title": [
+   "Springer International Handbooks of Education",
+   "International Handbook of Higher Education"
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     null
+    ]
+   ]
+  },
+  "URL": "https://doi.org/10.1007/978-1-4020-4012-2_13"
+ },
+ "angristkrueger1999": {
+  "publisher": "Elsevier",
+  "DOI": "10.1016/s1573-4463(99)03004-7",
+  "type": "book-chapter",
+  "page": "1277-1366",
+  "title": [
+   "Empirical Strategies in Labor Economics"
+  ],
+  "author": [
+   {
+    "given": "Joshua D.",
+    "family": "Angrist",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Alan B.",
+    "family": "Krueger",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "container-title": [
+   "Handbook of Labor Economics"
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     1999
+    ]
+   ]
+  },
+  "URL": "https://doi.org/10.1016/s1573-4463(99)03004-7"
+ },
+ "acemoglu2005": {
+  "DOI": "10.3386/w10481",
+  "title": [
+   "Institutions as the Fundamental Cause of Long-Run Growth"
+  ],
+  "author": [
+   {
+    "given": "Daron",
+    "family": "Acemoglu",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Simon",
+    "family": "Johnson",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "James",
+    "family": "Robinson",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2004,
+     5
+    ]
+   ]
+  },
+  "publisher": "National Bureau of Economic Research",
+  "type": "report",
+  "URL": "https://doi.org/10.3386/w10481"
+ },
+ "foster1997": {
+  "publisher": "University of Chicago Press",
+  "issue": "6",
+  "DOI": "10.1086/601447",
+  "type": "journal-article",
+  "page": "1176-1209",
+  "title": [
+   "Learning by Doing and Learning from Others: Human Capital and Technical Change in Agriculture"
+  ],
+  "volume": "103",
+  "author": [
+   {
+    "given": "Andrew D.",
+    "family": "Foster",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Mark R.",
+    "family": "Rosenzweig",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "container-title": [
+   "Journal of Political Economy"
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     1995,
+     12
+    ]
+   ]
+  },
+  "URL": "https://doi.org/10.1086/601447"
+ },
+ "schultz1961": {
+  "publisher": "JSTOR",
+  "issue": "155",
+  "DOI": "10.2307/2551855",
+  "type": "journal-article",
+  "page": "333",
+  "title": [
+   "Investment in Human Capital."
+  ],
+  "volume": "39",
+  "author": [
+   {
+    "given": "George",
+    "family": "Psacharopoulos",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Theodore W.",
+    "family": "Schultz",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "container-title": [
+   "Economica"
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     1972,
+     8
+    ]
+   ]
+  },
+  "URL": "https://doi.org/10.2307/2551855"
+ },
+ "becker1960": {
+  "DOI": "10.3386/w3414",
+  "title": [
+   "Human Capital, Fertility, and Economic Growth"
+  ],
+  "author": [
+   {
+    "given": "Gary",
+    "family": "Becker",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Kevin",
+    "family": "Murphy",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Robert",
+    "family": "Tamura",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     1990,
+     8
+    ]
+   ]
+  },
+  "publisher": "National Bureau of Economic Research",
+  "type": "report",
+  "URL": "https://doi.org/10.3386/w3414"
+ },
+ "davis1963": {
+  "publisher": "University of Chicago Press",
+  "issue": "3",
+  "DOI": "10.1086/449714",
+  "type": "journal-article",
+  "page": "211-235",
+  "title": [
+   "Social Structure and Fertility: An Analytic Framework"
+  ],
+  "volume": "4",
+  "author": [
+   {
+    "given": "Kingsley",
+    "family": "Davis",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Judith",
+    "family": "Blake",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "container-title": [
+   "Economic Development and Cultural Change"
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     1956,
+     4
+    ]
+   ]
+  },
+  "URL": "https://doi.org/10.1086/449714"
+ },
+ "notestein1945": {
+  "publisher": "JSTOR",
+  "issue": "4",
+  "DOI": "10.2307/3348188",
+  "type": "journal-article",
+  "page": "307",
+  "title": [
+   "Population Problems of Palestine"
+  ],
+  "volume": "23",
+  "author": [
+   {
+    "given": "Frank W.",
+    "family": "Notestein",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Ernest",
+    "family": "Jurkat",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "container-title": [
+   "The Milbank Memorial Fund Quarterly"
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     1945,
+     10
+    ]
+   ]
+  },
+  "URL": "https://doi.org/10.2307/3348188"
+ },
+ "bongaarts2011": {
+  "publisher": "JSTOR",
+  "issue": "1",
+  "DOI": "10.2307/1972149",
+  "type": "journal-article",
+  "page": "105",
+  "title": [
+   "A Framework for Analyzing the Proximate Determinants of Fertility"
+  ],
+  "volume": "4",
+  "author": [
+   {
+    "given": "John",
+    "family": "Bongaarts",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "container-title": [
+   "Population and Development Review"
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     1978,
+     3
+    ]
+   ]
+  },
+  "URL": "https://doi.org/10.2307/1972149"
+ },
+ "lutz2014": {
+  "publisher": "American Association for the Advancement of Science (AAAS)",
+  "issue": "6209",
+  "DOI": "10.1126/science.346.6209.561-a",
+  "type": "journal-article",
+  "page": "561-561",
+  "title": [
+   "Population growth: Peak probability"
+  ],
+  "volume": "346",
+  "author": [
+   {
+    "given": "Wolfgang",
+    "family": "Lutz",
+    "sequence": "first",
+    "affiliation": [
+     {
+      "name": "World Population Program, International Institute for Applied Systems Analysis (IIASA), A-2361 Laxenburg, Austria."
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "William",
+    "family": "Butz",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "World Population Program, International Institute for Applied Systems Analysis (IIASA), A-2361 Laxenburg, Austria."
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Samir",
+    "family": "KC",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "World Population Program, International Institute for Applied Systems Analysis (IIASA), A-2361 Laxenburg, Austria."
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Warren",
+    "family": "Sanderson",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "World Population Program, International Institute for Applied Systems Analysis (IIASA), A-2361 Laxenburg, Austria."
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Sergei",
+    "family": "Scherbov",
+    "sequence": "additional",
+    "affiliation": [
+     {
+      "name": "World Population Program, International Institute for Applied Systems Analysis (IIASA), A-2361 Laxenburg, Austria."
+     }
+    ],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "container-title": [
+   "Science"
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2014,
+     10,
+     31
+    ]
+   ]
+  },
+  "URL": "https://doi.org/10.1126/science.346.6209.561-a"
+ },
+ "striessnig2013": {
+  "publisher": "Springer Science and Business Media LLC",
+  "issue": "3",
+  "DOI": "10.1007/s10663-013-9213-3",
+  "type": "journal-article",
+  "page": "409-425",
+  "title": [
+   "Can below-replacement fertility be desirable?"
+  ],
+  "volume": "40",
+  "author": [
+   {
+    "given": "Erich",
+    "family": "Striessnig",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ]
+   },
+   {
+    "given": "Wolfgang",
+    "family": "Lutz",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "role": "author",
+      "vocabulary": "crossref"
+     }
+    ]
+   }
+  ],
+  "container-title": [
+   "Empirica"
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2013,
+     3,
+     20
+    ]
+   ]
+  },
+  "URL": "https://doi.org/10.1007/s10663-013-9213-3"
+ },
+ "murtin2013": {
+  "publisher": "MIT Press - Journals",
+  "issue": "2",
+  "DOI": "10.1162/rest_a_00302",
+  "type": "journal-article",
+  "page": "617-631",
+  "title": [
+   "Long-Term Determinants of the Demographic Transition, 1870\u20132000"
+  ],
+  "volume": "95",
+  "author": [
+   {
+    "given": "Fabrice",
+    "family": "Murtin",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "container-title": [
+   "Review of Economics and Statistics"
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2013,
+     5
+    ]
+   ]
+  },
+  "URL": "https://doi.org/10.1162/rest_a_00302"
+ },
+ "chen2010": {
+  "DOI": "10.2139/ssrn.6824800",
+  "title": [
+   "Post-Pandemic Structural Break in Returns to Education: Evidence from China, 2010-2023"
+  ],
+  "author": [
+   {
+    "given": "Shikai",
+    "family": "Li",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Jie",
+    "family": "Chen",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2026
+    ]
+   ]
+  },
+  "publisher": "Elsevier BV",
+  "type": "posted-content",
+  "URL": "https://doi.org/10.2139/ssrn.6824800"
+ },
+ "osili2008": {
+  "DOI": "10.3386/w13070",
+  "title": [
+   "Does Female Schooling Reduce Fertility? Evidence from Nigeria"
+  ],
+  "author": [
+   {
+    "given": "Una Okonkwo",
+    "family": "Osili",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Bridget Terry",
+    "family": "Long",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2007,
+     4
+    ]
+   ]
+  },
+  "publisher": "National Bureau of Economic Research",
+  "type": "report",
+  "URL": "https://doi.org/10.3386/w13070"
+ },
+ "bratti2003": {
+  "publisher": "Springer Science and Business Media LLC",
+  "issue": "3",
+  "DOI": "10.1007/s00148-003-0142-5",
+  "type": "journal-article",
+  "page": "525-554",
+  "title": [
+   "Labour force participation and marital fertility of Italian women: The role of education"
+  ],
+  "volume": "16",
+  "author": [
+   {
+    "given": "Massimiliano",
+    "family": "Bratti",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "container-title": [
+   "Journal of Population Economics"
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2003,
+     8,
+     1
+    ]
+   ]
+  },
+  "URL": "https://doi.org/10.1007/s00148-003-0142-5"
+ }
+}
