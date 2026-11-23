@@ -9,6 +9,7 @@
 - `paper.md` — full manuscript: abstract; introduction (Durlauf as named foil); literature review; method; data; results sorted under (1) Fertility and (2) Massification; resolution analysis; relation to prior work; discussion; limitations; reproducibility; target venues; appendices (definitions, grouping inventory, plain-language abstract and five-point summary).
 - `README.md` — this file.
 - `refs.md` — APA 7th bibliography with per-entry verification status.
+- `lit-review.md` — prior-art search and standing assessment (23 Nov 2026): closest work (multiverse, vibration of effects, cross-national multiverse applications, heterogeneity critique), what is genuinely ours vs borrowed, an honest strength score for each result, a use/don't-use checklist for other researchers, and a proposed (not applied) five-sentence patch to the paper plus nine verified references.
 - `scripts/verify_refs.py` — Crossref DOI checker used for the bibliography (prints bibliographic fields only).
 - `scripts/find_refs.py` — Crossref bibliographic search used to recover DOIs for the entries whose DOI was uncertain.
 
