@@ -1,0 +1,30 @@
+=== C4: country event sequencing (pre-registered definitions, common window 1965-2010) ===
+countries with data: 180; with all three events detected: 64
+release before schooling: 5%; schooling before fertility: 69%; release before fertility: 6%
+median gap release->schooling: -26 years; schooling->fertility: +0; release->fertility: -26
+bootstrap 95% intervals (1000 resamples of countries): release<=schooling [0, 11]%; schooling<=fertility [58, 80]%; gap release->schooling [-26, -22] yrs
+countries where schooling precedes release: 61 of 64 (ALB, BGD, BLZ, BRA, CHL, CHN, CIV, COL, CRI, CUB, DOM, DZA, ECU, EGY, ESP, FJI, GHA, GTM, GUY, HND)
+
+=== C5: US historical laboratory ===
+Data availability: OWID long-run fertility (1800+) and mean years of schooling (1870+) are usable.
+A long-run US agricultural-employment-share series was NOT obtainable (OWID share-of-employment series
+starts 1991; four other OWID slugs and FRED returned 404/timeout). We therefore use the documented
+Historic Statistics/USDA benchmark dates for the farm-employment share and label them external reference
+points, not API data. The US order is read from the dated series below.
+US fertility: 91 years 1933-2023; US schooling: 31 years 1870-2020
+US farm-employment share benchmarks used (external reference): 1910:31.0%, 1920:27.0%, 1930:21.5%, 1940:17.0%, 1950:12.0%, 1960:8.0%, 1970:4.0%
+US onset years: fertility decline 1957 (cohort 1937); schooling take-off 1955 (cohort 1935); farm-employment decline 1910 (cohort 1890).
+US order: farm employment (1910) -> schooling (1955) -> fertility (1957)
+Reading: in the observable US window the order is farm-employment decline (external benchmarks)
+-> schooling -> fertility, which is consistent with the theory's ordering. But the OWID US fertility
+series starts only in 1933, so this says nothing about the nineteenth-century US fertility transition,
+and the farm-share benchmarks are external reference points, not API data. The US therefore supports
+the ordering only for the twentieth century, and cannot adjudicate the earlier transition.
+Cross-country (C4) is the opposite: in the common 1965-2010 window schooling take-off precedes
+agricultural labour release in 61 of 64 countries, so the generational ordering is NOT supported
+there - reported as the pre-registered falsifier result.
+
+Second early industrialiser (UK): a long-run agricultural-employment series was not obtainable from the
+same public sources; the gap is documented rather than filled with a proxy. OWID fertility/schooling for
+the UK exist but without the farm-employment series the ordering cannot be dated, so no UK ordering is
+claimed.

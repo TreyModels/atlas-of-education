@@ -1,0 +1,5 @@
+OK ag_employment_share: 7020 rows, columns ['entity', 'code', 'year', 'share_employed_agriculture']
+OK fertility: 19402 rows, columns ['entity', 'code', 'year', 'fertility_rate_hist']
+OK schooling_years: 3699 rows, columns ['entity', 'code', 'year', 'mf_youth_and_adults__15_64_years__average_years_of_education']
+FAILED ag_output_per_worker https://ourworldindata.org/grapher/agricultural-output-per-worker.csv?v=1&csvType=full&useColumnShortNames=true
+FAILED primary_attainment https://ourworldindata.org/grapher/share-of-population-with-completed-primary-education.csv?v=1&csvType=full&useColumnShortNames=true

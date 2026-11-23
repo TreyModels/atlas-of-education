@@ -1,0 +1,11 @@
+{
+ "countries_with_all_events": 64,
+ "pct_release_before_schooling": 4.6875,
+ "pct_schooling_before_fertility": 68.75,
+ "pct_release_before_fertility": 6.25,
+ "us": {
+  "fertility_onset": 1957,
+  "schooling_onset": 1955,
+  "farm_onset": 1910
+ }
+}

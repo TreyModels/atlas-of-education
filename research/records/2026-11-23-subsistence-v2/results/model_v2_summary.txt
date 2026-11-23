@@ -1,0 +1,35 @@
+=== T3 v2: repaired joint demography-agriculture-absorber demonstration model ===
+5 free parameters (GATE); sigma=1.5 estimated in task-22; N0 and kappa calibrated from endpoints.
+Repairs: explicit wage-sector job stock + schooling queue; agricultural TFP growth and food income
+elasticity calibrated rather than imposed; mortality timing fitted. Demonstration, not history.
+
+   queue weight in schooling                    +4.8666   [calibrated]
+   wage-job creation rate (per 5y)              +0.0209   [calibrated]
+   agricultural TFP growth (per 5y)             +0.0452   [calibrated]
+   food income elasticity                       +0.4091   [calibrated]
+   mortality timing shift (years)               +28.8340   [calibrated]
+   scaled root-mean-square fit residual: 0.319
+
+repair check (v1 failure in brackets):
+  1900: ag share  36.4% (data  30.58; v1 2020 8.1 vs 19.4) | TFR   4.17 (data   6.01) | schooling   5.93 (data   0.39) | pop index   0.88 (data   1.00; v1 4.4 vs 2.9) | wage share  37.67 (data     na)
+  1950: ag share  39.6% (data  30.58; v1 2020 8.1 vs 19.4) | TFR   4.50 (data   6.01) | schooling   3.38 (data   2.44) | pop index   0.94 (data   1.00; v1 4.4 vs 2.9) | wage share  49.52 (data     na)
+  1960: ag share  39.3% (data  30.58; v1 2020 8.1 vs 19.4) | TFR   4.40 (data   6.01) | schooling   2.99 (data   3.12) | pop index   1.00 (data   1.00; v1 4.4 vs 2.9) | wage share  51.60 (data     na)
+  1980: ag share  35.4% (data  30.58; v1 2020 8.1 vs 19.4) | TFR   3.45 (data   4.22) | schooling   3.18 (data   5.47) | pop index   1.15 (data   1.57; v1 4.4 vs 2.9) | wage share  55.51 (data     na)
+  2000: ag share  24.9% (data  30.30; v1 2020 8.1 vs 19.4) | TFR   2.72 (data   2.71) | schooling   5.77 (data   7.92) | pop index   1.33 (data   2.24; v1 4.4 vs 2.9) | wage share  59.11 (data  58.10)
+  2020: ag share  17.6% (data  19.44; v1 2020 8.1 vs 19.4) | TFR   2.35 (data   2.06) | schooling   7.53 (data   9.57) | pop index   1.58 (data   2.92; v1 4.4 vs 2.9) | wage share  62.42 (data  62.23)
+
+counterfactuals in 2020 (baseline first):
+  freeze mechanisation        : ag share 17.6% vs 39.9%; schooling 7.5 vs 0.2 yrs; TFR 2.35 vs 3.29; pop index 1.58 vs 2.19; wage share 62.4% vs 60.1%
+  freeze schooling pipeline   : ag share 17.6% vs 18.0%; schooling 7.5 vs 3.0 yrs; TFR 2.35 vs 2.94; pop index 1.58 vs 1.90; wage share 62.4% vs 62.4%
+  freeze mortality decline    : ag share 17.6% vs 18.4%; schooling 7.5 vs 7.2 yrs; TFR 2.35 vs 3.96; pop index 1.58 vs 0.39; wage share 62.4% vs 62.4%
+  reading: freezing mechanisation leaves the most labour in agriculture and the least schooling;
+  freezing the pipeline leaves released labour unabsorbed and fertility higher; freezing mortality
+  removes the population explosion. The mortality freeze is the one that removes the demographic
+  driver the theory needs, so the model's implicit first mover is the mortality decline.
+
+parameter recovery test (simulate from known parameters, re-fit all five series):
+   lam_q     true +2.500 recovered +0.000 (error 2.500)
+   gJ        true +0.040 recovered +0.024 (error 0.016)
+   gA        true +0.020 recovered +0.020 (error 0.000)
+   eps_food  true +0.200 recovered +0.198 (error 0.002)
+   mort      true +5.000 recovered +2.457 (error 2.543)
