@@ -1,14 +1,13 @@
 # Schooling as a dose of individuation: GPU port and rerun (23 November 2026)
 
 ## What this job did
-1. Rewrote the individual-level life-course model from `research/records/2026-11-23-dose-model/` to run on a
-   GPU (Tesla T4, 16 GB). It is now a standalone engine with a documented callable interface, benchmarked
-   below, and delivered as an artefact for the agent-based model in its own right.
-2. Refitted the model on the **exact published CPU engine** with far more draws than last session
-   (5,000 prior draws per scenario at a fixed tolerance, 948-1,044 equally weighted accepted draws each,
-   plus an independent replicate of scenario A), and answered the four questions in the brief.
+1. Rewrote the life-course model from `research/records/2026-11-23-dose-model/` for GPU (T4, 16 GB): a
+   standalone engine, documented callable interface and scale benchmarks, delivered as an artefact for the
+   agent-based model in its own right.
+2. Refitted on the **exact published CPU engine** with 5,000 prior draws per scenario at a fixed tolerance
+   (948-1,044 equally weighted accepted draws each, plus an independent replicate of scenario A).
 3. Found and fixed a **serious arithmetic defect in the previous fitting code** that very likely explains
-   last session's "posterior looks like the prior, search not converged" conclusion. Evidence below.
+   last session's "posterior looks like the prior" conclusion.
 
 **Headline reversal:** on the exact engine with valid equal weights, the individuation scenario does **not**
 beat development-only out of sample. Last session's "A better out-of-sample, 4 of 6 countries" does **not**
@@ -143,15 +142,16 @@ The equal-weight tolerance is loose by construction, and the individuation poste
 does not translate out of sample.
 
 ## Files
-`scripts/`: `kernel.cu` and `engine.py` (GPU engine), `dosecore.py` (counter RNG, bit-exact math, schooling
-imputation), `ref_numpy.py` and `test_port.py` (independent reference and the porting test), `test_market.py`
-(200-seed engine-difference measurement), `reject_abc.py` (the quoted equal-weight fitter, with the synthetic
-recovery option), `recover_coverage.py`, `fit_cpu.py` and `fit_gpu.py` (particle ABC, superseded and the GPU
-protocol), `analyze_cpu.py` (posteriors, diagnostics, held-out, tempo/quantum, stability), `falsifiers.py`,
-`falsifier_perm.py`, `abm_dose.py` (callable interface), `bench_scale.py`.
-`results/`: the quoted fits `rej_fitA.json`, `rej_fitB.json`, `rej_fitA_rep.json`, `rec_fitA.json`;
-`port_test.json`, `PORT_NOTES.md`, `market_bias_postfix_17-31.json`; `analysis_holdout.json`,
-`analysis_holdout_gpuengine.json`, `analysis_decomp.json`, `analysis_stability.json`, `stability_A.md`,
-`summary_A.md`; `falsifiers.json`, `falsifier_perm.json`; `bench_scale.json`, `bench_scale_2080ti.log`; and
-the superseded `cpu_fit*.json` / `fix_fit*.json` / `market_bias_prefix_17-30_superseded.json` from the
-broken-weight attempts, kept so the methods trail is auditable.
+`scripts/`: `kernel.cu`, `engine.py`, `dosecore.py`, `abm_dose.py`, `bench_scale.py` (the GPU engine, its
+callable interface and scale benchmark); `ref_numpy.py` and `test_port.py` (independent reference and the
+porting test); `test_market.py` (200-seed engine-difference measurement); `reject_abc.py` (the quoted
+equal-weight fitter, with the synthetic-recovery option), `recover_coverage.py`, `falsifiers.py`,
+`falsifier_perm.py`; `analyze_cpu.py` (posteriors, diagnostics, held-out, tempo/quantum, stability); and the
+superseded `fit_cpu.py` / `fit_gpu.py`.
+`results/`: quoted fits `rej_fitA.json`, `rej_fitB.json`, `rej_fitA_rep.json`, `rec_fitA.json`; engine
+artefacts `port_test.json`, `PORT_NOTES.md`, `market_bias_postfix_17-31.json`, `bench_scale.json`,
+`bench_scale_2080ti.log`; analyses `analysis_holdout.json`, `analysis_holdout_gpuengine.json`,
+`analysis_decomp.json`, `analysis_stability.json`, `stability_A.md`, `summary_A.md`; falsifiers
+`falsifiers.json`, `falsifier_perm.json`; and the superseded `cpu_fit*` / `fix_fit*` /
+`market_bias_prefix_17-30_superseded.json` from the broken-weight attempts, kept so the methods trail is
+auditable.
