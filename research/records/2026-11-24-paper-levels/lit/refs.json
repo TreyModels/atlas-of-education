@@ -1,0 +1,1298 @@
+{
+ "robinson1950": {
+  "doi": "10.2307/2087176",
+  "title": "Ecological Correlations and the Behavior of Individuals",
+  "authors": [
+   "W. S. Robinson"
+  ],
+  "year": 1950,
+  "journal": "American Sociological Review",
+  "volume": "15",
+  "issue": "3",
+  "pages": "351",
+  "publisher": "SAGE Publications",
+  "type": "journal-article",
+  "url": "https://doi.org/10.2307/2087176",
+  "status": "verified",
+  "query": "Robinson 1950 ecological correlations and the behavior of individuals"
+ },
+ "nickell1981": {
+  "doi": "10.2307/1911408",
+  "title": "Biases in Dynamic Models with Fixed Effects",
+  "authors": [
+   "Stephen Nickell"
+  ],
+  "year": 1981,
+  "journal": "Econometrica",
+  "volume": "49",
+  "issue": "6",
+  "pages": "1417",
+  "publisher": "JSTOR",
+  "type": "journal-article",
+  "url": "https://doi.org/10.2307/1911408",
+  "status": "verified",
+  "query": "Nickell 1981 biases in dynamic models with fixed effects"
+ },
+ "angristpischke2009": {
+  "doi": "10.1515/9781400829828",
+  "title": "Mostly Harmless Econometrics",
+  "authors": [
+   "Joshua D. Angrist",
+   "J\u00f6rn-Steffen Pischke"
+  ],
+  "year": 2009,
+  "journal": "",
+  "volume": null,
+  "issue": null,
+  "pages": null,
+  "publisher": "Princeton University Press",
+  "type": "edited-book",
+  "url": "https://doi.org/10.1515/9781400829828",
+  "status": "verified",
+  "query": "Angrist Pischke 2009 Mostly Harmless Econometrics"
+ },
+ "belljones2015": {
+  "doi": "10.1017/psrm.2014.7",
+  "title": "Explaining Fixed Effects: Random Effects Modeling of Time-Series Cross-Sectional and Panel Data",
+  "authors": [
+   "Andrew Bell",
+   "Kelvyn Jones"
+  ],
+  "year": 2014,
+  "journal": "Political Science Research and Methods",
+  "volume": "3",
+  "issue": "1",
+  "pages": "133-153",
+  "publisher": "Cambridge University Press (CUP)",
+  "type": "journal-article",
+  "url": "https://doi.org/10.1017/psrm.2014.7",
+  "status": "verified",
+  "query": "Bell Jones 2015 explaining fixed effects random effects modeling panel data"
+ },
+ "hausmantaylor1981": {
+  "doi": "10.2307/1911406",
+  "title": "Panel Data and Unobservable Individual Effects",
+  "authors": [
+   "Jerry A. Hausman",
+   "William E. Taylor"
+  ],
+  "year": 1981,
+  "journal": "Econometrica",
+  "volume": "49",
+  "issue": "6",
+  "pages": "1377",
+  "publisher": "JSTOR",
+  "type": "journal-article",
+  "url": "https://doi.org/10.2307/1911406",
+  "status": "verified",
+  "query": "Hausman Taylor 1981 panel data and unobservable individual effects"
+ },
+ "steegen2016": {
+  "doi": "10.1177/1745691616658637",
+  "title": "Increasing Transparency Through a Multiverse Analysis",
+  "authors": [
+   "Sara Steegen",
+   "Francis Tuerlinckx",
+   "Andrew Gelman",
+   "Wolf Vanpaemel"
+  ],
+  "year": 2016,
+  "journal": "Perspectives on Psychological Science",
+  "volume": "11",
+  "issue": "5",
+  "pages": "702-712",
+  "publisher": "SAGE Publications",
+  "type": "journal-article",
+  "url": "https://doi.org/10.1177/1745691616658637",
+  "status": "verified",
+  "query": "Steegen Tuerlinckx Gelman Vanpaemel 2016 increasing transparency multiverse analysis"
+ },
+ "simonsohn2020": {
+  "doi": "10.1038/s41562-020-0912-z",
+  "title": "Specification curve analysis",
+  "authors": [
+   "Uri Simonsohn",
+   "Joseph P. Simmons",
+   "Leif D. Nelson"
+  ],
+  "year": 2020,
+  "journal": "Nature Human Behaviour",
+  "volume": "4",
+  "issue": "11",
+  "pages": "1208-1214",
+  "publisher": "Springer Science and Business Media LLC",
+  "type": "journal-article",
+  "url": "https://doi.org/10.1038/s41562-020-0912-z",
+  "status": "verified",
+  "query": "Simonsohn Simmons Nelson 2020 specification curve analysis"
+ },
+ "delgiudice2021": {
+  "doi": "10.1177/2515245920954925",
+  "title": "A Traveler\u2019s Guide to the Multiverse: Promises, Pitfalls, and a Framework for the Evaluation of Analytic Decisions",
+  "authors": [
+   "Marco Del Giudice",
+   "Steven W. Gangestad"
+  ],
+  "year": 2021,
+  "journal": "Advances in Methods and Practices in Psychological Science",
+  "volume": "4",
+  "issue": "1",
+  "pages": null,
+  "publisher": "SAGE Publications",
+  "type": "journal-article",
+  "url": "https://doi.org/10.1177/2515245920954925",
+  "status": "verified",
+  "query": "Del Giudice Gangestad 2021 traveler's guide multiverse"
+ },
+ "silberzahn2018": {
+  "doi": "10.3389/fpsyg.2023.1094150",
+  "title": "One data set, many analysts: Implications for practicing scientists",
+  "authors": [
+   "Erich Kummerfeld",
+   "Galin L. Jones"
+  ],
+  "year": 2023,
+  "journal": "Frontiers in Psychology",
+  "volume": "14",
+  "issue": null,
+  "pages": null,
+  "publisher": "Frontiers Media SA",
+  "type": "journal-article",
+  "url": "https://doi.org/10.3389/fpsyg.2023.1094150",
+  "status": "verified",
+  "query": "Silberzahn 2018 many analysts one data set"
+ },
+ "vivalt2020": {
+  "doi": "10.1093/jeea/jvaa019",
+  "title": "How Much Can We Generalize From Impact Evaluations?",
+  "authors": [
+   "Eva Vivalt"
+  ],
+  "year": 2020,
+  "journal": "Journal of the European Economic Association",
+  "volume": "18",
+  "issue": "6",
+  "pages": "3045-3089",
+  "publisher": "Oxford University Press (OUP)",
+  "type": "journal-article",
+  "url": "https://doi.org/10.1093/jeea/jvaa019",
+  "status": "verified",
+  "query": "Vivalt 2020 how much can we generalize from impact evaluations"
+ },
+ "deaton2010": {
+  "doi": "10.1257/jel.48.2.424",
+  "title": "Instruments, Randomization, and Learning about Development",
+  "authors": [
+   "Angus Deaton"
+  ],
+  "year": 2010,
+  "journal": "Journal of Economic Literature",
+  "volume": "48",
+  "issue": "2",
+  "pages": "424-455",
+  "publisher": "American Economic Association",
+  "type": "journal-article",
+  "url": "https://doi.org/10.1257/jel.48.2.424",
+  "status": "verified",
+  "query": "Deaton 2010 instruments randomization and learning about development"
+ },
+ "bareinboim2013": {
+  "doi": "10.1515/jci-2012-0004",
+  "title": "A General Algorithm for Deciding Transportability of Experimental Results",
+  "authors": [
+   "Elias Bareinboim",
+   "Judea Pearl"
+  ],
+  "year": 2013,
+  "journal": "Journal of Causal Inference",
+  "volume": "1",
+  "issue": "1",
+  "pages": "107-134",
+  "publisher": "Walter de Gruyter GmbH",
+  "type": "journal-article",
+  "url": "https://doi.org/10.1515/jci-2012-0004",
+  "status": "verified",
+  "query": "Bareinboim Pearl 2013 general algorithm deciding transportability experimental results"
+ },
+ "roth2022": {
+  "doi": "10.1257/aeri.20210236",
+  "title": "Pretest with Caution: Event-Study Estimates after Testing for Parallel Trends",
+  "authors": [
+   "Jonathan Roth"
+  ],
+  "year": 2022,
+  "journal": "American Economic Review: Insights",
+  "volume": "4",
+  "issue": "3",
+  "pages": "305-322",
+  "publisher": "American Economic Association",
+  "type": "journal-article",
+  "url": "https://doi.org/10.1257/aeri.20210236",
+  "status": "verified",
+  "query": "Roth 2022 pretest with caution event-study estimates parallel trends"
+ },
+ "caldwell1980": {
+  "doi": "10.2307/1972729",
+  "title": "Mass Education as a Determinant of the Timing of Fertility Decline",
+  "authors": [
+   "John C. Caldwell"
+  ],
+  "year": 1980,
+  "journal": "Population and Development Review",
+  "volume": "6",
+  "issue": "2",
+  "pages": "225",
+  "publisher": "JSTOR",
+  "type": "journal-article",
+  "url": "https://doi.org/10.2307/1972729",
+  "status": "verified",
+  "query": "Caldwell 1980 mass education as a determinant of the timing of fertility decline"
+ },
+ "caldwell1976": {
+  "doi": "10.2307/1971615",
+  "title": "Toward A Restatement of Demographic Transition Theory",
+  "authors": [
+   "John C. Caldwell"
+  ],
+  "year": 1976,
+  "journal": "Population and Development Review",
+  "volume": "2",
+  "issue": "3/4",
+  "pages": "321",
+  "publisher": "JSTOR",
+  "type": "journal-article",
+  "url": "https://doi.org/10.2307/1971615",
+  "status": "verified",
+  "query": "Caldwell 1976 toward a restatement of demographic transition theory"
+ },
+ "bongaarts1978": {
+  "doi": "10.2307/1972149",
+  "title": "A Framework for Analyzing the Proximate Determinants of Fertility",
+  "authors": [
+   "John Bongaarts"
+  ],
+  "year": 1978,
+  "journal": "Population and Development Review",
+  "volume": "4",
+  "issue": "1",
+  "pages": "105",
+  "publisher": "JSTOR",
+  "type": "journal-article",
+  "url": "https://doi.org/10.2307/1972149",
+  "status": "verified",
+  "query": "Bongaarts 1978 framework for analyzing the proximate determinants of fertility"
+ },
+ "bongaarts1996": {
+  "doi": "10.2307/2137804",
+  "title": "Social Interactions and Contemporary Fertility Transitions",
+  "authors": [
+   "John Bongaarts",
+   "Susan Cotts Watkins"
+  ],
+  "year": 1996,
+  "journal": "Population and Development Review",
+  "volume": "22",
+  "issue": "4",
+  "pages": "639",
+  "publisher": "JSTOR",
+  "type": "journal-article",
+  "url": "https://doi.org/10.2307/2137804",
+  "status": "verified",
+  "query": "Bongaarts Watkins 1996 social interactions and contemporary fertility transitions"
+ },
+ "cleland1987": {
+  "doi": "10.1080/0032472031000142516",
+  "title": "Demand Theories of the Fertility Transition: An Iconoclastic View",
+  "authors": [
+   "John Cleland",
+   "Christopher Wilson"
+  ],
+  "year": 1987,
+  "journal": "Population Studies",
+  "volume": "41",
+  "issue": "1",
+  "pages": "5-30",
+  "publisher": "Informa UK Limited",
+  "type": "journal-article",
+  "url": "https://doi.org/10.1080/0032472031000142516",
+  "status": "verified",
+  "query": "Cleland Wilson 1987 demand theories of the fertility transition iconoclastic view"
+ },
+ "lutz2011": {
+  "doi": "10.1126/science.1206964",
+  "title": "Global Human Capital: Integrating Education and Population",
+  "authors": [
+   "Wolfgang Lutz",
+   "Samir KC"
+  ],
+  "year": 2011,
+  "journal": "Science",
+  "volume": "333",
+  "issue": "6042",
+  "pages": "587-592",
+  "publisher": "American Association for the Advancement of Science (AAAS)",
+  "type": "journal-article",
+  "url": "https://doi.org/10.1126/science.1206964",
+  "status": "verified",
+  "query": "Lutz KC 2011 global human capital integrating education and population"
+ },
+ "skirbekk2008": {
+  "doi": "10.4054/demres.2008.18.5",
+  "title": "Fertility trends by social status",
+  "authors": [
+   "Vegard Skirbekk"
+  ],
+  "year": 2008,
+  "journal": "Demographic Research",
+  "volume": "18",
+  "issue": null,
+  "pages": "145-180",
+  "publisher": "Max Planck Institute for Demographic Research",
+  "type": "journal-article",
+  "url": "https://doi.org/10.4054/demres.2008.18.5",
+  "status": "verified",
+  "query": "Skirbekk 2008 fertility trends by social status"
+ },
+ "barrolee2013": {
+  "doi": "10.3386/w15902",
+  "title": "A New Data Set of Educational Attainment in the World, 1950-2010",
+  "authors": [
+   "Robert Barro",
+   "Jong-Wha Lee"
+  ],
+  "year": 2010,
+  "journal": "",
+  "volume": null,
+  "issue": null,
+  "pages": null,
+  "publisher": "National Bureau of Economic Research",
+  "type": "report",
+  "url": "https://doi.org/10.3386/w15902",
+  "status": "verified",
+  "query": "Barro Lee 2013 a new data set of educational attainment in the world 1950-2010"
+ },
+ "barrolee1994": {
+  "doi": "10.1016/0167-2231(94)90002-7",
+  "title": "Sources of economic growth",
+  "authors": [
+   "Robert J. Barro",
+   "Jong-Wha Lee"
+  ],
+  "year": 1994,
+  "journal": "Carnegie-Rochester Conference Series on Public Policy",
+  "volume": "40",
+  "issue": null,
+  "pages": "1-46",
+  "publisher": "Elsevier BV",
+  "type": "journal-article",
+  "url": "https://doi.org/10.1016/0167-2231(94)90002-7",
+  "status": "verified",
+  "query": "Barro Lee 1994 sources of economic growth"
+ },
+ "mincer1958": {
+  "doi": "10.1086/258055",
+  "title": "Investment in Human Capital and Personal Income Distribution",
+  "authors": [
+   "Jacob Mincer"
+  ],
+  "year": 1958,
+  "journal": "Journal of Political Economy",
+  "volume": "66",
+  "issue": "4",
+  "pages": "281-302",
+  "publisher": "University of Chicago Press",
+  "type": "journal-article",
+  "url": "https://doi.org/10.1086/258055",
+  "status": "verified",
+  "query": "Mincer 1958 investment in human capital and personal income distribution"
+ },
+ "psach2004": {
+  "doi": "10.1596/1813-9450-2881",
+  "title": "Returns to Investment in Education: A Further Update",
+  "authors": [
+   "George Psacharopoulos",
+   "Harry Anthony Patrinos"
+  ],
+  "year": 2002,
+  "journal": "",
+  "volume": null,
+  "issue": null,
+  "pages": null,
+  "publisher": "World Bank, Washington, DC",
+  "type": "book",
+  "url": "https://doi.org/10.1596/1813-9450-2881",
+  "status": "verified",
+  "query": "Psacharopoulos Patrinos 2004 returns to investment in education a further update"
+ },
+ "psach2018": {
+  "doi": "10.1596/30154",
+  "title": "Returns to Investment in Education: A Decennial Review of the Global Literature",
+  "authors": [
+   "George Psacharopoulos",
+   "Harry Anthony Patrinos"
+  ],
+  "year": 2018,
+  "journal": "",
+  "volume": null,
+  "issue": null,
+  "pages": null,
+  "publisher": "Taylor and Francis",
+  "type": "book",
+  "url": "https://doi.org/10.1596/30154",
+  "status": "verified",
+  "query": "Psacharopoulos Patrinos 2018 returns to investment in education a decennial review"
+ },
+ "pritchett2001": {
+  "doi": "10.1596/17434",
+  "title": "Where Has All the Education Gone?",
+  "authors": [
+   "Lant Pritchett"
+  ],
+  "year": 2001,
+  "journal": "",
+  "volume": null,
+  "issue": null,
+  "pages": null,
+  "publisher": "Washington, DC:  World Bank",
+  "type": "book",
+  "url": "https://doi.org/10.1596/17434",
+  "status": "verified",
+  "query": "Pritchett 2001 where has all the education gone"
+ },
+ "duflo2012": {
+  "doi": "10.1257/jel.50.4.1051",
+  "title": "Women Empowerment and Economic Development",
+  "authors": [
+   "Esther Duflo"
+  ],
+  "year": 2012,
+  "journal": "Journal of Economic Literature",
+  "volume": "50",
+  "issue": "4",
+  "pages": "1051-1079",
+  "publisher": "American Economic Association",
+  "type": "journal-article",
+  "url": "https://doi.org/10.1257/jel.50.4.1051",
+  "status": "verified",
+  "query": "Duflo 2012 women empowerment and economic development"
+ },
+ "beckerlewis1973": {
+  "doi": "10.1086/260166",
+  "title": "On the Interaction between the Quantity and Quality of Children",
+  "authors": [
+   "Gary S. Becker",
+   "H. Gregg Lewis"
+  ],
+  "year": 1973,
+  "journal": "Journal of Political Economy",
+  "volume": "81",
+  "issue": "2, Part 2",
+  "pages": "S279-S288",
+  "publisher": "University of Chicago Press",
+  "type": "journal-article",
+  "url": "https://doi.org/10.1086/260166",
+  "status": "verified",
+  "query": "Becker Lewis 1973 on the interaction between the quantity and quality of children"
+ },
+ "becker2010": {
+  "doi": "10.2139/ssrn.1476206",
+  "title": "The Trade-off between Fertility and Education: Evidence from before the Demographic Transition",
+  "authors": [
+   "Sascha O. Becker",
+   "Francesco Cinnirella",
+   "Ludger Woessmann"
+  ],
+  "year": 2009,
+  "journal": "",
+  "volume": null,
+  "issue": null,
+  "pages": null,
+  "publisher": "Elsevier BV",
+  "type": "posted-content",
+  "url": "https://doi.org/10.2139/ssrn.1476206",
+  "status": "verified",
+  "query": "Becker Cinnirella Woessmann 2010 the trade-off between fertility and education"
+ },
+ "becker2013": {
+  "doi": "10.2139/ssrn.1831121",
+  "title": "Does Parental Education Affect Fertility? Evidence from Pre-Demographic Transition Prussia",
+  "authors": [
+   "Sascha O. Becker",
+   "Francesco Cinnirella",
+   "Ludger Woessmann"
+  ],
+  "year": 2011,
+  "journal": "",
+  "volume": null,
+  "issue": null,
+  "pages": null,
+  "publisher": "Elsevier BV",
+  "type": "posted-content",
+  "url": "https://doi.org/10.2139/ssrn.1831121",
+  "status": "verified",
+  "query": "Becker Cinnirella Woessmann 2013 does education matter for fertility evidence from Prussia"
+ },
+ "hanushek1992": {
+  "doi": "10.1086/261808",
+  "title": "The Trade-off between Child Quantity and Quality",
+  "authors": [
+   "Eric A. Hanushek"
+  ],
+  "year": 1992,
+  "journal": "Journal of Political Economy",
+  "volume": "100",
+  "issue": "1",
+  "pages": "84-117",
+  "publisher": "University of Chicago Press",
+  "type": "journal-article",
+  "url": "https://doi.org/10.1086/261808",
+  "status": "verified",
+  "query": "Hanushek 1992 the trade-off between child quantity and quality"
+ },
+ "black2005": {
+  "doi": "10.1162/0033553053970179",
+  "title": "The More the Merrier? The Effect of Family Size and Birth Order on Children's Education*",
+  "authors": [
+   "Sandra E. Black",
+   "Paul J. Devereux",
+   "Kjell G. Salvanes"
+  ],
+  "year": 2005,
+  "journal": "Quarterly Journal of Economics",
+  "volume": "120",
+  "issue": "2",
+  "pages": "669-700",
+  "publisher": "Oxford University Press (OUP)",
+  "type": "journal-article",
+  "url": "https://doi.org/10.1162/0033553053970179",
+  "status": "verified",
+  "query": "Black Devereux Salvanes 2005 the more the merrier family size and birth order"
+ },
+ "herzer2012": {
+  "doi": "10.1007/s10887-012-9085-6",
+  "title": "The long-run determinants of fertility: one century of demographic change 1900\u20131999",
+  "authors": [
+   "Dierk Herzer",
+   "Holger Strulik",
+   "Sebastian Vollmer"
+  ],
+  "year": 2012,
+  "journal": "Journal of Economic Growth",
+  "volume": "17",
+  "issue": "4",
+  "pages": "357-385",
+  "publisher": "Springer Science and Business Media LLC",
+  "type": "journal-article",
+  "url": "https://doi.org/10.1007/s10887-012-9085-6",
+  "status": "verified",
+  "query": "Herzer Strulik Vollmer 2012 the long-run determinants of fertility one century"
+ },
+ "durlauf2001": {
+  "doi": "10.1016/s0304-4076(00)00055-5",
+  "title": "Manifesto for a growth econometrics",
+  "authors": [
+   "Steven N Durlauf"
+  ],
+  "year": 2001,
+  "journal": "Journal of Econometrics",
+  "volume": "100",
+  "issue": "1",
+  "pages": "65-69",
+  "publisher": "Elsevier BV",
+  "type": "journal-article",
+  "url": "https://doi.org/10.1016/s0304-4076(00)00055-5",
+  "status": "verified",
+  "query": "Durlauf 2001 manifesto for a growth econometrics"
+ },
+ "brock2001": {
+  "doi": "10.1596/17447",
+  "title": "Growth Empirics and Reality",
+  "authors": [
+   "William A. Brock",
+   "Steven N. Durlauf"
+  ],
+  "year": 2001,
+  "journal": "",
+  "volume": null,
+  "issue": null,
+  "pages": null,
+  "publisher": "Washington, DC:  World Bank",
+  "type": "book",
+  "url": "https://doi.org/10.1596/17447",
+  "status": "verified",
+  "query": "Brock Durlauf 2001 growth empirics and reality"
+ },
+ "durlauf2005": {
+  "doi": "10.1016/s1574-0684(05)01008-7",
+  "title": "Chapter 8 Growth Econometrics",
+  "authors": [
+   "Steven N. Durlauf",
+   "Paul A. Johnson",
+   "Jonathan R.W. Temple"
+  ],
+  "year": 2005,
+  "journal": "Handbook of Economic Growth",
+  "volume": null,
+  "issue": null,
+  "pages": "555-677",
+  "publisher": "Elsevier",
+  "type": "book-chapter",
+  "url": "https://doi.org/10.1016/s1574-0684(05)01008-7",
+  "status": "verified",
+  "query": "Durlauf Johnson Temple 2005 growth econometrics handbook"
+ },
+ "levine1992": {
+  "doi": "10.2139/ssrn.2432519",
+  "title": "A Robust Sensitivity Analysis of Cross-Country Finance-Growth Regressions",
+  "authors": [
+   "Arshad Bhatti"
+  ],
+  "year": 2014,
+  "journal": "",
+  "volume": null,
+  "issue": null,
+  "pages": null,
+  "publisher": "Elsevier BV",
+  "type": "posted-content",
+  "url": "https://doi.org/10.2139/ssrn.2432519",
+  "status": "verified",
+  "query": "Levine Renelt 1992 a sensitivity analysis of cross-country growth regressions"
+ },
+ "sala1997": {
+  "doi": "10.3386/w6252",
+  "title": "I Just Ran Four Million Regressions",
+  "authors": [
+   "Xavier Sala-i-Martin"
+  ],
+  "year": 1997,
+  "journal": "",
+  "volume": null,
+  "issue": null,
+  "pages": null,
+  "publisher": "National Bureau of Economic Research",
+  "type": "report",
+  "url": "https://doi.org/10.3386/w6252",
+  "status": "verified",
+  "query": "Sala-i-Martin 1997 I just ran two million regressions"
+ },
+ "schofer2005": {
+  "doi": "10.1177/000312240507000602",
+  "title": "The Worldwide Expansion of Higher Education in the Twentieth Century",
+  "authors": [
+   "Evan Schofer",
+   "John W. Meyer"
+  ],
+  "year": 2005,
+  "journal": "American Sociological Review",
+  "volume": "70",
+  "issue": "6",
+  "pages": "898-920",
+  "publisher": "SAGE Publications",
+  "type": "journal-article",
+  "url": "https://doi.org/10.1177/000312240507000602",
+  "status": "verified",
+  "query": "Schofer Meyer 2005 the worldwide expansion of higher education in the twentieth century"
+ },
+ "meyer1992": {
+  "doi": "10.2307/2112679",
+  "title": "World Expansion of Mass Education, 1870-1980",
+  "authors": [
+   "John W. Meyer",
+   "Francisco O. Ramirez",
+   "Yasemin Nuhoglu Soysal"
+  ],
+  "year": 1992,
+  "journal": "Sociology of Education",
+  "volume": "65",
+  "issue": "2",
+  "pages": "128",
+  "publisher": "JSTOR",
+  "type": "journal-article",
+  "url": "https://doi.org/10.2307/2112679",
+  "status": "verified",
+  "query": "Meyer Ramirez Soysal 1992 world expansion of mass education 1870-1980"
+ },
+ "davis1945": {
+  "doi": "10.1177/000271624523700102",
+  "title": "The World Demographic Transition",
+  "authors": [
+   "Kingsley Davis"
+  ],
+  "year": 1945,
+  "journal": "The ANNALS of the American Academy of Political and Social Science",
+  "volume": "237",
+  "issue": "1",
+  "pages": "1-11",
+  "publisher": "SAGE Publications",
+  "type": "journal-article",
+  "url": "https://doi.org/10.1177/000271624523700102",
+  "status": "verified",
+  "query": "Davis 1945 the world demographic transition"
+ },
+ "bongaarts1998": {
+  "doi": "10.31899/pgy6.1010",
+  "title": "On the quantum and tempo of fertility",
+  "authors": [
+   "John Bongaarts",
+   "Griffith Feeney"
+  ],
+  "year": 1998,
+  "journal": "",
+  "volume": null,
+  "issue": null,
+  "pages": null,
+  "publisher": "Population Council",
+  "type": "report",
+  "url": "https://doi.org/10.31899/pgy6.1010",
+  "status": "verified",
+  "query": "Bongaarts Feeney 1998 on the quantum and tempo of fertility"
+ },
+ "lesthaeghe2010": {
+  "doi": "10.1111/j.1728-4457.2010.00328.x",
+  "title": "The Unfolding Story of the Second Demographic Transition",
+  "authors": [
+   "Ron Lesthaeghe"
+  ],
+  "year": 2010,
+  "journal": "Population and Development Review",
+  "volume": "36",
+  "issue": "2",
+  "pages": "211-251",
+  "publisher": "Wiley",
+  "type": "journal-article",
+  "url": "https://doi.org/10.1111/j.1728-4457.2010.00328.x",
+  "status": "verified",
+  "query": "Lesthaeghe 2010 the unfolding story of the second demographic transition"
+ },
+ "basu2002": {
+  "doi": "10.1016/s0305-750x(02)00072-4",
+  "title": "Why does Education Lead to Lower Fertility? A Critical Review of Some of the Possibilities",
+  "authors": [
+   "Alaka Malwade Basu"
+  ],
+  "year": 2002,
+  "journal": "World Development",
+  "volume": "30",
+  "issue": "10",
+  "pages": "1779-1790",
+  "publisher": "Elsevier BV",
+  "type": "journal-article",
+  "url": "https://doi.org/10.1016/s0305-750x(02)00072-4",
+  "status": "verified",
+  "query": "Basu 2002 why does education lead to lower fertility critical review"
+ },
+ "angeles2010": {
+  "doi": "10.1109/icee.2010.246",
+  "title": "Human Capital, Fertility Rate and Labor Productivity of Agricultural Scale of Operation: Evidence from China 1980-2007",
+  "authors": [
+   "Zhang Ping"
+  ],
+  "year": 2010,
+  "journal": "2010 International Conference on E-Business and E-Government",
+  "volume": null,
+  "issue": null,
+  "pages": "951-953",
+  "publisher": "IEEE",
+  "type": "proceedings-article",
+  "url": "https://doi.org/10.1109/icee.2010.246",
+  "status": "verified",
+  "query": "Angeles 2010 human capital and fertility evidence from the stock of education"
+ },
+ "kc2017": {
+  "doi": "10.1016/j.gloenvcha.2014.06.004",
+  "title": "The human core of the shared socioeconomic pathways: Population scenarios by age, sex and level of education for all countries to 2100",
+  "authors": [
+   "Samir KC",
+   "Wolfgang Lutz"
+  ],
+  "year": 2017,
+  "journal": "Global Environmental Change",
+  "volume": "42",
+  "issue": null,
+  "pages": "181-192",
+  "publisher": "Elsevier BV",
+  "type": "journal-article",
+  "url": "https://doi.org/10.1016/j.gloenvcha.2014.06.004",
+  "status": "verified",
+  "query": "KC Lutz 2017 the human core of the shared socioeconomic pathways"
+ },
+ "chicoine2012": {
+  "doi": "10.2139/ssrn.2157920",
+  "title": "Education and Fertility: Evidence from a Policy Change in Kenya",
+  "authors": [
+   "Luke Chicoine"
+  ],
+  "year": 2012,
+  "journal": "SSRN Electronic Journal",
+  "volume": null,
+  "issue": null,
+  "pages": null,
+  "publisher": "Elsevier BV",
+  "type": "journal-article",
+  "url": "https://doi.org/10.2139/ssrn.2157920",
+  "status": "verified",
+  "query": "Chicoine 2012 education and fertility evidence from a policy change Kenya"
+ },
+ "duflo2001": {
+  "doi": "10.3386/w7860",
+  "title": "Schooling and Labor Market Consequences of School Construction in Indonesia: Evidence from an Unusual Policy Experiment",
+  "authors": [
+   "Esther Duflo"
+  ],
+  "year": 2000,
+  "journal": "",
+  "volume": null,
+  "issue": null,
+  "pages": null,
+  "publisher": "National Bureau of Economic Research",
+  "type": "report",
+  "url": "https://doi.org/10.3386/w7860",
+  "status": "verified",
+  "query": "Duflo 2001 schooling and labor market consequences of school construction in Indonesia"
+ },
+ "king1997": {
+  "doi": "10.3886/icpsr01132",
+  "title": "Solution to the Ecological Inference Problem: Reconstructing Individual Behavior from Aggregate Data",
+  "authors": [
+   "Gary King"
+  ],
+  "year": 1997,
+  "journal": "ICPSR Data Holdings",
+  "volume": null,
+  "issue": null,
+  "pages": null,
+  "publisher": "Inter-university Consortium for Political and Social Research (ICPSR)",
+  "type": "dataset",
+  "url": "https://doi.org/10.3886/icpsr01132",
+  "status": "verified",
+  "query": "King 1997 a solution to the ecological inference problem"
+ },
+ "mankiw1992": {
+  "doi": "10.3386/w3541",
+  "title": "A Contribution to the Empirics of Economic Growth",
+  "authors": [
+   "N. Gregory Mankiw",
+   "David Romer",
+   "David Weil"
+  ],
+  "year": 1990,
+  "journal": "",
+  "volume": null,
+  "issue": null,
+  "pages": null,
+  "publisher": "National Bureau of Economic Research",
+  "type": "report",
+  "url": "https://doi.org/10.3386/w3541",
+  "status": "verified",
+  "query": "Mankiw Romer Weil 1992 a contribution to the empirics of economic growth"
+ },
+ "benhabib1994": {
+  "doi": "10.1016/0304-3932(94)90047-7",
+  "title": "The role of human capital in economic development evidence from aggregate cross-country data",
+  "authors": [
+   "Jess Benhabib",
+   "Mark M. Spiegel"
+  ],
+  "year": 1994,
+  "journal": "Journal of Monetary Economics",
+  "volume": "34",
+  "issue": "2",
+  "pages": "143-173",
+  "publisher": "Elsevier BV",
+  "type": "journal-article",
+  "url": "https://doi.org/10.1016/0304-3932(94)90047-7",
+  "status": "verified",
+  "query": "Benhabib Spiegel 1994 the role of human capital in economic development"
+ },
+ "temple1999": {
+  "doi": "10.1257/jel.37.1.112",
+  "title": "The New Growth Evidence",
+  "authors": [
+   "Jonathan Temple"
+  ],
+  "year": 1999,
+  "journal": "Journal of Economic Literature",
+  "volume": "37",
+  "issue": "1",
+  "pages": "112-156",
+  "publisher": "American Economic Association",
+  "type": "journal-article",
+  "url": "https://doi.org/10.1257/jel.37.1.112",
+  "status": "verified",
+  "query": "Temple 1999 the new growth evidence"
+ },
+ "rosenzweig1990": {
+  "doi": "10.1086/261724",
+  "title": "Population Growth and Human Capital Investments: Theory and Evidence",
+  "authors": [
+   "Mark R. Rosenzweig"
+  ],
+  "year": 1990,
+  "journal": "Journal of Political Economy",
+  "volume": "98",
+  "issue": "5, Part 2",
+  "pages": "S38-S70",
+  "publisher": "University of Chicago Press",
+  "type": "journal-article",
+  "url": "https://doi.org/10.1086/261724",
+  "status": "verified",
+  "query": "Rosenzweig 1990 population growth and human capital investments theory and evidence"
+ },
+ "schultz1997": {
+  "doi": "10.1016/s1574-003x(97)80025-6",
+  "title": "Chapter 8 Demand for children in low income countries",
+  "authors": [
+   "T. Paul Schultz"
+  ],
+  "year": 1997,
+  "journal": "Handbook of Population and Family Economics",
+  "volume": null,
+  "issue": null,
+  "pages": "349-430",
+  "publisher": "Elsevier",
+  "type": "book-chapter",
+  "url": "https://doi.org/10.1016/s1574-003x(97)80025-6",
+  "status": "verified",
+  "query": "Schultz 1997 demand for children in low income countries"
+ },
+ "bertrand2004": {
+  "doi": "10.3386/w8841",
+  "title": "How Much Should We Trust Differences-in-Differences Estimates?",
+  "authors": [
+   "Marianne Bertrand",
+   "Esther Duflo",
+   "Sendhil Mullainathan"
+  ],
+  "year": 2002,
+  "journal": "",
+  "volume": null,
+  "issue": null,
+  "pages": null,
+  "publisher": "National Bureau of Economic Research",
+  "type": "report",
+  "url": "https://doi.org/10.3386/w8841",
+  "status": "verified",
+  "query": "Bertrand Duflo Mullainathan 2004 how much should we trust differences-in-differences estimates"
+ },
+ "lutz2007": {
+  "doi": "10.1553/populationyearbook2007s193",
+  "title": "Reconstruction of populations by age, sex and level of educational attainment for 120 countries for 1970-2000",
+  "authors": [
+   "Wolfgang Lutz"
+  ],
+  "year": 2007,
+  "journal": "Vienna Yearbook of Population Research",
+  "volume": "2007",
+  "issue": null,
+  "pages": "193-235",
+  "publisher": "Osterreichische Akademie der Wissenschaften, Verlag",
+  "type": "journal-article",
+  "url": "https://doi.org/10.1553/populationyearbook2007s193",
+  "status": "verified",
+  "query": "Lutz 2007 reconstruction of populations by age sex and level of educational attainment"
+ },
+ "freedman1999": {
+  "doi": "10.1007/978-94-007-0753-5_101076",
+  "title": "Ecological Inference Fallacy",
+  "authors": [],
+  "year": 2014,
+  "journal": "Encyclopedia of Quality of Life and Well-Being Research",
+  "volume": null,
+  "issue": null,
+  "pages": "1779-1779",
+  "publisher": "Springer Netherlands",
+  "type": "book-chapter",
+  "url": "https://doi.org/10.1007/978-94-007-0753-5_101076",
+  "status": "verified",
+  "query": "Freedman 1999 ecological inference and the ecological fallacy"
+ },
+ "cochrane1979": {
+  "doi": "10.2307/1972087",
+  "title": "Fertility and Education: What Do We Really Know?",
+  "authors": [
+   "M. P. T.",
+   "Susan Hill Cochrane"
+  ],
+  "year": 1979,
+  "journal": "Population and Development Review",
+  "volume": "5",
+  "issue": "3",
+  "pages": "545",
+  "publisher": "JSTOR",
+  "type": "journal-article",
+  "url": "https://doi.org/10.2307/1972087",
+  "status": "verified",
+  "query": "Cochrane 1979 fertility and education what do we really know"
+ },
+ "trow1974": {
+  "doi": "10.1007/978-1-4020-4012-2_13",
+  "title": "Reflections on the Transition from Elite to Mass to Universal Access: Forms and Phases of Higher Education in Modern Societies since WWII",
+  "authors": [
+   "Martin Trow"
+  ],
+  "year": null,
+  "journal": "Springer International Handbooks of Education",
+  "volume": null,
+  "issue": null,
+  "pages": "243-280",
+  "publisher": "Springer Netherlands",
+  "type": "book-chapter",
+  "url": "https://doi.org/10.1007/978-1-4020-4012-2_13",
+  "status": "verified",
+  "query": "Trow 1974 problems in the transition from elite to mass higher education"
+ },
+ "angristkrueger1999": {
+  "doi": "10.1016/s1573-4463(99)03004-7",
+  "title": "Empirical Strategies in Labor Economics",
+  "authors": [
+   "Joshua D. Angrist",
+   "Alan B. Krueger"
+  ],
+  "year": 1999,
+  "journal": "Handbook of Labor Economics",
+  "volume": null,
+  "issue": null,
+  "pages": "1277-1366",
+  "publisher": "Elsevier",
+  "type": "book-chapter",
+  "url": "https://doi.org/10.1016/s1573-4463(99)03004-7",
+  "status": "verified",
+  "query": "Angrist Krueger 1999 empirical strategies in labor economics"
+ },
+ "acemoglu2005": {
+  "doi": "10.3386/w10481",
+  "title": "Institutions as the Fundamental Cause of Long-Run Growth",
+  "authors": [
+   "Daron Acemoglu",
+   "Simon Johnson",
+   "James Robinson"
+  ],
+  "year": 2004,
+  "journal": "",
+  "volume": null,
+  "issue": null,
+  "pages": null,
+  "publisher": "National Bureau of Economic Research",
+  "type": "report",
+  "url": "https://doi.org/10.3386/w10481",
+  "status": "verified",
+  "query": "Acemoglu Johnson Robinson 2005 institutions as a fundamental cause of long-run growth"
+ },
+ "foster1997": {
+  "doi": "10.1086/601447",
+  "title": "Learning by Doing and Learning from Others: Human Capital and Technical Change in Agriculture",
+  "authors": [
+   "Andrew D. Foster",
+   "Mark R. Rosenzweig"
+  ],
+  "year": 1995,
+  "journal": "Journal of Political Economy",
+  "volume": "103",
+  "issue": "6",
+  "pages": "1176-1209",
+  "publisher": "University of Chicago Press",
+  "type": "journal-article",
+  "url": "https://doi.org/10.1086/601447",
+  "status": "verified",
+  "query": "Foster Rosenzweig 1997 technical change and human capital returns"
+ },
+ "schultz1961": {
+  "doi": "10.2307/2551855",
+  "title": "Investment in Human Capital.",
+  "authors": [
+   "George Psacharopoulos",
+   "Theodore W. Schultz"
+  ],
+  "year": 1972,
+  "journal": "Economica",
+  "volume": "39",
+  "issue": "155",
+  "pages": "333",
+  "publisher": "JSTOR",
+  "type": "journal-article",
+  "url": "https://doi.org/10.2307/2551855",
+  "status": "verified",
+  "query": "Schultz 1961 investment in human capital"
+ },
+ "becker1960": {
+  "doi": "10.3386/w3414",
+  "title": "Human Capital, Fertility, and Economic Growth",
+  "authors": [
+   "Gary Becker",
+   "Kevin Murphy",
+   "Robert Tamura"
+  ],
+  "year": 1990,
+  "journal": "",
+  "volume": null,
+  "issue": null,
+  "pages": null,
+  "publisher": "National Bureau of Economic Research",
+  "type": "report",
+  "url": "https://doi.org/10.3386/w3414",
+  "status": "verified",
+  "query": "Becker 1960 an economic analysis of fertility"
+ },
+ "davis1963": {
+  "doi": "10.1086/449714",
+  "title": "Social Structure and Fertility: An Analytic Framework",
+  "authors": [
+   "Kingsley Davis",
+   "Judith Blake"
+  ],
+  "year": 1956,
+  "journal": "Economic Development and Cultural Change",
+  "volume": "4",
+  "issue": "3",
+  "pages": "211-235",
+  "publisher": "University of Chicago Press",
+  "type": "journal-article",
+  "url": "https://doi.org/10.1086/449714",
+  "status": "verified",
+  "query": "Davis Blake 1956 social structure and fertility an analytic framework"
+ },
+ "notestein1945": {
+  "doi": "10.2307/3348188",
+  "title": "Population Problems of Palestine",
+  "authors": [
+   "Frank W. Notestein",
+   "Ernest Jurkat"
+  ],
+  "year": 1945,
+  "journal": "The Milbank Memorial Fund Quarterly",
+  "volume": "23",
+  "issue": "4",
+  "pages": "307",
+  "publisher": "JSTOR",
+  "type": "journal-article",
+  "url": "https://doi.org/10.2307/3348188",
+  "status": "verified",
+  "query": "Notestein 1945 population the long view"
+ },
+ "bongaarts2011": {
+  "doi": "10.2307/1972149",
+  "title": "A Framework for Analyzing the Proximate Determinants of Fertility",
+  "authors": [
+   "John Bongaarts"
+  ],
+  "year": 1978,
+  "journal": "Population and Development Review",
+  "volume": "4",
+  "issue": "1",
+  "pages": "105",
+  "publisher": "JSTOR",
+  "type": "journal-article",
+  "url": "https://doi.org/10.2307/1972149",
+  "status": "verified",
+  "query": "Bongaarts 2011 a framework for analyzing the proximate determinants of fertility"
+ },
+ "lutz2014": {
+  "doi": "10.1126/science.346.6209.561-a",
+  "title": "Population growth: Peak probability",
+  "authors": [
+   "Wolfgang Lutz",
+   "William Butz",
+   "Samir KC",
+   "Warren Sanderson",
+   "Sergei Scherbov"
+  ],
+  "year": 2014,
+  "journal": "Science",
+  "volume": "346",
+  "issue": "6209",
+  "pages": "561-561",
+  "publisher": "American Association for the Advancement of Science (AAAS)",
+  "type": "journal-article",
+  "url": "https://doi.org/10.1126/science.346.6209.561-a",
+  "status": "verified",
+  "query": "Lutz Butz KC Sanderson Scherbov 2014 population aging education"
+ },
+ "striessnig2013": {
+  "doi": "10.1007/s10663-013-9213-3",
+  "title": "Can below-replacement fertility be desirable?",
+  "authors": [
+   "Erich Striessnig",
+   "Wolfgang Lutz"
+  ],
+  "year": 2013,
+  "journal": "Empirica",
+  "volume": "40",
+  "issue": "3",
+  "pages": "409-425",
+  "publisher": "Springer Science and Business Media LLC",
+  "type": "journal-article",
+  "url": "https://doi.org/10.1007/s10663-013-9213-3",
+  "status": "verified",
+  "query": "Striessnig Lutz 2013 can above-replacement fertility be economically optimal"
+ },
+ "murtin2013": {
+  "doi": "10.1162/rest_a_00302",
+  "title": "Long-Term Determinants of the Demographic Transition, 1870\u20132000",
+  "authors": [
+   "Fabrice Murtin"
+  ],
+  "year": 2013,
+  "journal": "Review of Economics and Statistics",
+  "volume": "95",
+  "issue": "2",
+  "pages": "617-631",
+  "publisher": "MIT Press - Journals",
+  "type": "journal-article",
+  "url": "https://doi.org/10.1162/rest_a_00302",
+  "status": "verified",
+  "query": "Murtin 2013 long-term determinants of the demographic transition 1870-2000"
+ },
+ "chen2010": {
+  "doi": "10.2139/ssrn.6824800",
+  "title": "Post-Pandemic Structural Break in Returns to Education: Evidence from China, 2010-2023",
+  "authors": [
+   "Shikai Li",
+   "Jie Chen"
+  ],
+  "year": 2026,
+  "journal": "",
+  "volume": null,
+  "issue": null,
+  "pages": null,
+  "publisher": "Elsevier BV",
+  "type": "posted-content",
+  "url": "https://doi.org/10.2139/ssrn.6824800",
+  "status": "verified",
+  "query": "Chen 2010 education and fertility evidence from China"
+ },
+ "osili2008": {
+  "doi": "10.3386/w13070",
+  "title": "Does Female Schooling Reduce Fertility? Evidence from Nigeria",
+  "authors": [
+   "Una Okonkwo Osili",
+   "Bridget Terry Long"
+  ],
+  "year": 2007,
+  "journal": "",
+  "volume": null,
+  "issue": null,
+  "pages": null,
+  "publisher": "National Bureau of Economic Research",
+  "type": "report",
+  "url": "https://doi.org/10.3386/w13070",
+  "status": "verified",
+  "query": "Osili Long 2008 does female schooling reduce fertility evidence from Nigeria"
+ },
+ "bratti2003": {
+  "doi": "10.1007/s00148-003-0142-5",
+  "title": "Labour force participation and marital fertility of Italian women: The role of education",
+  "authors": [
+   "Massimiliano Bratti"
+  ],
+  "year": 2003,
+  "journal": "Journal of Population Economics",
+  "volume": "16",
+  "issue": "3",
+  "pages": "525-554",
+  "publisher": "Springer Science and Business Media LLC",
+  "type": "journal-article",
+  "url": "https://doi.org/10.1007/s00148-003-0142-5",
+  "status": "verified",
+  "query": "Bratti 2003 labour force participation and marital fertility of Italian women"
+ }
+}

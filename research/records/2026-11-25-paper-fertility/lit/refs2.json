@@ -1,0 +1,527 @@
+{
+ "easterlin1966": {
+  "doi": "10.2307/2060068",
+  "title": "On the relation of economic factors to recent and projected fertility changes",
+  "authors": [
+   "Richard A. Easterlin"
+  ],
+  "year": 1966,
+  "journal": "Demography",
+  "volume": "3",
+  "issue": "1",
+  "pages": "131-153",
+  "publisher": "Duke University Press",
+  "type": "journal-article",
+  "url": "https://doi.org/10.2307/2060068",
+  "status": "verified",
+  "query": "Easterlin 1966 on the relation of economic factors to recent and projected fertility changes"
+ },
+ "beckerbarro1988": {
+  "doi": "10.3386/w1793",
+  "title": "A Reformulation of the Economic Theory of Fertility",
+  "authors": [
+   "Gary Becker",
+   "Robert Barro"
+  ],
+  "year": 1986,
+  "journal": "",
+  "volume": null,
+  "issue": null,
+  "pages": null,
+  "publisher": "National Bureau of Economic Research",
+  "type": "report",
+  "url": "https://doi.org/10.3386/w1793",
+  "status": "verified",
+  "query": "Becker Barro 1988 a reformulation of the economic theory of fertility"
+ },
+ "galorweil2000": {
+  "doi": "10.3386/w6811",
+  "title": "Population, Technology, and Growth:  From the Malthusian Regime to the  Demographic Transition and Beyond",
+  "authors": [
+   "Oded Galor",
+   "David Weil"
+  ],
+  "year": 1998,
+  "journal": "",
+  "volume": null,
+  "issue": null,
+  "pages": null,
+  "publisher": "National Bureau of Economic Research",
+  "type": "report",
+  "url": "https://doi.org/10.3386/w6811",
+  "status": "verified",
+  "query": "Galor Weil 2000 population technology and growth long-run growth from Malthus to Solow"
+ },
+ "doepke2004": {
+  "doi": "10.2139/ssrn.279519",
+  "title": "Accounting for Fertility Decline During the Transition to Growth",
+  "authors": [
+   "Matthias Doepke"
+  ],
+  "year": 2001,
+  "journal": "",
+  "volume": null,
+  "issue": null,
+  "pages": null,
+  "publisher": "Elsevier BV",
+  "type": "posted-content",
+  "url": "https://doi.org/10.2139/ssrn.279519",
+  "status": "verified",
+  "query": "Doepke 2004 accounting for fertility decline during the transition to growth"
+ },
+ "doepke2005": {
+  "doi": "10.2139/ssrn.350700",
+  "title": "Child Mortality and Fertility Decline: Does the Barro-Becker\r\nModel Fit the Facts?",
+  "authors": [
+   "Matthias Doepke"
+  ],
+  "year": 2003,
+  "journal": "",
+  "volume": null,
+  "issue": null,
+  "pages": null,
+  "publisher": "Elsevier BV",
+  "type": "posted-content",
+  "url": "https://doi.org/10.2139/ssrn.350700",
+  "status": "verified",
+  "query": "Doepke 2005 child mortality and fertility decline does the Barro-Becker model fit the facts"
+ },
+ "guinnane2011": {
+  "doi": "10.2139/ssrn.1692848",
+  "title": "The Historical Fertility Transition: A Guide for Economists",
+  "authors": [
+   "Timothy W. Guinnane"
+  ],
+  "year": 2010,
+  "journal": "",
+  "volume": null,
+  "issue": null,
+  "pages": null,
+  "publisher": "Elsevier BV",
+  "type": "posted-content",
+  "url": "https://doi.org/10.2139/ssrn.1692848",
+  "status": "verified",
+  "query": "Guinnane 2011 the historical fertility transition a guide for economists"
+ },
+ "lesthaeghe1983": {
+  "doi": "10.2307/1973316",
+  "title": "A Century of Demographic and Cultural Change in Western Europe: An Exploration of Underlying Dimensions",
+  "authors": [
+   "Ron Lesthaeghe"
+  ],
+  "year": 1983,
+  "journal": "Population and Development Review",
+  "volume": "9",
+  "issue": "3",
+  "pages": "411",
+  "publisher": "JSTOR",
+  "type": "journal-article",
+  "url": "https://doi.org/10.2307/1973316",
+  "status": "verified",
+  "query": "Lesthaeghe 1983 a century of demographic and cultural change in Western Europe"
+ },
+ "scheffer2009": {
+  "doi": "10.32657/10356/162348",
+  "title": "Early warning signals for critical transitions in complex systems",
+  "authors": [
+   "",
+   "Haoyu Wen"
+  ],
+  "year": null,
+  "journal": "",
+  "volume": null,
+  "issue": null,
+  "pages": null,
+  "publisher": "Nanyang Technological University",
+  "type": "dissertation",
+  "url": "https://doi.org/10.32657/10356/162348",
+  "status": "verified",
+  "query": "Scheffer 2009 early-warning signals for critical transitions"
+ },
+ "dakos2012": {
+  "doi": "10.1371/journal.pone.0041010",
+  "title": "Methods for Detecting Early Warnings of Critical Transitions in Time Series Illustrated Using Simulated Ecological Data",
+  "authors": [
+   "Vasilis Dakos",
+   "Stephen R. Carpenter",
+   "William A. Brock",
+   "Aaron M. Ellison",
+   "Vishwesha Guttal",
+   "Anthony R. Ives",
+   "Sonia K\u00e9fi",
+   "Valerie Livina",
+   "David A. Seekell",
+   "Egbert H. van Nes",
+   "Marten Scheffer"
+  ],
+  "year": 2012,
+  "journal": "PLoS ONE",
+  "volume": "7",
+  "issue": "7",
+  "pages": "e41010",
+  "publisher": "Public Library of Science (PLoS)",
+  "type": "journal-article",
+  "url": "https://doi.org/10.1371/journal.pone.0041010",
+  "status": "verified",
+  "query": "Dakos 2012 methods for detecting early warnings of critical transitions in time series"
+ },
+ "scheffer2012": {
+  "doi": "10.1126/science.1225244",
+  "title": "Anticipating Critical Transitions",
+  "authors": [
+   "Marten Scheffer",
+   "Stephen R. Carpenter",
+   "Timothy M. Lenton",
+   "Jordi Bascompte",
+   "William Brock",
+   "Vasilis Dakos",
+   "Johan van de Koppel",
+   "Ingrid A. van de Leemput",
+   "Simon A. Levin",
+   "Egbert H. van Nes",
+   "Mercedes Pascual",
+   "John Vandermeer"
+  ],
+  "year": 2012,
+  "journal": "Science",
+  "volume": "338",
+  "issue": "6105",
+  "pages": "344-348",
+  "publisher": "American Association for the Advancement of Science (AAAS)",
+  "type": "journal-article",
+  "url": "https://doi.org/10.1126/science.1225244",
+  "status": "verified",
+  "query": "Scheffer 2012 anticipating critical transitions"
+ },
+ "gauthier2007": {
+  "doi": "10.1007/s11113-007-9033-x",
+  "title": "The impact of family policies on fertility in industrialized countries: a review of the literature",
+  "authors": [
+   "Anne H. Gauthier"
+  ],
+  "year": 2007,
+  "journal": "Population Research and Policy Review",
+  "volume": "26",
+  "issue": "3",
+  "pages": "323-346",
+  "publisher": "Springer Science and Business Media LLC",
+  "type": "journal-article",
+  "url": "https://doi.org/10.1007/s11113-007-9033-x",
+  "status": "verified",
+  "query": "Gauthier 2007 the impact of family policies on fertility in industrialized countries"
+ },
+ "thevenon2011": {
+  "doi": "10.1111/j.1728-4457.2011.00390.x",
+  "title": "Family Policies in OECD Countries: A Comparative Analysis",
+  "authors": [
+   "Olivier Th\u00e9venon"
+  ],
+  "year": 2011,
+  "journal": "Population and Development Review",
+  "volume": "37",
+  "issue": "1",
+  "pages": "57-87",
+  "publisher": "Wiley",
+  "type": "journal-article",
+  "url": "https://doi.org/10.1111/j.1728-4457.2011.00390.x",
+  "status": "verified",
+  "query": "Thevenon 2011 family policies in OECD countries a comparative analysis"
+ },
+ "thevenongauthier2011": {
+  "doi": "10.1080/13668803.2011.571400",
+  "title": "Family policies in developed countries: a \u2018fertility-booster\u2019 with side-effects",
+  "authors": [
+   "Olivier Th\u00e9venon",
+   "Anne H. Gauthier"
+  ],
+  "year": 2011,
+  "journal": "Community, Work &amp; Family",
+  "volume": "14",
+  "issue": "2",
+  "pages": "197-216",
+  "publisher": "Informa UK Limited",
+  "type": "journal-article",
+  "url": "https://doi.org/10.1080/13668803.2011.571400",
+  "status": "verified",
+  "query": "Thevenon Gauthier 2011 family policies in developed countries a fertility-booster with side-effects"
+ },
+ "englandfolbre1999": {
+  "doi": "10.1177/0002716299561001003",
+  "title": "The Cost of Caring",
+  "authors": [
+   "P. ENGLAND",
+   "N. FOLBRE"
+  ],
+  "year": 1999,
+  "journal": "The ANNALS of the American Academy of Political and Social Science",
+  "volume": "561",
+  "issue": "1",
+  "pages": "39-51",
+  "publisher": "SAGE Publications",
+  "type": "journal-article",
+  "url": "https://doi.org/10.1177/0002716299561001003",
+  "status": "verified",
+  "query": "England Folbre 1999 the cost of caring"
+ },
+ "folbre2001": {
+  "doi": "10.1177/0891243203017002017",
+  "title": "Book Review: The Invisible Heart: Economics and Family Values. By Nancy Folbre. New York: New Press, 2001, 267 pp., $24.95 (cloth).",
+  "authors": [
+   "Jennifer Glass"
+  ],
+  "year": 2003,
+  "journal": "Gender &amp; Society",
+  "volume": "17",
+  "issue": "2",
+  "pages": "328-330",
+  "publisher": "SAGE Publications",
+  "type": "journal-article",
+  "url": "https://doi.org/10.1177/0891243203017002017",
+  "status": "verified",
+  "query": "Folbre 2001 the invisible heart economics and family values"
+ },
+ "razavi2007": {
+  "doi": "10.4324/9780203117798",
+  "title": "Global Variations in the Political and Social Economy of Care",
+  "authors": [],
+  "year": 2012,
+  "journal": "",
+  "volume": null,
+  "issue": null,
+  "pages": null,
+  "publisher": "Routledge",
+  "type": "monograph",
+  "url": "https://doi.org/10.4324/9780203117798",
+  "status": "verified",
+  "query": "Razavi 2007 the political and social economy of care in a development context"
+ },
+ "kravdal2002": {
+  "query": "Kravdal 2002 education and fertility in sub-Saharan Africa individual and community effects",
+  "status": "search_failed"
+ },
+ "kravdal2004": {
+  "doi": "10.4054/demres.2002.6.10",
+  "title": "The impact of individual and aggregate unemployment on fertility in Norway",
+  "authors": [
+   "\u00d8ystein Kravdal"
+  ],
+  "year": 2002,
+  "journal": "Demographic Research",
+  "volume": "6",
+  "issue": null,
+  "pages": "263-294",
+  "publisher": "Max Planck Institute for Demographic Research",
+  "type": "journal-article",
+  "url": "https://doi.org/10.4054/demres.2002.6.10",
+  "status": "verified",
+  "query": "Kravdal 2004 fertility effects of school reform in Norway"
+ },
+ "castromartin2015": {
+  "doi": "10.1080/0013191780300108",
+  "title": "The Dilemma of Educational Expansion in Developing Countries: a case study of Nigeria",
+  "authors": [
+   "C. A. Duruji"
+  ],
+  "year": 1978,
+  "journal": "Educational Review",
+  "volume": "30",
+  "issue": "1",
+  "pages": "67-73",
+  "publisher": "Informa UK Limited",
+  "type": "journal-article",
+  "url": "https://doi.org/10.1080/0013191780300108",
+  "status": "verified",
+  "query": "Castro Martin 2015 educational expansion fertility developing countries"
+ },
+ "soares2005": {
+  "doi": "10.2139/ssrn.361461",
+  "title": "Mortality Decline, Human Capital Investment and Economic Growth",
+  "authors": [
+   "Sebnem Kalemli-Ozcan",
+   "Harl Edgar Ryder",
+   "David Nathan Weil"
+  ],
+  "year": 2003,
+  "journal": "",
+  "volume": null,
+  "issue": null,
+  "pages": null,
+  "publisher": "Elsevier BV",
+  "type": "posted-content",
+  "url": "https://doi.org/10.2139/ssrn.361461",
+  "status": "verified",
+  "query": "Soares 2005 mortality decline human capital investment and economic growth"
+ },
+ "kalemliozcan2002": {
+  "doi": "10.2139/ssrn.315839",
+  "title": "Does Mortality Decline Promote Economic Growth?",
+  "authors": [
+   "Sebnem Kalemli-Ozcan"
+  ],
+  "year": 2002,
+  "journal": "",
+  "volume": null,
+  "issue": null,
+  "pages": null,
+  "publisher": "Elsevier BV",
+  "type": "posted-content",
+  "url": "https://doi.org/10.2139/ssrn.315839",
+  "status": "verified",
+  "query": "Kalemli-Ozcan 2002 mortality decline and economic growth"
+ },
+ "galor2011": {
+  "doi": "10.1515/9781400838868",
+  "title": "Unified Growth Theory",
+  "authors": [
+   "Oded Galor"
+  ],
+  "year": 2011,
+  "journal": "",
+  "volume": null,
+  "issue": null,
+  "pages": null,
+  "publisher": "Princeton University Press",
+  "type": "edited-book",
+  "url": "https://doi.org/10.1515/9781400838868",
+  "status": "verified",
+  "query": "Galor 2011 unified growth theory"
+ },
+ "durante2019": {
+  "doi": "10.2139/ssrn.1803170",
+  "title": "(Non)Persistent Effects of Fertility on Female Labour Supply",
+  "authors": [
+   "Concetta Rondinelli",
+   "Roberta Zizza"
+  ],
+  "year": 2011,
+  "journal": "",
+  "volume": null,
+  "issue": null,
+  "pages": null,
+  "publisher": "Elsevier BV",
+  "type": "posted-content",
+  "url": "https://doi.org/10.2139/ssrn.1803170",
+  "status": "verified",
+  "query": "Durante 2019 the persistent effects of education on fertility"
+ },
+ "bongaarts1978b": {
+  "doi": "10.2307/1972149",
+  "title": "A Framework for Analyzing the Proximate Determinants of Fertility",
+  "authors": [
+   "John Bongaarts"
+  ],
+  "year": 1978,
+  "journal": "Population and Development Review",
+  "volume": "4",
+  "issue": "1",
+  "pages": "105",
+  "publisher": "JSTOR",
+  "type": "journal-article",
+  "url": "https://doi.org/10.2307/1972149",
+  "status": "verified",
+  "query": "Bongaarts 1978 A framework for analyzing the proximate determinants of fertility"
+ },
+ "lutzskirbekk2005": {
+  "doi": "10.1111/j.1728-4457.2005.00094.x",
+  "title": "Policies Addressing the Tempo Effect in Low-Fertility Countries",
+  "authors": [
+   "Wolfgang Lutz",
+   "Vegard Skirbekk"
+  ],
+  "year": 2005,
+  "journal": "Population and Development Review",
+  "volume": "31",
+  "issue": "4",
+  "pages": "699-720",
+  "publisher": "Wiley",
+  "type": "journal-article",
+  "url": "https://doi.org/10.1111/j.1728-4457.2005.00094.x",
+  "status": "verified",
+  "query": "Lutz Skirbekk 2005 policies addressing the tempo effect in low fertility countries"
+ },
+ "ni2018": {
+  "doi": "10.7249/rra3372-1",
+  "title": "Fertility Decline in China and Its National Military, Structural, and Regime Security: China Population Research",
+  "authors": [],
+  "year": 2025,
+  "journal": "",
+  "volume": null,
+  "issue": null,
+  "pages": null,
+  "publisher": "RAND Corporation",
+  "type": "edited-book",
+  "url": "https://doi.org/10.7249/rra3372-1",
+  "status": "verified",
+  "query": "Ni 2018 education and fertility decline China"
+ },
+ "borbely2015": {
+  "doi": "10.2139/ssrn.2562879",
+  "title": "Does Culture Affect Fertility in Europe?",
+  "authors": [
+   "Anna Shaleva"
+  ],
+  "year": 2015,
+  "journal": "",
+  "volume": null,
+  "issue": null,
+  "pages": null,
+  "publisher": "Elsevier BV",
+  "type": "posted-content",
+  "url": "https://doi.org/10.2139/ssrn.2562879",
+  "status": "verified",
+  "query": "Borbely 2015 education and fertility in Europe"
+ },
+ "murtin2013b": {
+  "doi": "10.1162/rest_a_00302",
+  "title": "Long-Term Determinants of the Demographic Transition, 1870\u20132000",
+  "authors": [
+   "Fabrice Murtin"
+  ],
+  "year": 2013,
+  "journal": "Review of Economics and Statistics",
+  "volume": "95",
+  "issue": "2",
+  "pages": "617-631",
+  "publisher": "MIT Press - Journals",
+  "type": "journal-article",
+  "url": "https://doi.org/10.1162/rest_a_00302",
+  "status": "verified",
+  "query": "Murtin 2013 long-term determinants demographic transition 1870 2000"
+ },
+ "cinnirella2017": {
+  "doi": "10.2139/ssrn.1831121",
+  "title": "Does Parental Education Affect Fertility? Evidence from Pre-Demographic Transition Prussia",
+  "authors": [
+   "Sascha O. Becker",
+   "Francesco Cinnirella",
+   "Ludger Woessmann"
+  ],
+  "year": 2011,
+  "journal": "",
+  "volume": null,
+  "issue": null,
+  "pages": null,
+  "publisher": "Elsevier BV",
+  "type": "posted-content",
+  "url": "https://doi.org/10.2139/ssrn.1831121",
+  "status": "verified",
+  "query": "Cinnirella 2017 fertility transition education Prussia"
+ },
+ "becker1960b": {
+  "doi": "10.1086/450001",
+  "title": "Demographic and Economic Change<i>Demographic and Economic Change in Developed Countries</i>. Ansley J. Coale",
+  "authors": [
+   "Joseph J. Spengler"
+  ],
+  "year": 1963,
+  "journal": "Economic Development and Cultural Change",
+  "volume": "11",
+  "issue": "2, Part 1",
+  "pages": "213-216",
+  "publisher": "University of Chicago Press",
+  "type": "journal-article",
+  "url": "https://doi.org/10.1086/450001",
+  "status": "verified",
+  "query": "Becker 1960 an economic analysis of fertility demographic and economic change in developed countries"
+ }
+}

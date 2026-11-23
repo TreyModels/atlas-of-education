@@ -1,0 +1,39 @@
+claim_id,claim,number,source_branch,source_commit,file,field
+A1,levels coefficient women's attainment,-0.129 (SE 0.029) n=5915/192,research/corr-rebuild-2026-11-23,161b563,data/results_part1.json,levels_female_attainment
+A1,levels coefficient total attainment,-0.228 (0.042) n=1394/144,research/corr-rebuild-2026-11-23,161b563,data/results_part1.json,levels_total_attainment
+A1,levels coefficient secondary enrolment,-0.0213 (0.0037) n=5927/202,research/corr-rebuild-2026-11-23,161b563,data/results_part1.json,levels_secondary
+A1,eight-measure levels table,all 8 negative-significant,research/corr-battery-2026-11-23,9363079,data/pair_table.csv,level_b/level_se
+A1,income robustness,-0.129 (0.029) with income -0.231 (0.063); income alone -0.318 (0.066),research/corr-rebuild-2026-11-23,161b563,README.md,levels-income paragraph
+A2,spec curve period cells,99.7% negative / 91.3% negsig / 0% possig / median -0.475,research/corr-rebuild-2026-11-23,161b563,data/spec_curve.csv,counts over period specs
+A2,spec curve all cells,96.1% negative / 81.8% negsig / 3.6% possig,research/corr-rebuild-2026-11-23,161b563,data/results_part2.json,spec_curve_all
+A3,transport focal pairs levels,0.715-0.989 share negative-significant,research/corr-battery-2026-11-23,9363079,data/results_summary.json,transport_focal_pairs
+A3,transport focal pairs changes,0.000-0.072,research/corr-battery-2026-11-23,9363079,data/results_summary.json,transport_focal_pairs
+A3,transport matrix-wide,0.227 [0.214,0.239] levels vs 0.111 [0.103,0.120] changes,research/corr-battery-2026-11-23,9363079,data/results_summary.json,transport
+A3,random re-partitions,13800 partitions; 57,291,101 regressions; 3018 s,research/corr-battery-2026-11-23,9363079,README.md,"run facts"
+A4,change coefficient women's attainment,+0.111 (SE 0.045),research/corr-rebuild-2026-11-23,161b563,data/results_part1.json,changes_female_attainment
+A4,change coefficient total attainment,+0.190 (0.055),research/corr-rebuild-2026-11-23,161b563,data/results_part1.json,changes_total_attainment
+A4,no negative-significant change cell,0/8,research/corr-battery-2026-11-23,9363079,data/results_summary.json,grid_a.changes
+A4,per-pair levels spec shares,negative in 70-83%; negsig 43-59%,research/corr-battery-2026-11-23,9363079,data/pair_table.csv,level_share_neg/level_share_negsig
+A4,per-pair changes spec shares,negative in 24-44%; negsig 3.5-13.5%,research/corr-battery-2026-11-23,9363079,data/pair_table.csv,change_share_neg/change_share_negsig
+A5,future-schooling placebo focal,52.9% negsig, median -0.0179,research/corr-battery-2026-11-23,9363079,data/results_summary.json,placebo_focal
+A5,correct-time same cells focal,58.8% negsig, median -0.0224,research/corr-battery-2026-11-23,9363079,data/results_summary.json,correct_time_focal
+A5,smaller-grid placebo,24/24 negative-significant median -0.68,research/corr-rebuild-2026-11-23,161b563,README.md,placebo paragraph
+A5,bootstrap focal,8/8 intervals exclude zero; all-pairs 74.6%,research/corr-battery-2026-11-23,9363079,data/results_summary.json,bootstrap
+B1,DHS education gradients,primary -0.57 (0.06); secondary -1.62 (0.17); higher -2.54 (0.24),research/dhs-micro-2026-11-23,31ded00,results/model_education.json,edu_primary/edu_secondary/edu_higher
+B1,DHS survey gradient universality,99% of 346 surveys negative; median -1.90 (IQR -2.48 to -1.43),research/dhs-micro-2026-11-23,31ded00,results/survey_gradients.csv,share_negative/median
+B1,DHS sample,1291 education cells, 369 surveys, 86 countries; 81,962 published cells,research/dhs-micro-2026-11-23,31ded00,README.md,"§1"
+B2,cohort attenuation,cohort medians -2.50 (1940s) to -1.80 (1970s); interaction +0.26 (0.13),research/dhs-micro-2026-11-23,31ded00,results/cohort_gradients.csv,cohort_medians/interaction
+B2,pipeline attenuation,pipeline medians -2.10/-2.00/-1.60; interaction +0.13 (0.05),research/dhs-micro-2026-11-23,31ded00,README.md,"§2 E3"
+B3,care-work loop null,+0.009 (t 0.17) after income +0.242 (t 2.47), urban +0.42 (t 3.38); male placebo +0.179 (t 2.10); manufacturing placebo -0.189 (t -3.47),research/care-credential-2026-11-23,e626cb8,research/records/2026-11-23-care-credential/results/,care_loop models
+B3,strong no-off-switch falsified,34/396 (8.6%, upper 11.3%); 5/38 within 10y; ceiling 1.83; event study +0.035 (0.025),research/policy-foreclosure-2026-11-23,63691a2,research/records/2026-11-23-policy-foreclosure/results/,persistence/event_study
+B3,tipping point absent,autocorr -0.025 (0.008) wrong sign; variance +0.079 (0.034) fails surrogate 0.42,research/early-warning-2026-11-23,7e64f61,research/records/2026-11-23-early-warning/results/,ews_stats
+B4,mortality counterfactual,history 4.96->3.60; frozen 5.01->3.70; 3.2% removed; band 0.9-4.7%; 4.5x 10%,research/transition-gpu-2026-11-23,f9f2f18,research/records/2026-11-23-transition-gpu/results/trans_collapse_big.json,rows[].cohort_fertility
+B4,development-only rival,5.22 -> 2.08 (-3.14); 2.0% removed,research/transition-gpu-2026-11-23,f9f2f18,research/records/2026-11-23-transition-gpu/results/trans_collapse_B.json,rows[].cohort_fertility
+B4,pre-antibiotic arc unreachable,4.01 -> 4.94 -> 4.64; max committed 5.20/5.42,research/transition-gpu-2026-11-23,f9f2f18,research/records/2026-11-23-transition-gpu/results/trans_results.json,rows[].cohort_fertility
+B4,individuation out-of-sample,24.43 vs 21.10; diff +3.32 [-3.76,+11.14]; 3/6 better,research/dose-gpu-2026-11-23,774085c,research/records/2026-11-23-dose-gpu/results/analysis_holdout.json,holdout.mean_A/mean_B/diff_mean/diff_ci/A_better
+B4,GPU engine variant,25.48 vs 21.68; +3.80 [-2.60,+11.96],research/dose-gpu-2026-11-23,774085c,research/records/2026-11-23-dose-gpu/results/analysis_holdout_gpuengine.json,holdout.*
+B4,quantum/tempo,2.09 / -0.34 in-sample; 2.55 / -0.42 out-of-sample,research/dose-gpu-2026-11-23,774085c,research/records/2026-11-23-dose-gpu/results/analysis_decomp.json,decomposition.A_fit/A_holdout
+B4,tolerance ladder,acceptance 1044/5000 (20.9%); 1012/10000 (10.1%); 660/12000 (5.5%); spreads 0.87-1.01; rival 32/4000,research/dose-tolerance-2026-11-23,baadfe6,research/records/2026-11-23-dose-tolerance/results/ladder.json,drawn/accepted/params.*.spread
+B4,mortality-leads-ordering,+12 years median lead,research/transition-2026-11-23,b13fde8,research/records/2026-11-23-transition/results/transition_results.json,onset lag distribution
+B5,threshold bootstrap women's years,-0.326 [-0.405,-0.248]; -0.092 [-0.175,-0.013]; +0.112 [0.057,0.171],research/corr-battery-2026-11-23,9363079,data/results_summary.json,threshold_bootstrap
+B5,threshold point estimates,-0.33 / -0.09 / +0.11,research/corr-rebuild-2026-11-23,161b563,README.md,threshold paragraph

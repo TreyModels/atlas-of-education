@@ -1,0 +1,502 @@
+{
+ "silberzahn2018b": {
+  "doi": "10.3410/f.733854636.793554750",
+  "title": "Faculty Opinions recommendation of Many analysts, one data set: making transparent how variations in analytic choices affect results.",
+  "authors": [
+   "Jesse Gillis"
+  ],
+  "year": 2019,
+  "journal": "Faculty Opinions \u2013 Post-Publication Peer Review of the Biomedical Literature",
+  "volume": null,
+  "issue": null,
+  "pages": null,
+  "publisher": "H1 Connect",
+  "type": "dataset",
+  "url": "https://doi.org/10.3410/f.733854636.793554750",
+  "status": "verified",
+  "query": "Silberzahn 2018 many analysts one data set making transparent how variations in analytic choices affect results"
+ },
+ "lee2003": {
+  "doi": "10.1257/089533003772034943",
+  "title": "The Demographic Transition: Three Centuries of Fundamental Change",
+  "authors": [
+   "Ronald Lee"
+  ],
+  "year": 2003,
+  "journal": "Journal of Economic Perspectives",
+  "volume": "17",
+  "issue": "4",
+  "pages": "167-190",
+  "publisher": "American Economic Association",
+  "type": "journal-article",
+  "url": "https://doi.org/10.1257/089533003772034943",
+  "status": "verified",
+  "query": "Lee 2003 the demographic transition three centuries of fundamental change"
+ },
+ "davis1963b": {
+  "doi": "10.2307/2732014",
+  "title": "The Theory of Change and Response in Modern Demographic History",
+  "authors": [],
+  "year": 1963,
+  "journal": "Population Index",
+  "volume": "29",
+  "issue": "4",
+  "pages": "345",
+  "publisher": "JSTOR",
+  "type": "journal-article",
+  "url": "https://doi.org/10.2307/2732014",
+  "status": "verified",
+  "query": "Davis 1963 the theory of change and response in modern demographic history"
+ },
+ "clelandrodriguez1988": {
+  "doi": "10.1080/0032472031000143566",
+  "title": "The Effect of Parental Education on Marital Fertility in Developing Countries",
+  "authors": [
+   "John Cleland",
+   "Germ\u00e1n Rodr\u00edguez"
+  ],
+  "year": 1988,
+  "journal": "Population Studies",
+  "volume": "42",
+  "issue": "3",
+  "pages": "419-442",
+  "publisher": "Informa UK Limited",
+  "type": "journal-article",
+  "url": "https://doi.org/10.1080/0032472031000143566",
+  "status": "verified",
+  "query": "Cleland Rodriguez 1988 the effect of parental education on marital fertility in developing countries"
+ },
+ "kravdal2012": {
+  "doi": "10.4054/demres.2012.27.22",
+  "title": "Further evidence of community education effects on fertility in sub-Saharan Africa",
+  "authors": [
+   "\u00d8ystein Kravdal"
+  ],
+  "year": 2012,
+  "journal": "Demographic Research",
+  "volume": "27",
+  "issue": null,
+  "pages": "645-680",
+  "publisher": "Max Planck Institute for Demographic Research",
+  "type": "journal-article",
+  "url": "https://doi.org/10.4054/demres.2012.27.22",
+  "status": "verified",
+  "query": "Kravdal 2012 further evidence of community education effects on fertility in sub-Saharan Africa"
+ },
+ "coalewatkins1986": {
+  "doi": "10.1515/9781400886692",
+  "title": "The Decline of Fertility in Europe",
+  "authors": [
+   "Ansley Johnson Coale"
+  ],
+  "year": 2017,
+  "journal": "",
+  "volume": null,
+  "issue": null,
+  "pages": null,
+  "publisher": "Princeton University Press",
+  "type": "edited-book",
+  "url": "https://doi.org/10.1515/9781400886692",
+  "status": "verified",
+  "query": "Coale Watkins 1986 the decline of fertility in Europe"
+ },
+ "granovetter1978": {
+  "doi": "10.1086/226707",
+  "title": "Threshold Models of Collective Behavior",
+  "authors": [
+   "Mark Granovetter"
+  ],
+  "year": 1978,
+  "journal": "American Journal of Sociology",
+  "volume": "83",
+  "issue": "6",
+  "pages": "1420-1443",
+  "publisher": "University of Chicago Press",
+  "type": "journal-article",
+  "url": "https://doi.org/10.1086/226707",
+  "status": "verified",
+  "query": "Granovetter 1978 threshold models of collective behavior"
+ },
+ "beaumont2002": {
+  "doi": "10.1093/genetics/162.4.2025",
+  "title": "Approximate Bayesian Computation in Population Genetics",
+  "authors": [
+   "Mark A Beaumont",
+   "Wenyang Zhang",
+   "David J Balding"
+  ],
+  "year": 2002,
+  "journal": "Genetics",
+  "volume": "162",
+  "issue": "4",
+  "pages": "2025-2035",
+  "publisher": "Oxford University Press (OUP)",
+  "type": "journal-article",
+  "url": "https://doi.org/10.1093/genetics/162.4.2025",
+  "status": "verified",
+  "query": "Beaumont Zhang Balding 2002 approximate Bayesian computation in population genetics"
+ },
+ "beaumont2009": {
+  "doi": "10.1093/biomet/asp052",
+  "title": "Adaptive approximate Bayesian computation",
+  "authors": [
+   "M. A. Beaumont",
+   "J.-M. Cornuet",
+   "J.-M. Marin",
+   "C. P. Robert"
+  ],
+  "year": 2009,
+  "journal": "Biometrika",
+  "volume": "96",
+  "issue": "4",
+  "pages": "983-990",
+  "publisher": "Oxford University Press (OUP)",
+  "type": "journal-article",
+  "url": "https://doi.org/10.1093/biomet/asp052",
+  "status": "verified",
+  "query": "Beaumont Cornuet Marin Robert 2009 adaptive approximate Bayesian computation"
+ },
+ "delmoral2012": {
+  "doi": "10.1007/s11222-011-9271-y",
+  "title": "An adaptive sequential Monte Carlo method for approximate Bayesian computation",
+  "authors": [
+   "Pierre Del Moral",
+   "Arnaud Doucet",
+   "Ajay Jasra"
+  ],
+  "year": 2011,
+  "journal": "Statistics and Computing",
+  "volume": "22",
+  "issue": "5",
+  "pages": "1009-1020",
+  "publisher": "Springer Science and Business Media LLC",
+  "type": "journal-article",
+  "url": "https://doi.org/10.1007/s11222-011-9271-y",
+  "status": "verified",
+  "query": "Del Moral Doucet Jasra 2012 an adaptive sequential Monte Carlo method for approximate Bayesian computation"
+ },
+ "eberhardt2011": {
+  "doi": "10.1111/j.1467-6419.2010.00624.x",
+  "title": "ECONOMETRICS FOR GRUMBLERS: A NEW LOOK AT THE LITERATURE ON CROSS-COUNTRY GROWTH EMPIRICS",
+  "authors": [
+   "Markus Eberhardt",
+   "Francis Teal"
+  ],
+  "year": 2011,
+  "journal": "Journal of Economic Surveys",
+  "volume": "25",
+  "issue": "1",
+  "pages": "109-155",
+  "publisher": "Wiley",
+  "type": "journal-article",
+  "url": "https://doi.org/10.1111/j.1467-6419.2010.00624.x",
+  "status": "verified",
+  "query": "Eberhardt Teal 2011 econometrics for grumblers a guide to the literature on cross-country growth empirics"
+ },
+ "pearl2011": {
+  "doi": "10.1109/icdmw.2011.169",
+  "title": "Transportability of Causal and Statistical Relations: A Formal Approach",
+  "authors": [
+   "Judea Pearl",
+   "Elias Bareinboim"
+  ],
+  "year": 2011,
+  "journal": "2011 IEEE 11th International Conference on Data Mining Workshops",
+  "volume": null,
+  "issue": null,
+  "pages": "540-547",
+  "publisher": "IEEE",
+  "type": "proceedings-article",
+  "url": "https://doi.org/10.1109/icdmw.2011.169",
+  "status": "verified",
+  "query": "Pearl Bareinboim 2011 transportability of causal and statistical relations a general approach"
+ },
+ "corsi2012": {
+  "doi": "10.1093/ije/dys184",
+  "title": "Demographic and health surveys: a profile",
+  "authors": [
+   "D. J. Corsi",
+   "M. Neuman",
+   "J. E. Finlay",
+   "S. Subramanian"
+  ],
+  "year": 2012,
+  "journal": "International Journal of Epidemiology",
+  "volume": "41",
+  "issue": "6",
+  "pages": "1602-1613",
+  "publisher": "Oxford University Press (OUP)",
+  "type": "journal-article",
+  "url": "https://doi.org/10.1093/ije/dys184",
+  "status": "verified",
+  "query": "Corsi Neuman Finlay Subramanian 2012 demographic and health surveys methodological reports"
+ },
+ "duflo2001b": {
+  "doi": "10.3386/w7860",
+  "title": "Schooling and Labor Market Consequences of School Construction in Indonesia: Evidence from an Unusual Policy Experiment",
+  "authors": [
+   "Esther Duflo"
+  ],
+  "year": 2000,
+  "journal": "",
+  "volume": null,
+  "issue": null,
+  "pages": null,
+  "publisher": "National Bureau of Economic Research",
+  "type": "report",
+  "url": "https://doi.org/10.3386/w7860",
+  "status": "verified",
+  "query": "Duflo 2001 schooling and labor market consequences of school construction in Indonesia evidence from an unusual policy experiment"
+ },
+ "pritchett2001b": {
+  "doi": "10.1093/wber/15.3.367",
+  "title": "Where Has All the Education Gone?",
+  "authors": [
+   "L. Pritchett"
+  ],
+  "year": 2001,
+  "journal": "The World Bank Economic Review",
+  "volume": "15",
+  "issue": "3",
+  "pages": "367-391",
+  "publisher": "Oxford University Press (OUP)",
+  "type": "journal-article",
+  "url": "https://doi.org/10.1093/wber/15.3.367",
+  "status": "verified",
+  "query": "Pritchett 2001 where has all the education gone World Bank Economic Review"
+ },
+ "barrolee2013b": {
+  "doi": "10.1016/j.jdeveco.2012.10.001",
+  "title": "A new data set of educational attainment in the world, 1950\u20132010",
+  "authors": [
+   "Robert J. Barro",
+   "Jong Wha Lee"
+  ],
+  "year": 2013,
+  "journal": "Journal of Development Economics",
+  "volume": "104",
+  "issue": null,
+  "pages": "184-198",
+  "publisher": "Elsevier BV",
+  "type": "journal-article",
+  "url": "https://doi.org/10.1016/j.jdeveco.2012.10.001",
+  "status": "verified",
+  "query": "Barro Lee 2013 a new data set of educational attainment in the world Journal of Development Economics"
+ },
+ "psach2004b": {
+  "doi": "10.1080/0964529042000239140",
+  "title": "Returns to investment in education: a further update",
+  "authors": [
+   "George Psacharopoulos",
+   "Harry Anthony Patrinos *"
+  ],
+  "year": 2004,
+  "journal": "Education Economics",
+  "volume": "12",
+  "issue": "2",
+  "pages": "111-134",
+  "publisher": "Informa UK Limited",
+  "type": "journal-article",
+  "url": "https://doi.org/10.1080/0964529042000239140",
+  "status": "verified",
+  "query": "Psacharopoulos Patrinos 2004 returns to investment in education a further update Education Economics"
+ },
+ "mankiw1992b": {
+  "doi": "10.2307/2118477",
+  "title": "A Contribution to the Empirics of Economic Growth",
+  "authors": [
+   "N. G. Mankiw",
+   "D. Romer",
+   "D. N. Weil"
+  ],
+  "year": 1992,
+  "journal": "The Quarterly Journal of Economics",
+  "volume": "107",
+  "issue": "2",
+  "pages": "407-437",
+  "publisher": "Oxford University Press (OUP)",
+  "type": "journal-article",
+  "url": "https://doi.org/10.2307/2118477",
+  "status": "verified",
+  "query": "Mankiw Romer Weil 1992 a contribution to the empirics of economic growth Quarterly Journal of Economics"
+ },
+ "brock2001b": {
+  "doi": "10.1596/17447",
+  "title": "Growth Empirics and Reality",
+  "authors": [
+   "William A. Brock",
+   "Steven N. Durlauf"
+  ],
+  "year": 2001,
+  "journal": "",
+  "volume": null,
+  "issue": null,
+  "pages": null,
+  "publisher": "Washington, DC:  World Bank",
+  "type": "book",
+  "url": "https://doi.org/10.1596/17447",
+  "status": "verified",
+  "query": "Brock Durlauf 2001 growth empirics and reality World Bank Economic Review"
+ },
+ "becker2010b": {
+  "doi": "10.2139/ssrn.1476206",
+  "title": "The Trade-off between Fertility and Education: Evidence from before the Demographic Transition",
+  "authors": [
+   "Sascha O. Becker",
+   "Francesco Cinnirella",
+   "Ludger Woessmann"
+  ],
+  "year": 2009,
+  "journal": "",
+  "volume": null,
+  "issue": null,
+  "pages": null,
+  "publisher": "Elsevier BV",
+  "type": "posted-content",
+  "url": "https://doi.org/10.2139/ssrn.1476206",
+  "status": "verified",
+  "query": "Becker Cinnirella Woessmann 2010 the trade-off between fertility and education evidence from before the demographic transition"
+ },
+ "becker2013b": {
+  "doi": "10.2139/ssrn.1831121",
+  "title": "Does Parental Education Affect Fertility? Evidence from Pre-Demographic Transition Prussia",
+  "authors": [
+   "Sascha O. Becker",
+   "Francesco Cinnirella",
+   "Ludger Woessmann"
+  ],
+  "year": 2011,
+  "journal": "",
+  "volume": null,
+  "issue": null,
+  "pages": null,
+  "publisher": "Elsevier BV",
+  "type": "posted-content",
+  "url": "https://doi.org/10.2139/ssrn.1831121",
+  "status": "verified",
+  "query": "Becker Cinnirella Woessmann 2013 does education matter for fertility evidence from Prussia"
+ },
+ "martinjuarez1995": {
+  "doi": "10.2307/2133523",
+  "title": "The Impact of Women's Education on Fertility In Latin America: Searching for Explanations",
+  "authors": [
+   "Teresa Castro Martin",
+   "Fatima Juarez"
+  ],
+  "year": 1995,
+  "journal": "International Family Planning Perspectives",
+  "volume": "21",
+  "issue": "2",
+  "pages": "52",
+  "publisher": "JSTOR",
+  "type": "journal-article",
+  "url": "https://doi.org/10.2307/2133523",
+  "status": "verified",
+  "query": "Martin Juarez 1995 the impact of women's education on fertility in Latin America searching for explanations"
+ },
+ "king1997b": {
+  "doi": "10.3886/icpsr01132.v1",
+  "title": "Solution to the Ecological Inference Problem: Reconstructing Individual Behavior from Aggregate Data",
+  "authors": [
+   "Gary King"
+  ],
+  "year": 1997,
+  "journal": "ICPSR Data Holdings",
+  "volume": null,
+  "issue": null,
+  "pages": null,
+  "publisher": "Inter-university Consortium for Political and Social Research (ICPSR)",
+  "type": "dataset",
+  "url": "https://doi.org/10.3886/icpsr01132.v1",
+  "status": "verified",
+  "query": "King 1997 a solution to the ecological inference problem reconstructing individual behavior from aggregate data"
+ },
+ "notestein1945b": {
+  "doi": "10.2134/asaspecpub6.c3",
+  "title": "World Population Determinants in the Future",
+  "authors": [
+   "Frank W. Notestein"
+  ],
+  "year": 1965,
+  "journal": "ASA Special Publications",
+  "volume": null,
+  "issue": null,
+  "pages": "23-30",
+  "publisher": "Wiley",
+  "type": "other",
+  "url": "https://doi.org/10.2134/asaspecpub6.c3",
+  "status": "verified",
+  "query": "Notestein 1945 population the long view Food for the World"
+ },
+ "schultz1961b": {
+  "doi": "10.1257/aer.89.2.186",
+  "title": "Immigrants and Human-Capital Investment",
+  "authors": [
+   "Harriet Orcutt Duleep",
+   "Mark C Regets"
+  ],
+  "year": 1999,
+  "journal": "American Economic Review",
+  "volume": "89",
+  "issue": "2",
+  "pages": "186-191",
+  "publisher": "American Economic Association",
+  "type": "journal-article",
+  "url": "https://doi.org/10.1257/aer.89.2.186",
+  "status": "verified",
+  "query": "Schultz 1961 investment in human capital American Economic Review"
+ },
+ "becker1960b2": {
+  "doi": "10.1086/450001",
+  "title": "Demographic and Economic Change<i>Demographic and Economic Change in Developed Countries</i>. Ansley J. Coale",
+  "authors": [
+   "Joseph J. Spengler"
+  ],
+  "year": 1963,
+  "journal": "Economic Development and Cultural Change",
+  "volume": "11",
+  "issue": "2, Part 1",
+  "pages": "213-216",
+  "publisher": "University of Chicago Press",
+  "type": "journal-article",
+  "url": "https://doi.org/10.1086/450001",
+  "status": "verified",
+  "query": "Becker 1960 an economic analysis of fertility demographic and economic change in developed countries"
+ },
+ "trow1974b": {
+  "doi": "10.1007/978-1-4020-4012-2_13",
+  "title": "Reflections on the Transition from Elite to Mass to Universal Access: Forms and Phases of Higher Education in Modern Societies since WWII",
+  "authors": [
+   "Martin Trow"
+  ],
+  "year": null,
+  "journal": "Springer International Handbooks of Education",
+  "volume": null,
+  "issue": null,
+  "pages": "243-280",
+  "publisher": "Springer Netherlands",
+  "type": "book-chapter",
+  "url": "https://doi.org/10.1007/978-1-4020-4012-2_13",
+  "status": "verified",
+  "query": "Trow 1974 problems in the transition from elite to mass higher education"
+ },
+ "henrich2010": {
+  "doi": "10.2139/ssrn.1601785",
+  "title": "The Weirdest People in the World?",
+  "authors": [
+   "Joseph Henrich",
+   "Steven J. Heine",
+   "Ara Norenzayan"
+  ],
+  "year": 2010,
+  "journal": "",
+  "volume": null,
+  "issue": null,
+  "pages": null,
+  "publisher": "Elsevier BV",
+  "type": "posted-content",
+  "url": "https://doi.org/10.2139/ssrn.1601785",
+  "status": "verified",
+  "query": "Henrich Heine Norenzayan 2010 the weirdest people in the world"
+ }
+}
