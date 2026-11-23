@@ -1,7 +1,7 @@
 # Research dashboard — 23 November 2026
 
-**Status: FINAL for the first wave; second wave appended at the end.** All thirteen first-wave jobs are complete, verified and pushed to origin. The methods paper is the only item still with Dr. Menefee and is not pushed. A second wave of eleven jobs (tasks 15–26) was run later the same evening to test the theory at the level it claims: those records are summarised in the "Second wave" section at the end, each with a pre-registration as its first commit. Every number below is
-traceable to the results file named in the job's own record. Plain words, no variable names.
+**Status: FINAL — first wave plus second wave, all verified.** All thirteen first-wave jobs are complete, verified and pushed to origin. The methods paper is the only item still with Dr. Menefee and is not pushed. A second wave of jobs (tasks 15–29) was run later the same evening to test the theory at the level it claims: those records are summarised in the "Second wave" and "Final tranche" sections at the end, each with a pre-registration as its first commit, and the full verified branch list (10 records) was recomputed from committed files by the run lead. Every number below is traceable to the results file named in the job's own record. Plain words, no variable names.
+
 
 **Server note.** Two rented boxes were used; one is retained. All remaining work and data are on box2
 (`ssh autodl2`): `/root/work/data`, `/root/work/dose_gpu`, `/root/work/impute`, `/root/work/controls`,
