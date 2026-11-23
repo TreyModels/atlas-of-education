@@ -65,3 +65,21 @@ first inventory pass and they are now in.
    accordingly in the inventory.
 3. **Do not merge F4 and F5** (400-draw vs 13,800-draw batteries) — they are separate runs with different
    percentages.
+
+---
+
+## LOOP CLOSED — Council a2128d1 (24 Nov)
+
+Both flagged items are fixed and verified:
+1. **Sample labels**: DECISION.md, NOVELTY_INVENTORY.md M6 and CANDIDATES.md now state both samples explicitly —
+   64 three-event countries: 60 fertility-first / 4 release-first (93.75% / 6.25%), 0 ties; 95 countries with both a
+   farm-exit and a fertility date: 86/9 (90.53% / 9.47%), 0 ties, with the nine named (AFG, LBR, MWI, ZMB, BDI, BFA,
+   ERI, NGA, TLS). The earlier "64 countries with both dates" label is gone.
+2. **Committed recompute artefact**: `lit/recompute_release_fertility_ordering.py` + `lit/release_fertility_ordering.json`
+   exist next to the data, with the CSV sha256 recorded. I verified the hash my downloaded Paper M CSV gives is
+   `d0c02f95ade0850e…` (exact match), and the JSON's four orderings reproduce my independent derivation exactly:
+   schooling-vs-fertility 64 = 24/20/20 (37.5% [26.67, 49.75]); all-81 = 29 (35.80%); release-vs-fertility 64 =
+   4/60, 0 ties, median gap −25.5; both-dates 95 = 9/86, 0 ties, median gap −20.0.
+My other marks are folded (F12-F13 "project-record, auditor not independently recomputed"; F4-vs-F5 separate-battery
+note; P1 signed off at f9dd325; P2 corrected at 95dc135/76d929a with the two opens; section E added). **Council
+inventory: CLOSED.**
