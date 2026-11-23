@@ -1,6 +1,6 @@
 # Research dashboard — 23 November 2026
 
-**Status: FINAL for this session** (the methods paper is still being drafted separately). Every number below is
+**Status: FINAL for the main session** (the methods paper is still being drafted separately; follow-up jobs 9-11 are running). Every number below is
 traceable to the results file named in the job's own record. Plain words, no variable names.
 
 **Server note.** Two rented boxes were used; one is retained. All remaining work and data are on box2
@@ -19,16 +19,22 @@ The two questions this session is answering:
 
 ## The jobs and where they stand
 
-| Job | What it tests | Branch | Status |
+| Job (task id) | What it tests | Branch | Status |
 |---|---|---|---|
-| 1 | GPU rewrite of the individual-level dose model, then a converged fit | research/dose-gpu-2026-11-23 | PORT DONE (exact vs rewritten reference); valid rejection-ABC posterior; A-vs-B pending |
-| 2 | Lead-lag matrix rerun on the gap-filled panel | research/imputed-matrix-2026-11-23 | **DONE and verified** (commit 18404e3) |
-| 3 | Grouping multiverse with 400 random groupings (was 74) | research/grouping-multiverse-400-2026-11-23 | **DONE and verified** (commit 1152cec; 38,420,908 regressions) |
-| 4 | Added controls: child mortality, women's work | research/controls-2026-11-23 | **DONE and verified** (commit e18fc5a) |
-| 5 | UN marriage and living-arrangements data, merged and tested | research/un-marriage-2026-11-23 | **DONE and verified** (b5c5335, 78ac50b, f3309e3) |
-| 6 | Marriage age added to the matrix (20 measures, 380 links) | research/matrix-marriage-2026-11-23 | **DONE and verified** (commit 383acd8) |
-| 8 | Why fertility tracks child survival and life expectancy: review + experiment plan | research/mechanisms-2026-11-23 | **DONE and verified** (commit ff2b18c) |
-| — | Methodology paper on the multiverse method | research/methods-multiverse-paper-2026-11-23 | DRAFTING (held by Dr. Menefee) |
+| 1 (task-1) | GPU rewrite of the dose model, then a converged fit and the A-vs-B test | research/dose-gpu-2026-11-23 | **DONE and verified** (cfb448e): individuation does **not** beat development-only out of sample |
+| 2 (task-2) | Lead-lag matrix on the gap-filled panel | research/imputed-matrix-2026-11-23 | **DONE and verified** (5e4602b) |
+| 3 (task-3) | Grouping multiverse at 400 random groupings (was 74) | research/grouping-multiverse-400-2026-11-23 | **DONE and verified** (1152cec; 38,420,908 regressions) |
+| 4 (task-5) | Added controls: child mortality, women's work | research/controls-2026-11-23 | **DONE and verified** (5ea58af) |
+| 5 (task-4) | UN marriage and living-arrangements data, merged and tested | research/un-marriage-2026-11-23 | **DONE and verified** (b2b18d5) |
+| 6 (task-7) | Marriage age inside the 20-measure matrix (380 links) | research/matrix-marriage-2026-11-23 | **DONE and verified** (559a4e9) |
+| 7 (task-8) | Why fertility tracks child survival: literature review + experiment plan | research/mechanisms-2026-11-23 | **DONE and verified** (28479c1) |
+| 8 (task-9) | E1: child-mortality level versus volatility | research/level-volatility-2026-11-23 | **DONE and verified** (935632e) |
+| 9 (task-10) | Dose tolerance ladder: is the strength identifiable? | research/dose-tolerance-2026-11-23 | RUNNING |
+| 10 (task-11) | GPU engine scale and robustness audit | research/cuda-scale-2026-11-23 | RUNNING |
+| 11 (task-12) | Full transition: pre-antibiotic equilibrium to fertility collapse | research/transition-2026-11-23 | RUNNING |
+| - (task-6) | Methodology paper on the multiverse method | research/methods-multiverse-paper-2026-11-23 | DRAFTING (held by Dr. Menefee) |
+
+Job numbers follow the project brief; the shared task board uses task ids (given in brackets).
 
 ---
 
@@ -44,15 +50,16 @@ The two questions this session is answering:
   strengths were not pinned down.
 - The "not luck" result weakened under a harder null: 6 of 20,000 shifted worlds reached it.
 
-### The dose model on the GPU (job 1) — DONE for the fit; A-vs-B pending
+### The dose model on the GPU (job 1) — DONE
 - **The GPU rewrite succeeded**: a hand-written CUDA kernel through CuPy on a Tesla T4, about 23x per CPU core
   (487 life-course runs per second against 19.5), up to ~1,900/s at larger batches. For the same random numbers
   the GPU reproduces the rewritten CPU reference exactly: per-woman states identical, all four fitted targets
   differ by 0.0, arithmetic aggregates within 1e-15. It never bit-matches the *published* model, because the
   published marriage market is a serial random permutation; the GPU market is a deterministic priority market, so
   it is a slightly different model (a documented deviation, not a correctable offset).
-- **Headline engine is the exact published model on CPU.** Scenario A, B and an independent A replicate were run
-  with rejection ABC (equal weights) after particle-filter ABC was abandoned - see the methods finding below.
+- **Headline engine is the exact published model on CPU, and the out-of-sample answer is negative.** Scenario A,
+  B and an independent A replicate were run with rejection ABC (equal weights) after particle-filter ABC was
+  abandoned - see the methods finding below.
 - **A valid posterior exists at last.** Scenario A accepted 1,044 of 5,000 prior draws (20.9%); the independent
   replicate accepted 1,003 (20.1%). Effective sample size equals the number accepted (all weights equal). The two
   independent runs agree closely, which is the convergence evidence the previous session lacked:
@@ -106,7 +113,7 @@ The two questions this session is answering:
   generate synthetic data; it refits nothing. It has been relabelled in the results file so it cannot be mistaken
   for recovery evidence.
 
-### Why fertility tracks child survival and life expectancy (new analysis) — DONE (review + plan, not experiments)
+### Why fertility tracks child survival and life expectancy (job 7) — DONE (review + plan; the level-vs-volatility test is job 8)
 - The two fertility links robust in every kind of country are higher child mortality -> higher fertility and
   higher life expectancy -> lower fertility. A literature review and experiment plan now explain why that is hard
   to model: at country level the rival mechanisms are **observationally equivalent** - replacement of dead
@@ -117,11 +124,12 @@ The two questions this session is answering:
   reverse-direction links are null in our matrix (fertility -> child mortality -0.83 +/- 1.84; fertility -> life
   expectancy -0.11 +/- 0.23), so the association is a one-way lead-lag pattern, not a feedback loop.
 - Seven ranked, pre-registered experiments were designed, each with estimand, data gap, falsifier, minimum
-  detectable effect and identifying assumptions. The one separable with data already in hand is **level versus
-  volatility** of child mortality (run first, nearly free); the highest identification value is **replacement vs
-  insurance in birth spacing after a child death** (needs DHS/WFS micro data; minimum detectable effect about 3
-  percentage points in the chance of a next birth); mortality shocks are most convincing in principle but
-  underpowered for a 10-point mortality fall.
+  detectable effect and identifying assumptions. The one separable with data already in hand - **level versus
+  volatility** of child mortality - has now been run (job 8): the level matters and the volatility does not, which
+  favours replacement/quantity-quality stories at country level without excluding a common development cause. The
+  highest remaining identification value is **replacement vs insurance in birth spacing after a child death**
+  (needs DHS/WFS micro data; minimum detectable effect about 3 percentage points in the chance of a next birth);
+  mortality shocks are most convincing in principle but underpowered for a 10-point mortality fall.
 
 ### Country-level fertility links after gap-filling (job 2) — DONE
 - Seven fertility-block cells change significance. **Four are precision-only, not new effects**: urbanisation
@@ -179,7 +187,7 @@ The two questions this session is answering:
 - What this supports: **nothing causal about marriage age and fertility**. The fraction of births that never happen
   is not explained by marriage-timing data at country level.
 
-### Marriage age inside the full matrix (job 7) — DONE
+### Marriage age inside the full matrix (job 6) — DONE
 - The 17-measure matrix was extended to 20 measures by adding women's mean age at marriage, the never-married
   share at 45-49, and the female-minus-male marriage-age gap: 380 ordered links, each run with country effects
   and with country trends.
@@ -196,6 +204,27 @@ The two questions this session is answering:
 - After Benjamini-Hochberg across 380 links, only 16 links survive country trends, about the 19 expected by
   chance if nothing were real, so the trend-surviving set must be read link by link.
 
+### Level versus volatility of child mortality (job 8, experiment E1) — DONE
+- **The direct test of why births track child survival.** Child mortality was split into its slow level and its
+  year-to-year volatility, and both were put into the same within-country lead-lag design (observed panel only,
+  income logged, country and decade effects, clustered errors, with and without country trends).
+- **The level matters; the volatility does not.** Level: +0.0067 births per woman per point of child mortality
+  (SE 0.0015, 7,531 country-years, 193 countries) with country trends, +0.0072 (SE 0.0007) with country effects -
+  replicating the matrix's raw link. Volatility: +0.0020 (SE 0.0020), not significant alone or jointly (the joint
+  estimate is -0.0022 with a level estimate of +0.0070). The level and volatility measures correlate only 0.29, so
+  the joint model can separate them.
+- **Falsifiers:** circular-shift permutation gives p < 0.005 for the level and p = 0.29 for volatility; the
+  cluster-preserving country placebo for volatility is p = 0.12 (inside its null). A minimum detectable effect of
+  0.0046 for the level and 0.0056 for volatility means a volatility effect as large as the level effect would have
+  been detected; roughly half that size would not.
+- **Reading:** the number of children who die moves fertility, not the riskiness of child survival. At country
+  level that favours replacement and quantity-quality stories over a pure insurance/uncertainty story - but it
+  does **not** exclude a common development cause, and a country-level null on volatility cannot rule out
+  household-level insurance.
+- **Methodological lesson logged:** a naive value-scramble placebo for the volatility series looked significant
+  but is invalid because it breaks the clustering of the series; the correct cluster-preserving placebo is the one
+  reported. This belongs with the circular-shift lesson in the methods paper.
+
 ### Added controls (job 4) — DONE
 - Adding child mortality and women's work as controls changes 217 cells, but **120 of those are pure sample
   composition** (the control is missing for some countries, so the sample changes) and only **94 are genuine
@@ -209,8 +238,6 @@ The two questions this session is answering:
   that controls a known mediator collapses the result as predicted; and an exact power/minimum-detectable-change
   figure is given for every unchanged link, so a null can be read as "no change" only where the test could have
   seen one.
-- Child mortality and women's work added to the matrix, with a mediator table and a rule that a link is never tested
-  with a control that sits on its own causal path. Not started; depends on job 2.
 
 ---
 
@@ -271,7 +298,7 @@ The two questions this session is answering:
   0.994; 267-269 of 272 links agree between the full set and a half), so 400 draws is enough; normal and t fits
   of the yardstick agree on 42 of 46 links.
 
-### Marriage age as an outcome of schooling (job 7) — DONE
+### Marriage age as an outcome of schooling (job 6) — DONE
 - The strongest "schooling -> later marriage" link from the enlarged matrix, more tertiary schooling going with
   a later rise in women's marriage age (+0.071 years per point, SE 0.021, BH q = 0.02), **dies under the correct
   test**: a circular-shift permutation that preserves each country's series gives p = 0.50, and dropping the
@@ -288,35 +315,46 @@ See the paragraph above the massification section: the same control exercise, so
 
 ## What would change our minds (falsifiers to watch)
 
-- **Dose model**: the recovery test. Data simulated from a known kin effect of zero and a known large kin effect must
-  be refitted and the search must recover which is which and prefer the right scenario. If it cannot, the dose model
-  cannot be said to test the hypothesis. Also the permutation test: shuffling schooling across women within
-  country-cohorts must destroy the fit gain.
+- **Dose model (now run).** Scenario recovery passes both ways: data generated from individuation are predicted
+  better by the individuation posterior (15.4 against 17.6) and data generated from development-only clearly better
+  by the development-only posterior (12.1 against 18.3). Parameter recovery, however, passes only trivially - the
+  intervals are nearly as wide as the priors - so the strengths are not identified, and the out-of-sample test
+  says individuation does not beat development-only. The permutation test passes modestly: scrambling schooling
+  across women worsens prediction (by 0.67, 7 of 8 countries). What would still change our minds is a
+  tighter-tolerance fit that narrows those intervals (job 9 is testing exactly that).
 - **Massification nulls**: the power simulation must keep showing the trend test can see a real effect of plausible
   size. "Dies under country trends" is only readable as "cannot be separated from development", never as "is zero".
-- **Multiverse**: the strict 400-draw test cannot certify anything (resolution), so the honest claim is about
-  stability across groupings, not statistical certification.
+- **Multiverse**: certification depends on how many links share the p-value ceiling. A lone link needs about 5,440
+  draws, a cluster of 30 needs about 182 - and at 400 draws **35 links were certified going up** because a cluster
+  of 30 sat on the floor. The honest claim is therefore both about stability across groupings and about that
+  ceiling-cluster logic, not "nothing can be certified".
 - **Marriage data**: the change-on-change test is what killed the positive timing result; any future "marriage
   timing matters" claim must survive it.
 
 ## Branches produced this session
-- research/un-marriage-2026-11-23 (complete)
-- research/dose-gpu-2026-11-23 (complete, commit cfb448e)
-- research/imputed-matrix-2026-11-23 (complete, commit 18404e3)
-- research/grouping-multiverse-400-2026-11-23 (complete, commit 1152cec)
-- research/controls-2026-11-23 (complete, commit e18fc5a)
-- research/matrix-marriage-2026-11-23 (complete, commit 383acd8)
-- research/mechanisms-2026-11-23 (complete, commit ff2b18c)
+- research/dose-gpu-2026-11-23 (complete, cfb448e)
+- research/imputed-matrix-2026-11-23 (complete, 5e4602b)
+- research/grouping-multiverse-400-2026-11-23 (complete, 1152cec)
+- research/controls-2026-11-23 (complete, 5ea58af)
+- research/un-marriage-2026-11-23 (complete, b2b18d5)
+- research/matrix-marriage-2026-11-23 (complete, 559a4e9)
+- research/mechanisms-2026-11-23 (complete, 28479c1)
+- research/level-volatility-2026-11-23 (complete, 935632e)
+- research/dose-tolerance-2026-11-23 (running)
+- research/cuda-scale-2026-11-23 (running)
+- research/transition-2026-11-23 (running)
 - research/methods-multiverse-paper-2026-11-23 (drafting, held by Dr. Menefee)
+- research/dashboard-2026-11-23 (this report)
 
 ## Still not known (honest list)
 - **The individuation mechanism.** The dose model now has a valid posterior and does NOT beat development-only out
   of sample; its strengths are stable across runs but no narrower than the priors, and parameter recovery is
   passed only trivially. So the mechanism is neither supported nor excluded: the data identify its direction, not
   its size. The decisive test is micro data (birth spacing after a child death), not another country panel.
-- **Why fertility tracks child survival and life expectancy.** The association is robust; the mechanisms are
-  observationally equivalent at country level. The first experiment to run is level versus volatility of child
-  mortality, which needs no new data.
+- **Why fertility tracks child survival and life expectancy.** The association is robust and the level-versus-
+  volatility test (job 8) shows the level matters, not the riskiness - which favours replacement/quantity-quality
+  over pure insurance at country level. But a common development cause predicts the same pattern and is not
+  excluded, and the decisive household test (birth spacing after a child death) needs micro data we do not have.
 - **Whether the schooling-fertility null is a measurement limit or a real absence.** No country-level test so far
   can tell these apart; the marriage-timing channel is not visible at all.
 - **Whether electricity or wage jobs matter with country trends at a feasible sample size.** So far inseparable
