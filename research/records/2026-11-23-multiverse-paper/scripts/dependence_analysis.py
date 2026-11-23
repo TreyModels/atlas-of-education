@@ -133,7 +133,7 @@ by_info = dict(
     per_procedure_by_zero=dict(
         up=0, down=0, flip=0, het=0,
         floor_clusters=dict(up=30, down=19, flip=15, het=53),
-        note="Each of the four procedures has family size 272, so each needs rank >= 84 at the 400-draw floor; every floor cluster is below 84, so BY certifies zero in every procedure. The down/flip/het null matrices were not saved with the committed record, so these are floor-size deductions, not recomputations."),
+        note="Each of the four procedures has family size 272, so each needs rank >= 84 at the 400-draw floor; every floor cluster is below 84, so BY certifies zero in every procedure. Source: the up floor (30) is recomputed here from null_shares_TR.csv.gz; the down/flip/het floors (19/15/53) are taken from 2026-11-23-grouping-multiverse-400/results/headline.json (same empirical machinery in analyse400.py), whose null matrices for those statistics were not saved, so they are deductions from committed counts, not independent recomputations."),
     hypothetical_per_direction_68=dict(
         certified=35,
         draws_needed=dict(lone=6533, cluster_30=218, cluster_35=186),
