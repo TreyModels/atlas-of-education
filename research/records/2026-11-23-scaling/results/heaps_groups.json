@@ -1,0 +1,130 @@
+{
+ "note": "theta/gamma are NOT measured; groups below are institutional PROXIES (income group, region), not theta/gamma levels",
+ "method": "rarefied expected-distinct-categories curves from ILOSTAT ISCO-08 major groups; pooled exponent = country-demeaned log-log slope; cluster bootstrap over countries",
+ "overall": {
+  "exponent": 0.3493154636599028,
+  "bootstrap_se": 0.009003456429466056,
+  "ci95": [
+   0.3314931756397666,
+   0.36772951588435115
+  ],
+  "ncountries": 151,
+  "npoints": 1208
+ },
+ "groups": {
+  "income": {
+   "High income": {
+    "ncountries": 50,
+    "exponent": 0.35134049376772136,
+    "curvature": -0.020487072483913783,
+    "curvature_se": 0.0017439573960834976,
+    "curvature_boot_se": 0.019242655652967625,
+    "mean_country_exponent": 0.3928823800425135,
+    "sd_country_exponent": 0.1241347528819826
+   },
+   "Low income": {
+    "ncountries": 20,
+    "exponent": 0.35476796230490765,
+    "curvature": -0.010429866226093161,
+    "curvature_se": 0.001486550964388916,
+    "curvature_boot_se": 0.019634769465401363,
+    "mean_country_exponent": 0.38298423201825355,
+    "sd_country_exponent": 0.096166695594878
+   },
+   "Lower middle income": {
+    "ncountries": 39,
+    "exponent": 0.34341778031681996,
+    "curvature": -0.014916233407092243,
+    "curvature_se": 0.001504391734263356,
+    "curvature_boot_se": 0.018387256075338507,
+    "mean_country_exponent": 0.3798737629167138,
+    "sd_country_exponent": 0.11805076672461093
+   },
+   "Upper middle income": {
+    "ncountries": 42,
+    "exponent": 0.3499258543240718,
+    "curvature": -0.018491082209016817,
+    "curvature_se": 0.0019081153531191304,
+    "curvature_boot_se": 0.022416008657112525,
+    "mean_country_exponent": 0.40138707182667216,
+    "sd_country_exponent": 0.14092736531163647
+   }
+  },
+  "region": {
+   "East Asia & Pacific": {
+    "ncountries": 18,
+    "exponent": 0.28626430220049526,
+    "curvature": -0.016970354274192447,
+    "curvature_se": 0.002178431672671386,
+    "curvature_boot_se": 0.028553671798006424,
+    "mean_country_exponent": 0.3326056389696408,
+    "sd_country_exponent": 0.14304697016290563
+   },
+   "Europe & Central Asia": {
+    "ncountries": 45,
+    "exponent": 0.3681007442092125,
+    "curvature": -0.022436225081264298,
+    "curvature_se": 0.001453667658073365,
+    "curvature_boot_se": 0.01613146678152636,
+    "mean_country_exponent": 0.4031237860586851,
+    "sd_country_exponent": 0.11038059843953038
+   },
+   "Latin America & Caribbean ": {
+    "ncountries": 25,
+    "exponent": 0.35257358463637306,
+    "curvature": -0.019816829019122368,
+    "curvature_se": 0.002139807560766222,
+    "curvature_boot_se": 0.02678985195409182,
+    "mean_country_exponent": 0.397137675601557,
+    "sd_country_exponent": 0.1301154226582267
+   },
+   "Middle East, North Africa, Afghanistan & Pakistan": {
+    "ncountries": 17,
+    "exponent": 0.4004004456840133,
+    "curvature": -0.021586491287805473,
+    "curvature_se": 0.002604682919264987,
+    "curvature_boot_se": 0.02246386289841367,
+    "mean_country_exponent": 0.42988234398203634,
+    "sd_country_exponent": 0.09445537015346032
+   },
+   "South Asia": {
+    "ncountries": 6,
+    "exponent": 0.2806368266154055,
+    "curvature": -0.01276462913967108,
+    "curvature_se": 0.005584347292331699,
+    "curvature_boot_se": 0.0698784094874998,
+    "mean_country_exponent": 0.3561490222356774,
+    "sd_country_exponent": 0.20030870327090455
+   },
+   "Sub-Saharan Africa ": {
+    "ncountries": 39,
+    "exponent": 0.3596721738511628,
+    "curvature": -0.011552121569942168,
+    "curvature_se": 0.0011439934754712581,
+    "curvature_boot_se": 0.016579490045078082,
+    "mean_country_exponent": 0.39479161387301775,
+    "sd_country_exponent": 0.10909470685383932
+   }
+  }
+ },
+ "heterogeneity": {
+  "income_kruskal": {
+   "H": 1.2177441502380475,
+   "p": 0.7487517531053678
+  },
+  "region_kruskal": {
+   "H": 6.477577654583683,
+   "p": 0.2624801889333674
+  },
+  "high_vs_low_income": {
+   "t": 0.35656782002978765,
+   "p": 0.7230813996916083,
+   "diff": 0.009898148024259978,
+   "diff_ci95": [
+    -0.042830816826940864,
+    0.06174156906218285
+   ]
+  },
+  "verdict": "no significant heterogeneity across institutional groups"
+ }
+}

@@ -75,7 +75,19 @@ occupational categories per country do not rise with workforce size at all (expo
 fixed 10-category classification, raw counts are almost pure sampling artefact. The honest object is
 the rarefaction curve (expected distinct categories at common sample size). Corrected, the exponent
 is **0.333 (SE 0.011), 151 countries, 11,712 curve points**, country-clustered; per-country median
-0.374 [IQR 0.319–0.468]. Strongly sublinear (proportional growth rejected, z = −58.8), but below the
+0.374 [IQR 0.319–0.468]. A country-level cluster bootstrap (1,000 resamples, one curve per country,
+latest year) gives **0.349, 95% CI 0.331–0.368** (151 countries, 1,208 points) — the all-years and
+latest-year estimates agree to within their uncertainty.
+
+**θ/γ stratification: cannot be tested directly, proxies show no difference.** The theory's
+low-inhibition (low-θ) versus high-inhibition/high-specialisation (high-θ/γ) contrast needs measured
+θ and γ. Neither exists in our data: they are model primitives, not observed country variables, and
+we do not pretend income or region are θ/γ. Using the closest observable institutional proxies
+(income group, region), the rarefied Heaps exponent does **not** vary significantly: income-group
+means 0.343–0.355 (Kruskal H = 1.22, p = 0.75), high-vs-low income difference 0.010 (95% CI −0.043
+to 0.062), region means 0.281–0.400 (Kruskal H = 6.48, p = 0.26); negative curvature is present in
+every group (see `results/heaps_groups.json`). So the data give no support for a two-regime θ/γ story
+here — but they also give no test of it, because θ/γ are not measured. Strongly sublinear (proportional growth rejected, z = −58.8), but below the
 0.4–0.6 Heaps range (z = −5.9 against 0.4). **Caveat: the classification is ISCO-08 one-digit only
 (10 categories); two- and three-digit ILOSTAT series are deprecated in the public API, so the ceiling
 truncates the curve and pushes the exponent down.** This is the best available test, not a clean one.
@@ -109,18 +121,8 @@ n = 5,925, 202) is a between-country association and **must not be read as a Min
 
 ## What a scaling law would and would not prove here
 
-A stable exponent would say the relation has a regular functional form across countries and time; it
-would **not** identify a mechanism, a cause, or a policy lever, and it would not license transplanting
-the urban Bettencourt exponents into schooling. The main finding is a discipline finding: in our own
-data, most education and sector "scaling laws" are between-country cross-sectional patterns that
-weaken or vanish inside countries, and the one universal collapse the theory wants — fertility on a
-single attainment curve — is rejected by the residual structure.
+A stable exponent would say the relation has a regular functional form across countries and time; it would **not** identify a mechanism, a cause, or a policy lever, and it would not license transplanting the urban Bettencourt exponents into schooling. The main finding is a discipline finding: in our own data, most education and sector "scaling laws" are between-country cross-sectional patterns that weaken or vanish inside countries, and the one universal collapse the theory wants — fertility on a single attainment curve — is rejected by the residual structure.
 
 ## Files
 
-`PREREGISTRATION.md` (pre-registered patterns, falsifiers, benchmark table); `scripts/analysis.py`
-(panel tests: urban–income, Mincer proxy, Wagner, fertility–income, collapse, Heaps, Zipf attempt);
-`scripts/consolidate.py` (merges local tables + new tests into verdicts, levels-vs-changes);
-`scripts/regime_break.py` (curvature + threshold split); `results/` (`scaling_results.json`,
-`consolidated_verdicts.json/.csv`, `regime_break.json`, `ilo_occupation_extract.csv`, `analysis.log`);
-`data/` (copies of the local CSVs used, for traceability). Server working copy: `/root/work/scaling`.
+`PREREGISTRATION.md` (patterns, falsifiers, benchmarks); `scripts/analysis.py` (panel tests: urban–income, Mincer proxy, Wagner, fertility–income, collapse, Heaps, Zipf attempt); `scripts/consolidate.py` (merges local tables + new tests into verdicts, levels-vs-changes); `scripts/regime_break.py` (curvature + threshold split); `scripts/heaps_groups.py` (institutional-proxy stratification of the Heaps exponent with cluster bootstrap); `results/` (`scaling_results.json`, `consolidated_verdicts.json/.csv`, `regime_break.json`, `heaps_groups.json`, `ilo_occupation_extract.csv`, `analysis.log`); `data/` (copies of the local CSVs used, for traceability). Server working copy: `/root/work/scaling`.
