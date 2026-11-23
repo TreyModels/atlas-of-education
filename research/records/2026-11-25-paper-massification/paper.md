@@ -676,7 +676,9 @@ Statistics series H-598 onward.
 demand arrived*. Prussia is the clean case; France separates the statute from the attainment by half a century;
 Britain inverts the ordering; the United States sits between. The implication is that the 61-of-64 result is a
 **late-industrialiser regularity, not a universal law**, and it is evidence about who built the pipeline and when
-rather than evidence that schooling causes the labour release.
+rather than evidence that schooling causes the labour release. Read together, the four cases are best treated as
+the two poles of a typology — state-built pipeline versus market-led — rather than as rival stories; Section 12.2
+develops the typology and its limits.
 
 **Evidence classes and the data gap.** Every date above is a standard literature date but **none was verified
 against a primary source in this pass**; all dates and percentages are therefore labelled **UNVERIFIED literature
