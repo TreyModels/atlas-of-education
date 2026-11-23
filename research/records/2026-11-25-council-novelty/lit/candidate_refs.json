@@ -1,0 +1,580 @@
+{
+ "liu_raftery2020": {
+  "doi": "10.1111/padr.12347",
+  "title": "How Do Education and Family Planning Accelerate Fertility Decline?",
+  "authors": [
+   "Daphne H. Liu",
+   "Adrian E. Raftery"
+  ],
+  "year": 2020,
+  "journal": "Population and Development Review",
+  "volume": "46",
+  "issue": "3",
+  "pages": "409-441",
+  "publisher": "Wiley",
+  "type": "journal-article",
+  "url": "https://doi.org/10.1111/padr.12347",
+  "status": "verified",
+  "query": "Liu Raftery 2020 how do education and family planning accelerate fertility decline"
+ },
+ "taylor1976": {
+  "doi": "10.1080/00324728.1976.10412734",
+  "title": "The child survival hypothesis",
+  "authors": [
+   "Carl E. Taylor",
+   "Jeanne S. Newman",
+   "Narindar U. Kelly"
+  ],
+  "year": 1976,
+  "journal": "Population Studies",
+  "volume": "30",
+  "issue": "2",
+  "pages": "263-278",
+  "publisher": "Informa UK Limited",
+  "type": "journal-article",
+  "url": "https://doi.org/10.1080/00324728.1976.10412734",
+  "status": "verified",
+  "query": "Taylor Newman Fuchs 1976 the child survival hypothesis"
+ },
+ "palloni1999": {
+  "doi": "10.2307/2648133",
+  "title": "The effects of infant mortality on fertility revisited: new evidence from latin america",
+  "authors": [
+   "Alberto Palloni",
+   "Hantamala Rafalimanana"
+  ],
+  "year": 1999,
+  "journal": "Demography",
+  "volume": "36",
+  "issue": "1",
+  "pages": "41-58",
+  "publisher": "Duke University Press",
+  "type": "journal-article",
+  "url": "https://doi.org/10.2307/2648133",
+  "status": "verified",
+  "query": "Palloni Rafalimanana 1999 the effects of infant mortality on fertility revisited"
+ },
+ "kalemli2003": {
+  "doi": "10.2139/ssrn.306528",
+  "title": "A Stochastic Model of Mortality, Fertility and Human Capital Investment",
+  "authors": [
+   "Sebnem Kalemli-Ozcan"
+  ],
+  "year": 2002,
+  "journal": "",
+  "volume": null,
+  "issue": null,
+  "pages": null,
+  "publisher": "Elsevier BV",
+  "type": "posted-content",
+  "url": "https://doi.org/10.2139/ssrn.306528",
+  "status": "verified",
+  "query": "Kalemli-Ozcan 2003 stochastic model mortality fertility human capital investment"
+ },
+ "soares2005": {
+  "doi": "10.2139/ssrn.361461",
+  "title": "Mortality Decline, Human Capital Investment and Economic Growth",
+  "authors": [
+   "Sebnem Kalemli-Ozcan",
+   "Harl Edgar Ryder",
+   "David Nathan Weil"
+  ],
+  "year": 2003,
+  "journal": "",
+  "volume": null,
+  "issue": null,
+  "pages": null,
+  "publisher": "Elsevier BV",
+  "type": "posted-content",
+  "url": "https://doi.org/10.2139/ssrn.361461",
+  "status": "verified",
+  "query": "Soares 2005 mortality decline human capital investment economic growth"
+ },
+ "doepke2005": {
+  "doi": "10.2139/ssrn.350700",
+  "title": "Child Mortality and Fertility Decline: Does the Barro-Becker\r\nModel Fit the Facts?",
+  "authors": [
+   "Matthias Doepke"
+  ],
+  "year": 2003,
+  "journal": "",
+  "volume": null,
+  "issue": null,
+  "pages": null,
+  "publisher": "Elsevier BV",
+  "type": "posted-content",
+  "url": "https://doi.org/10.2139/ssrn.350700",
+  "status": "verified",
+  "query": "Doepke 2005 child mortality and fertility decline Barro-Becker model fit the facts"
+ },
+ "porzio2021": {
+  "doi": "10.3386/w29390",
+  "title": "The Human Side of Structural Transformation",
+  "authors": [
+   "Tommaso Porzio",
+   "Federico Rossi",
+   "Gabriella Santangelo"
+  ],
+  "year": 2021,
+  "journal": "",
+  "volume": null,
+  "issue": null,
+  "pages": null,
+  "publisher": "National Bureau of Economic Research",
+  "type": "report",
+  "url": "https://doi.org/10.3386/w29390",
+  "status": "verified",
+  "query": "Porzio Rossi Santangelo 2021 the human side of structural transformation"
+ },
+ "herrendorf2014": {
+  "doi": "10.3386/w18996",
+  "title": "Growth and Structural Transformation",
+  "authors": [
+   "Berthold Herrendorf",
+   "Richard Rogerson",
+   "\u00c1kos Valentinyi"
+  ],
+  "year": 2013,
+  "journal": "",
+  "volume": null,
+  "issue": null,
+  "pages": null,
+  "publisher": "National Bureau of Economic Research",
+  "type": "report",
+  "url": "https://doi.org/10.3386/w18996",
+  "status": "verified",
+  "query": "Herrendorf Rogerson Valentinyi 2014 growth and structural transformation"
+ },
+ "boli1985": {
+  "doi": "10.1086/446504",
+  "title": "Explaining the Origins and Expansion of Mass Education",
+  "authors": [
+   "John Boli",
+   "Francisco O. Ramirez",
+   "John W. Meyer"
+  ],
+  "year": 1985,
+  "journal": "Comparative Education Review",
+  "volume": "29",
+  "issue": "2",
+  "pages": "145-170",
+  "publisher": "University of Chicago Press",
+  "type": "journal-article",
+  "url": "https://doi.org/10.1086/446504",
+  "status": "verified",
+  "query": "Boli Ramirez Meyer 1985 explaining the origins and expansion of mass education"
+ },
+ "soysal1989": {
+  "doi": "10.2307/2112831",
+  "title": "Construction of the First Mass Education Systems in Nineteenth-Century Europe",
+  "authors": [
+   "Yasemin Nuhoglu Soysal",
+   "David Strang"
+  ],
+  "year": 1989,
+  "journal": "Sociology of Education",
+  "volume": "62",
+  "issue": "4",
+  "pages": "277",
+  "publisher": "JSTOR",
+  "type": "journal-article",
+  "url": "https://doi.org/10.2307/2112831",
+  "status": "verified",
+  "query": "Soysal Strang 1989 construction of the world education regime"
+ },
+ "benavot1988": {
+  "doi": "10.2307/2112627",
+  "title": "The Expansion of Primary Education, 1870-1940: Trends and Issues",
+  "authors": [
+   "Aaron Benavot",
+   "Phyllis Riddle"
+  ],
+  "year": 1988,
+  "journal": "Sociology of Education",
+  "volume": "61",
+  "issue": "3",
+  "pages": "191",
+  "publisher": "JSTOR",
+  "type": "journal-article",
+  "url": "https://doi.org/10.2307/2112627",
+  "status": "verified",
+  "query": "Benavot Riddle 1988 the expansion of primary education 1870-1940"
+ },
+ "sandberg1979": {
+  "doi": "10.1017/s0022050700096418",
+  "title": "The Case of the Impoverished Sophisticate: Human Capital and Swedish Economic Growth before World War I",
+  "authors": [
+   "Lars G. Sandberg"
+  ],
+  "year": 1979,
+  "journal": "The Journal of Economic History",
+  "volume": "39",
+  "issue": "1",
+  "pages": "225-241",
+  "publisher": "Cambridge University Press (CUP)",
+  "type": "journal-article",
+  "url": "https://doi.org/10.1017/s0022050700096418",
+  "status": "verified",
+  "query": "Sandberg 1979 the case of the impoverished sophisticate human capital Swedish economic growth"
+ },
+ "mitch1992": {
+  "doi": "10.9783/9781512807189",
+  "title": "The Rise of Popular Literacy in Victorian England",
+  "authors": [
+   "David Mitch"
+  ],
+  "year": 1992,
+  "journal": "",
+  "volume": null,
+  "issue": null,
+  "pages": null,
+  "publisher": "University of Pennsylvania Press",
+  "type": "edited-book",
+  "url": "https://doi.org/10.9783/9781512807189",
+  "status": "verified",
+  "query": "Mitch 1992 the rise of popular literacy in Europe"
+ },
+ "goldstein2009": {
+  "doi": "10.4054/mpidr-wp-2009-029",
+  "title": "The end of 'lowest-low' fertility? (with supplementary materials)",
+  "authors": [
+   "Joshua R. Goldstein",
+   "Tom\u00e1\u0161 Sobotka",
+   "Aiva Jasilioniene"
+  ],
+  "year": 2009,
+  "journal": "",
+  "volume": null,
+  "issue": null,
+  "pages": null,
+  "publisher": "Max Planck Institute for Demographic Research",
+  "type": "report",
+  "url": "https://doi.org/10.4054/mpidr-wp-2009-029",
+  "status": "verified",
+  "query": "Goldstein Sobotka Jasilioniene 2009 the end of lowest-low fertility"
+ },
+ "myrsky2009": {
+  "doi": "10.1038/nature08230",
+  "title": "Advances in development reverse fertility declines",
+  "authors": [
+   "Mikko Myrskyl\u00e4",
+   "Hans-Peter Kohler",
+   "Francesco C. Billari"
+  ],
+  "year": 2009,
+  "journal": "Nature",
+  "volume": "460",
+  "issue": "7256",
+  "pages": "741-743",
+  "publisher": "Springer Science and Business Media LLC",
+  "type": "journal-article",
+  "url": "https://doi.org/10.1038/nature08230",
+  "status": "verified",
+  "query": "Myrskyla Kohler Billari 2009 advances in development reverse fertility declines"
+ },
+ "sobotka2011": {
+  "doi": "10.3917/pope.304.0451",
+  "title": "Re-Emerging Diversity: Rapid Fertility Changes in Central and Eastern Europe After the Collapse of the Communist Regimes",
+  "authors": [
+   "Tom\u00e1s Sobotka"
+  ],
+  "year": 2003,
+  "journal": "Population (english edition)",
+  "volume": "58",
+  "issue": "4",
+  "pages": "451",
+  "publisher": "CAIRN",
+  "type": "journal-article",
+  "url": "https://doi.org/10.3917/pope.304.0451",
+  "status": "verified",
+  "query": "Sobotka 2011 fertility in Central and Eastern Europe after 1989"
+ },
+ "frejka2008": {
+  "doi": "10.4054/demres.2008.19.3",
+  "title": "Overview Chapter 1: Fertility in Europe",
+  "authors": [
+   "Tomas Frejka",
+   "Tom\u00e1\u0161 Sobotka"
+  ],
+  "year": 2008,
+  "journal": "Demographic Research",
+  "volume": "19",
+  "issue": null,
+  "pages": "15-46",
+  "publisher": "Max Planck Institute for Demographic Research",
+  "type": "journal-article",
+  "url": "https://doi.org/10.4054/demres.2008.19.3",
+  "status": "verified",
+  "query": "Frejka Sobotka 2008 fertility in Europe diverse delayed and below replacement"
+ },
+ "benjamini1995": {
+  "doi": "10.1111/j.2517-6161.1995.tb02031.x",
+  "title": "Controlling the False Discovery Rate: A Practical and Powerful Approach to Multiple Testing",
+  "authors": [
+   "Yoav Benjamini",
+   "Yosef Hochberg"
+  ],
+  "year": 1995,
+  "journal": "Journal of the Royal Statistical Society Series B: Statistical Methodology",
+  "volume": "57",
+  "issue": "1",
+  "pages": "289-300",
+  "publisher": "Oxford University Press (OUP)",
+  "type": "journal-article",
+  "url": "https://doi.org/10.1111/j.2517-6161.1995.tb02031.x",
+  "status": "verified",
+  "query": "Benjamini Hochberg 1995 controlling the false discovery rate"
+ },
+ "phipson2010": {
+  "doi": "10.2202/1544-6115.1585",
+  "title": "Permutation P-values Should Never Be Zero: Calculating Exact P-values When Permutations Are Randomly Drawn",
+  "authors": [
+   "Belinda Phipson",
+   "Gordon K Smyth"
+  ],
+  "year": 2010,
+  "journal": "Statistical Applications in Genetics and Molecular Biology",
+  "volume": "9",
+  "issue": "1",
+  "pages": null,
+  "publisher": "Walter de Gruyter GmbH",
+  "type": "journal-article",
+  "url": "https://doi.org/10.2202/1544-6115.1585",
+  "status": "verified",
+  "query": "Phipson Smyth 2010 permutation p-values should never be zero"
+ },
+ "patel2015": {
+  "doi": "10.1016/j.jclinepi.2015.05.029",
+  "title": "Assessment of vibration of effects due to model specification can demonstrate the instability of observational associations",
+  "authors": [
+   "Chirag J. Patel",
+   "Belinda Burford",
+   "John P.A. Ioannidis"
+  ],
+  "year": 2015,
+  "journal": "Journal of Clinical Epidemiology",
+  "volume": "68",
+  "issue": "9",
+  "pages": "1046-1058",
+  "publisher": "Elsevier BV",
+  "type": "journal-article",
+  "url": "https://doi.org/10.1016/j.jclinepi.2015.05.029",
+  "status": "verified",
+  "query": "Patel Burford Ioannidis 2015 assessment of vibration of effects due to model specification"
+ },
+ "young2017": {
+  "doi": "10.1177/0049124115610347",
+  "title": "Model Uncertainty and Robustness",
+  "authors": [
+   "Cristobal Young",
+   "Katherine Holsteen"
+  ],
+  "year": 2016,
+  "journal": "Sociological Methods &amp; Research",
+  "volume": "46",
+  "issue": "1",
+  "pages": "3-40",
+  "publisher": "SAGE Publications",
+  "type": "journal-article",
+  "url": "https://doi.org/10.1177/0049124115610347",
+  "status": "verified",
+  "query": "Young Holsteen 2017 model uncertainty and robustness a computational framework"
+ },
+ "beaumont2019": {
+  "doi": "10.1146/annurev-statistics-030718-105212",
+  "title": "Approximate Bayesian Computation",
+  "authors": [
+   "Mark A. Beaumont"
+  ],
+  "year": 2019,
+  "journal": "Annual Review of Statistics and Its Application",
+  "volume": "6",
+  "issue": "1",
+  "pages": "379-403",
+  "publisher": "Annual Reviews",
+  "type": "journal-article",
+  "url": "https://doi.org/10.1146/annurev-statistics-030718-105212",
+  "status": "verified",
+  "query": "Beaumont 2019 approximate Bayesian computation annual review of statistics"
+ },
+ "csillery2010": {
+  "doi": "10.1016/j.tree.2010.04.001",
+  "title": "Approximate Bayesian Computation (ABC) in practice",
+  "authors": [
+   "Katalin Csill\u00e9ry",
+   "Michael G.B. Blum",
+   "Oscar E. Gaggiotti",
+   "Olivier Fran\u00e7ois"
+  ],
+  "year": 2010,
+  "journal": "Trends in Ecology &amp; Evolution",
+  "volume": "25",
+  "issue": "7",
+  "pages": "410-418",
+  "publisher": "Elsevier BV",
+  "type": "journal-article",
+  "url": "https://doi.org/10.1016/j.tree.2010.04.001",
+  "status": "verified",
+  "query": "Csillery Blum Gaggiotti Francois 2010 approximate Bayesian computation in ecology and evolution"
+ },
+ "marin2012": {
+  "doi": "10.1007/s11222-011-9288-2",
+  "title": "Approximate Bayesian computational methods",
+  "authors": [
+   "Jean-Michel Marin",
+   "Pierre Pudlo",
+   "Christian P. Robert",
+   "Robin J. Ryder"
+  ],
+  "year": 2011,
+  "journal": "Statistics and Computing",
+  "volume": "22",
+  "issue": "6",
+  "pages": "1167-1180",
+  "publisher": "Springer Science and Business Media LLC",
+  "type": "journal-article",
+  "url": "https://doi.org/10.1007/s11222-011-9288-2",
+  "status": "verified",
+  "query": "Marin Pudlo Robert Ryder 2012 approximate Bayesian computation in practice"
+ },
+ "scheffer2012": {
+  "doi": "10.1126/science.1225244",
+  "title": "Anticipating Critical Transitions",
+  "authors": [
+   "Marten Scheffer",
+   "Stephen R. Carpenter",
+   "Timothy M. Lenton",
+   "Jordi Bascompte",
+   "William Brock",
+   "Vasilis Dakos",
+   "Johan van de Koppel",
+   "Ingrid A. van de Leemput",
+   "Simon A. Levin",
+   "Egbert H. van Nes",
+   "Mercedes Pascual",
+   "John Vandermeer"
+  ],
+  "year": 2012,
+  "journal": "Science",
+  "volume": "338",
+  "issue": "6105",
+  "pages": "344-348",
+  "publisher": "American Association for the Advancement of Science (AAAS)",
+  "type": "journal-article",
+  "url": "https://doi.org/10.1126/science.1225244",
+  "status": "verified",
+  "query": "Scheffer 2012 anticipating critical transitions"
+ },
+ "dakos2012": {
+  "doi": "10.1371/journal.pone.0041010",
+  "title": "Methods for Detecting Early Warnings of Critical Transitions in Time Series Illustrated Using Simulated Ecological Data",
+  "authors": [
+   "Vasilis Dakos",
+   "Stephen R. Carpenter",
+   "William A. Brock",
+   "Aaron M. Ellison",
+   "Vishwesha Guttal",
+   "Anthony R. Ives",
+   "Sonia K\u00e9fi",
+   "Valerie Livina",
+   "David A. Seekell",
+   "Egbert H. van Nes",
+   "Marten Scheffer"
+  ],
+  "year": 2012,
+  "journal": "PLoS ONE",
+  "volume": "7",
+  "issue": "7",
+  "pages": "e41010",
+  "publisher": "Public Library of Science (PLoS)",
+  "type": "journal-article",
+  "url": "https://doi.org/10.1371/journal.pone.0041010",
+  "status": "verified",
+  "query": "Dakos 2012 methods for detecting early warnings of critical transitions in time series"
+ },
+ "kefi2014": {
+  "doi": "10.1098/rsos.231767/v1/review1",
+  "title": "Review for \"Optimal sampling of spatial patterns improves deep learning-based early warning signals of critical transitions\"",
+  "authors": [],
+  "year": 2023,
+  "journal": "",
+  "volume": null,
+  "issue": null,
+  "pages": null,
+  "publisher": "The Royal Society",
+  "type": "peer-review",
+  "url": "https://doi.org/10.1098/rsos.231767/v1/review1",
+  "status": "verified",
+  "query": "Kefi 2014 early warning signals of ecological transitions methods for spatial patterns"
+ },
+ "lewis1954": {
+  "doi": "10.1111/j.1467-9957.1954.tb00021.x",
+  "title": "Economic Development with Unlimited Supplies of Labour",
+  "authors": [
+   "W. ARTHUR LEWIS"
+  ],
+  "year": 1954,
+  "journal": "The Manchester School",
+  "volume": "22",
+  "issue": "2",
+  "pages": "139-191",
+  "publisher": "Wiley",
+  "type": "journal-article",
+  "url": "https://doi.org/10.1111/j.1467-9957.1954.tb00021.x",
+  "status": "verified",
+  "query": "Lewis 1954 economic development with unlimited supplies of labour"
+ },
+ "timmer1988": {
+  "doi": "10.1016/s1573-4471(88)01011-3",
+  "title": "Chapter 8 The agricultural transformation",
+  "authors": [
+   "C. Peter Timmer"
+  ],
+  "year": 1988,
+  "journal": "Handbook of Development Economics",
+  "volume": null,
+  "issue": null,
+  "pages": "275-331",
+  "publisher": "Elsevier",
+  "type": "book-chapter",
+  "url": "https://doi.org/10.1016/s1573-4471(88)01011-3",
+  "status": "verified",
+  "query": "Timmer 1988 the agricultural transformation"
+ },
+ "galor2006": {
+  "doi": "10.1111/j.1467-937x.2006.00370.x",
+  "title": "Das Human-Kapital: A Theory of the Demise of the Class Structure",
+  "authors": [
+   "ODED GALOR",
+   "OMER MOAV"
+  ],
+  "year": 2006,
+  "journal": "Review of Economic Studies",
+  "volume": "73",
+  "issue": "1",
+  "pages": "85-117",
+  "publisher": "Oxford University Press (OUP)",
+  "type": "journal-article",
+  "url": "https://doi.org/10.1111/j.1467-937x.2006.00370.x",
+  "status": "verified",
+  "query": "Galor Moav 2006 das human-kapital a theory of the demise of the class structure"
+ },
+ "preston1978": {
+  "doi": "10.2307/2066891",
+  "title": "The Effects of Infant and Child Mortality on Fertility.",
+  "authors": [
+   "Murray Gendell",
+   "Samuel H. Preston"
+  ],
+  "year": 1981,
+  "journal": "Contemporary Sociology",
+  "volume": "10",
+  "issue": "2",
+  "pages": "242",
+  "publisher": "SAGE Publications",
+  "type": "journal-article",
+  "url": "https://doi.org/10.2307/2066891",
+  "status": "verified",
+  "query": "Preston 1978 the effects of infant and child mortality on fertility"
+ }
+}
