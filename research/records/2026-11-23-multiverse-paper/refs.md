@@ -68,6 +68,28 @@ Young, A. (2019). Channeling Fisher: Randomization tests and the statistical ins
 
 Young, C., & Holsteen, K. (2017). Model uncertainty and robustness: A computational framework for multimodel analysis. *Sociological Methods & Research, 46*(1), 3–40. https://doi.org/10.1177/0049124115610347 — VERIFIED (Crossref dates the online version 2016; the issue is 2017).
 
+## Added by the literature review (23 November 2026) — cited in §2.1 and §2.8
+
+All nine records below were resolved against Crossref on 23 November 2026 (DOI lookup; bibliographic fields only, not content). They are the vibration-of-effects and cross-national-multiverse neighbourhood added by the situating patch.
+
+Cakici, N., Fieberg, C., Neszveda, G., Piljak, V., & Zaremba, A. (2026). Lost in the multiverse: Methodological uncertainty in studying global equity returns. *Journal of Banking & Finance, 190*, 107775. https://doi.org/10.1016/j.jbankfin.2026.107775 — VERIFIED.
+
+Cantone, G. G., & Tomaselli, V. (2023). Theory and methods of the multiverse: An application for panel-based models. *Quality & Quantity, 58*(2), 1447–1480. https://doi.org/10.1007/s11135-023-01698-5 — VERIFIED (Crossref dates the online version 2023; the issue is 2024).
+
+Engzell, P., & Mood, C. (2023). Understanding patterns and trends in income mobility through multiverse analysis. *American Sociological Review, 88*(4), 600–626. https://doi.org/10.1177/00031224231180607 — VERIFIED.
+
+Herrala, K. (2023). Does industrial development predict equalization in educational opportunity? A multiverse analysis. *Research in Social Stratification and Mobility, 83*, 100757. https://doi.org/10.1016/j.rssm.2023.100757 — VERIFIED.
+
+Hertel, F. R., Barone, C., & Smallenbroek, O. (2025). The multiverse of social class: A large-scale assessment of macro-level, meso-level and micro-level approaches to class analysis. *European Societies, 27*(5), 840–888. https://doi.org/10.1162/euso_a_00044 — VERIFIED.
+
+Klau, S., Hoffmann, S., Patel, C. J., Ioannidis, J. P. A., & Boulesteix, A.-L. (2021). Examining the robustness of observational associations to model, measurement and sampling uncertainty with the vibration of effects framework. *International Journal of Epidemiology, 50*(1), 266–278. https://doi.org/10.1093/ije/dyaa164 — VERIFIED (Crossref dates the DOI 2020; the issue is 2021).
+
+Kvarven, A., Lilletvedt, J. S., Strømland, E., & Johannesson, M. (2026). Multiverse robustness tests in macroeconomic calibration models. *Research in Economics, 80*(3), 101135. https://doi.org/10.1016/j.rie.2026.101135 — VERIFIED.
+
+Luo, R., Zeraatkar, D., Glymour, M. M., Ellis, R. J., Estiri, H., & Patel, C. J. (2024). Specification curve analysis to identify heterogeneity in risk factors for dementia: Findings from the UK Biobank. *BMC Medicine, 22*(1), 216. https://doi.org/10.1186/s12916-024-03424-w — VERIFIED.
+
+Patel, C. J., Burford, B., & Ioannidis, J. P. A. (2015). Assessment of vibration of effects due to model specification can demonstrate the instability of observational associations. *Journal of Clinical Epidemiology, 68*(9), 1046–1058. https://doi.org/10.1016/j.jclinepi.2015.05.029 — VERIFIED.
+
 ## Project records cited in the paper
 
 Menefee, T. (2026). *Grouping multiverse, 23 November 2026* [Data set and code: 74-draw run]. Atlas of Education repository, branch `research/grouping-multiverse-2026-11-23`, `research/records/2026-11-23-grouping-multiverse/`.

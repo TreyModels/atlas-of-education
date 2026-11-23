@@ -108,7 +108,7 @@ The single most important honest sentence for a reader: **a method that finds on
 
 ---
 
-## 6. What this means for the paper (proposed patch, not applied)
+## 6. What this means for the paper (patch applied 23 November 2026)
 
 The paper's `paper.md` currently claims "we are not aware of a study that treats the partition of countries as the multiverse dimension..." — that claim **survives this search**, but the paper is thinner on adjacent work than it should be, and three literatures need to be acknowledged explicitly or a reviewer will think we missed them:
 
@@ -120,7 +120,7 @@ The "we are not aware" sentence should then be narrowed to its defensible form: 
 
 **Also worth adding to the limitations:** the search behind this paper is not systematic; a systematic review of the comparative-education and comparative-politics journals is still needed before submission, and a reviewer who knows Engzell & Mood (2023) will otherwise read the paper as less situated than it is.
 
-If run-lead approves, the patch is small (five sentences + nine references). I have not modified `paper.md`, because the branch is verified and any change needs re-verification.
+The patch was approved and applied on 23 November 2026. Section 2.1 of `paper.md` now cites the vibration-of-effects and cross-national multiverse work (Patel et al., 2015; Klau et al., 2021; Engzell & Mood, 2023; Herrala, 2023; Cakici et al., 2026; Luo et al., 2024; Hertel et al., 2025; Cantone & Tomaselli, 2023; Kvarven et al., 2026), Section 2.8 states and answers the two fair attacks (clustered permutation inference; the Monte Carlo p-floor applied to BH), and `refs.md` carries the nine entries with Crossref status. Numbers and the paper's spine are unchanged; the branch was pushed for re-verification.
 
 ---
 

@@ -2,6 +2,8 @@
 
 **Status:** complete draft, 23 November 2026. The manuscript is `paper.md` in this directory. It incorporates **both** runs: the 74-draw run (`research/records/2026-11-23-grouping-multiverse/`) and the 400-draw run (`research/records/2026-11-23-grouping-multiverse-400/`). No placeholders remain. This record is the paper's public face, so every number in it is traceable to a named results file below.
 
+**Reviewer-facing verdict (honest):** 3.5/5 — a method that finds only five robust links out of 272, and finds that they are the least surprising five, is a method that is working. The paper's strength is methodological (the resolution analysis and the transportability framing), not the substantive payoff; the group-specific labels are hypotheses, not findings.
+
 **Branch:** `research/methods-multiverse-paper-2026-11-23` (off `research/grouping-multiverse-2026-11-23`). The 400-draw record directory `research/records/2026-11-23-grouping-multiverse-400/` is merged into this branch (from branch `research/grouping-multiverse-400-2026-11-23` @ `1152cec`), so every results file cited by the paper is present on this branch and a reader who clones it can trace every number without switching branches.
 
 ## What is in this directory
