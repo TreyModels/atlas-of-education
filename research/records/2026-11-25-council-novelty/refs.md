@@ -59,3 +59,12 @@ Model Fit the Facts?. https://doi.org/10.2139/ssrn.350700 *[V (Crossref)]*
 - Giudice, M. D., & Gangestad, S. W. (2021). A Traveler’s Guide to the Multiverse: Promises, Pitfalls, and a Framework for the Evaluation of Analytic Decisions. Advances in Methods and Practices in Psychological Science, 4(1). https://doi.org/10.1177/2515245920954925. https://doi.org/10.1177/2515245920954925 *[V (Crossref)]*
 - Tommaso Porzio, Federico Rossi, Gabriella Santangelo (2021). The Human Side of Structural Transformation. https://doi.org/10.3386/w29390 *[V (Crossref)]*
 - ? (2023). Review for "Optimal sampling of spatial patterns improves deep learning-based early warning signals of critical transitions". https://doi.org/10.1098/rsos.231767/v1/review1 *[V (Crossref)]*
+
+## Added after the auditor dependence objection (verified in-session)
+
+- Benjamini, Y., & Yekutieli, D. (2001). The control of the false discovery rate in multiple testing under dependency. The Annals of Statistics, 29(4), 1165-1188. https://doi.org/10.1214/aos/1013699998 *[V (Crossref)]*
+- Galwey, N. W. (2009). A new measure of the effective number of tests, a practical tool for comparing families of non‐independent significance tests. Genetic Epidemiology, 33(7), 559-568. https://doi.org/10.1002/gepi.20408 *[V (Crossref)]*
+- Cheverud, J. M. (2001). A simple correction for multiple comparisons in interval mapping genome scans. Heredity, 87(1), 52-58. https://doi.org/10.1046/j.1365-2540.2001.00901.x *[V (Crossref)]*
+- Li, J., & Ji, L. (2005). Adjusting multiple testing in multilocus analyses using the eigenvalues of a correlation matrix. Heredity, 95(3), 221-227. https://doi.org/10.1038/sj.hdy.6800717 *[V (Crossref)]*
+- Klau, S., Hoffmann, S., Patel, C. J., Ioannidis, J. P., & Boulesteix, A. (2020). Examining the robustness of observational associations to model, measurement and sampling uncertainty with the vibration of effects framework. International Journal of Epidemiology, 50(1), 266-278. https://doi.org/10.1093/ije/dyaa164 *[V (Crossref)]*
+- Simonsohn, U., Simmons, J. P., & Nelson, L. D. (2015). Specification Curve: Descriptive and Inferential Statistics on All Reasonable Specifications. . https://doi.org/10.2139/ssrn.2694998 *[V (Crossref)]*
