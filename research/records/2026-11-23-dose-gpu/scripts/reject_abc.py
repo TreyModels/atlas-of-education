@@ -58,14 +58,16 @@ if __name__ == "__main__":
     res, acc = [], []
     for i, x in enumerate(pool.imap_unordered(evaluate, [(U[j], int(rng.integers(1, 10**7))) for j in range(a.n)], chunksize=4)):
         res.append((i, x))
-        if (i + 1) % 250 == 0:
+        if x[0] <= a.eps: acc.append(x[0])
+        if (i + 1) % 1000 == 0:
             print("  %d/%d draws, %d accepted (%.1f%%), %.0fs, %.2f draws/s" % (
                 i + 1, a.n, len(acc), 100 * len(acc) / (i + 1), time.time() - t0, (i + 1) / (time.time() - t0)), flush=True)
         if time.time() - t0 > a.timecap: print("time cap", flush=True); break
     pool.close(); pool.join()
     idx = [j for j, _ in res]; dist = np.array([x[0] for _, x in res]); Dc = np.array([x[1] for _, x in res]); fb = np.array([x[2] for _, x in res])
     keep = dist <= a.eps
-    out = dict(scen=a.scen, names=M.PN, lo=M.LO.tolist(), hi=M.HI.tolist(), engine="original-numba-rejection",
+    qs = {str(p): float(np.quantile(dist, p)) for p in (.05, .10, .20, .50, .80)}
+    out = dict(drawn_quantiles=qs, drawn_all=dist.tolist(), scen=a.scen, names=M.PN, lo=M.LO.tolist(), hi=M.HI.tolist(), engine="original-numba-rejection",
                u=U[idx][keep].tolist(), w=(np.ones(keep.sum()) / max(keep.sum(), 1)).tolist(),
                D=dist[keep].tolist(), Dc=Dc[keep].tolist(), f=fb[keep].tolist(), eps=a.eps,
                n_drawn=int(len(dist)), n_accepted=int(keep.sum()), acceptance=float(keep.mean()),
