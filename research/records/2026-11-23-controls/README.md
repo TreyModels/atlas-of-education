@@ -1,7 +1,8 @@
 # Added controls: child mortality and women's work, 23 Nov 2026
 
-Server `/root/work/controls`; scripts in `scripts/`, results in `results/`. **Panel: the observed data**
-`/root/work/data` (not the gap-filled panel, so every number here is directly comparable with the reference
+Server box2 (`ssh autodl2`), `/root/work/controls`; scripts in `scripts/`, results in `results/`. **Panel: the
+observed data** `/root/work/data` (migrated copy under `/root/autodl-tmp/migrated/`; not the gap-filled panel, so
+every number here is directly comparable with the reference
 matrix and with the earlier session; the controls are also the two least complete series, so gap-filling would
 not rescue them). Estimator = `2026-11-23-handoff-run/scripts/full_matrix_trends.py`: 17 measures, ten-year
 changes, country effects, decade effects, errors clustered by country, with and without a straight-line
