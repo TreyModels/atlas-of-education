@@ -110,3 +110,29 @@ exit-reason fix (`fix/edsystem-exit-reason-2026-11-25`), e ds ystem test guards
 (`fix/edsystem-tests-pinv-2026-11-25`), test-bench F9/`inv` fix (`fix/equation-test-bench-2026-11-25`).
 Neon's own diffs (ir_pipeline, equation-suite ×2, gate-jobs tail) are still to be applied on top; where
 they overlap, his diff wins and the regression tests in these branches are the acceptance gate.
+
+---
+
+## QUARANTINE ADDENDUM — 25 Nov 2026 (two branches withdrawn from citation)
+
+Heads verified with `git ls-remote origin` on 25 Nov 2026. **Both branches are QUARANTINED — do not cite any number,
+table or claim from them.** This is additional to (not instead of) item 5 on test bench F9/`inv`.
+
+### Q1. `research/equation-test-bench-2026-11-25` @ `02d930c7e180463f94c71b5a49f6938855317ab3` — QUARANTINED — do not cite
+Head-check note: `f36577fa` is **not** the branch head; it is an ancestor snapshot commit contained in the branch.
+The current remote head is `02d930c`. Defects from the Neon line audit (task-49):
+1. key-name bug killing `F2_supply` / `F6_growth` (both run on n=0 cells, so their "verdicts" are undefined);
+2. out-of-sample evaluation drops controls (the comparison set differs from the in-sample fit set);
+3. `wins` is a no-op (the statistic is never applied);
+4. contemporaneous-Δ leakage: ΔX_t → ΔY_t, so the "predictor" is same-year change, not a lead.
+
+The separate fix branch `fix/equation-test-bench-2026-11-25` @ `2c575d9` fixes **only** F9 (join n=0) and the `inv`
+singular-matrix crash. **It does NOT cover the four items above.** Do not treat `2c575d9` as clearance for this branch.
+
+### Q2. `research/shadow-equations-review-2026-11-25` @ `264c059032c58f74916106207b8e571d6bf4a6ba` — QUARANTINED — do not cite
+Defects from the Neon line audit (task-49):
+1. `gini(learn)` can be negative (invalid Gini domain);
+2. `_income_elasticity == 0` (degenerate identity elasticity);
+3. post-transfer quintile re-ranking (units are re-sorted after transfers, so quintile comparisons are not like-for-like);
+4. three exact linear collinearities in the design (non-identified coefficients reported).
+No fix branch exists for these items; nothing from this branch may be cited.
