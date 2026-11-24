@@ -1,6 +1,6 @@
 {
- "patched_file": "/Users/treymenefee/neon-boot/wt2/dhs/research/records/2026-11-24-dhs-acquisition/scripts/ir_pipeline.py",
- "base_file": "/Users/treymenefee/neon-boot/dhs-verify/claims_2026-11-25/base_ir_pipeline.py",
+ "patched_file": "research/records/2026-11-24-dhs-acquisition/scripts/ir_pipeline.py",
+ "base_file": "git show f4a7f65:research/records/2026-11-24-dhs-acquisition/scripts/ir_pipeline.py",
  "patched_sha256": "68cccaa1e1a24082a1115aa14b69895b577d01fac8e6389806c8f00b8c4e330f",
  "note": "CODE TESTS on synthetic fixtures; not evidence, not a simulation of the research question",
  "claims": {

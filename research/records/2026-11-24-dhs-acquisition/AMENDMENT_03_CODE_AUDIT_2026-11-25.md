@@ -91,9 +91,11 @@ split (README, §2), the `v005/1e6` weight convention, the region × round FE de
 
 **Pre-registered M4 note (other record).** The `SurveyType == "DHS"` robustness model is pre-registered in
 `research/records/2026-11-24-dhs-api-ecological/PRE_REGISTRATION.md` (line 147), not in this IR record. It was
-not previously computed explicitly; the patched re-run recipe makes it explicit and records
-`results/m4_surveytype_check.json`. Pointer:
-`research/records/2026-11-24-dhs-api-ecological/M4_SURVEYTYPE_CHECK_2026-11-25.md`.
+not previously computed explicitly; the patched re-run recipe now makes it explicit. The box-run artefact
+(`m4_surveytype_check.json`: assertions, DHS-only M1, excluded MIS/AIS counts) is archived at
+`research/records/2026-11-25-box-runs/dhs-patched-verify/m4_surveytype_check.json` on branch
+`research/box-runs-2026-11-25` @ `24049a4`; the ecological record's own note and corrected run live on branch
+`research/dhs-corrected-2026-11-25` @ `d9c5139`.
 
 ---
 
@@ -105,3 +107,18 @@ not previously computed explicitly; the patched re-run recipe makes it explicit 
 - The only use of hand-made rows is code testing ("CODE TEST ONLY — NOT EVIDENCE"); they are not a simulation
   of the research question and must never be reported as a result.
 - No microdata was read, copied or synthesised. No causal claim is made or supported by anything here.
+
+**Patched re-run verification (box, 2026-11-25; recorded so the numbers are not provisional).** The patched
+pipeline + this record's code were re-run on the AutoDL box in a NEW directory `/root/work/dhs-api-patched-2026-11-25`
+(`/root/work/dhs-api` was not modified): **PASS_BYTE_IDENTICAL** — all **13/13** output files byte-identical to the
+committed corrected run (`results/MANIFEST.sha256` @ `45b974e`), 27/27 numeric anchors, 4/4 staged script hashes,
+`ir_pipeline.py --selftest` **51 coefficient rows**, pre-registered M4 `SurveyType == "DHS"` check passed (76
+non-DHS cells excluded; DHS-only M1 −0.5537/−1.5749/−2.5241 vs pooled −0.5541/−1.5837/−2.5382). **IR individual-level
+estimation remains NOT FEASIBLE on this instance: 0/72 manifest IR files present — no `.dta`/`.zip` microdata — and
+nothing was fabricated.** The first verifier pass failed on stale anchor values in the verifier itself; that
+failure is preserved (not overwritten) in the box run directory. Artefacts:
+`research/records/2026-11-25-box-runs/dhs-patched-verify/` on branch `research/box-runs-2026-11-25` @ `24049a4`
+(`VERIFICATION.json` verdict PASS_BYTE_IDENTICAL, `m4_surveytype_check.json` sha256 `c6af0f8f…`).
+- Reproducible plan: `~/neon-boot/patches/dhs_patched_rerun.sh` (host-side orchestrator; stages
+  audited code by sha256, never overwrites the old box path, no power command). The verifier's expected values are
+  full precision with rtol 1e-8 (a byte-identical run also matches the committed hashes).
