@@ -1,0 +1,9 @@
+{
+ "n_compared": 544,
+ "n_missing_pairs": 0,
+ "max_abs_diff": 3.9746458091016734e-05,
+ "median_abs_diff": 7.541119220189074e-07,
+ "n_over_1e6": 258,
+ "n_over_1e4": 0,
+ "verdict": "DISCREPANCY"
+}

@@ -1,0 +1,953 @@
+{
+ "R": 1200,
+ "robust_links": [
+  [
+   "gdppc_log",
+   "urban"
+  ],
+  [
+   "agri_va",
+   "gdppc_log"
+  ],
+  [
+   "life_exp",
+   "fertility"
+  ],
+  [
+   "u5mr",
+   "life_exp"
+  ],
+  [
+   "u5mr",
+   "fertility"
+  ]
+ ],
+ "by_certified_links": [
+  [
+   "agri_va",
+   "gdppc_log"
+  ],
+  [
+   "agri_va",
+   "ter"
+  ],
+  [
+   "electricity",
+   "agri_va"
+  ],
+  [
+   "electricity",
+   "gdppc_log"
+  ],
+  [
+   "electricity",
+   "gpi_ter"
+  ],
+  [
+   "electricity",
+   "lsc"
+  ],
+  [
+   "electricity",
+   "tax"
+  ],
+  [
+   "electricity",
+   "ter"
+  ],
+  [
+   "electricity",
+   "u5mr"
+  ],
+  [
+   "fertility",
+   "electricity"
+  ],
+  [
+   "fertility",
+   "gpi_sec"
+  ],
+  [
+   "flfp",
+   "agri_va"
+  ],
+  [
+   "flfp",
+   "gdppc_log"
+  ],
+  [
+   "gdppc_log",
+   "electricity"
+  ],
+  [
+   "gdppc_log",
+   "emp_agri"
+  ],
+  [
+   "gdppc_log",
+   "u5mr"
+  ],
+  [
+   "gdppc_log",
+   "wage_emp"
+  ],
+  [
+   "gpi_ter",
+   "urban"
+  ],
+  [
+   "life_exp",
+   "fertility"
+  ],
+  [
+   "life_exp",
+   "flfp"
+  ],
+  [
+   "life_exp",
+   "gpi_sec"
+  ],
+  [
+   "life_exp",
+   "ter"
+  ],
+  [
+   "prm_cmp",
+   "agri_va"
+  ],
+  [
+   "prm_cmp",
+   "u5mr"
+  ],
+  [
+   "sec",
+   "agri_va"
+  ],
+  [
+   "ter",
+   "agri_va"
+  ],
+  [
+   "u5mr",
+   "fertility"
+  ],
+  [
+   "u5mr",
+   "gpi_sec"
+  ],
+  [
+   "u5mr",
+   "life_exp"
+  ],
+  [
+   "u5mr",
+   "ter"
+  ],
+  [
+   "u5mr",
+   "urban"
+  ],
+  [
+   "urban",
+   "agri_va"
+  ]
+ ],
+ "robust": [
+  {
+   "x": "gdppc_log",
+   "y": "urban",
+   "b": 2.3174743158004705,
+   "se": 0.5822622758893113,
+   "t": 3.9801210069137722,
+   "t_top5_removed": 2.465373042031018,
+   "n_excl_below_1_96": -1,
+   "min_abs_t": 3.572326000565348,
+   "max_abs_delta_b": 0.29024915229284654,
+   "top5_countries": [
+    "BWA",
+    "GNQ",
+    "OMN",
+    "LBY",
+    "LBR"
+   ],
+   "top5_signal_share": 0.22331202633015723,
+   "top10_signal_share": 0.3338280412254548,
+   "flips_when_top5_removed": false,
+   "rel_change_b_top5": 0.509627207980536,
+   "group_concentrated": true
+  },
+  {
+   "x": "agri_va",
+   "y": "gdppc_log",
+   "b": -0.004121834245928269,
+   "se": 0.0015663337758155267,
+   "t": -2.63151718335525,
+   "t_top5_removed": -3.3000825235566618,
+   "n_excl_below_1_96": -1,
+   "min_abs_t": 2.227107358477224,
+   "max_abs_delta_b": 0.0008483018324632044,
+   "top5_countries": [
+    "NER",
+    "GHA",
+    "RWA",
+    "BWA",
+    "GUY"
+   ],
+   "top5_signal_share": 0.25214606988207516,
+   "top10_signal_share": 0.39286662178244236,
+   "flips_when_top5_removed": false,
+   "rel_change_b_top5": 0.02132389701037918,
+   "group_concentrated": false
+  },
+  {
+   "x": "life_exp",
+   "y": "fertility",
+   "b": -0.048179146627856766,
+   "se": 0.007953046731826905,
+   "t": -6.057948387886496,
+   "t_top5_removed": -8.689224555775823,
+   "n_excl_below_1_96": -1,
+   "min_abs_t": 5.455625411352895,
+   "max_abs_delta_b": 0.004663050457376056,
+   "top5_countries": [
+    "RWA",
+    "CAF",
+    "DZA",
+    "CHN",
+    "SOM"
+   ],
+   "top5_signal_share": 0.28537055092010855,
+   "top10_signal_share": 0.42787482001899924,
+   "flips_when_top5_removed": false,
+   "rel_change_b_top5": 0.11293367194294929,
+   "group_concentrated": false
+  },
+  {
+   "x": "u5mr",
+   "y": "life_exp",
+   "b": -0.02655145642296633,
+   "se": 0.008736973870323541,
+   "t": -3.0389762882492284,
+   "t_top5_removed": -4.461582257757995,
+   "n_excl_below_1_96": -1,
+   "min_abs_t": 2.8620195536825372,
+   "max_abs_delta_b": 0.005574657330775085,
+   "top5_countries": [
+    "KHM",
+    "OMN",
+    "ZMB",
+    "RWA",
+    "BWA"
+   ],
+   "top5_signal_share": 0.3043631247633595,
+   "top10_signal_share": 0.46464345092570564,
+   "flips_when_top5_removed": false,
+   "rel_change_b_top5": 0.16378326448806627,
+   "group_concentrated": false
+  },
+  {
+   "x": "u5mr",
+   "y": "fertility",
+   "b": 0.006107048176693717,
+   "se": 0.001132712651424669,
+   "t": 5.391524645736569,
+   "t_top5_removed": 7.257593416572762,
+   "n_excl_below_1_96": -1,
+   "min_abs_t": 5.033408033736667,
+   "max_abs_delta_b": 0.0006179584842835031,
+   "top5_countries": [
+    "KHM",
+    "CAF",
+    "SOM",
+    "DZA",
+    "RWA"
+   ],
+   "top5_signal_share": 0.3393461485614858,
+   "top10_signal_share": 0.48827847321698736,
+   "flips_when_top5_removed": false,
+   "rel_change_b_top5": 0.3723351587198389,
+   "group_concentrated": false
+  }
+ ],
+ "by": [
+  {
+   "x": "agri_va",
+   "y": "ter",
+   "b": -0.06662649269644857,
+   "se": 0.1361992256304783,
+   "t": -0.4891840786027133,
+   "t_top5_removed": -1.16318357148591,
+   "n_excl_below_1_96": 216,
+   "min_abs_t": 0.0015641123427014491,
+   "max_abs_delta_b": 0.1032313096166636,
+   "top5_countries": [
+    "TUR",
+    "CUB",
+    "UZB",
+    "THA",
+    "SYR"
+   ],
+   "top5_signal_share": 0.4362476274990354,
+   "top10_signal_share": 0.6019229919042318,
+   "flips_when_top5_removed": true,
+   "rel_change_b_top5": 0.11478348525676599,
+   "group_concentrated": true,
+   "by_certified": true
+  },
+  {
+   "x": "electricity",
+   "y": "agri_va",
+   "b": 0.04346079548018145,
+   "se": 0.02135219382934773,
+   "t": 2.0354252976313063,
+   "t_top5_removed": 2.108460704778868,
+   "n_excl_below_1_96": 14,
+   "min_abs_t": 1.6966507817697725,
+   "max_abs_delta_b": 0.009535701337592843,
+   "top5_countries": [
+    "SLB",
+    "SDN",
+    "KHM",
+    "ZWE",
+    "GUY"
+   ],
+   "top5_signal_share": 0.2739588473257442,
+   "top10_signal_share": 0.42144857559935933,
+   "flips_when_top5_removed": false,
+   "rel_change_b_top5": 0.22468065643832563,
+   "group_concentrated": false,
+   "by_certified": true
+  },
+  {
+   "x": "electricity",
+   "y": "gdppc_log",
+   "b": -0.0017516348999885975,
+   "se": 0.0014960658426159633,
+   "t": -1.170827412866907,
+   "t_top5_removed": -0.637496525244072,
+   "n_excl_below_1_96": 216,
+   "min_abs_t": 0.5928931065038602,
+   "max_abs_delta_b": 0.0010448001826293017,
+   "top5_countries": [
+    "SDN",
+    "GUY",
+    "BLR",
+    "TLS",
+    "SOM"
+   ],
+   "top5_signal_share": 0.32776109901392164,
+   "top10_signal_share": 0.4497117291735653,
+   "flips_when_top5_removed": true,
+   "rel_change_b_top5": 0.7051973087647766,
+   "group_concentrated": true,
+   "by_certified": true
+  },
+  {
+   "x": "electricity",
+   "y": "gpi_ter",
+   "b": -0.0020313086521343018,
+   "se": 0.0010447969908432522,
+   "t": -1.9442137275824647,
+   "t_top5_removed": -1.610795174668542,
+   "n_excl_below_1_96": 192,
+   "min_abs_t": 1.5011722969180323,
+   "max_abs_delta_b": 0.0005325208074509415,
+   "top5_countries": [
+    "LAO",
+    "IDN",
+    "KHM",
+    "TUN",
+    "NPL"
+   ],
+   "top5_signal_share": 0.35987395749134204,
+   "top10_signal_share": 0.5710820785279369,
+   "flips_when_top5_removed": true,
+   "rel_change_b_top5": 0.26675154073610025,
+   "group_concentrated": true,
+   "by_certified": true
+  },
+  {
+   "x": "electricity",
+   "y": "lsc",
+   "b": 0.0576660860889357,
+   "se": 0.10807505139527719,
+   "t": 0.5335744498332542,
+   "t_top5_removed": -0.1406852525954781,
+   "n_excl_below_1_96": 216,
+   "min_abs_t": 0.10689040374121926,
+   "max_abs_delta_b": 0.0673106363527225,
+   "top5_countries": [
+    "BLR",
+    "LAO",
+    "SLV",
+    "NAM",
+    "DOM"
+   ],
+   "top5_signal_share": 0.33075193753047977,
+   "top10_signal_share": 0.4975836505453176,
+   "flips_when_top5_removed": true,
+   "rel_change_b_top5": 1.179971770721145,
+   "group_concentrated": true,
+   "by_certified": true
+  },
+  {
+   "x": "electricity",
+   "y": "tax",
+   "b": -0.015939129892735465,
+   "se": 0.03981427297025179,
+   "t": -0.4003370827503186,
+   "t_top5_removed": -1.8582214174990075,
+   "n_excl_below_1_96": 216,
+   "min_abs_t": 0.12021789497997838,
+   "max_abs_delta_b": 0.030765416411334845,
+   "top5_countries": [
+    "BLR",
+    "BGR",
+    "KHM",
+    "VUT",
+    "PER"
+   ],
+   "top5_signal_share": 0.4238572842707954,
+   "top10_signal_share": 0.5720674486225917,
+   "flips_when_top5_removed": true,
+   "rel_change_b_top5": 1.397911062732868,
+   "group_concentrated": true,
+   "by_certified": true
+  },
+  {
+   "x": "electricity",
+   "y": "ter",
+   "b": -0.18177601169423568,
+   "se": 0.16560608466912077,
+   "t": -1.097640899230377,
+   "t_top5_removed": -0.16157991501711666,
+   "n_excl_below_1_96": 216,
+   "min_abs_t": 0.2070714749020454,
+   "max_abs_delta_b": 0.1685158185986851,
+   "top5_countries": [
+    "BLR",
+    "MNG",
+    "RUS",
+    "IDN",
+    "THA"
+   ],
+   "top5_signal_share": 0.5262789513591929,
+   "top10_signal_share": 0.6480787455372224,
+   "flips_when_top5_removed": true,
+   "rel_change_b_top5": 0.9540306906107002,
+   "group_concentrated": true,
+   "by_certified": true
+  },
+  {
+   "x": "electricity",
+   "y": "u5mr",
+   "b": 0.11704729852475163,
+   "se": 0.07460730096885237,
+   "t": 1.5688450996721812,
+   "t_top5_removed": 1.1630013720586614,
+   "n_excl_below_1_96": 215,
+   "min_abs_t": 1.2381236070382582,
+   "max_abs_delta_b": 0.045952196620202085,
+   "top5_countries": [
+    "SOM",
+    "RWA",
+    "CAF",
+    "ZAF",
+    "SDN"
+   ],
+   "top5_signal_share": 0.38988197681711806,
+   "top10_signal_share": 0.5552397802601151,
+   "flips_when_top5_removed": true,
+   "rel_change_b_top5": 0.6167736851276217,
+   "group_concentrated": true,
+   "by_certified": true
+  },
+  {
+   "x": "fertility",
+   "y": "electricity",
+   "b": -2.1604121033723573,
+   "se": 0.7606039774211611,
+   "t": -2.8403902260638527,
+   "t_top5_removed": -2.9419759495239823,
+   "n_excl_below_1_96": -1,
+   "min_abs_t": 2.6561121511891383,
+   "max_abs_delta_b": 0.4162414880251146,
+   "top5_countries": [
+    "UGA",
+    "RWA",
+    "OMN",
+    "ZWE",
+    "MAR"
+   ],
+   "top5_signal_share": 0.2664830779812134,
+   "top10_signal_share": 0.41230032210443995,
+   "flips_when_top5_removed": false,
+   "rel_change_b_top5": 0.30159881200527255,
+   "group_concentrated": false,
+   "by_certified": true
+  },
+  {
+   "x": "fertility",
+   "y": "gpi_sec",
+   "b": 0.007944868676134337,
+   "se": 0.01744996802655098,
+   "t": 0.455294168106545,
+   "t_top5_removed": -1.6144434127759721,
+   "n_excl_below_1_96": 216,
+   "min_abs_t": 0.20860747159755413,
+   "max_abs_delta_b": 0.018989594584028352,
+   "top5_countries": [
+    "OMN",
+    "SYC",
+    "SWE",
+    "ETH",
+    "CUB"
+   ],
+   "top5_signal_share": 0.38585848436801184,
+   "top10_signal_share": 0.5154176754102249,
+   "flips_when_top5_removed": true,
+   "rel_change_b_top5": 2.6857693102987095,
+   "group_concentrated": true,
+   "by_certified": true
+  },
+  {
+   "x": "flfp",
+   "y": "agri_va",
+   "b": -0.14582489000455334,
+   "se": 0.04985966151706174,
+   "t": -2.924706778337289,
+   "t_top5_removed": -2.969047970634603,
+   "n_excl_below_1_96": -1,
+   "min_abs_t": 2.700672721155139,
+   "max_abs_delta_b": 0.024718718529287392,
+   "top5_countries": [
+    "YEM",
+    "FJI",
+    "SYR",
+    "MWI",
+    "GUY"
+   ],
+   "top5_signal_share": 0.28047975184867835,
+   "top10_signal_share": 0.42477122391546496,
+   "flips_when_top5_removed": false,
+   "rel_change_b_top5": 0.36920274246199664,
+   "group_concentrated": false,
+   "by_certified": true
+  },
+  {
+   "x": "flfp",
+   "y": "gdppc_log",
+   "b": 0.0020740774939130005,
+   "se": 0.002767609076761147,
+   "t": 0.74941129198067,
+   "t_top5_removed": -0.9813509251534672,
+   "n_excl_below_1_96": 216,
+   "min_abs_t": 0.2539045014594676,
+   "max_abs_delta_b": 0.0014514071815825834,
+   "top5_countries": [
+    "AZE",
+    "GUY",
+    "GNQ",
+    "YEM",
+    "VEN"
+   ],
+   "top5_signal_share": 0.25771810569119086,
+   "top10_signal_share": 0.3725609009349469,
+   "flips_when_top5_removed": true,
+   "rel_change_b_top5": 1.851635924162792,
+   "group_concentrated": true,
+   "by_certified": true
+  },
+  {
+   "x": "gdppc_log",
+   "y": "electricity",
+   "b": 0.7807673745722504,
+   "se": 0.7314207519229903,
+   "t": 1.0674668069227216,
+   "t_top5_removed": -0.19458854833561504,
+   "n_excl_below_1_96": 216,
+   "min_abs_t": 0.6428900567807615,
+   "max_abs_delta_b": 0.35385140527307585,
+   "top5_countries": [
+    "ZWE",
+    "HND",
+    "LBY",
+    "RWA",
+    "ZMB"
+   ],
+   "top5_signal_share": 0.29716252155373535,
+   "top10_signal_share": 0.4458498697250052,
+   "flips_when_top5_removed": true,
+   "rel_change_b_top5": 1.1175207045455013,
+   "group_concentrated": true,
+   "by_certified": true
+  },
+  {
+   "x": "gdppc_log",
+   "y": "emp_agri",
+   "b": -1.88585406632812,
+   "se": 0.5923623576965837,
+   "t": -3.1836156396927584,
+   "t_top5_removed": -1.8003059770189835,
+   "n_excl_below_1_96": -1,
+   "min_abs_t": 2.5824787406052603,
+   "max_abs_delta_b": 0.24349347507705388,
+   "top5_countries": [
+    "LBR",
+    "SYR",
+    "TGO",
+    "AZE",
+    "GNQ"
+   ],
+   "top5_signal_share": 0.20325787969509113,
+   "top10_signal_share": 0.334057556715408,
+   "flips_when_top5_removed": true,
+   "rel_change_b_top5": 0.44074618747995215,
+   "group_concentrated": true,
+   "by_certified": true
+  },
+  {
+   "x": "gdppc_log",
+   "y": "u5mr",
+   "b": 5.81483280617453,
+   "se": 3.681005228610634,
+   "t": 1.579686103398797,
+   "t_top5_removed": 3.3709934906499566,
+   "n_excl_below_1_96": 215,
+   "min_abs_t": 1.1353787400493554,
+   "max_abs_delta_b": 2.216734211210904,
+   "top5_countries": [
+    "LBR",
+    "OMN",
+    "KHM",
+    "TZA",
+    "DZA"
+   ],
+   "top5_signal_share": 0.2914459017195363,
+   "top10_signal_share": 0.4219126314258266,
+   "flips_when_top5_removed": false,
+   "rel_change_b_top5": 0.39496247940741586,
+   "group_concentrated": false,
+   "by_certified": true
+  },
+  {
+   "x": "gdppc_log",
+   "y": "wage_emp",
+   "b": 1.0263253860329649,
+   "se": 0.5801116170656792,
+   "t": 1.7691860597867777,
+   "t_top5_removed": -0.21380188268072065,
+   "n_excl_below_1_96": 216,
+   "min_abs_t": 1.1069420529906087,
+   "max_abs_delta_b": 0.5354855659137663,
+   "top5_countries": [
+    "GNQ",
+    "MDA",
+    "SYR",
+    "AZE",
+    "COL"
+   ],
+   "top5_signal_share": 0.317241770454556,
+   "top10_signal_share": 0.41460572965735765,
+   "flips_when_top5_removed": true,
+   "rel_change_b_top5": 1.0703760801788755,
+   "group_concentrated": true,
+   "by_certified": true
+  },
+  {
+   "x": "gpi_ter",
+   "y": "urban",
+   "b": -0.8218934515130155,
+   "se": 0.7382726076471116,
+   "t": -1.1132655376885852,
+   "t_top5_removed": 0.7724898987486069,
+   "n_excl_below_1_96": 216,
+   "min_abs_t": 0.6263532937163315,
+   "max_abs_delta_b": 0.41896084959985996,
+   "top5_countries": [
+    "LSO",
+    "NPL",
+    "OMN",
+    "LCA",
+    "CUB"
+   ],
+   "top5_signal_share": 0.3202918940152497,
+   "top10_signal_share": 0.4770762382380775,
+   "flips_when_top5_removed": true,
+   "rel_change_b_top5": 1.4868190319646777,
+   "group_concentrated": true,
+   "by_certified": true
+  },
+  {
+   "x": "life_exp",
+   "y": "flfp",
+   "b": -0.027804684911029724,
+   "se": 0.024633681423608136,
+   "t": -1.1287263333844448,
+   "t_top5_removed": -1.1207749352592191,
+   "n_excl_below_1_96": 216,
+   "min_abs_t": 0.8826431220413729,
+   "max_abs_delta_b": 0.008292652459626595,
+   "top5_countries": [
+    "PER",
+    "NAM",
+    "TJK",
+    "CIV",
+    "MAC"
+   ],
+   "top5_signal_share": 0.16747644085221433,
+   "top10_signal_share": 0.29163619973667354,
+   "flips_when_top5_removed": true,
+   "rel_change_b_top5": 0.18773761533500213,
+   "group_concentrated": true,
+   "by_certified": true
+  },
+  {
+   "x": "life_exp",
+   "y": "gpi_sec",
+   "b": 0.0024427924877246376,
+   "se": 0.002656023513513451,
+   "t": 0.9197179450016442,
+   "t_top5_removed": 1.560854239535436,
+   "n_excl_below_1_96": 216,
+   "min_abs_t": 0.1459794684891301,
+   "max_abs_delta_b": 0.0021819259078423104,
+   "top5_countries": [
+    "OMN",
+    "LSO",
+    "SEN",
+    "NPL",
+    "BDI"
+   ],
+   "top5_signal_share": 0.42199996215981433,
+   "top10_signal_share": 0.5497831343405993,
+   "flips_when_top5_removed": true,
+   "rel_change_b_top5": 0.03954834235785592,
+   "group_concentrated": true,
+   "by_certified": true
+  },
+  {
+   "x": "life_exp",
+   "y": "ter",
+   "b": -0.5596217791006788,
+   "se": 0.2041559252838726,
+   "t": -2.7411488465129863,
+   "t_top5_removed": -2.124288491568447,
+   "n_excl_below_1_96": -1,
+   "min_abs_t": 2.496957521135831,
+   "max_abs_delta_b": 0.12232721236839872,
+   "top5_countries": [
+    "SAU",
+    "TUR",
+    "LSO",
+    "BDI",
+    "RUS"
+   ],
+   "top5_signal_share": 0.30705811039574643,
+   "top10_signal_share": 0.47779390692832996,
+   "flips_when_top5_removed": false,
+   "rel_change_b_top5": 0.3411523756579809,
+   "group_concentrated": false,
+   "by_certified": true
+  },
+  {
+   "x": "prm_cmp",
+   "y": "agri_va",
+   "b": 0.05550580328759716,
+   "se": 0.016340119036021082,
+   "t": 3.3969032395196774,
+   "t_top5_removed": 4.009464124590932,
+   "n_excl_below_1_96": -1,
+   "min_abs_t": 3.1285936442170637,
+   "max_abs_delta_b": 0.010625195058308445,
+   "top5_countries": [
+    "KIR",
+    "TGO",
+    "MLI",
+    "GUY",
+    "BWA"
+   ],
+   "top5_signal_share": 0.25890544469258947,
+   "top10_signal_share": 0.39544454655366734,
+   "flips_when_top5_removed": false,
+   "rel_change_b_top5": 0.226643774886513,
+   "group_concentrated": false,
+   "by_certified": true
+  },
+  {
+   "x": "prm_cmp",
+   "y": "u5mr",
+   "b": 0.15479677593097643,
+   "se": 0.06873487117423911,
+   "t": 2.2520850521211444,
+   "t_top5_removed": 1.6272991766963696,
+   "n_excl_below_1_96": 0,
+   "min_abs_t": 1.881648451050065,
+   "max_abs_delta_b": 0.03267552210128716,
+   "top5_countries": [
+    "RWA",
+    "SWZ",
+    "MDG",
+    "CAF",
+    "TZA"
+   ],
+   "top5_signal_share": 0.27939838369391234,
+   "top10_signal_share": 0.4616723390667721,
+   "flips_when_top5_removed": true,
+   "rel_change_b_top5": 0.4415617025818732,
+   "group_concentrated": true,
+   "by_certified": true
+  },
+  {
+   "x": "sec",
+   "y": "agri_va",
+   "b": 0.05958099238604549,
+   "se": 0.01878830192015295,
+   "t": 3.171174949138802,
+   "t_top5_removed": 4.712119994954493,
+   "n_excl_below_1_96": -1,
+   "min_abs_t": 2.9576149115811865,
+   "max_abs_delta_b": 0.012654642409213768,
+   "top5_countries": [
+    "SYC",
+    "SYR",
+    "MLI",
+    "KIR",
+    "CUB"
+   ],
+   "top5_signal_share": 0.30139473556569446,
+   "top10_signal_share": 0.4205813702224984,
+   "flips_when_top5_removed": false,
+   "rel_change_b_top5": 0.11516606871491361,
+   "group_concentrated": false,
+   "by_certified": true
+  },
+  {
+   "x": "ter",
+   "y": "agri_va",
+   "b": 0.04021040313434124,
+   "se": 0.013912873650308053,
+   "t": 2.890158003659504,
+   "t_top5_removed": 3.2205713370667963,
+   "n_excl_below_1_96": -1,
+   "min_abs_t": 2.5571087199772555,
+   "max_abs_delta_b": 0.006985258002488087,
+   "top5_countries": [
+    "CUB",
+    "SLV",
+    "SYR",
+    "MNG",
+    "PRY"
+   ],
+   "top5_signal_share": 0.25967006270893533,
+   "top10_signal_share": 0.42023175123253487,
+   "flips_when_top5_removed": false,
+   "rel_change_b_top5": 0.21703888872608482,
+   "group_concentrated": false,
+   "by_certified": true
+  },
+  {
+   "x": "u5mr",
+   "y": "gpi_sec",
+   "b": -0.000832476523989817,
+   "se": 0.0004378013575450396,
+   "t": -1.9014937017507407,
+   "t_top5_removed": -3.438653766442433,
+   "n_excl_below_1_96": 208,
+   "min_abs_t": 1.5039149039171311,
+   "max_abs_delta_b": 0.00039257499991145656,
+   "top5_countries": [
+    "OMN",
+    "NER",
+    "LSO",
+    "MWI",
+    "ETH"
+   ],
+   "top5_signal_share": 0.428106296797333,
+   "top10_signal_share": 0.604634178679952,
+   "flips_when_top5_removed": false,
+   "rel_change_b_top5": 0.21216287329756578,
+   "group_concentrated": false,
+   "by_certified": true
+  },
+  {
+   "x": "u5mr",
+   "y": "ter",
+   "b": 0.08805617653273021,
+   "se": 0.03354207338205935,
+   "t": 2.6252454799001432,
+   "t_top5_removed": 1.9169066134995039,
+   "n_excl_below_1_96": -1,
+   "min_abs_t": 2.3052496073763242,
+   "max_abs_delta_b": 0.02123287349646774,
+   "top5_countries": [
+    "TUR",
+    "SAU",
+    "MDG",
+    "ETH",
+    "MAR"
+   ],
+   "top5_signal_share": 0.4124191710860833,
+   "top10_signal_share": 0.5736337568216928,
+   "flips_when_top5_removed": true,
+   "rel_change_b_top5": 0.4933212317286981,
+   "group_concentrated": true,
+   "by_certified": true
+  },
+  {
+   "x": "u5mr",
+   "y": "urban",
+   "b": -0.004824900127541579,
+   "se": 0.006074998897700086,
+   "t": -0.7942223873272178,
+   "t_top5_removed": -1.0809676569466242,
+   "n_excl_below_1_96": 216,
+   "min_abs_t": 0.5110812989098759,
+   "max_abs_delta_b": 0.005089541668124809,
+   "top5_countries": [
+    "KHM",
+    "OMN",
+    "BWA",
+    "LBY",
+    "SDN"
+   ],
+   "top5_signal_share": 0.28564652193663204,
+   "top10_signal_share": 0.4261604427922224,
+   "flips_when_top5_removed": true,
+   "rel_change_b_top5": 0.08554697346429385,
+   "group_concentrated": true,
+   "by_certified": true
+  },
+  {
+   "x": "urban",
+   "y": "agri_va",
+   "b": 0.13707080465115543,
+   "se": 0.0692192194030092,
+   "t": 1.9802419881839421,
+   "t_top5_removed": 1.0866961213206754,
+   "n_excl_below_1_96": 30,
+   "min_abs_t": 1.5806906842781652,
+   "max_abs_delta_b": 0.031643295845967215,
+   "top5_countries": [
+    "BWA",
+    "KOR",
+    "ZMB",
+    "LSO",
+    "THA"
+   ],
+   "top5_signal_share": 0.2546060740718874,
+   "top10_signal_share": 0.40180042094556273,
+   "flips_when_top5_removed": true,
+   "rel_change_b_top5": 0.5326984172702164,
+   "group_concentrated": true,
+   "by_certified": true
+  }
+ ],
+ "summary": {
+  "n_robust": 5,
+  "n_robust_group_concentrated": 1,
+  "n_by_links": 32,
+  "n_by_group_concentrated": 20,
+  "n_by_checked": 33
+ }
+}

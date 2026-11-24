@@ -1,0 +1,42 @@
+{
+ "R": 1200,
+ "up_p_rank_correlation": 0.9965053913620758,
+ "family_agreement": {
+  "up": {
+   "certified_A": 0,
+   "certified_B": 0,
+   "certified_both": 0,
+   "certified_one_half": 0,
+   "jaccard": 0.0,
+   "BH_A": 34,
+   "BH_B": 38
+  },
+  "down": {
+   "certified_A": 0,
+   "certified_B": 0,
+   "certified_both": 0,
+   "certified_one_half": 0,
+   "jaccard": 0.0,
+   "BH_A": 21,
+   "BH_B": 23
+  },
+  "flip": {
+   "certified_A": 0,
+   "certified_B": 0,
+   "certified_both": 0,
+   "certified_one_half": 0,
+   "jaccard": 0.0,
+   "BH_A": 15,
+   "BH_B": 21
+  },
+  "het": {
+   "certified_A": 0,
+   "certified_B": 0,
+   "certified_both": 0,
+   "certified_one_half": 0,
+   "jaccard": 0.0,
+   "BH_A": 53,
+   "BH_B": 51
+  }
+ }
+}
