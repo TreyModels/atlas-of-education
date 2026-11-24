@@ -1,0 +1,38 @@
+{
+ "experiment": "x4",
+ "primary": {
+  "n_train": 40,
+  "n_valid": 21,
+  "b1": -2.053564188618717,
+  "b1_ci90_bootstrap": [
+   -4.443923401945843,
+   0.8735242954775441
+  ],
+  "mae": {
+   "model": 8.81146293704787,
+   "persistence": 11.300171328128055,
+   "pooled_trend": 9.483451343606458
+  },
+  "paired_MAE_model_minus_persistence": {
+   "mean": -2.488708391080187,
+   "ci90": [
+    -5.756147099978465,
+    0.7748490425452526
+   ]
+  },
+  "paired_MAE_model_minus_pooled_trend": {
+   "mean": -0.6719884065585865,
+   "ci90": [
+    -2.0393815770697787,
+    0.6565786994614996
+   ]
+  },
+  "decision": "FAIL_NO_EVIDENCE",
+  "decision_parts": {
+   "beats_persistence": false,
+   "beats_pooled_trend": false,
+   "b1_positive_ci_excludes_zero": false
+  },
+  "status": "tested"
+ }
+}

@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "/root/work/masseng-staging-x2-20261124/run_x4.py", line 219, in <module>
+    main()
+  File "/root/work/masseng-staging-x2-20261124/run_x4.py", line 191, in main
+    results[spec["name"]] = run_spec(isos, data, spec, rng, split)
+  File "/root/work/masseng-staging-x2-20261124/run_x4.py", line 71, in run_spec
+    usable = [i for i in isos if complete(i)]
+  File "/root/work/masseng-staging-x2-20261124/run_x4.py", line 71, in <listcomp>
+    usable = [i for i in isos if complete(i)]
+  File "/root/work/masseng-staging-x2-20261124/run_x4.py", line 69, in complete
+    vals = [val(data, iso, k) for k in edu + job + out]
+  File "/root/work/masseng-staging-x2-20261124/run_x4.py", line 69, in <listcomp>
+    vals = [val(data, iso, k) for k in edu + job + out]
+  File "/root/work/masseng-staging-x2-20261124/run_x4.py", line 49, in val
+    return data[iso][key]
+KeyError: 'lsc_2004'

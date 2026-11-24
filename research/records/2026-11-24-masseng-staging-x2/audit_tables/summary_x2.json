@@ -1,0 +1,5646 @@
+{
+ "label": "X2 gate/tutoring inequality factorial \u2014 pre-declared analysis",
+ "runs": 240,
+ "elapsed_s": 24.549,
+ "threshold_pp": 0.01,
+ "gate_adjacent_grades_1based": [
+  6,
+  9,
+  12
+ ],
+ "non_gate_grades_1based": [
+  4,
+  7,
+  10,
+  13
+ ],
+ "surfaces": {
+  "bar|access0.2|ban0": {
+   "tut_rate": {
+    "mean": 0.2402129094925208,
+    "ci90": [
+     0.2397262069644007,
+     0.2407003289231786
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "gate_adj": {
+    "mean": 0.2993475963756559,
+    "ci90": [
+     0.298576455850765,
+     0.30010386566398584
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "non_gate": {
+    "mean": 0.21881963880836924,
+    "ci90": [
+     0.21795853716534633,
+     0.21971635858680652
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "wealth_gap_tut": {
+    "mean": 0.3301133414216283,
+    "ci90": [
+     0.32863353939554585,
+     0.3316943077592027
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "own_share": {
+    "mean": 0.6541149224194138,
+    "ci90": [
+     0.6529750997067978,
+     0.6552533428053767
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "completion_primary": {
+    "mean": 0.8472750000000001,
+    "ci90": [
+     0.8451375000000002,
+     0.8494124999999999
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "completion_lower": {
+    "mean": 0.6667875,
+    "ci90": [
+     0.663774375,
+     0.6696256250000001
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "completion_upper": {
+    "mean": 0.584575,
+    "ci90": [
+     0.5813993749999999,
+     0.587475
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "completion_tertiary": {
+    "mean": 0.46533749999999996,
+    "ci90": [
+     0.46306250000000004,
+     0.4674499999999999
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "parity_location_lower": {
+    "mean": 0.7276532419760076,
+    "ci90": [
+     0.7213803870446994,
+     0.7337483910667614
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "parity_location_upper": {
+    "mean": 0.6761695378438664,
+    "ci90": [
+     0.667651052577284,
+     0.6846659792467619
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "wealth_gap_completion_lower": {
+    "mean": 0.9281249999999999,
+    "ci90": [
+     0.9230593749999998,
+     0.9333124999999999
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "wealth_gap_completion_upper": {
+    "mean": 0.983375,
+    "ci90": [
+     0.9816874999999999,
+     0.9849406250000002
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "wealth_gap_completion_tertiary": {
+    "mean": 0.9799375000000001,
+    "ci90": [
+     0.9780625000000001,
+     0.9816874999999999
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "mpl_primary": {
+    "mean": 0.9633910006091817,
+    "ci90": [
+     0.9623137817506965,
+     0.9644697093558564
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "q_pub": {
+    "mean": 1.0279649304124803,
+    "ci90": [
+     1.0271805991199963,
+     1.0287831610286955
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "formal_share_gdp": {
+    "mean": 0.30118790829526987,
+    "ci90": [
+     0.30010098523121437,
+     0.30226046335131934
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   }
+  },
+  "bar|access0.2|ban1": {
+   "tut_rate": {
+    "mean": 0.10558606608756209,
+    "ci90": [
+     0.1049501077267817,
+     0.10620974395915854
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "gate_adj": {
+    "mean": 0.10555799920862592,
+    "ci90": [
+     0.1047989495126214,
+     0.10628919238653231
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "non_gate": {
+    "mean": 0.10541447544688336,
+    "ci90": [
+     0.1044643409031098,
+     0.1063068113658883
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "wealth_gap_tut": {
+    "mean": 0.1560621881841231,
+    "ci90": [
+     0.15494399101689463,
+     0.15713604297328188
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "own_share": {
+    "mean": 0.0,
+    "ci90": [
+     0.0,
+     0.0
+    ],
+    "n": 20,
+    "n_pos": 0,
+    "n_neg": 0,
+    "sign_stable": false
+   },
+   "completion_primary": {
+    "mean": 0.839175,
+    "ci90": [
+     0.836486875,
+     0.8416625
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "completion_lower": {
+    "mean": 0.6555000000000001,
+    "ci90": [
+     0.652511875,
+     0.658488125
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "completion_upper": {
+    "mean": 0.570925,
+    "ci90": [
+     0.568224375,
+     0.5736375
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "completion_tertiary": {
+    "mean": 0.4546375,
+    "ci90": [
+     0.4521624999999999,
+     0.45707499999999995
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "parity_location_lower": {
+    "mean": 0.7105696389811054,
+    "ci90": [
+     0.7045742707572025,
+     0.7166197103152294
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "parity_location_upper": {
+    "mean": 0.6503132217311165,
+    "ci90": [
+     0.6436678663646882,
+     0.6570300502611622
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "wealth_gap_completion_lower": {
+    "mean": 0.9203125,
+    "ci90": [
+     0.9176249999999999,
+     0.9231874999999998
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "wealth_gap_completion_upper": {
+    "mean": 0.9736875000000002,
+    "ci90": [
+     0.9718125000000002,
+     0.9755
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "wealth_gap_completion_tertiary": {
+    "mean": 0.9678125000000002,
+    "ci90": [
+     0.9654375,
+     0.970125
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "mpl_primary": {
+    "mean": 0.9394970573202801,
+    "ci90": [
+     0.9379111207082654,
+     0.9409900826233376
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "q_pub": {
+    "mean": 1.0270428392670718,
+    "ci90": [
+     1.025902245825411,
+     1.0281437096548804
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "formal_share_gdp": {
+    "mean": 0.2972881075378778,
+    "ci90": [
+     0.2956963582122296,
+     0.29881139683722807
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   }
+  },
+  "bar|access0.4|ban0": {
+   "tut_rate": {
+    "mean": 0.25200705762600706,
+    "ci90": [
+     0.2513921314052834,
+     0.2526812948269167
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "gate_adj": {
+    "mean": 0.30872336293796704,
+    "ci90": [
+     0.3074434100079198,
+     0.31017343761112603
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "non_gate": {
+    "mean": 0.231672084654908,
+    "ci90": [
+     0.23073566806080373,
+     0.23261663593521736
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "wealth_gap_tut": {
+    "mean": 0.3574510763046209,
+    "ci90": [
+     0.3560116393554877,
+     0.35884810207854917
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "own_share": {
+    "mean": 0.6007719116923088,
+    "ci90": [
+     0.599073441722445,
+     0.6024128707364366
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "completion_primary": {
+    "mean": 0.8482125,
+    "ci90": [
+     0.846111875,
+     0.8505
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "completion_lower": {
+    "mean": 0.6683625,
+    "ci90": [
+     0.6663875,
+     0.6702625
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "completion_upper": {
+    "mean": 0.5865750000000001,
+    "ci90": [
+     0.58475,
+     0.5883874999999998
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "completion_tertiary": {
+    "mean": 0.47101250000000006,
+    "ci90": [
+     0.469175,
+     0.4728506249999999
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "parity_location_lower": {
+    "mean": 0.7308866292427446,
+    "ci90": [
+     0.7251135447695004,
+     0.736309073989738
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "parity_location_upper": {
+    "mean": 0.6800715810786302,
+    "ci90": [
+     0.6741310906582646,
+     0.6857757207359995
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "wealth_gap_completion_lower": {
+    "mean": 0.936375,
+    "ci90": [
+     0.9331249999999999,
+     0.9400625
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "wealth_gap_completion_upper": {
+    "mean": 0.9925624999999998,
+    "ci90": [
+     0.9914375,
+     0.9936875000000001
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "wealth_gap_completion_tertiary": {
+    "mean": 0.9909374999999999,
+    "ci90": [
+     0.9900625,
+     0.9918749999999997
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "mpl_primary": {
+    "mean": 0.9673926391380763,
+    "ci90": [
+     0.9663874511662867,
+     0.9683670293085331
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "q_pub": {
+    "mean": 1.0284098784664821,
+    "ci90": [
+     1.0274369003977792,
+     1.029473378228091
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "formal_share_gdp": {
+    "mean": 0.3032161535620173,
+    "ci90": [
+     0.3019032072151962,
+     0.3045655758613039
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   }
+  },
+  "bar|access0.4|ban1": {
+   "tut_rate": {
+    "mean": 0.12657150907356474,
+    "ci90": [
+     0.12582157102645852,
+     0.1273307776132776
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "gate_adj": {
+    "mean": 0.12741598796177622,
+    "ci90": [
+     0.12650666929163853,
+     0.12828295913656812
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "non_gate": {
+    "mean": 0.1260252847021953,
+    "ci90": [
+     0.12530868234028328,
+     0.12678828227360248
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "wealth_gap_tut": {
+    "mean": 0.19863162774208895,
+    "ci90": [
+     0.1973837519281958,
+     0.19990174018277893
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "own_share": {
+    "mean": 0.0,
+    "ci90": [
+     0.0,
+     0.0
+    ],
+    "n": 20,
+    "n_pos": 0,
+    "n_neg": 0,
+    "sign_stable": false
+   },
+   "completion_primary": {
+    "mean": 0.8410249999999999,
+    "ci90": [
+     0.8387249999999999,
+     0.843275625
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "completion_lower": {
+    "mean": 0.6587375,
+    "ci90": [
+     0.655886875,
+     0.6614749999999999
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "completion_upper": {
+    "mean": 0.5781000000000001,
+    "ci90": [
+     0.575911875,
+     0.5803750000000001
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "completion_tertiary": {
+    "mean": 0.46109999999999995,
+    "ci90": [
+     0.45887500000000003,
+     0.463425
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "parity_location_lower": {
+    "mean": 0.7153413972398482,
+    "ci90": [
+     0.7079781871023381,
+     0.7229307642315492
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "parity_location_upper": {
+    "mean": 0.659451809485551,
+    "ci90": [
+     0.6510493292793762,
+     0.6680215433173372
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "wealth_gap_completion_lower": {
+    "mean": 0.9319375000000001,
+    "ci90": [
+     0.9284375,
+     0.935125
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "wealth_gap_completion_upper": {
+    "mean": 0.9844375,
+    "ci90": [
+     0.9825000000000002,
+     0.9862500000000001
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "wealth_gap_completion_tertiary": {
+    "mean": 0.9841249999999999,
+    "ci90": [
+     0.9824999999999999,
+     0.9858125
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "mpl_primary": {
+    "mean": 0.95121859687097,
+    "ci90": [
+     0.9498558888476614,
+     0.9525208258571776
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "q_pub": {
+    "mean": 1.0278142126821135,
+    "ci90": [
+     1.0271007555410006,
+     1.028569333502432
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "formal_share_gdp": {
+    "mean": 0.3009854476138959,
+    "ci90": [
+     0.2997884810957813,
+     0.30215841410266864
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   }
+  },
+  "bar|access0.8|ban0": {
+   "tut_rate": {
+    "mean": 0.27302897389420744,
+    "ci90": [
+     0.2723500474421041,
+     0.27367793779358235
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "gate_adj": {
+    "mean": 0.3256909300948943,
+    "ci90": [
+     0.32483462776956085,
+     0.3266178191121112
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "non_gate": {
+    "mean": 0.2552638718099415,
+    "ci90": [
+     0.2543354533678226,
+     0.2562256500977865
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "wealth_gap_tut": {
+    "mean": 0.40917877568678723,
+    "ci90": [
+     0.40761407091603047,
+     0.41078426806465757
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "own_share": {
+    "mean": 0.5170107664639583,
+    "ci90": [
+     0.5160467866978801,
+     0.5180411171263601
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "completion_primary": {
+    "mean": 0.8530875,
+    "ci90": [
+     0.8501875,
+     0.8558881249999999
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "completion_lower": {
+    "mean": 0.6727,
+    "ci90": [
+     0.669099375,
+     0.676400625
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "completion_upper": {
+    "mean": 0.594425,
+    "ci90": [
+     0.5910618749999998,
+     0.597788125
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "completion_tertiary": {
+    "mean": 0.47355,
+    "ci90": [
+     0.46972500000000006,
+     0.47723750000000004
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "parity_location_lower": {
+    "mean": 0.7339042029804216,
+    "ci90": [
+     0.7284451288769822,
+     0.7394943348540823
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "parity_location_upper": {
+    "mean": 0.6830755158429304,
+    "ci90": [
+     0.6766533523168988,
+     0.6895754680875379
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "wealth_gap_completion_lower": {
+    "mean": 0.9349999999999999,
+    "ci90": [
+     0.9305,
+     0.939625
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "wealth_gap_completion_upper": {
+    "mean": 0.9935,
+    "ci90": [
+     0.992125,
+     0.9948125000000001
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "wealth_gap_completion_tertiary": {
+    "mean": 0.9969374999999999,
+    "ci90": [
+     0.9961250000000001,
+     0.9976875
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "mpl_primary": {
+    "mean": 0.9694070023510092,
+    "ci90": [
+     0.9685597158458216,
+     0.9702316166302075
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "q_pub": {
+    "mean": 1.0314898708155371,
+    "ci90": [
+     1.030539397378601,
+     1.0324496358199053
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "formal_share_gdp": {
+    "mean": 0.31037312526419053,
+    "ci90": [
+     0.30908680013623324,
+     0.3116610995054262
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   }
+  },
+  "bar|access0.8|ban1": {
+   "tut_rate": {
+    "mean": 0.16284102156618527,
+    "ci90": [
+     0.16216425011357147,
+     0.16355581881696818
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "gate_adj": {
+    "mean": 0.16243702423550577,
+    "ci90": [
+     0.16144390508217848,
+     0.16341194281618593
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "non_gate": {
+    "mean": 0.16112922331276675,
+    "ci90": [
+     0.16034983227837854,
+     0.1618672933891575
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "wealth_gap_tut": {
+    "mean": 0.2723442904903291,
+    "ci90": [
+     0.27085307814540016,
+     0.2738639891797473
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "own_share": {
+    "mean": 0.0,
+    "ci90": [
+     0.0,
+     0.0
+    ],
+    "n": 20,
+    "n_pos": 0,
+    "n_neg": 0,
+    "sign_stable": false
+   },
+   "completion_primary": {
+    "mean": 0.8526250000000001,
+    "ci90": [
+     0.8498750000000002,
+     0.855450625
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "completion_lower": {
+    "mean": 0.6696250000000001,
+    "ci90": [
+     0.666811875,
+     0.6723874999999999
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "completion_upper": {
+    "mean": 0.5902125,
+    "ci90": [
+     0.5869125000000001,
+     0.5933756250000001
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "completion_tertiary": {
+    "mean": 0.4723125,
+    "ci90": [
+     0.4687625000000001,
+     0.4760506250000001
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "parity_location_lower": {
+    "mean": 0.7347234159894718,
+    "ci90": [
+     0.7273304454312866,
+     0.7421453398228479
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "parity_location_upper": {
+    "mean": 0.6815303891032776,
+    "ci90": [
+     0.675351717534153,
+     0.6882714651870838
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "wealth_gap_completion_lower": {
+    "mean": 0.9369999999999997,
+    "ci90": [
+     0.9339375000000001,
+     0.9403124999999999
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "wealth_gap_completion_upper": {
+    "mean": 0.993625,
+    "ci90": [
+     0.9924968749999997,
+     0.9948124999999999
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "wealth_gap_completion_tertiary": {
+    "mean": 0.9951875000000001,
+    "ci90": [
+     0.994125,
+     0.9962499999999999
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "mpl_primary": {
+    "mean": 0.9642934986529171,
+    "ci90": [
+     0.9634062299485354,
+     0.9651793220261589
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "q_pub": {
+    "mean": 1.0301015069387112,
+    "ci90": [
+     1.029106978568769,
+     1.0310603914820649
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "formal_share_gdp": {
+    "mean": 0.308113625538225,
+    "ci90": [
+     0.30706659989363505,
+     0.30916483268567896
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   }
+  },
+  "quota|access0.2|ban0": {
+   "tut_rate": {
+    "mean": 0.4162603415779832,
+    "ci90": [
+     0.4147538241453118,
+     0.4177938554007599
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "gate_adj": {
+    "mean": 0.5375381967314502,
+    "ci90": [
+     0.5351721650407059,
+     0.5399197365575574
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "non_gate": {
+    "mean": 0.3667590627999483,
+    "ci90": [
+     0.3650520476156484,
+     0.3684325853876344
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "wealth_gap_tut": {
+    "mean": 0.46016416127782395,
+    "ci90": [
+     0.4579489482861113,
+     0.46248694023235026
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "own_share": {
+    "mean": 0.6002040676884813,
+    "ci90": [
+     0.5987738264512109,
+     0.6016373952917905
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "completion_primary": {
+    "mean": 0.8616125,
+    "ci90": [
+     0.8593743749999998,
+     0.8639125
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "completion_lower": {
+    "mean": 0.5500875000000002,
+    "ci90": [
+     0.5500125000000001,
+     0.5501625000000001
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "completion_upper": {
+    "mean": 0.4498874999999999,
+    "ci90": [
+     0.4497999999999999,
+     0.4499625
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "completion_tertiary": {
+    "mean": 0.3670375,
+    "ci90": [
+     0.366,
+     0.3681625
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "parity_location_lower": {
+    "mean": 0.6620816544956276,
+    "ci90": [
+     0.6565393463528247,
+     0.6677777716202165
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "parity_location_upper": {
+    "mean": 0.573920777375076,
+    "ci90": [
+     0.5670624660850211,
+     0.5800839311592674
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "wealth_gap_completion_lower": {
+    "mean": 0.7695624999999999,
+    "ci90": [
+     0.7648749999999999,
+     0.7741874999999999
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "wealth_gap_completion_upper": {
+    "mean": 0.7563125000000002,
+    "ci90": [
+     0.7510625,
+     0.7613125000000001
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "wealth_gap_completion_tertiary": {
+    "mean": 0.7611874999999999,
+    "ci90": [
+     0.7566249999999999,
+     0.7655624999999999
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "mpl_primary": {
+    "mean": 0.9536844463309926,
+    "ci90": [
+     0.952350737711855,
+     0.9550454804407902
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "q_pub": {
+    "mean": 1.0570655692934736,
+    "ci90": [
+     1.0561970422893563,
+     1.0578951718638283
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "formal_share_gdp": {
+    "mean": 0.30898105555125177,
+    "ci90": [
+     0.3077219657967732,
+     0.31016224161161576
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   }
+  },
+  "quota|access0.2|ban1": {
+   "tut_rate": {
+    "mean": 0.19026846605420294,
+    "ci90": [
+     0.189136116468244,
+     0.1913936495584784
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "gate_adj": {
+    "mean": 0.21635985726274248,
+    "ci90": [
+     0.21477312264667264,
+     0.21797499989922142
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "non_gate": {
+    "mean": 0.1836794358867293,
+    "ci90": [
+     0.18273142219496533,
+     0.18469688181234822
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "wealth_gap_tut": {
+    "mean": 0.22707825749721797,
+    "ci90": [
+     0.22517182950573647,
+     0.2290267084166464
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "own_share": {
+    "mean": 0.0,
+    "ci90": [
+     0.0,
+     0.0
+    ],
+    "n": 20,
+    "n_pos": 0,
+    "n_neg": 0,
+    "sign_stable": false
+   },
+   "completion_primary": {
+    "mean": 0.847175,
+    "ci90": [
+     0.8457125,
+     0.8485999999999999
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "completion_lower": {
+    "mean": 0.5499500000000002,
+    "ci90": [
+     0.5498000000000001,
+     0.5500625000000001
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "completion_upper": {
+    "mean": 0.4498874999999999,
+    "ci90": [
+     0.4497999999999999,
+     0.44996249999999993
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "completion_tertiary": {
+    "mean": 0.36937499999999995,
+    "ci90": [
+     0.36788750000000003,
+     0.370875
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "parity_location_lower": {
+    "mean": 0.5853308425007115,
+    "ci90": [
+     0.5816123830717672,
+     0.589267212891315
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "parity_location_upper": {
+    "mean": 0.48893308812119995,
+    "ci90": [
+     0.4856390404903573,
+     0.49225725017168104
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "wealth_gap_completion_lower": {
+    "mean": 0.7709374999999999,
+    "ci90": [
+     0.7646875,
+     0.7774375
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "wealth_gap_completion_upper": {
+    "mean": 0.761,
+    "ci90": [
+     0.7553125,
+     0.7666250000000001
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "wealth_gap_completion_tertiary": {
+    "mean": 0.7658125,
+    "ci90": [
+     0.7604374999999999,
+     0.7713125000000001
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "mpl_primary": {
+    "mean": 0.9388613348389223,
+    "ci90": [
+     0.9371923052585233,
+     0.9405687815243312
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "q_pub": {
+    "mean": 1.0530032317816922,
+    "ci90": [
+     1.0521017420968635,
+     1.0539346413327548
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "formal_share_gdp": {
+    "mean": 0.3045196573702384,
+    "ci90": [
+     0.30331186954834866,
+     0.30574958243506456
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   }
+  },
+  "quota|access0.4|ban0": {
+   "tut_rate": {
+    "mean": 0.43952825819216185,
+    "ci90": [
+     0.4381398036136761,
+     0.44097440832506973
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "gate_adj": {
+    "mean": 0.5653024389685174,
+    "ci90": [
+     0.5627022697941543,
+     0.5679309529572744
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "non_gate": {
+    "mean": 0.39493476931353383,
+    "ci90": [
+     0.39334493491804845,
+     0.3965830243054285
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "wealth_gap_tut": {
+    "mean": 0.49367401157399593,
+    "ci90": [
+     0.49141343750952626,
+     0.4957610360372683
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "own_share": {
+    "mean": 0.5211515948661669,
+    "ci90": [
+     0.5199020994066912,
+     0.5225013678263208
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "completion_primary": {
+    "mean": 0.8599249999999999,
+    "ci90": [
+     0.857349375,
+     0.8624124999999999
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "completion_lower": {
+    "mean": 0.5500125,
+    "ci90": [
+     0.5499625000000001,
+     0.5500625
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "completion_upper": {
+    "mean": 0.44998750000000004,
+    "ci90": [
+     0.4499375,
+     0.450025
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "completion_tertiary": {
+    "mean": 0.36626250000000005,
+    "ci90": [
+     0.36501187499999993,
+     0.36754999999999993
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "parity_location_lower": {
+    "mean": 0.6879152596570919,
+    "ci90": [
+     0.6822781608995563,
+     0.693695029945339
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "parity_location_upper": {
+    "mean": 0.6123523799386563,
+    "ci90": [
+     0.6055226717394361,
+     0.618851866343762
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "wealth_gap_completion_lower": {
+    "mean": 0.7739375,
+    "ci90": [
+     0.766875,
+     0.7814375
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "wealth_gap_completion_upper": {
+    "mean": 0.7622500000000001,
+    "ci90": [
+     0.7565624999999999,
+     0.7684374999999999
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "wealth_gap_completion_tertiary": {
+    "mean": 0.7658750000000001,
+    "ci90": [
+     0.7605624999999999,
+     0.771875
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "mpl_primary": {
+    "mean": 0.9539017191129799,
+    "ci90": [
+     0.9526831767549954,
+     0.9551140145566077
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "q_pub": {
+    "mean": 1.060414736340715,
+    "ci90": [
+     1.0595656212906972,
+     1.0612707201492142
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "formal_share_gdp": {
+    "mean": 0.3136820896717898,
+    "ci90": [
+     0.31235695496185945,
+     0.3150191820869953
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   }
+  },
+  "quota|access0.4|ban1": {
+   "tut_rate": {
+    "mean": 0.248666089268458,
+    "ci90": [
+     0.24749895276282094,
+     0.24979030174699124
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "gate_adj": {
+    "mean": 0.29205045312206207,
+    "ci90": [
+     0.28995238992387273,
+     0.2941347561242063
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "non_gate": {
+    "mean": 0.23940561471711116,
+    "ci90": [
+     0.23776783957922956,
+     0.2410267785855535
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "wealth_gap_tut": {
+    "mean": 0.30135627129130615,
+    "ci90": [
+     0.29910915720721437,
+     0.30355031608513844
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "own_share": {
+    "mean": 0.0,
+    "ci90": [
+     0.0,
+     0.0
+    ],
+    "n": 20,
+    "n_pos": 0,
+    "n_neg": 0,
+    "sign_stable": false
+   },
+   "completion_primary": {
+    "mean": 0.8528625,
+    "ci90": [
+     0.8509,
+     0.8547256249999999
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "completion_lower": {
+    "mean": 0.5498750000000001,
+    "ci90": [
+     0.5497250000000001,
+     0.5499750000000001
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "completion_upper": {
+    "mean": 0.4497749999999999,
+    "ci90": [
+     0.44953750000000003,
+     0.44997499999999996
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "completion_tertiary": {
+    "mean": 0.3705,
+    "ci90": [
+     0.36923750000000005,
+     0.3717125
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "parity_location_lower": {
+    "mean": 0.6177557527673467,
+    "ci90": [
+     0.6112848160503483,
+     0.6245495059514229
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "parity_location_upper": {
+    "mean": 0.5285201904924864,
+    "ci90": [
+     0.5214550221490998,
+     0.535372004256262
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "wealth_gap_completion_lower": {
+    "mean": 0.7790625,
+    "ci90": [
+     0.7720625,
+     0.7856249999999999
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "wealth_gap_completion_upper": {
+    "mean": 0.7717500000000002,
+    "ci90": [
+     0.7673124999999998,
+     0.7760625
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "wealth_gap_completion_tertiary": {
+    "mean": 0.7764374999999999,
+    "ci90": [
+     0.77225,
+     0.7805031250000001
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "mpl_primary": {
+    "mean": 0.9450010872851713,
+    "ci90": [
+     0.9436797391781283,
+     0.9463016690838816
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "q_pub": {
+    "mean": 1.0575069385355418,
+    "ci90": [
+     1.0566391854216612,
+     1.0584429553504955
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "formal_share_gdp": {
+    "mean": 0.31139943637828116,
+    "ci90": [
+     0.3098978387713256,
+     0.31293550275453713
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   }
+  },
+  "quota|access0.8|ban0": {
+   "tut_rate": {
+    "mean": 0.4838111489603903,
+    "ci90": [
+     0.48253321429638,
+     0.48517674480106415
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "gate_adj": {
+    "mean": 0.6143531404554715,
+    "ci90": [
+     0.611807732814164,
+     0.6170085367590248
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "non_gate": {
+    "mean": 0.44811422778030474,
+    "ci90": [
+     0.4463762652316668,
+     0.449926377361102
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "wealth_gap_tut": {
+    "mean": 0.5539982709684147,
+    "ci90": [
+     0.551411795043194,
+     0.5567112200952534
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "own_share": {
+    "mean": 0.3809607950394035,
+    "ci90": [
+     0.3800850679954427,
+     0.38185067155224695
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "completion_primary": {
+    "mean": 0.8632499999999999,
+    "ci90": [
+     0.8605875000000001,
+     0.866113125
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "completion_lower": {
+    "mean": 0.5499125000000001,
+    "ci90": [
+     0.5497375000000001,
+     0.55005
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "completion_upper": {
+    "mean": 0.44978749999999995,
+    "ci90": [
+     0.44944999999999996,
+     0.4500125
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "completion_tertiary": {
+    "mean": 0.364475,
+    "ci90": [
+     0.36275,
+     0.3661875
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "parity_location_lower": {
+    "mean": 0.7336588798016347,
+    "ci90": [
+     0.7265448150950331,
+     0.7400539442095965
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "parity_location_upper": {
+    "mean": 0.6739505482998565,
+    "ci90": [
+     0.6683049582346253,
+     0.6796094803334881
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "wealth_gap_completion_lower": {
+    "mean": 0.7815625,
+    "ci90": [
+     0.7756875,
+     0.7879375
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "wealth_gap_completion_upper": {
+    "mean": 0.7801875,
+    "ci90": [
+     0.7756875000000001,
+     0.784375
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "wealth_gap_completion_tertiary": {
+    "mean": 0.7858750000000001,
+    "ci90": [
+     0.7814375000000001,
+     0.7901250000000001
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "mpl_primary": {
+    "mean": 0.9557519661222079,
+    "ci90": [
+     0.954772492693541,
+     0.9568078437180936
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "q_pub": {
+    "mean": 1.0670091687045424,
+    "ci90": [
+     1.0662879008603066,
+     1.0677656766994892
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "formal_share_gdp": {
+    "mean": 0.32464213986956814,
+    "ci90": [
+     0.32364213000024167,
+     0.3256918722498911
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   }
+  },
+  "quota|access0.8|ban1": {
+   "tut_rate": {
+    "mean": 0.36601482003791047,
+    "ci90": [
+     0.36458704066599773,
+     0.36753341742023676
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "gate_adj": {
+    "mean": 0.4504936815244632,
+    "ci90": [
+     0.44796807834067026,
+     0.45294701927378905
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "non_gate": {
+    "mean": 0.3494455670746135,
+    "ci90": [
+     0.3476792744817301,
+     0.3513493332225099
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "wealth_gap_tut": {
+    "mean": 0.45399789344466573,
+    "ci90": [
+     0.4521661969641156,
+     0.4558576899839551
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "own_share": {
+    "mean": 0.0,
+    "ci90": [
+     0.0,
+     0.0
+    ],
+    "n": 20,
+    "n_pos": 0,
+    "n_neg": 0,
+    "sign_stable": false
+   },
+   "completion_primary": {
+    "mean": 0.8602875000000001,
+    "ci90": [
+     0.8580874999999999,
+     0.8626250000000001
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "completion_lower": {
+    "mean": 0.5499750000000001,
+    "ci90": [
+     0.5498875000000001,
+     0.5500625
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "completion_upper": {
+    "mean": 0.4499374999999999,
+    "ci90": [
+     0.4498749999999999,
+     0.4499999999999999
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "completion_tertiary": {
+    "mean": 0.36686250000000004,
+    "ci90": [
+     0.3651625,
+     0.36852500000000005
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "parity_location_lower": {
+    "mean": 0.6959361002783916,
+    "ci90": [
+     0.6903543350219554,
+     0.7019016736159818
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "parity_location_upper": {
+    "mean": 0.6242400424895591,
+    "ci90": [
+     0.617785242454027,
+     0.6311517197325748
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "wealth_gap_completion_lower": {
+    "mean": 0.782375,
+    "ci90": [
+     0.7781874999999999,
+     0.7867499999999998
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "wealth_gap_completion_upper": {
+    "mean": 0.7767499999999999,
+    "ci90": [
+     0.770875,
+     0.7824374999999999
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "wealth_gap_completion_tertiary": {
+    "mean": 0.7830625000000001,
+    "ci90": [
+     0.7776249999999999,
+     0.788253125
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "mpl_primary": {
+    "mean": 0.9450895675854014,
+    "ci90": [
+     0.9436492340188559,
+     0.9465625429606168
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "q_pub": {
+    "mean": 1.0655037294013254,
+    "ci90": [
+     1.064577325295492,
+     1.06641654895671
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "formal_share_gdp": {
+    "mean": 0.32421759433959024,
+    "ci90": [
+     0.322627738606856,
+     0.32581928545863537
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   }
+  }
+ },
+ "paired_contrasts": {
+  "quota_minus_bar|access0.2|ban0": {
+   "tut_rate": {
+    "mean": 0.17604743208546228,
+    "ci90": [
+     0.1744249842155499,
+     0.1777456907548299
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "gate_adj": {
+    "mean": 0.2381906003557944,
+    "ci90": [
+     0.23547787583620036,
+     0.24096770015193128
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "non_gate": {
+    "mean": 0.1479394239915791,
+    "ci90": [
+     0.14620197104169919,
+     0.14975160630308712
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "wealth_gap_tut": {
+    "mean": 0.13005081985619574,
+    "ci90": [
+     0.12708130904524362,
+     0.13297149764224578
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "own_share": {
+    "mean": -0.05391085473093267,
+    "ci90": [
+     -0.05607261670812811,
+     -0.05182409320296233
+    ],
+    "n": 20,
+    "n_pos": 0,
+    "n_neg": 20,
+    "sign_stable": true
+   },
+   "completion_primary": {
+    "mean": 0.014337499999999993,
+    "ci90": [
+     0.010912499999999986,
+     0.0175375
+    ],
+    "n": 20,
+    "n_pos": 17,
+    "n_neg": 3,
+    "sign_stable": false
+   },
+   "completion_lower": {
+    "mean": -0.11669999999999998,
+    "ci90": [
+     -0.11961249999999997,
+     -0.11363749999999999
+    ],
+    "n": 20,
+    "n_pos": 0,
+    "n_neg": 20,
+    "sign_stable": true
+   },
+   "completion_upper": {
+    "mean": -0.13468750000000002,
+    "ci90": [
+     -0.13777499999999998,
+     -0.1315375
+    ],
+    "n": 20,
+    "n_pos": 0,
+    "n_neg": 20,
+    "sign_stable": true
+   },
+   "completion_tertiary": {
+    "mean": -0.0983,
+    "ci90": [
+     -0.10070062500000002,
+     -0.095725
+    ],
+    "n": 20,
+    "n_pos": 0,
+    "n_neg": 20,
+    "sign_stable": true
+   },
+   "parity_location_lower": {
+    "mean": -0.06557158748037992,
+    "ci90": [
+     -0.07534051154277455,
+     -0.055909576453750304
+    ],
+    "n": 20,
+    "n_pos": 0,
+    "n_neg": 20,
+    "sign_stable": true
+   },
+   "parity_location_upper": {
+    "mean": -0.10224876046879036,
+    "ci90": [
+     -0.11413776300348527,
+     -0.09095493198496798
+    ],
+    "n": 20,
+    "n_pos": 0,
+    "n_neg": 20,
+    "sign_stable": true
+   },
+   "wealth_gap_completion_lower": {
+    "mean": -0.15856249999999994,
+    "ci90": [
+     -0.16549999999999992,
+     -0.1515625
+    ],
+    "n": 20,
+    "n_pos": 0,
+    "n_neg": 20,
+    "sign_stable": true
+   },
+   "wealth_gap_completion_upper": {
+    "mean": -0.2270625,
+    "ci90": [
+     -0.2320625,
+     -0.22218750000000004
+    ],
+    "n": 20,
+    "n_pos": 0,
+    "n_neg": 20,
+    "sign_stable": true
+   },
+   "wealth_gap_completion_tertiary": {
+    "mean": -0.21875,
+    "ci90": [
+     -0.2234375,
+     -0.21430937499999997
+    ],
+    "n": 20,
+    "n_pos": 0,
+    "n_neg": 20,
+    "sign_stable": true
+   },
+   "mpl_primary": {
+    "mean": -0.0097065542781891,
+    "ci90": [
+     -0.011425930149802423,
+     -0.008117759121728789
+    ],
+    "n": 20,
+    "n_pos": 0,
+    "n_neg": 20,
+    "sign_stable": true
+   },
+   "q_pub": {
+    "mean": 0.02910063888099319,
+    "ci90": [
+     0.027966943813210295,
+     0.030221028260926586
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "formal_share_gdp": {
+    "mean": 0.007793147255981838,
+    "ci90": [
+     0.006057354677300789,
+     0.009382411533839152
+    ],
+    "n": 20,
+    "n_pos": 19,
+    "n_neg": 1,
+    "sign_stable": false
+   }
+  },
+  "quota_minus_bar|access0.4|ban0": {
+   "tut_rate": {
+    "mean": 0.18752120056615468,
+    "ci90": [
+     0.1859699942082799,
+     0.18914838345095614
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "gate_adj": {
+    "mean": 0.2565790760305505,
+    "ci90": [
+     0.253326564776855,
+     0.2596123394552714
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "non_gate": {
+    "mean": 0.16326268465862578,
+    "ci90": [
+     0.16122745827212429,
+     0.1653000815132049
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "wealth_gap_tut": {
+    "mean": 0.13622293526937498,
+    "ci90": [
+     0.13342770180603528,
+     0.13902575318489868
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "own_share": {
+    "mean": -0.07962031682614179,
+    "ci90": [
+     -0.08167385227524596,
+     -0.0775881786516285
+    ],
+    "n": 20,
+    "n_pos": 0,
+    "n_neg": 20,
+    "sign_stable": true
+   },
+   "completion_primary": {
+    "mean": 0.011712500000000025,
+    "ci90": [
+     0.008887500000000041,
+     0.014412500000000023
+    ],
+    "n": 20,
+    "n_pos": 18,
+    "n_neg": 2,
+    "sign_stable": false
+   },
+   "completion_lower": {
+    "mean": -0.11834999999999996,
+    "ci90": [
+     -0.12031249999999996,
+     -0.11629999999999999
+    ],
+    "n": 20,
+    "n_pos": 0,
+    "n_neg": 20,
+    "sign_stable": true
+   },
+   "completion_upper": {
+    "mean": -0.13658749999999997,
+    "ci90": [
+     -0.1383875,
+     -0.13482437499999997
+    ],
+    "n": 20,
+    "n_pos": 0,
+    "n_neg": 20,
+    "sign_stable": true
+   },
+   "completion_tertiary": {
+    "mean": -0.10474999999999998,
+    "ci90": [
+     -0.10717499999999999,
+     -0.10232437500000001
+    ],
+    "n": 20,
+    "n_pos": 0,
+    "n_neg": 20,
+    "sign_stable": true
+   },
+   "parity_location_lower": {
+    "mean": -0.042971369585652563,
+    "ci90": [
+     -0.050122633327486885,
+     -0.035204023600615766
+    ],
+    "n": 20,
+    "n_pos": 0,
+    "n_neg": 20,
+    "sign_stable": true
+   },
+   "parity_location_upper": {
+    "mean": -0.06771920113997383,
+    "ci90": [
+     -0.07690081230444251,
+     -0.05853863924331728
+    ],
+    "n": 20,
+    "n_pos": 0,
+    "n_neg": 20,
+    "sign_stable": true
+   },
+   "wealth_gap_completion_lower": {
+    "mean": -0.1624375,
+    "ci90": [
+     -0.17118750000000002,
+     -0.153625
+    ],
+    "n": 20,
+    "n_pos": 0,
+    "n_neg": 20,
+    "sign_stable": true
+   },
+   "wealth_gap_completion_upper": {
+    "mean": -0.2303125,
+    "ci90": [
+     -0.23656249999999995,
+     -0.22381249999999997
+    ],
+    "n": 20,
+    "n_pos": 0,
+    "n_neg": 20,
+    "sign_stable": true
+   },
+   "wealth_gap_completion_tertiary": {
+    "mean": -0.22506250000000003,
+    "ci90": [
+     -0.23075,
+     -0.21875
+    ],
+    "n": 20,
+    "n_pos": 0,
+    "n_neg": 20,
+    "sign_stable": true
+   },
+   "mpl_primary": {
+    "mean": -0.013490920025096376,
+    "ci90": [
+     -0.014899465905176013,
+     -0.0120432188900733
+    ],
+    "n": 20,
+    "n_pos": 0,
+    "n_neg": 20,
+    "sign_stable": true
+   },
+   "q_pub": {
+    "mean": 0.032004857874232885,
+    "ci90": [
+     0.03091431784672458,
+     0.03302924802815473
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "formal_share_gdp": {
+    "mean": 0.0104659361097725,
+    "ci90": [
+     0.008907938129259505,
+     0.011921049919390494
+    ],
+    "n": 20,
+    "n_pos": 19,
+    "n_neg": 1,
+    "sign_stable": false
+   }
+  },
+  "quota_minus_bar|access0.8|ban0": {
+   "tut_rate": {
+    "mean": 0.21078217506618277,
+    "ci90": [
+     0.20942976166513372,
+     0.21221317843128498
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "gate_adj": {
+    "mean": 0.28866221036057726,
+    "ci90": [
+     0.286224009961925,
+     0.29117946595869815
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "non_gate": {
+    "mean": 0.19285035597036318,
+    "ci90": [
+     0.190663892884577,
+     0.19498461592472116
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "wealth_gap_tut": {
+    "mean": 0.14481949528162746,
+    "ci90": [
+     0.14218068030448508,
+     0.14767821082507926
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "own_share": {
+    "mean": -0.1360499714245549,
+    "ci90": [
+     -0.13726171483348515,
+     -0.13478717711619465
+    ],
+    "n": 20,
+    "n_pos": 0,
+    "n_neg": 20,
+    "sign_stable": true
+   },
+   "completion_primary": {
+    "mean": 0.010162499999999991,
+    "ci90": [
+     0.006099999999999982,
+     0.014038124999999999
+    ],
+    "n": 20,
+    "n_pos": 16,
+    "n_neg": 4,
+    "sign_stable": false
+   },
+   "completion_lower": {
+    "mean": -0.12278749999999997,
+    "ci90": [
+     -0.12654999999999997,
+     -0.11916249999999998
+    ],
+    "n": 20,
+    "n_pos": 0,
+    "n_neg": 20,
+    "sign_stable": true
+   },
+   "completion_upper": {
+    "mean": -0.14463750000000003,
+    "ci90": [
+     -0.148188125,
+     -0.14111187499999994
+    ],
+    "n": 20,
+    "n_pos": 0,
+    "n_neg": 20,
+    "sign_stable": true
+   },
+   "completion_tertiary": {
+    "mean": -0.10907499999999999,
+    "ci90": [
+     -0.11330062500000003,
+     -0.10495000000000002
+    ],
+    "n": 20,
+    "n_pos": 0,
+    "n_neg": 20,
+    "sign_stable": true
+   },
+   "parity_location_lower": {
+    "mean": -0.0002453231787869048,
+    "ci90": [
+     -0.008187043475457902,
+     0.007669928413663871
+    ],
+    "n": 20,
+    "n_pos": 9,
+    "n_neg": 11,
+    "sign_stable": false
+   },
+   "parity_location_upper": {
+    "mean": -0.00912496754307388,
+    "ci90": [
+     -0.017456691550445477,
+     -0.0013695680361705343
+    ],
+    "n": 20,
+    "n_pos": 6,
+    "n_neg": 14,
+    "sign_stable": false
+   },
+   "wealth_gap_completion_lower": {
+    "mean": -0.15343750000000003,
+    "ci90": [
+     -0.16131250000000003,
+     -0.14531249999999996
+    ],
+    "n": 20,
+    "n_pos": 0,
+    "n_neg": 20,
+    "sign_stable": true
+   },
+   "wealth_gap_completion_upper": {
+    "mean": -0.21331250000000007,
+    "ci90": [
+     -0.217125,
+     -0.209621875
+    ],
+    "n": 20,
+    "n_pos": 0,
+    "n_neg": 20,
+    "sign_stable": true
+   },
+   "wealth_gap_completion_tertiary": {
+    "mean": -0.2110625,
+    "ci90": [
+     -0.21569062500000002,
+     -0.206875
+    ],
+    "n": 20,
+    "n_pos": 0,
+    "n_neg": 20,
+    "sign_stable": true
+   },
+   "mpl_primary": {
+    "mean": -0.013655036228801288,
+    "ci90": [
+     -0.015200965477820513,
+     -0.012118746288427523
+    ],
+    "n": 20,
+    "n_pos": 0,
+    "n_neg": 20,
+    "sign_stable": true
+   },
+   "q_pub": {
+    "mean": 0.03551929788900554,
+    "ci90": [
+     0.03425999523239709,
+     0.036728507490476604
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "formal_share_gdp": {
+    "mean": 0.014269014605377583,
+    "ci90": [
+     0.012802511974471843,
+     0.01580310453567368
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   }
+  },
+  "quota_minus_bar|access0.2|ban1": {
+   "tut_rate": {
+    "mean": 0.08468239996664084,
+    "ci90": [
+     0.08336032136785372,
+     0.08597112241941403
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "gate_adj": {
+    "mean": 0.11080185805411653,
+    "ci90": [
+     0.1090454554851825,
+     0.11259743174934528
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "non_gate": {
+    "mean": 0.07826496043984589,
+    "ci90": [
+     0.0769051313805716,
+     0.0796294314940264
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "wealth_gap_tut": {
+    "mean": 0.07101606931309483,
+    "ci90": [
+     0.0692312307129816,
+     0.07301316212615591
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "own_share": {
+    "mean": 0.0,
+    "ci90": [
+     0.0,
+     0.0
+    ],
+    "n": 20,
+    "n_pos": 0,
+    "n_neg": 0,
+    "sign_stable": false
+   },
+   "completion_primary": {
+    "mean": 0.00799999999999999,
+    "ci90": [
+     0.005012499999999998,
+     0.010925625000000008
+    ],
+    "n": 20,
+    "n_pos": 17,
+    "n_neg": 3,
+    "sign_stable": false
+   },
+   "completion_lower": {
+    "mean": -0.10555,
+    "ci90": [
+     -0.108675625,
+     -0.10257437499999998
+    ],
+    "n": 20,
+    "n_pos": 0,
+    "n_neg": 20,
+    "sign_stable": true
+   },
+   "completion_upper": {
+    "mean": -0.12103750000000002,
+    "ci90": [
+     -0.12387500000000003,
+     -0.11826250000000002
+    ],
+    "n": 20,
+    "n_pos": 0,
+    "n_neg": 20,
+    "sign_stable": true
+   },
+   "completion_tertiary": {
+    "mean": -0.08526249999999998,
+    "ci90": [
+     -0.08837499999999998,
+     -0.08214999999999999
+    ],
+    "n": 20,
+    "n_pos": 0,
+    "n_neg": 20,
+    "sign_stable": true
+   },
+   "parity_location_lower": {
+    "mean": -0.12523879648039374,
+    "ci90": [
+     -0.13258515972605922,
+     -0.11774441987888543
+    ],
+    "n": 20,
+    "n_pos": 0,
+    "n_neg": 20,
+    "sign_stable": true
+   },
+   "parity_location_upper": {
+    "mean": -0.16138013360991646,
+    "ci90": [
+     -0.16890814006591312,
+     -0.15373932691853756
+    ],
+    "n": 20,
+    "n_pos": 0,
+    "n_neg": 20,
+    "sign_stable": true
+   },
+   "wealth_gap_completion_lower": {
+    "mean": -0.14937500000000004,
+    "ci90": [
+     -0.15456250000000002,
+     -0.14406250000000004
+    ],
+    "n": 20,
+    "n_pos": 0,
+    "n_neg": 20,
+    "sign_stable": true
+   },
+   "wealth_gap_completion_upper": {
+    "mean": -0.21268749999999997,
+    "ci90": [
+     -0.21912500000000001,
+     -0.20637499999999998
+    ],
+    "n": 20,
+    "n_pos": 0,
+    "n_neg": 20,
+    "sign_stable": true
+   },
+   "wealth_gap_completion_tertiary": {
+    "mean": -0.20199999999999996,
+    "ci90": [
+     -0.20768749999999997,
+     -0.1964375
+    ],
+    "n": 20,
+    "n_pos": 0,
+    "n_neg": 20,
+    "sign_stable": true
+   },
+   "mpl_primary": {
+    "mean": -0.0006357224813579698,
+    "ci90": [
+     -0.002975842839347343,
+     0.0017888881181244282
+    ],
+    "n": 20,
+    "n_pos": 11,
+    "n_neg": 9,
+    "sign_stable": false
+   },
+   "q_pub": {
+    "mean": 0.025960392514620102,
+    "ci90": [
+     0.024608169131284535,
+     0.02729998309577511
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "formal_share_gdp": {
+    "mean": 0.007231549832360554,
+    "ci90": [
+     0.005479798367665643,
+     0.00901866042234545
+    ],
+    "n": 20,
+    "n_pos": 18,
+    "n_neg": 2,
+    "sign_stable": false
+   }
+  },
+  "quota_minus_bar|access0.4|ban1": {
+   "tut_rate": {
+    "mean": 0.12209458019489328,
+    "ci90": [
+     0.12092226312318523,
+     0.12338955560172679
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "gate_adj": {
+    "mean": 0.16463446516028582,
+    "ci90": [
+     0.16262259436980142,
+     0.1667106500204346
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "non_gate": {
+    "mean": 0.11338033001491585,
+    "ci90": [
+     0.11153218201328315,
+     0.1151788692760868
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "wealth_gap_tut": {
+    "mean": 0.10272464354921726,
+    "ci90": [
+     0.0999732695259365,
+     0.10540260078750936
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "own_share": {
+    "mean": 0.0,
+    "ci90": [
+     0.0,
+     0.0
+    ],
+    "n": 20,
+    "n_pos": 0,
+    "n_neg": 0,
+    "sign_stable": false
+   },
+   "completion_primary": {
+    "mean": 0.011837499999999983,
+    "ci90": [
+     0.008449374999999969,
+     0.014987499999999982
+    ],
+    "n": 20,
+    "n_pos": 19,
+    "n_neg": 1,
+    "sign_stable": false
+   },
+   "completion_lower": {
+    "mean": -0.1088625,
+    "ci90": [
+     -0.11168812500000001,
+     -0.1060875
+    ],
+    "n": 20,
+    "n_pos": 0,
+    "n_neg": 20,
+    "sign_stable": true
+   },
+   "completion_upper": {
+    "mean": -0.12832499999999997,
+    "ci90": [
+     -0.13048749999999998,
+     -0.12617499999999998
+    ],
+    "n": 20,
+    "n_pos": 0,
+    "n_neg": 20,
+    "sign_stable": true
+   },
+   "completion_tertiary": {
+    "mean": -0.09059999999999999,
+    "ci90": [
+     -0.09367499999999998,
+     -0.087599375
+    ],
+    "n": 20,
+    "n_pos": 0,
+    "n_neg": 20,
+    "sign_stable": true
+   },
+   "parity_location_lower": {
+    "mean": -0.09758564447250155,
+    "ci90": [
+     -0.10659891763036548,
+     -0.08814521345281427
+    ],
+    "n": 20,
+    "n_pos": 0,
+    "n_neg": 20,
+    "sign_stable": true
+   },
+   "parity_location_upper": {
+    "mean": -0.13093161899306457,
+    "ci90": [
+     -0.14258591716624333,
+     -0.12000332931917886
+    ],
+    "n": 20,
+    "n_pos": 0,
+    "n_neg": 20,
+    "sign_stable": true
+   },
+   "wealth_gap_completion_lower": {
+    "mean": -0.15287499999999996,
+    "ci90": [
+     -0.16175312500000003,
+     -0.14418750000000005
+    ],
+    "n": 20,
+    "n_pos": 0,
+    "n_neg": 20,
+    "sign_stable": true
+   },
+   "wealth_gap_completion_upper": {
+    "mean": -0.2126875,
+    "ci90": [
+     -0.21806562500000004,
+     -0.20743750000000002
+    ],
+    "n": 20,
+    "n_pos": 0,
+    "n_neg": 20,
+    "sign_stable": true
+   },
+   "wealth_gap_completion_tertiary": {
+    "mean": -0.20768749999999997,
+    "ci90": [
+     -0.2119999999999999,
+     -0.20350000000000001
+    ],
+    "n": 20,
+    "n_pos": 0,
+    "n_neg": 20,
+    "sign_stable": true
+   },
+   "mpl_primary": {
+    "mean": -0.006217509585798664,
+    "ci90": [
+     -0.008280893036395868,
+     -0.004080677847053861
+    ],
+    "n": 20,
+    "n_pos": 2,
+    "n_neg": 18,
+    "sign_stable": false
+   },
+   "q_pub": {
+    "mean": 0.029692725853428116,
+    "ci90": [
+     0.028661839930336736,
+     0.03078734278257178
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "formal_share_gdp": {
+    "mean": 0.010413988764385235,
+    "ci90": [
+     0.008742151802726953,
+     0.012119527903566305
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   }
+  },
+  "quota_minus_bar|access0.8|ban1": {
+   "tut_rate": {
+    "mean": 0.20317379847172523,
+    "ci90": [
+     0.20150492679130586,
+     0.2047933846005844
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "gate_adj": {
+    "mean": 0.2880566572889575,
+    "ci90": [
+     0.2852752168045296,
+     0.2908101518269582
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "non_gate": {
+    "mean": 0.18831634376184683,
+    "ci90": [
+     0.18664661846169756,
+     0.19004537296958843
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "wealth_gap_tut": {
+    "mean": 0.18165360295433666,
+    "ci90": [
+     0.1791072394702262,
+     0.18437967174117204
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "own_share": {
+    "mean": 0.0,
+    "ci90": [
+     0.0,
+     0.0
+    ],
+    "n": 20,
+    "n_pos": 0,
+    "n_neg": 0,
+    "sign_stable": false
+   },
+   "completion_primary": {
+    "mean": 0.007662499999999994,
+    "ci90": [
+     0.004661874999999981,
+     0.010537499999999988
+    ],
+    "n": 20,
+    "n_pos": 16,
+    "n_neg": 4,
+    "sign_stable": false
+   },
+   "completion_lower": {
+    "mean": -0.11964999999999996,
+    "ci90": [
+     -0.12243749999999995,
+     -0.11692499999999999
+    ],
+    "n": 20,
+    "n_pos": 0,
+    "n_neg": 20,
+    "sign_stable": true
+   },
+   "completion_upper": {
+    "mean": -0.14027499999999998,
+    "ci90": [
+     -0.1434625,
+     -0.13688750000000002
+    ],
+    "n": 20,
+    "n_pos": 0,
+    "n_neg": 20,
+    "sign_stable": true
+   },
+   "completion_tertiary": {
+    "mean": -0.10545,
+    "ci90": [
+     -0.10919999999999999,
+     -0.101625
+    ],
+    "n": 20,
+    "n_pos": 0,
+    "n_neg": 20,
+    "sign_stable": true
+   },
+   "parity_location_lower": {
+    "mean": -0.03878731571108016,
+    "ci90": [
+     -0.04802037718239396,
+     -0.02965669099071553
+    ],
+    "n": 20,
+    "n_pos": 1,
+    "n_neg": 19,
+    "sign_stable": false
+   },
+   "parity_location_upper": {
+    "mean": -0.057290346613718415,
+    "ci90": [
+     -0.06567433586380149,
+     -0.04899103410819535
+    ],
+    "n": 20,
+    "n_pos": 0,
+    "n_neg": 20,
+    "sign_stable": true
+   },
+   "wealth_gap_completion_lower": {
+    "mean": -0.154625,
+    "ci90": [
+     -0.1595625,
+     -0.14981250000000002
+    ],
+    "n": 20,
+    "n_pos": 0,
+    "n_neg": 20,
+    "sign_stable": true
+   },
+   "wealth_gap_completion_upper": {
+    "mean": -0.216875,
+    "ci90": [
+     -0.22319062500000003,
+     -0.2106875
+    ],
+    "n": 20,
+    "n_pos": 0,
+    "n_neg": 20,
+    "sign_stable": true
+   },
+   "wealth_gap_completion_tertiary": {
+    "mean": -0.21212500000000004,
+    "ci90": [
+     -0.21756250000000002,
+     -0.2070625
+    ],
+    "n": 20,
+    "n_pos": 0,
+    "n_neg": 20,
+    "sign_stable": true
+   },
+   "mpl_primary": {
+    "mean": -0.019203931067515594,
+    "ci90": [
+     -0.020734955063689924,
+     -0.01766188841938126
+    ],
+    "n": 20,
+    "n_pos": 0,
+    "n_neg": 20,
+    "sign_stable": true
+   },
+   "q_pub": {
+    "mean": 0.03540222246261434,
+    "ci90": [
+     0.0342002510938778,
+     0.036671756786803344
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "formal_share_gdp": {
+    "mean": 0.0161039688013652,
+    "ci90": [
+     0.01445628139156025,
+     0.017774077996141703
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   }
+  },
+  "ban1_minus_ban0|bar|access0.2": {
+   "tut_rate": {
+    "mean": -0.13462684340495873,
+    "ci90": [
+     -0.13534946876606488,
+     -0.13383953918809152
+    ],
+    "n": 20,
+    "n_pos": 0,
+    "n_neg": 20,
+    "sign_stable": true
+   },
+   "gate_adj": {
+    "mean": -0.19378959716702998,
+    "ci90": [
+     -0.19467321621850042,
+     -0.19289359007820486
+    ],
+    "n": 20,
+    "n_pos": 0,
+    "n_neg": 20,
+    "sign_stable": true
+   },
+   "non_gate": {
+    "mean": -0.11340516336148584,
+    "ci90": [
+     -0.11430016460467934,
+     -0.11253783377903859
+    ],
+    "n": 20,
+    "n_pos": 0,
+    "n_neg": 20,
+    "sign_stable": true
+   },
+   "wealth_gap_tut": {
+    "mean": -0.17405115323750503,
+    "ci90": [
+     -0.17591854685668085,
+     -0.17219280066815865
+    ],
+    "n": 20,
+    "n_pos": 0,
+    "n_neg": 20,
+    "sign_stable": true
+   },
+   "own_share": {
+    "mean": -0.6541149224194138,
+    "ci90": [
+     -0.6552603105678766,
+     -0.6529729711988844
+    ],
+    "n": 20,
+    "n_pos": 0,
+    "n_neg": 20,
+    "sign_stable": true
+   },
+   "completion_primary": {
+    "mean": -0.008100000000000001,
+    "ci90": [
+     -0.011400625,
+     -0.005036874999999994
+    ],
+    "n": 20,
+    "n_pos": 4,
+    "n_neg": 16,
+    "sign_stable": false
+   },
+   "completion_lower": {
+    "mean": -0.0112875,
+    "ci90": [
+     -0.014862500000000006,
+     -0.007812500000000017
+    ],
+    "n": 20,
+    "n_pos": 2,
+    "n_neg": 18,
+    "sign_stable": false
+   },
+   "completion_upper": {
+    "mean": -0.01364999999999999,
+    "ci90": [
+     -0.01733749999999997,
+     -0.010099999999999993
+    ],
+    "n": 20,
+    "n_pos": 1,
+    "n_neg": 19,
+    "sign_stable": false
+   },
+   "completion_tertiary": {
+    "mean": -0.010700000000000006,
+    "ci90": [
+     -0.013887500000000006,
+     -0.007561875000000014
+    ],
+    "n": 20,
+    "n_pos": 3,
+    "n_neg": 17,
+    "sign_stable": false
+   },
+   "parity_location_lower": {
+    "mean": -0.01708360299490211,
+    "ci90": [
+     -0.025387654706328384,
+     -0.00894402863317376
+    ],
+    "n": 20,
+    "n_pos": 6,
+    "n_neg": 14,
+    "sign_stable": false
+   },
+   "parity_location_upper": {
+    "mean": -0.025856316112750098,
+    "ci90": [
+     -0.03713274707126964,
+     -0.013287303285955128
+    ],
+    "n": 20,
+    "n_pos": 4,
+    "n_neg": 16,
+    "sign_stable": false
+   },
+   "wealth_gap_completion_lower": {
+    "mean": -0.007812499999999961,
+    "ci90": [
+     -0.013878124999999976,
+     -0.0019999999999999792
+    ],
+    "n": 20,
+    "n_pos": 6,
+    "n_neg": 14,
+    "sign_stable": false
+   },
+   "wealth_gap_completion_upper": {
+    "mean": -0.00968750000000002,
+    "ci90": [
+     -0.012315625000000037,
+     -0.0071875000000000185
+    ],
+    "n": 20,
+    "n_pos": 1,
+    "n_neg": 19,
+    "sign_stable": false
+   },
+   "wealth_gap_completion_tertiary": {
+    "mean": -0.01212500000000002,
+    "ci90": [
+     -0.014937500000000025,
+     -0.009187500000000026
+    ],
+    "n": 20,
+    "n_pos": 1,
+    "n_neg": 18,
+    "sign_stable": false
+   },
+   "mpl_primary": {
+    "mean": -0.023893943288901487,
+    "ci90": [
+     -0.025632186039919378,
+     -0.022126171923975178
+    ],
+    "n": 20,
+    "n_pos": 0,
+    "n_neg": 20,
+    "sign_stable": true
+   },
+   "q_pub": {
+    "mean": -0.0009220911454082658,
+    "ci90": [
+     -0.002233559763739502,
+     0.0004048020908084092
+    ],
+    "n": 20,
+    "n_pos": 10,
+    "n_neg": 10,
+    "sign_stable": false
+   },
+   "formal_share_gdp": {
+    "mean": -0.0038998007573920216,
+    "ci90": [
+     -0.005837626954488874,
+     -0.0019580839610660356
+    ],
+    "n": 20,
+    "n_pos": 6,
+    "n_neg": 14,
+    "sign_stable": false
+   }
+  },
+  "ban1_minus_ban0|bar|access0.4": {
+   "tut_rate": {
+    "mean": -0.12543554855244232,
+    "ci90": [
+     -0.1264208456964121,
+     -0.12439140080432577
+    ],
+    "n": 20,
+    "n_pos": 0,
+    "n_neg": 20,
+    "sign_stable": true
+   },
+   "gate_adj": {
+    "mean": -0.18130737497619087,
+    "ci90": [
+     -0.18299146784197315,
+     -0.1797712564996044
+    ],
+    "n": 20,
+    "n_pos": 0,
+    "n_neg": 20,
+    "sign_stable": true
+   },
+   "non_gate": {
+    "mean": -0.10564679995271273,
+    "ci90": [
+     -0.10674046360404746,
+     -0.10455994895464972
+    ],
+    "n": 20,
+    "n_pos": 0,
+    "n_neg": 20,
+    "sign_stable": true
+   },
+   "wealth_gap_tut": {
+    "mean": -0.15881944856253197,
+    "ci90": [
+     -0.16021767595448017,
+     -0.1575053737859805
+    ],
+    "n": 20,
+    "n_pos": 0,
+    "n_neg": 20,
+    "sign_stable": true
+   },
+   "own_share": {
+    "mean": -0.6007719116923088,
+    "ci90": [
+     -0.60242195114469,
+     -0.5991742262339771
+    ],
+    "n": 20,
+    "n_pos": 0,
+    "n_neg": 20,
+    "sign_stable": true
+   },
+   "completion_primary": {
+    "mean": -0.00718749999999998,
+    "ci90": [
+     -0.01109999999999996,
+     -0.0038625000000000113
+    ],
+    "n": 20,
+    "n_pos": 4,
+    "n_neg": 15,
+    "sign_stable": false
+   },
+   "completion_lower": {
+    "mean": -0.00962499999999999,
+    "ci90": [
+     -0.012899999999999995,
+     -0.006399374999999997
+    ],
+    "n": 20,
+    "n_pos": 5,
+    "n_neg": 14,
+    "sign_stable": false
+   },
+   "completion_upper": {
+    "mean": -0.00847500000000001,
+    "ci90": [
+     -0.011313125000000025,
+     -0.005561875000000011
+    ],
+    "n": 20,
+    "n_pos": 3,
+    "n_neg": 17,
+    "sign_stable": false
+   },
+   "completion_tertiary": {
+    "mean": -0.0099125,
+    "ci90": [
+     -0.012762500000000001,
+     -0.006936875
+    ],
+    "n": 20,
+    "n_pos": 3,
+    "n_neg": 17,
+    "sign_stable": false
+   },
+   "parity_location_lower": {
+    "mean": -0.01554523200289636,
+    "ci90": [
+     -0.024596268426312448,
+     -0.00613591315346892
+    ],
+    "n": 20,
+    "n_pos": 7,
+    "n_neg": 13,
+    "sign_stable": false
+   },
+   "parity_location_upper": {
+    "mean": -0.02061977159307919,
+    "ci90": [
+     -0.03119088481172998,
+     -0.009905611961265801
+    ],
+    "n": 20,
+    "n_pos": 7,
+    "n_neg": 13,
+    "sign_stable": false
+   },
+   "wealth_gap_completion_lower": {
+    "mean": -0.004437500000000033,
+    "ci90": [
+     -0.0101875,
+     0.0008781249999999889
+    ],
+    "n": 20,
+    "n_pos": 9,
+    "n_neg": 11,
+    "sign_stable": false
+   },
+   "wealth_gap_completion_upper": {
+    "mean": -0.00812500000000001,
+    "ci90": [
+     -0.01050000000000002,
+     -0.005871874999999994
+    ],
+    "n": 20,
+    "n_pos": 0,
+    "n_neg": 19,
+    "sign_stable": false
+   },
+   "wealth_gap_completion_tertiary": {
+    "mean": -0.00681250000000001,
+    "ci90": [
+     -0.008312500000000028,
+     -0.005187500000000017
+    ],
+    "n": 20,
+    "n_pos": 1,
+    "n_neg": 18,
+    "sign_stable": false
+   },
+   "mpl_primary": {
+    "mean": -0.016174042267106524,
+    "ci90": [
+     -0.01791634571232883,
+     -0.014415385849152895
+    ],
+    "n": 20,
+    "n_pos": 0,
+    "n_neg": 20,
+    "sign_stable": true
+   },
+   "q_pub": {
+    "mean": -0.0005956657843685931,
+    "ci90": [
+     -0.0017881734542702927,
+     0.0005232441713677454
+    ],
+    "n": 20,
+    "n_pos": 10,
+    "n_neg": 10,
+    "sign_stable": false
+   },
+   "formal_share_gdp": {
+    "mean": -0.002230705948121381,
+    "ci90": [
+     -0.0035629077138840987,
+     -0.0009083555179734957
+    ],
+    "n": 20,
+    "n_pos": 6,
+    "n_neg": 14,
+    "sign_stable": false
+   }
+  },
+  "ban1_minus_ban0|bar|access0.8": {
+   "tut_rate": {
+    "mean": -0.11018795232802218,
+    "ci90": [
+     -0.11090115811876433,
+     -0.10945855993980565
+    ],
+    "n": 20,
+    "n_pos": 0,
+    "n_neg": 20,
+    "sign_stable": true
+   },
+   "gate_adj": {
+    "mean": -0.16325390585938854,
+    "ci90": [
+     -0.1642219312470887,
+     -0.16227215216089472
+    ],
+    "n": 20,
+    "n_pos": 0,
+    "n_neg": 20,
+    "sign_stable": true
+   },
+   "non_gate": {
+    "mean": -0.09413464849717473,
+    "ci90": [
+     -0.09514534004524881,
+     -0.09312663378917854
+    ],
+    "n": 20,
+    "n_pos": 0,
+    "n_neg": 20,
+    "sign_stable": true
+   },
+   "wealth_gap_tut": {
+    "mean": -0.1368344851964581,
+    "ci90": [
+     -0.13867072128235408,
+     -0.13487554609048466
+    ],
+    "n": 20,
+    "n_pos": 0,
+    "n_neg": 20,
+    "sign_stable": true
+   },
+   "own_share": {
+    "mean": -0.5170107664639583,
+    "ci90": [
+     -0.517989968375864,
+     -0.5160498367647574
+    ],
+    "n": 20,
+    "n_pos": 0,
+    "n_neg": 20,
+    "sign_stable": true
+   },
+   "completion_primary": {
+    "mean": -0.00046249999999998793,
+    "ci90": [
+     -0.004112499999999981,
+     0.0031500000000000365
+    ],
+    "n": 20,
+    "n_pos": 7,
+    "n_neg": 13,
+    "sign_stable": false
+   },
+   "completion_lower": {
+    "mean": -0.003075000000000011,
+    "ci90": [
+     -0.007288125000000029,
+     0.00109999999999999
+    ],
+    "n": 20,
+    "n_pos": 9,
+    "n_neg": 11,
+    "sign_stable": false
+   },
+   "completion_upper": {
+    "mean": -0.004212499999999985,
+    "ci90": [
+     -0.008488125000000003,
+     0.00016312500000001195
+    ],
+    "n": 20,
+    "n_pos": 7,
+    "n_neg": 13,
+    "sign_stable": false
+   },
+   "completion_tertiary": {
+    "mean": -0.0012374999999999968,
+    "ci90": [
+     -0.006525625,
+     0.00423874999999999
+    ],
+    "n": 20,
+    "n_pos": 10,
+    "n_neg": 10,
+    "sign_stable": false
+   },
+   "parity_location_lower": {
+    "mean": 0.0008192130090501071,
+    "ci90": [
+     -0.008879393344908958,
+     0.01067814890504965
+    ],
+    "n": 20,
+    "n_pos": 10,
+    "n_neg": 10,
+    "sign_stable": false
+   },
+   "parity_location_upper": {
+    "mean": -0.0015451267396528689,
+    "ci90": [
+     -0.011232559922611155,
+     0.00867051562990087
+    ],
+    "n": 20,
+    "n_pos": 10,
+    "n_neg": 10,
+    "sign_stable": false
+   },
+   "wealth_gap_completion_lower": {
+    "mean": 0.001999999999999996,
+    "ci90": [
+     -0.0034406250000000057,
+     0.006999999999999995
+    ],
+    "n": 20,
+    "n_pos": 16,
+    "n_neg": 4,
+    "sign_stable": false
+   },
+   "wealth_gap_completion_upper": {
+    "mean": 0.00012499999999999735,
+    "ci90": [
+     -0.0014375000000000028,
+     0.00162500000000001
+    ],
+    "n": 20,
+    "n_pos": 10,
+    "n_neg": 8,
+    "sign_stable": false
+   },
+   "wealth_gap_completion_tertiary": {
+    "mean": -0.0017500000000000072,
+    "ci90": [
+     -0.002937500000000021,
+     -0.0005625000000000046
+    ],
+    "n": 20,
+    "n_pos": 7,
+    "n_neg": 12,
+    "sign_stable": false
+   },
+   "mpl_primary": {
+    "mean": -0.005113503698092025,
+    "ci90": [
+     -0.0062402312928174185,
+     -0.003931835491345644
+    ],
+    "n": 20,
+    "n_pos": 1,
+    "n_neg": 19,
+    "sign_stable": false
+   },
+   "q_pub": {
+    "mean": -0.0013883638768259154,
+    "ci90": [
+     -0.002883973149807838,
+     7.74478328944155e-05
+    ],
+    "n": 20,
+    "n_pos": 10,
+    "n_neg": 10,
+    "sign_stable": false
+   },
+   "formal_share_gdp": {
+    "mean": -0.00225949972596553,
+    "ci90": [
+     -0.003976066516441911,
+     -0.0005517349275944497
+    ],
+    "n": 20,
+    "n_pos": 7,
+    "n_neg": 13,
+    "sign_stable": false
+   }
+  },
+  "ban1_minus_ban0|quota|access0.2": {
+   "tut_rate": {
+    "mean": -0.2259918755237802,
+    "ci90": [
+     -0.22776910900393918,
+     -0.22426868329360422
+    ],
+    "n": 20,
+    "n_pos": 0,
+    "n_neg": 20,
+    "sign_stable": true
+   },
+   "gate_adj": {
+    "mean": -0.3211783394687078,
+    "ci90": [
+     -0.3241005639136341,
+     -0.3182534832773429
+    ],
+    "n": 20,
+    "n_pos": 0,
+    "n_neg": 20,
+    "sign_stable": true
+   },
+   "non_gate": {
+    "mean": -0.18307962691321905,
+    "ci90": [
+     -0.18491821735899977,
+     -0.18124119741349012
+    ],
+    "n": 20,
+    "n_pos": 0,
+    "n_neg": 20,
+    "sign_stable": true
+   },
+   "wealth_gap_tut": {
+    "mean": -0.23308590378060595,
+    "ci90": [
+     -0.23671516533123513,
+     -0.22918924581147926
+    ],
+    "n": 20,
+    "n_pos": 0,
+    "n_neg": 20,
+    "sign_stable": true
+   },
+   "own_share": {
+    "mean": -0.6002040676884813,
+    "ci90": [
+     -0.601600138055113,
+     -0.598740202099735
+    ],
+    "n": 20,
+    "n_pos": 0,
+    "n_neg": 20,
+    "sign_stable": true
+   },
+   "completion_primary": {
+    "mean": -0.014437500000000002,
+    "ci90": [
+     -0.016938125000000023,
+     -0.011750000000000005
+    ],
+    "n": 20,
+    "n_pos": 1,
+    "n_neg": 19,
+    "sign_stable": false
+   },
+   "completion_lower": {
+    "mean": -0.0001375000000000015,
+    "ci90": [
+     -0.0002999999999999947,
+     5.551115123125783e-18
+    ],
+    "n": 20,
+    "n_pos": 5,
+    "n_neg": 9,
+    "sign_stable": false
+   },
+   "completion_upper": {
+    "mean": 0.0,
+    "ci90": [
+     -0.0001250000000000001,
+     0.00011250000000000149
+    ],
+    "n": 20,
+    "n_pos": 5,
+    "n_neg": 3,
+    "sign_stable": false
+   },
+   "completion_tertiary": {
+    "mean": 0.0023375000000000062,
+    "ci90": [
+     0.00018750000000000973,
+     0.004487500000000005
+    ],
+    "n": 20,
+    "n_pos": 14,
+    "n_neg": 6,
+    "sign_stable": false
+   },
+   "parity_location_lower": {
+    "mean": -0.07675081199491593,
+    "ci90": [
+     -0.08446352153275623,
+     -0.06906483270089987
+    ],
+    "n": 20,
+    "n_pos": 0,
+    "n_neg": 20,
+    "sign_stable": true
+   },
+   "parity_location_upper": {
+    "mean": -0.08498768925387619,
+    "ci90": [
+     -0.09231069374022105,
+     -0.07764746200594387
+    ],
+    "n": 20,
+    "n_pos": 0,
+    "n_neg": 20,
+    "sign_stable": true
+   },
+   "wealth_gap_completion_lower": {
+    "mean": 0.0013749999999999817,
+    "ci90": [
+     -0.007687500000000025,
+     0.010565624999999983
+    ],
+    "n": 20,
+    "n_pos": 10,
+    "n_neg": 10,
+    "sign_stable": false
+   },
+   "wealth_gap_completion_upper": {
+    "mean": 0.0046874999999999886,
+    "ci90": [
+     -0.0021875000000000254,
+     0.011374999999999979
+    ],
+    "n": 20,
+    "n_pos": 11,
+    "n_neg": 8,
+    "sign_stable": false
+   },
+   "wealth_gap_completion_tertiary": {
+    "mean": 0.00462499999999999,
+    "ci90": [
+     -0.0009375000000000133,
+     0.010062499999999985
+    ],
+    "n": 20,
+    "n_pos": 12,
+    "n_neg": 8,
+    "sign_stable": false
+   },
+   "mpl_primary": {
+    "mean": -0.014823111492070357,
+    "ci90": [
+     -0.017441655297894904,
+     -0.012060447644255411
+    ],
+    "n": 20,
+    "n_pos": 0,
+    "n_neg": 20,
+    "sign_stable": true
+   },
+   "q_pub": {
+    "mean": -0.004062337511781355,
+    "ci90": [
+     -0.005483728512667723,
+     -0.0025622887942733062
+    ],
+    "n": 20,
+    "n_pos": 3,
+    "n_neg": 17,
+    "sign_stable": false
+   },
+   "formal_share_gdp": {
+    "mean": -0.004461398181013307,
+    "ci90": [
+     -0.006361136851187964,
+     -0.00239180231264623
+    ],
+    "n": 20,
+    "n_pos": 3,
+    "n_neg": 17,
+    "sign_stable": false
+   }
+  },
+  "ban1_minus_ban0|quota|access0.4": {
+   "tut_rate": {
+    "mean": -0.19086216892370378,
+    "ci90": [
+     -0.1927625862518473,
+     -0.18888025563448851
+    ],
+    "n": 20,
+    "n_pos": 0,
+    "n_neg": 20,
+    "sign_stable": true
+   },
+   "gate_adj": {
+    "mean": -0.2732519858464555,
+    "ci90": [
+     -0.27642483442270216,
+     -0.2700675013181212
+    ],
+    "n": 20,
+    "n_pos": 0,
+    "n_neg": 20,
+    "sign_stable": true
+   },
+   "non_gate": {
+    "mean": -0.1555291545964227,
+    "ci90": [
+     -0.1580152254160914,
+     -0.15310965751455874
+    ],
+    "n": 20,
+    "n_pos": 0,
+    "n_neg": 20,
+    "sign_stable": true
+   },
+   "wealth_gap_tut": {
+    "mean": -0.19231774028268972,
+    "ci90": [
+     -0.19507483264381312,
+     -0.18953270668709482
+    ],
+    "n": 20,
+    "n_pos": 0,
+    "n_neg": 20,
+    "sign_stable": true
+   },
+   "own_share": {
+    "mean": -0.5211515948661669,
+    "ci90": [
+     -0.5224626054775237,
+     -0.5198957631804924
+    ],
+    "n": 20,
+    "n_pos": 0,
+    "n_neg": 20,
+    "sign_stable": true
+   },
+   "completion_primary": {
+    "mean": -0.007062500000000022,
+    "ci90": [
+     -0.009887500000000016,
+     -0.004175000000000016
+    ],
+    "n": 20,
+    "n_pos": 4,
+    "n_neg": 16,
+    "sign_stable": false
+   },
+   "completion_lower": {
+    "mean": -0.0001375000000000126,
+    "ci90": [
+     -0.0002875000000000183,
+     -2.4999999999991697e-05
+    ],
+    "n": 20,
+    "n_pos": 2,
+    "n_neg": 7,
+    "sign_stable": false
+   },
+   "completion_upper": {
+    "mean": -0.00021250000000000435,
+    "ci90": [
+     -0.0004500000000000004,
+     -5.551115123125783e-18
+    ],
+    "n": 20,
+    "n_pos": 2,
+    "n_neg": 6,
+    "sign_stable": false
+   },
+   "completion_tertiary": {
+    "mean": 0.004237500000000005,
+    "ci90": [
+     0.002637500000000009,
+     0.005887500000000004
+    ],
+    "n": 20,
+    "n_pos": 17,
+    "n_neg": 3,
+    "sign_stable": false
+   },
+   "parity_location_lower": {
+    "mean": -0.07015950688974533,
+    "ci90": [
+     -0.0801978865183317,
+     -0.059675303473442284
+    ],
+    "n": 20,
+    "n_pos": 1,
+    "n_neg": 19,
+    "sign_stable": false
+   },
+   "parity_location_upper": {
+    "mean": -0.08383218944616994,
+    "ci90": [
+     -0.09343942147789003,
+     -0.07367544373964068
+    ],
+    "n": 20,
+    "n_pos": 0,
+    "n_neg": 20,
+    "sign_stable": true
+   },
+   "wealth_gap_completion_lower": {
+    "mean": 0.005124999999999979,
+    "ci90": [
+     -0.00337812500000004,
+     0.013562499999999977
+    ],
+    "n": 20,
+    "n_pos": 12,
+    "n_neg": 8,
+    "sign_stable": false
+   },
+   "wealth_gap_completion_upper": {
+    "mean": 0.009500000000000003,
+    "ci90": [
+     0.0016874999999999917,
+     0.017378124999999994
+    ],
+    "n": 20,
+    "n_pos": 12,
+    "n_neg": 6,
+    "sign_stable": false
+   },
+   "wealth_gap_completion_tertiary": {
+    "mean": 0.010562499999999997,
+    "ci90": [
+     0.0034343749999999865,
+     0.017874999999999985
+    ],
+    "n": 20,
+    "n_pos": 13,
+    "n_neg": 6,
+    "sign_stable": false
+   },
+   "mpl_primary": {
+    "mean": -0.008900631827808814,
+    "ci90": [
+     -0.0110916641261027,
+     -0.006624004021860422
+    ],
+    "n": 20,
+    "n_pos": 2,
+    "n_neg": 18,
+    "sign_stable": false
+   },
+   "q_pub": {
+    "mean": -0.002907797805173362,
+    "ci90": [
+     -0.004095376209359905,
+     -0.0017076860795721999
+    ],
+    "n": 20,
+    "n_pos": 3,
+    "n_neg": 17,
+    "sign_stable": false
+   },
+   "formal_share_gdp": {
+    "mean": -0.002282653293508646,
+    "ci90": [
+     -0.004145179371487299,
+     -0.0004112507125797717
+    ],
+    "n": 20,
+    "n_pos": 5,
+    "n_neg": 15,
+    "sign_stable": false
+   }
+  },
+  "ban1_minus_ban0|quota|access0.8": {
+   "tut_rate": {
+    "mean": -0.11779632892247978,
+    "ci90": [
+     -0.12001654705197412,
+     -0.11542744344380572
+    ],
+    "n": 20,
+    "n_pos": 0,
+    "n_neg": 20,
+    "sign_stable": true
+   },
+   "gate_adj": {
+    "mean": -0.16385945893100837,
+    "ci90": [
+     -0.16834061899098612,
+     -0.15947885685605293
+    ],
+    "n": 20,
+    "n_pos": 0,
+    "n_neg": 20,
+    "sign_stable": true
+   },
+   "non_gate": {
+    "mean": -0.09866866070569108,
+    "ci90": [
+     -0.10162523557456651,
+     -0.09565423288034004
+    ],
+    "n": 20,
+    "n_pos": 0,
+    "n_neg": 20,
+    "sign_stable": true
+   },
+   "wealth_gap_tut": {
+    "mean": -0.1000003775237489,
+    "ci90": [
+     -0.10326702406431698,
+     -0.09649364338490658
+    ],
+    "n": 20,
+    "n_pos": 0,
+    "n_neg": 20,
+    "sign_stable": true
+   },
+   "own_share": {
+    "mean": -0.3809607950394035,
+    "ci90": [
+     -0.381858491660564,
+     -0.38008323002955824
+    ],
+    "n": 20,
+    "n_pos": 0,
+    "n_neg": 20,
+    "sign_stable": true
+   },
+   "completion_primary": {
+    "mean": -0.0029624999999999847,
+    "ci90": [
+     -0.006225624999999997,
+     0.000350625000000019
+    ],
+    "n": 20,
+    "n_pos": 7,
+    "n_neg": 13,
+    "sign_stable": false
+   },
+   "completion_lower": {
+    "mean": 6.249999999999867e-05,
+    "ci90": [
+     -8.750000000000702e-05,
+     0.0002499999999999947
+    ],
+    "n": 20,
+    "n_pos": 5,
+    "n_neg": 5,
+    "sign_stable": false
+   },
+   "completion_upper": {
+    "mean": 0.00015000000000000012,
+    "ci90": [
+     -8.749999999999868e-05,
+     0.00046249999999999904
+    ],
+    "n": 20,
+    "n_pos": 3,
+    "n_neg": 3,
+    "sign_stable": false
+   },
+   "completion_tertiary": {
+    "mean": 0.002387500000000009,
+    "ci90": [
+     3.7500000000012384e-05,
+     0.004687500000000002
+    ],
+    "n": 20,
+    "n_pos": 14,
+    "n_neg": 6,
+    "sign_stable": false
+   },
+   "parity_location_lower": {
+    "mean": -0.03772277952324315,
+    "ci90": [
+     -0.04701488038357352,
+     -0.027998884427418567
+    ],
+    "n": 20,
+    "n_pos": 2,
+    "n_neg": 18,
+    "sign_stable": false
+   },
+   "parity_location_upper": {
+    "mean": -0.049710505810297394,
+    "ci90": [
+     -0.05822478404159021,
+     -0.04127186702903929
+    ],
+    "n": 20,
+    "n_pos": 0,
+    "n_neg": 20,
+    "sign_stable": true
+   },
+   "wealth_gap_completion_lower": {
+    "mean": 0.0008124999999999771,
+    "ci90": [
+     -0.007940625000000048,
+     0.008937499999999977
+    ],
+    "n": 20,
+    "n_pos": 9,
+    "n_neg": 10,
+    "sign_stable": false
+   },
+   "wealth_gap_completion_upper": {
+    "mean": -0.00343750000000001,
+    "ci90": [
+     -0.010815625000000035,
+     0.0038124999999999748
+    ],
+    "n": 20,
+    "n_pos": 8,
+    "n_neg": 11,
+    "sign_stable": false
+   },
+   "wealth_gap_completion_tertiary": {
+    "mean": -0.002812500000000012,
+    "ci90": [
+     -0.010000000000000014,
+     0.004374999999999995
+    ],
+    "n": 20,
+    "n_pos": 8,
+    "n_neg": 11,
+    "sign_stable": false
+   },
+   "mpl_primary": {
+    "mean": -0.010662398536806334,
+    "ci90": [
+     -0.012789766449321576,
+     -0.008491068134394954
+    ],
+    "n": 20,
+    "n_pos": 1,
+    "n_neg": 19,
+    "sign_stable": false
+   },
+   "q_pub": {
+    "mean": -0.0015054393032171154,
+    "ci90": [
+     -0.002132068412288637,
+     -0.0008199095740446657
+    ],
+    "n": 20,
+    "n_pos": 4,
+    "n_neg": 16,
+    "sign_stable": false
+   },
+   "formal_share_gdp": {
+    "mean": -0.0004245455299779155,
+    "ci90": [
+     -0.0017263389240902032,
+     0.0008543208767587289
+    ],
+    "n": 20,
+    "n_pos": 9,
+    "n_neg": 11,
+    "sign_stable": false
+   }
+  },
+  "access0.8_minus_0.2|bar|ban0": {
+   "tut_rate": {
+    "mean": 0.03281606440168663,
+    "ci90": [
+     0.0318825898847114,
+     0.03372590071542494
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "gate_adj": {
+    "mean": 0.026343333719238367,
+    "ci90": [
+     0.02495390519193766,
+     0.027749420682117096
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "non_gate": {
+    "mean": 0.036444233001572214,
+    "ci90": [
+     0.0351427622781191,
+     0.03761580878703363
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "wealth_gap_tut": {
+    "mean": 0.07906543426515904,
+    "ci90": [
+     0.07668351790623829,
+     0.08154128631162401
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "own_share": {
+    "mean": -0.13710415595545553,
+    "ci90": [
+     -0.13871259107711476,
+     -0.13540715969968334
+    ],
+    "n": 20,
+    "n_pos": 0,
+    "n_neg": 20,
+    "sign_stable": true
+   },
+   "completion_primary": {
+    "mean": 0.005812499999999993,
+    "ci90": [
+     0.0017618749999999833,
+     0.009949999999999992
+    ],
+    "n": 20,
+    "n_pos": 12,
+    "n_neg": 8,
+    "sign_stable": false
+   },
+   "completion_lower": {
+    "mean": 0.00591250000000001,
+    "ci90": [
+     0.0010743750000000098,
+     0.010975000000000002
+    ],
+    "n": 20,
+    "n_pos": 12,
+    "n_neg": 7,
+    "sign_stable": false
+   },
+   "completion_upper": {
+    "mean": 0.009849999999999992,
+    "ci90": [
+     0.005199374999999982,
+     0.014588124999999983
+    ],
+    "n": 20,
+    "n_pos": 13,
+    "n_neg": 7,
+    "sign_stable": false
+   },
+   "completion_tertiary": {
+    "mean": 0.008212499999999992,
+    "ci90": [
+     0.004049374999999995,
+     0.01246312499999999
+    ],
+    "n": 20,
+    "n_pos": 17,
+    "n_neg": 3,
+    "sign_stable": false
+   },
+   "parity_location_lower": {
+    "mean": 0.006250961004414185,
+    "ci90": [
+     -0.002195895580595051,
+     0.014318831671202997
+    ],
+    "n": 20,
+    "n_pos": 12,
+    "n_neg": 8,
+    "sign_stable": false
+   },
+   "parity_location_upper": {
+    "mean": 0.00690597799906395,
+    "ci90": [
+     -0.002662380091177403,
+     0.01604349067856871
+    ],
+    "n": 20,
+    "n_pos": 11,
+    "n_neg": 9,
+    "sign_stable": false
+   },
+   "wealth_gap_completion_lower": {
+    "mean": 0.0068750000000000365,
+    "ci90": [
+     -0.0009374999999999523,
+     0.01531250000000003
+    ],
+    "n": 20,
+    "n_pos": 12,
+    "n_neg": 6,
+    "sign_stable": false
+   },
+   "wealth_gap_completion_upper": {
+    "mean": 0.010125000000000012,
+    "ci90": [
+     0.008312500000000033,
+     0.011937500000000012
+    ],
+    "n": 20,
+    "n_pos": 19,
+    "n_neg": 1,
+    "sign_stable": false
+   },
+   "wealth_gap_completion_tertiary": {
+    "mean": 0.017000000000000008,
+    "ci90": [
+     0.015437500000000015,
+     0.018625000000000003
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "mpl_primary": {
+    "mean": 0.006016001741827476,
+    "ci90": [
+     0.004653865129480019,
+     0.007392276583437815
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "q_pub": {
+    "mean": 0.003524940403056731,
+    "ci90": [
+     0.0022490086392197572,
+     0.004724067187074856
+    ],
+    "n": 20,
+    "n_pos": 17,
+    "n_neg": 3,
+    "sign_stable": false
+   },
+   "formal_share_gdp": {
+    "mean": 0.009185216968920721,
+    "ci90": [
+     0.007610592259818231,
+     0.010626429562968649
+    ],
+    "n": 20,
+    "n_pos": 19,
+    "n_neg": 1,
+    "sign_stable": false
+   }
+  },
+  "access0.8_minus_0.2|bar|ban1": {
+   "tut_rate": {
+    "mean": 0.05725495547862318,
+    "ci90": [
+     0.056334796635438444,
+     0.05822986757987046
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "gate_adj": {
+    "mean": 0.056879025026879824,
+    "ci90": [
+     0.05555900031276222,
+     0.05832034358302175
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "non_gate": {
+    "mean": 0.05571474786588334,
+    "ci90": [
+     0.05448036809074285,
+     0.05688146252370707
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "wealth_gap_tut": {
+    "mean": 0.11628210230620598,
+    "ci90": [
+     0.11418040783991129,
+     0.11834461933369174
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "own_share": {
+    "mean": 0.0,
+    "ci90": [
+     0.0,
+     0.0
+    ],
+    "n": 20,
+    "n_pos": 0,
+    "n_neg": 0,
+    "sign_stable": false
+   },
+   "completion_primary": {
+    "mean": 0.013450000000000007,
+    "ci90": [
+     0.009911874999999981,
+     0.017249999999999988
+    ],
+    "n": 20,
+    "n_pos": 18,
+    "n_neg": 2,
+    "sign_stable": false
+   },
+   "completion_lower": {
+    "mean": 0.014124999999999999,
+    "ci90": [
+     0.010575000000000001,
+     0.01787499999999999
+    ],
+    "n": 20,
+    "n_pos": 19,
+    "n_neg": 1,
+    "sign_stable": false
+   },
+   "completion_upper": {
+    "mean": 0.019287499999999996,
+    "ci90": [
+     0.01548750000000001,
+     0.023124999999999996
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "completion_tertiary": {
+    "mean": 0.017675000000000003,
+    "ci90": [
+     0.014837500000000003,
+     0.020800000000000003
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "parity_location_lower": {
+    "mean": 0.0241537770083664,
+    "ci90": [
+     0.014070294089963851,
+     0.033735182106868135
+    ],
+    "n": 20,
+    "n_pos": 17,
+    "n_neg": 3,
+    "sign_stable": false
+   },
+   "parity_location_upper": {
+    "mean": 0.03121716737216118,
+    "ci90": [
+     0.02179020184614547,
+     0.04056992865258034
+    ],
+    "n": 20,
+    "n_pos": 17,
+    "n_neg": 3,
+    "sign_stable": false
+   },
+   "wealth_gap_completion_lower": {
+    "mean": 0.016687499999999994,
+    "ci90": [
+     0.0128125,
+     0.02118749999999998
+    ],
+    "n": 20,
+    "n_pos": 19,
+    "n_neg": 0,
+    "sign_stable": false
+   },
+   "wealth_gap_completion_upper": {
+    "mean": 0.01993750000000003,
+    "ci90": [
+     0.0178125,
+     0.02212500000000004
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "wealth_gap_completion_tertiary": {
+    "mean": 0.02737500000000002,
+    "ci90": [
+     0.024875000000000046,
+     0.0299375
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "mpl_primary": {
+    "mean": 0.024796441332636938,
+    "ci90": [
+     0.023077096097804298,
+     0.02667022198551286
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "q_pub": {
+    "mean": 0.0030586676716390813,
+    "ci90": [
+     0.0015451629886508403,
+     0.004521956264991622
+    ],
+    "n": 20,
+    "n_pos": 17,
+    "n_neg": 3,
+    "sign_stable": false
+   },
+   "formal_share_gdp": {
+    "mean": 0.010825518000347211,
+    "ci90": [
+     0.00905911347040439,
+     0.012580264565869333
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   }
+  },
+  "access0.8_minus_0.2|quota|ban0": {
+   "tut_rate": {
+    "mean": 0.06755080738240714,
+    "ci90": [
+     0.06552007843896723,
+     0.06949413295939456
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "gate_adj": {
+    "mean": 0.07681494372402134,
+    "ci90": [
+     0.07308444155671846,
+     0.08046464742175785
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "non_gate": {
+    "mean": 0.08135516498035629,
+    "ci90": [
+     0.07891273766956311,
+     0.08382274088061378
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "wealth_gap_tut": {
+    "mean": 0.09383410969059078,
+    "ci90": [
+     0.09023056230717054,
+     0.09743274008292688
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "own_share": {
+    "mean": -0.2192432726490777,
+    "ci90": [
+     -0.22065797974478651,
+     -0.21779437329860787
+    ],
+    "n": 20,
+    "n_pos": 0,
+    "n_neg": 20,
+    "sign_stable": true
+   },
+   "completion_primary": {
+    "mean": 0.0016374999999999918,
+    "ci90": [
+     -0.0016125000000000173,
+     0.004887499999999984
+    ],
+    "n": 20,
+    "n_pos": 11,
+    "n_neg": 9,
+    "sign_stable": false
+   },
+   "completion_lower": {
+    "mean": -0.00017500000000000293,
+    "ci90": [
+     -0.00035000000000000585,
+     -2.4999999999991697e-05
+    ],
+    "n": 20,
+    "n_pos": 4,
+    "n_neg": 10,
+    "sign_stable": false
+   },
+   "completion_upper": {
+    "mean": -9.999999999999731e-05,
+    "ci90": [
+     -0.0003999999999999976,
+     0.0001375000000000015
+    ],
+    "n": 20,
+    "n_pos": 6,
+    "n_neg": 4,
+    "sign_stable": false
+   },
+   "completion_tertiary": {
+    "mean": -0.0025625000000000036,
+    "ci90": [
+     -0.004675000000000004,
+     -0.0003868750000000053
+    ],
+    "n": 20,
+    "n_pos": 9,
+    "n_neg": 11,
+    "sign_stable": false
+   },
+   "parity_location_lower": {
+    "mean": 0.07157722530600719,
+    "ci90": [
+     0.061169665371966414,
+     0.08090053381075717
+    ],
+    "n": 20,
+    "n_pos": 19,
+    "n_neg": 1,
+    "sign_stable": false
+   },
+   "parity_location_upper": {
+    "mean": 0.10002977092478045,
+    "ci90": [
+     0.09217464841060329,
+     0.10744355495480583
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "wealth_gap_completion_lower": {
+    "mean": 0.012000000000000005,
+    "ci90": [
+     0.005309374999999965,
+     0.018875000000000013
+    ],
+    "n": 20,
+    "n_pos": 12,
+    "n_neg": 6,
+    "sign_stable": false
+   },
+   "wealth_gap_completion_upper": {
+    "mean": 0.023875000000000007,
+    "ci90": [
+     0.016746875000000005,
+     0.03125
+    ],
+    "n": 20,
+    "n_pos": 18,
+    "n_neg": 2,
+    "sign_stable": false
+   },
+   "wealth_gap_completion_tertiary": {
+    "mean": 0.02468750000000001,
+    "ci90": [
+     0.01706250000000002,
+     0.03200000000000002
+    ],
+    "n": 20,
+    "n_pos": 18,
+    "n_neg": 2,
+    "sign_stable": false
+   },
+   "mpl_primary": {
+    "mean": 0.002067519791215289,
+    "ci90": [
+     0.0005507845007172489,
+     0.003665910313536886
+    ],
+    "n": 20,
+    "n_pos": 13,
+    "n_neg": 7,
+    "sign_stable": false
+   },
+   "q_pub": {
+    "mean": 0.009943599411069082,
+    "ci90": [
+     0.00877617222606489,
+     0.011096005578826588
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "formal_share_gdp": {
+    "mean": 0.015661084318316466,
+    "ci90": [
+     0.014122255158375471,
+     0.017137685724645448
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   }
+  },
+  "access0.8_minus_0.2|quota|ban1": {
+   "tut_rate": {
+    "mean": 0.17574635398370755,
+    "ci90": [
+     0.17389917672198765,
+     0.17768374619765953
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "gate_adj": {
+    "mean": 0.23413382426172072,
+    "ci90": [
+     0.23101358880559245,
+     0.23714419489393135
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "non_gate": {
+    "mean": 0.16576613118788425,
+    "ci90": [
+     0.16383384965763453,
+     0.167813284712526
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "wealth_gap_tut": {
+    "mean": 0.22691963594744777,
+    "ci90": [
+     0.224066692079538,
+     0.22952673266243792
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "own_share": {
+    "mean": 0.0,
+    "ci90": [
+     0.0,
+     0.0
+    ],
+    "n": 20,
+    "n_pos": 0,
+    "n_neg": 0,
+    "sign_stable": false
+   },
+   "completion_primary": {
+    "mean": 0.01311250000000001,
+    "ci90": [
+     0.01065000000000002,
+     0.01568750000000002
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "completion_lower": {
+    "mean": 2.4999999999997247e-05,
+    "ci90": [
+     -0.00011250000000000981,
+     0.0001625000000000043
+    ],
+    "n": 20,
+    "n_pos": 6,
+    "n_neg": 6,
+    "sign_stable": false
+   },
+   "completion_upper": {
+    "mean": 5.000000000000282e-05,
+    "ci90": [
+     -6.249999999999867e-05,
+     0.00016250000000000986
+    ],
+    "n": 20,
+    "n_pos": 5,
+    "n_neg": 3,
+    "sign_stable": false
+   },
+   "completion_tertiary": {
+    "mean": -0.002512500000000001,
+    "ci90": [
+     -0.004688125000000002,
+     -0.00039937499999999885
+    ],
+    "n": 20,
+    "n_pos": 7,
+    "n_neg": 13,
+    "sign_stable": false
+   },
+   "parity_location_lower": {
+    "mean": 0.11060525777767997,
+    "ci90": [
+     0.10422862007356319,
+     0.11661559626177077
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "parity_location_upper": {
+    "mean": 0.1353069543683592,
+    "ci90": [
+     0.12859960806388007,
+     0.14263945422047633
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "wealth_gap_completion_lower": {
+    "mean": 0.0114375,
+    "ci90": [
+     0.003809374999999984,
+     0.01937500000000002
+    ],
+    "n": 20,
+    "n_pos": 11,
+    "n_neg": 9,
+    "sign_stable": false
+   },
+   "wealth_gap_completion_upper": {
+    "mean": 0.015750000000000007,
+    "ci90": [
+     0.007312499999999999,
+     0.024375000000000008
+    ],
+    "n": 20,
+    "n_pos": 15,
+    "n_neg": 5,
+    "sign_stable": false
+   },
+   "wealth_gap_completion_tertiary": {
+    "mean": 0.01725000000000001,
+    "ci90": [
+     0.009750000000000007,
+     0.025499999999999988
+    ],
+    "n": 20,
+    "n_pos": 16,
+    "n_neg": 4,
+    "sign_stable": false
+   },
+   "mpl_primary": {
+    "mean": 0.006228232746479312,
+    "ci90": [
+     0.004060205908735764,
+     0.00827341008570405
+    ],
+    "n": 20,
+    "n_pos": 17,
+    "n_neg": 3,
+    "sign_stable": false
+   },
+   "q_pub": {
+    "mean": 0.012500497619633321,
+    "ci90": [
+     0.0115025297330916,
+     0.013488492157829282
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   },
+   "formal_share_gdp": {
+    "mean": 0.019697936969351855,
+    "ci90": [
+     0.018201557712065365,
+     0.02134787868688484
+    ],
+    "n": 20,
+    "n_pos": 20,
+    "n_neg": 0,
+    "sign_stable": true
+   }
+  }
+ },
+ "hypotheses": {
+  "H1_gate_prep": {
+   "supported": true,
+   "falsifier_confirmed": false,
+   "per_access": [
+    {
+     "access": 0.2,
+     "tut_rate": {
+      "mean": 0.17604743208546228,
+      "ci90": [
+       0.1744249842155499,
+       0.1777456907548299
+      ],
+      "n": 20,
+      "n_pos": 20,
+      "n_neg": 0,
+      "sign_stable": true
+     },
+     "gate_adj": {
+      "mean": 0.2381906003557944,
+      "ci90": [
+       0.23547787583620036,
+       0.24096770015193128
+      ],
+      "n": 20,
+      "n_pos": 20,
+      "n_neg": 0,
+      "sign_stable": true
+     },
+     "tut_rate_material_pos": true,
+     "gate_adj_material_pos": true
+    },
+    {
+     "access": 0.4,
+     "tut_rate": {
+      "mean": 0.18752120056615468,
+      "ci90": [
+       0.1859699942082799,
+       0.18914838345095614
+      ],
+      "n": 20,
+      "n_pos": 20,
+      "n_neg": 0,
+      "sign_stable": true
+     },
+     "gate_adj": {
+      "mean": 0.2565790760305505,
+      "ci90": [
+       0.253326564776855,
+       0.2596123394552714
+      ],
+      "n": 20,
+      "n_pos": 20,
+      "n_neg": 0,
+      "sign_stable": true
+     },
+     "tut_rate_material_pos": true,
+     "gate_adj_material_pos": true
+    },
+    {
+     "access": 0.8,
+     "tut_rate": {
+      "mean": 0.21078217506618277,
+      "ci90": [
+       0.20942976166513372,
+       0.21221317843128498
+      ],
+      "n": 20,
+      "n_pos": 20,
+      "n_neg": 0,
+      "sign_stable": true
+     },
+     "gate_adj": {
+      "mean": 0.28866221036057726,
+      "ci90": [
+       0.286224009961925,
+       0.29117946595869815
+      ],
+      "n": 20,
+      "n_pos": 20,
+      "n_neg": 0,
+      "sign_stable": true
+     },
+     "tut_rate_material_pos": true,
+     "gate_adj_material_pos": true
+    }
+   ],
+   "n_access_both_material_pos": 3,
+   "rule": "both tut_rate and gate-adjacent tutoring material-positive (>=1pp, 90% CI excludes 0) in >=2/3 access levels at ban=0"
+  },
+  "H1b_ban": {
+   "bar": {
+    "n_access_material_neg": 3,
+    "supported": true
+   },
+   "quota": {
+    "n_access_material_neg": 3,
+    "supported": true
+   },
+   "supported": true,
+   "falsifier_confirmed": false,
+   "per_cell": [
+    {
+     "gate": "bar",
+     "access": 0.2,
+     "tut_rate": {
+      "mean": -0.13462684340495873,
+      "ci90": [
+       -0.13534946876606488,
+       -0.13383953918809152
+      ],
+      "n": 20,
+      "n_pos": 0,
+      "n_neg": 20,
+      "sign_stable": true
+     },
+     "material_neg": true
+    },
+    {
+     "gate": "bar",
+     "access": 0.4,
+     "tut_rate": {
+      "mean": -0.12543554855244232,
+      "ci90": [
+       -0.1264208456964121,
+       -0.12439140080432577
+      ],
+      "n": 20,
+      "n_pos": 0,
+      "n_neg": 20,
+      "sign_stable": true
+     },
+     "material_neg": true
+    },
+    {
+     "gate": "bar",
+     "access": 0.8,
+     "tut_rate": {
+      "mean": -0.11018795232802218,
+      "ci90": [
+       -0.11090115811876433,
+       -0.10945855993980565
+      ],
+      "n": 20,
+      "n_pos": 0,
+      "n_neg": 20,
+      "sign_stable": true
+     },
+     "material_neg": true
+    },
+    {
+     "gate": "quota",
+     "access": 0.2,
+     "tut_rate": {
+      "mean": -0.2259918755237802,
+      "ci90": [
+       -0.22776910900393918,
+       -0.22426868329360422
+      ],
+      "n": 20,
+      "n_pos": 0,
+      "n_neg": 20,
+      "sign_stable": true
+     },
+     "material_neg": true
+    },
+    {
+     "gate": "quota",
+     "access": 0.4,
+     "tut_rate": {
+      "mean": -0.19086216892370378,
+      "ci90": [
+       -0.1927625862518473,
+       -0.18888025563448851
+      ],
+      "n": 20,
+      "n_pos": 0,
+      "n_neg": 20,
+      "sign_stable": true
+     },
+     "material_neg": true
+    },
+    {
+     "gate": "quota",
+     "access": 0.8,
+     "tut_rate": {
+      "mean": -0.11779632892247978,
+      "ci90": [
+       -0.12001654705197412,
+       -0.11542744344380572
+      ],
+      "n": 20,
+      "n_pos": 0,
+      "n_neg": 20,
+      "sign_stable": true
+     },
+     "material_neg": true
+    }
+   ]
+  },
+  "H2_wealth_gap_widening": {
+   "supported": true,
+   "falsifier_confirmed": false,
+   "per_access": [
+    {
+     "access": 0.2,
+     "quota_minus_bar_wealth_gap_tut": {
+      "mean": 0.13005081985619574,
+      "ci90": [
+       0.12708130904524362,
+       0.13297149764224578
+      ],
+      "n": 20,
+      "n_pos": 20,
+      "n_neg": 0,
+      "sign_stable": true
+     },
+     "material_pos": true
+    },
+    {
+     "access": 0.4,
+     "quota_minus_bar_wealth_gap_tut": {
+      "mean": 0.13622293526937498,
+      "ci90": [
+       0.13342770180603528,
+       0.13902575318489868
+      ],
+      "n": 20,
+      "n_pos": 20,
+      "n_neg": 0,
+      "sign_stable": true
+     },
+     "material_pos": true
+    },
+    {
+     "access": 0.8,
+     "quota_minus_bar_wealth_gap_tut": {
+      "mean": 0.14481949528162746,
+      "ci90": [
+       0.14218068030448508,
+       0.14767821082507926
+      ],
+      "n": 20,
+      "n_pos": 20,
+      "n_neg": 0,
+      "sign_stable": true
+     },
+     "material_pos": true
+    }
+   ],
+   "n_material_pos": 3,
+   "rule": "top-bottom tutoring gap quota-bar material-positive in >=2/3 access levels at ban=0"
+  },
+  "H3_access_gradient": {
+   "supported": false,
+   "falsifier_confirmed": true,
+   "per_gate": [
+    {
+     "gate": "bar",
+     "gap_diff": {
+      "mean": 0.07906543426515904,
+      "ci90": [
+       0.07668351790623829,
+       0.08154128631162401
+      ],
+      "n": 20,
+      "n_pos": 20,
+      "n_neg": 0,
+      "sign_stable": true
+     },
+     "material_neg": false
+    },
+    {
+     "gate": "quota",
+     "gap_diff": {
+      "mean": 0.09383410969059078,
+      "ci90": [
+       0.09023056230717054,
+       0.09743274008292688
+      ],
+      "n": 20,
+      "n_pos": 20,
+      "n_neg": 0,
+      "sign_stable": true
+     },
+     "material_neg": false
+    }
+   ],
+   "rule": "wealth tutoring gap (access0.8 - access0.2) material-negative in BOTH gates at ban=0"
+  },
+  "gate_specificity_DiD": {
+   "per_access": {
+    "access0.2": {
+     "mean": 0.09025117636421529,
+     "ci90": [
+      0.08845015336431027,
+      0.09201149880157196
+     ],
+     "n": 20,
+     "n_pos": 20,
+     "n_neg": 0,
+     "sign_stable": true,
+     "material_pos": true
+    },
+    "access0.4": {
+     "mean": 0.09331639137192464,
+     "ci90": [
+      0.0913776776835017,
+      0.09533573668778131
+     ],
+     "n": 20,
+     "n_pos": 20,
+     "n_neg": 0,
+     "sign_stable": true,
+     "material_pos": true
+    },
+    "access0.8": {
+     "mean": 0.09581185439021414,
+     "ci90": [
+      0.09430554478744194,
+      0.09733771654669818
+     ],
+     "n": 20,
+     "n_pos": 20,
+     "n_neg": 0,
+     "sign_stable": true,
+     "material_pos": true
+    }
+   },
+   "material_pos_count": 3,
+   "interpretation": "if material-positive, the quota tutoring response is gate-concentrated (gate arithmetic); if not, it is broader"
+  }
+ }
+}

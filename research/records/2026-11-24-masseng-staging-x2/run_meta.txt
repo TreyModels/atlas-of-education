@@ -1,0 +1,8 @@
+=== X2 LAUNCH 2026-11-24T13:13:34Z ===
+cmd: PYTHONPATH=/root/work/masseng-codex-deps /root/miniconda3/bin/python run_x2.py --workers 20 --out results_x2_EXPLORATORY.json > x2.log 2>&1
+=== X4 LAUNCH 2026-11-24T13:15:21Z ===
+cmd: PYTHONPATH=/root/work/masseng-codex-deps /root/miniconda3/bin/python run_x4.py --out results_x4.json > x4.log 2>&1
+=== X4 CORRECTED LAUNCH 2026-11-24T13:15:38Z ===
+NOTE: run 1 failed (KeyError lsc_2004); traced to analysis column-name bug; no result produced; failure log preserved as x4_v1_failure.log; windows/split/scores unchanged.
+cmd: PYTHONPATH=/root/work/masseng-codex-deps /root/miniconda3/bin/python run_x4.py --out results_x4.json > x4_corrected.log 2>&1
+=== X4 FINAL LAUNCH 2026-11-24T13:16:15Z ===

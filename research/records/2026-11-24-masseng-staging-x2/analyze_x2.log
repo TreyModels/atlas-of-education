@@ -1,0 +1,84 @@
+{
+ "H1": {
+  "supported": true,
+  "falsifier_confirmed": false,
+  "n_access_both_material_pos": 3,
+  "per_access": [
+   {
+    "access": 0.2,
+    "tut_rate": 0.176,
+    "gate_adj": 0.2382,
+    "pos": [
+     true,
+     true
+    ]
+   },
+   {
+    "access": 0.4,
+    "tut_rate": 0.1875,
+    "gate_adj": 0.2566,
+    "pos": [
+     true,
+     true
+    ]
+   },
+   {
+    "access": 0.8,
+    "tut_rate": 0.2108,
+    "gate_adj": 0.2887,
+    "pos": [
+     true,
+     true
+    ]
+   }
+  ]
+ },
+ "H1b": {
+  "supported": true
+ },
+ "H2": {
+  "supported": true,
+  "falsifier_confirmed": false,
+  "n_material_pos": 3,
+  "per_access": [
+   {
+    "access": 0.2,
+    "gap_diff": 0.1301,
+    "pos": true
+   },
+   {
+    "access": 0.4,
+    "gap_diff": 0.1362,
+    "pos": true
+   },
+   {
+    "access": 0.8,
+    "gap_diff": 0.1448,
+    "pos": true
+   }
+  ]
+ },
+ "H3": {
+  "supported": false,
+  "per_gate": [
+   {
+    "gate": "bar",
+    "gap_diff": 0.0791,
+    "neg": false
+   },
+   {
+    "gate": "quota",
+    "gap_diff": 0.0938,
+    "neg": false
+   }
+  ]
+ },
+ "DiD": {
+  "material_pos_count": 3,
+  "per_access": {
+   "access0.2": 0.0903,
+   "access0.4": 0.0933,
+   "access0.8": 0.0958
+  }
+ }
+}
