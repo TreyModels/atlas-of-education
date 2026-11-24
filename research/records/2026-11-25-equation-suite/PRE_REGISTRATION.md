@@ -1,0 +1,168 @@
+# PRE-REGISTRATION — Master Equation Inventory experiment suite (task-40)
+
+**Record:** `research/records/2026-11-25-equation-suite/`.
+**Branch:** `research/equation-suite-2026-11-25` (from `origin/research/handoff-2026-11-24` @ `e8ba60c`).
+**Author:** synthesist. **Written:** 2026-11-24/25, **committed before any code or run** (this file is the first
+commit on the branch).
+**Status:** DESIGN ONLY at this commit. No simulation has been run; no output exists yet.
+
+## Purpose
+
+The PI asked for ten self-contained experiments, one per block of the Master Equation Inventory (economics of
+education; education and development; shadow education). This suite builds a **small, honest, runnable
+demonstration for each block**: what the equation set implies in a known-truth or provenance-labelled world, where
+the intuitive interpretation fails, and what the data can and cannot say. It is a methods-and-demonstration
+suite, not a paper, and it is not an empirical test of any country.
+
+## Non-negotiable rules for every script
+
+1. **No causal claims.** Even where a DGP contains a true effect, script output is a statement about the
+   simulation design ("the estimator recovers/does not recover the known parameter"), never about the world.
+2. **No invented citations.** No script names a paper or DOI. The only external quantities used are the
+   **Bray six-school targets** already committed in `research/shadow-equations-2026-11-25` @ `fdc8da0` and the
+   repo's committed panels; both are provenance-labelled in `inputs/PROVENANCE.json`.
+3. **Data tiers labelled.** `SYNTHETIC` (generated in-script from a stated DGP), `OBSERVED`/`RECONSTRUCTED`
+   (committed repo panels, with branch/commit/sha256), `LITERATURE_TARGETS` (Bray targets). No imputation and no
+   fabricated empirical validation.
+4. **Smoke before full.** Every script supports `--smoke` (fewer seeds/replications, same code path). `run_all.py`
+   runs smoke then full for every script and records both statuses.
+5. **Report everything.** Nulls, failures, discarded runs and decision-rule misses are reported. A script that
+   crashes is a reported failure, not a deletion.
+6. **Bounded CPU.** Server runs use ≤32 worker processes; each worker is single-threaded (`OMP_NUM_THREADS=1`).
+   Other agents share the box; no job is killed, nothing is shut down.
+7. **Determinism.** Fixed seeds per script and per replication; the manifest records sha256 of every script and
+   every output; the run records host, Python/NumPy version, command and wall time.
+
+## The ten scripts (per-script pre-registration)
+
+Each script prints one plain-English sentence and writes `results/<name>.json` plus a CSV table.
+
+### S1 — `eq01_returns.py` — Mincer returns, ability bias, IV (inventory 42–56)
+- **Demonstrates:** a log-wage regression recovers the schooling coefficient when ability is controlled; it is
+  biased upward when ability is omitted and correlated with schooling; 2SLS using an instrument that shifts
+  schooling but not wages recovers the true coefficient under the stated exclusion restriction.
+- **DGP (SYNTHETIC):** n = 4,000; ability a ~ N(0,1); S = 10 + 2.2a + 1.5v; ln w = 1.0 + 0.09 S + 0.12 a + e;
+  instrument Z affects S with coefficient 1.0 and does not enter wages.
+- **Estimators:** OLS without ability; OLS with ability (oracle); 2SLS; also reports the exact percentage
+  `100(e^b - 1)%` and a quadratic experience profile.
+- **Decision rule (pre-declared):** under ability bias, OLS-without-ability bias is positive and its 95% CI
+  excludes the truth, while 2SLS |bias| is smaller and its CI covers the truth in ≥90% of 200 replications.
+  Null control: ability coefficient in the S equation = 0 → OLS and 2SLS both within 2 SE of the truth.
+- **Outputs:** per-replication coefficients, bias, CI coverage; verdict per rule.
+
+### S2 — `eq02_production.py` — Cobb-Douglas vs CES, complementarity (26–41)
+- **Demonstrates:** a linear interaction regression can recover the sign of a CES cross-partial only when the
+  omitted ability input is controlled; Cobb-Douglas is misspecified when the true technology is CES with ρ≠0.
+- **DGP (SYNTHETIC):** A = B[ωS^ρ + (1−ω)T^ρ]^{1/ρ} + γ·ability + noise; ability correlated with S and T;
+  worlds ρ ∈ {1.0 (linear null), 0.5 (complementary)}.
+- **Estimators:** OLS interaction with/without ability; CES fit by 1-D grid over ρ with linear coefficients
+  concentrated out; RMSE comparison of Cobb-Douglas vs CES.
+- **Decision rule:** in the ρ=1 world the interaction CI includes 0 in ≥95% of replications; in the ρ=0.5 world
+  the ability-controlled interaction is positive with CI excluding 0 in ≥80%; CES's recovered ρ is closer to the
+  truth than Cobb-Douglas implies (ρ=1).
+- **Outputs:** interaction coefficients, CES ρ grid, RMSEs.
+
+### S3 — `eq03_tutoring_demand.py` — logit/probit, two-part/hurdle/Tobit (57–69)
+- **Demonstrates:** when participation and amount are driven by different processes, a Tobit imposes one process
+  and biases the income elasticity; a two-part (hurdle) model recovers the amount process. Under a single process
+  the two agree.
+- **DGP (SYNTHETIC):** n = 6,000 households; participation probit with income gradient 0.6; amount log-linear
+  with income elasticity 0.8 (DIFFERENT world) or identical coefficients (SINGLE world). Zero censoring at no
+  participation.
+- **Estimators:** Tobit (EM), two-part (probit + OLS on log positive amount), OLS on all with zeros.
+- **Decision rule:** DIFFERENT world: two-part |η̂−0.8| ≤ 0.15 and Tobit |η̂−0.8| > 0.15 in ≥90% of
+  replications. SINGLE world: both within 0.15 of the truth. If the rule fails, it is reported as failed.
+- **Outputs:** participation and intensity coefficients, elasticities, model comparison.
+
+### S4 — `eq04_tutoring_production.py` — tutoring in production, inequality (70–80, 123–137)
+- **Demonstrates:** a tutoring-input production model can show a ban reducing participation yet *raising* the
+  learning Gini when richer households substitute into other tutoring; distributional conclusions depend on the
+  substitution assumption, not on the equation's fit.
+- **DGP (SYNTHETIC, illustrative):** 20,000 pupils; SES, school quality; tutoring take-up has an income gradient;
+  learning = CES(school, tutoring) + SES gradient; scenarios: baseline, own-teacher ban, hard quota, cash transfer.
+- **Real anchor (LITERATURE_TARGETS):** Bray six-school participation/own-share/teacher-share targets from the
+  committed shadow-equations record; reported only as a descriptive external check (max-z distance), not as a fit.
+- **Decision rule:** report Gini and top–bottom learning gap changes under each scenario; rule: "ban raises the
+  learning Gini" if ΔGini > 0 with CI excluding 0; the model is *not* claimed to fit Bray if max-z > 2.
+- **Outputs:** scenario table (participation, Gini, gaps), Bray distance.
+
+### S5 — `eq05_admissions.py` — admissions contest, bar vs quota (81–86)
+- **Demonstrates:** a hard quota changes *who* is admitted (by construction) but not effort or learning unless
+  effort responds to the contest form; a bar and a quota are different rationing devices with different
+  distributional incidence.
+- **DGP (SYNTHETIC):** 10,000 pupils with ability and income; bar = score threshold; quota = reserved share for
+  the bottom 40% by income; contest = Tullock effort with cost.
+- **Decision rule:** report the income–admission gap sign flip, effort/tutoring response, and the welfare
+  (learning-equivalent) change; rule: "quota flips the admission gap" if baseline gap > 0 and quota gap < 0.
+- **Outputs:** admission shares by quintile, effort, gap flip.
+
+### S6 — `eq06_growth.py` — augmented Solow, convergence, Nelson-Phelps (87–105)
+- **Demonstrates:** a convergence regression can recover the known λ; an omitted TFP term that is correlated with
+  human capital biases the human-capital coefficient; Nelson-Phelps-style catch-up is an interaction between
+  distance-to-frontier and human capital.
+- **DGP (SYNTHETIC):** 120 countries × 30 periods; growth = g0 − λ ln y0 + β_H H + u; H correlated with u
+  (omitted TFP); a Nelson-Phelps world where growth gap = φ0 + φ1 H × gap.
+- **Real part (OBSERVED AGGREGATES):** committed `x4_panel.csv` from the staging X2 record: descriptive
+  cross-section of 2004→2018 attainment change on 1991 attainment and job share; association only.
+- **Decision rule:** synthetic: recovered λ within 2 SE in the no-confound world; β_H sign flips or shrinks when
+  the confounder is excluded (report both). Real: report coefficients with robust SE and label "descriptive".
+- **Outputs:** synthetic recovery table, real cross-section table.
+
+### S7 — `eq07_finance.py` — public finance, benefit incidence, cost-benefit (106–122)
+- **Demonstrates:** the distributional incidence of a public education subsidy is a function of enrolment
+  composition, not of the budget line; a progressive-looking universal subsidy can be regressive; NPV/IRR are
+  arithmetic plus an assumed discount rate.
+- **DGP (SYNTHETIC):** 100,000 households with income and enrolment probability rising in income; public unit
+  cost; scenarios: universal, means-tested, quota.
+- **Decision rule:** report benefit-incidence shares by quintile, concentration index, NPV and IRR at two
+  discount rates; rule: "regressive" if the concentration index is positive (benefits skew rich).
+- **Outputs:** incidence table, CI, NPV/IRR.
+
+### S8 — `eq08_inequality.py` — inequality, decomposition, mobility (123–137)
+- **Demonstrates:** Gini/Theil and intergenerational elasticity answer different questions; a Theil decomposition
+  can attribute most inequality to between-group variation while the Oaxaca decomposition of the same gap says
+  something different; a mobility transition matrix is not an elasticity.
+- **DGP (SYNTHETIC):** two generations, 50,000 families; parent income and education → child education → child
+  income with persistence parameter; two-group SES structure.
+- **Decision rule:** report Gini, Theil within/between, intergenerational elasticity, rank-rank slope, transition
+  diagonal, Oaxaca twofold decomposition; null world with zero persistence → elasticity CI includes 0.
+- **Outputs:** inequality table, decomposition, mobility matrix.
+
+### S9 — `eq09_identification.py` — DID/event study/IV/RD/synthetic control shell (138–167)
+- **Demonstrates:** each identification design recovers its target in its own known-truth world and fails in the
+  stated violation world. **Demonstration only; no causal claim about any real policy.**
+- **DGP (SYNTHETIC):** (a) staggered adoption with heterogeneous effects → TWFE biased, group-time (CS-style)
+  estimator closer; (b) endogenous treatment with a valid instrument → IV recovers, OLS does not; (c) sharp RD
+  at a cutoff → local linear recovers the jump; (d) synthetic control for one treated unit.
+- **Decision rule:** no-effect null: all estimators' 90% CIs include 0 in ≥90% of replications. In the effect
+  worlds, report bias of naive vs design estimator; TWFE bias sign reported, no claim that it generalises.
+- **Outputs:** per-design truth/estimates/bias table.
+
+### S10 — `eq10_development.py` — LAYS, learning poverty, fertility/health (168–183)
+- **Demonstrates:** LAYS and learning-poverty are arithmetic mappings of three inputs and can rank countries
+  differently from enrolment; cross-country fertility/health associations are descriptive and sensitive to
+  controls, construct choice (effective fertility vs TFR) and a future-schooling placebo.
+- **Synthetic part:** 5,000 country-like units with EYS, HLS, schooling deprivation, learning deprivation;
+  compare LAYS rankings and learning-poverty under the 625 HLS benchmark vs a shifted benchmark.
+- **Real part (OBSERVED/RECONSTRUCTED):** committed `long_run_panel.csv` (Q2 record): 5-year grid 1950–2020,
+  fertility (both `effective_fertility` and `tfr_observed_1950plus`), schooling, log income, urbanisation;
+  country+year FE association, plus future-schooling placebo. Association only.
+- **Decision rule:** synthetic: report rank correlation between LAYS and EYS and the share of units whose
+  learning-poverty status changes when the benchmark moves 10%. Real: report associations for both fertility
+  constructs and the placebo; no causal reading.
+- **Outputs:** synthetic mapping table, real association table.
+
+## Run protocol
+
+1. Local smoke: `python scripts/run_all.py --smoke-only --workers 2` (Mac, numpy only; must pass before deploy).
+2. Deploy: tar the record (scripts, inputs, prereg) to `/root/work/eqsuite/` on the 192-core server
+   (`ssh -p 45973`, key only; **never shut it down**).
+3. Full run: `OMP_NUM_THREADS=1 python scripts/run_all.py --workers 16` (≤32 workers; the box is shared with
+   ABC/MASSENG agents). The manifest records per-script status, wall time and hashes.
+4. Fetch `results/` back, write `SUITE_REPORT.md` with the plain-English results, commit and push.
+5. Any script that fails is reported as failed with its traceback; no silent omission.
+
+## Deviations
+
+None at this commit. Any later deviation (changed rule, changed seed, changed data) must be logged in
+`SUITE_REPORT.md` with a dated note; the pre-registered rules above are not edited after seeing results.
