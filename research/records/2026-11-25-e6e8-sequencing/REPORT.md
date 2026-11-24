@@ -141,6 +141,10 @@ identifiable countries is below the 75% forward threshold** in the pre-registere
 definitions below 75% is 100%) — i.e., the ordering is threshold- and series-sensitive and cannot be quoted as a
 single percentage.
 
+**CORRECTION (see `ERRATUM.md` §C):** the "56–84%" weak forward-or-tie range in the sentence above does not
+reproduce from `results/n3_table.csv`; the reproducible quantities and their denominators are given in §C. The
+original sentence is left visible.
+
 **Recommendation for Paper 1's abstract (demand-ordering claim).** State it as an **interval with selection and
 threshold**: e.g. "on pre-1990 demand series, demand take-off precedes schooling take-off in 10–24% of
 identifiable countries (bounds 7–53% over all countries), with another 21–43% weak ties/left-censored; the strict

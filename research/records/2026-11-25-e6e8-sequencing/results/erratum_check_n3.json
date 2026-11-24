@@ -1,0 +1,119 @@
+{
+ "question": "Does \"(the weak forward-or-tie share ranges 56-84%)\" reproduce from results/n3_table.csv?",
+ "answer": "NO \u2014 no denominator (or subset) gives endpoints 56 and 84.",
+ "source": "results/n3_table.csv (54 definitions; all have n>=20)",
+ "n_definitions": 54,
+ "all_definitions": {
+  "tie_over_identifiable": {
+   "min": 56.6667,
+   "max": 88.4615,
+   "min_definition": "q1 \u0394s=0.5 \u0394r=5.0 smooth=1",
+   "max_definition": "q1 \u0394s=1.5 \u0394r=2.0 smooth=7",
+   "includes_both_56_and_84": false
+  },
+  "tie_over_n": {
+   "min": 50.0,
+   "max": 82.1429,
+   "min_definition": "q1 \u0394s=0.5 \u0394r=5.0 smooth=1",
+   "max_definition": "q1 \u0394s=1.5 \u0394r=2.0 smooth=7",
+   "includes_both_56_and_84": false
+  },
+  "incl_ties": {
+   "min": 56.7,
+   "max": 100.0,
+   "min_definition": "q1 \u0394s=0.5 \u0394r=5.0 smooth=1",
+   "max_definition": "q1 \u0394s=1.5 \u0394r=2.0 smooth=5",
+   "includes_both_56_and_84": false
+  },
+  "fwd_plus_tie_over_identifiable": {
+   "min": 56.6667,
+   "max": 100.0,
+   "min_definition": "q1 \u0394s=0.5 \u0394r=5.0 smooth=1",
+   "max_definition": "q1 \u0394s=1.5 \u0394r=2.0 smooth=5",
+   "includes_both_56_and_84": false
+  },
+  "fwd_plus_tie_over_n": {
+   "min": 50.0,
+   "max": 92.8571,
+   "min_definition": "q1 \u0394s=0.5 \u0394r=5.0 smooth=1",
+   "max_definition": "q1 \u0394s=1.5 \u0394r=2.0 smooth=5",
+   "includes_both_56_and_84": false
+  }
+ },
+ "q1_only": {
+  "tie_over_identifiable": {
+   "min": 56.6667,
+   "max": 88.4615,
+   "min_definition": "q1 \u0394s=0.5 \u0394r=5.0 smooth=1",
+   "max_definition": "q1 \u0394s=1.5 \u0394r=2.0 smooth=7",
+   "includes_both_56_and_84": false
+  },
+  "tie_over_n": {
+   "min": 50.0,
+   "max": 82.1429,
+   "min_definition": "q1 \u0394s=0.5 \u0394r=5.0 smooth=1",
+   "max_definition": "q1 \u0394s=1.5 \u0394r=2.0 smooth=7",
+   "includes_both_56_and_84": false
+  },
+  "incl_ties": {
+   "min": 56.7,
+   "max": 100.0,
+   "min_definition": "q1 \u0394s=0.5 \u0394r=5.0 smooth=1",
+   "max_definition": "q1 \u0394s=1.5 \u0394r=2.0 smooth=5",
+   "includes_both_56_and_84": false
+  },
+  "fwd_plus_tie_over_identifiable": {
+   "min": 56.6667,
+   "max": 100.0,
+   "min_definition": "q1 \u0394s=0.5 \u0394r=5.0 smooth=1",
+   "max_definition": "q1 \u0394s=1.5 \u0394r=2.0 smooth=5",
+   "includes_both_56_and_84": false
+  },
+  "fwd_plus_tie_over_n": {
+   "min": 50.0,
+   "max": 92.8571,
+   "min_definition": "q1 \u0394s=0.5 \u0394r=5.0 smooth=1",
+   "max_definition": "q1 \u0394s=1.5 \u0394r=2.0 smooth=5",
+   "includes_both_56_and_84": false
+  }
+ },
+ "non_survival": {
+  "tie_over_identifiable": {
+   "min": 56.6667,
+   "max": 88.4615,
+   "min_definition": "q1 \u0394s=0.5 \u0394r=5.0 smooth=1",
+   "max_definition": "q1 \u0394s=1.5 \u0394r=2.0 smooth=7",
+   "includes_both_56_and_84": false
+  },
+  "tie_over_n": {
+   "min": 50.0,
+   "max": 82.1429,
+   "min_definition": "q1 \u0394s=0.5 \u0394r=5.0 smooth=1",
+   "max_definition": "q1 \u0394s=1.5 \u0394r=2.0 smooth=7",
+   "includes_both_56_and_84": false
+  },
+  "incl_ties": {
+   "min": 56.7,
+   "max": 100.0,
+   "min_definition": "q1 \u0394s=0.5 \u0394r=5.0 smooth=1",
+   "max_definition": "q1 \u0394s=1.5 \u0394r=2.0 smooth=5",
+   "includes_both_56_and_84": false
+  },
+  "fwd_plus_tie_over_identifiable": {
+   "min": 56.6667,
+   "max": 100.0,
+   "min_definition": "q1 \u0394s=0.5 \u0394r=5.0 smooth=1",
+   "max_definition": "q1 \u0394s=1.5 \u0394r=2.0 smooth=5",
+   "includes_both_56_and_84": false
+  },
+  "fwd_plus_tie_over_n": {
+   "min": 50.0,
+   "max": 92.8571,
+   "min_definition": "q1 \u0394s=0.5 \u0394r=5.0 smooth=1",
+   "max_definition": "q1 \u0394s=1.5 \u0394r=2.0 smooth=5",
+   "includes_both_56_and_84": false
+  }
+ },
+ "conclusion": "The reproducible quantities are: weak tie share of identifiable countries 56.67-88.46%; of all n 50.00-82.14%; forward_share_incl_ties 56.70-100.00%; (forward+forward_or_tie)/identifiable 56.67-100.00%; (forward+forward_or_tie)/n 50.00-92.86%. None spans 56-84, and restricting to q1-only or non-survival definitions does not change this. The REPORT's 56-84% line is a stale or hand-rounded range; it should be replaced by one of the reproducible quantities with its denominator stated.",
+ "reproduces": "scripts/erratum_check_n3_prose.py (this record, task-10)."
+}

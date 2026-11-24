@@ -156,3 +156,78 @@ One further prose-vs-data mismatch was found, **outside the two issues this erra
   `forward_share_incl_ties` range, with the denominator stated explicitly). Downstream papers: Paper M quotes the
   E6 demand-first range and N3's *strict demand-first* range (0.0–30.8%, median 10.45) but **not** the 56–84% line,
   so no paper text is affected.
+
+
+---
+
+## §C — the N3 line "weak forward-or-tie share ranges 56–84%" does not reproduce
+
+*(Added 25 Nov 2026, task-10. This section closes the "Additional audit note" item above.)*
+
+### Where
+
+`REPORT.md`, §3 N3, the "Result" paragraph. Original sentence (retained; a `CORRECTION` pointer now follows the
+paragraph):
+
+> **Result (`results/n3_table.csv`, 54 definitions; all have ≥20 countries).** The **demand-first strict share
+> ranges 0.0–30.8% across definitions, median 10.45%**; the **weak forward-or-tie share ranges 56–84%** (ties and
+> left-censoring dominate because GGDC demand take-offs are often at the series start).
+
+### What reproduces, and from what
+
+Source file: `results/n3_table.csv` (54 committed definitions; all have n ≥ 20). Candidate "weak forward-or-tie"
+quantities and their exact ranges across all 54 definitions:
+
+| quantity | denominator | range | min / max definition |
+|---|---|---|---|
+| weak tie (`forward_or_tie`) | identifiable = `n − undetermined` | **56.67–88.46%** | min `q1 Δs=0.5 Δr=5.0 smooth=1`; max `q1 Δs=1.5 Δr=2.0 smooth=7` |
+| weak tie (`forward_or_tie`) | all countries in the definition (`n`) | **50.00–82.14%** | same definitions |
+| `forward_share_incl_ties` ((forward + forward_or_tie) / identifiable) | identifiable | **56.70–100.00%** | min `q1 Δs=0.5 Δr=5.0 smooth=1`; max `q1 Δs=1.5 Δr=2.0 smooth=5` |
+| (forward + `forward_or_tie`) | identifiable | **56.67–100.00%** | as above |
+| (forward + `forward_or_tie`) | `n` | **50.00–92.86%** | as above |
+
+**No denominator gives a range with endpoints 56 and 84.** Restricting the sweep to the 36 unsmoothed q1
+definitions, or to the 36 non-survival definitions, gives the identical endpoint pairs (56.67–88.46 /
+50.00–82.14 / 56.70–100.00), so the clause is not a subset artefact either. The lower endpoint 56 only matches the
+lower end of the weak-tie/identifiable quantity (56.67, i.e. 17/30); **no** quantity has 84 as an upper endpoint
+(nearest: 82.14 for weak tie/`n`; 88.46 for weak tie/identifiable). The line is therefore a **stale or
+hand-rounded prose range**, not an error in `results/n3_table.csv` (the table itself is the reproducible object;
+its strict demand-first 0.0–30.8% / median 10.45% and its q1 default 6.2 / 70.6 / 17.6 / 5.9 all reproduce).
+
+**Recommended replacement** (state the denominator explicitly): "the weak tie share of identifiable countries
+ranges 56.7–88.5%, or 50.0–82.1% of all countries in each definition; including weak-forward cases,
+`forward_share_incl_ties` ranges 56.7–100.0%".
+
+### Reproduction command
+
+```
+python3 scripts/erratum_check_n3_prose.py      # reads results/n3_table.csv; writes results/erratum_check_n3.json
+```
+
+### Effect on the papers
+
+**None.** Paper M (`research/paper-massification-2026-11-25` @ `fb9f419`) and Paper N1
+(`research/paper-sequencing-novel-2026-11-25` @ `62c27a3`) quote the N3 **strict demand-first** range
+(0.0–30.8%, median 10.45%) and the E6 demand-first range (10.0–24.1%, bounds 6.7–53.0%, weak ties 21–43%); neither
+quotes the weak forward-or-tie range. No paper text depends on 56–84%.
+
+### Other prose-vs-table ranges found by this scan (listed, not silently fixed)
+
+The scan also checked every other prose range in `REPORT.md`. All reproduced except two loose/stale ranges, which
+are recorded here for a follow-up correction and are **not** changed in this commit:
+
+1. **`REPORT.md` §2 "Estimator" paragraph (line 85): "25–30 control countries per event."** From
+   `results/e8_results.json` (`SE.PRM.ENRR_verified8`, field `n_controls`, all eleven event rows) the observed range
+   is **28–30** (min 28, max 30). "25–30" is loose rather than false — the observed values sit inside it — but the
+   lower endpoint 25 is not realised; the exact statement is 28–30.
+2. **`REPORT.md` §2 "Decision-rule assessment" paragraph (line 121): "(mean post 18–29 points against ~0 under
+   placebo)."** The reproducible mean-post quantities from `results/e8_results.json` are: mean of the CS post
+   ATTs at +1..+6 = **25.26**; sensitivity `mean_att_post` = 12.31 (`all+1`), 18.65 (`all-1`), 20.80 (`all12`),
+   **18.17–26.16** (leave-one-out), **−0.39** (placebo). No quantity spans 18–29, so this line looks like a stale
+   value from an earlier table; a reproducible replacement would be "mean post 12.3–26.2 across the ±1-year and
+   leave-one-out checks, against −0.39 under the placebo".
+
+Everything else audited reproduced: E6 demand-first 10–24% of identifiable countries and weak ties 21–43% of
+in-window countries; E6 bounds 6.7–53.0%; the eight E6 table rows (0 mismatches); the eleven E8 event-table rows
+(0 mismatches); E8 leave-one-out 18.17–26.16 and t0 7.00–13.94; 7–8 treated countries; N3 54 definitions all with
+n ≥ 20; q1 default 6.2 / 70.6 / 17.6 / 5.9 and bounds 5.9–82.4; and the 100% below-75% statement.
