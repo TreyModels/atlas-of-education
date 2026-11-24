@@ -28,14 +28,16 @@ associations are stated as associations.
 | E11 fertility audit (EFR vs TFR, placebo ladder) | `research/e11-fertility-audit-2026-11-25` | `e926575` | `research/records/2026-11-25-e11-fertility-audit/` |
 | Source verification (fee dates, demand series, prior art; metadata erratum on `9a0fd69`) | `research/codex-source-verification-2026-11-25` | `ea6bc61` | `research/records/2026-11-25-codex-source-verification/` |
 | Methods paper (multiverse) | `research/methods-multiverse-paper-2026-11-23` | `d7e8f9f` | `research/records/2026-11-23-multiverse-paper/` |
-| Paper F (fertility; rounding erratum on `ec899cc`) | `research/paper-fertility-2026-11-25` | `4f8a61c` | `research/records/2026-11-25-paper-fertility/` |
+| Paper F (fertility; rounding correction applied; erratum commits `4f8a61c` + `23928e0`; data unchanged) | `research/paper-fertility-2026-11-25` | `23928e0` | `research/records/2026-11-25-paper-fertility/` |
 
 Q3's substantive verification was at `075c8c3`; `db7814d` is a documentation-only addendum (the 1,200-draw
 cross-reference paragraph) and is the final head. Paper F's assembled draft (with the E11 text changes) is now at
-`4f8a61c`. Verification status per item is from the ledger @ `51f9f02`, not re-audited here; the **numbers** are
-recomputed in §6. **Record heads advanced after the consolidated errata pass (task-12): Q2 `f71b789 → 9a4f586`; E1
-`7e6f7b5 → 6a452a4`; E6/E8 `59d31d7 → bd782be`; source verification `9a0fd69 → ea6bc61`; Paper F `ec899cc →
-4f8a61c` — each an additive erratum commit (erratum only; data unchanged).** The corrections are folded into §2.1(d),
+`23928e0`; the −0.227 rounding correction is **applied**, and the rebuilt draft prints −0.227 (0 × −0.228).
+Verification status per item is from the ledger @ `51f9f02`, not re-audited here; the **numbers** are
+recomputed in §6. **Record heads advanced after the consolidated errata pass (task-12), each an additive erratum
+commit with data unchanged: Q2 `f71b789 → 9a4f586`; E1 `7e6f7b5 → 6a452a4`; E6/E8 `59d31d7 → bd782be`; source
+verification `9a0fd69 → ea6bc61`; Paper F `ec899cc → 4f8a61c → 23928e0` (draft correction applied; erratum commits
+`4f8a61c` + `23928e0`; data unchanged).** The corrections are folded into §2.1(d),
 §2.3, §2.4, the §3 erratum list, and the §6 R1/R4/R5/R6/R7/R10 rows; none changes a recomputed headline number.
 
 ---
@@ -175,7 +177,7 @@ divergent paths is supportable, and none is made.
 6. **"400 draws can certify nothing" was already retracted before this wave.** Nominal BH certifies a floor cluster
    (35 up links at 400; 41 at 1,200). The dependence-robust reading remains a separate, conditional statement.
 7. **"The level relation is a development gradient, not an identified schooling effect" was too strong**
-   (Codex F11; Paper F, F11 text at `ec899cc`, record head `4f8a61c`). The paper now says: the level association is consistent with (i) a common
+   (Codex F11; Paper F, F11 text at `ec899cc`, record head `23928e0`). The paper now says: the level association is consistent with (i) a common
    development gradient, (ii) anticipation/quantity-quality, and (iii) a schooling effect with a long lag, and this
    design **cannot distinguish them**. "Causal claim rejected" is not a claim the project is entitled to make.
 8. **The supply-led framing of massification was softened** (E6/E8, Paper M revision branch). The defensible
@@ -200,8 +202,9 @@ changes a recomputed headline number above. Pinned to the errata heads:
 - **Source-verification metadata** (`ea6bc61`): 24 prior-art works checked = **21 V (DOI verified) / 2 U (no DOI) /
   1 W (working-paper version)**; the `9a0fd69` commit message's "24 DOI-verified" is a metadata overstatement, not a
   status change.
-- **Paper F rounding** (`4f8a61c`): the total-attainment level coefficient is **−0.227458**, i.e. **−0.227** at
-  three decimals, not −0.228; substance unchanged.
+- **Paper F rounding** (`4f8a61c` erratum; **APPLIED** at `23928e0`): the total-attainment level coefficient is
+  **−0.227458**, which prints as **−0.227** (3 occurrences in the rebuilt draft; 0 × −0.228); four source
+  occurrences were corrected and the draft rebuilt. Data unchanged; substance unchanged (ERRATUM §B).
 
 ---
 
