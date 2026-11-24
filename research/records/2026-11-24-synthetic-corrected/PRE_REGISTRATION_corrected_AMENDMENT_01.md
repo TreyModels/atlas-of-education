@@ -1,5 +1,20 @@
 # PRE-REGISTRATION AMENDMENT_01 — corrected small experiment (matrix layer)
 
+## STATUS UPDATE — 2026-11-24 (post-review)
+
+**This amendment is NOT an active pre-registration.** Codex reviewed it and **declined it as a
+confirmatory design** (Bridge message `2026-11-24T12:23:07Z`): it materially changes the
+committed 5-group grid to 80 groupings, changes the outcome scale and analysis, and the
+generic standardised 0.05 margin still lacks substantive justification. It is retained in
+this record **only as a proposed exploratory follow-up**, as Codex allowed; it may be
+considered only as part of a later, well-specified and independently reviewed prospective
+design. **No run used this amendment:** the 2026-11-24 exploratory matrix + Phase B run used
+the Codex audited implementation (`a12d357`) of the committed corrected pre-registration at
+`77d6f23` — see `RUN_REPORT.md`. Anything below that conflicts with the committed
+pre-registration remains a proposal, not a claim.
+
+---
+
 **Status: committed BEFORE any confirmatory run.** This document amends
 `research/records/2026-11-24-synthetic-matrix-v2/PRE_REGISTRATION_corrected.md`
 (commit `77d6f23`, blob `618f4d1c…`, sha256 `eab63120…`). It supplies the definitions

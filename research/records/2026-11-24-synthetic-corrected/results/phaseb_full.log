@@ -1,0 +1,204 @@
+{
+  "path": "phaseb_full_EXPLORATORY.json",
+  "label": "SIMULATION ONLY \u2014 upstream calibrated model",
+  "n_units": 1120,
+  "dynamic_classifiers": {
+    "B1": {
+      "heldout": {
+        "status": "descriptive_only",
+        "feature": "B1",
+        "n": 240,
+        "correct": 228,
+        "accuracy": 0.95,
+        "per_world_n": {
+          "P": 60,
+          "S": 60,
+          "C": 60,
+          "R": 60
+        },
+        "per_world_recall": {
+          "P": 0.9833333333333333,
+          "S": 0.9666666666666667,
+          "C": 0.8833333333333333,
+          "R": 0.9666666666666667
+        },
+        "seed_block_permutation_p": 0.0004997501249375312,
+        "holm_adjusted_p": 0.0014992503748125937
+      },
+      "replication": {
+        "status": "descriptive_only",
+        "feature": "B1",
+        "n": 240,
+        "correct": 227,
+        "accuracy": 0.9458333333333333,
+        "per_world_n": {
+          "P": 60,
+          "S": 60,
+          "C": 60,
+          "R": 60
+        },
+        "per_world_recall": {
+          "P": 1.0,
+          "S": 1.0,
+          "C": 0.9333333333333333,
+          "R": 0.85
+        },
+        "seed_block_permutation_p": 0.0004997501249375312
+      },
+      "exploratory_pattern": "no_exploratory_separation_pattern"
+    },
+    "B2": {
+      "heldout": {
+        "status": "descriptive_only",
+        "feature": "B2",
+        "n": 240,
+        "correct": 102,
+        "accuracy": 0.425,
+        "per_world_n": {
+          "P": 60,
+          "S": 60,
+          "C": 60,
+          "R": 60
+        },
+        "per_world_recall": {
+          "P": 0.9333333333333333,
+          "S": 0.016666666666666666,
+          "C": 0.7333333333333333,
+          "R": 0.016666666666666666
+        },
+        "seed_block_permutation_p": 0.0004997501249375312,
+        "holm_adjusted_p": 0.0014992503748125937
+      },
+      "replication": {
+        "status": "descriptive_only",
+        "feature": "B2",
+        "n": 240,
+        "correct": 100,
+        "accuracy": 0.4166666666666667,
+        "per_world_n": {
+          "P": 60,
+          "S": 60,
+          "C": 60,
+          "R": 60
+        },
+        "per_world_recall": {
+          "P": 0.8666666666666667,
+          "S": 0.1,
+          "C": 0.7,
+          "R": 0.0
+        },
+        "seed_block_permutation_p": 0.0004997501249375312
+      },
+      "exploratory_pattern": "admissible_separation_pattern"
+    },
+    "B3": {
+      "heldout": {
+        "status": "descriptive_only",
+        "feature": "B3",
+        "n": 240,
+        "correct": 70,
+        "accuracy": 0.2916666666666667,
+        "per_world_n": {
+          "P": 60,
+          "S": 60,
+          "C": 60,
+          "R": 60
+        },
+        "per_world_recall": {
+          "P": 0.2,
+          "S": 0.35,
+          "C": 0.06666666666666667,
+          "R": 0.55
+        },
+        "seed_block_permutation_p": 0.06596701649175413,
+        "holm_adjusted_p": 0.06596701649175413
+      },
+      "replication": {
+        "status": "descriptive_only",
+        "feature": "B3",
+        "n": 240,
+        "correct": 87,
+        "accuracy": 0.3625,
+        "per_world_n": {
+          "P": 60,
+          "S": 60,
+          "C": 60,
+          "R": 60
+        },
+        "per_world_recall": {
+          "P": 0.2,
+          "S": 0.5166666666666667,
+          "C": 0.06666666666666667,
+          "R": 0.6666666666666666
+        },
+        "seed_block_permutation_p": 0.0004997501249375312
+      },
+      "exploratory_pattern": "no_exploratory_separation_pattern"
+    }
+  },
+  "s0_descriptive": {
+    "B1": {
+      "heldout": {
+        "status": "descriptive_only",
+        "feature": "B1",
+        "n": 240,
+        "correct": 73,
+        "accuracy": 0.30416666666666664,
+        "per_world_n": {
+          "P": 60,
+          "S": 60,
+          "C": 60,
+          "R": 60
+        },
+        "per_world_recall": {
+          "P": 0.06666666666666667,
+          "S": 0.5833333333333334,
+          "C": 0.03333333333333333,
+          "R": 0.5333333333333333
+        }
+      }
+    },
+    "B2": {
+      "heldout": {
+        "status": "descriptive_only",
+        "feature": "B2",
+        "n": 240,
+        "correct": 61,
+        "accuracy": 0.25416666666666665,
+        "per_world_n": {
+          "P": 60,
+          "S": 60,
+          "C": 60,
+          "R": 60
+        },
+        "per_world_recall": {
+          "P": 0.016666666666666666,
+          "S": 0.38333333333333336,
+          "C": 0.05,
+          "R": 0.5666666666666667
+        }
+      }
+    },
+    "B3": {
+      "heldout": {
+        "status": "descriptive_only",
+        "feature": "B3",
+        "n": 240,
+        "correct": 56,
+        "accuracy": 0.23333333333333334,
+        "per_world_n": {
+          "P": 60,
+          "S": 60,
+          "C": 60,
+          "R": 60
+        },
+        "per_world_recall": {
+          "P": 0.03333333333333333,
+          "S": 0.4166666666666667,
+          "C": 0.016666666666666666,
+          "R": 0.4666666666666667
+        }
+      }
+    }
+  }
+}

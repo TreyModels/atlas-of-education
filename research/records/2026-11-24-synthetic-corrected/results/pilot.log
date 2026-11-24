@@ -1,0 +1,130 @@
+=== PILOT START 2026-11-24T12:24:31Z ===
+Tue Nov 24 12:24:31 UTC 2026
+ 20:24:31 up 422 days, 23:51,  0 users,  load average: 3.53, 3.98, 5.12
+
+=== UNIT TESTS ===
+test_five_year_windows_have_more_observations (test_corrected.MatrixChecks) ... ok
+test_null_is_shared_baseline_not_world_label (test_corrected.MatrixChecks) ... ok
+test_paired_contrast_uses_block_variation (test_corrected.MatrixChecks) ... ok
+test_planned_full_design_has_no_seed_collisions (test_corrected.MatrixChecks) ... ok
+test_rank_deficiency_is_not_fabricated (test_corrected.MatrixChecks) ... ok
+test_seed_is_repeatable_and_namespaced (test_corrected.MatrixChecks) ... ok
+test_simulator_repeats_and_changes_by_block (test_corrected.MatrixChecks) ... ok
+test_b1_is_missing_not_zero_without_events (test_phaseb_corrected.PhaseBCorrectedSmoke) ... ok
+test_classifier_accounts_for_missingness (test_phaseb_corrected.PhaseBCorrectedSmoke) ... ok
+test_death_only_changes_next_two_year_hazards (test_phaseb_corrected.PhaseBCorrectedSmoke) ... ok
+test_death_remains_attached_to_interval_beyond_two_year_hazard_window (test_phaseb_corrected.PhaseBCorrectedSmoke) ... ok
+test_null_uses_independent_samples_instead_of_relabelled_clone (test_phaseb_corrected.PhaseBCorrectedSmoke) ... ok
+test_sha256_namespaced_seed_registry_has_no_collisions (test_phaseb_corrected.PhaseBCorrectedSmoke) ... ok
+test_smoke_result_has_separate_blocks_and_null_units (test_phaseb_corrected.PhaseBCorrectedSmoke) ... ok
+test_within_mother_support_and_finite_when_estimable (test_phaseb_corrected.PhaseBCorrectedSmoke) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 0.472s
+
+OK
+unittest_wall_s=1
+
+=== SMOKE ===
+{"output": "pilot_smoke.json", "fits": 4200, "estimable": 4100, "comparisons": 4200, "elapsed_s": 3.38}
+smoke_wall_s=3
+
+=== PILOT HARNESS ===
+{
+ "label": "PILOT TIMING PROJECTION ONLY \u2014 not a result",
+ "code_hashes": {
+  "run_corrected.py": "60faefa71200d4b9d2742c659d8da119208d7ad05809751d08b7501e4b864eb2",
+  "phaseb_corrected.py": "c3bc506a1434add728ad4cee1cb0d197a4443138dbce28ccd325ced73d9089d9",
+  "model.py": "b26b756146fb3694f5f2d367c3bab6e5c85abcee0df11bedc373f3efa47000a2",
+  "calibration.json": "6cc3c5701f5ea34d226726f2eee8171b97440632e1675971e40054edf15a839e"
+ },
+ "host": "autodl-container-bbbc11ba52-44a6772d",
+ "nproc": 96,
+ "python": "3.10.8",
+ "numpy": "2.2.6",
+ "started_utc": "2026-11-24T12:24:36Z",
+ "generate_unit_s": 0.056860968470573425,
+ "pool_192_tasks_s": 1.8280486166477203,
+ "pool_tasks_per_s": 105.03002942672829,
+ "projected_generation_3200_s": 30.46747694412867,
+ "pool_ok": true,
+ "full_block_world_series_64runs_s": 3.6192781925201416,
+ "fit_status": {
+  "S1|all": "estimable",
+  "S1|0": "estimable",
+  "S2|all": "estimable",
+  "S2|0": "estimable",
+  "S3|all": "estimable",
+  "S3|0": "estimable",
+  "S4|all": "estimable",
+  "S4|0": "estimable",
+  "S5|all": "estimable",
+  "S5|0": "estimable",
+  "S6|all": "estimable",
+  "S6|0": "estimable"
+ },
+ "fit_times_s": {
+  "S1|all": 0.00315113365650177,
+  "S1|0": 0.0010847672820091248,
+  "S2|all": 0.0038159340620040894,
+  "S2|0": 0.0012338683009147644,
+  "S3|all": 0.0163130983710289,
+  "S3|0": 0.00254947692155838,
+  "S4|all": 0.0031743645668029785,
+  "S4|0": 0.0010576620697975159,
+  "S5|all": 0.004037976264953613,
+  "S5|0": 0.0012486502528190613,
+  "S6|all": 0.004033707082271576,
+  "S6|0": 0.0012414753437042236
+ },
+ "fit_S1_all_with_dose_s": 0.005708865821361542,
+ "fit_S4_inc_unestimable_s": 9.834766387939453e-07,
+ "fit_S4_inc_status": "income outcome cannot be adjusted for itself",
+ "projected_fit_serial_s": 49.523282796144485,
+ "projected_fit_by_spec": {
+  "S1": {
+   "all_calls": 700,
+   "sub_calls": 2800,
+   "projected_s": 7.0335544645786285
+  },
+  "S2": {
+   "all_calls": 700,
+   "sub_calls": 2800,
+   "projected_s": 6.125985085964203
+  },
+  "S3": {
+   "all_calls": 700,
+   "sub_calls": 2800,
+   "projected_s": 18.557704240083694
+  },
+  "S4": {
+   "all_calls": 700,
+   "sub_calls": 2800,
+   "projected_s": 5.183508992195129
+  },
+  "S5": {
+   "all_calls": 700,
+   "sub_calls": 2800,
+   "projected_s": 6.322804093360901
+  },
+  "S6": {
+   "all_calls": 700,
+   "sub_calls": 2800,
+   "projected_s": 6.299725919961929
+  }
+ },
+ "projected_matrix_wall_s": 84.99075974027315,
+ "projected_matrix_wall_min": 1.4165126623378859,
+ "one_fit_record_bytes": 304,
+ "estimated_output_json_mb": 8.064,
+ "phaseb_upstream_kernel_unit_s": 0.0493045300245285,
+ "phaseb_fertility_unit_4000women_s": 0.08390813320875168,
+ "phaseb_blocked_permutation_2000reps_s": 0.6151285246014595,
+ "phaseb_permutation_available": true,
+ "projected_phaseb_wall_s": 142.1810513585806,
+ "projected_phaseb_wall_min": 2.3696841893096763,
+ "pilot_peak_traced_mb": 2.513009,
+ "finished_utc": "2026-11-24T12:24:43Z"
+}
+harness_wall_s=8
+=== PILOT END 2026-11-24T12:24:43Z ===

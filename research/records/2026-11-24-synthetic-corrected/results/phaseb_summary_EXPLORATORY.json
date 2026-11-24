@@ -1,0 +1,202 @@
+{
+ "label": "SIMULATION \u2014 EXPLORATORY (Phase B; not a confirmatory test)",
+ "run_mode": "full_upstream_simulation",
+ "wall_seconds": 132.124,
+ "n_units": 1120,
+ "n_units_main": 560,
+ "n_units_s0": 560,
+ "design": {
+  "n_calibration_per_world": 20,
+  "n_heldout_per_world": 60,
+  "n_replication_per_world": 60,
+  "model_households": 10000,
+  "women_per_fertility_unit": 4000,
+  "worlds": [
+   "P",
+   "S",
+   "C",
+   "R"
+  ],
+  "heldout_permutation_reps": 2000,
+  "seed_rule": "SHA-256 namespaced (mode, split, k, world) keys, collision-resolved in 32-bit model seed space; s0 uses common null nuisance and one shared upstream seed per split/k; fertility null histories use independent world-specific seeds"
+ },
+ "feature_gates": {
+  "B1": {
+   "feature": "B1",
+   "n": 80,
+   "r2": 0.9519898626195114,
+   "rejected": true,
+   "threshold": 0.9,
+   "status": "tested"
+  },
+  "B2": {
+   "feature": "B2",
+   "n": 80,
+   "r2": 0.10579881063764929,
+   "rejected": false,
+   "threshold": 0.9,
+   "status": "tested"
+  },
+  "B3": {
+   "feature": "B3",
+   "n": 80,
+   "r2": 0.11591567522998236,
+   "rejected": false,
+   "threshold": 0.9,
+   "status": "tested"
+  }
+ },
+ "classifiers": {
+  "B1": {
+   "heldout": {
+    "accuracy": 0.95,
+    "n": 240,
+    "seed_block_permutation_p": 0.0004997501249375312,
+    "holm_adjusted_p": 0.0014992503748125937,
+    "per_world_recall": {
+     "P": 0.9833333333333333,
+     "S": 0.9666666666666667,
+     "C": 0.8833333333333333,
+     "R": 0.9666666666666667
+    }
+   },
+   "replication": {
+    "accuracy": 0.9458333333333333,
+    "n": 240,
+    "seed_block_permutation_p": 0.0004997501249375312
+   },
+   "exploratory_pattern": "no_exploratory_separation_pattern"
+  },
+  "B2": {
+   "heldout": {
+    "accuracy": 0.425,
+    "n": 240,
+    "seed_block_permutation_p": 0.0004997501249375312,
+    "holm_adjusted_p": 0.0014992503748125937,
+    "per_world_recall": {
+     "P": 0.9333333333333333,
+     "S": 0.016666666666666666,
+     "C": 0.7333333333333333,
+     "R": 0.016666666666666666
+    }
+   },
+   "replication": {
+    "accuracy": 0.4166666666666667,
+    "n": 240,
+    "seed_block_permutation_p": 0.0004997501249375312
+   },
+   "exploratory_pattern": "admissible_separation_pattern"
+  },
+  "B3": {
+   "heldout": {
+    "accuracy": 0.2916666666666667,
+    "n": 240,
+    "seed_block_permutation_p": 0.06596701649175413,
+    "holm_adjusted_p": 0.06596701649175413,
+    "per_world_recall": {
+     "P": 0.2,
+     "S": 0.35,
+     "C": 0.06666666666666667,
+     "R": 0.55
+    }
+   },
+   "replication": {
+    "accuracy": 0.3625,
+    "n": 240,
+    "seed_block_permutation_p": 0.0004997501249375312
+   },
+   "exploratory_pattern": "no_exploratory_separation_pattern"
+  }
+ },
+ "s0_null_descriptive": {
+  "B1": 0.30416666666666664,
+  "B2": 0.25416666666666665,
+  "B3": 0.23333333333333334
+ },
+ "denominators": {
+  "B1": {
+   "n_exposed_intervals": {
+    "median": 7824.5,
+    "min": 5021,
+    "max": 10110
+   },
+   "n_unexposed_intervals": {
+    "median": 12844.0,
+    "min": 11283,
+    "max": 14310
+   },
+   "n_mothers_with_both": {
+    "median": 3716.5,
+    "min": 3102,
+    "max": 3932
+   },
+   "estimable_fraction": 1.0
+  },
+  "B2": {
+   "n_parity1_low_median": 3096.0,
+   "n_parity1_high_median": 903.5,
+   "missing": 0
+  },
+  "B3": {
+   "n_first_birth_low_median": 3096.0,
+   "n_first_birth_high_median": 903.5,
+   "missing": 0
+  }
+ },
+ "feature_means_by_world": {
+  "P": {
+   "n": 140,
+   "B1_mean": 2.000686261076514,
+   "B2_mean": 3.955039161035932e-05,
+   "B3_mean": 0.08409852781361142
+  },
+  "S": {
+   "n": 140,
+   "B1_mean": 2.402256500657592,
+   "B2_mean": 0.0006345104595269158,
+   "B3_mean": 0.13177534961349807
+  },
+  "C": {
+   "n": 140,
+   "B1_mean": 2.65246511695175,
+   "B2_mean": 0.00219695298112585,
+   "B3_mean": 0.19491301378931514
+  },
+  "R": {
+   "n": 140,
+   "B1_mean": 2.1671911725646544,
+   "B2_mean": 9.735251037493017e-05,
+   "B3_mean": 0.06548787255135814
+  }
+ },
+ "limitations": [
+  "Simulation only; not empirical evidence and no causal interpretation.",
+  "Each mechanism label uses its own calibration-chosen nuisance vector; classifier separation is conditional on those nuisance values and cannot be attributed uniquely to mechanism labels. A matched-nuisance alternative is not implemented.",
+  "Admissibility regresses each feature on the upstream school-utility weight vector plus simulated GER_post and child-labor_post; it is feature-specific and not a proof of causal independence.",
+  "The classifier and seed-block permutation analysis are exploratory simulation diagnostics and differ from the original preregistered binomial analysis; do not call these preregistered significance tests.",
+  "Held-out permutation p-values retain balanced seed-index blocks and have finite Monte Carlo resolution; they are diagnostics under this model design.",
+  "Replication permutation p-values are unadjusted secondary diagnostics; Holm adjustment applies to the three exploratory held-out feature tests only.",
+  "s=0 control classifiers are descriptive and are not used to choose thresholds or declare a result.",
+  "The birth-history layer remains a minimal approximation, not a full fertility ABM or DHS transport analysis."
+ ],
+ "not_implemented": [
+  "Rm misspecified world (explicitly NOT IMPLEMENTED in this run)",
+  "fertility-stratum macro FE",
+  "matched-nuisance follow-up",
+  "formal full-control label-permutation validation",
+  "Amendment_01 design (declined by Codex as confirmatory design)"
+ ],
+ "upstream": {
+  "model_path": "/root/work/corrected-codex/model.py",
+  "calibration_path": "calibration.json",
+  "backend": "numpy",
+  "model_layout": {
+   "N": 10000,
+   "years": 25,
+   "threads": 256,
+   "blocks": 40,
+   "backend": "mlx",
+   "backend_note": "port MLX transcription; NumPy fallback available"
+  }
+ }
+}

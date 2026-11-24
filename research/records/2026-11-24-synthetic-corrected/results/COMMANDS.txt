@@ -1,0 +1,8 @@
+PILOT (bounded, representative):
+  cd /root/work/corrected-codex
+  /root/miniconda3/bin/python -m unittest -v test_corrected test_phaseb_corrected
+  /root/miniconda3/bin/python run_corrected.py --smoke --workers 4 --output pilot_smoke.json
+  /root/miniconda3/bin/python pilot_harness.py > pilot_projection.json
+FULL (only after pilot projection accepted):
+  nohup /root/miniconda3/bin/python run_corrected.py --workers 96 --output matrix_full_EXPLORATORY.json > matrix_full.log 2>&1 &
+  nohup /root/miniconda3/bin/python phaseb_corrected.py --full --calibration-path calibration.json --out phaseb_full_EXPLORATORY.json > phaseb_full.log 2>&1 &

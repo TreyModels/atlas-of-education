@@ -60,3 +60,8 @@ must not block on Phase B).
 `--smoke` (2 blocks, 8 countries, N=1,000) exists only to exercise every code path on
 hash-verified files. If the smoke fails, the verified-copy traceback is reported and the full
 run is not launched. Smoke output is `results_smoke/` and is never quoted as a result.
+
+> **STATUS (2026-11-24, post-review): UNRUN DRAFT — SUPERSEDED.** This declaration and the
+> `synth_loop/` driver beside it describe an earlier draft (commit `90e6a1b`) that was never run.
+> The 2026-11-24 exploratory run used the Codex audited implementation (`a12d357`) of the
+> committed 5-group grid — see `RUN_REPORT.md`. The draft is retained only for provenance.

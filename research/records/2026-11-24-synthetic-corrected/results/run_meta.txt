@@ -1,0 +1,55 @@
+=== FULL MATRIX LAUNCH 2026-11-24T12:24:51Z ===
+cmd: nohup /root/miniconda3/bin/python run_corrected.py --workers 96 --output matrix_full_EXPLORATORY.json > matrix_full.log 2>&1
+NOTE: script writes results only at completion; interruption loses in-progress computation; EXPloratory only; raw 0.05 margin provisional; Rm NOT IMPLEMENTED.
+=== MATRIX FULL DONE 2026-11-24T12:27:11Z ===
+stdout: {"output": "matrix_full_EXPLORATORY.json", "fits": 21000, "estimable": 20500, "comparisons": 4200, "elapsed_s": 87.56}
+ff6dd729924e3e05762a431fa3cc6564a50e14a0df98e6a94a05ed0309d1509c  matrix_full_EXPLORATORY.json
+60faefa71200d4b9d2742c659d8da119208d7ad05809751d08b7501e4b864eb2  run_corrected.py
+b26b756146fb3694f5f2d367c3bab6e5c85abcee0df11bedc373f3efa47000a2  model.py
+6cc3c5701f5ea34d226726f2eee8171b97440632e1675971e40054edf15a839e  calibration.json
+=== PHASEB FULL LAUNCH 2026-11-24T12:27:11Z ===
+cmd: nohup /root/miniconda3/bin/python phaseb_corrected.py --full --calibration-path calibration.json --out phaseb_full_EXPLORATORY.json > phaseb_full.log 2>&1
+=== PHASEB FULL DONE 2026-11-24T12:29:31Z ===
+{
+  "path": "phaseb_full_EXPLORATORY.json",
+  "label": "SIMULATION ONLY \u2014 upstream calibrated model",
+  "n_units": 1120,
+  "dynamic_classifiers": {
+    "B1": {
+      "heldout": {
+        "status": "descriptive_only",
+        "feature": "B1",
+        "n": 240,
+        "correct": 228,
+        "accuracy": 0.95,
+        "per_world_n": {
+          "P": 60,
+          "S": 60,
+          "C": 60,
+   
+97ce46b1256cdbe6cf104e971d5d01339b685ea34f71035a20c547b8226810ca  phaseb_full_EXPLORATORY.json
+c3bc506a1434add728ad4cee1cb0d197a4443138dbce28ccd325ced73d9089d9  phaseb_corrected.py
+files:
+total 14624
+drwxr-xr-x  4 root root     4096 Nov 24 20:29 .
+drwxr-xr-x 10 root root     4096 Nov 24 20:24 ..
+-rw-r--r--  1 root root      644 Nov 24 20:24 COMMANDS.txt
+-rw-r--r--  1 root root     5997 Nov 24 20:24 PRE_REGISTRATION_MAPPING.md
+-rw-r--r--  1 root root     2148 Nov 24 20:24 SMOKE_TEST.md
+drwxr-xr-x  2 root root      219 Nov 24 20:24 __pycache__
+-rw-r--r--  1 root root     5243 Nov 24 20:24 calibration.json
+-rw-r--r--  1 root root      119 Nov 24 20:26 matrix_full.log
+-rw-r--r--  1 root root 10635055 Nov 24 20:26 matrix_full_EXPLORATORY.json
+-rw-r--r--  1 root root     6512 Nov 24 20:24 model.py
+-rw-r--r--  1 root root    21753 Nov 24 20:24 phaseb_corrected.py
+-rw-r--r--  1 root root     4977 Nov 24 20:29 phaseb_full.log
+-rw-r--r--  1 root root   713813 Nov 24 20:29 phaseb_full_EXPLORATORY.json
+-rw-r--r--  1 root root     4821 Nov 24 20:24 pilot.log
+-rw-------  1 root root     7286 Nov 24 20:24 pilot_harness.py
+-rw-r--r--  1 root root     2926 Nov 24 20:24 pilot_projection.json
+-rw-r--r--  1 root root  3498429 Nov 24 20:24 pilot_smoke.json
+drwxr-xr-x  3 root root       87 Nov 24 20:24 port_backend
+-rw-r--r--  1 root root     7709 Nov 24 20:24 run_corrected.py
+-rw-r--r--  1 root root     1689 Nov 24 20:29 run_meta.txt
+-rw-r--r--  1 root root     2167 Nov 24 20:24 test_corrected.py
+-rw-r--r--  1 root root     3742 Nov 24 20:24 test_phaseb_corrected.py
