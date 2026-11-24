@@ -1,0 +1,55 @@
+{
+ "method": "equal-weight rejection ABC, 5000 draws, top 10% accepted (500)",
+ "targets": {
+  "ger": 0.8,
+  "cl_children_in_employment": 0.3139927849940632,
+  "study_work_share_of_employed": 0.7
+ },
+ "construct_notes": [
+  "children in employment != child labour",
+  "model cl is a share of children; WDI SL.TLF.0714.ZS is the children-in-employment share",
+  "study+work share is a share of employed children (WDI SW.ZS)"
+ ],
+ "logged_nuisances": {
+  "sigma_y": 0.55,
+  "sigma_a": 0.2,
+  "mu_y": 0.0,
+  "mu_a": 1.0,
+  "f_pub_pre": 0.0,
+  "y_sub0": 0.85,
+  "w_child": 0.15,
+  "shadow_cost": 0.32
+ },
+ "identifiability": {
+  "w_pov": {
+   "q05": 0.09261291660314198,
+   "median": 1.1481434644830322,
+   "q95": 2.7079138140180925,
+   "width_ratio": 0.8717669658049835,
+   "identified": false
+  },
+  "w_push": {
+   "q05": 0.03624074006922774,
+   "median": 0.40757266041438334,
+   "q95": 1.1627532969075223,
+   "width_ratio": 0.37550418561276483,
+   "identified": true
+  },
+  "w_tutor": {
+   "q05": 1.8204358877418765,
+   "median": 2.584251887332796,
+   "q95": 2.9547892913076743,
+   "width_ratio": 0.3781178011885993,
+   "identified": true
+  },
+  "div": {
+   "q05": 0.010628085775925635,
+   "median": 0.11459683819898346,
+   "q95": 0.3034242675921186,
+   "width_ratio": 0.8365605194748371,
+   "identified": false
+  }
+ },
+ "n_accepted": 500,
+ "label": "SIMULATION-pre-audit"
+}

@@ -1,0 +1,379 @@
+{
+ "units": {
+  "calibration": 80,
+  "heldout": 240,
+  "replication": 240
+ },
+ "seeds": {
+  "calibration": [
+   20261125,
+   20263025
+  ],
+  "heldout": [
+   20263125,
+   20269025
+  ],
+  "replication": [
+   20269125,
+   20275025
+  ]
+ },
+ "batch_layout": {
+  "N": 10000,
+  "years": 25,
+  "threads": 256,
+  "blocks": 40,
+  "backend": "numpy",
+  "backend_note": "port MLX transcription; NumPy fallback available"
+ },
+ "chance_band_95": [
+  0.19521633455125514,
+  0.30478366544874486
+ ],
+ "tiebreakers": {
+  "T1": {
+   "admissibility": {
+    "r2_per_component": [
+     0.3112766897439909,
+     0.9805774652114894,
+     0.97214213484313,
+     0.552311348910169
+    ],
+    "max_r2": 0.9805774652114894,
+    "rejected": true,
+    "threshold": 0.9
+   },
+   "heldout": {
+    "accuracy": 0.8458333333333333,
+    "n_train": 80,
+    "n_test": 240,
+    "per_world_recall": {
+     "P": 0.8166666666666667,
+     "S": 1.0,
+     "C": 0.7833333333333333,
+     "R": 0.7833333333333333
+    },
+    "binom_p_one_sided": 6.979349699094642e-84,
+    "valid": true
+   },
+   "replication": {
+    "accuracy": 0.85,
+    "n_train": 80,
+    "n_test": 240,
+    "per_world_recall": {
+     "P": 0.8333333333333334,
+     "S": 0.9666666666666667,
+     "C": 0.8833333333333333,
+     "R": 0.7166666666666667
+    },
+    "binom_p_one_sided": 4.210956877285183e-85,
+    "valid": true
+   },
+   "label_permutation": {
+    "observed_accuracy": 0.8458333333333333,
+    "permutation_median": 0.24583333333333332,
+    "permutation_p95": 0.5625,
+    "p_perm": 0.009900990099009901
+   },
+   "holm_adjusted_p": 2.0938049097283928e-83,
+   "eligible_for_confirmatory_test": false,
+   "beats_chance_heldout": false,
+   "survives_replication": false
+  },
+  "T2": {
+   "admissibility": {
+    "r2_per_component": [
+     0.9781331631180044,
+     0.9089697914697217,
+     0.9903038531065367,
+     0.28345535009828315,
+     0.6445516142444684
+    ],
+    "max_r2": 0.9903038531065367,
+    "rejected": true,
+    "threshold": 0.9
+   },
+   "heldout": {
+    "accuracy": 0.8875,
+    "n_train": 80,
+    "n_test": 240,
+    "per_world_recall": {
+     "P": 0.65,
+     "S": 1.0,
+     "C": 0.9333333333333333,
+     "R": 0.9666666666666667
+    },
+    "binom_p_one_sided": 9.447276917274603e-97,
+    "valid": true
+   },
+   "replication": {
+    "accuracy": 0.875,
+    "n_train": 80,
+    "n_test": 240,
+    "per_world_recall": {
+     "P": 0.5833333333333334,
+     "S": 1.0,
+     "C": 0.9333333333333333,
+     "R": 0.9833333333333333
+    },
+    "binom_p_one_sided": 1.0032555781753283e-92,
+    "valid": true
+   },
+   "label_permutation": {
+    "observed_accuracy": 0.8875,
+    "permutation_median": 0.2708333333333333,
+    "permutation_p95": 0.5635416666666666,
+    "p_perm": 0.009900990099009901
+   },
+   "holm_adjusted_p": 3.778910766909841e-96,
+   "eligible_for_confirmatory_test": false,
+   "beats_chance_heldout": false,
+   "survives_replication": false
+  },
+  "T3": {
+   "admissibility": {
+    "r2_per_component": [
+     0.9956286845176425
+    ],
+    "max_r2": 0.9956286845176425,
+    "rejected": true,
+    "threshold": 0.9
+   },
+   "heldout": {
+    "accuracy": 0.8041666666666667,
+    "n_train": 80,
+    "n_test": 240,
+    "per_world_recall": {
+     "P": 1.0,
+     "S": 0.5166666666666667,
+     "C": 1.0,
+     "R": 0.7
+    },
+    "binom_p_one_sided": 2.1266795674213895e-72,
+    "valid": true
+   },
+   "replication": {
+    "accuracy": 0.825,
+    "n_train": 80,
+    "n_test": 240,
+    "per_world_recall": {
+     "P": 1.0,
+     "S": 0.6,
+     "C": 1.0,
+     "R": 0.7
+    },
+    "binom_p_one_sided": 5.507951164585553e-78,
+    "valid": true
+   },
+   "label_permutation": {
+    "observed_accuracy": 0.8041666666666667,
+    "permutation_median": 0.25,
+    "permutation_p95": 0.6127083333333334,
+    "p_perm": 0.009900990099009901
+   },
+   "holm_adjusted_p": 4.253359134842779e-72,
+   "eligible_for_confirmatory_test": false,
+   "beats_chance_heldout": false,
+   "survives_replication": false
+  },
+  "T4": {
+   "admissibility": {
+    "r2_per_component": [
+     0.934262835146788
+    ],
+    "max_r2": 0.934262835146788,
+    "rejected": true,
+    "threshold": 0.9
+   },
+   "heldout": {
+    "accuracy": 0.6416666666666667,
+    "n_train": 80,
+    "n_test": 240,
+    "per_world_recall": {
+     "P": 0.6,
+     "S": 0.4666666666666667,
+     "C": 0.8,
+     "R": 0.7
+    },
+    "binom_p_one_sided": 2.2992622772732453e-37,
+    "valid": true
+   },
+   "replication": {
+    "accuracy": 0.6541666666666667,
+    "n_train": 80,
+    "n_test": 240,
+    "per_world_recall": {
+     "P": 0.43333333333333335,
+     "S": 0.6333333333333333,
+     "C": 0.75,
+     "R": 0.8
+    },
+    "binom_p_one_sided": 1.3611210257179683e-39,
+    "valid": true
+   },
+   "label_permutation": {
+    "observed_accuracy": 0.6416666666666667,
+    "permutation_median": 0.25,
+    "permutation_p95": 0.5,
+    "p_perm": 0.009900990099009901
+   },
+   "holm_adjusted_p": 2.2992622772732453e-37,
+   "eligible_for_confirmatory_test": false,
+   "beats_chance_heldout": false,
+   "survives_replication": false
+  }
+ },
+ "holms_adjusted_p": {
+  "T1": 2.0938049097283928e-83,
+  "T2": 3.778910766909841e-96,
+  "T3": 4.253359134842779e-72,
+  "T4": 2.2992622772732453e-37
+ },
+ "separators": [],
+ "rejected_by_admissibility_gate": [
+  "T1",
+  "T2",
+  "T3",
+  "T4"
+ ],
+ "eligible_for_confirmatory_test": [],
+ "f3_all_rejected": true,
+ "placebos": {
+  "s0_control": {
+   "accuracy": 0.25,
+   "chance_band": [
+    0.19521633455125514,
+    0.30478366544874486
+   ],
+   "within_band": true,
+   "all_tiebreakers": {
+    "T1": {
+     "accuracy": 0.25,
+     "n_train": 80,
+     "n_test": 240,
+     "per_world_recall": {
+      "P": 1.0,
+      "S": 0.0,
+      "C": 0.0,
+      "R": 0.0
+     },
+     "binom_p_one_sided": 0.5247635909809055,
+     "valid": true
+    },
+    "T2": {
+     "accuracy": 0.25,
+     "n_train": 80,
+     "n_test": 240,
+     "per_world_recall": {
+      "P": 1.0,
+      "S": 0.0,
+      "C": 0.0,
+      "R": 0.0
+     },
+     "binom_p_one_sided": 0.5247635909809055,
+     "valid": true
+    },
+    "T3": {
+     "accuracy": 0.25,
+     "n_train": 80,
+     "n_test": 240,
+     "per_world_recall": {
+      "P": 1.0,
+      "S": 0.0,
+      "C": 0.0,
+      "R": 0.0
+     },
+     "binom_p_one_sided": 0.5247635909809055,
+     "valid": true
+    },
+    "T4": {
+     "accuracy": 0.25,
+     "n_train": 80,
+     "n_test": 240,
+     "per_world_recall": {
+      "P": 1.0,
+      "S": 0.0,
+      "C": 0.0,
+      "R": 0.0
+     },
+     "binom_p_one_sided": 0.5247635909809055,
+     "valid": true
+    }
+   }
+  },
+  "macro_only_control_accuracy": 0.75,
+  "label_permutation": {
+   "T1": {
+    "observed_accuracy": 0.8458333333333333,
+    "permutation_median": 0.24583333333333332,
+    "permutation_p95": 0.5625,
+    "p_perm": 0.009900990099009901
+   },
+   "T2": {
+    "observed_accuracy": 0.8875,
+    "permutation_median": 0.2708333333333333,
+    "permutation_p95": 0.5635416666666666,
+    "p_perm": 0.009900990099009901
+   },
+   "T3": {
+    "observed_accuracy": 0.8041666666666667,
+    "permutation_median": 0.25,
+    "permutation_p95": 0.6127083333333334,
+    "p_perm": 0.009900990099009901
+   },
+   "T4": {
+    "observed_accuracy": 0.6416666666666667,
+    "permutation_median": 0.25,
+    "permutation_p95": 0.5,
+    "p_perm": 0.009900990099009901
+   }
+  }
+ },
+ "algebraic_equivalence_placebo": {
+  "note": "ban=1.8 and ban=2.0 are algebraically identical (kernel threshold rule)",
+  "max_abs_kernel_diff": 0.0,
+  "accuracies": {
+   "T1": 0.5,
+   "T2": 0.5,
+   "T3": 0.5,
+   "T4": 0.5
+  },
+  "n": 120,
+  "chance_band_95": [
+   0.41053864894082287,
+   0.5894613510591771
+  ],
+  "within_band": {
+   "T1": true,
+   "T2": true,
+   "T3": true,
+   "T4": true
+  },
+  "pass": true
+ },
+ "verdict": "cannot test (F3): every tie-breaker was rejected by the admissibility gate as a transform of the DGP weights (max R^2: T1=0.981, T2=0.990, T3=0.996, T4=0.934)",
+ "verdict_code": "cannot_test",
+ "label": "SIMULATION",
+ "identity_check": {
+  "max_abs_diff": 0.0,
+  "passed": true
+ },
+ "macro_matching": {
+  "P": {
+   "matched": true,
+   "max_abs_residual": 0.03034517231429157
+  },
+  "S": {
+   "matched": true,
+   "max_abs_residual": 0.029315792197145196
+  },
+  "C": {
+   "matched": true,
+   "max_abs_residual": 0.07977999999999996
+  },
+  "R": {
+   "matched": true,
+   "max_abs_residual": 0.09707434794593905
+  }
+ }
+}

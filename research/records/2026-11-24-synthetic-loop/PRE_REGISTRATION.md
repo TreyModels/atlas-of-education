@@ -100,3 +100,12 @@ layout logged; pre-registration before each run; Phase B proposed, not sprawled.
 ## 8. Declared deviations log
 
 - (to be filled)
+
+## 9. Declared deviations log (filled)
+
+- Parameterisation fixed after a non-confirmatory design probe; the first Nordtveit design (w_push=1.5,
+  psi=0.55) was degenerate (GER 0.00) and is documented in §1 as a design finding.
+- Verdict logic: tie-breakers rejected by the admissibility gate are ineligible (F3), reused from the redesign.
+- `cl_target` pulled live from the World Bank API at run time (E8, SL.TLF.0714.ZS, 1990–2023); fallback 0.314.
+- Phase B not run in Phase A (as pre-registered); dynamic observables remain to be tested before the DHS data
+  arrive. No pre-registered rule was changed after any confirmatory output was inspected.

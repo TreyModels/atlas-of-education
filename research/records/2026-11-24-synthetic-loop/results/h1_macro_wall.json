@@ -1,0 +1,93 @@
+{
+ "design": {
+  "countries": 24,
+  "years": 25,
+  "nuisance_grid": {
+   "sigma_y": [
+    0.45,
+    0.55,
+    0.65
+   ],
+   "sigma_a": [
+    0.15,
+    0.2,
+    0.25
+   ]
+  },
+  "seed_base": 20270101,
+  "batch_layout": {
+   "N": 10000,
+   "years": 25,
+   "threads": 256,
+   "blocks": 40,
+   "backend": "numpy",
+   "backend_note": "port MLX transcription; NumPy fallback available"
+  },
+  "outcome": "D_cl_observed on D_GER, decade FE, country-clustered SE"
+ },
+ "slopes": {
+  "P": {
+   "beta": -0.23421973286075254,
+   "se": 0.050056879152337516,
+   "n_rows": 360,
+   "n_countries": 24
+  },
+  "S": {
+   "beta": -0.3455354204997266,
+   "se": 0.00986220424103257,
+   "n_rows": 360,
+   "n_countries": 24
+  },
+  "C": {
+   "beta": -0.36986006321594994,
+   "se": 0.03820590067278338,
+   "n_rows": 360,
+   "n_countries": 24
+  },
+  "R": {
+   "beta": -0.15044547783401463,
+   "se": 0.022055504430086626,
+   "n_rows": 360,
+   "n_countries": 24
+  }
+ },
+ "boot_ci95": {
+  "P": [
+   -0.33198684815497814,
+   -0.13293343962097812
+  ],
+  "S": [
+   -0.364412367233854,
+   -0.3218388538289337
+  ],
+  "C": [
+   -0.4340161130554351,
+   -0.25247483470718124
+  ],
+  "R": [
+   -0.18335212664651487,
+   -0.08717651227858633
+  ]
+ },
+ "pair_overlap": {
+  "P-S": 0.0438398191606275,
+  "P-R": 0.20594999326741606,
+  "C-P": 0.26408697830666095,
+  "C-S": 0.2345114774572139,
+  "C-R": 0.0,
+  "R-S": 0.0
+ },
+ "joint_interaction": {
+  "wald_chi2": 7786.801702954603,
+  "df": 2,
+  "p": 0.0
+ },
+ "decision_rule": "cannot separate iff joint p>0.05 and all pairwise overlaps >= 0.75",
+ "verdict": "separable",
+ "verdict_code": "separable",
+ "label": "SIMULATION",
+ "identity_check": {
+  "max_abs_diff": 0.0,
+  "passed": true
+ }
+}
