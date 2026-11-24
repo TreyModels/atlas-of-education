@@ -1,0 +1,3 @@
+# Phase B results — EXPLORATORY ONLY, no verdict
+
+`results/phaseb_results.json` (sha256 `f1f32ef6cbfdd685799bbb9aa4d46cb1aac655017830460d84958d058f954e6b`, server wall 67.8 s) is committed **for the record only**. Its dynamic-tie-breaker numbers (B1 held-out 0.358, B2 0.371; Holm p ≈ 2e-4; max R² 0.195) are **conditional on**: `WOMEN=400` vs prereg 4,000; the unaudited B1 spacing/denominator definition; a common rather than feature-specific admissibility gate; and a zero-signal control that duplicates observations across labels. **Not a verdict, not quotable** until the corrections in `CORRECTIONS_PENDING.md` are made and smoke-tested.

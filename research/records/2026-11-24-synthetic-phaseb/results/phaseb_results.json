@@ -1,0 +1,125 @@
+{
+ "dynamic_tiebreakers": {
+  "B1": {
+   "admissibility": {
+    "r2_per_component": [
+     0.1874111819664397,
+     0.1953907919882828,
+     0.07986071974574349
+    ],
+    "max_r2": 0.1953907919882828,
+    "rejected": false
+   },
+   "heldout": {
+    "accuracy": 0.35833333333333334,
+    "binomial_p": 0.00012326468742867121,
+    "n": 240
+   },
+   "replication": {
+    "accuracy": 0.37083333333333335,
+    "binomial_p": 2.2473638169672976e-05,
+    "n": 240
+   },
+   "s0_control": {
+    "accuracy": 0.25,
+    "binomial_p": 0.5123877658265898,
+    "n": 960
+   },
+   "holm_adjusted_p": 0.00024652937485734243,
+   "beats_chance": true
+  },
+  "B2": {
+   "admissibility": {
+    "r2_per_component": [
+     0.1874111819664397,
+     0.1953907919882828,
+     0.07986071974574349
+    ],
+    "max_r2": 0.1953907919882828,
+    "rejected": false
+   },
+   "heldout": {
+    "accuracy": 0.37083333333333335,
+    "binomial_p": 2.2473638169672976e-05,
+    "n": 240
+   },
+   "replication": {
+    "accuracy": 0.425,
+    "binomial_p": 2.439601185206035e-09,
+    "n": 240
+   },
+   "s0_control": {
+    "accuracy": 0.25,
+    "binomial_p": 0.5123877658265898,
+    "n": 960
+   },
+   "holm_adjusted_p": 6.742091450901893e-05,
+   "beats_chance": true
+  },
+  "B3": {
+   "admissibility": {
+    "r2_per_component": [
+     0.1874111819664397,
+     0.1953907919882828,
+     0.07986071974574349
+    ],
+    "max_r2": 0.1953907919882828,
+    "rejected": false
+   },
+   "heldout": {
+    "accuracy": 0.29583333333333334,
+    "binomial_p": 0.06067928397124249,
+    "n": 240
+   },
+   "replication": {
+    "accuracy": 0.2916666666666667,
+    "binomial_p": 0.0800166384628731,
+    "n": 240
+   },
+   "s0_control": {
+    "accuracy": 0.25,
+    "binomial_p": 0.5123877658265898,
+    "n": 960
+   },
+   "holm_adjusted_p": 0.06067928397124249,
+   "beats_chance": false
+  }
+ },
+ "chance_band_95": [
+  0.19521633455125514,
+  0.30478366544874486
+ ],
+ "holm": {
+  "B1": 0.00024652937485734243,
+  "B2": 6.742091450901893e-05,
+  "B3": 0.06067928397124249
+ },
+ "verdict": {
+  "code": "separates",
+  "text": "separates (dynamic observables: ['B1', 'B2'])"
+ },
+ "fertility_strata": {
+  "low_expansion": {
+   "slopes": {
+    "P": -0.5343660661424585,
+    "S": -0.5985857308205813,
+    "C": -0.5143821652462813,
+    "R": -0.5320034193218917
+   },
+   "spread": 0.08420356557429998,
+   "separated": true
+  },
+  "high_expansion": {
+   "slopes": {
+    "P": -0.5146271794337558,
+    "S": -0.6470964550709584,
+    "C": -0.4617982349499633,
+    "R": -0.5967810490192131
+   },
+   "spread": 0.18529822012099506,
+   "separated": true
+  }
+ },
+ "note": "SIMULATION; B1=death-spacing, B2=PPR gradient, B3=age-at-first-birth gradient; fertility layer is a declared minimal approximation, not the full dose ABM",
+ "label": "SIMULATION"
+}
