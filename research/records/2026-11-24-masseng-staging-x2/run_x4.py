@@ -167,19 +167,19 @@ def main():
     specs = [
         {"name": "primary_S_order", "score": "order",
          "edu_years": [1991, 1998, 2004], "job_years": [1991, 1998, 2004],
-         "out_years": [2004, 2018], "outcome": "lsc", "job_series": "job"},
+         "out_years": [2004, 2018], "outcome": "out", "job_series": "job"},
         {"name": "robust_S_net", "score": "net",
          "edu_years": [1991, 1998, 2004], "job_years": [1991, 1998, 2004],
-         "out_years": [2004, 2018], "outcome": "lsc", "job_series": "job"},
+         "out_years": [2004, 2018], "outcome": "out", "job_series": "job"},
         {"name": "robust_windowC", "score": "order",
          "edu_years": [1995, 1998, 2005], "job_years": [1995, 1998, 2005],
-         "out_years": [2005, 2019], "outcome": "lsc", "job_series": "job"},
+         "out_years": [2005, 2019], "outcome": "out", "job_series": "job"},
         {"name": "robust_outcome_sec_ner", "score": "order",
          "edu_years": [1991, 1998, 2004], "job_years": [1991, 1998, 2004],
          "out_years": [2004, 2018], "outcome": "out_alt", "job_series": "job"},
         {"name": "robust_job_emp_agri_neg", "score": "order",
          "edu_years": [1991, 1998, 2004], "job_years": [1991, 1998, 2004],
-         "out_years": [2004, 2018], "outcome": "lsc", "job_series": "job_alt_neg"},
+         "out_years": [2004, 2018], "outcome": "out", "job_series": "job_alt_neg"},
     ]
     # emp_agri: use negative change as structural-transformation expansion -> precomputed in extractor? no:
     # inject a helper series "job_alt_neg_<year>" = -emp_agri_<year> on the fly

@@ -149,4 +149,13 @@ claim; no E1 comparison.
   declared minimum (checked before modelling).
 
 ## Deviations log
-- (to be filled before the affected run; every departure from this declaration is logged)
+- 2026-11-24 (X2): ran once as declared: 240 runs, `elapsed_s=24.549`, results hash preserved.
+- 2026-11-24 (X4 run 1, NO RESULTS): the first X4 execution failed immediately with
+  `KeyError: 'lsc_2004'` because the analysis code looked up panel keys named after the outcome
+  variable label (`lsc_*`) while the committed extraction names outcome columns `out_*` /
+  `out_alt_*`. This is a column-name bug in the analysis code, not a design/coverage failure: no
+  model was fitted, no loss was computed, no result exists. The traceback is preserved in
+  `x4_v1_failure.log`. Fix: analysis now refers to the panel's outcome columns (`out_*` for the
+  lsc primary outcome, `out_alt_*` for the sec_ner robustness outcome); windows, split, scores,
+  benchmarks, thresholds and decision rules are unchanged. X4 rerun as `results_x4.json` with the
+  failure log kept.
