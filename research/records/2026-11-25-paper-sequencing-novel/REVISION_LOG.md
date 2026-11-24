@@ -2,8 +2,8 @@
 
 **Branch:** `research/paper-sequencing-novel-2026-11-25` (base `7f73ff1`).
 **Record:** `research/records/2026-11-25-paper-sequencing-novel/`.
-**Revision date:** 25 November 2026 (session). **Revision commit:** the hash is filled in by the follow-up commit that records it (the main revision of
-`PAPER.md` is the preceding commit on this branch).
+**Revision date:** 25 November 2026 (session). **Revision commit:** `cdd964e` (the revision of `PAPER.md`; this log entry is committed immediately after it
+and records the hash).
 **Draft after revision:** 6,898 words (was 6,040; this record keeps no word-count target of its own).
 
 ## Why
