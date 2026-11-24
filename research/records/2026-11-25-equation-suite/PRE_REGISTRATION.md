@@ -243,3 +243,27 @@ Pre-declared reporting rules from Amendment 01 apply unchanged to this table. Th
 script metadata is: **family affordability (incl. forgone earnings) → learning (school + tutoring) → limited-place
 selection gate → credential→jobs**, with migration, inequality/dashboard, growth and the test bench as the
 wider system. No coefficient is causal; the multiverse says what the equations imply under defensible choices.
+
+---
+
+## Amendment 03 — MASSENG v5 boundary labels (committed BEFORE any run)
+
+**Dated:** 2026-11-25, before any script ran. MASSENG v5's verified boundaries: **affordability / progression /
+capacity yes; learning production no; score bar/quota no; labour market / earnings no; rural-urban no;
+borrowing no.** Therefore:
+
+- Every script in this suite is a **standalone synthetic demonstration of an equation set**. None is a MASSENG v5
+  output, and none is described as one. Each output JSON carries
+  `masseng_boundary = {"used": "standalone synthetic demonstration (NOT MASSENG v5 output)",
+  "mechanism_in_masseng_v5": true/false, "note": "..."}`.
+- Where the mechanism is inside MASSENG v5 (affordability, progression, capacity: S1, S2, S4) the boundary note
+  says the mechanism exists in MASSENG v5 but this script's numbers are an equation demonstration, not a MASSENG
+  run.
+- Where the mechanism is **outside** MASSENG v5 (learning production S3/S10; score bar/quota gates S4's exam gate;
+  labour market/earnings S5; rural-urban S6; borrowing S1's credit-constrained spec) the boundary note says
+  "mechanism not implemented in MASSENG v5 — synthetic demonstration only; do not attribute to MASSENG".
+- `eduengine` (the staging ABM) does implement gates, quality, tutoring and a fiscal loop, but this suite does
+  not run it; where relevant the note says "eduengine represents this mechanism; this script is standalone and
+  does not use it".
+- No script claims an empirical fit to a country. S8's real cross-section is descriptive; S10's Bray targets are
+  a literature reality check, not a calibration.
