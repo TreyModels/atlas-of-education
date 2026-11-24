@@ -1,0 +1,64 @@
+{
+ "design": {
+  "worlds": [
+   "P",
+   "S",
+   "C",
+   "R",
+   "Rm"
+  ],
+  "NH": 100000,
+  "NC": 512,
+  "groupings": 80,
+  "specs": [
+   "S1_10y",
+   "S2_5y",
+   "S5_5y"
+  ],
+  "doses": [
+   0.0,
+   0.05,
+   0.1
+  ],
+  "blocks": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9
+  ],
+  "links": 7
+ },
+ "n_cells": 50400,
+ "n_indistinguishable": 10739,
+ "cross_world_indistinguishable_share": 0.21307539682539683,
+ "ci95": [
+  0.20958085317460318,
+  0.21654811507936508
+ ],
+ "wall_rule": 0.75,
+ "wall_verdict": "separable",
+ "dose_ladder": {
+  "0.0": {
+   "share": 0.1988095238095238,
+   "n": 16800
+  },
+  "0.05": {
+   "share": 0.20285714285714285,
+   "n": 16800
+  },
+  "0.1": {
+   "share": 0.2375595238095238,
+   "n": 16800
+  }
+ },
+ "label": "SIMULATION",
+ "wall_s": 1109.6,
+ "workers": 96,
+ "numpy": "2.2.6"
+}
