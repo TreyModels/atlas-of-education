@@ -1,0 +1,486 @@
+=== job A: corrected full sample (bootstrap multiplicities + full stacked interactions) ===
+{
+ "Q2b2_survey_level": {
+  "n_surveys": 368,
+  "n_countries": 87,
+  "years": [
+   1985,
+   2025
+  ],
+  "corr_surviving_tfr": 0.822434945097451,
+  "corr_ceb_tfr": 0.899141975055895,
+  "spearman_surviving_tfr": 0.8263368980094256,
+  "corr_surviving_ceb": 0.9500984602224292,
+  "median_abs_TFR_minus_surviving": 0.6305000000000001,
+  "max_abs_TFR_minus_surviving": 2.681,
+  "median_abs_TFR_minus_ceb40": 1.00875,
+  "max_abs_TFR_minus_ceb40": 3.1721999999999997,
+  "mean_ratio_TFR_over_surviving": 0.9415819327416656,
+  "n_within_country_changes": 65,
+  "corr_changes_surv_tfr": 0.320837332873007,
+  "corr_changes_ceb_tfr": 0.5093820613846578,
+  "median_change_gap_surv_minus_tfr": 0.43530000000000024
+ },
+ "D4_desired_vs_actual": {
+  "actual_tfr_secondary_z": {
+   "b": -1.2982559287980004,
+   "se": 0.07608430341030609,
+   "p": 0.0,
+   "ci": [
+    -1.4473811634822003,
+    -1.1491306941138006
+   ]
+  },
+  "wanted_tfr_secondary_z": {
+   "b": -1.085013427348775,
+   "se": 0.08848270522149904,
+   "p": 0.0,
+   "ci": [
+    -1.2584395295829132,
+    -0.9115873251146369
+   ]
+  },
+  "actual_tfr_secplus_z": {
+   "b": -1.2803021380047221,
+   "se": 0.061709653429438134,
+   "p": 0.0,
+   "ci": [
+    -1.401253058726421,
+    -1.1593512172830234
+   ]
+  },
+  "wanted_tfr_secplus_z": {
+   "b": -0.9744216079229009,
+   "se": 0.07603878019511036,
+   "p": 0.0,
+   "ci": [
+    -1.1234576171053172,
+    -0.8253855987404846
+   ]
+  }
+ },
+ "cohort_proxy": {
+  "edu4": {
+   "spec": "COHORT",
+   "n_cells": 860,
+   "n_surveys": 215,
+   "n_countries": 65,
+   "weighted": true,
+   "standardised": false,
+   "coef": {
+    "edu_primary": {
+     "b": -0.5782326977519521,
+     "se": 0.06708740879944612,
+     "p": 0.0,
+     "ci": [
+      -0.7097240189988665,
+      -0.44674137650503765
+     ]
+    },
+    "edu_secondary": {
+     "b": -1.6942643221894134,
+     "se": 0.15586338384140241,
+     "p": 0.0,
+     "ci": [
+      -1.999756554518562,
+      -1.3887720898602647
+     ]
+    },
+    "edu_higher": {
+     "b": -2.6791743696286217,
+     "se": 0.2012482169756209,
+     "p": 0.0,
+     "ci": [
+      -3.0736208749008385,
+      -2.284727864356405
+     ]
+    },
+    "edu_primary_x_cohort_decade": {
+     "b": -0.01920077643979226,
+     "se": 0.07630201095649344,
+     "p": 0.8013179355774969,
+     "ci": [
+      -0.1687527179145194,
+      0.13035116503493488
+     ]
+    },
+    "edu_secondary_x_cohort_decade": {
+     "b": 0.24005695120766313,
+     "se": 0.13108024818359945,
+     "p": 0.06704474752810241,
+     "ci": [
+      -0.01686033523219177,
+      0.496974237647518
+     ]
+    },
+    "edu_higher_x_cohort_decade": {
+     "b": 0.36705220050492615,
+     "se": 0.1477856303143463,
+     "p": 0.01300326328831991,
+     "ci": [
+      0.07739236508880742,
+      0.6567120359210449
+     ]
+    }
+   }
+  },
+  "edu2": {
+   "spec": "COHORT",
+   "n_cells": 692,
+   "n_surveys": 346,
+   "n_countries": 80,
+   "weighted": true,
+   "standardised": false,
+   "coef": {
+    "edu_secplus": {
+     "b": -1.6840923494955673,
+     "se": 0.12937247162564938,
+     "p": 0.0,
+     "ci": [
+      -1.93766239388184,
+      -1.4305223051092946
+     ]
+    },
+    "edu_secplus_x_cohort_decade": {
+     "b": 0.24380571228457182,
+     "se": 0.10159765654837495,
+     "p": 0.01640771232666305,
+     "ci": [
+      0.044674305449756924,
+      0.4429371191193867
+     ]
+    }
+   }
+  }
+ },
+ "D1_replication": {
+  "prior_record": {
+   "primary": -0.57,
+   "secondary": -1.62,
+   "higher": -2.54,
+   "n_cells": 1291,
+   "n_countries": 86,
+   "share_surveys_negative": 0.99,
+   "median_per_survey_gradient": -1.9
+  },
+  "this_run": {
+   "edu_primary": -0.5700212097980915,
+   "edu_secondary": -1.6215926060159207,
+   "edu_higher": -2.5364258334567236
+  },
+  "n_cells": 1291,
+  "n_countries": 86,
+  "delta_secondary": -0.0015926060159205946,
+  "delta_higher": 0.003574166543276469,
+  "delta_primary": -2.1209798091503806e-05,
+  "reproduced_0p15_secondary": true,
+  "reproduced_0p25_higher": true
+ }
+}
+Q1 headline: [('A_completed_fertility_M1_weighted', {'edu_primary': -0.554, 'edu_secondary': -1.584, 'edu_higher': -2.538}), ('A_completed_fertility_M1_weighted_z', {'edu_primary': -0.357, 'edu_secondary': -1.021, 'edu_higher': -1.636})]
+Q2a ratio: {'beta_A': -1.291539521131515, 'beta_B': -1.2953201299152477, 'ratio_B_over_A': 1.0029272110701037, 'ratio_ci': [0.9207637555525054, 1.0953553417203392], 'draws_requested': 500, 'draws_used': 500, 'countries': 65} {'beta_A': -1.3364049665811053, 'beta_B': -1.2805768817005156, 'ratio_B_over_A': 0.9582251740477937, 'ratio_ci': [0.9055879706872442, 1.0143901182565638], 'draws_requested': 500, 'draws_used': 500, 'countries': 80}
+het: {'n_surveys': 346, 'share_negative': 0.9884393063583815, 'median': -1.9000000000000004, 'iqr': [-2.4749999999999996, -1.4250000000000003], 'min': -4.6000000000000005, 'max': 0.6999999999999997}
+cohort: {'edu4': {'edu_primary': -0.5782, 'edu_secondary': -1.6943, 'edu_higher': -2.6792, 'edu_primary_x_cohort_decade': -0.0192, 'edu_secondary_x_cohort_decade': 0.2401, 'edu_higher_x_cohort_decade': 0.3671}, 'edu2': {'edu_secplus': -1.6841, 'edu_secplus_x_cohort_decade': 0.2438}}
+JOBA_EXIT=0
+=== job B: 11 African countries ===
+{
+ "Q2b2_survey_level": {
+  "n_surveys": 74,
+  "n_countries": 11,
+  "years": [
+   1988,
+   2025
+  ],
+  "corr_surviving_tfr": 0.7539405190873982,
+  "corr_ceb_tfr": 0.8677661824877512,
+  "spearman_surviving_tfr": 0.7186523509811179,
+  "corr_surviving_ceb": 0.9358594759357722,
+  "median_abs_TFR_minus_surviving": 0.5331500000000005,
+  "max_abs_TFR_minus_surviving": 1.8288000000000002,
+  "median_abs_TFR_minus_ceb40": 0.8596500000000002,
+  "max_abs_TFR_minus_ceb40": 2.3790000000000004,
+  "mean_ratio_TFR_over_surviving": 1.0082457407275585,
+  "n_within_country_changes": 10,
+  "corr_changes_surv_tfr": 0.42646353665701153,
+  "corr_changes_ceb_tfr": 0.6887750638606122,
+  "median_change_gap_surv_minus_tfr": 0.7744
+ },
+ "D4_desired_vs_actual": {
+  "actual_tfr_secondary_z": {
+   "b": -1.6299048631410689,
+   "se": 0.07464412105638965,
+   "p": 0.0,
+   "ci": [
+    -1.7762073404115926,
+    -1.4836023858705452
+   ]
+  },
+  "wanted_tfr_secondary_z": {
+   "b": -1.5756274512157717,
+   "se": 0.08667130528480134,
+   "p": 0.0,
+   "ci": [
+    -1.7455032095739824,
+    -1.405751692857561
+   ]
+  },
+  "actual_tfr_secplus_z": {
+   "b": -1.6075986019183397,
+   "se": 0.070063595645765,
+   "p": 0.0,
+   "ci": [
+    -1.7449232493840392,
+    -1.4702739544526402
+   ]
+  },
+  "wanted_tfr_secplus_z": {
+   "b": -1.4446910609353143,
+   "se": 0.11640244053837469,
+   "p": 0.0,
+   "ci": [
+    -1.6728398443905288,
+    -1.2165422774800998
+   ]
+  }
+ },
+ "cohort_proxy": {
+  "edu4": {
+   "spec": "COHORT",
+   "n_cells": 176,
+   "n_surveys": 44,
+   "n_countries": 11,
+   "weighted": true,
+   "standardised": false,
+   "coef": {
+    "edu_primary": {
+     "b": -0.666667796156243,
+     "se": 0.1376912095379893,
+     "p": 1.2869411820659593e-06,
+     "ci": [
+      -0.9365425668507021,
+      -0.396793025461784
+     ]
+    },
+    "edu_secondary": {
+     "b": -2.1483460124010256,
+     "se": 0.17297518508648752,
+     "p": 0.0,
+     "ci": [
+      -2.4873773751705412,
+      -1.80931464963151
+     ]
+    },
+    "edu_higher": {
+     "b": -3.246728446729991,
+     "se": 0.14779634694942081,
+     "p": 0.0,
+     "ci": [
+      -3.536409286750856,
+      -2.957047606709126
+     ]
+    },
+    "edu_primary_x_cohort_decade": {
+     "b": -0.27816443123379636,
+     "se": 0.11169561540958502,
+     "p": 0.01276068862077695,
+     "ci": [
+      -0.497087837436583,
+      -0.059241025031009725
+     ]
+    },
+    "edu_secondary_x_cohort_decade": {
+     "b": -0.18601052953875635,
+     "se": 0.07592220734554367,
+     "p": 0.014285035396250478,
+     "ci": [
+      -0.33481805593602193,
+      -0.037203003141490776
+     ]
+    },
+    "edu_higher_x_cohort_decade": {
+     "b": 0.01615675097743666,
+     "se": 0.08229719094279758,
+     "p": 0.8443581252677079,
+     "ci": [
+      -0.1451457432704466,
+      0.17745924522531992
+     ]
+    }
+   }
+  },
+  "edu2": {
+   "spec": "COHORT",
+   "n_cells": 144,
+   "n_surveys": 72,
+   "n_countries": 11,
+   "weighted": true,
+   "standardised": false,
+   "coef": {
+    "edu_secplus": {
+     "b": -2.0082634715705807,
+     "se": 0.1170122176200912,
+     "p": 0.0,
+     "ci": [
+      -2.2376074181059593,
+      -1.778919525035202
+     ]
+    },
+    "edu_secplus_x_cohort_decade": {
+     "b": 0.05744852602545379,
+     "se": 0.08297090349072542,
+     "p": 0.48869015769454816,
+     "ci": [
+      -0.10517444481636802,
+      0.22007149686727562
+     ]
+    }
+   }
+  }
+ },
+ "D1_replication": {
+  "prior_record": {
+   "primary": -0.57,
+   "secondary": -1.62,
+   "higher": -2.54,
+   "n_cells": 1291,
+   "n_countries": 86,
+   "share_surveys_negative": 0.99,
+   "median_per_survey_gradient": -1.9
+  },
+  "this_run": {
+   "edu_primary": -0.6223907162526281,
+   "edu_secondary": -2.1704962347821066,
+   "edu_higher": -3.1593350182613085
+  },
+  "n_cells": 264,
+  "n_countries": 11,
+  "delta_secondary": -0.5504962347821065,
+  "delta_higher": -0.6193350182613084,
+  "delta_primary": -0.052390716252628144,
+  "reproduced_0p15_secondary": false,
+  "reproduced_0p25_higher": false
+ }
+}
+Q1 headline: [('A_completed_fertility_M1_weighted', {'edu_primary': -0.707, 'edu_secondary': -2.163, 'edu_higher': -3.198}), ('A_completed_fertility_M1_weighted_z', {'edu_primary': -0.455, 'edu_secondary': -1.39, 'edu_higher': -2.056})]
+Q2a ratio: {'beta_A': -1.383622508252963, 'beta_B': -1.6299048631410689, 'ratio_B_over_A': 1.1779982281432204, 'ratio_ci': [1.0140814463610999, 1.3799673164490676], 'draws_requested': 500, 'draws_used': 500, 'countries': 11} {'beta_A': -1.5026485897755566, 'beta_B': -1.6075986019183397, 'ratio_B_over_A': 1.0698433505058285, 'ratio_ci': [1.001130354334825, 1.1402983948192367], 'draws_requested': 500, 'draws_used': 500, 'countries': 11}
+het: {'n_surveys': 72, 'share_negative': 0.9861111111111112, 'median': -2.0, 'iqr': [-2.325, -1.7000000000000002], 'min': -4.5, 'max': 0.5}
+cohort: {'edu4': {'edu_primary': -0.6667, 'edu_secondary': -2.1483, 'edu_higher': -3.2467, 'edu_primary_x_cohort_decade': -0.2782, 'edu_secondary_x_cohort_decade': -0.186, 'edu_higher_x_cohort_decade': 0.0162}, 'edu2': {'edu_secplus': -2.0083, 'edu_secplus_x_cohort_decade': 0.0574}}
+JOBB_EXIT=0
+=== job C: independent cross-check ===
+validation vs prior record: {
+ "edu_primary": {
+  "value": -0.57,
+  "se": 0.058,
+  "prior": -0.57
+ },
+ "edu_secondary": {
+  "value": -1.6216,
+  "se": 0.1703,
+  "prior": -1.62
+ },
+ "edu_higher": {
+  "value": -2.5364,
+  "se": 0.2346,
+  "prior": -2.54
+ },
+ "max_abs_delta": 0.0036000000000000476,
+ "passed": true
+}
+{
+ "A_M1_weighted_4level": {
+  "edu_primary": {
+   "b": -0.707,
+   "se": 0.1578,
+   "n_cells": 176
+  },
+  "edu_secondary": {
+   "b": -2.1627,
+   "se": 0.1785,
+   "n_cells": 176
+  },
+  "edu_higher": {
+   "b": -3.1977,
+   "se": 0.1354,
+   "n_cells": 176
+  }
+ },
+ "A_M1_unweighted_4level": {
+  "edu_primary": {
+   "b": -0.6205,
+   "se": 0.1345,
+   "n_cells": 176
+  },
+  "edu_secondary": {
+   "b": -2.1523,
+   "se": 0.248,
+   "n_cells": 176
+  },
+  "edu_higher": {
+   "b": -3.2341,
+   "se": 0.1587,
+   "n_cells": 176
+  }
+ },
+ "A_M1_weighted_2group": {
+  "edu_secplus": {
+   "b": -1.9743,
+   "se": 0.1231,
+   "n_cells": 144
+  }
+ },
+ "B_M1_unweighted_4level": {
+  "edu_primary": {
+   "b": -0.9836,
+   "se": 0.1434,
+   "n_cells": 244
+  },
+  "edu_secondary": {
+   "b": -2.5967,
+   "se": 0.1189,
+   "n_cells": 244
+  },
+  "edu_higher": {
+   "b": -3.6279,
+   "se": 0.122,
+   "n_cells": 244
+  }
+ },
+ "B_M1_unweighted_2group": {
+  "edu_secplus": {
+   "b": -2.1419,
+   "se": 0.0933,
+   "n_cells": 148
+  }
+ },
+ "A_M0_weighted_4level": {
+  "edu_primary": {
+   "b": -0.7141,
+   "se": 0.1592,
+   "n_cells": 176
+  },
+  "edu_secondary": {
+   "b": -2.1763,
+   "se": 0.1766,
+   "n_cells": 176
+  },
+  "edu_higher": {
+   "b": -3.2075,
+   "se": 0.1341,
+   "n_cells": 176
+  }
+ },
+ "A_M0_weighted_2group": {
+  "edu_secplus": {
+   "b": -1.9821,
+   "se": 0.1223,
+   "n_cells": 144
+  }
+ }
+}
+ratio 2-group: {'ratio': 1.069843350505824, 'ci': [0.9987338159871081, 1.1403490938072522], 'draws': 500, 'countries': 11}
+ratio 4-level: {'ratio': 1.1779982281432086, 'ci': [1.004171455034446, 1.3877475137473767], 'draws': 500, 'countries': 11}
+A_vs_B: {'b': -0.19669737936298493, 'se': 0.12008383669073323}
+C_vs_B: {'b': -0.0031318298867129, 'se': 0.06091204493643106}
+cohort: {'edu_primary': {'b': -0.6666677961562404, 'se': 0.13769120953798916}, 'edu_secondary': {'b': -2.148346012401025, 'se': 0.1729751850864871}, 'edu_higher': {'b': -3.2467284467299855, 'se': 0.1477963469494207}, 'edu_primary_x_cohort_decade': {'b': -0.2781644312338009, 'se': 0.11169561540958417}, 'edu_secondary_x_cohort_decade': {'b': -0.18601052953876795, 'se': 0.07592220734554395}, 'edu_higher_x_cohort_decade': {'b': 0.0161567509774303, 'se': 0.08229719094279538}}
+per-country: [{'country': 'BJ', 'b': -2.5577, 'se': 0.167, 'n_surveys': 5, 'n_cells': 10}, {'country': 'ET', 'b': -3.3989, 'se': 0.21, 'n_surveys': 6, 'n_cells': 12}, {'country': 'GH', 'b': -1.7083, 'se': 0.0464, 'n_surveys': 8, 'n_cells': 16}, {'country': 'KE', 'b': -1.8655, 'se': 0.0669, 'n_surveys': 10, 'n_cells': 20}, {'country': 'LS', 'b': -1.268, 'se': 0.0591, 'n_surveys': 4, 'n_cells': 8}, {'country': 'MW', 'b': -2.0293, 'se': 0.1529, 'n_surveys': 9, 'n_cells': 18}, {'country': 'MZ', 'b': -1.9604, 'se': 0.0585, 'n_surveys': 6, 'n_cells': 12}, {'country': 'NM', 'b': -1.969, 'se': 0.0724, 'n_surveys': 4, 'n_cells': 8}, {'country': 'TZ', 'b': -2.1078, 'se': 0.0718, 'n_surveys': 9, 'n_cells': 18}, {'country': 'UG', 'b': -1.7461, 'se': 0.1218, 'n_surveys': 10, 'n_cells': 20}]
+JOBC_EXIT=0

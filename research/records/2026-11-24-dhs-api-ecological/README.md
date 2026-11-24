@@ -5,6 +5,10 @@ follow-up, execution-ready individual test). **Branch:** `research/dhs-api-ecolo
 **Status:** complete; numbers **corrected** after a fixed-effect bug fix (see below); estimates computed on the
 server boxes, **never on the Mac**.
 
+> **25 Nov 2026 append:** a second correction (cluster-bootstrap multiplicities, Neon audit item 1) is recorded in
+> [`CORRECTED_RUN_2026-11-25.md`](CORRECTED_RUN_2026-11-25.md) — **provisional** until Neon's diff is applied.
+> It moves the intervals (Africa-11 2-group ratio now includes 1.0) and the D4 wanted-vs-actual gap (~−0.196).
+
 **One line:** in **all** DHS survey rounds the public API publishes with education breakdowns (369 surveys,
 87 countries, 1985–2025), schooling is associated with **−1.58 children** (secondary vs none, within survey);
 **98.8 % of 346 surveys** show a negative per-survey gradient; the result survives country FE, period FE and
