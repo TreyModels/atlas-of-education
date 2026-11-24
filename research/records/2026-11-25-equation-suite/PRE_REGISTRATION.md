@@ -214,3 +214,32 @@ tutoring) → limited-place selection gate → credential→jobs**, embedded in 
 
 No seeds, no thresholds, no scripts existed at this commit. The smoke-then-full protocol and the ≤32-worker
 server limit above are unchanged.
+
+---
+
+## Amendment 02 — final system-map scope (massification system; committed BEFORE any run)
+
+**Dated:** 2026-11-25, after the PI's scope correction relayed by the Lead (the suite must cover the whole
+**massification system**, not shadow education) and **before any script was executed**. Amendment 01 is
+superseded *only* in its mapping table; its multiverse and reporting rules stand. Tutoring is now **one**
+script/module (the exams-shadow part), not two.
+
+Final ten scripts and mapping:
+
+| Script | System part (Codex map) | Connected piece | Pre-declared multiverse of equation choices | Data |
+|---|---|---|---|---|
+| S1 `eq01_family_demand.py` | families (budgets, demand, forgone earnings, credit) | 1 affordability | budget without forgone earnings; with forgone earnings; credit-constrained; quantity-quality vs income-only | SYNTHETIC |
+| S2 `eq02_supply_finance.py` | schools-state, finance, dashboard | 1 affordability / state supply | universal vs means-tested vs quota finance; supply response on/off; discount 5% vs 8% | SYNTHETIC |
+| S3 `eq03_learning_quality.py` | learning, schools-state | 2 learning | Cobb-Douglas; CES ρ grid; value-added vs levels; teacher-input vs general input | SYNTHETIC |
+| S4 `eq04_transitions_gates.py` | stage transitions and gates at all levels | 3 gate | exam bar; reserved quota; merit+income gate; fee gate | SYNTHETIC |
+| S5 `eq05_returns_credentials.py` | jobs-credentials | 4 credential→jobs | OLS; 2SLS; credential/sheepskin dummy; overeducation/required schooling | SYNTHETIC |
+| S6 `eq06_migration_rural_urban.py` | wider economy / families (migration, rural-urban) | cross-cutting | probit vs logit; with/without network; with/without remittances; rural-urban gap | SYNTHETIC |
+| S7 `eq07_inequality_dashboard.py` | inequality, dashboard | 4 / distribution | Gini; Theil decomposition; IGE; rank-rank; Oaxaca; LAYS with HLS 625 vs 690; learning poverty | SYNTHETIC |
+| S8 `eq08_growth.py` | wider economy | 4 / macro | convergence with/without H; with/without initial income; Nelson-Phelps; descriptive real cross-section | SYNTHETIC + OBSERVED cross-section |
+| S9 `eq09_identification.py` | test bench | cross-cutting evaluation | TWFE; CS not-yet-treated; CS never-treated; OLS vs 2SLS; local-linear RD; synthetic control | SYNTHETIC |
+| S10 `eq10_tutoring_shadow.py` | exams-shadow (the single tutoring module) | 2 learning / gate pressure | Tobit; two-part hurdle; OLS participants; CES ρ {0.3,0.5,0.7}; ban retention {0.5,0.7,0.9} | SYNTHETIC + LITERATURE_TARGETS (Bray) |
+
+Pre-declared reporting rules from Amendment 01 apply unchanged to this table. The chain reported in every
+script metadata is: **family affordability (incl. forgone earnings) → learning (school + tutoring) → limited-place
+selection gate → credential→jobs**, with migration, inequality/dashboard, growth and the test bench as the
+wider system. No coefficient is causal; the multiverse says what the equations imply under defensible choices.
