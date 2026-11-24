@@ -41,6 +41,8 @@ class Params:
     b_ability: float = 0.20
     b_school_gap: float = 0.80
     b_teacher: float = 0.30
+    own_premium: float = 0.0
+    other_premium: float = 0.0
     price_fee: float = 1.0
     price_other: float = 0.8
     price_commercial: float = 1.5
@@ -136,8 +138,8 @@ def simulate(p: Params) -> dict:
     common = (p.b_income * logY + p.b_ability * ability
               + p.b_school_gap * (1.0 - q) + p.b_teacher * teacher_q + 0.30 * urban)
     V = np.zeros((n, 4))
-    V[:, 1] = p.b0 + common - p.price_fee          # own teacher
-    V[:, 2] = p.b0 - other_cost + common - p.price_other
+    V[:, 1] = p.b0 + common + p.own_premium - p.price_fee          # own teacher
+    V[:, 2] = p.b0 - other_cost + common + p.other_premium - p.price_other
     V[:, 3] = p.b0 - com_cost + common - p.price_commercial
     if p.ban_own:
         V[:, 1] = -1e9                              # option removed, not re-priced
