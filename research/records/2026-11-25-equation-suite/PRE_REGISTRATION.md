@@ -166,3 +166,51 @@ Each script prints one plain-English sentence and writes `results/<name>.json` p
 
 None at this commit. Any later deviation (changed rule, changed seed, changed data) must be logged in
 `SUITE_REPORT.md` with a dated note; the pre-registered rules above are not edited after seeing results.
+
+---
+
+## Amendment 01 — system-map alignment and multiverse specs (committed BEFORE any run)
+
+**Dated:** 2026-11-25, written after the Lead's task-40 scope update and **before any script was executed**
+(the pre-registration commit `dabc458` precedes this amendment; no output exists at this commit). This amendment
+does not delete anything above. It (a) places each script in Codex's system map, (b) places each script on one of
+the four connected pieces, and (c) pre-declares the **set of defensible equation choices (multiverse)** that each
+script must vary rather than report a single specification. The counting/decision rules in the S1–S10 sections
+remain; where they say "the estimator", read "the multiverse of estimators listed below".
+
+### Four connected pieces and the system map
+
+The suite is organised around the chain **family affordability (incl. forgone earnings) → learning (school +
+tutoring) → limited-place selection gate → credential→jobs**, embedded in Codex's system map
+(families · schools-state · learning · exams-shadow · jobs-credentials · wider economy · dashboard · test bench).
+
+| Script | System-map node(s) | Connected piece | Pre-declared multiverse of equation choices |
+|---|---|---|---|
+| S1 `eq01_returns` | jobs-credentials ↔ wider economy | 4 credential→jobs | OLS no controls; OLS with measured ability (oracle); 2SLS; experience quadratic vs linear; log vs exact-percentage premium |
+| S2 `eq02_production` | learning ↔ schools-state | 2 learning | linear interaction without ability; interaction with ability; CES ρ grid {0.3, 0.5, 0.7}; Cobb-Douglas |
+| S3 `eq03_tutoring_demand` | families ↔ exams-shadow | 1 family affordability | Tobit; two-part (hurdle); OLS on participants; probit vs logit participation |
+| S4 `eq04_tutoring_production` | learning ↔ exams-shadow ↔ families | 2 learning (+ shadow inequality) | CES ρ {0.3, 0.5, 0.7}; SES gradient on/off; ban retention {0.5, 0.7, 0.9} |
+| S5 `eq05_admissions` | exams-shadow ↔ schools-state | 3 limited-place gate | score bar; quota share {0.4, 0.5, 0.6}; contest effort weight {0.3, 0.8} |
+| S6 `eq06_growth` | wider economy | 4 / wider economy | convergence with/without H; with/without initial income; Nelson-Phelps interaction; descriptive real cross-section |
+| S7 `eq07_finance` | families ↔ schools-state ↔ dashboard | 1 affordability / state finance | universal; means-tested; quota; discount rate {5%, 8%} |
+| S8 `eq08_inequality` | wider economy ↔ jobs-credentials ↔ learning | 4 / distribution | Gini; Theil decomposition; intergenerational elasticity; rank-rank; transition matrix; Oaxaca; persistence on/off |
+| S9 `eq09_identification` | test bench | cross-cutting evaluation | TWFE; CS-style not-yet-treated controls; CS-style never-treated controls; OLS vs 2SLS; local-linear RD; synthetic control |
+| S10 `eq10_development` | dashboard ↔ wider economy | 4 / dashboard measurement | HLS benchmark 625 vs 690; LAYS vs learning poverty; effective fertility vs TFR; FE vs pooled associations |
+
+### Additional pre-declared reporting rules for the multiverse
+
+1. Every script reports **all** specs in its row, not a selected one; a `multiverse` block gives each estimate,
+   the min–max range, and `spec_robust = (sign is the same across all specs)`.
+2. A claim of "positive/negative" is made only if `spec_robust` is true; otherwise the result is reported as
+   "sign depends on the equation choice", with the range.
+3. No coefficient is called causal. The multiverse is a statement about what the equations imply under
+   defensible choices, not about the world.
+4. Multiverse specs are implemented as separate equations/estimators, not by dropping inconvenient seeds or
+   re-running until a sign appears. Seeds are fixed and shared across specs.
+5. Data tiers are unchanged: SYNTHETIC unless the script's declared input is a committed panel
+   (S6 descriptive cross-section, S10 observed panel) or the Bray literature targets (S4 descriptive check).
+
+## Amendment 02 — nothing else changed before the runs
+
+No seeds, no thresholds, no scripts existed at this commit. The smoke-then-full protocol and the ≤32-worker
+server limit above are unchanged.
