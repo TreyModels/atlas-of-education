@@ -171,13 +171,35 @@ def sha256(path):
     return h.hexdigest()
 
 
+def _json_safe(x, path="root"):
+    """Replace non-finite floats with None so no NaN/Infinity literal can ever be written.
+
+    NaN/Infinity are not valid JSON and made the committed eq04/eq07 outputs unparseable by
+    strict readers. Rather than silently emit an invalid literal, non-finite values become
+    null (and a note is added by write_result); the underlying NaN should be fixed instead.
+    """
+    if isinstance(x, dict):
+        return {k: _json_safe(v, path + "." + str(k)) for k, v in x.items()}
+    if isinstance(x, (list, tuple)):
+        return [_json_safe(v, path + "[%d]" % i) for i, v in enumerate(x)]
+    if isinstance(x, bool) or isinstance(x, int) or isinstance(x, str) or x is None:
+        return x
+    if isinstance(x, (float, np.floating)):
+        xf = float(x)
+        return xf if math.isfinite(xf) else None
+    if isinstance(x, np.integer):
+        return int(x)
+    return x
+
+
 def write_result(outdir, name, obj):
     os.makedirs(outdir, exist_ok=True)
     obj = dict(obj)
     obj.setdefault("generated_utc", datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"))
+    obj = _json_safe(obj)
     p = os.path.join(outdir, name + ".json")
     with open(p, "w") as f:
-        json.dump(obj, f, indent=1)
+        json.dump(obj, f, indent=1, allow_nan=False)
     return p
 
 
