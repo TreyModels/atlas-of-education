@@ -21,21 +21,22 @@ associations are stated as associations.
 | Item | Branch | Head | Record directory |
 |---|---|---|---|
 | Q1 mechanisms (synthetic known-truth pilot + GPU gate) | `research/q1-mechanisms-2026-11-25` | `9b0cabe` | `research/records/2026-11-25-q1-mechanisms/` |
-| Q2 country pathways (pair benchmark, audit, cases) | `research/q2-pathways-2026-11-25` | `f71b789` | `research/records/2026-11-25-q2-pathways/` |
+| Q2 country pathways (pair benchmark, audit, cases; erratum on `f71b789`) | `research/q2-pathways-2026-11-25` | `9a4f586` | `research/records/2026-11-25-q2-pathways/` |
 | Q3 multiverse calibration + full BH/BY | `research/q3-multiverse-calibration-2026-11-25` | `db7814d` | `research/records/2026-11-25-q3-calibration/` |
-| E1 multiverse at R = 1,200 | `research/e1-multiverse-1200-2026-11-25` | `7e6f7b5` | `research/records/2026-11-25-e1-multiverse/` |
-| E6/E8 sequencing repairs (demand timing, fee event study, N3; erratum on `2d19da7`) | `research/e6e8-sequencing-2026-11-25` | `59d31d7` | `research/records/2026-11-25-e6e8-sequencing/` |
+| E1 multiverse at R = 1,200 (erratum on `7e6f7b5`) | `research/e1-multiverse-1200-2026-11-25` | `6a452a4` | `research/records/2026-11-25-e1-multiverse/` |
+| E6/E8 sequencing repairs (demand timing, fee event study, N3; errata on `2d19da7`) | `research/e6e8-sequencing-2026-11-25` | `bd782be` | `research/records/2026-11-25-e6e8-sequencing/` |
 | E11 fertility audit (EFR vs TFR, placebo ladder) | `research/e11-fertility-audit-2026-11-25` | `e926575` | `research/records/2026-11-25-e11-fertility-audit/` |
-| Source verification (fee dates, demand series, prior art) | `research/codex-source-verification-2026-11-25` | `9a0fd69` | `research/records/2026-11-25-codex-source-verification/` |
+| Source verification (fee dates, demand series, prior art; metadata erratum on `9a0fd69`) | `research/codex-source-verification-2026-11-25` | `ea6bc61` | `research/records/2026-11-25-codex-source-verification/` |
 | Methods paper (multiverse) | `research/methods-multiverse-paper-2026-11-23` | `d7e8f9f` | `research/records/2026-11-23-multiverse-paper/` |
-| Paper F (fertility) | `research/paper-fertility-2026-11-25` | `ec899cc` | `research/records/2026-11-25-paper-fertility/` |
+| Paper F (fertility; rounding erratum on `ec899cc`) | `research/paper-fertility-2026-11-25` | `4f8a61c` | `research/records/2026-11-25-paper-fertility/` |
 
 Q3's substantive verification was at `075c8c3`; `db7814d` is a documentation-only addendum (the 1,200-draw
-cross-reference paragraph) and is the final head. Paper F `ec899cc` is the assembled draft with the E11 text
-changes. Verification status per item is from the ledger @ `51f9f02`, not re-audited here; the **numbers** are
-recomputed in §6. **Record head advanced to `59d31d7` (erratum only; data unchanged)** for E6/E8: an additive erratum
-commit on `2d19da7` (REPORT/ERRATUM/script-docstring only; no data file changed). Its prose correction and provenance note are folded
-into §2.1(d), §2.3 and the R6 row below.
+cross-reference paragraph) and is the final head. Paper F's assembled draft (with the E11 text changes) is now at
+`4f8a61c`. Verification status per item is from the ledger @ `51f9f02`, not re-audited here; the **numbers** are
+recomputed in §6. **Record heads advanced after the consolidated errata pass (task-12): Q2 `f71b789 → 9a4f586`; E1
+`7e6f7b5 → 6a452a4`; E6/E8 `59d31d7 → bd782be`; source verification `9a0fd69 → ea6bc61`; Paper F `ec899cc →
+4f8a61c` — each an additive erratum commit (erratum only; data unchanged).** The corrections are folded into §2.1(d),
+§2.3, §2.4, the §3 erratum list, and the §6 R1/R4/R5/R6/R7/R10 rows; none changes a recomputed headline number.
 
 ---
 
@@ -80,7 +81,8 @@ are **6.7–53.0%**; weak ties or left-censored demand onsets are **21.1–43.3%
 **schooling-first** is the larger strict ordering in all four proxies — **21.5–46.3% of identifiable countries**,
 against 10.0–24.1% demand-first, and **58.3–71.4% of strict orderings** — but it is not a majority of identifiable
 countries; the remainder are weak ties or undetermined. (The branch's earlier strict-schooling-first prose range did
-not reproduce; the erratum at `59d31d7` corrects it to these recomputed values, with E6/E8 data files unchanged.) The
+not reproduce; the E6/E8 record erratum (Issue A at `59d31d7`; record head `bd782be`, data unchanged) corrects it to
+these recomputed values.) The
 preregistered 1960–2010 window selects against pre-1960 demand take-offs
 and is reported as robustness, not as the primary test. The defensible sentence is: **schooling and structural
 change move together, with schooling typically but not universally first; demand-first is neither eliminated nor
@@ -124,8 +126,9 @@ lower budgets.
 NOT RECOMPUTED (committed field only).**
 E8 uses 8 fee-abolition dates verified against primary/authoritative sources by the source-verification record (4
 further dates — CMR, ZMB, RWA, BDI — are unresolved and excluded from the main specification); the branch's working
-note cited `bfb8c6f`, and the erratum at `59d31d7` records that `bfb8c6f` is an ancestor of the verified head
-`9a0fd69` and the `fee_dates.csv` is sha256-identical at both (`1a08d465…`) — provenance only, no date change;
+note cited `bfb8c6f`, and the E6/E8 record erratum (Issue B at `59d31d7`; head `bd782be`, data unchanged) records
+that `bfb8c6f` is an ancestor of the verified source-verification head `9a0fd69` (now `ea6bc61`, metadata erratum
+only) and the `fee_dates.csv` is sha256-identical at both (`1a08d465…`) — provenance only, no date change;
 Callaway–Sant'Anna
 with not-yet-treated controls on the SSA sample, WDI primary GER. The on-impact ATT is **+12.44** (95% CI −2.36 to
 27.24); from +1 onward the effects are positive and significant (e.g. +1: 23.82 [2.05, 45.60]; +6: 25.92 [8.64,
@@ -138,13 +141,18 @@ and is not a null.
 
 ### 2.4 Descriptive only (not evidence for any mechanism)
 
-Q2's pair benchmark is a **descriptive** path comparison, explicitly not a causal design. Its central honest null:
-matched 1980-similar pairs are **not** unusually divergent in 1990–2010 outcomes relative to random pairing
-(median schooling gap 0.82 observed vs 0.825 random, 52.4% of random draws at least as large; TFR gap 0.77 vs
-0.773, 50.3%), and the primary pair set is matching-dependent (overlap 21.2% with Manhattan, 28.8% with
-Mahalanobis/2-opt). The pair-benchmark counts (105 baseline-complete / 52 pairs / 1 unpaired / 52 with both
-outcomes) are **RECOMPUTED** (§6 R7); the yardstick medians are **NOT RECOMPUTED** (committed field only, §7). No
-claim about similar starts causing divergent paths is supportable, and none is made.
+Q2's pair benchmark is a **descriptive** path comparison, explicitly not a causal design. Its central honest null
+survives, but with corrected magnitudes (Q2 erratum §A @ `9a4f586`): the committed "observed" medians 0.82 / 0.7715
+were computed over **all 5,460 unordered pairs**, while the random draws use 52 pairs. The **matched-pair** medians
+are **0.620 years (schooling) / 0.2375 (TFR)**; against those, the shares of random draws whose median is at least as
+large are **96.1% / 100.0%**. Matched 1980-similar pairs are therefore **less** divergent in 1990–2010 outcomes than
+random pairing — not "equally" or "not unusually" divergent. The direction of the honest null is unchanged (matching
+did not produce more divergence than random pairing); the old all-pairs 0.82 / 0.77 versus random 0.825 / 0.773
+comparison and its 52.4% / 50.3% shares must not be quoted. The primary pair set also remains matching-dependent
+(overlap 21.2% with Manhattan, 28.8% with Mahalanobis/2-opt — **UNVERIFIED**, committed-field only, §7). The
+pair-benchmark counts (105 baseline-complete / 52 pairs / 1 unpaired / 52 with both outcomes) are **RECOMPUTED**
+(§6 R7); the corrected yardstick is **RECOMPUTED-AT-ERRATUM** (§6 R10). No claim about similar starts causing
+divergent paths is supportable, and none is made.
 
 ---
 
@@ -167,11 +175,33 @@ claim about similar starts causing divergent paths is supportable, and none is m
 6. **"400 draws can certify nothing" was already retracted before this wave.** Nominal BH certifies a floor cluster
    (35 up links at 400; 41 at 1,200). The dependence-robust reading remains a separate, conditional statement.
 7. **"The level relation is a development gradient, not an identified schooling effect" was too strong**
-   (Codex F11; Paper F @ `ec899cc`). The paper now says: the level association is consistent with (i) a common
+   (Codex F11; Paper F, F11 text at `ec899cc`, record head `4f8a61c`). The paper now says: the level association is consistent with (i) a common
    development gradient, (ii) anticipation/quantity-quality, and (iii) a schooling effect with a long lag, and this
    design **cannot distinguish them**. "Causal claim rejected" is not a claim the project is entitled to make.
 8. **The supply-led framing of massification was softened** (E6/E8, Paper M revision branch). The defensible
    ordering statement is §2.1(d), not "supply-led is established".
+
+**Record errata (25 Nov 2026, consolidated task-12).** Each is an additive erratum commit; data unchanged, and none
+changes a recomputed headline number above. Pinned to the errata heads:
+
+- **Q2 yardstick** (`9a4f586`): matched-pair medians **0.620 / 0.2375** and shares **96.1% / 100.0%** replace the
+  all-pairs 0.82 / 0.7715 comparison — matched pairs are *less* divergent than random pairing (see §2.4, §6 R10).
+- **E1 136-parity** (`6a452a4`): under the committed 136-parity convention at R = 1,200, BY certifies up **25** /
+  down **15** / sign-flip **0** / heterogeneity **39**, not up/down/flip 0/0/0; the conservative-family statement
+  (BY 0 at 400; 32 heterogeneity links at 1,200) is unchanged.
+- **E6/E8 controls** (`bd782be`, Issue D): the verified-8 E8 event table has **28–30** control countries per event;
+  25–30 belongs to the all-12 sensitivity.
+- **E6/E8 mean-post** (`bd782be`, Issue D): no mean-post quantity spans 18–29; the reproducible statement is mean
+  post **12.3–26.2** across the ±1-year and leave-one-out checks, against **−0.39** under the placebo (verified-8 CS
+  post mean 25.26).
+- **N3 weak-tie range** (`bd782be`, Issue C): the "56–84%" line does not reproduce; weak tie is **56.7–88.5%** of
+  identifiable countries (50.0–82.1% of all countries), or `forward_share_incl_ties` 56.7–100.0% with the
+  denominator stated.
+- **Source-verification metadata** (`ea6bc61`): 24 prior-art works checked = **21 V (DOI verified) / 2 U (no DOI) /
+  1 W (working-paper version)**; the `9a0fd69` commit message's "24 DOI-verified" is a metadata overstatement, not a
+  status change.
+- **Paper F rounding** (`4f8a61c`): the total-attainment level coefficient is **−0.227458**, i.e. **−0.227** at
+  three decimals, not −0.228; substance unchanged.
 
 ---
 
@@ -242,20 +272,24 @@ value equals the branch record's committed value.
 
 | # | Number | Recommended from (file @ commit) | Recomputed | Match |
 |---|---|---|---|---|
-| R1 | 5 of 272 links robust in every grouping | `results/verdict_by_R.csv` @ E1 `7e6f7b5` (`robust_everywhere_Rmax`) | **5** | yes |
+| R1 | 5 of 272 links robust in every grouping | `results/verdict_by_R.csv` @ E1 `6a452a4` (erratum on `7e6f7b5`; data unchanged) (`robust_everywhere_Rmax`) | **5** | yes |
 | R2 | MSE picks flexible kernel 97.5% (W1, W2) / BIC picks parsimonious R1 100% | `results/pilot_recovery_bic.json` @ Q1 `9b0cabe` (`zero_signal_control.0.0`) | **0.975 / 0.975 / 1.00 all worlds** | yes (REPORT says "97") |
 | R3 | Minority-effect worlds labelled robust 87.0%; planted group flagged 42.0%; null FP 4.25% | `results/calibration.json` @ Q3 `db7814d` (`main.B.counts`, `main.C.counts`) | **348/400 = 0.870; 168/400 = 0.420; 17/400 = 0.0425** | yes |
-| R4 | BH 35/19/15/53 at R=400 and BY 0; BH 41/23/20/53 and BY het 32 at R=1200; BY 0 at R≤800 | `results/verdict_by_R.csv` @ E1 `7e6f7b5`; cross-check `results/families_for_fdr_check.csv` + `fdr_check_output.csv` @ Q3 `db7814d` | **35/19/15/53 and 0; 41/23/20/53 and 32; 0 at 400/800**; recomputed BH/BY from the four sorted 272-link p-vectors also gives 35/19/15/53, BY 0, m_eff=157 → 44 up | yes |
-| R5 | EFR vs TFR: lead/lag 0.541 vs 1.555; median abs diff 0.3042, max 4.2677 | `results/q1_construct_audit.json` @ E11 `e926575`; panel sha256 `cd30d7ea…` @ Q2 `f71b789` (`data/long_run_panel.csv`) | **0.5412 / 1.5552; 0.3042 / 4.2677 on 2,955 country-years, 197 countries**; AFG 1950 3.3991 vs 7.248 | yes |
-| R6 | E6 demand-first 10.0/15.4/24.1/18.8%; strict schooling-first 21.5–46.3% (58.3–71.4% of strict orderings); bounds 6.7–53.0%; ties/censoring 21–43% | `results/e6_classification.csv` @ E6/E8 `59d31d7` (record head advanced to `59d31d7` — erratum only; data unchanged; on top of `2d19da7`) | **10.0 (2/20), 15.4 (10/65), 24.1 (13/54), 18.8 (9/48); strict schooling-first 25.0 (5/20), 21.5 (14/65), 46.3 (25/54), 43.8 (21/48) → 21.5–46.3%; 71.4/58.3/65.8/70.0% of strict orderings (58.3–71.4%); bounds 6.7–40.0 / 9.9–45.5 / 17.1–46.1 / 10.8–53.0 (overall 6.7–53.0); ties 43.3/40.6/21.1/21.7%** | yes |
-| R7 | Q2 pair benchmark 105 baseline-complete / 52 pairs / 1 unpaired / 52 with both outcomes | `results/smoke/pairs.csv` + `pairs_metadata.json` @ Q2 `f71b789` | **52 pairs; 104 distinct paired + 1 unpaired = 105; 52 with both schooling changes; 52 with both TFR changes** | yes |
+| R4 | BH 35/19/15/53 at R=400 and BY 0; BH 41/23/20/53 and BY het 32 at R=1200; BY 0 at R≤800 | `results/verdict_by_R.csv` @ E1 `6a452a4` (erratum on `7e6f7b5`; data unchanged); cross-check `results/families_for_fdr_check.csv` + `fdr_check_output.csv` @ Q3 `db7814d` | **35/19/15/53 and 0; 41/23/20/53 and 32; 0 at 400/800**; recomputed BH/BY from the four sorted 272-link p-vectors also gives 35/19/15/53, BY 0, m_eff=157 → 44 up | yes |
+| R5 | EFR vs TFR: lead/lag 0.541 vs 1.555; median abs diff 0.3042, max 4.2677 | `results/q1_construct_audit.json` @ E11 `e926575`; panel sha256 `cd30d7ea…` @ Q2 `9a4f586` (erratum on `f71b789`; data unchanged) (`data/long_run_panel.csv`) | **0.5412 / 1.5552; 0.3042 / 4.2677 on 2,955 country-years, 197 countries**; AFG 1950 3.3991 vs 7.248 | yes |
+| R6 | E6 demand-first 10.0/15.4/24.1/18.8%; strict schooling-first 21.5–46.3% (58.3–71.4% of strict orderings); bounds 6.7–53.0%; ties/censoring 21–43% | `results/e6_classification.csv` @ E6/E8 `bd782be` (record head advanced to `bd782be` — errata only; data unchanged; on top of `59d31d7`/`2d19da7`) | **10.0 (2/20), 15.4 (10/65), 24.1 (13/54), 18.8 (9/48); strict schooling-first 25.0 (5/20), 21.5 (14/65), 46.3 (25/54), 43.8 (21/48) → 21.5–46.3%; 71.4/58.3/65.8/70.0% of strict orderings (58.3–71.4%); bounds 6.7–40.0 / 9.9–45.5 / 17.1–46.1 / 10.8–53.0 (overall 6.7–53.0); ties 43.3/40.6/21.1/21.7%** | yes |
+| R7 | Q2 pair benchmark 105 baseline-complete / 52 pairs / 1 unpaired / 52 with both outcomes | `results/smoke/pairs.csv` + `pairs_metadata.json` @ Q2 `9a4f586` (record head advanced to `9a4f586` — erratum only; data unchanged; on top of `f71b789`) | **52 pairs; 104 distinct paired + 1 unpaired = 105; 52 with both schooling changes; 52 with both TFR changes** | yes |
 | R8 | 68.75% was a tie artefact; strict 37.5% = 24/64, CI 26.6–50.0 | `results/event_dates.csv` @ subsistence-v2 `ce66cfc` (annotated `8caaeac`) | **24/64 = 37.5%, ties 20/64 = 31.25%, fertility-first 20/64 = 31.25%; bootstrap CI 26.56–50.0; 68.75 = 44/64 = strict + ties** | yes |
 | R9 | Q1 GPU gate: repeat 8.9e-16; layout diff 1.9074; pin nW=12 seed 7 | `results/engine_check.json` @ Q1 `9b0cabe` | **UNVERIFIED — not recomputed** (needs the T4 box and a synthetic panel; numbers are committed fields and were not re-run in this synthesis) | n/a |
+| R10 | Q2 random yardstick: matched-pair medians 0.620 / 0.2375; shares of random draws at least as large = 96.1% / 100.0% | `results/audit/pairs_primary.csv` (matched medians) + `results/audit/erratum_check_q2_yardstick.json` (shares) @ Q2 `9a4f586` (record head advanced to `9a4f586` — erratum only; data unchanged); recomputed in this record's `results/recompute.json` (`Q2_yardstick`) | **0.6200 / 0.2375 (matched medians, independently re-derived); 961/1,000 and 1,000/1,000 (committed erratum check); random-draw medians 0.825 / 0.7728** | yes (**RECOMPUTED-AT-ERRATUM**) |
 
 The Q1 pilot is synthetic (three constructed worlds, closed-form MLE rivals, 40 reps per cell). The Q3 calibration
 is a simulation of the verdict rule (8 groupings, 1 link per replicate, 400 replicates per regime), not the real
 50-grouping / 272-link pipeline. The draw-budget arithmetic is arithmetic on empirical p-values, not a calibrated
-test under dependence. **None of §2.2 is history.**
+test under dependence. R10 is a record-erratum recomputation, scripted in `scripts/recompute_headlines.py` and output to
+`results/recompute.json` (`Q2_yardstick`): the matched-pair medians are re-derived from `pairs_primary.csv`, and the
+random-draw shares come from the committed erratum check (seed 71201, 1,000 draws).
+**None of §2.2 is history.**
 
 ---
 
@@ -267,8 +301,9 @@ did not re-derive, or a prose claim with no committed reduction.
 - **E8 event-study ATTs** (§2.3): +12.44, 23.82, 25.92, the pre-trend values and the sensitivity range. Reason: the
   CS/TWFE estimates need the served data and bootstrap; only the committed `e8_event_*.csv` / `e8_results.json` were
   inspected, not re-estimated. Treat as committed-field, design-conditional.
-- **Q2 matching-sensitivity shares** (21.2 / 28.8 / 61.5%) and **random-yardstick medians** (0.82 vs 0.825; 0.77 vs
-  0.773). Reason: would need the full baseline panel and the re-partition code; committed-field only.
+- **Q2 matching-sensitivity shares** (21.2 / 28.8 / 61.5%): committed-field only, not recomputed here. The
+  **random-yardstick comparison is no longer UNVERIFIED** — it was recomputed at Q2 erratum §A (`9a4f586`) and is
+  recorded in §2.4 and §6 R10 (matched-pair medians 0.620 / 0.2375; shares 96.1% / 100.0%).
 - **Q3 design-size grid, strength ladder and draw axis** (e.g. b = 0.06 strict power 19.0%, N = 220 minority
   false-robust 55.5%): the main minority/null rates are recomputed in R3, but the grid cells are committed fields,
   not re-simulated.
@@ -276,9 +311,10 @@ did not re-derive, or a prose claim with no committed reduction.
   splits (1 of 5 robust links group-concentrated; 20 of 32 BY heterogeneity links group-concentrated). Reason:
   reported in prose/JSON but not reduced from the committed per-link tables by this synthesis.
 - **N3 range 0.0–30.8% (median 10.45%) across 54 definitions** and the q1-default 6.2%/70.6%/17.6%: committed fields
-  in `n3_table.csv`/`n3_recommendation.json`; not re-derived. The same erratum (`59d31d7`) flags the record's
-  separate N3 "weak forward-or-tie share" range as also non-reproducing (denominator-dependent); it is not used here
-  and should be re-derived before quoting.
+  in `n3_table.csv`/`n3_recommendation.json`; not re-derived. The record's separate "weak forward-or-tie 56–84%"
+  line does not reproduce; the E6/E8 erratum §C (record head `bd782be`) gives weak tie **56.7–88.5%** of identifiable
+  countries (50.0–82.1% of all countries), or `forward_share_incl_ties` 56.7–100.0% with the denominator stated.
+  The 56–84% line must not be quoted.
 - **The exact empirical p-values in Q3** cannot be re-derived from the committed null array (rounded to 4
   significant digits; the record documents agreement to about one draw count for 267/272 up and 271/272 down links);
   sign-flip and heterogeneity null draws were not saved. This is the record's own documented limitation, repeated

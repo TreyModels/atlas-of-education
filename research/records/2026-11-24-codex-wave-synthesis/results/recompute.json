@@ -37,6 +37,14 @@
    "sha256": "d0c02f95ade0850eacfb4edb73a3a9e5a837624a6bdefe1dbe12043bd10413af",
    "source": "ce66cfc research/records/2026-11-23-subsistence-v2/results/event_dates.csv",
    "annotated_at": "8caaeac"
+  },
+  "q2_pairs_primary.csv": {
+   "sha256": "da3ac66d98db3e8b6db38b21c538c40c5ab56662eed0044cf13b11497954e6f7",
+   "source": "9a4f586 (Q2 erratum head) research/records/2026-11-25-q2-pathways/results/audit/pairs_primary.csv"
+  },
+  "q2_erratum_check.json": {
+   "sha256": "40c1b3e1dd43a0724fc0ad70bd189c4163334e664ae8f6fe946bf148360b1acb",
+   "source": "9a4f586 (Q2 erratum head) research/records/2026-11-25-q2-pathways/results/audit/erratum_check_q2_yardstick.json"
   }
  },
  "Q1_zero_signal": {
@@ -460,6 +468,29 @@
   "pairs_both_school_changes": 52,
   "pairs_both_tfr_changes": 52,
   "panel_sha256_matches_metadata": true
+ },
+ "Q2_yardstick": {
+  "matched_pair_median_schooling_gap": 0.62,
+  "matched_pair_median_tfr_gap": 0.2375,
+  "n_matched_pairs": 52,
+  "all_pairs_observed": {
+   "mean_years_schooling": 0.82,
+   "tfr_observed_1950plus": 0.7715
+  },
+  "random_draw_median_of_medians": {
+   "schooling": 0.825,
+   "tfr": 0.7728
+  },
+  "share_random_median_ge_matched_pair_observed": {
+   "schooling": 0.961,
+   "tfr": 1.0
+  },
+  "share_random_median_ge_all_pairs_observed": {
+   "schooling": 0.524,
+   "tfr": 0.503
+  },
+  "reading": "the committed 'observed' medians (0.82 / 0.7715) are all-pairs medians over 5,460 unordered pairs; the matched-pair medians are 0.620 / 0.2375 and are re-derived here from pairs_primary.csv. Against the matched-pair medians, 96.1% / 100.0% of random 52-pair draws have a median at least as large, so matched pairs are LESS divergent than random pairing. Direction of the Q2 honest null survives; the old 52.4% / 50.3% shares against all-pairs medians must not be quoted.",
+  "erratum": "Q2 ERRATUM \u00a7A, record head 9a4f586 (erratum on f71b789; data files unchanged)"
  },
  "ordering": {
   "source_sha256": "d0c02f95ade0850eacfb4edb73a3a9e5a837624a6bdefe1dbe12043bd10413af",

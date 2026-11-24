@@ -31,6 +31,10 @@ EXTRACT (run from a clone with origin fetched; heads as verified by the Codex wa
         > $S/e6_classification.csv
     git show ce66cfc:research/records/2026-11-23-subsistence-v2/results/event_dates.csv \
         > $S/subsistence_event_dates.csv
+    git show 9a4f586:research/records/2026-11-25-q2-pathways/results/audit/pairs_primary.csv \
+        > $S/q2_pairs_primary.csv
+    git show 9a4f586:research/records/2026-11-25-q2-pathways/results/audit/erratum_check_q2_yardstick.json \
+        > $S/q2_erratum_check.json
 
 Caveats kept explicit:
 - The Q3 `families_for_fdr_check.csv` holds the four committed 272-link p-value families; BH/BY are
@@ -104,6 +108,12 @@ OUT["provenance"] = {
         "sha256": sha(f"{S}/subsistence_event_dates.csv"),
         "source": "ce66cfc research/records/2026-11-23-subsistence-v2/results/event_dates.csv",
         "annotated_at": "8caaeac"},
+    "q2_pairs_primary.csv": {
+        "sha256": sha(f"{S}/q2_pairs_primary.csv"),
+        "source": "9a4f586 (Q2 erratum head) research/records/2026-11-25-q2-pathways/results/audit/pairs_primary.csv"},
+    "q2_erratum_check.json": {
+        "sha256": sha(f"{S}/q2_erratum_check.json"),
+        "source": "9a4f586 (Q2 erratum head) research/records/2026-11-25-q2-pathways/results/audit/erratum_check_q2_yardstick.json"},
 }
 
 # ------------------------------------------------- 1. Q1 zero-signal control (synthetic)
@@ -263,6 +273,26 @@ OUT["Q2"] = {
     "pairs_both_school_changes": int(q2[["schooling_change_a", "schooling_change_b"]].notna().all(axis=1).sum()),
     "pairs_both_tfr_changes": int(q2[["tfr_change_a", "tfr_change_b"]].notna().all(axis=1).sum()),
     "panel_sha256_matches_metadata": meta["input_sha256"] == sha(f"{S}/long_run_panel.csv"),
+}
+
+# ------------------------------------------- 6b. Q2 random-yardstick erratum (matched pairs)
+pr = pd.read_csv(f"{S}/q2_pairs_primary.csv")
+ec = json.load(open(f"{S}/q2_erratum_check.json"))
+OUT["Q2_yardstick"] = {
+    "matched_pair_median_schooling_gap": round(float(pr["mean_years_schooling_gap"].abs().median()), 4),
+    "matched_pair_median_tfr_gap": round(float(pr["tfr_observed_1950plus_gap"].abs().median()), 4),
+    "n_matched_pairs": int(len(pr)),
+    "all_pairs_observed": ec["all_pairs_observed"],
+    "random_draw_median_of_medians": ec["random_draw_median_of_medians"],
+    "share_random_median_ge_matched_pair_observed": ec["share_random_median_ge_matched_pair_observed"],
+    "share_random_median_ge_all_pairs_observed": ec["share_random_median_ge_all_pairs_observed"],
+    "reading": ("the committed 'observed' medians (0.82 / 0.7715) are all-pairs medians over 5,460 "
+                "unordered pairs; the matched-pair medians are 0.620 / 0.2375 and are re-derived here "
+                "from pairs_primary.csv. Against the matched-pair medians, 96.1% / 100.0% of random "
+                "52-pair draws have a median at least as large, so matched pairs are LESS divergent than "
+                "random pairing. Direction of the Q2 honest null survives; the old 52.4% / 50.3% shares "
+                "against all-pairs medians must not be quoted."),
+    "erratum": "Q2 ERRATUM §A, record head 9a4f586 (erratum on f71b789; data files unchanged)",
 }
 
 # ------------------------------------------------- 7. 68.75% tie artefact -> 37.5% strict
