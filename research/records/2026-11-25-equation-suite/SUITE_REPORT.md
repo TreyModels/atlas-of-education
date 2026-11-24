@@ -3,9 +3,10 @@
 **Branch:** `research/equation-suite-neon-fixes-2026-11-25` (local; base `a7fcfb9` = old head of
 `research/equation-suite-2026-11-25`). **Run:** local Mac (`Treys-MacBook-Air.local`), Python 3.10.2,
 NumPy 2.2.6, `nproc 8`.
-**Command:** `OMP_NUM_THREADS=1 python scripts/run_all.py --workers 6` · **Wall: 224.33 s** ·
+**Command:** `OMP_NUM_THREADS=1 python scripts/run_all.py --workers 6` · **Wall: 73.18 s** ·
 **Execution failures: []** · **Decision-rule failures: 3 (S4, S6, S10)** · **`run_all.py` exit: 1**.
-**Window:** 2026-11-24T17:00:38Z → 2026-11-24T17:04:23Z.
+**Window:** 2026-11-24T17:17:29Z → 2026-11-24T17:18:42Z. (Wall time varies with host load: the same suite
+also took 224.33 s on an earlier re-record; both are full `--workers 6` runs on the same 8-core Mac.)
 
 > **Why this report was re-recorded.** The previous version of this file (and every number in it) was produced
 > at `a7fcfb9` before Neon's verified Part A patch and before the Part B fixes. It is superseded: see
@@ -32,11 +33,15 @@ external check. **No causal claims; not MASSENG v5 outputs.** Every script is la
     **0.00892 < 0.01404** without network → FAIL.
   - **S10 (FAIL; also fails a dropped pre-registered rule).** The implemented rule fails on
     `ban_raises_gini_in_all_specs`. Separately, the old S3 tutoring-demand rule required the Tobit to be within
-    0.15 of 0.8 in the single-process world; on the aligned scale the Tobit is **1.441**
-    (`tobit_within_0.15_share = 0.0`) → that dropped pre-registered sub-rule still fails. The old 7.499-vs-0.8
+    0.15 of 0.8 in the single-process world; in the truth's units the Tobit is **1.441** — 0.64 away — and
+    `tobit_within_0.15_share = 0.0` → that dropped pre-registered sub-rule still fails. The old 7.499-vs-0.8
     comparison was a level-vs-log scale artefact, not a bias estimate.
 - **It is NOT "3 pre-declared FAILs".** Only S4's failure is on a clearly pre-registered rule. A reader must not
   take "pre-declared" at face value for S3/S6/S10.
+- **Sub-test flags are surfaced.** `run_all.py` now prints each script's `rule_flags`, and S10's
+  `decision_rule` carries the three dropped pre-registered S3 sub-rule booleans (outside `PASS`):
+  `dropped_prereg_S3_different_two_part_within_0.15 = True`, `dropped_prereg_S3_different_tobit_outside_0.15 = True`,
+  `dropped_prereg_S3_single_world_both_within_0.15 = False`. The last one is the dropped rule that **fails**.
 - **S3 (eq03) currently PASSES**, but its `rho_recovered_within_0.10` criterion is itself post-hoc; the
   pre-registered "recovered ρ closer than Cobb–Douglas" rule also passes (median ρ̂ 0.6 vs truth 0.5 vs CD 1.0).
 - **Smoke vs full.** Smoke (fast, fewer reps) differs from full for eq08 (`clean_lambda_near_truth=False` in
@@ -46,16 +51,16 @@ external check. **No causal claims; not MASSENG v5 outputs.** Every script is la
 
 | # | Script | System part | Execution | Decision rule | Failing / key sub-rule | Full wall (s) | Script sha256 | Output sha256 |
 |---|---|---|---|---|---|---|---|---|
-| S1 | `eq01_family_demand.py` | household demand/affordability | PASS | **PASS** | — | 5.14 | `acf642629c1d` | `89adb1cc4c31` |
-| S2 | `eq02_supply_finance.py` | state/school supply + finance | PASS | **PASS** | — | 24.33 | `1709a7f8b4dc` | `d3b3a9f88021` |
-| S3 | `eq03_learning_quality.py` | learning/quality | PASS | **PASS** | (post-hoc ρ criterion now passes) | 92.17 | `f5492b4cf693` | `688cafa1c0dd` |
-| S4 | `eq04_transitions_gates.py` | gates + attainment/completion | PASS | **FAIL** | `quota_flips_gap_negative` (pre-declared) | 3.37 | `bd32ea9c5fe0` | `ff880a92c8d3` |
-| S5 | `eq05_returns_credentials.py` | jobs/credentials | PASS | **PASS** | — | 2.57 | `42fd596d1dee` | `5c5888c1c67e` |
-| S6 | `eq06_migration_rural_urban.py` | rural-urban/migration | PASS | **FAIL** | `network_spec_effect_larger_than_no_network` (ad hoc) | 28.73 | `a7907b58987e` | `c291b81a9d39` |
-| S7 | `eq07_inequality_dashboard.py` | inequality/dashboard | PASS | **PASS** | — | 22.04 | `df0b97195211` | `977b1bf903d0` |
-| S8 | `eq08_growth.py` | structural change + macro | PASS | **PASS** | — | 1.15 | `b0fe636a2ad5` | `7e9678753765` |
-| S9 | `eq09_identification.py` | test bench | PASS | **PASS** | — | 26.42 | `deec9435d748` | `60c15fcf402c` |
-| S10 | `eq10_tutoring_shadow.py` | exams-shadow (single tutoring module) | PASS | **FAIL** | `ban_raises_gini_in_all_specs`; dropped S3 Tobit rule | 188.55 | `5aeac4c49e21` | `e99dc0f4ba47` |
+| S1 | `eq01_family_demand.py` | household demand/affordability | PASS | **PASS** | — | 2.79 | `acf642629c1d` | `d682987ff95a` |
+| S2 | `eq02_supply_finance.py` | state/school supply + finance | PASS | **PASS** | — | 11.55 | `1709a7f8b4dc` | `39b1ce8e54a6` |
+| S3 | `eq03_learning_quality.py` | learning/quality | PASS | **PASS** | (post-hoc ρ criterion now passes) | 36.46 | `f5492b4cf693` | `56418f7d46cf` |
+| S4 | `eq04_transitions_gates.py` | gates + attainment/completion | PASS | **FAIL** | `quota_flips_gap_negative` (pre-declared) | 2.05 | `bd32ea9c5fe0` | `86ae086ba9da` |
+| S5 | `eq05_returns_credentials.py` | jobs/credentials | PASS | **PASS** | — | 1.70 | `42fd596d1dee` | `1eb60a7a2381` |
+| S6 | `eq06_migration_rural_urban.py` | rural-urban/migration | PASS | **FAIL** | `network_spec_effect_larger_than_no_network` (ad hoc) | 14.70 | `a7907b58987e` | `388962b364f4` |
+| S7 | `eq07_inequality_dashboard.py` | inequality/dashboard | PASS | **PASS** | — | 10.28 | `df0b97195211` | `2da6b9d0e17f` |
+| S8 | `eq08_growth.py` | structural change + macro | PASS | **PASS** | — | 0.47 | `b0fe636a2ad5` | `8416f732ef76` |
+| S9 | `eq09_identification.py` | test bench | PASS | **PASS** | — | 13.21 | `deec9435d748` | `688741b82ac1` |
+| S10 | `eq10_tutoring_shadow.py` | exams-shadow (single tutoring module) | PASS | **FAIL** | `ban_raises_gini_in_all_specs`; dropped S3 Tobit rule | 61.24 | `5103ff04b0c2` | `00e70d435933` |
 
 Smoke statuses in the same run: S1–S3, S5, S7, S9 PASS; S4, S6, S8, S10 RULE_FAIL (eq08 smoke is the only
 smoke/full disagreement).
@@ -171,18 +176,23 @@ smoke/full disagreement).
 
 ### S10 eq10_tutoring_shadow — exams-shadow (single tutoring module)
 - **Data tier:** SYNTHETIC + LITERATURE_TARGETS (Bray; descriptive check only)
-- **Plain result:** Tutoring behaves as one exams-shadow module for demand: on the same log scale as the 0.8 truth
-  the two-part model is closer than the Tobit (0.73 vs 1.37). On inequality the own-teacher ban does NOT raise
-  the learning Gini once the Gini is computed on a strictly positive level domain: in this reduced production
-  model there is no substitution margin, so removing tutoring lowers the Gini in every CES/retention
-  specification (Δ range −0.064..−0.041). The illustrative model is far from Bray's targets (max |z| = 10.6), so
-  nothing here is a fit to a real shadow-education system.
-- **Tobit scale:** estimated on log1p(T) (semi-elasticity, comparable to the 0.8 truth): 1.441 single /
-  1.370 different. The level-scale fit (8.612 / 8.781) is reported separately and never compared to 0.8.
+- **Plain result:** Tutoring behaves as one exams-shadow module for demand: on the log1p scale (same units as the
+  0.8 truth) the two-part model is closer than the Tobit (0.73 vs 1.37); the log1p Tobit does NOT recover the
+  truth, so the dropped pre-registered single-process rule fails (Tobit within-0.15 share 0.00). On inequality the
+  own-teacher ban does NOT raise the learning Gini once the Gini is computed on a strictly positive level domain:
+  in this reduced production model there is no substitution margin, so removing tutoring lowers the Gini in every
+  CES/retention specification (Δ range −0.064..−0.041). The illustrative model is far from Bray's targets
+  (max |z| = 10.6), so nothing here is a fit to a real shadow-education system.
+- **Tobit scale:** same **units** as the 0.8 truth (log1p); the estimate recovers **1.441 single / 1.370
+  different** vs truth 0.8, i.e. **0.64/0.57 away**, and `tobit_within_0.15_share = 0.0` — the dropped
+  pre-registered single-process rule **FAILS**. The level-scale fit (8.612 / 8.781) is reported separately and
+  never compared to 0.8.
 - **Gini domain:** exp(achievement index); the raw additive index is non-positive in ~37% of draws, where the Gini
   is undefined (old committed Ginis were 0.71–1.07, outside [0,1]).
-- **Decision rule:** FAIL `{two_part_closer_than_tobit: True, ban_raises_gini_in_all_specs: False, model_not_claimed_to_fit_bray: True}`;
-  the dropped pre-registered S3 single-world rule also fails (`tobit_within_0.15_share = 0.0`).
+- **Decision rule:** FAIL `{two_part_closer_than_tobit: True, ban_raises_gini_in_all_specs: False, model_not_claimed_to_fit_bray: True}`.
+  The dropped pre-registered S3 sub-rules are carried alongside (not in PASS) and surface via `run_all.py`
+  `rule_flags`: `dropped_prereg_S3_different_two_part_within_0.15=True`,
+  `dropped_prereg_S3_different_tobit_outside_0.15=True`, `dropped_prereg_S3_single_world_both_within_0.15=False`.
 - **Observed vs assumed:** observed: no harmonised tutoring panel; Bray targets are literature targets | assumed:
   demand and production parameters | gap: no tutoring data
 
@@ -223,6 +233,10 @@ each deviation below is stated with its effect on the verdict.
     "flips" a +0.0906 gap; S6 "networks increase" when 0.00892 < 0.01402).
 11. **`write_result` refuses non-finite JSON.** The old eq04 had 12 literal `NaN`s and eq07 had 3; the
     re-recorded results have zero non-finite values and 11/11 JSON files strict-parse.
+13. **S10's dropped pre-registered S3 sub-rules are now reported in `decision_rule`** (prefixed
+    `dropped_prereg_S3_...`) and therefore appear in `run_all.py`'s `rule_flags`. They are *not* part of
+    S10's `PASS`: the implemented-rule flags are computed first. This makes the dropped-rule failure
+    traceable instead of prose-only.
 12. **Not changed here:** the DHS `ir_pipeline` CONSTRUCT clustering change (woman → PSU) belongs to the DHS
     branch and does not appear in this record.
 
