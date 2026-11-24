@@ -154,3 +154,33 @@ chosen estimate.
 
 - No amendment yet. Any change after this commit is appended here with a date and the reason, and the run
   log records it.
+
+---
+
+## Amendment 01 — evaluation mechanics fixed before any model code or run (dated 2026-11-25)
+
+Written before `scripts/observed_core.py` existed and before any model run. It fixes four mechanical
+ambiguities in §3–§4; it does not change any PASS/FAIL rule, data source, or the declared-assumption block.
+
+1. **Leave-country-out cannot use country intercepts.** For an unseen country there is no estimated country
+   fixed effect, so LOO predictions use the same nested predictor sets estimated with **year and/or decade
+   fixed effects but no country fixed effects** (pooled slopes). Country fixed effects are used in the
+   time-block evaluation (countries are seen in training) and in the transmission regressions. This is the
+   reason the prereg's FE multiverse is split by split type.
+2. **Benchmarks by split.** Persistence, pooled-mean and country-trend are used everywhere the information
+   exists. The country-trend benchmark is fitted per country on the last ≤10 observed training years
+   (minimum 3 points) and is therefore available only for time-block splits; for LOO folds the trend
+   benchmark is a **global linear year trend** fitted on the training sample. The pre-declared PASS rule
+   "skill vs country trend ≥ 0" is read as "skill vs the available trend benchmark".
+3. **Horizons.** h = 1 is one step ahead: each test year t is predicted from state t−1. h = 5 is one
+   five-year step per training endpoint: T ∈ {2000, 2010}, predicting the outcome at T+5 from state at T,
+   using training years ≤ T only. No recursive multi-step simulation is attempted (it would require
+   imputing unobserved intermediate years, which §2 forbids).
+4. **Time blocks.** h = 1: train ≤ 2000 → test 2001–2012; train ≤ 2010 → test 2011–2023. h = 5: the two
+   single steps 2000→2005 and 2010→2015. h = 1 test years with unobserved t−1 predictors are dropped
+   row-wise and counted.
+5. **FE multiverse cells.** LOO: year FE / decade FE / region×decade FE. Time-block: country FE /
+   country+year FE / country+decade FE. Transmission: country+decade FE (baseline) and country+year FE
+   (robustness).
+
+No other change.
