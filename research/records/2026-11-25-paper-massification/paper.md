@@ -10,7 +10,7 @@ verified or unverified throughout.
 
 ## Abstract
 
-Most theories of mass schooling are demand stories. This paper is built around one ordering claim, stated before the theory: in late-industrialising countries, the schooling take-off typically precedes the release of agricultural labour, and the structural-change proxies the demand story names do not usually turn on first. Families invest in education because returns rise, employers demand literate workers, and the labour market pulls children through school. In a panel of 64 late-industrialising countries where both events can be dated, the schooling take-off **precedes** the release of labour out of agriculture in 61 of them (95%), with a median lead of 26 years (bootstrap 95% interval 22–26 years); the reverse ordering occurs in 5% (0–11%). On pre-1990 structural-change series the demand take-off precedes the schooling take-off in **10.0%** of identifiable countries (GGDC non-agricultural employment), **15.4%** (urbanisation), **24.1%** (industry value added) and **18.8%** (agricultural value added); all-country bounds are **6.7–53.0%**, and another **21–43%** are weak ties or left-censored. Demand is neither eliminated nor cleanly ordered: the honest summary is that **schooling and structural change move together, with schooling typically but not universally first**. In a horse race with country and period fixed effects, supply-side measures carry the association with schooling expansion (+0.456, SE 0.174) while demand-side measures do not (+0.006, SE 0.203; n=78 country-periods, 51 countries). The raw event ordering looks demand-led (73% of countries, 64–82%), but that is an artefact of when the series begin: 61 of 108 schooling take-offs sit on the first observable year of the common window, and the supply series start in the median country only in 1975; in the fair sample (33 countries) supply precedes schooling in 76% and demand in 79%, and the two sides turn together. One supply-side shock can be tested with an event study: fee abolition in eight African countries with verified dates (1994–2005) is followed by large primary-enrolment gains (Callaway–Sant'Anna post-effects of roughly +22 to +29 points at +1 to +6, TWFE similar, flat pre-trends at −2/−3/−4); the on-impact effect includes zero, the treated sample is small (7 countries), and it is **consistent with** a supply effect, not a causal estimate. The historical record splits: Prussia's compulsory schooling state precedes industrialisation and the farm exodus by 80–120 years; France's 1833 statute precedes but attainment follows demand until the 1880s; in Britain — the first industrialiser — industrialisation and the farm exodus precede mass schooling by 40–90 years; the northern United States is supply-side in the local-public-goods sense. We read the evidence as a **late-industrialiser regularity, not a universal law**, and as an association rather than a causal sequence: where the state built the pipeline first, schooling typically led; where industrialisation came first, demand led. The paper also reports the agricultural-floor mechanism (real in the cross-section, not identified in the dynamics), scaling regularities that are between-country regularities rather than laws of change, and credential and care mechanisms unsupported in the data they can be tested on. Data tiers are labelled throughout: GGDC/WDI/PWT structural-change and enrolment series are **observed**; the long-run schooling event series is **reconstructed**; the WDI total-fertility series is **observed** (births per woman) and is not the project's effective-fertility measure. The contribution is a systematic, pre-registered, multi-country **event-ordering** of massification against structural change, joined to the historical cases, with the demand-side theory's own variables given a fair test.
+Most theories of mass schooling are demand stories. This paper is built around one ordering claim, stated before the theory: in late-industrialising countries, the schooling take-off typically precedes the release of agricultural labour, and the structural-change proxies the demand story names do not usually turn on first. Families invest in education because returns rise, employers demand literate workers, and the labour market pulls children through school. In a panel of 64 late-industrialising countries where both events can be dated, the schooling take-off **precedes** the release of labour out of agriculture in 61 of them (95%), with a median lead of 26 years (bootstrap 95% interval 22–26 years); the reverse ordering occurs in 5% (0–11%). On pre-1990 structural-change series the demand take-off precedes the schooling take-off in **10.0%** of identifiable countries (GGDC non-agricultural employment), **15.4%** (urbanisation), **24.1%** (industry value added) and **18.8%** (agricultural value added); all-country bounds are **6.7–53.0%**, and another **21–43%** are weak ties or left-censored. Demand is neither eliminated nor cleanly ordered: the honest summary is that **schooling and structural change move together, with schooling typically but not universally first**. In a horse race with country and period fixed effects, supply-side measures carry the association with schooling expansion (+0.456, SE 0.174) while demand-side measures do not (+0.006, SE 0.203; n=78 country-periods, 51 countries). The raw event ordering looks demand-led (73% of countries, 64–82%), but that is an artefact of when the series begin: 61 of 108 schooling take-offs sit on the first observable year of the common window, and the supply series start in the median country only in 1975; in the fair sample (33 countries) supply precedes schooling in 76% and demand in 79%, and the two sides turn together. One supply-side shock can be tested with an event study: fee abolition in eight African countries with verified dates (1994–2005) is followed by large primary-enrolment gains (Callaway–Sant'Anna post-effects of roughly +22 to +29 points at +1 to +6, TWFE similar, flat pre-trends at −2/−3/−4); the on-impact effect includes zero, the treated sample is small (7 countries), and it is **consistent with** a supply effect, not a causal estimate. The historical record splits: Prussia's compulsory schooling state precedes industrialisation and the farm exodus by 80–120 years; France's 1833 statute precedes but attainment follows demand until the 1880s; in Britain — the first industrialiser — industrialisation and the farm exodus precede mass schooling by 40–90 years; the northern United States is supply-side in the local-public-goods sense. We read the evidence as a **late-industrialiser regularity, not a universal law**, and as an association rather than a causal sequence: where the state built the pipeline first, schooling typically led; where industrialisation came first, demand led. The paper also reports the agricultural-floor mechanism (real in the cross-section, not identified in the dynamics), scaling regularities that are between-country regularities rather than laws of change, and credential and care mechanisms unsupported in the data they can be tested on. Data tiers are labelled throughout: GGDC/WDI/PWT structural-change and enrolment series are **observed**; the long-run schooling event series is **reconstructed**; the WDI total-fertility series is **observed** (births per woman) and is not the project's effective-fertility measure. The contribution is a systematic, pre-registered, multi-country **event-ordering** of massification against structural change, joined to the historical cases, with the demand-side theory's own variables given a fair test. The project's own forward tests are reported as negative results: exposure matching removes 88–98% of the apparent synthetic order effect, no feedback elasticity rescues it, the aggregate staging test fails out of sample, and the Bayesian screens are not usable posteriors — simulations and exploratory aggregates, not country evidence.
 
 **Keywords:** mass schooling; structural transformation; compulsory education; supply-side schooling expansion;
 event sequencing; late industrialisation.
@@ -600,6 +600,47 @@ attainment, or the schooling-versus-farm-exit ordering.
 
 The honest summary is conditional. The raw event ordering cannot distinguish the theories because it is dominated by data availability; the fair event comparison shows the two sides arriving together; the horse race puts the conditional association on supply; and the pre-1990 timing test finds schooling and structural change moving together with demand-first a minority that cannot be excluded. The narrow labour-market demand account finds no support in the timing tests, but neither is demand ruled out. The broad-development version of the demand story (income and urbanisation lead schooling) is supported, but it is not a human-capital story in the narrow sense — it is the familiar finding that richer, more urban places school more, which is consistent with institutionalist as well as demand accounts. What the evidence supports is the **descriptive** claim that in late industrialisers school systems were often built by states with their own reasons while schooling and structural change moved together, and that the narrow labour-market demand ordering arrives later. That is consistent with the institutional reading, and it is a description of the data, not a causal identification. A referee should read the horse race as a **decomposition, not a test**: both blocks correlate with development, state capacity and the demographic transition; exogenous variation in school supply would make it a test, and only the fee-abolition event study in Section 7.6 comes close, for one outcome.
 
+### 7.8 What the project's own simulations found: negative results
+
+The cross-country evidence above is descriptive. The project's forward programme — a synthetic `eduengine` model,
+an aggregate staging test and Bayesian importance screens — was meant to supply the mechanism. It did not. The
+tests are reported because they all point the same way; they are **simulations or exploratory aggregates, not
+country evidence**, and while they do not overturn the descriptive ordering, they remove the synthetic support for
+reading it as a staging mechanism.
+
+- **The audited staging experiment was exposure- and fiscal-confounded (task-26).** Its `school_first` and
+  `jobs_first` arms differ by construction by +1.8 education-share-years and −1.2 vacancy-years; the fiscal loop
+  gives `jobs_first` a higher mean education budget (41,818 vs 38,183, +9.5%); a one-year fiscal lag makes
+  "simultaneous" asymmetric. Completion contrasts are ≤0.6pp and not sign-stable (3–4 of 13 metrics); 5–7 distinct
+  schedule orderings appear across seeds; the stable quantities are mechanical.
+- **Exposure matching removes the order effect (X1, synthetic).** With equal cumulative exposure (18.36
+  education-share-years / 9.44 vacancy-years for all matched arms), the unmatched formal-share gap of −5.4…−4.8pp
+  (sign-stable) collapses to −0.13…+0.56pp — 2–12% of unmatched, i.e. **88–98% removed**. Completion and equity
+  effects are not material before or after matching; a +10-year calendar placebo shifts the gap to −6.2…−7.6pp, so
+  calendar position also matters. Matched-total effects on public quality (−2.4…−7.1pp) and tutoring (+0.5…+2.2pp)
+  are toy dynamics.
+- **No feedback elasticity rescues it (X3, synthetic).** Across 5 elasticities × 4 schedules × 2 gates × 20 seeds
+  (800 runs) there are **zero sign reversals**; the sequencing contrast is mostly NULL (9–11 of 13 metrics), with
+  only the mechanically exposed formal share robust. The both-early-vs-neither contrast is robust on 10–13/13
+  metrics — a dose/level contrast, not a sequencing result.
+- **The aggregate staging test fails out of sample (X4, observed aggregates, exploratory).** On an honest
+  40-training/21-validation split the model-implied ordering does not beat persistence or pooled trend (paired MAE
+  −2.49 [−5.76, +0.77] and −0.67 [−2.04, +0.66]; ordering coefficient −2.05 [−4.44, +0.87]), and all four
+  robustness specs return FAIL_NO_EVIDENCE. The test is thin (aggregates only), but it is a genuine negative.
+- **The Bayesian screens are not posteriors (X5).** The MASSENG importance screens had ESS 88.75/4,096 (2.17%) and
+  20.64/4,096 (0.50%), were prior-dominated, and failed the pre-declared recovery criteria (confusion diagonal 50%
+  vs ≥60%; error ≤15% in 56.25% vs ≥60%). They are conditional importance weights, not usable posterior-style
+  inference; no real-data mechanism claim is drawn from them.
+- **The gate/tutoring simulation has a clear direction, but it is not about sequencing (X2, synthetic).** Quota
+  gates raised gate-prep tutoring by +17.6…+21.1pp, widened the top-bottom tutoring gap by +13.0…+14.5pp, and
+  raising rural tutoring access widened rather than narrowed the wealth gap (+7.9pp bar, +9.4pp quota). Quota gates
+  also capped completion (lower −11.7…−12.3pp, upper −13.5…−14.5pp). These are stipulated toy worlds, relevant to
+  the credential and gate-design debate (Section 12.3), not to the ordering claim.
+
+**Consequence.** The 61-of-64 ordering stands as description; the project's forward tests provide **no synthetic or
+aggregate support** for treating it as a staging mechanism. "Schooling and structural change move together" is the
+claim the data support, and the mechanism remains open.
+
 ## 8. The historical cases as a typology: Prussia and Britain as the two poles
 *This section integrates the historical-sequence record (`research/historical-sequence-2026-11-23` @ `ab658c7`,
 definitions first committed at `74e0fe2`), drafted for this paper by the historical-sequence lead and edited into
@@ -885,7 +926,7 @@ the paper's supply measures are spending, teachers and enrolment capacity, and i
 outcomes, which the growth literature shows matter more than years of schooling. Third, **credential inflation is
 a real risk of supply-side expansion**: the credential literature (Collins 1979; Spence 1973; Arrow 1973) and the
 project's own credential test (Section 11) warn that expansion can outrun the jobs that justify it, and the care
-loop and gap tests come back null rather than reassuring. The policy reading is therefore "build the pipeline
+loop and gap tests come back null rather than reassuring. The project's synthetic gate simulations sharpen the credential risk: quota gates raised gate-prep tutoring by 17.6–21.1pp and widened the top-to-bottom tutoring gap by 13.0–14.5pp, and raising rural access widened rather than narrowed the wealth gap (X2, stipulated toy worlds, not causal estimates); gate design can be inequality-relevant. The policy reading is therefore "build the pipeline
 early, and watch the quality and the credential gap", not "build schools and growth follows".
 
 ### 12.4 What the implications are not
@@ -985,6 +1026,8 @@ massification. The evidence, taken together, supports a conditional synthesis:
 5. **Scaling regularities are between-country regularities, not laws of change**, and the universal fertility–attainment collapse curve is rejected (country identity explains 71.6% of the residual); theta/gamma is not estimable with the data that exists.
 6. **The mechanisms the formatting reading might use are not supported in the data they can be tested on**: no driver is robust everywhere (only five links, all fertility-side); electricity is the most fragile driver and paid employment the cleanest null; the credential–occupation gap is almost unrelated to fertility (−0.15 vs −0.62 for attainment) and predicts the wrong way; the care-work loop is absorbed by income and urbanisation, and male-care and manufacturing placebos behave like the treatment.
 
+7. **The project's forward tests do not support a staging mechanism**: the audited synthetic staging experiment was exposure- and fiscal-confounded; exposure matching removed 88–98% of the apparent order effect; no feedback elasticity produced a reversal or a rescue; the honest-split aggregate test returned FAIL_NO_EVIDENCE; and the Bayesian screens are not posteriors (X1–X5; simulations/exploratory aggregates, not evidence).
+
 ### 14.2 "What we know now" box
 
 > **What we know now — massification**
@@ -1009,6 +1052,9 @@ massification. The evidence, taken together, supports a conditional synthesis:
 >   curve (country effects 71.6% of residual).
 > - **Drivers and mechanisms**: no robust driver among development variables; credential inflation and the
 >   care loop are null in the data they can be tested on.
+> - **Forward tests**: synthetic staging experiment exposure/fiscal-confounded; exposure matching removes 88–98% of the
+>   order effect; no feedback-elasticity reversal or rescue; aggregate staging FAIL_NO_EVIDENCE; Bayesian screens not
+>   posteriors. Simulations, not evidence.
 > - **The framing**: a late-industrialiser regularity, not a universal law; the data are better described
 >   as schooling and structural change moving together, with a supply-side conditional association in the
 >   horse race — not an identified cause.
@@ -1102,6 +1148,14 @@ Economic History* as a standalone archival paper, because the historical section
 dates, not new archival measurement; that is a deliberate division of labour with the historical record, which
 names the archival work needed.
 
+**13. "The project's own simulations do not support the staging mechanism you discuss."** Correct, and Section 7.8
+now says so. The audited staging experiment confounded order with cumulative exposure, endogenous fiscal revenue and
+calendar position; exposure matching removed 88–98% of the apparent order effect, the feedback-elasticity surface
+showed zero reversals but no rescue, and the honest-split aggregate test returned FAIL_NO_EVIDENCE. The Bayesian
+importance screens are conditional weights, not posteriors. None of these are country evidence, and they do not
+change the descriptive ordering; they do mean the paper treats the ordering as description, not as a demonstrated
+staging mechanism.
+
 ## 16. Conclusion
 Massification is usually told as a demand story: factories and cities raise the return to schooling, and
 schooling follows. This paper tested the timing that story requires across 64 late-industrialising countries and
@@ -1116,7 +1170,7 @@ Prussia built its schools a century before it industrialised; Britain industrial
 framing that survives is **a late-industrialiser regularity, not a universal law**, and the verb is "is better
 described as" rather than "is caused by". The agricultural floor is real but does not deliver the sequence;
 scaling regularities are regularities, not laws; the credential and care mechanisms are null in the data they
-can be tested on. What remains is a clear, traceable, falsifiable statement about the order of events in
+can be tested on. The project's own forward tests are negative — exposure matching removes most of the synthetic order effect and the aggregate staging test fails out of sample — so the ordering is a description, not a demonstrated sequence. What remains is a clear, traceable, falsifiable statement about the order of events in
 massification, an honest set of limits, and a research agenda — cohort-linked microdata, archival verification
 of the historical dates, and an instrument for state capacity — that would let the next pass turn the
 correlation into identification.

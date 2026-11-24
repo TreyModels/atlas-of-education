@@ -5,7 +5,7 @@ Lead: panel-matrix (task-37). This record consolidates everything the project fo
 synthesis-length paper (target 12,000–18,000 words) with an exhaustive, DOI-verified literature review.
 
 ## Deliverables
-- **`paper.md`** — full draft, **17,968 words** (within the 12,000–18,000 target), restructured around the finding (Section 2) with explicit Implications (12) and Future research (13), with abstract, introduction,
+- **`paper.md`** — full draft, **18,809 words** (about 4.5% above the 12,000–18,000 target because the 24 Nov 2026 negative-results integration adds a required results subsection (§7.8) and synthesis/limitation entries; flagged for a trim pass), restructured around the finding (Section 2) with explicit Implications (12) and Future research (13), with abstract, introduction,
   four-literature theory section, data and measurement (with a data-tier table), empirical strategy, results sections including the E6 pre-1990 demand-timing re-estimate (7.5) and the E8 fee-abolition event study (7.6), synthesis and
   "What we know now" box, limitations/referee objections, conclusion, and three appendices (evidence labels/data tiers,
   reproduction, data gaps). The 25 Nov revision is logged in `REVISION_LOG.md`. Every number carries sample and uncertainty; the historical dates are labelled
@@ -81,6 +81,9 @@ Britain demand-led by 40–90 years. **Late-industrialiser regularity, not a uni
 
 ## Revision of 25 November 2026 (E6/E8 integration)
 Applied after the Codex wave retracted the 7% labour-demand figure and verified the E6/E8 record (`e6e8 @ 2d19da7`) and the fee dates (`task-49 @ 9a0fd69`). Changes: replaced the 7% figure and all "demand is ruled out" framing with E6's pre-1990 numbers and the "schooling and structural change move together" framing (with bounds and ties/censoring flagged); softened supply-led/sequencing causal language to association/consistency language; added the E8 fee-abolition section (7.6) and the N3 threshold-smoothing caveat (7.5); added a data-tier table and labelled every series; corrected subsection numbering; rechecked abstract/results/limitations against each other; recomputed the quoted numbers. Details, sources and commit: `REVISION_LOG.md`.
+
+## Negative-results integration (24 November 2026, task-37)
+Adds §7.8 "What the project's own simulations found: negative results" (staging audit exposure/fiscal confound; X1 exposure matching removes 88–98% of the apparent order effect; X3 no elasticity reversal or rescue; X4 aggregate FAIL_NO_EVIDENCE; X5 Bayesian screens not posteriors; X2 gate/tutoring inequality), plus abstract/conclusion sentences, synthesis point 7, the "What we know now" bullet and limitation 13, and the §12.3 gate-design caution. All X results are labelled **simulations** or **exploratory aggregates**, not evidence. Sources: `research/masseng-staging-x1-2026-11-24` @ `fef7428`, `research/masseng-staging-x2-2026-11-24` @ `f592bae`, `research/masseng-bayes-audit-2026-11-24` @ `0ecd4be`, `research/masseng-timing-audit-2026-11-24` @ `ff84e75`; details in `X_RESULTS_INTEGRATION.md`.
 
 ## Known gaps (stated, not proxied)
 1. Cohort-linked microdata (the theory's generational claim) not obtainable; event data are period data.
