@@ -1,0 +1,56 @@
+{
+ "engine_api": {
+  "ok": true,
+  "keys": [
+   "afb",
+   "asfr1519",
+   "coh",
+   "fb",
+   "m18",
+   "smam",
+   "tfr",
+   "years"
+  ],
+  "tfr_shape": [
+   1,
+   76
+  ],
+  "wall_sec": 5.023,
+  "nW": 12,
+  "seed": 7,
+  "note": "synthetic panel; API only, not the published calibration"
+ },
+ "baseline": {
+  "repeat": {
+   "tfr_max_abs_diff": 8.881784197001252e-16,
+   "smam_max_abs_diff": 0.0,
+   "asfr_max_abs_diff": 6.938893903907228e-17
+  },
+  "cpu_gpu_note": "numpy reference executed on the same prep",
+  "cpu_keys": [
+   "afb_n",
+   "afb_s",
+   "births",
+   "coh",
+   "expo",
+   "m18d",
+   "m18n",
+   "sing",
+   "state"
+  ]
+ },
+ "layout": {
+  "pinned": "nW=12 (first layout); all headline numbers use this layout",
+  "nW12_first_tfr": NaN,
+  "nW6_first_tfr": NaN,
+  "tfr_max_abs_diff": 1.9073691225284306,
+  "reading": "changing nW changes the random streams (documented caveat); diff is not FP noise"
+ },
+ "adaptation": {
+  "nW": 50000,
+  "gpu_wall_sec": 2.994,
+  "cpu_nW2000_wall_sec": 250.089,
+  "women_s_est": 16699.8,
+  "tfr_mean_last3": NaN
+ }
+}
