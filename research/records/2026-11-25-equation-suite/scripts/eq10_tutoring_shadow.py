@@ -35,18 +35,22 @@ def demand_world(rng, n, different):
 
 def demand_fit(y, urban, T):
     """Hurdle vs Tobit. The DGP truth is a semi-elasticity: d log T / d y = 0.8. A Tobit
-    on the LEVEL of T estimates a level coefficient (~8.6 here) and is not comparable to
-    0.8; estimate the Tobit on the log scale instead, log(1+T) with left-censoring at
-    log(1+0)=0, so its income coefficient is on the same scale as the two-part estimate
-    and the truth (Neon line audit / handoff quarantine #4: Tobit vs ground-truth scale).
-    The level-scale fit is still reported for continuity."""
+    on the LEVEL of T estimates a level coefficient (~8.6 here), which is in different
+    units from 0.8; estimate the Tobit on the log scale instead, log(1+T) with
+    left-censoring at log(1+0)=0, so its income coefficient is in the SAME UNITS as the
+    two-part estimate and the truth (Neon line audit / handoff quarantine #4: Tobit vs
+    ground-truth scale). Same units is not recovery: the log1p Tobit still estimates
+    ~1.44 single / ~1.37 different vs a 0.8 truth (0.64 / 0.57 away), so the dropped
+    pre-registered single-process rule fails. The level-scale fit is still reported for
+    continuity."""
     X = np.column_stack([np.ones_like(y), y, urban])
     pos = T > 0
     tob_log = tobit_em(np.log1p(T), X)
     tob_level = tobit_em(T, X)
     amt = ols(np.log(T[pos]), X[pos]); part = probit((T > 0).astype(float), X)
     return {"tobit_eta": tob_log["b"][1], "tobit_eta_level_scale": tob_level["b"][1],
-            "tobit_scale": "log1p(T): semi-elasticity comparable to the 0.8 truth",
+            "tobit_scale": "log1p(T): same units as the 0.8 semi-elasticity truth, but does NOT recover it "
+                           "(see tobit_within_0.15_share and the dropped_prereg_S3_* flags)",
             "two_part_eta": amt["b"][1], "ols_positive_eta": amt["b"][1],
             "participation_b": part["b"]}
 
@@ -107,10 +111,15 @@ def run(args):
             rows.append([world, r, round(f["tobit_eta"], 4), round(f["two_part_eta"], 4)])
         dem[world] = {"tobit_eta_mean": round(float(np.mean(tob)), 3),
                       "tobit_eta_level_scale_mean": round(float(np.mean(tob_level)), 3),
-                      "tobit_scale": "log1p(T): semi-elasticity; level-scale fit reported separately, not compared to 0.8",
+                      "tobit_scale": "log1p(T): same units as the 0.8 semi-elasticity truth; the estimate is "
+                                      "NOT close to 0.8 (see tobit_within_0.15_share); level-scale fit reported "
+                                      "separately and never compared to 0.8",
                       "two_part_eta_mean": round(float(np.mean(tp)), 3),
                       "two_part_within_0.15_share": round(float(np.mean(np.abs(np.array(tp) - 0.8) <= 0.15)), 2),
-                      "tobit_within_0.15_share": round(float(np.mean(np.abs(np.array(tob) - 0.8) <= 0.15)), 2)}
+                      "tobit_within_0.15_share": round(float(np.mean(np.abs(np.array(tob) - 0.8) <= 0.15)), 2),
+                      "tobit_outside_0.15_share": round(float(np.mean(np.abs(np.array(tob) - 0.8) > 0.15)), 2),
+                      "both_within_0.15_share": round(float(np.mean(
+                          (np.abs(np.array(tp) - 0.8) <= 0.15) & (np.abs(np.array(tob) - 0.8) <= 0.15))), 2)}
     mv_dem = {"specs": ["tobit", "two_part_hurdle", "ols_on_participants"],
               "estimates": {"different_processes_tobit": dem["different_processes"]["tobit_eta_mean"],
                             "different_processes_two_part": dem["different_processes"]["two_part_eta_mean"]}}
@@ -150,12 +159,24 @@ def run(args):
             "ban_raises_gini_in_all_specs": mv_prod["spec_robust"],
             "model_not_claimed_to_fit_bray": bray is not None and bray["max_abs_z"] > 2}
     rule["PASS"] = all(rule.values())
+    # Dropped pre-registered S3 tutoring-demand sub-rules, reported for traceability.
+    # They are NOT part of S10's implemented PASS above (which is why they are named
+    # separately). All three booleans are surfaced by run_all.py's rule_flags.
+    # The log1p Tobit is in the SAME UNITS as the 0.8 truth but does not recover it.
+    rule["dropped_prereg_S3_different_two_part_within_0.15"] = \
+        dem["different_processes"]["two_part_within_0.15_share"] >= 0.9
+    rule["dropped_prereg_S3_different_tobit_outside_0.15"] = \
+        dem["different_processes"]["tobit_outside_0.15_share"] >= 0.9
+    rule["dropped_prereg_S3_single_world_both_within_0.15"] = \
+        dem["single_process"]["both_within_0.15_share"] >= 0.9
     out.update({"demand": dem, "production": prod, "multiverse": {"demand": mv_dem, "production": mv_prod},
                 "gini_domain": "exp(learning index) - strictly positive level domain; the raw additive "
                                 "achievement index is non-positive in ~37% of draws, where the Gini is undefined",
                 "bray_external_check": bray, "decision_rule": rule,
-                "plain_result": ("Tutoring behaves as one exams-shadow module for demand: on the same log scale "
-                                 "as the 0.8 truth the two-part model is closer than the Tobit (%.2f vs %.2f). "
+                "plain_result": ("Tutoring behaves as one exams-shadow module for demand: on the log1p scale "
+                                 "(same units as the 0.8 truth) the two-part model is closer than the Tobit "
+                                 "(%.2f vs %.2f). The log1p Tobit does NOT recover the truth, so the dropped "
+                                 "pre-registered single-process rule fails (Tobit within-0.15 share %.2f). "
                                  "On inequality the own-teacher ban does NOT raise the learning Gini once the "
                                  "Gini is computed on a strictly positive level domain: in this reduced "
                                  "production model there is no substitution margin, so removing tutoring lowers "
@@ -164,9 +185,10 @@ def run(args):
                                  "is a fit to a real shadow-education system." %
                                  (mv_dem["estimates"]["different_processes_two_part"],
                                   mv_dem["estimates"]["different_processes_tobit"],
+                                  dem["single_process"]["tobit_within_0.15_share"],
                                   min(deltas), max(deltas), bray["max_abs_z"] if bray else float("nan")))})
     out["data_map"] = {'module': 'exams-shadow (single tutoring module)', 'observed': 'no harmonised tutoring panel; Bray targets are literature targets', 'assumed': 'demand and production parameters', 'gap': 'no tutoring data'}
-    out["statistical_frame"] = {'estimand': 'tutoring income elasticity; ban effect on learning Gini', 'identification': 'none (synthetic); two-part vs Tobit', 'testable_restrictions': 'hurdle/CES forms; retention assumption', 'benchmark_split': 'synthetic reps; Bray literature targets as external check (not a fit)', 'pass_fail': 'PASS if two-part closer than Tobit (same scale) and ban raises Gini in all specs', 'scale_alignment': 'Tobit on log1p(T) so its income coefficient is a semi-elasticity comparable to the 0.8 truth; the level-scale Tobit is reported but never compared to 0.8'}
+    out["statistical_frame"] = {'estimand': 'tutoring income elasticity; ban effect on learning Gini', 'identification': 'none (synthetic); two-part vs Tobit', 'testable_restrictions': 'hurdle/CES forms; retention assumption', 'benchmark_split': 'synthetic reps; Bray literature targets as external check (not a fit)', 'pass_fail': 'PASS if two-part closer than Tobit (same units) and ban raises Gini in all specs', 'scale_alignment': 'Tobit on log1p(T) so its income coefficient is in the same UNITS as the 0.8 semi-elasticity truth; it does NOT recover 0.8 (1.441 single / 1.370 different, 0.64/0.57 away), and the level-scale Tobit is reported but never compared to 0.8'}
     write_result(args.outdir, "eq10_tutoring_shadow", out)
     save_csv(args.outdir, "eq10_tutoring_shadow", ["part", "rep", "a", "b"], rows)
     print("PLAIN:", out["plain_result"])

@@ -157,7 +157,12 @@ def main():
                       "decision_rule_failures": manifest["decision_rule_failures"],
                       "no_rule_verdict": manifest["full_summary"]["no_rule_verdict"],
                       "smoke": manifest["smoke_summary"],
-                      "full": manifest["full_summary"]}, indent=1))
+                      "full": manifest["full_summary"],
+                      # per-script decision_rule sub-test flags (e.g. S10's Tobit /
+                      # dropped-pre-registered-S3 flags) so a rule failure is traceable
+                      "rule_flags": {r["script"]: r["rule_flags"]
+                                     for r in (manifest["smoke"] if args.smoke_only
+                                               else manifest["full"])}}, indent=1))
     summary = manifest["smoke_summary"] if args.smoke_only else manifest["full_summary"]
     bad = (summary["execution_failures"] + summary["decision_rule_failures"] +
            summary["no_rule_verdict"])
