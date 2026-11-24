@@ -98,6 +98,33 @@ def clean(v):
 
 _G = {}
 
+EXIT_FIELDS = ("reason", "started", "urban", "y", "cohort", "cred")
+
+
+def aggregate_exits(e):
+    """Rebuild the full child population: exit record + survivors still in the state.
+
+    WHY THIS IS NEEDED (Neon line audit, 2026-11-25). ``core.step`` compacts exited children OUT of
+    the state every step: it appends their rows to ``e.exits`` and then runs
+    ``keep = k['reason'] < 0; self.kids = {kk: v[keep] for kk, v in k.items()}``
+    (engine/eduengine/core.py, end of step). Therefore ``e.kids['reason']`` is ALL -1 after
+    ``e.run()`` -- reading it (as the first version of this driver did) structurally reports zero
+    exits, zero liquidity, zero choice and started_share == 1.0. The exits are not lost: they are in
+    ``e.exits``, a list with one dict of arrays per cohort-year in which at least one child exited.
+
+    Survivors still in ``e.kids`` keep reason -1 = censored at the horizon (still inside the system,
+    not yet exited). They are concatenated too so that the reported shares sum to 1, and are exposed
+    as their own ``censored`` category.
+    """
+    blocks = list(getattr(e, "exits", None) or [])
+    out = {}
+    for f in EXIT_FIELDS:
+        parts = [np.asarray(b[f]) for b in blocks if f in b]
+        if f in e.kids:
+            parts.append(np.asarray(e.kids[f]))
+        out[f] = np.concatenate(parts) if parts else np.array([])
+    return out
+
 
 def init_engine(engine_root):
     sys.path.insert(0, engine_root)
@@ -111,7 +138,7 @@ def one(task):
     mods, over = combo_params(combo, seed)
     e = worlds.make("formal_loop", mods=mods, **over)
     out = e.run()
-    k = e.kids
+    k = aggregate_exits(e)   # NOT e.kids: the engine compacts exits out of the state (see helper)
     y = np.asarray(k["y"], float)
     cuts = np.quantile(y, [0.2, 0.4, 0.6, 0.8])
     qb = np.searchsorted(cuts, y, side="right")
@@ -131,13 +158,21 @@ def one(task):
                 "liquidity": float(np.mean((reason[mask] == 1))),
                 "choice": float(np.mean((reason[mask] == 0))),
                 "never": float(np.mean((reason[mask] == 4))),
+                "censored": float(np.mean((reason[mask] == -1))),
+                "other_terminal": float(np.mean(np.isin(reason[mask], (2, 3, 5, 6)))),
                 "started_share": float(np.mean(started[mask]))}
     for qi in range(5):
         rec["groups"][f"q{qi+1}"] = dec(qb == qi)
     rec["groups"]["urban"] = dec(urban)
     rec["groups"]["rural"] = dec(~urban)
-    rec["groups"]["started_liquidity_share"] = float(np.mean(reason[started] == 1)) if started.any() else None
-    rec["groups"]["started_choice_share"] = float(np.mean(reason[started] == 0)) if started.any() else None
+    rec["groups"]["n_population"] = int(len(reason))
+    rec["groups"]["n_exits"] = int(np.sum(reason >= 0))
+    rec["groups"]["n_censored"] = int(np.sum(reason == -1))
+    started_exited = started & (reason >= 0)
+    rec["groups"]["started_liquidity_share"] = (float(np.mean(reason[started_exited] == 1))
+                                                if started_exited.any() else None)
+    rec["groups"]["started_choice_share"] = (float(np.mean(reason[started_exited] == 0))
+                                             if started_exited.any() else None)
     tg = np.asarray(out.get("tut_by_grade") or [], float)
     if tg.size >= 16:
         gate_adj = float(np.mean(tg[[5, 8, 11]]))
