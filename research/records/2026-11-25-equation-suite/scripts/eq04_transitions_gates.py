@@ -70,17 +70,21 @@ def run(args):
                         ["bar", "quota_share_0.4", "quota_share_0.5", "quota_share_0.6", "contest"]}}
     mv["range"] = [min(mv["estimates"].values()), max(mv["estimates"].values())]
     mv["spec_robust"] = len({v > 0 for v in mv["estimates"].values()}) == 1
+    quota_gap = summary["quota"]["mean_gap_top_minus_bottom"]
+    quota_txt = ("flips the gap (%.3f) as the pre-declared rule expected" % quota_gap
+                 if quota_gap < 0 else
+                 "narrows the gap (%.3f) but does NOT flip its sign, so the pre-declared "
+                 "'quota flips the gap' rule FAILS" % quota_gap)
     out.update({"summary": summary, "multiverse": mv, "decision_rule": rule,
                 "system_map": {"nodes": ["stage transitions", "gates"], "piece": 3, "chain": "family affordability -> learning -> gate -> credential->jobs"},
-           "masseng_boundary": {"used": "standalone synthetic demonstration (NOT MASSENG v5 output)", "mechanism_in_masseng_v5": False, "note": "standalone synthetic demonstration; not a MASSENG v5 output"},
-                "plain_result": ("A score bar admits rich pupils at a higher rate (gap %.3f); a reserved quota "
-                                 "flips the gap (%.3f) by construction, and a contest in which richer pupils "
-                                 "invest more effort widens it further (%.3f). The quota changes who is admitted, "
-                                 "not how much anyone learns — this is a rationing demonstration, not an "
-                                 "evaluation of any admissions policy." %
-                                 (summary["bar"]["mean_gap_top_minus_bottom"],
-                                  summary["quota"]["mean_gap_top_minus_bottom"],
-                                  summary["contest"]["mean_gap_top_minus_bottom"]))})
+           "masseng_boundary": {"used": "standalone synthetic demonstration (NOT MASSENG v5 output)", "mechanism_in_masseng_v5": False, "note": "progression/capacity exist in MASSENG v5; the exam score bar and reserved-quota gates do NOT -- synthetic demonstration only, not a MASSENG v5 output"},
+                "plain_result": (f"A score bar admits rich pupils at a higher rate "
+                                 f"(gap {summary['bar']['mean_gap_top_minus_bottom']:.3f}); a reserved quota "
+                                 + quota_txt +
+                                 ", and a contest in which richer pupils invest more effort widens it "
+                                 f"further ({summary['contest']['mean_gap_top_minus_bottom']:.3f}). The quota "
+                                 "changes who is admitted, not how much anyone learns \u2014 this is a "
+                                 "rationing demonstration, not an evaluation of any admissions policy.")})
     out["data_map"] = {'module': 'gates + attainment/completion', 'observed': 'EdStats completion/transition proxies available (not fitted)', 'assumed': 'gate thresholds, quota rules', 'gap': 'task-41 top gap 3'}
     out["statistical_frame"] = {'estimand': 'SES admission/completion gap under each gate', 'identification': 'gate arithmetic; no causal identification', 'testable_restrictions': 'score/effort distributions fixed', 'benchmark_split': 'synthetic reps; no observed split', 'pass_fail': 'PASS if baseline gap positive, quota flips it, contest widens it'}
     write_result(args.outdir, "eq04_transitions_gates", out)

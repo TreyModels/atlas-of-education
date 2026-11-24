@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 """S6 - Migration and rural-urban schooling (inventory 168-183 subset; cross-cutting system part).
-PREREG: PRE_REGISTRATION.md S6 + Amendments 01-03. SYNTHETIC demonstration only - NOT a MASSENG v5 output
+PREREG: PRE_REGISTRATION.md Amendment 02 mapping S6 lists the multiverse choices only; there is
+NO pre-registered decision rule for this new script (the implemented rule is ad hoc and is logged
+as a deviation in SUITE_REPORT.md). SYNTHETIC demonstration only - NOT a MASSENG v5 output
 (MASSENG v5 does not model rural-urban migration). No causal claim."""
 import os, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -60,16 +62,23 @@ def run(args):
                 mv["probit_with_network"]["mean_marginal_effect_education"] >
                 mv["probit_no_network"]["mean_marginal_effect_education"]}
     rule["PASS"] = all(rule.values())
+    net_txt = ("networks increase the estimated effect (%.4f with vs %.4f without)" %
+               (mv["probit_with_network"]["mean_marginal_effect_education"],
+                mv["probit_no_network"]["mean_marginal_effect_education"])
+               if rule["network_spec_effect_larger_than_no_network"] else
+               "networks slightly REDUCE the estimated marginal effect (%.4f with vs %.4f "
+               "without), so the ad hoc 'networks increase the effect' criterion FAILS" %
+               (mv["probit_with_network"]["mean_marginal_effect_education"],
+                mv["probit_no_network"]["mean_marginal_effect_education"]))
     out.update({"multiverse": {"specs": list(mv.keys()), "estimates": {k: v["mean_marginal_effect_education"] for k, v in mv.items()},
                                "range": [min(vals), max(vals)], "spec_robust": all(v > 0 for v in vals)},
                 "summary": mv, "decision_rule": rule,
                 "plain_result": ("Education raises the migration probability in every specification (marginal "
-                                 "effect range %.4f-%.4f) and migrants are more educated than stayers; networks "
-                                 "increase the effect. MASSENG v5 does not model rural-urban migration, so this is "
-                                 "a synthetic demonstration of the equation, not a model output." %
-                                 (min(vals), max(vals)))})
+                                 "effect range %.4f-%.4f) and migrants are more educated than stayers; " % (min(vals), max(vals))
+                                 + net_txt + ". MASSENG v5 does not model rural-urban migration, so this is "
+                                 "a synthetic demonstration of the equation, not a model output.")})
     out["data_map"] = {'module': 'rural-urban/migration', 'observed': 'WDI urbanisation, UN migrant stock, remittances available (not fitted)', 'assumed': 'flows, costs, networks', 'gap': 'task-41 top gap 4'}
-    out["statistical_frame"] = {'estimand': 'marginal effect of education on migration probability', 'identification': 'none (synthetic); probit/logit latent model', 'testable_restrictions': 'distributional form; network exogeneity', 'benchmark_split': 'Monte Carlo; no observed split', 'pass_fail': 'PASS if education effect positive in every spec'}
+    out["statistical_frame"] = {'estimand': 'marginal effect of education on migration probability', 'identification': 'none (synthetic); probit/logit latent model', 'testable_restrictions': 'distributional form; network exogeneity', 'benchmark_split': 'Monte Carlo; no observed split', 'pass_fail': 'PASS if education effect positive in every spec AND the network-spec marginal effect exceeds the no-network spec (the second criterion is ad hoc, not pre-registered)'}
     write_result(args.outdir, "eq06_migration_rural_urban", out)
     save_csv(args.outdir, "eq06_migration_rural_urban", ["spec", "rep", "marginal_effect_education", "edu_gap"], rows)
     print("PLAIN:", out["plain_result"])
