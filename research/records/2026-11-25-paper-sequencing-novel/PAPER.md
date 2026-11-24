@@ -30,7 +30,7 @@ cases where the sequence is best documented split by supplier: Prussia shows sta
 France is statute-led with attainment following demand, Britain is demand-led by 40 to 90 years, and the northern
 United States is state-supplied in the local-public-goods sense. The finding is stated as a **late-industrialiser regularity, not a universal law**, and as a new assembly
 of known facts rather than a discovery: the direction of the historical relation is well established, and this
-paper's increment is the systematic cross-country event-ordering compilation and its lead distribution. Data
+paper's increment is the systematic cross-country event-ordering compilation and its lead distribution. The project's own synthetic staging tests do not support reading that ordering as a mechanism: exposure matching removes 88–98 per cent of the apparent school-first advantage, no feedback-elasticity value produces a reversal or a rescue, and an honest-split aggregate test finds no evidence (X1–X5; simulations and exploratory aggregates, not country evidence). Data
 tiers are labelled throughout: the structural-change and enrolment series are observed (GGDC, WDI); the schooling
 event series is reconstructed; the fertility series is observed WDI total fertility (births per woman) and is not
 the project's effective-fertility measure; the historical sequences are literature-standard (unverified).
@@ -291,6 +291,34 @@ a large farm labour force left the land before the schools expanded. This is not
 the measurement, and the honest reading is that the reverse cases are weakly dated rather than substantively
 contradictory.
 
+### 4.6 What the project's own simulations and aggregates found: the timing claim is not reproduced
+
+The ordering above is descriptive. The project's forward programme tried to test whether the sequence *matters*
+mechanically: a synthetic `eduengine` model of schooling, jobs, tutoring and public quality, an aggregate staging
+test on observed series, and Bayesian importance screens. These are **simulations or exploratory aggregates, not
+country evidence**, and they are reported because they all point the same way: none supports a sequencing
+mechanism.
+
+| test | design (label) | result |
+|---|---|---|
+| staging audit (task-26) | audit of the committed synthetic staging experiment (**simulation**) | arms not exposure-matched: `school_first` vs `jobs_first` differ by +1.8 education-share-years and −1.2 vacancy-years by construction; the fiscal loop gives `jobs_first` the higher education budget (41,818 vs 38,183, +9.5%); completion contrasts ≤0.6pp and not sign-stable (3–4/13 metrics); 5–7 distinct schedule orderings across seeds |
+| X1 exposure-matched sequencing (task-27) | synthetic toy worlds, pre-registered (**simulation**) | unmatched formal-share gap −5.4…−4.8pp (sign-stable) collapses to −0.13…+0.56pp under equal exposure totals (18.36 education-share-years / 9.44 vacancy-years) = 2–12% of unmatched (**88–98% removed**); no material completion/equity effect; a +10-year calendar placebo moves the gap to −6.2…−7.6pp |
+| X3 feedback-elasticity surface (task-27) | 5 elasticities × 4 schedules × 2 gates × 20 seeds = 800 synthetic runs (**simulation**) | zero sign reversals; sequencing contrast mostly NULL (9–11/13 metrics); only the mechanically exposed formal share robust; both-early-vs-neither robust 10–13/13 — a dose contrast, not sequencing |
+| X4 honest-split aggregate test (task-28) | committed WDI/UIS aggregates, 40 train / 21 validation (**observed aggregates, exploratory**) | model-implied ordering does not beat persistence or pooled trend out of sample (paired MAE −2.49 [−5.76, +0.77] and −0.67 [−2.04, +0.66]; ordering coefficient −2.05 [−4.44, +0.87]); all four robustness specs FAIL_NO_EVIDENCE |
+| X5 Bayesian screens (task-29) | conditional importance weights, not posteriors (**simulation**) | ESS 88.75/4,096 (2.17%) and 20.64/4,096 (0.50%); prior-dominated; synthetic recovery confusion diagonal 50% (criterion ≥60%) and error ≤15% in 56.25% (criterion ≥60%); not usable as posterior-style inference |
+
+A sixth simulation belongs to the massification paper rather than here but completes the picture: quota gates
+raised gate-prep tutoring and widened the top-versus-bottom tutoring gap (X2, synthetic toy worlds). The staging
+audit's exposure/fiscal confound is the reason the paper's own ordering must not be read through that experiment:
+in the synthetic model the apparent order effect was mostly cumulative exposure plus endogenous revenue and
+calendar position, and equalising exposure removed it.
+
+What this means for this paper: the 61-of-64 event ordering stands as a **descriptive, dated ordering of observed
+series**; it gets **no support from the project's synthetic or aggregate tests** as evidence that the order is
+causal or that early schooling produces later job release. The paper's conclusion is therefore deliberately
+narrower than "schools before factories matters": it is that, in the countries where both events can be dated,
+schooling typically came first — an ordering to be explained, not a mechanism demonstrated.
+
 ## 5. The historical cases: a typology by supplier
 
 The panel is a set of 1965-2010 regularities. The four cases where the ordering is documented for a century or
@@ -511,6 +539,13 @@ cent interval 26.6–50.0), 31.25 per cent simultaneous and 31.25 per cent ferti
 with both dates it is 35.8 per cent.** The fertility event is not used in this paper's claims; the strict
 recomputation is the one to use.
 
+A fourth limit comes from the project's forward programme (Section 4.6): the synthetic staging experiment was
+exposure- and fiscal-confounded, its exposure-matched re-run removed 88–98 per cent of the apparent order effect,
+the feedback-elasticity surface produced no reversal and no rescue, and the honest-split aggregate test returned
+FAIL_NO_EVIDENCE; the project's Bayesian importance screens are conditional weights, not posteriors. These are
+simulations or exploratory aggregates, not country evidence, and they leave the ordering descriptive. No
+simulation is used as evidence anywhere in this paper.
+
 ## 10. Conclusion
 
 In 64 late-industrialising countries, the schools came before the farms: 61 forward cases, a median lead of 26
@@ -518,7 +553,7 @@ years, a lower quartile of 17, and a forward share that survives a systematic fi
 pre-1990 structural-change series, demand-first is a minority ordering (10–24 per cent of identifiable countries)
 with a large tie/censoring band, so schooling and structural change move together rather than demand cleanly
 leading; a supply-versus-demand decomposition puts the conditional association on the supply block, and a
-fee-abolition event study is consistent with a supply-side effect on primary enrolment. The historical cases explain the panel's shape: where the state supplied the
+fee-abolition event study is consistent with a supply-side effect on primary enrolment. None of this is evidence that the sequence *matters*: the project's exposure-matched simulations remove 88–98 per cent of the apparent order effect, and the aggregate staging test fails out of sample (Section 4.6); the ordering is a description to be explained, not a mechanism demonstrated. The historical cases explain the panel's shape: where the state supplied the
 schools, they preceded the industrial transformation (Prussia, France's statutes, the American common schools);
 where the market and charities supplied them unevenly, industrialisation came first (Britain). The result is a
 late-industrialiser regularity, not a universal law, and the paper's increment is a new assembly of known facts —
@@ -541,7 +576,7 @@ from `results/event_dates.csv`, and `scripts/verify_revision_numbers.py`, which 
 the revised passages (E6, E8, N3, sequencing and the fertility ordering) from committed copies of the source
 records in `data/`, writing `results/revision_verification.json`. The revision's source records are
 `research/e6e8-sequencing-2026-11-25` @ `2d19da7` (E6/E8/N3) and
-`research/codex-source-verification-2026-11-25` @ `9a0fd69` (verified fee dates). A published version should also
+`research/codex-source-verification-2026-11-25` @ `9a0fd69` (verified fee dates). The negative-results integration of 24 November 2026 cites `research/masseng-staging-x1-2026-11-24` @ `fef7428` (X1/X3 RUN_REPORT), `research/masseng-staging-x2-2026-11-24` @ `f592bae` (X2/X4 RUN_REPORT), `research/masseng-bayes-audit-2026-11-24` @ `0ecd4be` (X5 AUDIT addendum) and `research/masseng-timing-audit-2026-11-24` @ `ff84e75` (staging audit). All are simulations or exploratory aggregates; no server compute was involved. A published version should also
 release the country-by-country date and source table, which this record names as a gap rather than supplying.
 
 ## Appendix: claims to source, and files

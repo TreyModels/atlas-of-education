@@ -87,3 +87,14 @@ label data tiers, and recompute every quoted number from the committed records.
 - `data/` — six source-record copies (new).
 - `scripts/verify_revision_numbers.py` — new recomputation script.
 - `results/revision_verification.json` — new output (28/28 pass).
+
+## Negative-results integration (24 November 2026, task-37)
+
+Added §4.6 "What the project's own simulations and aggregates found: the timing claim is not reproduced" (table of
+staging audit, X1, X3, X4, X5 plus X2 note), an abstract sentence, a fourth limits paragraph, a conclusion sentence,
+and the data-availability source note. Draft after this integration: **7,607 words** (was 6,898). All X results are
+labelled **simulations** or **exploratory aggregates**, never evidence; no X1–X5 number is used as country
+evidence. Sources: `research/masseng-staging-x1-2026-11-24` @ `fef7428`, `research/masseng-staging-x2-2026-11-24` @
+`f592bae`, `research/masseng-bayes-audit-2026-11-24` @ `0ecd4be`, `research/masseng-timing-audit-2026-11-24` @
+`ff84e75`. Details: `X_RESULTS_INTEGRATION.md`. Branch: new additive branch
+`research/paper-sequencing-negatives-2026-11-24` (this revision does not rewrite the verified head `62c27a3`).
