@@ -32,6 +32,24 @@ def _model_dir():
 
 sys.path.insert(0, _model_dir())
 RESULTS = os.path.join(RECORD, "results")
+
+
+def _json_safe(obj):
+    """Recursively replace non-finite floats with None so the dump is strict JSON (no NaN/Infinity literals).
+
+    The dashboard legitimately returns undefined moments (e.g. mean pay with jobs off, a credential mix with an
+    empty cell). Those are undefined statistics, not numbers: they are written as JSON null, never as a NaN
+    literal that a strict parser rejects or a reader silently treats as a value.
+    """
+    if isinstance(obj, dict):
+        return {str(k): _json_safe(v) for k, v in obj.items()}
+    if isinstance(obj, (list, tuple)):
+        return [_json_safe(v) for v in obj]
+    if isinstance(obj, (np.floating, np.integer)):
+        obj = obj.item()
+    if isinstance(obj, float):
+        return obj if np.isfinite(obj) else None
+    return obj
 MAIN_SEEDS = list(range(10))
 HOLD_SEEDS = list(range(10, 20))
 
@@ -69,15 +87,38 @@ def _compare_zero_signal(seed):
 
 
 def _zero_selection(seed):
-    """T1b: with selection_strength=0, admission must not select on ability and prep must vanish."""
+    """T1b: with selection_strength=0, admission must not select on ability and prep must vanish.
+
+    The statistic is the point-biserial correlation between ability and the gate-2 admission indicator over the
+    gate-2 eligible (in-school) pool. The old code correlated ability among *admitted* cells with their own
+    all-ones indicator, which is zero-variance by construction: every seed returned NaN, so the control could
+    never fail. Degenerate pools (no admitted mass, everyone admitted, constant ability) are undefined rather
+    than evidence: they return a declared 0.0 with the counts recorded, never NaN.
+    """
     from model_blocks import Params, simulate
     full = simulate(Params(seed=seed))
     zero = simulate(Params(seed=seed, selection_strength=0.0))
-    def corr(d):
-        m = np.asarray(d["admitted"][:, 2], bool)
-        return float(np.corrcoef(np.asarray(d["ability"])[m], m[m].astype(float))[0, 1]) if m.sum() > 2 else float("nan")
-    return {"seed": seed, "ability_admission_corr_full": corr(full),
-            "ability_admission_corr_zero": corr(zero),
+
+    def point_biserial(d):
+        eligible = np.asarray(d["state"])[:, 2] >= 0
+        admitted = np.asarray(d["admitted"])[:, 2]
+        ability = np.asarray(d["ability"], float)
+        n_eligible = int(eligible.sum())
+        n_admitted = int((admitted & eligible).sum())
+        degenerate = (n_eligible < 3 or n_admitted == 0 or n_admitted == n_eligible
+                      or float(np.nanstd(ability[eligible])) <= 1e-12)
+        if degenerate:
+            return 0.0, n_eligible, n_admitted, True
+        r = float(np.corrcoef(ability[eligible], admitted[eligible].astype(float))[0, 1])
+        return (r if np.isfinite(r) else 0.0), n_eligible, n_admitted, False
+
+    r_full, n_el_full, n_ad_full, deg_full = point_biserial(full)
+    r_zero, n_el_zero, n_ad_zero, deg_zero = point_biserial(zero)
+    return {"seed": seed, "gate": 2,
+            "n_eligible_full": n_el_full, "n_admitted_full": n_ad_full,
+            "n_eligible_zero": n_el_zero, "n_admitted_zero": n_ad_zero,
+            "ability_admission_corr_full": r_full, "ability_admission_corr_zero": r_zero,
+            "degenerate_full": deg_full, "degenerate_zero": deg_zero,
             "prep_participation_zero": float((np.asarray(zero["prep"]) > 0).any(axis=1).mean())}
 
 
@@ -85,8 +126,10 @@ def _moments(seed, params):
     from model_blocks import Params, simulate
     from dashboard import outcomes
     o = outcomes(simulate(Params(seed=seed, **params)))
-    return [o["prep_participation"], o["admission_by_quintile"][2][0], o["formal_share"],
-            o["pay_by_credential"][3] / max(o["pay_by_credential"][2], 1e-9), o["queue_share"]]
+    pay3, pay2 = o["pay_by_credential"][3], o["pay_by_credential"][2]
+    ratio = pay3 / pay2 if (np.isfinite(pay3) and np.isfinite(pay2) and abs(pay2) > 1e-12) else float("nan")
+    return [o["prep_participation"], o["admission_by_quintile"][2][0], o["formal_share"], ratio,
+            o["queue_share"]]
 
 
 def _abc_draw(args):
@@ -95,7 +138,7 @@ def _abc_draw(args):
         m = _moments(1000 + i, params)
         truth = np.asarray(truth_moments, float)
         got = np.asarray(m, float)
-        ok = np.isfinite(got)
+        ok = np.isfinite(got) & np.isfinite(truth)      # nan-safe: a moment undefined at truth or draw is skipped
         if ok.sum() < 3:
             return None
         d = float(np.sqrt(np.mean(((got[ok] - truth[ok]) / np.maximum(np.abs(truth[ok]), 1e-6)) ** 2)))
@@ -167,11 +210,16 @@ def build_configs(abc_draws=1000):
     for arm, kw in labour_arms.items():
         cfgs += [dict(arm=arm, seed=s, params=dict(kw)) for s in MAIN_SEEDS]
     # ---- multiverse structural swaps (T5)
+    # T5 structural multiverse (declared): the two structural swaps crossed -- prep-return functional form
+    # (linear -> concave) x tertiary gate rule (rank bar -> quota / Tullock contest). The base cell (bar, linear)
+    # is the common reference and is already the baseline run, so it is not repeated here. Every arm below sets at
+    # least one non-default field and the name<->params map is one-to-one; the old dict repeated multi_prep_concave
+    # verbatim as multi_bar_concave and made multi_quota_tullock a no-op (linear prep, plain quota).
     multi_arms = {
-        "multi_prep_concave": dict(prep_form="concave"),
         "multi_bar_concave": dict(prep_form="concave"),
+        "multi_quota_concave": dict(rules=("bar", "bar", "quota"), prep_form="concave"),
+        "multi_tullock_linear": dict(rules=("bar", "bar", "tullock"), prep_form="linear"),
         "multi_tullock_concave": dict(rules=("bar", "bar", "tullock"), prep_form="concave"),
-        "multi_quota_tullock": dict(rules=("bar", "bar", "quota"), prep_form="linear"),
     }
     for arm, kw in multi_arms.items():
         cfgs += [dict(arm=arm, seed=s, params=dict(kw)) for s in MAIN_SEEDS]
@@ -201,8 +249,9 @@ def main():
     with Pool(processes=args.workers) as pool:
         zero = pool.map(_compare_zero_signal, [0, 1, 2])
         zero_sel = pool.map(_zero_selection, [0, 1, 2])
-    # truth moments for the ABC from the full baseline, averaged over 3 seeds
-    truth = np.mean([_moments(s, {}) for s in (0, 1, 2)], axis=0).tolist()
+    # truth moments for the ABC from the full baseline, nan-safe average over 3 seeds
+    with np.errstate(invalid="ignore"):
+        truth = np.nanmean(np.asarray([_moments(s, {}) for s in (0, 1, 2)], float), axis=0).tolist()
     prior = dict(gamma=(0.20, 0.90), quota_share=(0.0, 0.60), vacancies=(0.10, 0.40), signal_noise=(0.10, 0.90))
     truth_params = dict(gamma=0.55, quota_share=0.30, vacancies=0.25, signal_noise=0.50)
     rng = np.random.default_rng(20261125)
@@ -242,13 +291,16 @@ def main():
         "abc_draws": len(abc), "abc_accepted": n_acc, "abc_truth_moments": truth,
         "abc_prior": {k: list(v) for k, v in prior.items()}, "abc_truth_params": truth_params,
     }
-    json.dump({"meta": meta, "runs": runs, "zero_signal_identity": zero,
+    payload = {"meta": meta, "runs": runs, "zero_signal_identity": zero,
                "zero_signal_selection": zero_sel, "abc_identifiability": ident,
-               "shared_code_ablation": abl},
-              open(args.out, "w"), indent=1)
+               "shared_code_ablation": abl}
+    with open(args.out, "w") as fh:
+        json.dump(_json_safe(payload), fh, indent=1, allow_nan=False)
     print(f"wrote {args.out} ({os.path.getsize(args.out) / 1e6:.2f} MB) in {meta['wall_seconds']}s; "
           f"errors={len(errors)}")
     print("T1a max diff:", max(z["max_abs_diff"] for z in zero))
+    print("T1b corr full/zero:", [(round(z["ability_admission_corr_full"], 4),
+                                   round(z["ability_admission_corr_zero"], 4)) for z in zero_sel])
 
 
 if __name__ == "__main__":
