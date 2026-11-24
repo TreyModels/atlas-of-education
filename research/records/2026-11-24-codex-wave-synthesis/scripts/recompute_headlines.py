@@ -213,17 +213,42 @@ for proxy in ["ggdc_nonag_emp", "urban", "ind_va", "agri_va"]:
             "n_in_window": inwin, "forward": fwd, "reverse": rev,
             "forward_or_tie": tie, "undetermined": und, "identifiable": ident,
             "forward_share_identified": round(100 * fwd / ident, 1) if ident else None,
+            "strict_schooling_first_share_identified": round(100 * rev / ident, 1) if ident else None,
+            "strict_schooling_first_share_of_strict_orderings": round(100 * rev / (rev + fwd), 1)
+                                                                  if (rev + fwd) else None,
             "lower_bound_over_inwindow": round(100 * fwd / inwin, 1) if inwin else None,
             "upper_bound_over_inwindow": round(100 * (fwd + und) / inwin, 1) if inwin else None,
             "tie_or_censored_share_inwindow": round(100 * tie / inwin, 1) if inwin else None,
         }
+prim = {proxy: e6out[proxy]["1900-2012"] for proxy in e6out}
 OUT["E6"] = {
     "by_proxy_window": e6out,
+    "primary_window_ranges_1900_2012": {
+        "demand_first_share_identified": [min(v["forward_share_identified"] for v in prim.values()),
+                                          max(v["forward_share_identified"] for v in prim.values())],
+        "strict_schooling_first_share_identified": [
+            min(v["strict_schooling_first_share_identified"] for v in prim.values()),
+            max(v["strict_schooling_first_share_identified"] for v in prim.values())],
+        "strict_schooling_first_share_of_strict_orderings": [
+            min(v["strict_schooling_first_share_of_strict_orderings"] for v in prim.values()),
+            max(v["strict_schooling_first_share_of_strict_orderings"] for v in prim.values())],
+        "bounds_over_inwindow": [min(v["lower_bound_over_inwindow"] for v in prim.values()),
+                                 max(v["upper_bound_over_inwindow"] for v in prim.values())],
+        "tie_or_censored_share_inwindow": [min(v["tie_or_censored_share_inwindow"] for v in prim.values()),
+                                           max(v["tie_or_censored_share_inwindow"] for v in prim.values())],
+    },
+    "erratum": ("record head advanced to 59d31d7 (erratum on 2d19da7; REPORT/ERRATUM/docstring only, "
+                "data files unchanged): the original E6 prose '18-33% strict schooling-first' did not "
+                "reproduce; the values recomputed here are 21.5-46.3% of identifiable countries and "
+                "58.3-71.4% of strict orderings."),
     "reading": ("primary window 1900-2012 (full overlap; the preregistered 1960-2010 window selects "
                 "against pre-1960 demand take-offs and is reported as robustness): demand-first among "
                 "identifiable countries = 10.0% GGDC non-ag employment, 15.4% urbanisation, 24.1% "
                 "industry VA, 18.8% agriculture VA; bounds over all in-window countries 6.7-53.0%; "
-                "weak ties/left-censoring 21.1-43.3% of in-window countries."),
+                "weak ties/left-censoring 21.1-43.3% of in-window countries. Strict schooling-first is "
+                "the larger strict ordering in all four proxies: 21.5-46.3% of identifiable countries "
+                "(58.3-71.4% of strict orderings) against 10.0-24.1% demand-first, but it is not a "
+                "majority of identifiable countries; the remainder are weak ties or undetermined."),
 }
 
 # ------------------------------------------------- 6. Q2 pair benchmark (105/52/1/52)

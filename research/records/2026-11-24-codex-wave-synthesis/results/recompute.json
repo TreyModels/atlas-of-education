@@ -203,6 +203,8 @@
      "undetermined": 10,
      "identifiable": 20,
      "forward_share_identified": 10.0,
+     "strict_schooling_first_share_identified": 25.0,
+     "strict_schooling_first_share_of_strict_orderings": 71.4,
      "lower_bound_over_inwindow": 6.7,
      "upper_bound_over_inwindow": 40.0,
      "tie_or_censored_share_inwindow": 43.3
@@ -215,6 +217,8 @@
      "undetermined": 2,
      "identifiable": 7,
      "forward_share_identified": 14.3,
+     "strict_schooling_first_share_identified": 42.9,
+     "strict_schooling_first_share_of_strict_orderings": 75.0,
      "lower_bound_over_inwindow": 11.1,
      "upper_bound_over_inwindow": 33.3,
      "tie_or_censored_share_inwindow": 33.3
@@ -227,6 +231,8 @@
      "undetermined": 0,
      "identifiable": 5,
      "forward_share_identified": 20.0,
+     "strict_schooling_first_share_identified": 60.0,
+     "strict_schooling_first_share_of_strict_orderings": 75.0,
      "lower_bound_over_inwindow": 20.0,
      "upper_bound_over_inwindow": 20.0,
      "tie_or_censored_share_inwindow": 20.0
@@ -239,6 +245,8 @@
      "undetermined": 0,
      "identifiable": 3,
      "forward_share_identified": 33.3,
+     "strict_schooling_first_share_identified": 33.3,
+     "strict_schooling_first_share_of_strict_orderings": 50.0,
      "lower_bound_over_inwindow": 33.3,
      "upper_bound_over_inwindow": 33.3,
      "tie_or_censored_share_inwindow": 33.3
@@ -253,6 +261,8 @@
      "undetermined": 36,
      "identifiable": 65,
      "forward_share_identified": 15.4,
+     "strict_schooling_first_share_identified": 21.5,
+     "strict_schooling_first_share_of_strict_orderings": 58.3,
      "lower_bound_over_inwindow": 9.9,
      "upper_bound_over_inwindow": 45.5,
      "tie_or_censored_share_inwindow": 40.6
@@ -265,6 +275,8 @@
      "undetermined": 7,
      "identifiable": 58,
      "forward_share_identified": 17.2,
+     "strict_schooling_first_share_identified": 12.1,
+     "strict_schooling_first_share_of_strict_orderings": 41.2,
      "lower_bound_over_inwindow": 15.4,
      "upper_bound_over_inwindow": 26.2,
      "tie_or_censored_share_inwindow": 63.1
@@ -277,6 +289,8 @@
      "undetermined": 0,
      "identifiable": 11,
      "forward_share_identified": 63.6,
+     "strict_schooling_first_share_identified": 36.4,
+     "strict_schooling_first_share_of_strict_orderings": 36.4,
      "lower_bound_over_inwindow": 63.6,
      "upper_bound_over_inwindow": 63.6,
      "tie_or_censored_share_inwindow": 0.0
@@ -289,6 +303,8 @@
      "undetermined": 0,
      "identifiable": 2,
      "forward_share_identified": 50.0,
+     "strict_schooling_first_share_identified": 50.0,
+     "strict_schooling_first_share_of_strict_orderings": 50.0,
      "lower_bound_over_inwindow": 50.0,
      "upper_bound_over_inwindow": 50.0,
      "tie_or_censored_share_inwindow": 0.0
@@ -303,6 +319,8 @@
      "undetermined": 22,
      "identifiable": 54,
      "forward_share_identified": 24.1,
+     "strict_schooling_first_share_identified": 46.3,
+     "strict_schooling_first_share_of_strict_orderings": 65.8,
      "lower_bound_over_inwindow": 17.1,
      "upper_bound_over_inwindow": 46.1,
      "tie_or_censored_share_inwindow": 21.1
@@ -315,6 +333,8 @@
      "undetermined": 12,
      "identifiable": 42,
      "forward_share_identified": 31.0,
+     "strict_schooling_first_share_identified": 31.0,
+     "strict_schooling_first_share_of_strict_orderings": 50.0,
      "lower_bound_over_inwindow": 24.1,
      "upper_bound_over_inwindow": 46.3,
      "tie_or_censored_share_inwindow": 29.6
@@ -327,6 +347,8 @@
      "undetermined": 9,
      "identifiable": 25,
      "forward_share_identified": 32.0,
+     "strict_schooling_first_share_identified": 36.0,
+     "strict_schooling_first_share_of_strict_orderings": 52.9,
      "lower_bound_over_inwindow": 23.5,
      "upper_bound_over_inwindow": 50.0,
      "tie_or_censored_share_inwindow": 23.5
@@ -339,6 +361,8 @@
      "undetermined": 5,
      "identifiable": 10,
      "forward_share_identified": 30.0,
+     "strict_schooling_first_share_identified": 30.0,
+     "strict_schooling_first_share_of_strict_orderings": 50.0,
      "lower_bound_over_inwindow": 20.0,
      "upper_bound_over_inwindow": 53.3,
      "tie_or_censored_share_inwindow": 26.7
@@ -353,6 +377,8 @@
      "undetermined": 35,
      "identifiable": 48,
      "forward_share_identified": 18.8,
+     "strict_schooling_first_share_identified": 43.8,
+     "strict_schooling_first_share_of_strict_orderings": 70.0,
      "lower_bound_over_inwindow": 10.8,
      "upper_bound_over_inwindow": 53.0,
      "tie_or_censored_share_inwindow": 21.7
@@ -365,6 +391,8 @@
      "undetermined": 16,
      "identifiable": 42,
      "forward_share_identified": 21.4,
+     "strict_schooling_first_share_identified": 35.7,
+     "strict_schooling_first_share_of_strict_orderings": 62.5,
      "lower_bound_over_inwindow": 15.5,
      "upper_bound_over_inwindow": 43.1,
      "tie_or_censored_share_inwindow": 31.0
@@ -377,6 +405,8 @@
      "undetermined": 12,
      "identifiable": 24,
      "forward_share_identified": 29.2,
+     "strict_schooling_first_share_identified": 41.7,
+     "strict_schooling_first_share_of_strict_orderings": 58.8,
      "lower_bound_over_inwindow": 19.4,
      "upper_bound_over_inwindow": 52.8,
      "tie_or_censored_share_inwindow": 19.4
@@ -389,13 +419,38 @@
      "undetermined": 6,
      "identifiable": 8,
      "forward_share_identified": 25.0,
+     "strict_schooling_first_share_identified": 37.5,
+     "strict_schooling_first_share_of_strict_orderings": 60.0,
      "lower_bound_over_inwindow": 14.3,
      "upper_bound_over_inwindow": 57.1,
      "tie_or_censored_share_inwindow": 21.4
     }
    }
   },
-  "reading": "primary window 1900-2012 (full overlap; the preregistered 1960-2010 window selects against pre-1960 demand take-offs and is reported as robustness): demand-first among identifiable countries = 10.0% GGDC non-ag employment, 15.4% urbanisation, 24.1% industry VA, 18.8% agriculture VA; bounds over all in-window countries 6.7-53.0%; weak ties/left-censoring 21.1-43.3% of in-window countries."
+  "primary_window_ranges_1900_2012": {
+   "demand_first_share_identified": [
+    10.0,
+    24.1
+   ],
+   "strict_schooling_first_share_identified": [
+    21.5,
+    46.3
+   ],
+   "strict_schooling_first_share_of_strict_orderings": [
+    58.3,
+    71.4
+   ],
+   "bounds_over_inwindow": [
+    6.7,
+    53.0
+   ],
+   "tie_or_censored_share_inwindow": [
+    21.1,
+    43.3
+   ]
+  },
+  "erratum": "record head advanced to 59d31d7 (erratum on 2d19da7; REPORT/ERRATUM/docstring only, data files unchanged): the original E6 prose '18-33% strict schooling-first' did not reproduce; the values recomputed here are 21.5-46.3% of identifiable countries and 58.3-71.4% of strict orderings.",
+  "reading": "primary window 1900-2012 (full overlap; the preregistered 1960-2010 window selects against pre-1960 demand take-offs and is reported as robustness): demand-first among identifiable countries = 10.0% GGDC non-ag employment, 15.4% urbanisation, 24.1% industry VA, 18.8% agriculture VA; bounds over all in-window countries 6.7-53.0%; weak ties/left-censoring 21.1-43.3% of in-window countries. Strict schooling-first is the larger strict ordering in all four proxies: 21.5-46.3% of identifiable countries (58.3-71.4% of strict orderings) against 10.0-24.1% demand-first, but it is not a majority of identifiable countries; the remainder are weak ties or undetermined."
  },
  "Q2": {
   "pairs": 52,

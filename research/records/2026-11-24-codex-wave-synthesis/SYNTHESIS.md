@@ -24,7 +24,7 @@ associations are stated as associations.
 | Q2 country pathways (pair benchmark, audit, cases) | `research/q2-pathways-2026-11-25` | `f71b789` | `research/records/2026-11-25-q2-pathways/` |
 | Q3 multiverse calibration + full BH/BY | `research/q3-multiverse-calibration-2026-11-25` | `db7814d` | `research/records/2026-11-25-q3-calibration/` |
 | E1 multiverse at R = 1,200 | `research/e1-multiverse-1200-2026-11-25` | `7e6f7b5` | `research/records/2026-11-25-e1-multiverse/` |
-| E6/E8 sequencing repairs (demand timing, fee event study, N3) | `research/e6e8-sequencing-2026-11-25` | `2d19da7` | `research/records/2026-11-25-e6e8-sequencing/` |
+| E6/E8 sequencing repairs (demand timing, fee event study, N3; erratum on `2d19da7`) | `research/e6e8-sequencing-2026-11-25` | `59d31d7` | `research/records/2026-11-25-e6e8-sequencing/` |
 | E11 fertility audit (EFR vs TFR, placebo ladder) | `research/e11-fertility-audit-2026-11-25` | `e926575` | `research/records/2026-11-25-e11-fertility-audit/` |
 | Source verification (fee dates, demand series, prior art) | `research/codex-source-verification-2026-11-25` | `9a0fd69` | `research/records/2026-11-25-codex-source-verification/` |
 | Methods paper (multiverse) | `research/methods-multiverse-paper-2026-11-23` | `d7e8f9f` | `research/records/2026-11-23-multiverse-paper/` |
@@ -33,7 +33,9 @@ associations are stated as associations.
 Q3's substantive verification was at `075c8c3`; `db7814d` is a documentation-only addendum (the 1,200-draw
 cross-reference paragraph) and is the final head. Paper F `ec899cc` is the assembled draft with the E11 text
 changes. Verification status per item is from the ledger @ `51f9f02`, not re-audited here; the **numbers** are
-recomputed in §6.
+recomputed in §6. **Record head advanced to `59d31d7` (erratum only; data unchanged)** for E6/E8: an additive erratum
+commit on `2d19da7` (REPORT/ERRATUM/script-docstring only; no data file changed). Its prose correction and provenance note are folded
+into §2.1(d), §2.3 and the R6 row below.
 
 ---
 
@@ -74,8 +76,12 @@ E6 rebuilds the demand-ordering test on pre-1990 observed series, replacing the 
 primary 1900–2012 full-overlap window, the demand take-off precedes the schooling take-off in **10.0%** of
 identifiable countries on GGDC non-agricultural employment (2/20), **15.4%** on urbanisation (10/65), **24.1%** on
 industry value added (13/54) and **18.8%** on agricultural value added (9/48). Bounds over all in-window countries
-are **6.7–53.0%**; weak ties or left-censored demand onsets are **21.1–43.3%** of in-window countries; the rest are
-strict schooling-first or undetermined. The preregistered 1960–2010 window selects against pre-1960 demand take-offs
+are **6.7–53.0%**; weak ties or left-censored demand onsets are **21.1–43.3%** of in-window countries. Strict
+**schooling-first** is the larger strict ordering in all four proxies — **21.5–46.3% of identifiable countries**,
+against 10.0–24.1% demand-first, and **58.3–71.4% of strict orderings** — but it is not a majority of identifiable
+countries; the remainder are weak ties or undetermined. (The branch's earlier strict-schooling-first prose range did
+not reproduce; the erratum at `59d31d7` corrects it to these recomputed values, with E6/E8 data files unchanged.) The
+preregistered 1960–2010 window selects against pre-1960 demand take-offs
 and is reported as robustness, not as the primary test. The defensible sentence is: **schooling and structural
 change move together, with schooling typically but not universally first; demand-first is neither eliminated nor
 cleanly distinguished from censoring.**
@@ -117,7 +123,10 @@ lower budgets.
 **(h) Fee abolition: post-period primary-enrolment effects are positive and pre-trends are flat at −2/−3/−4.
 NOT RECOMPUTED (committed field only).**
 E8 uses 8 fee-abolition dates verified against primary/authoritative sources by the source-verification record (4
-further dates — CMR, ZMB, RWA, BDI — are unresolved and excluded from the main specification); Callaway–Sant'Anna
+further dates — CMR, ZMB, RWA, BDI — are unresolved and excluded from the main specification); the branch's working
+note cited `bfb8c6f`, and the erratum at `59d31d7` records that `bfb8c6f` is an ancestor of the verified head
+`9a0fd69` and the `fee_dates.csv` is sha256-identical at both (`1a08d465…`) — provenance only, no date change;
+Callaway–Sant'Anna
 with not-yet-treated controls on the SSA sample, WDI primary GER. The on-impact ATT is **+12.44** (95% CI −2.36 to
 27.24); from +1 onward the effects are positive and significant (e.g. +1: 23.82 [2.05, 45.60]; +6: 25.92 [8.64,
 43.20]); the placebo-date check is −0.39 and the leave-one-out mean post range 18.17–26.16. The −2/−3/−4
@@ -193,6 +202,8 @@ claim about similar starts causing divergent paths is supportable, and none is m
 
 ## 5. Forward programme (the wave's actual output)
 
+> **Status: needs redesign per the 24 Nov 2026 suite audit — see "Suite audit (24 Nov 2026)" at the end of this section.**
+
 The aggregate regression route is exhausted at this resolution. The next programme is measurement, not more
 panels:
 
@@ -211,6 +222,16 @@ panels:
    EFR-vs-TFR construct labels in every table. Keep the draw-budget/dependence caveats attached to every "robust"
    or "BY" statement.
 
+### Suite audit (24 Nov 2026)
+
+**The forward programme above needs redesign per audit: the shipped suite cannot test its own pre-registered hypotheses.** The audited payload (`research/records/2026-11-24-gpu-suite/` @ `51f9f02`) does not implement H1 or H4. `exp2` is a logistic classifier on pre/post means — there is no macro fixed-effects regression, no country dimension and no cross-DGP overlap statistic, so H1's ">75% macro-slope overlap" is undefined. `strength` appears only inside a docstring, so H4's zero-signal control cannot execute; the four "micro signatures" are transforms of the same state mix, so exp2's classifier recovery is **construction-implied and is not evidence**. `exp4` raises `IndexError` on its first World Bank API call, and WDI `SL.TLF.0714.ZS` is "Children in employment", **not** child labour, so the series cannot carry a child-labour claim. Any exp2/exp3 output, including the PORT-PRODUCTION run, inherits these defects.
+
+The **ten claims in AUDIT §9 must not be published** in their current form: the macro wall demonstrated; binary bans backfire; protective capacity reduces child labour while fees-only does not; a micro tie-breaker passes the Q1 zero-signal control; rejection-ABC calibrates and identifies; fee abolition reduces child employment; learning-per-grade slope tested; faithful DGP mapping to Basu–Van / Baland–Robinson / Nordtveit / Bray / Jayachandran / Dang–Rogers / Pritchett; hidden work measured; the mixed DGP as a mixed-mechanism world. The honest labels are "simulation", "reduced form" and "consistent with" — nothing stronger.
+
+The **Apple Silicon work is portability only**: the port reproduces the CuPy subset and the `sim_step` kernel bit-identically (NumPy vs MLX) and its full run is labelled **PORT-PRODUCTION, not research results** (`research/apple-silicon-gpu-2026-11-24`, port complete at `fd933d9`; branch head `be42c4d`). It does not repair the inferential objects.
+
+Therefore the **"macro wall" and the "micro tie-breaker" remain UNTESTED by simulation.** In progress is a **strength-separable, macro-moment-matched redesign with a survey measurement layer**, pre-registered as design only (no run) at `research/records/2026-11-24-suite-tiebreakers/PRE_REGISTRATION.md` @ `e526c94` on `research/suite-tiebreakers-2026-11-24`: worlds `θ_w(s) = θ_0 + s·Δ_w` that are identical at `s = 0`; per-world nuisance search to a common macro vector `M*`; measured-variable tie-breakers with sampling, non-response, heaping, reference-period and under-reporting layers; algebraic-equivalence and label-permutation placebos; out-of-seed, out-of-parameter-region and mixture-world validation. Audit source: `research/records/2026-11-24-suite-lit-review/AUDIT.md` @ `4649cae` on `research/suite-lit-review-2026-11-24`. Until the redesign runs and passes its pre-registered controls, no suite output may be cited as evidence for the wall or for a tie-breaker.
+
 ---
 
 ## 6. Recomputation log (every headline number above)
@@ -226,7 +247,7 @@ value equals the branch record's committed value.
 | R3 | Minority-effect worlds labelled robust 87.0%; planted group flagged 42.0%; null FP 4.25% | `results/calibration.json` @ Q3 `db7814d` (`main.B.counts`, `main.C.counts`) | **348/400 = 0.870; 168/400 = 0.420; 17/400 = 0.0425** | yes |
 | R4 | BH 35/19/15/53 at R=400 and BY 0; BH 41/23/20/53 and BY het 32 at R=1200; BY 0 at R≤800 | `results/verdict_by_R.csv` @ E1 `7e6f7b5`; cross-check `results/families_for_fdr_check.csv` + `fdr_check_output.csv` @ Q3 `db7814d` | **35/19/15/53 and 0; 41/23/20/53 and 32; 0 at 400/800**; recomputed BH/BY from the four sorted 272-link p-vectors also gives 35/19/15/53, BY 0, m_eff=157 → 44 up | yes |
 | R5 | EFR vs TFR: lead/lag 0.541 vs 1.555; median abs diff 0.3042, max 4.2677 | `results/q1_construct_audit.json` @ E11 `e926575`; panel sha256 `cd30d7ea…` @ Q2 `f71b789` (`data/long_run_panel.csv`) | **0.5412 / 1.5552; 0.3042 / 4.2677 on 2,955 country-years, 197 countries**; AFG 1950 3.3991 vs 7.248 | yes |
-| R6 | E6 demand-first 10.0/15.4/24.1/18.8%; bounds 6.7–53.0%; ties/censoring 21–43% | `results/e6_classification.csv` @ E6/E8 `2d19da7` (per-country classification) | **10.0 (2/20), 15.4 (10/65), 24.1 (13/54), 18.8 (9/48); bounds 6.7–40.0 / 9.9–45.5 / 17.1–46.1 / 10.8–53.0 (overall 6.7–53.0); ties 43.3/40.6/21.1/21.7%** | yes |
+| R6 | E6 demand-first 10.0/15.4/24.1/18.8%; strict schooling-first 21.5–46.3% (58.3–71.4% of strict orderings); bounds 6.7–53.0%; ties/censoring 21–43% | `results/e6_classification.csv` @ E6/E8 `59d31d7` (record head advanced to `59d31d7` — erratum only; data unchanged; on top of `2d19da7`) | **10.0 (2/20), 15.4 (10/65), 24.1 (13/54), 18.8 (9/48); strict schooling-first 25.0 (5/20), 21.5 (14/65), 46.3 (25/54), 43.8 (21/48) → 21.5–46.3%; 71.4/58.3/65.8/70.0% of strict orderings (58.3–71.4%); bounds 6.7–40.0 / 9.9–45.5 / 17.1–46.1 / 10.8–53.0 (overall 6.7–53.0); ties 43.3/40.6/21.1/21.7%** | yes |
 | R7 | Q2 pair benchmark 105 baseline-complete / 52 pairs / 1 unpaired / 52 with both outcomes | `results/smoke/pairs.csv` + `pairs_metadata.json` @ Q2 `f71b789` | **52 pairs; 104 distinct paired + 1 unpaired = 105; 52 with both schooling changes; 52 with both TFR changes** | yes |
 | R8 | 68.75% was a tie artefact; strict 37.5% = 24/64, CI 26.6–50.0 | `results/event_dates.csv` @ subsistence-v2 `ce66cfc` (annotated `8caaeac`) | **24/64 = 37.5%, ties 20/64 = 31.25%, fertility-first 20/64 = 31.25%; bootstrap CI 26.56–50.0; 68.75 = 44/64 = strict + ties** | yes |
 | R9 | Q1 GPU gate: repeat 8.9e-16; layout diff 1.9074; pin nW=12 seed 7 | `results/engine_check.json` @ Q1 `9b0cabe` | **UNVERIFIED — not recomputed** (needs the T4 box and a synthetic panel; numbers are committed fields and were not re-run in this synthesis) | n/a |
@@ -255,7 +276,9 @@ did not re-derive, or a prose claim with no committed reduction.
   splits (1 of 5 robust links group-concentrated; 20 of 32 BY heterogeneity links group-concentrated). Reason:
   reported in prose/JSON but not reduced from the committed per-link tables by this synthesis.
 - **N3 range 0.0–30.8% (median 10.45%) across 54 definitions** and the q1-default 6.2%/70.6%/17.6%: committed fields
-  in `n3_table.csv`/`n3_recommendation.json`; not re-derived.
+  in `n3_table.csv`/`n3_recommendation.json`; not re-derived. The same erratum (`59d31d7`) flags the record's
+  separate N3 "weak forward-or-tie share" range as also non-reproducing (denominator-dependent); it is not used here
+  and should be re-derived before quoting.
 - **The exact empirical p-values in Q3** cannot be re-derived from the committed null array (rounded to 4
   significant digits; the record documents agreement to about one draw count for 267/272 up and 271/272 down links);
   sign-flip and heterogeneity null draws were not saved. This is the record's own documented limitation, repeated
