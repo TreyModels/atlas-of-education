@@ -1,88 +1,100 @@
 # REPORT — schooling → fertility across **all** public DHS survey rounds (ecological, observed data)
 
-**Status:** complete. Pre-registration committed **before any value was pulled** (`88073d0`); Amendment 01 and
-the pull/panels committed **before any estimate** (`856c421`); estimates computed on **region-42** (not the Mac)
-after Trey's no-Mac-compute instruction. Everything below is **OBSERVED / ECOLOGICAL**: the unit is a
-DHS-published **country × survey × education cell**, not a woman. **No causal language is supported.** This
-**cannot substitute** for the blocked Individual Recode test.
-**Branch:** `research/dhs-api-ecological-2026-11-24` (base `origin/research/handoff-2026-11-24 @ 9242214`).
-**Task:** task-16. **Owner:** dhs-scout.
+**Status:** complete, **corrected**. Pre-registration committed **before any value was pulled** (`88073d0`);
+Amendment 01 and the pull/panels committed **before any estimate** (`856c421`); first estimation on region-42
+(`708e34a`); **fixed-effect bug found and corrected on 2026-11-24 23:55** (second box; see §0).
+**Branch:** `research/dhs-api-ecological-2026-11-24`. **Task:** task-16 (+ task-36 extension).
+**Owner:** dhs-scout.
+**Labels:** every number is **OBSERVED (published DHS aggregates) / ECOLOGICAL** — the unit is a
+country × survey × education cell, **not a woman**. **No causal language is supported.**
+**This cannot substitute for the blocked Individual Recode test.** No simulation or synthetic data is used or
+presented anywhere.
 
 ---
 
-## 1. Headline numbers (all OBSERVED, published-cell level)
+## 0. Correction notice (read before quoting any number)
+
+The first committed estimate (`708e34a`) dropped the reference level of every categorical fixed effect **without
+an intercept**, which constrained the reference group's mean to zero and biased all FE models by ~0.015–0.019
+children. Found while independently validating the estimator; fixed by pre-pending an intercept. The **prior
+DHS record (`research/dhs-micro-2026-11-23 @ 31ded00`) is unaffected** — it used the correct weighted
+within-transform, and the corrected run now reproduces it to **≤0.004**.
+
+**What changed:** full-sample M1 secondary −1.5685 → **−1.5837**; primary −0.5355 → **−0.5541**; higher −2.5201 →
+**−2.5382**; Q2a 4-level ratio 1.017 → **1.003**; Q2b1 wanted-vs-actual −0.0893 → **−0.0775**; cohort 2-group
+interaction +0.1515 (p=0.26) → **+0.2438 (p=0.016)** — so **D6 moves from "indeterminate" to "attenuation"**.
+Per-survey/per-period gradients and the survey-level construct statistics are unaffected (simple differences /
+correlations of published aggregates). Full account with old and new values:
+[`BUGFIX_FE_PARAMETERISATION.md`](BUGFIX_FE_PARAMETERISATION.md). The biased numbers remain in git history at
+`708e34a`; every number below is from the corrected run, independently cross-checked by a second implementation
+(`scripts/corrected_reduction.py`, agreement to the last printed digit).
+
+**Computation:** full-sample corrected run on `ssh -p 45973 root@connect.cqa1.seetacloud.com`,
+`/root/work/dhs-api/`, **8-worker multiprocessing, 24 s wall**; 11-country extension **13 s** (numpy 1.24.1,
+Python 3.10.8). **No project compute on the Mac.** Logs: `results/server_box2/`.
+**New in task-36:** the 11 African countries are analysed separately in
+[`AFRICA11_EXTENSION.md`](AFRICA11_EXTENSION.md) (coverage tier T1 under Amendment 02).
+
+---
+
+## 1. Headline numbers (all OBSERVED, published-cell level, corrected)
 
 | # | Result | Number |
 |---|---|---|
-| 1 | **Prior attempt reproduced exactly.** Completed fertility (women 40–49, mean CEB) on education, country×survey FE, weighted by women, clustered by country — same panel as `research/dhs-micro-2026-11-23 @ 31ded00` | primary **−0.554** (SE 0.058), secondary **−1.608** (0.166), higher **−2.520** (0.230); **1,291 cells, 86 countries** — deltas vs prior record (−0.57/−1.62/−2.54): **0.016 / 0.012 / 0.020** |
-| 2 | **Gradient holds across all public rounds, with a minority.** Per-survey secondary+ gradient (2-group), 346 surveys | **98.8% negative**, median **−1.90** children (IQR −2.48 to −1.43), range −4.60 to +0.70; only 4/346 surveys non-negative |
-| 3 | **Not a fixed-effects artefact.** Country FE + 5-year-period FE vs saturated country×survey FE vs country trends | M0 **−0.559 / −1.636 / −2.604**; M1 **−0.536 / −1.569 / −2.520**; M5 (+ country trends) **−0.553 / −1.584 / −2.536** (weighted, 4-level panel) |
-| 4 | **Window contrast (Q2a): period TFR vs cumulative completed fertility gives the same gradient.** Standardised secondary-vs-none ratio β(TFR)/β(CEB40) | **1.017**, cluster-bootstrap 95% CI **[0.944, 1.102]** (65 common countries, 500 draws); 2-group version **0.960 [0.918, 1.002]** (80 countries) |
-| 5 | **Construct contrast (b1): period-vs-cumulative births is null; desired-vs-actual is not.** Stacked, standardised, country×survey FE, clustered by country | A vs B interaction **−0.004 (SE 0.046, p=0.92)**; wanted-TFR vs actual-TFR interaction **−0.089 (0.024, p=0.00025)** — wanted-fertility gradient is *smaller* than the actual gradient |
-| 6 | **Construct contrast (b2): the surviving-children measure and period TFR are different series.** 368 surveys, 87 countries, 1985–2025 | corr(surviving₄₀, TFR) **0.822**; corr(CEB₄₀, TFR) **0.899**; median \|TFR − surviving₄₀\| **0.6305**, max **2.681**; median \|TFR − CEB₄₀\| **1.009**, max **3.172**; within-country changes corr(Δsurviving, ΔTFR) **0.321** vs corr(ΔCEB, ΔTFR) **0.509** (65 countries) |
-| 7 | **Cohort-proxy interaction: indeterminate.** Education × cohort-proxy (per decade) | secondary **−0.047 (0.245)**, higher **+0.077 (0.261)**, 2-group **+0.151 (0.135, p=0.26)** — direction matches the prior attenuation estimate, CIs include 0 |
+| 1 | **Prior attempt reproduced exactly.** Completed fertility (women 40–49, mean CEB) on education, country×survey FE, weighted, clustered by country — same panel as `research/dhs-micro-2026-11-23 @ 31ded00` | primary **−0.5700** (SE 0.0580), secondary **−1.6216** (0.1703), higher **−2.5364** (0.2346); **1,291 cells, 86 countries**; deltas vs prior (−0.57/−1.62/−2.54): **0.000 / 0.002 / 0.004** |
+| 2 | **Gradient holds across all public rounds, with a minority.** Per-survey secondary+ gradient (2-group), 346 surveys | **98.8% negative**, median **−1.90** children (IQR −2.48 to −1.43), range −4.60 to +0.70; 4/346 non-negative |
+| 3 | **Not a fixed-effects artefact.** Country FE + 5-year-period FE vs saturated country×survey FE vs country trends | M0 **−0.557 / −1.593 / −2.550**; M1 **−0.554 / −1.584 / −2.538**; M5 (+ country trends) **−0.553 / −1.584 / −2.536** |
+| 4 | **Window contrast (Q2a): period TFR vs cumulative completed fertility gives the same gradient.** Standardised secondary-vs-none ratio β(TFR)/β(CEB40) | **1.0029**, cluster-bootstrap 95% CI **[0.932, 1.077]** (65 countries, 500 draws); 2-group **0.9582 [0.915, 0.998]** (80 countries) |
+| 5 | **Construct contrast (b1): period-vs-cumulative births is null; desired-vs-actual is not.** Stacked, standardised, country×survey FE, clustered by country | A vs B interaction **+0.016 (SE 0.041, p=0.70)**; wanted-TFR vs actual-TFR **−0.0775 (0.0217, p=0.0004)** — wanted-fertility gradient is *smaller* than actual by 0.078 SD |
+| 6 | **Construct contrast (b2): the surviving-children measure and period TFR are different series.** 368 surveys, 87 countries, 1985–2025 | corr(surviving₄₀, TFR) **0.822**; corr(CEB₄₀, TFR) **0.899**; median \|TFR − surviving₄₀\| **0.6305**, max **2.681**; median \|TFR − CEB₄₀\| **1.009**, max **3.172**; within-country change corr **0.321** vs **0.509** (65 countries) |
+| 7 | **Cohort proxy: attenuation in the full sample, steepening in the African-11.** Education × cohort (per decade) | full sample: secondary **+0.240 (0.131, p=0.067)**, higher **+0.367 (0.148, p=0.013)**, 2-group **+0.244 (0.102, p=0.016)**; African-11: secondary **−0.186 (0.076, p=0.014)** — see [`AFRICA11_EXTENSION.md`](AFRICA11_EXTENSION.md) §5 |
 
 **One-sentence reading:** in the published cells, more schooling goes with fewer children in essentially every
-DHS round examined, the association is not an artefact of the FE choice or of country trends, and it is the
-same whether fertility is measured as a **period TFR** or as **cumulative completed fertility** — but the
-births-based measures and the surviving-children measure are **demonstrably different series**, and the
-schooling gradient is **weaker in wanted fertility than in realised fertility**. All of this is an ecological
-association; the individual-level test remains unrun.
+DHS round examined; the association is not an artefact of the FE choice or of country trends; it is the same
+whether fertility is measured as a **period TFR** or as **cumulative completed fertility**; but the
+births-based measures and the surviving-children measure are **demonstrably different series**, the schooling
+gradient is **weaker in wanted fertility than in realised fertility**, and the cohort pattern **differs by
+region**. All of this is an ecological association; the individual-level test remains unrun.
 
 ---
 
-## 2. Data and provenance
+## 2. Data and provenance (unchanged by the correction)
 
-- **Source:** `api.dhsprogram.com`, public endpoints, **no key, no login, no gated file** (see
-  [`data/source_log.txt`](../2026-11-24-dhs-acquisition/data/source_log.txt) for the probe log of the same API
-  on the sibling branch). Raw pages are cached in [`data/raw/`](data/raw) with
-  [`data/MANIFEST.sha256`](data/MANIFEST.sha256).
-- **Unit:** country × survey round × background category (the DHS-published cell). Everything in this report is
-  a property of published aggregates.
-- **Indicators used** (exact API ids; the pre-registration fixed the list):
-
-| id | label | construct | education breakdown? | denominators published? |
-|---|---|---|---|---|
-| `FE_FRTY_W_MNC` | Completed fertility of women 40–49 | cumulative **births** (mean CEB) | yes (4 levels / 2 groups) | **yes** |
-| `FE_FRTR_W_TFR` | Total fertility rate 15–49 | **period births** (DHS TFR) | yes | **no** |
-| `PR_WTFR_W_WFR` | Total wanted fertility rate | period **desired** births | yes | no |
-| `PR_DESL_W_WNM` | Women who want no more children | stated preference | yes | yes |
-| `FE_AAFB_W_M25` | Median age at first birth, women 25–29 | tempo | yes | no |
-| `FE_FRTR_W_GFR` | General fertility rate | period births (robustness) | yes | no |
-| `FE_CEBA_W_MNC` | Mean number of children ever born | cumulative births by age | **no (age only)** | yes |
-| `FE_CEBA_W_MND` | Mean number of children died | child deaths by age | **no (age only)** | yes |
-| `ED_EDUC_W_SEH` | Women with secondary+ | pipeline density (survey level) | — (age breakdown) | yes |
-
-- **Coverage of the built panels:** completed fertility 4-level **860 cells / 215 surveys / 65 countries**
-  (2-group: **692 cells / 346 surveys / 80 countries**); period TFR **1,296 / 324 / 77**; wanted TFR
-  **1,244 / 311 / 82**; want-no-more **1,116 / 279 / 79**; survey-level panel **369 surveys / 87 countries,
-  1985–2025**. The prior-specification panel is **1,291 cells / 369 surveys / 86 countries** — identical to the
-  prior record's sample.
-- **Checks run** ([`data/panel_checks.json`](data/panel_checks.json)): one row per survey × education (no
-  duplicates — this caught and fixed a hidden second dimension in `PR_DESL_W_WNM`, see
-  [`AMENDMENT_01.md`](AMENDMENT_01.md)); `DenominatorUnweighted ≥ 20` where published; weighted mean of the
-  education cells vs the published national total (completed fertility: **max abs difference 0.079 children over
-  215 surveys**; want-no-more: max 2.74 pp — universe/rounding differences, reported not hidden).
-
-**What is *not* here:** no microdata, no individual records, no synthetic data, no reconstructed series, no
-proxy denominator, no imputation. Rate indicators without published denominators enter **unweighted** models
-(Amendment 01) — nothing is invented to weight them.
+- **Source:** `api.dhsprogram.com`, public endpoints, **no key, no login, no gated file**. Raw pages cached in
+  [`data/raw/`](data/raw) with [`data/MANIFEST.sha256`](data/MANIFEST.sha256).
+- **Unit:** country × survey round × background category (the DHS-published cell).
+- **Indicators:** `FE_FRTY_W_MNC` (completed fertility 40–49; cumulative births; education breakdown; denominators
+  published), `FE_FRTR_W_TFR` (period TFR 15–49; education breakdown; **no denominators**), `PR_WTFR_W_WFR`
+  (wanted TFR; education; no denominators), `PR_DESL_W_WNM` (want no more; education; denominators),
+  `FE_AAFB_W_M25` (median age at first birth; education; no denominators), `FE_FRTR_W_GFR` (GFR; education),
+  `FE_CEBA_W_MNC` + `FE_CEBA_W_MND` (mean CEB and mean child deaths, **age groups only** → surviving-children
+  measure at survey level only), `ED_EDUC_W_SEH` (pipeline density).
+- **Coverage:** completed fertility 4-level **860 cells / 215 surveys / 65 countries** (2-group **692 / 346 /
+  80**); period TFR **1,296 / 324 / 77**; wanted TFR **1,244 / 311 / 82**; want-no-more **1,116 / 279 / 79**;
+  survey-level panel **369 surveys / 87 countries, 1985–2025**. Prior-spec replication panel **1,291 / 369 / 86**
+  (identical to the prior record's sample).
+- **Checks:** [`data/panel_checks.json`](data/panel_checks.json); one row per survey × education (this caught the
+  hidden second dimension in `PR_DESL_W_WNM`, Amendment 01 A1.2); `DenominatorUnweighted ≥ 20` where published;
+  weighted mean of education cells vs published national total (completed fertility: max abs difference **0.079
+  children** over 215 surveys; want-no-more: max 2.74 pp — universe/rounding, reported not hidden).
+- **What is not here:** no microdata, no individual records, no synthetic data, no reconstructed series, no proxy
+  denominator, no imputation. Rate indicators without published denominators enter **unweighted** models
+  (Amendment 01).
 
 ---
 
 ## 3. Q1 — does the ecological gradient hold across all public rounds?
 
-Outcome: **mean children ever born to women 40–49** (`FE_FRTY_W_MNC`, cumulative births). Estimator: WLS on
-published cells, cell weight = published unweighted women in the cell (weighted columns), cluster-robust SE by
-country; per-SD variants reported in `results/model_table.csv`.
+Outcome: mean children ever born to women 40–49 (`FE_FRTY_W_MNC`, cumulative births). WLS on published cells,
+cell weight = published unweighted women; cluster-robust SE by country; corrected estimator.
 
 ### 3.1 Headline model (M1: country×survey FE, 4-level panel, weighted)
 
 | Education | Coefficient (children) | SE | 95% CI | per-SD |
 |---|---|---|---|---|
-| Primary (vs none) | **−0.536** | 0.060 | [−0.652, −0.419] | −0.353 |
-| Secondary (vs none) | **−1.569** | 0.161 | [−1.884, −1.254] | −1.018 |
-| Higher (vs none) | **−2.520** | 0.236 | [−2.982, −2.058] | −1.632 |
+| Primary (vs none) | **−0.554** | 0.059 | [−0.669, −0.439] | −0.357 |
+| Secondary (vs none) | **−1.584** | 0.167 | [−1.911, −1.257] | −1.021 |
+| Higher (vs none) | **−2.538** | 0.242 | [−3.012, −2.064] | −1.636 |
 
 Monotone in education, all CIs exclude 0, n = 860 cells, 215 surveys, 65 countries.
 
@@ -90,67 +102,65 @@ Monotone in education, all CIs exclude 0, n = 860 cells, 215 surveys, 65 countri
 
 | Model | Primary | Secondary | Higher |
 |---|---|---|---|
-| **M0** country FE + 5-yr period FE | −0.559 (0.060) | −1.636 (0.191) | −2.604 (0.266) |
-| **M1** country×survey FE | −0.536 (0.060) | −1.569 (0.161) | −2.520 (0.236) |
-| **M2** M1 + education × pipeline density | −0.528 (0.064) | −1.643 (0.137); interaction +0.184 (0.152), p=0.23 | −2.638 (0.209); interaction +0.232 (0.156), p=0.14 |
+| **M0** country FE + 5-yr period FE | −0.557 (0.059) | −1.593 (0.170) | −2.550 (0.243) |
+| **M1** country×survey FE | −0.554 (0.059) | −1.584 (0.167) | −2.538 (0.242) |
+| **M2** M1 + education × pipeline density | −0.554 (0.059) | −1.675 (0.135); interaction **+0.242 (0.132), p=0.068** | −2.675 (0.207); interaction **+0.297 (0.134), p=0.027** |
 | **M5** country FE + year FE + country trends | −0.553 (0.059) | −1.584 (0.167) | −2.536 (0.241) |
-| **2-group** M1 (secondary+ vs none/primary), 346 surveys / 80 countries | — | **−1.545** (0.143) | — |
+| **2-group** M1 (secondary+ vs none/primary), 346 surveys / 80 countries | — | **−1.551** (0.145) | — |
 
-Reading: the gradient is **not produced by the FE choice** (M0 ≈ M1 ≈ M5) and is **not absorbed by
-country-specific trends**. The **pipeline-density interaction is positive in direction** (shallower gradient
-where more women have secondary+), consistent with the prior record's E3 direction (+0.13 (0.05) per
-+10pp), but is **not statistically distinguishable from zero in this panel** (0.18 (0.15) per SD of pipeline,
-p=0.23 for secondary). Unweighted estimates are larger in magnitude (secondary −1.87 (0.19)); both are reported.
+The gradient is **not produced by the FE choice** (M0 ≈ M1 ≈ M5) and is **not absorbed by country-specific
+trends**. The **pipeline-density interaction is positive** (shallower gradient where more women have secondary+),
+now significant for higher education (+0.297 (0.134), p=0.027) and marginal for secondary (+0.242 (0.132),
+p=0.068) — the same direction as the prior record's E3 (+0.13 (0.05) per +10 pp). Unweighted estimates are larger
+in magnitude (secondary −1.87 (0.19)); both reported in `results/model_table.csv`.
 
 ### 3.3 Replication of the prior attempt (D1)
 
-| | Prior record (`31ded00`) | This run (same implied sample) | Δ |
+| | Prior record (`31ded00`) | This run (same panel) | Δ |
 |---|---|---|---|
-| primary | −0.57 | **−0.554** (0.058) | +0.016 |
-| secondary | −1.62 | **−1.608** (0.166) | +0.012 |
-| higher | −2.54 | **−2.520** (0.230) | +0.020 |
+| primary | −0.57 | **−0.5700** (0.0580) | 0.000 |
+| secondary | −1.62 | **−1.6216** (0.1703) | 0.002 |
+| higher | −2.54 | **−2.5364** (0.2346) | 0.004 |
 | cells / countries | 1,291 / 86 | **1,291 / 86** | exact |
 
-**D1 verdict: REPRODUCED** (both pre-declared tolerance gates met: ±0.15 secondary, ±0.25 higher).
+**D1 verdict: REPRODUCED — now exactly** (both pre-declared tolerance gates met; deltas ≈ 0).
 
 ### 3.4 Heterogeneity (D2)
 
-- **Per survey** (346 surveys with both 2-group cells): **98.8% negative** (4 non-negative), median **−1.90**,
-  IQR **[−2.48, −1.43]**, min −4.60, max +0.70. Prior record: 99% negative, median −1.90. **D2 verdict:
-  "near-universal"** by the pre-declared ≥ 90% threshold — *and still not "robust everywhere":* the minority is
-  named (4 surveys, listed in [`results/heterogeneity_surveys.csv`](results/heterogeneity_surveys.csv)).
+- **Per survey** (346 surveys with both 2-group cells): **98.8% negative** (4 non-negative, listed in
+  [`results/heterogeneity_surveys.csv`](results/heterogeneity_surveys.csv)), median **−1.90**, IQR **[−2.48,
+  −1.43]**, min −4.60, **max +0.70**. **D2 verdict: "near-universal"** by the pre-declared ≥ 90% threshold — *not*
+  "robust everywhere": the 4 non-negative surveys are named.
 - **Per period** (median per-survey gradient): 1985–89 **−2.70** (94.7% negative), 1990–94 −2.20, 1995–99 −2.00,
-  2000–04 −1.85, 2005–09 −1.80, 2010–14 −1.90, 2015–19 −1.90, 2020–24 **−1.70**, 2025 (3 surveys) −1.50. The
-  gradient is flatter in later periods — **composition of "secondary" is the leading candidate, not a change in
-  the individual relationship**; the ecological cells cannot separate them.
-- **Per country** (63 countries with ≥2 surveys): **76.2% negative**, 35/63 significant at q=0.05 by
-  Benjamini–Hochberg on country-level gradient p-values.
+  2000–04 −1.85, 2005–09 −1.80, 2010–14 −1.90, 2015–19 −1.90, 2020–24 **−1.70**, 2025 (3 surveys) −1.50.
+- **Per country** (63 countries with ≥2 surveys): **98.4% negative**, **61/63** significant at q=0.05
+  (Benjamini–Hochberg). The non-negative countries are named in
+  [`results/heterogeneity_countries.csv`](results/heterogeneity_countries.csv).
 
 ---
 
-## 4. Q2a — does the answer change for completed ages (40–49) vs period fertility (15–49)?
+## 4. Q2a — completed ages (40–49) vs period fertility (15–49)
 
-Two **births-based** measures, same education breakdown, same designs:
-- **A:** `FE_FRTY_W_MNC` — cumulative, women 40–49 (mean CEB).
-- **B:** `FE_FRTR_W_TFR` — period TFR, ages 15–49 (weighted and unweighted not applicable: no published
-  denominators, so both A and B are estimated **unweighted** for this comparison — Amendment 01 A1.1).
+Both births-based; standardised within outcome; unweighted for both (rate indicators publish no denominators;
+Amendment 01 A1.1).
 
 | Contrast | A (cumulative CEB40, per-SD) | B (period TFR, per-SD) | Ratio β_B/β_A [bootstrap 95% CI] |
 |---|---|---|---|
-| 4-level, secondary vs none | −1.256 | −1.278 | **1.017 [0.944, 1.102]** (65 countries, 500 draws) |
-| 2-group, secondary+ vs none/primary | −1.327 | −1.274 | **0.960 [0.918, 1.002]** (80 countries, 500 draws) |
+| 4-level, secondary vs none | −1.2915 | −1.2983 | **1.0029 [0.932, 1.077]** (65 countries, 500 draws) |
+| 2-group, secondary+ vs none/primary | −1.3364 | −1.2806 | **0.9582 [0.915, 0.998]** (80 countries, 500 draws) |
 
-In raw children the period-TFR gradient is larger (secondary −1.950 vs −1.569; higher −2.871 vs −2.520) because
-the period measure varies more across cells; the **pre-registered comparison is the standardised ratio**, which
-is what the table reports. **D3 verdict: "same sign, similar magnitude"** (ratio in [0.67, 1.5], CI contains 1).
+Raw children: period TFR secondary **−2.022** (0.119) and higher **−2.944** (0.146); cumulative CEB40 secondary
+**−1.584** (0.167) and higher **−2.538** (0.242). The raw difference is scale (period measures vary more across
+cells); the pre-registered comparison is the standardised ratio.
 
-So: **the window (period vs cumulative) and the age range (15–49 vs 40–49) do not change the education gradient
-in any material way in these cells.** That is a real result: the schooling–fertility association is not an
-artefact of looking at completed fertility only.
+**D3 verdict:** 4-level contrast **"same sign, similar magnitude"** (ratio 1.003, CI contains 1). The 2-group
+contrast is "same sign" and 4% smaller in standardised units; by the letter of the pre-declared rule its CI
+excluding 1 makes it **"materially different magnitude"**, and that is reported as such. Overall: **the window
+and age range do not change the sign, and change the standardised magnitude by at most ~4%.**
 
-Robustness: `FE_FRTR_W_GFR` (general fertility rate) gives the same sign and similar standardised magnitude
-(see `results/model_table.csv`); median age at first birth (`FE_AAFB_W_M25`) has only 51 surveys with all four
-education levels and is reported descriptively, not used in any decision rule.
+Robustness: `FE_FRTR_W_GFR` (general fertility rate) gives the same sign and similar standardised magnitude;
+median age at first birth (`FE_AAFB_W_M25`) has only 51 surveys with all four education levels and is descriptive
+only.
 
 ---
 
@@ -158,39 +168,32 @@ education levels and is reported descriptively, not used in any decision rule.
 
 ### 5.1 Cell level, births-based (period vs cumulative) — null
 
-Stacked standardised model with country×survey FE and construct × education interaction (1,712 rows, 214
-surveys, 65 countries, cluster by country):
+Stacked standardised model, country×survey FE, construct × education interaction, cluster by country:
 
 | term | coefficient (SD units) | SE | p |
 |---|---|---|---|
-| secondary × construct (period TFR = 1) | **−0.004** | 0.046 | 0.92 |
+| secondary × construct (period TFR = 1) | **+0.016** | 0.041 | 0.70 |
 
 **No detectable difference between the period-TFR gradient and the cumulative-CEB gradient.**
 
 ### 5.2 Wanted vs actual fertility — the preference gradient is smaller (D4)
 
-Stacked standardised model, wanted TFR (`PR_WTFR_W_WFR`, construct 0) vs actual TFR (`FE_FRTR_W_TFR`,
-construct 1), 2,240 rows / 280 surveys / 82 countries:
+Stacked standardised model, wanted TFR (construct 0) vs actual TFR (construct 1):
 
 | term | coefficient (SD units) | SE | p |
 |---|---|---|---|
-| secondary × construct (actual = 1) | **−0.089** | 0.024 | **0.00025** |
+| secondary × construct (actual = 1) | **−0.0775** | 0.0217 | **0.0004** |
 
-Interpretation: schooling is associated with **lower actual fertility more strongly than with lower wanted
-fertility** — about 0.09 SD more. **D4 prediction confirmed** (`|β_wanted| < |β_actual|`): the gradient is not
-purely a stated-demand gradient; there is a realisation gap. The separate models give standardised secondary
-coefficients of **−1.282** (actual) vs **−1.070** (wanted). Stated "want no more children" (`PR_DESL_W_WNM`)
-is reported descriptively; its sign is not part of a decision rule (parity composition makes it ambiguous).
+Separate standardised models: actual TFR secondary **−1.298** (0.076) vs wanted TFR **−1.085** (0.089) — a gap of
+~0.21 SD. **D4 prediction confirmed** (`|β_wanted| < |β_actual|`): the gradient is not purely a stated-demand
+gradient. Stated "want no more children" (`PR_DESL_W_WNM`) is descriptive only (parity composition makes its sign
+ambiguous); it is in no decision rule.
 
 ### 5.3 Survey level, births vs surviving children — different series (D5)
 
-`FE_CEBA_W_MNC` and `FE_CEBA_W_MND` are published **only by age group** (no education breakdown). For women
-40–49 we combine the 40–44 and 45–49 cells with their published denominators:
-
-`CEB₄₀` = weighted mean of mean CEB; `Deaths₄₀` = weighted mean of mean children died;
-**`Surviving₄₀ = CEB₄₀ − Deaths₄₀`** — the individual-level identity `v201 − v206 − v207` aggregated, not a proxy.
-
-368 surveys, 87 countries, 1985–2025:
+`FE_CEBA_W_MNC` − `FE_CEBA_W_MND` for women 40–49 (weighted combination of the 40–44 and 45–49 age cells with
+published denominators): **mean surviving children**. This is the individual identity `v201 − v206 − v207`
+aggregated, not a proxy. 368 surveys, 87 countries, 1985–2025:
 
 | statistic | value |
 |---|---|
@@ -201,43 +204,44 @@ is reported descriptively; its sign is not part of a decision rule (parity compo
 | median \|TFR − CEB₄₀\| | **1.009** |
 | max \|TFR − CEB₄₀\| | **3.172** |
 | mean ratio TFR / Surviving₄₀ | **0.942** |
-| within-country changes (65 countries): corr(ΔSurviving₄₀, ΔTFR) | **0.321** |
+| within-country changes (65): corr(ΔSurviving₄₀, ΔTFR) | **0.321** |
 | within-country changes: corr(ΔCEB₄₀, ΔTFR) | **0.509** |
 | median Δ gap (ΔSurviving₄₀ − ΔTFR) | **+0.435** |
 
-**D5 statement (as pre-declared):** these answer different questions — **surviving family size vs period
-births** — and the gap is a **construct difference, not an error and not a correction of either series.** Note
-the levels gap here is *not* the E11 macro gap: E11 paired reconstructed surviving children/woman with UN WPP
-TFR for 1950–2010 and found median |diff| 0.3042 and max 4.2677; this is a different pairing (DHS published
-cells, 1985–2025, `CEB − deaths` for women 40–49 vs the same survey's period TFR). No replication of E11's
-numbers is claimed, and the DHS-based number is not a correction of it.
+**D5 statement (as pre-declared):** different constructs — **surviving family size vs period births**; the gap is
+not an error and neither series corrects the other. These are *not* E11's numbers: E11 paired reconstructed
+surviving children/woman with UN WPP TFR for 1950–2010 (median |diff| 0.3042, max 4.2677); this is a different
+pairing (DHS published cells, 1985–2025, `CEB − deaths` for women 40–49 vs the same survey's period TFR). No
+replication of E11 is claimed and the DHS-based number is not a correction of it.
 
 ### 5.4 Why no surviving-children-by-education gradient is reported
 
-The API publishes the surviving-children inputs **only by age group**, never crossed with education (metadata
-audit in [`data/indicator_availability.json`](data/indicator_availability.json); fixed in the pre-registration
-§2.3). We do **not** construct one by matching CEB-by-education to mortality rates. That gradient is exactly
-what the **individual microdata** would deliver, and the individual test is blocked on DHS approval
-(`research/dhs-acquisition-2026-11-24`).
+The API publishes the surviving-children inputs **only by age group**, never crossed with education (metadata audit
+in [`data/indicator_availability.json`](data/indicator_availability.json); fixed in the pre-registration §2.3). We
+do **not** construct one by matching CEB-by-education to mortality rates. That gradient is exactly what the
+individual microdata would deliver — and that test is blocked on DHS approval
+(`../2026-11-24-dhs-acquisition/application/NEXT_ACTION_2026-11-24.md`).
 
 ---
 
 ## 6. Cohort-of-women comparison (D6)
 
-Repeated cross-sections, completed-fertility panel; cohort proxy = survey year − 44.5 (5-year bins), country FE,
-cohort-proxy FE, education × cohort-proxy (per decade, centred):
+Repeated cross-sections, completed-fertility panel; cohort proxy = survey year − 44.5 (5-year bins); country FE,
+cohort-bin FE, education × cohort-proxy (per decade, centred):
 
 | interaction | coefficient (children per decade) | SE | 95% CI |
 |---|---|---|---|
-| primary × cohort | −0.375 | 0.227 | [−0.820, +0.070] |
-| secondary × cohort | −0.047 | 0.245 | [−0.527, +0.434] |
-| higher × cohort | +0.077 | 0.261 | [−0.435, +0.589] |
-| secondary+ × cohort (2-group) | +0.151 | 0.135 | [−0.113, +0.416] |
+| primary × cohort | −0.019 | 0.076 | [−0.169, +0.130] |
+| secondary × cohort | **+0.240** | 0.131 | [−0.017, +0.497] |
+| higher × cohort | **+0.367** | 0.148 | [+0.077, +0.657] |
+| secondary+ × cohort (2-group) | **+0.244** | 0.102 | [+0.045, +0.443] |
 
-**D6 verdict: indeterminate** — all CIs include 0. Directionally the 2-group interaction is **positive** (the
-gradient is *less steep* in later cohorts), consistent with the prior record's +0.26 (0.13) attenuation and with
-the per-period medians in §3.4. This is a **cohort proxy from survey years, not followed women**; it cannot
-separate composition from a change in the individual relationship — the individual test would have to.
+**D6 verdict: attenuation** in the full sample (the 2-group interaction's CI excludes 0; the direction matches the
+prior record's +0.26 (0.13)). This is a **cohort proxy from survey years, not followed women**: it cannot separate
+composition from a change in the individual relationship. **Regional divergence:** restricted to the 11 African
+countries the same specification gives **steepening** for primary (−0.278 (0.112), p=0.013) and secondary
+(−0.186 (0.076), p=0.014) — see [`AFRICA11_EXTENSION.md`](AFRICA11_EXTENSION.md) §5. The two must not be averaged
+away; the individual data are needed.
 
 ---
 
@@ -245,91 +249,77 @@ separate composition from a change in the individual relationship — the indivi
 
 | Rule | Verdict | Evidence |
 |---|---|---|
-| **D1** replication of prior magnitudes | **PASS — reproduced** | Δ secondary +0.012, Δ higher +0.020; n/panel exact |
-| **D2** coverage/generality | **"near-universal"** (98.8% ≥ 90% threshold) — minority named | 346 surveys; 4 non-negative |
-| **D3** window/construct agreement (A vs B) | **"same sign, similar magnitude"** | ratio 1.017 [0.944, 1.102]; 2-group 0.960 [0.918, 1.002] |
-| **D4** desired vs realised | **prediction confirmed** (`|β_wanted| < |β_actual|`) | interaction −0.089 (0.024), p=0.00025 |
-| **D5** survey-level construct gap | **different series, as expected**; no correction implied | corr 0.822; median gap 0.63; change corr 0.32 vs 0.51 |
-| **D6** cohort proxy | **indeterminate** (CIs include 0); direction = attenuation | see §6 |
-| **D7** nulls | all nulls reported with intervals above | M2 interaction p=0.23/0.14; cohort CIs |
+| **D1** replication of prior magnitudes | **PASS — exact** | deltas 0.000 / 0.002 / 0.004; panel exact |
+| **D2** coverage/generality | **"near-universal"** (98.8% ≥ 90% threshold); minority named | 346 surveys; 4 non-negative |
+| **D3** window/construct agreement (A vs B) | 4-level: **"same sign, similar magnitude"** (1.003 [0.932, 1.077]); 2-group: same sign, **materially different magnitude** by rule (0.958 [0.915, 0.998]) | §4 |
+| **D4** desired vs realised | **prediction confirmed** (`\|β_wanted\| < \|β_actual\|`) | −0.0775 (0.0217), p=0.0004 |
+| **D5** survey-level construct gap | **different series, as expected**; no correction implied | §5.3 |
+| **D6** cohort proxy | **attenuation** (full sample); **steepening** in the African-11 | §6, Africa-11 §5 |
+| **D7** nulls | all nulls reported with intervals | Q2b1 A-vs-B p=0.70; pipeline secondary p=0.068 |
 
-No decision rule was changed after seeing results. The only pre-estimation change is Amendment 01 (denominators;
-hidden second dimension in one indicator), committed before estimation.
+No decision rule was changed after seeing results. The two changes since the first run are a **correctness fix**
+(§0) and the **T1 coverage-restricted extension** (task-36), both documented in committed files before the
+affected numbers were final.
 
 ---
 
 ## 8. Ecological-limits statement (binding)
 
-1. **The unit is a published cell, not a woman.** Every coefficient is an association between group averages —
-   consistent with an individual-level association, but not evidence of one.
+1. **The unit is a published cell, not a woman.** Every coefficient is an association between group averages.
 2. **No causal language.** No instrument, no policy discontinuity, no pre-trends, no within-woman variation.
-3. **Aggregation bias is not hypothetical.** Cells differ in education composition and in everything correlated
-   with it. The API never crosses education with wealth or residence, so this gradient **cannot** be separated
-   from wealth/residence gradients in these data.
+3. **Aggregation bias is not hypothetical.** The API never crosses education with wealth or residence, so this
+   gradient cannot be separated from wealth/residence gradients in these data.
 4. **Categories change meaning across rounds** (massification): a stable coefficient is not a stable individual
-   effect; the per-period medians in §3.4 are consistent with composition.
-5. **Published values are already DHS-survey-weighted**; cell weights are denominators, and they re-weight cells,
-   not women.
+   effect.
+5. **Published values are already DHS-survey-weighted**; cell weights re-weight cells, not women.
 6. **Repeated cross-sections**: one row per country × round; the cohort proxy is derived from survey years.
 7. **This cannot substitute for the individual test.** The Individual Recode test
-   (`research/dhs-acquisition-2026-11-24/PRE_REGISTRATION.md`) is the only design here that puts a woman's own
-   schooling next to her own children ever born. Nothing above replaces it; no simulation or synthetic data was
-   used anywhere.
-8. **Construct naming:** `FE_FRTY_W_MNC` is a cumulative **births** measure (mean CEB, women 40–49), **not a
-   TFR**. `CEB₄₀ − Deaths₄₀` is a **surviving-children** measure, **not a TFR**. Only `FE_FRTR_W_TFR` and
-   `PR_WTFR_W_WFR` are rates. Tables name the construct in their headers.
+   (`../2026-11-24-dhs-acquisition/PRE_REGISTRATION.md`, execution-ready at
+   `../2026-11-24-dhs-acquisition/EXECUTION_READY.md`) is the only design here that puts a woman's own schooling
+   next to her own children ever born. No simulation or synthetic data is used anywhere.
+8. **Construct naming:** `FE_FRTY_W_MNC` is a cumulative **births** measure, **not a TFR**. `CEB₄₀ − Deaths₄₀` is a
+   **surviving-children** measure, **not a TFR**. Only `FE_FRTR_W_TFR` and `PR_WTFR_W_WFR` are rates.
 
 ---
 
-## 9. What the individual test must beat (hand-off to the blocked microdata design)
+## 9. What the individual test must beat
 
-- **The bar for "new information":** the ecological gradient is −1.57 children (secondary vs none, within
-  survey) with a near-universal sign. The individual test must show whether **within-cohort, within-woman**
-  schooling still carries an association **after wealth, residence and community** — the three things the public
-  cells cannot separate (§8.3). If the individual gradient shrinks toward zero once those enter, the ecological
-  pattern is composition; if it survives, the "dose" reading gains its first individual-level support.
-- **The construct test has a clear target:** the two births-based measures agree (ratio 1.02), the wanted measure
-  is weaker (−0.089 SD), and the surviving-children measure cannot be split by education in public data at all.
-  The individual test should estimate the **same construct × schooling interaction** with `v201` vs
-  `v201 − v206 − v207` — and it should reproduce the wanted-vs-actual gap if preferences are the weaker margin.
-- **The cohort question is open:** ecological attenuation is visible but not identified; the individual data with
-  birth cohorts can tell composition from change.
+- **Bar for "new information":** the ecological gradient is −1.58 children (secondary vs none, within survey) with
+  a near-universal sign. The individual test must show whether **within-cohort, within-woman** schooling still
+  carries an association **after wealth, residence and community** — the three things the public cells cannot
+  separate. If the individual gradient shrinks toward zero once those enter, the ecological pattern is composition;
+  if it survives, the "dose" reading gains its first individual-level support.
+- **Construct target:** the two births-based measures agree (ratio 1.003), wanted is weaker (−0.078 SD), and the
+  surviving-children measure cannot be split by education in public data. The individual test should estimate the
+  same construct × schooling interaction with `v201` vs `v201 − v206 − v207`.
+- **Cohort question:** ecological attenuation (full sample) vs steepening (African-11) is unresolved by these data;
+  birth cohorts in the microdata can separate composition from change.
 
 ---
 
 ## 10. Reproduction
 
-- **Compute location:** region-42 (`ssh -p 54585 root@region-42.seetacloud.com`), path `/root/work/dhs-api/`.
-  **No estimate was computed on the Mac.** The Mac only ran the API pull (network I/O) and `build_panel.py`
-  (seconds), and later only `git` and file copies.
-- **Command:** `cd /root/work/dhs-api && DHS_WORKERS=48 /root/miniconda3/bin/python -u scripts/estimate.py`
-  (`results/server/estimate.log`, `results/server/stats.log`).
-- **Parallelisation:** `multiprocessing.Pool(48)`; each worker sets `OMP/MKL/OPENBLAS/NUMEXPR/VECLIB` thread
-  limits to 1 before importing NumPy; the 500-draw country-cluster bootstrap is split as 500 independent
-  tasks per contrast and the 63 per-country fits are a second `Pool.map`. Log records `workers: 48`.
-- **Wall time:** **13 seconds** (start epoch 1795518781; `WALL_SECONDS=13`). **Load average** sampled during the
-  run: **10.5–11.8** (1-min; the box baseline before the run was ≈6–8 from other work, so this job contributed
-  roughly 4–6 runnable processes' worth on average, spiking to 48 Python processes during pool dispatch);
-  **CPU (system-wide, 96 cores): 5–19% `us`** across samples. The job is small: the 13-second wall time is
-  dominated by argument marshalling and the ~40 serial fixed-effects fits, not by the bootstrap.
-- **Environment:** Python 3.10.8, **numpy 1.24.1** on the server (no scipy/pandas/statsmodels needed — the script
-  is numpy + stdlib only). Local Python had numpy 1.24.3. **Delta check:** the substantive coefficients are
-  identical to 4 decimal places between the local NumPy 1.24.3 run and the server NumPy 1.24.1 run. The only
-  differences are method/design changes made before this final run and recorded in Amendment 01/this report:
-  per-country SEs use HC0 (cluster-robust is degenerate with one country per model) and the bootstrap CIs use
-  500 draws instead of the earlier partial run's 300. No numpy-version discrepancy to hide.
-- **Determinism:** bootstrap seeds are `20261124 + i` (fixed); the point estimates are closed-form WLS. Re-running
-  the script on the same cache reproduces the numbers bit-for-bit up to BLAS arithmetic ordering.
+- **Compute:** box `ssh -p 45973 root@connect.cqa1.seetacloud.com`, path `/root/work/dhs-api/`; command
+  `DHS_WORKERS=8 /root/miniconda3/bin/python -u scripts/estimate.py --outdir results`; **24 s wall, 8 workers**,
+  per-worker thread limits = 1. 11-country job: same script with
+  `--countries MWI,ETH,UGA,LSO,TZA,KEN,MOZ,GHA,BEN,NAM,SWZ --outdir results/africa11`, **13 s**. Box load average
+  ≈ 19–25 (shared; the job used ≤ 8 of the 15-CPU container quota). **No project compute on the Mac.**
+- **Environment:** Python 3.10.8, **numpy 1.24.1**; script is numpy + stdlib only. Local NumPy is 1.24.3; the
+  substantive coefficients are identical to 4 dp (no numpy-version delta).
+- **Determinism:** closed-form WLS; bootstrap seeds `20261124+i`; independent cross-check
+  (`scripts/corrected_reduction.py`) reproduces the point estimates exactly and validates the estimator against the
+  prior record (max |Δ| 0.0036).
+- **Files:** `results/results.json` (corrected full sample), `results/model_table.csv`,
+  `results/heterogeneity_*.{csv,json}`, `results/survey_construct.csv`, `results/africa11/*` (task-36 extension),
+  `results/corrected/corrected_results.json` (cross-check), `results/server_box2/` (logs); biased-run logs kept as
+  `results/server_superseded_biased/`.
+- **Scripts:** `scripts/pull_dhs_api.py`, `scripts/build_panel.py`, `scripts/estimate.py` (corrected),
+  `scripts/corrected_reduction.py` (independent cross-check).
+- **Commits:** pre-registration `88073d0`; Amendment 01 + pull/panels `856c421`; first (biased) results `708e34a`;
+  correction + task-36 outputs in the commit that carries this file.
 
-**Files:** `results/results.json` (all coefficients, CIs, samples, diagnostics), `results/model_table.csv`
-(flat model table), `results/heterogeneity_surveys.csv`, `results/heterogeneity_countries.csv`,
-`results/heterogeneity_bh.json`, `results/survey_construct.csv`, `results/server/{estimate,stats}.log`;
-scripts `scripts/pull_dhs_api.py`, `scripts/build_panel.py`, `scripts/estimate.py`; cache under `data/raw/`
-with `data/MANIFEST.sha256`; `data/panel_checks.json`; pre-registration `88073d0`, Amendment 01 + pull
-`856c421`.
-
-**UNVERIFIED / open items:** DHS API Terms & Conditions text (JS-only page; attribute DHS, no bulk scraping);
-the `FE_AAFB_W_M25` education breakdown is sparse (51 surveys with 4 levels) and is descriptive only; the
-want-no-more national-vs-cell check differs by up to 2.74 pp in some surveys (universe/rounding — reported, not
-corrected); the exact DHS-8 Guide period-TFR window is not re-derived here (we use the API's published TFR as
-DHS defines it).
+**UNVERIFIED / open:** DHS API Terms & Conditions text (JS-only page; attribute DHS, no bulk scraping); the
+`FE_AAFB_W_M25` education breakdown is sparse (51 surveys) and descriptive only; want-no-more national-vs-cell
+check differs by up to 2.74 pp in some surveys (reported, not corrected); O3 period TFR is not computed from IR
+(needs BR files; see `../2026-11-24-dhs-acquisition/AMENDMENT_02_ACCESS_COVERAGE.md` A2.4); the exact DHS-8 Guide
+window for a computed TFR was not re-derived (we use the API's published TFR as DHS defines it).

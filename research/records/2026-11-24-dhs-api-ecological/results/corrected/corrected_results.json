@@ -1,0 +1,444 @@
+{
+ "bug": {
+  "description": "committed estimator dropped the first FE level without an intercept; every FE model biased by ~0.01-0.02 children. Prior record unaffected (it used the correct weighted within-transform). Fixed in scripts/estimate.py (intercept pre-pended).",
+  "prior_record_values": [
+   -0.57,
+   -1.62,
+   -2.54
+  ],
+  "prior_record_se": [
+   0.06,
+   0.17,
+   0.24
+  ]
+ },
+ "labels": "OBSERVED / ECOLOGICAL published cells; not causal; not the individual test",
+ "method": "correct weighted within-transform (prior record's estimator), cluster-robust by country",
+ "validation_prior_record": {
+  "edu_primary": {
+   "value": -0.57,
+   "se": 0.058,
+   "prior": -0.57
+  },
+  "edu_secondary": {
+   "value": -1.6216,
+   "se": 0.1703,
+   "prior": -1.62
+  },
+  "edu_higher": {
+   "value": -2.5364,
+   "se": 0.2346,
+   "prior": -2.54
+  },
+  "max_abs_delta": 0.0036000000000000476,
+  "passed": true
+ },
+ "corrected_full_sample_M1_weighted": {
+  "edu_primary": {
+   "b": -0.5541,
+   "se": 0.0588,
+   "committed_biased": -0.5355,
+   "correction": -0.0186
+  },
+  "edu_secondary": {
+   "b": -1.5837,
+   "se": 0.1667,
+   "committed_biased": -1.5685,
+   "correction": -0.0152
+  },
+  "edu_higher": {
+   "b": -2.5382,
+   "se": 0.2419,
+   "committed_biased": -2.5201,
+   "correction": -0.0181
+  }
+ },
+ "corrected_full_sample_M1_weighted_2group": {
+  "b": -1.5514,
+  "se": 0.1452,
+  "committed_biased": -1.5449,
+  "correction": -0.0065
+ },
+ "full_sample": {
+  "Q1_M1_weighted_4level": {
+   "edu_primary": {
+    "b": -0.5541,
+    "se": 0.0588,
+    "committed_biased": -0.5355,
+    "correction": -0.0186
+   },
+   "edu_secondary": {
+    "b": -1.5837,
+    "se": 0.1667,
+    "committed_biased": -1.5685,
+    "correction": -0.0152
+   },
+   "edu_higher": {
+    "b": -2.5382,
+    "se": 0.2419,
+    "committed_biased": -2.5201,
+    "correction": -0.0181
+   }
+  },
+  "Q1_M0_weighted_4level": {
+   "edu_primary": {
+    "b": -0.5566,
+    "se": 0.0587
+   },
+   "edu_secondary": {
+    "b": -1.5934,
+    "se": 0.1701
+   },
+   "edu_higher": {
+    "b": -2.5501,
+    "se": 0.2433
+   }
+  },
+  "Q2a_ratio_2group": {
+   "ratio": 0.9582251740478178,
+   "ci": [
+    0.9143673107541921,
+    1.0020143941132866
+   ],
+   "draws": 500,
+   "countries": 80
+  },
+  "Q2a_ratio_4level": {
+   "ratio": 1.0029272110701175,
+   "ci": [
+    0.936480575722767,
+    1.0770431453173717
+   ],
+   "draws": 500,
+   "countries": 65
+  },
+  "Q2b1_A_vs_B_secondary": {
+   "b": 0.01580091251321945,
+   "se": 0.04113790004242
+  },
+  "Q2b1_C_vs_B_secondary": {
+   "b": -0.07747013550392778,
+   "se": 0.021687285535161773
+  },
+  "cohort": {
+   "edu_primary": {
+    "b": -0.5782326977519403,
+    "se": 0.06708740879944437
+   },
+   "edu_secondary": {
+    "b": -1.6942643221893994,
+    "se": 0.15586338384139772
+   },
+   "edu_higher": {
+    "b": -2.6791743696286145,
+    "se": 0.20124821697561684
+   },
+   "edu_primary_x_cohort_decade": {
+    "b": -0.019200776439803224,
+    "se": 0.07630201095649497
+   },
+   "edu_secondary_x_cohort_decade": {
+    "b": 0.24005695120765647,
+    "se": 0.1310802481836046
+   },
+   "edu_higher_x_cohort_decade": {
+    "b": 0.3670522005049255,
+    "se": 0.1477856303143536
+   }
+  }
+ },
+ "africa11": {
+  "countries": [
+   "MW",
+   "ET",
+   "UG",
+   "LS",
+   "TZ",
+   "KE",
+   "MZ",
+   "GH",
+   "BJ",
+   "NM",
+   "SZ"
+  ],
+  "Q1_models": {
+   "A_M1_weighted_4level": {
+    "edu_primary": {
+     "b": -0.707,
+     "se": 0.1578,
+     "n_cells": 176
+    },
+    "edu_secondary": {
+     "b": -2.1627,
+     "se": 0.1785,
+     "n_cells": 176
+    },
+    "edu_higher": {
+     "b": -3.1977,
+     "se": 0.1354,
+     "n_cells": 176
+    }
+   },
+   "A_M1_unweighted_4level": {
+    "edu_primary": {
+     "b": -0.6205,
+     "se": 0.1345,
+     "n_cells": 176
+    },
+    "edu_secondary": {
+     "b": -2.1523,
+     "se": 0.248,
+     "n_cells": 176
+    },
+    "edu_higher": {
+     "b": -3.2341,
+     "se": 0.1587,
+     "n_cells": 176
+    }
+   },
+   "A_M1_weighted_2group": {
+    "edu_secplus": {
+     "b": -1.9743,
+     "se": 0.1231,
+     "n_cells": 144
+    }
+   },
+   "B_M1_unweighted_4level": {
+    "edu_primary": {
+     "b": -0.9836,
+     "se": 0.1434,
+     "n_cells": 244
+    },
+    "edu_secondary": {
+     "b": -2.5967,
+     "se": 0.1189,
+     "n_cells": 244
+    },
+    "edu_higher": {
+     "b": -3.6279,
+     "se": 0.122,
+     "n_cells": 244
+    }
+   },
+   "B_M1_unweighted_2group": {
+    "edu_secplus": {
+     "b": -2.1419,
+     "se": 0.0933,
+     "n_cells": 148
+    }
+   },
+   "A_M0_weighted_4level": {
+    "edu_primary": {
+     "b": -0.7141,
+     "se": 0.1592,
+     "n_cells": 176
+    },
+    "edu_secondary": {
+     "b": -2.1763,
+     "se": 0.1766,
+     "n_cells": 176
+    },
+    "edu_higher": {
+     "b": -3.2075,
+     "se": 0.1341,
+     "n_cells": 176
+    }
+   },
+   "A_M0_weighted_2group": {
+    "edu_secplus": {
+     "b": -1.9821,
+     "se": 0.1223,
+     "n_cells": 144
+    }
+   }
+  },
+  "Q2a_ratio_2group": {
+   "ratio": 1.069843350505824,
+   "ci": [
+    1.0113416851262857,
+    1.134698905316072
+   ],
+   "draws": 500,
+   "countries": 11
+  },
+  "Q2a_ratio_4level": {
+   "ratio": 1.1779982281432086,
+   "ci": [
+    1.0209694791584365,
+    1.3712152488009302
+   ],
+   "draws": 500,
+   "countries": 11
+  },
+  "Q2b1_A_vs_B_4level": {
+   "edu_primary": {
+    "b": -0.5183944212922537,
+    "se": 0.10240192235169204
+   },
+   "edu_secondary": {
+    "b": -1.4641720424085327,
+    "se": 0.14944916900890876
+   },
+   "edu_higher": {
+    "b": -2.1570493069716865,
+    "se": 0.0856628400988378
+   },
+   "construct": {
+    "b": 0.019869051344720036,
+    "se": 0.06675912073162898
+   },
+   "edu_secondary_x_construct": {
+    "b": -0.07947620537888178,
+    "se": 0.08812756153700677
+   }
+  },
+  "Q2b1_C_vs_B_4level": {
+   "edu_primary": {
+    "b": -0.6961403188466703,
+    "se": 0.10168911921735209
+   },
+   "edu_secondary": {
+    "b": -1.6343182915146885,
+    "se": 0.11314959809462355
+   },
+   "edu_higher": {
+    "b": -2.1881431893949044,
+    "se": 0.10923466443237335
+   },
+   "construct": {
+    "b": 0.004905196108634836,
+    "se": 0.04257059755706073
+   },
+   "edu_secondary_x_construct": {
+    "b": -0.019620784434536537,
+    "se": 0.025569518809902016
+   }
+  },
+  "Q2b1_A_vs_B_2group": {
+   "edu_secplus": {
+    "b": -1.511819189080776,
+    "se": 0.10565481316803188
+   },
+   "construct": {
+    "b": 0.058713208180390115,
+    "se": 0.09139615915017212
+   },
+   "edu_secplus_x_construct": {
+    "b": -0.1174264163607805,
+    "se": 0.10528762230903135
+   }
+  },
+  "Q2b1_C_vs_B_2group": {
+   "edu_secplus": {
+    "b": -1.4446910609353134,
+    "se": 0.11640244053837469
+   },
+   "construct": {
+    "b": 0.07105960081491675,
+    "se": 0.08104409970352215
+   },
+   "edu_secplus_x_construct": {
+    "b": -0.142119201629834,
+    "se": 0.042925574727216295
+   }
+  },
+  "cohort": {
+   "edu_primary": {
+    "b": -0.6666677961562404,
+    "se": 0.13769120953798916
+   },
+   "edu_secondary": {
+    "b": -2.148346012401025,
+    "se": 0.1729751850864871
+   },
+   "edu_higher": {
+    "b": -3.2467284467299855,
+    "se": 0.1477963469494207
+   },
+   "edu_primary_x_cohort_decade": {
+    "b": -0.2781644312338009,
+    "se": 0.11169561540958417
+   },
+   "edu_secondary_x_cohort_decade": {
+    "b": -0.18601052953876795,
+    "se": 0.07592220734554395
+   },
+   "edu_higher_x_cohort_decade": {
+    "b": 0.0161567509774303,
+    "se": 0.08229719094279538
+   }
+  },
+  "per_country_corrected": [
+   {
+    "country": "BJ",
+    "b": -2.5577,
+    "se": 0.167,
+    "n_surveys": 5,
+    "n_cells": 10
+   },
+   {
+    "country": "ET",
+    "b": -3.3989,
+    "se": 0.21,
+    "n_surveys": 6,
+    "n_cells": 12
+   },
+   {
+    "country": "GH",
+    "b": -1.7083,
+    "se": 0.0464,
+    "n_surveys": 8,
+    "n_cells": 16
+   },
+   {
+    "country": "KE",
+    "b": -1.8655,
+    "se": 0.0669,
+    "n_surveys": 10,
+    "n_cells": 20
+   },
+   {
+    "country": "LS",
+    "b": -1.268,
+    "se": 0.0591,
+    "n_surveys": 4,
+    "n_cells": 8
+   },
+   {
+    "country": "MW",
+    "b": -2.0293,
+    "se": 0.1529,
+    "n_surveys": 9,
+    "n_cells": 18
+   },
+   {
+    "country": "MZ",
+    "b": -1.9604,
+    "se": 0.0585,
+    "n_surveys": 6,
+    "n_cells": 12
+   },
+   {
+    "country": "NM",
+    "b": -1.969,
+    "se": 0.0724,
+    "n_surveys": 4,
+    "n_cells": 8
+   },
+   {
+    "country": "TZ",
+    "b": -2.1078,
+    "se": 0.0718,
+    "n_surveys": 9,
+    "n_cells": 18
+   },
+   {
+    "country": "UG",
+    "b": -1.7461,
+    "se": 0.1218,
+    "n_surveys": 10,
+    "n_cells": 20
+   }
+  ]
+ }
+}

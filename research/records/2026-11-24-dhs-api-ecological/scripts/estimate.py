@@ -29,6 +29,15 @@ HERE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA = os.path.join(HERE, "data")
 RES = os.path.join(HERE, "results")
 os.makedirs(RES, exist_ok=True)
+COUNTRY_FILTER = None  # set from --countries (ISO2 or ISO3 list) for the 11-country African extension
+ISO3_TO_ISO2 = {"MWI": "MW", "ETH": "ET", "UGA": "UG", "LSO": "LS", "TZA": "TZ", "KEN": "KE",
+                "MOZ": "MZ", "GHA": "GH", "BEN": "BJ", "NAM": "NM", "SWZ": "SZ", "KHM": "KH",
+                "PHL": "PH", "VNM": "VN"}
+
+
+def _norm_country(c):
+    c = c.strip().upper()
+    return ISO3_TO_ISO2.get(c, c)
 
 RNG = np.random.default_rng(20261124)
 EDU4 = ["No education", "Primary", "Secondary", "Higher"]
@@ -52,6 +61,8 @@ def load_panel(kind, ind):
     rows = read(os.path.join(DATA, f"panel_{kind}_{ind}.csv"))
     out = []
     for r in rows:
+        if COUNTRY_FILTER and r["country"] not in COUNTRY_FILTER:
+            continue
         out.append({
             "country": r["country"], "survey": r["survey"], "year": int(r["year"]),
             "survey_type": r["survey_type"], "edu": r["edu"],
@@ -71,8 +82,16 @@ def dummies(vals, drop_first=True):
 
 
 def fit(y, X, w, cluster):
-    """WLS with cluster-robust sandwich. Returns beta, se, n, k, pvals."""
+    """WLS with cluster-robust sandwich. Returns beta, se, n, k, pvals.
+
+    BUGFIX (2026-11-24): the design matrices below drop the first level of each categorical FE (reference
+    category) and previously contained no intercept, which silently constrained the reference group's mean to
+    zero and biased every FE model by ~0.01-0.02 children. An intercept is pre-pended here so that
+    "dropped-reference dummies + intercept" spans the same space as the full dummy set (equivalently, the
+    weighted within-transform used by the prior record, which is why the prior record's numbers are correct).
+    """
     X = np.asarray(X, float)
+    X = np.column_stack([np.ones(len(X)), X])
     y = np.asarray(y, float)
     w = np.asarray(w, float)
     Xw = X * w[:, None]
@@ -113,8 +132,9 @@ def _country_task(c):
     X = np.column_stack([e, s])
     w = np.array([r["n"] for r in rs], float)
     f = fit(y, X, w, np.arange(len(rs)))  # HC0: one country per model
-    return {"country": c, "b": float(f["beta"][0]), "se": float(f["se"][0]),
-            "p": float(f["p"][0]), "n_surveys": len({r["survey"] for r in rs}),
+    j = 1  # fit() pre-pends an intercept, so education (first design column) is index 1
+    return {"country": c, "b": float(f["beta"][j]), "se": float(f["se"][j]),
+            "p": float(f["p"][j]), "n_surveys": len({r["survey"] for r in rs}),
             "n_cells": f["n"]}
 
 
@@ -221,7 +241,7 @@ def run_spec(rows, spec, twogroup=False, weight=True, standardise=False):
     w = np.array([(r["n"] if (weight and r["has_denom"]) else 1.0) for r in rows], float)
     cl = np.array([r["country"] for r in rows])
     f = fit(y, X, w, cl)
-    idx = {nm: i for i, nm in enumerate(names)}
+    idx = {nm: i + 1 for i, nm in enumerate(names)}  # +1 for the pre-pended intercept
     out = {"spec": spec, "n_cells": f["n"], "n_surveys": len({r["survey"] for r in rows}),
            "n_countries": len({r["country"] for r in rows}), "weighted": weight,
            "standardised": standardise, "coef": {}}
@@ -267,6 +287,8 @@ def load_prior_panel():
     rows = read(path)
     out = []
     for r in rows:
+        if COUNTRY_FILTER and r["country"] not in COUNTRY_FILTER:
+            continue
         out.append({"country": r["country"], "survey": r["survey"], "year": int(r["year"]),
                     "survey_type": r["survey_type"], "edu": r["edu"],
                     "edu_level": int(r["edu_level"]), "value": float(r["value"]),
@@ -319,12 +341,20 @@ def bh(pvals, q=0.05):
 
 # ------------------------------------------------------------------------------------ main
 def main():
+    global RES, COUNTRY_FILTER
+    argv = sys.argv[1:]
+    if "--countries" in argv:
+        COUNTRY_FILTER = {_norm_country(c) for c in argv[argv.index("--countries") + 1].split(",")}
+    if "--outdir" in argv:
+        RES = os.path.join(HERE, argv[argv.index("--outdir") + 1])
+        os.makedirs(RES, exist_ok=True)
     workers = int(os.environ.get("DHS_WORKERS", "48"))
     R = {"provenance": {
         "source": "api.dhsprogram.com public API, no key/no login",
         "pull_date": "2026-11-24", "preregistration_commit": "88073d0",
         "unit": "country x survey x education cell (published DHS aggregate)",
-        "tier": "OBSERVED / ECOLOGICAL", "seed": 20261124}}
+        "tier": "OBSERVED / ECOLOGICAL", "seed": 20261124,
+        "country_filter": sorted(COUNTRY_FILTER) if COUNTRY_FILTER else "all"}}
     pipe = pipeline_by_survey()
 
     # ---------- Q1: completed fertility, education gradient ----------
@@ -372,6 +402,11 @@ def main():
         pb_c = [r for r in pb if r["country"] in common]
         oa = run_spec(pa_c, "M1", twogroup=ta, weight=False, standardise=True)
         ob = run_spec(pb_c, "M1", twogroup=tb, weight=False, standardise=True)
+        if oa is None or ob is None:
+            return {"error": "insufficient common coverage for this contrast",
+                    "common_countries": common, "n_rows_A": len(pa_c), "n_rows_B": len(pb_c),
+                    "n_surveys_A": len({r["survey"] for r in pa_c}),
+                    "n_surveys_B": len({r["survey"] for r in pb_c})}
         ka = "edu_secplus" if ta else "edu_secondary"
         kb = "edu_secplus" if tb else "edu_secondary"
         point_a, point_b = oa["coef"][ka]["b"], ob["coef"][kb]["b"]
@@ -432,7 +467,7 @@ def main():
         cl = np.array([r["country"] for r in rows])
         w = np.ones(len(rows))
         f = fit(y, X, w, cl)
-        idx = {nm: i for i, nm in enumerate(names)}
+        idx = {nm: i + 1 for i, nm in enumerate(names)}  # +1: fit() pre-pends an intercept
         out = {"n_rows": f["n"], "n_surveys": len({r["survey"] for r in rows}),
                "n_countries": len({r["country"] for r in rows}), "coef": {}}
         for nm in (names[:len(en) + 2]):
@@ -449,7 +484,7 @@ def main():
 
     # ---------- Q2b2: survey-level construct contrast (surviving children vs TFR) ----------
     sv = read(os.path.join(DATA, "panel_survey.csv"))
-    sv = [dict(r) for r in sv]
+    sv = [dict(r) for r in sv if not COUNTRY_FILTER or r["country"] in COUNTRY_FILTER]
     for r in sv:
         for k in ("ceb40_agecells", "deaths40_agecells", "surviving40", "ceb40_published_total",
                   "tfr", "wanted_tfr", "want_no_more", "pipeline_sec_plus"):

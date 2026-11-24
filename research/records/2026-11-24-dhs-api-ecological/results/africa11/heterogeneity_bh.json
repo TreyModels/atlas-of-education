@@ -1,0 +1,6 @@
+{
+ "q": 0.05,
+ "n_countries": 10,
+ "bh_rejections": 10,
+ "share_negative": 1.0
+}
