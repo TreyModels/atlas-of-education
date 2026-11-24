@@ -1,0 +1,201 @@
+{
+ "label": "EXPLORATORY POST-HOC (task-7); follow-up to the confirmatory task-3 record",
+ "preregistration_followup_commit": "dab608c",
+ "confirmatory_commit": "5b42bfd",
+ "design_note": "B1/B2 are recomputation (arithmetic on committed outputs); B3 is an exploratory re-estimation on a reduced sample. Confirmatory REPORT/PRE_REGISTRATION unchanged.",
+ "language_rule": "association only; no causal wording",
+ "B1": {
+  "type": "RECOMPUTATION (arithmetic on committed results/e8_event_difference_verified8.csv; not new estimation)",
+  "formula": "se_e=(ci_hi-ci_lo)/(2*1.96); w_e=1/se_e^2; D_IV=sum(w_e d_e)/sum(w_e); SE_IV=1/sqrt(sum w_e); 95% CI = D_IV +/- 1.96*SE_IV",
+  "caveat": "treats the reported percentile paired-bootstrap CIs as symmetric normal intervals (approximation; the bootstrap distribution is skewed)",
+  "events": [
+   {
+    "event": 1,
+    "att_F": 21.818252357732263,
+    "att_M": 25.80506186566412,
+    "d_e": -3.986809507931852,
+    "ci_lo": -7.08674786423488,
+    "ci_hi": -0.5254153269746658,
+    "se_from_ci": 1.6738093207296465,
+    "w_raw": 0.3569340963125082,
+    "n_boot_used": 500,
+    "w_norm": 0.33108448010810865
+   },
+   {
+    "event": 2,
+    "att_F": 23.525750062728065,
+    "att_M": 28.193840780726312,
+    "d_e": -4.668090717998247,
+    "ci_lo": -8.614641406553776,
+    "ci_hi": -0.8689041046952876,
+    "se_from_ci": 1.9759533933312472,
+    "w_raw": 0.25612183612526834,
+    "n_boot_used": 500,
+    "w_norm": 0.23757317060465163
+   },
+   {
+    "event": 3,
+    "att_F": 20.036619365096357,
+    "att_M": 24.198344041254902,
+    "d_e": -4.161724676158546,
+    "ci_lo": -10.473415580557786,
+    "ci_hi": -0.00437699500158,
+    "se_from_ci": 2.6706731085602566,
+    "w_raw": 0.1402033959560821,
+    "n_boot_used": 498,
+    "w_norm": 0.1300496896739984
+   },
+   {
+    "event": 4,
+    "att_F": 20.438459677285625,
+    "att_M": 24.117054357493732,
+    "d_e": -3.678594680208107,
+    "ci_lo": -9.86439072717912,
+    "ci_hi": 1.7361630515108415,
+    "se_from_ci": 2.9593249435433577,
+    "w_raw": 0.11418648138564685,
+    "n_boot_used": 498,
+    "w_norm": 0.10591695278066458
+   },
+   {
+    "event": 5,
+    "att_F": 26.564837277331947,
+    "att_M": 30.432665257909175,
+    "d_e": -3.867827980577229,
+    "ci_lo": -9.50522763528095,
+    "ci_hi": 3.415731907431135,
+    "se_from_ci": 3.296163148651042,
+    "w_raw": 0.09204126962717549,
+    "n_boot_used": 500,
+    "w_norm": 0.08537552511184893
+   },
+   {
+    "event": 6,
+    "att_F": 24.45256503087646,
+    "att_M": 27.753223363393783,
+    "d_e": -3.300658332517326,
+    "ci_lo": -9.122182430729255,
+    "ci_hi": 2.2610278679063187,
+    "se_from_ci": 2.903880178223361,
+    "w_raw": 0.11858851083529874,
+    "n_boot_used": 500,
+    "w_norm": 0.1100001817207279
+   }
+  ],
+  "weight_profile_normalised": {
+   "1": 0.33108448010810865,
+   "2": 0.23757317060465163,
+   "3": 0.1300496896739984,
+   "4": 0.10591695278066458,
+   "5": 0.08537552511184893,
+   "6": 0.1100001817207279
+  },
+  "D_IV": -4.053131268713541,
+  "SE_IV": 0.9631088942618732,
+  "D_IV_ci95": [
+   -5.940824701466813,
+   -2.1654378359602693
+  ],
+  "D_IV_ci_excludes_zero": true,
+  "D_equal_weight_confirmatory": -3.9439509825652124,
+  "D_equal_weight_confirmatory_ci95_percentile": [
+   -8.717832601194601,
+   0.29456768330537014
+  ],
+  "D_equal_weight_normal_approx": -3.9439509825652177,
+  "D_equal_weight_normal_approx_ci95": [
+   -6.058303096523895,
+   -1.8295988686065408
+  ],
+  "sign": "male_higher",
+  "diagnostic_not_in_prereg": {
+   "why": "added post-hoc to explain why the IV CI (independent marginal SEs) differs from the confirmatory paired percentile CI; descriptive diagnostic only, no new decision rule",
+   "SE_joint_implied_by_confirmatory_paired_ci(percentile_width_/3.92)": 2.2990817052295847,
+   "D_IV_with_joint_paired_SE_ci95": [
+    -8.559331410963527,
+    0.453068873536445
+   ],
+   "D_equal_weight_with_joint_paired_SE_ci95": [
+    -8.450151124815203,
+    0.5622491596847681
+   ],
+   "note": "the six post-event differences are strongly positively correlated within the paired bootstrap (same country draws, overlapping event windows); combining their marginal CIs as independent, as the pre-registered B1 formula does, understates the variance of the aggregate and is anti-conservative. The paired percentile CI is the confirmatory inference."
+  },
+  "reading": "EXPLORATORY. Pre-registered B1 rule fires mechanically: the IV formula's CI excludes zero (-4.05 [-5.94, -2.17]). HOWEVER the direct comparison does NOT support a weighting-artefact explanation: the IV point estimate (-4.05) is essentially the equal-weight estimate (-3.94), the weights are dominated by +1 (33%) and +2 (24%) only because those event CIs are narrowest, and applying the SAME normal approximation to the equal-weight mean also excludes zero ([-6.06, -1.83]). The apparent flip is a CI-CONSTRUCTION effect: the B1 formula treats the six post-event CIs as independent, while the paired country-cluster bootstrap makes them strongly positively correlated \u2014 the joint paired SE implied by the confirmatory percentile CI is ~2.30, not ~0.97. With the joint paired SE the IV aggregate CI [-8.559331410963527, 0.453068873536445] includes zero. Confirmatory headline preserved: no detected sex difference.",
+  "pre_registered_rule_fired": true,
+  "weighting_artefact_supported": false,
+  "conclusion_changes_with_paired_uncertainty": true
+ },
+ "B2": {
+  "type": "RECOMPUTATION (equal-weight mean of the remaining five post-event differences)",
+  "D_full_equal_weight": -3.9439509825652124,
+  "leave_one_event_out": [
+   {
+    "dropped_event": 1,
+    "D_loo": -3.935379277491891,
+    "leverage_vs_full_D": 0.00857170507332139
+   },
+   {
+    "dropped_event": 2,
+    "D_loo": -3.799123035478612,
+    "leverage_vs_full_D": 0.14482794708660052
+   },
+   {
+    "dropped_event": 3,
+    "D_loo": -3.900396243846552,
+    "leverage_vs_full_D": 0.043554738718660335
+   },
+   {
+    "dropped_event": 4,
+    "D_loo": -3.99702224303664,
+    "leverage_vs_full_D": -0.05307126047142763
+   },
+   {
+    "dropped_event": 5,
+    "D_loo": -3.9591755829628155,
+    "leverage_vs_full_D": -0.015224600397603094
+   },
+   {
+    "dropped_event": 6,
+    "D_loo": -4.072609512574796,
+    "leverage_vs_full_D": -0.1286585300095835
+   }
+  ],
+  "D_loo_range": [
+   -4.072609512574796,
+   -3.799123035478612
+  ],
+  "most_influential_event_dropped": 2,
+  "max_abs_leverage": 0.14482794708660052,
+  "note": "descriptive leverage only; no significance test invented"
+ },
+ "B3": {
+  "type": "EXPLORATORY RE-ESTIMATION on a reduced sample (not recomputation)",
+  "sample": "SSA 1990-2015, verified-8 dates, MOZ removed from the whole sample (7 treated countries)",
+  "design": "same att_cs (bd782be), universal base g-1, not-yet-treated controls, event -5..+6, cohort-weighted, 500 paired country-cluster bootstrap reps, seeds 20261125+i, percentile CIs",
+  "D_dropMOZ": -3.947403674577945,
+  "D_dropMOZ_ci95": [
+   -8.319550248501923,
+   0.2412474336351153
+  ],
+  "n_events_used": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6
+  ],
+  "n_boot_reps_used": 499,
+  "sign": "male_higher",
+  "ci_excludes_zero": false,
+  "treated_at_e0": {
+   "F": 7,
+   "M": 7
+  }
+ },
+ "confirmatory_headline": "both sexes' post-abolition primary-GER trajectories are similar; the female-minus-male post mean is -3.94 pp with a 95% CI that includes zero (no detected sex difference)",
+ "confirmatory_headline_changed": false,
+ "pre_registered_B1_rule_fired": true,
+ "exploratory_finding": "the equal-weight aggregate null is NOT a weighting artefact (IV point estimate -4.05 vs equal-weight -3.94; leave-one-event-out range 0.27 pp; drop-MOZ -3.95); the apparent CI flip is a CI-construction effect (independent marginal SEs vs the paired country-cluster bootstrap). Confirmatory 'no detected sex difference' preserved, with the fragility note that the paired percentile CI's upper endpoint is +0.29."
+}
