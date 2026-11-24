@@ -83,5 +83,5 @@
   "benchmark_split": "synthetic recovery; observed train/validation split vs persistence and training-mean benchmarks",
   "pass_fail": "PASS if synthetic coefficients recover and the observed model beats both held-out benchmarks"
  },
- "generated_utc": "2026-11-24T17:01:13Z"
+ "generated_utc": "2026-11-24T17:17:40Z"
 }

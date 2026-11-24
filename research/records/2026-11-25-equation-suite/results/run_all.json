@@ -6,7 +6,7 @@
  "numpy": "2.2.6",
  "nproc": 8,
  "workers": 6,
- "start_utc": "2026-11-24T17:00:38Z",
+ "start_utc": "2026-11-24T17:17:29Z",
  "command": "scripts/run_all.py --workers 6",
  "smoke": [
   {
@@ -22,14 +22,14 @@
    },
    "rule_error": null,
    "returncode": 0,
-   "wall_s": 0.85,
+   "wall_s": 0.43,
    "stdout_tail": [
     "PLAIN: Family income raises schooling demand in every budget specification (income elasticity range 0.16-1.52), forgone earnings reduce it, and at zero schooling effect on births the raw schooling-births association is absorbed once income is controlled. This is a demonstration of budget arithmetic, not an estimate of any country's demand.",
     "RULE: {'affordability_positive_across_specs': True, 'forgone_earnings_reduces_schooling': True, 'zero_signal_association_absorbed_by_income': True, 'PASS': True}"
    ],
    "stderr_tail": [],
    "output_json": "/Users/treymenefee/neon-boot/wt2/eq/research/records/2026-11-25-equation-suite/results/eq01_family_demand.json",
-   "output_sha256": "2e081b5f451b1d22b283f1bfcd072d1fc7e9e1016fc585496a64eb97766696f7",
+   "output_sha256": "5a2bef9dcae7d7fbcc68d31a1c984da6413aa954683bbe8a05c121b487268a64",
    "script_sha256": "acf642629c1d7f7026b3935b392d275e29915636fe253a69a145c82ddfcc7608"
   },
   {
@@ -45,14 +45,14 @@
    },
    "rule_error": null,
    "returncode": 0,
-   "wall_s": 1.15,
+   "wall_s": 0.69,
    "stdout_tail": [
     "PLAIN: A universal per-student subsidy is pro-rich in this model (concentration index 0.408 vs -0.476 for means-testing) because enrolment rises with income; the investment arithmetic gives a positive NPV at 5% and an IRR of 25.0%. These are arithmetic consequences of the stated assumptions, not policy estimates.",
     "RULE: {'universal_more_pro_rich_than_means_tested': True, 'npv_positive_at_5pct': True, 'irr_above_5pct': True, 'PASS': True}"
    ],
    "stderr_tail": [],
    "output_json": "/Users/treymenefee/neon-boot/wt2/eq/research/records/2026-11-25-equation-suite/results/eq02_supply_finance.json",
-   "output_sha256": "4daf8e7ebf4c5ef5d107ae25acda1e71fbf035e4277f21eb318200ad955ccc60",
+   "output_sha256": "d4bf8af147a311bfd73a2c6aea64a4573830d46edb220d4eeec4103aecf04228",
    "script_sha256": "1709a7f8b4dc5e9d7e95a6fc49b41fbd11c1614a27572f35b0b90aae6fea347c"
   },
   {
@@ -69,14 +69,14 @@
    },
    "rule_error": null,
    "returncode": 0,
-   "wall_s": 6.4,
+   "wall_s": 1.69,
    "stdout_tail": [
     "PLAIN: In the CES world the ability-controlled interaction is positive (0.002) and the CES fit beats Cobb-Douglas on RMSE (0.291 vs 0.549); in the linear null world the controlled interaction is near zero (0.005). This is a demonstration about estimators, not evidence about any school system.",
     "RULE: {'linear_world_interaction_oracle_CI_includes_0': True, 'complementary_world_interaction_oracle_positive': True, 'rho_recovered_within_0.10_in_half_reps': True, 'ces_beats_cd_rmse_in_complementary_world': True, 'PASS': True}"
    ],
    "stderr_tail": [],
    "output_json": "/Users/treymenefee/neon-boot/wt2/eq/research/records/2026-11-25-equation-suite/results/eq03_learning_quality.json",
-   "output_sha256": "316ccc659b625e0873a0fdb15c36bd8a1c3e09f0821d5853057d5d849b01d89e",
+   "output_sha256": "798388df65036bb77e04635ca2f4789722e5397f3b3b05dea756abb43344cec8",
    "script_sha256": "f5492b4cf6938f8ed267a0a3f8776312170be5b2bb2132f44a4b7db0db81045e"
   },
   {
@@ -92,14 +92,14 @@
    },
    "rule_error": null,
    "returncode": 0,
-   "wall_s": 0.81,
+   "wall_s": 0.2,
    "stdout_tail": [
     "PLAIN: A score bar admits rich pupils at a higher rate (gap 0.551); a reserved quota narrows the gap (0.087) but does NOT flip its sign, so the pre-declared 'quota flips the gap' rule FAILS, and a contest in which richer pupils invest more effort widens it further (0.764). The quota changes who is admitted, not how much anyone learns \u2014 this is a rationing demonstration, not an evaluation of any admissions policy.",
     "RULE: {'baseline_gap_positive': True, 'quota_flips_gap_negative': False, 'contest_widens_gap': True, 'PASS': False}"
    ],
    "stderr_tail": [],
    "output_json": "/Users/treymenefee/neon-boot/wt2/eq/research/records/2026-11-25-equation-suite/results/eq04_transitions_gates.json",
-   "output_sha256": "9c728430611fbabf54746ee3f103321f869dff49753e7f900128325089db9cd8",
+   "output_sha256": "c86a295209dae1b00456e849ed2c91767b298d5a7891d44abafb97535aeb7bed",
    "script_sha256": "bd32ea9c5fe05f3282a4a6a3202740a2f6483752aa908642458a084570259cad"
   },
   {
@@ -116,14 +116,14 @@
    },
    "rule_error": null,
    "returncode": 0,
-   "wall_s": 0.67,
+   "wall_s": 0.2,
    "stdout_tail": [
     "PLAIN: Under the stipulated ability-bias DGP the naive regression overstates the return (mean bias 0.033) while 2SLS is much closer (mean bias 0.003); with no ability bias both recover the 9% return. This is a demonstration of the estimator, not an estimate of any real return.",
     "RULE: {'bias_world_naive_biased': True, 'bias_world_iv_bias_smaller': True, 'null_world_naive_close': True, 'null_world_iv_close': True, 'PASS': True}"
    ],
    "stderr_tail": [],
    "output_json": "/Users/treymenefee/neon-boot/wt2/eq/research/records/2026-11-25-equation-suite/results/eq05_returns_credentials.json",
-   "output_sha256": "25c6bf4c3fcd36210b9830d0d204ebddb8edf662e86a5beeb5a692cccae8edc7",
+   "output_sha256": "a239bfcaa694ac01a8ad266bada07e571eae7ca06c25fcc1cbcb4e863bc45051",
    "script_sha256": "42fd596d1deefd3b489b2a2d84e14532c8779401cdd9d6d3ec25bb6145a6d801"
   },
   {
@@ -138,14 +138,14 @@
    },
    "rule_error": null,
    "returncode": 0,
-   "wall_s": 3.22,
+   "wall_s": 0.75,
    "stdout_tail": [
     "PLAIN: Education raises the migration probability in every specification (marginal effect range 0.0077-0.0137) and migrants are more educated than stayers; networks slightly REDUCE the estimated marginal effect (0.0077 with vs 0.0137 without), so the ad hoc 'networks increase the effect' criterion FAILS. MASSENG v5 does not model rural-urban migration, so this is a synthetic demonstration of the equation, not a model output.",
     "RULE: {'education_positive_in_every_spec': True, 'network_spec_effect_larger_than_no_network': False, 'PASS': False}"
    ],
    "stderr_tail": [],
    "output_json": "/Users/treymenefee/neon-boot/wt2/eq/research/records/2026-11-25-equation-suite/results/eq06_migration_rural_urban.json",
-   "output_sha256": "dbb9564d00a75add158243ab497bcb83a64748dac175e795689953132410859f",
+   "output_sha256": "2295a3f17091083ac09f518a19d63a4bacd78b44ee7a1a0745f758a9b47c60f7",
    "script_sha256": "a7907b58987ea1070d0b96ca68309d5ec58443da7645a08bc3563ab2a90cf87b"
   },
   {
@@ -161,14 +161,14 @@
    },
    "rule_error": null,
    "returncode": 0,
-   "wall_s": 1.98,
+   "wall_s": 0.53,
    "stdout_tail": [
     "PLAIN: In the null world the intergenerational elasticity is indistinguishable from zero (90% CI -0.01 to 0.01); in the persistent world it is 0.45 and the Theil decomposition puts 0.10 of inequality between parent-education groups. The elasticity, the Gini and the transition matrix are different summaries of the same synthetic process, not interchangeable evidence.",
     "RULE: {'null_elasticity_ci_includes_0': True, 'persistent_elasticity_positive': True, 'theil_between_positive': True, 'PASS': True}"
    ],
    "stderr_tail": [],
    "output_json": "/Users/treymenefee/neon-boot/wt2/eq/research/records/2026-11-25-equation-suite/results/eq07_inequality_dashboard.json",
-   "output_sha256": "f790d3f7ee48885ba610ee916fd441da9d57f54a27c3c6013f0f87bc804b6bdb",
+   "output_sha256": "94144d9de1d367bc7054be4bdcbae85cdd192e85ad8ff8af20f30b09ec55a268",
    "script_sha256": "df0b97195211523b54273091f35274a244c5da6e89f0963866342f3440cf49b4"
   },
   {
@@ -184,14 +184,14 @@
    },
    "rule_error": null,
    "returncode": 0,
-   "wall_s": 0.48,
+   "wall_s": 0.16,
    "stdout_tail": [
     "PLAIN: In the clean world the convergence coefficient is recovered and the human-capital term is zero; with an omitted TFP term correlated with human capital the human-capital coefficient is inflated (0.5363 vs -0.0162), so a positive growth coefficient is not evidence of a causal human-capital effect.",
     "RULE: {'clean_lambda_near_truth': False, 'confound_inflates_beta_H': True, 'nelson_phelps_interaction_positive': True, 'PASS': False}"
    ],
    "stderr_tail": [],
    "output_json": "/Users/treymenefee/neon-boot/wt2/eq/research/records/2026-11-25-equation-suite/results/eq08_growth.json",
-   "output_sha256": "127af10825096aa3f48220bc1055b07a55af8f66023c2364c50fa7e312c1b97c",
+   "output_sha256": "4065e6ac8d7b7bfa77a7064940fec9cd33ce5397ed477d0813948489ddaf8fde",
    "script_sha256": "b0fe636a2ad57b28799a36d50eacb47eb333f8b5b576f15740dda72fed5b1589"
   },
   {
@@ -209,14 +209,14 @@
    },
    "rule_error": null,
    "returncode": 0,
-   "wall_s": 5.2,
+   "wall_s": 1.19,
    "stdout_tail": [
     "PLAIN: Each design recovers its target in its own known-truth world and is near zero in the no-effect control; the naive estimators are biased in the stated violation worlds (IV 1.49 vs OLS 1.76 against a true 1.5; TWFE bias -1.14 vs the group-time estimator -0.02). This is a demonstration of the designs, not an estimate of any real programme.",
     "RULE: {'null_twfe_near_zero': True, 'null_iv_near_zero': True, 'null_rd_near_zero': True, 'null_sc_near_zero': True, 'iv_closer_than_ols': True, 'PASS': True}"
    ],
    "stderr_tail": [],
    "output_json": "/Users/treymenefee/neon-boot/wt2/eq/research/records/2026-11-25-equation-suite/results/eq09_identification.json",
-   "output_sha256": "f689cdb40bbfb200f7821890f9224fe58ae8d34bc70c23d9e80cb4a579f7ce91",
+   "output_sha256": "f0bf05bc3d2a220e18913708fd1a692aa19c3c26d6b455f093064f213a8a6934",
    "script_sha256": "deec9435d74887e1f5749b54f0fa226ebd2f258fb874b29c29dca579d18074f7"
   },
   {
@@ -228,19 +228,22 @@
    "rule_flags": {
     "two_part_closer_than_tobit": true,
     "ban_raises_gini_in_all_specs": false,
-    "model_not_claimed_to_fit_bray": true
+    "model_not_claimed_to_fit_bray": true,
+    "dropped_prereg_S3_different_two_part_within_0.15": true,
+    "dropped_prereg_S3_different_tobit_outside_0.15": true,
+    "dropped_prereg_S3_single_world_both_within_0.15": false
    },
    "rule_error": null,
    "returncode": 0,
-   "wall_s": 9.56,
+   "wall_s": 3.1,
    "stdout_tail": [
-    "PLAIN: Tutoring behaves as one exams-shadow module for demand: on the same log scale as the 0.8 truth the two-part model is closer than the Tobit (0.74 vs 1.39). On inequality the own-teacher ban does NOT raise the learning Gini once the Gini is computed on a strictly positive level domain: in this reduced production model there is no substitution margin, so removing tutoring lowers the Gini in every CES/retention specification (delta range -0.065..-0.036). The illustrative model is far from Bray's targets (max |z| = 10.6), so nothing here is a fit to a real shadow-education system.",
-    "RULE: {'two_part_closer_than_tobit': True, 'ban_raises_gini_in_all_specs': False, 'model_not_claimed_to_fit_bray': True, 'PASS': False}"
+    "PLAIN: Tutoring behaves as one exams-shadow module for demand: on the log1p scale (same units as the 0.8 truth) the two-part model is closer than the Tobit (0.74 vs 1.39). The log1p Tobit does NOT recover the truth, so the dropped pre-registered single-process rule fails (Tobit within-0.15 share 0.00). On inequality the own-teacher ban does NOT raise the learning Gini once the Gini is computed on a strictly positive level domain: in this reduced production model there is no substitution margin, so removing tutoring lowers the Gini in every CES/retention specification (delta range -0.065..-0.036). The illustrative model is far from Bray's targets (max |z| = 10.6), so nothing here is a fit to a real shadow-education system.",
+    "RULE: {'two_part_closer_than_tobit': True, 'ban_raises_gini_in_all_specs': False, 'model_not_claimed_to_fit_bray': True, 'PASS': False, 'dropped_prereg_S3_different_two_part_within_0.15': True, 'dropped_prereg_S3_different_tobit_outside_0.15': True, 'dropped_prereg_S3_single_world_both_within_0.15': False}"
    ],
    "stderr_tail": [],
    "output_json": "/Users/treymenefee/neon-boot/wt2/eq/research/records/2026-11-25-equation-suite/results/eq10_tutoring_shadow.json",
-   "output_sha256": "80068eeb559c8e3995f292ace92ab976a42fa5605778f5a6a7bf8b0ae4ea42de",
-   "script_sha256": "5aeac4c49e2140fb005603d663cd3f86816d7f3be614adf4e7e9023e9d059af6"
+   "output_sha256": "f5854557aecb39780507e82cca580133ced6bd02f98aee1f60f028148a57f18e",
+   "script_sha256": "5103ff04b0c2db73f56bdf33c784a9b714276c8b03968629426016c202b37f4e"
   }
  ],
  "full": [
@@ -257,14 +260,14 @@
    },
    "rule_error": null,
    "returncode": 0,
-   "wall_s": 5.14,
+   "wall_s": 2.79,
    "stdout_tail": [
     "PLAIN: Family income raises schooling demand in every budget specification (income elasticity range 0.16-1.51), forgone earnings reduce it, and at zero schooling effect on births the raw schooling-births association is absorbed once income is controlled. This is a demonstration of budget arithmetic, not an estimate of any country's demand.",
     "RULE: {'affordability_positive_across_specs': True, 'forgone_earnings_reduces_schooling': True, 'zero_signal_association_absorbed_by_income': True, 'PASS': True}"
    ],
    "stderr_tail": [],
    "output_json": "/Users/treymenefee/neon-boot/wt2/eq/research/records/2026-11-25-equation-suite/results/eq01_family_demand.json",
-   "output_sha256": "89adb1cc4c31b59bea996c585ca51de4791a3b2a1417e8796e068593bfe01e00",
+   "output_sha256": "d682987ff95aebe3e7e16a5aa4bff344a83ff4bbd4e218eefe57dd020f3e4adc",
    "script_sha256": "acf642629c1d7f7026b3935b392d275e29915636fe253a69a145c82ddfcc7608"
   },
   {
@@ -280,14 +283,14 @@
    },
    "rule_error": null,
    "returncode": 0,
-   "wall_s": 24.33,
+   "wall_s": 11.55,
    "stdout_tail": [
     "PLAIN: A universal per-student subsidy is pro-rich in this model (concentration index 0.406 vs -0.479 for means-testing) because enrolment rises with income; the investment arithmetic gives a positive NPV at 5% and an IRR of 25.0%. These are arithmetic consequences of the stated assumptions, not policy estimates.",
     "RULE: {'universal_more_pro_rich_than_means_tested': True, 'npv_positive_at_5pct': True, 'irr_above_5pct': True, 'PASS': True}"
    ],
    "stderr_tail": [],
    "output_json": "/Users/treymenefee/neon-boot/wt2/eq/research/records/2026-11-25-equation-suite/results/eq02_supply_finance.json",
-   "output_sha256": "d3b3a9f880215c0734fa0c7e7ebb6cfd0b2e2a35d2e5df9ebf054c04f8b2b025",
+   "output_sha256": "39b1ce8e54a61daa8cc4bfbccebea3b18460393691a137adfe3793d62a5394db",
    "script_sha256": "1709a7f8b4dc5e9d7e95a6fc49b41fbd11c1614a27572f35b0b90aae6fea347c"
   },
   {
@@ -304,14 +307,14 @@
    },
    "rule_error": null,
    "returncode": 0,
-   "wall_s": 92.17,
+   "wall_s": 36.46,
    "stdout_tail": [
     "PLAIN: In the CES world the ability-controlled interaction is positive (0.002) and the CES fit beats Cobb-Douglas on RMSE (0.291 vs 0.558); in the linear null world the controlled interaction is near zero (0.004). This is a demonstration about estimators, not evidence about any school system.",
     "RULE: {'linear_world_interaction_oracle_CI_includes_0': True, 'complementary_world_interaction_oracle_positive': True, 'rho_recovered_within_0.10_in_half_reps': True, 'ces_beats_cd_rmse_in_complementary_world': True, 'PASS': True}"
    ],
    "stderr_tail": [],
    "output_json": "/Users/treymenefee/neon-boot/wt2/eq/research/records/2026-11-25-equation-suite/results/eq03_learning_quality.json",
-   "output_sha256": "688cafa1c0dd79b63805439de55c66b0689ce4e0b332153c246fb6e715cbde16",
+   "output_sha256": "56418f7d46cf54efc0849970d4f072fd438e1be63c860e0c1937459392d0a5d1",
    "script_sha256": "f5492b4cf6938f8ed267a0a3f8776312170be5b2bb2132f44a4b7db0db81045e"
   },
   {
@@ -327,14 +330,14 @@
    },
    "rule_error": null,
    "returncode": 0,
-   "wall_s": 3.37,
+   "wall_s": 2.05,
    "stdout_tail": [
     "PLAIN: A score bar admits rich pupils at a higher rate (gap 0.547); a reserved quota narrows the gap (0.091) but does NOT flip its sign, so the pre-declared 'quota flips the gap' rule FAILS, and a contest in which richer pupils invest more effort widens it further (0.761). The quota changes who is admitted, not how much anyone learns \u2014 this is a rationing demonstration, not an evaluation of any admissions policy.",
     "RULE: {'baseline_gap_positive': True, 'quota_flips_gap_negative': False, 'contest_widens_gap': True, 'PASS': False}"
    ],
    "stderr_tail": [],
    "output_json": "/Users/treymenefee/neon-boot/wt2/eq/research/records/2026-11-25-equation-suite/results/eq04_transitions_gates.json",
-   "output_sha256": "ff880a92c8d39494fa961833c0742ec7aec6b9a413e70a671f5d130e87bd2025",
+   "output_sha256": "86ae086ba9da2a89c86c2796a311cef75967428adb68337813229349ef560693",
    "script_sha256": "bd32ea9c5fe05f3282a4a6a3202740a2f6483752aa908642458a084570259cad"
   },
   {
@@ -351,14 +354,14 @@
    },
    "rule_error": null,
    "returncode": 0,
-   "wall_s": 2.57,
+   "wall_s": 1.7,
    "stdout_tail": [
     "PLAIN: Under the stipulated ability-bias DGP the naive regression overstates the return (mean bias 0.033) while 2SLS is much closer (mean bias -0.000); with no ability bias both recover the 9% return. This is a demonstration of the estimator, not an estimate of any real return.",
     "RULE: {'bias_world_naive_biased': True, 'bias_world_iv_bias_smaller': True, 'null_world_naive_close': True, 'null_world_iv_close': True, 'PASS': True}"
    ],
    "stderr_tail": [],
    "output_json": "/Users/treymenefee/neon-boot/wt2/eq/research/records/2026-11-25-equation-suite/results/eq05_returns_credentials.json",
-   "output_sha256": "5c5888c1c67e85afccbe9eb7c1304d887a469fa73dd2d67069c44b94959300e3",
+   "output_sha256": "1eb60a7a238179ae26fc5734c5f126f1255c6ba2d01ba712ba2312aa69e1b883",
    "script_sha256": "42fd596d1deefd3b489b2a2d84e14532c8779401cdd9d6d3ec25bb6145a6d801"
   },
   {
@@ -373,14 +376,14 @@
    },
    "rule_error": null,
    "returncode": 0,
-   "wall_s": 28.73,
+   "wall_s": 14.7,
    "stdout_tail": [
     "PLAIN: Education raises the migration probability in every specification (marginal effect range 0.0089-0.0140) and migrants are more educated than stayers; networks slightly REDUCE the estimated marginal effect (0.0089 with vs 0.0140 without), so the ad hoc 'networks increase the effect' criterion FAILS. MASSENG v5 does not model rural-urban migration, so this is a synthetic demonstration of the equation, not a model output.",
     "RULE: {'education_positive_in_every_spec': True, 'network_spec_effect_larger_than_no_network': False, 'PASS': False}"
    ],
    "stderr_tail": [],
    "output_json": "/Users/treymenefee/neon-boot/wt2/eq/research/records/2026-11-25-equation-suite/results/eq06_migration_rural_urban.json",
-   "output_sha256": "c291b81a9d39fd0d46619709295b4d7ca1fff2167d4ef1f49da29cf2b1fb86eb",
+   "output_sha256": "388962b364f4634050417810185f9e00dca4b2bb7132df4027ef29f3de5c4eb3",
    "script_sha256": "a7907b58987ea1070d0b96ca68309d5ec58443da7645a08bc3563ab2a90cf87b"
   },
   {
@@ -396,14 +399,14 @@
    },
    "rule_error": null,
    "returncode": 0,
-   "wall_s": 22.04,
+   "wall_s": 10.28,
    "stdout_tail": [
     "PLAIN: In the null world the intergenerational elasticity is indistinguishable from zero (90% CI -0.00 to 0.00); in the persistent world it is 0.45 and the Theil decomposition puts 0.10 of inequality between parent-education groups. The elasticity, the Gini and the transition matrix are different summaries of the same synthetic process, not interchangeable evidence.",
     "RULE: {'null_elasticity_ci_includes_0': True, 'persistent_elasticity_positive': True, 'theil_between_positive': True, 'PASS': True}"
    ],
    "stderr_tail": [],
    "output_json": "/Users/treymenefee/neon-boot/wt2/eq/research/records/2026-11-25-equation-suite/results/eq07_inequality_dashboard.json",
-   "output_sha256": "977b1bf903d0093b9a544f98270c5925accd6a9c00d06ea09da0643442b0b1ed",
+   "output_sha256": "2da6b9d0e17f82cbda8aba8b58be16c7fdca5ec5596d1b11e20a692e736d2eac",
    "script_sha256": "df0b97195211523b54273091f35274a244c5da6e89f0963866342f3440cf49b4"
   },
   {
@@ -419,14 +422,14 @@
    },
    "rule_error": null,
    "returncode": 0,
-   "wall_s": 1.15,
+   "wall_s": 0.47,
    "stdout_tail": [
     "PLAIN: In the clean world the convergence coefficient is recovered and the human-capital term is zero; with an omitted TFP term correlated with human capital the human-capital coefficient is inflated (0.5192 vs 0.0008), so a positive growth coefficient is not evidence of a causal human-capital effect.",
     "RULE: {'clean_lambda_near_truth': True, 'confound_inflates_beta_H': True, 'nelson_phelps_interaction_positive': True, 'PASS': True}"
    ],
    "stderr_tail": [],
    "output_json": "/Users/treymenefee/neon-boot/wt2/eq/research/records/2026-11-25-equation-suite/results/eq08_growth.json",
-   "output_sha256": "7e96787537652885fb5c34b8b6551474172e0c42b130a08d9977ceaf94d23f6c",
+   "output_sha256": "8416f732ef761d98ff7fbdab01d2c524175137115d64c5b1573cabd8f6542b17",
    "script_sha256": "b0fe636a2ad57b28799a36d50eacb47eb333f8b5b576f15740dda72fed5b1589"
   },
   {
@@ -444,14 +447,14 @@
    },
    "rule_error": null,
    "returncode": 0,
-   "wall_s": 26.42,
+   "wall_s": 13.21,
    "stdout_tail": [
     "PLAIN: Each design recovers its target in its own known-truth world and is near zero in the no-effect control; the naive estimators are biased in the stated violation worlds (IV 1.49 vs OLS 1.76 against a true 1.5; TWFE bias -1.15 vs the group-time estimator -0.02). This is a demonstration of the designs, not an estimate of any real programme.",
     "RULE: {'null_twfe_near_zero': True, 'null_iv_near_zero': True, 'null_rd_near_zero': True, 'null_sc_near_zero': True, 'iv_closer_than_ols': True, 'PASS': True}"
    ],
    "stderr_tail": [],
    "output_json": "/Users/treymenefee/neon-boot/wt2/eq/research/records/2026-11-25-equation-suite/results/eq09_identification.json",
-   "output_sha256": "60c15fcf402c658c6bfea732af48e2977425b92454d71969ae40d4ecde7124d2",
+   "output_sha256": "688741b82ac176474fff237393fad26649d625127fe2e1c933bd807457470279",
    "script_sha256": "deec9435d74887e1f5749b54f0fa226ebd2f258fb874b29c29dca579d18074f7"
   },
   {
@@ -463,23 +466,26 @@
    "rule_flags": {
     "two_part_closer_than_tobit": true,
     "ban_raises_gini_in_all_specs": false,
-    "model_not_claimed_to_fit_bray": true
+    "model_not_claimed_to_fit_bray": true,
+    "dropped_prereg_S3_different_two_part_within_0.15": true,
+    "dropped_prereg_S3_different_tobit_outside_0.15": true,
+    "dropped_prereg_S3_single_world_both_within_0.15": false
    },
    "rule_error": null,
    "returncode": 0,
-   "wall_s": 188.55,
+   "wall_s": 61.24,
    "stdout_tail": [
-    "PLAIN: Tutoring behaves as one exams-shadow module for demand: on the same log scale as the 0.8 truth the two-part model is closer than the Tobit (0.73 vs 1.37). On inequality the own-teacher ban does NOT raise the learning Gini once the Gini is computed on a strictly positive level domain: in this reduced production model there is no substitution margin, so removing tutoring lowers the Gini in every CES/retention specification (delta range -0.064..-0.041). The illustrative model is far from Bray's targets (max |z| = 10.6), so nothing here is a fit to a real shadow-education system.",
-    "RULE: {'two_part_closer_than_tobit': True, 'ban_raises_gini_in_all_specs': False, 'model_not_claimed_to_fit_bray': True, 'PASS': False}"
+    "PLAIN: Tutoring behaves as one exams-shadow module for demand: on the log1p scale (same units as the 0.8 truth) the two-part model is closer than the Tobit (0.73 vs 1.37). The log1p Tobit does NOT recover the truth, so the dropped pre-registered single-process rule fails (Tobit within-0.15 share 0.00). On inequality the own-teacher ban does NOT raise the learning Gini once the Gini is computed on a strictly positive level domain: in this reduced production model there is no substitution margin, so removing tutoring lowers the Gini in every CES/retention specification (delta range -0.064..-0.041). The illustrative model is far from Bray's targets (max |z| = 10.6), so nothing here is a fit to a real shadow-education system.",
+    "RULE: {'two_part_closer_than_tobit': True, 'ban_raises_gini_in_all_specs': False, 'model_not_claimed_to_fit_bray': True, 'PASS': False, 'dropped_prereg_S3_different_two_part_within_0.15': True, 'dropped_prereg_S3_different_tobit_outside_0.15': True, 'dropped_prereg_S3_single_world_both_within_0.15': False}"
    ],
    "stderr_tail": [],
    "output_json": "/Users/treymenefee/neon-boot/wt2/eq/research/records/2026-11-25-equation-suite/results/eq10_tutoring_shadow.json",
-   "output_sha256": "e99dc0f4ba47fe1954681e7cf68e44f7be41fc322c49645c8eb5f89fa31641d1",
-   "script_sha256": "5aeac4c49e2140fb005603d663cd3f86816d7f3be614adf4e7e9023e9d059af6"
+   "output_sha256": "00e70d43593365168341ab32cc33775fa17806f649928602b946f22679ba0ad2",
+   "script_sha256": "5103ff04b0c2db73f56bdf33c784a9b714276c8b03968629426016c202b37f4e"
   }
  ],
- "wall_s": 224.33,
- "end_utc": "2026-11-24T17:04:23Z",
+ "wall_s": 73.18,
+ "end_utc": "2026-11-24T17:18:42Z",
  "smoke_summary": {
   "execution_failures": [],
   "decision_rule_failures": [

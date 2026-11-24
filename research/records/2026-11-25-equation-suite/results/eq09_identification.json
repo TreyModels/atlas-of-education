@@ -67,5 +67,5 @@
   "benchmark_split": "known truth; null-world CIs",
   "pass_fail": "PASS if null worlds near zero and design estimators closer than naive"
  },
- "generated_utc": "2026-11-24T17:01:40Z"
+ "generated_utc": "2026-11-24T17:17:53Z"
 }

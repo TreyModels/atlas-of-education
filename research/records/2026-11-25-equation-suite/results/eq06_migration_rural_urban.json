@@ -74,5 +74,5 @@
   "benchmark_split": "Monte Carlo; no observed split",
   "pass_fail": "PASS if education effect positive in every spec AND the network-spec marginal effect exceeds the no-network spec (the second criterion is ad hoc, not pre-registered)"
  },
- "generated_utc": "2026-11-24T17:01:38Z"
+ "generated_utc": "2026-11-24T17:17:52Z"
 }

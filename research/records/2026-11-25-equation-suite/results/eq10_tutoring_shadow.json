@@ -23,18 +23,22 @@
   "single_process": {
    "tobit_eta_mean": 1.441,
    "tobit_eta_level_scale_mean": 8.612,
-   "tobit_scale": "log1p(T): semi-elasticity; level-scale fit reported separately, not compared to 0.8",
+   "tobit_scale": "log1p(T): same units as the 0.8 semi-elasticity truth; the estimate is NOT close to 0.8 (see tobit_within_0.15_share); level-scale fit reported separately and never compared to 0.8",
    "two_part_eta_mean": 0.802,
    "two_part_within_0.15_share": 1.0,
-   "tobit_within_0.15_share": 0.0
+   "tobit_within_0.15_share": 0.0,
+   "tobit_outside_0.15_share": 1.0,
+   "both_within_0.15_share": 0.0
   },
   "different_processes": {
    "tobit_eta_mean": 1.37,
    "tobit_eta_level_scale_mean": 8.781,
-   "tobit_scale": "log1p(T): semi-elasticity; level-scale fit reported separately, not compared to 0.8",
+   "tobit_scale": "log1p(T): same units as the 0.8 semi-elasticity truth; the estimate is NOT close to 0.8 (see tobit_within_0.15_share); level-scale fit reported separately and never compared to 0.8",
    "two_part_eta_mean": 0.733,
    "two_part_within_0.15_share": 1.0,
-   "tobit_within_0.15_share": 0.0
+   "tobit_within_0.15_share": 0.0,
+   "tobit_outside_0.15_share": 1.0,
+   "both_within_0.15_share": 0.0
   }
  },
  "production": {
@@ -147,9 +151,12 @@
   "two_part_closer_than_tobit": true,
   "ban_raises_gini_in_all_specs": false,
   "model_not_claimed_to_fit_bray": true,
-  "PASS": false
+  "PASS": false,
+  "dropped_prereg_S3_different_two_part_within_0.15": true,
+  "dropped_prereg_S3_different_tobit_outside_0.15": true,
+  "dropped_prereg_S3_single_world_both_within_0.15": false
  },
- "plain_result": "Tutoring behaves as one exams-shadow module for demand: on the same log scale as the 0.8 truth the two-part model is closer than the Tobit (0.73 vs 1.37). On inequality the own-teacher ban does NOT raise the learning Gini once the Gini is computed on a strictly positive level domain: in this reduced production model there is no substitution margin, so removing tutoring lowers the Gini in every CES/retention specification (delta range -0.064..-0.041). The illustrative model is far from Bray's targets (max |z| = 10.6), so nothing here is a fit to a real shadow-education system.",
+ "plain_result": "Tutoring behaves as one exams-shadow module for demand: on the log1p scale (same units as the 0.8 truth) the two-part model is closer than the Tobit (0.73 vs 1.37). The log1p Tobit does NOT recover the truth, so the dropped pre-registered single-process rule fails (Tobit within-0.15 share 0.00). On inequality the own-teacher ban does NOT raise the learning Gini once the Gini is computed on a strictly positive level domain: in this reduced production model there is no substitution margin, so removing tutoring lowers the Gini in every CES/retention specification (delta range -0.064..-0.041). The illustrative model is far from Bray's targets (max |z| = 10.6), so nothing here is a fit to a real shadow-education system.",
  "data_map": {
   "module": "exams-shadow (single tutoring module)",
   "observed": "no harmonised tutoring panel; Bray targets are literature targets",
@@ -161,8 +168,8 @@
   "identification": "none (synthetic); two-part vs Tobit",
   "testable_restrictions": "hurdle/CES forms; retention assumption",
   "benchmark_split": "synthetic reps; Bray literature targets as external check (not a fit)",
-  "pass_fail": "PASS if two-part closer than Tobit (same scale) and ban raises Gini in all specs",
-  "scale_alignment": "Tobit on log1p(T) so its income coefficient is a semi-elasticity comparable to the 0.8 truth; the level-scale Tobit is reported but never compared to 0.8"
+  "pass_fail": "PASS if two-part closer than Tobit (same units) and ban raises Gini in all specs",
+  "scale_alignment": "Tobit on log1p(T) so its income coefficient is in the same UNITS as the 0.8 semi-elasticity truth; it does NOT recover 0.8 (1.441 single / 1.370 different, 0.64/0.57 away), and the level-scale Tobit is reported but never compared to 0.8"
  },
- "generated_utc": "2026-11-24T17:04:23Z"
+ "generated_utc": "2026-11-24T17:18:42Z"
 }

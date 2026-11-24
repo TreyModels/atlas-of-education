@@ -117,5 +117,5 @@
   "pass_fail": "PASS if null-world IGE CI includes 0 and persistent-world IGE positive",
   "inequality_domain": "Gini/Theil/within-between on exp(child log income) i.e. level income (strictly positive); IGE, rank-rank and Oaxaca gap on log child income (Oaxaca in log points)"
  },
- "generated_utc": "2026-11-24T17:01:33Z"
+ "generated_utc": "2026-11-24T17:17:50Z"
 }
