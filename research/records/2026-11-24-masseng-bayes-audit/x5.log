@@ -1,0 +1,22 @@
+{
+ "verdict": "MIXED",
+ "aggregate": {
+  "n_datasets": 12,
+  "median_ess_fraction": 0.1279492041667964,
+  "min_ess_fraction": 0.013660319621289288,
+  "max_max_weight": 0.37463496337978347,
+  "coverage_rate_overall": 0.9166666666666666,
+  "error_fraction_median": 0.12760295197313887,
+  "error_fraction_le_0.15_rate": 0.5625,
+  "confusion_diagonal_rate": 0.5,
+  "rmse_model_median": 4.711238893765863,
+  "rmse_persistence_median": 9.768080569277771
+ },
+ "criteria": {
+  "(a)_median_ess_fraction_ge_0.02": true,
+  "(b)_coverage_rate_ge_0.60": true,
+  "(c)_error_le_15pct_prior_range_rate_ge_0.60": false,
+  "(d)_confusion_diagonal_ge_0.60": false
+ },
+ "wall_s": 229.18
+}
