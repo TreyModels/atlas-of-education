@@ -10,7 +10,7 @@ also fits Sociological Methods & Research). Paper N2, 24 November 2026. Every nu
 A large negative cross-country association between schooling and fertility is one of the most
 replicated facts in demography, and one of the most frequently used as evidence that schooling is a
 causal lever on fertility. This paper audits the structure of that association rather than
-announcing it. Using the project's 17-measure country panel (342 ordered pairs; 296 countries at
+announcing it. Using the project's 19-measure country panel (19 × 18 = 342 ordered pairs; 296 countries at
 most; six decades), we estimate the eight schooling–fertility pairs in two standard ways: in levels
 with decade and region fixed effects, and in within-country decade changes with country fixed
 effects and country-specific trends. The eight level coefficients are all negative and significant
@@ -47,7 +47,7 @@ the cross-section — a marker of where a country sits on a development gradient
 between-country variation can remove the relation entirely. When it is a causal effect of schooling,
 the within-country change design should see it.
 
-We take the eight schooling–fertility pairs from a 17-measure panel and estimate both. The contrast
+We take the eight schooling–fertility pairs from a 19-measure panel and estimate both. The contrast
 is stark. The level relation is large, negative and global: all eight coefficients are negative and
 significant, and between 71.5% and 98.9% of 13,800 random country re-partitions reproduce a
 negative-significant estimate. The change relation is not: three of eight coefficients are
@@ -166,11 +166,11 @@ statistic is the same and we report the extension rather than hiding it.
 
 ### 3.1 Panel and pairs
 
-The panel is the project's country-year panel: 17 measures covering schooling (five attainment and
+The panel is the project's country-year panel: 19 measures covering schooling (five attainment and
 completion measures, enrolment, and two gender-parity measures), fertility, mortality, income,
 urbanisation, employment, electricity and tax, mostly 1960–2014 (some series extend to 2020s), with
-income logged and urbanisation controlled. All 17 × 16 = 272 ordered pairs are used in the wider
-battery, giving 342 estimable ordered pairs after the minimum-data rule; the audit's focal object is
+income logged and urbanisation controlled. All 19 × 18 = 342 ordered pairs are used in the wider
+battery (an earlier draft wrote "17 × 16 = 272", which is the size of a different, 17-measure matrix elsewhere in the programme); the audit's focal object is
 the eight schooling → fertility pairs.
 
 ### 3.2 The two specifications
@@ -271,8 +271,10 @@ the share of partitions reproducing a negative-significant estimate is **71.5–
 level pairs and **0.0–7.2%** for the eight change pairs (Table 2). Across all 342 pairs the level
 share is 0.227 [95% interval 0.214, 0.239] and the change share 0.111 [0.103, 0.120].
 
-Two honest qualifications. First, the pre-registered "at least 80% transportable" rule is met for
-the schooling–fertility pairs (five of eight exceed 0.80; all exceed 0.715) but not for the matrix as
+Two honest qualifications. First, the pre-registered "at least 80% transportable" rule is met by only five of the eight
+schooling–fertility pairs (the other three fall between 0.715 and 0.80), and rule (i) also requires at least 80% of
+the specification grid to be negative, which holds for 70–83% by pair; the rule is therefore partly met, not met
+outright, for the focal pairs, and not met for the matrix as
 a whole — most of the 342 pairs are not schooling–fertility pairs, and signs are mixed by
 construction. The rule was written for the relation of interest and fails as a description of all 342
 links; we report both. Second, transportability is not a test of a causal hypothesis. That the
@@ -305,7 +307,7 @@ the causal question, and it is the one that most reduces what the level literatu
 
 | test | pre-registered rule | outcome | verdict |
 |---|---|---|---|
-| level relation large and global | level coefficient negative-significant in ≥80% of specs; transportability ≥0.80 | 8/8 negative-significant at baseline; negative in 70–83% of specs; transportability 0.715–0.989 | **holds for the eight focal pairs; fails matrix-wide (0.227)** |
+| level relation large and global | level coefficient negative-significant in ≥80% of specs; transportability ≥0.80 | 8/8 negative-significant at baseline; negative in 70–83% of specs (so the ≥80% specification rule is not met by every pair); transportability 0.715–0.989 (five of eight ≥0.80) | **partly met for the eight focal pairs (specification share 70–83%, transportability ≥0.80 for five of eight); fails matrix-wide (0.227)** |
 | change relation weak by the <30% rule | <30% of change cells negative-significant | change negative-significant share 3.5–13.5% per pair; matrix 9.0% | **holds** |
 | level gradient is descriptive, not causal | placebo ≥80% as strong as correct-time | 52.9% vs 58.8% (≈90%) | **fires: descriptive** |
 
@@ -362,7 +364,7 @@ effects and country-specific trends. The Nickell critique therefore does not mec
 the headline change estimate, but related finite-sample concerns do: with roughly six decades per
 country the within estimator can still be biased when regressors are predetermined, and the
 ten-year changes are not independent within country. Clustered standard errors and country trends are
-the minimum response, and the change estimates' standard errors (0.020–0.054 in Table 1) reflect
+the minimum response, and the change estimates' standard errors (0.0020 to 0.207 across the eight pairs in Table 1, each in its measure's own units; 0.046 and 0.054 for the two mean-years measures) reflect
 that. This is a real limit on precision, not a licence to dismiss the contrast.
 
 **Measurement error.** Schooling series are notoriously noisy, especially completion and attainment

@@ -10,7 +10,7 @@ the auditor memo **e51c4cf** (novelty-review, supplied via the Lead); no paper n
 
 | claim / number | file | field |
 |---|---|---|
-| 342 estimable ordered pairs; 17 measures | `data/pair_table.csv` (342 rows); `README.md` | row count; "17 measures" |
+| 342 estimable ordered pairs; 19 measures (19 × 18 = 342) | `data/pair_table.csv` (342 rows); `README.md` | row count; "19 measures" |
 | 936,657 estimable cells of 2,111,508 (44%); minimum-sample rule n ≥ 60, ≥ 8 countries | `README.md` (pre-registered grid table); `data/results_summary.json` → `grid_a` | `grid_a.levels.n` + `grid_a.changes.n` = 11,086 + 10,164 |
 | 13,800 partitions × 6 groups × 342 pairs × 2 relations; 56,077,352 within-group regressions | `README.md`; `data/results_summary.json` → `counts.done.B` | `counts.done.B = 13800`; regression arithmetic in README |
 | 10,447,698 recorded result rows; 3,018 s; 10 workers; one crash-and-resume | `README.md`; `results/logs/battery.log`; `data/results_summary.json` → `counts` | `counts.regs`, `counts.elapsed` |
