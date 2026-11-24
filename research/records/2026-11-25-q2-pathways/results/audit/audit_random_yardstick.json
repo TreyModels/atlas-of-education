@@ -1,0 +1,15 @@
+{
+ "seed": 71201,
+ "n_draws": 1000,
+ "observed": {
+  "median_schooling_gap": 0.8200000000000003,
+  "median_tfr_gap": 0.7714999999999999,
+  "n_countries": 105
+ },
+ "random_median_schooling_gap_median": 0.8250000000000006,
+ "random_median_tfr_gap_median": 0.77275,
+ "share_random_median_schooling_ge_observed": 0.524,
+ "share_random_median_tfr_ge_observed": 0.503,
+ "random_p2_5_schooling": 0.5998749999999993,
+ "random_p97_5_schooling": 1.045
+}

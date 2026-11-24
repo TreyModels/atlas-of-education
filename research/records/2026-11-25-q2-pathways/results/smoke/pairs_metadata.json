@@ -1,0 +1,13 @@
+{
+  "baseline": 1980,
+  "outcome_start": 1990,
+  "outcome_end": 2010,
+  "eligible_baseline_countries": 105,
+  "pairs": 52,
+  "unpaired_countries": 1,
+  "pairs_with_both_tfr_changes": 52,
+  "pairs_with_both_school_changes": 52,
+  "matching": "greedy disjoint Euclidean distance on baseline z-scores; GDP logged",
+  "note": "Descriptive, selected baseline complete cases; no significance test or causal inference.",
+  "input_sha256": "cd30d7ea7beb77b63de092c53f9b143065b94651f1ac95535ac70eebb3280f2d"
+}
