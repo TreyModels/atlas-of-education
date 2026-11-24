@@ -96,6 +96,8 @@ Menefee, T. (2026). *Grouping multiverse, 23 November 2026* [Data set and code: 
 
 Menefee, T. (2026). *Grouping multiverse with 400 random groupings, 23 November 2026* [Data set and code: 400-draw run, resolution analysis, halving and determinism checks]. Atlas of Education repository, branch `research/grouping-multiverse-400-2026-11-23`, `research/records/2026-11-23-grouping-multiverse-400/`.
 
+Menefee, T. (2026). *Grouping multiverse at R = 1,200: full BH/BY verdicts, split-halves and localisation* [Data set and code: 1,200-draw extension, E1]. Atlas of Education repository, branch `research/e1-multiverse-1200-2026-11-25` @ `7e6f7b5`, `research/records/2026-11-25-e1-multiverse/`.
+
 ## Notes
 
 1. The paper cites no work that is not listed above. It deliberately does not review the substantive fertility-decline or massification literatures; it is a methods paper, and the two applications are demonstrations of the method rather than contributions to those literatures.
