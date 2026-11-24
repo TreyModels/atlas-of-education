@@ -1,0 +1,95 @@
+{
+ "when": "2026-11-24 ~18:28-18:34 local",
+ "status": "DESIGN PROBE \u2014 non-confirmatory; no H1/H4 confirmatory output was generated or inspected",
+ "purpose": "establish whether the pre-registered design is feasible; document the amendment committed before the confirmatory run",
+ "finding_1_shipped_strength_degenerate": {
+  "evidence": "the shipped suite's own exp1 smoke output at t=0 (cuda_reference/cuda_smoke_exp1.json; same at the MLX port)",
+  "numbers": {
+   "DGP_POVERTY": {
+    "ger": 0.0,
+    "work_only": 0.996,
+    "hidden_work": 0.004
+   },
+   "DGP_SCHOOL_PUSH": {
+    "ger": 0.0,
+    "work_only": 1.0,
+    "hidden_work": 0.0
+   },
+   "DGP_CROWDING_TUTOR": {
+    "ger": 0.127,
+    "work_only": 0.873,
+    "hidden_work": 0.0
+   },
+   "DGP_MIXED": {
+    "ger": 0.001,
+    "work_only": 1.0,
+    "hidden_work": 0.0
+   }
+  },
+  "consequence": "the fees-only arm at shipped strengths sits in a degenerate corner (near-zero enrolment, near-one visible work); a non-degenerate tie-breaker test is impossible there"
+ },
+ "finding_2_shipped_strength_unmatchable": {
+  "probe": "theta_0 = centroid of shipped DGP vectors; mechanism scale K=0.5 of the shipped deviation; 6 nuisance knobs; target = theta_0 moments at default nuisance",
+  "result": "best max|residual| over 6 moments: P 0.027, S 0.222, C 0.063 (S cannot reach the baseline because its shifted w_push/w_tutor keep it out of schooling); at K=1 (shipped) the S world's post-shock GER is ~0.03",
+  "consequence": "worlds are not macro-matchable at shipped strengths; H4's conditional design cannot run"
+ },
+ "finding_3_moderate_strength_matched_at_5pp": {
+  "probe": "theta_0 = centroid; K=0.20; 9 nuisance knobs; 400 seeded candidates; target = theta_0 moments at design nuisance D (below)",
+  "design_nuisance_D": {
+   "sigma_y": 0.55,
+   "sigma_a": 0.2,
+   "mu_y": 0.0,
+   "mu_a": 1.0,
+   "f_pub_pre": 0.1,
+   "y_sub0": 0.8,
+   "w_child": 0.1,
+   "shadow_cost": 0.32,
+   "q_pub0": 0.65
+  },
+  "M_star": [
+   0.3059,
+   0.876,
+   0.1819,
+   0.5191,
+   0.7887,
+   0.3081
+  ],
+  "best_residuals": {
+   "P": {
+    "max_abs": 0.034,
+    "moments": [
+     0.272,
+     0.907,
+     0.18,
+     0.513,
+     0.815,
+     0.328
+    ]
+   },
+   "S": {
+    "max_abs": 0.04,
+    "moments": [
+     0.339,
+     0.88,
+     0.219,
+     0.482,
+     0.829,
+     0.311
+    ]
+   },
+   "C": {
+    "max_abs": 0.037,
+    "moments": [
+     0.292,
+     0.874,
+     0.166,
+     0.556,
+     0.788,
+     0.344
+    ]
+   }
+  },
+  "consequence": "all three worlds are macro-matchable at a +/-0.05 absolute tolerance; the tolerance is widened from 0.02 to 0.05 for this design (declared)"
+ },
+ "label": "DESIGN-PROBE (not a result)"
+}

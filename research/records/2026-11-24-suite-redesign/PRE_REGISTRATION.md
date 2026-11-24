@@ -204,3 +204,54 @@ confirmatory status and requires a dated amendment.
 ## 6. Declared deviations log (append during work)
 
 - (to be filled)
+
+## 7. Amendment 1 — dated 2026-11-24 18:34 local, committed BEFORE the confirmatory run
+
+**Status.** Committed before any confirmatory H1/H4 output exists. A design probe
+(`results/design_probe.json`) was run only to test feasibility and produced no H1/H4 outcome; it is committed
+alongside. The rules below replace the corresponding §1–§3 rules; everything not listed is unchanged.
+
+**A1.1 θ0 redefined.** The pre-registered `θ0 = (0.20, 0.20, 0.20, 0.02)` puts the baseline in a degenerate
+corner of the fees-only arm (near-zero enrolment, near-one visible work; the shipped suite itself reports
+GER 0.000 for two of three worlds at t=0). `θ0` is redefined as the **equal-weighted centroid of the three
+shipped mechanism vectors**: `θ0 = (w_pov=0.90, w_push=0.80, w_tutor=1.2667, div=0.0967)`. `Δ_w` remains
+`DGP_w − θ0` (so s = 1 recovers the shipped worlds' *directions* and s = 0 is the common neutral baseline).
+
+**A1.2 Mechanism strength scaled by K = 0.20.** The shipped deviations are too large for this model: at
+s = 1 the `DGP_SCHOOL_PUSH` world cannot enter schooling in the fees-only arm (post-shock GER ≈ 0.03; upstream
+smoke GER = 0.000), and no nuisance vector in the searched space can match it to the other worlds
+(design probe: best max|residual| 0.222). Therefore `Δ_w := 0.20 × (DGP_w − θ0)`. At s = 1 the three worlds
+are moderate-strength versions of the shipped directions; s = 0 remains exactly identical across labels.
+
+**A1.3 M\* redefined.** `M*` is the θ0-model moment vector at the pre-declared **design nuisance**
+`D = (sigma_y=0.55, sigma_a=0.20, mu_y=0.0, mu_a=1.0, f_pub_pre=0.10, y_sub0=0.80, w_child=0.10,
+shadow_cost=0.32, q_pub0=0.65)`, averaged over the five calibration seeds. The rule is unchanged in kind
+(a property of this model, not of data, fixed before the confirmatory run); only the design point changes,
+because the default nuisance (`f_pub_pre=0.45`) is degenerate. Design-probe value:
+`M* = [0.306, 0.876, 0.182, 0.519, 0.789, 0.308]` (pre GER, cl, study+work; post GER, cl, study+work).
+
+**A1.4 Calibration nuisance expanded to nine parameters.** `sigma_y ∈ [0.30, 0.90]`,
+`sigma_a ∈ [0.10, 0.40]`, `mu_y ∈ [-0.30, 0.40]`, `mu_a ∈ [0.80, 1.45]`,
+`f_pub_pre ∈ [0.00, 0.40]`, `y_sub0 ∈ [0.60, 1.20]`, `w_child ∈ [0.02, 0.55]`,
+`shadow_cost ∈ [0.10, 0.60]`, `q_pub0 ∈ [0.45, 0.85]`. `mu_y`, `mu_a`, `w_child`, `shadow_cost` and
+`q_pub0` are new (the kernel takes income/ability arrays and these fixed constants as inputs, so all are
+legitimate nuisance parameters). Search: **800** seeded candidates (was 200), two calibration seeds.
+
+**A1.5 Tolerance widened to ±0.05 per moment (was ±0.02).** Six moments with nine nuisance knobs: the design
+probe's best residuals are 0.034 (P), 0.040 (S), 0.037 (C). `±0.05` absolute is the declared feasible
+macro-equivalence band. Every matched cell, every residual and the full candidate table for unmatched worlds
+are reported; residual macro mismatch is measured for possible leakage by the retained macro-only control.
+
+**A1.6 H1 nuisance unchanged.** H1 continues to use the shipped-default nuisance
+(`sigma_y=0.55, sigma_a=0.20, mu_y=0, mu_a=1, f_pub_pre=0.45, y_sub0=0.90, w_child=0.55,
+shadow_cost=0.32, q_pub0=0.65`), **common across worlds**; H1's regression, overlap statistic and decision
+rule are unchanged (§2).
+
+**A1.7 Everything else unchanged**: seed blocks, pairing, survey measurement constants, tie-breaker panel,
+classifier, admissibility gate, placebos, Holm correction, chance band, verdict categories, failure categories,
+reporting rules.
+
+**Rationale.** Without A1.1–A1.5 the design cannot put the three worlds in a common state space with a common
+macro target, so the pre-registered H4 control cannot run at all; the amendment keeps the test anchored to the
+shipped mechanism directions while making every pre-registered object executable. No confirmatory outcome was
+inspected before this amendment.
