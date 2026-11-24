@@ -64,6 +64,48 @@
   "overall_liquidity_share_all": 0.3571785714285714,
   "overall_gate_fail_share_all": 0.062035714285714284
  },
+ "A_seed_spread": {
+  "per_seed": [
+   {
+    "seed": 0,
+    "q1_liquidity": 0.6966071428571429,
+    "q1_gate_fail": 0.011964285714285714,
+    "overall_liquidity": 0.3571785714285714
+   },
+   {
+    "seed": 1,
+    "q1_liquidity": 0.6998214285714286,
+    "q1_gate_fail": 0.014107142857142856,
+    "overall_liquidity": 0.3668214285714286
+   },
+   {
+    "seed": 2,
+    "q1_liquidity": 0.705,
+    "q1_gate_fail": 0.011428571428571429,
+    "overall_liquidity": 0.36864285714285716
+   },
+   {
+    "seed": 3,
+    "q1_liquidity": 0.6846428571428571,
+    "q1_gate_fail": 0.009821428571428571,
+    "overall_liquidity": 0.3547142857142857
+   },
+   {
+    "seed": 4,
+    "q1_liquidity": 0.6930357142857143,
+    "q1_gate_fail": 0.009821428571428571,
+    "overall_liquidity": 0.3623571428571429
+   }
+  ],
+  "mean": [
+   0.6958214285714286,
+   0.011428571428571429
+  ],
+  "sd": [
+   0.007641730557823101,
+   0.0017767632805475353
+  ]
+ },
  "B": {
   "metric": "skill_premium",
   "arm": "competitive",
