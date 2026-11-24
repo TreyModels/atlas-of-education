@@ -1,6 +1,6 @@
 claim_id,claim,number,source_branch,source_commit,file,field
 A1,levels coefficient women's attainment,-0.129 (SE 0.029) n=5915/192,research/corr-rebuild-2026-11-23,161b563,data/results_part1.json,levels_female_attainment
-A1,levels coefficient total attainment,-0.228 (0.042) n=1394/144,research/corr-rebuild-2026-11-23,161b563,data/results_part1.json,levels_total_attainment
+A1,levels coefficient total attainment,-0.227 (0.042) n=1394/144,research/corr-rebuild-2026-11-23,161b563,data/results_part1.json,levels_total_attainment
 A1,levels coefficient secondary enrolment,-0.0213 (0.0037) n=5927/202,research/corr-rebuild-2026-11-23,161b563,data/results_part1.json,levels_secondary
 A1,eight-measure levels table,all 8 negative-significant,research/corr-battery-2026-11-23,9363079,data/pair_table.csv,level_b/level_se
 A1,income robustness,-0.129 (0.029) with income -0.231 (0.063); income alone -0.318 (0.066),research/corr-rebuild-2026-11-23,161b563,README.md,levels-income paragraph

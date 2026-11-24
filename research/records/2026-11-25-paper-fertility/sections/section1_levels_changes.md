@@ -76,7 +76,7 @@ countries in the levels specification.
 | measure | levels | ten-year changes | n / countries (levels) |
 |---|---|---|---|
 | mean years of schooling, women | **−0.129** (0.029) | **+0.111** (0.045) | 5,915 / 192 |
-| mean years of schooling, total | **−0.228** (0.042) | **+0.190** (0.055) | 1,394 / 144 |
+| mean years of schooling, total | **−0.227** (0.042) | **+0.190** (0.055) | 1,394 / 144 |
 | secondary enrolment (%) | **−0.0213** (0.0037) | +0.0030 (0.0026) | 5,927 / 202 |
 | lower-secondary completion (%) | **−0.0224** (0.0035) | **+0.0066** (0.0031) | 4,106 / 193 |
 | primary completion (%) | **−0.0239** (0.0033) | −0.0003 (0.0019) | 4,878 / 193 |
@@ -103,7 +103,7 @@ pair is negative in 70–83 per cent of specifications and negative-significant 
 corresponding change grid it is negative in only 24–44 per cent and negative-significant in 3.5–13.5 per cent.
 
 The contrast survives the obvious rival: income. Adding the log of GDP per capita to the levels specification
-leaves female schooling at −0.129 (0.029) with income −0.231 (0.063); total attainment at −0.228 (0.042) with
+leaves female schooling at −0.129 (0.029) with income −0.231 (0.063); total attainment at −0.227 (0.042) with
 income −0.142 (0.087, not significant); income alone gives −0.318 (0.066). Both income and schooling predict
 the level, and schooling is not a proxy for income in this comparison. In the change specification income's
 coefficient is also small and imprecise, so the flip is not an income composition effect.

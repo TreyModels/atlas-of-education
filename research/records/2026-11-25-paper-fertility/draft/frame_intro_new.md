@@ -64,7 +64,7 @@ empirical regularity.
 Five results, in the order in which the paper builds them.
 
 **In levels, the gradient is large, precise, and robust.** Women's mean years of schooling: −0.129 births per
-woman per year of schooling (SE 0.029), on 5,915 country-years and 192 countries. Total attainment: −0.228
+woman per year of schooling (SE 0.029), on 5,915 country-years and 192 countries. Total attainment: −0.227
 (0.042). Secondary enrolment: −0.0213 (0.0037). All eight schooling measures — two attainment series, four
 enrolment/completion series, two gender-parity series — are negative and significant. The pre-registered
 specification curve reports 336 specifications: 99.7 per cent of the 288 period specifications are negative,
