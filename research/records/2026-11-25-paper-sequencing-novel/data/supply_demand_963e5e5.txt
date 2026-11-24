@@ -1,0 +1,61 @@
+=== C1: supply and demand event timing relative to the schooling take-off ===
+countries with a schooling date: 108; with a supply onset: 100; with a demand onset: 97; both: 89
+supply onset BEFORE schooling take-off: 28% (median gap +10 years)
+demand onset BEFORE schooling take-off: 73% (median gap -5 years)
+supply vs demand: supply first 28% (median supply-demand gap +10 years)
+bootstrap 95% CIs (1000 country resamples): supply<=schooling [19, 37]%; demand<=schooling [64, 82]%; supply<=demand [19, 38]%
+cross-tab: supply-first only 3, demand-first only 43, both before schooling 22, neither 21
+
+=== C1b: is the demand-first result an artefact of data availability? ===
+median first year with any supply measure: 1975 (education spending/pupil-teacher/enrolment series mostly start around then)
+schooling take-offs at the 1965 window boundary: 61 of 108
+fair-comparison sample (schooling after 1965 and supply data present before the take-off): 33 countries
+  supply before schooling: 76%; demand before schooling: 79%; supply before demand: 39%
+  median gaps: supply-schooling -5 yrs; demand-schooling -10 yrs
+demand measured only by wage-premium and paid-employment (no income/urbanisation): precedes schooling in 7% of 58 countries
+  Reading: the broad development series (income, urbanisation) are the earliest-moving demand proxies;
+  when only labour-market demand is used, demand-first weakens. Both sides' onset dates are also limited
+  by their data start years, and the 1965 boundary censors early schooling dates, so the timing test
+  is biased against supply. That is why the horse race below matters more than the raw ordering.
+
+=== C2: horse-race panel (10-year changes; country FE + period FE; clustered by country) ===
+supply only: n=116, countries=62
+   d_supply_spend     +0.105 (SE 0.054)  null
+   d_supply_ptr       +0.113 (SE 0.049)  sig
+   d_supply_ger       +0.120 (SE 0.098)  null
+demand only: n=300, countries=103
+   d_demand_prem      +0.026 (SE 0.059)  null
+   d_demand_wage      +0.115 (SE 0.063)  null
+   d_demand_urban     -0.028 (SE 0.070)  null
+   d_demand_gdp       -0.001 (SE 0.062)  null
+horse race: n=78, countries=51
+   d_supply_spend     +0.125 (SE 0.058)  sig
+   d_supply_ptr       +0.098 (SE 0.102)  null
+   d_supply_ger       +0.307 (SE 0.146)  sig
+   d_demand_prem      -0.209 (SE 0.114)  null
+   d_demand_wage      +0.051 (SE 0.117)  null
+   d_demand_urban     -0.049 (SE 0.096)  null
+   d_demand_gdp       +0.140 (SE 0.136)  null
+composite z-scores: n=78, countries=51; supply +0.456 (SE 0.174); demand +0.006 (SE 0.203)
+
+=== C3: six-country deep dive (project state-capacity file + policy timeline) ===
+  CHN: schooling take-off 1965; law/free-schooling dates: 1986 Compulsory Education Law; state-capacity series: education spending (% of GDP), UIS cross-check, education spending (% of GDP), WDI, education spending (% of total government expenditure), WDI
+  HKG: schooling take-off 1965; law/free-schooling dates: 1971 6-year free primary education, 1978 9-year free compulsory education, 2008 12-year free education rolled out; state-capacity series: education spending (% of GDP), UIS cross-check, education spending (% of GDP), WDI, education spending (% of total government expenditure), WDI
+  JPN: schooling take-off 1965; law/free-schooling dates: 1886 Compulsory education: 4 years; state-capacity series: education spending (% of GDP), UIS cross-check, education spending (% of GDP), WDI, education spending (% of total government expenditure), WDI
+  KHM: schooling take-off 2000; law/free-schooling dates: 1996 9-year compulsory education policy; state-capacity series: education spending (% of GDP), UIS cross-check, education spending (% of GDP), WDI, education spending (% of total government expenditure), WDI
+  KOR: schooling take-off 1965; law/free-schooling dates: 1953 Compulsory primary education, 1985 Middle-school compulsory education begins; state-capacity series: education spending (% of GDP), UIS cross-check, education spending (% of GDP), WDI, govt spending per primary student (constant PPP$)
+  PHL: schooling take-off 1965; law/free-schooling dates: none recorded; state-capacity series: classroom_student_ratio_elementary, classroom_student_ratio_junior_high_school, classroom_student_ratio_senior_high_school
+  (policy dates are the project's own compiled facts with sources in POLICY_TIMELINE.csv; they are
+   cited as project artefacts, not as a complete literature dataset. A full compulsory-schooling-law
+   compilation from the literature was NOT possible in this window; that gap is stated, not proxied.)
+
+=== reading ===
+raw timing: supply precedes schooling in 28% of countries, demand in 73%.
+fair sample: supply 76%, demand 79% (both sides often turn together).
+labour-market-only demand: precedes schooling in 7%. The raw demand-first ordering is
+carried by broad development indicators (income, urbanisation), not by labour-market demand.
+Horse race: supply block dominant (composite +0.456, SE 0.174); demand block zero (+0.006, SE 0.203).
+=> the SUPPLY-LED / institutional (formatting) reading survives; the labour-market human-capital
+reading is not supported by the timing of wage premia and paid jobs. The broad-development demand
+proxy also leads, so this is not a clean separation: it is timing plus conditional association,
+not causal identification (policy and income are jointly determined; no instrument here).

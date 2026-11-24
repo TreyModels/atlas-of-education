@@ -14,16 +14,26 @@ distribution of their ordering. In 64 countries with a dated schooling take-off,
 release and a dated fertility decline, **schooling precedes the agricultural exodus in 61 (95 per cent); the
 median lead is 26 years**, the interquartile range is 17 to 29 years, and 93 per cent of the forward cases
 exceed ten years. The result is not a fragile margin: 85 per cent of the forward cases exceed fifteen years, so a
-systematic fifteen-year dating error would still leave 81 per cent of the panel forward. Labour-market demand —
-wage premia and paid-employment shares — precedes the schooling take-off in only 7 per cent of countries when it
-is measured on its own. In a horse race on ten-year changes with country and period fixed effects, a composite
+systematic fifteen-year dating error would still leave 81 per cent of the panel forward. On pre-1990 structural-change series the demand take-off precedes the schooling take-off in **10.0 per cent** of
+identifiable countries (GGDC non-agricultural employment), **15.4 per cent** (urbanisation), **24.1 per cent**
+(industry value added) and **18.8 per cent** (agricultural value added); all-country bounds are **6.7–53.0 per
+cent**, and another **21–43 per cent** are weak ties or left-censored, so demand is neither eliminated nor cleanly
+ordered: **schooling and structural change move together, with schooling typically but not universally first**.
+The old "7 per cent" labour-demand figure came from a 1991-start wage-employment series and is retracted as a
+data-start artefact; it is not used. In a horse race on ten-year changes with country and period fixed effects, a composite
 supply block enters at **+0.456 (SE 0.174)** against **+0.006 (SE 0.203)** for a composite demand block. This is a
-decomposition, not a causal test. The four historical cases where the sequence is best documented split by
-supplier: Prussia is supply-led by 80 to 120 years, France is statute-led with attainment following demand,
-Britain is demand-led by 40 to 90 years, and the northern United States is supply-led in the local-public-goods
-sense. The finding is stated as a **late-industrialiser regularity, not a universal law**, and as a new assembly
+decomposition, not a causal test. A separate fee-abolition event study in eight African countries with
+independently verified dates (1994–2005) is **consistent with** a supply-side effect on primary enrolment: large
+post-abolition gains with flat pre-trends at the −2/−3/−4 horizons, while the on-impact interval spans zero and
+coverage is sparse. It identifies an enrolment effect only, not the massification sequence. The four historical
+cases where the sequence is best documented split by supplier: Prussia shows state supply 80 to 120 years ahead,
+France is statute-led with attainment following demand, Britain is demand-led by 40 to 90 years, and the northern
+United States is state-supplied in the local-public-goods sense. The finding is stated as a **late-industrialiser regularity, not a universal law**, and as a new assembly
 of known facts rather than a discovery: the direction of the historical relation is well established, and this
-paper's increment is the systematic cross-country event-ordering compilation and its lead distribution.
+paper's increment is the systematic cross-country event-ordering compilation and its lead distribution. Data
+tiers are labelled throughout: the structural-change and enrolment series are observed (GGDC, WDI); the schooling
+event series is reconstructed; the fertility series is observed WDI total fertility (births per woman) and is not
+the project's effective-fertility measure; the historical sequences are literature-standard (unverified).
 
 ## 1. Introduction
 
@@ -50,10 +60,12 @@ behind this paper found, has put the two dated events on one panel.
 
 This paper does that, and reports what it finds: a large, robust forward share. In 64 countries with all three
 events dated, 61 have the schooling take-off before the agricultural exodus, with a median lead of 26 years and a
-distribution that is not sensitive to a fifteen-year dating error. Labour-market demand, measured narrowly,
-almost never leads. A supply-versus-demand decomposition on ten-year changes puts the supply block far ahead.
+distribution that is not sensitive to a fifteen-year dating error. On pre-1990 structural-change series, demand-first is a minority ordering (10.0–24.1 per cent of identifiable
+countries, bounds 6.7–53.0 per cent, with another 21–43 per cent weak ties or left-censored): schooling and
+structural change move together rather than demand cleanly leading. A supply-versus-demand decomposition on
+ten-year changes puts the conditional association on the supply block.
 And the four historical cases where the documentary record is richest split exactly where the panel suggests
-they should: supply-led where the state supplied, demand-led in the first industrialiser.
+they should: schooling-first where the state supplied, demand-led in the first industrialiser.
 
 We are careful about what this is not. It is not a causal estimate. Event ordering is an ordering, not a
 mechanism, and the dates are compiled from standard sources rather than measured by us. It is not a discovery of
@@ -98,8 +110,9 @@ Gradstein & Justman, 2002). Its prediction is that schooling is supplied where s
 the timing follows state formation rather than labour demand.
 
 The three accounts are not mutually exclusive, and this paper does not try to choose among them with an ordering
-statistic. What it does is establish the ordering firmly enough that the demand-led story cannot be the general
-one, and then decompose the forward share into a supply block and a demand block to see which moves schooling.
+statistic. What it does is establish the ordering well enough to make a general demand-led ordering hard to reconcile with
+the late-industrialiser record, and then decompose the forward share into a supply block and a demand block to see
+which block carries the conditional association.
 
 An important distinction that structures the rest of the paper: **order is not cause.** A forward share of 61 of
 64 says that, on average, in late-industrialising countries the schools came first. It does not say that the
@@ -111,11 +124,14 @@ every point where a reader might be tempted to over-read it.
 ## 3. The panel and the event definitions
 
 **Data.** The event dates come from a cross-country panel assembled for this project and are reused here without
-re-estimation (`research/subsistence-v2-2026-11-23` @ `ce66cfc`, `results/event_dates.csv`). The schooling
-take-off is dated from the mean-years-of-schooling series (Barro-Lee and WDI, 1965-2010 window) as the first year
-of the fastest sustained rise; the agricultural labour release is dated from the agricultural employment share
-(WDI/ILO, 1965-2010) as the first year of the fastest sustained ten-year fall; the fertility decline is dated from
-the total fertility series by the same rule. The **common 1965-2010 window** is pre-registered (`62730fc`) and is
+re-estimation (`research/subsistence-v2-2026-11-23` @ `ce66cfc`, `results/event_dates.csv`). **Data tiers:**
+the schooling take-off is dated from the mean-years-of-schooling series (**reconstructed**, Barro-Lee/Wittgenstein
+and WDI, 1965–2010 window) as the first year of the fastest sustained rise; the agricultural labour release is
+dated from the agricultural employment share (**observed but ILO-modelled** for many countries, WDI/ILO,
+1965–2010) as the first year of the fastest sustained ten-year fall; the fertility decline is dated from the WDI
+total fertility rate (**observed**, births per woman) by the same rule. The fertility series is a birth-based TFR
+and is **not** the project's effective-fertility measure (expected surviving children); the two are different
+constructs and are not used interchangeably here. The **common 1965-2010 window** is pre-registered (`62730fc`) and is
 the source of a censoring problem discussed below.
 
 **Why 64 countries.** The panel dates a schooling take-off for 108 countries, a demand onset for 97, and all
@@ -140,9 +156,10 @@ within the following decade. The rule is applied uniformly; no country's date is
 first year at which the forward ten-year fall is largest, provided it is at least 3 percentage points and is not
 reversed within the following decade.
 
-**Fertility decline.** Using the total fertility rate, the decline is the first year at which the forward ten-year
-fall is largest, provided it is at least 0.5 births per woman. The fertility date is reported for completeness and
-is not used in this paper's claims (see the note in Section 9).
+**Fertility decline.** Using the WDI total fertility rate (births per woman — a birth-based TFR, not the
+project's effective-fertility measure), the decline is the first year at which the forward ten-year fall is
+largest, provided it is at least 0.5 births per woman. The fertility date is reported for completeness and is not
+used in this paper's claims (see the note in Section 9).
 
 A country enters the panel only if all three dates exist inside the common window; that is the 64. Countries with
 only two of the three dates (17 more) are used as a wider check where relevant. The thresholds are pre-registered
@@ -164,7 +181,7 @@ cent)**; the release precedes schooling in 3 (4.7 per cent). Among the 61 forwar
 | statistic | value |
 |---|---|
 | median lead (release minus schooling) | **26 years** |
-| interquartile range | 16.5 to 29.5 years (17-29 rounded) |
+| interquartile range (forward cases) | 16.5 to 29.5 years (17-29 rounded; all-64 gap IQR 16-29) |
 | share of forward cases exceeding 10 years | **93.4 per cent** |
 | share of forward cases exceeding 15 years | **85.2 per cent** |
 | share of all 64 still forward after a systematic +15-year error on schooling dates | **81.3 per cent** (52 of 64) |
@@ -197,12 +214,19 @@ schooling in **76 per cent** and the demand onset in **79 per cent**, with suppl
 cent: on comparable footing, the two sides turn at essentially the same time (section C1b). The raw 28-versus-73
 result is substantially an artefact of when the data begin.
 
-**Which demand.** The demand proxies include income and urbanisation, which move earliest and are the broadest
-development indicators. When demand is restricted to **labour-market** measures — the wage premium and the
-paid-employment share, the variables the demand-led story actually names — it precedes the schooling take-off in
-just **7 per cent of 58 countries** (section C1b). That number is the most damaging single result for a
-labour-demand account of massification: the labour market does not lead schooling; broad development does, and
-broad development is not a labour-demand mechanism.
+**Which demand, and on what series.** The demand proxies include income and urbanisation, which move earliest and
+are the broadest development indicators. The narrow **labour-market** measures that motivated the old "7 per
+cent" figure — the wage premium and the paid-employment share — cannot carry a pre-1990 test, because the
+paid-employment series begin in 1991; that figure is retracted as a data-start artefact and is not used here. On
+pre-1990 structural-change series (E6, `research/e6e8-sequencing-2026-11-25` @ `2d19da7`) the demand take-off
+precedes the schooling take-off in **10.0 per cent** of identifiable countries (GGDC non-agricultural employment),
+**15.4 per cent** (urbanisation), **24.1 per cent** (industry value added) and **18.8 per cent** (agricultural
+value added, falling), with all-country bounds of **6.7–53.0 per cent** and a further **21–43 per cent** of
+countries in weak ties or left-censored at the first observable year. Demand-first is therefore a minority strict
+ordering, but it is neither eliminated nor cleanly distinguished from ties: **schooling and structural change move
+together, with schooling typically but not universally first.** Across 54 threshold/smoothing definitions the
+strict demand-first share ranges 0.0–30.8 per cent (median 10.45 per cent), which is why the ordering is quoted as
+an interval rather than a point estimate.
 
 ### 4.3 The supply-versus-demand decomposition
 
@@ -227,7 +251,7 @@ decomposition's main weakness; it is a cross-check on the ordering, not a stand-
 Read together, the three pieces say: the schools precede the farms (4.1), the supply side moves schooling when
 the two sides are put in the same equation (4.3), and the reason the raw supply dates look late is that the
 supply series start late and the schooling dates are censored (4.2). None of this is causal. All of it is
-consistent with supply-led massification in late industrialisers.
+consistent with a supply-side reading of late-industrialiser massification, not with a causal claim.
 
 ### 4.4 What could have killed the claim, and did not
 
@@ -240,9 +264,11 @@ claim would be dead. Observed: 3 of 64 reverse, 61 forward. The claim survives w
 share, the claim would be an artefact of the rule. Observed: 85 per cent of forward cases exceed fifteen years of
 lead, so a +15-year error on schooling dates still leaves 81 per cent forward (Section 4.1).
 
-**Falsifier 3: labour-market demand leads.** If the demand variables the demand-led story actually names preceded
-the schooling take-off, the demand account would gain support. Observed: labour-market demand precedes schooling
-in 7 per cent of 58 countries — the falsifier fires against the claim's rival, not against the claim.
+**Falsifier 3: structural change leads generally.** If the pre-1990 demand proxies preceded the schooling
+take-off in most countries, a general demand-led account would gain support. Observed: demand-first is 10.0–24.1
+per cent of identifiable countries, with all-country bounds of 6.7–53.0 per cent and another 21–43 per cent weak
+ties or left-censored. Strict demand-first is a minority ordering, so the falsifier does not fire against the
+schooling-first ordering; but the tie/censoring band means it does not rule demand out either.
 
 **Falsifier 4: the horse race favours demand.** If a composite demand block out-predicted the supply block, the
 supply interpretation would be unsupported. Observed: supply +0.456 (0.174) against demand +0.006 (0.203). The
@@ -273,7 +299,7 @@ more tell us who did the supplying. Full detail and evidence classes are in `res
 (`74e0fe2`). Every date below is a **standard literature date, not verified against a primary source in this
 session**, and is labelled as such in the record.
 
-**Prussia: supply-led.** The General-Landschul-Reglement of 1763 made schooling compulsory, reaffirmed in 1794 and
+**Prussia: state supply.** The General-Landschul-Reglement of 1763 made schooling compulsory, reaffirmed in 1794 and
 1812; roughly half of school-age children were enrolled around 1800 and enrolment was near universal by the 1860s;
 industrialisation is dated to the 1840s-1870s and the agricultural employment share began its sustained fall after
 1850. Schooling precedes industrialisation and the farm exodus by **80 to 120 years**. This is the clean case for
@@ -293,7 +319,7 @@ only by 1900. **Industrialisation and the farm exodus precede mass schooling by 
 the demand-led story is true, and it is not a small exception: it is the first industrialiser and the case that
 generated the puzzle (Sanderson, 1991; Mitch, 1992).
 
-**The northern United States: supply-led in the local-public-goods sense.** Common schools were built in 1830-60
+**The northern United States: state-supplied in the local-public-goods sense.** Common schools were built in 1830-60
 with public funding from the 1830s and the first state compulsory law in Massachusetts in 1852; the national
 agricultural employment share fell from about 63 per cent in 1840 to 31 in 1910 and 12 in 1950, and the
 high-school movement dates to 1910-40. **Schooling precedes the farm exodus nationally by sixty or more years**,
@@ -352,10 +378,11 @@ that it does.
 **Human capital and demand.** Schultz (1961), Becker (1964) and Mincer (1958) supply the investment framework;
 Goldin and Katz (2008) give its strongest historical application and, importantly for us, the demand-led reading
 of the US case; Acemoglu and Autor (2011) frame the task-based demand for skills. The demand-led prediction is
-that schooling follows the returns. Our result is that the labour market's measures do not lead the schooling
-take-off in late industrialisers, which does not refute the human-capital framework — returns can be high before
-the labour market's measured variables move — but does mean that the demand-led account cannot be the general
-explanation for when mass schooling arrived.
+that schooling follows the returns. Our result is that, on pre-1990 structural-change series, demand-first is a
+minority ordering (10.0–24.1 per cent of identifiable countries) that is neither eliminated nor cleanly
+distinguished from ties. That does not refute the human-capital framework — returns can be high before the
+measured structural-change variables move — but it makes a general demand-led ordering hard to reconcile with the
+late-industrialiser record.
 
 **Economic history of the sequence.** Sandberg (1979) on Sweden, Mitch (1992) on England, Sanderson (1991) on
 Britain, Schleunes on Prussia, Flora's data handbook, Diebolt (2017) on France and Goldin and Katz (2008) on the
@@ -373,20 +400,22 @@ weakness (78 country-period observations). Everything else in the paper is synth
 
 **For the human-capital versus world-culture debate.** The debate has often been conducted with cross-sectional
 enrolment levels and economic covariates. An event ordering is a different kind of evidence: it asks which came
-first, and the answer — schools before farms in the late industrialisers — is more compatible with the
-institutional account's timing than with a simple returns-driven account. It does not prove world culture, but it
-removes the demand-led ordering from the set of general explanations, which is a real narrowing.
+first, and the answer — schools before farms in most, but not all, identifiable late industrialisers — is
+consistent with the institutional account's timing. It does not prove world culture, and it does not rule demand
+out: demand-first is a minority ordering (10–24 per cent) with a large tie/censoring band. What it does is make a
+general demand-led ordering hard to reconcile with the data, which is a real but limited narrowing.
 
-**Prussia and Britain as a typology.** The four cases suggest that the supplier decides the sequence: where the
-state builds schools ahead of demand, schooling comes first; where a market and charities supply unevenly, the
-industrial transformation comes first and mass schooling arrives late. That typology is more useful than a single
+**Prussia and Britain as a typology.** The four cases suggest that the sequence co-varies with the supplier:
+where the state builds schools ahead of demand, schooling typically comes first; where a market and charities
+supply unevenly, the industrial transformation comes first and mass schooling arrives late. That typology is more useful than a single
 "schooling leads" or "economy leads" claim because it explains why both literatures can find support.
 
-**The policy lever.** If the forward ordering in late industrialisers is real, the binding constraint on
-massification was supply-side capacity — schools, teachers, revenue — rather than an absence of demand. That is a
-different policy lesson from the demand-led reading, which would put the constraint on returns to schooling and on
-labour-market modernisation. The decomposition cannot prove the constraint was supply; it does show that the
-supply block moves schooling where the demand block does not.
+**The policy lever.** If the forward ordering in late industrialisers is real, the lever associated with
+historical massification was supply-side capacity — schools, teachers, revenue — rather than measured demand. That
+is a different policy lesson from the demand-led reading, which would put the constraint on returns to schooling
+and on labour-market modernisation. The decomposition cannot prove the constraint was supply; it shows that the
+supply block carries the conditional association where the demand block does not, and the E6 tie/censoring band
+means demand is not excluded either.
 
 **What the result does not establish.** It does not establish that schooling *caused* the farm exodus, that
 countries without schools would have kept farmers, or that the forward share reflects a deliberate development
@@ -402,7 +431,7 @@ policy. The cases show that states which built schools ahead of demand did so wi
 administrative reach, not with exhortation; and that the one case where demand was rising fastest, Britain,
 supplied its schools privately and unevenly for a century. The ordering fact therefore does not imply that
 "more schooling is always better" — Graff's (2017) *Literacy Myth* is the standing warning — but it does imply
-that where the pipeline is missing, the binding constraint is likely to be the state's capacity to build it, not
+that where the pipeline is missing, the state's capacity to build it is likely to be the more binding margin than
 the household's willingness to use it. That is a testable implication for aid design (school construction and
 teacher training versus demand-side transfers), and it is not tested here.
 
@@ -436,6 +465,19 @@ identifies: the effect of school supply on attainment and on farm exit holding t
 constant — the cleanest of the four designs. What it does not: the national-level question of whether mass
 schooling caused the transition rather than redistributing it within a country.
 
+**5. The one event study with checked pre-trends.** The fee-abolition event study (E8,
+`research/e6e8-sequencing-2026-11-25` @ `2d19da7`; dates verified in `research/codex-source-verification-2026-11-25`
+@ `9a0fd69`) is the project's one supply-side design with checked pre-trends: eight Sub-Saharan African countries
+abolished primary-school fees at verified dates between 1994 and 2005 (MWI 1994, ETH 1995, UGA 1997, LSO 2000,
+TZA 2001, KEN 2003, MOZ 2004, GHA 2005; four unresolved dates excluded from the main specification), and
+Callaway–Sant'Anna event studies on WDI primary gross enrolment show large post-abolition gains (+22 to +29
+percentage points at event years +1 to +6), flat pre-trends at −2/−3/−4, a placebo mean of −0.39 and a
+leave-one-out range of 18.2–26.2; the on-impact interval spans zero and the treated sample is seven countries.
+What this identifies: a supply-side effect on **enrolment**, and it licenses "consistent with", no stronger. What
+it does not identify: the schooling-versus-farm-exit ordering, attainment or massification. It is the template a
+future sequencing design should follow — an exogenous supply shock with pre-trends checked — but it is not that
+design.
+
 **A specific extension.** The closest competitor, Porzio, Rossi and Santangelo (2021), gives the schooling-
 structural-change relation a model. Adding the event-ordering data to that model — letting the timing of
 schooling expansion enter as a state variable with the farm-exit date as an outcome — would test the mechanism
@@ -454,18 +496,29 @@ not a sample. And the central search result — that no systematic cross-country
 found — is a search result: a reader who knows such a paper should update the record, and this paper's claim
 should be read as "new assembly" rather than as a discovery.
 
-One internal discrepancy is worth flagging for anyone reusing these records: the fertility ordering is reported
-inconsistently between the project record's JSON (`sequencing.json` reports schooling-before-fertility at 68.75
-per cent) and a direct recomputation from the same record's event CSV (35.8 per cent under a schooling-before-
-fertility reading). The fertility event is not used in this paper's claims, and the discrepancy is recorded here
-rather than resolved by assertion.
+Three limits specific to the revision of this draft should be stated. First, the old "7 per cent" labour-demand
+figure is retracted: it was computed on paid-employment series that start in 1991 and is a data-start artefact. The
+replacement (E6, pre-1990 structural-change series) gives demand-first shares of 10.0–24.1 per cent of identifiable
+countries with all-country bounds of 6.7–53.0 per cent and another 21–43 per cent weak ties or left-censored, and
+also a 0.0–30.8 per cent strict range across 54 threshold/smoothing definitions (median 10.45 per cent). The
+ordering is therefore threshold-sensitive and is reported as an interval, never a single percentage. Second, the
+fee-abolition event study has sparse coverage (seven to eight treated countries), an on-impact interval that
+includes zero, four unresolved fee dates and an enrolment-ratio outcome; it is "consistent with" a supply effect
+on enrolment only. Third, the fertility ordering is reported inconsistently between the project record's JSON
+(`sequencing.json` reports schooling-before-fertility at 68.75 per cent by counting ties as schooling-first) and a
+direct recomputation from the same record's event CSV: **strict schooling-first is 37.5 per cent (24/64, 95 per
+cent interval 26.6–50.0), 31.25 per cent simultaneous and 31.25 per cent fertility-first; across all 81 countries
+with both dates it is 35.8 per cent.** The fertility event is not used in this paper's claims; the strict
+recomputation is the one to use.
 
 ## 10. Conclusion
 
 In 64 late-industrialising countries, the schools came before the farms: 61 forward cases, a median lead of 26
-years, a lower quartile of 17, and a forward share that survives a systematic fifteen-year dating error. Labour-
-market demand lags schooling almost everywhere when measured on its own, and a supply-versus-demand decomposition
-puts the supply block far ahead. The historical cases explain the panel's shape: where the state supplied the
+years, a lower quartile of 17, and a forward share that survives a systematic fifteen-year dating error. On
+pre-1990 structural-change series, demand-first is a minority ordering (10–24 per cent of identifiable countries)
+with a large tie/censoring band, so schooling and structural change move together rather than demand cleanly
+leading; a supply-versus-demand decomposition puts the conditional association on the supply block, and a
+fee-abolition event study is consistent with a supply-side effect on primary enrolment. The historical cases explain the panel's shape: where the state supplied the
 schools, they preceded the industrial transformation (Prussia, France's statutes, the American common schools);
 where the market and charities supplied them unevenly, industrialisation came first (Britain). The result is a
 late-industrialiser regularity, not a universal law, and the paper's increment is a new assembly of known facts —
@@ -480,13 +533,16 @@ The event panel (`results/event_dates.csv`) is committed with this record and is
 `research/supply-demand-2026-11-23` @ `963e5e5` (`results/supply_demand.txt`, `results/supply_demand.json`,
 `results/event_ordering.csv`); the four historical cases are in `research/historical-sequence-2026-11-23` @
 `ab658c7`, whose operational definitions were committed first at `74e0fe2`. The underlying country series
-(mean years of schooling, agricultural employment share, total fertility, education spending, pupil-teacher
-ratios, enrolment) are World Bank WDI/ILO/Barro-Lee series pulled from the WDI API in the source records; the
+(mean years of schooling, agricultural employment share, WDI birth-based total fertility, education spending,
+pupil-teacher ratios, enrolment) are World Bank WDI/ILO/Barro-Lee series pulled from the WDI API in the source records; the
 raw extracts are on the project server rather than in the repository for size, and their download scripts are
-committed. This record adds one script (`scripts/sequencing_stats.py`) that recomputes the distribution in
-Section 4.1 from `results/event_dates.csv`, so the paper's centrepiece statistic can be reproduced without the
-server. A published version should also release the country-by-country date and source table, which this record
-names as a gap rather than supplying.
+committed. This record adds two scripts: `scripts/sequencing_stats.py`, which recomputes the distribution in Section 4.1
+from `results/event_dates.csv`, and `scripts/verify_revision_numbers.py`, which recomputes every number quoted in
+the revised passages (E6, E8, N3, sequencing and the fertility ordering) from committed copies of the source
+records in `data/`, writing `results/revision_verification.json`. The revision's source records are
+`research/e6e8-sequencing-2026-11-25` @ `2d19da7` (E6/E8/N3) and
+`research/codex-source-verification-2026-11-25` @ `9a0fd69` (verified fee dates). A published version should also
+release the country-by-country date and source table, which this record names as a gap rather than supplying.
 
 ## Appendix: claims to source, and files
 Every number in this paper traces to a committed file; the full map is `claims-to-source.md`. The analysis scripts
