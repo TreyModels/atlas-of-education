@@ -1,0 +1,23 @@
+parallel ABC: 2000000 draws / 64 workers (31250 each)
+SIMULATION — Bray reality check (parallel), 2000000 prior draws, 95 fit all seven (0.005%)
+best max_z: 0.432
+  participation          target 0.819  best 0.810
+  participation_g9       target 0.747  best 0.764
+  participation_g12      target 0.898  best 0.900
+  urban_rural_gap        target 0.026  best 0.021
+  own_share              target 0.577  best 0.563
+  other_share            target 0.409  best 0.437
+  teacher_tutor_share    target 0.540  best 0.556
+
+accepted parameter ranges (5th-95th pct):
+  b0                 -1.409 .. 1.398
+  b_income           0.090 .. 1.971
+  b_school_gap       0.207 .. 2.769
+  grade12_bonus      0.355 .. 1.880
+  urban_demand       0.055 .. 0.806
+  teacher_threshold  0.390 .. 0.520
+  own_premium        0.171 .. 2.647
+  other_premium      0.361 .. 2.802
+  grade9_bonus       -0.860 .. 0.790
+  cost_other         0.194 .. 1.795
+wrote bray_parallel.json
