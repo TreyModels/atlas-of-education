@@ -83,7 +83,7 @@ recomputed them (below).
 
 | metric (across schedules/feedback) | mean difference | seed-stability |
 |---|---|---|
-| completion_lower | **−0.171 to −0.201** (≈ −17 to −20 pp) | sign-stable in all displayed cells |
+| completion_lower | **−0.17 to −0.20** (≈ −17 to −20 pp) | sign-stable in all displayed cells |
 | completion_upper | strongly negative in most cells | sign-stable |
 | tut_rate | **+0.21 to +0.27** (≈ +21 to +27 pp) | sign-stable |
 | q_pub | negative | sign-stable |
