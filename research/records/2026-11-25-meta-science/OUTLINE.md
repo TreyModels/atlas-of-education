@@ -37,9 +37,10 @@ audit, not from the test suites — and the durable repair was always the same: 
 ## 3. Honest finding on the suggested receipt set (recorded before writing)
 
 - The suggested **"eq03 TWFE transpose commit" does not exist** in the reachable history. `git log --all
-  --oneline -- '*eq03*'` returns five commits; none touches a TWFE matrix. The only TWFE-transpose fix is in
-  `eq09_identification.py` (`0a91afb`), and it is the *only* commit in the repo whose diff contains
-  `np.tile`/`np.repeat` unit/time dummies (`git log --all -S'np.tile'`). The actual eq03 fix that exists is
+  --oneline -- '*eq03*'` returns five commits; none touches a TWFE matrix. The only TWFE-transpose **fix** is in
+  `eq09_identification.py` (`0a91afb`); a `git log --all -S'np.tile' -- research/records/2026-11-25-equation-suite`
+  search returns three commits (the initial suite `5880c7f`, the eq09 fix `0a91afb`, and the patch record
+  `d289f2e`), and only `0a91afb` changes the dummy indexing. The actual eq03 fix that exists is
   `aefade0` ("Part A patch"), which replaces a 1-D ρ grid with a 2-D (ρ, ω) CES grid — **not a transpose**.
   The task's phrasing appears to conflate the handoff's quarantine line ("equation-suite: quarantine
   eq03/04/05/07/09/10 until TWFE transpose, …", `MIGRATION_2026-11-25.md`, item 4) with an eq03-specific
