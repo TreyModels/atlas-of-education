@@ -3,9 +3,10 @@
 **Record:** `research/records/2026-11-24-suite-lit-review/` · branch `research/suite-lit-review-2026-11-24`
 **Base commit:** `51f9f02` (handoff head, from `origin/research/handoff-2026-11-24`).
 **Auditor:** suite-auditor (task-4, Job A). **Date of audit:** 2026-11-24 (UTC).
-**Status:** COMPLETE. Audit only — no suite script was executed. No suite results exist to audit; the payload
-under review is `research/records/2026-11-24-gpu-suite/` as committed, which contains a design and four scripts
-but no runs and no outputs.
+**Status:** COMPLETE. Audit only — no suite script was executed. No suite results are committed in the payload
+under review (`research/records/2026-11-24-gpu-suite/` at `51f9f02`: a design and four scripts, no runs and no
+outputs). A *PORT-PRODUCTION* run exists on the Apple-Silicon port branch; it is not part of this payload and was
+not inspected — see the post-audit note in §12.
 
 **Method.** Read-only. (i) `git show` on the cited branches; (ii) line-by-line code inspection of all four
 scripts; (iii) citation verification against Crossref/OpenAlex metadata records, DOI landing records, publisher
