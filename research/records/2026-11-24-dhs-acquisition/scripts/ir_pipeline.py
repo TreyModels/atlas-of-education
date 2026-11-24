@@ -66,6 +66,15 @@ def read_manifest(path):
     return rows
 
 
+def filter_manifest(rows, countries=None):
+    """Filter manifest rows strictly to standard DHS surveys (excluding MIS/AIS) and optional ISO3 subset."""
+    out = [r for r in rows if (r.get("survey_type") or "").strip().upper() == "DHS"]
+    if countries:
+        keep = {c.strip().upper() for c in countries.split(",")}
+        out = [r for r in out if (r.get("iso3") or "").strip().upper() in keep]
+    return out
+
+
 def locate_dta(datadir, row):
     """Find the extracted .dta for a manifest row; if only the original .ZIP is present, extract to tmp."""
     stem = os.path.splitext(row["file_stata"])[0]
@@ -137,26 +146,33 @@ def absorb(Y, X, fe_list, w, iters=60, tol=1e-10):
 
 
 def wls_absorbed(y, X, fe_list, w, cluster):
-    """WLS with absorbed FE (FWL) and cluster-robust sandwich SEs."""
+    """WLS with absorbed FE (FWL) and vectorized CR1 cluster-robust sandwich SEs."""
     y = np.asarray(y, float)
     X = np.asarray(X, float)
     w = np.asarray(w, float)
-    yd, Xd = absorb(y, X, fe_list, w)
-    keep = np.isfinite(yd) & np.all(np.isfinite(Xd), axis=1) & (w > 0)
-    yd, Xd, w2 = yd[keep], Xd[keep], w[keep]
+    keep = np.isfinite(y) & np.all(np.isfinite(X), axis=1) & np.isfinite(w) & (w > 0)
+    y, X, w2 = y[keep], X[keep], w[keep]
+    if X.shape[1] == 0 or len(y) < 10:
+        return None
+    fe_kept = [np.asarray(g)[keep] for g in fe_list]
+    cl = np.asarray(cluster)[keep]
+    yd, Xd = absorb(y, X, fe_kept, w2)
+    ok = np.isfinite(yd) & np.all(np.isfinite(Xd), axis=1)
+    if not np.all(ok):
+        yd, Xd, w2, cl = yd[ok], Xd[ok], w2[ok], cl[ok]
     if Xd.shape[1] == 0 or len(yd) < 10:
         return None
     XtWX = Xd.T @ (Xd * w2[:, None])
     beta = np.linalg.lstsq(XtWX, Xd.T @ (w2 * yd), rcond=None)[0]
     u = yd - Xd @ beta
     P = np.linalg.pinv(XtWX)
-    cl = np.asarray(cluster)[keep]
-    meat = np.zeros_like(XtWX)
-    for g in np.unique(cl):
-        m = cl == g
-        s = Xd[m].T @ (w2[m] * u[m])
-        meat += np.outer(s, s)
-    V = P @ meat @ P
+    _, inv = np.unique(cl, return_inverse=True)
+    n_cl = int(inv.max()) + 1
+    S = np.zeros((n_cl, Xd.shape[1]), dtype=float)
+    np.add.at(S, inv, Xd * (w2 * u)[:, None])
+    meat = S.T @ S
+    cr1 = (n_cl / (n_cl - 1.0)) if n_cl > 1 else 1.0
+    V = cr1 * (P @ meat @ P)
     se = np.sqrt(np.maximum(np.diag(V), 0))
     from math import erf, sqrt
     t = np.divide(beta, se, out=np.full_like(beta, np.nan), where=se > 0)
@@ -240,7 +256,7 @@ def check_file(df, row, path):
         try:
             y0, m0 = [int(x) for x in row["fieldwork_start"].split("-")[:2]]
             y1, m1 = [int(x) for x in row["fieldwork_end"].split("-")[:2]]
-            c0, c1 = y0 * 12 + m0, y1 * 12 + m1
+            c0, c1 = (y0 - 1900) * 12 + m0, (y1 - 1900) * 12 + m1
             v8 = d["v008"].astype(float)
             outside = ((v8 < c0 - 3) | (v8 > c1 + 3)).mean()
             if outside > 0.02:
@@ -267,6 +283,10 @@ def woman_frame(df, row):
     d = numeric(df).replace([np.inf, -np.inf], np.nan)
     age = d["v012"].astype(float).values
     cohort5 = (np.floor((d["v011"].astype(float).values / 12.0) / 5.0) * 5.0)
+    w_raw = d["v005"].astype(float).values / 1e6
+    w_valid = np.isfinite(w_raw) & (w_raw > 0)
+    w_sum = float(w_raw[w_valid].sum())
+    w_norm = np.where(w_valid, w_raw / w_sum, np.nan) if w_sum > 0 else np.full_like(w_raw, np.nan)
     f = {
         "age": age, "cohort5": cohort5.astype(int),
         "survey": np.array([row["survey_id"]] * len(d)),
@@ -274,7 +294,7 @@ def woman_frame(df, row):
         "round": np.array([str(row["survey_id"])] * len(d)),
         "psu": np.array([f"{row['survey_id']}_{int(x) if np.isfinite(x) else -1}"
                          for x in d["v021"].values], dtype=object),
-        "w": (d["v005"].astype(float).values / 1e6),
+        "w": w_norm,
         "edu": d["v106"].astype(float).values,
         "urban": d["v025"].astype(float).values,
         "region": d["v024"].astype(float).values,
@@ -313,8 +333,10 @@ def design(panel, outcome, spec, use_wealth=False, dose=False):
         X = np.column_stack([X, panel["urban"].astype(float)])
         names = names + ["urban"]
     if spec in ("M2", "M3", "M4") and use_wealth:
-        X = np.column_stack([X, (panel["wealth"] == 2).astype(float), (panel["wealth"] == 3).astype(float),
-                             (panel["wealth"] == 4).astype(float), (panel["wealth"] == 5).astype(float)])
+        wl = np.asarray(panel["wealth"], dtype=float)
+        valid_wl = np.isin(wl, [1.0, 2.0, 3.0, 4.0, 5.0])
+        X = np.column_stack([X] + [np.where(valid_wl, (wl == q).astype(float), np.nan)
+                                   for q in (2, 3, 4, 5)])
         names = names + ["wealth_2", "wealth_3", "wealth_4", "wealth_5"]
     if spec == "M3":
         coh = (panel["cohort5"].astype(float) - panel["cohort5"].astype(float).mean()) / 10.0
@@ -333,11 +355,16 @@ def design(panel, outcome, spec, use_wealth=False, dose=False):
     return np.asarray(X, float), names
 
 
+def _round_region_fe(panel):
+    reg = np.asarray(panel["region"], dtype=float)
+    reg_str = np.where(np.isfinite(reg), np.nan_to_num(reg, nan=-1).astype(int).astype(str), "NA")
+    return np.char.add(np.char.add(panel["round"].astype(str), "_"), reg_str)
+
+
 def fe_list_for(panel, spec):
     fe = [panel["cohort5"].astype(int), panel["round"]]
     if spec in ("M1", "M2", "M3", "M4"):
-        fe.append(np.char.add(np.char.add(panel["country"].astype(str), "_"),
-                              panel["region"].astype(int).astype(str)))
+        fe.append(_round_region_fe(panel))
     return fe
 
 
@@ -381,10 +408,10 @@ def run_models(panel, tier_label):
                         "p": float(fit["p"][0]), "ci_lo": float(fit["b"][0] - 1.96 * fit["se"][0]),
                         "ci_hi": float(fit["b"][0] + 1.96 * fit["se"][0]),
                         "n_women": fit["n"], "weighted": True})
-    # construct split: stack O1/O2, standardise each, construct x schooling, cluster by woman
+    # construct split: stack O1/O2, standardise each, construct x schooling, region x round FE, cluster by PSU
     n = len(p["births"])
-    y1 = (p["births"] - p["births"].mean()) / p["births"].std(ddof=1)
-    y2 = (p[SURVIVING] - p[SURVIVING].mean()) / p[SURVIVING].std(ddof=1)
+    y1 = (p["births"] - np.nanmean(p["births"])) / np.nanstd(p["births"], ddof=1)
+    y2 = (p[SURVIVING] - np.nanmean(p[SURVIVING])) / np.nanstd(p[SURVIVING], ddof=1)
     y = np.concatenate([y1, y2])
     con = np.concatenate([np.zeros(n), np.ones(n)])
     edu = np.concatenate([p["edu"], p["edu"]])
@@ -394,12 +421,13 @@ def run_models(panel, tier_label):
                          (edu == 3).astype(float) * con, urban])
     names = ["edu_primary", "edu_secondary", "edu_higher", "construct",
              "edu_primary_x_construct", "edu_secondary_x_construct", "edu_higher_x_construct", "urban"]
+    rr = _round_region_fe(p)
     fe = [np.concatenate([p["cohort5"].astype(int), p["cohort5"].astype(int)]),
-          np.concatenate([p["round"], p["round"]])]
+          np.concatenate([p["round"], p["round"]]),
+          np.concatenate([rr, rr])]
     ps = np.concatenate([p["psu"], p["psu"]])
     w = np.concatenate([p["w"], p["w"]])
-    woman = np.concatenate([np.arange(n), np.arange(n)])
-    fit = wls_absorbed(y, X, fe, w, woman)  # cluster on the woman (two rows per woman)
+    fit = wls_absorbed(y, X, fe, w, ps)  # cluster on PSU (encompasses both rows per woman)
     if fit is not None:
         for j, nm in enumerate(names):
             res.append({"tier": tier_label, "model": "CONSTRUCT", "outcome": "z(O1) vs z(O2)",
@@ -408,7 +436,7 @@ def run_models(panel, tier_label):
                         "ci_lo": float(fit["b"][j] - 1.96 * fit["se"][j]),
                         "ci_hi": float(fit["b"][j] + 1.96 * fit["se"][j]),
                         "n_women": fit["n"] // 2, "weighted": True,
-                        "note": "cluster = woman; rows = 2x women"})
+                        "note": "cluster = psu; rows = 2x women"})
     return res
 
 
@@ -465,10 +493,7 @@ def main():
     outdir = args.outdir or os.path.join(os.getcwd(), "dhs_ir_results")
     os.makedirs(outdir, exist_ok=True)
 
-    rows = read_manifest(args.manifest)
-    if args.countries:
-        keep = {c.strip().upper() for c in args.countries.split(",")}
-        rows = [r for r in rows if r["iso3"].upper() in keep]
+    rows = filter_manifest(read_manifest(args.manifest), args.countries)
 
     verification = {"manifest": os.path.basename(args.manifest), "requested_files": len(rows),
                     "files": [], "missing": [], "failed": 0,
