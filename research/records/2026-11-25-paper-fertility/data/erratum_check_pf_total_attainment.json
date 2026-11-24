@@ -1,0 +1,29 @@
+{
+ "question": "Does Paper F's -0.228 (0.042) reproduce for the total-attainment level coefficient?",
+ "answer": "NO at the stated 3-dp precision: the committed value is -0.227458..., which rounds to -0.227 (and truncates to -0.227), not -0.228. A 0.0005 boundary slip.",
+ "source": "research/corr-rebuild-2026-11-23 @ 161b563, research/records/2026-11-23-corr-rebuild/data/results_part1.json, field lags.mys_total['0']",
+ "recomputed": {
+  "b": -0.22745836147084678,
+  "b_round_3dp": -0.227,
+  "b_round_4dp": -0.2275,
+  "se": 0.042166886912195396,
+  "n": 1394,
+  "nc": 144
+ },
+ "paper_claim": {
+  "b": -0.228,
+  "se": 0.042,
+  "n": 1394,
+  "nc": 144
+ },
+ "reproduction": "git show 161b563:research/records/2026-11-23-corr-rebuild/data/results_part1.json > /tmp/results_part1.json && python3 scripts/erratum_check_pf_total_attainment.py /tmp/results_part1.json",
+ "audit_reference": "research/prose-data-audit-2026-11-24 @ ff390fe, research/records/2026-11-24-prose-data-audit/AUDIT.md check PF-02",
+ "occurrences_not_changed": [
+  "draft/paperF_draft.md line 67 (\u00a71.2)",
+  "draft/paperF_draft.md line 468 (Table 1)",
+  "draft/paperF_draft.md line 495 (income-rival paragraph)",
+  "draft/frame_intro_new.md line 67 (same sentence as the draft)",
+  "sections/section1_levels_changes.md line 79 (table) and line 106 (income-rival)",
+  "data/claims_sources.csv row A1 'levels coefficient total attainment'"
+ ]
+}

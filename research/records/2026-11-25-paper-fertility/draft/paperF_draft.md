@@ -70,6 +70,11 @@ enrolment/completion series, two gender-parity series — are negative and signi
 specification curve reports 336 specifications: 99.7 per cent of the 288 period specifications are negative,
 91.3 per cent negative-significant, 0 per cent positive-significant, with a median coefficient of −0.475.
 
+**CORRECTION (see `ERRATUM.md` §A):** the total-attainment level coefficient is **−0.227458** in the committed
+source (`corr-rebuild @ 161b563`, `lags.mys_total['0'].b`), which rounds to **−0.227**, not −0.228; the same value
+appears in Table 1 and the income-rival paragraph below (and in `data/claims_sources.csv`). Original text left
+visible.
+
 **In changes, the same measures are weak or reversed.** Ten-year changes with country fixed effects, decade
 effects, and country-specific trends give women's attainment +0.111 (0.045), significantly positive; total
 attainment +0.190 (0.055); lower-secondary completion +0.0066 (0.0031). Across the change specification grid,
