@@ -1,5 +1,13 @@
 # Paper F (Fertility) — Section: the transition engine, the individuation (dose) model, and the tolerance ladder
 
+*Construct note.* The transition record's "effective fertility" is **surviving children per woman**, not births;
+the model outputs discussed here are **births per woman**. On a matched 5-year sample (n = 2,955 country-years,
+197 countries) the median absolute difference between total fertility and effective fertility is 0.3042 and the
+maximum 4.2677, and their schooling lead/lag terms differ (0.541 versus 1.555); the two constructs are not
+interchangeable and neither corrects the other (E11 fertility audit, `research/e11-fertility-audit-2026-11-25` @
+`e926575`).
+
+
 **Author: gpu-dose. Provenance: `research/transition-gpu-2026-11-23` @ `f9f2f18`; `research/dose-gpu-2026-11-23`
 @ `774085c`; `research/dose-tolerance-2026-11-23` @ `baadfe6`; the transition record `research/transition-2026-11-23`
 @ `b13fde8` supplies the historical paths and the mortality-leads-fertility estimate. All files below are in
