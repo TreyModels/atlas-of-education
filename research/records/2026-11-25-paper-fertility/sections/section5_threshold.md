@@ -58,6 +58,11 @@ development) and that the level design picks up cleanly.
 
 ## 5.3 What the shape means for massification
 
+
+*A note on labels.* "Massification margin" here is the **schooling-distribution margin**, not the temporal
+schooling-before-jobs sequence tested by the project's synthetic staging programme (X1–X4), which did not
+reproduce a timing effect (Section 7.3.7). The two uses of "massification" should not be merged.
+
 The shape is the empirical bridge between this paper's levels result and the transition literature. The
 steepest part of the between-country gradient is the margin between populations with little or no formal
 schooling and populations with primary-to-lower-secondary attainment. That is precisely the margin that the

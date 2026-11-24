@@ -1,8 +1,8 @@
 # Paper F — fertility synthesis: "The level of analysis decides the answer"
 
 Branch `research/paper-fertility-2026-11-25`, 25 Nov 2026. Lead and integrator: `un-data`. Target:
-*Population and Development Review* / *Demographic Research*, synthesis length (draft: **17,284 words before
-references**, 119 references). Every number in the draft traces to a verified record; the map is
+*Population and Development Review* / *Demographic Research*, synthesis length (draft: **18,349 words before
+references** after the 24 Nov 2026 negative-results integration; 119 references). Every number in the draft traces to a verified record; the map is
 `data/claims_sources.csv` (claim | number | branch @ commit | file | field).
 
 ## Deliverables

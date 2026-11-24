@@ -161,3 +161,33 @@ Becker-Lewis's. The out-of-sample comparison is a correction of any impression t
 predicts better: it does not. The tolerance ladder is a correction of the earlier inference — the intervals are
 an identification limit. No claim of precedence is made, and the historical-transition literature above is
 cited because these results have to be read against it, not replaced by it.
+
+## 7. What the 2026-11-24 audit adds — and what it does not
+
+The project's 24 November 2026 forward programme is relevant here only as a **warning about mechanism claims**, and
+its labels should be kept visible: X1 and X2 are **synthetic toy-world simulations** (stipulated `eduengine`
+worlds, not fitted to any country; no causal or empirical claim); X4 is an **exploratory test on observed
+aggregates**; X5 is a set of **conditional importance weights, not posteriors**. None supplies evidence for the
+fertility claims in this paper, and none is used as such.
+
+- **The sequencing programme is negative.** The audited synthetic staging experiment was exposure- and
+  fiscal-confounded, and its exposure-matched re-run (X1) removed **88–98%** of the apparent school-first
+  advantage; the feedback-elasticity surface (X3) produced zero reversals but no rescue; the honest-split aggregate
+  staging test (X4) returned **FAIL_NO_EVIDENCE** (the model-implied ordering did not beat persistence or pooled
+  trend out of sample). This paper does not rely on a sequencing claim: where Section 7.4 speaks of the
+  "massification margin" it means the **schooling-distribution margin** (where the gradient is steepest), not a
+  temporal school-before-jobs sequence, and the two should not be merged.
+- **The Bayesian screens do not validate this paper's dose model.** X5 found the MASSENG importance screens
+  unusable as posterior-style inference (ESS 2.17%/0.50%; prior-dominated; synthetic-recovery confusion diagonal
+  50%, below the pre-declared 60% criterion). The dose model of Section 7.3.3 is a different model with a different
+  estimator and different observables, and its wide intervals remain an identification limit (Section 7.3.5); X5 is
+  a general caution against reading any project Bayesian output as a posterior, not a cross-validation of the dose
+  estimates.
+- **The gate/tutoring result is about school-system design, not fertility.** X2 (synthetic) found quota gates raise
+  gate-prep tutoring (+17.6…+21.1pp) and widen the top-bottom tutoring gap (+13.0…+14.5pp), with the rural-access
+  hypothesis falsified in the opposite direction. That is a massification/inequality result on stipulated worlds;
+  it is not evidence about the schooling–fertility gradient and is not used here.
+
+What this means for the paper: the fertility results remain the descriptive levels-versus-changes audit of Section 4
+and the supporting evidence of Sections 7.1–7.4; the project's simulations are labelled as simulations, and the
+negative results above leave the causal question open rather than supplying the missing mechanism.

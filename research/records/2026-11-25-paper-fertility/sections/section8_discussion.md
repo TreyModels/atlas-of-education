@@ -69,6 +69,13 @@ but is not a PRISMA-style systematic review. One ad-hoc multiverse run produced 
 re-verified after the compute node went offline; it is not used for any number in this paper, and the published
 battery covers the same ground.
 
+**Forward-programme negatives.** The project's 24 November 2026 synthetic/aggregate programme did not supply the
+missing mechanism: the audited staging experiment was exposure- and fiscal-confounded, exposure matching removed
+88–98% of the apparent order effect, the feedback-elasticity surface showed no reversal and no rescue, an
+honest-split aggregate staging test returned FAIL_NO_EVIDENCE, and the Bayesian importance screens are conditional
+weights, not posteriors. These are labelled simulations/exploratory aggregates, are not evidence, and are not used
+to support any number or claim in this paper.
+
 **Generalisability.** The panel is 196 countries over 1960–2024. The transportability experiment shows the level
 relation reproduces in arbitrary subsets of those countries; it does not show it would reproduce in another era
 or measurement regime. The above-nine-years reversal is estimated on the richest and most schooled countries and

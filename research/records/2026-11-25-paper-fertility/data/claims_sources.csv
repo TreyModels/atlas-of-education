@@ -37,3 +37,7 @@ B4,tolerance ladder,acceptance 1044/5000 (20.9%); 1012/10000 (10.1%); 660/12000 
 B4,mortality-leads-ordering,+12 years median lead,research/transition-2026-11-23,b13fde8,research/records/2026-11-23-transition/results/transition_results.json,onset lag distribution
 B5,threshold bootstrap women's years,-0.326 [-0.405,-0.248]; -0.092 [-0.175,-0.013]; +0.112 [0.057,0.171],research/corr-battery-2026-11-23,9363079,data/results_summary.json,threshold_bootstrap
 B5,threshold point estimates,-0.33 / -0.09 / +0.11,research/corr-rebuild-2026-11-23,161b563,README.md,threshold paragraph
+X1,negative-results caveat: exposure matching removes 88-98% of apparent order effect (synthetic),research/masseng-staging-x1-2026-11-24,fef7428,research/records/2026-11-24-masseng-staging-x1/RUN_REPORT.md,section 2
+X2/X3/X4,negative-results caveat: no elasticity reversal/no rescue; X2 quota tutoring +17.6-21.1pp; X4 honest-split FAIL_NO_EVIDENCE,research/masseng-staging-x2-2026-11-24,f592bae,research/records/2026-11-24-masseng-staging-x2/RUN_REPORT.md,sections 2-3
+X5,negative-results caveat: Bayesian importance screens are conditional weights not posteriors (ESS 2.17%/0.50%),research/masseng-bayes-audit-2026-11-24,0ecd4be,research/records/2026-11-24-masseng-bayes-audit/AUDIT.md,addendum section 2
+staging audit,negative-results caveat: staging experiment exposure/fiscal-confounded; arms not exposure-matched,research/masseng-timing-audit-2026-11-24,ff84e75,research/records/2026-11-24-masseng-timing-audit/STAGING_AUDIT_AND_MASSENG_INVENTORY.md,A2/A4
