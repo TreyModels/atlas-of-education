@@ -674,13 +674,15 @@ Seven manuscripts were mined from the verified branches, each with a claim-by-cl
 | Q2 country pathways (pair benchmark, audit, cases) | `research/q2-pathways-2026-11-25` | `f71b789` |
 | Q3 multiverse calibration + full BH/BY | `research/q3-multiverse-calibration-2026-11-25` | `db7814d` |
 | E1 multiverse at R = 1,200 | `research/e1-multiverse-1200-2026-11-25` | `7e6f7b5` |
-| E6/E8 sequencing repairs | `research/e6e8-sequencing-2026-11-25` | `2d19da7` |
+| E6/E8 sequencing repairs (erratum on `2d19da7`) | `research/e6e8-sequencing-2026-11-25` | `59d31d7` |
 | E11 fertility audit (EFR vs TFR) | `research/e11-fertility-audit-2026-11-25` | `e926575` |
 | Source verification (fee dates, demand series, prior art) | `research/codex-source-verification-2026-11-25` | `9a0fd69` |
 | Methods paper | `research/methods-multiverse-paper-2026-11-23` | `d7e8f9f` |
 | Paper F | `research/paper-fertility-2026-11-25` | `ec899cc` |
 
 Verification ledger: `research/records/2026-11-24-handoff/codex_wave_ledger.md` @ `51f9f02`. The dashboard's "Papers produced" table is stale on two heads: the methods paper is now `d7e8f9f` (was `1fef07e`) and Paper F is `ec899cc` (was `6f4d6fb`). Paper M and N1 revisions remain open on their branches.
+
+**Record head advanced to `59d31d7` (erratum only; data unchanged)** for E6/E8: an additive erratum commit on `2d19da7` (REPORT/ERRATUM/script-docstring only; no data file changed). It corrects one E6 prose range to strict schooling-first **21.5–46.3%** of identifiable countries (**58.3–71.4%** of strict orderings) and notes the fee-date provenance (`bfb8c6f` is an ancestor of the verified head `9a0fd69`; `fee_dates.csv` sha256-identical at both). The E6 demand-first shares below are unaffected.
 
 ### What the wave established (numbers recomputed from committed files)
 
@@ -691,7 +693,7 @@ Verification ledger: `research/records/2026-11-24-handoff/codex_wave_ledger.md` 
 - **No identified causal schooling→fertility effect, no mechanism winner, and no claim that demand is ruled out.** The three candidate mechanisms remain observationally equivalent at the aggregate level; the E11 change ladder returns "does not discriminate".
 - **Effective fertility is not TFR:** surviving children vs births differ by median **0.3042** (max **4.2677**) and flip the schooling lead/lag (**0.541** vs **1.555**). The two constructs are not interchangeable and neither corrects the other.
 - **The 68.75%/69% figure was a tie-counting artefact:** strict schooling-before-fertility is **37.5%** (24/64; bootstrap 95% CI **26.6–50.0%**), with **31.25% simultaneous** and **31.25% fertility-first**; the old figure counted the ties as schooling-first.
-- **The 7% labour-demand figure is retracted** (1991+ data start). E6's replacement on pre-1990 series: demand-first **10.0%** (GGDC non-ag employment), **15.4%** (urbanisation), **24.1%** (industry VA), **18.8%** (agriculture VA), bounds **6.7–53.0%**, ties/censoring **21.1–43.3%** → **"schooling and structural change move together"**, with schooling typically but not universally first.
+- **The 7% labour-demand figure is retracted** (1991+ data start). E6's replacement on pre-1990 series: demand-first **10.0%** (GGDC non-ag employment), **15.4%** (urbanisation), **24.1%** (industry VA), **18.8%** (agriculture VA), bounds **6.7–53.0%**, ties/censoring **21.1–43.3%** → **"schooling and structural change move together"**, with schooling typically but not universally first. Strict schooling-first is the larger strict ordering — **21.5–46.3%** of identifiable countries (**58.3–71.4%** of strict orderings) — but not a majority of identifiable countries; the branch's earlier strict-range prose did not reproduce (erratum @ `59d31d7`; data unchanged).
 - **Source verification:** 8 of 12 fee-abolition dates verified (4 unresolved: CMR, ZMB, RWA, BDI); **no pre-1990 wage-employment series exists** in the standard public sources checked (WDI/ILO modelled wage series begin 1991); prior art verified with DOI status.
 - **E8 event study (design-conditional):** fee abolition shows a large positive primary-GER post effect with flat −2/−3/−4 pre-trends (on-impact +12.44 [−2.36, 27.24]; +6 25.92 [8.64, 43.20]); placebo −0.39; leave-one-out 18.17–26.16. **"Consistent with"** a fee-abolition effect; no causal claim. The secondary-GER proxy shows no clear effect.
 
@@ -708,8 +710,20 @@ Verification ledger: `research/records/2026-11-24-handoff/codex_wave_ledger.md` 
 
 ### Recompute status
 
-The addendum's headline numbers were recomputed from committed source files before being quoted (8 recomputation rows in the synthesis record §6, including the 5/272 wall, the 97.5%/100% zero-signal control, the 87.0%/42.0% minority calibration, the BH/BY counts at R = 400/800/1,200, the EFR/TFR lead-lag and |diff| figures, the E6 shares and bounds, the Q2 105/52/1/52, and the 37.5% strict ordering). Numbers that were not recomputed — the E8 event ATTs, the Q2 matching/yardstick shares, the Q3 design grid, and the methods-paper 76/161 counts — are marked **UNVERIFIED (committed field only)** in the synthesis record §7; do not quote them as established.
+The addendum's headline numbers were recomputed from committed source files before being quoted (8 recomputation rows in the synthesis record §6, including the 5/272 wall, the 97.5%/100% zero-signal control, the 87.0%/42.0% minority calibration, the BH/BY counts at R = 400/800/1,200, the EFR/TFR lead-lag and |diff| figures, the E6 demand-first shares, bounds and strict schooling-first range (21.5–46.3% of identifiable; 58.3–71.4% of strict orderings; erratum @ `59d31d7`, data unchanged), the Q2 105/52/1/52, and the 37.5% strict ordering). Numbers that were not recomputed — the E8 event ATTs, the Q2 matching/yardstick shares, the Q3 design grid, and the methods-paper 76/161 counts — are marked **UNVERIFIED (committed field only)** in the synthesis record §7; do not quote them as established.
 
 ### Forward programme
 
 The aggregate regression route is exhausted at this resolution. Next: **micro-simulation** with explicit simulation-vs-history labels (the GPU suite, Apple Silicon port first); **micro tie-breakers** that separate observationally equivalent mechanisms; and **DHS Individual Recode microdata** (individual schooling → children-ever-born, cohort comparisons, EFR/TFR construct split). Keep the EFR-vs-TFR labels and the draw-budget/dependence caveats attached to every "robust" or "BY" statement.
+
+> **Status: needs redesign per the 24 Nov 2026 suite audit — see "Suite audit (24 Nov 2026)" below.**
+
+### Suite audit (24 Nov 2026)
+
+**The forward programme above needs redesign per audit: the shipped suite cannot test its own pre-registered hypotheses.** The audited payload (`research/records/2026-11-24-gpu-suite/` @ `51f9f02`) does not implement H1 or H4. `exp2` is a logistic classifier on pre/post means — there is no macro fixed-effects regression, no country dimension and no cross-DGP overlap statistic, so H1's ">75% macro-slope overlap" is undefined. `strength` appears only inside a docstring, so H4's zero-signal control cannot execute; the four "micro signatures" are transforms of the same state mix, so exp2's classifier recovery is **construction-implied and is not evidence**. `exp4` raises `IndexError` on its first World Bank API call, and WDI `SL.TLF.0714.ZS` is "Children in employment", **not** child labour, so the series cannot carry a child-labour claim. Any exp2/exp3 output, including the PORT-PRODUCTION run, inherits these defects.
+
+The **ten claims in AUDIT §9 must not be published** in their current form: the macro wall demonstrated; binary bans backfire; protective capacity reduces child labour while fees-only does not; a micro tie-breaker passes the Q1 zero-signal control; rejection-ABC calibrates and identifies; fee abolition reduces child employment; learning-per-grade slope tested; faithful DGP mapping to Basu–Van / Baland–Robinson / Nordtveit / Bray / Jayachandran / Dang–Rogers / Pritchett; hidden work measured; the mixed DGP as a mixed-mechanism world. The honest labels are "simulation", "reduced form" and "consistent with" — nothing stronger.
+
+The **Apple Silicon work is portability only**: the port reproduces the CuPy subset and the `sim_step` kernel bit-identically (NumPy vs MLX) and its full run is labelled **PORT-PRODUCTION, not research results** (`research/apple-silicon-gpu-2026-11-24`, port complete at `fd933d9`; branch head `be42c4d`). It does not repair the inferential objects.
+
+Therefore the **"macro wall" and the "micro tie-breaker" remain UNTESTED by simulation.** In progress is a **strength-separable, macro-moment-matched redesign with a survey measurement layer**, pre-registered as design only (no run) at `research/records/2026-11-24-suite-tiebreakers/PRE_REGISTRATION.md` @ `e526c94` on `research/suite-tiebreakers-2026-11-24`: worlds `θ_w(s) = θ_0 + s·Δ_w` that are identical at `s = 0`; per-world nuisance search to a common macro vector `M*`; measured-variable tie-breakers with sampling, non-response, heaping, reference-period and under-reporting layers; algebraic-equivalence and label-permutation placebos; out-of-seed, out-of-parameter-region and mixture-world validation. Audit source: `research/records/2026-11-24-suite-lit-review/AUDIT.md` @ `4649cae` on `research/suite-lit-review-2026-11-24`. Until the redesign runs and passes its pre-registered controls, no suite output may be cited as evidence for the wall or for a tie-breaker.
