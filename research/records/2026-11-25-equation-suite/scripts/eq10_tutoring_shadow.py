@@ -11,8 +11,17 @@ from eq_common import ols, probit, tobit_em, rng, write_result, save_csv, smoke_
 REC = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
+def require_positive(x, what):
+    """Gini is defined only on a strictly positive level domain (a Gini computed on a
+    variable with non-positive values is undefined and can leave [0, 1])."""
+    x = np.asarray(x, float)
+    if x.size == 0 or not np.all(np.isfinite(x)) or np.any(x <= 0):
+        raise ValueError("%s: Gini needs strictly positive level-domain values" % what)
+    return x
+
+
 def gini(x):
-    x = np.sort(np.asarray(x, float)); n = len(x); c = np.cumsum(x)
+    x = np.sort(require_positive(x, "gini")); n = len(x); c = np.cumsum(x)
     return float((2 * np.sum(np.arange(1, n + 1) * x) / (n * c[-1])) - (n + 1) / n)
 
 
@@ -25,10 +34,20 @@ def demand_world(rng, n, different):
 
 
 def demand_fit(y, urban, T):
+    """Hurdle vs Tobit. The DGP truth is a semi-elasticity: d log T / d y = 0.8. A Tobit
+    on the LEVEL of T estimates a level coefficient (~8.6 here) and is not comparable to
+    0.8; estimate the Tobit on the log scale instead, log(1+T) with left-censoring at
+    log(1+0)=0, so its income coefficient is on the same scale as the two-part estimate
+    and the truth (Neon line audit / handoff quarantine #4: Tobit vs ground-truth scale).
+    The level-scale fit is still reported for continuity."""
     X = np.column_stack([np.ones_like(y), y, urban])
-    tob = tobit_em(T, X); pos = T > 0
+    pos = T > 0
+    tob_log = tobit_em(np.log1p(T), X)
+    tob_level = tobit_em(T, X)
     amt = ols(np.log(T[pos]), X[pos]); part = probit((T > 0).astype(float), X)
-    return {"tobit_eta": tob["b"][1], "two_part_eta": amt["b"][1], "ols_positive_eta": amt["b"][1],
+    return {"tobit_eta": tob_log["b"][1], "tobit_eta_level_scale": tob_level["b"][1],
+            "tobit_scale": "log1p(T): semi-elasticity comparable to the 0.8 truth",
+            "two_part_eta": amt["b"][1], "ols_positive_eta": amt["b"][1],
             "participation_b": part["b"]}
 
 
@@ -49,8 +68,15 @@ def production_world(rng, n, rho, retention):
     Tb = np.where(own > 0, np.where(rng.random(n) < 0.6, 0.0, retention * T), T)
     Ab = learning(Q, Tb, z, rng, rho)
     gap = lambda A: float(A[q >= 0.8].mean() - A[q <= 0.2].mean())
-    return {"gini_base": gini(A0), "gini_ban": gini(Ab),
-            "delta_gini_ban": gini(Ab) - gini(A0), "gap_base": gap(A0), "gap_ban": gap(Ab),
+    # The additive achievement index can dip below zero in this stipulation (~37% of
+    # draws), where the Gini is undefined (and the raw value can exceed 1). Report it on
+    # the strictly positive level domain exp(A) (monotone transform); the sign of the
+    # ban effect is unchanged under a common additive shift (see NEON_PATCHES doc).
+    return {"gini_base": gini(np.exp(A0)), "gini_ban": gini(np.exp(Ab)),
+            "delta_gini_ban": gini(np.exp(Ab)) - gini(np.exp(A0)),
+            "gini_base_raw_nonpositive_share": round(float((A0 <= 0).mean()), 4),
+            "gini_domain": "exp(learning index)",
+            "gap_base": gap(A0), "gap_ban": gap(Ab),
             "participation": float((T > 0).mean()),
             "own_share": float(own[T > 0].sum() / max((T > 0).sum(), 1))}
 
@@ -72,15 +98,19 @@ def run(args):
     # ---- demand multiverse ----
     dem = {}
     for world, diff in [("single_process", False), ("different_processes", True)]:
-        tob, tp, ols_pos = [], [], []
+        tob, tp, ols_pos, tob_level = [], [], [], []
         for r in range(reps):
             y, urban, T = demand_world(rng(args.seed + (1 if diff else 2) * 10000 + r), n_dem, diff)
             f = demand_fit(y, urban, T)
             tob.append(f["tobit_eta"]); tp.append(f["two_part_eta"]); ols_pos.append(f["ols_positive_eta"])
+            tob_level.append(f["tobit_eta_level_scale"])
             rows.append([world, r, round(f["tobit_eta"], 4), round(f["two_part_eta"], 4)])
         dem[world] = {"tobit_eta_mean": round(float(np.mean(tob)), 3),
+                      "tobit_eta_level_scale_mean": round(float(np.mean(tob_level)), 3),
+                      "tobit_scale": "log1p(T): semi-elasticity; level-scale fit reported separately, not compared to 0.8",
                       "two_part_eta_mean": round(float(np.mean(tp)), 3),
-                      "two_part_within_0.15_share": round(float(np.mean(np.abs(np.array(tp) - 0.8) <= 0.15)), 2)}
+                      "two_part_within_0.15_share": round(float(np.mean(np.abs(np.array(tp) - 0.8) <= 0.15)), 2),
+                      "tobit_within_0.15_share": round(float(np.mean(np.abs(np.array(tob) - 0.8) <= 0.15)), 2)}
     mv_dem = {"specs": ["tobit", "two_part_hurdle", "ols_on_participants"],
               "estimates": {"different_processes_tobit": dem["different_processes"]["tobit_eta_mean"],
                             "different_processes_two_part": dem["different_processes"]["two_part_eta_mean"]}}
@@ -121,18 +151,22 @@ def run(args):
             "model_not_claimed_to_fit_bray": bray is not None and bray["max_abs_z"] > 2}
     rule["PASS"] = all(rule.values())
     out.update({"demand": dem, "production": prod, "multiverse": {"demand": mv_dem, "production": mv_prod},
+                "gini_domain": "exp(learning index) - strictly positive level domain; the raw additive "
+                                "achievement index is non-positive in ~37% of draws, where the Gini is undefined",
                 "bray_external_check": bray, "decision_rule": rule,
-                "plain_result": ("Tutoring behaves as one exams-shadow module: the two-part model recovers the "
-                                 "income elasticity when participation and spending differ (%.2f vs Tobit %.2f), "
-                                 "and an own-teacher ban raises the learning Gini in every CES/retention "
-                                 "specification (delta range %.3f..%.3f). The illustrative model is far from "
-                                 "Bray's targets (max |z| = %.1f), so nothing here is a fit to a real "
-                                 "shadow-education system." %
+                "plain_result": ("Tutoring behaves as one exams-shadow module for demand: on the same log scale "
+                                 "as the 0.8 truth the two-part model is closer than the Tobit (%.2f vs %.2f). "
+                                 "On inequality the own-teacher ban does NOT raise the learning Gini once the "
+                                 "Gini is computed on a strictly positive level domain: in this reduced "
+                                 "production model there is no substitution margin, so removing tutoring lowers "
+                                 "the Gini in every CES/retention specification (delta range %.3f..%.3f). The "
+                                 "illustrative model is far from Bray's targets (max |z| = %.1f), so nothing here "
+                                 "is a fit to a real shadow-education system." %
                                  (mv_dem["estimates"]["different_processes_two_part"],
                                   mv_dem["estimates"]["different_processes_tobit"],
                                   min(deltas), max(deltas), bray["max_abs_z"] if bray else float("nan")))})
     out["data_map"] = {'module': 'exams-shadow (single tutoring module)', 'observed': 'no harmonised tutoring panel; Bray targets are literature targets', 'assumed': 'demand and production parameters', 'gap': 'no tutoring data'}
-    out["statistical_frame"] = {'estimand': 'tutoring income elasticity; ban effect on learning Gini', 'identification': 'none (synthetic); two-part vs Tobit', 'testable_restrictions': 'hurdle/CES forms; retention assumption', 'benchmark_split': 'synthetic reps; Bray literature targets as external check (not a fit)', 'pass_fail': 'PASS if two-part closer than Tobit and ban raises Gini in all specs'}
+    out["statistical_frame"] = {'estimand': 'tutoring income elasticity; ban effect on learning Gini', 'identification': 'none (synthetic); two-part vs Tobit', 'testable_restrictions': 'hurdle/CES forms; retention assumption', 'benchmark_split': 'synthetic reps; Bray literature targets as external check (not a fit)', 'pass_fail': 'PASS if two-part closer than Tobit (same scale) and ban raises Gini in all specs', 'scale_alignment': 'Tobit on log1p(T) so its income coefficient is a semi-elasticity comparable to the 0.8 truth; the level-scale Tobit is reported but never compared to 0.8'}
     write_result(args.outdir, "eq10_tutoring_shadow", out)
     save_csv(args.outdir, "eq10_tutoring_shadow", ["part", "rep", "a", "b"], rows)
     print("PLAIN:", out["plain_result"])
