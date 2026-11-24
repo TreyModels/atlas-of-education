@@ -1,0 +1,5 @@
+# raw WDI bulk downloads/extracts are re-downloadable from the URL in acquire_wdi.py and are
+# pinned by sha256 in SHA256SUMS / _raw_sha256.txt; they are kept out of git
+wdi_SE.PRM.ENRR/
+wdi_SE.PRM.ENRR.zip
+__pycache__/
