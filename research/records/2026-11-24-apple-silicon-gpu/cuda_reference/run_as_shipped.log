@@ -1,0 +1,149 @@
+=== START 2026-11-24T18:01:28+08:00 ===
+=== host ===
+autodl-container-beda118efa-9108c74f
+Linux autodl-container-beda118efa-9108c74f 5.15.0-86-generic #96-Ubuntu SMP Wed Sep 20 08:23:49 UTC 2023 x86_64 x86_64 x86_64 GNU/Linux
+=== gpu ===
+Tue Nov 24 18:01:28 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 565.57.01              Driver Version: 565.57.01      CUDA Version: 12.7     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  Tesla T4                       On  |   00000000:00:08.0 Off |                  Off |
+| N/A   32C    P8              8W /   70W |       1MiB /  16384MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+=== python ===
+Python 3.10.8
+=== versions ===
+/root/miniconda3/lib/python3.10/site-packages/cupy/_environment.py:596: UserWarning: 
+--------------------------------------------------------------------------------
+
+  CuPy may not function correctly because multiple CuPy packages are installed
+  in your environment:
+
+    cupy-cuda11x, cupy-cuda12x
+
+  Follow these steps to resolve this issue:
+
+    1. For all packages listed above, run the following command to remove all
+       existing CuPy installations:
+
+         $ pip uninstall <package_name>
+
+      If you previously installed CuPy via conda, also run the following:
+
+         $ conda uninstall cupy
+
+    2. Install the appropriate CuPy package.
+       Refer to the Installation Guide for detailed instructions.
+
+         https://docs.cupy.dev/en/stable/install.html
+
+--------------------------------------------------------------------------------
+
+  warnings.warn(f'''
+python 3.10.8
+numpy 2.2.6
+cupy 13.6.0
+pandas 2.3.3
+requests 2.28.1
+sklearn MISSING ModuleNotFoundError No module named 'sklearn'
+scipy 1.15.3
+statsmodels 0.15.0
+=== wb network ===
+worldbank_http 200
+=== script hashes ===
+33cd60c6ee8185610cd328b092c396916626941f706157110cf443b9200e7da8  scripts/exp1_unified_gpu_abm.py
+847607edcd155b6caae376e626443048009473429e7892f0ad4f0a300be5ff3d  scripts/exp2_macro_wall_and_tiebreaker.py
+646de67fcc59f19baa2a45129b72dae9b2678af53a984273ef05f533cdd6e341  scripts/exp3_rejection_abc_realdata.py
+5809acedd429c8347a192ae06643cec63d207c2191510e0891e84019af84ee3a  scripts/exp4_fee_abolition_child_labor.py
+=== RUN exp1 --smoke (2026-11-24T18:01:30+08:00) ===
+/root/miniconda3/lib/python3.10/site-packages/cupy/_environment.py:596: UserWarning: 
+--------------------------------------------------------------------------------
+
+  CuPy may not function correctly because multiple CuPy packages are installed
+  in your environment:
+
+    cupy-cuda11x, cupy-cuda12x
+
+  Follow these steps to resolve this issue:
+
+    1. For all packages listed above, run the following command to remove all
+       existing CuPy installations:
+
+         $ pip uninstall <package_name>
+
+      If you previously installed CuPy via conda, also run the following:
+
+         $ conda uninstall cupy
+
+    2. Install the appropriate CuPy package.
+       Refer to the Installation Guide for detailed instructions.
+
+         https://docs.cupy.dev/en/stable/install.html
+
+--------------------------------------------------------------------------------
+
+  warnings.warn(f'''
+Traceback (most recent call last):
+  File "/root/work/port_ref/scripts/exp1_unified_gpu_abm.py", line 208, in <module>
+    all_rows.extend(run_country_arm(kern, N, T, seed, dgp, arm))
+  File "/root/work/port_ref/scripts/exp1_unified_gpu_abm.py", line 124, in run_country_arm
+    base_y = cp.exp(rng.normal(0.0, 0.55, size=N, dtype=cp.float32))
+AttributeError: 'Generator' object has no attribute 'normal'
+/root/work/port_ref/run_ref.sh: line 36: bc: command not found
+exp1_exit=1 exp1_wall_s=
+=== RUN exp3 --draws 20 --batch-n 2000 (2026-11-24T18:01:32+08:00) ===
+/root/miniconda3/lib/python3.10/site-packages/cupy/_environment.py:596: UserWarning: 
+--------------------------------------------------------------------------------
+
+  CuPy may not function correctly because multiple CuPy packages are installed
+  in your environment:
+
+    cupy-cuda11x, cupy-cuda12x
+
+  Follow these steps to resolve this issue:
+
+    1. For all packages listed above, run the following command to remove all
+       existing CuPy installations:
+
+         $ pip uninstall <package_name>
+
+      If you previously installed CuPy via conda, also run the following:
+
+         $ conda uninstall cupy
+
+    2. Install the appropriate CuPy package.
+       Refer to the Installation Guide for detailed instructions.
+
+         https://docs.cupy.dev/en/stable/install.html
+
+--------------------------------------------------------------------------------
+
+  warnings.warn(f'''
+Pulled public WDI/ILO-UCW targets for 14 countries.
+Traceback (most recent call last):
+  File "/root/work/port_ref/scripts/exp3_rejection_abc_realdata.py", line 103, in <module>
+    main(args.draws, args.batch_n, args.out)
+  File "/root/work/port_ref/scripts/exp3_rejection_abc_realdata.py", line 48, in main
+    base_y = cp.exp(rng_cp.normal(0.0, 0.55, size=batch_n, dtype=cp.float32))
+AttributeError: 'Generator' object has no attribute 'normal'
+/root/work/port_ref/run_ref.sh: line 40: bc: command not found
+exp3_exit=1 exp3_wall_s=
+=== RESULTS ===
+total 8
+drwxr-xr-x 2 root root   29 Nov 24 18:01 .
+drwxr-xr-x 4 root root   70 Nov 24 18:01 ..
+-rw-r--r-- 1 root root 6517 Nov 24 18:01 run.log
+=== END 2026-11-24T18:01:37+08:00 ===

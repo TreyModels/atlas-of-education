@@ -1,0 +1,365 @@
+{
+  "n": 10000,
+  "seed": 20261125,
+  "threads": 256,
+  "blocks": 40,
+  "batch_N": 10000,
+  "cupy": "13.6.0",
+  "numpy": "2.2.6",
+  "cuda_device": "Tesla T4",
+  "kernel_sha256": "e24ca67fb9d580deb0eb55a6347071acd59f61a4dbdc1874a47f730e4d60e57e",
+  "data_stream": "numpy Philox(seed) -> float64 normal -> float32 (port mapping)",
+  "launches": [
+    {
+      "dgp": "DGP_ZERO_SIGNAL",
+      "year": 0,
+      "seed0": 20261125,
+      "seed1": 17,
+      "f_pub": 0.45,
+      "h_hidden": 0.35,
+      "psi": 0.45,
+      "ban": 0.0,
+      "q_pub": 0.65,
+      "diversion_beta": 0.0,
+      "w_child": 0.55,
+      "y_sub": 0.9,
+      "shadow_cost": 0.32,
+      "w_pov": 0.0,
+      "w_push": 0.0,
+      "w_tutor": 0.0,
+      "key": "DGP_ZERO_SIGNAL_t0"
+    },
+    {
+      "dgp": "DGP_ZERO_SIGNAL",
+      "year": 12,
+      "seed0": 20261125,
+      "seed1": 29,
+      "f_pub": 0.0,
+      "h_hidden": 0.35,
+      "psi": 0.45,
+      "ban": 0.0,
+      "q_pub": 0.65,
+      "diversion_beta": 0.0,
+      "w_child": 0.55,
+      "y_sub": 0.7507187715067893,
+      "shadow_cost": 0.32,
+      "w_pov": 0.0,
+      "w_push": 0.0,
+      "w_tutor": 0.0,
+      "key": "DGP_ZERO_SIGNAL_t12"
+    },
+    {
+      "dgp": "DGP_POVERTY",
+      "year": 0,
+      "seed0": 20261125,
+      "seed1": 17,
+      "f_pub": 0.45,
+      "h_hidden": 0.35,
+      "psi": 0.45,
+      "ban": 0.0,
+      "q_pub": 0.65,
+      "diversion_beta": 0.02,
+      "w_child": 0.55,
+      "y_sub": 0.9,
+      "shadow_cost": 0.32,
+      "w_pov": 2.2,
+      "w_push": 0.1,
+      "w_tutor": 0.8,
+      "key": "DGP_POVERTY_t0"
+    },
+    {
+      "dgp": "DGP_POVERTY",
+      "year": 12,
+      "seed0": 20261125,
+      "seed1": 29,
+      "f_pub": 0.0,
+      "h_hidden": 0.35,
+      "psi": 0.45,
+      "ban": 0.0,
+      "q_pub": 0.65,
+      "diversion_beta": 0.02,
+      "w_child": 0.55,
+      "y_sub": 0.7507187715067893,
+      "shadow_cost": 0.32,
+      "w_pov": 2.2,
+      "w_push": 0.1,
+      "w_tutor": 0.8,
+      "key": "DGP_POVERTY_t12"
+    },
+    {
+      "dgp": "DGP_SCHOOL_PUSH",
+      "year": 0,
+      "seed0": 20261125,
+      "seed1": 17,
+      "f_pub": 0.45,
+      "h_hidden": 0.35,
+      "psi": 0.45,
+      "ban": 0.0,
+      "q_pub": 0.65,
+      "diversion_beta": 0.05,
+      "w_child": 0.55,
+      "y_sub": 0.9,
+      "shadow_cost": 0.32,
+      "w_pov": 0.2,
+      "w_push": 2.0,
+      "w_tutor": 0.8,
+      "key": "DGP_SCHOOL_PUSH_t0"
+    },
+    {
+      "dgp": "DGP_SCHOOL_PUSH",
+      "year": 12,
+      "seed0": 20261125,
+      "seed1": 29,
+      "f_pub": 0.0,
+      "h_hidden": 0.35,
+      "psi": 0.45,
+      "ban": 0.0,
+      "q_pub": 0.65,
+      "diversion_beta": 0.05,
+      "w_child": 0.55,
+      "y_sub": 0.7507187715067893,
+      "shadow_cost": 0.32,
+      "w_pov": 0.2,
+      "w_push": 2.0,
+      "w_tutor": 0.8,
+      "key": "DGP_SCHOOL_PUSH_t12"
+    },
+    {
+      "dgp": "DGP_CROWDING_TUTOR",
+      "year": 0,
+      "seed0": 20261125,
+      "seed1": 17,
+      "f_pub": 0.45,
+      "h_hidden": 0.35,
+      "psi": 0.45,
+      "ban": 0.0,
+      "q_pub": 0.65,
+      "diversion_beta": 0.22,
+      "w_child": 0.55,
+      "y_sub": 0.9,
+      "shadow_cost": 0.32,
+      "w_pov": 0.3,
+      "w_push": 0.3,
+      "w_tutor": 2.2,
+      "key": "DGP_CROWDING_TUTOR_t0"
+    },
+    {
+      "dgp": "DGP_CROWDING_TUTOR",
+      "year": 12,
+      "seed0": 20261125,
+      "seed1": 29,
+      "f_pub": 0.0,
+      "h_hidden": 0.35,
+      "psi": 0.45,
+      "ban": 0.0,
+      "q_pub": 0.65,
+      "diversion_beta": 0.22,
+      "w_child": 0.55,
+      "y_sub": 0.7507187715067893,
+      "shadow_cost": 0.32,
+      "w_pov": 0.3,
+      "w_push": 0.3,
+      "w_tutor": 2.2,
+      "key": "DGP_CROWDING_TUTOR_t12"
+    },
+    {
+      "dgp": "DGP_MIXED",
+      "year": 0,
+      "seed0": 20261125,
+      "seed1": 17,
+      "f_pub": 0.45,
+      "h_hidden": 0.35,
+      "psi": 0.45,
+      "ban": 0.0,
+      "q_pub": 0.65,
+      "diversion_beta": 0.12,
+      "w_child": 0.55,
+      "y_sub": 0.9,
+      "shadow_cost": 0.32,
+      "w_pov": 1.4,
+      "w_push": 1.3,
+      "w_tutor": 1.6,
+      "key": "DGP_MIXED_t0"
+    },
+    {
+      "dgp": "DGP_MIXED",
+      "year": 12,
+      "seed0": 20261125,
+      "seed1": 29,
+      "f_pub": 0.0,
+      "h_hidden": 0.35,
+      "psi": 0.45,
+      "ban": 0.0,
+      "q_pub": 0.65,
+      "diversion_beta": 0.12,
+      "w_child": 0.55,
+      "y_sub": 0.7507187715067893,
+      "shadow_cost": 0.32,
+      "w_pov": 1.4,
+      "w_push": 1.3,
+      "w_tutor": 1.6,
+      "key": "DGP_MIXED_t12"
+    }
+  ],
+  "wall_s": 0.004,
+  "npz_sha256": "bf934925af800242421b27c9632ff2b275c030441ff3bf739007d239cf9b2856",
+  "npz_bytes": 1153264,
+  "array_shapes": {
+    "base_y": [
+      10000
+    ],
+    "ability": [
+      10000
+    ],
+    "state_DGP_ZERO_SIGNAL_t0": [
+      10000
+    ],
+    "tutor_DGP_ZERO_SIGNAL_t0": [
+      10000
+    ],
+    "learn_DGP_ZERO_SIGNAL_t0": [
+      10000
+    ],
+    "work_DGP_ZERO_SIGNAL_t0": [
+      10000
+    ],
+    "y_hh_DGP_ZERO_SIGNAL_t0": [
+      10000
+    ],
+    "state_DGP_ZERO_SIGNAL_t12": [
+      10000
+    ],
+    "tutor_DGP_ZERO_SIGNAL_t12": [
+      10000
+    ],
+    "learn_DGP_ZERO_SIGNAL_t12": [
+      10000
+    ],
+    "work_DGP_ZERO_SIGNAL_t12": [
+      10000
+    ],
+    "y_hh_DGP_ZERO_SIGNAL_t12": [
+      10000
+    ],
+    "state_DGP_POVERTY_t0": [
+      10000
+    ],
+    "tutor_DGP_POVERTY_t0": [
+      10000
+    ],
+    "learn_DGP_POVERTY_t0": [
+      10000
+    ],
+    "work_DGP_POVERTY_t0": [
+      10000
+    ],
+    "y_hh_DGP_POVERTY_t0": [
+      10000
+    ],
+    "state_DGP_POVERTY_t12": [
+      10000
+    ],
+    "tutor_DGP_POVERTY_t12": [
+      10000
+    ],
+    "learn_DGP_POVERTY_t12": [
+      10000
+    ],
+    "work_DGP_POVERTY_t12": [
+      10000
+    ],
+    "y_hh_DGP_POVERTY_t12": [
+      10000
+    ],
+    "state_DGP_SCHOOL_PUSH_t0": [
+      10000
+    ],
+    "tutor_DGP_SCHOOL_PUSH_t0": [
+      10000
+    ],
+    "learn_DGP_SCHOOL_PUSH_t0": [
+      10000
+    ],
+    "work_DGP_SCHOOL_PUSH_t0": [
+      10000
+    ],
+    "y_hh_DGP_SCHOOL_PUSH_t0": [
+      10000
+    ],
+    "state_DGP_SCHOOL_PUSH_t12": [
+      10000
+    ],
+    "tutor_DGP_SCHOOL_PUSH_t12": [
+      10000
+    ],
+    "learn_DGP_SCHOOL_PUSH_t12": [
+      10000
+    ],
+    "work_DGP_SCHOOL_PUSH_t12": [
+      10000
+    ],
+    "y_hh_DGP_SCHOOL_PUSH_t12": [
+      10000
+    ],
+    "state_DGP_CROWDING_TUTOR_t0": [
+      10000
+    ],
+    "tutor_DGP_CROWDING_TUTOR_t0": [
+      10000
+    ],
+    "learn_DGP_CROWDING_TUTOR_t0": [
+      10000
+    ],
+    "work_DGP_CROWDING_TUTOR_t0": [
+      10000
+    ],
+    "y_hh_DGP_CROWDING_TUTOR_t0": [
+      10000
+    ],
+    "state_DGP_CROWDING_TUTOR_t12": [
+      10000
+    ],
+    "tutor_DGP_CROWDING_TUTOR_t12": [
+      10000
+    ],
+    "learn_DGP_CROWDING_TUTOR_t12": [
+      10000
+    ],
+    "work_DGP_CROWDING_TUTOR_t12": [
+      10000
+    ],
+    "y_hh_DGP_CROWDING_TUTOR_t12": [
+      10000
+    ],
+    "state_DGP_MIXED_t0": [
+      10000
+    ],
+    "tutor_DGP_MIXED_t0": [
+      10000
+    ],
+    "learn_DGP_MIXED_t0": [
+      10000
+    ],
+    "work_DGP_MIXED_t0": [
+      10000
+    ],
+    "y_hh_DGP_MIXED_t0": [
+      10000
+    ],
+    "state_DGP_MIXED_t12": [
+      10000
+    ],
+    "tutor_DGP_MIXED_t12": [
+      10000
+    ],
+    "learn_DGP_MIXED_t12": [
+      10000
+    ],
+    "work_DGP_MIXED_t12": [
+      10000
+    ],
+    "y_hh_DGP_MIXED_t12": [
+      10000
+    ]
+  }
+}
