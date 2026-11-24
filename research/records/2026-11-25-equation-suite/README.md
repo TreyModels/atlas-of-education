@@ -1,10 +1,14 @@
 # Master Equation Inventory experiment suite (task-40)
 
-**Record:** `research/records/2026-11-25-equation-suite/` · branch `research/equation-suite-2026-11-25`.
+**Record:** `research/records/2026-11-25-equation-suite/` · original branch `research/equation-suite-2026-11-25`
+(`a7fcfb9`); numbers re-recorded on `research/equation-suite-neon-fixes-2026-11-25` after Neon's verified Part A
+patch and the Part B fixes.
 **Pre-registration:** `PRE_REGISTRATION.md` (committed before code: `dabc458`), plus Amendments 01–03 (system-map
 alignment, final massification scope, MASSENG v5 boundary labels) committed before any run.
 **Status:** synthetic-equation demonstration suite. **No causal claims. No invented citations. Not MASSENG v5
-output.**
+output.** `SUITE_REPORT.md` is the re-recorded report (10/10 executed; **3 decision-rule failures, only S4 of
+them on a pre-registered rule**); `NEON_PATCHES_2026-11-25.md` records what changed, the before→after table, and
+the pre-registration deviations. A script's PASS is its own `decision_rule.PASS`, not its process exit code.
 
 ## What this is
 
@@ -32,12 +36,14 @@ reports the range and sign-robustness, rather than one specification.
 ## How to run
 
 ```bash
-python scripts/run_all.py --smoke-only --workers 2     # local smoke
-OMP_NUM_THREADS=1 python scripts/run_all.py --workers 16   # full run (server)
+python scripts/run_all.py --smoke-only --workers 2          # local smoke (fewer reps; same code path)
+OMP_NUM_THREADS=1 python scripts/run_all.py --workers 6     # full run (re-recorded locally, exit 1: 3 rule failures)
 ```
 
-Outputs: `results/<script>.json`, `results/<script>.csv`, `results/run_all.json`,
-`results/run_all_manifest.csv` (statuses, wall times, sha256 of every script and output).
+`run_all.py` exits non-zero when any script's `decision_rule.PASS` is false (or no verdict can be read), even
+though every script exits 0. Outputs: `results/<script>.json`, `results/<script>.csv`, `results/run_all.json`,
+`results/run_all_manifest.csv` (per-script status, execution status, decision-rule verdict, rule flags, wall
+times, sha256 of every script and output). Non-finite values are written as `null`, never as `NaN`/`Infinity`.
 
 ## Honest limits
 
