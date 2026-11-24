@@ -70,4 +70,10 @@ causal or empirical claim. Stop/report on switch-off failure, engine error, >2 %
 or wall >40 min.
 
 ## Deviations log
-- (to be filled before any affected run)
+- 2026-11-24 (migration run 1, NO RESULTS): the first execution failed immediately with
+  `TypeError`/RemoteTraceback because `worlds.modules` instantiated `ee.Migration(migration=...)`;
+  engine module constructors take no arguments (module settings are passed through the engine
+  parameter dict). No run completed, no result exists; the failure log is preserved as
+  `run_migration_v1_failure.log`. Fix (before the successful run): instantiate `ee.Migration()` and
+  pass `migration` through `worlds.make` into `ee.build`; `closed` still omits the module so the
+  switch-off identity test is unchanged. Design, axes, seeds and protocol unchanged.

@@ -10,7 +10,7 @@ def modules(labour='queue', private=True, tutoring=True, fiscal=False, migration
     if tutoring: m.append(ee.TutoringMarket())
     if fiscal: m.append(ee.FiscalState())
     if migration != 'closed':
-        m.append(ee.Migration(migration=migration))
+        m.append(ee.Migration())
     m.append(ee.QueueLabour() if labour == 'queue' else ee.CompetitiveLabour())
     return m
 
@@ -37,6 +37,7 @@ def make(world, mods=None, **over):
     w = WORLDS[world]
     m = dict(w['mods']); m.update(mods or {})
     prm = dict(w['params']); prm.update(over)
+    prm['migration'] = m.get('migration', 'closed')
     return ee.build(modules(**m), **prm)
 
 
