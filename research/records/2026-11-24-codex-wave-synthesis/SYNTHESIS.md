@@ -347,3 +347,27 @@ python scripts/recompute_headlines.py --sources "$S" --out results/recompute.jso
 ```
 
 No secrets, no branch rewrites, no new analysis in this record.
+
+---
+
+
+## 9. Full-system multiverse (25 Nov 2026) — toy simulation, not history
+
+**Heads.** Full-system multiverse: `research/masseng-edsystem-2026-11-25` @ `b7108da` (`RUN_REPORT.md`; **1,440 runs** = 144 equation-choice combinations × 10 seeds, 304.1 s at 12 workers; `results_multiverse.json` sha256 `004173aa…`, `summary_multiverse.json` `549958e2…`, driver `932fc973…`; pre-registration `3679f2d`). Statistical tests: `research/edsystem-tests-2026-11-25` @ `aadbbb4` (`MULTIVERSE_TESTS.md`; cluster-robust OLS + seed FE + Holm over 9 outcomes + stratum sign checks). Equation suite: `research/equation-suite-2026-11-25` @ `a7fcfb9` (**10 scripts**, 61.7 s on the 192-core server, 0 runtime failures, **3 pre-declared decision-rule FAILs preserved**).
+
+**What was tested.** `eduengine`'s full massification chain — family affordability incl. forgone earnings → learning/quality → limited-place gates at four transitions → credential→jobs — with rural structure and supply/funding. The multiverse varies **equation/mechanism choices** (3 affordability × 2 supply funding × 3 learning/supply configurations × 2 gates × 2 labour regimes × 2 rural structures), not calibrated parameters. **Toy simulation: every parameter illustrative, no causal or empirical claim, and not a MASSENG v5 output.**
+
+**Findings (toy-model regularities).**
+- **Gates dominate lower/upper attainment and the wealth completion gap.** Bar vs quota: lower completion **.720 vs .550**, upper **.609 vs .449**, tertiary .411 vs .313; the bar screens the poorest quintile hardest (lower completion q1 **.174** vs q5 **.966**). Quota lowers completion for everyone (middle quintiles most), narrows the absolute top–bottom gap (.792→.646) but barely moves wealth parity (.180→.165). Quota raises tutoring **.273→.499** (gate-adjacent .320→.604) and **shifts prep away from tertiary** (tertiary share .145→.078). Tests: quota-vs-bar lower completion **−17.0 pp** [−18.4,−15.7], tutoring **+22.6 pp** [21.3,23.9].
+- **Affordability dominates primary/tertiary completion and the poverty gap.** Cash-only vs credit: primary **.797 vs .929 / .910**, tertiary **.296 vs .362 / .428**; poorest-quintile lower completion .091→.195; wealth parity .103→.231/.183. Tests: credit vs cash primary **+13.2 pp** [12.6,13.9], tertiary up to **+13.2 pp** (poverty-line need).
+- **Jobs regime dominates formal share:** queue-with-credential-floors **.293** vs competitive **.627** (η² .96; tests **+33.4 pp** formal share, Holm-supported).
+- **Rural structure dominates wealth parity:** low vs high rural penalty **.245 vs .100** (tests **−14.6 pp**, sign-consistent) and lowers attainment at every level. **No migration, sorting or remittances are modelled.**
+- **Supply/funding moves public quality but is not identifiable from attainment:** fiscal loop vs fixed budget moves public quality 1.12 vs 0.99 (tests +0.132 [0.115,0.149]) but completion ranges overlap 1.00 — a statement about this design, not that supply never matters.
+- **Learning configuration moves the learning proxy but only slightly completion** (.622→.633→.651 lower across public-only/+private/+private+tutoring; value of learning η² .61).
+- **Tutoring is gate-driven and second-order** (η²≈0 for completion; +3.5 pp primary in tests). It is one module, not the system centre.
+- **Engine limitation, stated:** the push-out decomposition (liquidity vs choice vs never-started) is unusable because the engine overwrites the exit reason; no liquidity-vs-choice claim is made.
+
+**What not to believe.** Not causal, not empirical, not country-calibrated: do not quote as policy effects or as evidence about real quotas, affordability or jobs regimes. p-values describe regularities of the simulated design only. The full-system engine is toy `eduengine`, not MASSENG v5; migration, rural–urban sorting and remittances are missing (being added). The equation suite's **3 pre-declared FAILs remain FAIL**. Observed vs assumed: UIS/EdStats, ILO-UCW, GGDC/PWT, WDI/Barro-Lee and DHS aggregates are usable; demand, learning profiles, gate rules, credential requirements and migration flows are assumptions (task-41 top gaps). The DHS ecological FE-bug correction is already recorded in the dashboard and handoff (§14); never quote the old biased numbers (`708e34a`).
+
+**Next actions.** (1) Add migration/rural–urban sorting/remittances to `eduengine` and rerun the multiverse. (2) Fix the exit-reason bookkeeping before any liquidity-vs-choice claim. (3) Feed the equation test bench (task-43) with the suite's estimand/identification/benchmark frame. (4) Couple observed covariates where task-41 says usable; do not invent demand/learning/gate/credential targets. (5) DHS: the second African request remains the only route to the individual test.
+
