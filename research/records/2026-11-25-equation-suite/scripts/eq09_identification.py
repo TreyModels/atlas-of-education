@@ -25,12 +25,17 @@ def did_world(rng, N=40, T=20, effect=True):
 
 
 def twfe(Y, D, N, T):
+    """TWFE with explicit dummies. Y.reshape(-1) is row-major (index = i*T + t), so a
+    unit dummy is constant within a T-long block (np.repeat) and a time dummy cycles
+    across blocks (np.tile). The previous version had these transposed (tile for units,
+    repeat for time), so both dummy sets hit the wrong observations (Neon line audit /
+    handoff quarantine #4: eq09 TWFE transpose)."""
     rows = N * T
     X = [np.ones(rows), D.reshape(-1)]
     for i in range(1, N):
-        X.append(np.tile((np.arange(N) == i).astype(float), T))
+        X.append(np.repeat((np.arange(N) == i).astype(float), T))
     for t in range(1, T):
-        X.append(np.repeat((np.arange(T) == t).astype(float), N))
+        X.append(np.tile((np.arange(T) == t).astype(float), N))
     fit = ols(Y.reshape(-1), np.column_stack(X))
     return fit["b"][1], fit["se"][1]
 
@@ -61,9 +66,13 @@ def iv_world(rng, n, beta, endog=True):
     Xf = np.column_stack([np.ones(n), Z])
     Dhat = Xf @ np.linalg.lstsq(Xf, D, rcond=None)[0]
     X2 = np.column_stack([np.ones(n), Dhat])
-    b_iv = np.linalg.lstsq(X2, Y, rcond=None)[0][1]
-    e = Y - X2 @ np.linalg.lstsq(X2, Y, rcond=None)[0]
-    se = float(np.sqrt(np.mean(e ** 2) * np.linalg.pinv(X2.T @ X2)[1, 1]))
+    b2 = np.linalg.lstsq(X2, Y, rcond=None)[0]
+    b_iv = b2[1]
+    # 2SLS residuals must use the ACTUAL regressor D, not the first-stage fitted Dhat
+    # (Neon line audit / handoff quarantine #4: eq09 2SLS residuals).
+    e = Y - np.column_stack([np.ones(n), D]) @ b2
+    sigma2 = float(np.sum(e ** 2) / max(n - X2.shape[1], 1))
+    se = float(np.sqrt(sigma2 * np.linalg.pinv(X2.T @ X2)[1, 1]))
     return b_ols, b_iv, se
 
 
