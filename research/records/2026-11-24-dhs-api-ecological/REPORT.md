@@ -66,7 +66,7 @@ region**. All of this is an ecological association; the individual-level test re
 - **Indicators:** `FE_FRTY_W_MNC` (completed fertility 40–49; cumulative births; education breakdown; denominators
   published), `FE_FRTR_W_TFR` (period TFR 15–49; education breakdown; **no denominators**), `PR_WTFR_W_WFR`
   (wanted TFR; education; no denominators), `PR_DESL_W_WNM` (want no more; education; denominators),
-  `FE_AAFB_W_M25` (median age at first birth; education; no denominators), `FE_FRTR_W_GFR` (GFR; education),
+  `FE_AAFB_W_M25` (median age at first birth; education; no denominators), `FE_FRTR_W_GFR` (GFR; education; **panel pulled but never estimated — no computed value exists**),
   `FE_CEBA_W_MNC` + `FE_CEBA_W_MND` (mean CEB and mean child deaths, **age groups only** → surviving-children
   measure at survey level only), `ED_EDUC_W_SEH` (pipeline density).
 - **Coverage:** completed fertility 4-level **860 cells / 215 surveys / 65 countries** (2-group **692 / 346 /
@@ -158,8 +158,12 @@ contrast is "same sign" and 4% smaller in standardised units; by the letter of t
 excluding 1 makes it **"materially different magnitude"**, and that is reported as such. Overall: **the window
 and age range do not change the sign, and change the standardised magnitude by at most ~4%.**
 
-Robustness: `FE_FRTR_W_GFR` (general fertility rate) gives the same sign and similar standardised magnitude;
-median age at first birth (`FE_AAFB_W_M25`) has only 51 surveys with all four education levels and is descriptive
+**Not computed.** `FE_FRTR_W_GFR` (general fertility rate) was pre-registered as indicator **F** (a planned
+robustness check for B) and its panel was pulled (see `data/panel_edu*_FE_FRTR_W_GFR.csv`), but
+`scripts/estimate.py` never estimated it and **no GFR row exists in any committed result**
+(`results/model_table.csv`, `results/results.json`, `results/africa11/results.json` — 0 matches). No GFR number
+is reported or claimed here.
+`FE_AAFB_W_M25` (median age at first birth) has only 51 surveys with all four education levels and is descriptive
 only.
 
 ---
