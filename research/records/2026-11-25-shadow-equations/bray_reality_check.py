@@ -39,6 +39,8 @@ class BrayParams:
     urban_demand: float
     teacher_threshold: float
     own_premium: float
+    other_premium: float
+    grade9_bonus: float
     price_fee: float = 1.0
     cost_other: float = 0.5
     cost_commercial: float = 1.5
@@ -84,7 +86,10 @@ def simulate_bray(p: BrayParams) -> dict:
                       + p.urban_demand * urban)
             V = np.zeros((n, 3))  # none, own, other
             V[:, 1] = b0 + common + p.own_premium - p.price_fee
-            V[:, 2] = b0 - p.cost_other + common - 0.5 * p.price_fee
+            V[:, 2] = b0 - p.cost_other + common + p.other_premium - 0.5 * p.price_fee
+            if grade == 9:
+                V[:, 1] += p.grade9_bonus
+                V[:, 2] += p.grade9_bonus
             probs = _softmax(V)
             u = rng.random(n)
             choice = (u[:, None] > np.cumsum(probs, axis=1)).sum(axis=1)
@@ -117,14 +122,16 @@ def zscores(o):
 
 
 RANGES = {
-    "b0": (-4.0, 1.5),
+    "b0": (-5.0, 2.0),
     "b_income": (0.0, 2.0),
     "b_school_gap": (0.0, 3.0),
     "grade12_bonus": (0.0, 2.0),
     "urban_demand": (0.0, 1.5),
     "teacher_threshold": (0.0, 0.90),
-    "own_premium": (0.0, 2.5),
-    "cost_other": (0.0, 1.5),
+    "own_premium": (0.0, 3.0),
+    "other_premium": (0.0, 3.0),
+    "grade9_bonus": (-1.0, 1.0),
+    "cost_other": (0.0, 2.0),
 }
 
 
