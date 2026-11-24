@@ -1,0 +1,13 @@
+outcome,horizon,n_cells,n_specs,share_pass,share_weak,verdict,median_skill_persist,median_skill_trend,share_cells_beating_persistence
+ger_primary,1,120,24,0.042,0.292,WEAK,-0.7522,0.9095,0.3
+ger_primary,5,120,24,0.5,0.0,PASS,0.0572,0.6303,0.508
+ger_secondary,1,104,20,0.35,0.05,WEAK,-3.8369,0.7924,0.346
+ger_secondary,5,120,24,0.333,0.0,WEAK,-0.3704,0.6646,0.342
+cmpt_primary,1,120,24,0.167,0.167,WEAK,-0.3224,0.8229,0.267
+cmpt_primary,5,120,24,0.5,0.0,PASS,-0.0306,0.6141,0.45
+cmpt_lower_sec,1,120,24,0.0,0.333,WEAK,-1.0217,0.8289,0.325
+cmpt_lower_sec,5,120,24,0.333,0.0,WEAK,-0.0576,0.7305,0.45
+ptr_primary,1,120,24,0.125,0.208,WEAK,-0.4907,0.9395,0.292
+ptr_primary,5,120,24,0.625,0.0,PASS,0.0595,0.7956,0.608
+ptr_lower_sec,1,120,24,0.167,0.083,WEAK,-0.9232,0.8773,0.258
+ptr_lower_sec,5,120,24,0.292,0.042,WEAK,-0.0561,0.6662,0.408

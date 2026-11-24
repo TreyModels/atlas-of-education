@@ -1,0 +1,177 @@
+{
+  "api": "https://api.worldbank.org/v2",
+  "countries": {
+    "n": 217,
+    "sha256": "eacd85b3e43e32a49209e3fe964515f5f6a09ac76eefb3aed6592c6c4a8639b3"
+  },
+  "date_range": "1970:2023",
+  "files": {},
+  "indicators": {
+    "NY.GDP.PCAP.KD": {
+      "n_nonnull_country_rows": 10008,
+      "n_raw_rows": 14364,
+      "name": "GDP per capita (constant 2015 US$)",
+      "pages": 1,
+      "role": "macro",
+      "sha256_raw": "2bda5736c2e3d1b5a173329b3d052baf99469baabeb89b948cf53a795f005984",
+      "url": "https://api.worldbank.org/v2/country/all/indicator/NY.GDP.PCAP.KD?format=json&per_page=20000&page=1&date=1970:2023"
+    },
+    "SE.PRM.CMPT.ZS": {
+      "n_nonnull_country_rows": 4927,
+      "n_raw_rows": 14364,
+      "name": "Primary completion rate, total (% of relevant age group)",
+      "pages": 1,
+      "role": "outcome",
+      "sha256_raw": "0f2a52e041c260ed3b397c2592baaed1fe829d09726f70939df758ba86d4f414",
+      "url": "https://api.worldbank.org/v2/country/all/indicator/SE.PRM.CMPT.ZS?format=json&per_page=20000&page=1&date=1970:2023"
+    },
+    "SE.PRM.ENRL.TC.ZS": {
+      "n_nonnull_country_rows": 6016,
+      "n_raw_rows": 14364,
+      "name": "Pupil-teacher ratio, primary",
+      "pages": 1,
+      "role": "supply",
+      "sha256_raw": "7f6badbd01ee692a184d126480e093481f2f29575683114dc8fd3c50b66cc486",
+      "url": "https://api.worldbank.org/v2/country/all/indicator/SE.PRM.ENRL.TC.ZS?format=json&per_page=20000&page=1&date=1970:2023"
+    },
+    "SE.PRM.ENRR": {
+      "n_nonnull_country_rows": 7348,
+      "n_raw_rows": 14364,
+      "name": "School enrollment, primary (% gross)",
+      "pages": 1,
+      "role": "outcome",
+      "sha256_raw": "466d56d5043070c63c264b73b63fe05a8de63c0031d8acceeaaa22d034d60730",
+      "url": "https://api.worldbank.org/v2/country/all/indicator/SE.PRM.ENRR?format=json&per_page=20000&page=1&date=1970:2023"
+    },
+    "SE.PRM.PRIV.ZS": {
+      "n_nonnull_country_rows": 6081,
+      "n_raw_rows": 14364,
+      "name": "School enrollment, primary, private (% of total primary)",
+      "pages": 1,
+      "role": "mix",
+      "sha256_raw": "3b85735cf015137a354d068c58bdb075d6cb0c3af4fb64e9fa8dfb8fd4777c1d",
+      "url": "https://api.worldbank.org/v2/country/all/indicator/SE.PRM.PRIV.ZS?format=json&per_page=20000&page=1&date=1970:2023"
+    },
+    "SE.PRM.TCHR": {
+      "n_nonnull_country_rows": 6911,
+      "n_raw_rows": 14364,
+      "name": "Primary education, teachers",
+      "pages": 1,
+      "role": "supply",
+      "sha256_raw": "4d8561a0ce7fd59b355c8df38461e258177fc826da7719c0e82a64d99a574758",
+      "url": "https://api.worldbank.org/v2/country/all/indicator/SE.PRM.TCHR?format=json&per_page=20000&page=1&date=1970:2023"
+    },
+    "SE.SEC.CMPT.LO.ZS": {
+      "n_nonnull_country_rows": 4125,
+      "n_raw_rows": 14364,
+      "name": "Lower secondary completion rate, total (% of relevant age group)",
+      "pages": 1,
+      "role": "outcome",
+      "sha256_raw": "7636c5bc18e6f2e246a7ea573177c70497463b6d6ac198387d62af04adb145ab",
+      "url": "https://api.worldbank.org/v2/country/all/indicator/SE.SEC.CMPT.LO.ZS?format=json&per_page=20000&page=1&date=1970:2023"
+    },
+    "SE.SEC.ENRL.LO.TC.ZS": {
+      "n_nonnull_country_rows": 1955,
+      "n_raw_rows": 14364,
+      "name": "Pupil-teacher ratio, lower secondary",
+      "pages": 1,
+      "role": "supply",
+      "sha256_raw": "c9f23f274b0078f27470864c0076578ddd94d9de9fbe843e79bbff1ec1298b93",
+      "url": "https://api.worldbank.org/v2/country/all/indicator/SE.SEC.ENRL.LO.TC.ZS?format=json&per_page=20000&page=1&date=1970:2023"
+    },
+    "SE.SEC.ENRR": {
+      "n_nonnull_country_rows": 6162,
+      "n_raw_rows": 14364,
+      "name": "School enrollment, secondary (% gross)",
+      "pages": 1,
+      "role": "outcome",
+      "sha256_raw": "90e432ccefb10228946f953154e1565cc346c8521e3644c489ad53c35db4fbdb",
+      "url": "https://api.worldbank.org/v2/country/all/indicator/SE.SEC.ENRR?format=json&per_page=20000&page=1&date=1970:2023"
+    },
+    "SE.SEC.PRIV.ZS": {
+      "n_nonnull_country_rows": 2982,
+      "n_raw_rows": 14364,
+      "name": "School enrollment, secondary, private (% of total secondary)",
+      "pages": 1,
+      "role": "mix",
+      "sha256_raw": "32b317bea0509411dd0b5a60d10b21dd78e61776fa045ac8285f865264cbdf55",
+      "url": "https://api.worldbank.org/v2/country/all/indicator/SE.SEC.PRIV.ZS?format=json&per_page=20000&page=1&date=1970:2023"
+    },
+    "SE.XPD.PRIM.PC.ZS": {
+      "n_nonnull_country_rows": 1602,
+      "n_raw_rows": 14364,
+      "name": "Government expenditure per student, primary (% of GDP per capita)",
+      "pages": 1,
+      "role": "supply",
+      "sha256_raw": "d32d09489608749e7fb7661b6f7c44bc43086bf90174c310f252d5901326a1e9",
+      "url": "https://api.worldbank.org/v2/country/all/indicator/SE.XPD.PRIM.PC.ZS?format=json&per_page=20000&page=1&date=1970:2023"
+    },
+    "SE.XPD.SECO.PC.ZS": {
+      "n_nonnull_country_rows": 1442,
+      "n_raw_rows": 14364,
+      "name": "Government expenditure per student, secondary (% of GDP per capita)",
+      "pages": 1,
+      "role": "supply",
+      "sha256_raw": "fb2f25fbda0f5f4488b70608a10f41f8a83379cf8308c8aac6a4b34636e7137b",
+      "url": "https://api.worldbank.org/v2/country/all/indicator/SE.XPD.SECO.PC.ZS?format=json&per_page=20000&page=1&date=1970:2023"
+    },
+    "SE.XPD.TOTL.GD.ZS": {
+      "n_nonnull_country_rows": 5083,
+      "n_raw_rows": 14364,
+      "name": "Government expenditure on education, total (% of GDP)",
+      "pages": 1,
+      "role": "supply",
+      "sha256_raw": "0b42e08121aa853818288451fc834699f5cfd205c16ef8e0a5857f07e3ddf6ef",
+      "url": "https://api.worldbank.org/v2/country/all/indicator/SE.XPD.TOTL.GD.ZS?format=json&per_page=20000&page=1&date=1970:2023"
+    },
+    "SL.AGR.EMPL.ZS": {
+      "n_nonnull_country_rows": 6167,
+      "n_raw_rows": 14364,
+      "name": "Employment in agriculture (% of total employment) (modeled ILO estimate)",
+      "pages": 1,
+      "role": "demand_structural",
+      "sha256_raw": "6b24284d677ec065a5305fe9fc47abed688b21c8ae5f46d3970ae77cf5abdec5",
+      "url": "https://api.worldbank.org/v2/country/all/indicator/SL.AGR.EMPL.ZS?format=json&per_page=20000&page=1&date=1970:2023"
+    },
+    "SL.TLF.0714.ZS": {
+      "n_nonnull_country_rows": 281,
+      "n_raw_rows": 14364,
+      "name": "Children in employment, total (% of children ages 7-14)",
+      "pages": 1,
+      "role": "demand_structural",
+      "sha256_raw": "5e5e526525284266e21e402037682f5cae0fa891a0b326261e8dec67f27a55f8",
+      "url": "https://api.worldbank.org/v2/country/all/indicator/SL.TLF.0714.ZS?format=json&per_page=20000&page=1&date=1970:2023"
+    },
+    "SP.POP.TOTL": {
+      "n_nonnull_country_rows": 11698,
+      "n_raw_rows": 14364,
+      "name": "Population, total",
+      "pages": 1,
+      "role": "macro",
+      "sha256_raw": "f2267aed015afee67392f0e8de7dbea4d950ab11bcececf0c300af9d9c64dad4",
+      "url": "https://api.worldbank.org/v2/country/all/indicator/SP.POP.TOTL?format=json&per_page=20000&page=1&date=1970:2023"
+    },
+    "SP.URB.TOTL.IN.ZS": {
+      "n_nonnull_country_rows": 11718,
+      "n_raw_rows": 14364,
+      "name": "Urban population (% of total population)",
+      "pages": 1,
+      "role": "demand_structural",
+      "sha256_raw": "dedfd8bbfd50a7fd917b8c1534ef3675f0461c72103b15be8db61170f3283747",
+      "url": "https://api.worldbank.org/v2/country/all/indicator/SP.URB.TOTL.IN.ZS?format=json&per_page=20000&page=1&date=1970:2023"
+    }
+  },
+  "panel": {
+    "countries_with_any_data": 217,
+    "file": "data/wdi_long.csv",
+    "rows": 94506,
+    "sha256": "194bfbd67636ee4ddfa077715a0479475e4eb41e420d1fbdb995ca42786952aa",
+    "years": [
+      1970,
+      2023
+    ]
+  },
+  "per_page": 20000,
+  "retrieval_utc": "2026-11-24T16:02:11+00:00",
+  "tier": "OBSERVED (public World Bank API; no imputation, no interpolation)"
+}

@@ -1,0 +1,165 @@
+{
+  "data_dir": "data",
+  "horizons": [
+    1,
+    5
+  ],
+  "n_cells": 6048,
+  "outcomes": [
+    "ger_primary",
+    "ger_secondary",
+    "cmpt_primary",
+    "cmpt_lower_sec",
+    "ptr_primary",
+    "ptr_lower_sec"
+  ],
+  "tier": "OBSERVED core + declared assumptions (learning/gates/jobs/migration/borrowing not fitted)",
+  "transmission_rows": 40,
+  "verdicts": [
+    {
+      "horizon": 1,
+      "median_skill_persist": -0.7522,
+      "median_skill_trend": 0.9095,
+      "n_cells": 120,
+      "n_specs": 24,
+      "outcome": "ger_primary",
+      "share_cells_beating_persistence": 0.3,
+      "share_pass": 0.042,
+      "share_weak": 0.292,
+      "verdict": "WEAK"
+    },
+    {
+      "horizon": 5,
+      "median_skill_persist": 0.0572,
+      "median_skill_trend": 0.6303,
+      "n_cells": 120,
+      "n_specs": 24,
+      "outcome": "ger_primary",
+      "share_cells_beating_persistence": 0.508,
+      "share_pass": 0.5,
+      "share_weak": 0.0,
+      "verdict": "PASS"
+    },
+    {
+      "horizon": 1,
+      "median_skill_persist": -3.8369,
+      "median_skill_trend": 0.7924,
+      "n_cells": 104,
+      "n_specs": 20,
+      "outcome": "ger_secondary",
+      "share_cells_beating_persistence": 0.346,
+      "share_pass": 0.35,
+      "share_weak": 0.05,
+      "verdict": "WEAK"
+    },
+    {
+      "horizon": 5,
+      "median_skill_persist": -0.3704,
+      "median_skill_trend": 0.6646,
+      "n_cells": 120,
+      "n_specs": 24,
+      "outcome": "ger_secondary",
+      "share_cells_beating_persistence": 0.342,
+      "share_pass": 0.333,
+      "share_weak": 0.0,
+      "verdict": "WEAK"
+    },
+    {
+      "horizon": 1,
+      "median_skill_persist": -0.3224,
+      "median_skill_trend": 0.8229,
+      "n_cells": 120,
+      "n_specs": 24,
+      "outcome": "cmpt_primary",
+      "share_cells_beating_persistence": 0.267,
+      "share_pass": 0.167,
+      "share_weak": 0.167,
+      "verdict": "WEAK"
+    },
+    {
+      "horizon": 5,
+      "median_skill_persist": -0.0306,
+      "median_skill_trend": 0.6141,
+      "n_cells": 120,
+      "n_specs": 24,
+      "outcome": "cmpt_primary",
+      "share_cells_beating_persistence": 0.45,
+      "share_pass": 0.5,
+      "share_weak": 0.0,
+      "verdict": "PASS"
+    },
+    {
+      "horizon": 1,
+      "median_skill_persist": -1.0217,
+      "median_skill_trend": 0.8289,
+      "n_cells": 120,
+      "n_specs": 24,
+      "outcome": "cmpt_lower_sec",
+      "share_cells_beating_persistence": 0.325,
+      "share_pass": 0.0,
+      "share_weak": 0.333,
+      "verdict": "WEAK"
+    },
+    {
+      "horizon": 5,
+      "median_skill_persist": -0.0576,
+      "median_skill_trend": 0.7305,
+      "n_cells": 120,
+      "n_specs": 24,
+      "outcome": "cmpt_lower_sec",
+      "share_cells_beating_persistence": 0.45,
+      "share_pass": 0.333,
+      "share_weak": 0.0,
+      "verdict": "WEAK"
+    },
+    {
+      "horizon": 1,
+      "median_skill_persist": -0.4907,
+      "median_skill_trend": 0.9395,
+      "n_cells": 120,
+      "n_specs": 24,
+      "outcome": "ptr_primary",
+      "share_cells_beating_persistence": 0.292,
+      "share_pass": 0.125,
+      "share_weak": 0.208,
+      "verdict": "WEAK"
+    },
+    {
+      "horizon": 5,
+      "median_skill_persist": 0.0595,
+      "median_skill_trend": 0.7956,
+      "n_cells": 120,
+      "n_specs": 24,
+      "outcome": "ptr_primary",
+      "share_cells_beating_persistence": 0.608,
+      "share_pass": 0.625,
+      "share_weak": 0.0,
+      "verdict": "PASS"
+    },
+    {
+      "horizon": 1,
+      "median_skill_persist": -0.9232,
+      "median_skill_trend": 0.8773,
+      "n_cells": 120,
+      "n_specs": 24,
+      "outcome": "ptr_lower_sec",
+      "share_cells_beating_persistence": 0.258,
+      "share_pass": 0.167,
+      "share_weak": 0.083,
+      "verdict": "WEAK"
+    },
+    {
+      "horizon": 5,
+      "median_skill_persist": -0.0561,
+      "median_skill_trend": 0.6662,
+      "n_cells": 120,
+      "n_specs": 24,
+      "outcome": "ptr_lower_sec",
+      "share_cells_beating_persistence": 0.408,
+      "share_pass": 0.292,
+      "share_weak": 0.042,
+      "verdict": "WEAK"
+    }
+  ],
+  "wall_seconds": 132.3
+}

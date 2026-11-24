@@ -1,0 +1,14 @@
+started_utc: 2026-11-24T16:09:51+00:00
+host: autodl-container-a8f742b5ee-292349c5
+platform: Linux-5.15.0-94-generic-x86_64-with-glibc2.35
+python: 3.10.8
+numpy: 1.24.1
+argv: scripts/observed_core.py --data data --out results --workers 12
+workers: 12
+smoke: False
+data_rows: 94506
+wall_seconds: 132.3
+sha256 data/wdi_long.csv: 194bfbd67636ee4ddfa077715a0479475e4eb41e420d1fbdb995ca42786952aa
+sha256 data/countries.csv: eacd85b3e43e32a49209e3fe964515f5f6a09ac76eefb3aed6592c6c4a8639b3
+sha256 data/MANIFEST.json: dffd944b5cb1e3fb830d3f63d2884a28fbea2c9140dbb257ef2dcbae2bfde52e
+sha256 script: 6b392f725e0d99f860bcf3f3871155e54454598ad70f06d8548b1e4a01ad2dc8

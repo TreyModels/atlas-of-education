@@ -1,0 +1,14 @@
+started_utc: 2026-11-24T16:07:13+00:00
+host: Treys-MacBook-Air.local
+platform: macOS-26.6.2-arm64-arm-64bit
+python: 3.10.2
+numpy: 1.24.3
+argv: scripts/observed_core.py --data data --out results_smoke --smoke --workers 1
+workers: 1
+smoke: True
+data_rows: 94506
+wall_seconds: 2.1
+sha256 data/wdi_long.csv: 194bfbd67636ee4ddfa077715a0479475e4eb41e420d1fbdb995ca42786952aa
+sha256 data/countries.csv: eacd85b3e43e32a49209e3fe964515f5f6a09ac76eefb3aed6592c6c4a8639b3
+sha256 data/MANIFEST.json: dffd944b5cb1e3fb830d3f63d2884a28fbea2c9140dbb257ef2dcbae2bfde52e
+sha256 script: 3bbda88934c59953f2713bdb1fda7a447118fd6aa59ac371ac28b312f4ff0b5f

@@ -1,0 +1,3 @@
+outcome,horizon,n_cells,n_specs,share_pass,share_weak,verdict,median_skill_persist,median_skill_trend,share_cells_beating_persistence
+ger_primary,1,1,0,0.0,0.0,FAIL,0.0584,0.9535,1.0
+ger_secondary,1,1,0,0.0,0.0,FAIL,0.0694,0.9618,1.0

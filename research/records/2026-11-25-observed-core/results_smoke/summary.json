@@ -1,0 +1,40 @@
+{
+  "data_dir": "data",
+  "horizons": [
+    1
+  ],
+  "n_cells": 2,
+  "outcomes": [
+    "ger_primary",
+    "ger_secondary"
+  ],
+  "tier": "OBSERVED core + declared assumptions (learning/gates/jobs/migration/borrowing not fitted)",
+  "transmission_rows": 10,
+  "verdicts": [
+    {
+      "horizon": 1,
+      "median_skill_persist": 0.0584,
+      "median_skill_trend": 0.9535,
+      "n_cells": 1,
+      "n_specs": 0,
+      "outcome": "ger_primary",
+      "share_cells_beating_persistence": 1.0,
+      "share_pass": 0.0,
+      "share_weak": 0.0,
+      "verdict": "FAIL"
+    },
+    {
+      "horizon": 1,
+      "median_skill_persist": 0.0694,
+      "median_skill_trend": 0.9618,
+      "n_cells": 1,
+      "n_specs": 0,
+      "outcome": "ger_secondary",
+      "share_cells_beating_persistence": 1.0,
+      "share_pass": 0.0,
+      "share_weak": 0.0,
+      "verdict": "FAIL"
+    }
+  ],
+  "wall_seconds": 2.0
+}
