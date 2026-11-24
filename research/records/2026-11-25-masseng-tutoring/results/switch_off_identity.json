@@ -1,0 +1,2147 @@
+{
+  "label": "switch-off identity test (Model5 vs TutoringModel5 tutoring=False)",
+  "engine_file_sha256": "e01bd54383a7215503c3caff50212c5fcf16312aca9531e10ad810c7a3a5c17c",
+  "tutoring_sha256": "2fa27b1295e08677bdd8c964731bb362fd3a78b92a45ca142110b4de5244d15b",
+  "fit": {
+    "spec": "R1",
+    "cost": 105.25826238886292,
+    "nfev": 323
+  },
+  "full": {
+    "short_run": false,
+    "years": 85,
+    "baseline_seconds": 2.061,
+    "switch_off_seconds": 1.406,
+    "n_checks": 318,
+    "all_identical": true,
+    "checks": [
+      {
+        "path": "ind.ger_primary",
+        "shape": [
+          85
+        ],
+        "identical": true
+      },
+      {
+        "path": "ind.ner_primary",
+        "shape": [
+          85
+        ],
+        "identical": true
+      },
+      {
+        "path": "ind.ger_secondary",
+        "shape": [
+          85
+        ],
+        "identical": true
+      },
+      {
+        "path": "ind.ner_secondary",
+        "shape": [
+          85
+        ],
+        "identical": true
+      },
+      {
+        "path": "ind.ger_tertiary",
+        "shape": [
+          85
+        ],
+        "identical": true
+      },
+      {
+        "path": "ind.priv_primary",
+        "shape": [
+          85
+        ],
+        "identical": true
+      },
+      {
+        "path": "ind.priv_secondary",
+        "shape": [
+          85
+        ],
+        "identical": true
+      },
+      {
+        "path": "ind.priv_lower_secondary",
+        "shape": [
+          85
+        ],
+        "identical": true
+      },
+      {
+        "path": "ind.priv_upper_secondary",
+        "shape": [
+          85
+        ],
+        "identical": true
+      },
+      {
+        "path": "ind.priv_tertiary",
+        "shape": [
+          85
+        ],
+        "identical": true
+      },
+      {
+        "path": "ind.enrol_primary",
+        "shape": [
+          85
+        ],
+        "identical": true
+      },
+      {
+        "path": "ind.enrol_secondary",
+        "shape": [
+          85
+        ],
+        "identical": true
+      },
+      {
+        "path": "ind.enrol_tertiary",
+        "shape": [
+          85
+        ],
+        "identical": true
+      },
+      {
+        "path": "ind.S_primary",
+        "shape": [
+          85
+        ],
+        "identical": true
+      },
+      {
+        "path": "ind.S_secondary",
+        "shape": [
+          85
+        ],
+        "identical": true
+      },
+      {
+        "path": "ind.S_tertiary",
+        "shape": [
+          85
+        ],
+        "identical": true
+      },
+      {
+        "path": "ind.trans_lsec_usec",
+        "shape": [
+          85
+        ],
+        "identical": true
+      },
+      {
+        "path": "ind.ter_entrants_deferred_share",
+        "shape": [
+          85
+        ],
+        "identical": true
+      },
+      {
+        "path": "ind.edu_share_hh",
+        "shape": [
+          85
+        ],
+        "identical": true
+      },
+      {
+        "path": "ind.edu_share_bottom30",
+        "shape": [
+          85
+        ],
+        "identical": true
+      },
+      {
+        "path": "ind.edu_share_top70",
+        "shape": [
+          85
+        ],
+        "identical": true
+      },
+      {
+        "path": "ind.edu_share_d1",
+        "shape": [
+          85
+        ],
+        "identical": true
+      },
+      {
+        "path": "ind.edu_share_d10",
+        "shape": [
+          85
+        ],
+        "identical": true
+      },
+      {
+        "path": "ind.hh_share_total_spending",
+        "shape": [
+          85
+        ],
+        "identical": true
+      },
+      {
+        "path": "ind.gradlr_primary",
+        "shape": [
+          85
+        ],
+        "identical": true
+      },
+      {
+        "path": "ind.gradlr_secondary",
+        "shape": [
+          85
+        ],
+        "identical": true
+      },
+      {
+        "path": "ind.gradlr_tertiary",
+        "shape": [
+          85
+        ],
+        "identical": true
+      },
+      {
+        "path": "ind.pool_share_20_24",
+        "shape": [
+          85
+        ],
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1940.primary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1940.secondary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1940.tertiary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1941.primary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1941.secondary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1941.tertiary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1942.primary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1942.secondary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1942.tertiary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1943.primary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1943.secondary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1943.tertiary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1944.primary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1944.secondary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1944.tertiary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1945.primary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1945.secondary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1945.tertiary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1946.primary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1946.secondary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1946.tertiary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1947.primary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1947.secondary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1947.tertiary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1948.primary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1948.secondary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1948.tertiary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1949.primary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1949.secondary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1949.tertiary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1950.primary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1950.secondary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1950.tertiary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1951.primary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1951.secondary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1951.tertiary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1952.primary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1952.secondary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1952.tertiary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1953.primary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1953.secondary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1953.tertiary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1954.primary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1954.secondary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1954.tertiary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1955.primary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1955.secondary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1955.tertiary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1956.primary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1956.secondary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1956.tertiary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1957.primary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1957.secondary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1957.tertiary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1958.primary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1958.secondary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1958.tertiary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1959.primary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1959.secondary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1959.tertiary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1960.primary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1960.secondary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1960.tertiary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1961.primary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1961.secondary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1961.tertiary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1962.primary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1962.secondary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1962.tertiary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1963.primary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1963.secondary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1963.tertiary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1964.primary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1964.secondary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1964.tertiary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1965.primary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1965.secondary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1965.tertiary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1966.primary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1966.secondary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1966.tertiary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1967.primary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1967.secondary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1967.tertiary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1968.primary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1968.secondary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1968.tertiary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1969.primary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1969.secondary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1969.tertiary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1970.primary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1970.secondary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1970.tertiary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1971.primary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1971.secondary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1971.tertiary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1972.primary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1972.secondary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1972.tertiary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1973.primary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1973.secondary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1973.tertiary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1974.primary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1974.secondary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1974.tertiary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1975.primary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1975.secondary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1975.tertiary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1976.primary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1976.secondary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1976.tertiary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1977.primary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1977.secondary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1977.tertiary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1978.primary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1978.secondary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1978.tertiary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1979.primary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1979.secondary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1979.tertiary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1980.primary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1980.secondary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1980.tertiary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1981.primary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1981.secondary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1981.tertiary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1982.primary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1982.secondary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1982.tertiary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1983.primary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1983.secondary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1983.tertiary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1984.primary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1984.secondary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1984.tertiary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1985.primary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1985.secondary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1985.tertiary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1986.primary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1986.secondary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1986.tertiary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1987.primary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1987.secondary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1987.tertiary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1988.primary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1988.secondary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1988.tertiary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1989.primary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1989.secondary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1989.tertiary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1990.primary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1990.secondary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1990.tertiary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1991.primary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1991.secondary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1991.tertiary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1992.primary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1992.secondary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1992.tertiary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1993.primary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1993.secondary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1993.tertiary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1994.primary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1994.secondary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1994.tertiary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1995.primary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1995.secondary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1995.tertiary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1996.primary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1996.secondary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1996.tertiary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1997.primary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1997.secondary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1997.tertiary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1998.primary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1998.secondary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1998.tertiary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1999.primary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1999.secondary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.1999.tertiary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2000.primary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2000.secondary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2000.tertiary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2001.primary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2001.secondary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2001.tertiary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2002.primary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2002.secondary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2002.tertiary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2003.primary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2003.secondary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2003.tertiary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2004.primary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2004.secondary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2004.tertiary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2005.primary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2005.secondary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2005.tertiary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2006.primary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2006.secondary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2006.tertiary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2007.primary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2007.secondary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2007.tertiary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2008.primary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2008.secondary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2008.tertiary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2009.primary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2009.secondary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2009.tertiary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2010.primary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2010.secondary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2010.tertiary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2011.primary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2011.secondary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2011.tertiary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2012.primary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2012.secondary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2012.tertiary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2013.primary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2013.secondary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2013.tertiary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2014.primary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2014.secondary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2014.tertiary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2015.primary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2015.secondary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2015.tertiary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2016.primary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2016.secondary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2016.tertiary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2017.primary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2017.secondary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2017.tertiary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2018.primary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2018.secondary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2018.tertiary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2019.primary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2019.secondary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2019.tertiary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2020.primary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2020.secondary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2020.tertiary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2021.primary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2021.secondary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2021.tertiary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2022.primary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2022.secondary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2022.tertiary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2023.primary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2023.secondary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2023.tertiary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2024.primary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2024.secondary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2024.tertiary",
+        "identical": true
+      },
+      {
+        "path": "extra.grads",
+        "shape": [
+          116,
+          10,
+          4
+        ],
+        "identical": true
+      },
+      {
+        "path": "extra.drops",
+        "shape": [
+          116,
+          10
+        ],
+        "identical": true
+      },
+      {
+        "path": "extra.aged",
+        "shape": [
+          116,
+          10
+        ],
+        "identical": true
+      },
+      {
+        "path": "extra.entered",
+        "shape": [
+          116,
+          10
+        ],
+        "identical": true
+      },
+      {
+        "path": "extra.final_enrolled",
+        "shape": [
+          116,
+          10
+        ],
+        "identical": true
+      },
+      {
+        "path": "extra.final_pool",
+        "shape": [
+          116,
+          10
+        ],
+        "identical": true
+      },
+      {
+        "path": "extra.params.a_prim",
+        "identical": true
+      },
+      {
+        "path": "extra.params.a_sec",
+        "identical": true
+      },
+      {
+        "path": "extra.params.a_sec_entry",
+        "identical": true
+      },
+      {
+        "path": "extra.params.a_ter",
+        "identical": true
+      },
+      {
+        "path": "extra.params.a_ter_entry",
+        "identical": true
+      },
+      {
+        "path": "extra.params.b_h",
+        "identical": true
+      },
+      {
+        "path": "extra.params.b_p",
+        "identical": true
+      },
+      {
+        "path": "extra.params.b_r",
+        "identical": true
+      },
+      {
+        "path": "extra.params.eta",
+        "identical": true
+      },
+      {
+        "path": "extra.params.eta_x",
+        "identical": true
+      },
+      {
+        "path": "extra.params.kappa",
+        "identical": true
+      },
+      {
+        "path": "extra.params.lam",
+        "identical": true
+      },
+      {
+        "path": "extra.params.c_scale",
+        "identical": true
+      },
+      {
+        "path": "extra.params.mu_basic",
+        "identical": true
+      },
+      {
+        "path": "extra.params.mu_ter",
+        "identical": true
+      },
+      {
+        "path": "extra.params.nu",
+        "identical": true
+      },
+      {
+        "path": "extra.params.h_def",
+        "identical": true
+      },
+      {
+        "path": "extra.params.late",
+        "identical": true
+      },
+      {
+        "path": "extra.params.rep_prim",
+        "identical": true
+      },
+      {
+        "path": "extra.params.rep_sec",
+        "identical": true
+      },
+      {
+        "path": "extra.spec",
+        "identical": true
+      },
+      {
+        "path": "extra.markets.Q",
+        "shape": [
+          85,
+          4,
+          10
+        ],
+        "identical": true
+      },
+      {
+        "path": "extra.markets.L",
+        "shape": [
+          85,
+          4,
+          10
+        ],
+        "identical": true
+      },
+      {
+        "path": "extra.markets.E",
+        "shape": [
+          85,
+          4,
+          10
+        ],
+        "identical": true
+      },
+      {
+        "path": "extra.markets.R",
+        "shape": [
+          85,
+          4,
+          10
+        ],
+        "identical": true
+      },
+      {
+        "path": "extra.markets.unmet_effective",
+        "shape": [
+          85,
+          4,
+          10
+        ],
+        "identical": true
+      },
+      {
+        "path": "extra.markets.capacity",
+        "shape": [
+          85,
+          4,
+          10,
+          2
+        ],
+        "identical": true
+      },
+      {
+        "path": "extra.markets.admitted_by_sector",
+        "shape": [
+          85,
+          4,
+          10,
+          2
+        ],
+        "identical": true
+      },
+      {
+        "path": "extra.tutoring.switch",
+        "identical": true
+      }
+    ]
+  },
+  "short": {
+    "short_run": true,
+    "years": 25,
+    "baseline_seconds": 0.317,
+    "switch_off_seconds": 0.311,
+    "n_checks": 138,
+    "all_identical": true,
+    "checks": [
+      {
+        "path": "ind.ger_primary",
+        "shape": [
+          25
+        ],
+        "identical": true
+      },
+      {
+        "path": "ind.ner_primary",
+        "shape": [
+          25
+        ],
+        "identical": true
+      },
+      {
+        "path": "ind.ger_secondary",
+        "shape": [
+          25
+        ],
+        "identical": true
+      },
+      {
+        "path": "ind.ner_secondary",
+        "shape": [
+          25
+        ],
+        "identical": true
+      },
+      {
+        "path": "ind.ger_tertiary",
+        "shape": [
+          25
+        ],
+        "identical": true
+      },
+      {
+        "path": "ind.priv_primary",
+        "shape": [
+          25
+        ],
+        "identical": true
+      },
+      {
+        "path": "ind.priv_secondary",
+        "shape": [
+          25
+        ],
+        "identical": true
+      },
+      {
+        "path": "ind.priv_lower_secondary",
+        "shape": [
+          25
+        ],
+        "identical": true
+      },
+      {
+        "path": "ind.priv_upper_secondary",
+        "shape": [
+          25
+        ],
+        "identical": true
+      },
+      {
+        "path": "ind.priv_tertiary",
+        "shape": [
+          25
+        ],
+        "identical": true
+      },
+      {
+        "path": "ind.enrol_primary",
+        "shape": [
+          25
+        ],
+        "identical": true
+      },
+      {
+        "path": "ind.enrol_secondary",
+        "shape": [
+          25
+        ],
+        "identical": true
+      },
+      {
+        "path": "ind.enrol_tertiary",
+        "shape": [
+          25
+        ],
+        "identical": true
+      },
+      {
+        "path": "ind.S_primary",
+        "shape": [
+          25
+        ],
+        "identical": true
+      },
+      {
+        "path": "ind.S_secondary",
+        "shape": [
+          25
+        ],
+        "identical": true
+      },
+      {
+        "path": "ind.S_tertiary",
+        "shape": [
+          25
+        ],
+        "identical": true
+      },
+      {
+        "path": "ind.trans_lsec_usec",
+        "shape": [
+          25
+        ],
+        "identical": true
+      },
+      {
+        "path": "ind.ter_entrants_deferred_share",
+        "shape": [
+          25
+        ],
+        "identical": true
+      },
+      {
+        "path": "ind.edu_share_hh",
+        "shape": [
+          25
+        ],
+        "identical": true
+      },
+      {
+        "path": "ind.edu_share_bottom30",
+        "shape": [
+          25
+        ],
+        "identical": true
+      },
+      {
+        "path": "ind.edu_share_top70",
+        "shape": [
+          25
+        ],
+        "identical": true
+      },
+      {
+        "path": "ind.edu_share_d1",
+        "shape": [
+          25
+        ],
+        "identical": true
+      },
+      {
+        "path": "ind.edu_share_d10",
+        "shape": [
+          25
+        ],
+        "identical": true
+      },
+      {
+        "path": "ind.hh_share_total_spending",
+        "shape": [
+          25
+        ],
+        "identical": true
+      },
+      {
+        "path": "ind.gradlr_primary",
+        "shape": [
+          25
+        ],
+        "identical": true
+      },
+      {
+        "path": "ind.gradlr_secondary",
+        "shape": [
+          25
+        ],
+        "identical": true
+      },
+      {
+        "path": "ind.gradlr_tertiary",
+        "shape": [
+          25
+        ],
+        "identical": true
+      },
+      {
+        "path": "ind.pool_share_20_24",
+        "shape": [
+          25
+        ],
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2000.primary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2000.secondary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2000.tertiary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2001.primary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2001.secondary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2001.tertiary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2002.primary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2002.secondary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2002.tertiary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2003.primary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2003.secondary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2003.tertiary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2004.primary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2004.secondary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2004.tertiary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2005.primary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2005.secondary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2005.tertiary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2006.primary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2006.secondary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2006.tertiary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2007.primary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2007.secondary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2007.tertiary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2008.primary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2008.secondary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2008.tertiary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2009.primary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2009.secondary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2009.tertiary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2010.primary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2010.secondary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2010.tertiary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2011.primary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2011.secondary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2011.tertiary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2012.primary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2012.secondary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2012.tertiary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2013.primary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2013.secondary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2013.tertiary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2014.primary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2014.secondary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2014.tertiary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2015.primary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2015.secondary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2015.tertiary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2016.primary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2016.secondary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2016.tertiary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2017.primary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2017.secondary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2017.tertiary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2018.primary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2018.secondary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2018.tertiary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2019.primary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2019.secondary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2019.tertiary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2020.primary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2020.secondary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2020.tertiary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2021.primary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2021.secondary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2021.tertiary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2022.primary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2022.secondary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2022.tertiary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2023.primary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2023.secondary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2023.tertiary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2024.primary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2024.secondary",
+        "identical": true
+      },
+      {
+        "path": "extra.deciles.2024.tertiary",
+        "identical": true
+      },
+      {
+        "path": "extra.grads",
+        "shape": [
+          56,
+          10,
+          4
+        ],
+        "identical": true
+      },
+      {
+        "path": "extra.drops",
+        "shape": [
+          56,
+          10
+        ],
+        "identical": true
+      },
+      {
+        "path": "extra.aged",
+        "shape": [
+          56,
+          10
+        ],
+        "identical": true
+      },
+      {
+        "path": "extra.entered",
+        "shape": [
+          56,
+          10
+        ],
+        "identical": true
+      },
+      {
+        "path": "extra.final_enrolled",
+        "shape": [
+          56,
+          10
+        ],
+        "identical": true
+      },
+      {
+        "path": "extra.final_pool",
+        "shape": [
+          56,
+          10
+        ],
+        "identical": true
+      },
+      {
+        "path": "extra.params.a_prim",
+        "identical": true
+      },
+      {
+        "path": "extra.params.a_sec",
+        "identical": true
+      },
+      {
+        "path": "extra.params.a_sec_entry",
+        "identical": true
+      },
+      {
+        "path": "extra.params.a_ter",
+        "identical": true
+      },
+      {
+        "path": "extra.params.a_ter_entry",
+        "identical": true
+      },
+      {
+        "path": "extra.params.b_h",
+        "identical": true
+      },
+      {
+        "path": "extra.params.b_p",
+        "identical": true
+      },
+      {
+        "path": "extra.params.b_r",
+        "identical": true
+      },
+      {
+        "path": "extra.params.eta",
+        "identical": true
+      },
+      {
+        "path": "extra.params.eta_x",
+        "identical": true
+      },
+      {
+        "path": "extra.params.kappa",
+        "identical": true
+      },
+      {
+        "path": "extra.params.lam",
+        "identical": true
+      },
+      {
+        "path": "extra.params.c_scale",
+        "identical": true
+      },
+      {
+        "path": "extra.params.mu_basic",
+        "identical": true
+      },
+      {
+        "path": "extra.params.mu_ter",
+        "identical": true
+      },
+      {
+        "path": "extra.params.nu",
+        "identical": true
+      },
+      {
+        "path": "extra.params.h_def",
+        "identical": true
+      },
+      {
+        "path": "extra.params.late",
+        "identical": true
+      },
+      {
+        "path": "extra.params.rep_prim",
+        "identical": true
+      },
+      {
+        "path": "extra.params.rep_sec",
+        "identical": true
+      },
+      {
+        "path": "extra.spec",
+        "identical": true
+      },
+      {
+        "path": "extra.markets.Q",
+        "shape": [
+          25,
+          4,
+          10
+        ],
+        "identical": true
+      },
+      {
+        "path": "extra.markets.L",
+        "shape": [
+          25,
+          4,
+          10
+        ],
+        "identical": true
+      },
+      {
+        "path": "extra.markets.E",
+        "shape": [
+          25,
+          4,
+          10
+        ],
+        "identical": true
+      },
+      {
+        "path": "extra.markets.R",
+        "shape": [
+          25,
+          4,
+          10
+        ],
+        "identical": true
+      },
+      {
+        "path": "extra.markets.unmet_effective",
+        "shape": [
+          25,
+          4,
+          10
+        ],
+        "identical": true
+      },
+      {
+        "path": "extra.markets.capacity",
+        "shape": [
+          25,
+          4,
+          10,
+          2
+        ],
+        "identical": true
+      },
+      {
+        "path": "extra.markets.admitted_by_sector",
+        "shape": [
+          25,
+          4,
+          10,
+          2
+        ],
+        "identical": true
+      },
+      {
+        "path": "extra.tutoring.switch",
+        "identical": true
+      }
+    ]
+  },
+  "verdict": "IDENTICAL \u2014 switch-off reproduces the untouched baseline bit-for-bit"
+}

@@ -1,0 +1,36 @@
+=== MASSENG tutoring coupling: server environment + hashes (final, committed files) ===
+Tue Nov 24 15:53:03 UTC 2026
+autodl-container-a8f742b5ee-292349c5
+192
+               total        used        free      shared  buff/cache   available
+Mem:            1007          88         164           4         753         904
+overlay          30G  299M   30G   1% /
+python 3.10.8
+numpy 1.24.1
+scipy 1.9.3
+NVIDIA GeForce RTX 4090 D, 24564 MiB
+
+=== deployed code + inputs (sha256) ===
+2fa27b1295e08677bdd8c964731bb362fd3a78b92a45ca142110b4de5244d15b  masseng/tutoring.py
+e01bd54383a7215503c3caff50212c5fcf16312aca9531e10ad810c7a3a5c17c  masseng/engine5.py
+34f47a17401430d69493f38bb531dec9622f6a73c7d9a25a6c837d921d22cf01  masseng/data.py
+e0690737d0570e719c20a946b50036d3290a6d1d70689f019ea89ab2d33ef796  outputs/PHL/v5/fit_R1.json
+92adf5d25fb808ba7b64e20f94f349454eb29816cd44ca9b58a902a524f0ab1d  /root/work/masseng-tutoring/record/scripts/analyse_results.py
+018cfe0308bb03f90ae937ce1808bf8988644ff0b5eb623cba96fa97ada1ba33  /root/work/masseng-tutoring/record/scripts/channel_decomposition.py
+6749e5a0de2dfc775b969eec6d0c0a7b3f9982c70e274efd27cb7aaac0fb3859  /root/work/masseng-tutoring/record/scripts/diag_env.py
+393f3fab3f2684627eca90eb56b743d41c50ab2fab1140fd4a517475e4f808d9  /root/work/masseng-tutoring/record/scripts/run_bray_check.py
+f5d928c9e8df2de084aa9b3eaf3cdc62b7e47b3ab7a1b71d5077e59d825c9721  /root/work/masseng-tutoring/record/scripts/run_coupling.py
+7dc32eabbb4ad787dc357982e764f0d79a5425ed415f3dc4ba0a73b0f7eac897  /root/work/masseng-tutoring/record/scripts/smoke_coupling.py
+de948dcabe488fb62fbca691eab686d98394a4610df4ae5d94747d204f31b9ac  /root/work/masseng-tutoring/record/scripts/verify_switch_off.py
+85e9b809daabdc20abbc6c182543f6c8edcd1d8b4e0a39162eb2a6c3109bc17a  /root/work/masseng-tutoring/record/ported/bray_reality_check.py
+dc14fadfa63c01f30677948d6aedc878e883a14bb31186e78700e4fc976783ba  /root/work/masseng-tutoring/record/ported/shadow_model.py
+
+=== results present on server ===
+total 6540
+drwxr-xr-x 2  501 staff     163 Nov 24 23:48 .
+drwxr-xr-x 6  501 staff      82 Nov 24 23:39 ..
+-rw-r--r-- 1 root root    16251 Nov 24 23:46 bray_check.json
+-rw-r--r-- 1 root root     5038 Nov 24 23:50 channel.log
+-rw-r--r-- 1 root root    15620 Nov 24 23:50 channel_decomposition.json
+-rw-r--r-- 1 root root  6607192 Nov 24 23:51 coupling_raw.json
+-rw-r--r-- 1 root root    44900 Nov 24 23:50 switch_off_identity.json

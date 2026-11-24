@@ -1,0 +1,1617 @@
+{
+  "meta": {
+    "label": "SIMULATION \u2014 MASSENG v5 R1 PHL with switchable shadow-tutoring module; no causal claims",
+    "created_utc": "2026-11-24T15:51:11Z",
+    "command": "/root/miniconda3/bin/python /root/work/masseng-tutoring/record/scripts/run_coupling.py --workers 60",
+    "host": "autodl-container-a8f742b5ee-292349c5",
+    "platform": "Linux-5.15.0-94-generic-x86_64-with-glibc2.35",
+    "python": "3.10.8",
+    "numpy": "1.24.1",
+    "model_dir": "/root/work/masseng-tutoring/model",
+    "fit_R1_sha256": "e0690737d0570e719c20a946b50036d3290a6d1d70689f019ea89ab2d33ef796",
+    "engine5_sha256": "e01bd54383a7215503c3caff50212c5fcf16312aca9531e10ad810c7a3a5c17c",
+    "tutoring_py_sha256": "2fa27b1295e08677bdd8c964731bb362fd3a78b92a45ca142110b4de5244d15b",
+    "configs": 53,
+    "workers": 60,
+    "grid_wall_seconds": 10.403,
+    "pristine_baseline_seconds": 1.638,
+    "errors": 0,
+    "phl_tut_target": [
+      2010,
+      0.436
+    ],
+    "ref_fee_share_of_gdppc": 0.03,
+    "shs_public_seat_share": {
+      "2017": 0.529,
+      "2024": 0.529
+    },
+    "anchor": {
+      "b0": -0.579960677898339,
+      "b_income": 0.9824628208541586,
+      "b_quality": 1.8720819262593236,
+      "own_premium": 1.8244280806062503,
+      "other_premium": 2.5665315834074915,
+      "cost_other": 1.5318831868898115,
+      "cost_commercial": 1.0,
+      "price_own": 1.0,
+      "price_other": 0.8,
+      "price_commercial": 1.5,
+      "level_tilt": {
+        "primary": 0.0,
+        "secondary": -0.3059149260704672,
+        "upper_secondary": 1.220283660596227,
+        "tertiary": 1.220283660596227
+      },
+      "fee": 1.0,
+      "fee_ref": 0.03,
+      "ban_own": false,
+      "learning": true,
+      "odds_multiplier": 1.1,
+      "spend_feedback": true,
+      "label": "bray_50000_best"
+    },
+    "anchor_source": "/root/work/masseng-tutoring/record/results/bray_check.json best draw (max_z 0.531, 50000 draws)"
+  },
+  "switch_off_arm_equals_pristine": true,
+  "system_ledger_off": {
+    "ger_primary": {
+      "1970": 91.60674033324244,
+      "1990": 102.30708518117515,
+      "2000": 103.20234370860642,
+      "2010": 108.45517543247149,
+      "2018": 103.80081071825978,
+      "2024": 104.81159469177527
+    },
+    "ger_secondary": {
+      "1970": 42.27539936707333,
+      "1990": 68.80318318225396,
+      "2000": 77.22536696157078,
+      "2010": 94.0618135903099,
+      "2018": 101.53935788191605,
+      "2024": 99.07043238732598
+    },
+    "ger_tertiary": {
+      "1970": 15.186598838552499,
+      "1990": 29.10543613898288,
+      "2000": 39.615237139556804,
+      "2010": 57.92582267102376,
+      "2018": 40.2257518465853,
+      "2024": 76.2424087085656
+    },
+    "ner_primary": {
+      "1970": 85.77884689663628,
+      "1990": 95.38190630964463,
+      "2000": 83.24600172744371,
+      "2010": 92.50726271550322,
+      "2018": 95.60368474943597,
+      "2024": 96.45427375764231
+    },
+    "ner_secondary": {
+      "1970": 38.485735365788884,
+      "1990": 61.86954302119252,
+      "2000": 55.769692539954065,
+      "2010": 68.55188334185029,
+      "2018": 87.00566718316043,
+      "2024": 89.32362190358958
+    },
+    "priv_primary": {
+      "1970": 5.285322307031882,
+      "1990": 11.214701072684594,
+      "2000": 13.527203168056783,
+      "2010": 18.16865827805674,
+      "2018": 26.181785243949438,
+      "2024": 32.31867839935107
+    },
+    "priv_secondary": {
+      "1970": 4.667684894429844,
+      "1990": 8.184970592340042,
+      "2000": 12.341446814984067,
+      "2010": 17.414110747245406,
+      "2018": 27.64420610956677,
+      "2024": 33.51287609386862
+    },
+    "priv_lower_secondary": {
+      "1970": 4.667684894429847,
+      "1990": 8.184970592340042,
+      "2000": 12.341446814984062,
+      "2010": 17.414110747245402,
+      "2018": 26.149881611604258,
+      "2024": 32.09399642898167
+    },
+    "priv_upper_secondary": {
+      "1970": null,
+      "1990": null,
+      "2000": null,
+      "2010": null,
+      "2018": 30.945126401700065,
+      "2024": 36.509990750804626
+    },
+    "priv_tertiary": {
+      "1970": 77.83279967649004,
+      "1990": 76.49730406038336,
+      "2000": 72.45748264800281,
+      "2010": 74.66311241166653,
+      "2018": 77.31087686939142,
+      "2024": 82.29451462490047
+    },
+    "trans_lsec_usec": {
+      "1970": null,
+      "1990": null,
+      "2000": null,
+      "2010": null,
+      "2018": 0.9999997471712531,
+      "2024": 0.9999998902584757
+    },
+    "S_primary": {
+      "1970": 0.5076205078279822,
+      "1990": 0.921725775673029,
+      "2000": 0.9715521899901287,
+      "2010": 0.9773626142274991,
+      "2018": 0.9771308281182246,
+      "2024": 0.981491582367878
+    },
+    "S_secondary": {
+      "1970": 0.1653744127354293,
+      "1990": 0.33843628435284506,
+      "2000": 0.51265564448188,
+      "2010": 0.685721722387252,
+      "2018": 0.812247709146428,
+      "2024": 0.8737740731718908
+    },
+    "S_tertiary": {
+      "1970": 0.10206954573947047,
+      "1990": 0.21335833101393684,
+      "2000": 0.29508901790939573,
+      "2010": 0.40388681682364935,
+      "2018": 0.5478185243451573,
+      "2024": 0.49485642922270934
+    },
+    "edu_share_hh": {
+      "1970": 2.068874873650769,
+      "1990": 2.7874067499128885,
+      "2000": 3.4531916451769527,
+      "2010": 4.732796488822592,
+      "2018": 4.54961590193978,
+      "2024": 6.518754057209815
+    },
+    "edu_share_bottom30": {
+      "1970": 1.5461242733241065,
+      "1990": 1.8269575722541826,
+      "2000": 2.3511610903744695,
+      "2010": 3.4439016895397008,
+      "2018": 5.988789378804668,
+      "2024": 7.560261870380541
+    },
+    "edu_share_top70": {
+      "1970": 2.1264080120988087,
+      "1990": 2.885812168970067,
+      "2000": 3.5447253598222215,
+      "2010": 4.846278081844844,
+      "2018": 4.399321903754198,
+      "2024": 6.3961517868758575
+    },
+    "hh_share_total_spending": {
+      "1970": 49.61479526462377,
+      "1990": 49.75387448312259,
+      "2000": 43.99983766649645,
+      "2010": 57.07189775359637,
+      "2018": 45.93798638152341,
+      "2024": 54.45837916286584
+    },
+    "pool_share_20_24": {
+      "1970": 0.015684379435805813,
+      "1990": 0.035363806549596616,
+      "2000": 0.0947379922507315,
+      "2010": 0.09417422433170448,
+      "2018": 0.05135375775272442,
+      "2024": 0.016502859910853502
+    }
+  },
+  "dropout_baseline": [
+    0.7261,
+    0.6459,
+    0.5964,
+    0.5576,
+    0.5162,
+    0.4623,
+    0.3913,
+    0.3004,
+    0.1844,
+    0.0443
+  ],
+  "grads_by_decile_level": [
+    [
+      0.05,
+      0.0,
+      0.08,
+      0.12
+    ],
+    [
+      0.0,
+      0.0,
+      0.28,
+      0.59
+    ],
+    [
+      0.0,
+      0.0,
+      0.42,
+      0.99
+    ],
+    [
+      0.0,
+      0.0,
+      0.44,
+      1.42
+    ],
+    [
+      0.0,
+      0.0,
+      0.34,
+      1.96
+    ],
+    [
+      0.0,
+      0.0,
+      0.23,
+      2.58
+    ],
+    [
+      0.0,
+      0.0,
+      0.16,
+      3.31
+    ],
+    [
+      0.0,
+      0.0,
+      0.09,
+      4.19
+    ],
+    [
+      0.0,
+      0.0,
+      0.03,
+      5.26
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      6.52
+    ]
+  ],
+  "arms": {
+    "central_learning_only": {
+      "n_runs": 3,
+      "ger_primary_2010": 0.0287,
+      "ger_primary_2024": 0.0192,
+      "ger_secondary_2010": 0.9851,
+      "ger_secondary_2024": 0.2176,
+      "ger_tertiary_2010": 2.3245,
+      "ger_tertiary_2024": 0.8653,
+      "ner_secondary_2010": 0.5328,
+      "ner_secondary_2024": 0.1702,
+      "S_secondary_2010": 0.0219,
+      "S_secondary_2024": 0.0096,
+      "S_tertiary_2010": 0.0203,
+      "S_tertiary_2024": 0.0104,
+      "edu_share_hh_2010": 0.7399,
+      "edu_share_hh_2024": 0.9225,
+      "hh_share_total_spending_2010": 3.5165,
+      "hh_share_total_spending_2024": 3.2586,
+      "priv_secondary_2010": 0.1474,
+      "priv_secondary_2024": 0.129,
+      "priv_upper_secondary_2010": null,
+      "priv_upper_secondary_2024": 0.0463,
+      "priv_tertiary_2010": -0.6393,
+      "priv_tertiary_2024": 0.1134,
+      "tut_participation_2010": 0.5236,
+      "tut_participation_2024": 0.6688,
+      "tut_spend_share_gdp_2010": 0.452,
+      "tut_spend_share_gdp_2024": 0.6273,
+      "tut_participation_gap_q5_q1_2010": 0.5721,
+      "tut_participation_gap_q5_q1_2024": 0.4077,
+      "dropout_by_decile_2010": [
+        -0.0093,
+        -0.0137,
+        -0.0148,
+        -0.0141,
+        -0.0139,
+        -0.0141,
+        -0.013,
+        -0.0109,
+        -0.0081,
+        -0.0026
+      ],
+      "dropout_by_decile_2024": [
+        -0.0093,
+        -0.0137,
+        -0.0148,
+        -0.0141,
+        -0.0139,
+        -0.0141,
+        -0.013,
+        -0.0109,
+        -0.0081,
+        -0.0026
+      ]
+    },
+    "central_learning_plus_financing": {
+      "n_runs": 3,
+      "ger_primary_2010": -0.0464,
+      "ger_primary_2024": 0.0133,
+      "ger_secondary_2010": -4.7792,
+      "ger_secondary_2024": -0.8238,
+      "ger_tertiary_2010": -9.0141,
+      "ger_tertiary_2024": -3.6709,
+      "ner_secondary_2010": -2.6347,
+      "ner_secondary_2024": -0.6268,
+      "S_secondary_2010": -0.0938,
+      "S_secondary_2024": -0.0473,
+      "S_tertiary_2010": -0.0702,
+      "S_tertiary_2024": -0.0478,
+      "edu_share_hh_2010": 0.1601,
+      "edu_share_hh_2024": 0.6389,
+      "hh_share_total_spending_2010": 0.8131,
+      "hh_share_total_spending_2024": 2.3077,
+      "priv_secondary_2010": -0.5748,
+      "priv_secondary_2024": -0.6324,
+      "priv_upper_secondary_2010": null,
+      "priv_upper_secondary_2024": -0.1984,
+      "priv_tertiary_2010": 3.5104,
+      "priv_tertiary_2024": -0.5798,
+      "tut_participation_2010": 0.5242,
+      "tut_participation_2024": 0.6696,
+      "tut_spend_share_gdp_2010": 0.4264,
+      "tut_spend_share_gdp_2024": 0.6169,
+      "tut_participation_gap_q5_q1_2010": 0.5715,
+      "tut_participation_gap_q5_q1_2024": 0.4206,
+      "dropout_by_decile_2010": [
+        0.0258,
+        0.045,
+        0.0505,
+        0.0523,
+        0.0505,
+        0.0552,
+        0.0551,
+        0.0476,
+        0.0344,
+        0.0081
+      ],
+      "dropout_by_decile_2024": [
+        0.0258,
+        0.045,
+        0.0505,
+        0.0523,
+        0.0505,
+        0.0552,
+        0.0551,
+        0.0476,
+        0.0344,
+        0.0081
+      ]
+    },
+    "learning_only_ban_own": {
+      "n_runs": 3,
+      "ger_primary_2010": 0.0119,
+      "ger_primary_2024": 0.009,
+      "ger_secondary_2010": 0.4484,
+      "ger_secondary_2024": 0.1039,
+      "ger_tertiary_2010": 1.0972,
+      "ger_tertiary_2024": 0.4237,
+      "ner_secondary_2010": 0.2429,
+      "ner_secondary_2024": 0.0806,
+      "S_secondary_2010": 0.0099,
+      "S_secondary_2024": 0.0045,
+      "S_tertiary_2010": 0.0095,
+      "S_tertiary_2024": 0.005,
+      "edu_share_hh_2010": 0.3821,
+      "edu_share_hh_2024": 0.5428,
+      "hh_share_total_spending_2010": 1.8906,
+      "hh_share_total_spending_2024": 1.9751,
+      "priv_secondary_2010": 0.0683,
+      "priv_secondary_2024": 0.0608,
+      "priv_upper_secondary_2010": null,
+      "priv_upper_secondary_2024": 0.0222,
+      "priv_tertiary_2010": -0.3106,
+      "priv_tertiary_2024": 0.0549,
+      "tut_participation_2010": 0.3085,
+      "tut_participation_2024": 0.4444,
+      "tut_spend_share_gdp_2010": 0.2372,
+      "tut_spend_share_gdp_2024": 0.3728,
+      "tut_participation_gap_q5_q1_2010": 0.4707,
+      "tut_participation_gap_q5_q1_2024": 0.4413,
+      "dropout_by_decile_2010": [
+        -0.0042,
+        -0.0061,
+        -0.0067,
+        -0.0065,
+        -0.0063,
+        -0.0065,
+        -0.0061,
+        -0.0051,
+        -0.0038,
+        -0.0014
+      ],
+      "dropout_by_decile_2024": [
+        -0.0042,
+        -0.0061,
+        -0.0067,
+        -0.0065,
+        -0.0063,
+        -0.0065,
+        -0.0061,
+        -0.0051,
+        -0.0038,
+        -0.0014
+      ]
+    },
+    "learning_only_fee_low": {
+      "n_runs": 3,
+      "ger_primary_2010": 0.0395,
+      "ger_primary_2024": 0.0247,
+      "ger_secondary_2010": 1.2803,
+      "ger_secondary_2024": 0.2776,
+      "ger_tertiary_2010": 2.9699,
+      "ger_tertiary_2024": 1.0909,
+      "ner_secondary_2010": 0.692,
+      "ner_secondary_2024": 0.2177,
+      "S_secondary_2010": 0.0285,
+      "S_secondary_2024": 0.0123,
+      "S_tertiary_2010": 0.026,
+      "S_tertiary_2024": 0.0132,
+      "edu_share_hh_2010": 0.5188,
+      "edu_share_hh_2024": 0.5595,
+      "hh_share_total_spending_2010": 2.5275,
+      "hh_share_total_spending_2024": 2.0337,
+      "priv_secondary_2010": 0.1892,
+      "priv_secondary_2024": 0.1651,
+      "priv_upper_secondary_2010": null,
+      "priv_upper_secondary_2024": 0.0587,
+      "priv_tertiary_2010": -0.8066,
+      "priv_tertiary_2024": 0.143,
+      "tut_participation_2010": 0.6185,
+      "tut_participation_2024": 0.7523,
+      "tut_spend_share_gdp_2010": 0.2702,
+      "tut_spend_share_gdp_2024": 0.3562,
+      "tut_participation_gap_q5_q1_2010": 0.5567,
+      "tut_participation_gap_q5_q1_2024": 0.3501,
+      "dropout_by_decile_2010": [
+        -0.0123,
+        -0.018,
+        -0.0193,
+        -0.0182,
+        -0.018,
+        -0.0181,
+        -0.0167,
+        -0.0138,
+        -0.0102,
+        -0.0032
+      ],
+      "dropout_by_decile_2024": [
+        -0.0123,
+        -0.018,
+        -0.0193,
+        -0.0182,
+        -0.018,
+        -0.0181,
+        -0.0167,
+        -0.0138,
+        -0.0102,
+        -0.0032
+      ]
+    },
+    "learning_only_fee_high": {
+      "n_runs": 3,
+      "ger_primary_2010": 0.0137,
+      "ger_primary_2024": 0.0103,
+      "ger_secondary_2010": 0.512,
+      "ger_secondary_2024": 0.1178,
+      "ger_tertiary_2010": 1.2465,
+      "ger_tertiary_2024": 0.4789,
+      "ner_secondary_2010": 0.2772,
+      "ner_secondary_2024": 0.0915,
+      "S_secondary_2010": 0.0114,
+      "S_secondary_2024": 0.0051,
+      "S_tertiary_2010": 0.0108,
+      "S_tertiary_2024": 0.0057,
+      "edu_share_hh_2010": 0.8553,
+      "edu_share_hh_2024": 1.2559,
+      "hh_share_total_spending_2010": 4.0137,
+      "hh_share_total_spending_2024": 4.3242,
+      "priv_secondary_2010": 0.0778,
+      "priv_secondary_2024": 0.0691,
+      "priv_upper_secondary_2010": null,
+      "priv_upper_secondary_2024": 0.0251,
+      "priv_tertiary_2010": -0.3516,
+      "priv_tertiary_2024": 0.0621,
+      "tut_participation_2010": 0.3387,
+      "tut_participation_2024": 0.4794,
+      "tut_spend_share_gdp_2010": 0.5727,
+      "tut_spend_share_gdp_2024": 0.8839,
+      "tut_participation_gap_q5_q1_2010": 0.4962,
+      "tut_participation_gap_q5_q1_2024": 0.4477,
+      "dropout_by_decile_2010": [
+        -0.0048,
+        -0.007,
+        -0.0077,
+        -0.0074,
+        -0.0072,
+        -0.0074,
+        -0.0069,
+        -0.0058,
+        -0.0044,
+        -0.0015
+      ],
+      "dropout_by_decile_2024": [
+        -0.0048,
+        -0.007,
+        -0.0077,
+        -0.0074,
+        -0.0072,
+        -0.0074,
+        -0.0069,
+        -0.0058,
+        -0.0044,
+        -0.0015
+      ]
+    },
+    "financing_only": {
+      "n_runs": 3,
+      "ger_primary_2010": -0.0788,
+      "ger_primary_2024": -0.0064,
+      "ger_secondary_2010": -6.422,
+      "ger_secondary_2024": -1.3203,
+      "ger_tertiary_2010": -11.5429,
+      "ger_tertiary_2024": -5.1255,
+      "ner_secondary_2010": -3.5484,
+      "ner_secondary_2024": -1.0115,
+      "S_secondary_2010": -0.1196,
+      "S_secondary_2024": -0.0663,
+      "S_tertiary_2010": -0.0879,
+      "S_tertiary_2024": -0.0648,
+      "edu_share_hh_2010": 0.0236,
+      "edu_share_hh_2024": 0.5302,
+      "hh_share_total_spending_2010": 0.1221,
+      "hh_share_total_spending_2024": 1.9316,
+      "priv_secondary_2010": -0.7281,
+      "priv_secondary_2024": -0.9037,
+      "priv_upper_secondary_2010": null,
+      "priv_upper_secondary_2024": -0.2749,
+      "priv_tertiary_2010": 4.4704,
+      "priv_tertiary_2024": -1.252,
+      "tut_participation_2010": 0.524,
+      "tut_participation_2024": 0.6697,
+      "tut_spend_share_gdp_2010": 0.4199,
+      "tut_spend_share_gdp_2024": 0.613,
+      "tut_participation_gap_q5_q1_2010": 0.571,
+      "tut_participation_gap_q5_q1_2024": 0.4261,
+      "dropout_by_decile_2010": [
+        0.0328,
+        0.0601,
+        0.0662,
+        0.0694,
+        0.0663,
+        0.071,
+        0.0711,
+        0.0616,
+        0.0447,
+        0.0117
+      ],
+      "dropout_by_decile_2024": [
+        0.0328,
+        0.0601,
+        0.0662,
+        0.0694,
+        0.0663,
+        0.071,
+        0.0711,
+        0.0616,
+        0.0447,
+        0.0117
+      ]
+    },
+    "learning_mult_1.05": {
+      "n_runs": 3,
+      "ger_primary_2010": -0.0621,
+      "ger_primary_2024": 0.0038,
+      "ger_secondary_2010": -5.5624,
+      "ger_secondary_2024": -1.0527,
+      "ger_tertiary_2010": -10.2517,
+      "ger_tertiary_2024": -4.3501,
+      "ner_secondary_2010": -3.0699,
+      "ner_secondary_2024": -0.8041,
+      "S_secondary_2010": -0.1064,
+      "S_secondary_2024": -0.0563,
+      "S_tertiary_2010": -0.079,
+      "S_tertiary_2024": -0.0558,
+      "edu_share_hh_2010": 0.0936,
+      "edu_share_hh_2024": 0.5881,
+      "hh_share_total_spending_2010": 0.4792,
+      "hh_share_total_spending_2024": 2.1327,
+      "priv_secondary_2010": -0.6506,
+      "priv_secondary_2024": -0.76,
+      "priv_upper_secondary_2010": null,
+      "priv_upper_secondary_2024": -0.2358,
+      "priv_tertiary_2010": 3.9752,
+      "priv_tertiary_2024": -0.8928,
+      "tut_participation_2010": 0.5241,
+      "tut_participation_2024": 0.6697,
+      "tut_spend_share_gdp_2010": 0.4233,
+      "tut_spend_share_gdp_2024": 0.6151,
+      "tut_participation_gap_q5_q1_2010": 0.5712,
+      "tut_participation_gap_q5_q1_2024": 0.4231,
+      "dropout_by_decile_2010": [
+        0.0292,
+        0.0522,
+        0.0581,
+        0.0606,
+        0.0581,
+        0.0629,
+        0.0628,
+        0.0544,
+        0.0393,
+        0.0098
+      ],
+      "dropout_by_decile_2024": [
+        0.0292,
+        0.0522,
+        0.0581,
+        0.0606,
+        0.0581,
+        0.0629,
+        0.0628,
+        0.0544,
+        0.0393,
+        0.0098
+      ]
+    },
+    "learning_mult_1.20": {
+      "n_runs": 3,
+      "ger_primary_2010": -0.0179,
+      "ger_primary_2024": 0.0305,
+      "ger_secondary_2010": -3.4088,
+      "ger_secondary_2024": -0.4546,
+      "ger_tertiary_2010": -6.6785,
+      "ger_tertiary_2024": -2.4831,
+      "ner_secondary_2010": -1.8743,
+      "ner_secondary_2024": -0.3407,
+      "S_secondary_2010": -0.0706,
+      "S_secondary_2024": -0.0321,
+      "S_tertiary_2010": -0.0533,
+      "S_tertiary_2024": -0.0336,
+      "edu_share_hh_2010": 0.284,
+      "edu_share_hh_2024": 0.7242,
+      "hh_share_total_spending_2010": 1.4217,
+      "hh_share_total_spending_2024": 2.5979,
+      "priv_secondary_2010": -0.4302,
+      "priv_secondary_2024": -0.4169,
+      "priv_upper_secondary_2010": null,
+      "priv_upper_secondary_2024": -0.1301,
+      "priv_tertiary_2010": 2.6553,
+      "priv_tertiary_2024": -0.1358,
+      "tut_participation_2010": 0.5242,
+      "tut_participation_2024": 0.6695,
+      "tut_spend_share_gdp_2010": 0.4321,
+      "tut_spend_share_gdp_2024": 0.62,
+      "tut_participation_gap_q5_q1_2010": 0.5719,
+      "tut_participation_gap_q5_q1_2024": 0.4167,
+      "dropout_by_decile_2010": [
+        0.0187,
+        0.0319,
+        0.0363,
+        0.0372,
+        0.0366,
+        0.041,
+        0.0411,
+        0.0355,
+        0.0255,
+        0.0052
+      ],
+      "dropout_by_decile_2024": [
+        0.0187,
+        0.0319,
+        0.0363,
+        0.0372,
+        0.0366,
+        0.041,
+        0.0411,
+        0.0355,
+        0.0255,
+        0.0052
+      ]
+    },
+    "quality_teachers": {
+      "n_runs": 3,
+      "ger_primary_2010": -0.034,
+      "ger_primary_2024": 0.0097,
+      "ger_secondary_2010": -6.2284,
+      "ger_secondary_2024": -1.08,
+      "ger_tertiary_2010": -11.0294,
+      "ger_tertiary_2024": -4.5394,
+      "ner_secondary_2010": -3.4314,
+      "ner_secondary_2024": -0.8223,
+      "S_secondary_2010": -0.1181,
+      "S_secondary_2024": -0.0615,
+      "S_tertiary_2010": -0.0847,
+      "S_tertiary_2024": -0.0602,
+      "edu_share_hh_2010": 0.0467,
+      "edu_share_hh_2024": 0.46,
+      "hh_share_total_spending_2010": 0.2402,
+      "hh_share_total_spending_2024": 1.6852,
+      "priv_secondary_2010": -0.7212,
+      "priv_secondary_2024": -0.8843,
+      "priv_upper_secondary_2010": null,
+      "priv_upper_secondary_2024": -0.3186,
+      "priv_tertiary_2010": 4.2904,
+      "priv_tertiary_2024": -1.2172,
+      "tut_participation_2010": 0.5203,
+      "tut_participation_2024": 0.5875,
+      "tut_spend_share_gdp_2010": 0.4181,
+      "tut_spend_share_gdp_2024": 0.5393,
+      "tut_participation_gap_q5_q1_2010": 0.5875,
+      "tut_participation_gap_q5_q1_2024": 0.4544,
+      "dropout_by_decile_2010": [
+        0.0307,
+        0.0627,
+        0.071,
+        0.074,
+        0.0696,
+        0.0728,
+        0.0711,
+        0.06,
+        0.0413,
+        0.0089
+      ],
+      "dropout_by_decile_2024": [
+        0.0307,
+        0.0627,
+        0.071,
+        0.074,
+        0.0696,
+        0.0728,
+        0.0711,
+        0.06,
+        0.0413,
+        0.0089
+      ]
+    },
+    "limited_places_gate": {
+      "n_runs": 3,
+      "ger_primary_2010": -0.0464,
+      "ger_primary_2024": 0.0133,
+      "ger_secondary_2010": -4.7792,
+      "ger_secondary_2024": -2.4816,
+      "ger_tertiary_2010": -9.0141,
+      "ger_tertiary_2024": -8.7166,
+      "ner_secondary_2010": -2.6347,
+      "ner_secondary_2024": -1.6415,
+      "S_secondary_2010": -0.0938,
+      "S_secondary_2024": -0.0874,
+      "S_tertiary_2010": -0.0702,
+      "S_tertiary_2024": -0.0544,
+      "edu_share_hh_2010": 0.1601,
+      "edu_share_hh_2024": 0.6803,
+      "hh_share_total_spending_2010": 0.8131,
+      "hh_share_total_spending_2024": 2.4489,
+      "priv_secondary_2010": -0.5748,
+      "priv_secondary_2024": 7.8039,
+      "priv_upper_secondary_2010": null,
+      "priv_upper_secondary_2024": 28.2942,
+      "priv_tertiary_2010": 3.5104,
+      "priv_tertiary_2024": 2.2439,
+      "tut_participation_2010": 0.5242,
+      "tut_participation_2024": 0.6689,
+      "tut_spend_share_gdp_2010": 0.4264,
+      "tut_spend_share_gdp_2024": 0.6027,
+      "tut_participation_gap_q5_q1_2010": 0.5715,
+      "tut_participation_gap_q5_q1_2024": 0.4393,
+      "dropout_by_decile_2010": [
+        0.0503,
+        0.0783,
+        0.0703,
+        0.0598,
+        0.0529,
+        0.0559,
+        0.0553,
+        0.0477,
+        0.0344,
+        0.0081
+      ],
+      "dropout_by_decile_2024": [
+        0.0503,
+        0.0783,
+        0.0703,
+        0.0598,
+        0.0529,
+        0.0559,
+        0.0553,
+        0.0477,
+        0.0344,
+        0.0081
+      ]
+    },
+    "limited_places_gate_off": {
+      "n_runs": 1,
+      "ger_primary_2010": 0.0,
+      "ger_primary_2024": 0.0,
+      "ger_secondary_2010": 0.0,
+      "ger_secondary_2024": -1.4155,
+      "ger_tertiary_2010": 0.0,
+      "ger_tertiary_2024": -5.2767,
+      "ner_secondary_2010": 0.0,
+      "ner_secondary_2024": -0.8378,
+      "S_secondary_2010": 0.0,
+      "S_secondary_2024": -0.0384,
+      "S_tertiary_2010": 0.0,
+      "S_tertiary_2024": -0.007,
+      "edu_share_hh_2010": 0.0,
+      "edu_share_hh_2024": 0.0714,
+      "hh_share_total_spending_2010": 0.0,
+      "hh_share_total_spending_2024": 0.2699,
+      "priv_secondary_2010": 0.0,
+      "priv_secondary_2024": 8.5924,
+      "priv_upper_secondary_2010": null,
+      "priv_upper_secondary_2024": 28.5094,
+      "priv_tertiary_2010": 0.0,
+      "priv_tertiary_2024": 3.066,
+      "tut_participation_2010": null,
+      "tut_participation_2024": null,
+      "tut_spend_share_gdp_2010": null,
+      "tut_spend_share_gdp_2024": null,
+      "tut_participation_gap_q5_q1_2010": null,
+      "tut_participation_gap_q5_q1_2024": null,
+      "dropout_by_decile_2010": [
+        0.0314,
+        0.0307,
+        0.0135,
+        0.0044,
+        0.0014,
+        0.0004,
+        0.0001,
+        0.0,
+        0.0001,
+        0.0
+      ],
+      "dropout_by_decile_2024": [
+        0.0314,
+        0.0307,
+        0.0135,
+        0.0044,
+        0.0014,
+        0.0004,
+        0.0001,
+        0.0,
+        0.0001,
+        0.0
+      ]
+    }
+  },
+  "seed_spread_2010": {
+    "central_learning_only": {
+      "ger_secondary": {
+        "values": [
+          0.9847,
+          0.9705,
+          1.0
+        ],
+        "mean": 0.9851,
+        "sd": 0.0148
+      },
+      "ger_tertiary": {
+        "values": [
+          2.3151,
+          2.3134,
+          2.3451
+        ],
+        "mean": 2.3245,
+        "sd": 0.0178
+      },
+      "S_secondary": {
+        "values": [
+          0.0218,
+          0.0218,
+          0.0221
+        ],
+        "mean": 0.0219,
+        "sd": 0.0002
+      },
+      "edu_share_hh": {
+        "values": [
+          0.7326,
+          0.7396,
+          0.7475
+        ],
+        "mean": 0.7399,
+        "sd": 0.0075
+      },
+      "tut_participation_2010": {
+        "values": [
+          0.5231013146575464,
+          0.5245138219427966,
+          0.5231543402919243
+        ],
+        "mean": 0.5236,
+        "sd": 0.0008
+      }
+    },
+    "central_learning_plus_financing": {
+      "ger_secondary": {
+        "values": [
+          -4.6984,
+          -4.6863,
+          -4.9529
+        ],
+        "mean": -4.7792,
+        "sd": 0.1506
+      },
+      "ger_tertiary": {
+        "values": [
+          -8.8545,
+          -8.9716,
+          -9.2163
+        ],
+        "mean": -9.0141,
+        "sd": 0.1846
+      },
+      "S_secondary": {
+        "values": [
+          -0.0922,
+          -0.0929,
+          -0.0963
+        ],
+        "mean": -0.0938,
+        "sd": 0.0022
+      },
+      "edu_share_hh": {
+        "values": [
+          0.162,
+          0.1637,
+          0.1547
+        ],
+        "mean": 0.1601,
+        "sd": 0.0048
+      },
+      "tut_participation_2010": {
+        "values": [
+          0.5235296488278508,
+          0.5258532950688274,
+          0.5231143484172612
+        ],
+        "mean": 0.5242,
+        "sd": 0.0015
+      }
+    }
+  },
+  "tutoring_demand": {
+    "2010": {
+      "participation_by_decile": [
+        0.27,
+        0.381,
+        0.45,
+        0.505,
+        0.555,
+        0.602,
+        0.65,
+        0.7,
+        0.757,
+        0.855
+      ],
+      "participation_by_level": [
+        0.469,
+        0.403,
+        0.717,
+        0.701
+      ],
+      "own_share_among_tutored": 0.629,
+      "other_share_among_tutored": 0.349,
+      "commercial_share_among_tutored": 0.023,
+      "spend_per_tutored_pupil_by_decile": [
+        0.0282,
+        0.0282,
+        0.0282,
+        0.0282,
+        0.0282,
+        0.0282,
+        0.0282,
+        0.0282,
+        0.0282,
+        0.0282
+      ]
+    },
+    "2024": {
+      "participation_by_decile": [
+        0.444,
+        0.549,
+        0.606,
+        0.65,
+        0.687,
+        0.722,
+        0.755,
+        0.789,
+        0.827,
+        0.89
+      ],
+      "participation_by_level": [
+        0.603,
+        0.534,
+        0.822,
+        0.81
+      ],
+      "own_share_among_tutored": 0.629,
+      "other_share_among_tutored": 0.349,
+      "commercial_share_among_tutored": 0.023,
+      "spend_per_tutored_pupil_by_decile": [
+        0.0282,
+        0.0282,
+        0.0282,
+        0.0282,
+        0.0282,
+        0.0282,
+        0.0282,
+        0.0282,
+        0.0282,
+        0.0282
+      ]
+    }
+  },
+  "tutoring_central_params": {
+    "b0": -0.579960677898339,
+    "b_income": 0.9824628208541586,
+    "b_quality": 1.8720819262593236,
+    "own_premium": 1.8244280806062503,
+    "other_premium": 2.5665315834074915,
+    "cost_other": 1.5318831868898115,
+    "cost_commercial": 1.0,
+    "price_own": 1.0,
+    "price_other": 0.8,
+    "price_commercial": 1.5,
+    "level_tilt": {
+      "primary": 0.0,
+      "secondary": -0.3059149260704672,
+      "upper_secondary": 1.220283660596227,
+      "tertiary": 1.220283660596227
+    },
+    "fee": 1.0,
+    "fee_ref": 0.03,
+    "ban_own": false,
+    "learning": true,
+    "odds_multiplier": 1.1,
+    "spend_feedback": false,
+    "label": "ON_f1.0_ban0_fb0_s0"
+  },
+  "tutoring_central_b0": -2.6999282362100967,
+  "phl_fit_consistency": {
+    "OFF": {
+      "by_series": {
+        "edu_share_hh": {
+          "n": 1,
+          "rmse": 0.8727007642190712
+        },
+        "enrol_tertiary": {
+          "n": 5,
+          "rmse": 0.1694539509954022
+        },
+        "ger_primary": {
+          "n": 25,
+          "rmse": 7.108101968234727
+        },
+        "ger_secondary": {
+          "n": 24,
+          "rmse": 12.842811433459191
+        },
+        "ger_tertiary": {
+          "n": 26,
+          "rmse": 25.00875372815879
+        },
+        "hh_share_total_spending": {
+          "n": 6,
+          "rmse": 6.912255174094776
+        },
+        "ner_primary": {
+          "n": 16,
+          "rmse": 3.9796556996343972
+        },
+        "ner_secondary": {
+          "n": 14,
+          "rmse": 6.156810764714648
+        },
+        "priv_lower_secondary": {
+          "n": 1,
+          "rmse": 10.013030200242707
+        },
+        "priv_primary": {
+          "n": 21,
+          "rmse": 10.997564990427307
+        },
+        "priv_secondary": {
+          "n": 17,
+          "rmse": 7.479226700496153
+        },
+        "priv_tertiary": {
+          "n": 6,
+          "rmse": 22.23950185780231
+        },
+        "priv_upper_secondary": {
+          "n": 1,
+          "rmse": 14.68931350789687
+        },
+        "trans_lsec_usec": {
+          "n": 1,
+          "rmse": 6.699974717125315
+        }
+      },
+      "three_ger_rmse": 16.92454509918185
+    },
+    "OFF_capacity": {
+      "by_series": {
+        "edu_share_hh": {
+          "n": 1,
+          "rmse": 0.8727007642190712
+        },
+        "enrol_tertiary": {
+          "n": 5,
+          "rmse": 0.18684410444345936
+        },
+        "ger_primary": {
+          "n": 25,
+          "rmse": 7.108101968234727
+        },
+        "ger_secondary": {
+          "n": 24,
+          "rmse": 12.411142356101616
+        },
+        "ger_tertiary": {
+          "n": 26,
+          "rmse": 23.940857804372765
+        },
+        "hh_share_total_spending": {
+          "n": 6,
+          "rmse": 6.912255174094776
+        },
+        "ner_primary": {
+          "n": 16,
+          "rmse": 3.9796556996343972
+        },
+        "ner_secondary": {
+          "n": 14,
+          "rmse": 6.156810764714648
+        },
+        "priv_lower_secondary": {
+          "n": 1,
+          "rmse": 10.013030200242707
+        },
+        "priv_primary": {
+          "n": 21,
+          "rmse": 10.997564990427307
+        },
+        "priv_secondary": {
+          "n": 17,
+          "rmse": 9.287881909856619
+        },
+        "priv_tertiary": {
+          "n": 6,
+          "rmse": 23.002923153668057
+        },
+        "priv_upper_secondary": {
+          "n": 1,
+          "rmse": 15.60063694960622
+        },
+        "trans_lsec_usec": {
+          "n": 1,
+          "rmse": 6.695621605845204
+        }
+      },
+      "three_ger_rmse": 16.273612273621257
+    },
+    "ON_f1.0_ban0_fb1_s0": {
+      "by_series": {
+        "edu_share_hh": {
+          "n": 1,
+          "rmse": 1.0603300893391028
+        },
+        "enrol_tertiary": {
+          "n": 5,
+          "rmse": 0.1331955044570771
+        },
+        "ger_primary": {
+          "n": 25,
+          "rmse": 7.103699802668367
+        },
+        "ger_secondary": {
+          "n": 24,
+          "rmse": 10.518196232634724
+        },
+        "ger_tertiary": {
+          "n": 26,
+          "rmse": 19.087675513710845
+        },
+        "hh_share_total_spending": {
+          "n": 6,
+          "rmse": 6.332602450503608
+        },
+        "ner_primary": {
+          "n": 16,
+          "rmse": 4.0137025741568655
+        },
+        "ner_secondary": {
+          "n": 14,
+          "rmse": 4.238946218714838
+        },
+        "priv_lower_secondary": {
+          "n": 1,
+          "rmse": 8.983431089731216
+        },
+        "priv_primary": {
+          "n": 21,
+          "rmse": 11.001006305589515
+        },
+        "priv_secondary": {
+          "n": 17,
+          "rmse": 7.529884783233337
+        },
+        "priv_tertiary": {
+          "n": 6,
+          "rmse": 22.559482995982307
+        },
+        "priv_upper_secondary": {
+          "n": 1,
+          "rmse": 14.65569935955822
+        },
+        "trans_lsec_usec": {
+          "n": 1,
+          "rmse": 6.699950795907611
+        }
+      },
+      "three_ger_rmse": 13.361420028980188
+    },
+    "ON_f1.0_ban0_fb0_s0": {
+      "by_series": {
+        "edu_share_hh": {
+          "n": 1,
+          "rmse": 1.6163222612538313
+        },
+        "enrol_tertiary": {
+          "n": 5,
+          "rmse": 0.17713277619219644
+        },
+        "ger_primary": {
+          "n": 25,
+          "rmse": 7.1254561054675545
+        },
+        "ger_secondary": {
+          "n": 24,
+          "rmse": 13.513245654409099
+        },
+        "ger_tertiary": {
+          "n": 26,
+          "rmse": 26.53150432275333
+        },
+        "hh_share_total_spending": {
+          "n": 6,
+          "rmse": 4.827354786057804
+        },
+        "ner_primary": {
+          "n": 16,
+          "rmse": 3.970502872603932
+        },
+        "ner_secondary": {
+          "n": 14,
+          "rmse": 6.7281203951913255
+        },
+        "priv_lower_secondary": {
+          "n": 1,
+          "rmse": 10.229950319378943
+        },
+        "priv_primary": {
+          "n": 21,
+          "rmse": 11.00082338705381
+        },
+        "priv_secondary": {
+          "n": 17,
+          "rmse": 7.451909208706306
+        },
+        "priv_tertiary": {
+          "n": 6,
+          "rmse": 22.56198154866803
+        },
+        "priv_upper_secondary": {
+          "n": 1,
+          "rmse": 14.672164030994978
+        },
+        "trans_lsec_usec": {
+          "n": 1,
+          "rmse": 6.699978848696077
+        }
+      },
+      "three_ger_rmse": 17.87132872318214
+    },
+    "GATE_capacity_s0": {
+      "by_series": {
+        "edu_share_hh": {
+          "n": 1,
+          "rmse": 1.0603300893391028
+        },
+        "enrol_tertiary": {
+          "n": 5,
+          "rmse": 0.15132182466191982
+        },
+        "ger_primary": {
+          "n": 25,
+          "rmse": 7.103699802668367
+        },
+        "ger_secondary": {
+          "n": 24,
+          "rmse": 10.015606991608127
+        },
+        "ger_tertiary": {
+          "n": 26,
+          "rmse": 17.88031727046346
+        },
+        "hh_share_total_spending": {
+          "n": 6,
+          "rmse": 6.332602450503608
+        },
+        "ner_primary": {
+          "n": 16,
+          "rmse": 4.0137025741568655
+        },
+        "ner_secondary": {
+          "n": 14,
+          "rmse": 4.238946218714838
+        },
+        "priv_lower_secondary": {
+          "n": 1,
+          "rmse": 8.983431089731216
+        },
+        "priv_primary": {
+          "n": 21,
+          "rmse": 11.001006305589515
+        },
+        "priv_secondary": {
+          "n": 17,
+          "rmse": 9.136771948236504
+        },
+        "priv_tertiary": {
+          "n": 6,
+          "rmse": 23.17640089460328
+        },
+        "priv_upper_secondary": {
+          "n": 1,
+          "rmse": 15.50732691396793
+        },
+        "trans_lsec_usec": {
+          "n": 1,
+          "rmse": 6.689150595114171
+        }
+      },
+      "three_ger_rmse": 12.639309243790414
+    },
+    "baseline_pristine": {
+      "by_series": {
+        "edu_share_hh": {
+          "n": 1,
+          "rmse": 0.8727007642190712
+        },
+        "enrol_tertiary": {
+          "n": 5,
+          "rmse": 0.1694539509954022
+        },
+        "ger_primary": {
+          "n": 25,
+          "rmse": 7.108101968234727
+        },
+        "ger_secondary": {
+          "n": 24,
+          "rmse": 12.842811433459191
+        },
+        "ger_tertiary": {
+          "n": 26,
+          "rmse": 25.00875372815879
+        },
+        "hh_share_total_spending": {
+          "n": 6,
+          "rmse": 6.912255174094776
+        },
+        "ner_primary": {
+          "n": 16,
+          "rmse": 3.9796556996343972
+        },
+        "ner_secondary": {
+          "n": 14,
+          "rmse": 6.156810764714648
+        },
+        "priv_lower_secondary": {
+          "n": 1,
+          "rmse": 10.013030200242707
+        },
+        "priv_primary": {
+          "n": 21,
+          "rmse": 10.997564990427307
+        },
+        "priv_secondary": {
+          "n": 17,
+          "rmse": 7.479226700496153
+        },
+        "priv_tertiary": {
+          "n": 6,
+          "rmse": 22.23950185780231
+        },
+        "priv_upper_secondary": {
+          "n": 1,
+          "rmse": 14.68931350789687
+        },
+        "trans_lsec_usec": {
+          "n": 1,
+          "rmse": 6.699974717125315
+        }
+      },
+      "three_ger_rmse": 16.92454509918185
+    }
+  },
+  "phl_fit_series_delta": {
+    "OFF": {
+      "edu_share_hh": 0.0,
+      "enrol_tertiary": 0.0,
+      "ger_primary": 0.0,
+      "ger_secondary": 0.0,
+      "ger_tertiary": 0.0,
+      "hh_share_total_spending": 0.0,
+      "ner_primary": 0.0,
+      "ner_secondary": 0.0,
+      "priv_lower_secondary": 0.0,
+      "priv_primary": 0.0,
+      "priv_secondary": 0.0,
+      "priv_tertiary": 0.0,
+      "priv_upper_secondary": 0.0,
+      "trans_lsec_usec": 0.0
+    },
+    "OFF_capacity": {
+      "edu_share_hh": 0.0,
+      "enrol_tertiary": 0.017,
+      "ger_primary": 0.0,
+      "ger_secondary": -0.432,
+      "ger_tertiary": -1.068,
+      "hh_share_total_spending": 0.0,
+      "ner_primary": 0.0,
+      "ner_secondary": 0.0,
+      "priv_lower_secondary": 0.0,
+      "priv_primary": 0.0,
+      "priv_secondary": 1.809,
+      "priv_tertiary": 0.763,
+      "priv_upper_secondary": 0.911,
+      "trans_lsec_usec": -0.004
+    },
+    "ON_f1.0_ban0_fb1_s0": {
+      "edu_share_hh": 0.188,
+      "enrol_tertiary": -0.036,
+      "ger_primary": -0.004,
+      "ger_secondary": -2.325,
+      "ger_tertiary": -5.921,
+      "hh_share_total_spending": -0.58,
+      "ner_primary": 0.034,
+      "ner_secondary": -1.918,
+      "priv_lower_secondary": -1.03,
+      "priv_primary": 0.003,
+      "priv_secondary": 0.051,
+      "priv_tertiary": 0.32,
+      "priv_upper_secondary": -0.034,
+      "trans_lsec_usec": -0.0
+    },
+    "ON_f1.0_ban0_fb0_s0": {
+      "edu_share_hh": 0.744,
+      "enrol_tertiary": 0.008,
+      "ger_primary": 0.017,
+      "ger_secondary": 0.67,
+      "ger_tertiary": 1.523,
+      "hh_share_total_spending": -2.085,
+      "ner_primary": -0.009,
+      "ner_secondary": 0.571,
+      "priv_lower_secondary": 0.217,
+      "priv_primary": 0.003,
+      "priv_secondary": -0.027,
+      "priv_tertiary": 0.322,
+      "priv_upper_secondary": -0.017,
+      "trans_lsec_usec": 0.0
+    },
+    "GATE_capacity_s0": {
+      "edu_share_hh": 0.188,
+      "enrol_tertiary": -0.018,
+      "ger_primary": -0.004,
+      "ger_secondary": -2.827,
+      "ger_tertiary": -7.128,
+      "hh_share_total_spending": -0.58,
+      "ner_primary": 0.034,
+      "ner_secondary": -1.918,
+      "priv_lower_secondary": -1.03,
+      "priv_primary": 0.003,
+      "priv_secondary": 1.658,
+      "priv_tertiary": 0.937,
+      "priv_upper_secondary": 0.818,
+      "trans_lsec_usec": -0.011
+    }
+  },
+  "demand_mix_check_bray": {
+    "provenance": "ported/bray_reality_check.py @ research/shadow-equations-2026-11-25 fdc8da0",
+    "n_draws": 50000,
+    "n_fit_all_seven": 1,
+    "best_max_z": 0.531,
+    "patterns": {
+      "participation": {
+        "target": 0.819,
+        "tol": 0.03,
+        "best": 0.806,
+        "z": 0.42
+      },
+      "participation_g9": {
+        "target": 0.747,
+        "tol": 0.04,
+        "best": 0.752,
+        "z": 0.13
+      },
+      "participation_g12": {
+        "target": 0.898,
+        "tol": 0.04,
+        "best": 0.914,
+        "z": 0.41
+      },
+      "urban_rural_gap": {
+        "target": 0.026,
+        "tol": 0.04,
+        "best": 0.005,
+        "z": 0.53
+      },
+      "own_share": {
+        "target": 0.577,
+        "tol": 0.07,
+        "best": 0.561,
+        "z": 0.23
+      },
+      "other_share": {
+        "target": 0.409,
+        "tol": 0.07,
+        "best": 0.439,
+        "z": 0.43
+      },
+      "teacher_tutor_share": {
+        "target": 0.54,
+        "tol": 0.2,
+        "best": 0.444,
+        "z": 0.48
+      }
+    }
+  },
+  "channel_decomposition_2010": {
+    "ON_fb1_learn1": {
+      "ger_secondary": -4.6984,
+      "ger_tertiary": -8.8545,
+      "S_secondary": -0.0922,
+      "edu_share_hh": 0.162
+    },
+    "ON_fb1_learn0": {
+      "ger_secondary": -6.3252,
+      "ger_tertiary": -11.3658,
+      "S_secondary": -0.1178,
+      "edu_share_hh": 0.0266
+    },
+    "ON_fb0_learn1": {
+      "ger_secondary": 0.9847,
+      "ger_tertiary": 2.3152,
+      "S_secondary": 0.0219,
+      "edu_share_hh": 0.7326
+    },
+    "ON_fb0_learn0": {
+      "ger_secondary": 0.0,
+      "ger_tertiary": 0.0,
+      "S_secondary": 0.0,
+      "edu_share_hh": 0.6141
+    },
+    "ON_fb0_learn1_ban": {
+      "ger_secondary": 0.4915,
+      "ger_tertiary": 1.194,
+      "S_secondary": 0.0109,
+      "edu_share_hh": 0.404
+    }
+  }
+}
