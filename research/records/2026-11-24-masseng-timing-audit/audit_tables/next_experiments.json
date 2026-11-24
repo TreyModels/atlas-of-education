@@ -1,0 +1,65 @@
+{
+ "label": "proposed next experiments (proposals only; none run)",
+ "experiments": [
+  {
+   "id": "X1",
+   "title": "Exposure-matched sequencing test (fix the staging experiment's main confound)",
+   "priority": 1,
+   "question": "After equalising cumulative exposure to the education-share and vacancy-rate changes, does the school-first vs jobs-first difference in completion/formal-share persist, or was it a cumulative-dose artefact?",
+   "design": "eduengine formal_loop with 6 arms: none; school_first; jobs_first; simultaneous; school_first_matched; jobs_first_matched. Matched arms deliver the SAME total education-share-years and vacancy-years as their counterpart (e.g. shorten the early period or compensate late), so only ORDER differs. Add a calendar-shift placebo (both events shifted +10 years, same order) to separate calendar/cohort-window effects. 6 arms x 2 feedback x 2 gates x 20 seeds = 480 runs; pre-declare all contrasts and the exposure arithmetic (audited: unmatched arms differ by +1.8 edu-share-years / -1.2 vacancy-years).",
+   "falsifier": "If the matched order contrast is ~0 while the unmatched contrast is large, the original 'timing effect' is cumulative exposure, not sequencing. If the matched contrast keeps the sign and clears its seed bootstrap CI, order has a model-internal effect worth following up in a more structural design.",
+   "splits": "None needed (synthetic); report all arms and seeds, no selection; seed bootstrap CIs over 20 seeds.",
+   "data": "none (synthetic)",
+   "cost_estimate": "480 runs x ~0.83 CPU-s = ~400 CPU-s; ~30 s wall on 24-48 workers; <5 min end-to-end with monitoring.",
+   "blocked_by": "none; only the audited staging harness needs a small extension (new arm definitions), not a new engine."
+  },
+  {
+   "id": "X2",
+   "title": "Gate/quota x shadow-tutoring inequality factorial",
+   "priority": 2,
+   "question": "Do quota gates (planned seats) versus absolute bar gates change tutoring use and completion differently across household income quintiles and rural/urban location, in the direction the MASSENG account predicts?",
+   "design": "eduengine: gates bar vs quota x tutoring access (rural_firm_access 0.2/0.4/0.8) x own-teacher ban (0/enforced) x 20 seeds = 240 runs; outcomes by level and wealth quintile: completion, tut_rate, tut_by_q, parity_wealth/location; pre-declare directional expectations (quota gates -> more gate-prep tutoring; richer/urban households capture more).",
+   "falsifier": "Pre-declared: if quota gates do not raise gate-prep tutoring relative to bar gates (sign and CI), or do not widen the top-vs-bottom tutoring gap, the model's gate/tutoring channel does not produce the claimed pattern (conditional on the rest of the design).",
+   "splits": "None (synthetic); all cells reported; no post-hoc subgroup selection.",
+   "data": "none (synthetic)",
+   "cost_estimate": "240 runs x ~0.83 CPU-s = ~200 CPU-s; <1 min wall on 24 workers.",
+   "blocked_by": "none."
+  },
+  {
+   "id": "X3",
+   "title": "Education-to-jobs feedback-elasticity robustness surface",
+   "priority": 3,
+   "question": "Are any sequencing conclusions robust to the assumed education-to-jobs feedback (job_elasticity)?",
+   "design": "eduengine: job_elasticity in {0, 0.25, 0.5, 0.75, 1.0} x 4 schedules x 2 gates x 20 seeds = 800 runs; report the full contrast surface with seed bootstrap CIs; pre-declare that conclusions must be stable across the whole elasticity range (or be reported as conditional).",
+   "falsifier": "Any order conclusion that reverses sign across the elasticity grid is not robust; report the reversal and do not select the elasticity that gives the preferred answer.",
+   "splits": "None (synthetic); full surface reported.",
+   "data": "none (synthetic)",
+   "cost_estimate": "800 runs x ~0.83 CPU-s = ~660 CPU-s; ~1-2 min wall on 24-48 workers.",
+   "blocked_by": "none."
+  },
+  {
+   "id": "X4",
+   "title": "Observed-data staging/ordering test with honest splits (aggregate level only)",
+   "priority": 4,
+   "question": "Where the observed panels allow, does a pre-declared model-implied timing/ordering score predict held-out changes in enrolment/completion better than persistence or trend benchmarks?",
+   "design": "Use committed WDI/UIS panel (pre_ger, prm_ner, sec_ner, lsc), transition onset dates, and (if used) child_work only as a sparse secondary outcome. Freeze: train on countries/periods disjoint from validation (e.g. leave-country-out blocks and pre-1996 -> 1996-2015); pre-register the ordering score and the benchmark losses. Report absolute losses and paired predictive differences with country-cluster bootstrap CIs. No new data pull; no DHS microdata.",
+   "falsifier": "If the model-implied ordering score does not beat persistence and trend on held-out countries (paired differences with CIs), the observed data do not support the staging prediction at this aggregate; report it as such.",
+   "splits": "Pre-registered leave-country-out + time-block split; no Q2/E1 observation reused across splits; if too few countries, report insufficient evidence.",
+   "data": "D1, D3, D4 (committed only)",
+   "cost_estimate": "panel regressions only; minutes of CPU (no simulation).",
+   "blocked_by": "construct mismatch: only aggregate enrolment/completion, no child-work states or tutoring; results would be exploratory and cannot identify mechanisms."
+  },
+  {
+   "id": "X5",
+   "title": "Bayesian screen validation and synthetic parameter recovery (coordinate with Lead/Codex)",
+   "priority": 5,
+   "question": "Are the v5 R1 importance screens usable at all: do they recover known parameters, pass ESS/weight diagnostics, and stay stable across seeds, priors and tolerance?",
+   "design": "Use existing run_screen.py (no model edits): (i) synthetic recovery - simulate from known b_h,b_p,b_r,lam draws and check coverage/bias; (ii) weight diagnostics - max weight share, ESS, degenerate draws; (iii) seed stability - >=2 seeds per prior; (iv) prior and tolerance sensitivity; (v) posterior-predictive coverage vs persistence/trend benchmarks. Report everything; no posterior claim.",
+   "falsifier": "If synthetic recovery fails (coverage far below nominal / parameters unidentifiable) or ESS remains very low at the declared budget, the screens are not usable and no posterior/mechanism claim can be made.",
+   "splits": "Synthetic known-parameter recovery + committed/active screen outputs; no observed holdout claims (post-1995 already inspected).",
+   "data": "D12 (v5 R1 fit), existing screen code",
+   "cost_estimate": "needs one measured 4,096-draw screen wall first (active runs); budget <=1 h server time for recovery+diagnostics at 24 workers; do not promise draw counts before the timing measure.",
+   "blocked_by": "active 4,096-draw screens must complete/be owned by Lead; do not duplicate."
+  }
+ ]
+}

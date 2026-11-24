@@ -1,0 +1,173 @@
+{
+ "label": "MASSENG / education engine inventory (read-only audit, 2026-11-24)",
+ "engines": [
+  {
+   "id": "eduengine_modular_abm",
+   "name": "eduengine \u2014 modular education supply/demand/shadow-education ABM",
+   "path": "engine/eduengine/ (core.py, measure.py, ledger.py, planning.py, struts.py, settle.py, modules/{state,schools,labour,tutoring,sdg4,anchor}.py); built by engine/worlds.py",
+   "version": "v0.1\u2013v0.4 features in source comments (CORE_DEFAULTS v0.3 additions; tutoring/state modules v0.x)",
+   "type": "synthetic agent/cohort simulation (not national regression model)",
+   "status": "toy/uncalibrated: engine/worlds.py docstring 'Toy worlds: abstractions, not countries ... nothing is calibrated'; used by the audited staging experiment (worlds.formal_loop)",
+   "state_variables": [
+    "children: cohort (entry year), grade g (0-15, 16 grades), learning L (grade-equivalents), credential, attendance status, started/reason, ability a, home capital, household income y, urban flag, parity",
+    "households: income, consumption need, liquidity/borrowing, shocks, child-wage schedule",
+    "schools/supply: public budget, teachers, class size, quality q_pub, private entry, tuition/fees",
+    "labour: formal vacancies per entrant, credential floors, queues, informal wages, wage bill",
+    "fiscal: tax revenue (formal + consumption), education share of tax revenue, CCT",
+    "tutoring: own-teacher vs firm supply, buy-back/gate-prep/remedial motives, prices"
+   ],
+   "stage_transitions": [
+    "entry to Grade 1 (ages 6\u20139, entry_share anchor)",
+    "annual continuation vs stop vs repeat (promotion bar; household liquidity)",
+    "primary (6 grades) -> lower secondary gate -> lower (3) -> upper-secondary gate -> upper (3) -> tertiary gate -> tertiary (4)",
+    "gates: absolute bar thresholds or planned quota seats (share x cohort), fail->track or stop",
+    "leavers enter labour market: formal queue by credential vs informal/competitive"
+   ],
+   "supply_vs_demand": "separate modules: PublicSchools/PrivateSchools (supply, financing), demand through household utility (discount future income, child wage, costs, beliefs)",
+   "rural_migration": "NOT SIMULATED: rural is a household attribute (urban flag) plus an extra schooling cost (rural_cost=0.03 beyond primary) and lower tutoring firm access; no rural-urban migration, no remittances, no location transitions, no spatial labour market",
+   "jobs_formalization_credential": "QueueLabour: formal vacancies per entrant (vac0), credential floors, graduate queue, informality (Harris-Todaro), wage premium beliefs; optional job_elasticity feedback (vacancies x educated share^elasticity) is an ASSUMED functional form",
+   "quality_shadow_tutoring": "quality from class size/teacher pay/monitoring/withholding; tutoring market with own-teacher buy-back, gate-prep and remedial motives, rural firm access and bans",
+   "heterogeneity": "household income (lognormal), urban/rural, ability, home capital; cohort-by-year variation",
+   "limitations": [
+    "not calibrated to any country",
+    "no migration",
+    "assumed learning scale",
+    "no employer credential requirements data",
+    "no tutoring cost/distribution estimates",
+    "stylised tax/state capacity"
+   ]
+  },
+  {
+   "id": "masseng_v5_portable_cohort",
+   "name": "MASSENG v5 \u2014 portable national cohort-flow model of massification (PHL v1\u2013v5; KHM v3; HKG facts)",
+   "path": "research/masseng-v6/model/{masseng/{engine.py,engine5.py,calibrate.py,calibrate5.py,targets.py,data.py,readiness5.py},model/docs/,PROTOCOL.md,PROTOCOL_v5.md,HANDOFF_v5.md,countries/{HKG,KHM,PHL}/,outputs/PHL/v1..v5,outputs/KHM/v3}",
+   "version": "v5 (PROTOCOL_v5, written 2026-11-22 before first fit); archived v1-v4 protocols preserved; R0-R5 specifications",
+   "type": "deterministic cohort-flow/regression hybrid fitted to country data (PHL/KHM); 'the actual PHL MASSENG v5 R1 model' used by the Bayesian screens",
+   "status": "fitted for PHL (v5 fits R0-R5, fit_R1.json = R1 spec with b_h,b_p,b_r,lam fitted) and KHM (v3 fits); retrospective and inspected (post-1995 seen per PROTOCOL_v5)",
+   "state_variables": [
+    "birth cohorts by year (cohort size)",
+    "income deciles (10) x public/private sector",
+    "grades: 16 (primary 6, secondary 3, upper-secondary 3, tertiary 4)",
+    "status: entrants, enrolled, repeaters, deferred/qualified-waiting (tertiary deferral pool), completers, out-of-school",
+    "demand utility: human-capital premium (b_h), positional credential share (b_p), relational/formal-work floor (b_r), declining cost sensitivity (lam), level intercepts, income decile",
+    "supply/financing: public capacity, vouchers, fees/subsidies, free tuition, CCT, cycle rules"
+   ],
+   "stage_transitions": [
+    "Grade 1 entry -> primary (6) -> secondary (3) [gate at end of secondary] -> upper-secondary (3) [senior-high reform gates] -> tertiary (4)",
+    "repetition (rep_prim/rep_sec), late entry (late), dropout, upper-secondary transition (PHL Grade 10->11)",
+    "tertiary deferral pool (qualified waiting) and admission when capacity/utility allows"
+   ],
+   "supply_vs_demand": "supply/financing facts enter as inputs (capacity, vouchers, fees, subsidies); demand engine is the fitted part",
+   "rural_migration": "NOT MODELLED: model is national by income decile; no region/rural dimension, no migration",
+   "jobs_formalization_credential": "relational floor b_r on formal-work share (wage/salary employment proxy); wage premiums for next credential are drivers; credential queues are NOT an explicit employer queue in v5 (unlike eduengine)",
+   "quality_shadow_tutoring": "NOT MODELLED in v5: no school quality, learning, or tutoring; v6 Phase-1 prototype adds stage/work states but not quality/tutoring yet",
+   "heterogeneity": "income deciles, cohorts, public/private, gender not modelled",
+   "limitations": [
+    "PHL-centric and retrospectively inspected",
+    "no migration/region",
+    "no quality/learning/tutoring",
+    "employer credential demand proxied by formal-share driver",
+    "post-1995 not blind"
+   ]
+  },
+  {
+   "id": "masseng_v6_phase1",
+   "name": "MASSENG v6 Phase 1 \u2014 conserved cohorts and joint admissions (accounting prototype)",
+   "path": "research/masseng-v6/masseng_v6/{core/{state,runner,ledger}.py,education/{admissions,institutions}.py}; tests in research/masseng-v6/tests/",
+   "version": "v6 Phase 1 prototype (README: 'illustrative mechanics; not calibrated, causally identified, or empirically validated')",
+   "type": "probability-mass cohort accounting kernel with joint admission markets",
+   "status": "prototype; does NOT yet implement the full country-year v6 simulation; no fitted parameters; synthetic known-answer tests only",
+   "state_variables": [
+    "CohortKey(country, birth_cohort, decile, region, stage, grade, sector, education_status, work_status)",
+    "EducationStatus: attending / repeating / qualified_waiting / out_of_school_reenterable / completed / exit_terminal / alternative",
+    "WorkStatus: none / part_time / full_time / seasonal",
+    "stocks by level/sector; entry funnel Q>=L>=E>=R; market capacity/reservations"
+   ],
+   "stage_transitions": [
+    "conserved cohort progression with explicit external entries/deaths/exits/reentries",
+    "joint admissions: effective applicants -> at most one market; continuing reservations respected"
+   ],
+   "supply_vs_demand": "EntryFunnel separates latent (Q) -> qualified (L) -> eligible (E) -> effective (R) demand; Market supplies capacity",
+   "rural_migration": "region is a CohortKey dimension but no migration flows are implemented",
+   "jobs_formalization_credential": "work_status is recorded orthogonally; no employer queue/credential model yet",
+   "quality_shadow_tutoring": "not implemented in Phase 1",
+   "heterogeneity": "cohort/decile/region/stage/grade/sector/status",
+   "limitations": [
+    "accounting only",
+    "no country-year simulation",
+    "no behaviour/estimation",
+    "no quality/tutoring/migration"
+   ]
+  },
+  {
+   "id": "legacy_engine_worlds",
+   "name": "legacy engine/ worlds (childworld, camchild, floorworld, impute)",
+   "path": "engine/{childworld.py,camchild.py,floorworld.py,impute/,experiments.py,mc.py,worlds.py,...}",
+   "version": "pre-MASSENG / auxiliary",
+   "type": "fast school-and-work Monte Carlo (childworld), Cambodia child-labour twin (camchild), education\u2192industrialisation (floorworld), imputation system",
+   "status": "auxiliary/archived; not the current MASSENG line",
+   "state_variables": [
+    "varies; mostly aggregate/two-region household models"
+   ],
+   "stage_transitions": [
+    "varies (e.g. camchild: two linked regions, school/work states)"
+   ],
+   "supply_vs_demand": "varies",
+   "rural_migration": "camchild has two linked regions; childworld/floorworld aggregate",
+   "jobs_formalization_credential": "varies",
+   "quality_shadow_tutoring": "varies",
+   "heterogeneity": "varies",
+   "limitations": [
+    "legacy; not maintained as MASSENG"
+   ]
+  },
+  {
+   "id": "staging_experiment",
+   "name": "Codex synthetic staging/sequencing experiment (audited)",
+   "path": "engine/experiments_codex_sequence/{DESIGN.md,run_staging.py,results/full.json} @ origin/research/codex-masseng-staging-2026-11-24 (bac3a7c)",
+   "version": "single exploratory experiment, 160 runs",
+   "type": "eduengine formal_loop scenario grid",
+   "status": "SIMULATION ONLY; DESIGN committed in c435fa2 (20:46:01) before results in bac3a7c (20:48:13)",
+   "state_variables": [
+    "inherits eduengine state (see eduengine_modular_abm)"
+   ],
+   "stage_transitions": [
+    "4 schedules of 2 stipulated events (edu_share 0.18->0.30; vac0 0.08->0.16); 70 years; cohorts 35-44 measured"
+   ],
+   "supply_vs_demand": "eduengine modules",
+   "rural_migration": "not simulated (rural attribute + cost only)",
+   "jobs_formalization_credential": "eduengine QueueLabour with job_elasticity 0/1 assumption",
+   "quality_shadow_tutoring": "eduengine quality/tutoring modules",
+   "heterogeneity": "seeds 0-9; feedback 0/1; gates bar/quota",
+   "limitations": [
+    "synthetic; arms not exposure-matched; time order not identified; no migration; seed-sensitive completion rankings"
+   ]
+  },
+  {
+   "id": "codex_bayes_screen",
+   "name": "MASSENG v5 PHL R1 conditional Bayesian-style importance screen",
+   "path": "research/masseng-v6/experiments/codex_bayes/{run_screen.py,test_screen.py,results_main/,results_expanded/} @ origin/research/codex-masseng-staging-2026-11-24; active server copy /root/work/masseng-staging-codex-20261124/masseng-v6/experiments/codex_bayes/",
+   "version": "prototype importance screen (no resampling; conditional weights)",
+   "type": "prior-draw importance screening against 1971-1995 PHL GERs",
+   "status": "committed 256-draw pilots: ESS 5.94 (main) / 1.77 (expanded), holdout GER RMSE 9.645/7.065 vs persistence 6.600; 4096-draw main+expanded runs active on region-42 at audit time (see verification)",
+   "state_variables": [
+    "MASSENG v5 R1 parameters b_h,b_p,b_r,lam drawn; all other params fixed at fit_R1.json"
+   ],
+   "stage_transitions": [
+    "model simulation per draw; Gaussian pseudo-likelihood; weights; ESS; holdout comparison"
+   ],
+   "supply_vs_demand": "v5 model",
+   "rural_migration": "not modelled",
+   "jobs_formalization_credential": "v5 relational driver",
+   "quality_shadow_tutoring": "not modelled",
+   "heterogeneity": "prior draws x parameters",
+   "limitations": [
+    "conditional importance weights, not calibrated posterior",
+    "fixed nuisance from broader fit = data reuse",
+    "logistic overflow on expanded prior",
+    "holdout previously inspected",
+    "ESS very low at 256 draws"
+   ]
+  }
+ ]
+}

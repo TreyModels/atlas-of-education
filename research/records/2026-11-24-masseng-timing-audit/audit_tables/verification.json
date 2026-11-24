@@ -1,0 +1,71 @@
+{
+ "staging_branch": "origin/research/codex-masseng-staging-2026-11-24",
+ "staging_commit": "bac3a7c",
+ "commit_order": {
+  "c435fa2": "DESIGN.md + run_staging.py (2026-11-24 20:46:01 +0800)",
+  "bac3a7c": "results/full.json + codex_bayes pilots (2026-11-24 20:48:13 +0800)",
+  "note": "DESIGN recorded before results in git history"
+ },
+ "committed_vs_server_sha256": {
+  "engine/experiments_codex_sequence/results/full.json": {
+   "committed": "69129f47e5e4a1619d5380fbb28b6904aa755aa6e809af3e4231b5869b845eeb",
+   "server": "69129f47e5e4a1619d5380fbb28b6904aa755aa6e809af3e4231b5869b845eeb",
+   "match": true
+  },
+  "engine/experiments_codex_sequence/DESIGN.md": {
+   "committed": "7d9ad7b81104f40ec8f5fc4b26f9c35d50567c63a434ed9d60b9b7e4fa5209ae",
+   "server": "7d9ad7b81104f40ec8f5fc4b26f9c35d50567c63a434ed9d60b9b7e4fa5209ae",
+   "match": true
+  },
+  "engine/worlds.py": {
+   "committed": "2e9ec71a882755d9402b9bbcf802ce4a3aeb1f32ef4ac06ef48b97fc7340e0da",
+   "server": "2e9ec71a882755d9402b9bbcf802ce4a3aeb1f32ef4ac06ef48b97fc7340e0da",
+   "match": true
+  },
+  "engine/eduengine/core.py": {
+   "committed": "2b7484a97d64bf5f498c95003dd249241373cdc25da4c4d02d59d256df59c064",
+   "server": "2b7484a97d64bf5f498c95003dd249241373cdc25da4c4d02d59d256df59c064",
+   "match": true
+  },
+  "research/masseng-v6/experiments/codex_bayes/run_screen.py": {
+   "committed": "48dec650d5d77a54a8cc99840e3e27bc3c0dd65961695e29f5e74b35ce7fcc52",
+   "server": "48dec650d5d77a54a8cc99840e3e27bc3c0dd65961695e29f5e74b35ce7fcc52",
+   "match": true
+  },
+  "research/masseng-v6/model/masseng/engine5.py": {
+   "committed": "e01bd54383a7215503c3caff50212c5fcf16312aca9531e10ad810c7a3a5c17c",
+   "server": "e01bd54383a7215503c3caff50212c5fcf16312aca9531e10ad810c7a3a5c17c",
+   "match": true
+  }
+ },
+ "server_snapshot_utc": "2026-11-24T12:55:31Z",
+ "active_bayesian_runs": {
+  "main_4096": {
+   "shell_pid": 18115,
+   "python_parent": 18116,
+   "workers": 24,
+   "n_draws": 4096,
+   "seed": 20261125,
+   "prior": "main",
+   "log_bytes": 0,
+   "output_json": "pending (written at completion)",
+   "status": "running at audit snapshot (~6 min elapsed)"
+  },
+  "expanded_4096": {
+   "shell_pid": 18162,
+   "workers": 24,
+   "n_draws": 4096,
+   "seed": 20261126,
+   "prior": "expanded",
+   "log_bytes": 3840,
+   "output_json": "pending (written at completion)",
+   "status": "running at audit snapshot (~6 min elapsed); RuntimeWarning overflow in engine5 sigmoid"
+  },
+  "run_screen_processes_observed": 53,
+  "note": "At the audit snapshot both screens were alive; do not shut down region-42 while active. This audit did not touch them."
+ },
+ "limitations_of_verification": [
+  "read-only checks only; no staging re-run",
+  "active screens not yet complete; their results are not audited here"
+ ]
+}
