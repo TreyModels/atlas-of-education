@@ -161,6 +161,7 @@ directory (numpy only). Reproduction hash of the source used here: `004173aa…`
   the sign hold across every level of all five *other* design axes, not merely the non-empty-stratum heuristic used
   by the `supported` flag. Quoted from the task-47 audit; it is not machine-readable in `full_system_tests.json`
   and was not recomputed in this addendum.
-- The first version's **49/72** is superseded and must not be quoted (four empty-stratum rows and one zero-variance
-  row were false positives; see the correction notice above). Cite **45/72 supported, 28/72 strict**, with the
-  exploratory label.
+- The first version's **49/72** is superseded and must not be quoted: the fix removed **4 rows total** (49 -> 45),
+  exactly matching the 45-row supported table plus the 4 `not_estimable` rows; one of the 4 removed rows is the
+  zero-variance `tut_rate` row (task-47 audit; see the correction notice above and `results/audit.json`). Cite
+  **45/72 supported, 28/72 strict**, with the exploratory label.
