@@ -591,6 +591,14 @@ vintages; replace `sha256sum` with a portable hash; make the CPU path work or fa
 
 ## 12. Provenance
 
+**Post-audit note (24 Nov 2026, added before this record was finalised).** The handoff branch advanced after
+this audit began: `origin/research/handoff-2026-11-24` now records that the Apple-Silicon port completed at
+`fd933d9` and that a *PORT-PRODUCTION* run (exp1 7,500 rows, exp2, exp3) was executed on that branch and
+labelled "not research results" (`HANDOFF.md` §6–7). That run is **not** in the payload audited here, and this
+auditor did not open its results; nothing in this record is based on it. Before any output from it is used as
+evidence, the v2 fixes in §11 still apply — a production run of the current code inherits every defect above,
+including the missing zero-signal control and the construction-implied features.
+
 - Base commit: `51f9f02` (`origin/research/handoff-2026-11-24`).
 - Referenced records: Q1 `origin/research/q1-mechanisms-2026-11-25` @ `9b0cabe` (REPORT read); E1
   `origin/research/e1-multiverse-1200-2026-11-25` @ `7e6f7b5` (REPORT head read); Q3
