@@ -28,12 +28,12 @@
   "estimates": {
    "probit_with_network": 0.00892,
    "logit_with_network": 0.00901,
-   "probit_no_network": 0.01402,
+   "probit_no_network": 0.01404,
    "probit_network_remittance": 0.00892
   },
   "range": [
    0.00892,
-   0.01402
+   0.01404
   ],
   "spec_robust": true
  },
@@ -47,7 +47,7 @@
    "mean_education_gap_migrants_vs_stayers": 1.6274
   },
   "probit_no_network": {
-   "mean_marginal_effect_education": 0.01402,
+   "mean_marginal_effect_education": 0.01404,
    "mean_education_gap_migrants_vs_stayers": 1.6287
   },
   "probit_network_remittance": {
@@ -60,7 +60,7 @@
   "network_spec_effect_larger_than_no_network": false,
   "PASS": false
  },
- "plain_result": "Education raises the migration probability in every specification (marginal effect range 0.0089-0.0140) and migrants are more educated than stayers; networks increase the effect. MASSENG v5 does not model rural-urban migration, so this is a synthetic demonstration of the equation, not a model output.",
+ "plain_result": "Education raises the migration probability in every specification (marginal effect range 0.0089-0.0140) and migrants are more educated than stayers; networks slightly REDUCE the estimated marginal effect (0.0089 with vs 0.0140 without), so the ad hoc 'networks increase the effect' criterion FAILS. MASSENG v5 does not model rural-urban migration, so this is a synthetic demonstration of the equation, not a model output.",
  "data_map": {
   "module": "rural-urban/migration",
   "observed": "WDI urbanisation, UN migrant stock, remittances available (not fitted)",
@@ -72,7 +72,7 @@
   "identification": "none (synthetic); probit/logit latent model",
   "testable_restrictions": "distributional form; network exogeneity",
   "benchmark_split": "Monte Carlo; no observed split",
-  "pass_fail": "PASS if education effect positive in every spec"
+  "pass_fail": "PASS if education effect positive in every spec AND the network-spec marginal effect exceeds the no-network spec (the second criterion is ad hoc, not pre-registered)"
  },
- "generated_utc": "2026-11-24T15:53:29Z"
+ "generated_utc": "2026-11-24T17:01:38Z"
 }

@@ -21,60 +21,66 @@
  "n_production": 12000,
  "demand": {
   "single_process": {
-   "tobit_eta_mean": 7.499,
+   "tobit_eta_mean": 1.441,
+   "tobit_eta_level_scale_mean": 8.612,
+   "tobit_scale": "log1p(T): semi-elasticity; level-scale fit reported separately, not compared to 0.8",
    "two_part_eta_mean": 0.802,
-   "two_part_within_0.15_share": 1.0
+   "two_part_within_0.15_share": 1.0,
+   "tobit_within_0.15_share": 0.0
   },
   "different_processes": {
-   "tobit_eta_mean": 7.631,
+   "tobit_eta_mean": 1.37,
+   "tobit_eta_level_scale_mean": 8.781,
+   "tobit_scale": "log1p(T): semi-elasticity; level-scale fit reported separately, not compared to 0.8",
    "two_part_eta_mean": 0.733,
-   "two_part_within_0.15_share": 1.0
+   "two_part_within_0.15_share": 1.0,
+   "tobit_within_0.15_share": 0.0
   }
  },
  "production": {
   "rho_0.3_ret_0.5": {
-   "mean_delta_gini_ban": 0.3721,
-   "ban_raises_gini_share": 1.0,
+   "mean_delta_gini_ban": -0.0642,
+   "ban_raises_gini_share": 0.0,
    "mean_participation": 0.501
   },
   "rho_0.3_ret_0.7": {
-   "mean_delta_gini_ban": 0.3365,
-   "ban_raises_gini_share": 1.0,
+   "mean_delta_gini_ban": -0.0559,
+   "ban_raises_gini_share": 0.0,
    "mean_participation": 0.501
   },
   "rho_0.3_ret_0.9": {
-   "mean_delta_gini_ban": 0.3127,
-   "ban_raises_gini_share": 1.0,
+   "mean_delta_gini_ban": -0.0476,
+   "ban_raises_gini_share": 0.0,
    "mean_participation": 0.5
   },
   "rho_0.5_ret_0.5": {
-   "mean_delta_gini_ban": 0.1114,
-   "ban_raises_gini_share": 1.0,
+   "mean_delta_gini_ban": -0.0588,
+   "ban_raises_gini_share": 0.0,
    "mean_participation": 0.499
   },
   "rho_0.5_ret_0.7": {
-   "mean_delta_gini_ban": 0.1028,
-   "ban_raises_gini_share": 1.0,
+   "mean_delta_gini_ban": -0.0512,
+   "ban_raises_gini_share": 0.0,
    "mean_participation": 0.5
   },
   "rho_0.5_ret_0.9": {
-   "mean_delta_gini_ban": 0.0973,
-   "ban_raises_gini_share": 1.0,
+   "mean_delta_gini_ban": -0.0434,
+   "ban_raises_gini_share": 0.0,
    "mean_participation": 0.5
   },
   "rho_0.7_ret_0.5": {
-   "mean_delta_gini_ban": 0.0251,
-   "ban_raises_gini_share": 1.0,
+   "mean_delta_gini_ban": -0.0544,
+   "ban_raises_gini_share": 0.0,
    "mean_participation": 0.501
   },
   "rho_0.7_ret_0.7": {
-   "mean_delta_gini_ban": 0.0247,
-   "ban_raises_gini_share": 1.0,
+   "mean_delta_gini_ban": -0.0478,
+   "ban_raises_gini_share": 0.0,
    "mean_participation": 0.5
   },
   "rho_0.7_ret_0.9": {
-   "mean_delta_gini_ban": 0.0254,
-   "ban_raises_gini_share": 1.0,
+   "mean_delta_gini_ban": -0.0406,
+   "ban_raises_gini_share": 0.0,
    "mean_participation": 0.501
   }
  },
@@ -86,12 +92,12 @@
     "ols_on_participants"
    ],
    "estimates": {
-    "different_processes_tobit": 7.631,
+    "different_processes_tobit": 1.37,
     "different_processes_two_part": 0.733
    },
    "range": [
     0.733,
-    7.631
+    1.37
    ],
    "spec_robust": true
   },
@@ -108,23 +114,24 @@
     "rho_0.7_ret_0.9"
    ],
    "estimates": {
-    "rho_0.3_ret_0.5": 0.3721,
-    "rho_0.3_ret_0.7": 0.3365,
-    "rho_0.3_ret_0.9": 0.3127,
-    "rho_0.5_ret_0.5": 0.1114,
-    "rho_0.5_ret_0.7": 0.1028,
-    "rho_0.5_ret_0.9": 0.0973,
-    "rho_0.7_ret_0.5": 0.0251,
-    "rho_0.7_ret_0.7": 0.0247,
-    "rho_0.7_ret_0.9": 0.0254
+    "rho_0.3_ret_0.5": -0.0642,
+    "rho_0.3_ret_0.7": -0.0559,
+    "rho_0.3_ret_0.9": -0.0476,
+    "rho_0.5_ret_0.5": -0.0588,
+    "rho_0.5_ret_0.7": -0.0512,
+    "rho_0.5_ret_0.9": -0.0434,
+    "rho_0.7_ret_0.5": -0.0544,
+    "rho_0.7_ret_0.7": -0.0478,
+    "rho_0.7_ret_0.9": -0.0406
    },
    "range": [
-    0.0247,
-    0.3721
+    -0.0642,
+    -0.0406
    ],
-   "spec_robust": true
+   "spec_robust": false
   }
  },
+ "gini_domain": "exp(learning index) - strictly positive level domain; the raw additive achievement index is non-positive in ~37% of draws, where the Gini is undefined",
  "bray_external_check": {
   "source": "literature targets from research/shadow-equations-2026-11-25 @ fdc8da0",
   "checks": {
@@ -138,11 +145,11 @@
  },
  "decision_rule": {
   "two_part_closer_than_tobit": true,
-  "ban_raises_gini_in_all_specs": true,
+  "ban_raises_gini_in_all_specs": false,
   "model_not_claimed_to_fit_bray": true,
-  "PASS": true
+  "PASS": false
  },
- "plain_result": "Tutoring behaves as one exams-shadow module: the two-part model recovers the income elasticity when participation and spending differ (0.73 vs Tobit 7.63), and an own-teacher ban raises the learning Gini in every CES/retention specification (delta range 0.025..0.372). The illustrative model is far from Bray's targets (max |z| = 10.6), so nothing here is a fit to a real shadow-education system.",
+ "plain_result": "Tutoring behaves as one exams-shadow module for demand: on the same log scale as the 0.8 truth the two-part model is closer than the Tobit (0.73 vs 1.37). On inequality the own-teacher ban does NOT raise the learning Gini once the Gini is computed on a strictly positive level domain: in this reduced production model there is no substitution margin, so removing tutoring lowers the Gini in every CES/retention specification (delta range -0.064..-0.041). The illustrative model is far from Bray's targets (max |z| = 10.6), so nothing here is a fit to a real shadow-education system.",
  "data_map": {
   "module": "exams-shadow (single tutoring module)",
   "observed": "no harmonised tutoring panel; Bray targets are literature targets",
@@ -154,7 +161,8 @@
   "identification": "none (synthetic); two-part vs Tobit",
   "testable_restrictions": "hurdle/CES forms; retention assumption",
   "benchmark_split": "synthetic reps; Bray literature targets as external check (not a fit)",
-  "pass_fail": "PASS if two-part closer than Tobit and ban raises Gini in all specs"
+  "pass_fail": "PASS if two-part closer than Tobit (same scale) and ban raises Gini in all specs",
+  "scale_alignment": "Tobit on log1p(T) so its income coefficient is a semi-elasticity comparable to the 0.8 truth; the level-scale Tobit is reported but never compared to 0.8"
  },
- "generated_utc": "2026-11-24T15:54:00Z"
+ "generated_utc": "2026-11-24T17:04:23Z"
 }

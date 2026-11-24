@@ -19,18 +19,18 @@
  "summary": {
   "did": {
    "true_att_mean": 1.284,
-   "twfe_mean": 0.785,
-   "twfe_bias": -0.499,
+   "twfe_mean": 0.138,
+   "twfe_bias": -1.146,
    "cs_style_mean": 1.261,
    "cs_bias": -0.023,
-   "null_twfe_mean": -0.023,
+   "null_twfe_mean": 0.003,
    "null_cs_mean": 0.005
   },
   "iv": {
    "true_beta": 1.5,
    "ols_mean": 1.76,
    "iv_mean": 1.492,
-   "iv_se_mean": 0.082,
+   "iv_se_mean": 0.045,
    "null_iv_mean": 0.002
   },
   "rd": {
@@ -53,7 +53,7 @@
   "iv_closer_than_ols": true,
   "PASS": true
  },
- "plain_result": "Each design recovers its target in its own known-truth world and is near zero in the no-effect control; the naive estimators are biased in the stated violation worlds (IV 1.49 vs OLS 1.76 against a true 1.5; TWFE bias -0.50 vs the group-time estimator -0.02). This is a demonstration of the designs, not an estimate of any real programme.",
+ "plain_result": "Each design recovers its target in its own known-truth world and is near zero in the no-effect control; the naive estimators are biased in the stated violation worlds (IV 1.49 vs OLS 1.76 against a true 1.5; TWFE bias -1.15 vs the group-time estimator -0.02). This is a demonstration of the designs, not an estimate of any real programme.",
  "data_map": {
   "module": "test bench",
   "observed": "none needed (known-truth synthetic designs)",
@@ -67,5 +67,5 @@
   "benchmark_split": "known truth; null-world CIs",
   "pass_fail": "PASS if null worlds near zero and design estimators closer than naive"
  },
- "generated_utc": "2026-11-24T15:53:17Z"
+ "generated_utc": "2026-11-24T17:01:40Z"
 }

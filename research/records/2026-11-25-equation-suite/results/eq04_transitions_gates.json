@@ -29,24 +29,24 @@
    ]
   },
   "quota_share_0.4": {
-   "mean_gap_top_minus_bottom": NaN,
+   "mean_gap_top_minus_bottom": 0.2593,
    "ci90": [
-    NaN,
-    NaN
+    0.2424,
+    0.2771
    ]
   },
   "quota_share_0.5": {
-   "mean_gap_top_minus_bottom": NaN,
+   "mean_gap_top_minus_bottom": 0.0906,
    "ci90": [
-    NaN,
-    NaN
+    0.0733,
+    0.1063
    ]
   },
   "quota_share_0.6": {
-   "mean_gap_top_minus_bottom": NaN,
+   "mean_gap_top_minus_bottom": -0.0912,
    "ci90": [
-    NaN,
-    NaN
+    -0.1097,
+    -0.0779
    ]
   }
  },
@@ -60,13 +60,13 @@
   ],
   "estimates": {
    "bar": 0.5472,
-   "quota_share_0.4": NaN,
-   "quota_share_0.5": NaN,
-   "quota_share_0.6": NaN,
+   "quota_share_0.4": 0.2593,
+   "quota_share_0.5": 0.0906,
+   "quota_share_0.6": -0.0912,
    "contest": 0.7614
   },
   "range": [
-   0.5472,
+   -0.0912,
    0.7614
   ],
   "spec_robust": false
@@ -87,10 +87,10 @@
  },
  "masseng_boundary": {
   "used": "standalone synthetic demonstration (NOT MASSENG v5 output)",
-  "mechanism_in_masseng_v5": true,
-  "note": "standalone synthetic demonstration; not a MASSENG v5 output"
+  "mechanism_in_masseng_v5": false,
+  "note": "progression/capacity exist in MASSENG v5; the exam score bar and reserved-quota gates do NOT -- synthetic demonstration only, not a MASSENG v5 output"
  },
- "plain_result": "A score bar admits rich pupils at a higher rate (gap 0.547); a reserved quota flips the gap (0.091) by construction, and a contest in which richer pupils invest more effort widens it further (0.761). The quota changes who is admitted, not how much anyone learns \u2014 this is a rationing demonstration, not an evaluation of any admissions policy.",
+ "plain_result": "A score bar admits rich pupils at a higher rate (gap 0.547); a reserved quota narrows the gap (0.091) but does NOT flip its sign, so the pre-declared 'quota flips the gap' rule FAILS, and a contest in which richer pupils invest more effort widens it further (0.761). The quota changes who is admitted, not how much anyone learns \u2014 this is a rationing demonstration, not an evaluation of any admissions policy.",
  "data_map": {
   "module": "gates + attainment/completion",
   "observed": "EdStats completion/transition proxies available (not fitted)",
@@ -104,5 +104,5 @@
   "benchmark_split": "synthetic reps; no observed split",
   "pass_fail": "PASS if baseline gap positive, quota flips it, contest widens it"
  },
- "generated_utc": "2026-11-24T15:53:11Z"
+ "generated_utc": "2026-11-24T17:01:12Z"
 }

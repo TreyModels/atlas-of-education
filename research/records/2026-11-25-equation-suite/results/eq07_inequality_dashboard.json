@@ -1,7 +1,7 @@
 {
  "script": "eq07_inequality_dashboard",
  "prereg": "S7",
- "data_tier": "SYNTHETIC",
+ "data_tier": "SYNTHETIC + OBSERVED/RECONSTRUCTED descriptive dashboard check",
  "label": "SIMULATION - stipulated two-generation DGP; no causal claim",
  "n": 50000,
  "reps": 40,
@@ -12,8 +12,8 @@
     -0.0043,
     0.0045
    ],
-   "mean_gini_child_income": 0.2024,
-   "mean_theil_within": NaN,
+   "mean_gini_child_income": 0.5224,
+   "mean_theil_within": 0.5042,
    "mean_theil_between": 0.0,
    "mean_rank_rank": 0.001,
    "mean_transition_diagonal": 0.2003,
@@ -27,9 +27,9 @@
     0.4451,
     0.456
    ],
-   "mean_gini_child_income": 0.2402,
-   "mean_theil_within": NaN,
-   "mean_theil_between": 0.0128,
+   "mean_gini_child_income": 0.6006,
+   "mean_theil_within": 0.6141,
+   "mean_theil_between": 0.0951,
    "mean_rank_rank": 0.5167,
    "mean_transition_diagonal": 0.3328,
    "oaxaca_gap": 1.089,
@@ -51,9 +51,9 @@
    "rank_rank_slope": 0.001
   },
   "other_summaries": {
-   "gini": 0.2402,
-   "theil_within": NaN,
-   "theil_between": 0.0128,
+   "gini": 0.6006,
+   "theil_within": 0.6141,
+   "theil_between": 0.0951,
    "oaxaca_explained": 0.6431,
    "oaxaca_unexplained": 0.4459
   },
@@ -102,7 +102,7 @@
   "mechanism_in_masseng_v5": false,
   "note": "standalone synthetic demonstration; not a MASSENG v5 output"
  },
- "plain_result": "In the null world the intergenerational elasticity is indistinguishable from zero (90% CI -0.00 to 0.00); in the persistent world it is 0.45 and the Theil decomposition puts 0.01 of inequality between parent-education groups. The elasticity, the Gini and the transition matrix are different summaries of the same synthetic process, not interchangeable evidence.",
+ "plain_result": "In the null world the intergenerational elasticity is indistinguishable from zero (90% CI -0.00 to 0.00); in the persistent world it is 0.45 and the Theil decomposition puts 0.10 of inequality between parent-education groups. The elasticity, the Gini and the transition matrix are different summaries of the same synthetic process, not interchangeable evidence.",
  "data_map": {
   "module": "inequality/dashboard",
   "observed": "WID/SWIID, Barro-Lee, Learning Poverty; committed long_run_panel used descriptively",
@@ -114,7 +114,8 @@
   "identification": "descriptive; country+year FE for the observed dashboard check only",
   "testable_restrictions": "two-generation DGP; observed panel association",
   "benchmark_split": "null vs persistent synthetic worlds; observed panel descriptive",
-  "pass_fail": "PASS if null-world IGE CI includes 0 and persistent-world IGE positive"
+  "pass_fail": "PASS if null-world IGE CI includes 0 and persistent-world IGE positive",
+  "inequality_domain": "Gini/Theil/within-between on exp(child log income) i.e. level income (strictly positive); IGE, rank-rank and Oaxaca gap on log child income (Oaxaca in log points)"
  },
- "generated_utc": "2026-11-24T15:53:17Z"
+ "generated_utc": "2026-11-24T17:01:33Z"
 }
