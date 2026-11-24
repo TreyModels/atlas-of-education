@@ -133,8 +133,8 @@ in magnitude (secondary −1.87 (0.19)); both reported in `results/model_table.c
   "robust everywhere": the 4 non-negative surveys are named.
 - **Per period** (median per-survey gradient): 1985–89 **−2.70** (94.7% negative), 1990–94 −2.20, 1995–99 −2.00,
   2000–04 −1.85, 2005–09 −1.80, 2010–14 −1.90, 2015–19 −1.90, 2020–24 **−1.70**, 2025 (3 surveys) −1.50.
-- **Per country** (63 countries with ≥2 surveys): **98.4% negative**, **61/63** significant at q=0.05
-  (Benjamini–Hochberg). The non-negative countries are named in
+- **Per country** (63 countries with ≥2 surveys): **62/63 negative** (the exception is **Tajikistan +0.04, p=0.90**), **61/63**
+  significant at q=0.05 (Benjamini–Hochberg). All rows are in
   [`results/heterogeneity_countries.csv`](results/heterogeneity_countries.csv).
 
 ---
