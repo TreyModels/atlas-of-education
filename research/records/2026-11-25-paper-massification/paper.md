@@ -1083,19 +1083,19 @@ not previously assembled in this form), the horse race between measured supply a
 demand-timing re-estimate that replaced the retracted "7%" figure, and the fee-abolition event study. It is not
 presented as a new data collection.
 
-**11. "Your old labour-demand result said 7%; why is it gone?"** The 7% figure was computed on wage-employment
+**10. "Your old labour-demand result said 7%; why is it gone?"** The 7% figure was computed on wage-employment
 and paid-employment series that begin in 1991, so on a 1965–2010 event window it could not have preceded a
 schooling take-off for most countries; it is a data-start artefact, retracted project-wide, and is replaced by
 the pre-1990 series in Section 6.5. The replacement does not rule demand out: demand-first is 10–24% of
 identifiable countries, bounds 6.7–53.0%, with another 21–43% weak ties or left-censored.
 
-**12. "The fee-abolition event study is causal, surely?"** It is an event study with checked pre-trends, so it
+**11. "The fee-abolition event study is causal, surely?"** It is an event study with checked pre-trends, so it
 licenses the phrase "consistent with" for a supply effect on primary enrolment — no stronger. The treated
 sample is seven to eight countries, the on-impact interval includes zero, four fee dates are unresolved and
 excluded from the main specification, and the outcome is an enrolment ratio, not attainment; the design says
 nothing about massification or the schooling-versus-farm-exit ordering.
 
-**10. "Publication fit."** The paper is a synthesis with new tests; it fits a review/synthesis venue
+**12. "Publication fit."** The paper is a synthesis with new tests; it fits a review/synthesis venue
 (*Review of Educational Research*, *Annual Review of Sociology*, *Sociology of Education*) or a development
 economics venue (*World Development*, *Journal of Development Economics*). It does not fit *Explorations in
 Economic History* as a standalone archival paper, because the historical section is a synthesis of literature
