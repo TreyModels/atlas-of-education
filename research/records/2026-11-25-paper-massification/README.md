@@ -62,8 +62,7 @@ keeps its journal structure; this map gives the sort:
 
 ## The synthesis verdict
 Massification in late-industrialising countries is better described as state/institution-led: the schooling
-take-off precedes the release of agricultural labour in 61 of 64 countries (median 26 years, reverse 5%,
-0–11%); labour-market demand (wage premium, paid employment) precedes it in only 7% of countries; the raw
+take-off precedes the release of agricultural labour in 31 of the 34 countries where the order can be identified (30 are unordered; median 18 years where both dates are exact; 3 reverse); labour-market demand (wage premium, paid employment) precedes it in only 7% of countries; the raw
 demand-first event ordering (73%) is a data-availability artefact, and in the fair sample supply (76%) and
 demand (79%) turn together while the horse race puts the association on supply (+0.456, SE 0.174 vs +0.006,
 SE 0.203; n=78, 51 countries). The agricultural floor is real in the cross-section but does not deliver the

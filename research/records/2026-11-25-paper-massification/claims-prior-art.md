@@ -11,7 +11,7 @@ The search strategy is recorded in `search-strategy.md`.
 
 ---
 
-## Claim 1 — In late-industrialising countries, the schooling take-off precedes the release of labour from agriculture (61 of 64 countries; median lead 26 years; reverse ordering 5%, 0–11%)
+## Claim 1 — In late-industrialising countries, the schooling take-off precedes the release of labour from agriculture (31 of the 34 countries where the order is identified; 30 undetermined; both-exact median lead 18 years; 3 reverse cases)
 
 | work | what it shows | status | new vs replicated |
 |---|---|---|---|
@@ -135,7 +135,7 @@ the additions so the diff is auditable.
 **Objection 1 — "schools before factories is not new."** Accepted. The paper now cites Sandberg (1979, the
 "impoverished sophisticate"), Mitch (1992), the world-polity school, Squicciarini and Voigtländer (2015), de
 Pleijt and van Zanden (2016) and Graff as the prior claims, in the introduction (Section 1), and reframes the
-contribution as the **systematic 61/64 event coding plus the supply-versus-demand decomposition**, not the
+contribution as the **systematic event coding (31 of 34 identified forward, 30 unordered) plus the supply-versus-demand decomposition**, not the
 direction of the historical pattern. No sentence claims awareness-failure. Works added: Sandberg 1979
 (10.1017/s0022050700096418), Mitch 1992 (10.9783/9781512807189), Goldin & Katz 1999 (10.3386/w6439; published
 chapter 10.1017/cbo9780511572777.012), Squicciarini & Voigtländer 2015 (10.1093/qje/qjv025), de Pleijt & van
@@ -144,8 +144,7 @@ Benavot & Riddle 1988 (10.2307/2112627), Meyer, Ramirez & Soysal 1992 (10.2307/2
 (10.1177/000312240507000602). All marked in `refs.md` as auditor-verified (V/W/U).
 
 **Objection 2 — "the dates and coding are the paper."** Accepted and partly answered: Section 5.3 now reports the
-date-perturbation robustness (median gap 26 years, IQR 17–29; 93% of forward cases exceed a 10-year gap; a uniform
-15-year error is needed to cut the forward share materially). Alternative-threshold re-detection could not be run
+censoring-aware recount (order identified for 34 of 64; 31 forward; both-exact median 18 years, IQR 8–31; 26 of the 34 stay forward after a uniform 15-year error). The earlier 26-year / 93% / 15-year-margin figures treated boundary dates as exact and are withdrawn. Alternative-threshold re-detection could not be run
 (the raw series were on the unreachable box) and is named as the paper's central remaining vulnerability, with a
 date-by-date source table owed for the historical cases. Demand-side theory added: Galor & Moav 2006
 (10.1111/j.1467-937x.2006.00370.x) and Becker & Woessmann 2009 (10.1162/qjec.2009.124.2.531).

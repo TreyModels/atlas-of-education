@@ -3,11 +3,9 @@
 The paper is built around one ordering claim, and it is worth stating plainly before the literature, the data or
 the qualifications. In the 64 late-industrialising countries where the three events — the take-off in schooling,
 the release of labour out of agriculture, and the fertility decline — can all be dated in the common 1965-2010
-window, **the schooling take-off precedes the release of agricultural labour in 61 countries (95.3%)**, with a
-median lead of **26 years** (bootstrap 95% interval for the median 22-26 years; interquartile range of the
-country-level gaps 17-29 years). The reverse ordering — the farm exodus first, which is what the demand-led
-account requires — occurs in **3 countries (4.7%; bootstrap 95% interval 0-11%)**. The schooling take-off also
-precedes the fertility decline in **69%** of the same countries (95% interval 58-80%). The result is not carried
+window, **the schooling take-off precedes the release of agricultural labour in 31 of the 34 countries where the order can be identified (91%)**, with a
+median lead of **18 years** among the 18 countries where both dates are exact (the other 30 countries have dates on a window boundary and cannot be ordered). The reverse ordering — the farm exodus first, which is what the demand-led
+account requires — occurs in **3 countries** (Afghanistan, Cambodia, Senegal). The schooling take-off precedes the fertility decline in only **37.5%** of the same countries under a strict ordering (the earlier 69% counted ties; see `paper.md` Section 2). The result is not carried
 by one region: Latin America, South Asia, East Asia, North Africa and Sub-Saharan Africa are all represented
 among the forward cases.
 

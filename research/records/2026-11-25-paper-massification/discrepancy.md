@@ -9,7 +9,7 @@ resolution. Status: **FIXED**, **DISPUTED-WITH-REASON**, or **OPEN**.
 | # | item | status | resolution |
 |---|---|---|---|
 | A1 | "Schools before factories is not new" — must cite Sandberg 1979, Mitch 1992, world-polity, Squicciarini & Voigtländer 2015, de Pleijt & van Zanden 2016 | FIXED | Section 1 now cites all of them and the claim is reframed as systematic coding, not direction; Section 3 asks "has anyone established this ordering?"; claims-prior-art Claim 1 rewritten with the prior claims and the "new assembly" label |
-| A2 | Dates/coding are the paper — need date-by-date source table and recoding robustness | PARTLY FIXED / OPEN | date-perturbation robustness added (Section 6.3; median 26, IQR 16–29 across all 64 / 17–29 across the 61 forward cases, 93% >10y, 15y uniform error needed); alternative-threshold re-detection and the date-source table are named as the central vulnerability (Section 15, Section 13.1) and are **open** because the raw series were on a server that went down |
+| A2 | Dates/coding are the paper — need date-by-date source table and recoding robustness | PARTLY FIXED / OPEN | date-perturbation robustness recomputed with boundary dates treated as censored (Section 5.3; 34 of 64 identified, 31 forward; both-exact median 18, IQR 8–31; 26 of 34 forward after a 15y error); the earlier median 26 / 93% >10y figures are withdrawn; alternative-threshold re-detection and the date-source table are named as the central vulnerability (Section 15, Section 13.1) and are **open** because the raw series were on a server that went down |
 | A3 | Horse race under-identified | FIXED | called a **decomposition, not a test** (Section 7.6 and 12.4); names the natural experiments needed (compulsory-law adoption, church-state competition, colonial schooling policy) in Sections 7.6, 13.3 |
 | A4 | Scaling/θγ presented as tested claim | FIXED | Section 10 labelled a diagnostic frame, θ/γ not fitted, data gap stated |
 | A5 | Credential inflation is a 50-year-old claim | FIXED | Collins, Spence, Arrow, Bills & Brown cited; contribution limited to the measurement, with the data gap stated |
@@ -29,7 +29,7 @@ resolution. Status: **FIXED**, **DISPUTED-WITH-REASON**, or **OPEN**.
 
 ## C. Centerpiece verdict
 
-The auditor's verdict is that the 61/64 event-ordering comparison is **not known as a systematic test**: the
+The auditor's verdict is that the schooling-versus-release event-ordering comparison is **not known as a systematic test**: the
 world-polity school argued mass schooling precedes economic demand (Boli et al. 1985; Soysal & Strang 1989; Meyer
 et al. 1992) and economic history has case narratives (Prussia, Britain, France, US), but no common event-ordering
 comparison across ~64 countries with bootstrap intervals was found. Verdict: **INCREMENTAL-NEW assembly**,

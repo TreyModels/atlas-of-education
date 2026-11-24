@@ -14,9 +14,10 @@ verified or unverified throughout.
 Most theories of mass schooling are demand stories. This paper is built around one ordering claim, stated before the theory: in late-industrialising countries, the schooling take-off precedes the release of agricultural labour, and the labour-market demand variables the human-capital theory names turn on later. Families invest in education because returns rise,
 employers demand literate workers, and the labour market pulls children through school. The timing of the
 historical record is awkward for this account in much of the world: in a panel of 64 late-industrialising
-countries where both events can be dated, the take-off in schooling **precedes** the release of labour out of
-agriculture in 61 of them (95%), with a median lead of 26 years (bootstrap 95% interval 22–26 years); the
-reverse ordering occurs in 5% (0–11%). Labour-market demand — the wage premium between non-agricultural and
+countries with all three events dated, the order of schooling and release can be identified in only 34, because the
+1965–2010 window puts many dates on its boundary; in 31 of those 34 (91%) the take-off in schooling **precedes** the
+release of labour out of agriculture and in 3 it follows, while 30 countries cannot be ordered (the forward share over
+all 64 is between 48% and 95%). Where both dates are exact the median lead is 18 years. Labour-market demand — the wage premium between non-agricultural and
 agricultural work and the paid-employment share — precedes the schooling take-off in only 7% of countries.
 In a panel horse race with country and period fixed effects, supply-side measures (education spending, teacher
 supply, enrolment capacity) carry the association with schooling expansion (standardized coefficient +0.456,
@@ -73,8 +74,8 @@ across late-industrialising countries.
 
 **The finding, in one paragraph.** Among 64 countries where all three events — schooling take-off, agricultural
 labour release, fertility decline — can be dated in a common 1965–2010 window, schooling precedes agricultural
-labour release in 61 (95%; release-first 5%, bootstrap 95% interval 0–11%), with a median lead of 26 years (22–26
-years). Schooling also precedes the fertility decline in only 37.5% of those 64 countries under a strict ordering (bootstrap 95% interval 26.6–50.0%; 31.3% simultaneous, 31.3% fertility-first); the source record's JSON reported 68.75% only by counting the 20 simultaneous take-offs as schooling-first, and that figure is not used. The raw supply-versus-
+labour release in 31 of the 34 where the order can be identified (91%; 3 release-first; 30 countries have dates on a
+window boundary and cannot be ordered), with a median lead of 18 years where both dates are exact (n = 18). Schooling also precedes the fertility decline in only 37.5% of those 64 countries under a strict ordering (bootstrap 95% interval 26.6–50.0%; 31.3% simultaneous, 31.3% fertility-first); the source record's JSON reported 68.75% only by counting the 20 simultaneous take-offs as schooling-first, and that figure is not used. The raw supply-versus-
 demand event comparison initially looks demand-led — demand onset precedes schooling in 73% of 89 countries
 (64–82%) while supply onset does so in 28% (19–37%) — but that comparison is contaminated by data availability:
 61 of 108 schooling dates sit on the first year of the common window, and the education-spending, pupil-teacher
@@ -131,9 +132,9 @@ panel under one rule.
 The paper is built around one ordering claim, and it is worth stating plainly before the literature, the data or
 the qualifications. In the 64 late-industrialising countries where the three events — the take-off in schooling,
 the release of labour out of agriculture, and the fertility decline — can all be dated in the common 1965-2010
-window, **the schooling take-off precedes the release of agricultural labour in 61 countries (95.3%)**, with a
-median lead of **26 years** (bootstrap 95% interval for the median 22-26 years; interquartile range 16-29 years across all 64 gaps (17-29 years across the 61 forward cases)). The reverse ordering — the farm exodus first, which is what the demand-led
-account requires — occurs in **3 countries (4.7%; bootstrap 95% interval 0-11%)**. The schooling take-off also
+window, **the schooling take-off precedes the release of agricultural labour in 31 of the 34 countries where the order can be identified (91%)**, with a
+median lead of **18 years** among the 18 countries where both dates are exact (interquartile range 8–31). The other 30 countries have a schooling date at the 1965 boundary and/or a release date at the 1991 boundary — "at or before" dates, not events — and cannot be ordered; over all 64 the forward share lies between 48% and 95%. The reverse ordering — the farm exodus first, which is what the demand-led
+account requires — occurs in **3 countries** (Afghanistan, Cambodia, Senegal). *Correction (review 2026-11-24): an earlier draft reported 61 of 64 and a median of 26 years, which treated boundary dates as exact.* The schooling take-off also
 precedes the fertility decline in **37.5%** of the same countries under a strict ordering (95% interval 26.6-50.0%; 31.3% simultaneous, 31.3% fertility-first; the source record's JSON reported 68.75% by counting the simultaneous cases as schooling-first, and that figure is not used). The result is not carried
 by one region: Latin America, South Asia, East Asia, North Africa and Sub-Saharan Africa are all represented
 among the forward cases.
@@ -506,10 +507,11 @@ replicated for every claim.
 
 Among the 64 countries where all three events — schooling take-off, agricultural labour release and fertility
 decline — can be detected in the common 1965–2010 window, the schooling take-off **precedes** the agricultural
-labour release in **61 countries (95.3%)**, with a median lead of **26 years** (bootstrap 95% interval of the
-median 22–26 years; full record `subsistence-v2 @ ce66cfc`, `results/sequencing.txt`, fields
-`pct_release_before_schooling` and `median gap release->schooling`). The reverse ordering — the farm exodus
-first, the demand-led prediction — occurs in **3 countries, 4.7%** (bootstrap 95% interval 0–11%). The schooling
+labour release in **31 of the 34 countries where the order can be identified (91%)**, with a median lead of **18 years**
+where both dates are exact (n = 18; record `subsistence-v2 @ ce66cfc`, `results/event_dates.csv`, recomputed in
+`results/sequencing_censoring.json` by `scripts/sequencing_censoring.py`). The 30 remaining countries have schooling at the 1965 boundary and/or release at the 1991 boundary and cannot be ordered. The earlier
+figures (61 of 64; 26 years; bootstrap 22–26) came from `results/sequencing.txt`, which treated those boundary dates as exact, and are withdrawn. The reverse ordering — the farm exodus
+first, the demand-led prediction — occurs in **3 countries** (Afghanistan, Cambodia, Senegal). The schooling
 take-off also precedes the fertility decline in **37.5%** of those countries under a strict ordering (95% interval
 26.6–50.0%; 31.3% simultaneous, 31.3% fertility-first), with a median gap of **0 years** (interquartile range −5
 to +8). The source record's JSON reports **68.75%** for this ordering because it counts the 20 simultaneous cases
@@ -517,8 +519,7 @@ as schooling-first; a direct recomputation from the same record's event CSV give
 countries (**35.8%** across all 81 countries with both dates), and this paper reports the strict ordering and the
 discrepancy rather than the JSON figure (recomputation: `scripts/recompute_fertility_ordering.py`, output
 `data/recompute_fertility_ordering.json`). The related but **different** ordering of the farm exodus against the fertility decline is not used as a claim
-in this paper: computed from the same event file it is **4/64 = 6.25%** release-first (no ties; the fertility
-decline comes first in **60/64 = 93.75%**), and it must not be conflated with the 20/64 simultaneity in the
+in this paper: computed from the same event file it is **4/64** release-first with no ties, but 28 of the 60 fertility-first cases are fertility dates on the 1965 boundary and fertility-first by the window (the genuine comparisons are 19 fertility-first and 4 release-first among 23), and it must not be conflated with the 20/64 simultaneity in the
 schooling-versus-fertility comparison (recomputation: `scripts/recompute_fertility_ordering.py`,
 `data/recompute_fertility_ordering.json`).
 
@@ -535,22 +536,18 @@ agricultural employment share. It does **not** say that schooling caused the lab
 structural change can both be consequences of a third process — state building, for example — and the event
 data cannot separate them. The result does say that the simple demand narrative — farms release labour, the
 labour market demands skills, schooling follows — is **not the typical ordering** in the countries where the
-16 sequence can be measured. The median 26-year lead is long enough that the two events are not part of a
-single contemporaneous adjustment.
+16 sequence can be measured. Where both dates are exact the median lead is 18 years, and for the 15 countries with schooling at the 1965 boundary the lead is at least 27 years by construction; both are long enough that the two events are not part of a
+single contemporaneous adjustment, though the lead's typical size is only established for the exact-date pairs.
 
 ### 5.3 Robustness: which countries carry the result, and the window boundary
 
-The 61-of-64 result is not driven by one region. The countries where schooling precedes release include
+The forward result among identified countries is not driven by one region. The countries where schooling precedes release include
 Albania, Bangladesh, Belize, Brazil, Chile, China, Côte d'Ivoire, Colombia, Costa Rica, Cuba, the Dominican
 Republic, Algeria, Ecuador, Egypt, Spain, Fiji, Ghana, Guatemala, Guyana and Honduras, among others — Latin
 America, South Asia, East Asia, North Africa and Sub-Saharan Africa are all represented. The three countries
-with the reverse ordering are not a bloc. A concern is the window boundary: because both events are detected
-in the same window, countries whose schooling take-off is exactly at the window start (1965) may have led by
-more than 26 years or by less; the bootstrap interval on the median (22–26 years) already reflects the
-imprecision of dates. A second concern is that the agricultural employment series are ILO-modelled for many
+with the reverse ordering are not a bloc. The central concern is the window boundary, and the first draft handled it wrongly: 61 of 108 schooling take-offs sit exactly at the window start (1965) and 65 of 134 release dates at 1991, so those dates mean "at or before", and a bootstrap on the pile-up does not account for that. Section 5.3 below classifies the countries accordingly. A second concern is that the agricultural employment series are ILO-modelled for many
 countries, and modelled shares can lag real sectoral change; if the effect were large it would shorten the
-measured lead, and the lead is large enough to survive it. **Coding robustness (computed for this paper from the committed event dates).** Because the dates are the paper's central vulnerability, we report how the headline count behaves under date perturbation, using the committed event-date file (alternative-threshold re-detection was not possible after the box went down; it is stated as remaining work). In the 64-country three-event sample the gap distribution is: median **26 years**, interquartile range **16-29 years** across all 64 gaps (**17-29 years** across the 61 forward cases); **61 of 61** forward cases have a positive gap, **59 of 61 (97%)** exceed 5 years, **57 of 61 (93%)** exceed 10 years, **52 of 61 (85%)** exceed 15 years, **43 of 61 (70%)** exceed 20 years and **13 of 61 (21%)** exceed 30 years. If every gap were overstated by a uniform 5 years, 59 of 61 forward cases would remain; by 10 years, 57; by 15 years, 52. The headline count therefore takes a systematic error of more than 15 years in the same direction to cut the forward share materially. What this does not do is re-detect the events under alternative definitions (statute vs enrolment, 1 vs 2 years of schooling, 3 vs 5 points of agricultural decline); that recoding is the paper's main empirical vulnerability and the first item for the next pass. Source: `subsistence-v2 @ ce66cfc`, `results/event_dates.csv`, columns `schooling` and `release`; the counts are arithmetic on that file, not a new estimate. The reliability of the result therefore rests on the
-magnitude of the gap rather than on the exact dates, and on the fact that the reverse ordering is rare.
+measured lead, and the lead is large enough to survive it. **Coding robustness (recomputed 2026-11-24 with boundary dates treated as censored).** Because the dates are the paper's central vulnerability, we classify each of the 64 three-event countries by what its two dates can say (`scripts/sequencing_censoring.py` on the committed event-date file): 18 have both dates exact; 15 have schooling at the 1965 boundary and release exact (schooling-first is identified, lead at least 27 years); 15 have release at the 1991 boundary and schooling exact (reverse-or-tie is identified when schooling is 1991 or later — one country — and otherwise the order is undetermined); and 16 have both at their boundaries (undetermined). The order is therefore identified for 34 countries, 31 forward and 3 reverse, and undetermined for 30. Among the 18 both-exact pairs the lead has median 18 years, interquartile range 8.0–30.8, range −12 to +34; if every schooling date were fifteen years too early, 11 of the 18 would remain forward, and across the 34 identified countries 26 (76.5%) would. The earlier perturbation counts (57 of 61 over 10 years; 52 of 61 over 15 years) were computed on boundary-inflated gaps and are withdrawn. What this still does not do is re-detect the events under alternative definitions (statute vs enrolment, 1 vs 2 years of schooling, 3 vs 5 points of agricultural decline); that recoding is the paper's main empirical vulnerability and the first item for the next pass, and a longer window or earlier series would be needed to order the 30 undetermined countries. Source: `results/event_dates.csv`, columns `schooling` and `release`; `results/sequencing_censoring.json`. The reliability of the result therefore rests on the identified countries only: it is a statement about the 34 countries whose order can be read from the data, in which the reverse ordering is rare, and not a statement about all 64.
 
 ### 5.4 The demand variables, measured the way the theory measures them
 
@@ -637,8 +634,8 @@ definitions first committed at `74e0fe2`), drafted for this paper by the histori
 the paper's voice. All historical dates are UNVERIFIED literature standard; the evidence labels are stated at
 each case.*
 
-The 1965–2010 panel finds that schooling take-off precedes the release of agricultural labour in 61 of 64
-countries. That regularity could be a law of development or a property of the late-industrialising countries that
+The 1965–2010 panel finds that schooling take-off precedes the release of agricultural labour in 31 of the 34
+countries where the order can be identified (30 cannot be ordered). That regularity could be a law of development or a property of the late-industrialising countries that
 dominate post-1965 data. The historical cases are where the question can be asked directly, and the answer is
 split: schooling came first only where the state built the pipeline ahead of demand.
 
@@ -1024,10 +1021,10 @@ Before any new data, the ordering claim needs a robustness pass that this sessio
 series were on a server that went down, so alternative-threshold recoding was not possible). Concretely: re-detect
 the three events under alternative definitions — statute versus measured enrolment for schooling; 1 versus 2
 years of schooling per decade; 3 versus 5 points of agricultural-employment decline; different windows and
-smoothing rules — and report how many of the 61 forward cases flip under each. A second coder should code a
+smoothing rules — and report how many of the 31 identified forward cases flip under each. A second coder should code a
 sample of countries blind to the first coder's dates, with a pre-registered agreement threshold, and a
 date-by-date source table with page references should be published for every country in the headline table. What
-this would settle: whether the 61/64 count is a property of the events or of our definitions. What it would not
+this would settle: whether the 31-of-34 count is a property of the events or of our definitions, and what the 30 unordered countries do. What it would not
 settle: causality.
 
 ### 13.2 Historical enrolment series: measuring the classic cases properly
@@ -1106,8 +1103,9 @@ The paper set out to test the timing prediction that separates the demand-led an
 massification. The evidence, taken together, supports a conditional synthesis:
 
 1. **In the late-industrialising countries where the modern panel can date the events, schooling precedes the
-   release of labour from agriculture**: 61 of 64 countries, a median lead of 26 years (bootstrap 22–26 years),
-   reverse ordering 5% (0–11%). Schooling precedes the fertility decline in only 37.5% of those countries under a strict ordering (26.6–50.0%;
+   release of labour from agriculture**: 31 of the 34 countries where the order is identified (30 cannot be
+   ordered because their dates sit on the window boundary), a median lead of 18 years where both dates are exact,
+   3 reverse cases. Schooling precedes the fertility decline in only 37.5% of those countries under a strict ordering (26.6–50.0%;
    31.3% simultaneous, 31.3% fertility-first; the record JSON's 68.75% counted simultaneous take-offs as
    schooling-first and is not used). The sequencing is not a cohort-level measurement — the data are period series — but it is a
    systematic event-ordering, not a handful of cases.
@@ -1141,8 +1139,9 @@ massification. The evidence, taken together, supports a conditional synthesis:
 
 > **What we know now — massification**
 >
-> - **The sequence**: in 61 of 64 late-industrialising countries, the schooling take-off precedes the release
->   of labour from agriculture, median gap 26 years (22–26, bootstrap); reverse 5% (0–11%).
+> - **The sequence**: in 31 of the 34 late-industrialising countries where the order can be identified (30 cannot
+>   be ordered), the schooling take-off precedes the release of labour from agriculture; median gap 18 years where
+>   both dates are exact; 3 reverse cases.
 > - **Which comes first, supply or demand**: the raw event ordering looks demand-led (73%), but that is a data
 >   artefact; the fair sample turns together (supply 76%, demand 79%) and the horse race puts the association
 >   on supply (+0.456, SE 0.174) not demand (+0.006, SE 0.203; n=78, 51 countries).
@@ -1183,7 +1182,7 @@ take-off precedes labour release", not "the cohort that entered as mechanisation
 fertility". The cohort-level test is stated as future work; the event ordering is the strongest claim the data
 can carry.
 
-**2. "The dates are the paper - a different coding gives a different count."** Yes. Section 6.3 reports the perturbation exercise: 93% of forward cases exceed a 10-year gap and a systematic 15-year error is needed to cut the forward share materially. But we did **not** re-detect the events under alternative definitions (statute vs enrolment; 1 vs 2 years of schooling; 3 vs 5 points of agricultural decline), because the raw series were unreachable after the box went down. That recoding is the paper's central empirical vulnerability and the first item for the next pass; a date-by-date source table with page references is also owed for the historical cases.
+**2. "The dates are the paper - a different coding gives a different count."** Yes. Section 5.3 reports the censoring-aware recount: the order is identified for 34 of 64 countries (31 forward), and a systematic 15-year error leaves 26 of the 34 forward. The earlier 93%-above-10-years statistic is withdrawn. But we did **not** re-detect the events under alternative definitions (statute vs enrolment; 1 vs 2 years of schooling; 3 vs 5 points of agricultural decline), because the raw series were unreachable after the box went down. That recoding is the paper's central empirical vulnerability and the first item for the next pass; a date-by-date source table with page references is also owed for the historical cases.
 
 **2b. "Your headline sequencing result is a selection of the countries that happen to have data."** Partly true.
 The 64 countries are those where all three events are detectable in the 1965–2010 window; they over-represent
@@ -1238,8 +1237,8 @@ names the archival work needed.
 ## 16. Conclusion
 Massification is usually told as a demand story: factories and cities raise the return to schooling, and
 schooling follows. This paper tested the timing that story requires across 64 late-industrialising countries and
-found the opposite ordering: the schooling take-off precedes the release of labour from agriculture in 61 of
-them, by a median of 26 years; labour-market demand — the wage premium and paid employment — precedes schooling
+found the opposite ordering: the schooling take-off precedes the release of labour from agriculture in 31 of
+the 34 where the order can be identified (30 cannot be ordered), by a median of 18 years where both dates are exact; labour-market demand — the wage premium and paid employment — precedes schooling
 in only 7% of countries; the raw demand-first appearance is a data artefact, and in the fair comparison the two
 sides turn together, with the horse race putting the association on supply. The historical cases show why the
 answer is conditional: Prussia built its schools a century before it industrialised; Britain industrialised
@@ -1257,7 +1256,7 @@ pass turn the correlation into identification.
 ## Appendix A. Evidence labels and verification status
 | section | evidence | label |
 |---|---|---|
-| 5 | 61/64 sequencing, median 26 years, bootstrap CI | project data, verified in record (`subsistence-v2 @ ce66cfc`) |
+| 5 | 31 of 34 identified sequencing, median 18 years (both-exact), 30 undetermined | recomputed from `results/event_dates.csv` (`subsistence-v2 @ ce66cfc`) by `scripts/sequencing_censoring.py`; the earlier 61/64 and 26 years are withdrawn |
 | 6 | raw 28%/73%; fair 76%/79%/39%; labour-market-only 7%; horse race +0.456/+0.006 | project data, verified in record (`supply-demand @ 963e5e5`) |
 | 7 | Prussia/France/Britain/US dates and percentages | **UNVERIFIED literature standard** (all); verified negative: our own panel cannot see them |
 | 8 | elasticities, intensification share, dynamic nulls, model | project data, verified in record (`subsistence @ 41f6429`, `subsistence-v2 @ ce66cfc`) |

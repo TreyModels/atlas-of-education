@@ -10,10 +10,10 @@ Before any new data, the ordering claim needs a robustness pass that this sessio
 series were on a server that went down, so alternative-threshold recoding was not possible). Concretely: re-detect
 the three events under alternative definitions — statute versus measured enrolment for schooling; 1 versus 2
 years of schooling per decade; 3 versus 5 points of agricultural-employment decline; different windows and
-smoothing rules — and report how many of the 61 forward cases flip under each. A second coder should code a
+smoothing rules — and report how many of the 31 identified forward cases flip under each. A second coder should code a
 sample of countries blind to the first coder's dates, with a pre-registered agreement threshold, and a
 date-by-date source table with page references should be published for every country in the headline table. What
-this would settle: whether the 61/64 count is a property of the events or of our definitions. What it would not
+this would settle: whether the 31-of-34 count is a property of the events or of our definitions. What it would not
 settle: causality.
 
 ### 13.2 Historical enrolment series: measuring the classic cases properly
