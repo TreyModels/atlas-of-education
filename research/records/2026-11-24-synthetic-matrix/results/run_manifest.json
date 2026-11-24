@@ -1,0 +1,34 @@
+{
+ "task": "task-19",
+ "commit_base": "fbd02814f70b5cc884f026b73a2e8506b73bd1e8",
+ "started_local": "2026-11-24T18:54:56+0800",
+ "wall_s": 11.7,
+ "backend": "numpy",
+ "batch_layout": {
+  "N": 10000,
+  "years": 25,
+  "threads": 256,
+  "blocks": 40,
+  "backend": "numpy",
+  "backend_note": "port MLX transcription; NumPy fallback available"
+ },
+ "n_countries": 72,
+ "years": 25,
+ "links": [
+  "cl_observed",
+  "study_work",
+  "work_only",
+  "hidden_work",
+  "tutoring",
+  "mean_learn",
+  "mean_income"
+ ],
+ "specs": [
+  "S1_10y_decFE",
+  "S2_5y_binFE",
+  "S3_levels_country_year_FE"
+ ],
+ "n_groupings": 15,
+ "seed_base": 20270101,
+ "label": "SIMULATION"
+}

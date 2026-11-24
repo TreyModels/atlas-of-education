@@ -1,0 +1,547 @@
+{
+ "n_cells": 315,
+ "n_indistinguishable": 175,
+ "cross_world_indistinguishable_share": 0.5555555555555556,
+ "wall_decision_rule": "wall demonstrated iff share >= 0.75",
+ "wall_verdict": "separable",
+ "robust_across_groupings": {
+  "P": {
+   "n_robust": 15,
+   "n_links": 21,
+   "share": 0.7142857142857143,
+   "detail": [
+    {
+     "spec": "S1_10y_decFE",
+     "link": "cl_observed",
+     "groupings_same_sign_sig": 15,
+     "robust": true
+    },
+    {
+     "spec": "S1_10y_decFE",
+     "link": "study_work",
+     "groupings_same_sign_sig": 15,
+     "robust": true
+    },
+    {
+     "spec": "S1_10y_decFE",
+     "link": "work_only",
+     "groupings_same_sign_sig": 15,
+     "robust": true
+    },
+    {
+     "spec": "S1_10y_decFE",
+     "link": "hidden_work",
+     "groupings_same_sign_sig": 0,
+     "robust": false
+    },
+    {
+     "spec": "S1_10y_decFE",
+     "link": "tutoring",
+     "groupings_same_sign_sig": 15,
+     "robust": true
+    },
+    {
+     "spec": "S1_10y_decFE",
+     "link": "mean_learn",
+     "groupings_same_sign_sig": 15,
+     "robust": true
+    },
+    {
+     "spec": "S1_10y_decFE",
+     "link": "mean_income",
+     "groupings_same_sign_sig": 0,
+     "robust": false
+    },
+    {
+     "spec": "S2_5y_binFE",
+     "link": "cl_observed",
+     "groupings_same_sign_sig": 15,
+     "robust": true
+    },
+    {
+     "spec": "S2_5y_binFE",
+     "link": "study_work",
+     "groupings_same_sign_sig": 15,
+     "robust": true
+    },
+    {
+     "spec": "S2_5y_binFE",
+     "link": "work_only",
+     "groupings_same_sign_sig": 15,
+     "robust": true
+    },
+    {
+     "spec": "S2_5y_binFE",
+     "link": "hidden_work",
+     "groupings_same_sign_sig": 0,
+     "robust": false
+    },
+    {
+     "spec": "S2_5y_binFE",
+     "link": "tutoring",
+     "groupings_same_sign_sig": 15,
+     "robust": true
+    },
+    {
+     "spec": "S2_5y_binFE",
+     "link": "mean_learn",
+     "groupings_same_sign_sig": 15,
+     "robust": true
+    },
+    {
+     "spec": "S2_5y_binFE",
+     "link": "mean_income",
+     "groupings_same_sign_sig": 0,
+     "robust": false
+    },
+    {
+     "spec": "S3_levels_country_year_FE",
+     "link": "cl_observed",
+     "groupings_same_sign_sig": 15,
+     "robust": true
+    },
+    {
+     "spec": "S3_levels_country_year_FE",
+     "link": "study_work",
+     "groupings_same_sign_sig": 15,
+     "robust": true
+    },
+    {
+     "spec": "S3_levels_country_year_FE",
+     "link": "work_only",
+     "groupings_same_sign_sig": 15,
+     "robust": true
+    },
+    {
+     "spec": "S3_levels_country_year_FE",
+     "link": "hidden_work",
+     "groupings_same_sign_sig": 6,
+     "robust": false
+    },
+    {
+     "spec": "S3_levels_country_year_FE",
+     "link": "tutoring",
+     "groupings_same_sign_sig": 1,
+     "robust": false
+    },
+    {
+     "spec": "S3_levels_country_year_FE",
+     "link": "mean_learn",
+     "groupings_same_sign_sig": 13,
+     "robust": true
+    },
+    {
+     "spec": "S3_levels_country_year_FE",
+     "link": "mean_income",
+     "groupings_same_sign_sig": 15,
+     "robust": true
+    }
+   ]
+  },
+  "S": {
+   "n_robust": 14,
+   "n_links": 21,
+   "share": 0.6666666666666666,
+   "detail": [
+    {
+     "spec": "S1_10y_decFE",
+     "link": "cl_observed",
+     "groupings_same_sign_sig": 15,
+     "robust": true
+    },
+    {
+     "spec": "S1_10y_decFE",
+     "link": "study_work",
+     "groupings_same_sign_sig": 15,
+     "robust": true
+    },
+    {
+     "spec": "S1_10y_decFE",
+     "link": "work_only",
+     "groupings_same_sign_sig": 15,
+     "robust": true
+    },
+    {
+     "spec": "S1_10y_decFE",
+     "link": "hidden_work",
+     "groupings_same_sign_sig": 0,
+     "robust": false
+    },
+    {
+     "spec": "S1_10y_decFE",
+     "link": "tutoring",
+     "groupings_same_sign_sig": 15,
+     "robust": true
+    },
+    {
+     "spec": "S1_10y_decFE",
+     "link": "mean_learn",
+     "groupings_same_sign_sig": 15,
+     "robust": true
+    },
+    {
+     "spec": "S1_10y_decFE",
+     "link": "mean_income",
+     "groupings_same_sign_sig": 0,
+     "robust": false
+    },
+    {
+     "spec": "S2_5y_binFE",
+     "link": "cl_observed",
+     "groupings_same_sign_sig": 15,
+     "robust": true
+    },
+    {
+     "spec": "S2_5y_binFE",
+     "link": "study_work",
+     "groupings_same_sign_sig": 15,
+     "robust": true
+    },
+    {
+     "spec": "S2_5y_binFE",
+     "link": "work_only",
+     "groupings_same_sign_sig": 15,
+     "robust": true
+    },
+    {
+     "spec": "S2_5y_binFE",
+     "link": "hidden_work",
+     "groupings_same_sign_sig": 0,
+     "robust": false
+    },
+    {
+     "spec": "S2_5y_binFE",
+     "link": "tutoring",
+     "groupings_same_sign_sig": 15,
+     "robust": true
+    },
+    {
+     "spec": "S2_5y_binFE",
+     "link": "mean_learn",
+     "groupings_same_sign_sig": 15,
+     "robust": true
+    },
+    {
+     "spec": "S2_5y_binFE",
+     "link": "mean_income",
+     "groupings_same_sign_sig": 0,
+     "robust": false
+    },
+    {
+     "spec": "S3_levels_country_year_FE",
+     "link": "cl_observed",
+     "groupings_same_sign_sig": 15,
+     "robust": true
+    },
+    {
+     "spec": "S3_levels_country_year_FE",
+     "link": "study_work",
+     "groupings_same_sign_sig": 2,
+     "robust": false
+    },
+    {
+     "spec": "S3_levels_country_year_FE",
+     "link": "work_only",
+     "groupings_same_sign_sig": 15,
+     "robust": true
+    },
+    {
+     "spec": "S3_levels_country_year_FE",
+     "link": "hidden_work",
+     "groupings_same_sign_sig": 0,
+     "robust": false
+    },
+    {
+     "spec": "S3_levels_country_year_FE",
+     "link": "tutoring",
+     "groupings_same_sign_sig": 2,
+     "robust": false
+    },
+    {
+     "spec": "S3_levels_country_year_FE",
+     "link": "mean_learn",
+     "groupings_same_sign_sig": 15,
+     "robust": true
+    },
+    {
+     "spec": "S3_levels_country_year_FE",
+     "link": "mean_income",
+     "groupings_same_sign_sig": 15,
+     "robust": true
+    }
+   ]
+  },
+  "C": {
+   "n_robust": 15,
+   "n_links": 21,
+   "share": 0.7142857142857143,
+   "detail": [
+    {
+     "spec": "S1_10y_decFE",
+     "link": "cl_observed",
+     "groupings_same_sign_sig": 15,
+     "robust": true
+    },
+    {
+     "spec": "S1_10y_decFE",
+     "link": "study_work",
+     "groupings_same_sign_sig": 15,
+     "robust": true
+    },
+    {
+     "spec": "S1_10y_decFE",
+     "link": "work_only",
+     "groupings_same_sign_sig": 15,
+     "robust": true
+    },
+    {
+     "spec": "S1_10y_decFE",
+     "link": "hidden_work",
+     "groupings_same_sign_sig": 0,
+     "robust": false
+    },
+    {
+     "spec": "S1_10y_decFE",
+     "link": "tutoring",
+     "groupings_same_sign_sig": 15,
+     "robust": true
+    },
+    {
+     "spec": "S1_10y_decFE",
+     "link": "mean_learn",
+     "groupings_same_sign_sig": 15,
+     "robust": true
+    },
+    {
+     "spec": "S1_10y_decFE",
+     "link": "mean_income",
+     "groupings_same_sign_sig": 0,
+     "robust": false
+    },
+    {
+     "spec": "S2_5y_binFE",
+     "link": "cl_observed",
+     "groupings_same_sign_sig": 15,
+     "robust": true
+    },
+    {
+     "spec": "S2_5y_binFE",
+     "link": "study_work",
+     "groupings_same_sign_sig": 15,
+     "robust": true
+    },
+    {
+     "spec": "S2_5y_binFE",
+     "link": "work_only",
+     "groupings_same_sign_sig": 15,
+     "robust": true
+    },
+    {
+     "spec": "S2_5y_binFE",
+     "link": "hidden_work",
+     "groupings_same_sign_sig": 0,
+     "robust": false
+    },
+    {
+     "spec": "S2_5y_binFE",
+     "link": "tutoring",
+     "groupings_same_sign_sig": 15,
+     "robust": true
+    },
+    {
+     "spec": "S2_5y_binFE",
+     "link": "mean_learn",
+     "groupings_same_sign_sig": 15,
+     "robust": true
+    },
+    {
+     "spec": "S2_5y_binFE",
+     "link": "mean_income",
+     "groupings_same_sign_sig": 0,
+     "robust": false
+    },
+    {
+     "spec": "S3_levels_country_year_FE",
+     "link": "cl_observed",
+     "groupings_same_sign_sig": 15,
+     "robust": true
+    },
+    {
+     "spec": "S3_levels_country_year_FE",
+     "link": "study_work",
+     "groupings_same_sign_sig": 14,
+     "robust": true
+    },
+    {
+     "spec": "S3_levels_country_year_FE",
+     "link": "work_only",
+     "groupings_same_sign_sig": 15,
+     "robust": true
+    },
+    {
+     "spec": "S3_levels_country_year_FE",
+     "link": "hidden_work",
+     "groupings_same_sign_sig": 0,
+     "robust": false
+    },
+    {
+     "spec": "S3_levels_country_year_FE",
+     "link": "tutoring",
+     "groupings_same_sign_sig": 1,
+     "robust": false
+    },
+    {
+     "spec": "S3_levels_country_year_FE",
+     "link": "mean_learn",
+     "groupings_same_sign_sig": 15,
+     "robust": true
+    },
+    {
+     "spec": "S3_levels_country_year_FE",
+     "link": "mean_income",
+     "groupings_same_sign_sig": 15,
+     "robust": true
+    }
+   ]
+  },
+  "R": {
+   "n_robust": 14,
+   "n_links": 21,
+   "share": 0.6666666666666666,
+   "detail": [
+    {
+     "spec": "S1_10y_decFE",
+     "link": "cl_observed",
+     "groupings_same_sign_sig": 15,
+     "robust": true
+    },
+    {
+     "spec": "S1_10y_decFE",
+     "link": "study_work",
+     "groupings_same_sign_sig": 15,
+     "robust": true
+    },
+    {
+     "spec": "S1_10y_decFE",
+     "link": "work_only",
+     "groupings_same_sign_sig": 15,
+     "robust": true
+    },
+    {
+     "spec": "S1_10y_decFE",
+     "link": "hidden_work",
+     "groupings_same_sign_sig": 0,
+     "robust": false
+    },
+    {
+     "spec": "S1_10y_decFE",
+     "link": "tutoring",
+     "groupings_same_sign_sig": 15,
+     "robust": true
+    },
+    {
+     "spec": "S1_10y_decFE",
+     "link": "mean_learn",
+     "groupings_same_sign_sig": 15,
+     "robust": true
+    },
+    {
+     "spec": "S1_10y_decFE",
+     "link": "mean_income",
+     "groupings_same_sign_sig": 0,
+     "robust": false
+    },
+    {
+     "spec": "S2_5y_binFE",
+     "link": "cl_observed",
+     "groupings_same_sign_sig": 15,
+     "robust": true
+    },
+    {
+     "spec": "S2_5y_binFE",
+     "link": "study_work",
+     "groupings_same_sign_sig": 15,
+     "robust": true
+    },
+    {
+     "spec": "S2_5y_binFE",
+     "link": "work_only",
+     "groupings_same_sign_sig": 15,
+     "robust": true
+    },
+    {
+     "spec": "S2_5y_binFE",
+     "link": "hidden_work",
+     "groupings_same_sign_sig": 0,
+     "robust": false
+    },
+    {
+     "spec": "S2_5y_binFE",
+     "link": "tutoring",
+     "groupings_same_sign_sig": 15,
+     "robust": true
+    },
+    {
+     "spec": "S2_5y_binFE",
+     "link": "mean_learn",
+     "groupings_same_sign_sig": 15,
+     "robust": true
+    },
+    {
+     "spec": "S2_5y_binFE",
+     "link": "mean_income",
+     "groupings_same_sign_sig": 0,
+     "robust": false
+    },
+    {
+     "spec": "S3_levels_country_year_FE",
+     "link": "cl_observed",
+     "groupings_same_sign_sig": 15,
+     "robust": true
+    },
+    {
+     "spec": "S3_levels_country_year_FE",
+     "link": "study_work",
+     "groupings_same_sign_sig": 1,
+     "robust": false
+    },
+    {
+     "spec": "S3_levels_country_year_FE",
+     "link": "work_only",
+     "groupings_same_sign_sig": 15,
+     "robust": true
+    },
+    {
+     "spec": "S3_levels_country_year_FE",
+     "link": "hidden_work",
+     "groupings_same_sign_sig": 0,
+     "robust": false
+    },
+    {
+     "spec": "S3_levels_country_year_FE",
+     "link": "tutoring",
+     "groupings_same_sign_sig": 2,
+     "robust": false
+    },
+    {
+     "spec": "S3_levels_country_year_FE",
+     "link": "mean_learn",
+     "groupings_same_sign_sig": 15,
+     "robust": true
+    },
+    {
+     "spec": "S3_levels_country_year_FE",
+     "link": "mean_income",
+     "groupings_same_sign_sig": 15,
+     "robust": true
+    }
+   ]
+  }
+ },
+ "comparison": {
+  "E1_robust_travel": "5/272 = 1.8% of links travel across 50 typologies (empirical)",
+  "Q3_minority_mislabel": "87% of minority-effect worlds mislabelled robust everywhere (empirical)",
+  "note": "synthetic robust shares are the structural analogue; Q3 statistic is not directly comparable"
+ },
+ "label": "SIMULATION"
+}

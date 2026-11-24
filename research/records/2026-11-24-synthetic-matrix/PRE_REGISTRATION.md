@@ -36,3 +36,7 @@ approximated by 15 groupings — declared).
 
 ## Deviations log
 - (to be filled)
+
+## Deviations log (filled)
+- S3 specification design initially had an intercept collinear with country dummies; fixed before any matrix
+  result was inspected (implementation bug, no rule change).
