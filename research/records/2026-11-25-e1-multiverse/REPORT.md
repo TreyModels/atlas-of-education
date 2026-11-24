@@ -22,6 +22,10 @@ BY first-step threshold falls as R rises, and the floor cluster (32) is large en
 BY line at rank 29. Under the committed 136-parity convention the same pattern appears (BY het = 39 at
 1,200; up/down/flip 0/0/0).
 
+**CORRECTION (see `ERRATUM.md` §A):** the "up/down/flip 0/0/0" clause is wrong under the 136-parity convention —
+`results/summary_by_R.json` `families.1200.*.certified_BY136` gives **up 25, down 15, sign-flip 0** (heterogeneity
+39 is correct). Original text left visible.
+
 **(b) How many "robust" links are group-concentrated? — 1 of 5.** The five robust-everywhere links are
 `gdppc_log→urban`, `agri_va→gdppc_log`, `life_exp→fertility`, `u5mr→life_exp`, `u5mr→fertility` (recomputed at
 R = 1200 with the unchanged rule). Leave-one-country-out pooled estimates with the unchanged estimator show
@@ -85,6 +89,8 @@ not bit-identical; no adjustment was applied. Panel sha256 for the 17 variables 
 - Runtime: 1,201 draws in 5,426.8 s = **4.52 s/draw effective** on 8 workers; per-draw worker wall mean
   37.8 s, median 36.4 s, max 136.2 s (the real pass), min 31.1 s (`results/progress.log`,
   `results/run_meta.txt`). The pilot's higher average (13.1 s/draw) was dominated by the real pass.
+  **CORRECTION (see `ERRATUM.md` §B):** the minimum worker wall is **31.045 s** (`results/progress.log`, column 2;
+  rounds/truncates to **31.0 s**), not 31.1 s. Original text left visible.
 - No failed draws, no resume events, no discarded runs. `q2_audit.py` seen on the box belongs to a different
   record (`/root/work/repo/research/records/2026-11-25-q2-pathways`), was **not** touched or killed, and was
   no longer running at the final check.

@@ -1,0 +1,41 @@
+{
+ "issue_A_136_parity": {
+  "original_sentence": "Under the committed 136-parity convention the same pattern appears (BY het = 39 at 1,200; up/down/flip 0/0/0).",
+  "committed_json": "results/summary_by_R.json families.1200.*.certified_BY136",
+  "recomputed": {
+   "up": 25,
+   "down": 15,
+   "flip": 0,
+   "het": 39
+  },
+  "prose_claim": {
+   "het": 39,
+   "up": 0,
+   "down": 0,
+   "flip": 0
+  },
+  "verdict": "MISMATCH: only the sign-flip zero is right; up=25 and down=15 also certify at 136 parity."
+ },
+ "issue_B_runtime": {
+  "original_sentence": "per-draw worker wall mean 37.8 s, median 36.4 s, max 136.2 s (the real pass), min 31.1 s (results/progress.log, results/run_meta.txt)",
+  "source": "results/progress.log column 2 (worker wall seconds), 1,201 rows",
+  "recomputed": {
+   "n": 1201,
+   "mean": 37.759,
+   "median": 36.406,
+   "min": 31.045,
+   "max": 136.204,
+   "min_rounded_1dp": 31.0,
+   "min_truncated_1dp": 31.0
+  },
+  "prose_claim": {
+   "mean": 37.8,
+   "median": 36.4,
+   "max": 136.2,
+   "min": 31.1
+  },
+  "verdict": "MISMATCH at the stated precision: min is 31.045 s (rounds/truncates to 31.0), not 31.1; the other three values reproduce."
+ },
+ "reproduction": "python3 scripts/erratum_check_e1_prose.py (this record; stdlib only)",
+ "audit_reference": "research/prose-data-audit-2026-11-24 @ ff390fe, research/records/2026-11-24-prose-data-audit/AUDIT.md checks E1-07 and E1-12"
+}
