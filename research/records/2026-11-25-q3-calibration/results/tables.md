@@ -10,14 +10,16 @@
 
 ### Table 2. Uniform-effect strength ladder (400 replicates per strength)
 
-| b (per country) | detected as ROBUST (any robust) [95% CI] | NONE (false negative) [95% CI] |
-|---|---|---|
-| 0.02 | 0.2% [0.0, 1.4] | 97.2% [95.1, 98.5] |
-| 0.04 | 3.8% [2.3, 6.1] | 93.5% [90.6, 95.5] |
-| 0.06 | 19.2% [15.7, 23.4] | 78.5% [74.2, 82.2] |
-| 0.1 | 60.5% [55.6, 65.2] | 37.2% [32.7, 42.1] |
-| 0.15 | 95.8% [93.3, 97.3] | 3.0% [1.7, 5.2] |
-| 0.25 | 98.5% [96.8, 99.3] | 0.0% [0.0, 1.0] |
+| b (per country) | ROBUST+H (strict) [95% CI] | any-robust (ROBUST+H + ROBUST-but-GROUP) [95% CI] | NONE (false negative) [95% CI] |
+|---|---|---|---|
+| 0.02 | 0.2% [0.0, 1.4] | 0.2% [0.0, 1.4] | 97.2% [95.1, 98.5] |
+| 0.04 | 3.8% [2.3, 6.1] | 3.8% [2.3, 6.1] | 93.5% [90.6, 95.5] |
+| 0.06 | 19.0% [15.5, 23.1] | 19.2% [15.7, 23.4] | 78.5% [74.2, 82.2] |
+| 0.1 | 60.0% [55.1, 64.7] | 60.5% [55.6, 65.2] | 37.2% [32.7, 42.1] |
+| 0.15 | 95.0% [92.4, 96.7] | 95.8% [93.3, 97.3] | 3.0% [1.7, 5.2] |
+| 0.25 | 97.5% [95.5, 98.6] | 98.5% [96.8, 99.3] | 0.0% [0.0, 1.0] |
+
+Canonical source: `results/calibration.json` -> `strength_ladder[b].ROBUST+H_rate` (strict), `strength_ladder[b].correct_robust_rate` (any-robust), `strength_ladder[b].false_negative_rate`.
 
 ### Table 3. Design-size grid (200 replicates per cell): Monte Carlo intervals are in Table 1; here the spread is across sample/mechanism cells
 
@@ -28,16 +30,18 @@
 | C | 150 | 50 | 400 | FP 2.0% [0.8, 5.0] |
 | C | 150 | 60 | 400 | FP 4.5% [2.4, 8.3] |
 | C | 220 | 50 | 400 | FP 5.0% [2.7, 9.0] |
-| U | 80 | 50 | 400 | correct ROBUST 3.0% [1.4, 6.4] |
-| U | 150 | 30 | 400 | correct ROBUST 10.5% [7.0, 15.5] |
-| U | 150 | 50 | 400 | correct ROBUST 11.0% [7.4, 16.1] |
-| U | 150 | 60 | 400 | correct ROBUST 11.0% [7.4, 16.1] |
-| U | 220 | 50 | 400 | correct ROBUST 28.0% [22.2, 34.6] |
-| B | 80 | 50 | 400 | tag hit 37.5% [31.1, 44.4]; false-ROBUST 27.5% |
-| B | 150 | 30 | 400 | tag hit 54.5% [47.6, 61.3]; false-ROBUST 38.5% |
-| B | 150 | 50 | 400 | tag hit 38.0% [31.6, 44.9]; false-ROBUST 52.0% |
-| B | 150 | 60 | 400 | tag hit 40.0% [33.5, 46.9]; false-ROBUST 38.0% |
-| B | 220 | 50 | 400 | tag hit 42.0% [35.4, 48.9]; false-ROBUST 55.5% |
+| U | 80 | 50 | 400 | any-robust 3.0% [1.4, 6.4] (strict ROBUST+H 3.0%) |
+| U | 150 | 30 | 400 | any-robust 10.5% [7.0, 15.5] (strict ROBUST+H 10.5%) |
+| U | 150 | 50 | 400 | any-robust 11.0% [7.4, 16.1] (strict ROBUST+H 11.0%) |
+| U | 150 | 60 | 400 | any-robust 11.0% [7.4, 16.1] (strict ROBUST+H 11.0%) |
+| U | 220 | 50 | 400 | any-robust 28.0% [22.2, 34.6] (strict ROBUST+H 28.0%) |
+| B | 80 | 50 | 400 | tag hit 37.5% [31.1, 44.4]; false-ROBUST combined 27.5% (strict ROBUST+H 26.5%) |
+| B | 150 | 30 | 400 | tag hit 54.5% [47.6, 61.3]; false-ROBUST combined 38.5% (strict ROBUST+H 38.5%) |
+| B | 150 | 50 | 400 | tag hit 38.0% [31.6, 44.9]; false-ROBUST combined 52.0% (strict ROBUST+H 52.0%) |
+| B | 150 | 60 | 400 | tag hit 40.0% [33.5, 46.9]; false-ROBUST combined 38.0% (strict ROBUST+H 38.0%) |
+| B | 220 | 50 | 400 | tag hit 42.0% [35.4, 48.9]; false-ROBUST combined 55.5% (strict ROBUST+H 55.5%) |
+
+Canonical source: `results/calibration.json` -> `design_grid[cell].ROBUST+H_rate`, `.correct_robust_rate`, `.false_robust_everywhere_rate`, `.planted_tag_flagged_rate`.
 
 ### Table 4. Draw-count axis (200 replicates per cell)
 
@@ -45,8 +49,8 @@
 |---|---|---|
 | C | 100 | FP 1.5% [0.5, 4.3] |
 | C | 400 | FP 3.0% [1.4, 6.4] |
-| U | 100 | correct ROBUST 9.0% [5.8, 13.8] |
-| U | 400 | correct ROBUST 13.0% [9.0, 18.4] |
+| U | 100 | any-robust 9.0% [5.8, 13.8] (strict ROBUST+H 9.0%) |
+| U | 400 | any-robust 13.0% [9.0, 18.4] (strict ROBUST+H 13.0%) |
 
 ### Table 5. Full-vector BH and BY on the four real strict-tier families (272 links each)
 

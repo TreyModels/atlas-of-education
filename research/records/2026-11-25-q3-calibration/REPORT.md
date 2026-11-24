@@ -56,7 +56,7 @@ real pipeline.
 |---|---|---|---|---|---|---|---|
 | R0 null | 0.0% [0.0, 1.0] | 0.0% [0.0, 1.0] | 0.0% [0.0, 1.0] | 0.2% [0.0, 1.4] | 4.0% [2.5, 6.4] | 95.8% [93.3, 97.3] | false-positive **4.2%** [2.7, 6.7] |
 | R1 uniform strong (b = 0.15) | 95.5% [93.0, 97.1] | 1.0% [0.4, 2.5] | 1.0% [0.4, 2.5] | 0.0% [0.0, 1.0] | 0.0% [0.0, 1.0] | 2.5% [1.4, 4.5] | false-negative **2.5%** [1.4, 4.5] |
-| R3 minority-only (b = 0.40, top third) | 48.2% [43.4, 53.1] | 0.0% [0.0, 1.0] | 38.8% [34.1, 43.6] | 3.2% [1.9, 5.5] | 0.0% [0.0, 1.0] | 9.8% [7.2, 13.1] | planted tag flagged **42.0%** [37.3, 46.9]; false-ROBUST **48.2%** [43.4, 53.1]; any-robust 87.0% |
+| R3 minority-only (b = 0.40, top third) | 48.2% [43.4, 53.1] | 0.0% [0.0, 1.0] | 38.8% [34.1, 43.6] | 3.2% [1.9, 5.5] | 0.0% [0.0, 1.0] | 9.8% [7.2, 13.1] | planted tag flagged **42.0%** [37.3, 46.9]; false-ROBUST (strict ROBUST+H) **48.2%** [43.4, 53.1]; any-robust 87.0% |
 | R4 shared country trends, no effect | 0.2% [0.0, 1.4] | 0.0% [0.0, 1.0] | 0.0% [0.0, 1.0] | 1.8% [0.9, 3.6] | 3.0% [1.7, 5.2] | 95.0% [92.4, 96.7] | false-positive **5.0%** [3.3, 7.6] |
 | R5 sign-split (+0.25 / −0.25) | 0.0% [0.0, 1.0] | 0.0% [0.0, 1.0] | 0.0% [0.0, 1.0] | 3.2% [1.9, 5.5] | 64.5% [59.7, 69.0] | 32.2% [27.9, 37.0] | no robust; BEATS is the dominant (correct) label |
 
@@ -67,14 +67,21 @@ only one third of countries, and the planted group is localised in under half.
 
 ### Table 2. Uniform-effect strength ladder (400 replicates per strength)
 
-| b per country | detected as ROBUST (any robust) [95% CI] | NONE (false negative) [95% CI] |
-|---|---|---|
-| 0.02 | 0.2% [0.0, 1.4] | 97.2% [95.1, 98.5] |
-| 0.04 | 3.8% [2.3, 6.1] | 93.5% [90.6, 95.5] |
-| 0.06 | 19.2% [15.7, 23.4] | 78.5% [74.2, 82.2] |
-| 0.10 | 60.5% [55.6, 65.2] | 37.2% [32.7, 42.1] |
-| 0.15 | 95.8% [93.3, 97.3] | 3.0% [1.7, 5.2] |
-| 0.25 | 98.5% [96.8, 99.3] | 0.0% [0.0, 1.0] |
+| b per country | ROBUST+H (strict) [95% CI] | any-robust (ROBUST+H + ROBUST-but-GROUP) [95% CI] | NONE (false negative) [95% CI] |
+|---|---|---|---|
+| 0.02 | 0.2% [0.0, 1.4] | 0.2% [0.0, 1.4] | 97.2% [95.1, 98.5] |
+| 0.04 | 3.8% [2.3, 6.1] | 3.8% [2.3, 6.1] | 93.5% [90.6, 95.5] |
+| 0.06 | **19.0%** [15.5, 23.1] | 19.2% [15.7, 23.4] | 78.5% [74.2, 82.2] |
+| 0.10 | **60.0%** [55.1, 64.7] | 60.5% [55.6, 65.2] | 37.2% [32.7, 42.1] |
+| 0.15 | **95.0%** [92.4, 96.7] | 95.8% [93.3, 97.3] | 3.0% [1.7, 5.2] |
+| 0.25 | 97.5% [95.5, 98.6] | 98.5% [96.8, 99.3] | 0.0% [0.0, 1.0] |
+
+Source of each power-ladder figure (canonical file `results/calibration.json`, the committed run):
+strict ROBUST+H = `strength_ladder[b].ROBUST+H_rate`; any-robust =
+`strength_ladder[b].correct_robust_rate` (adds the ROBUST-but-GROUP category); false negative =
+`strength_ladder[b].false_negative_rate`. The earlier draft quoted only the any-robust field; both
+are shown here because the difference (19.0 versus 19.2, 60.0 versus 60.5, 95.0 versus 95.8) is the
+small ROBUST-but-GROUP category, not a different seed or run.
 
 The rule needs a per-country effect of roughly 0.10–0.15 for acceptable power at N = 150, T = 50;
 effects below 0.06 are mostly missed. This is the power boundary the paper should quote next to any
@@ -89,21 +96,25 @@ effects below 0.06 are mostly missed. This is the power boundary the paper shoul
 | C null | 150 | 50 | 400 | FP 2.0% [0.8, 5.0] |
 | C null | 150 | 60 | 400 | FP 4.5% [2.4, 8.3] |
 | C null | 220 | 50 | 400 | FP 5.0% [2.7, 9.0] |
-| U uniform (b = 0.06) | 80 | 50 | 400 | correct ROBUST 3.0% [1.4, 6.4] |
-| U uniform (b = 0.06) | 150 | 30 | 400 | correct ROBUST 10.5% [7.0, 15.5] |
-| U uniform (b = 0.06) | 150 | 50 | 400 | correct ROBUST 11.0% [7.4, 16.1] |
-| U uniform (b = 0.06) | 150 | 60 | 400 | correct ROBUST 11.0% [7.4, 16.1] |
-| U uniform (b = 0.06) | 220 | 50 | 400 | correct ROBUST 28.0% [22.2, 34.6] |
-| B minority | 80 | 50 | 400 | tag hit 37.5% [31.1, 44.4]; false-ROBUST 27.5% |
-| B minority | 150 | 30 | 400 | tag hit 54.5% [47.6, 61.3]; false-ROBUST 38.5% |
-| B minority | 150 | 50 | 400 | tag hit 38.0% [31.6, 44.9]; false-ROBUST 52.0% |
-| B minority | 150 | 60 | 400 | tag hit 40.0% [33.5, 46.9]; false-ROBUST 38.0% |
-| B minority | 220 | 50 | 400 | tag hit 42.0% [35.4, 48.9]; false-ROBUST 55.5% |
+| U uniform (b = 0.06) | 80 | 50 | 400 | any-robust 3.0% [1.4, 6.4] (strict ROBUST+H 3.0%) |
+| U uniform (b = 0.06) | 150 | 30 | 400 | any-robust 10.5% [7.0, 15.5] (strict ROBUST+H 10.5%) |
+| U uniform (b = 0.06) | 150 | 50 | 400 | any-robust 11.0% [7.4, 16.1] (strict ROBUST+H 11.0%) |
+| U uniform (b = 0.06) | 150 | 60 | 400 | any-robust 11.0% [7.4, 16.1] (strict ROBUST+H 11.0%) |
+| U uniform (b = 0.06) | 220 | 50 | 400 | any-robust 28.0% [22.2, 34.6] (strict ROBUST+H 28.0%) |
+| B minority | 80 | 50 | 400 | tag hit 37.5% [31.1, 44.4]; false-ROBUST combined 27.5% (strict ROBUST+H 26.5%) |
+| B minority | 150 | 30 | 400 | tag hit 54.5% [47.6, 61.3]; false-ROBUST combined 38.5% (strict ROBUST+H 38.5%) |
+| B minority | 150 | 50 | 400 | tag hit 38.0% [31.6, 44.9]; false-ROBUST combined 52.0% (strict ROBUST+H 52.0%) |
+| B minority | 150 | 60 | 400 | tag hit 40.0% [33.5, 46.9]; false-ROBUST combined 38.0% (strict ROBUST+H 38.0%) |
+| B minority | 220 | 50 | 400 | tag hit 42.0% [35.4, 48.9]; false-ROBUST combined 55.5% (strict ROBUST+H 55.5%) |
+
+Source: `results/calibration.json` → `design_grid[cell].ROBUST+H_rate` (strict),
+`.correct_robust_rate` (any-robust), `.false_robust_everywhere_rate` (combined ROBUST+H + ROBUST-HET),
+`.planted_tag_flagged_rate`.
 
 Two design-size results deserve emphasis. First, for the uniform weak effect (b = 0.06) power ranges
 from 3% at N = 80 to 28% at N = 220: **the same rule is underpowered in small samples and still not
 well powered in moderate ones**. Second, for the minority regime, false-ROBUST rises with N
-(27.5% → 55.5%): with more countries the minority effect becomes significant in enough groups to pass
+(combined 27.5% / strict ROBUST+H 26.5% at N = 80, rising to 55.5% at N = 220): with more countries the minority effect becomes significant in enough groups to pass
 the share rule while the other groups stay null, so **more data make the "everywhere" mislabel worse,
 not better**. This is the calibration answer to "does it just travel everywhere".
 

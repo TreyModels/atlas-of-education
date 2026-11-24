@@ -46,16 +46,20 @@ def main():
                  f"| {cell('GROUP')} | {cell('BEATS')} | {cell('NONE')} | {key} |")
     L.append("")
     L.append("### Table 2. Uniform-effect strength ladder (400 replicates per strength)\n")
-    L.append("| b (per country) | detected as ROBUST (any robust) [95% CI] | NONE (false negative) [95% CI] |")
-    L.append("|---|---|---|")
+    L.append("| b (per country) | ROBUST+H (strict) [95% CI] | any-robust (ROBUST+H + ROBUST-but-GROUP) [95% CI] | NONE (false negative) [95% CI] |")
+    L.append("|---|---|---|---|")
     for b in ("0.02", "0.04", "0.06", "0.1", "0.15", "0.25"):
         d = cal["strength_ladder"].get(b) or cal["strength_ladder"].get(str(float(b)))
         if not d:
             continue
-        L.append(f"| {b} | {pct(d['correct_robust_rate'])} [{100*d['correct_robust_ci'][0]:.1f}, "
-                 f"{100*d['correct_robust_ci'][1]:.1f}] | {pct(d['false_negative_rate'])} "
+        L.append(f"| {b} | {pct(d['ROBUST+H_rate'])} [{100*d['ROBUST+H_ci'][0]:.1f}, "
+                 f"{100*d['ROBUST+H_ci'][1]:.1f}] | {pct(d['correct_robust_rate'])} "
+                 f"[{100*d['correct_robust_ci'][0]:.1f}, {100*d['correct_robust_ci'][1]:.1f}] | "
+                 f"{pct(d['false_negative_rate'])} "
                  f"[{100*d['false_negative_ci'][0]:.1f}, {100*d['false_negative_ci'][1]:.1f}] |")
     L.append("")
+    L.append("Canonical source: `results/calibration.json` -> `strength_ladder[b].ROBUST+H_rate` (strict), "
+             "`strength_ladder[b].correct_robust_rate` (any-robust), `strength_ladder[b].false_negative_rate`.\n")
     L.append("### Table 3. Design-size grid (200 replicates per cell): Monte Carlo intervals are in Table 1; here the spread is across sample/mechanism cells\n")
     L.append("| regime | N | T | R | key rate [95% CI] |")
     L.append("|---|---|---|---|---|")
@@ -69,12 +73,16 @@ def main():
         if reg == "C":
             key = f"FP {pct(d['false_positive_rate'])}" + ci(d, "false_positive")
         elif reg == "U":
-            key = f"correct ROBUST {pct(d['correct_robust_rate'])}" + ci(d, "correct_robust")
+            key = (f"any-robust {pct(d['correct_robust_rate'])}" + ci(d, "correct_robust") +
+                   f" (strict ROBUST+H {pct(d['ROBUST+H_rate'])})")
         else:
             key = (f"tag hit {pct(d['planted_tag_flagged_rate'])}" + ci(d, "planted_tag_flagged") +
-                   f"; false-ROBUST {pct(d['false_robust_everywhere_rate'])}")
+                   f"; false-ROBUST combined {pct(d['false_robust_everywhere_rate'])} "
+                   f"(strict ROBUST+H {pct(d['ROBUST+H_rate'])})")
         L.append(f"| {reg} | {d['N']} | {d['T']} | {d['R']} | {key} |")
     L.append("")
+    L.append("Canonical source: `results/calibration.json` -> `design_grid[cell].ROBUST+H_rate`, "
+             "`.correct_robust_rate`, `.false_robust_everywhere_rate`, `.planted_tag_flagged_rate`.\n")
     L.append("### Table 4. Draw-count axis (200 replicates per cell)\n")
     L.append("| regime | R | key rate [95% CI] |")
     L.append("|---|---|---|")
@@ -86,7 +94,8 @@ def main():
             if reg == "C":
                 key = f"FP {pct(d['false_positive_rate'])}" + ci(d, "false_positive")
             else:
-                key = f"correct ROBUST {pct(d['correct_robust_rate'])}" + ci(d, "correct_robust")
+                key = (f"any-robust {pct(d['correct_robust_rate'])}" + ci(d, "correct_robust") +
+                   f" (strict ROBUST+H {pct(d['ROBUST+H_rate'])})")
             L.append(f"| {reg} | {R} | {key} |")
     L.append("")
     L.append("### Table 5. Full-vector BH and BY on the four real strict-tier families (272 links each)\n")
