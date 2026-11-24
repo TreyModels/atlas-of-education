@@ -187,4 +187,10 @@ minute-equivalents or requires more than 96 cores; do not promise a draw count i
 | 6 | projected cost above the declared budget → stop, report cost |
 
 ## Deviations log
-- (to be filled; every departure must be logged here before the affected run)
+- 2026-11-24: Stage 1 audit executed as a read-only inventory of committed repo data
+  (`construct_audit.py`, file reading only). No model/fitting compute ran anywhere; the
+  pre-registration's region-42 compute rule was therefore not engaged.
+- 2026-11-24: **Stage 1 FAILED** (0 compatible, 4 partial, 7 unmatched model observables;
+  no joint moment observing the school/work decomposition; no frozen split feasible).
+  Per §8 stop rules, Stages 2–5 and the §6 timing pilot were **not launched**; no draws or
+  cores were committed and region-42 was not used.
