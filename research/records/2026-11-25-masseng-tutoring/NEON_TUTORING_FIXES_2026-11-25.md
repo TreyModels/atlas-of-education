@@ -4,7 +4,7 @@
 **Base:** `b9d68c1` (head of `research/masseng-tutoring-2026-11-25`)
 **Worktree:** `~/neon-boot/wt3/tut` — clean clone `/Users/treymenefee/neon-boot/repos/atlas` (no sparse-checkout)
 **Code+tests commit:** `8dd85b5` (this record commit follows; branch head is the last commit in `git log -1`)
-**Host-only:** no box, no GPU, no server, no power/shutdown commands, no push.
+**Host-only:** no box, no GPU, no server, no instance-control operations, no push.
 
 Everything here is **SIMULATION** of a declared, illustrative coupled model. No empirical or causal claim.
 No committed result was edited or regenerated to make a test pass; pre-fix artifacts are preserved and flagged below.
