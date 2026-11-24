@@ -5,9 +5,12 @@ follow-up, execution-ready individual test). **Branch:** `research/dhs-api-ecolo
 **Status:** complete; numbers **corrected** after a fixed-effect bug fix (see below); estimates computed on the
 server boxes, **never on the Mac**.
 
-> **25 Nov 2026 append:** a second correction (cluster-bootstrap multiplicities, Neon audit item 1) is recorded in
+> **25 Nov 2026 append:** a second correction (Neon audit item 1) is recorded in
 > [`CORRECTED_RUN_2026-11-25.md`](CORRECTED_RUN_2026-11-25.md) — **provisional** until Neon's diff is applied.
-> It moves the intervals (Africa-11 2-group ratio now includes 1.0) and the D4 wanted-vs-actual gap (~−0.196).
+> It has **two separable parts**: (a) cluster-bootstrap **multiplicities**, which move bootstrap CIs only
+> (Africa-11 2-group ratio now includes 1.0), and (b) the **full construct×schooling interaction set** in
+> `stacked()`, which is what moves the D4 wanted-vs-actual gap −0.0775 → ~−0.1962. A bootstrap-only patch
+> returns D4 to ≈ −0.0775; the interaction-set change is a separate hunk and must not be conflated with it.
 
 **One line:** in **all** DHS survey rounds the public API publishes with education breakdowns (369 surveys,
 87 countries, 1985–2025), schooling is associated with **−1.58 children** (secondary vs none, within survey);
