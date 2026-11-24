@@ -107,6 +107,32 @@ verifier reproduced the same numbers independently. So the fix is reproducible o
 Minor: `estimate.py`'s own bootstrap and `corrected_reduction.py`'s differ in the last digits of the CI
 (2-group full [`0.9056, 1.0144`] vs [`0.9060, 1.0191`]) — different RNG streams/implementations; both include 1.0.
 
+## Patched re-run reconciliation — 25 Nov 2026 (post-freeze, host + box)
+
+Neon's audited `ir_pipeline.py` patch was applied on `research/dhs-ir-pipeline-neon-2026-11-25` (additive; the
+patch does **not** touch `estimate.py`/`corrected_reduction.py`), and the record's corrected estimators
+(`estimate.py` + `corrected_reduction.py` @ `45b974e`) were re-run on the box from clean staged copies with the
+deterministic env (`OMP/MKL/OPENBLAS/NUMEXPR/VECLIB=1`, `DHS_WORKERS=8`, box python 3.10.8 / numpy 1.24.1) in a
+**new** directory `/root/work/dhs-api-patched-2026-11-25` (the original `/root/work/dhs-api` was not modified).
+
+**Result: PASS_BYTE_IDENTICAL.** All **13/13** produced output files are byte-identical to the committed corrected
+run (`sha256sum` against `results/MANIFEST.sha256`, record @ `45b974e`); 27/27 numeric anchors pass at full
+precision; 4/4 staged script hashes match. Therefore the corrected-run numbers above are **reproduced by a known
+runner from the committed scripts** — the "provisional, unattributed run" caveat in the header applies only to
+their original provenance, not to their reproducibility; and closing it still does **not** resolve the separate
+`estimate.py` bootstrap-diff reconciliation item in "Open" below.
+
+Also recorded by the same run:
+- `ir_pipeline.py --selftest` passes with **51 coefficient rows** (code test only, not evidence).
+- The pre-registered M4 `SurveyType == "DHS"` check passes: edu4 completed-fertility panel **784 DHS / 72 MIS / 4
+  AIS** cells, **76 non-DHS cells excluded**; DHS-only M1 primary/secondary/higher **−0.5537 / −1.5749 / −2.5241**
+  vs pooled **−0.5541 / −1.5837 / −2.5382** (signs and ordering unchanged; robustness only).
+- **IR individual-level estimation remains NOT FEASIBLE on this instance:** 0 of the 72 manifest IR files are
+  present (no `.dta`/`.zip` microdata on the box); the gate records this explicitly and **nothing was fabricated**.
+- Artefacts: `research/records/2026-11-25-box-runs/dhs-patched-verify/{VERIFICATION.json, m4_surveytype_check.json}`
+  @ `research/box-runs-2026-11-25` @ `24049a4` (the first verifier pass failed on stale anchor values; that failure
+  is preserved in the box run directory, not overwritten).
+
 ## Open (for Neon / next window)
 
 - Apply Neon's actual drop-in diffs and separate the two items explicitly: if his `estimate.py` patch fixes
