@@ -110,8 +110,9 @@ def simulate_bray(p: BrayParams) -> dict:
         "participation_g9": float(np.mean(part_g9)),
         "participation_g12": float(np.mean(part_g12)),
         "urban_rural_gap": float(np.mean(part_urban) - np.mean(part_rural)),
-        "own_share": own_n / pupils,
-        "other_share": other_n / pupils,
+        # Bray reports provider shares among TUTORED pupils, not among all pupils.
+        "own_share": own_n / max(own_n + other_n, 1),
+        "other_share": other_n / max(own_n + other_n, 1),
         "teacher_tutor_share": float(np.mean(teacher_flags)),
     }
     return out
