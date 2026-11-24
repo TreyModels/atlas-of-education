@@ -11,10 +11,14 @@ Does mass schooling come before or after the release of agricultural labour? The
 answer bears on whether massification is a response to labour-market demand or a supply-side institutional
 project. This paper codes both events on a common panel of late-industrialising countries and reports the
 distribution of their ordering. In 64 countries with a dated schooling take-off, a dated agricultural labour
-release and a dated fertility decline, **schooling precedes the agricultural exodus in 61 (95 per cent); the
-median lead is 26 years**, the interquartile range is 17 to 29 years, and 93 per cent of the forward cases
-exceed ten years. The result is not a fragile margin: 85 per cent of the forward cases exceed fifteen years, so a
-systematic fifteen-year dating error would still leave 81 per cent of the panel forward. Labour-market demand —
+release and a dated fertility decline, the ordering can actually be identified for only 34, because the 1965–2010
+window pushes many dates onto its boundary (61 of 108 schooling dates sit at 1965 and 65 of 134 release dates at
+1991, and these are "at or before" dates, not events). **Of the 34 identified countries, schooling precedes the
+agricultural exodus in 31 (91 per cent)** and the release comes first in 3; the other 30 cannot be ordered. Taken
+over all 64, the forward share is therefore between 48 and 95 per cent. Among the 18 countries where both dates are
+exact the median lead is 18 years (interquartile range 8 to 31), and 11 of the 18 survive a systematic fifteen-year
+error. The 26-year median and 93 per cent exceeding ten years reported in an earlier draft treated boundary dates
+as exact and are withdrawn. Labour-market demand —
 wage premia and paid-employment shares — precedes the schooling take-off in only 7 per cent of countries when it
 is measured on its own. In a horse race on ten-year changes with country and period fixed effects, a composite
 supply block enters at **+0.456 (SE 0.174)** against **+0.006 (SE 0.203)** for a composite demand block. This is a
@@ -48,9 +52,10 @@ ordering. The enrolment compilations (Benavot & Riddle, 1988; Meyer et al., 1992
 never date farm exit. The agricultural-transition literature does the reverse. Nobody, as far as the search
 behind this paper found, has put the two dated events on one panel.
 
-This paper does that, and reports what it finds: a large, robust forward share. In 64 countries with all three
-events dated, 61 have the schooling take-off before the agricultural exodus, with a median lead of 26 years and a
-distribution that is not sensitive to a fifteen-year dating error. Labour-market demand, measured narrowly,
+This paper does that, and reports what it finds: a forward majority among the countries whose ordering can be
+identified, and a large block of countries that cannot be ordered. In 64 countries with all three events dated,
+the order is identified for 34; 31 of those have the schooling take-off before the agricultural exodus (91 per
+cent), and the lead is 18 years at the median where both dates are exact. Labour-market demand, measured narrowly,
 almost never leads. A supply-versus-demand decomposition on ten-year changes puts the supply block far ahead.
 And the four historical cases where the documentary record is richest split exactly where the panel suggests
 they should: supply-led where the state supplied, demand-led in the first industrialiser.
@@ -74,7 +79,7 @@ Section 9 states the limits.
 ## 2. The claim and why it is contested
 
 **The claim.** In countries that industrialised late, the expansion of mass schooling precedes the release of
-agricultural labour. The panel reports this for 61 of 64 countries with a median lead of 26 years; the
+agricultural labour. The panel identifies the order in 34 of 64 countries and finds it forward in 31; the
 labour-market demand account predicts the reverse.
 
 **Why it is contested.** Three literatures predict different orderings and each has evidence.
@@ -158,25 +163,47 @@ not the policy instrument.
 
 ### 4.1 The distribution
 
-In the 64 countries with all three events dated, **schooling precedes the agricultural exodus in 61 (95.3 per
-cent)**; the release precedes schooling in 3 (4.7 per cent). Among the 61 forward cases the lead is:
+**Correction (review 2026-11-24).** The first draft treated every date as exact and reported 61 of 64 forward with a
+26-year median lead. But event dates are searched inside a 1965–2010 window: a schooling date of 1965 means the
+take-off happened in or before 1965, and a release date of 1991 (the first year of the release series) means it
+happened in or before 1991. Computing 1991 − 1965 = 26 for such pairs manufactured the 26-year median. The
+table below classifies each of the 64 countries by what its dates can and cannot say.
+
+| class | countries | what the order is |
+|---|---|---|
+| both dates exact | 18 | identified (16 forward, 2 reverse or tie) |
+| schooling at the 1965 boundary, release exact | 15 | identified: forward (schooling ≤ 1965 < release) |
+| release at the 1991 boundary, schooling exact | 15 | identified reverse-or-tie in 1 (schooling ≥ 1991); undetermined in 14 |
+| both at their boundaries | 16 | undetermined |
+| **identified total** | **34** | **31 forward, 3 reverse** |
+| **undetermined** | **30** | — |
+
+So **schooling precedes the agricultural exodus in 31 of the 34 countries where the order is identified (91.2 per
+cent)**; over all 64 countries the forward share lies between **48.4 per cent** (31 of 64, counting every
+undetermined country as not forward) and **95.3 per cent** (61 of 64, counting every one as forward). The
+identified sample is selected: forward order is easy to identify (schooling expanded before 1965) and reverse
+order is identifiable only when schooling is dated after 1990, so the 91 per cent is not an estimate for the 30
+undetermined countries.
 
 | statistic | value |
 |---|---|
-| median lead (release minus schooling) | **26 years** |
-| interquartile range | 16.5 to 29.5 years (17-29 rounded) |
-| share of forward cases exceeding 10 years | **93.4 per cent** |
-| share of forward cases exceeding 15 years | **85.2 per cent** |
-| share of all 64 still forward after a systematic +15-year error on schooling dates | **81.3 per cent** (52 of 64) |
-| median lead, wider 81-country sample (schooling and release only) | 26 years; forward share 93.8 per cent |
+| countries with identified order / undetermined | 34 / 30 |
+| forward among identified | 31 (91.2 per cent) |
+| median lead, 18 countries with both dates exact | **18 years** (interquartile range 8.0 to 30.8; range −12 to +34) |
+| median lower bound on the lead, 15 countries with schooling at the boundary | 31 years (a bound, not an estimate) |
+| identified forward after a systematic +15-year error on schooling dates | 26 of 34 (76.5 per cent) |
+| wider 81-country sample (schooling and release only) | 44 identified, 39 forward (88.6 per cent); 37 undetermined; median lead with both dates exact 18 years (n = 21) |
 
-These are not marginal results. A lead of 26 years with a lower quartile of 16.5 means that for a quarter of the
-panel the schools were a generation ahead of the farm exodus. The fifteen-year robustness line is the one a
-referee should press on, and it is built into the table: even if every schooling date were systematically fifteen
-years too early — a large error for series built from school-census data — 81 per cent of the panel would still
-have schooling first. To make the forward share fall below half, the dating error would have to exceed the
-observed interquartile range itself. The three reverse cases are reported, not suppressed; two are small
-city-states and one is a resource economy where the farm sector's measured employment share is small and volatile.
+Source: `results/sequencing_stats.json` (`all_three`, `schooling_and_release`), produced by
+`scripts/sequencing_stats.py` from `results/event_dates.csv`. The earlier uncensored figures are kept in
+`naive_uncensored_for_reference` and labelled as not valid.
+
+What survives is a qualified claim: among countries where the two events can be ordered, schooling usually comes
+first, and for the 15 countries whose schooling take-off is at or before 1965 the lead is at least 27 years by
+construction (the release dates are all after 1991). What does not survive is any statement about the typical size
+of the lead, or the claim that the forward share is robust to a fifteen-year error with a wide margin: with the
+boundary pairs removed, 11 of 18 exact pairs exceed fifteen years, and a quarter of the 34 identified pairs would
+flip. The three identified reverse cases are named in Section 4.5.
 
 ### 4.2 Why the raw ordering understates the supply side
 
@@ -234,11 +261,13 @@ consistent with supply-led massification in late industrialisers.
 The sequencing claim was pre-registered with falsifiers, and reporting them is part of the result.
 
 **Falsifier 1: the reverse share.** If release preceded schooling more often than schooling preceded release, the
-claim would be dead. Observed: 3 of 64 reverse, 61 forward. The claim survives with a wide margin.
+claim would be dead. Observed: 3 reverse and 31 forward among the 34 countries whose order is identified; 30 countries cannot be
+ordered. The claim survives among identified countries, but its margin over all 64 countries is not known.
 
 **Falsifier 2: the dating-error sensitivity.** If a plausible systematic error in dating could flip the forward
-share, the claim would be an artefact of the rule. Observed: 85 per cent of forward cases exceed fifteen years of
-lead, so a +15-year error on schooling dates still leaves 81 per cent forward (Section 4.1).
+share, the claim would be an artefact of the rule. Observed: after a +15-year error on schooling dates, 26 of the 34 identified countries (76.5 per cent) are
+still forward (Section 4.1). The earlier figure of 81 per cent of all 64 was an artefact of treating boundary dates
+as exact.
 
 **Falsifier 3: labour-market demand leads.** If the demand variables the demand-led story actually names preceded
 the schooling take-off, the demand account would gain support. Observed: labour-market demand precedes schooling
@@ -255,15 +284,20 @@ censoring and by broad development proxies — and that on the labour-market mea
 disappears. A reader who does not accept the censoring correction should read the paper's supply-side conclusion
 as weaker than stated: the fair sample is 33 countries and it shows the two sides turning at the same time.
 
-### 4.5 The three reverse cases
+### 4.5 The identified reverse cases
 
-The three countries where the release precedes the schooling take-off are worth naming because a paper that
-reports 61 of 64 should say what the 3 are. In all three the agricultural employment share is small and volatile,
-so the "release" date is measured on a small base and is driven by a sectoral reallocation that the ten-year rule
-can place early. None of the three is an industrialiser in the sense the claim is about, and none is a case where
-a large farm labour force left the land before the schools expanded. This is not an excuse; it is a description of
-the measurement, and the honest reading is that the reverse cases are weakly dated rather than substantively
-contradictory.
+Three countries in the 64-country panel have an identified reverse order: **Afghanistan** (schooling take-off 2005,
+release 1993), **Cambodia** (schooling 2000, release at the 1991 boundary, so release is at or before 1991) and
+**Senegal** (schooling 2000, release 1992). In the wider 81-country sample **Mali** (2010 vs 2009) and
+**Mozambique** (2005 vs 1992) are added. **Correction:** the first draft described the reverse cases as two small
+city-states and a resource economy with a small, volatile farm sector. That description does not match these
+countries. All five are low-income countries with large agricultural populations, and in each the schooling take-off
+is dated late (2000 or after), well after the release. The data in this repository do not say why; plausible
+candidates (conflict or post-conflict disruption, late aid-financed expansion, or a release date picked up from a
+noisy farm-employment series) are untested, and the honest reading is that these are late-expanding cases that run
+against the supply-first ordering rather than measurement noise on a small base. They are 5 of the 44 identified
+pairs in the wider sample, and they are the clearest place for a reader to test the regularity against its
+exceptions.
 
 ## 5. The historical cases: a typology by supplier
 
@@ -303,7 +337,7 @@ exodus rather than preceding it (Goldin & Katz, 2008).
 **The typology.** The forward share in the panel is a late-industrialiser regularity, and the four cases show why:
 schooling comes first when the state supplies it ahead of demand (Prussia; the French statutes; American common
 schools funded locally), and industrialisation comes first in the one case where a private, uneven market
-supplied the little schooling there was (Britain). The panel's 61 of 64 is the aggregate of the first type; it is
+supplied the little schooling there was (Britain). The panel's 31 forward cases among 34 identified are the aggregate of the first type; it is
 not a claim that schooling always comes first, and Britain is the standing counterexample.
 
 Two further readings from the historical literature must be kept in view. Sandberg's (1979) Sweden is the
@@ -365,8 +399,8 @@ Literacy Myth* is the sceptical classic: schooling does not automatically delive
 effects its advocates claim, which is a caution this paper shares.
 
 **What is genuinely new, stated plainly.** One thing: the joint event-ordering compilation and its distribution
-(61 of 64, median 26 years, forward and reverse shares, and the robustness of the forward share to a fifteen-year
-dating error). The supply-versus-demand decomposition is a second, smaller increment, and it comes with its own
+(31 forward and 3 reverse among the 34 countries where the order is identified, with 30 countries
+undetermined because their dates sit on the window boundary). The supply-versus-demand decomposition is a second, smaller increment, and it comes with its own
 weakness (78 country-period observations). Everything else in the paper is synthesis of known results.
 
 ## 7. Implications
@@ -447,23 +481,30 @@ The dates are literature standards, not measurements; a published version needs 
 table, which this draft names in the records rather than reproducing. The take-off rules are thresholds; the
 forward share is reported under the pre-registered rules only, and an alternative-threshold recoding is future
 work, not an established robustness result. The panel is censored at 1965 (61 of 108 take-offs sit on the
-boundary) and the supply series start in the median country in 1975, which biases the raw supply-versus-demand
-ordering against supply — the fair sample of 33 countries is the corrective and it is small. The decomposition is
+boundary) and at 1991 for the release series (65 of 134 dates), which leaves 30 of 64 countries unordered; the
+supply series start in the median country in 1975, which biases the raw supply-versus-demand
+ordering against supply — the fair sample of 33 countries is the corrective and it is small. The 7 per cent labour-market-demand figure (Section 4.2) comes from the same
+window-limited dating and was not recomputed in this revision; it should be read as provisional. The decomposition is
 a horse race on 78 country-period observations, not a causal design. The four historical cases are an argument,
 not a sample. And the central search result — that no systematic cross-country event-ordering compilation was
 found — is a search result: a reader who knows such a paper should update the record, and this paper's claim
 should be read as "new assembly" rather than as a discovery.
 
-One internal discrepancy is worth flagging for anyone reusing these records: the fertility ordering is reported
-inconsistently between the project record's JSON (`sequencing.json` reports schooling-before-fertility at 68.75
-per cent) and a direct recomputation from the same record's event CSV (35.8 per cent under a schooling-before-
-fertility reading). The fertility event is not used in this paper's claims, and the discrepancy is recorded here
-rather than resolved by assertion.
+The first draft flagged an internal discrepancy in the fertility ordering: the project record's JSON reports
+schooling-before-fertility at 68.75 per cent and a direct recomputation from its event CSV gave 35.8 per cent. It is
+resolved here. On the 64-country panel 68.75 per cent (44 of 64) is "schooling no later than fertility", which counts
+20 ties, 18 of them pairs where both dates sit on the 1965 boundary and so cannot be ordered; strictly
+schooling-first is 24 of 64 (37.5 per cent) and fertility-first 20. Among the 23 countries where both dates are
+exact it is 11 versus 10 with 2 ties. The fertility event is therefore not ordered relative to schooling in these
+data, it is not used in this paper's claims, and neither earlier figure should be cited
+(`results/sequencing_stats.json` → `schooling_vs_fertility_all_three`).
 
 ## 10. Conclusion
 
-In 64 late-industrialising countries, the schools came before the farms: 61 forward cases, a median lead of 26
-years, a lower quartile of 17, and a forward share that survives a systematic fifteen-year dating error. Labour-
+In the 34 of 64 late-industrialising countries where the order can be identified, the schools usually came
+before the farms: 31 forward cases and 3 reverse, with 30 countries unordered because their dates sit on the window
+boundary. Where both dates are exact the median lead is 18 years, and 26 of the 34 identified countries stay forward
+under a systematic fifteen-year dating error. Labour-
 market demand lags schooling almost everywhere when measured on its own, and a supply-versus-demand decomposition
 puts the supply block far ahead. The historical cases explain the panel's shape: where the state supplied the
 schools, they preceded the industrial transformation (Prussia, France's statutes, the American common schools);

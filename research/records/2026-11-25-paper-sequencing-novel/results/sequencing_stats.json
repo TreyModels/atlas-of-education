@@ -1,31 +1,150 @@
 {
  "all_three": {
   "n": 64,
-  "forward": 61,
-  "reverse": 3,
-  "forward_pct": 95.31,
-  "median_lead": 26.0,
-  "q1": 16.5,
-  "q3": 29.5,
-  "share_gt10": 93.44,
-  "share_gt15": 85.25,
-  "still_forward_after_plus15_error": 52,
-  "still_forward_after_plus15_pct": 81.25,
-  "median_lead_all": 26.0
+  "categories": {
+   "both_exact": 18,
+   "schooling_censored": 15,
+   "release_censored": 15,
+   "both_censored": 16
+  },
+  "identified_forward": 31,
+  "identified_reverse": 3,
+  "undetermined": 30,
+  "identified_total": 34,
+  "forward_share_of_identified_pct": 91.2,
+  "forward_share_of_all_lower_bound_pct": 48.4,
+  "both_exact_n": 18,
+  "both_exact_forward": 16,
+  "both_exact_reverse_or_tie": 2,
+  "both_exact_median_lead": 18.0,
+  "both_exact_leads_sorted": [
+   -12.0,
+   -8.0,
+   1.0,
+   8.0,
+   8.0,
+   12.0,
+   15.0,
+   17.0,
+   18.0,
+   18.0,
+   22.0,
+   24.0,
+   24.0,
+   30.0,
+   33.0,
+   33.0,
+   34.0,
+   34.0
+  ],
+  "schooling_censored_lead_lower_bound_median": 31.0,
+  "identified_forward_after_plus15_error": 26,
+  "identified_forward_after_plus15_share_of_identified_pct": 76.5,
+  "both_exact_lead_q1": 8.0,
+  "both_exact_lead_q3": 30.8
+ },
+ "schooling_vs_fertility_all_three": {
+  "n": 64,
+  "strict_schooling_before_fertility": 24,
+  "ties": 20,
+  "strict_fertility_before_schooling": 20,
+  "both_at_1965_undetermined": 18,
+  "schooling_censored_only_schooling_first": 13,
+  "fertility_censored_only_fertility_first": 10,
+  "both_exact": 23,
+  "both_exact_schooling_first": 11,
+  "both_exact_fertility_first": 10,
+  "both_exact_ties": 2
  },
  "schooling_and_release": {
   "n": 81,
-  "forward": 76,
-  "reverse": 5,
-  "forward_pct": 93.83,
-  "median_lead": 26.0,
-  "q1": 18.0,
-  "q3": 29.0,
-  "share_gt10": 94.74,
-  "share_gt15": 86.84,
-  "still_forward_after_plus15_error": 66,
-  "still_forward_after_plus15_pct": 81.48,
-  "median_lead_all": 26.0
+  "categories": {
+   "both_exact": 21,
+   "schooling_censored": 22,
+   "release_censored": 17,
+   "both_censored": 21
+  },
+  "identified_forward": 39,
+  "identified_reverse": 5,
+  "undetermined": 37,
+  "identified_total": 44,
+  "forward_share_of_identified_pct": 88.6,
+  "forward_share_of_all_lower_bound_pct": 48.1,
+  "both_exact_n": 21,
+  "both_exact_forward": 17,
+  "both_exact_reverse_or_tie": 4,
+  "both_exact_median_lead": 18.0,
+  "both_exact_leads_sorted": [
+   -13.0,
+   -12.0,
+   -8.0,
+   -1.0,
+   1.0,
+   8.0,
+   8.0,
+   12.0,
+   15.0,
+   17.0,
+   18.0,
+   18.0,
+   22.0,
+   24.0,
+   24.0,
+   25.0,
+   30.0,
+   33.0,
+   33.0,
+   34.0,
+   34.0
+  ],
+  "schooling_censored_lead_lower_bound_median": 31.0,
+  "identified_forward_after_plus15_error": 34,
+  "identified_forward_after_plus15_share_of_identified_pct": 77.3,
+  "both_exact_lead_q1": 4.5,
+  "both_exact_lead_q3": 27.5
+ },
+ "identified_reverse_cases": [
+  [
+   "AFG",
+   2005.0,
+   1993.0
+  ],
+  [
+   "KHM",
+   2000.0,
+   1991.0
+  ],
+  [
+   "MLI",
+   2010.0,
+   2009.0
+  ],
+  [
+   "MOZ",
+   2005.0,
+   1992.0
+  ],
+  [
+   "SEN",
+   2000.0,
+   1992.0
+  ]
+ ],
+ "naive_uncensored_for_reference": {
+  "all_three": {
+   "n": 64,
+   "forward": 61,
+   "median_lead_forward_only": 26.0,
+   "share_gt10": 93.4,
+   "note": "NOT VALID: treats boundary dates as exact. Kept to show what the censoring changes."
+  },
+  "schooling_and_release": {
+   "n": 81,
+   "forward": 76,
+   "median_lead_forward_only": 26.0,
+   "share_gt10": 94.7,
+   "note": "NOT VALID: treats boundary dates as exact. Kept to show what the censoring changes."
+  }
  },
  "note": "lead = release - schooling; positive = schooling first. all_three is the paper's 64-country panel."
 }

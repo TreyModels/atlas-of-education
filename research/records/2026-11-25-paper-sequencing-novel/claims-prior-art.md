@@ -13,7 +13,7 @@ API on 24 November 2026.
 
 ## The novelty core, answered explicitly
 **No paper was found that codes schooling take-off against agricultural/farm-exit event ordering on a common
-country panel and reports the lead distribution (61 of 64, median 26 years, forward and reverse shares).** The
+country panel and reports the lead distribution (31 forward and 3 reverse among 34 countries with an identified order, 30 undetermined; both-exact median lead 18 years).** The
 direction of the historical relation is well known and has been argued since the 1980s; the systematic
 event-ordering compilation appears to be a new assembly. The paper says exactly that and never says "first".
 
@@ -48,7 +48,7 @@ is no book DOI for **Becker (1964)** is respected: neither is cited for a number
 Porzio, Rossi and Santangelo (2021) is the paper a referee will name first, and it is genuinely closer than the
 enrolment compilations: it takes the schooling-structural-change relation seriously and gives it a model. What
 it does not do — and what this paper does — is put both event dates on the same country panel and report the
-distribution of leads: 61 of 64 countries forward, median 26 years, with the reverse in 3. That is an
+distribution of leads: 31 of 34 identified countries forward (30 undetermined), median 18 years where both dates are exact, with the reverse in 3. That is an
 assembly-and-measurement increment, not a new direction, and the paper's framing follows the auditor's line: the
 paper systematises a known historical pattern; it does not discover the direction.
 
