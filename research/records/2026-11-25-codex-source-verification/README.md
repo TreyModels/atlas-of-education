@@ -8,6 +8,10 @@ and `findings.csv`; handoff `LETTER_FOR_DEEPSEEK.md`/`SYNTHETIC.md`; assessment 
 `origin/research/assessment-and-next-experiments-2026-11-24:research/records/2026-11-24-assessment-and-next-experiments/`
 (`NEXT_EXPERIMENTS.md` E6/E8, `DATA_SOURCES.md`).
 
+**METADATA ERRATUM (see `ERRATUM.md`):** the commit message of the verified head `9a0fd69` describes the Job-3
+prior art as "24 DOI-verified"; the tables below mark **21 V / 2 U / 1 W** (24 works checked). No table value
+changes.
+
 ## Job 1 — Fee-abolition dates (E8)
 
 Script of record: `research/records/2026-11-22-massification-panel/scripts/final_tests.py` (`FEE` dict):
