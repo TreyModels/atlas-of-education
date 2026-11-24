@@ -1,0 +1,316 @@
+{
+ "root": "/root/work/dhs-api-patched-2026-11-25",
+ "label": "OBSERVED / ECOLOGICAL; association only; not causal",
+ "script_hashes": {
+  "scripts/ir_pipeline.py": {
+   "expected": "68cccaa1e1a24082a1115aa14b69895b577d01fac8e6389806c8f00b8c4e330f",
+   "got": "68cccaa1e1a24082a1115aa14b69895b577d01fac8e6389806c8f00b8c4e330f",
+   "match": true
+  },
+  "scripts/estimate.py": {
+   "expected": "17490c1c18c33091ecc36c27b41e01aa733ebaeb736bf29ca989c8a81771cfaa",
+   "got": "17490c1c18c33091ecc36c27b41e01aa733ebaeb736bf29ca989c8a81771cfaa",
+   "match": true
+  },
+  "scripts/corrected_reduction.py": {
+   "expected": "a9c1676f98c6f6e6705343ac8840f23e8bcf37bed798dbd42778bc446f247ae9",
+   "got": "a9c1676f98c6f6e6705343ac8840f23e8bcf37bed798dbd42778bc446f247ae9",
+   "match": true
+  },
+  "scripts/m4_surveytype_check.py": {
+   "expected": "82b5bbcd55165d7b90d5743e6cb2d25f7bc2dd83a63edff687fd1135c633c5e4",
+   "got": "82b5bbcd55165d7b90d5743e6cb2d25f7bc2dd83a63edff687fd1135c633c5e4",
+   "match": true
+  }
+ },
+ "result_hashes": {
+  "results/results.json": {
+   "expected": "b01c12b9c0cf288beb4afa7d982c494cd9b99b97cb32cc49df3af123a4b0de2e",
+   "got": "b01c12b9c0cf288beb4afa7d982c494cd9b99b97cb32cc49df3af123a4b0de2e",
+   "match": true
+  },
+  "results/model_table.csv": {
+   "expected": "5ba322ed384babac53c3a333a8bbc5e437c64383d05f81f01f476ece1ec18653",
+   "got": "5ba322ed384babac53c3a333a8bbc5e437c64383d05f81f01f476ece1ec18653",
+   "match": true
+  },
+  "results/heterogeneity_bh.json": {
+   "expected": "32cf218e7a264daa6d914e30d1aa5704d06b51721f9a1c04c872fcf02cfc760a",
+   "got": "32cf218e7a264daa6d914e30d1aa5704d06b51721f9a1c04c872fcf02cfc760a",
+   "match": true
+  },
+  "results/heterogeneity_countries.csv": {
+   "expected": "dcdf7276e1ba8f6dfcf53a6cc432e888e2426106b33a23dd2281ddc578ca5e23",
+   "got": "dcdf7276e1ba8f6dfcf53a6cc432e888e2426106b33a23dd2281ddc578ca5e23",
+   "match": true
+  },
+  "results/heterogeneity_surveys.csv": {
+   "expected": "08c709de90aeab5222c258ec4f839c8f86f8c0cd05d6703a4601ca9698b1ebee",
+   "got": "08c709de90aeab5222c258ec4f839c8f86f8c0cd05d6703a4601ca9698b1ebee",
+   "match": true
+  },
+  "results/survey_construct.csv": {
+   "expected": "95995933666cf991e70a7a6a07da5a64cbf8919e6f3138ded35297ccf4b0e21d",
+   "got": "95995933666cf991e70a7a6a07da5a64cbf8919e6f3138ded35297ccf4b0e21d",
+   "match": true
+  },
+  "results/africa11/results.json": {
+   "expected": "74bd7c953eed9874bc4a336f0754c93a48d4a693e57cb59a7408ca54e64e63d5",
+   "got": "74bd7c953eed9874bc4a336f0754c93a48d4a693e57cb59a7408ca54e64e63d5",
+   "match": true
+  },
+  "results/africa11/model_table.csv": {
+   "expected": "29c9b2b94cc88b7094dc915abc182b44b74d31b01d31fcc16671d8d2f965a904",
+   "got": "29c9b2b94cc88b7094dc915abc182b44b74d31b01d31fcc16671d8d2f965a904",
+   "match": true
+  },
+  "results/africa11/heterogeneity_bh.json": {
+   "expected": "f3db0b6d115d8c52c003cc690556a97fb28401929c1146e3d8982c9818f17f5f",
+   "got": "f3db0b6d115d8c52c003cc690556a97fb28401929c1146e3d8982c9818f17f5f",
+   "match": true
+  },
+  "results/africa11/heterogeneity_countries.csv": {
+   "expected": "18ddd38a5cef0f377569987c71f1a07dff9c214c563155bcf8b5f46452c00f30",
+   "got": "18ddd38a5cef0f377569987c71f1a07dff9c214c563155bcf8b5f46452c00f30",
+   "match": true
+  },
+  "results/africa11/heterogeneity_surveys.csv": {
+   "expected": "8747fec7bf7c96d1a51d364f61da429d7e966cc359bb1b5b79229b81eb2f5569",
+   "got": "8747fec7bf7c96d1a51d364f61da429d7e966cc359bb1b5b79229b81eb2f5569",
+   "match": true
+  },
+  "results/africa11/survey_construct.csv": {
+   "expected": "fbd050b023edba3d72d924edbe7c2a40628cf7eab2e561895f1d4d5903b7d9de",
+   "got": "fbd050b023edba3d72d924edbe7c2a40628cf7eab2e561895f1d4d5903b7d9de",
+   "match": true
+  },
+  "results/corrected/corrected_results.json": {
+   "expected": "a3d2074c2a380a20e17829183961974c529221b0589e688a616237863c1c085a",
+   "got": "a3d2074c2a380a20e17829183961974c529221b0589e688a616237863c1c085a",
+   "match": true
+  }
+ },
+ "anchors": [
+  {
+   "file": "results/results.json",
+   "path": "coef.edu_primary.b",
+   "expected": -0.5540893538065248,
+   "got": -0.5540893538065248,
+   "pass": true
+  },
+  {
+   "file": "results/results.json",
+   "path": "coef.edu_secondary.b",
+   "expected": -1.5837243332438806,
+   "got": -1.5837243332438806,
+   "pass": true
+  },
+  {
+   "file": "results/results.json",
+   "path": "coef.edu_higher.b",
+   "expected": -2.538164103593176,
+   "got": -2.538164103593176,
+   "pass": true
+  },
+  {
+   "file": "results/results.json",
+   "path": "coef.edu_primary.se",
+   "expected": 0.058793787187576496,
+   "got": 0.058793787187576496,
+   "pass": true
+  },
+  {
+   "file": "results/results.json",
+   "path": "coef.edu_secondary.se",
+   "expected": 0.16673663262288285,
+   "got": 0.16673663262288285,
+   "pass": true
+  },
+  {
+   "file": "results/results.json",
+   "path": "coef.edu_higher.se",
+   "expected": 0.24186608412591726,
+   "got": 0.24186608412591726,
+   "pass": true
+  },
+  {
+   "file": "results/results.json",
+   "path": "ratio_B_over_A.ratio_B_over_A",
+   "expected": 1.0029272110701037,
+   "got": 1.0029272110701037,
+   "pass": true
+  },
+  {
+   "file": "results/results.json",
+   "path": "ratio_B2_over_A2.ratio_B_over_A",
+   "expected": 0.9582251740477937,
+   "got": 0.9582251740477937,
+   "pass": true
+  },
+  {
+   "file": "results/results.json",
+   "path": "ratio_B_over_A.ratio_ci.0",
+   "expected": 0.9207637555525054,
+   "got": 0.9207637555525054,
+   "pass": true
+  },
+  {
+   "file": "results/results.json",
+   "path": "ratio_B_over_A.ratio_ci.1",
+   "expected": 1.0953553417203392,
+   "got": 1.0953553417203392,
+   "pass": true
+  },
+  {
+   "file": "results/results.json",
+   "path": "ratio_B2_over_A2.ratio_ci.0",
+   "expected": 0.9055879706872442,
+   "got": 0.9055879706872442,
+   "pass": true
+  },
+  {
+   "file": "results/results.json",
+   "path": "ratio_B2_over_A2.ratio_ci.1",
+   "expected": 1.0143901182565638,
+   "got": 1.0143901182565638,
+   "pass": true
+  },
+  {
+   "file": "results/africa11/results.json",
+   "path": "coef.edu_primary.b",
+   "expected": -0.7070254461654115,
+   "got": -0.7070254461654115,
+   "pass": true
+  },
+  {
+   "file": "results/africa11/results.json",
+   "path": "coef.edu_secondary.b",
+   "expected": -2.1626782010104586,
+   "got": -2.1626782010104586,
+   "pass": true
+  },
+  {
+   "file": "results/africa11/results.json",
+   "path": "coef.edu_higher.b",
+   "expected": -3.197672352416153,
+   "got": -3.197672352416153,
+   "pass": true
+  },
+  {
+   "file": "results/corrected/corrected_results.json",
+   "path": "validation_prior_record.passed",
+   "expected": true,
+   "got": true,
+   "pass": true
+  },
+  {
+   "file": "results/corrected/corrected_results.json",
+   "path": "validation_prior_record.max_abs_delta",
+   "expected": 0.0036000000000000476,
+   "got": 0.0036000000000000476,
+   "pass": true
+  },
+  {
+   "file": "results/corrected/corrected_results.json",
+   "path": "corrected_full_sample_M1_weighted.edu_primary.b",
+   "expected": -0.5541,
+   "got": -0.5541,
+   "pass": true
+  },
+  {
+   "file": "results/corrected/corrected_results.json",
+   "path": "corrected_full_sample_M1_weighted.edu_secondary.b",
+   "expected": -1.5837,
+   "got": -1.5837,
+   "pass": true
+  },
+  {
+   "file": "results/corrected/corrected_results.json",
+   "path": "corrected_full_sample_M1_weighted.edu_higher.b",
+   "expected": -2.5382,
+   "got": -2.5382,
+   "pass": true
+  },
+  {
+   "file": "results/corrected/corrected_results.json",
+   "path": "corrected_full_sample_M1_weighted_2group.b",
+   "expected": -1.5514,
+   "got": -1.5514,
+   "pass": true
+  },
+  {
+   "file": "results/corrected/corrected_results.json",
+   "path": "africa11.Q2a_ratio_2group.ratio",
+   "expected": 1.069843350505824,
+   "got": 1.069843350505824,
+   "pass": true
+  },
+  {
+   "file": "results/corrected/corrected_results.json",
+   "path": "africa11.Q2a_ratio_2group.ci.0",
+   "expected": 0.9987338159871081,
+   "got": 0.9987338159871081,
+   "pass": true
+  },
+  {
+   "file": "results/corrected/corrected_results.json",
+   "path": "africa11.Q2a_ratio_2group.ci.1",
+   "expected": 1.1403490938072522,
+   "got": 1.1403490938072522,
+   "pass": true
+  },
+  {
+   "file": "results/corrected/corrected_results.json",
+   "path": "africa11.Q2a_ratio_4level.ratio",
+   "expected": 1.1779982281432086,
+   "got": 1.1779982281432086,
+   "pass": true
+  },
+  {
+   "file": "results/corrected/corrected_results.json",
+   "path": "africa11.Q2b1_A_vs_B_4level.edu_secondary_x_construct.b",
+   "expected": -0.19669737936298493,
+   "got": -0.19669737936298493,
+   "pass": true
+  },
+  {
+   "file": "results/corrected/corrected_results.json",
+   "path": "africa11.Q2b1_C_vs_B_4level.edu_secondary_x_construct.b",
+   "expected": -0.0031318298867129,
+   "got": -0.0031318298867129,
+   "pass": true
+  }
+ ],
+ "failed": [],
+ "warnings": [],
+ "ir_selftest": {
+  "log": "/root/work/dhs-api-patched-2026-11-25/results_ir/selftest.log",
+  "has_51_rows": true,
+  "has_ok": true
+ },
+ "ir_feasibility": {
+  "requested_files": 72,
+  "n_files_verified": 0,
+  "n_missing": 72,
+  "feasible": false,
+  "verdict": "EXPECTED: 72 manifest IR files requested, 0 present -> individual-level IR estimation NOT FEASIBLE on this instance (no .dta/.ZIP microdata). Not a code failure; nothing was fabricated."
+ },
+ "m4_surveytype_check": {
+  "passed": true,
+  "counts": {
+   "DHS": 784,
+   "MIS": 72,
+   "AIS": 4
+  },
+  "excluded_non_dhs_cells": 76,
+  "dhs_only_M1": {
+   "edu_primary": -0.553734,
+   "edu_secondary": -1.574933,
+   "edu_higher": -2.524109
+  }
+ },
+ "byte_identical_files": 13,
+ "expected_byte_identical_files": 13,
+ "verdict": "PASS_BYTE_IDENTICAL",
+ "message": "ALL PASS and all 13 output files are byte-identical to the committed corrected run: the patched re-run reproduces it exactly."
+}

@@ -1,0 +1,212 @@
+{
+ "source": "/root/work/edsystem/research/records/2026-11-25-masseng-edsystem-fix40/results_multiverse_fixed1440.json",
+ "label": "SIMULATION ONLY \u2014 eduengine toy worlds; illustrative parameters; no causal/empirical claims",
+ "driver_sha256": "001e40ef9a98d72d1e919f95deb2374683e368cf64f2b2adce983336a47fd585",
+ "runs": 1440,
+ "elapsed_s": 301.243,
+ "notes": "Exit shares partition the full measured child population (exits from e.exits + survivors censored at horizon). Mean over seeds; derived report, results unmodified.",
+ "combo_0": {
+  "combo_index": 0,
+  "combo": [
+   "cash_only",
+   "fixed_budget",
+   "public_only",
+   "bar",
+   "queue_floors",
+   "low_penalty"
+  ],
+  "n_seeds": 10,
+  "seeds": [
+   0,
+   9
+  ],
+  "overall": {
+   "started_liquidity_share": 0.43931242127271436,
+   "started_choice_share": 0.17291097851291937,
+   "n_population": 28000.0,
+   "n_exits": 23761.4,
+   "n_censored": 4238.6
+  },
+  "q1": {
+   "liquidity": 0.6849821428571428,
+   "choice": 0.10141071428571428,
+   "never": 0.14660714285714285,
+   "censored": 0.05614285714285714,
+   "other_terminal": 0.010857142857142857,
+   "started_share": 0.8405714285714285,
+   "n": 5600.0
+  },
+  "q2": {
+   "liquidity": 0.5163571428571428,
+   "choice": 0.2942142857142857,
+   "never": 0.0,
+   "censored": 0.1295,
+   "other_terminal": 0.05992857142857142,
+   "started_share": 0.9999464285714286,
+   "n": 5600.0
+  },
+  "q3": {
+   "liquidity": 0.4680357142857143,
+   "choice": 0.17055357142857147,
+   "never": 0.0,
+   "censored": 0.173625,
+   "other_terminal": 0.18778571428571428,
+   "started_share": 0.9999821428571429,
+   "n": 5600.0
+  },
+  "q4": {
+   "liquidity": 0.12771428571428572,
+   "choice": 0.08955357142857143,
+   "never": 0.0,
+   "censored": 0.19717857142857143,
+   "other_terminal": 0.5855535714285715,
+   "started_share": 1.0,
+   "n": 5600.0
+  },
+  "q5": {
+   "liquidity": 0.0025714285714285713,
+   "choice": 0.05257142857142856,
+   "never": 0.0,
+   "censored": 0.20044642857142855,
+   "other_terminal": 0.7444107142857141,
+   "started_share": 1.0,
+   "n": 5600.0
+  },
+  "urban": {
+   "liquidity": 0.3039412936668916,
+   "choice": 0.13442944235424933,
+   "never": 0.013694273976440102,
+   "censored": 0.16311094848793575,
+   "other_terminal": 0.38482404151448313,
+   "started_share": 0.9849764822258849,
+   "n": 16845.9
+  },
+  "rural": {
+   "liquidity": 0.4444966953022895,
+   "choice": 0.15256522806522713,
+   "never": 0.052923141470478094,
+   "censored": 0.13365379980753986,
+   "other_terminal": 0.21636113535446544,
+   "started_share": 0.9426130803359077,
+   "n": 11154.1
+  },
+  "metrics": {
+   "completion_primary": 0.793525,
+   "completion_lower": 0.67845,
+   "completion_upper": 0.555425,
+   "completion_tertiary": 0.32985,
+   "tut_rate": null,
+   "formal_rate": 0.08010714387083205
+  },
+  "combo_named": {
+   "afford": "cash_only",
+   "supply": "fixed_budget",
+   "learning": "public_only",
+   "gates": "bar",
+   "jobs": "queue_floors",
+   "rural": "low_penalty"
+  }
+ },
+ "combo_143": {
+  "combo_index": 143,
+  "combo": [
+   "credit_poverty",
+   "fiscal_loop",
+   "plus_private_tutoring",
+   "quota",
+   "competitive",
+   "high_penalty"
+  ],
+  "n_seeds": 10,
+  "seeds": [
+   0,
+   9
+  ],
+  "overall": {
+   "started_liquidity_share": 0.2335549129998679,
+   "started_choice_share": 0.2556779993242767,
+   "n_population": 28000.0,
+   "n_exits": 23868.7,
+   "n_censored": 4131.3
+  },
+  "q1": {
+   "liquidity": 0.5014285714285714,
+   "choice": 0.30121428571428566,
+   "never": 0.0010000000000000002,
+   "censored": 0.08557142857142856,
+   "other_terminal": 0.11078571428571429,
+   "started_share": 0.9988392857142857,
+   "n": 5600.0
+  },
+  "q2": {
+   "liquidity": 0.2899285714285714,
+   "choice": 0.3745357142857143,
+   "never": 0.0,
+   "censored": 0.12867857142857142,
+   "other_terminal": 0.20685714285714285,
+   "started_share": 0.9999821428571428,
+   "n": 5600.0
+  },
+  "q3": {
+   "liquidity": 0.203,
+   "choice": 0.18507142857142855,
+   "never": 0.0,
+   "censored": 0.16282142857142856,
+   "other_terminal": 0.44910714285714287,
+   "started_share": 1.0,
+   "n": 5600.0
+  },
+  "q4": {
+   "liquidity": 0.0008750000000000001,
+   "choice": 0.12385714285714286,
+   "never": 0.0,
+   "censored": 0.1786785714285714,
+   "other_terminal": 0.6965892857142857,
+   "started_share": 0.9999821428571428,
+   "n": 5600.0
+  },
+  "q5": {
+   "liquidity": 0.0,
+   "choice": 0.10483928571428572,
+   "never": 0.0,
+   "censored": 0.18198214285714284,
+   "other_terminal": 0.7131785714285714,
+   "started_share": 0.9999821428571429,
+   "n": 5600.0
+  },
+  "urban": {
+   "liquidity": 0.1142232437834769,
+   "choice": 0.16948955346482036,
+   "never": 2.921996669265301e-05,
+   "censored": 0.16531037916675265,
+   "other_terminal": 0.5509476036182575,
+   "started_share": 0.9999566377620586,
+   "n": 6930.1
+  },
+  "rural": {
+   "liquidity": 0.226955396811151,
+   "choice": 0.2338132945966091,
+   "never": 0.000256314073116855,
+   "censored": 0.14170379787940438,
+   "other_terminal": 0.3972711966397186,
+   "started_share": 0.999691462199598,
+   "n": 21069.9
+  },
+  "metrics": {
+   "completion_primary": 0.957475,
+   "completion_lower": 0.54965,
+   "completion_upper": 0.4498000000000001,
+   "completion_tertiary": 0.34479999999999994,
+   "tut_rate": 0.48697638474124405,
+   "formal_rate": null
+  },
+  "combo_named": {
+   "afford": "credit_poverty",
+   "supply": "fiscal_loop",
+   "learning": "plus_private_tutoring",
+   "gates": "quota",
+   "jobs": "competitive",
+   "rural": "high_penalty"
+  }
+ }
+}

@@ -1,0 +1,300 @@
+{
+ "label": "PRE-REGISTERED M4 CHECK - OBSERVED / ECOLOGICAL published cells; association only, not causal",
+ "preregistration": {
+  "file": "PRE_REGISTRATION.md",
+  "model": "M4",
+  "definition": "M1 restricted to SurveyType == \"DHS\"",
+  "note": "main specification pools whatever survey types exist (PRE_REGISTRATION lines 107-108); M4 is the pre-declared survey-type robustness split (line 147)"
+ },
+ "check": {
+  "survey_type_field": "panel CSV column survey_type (built from DHS API SurveyType)",
+  "counts_by_survey_type_edu4_FE_FRTY_W_MNC": {
+   "DHS": 784,
+   "MIS": 72,
+   "AIS": 4
+  },
+  "counts_by_survey_type_edu4_FE_FRTR_W_TFR": {
+   "DHS": 1128,
+   "MIS": 156,
+   "AIS": 12
+  },
+  "n_cells_edu4_FE_FRTY_W_MNC": 860,
+  "n_cells_edu4_FE_FRTR_W_TFR": 1296,
+  "n_dhs_cells_edu4": 784,
+  "n_non_dhs_cells_excluded_edu4": 76,
+  "excluded_by_type": {
+   "MIS": 72,
+   "AIS": 4
+  },
+  "independent_csv_recount_matches_loader": true
+ },
+ "assertions": {
+  "survey_type_values_known": true,
+  "survey_type_values_known_detail": {
+   "unknown_edu4": [],
+   "unknown_tfr4": []
+  },
+  "both_dhs_and_non_dhs_present": true,
+  "loader_matches_csv_recount": true,
+  "dhs_only_subset_is_exactly_survey_type_DHS": true,
+  "dhs_only_subset_excludes_non_dhs": true,
+  "restriction_actually_applied": true,
+  "m4_model_estimated": true
+ },
+ "passed": true,
+ "models": {
+  "full_sample": {
+   "pooled_M1_weighted_4level": {
+    "n_cells": 860,
+    "n_surveys": 215,
+    "n_countries": 65,
+    "coefficients": {
+     "edu_primary": {
+      "b": -0.5540893538065248,
+      "se": 0.058793787187576496,
+      "p": 0.0,
+      "ci": [
+       -0.6693251766941747,
+       -0.43885353091887486
+      ]
+     },
+     "edu_secondary": {
+      "b": -1.5837243332438806,
+      "se": 0.16673663262288285,
+      "p": 0.0,
+      "ci": [
+       -1.910528133184731,
+       -1.2569205333030302
+      ]
+     },
+     "edu_higher": {
+      "b": -2.538164103593176,
+      "se": 0.24186608412591726,
+      "p": 0.0,
+      "ci": [
+       -3.0122216284799737,
+       -2.064106578706378
+      ]
+     }
+    }
+   },
+   "pooled_M1_weighted_2group": {
+    "n_cells": 692,
+    "n_surveys": 346,
+    "n_countries": 80,
+    "coefficients": {
+     "edu_secplus": {
+      "b": -1.5513919793325286,
+      "se": 0.14519049143391194,
+      "p": 0.0,
+      "ci": [
+       -1.835965342542996,
+       -1.2668186161220611
+      ]
+     }
+    }
+   },
+   "M4_DHS_only_M1_weighted_4level": {
+    "n_cells": 784,
+    "n_surveys": 196,
+    "n_countries": 65,
+    "coefficients": {
+     "edu_primary": {
+      "b": -0.553734344891307,
+      "se": 0.058434359242255166,
+      "p": 0.0,
+      "ci": [
+       -0.6682656890061272,
+       -0.4392030007764869
+      ]
+     },
+     "edu_secondary": {
+      "b": -1.574932928839817,
+      "se": 0.16547251830480364,
+      "p": 0.0,
+      "ci": [
+       -1.8992590647172323,
+       -1.2506067929624018
+      ]
+     },
+     "edu_higher": {
+      "b": -2.5241090439872895,
+      "se": 0.24122819930670308,
+      "p": 0.0,
+      "ci": [
+       -2.9969163146284274,
+       -2.0513017733461516
+      ]
+     }
+    }
+   },
+   "M4_DHS_only_M1_weighted_2group": {
+    "n_cells": 598,
+    "n_surveys": 299,
+    "n_countries": 80,
+    "coefficients": {
+     "edu_secplus": {
+      "b": -1.5379307818993828,
+      "se": 0.14452085485288138,
+      "p": 0.0,
+      "ci": [
+       -1.8211916574110303,
+       -1.2546699063877353
+      ]
+     }
+    }
+   },
+   "M4_DHS_only_M1_unweighted_4level": {
+    "n_cells": 784,
+    "n_surveys": 196,
+    "n_countries": 65,
+    "coefficients": {
+     "edu_primary": {
+      "b": -0.6377551020407504,
+      "se": 0.08380067687954541,
+      "p": 2.731148640577885e-14,
+      "ci": [
+       -0.8020044287246594,
+       -0.47350577535684135
+      ]
+     },
+     "edu_secondary": {
+      "b": -2.0005102040816567,
+      "se": 0.13263599287796599,
+      "p": 0.0,
+      "ci": [
+       -2.26047675012247,
+       -1.7405436580408433
+      ]
+     },
+     "edu_higher": {
+      "b": -3.0750000000000073,
+      "se": 0.11975431038718241,
+      "p": 0.0,
+      "ci": [
+       -3.309718448358885,
+       -2.8402815516411297
+      ]
+     }
+    }
+   },
+   "delta_DHS_only_minus_pooled_4level": {
+    "edu_primary": {
+     "b_dhs_only_minus_pooled": 0.00035500891521778044,
+     "se_dhs_only_minus_pooled": -0.0003594279453213306
+    },
+    "edu_secondary": {
+     "b_dhs_only_minus_pooled": 0.008791404404063563,
+     "se_dhs_only_minus_pooled": -0.0012641143180792125
+    },
+    "edu_higher": {
+     "b_dhs_only_minus_pooled": 0.014055059605886377,
+     "se_dhs_only_minus_pooled": -0.000637884819214174
+    }
+   }
+  },
+  "africa11": {
+   "pooled_M1_weighted_4level": {
+    "n_cells": 176,
+    "n_surveys": 44,
+    "n_countries": 11,
+    "coefficients": {
+     "edu_primary": {
+      "b": -0.7070254461654115,
+      "se": 0.15777095278996028,
+      "p": 7.417546905585937e-06,
+      "ci": [
+       -1.0162565136337336,
+       -0.3977943786970894
+      ]
+     },
+     "edu_secondary": {
+      "b": -2.1626782010104586,
+      "se": 0.1785234337418089,
+      "p": 0.0,
+      "ci": [
+       -2.512584131144404,
+       -1.812772270876513
+      ]
+     },
+     "edu_higher": {
+      "b": -3.197672352416153,
+      "se": 0.1354333255755962,
+      "p": 0.0,
+      "ci": [
+       -3.4631216705443215,
+       -2.9322230342879845
+      ]
+     }
+    }
+   },
+   "pooled_M1_weighted_2group": {
+    "n_cells": 144,
+    "n_surveys": 72,
+    "n_countries": 11,
+    "coefficients": {
+     "edu_secplus": {
+      "b": -1.9743253390210276,
+      "se": 0.12314498156194276,
+      "p": 0.0,
+      "ci": [
+       -2.2156895028824355,
+       -1.7329611751596197
+      ]
+     }
+    }
+   },
+   "M4_DHS_only_M1_weighted_4level": {
+    "n_cells": 140,
+    "n_surveys": 35,
+    "n_countries": 11,
+    "coefficients": {
+     "edu_primary": {
+      "b": -0.7139192284533968,
+      "se": 0.15867075297190336,
+      "p": 6.815352168398903e-06,
+      "ci": [
+       -1.0249139042783275,
+       -0.40292455262846627
+      ]
+     },
+     "edu_secondary": {
+      "b": -2.1919607778995087,
+      "se": 0.18583228946646993,
+      "p": 0.0,
+      "ci": [
+       -2.5561920652537897,
+       -1.8277294905452277
+      ]
+     },
+     "edu_higher": {
+      "b": -3.2056148941130407,
+      "se": 0.1501353839313919,
+      "p": 0.0,
+      "ci": [
+       -3.499880246618569,
+       -2.9113495416075126
+      ]
+     }
+    }
+   },
+   "M4_DHS_only_M1_weighted_2group": {
+    "n_cells": 110,
+    "n_surveys": 55,
+    "n_countries": 11,
+    "coefficients": {
+     "edu_secplus": {
+      "b": -1.9887422225760112,
+      "se": 0.13922625622298565,
+      "p": 0.0,
+      "ci": [
+       -2.261625684773063,
+       -1.7158587603789592
+      ]
+     }
+    }
+   }
+  }
+ },
+ "verdict": "M4 COMPUTED: M1 re-estimated on the SurveyType == 'DHS' subset; 76 non-DHS cells excluded from the edu4 completed-fertility panel. Coefficients are association-only, not causal."
+}

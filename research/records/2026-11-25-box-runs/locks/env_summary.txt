@@ -1,0 +1,6 @@
+host=autodl-container-a8f742b5ee-292349c5
+date_utc=2026-11-24T16:55:50Z
+python=Python 3.10.8
+numpy=1.24.1
+kernel=Linux autodl-container-a8f742b5ee-292349c5 5.15.0-94-generic #104-Ubuntu SMP Tue Jan 9 15:25:40 UTC 2024 x86_64 x86_64 x86_64 GNU/Linux
+cgroup_cpus=192

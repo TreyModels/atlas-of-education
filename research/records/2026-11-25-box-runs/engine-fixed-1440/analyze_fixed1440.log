@@ -1,0 +1,32 @@
+{
+ "runs": 1440,
+ "top_movers_by_outcome": {
+  "completion_primary": "afford",
+  "completion_lower": "gates",
+  "completion_upper": "gates",
+  "completion_tertiary": "afford",
+  "q_pub": "supply",
+  "formal_share_gdp": "afford",
+  "edu_gdp": "afford",
+  "tut_rate": "afford",
+  "mpl_primary": "learning",
+  "parity_location_lower": "rural",
+  "parity_wealth_lower": "rural",
+  "started_liquidity_share": "afford",
+  "started_choice_share": "afford",
+  "tut_q_gap_q5_q1": "supply",
+  "tut_gate_mass_share": "afford",
+  "tut_gate_adjacent": "gates",
+  "tut_non_gate": "gates",
+  "completion_lower_q_gap": "rural",
+  "completion_upper_q_gap": "gates",
+  "completion_tertiary_q_gap": "gates",
+  "tut_level_share_primary": "gates",
+  "tut_level_share_lower": "afford",
+  "tut_level_share_upper": "afford",
+  "tut_level_share_tertiary": "afford",
+  "formal_rate": "afford",
+  "skill_premium": "afford"
+ },
+ "elapsed_s": 301.243
+}

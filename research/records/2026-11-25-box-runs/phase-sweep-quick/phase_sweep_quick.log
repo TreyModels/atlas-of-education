@@ -1,0 +1,1 @@
+{"runs": 500, "cells": 100, "seeds": 5, "gate": "bar", "elapsed_s": 35.362, "workers": 12, "csv": "/root/work/phase_sweep_quick/phase_sweep_quick_summary.csv", "json": "/root/work/phase_sweep_quick/phase_sweep_quick_summary.json"}
