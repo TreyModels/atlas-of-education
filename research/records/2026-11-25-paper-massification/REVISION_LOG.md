@@ -2,8 +2,8 @@
 
 **Branch:** `research/paper-massification-2026-11-25` (base `76d929a`).
 **Record:** `research/records/2026-11-25-paper-massification/`.
-**Revision date:** 25 November 2026 (session). **Revision commit:** see the last commit touching `paper.md` on this
-branch (the hash is recorded in the hand-off message; this file was committed with the revision).
+**Revision date:** 25 November 2026 (session). **Revision commit:** `417c87a` (the revision of `paper.md`; this log entry is committed immediately after it and
+records the hash).
 **Draft after revision:** 17,968 words (was 17,433; target 12,000–18,000).
 
 ## Why
