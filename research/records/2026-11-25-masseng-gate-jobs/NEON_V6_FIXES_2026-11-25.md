@@ -15,7 +15,7 @@ Commits in this branch (each logical fix separate, explicit paths only, no `git 
 | `c21bf3b` | record: this file (before/after numbers, tests, OPEN defects) |
 | `fc2504d` | tests: restore labour test SUMMARY/non-zero exit after the file split (no production change) |
 
-Branch head at record close: `fc2504d`.
+Branch head at handoff is the last commit in `git log -1` on the branch (reported to the Lead); this record-update commit follows the fixes.
 
 Everything below is **SIMULATION** of a declared, illustrative toy model. No empirical calibration, no causal claim.
 No result was edited to make a test pass; failures are preserved and reported (see §5).
