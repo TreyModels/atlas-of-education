@@ -34,15 +34,22 @@ def interaction(A, S, T, a=None):
 
 
 def fit_ces_rho(A, S, T, grid):
+    """Grid search over (rho, omega) evaluating normalized CES directly on the A-scale."""
+    S_c = np.clip(S, 1e-6, None)
+    T_c = np.clip(T, 1e-6, None)
+    w_grid = np.linspace(0.1, 0.9, 17)
+    ones = np.ones_like(S_c)
     best = None
     for rho in grid:
-        y = np.power(np.clip(A, 1e-6, None), rho)
-        X = np.column_stack([np.ones_like(S), np.power(np.clip(S, 1e-6, None), rho),
-                             np.power(np.clip(T, 1e-6, None), rho)])
-        fit = ols(y, X)
-        sse = float(np.sum((y - X @ np.array(fit["b"])) ** 2))
-        if best is None or sse < best[1]:
-            best = (float(rho), sse)
+        Sr = np.power(S_c, rho)
+        Tr = np.power(T_c, rho)
+        for w in w_grid:
+            tech = np.power(w * Sr + (1.0 - w) * Tr, 1.0 / rho)
+            X = np.column_stack([ones, tech])
+            b = np.linalg.lstsq(X, A, rcond=None)[0]
+            sse = float(np.sum((A - X @ b) ** 2))
+            if best is None or sse < best[1]:
+                best = (float(rho), sse)
     return best[0]
 
 

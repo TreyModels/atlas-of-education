@@ -82,19 +82,20 @@ def probit(y, X, iters=60, ridge=1e-8):
     X = np.asarray(X, float)
     b = np.zeros(X.shape[1])
     for _ in range(iters):
-        z = X @ b
-        p = np.clip(norm_cdf(z), 1e-9, 1 - 1e-9)
+        z = np.clip(X @ b, -6.5, 6.5)
+        p = np.clip(norm_cdf(z), 1e-12, 1.0 - 1e-12)
         ph = norm_pdf(z)
-        w = np.maximum(ph ** 2 / (p * (1 - p)), 1e-12)
+        w = np.maximum(ph ** 2 / (p * (1.0 - p)), 1e-12)
+        score = X.T @ ((ph / (p * (1.0 - p))) * (y - p))
         H = X.T @ (X * w[:, None]) + ridge * np.eye(X.shape[1])
-        step = np.linalg.solve(H, X.T @ (y - p))
+        step = np.linalg.solve(H, score)
         b = b + step
         if np.max(np.abs(step)) < 1e-9:
             break
-    z = X @ b
-    p = np.clip(norm_cdf(z), 1e-9, 1 - 1e-9)
+    z = np.clip(X @ b, -6.5, 6.5)
+    p = np.clip(norm_cdf(z), 1e-12, 1.0 - 1e-12)
     ph = norm_pdf(z)
-    w = np.maximum(ph ** 2 / (p * (1 - p)), 1e-12)
+    w = np.maximum(ph ** 2 / (p * (1.0 - p)), 1e-12)
     H = X.T @ (X * w[:, None]) + ridge * np.eye(X.shape[1])
     se = np.sqrt(np.maximum(np.diag(np.linalg.pinv(H)), 0.0))
     return {"b": b.tolist(), "se": se.tolist(), "n": int(len(y))}
@@ -109,13 +110,23 @@ def tobit_em(y, X, iters=400):
     sigma = max(float(np.std(y[pos] - X[pos] @ b)), 1e-6)
     ystar = y.copy()
     for _ in range(iters):
+        b_old, sigma_old = b, sigma
         z = X @ b
-        lam = norm_pdf(z / sigma) / np.maximum(norm_cdf(-z / sigma), 1e-12)
-        ystar = np.where(pos, y, z - sigma * np.clip(lam, 0.0, 1e6))
+        a = -z / sigma
+        safe_a = np.where(a < -6.0, -6.0, a)
+        tail_a = np.where(a < -6.0, a, -6.0)
+        lam = np.where(
+            a < -6.0,
+            -tail_a - 1.0 / tail_a + 2.0 / (tail_a ** 3),
+            norm_pdf(safe_a) / np.maximum(norm_cdf(safe_a), 1e-300),
+        )
+        ystar = np.where(pos, y, z - sigma * lam)
+        var_cond = np.where(pos, 0.0, (sigma ** 2) * np.maximum(1.0 - a * lam - lam ** 2, 0.0))
         b = np.linalg.lstsq(X, ystar, rcond=None)[0]
-        sigma = max(float(np.sqrt(np.mean((ystar - X @ b) ** 2))), 1e-6)
-    r = ystar - X @ b
-    cov = max(float(np.mean(r * r)), 1e-8) * np.linalg.pinv(X.T @ X)
+        sigma = max(float(np.sqrt(np.mean((ystar - X @ b) ** 2 + var_cond))), 1e-6)
+        if max(float(np.max(np.abs(b - b_old))), abs(sigma - sigma_old)) < 1e-9:
+            break
+    cov = max(float(sigma ** 2), 1e-8) * np.linalg.pinv(X.T @ X)
     se = np.sqrt(np.maximum(np.diag(cov), 0.0))
     return {"b": b.tolist(), "se": se.tolist(), "sigma": float(sigma), "n": int(len(y))}
 

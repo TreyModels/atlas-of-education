@@ -46,7 +46,7 @@ def run(args):
         q = np.argsort(np.argsort(z)) / (n - 1)
         bar = admit_bar(score, seats)
         quota = admit_quota(z, score, seats)
-        quotas = {q: admit_quota(z, score, seats, quota_share=q) for q in (0.4, 0.5, 0.6)}
+        quotas = {qs: admit_quota(z, score, seats, quota_share=qs) for qs in (0.4, 0.5, 0.6)}
         # contest: richer pupils value the seat more and exert more effort; rank on score + effort
         value = 1.0 + 0.8 * z
         effort = 0.5 * value
@@ -55,9 +55,9 @@ def run(args):
             gap = adm[q >= 0.8].mean() - adm[q <= 0.2].mean()
             rows.append([name, r, round(float(adm.mean()), 3), round(float(gap), 4)])
             summary.setdefault(name, []).append(gap)
-        for q, adm_q in quotas.items():
+        for qs, adm_q in quotas.items():
             gq = adm_q[q >= 0.8].mean() - adm_q[q <= 0.2].mean()
-            summary.setdefault("quota_share_%.1f" % q, []).append(gq)
+            summary.setdefault("quota_share_%.1f" % qs, []).append(gq)
     summary = {k: {"mean_gap_top_minus_bottom": round(float(np.mean(v)), 4),
                    "ci90": [round(float(np.percentile(v, 5)), 4), round(float(np.percentile(v, 95)), 4)]}
                for k, v in summary.items()}
@@ -72,7 +72,7 @@ def run(args):
     mv["spec_robust"] = len({v > 0 for v in mv["estimates"].values()}) == 1
     out.update({"summary": summary, "multiverse": mv, "decision_rule": rule,
                 "system_map": {"nodes": ["stage transitions", "gates"], "piece": 3, "chain": "family affordability -> learning -> gate -> credential->jobs"},
-           "masseng_boundary": {"used": "standalone synthetic demonstration (NOT MASSENG v5 output)", "mechanism_in_masseng_v5": True, "note": "standalone synthetic demonstration; not a MASSENG v5 output"},
+           "masseng_boundary": {"used": "standalone synthetic demonstration (NOT MASSENG v5 output)", "mechanism_in_masseng_v5": False, "note": "standalone synthetic demonstration; not a MASSENG v5 output"},
                 "plain_result": ("A score bar admits rich pupils at a higher rate (gap %.3f); a reserved quota "
                                  "flips the gap (%.3f) by construction, and a contest in which richer pupils "
                                  "invest more effort widens it further (%.3f). The quota changes who is admitted, "

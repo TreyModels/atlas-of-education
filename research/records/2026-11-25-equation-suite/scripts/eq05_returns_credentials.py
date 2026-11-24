@@ -8,16 +8,18 @@ from eq_common import ols, rng, write_result, save_csv, smoke_parser
 
 
 def two_sls(y, S, Z, X_exog):
-    """2SLS for y = b*S + X_exog*c + e with instrument Z. SEs homoskedastic 2SLS."""
-    X = np.column_stack([S] + ([X_exog] if X_exog is not None else []))
-    Zf = np.column_stack([Z] + ([X_exog] if X_exog is not None else []))
+    """2SLS for y = a + b*S + X_exog*c + e with instrument Z. SEs homoskedastic 2SLS."""
+    y = np.asarray(y, float).reshape(-1)
+    ones = np.ones(len(y))
+    X = np.column_stack([ones, S] + ([X_exog] if X_exog is not None else []))
+    Zf = np.column_stack([ones, Z] + ([X_exog] if X_exog is not None else []))
     Xhat = Zf @ np.linalg.lstsq(Zf, X, rcond=None)[0]
     b = np.linalg.lstsq(Xhat, y, rcond=None)[0]
     e = y - X @ b
-    sigma2 = float(np.mean(e ** 2))
+    sigma2 = float(np.sum(e ** 2) / max(len(y) - X.shape[1], 1))
     cov = sigma2 * np.linalg.pinv(Xhat.T @ Xhat)
     se = np.sqrt(np.maximum(np.diag(cov), 0.0))
-    return b[0], se[0]
+    return b[1], se[1]
 
 
 def one_rep(rng, n, ability_bias):
