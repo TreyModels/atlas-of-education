@@ -1,8 +1,11 @@
 # FINAL SESSION RECORD — 25 Nov 2026 (before AutoDL release)
 
 This closes the session that began at 00:18 CST. Everything below is pushed to
-`https://github.com/TreyModels/atlas-of-education`. **QA is CLEARED** (adversarial gate, 16+ branches,
-no FAIL; `~/neon-boot/QA_GATE_2026-11-25.md`).
+`https://github.com/TreyModels/atlas-of-education`. **QA is CLEARED** (adversarial gate, 22 branches, no FAIL;
+`~/neon-boot/QA_GATE_2026-11-25.md`). The final audit addendum gives the tutoring lane
+**PASS** (`research/masseng-tutoring-neon-2026-11-25` @ `9df03c2`), so every Neon skill area now has a
+passed patch set; the only open item is the deliberately-declared Bray MNL mapping deviation (a re-fit
+or claim-amendment decision that belongs to the owner).
 
 ## Heads (origin)
 
