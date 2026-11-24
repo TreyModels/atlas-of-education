@@ -1,0 +1,354 @@
+{
+ "label": "EXPLORATORY POST-HOC",
+ "caveat": "Exploratory post-hoc probes; the confirmatory record (PRE_REGISTRATION.md, REPORT.md, results/e8_ri_results.json, classification 'robust') is NOT changed unless a probe is not 'unaffected'.",
+ "meta": {
+  "record": "research/records/2026-11-25-e8-fisher-ri",
+  "label": "EXPLORATORY POST-HOC",
+  "prereg_followup_commit": "078dd7f280250e1359837adc7f73f453e1f6fa0c",
+  "prereg_followup_is_ancestor_of_head": true,
+  "confirmatory_commit": "3535e49da411946b969dfb978773eaee4928b835",
+  "git_head": "078dd7f280250e1359837adc7f73f453e1f6fa0c",
+  "master_seed": 20261125,
+  "B": 10000,
+  "workers": 8,
+  "family_codes": {
+   "A1": 2,
+   "A2": 1
+  },
+  "command": "/Users/treymenefee/neon-boot/venv/bin/python scripts/e8_ri_followup.py",
+  "numpy": "2.2.6",
+  "pandas": "2.3.3",
+  "wdi_last_updated_date": "2026-11-11",
+  "runtime_seconds": 8.3
+ },
+ "data": {
+  "panel": "data/e8_primary_ger_panel.csv",
+  "panel_sha256": "365bcd4358f012a7caed7602e7fc26fd73c122b16ecfe5ce6005a1a594f6a886",
+  "confirmatory_results_json": "results/e8_ri_results.json",
+  "confirmatory_gate_pass": true,
+  "ssa_countries": 48,
+  "treated": {
+   "MWI": 1994,
+   "ETH": 1995,
+   "UGA": 1997,
+   "LSO": 2000,
+   "TZA": 2001,
+   "KEN": 2003,
+   "MOZ": 2004,
+   "GHA": 2005
+  },
+  "n_pool_full": 40
+ },
+ "observed": {
+  "T0": 12.44362392207772,
+  "Tpost": 25.260746369507263,
+  "n_t0": 7,
+  "n_post_events": 6
+ },
+ "confirmatory_baseline": {
+  "placebo_date": {
+   "p2_T0": 9.999000099990002e-05,
+   "p2_Tpost": 9.999000099990002e-05
+  },
+  "placebo_country": {
+   "p2_T0": 0.0005999400059994001,
+   "p2_Tpost": 0.00029997000299970003
+  }
+ },
+ "A1": {
+  "label": "A1_placebo_country_pool36_excl_unresolved",
+  "B": 10000,
+  "B_eff_T0": 9999,
+  "B_eff_Tpost": 10000,
+  "T0": {
+   "label": "T0",
+   "B_eff": 9999,
+   "defined": 9999,
+   "T_obs": 12.44362392207772,
+   "dist": {
+    "mean": -0.7432012402814845,
+    "sd": 1.8992829169311034,
+    "min": -9.381912568036263,
+    "max": 10.519789470143674,
+    "quantiles_2p5_5_25_50_75_95_97p5": [
+     -3.8825585092543276,
+     -3.411337276201702,
+     -2.031694006924046,
+     -0.9833409842707834,
+     0.334035237899016,
+     2.687337895200372,
+     3.548768941424285
+    ],
+    "n_ge_obs": 0,
+    "n_abs_ge_obs": 0
+   },
+   "p_two_sided": 0.0001,
+   "p_one_sided_positive": 0.0001,
+   "mcse_two_sided": 9.999499987499375e-05,
+   "mcse_one_sided_positive": 9.999499987499375e-05
+  },
+  "Tpost": {
+   "label": "Tpost",
+   "B_eff": 10000,
+   "defined": 10000,
+   "T_obs": 25.260746369507263,
+   "dist": {
+    "mean": -2.8272971192501455,
+    "sd": 4.514279139277152,
+    "min": -28.53978488081209,
+    "max": 15.482210276965406,
+    "quantiles_2p5_5_25_50_75_95_97p5": [
+     -12.107746733725943,
+     -10.420921963217507,
+     -5.693161862360979,
+     -2.6456991005286365,
+     0.13398773101753692,
+     4.2780396437221055,
+     5.779956518459198
+    ],
+    "n_ge_obs": 0,
+    "n_abs_ge_obs": 1
+   },
+   "p_two_sided": 0.00019998000199980003,
+   "p_one_sided_positive": 9.999000099990002e-05,
+   "mcse_two_sided": 0.00014139307550117174,
+   "mcse_one_sided_positive": 9.998500187478128e-05
+  },
+  "n_t0_dist": {
+   "mean": 5.4994,
+   "min": 0,
+   "max": 8,
+   "share_eq_8": 0.0412
+  },
+  "n_post_events_dist": {
+   "mean": 5.9993,
+   "min": 3,
+   "max": 6
+  },
+  "pool_excluded": [
+   "CMR",
+   "ZMB",
+   "RWA",
+   "BDI"
+  ],
+  "n_pool": 36,
+  "pool": [
+   "AGO",
+   "BEN",
+   "BFA",
+   "BWA",
+   "CAF",
+   "CIV",
+   "COD",
+   "COG",
+   "COM",
+   "CPV",
+   "ERI",
+   "GAB",
+   "GIN",
+   "GMB",
+   "GNB",
+   "GNQ",
+   "LBR",
+   "MDG",
+   "MLI",
+   "MRT",
+   "MUS",
+   "NAM",
+   "NER",
+   "NGA",
+   "SDN",
+   "SEN",
+   "SLE",
+   "SOM",
+   "SSD",
+   "STP",
+   "SWZ",
+   "SYC",
+   "TCD",
+   "TGO",
+   "ZAF",
+   "ZWE"
+  ],
+  "spot_checks": {
+   "A1:0": {
+    "serial_T0": -2.41552456402966,
+    "csv_T0": -2.41552456402966,
+    "abs_diff_T0": 0.0,
+    "serial_Tpost": -9.533425181157506,
+    "csv_Tpost": -9.533425181157506,
+    "abs_diff_Tpost": 0.0
+   },
+   "A1:5000": {
+    "serial_T0": -1.5785132179162158,
+    "csv_T0": -1.5785132179162158,
+    "abs_diff_T0": 0.0,
+    "serial_Tpost": -3.6566286822896923,
+    "csv_Tpost": -3.6566286822896923,
+    "abs_diff_Tpost": 0.0
+   },
+   "A1:9999": {
+    "serial_T0": -0.9401121601917062,
+    "csv_T0": -0.9401121601917062,
+    "abs_diff_T0": 0.0,
+    "serial_Tpost": -7.674181118292895,
+    "csv_Tpost": -7.674181118292895,
+    "abs_diff_Tpost": 0.0
+   }
+  }
+ },
+ "A2": {
+  "label": "A2_placebo_date_local_pm3",
+  "B": 10000,
+  "B_eff_T0": 10000,
+  "B_eff_Tpost": 10000,
+  "T0": {
+   "label": "T0",
+   "B_eff": 10000,
+   "defined": 10000,
+   "T_obs": 12.44362392207772,
+   "dist": {
+    "mean": 0.36940441557119164,
+    "sd": 1.1382478438097203,
+    "min": -1.9631828287171955,
+    "max": 2.73832942420404,
+    "quantiles_2p5_5_25_50_75_95_97p5": [
+     -1.768138658184283,
+     -1.4794124049503738,
+     -0.5663591442090625,
+     0.3544520141956002,
+     1.282168740842684,
+     2.193327699154036,
+     2.40782040170074
+    ],
+    "n_ge_obs": 0,
+    "n_abs_ge_obs": 0
+   },
+   "p_two_sided": 9.999000099990002e-05,
+   "p_one_sided_positive": 9.999000099990002e-05,
+   "mcse_two_sided": 9.998500187478128e-05,
+   "mcse_one_sided_positive": 9.998500187478128e-05
+  },
+  "Tpost": {
+   "label": "Tpost",
+   "B_eff": 10000,
+   "defined": 10000,
+   "T_obs": 25.260746369507263,
+   "dist": {
+    "mean": 8.062366840595786,
+    "sd": 3.855346769758643,
+    "min": 1.106011313830494,
+    "max": 13.790670177500566,
+    "quantiles_2p5_5_25_50_75_95_97p5": [
+     1.7521677333427608,
+     2.210580814527019,
+     4.607465586549821,
+     7.9293838957861205,
+     11.590324886039092,
+     12.92995673813322,
+     13.068508156929257
+    ],
+    "n_ge_obs": 0,
+    "n_abs_ge_obs": 0
+   },
+   "p_two_sided": 9.999000099990002e-05,
+   "p_one_sided_positive": 9.999000099990002e-05,
+   "mcse_two_sided": 9.998500187478128e-05,
+   "mcse_one_sided_positive": 9.998500187478128e-05
+  },
+  "n_t0_dist": {
+   "mean": 8.0,
+   "min": 8,
+   "max": 8,
+   "share_eq_8": 1.0
+  },
+  "n_post_events_dist": {
+   "mean": 6.0,
+   "min": 6,
+   "max": 6
+  },
+  "windows_local": {
+   "ETH": [
+    1992,
+    1998
+   ],
+   "GHA": [
+    2002,
+    2008
+   ],
+   "KEN": [
+    2000,
+    2006
+   ],
+   "LSO": [
+    1997,
+    2003
+   ],
+   "MOZ": [
+    2001,
+    2007
+   ],
+   "MWI": [
+    1991
+   ],
+   "TZA": [
+    1998,
+    2004
+   ],
+   "UGA": [
+    1994,
+    2000
+   ]
+  },
+  "window_sizes": {
+   "ETH": 2,
+   "GHA": 2,
+   "KEN": 2,
+   "LSO": 2,
+   "MOZ": 2,
+   "MWI": 1,
+   "TZA": 2,
+   "UGA": 2
+  },
+  "spot_checks": {
+   "A2:0": {
+    "serial_T0": 2.130670249732024,
+    "csv_T0": 2.130670249732024,
+    "abs_diff_T0": 0.0,
+    "serial_Tpost": 10.840263364496488,
+    "csv_Tpost": 10.840263364496488,
+    "abs_diff_Tpost": 0.0
+   },
+   "A2:5000": {
+    "serial_T0": 2.1222325253089953,
+    "csv_T0": 2.1222325253089953,
+    "abs_diff_T0": 0.0,
+    "serial_Tpost": 11.989583055687744,
+    "csv_Tpost": 11.989583055687744,
+    "abs_diff_Tpost": 0.0
+   },
+   "A2:9999": {
+    "serial_T0": -0.821453253498212,
+    "csv_T0": -0.821453253498212,
+    "abs_diff_T0": 0.0,
+    "serial_Tpost": 11.711154679254603,
+    "csv_Tpost": 11.711154679254603,
+    "abs_diff_Tpost": 0.0
+   }
+  }
+ },
+ "reading": {
+  "rule": "PRE_REGISTRATION_FOLLOWUP.md \u00a75",
+  "A1": "unaffected",
+  "A2": "unaffected",
+  "overall_confirmatory_conclusion": "unchanged",
+  "statement": "Both probes leave the confirmatory reading unchanged: p2 < 0.05 for T0 and Tpost in each probe, so the 'robust' classification is not driven by the four contaminated-control candidates (A1) or by far placebo dates (A2)."
+ },
+ "files": {
+  "followup_json": "results/e8_ri_followup.json",
+  "perms_csv": "results/e8_ri_followup_perms.csv.gz",
+  "perms_csv_sha256": "d2c5c5fd897046c37dd8c2080cab9131a360ab8bb452509e324043511a0337d3",
+  "prereg_followup": "PRE_REGISTRATION_FOLLOWUP.md",
+  "followup_md": "FOLLOWUP.md"
+ }
+}
