@@ -1,0 +1,906 @@
+{
+  "title": "MASSENG v5 PHL R1 prior importance screen",
+  "status": "exploratory Bayesian-style importance screening; not a calibrated posterior",
+  "prior": "expanded",
+  "prior_bounds": {
+    "b_h": [
+      -6.0,
+      12.0
+    ],
+    "b_p": [
+      -6.0,
+      12.0
+    ],
+    "b_r": [
+      -12.0,
+      24.0
+    ],
+    "lam": [
+      -6.0,
+      12.0
+    ]
+  },
+  "draws": 256,
+  "seed": 20261124,
+  "varied_parameters": [
+    "b_h",
+    "b_p",
+    "b_r",
+    "lam"
+  ],
+  "fixed_parameters": {
+    "a_prim": 1.5680103706225554,
+    "a_sec": 0.07227420317809874,
+    "a_sec_entry": 11.77532499378019,
+    "a_ter": 7.989842515899082,
+    "a_ter_entry": 4.838237564694366,
+    "eta": 0.0,
+    "eta_x": 2.1334422464883644,
+    "kappa": 39.04487338068635,
+    "c_scale": 1.100521453338313,
+    "mu_basic": -2.2450220903572786,
+    "mu_ter": 3.0445303106379846,
+    "nu": 2.881309174365368,
+    "h_def": 0.2,
+    "late": 0.15,
+    "rep_prim": 0.04,
+    "rep_sec": 0.02
+  },
+  "baseline_source": "/Users/treymenefee/Documents/Codex/2026-11-24/files-pasted-by-the-user-hello/work/masseng_checkout/research/masseng-v6/model/outputs/PHL/v5/fit_R1.json",
+  "baseline_note": "Other parameters fixed at an existing R1 fit estimated using broader data. This is empirically informed conditioning and involves data reuse; results are conditional, not a fresh independent calibration.",
+  "likelihood": {
+    "form": "sum of equal-weight mean Gaussian log densities for GER primary, secondary, tertiary training blocks",
+    "sigma_percentage_points": {
+      "ger_primary": 4.0,
+      "ger_secondary": 4.0,
+      "ger_tertiary": 5.0
+    },
+    "training_years": [
+      1971,
+      1995
+    ],
+    "training_rows": {
+      "ger_primary": 25,
+      "ger_secondary": 25,
+      "ger_tertiary": 23
+    }
+  },
+  "holdout": {
+    "years": [
+      1996,
+      2024
+    ],
+    "status": "retrospective and inspected under PROTOCOL_v5; not blind",
+    "scores": {
+      "ger_primary": {
+        "n": 25,
+        "model_rmse": 8.216932493207114,
+        "persistence_rmse": 4.737306724289657
+      },
+      "ger_secondary": {
+        "n": 24,
+        "model_rmse": 6.462459448462521,
+        "persistence_rmse": 7.792879631967462
+      },
+      "ger_tertiary": {
+        "n": 26,
+        "model_rmse": 6.365468894090532,
+        "persistence_rmse": 6.929850936347764
+      }
+    },
+    "macro_rmse_model": 7.0651913974386655,
+    "macro_rmse_persistence": 6.600142331798609,
+    "weighted_predictive_intervals_90": {
+      "lower": [
+        90.9534779320725,
+        90.46665288849026,
+        89.11194181650629,
+        89.55224084430205,
+        89.887109633833,
+        90.67478851137906,
+        91.39821212738039,
+        92.50261239140892,
+        93.41179965932554,
+        93.38163616221914,
+        93.75329729701309,
+        94.42160776483229,
+        95.0674897204983,
+        97.62242434007878,
+        107.77896820349498,
+        106.9144942436947,
+        105.97194363512176,
+        105.01847479606673,
+        104.09309571925068,
+        104.02518646203671,
+        104.05840926770254,
+        104.35171067654588,
+        104.54081134399007,
+        104.8054461025249,
+        105.06416902052176,
+        60.3413720164629,
+        58.87918676293859,
+        57.07391969682665,
+        56.90571101745712,
+        56.92725813480475,
+        57.14808437070272,
+        57.607594346726835,
+        59.17975897098845,
+        59.9309761111196,
+        60.63343603015234,
+        62.14592429839429,
+        62.53778920969319,
+        64.07361207188572,
+        79.03823906793087,
+        82.62372973727,
+        85.42361253780638,
+        83.48949963636497,
+        79.18716054774583,
+        80.54328211074709,
+        80.12501837928001,
+        79.07249762043003,
+        79.29044065155031,
+        79.55229710556273,
+        79.67565328599078,
+        16.067019168118758,
+        16.20820244807292,
+        15.733505853877164,
+        15.573305188113311,
+        15.684846001970055,
+        15.913200609863884,
+        16.234400197460594,
+        16.35944132282556,
+        16.203475983232238,
+        16.851207107433353,
+        17.445011659278293,
+        17.137508279741116,
+        17.592537602981764,
+        18.708418454435776,
+        18.48436053490405,
+        19.473220246035286,
+        20.125736058073397,
+        20.90104792453693,
+        17.05897021509409,
+        14.11179234288584,
+        15.834604501166538,
+        18.403552781545944,
+        25.180705598497003,
+        30.219843524057403,
+        30.89176286339374,
+        31.168022270533456
+      ],
+      "upper": [
+        101.4300227246634,
+        101.38488152134336,
+        100.14048322012438,
+        101.04005323724586,
+        101.90597309033645,
+        102.76552700288147,
+        103.49948442734828,
+        104.50838167921412,
+        105.28333293491256,
+        105.24985659033,
+        105.5406220090137,
+        106.17906945874581,
+        106.74554847283716,
+        107.47636851319979,
+        108.35208471666354,
+        107.49288253776807,
+        106.46905853207022,
+        105.45606656822537,
+        104.4745340132091,
+        104.35628703855248,
+        104.37061990885493,
+        104.64940600110097,
+        104.83102992172314,
+        105.08629860964376,
+        105.33609110363109,
+        77.19529849486067,
+        77.04497204370887,
+        72.89165077133123,
+        73.39406763596656,
+        74.9624958527873,
+        75.2529060907112,
+        75.7305880511242,
+        77.318776297648,
+        78.72580866560048,
+        79.95184385062798,
+        81.50089101748019,
+        81.86114930181049,
+        84.13619551035417,
+        96.7539552990298,
+        98.64287010418808,
+        100.15047062447456,
+        97.86837900217353,
+        96.47406616981246,
+        97.37615141424983,
+        97.06828017701277,
+        96.54480669870031,
+        95.86305904858848,
+        95.35510315991216,
+        95.47007456218344,
+        23.790963356611268,
+        22.983659955873915,
+        22.7825426658796,
+        23.13134926337547,
+        23.151320322341643,
+        23.331493910194716,
+        23.567999629444873,
+        23.614959082430484,
+        23.732960568915473,
+        24.146074240756096,
+        24.83992107983027,
+        25.350891916432456,
+        26.01849773370264,
+        26.629387289773994,
+        27.93124350099874,
+        28.86255215071139,
+        30.769370474026168,
+        32.53270539967012,
+        26.87781110540756,
+        21.72794408869024,
+        25.22302726439044,
+        28.142660029339307,
+        38.8968594945982,
+        47.6168507388411,
+        46.60432322681813,
+        47.97043465980291
+      ]
+    },
+    "rows": [
+      {
+        "series": "ger_primary",
+        "year": 1996,
+        "observed": 102.639,
+        "posterior_mean": 96.33808475281089,
+        "lower90": 90.9534779320725,
+        "upper90": 101.4300227246634
+      },
+      {
+        "series": "ger_primary",
+        "year": 1997,
+        "observed": 103.285,
+        "posterior_mean": 95.14253268118914,
+        "lower90": 90.46665288849026,
+        "upper90": 101.38488152134336
+      },
+      {
+        "series": "ger_primary",
+        "year": 1998,
+        "observed": 102.765,
+        "posterior_mean": 93.53004655457977,
+        "lower90": 89.11194181650629,
+        "upper90": 100.14048322012438
+      },
+      {
+        "series": "ger_primary",
+        "year": 1999,
+        "observed": 103.615,
+        "posterior_mean": 94.23118969089838,
+        "lower90": 89.55224084430205,
+        "upper90": 101.04005323724586
+      },
+      {
+        "series": "ger_primary",
+        "year": 2000,
+        "observed": 104.053,
+        "posterior_mean": 94.95026038076828,
+        "lower90": 89.887109633833,
+        "upper90": 101.90597309033645
+      },
+      {
+        "series": "ger_primary",
+        "year": 2001,
+        "observed": 103.306,
+        "posterior_mean": 95.80916689803853,
+        "lower90": 90.67478851137906,
+        "upper90": 102.76552700288147
+      },
+      {
+        "series": "ger_primary",
+        "year": 2002,
+        "observed": 102.621,
+        "posterior_mean": 96.56786892913543,
+        "lower90": 91.39821212738039,
+        "upper90": 103.49948442734828
+      },
+      {
+        "series": "ger_primary",
+        "year": 2003,
+        "observed": 102.733,
+        "posterior_mean": 97.61299718608365,
+        "lower90": 92.50261239140892,
+        "upper90": 104.50838167921412
+      },
+      {
+        "series": "ger_primary",
+        "year": 2004,
+        "observed": 102.275,
+        "posterior_mean": 98.25569946008443,
+        "lower90": 93.41179965932554,
+        "upper90": 105.28333293491256
+      },
+      {
+        "series": "ger_primary",
+        "year": 2005,
+        "observed": 101.72,
+        "posterior_mean": 98.08862421297239,
+        "lower90": 93.38163616221914,
+        "upper90": 105.24985659033
+      },
+      {
+        "series": "ger_primary",
+        "year": 2006,
+        "observed": 100.087,
+        "posterior_mean": 98.3282721285561,
+        "lower90": 93.75329729701309,
+        "upper90": 105.5406220090137
+      },
+      {
+        "series": "ger_primary",
+        "year": 2007,
+        "observed": 100.311,
+        "posterior_mean": 98.97342416345992,
+        "lower90": 94.42160776483229,
+        "upper90": 106.17906945874581
+      },
+      {
+        "series": "ger_primary",
+        "year": 2008,
+        "observed": 101.466,
+        "posterior_mean": 99.64330048075621,
+        "lower90": 95.0674897204983,
+        "upper90": 106.74554847283716
+      },
+      {
+        "series": "ger_primary",
+        "year": 2009,
+        "observed": 102.759,
+        "posterior_mean": 101.64893833140783,
+        "lower90": 97.62242434007878,
+        "upper90": 107.47636851319979
+      },
+      {
+        "series": "ger_primary",
+        "year": 2014,
+        "observed": 104.63,
+        "posterior_mean": 108.21142127880036,
+        "lower90": 107.77896820349498,
+        "upper90": 108.35208471666354
+      },
+      {
+        "series": "ger_primary",
+        "year": 2015,
+        "observed": 103.408,
+        "posterior_mean": 107.38411696108936,
+        "lower90": 106.9144942436947,
+        "upper90": 107.49288253776807
+      },
+      {
+        "series": "ger_primary",
+        "year": 2016,
+        "observed": 101.722,
+        "posterior_mean": 106.38020289735586,
+        "lower90": 105.97194363512176,
+        "upper90": 106.46905853207022
+      },
+      {
+        "series": "ger_primary",
+        "year": 2017,
+        "observed": 99.367,
+        "posterior_mean": 105.38126766028549,
+        "lower90": 105.01847479606673,
+        "upper90": 105.45606656822537
+      },
+      {
+        "series": "ger_primary",
+        "year": 2018,
+        "observed": 94.554,
+        "posterior_mean": 104.41170784438182,
+        "lower90": 104.09309571925068,
+        "upper90": 104.4745340132091
+      },
+      {
+        "series": "ger_primary",
+        "year": 2019,
+        "observed": 93.008,
+        "posterior_mean": 104.3020655841945,
+        "lower90": 104.02518646203671,
+        "upper90": 104.35628703855248
+      },
+      {
+        "series": "ger_primary",
+        "year": 2020,
+        "observed": 93.282,
+        "posterior_mean": 104.3200167263924,
+        "lower90": 104.05840926770254,
+        "upper90": 104.37061990885493
+      },
+      {
+        "series": "ger_primary",
+        "year": 2021,
+        "observed": 88.835,
+        "posterior_mean": 104.6015128557047,
+        "lower90": 104.35171067654588,
+        "upper90": 104.64940600110097
+      },
+      {
+        "series": "ger_primary",
+        "year": 2022,
+        "observed": 90.613,
+        "posterior_mean": 104.78454219005059,
+        "lower90": 104.54081134399007,
+        "upper90": 104.83102992172314
+      },
+      {
+        "series": "ger_primary",
+        "year": 2023,
+        "observed": 92.446,
+        "posterior_mean": 105.04138816856839,
+        "lower90": 104.8054461025249,
+        "upper90": 105.08629860964376
+      },
+      {
+        "series": "ger_primary",
+        "year": 2024,
+        "observed": 94.033,
+        "posterior_mean": 105.29259698970051,
+        "lower90": 105.06416902052176,
+        "upper90": 105.33609110363109
+      },
+      {
+        "series": "ger_secondary",
+        "year": 1996,
+        "observed": 73.716,
+        "posterior_mean": 73.23869574028429,
+        "lower90": 60.3413720164629,
+        "upper90": 77.19529849486067
+      },
+      {
+        "series": "ger_secondary",
+        "year": 1997,
+        "observed": 72.875,
+        "posterior_mean": 72.4966978074711,
+        "lower90": 58.87918676293859,
+        "upper90": 77.04497204370887
+      },
+      {
+        "series": "ger_secondary",
+        "year": 1998,
+        "observed": 70.508,
+        "posterior_mean": 69.86247692745454,
+        "lower90": 57.07391969682665,
+        "upper90": 72.89165077133123
+      },
+      {
+        "series": "ger_secondary",
+        "year": 1999,
+        "observed": 69.947,
+        "posterior_mean": 69.46979503055407,
+        "lower90": 56.90571101745712,
+        "upper90": 73.39406763596656
+      },
+      {
+        "series": "ger_secondary",
+        "year": 2001,
+        "observed": 70.579,
+        "posterior_mean": 69.66717881358828,
+        "lower90": 56.92725813480475,
+        "upper90": 74.9624958527873
+      },
+      {
+        "series": "ger_secondary",
+        "year": 2002,
+        "observed": 74.914,
+        "posterior_mean": 69.99272045275784,
+        "lower90": 57.14808437070272,
+        "upper90": 75.2529060907112
+      },
+      {
+        "series": "ger_secondary",
+        "year": 2003,
+        "observed": 76.822,
+        "posterior_mean": 70.4914858035351,
+        "lower90": 57.607594346726835,
+        "upper90": 75.7305880511242
+      },
+      {
+        "series": "ger_secondary",
+        "year": 2004,
+        "observed": 78.541,
+        "posterior_mean": 71.79688115730083,
+        "lower90": 59.17975897098845,
+        "upper90": 77.318776297648
+      },
+      {
+        "series": "ger_secondary",
+        "year": 2005,
+        "observed": 78.306,
+        "posterior_mean": 72.90097533784288,
+        "lower90": 59.9309761111196,
+        "upper90": 78.72580866560048
+      },
+      {
+        "series": "ger_secondary",
+        "year": 2006,
+        "observed": 76.957,
+        "posterior_mean": 73.71780073145914,
+        "lower90": 60.63343603015234,
+        "upper90": 79.95184385062798
+      },
+      {
+        "series": "ger_secondary",
+        "year": 2007,
+        "observed": 77.071,
+        "posterior_mean": 74.85654407336229,
+        "lower90": 62.14592429839429,
+        "upper90": 81.50089101748019
+      },
+      {
+        "series": "ger_secondary",
+        "year": 2008,
+        "observed": 78.009,
+        "posterior_mean": 75.73336693624796,
+        "lower90": 62.53778920969319,
+        "upper90": 81.86114930181049
+      },
+      {
+        "series": "ger_secondary",
+        "year": 2009,
+        "observed": 80.176,
+        "posterior_mean": 77.32664036244427,
+        "lower90": 64.07361207188572,
+        "upper90": 84.13619551035417
+      },
+      {
+        "series": "ger_secondary",
+        "year": 2014,
+        "observed": 81.564,
+        "posterior_mean": 93.25437479534017,
+        "lower90": 79.03823906793087,
+        "upper90": 96.7539552990298
+      },
+      {
+        "series": "ger_secondary",
+        "year": 2015,
+        "observed": 82.009,
+        "posterior_mean": 95.77148654473288,
+        "lower90": 82.62372973727,
+        "upper90": 98.64287010418808
+      },
+      {
+        "series": "ger_secondary",
+        "year": 2016,
+        "observed": 82.784,
+        "posterior_mean": 97.19059345305031,
+        "lower90": 85.42361253780638,
+        "upper90": 100.15047062447456
+      },
+      {
+        "series": "ger_secondary",
+        "year": 2017,
+        "observed": 80.923,
+        "posterior_mean": 93.85549891586754,
+        "lower90": 83.48949963636497,
+        "upper90": 97.86837900217353
+      },
+      {
+        "series": "ger_secondary",
+        "year": 2018,
+        "observed": 79.362,
+        "posterior_mean": 88.2534139372097,
+        "lower90": 79.18716054774583,
+        "upper90": 96.47406616981246
+      },
+      {
+        "series": "ger_secondary",
+        "year": 2019,
+        "observed": 85.382,
+        "posterior_mean": 88.77230144939561,
+        "lower90": 80.54328211074709,
+        "upper90": 97.37615141424983
+      },
+      {
+        "series": "ger_secondary",
+        "year": 2020,
+        "observed": 87.942,
+        "posterior_mean": 88.57433459753999,
+        "lower90": 80.12501837928001,
+        "upper90": 97.06828017701277
+      },
+      {
+        "series": "ger_secondary",
+        "year": 2021,
+        "observed": 85.867,
+        "posterior_mean": 88.52803260516201,
+        "lower90": 79.07249762043003,
+        "upper90": 96.54480669870031
+      },
+      {
+        "series": "ger_secondary",
+        "year": 2022,
+        "observed": 92.291,
+        "posterior_mean": 88.39317701789867,
+        "lower90": 79.29044065155031,
+        "upper90": 95.86305904858848
+      },
+      {
+        "series": "ger_secondary",
+        "year": 2023,
+        "observed": 91.549,
+        "posterior_mean": 88.4767903783925,
+        "lower90": 79.55229710556273,
+        "upper90": 95.35510315991216
+      },
+      {
+        "series": "ger_secondary",
+        "year": 2024,
+        "observed": 85.295,
+        "posterior_mean": 88.33716951350954,
+        "lower90": 79.67565328599078,
+        "upper90": 95.47007456218344
+      },
+      {
+        "series": "ger_tertiary",
+        "year": 1996,
+        "observed": 28.523,
+        "posterior_mean": 22.81755014741311,
+        "lower90": 16.067019168118758,
+        "upper90": 23.790963356611268
+      },
+      {
+        "series": "ger_tertiary",
+        "year": 1998,
+        "observed": 26.65,
+        "posterior_mean": 22.096453237768955,
+        "lower90": 16.20820244807292,
+        "upper90": 22.983659955873915
+      },
+      {
+        "series": "ger_tertiary",
+        "year": 1999,
+        "observed": 27.522,
+        "posterior_mean": 21.948560159119907,
+        "lower90": 15.733505853877164,
+        "upper90": 22.7825426658796
+      },
+      {
+        "series": "ger_tertiary",
+        "year": 2001,
+        "observed": 28.648,
+        "posterior_mean": 21.961441273368145,
+        "lower90": 15.573305188113311,
+        "upper90": 23.13134926337547
+      },
+      {
+        "series": "ger_tertiary",
+        "year": 2002,
+        "observed": 28.348,
+        "posterior_mean": 22.023070212519293,
+        "lower90": 15.684846001970055,
+        "upper90": 23.151320322341643
+      },
+      {
+        "series": "ger_tertiary",
+        "year": 2003,
+        "observed": 27.23,
+        "posterior_mean": 22.285330103762718,
+        "lower90": 15.913200609863884,
+        "upper90": 23.331493910194716
+      },
+      {
+        "series": "ger_tertiary",
+        "year": 2004,
+        "observed": 26.546,
+        "posterior_mean": 22.66211658999004,
+        "lower90": 16.234400197460594,
+        "upper90": 23.567999629444873
+      },
+      {
+        "series": "ger_tertiary",
+        "year": 2005,
+        "observed": 25.823,
+        "posterior_mean": 22.709088865217417,
+        "lower90": 16.35944132282556,
+        "upper90": 23.614959082430484
+      },
+      {
+        "series": "ger_tertiary",
+        "year": 2006,
+        "observed": 26.247,
+        "posterior_mean": 22.839801766652585,
+        "lower90": 16.203475983232238,
+        "upper90": 23.732960568915473
+      },
+      {
+        "series": "ger_tertiary",
+        "year": 2008,
+        "observed": 27.129,
+        "posterior_mean": 23.279355463539627,
+        "lower90": 16.851207107433353,
+        "upper90": 24.146074240756096
+      },
+      {
+        "series": "ger_tertiary",
+        "year": 2009,
+        "observed": 26.606,
+        "posterior_mean": 23.880647034466485,
+        "lower90": 17.445011659278293,
+        "upper90": 24.83992107983027
+      },
+      {
+        "series": "ger_tertiary",
+        "year": 2010,
+        "observed": 27.755,
+        "posterior_mean": 24.49101736950891,
+        "lower90": 17.137508279741116,
+        "upper90": 25.350891916432456
+      },
+      {
+        "series": "ger_tertiary",
+        "year": 2011,
+        "observed": 29.071,
+        "posterior_mean": 24.98515882594986,
+        "lower90": 17.592537602981764,
+        "upper90": 26.01849773370264
+      },
+      {
+        "series": "ger_tertiary",
+        "year": 2012,
+        "observed": 29.63,
+        "posterior_mean": 25.480539903140652,
+        "lower90": 18.708418454435776,
+        "upper90": 26.629387289773994
+      },
+      {
+        "series": "ger_tertiary",
+        "year": 2013,
+        "observed": 31.87,
+        "posterior_mean": 26.099089229754988,
+        "lower90": 18.48436053490405,
+        "upper90": 27.93124350099874
+      },
+      {
+        "series": "ger_tertiary",
+        "year": 2014,
+        "observed": 33.874,
+        "posterior_mean": 26.49205829601466,
+        "lower90": 19.473220246035286,
+        "upper90": 28.86255215071139
+      },
+      {
+        "series": "ger_tertiary",
+        "year": 2015,
+        "observed": 35.875,
+        "posterior_mean": 27.137220414963515,
+        "lower90": 20.125736058073397,
+        "upper90": 30.769370474026168
+      },
+      {
+        "series": "ger_tertiary",
+        "year": 2016,
+        "observed": 38.345,
+        "posterior_mean": 27.812295113687306,
+        "lower90": 20.90104792453693,
+        "upper90": 32.53270539967012
+      },
+      {
+        "series": "ger_tertiary",
+        "year": 2017,
+        "observed": 33.684,
+        "posterior_mean": 21.869829816038433,
+        "lower90": 17.05897021509409,
+        "upper90": 26.87781110540756
+      },
+      {
+        "series": "ger_tertiary",
+        "year": 2018,
+        "observed": 28.117,
+        "posterior_mean": 17.81021090118748,
+        "lower90": 14.11179234288584,
+        "upper90": 21.72794408869024
+      },
+      {
+        "series": "ger_tertiary",
+        "year": 2019,
+        "observed": 30.055,
+        "posterior_mean": 21.099399365817913,
+        "lower90": 15.834604501166538,
+        "upper90": 25.22302726439044
+      },
+      {
+        "series": "ger_tertiary",
+        "year": 2020,
+        "observed": 31.632,
+        "posterior_mean": 23.715122846642878,
+        "lower90": 18.403552781545944,
+        "upper90": 28.142660029339307
+      },
+      {
+        "series": "ger_tertiary",
+        "year": 2021,
+        "observed": 33.617,
+        "posterior_mean": 32.557217827352304,
+        "lower90": 25.180705598497003,
+        "upper90": 38.8968594945982
+      },
+      {
+        "series": "ger_tertiary",
+        "year": 2022,
+        "observed": 38.401,
+        "posterior_mean": 39.7232125355733,
+        "lower90": 30.219843524057403,
+        "upper90": 47.6168507388411
+      },
+      {
+        "series": "ger_tertiary",
+        "year": 2023,
+        "observed": 44.239,
+        "posterior_mean": 39.47416463916836,
+        "lower90": 30.89176286339374,
+        "upper90": 46.60432322681813
+      },
+      {
+        "series": "ger_tertiary",
+        "year": 2024,
+        "observed": 47.413,
+        "posterior_mean": 39.200882179831126,
+        "lower90": 31.168022270533456,
+        "upper90": 47.97043465980291
+      }
+    ]
+  },
+  "importance": {
+    "ess": 1.774970468623255,
+    "ess_fraction": 0.00693347839305959,
+    "max_weight": 0.7308560970227723,
+    "prior_parameter_summary": {
+      "b_h": {
+        "prior": [
+          -6.0,
+          12.0
+        ],
+        "mean": -0.39997146534202344,
+        "q05": -5.884522305311959,
+        "median": 1.0709017921193358,
+        "q95": 1.0997146187200797
+      },
+      "b_p": {
+        "prior": [
+          -6.0,
+          12.0
+        ],
+        "mean": 7.938106410262058,
+        "q05": -0.7402675695286748,
+        "median": 10.609810820159048,
+        "q95": 10.649306948995383
+      },
+      "b_r": {
+        "prior": [
+          -12.0,
+          24.0
+        ],
+        "mean": 13.555686659752867,
+        "q05": 12.569078636268092,
+        "median": 13.77098548546404,
+        "q95": 16.498395316822794
+      },
+      "lam": {
+        "prior": [
+          -6.0,
+          12.0
+        ],
+        "mean": -0.6119608793423109,
+        "q05": -1.3121631857612395,
+        "median": -1.1555096035516164,
+        "q95": 2.068878567030879
+      }
+    }
+  },
+  "limitations": [
+    "No causal interpretation.",
+    "The model and targets are deterministic conditional on inputs; weights reflect a chosen pseudo-likelihood, not a validated observation model.",
+    "R1 baseline fit reuses data beyond the GER training block, so this is conditional on empirically informed nuisance parameters.",
+    "Holdout is previously inspected, and persistence scores do not provide a blind benchmark.",
+    "The importance sample may have low ESS; no adaptive resampling or MCMC is used."
+  ]
+}
