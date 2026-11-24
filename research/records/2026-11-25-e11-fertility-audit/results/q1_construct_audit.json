@@ -1,0 +1,168 @@
+{
+ "descriptive": {
+  "n_overlap_rows": 2955,
+  "n_countries": 197,
+  "year_min": 1950,
+  "year_max": 2020,
+  "median_abs_diff": 0.3041941999999995,
+  "max_abs_diff": 4.2677227,
+  "mean_ratio_tfr_over_efr": 1.1749065409301007,
+  "corr_levels": 0.9377718575619125,
+  "afg_1950": {
+   "effective_fertility": 3.3990664,
+   "tfr_observed_1950plus": 7.248
+  },
+  "corr_changes": 0.9386617170884245,
+  "n_change_rows": 2758,
+  "coverage": {
+   "efr_rows": 3196,
+   "tfr_rows": 2955,
+   "both_rows": 2955,
+   "efr_countries": 197,
+   "tfr_countries": 197
+  }
+ },
+ "level_ladder": {
+  "effective_fertility": {
+   "S only": {
+    "zS": [
+     -1.6083,
+     0.2087
+    ],
+    "n": 1417
+   },
+   "S(t-10), S, S(t+10)": {
+    "zSm10": [
+     -1.0209,
+     0.1989
+    ],
+    "zS": [
+     -0.5966,
+     0.1653
+    ],
+    "zSp10": [
+     -0.3229,
+     0.1924
+    ],
+    "n": 1417
+   },
+   "S(t+10) only (future)": {
+    "zSp10": [
+     -1.2088,
+     0.215
+    ],
+    "n": 1417
+   },
+   "S(t-10) only (lagged)": {
+    "zSm10": [
+     -1.5773,
+     0.2116
+    ],
+    "n": 1417
+   },
+   "lead_lag_ratio_Sp10_over_S": 0.541
+  },
+  "tfr_observed_1950plus": {
+   "S only": {
+    "zS": [
+     -1.3476,
+     0.2195
+    ],
+    "n": 1417
+   },
+   "S(t-10), S, S(t+10)": {
+    "zSm10": [
+     -0.2999,
+     0.2173
+    ],
+    "zS": [
+     -0.5378,
+     0.1879
+    ],
+    "zSp10": [
+     -0.8364,
+     0.1997
+    ],
+    "n": 1417
+   },
+   "S(t+10) only (future)": {
+    "zSp10": [
+     -1.3588,
+     0.2138
+    ],
+    "n": 1417
+   },
+   "S(t-10) only (lagged)": {
+    "zSm10": [
+     -1.0173,
+     0.2251
+    ],
+    "n": 1417
+   },
+   "lead_lag_ratio_Sp10_over_S": 1.555
+  }
+ },
+ "change_direction": {
+  "effective_fertility": {
+   "dF on dS prev/current/next": {
+    "zdS_prev": [
+     -0.2437,
+     0.0631
+    ],
+    "zdS_next": [
+     -0.2159,
+     0.0597
+    ],
+    "zdS_next2": [
+     -0.1185,
+     0.0395
+    ]
+   },
+   "dS on dF prev/current/next": {
+    "zdeffective_fertility_prev": [
+     -0.0609,
+     0.0364
+    ],
+    "zdeffective_fertility_next": [
+     -0.1801,
+     0.0436
+    ],
+    "zdeffective_fertility_next2": [
+     -0.1344,
+     0.0368
+    ]
+   }
+  },
+  "tfr_observed_1950plus": {
+   "dF on dS prev/current/next": {
+    "zdS_prev": [
+     -0.1885,
+     0.0578
+    ],
+    "zdS_next": [
+     -0.2144,
+     0.0596
+    ],
+    "zdS_next2": [
+     -0.1508,
+     0.0392
+    ]
+   },
+   "dS on dF prev/current/next": {
+    "zdtfr_observed_1950plus_prev": [
+     -0.0858,
+     0.0397
+    ],
+    "zdtfr_observed_1950plus_next": [
+     -0.1858,
+     0.0453
+    ],
+    "zdtfr_observed_1950plus_next2": [
+     -0.1052,
+     0.0398
+    ]
+   }
+  }
+ },
+ "note": "effective_fertility = surviving children per woman (reconstructed pre-1950); tfr_observed_1950plus = births per woman (UN WPP 2024, 1950+). Different constructs."
+}

@@ -1,0 +1,47 @@
+=== Q1 construct audit: effective_fertility (surviving children) vs tfr_observed_1950plus (births)
+{
+ "n_overlap_rows": 2955,
+ "n_countries": 197,
+ "year_min": 1950,
+ "year_max": 2020,
+ "median_abs_diff": 0.3041941999999995,
+ "max_abs_diff": 4.2677227,
+ "mean_ratio_tfr_over_efr": 1.1749065409301007,
+ "corr_levels": 0.9377718575619125,
+ "afg_1950": {
+  "effective_fertility": 3.3990664,
+  "tfr_observed_1950plus": 7.248
+ },
+ "corr_changes": 0.9386617170884245,
+ "n_change_rows": 2758,
+ "coverage": {
+  "efr_rows": 3196,
+  "tfr_rows": 2955,
+  "both_rows": 2955,
+  "efr_countries": 197,
+  "tfr_countries": 197
+ }
+}
+
+=== matched level sample: n=1417 countries=109 years 1950-2010
+  effective_fertility        S only                     {'zS': (-1.6083, 0.2087), 'n': 1417}
+  effective_fertility        S(t-10), S, S(t+10)        {'zSm10': (-1.0209, 0.1989), 'zS': (-0.5966, 0.1653), 'zSp10': (-0.3229, 0.1924), 'n': 1417}
+  effective_fertility        S(t+10) only (future)      {'zSp10': (-1.2088, 0.215), 'n': 1417}
+  effective_fertility        S(t-10) only (lagged)      {'zSm10': (-1.5773, 0.2116), 'n': 1417}
+  tfr_observed_1950plus      S only                     {'zS': (-1.3476, 0.2195), 'n': 1417}
+  tfr_observed_1950plus      S(t-10), S, S(t+10)        {'zSm10': (-0.2999, 0.2173), 'zS': (-0.5378, 0.1879), 'zSp10': (-0.8364, 0.1997), 'n': 1417}
+  tfr_observed_1950plus      S(t+10) only (future)      {'zSp10': (-1.3588, 0.2138), 'n': 1417}
+  tfr_observed_1950plus      S(t-10) only (lagged)      {'zSm10': (-1.0173, 0.2251), 'n': 1417}
+
+  lead/lag ratios (S(t+10) over S(t)): {'effective_fertility': 0.541, 'tfr_observed_1950plus': 1.555}
+  NOTE: these are different constructs; the level ladder is not a horse race and neither outcome corrects the other.
+
+=== matched change sample: n=981 countries=109
+  deffective_fertility(t,t+10) on dS prev/current/next  {'zdS_prev': (-0.2437, 0.0631), 'zdS_next': (-0.2159, 0.0597), 'zdS_next2': (-0.1185, 0.0395)} n= 981
+  dS(t,t+10) on deffective_fertility prev/current/next  {'zdeffective_fertility_prev': (-0.0609, 0.0364), 'zdeffective_fertility_next': (-0.1801, 0.0436), 'zdeffective_fertility_next2': (-0.1344, 0.0368)} n= 981
+  dtfr_observed_1950plus(t,t+10) on dS prev/current/next  {'zdS_prev': (-0.1885, 0.0578), 'zdS_next': (-0.2144, 0.0596), 'zdS_next2': (-0.1508, 0.0392)} n= 981
+  dS(t,t+10) on dtfr_observed_1950plus prev/current/next  {'zdtfr_observed_1950plus_prev': (-0.0858, 0.0397), 'zdtfr_observed_1950plus_next': (-0.1858, 0.0453), 'zdtfr_observed_1950plus_next2': (-0.1052, 0.0398)} n= 981
+
+  INTERPRETATION LIMIT: the two outcomes answer different questions (surviving children vs births).
+  Neither can 'correct' the other; a differing lead/lag pattern is expected and is not a data error.
+Q1_EXIT=0

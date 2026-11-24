@@ -1,0 +1,51 @@
+indicators available (8): ['mys_total', 'mys_female', 'sec', 'lsc', 'prm_cmp', 'ter', 'gpi_sec', 'gpi_ter']
+panel rows: 2821, countries: 217, years 1960-2020
+
+rows written: 288 (failures: 0)
+
+=== E11 compact table (baseline = country+decade FE for levels, country FE for changes; per-SD; clustered SE)
+  A2 lead S(t+10)/lag S(t):
+    mys_total=+0.90, mys_female=+9.92, sec=+0.71, lsc=+3.32, prm_cmp=+0.19, ter=-0.58, gpi_sec=+0.27, gpi_ter=+1.37
+    |lead|>=0.8|lag| in 4/8; |lag|>=2|lead| in 2/8
+    pre-registered verdict: indeterminate
+  B3 lead dS(t+10,t+20)/lag dS(t-10,t):
+    mys_total=+0.98, mys_female=NA, sec=+0.21, lsc=-0.94, prm_cmp=+0.07, ter=+0.97, gpi_sec=-1.52, gpi_ter=-3.55
+    |lead|>=0.8|lag| in 5/7; |lag|>=2|lead| in 2/7
+    pre-registered verdict: does not discriminate between a common development gradient, anticipation/quantity-quality, and a schooling effect
+
+=== future-fertility placebo (C ladder, baseline, future dF term C2)
+  mys_total   dF_prev    +0.004 (0.020) n=719 countries=109
+  mys_total   dF_next    -0.041 (0.022) n=719 countries=109
+  mys_total   dF_next2   +0.008 (0.021) n=719 countries=109
+
+  mys_female  dF_prev    -0.000 (0.000) n=150 countries=150
+  mys_female  dF_next    -0.000 (0.000) n=150 countries=150
+  mys_female  dF_next2   -0.000 (0.000) n=150 countries=150
+
+  sec         dF_prev    +0.703 (0.862) n=152 countries=70
+  sec         dF_next    +0.385 (1.626) n=152 countries=70
+  sec         dF_next2   +0.123 (0.895) n=152 countries=70
+
+  lsc         dF_prev    +0.577 (1.036) n=51 countries=27
+  lsc         dF_next    +2.627 (0.933) n=51 countries=27
+  lsc         dF_next2   +2.719 (1.987) n=51 countries=27
+
+  prm_cmp     dF_prev    +0.441 (1.176) n=91 countries=40
+  prm_cmp     dF_next    +0.923 (1.325) n=91 countries=40
+  prm_cmp     dF_next2   -2.052 (1.496) n=91 countries=40
+
+  ter         dF_prev    -0.126 (0.510) n=139 countries=60
+  ter         dF_next    +1.604 (0.589) n=139 countries=60
+  ter         dF_next2   +0.527 (0.982) n=139 countries=60
+
+  gpi_sec     dF_prev    +0.008 (0.009) n=190 countries=75
+  gpi_sec     dF_next    -0.008 (0.005) n=190 countries=75
+  gpi_sec     dF_next2   -0.009 (0.011) n=190 countries=75
+
+  gpi_ter     dF_prev    -0.047 (0.010) n=64 countries=35
+  gpi_ter     dF_next    -0.001 (0.016) n=64 countries=35
+  gpi_ter     dF_next2   +0.015 (0.016) n=64 countries=35
+
+
+INTERPRETATION LIMIT (pre-registered): a future-schooling term as strong as the current term is consistent with (i) a common development gradient, (ii) anticipation/quantity-quality, and (iii) a schooling effect with a long lag. The design cannot distinguish these and cannot reject a schooling effect.
+E11_EXIT=0
