@@ -85,7 +85,7 @@ def run_spec(isos, data, spec, rng, split):
         if spec["score"] == "order":
             raw[iso] = ((e[1] - e[0]) - (e[2] - e[1])) - ((j[1] - j[0]) - (j[2] - j[1]))
         elif spec["score"] == "net":
-            raw[iso] = (e[2] - e[0]) - (j[2] - j[0])
+            raw[iso] = (e[-1] - e[0]) - (j[-1] - j[0])
         elif spec["score"] == "net_alt_job":
             raw[iso] = (e[2] - e[0]) - (j[2] - j[0])   # job series already the alt proxy
         else:
@@ -170,7 +170,7 @@ def main():
          "edu_years": [1991, 1998, 2004], "job_years": [1991, 1998, 2004],
          "out_years": [2004, 2018], "outcome": "out", "job_series": "job"},
         {"name": "robust_S_net", "score": "net",
-         "edu_years": [1991, 1998, 2004], "job_years": [1991, 1998, 2004],
+         "edu_years": [1991, 2004], "job_years": [1991, 2004],
          "out_years": [2004, 2018], "outcome": "out", "job_series": "job"},
         {"name": "robust_windowC", "score": "order",
          "edu_years": [1995, 1998, 2005], "job_years": [1995, 1998, 2005],

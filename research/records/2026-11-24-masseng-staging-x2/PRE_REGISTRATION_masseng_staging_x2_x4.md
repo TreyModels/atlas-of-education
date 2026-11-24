@@ -150,6 +150,12 @@ claim; no E1 comparison.
 
 ## Deviations log
 - 2026-11-24 (X2): ran once as declared: 240 runs, `elapsed_s=24.549`, results hash preserved.
+- 2026-11-24 (X4 robustness-count clarification, BEFORE the successful run): the pre-registered
+  robustness note for window C quoted 74 complete = 50/24 from a coverage check that did not yet
+  require the 1998 midpoint that the declared S_order formula needs; with the declared timing
+  score the window-C robustness sample is 72 complete = 49/23. Primary windows/split/scores/
+  decision rule are unchanged; window C is robustness-only (no decision authority). The S_net
+  robustness spec uses endpoint years only (1991 and 2004), as declared (63 complete = 41/22).
 - 2026-11-24 (X4 run 1, NO RESULTS): the first X4 execution failed immediately with
   `KeyError: 'lsc_2004'` because the analysis code looked up panel keys named after the outcome
   variable label (`lsc_*`) while the committed extraction names outcome columns `out_*` /
