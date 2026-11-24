@@ -1,0 +1,97 @@
+{
+ "task": "task-8",
+ "preregistration": "research/records/2026-11-24-suite-redesign/PRE_REGISTRATION.md",
+ "commit": "9ae1337906f0747317490f81dcc11f911bfa839e",
+ "started_local": "2026-11-24T18:43:36+0800",
+ "wall_s": 424.7,
+ "backend": "numpy",
+ "batch_layout": {
+  "N": 10000,
+  "years": 25,
+  "threads": 256,
+  "blocks": 40,
+  "backend": "numpy",
+  "backend_note": "port MLX transcription; NumPy fallback available"
+ },
+ "theta0": {
+  "w_pov": 0.9,
+  "w_push": 0.7999999999999999,
+  "w_tutor": 1.2666666666666668,
+  "div": 0.09666666666666668
+ },
+ "deltas": {
+  "P": {
+   "w_pov": 0.26000000000000006,
+   "w_push": -0.13999999999999999,
+   "w_tutor": -0.09333333333333337,
+   "div": -0.015333333333333336
+  },
+  "S": {
+   "w_pov": -0.13999999999999999,
+   "w_push": 0.24000000000000005,
+   "w_tutor": -0.09333333333333337,
+   "div": -0.009333333333333336
+  },
+  "C": {
+   "w_pov": -0.12000000000000002,
+   "w_push": -0.09999999999999999,
+   "w_tutor": 0.18666666666666668,
+   "div": 0.024666666666666667
+  }
+ },
+ "seed_blocks": {
+  "calibration": [
+   20261125,
+   20263025
+  ],
+  "heldout": [
+   20263125,
+   20269025
+  ],
+  "replication": [
+   20269125,
+   20275025
+  ]
+ },
+ "h1_country_seeds": [
+  20270101,
+  20272401
+ ],
+ "python": {
+  "executable": "/Users/treymenefee/atlas-work-2026-11-23/apple-venv310/bin/python",
+  "version": "3.10.2",
+  "numpy": "2.2.6",
+  "mlx": "0.32.4"
+ },
+ "platform": "macOS-26.6.2-arm64-arm-64bit",
+ "mechanism_scale_K": 0.2,
+ "backend_cross_check_numpy_vs_mlx": {
+  "P": {
+   "state": 0.0,
+   "tutor": 0.0,
+   "learn": 0.0,
+   "work": 0.0,
+   "y_hh": 0.0
+  },
+  "S": {
+   "state": 0.0,
+   "tutor": 0.0,
+   "learn": 0.0,
+   "work": 0.0,
+   "y_hh": 0.0
+  },
+  "C": {
+   "state": 0.0,
+   "tutor": 0.0,
+   "learn": 0.0,
+   "work": 0.0,
+   "y_hh": 0.0
+  }
+ },
+ "label": "SIMULATION",
+ "seed_log_entries": 150,
+ "verdicts": {
+  "H1": "separable",
+  "H4": "cannot_test"
+ }
+}

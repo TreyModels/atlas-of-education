@@ -255,3 +255,17 @@ reporting rules.
 macro target, so the pre-registered H4 control cannot run at all; the amendment keeps the test anchored to the
 shipped mechanism directions while making every pre-registered object executable. No confirmatory outcome was
 inspected before this amendment.
+
+## 8. Declared deviations log (filled at run close)
+
+- **Amendment 1** (§7, committed before the confirmatory run): θ0 = centroid of the shipped mechanism vectors;
+  mechanism scale K = 0.20; M* at a non-degenerate design nuisance; calibration nuisance expanded 4 → 9
+  parameters; candidates 200 → 800; match tolerance ±0.02 → ±0.05. Reasons and probe numbers:
+  `results/design_probe.json`.
+- **Verdict-logic fix before reporting:** the first pipeline execution treated tie-breakers rejected by the
+  admissibility gate as "separators"; corrected to mark them ineligible (F3) before the reported run. Calibration,
+  H1 slopes, accuracies and placebos were identical across the two runs; only the verdict bookkeeping changed.
+- **Run provenance:** run base commit `9ae1337` (code committed in the follow-up commit); NumPy port backend used
+  because it is 20× faster per call than the MLX path at this call volume and the port verified NumPy-vs-MLX
+  kernel bit-identity; re-verified for this run (max abs diff 0.0 for all five arrays, all three worlds).
+- No pre-registered rule was changed after any confirmatory output was inspected.

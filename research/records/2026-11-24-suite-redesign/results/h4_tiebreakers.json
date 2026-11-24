@@ -1,0 +1,415 @@
+{
+ "units": {
+  "calibration": 60,
+  "heldout": 180,
+  "replication": 180
+ },
+ "seeds": {
+  "calibration": [
+   20261125,
+   20263025
+  ],
+  "heldout": [
+   20263125,
+   20269025
+  ],
+  "replication": [
+   20269125,
+   20275025
+  ]
+ },
+ "batch_layout": {
+  "N": 10000,
+  "years": 25,
+  "threads": 256,
+  "blocks": 40,
+  "backend": "numpy",
+  "backend_note": "port MLX transcription; NumPy fallback available"
+ },
+ "chance_band_95": [
+  0.26446595317855526,
+  0.40220071348811137
+ ],
+ "tiebreakers": {
+  "T1": {
+   "admissibility": {
+    "r2_per_component": [
+     0.9858312542606575,
+     0.5784141013182411,
+     0.9182979572093634,
+     0.9658863382656714
+    ],
+    "max_r2": 0.9858312542606575,
+    "rejected": true,
+    "threshold": 0.9
+   },
+   "heldout": {
+    "accuracy": 1.0,
+    "n_train": 60,
+    "n_test": 180,
+    "per_world_recall": {
+     "P": 1.0,
+     "S": 1.0,
+     "C": 1.0
+    },
+    "binom_p_one_sided": 1.3127261917780203e-86,
+    "valid": true
+   },
+   "replication": {
+    "accuracy": 1.0,
+    "n_train": 60,
+    "n_test": 180,
+    "per_world_recall": {
+     "P": 1.0,
+     "S": 1.0,
+     "C": 1.0
+    },
+    "binom_p_one_sided": 1.3127261917780203e-86,
+    "valid": true
+   },
+   "label_permutation": {
+    "observed_accuracy": 1.0,
+    "permutation_median": 0.3194444444444444,
+    "permutation_p95": 0.8952777777777777,
+    "p_perm": 0.019801980198019802
+   },
+   "holm_adjusted_p": 5.250904767112081e-86,
+   "eligible_for_confirmatory_test": false,
+   "beats_chance_heldout": false,
+   "survives_replication": false
+  },
+  "T2": {
+   "admissibility": {
+    "r2_per_component": [
+     0.9744232534709526,
+     0.9147178251928986,
+     0.9621909880276386,
+     0.25840996546168904,
+     0.6916428590817032
+    ],
+    "max_r2": 0.9744232534709526,
+    "rejected": true,
+    "threshold": 0.9
+   },
+   "heldout": {
+    "accuracy": 1.0,
+    "n_train": 60,
+    "n_test": 180,
+    "per_world_recall": {
+     "P": 1.0,
+     "S": 1.0,
+     "C": 1.0
+    },
+    "binom_p_one_sided": 1.3127261917780203e-86,
+    "valid": true
+   },
+   "replication": {
+    "accuracy": 0.9944444444444445,
+    "n_train": 60,
+    "n_test": 180,
+    "per_world_recall": {
+     "P": 1.0,
+     "S": 0.9833333333333333,
+     "C": 1.0
+    },
+    "binom_p_one_sided": 4.738941552318654e-84,
+    "valid": true
+   },
+   "label_permutation": {
+    "observed_accuracy": 1.0,
+    "permutation_median": 0.2833333333333333,
+    "permutation_p95": 0.7527777777777777,
+    "p_perm": 0.009900990099009901
+   },
+   "holm_adjusted_p": 5.250904767112081e-86,
+   "eligible_for_confirmatory_test": false,
+   "beats_chance_heldout": false,
+   "survives_replication": false
+  },
+  "T3": {
+   "admissibility": {
+    "r2_per_component": [
+     0.9901595830073713
+    ],
+    "max_r2": 0.9901595830073713,
+    "rejected": true,
+    "threshold": 0.9
+   },
+   "heldout": {
+    "accuracy": 1.0,
+    "n_train": 60,
+    "n_test": 180,
+    "per_world_recall": {
+     "P": 1.0,
+     "S": 1.0,
+     "C": 1.0
+    },
+    "binom_p_one_sided": 1.3127261917780203e-86,
+    "valid": true
+   },
+   "replication": {
+    "accuracy": 1.0,
+    "n_train": 60,
+    "n_test": 180,
+    "per_world_recall": {
+     "P": 1.0,
+     "S": 1.0,
+     "C": 1.0
+    },
+    "binom_p_one_sided": 1.3127261917780203e-86,
+    "valid": true
+   },
+   "label_permutation": {
+    "observed_accuracy": 1.0,
+    "permutation_median": 0.3027777777777778,
+    "permutation_p95": 0.7111111111111111,
+    "p_perm": 0.009900990099009901
+   },
+   "holm_adjusted_p": 5.250904767112081e-86,
+   "eligible_for_confirmatory_test": false,
+   "beats_chance_heldout": false,
+   "survives_replication": false
+  },
+  "T4": {
+   "admissibility": {
+    "r2_per_component": [
+     0.9907850332619412
+    ],
+    "max_r2": 0.9907850332619412,
+    "rejected": true,
+    "threshold": 0.9
+   },
+   "heldout": {
+    "accuracy": 1.0,
+    "n_train": 60,
+    "n_test": 180,
+    "per_world_recall": {
+     "P": 1.0,
+     "S": 1.0,
+     "C": 1.0
+    },
+    "binom_p_one_sided": 1.3127261917780203e-86,
+    "valid": true
+   },
+   "replication": {
+    "accuracy": 1.0,
+    "n_train": 60,
+    "n_test": 180,
+    "per_world_recall": {
+     "P": 1.0,
+     "S": 1.0,
+     "C": 1.0
+    },
+    "binom_p_one_sided": 1.3127261917780203e-86,
+    "valid": true
+   },
+   "label_permutation": {
+    "observed_accuracy": 1.0,
+    "permutation_median": 0.28055555555555556,
+    "permutation_p95": 0.7727777777777778,
+    "p_perm": 0.009900990099009901
+   },
+   "holm_adjusted_p": 5.250904767112081e-86,
+   "eligible_for_confirmatory_test": false,
+   "beats_chance_heldout": false,
+   "survives_replication": false
+  }
+ },
+ "holms_adjusted_p": {
+  "T1": 5.250904767112081e-86,
+  "T2": 5.250904767112081e-86,
+  "T3": 5.250904767112081e-86,
+  "T4": 5.250904767112081e-86
+ },
+ "separators": [],
+ "rejected_by_admissibility_gate": [
+  "T1",
+  "T2",
+  "T3",
+  "T4"
+ ],
+ "eligible_for_confirmatory_test": [],
+ "f3_all_rejected": true,
+ "placebos": {
+  "s0_control": {
+   "accuracy": 0.3333333333333333,
+   "chance_band": [
+    0.26446595317855526,
+    0.40220071348811137
+   ],
+   "within_band": true,
+   "all_tiebreakers": {
+    "T1": {
+     "accuracy": 0.3333333333333333,
+     "n_train": 60,
+     "n_test": 180,
+     "per_world_recall": {
+      "P": 1.0,
+      "S": 0.0,
+      "C": 0.0
+     },
+     "binom_p_one_sided": 0.5280066612174756,
+     "valid": true
+    },
+    "T2": {
+     "accuracy": 0.3333333333333333,
+     "n_train": 60,
+     "n_test": 180,
+     "per_world_recall": {
+      "P": 1.0,
+      "S": 0.0,
+      "C": 0.0
+     },
+     "binom_p_one_sided": 0.5280066612174756,
+     "valid": true
+    },
+    "T3": {
+     "accuracy": 0.3333333333333333,
+     "n_train": 60,
+     "n_test": 180,
+     "per_world_recall": {
+      "P": 1.0,
+      "S": 0.0,
+      "C": 0.0
+     },
+     "binom_p_one_sided": 0.5280066612174756,
+     "valid": true
+    },
+    "T4": {
+     "accuracy": 0.3333333333333333,
+     "n_train": 60,
+     "n_test": 180,
+     "per_world_recall": {
+      "P": 1.0,
+      "S": 0.0,
+      "C": 0.0
+     },
+     "binom_p_one_sided": 0.5280066612174756,
+     "valid": true
+    }
+   }
+  },
+  "macro_only_control_accuracy": 1.0,
+  "label_permutation": {
+   "T1": {
+    "observed_accuracy": 1.0,
+    "permutation_median": 0.3194444444444444,
+    "permutation_p95": 0.8952777777777777,
+    "p_perm": 0.019801980198019802
+   },
+   "T2": {
+    "observed_accuracy": 1.0,
+    "permutation_median": 0.2833333333333333,
+    "permutation_p95": 0.7527777777777777,
+    "p_perm": 0.009900990099009901
+   },
+   "T3": {
+    "observed_accuracy": 1.0,
+    "permutation_median": 0.3027777777777778,
+    "permutation_p95": 0.7111111111111111,
+    "p_perm": 0.009900990099009901
+   },
+   "T4": {
+    "observed_accuracy": 1.0,
+    "permutation_median": 0.28055555555555556,
+    "permutation_p95": 0.7727777777777778,
+    "p_perm": 0.009900990099009901
+   }
+  }
+ },
+ "algebraic_equivalence_placebo": {
+  "note": "ban=1.8 and ban=2.0 are algebraically identical (kernel threshold rule)",
+  "max_abs_kernel_diff": 0.0,
+  "accuracies": {
+   "T1": 0.5,
+   "T2": 0.5,
+   "T3": 0.5,
+   "T4": 0.5
+  },
+  "n": 120,
+  "chance_band_95": [
+   0.41053864894082287,
+   0.5894613510591771
+  ],
+  "within_band": {
+   "T1": true,
+   "T2": true,
+   "T3": true,
+   "T4": true
+  },
+  "pass": true
+ },
+ "verdict": "cannot test (F3): every tie-breaker was rejected by the admissibility gate as a transform of the DGP weights (max R^2: T1=0.986, T2=0.974, T3=0.990, T4=0.991)",
+ "verdict_code": "cannot_test",
+ "label": "SIMULATION",
+ "f2_matched": {
+  "P": true,
+  "S": true,
+  "C": true
+ },
+ "macro_matching": {
+  "P": {
+   "matched": true,
+   "max_abs_residual": 0.02787800000000007,
+   "residual": [
+    -0.017288000000000026,
+    0.0034250000000002334,
+    -0.013862999999999959,
+    0.02787800000000007,
+    -0.01617399999999991,
+    0.011704000000000048
+   ]
+  },
+  "S": {
+   "matched": true,
+   "max_abs_residual": 0.040591000000000155,
+   "residual": [
+    0.031211999999999962,
+    0.005075000000000163,
+    0.03628700000000004,
+    -0.03798199999999985,
+    0.040591000000000155,
+    0.0026089999999999725
+   ]
+  },
+  "C": {
+   "matched": true,
+   "max_abs_residual": 0.023478999999999917,
+   "residual": [
+    -0.009262999999999966,
+    0.01562500000000011,
+    0.0063620000000000065,
+    0.019392999999999994,
+    0.004086000000000145,
+    0.023478999999999917
+   ]
+  }
+ },
+ "macro_only_control_note": "the macro-only control accuracy above measures residual macro separation after matching; if it is far above chance, the 'conditional on matched macro moments' premise is only partially satisfied and is reported as a limitation",
+ "identity_check": {
+  "seeds": [
+   {
+    "k": 0,
+    "max_abs_diff": 0.0
+   },
+   {
+    "k": 1,
+    "max_abs_diff": 0.0
+   },
+   {
+    "k": 2,
+    "max_abs_diff": 0.0
+   },
+   {
+    "k": 3,
+    "max_abs_diff": 0.0
+   },
+   {
+    "k": 4,
+    "max_abs_diff": 0.0
+   }
+  ],
+  "max_abs_diff": 0.0,
+  "passed": true
+ }
+}
