@@ -21,8 +21,12 @@ stocks are foregrounded; shadow education is one corner with the thinnest data.
 
 ## 1. The system this is attached to (MASSENG v5 R1, PHL)
 
-MASSENG v5 is a deterministic cohort-flow model of the Philippine school system (1940–2024), fitted to PHL
-targets. In one paragraph: each birth cohort (WDI births × survival to 5) is split into ten income deciles whose
+MASSENG v5 is a deterministic cohort-flow model of the Philippine school system. It **simulates 1940–2024**
+(85 years); 1940–1959 are back-cast from the 1960 WDI levels using the configured pre-data growth and are **not
+observed data**. The observed data window used by the fit is **1960–2024** for the macro series (education
+enrolment/private series start in 1971; Gini 1985–2023), and the fit windows are **train 1971–1995, test
+1996–2024** (`countries/PHL/config.json`; see the window-label note in `masseng/tutoring.py`). The model is
+fitted to PHL targets. In one paragraph: each birth cohort (WDI births × survival to 5) is split into ten income deciles whose
 relative incomes come from the WDI Gini; pupils move through grades 1–12 and four tertiary years in public or
 private sectors; each year a fixed share repeats, and the household chooses whether to continue/enter with a
 logit in the credential's wage premium (`b_h`), the credential stock of 20–29 year-olds (`b_p`, positional pull),
@@ -229,7 +233,8 @@ sampling uncertainty.
 
 `TutoringModel5(switches={'tutoring': False})` vs the untouched `Model5`, same fit, same code:
 
-- full run, 1940–2024, 85 years: **318 comparisons, all byte-identical** (2.06 s baseline + 1.41 s off);
+- full run, **simulated window** 1940–2024 (85 years; observed data 1960–2024, 1940–1959 back-cast):
+  **318 comparisons, all byte-identical** (2.06 s baseline + 1.41 s off);
 - short run, 2000–2024, 25 years: **138 comparisons, all byte-identical**;
 - the only difference in `Result.extra` is the added diagnostics key `tutoring` (not a numerical object).
 

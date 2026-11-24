@@ -46,6 +46,29 @@ probabilities; (ii) expected tutoring outlay enters the engine's existing househ
 back into tutoring demand, so the demand block is exogenous given the income distribution; that is a declared
 first-pass restriction, not an estimated structure.
 
+Accounting and open deviations (Neon audit items, declared here rather than silently changed)
+----------------------------------------------------------------------------------------------
+* Household spending is reported as two single-counted flows: (i) the fitted direct-cost schedule and (ii) the
+  declared tutoring outlay.  In the financing arm (``spend_feedback=True``) the outlay is declared ADDITIONAL to
+  the fitted schedule and the reported total is schedule + outlay; in the learning-only arm
+  (``spend_feedback=False``) the fitted ``c_scale`` schedule is read as all-in (it was matched to FIES *total*
+  household education spending, which already contains shadow-education outlays), so the reported total is the
+  schedule only and the outlay is reported separately -- it is not added twice.  ``spend_school_share_gdp``,
+  ``spend_total_share_gdp`` and ``edu_share_hh_incl_tut`` expose the decomposition.
+* The MNL price/option mapping against the Bray reality check is an OPEN deviation: the port is four-option with
+  ``price_other = 0.8`` while the fitted check used three options with a 0.5 price coefficient on the
+  other-teacher option, plus a commercial option absent from the fit.  The claim text is unchanged;
+  ``bray_mapping_gap()`` measures the gap.
+
+Window labels (Neon audit item "1940-2024 label error")
+-------------------------------------------------------
+The engine SIMULATES 1940-2024 (85 years); 1940-1959 are back-cast from 1960 WDI levels using the configured
+pre-data growth, NOT observed data.  Observed series used by the PHL fit span 1960-2025 (macro) and 1971-2020/2024
+(education enrolment/private), Gini 1985-2023; the fit windows are train 1971-1995 and test 1996-2024
+(``countries/PHL/config.json``).  Records must say "simulated 1940-2024, observed data 1960-2024" and must not
+call 1940-2024 the data window.  ``SIMULATED_WINDOW`` / ``OBSERVED_DATA_WINDOW`` / ``FIT_WINDOWS`` hold the
+declared labels; ``tests/test_tutoring_fixes.py`` checks them against the config and the loaded series.
+
 Switch
 ------
 ``switches={'tutoring': False}`` (default) must be bit-identical to the untouched ``Model5``.  Every override
@@ -57,6 +80,32 @@ from typing import Dict, Optional
 import numpy as np
 
 from .engine5 import Model5, LEVEL_NAMES, PRIV
+
+# Declared window labels (see module docstring, "Window labels"): the engine's simulation window comes from
+# v5.years; observed data coverage of the PHL series used by the fit is macro 1960+ / education 1971+; the fit
+# windows come from the PHL config years.  The record must not call 1940-2024 the *data* window.
+SIMULATED_WINDOW = (1940, 2024)
+OBSERVED_DATA_WINDOW = (1960, 2024)
+FIT_WINDOWS = {"train": (1971, 1995), "test": (1996, 2024)}
+
+# Declared demand mappings (OPEN deviation, Neon audit item "MNL price/option mismatch vs Bray").  The bray_8k
+# parameter vector was FITTED under BRAY_CHECK_MAPPING; the port implements PORT_MAPPING (four options, full
+# price_other, plus a commercial option absent from the fit).  The claim text is unchanged; use
+# bray_mapping_gap() to measure the difference.
+BRAY_CHECK_MAPPING = {
+    "options": ("none", "own", "other"),
+    "own_price_coef": 1.0,
+    "other_price_coef": 0.5,
+    "commercial_option": False,
+    "source": "research/records/2026-11-25-masseng-tutoring/ported/bray_reality_check.py:87-93",
+}
+PORT_MAPPING = {
+    "options": ("none", "own", "other", "commercial"),
+    "own_price_coef": "price_own (default 1.0)",
+    "other_price_coef": "price_other (default 0.8)",
+    "commercial_option": True,
+    "source": "masseng/tutoring.py _level_utilities (four-option shadow_model.py structure)",
+}
 
 
 # ----------------------------------------------------------------------------- parameters
@@ -127,6 +176,34 @@ class TutoringParams:
         for name in ('b_income', 'b_quality', 'own_premium', 'other_premium', 'cost_other'):
             setattr(out, name, float(getattr(self, name) * (1.0 + band * (2.0 * rng.random() - 1.0))))
         return out
+
+
+def bray_mapping_gap(tut_params=None, fee=None):
+    """Utility-term gap between the ported MNL mapping and the mapping the Bray vector was fitted under.
+
+    OPEN deviation (Neon audit item "MNL price/option mismatch vs Bray"): the bray_8k parameter vector comes from
+    ``ported/bray_reality_check.py``, whose three-option mapping charged the other-teacher option
+    ``0.5 * price_fee`` and had no commercial option.  The port (``_level_utilities``) charges
+    ``price_other * fee`` (default 0.8) and adds a commercial option.  This helper measures the difference for the
+    own/other price terms; positive values are more expensive than the fit specification.  It does NOT change any
+    default behaviour or claim text -- the deviation is left open until the vector is re-fitted in the port
+    specification or the claim is amended.
+    """
+    tp = tut_params if tut_params is not None else TutoringParams()
+    f = float(tp.fee if fee is None else fee)
+    own_port = -tp.price_own * f
+    own_fit = -BRAY_CHECK_MAPPING["own_price_coef"] * f
+    other_port = -tp.price_other * f
+    other_fit = -BRAY_CHECK_MAPPING["other_price_coef"] * f
+    return {
+        "fee": f,
+        "own_port": own_port, "own_fit": own_fit, "own_gap": own_port - own_fit,
+        "other_port": other_port, "other_fit": other_fit, "other_gap": other_port - other_fit,
+        "commercial_option_port": PORT_MAPPING["commercial_option"],
+        "commercial_option_fit": BRAY_CHECK_MAPPING["commercial_option"],
+        "bray_check_mapping": dict(BRAY_CHECK_MAPPING),
+        "port_mapping": dict(PORT_MAPPING),
+    }
 
 
 # ----------------------------------------------------------------------------- helpers
@@ -322,15 +399,23 @@ class TutoringModel5(Model5):
             persons_li[li] = persons[:, :, sel, :].sum(axis=(0, 2, 3)) if sel.any() else 0.0
         part = self.tut_part[yi]                      # (10, 4)
         prob = self.tut_prob[yi]                      # (10, 4, 4)
+        # ---- household spending: TWO declared flows, each counted exactly once (Neon audit item
+        # "_record() spend double-count").  Flow 1 = fitted direct-cost schedule (public/private fees) x enrolled
+        # persons (mirrors Model5._record).  Flow 2 = declared tutoring outlay.
+        cdir = self.p['c_scale'] * self.direct[yi]
+        spend_school_d = np.zeros(10)
+        for g in range(16):
+            spend_school_d += (persons[:, :, g, :] * cdir[lvl[g]][None, None, :]).sum(axis=(0, 2))
         # tutoring outlay (GDPpc units) by decile: enrolled pupils x expected spend per pupil at that level
         spend_tut_d = (persons_li * self.tut_spend[yi].T).sum(axis=0)   # sum over levels -> (10,)
+        # The fitted c_scale was matched to FIES *total* household education spending, which already contains
+        # shadow-education outlays (MASSENG_TUTORING_COUPLING.md section 3.1).  In the learning-only arm
+        # (spend_feedback=False) the schedule is read as all-in, so adding the outlay on top would count the same
+        # household spending twice: the reported total is the schedule only.  In the financing arm the outlay is a
+        # declared ADDITIONAL flow and is added exactly once.
+        spend_incl_d = spend_school_d + spend_tut_d       # declared all-in total, always one of each flow
+        spend_d = spend_incl_d if (self.tut_on and self.tutp.spend_feedback) else spend_school_d
         total_pop = self.c.pop(y)
-        # household direct spending including tutoring (mirrors Model5._record)
-        cdir = self.p['c_scale'] * self.direct[yi]
-        spend_d = np.zeros(10)
-        for g in range(16):
-            spend_d += (persons[:, :, g, :] * cdir[lvl[g]][None, None, :]).sum(axis=(0, 2))
-        spend_d = spend_d + spend_tut_d
         cons_d = self.cons_share * self.mult[yi] * total_pop / 10.0
         out['edu_share_hh'][yi] = 100 * spend_d.sum() / cons_d.sum()
         out['edu_share_bottom30'][yi] = 100 * spend_d[:3].sum() / cons_d[:3].sum()
@@ -340,9 +425,11 @@ class TutoringModel5(Model5):
         hh_gdp = spend_d.sum() / total_pop
         pub = self.pub_xpd[yi]
         out['hh_share_total_spending'][yi] = 100 * hh_gdp / (hh_gdp + pub) if pub == pub else np.nan
-        # tutoring aggregate indicators
+        # tutoring aggregate indicators (+ the declared single-count decomposition)
         for key in ('tut_participation', 'tut_own_share', 'tut_other_share', 'tut_commercial_share',
-                    'tut_spend_share_gdp', 'tut_spend_share_hh_edu', 'tut_participation_gap_q5_q1'):
+                    'tut_spend_share_gdp', 'tut_spend_share_hh_edu', 'tut_participation_gap_q5_q1',
+                    'spend_school_share_gdp', 'spend_total_share_gdp', 'spend_incl_share_gdp',
+                    'edu_share_hh_incl_tut'):
             if key not in out:
                 out[key] = np.full(n_years, np.nan)
         den = float(persons_li.sum())
@@ -353,8 +440,12 @@ class TutoringModel5(Model5):
         out['tut_other_share'][yi] = float((persons_li * prob[..., 2].T).sum() / num) if num > 0 else np.nan
         out['tut_commercial_share'][yi] = float((persons_li * prob[..., 3].T).sum() / num) if num > 0 else np.nan
         out['tut_spend_share_gdp'][yi] = 100.0 * spend_tut_d.sum() / total_pop
-        out['tut_spend_share_hh_edu'][yi] = (100.0 * spend_tut_d.sum() / spend_d.sum()
-                                             if spend_d.sum() > 0 else np.nan)
+        out['spend_school_share_gdp'][yi] = 100.0 * spend_school_d.sum() / total_pop
+        out['spend_total_share_gdp'][yi] = 100.0 * spend_d.sum() / total_pop
+        out['spend_incl_share_gdp'][yi] = 100.0 * spend_incl_d.sum() / total_pop
+        out['edu_share_hh_incl_tut'][yi] = 100.0 * spend_incl_d.sum() / cons_d.sum()
+        out['tut_spend_share_hh_edu'][yi] = (100.0 * spend_tut_d.sum() / spend_incl_d.sum()
+                                             if spend_incl_d.sum() > 0 else np.nan)
         # participation gap richest vs poorest income quintile (enrolled-weighted)
         byd = (persons_li * part.T).sum(axis=0) / np.maximum(persons_li.sum(axis=0), 1e-12)
         w = persons_li.sum(axis=0)
