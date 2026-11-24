@@ -1,0 +1,929 @@
+{
+  "audit": "MASSENG v5 massification claim layer (engine/data reality only)",
+  "date": "2026-11-25",
+  "heads": {
+    "v6": "9571eb4"
+  },
+  "checks": [
+    {
+      "id": "HEAD-1",
+      "area": "provenance",
+      "question": "audited heads",
+      "value": {
+        "v6": "9571eb4"
+      },
+      "ref": "current origin refs",
+      "status": "INFO"
+    },
+    {
+      "id": "TRAIN-1",
+      "area": "training reuse",
+      "question": "training rows / test rows / post-1995 training rows",
+      "value": {
+        "n_train": 121,
+        "n_test": 164,
+        "n_post1995": 9,
+        "post1995": [
+          [
+            "gradlr_primary",
+            2019
+          ],
+          [
+            "gradlr_secondary",
+            2019
+          ],
+          [
+            "gradlr_tertiary",
+            2019
+          ],
+          [
+            "edu_share_hh",
+            2003
+          ],
+          [
+            "edu_share_bottom30",
+            2003
+          ],
+          [
+            "edu_share_top70",
+            2003
+          ],
+          [
+            "edu_share_hh",
+            2006
+          ],
+          [
+            "edu_share_bottom30",
+            2006
+          ],
+          [
+            "edu_share_top70",
+            2006
+          ]
+        ],
+        "share_post1995_pct": 7.4
+      },
+      "ref": "results/PHL/v5 preflight train_rows=121/test_rows=164; PROTOCOL_v5 \u00a77",
+      "status": "FLAG"
+    },
+    {
+      "id": "TRAIN-2",
+      "area": "training reuse",
+      "question": "post-1995 training targets are non-enrolment outcomes (FIES education shares 2003/2006; APIS 2019 gradient)",
+      "value": [
+        "edu_share_bottom30",
+        "edu_share_hh",
+        "edu_share_top70",
+        "gradlr_primary",
+        "gradlr_secondary",
+        "gradlr_tertiary"
+      ],
+      "ref": "targets.py income_gradient_2019 role=train; target_map fies train_years 2003/2006",
+      "status": "FLAG"
+    },
+    {
+      "id": "DRIVER-1",
+      "area": "identification",
+      "question": "driver observations inside the 1971-1995 training window",
+      "value": {
+        "premium_tertiary": [
+          1988,
+          1990,
+          1995
+        ],
+        "premium_secondary": [
+          1988,
+          1990,
+          1995
+        ],
+        "formal_share": [
+          1991,
+          1992,
+          1993,
+          1994,
+          1995
+        ]
+      },
+      "ref": "countries/PHL/drivers_v5.json",
+      "status": "FLAG"
+    },
+    {
+      "id": "DRIVER-2",
+      "area": "identification",
+      "question": "premium_tertiary is linearly interpolated 1995-2013 and 2013-2024; only 3 observed training anchors",
+      "value": {
+        "train_anchors": [
+          1988,
+          1990,
+          1995
+        ],
+        "post1995_anchors": [
+          2013,
+          2024
+        ]
+      },
+      "ref": "ditto; Series linear interpolation",
+      "status": "FLAG"
+    },
+    {
+      "id": "R1-1",
+      "area": "R1 performance",
+      "question": "pooled three-GER held-out RMSE by rival (recomputed from scores.json obs/pred)",
+      "value": {
+        "R2": 7.458,
+        "R4": 12.194,
+        "R0": 14.23,
+        "R3": 15.184,
+        "R5": 16.543,
+        "R1": 16.925
+      },
+      "ref": "report table: R0 14.230, R1 16.925, R2 7.458, R3 15.184, R4 12.194, R5 16.543",
+      "status": "PASS"
+    },
+    {
+      "id": "R1-2",
+      "area": "R1 performance",
+      "question": "rank of R1 among the six rivals (1=best)",
+      "value": {
+        "rank": 6,
+        "of": 6,
+        "ranking": [
+          "R2",
+          "R4",
+          "R0",
+          "R3",
+          "R5",
+          "R1"
+        ]
+      },
+      "ref": "lower is better",
+      "status": "FLAG"
+    },
+    {
+      "id": "R1-3",
+      "area": "R1 performance",
+      "question": "R1 vs benchmarks: R1 - R0, R1 - trend, R1 - persistence (pp)",
+      "value": {
+        "minus_R0": 2.695,
+        "minus_trend": 5.131,
+        "minus_persistence": 10.324
+      },
+      "ref": "persistence 6.600, trend 11.794 from scores.json",
+      "status": "FLAG"
+    },
+    {
+      "id": "R1-4",
+      "area": "R1 predictions",
+      "question": "R1 tertiary GER predictions vs observed at the premium/participation contrast",
+      "value": {
+        "R1": {
+          "2013": {
+            "pred": 64.743,
+            "obs": 31.87
+          },
+          "2024": {
+            "pred": 76.242,
+            "obs": 47.413
+          }
+        },
+        "R2": {
+          "2013": {
+            "pred": 34.633,
+            "obs": 31.87
+          },
+          "2024": {
+            "pred": 44.005,
+            "obs": 47.413
+          }
+        }
+      },
+      "ref": "scores.json ger_tertiary",
+      "status": "FLAG"
+    },
+    {
+      "id": "R1-5",
+      "area": "identification",
+      "question": "the four mechanism coefficients across the six specifications",
+      "value": {
+        "R0": {
+          "b_h": 0.0,
+          "b_p": 0.0,
+          "b_r": 0.0,
+          "lam": 0.0
+        },
+        "R1": {
+          "b_h": 1.4308,
+          "b_p": 5.0105,
+          "b_r": 3.0635,
+          "lam": 3.095
+        },
+        "R2": {
+          "b_h": -5.9998,
+          "b_p": 0.0,
+          "b_r": 0.0,
+          "lam": 0.0
+        },
+        "R3": {
+          "b_h": -5.7215,
+          "b_p": 6.923,
+          "b_r": 8.1357,
+          "lam": 0.0
+        },
+        "R4": {
+          "b_h": 2.4891,
+          "b_p": 0.0,
+          "b_r": 9.1934,
+          "lam": 4.2612
+        },
+        "R5": {
+          "b_h": -3.6807,
+          "b_p": 8.04,
+          "b_r": 7.2557,
+          "lam": 2.2852
+        }
+      },
+      "ref": "outputs/PHL/v5/fit_R*.json",
+      "status": "FLAG"
+    },
+    {
+      "id": "R1-6",
+      "area": "identification",
+      "question": "b_h sign across specifications",
+      "value": {
+        "R0": "0",
+        "R1": "+",
+        "R2": "-",
+        "R3": "-",
+        "R4": "+",
+        "R5": "-"
+      },
+      "ref": "same",
+      "status": "FLAG"
+    },
+    {
+      "id": "R1-7",
+      "area": "bounds",
+      "question": "parameters within 1% of a bound (relative) and whether the record's absolute-1e-3 rule flags them",
+      "value": [
+        {
+          "spec": "R0",
+          "param": "eta",
+          "value": 5.999999999999999,
+          "bound": [
+            0,
+            6
+          ],
+          "rel_dist": 0.0,
+          "flagged_by_record": true
+        },
+        {
+          "spec": "R0",
+          "param": "nu",
+          "value": 7.999985427383159,
+          "bound": [
+            -6,
+            8
+          ],
+          "rel_dist": 1e-06,
+          "flagged_by_record": true
+        },
+        {
+          "spec": "R1",
+          "param": "eta",
+          "value": 0.0,
+          "bound": [
+            0,
+            6
+          ],
+          "rel_dist": 0.0,
+          "flagged_by_record": false
+        },
+        {
+          "spec": "R2",
+          "param": "b_h",
+          "value": -5.999765171164789,
+          "bound": [
+            -6,
+            12
+          ],
+          "rel_dist": 1.3e-05,
+          "flagged_by_record": true
+        },
+        {
+          "spec": "R2",
+          "param": "eta",
+          "value": 0.0,
+          "bound": [
+            0,
+            6
+          ],
+          "rel_dist": 0.0,
+          "flagged_by_record": false
+        },
+        {
+          "spec": "R2",
+          "param": "eta_x",
+          "value": 1.5945542328685073e-13,
+          "bound": [
+            0,
+            4
+          ],
+          "rel_dist": 0.0,
+          "flagged_by_record": true
+        },
+        {
+          "spec": "R2",
+          "param": "nu",
+          "value": 7.9997713382177675,
+          "bound": [
+            -6,
+            8
+          ],
+          "rel_dist": 1.6e-05,
+          "flagged_by_record": true
+        },
+        {
+          "spec": "R3",
+          "param": "eta",
+          "value": 0.0,
+          "bound": [
+            0,
+            6
+          ],
+          "rel_dist": 0.0,
+          "flagged_by_record": false
+        },
+        {
+          "spec": "R4",
+          "param": "eta",
+          "value": 0.0,
+          "bound": [
+            0,
+            6
+          ],
+          "rel_dist": 0.0,
+          "flagged_by_record": false
+        },
+        {
+          "spec": "R4",
+          "param": "kappa",
+          "value": 39.995406221196006,
+          "bound": [
+            0,
+            40
+          ],
+          "rel_dist": 0.000115,
+          "flagged_by_record": false
+        },
+        {
+          "spec": "R5",
+          "param": "eta",
+          "value": 0.0,
+          "bound": [
+            0,
+            6
+          ],
+          "rel_dist": 0.0,
+          "flagged_by_record": false
+        }
+      ],
+      "ref": "calibrate5.py line 100 uses abs(v-bound)<1e-3",
+      "status": "FLAG"
+    },
+    {
+      "id": "R1-8",
+      "area": "recovery",
+      "question": "recovery test is run on the selected rival only; R1 is never recovered",
+      "value": {
+        "recovery_file": "outputs/PHL/v5/recovery_R2.json",
+        "spec": "R2",
+        "b_h": "boundary recovery (15/20 bound hits)",
+        "kappa": "not identified (60% < 80%)",
+        "b_p": "not in rival"
+      },
+      "ref": "PROTOCOL_v5 \u00a77; recovery_R2.json",
+      "status": "FLAG"
+    },
+    {
+      "id": "REPRO-1",
+      "area": "reproduction",
+      "question": "committed v5 outputs match the fresh-copy QA and final-output hash manifests",
+      "value": {
+        "fit_R0.json": {
+          "sha256": "b6e355ba0ceba9c438f6641243ef10ecb1d054383bdde686df0413e77828407c",
+          "matches_fresh_copy_qa": true,
+          "matches_final_output_hashes": true
+        },
+        "fit_R1.json": {
+          "sha256": "e0690737d0570e719c20a946b50036d3290a6d1d70689f019ea89ab2d33ef796",
+          "matches_fresh_copy_qa": true,
+          "matches_final_output_hashes": true
+        },
+        "fit_R2.json": {
+          "sha256": "add2073e9c894a2961ded5e036c0dfe007dd9e190d4202dec18f2cb2cc440ef4",
+          "matches_fresh_copy_qa": true,
+          "matches_final_output_hashes": true
+        },
+        "fit_R3.json": {
+          "sha256": "052ab5631e2a1f5c0eca534b8db143e689ee8e14521ab9a3cc73e02f826d9fbf",
+          "matches_fresh_copy_qa": true,
+          "matches_final_output_hashes": true
+        },
+        "fit_R4.json": {
+          "sha256": "c894c501814e7049be82f3d35aa1843748168c13ca75f0479bf9ee2f287ff5df",
+          "matches_fresh_copy_qa": true,
+          "matches_final_output_hashes": true
+        },
+        "fit_R5.json": {
+          "sha256": "2b00a64bedefc57e68b49e31db3851a09ace18c1d1b109bffeab5dd00df17938",
+          "matches_fresh_copy_qa": true,
+          "matches_final_output_hashes": true
+        },
+        "scores.json": {
+          "sha256": "c6bc205157c58543980756421e27c07f05e96568747a7ca6449877001d210069",
+          "matches_fresh_copy_qa": true,
+          "matches_final_output_hashes": true
+        }
+      },
+      "ref": "outputs/qa/fresh_copy_comparison.json; outputs/qa/final_output_hashes.json",
+      "status": "PASS"
+    },
+    {
+      "id": "REPRO-2",
+      "area": "reproduction",
+      "question": "fresh-copy claim: files compared / all byte-identical / pinned environment",
+      "value": {
+        "files_compared": 13,
+        "all_byte_identical": true,
+        "requirements": {
+          "python": "3.12.16",
+          "numpy": "2.4.4",
+          "scipy": "1.18.1",
+          "matplotlib": "3.10.9",
+          "pytest": "9.2.0",
+          "blas_threads": "OPENBLAS_NUM_THREADS=1; OMP_NUM_THREADS=1"
+        }
+      },
+      "ref": "fresh_copy_comparison.json",
+      "status": "PASS"
+    },
+    {
+      "id": "REPRO-3",
+      "area": "reproduction",
+      "question": "R1/R4 fits are two-stage continuations; stage-1 parameters are not committed",
+      "value": {
+        "R1": {
+          "cost": 118.71432113145174,
+          "nfev": 250
+        },
+        "R4": {
+          "cost": 113.78606876389063,
+          "nfev": 250
+        },
+        "R1_total_nfev": 573,
+        "R4_total_nfev": 278
+      },
+      "ref": "fit_R1.json / fit_R4.json; README reproduction block",
+      "status": "FLAG"
+    },
+    {
+      "id": "BAYES-1",
+      "area": "Bayesian screen",
+      "question": "screen title/status/shape as committed",
+      "value": {
+        "title": "MASSENG v5 PHL R1 prior importance screen",
+        "status": "exploratory Bayesian-style importance screening; not a calibrated posterior",
+        "draws": 4096,
+        "varied": [
+          "b_h",
+          "b_p",
+          "b_r",
+          "lam"
+        ],
+        "fixed_baseline_note": "Other parameters fixed at an existing R1 fit estimated using broader data. This is empirically informed conditioning and involves data reuse; results are conditional, not a fresh independent calibration."
+      },
+      "ref": "masseng-bayes-audit results/main_summary.json",
+      "status": "FLAG"
+    },
+    {
+      "id": "BOUND-1",
+      "area": "boundary",
+      "question": "mechanism keywords present/absent in masseng/engine5.py",
+      "value": {
+        "present_counts": {
+          "capacity": 6,
+          "voucher": 1,
+          "subsid": 1,
+          "earnings": 3,
+          "wage": 1,
+          "premium": 6,
+          "formal": 2,
+          "deferred": 8,
+          "exam": 7
+        },
+        "absent": [
+          "learning",
+          "quality",
+          "score",
+          "achievement",
+          "tutor",
+          "shadow",
+          "region",
+          "rural",
+          "urban",
+          "migration",
+          "fee",
+          "tax",
+          "budget",
+          "borrowing",
+          "credit",
+          "quota"
+        ]
+      },
+      "ref": "masseng/engine5.py (v5 demand engine)",
+      "status": "FLAG"
+    },
+    {
+      "id": "BOUND-2",
+      "area": "boundary",
+      "question": "the model's own omission list in docs/model.md",
+      "value": {
+        "omitted": [
+          "school quality and learning",
+          "teachers and budgets except tertiary capacity",
+          "geography and distance",
+          "migration",
+          "shadow education",
+          "informal fees",
+          "gender",
+          "labour-market return changes except through household income"
+        ]
+      },
+      "ref": "docs/model.md lines 102-111",
+      "status": "PASS"
+    },
+    {
+      "id": "BOUND-3",
+      "area": "boundary",
+      "question": "what v5 DOES contain (supply/finance, demand, gates, deferral)",
+      "value": {
+        "levels": [
+          "primary",
+          "secondary",
+          "upper_secondary",
+          "tertiary"
+        ],
+        "household_demand": "four-level utility by income decile with cost burden",
+        "supply_finance_inputs": [
+          "public tertiary capacity (rationed)",
+          "optional upper-secondary public capacity",
+          "dated fee/subsidy/voucher cost changes",
+          "CCT transfers (4Ps) as cost reductions"
+        ],
+        "gates": "optional exogenous tertiary exam pass-rate schedule; PHL config has none",
+        "deferral": "tertiary deferral to max age 25",
+        "sector": "public/private provider within levels"
+      },
+      "ref": "engine5.py / countries/PHL/config.json",
+      "status": "INFO"
+    },
+    {
+      "id": "QA-1",
+      "area": "QA claims",
+      "question": "twelve World Bank values spot-checked within 0.0005",
+      "value": {
+        "n": 12,
+        "passed": 12
+      },
+      "ref": "outputs/qa/world_bank_spotchecks.json",
+      "status": "PASS"
+    },
+    {
+      "id": "QA-2",
+      "area": "QA claims",
+      "question": "China credential-floor check result (honest negative)",
+      "value": {
+        "result": "FAIL: all three structures predict a positive change, opposite to both observed signs; no interval crosses zero",
+        "observed": {
+          "raw_change_2024_26": -0.0387,
+          "cohort_adjusted_change_2024_26": -0.0531
+        },
+        "predicted_medians": {
+          "M_HC": 0.056,
+          "M_POS": 0.068,
+          "M_REL": 0.078
+        }
+      },
+      "ref": "outputs/qa/credential_floor_china_check.json",
+      "status": "PASS"
+    },
+    {
+      "id": "QA-3",
+      "area": "QA claims",
+      "question": "release status and test claims",
+      "value": {
+        "release": "NOT READY (CHED original-source access open)",
+        "tests": "35 tests / 34 tests are reported in QA prose; not re-run here",
+        "byte_identical_outputs": {
+          "files": 13,
+          "all": true
+        }
+      },
+      "ref": "ATLAS_WORLDS_QA.md; fresh_copy_comparison.json",
+      "status": "FLAG"
+    },
+    {
+      "id": "QA-4",
+      "area": "QA claims",
+      "question": "completion-indicator check: 67% NER vs 73% completion are unlike indicators",
+      "value": "RESOLVED AS UNLIKE INDICATORS, NOT A NUMERICAL CONTRADICTION TO BE AVERAGED",
+      "ref": "outputs/qa/completion_indicator_check.json",
+      "status": "PASS"
+    },
+    {
+      "id": "DASH-1",
+      "area": "dashboard claims",
+      "question": "MASSENG mentions in the dashboard record and public massification page",
+      "value": {
+        "dashboard_masseng_strings": 7,
+        "dashboard_context": "all 7 are branch/record links plus 'MASSENG coupling in flight; do not interpret until committed'; no engine result is claimed",
+        "public_page_mentions": 0,
+        "public_page_label": "mechanism tests, not measurements of what happened in a country"
+      },
+      "ref": "dashboard-2026-11-23 README; public/research/massification/index.html",
+      "status": "PASS"
+    },
+    {
+      "id": "DASH-2",
+      "area": "dashboard claims",
+      "question": "dashboard statements that must not be re-labelled as MASSENG v5 results",
+      "value": [
+        "wage jobs cleanest null",
+        "electricity null once country trends",
+        "supply-led is the better description (later retracted/softened)",
+        "GPU transition counterfactual",
+        "multiverse 5/272 and 46 beats random"
+      ],
+      "ref": "dashboard README",
+      "status": "FLAG"
+    },
+    {
+      "id": "CL-1",
+      "area": "claim inventory",
+      "question": "MASSENG v5 R1 = 'the demand engine'",
+      "value": {
+        "verdict": "WITHDRAW",
+        "reality": "R1 is one of six rival specifications; it ranks 6/6 on the registered metric (pooled RMSE 16.925 vs R0 14.230, persistence 6.600)."
+      },
+      "ref": "PROTOCOL_v5.md title/\u00a74; HANDOFF_v5.md; engine5.py docstring",
+      "status": "FLAG"
+    },
+    {
+      "id": "CL-2",
+      "area": "claim inventory",
+      "question": "R1 estimates human-capital / positional / relational / saturation coefficients",
+      "value": {
+        "verdict": "DOWNGRADE",
+        "reality": "weighted least-squares point values only; no SE/CI/recovery; coefficients unstable across specs (b_h +1.43/-6.00/-5.72/+2.49/-3.68)."
+      },
+      "ref": "PROTOCOL_v5 \u00a74; paper \u00a72",
+      "status": "FLAG"
+    },
+    {
+      "id": "CL-3",
+      "area": "claim inventory",
+      "question": "positive b_h supports a human-capital demand channel",
+      "value": {
+        "verdict": "WITHDRAW",
+        "reality": "b_h sign flips across specs; selected R2's b_h is -6.000 at its bound."
+      },
+      "ref": "paper/README result table",
+      "status": "FLAG"
+    },
+    {
+      "id": "CL-4",
+      "area": "claim inventory",
+      "question": "saturation-dependent cost sensitivity (lambda>0) is supported",
+      "value": {
+        "verdict": "WITHDRAW",
+        "reality": "R1 loses to R3 on both criteria (pooled 16.925 vs 15.184; 1998 recession err 4.27 vs 0.77)."
+      },
+      "ref": "PROTOCOL_v5 \u00a77 decision rule",
+      "status": "FLAG"
+    },
+    {
+      "id": "CL-5",
+      "area": "claim inventory",
+      "question": "the full positional-relational engine is the preferred demand account",
+      "value": {
+        "verdict": "WITHDRAW",
+        "reality": "R1 is the worst of six; paper already says it does not win."
+      },
+      "ref": "implied by 'demand engine' label",
+      "status": "FLAG"
+    },
+    {
+      "id": "CL-6",
+      "area": "claim inventory",
+      "question": "test RMSE on 1996-2024 validates the model",
+      "value": {
+        "verdict": "DOWNGRADE",
+        "reality": "test is retrospective and previously inspected; test used for model selection; persistence beats the selected rival."
+      },
+      "ref": "table headings / 'held-out'",
+      "status": "FLAG"
+    },
+    {
+      "id": "CL-7",
+      "area": "claim inventory",
+      "question": "post-1995 enrolment was not fitted (therefore the test is clean)",
+      "value": {
+        "verdict": "DOWNGRADE",
+        "reality": "true for enrolment, but 9/121 training rows are post-1995 (APIS 2019 gradient inside the test window; FIES 2003/2006)."
+      },
+      "ref": "results report",
+      "status": "FLAG"
+    },
+    {
+      "id": "CL-8",
+      "area": "claim inventory",
+      "question": "the 1971-1995 training window identifies the demand coefficients",
+      "value": {
+        "verdict": "DOWNGRADE",
+        "reality": "premium drivers have 3 observed training anchors (1988,1990,1995); formal_share has 5 years (1991-1995); premium is interpolated 1995-2013."
+      },
+      "ref": "PROTOCOL_v5 \u00a77",
+      "status": "FLAG"
+    },
+    {
+      "id": "CL-9",
+      "area": "claim inventory",
+      "question": "drivers are exogenous and predetermined",
+      "value": {
+        "verdict": "DOWNGRADE",
+        "reality": "2013/2024 premium values are contemporaneous with the test outcomes; formal_share varies through the test period."
+      },
+      "ref": "PROTOCOL_v5 \u00a73",
+      "status": "FLAG"
+    },
+    {
+      "id": "CL-10",
+      "area": "claim inventory",
+      "question": "learning/quality mechanism is modelled",
+      "value": {
+        "verdict": "WITHDRAW",
+        "reality": "v5 has no learning state, no quality, no score/achievement variable (engine5.py keyword counts 0)."
+      },
+      "ref": "theory manuscripts (May/June); QA file names",
+      "status": "FLAG"
+    },
+    {
+      "id": "CL-11",
+      "area": "claim inventory",
+      "question": "score bars / quotas / high-stakes gates are modelled",
+      "value": {
+        "verdict": "WITHDRAW",
+        "reality": "v5 has no score bar and no quota; only an optional exogenous tertiary exam pass-rate schedule (absent for PHL) and capacity rationing."
+      },
+      "ref": "theory manuscripts; v6 Phase-1 notes",
+      "status": "FLAG"
+    },
+    {
+      "id": "CL-12",
+      "area": "claim inventory",
+      "question": "teacher supply / teacher effort is modelled",
+      "value": {
+        "verdict": "WITHDRAW",
+        "reality": "teachers enter only through the declarative tertiary-capacity rule; no teacher market or effort."
+      },
+      "ref": "theory manuscripts",
+      "status": "FLAG"
+    },
+    {
+      "id": "CL-13",
+      "area": "claim inventory",
+      "question": "labour market / earnings / employer screening / credential queues are modelled",
+      "value": {
+        "verdict": "WITHDRAW",
+        "reality": "no labour market, no earnings, no employer; credentials only as exogenous wage-premium drivers and a formal-share proxy."
+      },
+      "ref": "June manuscript; paper's 'relational floor'",
+      "status": "FLAG"
+    },
+    {
+      "id": "CL-14",
+      "area": "claim inventory",
+      "question": "rural/urban differences and migration are modelled",
+      "value": {
+        "verdict": "WITHDRAW",
+        "reality": "no region, no urban/rural, no migration in the engine; documented omission."
+      },
+      "ref": "theory manuscripts; HKG/AQRF material",
+      "status": "FLAG"
+    },
+    {
+      "id": "CL-15",
+      "area": "claim inventory",
+      "question": "borrowing/credit constraints are modelled",
+      "value": {
+        "verdict": "WITHDRAW",
+        "reality": "affordability is a cost-burden term; no borrowing, credit, savings or uncertainty state."
+      },
+      "ref": "household-demand discussion",
+      "status": "FLAG"
+    },
+    {
+      "id": "CL-16",
+      "area": "claim inventory",
+      "question": "shadow education / tutoring effects are estimated in MASSENG",
+      "value": {
+        "verdict": "WITHDRAW",
+        "reality": "v5 has no tutoring/shadow state; the coupled module is an external declared layer (achievement shift as declared odds multiplier), not an estimate."
+      },
+      "ref": "coupling notes; shadow record",
+      "status": "FLAG"
+    },
+    {
+      "id": "CL-17",
+      "area": "claim inventory",
+      "question": "state supply and finance drive massification (supply-led established)",
+      "value": {
+        "verdict": "WITHDRAW",
+        "reality": "v5 takes capacity and cost policies as declared inputs; no tax, budget, construction or teacher-supply response. Panel claim, not engine result."
+      },
+      "ref": "theory manuscripts; dashboard line 618",
+      "status": "FLAG"
+    },
+    {
+      "id": "CL-18",
+      "area": "claim inventory",
+      "question": "MASSENG v5 validates the surplus / credential-pipeline theory",
+      "value": {
+        "verdict": "WITHDRAW",
+        "reality": "employer/state/migration/learning mechanisms are outside the engine; only conditional demand accounting is present."
+      },
+      "ref": "May/June manuscripts",
+      "status": "FLAG"
+    },
+    {
+      "id": "CL-19",
+      "area": "claim inventory",
+      "question": "MASSENG is calibrated / validated / usable for forecasting",
+      "value": {
+        "verdict": "WITHDRAW",
+        "reality": "status is 'not calibrated'; report/paper say no forecast or policy simulation."
+      },
+      "ref": "release prose",
+      "status": "FLAG"
+    },
+    {
+      "id": "CL-20",
+      "area": "claim inventory",
+      "question": "dashboard / public massification claims are MASSENG v5 results",
+      "value": {
+        "verdict": "DOWNGRADE",
+        "reality": "dashboard = E1/E6 panel; public page = ABM mechanism tests; neither is MASSENG."
+      },
+      "ref": "dashboard; public/research/massification",
+      "status": "FLAG"
+    },
+    {
+      "id": "CL-21",
+      "area": "claim inventory",
+      "question": "the PHL fit reproduces from the committed bundle",
+      "value": {
+        "verdict": "DOWNGRADE",
+        "reality": "record's own fresh-copy QA is 13/13 byte-identical under pinned deps; R1/R4 need a two-stage continuation whose stage-1 parameters are not committed; no independent re-run here."
+      },
+      "ref": "README reproduction block",
+      "status": "FLAG"
+    },
+    {
+      "id": "CL-22",
+      "area": "claim inventory",
+      "question": "'at bounds: none' for R4",
+      "value": {
+        "verdict": "DOWNGRADE",
+        "reality": "R4 kappa=39.995 vs upper bound 40 is not flagged because the rule uses absolute |v-bound|<1e-3 on a 0-40 scale."
+      },
+      "ref": "model/README table",
+      "status": "FLAG"
+    },
+    {
+      "id": "CL-23",
+      "area": "claim inventory",
+      "question": "the Bayesian screen yields a posterior / identifies mechanisms",
+      "value": {
+        "verdict": "WITHDRAW",
+        "reality": "conditional importance screen: ESS 2.17%, prior- and sigma-dominated, X5 confusion 50% (<60% criterion), baseline fixes 11 params from an R1 fit with admitted data reuse."
+      },
+      "ref": "masseng-bayes-audit record (cited)",
+      "status": "FLAG"
+    }
+  ],
+  "notes": [
+    "read-only; no server compute; no masseng edits",
+    "Bayesian screen numbers are read from the prior audit record, not recomputed",
+    "literature verification is out of scope by instruction: this audit is engine/data reality only"
+  ]
+}
