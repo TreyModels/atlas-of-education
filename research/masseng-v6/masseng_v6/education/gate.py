@@ -175,7 +175,11 @@ def apply_gate(gate: Gate, scores, mass, eligible, group, rng=None) -> GateOutco
         open_pool = (q_ok | regular_ok) & ~(q_adm > 0)
         o_adm, _ = ranked_admit(open_pool, open_capacity, scores, mass)
         adm += o_adm
-        cap_reject = np.where(allowed, np.maximum(mass - adm, 0.0), 0.0)
+        # Only threshold-passers can be rejected by the capacity rule. Counting every eligible cell here would
+        # double-count the below-bar mass already recorded above (below_bar + capacity_rejection would exceed
+        # rejected_eligible by exactly the below-bar mass; Neon quarantine item "quota double-count").
+        threshold_passers = q_ok | regular_ok
+        cap_reject = np.where(threshold_passers, np.maximum(mass - adm, 0.0), 0.0)
     else:  # pragma: no cover - guarded by Gate
         raise ValueError(gate.kind)
 
