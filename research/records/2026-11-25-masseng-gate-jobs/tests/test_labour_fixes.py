@@ -124,3 +124,7 @@ ok = (0.0 <= a["formal_share"] <= 0.25 + 1e-9 and 0.0 <= a["queue_share"] <= 1.0
 check("T7 queue formal_share<=vacancies, queue_share in [0,1], mean income positive", ok,
       f"formal_share={a['formal_share']}, queue_share={a['queue_share']}, mean_income={a['mean_income']}")
 
+
+n_pass = sum(1 for _, ok, _ in CASES if ok)
+print(f"\nSUMMARY: {n_pass}/{len(CASES)} PASS (model dir: {MODEL})")
+raise SystemExit(0 if n_pass == len(CASES) else 1)
