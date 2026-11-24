@@ -179,3 +179,16 @@ git log origin/research/paper-fertility-2026-11-25 --oneline -1       # expect 2
 git show origin/research/suite-redesign-2026-11-24:research/records/2026-11-24-suite-redesign/ANALYSIS.md | grep -E 'H1:|H4:'
 ssh autodl3 'echo up' 2>&1                                            # expect connection failure (T4 is off)
 ```
+
+## 12. Addendum — post-handoff work pushed 24 Nov 2026 ~19:35 local
+
+New origin heads beyond §3:
+
+- **DHS public-API ecological sprint** — `research/dhs-api-ecological-2026-11-24` @ **`708e34a`**: OBSERVED/ECOLOGICAL published cells, no microdata. Prior attempt reproduced (−0.554 / −1.608 / −2.520; 1,291 cells, 86 countries); gradient across **346 surveys: 98.8% negative, median −1.90** children; robust to country+period FE, country×survey FE, country trends; period-TFR vs completed-CEB ratio **1.017 [0.944, 1.102]**; surviving-children ≠ TFR; the individual Recode test remains blocked on DHS approval and is not substituted.
+- **Synthetic loop Phase A** — `research/synthetic-loop-2026-11-24` @ **`394fb32`**: four literature worlds calibrated non-degenerately; H1 **separable**, H4 **cannot test (F3)**; construct-correct ABC pre-audit (w_push / w_tutor identified; div / w_pov unidentified); pre-registered DHS day-one micro signature.
+- **Synthetic matrix v1 and v2** — `research/synthetic-matrix-2026-11-24` @ **`ff42c4b`**: v1 (`be7e499`) 55.6% cross-world indistinguishable; v2 (`52dfcb7`) **26.1%** (dose ladder 22.5 / 25.4 / 30.4%), with a misspecified Pritchett world (Rm) not collapsing the worlds; synthetic robust-across-groupings 70–85% vs E1's 1.8%. v2b pre-registration + parallel driver (`ef5541c`), runner scripts committed (`ff42c4b`); v2b run in flight on region-42.
+- **Synthetic loop Phase B (scripts)** — `research/synthetic-phaseb-2026-11-24` @ **`81112ab`**: birth-history layer + dynamic tie-breaker scripts committed; server run in flight, results to follow.
+
+**Compute site:** region-42 (96 cores, 375 GB RAM, RTX 2080 Ti) is the compute site; AutoDL T4 remains **off**. GPU currently idle pending a fixed-seed NumPy-vs-CUDA equivalence (no CuPy kernel backend yet); the NumPy CPU pool is the workhorse. Mac has no project compute.
+
+**In flight at this push:** v2b matrix run, Phase B verdict, GPU equivalence probe. No new secrets.
