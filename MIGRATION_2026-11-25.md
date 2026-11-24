@@ -86,3 +86,27 @@ Papers: M `a22f3c4`, N1 `5a56864`, F `2bcb7d7` (plus negatives branches); older 
 
 Rules preserved: pre-registration before runs, additive branches only, no secrets, simulation labels, no causal language,
 preserve failures, recompute before quoting.
+
+---
+
+## AMENDMENT — 25 Nov 2026: power rules + Neon-free fixes (read this before the next run)
+
+**POWER RULES are absolute.** No agent may power off, shut down, reboot, stop, or restart the AutoDL
+instance, ever — not by `shutdown`/`reboot`/`poweroff`/the AutoDL stub/console/API/wrapper, and no agent
+may create, arm, edit, or re-enable any watcher, timer, cron, `at` job, or "shutdown when done" script.
+No standing rules: power is the operator's in-conversation decision, per action. If an agent thinks the
+box should go off, it says so and stops. This supersedes item 5 of "Next session first moves" above.
+Full text: `NEON_FREE_FIXES_2026-11-25.md` in this branch and `~/neon-boot/POWER_RULES_2026-11-25.md`.
+Incident: an agent-authored `shutdown_after_two.sh` fired at 00:31:04 CST and powered the box off; the
+operator recovered it; both watchers are renamed `*.DISABLED_2026-11-25` — do not reverse that.
+Forensics attribute the script and its markers to a **lingering agent from the retired window** (its
+`run_neon_fix.sh` mtime is 00:17, before this session started), not to the Lead or to Commander; that
+same worker produced the corrected DHS numbers, which is why their provenance is recorded in
+`NEON_FREE_FIXES_2026-11-25.md` and validated by an independent host-side reproduction.
+
+**Neon-free work already done and pushed** (four additive branches; see `NEON_FREE_FIXES_2026-11-25.md`):
+DHS bootstrap-multiplicity corrected run (`research/dhs-corrected-2026-11-25`), eduengine driver
+exit-reason fix (`fix/edsystem-exit-reason-2026-11-25`), e ds ystem test guards
+(`fix/edsystem-tests-pinv-2026-11-25`), test-bench F9/`inv` fix (`fix/equation-test-bench-2026-11-25`).
+Neon's own diffs (ir_pipeline, equation-suite ×2, gate-jobs tail) are still to be applied on top; where
+they overlap, his diff wins and the regression tests in these branches are the acceptance gate.
