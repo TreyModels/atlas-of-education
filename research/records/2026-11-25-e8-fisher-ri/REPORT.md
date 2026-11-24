@@ -104,7 +104,8 @@ the published result (`n_treated = 7` at `e = 0`) and no value was imputed.
 ## 5. RI results
 
 Permutation distributions and p-values (`results/e8_ri_results.json`, `results/e8_ri_summary.csv`,
-per-permutation draws in `results/e8_ri_perms.csv.gz`, 40,000 rows):
+per-permutation draws in `results/e8_ri_perms.csv.gz`, 20,000 rows — 2 families × B=10,000 permutations; `T0`/`Tpost`
+are columns):
 
 | family | statistic | `T_obs` | perm mean | perm SD | min | max | q2.5 | q50 | q97.5 | #(\|T_perm\|≥\|T_obs\|) | B_eff | **p2** | **p+** | MCSE(p2) | MCSE(p+) |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
@@ -172,6 +173,8 @@ gate as failed and registers `t*` as NOT-ESTIMABLE; auditor-supplied cycle-lengt
 /Users/treymenefee/neon-boot/venv/bin/python scripts/repro_gate.py   # gate PASS required (results/repro_gate.json)
 /Users/treymenefee/neon-boot/venv/bin/python scripts/e8_ri.py        # 2 x 10,000 permutations (~26 s)
 ```
+`acquire_wdi.py` must run first: `repro_gate.py` checks the committed panel against the gitignored raw extract
+`data/wdi_SE.PRM.ENRR/` that the acquisition step creates and hash-pins.
 Environment: host python `/Users/treymenefee/neon-boot/venv/bin/python`, numpy 2.2.6, pandas 2.3.3. Hashes:
 perms CSV `9d04926c…`, summary CSV `afb4e29c…`, panel `365bcd43…` (recorded in `results/e8_ri_results.json ->
 files`). Determinism: per-permutation seed derivation, spot-checked at permutations 0/5000/9999 per family (diff 0.0).
@@ -210,6 +213,11 @@ files`). Determinism: per-permutation seed derivation, spot-checked at permutati
 
 **Deviations from the pre-registration: none substantive.** The only additions are an extra flat summary table
 (`results/e8_ri_summary.csv`; no new statistics) and recording the reproduction-gate summary inside the RI JSON.
+
+**Documentation erratum (numeric, no effect on results).** `PRE_REGISTRATION.md` §11 forecast "40,000 rows" for the
+per-permutation CSV. That was a 2× bookkeeping error — `T0` and `Tpost` are columns of the same 20,000 permutation
+rows (2 families × B = 10,000), not extra rows; the committed `results/e8_ri_perms.csv.gz` has exactly 20,000 data
+rows. The pre-registration text is left as committed (unchanged); no statistic, p-value, draw, or label is affected.
 
 ---
 
