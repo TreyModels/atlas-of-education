@@ -121,7 +121,7 @@ Stacked standardised model, country×survey FE, construct × secondary interacti
 ### 4.2 Wanted vs actual TFR — direction right, not distinguishable
 
 **−0.0196 (SE 0.0256, p=0.44)** for the secondary × construct interaction (actual − wanted). The full-sample
-result (−0.0775, p=0.0004) — that the schooling gradient is weaker in **wanted** than in **actual** fertility —
+result (−0.0775, p=0.0004) *[pre-interaction-set; corrected **−0.1962 (0.0495)** in `CORRECTED_RUN_2026-11-25.md`]* — that the schooling gradient is weaker in **wanted** than in **actual** fertility —
 **does not replicate with precision in the 11-country subset**; the sign is the same but the CI includes 0. In the
 separate standardised models: actual TFR secondary −1.630 (0.075) vs wanted TFR −1.576 (0.087), a gap of ~0.05 SD
 vs ~0.21 SD in the full sample.
