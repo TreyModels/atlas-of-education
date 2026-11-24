@@ -42,9 +42,16 @@ X_LEVELS = [0.02, 0.03, 0.045, 0.065, 0.09, 0.13, 0.18, 0.25, 0.35, 0.50]   # va
 Y_LEVELS = [0.00, 0.02, 0.04, 0.06, 0.08, 0.10, 0.12, 0.14, 0.16, 0.18]    # primary fee: post-E8 -> pre-E8
 
 GATES = {
+    # pre-registered gate rules
     "bar": [dict(kind="bar", bar=b) for b in (3.0, 5.5, 8.0, 11.5)],
     "quota": [dict(kind="bar", bar=3.0), dict(kind="quota", share=0.55, cut0=7.0),
               dict(kind="quota", share=0.45, cut0=10.0), dict(kind="bar", bar=11.5)],
+    # EXPLORATORY (post-hoc diagnostic, declared as a deviation): the pre-registered "bar" arm turns out
+    # non-binding (gate_fail ~0.7%), so this arm makes the two high-stakes gates actually bind (~50%).
+    # calibrated on one probe run so the two high-stakes gates actually ration (gate_fail ~9%), instead of
+    # the pre-registered bars which almost nobody fails (gate_fail <=1.3%).
+    "bar_binding": [dict(kind="bar", bar=3.0), dict(kind="bar", bar=13.5),
+                    dict(kind="bar", bar=17.5), dict(kind="bar", bar=11.5)],
 }
 
 EXIT_FIELDS = ("reason", "started", "urban", "y", "cohort", "cred", "inc")
@@ -206,7 +213,7 @@ def main():
     ap.add_argument("--out", required=True, help="output directory (created; only place written)")
     ap.add_argument("--workers", type=int, default=12, help="parallel workers (box quota <=12)")
     ap.add_argument("--seeds", type=int, default=5, help="seeds per cell (0..seeds-1)")
-    ap.add_argument("--gate", default="bar", choices=["bar", "quota"], help="exam-gate rule")
+    ap.add_argument("--gate", default="bar", choices=["bar", "quota", "bar_binding"], help="exam-gate rule (bar_binding = exploratory)")
     ap.add_argument("--x-levels", default=None, help="comma list overriding X (vac0) levels")
     ap.add_argument("--y-levels", default=None, help="comma list overriding Y (fee) levels")
     ap.add_argument("--n", type=int, default=400)

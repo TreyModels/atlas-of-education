@@ -126,3 +126,28 @@ results preserved. Additive commits only on this branch; no push/force/reset. No
 command on any machine, ever. Deviation log below, filled before any affected run.
 
 **Deviation log:** (none at commit time)
+
+---
+
+### Deviation log (appended AFTER the pre-registration commit; every item is a declared deviation, none changes the pre-registered decision rule)
+
+1. **Primary grid executed on the warm AutoDL box, not CPU-local.** Per the Lead's shutdown-checklist instruction
+   (quick mode first), the 200-cell × 5-seed grid for both gates was run on `autodl-container-a8f742b5ee-292349c5`
+   with the quick-mode runner copied by server-runner (script sha256 `69b984a3…`, engine root
+   `/root/work/edsystem/engine`, 12 workers): bar 35.4 s / 500 runs, quota 42.0 s / 500 runs. The engine
+   hashes on that box equal the committed eDSYSTEM server run (record `code_sha256`), i.e. the same
+   `eduengine` code as this worktree. A local full-runner duplicate (1,000 runs) was launched 01:00–01:03
+   and **killed** when the box grid made it redundant and the Mac reached load 53; no local full-run rows
+   are reported. The pre-registered design is unchanged (same X/Y levels, 5 seeds, `formal_loop`, N=400,
+   T=70, measure_from=35, queue_on=True).
+2. **`bar_binding` exploratory arm, declared post-hoc.** After the pre-registered bar arm was seen to be
+   **non-binding** (gate_fail ≤ 1.3 % of the measured population), an extra arm with binding bar thresholds
+   (3.0 / 13.5 / 17.5 / 11.5) was calibrated on one probe run (gate_fail ≈ 9 %) and run on the same 10×10×5
+   grid. It is reported **separately as an exploratory diagnostic** and is **not** part of the pre-registered
+   decision rule (which remains bar vs quota).
+3. **Decision-metric availability.** The box quick runner does not expose `gate_pass_q_gap` or
+   `formal_hire_q_gap`; the pre-registered decision therefore uses the metrics it does expose —
+   `tut_q5_q1_gap`, `completion_lower_q_gap`, `q1_gate_fail_share` — exactly as the rule allows
+   ("tut gap OR the q1 gate/transition inequality").
+4. **Quote check A** is run on the committed multiverse baseline combo 0 with the fixed exit read and a
+   5-seed spread; "exam gates" = reason 2 (`gate_fail`).

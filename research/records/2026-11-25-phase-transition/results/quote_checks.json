@@ -1,0 +1,248 @@
+{
+ "label": "SIMULATION ONLY - reproduction checks; no causal/empirical claims",
+ "preregistration": "PREREGISTRATION_PHASE_SWEEP.md (commit 408aa3e) \u00a75",
+ "engine_root": "/Users/treymenefee/neon-boot/wt2/phase/engine",
+ "committed_raw": "/Users/treymenefee/neon-boot/wt2/phase/research/records/2026-11-25-masseng-edsystem/results_multiverse.json",
+ "committed_raw_sha256_prefix": "004173aa78482bca",
+ "A": {
+  "combo": [
+   "cash_only",
+   "fixed_budget",
+   "public_only",
+   "bar",
+   "queue_floors",
+   "low_penalty"
+  ],
+  "seed": 0,
+  "N": 400,
+  "T": 70,
+  "population_all_cohorts": {
+   "n": 28000,
+   "liquidity": 0.3571785714285714,
+   "gate_fail": 0.062035714285714284,
+   "choice": 0.16825,
+   "never_enrolled": 0.028035714285714285,
+   "no_seat": 0.0,
+   "not_admitted": 0.0,
+   "finished": 0.2315,
+   "censored": 0.153
+  },
+  "population_measured_cohorts": {
+   "n": 14000,
+   "liquidity": 0.31492857142857145,
+   "gate_fail": 0.05657142857142857,
+   "choice": 0.1,
+   "never_enrolled": 0.032,
+   "no_seat": 0.0,
+   "not_admitted": 0.0,
+   "finished": 0.1905,
+   "censored": 0.306
+  },
+  "q1_all_cohorts": {
+   "n": 5600,
+   "liquidity": 0.6966071428571429,
+   "gate_fail": 0.011964285714285714,
+   "choice": 0.09553571428571428,
+   "never_enrolled": 0.14017857142857143,
+   "no_seat": 0.0,
+   "not_admitted": 0.0,
+   "finished": 0.0,
+   "censored": 0.055714285714285716
+  },
+  "q1_measured_cohorts": {
+   "n": 2863,
+   "liquidity": 0.6154383513796716,
+   "gate_fail": 0.011177086971707998,
+   "choice": 0.10792874607055536,
+   "never_enrolled": 0.15647921760391198,
+   "no_seat": 0.0,
+   "not_admitted": 0.0,
+   "finished": 0.0,
+   "censored": 0.10897659797415299
+  },
+  "liquidity_share_among_exited_started": 0.43613449042780517,
+  "overall_liquidity_share_all": 0.3571785714285714,
+  "overall_gate_fail_share_all": 0.062035714285714284
+ },
+ "B": {
+  "metric": "skill_premium",
+  "arm": "competitive",
+  "n_rows": 720,
+  "eta2_by_axis": {
+   "afford": {
+    "eta2": 0.402582044257164,
+    "n": 720,
+    "groups": {
+     "cash_only": 1.951460548301466,
+     "credit_constant": 1.730921053097928,
+     "credit_poverty": 1.5663191120558888
+    }
+   },
+   "supply": {
+    "eta2": 0.0009599502301605367,
+    "n": 720,
+    "groups": {
+     "fixed_budget": 1.7572717386675607,
+     "fiscal_loop": 1.7418620703026277
+    }
+   },
+   "learning": {
+    "eta2": 0.021444209519778983,
+    "n": 720,
+    "groups": {
+     "public_only": 1.795452094405049,
+     "plus_private": 1.7468756140979147,
+     "plus_private_tutoring": 1.7063730049523191
+    }
+   },
+   "gates": {
+    "eta2": 0.4242470382136507,
+    "n": 720,
+    "groups": {
+     "bar": 1.5875917705983797,
+     "quota": 1.9115420383718091
+    }
+   },
+   "jobs": {
+    "eta2": 0.0,
+    "n": 720,
+    "groups": {
+     "competitive": 1.7495669044850943
+    }
+   },
+   "rural": {
+    "eta2": 0.10304237786765123,
+    "n": 720,
+    "groups": {
+     "low_penalty": 1.6697404437936654,
+     "high_penalty": 1.8293933651765235
+    }
+   }
+  },
+  "quoted_value": 0.424,
+  "computed_gates_eta2": 0.4242470382136507
+ },
+ "C": {
+  "metric": "formal_rate",
+  "arm": "queue_floors",
+  "n_rows": 720,
+  "eta2_by_axis": {
+   "afford": {
+    "eta2": 0.00020229887550595252,
+    "n": 720,
+    "groups": {
+     "cash_only": 0.08417017792438979,
+     "credit_constant": 0.08411097140606545,
+     "credit_poverty": 0.08397640129155076
+    }
+   },
+   "supply": {
+    "eta2": 0.0010462296763679802,
+    "n": 720,
+    "groups": {
+     "fixed_budget": 0.08390146589595962,
+     "fiscal_loop": 0.08427023451871103
+    }
+   },
+   "learning": {
+    "eta2": 0.7782854302424091,
+    "n": 720,
+    "groups": {
+     "public_only": 0.08067497618982354,
+     "plus_private": 0.08038662146736443,
+     "plus_private_tutoring": 0.09119595296481801
+    }
+   },
+   "gates": {
+    "eta2": 0.03126377918679037,
+    "n": 720,
+    "groups": {
+     "bar": 0.08307791831827116,
+     "quota": 0.0850937820963995
+    }
+   },
+   "jobs": {
+    "eta2": 0.0,
+    "n": 720,
+    "groups": {
+     "queue_floors": 0.08408585020733533
+    }
+   },
+   "rural": {
+    "eta2": 0.02833225005027783,
+    "n": 720,
+    "groups": {
+     "low_penalty": 0.08504536346850869,
+     "high_penalty": 0.08312633694616198
+    }
+   }
+  },
+  "quoted_value": 0.778,
+  "computed_learning_eta2": 0.7782854302424091
+ },
+ "reproducibility_reruns": [
+  {
+   "combo_index": 37,
+   "seed": 0,
+   "metric": "skill_premium",
+   "committed": null,
+   "rerun": null
+  },
+  {
+   "combo_index": 37,
+   "seed": 1,
+   "metric": "skill_premium",
+   "committed": null,
+   "rerun": null
+  },
+  {
+   "combo_index": 71,
+   "seed": 0,
+   "metric": "skill_premium",
+   "committed": 1.9731303827700006,
+   "rerun": 1.9731303827700006,
+   "abs_diff": 0.0
+  },
+  {
+   "combo_index": 71,
+   "seed": 1,
+   "metric": "skill_premium",
+   "committed": 1.9609392913213752,
+   "rerun": 1.9609392913213752,
+   "abs_diff": 0.0
+  },
+  {
+   "combo_index": 0,
+   "seed": 0,
+   "metric": "formal_rate",
+   "committed": 0.08030628033302345,
+   "rerun": 0.08030628033302345,
+   "abs_diff": 0.0
+  },
+  {
+   "combo_index": 0,
+   "seed": 1,
+   "metric": "formal_rate",
+   "committed": 0.07968603218377521,
+   "rerun": 0.07968603218377521,
+   "abs_diff": 0.0
+  },
+  {
+   "combo_index": 36,
+   "seed": 0,
+   "metric": "formal_rate",
+   "committed": 0.08051510000655845,
+   "rerun": 0.08051510000655845,
+   "abs_diff": 0.0
+  },
+  {
+   "combo_index": 36,
+   "seed": 1,
+   "metric": "formal_rate",
+   "committed": 0.08029968603866118,
+   "rerun": 0.08029968603866118,
+   "abs_diff": 0.0
+  }
+ ],
+ "max_abs_diff": 0.0
+}
