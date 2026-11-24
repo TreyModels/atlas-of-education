@@ -1,0 +1,58 @@
+# Source log — DHS acquisition probe, 2026-11-24 (Asia/Shanghai, UTC+8)
+# Machine: Trey's Mac (worktree /Users/treymenefee/atlas-work-2026-11-23/dhs)
+# Method: plain HTTP GET of PUBLIC pages and PUBLIC API endpoints only.
+# NO login was attempted. NO credentials exist in this repo, this log, or the session.
+# No gated file was downloaded, mirrored, or requested. Nothing here bypasses access control.
+
+## 1. Public pages fetched (HTTP status, what it establishes)
+200 https://dhsprogram.com/data/Access-Instructions.cfm        -> registration/approval flow text (24-48h, by country)
+200 https://dhsprogram.com/data/new-user-registration.cfm      -> registration form fields; no closure notice on page
+200 https://dhsprogram.com/data/Terms-of-Use.cfm               -> Terms of Use / de facto data-use agreement
+200 https://dhsprogram.com/data/File-Types-and-Names.cfm       -> file naming convention CCDDVV[FF]DS.ZIP + version/format codes
+200 https://dhsprogram.com/data/dataset/Malawi_Standard-DHS_2015.cfm -> file listing visible, download gated ("please login here")
+200 https://dhsprogram.com/data/Model-Datasets.cfm             -> model (synthetic) files, no registration needed
+200 https://dhsprogram.com/data/Download-Model-Datasets.cfm    -> model file list (zzir62*); POST download requires form session
+200 https://dhsprogram.com/data/Data-Tools-and-Manuals.cfm     -> Recode Manual / Guide to DHS Statistics links
+200 https://dhsprogram.com/data/Data-Variables-and-Definitions.cfm
+200 https://dhsprogram.com/data/dataset_admin/login_main.cfm   -> login page; archive@dhsprogram.com contact; re-distribution warning
+200 https://dhsprogram.com/Who-We-Are/News-about-the-DHS-Program.cfm -> funding FAQ (USAID ended Feb 2025; Gates grant Jul 2025)
+200 https://dhsprogram.com/data/Guide-to-DHS-Statistics/index.htm -> Guide to DHS Statistics (DHS-8)
+200 https://dhsprogram.com/pubs/pdf/DHSG4/Recode6_DHS_22March2013_DHSG4.pdf  (1,542,297 bytes)
+200 https://dhsprogram.com/pubs/pdf/DHSG4/Recode7_DHS_10Sep2018_DHSG4.pdf  (1,300,131 bytes)
+200 https://www.statcompiler.com/en/                            -> STATcompiler public
+403 https://ipums.org/projects/ipums-dhs                       -> bot-blocked at ipums.org (not an access finding)
+200 https://www.idhsdata.org/idhs/register.shtml                -> IPUMS-DHS registration is managed by The DHS Program
+200 https://www.idhsdata.org/idhs/terms.shtml                   -> IPUMS-DHS defers to DHS terms of use
+
+## 2. Public API endpoints used (no key, no credentials)
+200 GET https://api.dhsprogram.com/rest/dhs/indicators?f=json&perpage=1&returnFields=IndicatorId,Label
+        -> RecordCount 4655 indicators
+200 GET https://api.dhsprogram.com/rest/dhs/surveys?f=json&perpage=1000&returnFields=SurveyId,CountryName,SurveyYear,SurveyType,SurveyStatus,NumberOfWomen,NumberOfSamplePoints,FieldworkStart,FieldworkEnd,UniverseOfWomen,PublicationDate,ReleaseDate
+        -> RecordCount 377 surveys
+200 GET https://api.dhsprogram.com/rest/dhs/datasets?returnFields=FileName,CountryName,SurveyYear,SurveyId,FileType,FileFormat,FileSize,DatasetType&f=json&perpage=1000&page=1..16
+        -> 15518 dataset file records; 2005 Individual Recode records; 2000 unique IR filenames; 85 countries
+200 GET https://api.dhsprogram.com/rest/dhs/datasets?countryIds=MW&returnFields=...&perpage=1000
+        -> 403 Malawi records incl. 45 IR records
+200 GET https://api.dhsprogram.com/rest/dhs/data?indicatorIds=FE_FRTY_W_MNC&breakdown=background&countryIds=MW,ET,UG,LS,TZ,KE,MZ,GH,KH,PH,VN,BJ,NM,SZ&f=json&perpage=5000
+        -> 2550 records; 318 Education cells (women 40-49) used for the cell-size risk table
+        (breakdown=background is required; breakdown=ALL returns age groups only)
+NOTE: the API requires no key in these tests. Its Terms & Conditions page is served by a JS app at
+      https://api.dhsprogram.com/#/terms.cfm and could not be read mechanically -> UNVERIFIED (see plan section 5).
+
+## 3. Gating tests (prove the wall, do not breach it)
+- Dataset landing pages show the FULL file list and sizes to anonymous users; the only access link is
+  /data/dataset_admin/login_main.cfm ("If you are a registered user, please login here").
+- Prior probe on branch research/dhs-micro-2026-11-23 (commit 31ded00) recorded: direct flat-file URLs
+  (/data/dataset/AFIR66FL.ZIP, /data/AFIR66FL.ZIP) 404; IPUMS API 403 without key; no DHS recodes on
+  Harvard Dataverse/Zenodo. Quoted from that committed record, not re-run here.
+- Not attempted here: registration, login, any download of a gated IR/BR/HR/KR/PR file.
+
+## 4. Third-party status statements (external, cited as sources)
+- IPUMS blog, 2025-09-03: "DHS Data Again Available to New Users" — DHS announced "We are now open for
+  new registrations"; Gates Foundation 3-year grant supports dhsprogram.com + STATcompiler + API + SDR.
+  https://blog.popdata.org/dhs-data-again-available-to-new-users/
+- DC Sociological Society news, 2025-08-16: DHS "is again reviewing new user applications and requests for
+  expanded access"; USAID support ended Feb 2025; ICF interim funding; Gates grant Jul 2025.
+  https://www.dcsociologicalsociety.org/news/13532577
+- These are third-party reports of DHS statements; the DHS FAQ page confirms the funding facts but does not
+  print the "open for new registrations" sentence on the pages we could fetch (UNVERIFIED at source).
