@@ -1,0 +1,7 @@
+=== X1 LAUNCH 2026-11-24T13:01:10Z ===
+cmd: PYTHONPATH=/root/work/masseng-codex-deps /root/miniconda3/bin/python run_x1_x3.py --experiment x1 --workers 20 --out results_x1_EXPLORATORY.json > x1.log 2>&1
+=== X3 LAUNCH 2026-11-24T13:03:10Z ===
+cmd: PYTHONPATH=/root/work/masseng-codex-deps /root/miniconda3/bin/python run_x1_x3.py --experiment x3 --workers 20 --out results_x3_EXPLORATORY.json > x3.log 2>&1
+=== X1 CORRECTED LAUNCH 2026-11-24T13:05:35Z ===
+NOTE: run 1 (results_x1_EXPLORATORY.json) INVALID for primary analysis (matched arms not exposure-matched); preserved as results_x1_v1_INVALID_... ; corrected run uses year-48 revert events.
+cmd: PYTHONPATH=/root/work/masseng-codex-deps /root/miniconda3/bin/python run_x1_x3.py --experiment x1 --workers 20 --out results_x1_EXPLORATORY_corrected.json > x1_corrected.log 2>&1
