@@ -77,6 +77,11 @@ In other words, matching on 1980 similarity does **not** produce larger 1990-201
 in this sample. This is the central honest null of Q2: the pair benchmark describes paths, but it does not show
 that similar starts produce unusually divergent outcomes. Source: `results/audit/audit_random_yardstick.json`.
 
+**CORRECTION (see `ERRATUM.md` §A):** the "observed" 0.82 / 0.77 in the bullets above are medians over all
+5,460 unordered pairs, not over the 52 matched pairs; the matched-pair medians are 0.620 / 0.2375, against which
+the shares are **96.1% / 100.0%** — matched pairs are *less* divergent than random pairing. The "central honest
+null" sentence needs the corrected wording. Original text left visible.
+
 ### 4.4 Farming employment where dated
 `emp_agri.json` begins in **1991**; 1990 is absent. Per the pre-registration no earlier values were invented and
 no backcasting was done. For the case countries, the 1991→2010 changes in the **modelled** agricultural employment

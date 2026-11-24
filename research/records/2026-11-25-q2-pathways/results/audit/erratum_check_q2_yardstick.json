@@ -1,0 +1,37 @@
+{
+ "question": "Does the committed random-yardstick comparison use the matched-pair observed medians?",
+ "answer": "NO \u2014 the committed 'observed' statistics (0.820 / 0.7715) are medians over all 5,460 unordered pairs of the 105 countries, while the random draws use their 52 pairs. The matched-pair medians are 0.620 / 0.2375; against those the shares are 96.1% / 100.0%, i.e. the matched pairs are LESS divergent than random pairing (direction of the paper's point survives; the magnitude and the 'central honest null' sentence do not).",
+ "seed": 71201,
+ "n_draws": 1000,
+ "n_countries": 105,
+ "all_pairs_observed": {
+  "mean_years_schooling": 0.82,
+  "tfr_observed_1950plus": 0.7715
+ },
+ "matched_pair_observed": {
+  "mean_years_schooling": 0.62,
+  "tfr_observed_1950plus": 0.2375
+ },
+ "random_draw_median_of_medians": {
+  "schooling": 0.825,
+  "tfr": 0.7728
+ },
+ "share_random_median_ge_all_pairs_observed": {
+  "schooling": 0.524,
+  "tfr": 0.503
+ },
+ "share_random_median_ge_matched_pair_observed": {
+  "schooling": 0.961,
+  "tfr": 1.0
+ },
+ "committed_json": {
+  "observed": {
+   "median_schooling_gap": 0.8200000000000003,
+   "median_tfr_gap": 0.7714999999999999,
+   "n_countries": 105
+  },
+  "share_random_median_schooling_ge_observed": 0.524,
+  "share_random_median_tfr_ge_observed": 0.503
+ },
+ "reproduction": "python3 scripts/erratum_check_q2_yardstick.py (this record; reads data/long_run_panel.csv and results/audit/pairs_primary.csv; same algorithm and seed as scripts/q2_audit.py)"
+}
