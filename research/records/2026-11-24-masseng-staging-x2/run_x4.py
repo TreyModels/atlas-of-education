@@ -160,8 +160,9 @@ def main():
         raise FileExistsError(out_path)
     t0 = time.time()
     isos, data = load_panel()
-    # deterministic split: national ISO3 codes with any lsc observation, sorted, every third validation
-    lsc_isos = sorted([i for i in isos if any(np.isfinite(v) for k, v in data[i].items() if k.startswith("lsc_"))])
+    # deterministic split: the national ISO3 codes with any lsc observation (all panel rows, sorted),
+    # every third validation. The panel is built from the lsc series' national ISO3 set.
+    lsc_isos = sorted(isos)
     split = {iso: (n % 3 == 0) for n, iso in enumerate(lsc_isos)}
     rng = np.random.default_rng(BOOT_SEED)
     specs = [
