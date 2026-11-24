@@ -59,7 +59,7 @@ def outcomes(d: dict) -> dict:
     learning = np.asarray(d["learning"], float)
     admitted = np.asarray(d["admitted"], bool)
     state = np.asarray(d["state"], int)
-    formal = np.asarray(d["formal"], bool)
+    formal = np.asarray(d["formal"], float)      # expected formal-work share per cell (fractional mass, in [0,1])
     pay = np.asarray(d["pay"], float)
     queue = np.asarray(d["queue_years"], float)
     hidden_income = np.asarray(d["hidden_income"], float)
