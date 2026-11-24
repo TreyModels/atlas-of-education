@@ -23,6 +23,7 @@ no FAIL; `~/neon-boot/QA_GATE_2026-11-25.md`).
 | `research/bulge-arrival-2026-11-25` | `1b91a71` | E6/E8 packet, t* NOT-ESTIMABLE |
 | `research/bulge-micro-dhs-2026-11-25` | `230521b` | DHS micro data gate (0/48), LSMS not held |
 | `research/masseng-gate-jobs-neon-2026-11-25` | `9d79df1` | v6 fixes + tests (fail-on-base pattern) |
+| `research/masseng-tutoring-neon-2026-11-25` | `9df03c2` | **last gap closed**: `_record()` spend double-count fixed (single-counted flows; learning-only `edu_share_hh` 6.043/7.844 → 4.971/6.625; financing arm unchanged), 1940–2024 label corrected to sim-1940–2024 / observed-1960–2024 / fit 1971–1995·1996–2024, **MNL vs Bray left OPEN and declared** (gap −0.30 logit, claim untouched; needs owner re-fit decision). Fail-on-base 0/3 → 3/3. |
 | `fix/edsystem-exit-reason-2026-11-25` | `4679ddb` | e.exits driver fix + retraction |
 | `fix/edsystem-tests-pinv-2026-11-25` | `3e35ff0` | rank/stratum guards, 45/72 + 28/72 |
 | `fix/equation-test-bench-2026-11-25` | `2c575d9` | F9 lag join, singular control |
@@ -59,6 +60,7 @@ no FAIL; `~/neon-boot/QA_GATE_2026-11-25.md`).
   finished*, executed via the lease protocol in `~/neon-boot/BOX_LEASE.md`.
 
 ## Open / next
+- **masseng-tutoring lane**: `research/masseng-tutoring-neon-2026-11-25` @ `9df03c2` — spend double-count and window-label fixed with fail-on-base tests (base `b9d68c1` 0/3, branch 3/3, independently reproduced). One **deliberately OPEN** deviation: MNL vs Bray mapping (declared `BRAY_CHECK_MAPPING`/`PORT_MAPPING`, measured −0.30 logit gap; closing needs a re-fit in port spec or a claim amendment — **owner decision**, not an agent decision).
 - Paper drafting continues (no empirical work needed): finish #1–#3, then the Paper #1/#2 sketch with the
   auditor ("Zero Universal Laws, 32 Regimes").
 - DHS individual-level (IR) leg: 0/48 microdata held → needs a data-access request.
