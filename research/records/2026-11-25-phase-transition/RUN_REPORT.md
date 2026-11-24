@@ -11,6 +11,28 @@ eDSYSTEM server run (`core 2b7484a9…`, `labour bd3eaae6…`, `schools 9b079280
 `sdg4 5ce05c8b…`, `worlds 2e9ec71a…`). Quick runner sha256 `69b984a3…` (box); exploratory binding
 variant `e9a8a9bd…` (local). Branch `research/phase-transition-2026-11-25`.
 
+## REPRODUCTION_STATUS (QA gate; added after the Lead's 40-seed re-run)
+
+- **B — "gates drive 42.4 % of variance in `skill_premium`": REPRODUCED ✓.**
+  One-way η²(gates) on `skill_premium` = **42.42 %** (`0.424247`), competitive arm, n = 720 rows of the
+  committed raw grid.
+- **C — "learning drives 77.8 % of `formal_rate`": REPRODUCED ✓.**
+  One-way η²(learning) on `formal_rate` = **77.83 %** (`0.778285`), queue arm, n = 720 rows.
+- **A — "poor households exit mostly from liquidity (70.6 %), not exam gates (0.8 %)": PARTIAL, not exact.**
+  q1 liquidity = **68.99 % (40-seed mean)** / **69.66 % (seed 0)** vs the quoted **70.6 %**. The 40-seed
+  value was verified independently from the pulled fixed-40 decomposition
+  (`pulled/engine-fixed-40seeds/decomp_fixed40.json`, combo 0, q1: `liquidity = 0.689866`). The quoted
+  **0.8 % q1 gate_fail is folded into `other_terminal`** in the multiverse decomposition (the driver
+  buckets reasons 2/3/5/6 together; 40-seed combo-0 q1 `other_terminal` = **1.08 %**), so it is **not
+  directly comparable**; a direct reason-code read on the fixed driver gives **1.20 % (seed 0)** and
+  **1.14 ± 0.18 % across 5 seeds**. The ordering "mostly liquidity, not exam gates" reproduces; the
+  exact decimals do not.
+- **Combo-0 exit partition reproduces bit-exactly**: censored 15.3 %, liquidity 35.7 %, choice 16.8 %,
+  never 2.8 %, failed 6.2 %, finished 23.1 %, rationed 0.0 % — identical to the committed RUN_REPORT §3.8
+  spot-check.
+- **8/8 independent re-run cells are bit-exact** (max abs diff 0.0) between this Mac
+  (py3.10.2 / np2.2.6) and the committed server run (py3.10.8 / np1.24.1).
+
 ## 1. What was run
 
 | arm | grid | seeds | runs | host | wall | file sha256 |
@@ -144,15 +166,40 @@ the quota policy, not an emergent equifinality; the informative part is that tut
 is absorbed by competition, not by attainment. (The Lead's message calls this "Δtut gap"; in the code it
 is `tut_rate`, the uptake rate. The Q5−Q1 gap difference for these pairs is 7–9 pp.)
 
-**Dense-grid decision.** The 10×10 quick grid is too coarse to test the candidate boundary: the jump sits
-across a single step whose `vac0` changes by 43 %, and the X levels are not uniform. A 20×20 × 20-seed
-grid is the right instrument and is **already pre-registered by the equifinality lane**
-(`research/equifinality-phase-2026-11-25`, worktree `wt3/phase`, commit `078cc13`, 16,000 runs
-20×20×{bar,quota}×20 seeds). **I did not start a second grid**; coordination posted to the shared board
-(`domus_board_post`, to `deepseek`) with the three things that lane should preserve: (i) the bar arm is
-non-binding (gate_fail ≤ 1.3 %), so report it and add a binding-bar variant; (ii) quota completion is
-pinned by the seat share, so equifinality there is partly accounting; (iii) densify X near
-`x_vac_per_gate_pass` 0.5–1.6 and around the inverted-U peak (x ≈ 0.3), and normalise J by seed SD.
+**Dense-grid decision (superseded by the live run, see §3c).** The 10×10 quick grid is too coarse to test
+the candidate boundary: the jump sits across a single step whose `vac0` changes by 43 %, and the X levels
+are not uniform. A 20×20 × 20-seed grid is the right instrument. **I did not start a second grid.**
+Coordination posted to the shared board (`domus_board_post`, to `deepseek`) with the things the 20×20
+lane should preserve: (i) the bar arm is non-binding (gate_fail ≤ 1.3 %), so report it and add a
+binding-bar variant; (ii) quota completion is pinned by the seat share, so equifinality there is partly
+accounting; (iii) densify X near `x_vac_per_gate_pass` 0.5–1.6 and around the inverted-U peak (x ≈ 0.3),
+and normalise J by seed SD.
+
+### 3c. Dense 20×20 resolution test — Lead's live run (this record does NOT claim its verdict)
+
+The Lead has pre-registered and launched the dense resolution test:
+`research/phase-transition-dense-2026-11-25` @ **`8b0cc88`** (committed before launch) — 20×20
+(X `vac0` geometric 0.02→0.50, 20 levels; Y `fee_primary` 0.00→0.19 step 0.01) × gates `bar`/`quota`
+× 20 seeds = 16,000 runs. The **bar arm (8,000 runs) is running on the box under the Lead's claim**; the
+**quota arm** is taken by `deepseek` after the Lead's release. This is a **resolution test, not a re-test
+after seeing a positive**.
+
+- **What it tests:** the quick-grid quota candidate on the vacancy axis — `vac0` .35→.50
+  (`x_vac_per_gate_pass` .83→1.18), Δ gap −.123, **J = 13.69**, pre-registered sharpness **8.72**,
+  step **ΔR² .392**, **PROVISIONAL on 5 seeds and one coarse grid step**. The dense grid resolves that
+  interval into ~4 geometric steps (.30→.36→.42→.50), so it can confirm or dissolve the jump.
+- **This record keeps the quick-grid verdict intact** — ABSENT (pre-registered bar signature) /
+  PARTIAL (equifinality) / PROVISIONAL (quota vacancy-axis candidate) — and **does not claim any dense
+  verdict**. When the Lead posts the dense statistics, they are to be reconciled here as a separate
+  section, with the quota candidate preserved as provisional whatever the dense result.
+- **Flagged analysis-definition risk (raised to the Lead):** the dense pre-registration's statistics
+  section describes the *Lead's* fee-axis, level-normalised sharpness (`|Δ| / median level`,
+  threshold ≥ 2), whereas `408aa3e` defines `J = |Δ| / median(seed SD)` over **both** axes with
+  `sharpness = J_max / median(J_edge)`. Under the level-normalised fee-axis definition the ≥ 2 threshold
+  is effectively unreachable (0.01–0.29 observed on both quick grids), and the candidate boundary is on
+  the **X** axis that definition does not scan. The dense results must therefore be analysed with the
+  `408aa3e` statistic (applied symmetrically to quick and dense); any post-hoc analysis change must be
+  declared as a deviation before the dense numbers are read.
 
 ## 4. Auditor's three quoted numbers — checked against the code actually run
 
@@ -163,7 +210,7 @@ re-run cells. 8/8 re-run cells are **bit-identical** to the committed values (ma
 
 | quote | my value | verdict |
 |---|---|---|
-| "poor households exit mostly from liquidity (70.6 %), not exam gates (0.8 %)" | baseline combo 0 (cash_only/fixed_budget/public_only/bar/queue/low_penalty), seed 0: q1 **liquidity 69.66 %**, q1 **gate_fail 1.20 %**; across seeds 0–4: **69.58 ± 0.76 %** and **1.14 ± 0.18 %** (max q1 liquidity at seed 2 = 70.50 %; min gate_fail = 0.98 %) | **reproduces in substance** (direction/order of magnitude exact; the 0.8 % point sits just below my seed range, 70.6 % matches my seed-2 draw). The record's own overall combo-0 decomposition reproduces **exactly**: censored 15.3 %, liquidity 35.7 %, choice 16.8 %, never 2.8 %, failed 6.2 %, finished 23.1 %, rationed 0.0 % |
+| "poor households exit mostly from liquidity (70.6 %), not exam gates (0.8 %)" | baseline combo 0 (cash_only/fixed_budget/public_only/bar/queue/low_penalty), seed 0: q1 **liquidity 69.66 %**, q1 **gate_fail 1.20 %**; 40-seed q1 liquidity **68.99 %** (verified from `decomp_fixed40.json`); across seeds 0–4: **69.58 ± 0.76 %** and **1.14 ± 0.18 %** | **PARTIAL — see `REPRODUCTION_STATUS` above.** The ordering reproduces; 70.6 % vs 68.99 % (40-seed mean) / 69.66 % (seed 0). The quoted 0.8 % q1 gate_fail sits inside `other_terminal` (1.08 % at 40 seeds) in the multiverse decomposition, so it is not directly comparable. The record's own overall combo-0 partition reproduces **exactly**: censored 15.3 %, liquidity 35.7 %, choice 16.8 %, never 2.8 %, failed 6.2 %, finished 23.1 %, rationed 0.0 % |
 | "gates drive 42.4 % of variance in `skill_premium`" | one-way η²(gates) on `skill_premium`, competitive arm, n=720: **0.42425** | **reproduces** (42.4 %) |
 | "learning drives 77.8 % of `formal_rate`" | one-way η²(learning) on `formal_rate`, queue arm, n=720: **0.77829** | **reproduces** (77.8 %) |
 
