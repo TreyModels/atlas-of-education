@@ -1,0 +1,26 @@
+{
+ "label": "SIMULATION ONLY - eduengine toy worlds; illustrative parameters; no causal/empirical claims",
+ "prereg": "research/records/2026-11-25-equifinality-phase/PRE_REGISTRATION.md (commit 078cc13)",
+ "analysis_script": "/Users/treymenefee/neon-boot/wt3/phase/research/records/2026-11-25-equifinality-phase/analyze_equifinality.py",
+ "analysis_script_sha256": "63c960dcaeb4503ed2a62ce3005d4f895713cc81d7b39b3ba1b82ec8d7795e12",
+ "inputs": {
+  "run_json": "/Users/treymenefee/neon-boot/wt3/phase/research/records/2026-11-25-equifinality-phase/data/phase_sweep_full_summary.json",
+  "run_json_sha256": "285fa796c5d7713c711655805a75a08459d7b6f812e106267cbe7b1f12ea794c",
+  "runs_csv": "/Users/treymenefee/neon-boot/wt3/phase/research/records/2026-11-25-equifinality-phase/data/phase_sweep_full_runs.csv",
+  "runs_csv_sha256": "3a6ef24cbee13b840be09043cc2c9fa7fb19d8fa4d6ded79ece4ac4c0449efb5",
+  "analysis_script_sha256": "63c960dcaeb4503ed2a62ce3005d4f895713cc81d7b39b3ba1b82ec8d7795e12"
+ },
+ "outputs": [
+  "analysis_manifest.json",
+  "analysis_stdout.json",
+  "equifinality_completion_lower_pairs.csv",
+  "equifinality_null.json",
+  "equifinality_pairs.csv",
+  "equifinality_report.json",
+  "equifinality_top50.csv",
+  "equifinality_top50_crossgate.csv",
+  "phase_sweep_full_runs.csv",
+  "phase_sweep_full_summary.csv",
+  "phase_sweep_full_summary.json"
+ ]
+}

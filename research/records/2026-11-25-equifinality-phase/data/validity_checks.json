@@ -1,0 +1,44 @@
+{
+ "label": "SIMULATION ONLY - eduengine toy worlds; illustrative parameters; no causal/empirical claims",
+ "inputs": {
+  "runs_csv": "/Users/treymenefee/neon-boot/wt3/phase/research/records/2026-11-25-equifinality-phase/data/phase_sweep_full_runs.csv",
+  "summary_json": "/Users/treymenefee/neon-boot/wt3/phase/research/records/2026-11-25-equifinality-phase/data/phase_sweep_full_summary.json",
+  "repro_csv": "/Users/treymenefee/neon-boot/wt3/phase/research/records/2026-11-25-equifinality-phase/data/repro_subset_runs.csv"
+ },
+ "exit_partition": {
+  "n_rows": 16000,
+  "max_abs_deviation_from_1": 2.000000165480742e-09,
+  "tolerance": 1e-06,
+  "passed": true,
+  "worst_row": {
+   "gate": "bar",
+   "x_index": "0",
+   "y_index": "12",
+   "seed": "15",
+   "sum": 1.0000000020000002
+  }
+ },
+ "cell_means": {
+  "n_cells": 800,
+  "n_values_compared": 2400,
+  "max_abs_diff": 0.0,
+  "tolerance": 1e-06,
+  "passed": true,
+  "worst": null
+ },
+ "ger_sim_definition": {
+  "max_abs_diff_from_1_minus_never_share": 1.1102230246251565e-16,
+  "tolerance": 1e-08,
+  "passed": true
+ },
+ "reproducibility": {
+  "n_repro_rows": 360,
+  "n_matched": 360,
+  "n_field_comparisons": 18360,
+  "n_mismatches": 0,
+  "max_abs_diff": 0.0,
+  "passed": true,
+  "first_mismatches": []
+ },
+ "all_passed": true
+}

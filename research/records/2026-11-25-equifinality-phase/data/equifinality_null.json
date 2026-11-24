@@ -1,0 +1,64 @@
+{
+ "label": "SIMULATION ONLY - eduengine toy worlds; illustrative parameters; no causal/empirical claims",
+ "n_perms": 1000,
+ "within_bar": {
+  "observed": 161.0,
+  "null_mean": 170.224,
+  "null_sd": 14.870539901326952,
+  "null_p2_5": 142.0,
+  "null_p50": 170.0,
+  "null_p97_5": 199.0,
+  "null_min": 119.0,
+  "null_max": 226.0,
+  "ratio_obs_over_nullmean": 0.9458125763699596,
+  "p_one_sided": 0.7382617382617382
+ },
+ "within_quota": {
+  "observed": 15.0,
+  "null_mean": 20.299,
+  "null_sd": 4.4559459662853245,
+  "null_p2_5": 12.0,
+  "null_p50": 20.0,
+  "null_p97_5": 29.0,
+  "null_min": 8.0,
+  "null_max": 38.0,
+  "ratio_obs_over_nullmean": 0.7389526577663924,
+  "p_one_sided": 0.9000999000999002
+ },
+ "within_gate_combined": {
+  "observed": 176.0,
+  "null_mean": 190.523,
+  "null_sd": 15.731336432291629,
+  "null_p2_5": 161.0,
+  "null_p50": 191.0,
+  "null_p97_5": 221.02499999999998,
+  "null_min": 139.0,
+  "null_max": 247.0,
+  "ratio_obs_over_nullmean": 0.9237729827894795,
+  "p_one_sided": 0.8381618381618382
+ },
+ "cross": {
+  "observed": 4132.0,
+  "null_mean": 3908.133,
+  "null_sd": 60.94415066682364,
+  "null_p2_5": 3792.0,
+  "null_p50": 3908.0,
+  "null_p97_5": 4030.025,
+  "null_min": 3700.0,
+  "null_max": 4085.0,
+  "ratio_obs_over_nullmean": 1.0572823391629713,
+  "p_one_sided": 0.000999000999000999
+ },
+ "all_pairs": {
+  "observed": 4308.0,
+  "null_mean": 4098.656,
+  "null_sd": 63.57765159064765,
+  "null_p2_5": 3976.975,
+  "null_p50": 4097.0,
+  "null_p97_5": 4229.025,
+  "null_min": 3868.0,
+  "null_max": 4296.0,
+  "ratio_obs_over_nullmean": 1.0510762552407424,
+  "p_one_sided": 0.000999000999000999
+ }
+}
