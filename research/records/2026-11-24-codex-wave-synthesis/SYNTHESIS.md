@@ -156,6 +156,46 @@ pair-benchmark counts (105 baseline-complete / 52 pairs / 1 unpaired / 52 with b
 (§6 R7); the corrected yardstick is **RECOMPUTED-AT-ERRATUM** (§6 R10). No claim about similar starts causing
 divergent paths is supportable, and none is made.
 
+### 2.5 The full-system toy multiverse: structural margins dominate, tutoring is second-order (SIMULATION)
+
+A separate pre-registered exercise widens the toy `eduengine` model from the staging question to a full massification
+system: a 1,440-run multiverse (144 equation-choice combinations × 10 seeds; N=400 children/cohort, T=70, cohorts
+measured from year 35) varying household affordability, supply/funding, learning/supply configuration, gates, labour
+regime and rural structure, with independent tests (cluster-robust OLS with seed fixed effects, 144 design-cell
+clusters, Holm correction across 9 outcomes, stratum sign checks; `research/masseng-edsystem-2026-11-25` @
+`b7108da`, pre-registration `3679f2d`; `research/edsystem-tests-2026-11-25` @ `aadbbb4`). **It is a toy,
+uncalibrated simulation — illustrative parameters, no country fit, no causal or empirical claim — and it is not
+history.** Its pre-declared η² decomposition and the independent tests agree on where leverage sits in that world:
+
+| margin | largest axis (η²) | contrast in the toy multiverse |
+|---|---|---|
+| lower / upper completion | **gates** (.70 / .69) | bar **.720** [.592, .849] / **.609** [.493, .746] vs quota **.550** [.549, .550] / **.449** [.446, .450]; quota−bar **−17.0pp** [−18.4, −15.7] / **−16.0pp** |
+| primary / tertiary completion | **affordability** (.69 / .41) | cash-only **.797** / **.296** vs credit up to **.929** / **.428**; credit effects +13.2/+11.3pp (primary) and +6.6/+13.2pp (tertiary) |
+| wealth completion gaps | **gates** (.66 upper) | bar screens the poorest hardest: lower completion q1 **.174** vs q5 **.966** (gap .792); quota **.121** / **.767** (gap .646) |
+| formal share / education spending | **jobs** (.96) | queue-with-floors **.293** [.275, .331] vs competitive **.627** [.556, .707]; **+33.4pp** [32.4, 34.4] |
+| wealth parity (lower) | **rural** (.51) | low penalty **.245** [.124, .393] vs high penalty **.100** [.043, .180]; **−14.6pp** |
+| public quality `q_pub` | **supply** (.42) | fixed budget **0.99** vs fiscal loop **1.12**; supported **+0.132** [0.115, 0.149], but completion effects not supported and supply is not identifiable from attainment (range overlap 1.00) |
+| tutoring (gate-adjacent) | **gates** (.89) | bar **.273** vs quota **.499** (gate-adjacent .320 vs .604); quota−bar **+22.6pp** [21.3, 23.9]; second-order for attainment (η² ≈ 0 for completion) |
+
+The bar gate is a screen (q1 .174 → q5 .966 completion); the quota lowers completion for all, narrows the absolute
+gap (.792→.646) and raises gate-prep tutoring at every quintile (q1 .068→.235; q5 .405→.578), reallocating prep from
+tertiary to lower/primary. Credit access is the largest single access lever (q1 lower completion .091→.195). These
+are statements about a stipulated toy system, not about real quotas, credit or labour markets.
+
+**Engine boundaries (stated).** Toy/uncalibrated `eduengine`: no persistent learning state; no exam-score gate (the
+gates are bar-vs-quota seat rules, not score cut-offs); stylised labour market (queue-with-floors vs competitive
+skill premium) and rural/urban block (distance cost/urban share), not estimated; no migration, rural–urban sorting
+or remittances; a push-out decomposition by liquidity vs choice is unusable (engine overwrites exit-reason codes);
+the PHL level check is construct-limited (simulated lower completion .635 [.550, .833] vs observed `lsc` 84.8% in
+2024; no calibration). The binding data gap remains: household demand/affordability, learning grade profiles,
+exam/quota rules, migration flows and credential requirements are not identified by available public data.
+
+**What it means for the wave's verdict.** This is the clearest positive structural statement the wave can make, and
+it is a statement about a toy system, not about the world: affordability, gate design, jobs/credential regime and
+rural structure dominate this synthetic system, supply moves public quality but not attainment, and tutoring is
+gate-driven and second-order. It says where a measurement programme should look and reinforces §4's "no mechanism
+winner" — no simulation here identifies a real-world mechanism.
+
 ---
 
 ## 3. What was retracted or corrected (must never reappear)
@@ -219,6 +259,10 @@ changes a recomputed headline number above. Pinned to the errata heads:
   and its selection criteria are degenerate; E11 cannot separate the three candidate mechanisms; the multiverse is a
   transportability test, not an identification strategy. The three worlds remain observationally equivalent at the
   aggregate level, and the pilot does not claim equivalence beyond its shared-mean construction.
+- **No full-system mechanism winner (simulation only).** The 1,440-run full-system toy multiverse (§2.5) locates
+  leverage in affordability, gate design, jobs/credential regime and rural structure, with supply moving public
+  quality but not attainment and tutoring gate-driven and second-order; it is a toy, uncalibrated simulation with
+  stated boundaries, not evidence about any real system and not a mechanism identification.
 - **No claim that demand is ruled out.** The retraction of the 7% figure means the opposite: pre-1990 demand
   indicators are available, demand-first is a real 10–24% minority ordering, and 21–43% of countries are weak
   ties/censored. Demand is neither established nor excluded.
@@ -285,6 +329,7 @@ value equals the branch record's committed value.
 | R8 | 68.75% was a tie artefact; strict 37.5% = 24/64, CI 26.6–50.0 | `results/event_dates.csv` @ subsistence-v2 `ce66cfc` (annotated `8caaeac`) | **24/64 = 37.5%, ties 20/64 = 31.25%, fertility-first 20/64 = 31.25%; bootstrap CI 26.56–50.0; 68.75 = 44/64 = strict + ties** | yes |
 | R9 | Q1 GPU gate: repeat 8.9e-16; layout diff 1.9074; pin nW=12 seed 7 | `results/engine_check.json` @ Q1 `9b0cabe` | **UNVERIFIED — not recomputed** (needs the T4 box and a synthetic panel; numbers are committed fields and were not re-run in this synthesis) | n/a |
 | R10 | Q2 random yardstick: matched-pair medians 0.620 / 0.2375; shares of random draws at least as large = 96.1% / 100.0% | `results/audit/pairs_primary.csv` (matched medians) + `results/audit/erratum_check_q2_yardstick.json` (shares) @ Q2 `9a4f586` (record head advanced to `9a4f586` — erratum only; data unchanged); recomputed in this record's `results/recompute.json` (`Q2_yardstick`) | **0.6200 / 0.2375 (matched medians, independently re-derived); 961/1,000 and 1,000/1,000 (committed erratum check); random-draw medians 0.825 / 0.7728** | yes (**RECOMPUTED-AT-ERRATUM**) |
+| R11 | full-system multiverse headline values: gates bar .720/.609 vs quota .550/.449; affordability cash .797/.296 vs credit up to .929/.428; jobs .293 vs .627; rural wealth parity .245 vs .100; tutoring .273→.499; supply q_pub .99 vs 1.12 | `results_multiverse.json` @ masseng-edsystem `b7108da`; `full_system_tests.json` @ edsystem-tests `aadbbb4` | **NOT RECOMPUTED — committed simulation fields** (11 headline values read from the two records; no re-derivation here) | n/a (**SIMULATION, not history**) |
 
 The Q1 pilot is synthetic (three constructed worlds, closed-form MLE rivals, 40 reps per cell). The Q3 calibration
 is a simulation of the verdict rule (8 groupings, 1 link per replicate, 400 replicates per regime), not the real
@@ -331,6 +376,7 @@ did not re-derive, or a prose claim with no committed reduction.
 - Recompute script: `research/records/2026-11-24-codex-wave-synthesis/scripts/recompute_headlines.py` (extraction
   commands in its docstring; `--sources` points at a directory of `git show` copies).
 - Recompute output: `research/records/2026-11-24-codex-wave-synthesis/results/recompute.json`.
+- Full-system multiverse (simulation): `research/records/2026-11-25-masseng-edsystem/RUN_REPORT.md` @ `research/masseng-edsystem-2026-11-25` `b7108da` (pre-registration `3679f2d`); independent tests: `research/records/2026-11-25-edsystem-tests/MULTIVERSE_TESTS.md` @ `research/edsystem-tests-2026-11-25` `aadbbb4`. Integrated in §2.5; labels in `EDSYSTEM_INTEGRATION.md`.
 - Handoff contract and ledger: `HANDOFF.md` @ `51f9f02`,
   `research/records/2026-11-24-handoff/codex_wave_ledger.md` @ `51f9f02`.
 - Forward-programme suite: `research/records/2026-11-24-gpu-suite/` (`METHODOLOGY.md`, `PRE_REGISTRATION.md`,
