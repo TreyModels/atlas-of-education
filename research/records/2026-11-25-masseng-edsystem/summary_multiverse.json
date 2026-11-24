@@ -1,0 +1,2349 @@
+{
+ "label": "SIMULATION ONLY \u2014 eduengine toy worlds; illustrative parameters; no causal/empirical claims",
+ "design": {
+  "axes": {
+   "afford": [
+    "cash_only",
+    "credit_constant",
+    "credit_poverty"
+   ],
+   "supply": [
+    "fixed_budget",
+    "fiscal_loop"
+   ],
+   "learning": [
+    "public_only",
+    "plus_private",
+    "plus_private_tutoring"
+   ],
+   "gates": [
+    "bar",
+    "quota"
+   ],
+   "jobs": [
+    "queue_floors",
+    "competitive"
+   ],
+   "rural": [
+    "low_penalty",
+    "high_penalty"
+   ]
+  },
+  "n_combos": 144,
+  "seeds": 10,
+  "runs": 1440,
+  "N": 400,
+  "T": 70,
+  "measure_from": 35,
+  "workers": 12,
+  "base_world": "formal_loop",
+  "missing_mechanisms": [
+   "migration/emigration",
+   "rural-urban sorting/residential choice",
+   "remittances/kin transfers",
+   "country-specific calibration",
+   "informal/formal employment composition beyond queue vs competitive"
+  ]
+ },
+ "elapsed_s": 304.1,
+ "n_runs": 1440,
+ "variance_decomposition": {
+  "completion_primary": {
+   "afford": {
+    "eta2": 0.6910365299649258,
+    "worst_range_overlap": 0.0
+   },
+   "supply": {
+    "eta2": 0.006853183732955408,
+    "worst_range_overlap": 0.931744496900063
+   },
+   "learning": {
+    "eta2": 0.040534911531954744,
+    "worst_range_overlap": 0.8188276123854453
+   },
+   "gates": {
+    "eta2": 0.0006212012971833017,
+    "worst_range_overlap": 0.9917747914735868
+   },
+   "jobs": {
+    "eta2": 0.14733168843377623,
+    "worst_range_overlap": 0.6773606747147348
+   },
+   "rural": {
+    "eta2": 0.05272932493251242,
+    "worst_range_overlap": 0.7439024390243901
+   }
+  },
+  "completion_lower": {
+   "afford": {
+    "eta2": 0.021329141604220524,
+    "worst_range_overlap": 0.686594657958637
+   },
+   "supply": {
+    "eta2": 0.0017341508943351136,
+    "worst_range_overlap": 0.8878320479862892
+   },
+   "learning": {
+    "eta2": 0.013763734250133691,
+    "worst_range_overlap": 0.726152573909448
+   },
+   "gates": {
+    "eta2": 0.7009037909839219,
+    "worst_range_overlap": 0.0
+   },
+   "jobs": {
+    "eta2": 0.03594179438325799,
+    "worst_range_overlap": 0.7719444560276882
+   },
+   "rural": {
+    "eta2": 0.060591375074914244,
+    "worst_range_overlap": 0.730969542935711
+   }
+  },
+  "completion_upper": {
+   "afford": {
+    "eta2": 0.028817278854663824,
+    "worst_range_overlap": 0.6652342781588299
+   },
+   "supply": {
+    "eta2": 0.0027375086352547204,
+    "worst_range_overlap": 0.8724308386089673
+   },
+   "learning": {
+    "eta2": 0.02169547984257636,
+    "worst_range_overlap": 0.6702569373072972
+   },
+   "gates": {
+    "eta2": 0.6887395415007723,
+    "worst_range_overlap": 0.0
+   },
+   "jobs": {
+    "eta2": 0.03591819563002689,
+    "worst_range_overlap": 0.7114169769485004
+   },
+   "rural": {
+    "eta2": 0.05294111637027788,
+    "worst_range_overlap": 0.6974670888185301
+   }
+  },
+  "completion_tertiary": {
+   "afford": {
+    "eta2": 0.41262811714683884,
+    "worst_range_overlap": 0.1626198577172902
+   },
+   "supply": {
+    "eta2": 0.0012846444463815987,
+    "worst_range_overlap": 0.8496373013543548
+   },
+   "learning": {
+    "eta2": 0.02540823577049771,
+    "worst_range_overlap": 0.7227387330601956
+   },
+   "gates": {
+    "eta2": 0.34606784603890034,
+    "worst_range_overlap": 0.3605807478122513
+   },
+   "jobs": {
+    "eta2": 0.001192582783456841,
+    "worst_range_overlap": 0.8108209421466952
+   },
+   "rural": {
+    "eta2": 0.09890606333336517,
+    "worst_range_overlap": 0.6309864757358788
+   }
+  },
+  "q_pub": {
+   "afford": {
+    "eta2": 0.004305084264596739,
+    "worst_range_overlap": 0.8870283017406528
+   },
+   "supply": {
+    "eta2": 0.41789920651048523,
+    "worst_range_overlap": 0.20146340537196378
+   },
+   "learning": {
+    "eta2": 0.03245733058326048,
+    "worst_range_overlap": 0.8175933741393561
+   },
+   "gates": {
+    "eta2": 0.01358392487446153,
+    "worst_range_overlap": 0.9214262352244526
+   },
+   "jobs": {
+    "eta2": 0.2626292005933131,
+    "worst_range_overlap": 0.35056785989305306
+   },
+   "rural": {
+    "eta2": 0.0007619924425279391,
+    "worst_range_overlap": 0.9717391798655237
+   }
+  },
+  "formal_share_gdp": {
+   "afford": {
+    "eta2": 0.008357233327465134,
+    "worst_range_overlap": 0.7948880251027326
+   },
+   "supply": {
+    "eta2": NaN,
+    "worst_range_overlap": 1.0
+   },
+   "learning": {
+    "eta2": 0.012976748108862731,
+    "worst_range_overlap": 0.7749887861166819
+   },
+   "gates": {
+    "eta2": 0.0016690398619692288,
+    "worst_range_overlap": 0.8888869667638148
+   },
+   "jobs": {
+    "eta2": 0.9581221698506549,
+    "worst_range_overlap": 0.0
+   },
+   "rural": {
+    "eta2": 0.0038570819018956285,
+    "worst_range_overlap": 0.9133988694031469
+   }
+  },
+  "edu_gdp": {
+   "afford": {
+    "eta2": 0.008580418682178861,
+    "worst_range_overlap": 0.7923989710022893
+   },
+   "supply": {
+    "eta2": NaN,
+    "worst_range_overlap": 1.0
+   },
+   "learning": {
+    "eta2": 0.010657099808529052,
+    "worst_range_overlap": 0.7985010603886449
+   },
+   "gates": {
+    "eta2": 0.0016286399974484202,
+    "worst_range_overlap": 0.8869944636220641
+   },
+   "jobs": {
+    "eta2": 0.9610490314908967,
+    "worst_range_overlap": 0.0
+   },
+   "rural": {
+    "eta2": 0.00375135734151366,
+    "worst_range_overlap": 0.9132263411126746
+   }
+  },
+  "tut_rate": {
+   "afford": {
+    "eta2": 0.004732843209759011,
+    "worst_range_overlap": 0.9043529529255667
+   },
+   "supply": {
+    "eta2": 0.00388296127844267,
+    "worst_range_overlap": 0.8485612811649607
+   },
+   "learning": {
+    "eta2": NaN,
+    "worst_range_overlap": 1.0
+   },
+   "gates": {
+    "eta2": 0.8759977814003588,
+    "worst_range_overlap": 0.0
+   },
+   "jobs": {
+    "eta2": 0.0018411224987772506,
+    "worst_range_overlap": 0.8928913740288064
+   },
+   "rural": {
+    "eta2": 0.08016257229166796,
+    "worst_range_overlap": 0.6639839455649215
+   }
+  },
+  "mpl_primary": {
+   "afford": {
+    "eta2": 0.014741828271661863,
+    "worst_range_overlap": 0.8450920335370702
+   },
+   "supply": {
+    "eta2": 0.08260046492007145,
+    "worst_range_overlap": 0.8812544921995326
+   },
+   "learning": {
+    "eta2": 0.6119632276138385,
+    "worst_range_overlap": 0.05802523713828633
+   },
+   "gates": {
+    "eta2": 0.0002824579670586583,
+    "worst_range_overlap": 0.8869905228099231
+   },
+   "jobs": {
+    "eta2": 0.09179305689546007,
+    "worst_range_overlap": 0.8621716682701277
+   },
+   "rural": {
+    "eta2": 0.0018046768834178702,
+    "worst_range_overlap": 0.9113449708375633
+   }
+  },
+  "parity_location_lower": {
+   "afford": {
+    "eta2": 0.14263858170534674,
+    "worst_range_overlap": 0.5146108909803916
+   },
+   "supply": {
+    "eta2": 0.006705561130600831,
+    "worst_range_overlap": 0.8714095783296196
+   },
+   "learning": {
+    "eta2": 0.1451744020166538,
+    "worst_range_overlap": 0.6314131133036611
+   },
+   "gates": {
+    "eta2": 0.02818652962720905,
+    "worst_range_overlap": 0.7964030055085961
+   },
+   "jobs": {
+    "eta2": 0.13263745576124603,
+    "worst_range_overlap": 0.7887111429880358
+   },
+   "rural": {
+    "eta2": 0.18577355148048738,
+    "worst_range_overlap": 0.7144498190704935
+   }
+  },
+  "parity_wealth_lower": {
+   "afford": {
+    "eta2": 0.2629547823257407,
+    "worst_range_overlap": 0.2251663453581004
+   },
+   "supply": {
+    "eta2": 0.0020508461122255833,
+    "worst_range_overlap": 0.9014919473572313
+   },
+   "learning": {
+    "eta2": 0.00010356805221803469,
+    "worst_range_overlap": 0.9616640658908555
+   },
+   "gates": {
+    "eta2": 0.004940611016674218,
+    "worst_range_overlap": 0.8568502656763975
+   },
+   "jobs": {
+    "eta2": 0.09755134014715212,
+    "worst_range_overlap": 0.6845677377472765
+   },
+   "rural": {
+    "eta2": 0.5082690104712638,
+    "worst_range_overlap": 0.15974386460484
+   }
+  },
+  "started_liquidity_share": {
+   "afford": {
+    "eta2": NaN,
+    "worst_range_overlap": 1.0
+   },
+   "supply": {
+    "eta2": NaN,
+    "worst_range_overlap": 1.0
+   },
+   "learning": {
+    "eta2": NaN,
+    "worst_range_overlap": 1.0
+   },
+   "gates": {
+    "eta2": NaN,
+    "worst_range_overlap": 1.0
+   },
+   "jobs": {
+    "eta2": NaN,
+    "worst_range_overlap": 1.0
+   },
+   "rural": {
+    "eta2": NaN,
+    "worst_range_overlap": 1.0
+   }
+  },
+  "started_choice_share": {
+   "afford": {
+    "eta2": NaN,
+    "worst_range_overlap": 1.0
+   },
+   "supply": {
+    "eta2": NaN,
+    "worst_range_overlap": 1.0
+   },
+   "learning": {
+    "eta2": NaN,
+    "worst_range_overlap": 1.0
+   },
+   "gates": {
+    "eta2": NaN,
+    "worst_range_overlap": 1.0
+   },
+   "jobs": {
+    "eta2": NaN,
+    "worst_range_overlap": 1.0
+   },
+   "rural": {
+    "eta2": NaN,
+    "worst_range_overlap": 1.0
+   }
+  },
+  "tut_q_gap_q5_q1": {
+   "afford": {
+    "eta2": 0.05349798901916527,
+    "worst_range_overlap": 0.6702822015746981
+   },
+   "supply": {
+    "eta2": 0.17513714152598778,
+    "worst_range_overlap": 0.491760460632259
+   },
+   "learning": {
+    "eta2": NaN,
+    "worst_range_overlap": 1.0
+   },
+   "gates": {
+    "eta2": 0.002367719582547811,
+    "worst_range_overlap": 0.4888237513933487
+   },
+   "jobs": {
+    "eta2": 0.4012207416645002,
+    "worst_range_overlap": 0.2145573329856756
+   },
+   "rural": {
+    "eta2": 0.03509630426770282,
+    "worst_range_overlap": 0.7999644805020247
+   }
+  },
+  "tut_gate_mass_share": {
+   "afford": {
+    "eta2": 0.010858342286173458,
+    "worst_range_overlap": 0.7859685441948651
+   },
+   "supply": {
+    "eta2": 0.0003145626786322484,
+    "worst_range_overlap": 0.8595009217267947
+   },
+   "learning": {
+    "eta2": NaN,
+    "worst_range_overlap": 1.0
+   },
+   "gates": {
+    "eta2": 0.7750812434408695,
+    "worst_range_overlap": 0.0
+   },
+   "jobs": {
+    "eta2": 0.03521053576918581,
+    "worst_range_overlap": 0.7174447300795113
+   },
+   "rural": {
+    "eta2": 0.10125715503723523,
+    "worst_range_overlap": 0.5578778949859448
+   }
+  },
+  "tut_gate_adjacent": {
+   "afford": {
+    "eta2": 0.0011078297937100329,
+    "worst_range_overlap": 0.8935347278032854
+   },
+   "supply": {
+    "eta2": 0.0022955408728971526,
+    "worst_range_overlap": 0.839018438903297
+   },
+   "learning": {
+    "eta2": NaN,
+    "worst_range_overlap": 1.0
+   },
+   "gates": {
+    "eta2": 0.8949242205405014,
+    "worst_range_overlap": 0.0
+   },
+   "jobs": {
+    "eta2": 5.126888812087586e-06,
+    "worst_range_overlap": 0.8786428946620182
+   },
+   "rural": {
+    "eta2": 0.06665392314932331,
+    "worst_range_overlap": 0.6963737274700924
+   }
+  },
+  "tut_non_gate": {
+   "afford": {
+    "eta2": 0.0013461387286962632,
+    "worst_range_overlap": 0.914669679299091
+   },
+   "supply": {
+    "eta2": 0.00143549327785106,
+    "worst_range_overlap": 0.8602187459575966
+   },
+   "learning": {
+    "eta2": NaN,
+    "worst_range_overlap": 1.0
+   },
+   "gates": {
+    "eta2": 0.845648730295117,
+    "worst_range_overlap": 0.0
+   },
+   "jobs": {
+    "eta2": 0.00037520246481720034,
+    "worst_range_overlap": 0.8663561906280662
+   },
+   "rural": {
+    "eta2": 0.10915881779759973,
+    "worst_range_overlap": 0.6472264775896803
+   }
+  },
+  "completion_lower_q_gap": {
+   "afford": {
+    "eta2": 0.19095350984444492,
+    "worst_range_overlap": 0.48600508905852424
+   },
+   "supply": {
+    "eta2": 0.0003309105675991399,
+    "worst_range_overlap": 0.950694633614819
+   },
+   "learning": {
+    "eta2": 0.006679377734310331,
+    "worst_range_overlap": 0.857706470278801
+   },
+   "gates": {
+    "eta2": 0.29239388288673296,
+    "worst_range_overlap": 0.4631713554987212
+   },
+   "jobs": {
+    "eta2": 0.06736035359231982,
+    "worst_range_overlap": 0.7936839357953809
+   },
+   "rural": {
+    "eta2": 0.36221353084849695,
+    "worst_range_overlap": 0.4427109974424552
+   }
+  },
+  "completion_upper_q_gap": {
+   "afford": {
+    "eta2": 0.08678349371250553,
+    "worst_range_overlap": 0.5878011419022418
+   },
+   "supply": {
+    "eta2": 0.000558035002587137,
+    "worst_range_overlap": 0.9882715144406976
+   },
+   "learning": {
+    "eta2": 0.021369388046053286,
+    "worst_range_overlap": 0.8269612007929763
+   },
+   "gates": {
+    "eta2": 0.6604332595347021,
+    "worst_range_overlap": 0.06380334207982344
+   },
+   "jobs": {
+    "eta2": 0.029697778675532027,
+    "worst_range_overlap": 0.7784547216837439
+   },
+   "rural": {
+    "eta2": 0.085307938480276,
+    "worst_range_overlap": 0.6975213555524433
+   }
+  },
+  "completion_tertiary_q_gap": {
+   "afford": {
+    "eta2": 0.0036076796385678253,
+    "worst_range_overlap": 0.7460815047021941
+   },
+   "supply": {
+    "eta2": 0.0026590218949831546,
+    "worst_range_overlap": 0.9666666666666669
+   },
+   "learning": {
+    "eta2": 0.040076461616417036,
+    "worst_range_overlap": 0.8576411960132891
+   },
+   "gates": {
+    "eta2": 0.7663283045208592,
+    "worst_range_overlap": 0.0
+   },
+   "jobs": {
+    "eta2": 0.0014305464621818622,
+    "worst_range_overlap": 0.868151815181518
+   },
+   "rural": {
+    "eta2": 0.023097135891555244,
+    "worst_range_overlap": 0.7907324364723466
+   }
+  },
+  "tut_level_share_primary": {
+   "afford": {
+    "eta2": 0.0595813356383804,
+    "worst_range_overlap": 0.749634059379944
+   },
+   "supply": {
+    "eta2": 0.1882304020244335,
+    "worst_range_overlap": 0.6142260814080253
+   },
+   "learning": {
+    "eta2": NaN,
+    "worst_range_overlap": 1.0
+   },
+   "gates": {
+    "eta2": 0.2379886902087399,
+    "worst_range_overlap": 0.3596627481046023
+   },
+   "jobs": {
+    "eta2": 0.12386196623572576,
+    "worst_range_overlap": 0.6242899394002646
+   },
+   "rural": {
+    "eta2": 0.06390615651388055,
+    "worst_range_overlap": 0.48551260586701567
+   }
+  },
+  "tut_level_share_lower": {
+   "afford": {
+    "eta2": 0.013465906466553008,
+    "worst_range_overlap": 0.8254827812362248
+   },
+   "supply": {
+    "eta2": 0.01154542907469246,
+    "worst_range_overlap": 0.771412334247223
+   },
+   "learning": {
+    "eta2": NaN,
+    "worst_range_overlap": 1.0
+   },
+   "gates": {
+    "eta2": 0.911933939066796,
+    "worst_range_overlap": 0.0
+   },
+   "jobs": {
+    "eta2": 3.176718748136126e-09,
+    "worst_range_overlap": 0.7837224667119254
+   },
+   "rural": {
+    "eta2": 0.009850488939927914,
+    "worst_range_overlap": 0.841416198646067
+   }
+  },
+  "tut_level_share_upper": {
+   "afford": {
+    "eta2": 0.21141354709879034,
+    "worst_range_overlap": 0.46100335882860966
+   },
+   "supply": {
+    "eta2": 0.05851003409720081,
+    "worst_range_overlap": 0.7157266339145815
+   },
+   "learning": {
+    "eta2": NaN,
+    "worst_range_overlap": 1.0
+   },
+   "gates": {
+    "eta2": 0.11513158703935193,
+    "worst_range_overlap": 0.48992598669859805
+   },
+   "jobs": {
+    "eta2": 0.1610896116412409,
+    "worst_range_overlap": 0.5530739892349258
+   },
+   "rural": {
+    "eta2": 0.0004053236130309758,
+    "worst_range_overlap": 0.40686363682714877
+   }
+  },
+  "tut_level_share_tertiary": {
+   "afford": {
+    "eta2": 0.022404839126968782,
+    "worst_range_overlap": 0.7335268114674882
+   },
+   "supply": {
+    "eta2": 0.002476738092932475,
+    "worst_range_overlap": 0.8472803646613069
+   },
+   "learning": {
+    "eta2": NaN,
+    "worst_range_overlap": 1.0
+   },
+   "gates": {
+    "eta2": 0.8982476261566357,
+    "worst_range_overlap": 0.0
+   },
+   "jobs": {
+    "eta2": 0.001060622776181201,
+    "worst_range_overlap": 0.8779402326197868
+   },
+   "rural": {
+    "eta2": 0.05371956599506484,
+    "worst_range_overlap": 0.649185918470373
+   }
+  },
+  "formal_rate": {
+   "afford": {
+    "eta2": NaN,
+    "worst_range_overlap": NaN
+   },
+   "supply": {
+    "eta2": NaN,
+    "worst_range_overlap": NaN
+   },
+   "learning": {
+    "eta2": NaN,
+    "worst_range_overlap": NaN
+   },
+   "gates": {
+    "eta2": NaN,
+    "worst_range_overlap": NaN
+   },
+   "jobs": {
+    "eta2": NaN,
+    "worst_range_overlap": NaN
+   },
+   "rural": {
+    "eta2": NaN,
+    "worst_range_overlap": NaN
+   }
+  },
+  "skill_premium": {
+   "afford": {
+    "eta2": NaN,
+    "worst_range_overlap": NaN
+   },
+   "supply": {
+    "eta2": NaN,
+    "worst_range_overlap": NaN
+   },
+   "learning": {
+    "eta2": NaN,
+    "worst_range_overlap": NaN
+   },
+   "gates": {
+    "eta2": NaN,
+    "worst_range_overlap": NaN
+   },
+   "jobs": {
+    "eta2": NaN,
+    "worst_range_overlap": NaN
+   },
+   "rural": {
+    "eta2": NaN,
+    "worst_range_overlap": NaN
+   }
+  }
+ },
+ "marginal_means": {
+  "completion_lower": {
+   "afford": {
+    "cash_only": {
+     "mean": 0.6147645833333333,
+     "ci90": [
+      0.54925,
+      0.755
+     ],
+     "n": 480
+    },
+    "credit_constant": {
+     "mean": 0.6499723958333334,
+     "ci90": [
+      0.55,
+      0.8478249999999999
+     ],
+     "n": 480
+    },
+    "credit_poverty": {
+     "mean": 0.640321875,
+     "ci90": [
+      0.54975,
+      0.8375625
+     ],
+     "n": 480
+    }
+   },
+   "supply": {
+    "fiscal_loop": {
+     "mean": 0.6392552083333333,
+     "ci90": [
+      0.5495,
+      0.84125
+     ],
+     "n": 720
+    },
+    "fixed_budget": {
+     "mean": 0.6307840277777778,
+     "ci90": [
+      0.54975,
+      0.8087749999999999
+     ],
+     "n": 720
+    }
+   },
+   "learning": {
+    "plus_private": {
+     "mean": 0.6329546875000001,
+     "ci90": [
+      0.54975,
+      0.8144124999999999
+     ],
+     "n": 480
+    },
+    "plus_private_tutoring": {
+     "mean": 0.6505567708333334,
+     "ci90": [
+      0.54925,
+      0.8515625
+     ],
+     "n": 480
+    },
+    "public_only": {
+     "mean": 0.6215473958333334,
+     "ci90": [
+      0.54975,
+      0.7692749999999999
+     ],
+     "n": 480
+    }
+   },
+   "gates": {
+    "bar": {
+     "mean": 0.7201725694444444,
+     "ci90": [
+      0.592,
+      0.8492624999999999
+     ],
+     "n": 720
+    },
+    "quota": {
+     "mean": 0.5498666666666666,
+     "ci90": [
+      0.549,
+      0.55025
+     ],
+     "n": 720
+    }
+   },
+   "jobs": {
+    "competitive": {
+     "mean": 0.6543024305555555,
+     "ci90": [
+      0.55,
+      0.8492624999999999
+     ],
+     "n": 720
+    },
+    "queue_floors": {
+     "mean": 0.6157368055555555,
+     "ci90": [
+      0.5495,
+      0.7813999999999999
+     ],
+     "n": 720
+    }
+   },
+   "rural": {
+    "high_penalty": {
+     "mean": 0.609982986111111,
+     "ci90": [
+      0.54925,
+      0.7693
+     ],
+     "n": 720
+    },
+    "low_penalty": {
+     "mean": 0.66005625,
+     "ci90": [
+      0.55,
+      0.8492624999999999
+     ],
+     "n": 720
+    }
+   }
+  },
+  "completion_upper": {
+   "afford": {
+    "cash_only": {
+     "mean": 0.5064463541666666,
+     "ci90": [
+      0.4454875,
+      0.65025
+     ],
+     "n": 480
+    },
+    "credit_constant": {
+     "mean": 0.54445,
+     "ci90": [
+      0.449,
+      0.7480125
+     ],
+     "n": 480
+    },
+    "credit_poverty": {
+     "mean": 0.5361333333333334,
+     "ci90": [
+      0.4489875,
+      0.7328
+     ],
+     "n": 480
+    }
+   },
+   "supply": {
+    "fiscal_loop": {
+     "mean": 0.5340375,
+     "ci90": [
+      0.4475,
+      0.7352749999999999
+     ],
+     "n": 720
+    },
+    "fixed_budget": {
+     "mean": 0.5239822916666667,
+     "ci90": [
+      0.447,
+      0.699
+     ],
+     "n": 720
+    }
+   },
+   "learning": {
+    "plus_private": {
+     "mean": 0.5258723958333333,
+     "ci90": [
+      0.4475,
+      0.7009499999999999
+     ],
+     "n": 480
+    },
+    "plus_private_tutoring": {
+     "mean": 0.5476989583333333,
+     "ci90": [
+      0.44725,
+      0.7513
+     ],
+     "n": 480
+    },
+    "public_only": {
+     "mean": 0.5134583333333335,
+     "ci90": [
+      0.4472375,
+      0.65105
+     ],
+     "n": 480
+    }
+   },
+   "gates": {
+    "bar": {
+     "mean": 0.60875625,
+     "ci90": [
+      0.4929875,
+      0.7460374999999999
+     ],
+     "n": 720
+    },
+    "quota": {
+     "mean": 0.44926354166666677,
+     "ci90": [
+      0.4459875,
+      0.45
+     ],
+     "n": 720
+    }
+   },
+   "jobs": {
+    "competitive": {
+     "mean": 0.5472211805555555,
+     "ci90": [
+      0.44725,
+      0.7460374999999999
+     ],
+     "n": 720
+    },
+    "queue_floors": {
+     "mean": 0.5107986111111111,
+     "ci90": [
+      0.4475,
+      0.6600625
+     ],
+     "n": 720
+    }
+   },
+   "rural": {
+    "high_penalty": {
+     "mean": 0.5069003472222222,
+     "ci90": [
+      0.4459875,
+      0.6585249999999999
+     ],
+     "n": 720
+    },
+    "low_penalty": {
+     "mean": 0.5511194444444445,
+     "ci90": [
+      0.44925,
+      0.7460374999999999
+     ],
+     "n": 720
+    }
+   }
+  },
+  "completion_tertiary": {
+   "afford": {
+    "cash_only": {
+     "mean": 0.2957239583333333,
+     "ci90": [
+      0.24525,
+      0.39207499999999995
+     ],
+     "n": 480
+    },
+    "credit_constant": {
+     "mean": 0.36200729166666673,
+     "ci90": [
+      0.283,
+      0.49725
+     ],
+     "n": 480
+    },
+    "credit_poverty": {
+     "mean": 0.4281171875,
+     "ci90": [
+      0.3395,
+      0.56855
+     ],
+     "n": 480
+    }
+   },
+   "supply": {
+    "fiscal_loop": {
+     "mean": 0.36496527777777776,
+     "ci90": [
+      0.252725,
+      0.5503624999999999
+     ],
+     "n": 720
+    },
+    "fixed_budget": {
+     "mean": 0.3589336805555556,
+     "ci90": [
+      0.25225,
+      0.5060125
+     ],
+     "n": 720
+    }
+   },
+   "learning": {
+    "plus_private": {
+     "mean": 0.36002187500000005,
+     "ci90": [
+      0.2534875,
+      0.5025124999999999
+     ],
+     "n": 480
+    },
+    "plus_private_tutoring": {
+     "mean": 0.3792546875000001,
+     "ci90": [
+      0.2542,
+      0.5672875
+     ],
+     "n": 480
+    },
+    "public_only": {
+     "mean": 0.34657187500000003,
+     "ci90": [
+      0.2499875,
+      0.483525
+     ],
+     "n": 480
+    }
+   },
+   "gates": {
+    "bar": {
+     "mean": 0.4114479166666667,
+     "ci90": [
+      0.2729375,
+      0.562
+     ],
+     "n": 720
+    },
+    "quota": {
+     "mean": 0.31245104166666665,
+     "ci90": [
+      0.24775,
+      0.38625
+     ],
+     "n": 720
+    }
+   },
+   "jobs": {
+    "competitive": {
+     "mean": 0.3648552083333333,
+     "ci90": [
+      0.25025,
+      0.5503624999999999
+     ],
+     "n": 720
+    },
+    "queue_floors": {
+     "mean": 0.35904375,
+     "ci90": [
+      0.253975,
+      0.4973125
+     ],
+     "n": 720
+    }
+   },
+   "rural": {
+    "high_penalty": {
+     "mean": 0.3354875,
+     "ci90": [
+      0.24775,
+      0.475525
+     ],
+     "n": 720
+    },
+    "low_penalty": {
+     "mean": 0.38841145833333335,
+     "ci90": [
+      0.2772375,
+      0.562
+     ],
+     "n": 720
+    }
+   }
+  },
+  "tut_rate": {
+   "afford": {
+    "cash_only": {
+     "mean": 0.39585832489423833,
+     "ci90": [
+      0.23642800931528812,
+      0.5644463799252061
+     ],
+     "n": 160
+    },
+    "credit_constant": {
+     "mean": 0.3856717132865427,
+     "ci90": [
+      0.21682497661421501,
+      0.5583894781753445
+     ],
+     "n": 160
+    },
+    "credit_poverty": {
+     "mean": 0.3755015901676021,
+     "ci90": [
+      0.21199434891617253,
+      0.555169044322921
+     ],
+     "n": 160
+    }
+   },
+   "supply": {
+    "fiscal_loop": {
+     "mean": 0.3781496705100985,
+     "ci90": [
+      0.2137172467144592,
+      0.5486133143773207
+     ],
+     "n": 240
+    },
+    "fixed_budget": {
+     "mean": 0.3932047483888236,
+     "ci90": [
+      0.251353244291642,
+      0.564027915706545
+     ],
+     "n": 240
+    }
+   },
+   "learning": {
+    "plus_private_tutoring": {
+     "mean": 0.38567720944946104,
+     "ci90": [
+      0.23567286406174418,
+      0.5601797223034775
+     ],
+     "n": 480
+    }
+   },
+   "gates": {
+    "bar": {
+     "mean": 0.2726135640095849,
+     "ci90": [
+      0.2137172467144592,
+      0.32020790497621787
+     ],
+     "n": 240
+    },
+    "quota": {
+     "mean": 0.4987408548893371,
+     "ci90": [
+      0.41304502184349334,
+      0.564027915706545
+     ],
+     "n": 240
+    }
+   },
+   "jobs": {
+    "competitive": {
+     "mean": 0.3908605867619348,
+     "ci90": [
+      0.2137172467144592,
+      0.5608540405574444
+     ],
+     "n": 240
+    },
+    "queue_floors": {
+     "mean": 0.3804938321369873,
+     "ci90": [
+      0.24497888734337306,
+      0.5549343361737905
+     ],
+     "n": 240
+    }
+   },
+   "rural": {
+    "high_penalty": {
+     "mean": 0.3514747526360276,
+     "ci90": [
+      0.2137172467144592,
+      0.4892129854220194
+     ],
+     "n": 240
+    },
+    "low_penalty": {
+     "mean": 0.41987966626289447,
+     "ci90": [
+      0.2566123252511671,
+      0.564027915706545
+     ],
+     "n": 240
+    }
+   }
+  },
+  "q_pub": {
+   "afford": {
+    "cash_only": {
+     "mean": 1.0634485491505963,
+     "ci90": [
+      0.9757849322218337,
+      1.2366858819259647
+     ],
+     "n": 480
+    },
+    "credit_constant": {
+     "mean": 1.0475064369946994,
+     "ci90": [
+      0.9463452234832809,
+      1.2333253134065105
+     ],
+     "n": 480
+    },
+    "credit_poverty": {
+     "mean": 1.0521665176475825,
+     "ci90": [
+      0.9523158223876613,
+      1.235276633117943
+     ],
+     "n": 480
+    }
+   },
+   "supply": {
+    "fiscal_loop": {
+     "mean": 1.1203151861944565,
+     "ci90": [
+      0.9738559473598426,
+      1.2404368758014652
+     ],
+     "n": 720
+    },
+    "fixed_budget": {
+     "mean": 0.9884324830007953,
+     "ci90": [
+      0.9459354637161574,
+      1.0331872047254007
+     ],
+     "n": 720
+    }
+   },
+   "learning": {
+    "plus_private": {
+     "mean": 1.0667169622408939,
+     "ci90": [
+      0.9757227030345828,
+      1.2343091062245528
+     ],
+     "n": 480
+    },
+    "plus_private_tutoring": {
+     "mean": 1.0680092288407428,
+     "ci90": [
+      0.9548290560977994,
+      1.2415500720236943
+     ],
+     "n": 480
+    },
+    "public_only": {
+     "mean": 1.0283953127112408,
+     "ci90": [
+      0.9445353136379181,
+      1.2126398358526473
+     ],
+     "n": 480
+    }
+   },
+   "gates": {
+    "bar": {
+     "mean": 1.0424851253260425,
+     "ci90": [
+      0.9459354637161574,
+      1.2309795850818441
+     ],
+     "n": 720
+    },
+    "quota": {
+     "mean": 1.0662625438692093,
+     "ci90": [
+      0.9596182576757939,
+      1.2404368758014652
+     ],
+     "n": 720
+    }
+   },
+   "jobs": {
+    "competitive": {
+     "mean": 1.1066487787148642,
+     "ci90": [
+      0.9461160870984638,
+      1.2404368758014652
+     ],
+     "n": 720
+    },
+    "queue_floors": {
+     "mean": 1.0020988904803878,
+     "ci90": [
+      0.9573965963244183,
+      1.060576005342065
+     ],
+     "n": 720
+    }
+   },
+   "rural": {
+    "high_penalty": {
+     "mean": 1.0571896060618025,
+     "ci90": [
+      0.9596182576757939,
+      1.235995663767362
+     ],
+     "n": 720
+    },
+    "low_penalty": {
+     "mean": 1.0515580631334498,
+     "ci90": [
+      0.9515866716855613,
+      1.2360018849630738
+     ],
+     "n": 720
+    }
+   }
+  },
+  "formal_share_gdp": {
+   "afford": {
+    "cash_only": {
+     "mean": 0.4413250514498939,
+     "ci90": [
+      0.2747079776370405,
+      0.626290095975667
+     ],
+     "n": 240
+    },
+    "credit_constant": {
+     "mean": 0.4579217387153143,
+     "ci90": [
+      0.27814318636859275,
+      0.6682883346606279
+     ],
+     "n": 240
+    },
+    "credit_poverty": {
+     "mean": 0.4794264540193863,
+     "ci90": [
+      0.2773257987522459,
+      0.7137186133530842
+     ],
+     "n": 240
+    }
+   },
+   "supply": {
+    "fiscal_loop": {
+     "mean": 0.45955774806153155,
+     "ci90": [
+      0.27636525905251,
+      0.6916268970920157
+     ],
+     "n": 720
+    }
+   },
+   "learning": {
+    "plus_private": {
+     "mean": 0.4566595259331321,
+     "ci90": [
+      0.27669845120227227,
+      0.6780097517283393
+     ],
+     "n": 240
+    },
+    "plus_private_tutoring": {
+     "mean": 0.4846787394898778,
+     "ci90": [
+      0.3034664825713477,
+      0.7009756573028467
+     ],
+     "n": 240
+    },
+    "public_only": {
+     "mean": 0.43733497876158467,
+     "ci90": [
+      0.2747079776370405,
+      0.6338191541963254
+     ],
+     "n": 240
+    }
+   },
+   "gates": {
+    "bar": {
+     "mean": 0.4665282681095375,
+     "ci90": [
+      0.27733549533439206,
+      0.7073639672107875
+     ],
+     "n": 360
+    },
+    "quota": {
+     "mean": 0.4525872280135254,
+     "ci90": [
+      0.2750239252048862,
+      0.661636923883558
+     ],
+     "n": 360
+    }
+   },
+   "jobs": {
+    "competitive": {
+     "mean": 0.6265676691135426,
+     "ci90": [
+      0.5558940048782905,
+      0.7073639672107875
+     ],
+     "n": 360
+    },
+    "queue_floors": {
+     "mean": 0.2925478270095204,
+     "ci90": [
+      0.2748072450872804,
+      0.3312042389972297
+     ],
+     "n": 360
+    }
+   },
+   "rural": {
+    "high_penalty": {
+     "mean": 0.4489612769989377,
+     "ci90": [
+      0.2748145895217566,
+      0.6740740135281197
+     ],
+     "n": 360
+    },
+    "low_penalty": {
+     "mean": 0.47015421912412536,
+     "ci90": [
+      0.27898390098592407,
+      0.7073639672107875
+     ],
+     "n": 360
+    }
+   }
+  },
+  "started_liquidity_share": {
+   "afford": {
+    "cash_only": {
+     "mean": 0.0,
+     "ci90": [
+      0.0,
+      0.0
+     ],
+     "n": 480
+    },
+    "credit_constant": {
+     "mean": 0.0,
+     "ci90": [
+      0.0,
+      0.0
+     ],
+     "n": 480
+    },
+    "credit_poverty": {
+     "mean": 0.0,
+     "ci90": [
+      0.0,
+      0.0
+     ],
+     "n": 480
+    }
+   },
+   "supply": {
+    "fiscal_loop": {
+     "mean": 0.0,
+     "ci90": [
+      0.0,
+      0.0
+     ],
+     "n": 720
+    },
+    "fixed_budget": {
+     "mean": 0.0,
+     "ci90": [
+      0.0,
+      0.0
+     ],
+     "n": 720
+    }
+   },
+   "learning": {
+    "plus_private": {
+     "mean": 0.0,
+     "ci90": [
+      0.0,
+      0.0
+     ],
+     "n": 480
+    },
+    "plus_private_tutoring": {
+     "mean": 0.0,
+     "ci90": [
+      0.0,
+      0.0
+     ],
+     "n": 480
+    },
+    "public_only": {
+     "mean": 0.0,
+     "ci90": [
+      0.0,
+      0.0
+     ],
+     "n": 480
+    }
+   },
+   "gates": {
+    "bar": {
+     "mean": 0.0,
+     "ci90": [
+      0.0,
+      0.0
+     ],
+     "n": 720
+    },
+    "quota": {
+     "mean": 0.0,
+     "ci90": [
+      0.0,
+      0.0
+     ],
+     "n": 720
+    }
+   },
+   "jobs": {
+    "competitive": {
+     "mean": 0.0,
+     "ci90": [
+      0.0,
+      0.0
+     ],
+     "n": 720
+    },
+    "queue_floors": {
+     "mean": 0.0,
+     "ci90": [
+      0.0,
+      0.0
+     ],
+     "n": 720
+    }
+   },
+   "rural": {
+    "high_penalty": {
+     "mean": 0.0,
+     "ci90": [
+      0.0,
+      0.0
+     ],
+     "n": 720
+    },
+    "low_penalty": {
+     "mean": 0.0,
+     "ci90": [
+      0.0,
+      0.0
+     ],
+     "n": 720
+    }
+   }
+  },
+  "tut_q_gap_q5_q1": {
+   "afford": {
+    "cash_only": {
+     "mean": 0.32695280003448385,
+     "ci90": [
+      0.22731697241716173,
+      0.41118395219040615
+     ],
+     "n": 160
+    },
+    "credit_constant": {
+     "mean": 0.32978582248932875,
+     "ci90": [
+      0.16112853783891729,
+      0.4344004022855891
+     ],
+     "n": 160
+    },
+    "credit_poverty": {
+     "mean": 0.36370253936804164,
+     "ci90": [
+      0.21183764566452393,
+      0.4861504341307619
+     ],
+     "n": 160
+    }
+   },
+   "supply": {
+    "fiscal_loop": {
+     "mean": 0.37035644353135794,
+     "ci90": [
+      0.3054685098593825,
+      0.4851435275187057
+     ],
+     "n": 240
+    },
+    "fixed_budget": {
+     "mean": 0.3099376643965449,
+     "ci90": [
+      0.18814066603842078,
+      0.4515227738300264
+     ],
+     "n": 240
+    }
+   },
+   "learning": {
+    "plus_private_tutoring": {
+     "mean": 0.3401470539639515,
+     "ci90": [
+      0.20433823479545357,
+      0.4598814923313655
+     ],
+     "n": 480
+    }
+   },
+   "gates": {
+    "bar": {
+     "mean": 0.33663454085167993,
+     "ci90": [
+      0.24850483056173525,
+      0.39368688348508724
+     ],
+     "n": 240
+    },
+    "quota": {
+     "mean": 0.3436595670762229,
+     "ci90": [
+      0.18814066603842078,
+      0.4851435275187057
+     ],
+     "n": 240
+    }
+   },
+   "jobs": {
+    "competitive": {
+     "mean": 0.29442302309158,
+     "ci90": [
+      0.18814066603842078,
+      0.3771935218068919
+     ],
+     "n": 240
+    },
+    "queue_floors": {
+     "mean": 0.3858710848363229,
+     "ci90": [
+      0.31346937995856794,
+      0.4851435275187057
+     ],
+     "n": 240
+    }
+   },
+   "rural": {
+    "high_penalty": {
+     "mean": 0.326623728060337,
+     "ci90": [
+      0.18822294970868778,
+      0.45414445727196123
+     ],
+     "n": 240
+    },
+    "low_penalty": {
+     "mean": 0.3536703798675659,
+     "ci90": [
+      0.23572733849526653,
+      0.461256470696551
+     ],
+     "n": 240
+    }
+   }
+  }
+ },
+ "baseline_group_table": {
+  "q1": {
+   "liquidity": {
+    "mean": 0.0,
+    "ci90": [
+     0.0,
+     0.0
+    ]
+   },
+   "choice": {
+    "mean": 0.0,
+    "ci90": [
+     0.0,
+     0.0
+    ]
+   },
+   "never": {
+    "mean": 0.0,
+    "ci90": [
+     0.0,
+     0.0
+    ]
+   },
+   "started": {
+    "mean": 0.9149807953333374,
+    "ci90": [
+     0.908759890802766,
+     0.9225909645363711
+    ]
+   }
+  },
+  "q2": {
+   "liquidity": {
+    "mean": 0.0,
+    "ci90": [
+     0.0,
+     0.0
+    ]
+   },
+   "choice": {
+    "mean": 0.0,
+    "ci90": [
+     0.0,
+     0.0
+    ]
+   },
+   "never": {
+    "mean": 0.0,
+    "ci90": [
+     0.0,
+     0.0
+    ]
+   },
+   "started": {
+    "mean": 1.0,
+    "ci90": [
+     1.0,
+     1.0
+    ]
+   }
+  },
+  "q3": {
+   "liquidity": {
+    "mean": 0.0,
+    "ci90": [
+     0.0,
+     0.0
+    ]
+   },
+   "choice": {
+    "mean": 0.0,
+    "ci90": [
+     0.0,
+     0.0
+    ]
+   },
+   "never": {
+    "mean": 0.0,
+    "ci90": [
+     0.0,
+     0.0
+    ]
+   },
+   "started": {
+    "mean": 0.9998815165876778,
+    "ci90": [
+     0.9993483412322275,
+     1.0
+    ]
+   }
+  },
+  "q4": {
+   "liquidity": {
+    "mean": 0.0,
+    "ci90": [
+     0.0,
+     0.0
+    ]
+   },
+   "choice": {
+    "mean": 0.0,
+    "ci90": [
+     0.0,
+     0.0
+    ]
+   },
+   "never": {
+    "mean": 0.0,
+    "ci90": [
+     0.0,
+     0.0
+    ]
+   },
+   "started": {
+    "mean": 1.0,
+    "ci90": [
+     1.0,
+     1.0
+    ]
+   }
+  },
+  "q5": {
+   "liquidity": {
+    "mean": 0.0,
+    "ci90": [
+     0.0,
+     0.0
+    ]
+   },
+   "choice": {
+    "mean": 0.0,
+    "ci90": [
+     0.0,
+     0.0
+    ]
+   },
+   "never": {
+    "mean": 0.0,
+    "ci90": [
+     0.0,
+     0.0
+    ]
+   },
+   "started": {
+    "mean": 1.0,
+    "ci90": [
+     1.0,
+     1.0
+    ]
+   }
+  },
+  "urban": {
+   "liquidity": {
+    "mean": 0.0,
+    "ci90": [
+     0.0,
+     0.0
+    ]
+   },
+   "choice": {
+    "mean": 0.0,
+    "ci90": [
+     0.0,
+     0.0
+    ]
+   },
+   "never": {
+    "mean": 0.0,
+    "ci90": [
+     0.0,
+     0.0
+    ]
+   },
+   "started": {
+    "mean": 0.9918605105740805,
+    "ci90": [
+     0.9893419928556542,
+     0.9937773156484323
+    ]
+   }
+  },
+  "rural": {
+   "liquidity": {
+    "mean": 0.0,
+    "ci90": [
+     0.0,
+     0.0
+    ]
+   },
+   "choice": {
+    "mean": 0.0,
+    "ci90": [
+     0.0,
+     0.0
+    ]
+   },
+   "never": {
+    "mean": 0.0,
+    "ci90": [
+     0.0,
+     0.0
+    ]
+   },
+   "started": {
+    "mean": 0.966626734922494,
+    "ci90": [
+     0.9622057130325127,
+     0.9710900454045707
+    ]
+   }
+  }
+ },
+ "baseline_tutoring": {
+  "tut_rate": null,
+  "tut_q_gap_q5_q1": null,
+  "tut_gate_adjacent": null,
+  "tut_non_gate": null,
+  "tut_gate_mass_share": null,
+  "share_primary": null,
+  "share_lower": null,
+  "share_upper": null,
+  "share_tertiary": null
+ },
+ "phl_check": {
+  "observed_series": [
+   {
+    "year": 1990,
+    "value": 64.7707138061523
+   },
+   {
+    "year": 1992,
+    "value": 67.6752090454102
+   },
+   {
+    "year": 1998,
+    "value": 65.6140975952148
+   },
+   {
+    "year": 1999,
+    "value": 64.8655319213867
+   },
+   {
+    "year": 2001,
+    "value": 64.0594787597656
+   },
+   {
+    "year": 2002,
+    "value": 65.0148315429688
+   },
+   {
+    "year": 2003,
+    "value": 68.1813583374023
+   },
+   {
+    "year": 2004,
+    "value": 77.2737579345703
+   },
+   {
+    "year": 2005,
+    "value": 74.1895523071289
+   },
+   {
+    "year": 2006,
+    "value": 70.722297668457
+   },
+   {
+    "year": 2007,
+    "value": 64.8881683349609
+   },
+   {
+    "year": 2008,
+    "value": 77.0017929077148
+   },
+   {
+    "year": 2009,
+    "value": 74.0978469848633
+   },
+   {
+    "year": 2014,
+    "value": 76.1457584981391
+   },
+   {
+    "year": 2017,
+    "value": 72.9995342379945
+   },
+   {
+    "year": 2018,
+    "value": 76.3291610991428
+   },
+   {
+    "year": 2019,
+    "value": 79.4044238396462
+   },
+   {
+    "year": 2020,
+    "value": 81.7889755279292
+   },
+   {
+    "year": 2021,
+    "value": 85.7914115393952
+   },
+   {
+    "year": 2022,
+    "value": 97.3618744860042
+   },
+   {
+    "year": 2023,
+    "value": 92.2723546120706
+   },
+   {
+    "year": 2024,
+    "value": 84.7512943826576
+   }
+  ],
+  "latest": {
+   "year": 2024,
+   "value": 84.7512943826576
+  },
+  "simulated_completion_lower": {
+   "mean": 0.6350196180555556,
+   "ci90": [
+    0.54975,
+    0.833325
+   ]
+  },
+  "note": "construct-limited: UIS/WDI lsc is lower-secondary completion; simulated completion_lower is a toy share; not a calibration."
+ },
+ "non_identifiable_outcomes": {
+  "completion_primary": {
+   "supply": {
+    "eta2": 0.006853183732955408,
+    "worst_range_overlap": 0.931744496900063
+   },
+   "learning": {
+    "eta2": 0.040534911531954744,
+    "worst_range_overlap": 0.8188276123854453
+   },
+   "gates": {
+    "eta2": 0.0006212012971833017,
+    "worst_range_overlap": 0.9917747914735868
+   }
+  },
+  "completion_lower": {
+   "supply": {
+    "eta2": 0.0017341508943351136,
+    "worst_range_overlap": 0.8878320479862892
+   }
+  },
+  "completion_upper": {
+   "supply": {
+    "eta2": 0.0027375086352547204,
+    "worst_range_overlap": 0.8724308386089673
+   }
+  },
+  "completion_tertiary": {
+   "supply": {
+    "eta2": 0.0012846444463815987,
+    "worst_range_overlap": 0.8496373013543548
+   },
+   "jobs": {
+    "eta2": 0.001192582783456841,
+    "worst_range_overlap": 0.8108209421466952
+   }
+  },
+  "q_pub": {
+   "afford": {
+    "eta2": 0.004305084264596739,
+    "worst_range_overlap": 0.8870283017406528
+   },
+   "learning": {
+    "eta2": 0.03245733058326048,
+    "worst_range_overlap": 0.8175933741393561
+   },
+   "gates": {
+    "eta2": 0.01358392487446153,
+    "worst_range_overlap": 0.9214262352244526
+   },
+   "rural": {
+    "eta2": 0.0007619924425279391,
+    "worst_range_overlap": 0.9717391798655237
+   }
+  },
+  "formal_share_gdp": {
+   "supply": {
+    "eta2": NaN,
+    "worst_range_overlap": 1.0
+   },
+   "gates": {
+    "eta2": 0.0016690398619692288,
+    "worst_range_overlap": 0.8888869667638148
+   },
+   "rural": {
+    "eta2": 0.0038570819018956285,
+    "worst_range_overlap": 0.9133988694031469
+   }
+  },
+  "edu_gdp": {
+   "supply": {
+    "eta2": NaN,
+    "worst_range_overlap": 1.0
+   },
+   "gates": {
+    "eta2": 0.0016286399974484202,
+    "worst_range_overlap": 0.8869944636220641
+   },
+   "rural": {
+    "eta2": 0.00375135734151366,
+    "worst_range_overlap": 0.9132263411126746
+   }
+  },
+  "tut_rate": {
+   "afford": {
+    "eta2": 0.004732843209759011,
+    "worst_range_overlap": 0.9043529529255667
+   },
+   "supply": {
+    "eta2": 0.00388296127844267,
+    "worst_range_overlap": 0.8485612811649607
+   },
+   "learning": {
+    "eta2": NaN,
+    "worst_range_overlap": 1.0
+   },
+   "jobs": {
+    "eta2": 0.0018411224987772506,
+    "worst_range_overlap": 0.8928913740288064
+   }
+  },
+  "mpl_primary": {
+   "afford": {
+    "eta2": 0.014741828271661863,
+    "worst_range_overlap": 0.8450920335370702
+   },
+   "supply": {
+    "eta2": 0.08260046492007145,
+    "worst_range_overlap": 0.8812544921995326
+   },
+   "gates": {
+    "eta2": 0.0002824579670586583,
+    "worst_range_overlap": 0.8869905228099231
+   },
+   "jobs": {
+    "eta2": 0.09179305689546007,
+    "worst_range_overlap": 0.8621716682701277
+   },
+   "rural": {
+    "eta2": 0.0018046768834178702,
+    "worst_range_overlap": 0.9113449708375633
+   }
+  },
+  "parity_location_lower": {
+   "supply": {
+    "eta2": 0.006705561130600831,
+    "worst_range_overlap": 0.8714095783296196
+   }
+  },
+  "parity_wealth_lower": {
+   "supply": {
+    "eta2": 0.0020508461122255833,
+    "worst_range_overlap": 0.9014919473572313
+   },
+   "learning": {
+    "eta2": 0.00010356805221803469,
+    "worst_range_overlap": 0.9616640658908555
+   },
+   "gates": {
+    "eta2": 0.004940611016674218,
+    "worst_range_overlap": 0.8568502656763975
+   }
+  },
+  "started_liquidity_share": {
+   "afford": {
+    "eta2": NaN,
+    "worst_range_overlap": 1.0
+   },
+   "supply": {
+    "eta2": NaN,
+    "worst_range_overlap": 1.0
+   },
+   "learning": {
+    "eta2": NaN,
+    "worst_range_overlap": 1.0
+   },
+   "gates": {
+    "eta2": NaN,
+    "worst_range_overlap": 1.0
+   },
+   "jobs": {
+    "eta2": NaN,
+    "worst_range_overlap": 1.0
+   },
+   "rural": {
+    "eta2": NaN,
+    "worst_range_overlap": 1.0
+   }
+  },
+  "started_choice_share": {
+   "afford": {
+    "eta2": NaN,
+    "worst_range_overlap": 1.0
+   },
+   "supply": {
+    "eta2": NaN,
+    "worst_range_overlap": 1.0
+   },
+   "learning": {
+    "eta2": NaN,
+    "worst_range_overlap": 1.0
+   },
+   "gates": {
+    "eta2": NaN,
+    "worst_range_overlap": 1.0
+   },
+   "jobs": {
+    "eta2": NaN,
+    "worst_range_overlap": 1.0
+   },
+   "rural": {
+    "eta2": NaN,
+    "worst_range_overlap": 1.0
+   }
+  },
+  "tut_q_gap_q5_q1": {
+   "learning": {
+    "eta2": NaN,
+    "worst_range_overlap": 1.0
+   }
+  },
+  "tut_gate_mass_share": {
+   "supply": {
+    "eta2": 0.0003145626786322484,
+    "worst_range_overlap": 0.8595009217267947
+   },
+   "learning": {
+    "eta2": NaN,
+    "worst_range_overlap": 1.0
+   }
+  },
+  "tut_gate_adjacent": {
+   "afford": {
+    "eta2": 0.0011078297937100329,
+    "worst_range_overlap": 0.8935347278032854
+   },
+   "supply": {
+    "eta2": 0.0022955408728971526,
+    "worst_range_overlap": 0.839018438903297
+   },
+   "learning": {
+    "eta2": NaN,
+    "worst_range_overlap": 1.0
+   },
+   "jobs": {
+    "eta2": 5.126888812087586e-06,
+    "worst_range_overlap": 0.8786428946620182
+   }
+  },
+  "tut_non_gate": {
+   "afford": {
+    "eta2": 0.0013461387286962632,
+    "worst_range_overlap": 0.914669679299091
+   },
+   "supply": {
+    "eta2": 0.00143549327785106,
+    "worst_range_overlap": 0.8602187459575966
+   },
+   "learning": {
+    "eta2": NaN,
+    "worst_range_overlap": 1.0
+   },
+   "jobs": {
+    "eta2": 0.00037520246481720034,
+    "worst_range_overlap": 0.8663561906280662
+   }
+  },
+  "completion_lower_q_gap": {
+   "supply": {
+    "eta2": 0.0003309105675991399,
+    "worst_range_overlap": 0.950694633614819
+   },
+   "learning": {
+    "eta2": 0.006679377734310331,
+    "worst_range_overlap": 0.857706470278801
+   }
+  },
+  "completion_upper_q_gap": {
+   "supply": {
+    "eta2": 0.000558035002587137,
+    "worst_range_overlap": 0.9882715144406976
+   },
+   "learning": {
+    "eta2": 0.021369388046053286,
+    "worst_range_overlap": 0.8269612007929763
+   }
+  },
+  "completion_tertiary_q_gap": {
+   "supply": {
+    "eta2": 0.0026590218949831546,
+    "worst_range_overlap": 0.9666666666666669
+   },
+   "learning": {
+    "eta2": 0.040076461616417036,
+    "worst_range_overlap": 0.8576411960132891
+   },
+   "jobs": {
+    "eta2": 0.0014305464621818622,
+    "worst_range_overlap": 0.868151815181518
+   }
+  },
+  "tut_level_share_primary": {
+   "learning": {
+    "eta2": NaN,
+    "worst_range_overlap": 1.0
+   }
+  },
+  "tut_level_share_lower": {
+   "afford": {
+    "eta2": 0.013465906466553008,
+    "worst_range_overlap": 0.8254827812362248
+   },
+   "learning": {
+    "eta2": NaN,
+    "worst_range_overlap": 1.0
+   },
+   "rural": {
+    "eta2": 0.009850488939927914,
+    "worst_range_overlap": 0.841416198646067
+   }
+  },
+  "tut_level_share_upper": {
+   "learning": {
+    "eta2": NaN,
+    "worst_range_overlap": 1.0
+   }
+  },
+  "tut_level_share_tertiary": {
+   "supply": {
+    "eta2": 0.002476738092932475,
+    "worst_range_overlap": 0.8472803646613069
+   },
+   "learning": {
+    "eta2": NaN,
+    "worst_range_overlap": 1.0
+   },
+   "jobs": {
+    "eta2": 0.001060622776181201,
+    "worst_range_overlap": 0.8779402326197868
+   }
+  },
+  "formal_rate": {},
+  "skill_premium": {}
+ }
+}
