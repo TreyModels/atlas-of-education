@@ -1,0 +1,6 @@
+{
+  "n": 4096,
+  "seed": 20261126,
+  "workers": 24,
+  "prior": "expanded"
+}

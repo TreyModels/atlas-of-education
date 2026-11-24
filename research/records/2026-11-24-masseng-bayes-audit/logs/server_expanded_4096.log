@@ -1,0 +1,49 @@
+/root/work/masseng-staging-codex-20261124/masseng-v6/model/masseng/engine5.py:63: RuntimeWarning: overflow encountered in exp
+  return 1.0 / (1.0 + np.exp(-x))
+/root/work/masseng-staging-codex-20261124/masseng-v6/model/masseng/engine5.py:63: RuntimeWarning: overflow encountered in exp
+  return 1.0 / (1.0 + np.exp(-x))
+/root/work/masseng-staging-codex-20261124/masseng-v6/model/masseng/engine5.py:63: RuntimeWarning: overflow encountered in exp
+  return 1.0 / (1.0 + np.exp(-x))
+/root/work/masseng-staging-codex-20261124/masseng-v6/model/masseng/engine5.py:63: RuntimeWarning: overflow encountered in exp
+  return 1.0 / (1.0 + np.exp(-x))
+/root/work/masseng-staging-codex-20261124/masseng-v6/model/masseng/engine5.py:63: RuntimeWarning: overflow encountered in exp
+  return 1.0 / (1.0 + np.exp(-x))
+/root/work/masseng-staging-codex-20261124/masseng-v6/model/masseng/engine5.py:63: RuntimeWarning: overflow encountered in exp
+  return 1.0 / (1.0 + np.exp(-x))
+/root/work/masseng-staging-codex-20261124/masseng-v6/model/masseng/engine5.py:63: RuntimeWarning: overflow encountered in exp
+  return 1.0 / (1.0 + np.exp(-x))
+/root/work/masseng-staging-codex-20261124/masseng-v6/model/masseng/engine5.py:63: RuntimeWarning: overflow encountered in exp
+  return 1.0 / (1.0 + np.exp(-x))
+/root/work/masseng-staging-codex-20261124/masseng-v6/model/masseng/engine5.py:63: RuntimeWarning: overflow encountered in exp
+  return 1.0 / (1.0 + np.exp(-x))
+/root/work/masseng-staging-codex-20261124/masseng-v6/model/masseng/engine5.py:63: RuntimeWarning: overflow encountered in exp
+  return 1.0 / (1.0 + np.exp(-x))
+/root/work/masseng-staging-codex-20261124/masseng-v6/model/masseng/engine5.py:63: RuntimeWarning: overflow encountered in exp
+  return 1.0 / (1.0 + np.exp(-x))
+/root/work/masseng-staging-codex-20261124/masseng-v6/model/masseng/engine5.py:63: RuntimeWarning: overflow encountered in exp
+  return 1.0 / (1.0 + np.exp(-x))
+/root/work/masseng-staging-codex-20261124/masseng-v6/model/masseng/engine5.py:63: RuntimeWarning: overflow encountered in exp
+  return 1.0 / (1.0 + np.exp(-x))
+/root/work/masseng-staging-codex-20261124/masseng-v6/model/masseng/engine5.py:63: RuntimeWarning: overflow encountered in exp
+  return 1.0 / (1.0 + np.exp(-x))
+/root/work/masseng-staging-codex-20261124/masseng-v6/model/masseng/engine5.py:63: RuntimeWarning: overflow encountered in exp
+  return 1.0 / (1.0 + np.exp(-x))
+/root/work/masseng-staging-codex-20261124/masseng-v6/model/masseng/engine5.py:63: RuntimeWarning: overflow encountered in exp
+  return 1.0 / (1.0 + np.exp(-x))
+/root/work/masseng-staging-codex-20261124/masseng-v6/model/masseng/engine5.py:63: RuntimeWarning: overflow encountered in exp
+  return 1.0 / (1.0 + np.exp(-x))
+/root/work/masseng-staging-codex-20261124/masseng-v6/model/masseng/engine5.py:63: RuntimeWarning: overflow encountered in exp
+  return 1.0 / (1.0 + np.exp(-x))
+/root/work/masseng-staging-codex-20261124/masseng-v6/model/masseng/engine5.py:63: RuntimeWarning: overflow encountered in exp
+  return 1.0 / (1.0 + np.exp(-x))
+/root/work/masseng-staging-codex-20261124/masseng-v6/model/masseng/engine5.py:63: RuntimeWarning: overflow encountered in exp
+  return 1.0 / (1.0 + np.exp(-x))
+/root/work/masseng-staging-codex-20261124/masseng-v6/model/masseng/engine5.py:63: RuntimeWarning: overflow encountered in exp
+  return 1.0 / (1.0 + np.exp(-x))
+/root/work/masseng-staging-codex-20261124/masseng-v6/model/masseng/engine5.py:63: RuntimeWarning: overflow encountered in exp
+  return 1.0 / (1.0 + np.exp(-x))
+/root/work/masseng-staging-codex-20261124/masseng-v6/model/masseng/engine5.py:63: RuntimeWarning: overflow encountered in exp
+  return 1.0 / (1.0 + np.exp(-x))
+/root/work/masseng-staging-codex-20261124/masseng-v6/model/masseng/engine5.py:63: RuntimeWarning: overflow encountered in exp
+  return 1.0 / (1.0 + np.exp(-x))
+Saved /root/work/masseng-staging-codex-20261124/masseng-v6/experiments/codex_bayes/server_expanded_4096; ESS 20.6/4096; holdout macro RMSE model 6.478, persistence 6.600
