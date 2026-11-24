@@ -10,6 +10,11 @@ Server run: `/root/work/edsystem/research/records/2026-11-25-masseng-edsystem/`,
 (144 combinations × 10 seeds), **304.1 s at 12 workers**, no Mac compute. Branch
 `research/masseng-edsystem-2026-11-25`.
 
+> **25 Nov correction appended (§3.8):** the "engine records no liquidity exits / reason overwritten in
+> `core.step`" claim is **wrong and retracted** — the bug was the driver reading `e.kids['reason']`
+> after the engine had compacted exits into `e.exits`. Fix + regression test on
+> `fix/edsystem-exit-reason-2026-11-25`; the decomposition tables still need the re-run.
+
 ---
 
 ## 1. What was built (and where each piece lives in `engine/eduengine/`)
@@ -167,15 +172,47 @@ numbers are structural assumptions, not estimates.
 - Tutoring is **not** a major determinant of attainment in this prototype (η² ≈ 0 for completion;
   gates and affordability dominate).
 
-### 3.8 Push-out decomposition — engine limitation, stated
+### 3.8 Push-out decomposition — CORRECTED 25 Nov (driver bug, not an engine bug)
 
-The prototype tried to split exits into liquidity vs choice vs never-started by wealth quintile and
-rural/urban. The engine's final state records **no liquidity exits** in these configurations: the
-`reason` code is overwritten for children who stop after a liquidity exit (engine code path in
-`core.step`), so the decomposition reads 0/0/0 and is **not usable**. We therefore report
-gate screening directly: lower completion by quintile (.174→.966 under bar; .121→.767 under quota)
-and wealth parity/wealth gaps above. Fixing the engine's exit-reason bookkeeping would be needed
-before any "who is pushed out by liquidity vs choice" statement; we did not modify the engine.
+**Correction notice.** The first version of this report said the engine recorded **no liquidity exits**
+and that the `reason` code "is overwritten for children who stop after a liquidity exit (engine code
+path in `core.step`)", and therefore reported the decomposition as unusable. **That was wrong and is
+retracted.** The engine is correct. `core.step` deliberately compacts exited children out of the state
+at the end of every step — it appends their rows to `e.exits` and then runs
+`keep = k['reason'] < 0; self.kids = {kk: v[keep] ...}`. After `e.run()`, `e.kids['reason']` is
+therefore **all −1**, and the driver's `k = e.kids; reason = k["reason"]` read only the survivors:
+liquidity = choice = never = 0.0 and started_share = 1.0 in **every** run, by construction. Neon's
+line audit flagged the read; this note settles the blame (driver, not engine) from the code plus a
+fresh instrumented run.
+
+**Fix** (`fix/edsystem-exit-reason-2026-11-25`, cut from `b7108da`): `aggregate_exits(e)` rebuilds the
+full child population from `e.exits` + the survivors still in the state (reason −1 = **censored at the
+horizon**, i.e. still inside the system). The quintile and rural/urban decomposition now reports
+`liquidity, choice, never, censored, other_terminal` — a partition of each group (sums to 1) — plus
+`n_population / n_exits / n_censored`; `started_liquidity_share` is computed over exited started
+children only. `test_exit_reason.py` (self-contained, no server) pins the all-minus-1 invariant, then
+asserts the corrected read finds both liquidity and choice exits and that group categories partition.
+
+**Spot-check evidence** — 2 of the 144 combos (0 = cash_only/fixed_budget/public_only/bar/queue/low
+penalty; 143 = credit_poverty/fiscal_loop/private+tutoring/quota/competitive/high penalty), seed 0,
+record defaults N=400, T=70, single local process. Shares of the 28,000-row child population:
+
+| combo | censored (alive) | liquidity | choice | never-started | failed | finished (credential) | rationed |
+|---|---|---|---|---|---|---|---|
+| 0 (cash-only, bar, queue) | 15.3 % | **35.7 %** | 16.8 % | 2.8 % | 6.2 % | 23.1 % | 0.0 % |
+| 143 (credit+poverty, quota, competitive) | 14.8 % | **20.3 %** | 20.8 % | 0.0 % | 9.2 % | 27.4 % | 7.4 % |
+
+So the decomposition is not only recoverable, it is **economically sane**: liquidity push-out dominates
+under cash-only affordability and falls under credit+poverty-line need (35.7 % → 20.3 %), while quota
+rationing appears only in the quota arm. Caveat: exact counts shift slightly with the in-process
+evaluation order — the sharded run re-initialises RNG per task, so the committed re-run counts, not
+these, are the record.
+
+**Do NOT quote a liquidity/choice/never decomposition from the committed
+`results_multiverse.json` / `summary_multiverse.json`**: they carry the all-zero read. The full
+144×10 and 144×40 tables have not yet been regenerated with the fixed driver (the instance was powered
+off before the re-run). Re-running the multiverse with this driver and updating §3.8/§4 is the first
+move of the next window; the fix and its test are committed.
 
 ### 3.9 PHL coupling attempt (construct-limited, not calibration)
 
@@ -200,7 +237,8 @@ Pre-declared rule: an axis is not distinguished by an outcome when variant 5–9
 - **Tutoring rate/gate mass**: affordability, supply, learning, jobs not identified; only gates
   move it strongly.
 - **Formal share/edu_gdp**: supply/gates/rural not identified; jobs dominates.
-- **Liquidity vs choice exits: not identifiable** in this engine version (bookkeeping issue above).
+- ~~**Liquidity vs choice exits: not identifiable**~~ — **withdrawn 25 Nov**: that was the driver
+  read bug, not a property of the model (§3.8). The decomposition is recoverable; it needs the re-run.
 - More fundamentally (task-41): **household demand/affordability, learning grade profiles, exam/quota
   rules, migration flows and credential requirements are not identified by available public data**;
   any target for them here would be invented.
