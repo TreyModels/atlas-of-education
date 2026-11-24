@@ -149,3 +149,18 @@ Not pre-registered (see `TEST_PREREGISTRATION_DEVIATION.md`).
 sha256, numpy/python versions, git commit, full-design rank (18 < 18 columns → full rank with all rows;
 the rank losses above are outcome-specific). Regenerate with `python3 test_full_system.py` from this
 directory (numpy only). Reproduction hash of the source used here: `004173aa…` (matches the run record).
+
+---
+
+## Reconciliation addendum — 25 Nov 2026 (counts for citation)
+
+- **Supported: 45 of 72 tested contrast-outcome rows (45/72).** The denominator is the 72 rows in
+  `full_system_tests.json` (`contrasts`): 6 contrast blocks x their outcome rows = 72 estimable-and-variable
+  candidates; 4 are reported in `not_estimable`, and the remaining 23 are not supported.
+- **Strict 5-axis sign-consistent count: 28 of 72 (28/72).** This is the task-47 audit's stricter requirement that
+  the sign hold across every level of all five *other* design axes, not merely the non-empty-stratum heuristic used
+  by the `supported` flag. Quoted from the task-47 audit; it is not machine-readable in `full_system_tests.json`
+  and was not recomputed in this addendum.
+- The first version's **49/72** is superseded and must not be quoted (four empty-stratum rows and one zero-variance
+  row were false positives; see the correction notice above). Cite **45/72 supported, 28/72 strict**, with the
+  exploratory label.
