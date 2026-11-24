@@ -13,7 +13,7 @@ relevant; no causal claims are intended unless explicitly stated.
 | Full-system multiverse (144 equation-choice combinations × seeds; eduengine) | `research/masseng-edsystem-2026-11-25` (`b7108da`) | `research/records/2026-11-25-masseng-edsystem/run_edsystem_multiverse.py`, `analyze_edsystem_multiverse.py` |
 | Statistical tests of that multiverse (cluster-robust OLS + seed FE + Holm + stratum checks) | `research/edsystem-tests-2026-11-25` (`aadbbb4`) | `research/records/2026-11-25-edsystem-tests/test_full_system.py` |
 | 10-script Master Equation Inventory suite (massification; tutoring one module) | `research/equation-suite-2026-11-25` (`a7fcfb9`) | `research/records/2026-11-25-equation-suite/scripts/eq01_family_demand.py` … `eq10_tutoring_shadow.py`, `eq_common.py` |
-| Observed-core model (state supply + demand + attainment + structural change from panels) | `research/observed-core-2026-11-25` (`cfb9418`) | `research/records/2026-11-25-observed-core/scripts/` |
+| Observed-core model (state supply + demand + attainment + structural change from panels) | `research/observed-core-2026-11-25` (`b563cf1`) | `research/records/2026-11-25-observed-core/scripts/` |
 | Equation test bench (pre-registered plan + partial data-level bench) | `research/equation-test-bench-2026-11-25` (`3451693`) | `research/records/2026-11-25-equation-test-bench/test_bench.py`, `TEST_PLAN.md` |
 
 ## MASSENG coupling / engine boundaries
