@@ -69,8 +69,10 @@ X1_ARMS = {
     "school_first": [EDU(15), VAC(30)],
     "jobs_first": [VAC(15), EDU(30)],
     "simultaneous": [EDU(15), VAC(15)],
-    "matched_school_first": [EDU(0), VAC(22)],
-    "matched_jobs_first": [VAC(0), EDU(22)],
+    # matched spells are exactly 48 treated years for EACH intervention, so totals are equal:
+    # revert events at year 48 end the early spell (education back to 0.18 / vacancies back to 0.08).
+    "matched_school_first": [EDU(0), VAC(22), ev(48, "education_revert", {"edu_share": 0.18})],
+    "matched_jobs_first": [VAC(0), EDU(22), ev(48, "vacancy_revert", {"vac0": 0.08})],
     "matched_simultaneous": [EDU(22), VAC(22)],
     "shifted_school_first": [EDU(25), VAC(40)],
     "shifted_jobs_first": [VAC(25), EDU(40)],
@@ -85,15 +87,14 @@ X3_ELASTICITIES = [0.0, 0.25, 0.5, 0.75, 1.0]
 
 
 def exposure(events, treated_param, base, treat):
-    """Cumulative 70-year exposure implied by an arm's events (declared arithmetic)."""
-    year = None
-    for e in events:
-        if treated_param in e["set"]:
-            year = e["year"]
+    """Cumulative 70-year exposure implied by an arm's events (applies step changes in year order)."""
     tot = 0.0
+    val = base
     for t in range(70):
-        treated = year is not None and t >= year
-        tot += treat if treated else base
+        for e in events:
+            if e["year"] == t and treated_param in e["set"]:
+                val = e["set"][treated_param]
+        tot += val
     return tot
 
 

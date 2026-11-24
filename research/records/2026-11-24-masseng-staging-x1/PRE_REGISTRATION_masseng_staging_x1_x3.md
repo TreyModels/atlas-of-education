@@ -157,4 +157,17 @@ leave-one-seed-out stability; report the **full surface** (no point selection).
 - If the primary matched contrast is undefined (missing arms) → report as failure.
 
 ## Deviations log
-- (to be filled before the affected run; every departure from this declaration is logged)
+- 2026-11-24 (X1 run 1, INVALID for the primary analysis): the first implementation of the two
+  dose-matched arms used one-way step events without end events, so the early intervention stayed on
+  for all 70 years: the emitted exposure check gave `matched_school_first` 21.0 edu-share-years /
+  9.44 vacancy-years and `matched_jobs_first` 18.36 / 11.2 — **not** the declared 18.36 / 9.44 for
+  both. The primary matched contrast from run 1 is therefore not exposure-matched and is reported as
+  **INVALID**, not interpreted. Run 1 is preserved under
+  `results_x1_v1_INVALID_matched_arms_not_exposure_matched.json` (never overwritten);
+  `results_x1_EXPLORATORY.json` is its untouched original.
+- 2026-11-24 (fix, before the corrected run): the two matched arms now add end events at year 48
+  (`education_revert` to 0.18 / `vacancy_revert` to 0.08) so each intervention is treated for exactly
+  48 years, matching the declared arm table; the driver's exposure function now re-simulates the
+  parameter path and verifies 18.36 / 9.44 for all three matched arms. Only the pre-declared arms and
+  seeds are rerun (`results_x1_EXPLORATORY_corrected.json`); no arms/seeds/thresholds were changed.
+- X3 was unaffected by this bug (it uses only the four original schedules) and ran once, as declared.
