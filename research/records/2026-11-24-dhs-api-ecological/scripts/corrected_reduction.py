@@ -27,6 +27,7 @@ No microdata, no synthetic data, no causal language. Outputs: results/corrected/
 import csv
 import json
 import os
+from collections import Counter
 
 import numpy as np
 
@@ -145,20 +146,28 @@ def m0(rows, twogroup=False, weighted=True):
     return fit(y, X, [gc, gp], weight_vec(rows, weighted), cl, names=names)
 
 
+def _expand(panel, mult):
+    """Honour bootstrap multiplicities (NEON-AUDIT FIX): replicate a resampled country's cells `count` times."""
+    return [dict(r) for r in panel if r["country"] in mult for _ in range(mult[r["country"]])]
+
+
 def ratio_boot(pa, pb, ta, tb, draws):
     common = sorted({r["country"] for r in pa} & {r["country"] for r in pb})
-    def est(countries):
-        fa = m1(subset(pa, countries), twogroup=ta, weighted=False)
-        fb = m1(subset(pb, countries), twogroup=tb, weighted=False)
-        sd_a = float(np.std([r["value"] for r in subset(pa, countries)], ddof=1))
-        sd_b = float(np.std([r["value"] for r in subset(pb, countries)], ddof=1))
+
+    def est(mult):
+        ra, rb = _expand(pa, mult), _expand(pb, mult)
+        fa = m1(ra, twogroup=ta, weighted=False)
+        fb = m1(rb, twogroup=tb, weighted=False)
+        sd_a = float(np.std([r["value"] for r in ra], ddof=1))
+        sd_b = float(np.std([r["value"] for r in rb], ddof=1))
         ja = 0 if ta else 1  # secondary
         jb = 0 if tb else 1
         return (fb["beta"][jb] / sd_b) / (fa["beta"][ja] / sd_a)
-    point = est(common)
+    point = est({c: 1 for c in common})
     vals = []
     for _ in range(draws):
-        vals.append(est(list(RNG.choice(common, size=len(common), replace=True))))
+        mult = Counter(RNG.choice(common, size=len(common), replace=True).tolist())
+        vals.append(est(mult))
     vals = np.array(vals)
     return {"ratio": float(point), "ci": [float(np.percentile(vals, 2.5)), float(np.percentile(vals, 97.5))],
             "draws": len(vals), "countries": len(common)}
@@ -186,12 +195,10 @@ def stacked(pa, pb, twogroup, draws_cluster_by_country=True):
     lv = np.array([r["edu_level"] for r in rows])
     lvls = [1] if twogroup else [1, 2, 3]
     tag = ["edu_secplus"] if twogroup else ["edu_primary", "edu_secondary", "edu_higher"]
-    X = np.column_stack([(lv == l).astype(float) for l in lvls] + [con])
-    names = tag + ["construct"]
-    # single headline interaction, matching scripts/estimate.py (secondary for 4-level, secplus for 2-group)
-    j = 0 if twogroup else 1
-    X = np.column_stack([X, (lv == lvls[j]).astype(float) * con])
-    names.append(f"{tag[j]}_x_construct")
+    # NEON-AUDIT FIX: full construct x schooling interaction (all education categories), matching estimate.py
+    X = np.column_stack([(lv == l).astype(float) for l in lvls] + [con]
+                        + [(lv == l).astype(float) * con for l in lvls])
+    names = tag + ["construct"] + [f"{nm}_x_construct" for nm in tag]
     g, _ = survey_codes(rows)
     cl, _ = country_codes(rows)
     f = fit(y, X, [g], np.ones(len(rows)), cl, names=names)

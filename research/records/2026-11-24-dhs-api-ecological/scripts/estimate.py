@@ -15,6 +15,7 @@ import csv
 import json
 import os
 import sys
+from collections import Counter
 
 # Server policy: one BLAS thread per worker; parallelise with multiprocessing instead (region-42, 96 cores).
 for _v in ("OMP_NUM_THREADS", "MKL_NUM_THREADS", "OPENBLAS_NUM_THREADS", "NUMEXPR_NUM_THREADS",
@@ -107,10 +108,15 @@ def fit(y, X, w, cluster):
         s = X[m].T @ (w[m] * u[m])
         meat += np.outer(s, s)
     V = P @ meat @ P
+    # NEON-AUDIT FIX (2026-11-25): CR1 finite-sample scaling and t_{G-1} inference.
+    G = len(np.unique(cl))
+    n_obs, k_par = X.shape
+    if G > 1 and n_obs > k_par:
+        V = V * (G / (G - 1.0)) * ((n_obs - 1.0) / (n_obs - k_par))
     se = np.sqrt(np.maximum(np.diag(V), 0))
-    from math import erf, sqrt
+    from scipy import stats as _st
     t = np.divide(beta, se, out=np.full_like(beta, np.nan), where=se > 0)
-    p = np.array([2 * (1 - 0.5 * (1 + erf(abs(v) / sqrt(2)))) for v in t])
+    p = 2.0 * _st.t.sf(np.abs(t), df=max(G - 1, 1))
     return dict(beta=beta, se=se, n=len(y), k=X.shape[1], p=p, V=V, t=t)
 
 
@@ -139,13 +145,23 @@ def _country_task(c):
 
 
 def _boot_task(args):
+    """One country-cluster bootstrap draw.
+
+    NEON-AUDIT FIX (2026-11-25): the previous version did `r["country"] in samp`, which silently kept each
+    resampled country at most once (~63.2% of draws were dropped) -- that is a subsampling bootstrap, not a
+    cluster bootstrap, and its intervals were too narrow. Multiplicities are now honoured by replicating each
+    resampled country's cells `count` times (frequency weighting, exactly equivalent to weight = count).
+    """
     which, seed = args
     pa, pb, twog_a, twog_b = _W["boot"][which]
     common = sorted(set(r["country"] for r in pa) & set(r["country"] for r in pb))
     rng = np.random.default_rng(seed)
-    samp = list(rng.choice(common, size=len(common), replace=True))
-    ra = [r for r in pa if r["country"] in samp]
-    rb = [r for r in pb if r["country"] in samp]
+    mult = Counter(rng.choice(common, size=len(common), replace=True).tolist())
+
+    def expand(panel):
+        return [dict(r) for r in panel if r["country"] in mult for _ in range(mult[r["country"]])]
+
+    ra, rb = expand(pa), expand(pb)
     oa = run_spec(ra, "M1", twogroup=twog_a, weight=False, standardise=True)
     ob = run_spec(rb, "M1", twogroup=twog_b, weight=False, standardise=True)
     if not oa or not ob:
@@ -215,8 +231,10 @@ def spec_matrix(rows, spec, twogroup=False):
         parts.append(s)
         names += [f"s_{i}" for i in range(s.shape[1])]
     if spec == "M2":
+        # NEON-AUDIT FIX (2026-11-25): drop rows missing the pipeline control rather than mean-imputing.
+        if len(rows) < 5:
+            return None
         pipe = np.array([r.get("pipeline", np.nan) for r in rows], float)
-        pipe = np.where(np.isfinite(pipe), pipe, np.nanmean(pipe))
         pipe = (pipe - np.nanmean(pipe)) / np.nanstd(pipe)
         lv = np.array([r["edu_level"] for r in rows])
         inter = np.column_stack([(lv == 1).astype(float) * pipe, (lv == 2).astype(float) * pipe,
@@ -229,6 +247,14 @@ def spec_matrix(rows, spec, twogroup=False):
 
 def run_spec(rows, spec, twogroup=False, weight=True, standardise=False):
     rows = [r for r in rows if r["value"] is not None]
+    if spec == "M2":
+        # NEON-AUDIT FIX: drop rows missing the pipeline control before any matrix is built.
+        def _finite(v):
+            try:
+                return bool(np.isfinite(float(v)))
+            except (TypeError, ValueError):
+                return False
+        rows = [r for r in rows if _finite(r.get("pipeline", np.nan))]
     if len(rows) < 8:
         return None
     y = np.array([r["value"] for r in rows], float)
@@ -456,11 +482,12 @@ def main():
                     r["z"] = (r["value"] - m) / sd
         y = np.array([r["z"] for r in rows])
         con = np.array([r["construct"] for r in rows], float)
+        # NEON-AUDIT FIX (2026-11-25): the pre-registered contrast is the FULL construct x schooling
+        # interaction. The previous version interacted only edu_secondary (4-level) / secplus (2-group) and
+        # therefore mis-scoped the test; all education x construct terms are now included.
         e, en = edu_cols(rows, twog)
-        keep = ["edu_secplus"] if twog else ["edu_secondary"]
-        base = [nm for nm in en if nm in (["edu_secplus"] if twog else ["edu_secondary", "edu_higher", "edu_primary"])]
-        X = np.column_stack([e, con] + [e[:, (0 if twog else 1)] * con])
-        names = en + ["construct"] + [f"{keep[0]}_x_construct"]
+        X = np.column_stack([e, con] + [e[:, j] * con for j in range(e.shape[1])])
+        names = en + ["construct"] + [f"{nm}_x_construct" for nm in en]
         s, _ = dummies([r["survey"] for r in rows])
         X = np.column_stack([X, s])
         names += [f"s_{i}" for i in range(s.shape[1])]
@@ -470,7 +497,7 @@ def main():
         idx = {nm: i + 1 for i, nm in enumerate(names)}  # +1: fit() pre-pends an intercept
         out = {"n_rows": f["n"], "n_surveys": len({r["survey"] for r in rows}),
                "n_countries": len({r["country"] for r in rows}), "coef": {}}
-        for nm in (names[:len(en) + 2]):
+        for nm in (names[:2 * len(en) + 1]):  # all edu, construct, all edu x construct
             i = idx[nm]
             out["coef"][nm] = {"b": float(f["beta"][i]), "se": float(f["se"][i]),
                                "p": float(f["p"][i]),
