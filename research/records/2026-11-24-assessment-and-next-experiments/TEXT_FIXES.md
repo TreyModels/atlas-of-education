@@ -32,8 +32,9 @@ Also revise the Council's claim #1 supporting statement if it quotes the 7%.
   with 49% detection of the planted tag at R=400 (BH floor 1/(R+1)=0.0025 is exactly the first threshold).
 
 ## 3. Fertility audit
-- Add the orthogonalised placebo (A6) to the placebo section; keep the "co-trending" wording and add that it cannot be separated
-  from a causal slow-moving gradient by these data.
+- Add the orthogonalised placebo (A6) to the placebo section; do **not** call it co-trending. Say the pattern is consistent with (a) a
+  common development gradient, (b) anticipation / quantity-quality (fertility choices at t respond to expected schooling of the next
+  generation), and (c) a schooling effect, and that the lead-lag design cannot separate them; point to E13 and E17.
 - Label nulls "power-calibrated" only where an MDE is computed.
 
 ## 4. Shape paper (N4)

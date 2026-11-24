@@ -22,7 +22,7 @@ surplus-motor reading of the Philippine models.
 | Result | File |
 |---|---|
 | The "labour demand precedes schooling in 7% of 58 countries" figure is a data-start artefact: the narrow demand series start in 1991, 92% of schooling take-offs are dated by 1990 | `results/demand_series_start_check.txt` |
-| Orthogonalised future-schooling placebo: future schooling keeps a coefficient comparable to or larger than current schooling for lower-secondary, secondary and tertiary, with country fixed effects | `results/placebo_orthogonal.txt` |
+| Orthogonalised future-schooling placebo: future schooling keeps a coefficient comparable to or larger than current schooling for lower-secondary, secondary and tertiary, with country fixed effects. It does not separate a common trend from anticipation/quantity-quality or a schooling effect (see PAPER_PLAN Paper 2) | `results/placebo_orthogonal.txt` |
 | Income at onset is unrelated to fertility-transition timing (n=68); schooling timing survives it; starting child mortality explains 29% (onset) and 53% (midpoint) of the variance | `results/n4_gdp_mortality.txt` |
 | Known-truth simulation of the grouping-multiverse verdicts: false positives 0-2%; group-specific tags undetectable at 25 draws, found from 100 draws; a link planted in one third of countries is labelled "robust everywhere" ~85% of the time | `results/known_truth_sim_summary.md` |
 

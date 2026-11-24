@@ -32,9 +32,14 @@ Merges Paper F and Paper N2; folds in the GPU counterfactual as a model-bound se
   ~90% as strong (52.9% vs 58.8%).
 - **New this session:** the orthogonalised placebo (`results/placebo_orthogonal.txt`). With both S(t) and S(t+10) in the model,
   future schooling keeps a coefficient comparable to or larger than current schooling for lower-secondary, secondary and tertiary, with and
-  without country fixed effects; tertiary is dominated by the future value (primary completion is the exception). This is the strongest available evidence for the
-  "co-trending, not causal" reading and answers the serial-correlation objection. Limits: exploratory, 22 Nov panel, two
-  trending series cannot be fully separated; E11 repeats it with change-on-change at several lags on the 23 Nov battery panel.
+  without country fixed effects; tertiary is dominated by the future value (primary completion is the exception). It does **not** by itself show "co-trending, not
+  causal". A "future" schooling value is not a clean placebo, because parents form expectations about their children's schooling
+  and choose family size accordingly (quantity-quality, Becker-Lewis; Galor-Weil), and the children schooled at t+10 were born
+  within about a decade of year t. Three readings fit the pattern: (a) common development trend; (b) anticipation or
+  quantity-quality, i.e. fertility choices at t respond to expected schooling of the next generation (fertility -> later
+  schooling); (c) schooling -> fertility. The placebo rules out only a short-run lever timed on *contemporaneous* schooling. Cleaner
+  designs: adult attainment stock (25+) at t+10, which is fixed by cohorts already born and cannot respond to fertility at t (E17);
+  the direction test (E13). Limits: exploratory, 22 Nov panel; E11 repeats it with change-on-change at several lags.
 - **Supporting audit table (not a separate paper):** farm decline -> fertility null (MDE 0.016 births); care-work absorbed by GDP
   and urbanisation; credential-gap correlation; marriage timing reversing in change-on-change; tipping-point statistics. Label
   them "power-calibrated" only where an MDE exists, and "exploratory" otherwise. Only this paper has a preregistration file.

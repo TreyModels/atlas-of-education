@@ -74,11 +74,17 @@ Priority: **P1** decides whether a paper is submittable; **P2** strengthens; **P
 
 ### E11 [P1] Change-on-change placebo ladder on the battery panel
 - Panel from `research/records/2026-11-23-corr-battery` (raw data via `corr-rebuild/scripts/download_raw.sh`). For each of the 8 schooling indicators run, in one table: F(t) on S(t); on S(t+10); on both; and dF(t,t+10) on dS(t-10,t), dS(t,t+10), dS(t+10,t+20), with and without country trends, with country-clustered SEs. The 22 Nov quick version is `scripts/placebo_orthogonal.py`.
-- Decision rule (pre-register): if the lead term (S(t+10) or dS(t+10,t+20)) is at least 80% of the lag term in more than half of indicators, the paper says "development gradient / co-trending"; if the lag term is at least twice the lead term in more than half, say "temporal asymmetry present, causal reading still untested".
+- Decision rule (pre-register): if the lead term (S(t+10) or dS(t+10,t+20)) is at least 80% of the lag term in more than half of indicators, the paper says the link "does not discriminate between a common development gradient, anticipation/quantity-quality and a schooling effect" (not "co-trending"); if the lag term is at least twice the lead term in more than half, say "temporal asymmetry present, causal reading still untested".
 
 ### E12 [P2] Stratified DHS check (public API, no login)
 - Use the DHS STATcompiler / API to pull TFR by woman's education x residence x wealth quintile for all surveys 1990-2022. Test whether the education gradient and its cohort attenuation survive within urban/rural and wealth strata.
 - Decision rule: if the gradient halves or more within strata, composition (who is educated) explains much of the macro gradient; report both.
+
+### E17 [P1] A placebo that fertility choices cannot contaminate
+- Why: the "future schooling" in E11 and in the 23 Nov battery is enrolment or completion of children born within about a decade of year t, so parents' fertility and expectations at t can affect it (quantity-quality, anticipation). A clean placebo must be fixed before the fertility choice.
+- Method: use the adult attainment stock (population 25+, mean years of schooling; Barro-Lee / Lee-Lee / OWID) at t+10, which reflects cohorts born >= 25 years before t+10 and cannot respond to fertility in year t or to parents' expectations. Regress F(t) on stock(t) and stock(t+10), with country FE and year FE, as in `scripts/placebo_orthogonal.py`. In parallel run the opposite timing: fertility at t-15..t-5 (the cohort's birth years) on that cohort's later schooling, which is the quantity-quality direction.
+- Decision rule (pre-register): if the adult-stock lead term is at least 80% of the lag term, the schooling-fertility association is a development gradient at the country level; if it is under 50% and the cohort-birth-year fertility predicts later schooling, the quantity-quality direction carries the signal. Report both.
+- Note the literature on quantity-quality is mixed under causal designs (twins, sibling-sex composition); cite and do not overclaim in either direction.
 
 ### E13 [P3] Direction test
 - Granger-type test with 5- and 10-year lags in a dynamic panel (Arellano-Bond or long-difference): does lagged schooling change predict fertility change better than lagged fertility change predicts schooling change? Report both directions and the difference in explained variance.
