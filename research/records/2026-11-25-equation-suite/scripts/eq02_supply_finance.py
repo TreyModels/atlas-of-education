@@ -99,8 +99,8 @@ def run(args):
                                  (summary["universal"]["mean_concentration_index"],
                                   summary["means_tested"]["mean_concentration_index"],
                                   100 * summary["universal"]["irr_mean"]))})
-    write_result(args.outdir, "eq07_finance", out)
-    save_csv(args.outdir, "eq07_finance",
+    write_result(args.outdir, "eq02_supply_finance", out)
+    save_csv(args.outdir, "eq02_supply_finance",
              ["scenario", "rep", "concentration_index", "npv_5pct", "irr", "benefit_top_q", "benefit_bottom_q"], rows)
     print("PLAIN:", out["plain_result"])
     print("RULE:", rule)

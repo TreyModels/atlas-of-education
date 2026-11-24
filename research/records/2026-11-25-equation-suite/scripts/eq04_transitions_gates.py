@@ -81,8 +81,8 @@ def run(args):
                                  (summary["bar"]["mean_gap_top_minus_bottom"],
                                   summary["quota"]["mean_gap_top_minus_bottom"],
                                   summary["contest"]["mean_gap_top_minus_bottom"]))})
-    write_result(args.outdir, "eq05_admissions", out)
-    save_csv(args.outdir, "eq05_admissions", ["regime", "rep", "admit_rate", "income_gap"], rows)
+    write_result(args.outdir, "eq04_transitions_gates", out)
+    save_csv(args.outdir, "eq04_transitions_gates", ["regime", "rep", "admit_rate", "income_gap"], rows)
     print("PLAIN:", out["plain_result"])
     print("RULE:", rule)
     return out

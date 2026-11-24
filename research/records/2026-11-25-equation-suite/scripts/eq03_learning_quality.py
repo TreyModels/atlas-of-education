@@ -110,8 +110,8 @@ def run(args):
                                  "estimators, not evidence about any school system." %
                                  (comp["mean_interaction_ability_controlled"], comp["mean_rmse_ces"],
                                   comp["mean_rmse_cobb_douglas"], lin["mean_interaction_ability_controlled"]))})
-    write_result(args.outdir, "eq02_production", out)
-    save_csv(args.outdir, "eq02_production",
+    write_result(args.outdir, "eq03_learning_quality", out)
+    save_csv(args.outdir, "eq03_learning_quality",
              ["world", "rep", "interaction_naive", "interaction_oracle", "rho_hat", "rmse_cd", "rmse_ces"], rows)
     print("PLAIN:", out["plain_result"])
     print("RULE:", rule)

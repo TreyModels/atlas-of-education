@@ -92,8 +92,8 @@ def run(args):
                                  "both recover the 9%% return. This is a demonstration of the estimator, not an "
                                  "estimate of any real return." %
                                  (bias_s["mean_bias_ols_naive"], bias_s["mean_bias_2sls"]))})
-    write_result(args.outdir, "eq01_returns", out)
-    save_csv(args.outdir, "eq01_returns",
+    write_result(args.outdir, "eq05_returns_credentials", out)
+    save_csv(args.outdir, "eq05_returns_credentials",
              ["world", "rep", "ols_naive", "ols_oracle", "iv", "exact_pct_iv", "mret_exp10"], rows)
     print("PLAIN:", out["plain_result"])
     print("RULE:", rule)

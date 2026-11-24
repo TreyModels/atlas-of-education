@@ -93,8 +93,8 @@ def run(args):
                             "coefficient is inflated (%.4f vs %.4f), so a positive growth coefficient is not "
                             "evidence of a causal human-capital effect." %
                             (conf["mean_beta_H_withH"], clean["mean_beta_H_withH"]))}
-    write_result(args.outdir, "eq06_growth", out)
-    save_csv(args.outdir, "eq06_growth", ["world", "rep", "lambda_noH", "beta_H_withH"], rows)
+    write_result(args.outdir, "eq08_growth", out)
+    save_csv(args.outdir, "eq08_growth", ["world", "rep", "lambda_noH", "beta_H_withH"], rows)
     print("PLAIN:", out["plain_result"])
     print("RULE:", rule)
     return out

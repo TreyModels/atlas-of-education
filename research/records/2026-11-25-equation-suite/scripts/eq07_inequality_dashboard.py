@@ -156,8 +156,8 @@ def run(args):
                                  "same synthetic process, not interchangeable evidence." %
                                  (null_s["elasticity_ci90"][0], null_s["elasticity_ci90"][1],
                                   per_s["mean_intergen_elasticity"], per_s["mean_theil_between"]))})
-    write_result(args.outdir, "eq08_inequality", out)
-    save_csv(args.outdir, "eq08_inequality",
+    write_result(args.outdir, "eq07_inequality_dashboard", out)
+    save_csv(args.outdir, "eq07_inequality_dashboard",
              ["world", "rep", "ige", "gini", "theil", "theil_within", "theil_between", "rank_rank", "diag"], rows)
     print("PLAIN:", out["plain_result"])
     print("RULE:", rule)
