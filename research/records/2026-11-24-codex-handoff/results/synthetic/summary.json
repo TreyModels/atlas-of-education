@@ -1,0 +1,35 @@
+{
+  "disclaimer": "Synthetic illustration, not real-world causal evidence or the Atlas CUDA engine.",
+  "oracle_design": "Cell means and subgroup rates are known by construction, not estimated. Scores are evaluated on fresh simulated observations.",
+  "seed": 71201,
+  "replicates": 200,
+  "countries": 3,
+  "periods": 5,
+  "individuals_per_cell": 400,
+  "conditional_birth_difference": 0.65,
+  "macro_mean_targets": "Identical for effect, common_trend and selection in every country-period by construction.",
+  "micro_observational_distributions": "effect and selection are identical by construction; common_trend has no within-cell schooling gradient.",
+  "intervention_mean_difference_do_school_minus_do_no_school": {
+    "effect": -0.65,
+    "common_trend": 0.0,
+    "selection": 0.0
+  },
+  "structured_micro_model_wins": {
+    "effect": {
+      "count": 200,
+      "fraction": 1.0,
+      "mean_log_likelihood_advantage": 70.19032749614468
+    },
+    "common_trend": {
+      "count": 0,
+      "fraction": 0.0,
+      "mean_log_likelihood_advantage": -71.15525579258684
+    },
+    "selection": {
+      "count": 200,
+      "fraction": 1.0,
+      "mean_log_likelihood_advantage": 70.26239497881319
+    }
+  },
+  "interpretation": "Macro likelihoods tie exactly for each dataset. Fresh micro outcomes can separate the specified common-trend model from the gradient models but cannot separate effect from selection; experimental or other credible identifying information is needed."
+}
