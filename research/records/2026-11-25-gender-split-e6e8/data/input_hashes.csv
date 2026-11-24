@@ -1,0 +1,7 @@
+item,sha256,url,path_or_output,note
+SE.PRM.ENRR.zip,ca495dfed92b90ea6e99b5d253fb3e5ea702012a206d6fb834588f95ab941d13,https://api.worldbank.org/v2/en/indicator/SE.PRM.ENRR?downloadformat=csv,API_SE.PRM.ENRR_DS2_en_csv_v2_73123.csv,WDI bulk CSV zip; vintage (Last Updated Date) = 2026-11-11
+SE.PRM.ENRR.FE.zip,c2e6773b06c5dfeb521c975ce3c667ad976281d3d5112a7c6641106d0ad5f879,https://api.worldbank.org/v2/en/indicator/SE.PRM.ENRR.FE?downloadformat=csv,API_SE.PRM.ENRR.FE_DS2_en_csv_v2_82226.csv,WDI bulk CSV zip; vintage (Last Updated Date) = 2026-11-11
+SE.PRM.ENRR.MA.zip,56f744083e7fab2d5cc95b64d72f143e96c52fbfe333ba9593e2c88b35aef39b,https://api.worldbank.org/v2/en/indicator/SE.PRM.ENRR.MA?downloadformat=csv,API_SE.PRM.ENRR.MA_DS2_en_csv_v2_82212.csv,WDI bulk CSV zip; vintage (Last Updated Date) = 2026-11-11
+wdi_sex_ger_panels.csv,210946bb971a1ca3f61547a364c3650a9e12bb39575b9276e80701a1c2fa84c5,,wdi_sex_ger_panels.csv,18252 rows
+wdi_pooled_ger_panel.csv,b1a6780165674723d82d96e9f148300890029f9c6d7eb8c84ec3078479e7a78e,,wdi_pooled_ger_panel.csv,9542 rows
+wdi_metadata_country.csv,f85d5883579b97f81e2e6e998b72bbc753bb2c92bd00833f6ae1e9a12a578092,,wdi_metadata_country.csv,265 rows
