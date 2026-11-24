@@ -1,5 +1,6 @@
 {
-  "label": "SIMULATION \u2014 statistical tests of the full-system multiverse; toy worlds, no causal claims",
+  "label": "EXPLORATORY SIGNIFICANCE SCREEN \u2014 full-system multiverse; toy worlds; no causal claims",
+  "status": "exploratory",
   "n_runs": 1440,
   "outcomes": [
     "completion_primary",
@@ -18,15 +19,20 @@
         {
           "outcome": "completion_primary",
           "effect": 0.13242083333332816,
-          "se": 0.0033850327760750055,
+          "se": 0.0033850327760748616,
           "p": 0.0,
+          "cell_pairs": 48,
+          "cell_sign_flips": 0,
+          "cell_sign_flips_10pct": 0,
           "ci": [
-            0.12578616909222115,
-            0.13905549757443517
+            0.12578616909222143,
+            0.1390554975744349
           ],
           "stratum_min": 0.11599583333333341,
           "stratum_max": 0.14884583333333334,
+          "n_strata": 11,
           "sign_consistent": true,
+          "estimable": true,
           "n": 1440,
           "p_holm": 0.0,
           "supported": true
@@ -34,129 +40,169 @@
         {
           "outcome": "completion_lower",
           "effect": 0.03520781249999874,
-          "se": 0.008036288158414265,
-          "p": 1.1807960470794558e-05,
+          "se": 0.00803628815841391,
+          "p": 1.180796047078404e-05,
+          "cell_pairs": 48,
+          "cell_sign_flips": 7,
+          "cell_sign_flips_10pct": 0,
           "ci": [
-            0.019456687709506783,
-            0.0509589372904907
+            0.01945668770950748,
+            0.05095893729049
           ],
           "stratum_min": 0.00010624999999997442,
           "stratum_max": 0.07030937500000001,
+          "n_strata": 11,
           "sign_consistent": true,
+          "estimable": true,
           "n": 1440,
-          "p_holm": 4.723184188317823e-05,
+          "p_holm": 4.723184188313616e-05,
           "supported": true
         },
         {
           "outcome": "completion_upper",
           "effect": 0.0380036458333318,
-          "se": 0.008040288343232031,
-          "p": 2.28251827954166e-06,
+          "se": 0.008040288343231677,
+          "p": 2.282518279539332e-06,
+          "cell_pairs": 48,
+          "cell_sign_flips": 2,
+          "cell_sign_flips_10pct": 0,
           "ci": [
-            0.022244680680597022,
-            0.05376261098606658
+            0.022244680680597716,
+            0.053762610986065884
           ],
           "stratum_min": 0.0014385416666667927,
           "stratum_max": 0.07456874999999996,
+          "n_strata": 11,
           "sign_consistent": true,
+          "estimable": true,
           "n": 1440,
-          "p_holm": 1.14125913977083e-05,
+          "p_holm": 1.1412591397696658e-05,
           "supported": true
         },
         {
           "outcome": "completion_tertiary",
           "effect": 0.06628333333333049,
-          "se": 0.005312980893009974,
-          "p": 1.012694222253533e-35,
+          "se": 0.0053129808930097435,
+          "p": 1.0126942222466335e-35,
+          "cell_pairs": 48,
+          "cell_sign_flips": 0,
+          "cell_sign_flips_10pct": 0,
           "ci": [
-            0.05586989078303094,
-            0.07669677588363004
+            0.055869890783031395,
+            0.07669677588362958
           ],
           "stratum_min": 0.03978333333333334,
           "stratum_max": 0.09278333333333333,
+          "n_strata": 11,
           "sign_consistent": true,
+          "estimable": true,
           "n": 1440,
-          "p_holm": 6.076165333521198e-35,
+          "p_holm": 6.076165333479801e-35,
           "supported": true
         },
         {
           "outcome": "tut_rate",
           "effect": -0.010186611607695184,
-          "se": 0.007784596068115815,
-          "p": 0.19068341274205752,
+          "se": 0.007767800803527074,
+          "p": 0.18972623940191732,
+          "cell_pairs": 16,
+          "cell_sign_flips": 3,
+          "cell_sign_flips_10pct": 3,
           "ci": [
-            -0.025444419901202178,
-            0.005071196685811812
+            -0.02541150118260825,
+            0.005038277967217881
           ],
           "stratum_min": -0.01982102365361449,
           "stratum_max": -0.0005521995617766562,
+          "n_strata": 9,
           "sign_consistent": true,
+          "estimable": true,
           "n": 480,
-          "p_holm": 0.2738154295457219,
+          "p_holm": 0.2738154295456874,
           "supported": false
         },
         {
           "outcome": "formal_share_gdp",
           "effect": 0.016596687265420823,
-          "se": 0.005183211535802669,
-          "p": 0.0013647298287571084,
+          "se": 0.005179523729191606,
+          "p": 0.001353968240384633,
+          "cell_pairs": 24,
+          "cell_sign_flips": 0,
+          "cell_sign_flips_10pct": 0,
           "ci": [
-            0.006437592655247593,
-            0.026755781875594055
+            0.006444820756205276,
+            0.02674855377463637
           ],
           "stratum_min": 0.0033166418651700003,
           "stratum_max": 0.02987673266567059,
+          "n_strata": 10,
           "sign_consistent": true,
+          "estimable": true,
           "n": 720,
-          "p_holm": 0.004094189486271325,
+          "p_holm": 0.0040619047211538995,
           "supported": true
         },
         {
           "outcome": "parity_wealth_lower",
           "effect": 0.12707438788935002,
-          "se": 0.007074016279378992,
-          "p": 3.7602928706685826e-72,
+          "se": 0.007074016279378687,
+          "p": 3.7602928706159865e-72,
+          "cell_pairs": 48,
+          "cell_sign_flips": 0,
+          "cell_sign_flips_10pct": 0,
           "ci": [
-            0.1132093159817672,
-            0.14093945979693284
+            0.1132093159817678,
+            0.14093945979693226
           ],
           "stratum_min": 0.0737725609319663,
           "stratum_max": 0.1803762148467435,
+          "n_strata": 11,
           "sign_consistent": true,
+          "estimable": true,
           "n": 1440,
-          "p_holm": 3.008234296534866e-71,
+          "p_holm": 3.008234296492789e-71,
           "supported": true
         },
         {
           "outcome": "skill_premium",
           "effect": -0.2205394952035415,
-          "se": 0.01692353481325627,
-          "p": 8.09711484346415e-39,
+          "se": 0.01691149387625502,
+          "p": 7.16959592573694e-39,
+          "cell_pairs": 24,
+          "cell_sign_flips": 0,
+          "cell_sign_flips_10pct": 0,
           "ci": [
-            -0.2537096234375238,
-            -0.1873693669695592
+            -0.2536860232010013,
+            -0.18739296720608165
           ],
           "stratum_min": -0.2847520100333356,
           "stratum_max": -0.15632698037374015,
+          "n_strata": 10,
           "sign_consistent": true,
+          "estimable": true,
           "n": 720,
-          "p_holm": 5.667980390424905e-38,
+          "p_holm": 5.018717148015857e-38,
           "supported": true
         },
         {
           "outcome": "q_pub",
           "effect": -0.015942112155896415,
-          "se": 0.010718066406362865,
-          "p": 0.13690771477286096,
+          "se": 0.010718066406362395,
+          "p": 0.1369077147728437,
+          "cell_pairs": 48,
+          "cell_sign_flips": 0,
+          "cell_sign_flips_10pct": 0,
           "ci": [
-            -0.03694952231236763,
-            0.0050652980005748
+            -0.036949522312366714,
+            0.0050652980005738805
           ],
           "stratum_min": -0.020891210820164652,
           "stratum_max": -0.010993013491629622,
+          "n_strata": 11,
           "sign_consistent": true,
+          "estimable": true,
           "n": 1440,
-          "p_holm": 0.2738154295457219,
+          "p_holm": 0.2738154295456874,
           "supported": false
         }
       ],
@@ -164,145 +210,190 @@
         {
           "outcome": "completion_primary",
           "effect": 0.11305364583333243,
-          "se": 0.0037047744579470497,
-          "p": 1.6151651701631125e-204,
+          "se": 0.003704774457947022,
+          "p": 1.6151651701519567e-204,
+          "cell_pairs": 48,
+          "cell_sign_flips": 0,
+          "cell_sign_flips_10pct": 0,
           "ci": [
-            0.1057922878957562,
-            0.12031500377090865
+            0.10579228789575626,
+            0.12031500377090859
           ],
           "stratum_min": 0.08832083333333351,
           "stratum_max": 0.13778645833333347,
+          "n_strata": 11,
           "sign_consistent": true,
+          "estimable": true,
           "n": 1440,
-          "p_holm": 1.453648653146801e-203,
+          "p_holm": 1.453648653136761e-203,
           "supported": true
         },
         {
           "outcome": "completion_lower",
           "effect": 0.025557291666666624,
-          "se": 0.008437408721926972,
-          "p": 0.0024532804484619806,
+          "se": 0.008437408721926935,
+          "p": 0.0024532804484618735,
+          "cell_pairs": 48,
+          "cell_sign_flips": 11,
+          "cell_sign_flips_10pct": 6,
           "ci": [
-            0.00901997057168976,
-            0.04209461276164349
+            0.00901997057168983,
+            0.04209461276164342
           ],
           "stratum_min": 9.375000000000355e-05,
           "stratum_max": 0.05102083333333329,
+          "n_strata": 11,
           "sign_consistent": true,
+          "estimable": true,
           "n": 1440,
-          "p_holm": 0.007359841345385942,
+          "p_holm": 0.00735984134538562,
           "supported": true
         },
         {
           "outcome": "completion_upper",
           "effect": 0.02968697916666642,
-          "se": 0.008000064456443516,
-          "p": 0.00020657060508618992,
+          "se": 0.008000064456443464,
+          "p": 0.00020657060508617045,
+          "cell_pairs": 48,
+          "cell_sign_flips": 4,
+          "cell_sign_flips_10pct": 0,
           "ci": [
-            0.014006852832037127,
-            0.04536710550129571
+            0.014006852832037231,
+            0.04536710550129561
           ],
           "stratum_min": 0.0013708333333333766,
           "stratum_max": 0.058003125000000044,
+          "n_strata": 11,
           "sign_consistent": true,
+          "estimable": true,
           "n": 1440,
-          "p_holm": 0.0008262824203447597,
+          "p_holm": 0.0008262824203446818,
           "supported": true
         },
         {
           "outcome": "completion_tertiary",
           "effect": 0.13239322916666588,
-          "se": 0.00600343079277925,
-          "p": 8.95384453572515e-108,
+          "se": 0.006003430792779226,
+          "p": 8.953844535707753e-108,
+          "cell_pairs": 48,
+          "cell_sign_flips": 0,
+          "cell_sign_flips_10pct": 0,
           "ci": [
-            0.12062650481281854,
-            0.1441599535205132
+            0.1206265048128186,
+            0.14415995352051317
           ],
           "stratum_min": 0.10031041666666674,
           "stratum_max": 0.16447604166666657,
+          "n_strata": 11,
           "sign_consistent": true,
+          "estimable": true,
           "n": 1440,
-          "p_holm": 6.267691175007605e-107,
+          "p_holm": 6.267691174995427e-107,
           "supported": true
         },
         {
           "outcome": "tut_rate",
           "effect": -0.020356734726636343,
-          "se": 0.00817581018619359,
-          "p": 0.01277884989336322,
+          "se": 0.008158170877216944,
+          "p": 0.012586585625080539,
+          "cell_pairs": 16,
+          "cell_sign_flips": 2,
+          "cell_sign_flips_10pct": 2,
           "ci": [
-            -0.036381322691575776,
-            -0.0043321467616969055
+            -0.03634674964598156,
+            -0.004366719807291131
           ],
           "stratum_min": -0.027023128267682495,
           "stratum_max": -0.013690341185589816,
+          "n_strata": 9,
           "sign_consistent": true,
+          "estimable": true,
           "n": 480,
-          "p_holm": 0.02555769978672644,
+          "p_holm": 0.025173171250161077,
           "supported": true
         },
         {
           "outcome": "formal_share_gdp",
           "effect": 0.03810140256949264,
-          "se": 0.0068196050009540895,
-          "p": 2.3097319315210497e-08,
+          "se": 0.006814752915671747,
+          "p": 2.257428712519462e-08,
+          "cell_pairs": 24,
+          "cell_sign_flips": 5,
+          "cell_sign_flips_10pct": 0,
           "ci": [
-            0.024734976767622624,
-            0.051467828371362656
+            0.024744486854776017,
+            0.05145831828420926
           ],
           "stratum_min": 0.0011705337550410033,
           "stratum_max": 0.07503227138394375,
+          "n_strata": 10,
           "sign_consistent": true,
+          "estimable": true,
           "n": 720,
-          "p_holm": 1.154865965760525e-07,
+          "p_holm": 1.1287143562597309e-07,
           "supported": true
         },
         {
           "outcome": "parity_wealth_lower",
           "effect": 0.07984410290450433,
-          "se": 0.007209871377060273,
-          "p": 1.6722698100746317e-28,
+          "se": 0.0072098713770602,
+          "p": 1.6722698100725446e-28,
+          "cell_pairs": 48,
+          "cell_sign_flips": 8,
+          "cell_sign_flips_10pct": 3,
           "ci": [
-            0.0657127550054662,
-            0.09397545080354247
+            0.06571275500546633,
+            0.09397545080354233
           ],
           "stratum_min": 0.03420033451377433,
           "stratum_max": 0.12548787129523553,
+          "n_strata": 11,
           "sign_consistent": true,
+          "estimable": true,
           "n": 1440,
-          "p_holm": 1.003361886044779e-27,
+          "p_holm": 1.0033618860435267e-27,
           "supported": true
         },
         {
           "outcome": "skill_premium",
           "effect": -0.38514143624557895,
-          "se": 0.016714324784695023,
-          "p": 1.7451252525641804e-117,
+          "se": 0.016702432698675426,
+          "p": 1.194753300858498e-117,
+          "cell_pairs": 24,
+          "cell_sign_flips": 0,
+          "cell_sign_flips_10pct": 0,
           "ci": [
-            -0.4179015128235812,
-            -0.3523813596675767
+            -0.4178782043349828,
+            -0.3524046681561751
           ],
           "stratum_min": -0.4433553522828828,
           "stratum_max": -0.3269275202082713,
+          "n_strata": 10,
           "sign_consistent": true,
+          "estimable": true,
           "n": 720,
-          "p_holm": 1.3961002020513443e-116,
+          "p_holm": 9.558026406867984e-117,
           "supported": true
         },
         {
           "outcome": "q_pub",
           "effect": -0.01128203150301394,
-          "se": 0.01082289137608713,
-          "p": 0.29721558168536816,
+          "se": 0.010822891376087069,
+          "p": 0.29721558168536544,
+          "cell_pairs": 48,
+          "cell_sign_flips": 0,
+          "cell_sign_flips_10pct": 0,
           "ci": [
-            -0.03249489860014471,
-            0.009930835594116833
+            -0.032494898600144595,
+            0.009930835594116715
           ],
           "stratum_min": -0.017125319228402547,
           "stratum_max": -0.005438743777625099,
+          "n_strata": 11,
           "sign_consistent": true,
+          "estimable": true,
           "n": 1440,
-          "p_holm": 0.29721558168536816,
+          "p_holm": 0.29721558168536544,
           "supported": false
         }
       ]
@@ -312,129 +403,163 @@
         {
           "outcome": "completion_primary",
           "effect": 0.011630902777777114,
-          "se": 0.002766905531812872,
-          "p": 2.6272874435464394e-05,
+          "se": 0.0027669055318128746,
+          "p": 2.6272874435464835e-05,
+          "cell_pairs": 72,
+          "cell_sign_flips": 19,
+          "cell_sign_flips_10pct": 17,
           "ci": [
-            0.0062077679354238845,
-            0.017054037620130344
+            0.006207767935423879,
+            0.017054037620130347
           ],
           "stratum_min": -0.0013027777777777638,
           "stratum_max": 0.024564583333333445,
+          "n_strata": 12,
           "sign_consistent": false,
+          "estimable": true,
           "n": 1440,
-          "p_holm": 0.00018391012104825076,
+          "p_holm": 0.00018391012104825385,
           "supported": false
         },
         {
           "outcome": "completion_lower",
           "effect": 0.008471180555555168,
-          "se": 0.006918343113982704,
-          "p": 0.22078168181991054,
+          "se": 0.006918343113982705,
+          "p": 0.22078168181991056,
+          "cell_pairs": 72,
+          "cell_sign_flips": 26,
+          "cell_sign_flips_10pct": 11,
           "ci": [
-            -0.005088771947850932,
+            -0.005088771947850934,
             0.022031133058961268
           ],
           "stratum_min": -0.00019583333333339503,
           "stratum_max": 0.01713819444444431,
+          "n_strata": 12,
           "sign_consistent": false,
+          "estimable": true,
           "n": 1440,
-          "p_holm": 0.5945927265416405,
+          "p_holm": 0.5945927265416412,
           "supported": false
         },
         {
           "outcome": "completion_upper",
           "effect": 0.010055208333332975,
-          "se": 0.006594158675710745,
-          "p": 0.1272925249242792,
+          "se": 0.006594158675710747,
+          "p": 0.1272925249242793,
+          "cell_pairs": 72,
+          "cell_sign_flips": 23,
+          "cell_sign_flips_10pct": 6,
           "ci": [
-            -0.0028693426710600847,
+            -0.002869342671060088,
             0.022979759337726037
           ],
           "stratum_min": 0.00015069444444437696,
           "stratum_max": 0.019959722222222198,
+          "n_strata": 12,
           "sign_consistent": true,
+          "estimable": true,
           "n": 1440,
-          "p_holm": 0.5091700996971168,
+          "p_holm": 0.5091700996971172,
           "supported": false
         },
         {
           "outcome": "completion_tertiary",
           "effect": 0.006031597222221904,
-          "se": 0.004687634862697472,
-          "p": 0.19819757551388018,
+          "se": 0.004687634862697474,
+          "p": 0.1981975755138804,
+          "cell_pairs": 72,
+          "cell_sign_flips": 31,
+          "cell_sign_flips_10pct": 29,
           "ci": [
-            -0.0031561671086651408,
-            0.015219361553108948
+            -0.0031561671086651442,
+            0.015219361553108952
           ],
           "stratum_min": -0.001236805555555498,
           "stratum_max": 0.013485416666666694,
+          "n_strata": 12,
           "sign_consistent": false,
+          "estimable": true,
           "n": 1440,
-          "p_holm": 0.5945927265416405,
+          "p_holm": 0.5945927265416412,
           "supported": false
         },
         {
           "outcome": "tut_rate",
           "effect": -0.015055077878725192,
-          "se": 0.006503722981472215,
-          "p": 0.020621691877594668,
+          "se": 0.006489691200332928,
+          "p": 0.020349262120924933,
+          "cell_pairs": 24,
+          "cell_sign_flips": 6,
+          "cell_sign_flips_10pct": 5,
           "ci": [
-            -0.027802374922410732,
-            -0.002307780835039651
+            -0.02777487263137773,
+            -0.002335283126072653
           ],
           "stratum_min": -0.03110090350477923,
           "stratum_max": 0.000990747747328935,
+          "n_strata": 10,
           "sign_consistent": false,
+          "estimable": true,
           "n": 480,
-          "p_holm": 0.12373015126556801,
+          "p_holm": 0.1220955727255496,
           "supported": false
         },
         {
           "outcome": "formal_share_gdp",
-          "effect": 0.13520131275037553,
-          "se": 0.003031006450597212,
-          "p": 0.0,
-          "ci": [
-            0.129260540107205,
-            0.14114208539354606
-          ],
+          "effect": null,
+          "se": null,
+          "p": null,
+          "p_holm": null,
+          "ci": null,
           "stratum_min": null,
           "stratum_max": null,
-          "sign_consistent": true,
-          "n": 720,
-          "p_holm": 0.0,
-          "supported": true
+          "n_strata": 0,
+          "sign_consistent": null,
+          "estimable": false,
+          "supported": false,
+          "note": "design rank 17 < 18: contrast not identifiable"
         },
         {
           "outcome": "parity_wealth_lower",
           "effect": 0.00926306332086035,
-          "se": 0.005466717561810096,
-          "p": 0.0901803696949403,
+          "se": 0.005466717561810099,
+          "p": 0.09018036969494041,
+          "cell_pairs": 72,
+          "cell_sign_flips": 20,
+          "cell_sign_flips_10pct": 17,
           "ci": [
-            -0.0014517031002874367,
-            0.019977829742008138
+            -0.001451703100287442,
+            0.019977829742008145
           ],
           "stratum_min": 0.0006072162270637227,
           "stratum_max": 0.017918910414657402,
+          "n_strata": 12,
           "sign_consistent": true,
+          "estimable": true,
           "n": 1440,
-          "p_holm": 0.4509018484747015,
+          "p_holm": 0.45090184847470205,
           "supported": false
         },
         {
           "outcome": "skill_premium",
           "effect": -0.015409668364933344,
-          "se": 0.012850558186631486,
-          "p": 0.23047199951822292,
+          "se": 0.01284141513446959,
+          "p": 0.2301402415994373,
+          "cell_pairs": 36,
+          "cell_sign_flips": 17,
+          "cell_sign_flips_10pct": 17,
           "ci": [
-            -0.040596762410731055,
-            0.00977742568086437
+            -0.04057884202849374,
+            0.009759505298627054
           ],
           "stratum_min": -0.04520715312762147,
           "stratum_max": 0.014387816397755993,
+          "n_strata": 11,
           "sign_consistent": false,
+          "estimable": true,
           "n": 720,
-          "p_holm": 0.5945927265416405,
+          "p_holm": 0.5945927265416412,
           "supported": false
         },
         {
@@ -442,13 +567,18 @@
           "effect": 0.13188270319366055,
           "se": 0.008888589167960216,
           "p": 8.406672790326759e-50,
+          "cell_pairs": 72,
+          "cell_sign_flips": 0,
+          "cell_sign_flips_10pct": 0,
           "ci": [
             0.11446106842445852,
             0.14930433796286258
           ],
           "stratum_min": 0.029357534852170186,
           "stratum_max": 0.23440787153515152,
+          "n_strata": 12,
           "sign_consistent": true,
+          "estimable": true,
           "n": 1440,
           "p_holm": 6.725338232261407e-49,
           "supported": true
@@ -460,145 +590,184 @@
         {
           "outcome": "completion_primary",
           "effect": 0.01629270833333293,
-          "se": 0.0035589762978003683,
-          "p": 4.696224937457803e-06,
+          "se": 0.0035589762978003236,
+          "p": 4.696224937456507e-06,
+          "cell_pairs": 48,
+          "cell_sign_flips": 0,
+          "cell_sign_flips_10pct": 0,
           "ci": [
-            0.009317114789644209,
-            0.02326830187702165
+            0.009317114789644296,
+            0.023268301877021565
           ],
           "stratum_min": 0.012543749999999965,
           "stratum_max": 0.019659375000000034,
+          "n_strata": 11,
           "sign_consistent": true,
+          "estimable": true,
           "n": 1440,
-          "p_holm": 3.756979949966242e-05,
+          "p_holm": 3.7569799499652055e-05,
           "supported": true
         },
         {
           "outcome": "completion_lower",
           "effect": 0.011407291666666446,
-          "se": 0.008400984284504556,
-          "p": 0.1745107130671482,
+          "se": 0.008400984284504455,
+          "p": 0.17451071306714297,
+          "cell_pairs": 48,
+          "cell_sign_flips": 11,
+          "cell_sign_flips_10pct": 1,
           "ci": [
-            -0.005058637530962482,
-            0.027873220864295375
+            -0.005058637530962284,
+            0.027873220864295174
           ],
           "stratum_min": -6.250000000007638e-05,
           "stratum_max": 0.02287708333333327,
+          "n_strata": 11,
           "sign_consistent": false,
+          "estimable": true,
           "n": 1440,
-          "p_holm": 0.3490214261342964,
+          "p_holm": 0.34902142613428594,
           "supported": false
         },
         {
           "outcome": "completion_upper",
           "effect": 0.01241406249999958,
-          "se": 0.007902973420299384,
-          "p": 0.11622699961798433,
+          "se": 0.007902973420299287,
+          "p": 0.11622699961797987,
+          "cell_pairs": 48,
+          "cell_sign_flips": 10,
+          "cell_sign_flips_10pct": 1,
           "ci": [
-            -0.003075765403787213,
-            0.027903890403786373
+            -0.0030757654037870223,
+            0.027903890403786182
           ],
           "stratum_min": -3.125000000003819e-05,
           "stratum_max": 0.024859375000000017,
+          "n_strata": 11,
           "sign_consistent": false,
+          "estimable": true,
           "n": 1440,
-          "p_holm": 0.348680998853953,
+          "p_holm": 0.3486809988539396,
           "supported": false
         },
         {
           "outcome": "completion_tertiary",
           "effect": 0.013449999999999688,
-          "se": 0.005488866915348771,
-          "p": 0.014269177993563581,
+          "se": 0.005488866915348702,
+          "p": 0.014269177993562353,
+          "cell_pairs": 48,
+          "cell_sign_flips": 4,
+          "cell_sign_flips_10pct": 3,
           "ci": [
-            0.002691820845916097,
-            0.024208179154083277
+            0.002691820845916232,
+            0.024208179154083145
           ],
           "stratum_min": 0.004538541666666673,
           "stratum_max": 0.022361458333333306,
+          "n_strata": 11,
           "sign_consistent": true,
+          "estimable": true,
           "n": 1440,
-          "p_holm": 0.057076711974254325,
+          "p_holm": 0.05707671197424941,
           "supported": false
         },
         {
           "outcome": "tut_rate",
-          "effect": 2.7755575615628914e-17,
-          "se": 4.1873658369387243e-19,
-          "p": 0.0,
-          "ci": [
-            2.6934851911588924e-17,
-            2.85762993196689e-17
-          ],
+          "effect": null,
+          "se": null,
+          "p": null,
+          "p_holm": null,
+          "ci": null,
           "stratum_min": null,
           "stratum_max": null,
-          "sign_consistent": true,
-          "n": 480,
-          "p_holm": 0.0,
-          "supported": true
+          "n_strata": 0,
+          "sign_consistent": null,
+          "estimable": false,
+          "supported": false,
+          "note": "design rank 16 < 18: contrast not identifiable"
         },
         {
           "outcome": "formal_share_gdp",
           "effect": 0.019324547171547447,
-          "se": 0.005926368812048976,
-          "p": 0.0011110870284875268,
+          "se": 0.005922152255974746,
+          "p": 0.001102024564012492,
+          "cell_pairs": 24,
+          "cell_sign_flips": 3,
+          "cell_sign_flips_10pct": 1,
           "ci": [
-            0.007708864299931454,
-            0.03094023004316344
+            0.007717128749836946,
+            0.03093196559325795
           ],
           "stratum_min": 0.0019703712681496954,
           "stratum_max": 0.03667872307494524,
+          "n_strata": 10,
           "sign_consistent": true,
+          "estimable": true,
           "n": 720,
-          "p_holm": 0.0066665221709251606,
+          "p_holm": 0.006612147384074951,
           "supported": true
         },
         {
           "outcome": "parity_wealth_lower",
           "effect": -0.0024716677564150325,
-          "se": 0.006713924580906282,
-          "p": 0.7127684508524554,
+          "se": 0.006713924580906201,
+          "p": 0.7127684508524521,
+          "cell_pairs": 48,
+          "cell_sign_flips": 16,
+          "cell_sign_flips_10pct": 16,
           "ci": [
-            -0.015630959934991345,
-            0.010687624422161281
+            -0.015630959934991185,
+            0.010687624422161122
           ],
           "stratum_min": -0.005522199428656477,
           "stratum_max": 0.00045991719175833556,
+          "n_strata": 11,
           "sign_consistent": false,
+          "estimable": true,
           "n": 1440,
-          "p_holm": 0.7127684508524554,
+          "p_holm": 0.7127684508524521,
           "supported": false
         },
         {
           "outcome": "skill_premium",
           "effect": -0.048576480307134226,
-          "se": 0.01604650119445731,
-          "p": 0.002468045374437802,
+          "se": 0.016035084258686518,
+          "p": 0.0024505032795317594,
+          "cell_pairs": 24,
+          "cell_sign_flips": 0,
+          "cell_sign_flips_10pct": 0,
           "ci": [
-            -0.08002762264827054,
-            -0.017125337965997904
+            -0.0800052454541598,
+            -0.01714771516010865
           ],
           "stratum_min": -0.07163191792368195,
           "stratum_max": -0.025521042690585638,
+          "n_strata": 10,
           "sign_consistent": true,
+          "estimable": true,
           "n": 720,
-          "p_holm": 0.01234022687218901,
+          "p_holm": 0.012252516397658796,
           "supported": true
         },
         {
           "outcome": "q_pub",
           "effect": 0.03832164952965266,
-          "se": 0.011248789266966423,
-          "p": 0.0006574480970430455,
+          "se": 0.011248789266966285,
+          "p": 0.0006574480970429425,
+          "cell_pairs": 48,
+          "cell_sign_flips": 0,
+          "cell_sign_flips_10pct": 0,
           "ci": [
-            0.016274022566398472,
-            0.060369276492906854
+            0.016274022566398743,
+            0.060369276492906576
           ],
           "stratum_min": 0.032024451346206906,
           "stratum_max": 0.04461884771309954,
+          "n_strata": 11,
           "sign_consistent": true,
+          "estimable": true,
           "n": 1440,
-          "p_holm": 0.004602136679301319,
+          "p_holm": 0.004602136679300597,
           "supported": true
         }
       ],
@@ -606,145 +775,184 @@
         {
           "outcome": "completion_primary",
           "effect": 0.034623958333332976,
-          "se": 0.003560492567306862,
-          "p": 2.37100978143468e-22,
+          "se": 0.0035604925673068384,
+          "p": 2.371009781433188e-22,
+          "cell_pairs": 48,
+          "cell_sign_flips": 0,
+          "cell_sign_flips_10pct": 0,
           "ci": [
-            0.027645392901411527,
-            0.041602523765254425
+            0.02764539290141157,
+            0.041602523765254376
           ],
           "stratum_min": 0.02460624999999994,
           "stratum_max": 0.04464166666666669,
+          "n_strata": 11,
           "sign_consistent": true,
+          "estimable": true,
           "n": 1440,
-          "p_holm": 1.896807825147744e-21,
+          "p_holm": 1.8968078251465505e-21,
           "supported": true
         },
         {
           "outcome": "completion_lower",
           "effect": 0.029009374999999938,
-          "se": 0.008571017723935972,
-          "p": 0.0007128482323342038,
+          "se": 0.008571017723935927,
+          "p": 0.0007128482323341584,
+          "cell_pairs": 48,
+          "cell_sign_flips": 12,
+          "cell_sign_flips_10pct": 0,
           "ci": [
-            0.012210180261085432,
-            0.045808569738914444
+            0.012210180261085522,
+            0.045808569738914354
           ],
           "stratum_min": -0.00011250000000007088,
           "stratum_max": 0.05813124999999997,
+          "n_strata": 11,
           "sign_consistent": false,
+          "estimable": true,
           "n": 1440,
-          "p_holm": 0.0014256964646684077,
+          "p_holm": 0.0014256964646683168,
           "supported": false
         },
         {
           "outcome": "completion_upper",
           "effect": 0.0342406249999997,
-          "se": 0.008313107701615847,
-          "p": 3.8073185634516656e-05,
+          "se": 0.008313107701615809,
+          "p": 3.8073185634513654e-05,
+          "cell_pairs": 48,
+          "cell_sign_flips": 15,
+          "cell_sign_flips_10pct": 0,
           "ci": [
-            0.017946933904832638,
-            0.05053431609516676
+            0.017946933904832714,
+            0.05053431609516668
           ],
           "stratum_min": -0.00014687499999999076,
           "stratum_max": 0.06862812500000004,
+          "n_strata": 11,
           "sign_consistent": false,
+          "estimable": true,
           "n": 1440,
-          "p_holm": 0.00015229274253806662,
+          "p_holm": 0.00015229274253805461,
           "supported": false
         },
         {
           "outcome": "completion_tertiary",
           "effect": 0.03268281249999978,
-          "se": 0.006037871037804511,
-          "p": 6.198801042619619e-08,
+          "se": 0.006037871037804479,
+          "p": 6.198801042618682e-08,
+          "cell_pairs": 48,
+          "cell_sign_flips": 2,
+          "cell_sign_flips_10pct": 0,
           "ci": [
-            0.02084858526590294,
-            0.044517039734096625
+            0.020848585265903004,
+            0.04451703973409656
           ],
           "stratum_min": 0.007136458333333318,
           "stratum_max": 0.05822916666666661,
+          "n_strata": 11,
           "sign_consistent": true,
+          "estimable": true,
           "n": 1440,
-          "p_holm": 3.0994005213098095e-07,
+          "p_holm": 3.099400521309341e-07,
           "supported": true
         },
         {
           "outcome": "tut_rate",
-          "effect": 0.1590973393994304,
-          "se": 0.0037627665524575435,
-          "p": 0.0,
-          "ci": [
-            0.15172231695661362,
-            0.1664723618422472
-          ],
+          "effect": null,
+          "se": null,
+          "p": null,
+          "p_holm": null,
+          "ci": null,
           "stratum_min": null,
           "stratum_max": null,
-          "sign_consistent": true,
-          "n": 480,
-          "p_holm": 0.0,
-          "supported": true
+          "n_strata": 0,
+          "sign_consistent": null,
+          "estimable": false,
+          "supported": false,
+          "note": "design rank 16 < 18: contrast not identifiable"
         },
         {
           "outcome": "formal_share_gdp",
           "effect": 0.047343760728292876,
-          "se": 0.006003987092073525,
-          "p": 3.135626552874717e-15,
+          "se": 0.005999715311317757,
+          "p": 2.9977176857290484e-15,
+          "cell_pairs": 24,
+          "cell_sign_flips": 0,
+          "cell_sign_flips_10pct": 0,
           "ci": [
-            0.035575946027828764,
-            0.05911157542875699
+            0.035584318718110075,
+            0.05910320273847568
           ],
           "stratum_min": 0.03609693645903167,
           "stratum_max": 0.05859058499755465,
+          "n_strata": 10,
           "sign_consistent": true,
+          "estimable": true,
           "n": 720,
-          "p_holm": 2.194938587012302e-14,
+          "p_holm": 2.0984023800103338e-14,
           "supported": true
         },
         {
           "outcome": "parity_wealth_lower",
           "effect": -0.0006946146156290863,
-          "se": 0.006796609743149102,
-          "p": 0.9185977993094646,
+          "se": 0.006796609743149065,
+          "p": 0.9185977993094642,
+          "cell_pairs": 48,
+          "cell_sign_flips": 27,
+          "cell_sign_flips_10pct": 27,
           "ci": [
-            -0.014015969712201325,
-            0.012626740480943154
+            -0.014015969712201252,
+            0.012626740480943081
           ],
           "stratum_min": -0.007815435820326566,
           "stratum_max": 0.0064262065890687,
+          "n_strata": 11,
           "sign_consistent": false,
+          "estimable": true,
           "n": 1440,
-          "p_holm": 0.9185977993094646,
+          "p_holm": 0.9185977993094642,
           "supported": false
         },
         {
           "outcome": "skill_premium",
           "effect": -0.0890790894527301,
-          "se": 0.016273962385115297,
-          "p": 4.40688841854276e-08,
+          "se": 0.016262383612831187,
+          "p": 4.310948780019144e-08,
+          "cell_pairs": 24,
+          "cell_sign_flips": 0,
+          "cell_sign_flips_10pct": 0,
           "ci": [
-            -0.12097605572755608,
-            -0.05718212317790412
+            -0.12095336133387924,
+            -0.057204817571580975
           ],
           "stratum_min": -0.13599895022155062,
           "stratum_max": -0.042159228683908756,
+          "n_strata": 10,
           "sign_consistent": true,
+          "estimable": true,
           "n": 720,
-          "p_holm": 2.644133051125656e-07,
+          "p_holm": 2.586569268011486e-07,
           "supported": true
         },
         {
           "outcome": "q_pub",
           "effect": 0.039613916129501714,
-          "se": 0.011260371455382435,
-          "p": 0.0004348226433456276,
+          "se": 0.011260371455382364,
+          "p": 0.0004348226433455916,
+          "cell_pairs": 48,
+          "cell_sign_flips": 0,
+          "cell_sign_flips_10pct": 0,
           "ci": [
-            0.01754358807695214,
-            0.06168424418205129
+            0.01754358807695228,
+            0.06168424418205115
           ],
           "stratum_min": 0.026570471533615025,
           "stratum_max": 0.052657360725388624,
+          "n_strata": 11,
           "sign_consistent": true,
+          "estimable": true,
           "n": 1440,
-          "p_holm": 0.0013044679300368827,
+          "p_holm": 0.0013044679300367747,
           "supported": true
         }
       ]
@@ -754,145 +962,190 @@
         {
           "outcome": "completion_primary",
           "effect": 0.0035017361111103437,
-          "se": 0.002766905531812871,
-          "p": 0.2056640328790311,
+          "se": 0.0027669055318128685,
+          "p": 0.20566403287903065,
+          "cell_pairs": 72,
+          "cell_sign_flips": 20,
+          "cell_sign_flips_10pct": 17,
           "ci": [
-            -0.001921398731242884,
-            0.008924870953463572
+            -0.0019213987312428787,
+            0.008924870953463566
           ],
           "stratum_min": 0.0014958333333333629,
           "stratum_max": 0.005054166666666915,
+          "n_strata": 12,
           "sign_consistent": true,
+          "estimable": true,
           "n": 1440,
-          "p_holm": 0.2056640328790311,
+          "p_holm": 0.20566403287903065,
           "supported": false
         },
         {
           "outcome": "completion_lower",
           "effect": -0.17030590277777774,
-          "se": 0.006918343113982702,
-          "p": 8.395523440376348e-134,
+          "se": 0.006918343113982692,
+          "p": 8.395523440369066e-134,
+          "cell_pairs": 72,
+          "cell_sign_flips": 0,
+          "cell_sign_flips_10pct": 0,
           "ci": [
-            -0.18386585528118385,
-            -0.15674595027437163
+            -0.18386585528118382,
+            -0.15674595027437166
           ],
           "stratum_min": -0.22020694444444455,
           "stratum_max": -0.12040486111111115,
+          "n_strata": 12,
           "sign_consistent": true,
+          "estimable": true,
           "n": 1440,
-          "p_holm": 5.876866408263444e-133,
+          "p_holm": 5.8768664082583464e-133,
           "supported": true
         },
         {
           "outcome": "completion_upper",
           "effect": -0.15949270833333332,
-          "se": 0.006594158675710743,
-          "p": 3.050929564929221e-129,
+          "se": 0.006594158675710733,
+          "p": 3.0509295649266204e-129,
+          "cell_pairs": 72,
+          "cell_sign_flips": 0,
+          "cell_sign_flips_10pct": 0,
           "ci": [
             -0.17241725933772636,
             -0.14656815732894027
           ],
           "stratum_min": -0.2027124999999999,
           "stratum_max": -0.11623854166666664,
+          "n_strata": 12,
           "sign_consistent": true,
+          "estimable": true,
           "n": 1440,
-          "p_holm": 1.8305577389575325e-128,
+          "p_holm": 1.830557738955972e-128,
           "supported": true
         },
         {
           "outcome": "completion_tertiary",
           "effect": -0.09899687500000018,
-          "se": 0.004687634862697469,
-          "p": 5.3519165378861725e-99,
+          "se": 0.004687634862697463,
+          "p": 5.3519165378833275e-99,
+          "cell_pairs": 72,
+          "cell_sign_flips": 0,
+          "cell_sign_flips_10pct": 0,
           "ci": [
-            -0.10818463933088722,
-            -0.08980911066911314
+            -0.1081846393308872,
+            -0.08980911066911315
           ],
           "stratum_min": -0.12767986111111113,
           "stratum_max": -0.059941666666666726,
+          "n_strata": 12,
           "sign_consistent": true,
+          "estimable": true,
           "n": 1440,
-          "p_holm": 2.6759582689430863e-98,
+          "p_holm": 2.6759582689416638e-98,
           "supported": true
         },
         {
           "outcome": "tut_rate",
           "effect": 0.2261272908797517,
-          "se": 0.006503722981472219,
-          "p": 7.181601461071747e-265,
+          "se": 0.006489691200332957,
+          "p": 5.2348368980657575e-266,
+          "cell_pairs": 24,
+          "cell_sign_flips": 0,
+          "cell_sign_flips_10pct": 0,
           "ci": [
-            0.21337999383606615,
-            0.23887458792343724
+            0.2134074961270991,
+            0.23884708563240428
           ],
           "stratum_min": 0.2021268275062969,
           "stratum_max": 0.2501277542532074,
+          "n_strata": 10,
           "sign_consistent": true,
+          "estimable": true,
           "n": 480,
-          "p_holm": 6.463441314964573e-264,
+          "p_holm": 4.7113532082591815e-265,
           "supported": true
         },
         {
           "outcome": "formal_share_gdp",
           "effect": -0.013941040096011492,
-          "se": 0.004988155604408766,
-          "p": 0.005192723328378812,
+          "se": 0.004984606578271517,
+          "p": 0.005160850947192003,
+          "cell_pairs": 36,
+          "cell_sign_flips": 10,
+          "cell_sign_flips_10pct": 8,
           "ci": [
-            -0.023717825080652673,
-            -0.004164255111370311
+            -0.023710868989423664,
+            -0.004171211202599319
           ],
           "stratum_min": -0.0304560012522479,
           "stratum_max": 0.002573921060223694,
+          "n_strata": 11,
           "sign_consistent": false,
+          "estimable": true,
           "n": 720,
-          "p_holm": 0.020770893313515247,
+          "p_holm": 0.02064340378876801,
           "supported": false
         },
         {
           "outcome": "parity_wealth_lower",
           "effect": -0.0143773361588003,
-          "se": 0.005466717561810094,
-          "p": 0.00853908883412373,
+          "se": 0.0054667175618100874,
+          "p": 0.008539088834123638,
+          "cell_pairs": 72,
+          "cell_sign_flips": 14,
+          "cell_sign_flips_10pct": 14,
           "ci": [
-            -0.025092102579948088,
-            -0.0036625697376525147
+            -0.025092102579948074,
+            -0.0036625697376525285
           ],
           "stratum_min": -0.025180212627239767,
           "stratum_max": -0.0035744596903600906,
+          "n_strata": 12,
           "sign_consistent": true,
+          "estimable": true,
           "n": 1440,
-          "p_holm": 0.022415446106957376,
+          "p_holm": 0.02241544610695713,
           "supported": true
         },
         {
           "outcome": "skill_premium",
           "effect": 0.3239502677734275,
-          "se": 0.012850558186631467,
-          "p": 3.1881442465386022e-140,
+          "se": 0.012841415134469581,
+          "p": 2.0260683258424208e-140,
+          "cell_pairs": 36,
+          "cell_sign_flips": 0,
+          "cell_sign_flips_10pct": 0,
           "ci": [
-            0.29876317372762984,
-            0.34913736181922517
+            0.29878109410986714,
+            0.34911944143698787
           ],
           "stratum_min": 0.25084037988316576,
           "stratum_max": 0.3792654095427612,
+          "n_strata": 11,
           "sign_consistent": true,
+          "estimable": true,
           "n": 720,
-          "p_holm": 2.5505153972308818e-139,
+          "p_holm": 1.6208546606739366e-139,
           "supported": true
         },
         {
           "outcome": "q_pub",
           "effect": 0.023777418543165806,
-          "se": 0.00888858916796021,
-          "p": 0.007471815368985792,
+          "se": 0.008888589167960198,
+          "p": 0.00747181536898571,
+          "cell_pairs": 72,
+          "cell_sign_flips": 0,
+          "cell_sign_flips_10pct": 0,
           "ci": [
-            0.006355783773963793,
-            0.04119905331236782
+            0.006355783773963817,
+            0.0411990533123678
           ],
           "stratum_min": 0.010883656690277688,
           "stratum_max": 0.03697054588205129,
+          "n_strata": 12,
           "sign_consistent": true,
+          "estimable": true,
           "n": 1440,
-          "p_holm": 0.022415446106957376,
+          "p_holm": 0.02241544610695713,
           "supported": true
         }
       ]
@@ -902,95 +1155,125 @@
         {
           "outcome": "completion_primary",
           "effect": 0.05392812499999974,
-          "se": 0.002766905531812873,
-          "p": 1.3241426660829518e-84,
+          "se": 0.0027669055318128985,
+          "p": 1.324142666087567e-84,
+          "cell_pairs": 72,
+          "cell_sign_flips": 1,
+          "cell_sign_flips_10pct": 0,
           "ci": [
-            0.048504990157646505,
-            0.05935125984235297
+            0.048504990157646456,
+            0.05935125984235302
           ],
           "stratum_min": 0.02648958333333329,
           "stratum_max": 0.07595520833333325,
+          "n_strata": 12,
           "sign_consistent": true,
+          "estimable": true,
           "n": 1440,
-          "p_holm": 9.268998662580661e-84,
+          "p_holm": 9.268998662612969e-84,
           "supported": true
         },
         {
           "outcome": "completion_lower",
           "effect": 0.03856562499999998,
-          "se": 0.006918343113982701,
-          "p": 2.4838172155432358e-08,
+          "se": 0.006918343113982763,
+          "p": 2.4838172155439518e-08,
+          "cell_pairs": 72,
+          "cell_sign_flips": 14,
+          "cell_sign_flips_10pct": 0,
           "ci": [
-            0.025005672496593884,
-            0.05212557750340607
+            0.025005672496593766,
+            0.05212557750340619
           ],
           "stratum_min": 7.916666666651917e-05,
           "stratum_max": 0.07705208333333347,
+          "n_strata": 12,
           "sign_consistent": true,
+          "estimable": true,
           "n": 1440,
-          "p_holm": 9.935268862172943e-08,
+          "p_holm": 9.935268862175807e-08,
           "supported": true
         },
         {
           "outcome": "completion_upper",
           "effect": 0.03642256944444439,
-          "se": 0.006594158675710743,
-          "p": 3.323886325594945e-08,
+          "se": 0.006594158675710803,
+          "p": 3.323886325595919e-08,
+          "cell_pairs": 72,
+          "cell_sign_flips": 18,
+          "cell_sign_flips_10pct": 0,
           "ci": [
-            0.023498018440051338,
-            0.04934712044883745
+            0.02349801844005122,
+            0.049347120448837566
           ],
           "stratum_min": -0.00012430555555553724,
           "stratum_max": 0.07296944444444453,
+          "n_strata": 12,
           "sign_consistent": false,
+          "estimable": true,
           "n": 1440,
-          "p_holm": 9.971658976784835e-08,
+          "p_holm": 9.971658976787757e-08,
           "supported": false
         },
         {
           "outcome": "completion_tertiary",
           "effect": 0.005811458333333096,
-          "se": 0.004687634862697469,
-          "p": 0.2150707965302546,
+          "se": 0.004687634862697514,
+          "p": 0.21507079653025893,
+          "cell_pairs": 72,
+          "cell_sign_flips": 35,
+          "cell_sign_flips_10pct": 35,
           "ci": [
-            -0.003376305997553942,
-            0.014999222664220133
+            -0.0033763059975540303,
+            0.014999222664220222
           ],
           "stratum_min": -0.015954861111111163,
           "stratum_max": 0.027577777777777812,
+          "n_strata": 12,
           "sign_consistent": false,
+          "estimable": true,
           "n": 1440,
-          "p_holm": 0.2218844546370531,
+          "p_holm": 0.22034477626562723,
           "supported": false
         },
         {
           "outcome": "tut_rate",
           "effect": 0.010366754624947414,
-          "se": 0.0065037229814722194,
-          "p": 0.11094222731852656,
+          "se": 0.006489691200332959,
+          "p": 0.11017238813281362,
+          "cell_pairs": 24,
+          "cell_sign_flips": 8,
+          "cell_sign_flips_10pct": 8,
           "ci": [
-            -0.0023805424187381356,
-            0.023114051668632965
+            -0.0023530401277051857,
+            0.02308654937760001
           ],
           "stratum_min": -0.008988478436146197,
           "stratum_max": 0.02972198768604095,
+          "n_strata": 10,
           "sign_consistent": false,
+          "estimable": true,
           "n": 480,
-          "p_holm": 0.2218844546370531,
+          "p_holm": 0.22034477626562723,
           "supported": false
         },
         {
           "outcome": "formal_share_gdp",
           "effect": 0.3340198421040243,
-          "se": 0.00498815560440876,
+          "se": 0.004984606578271561,
           "p": 0.0,
+          "cell_pairs": 36,
+          "cell_sign_flips": 0,
+          "cell_sign_flips_10pct": 0,
           "ci": [
-            0.3242430571193831,
-            0.3437966270886655
+            0.32425001321061203,
+            0.34378967099743657
           ],
           "stratum_min": 0.30054589929422104,
           "stratum_max": 0.3744076369231238,
+          "n_strata": 11,
           "sign_consistent": true,
+          "estimable": true,
           "n": 720,
           "p_holm": 0.0,
           "supported": true
@@ -998,49 +1281,58 @@
         {
           "outcome": "parity_wealth_lower",
           "effect": 0.0638858556671418,
-          "se": 0.005466717561810094,
-          "p": 1.4972057872335212e-31,
+          "se": 0.005466717561810141,
+          "p": 1.4972057872352479e-31,
+          "cell_pairs": 72,
+          "cell_sign_flips": 2,
+          "cell_sign_flips_10pct": 0,
           "ci": [
-            0.05317108924599402,
-            0.07460062208828959
+            0.05317108924599393,
+            0.07460062208828969
           ],
           "stratum_min": 0.015157614366665809,
           "stratum_max": 0.106445151148127,
+          "n_strata": 12,
           "sign_consistent": true,
+          "estimable": true,
           "n": 1440,
-          "p_holm": 7.486028936167606e-31,
+          "p_holm": 7.486028936176239e-31,
           "supported": true
         },
         {
           "outcome": "skill_premium",
-          "effect": 0.8817673343958495,
-          "se": 0.010567464437691914,
-          "p": 0.0,
-          "ci": [
-            0.8610551040979734,
-            0.9024795646937257
-          ],
+          "effect": null,
+          "se": null,
+          "p": null,
+          "p_holm": null,
+          "ci": null,
           "stratum_min": null,
           "stratum_max": null,
-          "sign_consistent": true,
-          "n": 720,
-          "p_holm": 0.0,
-          "supported": true
+          "n_strata": 0,
+          "sign_consistent": null,
+          "estimable": false,
+          "supported": false,
+          "note": "design rank 17 < 18: contrast not identifiable"
         },
         {
           "outcome": "q_pub",
           "effect": 0.1045498882344768,
-          "se": 0.008888589167960209,
-          "p": 6.107789925009288e-32,
+          "se": 0.00888858916796029,
+          "p": 6.107789925017105e-32,
+          "cell_pairs": 72,
+          "cell_sign_flips": 19,
+          "cell_sign_flips_10pct": 9,
           "ci": [
-            0.0871282534652748,
-            0.12197152300367882
+            0.08712825346527464,
+            0.12197152300367897
           ],
           "stratum_min": 0.0020247198929855825,
           "stratum_max": 0.20707505657596692,
+          "n_strata": 12,
           "sign_consistent": true,
+          "estimable": true,
           "n": 1440,
-          "p_holm": 3.664673955005573e-31,
+          "p_holm": 3.664673955010263e-31,
           "supported": true
         }
       ]
@@ -1052,13 +1344,18 @@
           "effect": -0.032262152777778406,
           "se": 0.0027669055318128746,
           "p": 2.0401270807289053e-31,
+          "cell_pairs": 72,
+          "cell_sign_flips": 0,
+          "cell_sign_flips_10pct": 0,
           "ci": [
             -0.03768528762013164,
             -0.02683901793542517
           ],
           "stratum_min": -0.0498791666666667,
           "stratum_max": -0.01902500000000007,
+          "n_strata": 12,
           "sign_consistent": true,
+          "estimable": true,
           "n": 1440,
           "p_holm": 1.4280889565102337e-30,
           "supported": true
@@ -1066,133 +1363,215 @@
         {
           "outcome": "completion_lower",
           "effect": -0.05007326388888934,
-          "se": 0.006918343113982715,
-          "p": 4.561766895581645e-13,
+          "se": 0.0069183431139827,
+          "p": 4.561766895581137e-13,
+          "cell_pairs": 72,
+          "cell_sign_flips": 4,
+          "cell_sign_flips_10pct": 0,
           "ci": [
-            -0.06363321639229545,
-            -0.036513311385483214
+            -0.06363321639229542,
+            -0.03651331138548324
           ],
           "stratum_min": -0.09997430555555553,
           "stratum_max": -0.00017222222222212924,
+          "n_strata": 12,
           "sign_consistent": true,
+          "estimable": true,
           "n": 1440,
-          "p_holm": 1.824706758232658e-12,
+          "p_holm": 1.824706758232455e-12,
           "supported": true
         },
         {
           "outcome": "completion_upper",
           "effect": -0.044219097222222614,
-          "se": 0.006594158675710756,
-          "p": 2.003084156532618e-11,
+          "se": 0.006594158675710743,
+          "p": 2.0030841565324452e-11,
+          "cell_pairs": 72,
+          "cell_sign_flips": 6,
+          "cell_sign_flips_10pct": 0,
           "ci": [
-            -0.0571436482266157,
-            -0.03129454621782953
+            -0.05714364822661567,
+            -0.03129454621782956
           ],
           "stratum_min": -0.08743888888888884,
           "stratum_max": -0.0009993055555556074,
+          "n_strata": 12,
           "sign_consistent": true,
+          "estimable": true,
           "n": 1440,
-          "p_holm": 6.009252469597854e-11,
+          "p_holm": 6.009252469597336e-11,
           "supported": true
         },
         {
           "outcome": "completion_tertiary",
           "effect": -0.05292395833333364,
-          "se": 0.004687634862697477,
-          "p": 1.4683670034549203e-29,
+          "se": 0.004687634862697469,
+          "p": 1.4683670034545635e-29,
+          "cell_pairs": 72,
+          "cell_sign_flips": 0,
+          "cell_sign_flips_10pct": 0,
           "ci": [
-            -0.062111722664220693,
-            -0.043736194002446584
+            -0.06211172266422067,
+            -0.043736194002446604
           ],
           "stratum_min": -0.08160694444444455,
           "stratum_max": -0.024240972222222268,
+          "n_strata": 12,
           "sign_consistent": true,
+          "estimable": true,
           "n": 1440,
-          "p_holm": 8.810202020729522e-29,
+          "p_holm": 8.810202020727382e-29,
           "supported": true
         },
         {
           "outcome": "tut_rate",
           "effect": -0.06840491362686651,
-          "se": 0.006503722981472216,
-          "p": 7.151758232916519e-26,
+          "se": 0.006489691200332947,
+          "p": 5.616952092591227e-26,
+          "cell_pairs": 24,
+          "cell_sign_flips": 0,
+          "cell_sign_flips_10pct": 0,
           "ci": [
-            -0.08115221067055206,
-            -0.05565761658318097
+            -0.08112470837951909,
+            -0.05568511887421394
           ],
           "stratum_min": -0.09240537700032209,
           "stratum_max": -0.04440445025341161,
+          "n_strata": 10,
           "sign_consistent": true,
+          "estimable": true,
           "n": 480,
-          "p_holm": 3.5758791164582593e-25,
+          "p_holm": 2.8084760462956134e-25,
           "supported": true
         },
         {
           "outcome": "formal_share_gdp",
           "effect": -0.021192942125187825,
-          "se": 0.004988155604408766,
-          "p": 2.1505977037577608e-05,
+          "se": 0.004984606578271519,
+          "p": 2.121747760172992e-05,
+          "cell_pairs": 36,
+          "cell_sign_flips": 1,
+          "cell_sign_flips_10pct": 0,
           "ci": [
-            -0.030969727109829006,
-            -0.011416157140546643
+            -0.030962771018600004,
+            -0.011423113231775648
           ],
           "stratum_min": -0.03331796956012423,
           "stratum_max": -0.009067914690251422,
+          "n_strata": 11,
           "sign_consistent": true,
+          "estimable": true,
           "n": 720,
-          "p_holm": 4.3011954075155216e-05,
+          "p_holm": 4.243495520345984e-05,
           "supported": true
         },
         {
           "outcome": "parity_wealth_lower",
           "effect": -0.1458259826392891,
-          "se": 0.0054667175618101005,
-          "p": 9.123165543703088e-157,
+          "se": 0.005466717561810092,
+          "p": 9.123165543692067e-157,
+          "cell_pairs": 72,
+          "cell_sign_flips": 0,
+          "cell_sign_flips_10pct": 0,
           "ci": [
-            -0.15654074906043688,
-            -0.1351112162181413
+            -0.15654074906043686,
+            -0.13511121621814132
           ],
           "stratum_min": -0.18959229952601458,
           "stratum_max": -0.0829886456112374,
+          "n_strata": 12,
           "sign_consistent": true,
+          "estimable": true,
           "n": 1440,
-          "p_holm": 8.210848989332779e-156,
+          "p_holm": 8.210848989322861e-156,
           "supported": true
         },
         {
           "outcome": "skill_premium",
           "effect": 0.1596529213828572,
-          "se": 0.012850558186631483,
-          "p": 1.9408777557991472e-35,
+          "se": 0.012841415134469644,
+          "p": 1.7375929993296204e-35,
+          "cell_pairs": 36,
+          "cell_sign_flips": 0,
+          "cell_sign_flips_10pct": 0,
           "ci": [
-            0.13446582733705947,
-            0.1848400154286549
+            0.1344837477192967,
+            0.1848220950464177
           ],
           "stratum_min": 0.1033992112603388,
           "stratum_max": 0.2198270433349503,
+          "n_strata": 11,
           "sign_consistent": true,
+          "estimable": true,
           "n": 720,
-          "p_holm": 1.5527022046393178e-34,
+          "p_holm": 1.3900743994636963e-34,
           "supported": true
         },
         {
           "outcome": "q_pub",
           "effect": 0.005631542928352314,
-          "se": 0.00888858916796022,
-          "p": 0.5263615219183813,
+          "se": 0.008888589167960216,
+          "p": 0.526361521918381,
+          "cell_pairs": 72,
+          "cell_sign_flips": 26,
+          "cell_sign_flips_10pct": 25,
           "ci": [
-            -0.011790091840849715,
-            0.023053177697554345
+            -0.011790091840849708,
+            0.02305317769755434
           ],
           "stratum_min": -0.0005612669040402363,
           "stratum_max": 0.01182435276074556,
+          "n_strata": 12,
           "sign_consistent": false,
+          "estimable": true,
           "n": 1440,
-          "p_holm": 0.5263615219183813,
+          "p_holm": 0.526361521918381,
           "supported": false
         }
       ]
     }
   },
-  "notes": []
+  "not_estimable": [
+    {
+      "contrast": "supply: ['fiscal_loop'] vs fixed_budget",
+      "value": "fiscal_loop",
+      "outcome": "formal_share_gdp",
+      "reason": "design rank 17 < 18: contrast not identifiable"
+    },
+    {
+      "contrast": "learning: ['plus_private', 'plus_private_tutoring'] vs public_only",
+      "value": "plus_private",
+      "outcome": "tut_rate",
+      "reason": "design rank 16 < 18: contrast not identifiable"
+    },
+    {
+      "contrast": "learning: ['plus_private', 'plus_private_tutoring'] vs public_only",
+      "value": "plus_private_tutoring",
+      "outcome": "tut_rate",
+      "reason": "design rank 16 < 18: contrast not identifiable"
+    },
+    {
+      "contrast": "jobs: ['competitive'] vs queue_floors",
+      "value": "competitive",
+      "outcome": "skill_premium",
+      "reason": "design rank 17 < 18: contrast not identifiable"
+    }
+  ],
+  "notes": [
+    "Holm family = the estimable outcomes within one contrast block; families are not joint across blocks.",
+    "The stratum check is a raw-mean sign heuristic (no seed FE, no clustering) and is a necessary, not sufficient, condition.",
+    "A row is 'supported' only if estimable AND variable AND Holm p<0.05 AND sign-consistent across a non-empty set of strata.",
+    "These p-values were not pre-registered; the multiverse pre-registration said 'no p-values'. Treat as exploratory."
+  ],
+  "provenance": {
+    "script": "test_full_system.py",
+    "script_sha256": "67bf7cd11a9a36c230c6f80d7662d8467f7aeee401e6b63f49c7a7c289183498",
+    "source": "results_multiverse.json",
+    "source_sha256": "004173aa78482bca517b2b9dc72f3a10cfa2edd11d416b10b8e911035d6ef951",
+    "numpy": "1.24.3",
+    "python": "3.10.2",
+    "git_commit": "aadbbb4f213ccbc87e2d7f50f04dfc4addcc47a2",
+    "rank_full_design": 18,
+    "n_columns": 18
+  }
 }
