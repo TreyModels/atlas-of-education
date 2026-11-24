@@ -321,7 +321,9 @@ differently (lead/lag **1.555 vs 0.541**; median |diff| **0.3042**; max **4.2677
 individual-level version of the same question: **does the within-cohort schooling coefficient change sign, or
 change materially in size, when the outcome is births vs surviving children?** That is pre-registered in
 [`PRE_REGISTRATION.md`](PRE_REGISTRATION.md) §5 as a construct × schooling interaction on the stacked outcomes,
-with the woman as the clustering unit. Neither outcome "corrects" the other; a sign flip would be a **construct
+with cluster-robust SEs (the pipeline clusters the stacked CONSTRUCT block on the PSU; the
+pre-registration's woman-clustered version is carried as a declared sensitivity — see `AMENDMENT_03` §2).
+Neither outcome "corrects" the other; a sign flip would be a **construct
 finding**, a magnitude difference a **materiality finding**, and equality a **no-difference finding**. All three
 are reportable; none is causal.
 

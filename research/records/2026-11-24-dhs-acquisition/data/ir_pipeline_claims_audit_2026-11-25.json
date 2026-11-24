@@ -1,0 +1,127 @@
+{
+ "patched_file": "/Users/treymenefee/neon-boot/wt2/dhs/research/records/2026-11-24-dhs-acquisition/scripts/ir_pipeline.py",
+ "base_file": "/Users/treymenefee/neon-boot/dhs-verify/claims_2026-11-25/base_ir_pipeline.py",
+ "patched_sha256": "68cccaa1e1a24082a1115aa14b69895b577d01fac8e6389806c8f00b8c4e330f",
+ "note": "CODE TESTS on synthetic fixtures; not evidence, not a simulation of the research question",
+ "claims": {
+  "C1_v190_nan_to_nan": {
+   "value": {
+    "patched_nan_rows_all_nan_in_wealth_cols": true,
+    "patched_valid_rows_finite": true,
+    "patched_M2_n": 270,
+    "patched_M2_n_of_total": "270/300",
+    "prefiltered_fit_n": 270,
+    "max_abs_delta_beta_patched_vs_prefiltered": 0.0,
+    "base_nan_rows_mapped_to_reference_zero": true,
+    "base_M2_n": 300
+   },
+   "claim": "NaN wealth stays NaN (not Q1) and drops out: n=270/300, max|d beta|=0 vs pre-filtered fit",
+   "pass": true
+  },
+  "C2_round_region_fe": {
+   "value": {
+    "round_region_levels": [
+     "S1_1",
+     "S1_2",
+     "S1_3",
+     "S2_1",
+     "S2_2",
+     "S2_3"
+    ],
+    "n_round_region_levels": 6,
+    "any_country_in_round_region": false,
+    "base_levels": [
+     "ZZ_1",
+     "ZZ_2",
+     "ZZ_3"
+    ],
+    "base_n_levels": 3
+   },
+   "claim": "fe_list_for(M1) gives 6 round_region levels, zero country_region",
+   "pass": true
+  },
+  "C2_cmc_window": {
+   "value": {
+    "cmc_formula": "(2020-1900)*12+6",
+    "cmc_value": 1446,
+    "patched_warnings_in_window": [],
+    "patched_warnings_one_out_of_window": [
+     "2.5% of interviews outside fieldwork window +/-3 months"
+    ],
+    "base_warnings_in_window": [
+     "100.0% of interviews outside fieldwork window +/-3 months"
+    ]
+   },
+   "claim": "CMC == 1446; 0 in-window / 1 out-of-window warning; base warned 100% out",
+   "pass": true
+  },
+  "C3_weights_normalised": {
+   "value": {
+    "patched_sum_w_survey_A": 1.0,
+    "patched_sum_w_survey_B": 1.0,
+    "base_sum_w_survey_A": 120.0
+   },
+   "claim": "v005/1e6 normalises each survey to 1.000000 (base raw)",
+   "pass": true
+  },
+  "C3_filter_manifest": {
+   "value": {
+    "rows_base": 92,
+    "rows_patched": 72,
+    "dropped": 20,
+    "survey_type_counts": {
+     "DHS": 72,
+     "MIS": 13,
+     "AIS": 7
+    },
+    "countries_all": 14,
+    "countries_kept": 14
+   },
+   "claim": "filter_manifest drops 20 MIS/AIS rows (92->72) and keeps 14/14 countries",
+   "pass": true
+  },
+  "C4_vectorised_cr1": {
+   "value": {
+    "max_abs_delta_se_vs_reference_loop": 1.3877787807814457e-17,
+    "max_abs_delta_beta_vs_reference_loop": 0.0,
+    "patched_over_base_se_ratio": 1.0127393670836666,
+    "expected_ratio_sqrt_cr1": 1.0127393670836666,
+    "n_rows": 400
+   },
+   "claim": "vectorised CR1 == reference loop SE (max|d SE| ~1e-17); base lacked CR1 factor",
+   "pass": true
+  },
+  "C5_construct_direct_match": {
+   "value": {
+    "n_construct_terms": 8,
+    "max_abs_delta_b": 0.0,
+    "max_abs_delta_se": 0.0,
+    "note": "cluster = psu; rows = 2x women",
+    "n_women_reported": 600,
+    "direct_n_rows": 1200
+   },
+   "claim": "CONSTRUCT == direct round_region FE + PSU clustering; note cluster = psu",
+   "pass": true
+  },
+  "C6_selftest": {
+   "value": {
+    "patched": {
+     "rc": 0,
+     "n_rows": 51,
+     "ok": true,
+     "tail": "SELFTEST OK - code path works. This is not a result."
+    },
+    "base": {
+     "rc": 0,
+     "n_rows": 51,
+     "ok": true,
+     "tail": "SELFTEST OK - code path works. This is not a result."
+    }
+   },
+   "claim": "patched --selftest passes and reports 51 coefficient rows",
+   "pass": true
+  }
+ },
+ "passed": 8,
+ "total": 8
+}

@@ -77,11 +77,11 @@ be copied into the record; microdata and any cell small enough to identify a wom
 | Exposure `v106` (4 categories, ref none); dose `v133` | `design(dose=False/True)`; `M1_dose` row in `estimates.csv` |
 | Cohort = 5-year birth-year bins from `v011` | `cohort5` in `woman_frame()` |
 | Round FE = survey id; country FE | absorbed via alternating projections (`absorb`) |
-| Region × round FE; urban control (M1) | `fe_list_for()` adds country_region; `design()` adds `v025` |
+| Region × round FE; urban control (M1) | `fe_list_for()` adds **round_region** (`v024` × survey round); `design()` adds `v025` (amended 2026-11-25: `AMENDMENT_03`) |
 | Wealth control (M2, mediator) | `v190` quintile dummies in M2 |
 | Education × cohort (M3); education × round (M4) | interaction blocks in `design()` |
 | Survey weights `v005/1e6`; PSU clusters `v021` (nested in round) | `w`, `psu = survey_id_v021`; cluster-robust sandwich |
-| Construct test: stack O1/O2, standardise, construct × education, cluster by **woman** | `CONSTRUCT` block in `run_models()` |
+| Construct test: stack O1/O2, standardise, construct × education, cluster by **PSU** | `CONSTRUCT` block in `run_models()`; **deviates from `PRE_REGISTRATION.md` §4.3 (woman), logged in `AMENDMENT_03` §2** |
 | Verification gate (ACQUISITION_PLAN §7) | `check_file()` — the checks listed there, automated |
 | Decision rules D1–D3 | applied by the analyst to `estimates.csv`; thresholds are in the pre-registration, not in code (deliberate: no auto-p-hacking) |
 | Heterogeneity shares, BH | per-round/ per-country tables are produced in the analysis notebook from `verify` + raw files; BH computed by hand from the recorded p-values |
