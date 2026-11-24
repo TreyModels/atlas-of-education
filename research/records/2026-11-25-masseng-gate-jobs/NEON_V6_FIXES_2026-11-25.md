@@ -12,7 +12,10 @@ Commits in this branch (each logical fix separate, explicit paths only, no `git 
 | `bb46e3a` | `education/gate.py`: quota rejection channels no longer double-count below-bar mass (audit item: quota double-count) |
 | `6b80c25` | `scripts/dashboard.py`: keep fractional formal share (measurement-layer follow-on; no re-binarisation) |
 | `70f13b0` | `scripts/run_swaps.py`: T1b NaN handling, T5 swap arms, strict-JSON nan-safe dump |
-| (this file) | record: before/after numbers, tests, OPEN defects |
+| `c21bf3b` | record: this file (before/after numbers, tests, OPEN defects) |
+| `fc2504d` | tests: restore labour test SUMMARY/non-zero exit after the file split (no production change) |
+
+Branch head at record close: `fc2504d`.
 
 Everything below is **SIMULATION** of a declared, illustrative toy model. No empirical calibration, no causal claim.
 No result was edited to make a test pass; failures are preserved and reported (see §5).
