@@ -99,6 +99,8 @@ def run(args):
                                  (summary["universal"]["mean_concentration_index"],
                                   summary["means_tested"]["mean_concentration_index"],
                                   100 * summary["universal"]["irr_mean"]))})
+    out["data_map"] = {'module': 'state/school supply + finance', 'observed': 'UIS/EdStats PTR, private share, EMIS, WDI GDP available (not fitted)', 'assumed': 'coverage, unit costs, allocation rules', 'gap': 'no unified school-finance panel'}
+    out["statistical_frame"] = {'estimand': 'benefit-incidence concentration index; NPV/IRR', 'identification': 'accounting arithmetic; no behavioural identification', 'testable_restrictions': 'fixed unit cost; stated enrolment process', 'benchmark_split': 'synthetic reps; no observed split', 'pass_fail': 'PASS if universal subsidy is more pro-rich than means-testing and investment NPV/IRR positive'}
     write_result(args.outdir, "eq02_supply_finance", out)
     save_csv(args.outdir, "eq02_supply_finance",
              ["scenario", "rep", "concentration_index", "npv_5pct", "irr", "benefit_top_q", "benefit_bottom_q"], rows)

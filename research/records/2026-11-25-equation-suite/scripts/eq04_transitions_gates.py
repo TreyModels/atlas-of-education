@@ -81,6 +81,8 @@ def run(args):
                                  (summary["bar"]["mean_gap_top_minus_bottom"],
                                   summary["quota"]["mean_gap_top_minus_bottom"],
                                   summary["contest"]["mean_gap_top_minus_bottom"]))})
+    out["data_map"] = {'module': 'gates + attainment/completion', 'observed': 'EdStats completion/transition proxies available (not fitted)', 'assumed': 'gate thresholds, quota rules', 'gap': 'task-41 top gap 3'}
+    out["statistical_frame"] = {'estimand': 'SES admission/completion gap under each gate', 'identification': 'gate arithmetic; no causal identification', 'testable_restrictions': 'score/effort distributions fixed', 'benchmark_split': 'synthetic reps; no observed split', 'pass_fail': 'PASS if baseline gap positive, quota flips it, contest widens it'}
     write_result(args.outdir, "eq04_transitions_gates", out)
     save_csv(args.outdir, "eq04_transitions_gates", ["regime", "rep", "admit_rate", "income_gap"], rows)
     print("PLAIN:", out["plain_result"])

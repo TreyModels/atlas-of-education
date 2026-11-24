@@ -1,0 +1,87 @@
+{
+ "script": "eq08_growth",
+ "prereg": "S8",
+ "multiverse": {
+  "specs": [
+   "beta_H_clean_world",
+   "beta_H_confounded_world",
+   "nelson_phelps_interaction"
+  ],
+  "estimates": {
+   "beta_H_clean_world": 0.00085,
+   "beta_H_confounded_world": 0.51924,
+   "nelson_phelps_interaction": 0.0197
+  },
+  "range": [
+   0.00085,
+   0.51924
+  ],
+  "spec_robust": true
+ },
+ "system_map": {
+  "nodes": [
+   "wider economy"
+  ],
+  "piece": 4,
+  "chain": "family affordability -> learning -> gate -> credential->jobs"
+ },
+ "masseng_boundary": {
+  "used": "standalone synthetic demonstration (NOT MASSENG v5 output)",
+  "mechanism_in_masseng_v5": false,
+  "note": "standalone synthetic demonstration; not a MASSENG v5 output"
+ },
+ "data_tier": "SYNTHETIC (+ descriptive OBSERVED cross-section if input present)",
+ "label": "SIMULATION for recovery; observed cross-section is descriptive only",
+ "reps": 120,
+ "synthetic_summary": {
+  "clean_no_confound": {
+   "mean_lambda_noH": -0.0178,
+   "mean_beta_H_withH": 0.00085
+  },
+  "omitted_tfp_confound": {
+   "mean_lambda_noH": 0.23974,
+   "mean_beta_H_withH": 0.51924
+  },
+  "nelson_phelps": {
+   "interaction": 0.0197,
+   "interaction_se": 0.0015
+  }
+ },
+ "real_cross_section": {
+  "data_tier": "OBSERVED AGGREGATES (committed x4_panel.csv; WDI/UIS national series)",
+  "source": "research/masseng-staging-x2-2026-11-24 @ f592bae, x4_input/x4_panel.csv",
+  "n": 70,
+  "n_train": 47,
+  "n_validation": 23,
+  "coef_edu1991": -0.054,
+  "se_edu1991": 0.114,
+  "coef_job1991": -0.156,
+  "se_job1991": 0.089,
+  "heldout_mae_model": 7.773,
+  "heldout_mae_persistence": 12.912,
+  "heldout_mae_training_mean": 9.88,
+  "beats_benchmarks": true,
+  "note": "honest split fixed before fit (sorted ISO3, every third validation); descriptive only; no causal claim"
+ },
+ "decision_rule": {
+  "clean_lambda_near_truth": true,
+  "confound_inflates_beta_H": true,
+  "nelson_phelps_interaction_positive": true,
+  "PASS": true
+ },
+ "plain_result": "In the clean world the convergence coefficient is recovered and the human-capital term is zero; with an omitted TFP term correlated with human capital the human-capital coefficient is inflated (0.5192 vs 0.0008), so a positive growth coefficient is not evidence of a causal human-capital effect.",
+ "data_map": {
+  "module": "structural change + macro/development",
+  "observed": "WDI GDP, GGDC/PWT, Barro-Lee; committed x4_panel used descriptively with honest split",
+  "assumed": "Solow/NP parameters, structural-change mapping",
+  "gap": "descriptive use only"
+ },
+ "statistical_frame": {
+  "estimand": "convergence and human-capital coefficient; descriptive real cross-section",
+  "identification": "known synthetic DGP; observed cross-section descriptive only",
+  "testable_restrictions": "Solow/Nelson-Phelps forms",
+  "benchmark_split": "synthetic recovery; observed train/validation split vs persistence and training-mean benchmarks",
+  "pass_fail": "PASS if synthetic coefficients recover and the observed model beats both held-out benchmarks"
+ },
+ "generated_utc": "2026-11-24T15:53:10Z"
+}

@@ -1,0 +1,105 @@
+{
+ "script": "eq01_family_demand",
+ "prereg": "S1",
+ "system_map": {
+  "nodes": [
+   "families"
+  ],
+  "piece": 1,
+  "chain": "family affordability -> learning -> gate -> credential->jobs"
+ },
+ "masseng_boundary": {
+  "used": "standalone synthetic demonstration (NOT MASSENG v5 output)",
+  "mechanism_in_masseng_v5": true,
+  "note": "affordability/progression are inside MASSENG v5; these numbers are an equation demonstration, not a MASSENG run. Borrowing is NOT implemented in MASSENG v5; the credit-constrained spec is synthetic only."
+ },
+ "data_tier": "SYNTHETIC",
+ "label": "SIMULATION - stipulated household demand DGP; no causal claim",
+ "reps": 50,
+ "n": 15000,
+ "multiverse": {
+  "specs": [
+   "income_only",
+   "forgone_earnings",
+   "credit_constrained"
+  ],
+  "estimates": {
+   "income_only_s0.00": {
+    "mean_income_elasticity_schooling": 0.169,
+    "mean_births_coef_income_control": -0.0005
+   },
+   "income_only_s0.35": {
+    "mean_income_elasticity_schooling": 0.169,
+    "mean_births_coef_income_control": -0.3474
+   },
+   "forgone_earnings_s0.00": {
+    "mean_income_elasticity_schooling": 0.1603,
+    "mean_births_coef_income_control": -0.0003
+   },
+   "forgone_earnings_s0.35": {
+    "mean_income_elasticity_schooling": 0.1603,
+    "mean_births_coef_income_control": -0.3494
+   },
+   "credit_constrained_s0.00": {
+    "mean_income_elasticity_schooling": 1.5131,
+    "mean_births_coef_income_control": 0.0004
+   },
+   "credit_constrained_s0.35": {
+    "mean_income_elasticity_schooling": 1.5131,
+    "mean_births_coef_income_control": -0.3357
+   }
+  },
+  "income_elasticity_range": [
+   0.1603,
+   1.5131
+  ],
+  "spec_robust": true
+ },
+ "summary": {
+  "income_only_s0.00": {
+   "mean_income_elasticity_schooling": 0.169,
+   "mean_births_coef_income_control": -0.0005
+  },
+  "income_only_s0.35": {
+   "mean_income_elasticity_schooling": 0.169,
+   "mean_births_coef_income_control": -0.3474
+  },
+  "forgone_earnings_s0.00": {
+   "mean_income_elasticity_schooling": 0.1603,
+   "mean_births_coef_income_control": -0.0003
+  },
+  "forgone_earnings_s0.35": {
+   "mean_income_elasticity_schooling": 0.1603,
+   "mean_births_coef_income_control": -0.3494
+  },
+  "credit_constrained_s0.00": {
+   "mean_income_elasticity_schooling": 1.5131,
+   "mean_births_coef_income_control": 0.0004
+  },
+  "credit_constrained_s0.35": {
+   "mean_income_elasticity_schooling": 1.5131,
+   "mean_births_coef_income_control": -0.3357
+  }
+ },
+ "decision_rule": {
+  "affordability_positive_across_specs": true,
+  "forgone_earnings_reduces_schooling": true,
+  "zero_signal_association_absorbed_by_income": true,
+  "PASS": true
+ },
+ "plain_result": "Family income raises schooling demand in every budget specification (income elasticity range 0.16-1.51), forgone earnings reduce it, and at zero schooling effect on births the raw schooling-births association is absorbed once income is controlled. This is a demonstration of budget arithmetic, not an estimate of any country's demand.",
+ "data_map": {
+  "module": "household demand/affordability",
+  "observed": "no usable public household demand micro panel (DHS IR gated; no fees/forgone panel)",
+  "assumed": "all budget/credit parameters",
+  "gap": "task-41 top gap 1"
+ },
+ "statistical_frame": {
+  "estimand": "income elasticity of schooling demand by level; schooling-births association",
+  "identification": "none (simulation); zero-signal control separates strength from income",
+  "testable_restrictions": "budget adds up; credit binds only in that spec",
+  "benchmark_split": "Monte Carlo reps; no observed split",
+  "pass_fail": "PASS if income elasticity positive across specs and zero-signal absorbed by income control"
+ },
+ "generated_utc": "2026-11-24T15:53:11Z"
+}

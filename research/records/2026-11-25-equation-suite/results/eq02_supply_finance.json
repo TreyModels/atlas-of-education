@@ -1,0 +1,97 @@
+{
+ "script": "eq02_supply_finance",
+ "prereg": "S2",
+ "data_tier": "SYNTHETIC",
+ "label": "SIMULATION - stipulated income/enrolment DGP; arithmetic policy scenarios",
+ "n": 100000,
+ "reps": 40,
+ "summary": {
+  "universal": {
+   "mean_concentration_index": 0.4061,
+   "ci90": [
+    0.4029,
+    0.4089
+   ],
+   "benefit_share_top_quintile": 0.432,
+   "benefit_share_bottom_quintile": 0.036,
+   "npv_at_5pct": 2.843,
+   "irr_mean": 0.2497
+  },
+  "means_tested": {
+   "mean_concentration_index": -0.4791,
+   "ci90": [
+    -0.4844,
+    -0.4748
+   ],
+   "benefit_share_top_quintile": 0.0,
+   "benefit_share_bottom_quintile": 0.275,
+   "npv_at_5pct": 2.843,
+   "irr_mean": 0.2497
+  },
+  "quota": {
+   "mean_concentration_index": 0.335,
+   "ci90": [
+    0.3344,
+    0.3355
+   ],
+   "benefit_share_top_quintile": 0.5,
+   "benefit_share_bottom_quintile": 0.0,
+   "npv_at_5pct": 2.843,
+   "irr_mean": 0.2497
+  }
+ },
+ "multiverse": {
+  "specs": [
+   "universal",
+   "means_tested",
+   "quota"
+  ],
+  "estimates": {
+   "universal": 0.4061,
+   "means_tested": -0.4791,
+   "quota": 0.335
+  },
+  "range": [
+   -0.4791,
+   0.4061
+  ],
+  "spec_robust": false,
+  "discount_sensitivity": {
+   "npv_5pct": 2.843
+  }
+ },
+ "decision_rule": {
+  "universal_more_pro_rich_than_means_tested": true,
+  "npv_positive_at_5pct": true,
+  "irr_above_5pct": true,
+  "PASS": true
+ },
+ "system_map": {
+  "nodes": [
+   "schools-state",
+   "dashboard"
+  ],
+  "piece": 1,
+  "chain": "family affordability -> learning -> gate -> credential->jobs"
+ },
+ "masseng_boundary": {
+  "used": "standalone synthetic demonstration (NOT MASSENG v5 output)",
+  "mechanism_in_masseng_v5": true,
+  "note": "standalone synthetic demonstration; not a MASSENG v5 output"
+ },
+ "plain_result": "A universal per-student subsidy is pro-rich in this model (concentration index 0.406 vs -0.479 for means-testing) because enrolment rises with income; the investment arithmetic gives a positive NPV at 5% and an IRR of 25.0%. These are arithmetic consequences of the stated assumptions, not policy estimates.",
+ "data_map": {
+  "module": "state/school supply + finance",
+  "observed": "UIS/EdStats PTR, private share, EMIS, WDI GDP available (not fitted)",
+  "assumed": "coverage, unit costs, allocation rules",
+  "gap": "no unified school-finance panel"
+ },
+ "statistical_frame": {
+  "estimand": "benefit-incidence concentration index; NPV/IRR",
+  "identification": "accounting arithmetic; no behavioural identification",
+  "testable_restrictions": "fixed unit cost; stated enrolment process",
+  "benchmark_split": "synthetic reps; no observed split",
+  "pass_fail": "PASS if universal subsidy is more pro-rich than means-testing and investment NPV/IRR positive"
+ },
+ "generated_utc": "2026-11-24T15:53:17Z"
+}

@@ -1,0 +1,160 @@
+{
+ "script": "eq10_tutoring_shadow",
+ "prereg": "S10",
+ "system_map": {
+  "nodes": [
+   "exams-shadow",
+   "learning"
+  ],
+  "piece": 2,
+  "chain": "family affordability -> learning -> gate -> credential->jobs"
+ },
+ "masseng_boundary": {
+  "used": "standalone synthetic demonstration (NOT MASSENG v5 output)",
+  "mechanism_in_masseng_v5": false,
+  "note": "tutoring/learning production is NOT implemented in MASSENG v5; synthetic demonstration only. Bray targets are literature targets, not a fit."
+ },
+ "data_tier": "SYNTHETIC + LITERATURE_TARGETS (Bray; descriptive check only)",
+ "label": "SIMULATION - stipulated tutoring demand + production DGP; no causal claim",
+ "reps": 50,
+ "n_demand": 8000,
+ "n_production": 12000,
+ "demand": {
+  "single_process": {
+   "tobit_eta_mean": 7.499,
+   "two_part_eta_mean": 0.802,
+   "two_part_within_0.15_share": 1.0
+  },
+  "different_processes": {
+   "tobit_eta_mean": 7.631,
+   "two_part_eta_mean": 0.733,
+   "two_part_within_0.15_share": 1.0
+  }
+ },
+ "production": {
+  "rho_0.3_ret_0.5": {
+   "mean_delta_gini_ban": 0.3721,
+   "ban_raises_gini_share": 1.0,
+   "mean_participation": 0.501
+  },
+  "rho_0.3_ret_0.7": {
+   "mean_delta_gini_ban": 0.3365,
+   "ban_raises_gini_share": 1.0,
+   "mean_participation": 0.501
+  },
+  "rho_0.3_ret_0.9": {
+   "mean_delta_gini_ban": 0.3127,
+   "ban_raises_gini_share": 1.0,
+   "mean_participation": 0.5
+  },
+  "rho_0.5_ret_0.5": {
+   "mean_delta_gini_ban": 0.1114,
+   "ban_raises_gini_share": 1.0,
+   "mean_participation": 0.499
+  },
+  "rho_0.5_ret_0.7": {
+   "mean_delta_gini_ban": 0.1028,
+   "ban_raises_gini_share": 1.0,
+   "mean_participation": 0.5
+  },
+  "rho_0.5_ret_0.9": {
+   "mean_delta_gini_ban": 0.0973,
+   "ban_raises_gini_share": 1.0,
+   "mean_participation": 0.5
+  },
+  "rho_0.7_ret_0.5": {
+   "mean_delta_gini_ban": 0.0251,
+   "ban_raises_gini_share": 1.0,
+   "mean_participation": 0.501
+  },
+  "rho_0.7_ret_0.7": {
+   "mean_delta_gini_ban": 0.0247,
+   "ban_raises_gini_share": 1.0,
+   "mean_participation": 0.5
+  },
+  "rho_0.7_ret_0.9": {
+   "mean_delta_gini_ban": 0.0254,
+   "ban_raises_gini_share": 1.0,
+   "mean_participation": 0.501
+  }
+ },
+ "multiverse": {
+  "demand": {
+   "specs": [
+    "tobit",
+    "two_part_hurdle",
+    "ols_on_participants"
+   ],
+   "estimates": {
+    "different_processes_tobit": 7.631,
+    "different_processes_two_part": 0.733
+   },
+   "range": [
+    0.733,
+    7.631
+   ],
+   "spec_robust": true
+  },
+  "production": {
+   "specs": [
+    "rho_0.3_ret_0.5",
+    "rho_0.3_ret_0.7",
+    "rho_0.3_ret_0.9",
+    "rho_0.5_ret_0.5",
+    "rho_0.5_ret_0.7",
+    "rho_0.5_ret_0.9",
+    "rho_0.7_ret_0.5",
+    "rho_0.7_ret_0.7",
+    "rho_0.7_ret_0.9"
+   ],
+   "estimates": {
+    "rho_0.3_ret_0.5": 0.3721,
+    "rho_0.3_ret_0.7": 0.3365,
+    "rho_0.3_ret_0.9": 0.3127,
+    "rho_0.5_ret_0.5": 0.1114,
+    "rho_0.5_ret_0.7": 0.1028,
+    "rho_0.5_ret_0.9": 0.0973,
+    "rho_0.7_ret_0.5": 0.0251,
+    "rho_0.7_ret_0.7": 0.0247,
+    "rho_0.7_ret_0.9": 0.0254
+   },
+   "range": [
+    0.0247,
+    0.3721
+   ],
+   "spec_robust": true
+  }
+ },
+ "bray_external_check": {
+  "source": "literature targets from research/shadow-equations-2026-11-25 @ fdc8da0",
+  "checks": {
+   "participation": {
+    "model": 0.5,
+    "target_mean": 0.819,
+    "z": -10.62
+   }
+  },
+  "max_abs_z": 10.62
+ },
+ "decision_rule": {
+  "two_part_closer_than_tobit": true,
+  "ban_raises_gini_in_all_specs": true,
+  "model_not_claimed_to_fit_bray": true,
+  "PASS": true
+ },
+ "plain_result": "Tutoring behaves as one exams-shadow module: the two-part model recovers the income elasticity when participation and spending differ (0.73 vs Tobit 7.63), and an own-teacher ban raises the learning Gini in every CES/retention specification (delta range 0.025..0.372). The illustrative model is far from Bray's targets (max |z| = 10.6), so nothing here is a fit to a real shadow-education system.",
+ "data_map": {
+  "module": "exams-shadow (single tutoring module)",
+  "observed": "no harmonised tutoring panel; Bray targets are literature targets",
+  "assumed": "demand and production parameters",
+  "gap": "no tutoring data"
+ },
+ "statistical_frame": {
+  "estimand": "tutoring income elasticity; ban effect on learning Gini",
+  "identification": "none (synthetic); two-part vs Tobit",
+  "testable_restrictions": "hurdle/CES forms; retention assumption",
+  "benchmark_split": "synthetic reps; Bray literature targets as external check (not a fit)",
+  "pass_fail": "PASS if two-part closer than Tobit and ban raises Gini in all specs"
+ },
+ "generated_utc": "2026-11-24T15:54:00Z"
+}

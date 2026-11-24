@@ -1,0 +1,108 @@
+{
+ "script": "eq04_transitions_gates",
+ "prereg": "S4",
+ "data_tier": "SYNTHETIC",
+ "label": "SIMULATION - stipulated admissions DGP; no causal claim",
+ "reps": 60,
+ "n": 12000,
+ "seats": 4800,
+ "summary": {
+  "bar": {
+   "mean_gap_top_minus_bottom": 0.5472,
+   "ci90": [
+    0.5269,
+    0.5683
+   ]
+  },
+  "quota": {
+   "mean_gap_top_minus_bottom": 0.0906,
+   "ci90": [
+    0.0733,
+    0.1063
+   ]
+  },
+  "contest": {
+   "mean_gap_top_minus_bottom": 0.7614,
+   "ci90": [
+    0.7463,
+    0.775
+   ]
+  },
+  "quota_share_0.4": {
+   "mean_gap_top_minus_bottom": NaN,
+   "ci90": [
+    NaN,
+    NaN
+   ]
+  },
+  "quota_share_0.5": {
+   "mean_gap_top_minus_bottom": NaN,
+   "ci90": [
+    NaN,
+    NaN
+   ]
+  },
+  "quota_share_0.6": {
+   "mean_gap_top_minus_bottom": NaN,
+   "ci90": [
+    NaN,
+    NaN
+   ]
+  }
+ },
+ "multiverse": {
+  "specs": [
+   "bar",
+   "quota_share_0.4",
+   "quota_share_0.5",
+   "quota_share_0.6",
+   "contest"
+  ],
+  "estimates": {
+   "bar": 0.5472,
+   "quota_share_0.4": NaN,
+   "quota_share_0.5": NaN,
+   "quota_share_0.6": NaN,
+   "contest": 0.7614
+  },
+  "range": [
+   0.5472,
+   0.7614
+  ],
+  "spec_robust": false
+ },
+ "decision_rule": {
+  "baseline_gap_positive": true,
+  "quota_flips_gap_negative": false,
+  "contest_widens_gap": true,
+  "PASS": false
+ },
+ "system_map": {
+  "nodes": [
+   "stage transitions",
+   "gates"
+  ],
+  "piece": 3,
+  "chain": "family affordability -> learning -> gate -> credential->jobs"
+ },
+ "masseng_boundary": {
+  "used": "standalone synthetic demonstration (NOT MASSENG v5 output)",
+  "mechanism_in_masseng_v5": true,
+  "note": "standalone synthetic demonstration; not a MASSENG v5 output"
+ },
+ "plain_result": "A score bar admits rich pupils at a higher rate (gap 0.547); a reserved quota flips the gap (0.091) by construction, and a contest in which richer pupils invest more effort widens it further (0.761). The quota changes who is admitted, not how much anyone learns \u2014 this is a rationing demonstration, not an evaluation of any admissions policy.",
+ "data_map": {
+  "module": "gates + attainment/completion",
+  "observed": "EdStats completion/transition proxies available (not fitted)",
+  "assumed": "gate thresholds, quota rules",
+  "gap": "task-41 top gap 3"
+ },
+ "statistical_frame": {
+  "estimand": "SES admission/completion gap under each gate",
+  "identification": "gate arithmetic; no causal identification",
+  "testable_restrictions": "score/effort distributions fixed",
+  "benchmark_split": "synthetic reps; no observed split",
+  "pass_fail": "PASS if baseline gap positive, quota flips it, contest widens it"
+ },
+ "generated_utc": "2026-11-24T15:53:11Z"
+}

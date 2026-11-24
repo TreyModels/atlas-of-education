@@ -68,6 +68,8 @@ def run(args):
                                  "increase the effect. MASSENG v5 does not model rural-urban migration, so this is "
                                  "a synthetic demonstration of the equation, not a model output." %
                                  (min(vals), max(vals)))})
+    out["data_map"] = {'module': 'rural-urban/migration', 'observed': 'WDI urbanisation, UN migrant stock, remittances available (not fitted)', 'assumed': 'flows, costs, networks', 'gap': 'task-41 top gap 4'}
+    out["statistical_frame"] = {'estimand': 'marginal effect of education on migration probability', 'identification': 'none (synthetic); probit/logit latent model', 'testable_restrictions': 'distributional form; network exogeneity', 'benchmark_split': 'Monte Carlo; no observed split', 'pass_fail': 'PASS if education effect positive in every spec'}
     write_result(args.outdir, "eq06_migration_rural_urban", out)
     save_csv(args.outdir, "eq06_migration_rural_urban", ["spec", "rep", "marginal_effect_education", "edu_gap"], rows)
     print("PLAIN:", out["plain_result"])

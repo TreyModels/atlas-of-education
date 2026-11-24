@@ -92,6 +92,8 @@ def run(args):
                                  "both recover the 9%% return. This is a demonstration of the estimator, not an "
                                  "estimate of any real return." %
                                  (bias_s["mean_bias_ols_naive"], bias_s["mean_bias_2sls"]))})
+    out["data_map"] = {'module': 'jobs/credentials', 'observed': 'ILOSTAT/STEP wage premia available (not fitted)', 'assumed': 'returns, credential premiums', 'gap': 'task-41 top gap 5'}
+    out["statistical_frame"] = {'estimand': 'schooling return and credential premium', 'identification': 'IV exclusion holds in synthetic world only', 'testable_restrictions': 'linear wage equation; instrument relevance/exclusion', 'benchmark_split': 'Monte Carlo; no observed split', 'pass_fail': 'PASS if 2SLS bias smaller than OLS under ability bias and both recover truth in the null'}
     write_result(args.outdir, "eq05_returns_credentials", out)
     save_csv(args.outdir, "eq05_returns_credentials",
              ["world", "rep", "ols_naive", "ols_oracle", "iv", "exact_pct_iv", "mret_exp10"], rows)

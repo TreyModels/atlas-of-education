@@ -156,6 +156,8 @@ def run(args):
                                  "same synthetic process, not interchangeable evidence." %
                                  (null_s["elasticity_ci90"][0], null_s["elasticity_ci90"][1],
                                   per_s["mean_intergen_elasticity"], per_s["mean_theil_between"]))})
+    out["data_map"] = {'module': 'inequality/dashboard', 'observed': 'WID/SWIID, Barro-Lee, Learning Poverty; committed long_run_panel used descriptively', 'assumed': 'mobility process, dashboard thresholds', 'gap': 'descriptive use only'}
+    out["statistical_frame"] = {'estimand': 'inequality/mobility summaries; dashboard association', 'identification': 'descriptive; country+year FE for the observed dashboard check only', 'testable_restrictions': 'two-generation DGP; observed panel association', 'benchmark_split': 'null vs persistent synthetic worlds; observed panel descriptive', 'pass_fail': 'PASS if null-world IGE CI includes 0 and persistent-world IGE positive'}
     write_result(args.outdir, "eq07_inequality_dashboard", out)
     save_csv(args.outdir, "eq07_inequality_dashboard",
              ["world", "rep", "ige", "gini", "theil", "theil_within", "theil_between", "rank_rank", "diag"], rows)

@@ -1,0 +1,78 @@
+{
+ "script": "eq06_migration_rural_urban",
+ "prereg": "S6",
+ "system_map": {
+  "nodes": [
+   "wider economy",
+   "families"
+  ],
+  "piece": 0,
+  "chain": "family affordability -> learning -> gate -> credential->jobs"
+ },
+ "masseng_boundary": {
+  "used": "standalone synthetic demonstration (NOT MASSENG v5 output)",
+  "mechanism_in_masseng_v5": false,
+  "note": "rural-urban migration/remittances are NOT implemented in MASSENG v5; synthetic demonstration only"
+ },
+ "data_tier": "SYNTHETIC",
+ "label": "SIMULATION - stipulated migration DGP; no causal claim",
+ "reps": 50,
+ "n": 12000,
+ "multiverse": {
+  "specs": [
+   "probit_with_network",
+   "logit_with_network",
+   "probit_no_network",
+   "probit_network_remittance"
+  ],
+  "estimates": {
+   "probit_with_network": 0.00892,
+   "logit_with_network": 0.00901,
+   "probit_no_network": 0.01402,
+   "probit_network_remittance": 0.00892
+  },
+  "range": [
+   0.00892,
+   0.01402
+  ],
+  "spec_robust": true
+ },
+ "summary": {
+  "probit_with_network": {
+   "mean_marginal_effect_education": 0.00892,
+   "mean_education_gap_migrants_vs_stayers": 1.6599
+  },
+  "logit_with_network": {
+   "mean_marginal_effect_education": 0.00901,
+   "mean_education_gap_migrants_vs_stayers": 1.6274
+  },
+  "probit_no_network": {
+   "mean_marginal_effect_education": 0.01402,
+   "mean_education_gap_migrants_vs_stayers": 1.6287
+  },
+  "probit_network_remittance": {
+   "mean_marginal_effect_education": 0.00892,
+   "mean_education_gap_migrants_vs_stayers": 1.6599
+  }
+ },
+ "decision_rule": {
+  "education_positive_in_every_spec": true,
+  "network_spec_effect_larger_than_no_network": false,
+  "PASS": false
+ },
+ "plain_result": "Education raises the migration probability in every specification (marginal effect range 0.0089-0.0140) and migrants are more educated than stayers; networks increase the effect. MASSENG v5 does not model rural-urban migration, so this is a synthetic demonstration of the equation, not a model output.",
+ "data_map": {
+  "module": "rural-urban/migration",
+  "observed": "WDI urbanisation, UN migrant stock, remittances available (not fitted)",
+  "assumed": "flows, costs, networks",
+  "gap": "task-41 top gap 4"
+ },
+ "statistical_frame": {
+  "estimand": "marginal effect of education on migration probability",
+  "identification": "none (synthetic); probit/logit latent model",
+  "testable_restrictions": "distributional form; network exogeneity",
+  "benchmark_split": "Monte Carlo; no observed split",
+  "pass_fail": "PASS if education effect positive in every spec"
+ },
+ "generated_utc": "2026-11-24T15:53:29Z"
+}

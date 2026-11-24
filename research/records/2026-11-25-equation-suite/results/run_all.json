@@ -1,0 +1,333 @@
+{
+ "label": "SIMULATION/known-truth equation suite (no causal claims)",
+ "host": "autodl-container-a8f742b5ee-292349c5",
+ "python": "3.10.8",
+ "numpy": "1.24.1",
+ "nproc": 192,
+ "workers": 16,
+ "start_utc": "2026-11-24T15:52:59Z",
+ "command": "scripts/run_all.py --workers 16",
+ "smoke": [
+  {
+   "script": "eq01_family_demand.py",
+   "phase": "smoke",
+   "status": "PASS",
+   "returncode": 0,
+   "wall_s": 0.25,
+   "stdout_tail": [
+    "PLAIN: Family income raises schooling demand in every budget specification (income elasticity range 0.16-1.52), forgone earnings reduce it, and at zero schooling effect on births the raw schooling-births association is absorbed once income is controlled. This is a demonstration of budget arithmetic, not an estimate of any country's demand.",
+    "RULE: {'affordability_positive_across_specs': True, 'forgone_earnings_reduces_schooling': True, 'zero_signal_association_absorbed_by_income': True, 'PASS': True}"
+   ],
+   "stderr_tail": [],
+   "output_json": "/root/work/eqsuite/results/eq01_family_demand.json",
+   "output_sha256": "846d39f32fdab9b740304ea5fae3248bce808f17698189a7dcd307e669da959d",
+   "script_sha256": "acf642629c1d7f7026b3935b392d275e29915636fe253a69a145c82ddfcc7608"
+  },
+  {
+   "script": "eq02_supply_finance.py",
+   "phase": "smoke",
+   "status": "PASS",
+   "returncode": 0,
+   "wall_s": 0.52,
+   "stdout_tail": [
+    "PLAIN: A universal per-student subsidy is pro-rich in this model (concentration index 0.408 vs -0.476 for means-testing) because enrolment rises with income; the investment arithmetic gives a positive NPV at 5% and an IRR of 25.0%. These are arithmetic consequences of the stated assumptions, not policy estimates.",
+    "RULE: {'universal_more_pro_rich_than_means_tested': True, 'npv_positive_at_5pct': True, 'irr_above_5pct': True, 'PASS': True}"
+   ],
+   "stderr_tail": [],
+   "output_json": "/root/work/eqsuite/results/eq02_supply_finance.json",
+   "output_sha256": "f3b7dfec4b3b7bde3440e9a024341153b10cc6a8e3a4fe206e1ed5468251e84d",
+   "script_sha256": "1709a7f8b4dc5e9d7e95a6fc49b41fbd11c1614a27572f35b0b90aae6fea347c"
+  },
+  {
+   "script": "eq03_learning_quality.py",
+   "phase": "smoke",
+   "status": "PASS",
+   "returncode": 0,
+   "wall_s": 0.62,
+   "stdout_tail": [
+    "PLAIN: In the CES world the ability-controlled interaction is positive (0.002) and the CES fit beats Cobb-Douglas on RMSE (0.372 vs 0.549); in the linear null world the controlled interaction is near zero (0.005). This is a demonstration about estimators, not evidence about any school system.",
+    "RULE: {'linear_world_interaction_oracle_CI_includes_0': True, 'complementary_world_interaction_oracle_positive': True, 'rho_recovered_within_0.10_in_half_reps': False, 'ces_beats_cd_rmse_in_complementary_world': True, 'PASS': False}"
+   ],
+   "stderr_tail": [],
+   "output_json": "/root/work/eqsuite/results/eq03_learning_quality.json",
+   "output_sha256": "128757ff9d5a7a11383f7d6b045858030d64c4bcd71f1de2b8b1d3805a1da858",
+   "script_sha256": "838259248a63e91ad21eb92fd0af167e0f68b1bc96defc486a90d8af1327835e"
+  },
+  {
+   "script": "eq04_transitions_gates.py",
+   "phase": "smoke",
+   "status": "PASS",
+   "returncode": 0,
+   "wall_s": 0.23,
+   "stdout_tail": [
+    "PLAIN: A score bar admits rich pupils at a higher rate (gap 0.551); a reserved quota flips the gap (0.087) by construction, and a contest in which richer pupils invest more effort widens it further (0.764). The quota changes who is admitted, not how much anyone learns \u2014 this is a rationing demonstration, not an evaluation of any admissions policy.",
+    "RULE: {'baseline_gap_positive': True, 'quota_flips_gap_negative': False, 'contest_widens_gap': True, 'PASS': False}"
+   ],
+   "stderr_tail": [
+    "/root/work/eqsuite/scripts/eq04_transitions_gates.py:59: RuntimeWarning: Mean of empty slice.",
+    "  gq = adm_q[q >= 0.8].mean() - adm_q[q <= 0.2].mean()",
+    "/root/miniconda3/lib/python3.10/site-packages/numpy/core/_methods.py:192: RuntimeWarning: invalid value encountered in scalar divide",
+    "  ret = ret.dtype.type(ret / rcount)"
+   ],
+   "output_json": "/root/work/eqsuite/results/eq04_transitions_gates.json",
+   "output_sha256": "3b2e15b54becde984086f52a2b0e5efd177b17e598fb5454ead2c0669d9bd01f",
+   "script_sha256": "61534e3c55e84069ba7d9ccd62bf4e5f229e0feca8db421f60bc934fd18f9d99"
+  },
+  {
+   "script": "eq05_returns_credentials.py",
+   "phase": "smoke",
+   "status": "PASS",
+   "returncode": 0,
+   "wall_s": 0.24,
+   "stdout_tail": [
+    "PLAIN: Under the stipulated ability-bias DGP the naive regression overstates the return (mean bias 0.033) while 2SLS is much closer (mean bias -0.043); with no ability bias both recover the 9% return. This is a demonstration of the estimator, not an estimate of any real return.",
+    "RULE: {'bias_world_naive_biased': True, 'bias_world_iv_bias_smaller': False, 'null_world_naive_close': True, 'null_world_iv_close': True, 'PASS': False}"
+   ],
+   "stderr_tail": [],
+   "output_json": "/root/work/eqsuite/results/eq05_returns_credentials.json",
+   "output_sha256": "fd9152f0ef02e7584834d60578218df73552ff3f4b813a0eb2b908ed6f633354",
+   "script_sha256": "cedcef85dafd3cfda0daf63763e89cead35182622226ac1b8bb179a6ae25acc1"
+  },
+  {
+   "script": "eq06_migration_rural_urban.py",
+   "phase": "smoke",
+   "status": "PASS",
+   "returncode": 0,
+   "wall_s": 1.54,
+   "stdout_tail": [
+    "PLAIN: Education raises the migration probability in every specification (marginal effect range 0.0076-0.0136) and migrants are more educated than stayers; networks increase the effect. MASSENG v5 does not model rural-urban migration, so this is a synthetic demonstration of the equation, not a model output.",
+    "RULE: {'education_positive_in_every_spec': True, 'network_spec_effect_larger_than_no_network': False, 'PASS': False}"
+   ],
+   "stderr_tail": [],
+   "output_json": "/root/work/eqsuite/results/eq06_migration_rural_urban.json",
+   "output_sha256": "03878805d774b493807f31afd3a739d6d520126fa9dbb479d1d2e358ab47bfc5",
+   "script_sha256": "fc24d5b2dcc71519477df78ff80bb93bbec31c6227b1fa877e7c35a520a39a48"
+  },
+  {
+   "script": "eq07_inequality_dashboard.py",
+   "phase": "smoke",
+   "status": "PASS",
+   "returncode": 0,
+   "wall_s": 0.65,
+   "stdout_tail": [
+    "PLAIN: In the null world the intergenerational elasticity is indistinguishable from zero (90% CI -0.01 to 0.01); in the persistent world it is 0.45 and the Theil decomposition puts 0.01 of inequality between parent-education groups. The elasticity, the Gini and the transition matrix are different summaries of the same synthetic process, not interchangeable evidence.",
+    "RULE: {'null_elasticity_ci_includes_0': True, 'persistent_elasticity_positive': True, 'theil_between_positive': True, 'PASS': True}"
+   ],
+   "stderr_tail": [
+    "/root/work/eqsuite/scripts/eq07_inequality_dashboard.py:19: RuntimeWarning: invalid value encountered in log",
+    "  return float(np.mean((y / m) * np.log(y / m))) if m > 0 else 0.0"
+   ],
+   "output_json": "/root/work/eqsuite/results/eq07_inequality_dashboard.json",
+   "output_sha256": "4c044135e073948d31a4f7f65f2b9c4889f9a2758981a27e7da058fc927c6386",
+   "script_sha256": "826036cb7e8cbe6b5d6737c6858836741ce58b37f763b12c06bd0e0e20db1c80"
+  },
+  {
+   "script": "eq08_growth.py",
+   "phase": "smoke",
+   "status": "PASS",
+   "returncode": 0,
+   "wall_s": 0.16,
+   "stdout_tail": [
+    "PLAIN: In the clean world the convergence coefficient is recovered and the human-capital term is zero; with an omitted TFP term correlated with human capital the human-capital coefficient is inflated (0.5363 vs -0.0162), so a positive growth coefficient is not evidence of a causal human-capital effect.",
+    "RULE: {'clean_lambda_near_truth': False, 'confound_inflates_beta_H': True, 'nelson_phelps_interaction_positive': True, 'PASS': False}"
+   ],
+   "stderr_tail": [],
+   "output_json": "/root/work/eqsuite/results/eq08_growth.json",
+   "output_sha256": "ad4ecdcb9e4ac2bd48602875b0fee82dfc6e3ca60964ad630e62137765d1de16",
+   "script_sha256": "b0fe636a2ad57b28799a36d50eacb47eb333f8b5b576f15740dda72fed5b1589"
+  },
+  {
+   "script": "eq09_identification.py",
+   "phase": "smoke",
+   "status": "PASS",
+   "returncode": 0,
+   "wall_s": 1.96,
+   "stdout_tail": [
+    "PLAIN: Each design recovers its target in its own known-truth world and is near zero in the no-effect control; the naive estimators are biased in the stated violation worlds (IV 1.49 vs OLS 1.76 against a true 1.5; TWFE bias -0.56 vs the group-time estimator -0.02). This is a demonstration of the designs, not an estimate of any real programme.",
+    "RULE: {'null_twfe_near_zero': True, 'null_iv_near_zero': True, 'null_rd_near_zero': True, 'null_sc_near_zero': True, 'iv_closer_than_ols': True, 'PASS': True}"
+   ],
+   "stderr_tail": [],
+   "output_json": "/root/work/eqsuite/results/eq09_identification.json",
+   "output_sha256": "32a500d31bce4cfa2c533ea1deb643cba0bab679a5dceb1ef09cf2cc398d2144",
+   "script_sha256": "d06df3b250c066c7a46519c1c5621c30dfa8f0425b3de3fefd7760d39284d0a8"
+  },
+  {
+   "script": "eq10_tutoring_shadow.py",
+   "phase": "smoke",
+   "status": "PASS",
+   "returncode": 0,
+   "wall_s": 5.19,
+   "stdout_tail": [
+    "PLAIN: Tutoring behaves as one exams-shadow module: the two-part model recovers the income elasticity when participation and spending differ (0.74 vs Tobit 7.80), and an own-teacher ban raises the learning Gini in every CES/retention specification (delta range 0.023..0.368). The illustrative model is far from Bray's targets (max |z| = 10.6), so nothing here is a fit to a real shadow-education system.",
+    "RULE: {'two_part_closer_than_tobit': True, 'ban_raises_gini_in_all_specs': True, 'model_not_claimed_to_fit_bray': True, 'PASS': True}"
+   ],
+   "stderr_tail": [],
+   "output_json": "/root/work/eqsuite/results/eq10_tutoring_shadow.json",
+   "output_sha256": "17c805389fb5624f8a6328efbb114934f523a4d6915bb47010a8d28c7054b325",
+   "script_sha256": "5c0f71dfc1620901671191c3cb9df85b800482d771e7985b5960f3718740dc7d"
+  }
+ ],
+ "full": [
+  {
+   "script": "eq01_family_demand.py",
+   "phase": "full",
+   "status": "PASS",
+   "returncode": 0,
+   "wall_s": 1.26,
+   "stdout_tail": [
+    "PLAIN: Family income raises schooling demand in every budget specification (income elasticity range 0.16-1.51), forgone earnings reduce it, and at zero schooling effect on births the raw schooling-births association is absorbed once income is controlled. This is a demonstration of budget arithmetic, not an estimate of any country's demand.",
+    "RULE: {'affordability_positive_across_specs': True, 'forgone_earnings_reduces_schooling': True, 'zero_signal_association_absorbed_by_income': True, 'PASS': True}"
+   ],
+   "stderr_tail": [],
+   "output_json": "/root/work/eqsuite/results/eq01_family_demand.json",
+   "output_sha256": "75ad1e0382758a1f5ead898718a9d61d5265f0e385ceeac2e3d98f5964546701",
+   "script_sha256": "acf642629c1d7f7026b3935b392d275e29915636fe253a69a145c82ddfcc7608"
+  },
+  {
+   "script": "eq02_supply_finance.py",
+   "phase": "full",
+   "status": "PASS",
+   "returncode": 0,
+   "wall_s": 7.1,
+   "stdout_tail": [
+    "PLAIN: A universal per-student subsidy is pro-rich in this model (concentration index 0.406 vs -0.479 for means-testing) because enrolment rises with income; the investment arithmetic gives a positive NPV at 5% and an IRR of 25.0%. These are arithmetic consequences of the stated assumptions, not policy estimates.",
+    "RULE: {'universal_more_pro_rich_than_means_tested': True, 'npv_positive_at_5pct': True, 'irr_above_5pct': True, 'PASS': True}"
+   ],
+   "stderr_tail": [],
+   "output_json": "/root/work/eqsuite/results/eq02_supply_finance.json",
+   "output_sha256": "91a245f8ae9de020c970787dce44ed9ac9c149465c5c7c1e6e0e66562e688a23",
+   "script_sha256": "1709a7f8b4dc5e9d7e95a6fc49b41fbd11c1614a27572f35b0b90aae6fea347c"
+  },
+  {
+   "script": "eq03_learning_quality.py",
+   "phase": "full",
+   "status": "PASS",
+   "returncode": 0,
+   "wall_s": 2.81,
+   "stdout_tail": [
+    "PLAIN: In the CES world the ability-controlled interaction is positive (0.002) and the CES fit beats Cobb-Douglas on RMSE (0.376 vs 0.558); in the linear null world the controlled interaction is near zero (0.004). This is a demonstration about estimators, not evidence about any school system.",
+    "RULE: {'linear_world_interaction_oracle_CI_includes_0': True, 'complementary_world_interaction_oracle_positive': True, 'rho_recovered_within_0.10_in_half_reps': False, 'ces_beats_cd_rmse_in_complementary_world': True, 'PASS': False}"
+   ],
+   "stderr_tail": [],
+   "output_json": "/root/work/eqsuite/results/eq03_learning_quality.json",
+   "output_sha256": "532cf91f1a6cde86a42f2556a27867eb61338780f448e6ad063b0f6f78c02af7",
+   "script_sha256": "838259248a63e91ad21eb92fd0af167e0f68b1bc96defc486a90d8af1327835e"
+  },
+  {
+   "script": "eq04_transitions_gates.py",
+   "phase": "full",
+   "status": "PASS",
+   "returncode": 0,
+   "wall_s": 0.96,
+   "stdout_tail": [
+    "PLAIN: A score bar admits rich pupils at a higher rate (gap 0.547); a reserved quota flips the gap (0.091) by construction, and a contest in which richer pupils invest more effort widens it further (0.761). The quota changes who is admitted, not how much anyone learns \u2014 this is a rationing demonstration, not an evaluation of any admissions policy.",
+    "RULE: {'baseline_gap_positive': True, 'quota_flips_gap_negative': False, 'contest_widens_gap': True, 'PASS': False}"
+   ],
+   "stderr_tail": [
+    "/root/work/eqsuite/scripts/eq04_transitions_gates.py:59: RuntimeWarning: Mean of empty slice.",
+    "  gq = adm_q[q >= 0.8].mean() - adm_q[q <= 0.2].mean()",
+    "/root/miniconda3/lib/python3.10/site-packages/numpy/core/_methods.py:192: RuntimeWarning: invalid value encountered in scalar divide",
+    "  ret = ret.dtype.type(ret / rcount)"
+   ],
+   "output_json": "/root/work/eqsuite/results/eq04_transitions_gates.json",
+   "output_sha256": "1471046b42aed4db4d5903decb657ac2b092ec1814111a0cc39213633ffbc45e",
+   "script_sha256": "61534e3c55e84069ba7d9ccd62bf4e5f229e0feca8db421f60bc934fd18f9d99"
+  },
+  {
+   "script": "eq05_returns_credentials.py",
+   "phase": "full",
+   "status": "PASS",
+   "returncode": 0,
+   "wall_s": 0.55,
+   "stdout_tail": [
+    "PLAIN: Under the stipulated ability-bias DGP the naive regression overstates the return (mean bias 0.033) while 2SLS is much closer (mean bias -0.006); with no ability bias both recover the 9% return. This is a demonstration of the estimator, not an estimate of any real return.",
+    "RULE: {'bias_world_naive_biased': True, 'bias_world_iv_bias_smaller': True, 'null_world_naive_close': True, 'null_world_iv_close': True, 'PASS': True}"
+   ],
+   "stderr_tail": [],
+   "output_json": "/root/work/eqsuite/results/eq05_returns_credentials.json",
+   "output_sha256": "b08fb9187a1755d76239edb97138a6eb6d896a9907bd18a6db6ec110b1400501",
+   "script_sha256": "cedcef85dafd3cfda0daf63763e89cead35182622226ac1b8bb179a6ae25acc1"
+  },
+  {
+   "script": "eq06_migration_rural_urban.py",
+   "phase": "full",
+   "status": "PASS",
+   "returncode": 0,
+   "wall_s": 18.81,
+   "stdout_tail": [
+    "PLAIN: Education raises the migration probability in every specification (marginal effect range 0.0089-0.0140) and migrants are more educated than stayers; networks increase the effect. MASSENG v5 does not model rural-urban migration, so this is a synthetic demonstration of the equation, not a model output.",
+    "RULE: {'education_positive_in_every_spec': True, 'network_spec_effect_larger_than_no_network': False, 'PASS': False}"
+   ],
+   "stderr_tail": [],
+   "output_json": "/root/work/eqsuite/results/eq06_migration_rural_urban.json",
+   "output_sha256": "7fc33d01199ce47bb99e569a558c04c82a5cdb6f69a5db5cc2bfb8895ef0db6c",
+   "script_sha256": "fc24d5b2dcc71519477df78ff80bb93bbec31c6227b1fa877e7c35a520a39a48"
+  },
+  {
+   "script": "eq07_inequality_dashboard.py",
+   "phase": "full",
+   "status": "PASS",
+   "returncode": 0,
+   "wall_s": 7.08,
+   "stdout_tail": [
+    "PLAIN: In the null world the intergenerational elasticity is indistinguishable from zero (90% CI -0.00 to 0.00); in the persistent world it is 0.45 and the Theil decomposition puts 0.01 of inequality between parent-education groups. The elasticity, the Gini and the transition matrix are different summaries of the same synthetic process, not interchangeable evidence.",
+    "RULE: {'null_elasticity_ci_includes_0': True, 'persistent_elasticity_positive': True, 'theil_between_positive': True, 'PASS': True}"
+   ],
+   "stderr_tail": [
+    "/root/work/eqsuite/scripts/eq07_inequality_dashboard.py:19: RuntimeWarning: invalid value encountered in log",
+    "  return float(np.mean((y / m) * np.log(y / m))) if m > 0 else 0.0"
+   ],
+   "output_json": "/root/work/eqsuite/results/eq07_inequality_dashboard.json",
+   "output_sha256": "466e636510b48fee08e4738ee6fc5e64e6235e6f1911f515190ac9ecd391a1f8",
+   "script_sha256": "826036cb7e8cbe6b5d6737c6858836741ce58b37f763b12c06bd0e0e20db1c80"
+  },
+  {
+   "script": "eq08_growth.py",
+   "phase": "full",
+   "status": "PASS",
+   "returncode": 0,
+   "wall_s": 0.22,
+   "stdout_tail": [
+    "PLAIN: In the clean world the convergence coefficient is recovered and the human-capital term is zero; with an omitted TFP term correlated with human capital the human-capital coefficient is inflated (0.5192 vs 0.0008), so a positive growth coefficient is not evidence of a causal human-capital effect.",
+    "RULE: {'clean_lambda_near_truth': True, 'confound_inflates_beta_H': True, 'nelson_phelps_interaction_positive': True, 'PASS': True}"
+   ],
+   "stderr_tail": [],
+   "output_json": "/root/work/eqsuite/results/eq08_growth.json",
+   "output_sha256": "ebd71df8003835bfff90466dc106945c3452eb9e95925fd299f9805ce4e97b09",
+   "script_sha256": "b0fe636a2ad57b28799a36d50eacb47eb333f8b5b576f15740dda72fed5b1589"
+  },
+  {
+   "script": "eq09_identification.py",
+   "phase": "full",
+   "status": "PASS",
+   "returncode": 0,
+   "wall_s": 7.33,
+   "stdout_tail": [
+    "PLAIN: Each design recovers its target in its own known-truth world and is near zero in the no-effect control; the naive estimators are biased in the stated violation worlds (IV 1.49 vs OLS 1.76 against a true 1.5; TWFE bias -0.50 vs the group-time estimator -0.02). This is a demonstration of the designs, not an estimate of any real programme.",
+    "RULE: {'null_twfe_near_zero': True, 'null_iv_near_zero': True, 'null_rd_near_zero': True, 'null_sc_near_zero': True, 'iv_closer_than_ols': True, 'PASS': True}"
+   ],
+   "stderr_tail": [],
+   "output_json": "/root/work/eqsuite/results/eq09_identification.json",
+   "output_sha256": "7cbbe0d38613e12cfb1fe2ac758334512a064b9e31764d26ebbaa4b86175700e",
+   "script_sha256": "d06df3b250c066c7a46519c1c5621c30dfa8f0425b3de3fefd7760d39284d0a8"
+  },
+  {
+   "script": "eq10_tutoring_shadow.py",
+   "phase": "full",
+   "status": "PASS",
+   "returncode": 0,
+   "wall_s": 50.2,
+   "stdout_tail": [
+    "PLAIN: Tutoring behaves as one exams-shadow module: the two-part model recovers the income elasticity when participation and spending differ (0.73 vs Tobit 7.63), and an own-teacher ban raises the learning Gini in every CES/retention specification (delta range 0.025..0.372). The illustrative model is far from Bray's targets (max |z| = 10.6), so nothing here is a fit to a real shadow-education system.",
+    "RULE: {'two_part_closer_than_tobit': True, 'ban_raises_gini_in_all_specs': True, 'model_not_claimed_to_fit_bray': True, 'PASS': True}"
+   ],
+   "stderr_tail": [],
+   "output_json": "/root/work/eqsuite/results/eq10_tutoring_shadow.json",
+   "output_sha256": "a8bdefd77313f8744ddbb1f3410bfc160d007ee7b9b0e2ffc035b90b812dd984",
+   "script_sha256": "5c0f71dfc1620901671191c3cb9df85b800482d771e7985b5960f3718740dc7d"
+  }
+ ],
+ "wall_s": 61.69,
+ "end_utc": "2026-11-24T15:54:00Z",
+ "failures": []
+}

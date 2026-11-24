@@ -131,6 +131,8 @@ def run(args):
                                  (mv_dem["estimates"]["different_processes_two_part"],
                                   mv_dem["estimates"]["different_processes_tobit"],
                                   min(deltas), max(deltas), bray["max_abs_z"] if bray else float("nan")))})
+    out["data_map"] = {'module': 'exams-shadow (single tutoring module)', 'observed': 'no harmonised tutoring panel; Bray targets are literature targets', 'assumed': 'demand and production parameters', 'gap': 'no tutoring data'}
+    out["statistical_frame"] = {'estimand': 'tutoring income elasticity; ban effect on learning Gini', 'identification': 'none (synthetic); two-part vs Tobit', 'testable_restrictions': 'hurdle/CES forms; retention assumption', 'benchmark_split': 'synthetic reps; Bray literature targets as external check (not a fit)', 'pass_fail': 'PASS if two-part closer than Tobit and ban raises Gini in all specs'}
     write_result(args.outdir, "eq10_tutoring_shadow", out)
     save_csv(args.outdir, "eq10_tutoring_shadow", ["part", "rep", "a", "b"], rows)
     print("PLAIN:", out["plain_result"])

@@ -156,6 +156,8 @@ def run(args):
                                  "estimate of any real programme." %
                                  (summary["iv"]["iv_mean"], summary["iv"]["ols_mean"],
                                   summary["did"]["twfe_bias"], summary["did"]["cs_bias"]))})
+    out["data_map"] = {'module': 'test bench', 'observed': 'none needed (known-truth synthetic designs)', 'assumed': 'all DGP parameters', 'gap': 'n/a'}
+    out["statistical_frame"] = {'estimand': 'each design target (ATT, IV coefficient, RD jump, SC gap)', 'identification': 'design-specific assumptions stated per synthetic world', 'testable_restrictions': 'parallel trends/exclusion/continuity/donor convexity as applicable', 'benchmark_split': 'known truth; null-world CIs', 'pass_fail': 'PASS if null worlds near zero and design estimators closer than naive'}
     write_result(args.outdir, "eq09_identification", out)
     save_csv(args.outdir, "eq09_identification", ["design", "rep", "truth", "estimate", "control"], rows)
     print("PLAIN:", out["plain_result"])

@@ -81,6 +81,8 @@ def run(args):
                                  "effect on births the raw schooling-births association is absorbed once income is "
                                  "controlled. This is a demonstration of budget arithmetic, not an estimate of any "
                                  "country's demand." % (min(income_elasts), max(income_elasts)))})
+    out["data_map"] = {'module': 'household demand/affordability', 'observed': 'no usable public household demand micro panel (DHS IR gated; no fees/forgone panel)', 'assumed': 'all budget/credit parameters', 'gap': 'task-41 top gap 1'}
+    out["statistical_frame"] = {'estimand': 'income elasticity of schooling demand by level; schooling-births association', 'identification': 'none (simulation); zero-signal control separates strength from income', 'testable_restrictions': 'budget adds up; credit binds only in that spec', 'benchmark_split': 'Monte Carlo reps; no observed split', 'pass_fail': 'PASS if income elasticity positive across specs and zero-signal absorbed by income control'}
     write_result(args.outdir, "eq01_family_demand", out)
     save_csv(args.outdir, "eq01_family_demand", ["spec", "rep", "income_elasticity", "births_naive", "births_income_ctrl"], rows)
     print("PLAIN:", out["plain_result"])

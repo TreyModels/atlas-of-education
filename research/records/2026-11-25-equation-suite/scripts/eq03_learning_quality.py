@@ -110,6 +110,8 @@ def run(args):
                                  "estimators, not evidence about any school system." %
                                  (comp["mean_interaction_ability_controlled"], comp["mean_rmse_ces"],
                                   comp["mean_rmse_cobb_douglas"], lin["mean_interaction_ability_controlled"]))})
+    out["data_map"] = {'module': 'learning/quality', 'observed': 'PISA/TIMSS/PIRLS/SACMEQ anchors available (not fitted)', 'assumed': 'production technology and parameters', 'gap': 'task-41 top gap 2'}
+    out["statistical_frame"] = {'estimand': 'input returns and CES-vs-Cobb-Douglas fit', 'identification': 'known synthetic DGP; ability control vs omission', 'testable_restrictions': 'CES/CD functional forms', 'benchmark_split': 'Monte Carlo; no observed split', 'pass_fail': 'PASS if ability-controlled interaction positive in the CES world and rho recovered'}
     write_result(args.outdir, "eq03_learning_quality", out)
     save_csv(args.outdir, "eq03_learning_quality",
              ["world", "rep", "interaction_naive", "interaction_oracle", "rho_hat", "rmse_cd", "rmse_ces"], rows)

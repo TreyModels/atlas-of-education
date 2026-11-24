@@ -1,0 +1,84 @@
+{
+ "script": "eq03_learning_quality",
+ "prereg": "S3",
+ "data_tier": "SYNTHETIC",
+ "label": "SIMULATION - stipulated CES production DGP; no causal claim",
+ "reps": 150,
+ "n": 4000,
+ "omega": 0.6,
+ "summary": {
+  "linear_null_rho1": {
+   "true_rho": 1.0,
+   "mean_interaction_ability_omitted": 0.0006,
+   "mean_interaction_ability_controlled": 0.0044,
+   "median_rho_hat": 0.2,
+   "share_rho_hat_within_0.10": 0.0,
+   "mean_rmse_cobb_douglas": 0.5125,
+   "mean_rmse_ces": 0.3729
+  },
+  "ces_complementary_rho0.5": {
+   "true_rho": 0.5,
+   "mean_interaction_ability_omitted": -0.0024,
+   "mean_interaction_ability_controlled": 0.0016,
+   "median_rho_hat": 0.2,
+   "share_rho_hat_within_0.10": 0.0,
+   "mean_rmse_cobb_douglas": 0.5578,
+   "mean_rmse_ces": 0.3762
+  }
+ },
+ "multiverse": {
+  "specs": [
+   "linear_interaction_ability_omitted",
+   "linear_interaction_ability_controlled"
+  ],
+  "estimates": {
+   "linear_interaction_ability_omitted": -0.0024,
+   "linear_interaction_ability_controlled": 0.0016
+  },
+  "fit_specs": {
+   "ces_rho_hat": 0.2,
+   "cobb_douglas_implied_rho": 1.0,
+   "linear_null_rho": 1.0
+  },
+  "range_interaction": [
+   -0.0024,
+   0.0016
+  ],
+  "spec_robust": false
+ },
+ "decision_rule": {
+  "linear_world_interaction_oracle_CI_includes_0": true,
+  "complementary_world_interaction_oracle_positive": true,
+  "rho_recovered_within_0.10_in_half_reps": false,
+  "ces_beats_cd_rmse_in_complementary_world": true,
+  "PASS": false
+ },
+ "system_map": {
+  "nodes": [
+   "learning",
+   "schools-state"
+  ],
+  "piece": 2,
+  "chain": "family affordability -> learning -> gate -> credential->jobs"
+ },
+ "masseng_boundary": {
+  "used": "standalone synthetic demonstration (NOT MASSENG v5 output)",
+  "mechanism_in_masseng_v5": false,
+  "note": "standalone synthetic demonstration; not a MASSENG v5 output"
+ },
+ "plain_result": "In the CES world the ability-controlled interaction is positive (0.002) and the CES fit beats Cobb-Douglas on RMSE (0.376 vs 0.558); in the linear null world the controlled interaction is near zero (0.004). This is a demonstration about estimators, not evidence about any school system.",
+ "data_map": {
+  "module": "learning/quality",
+  "observed": "PISA/TIMSS/PIRLS/SACMEQ anchors available (not fitted)",
+  "assumed": "production technology and parameters",
+  "gap": "task-41 top gap 2"
+ },
+ "statistical_frame": {
+  "estimand": "input returns and CES-vs-Cobb-Douglas fit",
+  "identification": "known synthetic DGP; ability control vs omission",
+  "testable_restrictions": "CES/CD functional forms",
+  "benchmark_split": "Monte Carlo; no observed split",
+  "pass_fail": "PASS if ability-controlled interaction positive in the CES world and rho recovered"
+ },
+ "generated_utc": "2026-11-24T15:53:13Z"
+}

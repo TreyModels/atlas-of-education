@@ -41,10 +41,11 @@ def run_synthetic(rng, n, reps, smoke):
 
 
 def real_cross_section():
+    """Descriptive observed cross-section WITH honest split + benchmarks (no causal claim)."""
+    import csv
     path = os.path.join(REC, "inputs", "x4_panel.csv")
     if not os.path.exists(path):
         return None
-    import csv
     rows = list(csv.DictReader(open(path)))
     data = []
     for r in rows:
@@ -53,17 +54,30 @@ def real_cross_section():
             o4 = float(r["out_2004"]); o18 = float(r["out_2018"])
         except (TypeError, ValueError, KeyError):
             continue
-        data.append((edu, job, o18 - o4))
-    X = np.column_stack([np.ones(len(data)), [d[0] for d in data], [d[1] for d in data]])
-    y = np.array([d[2] for d in data])
-    fit = ols(y, X)
+        data.append((r["iso3"], edu, job, o18 - o4))
+    data.sort()
+    train = [i for i in range(len(data)) if i % 3 != 2]
+    valid = [i for i in range(len(data)) if i % 3 == 2]
+    def X(idx):
+        return np.column_stack([np.ones(len(idx)), [data[i][1] for i in idx], [data[i][2] for i in idx]])
+    ytr = np.array([data[i][3] for i in train]); Xtr = X(train)
+    fit = ols(ytr, Xtr)
+    yv = np.array([data[i][3] for i in valid]); Xv = X(valid)
+    pred = Xv @ np.array(fit["b"])
+    mae_model = float(np.mean(np.abs(yv - pred)))
+    mae_persist = float(np.mean(np.abs(yv)))
+    mae_mean = float(np.mean(np.abs(yv - float(np.mean(ytr)))))
     return {"data_tier": "OBSERVED AGGREGATES (committed x4_panel.csv; WDI/UIS national series)",
             "source": "research/masseng-staging-x2-2026-11-24 @ f592bae, x4_input/x4_panel.csv",
-            "n": int(len(data)), "coef_intercept": round(fit["b"][0], 3),
+            "n": int(len(data)), "n_train": len(train), "n_validation": len(valid),
             "coef_edu1991": round(fit["b"][1], 3), "se_edu1991": round(fit["se"][1], 3),
             "coef_job1991": round(fit["b"][2], 3), "se_job1991": round(fit["se"][2], 3),
-            "r2": round(fit["r2"], 3),
-            "note": "descriptive cross-section only; no causal claim"}
+            "heldout_mae_model": round(mae_model, 3), "heldout_mae_persistence": round(mae_persist, 3),
+            "heldout_mae_training_mean": round(mae_mean, 3),
+            "beats_benchmarks": bool(mae_model < min(mae_persist, mae_mean)),
+            "note": "honest split fixed before fit (sorted ISO3, every third validation); descriptive only; no causal claim"}
+
+
 
 
 def run(args):
@@ -93,6 +107,8 @@ def run(args):
                             "coefficient is inflated (%.4f vs %.4f), so a positive growth coefficient is not "
                             "evidence of a causal human-capital effect." %
                             (conf["mean_beta_H_withH"], clean["mean_beta_H_withH"]))}
+    out["data_map"] = {'module': 'structural change + macro/development', 'observed': 'WDI GDP, GGDC/PWT, Barro-Lee; committed x4_panel used descriptively with honest split', 'assumed': 'Solow/NP parameters, structural-change mapping', 'gap': 'descriptive use only'}
+    out["statistical_frame"] = {'estimand': 'convergence and human-capital coefficient; descriptive real cross-section', 'identification': 'known synthetic DGP; observed cross-section descriptive only', 'testable_restrictions': 'Solow/Nelson-Phelps forms', 'benchmark_split': 'synthetic recovery; observed train/validation split vs persistence and training-mean benchmarks', 'pass_fail': 'PASS if synthetic coefficients recover and the observed model beats both held-out benchmarks'}
     write_result(args.outdir, "eq08_growth", out)
     save_csv(args.outdir, "eq08_growth", ["world", "rep", "lambda_noH", "beta_H_withH"], rows)
     print("PLAIN:", out["plain_result"])
