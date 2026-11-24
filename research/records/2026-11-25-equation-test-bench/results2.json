@@ -1,0 +1,71 @@
+{
+ "label": "data-level test bench (observational; descriptive OOS prediction only; no causal claims)",
+ "provenance": {
+  "panel": "long_run_panel.csv",
+  "panel_sha256": "cd30d7ea7beb77b63de092c53f9b143065b94651f1ac95535ac70eebb3280f2d",
+  "n_rows": 42959,
+  "n_countries": 197,
+  "schooling_spacing_lag": 5,
+  "test_year": 2000,
+  "numpy": "1.24.3",
+  "python": "3.10.2"
+ },
+ "families": {
+  "F9_fertility_lagged_OOS": {
+   "ok": true,
+   "n": 1495,
+   "n_folds": 5,
+   "n_countries": 135,
+   "model_rmse": 0.2380566882188928,
+   "persistence_rmse": 0.28548430284689524,
+   "null_rmse": 0.23112085027163176,
+   "folds_beat": 2,
+   "beta": -0.253075416653678,
+   "se": 0.03220727069402506,
+   "ci": [
+    -0.31620166721396714,
+    -0.18994916609338888
+   ],
+   "dropped_controls": [],
+   "spec_share": 1.0,
+   "n_variants": 8,
+   "verdict": "REJECTED (does not beat both benchmarks)"
+  },
+  "F10_measurement_construct": {
+   "n": 14578,
+   "median_abs_diff": 0.28353589999999995,
+   "mean_diff": 0.7034889164844286,
+   "note": "TFR and effective fertility are different constructs; a large median gap supports construct divergence only",
+   "verdict": "SUPPORTED_CONSTRUCT_DIVERGENCE"
+  }
+ },
+ "tierB": {
+  "E8_fee_dates": {
+   "verdict": "UNTESTABLE on this branch",
+   "note": "fee_dates.csv exists on research/e6e8-sequencing-2026-11-25 and research/paper-massification-2026-11-25; supply --e8-dir with SHA-256 provenance"
+  },
+  "E8_PHL_gate": {
+   "verdict": "UNTESTABLE",
+   "note": "PHL 2013 K-12 lower-secondary completion series not located in the repo branches searched"
+  }
+ },
+ "tierC": {
+  "F2_supply": "UNTESTABLE (no PTR/teacher/private/finance panel in cached inputs)",
+  "F6_growth": "UNTESTABLE (x4 is a wide cross-section; no lagged growth panel with controls)",
+  "F7_inequality": "UNTESTABLE (no Gini/SWIID in cache)",
+  "F4_gates": "UNTESTABLE (no exam/admission data)",
+  "F5_credentials": "UNTESTABLE (no wage/returns panel in cache)",
+  "F8_shadow": "UNTESTABLE (literature targets only)",
+  "F1_demand": "UNTESTABLE (no micro affordability)",
+  "F3_learning": "UNTESTABLE (no learning panels)",
+  "shared_code_ablation": "UNTESTABLE in this branch (no equation model code)",
+  "multiverse_structural_swap": "UNTESTABLE in this branch (no equation model code)"
+ },
+ "Q1_zero_signal": {
+  "trials_run": 20,
+  "complex_selected": 3,
+  "share": 0.15,
+  "pass": true,
+  "note": "share of permuted-outcome runs where the model beat both benchmarks in >=3 folds; high share = benchmark too weak or leakage"
+ }
+}

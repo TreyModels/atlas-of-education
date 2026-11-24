@@ -1,5 +1,12 @@
 # Diagnostics — 25 Nov 2026 (session retirement record)
 
+## STATUS 25 Nov 2026 — both diagnosed defects are now FIXED
+
+`test_bench2.py` was rewritten (commit on `fix/equation-test-bench-2026-11-25`): lag derived from the
+schooling spacing (5 y) → F9 join n = 1,495; SVD rank guard replaces `inv`/`pinv` on collinear controls;
+E8/PHL made explicit (E8 via `--e8-dir`, PHL UNTESTABLE); `test_bench_guards.py` pins all of it. See
+`REPORT.md` / `TEST_MATRIX.md` for the corrected verdicts. The text below is the original diagnosis, kept.
+
 ## F9 join coverage (`long_run_panel.csv`, 42,959 rows, 197 countries, years 1750–2024)
 | column | non-missing rows |
 |---|---|
