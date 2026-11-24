@@ -24,8 +24,12 @@ run by parallel session `lead-nb`; statistics pre-registered in `research/phase-
 | bar / gate-fail | 2.86 | interior | 5.3 | PARTIAL |
 
 - Gate contrast bar vs quota, median |Δ tutoring Q5−Q1 gap| = **0.0741** (pre-registered threshold 0.05).
-- **Equifinal pairs: 374.** Largest: completion differs **0.26 pp** while tutoring rate differs
-  **20.9 pp** and liquidity exits **15.5 pp**.
+- **Equifinal pairs: 374 descriptive** (our metric, pooled over gates). Largest: completion differs
+  **0.26 pp** while tutoring rate differs **20.9 pp** and liquidity exits **15.5 pp**.
+  **NOT evidence of equifinality beyond chance**: an exhaustive permutation test on the same grid
+  (within-gate metric, 1,000 permutations) gives **176 observed vs 190.5 expected** (SD 15.7, p97.5 221,
+  **p = 0.838**) — `research/equifinality-phase-2026-11-25` @ `ab415f2`. Report the count as description
+  only.
 - Reading: the arms-race boundary exists **only when the gate binds**, on the formal-vacancy axis at
   ≈0.40–0.50 vacancies per cohort entrant. The `bar` gate is non-binding in-engine (gate-fail ≤1.3%).
 

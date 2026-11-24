@@ -112,14 +112,20 @@ Holding the (vacancy, fee) cell fixed, switching from the bar to the quota gate 
 wealth gap in tutoring by **C = 0.074** (7.4 pp), above the pre-registered 0.05 threshold — consistent
 with the boundary being a *gate* phenomenon rather than a generic scarcity effect.
 
-### 4.4 Equifinality: same attainment, different competition
+### 4.4 Equifinality: descriptive only — no excess over chance
 
-374 cell pairs reach the same lower-secondary completion rate (within 0.5 pp) while differing by >20 pp
-in tutoring intensity (auditor thresholds, fixed in advance). The largest example: (vac0 ≈ 0.010,
-fee 0.19) vs (vac0 ≈ 0.50, fee 0.00) — completion differs by **0.26 pp**, but tutoring rate differs by
-**20.9 pp** and liquidity exits by **15.5 pp**. Caveat: quota completion is partly pinned by seat share,
-so "same attainment" is in part an accounting identity; the informative statement is *the bulge is
-absorbed by competition rather than attainment*, not that attainment is invariant.
+374 cell pairs (our metric: |Δ completion_lower| < 0.5 pp with tutoring difference > 20 pp, pooled over
+both gates) reach the same lower-secondary completion rate while differing by >20 pp in tutoring
+intensity. The largest example: (vac0 ≈ 0.010, fee 0.19) vs (vac0 ≈ 0.50, fee 0.00) — completion
+differs by **0.26 pp**, but tutoring rate differs by **20.9 pp** and liquidity exits by **15.5 pp**.
+
+**But the count is what chance produces.** An independent exhaustive search on the same 16,000-run grid
+under a pre-registered metric (|Δ GER| < 0.5 pp with |Δ liq| > 25 pp or |Δ tut| > 20 pp; seed-mean
+cells; within-gate) finds **176 pairs** against a **1,000-permutation null mean of 190.5** (SD 15.7,
+97.5th pct 221; **p = 0.838**) — `research/equifinality-phase-2026-11-25` @ `ab415f2`. There is **no
+evidence of equifinality beyond chance**. We therefore report the pairs as a *description of the
+outcome space*, not as a mechanism or a regime indicator. Caveat on top: quota completion is partly
+pinned by seat share, so "same attainment" is in part an accounting identity.
 
 ### 4.5 Seat scarcity widens the gap; the fee interaction is not detected
 
