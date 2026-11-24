@@ -302,3 +302,11 @@ The script reads the three branches with `git show`, verifies script/output hash
 OLS/seed-FE design with numpy, and checks the claims above. No server compute; no audited file edited. Limits: the
 audit does not re-run any script (the suite's own full run and the multiverse are taken as committed), does not
 re-derive the engines' behavioural code, and does not verify literature (stopped by instruction).
+
+---
+
+## ERRATUM pointer — FS-12 (25 Nov 2026)
+
+FS-12's "engine exit-reason bookkeeping overwritten" wording is **retracted**: the bug was the **driver**, not
+`core.step`. See `ERRATUM_FS-12.md` in this record and `fix/edsystem-exit-reason-2026-11-25` @ `4679ddb`
+(`RUN_REPORT.md` §3.8). The flag text in `results/audit.json` and `scripts/audit_claims.py` is left as audit evidence.
