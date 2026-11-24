@@ -1,0 +1,539 @@
+indicator,country,country_name,survey,year,survey_type,edu,edu_level,edu_ref,value,n,has_denom,n_weighted,ci_low,ci_high
+FE_AAFB_W_M25,AF,Afghanistan,AF2015DHS,2015,DHS,No education or primary,0,0,19.6,0,0,None,None,None
+FE_AAFB_W_M25,AF,Afghanistan,AF2015DHS,2015,DHS,Secondary or higher,1,1,23.0,0,0,None,None,None
+FE_AAFB_W_M25,AM,Armenia,AM2005DHS,2005,DHS,No education or primary,0,0,23.4,0,0,None,None,None
+FE_AAFB_W_M25,AM,Armenia,AM2005DHS,2005,DHS,Secondary or higher,1,1,22.4,0,0,None,None,None
+FE_AAFB_W_M25,AM,Armenia,AM2010DHS,2010,DHS,No education or primary,0,0,21.6,0,0,None,None,None
+FE_AAFB_W_M25,AM,Armenia,AM2010DHS,2010,DHS,Secondary or higher,1,1,24.2,0,0,None,None,None
+FE_AAFB_W_M25,AM,Armenia,AM2016DHS,2016,DHS,No education or primary,0,0,23.0,0,0,None,None,None
+FE_AAFB_W_M25,AM,Armenia,AM2016DHS,2016,DHS,Secondary or higher,1,1,24.5,0,0,None,None,None
+FE_AAFB_W_M25,AO,Angola,AO2011MIS,2011,MIS,No education or primary,0,0,18.7,0,0,None,None,None
+FE_AAFB_W_M25,AO,Angola,AO2011MIS,2011,MIS,Secondary or higher,1,1,22.7,0,0,None,None,None
+FE_AAFB_W_M25,AO,Angola,AO2015DHS,2015,DHS,No education or primary,0,0,18.3,0,0,None,None,None
+FE_AAFB_W_M25,AO,Angola,AO2015DHS,2015,DHS,Secondary or higher,1,1,20.6,0,0,None,None,None
+FE_AAFB_W_M25,AO,Angola,AO2023DHS,2023,DHS,No education or primary,0,0,17.9,0,0,None,None,None
+FE_AAFB_W_M25,AO,Angola,AO2023DHS,2023,DHS,Secondary or higher,1,1,20.7,0,0,None,None,None
+FE_AAFB_W_M25,AZ,Azerbaijan,AZ2006DHS,2006,DHS,No education or primary,0,0,20.8,0,0,None,None,None
+FE_AAFB_W_M25,AZ,Azerbaijan,AZ2006DHS,2006,DHS,Secondary or higher,1,1,23.4,0,0,None,None,None
+FE_AAFB_W_M25,BD,Bangladesh,BD1994DHS,1994,DHS,No education or primary,0,0,17.6,0,0,None,None,None
+FE_AAFB_W_M25,BD,Bangladesh,BD1994DHS,1994,DHS,Secondary or higher,1,1,19.5,0,0,None,None,None
+FE_AAFB_W_M25,BD,Bangladesh,BD1997DHS,1997,DHS,No education or primary,0,0,16.9,0,0,None,None,None
+FE_AAFB_W_M25,BD,Bangladesh,BD1997DHS,1997,DHS,Secondary or higher,1,1,20.3,0,0,None,None,None
+FE_AAFB_W_M25,BD,Bangladesh,BD2000DHS,2000,DHS,No education or primary,0,0,17.5,0,0,None,None,None
+FE_AAFB_W_M25,BD,Bangladesh,BD2000DHS,2000,DHS,Secondary or higher,1,1,20.7,0,0,None,None,None
+FE_AAFB_W_M25,BD,Bangladesh,BD2004DHS,2004,DHS,No education or primary,0,0,17.0,0,0,None,None,None
+FE_AAFB_W_M25,BD,Bangladesh,BD2004DHS,2004,DHS,Secondary or higher,1,1,19.8,0,0,None,None,None
+FE_AAFB_W_M25,BD,Bangladesh,BD2007DHS,2007,DHS,No education or primary,0,0,17.3,0,0,None,None,None
+FE_AAFB_W_M25,BD,Bangladesh,BD2007DHS,2007,DHS,Secondary or higher,1,1,20.0,0,0,None,None,None
+FE_AAFB_W_M25,BD,Bangladesh,BD2011DHS,2011,DHS,No education or primary,0,0,17.1,0,0,None,None,None
+FE_AAFB_W_M25,BD,Bangladesh,BD2011DHS,2011,DHS,Secondary or higher,1,1,19.3,0,0,None,None,None
+FE_AAFB_W_M25,BD,Bangladesh,BD2014DHS,2014,DHS,No education or primary,0,0,17.2,0,0,None,None,None
+FE_AAFB_W_M25,BD,Bangladesh,BD2014DHS,2014,DHS,Secondary or higher,1,1,19.4,0,0,None,None,None
+FE_AAFB_W_M25,BD,Bangladesh,BD2017DHS,2017,DHS,No education or primary,0,0,17.8,0,0,None,None,None
+FE_AAFB_W_M25,BD,Bangladesh,BD2017DHS,2017,DHS,Secondary or higher,1,1,19.3,0,0,None,None,None
+FE_AAFB_W_M25,BD,Bangladesh,BD2022DHS,2022,DHS,No education or primary,0,0,18.4,0,0,None,None,None
+FE_AAFB_W_M25,BD,Bangladesh,BD2022DHS,2022,DHS,Secondary or higher,1,1,20.0,0,0,None,None,None
+FE_AAFB_W_M25,BF,Burkina Faso,BF1993DHS,1993,DHS,No education or primary,0,0,18.9,0,0,None,None,None
+FE_AAFB_W_M25,BF,Burkina Faso,BF1993DHS,1993,DHS,Secondary or higher,1,1,22.4,0,0,None,None,None
+FE_AAFB_W_M25,BF,Burkina Faso,BF1999DHS,1999,DHS,No education or primary,0,0,18.9,0,0,None,None,None
+FE_AAFB_W_M25,BF,Burkina Faso,BF1999DHS,1999,DHS,Secondary or higher,1,1,24.5,0,0,None,None,None
+FE_AAFB_W_M25,BF,Burkina Faso,BF2003DHS,2003,DHS,No education or primary,0,0,19.1,0,0,None,None,None
+FE_AAFB_W_M25,BF,Burkina Faso,BF2003DHS,2003,DHS,Secondary or higher,1,1,23.0,0,0,None,None,None
+FE_AAFB_W_M25,BF,Burkina Faso,BF2010DHS,2010,DHS,No education or primary,0,0,19.2,0,0,None,None,None
+FE_AAFB_W_M25,BF,Burkina Faso,BF2010DHS,2010,DHS,Secondary or higher,1,1,24.7,0,0,None,None,None
+FE_AAFB_W_M25,BF,Burkina Faso,BF2021DHS,2021,DHS,No education or primary,0,0,19.3,0,0,None,None,None
+FE_AAFB_W_M25,BF,Burkina Faso,BF2021DHS,2021,DHS,Secondary or higher,1,1,22.7,0,0,None,None,None
+FE_AAFB_W_M25,BJ,Benin,BJ1996DHS,1996,DHS,No education or primary,0,0,19.5,0,0,None,None,None
+FE_AAFB_W_M25,BJ,Benin,BJ1996DHS,1996,DHS,Secondary or higher,1,1,22.8,0,0,None,None,None
+FE_AAFB_W_M25,BJ,Benin,BJ2012DHS,2012,DHS,No education or primary,0,0,19.7,0,0,None,None,None
+FE_AAFB_W_M25,BJ,Benin,BJ2012DHS,2012,DHS,Secondary or higher,1,1,24.4,0,0,None,None,None
+FE_AAFB_W_M25,BJ,Benin,BJ2017DHS,2017,DHS,No education or primary,0,0,19.9,0,0,None,None,None
+FE_AAFB_W_M25,BJ,Benin,BJ2017DHS,2017,DHS,Secondary or higher,1,1,22.7,0,0,None,None,None
+FE_AAFB_W_M25,BO,Bolivia,BO1989DHS,1989,DHS,No education or primary,0,0,19.9,0,0,None,None,None
+FE_AAFB_W_M25,BO,Bolivia,BO1989DHS,1989,DHS,Secondary or higher,1,1,21.8,0,0,None,None,None
+FE_AAFB_W_M25,BO,Bolivia,BO1994DHS,1994,DHS,No education or primary,0,0,20.2,0,0,None,None,None
+FE_AAFB_W_M25,BO,Bolivia,BO1994DHS,1994,DHS,Secondary or higher,1,1,22.0,0,0,None,None,None
+FE_AAFB_W_M25,BO,Bolivia,BO1998DHS,1998,DHS,No education or primary,0,0,19.6,0,0,None,None,None
+FE_AAFB_W_M25,BO,Bolivia,BO1998DHS,1998,DHS,Secondary or higher,1,1,22.4,0,0,None,None,None
+FE_AAFB_W_M25,BO,Bolivia,BO2003DHS,2003,DHS,No education or primary,0,0,19.5,0,0,None,None,None
+FE_AAFB_W_M25,BO,Bolivia,BO2003DHS,2003,DHS,Secondary or higher,1,1,23.8,0,0,None,None,None
+FE_AAFB_W_M25,BO,Bolivia,BO2008DHS,2008,DHS,No education or primary,0,0,19.4,0,0,None,None,None
+FE_AAFB_W_M25,BO,Bolivia,BO2008DHS,2008,DHS,Secondary or higher,1,1,23.1,0,0,None,None,None
+FE_AAFB_W_M25,BR,Brazil,BR1996DHS,1996,DHS,No education or primary,0,0,19.8,0,0,None,None,None
+FE_AAFB_W_M25,BR,Brazil,BR1996DHS,1996,DHS,Secondary or higher,1,1,23.6,0,0,None,None,None
+FE_AAFB_W_M25,BT,Botswana,BT1988DHS,1988,DHS,No education or primary,0,0,18.8,0,0,None,None,None
+FE_AAFB_W_M25,BT,Botswana,BT1988DHS,1988,DHS,Secondary or higher,1,1,20.5,0,0,None,None,None
+FE_AAFB_W_M25,BU,Burundi,BU1987DHS,1987,DHS,No education or primary,0,0,20.9,0,0,None,None,None
+FE_AAFB_W_M25,BU,Burundi,BU1987DHS,1987,DHS,Secondary or higher,1,1,24.5,0,0,None,None,None
+FE_AAFB_W_M25,CD,Congo Democratic Republic,CD2007DHS,2007,DHS,No education or primary,0,0,19.4,0,0,None,None,None
+FE_AAFB_W_M25,CD,Congo Democratic Republic,CD2007DHS,2007,DHS,Secondary or higher,1,1,21.7,0,0,None,None,None
+FE_AAFB_W_M25,CD,Congo Democratic Republic,CD2013DHS,2013,DHS,No education or primary,0,0,19.2,0,0,None,None,None
+FE_AAFB_W_M25,CD,Congo Democratic Republic,CD2013DHS,2013,DHS,Secondary or higher,1,1,21.4,0,0,None,None,None
+FE_AAFB_W_M25,CD,Congo Democratic Republic,CD2023DHS,2023,DHS,No education or primary,0,0,18.6,0,0,None,None,None
+FE_AAFB_W_M25,CD,Congo Democratic Republic,CD2023DHS,2023,DHS,Secondary or higher,1,1,20.9,0,0,None,None,None
+FE_AAFB_W_M25,CF,Central African Republic,CF1994DHS,1994,DHS,No education or primary,0,0,19.4,0,0,None,None,None
+FE_AAFB_W_M25,CF,Central African Republic,CF1994DHS,1994,DHS,Secondary or higher,1,1,19.1,0,0,None,None,None
+FE_AAFB_W_M25,CG,Congo,CG2005DHS,2005,DHS,No education or primary,0,0,18.7,0,0,None,None,None
+FE_AAFB_W_M25,CG,Congo,CG2005DHS,2005,DHS,Secondary or higher,1,1,20.4,0,0,None,None,None
+FE_AAFB_W_M25,CG,Congo,CG2011DHS,2011,DHS,No education or primary,0,0,18.7,0,0,None,None,None
+FE_AAFB_W_M25,CG,Congo,CG2011DHS,2011,DHS,Secondary or higher,1,1,20.4,0,0,None,None,None
+FE_AAFB_W_M25,CI,Cote d'Ivoire,CI1994DHS,1994,DHS,No education or primary,0,0,18.4,0,0,None,None,None
+FE_AAFB_W_M25,CI,Cote d'Ivoire,CI1994DHS,1994,DHS,Secondary or higher,1,1,19.9,0,0,None,None,None
+FE_AAFB_W_M25,CI,Cote d'Ivoire,CI1998DHS,1998,DHS,No education or primary,0,0,18.9,0,0,None,None,None
+FE_AAFB_W_M25,CI,Cote d'Ivoire,CI1998DHS,1998,DHS,Secondary or higher,1,1,23.1,0,0,None,None,None
+FE_AAFB_W_M25,CI,Cote d'Ivoire,CI2005AIS,2005,AIS,No education or primary,0,0,19.3,0,0,None,None,None
+FE_AAFB_W_M25,CI,Cote d'Ivoire,CI2005AIS,2005,AIS,Secondary or higher,1,1,22.6,0,0,None,None,None
+FE_AAFB_W_M25,CI,Cote d'Ivoire,CI2012DHS,2012,DHS,No education or primary,0,0,19.3,0,0,None,None,None
+FE_AAFB_W_M25,CI,Cote d'Ivoire,CI2012DHS,2012,DHS,Secondary or higher,1,1,24.2,0,0,None,None,None
+FE_AAFB_W_M25,CI,Cote d'Ivoire,CI2021DHS,2021,DHS,No education or primary,0,0,19.5,0,0,None,None,None
+FE_AAFB_W_M25,CI,Cote d'Ivoire,CI2021DHS,2021,DHS,Secondary or higher,1,1,23.5,0,0,None,None,None
+FE_AAFB_W_M25,CM,Cameroon,CM1991DHS,1991,DHS,No education or primary,0,0,18.0,0,0,None,None,None
+FE_AAFB_W_M25,CM,Cameroon,CM1991DHS,1991,DHS,Secondary or higher,1,1,20.4,0,0,None,None,None
+FE_AAFB_W_M25,CM,Cameroon,CM1998DHS,1998,DHS,No education or primary,0,0,18.4,0,0,None,None,None
+FE_AAFB_W_M25,CM,Cameroon,CM1998DHS,1998,DHS,Secondary or higher,1,1,20.1,0,0,None,None,None
+FE_AAFB_W_M25,CM,Cameroon,CM2004DHS,2004,DHS,No education or primary,0,0,18.2,0,0,None,None,None
+FE_AAFB_W_M25,CM,Cameroon,CM2004DHS,2004,DHS,Secondary or higher,1,1,21.6,0,0,None,None,None
+FE_AAFB_W_M25,CM,Cameroon,CM2011DHS,2011,DHS,No education or primary,0,0,18.6,0,0,None,None,None
+FE_AAFB_W_M25,CM,Cameroon,CM2011DHS,2011,DHS,Secondary or higher,1,1,22.1,0,0,None,None,None
+FE_AAFB_W_M25,CM,Cameroon,CM2018DHS,2018,DHS,No education or primary,0,0,18.8,0,0,None,None,None
+FE_AAFB_W_M25,CM,Cameroon,CM2018DHS,2018,DHS,Secondary or higher,1,1,22.0,0,0,None,None,None
+FE_AAFB_W_M25,CO,Colombia,CO1986DHS,1986,DHS,No education or primary,0,0,20.2,0,0,None,None,None
+FE_AAFB_W_M25,CO,Colombia,CO1986DHS,1986,DHS,Secondary or higher,1,1,23.5,0,0,None,None,None
+FE_AAFB_W_M25,CO,Colombia,CO1990DHS,1990,DHS,No education or primary,0,0,20.2,0,0,None,None,None
+FE_AAFB_W_M25,CO,Colombia,CO1990DHS,1990,DHS,Secondary or higher,1,1,24.5,0,0,None,None,None
+FE_AAFB_W_M25,CO,Colombia,CO1995DHS,1995,DHS,No education or primary,0,0,19.6,0,0,None,None,None
+FE_AAFB_W_M25,CO,Colombia,CO1995DHS,1995,DHS,Secondary or higher,1,1,23.9,0,0,None,None,None
+FE_AAFB_W_M25,CO,Colombia,CO2000DHS,2000,DHS,No education or primary,0,0,19.5,0,0,None,None,None
+FE_AAFB_W_M25,CO,Colombia,CO2000DHS,2000,DHS,Secondary or higher,1,1,23.1,0,0,None,None,None
+FE_AAFB_W_M25,CO,Colombia,CO2005DHS,2005,DHS,No education or primary,0,0,19.2,0,0,None,None,None
+FE_AAFB_W_M25,CO,Colombia,CO2005DHS,2005,DHS,Secondary or higher,1,1,22.8,0,0,None,None,None
+FE_AAFB_W_M25,CO,Colombia,CO2010DHS,2010,DHS,No education or primary,0,0,18.5,0,0,None,None,None
+FE_AAFB_W_M25,CO,Colombia,CO2010DHS,2010,DHS,Secondary or higher,1,1,22.3,0,0,None,None,None
+FE_AAFB_W_M25,CO,Colombia,CO2015DHS,2015,DHS,No education or primary,0,0,18.2,0,0,None,None,None
+FE_AAFB_W_M25,CO,Colombia,CO2015DHS,2015,DHS,Secondary or higher,1,1,22.4,0,0,None,None,None
+FE_AAFB_W_M25,DR,Dominican Republic,DR1991DHS,1991,DHS,No education or primary,0,0,18.9,0,0,None,None,None
+FE_AAFB_W_M25,DR,Dominican Republic,DR1991DHS,1991,DHS,Secondary or higher,1,1,24.9,0,0,None,None,None
+FE_AAFB_W_M25,DR,Dominican Republic,DR1996DHS,1996,DHS,No education or primary,0,0,19.0,0,0,None,None,None
+FE_AAFB_W_M25,DR,Dominican Republic,DR1996DHS,1996,DHS,Secondary or higher,1,1,24.0,0,0,None,None,None
+FE_AAFB_W_M25,DR,Dominican Republic,DR1999DHS,1999,DHS,No education or primary,0,0,18.9,0,0,None,None,None
+FE_AAFB_W_M25,DR,Dominican Republic,DR1999DHS,1999,DHS,Secondary or higher,1,1,23.8,0,0,None,None,None
+FE_AAFB_W_M25,DR,Dominican Republic,DR2002DHS,2002,DHS,No education or primary,0,0,18.7,0,0,None,None,None
+FE_AAFB_W_M25,DR,Dominican Republic,DR2002DHS,2002,DHS,Secondary or higher,1,1,23.0,0,0,None,None,None
+FE_AAFB_W_M25,DR,Dominican Republic,DR2007DHS,2007,DHS,No education or primary,0,0,18.0,0,0,None,None,None
+FE_AAFB_W_M25,DR,Dominican Republic,DR2007DHS,2007,DHS,Secondary or higher,1,1,22.4,0,0,None,None,None
+FE_AAFB_W_M25,DR,Dominican Republic,DR2013DHS,2013,DHS,No education or primary,0,0,17.9,0,0,None,None,None
+FE_AAFB_W_M25,DR,Dominican Republic,DR2013DHS,2013,DHS,Secondary or higher,1,1,22.6,0,0,None,None,None
+FE_AAFB_W_M25,EC,Ecuador,EC1987DHS,1987,DHS,No education or primary,0,0,19.5,0,0,None,None,None
+FE_AAFB_W_M25,EC,Ecuador,EC1987DHS,1987,DHS,Secondary or higher,1,1,23.2,0,0,None,None,None
+FE_AAFB_W_M25,EG,Egypt,EG1992DHS,1992,DHS,No education or primary,0,0,19.9,0,0,None,None,None
+FE_AAFB_W_M25,EG,Egypt,EG1992DHS,1992,DHS,Secondary or higher,1,1,24.6,0,0,None,None,None
+FE_AAFB_W_M25,EG,Egypt,EG1995DHS,1995,DHS,No education or primary,0,0,19.7,0,0,None,None,None
+FE_AAFB_W_M25,EG,Egypt,EG1995DHS,1995,DHS,Secondary or higher,1,1,24.9,0,0,None,None,None
+FE_AAFB_W_M25,EG,Egypt,EG2000DHS,2000,DHS,No education or primary,0,0,20.5,0,0,None,None,None
+FE_AAFB_W_M25,EG,Egypt,EG2000DHS,2000,DHS,Secondary or higher,1,1,23.9,0,0,None,None,None
+FE_AAFB_W_M25,EG,Egypt,EG2003DHS,2003,DHS,No education or primary,0,0,20.4,0,0,None,None,None
+FE_AAFB_W_M25,EG,Egypt,EG2003DHS,2003,DHS,Secondary or higher,1,1,23.8,0,0,None,None,None
+FE_AAFB_W_M25,EG,Egypt,EG2005DHS,2005,DHS,No education or primary,0,0,20.8,0,0,None,None,None
+FE_AAFB_W_M25,EG,Egypt,EG2005DHS,2005,DHS,Secondary or higher,1,1,23.9,0,0,None,None,None
+FE_AAFB_W_M25,EG,Egypt,EG2008DHS,2008,DHS,No education or primary,0,0,20.6,0,0,None,None,None
+FE_AAFB_W_M25,EG,Egypt,EG2008DHS,2008,DHS,Secondary or higher,1,1,23.7,0,0,None,None,None
+FE_AAFB_W_M25,EG,Egypt,EG2014DHS,2014,DHS,No education or primary,0,0,21.1,0,0,None,None,None
+FE_AAFB_W_M25,EG,Egypt,EG2014DHS,2014,DHS,Secondary or higher,1,1,23.1,0,0,None,None,None
+FE_AAFB_W_M25,ER,Eritrea,ER1995DHS,1995,DHS,No education or primary,0,0,20.6,0,0,None,None,None
+FE_AAFB_W_M25,ER,Eritrea,ER1995DHS,1995,DHS,Secondary or higher,1,1,24.4,0,0,None,None,None
+FE_AAFB_W_M25,ER,Eritrea,ER2002DHS,2002,DHS,No education or primary,0,0,19.8,0,0,None,None,None
+FE_AAFB_W_M25,ER,Eritrea,ER2002DHS,2002,DHS,Secondary or higher,1,1,24.4,0,0,None,None,None
+FE_AAFB_W_M25,ET,Ethiopia,ET2000DHS,2000,DHS,No education or primary,0,0,19.7,0,0,None,None,None
+FE_AAFB_W_M25,ET,Ethiopia,ET2000DHS,2000,DHS,Secondary or higher,1,1,24.4,0,0,None,None,None
+FE_AAFB_W_M25,ET,Ethiopia,ET2019DHS,2019,DHS,No education or primary,0,0,18.9,0,0,None,None,None
+FE_AAFB_W_M25,ET,Ethiopia,ET2019DHS,2019,DHS,Secondary or higher,1,1,24.1,0,0,None,None,None
+FE_AAFB_W_M25,ET,Ethiopia,ET2024DHS,2024,DHS,No education or primary,0,0,20.0,0,0,None,None,None
+FE_AAFB_W_M25,ET,Ethiopia,ET2024DHS,2024,DHS,Secondary or higher,1,1,24.5,0,0,None,None,None
+FE_AAFB_W_M25,GA,Gabon,GA2000DHS,2000,DHS,No education or primary,0,0,18.1,0,0,None,None,None
+FE_AAFB_W_M25,GA,Gabon,GA2000DHS,2000,DHS,Secondary or higher,1,1,19.0,0,0,None,None,None
+FE_AAFB_W_M25,GA,Gabon,GA2012DHS,2012,DHS,No education or primary,0,0,19.6,0,0,None,None,None
+FE_AAFB_W_M25,GA,Gabon,GA2012DHS,2012,DHS,Secondary or higher,1,1,20.5,0,0,None,None,None
+FE_AAFB_W_M25,GA,Gabon,GA2019DHS,2019,DHS,No education or primary,0,0,20.5,0,0,None,None,None
+FE_AAFB_W_M25,GA,Gabon,GA2019DHS,2019,DHS,Secondary or higher,1,1,20.6,0,0,None,None,None
+FE_AAFB_W_M25,GH,Ghana,GH1988DHS,1988,DHS,No education or primary,0,0,19.8,0,0,None,None,None
+FE_AAFB_W_M25,GH,Ghana,GH1988DHS,1988,DHS,Secondary or higher,1,1,23.1,0,0,None,None,None
+FE_AAFB_W_M25,GH,Ghana,GH1998DHS,1998,DHS,No education or primary,0,0,19.8,0,0,None,None,None
+FE_AAFB_W_M25,GH,Ghana,GH1998DHS,1998,DHS,Secondary or higher,1,1,22.4,0,0,None,None,None
+FE_AAFB_W_M25,GH,Ghana,GH2003DHS,2003,DHS,No education or primary,0,0,19.7,0,0,None,None,None
+FE_AAFB_W_M25,GH,Ghana,GH2003DHS,2003,DHS,Secondary or higher,1,1,23.2,0,0,None,None,None
+FE_AAFB_W_M25,GH,Ghana,GH2008DHS,2008,DHS,No education or primary,0,0,19.4,0,0,None,None,None
+FE_AAFB_W_M25,GH,Ghana,GH2008DHS,2008,DHS,Secondary or higher,1,1,23.7,0,0,None,None,None
+FE_AAFB_W_M25,GH,Ghana,GH2014DHS,2014,DHS,No education or primary,0,0,19.4,0,0,None,None,None
+FE_AAFB_W_M25,GH,Ghana,GH2014DHS,2014,DHS,Secondary or higher,1,1,24.8,0,0,None,None,None
+FE_AAFB_W_M25,GH,Ghana,GH2022DHS,2022,DHS,No education or primary,0,0,20.0,0,0,None,None,None
+FE_AAFB_W_M25,GH,Ghana,GH2022DHS,2022,DHS,Secondary or higher,1,1,24.1,0,0,None,None,None
+FE_AAFB_W_M25,GM,Gambia,GM2013DHS,2013,DHS,No education or primary,0,0,19.5,0,0,None,None,None
+FE_AAFB_W_M25,GM,Gambia,GM2013DHS,2013,DHS,Secondary or higher,1,1,23.4,0,0,None,None,None
+FE_AAFB_W_M25,GM,Gambia,GM2019DHS,2019,DHS,No education or primary,0,0,19.6,0,0,None,None,None
+FE_AAFB_W_M25,GM,Gambia,GM2019DHS,2019,DHS,Secondary or higher,1,1,24.1,0,0,None,None,None
+FE_AAFB_W_M25,GN,Guinea,GN1999DHS,1999,DHS,No education or primary,0,0,18.4,0,0,None,None,None
+FE_AAFB_W_M25,GN,Guinea,GN1999DHS,1999,DHS,Secondary or higher,1,1,21.6,0,0,None,None,None
+FE_AAFB_W_M25,GN,Guinea,GN2005DHS,2005,DHS,No education or primary,0,0,18.8,0,0,None,None,None
+FE_AAFB_W_M25,GN,Guinea,GN2005DHS,2005,DHS,Secondary or higher,1,1,21.9,0,0,None,None,None
+FE_AAFB_W_M25,GN,Guinea,GN2012DHS,2012,DHS,No education or primary,0,0,18.2,0,0,None,None,None
+FE_AAFB_W_M25,GN,Guinea,GN2012DHS,2012,DHS,Secondary or higher,1,1,24.9,0,0,None,None,None
+FE_AAFB_W_M25,GN,Guinea,GN2018DHS,2018,DHS,No education or primary,0,0,19.0,0,0,None,None,None
+FE_AAFB_W_M25,GN,Guinea,GN2018DHS,2018,DHS,Secondary or higher,1,1,22.2,0,0,None,None,None
+FE_AAFB_W_M25,GN,Guinea,GN2024DHS,2024,DHS,No education or primary,0,0,19.1,0,0,None,None,None
+FE_AAFB_W_M25,GN,Guinea,GN2024DHS,2024,DHS,Secondary or higher,1,1,21.6,0,0,None,None,None
+FE_AAFB_W_M25,GU,Guatemala,GU1987DHS,1987,DHS,No education or primary,0,0,19.2,0,0,None,None,None
+FE_AAFB_W_M25,GU,Guatemala,GU1987DHS,1987,DHS,Secondary or higher,1,1,23.6,0,0,None,None,None
+FE_AAFB_W_M25,GU,Guatemala,GU1995DHS,1995,DHS,No education or primary,0,0,19.4,0,0,None,None,None
+FE_AAFB_W_M25,GU,Guatemala,GU1995DHS,1995,DHS,Secondary or higher,1,1,23.1,0,0,None,None,None
+FE_AAFB_W_M25,GU,Guatemala,GU1999DHS,1999,DHS,No education or primary,0,0,19.5,0,0,None,None,None
+FE_AAFB_W_M25,GU,Guatemala,GU1999DHS,1999,DHS,Secondary or higher,1,1,23.0,0,0,None,None,None
+FE_AAFB_W_M25,GU,Guatemala,GU2015DHS,2015,DHS,No education or primary,0,0,19.7,0,0,None,None,None
+FE_AAFB_W_M25,GU,Guatemala,GU2015DHS,2015,DHS,Secondary or higher,1,1,23.4,0,0,None,None,None
+FE_AAFB_W_M25,GY,Guyana,GY2005AIS,2005,AIS,No education or primary,0,0,18.5,0,0,None,None,None
+FE_AAFB_W_M25,GY,Guyana,GY2005AIS,2005,AIS,Secondary or higher,1,1,21.1,0,0,None,None,None
+FE_AAFB_W_M25,GY,Guyana,GY2009DHS,2009,DHS,No education or primary,0,0,18.7,0,0,None,None,None
+FE_AAFB_W_M25,GY,Guyana,GY2009DHS,2009,DHS,Secondary or higher,1,1,21.4,0,0,None,None,None
+FE_AAFB_W_M25,HN,Honduras,HN2005DHS,2005,DHS,No education or primary,0,0,19.2,0,0,None,None,None
+FE_AAFB_W_M25,HN,Honduras,HN2005DHS,2005,DHS,Secondary or higher,1,1,22.3,0,0,None,None,None
+FE_AAFB_W_M25,HN,Honduras,HN2011DHS,2011,DHS,No education or primary,0,0,19.1,0,0,None,None,None
+FE_AAFB_W_M25,HN,Honduras,HN2011DHS,2011,DHS,Secondary or higher,1,1,23.3,0,0,None,None,None
+FE_AAFB_W_M25,IA,India,IA1993DHS,1993,DHS,No education or primary,0,0,18.7,0,0,None,None,None
+FE_AAFB_W_M25,IA,India,IA1993DHS,1993,DHS,Secondary or higher,1,1,22.2,0,0,None,None,None
+FE_AAFB_W_M25,IA,India,IA1999DHS,1999,DHS,No education or primary,0,0,18.3,0,0,None,None,None
+FE_AAFB_W_M25,IA,India,IA1999DHS,1999,DHS,Secondary or higher,1,1,21.3,0,0,None,None,None
+FE_AAFB_W_M25,IA,India,IA2006DHS,2006,DHS,No education or primary,0,0,18.6,0,0,None,None,None
+FE_AAFB_W_M25,IA,India,IA2006DHS,2006,DHS,Secondary or higher,1,1,22.1,0,0,None,None,None
+FE_AAFB_W_M25,IA,India,IA2015DHS,2015,DHS,No education or primary,0,0,20.1,0,0,None,None,None
+FE_AAFB_W_M25,IA,India,IA2015DHS,2015,DHS,Secondary or higher,1,1,22.7,0,0,None,None,None
+FE_AAFB_W_M25,IA,India,IA2020DHS,2020,DHS,No education or primary,0,0,19.9,0,0,None,None,None
+FE_AAFB_W_M25,IA,India,IA2020DHS,2020,DHS,Secondary or higher,1,1,22.8,0,0,None,None,None
+FE_AAFB_W_M25,ID,Indonesia,ID1987DHS,1987,DHS,No education or primary,0,0,19.5,0,0,None,None,None
+FE_AAFB_W_M25,ID,Indonesia,ID1987DHS,1987,DHS,Secondary or higher,1,1,23.9,0,0,None,None,None
+FE_AAFB_W_M25,ID,Indonesia,ID1991DHS,1991,DHS,No education or primary,0,0,19.4,0,0,None,None,None
+FE_AAFB_W_M25,ID,Indonesia,ID1991DHS,1991,DHS,Secondary or higher,1,1,23.8,0,0,None,None,None
+FE_AAFB_W_M25,ID,Indonesia,ID1994DHS,1994,DHS,No education or primary,0,0,19.5,0,0,None,None,None
+FE_AAFB_W_M25,ID,Indonesia,ID1994DHS,1994,DHS,Secondary or higher,1,1,24.4,0,0,None,None,None
+FE_AAFB_W_M25,ID,Indonesia,ID1997DHS,1997,DHS,No education or primary,0,0,19.9,0,0,None,None,None
+FE_AAFB_W_M25,ID,Indonesia,ID1997DHS,1997,DHS,Secondary or higher,1,1,24.2,0,0,None,None,None
+FE_AAFB_W_M25,ID,Indonesia,ID2003DHS,2003,DHS,No education or primary,0,0,19.9,0,0,None,None,None
+FE_AAFB_W_M25,ID,Indonesia,ID2003DHS,2003,DHS,Secondary or higher,1,1,23.7,0,0,None,None,None
+FE_AAFB_W_M25,ID,Indonesia,ID2007DHS,2007,DHS,No education or primary,0,0,20.4,0,0,None,None,None
+FE_AAFB_W_M25,ID,Indonesia,ID2007DHS,2007,DHS,Secondary or higher,1,1,24.1,0,0,None,None,None
+FE_AAFB_W_M25,ID,Indonesia,ID2012DHS,2012,DHS,No education or primary,0,0,20.5,0,0,None,None,None
+FE_AAFB_W_M25,ID,Indonesia,ID2012DHS,2012,DHS,Secondary or higher,1,1,23.6,0,0,None,None,None
+FE_AAFB_W_M25,ID,Indonesia,ID2017DHS,2017,DHS,No education or primary,0,0,20.8,0,0,None,None,None
+FE_AAFB_W_M25,ID,Indonesia,ID2017DHS,2017,DHS,Secondary or higher,1,1,23.6,0,0,None,None,None
+FE_AAFB_W_M25,JO,Jordan,JO1990DHS,1990,DHS,No education or primary,0,0,20.6,0,0,None,None,None
+FE_AAFB_W_M25,JO,Jordan,JO1990DHS,1990,DHS,Secondary or higher,1,1,23.6,0,0,None,None,None
+FE_AAFB_W_M25,JO,Jordan,JO1997DHS,1997,DHS,No education or primary,0,0,24.9,0,0,None,None,None
+FE_AAFB_W_M25,JO,Jordan,JO1997DHS,1997,DHS,Secondary or higher,1,1,24.7,0,0,None,None,None
+FE_AAFB_W_M25,JO,Jordan,JO2009DHS,2009,DHS,No education or primary,0,0,23.1,0,0,None,None,None
+FE_AAFB_W_M25,JO,Jordan,JO2009DHS,2009,DHS,Secondary or higher,1,1,25.0,0,0,None,None,None
+FE_AAFB_W_M25,KE,Kenya,KE1989DHS,1989,DHS,No education or primary,0,0,18.1,0,0,None,None,None
+FE_AAFB_W_M25,KE,Kenya,KE1989DHS,1989,DHS,Secondary or higher,1,1,20.4,0,0,None,None,None
+FE_AAFB_W_M25,KE,Kenya,KE1993DHS,1993,DHS,No education or primary,0,0,18.5,0,0,None,None,None
+FE_AAFB_W_M25,KE,Kenya,KE1993DHS,1993,DHS,Secondary or higher,1,1,20.9,0,0,None,None,None
+FE_AAFB_W_M25,KE,Kenya,KE1998DHS,1998,DHS,No education or primary,0,0,18.5,0,0,None,None,None
+FE_AAFB_W_M25,KE,Kenya,KE1998DHS,1998,DHS,Secondary or higher,1,1,22.0,0,0,None,None,None
+FE_AAFB_W_M25,KE,Kenya,KE2003DHS,2003,DHS,No education or primary,0,0,19.2,0,0,None,None,None
+FE_AAFB_W_M25,KE,Kenya,KE2003DHS,2003,DHS,Secondary or higher,1,1,23.0,0,0,None,None,None
+FE_AAFB_W_M25,KE,Kenya,KE2008DHS,2008,DHS,No education or primary,0,0,18.9,0,0,None,None,None
+FE_AAFB_W_M25,KE,Kenya,KE2008DHS,2008,DHS,Secondary or higher,1,1,22.4,0,0,None,None,None
+FE_AAFB_W_M25,KE,Kenya,KE2014DHS,2014,DHS,No education or primary,0,0,18.9,0,0,None,None,None
+FE_AAFB_W_M25,KE,Kenya,KE2014DHS,2014,DHS,Secondary or higher,1,1,22.9,0,0,None,None,None
+FE_AAFB_W_M25,KE,Kenya,KE2022DHS,2022,DHS,No education or primary,0,0,18.5,0,0,None,None,None
+FE_AAFB_W_M25,KE,Kenya,KE2022DHS,2022,DHS,Secondary or higher,1,1,22.5,0,0,None,None,None
+FE_AAFB_W_M25,KE,Kenya,KE2025DHS,2025,DHS,No education or primary,0,0,18.9,0,0,None,None,None
+FE_AAFB_W_M25,KE,Kenya,KE2025DHS,2025,DHS,Secondary or higher,1,1,22.4,0,0,None,None,None
+FE_AAFB_W_M25,KH,Cambodia,KH2000DHS,2000,DHS,No education or primary,0,0,21.3,0,0,None,None,None
+FE_AAFB_W_M25,KH,Cambodia,KH2000DHS,2000,DHS,Secondary or higher,1,1,22.2,0,0,None,None,None
+FE_AAFB_W_M25,KH,Cambodia,KH2005DHS,2005,DHS,No education or primary,0,0,21.5,0,0,None,None,None
+FE_AAFB_W_M25,KH,Cambodia,KH2005DHS,2005,DHS,Secondary or higher,1,1,23.3,0,0,None,None,None
+FE_AAFB_W_M25,KH,Cambodia,KH2010DHS,2010,DHS,No education or primary,0,0,22.2,0,0,None,None,None
+FE_AAFB_W_M25,KH,Cambodia,KH2010DHS,2010,DHS,Secondary or higher,1,1,24.5,0,0,None,None,None
+FE_AAFB_W_M25,KH,Cambodia,KH2014DHS,2014,DHS,No education or primary,0,0,21.9,0,0,None,None,None
+FE_AAFB_W_M25,KH,Cambodia,KH2014DHS,2014,DHS,Secondary or higher,1,1,24.6,0,0,None,None,None
+FE_AAFB_W_M25,KH,Cambodia,KH2021DHS,2021,DHS,No education or primary,0,0,21.8,0,0,None,None,None
+FE_AAFB_W_M25,KH,Cambodia,KH2021DHS,2021,DHS,Secondary or higher,1,1,24.0,0,0,None,None,None
+FE_AAFB_W_M25,KY,Kyrgyz Republic,KY2012DHS,2012,DHS,No education or primary,0,0,20.7,0,0,None,None,None
+FE_AAFB_W_M25,KY,Kyrgyz Republic,KY2012DHS,2012,DHS,Secondary or higher,1,1,22.6,0,0,None,None,None
+FE_AAFB_W_M25,LB,Liberia,LB1986DHS,1986,DHS,No education or primary,0,0,19.1,0,0,None,None,None
+FE_AAFB_W_M25,LB,Liberia,LB1986DHS,1986,DHS,Secondary or higher,1,1,18.8,0,0,None,None,None
+FE_AAFB_W_M25,LB,Liberia,LB2007DHS,2007,DHS,No education or primary,0,0,18.8,0,0,None,None,None
+FE_AAFB_W_M25,LB,Liberia,LB2007DHS,2007,DHS,Secondary or higher,1,1,20.1,0,0,None,None,None
+FE_AAFB_W_M25,LB,Liberia,LB2009MIS,2009,MIS,No education or primary,0,0,18.6,0,0,None,None,None
+FE_AAFB_W_M25,LB,Liberia,LB2009MIS,2009,MIS,Secondary or higher,1,1,20.5,0,0,None,None,None
+FE_AAFB_W_M25,LB,Liberia,LB2013DHS,2013,DHS,No education or primary,0,0,18.8,0,0,None,None,None
+FE_AAFB_W_M25,LB,Liberia,LB2013DHS,2013,DHS,Secondary or higher,1,1,20.0,0,0,None,None,None
+FE_AAFB_W_M25,LB,Liberia,LB2019DHS,2019,DHS,No education or primary,0,0,18.1,0,0,None,None,None
+FE_AAFB_W_M25,LB,Liberia,LB2019DHS,2019,DHS,Secondary or higher,1,1,20.0,0,0,None,None,None
+FE_AAFB_W_M25,LK,Sri Lanka,LK1987DHS,1987,DHS,No education or primary,0,0,20.5,0,0,None,None,None
+FE_AAFB_W_M25,LK,Sri Lanka,LK1987DHS,1987,DHS,Secondary or higher,1,1,23.1,0,0,None,None,None
+FE_AAFB_W_M25,LS,Lesotho,LS2004DHS,2004,DHS,No education or primary,0,0,19.9,0,0,None,None,None
+FE_AAFB_W_M25,LS,Lesotho,LS2004DHS,2004,DHS,Secondary or higher,1,1,21.6,0,0,None,None,None
+FE_AAFB_W_M25,LS,Lesotho,LS2009DHS,2009,DHS,No education or primary,0,0,20.2,0,0,None,None,None
+FE_AAFB_W_M25,LS,Lesotho,LS2009DHS,2009,DHS,Secondary or higher,1,1,22.7,0,0,None,None,None
+FE_AAFB_W_M25,LS,Lesotho,LS2014DHS,2014,DHS,No education or primary,0,0,19.8,0,0,None,None,None
+FE_AAFB_W_M25,LS,Lesotho,LS2014DHS,2014,DHS,Secondary or higher,1,1,22.5,0,0,None,None,None
+FE_AAFB_W_M25,LS,Lesotho,LS2023DHS,2023,DHS,No education or primary,0,0,19.4,0,0,None,None,None
+FE_AAFB_W_M25,LS,Lesotho,LS2023DHS,2023,DHS,Secondary or higher,1,1,22.7,0,0,None,None,None
+FE_AAFB_W_M25,MB,Moldova,MB2005DHS,2005,DHS,No education or primary,0,0,19.4,0,0,None,None,None
+FE_AAFB_W_M25,MB,Moldova,MB2005DHS,2005,DHS,Secondary or higher,1,1,22.3,0,0,None,None,None
+FE_AAFB_W_M25,MD,Madagascar,MD1992DHS,1992,DHS,No education or primary,0,0,18.7,0,0,None,None,None
+FE_AAFB_W_M25,MD,Madagascar,MD1992DHS,1992,DHS,Secondary or higher,1,1,22.4,0,0,None,None,None
+FE_AAFB_W_M25,MD,Madagascar,MD1997DHS,1997,DHS,No education or primary,0,0,18.9,0,0,None,None,None
+FE_AAFB_W_M25,MD,Madagascar,MD1997DHS,1997,DHS,Secondary or higher,1,1,21.5,0,0,None,None,None
+FE_AAFB_W_M25,MD,Madagascar,MD2004DHS,2004,DHS,No education or primary,0,0,19.1,0,0,None,None,None
+FE_AAFB_W_M25,MD,Madagascar,MD2004DHS,2004,DHS,Secondary or higher,1,1,22.1,0,0,None,None,None
+FE_AAFB_W_M25,MD,Madagascar,MD2008DHS,2008,DHS,No education or primary,0,0,18.9,0,0,None,None,None
+FE_AAFB_W_M25,MD,Madagascar,MD2008DHS,2008,DHS,Secondary or higher,1,1,21.4,0,0,None,None,None
+FE_AAFB_W_M25,MD,Madagascar,MD2021DHS,2021,DHS,No education or primary,0,0,18.2,0,0,None,None,None
+FE_AAFB_W_M25,MD,Madagascar,MD2021DHS,2021,DHS,Secondary or higher,1,1,21.3,0,0,None,None,None
+FE_AAFB_W_M25,ML,Mali,ML1987DHS,1987,DHS,No education or primary,0,0,18.9,0,0,None,None,None
+FE_AAFB_W_M25,ML,Mali,ML1987DHS,1987,DHS,Secondary or higher,1,1,24.0,0,0,None,None,None
+FE_AAFB_W_M25,ML,Mali,ML1996DHS,1996,DHS,No education or primary,0,0,18.5,0,0,None,None,None
+FE_AAFB_W_M25,ML,Mali,ML1996DHS,1996,DHS,Secondary or higher,1,1,21.5,0,0,None,None,None
+FE_AAFB_W_M25,ML,Mali,ML2001DHS,2001,DHS,No education or primary,0,0,18.5,0,0,None,None,None
+FE_AAFB_W_M25,ML,Mali,ML2001DHS,2001,DHS,Secondary or higher,1,1,22.9,0,0,None,None,None
+FE_AAFB_W_M25,ML,Mali,ML2006DHS,2006,DHS,No education or primary,0,0,18.4,0,0,None,None,None
+FE_AAFB_W_M25,ML,Mali,ML2006DHS,2006,DHS,Secondary or higher,1,1,23.5,0,0,None,None,None
+FE_AAFB_W_M25,ML,Mali,ML2012DHS,2012,DHS,No education or primary,0,0,18.6,0,0,None,None,None
+FE_AAFB_W_M25,ML,Mali,ML2012DHS,2012,DHS,Secondary or higher,1,1,21.8,0,0,None,None,None
+FE_AAFB_W_M25,ML,Mali,ML2018DHS,2018,DHS,No education or primary,0,0,18.6,0,0,None,None,None
+FE_AAFB_W_M25,ML,Mali,ML2018DHS,2018,DHS,Secondary or higher,1,1,20.8,0,0,None,None,None
+FE_AAFB_W_M25,ML,Mali,ML2023DHS,2023,DHS,No education or primary,0,0,18.8,0,0,None,None,None
+FE_AAFB_W_M25,ML,Mali,ML2023DHS,2023,DHS,Secondary or higher,1,1,20.4,0,0,None,None,None
+FE_AAFB_W_M25,MR,Mauritania,MR2020DHS,2020,DHS,No education or primary,0,0,20.3,0,0,None,None,None
+FE_AAFB_W_M25,MR,Mauritania,MR2020DHS,2020,DHS,Secondary or higher,1,1,24.4,0,0,None,None,None
+FE_AAFB_W_M25,MV,Maldives,MV2016DHS,2016,DHS,No education or primary,0,0,22.1,0,0,None,None,None
+FE_AAFB_W_M25,MV,Maldives,MV2016DHS,2016,DHS,Secondary or higher,1,1,24.7,0,0,None,None,None
+FE_AAFB_W_M25,MW,Malawi,MW1992DHS,1992,DHS,No education or primary,0,0,18.6,0,0,None,None,None
+FE_AAFB_W_M25,MW,Malawi,MW1992DHS,1992,DHS,Secondary or higher,1,1,22.8,0,0,None,None,None
+FE_AAFB_W_M25,MW,Malawi,MW2000DHS,2000,DHS,No education or primary,0,0,19.0,0,0,None,None,None
+FE_AAFB_W_M25,MW,Malawi,MW2000DHS,2000,DHS,Secondary or higher,1,1,22.3,0,0,None,None,None
+FE_AAFB_W_M25,MW,Malawi,MW2004DHS,2004,DHS,No education or primary,0,0,18.7,0,0,None,None,None
+FE_AAFB_W_M25,MW,Malawi,MW2004DHS,2004,DHS,Secondary or higher,1,1,21.6,0,0,None,None,None
+FE_AAFB_W_M25,MW,Malawi,MW2010DHS,2010,DHS,No education or primary,0,0,18.4,0,0,None,None,None
+FE_AAFB_W_M25,MW,Malawi,MW2010DHS,2010,DHS,Secondary or higher,1,1,20.8,0,0,None,None,None
+FE_AAFB_W_M25,MW,Malawi,MW2015DHS,2015,DHS,No education or primary,0,0,18.2,0,0,None,None,None
+FE_AAFB_W_M25,MW,Malawi,MW2015DHS,2015,DHS,Secondary or higher,1,1,21.4,0,0,None,None,None
+FE_AAFB_W_M25,MW,Malawi,MW2024DHS,2024,DHS,No education or primary,0,0,18.4,0,0,None,None,None
+FE_AAFB_W_M25,MW,Malawi,MW2024DHS,2024,DHS,Secondary or higher,1,1,21.5,0,0,None,None,None
+FE_AAFB_W_M25,MX,Mexico,MX1987DHS,1987,DHS,No education or primary,0,0,19.7,0,0,None,None,None
+FE_AAFB_W_M25,MX,Mexico,MX1987DHS,1987,DHS,Secondary or higher,1,1,24.2,0,0,None,None,None
+FE_AAFB_W_M25,MZ,Mozambique,MZ1997DHS,1997,DHS,No education or primary,0,0,18.6,0,0,None,None,None
+FE_AAFB_W_M25,MZ,Mozambique,MZ1997DHS,1997,DHS,Secondary or higher,1,1,21.2,0,0,None,None,None
+FE_AAFB_W_M25,MZ,Mozambique,MZ2003DHS,2003,DHS,No education or primary,0,0,18.7,0,0,None,None,None
+FE_AAFB_W_M25,MZ,Mozambique,MZ2003DHS,2003,DHS,Secondary or higher,1,1,22.2,0,0,None,None,None
+FE_AAFB_W_M25,MZ,Mozambique,MZ2011DHS,2011,DHS,No education or primary,0,0,18.6,0,0,None,None,None
+FE_AAFB_W_M25,MZ,Mozambique,MZ2011DHS,2011,DHS,Secondary or higher,1,1,20.5,0,0,None,None,None
+FE_AAFB_W_M25,MZ,Mozambique,MZ2022DHS,2022,DHS,No education or primary,0,0,18.0,0,0,None,None,None
+FE_AAFB_W_M25,MZ,Mozambique,MZ2022DHS,2022,DHS,Secondary or higher,1,1,19.4,0,0,None,None,None
+FE_AAFB_W_M25,NC,Nicaragua,NC1998DHS,1998,DHS,No education or primary,0,0,18.2,0,0,None,None,None
+FE_AAFB_W_M25,NC,Nicaragua,NC1998DHS,1998,DHS,Secondary or higher,1,1,21.6,0,0,None,None,None
+FE_AAFB_W_M25,NC,Nicaragua,NC2001DHS,2001,DHS,No education or primary,0,0,18.4,0,0,None,None,None
+FE_AAFB_W_M25,NC,Nicaragua,NC2001DHS,2001,DHS,Secondary or higher,1,1,21.4,0,0,None,None,None
+FE_AAFB_W_M25,NG,Nigeria,NG1990DHS,1990,DHS,No education or primary,0,0,18.8,0,0,None,None,None
+FE_AAFB_W_M25,NG,Nigeria,NG1990DHS,1990,DHS,Secondary or higher,1,1,23.6,0,0,None,None,None
+FE_AAFB_W_M25,NG,Nigeria,NG2003DHS,2003,DHS,No education or primary,0,0,18.4,0,0,None,None,None
+FE_AAFB_W_M25,NG,Nigeria,NG2003DHS,2003,DHS,Secondary or higher,1,1,24.1,0,0,None,None,None
+FE_AAFB_W_M25,NG,Nigeria,NG2008DHS,2008,DHS,No education or primary,0,0,18.5,0,0,None,None,None
+FE_AAFB_W_M25,NG,Nigeria,NG2008DHS,2008,DHS,Secondary or higher,1,1,24.9,0,0,None,None,None
+FE_AAFB_W_M25,NG,Nigeria,NG2010MIS,2010,MIS,No education or primary,0,0,18.3,0,0,None,None,None
+FE_AAFB_W_M25,NG,Nigeria,NG2010MIS,2010,MIS,Secondary or higher,1,1,24.3,0,0,None,None,None
+FE_AAFB_W_M25,NG,Nigeria,NG2013DHS,2013,DHS,No education or primary,0,0,18.1,0,0,None,None,None
+FE_AAFB_W_M25,NG,Nigeria,NG2013DHS,2013,DHS,Secondary or higher,1,1,24.4,0,0,None,None,None
+FE_AAFB_W_M25,NG,Nigeria,NG2018DHS,2018,DHS,No education or primary,0,0,18.1,0,0,None,None,None
+FE_AAFB_W_M25,NG,Nigeria,NG2018DHS,2018,DHS,Secondary or higher,1,1,23.1,0,0,None,None,None
+FE_AAFB_W_M25,NG,Nigeria,NG2024DHS,2024,DHS,No education or primary,0,0,18.7,0,0,None,None,None
+FE_AAFB_W_M25,NG,Nigeria,NG2024DHS,2024,DHS,Secondary or higher,1,1,23.5,0,0,None,None,None
+FE_AAFB_W_M25,NG,Nigeria,NG2025DHS,2025,DHS,No education or primary,0,0,18.8,0,0,None,None,None
+FE_AAFB_W_M25,NG,Nigeria,NG2025DHS,2025,DHS,Secondary or higher,1,1,23.9,0,0,None,None,None
+FE_AAFB_W_M25,NI,Niger,NI1992DHS,1992,DHS,No education or primary,0,0,17.7,0,0,None,None,None
+FE_AAFB_W_M25,NI,Niger,NI1992DHS,1992,DHS,Secondary or higher,1,1,21.2,0,0,None,None,None
+FE_AAFB_W_M25,NI,Niger,NI1998DHS,1998,DHS,No education or primary,0,0,17.8,0,0,None,None,None
+FE_AAFB_W_M25,NI,Niger,NI1998DHS,1998,DHS,Secondary or higher,1,1,22.4,0,0,None,None,None
+FE_AAFB_W_M25,NI,Niger,NI2006DHS,2006,DHS,No education or primary,0,0,17.9,0,0,None,None,None
+FE_AAFB_W_M25,NI,Niger,NI2006DHS,2006,DHS,Secondary or higher,1,1,23.3,0,0,None,None,None
+FE_AAFB_W_M25,NI,Niger,NI2012DHS,2012,DHS,No education or primary,0,0,17.9,0,0,None,None,None
+FE_AAFB_W_M25,NI,Niger,NI2012DHS,2012,DHS,Secondary or higher,1,1,23.4,0,0,None,None,None
+FE_AAFB_W_M25,NM,Namibia,NM1992DHS,1992,DHS,No education or primary,0,0,19.8,0,0,None,None,None
+FE_AAFB_W_M25,NM,Namibia,NM1992DHS,1992,DHS,Secondary or higher,1,1,23.5,0,0,None,None,None
+FE_AAFB_W_M25,NM,Namibia,NM2000DHS,2000,DHS,No education or primary,0,0,19.6,0,0,None,None,None
+FE_AAFB_W_M25,NM,Namibia,NM2000DHS,2000,DHS,Secondary or higher,1,1,21.9,0,0,None,None,None
+FE_AAFB_W_M25,NM,Namibia,NM2006DHS,2006,DHS,No education or primary,0,0,19.2,0,0,None,None,None
+FE_AAFB_W_M25,NM,Namibia,NM2006DHS,2006,DHS,Secondary or higher,1,1,22.5,0,0,None,None,None
+FE_AAFB_W_M25,NM,Namibia,NM2013DHS,2013,DHS,No education or primary,0,0,18.8,0,0,None,None,None
+FE_AAFB_W_M25,NM,Namibia,NM2013DHS,2013,DHS,Secondary or higher,1,1,22.3,0,0,None,None,None
+FE_AAFB_W_M25,NP,Nepal,NP1996DHS,1996,DHS,No education or primary,0,0,19.1,0,0,None,None,None
+FE_AAFB_W_M25,NP,Nepal,NP1996DHS,1996,DHS,Secondary or higher,1,1,21.6,0,0,None,None,None
+FE_AAFB_W_M25,NP,Nepal,NP2001DHS,2001,DHS,No education or primary,0,0,19.5,0,0,None,None,None
+FE_AAFB_W_M25,NP,Nepal,NP2001DHS,2001,DHS,Secondary or higher,1,1,21.4,0,0,None,None,None
+FE_AAFB_W_M25,NP,Nepal,NP2006DHS,2006,DHS,No education or primary,0,0,19.1,0,0,None,None,None
+FE_AAFB_W_M25,NP,Nepal,NP2006DHS,2006,DHS,Secondary or higher,1,1,21.8,0,0,None,None,None
+FE_AAFB_W_M25,NP,Nepal,NP2011DHS,2011,DHS,No education or primary,0,0,19.0,0,0,None,None,None
+FE_AAFB_W_M25,NP,Nepal,NP2011DHS,2011,DHS,Secondary or higher,1,1,21.9,0,0,None,None,None
+FE_AAFB_W_M25,NP,Nepal,NP2016DHS,2016,DHS,No education or primary,0,0,19.3,0,0,None,None,None
+FE_AAFB_W_M25,NP,Nepal,NP2016DHS,2016,DHS,Secondary or higher,1,1,22.6,0,0,None,None,None
+FE_AAFB_W_M25,NP,Nepal,NP2022DHS,2022,DHS,No education or primary,0,0,19.3,0,0,None,None,None
+FE_AAFB_W_M25,NP,Nepal,NP2022DHS,2022,DHS,Secondary or higher,1,1,23.0,0,0,None,None,None
+FE_AAFB_W_M25,PE,Peru,PE1986DHS,1986,DHS,No education or primary,0,0,19.4,0,0,None,None,None
+FE_AAFB_W_M25,PE,Peru,PE1986DHS,1986,DHS,Secondary or higher,1,1,23.9,0,0,None,None,None
+FE_AAFB_W_M25,PE,Peru,PE1992DHS,1992,DHS,No education or primary,0,0,19.5,0,0,None,None,None
+FE_AAFB_W_M25,PE,Peru,PE1992DHS,1992,DHS,Secondary or higher,1,1,24.1,0,0,None,None,None
+FE_AAFB_W_M25,PE,Peru,PE1996DHS,1996,DHS,No education or primary,0,0,19.5,0,0,None,None,None
+FE_AAFB_W_M25,PE,Peru,PE1996DHS,1996,DHS,Secondary or higher,1,1,23.4,0,0,None,None,None
+FE_AAFB_W_M25,PE,Peru,PE2000DHS,2000,DHS,No education or primary,0,0,19.5,0,0,None,None,None
+FE_AAFB_W_M25,PE,Peru,PE2000DHS,2000,DHS,Secondary or higher,1,1,23.7,0,0,None,None,None
+FE_AAFB_W_M25,PE,Peru,PE2004DHS,2004,DHS,No education or primary,0,0,19.3,0,0,None,None,None
+FE_AAFB_W_M25,PE,Peru,PE2004DHS,2004,DHS,Secondary or higher,1,1,23.9,0,0,None,None,None
+FE_AAFB_W_M25,PE,Peru,PE2007DHS,2007,DHS,No education or primary,0,0,19.1,0,0,None,None,None
+FE_AAFB_W_M25,PE,Peru,PE2007DHS,2007,DHS,Secondary or higher,1,1,23.9,0,0,None,None,None
+FE_AAFB_W_M25,PE,Peru,PE2009DHS,2009,DHS,No education or primary,0,0,18.7,0,0,None,None,None
+FE_AAFB_W_M25,PE,Peru,PE2009DHS,2009,DHS,Secondary or higher,1,1,23.9,0,0,None,None,None
+FE_AAFB_W_M25,PE,Peru,PE2010DHS,2010,DHS,No education or primary,0,0,18.9,0,0,None,None,None
+FE_AAFB_W_M25,PE,Peru,PE2010DHS,2010,DHS,Secondary or higher,1,1,23.4,0,0,None,None,None
+FE_AAFB_W_M25,PE,Peru,PE2011DHS,2011,DHS,No education or primary,0,0,19.2,0,0,None,None,None
+FE_AAFB_W_M25,PE,Peru,PE2011DHS,2011,DHS,Secondary or higher,1,1,23.7,0,0,None,None,None
+FE_AAFB_W_M25,PE,Peru,PE2012DHS,2012,DHS,No education or primary,0,0,18.9,0,0,None,None,None
+FE_AAFB_W_M25,PE,Peru,PE2012DHS,2012,DHS,Secondary or higher,1,1,23.5,0,0,None,None,None
+FE_AAFB_W_M25,PG,Papua New Guinea,PG2017DHS,2017,DHS,No education or primary,0,0,20.6,0,0,None,None,None
+FE_AAFB_W_M25,PG,Papua New Guinea,PG2017DHS,2017,DHS,Secondary or higher,1,1,23.9,0,0,None,None,None
+FE_AAFB_W_M25,PH,Philippines,PH1993DHS,1993,DHS,No education or primary,0,0,20.7,0,0,None,None,None
+FE_AAFB_W_M25,PH,Philippines,PH1993DHS,1993,DHS,Secondary or higher,1,1,24.3,0,0,None,None,None
+FE_AAFB_W_M25,PH,Philippines,PH1998DHS,1998,DHS,No education or primary,0,0,20.9,0,0,None,None,None
+FE_AAFB_W_M25,PH,Philippines,PH1998DHS,1998,DHS,Secondary or higher,1,1,24.8,0,0,None,None,None
+FE_AAFB_W_M25,PH,Philippines,PH2003DHS,2003,DHS,No education or primary,0,0,20.4,0,0,None,None,None
+FE_AAFB_W_M25,PH,Philippines,PH2003DHS,2003,DHS,Secondary or higher,1,1,24.1,0,0,None,None,None
+FE_AAFB_W_M25,PH,Philippines,PH2008DHS,2008,DHS,No education or primary,0,0,20.7,0,0,None,None,None
+FE_AAFB_W_M25,PH,Philippines,PH2008DHS,2008,DHS,Secondary or higher,1,1,23.7,0,0,None,None,None
+FE_AAFB_W_M25,PH,Philippines,PH2013DHS,2013,DHS,No education or primary,0,0,20.2,0,0,None,None,None
+FE_AAFB_W_M25,PH,Philippines,PH2013DHS,2013,DHS,Secondary or higher,1,1,23.6,0,0,None,None,None
+FE_AAFB_W_M25,PH,Philippines,PH2017DHS,2017,DHS,No education or primary,0,0,20.0,0,0,None,None,None
+FE_AAFB_W_M25,PH,Philippines,PH2017DHS,2017,DHS,Secondary or higher,1,1,23.2,0,0,None,None,None
+FE_AAFB_W_M25,PK,Pakistan,PK1991DHS,1991,DHS,No education or primary,0,0,19.8,0,0,None,None,None
+FE_AAFB_W_M25,PK,Pakistan,PK1991DHS,1991,DHS,Secondary or higher,1,1,21.8,0,0,None,None,None
+FE_AAFB_W_M25,PY,Paraguay,PY1990DHS,1990,DHS,No education or primary,0,0,20.1,0,0,None,None,None
+FE_AAFB_W_M25,PY,Paraguay,PY1990DHS,1990,DHS,Secondary or higher,1,1,23.9,0,0,None,None,None
+FE_AAFB_W_M25,RW,Rwanda,RW1992DHS,1992,DHS,No education or primary,0,0,21.7,0,0,None,None,None
+FE_AAFB_W_M25,RW,Rwanda,RW1992DHS,1992,DHS,Secondary or higher,1,1,24.1,0,0,None,None,None
+FE_AAFB_W_M25,RW,Rwanda,RW2000DHS,2000,DHS,No education or primary,0,0,21.8,0,0,None,None,None
+FE_AAFB_W_M25,RW,Rwanda,RW2000DHS,2000,DHS,Secondary or higher,1,1,22.9,0,0,None,None,None
+FE_AAFB_W_M25,RW,Rwanda,RW2005DHS,2005,DHS,No education or primary,0,0,21.5,0,0,None,None,None
+FE_AAFB_W_M25,RW,Rwanda,RW2005DHS,2005,DHS,Secondary or higher,1,1,23.9,0,0,None,None,None
+FE_AAFB_W_M25,RW,Rwanda,RW2025DHS,2025,DHS,No education or primary,0,0,21.9,0,0,None,None,None
+FE_AAFB_W_M25,RW,Rwanda,RW2025DHS,2025,DHS,Secondary or higher,1,1,24.6,0,0,None,None,None
+FE_AAFB_W_M25,SL,Sierra Leone,SL2008DHS,2008,DHS,No education or primary,0,0,18.7,0,0,None,None,None
+FE_AAFB_W_M25,SL,Sierra Leone,SL2008DHS,2008,DHS,Secondary or higher,1,1,22.0,0,0,None,None,None
+FE_AAFB_W_M25,SL,Sierra Leone,SL2013DHS,2013,DHS,No education or primary,0,0,18.6,0,0,None,None,None
+FE_AAFB_W_M25,SL,Sierra Leone,SL2013DHS,2013,DHS,Secondary or higher,1,1,22.3,0,0,None,None,None
+FE_AAFB_W_M25,SL,Sierra Leone,SL2019DHS,2019,DHS,No education or primary,0,0,18.7,0,0,None,None,None
+FE_AAFB_W_M25,SL,Sierra Leone,SL2019DHS,2019,DHS,Secondary or higher,1,1,20.8,0,0,None,None,None
+FE_AAFB_W_M25,SN,Senegal,SN1986DHS,1986,DHS,No education or primary,0,0,18.8,0,0,None,None,None
+FE_AAFB_W_M25,SN,Senegal,SN1986DHS,1986,DHS,Secondary or higher,1,1,21.8,0,0,None,None,None
+FE_AAFB_W_M25,SN,Senegal,SN1993DHS,1993,DHS,No education or primary,0,0,19.0,0,0,None,None,None
+FE_AAFB_W_M25,SN,Senegal,SN1993DHS,1993,DHS,Secondary or higher,1,1,24.5,0,0,None,None,None
+FE_AAFB_W_M25,SN,Senegal,SN2023DHS,2023,DHS,No education or primary,0,0,20.4,0,0,None,None,None
+FE_AAFB_W_M25,SN,Senegal,SN2023DHS,2023,DHS,Secondary or higher,1,1,24.8,0,0,None,None,None
+FE_AAFB_W_M25,ST,Sao Tome and Principe,ST2008DHS,2008,DHS,No education or primary,0,0,18.8,0,0,None,None,None
+FE_AAFB_W_M25,ST,Sao Tome and Principe,ST2008DHS,2008,DHS,Secondary or higher,1,1,21.6,0,0,None,None,None
+FE_AAFB_W_M25,SZ,Eswatini,SZ2006DHS,2006,DHS,No education or primary,0,0,18.1,0,0,None,None,None
+FE_AAFB_W_M25,SZ,Eswatini,SZ2006DHS,2006,DHS,Secondary or higher,1,1,20.4,0,0,None,None,None
+FE_AAFB_W_M25,TD,Chad,TD1997DHS,1997,DHS,No education or primary,0,0,18.1,0,0,None,None,None
+FE_AAFB_W_M25,TD,Chad,TD1997DHS,1997,DHS,Secondary or higher,1,1,20.1,0,0,None,None,None
+FE_AAFB_W_M25,TD,Chad,TD2004DHS,2004,DHS,No education or primary,0,0,17.9,0,0,None,None,None
+FE_AAFB_W_M25,TD,Chad,TD2004DHS,2004,DHS,Secondary or higher,1,1,20.6,0,0,None,None,None
+FE_AAFB_W_M25,TD,Chad,TD2014DHS,2014,DHS,No education or primary,0,0,17.6,0,0,None,None,None
+FE_AAFB_W_M25,TD,Chad,TD2014DHS,2014,DHS,Secondary or higher,1,1,20.2,0,0,None,None,None
+FE_AAFB_W_M25,TG,Togo,TG1988DHS,1988,DHS,No education or primary,0,0,18.9,0,0,None,None,None
+FE_AAFB_W_M25,TG,Togo,TG1988DHS,1988,DHS,Secondary or higher,1,1,21.8,0,0,None,None,None
+FE_AAFB_W_M25,TG,Togo,TG1998DHS,1998,DHS,No education or primary,0,0,19.7,0,0,None,None,None
+FE_AAFB_W_M25,TG,Togo,TG1998DHS,1998,DHS,Secondary or higher,1,1,24.2,0,0,None,None,None
+FE_AAFB_W_M25,TG,Togo,TG2013DHS,2013,DHS,No education or primary,0,0,20.0,0,0,None,None,None
+FE_AAFB_W_M25,TG,Togo,TG2013DHS,2013,DHS,Secondary or higher,1,1,23.5,0,0,None,None,None
+FE_AAFB_W_M25,TJ,Tajikistan,TJ2012DHS,2012,DHS,No education or primary,0,0,22.9,0,0,None,None,None
+FE_AAFB_W_M25,TJ,Tajikistan,TJ2012DHS,2012,DHS,Secondary or higher,1,1,22.8,0,0,None,None,None
+FE_AAFB_W_M25,TJ,Tajikistan,TJ2017DHS,2017,DHS,No education or primary,0,0,22.7,0,0,None,None,None
+FE_AAFB_W_M25,TJ,Tajikistan,TJ2017DHS,2017,DHS,Secondary or higher,1,1,21.9,0,0,None,None,None
+FE_AAFB_W_M25,TJ,Tajikistan,TJ2023DHS,2023,DHS,No education or primary,0,0,21.3,0,0,None,None,None
+FE_AAFB_W_M25,TJ,Tajikistan,TJ2023DHS,2023,DHS,Secondary or higher,1,1,21.0,0,0,None,None,None
+FE_AAFB_W_M25,TL,Timor-Leste,TL2009DHS,2009,DHS,No education or primary,0,0,21.2,0,0,None,None,None
+FE_AAFB_W_M25,TL,Timor-Leste,TL2009DHS,2009,DHS,Secondary or higher,1,1,23.0,0,0,None,None,None
+FE_AAFB_W_M25,TL,Timor-Leste,TL2016DHS,2016,DHS,No education or primary,0,0,21.4,0,0,None,None,None
+FE_AAFB_W_M25,TL,Timor-Leste,TL2016DHS,2016,DHS,Secondary or higher,1,1,24.0,0,0,None,None,None
+FE_AAFB_W_M25,TM,Turkmenistan,TM2000DHS,2000,DHS,No education or primary,0,0,21.5,0,0,None,None,None
+FE_AAFB_W_M25,TM,Turkmenistan,TM2000DHS,2000,DHS,Secondary or higher,1,1,23.3,0,0,None,None,None
+FE_AAFB_W_M25,TR,Turkey,TR1993DHS,1993,DHS,No education or primary,0,0,20.9,0,0,None,None,None
+FE_AAFB_W_M25,TR,Turkey,TR1993DHS,1993,DHS,Secondary or higher,1,1,24.9,0,0,None,None,None
+FE_AAFB_W_M25,TR,Turkey,TR1998DHS,1998,DHS,No education or primary,0,0,21.3,0,0,None,None,None
+FE_AAFB_W_M25,TR,Turkey,TR1998DHS,1998,DHS,Secondary or higher,1,1,24.8,0,0,None,None,None
+FE_AAFB_W_M25,TT,Trinidad and Tobago,TT1987DHS,1987,DHS,No education or primary,0,0,21.0,0,0,None,None,None
+FE_AAFB_W_M25,TT,Trinidad and Tobago,TT1987DHS,1987,DHS,Secondary or higher,1,1,24.0,0,0,None,None,None
+FE_AAFB_W_M25,TZ,Tanzania,TZ1992DHS,1992,DHS,No education or primary,0,0,19.3,0,0,None,None,None
+FE_AAFB_W_M25,TZ,Tanzania,TZ1992DHS,1992,DHS,Secondary or higher,1,1,23.9,0,0,None,None,None
+FE_AAFB_W_M25,TZ,Tanzania,TZ1996DHS,1996,DHS,No education or primary,0,0,19.3,0,0,None,None,None
+FE_AAFB_W_M25,TZ,Tanzania,TZ1996DHS,1996,DHS,Secondary or higher,1,1,23.7,0,0,None,None,None
+FE_AAFB_W_M25,TZ,Tanzania,TZ1999DHS,1999,DHS,No education or primary,0,0,19.3,0,0,None,None,None
+FE_AAFB_W_M25,TZ,Tanzania,TZ1999DHS,1999,DHS,Secondary or higher,1,1,23.5,0,0,None,None,None
+FE_AAFB_W_M25,TZ,Tanzania,TZ2004DHS,2004,DHS,No education or primary,0,0,19.4,0,0,None,None,None
+FE_AAFB_W_M25,TZ,Tanzania,TZ2004DHS,2004,DHS,Secondary or higher,1,1,24.8,0,0,None,None,None
+FE_AAFB_W_M25,TZ,Tanzania,TZ2007AIS,2007,AIS,No education or primary,0,0,19.2,0,0,None,None,None
+FE_AAFB_W_M25,TZ,Tanzania,TZ2007AIS,2007,AIS,Secondary or higher,1,1,24.0,0,0,None,None,None
+FE_AAFB_W_M25,TZ,Tanzania,TZ2010DHS,2010,DHS,No education or primary,0,0,19.3,0,0,None,None,None
+FE_AAFB_W_M25,TZ,Tanzania,TZ2010DHS,2010,DHS,Secondary or higher,1,1,23.4,0,0,None,None,None
+FE_AAFB_W_M25,TZ,Tanzania,TZ2015DHS,2015,DHS,No education or primary,0,0,19.2,0,0,None,None,None
+FE_AAFB_W_M25,TZ,Tanzania,TZ2015DHS,2015,DHS,Secondary or higher,1,1,24.5,0,0,None,None,None
+FE_AAFB_W_M25,TZ,Tanzania,TZ2022DHS,2022,DHS,No education or primary,0,0,19.2,0,0,None,None,None
+FE_AAFB_W_M25,TZ,Tanzania,TZ2022DHS,2022,DHS,Secondary or higher,1,1,22.2,0,0,None,None,None
+FE_AAFB_W_M25,UG,Uganda,UG1988DHS,1988,DHS,No education or primary,0,0,18.2,0,0,None,None,None
+FE_AAFB_W_M25,UG,Uganda,UG1988DHS,1988,DHS,Secondary or higher,1,1,20.4,0,0,None,None,None
+FE_AAFB_W_M25,UG,Uganda,UG1995DHS,1995,DHS,No education or primary,0,0,18.5,0,0,None,None,None
+FE_AAFB_W_M25,UG,Uganda,UG1995DHS,1995,DHS,Secondary or higher,1,1,20.3,0,0,None,None,None
+FE_AAFB_W_M25,UG,Uganda,UG2000DHS,2000,DHS,No education or primary,0,0,18.5,0,0,None,None,None
+FE_AAFB_W_M25,UG,Uganda,UG2000DHS,2000,DHS,Secondary or higher,1,1,21.1,0,0,None,None,None
+FE_AAFB_W_M25,UG,Uganda,UG2006DHS,2006,DHS,No education or primary,0,0,18.3,0,0,None,None,None
+FE_AAFB_W_M25,UG,Uganda,UG2006DHS,2006,DHS,Secondary or higher,1,1,21.0,0,0,None,None,None
+FE_AAFB_W_M25,UG,Uganda,UG2009MIS,2009,MIS,No education or primary,0,0,17.8,0,0,None,None,None
+FE_AAFB_W_M25,UG,Uganda,UG2009MIS,2009,MIS,Secondary or higher,1,1,20.8,0,0,None,None,None
+FE_AAFB_W_M25,UG,Uganda,UG2011DHS,2011,DHS,No education or primary,0,0,18.1,0,0,None,None,None
+FE_AAFB_W_M25,UG,Uganda,UG2011DHS,2011,DHS,Secondary or higher,1,1,21.2,0,0,None,None,None
+FE_AAFB_W_M25,UG,Uganda,UG2016DHS,2016,DHS,No education or primary,0,0,18.5,0,0,None,None,None
+FE_AAFB_W_M25,UG,Uganda,UG2016DHS,2016,DHS,Secondary or higher,1,1,21.6,0,0,None,None,None
+FE_AAFB_W_M25,UZ,Uzbekistan,UZ1996DHS,1996,DHS,No education or primary,0,0,18.7,0,0,None,None,None
+FE_AAFB_W_M25,UZ,Uzbekistan,UZ1996DHS,1996,DHS,Secondary or higher,1,1,21.4,0,0,None,None,None
+FE_AAFB_W_M25,VN,Vietnam,VN1997DHS,1997,DHS,No education or primary,0,0,21.2,0,0,None,None,None
+FE_AAFB_W_M25,VN,Vietnam,VN1997DHS,1997,DHS,Secondary or higher,1,1,23.1,0,0,None,None,None
+FE_AAFB_W_M25,VN,Vietnam,VN2002DHS,2002,DHS,No education or primary,0,0,21.0,0,0,None,None,None
+FE_AAFB_W_M25,VN,Vietnam,VN2002DHS,2002,DHS,Secondary or higher,1,1,23.2,0,0,None,None,None
+FE_AAFB_W_M25,YE,Yemen,YE1997DHS,1997,DHS,No education or primary,0,0,18.8,0,0,None,None,None
+FE_AAFB_W_M25,YE,Yemen,YE1997DHS,1997,DHS,Secondary or higher,1,1,24.6,0,0,None,None,None
+FE_AAFB_W_M25,ZA,South Africa,ZA1998DHS,1998,DHS,No education or primary,0,0,19.3,0,0,None,None,None
+FE_AAFB_W_M25,ZA,South Africa,ZA1998DHS,1998,DHS,Secondary or higher,1,1,21.7,0,0,None,None,None
+FE_AAFB_W_M25,ZA,South Africa,ZA2016DHS,2016,DHS,No education or primary,0,0,19.6,0,0,None,None,None
+FE_AAFB_W_M25,ZA,South Africa,ZA2016DHS,2016,DHS,Secondary or higher,1,1,21.3,0,0,None,None,None
+FE_AAFB_W_M25,ZM,Zambia,ZM1992DHS,1992,DHS,No education or primary,0,0,18.3,0,0,None,None,None
+FE_AAFB_W_M25,ZM,Zambia,ZM1992DHS,1992,DHS,Secondary or higher,1,1,20.4,0,0,None,None,None
+FE_AAFB_W_M25,ZM,Zambia,ZM1996DHS,1996,DHS,No education or primary,0,0,18.5,0,0,None,None,None
+FE_AAFB_W_M25,ZM,Zambia,ZM1996DHS,1996,DHS,Secondary or higher,1,1,20.8,0,0,None,None,None
+FE_AAFB_W_M25,ZM,Zambia,ZM2002DHS,2002,DHS,No education or primary,0,0,18.6,0,0,None,None,None
+FE_AAFB_W_M25,ZM,Zambia,ZM2002DHS,2002,DHS,Secondary or higher,1,1,20.3,0,0,None,None,None
+FE_AAFB_W_M25,ZM,Zambia,ZM2007DHS,2007,DHS,No education or primary,0,0,18.6,0,0,None,None,None
+FE_AAFB_W_M25,ZM,Zambia,ZM2007DHS,2007,DHS,Secondary or higher,1,1,20.9,0,0,None,None,None
+FE_AAFB_W_M25,ZM,Zambia,ZM2013DHS,2013,DHS,No education or primary,0,0,18.4,0,0,None,None,None
+FE_AAFB_W_M25,ZM,Zambia,ZM2013DHS,2013,DHS,Secondary or higher,1,1,20.7,0,0,None,None,None
+FE_AAFB_W_M25,ZM,Zambia,ZM2018DHS,2018,DHS,No education or primary,0,0,18.2,0,0,None,None,None
+FE_AAFB_W_M25,ZM,Zambia,ZM2018DHS,2018,DHS,Secondary or higher,1,1,20.5,0,0,None,None,None
+FE_AAFB_W_M25,ZM,Zambia,ZM2024DHS,2024,DHS,No education or primary,0,0,18.0,0,0,None,None,None
+FE_AAFB_W_M25,ZM,Zambia,ZM2024DHS,2024,DHS,Secondary or higher,1,1,20.9,0,0,None,None,None
+FE_AAFB_W_M25,ZW,Zimbabwe,ZW1988DHS,1988,DHS,No education or primary,0,0,19.1,0,0,None,None,None
+FE_AAFB_W_M25,ZW,Zimbabwe,ZW1988DHS,1988,DHS,Secondary or higher,1,1,21.2,0,0,None,None,None
+FE_AAFB_W_M25,ZW,Zimbabwe,ZW1994DHS,1994,DHS,No education or primary,0,0,18.4,0,0,None,None,None
+FE_AAFB_W_M25,ZW,Zimbabwe,ZW1994DHS,1994,DHS,Secondary or higher,1,1,21.0,0,0,None,None,None
+FE_AAFB_W_M25,ZW,Zimbabwe,ZW1999DHS,1999,DHS,No education or primary,0,0,18.8,0,0,None,None,None
+FE_AAFB_W_M25,ZW,Zimbabwe,ZW1999DHS,1999,DHS,Secondary or higher,1,1,21.0,0,0,None,None,None
+FE_AAFB_W_M25,ZW,Zimbabwe,ZW2005DHS,2005,DHS,No education or primary,0,0,18.8,0,0,None,None,None
+FE_AAFB_W_M25,ZW,Zimbabwe,ZW2005DHS,2005,DHS,Secondary or higher,1,1,20.8,0,0,None,None,None
+FE_AAFB_W_M25,ZW,Zimbabwe,ZW2010DHS,2010,DHS,No education or primary,0,0,18.7,0,0,None,None,None
+FE_AAFB_W_M25,ZW,Zimbabwe,ZW2010DHS,2010,DHS,Secondary or higher,1,1,21.1,0,0,None,None,None
+FE_AAFB_W_M25,ZW,Zimbabwe,ZW2015DHS,2015,DHS,No education or primary,0,0,18.6,0,0,None,None,None
+FE_AAFB_W_M25,ZW,Zimbabwe,ZW2015DHS,2015,DHS,Secondary or higher,1,1,20.7,0,0,None,None,None

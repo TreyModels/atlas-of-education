@@ -1,0 +1,67 @@
+{
+ "FE_FRTY_W_MNC": {
+  "surveys_edu4": 215,
+  "surveys_edu2": 346,
+  "countries": 65,
+  "cells_edu4": 860,
+  "national_vs_cell_weighted_mean_abs_max": 0.0785,
+  "national_vs_cell_n": 215
+ },
+ "FE_FRTR_W_TFR": {
+  "surveys_edu4": 324,
+  "surveys_edu2": 360,
+  "countries": 77,
+  "cells_edu4": 1296,
+  "national_vs_cell_weighted_mean_abs_max": null,
+  "national_vs_cell_n": 0
+ },
+ "PR_WTFR_W_WFR": {
+  "surveys_edu4": 311,
+  "surveys_edu2": 319,
+  "countries": 82,
+  "cells_edu4": 1244,
+  "national_vs_cell_weighted_mean_abs_max": null,
+  "national_vs_cell_n": 0
+ },
+ "PR_DESL_W_WNM": {
+  "surveys_edu4": 279,
+  "surveys_edu2": 317,
+  "countries": 79,
+  "cells_edu4": 1116,
+  "national_vs_cell_weighted_mean_abs_max": 2.7365,
+  "national_vs_cell_n": 279
+ },
+ "FE_AAFB_W_M25": {
+  "surveys_edu4": 51,
+  "surveys_edu2": 269,
+  "countries": 23,
+  "cells_edu4": 204,
+  "national_vs_cell_weighted_mean_abs_max": null,
+  "national_vs_cell_n": 0
+ },
+ "FE_FRTR_W_GFR": {
+  "surveys_edu4": 324,
+  "surveys_edu2": 360,
+  "countries": 77,
+  "cells_edu4": 1296,
+  "national_vs_cell_weighted_mean_abs_max": null,
+  "national_vs_cell_n": 0
+ },
+ "prior_spec_panel": {
+  "cells": 1291,
+  "surveys": 369,
+  "countries": 86,
+  "cells_with_all_levels": null
+ },
+ "panel_survey": {
+  "surveys": 369,
+  "countries": 87,
+  "with_tfr": 368,
+  "with_published_ceb40": 369,
+  "with_pipeline": 342,
+  "years": [
+   1985,
+   2025
+  ]
+ }
+}

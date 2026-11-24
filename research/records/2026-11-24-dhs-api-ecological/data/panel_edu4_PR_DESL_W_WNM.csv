@@ -1,0 +1,1117 @@
+indicator,country,country_name,survey,year,survey_type,edu,edu_level,edu_ref,value,n,has_denom,n_weighted,ci_low,ci_high
+PR_DESL_W_WNM,AF,Afghanistan,AF2015DHS,2015,DHS,No education,0,0,26.0,24488.0,1,None,None,None
+PR_DESL_W_WNM,AF,Afghanistan,AF2015DHS,2015,DHS,Primary,1,1,24.0,1928.0,1,None,None,None
+PR_DESL_W_WNM,AF,Afghanistan,AF2015DHS,2015,DHS,Secondary,2,1,21.1,1761.0,1,None,None,None
+PR_DESL_W_WNM,AF,Afghanistan,AF2015DHS,2015,DHS,Higher,3,1,23.6,484.0,1,None,None,None
+PR_DESL_W_WNM,AL,Albania,AL2017DHS,2017,DHS,No education,0,0,69.5,52.0,1,None,None,None
+PR_DESL_W_WNM,AL,Albania,AL2017DHS,2017,DHS,Primary,1,1,69.5,4099.0,1,None,None,None
+PR_DESL_W_WNM,AL,Albania,AL2017DHS,2017,DHS,Secondary,2,1,66.7,2185.0,1,None,None,None
+PR_DESL_W_WNM,AL,Albania,AL2017DHS,2017,DHS,Higher,3,1,49.6,1218.0,1,None,None,None
+PR_DESL_W_WNM,AO,Angola,AO2015DHS,2015,DHS,No education,0,0,32.4,2667.0,1,None,None,None
+PR_DESL_W_WNM,AO,Angola,AO2015DHS,2015,DHS,Primary,1,1,35.3,3039.0,1,None,None,None
+PR_DESL_W_WNM,AO,Angola,AO2015DHS,2015,DHS,Secondary,2,1,26.4,2106.0,1,None,None,None
+PR_DESL_W_WNM,AO,Angola,AO2015DHS,2015,DHS,Higher,3,1,17.2,221.0,1,None,None,None
+PR_DESL_W_WNM,AO,Angola,AO2023DHS,2023,DHS,No education,0,0,35.1,2088.0,1,None,None,None
+PR_DESL_W_WNM,AO,Angola,AO2023DHS,2023,DHS,Primary,1,1,36.5,2149.0,1,None,None,None
+PR_DESL_W_WNM,AO,Angola,AO2023DHS,2023,DHS,Secondary,2,1,29.2,2642.0,1,None,None,None
+PR_DESL_W_WNM,AO,Angola,AO2023DHS,2023,DHS,Higher,3,1,28.5,277.0,1,None,None,None
+PR_DESL_W_WNM,AZ,Azerbaijan,AZ2006DHS,2006,DHS,No education,0,0,78.2,64.0,1,None,None,None
+PR_DESL_W_WNM,AZ,Azerbaijan,AZ2006DHS,2006,DHS,Primary,1,1,61.5,63.0,1,None,None,None
+PR_DESL_W_WNM,AZ,Azerbaijan,AZ2006DHS,2006,DHS,Secondary,2,1,72.7,4584.0,1,None,None,None
+PR_DESL_W_WNM,AZ,Azerbaijan,AZ2006DHS,2006,DHS,Higher,3,1,65.1,549.0,1,None,None,None
+PR_DESL_W_WNM,BD,Bangladesh,BD1994DHS,1994,DHS,No education,0,0,60.6,4871.0,1,None,None,None
+PR_DESL_W_WNM,BD,Bangladesh,BD1994DHS,1994,DHS,Primary,1,1,57.7,2520.0,1,None,None,None
+PR_DESL_W_WNM,BD,Bangladesh,BD1994DHS,1994,DHS,Secondary,2,1,48.8,1247.0,1,None,None,None
+PR_DESL_W_WNM,BD,Bangladesh,BD1994DHS,1994,DHS,Higher,3,1,43.9,208.0,1,None,None,None
+PR_DESL_W_WNM,BD,Bangladesh,BD1997DHS,1997,DHS,No education,0,0,64.1,4366.0,1,None,None,None
+PR_DESL_W_WNM,BD,Bangladesh,BD1997DHS,1997,DHS,Primary,1,1,57.0,2311.0,1,None,None,None
+PR_DESL_W_WNM,BD,Bangladesh,BD1997DHS,1997,DHS,Secondary,2,1,47.9,1343.0,1,None,None,None
+PR_DESL_W_WNM,BD,Bangladesh,BD1997DHS,1997,DHS,Higher,3,1,39.7,286.0,1,None,None,None
+PR_DESL_W_WNM,BD,Bangladesh,BD2000DHS,2000,DHS,No education,0,0,68.4,4004.0,1,None,None,None
+PR_DESL_W_WNM,BD,Bangladesh,BD2000DHS,2000,DHS,Primary,1,1,58.5,2714.0,1,None,None,None
+PR_DESL_W_WNM,BD,Bangladesh,BD2000DHS,2000,DHS,Secondary,2,1,48.8,2268.0,1,None,None,None
+PR_DESL_W_WNM,BD,Bangladesh,BD2000DHS,2000,DHS,Higher,3,1,42.4,544.0,1,None,None,None
+PR_DESL_W_WNM,BD,Bangladesh,BD2004DHS,2004,DHS,No education,0,0,72.8,3879.0,1,None,None,None
+PR_DESL_W_WNM,BD,Bangladesh,BD2004DHS,2004,DHS,Primary,1,1,62.4,3094.0,1,None,None,None
+PR_DESL_W_WNM,BD,Bangladesh,BD2004DHS,2004,DHS,Secondary,2,1,42.6,2773.0,1,None,None,None
+PR_DESL_W_WNM,BD,Bangladesh,BD2004DHS,2004,DHS,Higher,3,1,35.1,671.0,1,None,None,None
+PR_DESL_W_WNM,BD,Bangladesh,BD2007DHS,2007,DHS,No education,0,0,78.7,3055.0,1,None,None,None
+PR_DESL_W_WNM,BD,Bangladesh,BD2007DHS,2007,DHS,Primary,1,1,65.1,3040.0,1,None,None,None
+PR_DESL_W_WNM,BD,Bangladesh,BD2007DHS,2007,DHS,Secondary,2,1,46.2,3217.0,1,None,None,None
+PR_DESL_W_WNM,BD,Bangladesh,BD2007DHS,2007,DHS,Higher,3,1,47.6,831.0,1,None,None,None
+PR_DESL_W_WNM,BD,Bangladesh,BD2011DHS,2011,DHS,No education,0,0,81.6,4091.0,1,None,None,None
+PR_DESL_W_WNM,BD,Bangladesh,BD2011DHS,2011,DHS,Primary,1,1,70.5,4984.0,1,None,None,None
+PR_DESL_W_WNM,BD,Bangladesh,BD2011DHS,2011,DHS,Secondary,2,1,51.8,6111.0,1,None,None,None
+PR_DESL_W_WNM,BD,Bangladesh,BD2011DHS,2011,DHS,Higher,3,1,47.0,1430.0,1,None,None,None
+PR_DESL_W_WNM,BD,Bangladesh,BD2014DHS,2014,DHS,No education,0,0,81.1,3715.0,1,None,None,None
+PR_DESL_W_WNM,BD,Bangladesh,BD2014DHS,2014,DHS,Primary,1,1,67.9,4915.0,1,None,None,None
+PR_DESL_W_WNM,BD,Bangladesh,BD2014DHS,2014,DHS,Secondary,2,1,52.0,6527.0,1,None,None,None
+PR_DESL_W_WNM,BD,Bangladesh,BD2014DHS,2014,DHS,Higher,3,1,41.4,1673.0,1,None,None,None
+PR_DESL_W_WNM,BD,Bangladesh,BD2017DHS,2017,DHS,No education,0,0,78.9,2795.0,1,None,None,None
+PR_DESL_W_WNM,BD,Bangladesh,BD2017DHS,2017,DHS,Primary,1,1,69.4,5916.0,1,None,None,None
+PR_DESL_W_WNM,BD,Bangladesh,BD2017DHS,2017,DHS,Secondary,2,1,53.1,7452.0,1,None,None,None
+PR_DESL_W_WNM,BD,Bangladesh,BD2017DHS,2017,DHS,Higher,3,1,35.5,2732.0,1,None,None,None
+PR_DESL_W_WNM,BD,Bangladesh,BD2022DHS,2022,DHS,No education,0,0,79.5,2432.0,1,None,None,None
+PR_DESL_W_WNM,BD,Bangladesh,BD2022DHS,2022,DHS,Primary,1,1,69.8,4893.0,1,None,None,None
+PR_DESL_W_WNM,BD,Bangladesh,BD2022DHS,2022,DHS,Secondary,2,1,50.3,8808.0,1,None,None,None
+PR_DESL_W_WNM,BD,Bangladesh,BD2022DHS,2022,DHS,Higher,3,1,36.5,2854.0,1,None,None,None
+PR_DESL_W_WNM,BF,Burkina Faso,BF1993DHS,1993,DHS,No education,0,0,18.8,4052.0,1,None,None,None
+PR_DESL_W_WNM,BF,Burkina Faso,BF1993DHS,1993,DHS,Primary,1,1,21.7,612.0,1,None,None,None
+PR_DESL_W_WNM,BF,Burkina Faso,BF1993DHS,1993,DHS,Secondary,2,1,18.2,387.0,1,None,None,None
+PR_DESL_W_WNM,BF,Burkina Faso,BF1993DHS,1993,DHS,Higher,3,1,37.7,45.0,1,None,None,None
+PR_DESL_W_WNM,BF,Burkina Faso,BF2010DHS,2010,DHS,No education,0,0,24.4,10903.0,1,None,None,None
+PR_DESL_W_WNM,BF,Burkina Faso,BF2010DHS,2010,DHS,Primary,1,1,19.5,1562.0,1,None,None,None
+PR_DESL_W_WNM,BF,Burkina Faso,BF2010DHS,2010,DHS,Secondary,2,1,23.1,848.0,1,None,None,None
+PR_DESL_W_WNM,BF,Burkina Faso,BF2010DHS,2010,DHS,Higher,3,1,18.8,76.0,1,None,None,None
+PR_DESL_W_WNM,BF,Burkina Faso,BF2021DHS,2021,DHS,No education,0,0,21.3,9095.0,1,None,None,None
+PR_DESL_W_WNM,BF,Burkina Faso,BF2021DHS,2021,DHS,Primary,1,1,16.9,1681.0,1,None,None,None
+PR_DESL_W_WNM,BF,Burkina Faso,BF2021DHS,2021,DHS,Secondary,2,1,9.9,1930.0,1,None,None,None
+PR_DESL_W_WNM,BF,Burkina Faso,BF2021DHS,2021,DHS,Higher,3,1,15.4,162.0,1,None,None,None
+PR_DESL_W_WNM,BJ,Benin,BJ2006DHS,2006,DHS,No education,0,0,26.7,10076.0,1,None,None,None
+PR_DESL_W_WNM,BJ,Benin,BJ2006DHS,2006,DHS,Primary,1,1,27.2,2312.0,1,None,None,None
+PR_DESL_W_WNM,BJ,Benin,BJ2006DHS,2006,DHS,Secondary,2,1,31.9,1022.0,1,None,None,None
+PR_DESL_W_WNM,BJ,Benin,BJ2006DHS,2006,DHS,Higher,3,1,31.3,76.0,1,None,None,None
+PR_DESL_W_WNM,BJ,Benin,BJ2012DHS,2012,DHS,No education,0,0,26.9,8854.0,1,None,None,None
+PR_DESL_W_WNM,BJ,Benin,BJ2012DHS,2012,DHS,Primary,1,1,30.6,1834.0,1,None,None,None
+PR_DESL_W_WNM,BJ,Benin,BJ2012DHS,2012,DHS,Secondary,2,1,26.4,1096.0,1,None,None,None
+PR_DESL_W_WNM,BJ,Benin,BJ2012DHS,2012,DHS,Higher,3,1,34.6,96.0,1,None,None,None
+PR_DESL_W_WNM,BJ,Benin,BJ2017DHS,2017,DHS,No education,0,0,26.0,7399.0,1,None,None,None
+PR_DESL_W_WNM,BJ,Benin,BJ2017DHS,2017,DHS,Primary,1,1,26.0,1962.0,1,None,None,None
+PR_DESL_W_WNM,BJ,Benin,BJ2017DHS,2017,DHS,Secondary,2,1,16.1,1651.0,1,None,None,None
+PR_DESL_W_WNM,BJ,Benin,BJ2017DHS,2017,DHS,Higher,3,1,21.3,158.0,1,None,None,None
+PR_DESL_W_WNM,BO,Bolivia,BO1989DHS,1989,DHS,No education,0,0,86.6,972.0,1,None,None,None
+PR_DESL_W_WNM,BO,Bolivia,BO1989DHS,1989,DHS,Primary,1,1,79.6,2223.0,1,None,None,None
+PR_DESL_W_WNM,BO,Bolivia,BO1989DHS,1989,DHS,Secondary,2,1,65.5,1311.0,1,None,None,None
+PR_DESL_W_WNM,BO,Bolivia,BO1989DHS,1989,DHS,Higher,3,1,62.0,389.0,1,None,None,None
+PR_DESL_W_WNM,BO,Bolivia,BO1994DHS,1994,DHS,No education,0,0,81.7,893.0,1,None,None,None
+PR_DESL_W_WNM,BO,Bolivia,BO1994DHS,1994,DHS,Primary,1,1,76.5,2287.0,1,None,None,None
+PR_DESL_W_WNM,BO,Bolivia,BO1994DHS,1994,DHS,Secondary,2,1,65.1,1749.0,1,None,None,None
+PR_DESL_W_WNM,BO,Bolivia,BO1994DHS,1994,DHS,Higher,3,1,58.7,398.0,1,None,None,None
+PR_DESL_W_WNM,BO,Bolivia,BO1998DHS,1998,DHS,No education,0,0,82.5,886.0,1,None,None,None
+PR_DESL_W_WNM,BO,Bolivia,BO1998DHS,1998,DHS,Primary,1,1,78.6,2958.0,1,None,None,None
+PR_DESL_W_WNM,BO,Bolivia,BO1998DHS,1998,DHS,Secondary,2,1,63.6,2089.0,1,None,None,None
+PR_DESL_W_WNM,BO,Bolivia,BO1998DHS,1998,DHS,Higher,3,1,56.5,813.0,1,None,None,None
+PR_DESL_W_WNM,BO,Bolivia,BO2003DHS,2003,DHS,No education,0,0,86.2,933.0,1,None,None,None
+PR_DESL_W_WNM,BO,Bolivia,BO2003DHS,2003,DHS,Primary,1,1,77.8,5883.0,1,None,None,None
+PR_DESL_W_WNM,BO,Bolivia,BO2003DHS,2003,DHS,Secondary,2,1,60.0,2677.0,1,None,None,None
+PR_DESL_W_WNM,BO,Bolivia,BO2003DHS,2003,DHS,Higher,3,1,50.5,1133.0,1,None,None,None
+PR_DESL_W_WNM,BO,Bolivia,BO2008DHS,2008,DHS,No education,0,0,85.6,634.0,1,None,None,None
+PR_DESL_W_WNM,BO,Bolivia,BO2008DHS,2008,DHS,Primary,1,1,79.0,5142.0,1,None,None,None
+PR_DESL_W_WNM,BO,Bolivia,BO2008DHS,2008,DHS,Secondary,2,1,58.9,2849.0,1,None,None,None
+PR_DESL_W_WNM,BO,Bolivia,BO2008DHS,2008,DHS,Higher,3,1,50.9,1563.0,1,None,None,None
+PR_DESL_W_WNM,BR,Brazil,BR1986DHS,1986,DHS,No education,0,0,77.5,376.0,1,None,None,None
+PR_DESL_W_WNM,BR,Brazil,BR1986DHS,1986,DHS,Primary,1,1,67.2,2422.0,1,None,None,None
+PR_DESL_W_WNM,BR,Brazil,BR1986DHS,1986,DHS,Secondary,2,1,56.7,468.0,1,None,None,None
+PR_DESL_W_WNM,BR,Brazil,BR1986DHS,1986,DHS,Higher,3,1,64.5,192.0,1,None,None,None
+PR_DESL_W_WNM,BR,Brazil,BR1996DHS,1996,DHS,No education,0,0,83.1,605.0,1,None,None,None
+PR_DESL_W_WNM,BR,Brazil,BR1996DHS,1996,DHS,Primary,1,1,77.2,2949.0,1,None,None,None
+PR_DESL_W_WNM,BR,Brazil,BR1996DHS,1996,DHS,Secondary,2,1,71.7,3504.0,1,None,None,None
+PR_DESL_W_WNM,BR,Brazil,BR1996DHS,1996,DHS,Higher,3,1,67.4,425.0,1,None,None,None
+PR_DESL_W_WNM,BT,Botswana,BT1988DHS,1988,DHS,No education,0,0,39.5,478.0,1,None,None,None
+PR_DESL_W_WNM,BT,Botswana,BT1988DHS,1988,DHS,Primary,1,1,37.3,853.0,1,None,None,None
+PR_DESL_W_WNM,BT,Botswana,BT1988DHS,1988,DHS,Secondary,2,1,32.7,331.0,1,None,None,None
+PR_DESL_W_WNM,BT,Botswana,BT1988DHS,1988,DHS,Higher,3,1,50.3,72.0,1,None,None,None
+PR_DESL_W_WNM,BU,Burundi,BU1987DHS,1987,DHS,No education,0,0,25.3,2016.0,1,None,None,None
+PR_DESL_W_WNM,BU,Burundi,BU1987DHS,1987,DHS,Primary,1,1,25.9,454.0,1,None,None,None
+PR_DESL_W_WNM,BU,Burundi,BU1987DHS,1987,DHS,Secondary,2,1,38.0,116.0,1,None,None,None
+PR_DESL_W_WNM,BU,Burundi,BU1987DHS,1987,DHS,Higher,3,1,24.3,25.0,1,None,None,None
+PR_DESL_W_WNM,BU,Burundi,BU2010DHS,2010,DHS,No education,0,0,37.8,2673.0,1,None,None,None
+PR_DESL_W_WNM,BU,Burundi,BU2010DHS,2010,DHS,Primary,1,1,26.5,2047.0,1,None,None,None
+PR_DESL_W_WNM,BU,Burundi,BU2010DHS,2010,DHS,Secondary,2,1,25.9,453.0,1,None,None,None
+PR_DESL_W_WNM,BU,Burundi,BU2010DHS,2010,DHS,Higher,3,1,30.3,88.0,1,None,None,None
+PR_DESL_W_WNM,BU,Burundi,BU2016DHS,2016,DHS,No education,0,0,52.3,4430.0,1,None,None,None
+PR_DESL_W_WNM,BU,Burundi,BU2016DHS,2016,DHS,Primary,1,1,42.2,3811.0,1,None,None,None
+PR_DESL_W_WNM,BU,Burundi,BU2016DHS,2016,DHS,Secondary,2,1,27.5,1199.0,1,None,None,None
+PR_DESL_W_WNM,BU,Burundi,BU2016DHS,2016,DHS,Higher,3,1,32.5,119.0,1,None,None,None
+PR_DESL_W_WNM,CD,Congo Democratic Republic,CD2007DHS,2007,DHS,No education,0,0,19.0,1613.0,1,None,None,None
+PR_DESL_W_WNM,CD,Congo Democratic Republic,CD2007DHS,2007,DHS,Primary,1,1,19.2,2707.0,1,None,None,None
+PR_DESL_W_WNM,CD,Congo Democratic Republic,CD2007DHS,2007,DHS,Secondary,2,1,20.9,2155.0,1,None,None,None
+PR_DESL_W_WNM,CD,Congo Democratic Republic,CD2007DHS,2007,DHS,Higher,3,1,18.0,111.0,1,None,None,None
+PR_DESL_W_WNM,CD,Congo Democratic Republic,CD2013DHS,2013,DHS,No education,0,0,23.0,2683.0,1,None,None,None
+PR_DESL_W_WNM,CD,Congo Democratic Republic,CD2013DHS,2013,DHS,Primary,1,1,23.4,5412.0,1,None,None,None
+PR_DESL_W_WNM,CD,Congo Democratic Republic,CD2013DHS,2013,DHS,Secondary,2,1,23.6,4153.0,1,None,None,None
+PR_DESL_W_WNM,CD,Congo Democratic Republic,CD2013DHS,2013,DHS,Higher,3,1,23.1,200.0,1,None,None,None
+PR_DESL_W_WNM,CD,Congo Democratic Republic,CD2023DHS,2023,DHS,No education,0,0,30.1,3709.0,1,None,None,None
+PR_DESL_W_WNM,CD,Congo Democratic Republic,CD2023DHS,2023,DHS,Primary,1,1,28.8,5607.0,1,None,None,None
+PR_DESL_W_WNM,CD,Congo Democratic Republic,CD2023DHS,2023,DHS,Secondary,2,1,23.0,7207.0,1,None,None,None
+PR_DESL_W_WNM,CD,Congo Democratic Republic,CD2023DHS,2023,DHS,Higher,3,1,29.5,415.0,1,None,None,None
+PR_DESL_W_WNM,CG,Congo,CG2005DHS,2005,DHS,No education,0,0,23.9,335.0,1,None,None,None
+PR_DESL_W_WNM,CG,Congo,CG2005DHS,2005,DHS,Primary,1,1,19.0,1162.0,1,None,None,None
+PR_DESL_W_WNM,CG,Congo,CG2005DHS,2005,DHS,Secondary,2,1,18.7,2384.0,1,None,None,None
+PR_DESL_W_WNM,CG,Congo,CG2005DHS,2005,DHS,Higher,3,1,13.9,112.0,1,None,None,None
+PR_DESL_W_WNM,CG,Congo,CG2011DHS,2011,DHS,No education,0,0,25.3,663.0,1,None,None,None
+PR_DESL_W_WNM,CG,Congo,CG2011DHS,2011,DHS,Primary,1,1,17.2,2473.0,1,None,None,None
+PR_DESL_W_WNM,CG,Congo,CG2011DHS,2011,DHS,Secondary,2,1,17.8,3477.0,1,None,None,None
+PR_DESL_W_WNM,CG,Congo,CG2011DHS,2011,DHS,Higher,3,1,9.3,137.0,1,None,None,None
+PR_DESL_W_WNM,CI,Cote d'Ivoire,CI1994DHS,1994,DHS,No education,0,0,22.0,3684.0,1,None,None,None
+PR_DESL_W_WNM,CI,Cote d'Ivoire,CI1994DHS,1994,DHS,Primary,1,1,19.7,1077.0,1,None,None,None
+PR_DESL_W_WNM,CI,Cote d'Ivoire,CI1994DHS,1994,DHS,Secondary,2,1,23.9,456.0,1,None,None,None
+PR_DESL_W_WNM,CI,Cote d'Ivoire,CI1994DHS,1994,DHS,Higher,3,1,13.5,31.0,1,None,None,None
+PR_DESL_W_WNM,CI,Cote d'Ivoire,CI2012DHS,2012,DHS,No education,0,0,20.5,4425.0,1,None,None,None
+PR_DESL_W_WNM,CI,Cote d'Ivoire,CI2012DHS,2012,DHS,Primary,1,1,21.2,1389.0,1,None,None,None
+PR_DESL_W_WNM,CI,Cote d'Ivoire,CI2012DHS,2012,DHS,Secondary,2,1,19.9,562.0,1,None,None,None
+PR_DESL_W_WNM,CI,Cote d'Ivoire,CI2012DHS,2012,DHS,Higher,3,1,14.2,77.0,1,None,None,None
+PR_DESL_W_WNM,CI,Cote d'Ivoire,CI2021DHS,2021,DHS,No education,0,0,20.3,6535.0,1,None,None,None
+PR_DESL_W_WNM,CI,Cote d'Ivoire,CI2021DHS,2021,DHS,Primary,1,1,22.5,1709.0,1,None,None,None
+PR_DESL_W_WNM,CI,Cote d'Ivoire,CI2021DHS,2021,DHS,Secondary,2,1,16.2,1133.0,1,None,None,None
+PR_DESL_W_WNM,CI,Cote d'Ivoire,CI2021DHS,2021,DHS,Higher,3,1,9.8,247.0,1,None,None,None
+PR_DESL_W_WNM,CM,Cameroon,CM1991DHS,1991,DHS,No education,0,0,12.2,1115.0,1,None,None,None
+PR_DESL_W_WNM,CM,Cameroon,CM1991DHS,1991,DHS,Primary,1,1,15.6,930.0,1,None,None,None
+PR_DESL_W_WNM,CM,Cameroon,CM1991DHS,1991,DHS,Secondary,2,1,14.0,648.0,1,None,None,None
+PR_DESL_W_WNM,CM,Cameroon,CM1991DHS,1991,DHS,Higher,3,1,6.0,44.0,1,None,None,None
+PR_DESL_W_WNM,CM,Cameroon,CM1998DHS,1998,DHS,No education,0,0,15.7,1148.0,1,None,None,None
+PR_DESL_W_WNM,CM,Cameroon,CM1998DHS,1998,DHS,Primary,1,1,23.2,1322.0,1,None,None,None
+PR_DESL_W_WNM,CM,Cameroon,CM1998DHS,1998,DHS,Secondary,2,1,19.9,1003.0,1,None,None,None
+PR_DESL_W_WNM,CM,Cameroon,CM1998DHS,1998,DHS,Higher,3,1,13.8,57.0,1,None,None,None
+PR_DESL_W_WNM,CM,Cameroon,CM2004DHS,2004,DHS,No education,0,0,16.4,1839.0,1,None,None,None
+PR_DESL_W_WNM,CM,Cameroon,CM2004DHS,2004,DHS,Primary,1,1,24.9,3048.0,1,None,None,None
+PR_DESL_W_WNM,CM,Cameroon,CM2004DHS,2004,DHS,Secondary,2,1,21.4,2187.0,1,None,None,None
+PR_DESL_W_WNM,CM,Cameroon,CM2004DHS,2004,DHS,Higher,3,1,19.2,103.0,1,None,None,None
+PR_DESL_W_WNM,CM,Cameroon,CM2011DHS,2011,DHS,No education,0,0,24.1,2389.0,1,None,None,None
+PR_DESL_W_WNM,CM,Cameroon,CM2011DHS,2011,DHS,Primary,1,1,31.1,3880.0,1,None,None,None
+PR_DESL_W_WNM,CM,Cameroon,CM2011DHS,2011,DHS,Secondary,2,1,24.1,3178.0,1,None,None,None
+PR_DESL_W_WNM,CM,Cameroon,CM2011DHS,2011,DHS,Higher,3,1,24.2,358.0,1,None,None,None
+PR_DESL_W_WNM,CM,Cameroon,CM2018DHS,2018,DHS,No education,0,0,16.5,1871.0,1,None,None,None
+PR_DESL_W_WNM,CM,Cameroon,CM2018DHS,2018,DHS,Primary,1,1,28.5,2449.0,1,None,None,None
+PR_DESL_W_WNM,CM,Cameroon,CM2018DHS,2018,DHS,Secondary,2,1,27.7,2753.0,1,None,None,None
+PR_DESL_W_WNM,CM,Cameroon,CM2018DHS,2018,DHS,Higher,3,1,23.5,390.0,1,None,None,None
+PR_DESL_W_WNM,CO,Colombia,CO1986DHS,1986,DHS,No education,0,0,85.0,220.0,1,None,None,None
+PR_DESL_W_WNM,CO,Colombia,CO1986DHS,1986,DHS,Primary,1,1,73.5,1665.0,1,None,None,None
+PR_DESL_W_WNM,CO,Colombia,CO1986DHS,1986,DHS,Secondary,2,1,61.0,876.0,1,None,None,None
+PR_DESL_W_WNM,CO,Colombia,CO1986DHS,1986,DHS,Higher,3,1,48.7,87.0,1,None,None,None
+PR_DESL_W_WNM,CO,Colombia,CO1990DHS,1990,DHS,No education,0,0,81.4,189.0,1,None,None,None
+PR_DESL_W_WNM,CO,Colombia,CO1990DHS,1990,DHS,Primary,1,1,69.8,1965.0,1,None,None,None
+PR_DESL_W_WNM,CO,Colombia,CO1990DHS,1990,DHS,Secondary,2,1,56.4,1998.0,1,None,None,None
+PR_DESL_W_WNM,CO,Colombia,CO1990DHS,1990,DHS,Higher,3,1,53.6,389.0,1,None,None,None
+PR_DESL_W_WNM,CO,Colombia,CO1995DHS,1995,DHS,No education,0,0,81.4,331.0,1,None,None,None
+PR_DESL_W_WNM,CO,Colombia,CO1995DHS,1995,DHS,Primary,1,1,75.6,2704.0,1,None,None,None
+PR_DESL_W_WNM,CO,Colombia,CO1995DHS,1995,DHS,Secondary,2,1,60.0,2601.0,1,None,None,None
+PR_DESL_W_WNM,CO,Colombia,CO1995DHS,1995,DHS,Higher,3,1,53.7,495.0,1,None,None,None
+PR_DESL_W_WNM,CO,Colombia,CO2000DHS,2000,DHS,No education,0,0,88.1,280.0,1,None,None,None
+PR_DESL_W_WNM,CO,Colombia,CO2000DHS,2000,DHS,Primary,1,1,75.2,2467.0,1,None,None,None
+PR_DESL_W_WNM,CO,Colombia,CO2000DHS,2000,DHS,Secondary,2,1,65.7,2683.0,1,None,None,None
+PR_DESL_W_WNM,CO,Colombia,CO2000DHS,2000,DHS,Higher,3,1,57.2,596.0,1,None,None,None
+PR_DESL_W_WNM,CO,Colombia,CO2005DHS,2005,DHS,No education,0,0,82.5,816.0,1,None,None,None
+PR_DESL_W_WNM,CO,Colombia,CO2005DHS,2005,DHS,Primary,1,1,79.8,7117.0,1,None,None,None
+PR_DESL_W_WNM,CO,Colombia,CO2005DHS,2005,DHS,Secondary,2,1,68.2,9244.0,1,None,None,None
+PR_DESL_W_WNM,CO,Colombia,CO2005DHS,2005,DHS,Higher,3,1,57.8,2910.0,1,None,None,None
+PR_DESL_W_WNM,CO,Colombia,CO2010DHS,2010,DHS,No education,0,0,84.2,864.0,1,None,None,None
+PR_DESL_W_WNM,CO,Colombia,CO2010DHS,2010,DHS,Primary,1,1,81.0,9038.0,1,None,None,None
+PR_DESL_W_WNM,CO,Colombia,CO2010DHS,2010,DHS,Secondary,2,1,68.1,12630.0,1,None,None,None
+PR_DESL_W_WNM,CO,Colombia,CO2010DHS,2010,DHS,Higher,3,1,56.9,4814.0,1,None,None,None
+PR_DESL_W_WNM,CO,Colombia,CO2015DHS,2015,DHS,No education,0,0,75.4,546.0,1,None,None,None
+PR_DESL_W_WNM,CO,Colombia,CO2015DHS,2015,DHS,Primary,1,1,78.9,5077.0,1,None,None,None
+PR_DESL_W_WNM,CO,Colombia,CO2015DHS,2015,DHS,Secondary,2,1,66.2,8973.0,1,None,None,None
+PR_DESL_W_WNM,CO,Colombia,CO2015DHS,2015,DHS,Higher,3,1,56.6,5161.0,1,None,None,None
+PR_DESL_W_WNM,DR,Dominican Republic,DR1986DHS,1986,DHS,No education,0,0,70.0,354.0,1,None,None,None
+PR_DESL_W_WNM,DR,Dominican Republic,DR1986DHS,1986,DHS,Primary,1,1,68.4,3061.0,1,None,None,None
+PR_DESL_W_WNM,DR,Dominican Republic,DR1986DHS,1986,DHS,Secondary,2,1,49.3,648.0,1,None,None,None
+PR_DESL_W_WNM,DR,Dominican Republic,DR1986DHS,1986,DHS,Higher,3,1,44.5,270.0,1,None,None,None
+PR_DESL_W_WNM,DR,Dominican Republic,DR1991DHS,1991,DHS,No education,0,0,78.3,378.0,1,None,None,None
+PR_DESL_W_WNM,DR,Dominican Republic,DR1991DHS,1991,DHS,Primary,1,1,71.3,2551.0,1,None,None,None
+PR_DESL_W_WNM,DR,Dominican Republic,DR1991DHS,1991,DHS,Secondary,2,1,49.8,922.0,1,None,None,None
+PR_DESL_W_WNM,DR,Dominican Republic,DR1991DHS,1991,DHS,Higher,3,1,52.4,369.0,1,None,None,None
+PR_DESL_W_WNM,DR,Dominican Republic,DR1996DHS,1996,DHS,No education,0,0,73.8,656.0,1,None,None,None
+PR_DESL_W_WNM,DR,Dominican Republic,DR1996DHS,1996,DHS,Primary,1,1,67.1,2870.0,1,None,None,None
+PR_DESL_W_WNM,DR,Dominican Republic,DR1996DHS,1996,DHS,Secondary,2,1,50.7,1141.0,1,None,None,None
+PR_DESL_W_WNM,DR,Dominican Republic,DR1996DHS,1996,DHS,Higher,3,1,57.9,502.0,1,None,None,None
+PR_DESL_W_WNM,DR,Dominican Republic,DR1999DHS,1999,DHS,No education,0,0,73.8,34.0,1,None,None,None
+PR_DESL_W_WNM,DR,Dominican Republic,DR1999DHS,1999,DHS,Primary,1,1,64.0,439.0,1,None,None,None
+PR_DESL_W_WNM,DR,Dominican Republic,DR1999DHS,1999,DHS,Secondary,2,1,58.6,191.0,1,None,None,None
+PR_DESL_W_WNM,DR,Dominican Republic,DR1999DHS,1999,DHS,Higher,3,1,48.0,89.0,1,None,None,None
+PR_DESL_W_WNM,DR,Dominican Republic,DR2002DHS,2002,DHS,No education,0,0,80.0,955.0,1,None,None,None
+PR_DESL_W_WNM,DR,Dominican Republic,DR2002DHS,2002,DHS,Primary,1,1,72.4,8055.0,1,None,None,None
+PR_DESL_W_WNM,DR,Dominican Republic,DR2002DHS,2002,DHS,Secondary,2,1,58.4,3707.0,1,None,None,None
+PR_DESL_W_WNM,DR,Dominican Republic,DR2002DHS,2002,DHS,Higher,3,1,54.6,1787.0,1,None,None,None
+PR_DESL_W_WNM,DR,Dominican Republic,DR2007DHS,2007,DHS,No education,0,0,81.1,1022.0,1,None,None,None
+PR_DESL_W_WNM,DR,Dominican Republic,DR2007DHS,2007,DHS,Primary,1,1,75.2,7508.0,1,None,None,None
+PR_DESL_W_WNM,DR,Dominican Republic,DR2007DHS,2007,DHS,Secondary,2,1,57.5,4895.0,1,None,None,None
+PR_DESL_W_WNM,DR,Dominican Republic,DR2007DHS,2007,DHS,Higher,3,1,53.8,2447.0,1,None,None,None
+PR_DESL_W_WNM,DR,Dominican Republic,DR2013DHS,2013,DHS,No education,0,0,76.0,208.0,1,None,None,None
+PR_DESL_W_WNM,DR,Dominican Republic,DR2013DHS,2013,DHS,Primary,1,1,75.1,2025.0,1,None,None,None
+PR_DESL_W_WNM,DR,Dominican Republic,DR2013DHS,2013,DHS,Secondary,2,1,53.7,1784.0,1,None,None,None
+PR_DESL_W_WNM,DR,Dominican Republic,DR2013DHS,2013,DHS,Higher,3,1,51.3,1202.0,1,None,None,None
+PR_DESL_W_WNM,EC,Ecuador,EC1987DHS,1987,DHS,No education,0,0,67.1,298.0,1,None,None,None
+PR_DESL_W_WNM,EC,Ecuador,EC1987DHS,1987,DHS,Primary,1,1,71.0,1611.0,1,None,None,None
+PR_DESL_W_WNM,EC,Ecuador,EC1987DHS,1987,DHS,Secondary,2,1,56.4,823.0,1,None,None,None
+PR_DESL_W_WNM,EC,Ecuador,EC1987DHS,1987,DHS,Higher,3,1,52.0,225.0,1,None,None,None
+PR_DESL_W_WNM,EG,Egypt,EG1988DHS,1988,DHS,No education,0,0,66.9,4010.0,1,None,None,None
+PR_DESL_W_WNM,EG,Egypt,EG1988DHS,1988,DHS,Primary,1,1,71.9,2667.0,1,None,None,None
+PR_DESL_W_WNM,EG,Egypt,EG1988DHS,1988,DHS,Secondary,2,1,56.0,1116.0,1,None,None,None
+PR_DESL_W_WNM,EG,Egypt,EG1988DHS,1988,DHS,Higher,3,1,57.6,426.0,1,None,None,None
+PR_DESL_W_WNM,EG,Egypt,EG1992DHS,1992,DHS,No education,0,0,69.2,4228.0,1,None,None,None
+PR_DESL_W_WNM,EG,Egypt,EG1992DHS,1992,DHS,Primary,1,1,75.6,2359.0,1,None,None,None
+PR_DESL_W_WNM,EG,Egypt,EG1992DHS,1992,DHS,Secondary,2,1,54.3,2114.0,1,None,None,None
+PR_DESL_W_WNM,EG,Egypt,EG1992DHS,1992,DHS,Higher,3,1,52.6,447.0,1,None,None,None
+PR_DESL_W_WNM,EG,Egypt,EG1995DHS,1995,DHS,No education,0,0,68.4,6147.0,1,None,None,None
+PR_DESL_W_WNM,EG,Egypt,EG1995DHS,1995,DHS,Primary,1,1,73.9,3255.0,1,None,None,None
+PR_DESL_W_WNM,EG,Egypt,EG1995DHS,1995,DHS,Secondary,2,1,53.5,3524.0,1,None,None,None
+PR_DESL_W_WNM,EG,Egypt,EG1995DHS,1995,DHS,Higher,3,1,61.2,792.0,1,None,None,None
+PR_DESL_W_WNM,EG,Egypt,EG2000DHS,2000,DHS,No education,0,0,72.0,5958.0,1,None,None,None
+PR_DESL_W_WNM,EG,Egypt,EG2000DHS,2000,DHS,Primary,1,1,71.3,2551.0,1,None,None,None
+PR_DESL_W_WNM,EG,Egypt,EG2000DHS,2000,DHS,Secondary,2,1,55.0,4682.0,1,None,None,None
+PR_DESL_W_WNM,EG,Egypt,EG2000DHS,2000,DHS,Higher,3,1,58.4,1202.0,1,None,None,None
+PR_DESL_W_WNM,EG,Egypt,EG2003DHS,2003,DHS,No education,0,0,71.7,3288.0,1,None,None,None
+PR_DESL_W_WNM,EG,Egypt,EG2003DHS,2003,DHS,Primary,1,1,70.5,1394.0,1,None,None,None
+PR_DESL_W_WNM,EG,Egypt,EG2003DHS,2003,DHS,Secondary,2,1,55.6,3022.0,1,None,None,None
+PR_DESL_W_WNM,EG,Egypt,EG2003DHS,2003,DHS,Higher,3,1,54.4,726.0,1,None,None,None
+PR_DESL_W_WNM,EG,Egypt,EG2005DHS,2005,DHS,No education,0,0,71.0,6282.0,1,None,None,None
+PR_DESL_W_WNM,EG,Egypt,EG2005DHS,2005,DHS,Primary,1,1,74.1,2809.0,1,None,None,None
+PR_DESL_W_WNM,EG,Egypt,EG2005DHS,2005,DHS,Secondary,2,1,58.1,7334.0,1,None,None,None
+PR_DESL_W_WNM,EG,Egypt,EG2005DHS,2005,DHS,Higher,3,1,54.5,1709.0,1,None,None,None
+PR_DESL_W_WNM,EG,Egypt,EG2008DHS,2008,DHS,No education,0,0,72.0,4981.0,1,None,None,None
+PR_DESL_W_WNM,EG,Egypt,EG2008DHS,2008,DHS,Primary,1,1,72.2,1851.0,1,None,None,None
+PR_DESL_W_WNM,EG,Egypt,EG2008DHS,2008,DHS,Secondary,2,1,57.0,6844.0,1,None,None,None
+PR_DESL_W_WNM,EG,Egypt,EG2008DHS,2008,DHS,Higher,3,1,52.5,1730.0,1,None,None,None
+PR_DESL_W_WNM,EG,Egypt,EG2014DHS,2014,DHS,No education,0,0,72.0,4435.0,1,None,None,None
+PR_DESL_W_WNM,EG,Egypt,EG2014DHS,2014,DHS,Primary,1,1,67.2,1983.0,1,None,None,None
+PR_DESL_W_WNM,EG,Egypt,EG2014DHS,2014,DHS,Secondary,2,1,56.5,10963.0,1,None,None,None
+PR_DESL_W_WNM,EG,Egypt,EG2014DHS,2014,DHS,Higher,3,1,50.2,3049.0,1,None,None,None
+PR_DESL_W_WNM,ER,Eritrea,ER2002DHS,2002,DHS,No education,0,0,18.4,4126.0,1,None,None,None
+PR_DESL_W_WNM,ER,Eritrea,ER2002DHS,2002,DHS,Primary,1,1,15.3,1301.0,1,None,None,None
+PR_DESL_W_WNM,ER,Eritrea,ER2002DHS,2002,DHS,Secondary,2,1,16.5,496.0,1,None,None,None
+PR_DESL_W_WNM,ER,Eritrea,ER2002DHS,2002,DHS,Higher,3,1,31.5,47.0,1,None,None,None
+PR_DESL_W_WNM,ES,El Salvador,ES1985DHS,1985,DHS,No education,0,0,65.5,734.0,1,None,None,None
+PR_DESL_W_WNM,ES,El Salvador,ES1985DHS,1985,DHS,Primary,1,1,62.5,1933.0,1,None,None,None
+PR_DESL_W_WNM,ES,El Salvador,ES1985DHS,1985,DHS,Secondary,2,1,58.2,366.0,1,None,None,None
+PR_DESL_W_WNM,ES,El Salvador,ES1985DHS,1985,DHS,Higher,3,1,60.3,77.0,1,None,None,None
+PR_DESL_W_WNM,ET,Ethiopia,ET2000DHS,2000,DHS,No education,0,0,32.0,7391.0,1,None,None,None
+PR_DESL_W_WNM,ET,Ethiopia,ET2000DHS,2000,DHS,Primary,1,1,29.8,1189.0,1,None,None,None
+PR_DESL_W_WNM,ET,Ethiopia,ET2000DHS,2000,DHS,Secondary,2,1,37.7,714.0,1,None,None,None
+PR_DESL_W_WNM,ET,Ethiopia,ET2000DHS,2000,DHS,Higher,3,1,33.4,86.0,1,None,None,None
+PR_DESL_W_WNM,ET,Ethiopia,ET2005DHS,2005,DHS,No education,0,0,43.0,6385.0,1,None,None,None
+PR_DESL_W_WNM,ET,Ethiopia,ET2005DHS,2005,DHS,Primary,1,1,39.5,1322.0,1,None,None,None
+PR_DESL_W_WNM,ET,Ethiopia,ET2005DHS,2005,DHS,Secondary,2,1,37.0,795.0,1,None,None,None
+PR_DESL_W_WNM,ET,Ethiopia,ET2005DHS,2005,DHS,Higher,3,1,36.2,142.0,1,None,None,None
+PR_DESL_W_WNM,ET,Ethiopia,ET2011DHS,2011,DHS,No education,0,0,40.6,6569.0,1,None,None,None
+PR_DESL_W_WNM,ET,Ethiopia,ET2011DHS,2011,DHS,Primary,1,1,32.2,2739.0,1,None,None,None
+PR_DESL_W_WNM,ET,Ethiopia,ET2011DHS,2011,DHS,Secondary,2,1,21.8,528.0,1,None,None,None
+PR_DESL_W_WNM,ET,Ethiopia,ET2011DHS,2011,DHS,Higher,3,1,20.5,368.0,1,None,None,None
+PR_DESL_W_WNM,ET,Ethiopia,ET2016DHS,2016,DHS,No education,0,0,43.0,5693.0,1,None,None,None
+PR_DESL_W_WNM,ET,Ethiopia,ET2016DHS,2016,DHS,Primary,1,1,30.5,2700.0,1,None,None,None
+PR_DESL_W_WNM,ET,Ethiopia,ET2016DHS,2016,DHS,Secondary,2,1,18.0,880.0,1,None,None,None
+PR_DESL_W_WNM,ET,Ethiopia,ET2016DHS,2016,DHS,Higher,3,1,15.4,551.0,1,None,None,None
+PR_DESL_W_WNM,ET,Ethiopia,ET2024DHS,2024,DHS,No education,0,0,26.3,5626.0,1,None,None,None
+PR_DESL_W_WNM,ET,Ethiopia,ET2024DHS,2024,DHS,Primary,1,1,16.5,4365.0,1,None,None,None
+PR_DESL_W_WNM,ET,Ethiopia,ET2024DHS,2024,DHS,Secondary,2,1,10.2,1745.0,1,None,None,None
+PR_DESL_W_WNM,ET,Ethiopia,ET2024DHS,2024,DHS,Higher,3,1,11.2,1271.0,1,None,None,None
+PR_DESL_W_WNM,GA,Gabon,GA2000DHS,2000,DHS,No education,0,0,21.2,269.0,1,None,None,None
+PR_DESL_W_WNM,GA,Gabon,GA2000DHS,2000,DHS,Primary,1,1,26.1,1609.0,1,None,None,None
+PR_DESL_W_WNM,GA,Gabon,GA2000DHS,2000,DHS,Secondary,2,1,21.2,1498.0,1,None,None,None
+PR_DESL_W_WNM,GA,Gabon,GA2000DHS,2000,DHS,Higher,3,1,21.6,93.0,1,None,None,None
+PR_DESL_W_WNM,GA,Gabon,GA2012DHS,2012,DHS,No education,0,0,24.9,319.0,1,None,None,None
+PR_DESL_W_WNM,GA,Gabon,GA2012DHS,2012,DHS,Primary,1,1,29.5,1841.0,1,None,None,None
+PR_DESL_W_WNM,GA,Gabon,GA2012DHS,2012,DHS,Secondary,2,1,22.0,2400.0,1,None,None,None
+PR_DESL_W_WNM,GA,Gabon,GA2012DHS,2012,DHS,Higher,3,1,13.2,189.0,1,None,None,None
+PR_DESL_W_WNM,GA,Gabon,GA2019DHS,2019,DHS,No education,0,0,26.0,396.0,1,None,None,None
+PR_DESL_W_WNM,GA,Gabon,GA2019DHS,2019,DHS,Primary,1,1,32.6,1195.0,1,None,None,None
+PR_DESL_W_WNM,GA,Gabon,GA2019DHS,2019,DHS,Secondary,2,1,25.9,2766.0,1,None,None,None
+PR_DESL_W_WNM,GA,Gabon,GA2019DHS,2019,DHS,Higher,3,1,17.1,388.0,1,None,None,None
+PR_DESL_W_WNM,GH,Ghana,GH1993DHS,1993,DHS,No education,0,0,31.6,1356.0,1,None,None,None
+PR_DESL_W_WNM,GH,Ghana,GH1993DHS,1993,DHS,Primary,1,1,35.1,1608.0,1,None,None,None
+PR_DESL_W_WNM,GH,Ghana,GH1993DHS,1993,DHS,Secondary,2,1,34.2,196.0,1,None,None,None
+PR_DESL_W_WNM,GH,Ghana,GH1993DHS,1993,DHS,Higher,3,1,63.6,44.0,1,None,None,None
+PR_DESL_W_WNM,GH,Ghana,GH1998DHS,1998,DHS,No education,0,0,33.0,1406.0,1,None,None,None
+PR_DESL_W_WNM,GH,Ghana,GH1998DHS,1998,DHS,Primary,1,1,35.7,536.0,1,None,None,None
+PR_DESL_W_WNM,GH,Ghana,GH1998DHS,1998,DHS,Secondary,2,1,35.9,1223.0,1,None,None,None
+PR_DESL_W_WNM,GH,Ghana,GH1998DHS,1998,DHS,Higher,3,1,44.5,64.0,1,None,None,None
+PR_DESL_W_WNM,GH,Ghana,GH2003DHS,2003,DHS,No education,0,0,31.5,1644.0,1,None,None,None
+PR_DESL_W_WNM,GH,Ghana,GH2003DHS,2003,DHS,Primary,1,1,40.5,701.0,1,None,None,None
+PR_DESL_W_WNM,GH,Ghana,GH2003DHS,2003,DHS,Secondary,2,1,37.5,1282.0,1,None,None,None
+PR_DESL_W_WNM,GH,Ghana,GH2003DHS,2003,DHS,Higher,3,1,46.4,67.0,1,None,None,None
+PR_DESL_W_WNM,GH,Ghana,GH2008DHS,2008,DHS,No education,0,0,36.4,1041.0,1,None,None,None
+PR_DESL_W_WNM,GH,Ghana,GH2008DHS,2008,DHS,Primary,1,1,36.8,638.0,1,None,None,None
+PR_DESL_W_WNM,GH,Ghana,GH2008DHS,2008,DHS,Secondary,2,1,37.0,1171.0,1,None,None,None
+PR_DESL_W_WNM,GH,Ghana,GH2008DHS,2008,DHS,Higher,3,1,29.0,100.0,1,None,None,None
+PR_DESL_W_WNM,GH,Ghana,GH2014DHS,2014,DHS,No education,0,0,36.4,1922.0,1,None,None,None
+PR_DESL_W_WNM,GH,Ghana,GH2014DHS,2014,DHS,Primary,1,1,42.0,1037.0,1,None,None,None
+PR_DESL_W_WNM,GH,Ghana,GH2014DHS,2014,DHS,Secondary,2,1,35.9,2250.0,1,None,None,None
+PR_DESL_W_WNM,GH,Ghana,GH2014DHS,2014,DHS,Higher,3,1,34.5,247.0,1,None,None,None
+PR_DESL_W_WNM,GH,Ghana,GH2022DHS,2022,DHS,No education,0,0,33.4,2856.0,1,None,None,None
+PR_DESL_W_WNM,GH,Ghana,GH2022DHS,2022,DHS,Primary,1,1,36.3,1401.0,1,None,None,None
+PR_DESL_W_WNM,GH,Ghana,GH2022DHS,2022,DHS,Secondary,2,1,31.9,3840.0,1,None,None,None
+PR_DESL_W_WNM,GH,Ghana,GH2022DHS,2022,DHS,Higher,3,1,31.3,714.0,1,None,None,None
+PR_DESL_W_WNM,GM,Gambia,GM2013DHS,2013,DHS,No education,0,0,19.2,4437.0,1,None,None,None
+PR_DESL_W_WNM,GM,Gambia,GM2013DHS,2013,DHS,Primary,1,1,10.8,931.0,1,None,None,None
+PR_DESL_W_WNM,GM,Gambia,GM2013DHS,2013,DHS,Secondary,2,1,10.4,1341.0,1,None,None,None
+PR_DESL_W_WNM,GM,Gambia,GM2013DHS,2013,DHS,Higher,3,1,11.1,196.0,1,None,None,None
+PR_DESL_W_WNM,GM,Gambia,GM2019DHS,2019,DHS,No education,0,0,23.2,4366.0,1,None,None,None
+PR_DESL_W_WNM,GM,Gambia,GM2019DHS,2019,DHS,Primary,1,1,15.3,1420.0,1,None,None,None
+PR_DESL_W_WNM,GM,Gambia,GM2019DHS,2019,DHS,Secondary,2,1,11.0,2008.0,1,None,None,None
+PR_DESL_W_WNM,GM,Gambia,GM2019DHS,2019,DHS,Higher,3,1,10.5,289.0,1,None,None,None
+PR_DESL_W_WNM,GN,Guinea,GN1999DHS,1999,DHS,No education,0,0,20.1,4720.0,1,None,None,None
+PR_DESL_W_WNM,GN,Guinea,GN1999DHS,1999,DHS,Primary,1,1,22.2,422.0,1,None,None,None
+PR_DESL_W_WNM,GN,Guinea,GN1999DHS,1999,DHS,Secondary,2,1,28.7,285.0,1,None,None,None
+PR_DESL_W_WNM,GN,Guinea,GN1999DHS,1999,DHS,Higher,3,1,33.2,104.0,1,None,None,None
+PR_DESL_W_WNM,GN,Guinea,GN2005DHS,2005,DHS,No education,0,0,22.0,5462.0,1,None,None,None
+PR_DESL_W_WNM,GN,Guinea,GN2005DHS,2005,DHS,Primary,1,1,23.3,474.0,1,None,None,None
+PR_DESL_W_WNM,GN,Guinea,GN2005DHS,2005,DHS,Secondary,2,1,19.0,357.0,1,None,None,None
+PR_DESL_W_WNM,GN,Guinea,GN2005DHS,2005,DHS,Higher,3,1,27.8,34.0,1,None,None,None
+PR_DESL_W_WNM,GN,Guinea,GN2012DHS,2012,DHS,No education,0,0,21.7,5371.0,1,None,None,None
+PR_DESL_W_WNM,GN,Guinea,GN2012DHS,2012,DHS,Primary,1,1,14.0,750.0,1,None,None,None
+PR_DESL_W_WNM,GN,Guinea,GN2012DHS,2012,DHS,Secondary,2,1,12.6,541.0,1,None,None,None
+PR_DESL_W_WNM,GN,Guinea,GN2012DHS,2012,DHS,Higher,3,1,3.4,117.0,1,None,None,None
+PR_DESL_W_WNM,GN,Guinea,GN2018DHS,2018,DHS,No education,0,0,19.4,6184.0,1,None,None,None
+PR_DESL_W_WNM,GN,Guinea,GN2018DHS,2018,DHS,Primary,1,1,11.2,753.0,1,None,None,None
+PR_DESL_W_WNM,GN,Guinea,GN2018DHS,2018,DHS,Secondary,2,1,11.3,703.0,1,None,None,None
+PR_DESL_W_WNM,GN,Guinea,GN2018DHS,2018,DHS,Higher,3,1,8.1,172.0,1,None,None,None
+PR_DESL_W_WNM,GN,Guinea,GN2024DHS,2024,DHS,No education,0,0,16.9,5332.0,1,None,None,None
+PR_DESL_W_WNM,GN,Guinea,GN2024DHS,2024,DHS,Primary,1,1,10.0,897.0,1,None,None,None
+PR_DESL_W_WNM,GN,Guinea,GN2024DHS,2024,DHS,Secondary,2,1,10.8,840.0,1,None,None,None
+PR_DESL_W_WNM,GN,Guinea,GN2024DHS,2024,DHS,Higher,3,1,10.0,250.0,1,None,None,None
+PR_DESL_W_WNM,GU,Guatemala,GU1987DHS,1987,DHS,No education,0,0,42.1,1565.0,1,None,None,None
+PR_DESL_W_WNM,GU,Guatemala,GU1987DHS,1987,DHS,Primary,1,1,52.9,1507.0,1,None,None,None
+PR_DESL_W_WNM,GU,Guatemala,GU1987DHS,1987,DHS,Secondary,2,1,53.3,274.0,1,None,None,None
+PR_DESL_W_WNM,GU,Guatemala,GU1987DHS,1987,DHS,Higher,3,1,45.2,31.0,1,None,None,None
+PR_DESL_W_WNM,GU,Guatemala,GU1995DHS,1995,DHS,No education,0,0,51.3,3426.0,1,None,None,None
+PR_DESL_W_WNM,GU,Guatemala,GU1995DHS,1995,DHS,Primary,1,1,52.4,3814.0,1,None,None,None
+PR_DESL_W_WNM,GU,Guatemala,GU1995DHS,1995,DHS,Secondary,2,1,55.8,788.0,1,None,None,None
+PR_DESL_W_WNM,GU,Guatemala,GU1995DHS,1995,DHS,Higher,3,1,60.0,128.0,1,None,None,None
+PR_DESL_W_WNM,GU,Guatemala,GU1999DHS,1999,DHS,No education,0,0,60.9,1516.0,1,None,None,None
+PR_DESL_W_WNM,GU,Guatemala,GU1999DHS,1999,DHS,Primary,1,1,56.1,2012.0,1,None,None,None
+PR_DESL_W_WNM,GU,Guatemala,GU1999DHS,1999,DHS,Secondary,2,1,61.0,465.0,1,None,None,None
+PR_DESL_W_WNM,GU,Guatemala,GU1999DHS,1999,DHS,Higher,3,1,53.4,52.0,1,None,None,None
+PR_DESL_W_WNM,GU,Guatemala,GU2015DHS,2015,DHS,No education,0,0,62.5,2749.0,1,None,None,None
+PR_DESL_W_WNM,GU,Guatemala,GU2015DHS,2015,DHS,Primary,1,1,52.1,7815.0,1,None,None,None
+PR_DESL_W_WNM,GU,Guatemala,GU2015DHS,2015,DHS,Secondary,2,1,44.5,3686.0,1,None,None,None
+PR_DESL_W_WNM,GU,Guatemala,GU2015DHS,2015,DHS,Higher,3,1,49.0,746.0,1,None,None,None
+PR_DESL_W_WNM,GY,Guyana,GY2009DHS,2009,DHS,No education,0,0,75.6,74.0,1,None,None,None
+PR_DESL_W_WNM,GY,Guyana,GY2009DHS,2009,DHS,Primary,1,1,75.5,830.0,1,None,None,None
+PR_DESL_W_WNM,GY,Guyana,GY2009DHS,2009,DHS,Secondary,2,1,56.5,1942.0,1,None,None,None
+PR_DESL_W_WNM,GY,Guyana,GY2009DHS,2009,DHS,Higher,3,1,48.2,160.0,1,None,None,None
+PR_DESL_W_WNM,HN,Honduras,HN2005DHS,2005,DHS,No education,0,0,69.3,1116.0,1,None,None,None
+PR_DESL_W_WNM,HN,Honduras,HN2005DHS,2005,DHS,Primary,1,1,58.9,8006.0,1,None,None,None
+PR_DESL_W_WNM,HN,Honduras,HN2005DHS,2005,DHS,Secondary,2,1,53.4,2184.0,1,None,None,None
+PR_DESL_W_WNM,HN,Honduras,HN2005DHS,2005,DHS,Higher,3,1,55.0,403.0,1,None,None,None
+PR_DESL_W_WNM,HN,Honduras,HN2011DHS,2011,DHS,No education,0,0,70.4,783.0,1,None,None,None
+PR_DESL_W_WNM,HN,Honduras,HN2011DHS,2011,DHS,Primary,1,1,58.8,8388.0,1,None,None,None
+PR_DESL_W_WNM,HN,Honduras,HN2011DHS,2011,DHS,Secondary,2,1,45.7,3361.0,1,None,None,None
+PR_DESL_W_WNM,HN,Honduras,HN2011DHS,2011,DHS,Higher,3,1,52.5,646.0,1,None,None,None
+PR_DESL_W_WNM,HT,Haiti,HT1994DHS,1994,DHS,No education,0,0,58.5,1402.0,1,None,None,None
+PR_DESL_W_WNM,HT,Haiti,HT1994DHS,1994,DHS,Primary,1,1,51.0,1180.0,1,None,None,None
+PR_DESL_W_WNM,HT,Haiti,HT1994DHS,1994,DHS,Secondary,2,1,37.5,461.0,1,None,None,None
+PR_DESL_W_WNM,HT,Haiti,HT1994DHS,1994,DHS,Higher,3,1,33.7,33.0,1,None,None,None
+PR_DESL_W_WNM,HT,Haiti,HT2000DHS,2000,DHS,No education,0,0,64.4,2482.0,1,None,None,None
+PR_DESL_W_WNM,HT,Haiti,HT2000DHS,2000,DHS,Primary,1,1,58.0,2365.0,1,None,None,None
+PR_DESL_W_WNM,HT,Haiti,HT2000DHS,2000,DHS,Secondary,2,1,39.1,992.0,1,None,None,None
+PR_DESL_W_WNM,HT,Haiti,HT2000DHS,2000,DHS,Higher,3,1,32.8,63.0,1,None,None,None
+PR_DESL_W_WNM,HT,Haiti,HT2006DHS,2006,DHS,No education,0,0,68.7,2148.0,1,None,None,None
+PR_DESL_W_WNM,HT,Haiti,HT2006DHS,2006,DHS,Primary,1,1,53.5,2434.0,1,None,None,None
+PR_DESL_W_WNM,HT,Haiti,HT2006DHS,2006,DHS,Secondary,2,1,31.4,1637.0,1,None,None,None
+PR_DESL_W_WNM,HT,Haiti,HT2006DHS,2006,DHS,Higher,3,1,28.0,157.0,1,None,None,None
+PR_DESL_W_WNM,HT,Haiti,HT2012DHS,2012,DHS,No education,0,0,72.4,1869.0,1,None,None,None
+PR_DESL_W_WNM,HT,Haiti,HT2012DHS,2012,DHS,Primary,1,1,58.7,3234.0,1,None,None,None
+PR_DESL_W_WNM,HT,Haiti,HT2012DHS,2012,DHS,Secondary,2,1,40.5,2439.0,1,None,None,None
+PR_DESL_W_WNM,HT,Haiti,HT2012DHS,2012,DHS,Higher,3,1,31.0,307.0,1,None,None,None
+PR_DESL_W_WNM,HT,Haiti,HT2016DHS,2016,DHS,No education,0,0,76.4,1650.0,1,None,None,None
+PR_DESL_W_WNM,HT,Haiti,HT2016DHS,2016,DHS,Primary,1,1,64.7,2883.0,1,None,None,None
+PR_DESL_W_WNM,HT,Haiti,HT2016DHS,2016,DHS,Secondary,2,1,44.1,2721.0,1,None,None,None
+PR_DESL_W_WNM,HT,Haiti,HT2016DHS,2016,DHS,Higher,3,1,31.8,309.0,1,None,None,None
+PR_DESL_W_WNM,IA,India,IA1993DHS,1993,DHS,No education,0,0,54.1,47342.0,1,None,None,None
+PR_DESL_W_WNM,IA,India,IA1993DHS,1993,DHS,Primary,1,1,63.8,14390.0,1,None,None,None
+PR_DESL_W_WNM,IA,India,IA1993DHS,1993,DHS,Secondary,2,1,59.4,18532.0,1,None,None,None
+PR_DESL_W_WNM,IA,India,IA1993DHS,1993,DHS,Higher,3,1,60.1,3772.0,1,None,None,None
+PR_DESL_W_WNM,IA,India,IA1999DHS,1999,DHS,No education,0,0,62.3,41776.0,1,None,None,None
+PR_DESL_W_WNM,IA,India,IA1999DHS,1999,DHS,Primary,1,1,68.9,14335.0,1,None,None,None
+PR_DESL_W_WNM,IA,India,IA1999DHS,1999,DHS,Secondary,2,1,63.1,20618.0,1,None,None,None
+PR_DESL_W_WNM,IA,India,IA1999DHS,1999,DHS,Higher,3,1,62.4,8111.0,1,None,None,None
+PR_DESL_W_WNM,IA,India,IA2006DHS,2006,DHS,No education,0,0,72.6,34108.0,1,None,None,None
+PR_DESL_W_WNM,IA,India,IA2006DHS,2006,DHS,Primary,1,1,72.4,13551.0,1,None,None,None
+PR_DESL_W_WNM,IA,India,IA2006DHS,2006,DHS,Secondary,2,1,67.6,32474.0,1,None,None,None
+PR_DESL_W_WNM,IA,India,IA2006DHS,2006,DHS,Higher,3,1,64.1,7787.0,1,None,None,None
+PR_DESL_W_WNM,IA,India,IA2015DHS,2015,DHS,No education,0,0,76.4,172686.0,1,None,None,None
+PR_DESL_W_WNM,IA,India,IA2015DHS,2015,DHS,Primary,1,1,73.7,72881.0,1,None,None,None
+PR_DESL_W_WNM,IA,India,IA2015DHS,2015,DHS,Secondary,2,1,63.9,209380.0,1,None,None,None
+PR_DESL_W_WNM,IA,India,IA2015DHS,2015,DHS,Higher,3,1,51.8,44680.0,1,None,None,None
+PR_DESL_W_WNM,IA,India,IA2020DHS,2020,DHS,No education,0,0,81.2,146923.0,1,None,None,None
+PR_DESL_W_WNM,IA,India,IA2020DHS,2020,DHS,Primary,1,1,78.5,71907.0,1,None,None,None
+PR_DESL_W_WNM,IA,India,IA2020DHS,2020,DHS,Secondary,2,1,66.1,236574.0,1,None,None,None
+PR_DESL_W_WNM,IA,India,IA2020DHS,2020,DHS,Higher,3,1,52.6,57004.0,1,None,None,None
+PR_DESL_W_WNM,ID,Indonesia,ID1987DHS,1987,DHS,No education,0,0,64.6,2293.0,1,None,None,None
+PR_DESL_W_WNM,ID,Indonesia,ID1987DHS,1987,DHS,Primary,1,1,51.8,6277.0,1,None,None,None
+PR_DESL_W_WNM,ID,Indonesia,ID1987DHS,1987,DHS,Secondary,2,1,52.1,2105.0,1,None,None,None
+PR_DESL_W_WNM,ID,Indonesia,ID1987DHS,1987,DHS,Higher,3,1,49.5,244.0,1,None,None,None
+PR_DESL_W_WNM,ID,Indonesia,ID1991DHS,1991,DHS,No education,0,0,64.3,3963.0,1,None,None,None
+PR_DESL_W_WNM,ID,Indonesia,ID1991DHS,1991,DHS,Primary,1,1,52.4,12043.0,1,None,None,None
+PR_DESL_W_WNM,ID,Indonesia,ID1991DHS,1991,DHS,Secondary,2,1,48.3,4726.0,1,None,None,None
+PR_DESL_W_WNM,ID,Indonesia,ID1991DHS,1991,DHS,Higher,3,1,46.7,455.0,1,None,None,None
+PR_DESL_W_WNM,ID,Indonesia,ID1994DHS,1994,DHS,No education,0,0,59.6,4239.0,1,None,None,None
+PR_DESL_W_WNM,ID,Indonesia,ID1994DHS,1994,DHS,Primary,1,1,51.9,14204.0,1,None,None,None
+PR_DESL_W_WNM,ID,Indonesia,ID1994DHS,1994,DHS,Secondary,2,1,45.9,7009.0,1,None,None,None
+PR_DESL_W_WNM,ID,Indonesia,ID1994DHS,1994,DHS,Higher,3,1,44.8,768.0,1,None,None,None
+PR_DESL_W_WNM,ID,Indonesia,ID1997DHS,1997,DHS,No education,0,0,61.4,3466.0,1,None,None,None
+PR_DESL_W_WNM,ID,Indonesia,ID1997DHS,1997,DHS,Primary,1,1,51.0,14137.0,1,None,None,None
+PR_DESL_W_WNM,ID,Indonesia,ID1997DHS,1997,DHS,Secondary,2,1,41.8,8254.0,1,None,None,None
+PR_DESL_W_WNM,ID,Indonesia,ID1997DHS,1997,DHS,Higher,3,1,40.1,976.0,1,None,None,None
+PR_DESL_W_WNM,ID,Indonesia,ID2003DHS,2003,DHS,No education,0,0,73.9,1979.0,1,None,None,None
+PR_DESL_W_WNM,ID,Indonesia,ID2003DHS,2003,DHS,Primary,1,1,58.8,13904.0,1,None,None,None
+PR_DESL_W_WNM,ID,Indonesia,ID2003DHS,2003,DHS,Secondary,2,1,43.3,10266.0,1,None,None,None
+PR_DESL_W_WNM,ID,Indonesia,ID2003DHS,2003,DHS,Higher,3,1,48.7,1635.0,1,None,None,None
+PR_DESL_W_WNM,ID,Indonesia,ID2007DHS,2007,DHS,No education,0,0,72.0,1965.0,1,None,None,None
+PR_DESL_W_WNM,ID,Indonesia,ID2007DHS,2007,DHS,Primary,1,1,58.0,13340.0,1,None,None,None
+PR_DESL_W_WNM,ID,Indonesia,ID2007DHS,2007,DHS,Secondary,2,1,45.9,13287.0,1,None,None,None
+PR_DESL_W_WNM,ID,Indonesia,ID2007DHS,2007,DHS,Higher,3,1,48.7,2274.0,1,None,None,None
+PR_DESL_W_WNM,ID,Indonesia,ID2012DHS,2012,DHS,No education,0,0,63.7,1311.0,1,None,None,None
+PR_DESL_W_WNM,ID,Indonesia,ID2012DHS,2012,DHS,Primary,1,1,57.1,11862.0,1,None,None,None
+PR_DESL_W_WNM,ID,Indonesia,ID2012DHS,2012,DHS,Secondary,2,1,44.9,15802.0,1,None,None,None
+PR_DESL_W_WNM,ID,Indonesia,ID2012DHS,2012,DHS,Higher,3,1,42.3,3731.0,1,None,None,None
+PR_DESL_W_WNM,ID,Indonesia,ID2017DHS,2017,DHS,No education,0,0,62.4,717.0,1,None,None,None
+PR_DESL_W_WNM,ID,Indonesia,ID2017DHS,2017,DHS,Primary,1,1,63.2,10728.0,1,None,None,None
+PR_DESL_W_WNM,ID,Indonesia,ID2017DHS,2017,DHS,Secondary,2,1,49.3,17956.0,1,None,None,None
+PR_DESL_W_WNM,ID,Indonesia,ID2017DHS,2017,DHS,Higher,3,1,41.1,5066.0,1,None,None,None
+PR_DESL_W_WNM,JO,Jordan,JO1990DHS,1990,DHS,No education,0,0,65.9,1544.0,1,None,None,None
+PR_DESL_W_WNM,JO,Jordan,JO1990DHS,1990,DHS,Primary,1,1,62.5,1321.0,1,None,None,None
+PR_DESL_W_WNM,JO,Jordan,JO1990DHS,1990,DHS,Secondary,2,1,45.0,2659.0,1,None,None,None
+PR_DESL_W_WNM,JO,Jordan,JO1990DHS,1990,DHS,Higher,3,1,36.0,657.0,1,None,None,None
+PR_DESL_W_WNM,JO,Jordan,JO1997DHS,1997,DHS,No education,0,0,66.0,552.0,1,None,None,None
+PR_DESL_W_WNM,JO,Jordan,JO1997DHS,1997,DHS,Primary,1,1,64.3,820.0,1,None,None,None
+PR_DESL_W_WNM,JO,Jordan,JO1997DHS,1997,DHS,Secondary,2,1,48.8,2798.0,1,None,None,None
+PR_DESL_W_WNM,JO,Jordan,JO1997DHS,1997,DHS,Higher,3,1,42.6,1170.0,1,None,None,None
+PR_DESL_W_WNM,JO,Jordan,JO2002DHS,2002,DHS,No education,0,0,65.3,473.0,1,None,None,None
+PR_DESL_W_WNM,JO,Jordan,JO2002DHS,2002,DHS,Primary,1,1,55.9,732.0,1,None,None,None
+PR_DESL_W_WNM,JO,Jordan,JO2002DHS,2002,DHS,Secondary,2,1,41.9,3168.0,1,None,None,None
+PR_DESL_W_WNM,JO,Jordan,JO2002DHS,2002,DHS,Higher,3,1,38.5,1354.0,1,None,None,None
+PR_DESL_W_WNM,JO,Jordan,JO2007DHS,2007,DHS,No education,0,0,73.2,658.0,1,None,None,None
+PR_DESL_W_WNM,JO,Jordan,JO2007DHS,2007,DHS,Primary,1,1,63.2,930.0,1,None,None,None
+PR_DESL_W_WNM,JO,Jordan,JO2007DHS,2007,DHS,Secondary,2,1,51.1,5875.0,1,None,None,None
+PR_DESL_W_WNM,JO,Jordan,JO2007DHS,2007,DHS,Higher,3,1,43.7,2897.0,1,None,None,None
+PR_DESL_W_WNM,JO,Jordan,JO2009DHS,2009,DHS,No education,0,0,67.9,472.0,1,None,None,None
+PR_DESL_W_WNM,JO,Jordan,JO2009DHS,2009,DHS,Primary,1,1,57.3,827.0,1,None,None,None
+PR_DESL_W_WNM,JO,Jordan,JO2009DHS,2009,DHS,Secondary,2,1,48.5,5316.0,1,None,None,None
+PR_DESL_W_WNM,JO,Jordan,JO2009DHS,2009,DHS,Higher,3,1,40.4,3024.0,1,None,None,None
+PR_DESL_W_WNM,JO,Jordan,JO2012DHS,2012,DHS,No education,0,0,63.1,360.0,1,None,None,None
+PR_DESL_W_WNM,JO,Jordan,JO2012DHS,2012,DHS,Primary,1,1,61.4,871.0,1,None,None,None
+PR_DESL_W_WNM,JO,Jordan,JO2012DHS,2012,DHS,Secondary,2,1,55.2,6079.0,1,None,None,None
+PR_DESL_W_WNM,JO,Jordan,JO2012DHS,2012,DHS,Higher,3,1,45.5,3436.0,1,None,None,None
+PR_DESL_W_WNM,JO,Jordan,JO2017DHS,2017,DHS,No education,0,0,55.9,462.0,1,None,None,None
+PR_DESL_W_WNM,JO,Jordan,JO2017DHS,2017,DHS,Primary,1,1,54.9,1078.0,1,None,None,None
+PR_DESL_W_WNM,JO,Jordan,JO2017DHS,2017,DHS,Secondary,2,1,53.5,7576.0,1,None,None,None
+PR_DESL_W_WNM,JO,Jordan,JO2017DHS,2017,DHS,Higher,3,1,41.2,4618.0,1,None,None,None
+PR_DESL_W_WNM,JO,Jordan,JO2023DHS,2023,DHS,No education,0,0,65.6,341.0,1,None,None,None
+PR_DESL_W_WNM,JO,Jordan,JO2023DHS,2023,DHS,Primary,1,1,57.8,974.0,1,None,None,None
+PR_DESL_W_WNM,JO,Jordan,JO2023DHS,2023,DHS,Secondary,2,1,59.6,6704.0,1,None,None,None
+PR_DESL_W_WNM,JO,Jordan,JO2023DHS,2023,DHS,Higher,3,1,50.9,3616.0,1,None,None,None
+PR_DESL_W_WNM,KE,Kenya,KE1998DHS,1998,DHS,No education,0,0,59.3,762.0,1,None,None,None
+PR_DESL_W_WNM,KE,Kenya,KE1998DHS,1998,DHS,Primary,1,1,52.2,2843.0,1,None,None,None
+PR_DESL_W_WNM,KE,Kenya,KE1998DHS,1998,DHS,Secondary,2,1,52.5,1149.0,1,None,None,None
+PR_DESL_W_WNM,KE,Kenya,KE1998DHS,1998,DHS,Higher,3,1,53.4,93.0,1,None,None,None
+PR_DESL_W_WNM,KE,Kenya,KE2003DHS,2003,DHS,No education,0,0,38.0,946.0,1,None,None,None
+PR_DESL_W_WNM,KE,Kenya,KE2003DHS,2003,DHS,Primary,1,1,49.0,2591.0,1,None,None,None
+PR_DESL_W_WNM,KE,Kenya,KE2003DHS,2003,DHS,Secondary,2,1,53.3,1025.0,1,None,None,None
+PR_DESL_W_WNM,KE,Kenya,KE2003DHS,2003,DHS,Higher,3,1,58.1,314.0,1,None,None,None
+PR_DESL_W_WNM,KE,Kenya,KE2008DHS,2008,DHS,No education,0,0,37.2,953.0,1,None,None,None
+PR_DESL_W_WNM,KE,Kenya,KE2008DHS,2008,DHS,Primary,1,1,57.6,2662.0,1,None,None,None
+PR_DESL_W_WNM,KE,Kenya,KE2008DHS,2008,DHS,Secondary,2,1,52.5,1030.0,1,None,None,None
+PR_DESL_W_WNM,KE,Kenya,KE2008DHS,2008,DHS,Higher,3,1,51.0,396.0,1,None,None,None
+PR_DESL_W_WNM,KE,Kenya,KE2014DHS,2014,DHS,No education,0,0,33.4,1567.0,1,None,None,None
+PR_DESL_W_WNM,KE,Kenya,KE2014DHS,2014,DHS,Primary,1,1,56.3,4722.0,1,None,None,None
+PR_DESL_W_WNM,KE,Kenya,KE2014DHS,2014,DHS,Secondary,2,1,47.7,2004.0,1,None,None,None
+PR_DESL_W_WNM,KE,Kenya,KE2014DHS,2014,DHS,Higher,3,1,38.6,723.0,1,None,None,None
+PR_DESL_W_WNM,KE,Kenya,KE2022DHS,2022,DHS,No education,0,0,31.5,1668.0,1,None,None,None
+PR_DESL_W_WNM,KE,Kenya,KE2022DHS,2022,DHS,Primary,1,1,58.1,3828.0,1,None,None,None
+PR_DESL_W_WNM,KE,Kenya,KE2022DHS,2022,DHS,Secondary,2,1,39.2,2680.0,1,None,None,None
+PR_DESL_W_WNM,KE,Kenya,KE2022DHS,2022,DHS,Higher,3,1,34.6,1474.0,1,None,None,None
+PR_DESL_W_WNM,KE,Kenya,KE2025DHS,2025,DHS,No education,0,0,35.0,1853.0,1,None,None,None
+PR_DESL_W_WNM,KE,Kenya,KE2025DHS,2025,DHS,Primary,1,1,56.8,4309.0,1,None,None,None
+PR_DESL_W_WNM,KE,Kenya,KE2025DHS,2025,DHS,Secondary,2,1,38.2,3705.0,1,None,None,None
+PR_DESL_W_WNM,KE,Kenya,KE2025DHS,2025,DHS,Higher,3,1,34.6,1819.0,1,None,None,None
+PR_DESL_W_WNM,KH,Cambodia,KH2005DHS,2005,DHS,No education,0,0,60.9,2728.0,1,None,None,None
+PR_DESL_W_WNM,KH,Cambodia,KH2005DHS,2005,DHS,Primary,1,1,58.6,5882.0,1,None,None,None
+PR_DESL_W_WNM,KH,Cambodia,KH2005DHS,2005,DHS,Secondary,2,1,48.8,1649.0,1,None,None,None
+PR_DESL_W_WNM,KH,Cambodia,KH2005DHS,2005,DHS,Higher,3,1,35.3,50.0,1,None,None,None
+PR_DESL_W_WNM,KH,Cambodia,KH2010DHS,2010,DHS,No education,0,0,65.1,2434.0,1,None,None,None
+PR_DESL_W_WNM,KH,Cambodia,KH2010DHS,2010,DHS,Primary,1,1,58.2,6050.0,1,None,None,None
+PR_DESL_W_WNM,KH,Cambodia,KH2010DHS,2010,DHS,Secondary,2,1,45.8,2849.0,1,None,None,None
+PR_DESL_W_WNM,KH,Cambodia,KH2010DHS,2010,DHS,Higher,3,1,37.6,203.0,1,None,None,None
+PR_DESL_W_WNM,KH,Cambodia,KH2014DHS,2014,DHS,No education,0,0,62.1,1742.0,1,None,None,None
+PR_DESL_W_WNM,KH,Cambodia,KH2014DHS,2014,DHS,Primary,1,1,55.7,5948.0,1,None,None,None
+PR_DESL_W_WNM,KH,Cambodia,KH2014DHS,2014,DHS,Secondary,2,1,39.7,3588.0,1,None,None,None
+PR_DESL_W_WNM,KH,Cambodia,KH2014DHS,2014,DHS,Higher,3,1,36.0,390.0,1,None,None,None
+PR_DESL_W_WNM,KH,Cambodia,KH2021DHS,2021,DHS,No education,0,0,65.5,2345.0,1,None,None,None
+PR_DESL_W_WNM,KH,Cambodia,KH2021DHS,2021,DHS,Primary,1,1,58.4,6314.0,1,None,None,None
+PR_DESL_W_WNM,KH,Cambodia,KH2021DHS,2021,DHS,Secondary,2,1,45.1,4529.0,1,None,None,None
+PR_DESL_W_WNM,KH,Cambodia,KH2021DHS,2021,DHS,Higher,3,1,30.8,567.0,1,None,None,None
+PR_DESL_W_WNM,KM,Comoros,KM2012DHS,2012,DHS,No education,0,0,26.5,1254.0,1,None,None,None
+PR_DESL_W_WNM,KM,Comoros,KM2012DHS,2012,DHS,Primary,1,1,22.4,708.0,1,None,None,None
+PR_DESL_W_WNM,KM,Comoros,KM2012DHS,2012,DHS,Secondary,2,1,12.0,989.0,1,None,None,None
+PR_DESL_W_WNM,KM,Comoros,KM2012DHS,2012,DHS,Higher,3,1,6.6,330.0,1,None,None,None
+PR_DESL_W_WNM,LB,Liberia,LB1986DHS,1986,DHS,No education,0,0,16.5,2710.0,1,None,None,None
+PR_DESL_W_WNM,LB,Liberia,LB1986DHS,1986,DHS,Primary,1,1,14.8,516.0,1,None,None,None
+PR_DESL_W_WNM,LB,Liberia,LB1986DHS,1986,DHS,Secondary,2,1,21.2,343.0,1,None,None,None
+PR_DESL_W_WNM,LB,Liberia,LB1986DHS,1986,DHS,Higher,3,1,37.3,35.0,1,None,None,None
+PR_DESL_W_WNM,LB,Liberia,LB2007DHS,2007,DHS,No education,0,0,37.2,2337.0,1,None,None,None
+PR_DESL_W_WNM,LB,Liberia,LB2007DHS,2007,DHS,Primary,1,1,23.1,1366.0,1,None,None,None
+PR_DESL_W_WNM,LB,Liberia,LB2007DHS,2007,DHS,Secondary,2,1,24.2,737.0,1,None,None,None
+PR_DESL_W_WNM,LB,Liberia,LB2007DHS,2007,DHS,Higher,3,1,24.0,63.0,1,None,None,None
+PR_DESL_W_WNM,LB,Liberia,LB2013DHS,2013,DHS,No education,0,0,36.4,2944.0,1,None,None,None
+PR_DESL_W_WNM,LB,Liberia,LB2013DHS,2013,DHS,Primary,1,1,25.7,1765.0,1,None,None,None
+PR_DESL_W_WNM,LB,Liberia,LB2013DHS,2013,DHS,Secondary,2,1,23.2,1060.0,1,None,None,None
+PR_DESL_W_WNM,LB,Liberia,LB2013DHS,2013,DHS,Higher,3,1,26.2,106.0,1,None,None,None
+PR_DESL_W_WNM,LB,Liberia,LB2019DHS,2019,DHS,No education,0,0,41.2,2284.0,1,None,None,None
+PR_DESL_W_WNM,LB,Liberia,LB2019DHS,2019,DHS,Primary,1,1,33.6,1199.0,1,None,None,None
+PR_DESL_W_WNM,LB,Liberia,LB2019DHS,2019,DHS,Secondary,2,1,26.0,1060.0,1,None,None,None
+PR_DESL_W_WNM,LB,Liberia,LB2019DHS,2019,DHS,Higher,3,1,24.3,111.0,1,None,None,None
+PR_DESL_W_WNM,LK,Sri Lanka,LK1987DHS,1987,DHS,No education,0,0,72.8,653.0,1,None,None,None
+PR_DESL_W_WNM,LK,Sri Lanka,LK1987DHS,1987,DHS,Primary,1,1,75.1,1620.0,1,None,None,None
+PR_DESL_W_WNM,LK,Sri Lanka,LK1987DHS,1987,DHS,Secondary,2,1,63.9,1936.0,1,None,None,None
+PR_DESL_W_WNM,LK,Sri Lanka,LK1987DHS,1987,DHS,Higher,3,1,51.3,1237.0,1,None,None,None
+PR_DESL_W_WNM,LS,Lesotho,LS2004DHS,2004,DHS,No education,0,0,49.4,105.0,1,None,None,None
+PR_DESL_W_WNM,LS,Lesotho,LS2004DHS,2004,DHS,Primary,1,1,54.9,2406.0,1,None,None,None
+PR_DESL_W_WNM,LS,Lesotho,LS2004DHS,2004,DHS,Secondary,2,1,52.3,1165.0,1,None,None,None
+PR_DESL_W_WNM,LS,Lesotho,LS2004DHS,2004,DHS,Higher,3,1,71.4,50.0,1,None,None,None
+PR_DESL_W_WNM,LS,Lesotho,LS2009DHS,2009,DHS,No education,0,0,52.6,77.0,1,None,None,None
+PR_DESL_W_WNM,LS,Lesotho,LS2009DHS,2009,DHS,Primary,1,1,62.0,2384.0,1,None,None,None
+PR_DESL_W_WNM,LS,Lesotho,LS2009DHS,2009,DHS,Secondary,2,1,55.1,1465.0,1,None,None,None
+PR_DESL_W_WNM,LS,Lesotho,LS2009DHS,2009,DHS,Higher,3,1,53.1,203.0,1,None,None,None
+PR_DESL_W_WNM,LS,Lesotho,LS2014DHS,2014,DHS,No education,0,0,72.0,55.0,1,None,None,None
+PR_DESL_W_WNM,LS,Lesotho,LS2014DHS,2014,DHS,Primary,1,1,63.5,1684.0,1,None,None,None
+PR_DESL_W_WNM,LS,Lesotho,LS2014DHS,2014,DHS,Secondary,2,1,52.8,1595.0,1,None,None,None
+PR_DESL_W_WNM,LS,Lesotho,LS2014DHS,2014,DHS,Higher,3,1,52.3,275.0,1,None,None,None
+PR_DESL_W_WNM,LS,Lesotho,LS2023DHS,2023,DHS,No education,0,0,64.8,35.0,1,None,None,None
+PR_DESL_W_WNM,LS,Lesotho,LS2023DHS,2023,DHS,Primary,1,1,71.1,1136.0,1,None,None,None
+PR_DESL_W_WNM,LS,Lesotho,LS2023DHS,2023,DHS,Secondary,2,1,59.3,1674.0,1,None,None,None
+PR_DESL_W_WNM,LS,Lesotho,LS2023DHS,2023,DHS,Higher,3,1,55.6,381.0,1,None,None,None
+PR_DESL_W_WNM,MA,Morocco,MA1987DHS,1987,DHS,No education,0,0,49.2,4510.0,1,None,None,None
+PR_DESL_W_WNM,MA,Morocco,MA1987DHS,1987,DHS,Primary,1,1,51.6,537.0,1,None,None,None
+PR_DESL_W_WNM,MA,Morocco,MA1987DHS,1987,DHS,Secondary,2,1,49.4,342.0,1,None,None,None
+PR_DESL_W_WNM,MA,Morocco,MA1987DHS,1987,DHS,Higher,3,1,50.0,48.0,1,None,None,None
+PR_DESL_W_WNM,MA,Morocco,MA1992DHS,1992,DHS,No education,0,0,53.3,3932.0,1,None,None,None
+PR_DESL_W_WNM,MA,Morocco,MA1992DHS,1992,DHS,Primary,1,1,50.8,644.0,1,None,None,None
+PR_DESL_W_WNM,MA,Morocco,MA1992DHS,1992,DHS,Secondary,2,1,44.3,465.0,1,None,None,None
+PR_DESL_W_WNM,MA,Morocco,MA1992DHS,1992,DHS,Higher,3,1,41.6,77.0,1,None,None,None
+PR_DESL_W_WNM,MA,Morocco,MA2003DHS,2003,DHS,No education,0,0,57.3,5848.0,1,None,None,None
+PR_DESL_W_WNM,MA,Morocco,MA2003DHS,2003,DHS,Primary,1,1,46.5,1452.0,1,None,None,None
+PR_DESL_W_WNM,MA,Morocco,MA2003DHS,2003,DHS,Secondary,2,1,48.5,1242.0,1,None,None,None
+PR_DESL_W_WNM,MA,Morocco,MA2003DHS,2003,DHS,Higher,3,1,48.3,309.0,1,None,None,None
+PR_DESL_W_WNM,MD,Madagascar,MD1992DHS,1992,DHS,No education,0,0,34.1,696.0,1,None,None,None
+PR_DESL_W_WNM,MD,Madagascar,MD1992DHS,1992,DHS,Primary,1,1,43.0,1832.0,1,None,None,None
+PR_DESL_W_WNM,MD,Madagascar,MD1992DHS,1992,DHS,Secondary,2,1,41.1,983.0,1,None,None,None
+PR_DESL_W_WNM,MD,Madagascar,MD1992DHS,1992,DHS,Higher,3,1,39.6,117.0,1,None,None,None
+PR_DESL_W_WNM,MD,Madagascar,MD1997DHS,1997,DHS,No education,0,0,29.7,1030.0,1,None,None,None
+PR_DESL_W_WNM,MD,Madagascar,MD1997DHS,1997,DHS,Primary,1,1,40.0,2130.0,1,None,None,None
+PR_DESL_W_WNM,MD,Madagascar,MD1997DHS,1997,DHS,Secondary,2,1,42.1,1095.0,1,None,None,None
+PR_DESL_W_WNM,MD,Madagascar,MD1997DHS,1997,DHS,Higher,3,1,48.2,100.0,1,None,None,None
+PR_DESL_W_WNM,MD,Madagascar,MD2004DHS,2004,DHS,No education,0,0,34.7,849.0,1,None,None,None
+PR_DESL_W_WNM,MD,Madagascar,MD2004DHS,2004,DHS,Primary,1,1,39.6,2024.0,1,None,None,None
+PR_DESL_W_WNM,MD,Madagascar,MD2004DHS,2004,DHS,Secondary,2,1,49.3,1842.0,1,None,None,None
+PR_DESL_W_WNM,MD,Madagascar,MD2004DHS,2004,DHS,Higher,3,1,50.0,225.0,1,None,None,None
+PR_DESL_W_WNM,MD,Madagascar,MD2008DHS,2008,DHS,No education,0,0,34.9,2734.0,1,None,None,None
+PR_DESL_W_WNM,MD,Madagascar,MD2008DHS,2008,DHS,Primary,1,1,44.4,5585.0,1,None,None,None
+PR_DESL_W_WNM,MD,Madagascar,MD2008DHS,2008,DHS,Secondary,2,1,45.6,3229.0,1,None,None,None
+PR_DESL_W_WNM,MD,Madagascar,MD2008DHS,2008,DHS,Higher,3,1,40.8,355.0,1,None,None,None
+PR_DESL_W_WNM,MD,Madagascar,MD2021DHS,2021,DHS,No education,0,0,39.0,2442.0,1,None,None,None
+PR_DESL_W_WNM,MD,Madagascar,MD2021DHS,2021,DHS,Primary,1,1,40.7,5164.0,1,None,None,None
+PR_DESL_W_WNM,MD,Madagascar,MD2021DHS,2021,DHS,Secondary,2,1,30.5,3628.0,1,None,None,None
+PR_DESL_W_WNM,MD,Madagascar,MD2021DHS,2021,DHS,Higher,3,1,29.6,403.0,1,None,None,None
+PR_DESL_W_WNM,ML,Mali,ML2001DHS,2001,DHS,No education,0,0,21.1,9023.0,1,None,None,None
+PR_DESL_W_WNM,ML,Mali,ML2001DHS,2001,DHS,Primary,1,1,20.2,1109.0,1,None,None,None
+PR_DESL_W_WNM,ML,Mali,ML2001DHS,2001,DHS,Secondary,2,1,29.4,521.0,1,None,None,None
+PR_DESL_W_WNM,ML,Mali,ML2001DHS,2001,DHS,Higher,3,1,32.4,44.0,1,None,None,None
+PR_DESL_W_WNM,ML,Mali,ML2006DHS,2006,DHS,No education,0,0,20.0,10064.0,1,None,None,None
+PR_DESL_W_WNM,ML,Mali,ML2006DHS,2006,DHS,Primary,1,1,17.2,1279.0,1,None,None,None
+PR_DESL_W_WNM,ML,Mali,ML2006DHS,2006,DHS,Secondary,2,1,17.0,916.0,1,None,None,None
+PR_DESL_W_WNM,ML,Mali,ML2006DHS,2006,DHS,Higher,3,1,20.1,65.0,1,None,None,None
+PR_DESL_W_WNM,ML,Mali,ML2012DHS,2012,DHS,No education,0,0,22.3,7047.0,1,None,None,None
+PR_DESL_W_WNM,ML,Mali,ML2012DHS,2012,DHS,Primary,1,1,18.6,801.0,1,None,None,None
+PR_DESL_W_WNM,ML,Mali,ML2012DHS,2012,DHS,Secondary,2,1,17.1,808.0,1,None,None,None
+PR_DESL_W_WNM,ML,Mali,ML2012DHS,2012,DHS,Higher,3,1,6.5,81.0,1,None,None,None
+PR_DESL_W_WNM,ML,Mali,ML2018DHS,2018,DHS,No education,0,0,23.4,6063.0,1,None,None,None
+PR_DESL_W_WNM,ML,Mali,ML2018DHS,2018,DHS,Primary,1,1,17.3,1015.0,1,None,None,None
+PR_DESL_W_WNM,ML,Mali,ML2018DHS,2018,DHS,Secondary,2,1,9.0,1136.0,1,None,None,None
+PR_DESL_W_WNM,ML,Mali,ML2018DHS,2018,DHS,Higher,3,1,11.8,118.0,1,None,None,None
+PR_DESL_W_WNM,ML,Mali,ML2023DHS,2023,DHS,No education,0,0,25.0,8285.0,1,None,None,None
+PR_DESL_W_WNM,ML,Mali,ML2023DHS,2023,DHS,Primary,1,1,14.8,2035.0,1,None,None,None
+PR_DESL_W_WNM,ML,Mali,ML2023DHS,2023,DHS,Secondary,2,1,10.0,2326.0,1,None,None,None
+PR_DESL_W_WNM,ML,Mali,ML2023DHS,2023,DHS,Higher,3,1,14.6,254.0,1,None,None,None
+PR_DESL_W_WNM,MM,Myanmar,MM2016DHS,2016,DHS,No education,0,0,67.9,1201.0,1,None,None,None
+PR_DESL_W_WNM,MM,Myanmar,MM2016DHS,2016,DHS,Primary,1,1,63.6,3622.0,1,None,None,None
+PR_DESL_W_WNM,MM,Myanmar,MM2016DHS,2016,DHS,Secondary,2,1,54.2,2432.0,1,None,None,None
+PR_DESL_W_WNM,MM,Myanmar,MM2016DHS,2016,DHS,Higher,3,1,51.7,613.0,1,None,None,None
+PR_DESL_W_WNM,MR,Mauritania,MR2000DHS,2000,DHS,No education,0,0,18.9,2710.0,1,None,None,None
+PR_DESL_W_WNM,MR,Mauritania,MR2000DHS,2000,DHS,Primary,1,1,18.2,1000.0,1,None,None,None
+PR_DESL_W_WNM,MR,Mauritania,MR2000DHS,2000,DHS,Secondary,2,1,22.3,470.0,1,None,None,None
+PR_DESL_W_WNM,MR,Mauritania,MR2000DHS,2000,DHS,Higher,3,1,18.3,52.0,1,None,None,None
+PR_DESL_W_WNM,MR,Mauritania,MR2020DHS,2020,DHS,No education,0,0,21.2,3954.0,1,None,None,None
+PR_DESL_W_WNM,MR,Mauritania,MR2020DHS,2020,DHS,Primary,1,1,16.4,3899.0,1,None,None,None
+PR_DESL_W_WNM,MR,Mauritania,MR2020DHS,2020,DHS,Secondary,2,1,14.6,1755.0,1,None,None,None
+PR_DESL_W_WNM,MR,Mauritania,MR2020DHS,2020,DHS,Higher,3,1,10.8,151.0,1,None,None,None
+PR_DESL_W_WNM,MV,Maldives,MV2009DHS,2009,DHS,No education,0,0,82.6,1740.0,1,None,None,None
+PR_DESL_W_WNM,MV,Maldives,MV2009DHS,2009,DHS,Primary,1,1,55.1,2288.0,1,None,None,None
+PR_DESL_W_WNM,MV,Maldives,MV2009DHS,2009,DHS,Secondary,2,1,24.2,2246.0,1,None,None,None
+PR_DESL_W_WNM,MV,Maldives,MV2009DHS,2009,DHS,Higher,3,1,16.0,205.0,1,None,None,None
+PR_DESL_W_WNM,MV,Maldives,MV2016DHS,2016,DHS,No education,0,0,77.3,303.0,1,None,None,None
+PR_DESL_W_WNM,MV,Maldives,MV2016DHS,2016,DHS,Primary,1,1,68.1,1810.0,1,None,None,None
+PR_DESL_W_WNM,MV,Maldives,MV2016DHS,2016,DHS,Secondary,2,1,30.8,2678.0,1,None,None,None
+PR_DESL_W_WNM,MV,Maldives,MV2016DHS,2016,DHS,Higher,3,1,23.7,829.0,1,None,None,None
+PR_DESL_W_WNM,MW,Malawi,MW2004DHS,2004,DHS,No education,0,0,50.0,2234.0,1,None,None,None
+PR_DESL_W_WNM,MW,Malawi,MW2004DHS,2004,DHS,Primary,1,1,38.6,5261.0,1,None,None,None
+PR_DESL_W_WNM,MW,Malawi,MW2004DHS,2004,DHS,Secondary,2,1,31.7,853.0,1,None,None,None
+PR_DESL_W_WNM,MW,Malawi,MW2004DHS,2004,DHS,Higher,3,1,46.1,37.0,1,None,None,None
+PR_DESL_W_WNM,MW,Malawi,MW2010DHS,2010,DHS,No education,0,0,59.5,2743.0,1,None,None,None
+PR_DESL_W_WNM,MW,Malawi,MW2010DHS,2010,DHS,Primary,1,1,45.4,10447.0,1,None,None,None
+PR_DESL_W_WNM,MW,Malawi,MW2010DHS,2010,DHS,Secondary,2,1,37.6,2105.0,1,None,None,None
+PR_DESL_W_WNM,MW,Malawi,MW2010DHS,2010,DHS,Higher,3,1,47.3,150.0,1,None,None,None
+PR_DESL_W_WNM,MW,Malawi,MW2015DHS,2015,DHS,No education,0,0,65.5,2126.0,1,None,None,None
+PR_DESL_W_WNM,MW,Malawi,MW2015DHS,2015,DHS,Primary,1,1,48.4,10202.0,1,None,None,None
+PR_DESL_W_WNM,MW,Malawi,MW2015DHS,2015,DHS,Secondary,2,1,40.3,3246.0,1,None,None,None
+PR_DESL_W_WNM,MW,Malawi,MW2015DHS,2015,DHS,Higher,3,1,45.9,378.0,1,None,None,None
+PR_DESL_W_WNM,MW,Malawi,MW2024DHS,2024,DHS,No education,0,0,57.3,899.0,1,None,None,None
+PR_DESL_W_WNM,MW,Malawi,MW2024DHS,2024,DHS,Primary,1,1,40.9,8074.0,1,None,None,None
+PR_DESL_W_WNM,MW,Malawi,MW2024DHS,2024,DHS,Secondary,2,1,34.0,3021.0,1,None,None,None
+PR_DESL_W_WNM,MW,Malawi,MW2024DHS,2024,DHS,Higher,3,1,42.7,372.0,1,None,None,None
+PR_DESL_W_WNM,MX,Mexico,MX1987DHS,1987,DHS,No education,0,0,70.5,662.0,1,None,None,None
+PR_DESL_W_WNM,MX,Mexico,MX1987DHS,1987,DHS,Primary,1,1,71.2,3123.0,1,None,None,None
+PR_DESL_W_WNM,MX,Mexico,MX1987DHS,1987,DHS,Secondary,2,1,59.1,1392.0,1,None,None,None
+PR_DESL_W_WNM,MX,Mexico,MX1987DHS,1987,DHS,Higher,3,1,50.8,273.0,1,None,None,None
+PR_DESL_W_WNM,MZ,Mozambique,MZ2011DHS,2011,DHS,No education,0,0,27.2,2945.0,1,None,None,None
+PR_DESL_W_WNM,MZ,Mozambique,MZ2011DHS,2011,DHS,Primary,1,1,28.9,4650.0,1,None,None,None
+PR_DESL_W_WNM,MZ,Mozambique,MZ2011DHS,2011,DHS,Secondary,2,1,28.7,1234.0,1,None,None,None
+PR_DESL_W_WNM,MZ,Mozambique,MZ2011DHS,2011,DHS,Higher,3,1,41.2,127.0,1,None,None,None
+PR_DESL_W_WNM,MZ,Mozambique,MZ2015AIS,2015,AIS,No education,0,0,28.3,1121.0,1,None,None,None
+PR_DESL_W_WNM,MZ,Mozambique,MZ2015AIS,2015,AIS,Primary,1,1,26.7,2323.0,1,None,None,None
+PR_DESL_W_WNM,MZ,Mozambique,MZ2015AIS,2015,AIS,Secondary,2,1,22.6,844.0,1,None,None,None
+PR_DESL_W_WNM,MZ,Mozambique,MZ2015AIS,2015,AIS,Higher,3,1,30.3,75.0,1,None,None,None
+PR_DESL_W_WNM,MZ,Mozambique,MZ2022DHS,2022,DHS,No education,0,0,26.0,2324.0,1,None,None,None
+PR_DESL_W_WNM,MZ,Mozambique,MZ2022DHS,2022,DHS,Primary,1,1,25.6,3746.0,1,None,None,None
+PR_DESL_W_WNM,MZ,Mozambique,MZ2022DHS,2022,DHS,Secondary,2,1,26.4,1923.0,1,None,None,None
+PR_DESL_W_WNM,MZ,Mozambique,MZ2022DHS,2022,DHS,Higher,3,1,38.2,202.0,1,None,None,None
+PR_DESL_W_WNM,NC,Nicaragua,NC1998DHS,1998,DHS,No education,0,0,76.2,1759.0,1,None,None,None
+PR_DESL_W_WNM,NC,Nicaragua,NC1998DHS,1998,DHS,Primary,1,1,68.1,3821.0,1,None,None,None
+PR_DESL_W_WNM,NC,Nicaragua,NC1998DHS,1998,DHS,Secondary,2,1,58.5,2260.0,1,None,None,None
+PR_DESL_W_WNM,NC,Nicaragua,NC1998DHS,1998,DHS,Higher,3,1,51.2,326.0,1,None,None,None
+PR_DESL_W_WNM,NC,Nicaragua,NC2001DHS,2001,DHS,No education,0,0,72.8,1648.0,1,None,None,None
+PR_DESL_W_WNM,NC,Nicaragua,NC2001DHS,2001,DHS,Primary,1,1,66.6,3539.0,1,None,None,None
+PR_DESL_W_WNM,NC,Nicaragua,NC2001DHS,2001,DHS,Secondary,2,1,59.6,1978.0,1,None,None,None
+PR_DESL_W_WNM,NC,Nicaragua,NC2001DHS,2001,DHS,Higher,3,1,54.6,513.0,1,None,None,None
+PR_DESL_W_WNM,NG,Nigeria,NG1990DHS,1990,DHS,No education,0,0,13.9,4198.0,1,None,None,None
+PR_DESL_W_WNM,NG,Nigeria,NG1990DHS,1990,DHS,Primary,1,1,20.2,1537.0,1,None,None,None
+PR_DESL_W_WNM,NG,Nigeria,NG1990DHS,1990,DHS,Secondary,2,1,13.7,837.0,1,None,None,None
+PR_DESL_W_WNM,NG,Nigeria,NG1990DHS,1990,DHS,Higher,3,1,26.3,124.0,1,None,None,None
+PR_DESL_W_WNM,NG,Nigeria,NG2003DHS,2003,DHS,No education,0,0,15.0,2693.0,1,None,None,None
+PR_DESL_W_WNM,NG,Nigeria,NG2003DHS,2003,DHS,Primary,1,1,25.8,1178.0,1,None,None,None
+PR_DESL_W_WNM,NG,Nigeria,NG2003DHS,2003,DHS,Secondary,2,1,16.4,1029.0,1,None,None,None
+PR_DESL_W_WNM,NG,Nigeria,NG2003DHS,2003,DHS,Higher,3,1,29.3,257.0,1,None,None,None
+PR_DESL_W_WNM,NG,Nigeria,NG2008DHS,2008,DHS,No education,0,0,14.8,12288.0,1,None,None,None
+PR_DESL_W_WNM,NG,Nigeria,NG2008DHS,2008,DHS,Primary,1,1,25.8,5110.0,1,None,None,None
+PR_DESL_W_WNM,NG,Nigeria,NG2008DHS,2008,DHS,Secondary,2,1,22.0,5053.0,1,None,None,None
+PR_DESL_W_WNM,NG,Nigeria,NG2008DHS,2008,DHS,Higher,3,1,26.2,1503.0,1,None,None,None
+PR_DESL_W_WNM,NG,Nigeria,NG2013DHS,2013,DHS,No education,0,0,11.1,12531.0,1,None,None,None
+PR_DESL_W_WNM,NG,Nigeria,NG2013DHS,2013,DHS,Primary,1,1,29.2,5572.0,1,None,None,None
+PR_DESL_W_WNM,NG,Nigeria,NG2013DHS,2013,DHS,Secondary,2,1,22.8,7044.0,1,None,None,None
+PR_DESL_W_WNM,NG,Nigeria,NG2013DHS,2013,DHS,Higher,3,1,26.6,2127.0,1,None,None,None
+PR_DESL_W_WNM,NG,Nigeria,NG2018DHS,2018,DHS,No education,0,0,20.1,12725.0,1,None,None,None
+PR_DESL_W_WNM,NG,Nigeria,NG2018DHS,2018,DHS,Primary,1,1,35.2,4810.0,1,None,None,None
+PR_DESL_W_WNM,NG,Nigeria,NG2018DHS,2018,DHS,Secondary,2,1,24.9,8757.0,1,None,None,None
+PR_DESL_W_WNM,NG,Nigeria,NG2018DHS,2018,DHS,Higher,3,1,25.7,2596.0,1,None,None,None
+PR_DESL_W_WNM,NG,Nigeria,NG2024DHS,2024,DHS,No education,0,0,20.1,10423.0,1,None,None,None
+PR_DESL_W_WNM,NG,Nigeria,NG2024DHS,2024,DHS,Primary,1,1,36.7,3173.0,1,None,None,None
+PR_DESL_W_WNM,NG,Nigeria,NG2024DHS,2024,DHS,Secondary,2,1,30.9,8653.0,1,None,None,None
+PR_DESL_W_WNM,NG,Nigeria,NG2024DHS,2024,DHS,Higher,3,1,34.7,3390.0,1,None,None,None
+PR_DESL_W_WNM,NG,Nigeria,NG2025DHS,2025,DHS,No education,0,0,18.9,5857.0,1,None,None,None
+PR_DESL_W_WNM,NG,Nigeria,NG2025DHS,2025,DHS,Primary,1,1,35.5,1903.0,1,None,None,None
+PR_DESL_W_WNM,NG,Nigeria,NG2025DHS,2025,DHS,Secondary,2,1,29.0,6590.0,1,None,None,None
+PR_DESL_W_WNM,NG,Nigeria,NG2025DHS,2025,DHS,Higher,3,1,33.4,2599.0,1,None,None,None
+PR_DESL_W_WNM,NI,Niger,NI2006DHS,2006,DHS,No education,0,0,8.8,6209.0,1,None,None,None
+PR_DESL_W_WNM,NI,Niger,NI2006DHS,2006,DHS,Primary,1,1,8.9,796.0,1,None,None,None
+PR_DESL_W_WNM,NI,Niger,NI2006DHS,2006,DHS,Secondary,2,1,11.9,396.0,1,None,None,None
+PR_DESL_W_WNM,NI,Niger,NI2006DHS,2006,DHS,Higher,3,1,16.7,30.0,1,None,None,None
+PR_DESL_W_WNM,NI,Niger,NI2012DHS,2012,DHS,No education,0,0,8.8,7714.0,1,None,None,None
+PR_DESL_W_WNM,NI,Niger,NI2012DHS,2012,DHS,Primary,1,1,6.8,1095.0,1,None,None,None
+PR_DESL_W_WNM,NI,Niger,NI2012DHS,2012,DHS,Secondary,2,1,7.7,618.0,1,None,None,None
+PR_DESL_W_WNM,NI,Niger,NI2012DHS,2012,DHS,Higher,3,1,11.5,66.0,1,None,None,None
+PR_DESL_W_WNM,NM,Namibia,NM1992DHS,1992,DHS,No education,0,0,32.0,527.0,1,None,None,None
+PR_DESL_W_WNM,NM,Namibia,NM1992DHS,1992,DHS,Primary,1,1,28.8,1071.0,1,None,None,None
+PR_DESL_W_WNM,NM,Namibia,NM1992DHS,1992,DHS,Secondary,2,1,39.4,636.0,1,None,None,None
+PR_DESL_W_WNM,NM,Namibia,NM1992DHS,1992,DHS,Higher,3,1,56.4,63.0,1,None,None,None
+PR_DESL_W_WNM,NM,Namibia,NM2000DHS,2000,DHS,No education,0,0,55.8,509.0,1,None,None,None
+PR_DESL_W_WNM,NM,Namibia,NM2000DHS,2000,DHS,Primary,1,1,57.8,970.0,1,None,None,None
+PR_DESL_W_WNM,NM,Namibia,NM2000DHS,2000,DHS,Secondary,2,1,58.5,1229.0,1,None,None,None
+PR_DESL_W_WNM,NM,Namibia,NM2000DHS,2000,DHS,Higher,3,1,64.2,119.0,1,None,None,None
+PR_DESL_W_WNM,NM,Namibia,NM2006DHS,2006,DHS,No education,0,0,57.0,476.0,1,None,None,None
+PR_DESL_W_WNM,NM,Namibia,NM2006DHS,2006,DHS,Primary,1,1,62.0,1180.0,1,None,None,None
+PR_DESL_W_WNM,NM,Namibia,NM2006DHS,2006,DHS,Secondary,2,1,59.3,1632.0,1,None,None,None
+PR_DESL_W_WNM,NM,Namibia,NM2006DHS,2006,DHS,Higher,3,1,57.0,287.0,1,None,None,None
+PR_DESL_W_WNM,NM,Namibia,NM2013DHS,2013,DHS,No education,0,0,60.0,313.0,1,None,None,None
+PR_DESL_W_WNM,NM,Namibia,NM2013DHS,2013,DHS,Primary,1,1,57.6,822.0,1,None,None,None
+PR_DESL_W_WNM,NM,Namibia,NM2013DHS,2013,DHS,Secondary,2,1,49.8,1938.0,1,None,None,None
+PR_DESL_W_WNM,NM,Namibia,NM2013DHS,2013,DHS,Higher,3,1,46.8,293.0,1,None,None,None
+PR_DESL_W_WNM,NP,Nepal,NP1996DHS,1996,DHS,No education,0,0,59.7,6337.0,1,None,None,None
+PR_DESL_W_WNM,NP,Nepal,NP1996DHS,1996,DHS,Primary,1,1,55.9,864.0,1,None,None,None
+PR_DESL_W_WNM,NP,Nepal,NP1996DHS,1996,DHS,Secondary,2,1,53.2,667.0,1,None,None,None
+PR_DESL_W_WNM,NP,Nepal,NP1996DHS,1996,DHS,Higher,3,1,56.5,110.0,1,None,None,None
+PR_DESL_W_WNM,NP,Nepal,NP2001DHS,2001,DHS,No education,0,0,67.7,5946.0,1,None,None,None
+PR_DESL_W_WNM,NP,Nepal,NP2001DHS,2001,DHS,Primary,1,1,61.1,1227.0,1,None,None,None
+PR_DESL_W_WNM,NP,Nepal,NP2001DHS,2001,DHS,Secondary,2,1,60.5,1040.0,1,None,None,None
+PR_DESL_W_WNM,NP,Nepal,NP2001DHS,2001,DHS,Higher,3,1,49.7,111.0,1,None,None,None
+PR_DESL_W_WNM,NP,Nepal,NP2006DHS,2006,DHS,No education,0,0,76.4,5070.0,1,None,None,None
+PR_DESL_W_WNM,NP,Nepal,NP2006DHS,2006,DHS,Primary,1,1,64.5,1413.0,1,None,None,None
+PR_DESL_W_WNM,NP,Nepal,NP2006DHS,2006,DHS,Secondary,2,1,60.1,1520.0,1,None,None,None
+PR_DESL_W_WNM,NP,Nepal,NP2006DHS,2006,DHS,Higher,3,1,59.7,241.0,1,None,None,None
+PR_DESL_W_WNM,NP,Nepal,NP2011DHS,2011,DHS,No education,0,0,81.2,4445.0,1,None,None,None
+PR_DESL_W_WNM,NP,Nepal,NP2011DHS,2011,DHS,Primary,1,1,72.7,1791.0,1,None,None,None
+PR_DESL_W_WNM,NP,Nepal,NP2011DHS,2011,DHS,Secondary,2,1,61.7,2621.0,1,None,None,None
+PR_DESL_W_WNM,NP,Nepal,NP2011DHS,2011,DHS,Higher,3,1,55.4,602.0,1,None,None,None
+PR_DESL_W_WNM,NP,Nepal,NP2016DHS,2016,DHS,No education,0,0,83.2,4052.0,1,None,None,None
+PR_DESL_W_WNM,NP,Nepal,NP2016DHS,2016,DHS,Primary,1,1,72.5,1812.0,1,None,None,None
+PR_DESL_W_WNM,NP,Nepal,NP2016DHS,2016,DHS,Secondary,2,1,59.1,2938.0,1,None,None,None
+PR_DESL_W_WNM,NP,Nepal,NP2016DHS,2016,DHS,Higher,3,1,51.8,1102.0,1,None,None,None
+PR_DESL_W_WNM,NP,Nepal,NP2022DHS,2022,DHS,No education,0,0,82.2,3691.0,1,None,None,None
+PR_DESL_W_WNM,NP,Nepal,NP2022DHS,2022,DHS,Primary,1,1,71.4,3774.0,1,None,None,None
+PR_DESL_W_WNM,NP,Nepal,NP2022DHS,2022,DHS,Secondary,2,1,56.9,3438.0,1,None,None,None
+PR_DESL_W_WNM,NP,Nepal,NP2022DHS,2022,DHS,Higher,3,1,55.3,355.0,1,None,None,None
+PR_DESL_W_WNM,PE,Peru,PE1986DHS,1986,DHS,No education,0,0,83.6,446.0,1,None,None,None
+PR_DESL_W_WNM,PE,Peru,PE1986DHS,1986,DHS,Primary,1,1,79.4,1299.0,1,None,None,None
+PR_DESL_W_WNM,PE,Peru,PE1986DHS,1986,DHS,Secondary,2,1,66.5,938.0,1,None,None,None
+PR_DESL_W_WNM,PE,Peru,PE1986DHS,1986,DHS,Higher,3,1,62.7,217.0,1,None,None,None
+PR_DESL_W_WNM,PE,Peru,PE1992DHS,1992,DHS,No education,0,0,83.4,871.0,1,None,None,None
+PR_DESL_W_WNM,PE,Peru,PE1992DHS,1992,DHS,Primary,1,1,80.0,3660.0,1,None,None,None
+PR_DESL_W_WNM,PE,Peru,PE1992DHS,1992,DHS,Secondary,2,1,67.7,3168.0,1,None,None,None
+PR_DESL_W_WNM,PE,Peru,PE1992DHS,1992,DHS,Higher,3,1,60.8,1442.0,1,None,None,None
+PR_DESL_W_WNM,PE,Peru,PE1996DHS,1996,DHS,No education,0,0,82.5,1724.0,1,None,None,None
+PR_DESL_W_WNM,PE,Peru,PE1996DHS,1996,DHS,Primary,1,1,77.8,7271.0,1,None,None,None
+PR_DESL_W_WNM,PE,Peru,PE1996DHS,1996,DHS,Secondary,2,1,64.0,6031.0,1,None,None,None
+PR_DESL_W_WNM,PE,Peru,PE1996DHS,1996,DHS,Higher,3,1,54.9,2804.0,1,None,None,None
+PR_DESL_W_WNM,PE,Peru,PE2000DHS,2000,DHS,No education,0,0,84.4,1441.0,1,None,None,None
+PR_DESL_W_WNM,PE,Peru,PE2000DHS,2000,DHS,Primary,1,1,76.3,6854.0,1,None,None,None
+PR_DESL_W_WNM,PE,Peru,PE2000DHS,2000,DHS,Secondary,2,1,60.9,5589.0,1,None,None,None
+PR_DESL_W_WNM,PE,Peru,PE2000DHS,2000,DHS,Higher,3,1,55.5,2634.0,1,None,None,None
+PR_DESL_W_WNM,PE,Peru,PE2004DHS,2004,DHS,No education,0,0,84.5,685.0,1,None,None,None
+PR_DESL_W_WNM,PE,Peru,PE2004DHS,2004,DHS,Primary,1,1,74.6,4292.0,1,None,None,None
+PR_DESL_W_WNM,PE,Peru,PE2004DHS,2004,DHS,Secondary,2,1,60.4,3980.0,1,None,None,None
+PR_DESL_W_WNM,PE,Peru,PE2004DHS,2004,DHS,Higher,3,1,53.3,2214.0,1,None,None,None
+PR_DESL_W_WNM,PE,Peru,PE2007DHS,2007,DHS,No education,0,0,85.9,625.0,1,None,None,None
+PR_DESL_W_WNM,PE,Peru,PE2007DHS,2007,DHS,Primary,1,1,75.5,4996.0,1,None,None,None
+PR_DESL_W_WNM,PE,Peru,PE2007DHS,2007,DHS,Secondary,2,1,60.8,4894.0,1,None,None,None
+PR_DESL_W_WNM,PE,Peru,PE2007DHS,2007,DHS,Higher,3,1,51.6,2905.0,1,None,None,None
+PR_DESL_W_WNM,PE,Peru,PE2009DHS,2009,DHS,No education,0,0,80.1,691.0,1,None,None,None
+PR_DESL_W_WNM,PE,Peru,PE2009DHS,2009,DHS,Primary,1,1,74.4,5280.0,1,None,None,None
+PR_DESL_W_WNM,PE,Peru,PE2009DHS,2009,DHS,Secondary,2,1,58.8,5690.0,1,None,None,None
+PR_DESL_W_WNM,PE,Peru,PE2009DHS,2009,DHS,Higher,3,1,53.6,2976.0,1,None,None,None
+PR_DESL_W_WNM,PE,Peru,PE2010DHS,2010,DHS,No education,0,0,85.5,533.0,1,None,None,None
+PR_DESL_W_WNM,PE,Peru,PE2010DHS,2010,DHS,Primary,1,1,75.3,4985.0,1,None,None,None
+PR_DESL_W_WNM,PE,Peru,PE2010DHS,2010,DHS,Secondary,2,1,60.2,5253.0,1,None,None,None
+PR_DESL_W_WNM,PE,Peru,PE2010DHS,2010,DHS,Higher,3,1,52.1,2855.0,1,None,None,None
+PR_DESL_W_WNM,PE,Peru,PE2011DHS,2011,DHS,No education,0,0,84.5,594.0,1,None,None,None
+PR_DESL_W_WNM,PE,Peru,PE2011DHS,2011,DHS,Primary,1,1,73.1,4797.0,1,None,None,None
+PR_DESL_W_WNM,PE,Peru,PE2011DHS,2011,DHS,Secondary,2,1,58.9,5240.0,1,None,None,None
+PR_DESL_W_WNM,PE,Peru,PE2011DHS,2011,DHS,Higher,3,1,52.6,2849.0,1,None,None,None
+PR_DESL_W_WNM,PE,Peru,PE2012DHS,2012,DHS,No education,0,0,80.7,565.0,1,None,None,None
+PR_DESL_W_WNM,PE,Peru,PE2012DHS,2012,DHS,Primary,1,1,74.5,4844.0,1,None,None,None
+PR_DESL_W_WNM,PE,Peru,PE2012DHS,2012,DHS,Secondary,2,1,57.0,5705.0,1,None,None,None
+PR_DESL_W_WNM,PE,Peru,PE2012DHS,2012,DHS,Higher,3,1,52.3,3121.0,1,None,None,None
+PR_DESL_W_WNM,PG,Papua New Guinea,PG2017DHS,2017,DHS,No education,0,0,43.2,2283.0,1,None,None,None
+PR_DESL_W_WNM,PG,Papua New Guinea,PG2017DHS,2017,DHS,Primary,1,1,50.7,4934.0,1,None,None,None
+PR_DESL_W_WNM,PG,Papua New Guinea,PG2017DHS,2017,DHS,Secondary,2,1,42.8,2323.0,1,None,None,None
+PR_DESL_W_WNM,PG,Papua New Guinea,PG2017DHS,2017,DHS,Higher,3,1,28.0,403.0,1,None,None,None
+PR_DESL_W_WNM,PH,Philippines,PH1993DHS,1993,DHS,No education,0,0,47.1,291.0,1,None,None,None
+PR_DESL_W_WNM,PH,Philippines,PH1993DHS,1993,DHS,Primary,1,1,70.6,3736.0,1,None,None,None
+PR_DESL_W_WNM,PH,Philippines,PH1993DHS,1993,DHS,Secondary,2,1,60.6,3049.0,1,None,None,None
+PR_DESL_W_WNM,PH,Philippines,PH1993DHS,1993,DHS,Higher,3,1,54.5,2068.0,1,None,None,None
+PR_DESL_W_WNM,PH,Philippines,PH1998DHS,1998,DHS,No education,0,0,42.7,288.0,1,None,None,None
+PR_DESL_W_WNM,PH,Philippines,PH1998DHS,1998,DHS,Primary,1,1,72.1,3082.0,1,None,None,None
+PR_DESL_W_WNM,PH,Philippines,PH1998DHS,1998,DHS,Secondary,2,1,60.4,3012.0,1,None,None,None
+PR_DESL_W_WNM,PH,Philippines,PH1998DHS,1998,DHS,Higher,3,1,53.1,2252.0,1,None,None,None
+PR_DESL_W_WNM,PH,Philippines,PH2003DHS,2003,DHS,No education,0,0,57.5,186.0,1,None,None,None
+PR_DESL_W_WNM,PH,Philippines,PH2003DHS,2003,DHS,Primary,1,1,69.6,2616.0,1,None,None,None
+PR_DESL_W_WNM,PH,Philippines,PH2003DHS,2003,DHS,Secondary,2,1,60.5,3533.0,1,None,None,None
+PR_DESL_W_WNM,PH,Philippines,PH2003DHS,2003,DHS,Higher,3,1,53.9,2429.0,1,None,None,None
+PR_DESL_W_WNM,PH,Philippines,PH2008DHS,2008,DHS,No education,0,0,60.1,176.0,1,None,None,None
+PR_DESL_W_WNM,PH,Philippines,PH2008DHS,2008,DHS,Primary,1,1,72.2,2198.0,1,None,None,None
+PR_DESL_W_WNM,PH,Philippines,PH2008DHS,2008,DHS,Secondary,2,1,62.0,3722.0,1,None,None,None
+PR_DESL_W_WNM,PH,Philippines,PH2008DHS,2008,DHS,Higher,3,1,56.2,2468.0,1,None,None,None
+PR_DESL_W_WNM,PH,Philippines,PH2013DHS,2013,DHS,No education,0,0,61.1,199.0,1,None,None,None
+PR_DESL_W_WNM,PH,Philippines,PH2013DHS,2013,DHS,Primary,1,1,71.3,2192.0,1,None,None,None
+PR_DESL_W_WNM,PH,Philippines,PH2013DHS,2013,DHS,Secondary,2,1,63.2,4554.0,1,None,None,None
+PR_DESL_W_WNM,PH,Philippines,PH2013DHS,2013,DHS,Higher,3,1,54.7,2921.0,1,None,None,None
+PR_DESL_W_WNM,PH,Philippines,PH2017DHS,2017,DHS,No education,0,0,55.1,252.0,1,None,None,None
+PR_DESL_W_WNM,PH,Philippines,PH2017DHS,2017,DHS,Primary,1,1,69.7,3156.0,1,None,None,None
+PR_DESL_W_WNM,PH,Philippines,PH2017DHS,2017,DHS,Secondary,2,1,60.6,7272.0,1,None,None,None
+PR_DESL_W_WNM,PH,Philippines,PH2017DHS,2017,DHS,Higher,3,1,54.3,4765.0,1,None,None,None
+PR_DESL_W_WNM,PH,Philippines,PH2022DHS,2022,DHS,No education,0,0,63.7,199.0,1,None,None,None
+PR_DESL_W_WNM,PH,Philippines,PH2022DHS,2022,DHS,Primary,1,1,68.0,2543.0,1,None,None,None
+PR_DESL_W_WNM,PH,Philippines,PH2022DHS,2022,DHS,Secondary,2,1,59.8,7293.0,1,None,None,None
+PR_DESL_W_WNM,PH,Philippines,PH2022DHS,2022,DHS,Higher,3,1,50.4,5487.0,1,None,None,None
+PR_DESL_W_WNM,PK,Pakistan,PK1991DHS,1991,DHS,No education,0,0,38.2,4887.0,1,None,None,None
+PR_DESL_W_WNM,PK,Pakistan,PK1991DHS,1991,DHS,Primary,1,1,42.2,574.0,1,None,None,None
+PR_DESL_W_WNM,PK,Pakistan,PK1991DHS,1991,DHS,Secondary,2,1,49.9,820.0,1,None,None,None
+PR_DESL_W_WNM,PK,Pakistan,PK1991DHS,1991,DHS,Higher,3,1,49.2,112.0,1,None,None,None
+PR_DESL_W_WNM,PK,Pakistan,PK2006DHS,2006,DHS,No education,0,0,53.9,6333.0,1,None,None,None
+PR_DESL_W_WNM,PK,Pakistan,PK2006DHS,2006,DHS,Primary,1,1,49.1,1298.0,1,None,None,None
+PR_DESL_W_WNM,PK,Pakistan,PK2006DHS,2006,DHS,Secondary,2,1,47.2,1306.0,1,None,None,None
+PR_DESL_W_WNM,PK,Pakistan,PK2006DHS,2006,DHS,Higher,3,1,43.8,643.0,1,None,None,None
+PR_DESL_W_WNM,PK,Pakistan,PK2012DHS,2012,DHS,No education,0,0,55.0,7279.0,1,None,None,None
+PR_DESL_W_WNM,PK,Pakistan,PK2012DHS,2012,DHS,Primary,1,1,50.1,1759.0,1,None,None,None
+PR_DESL_W_WNM,PK,Pakistan,PK2012DHS,2012,DHS,Secondary,2,1,45.4,2327.0,1,None,None,None
+PR_DESL_W_WNM,PK,Pakistan,PK2012DHS,2012,DHS,Higher,3,1,41.1,1645.0,1,None,None,None
+PR_DESL_W_WNM,PK,Pakistan,PK2017DHS,2017,DHS,No education,0,0,45.6,6405.0,1,None,None,None
+PR_DESL_W_WNM,PK,Pakistan,PK2017DHS,2017,DHS,Primary,1,1,45.7,1629.0,1,None,None,None
+PR_DESL_W_WNM,PK,Pakistan,PK2017DHS,2017,DHS,Secondary,2,1,41.3,2232.0,1,None,None,None
+PR_DESL_W_WNM,PK,Pakistan,PK2017DHS,2017,DHS,Higher,3,1,39.6,1636.0,1,None,None,None
+PR_DESL_W_WNM,PY,Paraguay,PY1990DHS,1990,DHS,No education,0,0,57.9,129.0,1,None,None,None
+PR_DESL_W_WNM,PY,Paraguay,PY1990DHS,1990,DHS,Primary,1,1,45.6,2564.0,1,None,None,None
+PR_DESL_W_WNM,PY,Paraguay,PY1990DHS,1990,DHS,Secondary,2,1,39.4,758.0,1,None,None,None
+PR_DESL_W_WNM,PY,Paraguay,PY1990DHS,1990,DHS,Higher,3,1,30.4,181.0,1,None,None,None
+PR_DESL_W_WNM,RW,Rwanda,RW2000DHS,2000,DHS,No education,0,0,43.3,1627.0,1,None,None,None
+PR_DESL_W_WNM,RW,Rwanda,RW2000DHS,2000,DHS,Primary,1,1,27.9,2651.0,1,None,None,None
+PR_DESL_W_WNM,RW,Rwanda,RW2000DHS,2000,DHS,Secondary,2,1,30.5,577.0,1,None,None,None
+PR_DESL_W_WNM,RW,Rwanda,RW2000DHS,2000,DHS,Higher,3,1,63.4,36.0,1,None,None,None
+PR_DESL_W_WNM,RW,Rwanda,RW2005DHS,2005,DHS,No education,0,0,48.6,1584.0,1,None,None,None
+PR_DESL_W_WNM,RW,Rwanda,RW2005DHS,2005,DHS,Primary,1,1,39.5,3335.0,1,None,None,None
+PR_DESL_W_WNM,RW,Rwanda,RW2005DHS,2005,DHS,Secondary,2,1,46.7,496.0,1,None,None,None
+PR_DESL_W_WNM,RW,Rwanda,RW2005DHS,2005,DHS,Higher,3,1,29.4,43.0,1,None,None,None
+PR_DESL_W_WNM,RW,Rwanda,RW2008DHS,2008,DHS,No education,0,0,57.2,919.0,1,None,None,None
+PR_DESL_W_WNM,RW,Rwanda,RW2008DHS,2008,DHS,Primary,1,1,45.7,2437.0,1,None,None,None
+PR_DESL_W_WNM,RW,Rwanda,RW2008DHS,2008,DHS,Secondary,2,1,51.3,354.0,1,None,None,None
+PR_DESL_W_WNM,RW,Rwanda,RW2008DHS,2008,DHS,Higher,3,1,51.8,49.0,1,None,None,None
+PR_DESL_W_WNM,RW,Rwanda,RW2010DHS,2010,DHS,No education,0,0,64.5,1318.0,1,None,None,None
+PR_DESL_W_WNM,RW,Rwanda,RW2010DHS,2010,DHS,Primary,1,1,49.9,4736.0,1,None,None,None
+PR_DESL_W_WNM,RW,Rwanda,RW2010DHS,2010,DHS,Secondary,2,1,51.8,651.0,1,None,None,None
+PR_DESL_W_WNM,RW,Rwanda,RW2010DHS,2010,DHS,Higher,3,1,45.1,129.0,1,None,None,None
+PR_DESL_W_WNM,RW,Rwanda,RW2015DHS,2015,DHS,No education,0,0,63.6,1098.0,1,None,None,None
+PR_DESL_W_WNM,RW,Rwanda,RW2015DHS,2015,DHS,Primary,1,1,47.8,4792.0,1,None,None,None
+PR_DESL_W_WNM,RW,Rwanda,RW2015DHS,2015,DHS,Secondary,2,1,33.4,766.0,1,None,None,None
+PR_DESL_W_WNM,RW,Rwanda,RW2015DHS,2015,DHS,Higher,3,1,36.9,234.0,1,None,None,None
+PR_DESL_W_WNM,RW,Rwanda,RW2019DHS,2019,DHS,No education,0,0,66.4,922.0,1,None,None,None
+PR_DESL_W_WNM,RW,Rwanda,RW2019DHS,2019,DHS,Primary,1,1,54.2,4770.0,1,None,None,None
+PR_DESL_W_WNM,RW,Rwanda,RW2019DHS,2019,DHS,Secondary,2,1,30.4,1204.0,1,None,None,None
+PR_DESL_W_WNM,RW,Rwanda,RW2019DHS,2019,DHS,Higher,3,1,36.8,394.0,1,None,None,None
+PR_DESL_W_WNM,RW,Rwanda,RW2025DHS,2025,DHS,No education,0,0,65.4,602.0,1,None,None,None
+PR_DESL_W_WNM,RW,Rwanda,RW2025DHS,2025,DHS,Primary,1,1,51.5,4511.0,1,None,None,None
+PR_DESL_W_WNM,RW,Rwanda,RW2025DHS,2025,DHS,Secondary,2,1,28.9,1870.0,1,None,None,None
+PR_DESL_W_WNM,RW,Rwanda,RW2025DHS,2025,DHS,Higher,3,1,41.0,383.0,1,None,None,None
+PR_DESL_W_WNM,SD,Sudan,SD1990DHS,1990,DHS,No education,0,0,27.1,3130.0,1,None,None,None
+PR_DESL_W_WNM,SD,Sudan,SD1990DHS,1990,DHS,Primary,1,1,29.5,1435.0,1,None,None,None
+PR_DESL_W_WNM,SD,Sudan,SD1990DHS,1990,DHS,Secondary,2,1,18.9,769.0,1,None,None,None
+PR_DESL_W_WNM,SD,Sudan,SD1990DHS,1990,DHS,Higher,3,1,27.3,66.0,1,None,None,None
+PR_DESL_W_WNM,SL,Sierra Leone,SL2008DHS,2008,DHS,No education,0,0,30.2,4016.0,1,None,None,None
+PR_DESL_W_WNM,SL,Sierra Leone,SL2008DHS,2008,DHS,Primary,1,1,29.5,618.0,1,None,None,None
+PR_DESL_W_WNM,SL,Sierra Leone,SL2008DHS,2008,DHS,Secondary,2,1,32.8,634.0,1,None,None,None
+PR_DESL_W_WNM,SL,Sierra Leone,SL2008DHS,2008,DHS,Higher,3,1,30.5,105.0,1,None,None,None
+PR_DESL_W_WNM,SL,Sierra Leone,SL2013DHS,2013,DHS,No education,0,0,28.6,7716.0,1,None,None,None
+PR_DESL_W_WNM,SL,Sierra Leone,SL2013DHS,2013,DHS,Primary,1,1,21.5,1375.0,1,None,None,None
+PR_DESL_W_WNM,SL,Sierra Leone,SL2013DHS,2013,DHS,Secondary,2,1,17.6,1469.0,1,None,None,None
+PR_DESL_W_WNM,SL,Sierra Leone,SL2013DHS,2013,DHS,Higher,3,1,32.1,194.0,1,None,None,None
+PR_DESL_W_WNM,SL,Sierra Leone,SL2019DHS,2019,DHS,No education,0,0,31.0,6338.0,1,None,None,None
+PR_DESL_W_WNM,SL,Sierra Leone,SL2019DHS,2019,DHS,Primary,1,1,22.2,1214.0,1,None,None,None
+PR_DESL_W_WNM,SL,Sierra Leone,SL2019DHS,2019,DHS,Secondary,2,1,14.7,1981.0,1,None,None,None
+PR_DESL_W_WNM,SL,Sierra Leone,SL2019DHS,2019,DHS,Higher,3,1,21.5,304.0,1,None,None,None
+PR_DESL_W_WNM,SN,Senegal,SN1997DHS,1997,DHS,No education,0,0,22.2,4861.0,1,None,None,None
+PR_DESL_W_WNM,SN,Senegal,SN1997DHS,1997,DHS,Primary,1,1,23.9,829.0,1,None,None,None
+PR_DESL_W_WNM,SN,Senegal,SN1997DHS,1997,DHS,Secondary,2,1,25.8,308.0,1,None,None,None
+PR_DESL_W_WNM,SN,Senegal,SN1997DHS,1997,DHS,Higher,3,1,54.1,32.0,1,None,None,None
+PR_DESL_W_WNM,SN,Senegal,SN2005DHS,2005,DHS,No education,0,0,21.4,7452.0,1,None,None,None
+PR_DESL_W_WNM,SN,Senegal,SN2005DHS,2005,DHS,Primary,1,1,19.6,2019.0,1,None,None,None
+PR_DESL_W_WNM,SN,Senegal,SN2005DHS,2005,DHS,Secondary,2,1,21.6,714.0,1,None,None,None
+PR_DESL_W_WNM,SN,Senegal,SN2005DHS,2005,DHS,Higher,3,1,12.6,36.0,1,None,None,None
+PR_DESL_W_WNM,SN,Senegal,SN2010DHS,2010,DHS,No education,0,0,23.0,8099.0,1,None,None,None
+PR_DESL_W_WNM,SN,Senegal,SN2010DHS,2010,DHS,Primary,1,1,18.7,1914.0,1,None,None,None
+PR_DESL_W_WNM,SN,Senegal,SN2010DHS,2010,DHS,Secondary,2,1,17.7,738.0,1,None,None,None
+PR_DESL_W_WNM,SN,Senegal,SN2010DHS,2010,DHS,Higher,3,1,19.4,53.0,1,None,None,None
+PR_DESL_W_WNM,SN,Senegal,SN2012DHS,2012,DHS,No education,0,0,23.3,4101.0,1,None,None,None
+PR_DESL_W_WNM,SN,Senegal,SN2012DHS,2012,DHS,Primary,1,1,15.9,1188.0,1,None,None,None
+PR_DESL_W_WNM,SN,Senegal,SN2012DHS,2012,DHS,Secondary,2,1,14.4,459.0,1,None,None,None
+PR_DESL_W_WNM,SN,Senegal,SN2012DHS,2012,DHS,Higher,3,1,33.5,49.0,1,None,None,None
+PR_DESL_W_WNM,SN,Senegal,SN2014DHS,2014,DHS,No education,0,0,21.4,4099.0,1,None,None,None
+PR_DESL_W_WNM,SN,Senegal,SN2014DHS,2014,DHS,Primary,1,1,18.3,1124.0,1,None,None,None
+PR_DESL_W_WNM,SN,Senegal,SN2014DHS,2014,DHS,Secondary,2,1,15.7,548.0,1,None,None,None
+PR_DESL_W_WNM,SN,Senegal,SN2014DHS,2014,DHS,Higher,3,1,13.4,49.0,1,None,None,None
+PR_DESL_W_WNM,SN,Senegal,SN2015DHS,2015,DHS,No education,0,0,19.7,4203.0,1,None,None,None
+PR_DESL_W_WNM,SN,Senegal,SN2015DHS,2015,DHS,Primary,1,1,18.1,1173.0,1,None,None,None
+PR_DESL_W_WNM,SN,Senegal,SN2015DHS,2015,DHS,Secondary,2,1,15.8,610.0,1,None,None,None
+PR_DESL_W_WNM,SN,Senegal,SN2015DHS,2015,DHS,Higher,3,1,9.2,62.0,1,None,None,None
+PR_DESL_W_WNM,SN,Senegal,SN2016DHS,2016,DHS,No education,0,0,21.5,4168.0,1,None,None,None
+PR_DESL_W_WNM,SN,Senegal,SN2016DHS,2016,DHS,Primary,1,1,16.8,1204.0,1,None,None,None
+PR_DESL_W_WNM,SN,Senegal,SN2016DHS,2016,DHS,Secondary,2,1,13.5,694.0,1,None,None,None
+PR_DESL_W_WNM,SN,Senegal,SN2016DHS,2016,DHS,Higher,3,1,27.4,81.0,1,None,None,None
+PR_DESL_W_WNM,SN,Senegal,SN2017DHS,2017,DHS,No education,0,0,22.6,7294.0,1,None,None,None
+PR_DESL_W_WNM,SN,Senegal,SN2017DHS,2017,DHS,Primary,1,1,18.3,2407.0,1,None,None,None
+PR_DESL_W_WNM,SN,Senegal,SN2017DHS,2017,DHS,Secondary,2,1,13.3,1493.0,1,None,None,None
+PR_DESL_W_WNM,SN,Senegal,SN2017DHS,2017,DHS,Higher,3,1,8.4,199.0,1,None,None,None
+PR_DESL_W_WNM,SN,Senegal,SN2018DHS,2018,DHS,No education,0,0,21.8,4108.0,1,None,None,None
+PR_DESL_W_WNM,SN,Senegal,SN2018DHS,2018,DHS,Primary,1,1,19.9,1303.0,1,None,None,None
+PR_DESL_W_WNM,SN,Senegal,SN2018DHS,2018,DHS,Secondary,2,1,11.7,876.0,1,None,None,None
+PR_DESL_W_WNM,SN,Senegal,SN2018DHS,2018,DHS,Higher,3,1,12.0,94.0,1,None,None,None
+PR_DESL_W_WNM,SN,Senegal,SN2019DHS,2019,DHS,No education,0,0,21.9,3787.0,1,None,None,None
+PR_DESL_W_WNM,SN,Senegal,SN2019DHS,2019,DHS,Primary,1,1,17.4,1158.0,1,None,None,None
+PR_DESL_W_WNM,SN,Senegal,SN2019DHS,2019,DHS,Secondary,2,1,11.8,877.0,1,None,None,None
+PR_DESL_W_WNM,SN,Senegal,SN2019DHS,2019,DHS,Higher,3,1,23.7,110.0,1,None,None,None
+PR_DESL_W_WNM,SN,Senegal,SN2023DHS,2023,DHS,No education,0,0,21.7,6562.0,1,None,None,None
+PR_DESL_W_WNM,SN,Senegal,SN2023DHS,2023,DHS,Primary,1,1,19.4,2201.0,1,None,None,None
+PR_DESL_W_WNM,SN,Senegal,SN2023DHS,2023,DHS,Secondary,2,1,10.4,2056.0,1,None,None,None
+PR_DESL_W_WNM,SN,Senegal,SN2023DHS,2023,DHS,Higher,3,1,7.3,252.0,1,None,None,None
+PR_DESL_W_WNM,SZ,Eswatini,SZ2006DHS,2006,DHS,No education,0,0,69.5,251.0,1,None,None,None
+PR_DESL_W_WNM,SZ,Eswatini,SZ2006DHS,2006,DHS,Primary,1,1,70.2,720.0,1,None,None,None
+PR_DESL_W_WNM,SZ,Eswatini,SZ2006DHS,2006,DHS,Secondary,2,1,67.0,884.0,1,None,None,None
+PR_DESL_W_WNM,SZ,Eswatini,SZ2006DHS,2006,DHS,Higher,3,1,65.2,214.0,1,None,None,None
+PR_DESL_W_WNM,TD,Chad,TD2004DHS,2004,DHS,No education,0,0,8.0,3321.0,1,None,None,None
+PR_DESL_W_WNM,TD,Chad,TD2004DHS,2004,DHS,Primary,1,1,10.1,754.0,1,None,None,None
+PR_DESL_W_WNM,TD,Chad,TD2004DHS,2004,DHS,Secondary,2,1,10.3,308.0,1,None,None,None
+PR_DESL_W_WNM,TD,Chad,TD2004DHS,2004,DHS,Higher,3,1,14.0,32.0,1,None,None,None
+PR_DESL_W_WNM,TD,Chad,TD2014DHS,2014,DHS,No education,0,0,12.3,9999.0,1,None,None,None
+PR_DESL_W_WNM,TD,Chad,TD2014DHS,2014,DHS,Primary,1,1,13.4,2335.0,1,None,None,None
+PR_DESL_W_WNM,TD,Chad,TD2014DHS,2014,DHS,Secondary,2,1,9.4,1033.0,1,None,None,None
+PR_DESL_W_WNM,TD,Chad,TD2014DHS,2014,DHS,Higher,3,1,7.1,72.0,1,None,None,None
+PR_DESL_W_WNM,TG,Togo,TG2013DHS,2013,DHS,No education,0,0,35.6,2857.0,1,None,None,None
+PR_DESL_W_WNM,TG,Togo,TG2013DHS,2013,DHS,Primary,1,1,33.7,2133.0,1,None,None,None
+PR_DESL_W_WNM,TG,Togo,TG2013DHS,2013,DHS,Secondary,2,1,24.5,1288.0,1,None,None,None
+PR_DESL_W_WNM,TG,Togo,TG2013DHS,2013,DHS,Higher,3,1,24.2,82.0,1,None,None,None
+PR_DESL_W_WNM,TH,Thailand,TH1987DHS,1987,DHS,No education,0,0,74.6,536.0,1,None,None,None
+PR_DESL_W_WNM,TH,Thailand,TH1987DHS,1987,DHS,Primary,1,1,66.9,4576.0,1,None,None,None
+PR_DESL_W_WNM,TH,Thailand,TH1987DHS,1987,DHS,Secondary,2,1,54.4,716.0,1,None,None,None
+PR_DESL_W_WNM,TH,Thailand,TH1987DHS,1987,DHS,Higher,3,1,50.8,398.0,1,None,None,None
+PR_DESL_W_WNM,TJ,Tajikistan,TJ2012DHS,2012,DHS,No education,0,0,36.5,92.0,1,None,None,None
+PR_DESL_W_WNM,TJ,Tajikistan,TJ2012DHS,2012,DHS,Primary,1,1,30.1,214.0,1,None,None,None
+PR_DESL_W_WNM,TJ,Tajikistan,TJ2012DHS,2012,DHS,Secondary,2,1,44.1,4955.0,1,None,None,None
+PR_DESL_W_WNM,TJ,Tajikistan,TJ2012DHS,2012,DHS,Higher,3,1,48.5,1127.0,1,None,None,None
+PR_DESL_W_WNM,TJ,Tajikistan,TJ2017DHS,2017,DHS,No education,0,0,32.3,131.0,1,None,None,None
+PR_DESL_W_WNM,TJ,Tajikistan,TJ2017DHS,2017,DHS,Primary,1,1,32.3,312.0,1,None,None,None
+PR_DESL_W_WNM,TJ,Tajikistan,TJ2017DHS,2017,DHS,Secondary,2,1,45.7,5593.0,1,None,None,None
+PR_DESL_W_WNM,TJ,Tajikistan,TJ2017DHS,2017,DHS,Higher,3,1,40.4,1509.0,1,None,None,None
+PR_DESL_W_WNM,TJ,Tajikistan,TJ2023DHS,2023,DHS,No education,0,0,29.8,86.0,1,None,None,None
+PR_DESL_W_WNM,TJ,Tajikistan,TJ2023DHS,2023,DHS,Primary,1,1,45.6,234.0,1,None,None,None
+PR_DESL_W_WNM,TJ,Tajikistan,TJ2023DHS,2023,DHS,Secondary,2,1,38.5,5204.0,1,None,None,None
+PR_DESL_W_WNM,TJ,Tajikistan,TJ2023DHS,2023,DHS,Higher,3,1,29.4,1679.0,1,None,None,None
+PR_DESL_W_WNM,TL,Timor-Leste,TL2009DHS,2009,DHS,No education,0,0,44.9,2977.0,1,None,None,None
+PR_DESL_W_WNM,TL,Timor-Leste,TL2009DHS,2009,DHS,Primary,1,1,36.7,2088.0,1,None,None,None
+PR_DESL_W_WNM,TL,Timor-Leste,TL2009DHS,2009,DHS,Secondary,2,1,25.6,2655.0,1,None,None,None
+PR_DESL_W_WNM,TL,Timor-Leste,TL2009DHS,2009,DHS,Higher,3,1,27.3,157.0,1,None,None,None
+PR_DESL_W_WNM,TL,Timor-Leste,TL2016DHS,2016,DHS,No education,0,0,36.9,2158.0,1,None,None,None
+PR_DESL_W_WNM,TL,Timor-Leste,TL2016DHS,2016,DHS,Primary,1,1,33.9,1451.0,1,None,None,None
+PR_DESL_W_WNM,TL,Timor-Leste,TL2016DHS,2016,DHS,Secondary,2,1,23.3,3381.0,1,None,None,None
+PR_DESL_W_WNM,TL,Timor-Leste,TL2016DHS,2016,DHS,Higher,3,1,16.4,638.0,1,None,None,None
+PR_DESL_W_WNM,TM,Turkmenistan,TM2000DHS,2000,DHS,No education,0,0,75.0,58.0,1,None,None,None
+PR_DESL_W_WNM,TM,Turkmenistan,TM2000DHS,2000,DHS,Primary,1,1,67.1,50.0,1,None,None,None
+PR_DESL_W_WNM,TM,Turkmenistan,TM2000DHS,2000,DHS,Secondary,2,1,54.5,4374.0,1,None,None,None
+PR_DESL_W_WNM,TM,Turkmenistan,TM2000DHS,2000,DHS,Higher,3,1,57.0,347.0,1,None,None,None
+PR_DESL_W_WNM,TN,Tunisia,TN1988DHS,1988,DHS,No education,0,0,64.2,2271.0,1,None,None,None
+PR_DESL_W_WNM,TN,Tunisia,TN1988DHS,1988,DHS,Primary,1,1,53.3,1251.0,1,None,None,None
+PR_DESL_W_WNM,TN,Tunisia,TN1988DHS,1988,DHS,Secondary,2,1,56.7,420.0,1,None,None,None
+PR_DESL_W_WNM,TN,Tunisia,TN1988DHS,1988,DHS,Higher,3,1,52.9,70.0,1,None,None,None
+PR_DESL_W_WNM,TR,Turkey,TR1993DHS,1993,DHS,No education,0,0,78.1,1688.0,1,None,None,None
+PR_DESL_W_WNM,TR,Turkey,TR1993DHS,1993,DHS,Primary,1,1,68.4,3508.0,1,None,None,None
+PR_DESL_W_WNM,TR,Turkey,TR1993DHS,1993,DHS,Secondary,2,1,60.8,866.0,1,None,None,None
+PR_DESL_W_WNM,TR,Turkey,TR1993DHS,1993,DHS,Higher,3,1,63.8,211.0,1,None,None,None
+PR_DESL_W_WNM,TR,Turkey,TR1998DHS,1998,DHS,No education,0,0,74.4,1350.0,1,None,None,None
+PR_DESL_W_WNM,TR,Turkey,TR1998DHS,1998,DHS,Primary,1,1,66.7,3302.0,1,None,None,None
+PR_DESL_W_WNM,TR,Turkey,TR1998DHS,1998,DHS,Secondary,2,1,58.9,991.0,1,None,None,None
+PR_DESL_W_WNM,TR,Turkey,TR1998DHS,1998,DHS,Higher,3,1,53.8,250.0,1,None,None,None
+PR_DESL_W_WNM,TR,Turkey,TR2003DHS,2003,DHS,No education,0,0,74.9,775.0,1,None,None,None
+PR_DESL_W_WNM,TR,Turkey,TR2003DHS,2003,DHS,Primary,1,1,72.3,2134.0,1,None,None,None
+PR_DESL_W_WNM,TR,Turkey,TR2003DHS,2003,DHS,Secondary,2,1,61.1,770.0,1,None,None,None
+PR_DESL_W_WNM,TR,Turkey,TR2003DHS,2003,DHS,Higher,3,1,50.5,218.0,1,None,None,None
+PR_DESL_W_WNM,TR,Turkey,TR2008DHS,2008,DHS,No education,0,0,76.9,1240.0,1,None,None,None
+PR_DESL_W_WNM,TR,Turkey,TR2008DHS,2008,DHS,Primary,1,1,72.1,3766.0,1,None,None,None
+PR_DESL_W_WNM,TR,Turkey,TR2008DHS,2008,DHS,Secondary,2,1,51.6,734.0,1,None,None,None
+PR_DESL_W_WNM,TR,Turkey,TR2008DHS,2008,DHS,Higher,3,1,55.3,1302.0,1,None,None,None
+PR_DESL_W_WNM,TR,Turkey,TR2013DHS,2013,DHS,No education,0,0,64.4,920.0,1,None,None,None
+PR_DESL_W_WNM,TR,Turkey,TR2013DHS,2013,DHS,Primary,1,1,66.2,3213.0,1,None,None,None
+PR_DESL_W_WNM,TR,Turkey,TR2013DHS,2013,DHS,Secondary,2,1,47.5,1983.0,1,None,None,None
+PR_DESL_W_WNM,TR,Turkey,TR2013DHS,2013,DHS,Higher,3,1,38.6,719.0,1,None,None,None
+PR_DESL_W_WNM,TT,Trinidad and Tobago,TT1987DHS,1987,DHS,No education,0,0,70.4,27.0,1,None,None,None
+PR_DESL_W_WNM,TT,Trinidad and Tobago,TT1987DHS,1987,DHS,Primary,1,1,67.2,1396.0,1,None,None,None
+PR_DESL_W_WNM,TT,Trinidad and Tobago,TT1987DHS,1987,DHS,Secondary,2,1,44.1,1144.0,1,None,None,None
+PR_DESL_W_WNM,TT,Trinidad and Tobago,TT1987DHS,1987,DHS,Higher,3,1,46.9,49.0,1,None,None,None
+PR_DESL_W_WNM,TZ,Tanzania,TZ2004DHS,2004,DHS,No education,0,0,27.9,2021.0,1,None,None,None
+PR_DESL_W_WNM,TZ,Tanzania,TZ2004DHS,2004,DHS,Primary,1,1,30.0,4117.0,1,None,None,None
+PR_DESL_W_WNM,TZ,Tanzania,TZ2004DHS,2004,DHS,Secondary,2,1,30.0,529.0,1,None,None,None
+PR_DESL_W_WNM,TZ,Tanzania,TZ2004DHS,2004,DHS,Higher,3,1,37.5,119.0,1,None,None,None
+PR_DESL_W_WNM,TZ,Tanzania,TZ2015DHS,2015,DHS,No education,0,0,29.8,1610.0,1,None,None,None
+PR_DESL_W_WNM,TZ,Tanzania,TZ2015DHS,2015,DHS,Primary,1,1,30.8,5048.0,1,None,None,None
+PR_DESL_W_WNM,TZ,Tanzania,TZ2015DHS,2015,DHS,Secondary,2,1,19.2,1453.0,1,None,None,None
+PR_DESL_W_WNM,TZ,Tanzania,TZ2015DHS,2015,DHS,Higher,3,1,41.8,78.0,1,None,None,None
+PR_DESL_W_WNM,TZ,Tanzania,TZ2022DHS,2022,DHS,No education,0,0,24.4,1857.0,1,None,None,None
+PR_DESL_W_WNM,TZ,Tanzania,TZ2022DHS,2022,DHS,Primary,1,1,25.1,4914.0,1,None,None,None
+PR_DESL_W_WNM,TZ,Tanzania,TZ2022DHS,2022,DHS,Secondary,2,1,12.6,2273.0,1,None,None,None
+PR_DESL_W_WNM,TZ,Tanzania,TZ2022DHS,2022,DHS,Higher,3,1,22.5,107.0,1,None,None,None
+PR_DESL_W_WNM,UG,Uganda,UG2000DHS,2000,DHS,No education,0,0,40.8,1138.0,1,None,None,None
+PR_DESL_W_WNM,UG,Uganda,UG2000DHS,2000,DHS,Primary,1,1,37.6,2720.0,1,None,None,None
+PR_DESL_W_WNM,UG,Uganda,UG2000DHS,2000,DHS,Secondary,2,1,37.4,629.0,1,None,None,None
+PR_DESL_W_WNM,UG,Uganda,UG2000DHS,2000,DHS,Higher,3,1,39.8,188.0,1,None,None,None
+PR_DESL_W_WNM,UG,Uganda,UG2006DHS,2006,DHS,No education,0,0,46.6,1414.0,1,None,None,None
+PR_DESL_W_WNM,UG,Uganda,UG2006DHS,2006,DHS,Primary,1,1,40.0,3135.0,1,None,None,None
+PR_DESL_W_WNM,UG,Uganda,UG2006DHS,2006,DHS,Secondary,2,1,35.2,640.0,1,None,None,None
+PR_DESL_W_WNM,UG,Uganda,UG2006DHS,2006,DHS,Higher,3,1,40.0,173.0,1,None,None,None
+PR_DESL_W_WNM,UG,Uganda,UG2011DHS,2011,DHS,No education,0,0,53.2,1037.0,1,None,None,None
+PR_DESL_W_WNM,UG,Uganda,UG2011DHS,2011,DHS,Primary,1,1,43.4,3051.0,1,None,None,None
+PR_DESL_W_WNM,UG,Uganda,UG2011DHS,2011,DHS,Secondary,2,1,31.6,980.0,1,None,None,None
+PR_DESL_W_WNM,UG,Uganda,UG2011DHS,2011,DHS,Higher,3,1,35.5,284.0,1,None,None,None
+PR_DESL_W_WNM,UG,Uganda,UG2016DHS,2016,DHS,No education,0,0,55.5,1587.0,1,None,None,None
+PR_DESL_W_WNM,UG,Uganda,UG2016DHS,2016,DHS,Primary,1,1,40.3,6904.0,1,None,None,None
+PR_DESL_W_WNM,UG,Uganda,UG2016DHS,2016,DHS,Secondary,2,1,25.5,2146.0,1,None,None,None
+PR_DESL_W_WNM,UG,Uganda,UG2016DHS,2016,DHS,Higher,3,1,26.1,742.0,1,None,None,None
+PR_DESL_W_WNM,VN,Vietnam,VN1997DHS,1997,DHS,No education,0,0,67.5,287.0,1,None,None,None
+PR_DESL_W_WNM,VN,Vietnam,VN1997DHS,1997,DHS,Primary,1,1,74.9,1429.0,1,None,None,None
+PR_DESL_W_WNM,VN,Vietnam,VN1997DHS,1997,DHS,Secondary,2,1,72.2,3506.0,1,None,None,None
+PR_DESL_W_WNM,VN,Vietnam,VN1997DHS,1997,DHS,Higher,3,1,75.3,109.0,1,None,None,None
+PR_DESL_W_WNM,VN,Vietnam,VN2002DHS,2002,DHS,No education,0,0,77.7,331.0,1,None,None,None
+PR_DESL_W_WNM,VN,Vietnam,VN2002DHS,2002,DHS,Primary,1,1,75.6,1423.0,1,None,None,None
+PR_DESL_W_WNM,VN,Vietnam,VN2002DHS,2002,DHS,Secondary,2,1,75.8,3378.0,1,None,None,None
+PR_DESL_W_WNM,VN,Vietnam,VN2002DHS,2002,DHS,Higher,3,1,64.2,209.0,1,None,None,None
+PR_DESL_W_WNM,YE,Yemen,YE1991DHS,1991,DHS,No education,0,0,36.3,4523.0,1,None,None,None
+PR_DESL_W_WNM,YE,Yemen,YE1991DHS,1991,DHS,Primary,1,1,31.5,613.0,1,None,None,None
+PR_DESL_W_WNM,YE,Yemen,YE1991DHS,1991,DHS,Secondary,2,1,37.2,141.0,1,None,None,None
+PR_DESL_W_WNM,YE,Yemen,YE1991DHS,1991,DHS,Higher,3,1,45.0,55.0,1,None,None,None
+PR_DESL_W_WNM,YE,Yemen,YE1997DHS,1997,DHS,No education,0,0,51.7,7698.0,1,None,None,None
+PR_DESL_W_WNM,YE,Yemen,YE1997DHS,1997,DHS,Primary,1,1,39.2,1209.0,1,None,None,None
+PR_DESL_W_WNM,YE,Yemen,YE1997DHS,1997,DHS,Secondary,2,1,37.3,734.0,1,None,None,None
+PR_DESL_W_WNM,YE,Yemen,YE1997DHS,1997,DHS,Higher,3,1,37.8,109.0,1,None,None,None
+PR_DESL_W_WNM,YE,Yemen,YE2013DHS,2013,DHS,No education,0,0,50.3,8539.0,1,None,None,None
+PR_DESL_W_WNM,YE,Yemen,YE2013DHS,2013,DHS,Primary,1,1,32.4,5164.0,1,None,None,None
+PR_DESL_W_WNM,YE,Yemen,YE2013DHS,2013,DHS,Secondary,2,1,26.4,1423.0,1,None,None,None
+PR_DESL_W_WNM,YE,Yemen,YE2013DHS,2013,DHS,Higher,3,1,29.2,523.0,1,None,None,None
+PR_DESL_W_WNM,ZA,South Africa,ZA1998DHS,1998,DHS,No education,0,0,63.9,520.0,1,None,None,None
+PR_DESL_W_WNM,ZA,South Africa,ZA1998DHS,1998,DHS,Primary,1,1,62.6,1568.0,1,None,None,None
+PR_DESL_W_WNM,ZA,South Africa,ZA1998DHS,1998,DHS,Secondary,2,1,60.5,2452.0,1,None,None,None
+PR_DESL_W_WNM,ZA,South Africa,ZA1998DHS,1998,DHS,Higher,3,1,61.4,408.0,1,None,None,None
+PR_DESL_W_WNM,ZA,South Africa,ZA2016DHS,2016,DHS,No education,0,0,78.6,91.0,1,None,None,None
+PR_DESL_W_WNM,ZA,South Africa,ZA2016DHS,2016,DHS,Primary,1,1,59.2,361.0,1,None,None,None
+PR_DESL_W_WNM,ZA,South Africa,ZA2016DHS,2016,DHS,Secondary,2,1,57.4,2013.0,1,None,None,None
+PR_DESL_W_WNM,ZA,South Africa,ZA2016DHS,2016,DHS,Higher,3,1,55.9,376.0,1,None,None,None
+PR_DESL_W_WNM,ZM,Zambia,ZM1992DHS,1992,DHS,No education,0,0,29.3,903.0,1,None,None,None
+PR_DESL_W_WNM,ZM,Zambia,ZM1992DHS,1992,DHS,Primary,1,1,21.5,2768.0,1,None,None,None
+PR_DESL_W_WNM,ZM,Zambia,ZM1992DHS,1992,DHS,Secondary,2,1,25.0,708.0,1,None,None,None
+PR_DESL_W_WNM,ZM,Zambia,ZM1992DHS,1992,DHS,Higher,3,1,43.8,87.0,1,None,None,None
+PR_DESL_W_WNM,ZM,Zambia,ZM1996DHS,1996,DHS,No education,0,0,28.7,877.0,1,None,None,None
+PR_DESL_W_WNM,ZM,Zambia,ZM1996DHS,1996,DHS,Primary,1,1,26.4,3139.0,1,None,None,None
+PR_DESL_W_WNM,ZM,Zambia,ZM1996DHS,1996,DHS,Secondary,2,1,32.1,827.0,1,None,None,None
+PR_DESL_W_WNM,ZM,Zambia,ZM1996DHS,1996,DHS,Higher,3,1,52.2,106.0,1,None,None,None
+PR_DESL_W_WNM,ZM,Zambia,ZM2002DHS,2002,DHS,No education,0,0,30.9,727.0,1,None,None,None
+PR_DESL_W_WNM,ZM,Zambia,ZM2002DHS,2002,DHS,Primary,1,1,35.0,2969.0,1,None,None,None
+PR_DESL_W_WNM,ZM,Zambia,ZM2002DHS,2002,DHS,Secondary,2,1,38.1,925.0,1,None,None,None
+PR_DESL_W_WNM,ZM,Zambia,ZM2002DHS,2002,DHS,Higher,3,1,54.0,110.0,1,None,None,None
+PR_DESL_W_WNM,ZM,Zambia,ZM2007DHS,2007,DHS,No education,0,0,37.5,558.0,1,None,None,None
+PR_DESL_W_WNM,ZM,Zambia,ZM2007DHS,2007,DHS,Primary,1,1,35.3,2596.0,1,None,None,None
+PR_DESL_W_WNM,ZM,Zambia,ZM2007DHS,2007,DHS,Secondary,2,1,35.3,986.0,1,None,None,None
+PR_DESL_W_WNM,ZM,Zambia,ZM2007DHS,2007,DHS,Higher,3,1,43.5,176.0,1,None,None,None
+PR_DESL_W_WNM,ZM,Zambia,ZM2013DHS,2013,DHS,No education,0,0,42.1,1054.0,1,None,None,None
+PR_DESL_W_WNM,ZM,Zambia,ZM2013DHS,2013,DHS,Primary,1,1,39.3,5320.0,1,None,None,None
+PR_DESL_W_WNM,ZM,Zambia,ZM2013DHS,2013,DHS,Secondary,2,1,30.7,2796.0,1,None,None,None
+PR_DESL_W_WNM,ZM,Zambia,ZM2013DHS,2013,DHS,Higher,3,1,37.0,472.0,1,None,None,None
+PR_DESL_W_WNM,ZM,Zambia,ZM2018DHS,2018,DHS,No education,0,0,47.3,804.0,1,None,None,None
+PR_DESL_W_WNM,ZM,Zambia,ZM2018DHS,2018,DHS,Primary,1,1,40.8,3956.0,1,None,None,None
+PR_DESL_W_WNM,ZM,Zambia,ZM2018DHS,2018,DHS,Secondary,2,1,29.8,2419.0,1,None,None,None
+PR_DESL_W_WNM,ZM,Zambia,ZM2018DHS,2018,DHS,Higher,3,1,37.9,418.0,1,None,None,None
+PR_DESL_W_WNM,ZM,Zambia,ZM2024DHS,2024,DHS,No education,0,0,44.9,653.0,1,None,None,None
+PR_DESL_W_WNM,ZM,Zambia,ZM2024DHS,2024,DHS,Primary,1,1,39.7,3614.0,1,None,None,None
+PR_DESL_W_WNM,ZM,Zambia,ZM2024DHS,2024,DHS,Secondary,2,1,27.8,2709.0,1,None,None,None
+PR_DESL_W_WNM,ZM,Zambia,ZM2024DHS,2024,DHS,Higher,3,1,38.2,481.0,1,None,None,None
+PR_DESL_W_WNM,ZW,Zimbabwe,ZW1994DHS,1994,DHS,No education,0,0,45.6,580.0,1,None,None,None
+PR_DESL_W_WNM,ZW,Zimbabwe,ZW1994DHS,1994,DHS,Primary,1,1,42.9,2032.0,1,None,None,None
+PR_DESL_W_WNM,ZW,Zimbabwe,ZW1994DHS,1994,DHS,Secondary,2,1,26.7,1108.0,1,None,None,None
+PR_DESL_W_WNM,ZW,Zimbabwe,ZW1994DHS,1994,DHS,Higher,3,1,29.2,57.0,1,None,None,None
+PR_DESL_W_WNM,ZW,Zimbabwe,ZW1999DHS,1999,DHS,No education,0,0,53.1,345.0,1,None,None,None
+PR_DESL_W_WNM,ZW,Zimbabwe,ZW1999DHS,1999,DHS,Primary,1,1,45.9,1732.0,1,None,None,None
+PR_DESL_W_WNM,ZW,Zimbabwe,ZW1999DHS,1999,DHS,Secondary,2,1,32.8,1378.0,1,None,None,None
+PR_DESL_W_WNM,ZW,Zimbabwe,ZW1999DHS,1999,DHS,Higher,3,1,43.2,98.0,1,None,None,None
+PR_DESL_W_WNM,ZW,Zimbabwe,ZW2005DHS,2005,DHS,No education,0,0,54.8,270.0,1,None,None,None
+PR_DESL_W_WNM,ZW,Zimbabwe,ZW2005DHS,2005,DHS,Primary,1,1,45.7,1955.0,1,None,None,None
+PR_DESL_W_WNM,ZW,Zimbabwe,ZW2005DHS,2005,DHS,Secondary,2,1,41.9,2730.0,1,None,None,None
+PR_DESL_W_WNM,ZW,Zimbabwe,ZW2005DHS,2005,DHS,Higher,3,1,54.3,163.0,1,None,None,None
+PR_DESL_W_WNM,ZW,Zimbabwe,ZW2010DHS,2010,DHS,No education,0,0,60.5,160.0,1,None,None,None
+PR_DESL_W_WNM,ZW,Zimbabwe,ZW2010DHS,2010,DHS,Primary,1,1,46.5,1835.0,1,None,None,None
+PR_DESL_W_WNM,ZW,Zimbabwe,ZW2010DHS,2010,DHS,Secondary,2,1,35.8,3367.0,1,None,None,None
+PR_DESL_W_WNM,ZW,Zimbabwe,ZW2010DHS,2010,DHS,Higher,3,1,49.4,216.0,1,None,None,None
+PR_DESL_W_WNM,ZW,Zimbabwe,ZW2015DHS,2015,DHS,No education,0,0,54.0,71.0,1,None,None,None
+PR_DESL_W_WNM,ZW,Zimbabwe,ZW2015DHS,2015,DHS,Primary,1,1,41.9,1657.0,1,None,None,None
+PR_DESL_W_WNM,ZW,Zimbabwe,ZW2015DHS,2015,DHS,Secondary,2,1,39.0,3802.0,1,None,None,None
+PR_DESL_W_WNM,ZW,Zimbabwe,ZW2015DHS,2015,DHS,Higher,3,1,50.3,485.0,1,None,None,None
