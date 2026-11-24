@@ -1,0 +1,27 @@
+{
+ "label": "Inputs for the equation suite (provenance-labelled)",
+ "long_run_panel.csv": {
+  "source": "research/q2-pathways-2026-11-25 @ 9a4f586, data/long_run_panel.csv",
+  "tier": "OBSERVED/RECONSTRUCTED (schooling/income/urban reconstructed; observed TFR 1950+; effective fertility reconstructed)",
+  "sha256": "cd30d7ea7beb77b63de092c53f9b143065b94651f1ac95535ac70eebb3280f2d",
+  "used_by": [
+   "eq07_inequality_dashboard (descriptive dashboard check)"
+  ]
+ },
+ "x4_panel.csv": {
+  "source": "research/masseng-staging-x2-2026-11-24 @ f592bae, x4_input/x4_panel.csv",
+  "tier": "OBSERVED AGGREGATE (WDI/UIS national series)",
+  "sha256": "01590120eeaab9bd2ebbc0b6835afbb4d63619ebed4fd8518920b4bfb6a569e5",
+  "used_by": [
+   "eq08_growth (descriptive cross-section)"
+  ]
+ },
+ "bray_targets.json": {
+  "source": "research/shadow-equations-2026-11-25 @ fdc8da0",
+  "tier": "LITERATURE_TARGETS (Bray six-school checks; not repo data)",
+  "sha256": "15ebc84e550cddea10a8650c6e619c2c97174668c4b3a4d2b261c0e01aa1b715",
+  "used_by": [
+   "eq10_tutoring_shadow (external check)"
+  ]
+ }
+}
