@@ -184,3 +184,32 @@ ambiguities in §3–§4; it does not change any PASS/FAIL rule, data source, or
    (robustness).
 
 No other change.
+
+---
+
+## Amendment 02 — identified fixed-effect cells and transform details (dated 2026-11-25, before any model run)
+
+Written before `scripts/observed_core.py` was executed. No PASS/FAIL rule or data source changes.
+
+1. **FE cells must be identified on the test rows.** Some cells named in Amendment 01 cannot be estimated
+   for out-of-period test rows (year/decade dummies for years not in the training block). The pre-declared
+   FE multiverse is therefore:
+   - LOO and leave-region-out folds (all years present in training): **no FE**, **year FE**, **decade FE**,
+     **region×decade FE**.
+   - Time blocks (future test years): **country FE**, **country FE + region FE**, **country FE + linear
+     year trend**, **country FE + region-specific linear year trends**. (Continuous trends extrapolate;
+     year/decade dummies would require an unseen level.)
+   - Transmission: **country + decade FE** (baseline) and **country + region×decade FE** (robustness).
+2. **Forms.** For every cell, three transforms are run and reported separately: (a) **level**; (b) **log**
+   of the outcome (only cells where every training outcome > 0); (c) **logit** of the outcome/100 for
+   share outcomes (clipped to (0.001, 0.999) on the training data; cells with no rows strictly inside the
+   open interval are skipped and counted). Predicted values are back-transformed and clipped to the
+   indicator's admissible range before scoring: enrolment ratios to [0, 150]; completion and PTR to
+   [0, 100].
+3. **Fold aggregation.** Fold-level and pooled-test results are both written. The pre-declared PASS rule is
+   applied to the pooled test rows across the 5 LOO folds, together with the share of folds won; leave-
+   region-out and time-block results are reported as robustness, not used for PASS/FAIL.
+4. **Multiverse aggregation.** Robustness shares are computed over all *identified* cells for the outcome
+   (any split, FE, controls, form) that produced a finite prediction, with N and skipped cells reported.
+
+No other change.
