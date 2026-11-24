@@ -13,7 +13,7 @@ import numpy as np
 HERE = os.path.dirname(os.path.abspath(__file__))
 AXES = ["afford", "supply", "learning", "gates", "jobs", "rural"]
 OUTCOMES = ["completion_primary", "completion_lower", "completion_upper", "completion_tertiary",
-            "q_pub", "formal_share_gdp", "edu_gdp", "tut_rate", "mpl_primary",
+            "q_pub", "formal_share_gdp", "formal_rate", "skill_premium", "edu_gdp", "tut_rate", "mpl_primary",
             "parity_location_lower", "parity_wealth_lower"]
 
 
@@ -45,6 +45,8 @@ def ranges_overlap(values, axis_vals, q=(5, 95)):
         if len(v) < 5:
             continue
         rng[level] = (float(np.percentile(v, q[0])), float(np.percentile(v, q[1])))
+    if len(rng) < 2:
+        return float("nan")
     worst = 1.0
     for i, a in enumerate(sorted(rng)):
         for b in sorted(rng)[i + 1:]:

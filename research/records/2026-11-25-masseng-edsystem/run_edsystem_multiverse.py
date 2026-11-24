@@ -111,13 +111,16 @@ def one(task):
     mods, over = combo_params(combo, seed)
     e = worlds.make("formal_loop", mods=mods, **over)
     out = e.run()
-    k = e.kids
-    y = np.asarray(k["y"], float)
-    cuts = np.quantile(y, [0.2, 0.4, 0.6, 0.8])
+    # NEON-AUDIT FIX (2026-11-25): core.step purges exiting children into e.exits after moving them out of
+    # e.kids; read the exit records (e.X) rather than the emptied roster.
+    X = e.X
+    keep = np.asarray(X["exit_year"], int) >= 35
+    y = np.asarray(X["y"], float)[keep]
+    cuts = np.quantile(y, [0.2, 0.4, 0.6, 0.8]) if len(y) else np.array([0, 0, 0, 0])
     qb = np.searchsorted(cuts, y, side="right")
-    started = np.asarray(k["started"], bool)
-    reason = np.asarray(k["reason"], int)
-    urban = np.asarray(k["urban"], bool)
+    started = np.asarray(X["started"], bool)[keep]
+    reason = np.asarray(X["reason"], int)[keep]
+    urban = np.asarray(X["urban"], bool)[keep]
     rec = {"combo_index": ci, "combo": list(combo), "seed": seed,
            "metrics": {m: clean(out.get(m)) for m in SCALARS + EXTRA},
            "arrays": {m: clean(out.get(m)) for m in ARRAYS},
