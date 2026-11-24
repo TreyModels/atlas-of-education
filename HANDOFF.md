@@ -66,12 +66,12 @@ Six tasks were launched in the closing session; check whether their branches hav
 - **Micro tie-breaker observables** (un-data) — `research/suite-tiebreakers-2026-11-24`.
 - **DHS Individual Recode acquisition attempt** (multiverse-400) — `research/dhs-acquisition-2026-11-24` (the individual test is the biggest available upgrade; files are login-gated, so this is an access-path job, not a scraper).
 - **Codex-wave synthesis + dashboard update** (methods-paper) — `research/codex-wave-synthesis-2026-11-24`.
-- **CUDA → Apple Silicon port** (cuda-scale) — `research/apple-silicon-gpu-2026-11-24` (pre-registration at 3d65715; builds `gpu_compat.py` on MLX/MPS with NumPy fallback, fixed-seed equivalence tests, smoke run).
+- **CUDA → Apple Silicon port** (cuda-scale) — **DONE at `fd933d9`** (`research/apple-silicon-gpu-2026-11-24`; pre-reg `3d65715`). `gpu_compat.py` reproduces the exact CuPy subset, `shim/cupy/__init__.py` lets the upstream scripts run byte-for-byte unmodified, `kernels_np_mlx.py` transcribes the suite's one CUDA kernel (`sim_step`) line by line in NumPy and MLX, and embedded `cp.RawModule` CUDA C is recognised by source fingerprint (arbitrary CUDA raises `PortabilityError` — tested). Backend: MLX 0.32.4 on M1; NumPy fallback verified; PyTorch/MPS not installed (documented). RNG: Philox4x32-10 transcribed and validated; **CUDA bit-equivalence not claimed**. Equivalence: kernel NumPy vs MLX **bit-identical** (0 state mismatches), exp1 smoke 450 rows exact on state metrics and max 9.5e-7 on continuous, exp3 small-run identifiability identical — PASS. Smoke wall: NumPy 4.04 s / MLX 3.86 s; full production ran in **313 s** (exp1 7,500 rows at N=250,000, exp2, exp3 5,000 draws) and is labelled PORT-PRODUCTION, not research results. See `research/records/2026-11-24-apple-silicon-gpu/REPORT.md` and `APPLESILICON.md`.
 
 ## 7. Next three moves
 
-1. **Finish the Apple Silicon port**, then run the suite's smoke path on the Mac (exp1 --smoke, exp3 small draws); only scale if equivalence and time are acceptable.
-2. **Run exp1/exp2 on the ported backend** and check whether the four DGPs actually collapse to identical macro slopes (the wall) and whether any micro tie-breaker separates them — labelled simulation, not evidence.
+1. **Analyse the ported suite's production output** (`research/apple-silicon-gpu-2026-11-24` @ `fd933d9`, `results/`): do the four DGPs collapse to identical macro slopes (the wall), and does any micro tie-breaker separate them better than the aggregate criteria? Label it simulation, not evidence; the run is already labelled PORT-PRODUCTION.
+2. **Run exp1/exp2 sensitivity on the ported backend** where the pre-registration allows (seeds, parameter strengths), keeping the MLX×NumPy bit-identical check per run; do not claim CUDA equivalence.
 3. **DHS microdata** if obtainable: individual-level schooling→children-ever-born, cohort comparisons, and the EFR/TFR construct split as the first real micro test.
 
 ## 8. Quick sanity checks
