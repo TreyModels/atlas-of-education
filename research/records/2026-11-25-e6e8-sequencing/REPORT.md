@@ -58,6 +58,11 @@ identifiable cases, but demand-first is neither eliminated (10–24%) nor cleanl
 (another 21–43%)**; the paper's supply-led framing should be softened to "schooling and structural change move
 together, with schooling typically but not universally first." The 7% figure is not used or re-derived.
 
+**CORRECTION (see `ERRATUM.md` §A):** the "18–33% strict schooling-first" clause in the sentence above does not
+reproduce from `results/e6_summary.json`; the recomputed range is **21.5–46.3% of identifiable countries**
+(58.3–71.4% of strict orderings), and "majority strict ordering" should read "larger strict ordering". The original
+sentence is left visible.
+
 ## 2. E8 — fee-abolition event study with verified dates
 
 **Dates.** Main specification uses the 8 dates verified by the independent audit (task-49,
@@ -68,6 +73,11 @@ with source, page, quote, and conflict resolution is committed at `data/fee_date
 Ghana→2005 (national scale-up; 1997 is not a national abolition), Ethiopia→1995 (implementation; 1994 = policy
 adoption), Tanzania→2001 (PEDP launch), Malawi→1994 (elimination), Mozambique→2004 (abolition),
 Cameroon unresolved.
+
+**PROVENANCE NOTE (see `ERRATUM.md` §B):** `fee_dates.csv` is byte-identical (sha256
+`1a08d4652371f7a3c79a54725b79c48429a793e3d88252d170715018ddd8e2ab`) between `bfb8c6f` (the fee-date commit cited
+above) and the verified branch head `9a0fd69`; the papers cite `9a0fd69`. The same note applies to the citation in
+`scripts/e8_fee_event_study.py`. No data changes.
 
 **Estimator.** Callaway–Sant'Anna with universal base period g−1 and not-yet-treated controls (never-treated
 allowed), event time −5..+6, cohort-size aggregated, country-cluster bootstrap (500). TWFE event study (country

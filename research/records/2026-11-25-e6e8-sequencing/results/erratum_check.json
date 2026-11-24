@@ -1,0 +1,103 @@
+{
+ "question": "Does \"(18-33% strict schooling-first)\" reproduce from results/e6_summary.json?",
+ "answer": "NO \u2014 no denominator below yields a range whose endpoints are 18 and 33.",
+ "source": "results/e6_summary.json (E6, pre-1990 full-overlap 1900-2012 rows)",
+ "by_proxy": {
+  "ggdc_nonag_emp": {
+   "label": "GGDC non-agricultural employment",
+   "n_all": 37,
+   "n_in_window": 30,
+   "forward": 2,
+   "reverse": 5,
+   "forward_or_tie": 13,
+   "undetermined": 10,
+   "identifiable": 20,
+   "strict_orderings": 7,
+   "share_identifiable": 25.0,
+   "share_in_window": 16.67,
+   "share_all": 13.51,
+   "share_strict_only": 71.43,
+   "demand_first_share_identifiable": 10.0,
+   "weak_forward_share_in_window": 43.33
+  },
+  "urban": {
+   "label": "WDI urbanisation",
+   "n_all": 143,
+   "n_in_window": 101,
+   "forward": 10,
+   "reverse": 14,
+   "forward_or_tie": 41,
+   "undetermined": 36,
+   "identifiable": 65,
+   "strict_orderings": 24,
+   "share_identifiable": 21.54,
+   "share_in_window": 13.86,
+   "share_all": 9.79,
+   "share_strict_only": 58.33,
+   "demand_first_share_identifiable": 15.38,
+   "weak_forward_share_in_window": 40.59
+  },
+  "ind_va": {
+   "label": "WDI industry value added",
+   "n_all": 143,
+   "n_in_window": 76,
+   "forward": 13,
+   "reverse": 25,
+   "forward_or_tie": 16,
+   "undetermined": 22,
+   "identifiable": 54,
+   "strict_orderings": 38,
+   "share_identifiable": 46.3,
+   "share_in_window": 32.89,
+   "share_all": 17.48,
+   "share_strict_only": 65.79,
+   "demand_first_share_identifiable": 24.07,
+   "weak_forward_share_in_window": 21.05
+  },
+  "agri_va": {
+   "label": "WDI agricultural value added (falling)",
+   "n_all": 143,
+   "n_in_window": 83,
+   "forward": 9,
+   "reverse": 21,
+   "forward_or_tie": 18,
+   "undetermined": 35,
+   "identifiable": 48,
+   "strict_orderings": 30,
+   "share_identifiable": 43.75,
+   "share_in_window": 25.3,
+   "share_all": 14.69,
+   "share_strict_only": 70.0,
+   "demand_first_share_identifiable": 18.75,
+   "weak_forward_share_in_window": 21.69
+  }
+ },
+ "ranges": {
+  "share_identifiable": [
+   21.54,
+   46.3
+  ],
+  "share_in_window": [
+   13.86,
+   32.89
+  ],
+  "share_all": [
+   9.79,
+   17.48
+  ],
+  "share_strict_only": [
+   58.33,
+   71.43
+  ],
+  "demand_first_share_identifiable": [
+   10.0,
+   24.07
+  ],
+  "weak_forward_share_in_window": [
+   21.05,
+   43.33
+  ]
+ },
+ "corrected_reading": "Schooling-first is the larger strict ordering in all four proxies but not a majority of identifiable countries: 21.5-46.3% of identifiable countries versus demand-first 10.0-24.1%; 58.3-71.4% of strict orderings; the remainder (21-43% of in-window countries) is weak ties or left-censored. Correct the REPORT's 'majority' wording to 'larger strict ordering': it is a majority only among strict orderings (58.3-71.4%), not among identifiable countries.",
+ "reproduces": "scripts/erratum_check_e6_prose.py (this record); cross-checked by research/paper-massification-2026-11-25 @ fb9f419 scripts/verify_revision_numbers.py (21.5-46.3% of identifiable countries)."
+}

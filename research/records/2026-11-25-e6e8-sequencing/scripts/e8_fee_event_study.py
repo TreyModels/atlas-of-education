@@ -6,6 +6,10 @@ research/codex-source-verification-2026-11-25 @ bfb8c6f): MWI 1994, ETH 1995, UG
 TZA 2001, KEN 2003, MOZ 2004, GHA 2005. The 4 unresolved countries (CMR, ZMB, RWA, BDI) enter only the
 all-dates sensitivity and are flagged.
 
+Provenance note (see ERRATUM.md §B): fee_dates.csv is byte-identical (sha256
+1a08d4652371f7a3c79a54725b79c48429a793e3d88252d170715018ddd8e2ab) between bfb8c6f (the fee-date commit cited
+above) and the verified branch head 9a0fd69; the papers cite 9a0fd69. No data changes.
+
 Estimators: Callaway–Sant'Anna with universal base period g-1 and not-yet-treated controls (never-treated
 allowed), event time -5..+6, cohort-size-aggregated, country-cluster bootstrap (500). TWFE event study
 (country and year FE, binned endpoints) for comparison. Pre-trends ATT(g,g-2), ATT(g,g-3).
