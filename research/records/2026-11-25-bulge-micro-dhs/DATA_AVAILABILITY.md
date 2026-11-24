@@ -22,7 +22,7 @@ committed by design). The box contains none either. What exists is the **public 
 (`research/records/2026-11-24-dhs-acquisition/data/dhs_ir_inventory_targets.csv`, 92 files / 14 countries =
 public API metadata, committed 2026-11-24), which names the files to obtain — it is not the files.
 
-E8 target IR waves (67 rows: 54 standard-DHS + 13 MIS/AIS), extracted with a `held_on_box_or_repo = NO` column:
+E8 target IR waves (**67 rows = 48 standard-DHS + 13 MIS + 6 AIS**, independently recounted from the committed CSV), extracted with a `held_on_box_or_repo = NO` column:
 [`data/dhs_ir_target_waves_e8.csv`](data/dhs_ir_target_waves_e8.csv).
 
 | Country | t_abolition (sourced) | standard-DHS IR target waves (file names) | held? |
@@ -115,8 +115,8 @@ series exist for primary repetition, primary→secondary transition, exam-gate q
 
 ## 4. Bottom line
 
-- **DHS IR micro leg:** **NOT-ESTIMABLE** — 0 of the required 54 standard-DHS E8 IR waves are held (access
-  request not submitted), and even when acquired the IR has no direct secondary-**entry** variable (attainment
+- **DHS IR micro leg:** **NOT-ESTIMABLE** — **0/48** required standard-DHS E8 IR waves held (target set is
+  48 DHS + 13 MIS + 6 AIS = 67 rows; none present; access request not submitted), and even when acquired the IR has no direct secondary-**entry** variable (attainment
   proxy only).
 - **`t*`:** **NOT-ESTIMABLE** — `L_primary` 0/8; no in-repo source, and no web/assumed duration is substituted.
 - **LSMS-ISA tutoring spend:** **NOT-ESTIMABLE / item existence UNVERIFIED** — no LSMS-ISA data or

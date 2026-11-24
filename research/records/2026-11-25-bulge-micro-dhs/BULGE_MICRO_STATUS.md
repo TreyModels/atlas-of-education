@@ -14,7 +14,7 @@ or duration was invented.**
 | leg | verdict | decisive blocker |
 |---|---|---|
 | `t*` = `t_abolition` + `L_primary` | **NOT-ESTIMABLE (0/8)** | `L_primary` has **no in-repo source**; `t_abolition` is sourced 8/8 |
-| DHS IR micro: Q5−Q1 gap in secondary attainment by `t*` cohort | **NOT-ESTIMABLE** | 0 of 54 standard-DHS E8 IR waves held (Africa-11 request not submitted) **and** `t*` unsourced; IR also has no secondary-**entry** variable (attainment only) |
+| DHS IR micro: Q5−Q1 gap in secondary attainment by `t*` cohort | **NOT-ESTIMABLE** | **DHS IR: 0/48 held** (target set 48 DHS + 13 MIS + 6 AIS = 67 rows; Africa-11 request not submitted) **and** `t*` unsourced; IR also has no secondary-**entry** variable (attainment only) |
 | DHS IR micro: primary-attainment comparator ("6–8 y earlier") | **NOT-ESTIMABLE** | same: no IR microdata held |
 | LSMS-ISA tutoring / extra-classes / exam-prep spend (MWI, ETH, UGA, TZA) | **NOT-ESTIMABLE / item existence UNVERIFIED** | 0 LSMS-ISA files or questionnaires in holdings; no proxy permitted |
 | Pre-trends / placebo (`t*` shifted earlier) / decision rule | **cannot be computed** | properties of an estimate; no estimate exists. Reporting them as "flat"/"≈0" would be fabrication |
@@ -33,7 +33,7 @@ This matches, and extends to the micro level, the macro verdict in the Paper-#2 
 - DHS IR holdings 0: repo `git ls-files` → 0 `.dta` (DHS Terms forbid committing microdata); box scan
   (`/root/work`, `/root`) → no `.dta`/`.zip` > 1 MB; `/root/work/dhs_ir` does not exist. Only **target inventory**
   metadata exists: `research/records/2026-11-24-dhs-acquisition/data/dhs_ir_inventory_targets.csv`
-  (54 standard-DHS E8 waves among 92 files; see [`data/dhs_ir_target_waves_e8.csv`](data/dhs_ir_target_waves_e8.csv)).
+  (48 standard-DHS E8 waves + 13 MIS + 6 AIS = 67 target rows; see [`data/dhs_ir_target_waves_e8.csv`](data/dhs_ir_target_waves_e8.csv)).
 - DHS access status: Asia request "received and pending"; **Africa-11 request (contains all 8 E8) not yet
   submitted** — `research/records/2026-11-24-dhs-acquisition/application/STATUS_LOG.md`.
 - Secondary-entry variable: DHS IR has no school-entry date/age; only attained level (`v106`, `v107`, `v133`,
@@ -64,8 +64,8 @@ failed first.
 
 1. Commit a hashed `L_primary` source per E8 country/year (UIS ISCED primary duration or WB EdStats
    education-structure table, with URL + locator) → `t*` becomes computable.
-2. Submit the DHS **Africa-11** request (the 8 E8 countries), download and manifest-verify the 54 standard-DHS IR
-   files, store outside the repo.
+2. Submit the DHS **Africa-11** request (the 8 E8 countries), download and manifest-verify the **48** standard-DHS
+   IR files (67 target rows: 48 DHS + 13 MIS + 6 AIS; `data/dhs_ir_target_waves_e8.csv`), store outside the repo.
 3. LSMS-ISA: download the four countries' candidate waves + questionnaires, inspect the education module for
    out-of-pocket tutoring/extra-classes/exam-prep items, commit hashed excerpts + exact variable names; if an item
    is absent in a wave, record it as missing (do not proxy).

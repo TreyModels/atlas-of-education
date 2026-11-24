@@ -77,7 +77,7 @@ Unit: woman *i* in birth cohort *c* (5-year bins from `v011`), DHS round *r*, co
 | `t_abolition` | sourced per country | 8/8 sourced (`fee_dates.csv` @ `2d19da7`) | PASS |
 | `L_primary` | repo file stating primary-cycle length | **none in repo** | **FAIL** |
 | `t*` | = t_abolition + L_primary | **UNSOURCED 0/8** | **FAIL** |
-| DHS IR microdata | 54 standard-DHS E8 IR files obtained and manifest-verified | **0 held** (no `.dta`/`.zip` on box or repo; Africa-11 request not yet submitted) | **FAIL** |
+| DHS IR microdata | 48 standard-DHS E8 IR files obtained and manifest-verified (target CSV: 48 DHS + 13 MIS + 6 AIS = 67 rows) | **0/48 held** (no `.dta`/`.zip` on box or repo; Africa-11 request not yet submitted) | **FAIL** |
 | secondary-entry variable | direct entry timing in IR | **absent by instrument design** (attainment `v106` only) | **FAIL (definitional, logged)** |
 
 **Registered consequence.** Because the gate fails, the main specification, the pre-trends and the placebos are
@@ -88,7 +88,8 @@ pre-registered outcome, not a post-hoc excuse: the gate rule was fixed before an
 
 1. Commit a hashed `L_primary` source file per E8 country/year (e.g. UNESCO UIS ISCED duration of primary, or
    World Bank EdStats education-structure table) with source URL + locator → then `t*` is computable 8/8.
-2. Submit the DHS **Africa-11** request (contains the 8 E8 countries) and download the 54 standard-DHS IR files;
+2. Submit the DHS **Africa-11** request (contains the 8 E8 countries) and download the **48** standard-DHS IR files
+   (67 target rows total: 48 DHS + 13 MIS + 6 AIS);
    verify against `dhs_ir_inventory_targets.csv` (see `DATA_AVAILABILITY.md` §1 in the Paper-#2 micro record).
 3. Accept the definitional limit (attained secondary, not entry) or find an alternative instrument with entry
    timing; this is not fixable inside the DHS IR.
