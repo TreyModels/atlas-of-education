@@ -250,3 +250,23 @@ development–schooling gradient well (GDP and enrolment move together; structur
 secondary expansion), it will not identify what spending does, and it will not forecast future years better
 than assuming nothing changes. The missing demand, learning, gate, jobs and migration blocks are assumptions,
 not findings, and they are where the next data work has to go.
+
+## 10. Provenance note (branch history)
+
+The branch is additive from `34fd7c9`. One commit on the branch, `cfb9418` ("WIP snapshot for external code
+review: observed-core model scripts (data/ omitted); no results claimed"), was not authored by this run: it
+appears to come from an external code-review snapshot and contains **only** the data-fetch script
+(`scripts/fetch_wdi.py`), no model code and no results. It was not rewritten or removed (branch rule: additive
+only). The model code (`scripts/observed_core.py`) first appears in `dda4409`, after the pre-registration and
+all amendments; the data-fetcher is provenance plumbing, not the model. Commit order on the branch:
+
+```
+34fd7c9  base (task-41 data map)
+1f438c6  PRE_REGISTRATION
+050198c  Amendment 01
+cfb9418  external review snapshot (fetch script only; no results)  <- not authored here
+7d08105  Amendment 02
+55cd2fa  Amendment 03
+302cb43  Amendment 04 (written after a 2-cell local smoke, before the full run)
+dda4409  data + model + results + this report
+```
