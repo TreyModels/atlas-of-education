@@ -213,3 +213,29 @@ Written before `scripts/observed_core.py` was executed. No PASS/FAIL rule or dat
    (any split, FE, controls, form) that produced a finite prediction, with N and skipped cells reported.
 
 No other change.
+
+---
+
+## Amendment 03 — verdict aggregation and transmission details (dated 2026-11-25, before any model run)
+
+Written before `scripts/observed_core.py` was executed.
+
+1. **Aggregating the PASS/FAIL rule over the multiverse.** The §4 rule ("skill vs persistence > 0 in ≥60%
+   of LOO folds, overall skill vs persistence ≥ 0.05, overall skill vs trend ≥ 0") is applied **per
+   specification cell** (FE × controls × form) on the 5 LOO folds. The outcome×horizon verdict is then
+   **PASS if ≥ 50% of LOO cells meet all three conditions**; **WEAK if 20–50%**; **FAIL if < 20%** (or if
+   the pooled test skill is negative in the median cell). The cell distribution and median skill are always
+   reported alongside the verdict, so the verdict never hides a fragile result.
+2. **Transmission variables.** T1–T7 use 5-year and 10-year long differences of the named series, country FE
+   plus decade FE (baseline) or country FE plus region×decade FE (robustness). T3–T7 additionally report a
+   version controlling for Δln GDP per capita. Standard errors are clustered by country with the standard
+   small-sample correction `G/(G−1) · (N−1)/(N−K)`; dummy coefficients are not reported, only the driver.
+   A transmission sign is **robust** only if the pre-declared expected sign holds in ≥ 90% of cells with
+   p < 0.05 in at least half of those; otherwise it is reported as fragile/uncertain. Expected signs:
+   T1 +, T2 +, T3 −, T4 −, T5 −, T6 +, T7 − (T7 is reported as an association; no direction is claimed as
+   causal and its sign is not used for PASS/FAIL).
+3. **Skipped cells.** Cells with fewer than 200 training rows or fewer than 30 test rows are marked
+   `skipped` with the reason and counted; they are not silently dropped. All cells, including skipped ones,
+   appear in `results/predictive.csv`.
+
+No other change.
