@@ -197,6 +197,18 @@ therefore: **BH over 272 links certifies 35 up links; the dependence-robust BY b
 the 44 figure is an approximation using an effective number of tests, not a procedure with an FDR
 guarantee.** The committed counts were not floor-count artefacts.
 
+**Cross-reference — what changes at 1,200 draws (E1, task-46; outside Q3's scope).** The same four
+families were recomputed at 1,200 draws in `research/records/2026-11-25-e1-multiverse/` @ `7e6f7b5`
+(field source: `results/summary_by_R.json` → `families.<R>.<proc>.certified_BH` / `.certified_BY` /
+`.first_rank_BY` / `.n_floor`). The BH counts move with the draw budget: up 35 → **41**, down 19 →
+**23**, sign-flip 15 → **20**, heterogeneity 53 → **53**. BY stays 0 for up, down and sign-flip at
+1,200, but the heterogeneity family flips: BY certifies **32 heterogeneity links** at 1,200 (first BY
+rank 29; 32 links at the floor), where it certifies 0 at 400. So "BY = 0" is a property of the
+400-draw budget, not a universal property of the strict tier: at 400 no family has enough
+floor/ceiling mass to clear the dependence-robust threshold, while by 1,200 the heterogeneity family
+does. Q3 itself did not run 1,200 draws (explicitly deferred to task-46); this paragraph is a
+cross-reference, and the E1 numbers come from that record's committed field, not from Q3.
+
 ## What the multiverse can and cannot claim (restrained)
 
 - **Can claim:** with a known null or shared-trend null, the rule's false-positive rate is about 5%;
