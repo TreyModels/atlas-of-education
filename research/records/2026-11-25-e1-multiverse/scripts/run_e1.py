@@ -16,6 +16,8 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 import gm_core as g
 
+G = g.make_groupings()   # deterministic; workers inherit via fork
+
 R = int(os.environ.get("GM_R", "1200"))
 NPROC = int(os.environ.get("GM_NPROC", "8"))
 OUT = os.environ.get("GM_OUT", "/root/work/e1/out")
@@ -61,7 +63,6 @@ def job(r):
 
 
 if __name__ == "__main__":
-    G = g.make_groupings()
     meta = dict(n_groupings=len(G), cells=sum(len(x["groups"]) for x in G), NE=g.NE, C=g.C,
                 R=R, nproc=NPROC)
     print(f"{meta['n_groupings']} groupings, {meta['cells']} cells, {g.NE} edge-specs, R={R}, "

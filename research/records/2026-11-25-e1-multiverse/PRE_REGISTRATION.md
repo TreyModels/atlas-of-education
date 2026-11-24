@@ -116,4 +116,19 @@ job finishes; `REPORT.md` records the shutdown.
 
 ## Declared deviations log (append-only, filled during the work)
 
-- (to be filled)
+- **2026-11-24 13:36 UTC — panel-vintage micro-discrepancy (declared before scaling).** The real-grouping
+  pass on the new box reproduces the committed `edge_table400.csv` pooled t-statistics with
+  **max |Δt| = 3.97e-5**, median **7.54e-7** (258/544 values above 1e-6, none above 1e-4;
+  `results/panelcheck.json`). The old box/panel is unavailable (`final400.pkl` lost; box2 closed), so an
+  exact panel reproduction is impossible. **Decision: proceed with the new panel as the E1 panel, and report
+  the R=400 comparison as a reproduction-with-vintage-difference, not a bit-identical reproduction.** No
+  adjustment is applied; the discrepancy is ~4 orders of magnitude below the effect sizes at issue, and the
+  R=400 certified counts are compared directly against the committed headline. Full hashes in
+  `results/panel_hashes.txt`.
+- **2026-11-24 13:36 UTC — pilot (R=20) and runtime projection.** 21 draws in **274.8 s** wall on 8 workers
+  (mean per-draw worker wall 97.8 s; **13.08 s/draw effective**). Projected R=1200: ~15,700 s + startup
+  ≈ **4.4 h**, inside the 10 h cap, so the run scales to 1200. Determinism: replicate 7 recomputed in a fresh
+  process is **bit-identical** in z, Qp and flip. The runner was made importable by moving the deterministic
+  grouping construction to module level (job logic unchanged; determinism re-checked after the change).
+- **Compute:** CPU only (8-core cgroup); the GPU engine is not used, so no GPU batch layout applies.
+
