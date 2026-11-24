@@ -1,0 +1,31 @@
+C null {"reps": 400, "ROBUST+H_rate": 0.0, "ROBUST-HET_rate": 0.0, "ROBUST-but-GROUP_rate": 0.0, "GROUP_rate": 0.0025, "BEATS_rate": 0.04, "NONE_rate": 0.9575, "false_positive_rate": 0.0425}
+U uniform strong {"reps": 400, "ROBUST+H_rate": 0.955, "ROBUST-HET_rate": 0.01, "ROBUST-but-GROUP_rate": 0.01, "GROUP_rate": 0.0, "BEATS_rate": 0.0, "NONE_rate": 0.025, "false_negative_rate": 0.025, "correct_robust_rate": 0.965}
+B minority top third fam0 {"reps": 400, "ROBUST+H_rate": 0.4825, "ROBUST-HET_rate": 0.0, "ROBUST-but-GROUP_rate": 0.3875, "GROUP_rate": 0.0325, "BEATS_rate": 0.0, "NONE_rate": 0.0975, "false_robust_everywhere_rate": 0.4825, "planted_tag_flagged_rate": 0.42}
+D shared country trends, no effect {"reps": 400, "ROBUST+H_rate": 0.0025, "ROBUST-HET_rate": 0.0, "ROBUST-but-GROUP_rate": 0.0, "GROUP_rate": 0.0175, "BEATS_rate": 0.03, "NONE_rate": 0.95, "false_positive_rate": 0.05}
+S sign-split +/-0.25 {"reps": 400, "ROBUST+H_rate": 0.0, "ROBUST-HET_rate": 0.0, "ROBUST-but-GROUP_rate": 0.0, "GROUP_rate": 0.0325, "BEATS_rate": 0.645, "NONE_rate": 0.3225}
+ladder 0.02 0.0025 0.9725
+ladder 0.04 0.0375 0.935
+ladder 0.06 0.1925 0.785
+ladder 0.1 0.605 0.3725
+ladder 0.15 0.9575 0.03
+ladder 0.25 0.985 0.0
+grid C 80 50 0.03
+grid C 150 30 0.04
+grid C 150 50 0.02
+grid C 150 60 0.045
+grid C 220 50 0.05
+grid U 80 50 0.03
+grid U 150 30 0.105
+grid U 150 50 0.11
+grid U 150 60 0.11
+grid U 220 50 0.28
+grid B 80 50 None
+grid B 150 30 None
+grid B 150 50 None
+grid B 150 60 None
+grid B 220 50 None
+Raxis C 100 0.015
+Raxis C 400 0.03
+Raxis U 100 0.09
+Raxis U 400 0.13
+WROTE results/calibration.json

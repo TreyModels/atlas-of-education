@@ -1,0 +1,29 @@
+{
+ "benchmarks": [
+  {
+   "name": "null FP <= 5% with upper CI <= 10%",
+   "observed": "4.2% [2.7, 6.7]",
+   "passed": true
+  },
+  {
+   "name": "uniform-strong FN (NONE) <= 5%",
+   "observed": "2.5% [1.4, 4.5]",
+   "passed": true
+  },
+  {
+   "name": "minority planted-tag hit >= 80%",
+   "observed": "42.0% [37.3, 46.9]",
+   "passed": false
+  },
+  {
+   "name": "minority false-ROBUST <= 10%",
+   "observed": "48.2% [43.4, 53.1]",
+   "passed": false
+  },
+  {
+   "name": "shared-trend FP <= 5%",
+   "observed": "5.0% [3.3, 7.6]",
+   "passed": true
+  }
+ ]
+}

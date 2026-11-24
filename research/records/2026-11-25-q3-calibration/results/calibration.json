@@ -1,0 +1,1588 @@
+{
+ "design": {
+  "N": 150,
+  "T": 50,
+  "cuts": [
+   2,
+   3
+  ],
+  "R": 400,
+  "regimes_reps": 400,
+  "grid_reps": 200,
+  "seed_base": 20261125
+ },
+ "main": {
+  "C": {
+   "reps": 400,
+   "counts": {
+    "NONE": 383,
+    "BEATS": 16,
+    "GROUP": 1
+   },
+   "ROBUST+H_rate": 0.0,
+   "ROBUST+H_ci": [
+    0.0,
+    0.009512640599680667
+   ],
+   "ROBUST-HET_rate": 0.0,
+   "ROBUST-HET_ci": [
+    0.0,
+    0.009512640599680667
+   ],
+   "ROBUST-but-GROUP_rate": 0.0,
+   "ROBUST-but-GROUP_ci": [
+    0.0,
+    0.009512640599680667
+   ],
+   "GROUP_rate": 0.0025,
+   "GROUP_ci": [
+    0.00044143642943440895,
+    0.014023640967247855
+   ],
+   "BEATS_rate": 0.04,
+   "BEATS_ci": [
+    0.024768847722620668,
+    0.06398278162908555
+   ],
+   "NONE_rate": 0.9575,
+   "NONE_ci": [
+    0.9329974034029175,
+    0.9732985304483749
+   ],
+   "false_positive_rate": 0.0425,
+   "false_positive_ci": [
+    0.02670146955162519,
+    0.06700259659708263
+   ],
+   "N": 150,
+   "T": 50,
+   "R": 400,
+   "b": null,
+   "seed_base": 20261125,
+   "label": "null"
+  },
+  "U": {
+   "reps": 400,
+   "counts": {
+    "ROBUST+H": 382,
+    "NONE": 10,
+    "ROBUST-HET": 4,
+    "ROBUST-but-GROUP": 4
+   },
+   "ROBUST+H_rate": 0.955,
+   "ROBUST+H_ci": [
+    0.929994720438381,
+    0.9713487766159096
+   ],
+   "ROBUST-HET_rate": 0.01,
+   "ROBUST-HET_ci": [
+    0.0038954207932788126,
+    0.02542696699440824
+   ],
+   "ROBUST-but-GROUP_rate": 0.01,
+   "ROBUST-but-GROUP_ci": [
+    0.0038954207932788126,
+    0.02542696699440824
+   ],
+   "GROUP_rate": 0.0,
+   "GROUP_ci": [
+    0.0,
+    0.009512640599680667
+   ],
+   "BEATS_rate": 0.0,
+   "BEATS_ci": [
+    0.0,
+    0.009512640599680667
+   ],
+   "NONE_rate": 0.025,
+   "NONE_ci": [
+    0.013634943739762435,
+    0.045402064829934204
+   ],
+   "false_negative_rate": 0.025,
+   "false_negative_ci": [
+    0.013634943739762435,
+    0.045402064829934204
+   ],
+   "correct_robust_rate": 0.965,
+   "N": 150,
+   "T": 50,
+   "R": 400,
+   "b": 0.15,
+   "seed_base": 20261125,
+   "label": "uniform strong",
+   "correct_robust_ci": [
+    0.942114344143788,
+    0.9790389000985089
+   ]
+  },
+  "B": {
+   "reps": 400,
+   "counts": {
+    "ROBUST+H": 193,
+    "ROBUST-but-GROUP": 155,
+    "NONE": 39,
+    "GROUP": 13
+   },
+   "ROBUST+H_rate": 0.4825,
+   "ROBUST+H_ci": [
+    0.4339296820630707,
+    0.5314032603579181
+   ],
+   "ROBUST-HET_rate": 0.0,
+   "ROBUST-HET_ci": [
+    0.0,
+    0.009512640599680667
+   ],
+   "ROBUST-but-GROUP_rate": 0.3875,
+   "ROBUST-but-GROUP_ci": [
+    0.3410421691577642,
+    0.43609817497716397
+   ],
+   "GROUP_rate": 0.0325,
+   "GROUP_ci": [
+    0.019089659086961887,
+    0.054804659873739545
+   ],
+   "BEATS_rate": 0.0,
+   "BEATS_ci": [
+    0.0,
+    0.009512640599680667
+   ],
+   "NONE_rate": 0.0975,
+   "NONE_ci": [
+    0.07214471685094813,
+    0.1305129588317948
+   ],
+   "false_robust_everywhere_rate": 0.4825,
+   "false_robust_everywhere_ci": [
+    0.4339296820630707,
+    0.5314032603579181
+   ],
+   "N": 150,
+   "T": 50,
+   "R": 400,
+   "b": 0.4,
+   "seed_base": 20261125,
+   "planted_tag_flagged": 168,
+   "planted_tag_flagged_rate": 0.42,
+   "planted_tag_flagged_ci": [
+    0.3726168694631035,
+    0.46890515303284536
+   ],
+   "label": "minority top third fam0"
+  },
+  "D": {
+   "reps": 400,
+   "counts": {
+    "NONE": 380,
+    "BEATS": 12,
+    "ROBUST+H": 1,
+    "GROUP": 7
+   },
+   "ROBUST+H_rate": 0.0025,
+   "ROBUST+H_ci": [
+    0.00044143642943440895,
+    0.014023640967247855
+   ],
+   "ROBUST-HET_rate": 0.0,
+   "ROBUST-HET_ci": [
+    0.0,
+    0.009512640599680667
+   ],
+   "ROBUST-but-GROUP_rate": 0.0,
+   "ROBUST-but-GROUP_ci": [
+    0.0,
+    0.009512640599680667
+   ],
+   "GROUP_rate": 0.0175,
+   "GROUP_ci": [
+    0.008502182660789141,
+    0.03567751551790271
+   ],
+   "BEATS_rate": 0.03,
+   "BEATS_ci": [
+    0.017242849034032177,
+    0.05169903312966765
+   ],
+   "NONE_rate": 0.95,
+   "NONE_ci": [
+    0.9240357990869275,
+    0.9674028243733599
+   ],
+   "false_positive_rate": 0.05,
+   "false_positive_ci": [
+    0.0325971756266401,
+    0.07596420091307252
+   ],
+   "N": 150,
+   "T": 50,
+   "R": 400,
+   "b": null,
+   "seed_base": 20261125,
+   "label": "shared country trends, no effect"
+  },
+  "S": {
+   "reps": 400,
+   "counts": {
+    "BEATS": 258,
+    "NONE": 129,
+    "GROUP": 13
+   },
+   "ROBUST+H_rate": 0.0,
+   "ROBUST+H_ci": [
+    0.0,
+    0.009512640599680667
+   ],
+   "ROBUST-HET_rate": 0.0,
+   "ROBUST-HET_ci": [
+    0.0,
+    0.009512640599680667
+   ],
+   "ROBUST-but-GROUP_rate": 0.0,
+   "ROBUST-but-GROUP_ci": [
+    0.0,
+    0.009512640599680667
+   ],
+   "GROUP_rate": 0.0325,
+   "GROUP_ci": [
+    0.019089659086961887,
+    0.054804659873739545
+   ],
+   "BEATS_rate": 0.645,
+   "BEATS_ci": [
+    0.5969295604595849,
+    0.6903117737665078
+   ],
+   "NONE_rate": 0.3225,
+   "NONE_ci": [
+    0.27856718806945857,
+    0.36980979934342806
+   ],
+   "N": 150,
+   "T": 50,
+   "R": 400,
+   "b": null,
+   "seed_base": 20261125,
+   "label": "sign-split +/-0.25"
+  }
+ },
+ "strength_ladder": {
+  "0.02": {
+   "reps": 400,
+   "counts": {
+    "NONE": 389,
+    "BEATS": 9,
+    "ROBUST+H": 1,
+    "GROUP": 1
+   },
+   "ROBUST+H_rate": 0.0025,
+   "ROBUST+H_ci": [
+    0.00044143642943440895,
+    0.014023640967247855
+   ],
+   "ROBUST-HET_rate": 0.0,
+   "ROBUST-HET_ci": [
+    0.0,
+    0.009512640599680667
+   ],
+   "ROBUST-but-GROUP_rate": 0.0,
+   "ROBUST-but-GROUP_ci": [
+    0.0,
+    0.009512640599680667
+   ],
+   "GROUP_rate": 0.0025,
+   "GROUP_ci": [
+    0.00044143642943440895,
+    0.014023640967247855
+   ],
+   "BEATS_rate": 0.0225,
+   "BEATS_ci": [
+    0.011881448169963291,
+    0.04220312360273175
+   ],
+   "NONE_rate": 0.9725,
+   "NONE_ci": [
+    0.951434030711826,
+    0.984576523921476
+   ],
+   "false_negative_rate": 0.9725,
+   "false_negative_ci": [
+    0.951434030711826,
+    0.984576523921476
+   ],
+   "correct_robust_rate": 0.0025,
+   "N": 150,
+   "T": 50,
+   "R": 400,
+   "b": 0.02,
+   "seed_base": 20761145,
+   "correct_robust_ci": [
+    0.00044143642943440895,
+    0.014023640967247855
+   ]
+  },
+  "0.04": {
+   "reps": 400,
+   "counts": {
+    "NONE": 374,
+    "BEATS": 7,
+    "GROUP": 4,
+    "ROBUST+H": 15
+   },
+   "ROBUST+H_rate": 0.0375,
+   "ROBUST+H_ci": [
+    0.022854824841380277,
+    0.06094436771332434
+   ],
+   "ROBUST-HET_rate": 0.0,
+   "ROBUST-HET_ci": [
+    0.0,
+    0.009512640599680667
+   ],
+   "ROBUST-but-GROUP_rate": 0.0,
+   "ROBUST-but-GROUP_ci": [
+    0.0,
+    0.009512640599680667
+   ],
+   "GROUP_rate": 0.01,
+   "GROUP_ci": [
+    0.0038954207932788126,
+    0.02542696699440824
+   ],
+   "BEATS_rate": 0.0175,
+   "BEATS_ci": [
+    0.008502182660789141,
+    0.03567751551790271
+   ],
+   "NONE_rate": 0.935,
+   "NONE_ci": [
+    0.9064641783755448,
+    0.9552598243027332
+   ],
+   "false_negative_rate": 0.935,
+   "false_negative_ci": [
+    0.9064641783755448,
+    0.9552598243027332
+   ],
+   "correct_robust_rate": 0.0375,
+   "N": 150,
+   "T": 50,
+   "R": 400,
+   "b": 0.04,
+   "seed_base": 20761165,
+   "correct_robust_ci": [
+    0.022854824841380277,
+    0.06094436771332434
+   ]
+  },
+  "0.06": {
+   "reps": 400,
+   "counts": {
+    "NONE": 314,
+    "ROBUST+H": 76,
+    "ROBUST-but-GROUP": 1,
+    "BEATS": 5,
+    "GROUP": 3,
+    "ROBUST-HET": 1
+   },
+   "ROBUST+H_rate": 0.19,
+   "ROBUST+H_ci": [
+    0.15457325560638852,
+    0.23132458156541352
+   ],
+   "ROBUST-HET_rate": 0.0025,
+   "ROBUST-HET_ci": [
+    0.00044143642943440895,
+    0.014023640967247855
+   ],
+   "ROBUST-but-GROUP_rate": 0.0025,
+   "ROBUST-but-GROUP_ci": [
+    0.00044143642943440895,
+    0.014023640967247855
+   ],
+   "GROUP_rate": 0.0075,
+   "GROUP_ci": [
+    0.0025538429629852373,
+    0.02181610802770022
+   ],
+   "BEATS_rate": 0.0125,
+   "BEATS_ci": [
+    0.005350671853550634,
+    0.02892415273113802
+   ],
+   "NONE_rate": 0.785,
+   "NONE_ci": [
+    0.7421286435160355,
+    0.8224491513421466
+   ],
+   "false_negative_rate": 0.785,
+   "false_negative_ci": [
+    0.7421286435160355,
+    0.8224491513421466
+   ],
+   "correct_robust_rate": 0.1925,
+   "N": 150,
+   "T": 50,
+   "R": 400,
+   "b": 0.06,
+   "seed_base": 20761185,
+   "correct_robust_ci": [
+    0.15686042573701753,
+    0.2339898482317861
+   ]
+  },
+  "0.1": {
+   "reps": 400,
+   "counts": {
+    "NONE": 149,
+    "ROBUST+H": 240,
+    "BEATS": 2,
+    "ROBUST-but-GROUP": 2,
+    "ROBUST-HET": 3,
+    "GROUP": 4
+   },
+   "ROBUST+H_rate": 0.6,
+   "ROBUST+H_ci": [
+    0.5512581652462732,
+    0.6468393066337906
+   ],
+   "ROBUST-HET_rate": 0.0075,
+   "ROBUST-HET_ci": [
+    0.0025538429629852373,
+    0.02181610802770022
+   ],
+   "ROBUST-but-GROUP_rate": 0.005,
+   "ROBUST-but-GROUP_ci": [
+    0.0013722242215711469,
+    0.018045289972112716
+   ],
+   "GROUP_rate": 0.01,
+   "GROUP_ci": [
+    0.0038954207932788126,
+    0.02542696699440824
+   ],
+   "BEATS_rate": 0.005,
+   "BEATS_ci": [
+    0.0013722242215711469,
+    0.018045289972112716
+   ],
+   "NONE_rate": 0.3725,
+   "NONE_ci": [
+    0.32654304802813294,
+    0.4208826753247856
+   ],
+   "false_negative_rate": 0.3725,
+   "false_negative_ci": [
+    0.32654304802813294,
+    0.4208826753247856
+   ],
+   "correct_robust_rate": 0.605,
+   "N": 150,
+   "T": 50,
+   "R": 400,
+   "b": 0.1,
+   "seed_base": 20761225,
+   "correct_robust_ci": [
+    0.5563117510251911,
+    0.6516905944488758
+   ]
+  },
+  "0.15": {
+   "reps": 400,
+   "counts": {
+    "ROBUST+H": 380,
+    "ROBUST-HET": 5,
+    "NONE": 12,
+    "ROBUST-but-GROUP": 3
+   },
+   "ROBUST+H_rate": 0.95,
+   "ROBUST+H_ci": [
+    0.9240357990869275,
+    0.9674028243733599
+   ],
+   "ROBUST-HET_rate": 0.0125,
+   "ROBUST-HET_ci": [
+    0.005350671853550634,
+    0.02892415273113802
+   ],
+   "ROBUST-but-GROUP_rate": 0.0075,
+   "ROBUST-but-GROUP_ci": [
+    0.0025538429629852373,
+    0.02181610802770022
+   ],
+   "GROUP_rate": 0.0,
+   "GROUP_ci": [
+    0.0,
+    0.009512640599680667
+   ],
+   "BEATS_rate": 0.0,
+   "BEATS_ci": [
+    0.0,
+    0.009512640599680667
+   ],
+   "NONE_rate": 0.03,
+   "NONE_ci": [
+    0.017242849034032177,
+    0.05169903312966765
+   ],
+   "false_negative_rate": 0.03,
+   "false_negative_ci": [
+    0.017242849034032177,
+    0.05169903312966765
+   ],
+   "correct_robust_rate": 0.9575,
+   "N": 150,
+   "T": 50,
+   "R": 400,
+   "b": 0.15,
+   "seed_base": 20761275,
+   "correct_robust_ci": [
+    0.9329974034029175,
+    0.9732985304483749
+   ]
+  },
+  "0.25": {
+   "reps": 400,
+   "counts": {
+    "ROBUST+H": 390,
+    "ROBUST-but-GROUP": 4,
+    "ROBUST-HET": 6
+   },
+   "ROBUST+H_rate": 0.975,
+   "ROBUST+H_ci": [
+    0.9545979351700657,
+    0.9863650562602375
+   ],
+   "ROBUST-HET_rate": 0.015,
+   "ROBUST-HET_ci": [
+    0.006892197870136998,
+    0.03233506351155325
+   ],
+   "ROBUST-but-GROUP_rate": 0.01,
+   "ROBUST-but-GROUP_ci": [
+    0.0038954207932788126,
+    0.02542696699440824
+   ],
+   "GROUP_rate": 0.0,
+   "GROUP_ci": [
+    0.0,
+    0.009512640599680667
+   ],
+   "BEATS_rate": 0.0,
+   "BEATS_ci": [
+    0.0,
+    0.009512640599680667
+   ],
+   "NONE_rate": 0.0,
+   "NONE_ci": [
+    0.0,
+    0.009512640599680667
+   ],
+   "false_negative_rate": 0.0,
+   "false_negative_ci": [
+    0.0,
+    0.009512640599680667
+   ],
+   "correct_robust_rate": 0.985,
+   "N": 150,
+   "T": 50,
+   "R": 400,
+   "b": 0.25,
+   "seed_base": 20761375,
+   "correct_robust_ci": [
+    0.9676649364884468,
+    0.993107802129863
+   ]
+  }
+ },
+ "design_grid": {
+  "C_N80_T50": {
+   "reps": 200,
+   "counts": {
+    "NONE": 194,
+    "GROUP": 1,
+    "BEATS": 5
+   },
+   "ROBUST+H_rate": 0.0,
+   "ROBUST+H_ci": [
+    0.0,
+    0.018846005918320894
+   ],
+   "ROBUST-HET_rate": 0.0,
+   "ROBUST-HET_ci": [
+    0.0,
+    0.018846005918320894
+   ],
+   "ROBUST-but-GROUP_rate": 0.0,
+   "ROBUST-but-GROUP_ci": [
+    0.0,
+    0.018846005918320894
+   ],
+   "GROUP_rate": 0.005,
+   "GROUP_ci": [
+    0.0008831459893662054,
+    0.02777439986977148
+   ],
+   "BEATS_rate": 0.025,
+   "BEATS_ci": [
+    0.010724561470787711,
+    0.05717914415161715
+   ],
+   "NONE_rate": 0.97,
+   "NONE_ci": [
+    0.9361048802675267,
+    0.9861798741692518
+   ],
+   "false_positive_rate": 0.03,
+   "false_positive_ci": [
+    0.013820125830748327,
+    0.06389511973247333
+   ],
+   "N": 80,
+   "T": 50,
+   "R": 400,
+   "b": null,
+   "seed_base": 21161975
+  },
+  "C_N150_T30": {
+   "reps": 200,
+   "counts": {
+    "NONE": 192,
+    "BEATS": 7,
+    "GROUP": 1
+   },
+   "ROBUST+H_rate": 0.0,
+   "ROBUST+H_ci": [
+    0.0,
+    0.018846005918320894
+   ],
+   "ROBUST-HET_rate": 0.0,
+   "ROBUST-HET_ci": [
+    0.0,
+    0.018846005918320894
+   ],
+   "ROBUST-but-GROUP_rate": 0.0,
+   "ROBUST-but-GROUP_ci": [
+    0.0,
+    0.018846005918320894
+   ],
+   "GROUP_rate": 0.005,
+   "GROUP_ci": [
+    0.0008831459893662054,
+    0.02777439986977148
+   ],
+   "BEATS_rate": 0.035,
+   "BEATS_ci": [
+    0.017055324637357105,
+    0.07047146086668134
+   ],
+   "NONE_rate": 0.96,
+   "NONE_ci": [
+    0.9230670617058012,
+    0.9795946128493436
+   ],
+   "false_positive_rate": 0.04,
+   "false_positive_ci": [
+    0.02040538715065641,
+    0.07693293829419882
+   ],
+   "N": 150,
+   "T": 30,
+   "R": 400,
+   "b": null,
+   "seed_base": 21162655
+  },
+  "C_N150_T50": {
+   "reps": 200,
+   "counts": {
+    "NONE": 196,
+    "BEATS": 4
+   },
+   "ROBUST+H_rate": 0.0,
+   "ROBUST+H_ci": [
+    0.0,
+    0.018846005918320894
+   ],
+   "ROBUST-HET_rate": 0.0,
+   "ROBUST-HET_ci": [
+    0.0,
+    0.018846005918320894
+   ],
+   "ROBUST-but-GROUP_rate": 0.0,
+   "ROBUST-but-GROUP_ci": [
+    0.0,
+    0.018846005918320894
+   ],
+   "GROUP_rate": 0.0,
+   "GROUP_ci": [
+    0.0,
+    0.018846005918320894
+   ],
+   "BEATS_rate": 0.02,
+   "BEATS_ci": [
+    0.007804300176394188,
+    0.050287865505193874
+   ],
+   "NONE_rate": 0.98,
+   "NONE_ci": [
+    0.9497121344948062,
+    0.9921956998236058
+   ],
+   "false_positive_rate": 0.02,
+   "false_positive_ci": [
+    0.007804300176394188,
+    0.050287865505193874
+   ],
+   "N": 150,
+   "T": 50,
+   "R": 400,
+   "b": null,
+   "seed_base": 21162675
+  },
+  "C_N150_T60": {
+   "reps": 200,
+   "counts": {
+    "NONE": 191,
+    "BEATS": 7,
+    "GROUP": 2
+   },
+   "ROBUST+H_rate": 0.0,
+   "ROBUST+H_ci": [
+    0.0,
+    0.018846005918320894
+   ],
+   "ROBUST-HET_rate": 0.0,
+   "ROBUST-HET_ci": [
+    0.0,
+    0.018846005918320894
+   ],
+   "ROBUST-but-GROUP_rate": 0.0,
+   "ROBUST-but-GROUP_ci": [
+    0.0,
+    0.018846005918320894
+   ],
+   "GROUP_rate": 0.01,
+   "GROUP_ci": [
+    0.0027466006037749346,
+    0.03572248519617954
+   ],
+   "BEATS_rate": 0.035,
+   "BEATS_ci": [
+    0.017055324637357105,
+    0.07047146086668134
+   ],
+   "NONE_rate": 0.955,
+   "NONE_ci": [
+    0.9167024063390322,
+    0.9761477282752958
+   ],
+   "false_positive_rate": 0.045,
+   "false_positive_ci": [
+    0.023852271724704166,
+    0.08329759366096785
+   ],
+   "N": 150,
+   "T": 60,
+   "R": 400,
+   "b": null,
+   "seed_base": 21162685
+  },
+  "C_N220_T50": {
+   "reps": 200,
+   "counts": {
+    "NONE": 190,
+    "BEATS": 10
+   },
+   "ROBUST+H_rate": 0.0,
+   "ROBUST+H_ci": [
+    0.0,
+    0.018846005918320894
+   ],
+   "ROBUST-HET_rate": 0.0,
+   "ROBUST-HET_ci": [
+    0.0,
+    0.018846005918320894
+   ],
+   "ROBUST-but-GROUP_rate": 0.0,
+   "ROBUST-but-GROUP_ci": [
+    0.0,
+    0.018846005918320894
+   ],
+   "GROUP_rate": 0.0,
+   "GROUP_ci": [
+    0.0,
+    0.018846005918320894
+   ],
+   "BEATS_rate": 0.05,
+   "BEATS_ci": [
+    0.027382349028644986,
+    0.08957905629784384
+   ],
+   "NONE_rate": 0.95,
+   "NONE_ci": [
+    0.9104209437021562,
+    0.9726176509713551
+   ],
+   "false_positive_rate": 0.05,
+   "false_positive_ci": [
+    0.027382349028644986,
+    0.08957905629784384
+   ],
+   "N": 220,
+   "T": 50,
+   "R": 400,
+   "b": null,
+   "seed_base": 21163375
+  },
+  "U_N80_T50": {
+   "reps": 200,
+   "counts": {
+    "NONE": 190,
+    "ROBUST+H": 6,
+    "GROUP": 1,
+    "BEATS": 3
+   },
+   "ROBUST+H_rate": 0.03,
+   "ROBUST+H_ci": [
+    0.013820125830748327,
+    0.06389511973247333
+   ],
+   "ROBUST-HET_rate": 0.0,
+   "ROBUST-HET_ci": [
+    0.0,
+    0.018846005918320894
+   ],
+   "ROBUST-but-GROUP_rate": 0.0,
+   "ROBUST-but-GROUP_ci": [
+    0.0,
+    0.018846005918320894
+   ],
+   "GROUP_rate": 0.005,
+   "GROUP_ci": [
+    0.0008831459893662054,
+    0.02777439986977148
+   ],
+   "BEATS_rate": 0.015,
+   "BEATS_ci": [
+    0.005114145184492387,
+    0.043166480556278884
+   ],
+   "NONE_rate": 0.95,
+   "NONE_ci": [
+    0.9104209437021562,
+    0.9726176509713551
+   ],
+   "false_negative_rate": 0.95,
+   "false_negative_ci": [
+    0.9104209437021562,
+    0.9726176509713551
+   ],
+   "correct_robust_rate": 0.03,
+   "N": 80,
+   "T": 50,
+   "R": 400,
+   "b": 0.06,
+   "seed_base": 21161975,
+   "correct_robust_ci": [
+    0.013820125830748327,
+    0.06389511973247333
+   ]
+  },
+  "U_N150_T30": {
+   "reps": 200,
+   "counts": {
+    "NONE": 174,
+    "ROBUST+H": 21,
+    "BEATS": 4,
+    "ROBUST-HET": 1
+   },
+   "ROBUST+H_rate": 0.105,
+   "ROBUST+H_ci": [
+    0.0697069624619373,
+    0.15518138221353622
+   ],
+   "ROBUST-HET_rate": 0.005,
+   "ROBUST-HET_ci": [
+    0.0008831459893662054,
+    0.02777439986977148
+   ],
+   "ROBUST-but-GROUP_rate": 0.0,
+   "ROBUST-but-GROUP_ci": [
+    0.0,
+    0.018846005918320894
+   ],
+   "GROUP_rate": 0.0,
+   "GROUP_ci": [
+    0.0,
+    0.018846005918320894
+   ],
+   "BEATS_rate": 0.02,
+   "BEATS_ci": [
+    0.007804300176394188,
+    0.050287865505193874
+   ],
+   "NONE_rate": 0.87,
+   "NONE_ci": [
+    0.8163353692726989,
+    0.9097185863477437
+   ],
+   "false_negative_rate": 0.87,
+   "false_negative_ci": [
+    0.8163353692726989,
+    0.9097185863477437
+   ],
+   "correct_robust_rate": 0.105,
+   "N": 150,
+   "T": 30,
+   "R": 400,
+   "b": 0.06,
+   "seed_base": 21162655,
+   "correct_robust_ci": [
+    0.0697069624619373,
+    0.15518138221353622
+   ]
+  },
+  "U_N150_T50": {
+   "reps": 200,
+   "counts": {
+    "NONE": 174,
+    "ROBUST+H": 22,
+    "BEATS": 4
+   },
+   "ROBUST+H_rate": 0.11,
+   "ROBUST+H_ci": [
+    0.07377190160716048,
+    0.16092798300912986
+   ],
+   "ROBUST-HET_rate": 0.0,
+   "ROBUST-HET_ci": [
+    0.0,
+    0.018846005918320894
+   ],
+   "ROBUST-but-GROUP_rate": 0.0,
+   "ROBUST-but-GROUP_ci": [
+    0.0,
+    0.018846005918320894
+   ],
+   "GROUP_rate": 0.0,
+   "GROUP_ci": [
+    0.0,
+    0.018846005918320894
+   ],
+   "BEATS_rate": 0.02,
+   "BEATS_ci": [
+    0.007804300176394188,
+    0.050287865505193874
+   ],
+   "NONE_rate": 0.87,
+   "NONE_ci": [
+    0.8163353692726989,
+    0.9097185863477437
+   ],
+   "false_negative_rate": 0.87,
+   "false_negative_ci": [
+    0.8163353692726989,
+    0.9097185863477437
+   ],
+   "correct_robust_rate": 0.11,
+   "N": 150,
+   "T": 50,
+   "R": 400,
+   "b": 0.06,
+   "seed_base": 21162675,
+   "correct_robust_ci": [
+    0.07377190160716048,
+    0.16092798300912986
+   ]
+  },
+  "U_N150_T60": {
+   "reps": 200,
+   "counts": {
+    "NONE": 172,
+    "ROBUST+H": 22,
+    "BEATS": 5,
+    "GROUP": 1
+   },
+   "ROBUST+H_rate": 0.11,
+   "ROBUST+H_ci": [
+    0.07377190160716048,
+    0.16092798300912986
+   ],
+   "ROBUST-HET_rate": 0.0,
+   "ROBUST-HET_ci": [
+    0.0,
+    0.018846005918320894
+   ],
+   "ROBUST-but-GROUP_rate": 0.0,
+   "ROBUST-but-GROUP_ci": [
+    0.0,
+    0.018846005918320894
+   ],
+   "GROUP_rate": 0.005,
+   "GROUP_ci": [
+    0.0008831459893662054,
+    0.02777439986977148
+   ],
+   "BEATS_rate": 0.025,
+   "BEATS_ci": [
+    0.010724561470787711,
+    0.05717914415161715
+   ],
+   "NONE_rate": 0.86,
+   "NONE_ci": [
+    0.8051000619915237,
+    0.9013308137472852
+   ],
+   "false_negative_rate": 0.86,
+   "false_negative_ci": [
+    0.8051000619915237,
+    0.9013308137472852
+   ],
+   "correct_robust_rate": 0.11,
+   "N": 150,
+   "T": 60,
+   "R": 400,
+   "b": 0.06,
+   "seed_base": 21162685,
+   "correct_robust_ci": [
+    0.07377190160716048,
+    0.16092798300912986
+   ]
+  },
+  "U_N220_T50": {
+   "reps": 200,
+   "counts": {
+    "ROBUST+H": 56,
+    "BEATS": 6,
+    "NONE": 138
+   },
+   "ROBUST+H_rate": 0.28,
+   "ROBUST+H_ci": [
+    0.22236792842635128,
+    0.34592431417771
+   ],
+   "ROBUST-HET_rate": 0.0,
+   "ROBUST-HET_ci": [
+    0.0,
+    0.018846005918320894
+   ],
+   "ROBUST-but-GROUP_rate": 0.0,
+   "ROBUST-but-GROUP_ci": [
+    0.0,
+    0.018846005918320894
+   ],
+   "GROUP_rate": 0.0,
+   "GROUP_ci": [
+    0.0,
+    0.018846005918320894
+   ],
+   "BEATS_rate": 0.03,
+   "BEATS_ci": [
+    0.013820125830748327,
+    0.06389511973247333
+   ],
+   "NONE_rate": 0.69,
+   "NONE_ci": [
+    0.622826945087378,
+    0.75001157266366
+   ],
+   "false_negative_rate": 0.69,
+   "false_negative_ci": [
+    0.622826945087378,
+    0.75001157266366
+   ],
+   "correct_robust_rate": 0.28,
+   "N": 220,
+   "T": 50,
+   "R": 400,
+   "b": 0.06,
+   "seed_base": 21163375,
+   "correct_robust_ci": [
+    0.22236792842635128,
+    0.34592431417771
+   ]
+  },
+  "B_N80_T50": {
+   "reps": 200,
+   "counts": {
+    "ROBUST+H": 53,
+    "NONE": 68,
+    "GROUP": 49,
+    "BEATS": 2,
+    "ROBUST-but-GROUP": 26,
+    "ROBUST-HET": 2
+   },
+   "ROBUST+H_rate": 0.265,
+   "ROBUST+H_ci": [
+    0.20868060011609973,
+    0.33017702266551113
+   ],
+   "ROBUST-HET_rate": 0.01,
+   "ROBUST-HET_ci": [
+    0.0027466006037749346,
+    0.03572248519617954
+   ],
+   "ROBUST-but-GROUP_rate": 0.13,
+   "ROBUST-but-GROUP_ci": [
+    0.09028141365225628,
+    0.18366463072730121
+   ],
+   "GROUP_rate": 0.245,
+   "GROUP_ci": [
+    0.19056777914685893,
+    0.3090436838714848
+   ],
+   "BEATS_rate": 0.01,
+   "BEATS_ci": [
+    0.0027466006037749346,
+    0.03572248519617954
+   ],
+   "NONE_rate": 0.34,
+   "NONE_ci": [
+    0.2779143922159556,
+    0.40811632967790723
+   ],
+   "false_robust_everywhere_rate": 0.275,
+   "false_robust_everywhere_ci": [
+    0.21779604313809775,
+    0.3406846595251467
+   ],
+   "N": 80,
+   "T": 50,
+   "R": 400,
+   "b": 0.4,
+   "seed_base": 21161975,
+   "planted_tag_flagged": 75,
+   "planted_tag_flagged_rate": 0.375,
+   "planted_tag_flagged_ci": [
+    0.3108532530524515,
+    0.44385824842712884
+   ]
+  },
+  "B_N150_T30": {
+   "reps": 200,
+   "counts": {
+    "ROBUST+H": 77,
+    "GROUP": 60,
+    "ROBUST-but-GROUP": 50,
+    "NONE": 11,
+    "BEATS": 2
+   },
+   "ROBUST+H_rate": 0.385,
+   "ROBUST+H_ci": [
+    0.3203319691791383,
+    0.4540026121820756
+   ],
+   "ROBUST-HET_rate": 0.0,
+   "ROBUST-HET_ci": [
+    0.0,
+    0.018846005918320894
+   ],
+   "ROBUST-but-GROUP_rate": 0.25,
+   "ROBUST-but-GROUP_ci": [
+    0.19508076816296532,
+    0.3143422347961952
+   ],
+   "GROUP_rate": 0.3,
+   "GROUP_ci": [
+    0.24074644243406385,
+    0.3667919599332645
+   ],
+   "BEATS_rate": 0.01,
+   "BEATS_ci": [
+    0.0027466006037749346,
+    0.03572248519617954
+   ],
+   "NONE_rate": 0.055,
+   "NONE_ci": [
+    0.030985020801370097,
+    0.0957879244659355
+   ],
+   "false_robust_everywhere_rate": 0.385,
+   "false_robust_everywhere_ci": [
+    0.3203319691791383,
+    0.4540026121820756
+   ],
+   "N": 150,
+   "T": 30,
+   "R": 400,
+   "b": 0.4,
+   "seed_base": 21162655,
+   "planted_tag_flagged": 109,
+   "planted_tag_flagged_rate": 0.545,
+   "planted_tag_flagged_ci": [
+    0.4757848503696115,
+    0.6125190090977398
+   ]
+  },
+  "B_N150_T50": {
+   "reps": 200,
+   "counts": {
+    "ROBUST-but-GROUP": 68,
+    "ROBUST+H": 104,
+    "GROUP": 8,
+    "NONE": 20
+   },
+   "ROBUST+H_rate": 0.52,
+   "ROBUST+H_ci": [
+    0.4510366005581654,
+    0.5882095592051018
+   ],
+   "ROBUST-HET_rate": 0.0,
+   "ROBUST-HET_ci": [
+    0.0,
+    0.018846005918320894
+   ],
+   "ROBUST-but-GROUP_rate": 0.34,
+   "ROBUST-but-GROUP_ci": [
+    0.2779143922159556,
+    0.40811632967790723
+   ],
+   "GROUP_rate": 0.04,
+   "GROUP_ci": [
+    0.02040538715065641,
+    0.07693293829419882
+   ],
+   "BEATS_rate": 0.0,
+   "BEATS_ci": [
+    0.0,
+    0.018846005918320894
+   ],
+   "NONE_rate": 0.1,
+   "NONE_ci": [
+    0.06566994117157123,
+    0.14940686356308552
+   ],
+   "false_robust_everywhere_rate": 0.52,
+   "false_robust_everywhere_ci": [
+    0.4510366005581654,
+    0.5882095592051018
+   ],
+   "N": 150,
+   "T": 50,
+   "R": 400,
+   "b": 0.4,
+   "seed_base": 21162675,
+   "planted_tag_flagged": 76,
+   "planted_tag_flagged_rate": 0.38,
+   "planted_tag_flagged_ci": [
+    0.3155889366123922,
+    0.4489341048080049
+   ]
+  },
+  "B_N150_T60": {
+   "reps": 200,
+   "counts": {
+    "ROBUST-but-GROUP": 76,
+    "ROBUST+H": 76,
+    "NONE": 44,
+    "GROUP": 4
+   },
+   "ROBUST+H_rate": 0.38,
+   "ROBUST+H_ci": [
+    0.3155889366123922,
+    0.4489341048080049
+   ],
+   "ROBUST-HET_rate": 0.0,
+   "ROBUST-HET_ci": [
+    0.0,
+    0.018846005918320894
+   ],
+   "ROBUST-but-GROUP_rate": 0.38,
+   "ROBUST-but-GROUP_ci": [
+    0.3155889366123922,
+    0.4489341048080049
+   ],
+   "GROUP_rate": 0.02,
+   "GROUP_ci": [
+    0.007804300176394188,
+    0.050287865505193874
+   ],
+   "BEATS_rate": 0.0,
+   "BEATS_ci": [
+    0.0,
+    0.018846005918320894
+   ],
+   "NONE_rate": 0.22,
+   "NONE_ci": [
+    0.16816453539463405,
+    0.2823892279196257
+   ],
+   "false_robust_everywhere_rate": 0.38,
+   "false_robust_everywhere_ci": [
+    0.3155889366123922,
+    0.4489341048080049
+   ],
+   "N": 150,
+   "T": 60,
+   "R": 400,
+   "b": 0.4,
+   "seed_base": 21162685,
+   "planted_tag_flagged": 80,
+   "planted_tag_flagged_rate": 0.4,
+   "planted_tag_flagged_ci": [
+    0.3346046396837895,
+    0.46916456149987484
+   ]
+  },
+  "B_N220_T50": {
+   "reps": 200,
+   "counts": {
+    "ROBUST-but-GROUP": 84,
+    "ROBUST+H": 111,
+    "NONE": 5
+   },
+   "ROBUST+H_rate": 0.555,
+   "ROBUST+H_ci": [
+    0.4857317563236392,
+    0.6221951830253456
+   ],
+   "ROBUST-HET_rate": 0.0,
+   "ROBUST-HET_ci": [
+    0.0,
+    0.018846005918320894
+   ],
+   "ROBUST-but-GROUP_rate": 0.42,
+   "ROBUST-but-GROUP_ci": [
+    0.3537348235017175,
+    0.48928053744521394
+   ],
+   "GROUP_rate": 0.0,
+   "GROUP_ci": [
+    0.0,
+    0.018846005918320894
+   ],
+   "BEATS_rate": 0.0,
+   "BEATS_ci": [
+    0.0,
+    0.018846005918320894
+   ],
+   "NONE_rate": 0.025,
+   "NONE_ci": [
+    0.010724561470787711,
+    0.05717914415161715
+   ],
+   "false_robust_everywhere_rate": 0.555,
+   "false_robust_everywhere_ci": [
+    0.4857317563236392,
+    0.6221951830253456
+   ],
+   "N": 220,
+   "T": 50,
+   "R": 400,
+   "b": 0.4,
+   "seed_base": 21163375,
+   "planted_tag_flagged": 84,
+   "planted_tag_flagged_rate": 0.42,
+   "planted_tag_flagged_ci": [
+    0.3537348235017175,
+    0.48928053744521394
+   ]
+  }
+ },
+ "R_axis": {
+  "C_R100": {
+   "reps": 200,
+   "counts": {
+    "NONE": 197,
+    "BEATS": 3
+   },
+   "ROBUST+H_rate": 0.0,
+   "ROBUST+H_ci": [
+    0.0,
+    0.018846005918320894
+   ],
+   "ROBUST-HET_rate": 0.0,
+   "ROBUST-HET_ci": [
+    0.0,
+    0.018846005918320894
+   ],
+   "ROBUST-but-GROUP_rate": 0.0,
+   "ROBUST-but-GROUP_ci": [
+    0.0,
+    0.018846005918320894
+   ],
+   "GROUP_rate": 0.0,
+   "GROUP_ci": [
+    0.0,
+    0.018846005918320894
+   ],
+   "BEATS_rate": 0.015,
+   "BEATS_ci": [
+    0.005114145184492387,
+    0.043166480556278884
+   ],
+   "NONE_rate": 0.985,
+   "NONE_ci": [
+    0.9568335194437211,
+    0.9948858548155076
+   ],
+   "false_positive_rate": 0.015,
+   "false_positive_ci": [
+    0.005114145184492387,
+    0.043166480556278884
+   ],
+   "N": 150,
+   "T": 50,
+   "R": 100,
+   "b": null,
+   "seed_base": 20961225
+  },
+  "C_R400": {
+   "reps": 200,
+   "counts": {
+    "NONE": 194,
+    "BEATS": 6
+   },
+   "ROBUST+H_rate": 0.0,
+   "ROBUST+H_ci": [
+    0.0,
+    0.018846005918320894
+   ],
+   "ROBUST-HET_rate": 0.0,
+   "ROBUST-HET_ci": [
+    0.0,
+    0.018846005918320894
+   ],
+   "ROBUST-but-GROUP_rate": 0.0,
+   "ROBUST-but-GROUP_ci": [
+    0.0,
+    0.018846005918320894
+   ],
+   "GROUP_rate": 0.0,
+   "GROUP_ci": [
+    0.0,
+    0.018846005918320894
+   ],
+   "BEATS_rate": 0.03,
+   "BEATS_ci": [
+    0.013820125830748327,
+    0.06389511973247333
+   ],
+   "NONE_rate": 0.97,
+   "NONE_ci": [
+    0.9361048802675267,
+    0.9861798741692518
+   ],
+   "false_positive_rate": 0.03,
+   "false_positive_ci": [
+    0.013820125830748327,
+    0.06389511973247333
+   ],
+   "N": 150,
+   "T": 50,
+   "R": 400,
+   "b": null,
+   "seed_base": 20961525
+  },
+  "U_R100": {
+   "reps": 200,
+   "counts": {
+    "NONE": 177,
+    "ROBUST+H": 18,
+    "BEATS": 5
+   },
+   "ROBUST+H_rate": 0.09,
+   "ROBUST+H_ci": [
+    0.05768697871453362,
+    0.13776674613848952
+   ],
+   "ROBUST-HET_rate": 0.0,
+   "ROBUST-HET_ci": [
+    0.0,
+    0.018846005918320894
+   ],
+   "ROBUST-but-GROUP_rate": 0.0,
+   "ROBUST-but-GROUP_ci": [
+    0.0,
+    0.018846005918320894
+   ],
+   "GROUP_rate": 0.0,
+   "GROUP_ci": [
+    0.0,
+    0.018846005918320894
+   ],
+   "BEATS_rate": 0.025,
+   "BEATS_ci": [
+    0.010724561470787711,
+    0.05717914415161715
+   ],
+   "NONE_rate": 0.885,
+   "NONE_ci": [
+    0.8333517476611362,
+    0.9221368277817569
+   ],
+   "false_negative_rate": 0.885,
+   "false_negative_ci": [
+    0.8333517476611362,
+    0.9221368277817569
+   ],
+   "correct_robust_rate": 0.09,
+   "N": 150,
+   "T": 50,
+   "R": 100,
+   "b": 0.06,
+   "seed_base": 20961225,
+   "correct_robust_ci": [
+    0.05768697871453362,
+    0.13776674613848952
+   ]
+  },
+  "U_R400": {
+   "reps": 200,
+   "counts": {
+    "ROBUST+H": 26,
+    "NONE": 167,
+    "BEATS": 3,
+    "GROUP": 2,
+    "ROBUST-HET": 2
+   },
+   "ROBUST+H_rate": 0.13,
+   "ROBUST+H_ci": [
+    0.09028141365225628,
+    0.18366463072730121
+   ],
+   "ROBUST-HET_rate": 0.01,
+   "ROBUST-HET_ci": [
+    0.0027466006037749346,
+    0.03572248519617954
+   ],
+   "ROBUST-but-GROUP_rate": 0.0,
+   "ROBUST-but-GROUP_ci": [
+    0.0,
+    0.018846005918320894
+   ],
+   "GROUP_rate": 0.01,
+   "GROUP_ci": [
+    0.0027466006037749346,
+    0.03572248519617954
+   ],
+   "BEATS_rate": 0.015,
+   "BEATS_ci": [
+    0.005114145184492387,
+    0.043166480556278884
+   ],
+   "NONE_rate": 0.835,
+   "NONE_ci": [
+    0.7773410172613647,
+    0.8800321587733603
+   ],
+   "false_negative_rate": 0.835,
+   "false_negative_ci": [
+    0.7773410172613647,
+    0.8800321587733603
+   ],
+   "correct_robust_rate": 0.13,
+   "N": 150,
+   "T": 50,
+   "R": 400,
+   "b": 0.06,
+   "seed_base": 20961525,
+   "correct_robust_ci": [
+    0.09028141365225628,
+    0.18366463072730121
+   ]
+  }
+ }
+}

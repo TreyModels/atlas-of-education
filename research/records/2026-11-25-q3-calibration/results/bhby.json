@@ -1,0 +1,232 @@
+{
+ "inputs": {
+  "edge_sha256_note": "see inputs/SHA256SUMS.txt",
+  "R": 400,
+  "links": 272
+ },
+ "families": {
+  "up": {
+   "p_col": "emp_p_up_TR",
+   "n": 272,
+   "bh": 35,
+   "by": 0,
+   "bh_at_m_eff_157": 44,
+   "min_p": 0.00249377,
+   "n_at_floor": 30,
+   "k_star_bh": 35
+  },
+  "down": {
+   "p_col": "emp_p_dn_TR",
+   "n": 272,
+   "bh": 19,
+   "by": 0,
+   "bh_at_m_eff_157": 28,
+   "min_p": 0.00249377,
+   "n_at_floor": 19,
+   "k_star_bh": 19
+  },
+  "sign_flip": {
+   "p_col": "emp_p_flip_le",
+   "n": 272,
+   "bh": 15,
+   "by": 0,
+   "bh_at_m_eff_157": 27,
+   "min_p": 0.00249377,
+   "n_at_floor": 15,
+   "k_star_bh": 15
+  },
+  "heterogeneity": {
+   "p_col": "emp_p_Q_up",
+   "n": 272,
+   "bh": 53,
+   "by": 0,
+   "bh_at_m_eff_157": 56,
+   "min_p": 0.00249377,
+   "n_at_floor": 39,
+   "k_star_bh": 53
+  }
+ },
+ "validation": {
+  "V1_p_recompute": {
+   "max_abs_diff_up": 0.02244367830423938,
+   "max_abs_diff_dn": 0.004988002493765603,
+   "mismatches_up": 251,
+   "mismatches_dn": 242,
+   "pass_": false,
+   "note": "the committed null array is rounded to 4 significant digits, so exact equality cannot hold; differences are in units of 1/401 draw counts",
+   "up_links_matching_within_1_draw": 267,
+   "up_links_total": 272,
+   "up_max_draw_diff": 8.99991499999999,
+   "dn_links_matching_within_1_draw": 271,
+   "dn_max_draw_diff": 2.000189000000007
+  },
+  "V2_floor_range": {
+   "up": {
+    "n": 272,
+    "n_nan": 0,
+    "min": 0.00249377,
+    "max": 1.0,
+    "n_at_floor": 30,
+    "all_in_0_1": true
+   },
+   "down": {
+    "n": 272,
+    "n_nan": 0,
+    "min": 0.00249377,
+    "max": 1.0,
+    "n_at_floor": 19,
+    "all_in_0_1": true
+   },
+   "sign_flip": {
+    "n": 272,
+    "n_nan": 0,
+    "min": 0.00249377,
+    "max": 1.0,
+    "n_at_floor": 15,
+    "all_in_0_1": true
+   },
+   "heterogeneity": {
+    "n": 272,
+    "n_nan": 0,
+    "min": 0.00249377,
+    "max": 1.0,
+    "n_at_floor": 39,
+    "all_in_0_1": true
+   }
+  },
+  "V3_marginal_uniformity": {
+   "up": {
+    "n_sub": 214,
+    "ks_stat": 0.25720733644859817,
+    "ks_p": 5.675138150802027e-13,
+    "frac_le_05": 0.21323529411764705,
+    "expected_frac_if_valid": 0.05
+   },
+   "down": {
+    "n_sub": 216,
+    "ks_stat": 0.23360551851851852,
+    "ks_p": 7.529566406335537e-11,
+    "frac_le_05": 0.20588235294117646,
+    "expected_frac_if_valid": 0.05
+   }
+  },
+  "V3b_leave_one_out_null": {
+   "n": 108800,
+   "ks_stat": 0.006139705882352908,
+   "ks_p": 0.0005455887775657144,
+   "frac_le_05": 0.04984375,
+   "expected_frac_if_valid": 0.05,
+   "ci_frac_le_05": [
+    0.048566432216053,
+    0.05115285563673913
+   ],
+   "note": "permutation-validity check on the random draws themselves; rounding of the committed null array creates ties and makes this mildly conservative"
+  },
+  "V4_exchangeability": {
+   "n_links_tested": 272,
+   "frac_block_anova_p_lt_05": 0.04411764705882353,
+   "frac_ci": [
+    0.025414256244794896,
+    0.07551903300526747
+   ],
+   "ks_of_anova_p": 0.05901473645342087,
+   "ks_p": 0.2883067421741927,
+   "spearman_draw_index_vs_mean_share": 0.02756735979599872,
+   "spearman_p": 0.582507156178838,
+   "block_means": [
+    0.13861009955882353,
+    0.13848976761029413,
+    0.13863182536764704,
+    0.1387243045220588
+   ]
+  },
+  "V3a_real_marginal_descriptive": {
+   "up_frac_p_eq_1": 0.07720588235294118,
+   "note": "descriptive only: real links need not be null, and links whose real share is at or below every random draw get p=1 by construction, so a uniform test on the real p-values is not a validity test"
+  },
+  "V5_draw_arrays": {
+   "share_p_recomputed": true,
+   "flip_p_array_available": false,
+   "het_p_array_available": false,
+   "note": "flip and heterogeneity p-values cannot be recomputed from the saved 400-draw array; they are used as committed and labelled committed-p only"
+  }
+ },
+ "committed": {
+  "headline_strict": {
+   "up": 35,
+   "down": 19,
+   "sign_flip": 15,
+   "heterogeneity": 53
+  },
+  "by_committed": {
+   "50": 60,
+   "100": 52,
+   "150": 46,
+   "157": 44,
+   "272": 35
+  },
+  "by_procedure": 0,
+  "m_eff": 44,
+  "note": "committed up/down/flip/het counts from summary400.txt/headline.json; BY and m_eff from methods dependence_analysis.json"
+ },
+ "BY_harmonic": 6.184854840123505,
+ "fdr_check": {
+  "returncode": 0,
+  "stdout": "{\"families\": 4, \"tests\": 1088, \"bh\": 122, \"by\": 0, \"note\": \"FDR guarantees require valid p-values and an appropriate family definition.\"}",
+  "stderr": "",
+  "agreement_with_own": {
+   "up": {
+    "bh_agree": true,
+    "by_agree": true,
+    "bh": 35,
+    "by": 0
+   },
+   "down": {
+    "bh_agree": true,
+    "by_agree": true,
+    "bh": 19,
+    "by": 0
+   },
+   "sign_flip": {
+    "bh_agree": true,
+    "by_agree": true,
+    "bh": 15,
+    "by": 0
+   },
+   "heterogeneity": {
+    "bh_agree": true,
+    "by_agree": true,
+    "bh": 53,
+    "by": 0
+   }
+  }
+ },
+ "story": {
+  "recomputed_bh": {
+   "up": 35,
+   "down": 19,
+   "sign_flip": 15,
+   "heterogeneity": 53
+  },
+  "committed_bh": {
+   "up": 35,
+   "down": 19,
+   "sign_flip": 15,
+   "heterogeneity": 53
+  },
+  "by_counts": {
+   "up": 0,
+   "down": 0,
+   "sign_flip": 0,
+   "heterogeneity": 0
+  },
+  "bh_m_eff_157": {
+   "up": 44,
+   "down": 28,
+   "sign_flip": 27,
+   "heterogeneity": 56
+  },
+  "story_changes": false,
+  "validation_passed": false
+ }
+}
