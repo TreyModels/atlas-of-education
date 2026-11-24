@@ -158,9 +158,8 @@ contrast is "same sign" and 4% smaller in standardised units; by the letter of t
 excluding 1 makes it **"materially different magnitude"**, and that is reported as such. Overall: **the window
 and age range do not change the sign, and change the standardised magnitude by at most ~4%.**
 
-Robustness: `FE_FRTR_W_GFR` (general fertility rate) gives the same sign and similar standardised magnitude;
-median age at first birth (`FE_AAFB_W_M25`) has only 51 surveys with all four education levels and is descriptive
-only.
+`FE_AAFB_W_M25` (median age at first birth) has only 51 surveys with all four education levels and is
+descriptive only.
 
 ---
 
