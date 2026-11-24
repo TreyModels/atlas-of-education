@@ -5,10 +5,10 @@ Lead: panel-matrix (task-37). This record consolidates everything the project fo
 synthesis-length paper (target 12,000–18,000 words) with an exhaustive, DOI-verified literature review.
 
 ## Deliverables
-- **`paper.md`** — full draft, **17,433 words** (within the 12,000–18,000 target), restructured around the finding (Section 2) with explicit Implications (12) and Future research (13), with abstract, introduction,
-  four-literature theory section, data and measurement, empirical strategy, six results sections, synthesis and
-  "What we know now" box, limitations/referee objections, conclusion, and three appendices (evidence labels,
-  reproduction, data gaps). Every number carries sample and uncertainty; the historical dates are labelled
+- **`paper.md`** — full draft, **17,968 words** (within the 12,000–18,000 target), restructured around the finding (Section 2) with explicit Implications (12) and Future research (13), with abstract, introduction,
+  four-literature theory section, data and measurement (with a data-tier table), empirical strategy, results sections including the E6 pre-1990 demand-timing re-estimate (7.5) and the E8 fee-abolition event study (7.6), synthesis and
+  "What we know now" box, limitations/referee objections, conclusion, and three appendices (evidence labels/data tiers,
+  reproduction, data gaps). The 25 Nov revision is logged in `REVISION_LOG.md`. Every number carries sample and uncertainty; the historical dates are labelled
   UNVERIFIED literature standard; the framing is "a late-industrialiser regularity, not a universal law" and the
   causal language is "is better described as", never "causes".
 - **`claims-prior-art.md`** — seven claim groups, 3–8 closest works each, DOI + Crossref status, explicit
@@ -18,7 +18,10 @@ synthesis-length paper (target 12,000–18,000 words) with an exhaustive, DOI-ve
 - **`refs.md`** — APA 7th, 57 entries from this paper's own Crossref run (with MATCH / WEAK / NO-MATCH status)
   plus the section leads' Crossref-verified reference lists in Part B (scaling, drivers/credentials,
   agriculture/history), each with its branch and status markings.
-- **`claims-to-source-map.md`** — claim | number | branch @ commit | file | field for every number in the paper.
+- **`claims-to-source-map.md`** — claim | number | branch @ commit | file | field for every number in the paper, including the E6/E8 rows added in the 25 Nov revision.
+- **`data/`** — verbatim copies of the source records used by the revision: `e6_summary.json`, `e8_results.json`, `n3_recommendation.json`, `fee_dates.csv` (from `e6e8 @ 2d19da7` and source verification `9a0fd69`), `supply_demand_963e5e5.json/.txt` and `event_dates_subsistence_v2.csv`.
+- **`scripts/verify_revision_numbers.py`** — recomputes every number quoted in the revised passages from `data/`; output `data/revision_verification.json` (41/41 checks pass).
+- **`REVISION_LOG.md`** — what changed in the 25 Nov revision, source and commit.
 - **`search-strategy.md`** — the recorded search (Crossref API, web queries, project records; what was not
   accessible and why).
 - **`contributions/dhs-ecological-gradient-for-paper-F.md`** — the DHS ecological-gradient section draft
@@ -47,8 +50,7 @@ keeps its journal structure; this map gives the sort:
   research).
 
 ## Verification status
-- **Numbers**: every number in the paper is a field in a verified branch at a named commit (see
-  `claims-to-source-map.md`). No new estimation was done for the paper; only the Crossref verification run.
+- **Numbers**: every number quoted in the revised passages was **recomputed** from a committed copy of the source record (`data/`) by `scripts/verify_revision_numbers.py`, 41/41 checks passing (`data/revision_verification.json`); the remaining unchanged numbers are fields in verified branches at named commits (see `claims-to-source-map.md`). No new estimation was done for the paper; only the Crossref verification run and the recomputation of already-committed numbers.
 - **Historical dates**: **all UNVERIFIED literature standard**; the negative facts verified in-session are that
   the project's own long-run panel cannot adjudicate them (schooling starts 1870, urban share 1950) and that no
   national enrolment series was obtainable from public APIs.
@@ -61,15 +63,24 @@ keeps its journal structure; this map gives the sort:
   wording.
 
 ## The synthesis verdict
-Massification in late-industrialising countries is better described as state/institution-led: the schooling
-take-off precedes the release of agricultural labour in 61 of 64 countries (median 26 years, reverse 5%,
-0–11%); labour-market demand (wage premium, paid employment) precedes it in only 7% of countries; the raw
-demand-first event ordering (73%) is a data-availability artefact, and in the fair sample supply (76%) and
-demand (79%) turn together while the horse race puts the association on supply (+0.456, SE 0.174 vs +0.006,
-SE 0.203; n=78, 51 countries). The agricultural floor is real in the cross-section but does not deliver the
-dynamic sequence; scaling regularities are regularities, not laws; credential and care mechanisms are null in
-the data they can be tested on. The historical cases show why the regularity is conditional: Prussia supply-led
-by 80–120 years, Britain demand-led by 40–90 years. **Late-industrialiser regularity, not a universal law.**
+Massification in late-industrialising countries is better described as schooling and structural change moving
+together, with schooling typically but not universally first: the schooling take-off precedes the release of
+agricultural labour in 61 of 64 countries (median 26 years, reverse 5%, 0–11%). On pre-1990 structural-change
+series, demand-first is 10.0% (GGDC non-agricultural employment), 15.4% (urbanisation), 24.1% (industry value
+added) and 18.8% (agricultural value added) of identifiable countries, with all-country bounds of 6.7–53.0%
+and 21–43% weak ties/left-censored: demand is neither eliminated nor cleanly ordered. The retracted "7%"
+labour-demand figure came from a 1991-start series and is not used. The raw demand-first event ordering (73%)
+is a data-availability artefact; in the fair sample supply (76%) and demand (79%) turn together, and the horse
+race puts the conditional association on supply (+0.456, SE 0.174 vs +0.006, SE 0.203; n=78, 51 countries).
+The fee-abolition event study is **consistent with** a supply-side effect on primary enrolment (+22 to +29
+points after event year +1, flat pre-trends, sparse coverage, on-impact interval spanning zero). The
+agricultural floor is real in the cross-section but does not deliver the dynamic sequence; scaling regularities
+are regularities, not laws; credential and care mechanisms are null in the data they can be tested on. The
+historical cases show why the regularity is conditional: Prussia shows state supply 80–120 years ahead,
+Britain demand-led by 40–90 years. **Late-industrialiser regularity, not a universal law.**
+
+## Revision of 25 November 2026 (E6/E8 integration)
+Applied after the Codex wave retracted the 7% labour-demand figure and verified the E6/E8 record (`e6e8 @ 2d19da7`) and the fee dates (`task-49 @ 9a0fd69`). Changes: replaced the 7% figure and all "demand is ruled out" framing with E6's pre-1990 numbers and the "schooling and structural change move together" framing (with bounds and ties/censoring flagged); softened supply-led/sequencing causal language to association/consistency language; added the E8 fee-abolition section (7.6) and the N3 threshold-smoothing caveat (7.5); added a data-tier table and labelled every series; corrected subsection numbering; rechecked abstract/results/limitations against each other; recomputed the quoted numbers. Details, sources and commit: `REVISION_LOG.md`.
 
 ## Known gaps (stated, not proxied)
 1. Cohort-linked microdata (the theory's generational claim) not obtainable; event data are period data.

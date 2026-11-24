@@ -1,3 +1,7 @@
+> **SUPERSEDED (25 Nov 2026 revision):** this is an assembly part from the pre-revision draft. It contains the
+> retracted 7% labour-demand figure and/or the retracted 69% fertility-ordering figure, and old section
+> numbering. The current text is `paper.md` (see `REVISION_LOG.md`); do not quote this part.
+
 ## 13. Future research: what would settle it
 
 The paper's central vulnerability is that its dates are ours — literature-standard dates and our own event

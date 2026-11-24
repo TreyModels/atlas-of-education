@@ -94,3 +94,40 @@ release-first, 0 ties, 90.53% fertility-first. This matches gpu-dose's independe
 (release-first AFG, LBR, MWI, ZMB). Action taken: a clarifying sentence was added to Section 6 distinguishing the
 two orderings, and claims-to-source-map row 31 records the check. No existing claim or number was changed.
 **Status: VERIFIED, not used as a claim.**
+
+## H. E6/E8 revision and retirement of the 7% figure (25 Nov 2026 — task-3)
+
+**Triggers.** (i) Codex F02/F12 retracted the 7% labour-demand figure (the wage/paid-employment series start in
+1991, so the original ordering is a data-start artefact); (ii) the E6/E8 record (`research/e6e8-sequencing-2026-11-25`
+@ `2d19da7`) replaced it with pre-1990 demand-timing estimates and added a fee-abolition event study; (iii) the
+fee dates were independently verified (`research/codex-source-verification-2026-11-25` @ `9a0fd69`).
+
+**What changed.** The 7% figure is removed from every substantive passage (abstract, §1, §2, §7.5, §14 synthesis
+and box, §15, §16) and appears only where it is explicitly labelled retracted. It is replaced by E6: demand-first
+10.0% (GGDC non-agricultural employment), 15.4% (urbanisation), 24.1% (industry value added), 18.8% (agricultural
+value added) of identifiable countries; bounds 6.7–53.0%; 21–43% weak ties or left-censored; N3 threshold/smoothing
+range 0.0–30.8% (median 10.45%). The honest framing is now "schooling and structural change move together, with
+schooling typically but not universally first". The E8 fee-abolition event study is added as §7.6 (8 verified
+dates, CS+TWFE, flat pre-trends at −2/−3/−4, sparse coverage, on-impact interval spanning zero; "consistent with"
+language only). Data tiers are labelled in a new §4.1 table and in Appendix A; effective fertility is not called
+TFR (and the paper states that the WDI TFR series used for the event dates is a birth-based TFR, not the project's
+effective-fertility measure).
+
+**Recomputation.** `scripts/verify_revision_numbers.py` recomputes 41 checks from committed copies of the source
+records (`data/`), 41/41 passing (`data/revision_verification.json`). One discrepancy was found in the source
+record's prose: the E6 REPORT's reading line "18–33% strict schooling-first" is **not** reproduced from
+`e6_summary.json`. Recomputed strict schooling-first shares are 25.0% (GGDC), 21.5% (urban), 46.3% (industry),
+43.8% (agriculture) of identifiable countries (21.5–46.3%); the paper uses the recomputed figures and does not
+quote the REPORT's 18–33% line. The source-record owner should correct the REPORT reading line.
+
+**Date-commit note.** The E8 record cites the fee-date commit `bfb8c6f`; the verified branch head is `9a0fd69`.
+`fee_dates.csv` at the two commits is byte-identical (checked), so the paper cites `9a0fd69` as the verified head.
+
+**UNVERIFIED numbers.** None among the E6/E8/sequencing/fertility/supply-demand numbers quoted: all are
+recomputed. The only quoted numbers not recomputable in this pass are the four historical sequences' literature
+dates and percentages; they are labelled **UNVERIFIED literature standard** in the paper (§8, Appendix A), as
+before. The numbers in §§9–11 were re-checked against their committed source records (records listed in the
+claims map); where the source record reports a value only in prose/table rather than a machine-readable field,
+it is marked "verified in record" in Appendix A rather than "recomputed".
+
+**Word count.** The draft is 17,968 words after the revision (was 17,433; target 12,000–18,000).

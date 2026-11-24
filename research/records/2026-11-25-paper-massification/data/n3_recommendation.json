@@ -1,0 +1,27 @@
+{
+ "n_definitions": 54,
+ "n_with_20plus": 54,
+ "forward_share_range_identified": [
+  0.0,
+  30.8
+ ],
+ "forward_share_median": 10.45,
+ "share_below_75": 1.0,
+ "q1_default": [
+  {
+   "definition": "q1 \u0394s=1.0 \u0394r=3.0 smooth=1",
+   "n": 34,
+   "forward": 2,
+   "forward_or_tie": 24,
+   "reverse": 6,
+   "undetermined": 2,
+   "forward_share_identified": 6.2,
+   "forward_share_incl_ties": 81.2,
+   "lower_bound_all": 5.9,
+   "upper_bound_all": 82.4,
+   "share_identifiable": 94.1,
+   "median_lead_forward": -5.5
+  }
+ ],
+ "recommendation": "Report the forward share as an interval with its selection and threshold definition; never a bare percentage. If the abstract needs one number, give the q1-default share with its all-country bounds and state the threshold/smoothing dependence (the range across definitions is the honest summary)."
+}
