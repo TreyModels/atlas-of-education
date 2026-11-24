@@ -34,8 +34,10 @@ no FAIL; `~/neon-boot/QA_GATE_2026-11-25.md`).
 1. **Phase transition (SIMULATION)**: no boundary under a non-binding bar gate (J_max 2.88 < 4);
    **SIGNATURE boundary under the binding quota gate on the vacancy axis** — tutoring Q5−Q1 gap
    J=11.50 at vac0 0.4005→0.5044 (sharpness 18.17), gate-fail J=12.58 (23.48); gate contrast 0.074;
-   **374 equifinal pairs** (same attainment, tutoring differs >20 pp); seat scarcity monotone
-   (Spearman −1.00) but the fee × scarcity interaction is a **null** (+0.0039, CI [−0.019, +0.027]).
+   374 descriptive equifinal pairs (same attainment, tutoring differs >20 pp) — **not** evidence
+   beyond chance: permutation null gives 176 observed vs 190.5 expected, p = 0.838
+   (`research/equifinality-phase-2026-11-25` @ `ab415f2`). Seat scarcity monotone (Spearman −1.00) but
+   the fee × scarcity interaction is a **null** (+0.0039, CI [−0.019, +0.027]).
 2. **eduengine driver** was misreading exits (engine correct); corrected decomposition q1 liquidity
    **68.99 %** vs universal 0.0 before.
 3. **DHS corrected**: Africa-11 2-group ratio **1.0698 [0.9987, 1.1403]** (incl. 1.0);
