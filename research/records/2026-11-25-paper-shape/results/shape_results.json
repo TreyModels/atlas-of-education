@@ -93,34 +93,98 @@
    "spline": 2
   },
   "mean_holdout_rmse": {
-   "logistic": 0.4756367973575938,
-   "gompertz": 0.3564564924230756,
-   "exponential": 0.3072609134581947,
-   "linear_kink": 0.39427991903580295
+   "logistic": 0.47563682487249526,
+   "gompertz": 0.3564564919992354,
+   "exponential": 0.3072609524782386,
+   "linear_kink": 0.39696759697992035
   },
   "note": "AIC/BIC from full-series fits; hold-out fits 1960-2012 and predicts 2013-2023"
  },
  "path_uniformity": {
   "curve_pca_var": [
-   1.0,
-   1.3287201497988694e-33,
-   1.5628642950314015e-65
+   0.7274745876546755,
+   0.16296934106640165,
+   0.05716211364886086
   ],
   "across_country_sd_by_grid": [
-   0.01714906382284556,
-   0.01714906382284556,
-   0.01714906382284556,
-   0.01714906382284556,
-   0.01714906382284556,
-   0.01714906382284556,
-   0.01714906382284556,
-   0.01714906382284556,
-   0.01714906382284556,
-   0.01714906382284556,
-   0.01714906382284556
+   0.016605407367214244,
+   0.07777573841966458,
+   0.14392570414012973,
+   0.14757202048217524,
+   0.1618526326931059,
+   0.1478268509887823,
+   0.1357367346096549,
+   0.10955050788985689,
+   0.07998822394882203,
+   0.04089601182544211,
+   0.02462256120420611
   ],
-  "mean_abs_deviation_from_mean_curve": 0.010831289339110803,
-  "note": "aligned curves share onset and 10%-remaining endpoints; low residual variation means the decline PATH is a near-universal family and heterogeneity is in timing/pace/level"
+  "mean_abs_deviation_from_mean_curve": 0.07441171925538967,
+  "mean_aligned_curve": [
+   0.9432925696110435,
+   0.8299151111703844,
+   0.7022108196886229,
+   0.59999182082154,
+   0.5104088022362704,
+   0.428860064216731,
+   0.35125330635781193,
+   0.2852958920128195,
+   0.2226559890993538,
+   0.15956662364793514,
+   0.08411315938436456
+  ],
+  "pc1_loadings": [
+   0.013180821328013993,
+   0.17712842561982514,
+   0.2874562464623505,
+   0.4359971111209195,
+   0.49650129183670005,
+   0.4495788552113862,
+   0.38185819200211824,
+   0.2757726350481626,
+   0.15219990523000984,
+   0.03991623512286811,
+   -0.02163770743205356
+  ],
+  "n_countries": 105,
+  "note": "aligned curves share onset and 10%-remaining endpoints (SD is ~0 at the two ends by construction). Review 2026-11-24: the earlier run interpolated on an index axis, which made every curve identical (SD 0.017, PC1 100%); with calendar-year interpolation the interior SD is ~0.15 and PC1 ~73%, so the aligned path is NOT near-universal.",
+  "pc1_score_correlations": {
+   "curvature": -0.4223259610890553,
+   "speed": -0.060060035520526196,
+   "duration": -0.3514771572867443,
+   "onset": 0.3423093005862806,
+   "floor": 0.5147918245483406
+  },
+  "pc1_sign_note": "positive PC1 score = higher normalised fertility in the interior of the aligned window (slower early fall)",
+  "class_mean_curves": {
+   "class_1": [
+    0.9421584694315108,
+    0.7890474222454174,
+    0.62516412164123,
+    0.5176597153243759,
+    0.4314220440628913,
+    0.3660107569264917,
+    0.2985543617118214,
+    0.24839655736524152,
+    0.20720817151880522,
+    0.15558334704181853,
+    0.0873996445395856
+   ],
+   "class_2": [
+    0.9446920974921691,
+    0.8803475783543867,
+    0.797289723662002,
+    0.7015931424988907,
+    0.6078818229608657,
+    0.5064187838514945,
+    0.416286046559247,
+    0.3308312411523839,
+    0.24171925334769004,
+    0.16448215648101527,
+    0.08005749685238968
+   ]
+  },
+  "class_curve_max_gap": 0.18393342717451477
  },
  "clustering": {
   "k_best": 2,
@@ -130,17 +194,17 @@
    "3": 0.2393287557376279,
    "4": 0.26049675119454874,
    "5": 0.21925781856540527,
-   "6": 0.23277176317892562
+   "6": 0.23277176317892556
   },
   "descriptor_pca_var": [
-   0.4349948911728046,
-   0.2617964418889266,
-   0.1497952745468082
+   0.4349948911728047,
+   0.26179644188892653,
+   0.14979527454680824
   ],
   "null_test": {
    "random_partition_p": 0.0,
-   "null_mean": 0.00010805957395440252,
-   "null_sd": 0.008823177921265983,
+   "null_mean": 0.00010805957395440213,
+   "null_sd": 0.008823177921265982,
    "draws": 500
   },
   "cluster_profiles": {
@@ -198,25 +262,25 @@
  },
  "determinants": {
   "onset": {
-   "school_lead": {
+   "school_50": {
     "n": 90,
-    "label": "schooling expansion timing (onset minus year female primary completion reached 50%; left-censored at first observation)",
+    "label": "schooling expansion timing (calendar year female primary completion reached 50%; left-censored at first observation)",
     "coef": [
-     0.049029483763346704,
-     0.04092858283551115
+     0.16352310115729107,
+     0.047017210003632195
     ],
-    "p": 0.2309451586149408,
-    "r2": 0.01023215163540625
+    "p": 0.0005052803754914691,
+    "r2": 0.1293968359285954
    },
-   "mortality_lead": {
+   "mort_10": {
     "n": 101,
-    "label": "mortality-decline timing (onset minus year female life expectancy gained 10 years)",
+    "label": "mortality-decline timing (calendar year female life expectancy gained 10 years)",
     "coef": [
-     0.24009392251439,
-     0.03608007464887105
+     -0.12483860224769515,
+     0.04246220370334418
     ],
-    "p": 2.843148015034189e-11,
-    "r2": 0.37009670830539343
+    "p": 0.0032821914800559905,
+    "r2": 0.06759590537108873
    },
    "log_gdp_onset": {
     "n": 18,
@@ -227,47 +291,68 @@
     "n": 105,
     "label": "urban share at onset",
     "coef": [
-     -0.052020456569296325,
-     0.024895741098376365
+     -0.05202045656931306,
+     0.024895741098376344
     ],
-    "p": 0.03665982842127365,
-    "r2": 0.0444218016738418
+    "p": 0.03665982842121302,
+    "r2": 0.04442180167383769
    },
    "school_level": {
     "n": 30,
     "label": "female upper-secondary completion at onset (%)",
     "coef": [
-     -0.2461743026079546,
-     0.09746901849315838
+     -0.24617430260804163,
+     0.09746901849316797
     ],
-    "p": 0.011547881779339042,
-    "r2": 0.1451559104216279
+    "p": 0.01154788177931786,
+    "r2": 0.14515591042163578
    },
    "multivariate": {
     "n": 4,
     "note": "too few complete cases"
+   },
+   "multivariate_no_gdp_no_schoollevel": {
+    "n": 86,
+    "r2": 0.18731131298317127,
+    "coef": {
+     "school_50": [
+      0.14223384308371934,
+      0.04504789275369745,
+      0.001591873508215073
+     ],
+     "mort_10": [
+      -0.08460071388357009,
+      0.04804594252404548,
+      0.07826726193826443
+     ],
+     "urban_onset": [
+      -0.04563349635157987,
+      0.02811651037921794,
+      0.10458636365773219
+     ]
+    }
    }
   },
   "midpoint": {
-   "school_lead": {
+   "school_50": {
     "n": 90,
-    "label": "schooling expansion timing (onset minus year female primary completion reached 50%; left-censored at first observation)",
+    "label": "schooling expansion timing (calendar year female primary completion reached 50%; left-censored at first observation)",
     "coef": [
-     -0.0632243668898056,
-     0.08468188704763195
+     0.26976968711492955,
+     0.07162578276348182
     ],
-    "p": 0.4552988449223293,
-    "r2": 0.007504270345010666
+    "p": 0.00016563375278193774,
+    "r2": 0.15532411592916395
    },
-   "mortality_lead": {
+   "mort_10": {
     "n": 101,
-    "label": "mortality-decline timing (onset minus year female life expectancy gained 10 years)",
+    "label": "mortality-decline timing (calendar year female life expectancy gained 10 years)",
     "coef": [
-     0.30118735540718516,
-     0.045822735402008694
+     -0.2053777867556947,
+     0.06947244036223758
     ],
-    "p": 4.9351127856819276e-11,
-    "r2": 0.24147935709723822
+    "p": 0.003114062403332709,
+    "r2": 0.07585482054166226
    },
    "log_gdp_onset": {
     "n": 18,
@@ -278,47 +363,68 @@
     "n": 105,
     "label": "urban share at onset",
     "coef": [
-     -0.14644459457768733,
-     0.0358695190717291
+     -0.14644459457770354,
+     0.03586951907172872
     ],
-    "p": 4.4514890340668475e-05,
-    "r2": 0.14442295090151658
+    "p": 4.4514890340573776e-05,
+    "r2": 0.1444229509015178
    },
    "school_level": {
     "n": 30,
     "label": "female upper-secondary completion at onset (%)",
     "coef": [
-     -0.29091743524050173,
-     0.11597767394503529
+     -0.2909174352405781,
+     0.11597767394504169
     ],
-    "p": 0.012128213832327232,
-    "r2": 0.0974361168707859
+    "p": 0.012128213832309383,
+    "r2": 0.09743611687078335
    },
    "multivariate": {
     "n": 4,
     "note": "too few complete cases"
+   },
+   "multivariate_no_gdp_no_schoollevel": {
+    "n": 86,
+    "r2": 0.25569543559387875,
+    "coef": {
+     "school_50": [
+      0.22174528366979462,
+      0.0671607196123837,
+      0.0009609704220558141
+     ],
+     "mort_10": [
+      -0.11130178757108332,
+      0.08095750206783586,
+      0.16918804287759648
+     ],
+     "urban_onset": [
+      -0.11398456231705523,
+      0.03952911061898888,
+      0.0039320772908166095
+     ]
+    }
    }
   },
   "duration": {
-   "school_lead": {
+   "school_50": {
     "n": 90,
-    "label": "schooling expansion timing (onset minus year female primary completion reached 50%; left-censored at first observation)",
+    "label": "schooling expansion timing (calendar year female primary completion reached 50%; left-censored at first observation)",
     "coef": [
-     -0.07198175949394514,
-     0.10064197474997595
+     -0.0818782631893193,
+     0.08861534803448333
     ],
-    "p": 0.4744693905907331,
-    "r2": 0.00802693993294068
+    "p": 0.3554999374134088,
+    "r2": 0.011807431675711744
    },
-   "mortality_lead": {
+   "mort_10": {
     "n": 101,
-    "label": "mortality-decline timing (onset minus year female life expectancy gained 10 years)",
+    "label": "mortality-decline timing (calendar year female life expectancy gained 10 years)",
     "coef": [
-     -0.16765344012186129,
-     0.06780103371938742
+     0.093320658093364,
+     0.09049160707519356
     ],
-    "p": 0.013408656425086669,
-    "r2": 0.06266720622545807
+    "p": 0.3024174425564906,
+    "r2": 0.013117186295790062
    },
    "log_gdp_onset": {
     "n": 18,
@@ -329,47 +435,68 @@
     "n": 105,
     "label": "urban share at onset",
     "coef": [
-     -0.04248710076595326,
-     0.04541371669312066
+     -0.04248710076595363,
+     0.045413716693120644
     ],
-    "p": 0.3495015471207982,
-    "r2": 0.009914662154005383
+    "p": 0.34950154712079384,
+    "r2": 0.00991466215400505
    },
    "school_level": {
     "n": 30,
     "label": "female upper-secondary completion at onset (%)",
     "coef": [
-     0.5828965634114334,
-     0.1999150332078572
+     0.5828965634114316,
+     0.19991503320785733
     ],
-    "p": 0.003548670956135124,
+    "p": 0.003548670956135252,
     "r2": 0.2327237541642846
    },
    "multivariate": {
     "n": 4,
     "note": "too few complete cases"
+   },
+   "multivariate_no_gdp_no_schoollevel": {
+    "n": 86,
+    "r2": 0.05021234865170332,
+    "coef": {
+     "school_50": [
+      -0.030526270739397503,
+      0.09285527439202075,
+      0.7423438501551314
+     ],
+     "mort_10": [
+      0.1707338621409043,
+      0.07804659549468934,
+      0.02869956470459454
+     ],
+     "urban_onset": [
+      -0.0038406833340744843,
+      0.04882755512856369,
+      0.9373045634277678
+     ]
+    }
    }
   },
   "speed": {
-   "school_lead": {
+   "school_50": {
     "n": 90,
-    "label": "schooling expansion timing (onset minus year female primary completion reached 50%; left-censored at first observation)",
+    "label": "schooling expansion timing (calendar year female primary completion reached 50%; left-censored at first observation)",
     "coef": [
-     0.0002715363618639101,
-     0.00043285239490152653
+     -4.258933675477819e-05,
+     0.00044050486569991343
     ],
-    "p": 0.530450408204642,
-    "r2": 0.0023511941141928228
+    "p": 0.9229781319131342,
+    "r2": 6.575781146411774e-05
    },
-   "mortality_lead": {
+   "mort_10": {
     "n": 101,
-    "label": "mortality-decline timing (onset minus year female life expectancy gained 10 years)",
+    "label": "mortality-decline timing (calendar year female life expectancy gained 10 years)",
     "coef": [
-     0.00042970374666554984,
-     0.000608946346421947
+     -0.0003865728535122574,
+     0.0007856416050704901
     ],
-    "p": 0.48040504848745647,
-    "r2": 0.006448408483653134
+    "p": 0.6226858854643402,
+    "r2": 0.0035257106856140252
    },
    "log_gdp_onset": {
     "n": 18,
@@ -380,47 +507,68 @@
     "n": 105,
     "label": "urban share at onset",
     "coef": [
-     0.00034469640073423407,
-     0.0003446901729020171
+     0.0003446964007342324,
+     0.00034469017290201707
     ],
-    "p": 0.3173017641296809,
+    "p": 0.31730176412968325,
     "r2": 0.010759544435303137
    },
    "school_level": {
     "n": 30,
     "label": "female upper-secondary completion at onset (%)",
     "coef": [
-     -0.00019905941174411853,
-     0.0008161289072109202
+     -0.00019905941174412699,
+     0.0008161289072109205
     ],
-    "p": 0.8073029820729403,
+    "p": 0.8073029820729323,
     "r2": 0.00076040879963446
    },
    "multivariate": {
     "n": 4,
     "note": "too few complete cases"
+   },
+   "multivariate_no_gdp_no_schoollevel": {
+    "n": 86,
+    "r2": 0.04490476432825341,
+    "coef": {
+     "school_50": [
+      -5.748706304309776e-05,
+      0.0004792862823360662,
+      0.9045282541841188
+     ],
+     "mort_10": [
+      -0.0010657015721113198,
+      0.0006314029006018713,
+      0.0914436193203301
+     ],
+     "urban_onset": [
+      0.00035749940348128305,
+      0.000342576854854053,
+      0.2966891414920724
+     ]
+    }
    }
   },
   "floor": {
-   "school_lead": {
+   "school_50": {
     "n": 90,
-    "label": "schooling expansion timing (onset minus year female primary completion reached 50%; left-censored at first observation)",
+    "label": "schooling expansion timing (calendar year female primary completion reached 50%; left-censored at first observation)",
     "coef": [
-     -0.0001212408743311473,
-     0.005687753479339528
+     0.010213586935809715,
+     0.005048183083199863
     ],
-    "p": 0.9829934794417905,
-    "r2": 6.2525618392816895e-06
+    "p": 0.043050430588750924,
+    "r2": 0.05044632773572322
    },
-   "mortality_lead": {
+   "mort_10": {
     "n": 101,
-    "label": "mortality-decline timing (onset minus year female life expectancy gained 10 years)",
+    "label": "mortality-decline timing (calendar year female life expectancy gained 10 years)",
     "coef": [
-     0.005088883469139553,
-     0.0038474408930784143
+     0.003187492868471515,
+     0.004932297967773344
     ],
-    "p": 0.18594611079713808,
-    "r2": 0.016941349926063776
+    "p": 0.5181180793189695,
+    "r2": 0.004490256500459977
    },
    "log_gdp_onset": {
     "n": 18,
@@ -431,47 +579,68 @@
     "n": 105,
     "label": "urban share at onset",
     "coef": [
-     -0.003960635296377593,
-     0.002682103077388365
+     -0.0039606352963776105,
+     0.0026821030773883647
     ],
-    "p": 0.13975870365736814,
-    "r2": 0.02614953317145674
+    "p": 0.1397587036573664,
+    "r2": 0.026149533171456962
    },
    "school_level": {
     "n": 30,
     "label": "female upper-secondary completion at onset (%)",
     "coef": [
-     -0.024080915922358125,
-     0.016754796434659755
+     -0.024080915922358226,
+     0.01675479643465977
     ],
-    "p": 0.15064553373697354,
-    "r2": 0.10036200560399045
+    "p": 0.1506455337369722,
+    "r2": 0.10036200560399011
    },
    "multivariate": {
     "n": 4,
     "note": "too few complete cases"
+   },
+   "multivariate_no_gdp_no_schoollevel": {
+    "n": 86,
+    "r2": 0.13703719430889683,
+    "coef": {
+     "school_50": [
+      0.010782890585756766,
+      0.005463950511163501,
+      0.04844311897893351
+     ],
+     "mort_10": [
+      0.005568890706827055,
+      0.005297440278952328,
+      0.29314754511224383
+     ],
+     "urban_onset": [
+      -0.006557206102825972,
+      0.003010492931555823,
+      0.029397320582225852
+     ]
+    }
    }
   },
   "curvature": {
-   "school_lead": {
+   "school_50": {
     "n": 90,
-    "label": "schooling expansion timing (onset minus year female primary completion reached 50%; left-censored at first observation)",
+    "label": "schooling expansion timing (calendar year female primary completion reached 50%; left-censored at first observation)",
     "coef": [
-     -0.0036053014697505397,
-     0.005710486466447808
+     -0.0055991841430386505,
+     0.004878696927702827
     ],
-    "p": 0.5278133220275327,
-    "r2": 0.005641287316896837
+    "p": 0.25110058446437933,
+    "r2": 0.015468836537362196
    },
-   "mortality_lead": {
+   "mort_10": {
     "n": 101,
-    "label": "mortality-decline timing (onset minus year female life expectancy gained 10 years)",
+    "label": "mortality-decline timing (calendar year female life expectancy gained 10 years)",
     "coef": [
-     -0.013889978328900267,
-     0.0036444647535714718
+     0.011668358404747257,
+     0.005165066671810252
     ],
-    "p": 0.00013826399718290744,
-    "r2": 0.11269286184662686
+    "p": 0.023877691492885034,
+    "r2": 0.05372575141858571
    },
    "log_gdp_onset": {
     "n": 18,
@@ -482,25 +651,46 @@
     "n": 105,
     "label": "urban share at onset",
     "coef": [
-     1.3733246015286524e-05,
-     0.003243890046531303
+     1.3733246015270793e-05,
+     0.003243890046531304
     ],
-    "p": 0.9966221073846702,
-    "r2": 2.579788900280988e-07
+    "p": 0.996622107384674,
+    "r2": 2.579788901391211e-07
    },
    "school_level": {
     "n": 30,
     "label": "female upper-secondary completion at onset (%)",
     "coef": [
-     0.02434463059570623,
-     0.008996038627463275
+     0.02434463059570617,
+     0.008996038627463286
     ],
-    "p": 0.006806827720626468,
+    "p": 0.006806827720626666,
     "r2": 0.2587429927675201
    },
    "multivariate": {
     "n": 4,
     "note": "too few complete cases"
+   },
+   "multivariate_no_gdp_no_schoollevel": {
+    "n": 86,
+    "r2": 0.11429838839488493,
+    "coef": {
+     "school_50": [
+      -0.001343868232519667,
+      0.004783807247220001,
+      0.778771583843934
+     ],
+     "mort_10": [
+      0.013587268580503334,
+      0.005639597709166397,
+      0.015984817118102616
+     ],
+     "urban_onset": [
+      0.002769317133093754,
+      0.002820400026575801,
+      0.326154994702335
+     ]
+    }
    }
   }
  },

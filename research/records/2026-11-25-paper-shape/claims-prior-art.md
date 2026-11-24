@@ -56,8 +56,8 @@ The claim is about the estimable window only.
 | Lesthaeghe (2010), *Population and Development Review* 36(2):211–251, "The unfolding story of the second demographic transition" | a later distinct regime | 10.1111/j.1728-4457.2010.00328.x — Crossref ✓ | not tested (post-transition) |
 | Dyson (2010), *Population and Development: The Demographic Transition* (Zed Books) | transitions as regional sequences | 10.5040/9781350221819 — Crossref ✓ (book) | benchmark |
 
-**Our status: replicated + new measurement.** The heterogeneity is real, but it decomposes into timing, pace
-and floor; the aligned path is nearly universal (SD 0.017). Two poles are detected (silhouette 0.275; random
+**Our status: replicated + new measurement.** The heterogeneity is real and decomposes mostly into timing, pace
+and floor, with a real interior-shape component (aligned-path interior SD about 0.15; PC1 73%; corrected 2026-11-24 from an earlier coding error that gave SD 0.017). Two poles are detected (silhouette 0.275; random
 partition p < 0.01), and described honestly as a continuum.
 
 ## Claim 3 — the transition is a universal/global process
@@ -70,9 +70,9 @@ partition p < 0.01), and described honestly as a continuum.
 | Dyson (2010) | regional sequences of a global process | 10.5040/9781350221819 — Crossref ✓ | partial |
 | Bongaarts & Casterline (2013) | limits of universality (slow transitions) | 10.1111/j.1728-4457.2013.00557.x — Crossref ✓ | replicated in the negative direction |
 
-**Our status: audit.** Universality holds for the *path* once timing is aligned; it fails for *placement*
-(onset spans two decades, floors 1.37–2.79). The correct object is a common path with country-specific shift
-parameters.
+**Our status: audit.** Universality fails for *placement* (onset 10th–90th percentile 1963–1977, floors 1.37–2.79) and
+also only partly holds for the aligned *path* (interior SD about 0.15; class-mean paths differ by up to 0.18).
+The correct object is a family with country-specific shift and curvature parameters.
 
 ## Claim 4 — diffusion/social interaction shapes transition timing and pace
 
@@ -95,8 +95,8 @@ consistent with diffusion (and with many other mechanisms); they are not a test 
 | Lee (2003), *Journal of Economic Perspectives* 17(4):167–190, "The demographic transition: three centuries of fundamental change" | mortality-first transition narrative | 10.1257/089533003772034943 — Crossref ✓ | benchmark |
 | Davis (1963) | mortality decline as the trigger of response | 10.2307/2732014 — Crossref ✓ | benchmark |
 
-**Our status: replicated as a correlation.** Mortality-decline timing is the strongest correlate of onset
-(0.24 years later per year of lead, SE 0.036, n = 101) and midpoint (0.30, SE 0.046). Not causal.
+**Our status: replicated as a correlation.** Corrected 2026-11-24: the earlier mortality-lead coefficients (0.24) were mechanically coupled to the outcome.
+With calendar-year timing, mortality timing is not a robust correlate (onset −0.125, SE 0.042, n = 101; −0.085, p = 0.08 in the multivariate model). Not causal.
 
 ## Claim 6 — schooling/education drives the transition
 

@@ -236,7 +236,9 @@ X = []
 Xiso = []
 for c in countries:
     y = np.array(series("tfr", c["iso"]), float)
-    x = np.arange(len(y), dtype=float)
+    # FIX (review 2026-11-24): onset/t10 are calendar years, so the interpolation axis must be calendar
+    # years too. The earlier version used np.arange(len(y)) (0..63) and clamped every query to the last value.
+    x = np.array(YEARS, dtype=float)
     m = ~np.isnan(y)
     yy = np.interp(grid * (c["t10"] - c["onset"]) + c["onset"], x[m], y[m])
     norm = (yy - c["floor"]) / c["fall"]
@@ -247,9 +249,21 @@ path_uniformity = dict(
     curve_pca_var=[float(v) for v in pca.explained_variance_ratio_],
     across_country_sd_by_grid=[float(v) for v in X.std(axis=0, ddof=1)],
     mean_abs_deviation_from_mean_curve=float(np.mean(np.abs(X - X.mean(0)))),
-    note="aligned curves share onset and 10%-remaining endpoints; low residual variation means the "
-         "decline PATH is a near-universal family and heterogeneity is in timing/pace/level",
+    mean_aligned_curve=[float(v) for v in X.mean(axis=0)],
+    pc1_loadings=[float(v) for v in pca.components_[0]],
+    n_countries=int(X.shape[0]),
+    note="aligned curves share onset and 10%-remaining endpoints (SD is ~0 at the two ends by construction). "
+         "Review 2026-11-24: the earlier run interpolated on an index axis, which made every curve identical "
+         "(SD 0.017, PC1 100%); with calendar-year interpolation the interior SD is ~0.15 and PC1 ~73%, so "
+         "the aligned path is NOT near-universal.",
 )
+# which end of the path does PC1 distinguish? correlate PC1 score with the transition descriptors
+_pc1 = pca.transform(X)[:, 0]
+_cdf = pd.DataFrame([dict(iso=c["iso"], curvature=c["curvature"], speed=c["speed"], duration=c["duration"],
+                          onset=c["onset"], floor=c["floor"]) for c in countries])
+path_uniformity["pc1_score_correlations"] = {
+    k: float(np.corrcoef(_pc1, _cdf[k].values)[0, 1]) for k in ("curvature", "speed", "duration", "onset", "floor")}
+path_uniformity["pc1_sign_note"] = "positive PC1 score = higher normalised fertility in the interior of the aligned window (slower early fall)" if pca.components_[0].mean() > 0 else "positive PC1 score = lower normalised fertility in the interior of the aligned window (faster early fall)"
 
 # ---------------------------------------------------------------- 4. determinants
 def cross_year(s, thresh, above=True):
@@ -329,12 +343,13 @@ for c in countries:
     ))
 D = pd.DataFrame(rows)
 D["school_timing"] = D["school_50"]
-D["school_lead"] = D["onset"] - D["school_50"]
-D["mortality_lead"] = D["onset"] - D["mort_10"]
-PRED = {"school_lead": "schooling expansion timing (onset minus year female primary completion reached "
-                        "50%; left-censored at first observation)",
-        "mortality_lead": "mortality-decline timing (onset minus year female life expectancy gained "
-                          "10 years)",
+# FIX (review 2026-11-24): the earlier version regressed onset on (onset - timing), which contains the
+# dependent variable on the right-hand side (mechanical coupling). Predictors are now the timing years
+# themselves, entered as levels.
+PRED = {"school_50": "schooling expansion timing (calendar year female primary completion reached "
+                      "50%; left-censored at first observation)",
+        "mort_10": "mortality-decline timing (calendar year female life expectancy gained "
+                   "10 years)",
         "log_gdp_onset": "log GDP per capita at onset (PPP)",
         "urban_onset": "urban share at onset",
         "school_level": "female upper-secondary completion at onset (%)"}
@@ -359,6 +374,17 @@ for dep in ("onset", "midpoint", "duration", "speed", "floor", "curvature"):
                   for k in PRED if k in m.params.index})
     else:
         reg[dep]["multivariate"] = dict(n=int(len(dd)), note="too few complete cases")
+    # Review 2026-11-24: the full model (needs GDP, n=4) is not estimable, so the paper's "multivariate model
+    # without income" was never actually in the JSON. Added here: timing and urbanisation predictors only.
+    PRED_MV = ["school_50", "mort_10", "urban_onset"]
+    dm = D.dropna(subset=[dep] + PRED_MV).copy()
+    if len(dm) >= 25:
+        mm = sm.OLS(dm[dep], sm.add_constant(dm[PRED_MV])).fit(cov_type="HC1")
+        reg[dep]["multivariate_no_gdp_no_schoollevel"] = dict(
+            n=int(len(dm)), r2=float(mm.rsquared),
+            coef={k: [float(mm.params[k]), float(mm.bse[k]), float(mm.pvalues[k])] for k in PRED_MV})
+    else:
+        reg[dep]["multivariate_no_gdp_no_schoollevel"] = dict(n=int(len(dm)), note="too few complete cases")
 D.to_csv(os.path.join(OUT, "country_shape_parameters.csv"), index=False)
 
 # ---------------------------------------------------------------- 3b. clustering of transition timing/pace
@@ -456,7 +482,7 @@ ax.plot(grid, X.mean(0), "k-", lw=2, label="mean across countries")
 ax.fill_between(grid, X.mean(0) - X.std(0, ddof=1), X.mean(0) + X.std(0, ddof=1), color="grey", alpha=0.3,
                 label="+/- 1 SD")
 ax.set_xlabel("normalised time (onset to 10% remaining)"); ax.set_ylabel("normalised TFR (1=peak, 0=floor)")
-ax.set_title("Aligned decline paths: one family (PC1 %.0f%% of variance)" % (100 * pca.explained_variance_ratio_[0]))
+ax.set_title("Aligned decline paths (mean and 1 SD; PC1 %.0f%% of variance)" % (100 * pca.explained_variance_ratio_[0]))
 ax.legend(fontsize=7)
 ax = axes[1]
 for k in np.unique(labels):
@@ -465,6 +491,12 @@ for k in np.unique(labels):
     ax.plot(grid, curves.mean(0), color="C%d" % k, lw=2, label="class %d (n=%d)" % (k + 1, m.sum()))
 ax.set_xlabel("normalised time"); ax.set_ylabel("normalised TFR")
 ax.set_title("Mean path by transition class"); ax.legend(fontsize=7)
+# Review 2026-11-24: store the class mean curves so the paper's numbers are traceable to the JSON
+path_uniformity["class_mean_curves"] = {
+    "class_%d" % (k + 1): [float(v) for v in np.array([Xmap[i] for i in Diso[labels == k]]).mean(0)]
+    for k in np.unique(labels)}
+path_uniformity["class_curve_max_gap"] = float(np.max(np.abs(
+    np.array(path_uniformity["class_mean_curves"]["class_1"]) - np.array(path_uniformity["class_mean_curves"]["class_2"]))))
 plt.tight_layout(); plt.savefig(os.path.join(FIG, "fig4_norm_curves.png"), dpi=300); plt.close()
 
 # ---------------------------------------------------------------- 6. save

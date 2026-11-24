@@ -1,4 +1,4 @@
-# The shape of the demographic transition: one path, many timings
+# The shape of the demographic transition: what varies and what does not
 
 **Draft for:** *Demography* / *Population and Development Review* / *Population Studies*. **Date:** 25 November
 2026. **Data and code:** `research/records/2026-11-25-paper-shape/` (branch `research/paper-shape-2026-11-25`).
@@ -17,22 +17,28 @@ S-curve is not the best description of the estimable window: an exponential decl
 parametric forms out of sample (last-decade RMSE 0.48 births per woman, against 0.31 for the exponential).
 **With truncated 1960–2023 series we cannot distinguish a genuinely non-logistic form from a logistic that
 the window leaves unidentified; the claim is that the exponential-to-floor family describes the available
-transition data better, not that the S-curve is refuted.** Second, once each
-transition is aligned on its own onset and duration, the *path* is nearly universal (country-to-country
-standard deviation of the aligned curve 0.017; the first principal component explains essentially all
-remaining variance), so the heterogeneity documented in cross-country fertility studies lives almost entirely
-in *timing, pace and level*, not in the functional shape of the decline. Third, two broad transition classes
-are nevertheless detectable — an earlier, deeper, more curved class (58 countries; median onset 1965, floor
+transition data better, not that the S-curve is refuted.** Second, aligning each transition on
+its own onset and duration removes most, but not all, of the heterogeneity. The aligned path is pinned at its
+endpoints by construction (country-to-country standard deviation 0.02), but in the interior the standard
+deviation is about 0.15 on the 0–1 scale (peak 0.16), the first principal component explains 73% of the
+remaining variance and the second 16%. The path is therefore *not* universal: a large part of the heterogeneity
+documented in cross-country fertility studies lives in *timing, pace and level*, and a smaller but real part in
+the interior shape (how early or late in the window the decline is concentrated). Third, two broad transition
+classes are detectable — an earlier, deeper, more curved class (58 countries; median onset 1965, floor
 1.68) and a later, shallower, more linear class (47 countries; median onset 1973, floor 2.36) — and the
 partition is better than random (silhouette 0.28; 0 of 500 random partitions as coherent, p < 0.01), though
 silhouette levels are modest enough that the honest description is two poles of a continuum rather than
-discrete types. The strongest correlate of timing is the timing of mortality decline: a one-year later
-ten-year gain in female life expectancy is associated with a 0.24-year later onset (SE 0.04) and a 0.30-year
-later midpoint (SE 0.05). Higher urbanisation at onset is associated with earlier transitions; female
-secondary completion at onset is associated with longer, more curved declines. Schooling-expansion timing has
-no independent association once mortality timing is accounted for. Richer data are needed before any of these
-associations can be read causally. The practical implication is that the "model country" approach to
-forecasting is defensible for the *shape* of the decline and indefensible for its *timing*.
+discrete types. The timing of schooling expansion is the strongest correlate of fertility-transition timing:
+a year later date at which female primary completion reached 50% is associated with a 0.16-year later onset
+(SE 0.05, n = 90) and a 0.27-year later midpoint (SE 0.07), and the association survives adjustment for
+mortality timing and urbanisation (0.14, SE 0.05, n = 86). The calendar year of a ten-year gain in female life
+expectancy is, if anything, negatively associated with onset (−0.13, SE 0.04) and is not robust to adjustment
+(−0.09, SE 0.05). Higher urbanisation at onset is associated with earlier transitions; female secondary
+completion at onset is associated with longer, more curved declines (n = 30). The schooling dates are
+left-censored at the first observation, so these coefficients are descriptive at best, and richer data are needed
+before any of them can be read causally. The practical implication is that the "model country" approach to
+forecasting is defensible for a first-order guess at the *shape* of the decline, with an interior uncertainty
+band of about ±0.15, and indefensible for its *timing*.
 
 ## 1. Introduction
 
@@ -59,30 +65,29 @@ quantifies a functional form that is usually assumed.
 The analysis rests on a fresh pull of the World Bank's annual World Development Indicators for 1960–2023, with
 105 countries that meet a transparent transition rule. For each country we fit five functional forms, compare
 them by AIC/BIC and by a hold-out of the last decade, extract descriptors from the observed series, test
-whether the normalised decline paths differ (they barely do), cluster the timing-and-pace descriptors (they
+whether the normalised decline paths differ (they do, by about 0.15 in the interior), cluster the timing-and-pace descriptors (they
 do, weakly, into two poles), and regress the descriptors on covariates.
 
 Four findings organise the paper. First, **the S-curve is usually assumed rather than tested, and in the estimable window it is not the best-fitting form**. An exponential decay to a floor and
 the Gompertz curve both beat the logistic in most countries; the logistic is the worst of the four parametric
 forms in out-of-sample prediction. The transition, as measured annually, is more often a decelerating decline
-than a symmetric S. Second, **the path is near-universal once timing is removed**. Aligned on onset and on the
-year when 10% of the fall remains, country curves are almost indistinguishable: the cross-country standard
-deviation at each point of the aligned path is about 0.017 on a 0–1 scale, and the first principal component
-explains essentially all the residual variance. Third, **the heterogeneity is real but is about
-timing, pace and level**, and it has two broad poles: an early, deep, curved class and a late, shallow,
+than a symmetric S. Second, **alignment removes most heterogeneity but the path is not universal**. Aligned on onset and on the
+year when 10% of the fall remains, country curves are pinned together at the ends (standard deviation about
+0.02) but differ in the interior, where the standard deviation is about 0.15 on a 0–1 scale; the first
+principal component explains 73% of the residual variance and the second 16%. Third, **the heterogeneity is
+mostly about timing, pace and level, with a real interior-shape component**, and it has two broad poles: an early, deep, curved class and a late, shallow,
 near-linear class. The clustering is better than random partitions but weak in absolute separation, so the
-right description is a continuum with two poles, not a taxonomy. Fourth, **mortality-decline timing is the
-dominant correlate of transition timing**, with urbanisation at onset associated with earlier transitions and
-secondary attainment at onset with longer, more curved declines; the timing of schooling expansion has no
-independent association once mortality timing is in the model. This last finding is correlational and the
+right description is a continuum with two poles, not a taxonomy. Fourth, **schooling-expansion timing is the
+strongest correlate of transition timing**, with urbanisation at onset associated with earlier transitions and
+secondary attainment at onset with longer, more curved declines; the calendar timing of mortality decline is
+not a robust correlate. This last finding is correlational, the schooling dates are left-censored, and the
 covariate coverage is uneven, so we state it as a description, not an effect.
 
 The paper also serves as the constructive follow-up to an earlier negative result from the same programme: a
 "universal collapse curve" relating fertility to female attainment across countries and cohorts was rejected,
 with country effects explaining about 72% of the residual variance. That result said *that* a single curve
-fails; this paper says *how* it fails. The answer is not that countries follow different functional paths — the
-path is remarkably stable — but that they are shifted horizontally (timing) and vertically (floor), and that
-the curvature differs modestly. That decomposition is useful for forecasting, for the model-country approach,
+fails; this paper says *how* it fails. The answer is mostly that countries are shifted horizontally (timing)
+and vertically (floor), with a smaller but non-trivial difference in interior shape (curvature). That decomposition is useful for forecasting, for the model-country approach,
 and for the theory of terminal enclosure.
 
 The rest of the paper is organised as follows. Section 2 reviews the shape literature. Section 3 describes the
@@ -244,13 +249,16 @@ reported as a continuum, not hidden behind a cluster count.
 ### 4.4 Determinants
 
 Shape descriptors are regressed on covariates with robust (HC1) standard errors. The timing covariates are
-defined as leads: the schooling-expansion lead is the onset year minus the year female primary completion
-reached 50% (left-censored at first observation), and the mortality-decline lead is the onset year minus the
-year female life expectancy gained ten years over its first observed value. Level covariates are measured at
+calendar years, not leads: schooling-expansion timing is the year female primary completion reached 50%
+(left-censored at the first observation), and mortality-decline timing is the year female life expectancy gained
+ten years over its first observed value. An earlier version of this analysis defined each as the onset year
+minus that date; because onset is also the dependent variable, that construction mechanically built the outcome
+into the regressor and produced spuriously large coefficients, so it was dropped. Level covariates are measured at
 onset: urban share, female upper-secondary completion, and log GDP per capita where available. Each descriptor
 is regressed on each covariate separately with the available cases, and a multivariate model is attempted on
 complete cases; where complete cases are too few, the multivariate model is reported as not estimable rather
-than dropped silently. All coefficients are correlations, not causal effects.
+than dropped silently. Because GDP leaves four complete cases, the reported multivariate model uses the two
+timing covariates and urbanisation only (n = 86). All coefficients are correlations, not causal effects.
 
 ## 5. Results
 
@@ -327,32 +335,44 @@ transitions actually differ.
 *Source:* `results/shape_results.json` → `shape_descriptors`; per-country values in
 `results/country_descriptors.csv`. Figure 3 plots the distributions.
 
-### 5.3 One path, many timings
+### 5.3 Timing and level first, interior shape second
 
 Figure 1 shows fitted shapes for representative countries, two per best-fitting form. Figure 4 shows the
-aligned curves. Once each transition is resampled between its own onset and the year when 10% of the fall
-remains, and normalised to run from one to zero, the curves hardly differ. The cross-country standard
-deviation of the aligned curve is **0.017 at every point of the path**, and the mean absolute deviation from
-the mean curve is **0.011** on a 0–1 scale. The first principal component of the aligned curves explains
-essentially **all** of their variance (the second component is numerically zero), which means that the
-variation that remains after alignment is a single, small, common deviation rather than several distinct path
-types. The variance share is unsurprising once the curves are aligned on the same endpoints; the informative
-number is the **0.017 cross-country spread**, not the variance share.
+aligned curves. Each transition is resampled (by linear interpolation on calendar years) between its own onset
+and the year when 10% of the fall remains, and normalised to run from one to zero. **Correction note:** an
+earlier version of this section reported a cross-country standard deviation of 0.017 at every point and a first
+principal component explaining essentially 100% of the variance. That was a coding error: the interpolation
+used the position in the series (0–63) as its axis while onset and t10 are calendar years, so every query was
+clamped to the last observed value and all countries received almost the same curve. With the interpolation
+axis fixed the picture is different.
 
-This is the paper's central decomposition. The literature correctly documents enormous heterogeneity, but that
-heterogeneity is **horizontal and vertical**, not in the shape of the path: transitions start at different
-times, fall at different speeds and depths, and end at different floors, but once those are aligned they follow
-the same path. The qualification is important: alignment is partly constructed by definition — any two
-monotone declines will look similar when both are normalised between their own endpoints. The informative
-part is the *size* of the residual: 0.017 on a 0–1 scale is small relative to the interval between, say, a
-linear and an S-shaped path (which would differ by an order of magnitude more at the midpoint). The result is
-therefore a statement about magnitude, not a tautology.
+The aligned curves are pinned together at the ends (standard deviation 0.017 at the first grid point and 0.025
+at the last; these are near zero by construction), but diverge in the interior: the standard deviation across
+the eleven grid points is 0.017, 0.078, 0.144, 0.148, 0.162, 0.148, 0.136, 0.110, 0.080, 0.041 and 0.025, and
+the mean absolute deviation from the mean curve is **0.074**. The first principal component explains **72.7%**
+of the variance of the aligned curves, the second **16.3%** and the third **5.7%**. PC1 scores are positively
+correlated with the floor (+0.51) and the onset year (+0.34) and negatively with curvature (−0.42) and
+duration (−0.35); a high score means that fertility stays higher through the interior of the window (a slower
+early fall). Part of the interior spread is therefore the same curvature variation that the descriptors
+already measure.
 
-This finding also explains the earlier collapse-curve rejection. If a single curve were imposed on the raw
-data, country differences in vertical level and horizontal timing would generate exactly the residual
-structure that the earlier analysis found: country intercepts and slopes differing while the pooled shape
-fit well (R² 0.78 pooled, but 71.6% of the residual variance attributable to country identity). The present
-analysis shows where that structure comes from.
+The mean aligned path is gently convex. By class (Figure 4, right) the early–deep class falls faster early in the
+window (0.52 of the fall remaining at normalised time 0.3, against 0.70 for the late–shallow class), so the two
+classes differ by up to about 0.18 in the aligned path itself.
+
+This is a weaker decomposition than the one this paper first reported. Timing and level account for much of the
+heterogeneity in raw series, but alignment does not remove all of it: for any one country, the interior of the
+decline can lie about 0.15 (one SD) above or below the average aligned path, which is of the same order as the
+difference between a linear decline and a moderately curved one (curvature 1.0 vs 1.4–1.9). Alignment is also
+partly constructed by definition — any two monotone declines look similar when normalised between their own
+endpoints — so even this spread is a lower bound on interior-shape differences.
+
+This finding is still consistent with the earlier collapse-curve rejection. If a single curve were imposed on
+the raw data, country differences in vertical level and horizontal timing, plus the interior-shape differences
+measured here, would generate the residual structure that the earlier analysis found: country intercepts and
+slopes differing while the pooled shape fit well (R² 0.78 pooled, but 71.6% of the residual variance
+attributable to country identity). The present analysis does not apportion that structure between placement and
+shape.
 
 ### 5.4 Two poles, not a taxonomy
 
@@ -389,32 +409,41 @@ silhouette caveat would overstate the typology.
 
 ### 5.5 What predicts the shape?
 
-Table 4 reports the available-case regressions of each descriptor on each covariate. Three patterns are
-robust across specifications.
+Table 4 reports the available-case regressions of each descriptor on each covariate. **Correction note:** an
+earlier version reported mortality-decline timing as the dominant correlate (0.24-year later onset per year,
+SE 0.036) and schooling timing as irrelevant. Both timing covariates had been defined as the onset year minus a
+date, so the outcome was part of the regressor; the coefficients in that version were largely mechanical. The
+results below use calendar-year timing covariates and replace them.
 
-**Mortality timing is the strongest correlate of transition timing.** A one-year later ten-year gain in female
-life expectancy is associated with a **0.24-year later onset (SE 0.036, n = 101)** and a **0.30-year later
-midpoint (SE 0.046, n = 101)**; later mortality decline also predicts a shorter duration (−0.17 years per year,
-SE 0.068) and less curvature (−0.014, SE 0.004). The near one-for-one relation is consistent with mortality
-decline being part of the same process rather than an external cause: it is a description of co-movement at the
-level of countries. Because both variables are timing measures on the same scale, the coefficient is easy to
-read: a country whose mortality decline arrived a decade later in relative terms typically began its
-fertility transition about 2.4 years later.
+**Schooling-expansion timing is the strongest correlate of transition timing.** A year later date at which
+female primary completion reached 50% is associated with a **0.16-year later onset (SE 0.047, n = 90)** and a
+**0.27-year later midpoint (SE 0.072)**. In the multivariate model with mortality timing and urbanisation
+(n = 86) the onset coefficient is 0.142 (SE 0.045) and the midpoint coefficient 0.222 (SE 0.067); the model
+R² is 0.19 for onset and 0.26 for midpoint. The schooling dates are left-censored at the first observation
+(many countries had crossed 50% before the series begins), which compresses the early end of the variable and
+can attenuate or distort the slope; the coefficient is a description of co-movement in the observed sample.
+
+**Mortality timing is not a robust correlate.** The calendar year in which female life expectancy gained ten
+years is associated with a **0.13-year earlier onset (coefficient −0.125, SE 0.042, n = 101)** and a 0.21-year
+earlier midpoint (SE 0.069) in the univariate regressions, the opposite sign to the earlier version. In the
+multivariate model the onset coefficient is −0.085 (SE 0.048, p = 0.08) and the midpoint coefficient −0.111
+(SE 0.081). A plausible reading is that countries which started with higher life expectancy needed longer to
+gain ten years, and also began their fertility transitions earlier; the variable partly reflects the starting
+level of mortality rather than the date of a mortality decline; we have not tested this reading. It does show a small positive association with
+curvature (+0.012, SE 0.005; +0.014 in the multivariate model), which we do not interpret.
 
 **Urbanisation at onset is associated with earlier, faster transitions.** A one-percentage-point higher urban
 share at onset is associated with a **0.05-year earlier onset (SE 0.025, n = 105)** and a **0.15-year earlier
 midpoint (SE 0.036)**; the onset coefficient is significant at conventional levels and the midpoint coefficient
-is strongly significant. The magnitudes are modest but the sign is consistent with an urban transition
-occurring earlier in more urban societies.
+is strongly significant. The magnitudes are modest. In the multivariate model the midpoint coefficient is
+−0.114 (SE 0.040) and the onset coefficient −0.046 (SE 0.028).
 
-**Schooling is about level, not timing.** The timing of schooling expansion (the year female primary completion
-reached 50%) has no independent association with onset (**0.049 years later per year of lead, SE 0.041,
-n = 90**) or midpoint (−0.063, SE 0.085). What does predict shape is the *level* of female secondary completion
-at onset: a ten-point higher level is associated with a **2.5-year earlier onset (coefficient −0.246, SE
-0.097, n = 30)**, a **5.8-year longer duration** (coefficient +0.583 years per percentage point, SE 0.20),
-and **more curvature** (+0.024 per point, SE 0.009) — i.e. higher-attainment countries have longer, more
-S-shaped declines. The schooling-level sample is only 30 countries, so this is a hypothesis, not an
-established pattern.
+**Female secondary completion at onset is associated with a different shape.** What predicts shape beyond
+timing is the *level* of female upper-secondary completion at onset: a ten-point higher level is associated
+with a **2.5-year earlier onset (coefficient −0.246, SE 0.097, n = 30)**, a **5.8-year longer duration**
+(coefficient +0.583 years per percentage point, SE 0.20), and **more curvature** (+0.024 per point, SE 0.009)
+— i.e. higher-attainment countries have longer, more S-shaped declines. The schooling-level sample is only 30
+countries, so this is a hypothesis, not an established pattern.
 
 **Income could not be tested well.** GDP per capita at onset is available for only 18 transitions, because PPP
 series mostly start in 1990 and many onsets are in the 1960s and 1970s. We report the coverage rather than
@@ -422,24 +451,26 @@ impute a backcast series.
 
 **Table 4. Correlates of shape descriptors (available-case OLS, robust SE; n in parentheses).**
 
-| Descriptor | Mortality-decline lead (years) | Schooling-expansion lead (years) | Urban share at onset (pp) | Female upper-sec. at onset (pp) |
+| Descriptor | Mortality-decline timing (calendar year) | Schooling-expansion timing (calendar year) | Urban share at onset (pp) | Female upper-sec. at onset (pp) |
 |---|---|---|---|---|
-| Onset year | **0.240 (0.036)**, n=101 | 0.049 (0.041), n=90 | **−0.052 (0.025)**, n=105 | **−0.246 (0.097)**, n=30 |
-| Midpoint year | **0.301 (0.046)**, n=101 | −0.063 (0.085), n=90 | **−0.146 (0.036)**, n=105 | **−0.291 (0.116)**, n=30 |
-| Duration (years) | **−0.168 (0.068)**, n=101 | −0.072 (0.101), n=90 | −0.042 (0.045), n=105 | **0.583 (0.200)**, n=30 |
-| Curvature | **−0.014 (0.004)**, n=101 | −0.004 (0.006), n=90 | 0.000 (0.003), n=105 | **0.024 (0.009)**, n=30 |
-| Floor | **0.005 (0.004)**, n=101 | −0.000 (0.006), n=90 | −0.004 (0.003), n=105 | −0.024 (0.017), n=30 |
+| Onset year | **−0.125 (0.042)**, n=101 | **0.164 (0.047)**, n=90 | **−0.052 (0.025)**, n=105 | **−0.246 (0.097)**, n=30 |
+| Midpoint year | **−0.205 (0.069)**, n=101 | **0.270 (0.072)**, n=90 | **−0.146 (0.036)**, n=105 | **−0.291 (0.116)**, n=30 |
+| Duration (years) | 0.093 (0.090), n=101 | −0.082 (0.089), n=90 | −0.042 (0.045), n=105 | **0.583 (0.200)**, n=30 |
+| Curvature | **0.012 (0.005)**, n=101 | −0.006 (0.005), n=90 | 0.000 (0.003), n=105 | **0.024 (0.009)**, n=30 |
+| Floor | 0.003 (0.005), n=101 | 0.010 (0.005), n=90 | −0.004 (0.003), n=105 | −0.024 (0.017), n=30 |
 
 *Notes:* each cell is a separate regression with an intercept; coefficients in descriptor units per covariate
-unit; robust (HC1) standard errors; bold marks the associations discussed in the text. The multivariate
-complete-case model is not estimable because GDP coverage reduces it to one observation; the multivariate
-model without GDP has n = 25 and is reported in `results/shape_results.json`. Source:
-`results/shape_results.json` → `determinants`.
+unit; robust (HC1) standard errors; bold marks coefficients with |t| above about 2. Timing covariates are
+calendar years (an earlier version used onset minus the date, which is mechanically coupled to the outcome and
+has been removed). The full multivariate model is not estimable because GDP coverage reduces it to four
+observations; the model with both timing covariates and urbanisation (n = 86) is in `results/shape_results.json`
+→ `determinants` → `multivariate_no_gdp_no_schoollevel`. Source: `results/shape_results.json` → `determinants`.
 
-The multivariate model without income (n = 25) leaves the mortality coefficients essentially unchanged
-(mortality lead 0.236 on onset, SE 0.041) and the urban coefficient smaller, while the schooling-level
-coefficients lose precision. We therefore report the univariate patterns and flag the multivariate model as
-underpowered rather than treating it as the headline.
+The multivariate model without income (n = 86) leaves the schooling-timing association with onset and midpoint
+essentially unchanged (0.142 and 0.222), weakens the mortality-timing coefficients (onset p = 0.08, midpoint
+p = 0.17), and leaves the urbanisation coefficient on midpoint significant (−0.114, SE 0.040). Its R² is
+0.19 for onset and 0.26 for midpoint, so most of the variation in timing is not accounted for by these
+covariates. We report the univariate patterns alongside it; none of the regressions is a causal estimate.
 
 ### 5.6 Robustness and descriptor structure
 
@@ -448,7 +479,7 @@ the exponential is both the most frequent BIC winner (51 countries) and the best
 hold-out (RMSE 0.31), while the logistic is both rare (7 countries) and worst (0.48). A ranking that only
 held in-sample would be suspect; this one does not. Second, **the descriptor space is coherent**: the
 correlations among the six descriptors have the expected signs. Onset and midpoint correlate at 0.68;
-duration correlates negatively with speed (−0.47) and negatively with curvature (0.51 — longer transitions
+duration correlates negatively with speed (−0.47) and positively with curvature (+0.51 — longer transitions
 are more curved); and the floor correlates positively with onset (0.46) and midpoint (0.51), so later
 transitions end higher. These correlations are what the two-pole structure summarises. Third, **k = 3 splits
 the same continuum rather than overturning it** (silhouette 0.239): the three-class solution separates a very
@@ -458,16 +489,15 @@ countries) between them. The k = 2 solution is the more parsimonious summary of 
 k = 3 here so that a reader can see that the choice of k is a summary decision, not an artefact that
 manufactures the two-pole reading.
 
-A fourth check is conceptual rather than numerical. The path-uniformity result uses alignment on onset and
-t10, which is a strong normalisation; the honest question is whether the residual variation is small enough
-to matter. The cross-country standard deviation of 0.017 is small relative to the difference between
-alternative paths: a linear decline and an S-shaped decline differ by roughly 0.15 at the midpoint on the
-same normalised scale. The residual after alignment is an order of magnitude smaller than a genuine
-path difference, which is why we describe the path as near-universal rather than as sharing a family
-resemblance. The alignment does, however, absorb information about the *approach* to the endpoints — a
-transition that creeps at onset and plunges later is aligned away from one that plunges immediately — so the
-claim is best stated as: heterogeneity in the interior shape of the decline is small, not that timing and
-pace are unimportant. They are the main story.
+A fourth check is conceptual. Alignment on onset and t10 is a strong normalisation, so the residual spread
+after alignment is a lower bound on how much interior shape differs. The spread is not small: an interior
+standard deviation of about 0.15 is of the same order as the difference between a linear decline and a
+moderately curved one (curvature 1.0 versus 1.4–1.9 on the descriptor scale), and the first principal component
+carries 73% of the variance of the aligned curves, strongly tied to curvature (−0.42), floor (+0.51), onset
+(+0.34) and duration (−0.35). We therefore do not describe the path as universal. The alignment also absorbs
+information about the *approach* to the endpoints, which makes any interior-shape differences, if anything, larger
+than measured here. Timing and level remain the largest sources of heterogeneity in raw series, but they are not
+the only ones.
 
 ## 6. Relation to the "no universal collapse curve" result
 
@@ -479,17 +509,18 @@ heterogeneity F-statistic was 46.4 on 313 and 3,717 degrees of freedom; the resi
 0.847 births per woman, 11.2% of the fertility range, and remained 0.434 after a country-level rescaling. That
 paper said the universal collapse curve is rejected.
 
-The present paper is the constructive follow-up. It explains *why* the collapse fails, and the answer is
-unexpectedly benign for the idea of a common transition: countries do not follow different functional paths.
-Once aligned, they follow an almost identical one. The collapse fails because countries are **shifted** — in
-timing (onset spans two decades or more) and in level (floors range from 1.37 to 2.79) — and because curvature
-varies modestly (1.06 to 2.40). A single curve imposed on raw data therefore fits shape but not placement, and
-placement dominates the residual. The correct object is a family with a common path and country-specific
-shift parameters; that is exactly what the fitted exponential and Gompertz models provide.
+The present paper is a descriptive follow-up. It points to *where* the collapse fails, with a more modest
+answer than the first draft gave. Countries are **shifted** — in timing (the 10th–90th percentile range of onset
+is 1963–1977) and in level (the 10th–90th percentile range of floors is 1.37–2.79) — and their interior shapes
+also differ (curvature 10th–90th percentile 1.06–2.40; after alignment the interior spread of the normalised
+curve is about 0.15). A single curve imposed on raw data therefore misses placement and, to a smaller degree,
+shape. The analysis here does not apportion the earlier residual between the two, and the earlier negative is
+not "explained away": it is consistent with both placement and shape differences.
 
-This reconciliation matters for how the earlier negative is read. "No universal curve" does not mean "no
-common shape"; it means "no common placement". The two claims are compatible, and separating them is the
-contribution of this paper.
+This matters for how the earlier negative is read. "No universal curve" should not be read as "common shape,
+different placement"; the evidence here supports mostly-placement differences plus real shape differences. A
+family with country-specific shift and curvature parameters, as the fitted exponential and Gompertz models
+provide, is the appropriate object.
 
 ## 7. Implications
 
@@ -498,53 +529,56 @@ contribution of this paper.
 Three implications follow. First, the commonly imposed S-curve is not the best-supported functional form for
 historical annual data in this estimable window; an exponential or Gompertz family, or a flexible spline, transports better. Projection
 models that impose an S-curve should test the imposed form against these alternatives rather than treating it
-as given. Second, because the path is near-universal once timing is fixed, the key forecasting problem is not
-the shape of the decline but the **timing and the floor**. Forecast uncertainty should be concentrated on
-onset/midpoint timing and on the post-transition level rather than on curvature. Third, the two transition
-poles provide a natural donor pool for model-country forecasts: late, shallow transitions resemble each other
-more than they resemble the early deep transitions, and borrowing the *shape* from the right pole while
-estimating timing from the country's own covariates is a defensible strategy.
+as given. Second, because alignment removes most (not all) of the heterogeneity, the main forecasting problems are the
+**timing and the floor**, with interior shape a secondary source: an interior spread of about 0.15 on the
+normalised scale is large enough that a single borrowed path should carry an explicit uncertainty band. Third, the two transition
+poles provide a natural donor pool for model-country forecasts: the class-mean aligned paths differ by up to
+about 0.18, so borrowing the shape from the right pole, rather than from a pooled mean, is the better strategy,
+while timing is estimated from the country's own covariates.
 
 ### 7.2 For the "model country" approach
 
 The model-country approach uses one country's history as a template for another's future. The results draw a
-sharp line: **the shape is transportable, the timing is not**. Aligned curves differ by about 0.017 on a 0–1
-scale, so borrowing the path is defensible. Onset and midpoint differ by decades, so borrowing the timing
-without re-estimating it would be indefensible. Any model-country exercise should therefore separate the two
-operations: take the normalised path from a donor (or from a pooled estimate), and estimate the timing
-parameters from the receiving country's own covariates, accepting that the mortality-timing and urbanisation
-associations above are only correlational.
+line between shape and timing: **timing is not transportable, and shape is only partly so**. Onset and midpoint
+differ by decades, so borrowing the timing without re-estimating it would be indefensible. Aligned curves
+differ by about 0.15 (one SD) in the interior, with a 0.18 gap between class means, so borrowing a path is a
+defensible first approximation but not an exact one. Any model-country exercise should therefore separate the two
+operations: take the normalised path from a donor in the matching class (or from a pooled estimate with an
+uncertainty band), and estimate the timing parameters from the receiving country's own covariates, accepting that
+the schooling-timing and urbanisation associations above are only correlational.
 
 ### 7.3 For policy timing
 
-If mortality timing and urbanisation are the covariates most strongly associated with transition timing, then
-the window in which fertility policy can plausibly bite is set by processes that are not themselves fertility
-policy. The correlational pattern suggests that interventions are most likely to matter around the mortality
-decline and urban transition, not decades before or after. This is a hypothesis about timing, not an
-identified effect; it is offered because policy documents routinely assume a generic S-curve in which the
-intervention point is chosen by position in the curve, and the evidence here suggests that position in the
-curve is itself mostly a function of mortality and urbanisation timing.
+If schooling-expansion timing and urbanisation are the covariates most strongly associated with transition
+timing, then the window in which fertility policy can plausibly bite is set by processes that are not
+themselves fertility policy. The correlational pattern suggests that interventions are most likely to matter
+around the schooling expansion and urban transition, not decades before or after. This is a hypothesis about
+timing, not an identified effect (the schooling dates are left-censored and the models explain only about a
+fifth to a quarter of the variance in timing); it is offered because policy documents routinely assume a generic
+S-curve in which the intervention point is chosen by position in the curve.
 
 ### 7.4 For the theory of terminal enclosure
 
 The programme's theory of terminal enclosure expects high-inhibition systems to approach a terminal state in
 which additional scale yields little further functional change. The transition-shape results speak to the
 demographic side of that claim in one specific way: the **floor** — the terminal fertility level — varies
-substantially (1.37 to 2.79) and is not bound to a single value. If enclosure implies a common terminal state,
-the cross-country record does not support a common terminal *level*, only a common terminal *shape*. The
-theory's terminal-enclosure prediction should therefore be stated in terms of shape and trajectory, not in
-terms of a universal end-point.
+substantially (10th–90th percentile 1.37 to 2.79; full range 0.75 to 3.17) and is not bound to a single value. If enclosure implies a common terminal state,
+the cross-country record does not support a common terminal *level*, and with an interior spread of about 0.15 it
+does not support a single common trajectory either. The theory's terminal-enclosure prediction should therefore be
+stated as a tendency toward a low-fertility regime with country-specific timing, level and curvature, not as a
+universal end-point or a universal path.
 
 ### 7.5 What would change our mind
 
-The claims in this paper are falsifiable and we state the tests. The path-uniformity claim would fail if
-cohort or subnational data showed materially different aligned paths — for example, a markedly slower start
-followed by a steeper interior than the 0.017 spread found here. The functional-form claim would fail if a
+The claims in this paper are falsifiable and we state the tests. The claim that interior shape differs modestly but
+measurably would fail if cohort or subnational data showed aligned paths much tighter than the 0.15 interior
+spread found here, or much looser. The functional-form claim would fail if a
 properly specified logistic with a flexible floor tracked the annual data as well as the exponential family
 in a rolling-origin forecasting evaluation. The two-pole reading would fail if clustering with additional
 shape descriptors (for example, the skew of the decline or the duration of the final deceleration) produced
 clusters with substantially higher silhouette and a different substantive split. The covariate associations
-would fail if within-country or historical data reversed them, or if mortality timing turned out to be
+would fail if within-country or historical data reversed them, if the schooling-timing slope were an artefact of
+left-censoring (testable on a window that starts before 1960), or if mortality timing turned out to be
 mechanically tied to the TFR series through the tempo effect. None of these tests is run here; they define
 the next paper, not a weakness of this one.
 
@@ -558,7 +592,7 @@ different shapes from the national average; subnational series would let the pat
 within countries as well as between them. Third, **historical series for the earliest transitions**: our data
 begin in 1960, so the earliest transitions (Britain, France, Sweden, the United States) are left-censored;
 historical series from the Human Mortality Database and national statistical yearbooks would test whether the
-near-universal path holds for the first transitions or whether the path itself changed over history. Fourth,
+interior shape found here holds for the first transitions or whether the path itself changed over history. Fourth,
 **a forecasting horse race**: compare the fitted functional forms against the UN double-logistic and against
 simple random-walk benchmarks on a rolling-origin evaluation; the hold-out comparison here is a first step,
 not a forecasting evaluation.
@@ -584,16 +618,19 @@ The demographic transition has a shape, and the shape is not quite the one usual
 countries, annual total fertility in the estimable window is better described as an exponential or Gompertz
 decline to a floor than as a logistic S-curve; the logistic is the worst of the four parametric forms out of
 sample and wins in only seven countries, though the truncation of the series means this is evidence about the
-window rather than a refutation of the S-curve. Once transitions are aligned on their own onset and duration, their paths are almost identical: the
-heterogeneity that the comparative literature documents is in timing, pace and floor, not in the path. That
+window rather than a refutation of the S-curve. Once transitions are aligned on their own onset and duration, much of the heterogeneity disappears but not all
+of it: the interior spread of the aligned path is about 0.15 on a 0–1 scale, and the first principal component of
+the aligned curves explains 73% of the variance. The heterogeneity that the comparative literature documents is
+mostly in timing, pace and floor, with a real interior-shape component. That
 heterogeneity has two poles — early, deep, curved transitions and late, shallow, near-linear ones — which are
-better than random partitions but weak enough to describe a continuum. Mortality-decline timing is the
+better than random partitions but weak enough to describe a continuum. Schooling-expansion timing is the
 strongest correlate of transition timing; urbanisation at onset is associated with earlier transitions; the
 level of female secondary attainment at onset is associated with longer, more curved declines, while the
-timing of schooling expansion is not independently associated once mortality timing is accounted for. These
-are descriptions, not causes. For forecasting and for the model-country approach, the practical lesson is
-simple: borrow the shape, estimate the timing. For the earlier "no universal curve" negative, the lesson is
-that a single curve fails not because paths differ but because placements do.
+calendar timing of mortality decline is not a robust correlate. These are descriptions, not causes. For
+forecasting and for the model-country approach, the practical lesson is to estimate the timing from the
+receiving country and to borrow the shape from the matching class with an explicit uncertainty band. For the
+earlier "no universal curve" negative, the lesson is that a single curve fails mostly because placements differ,
+and partly because interior shapes do.
 
 ## Data and code availability
 
@@ -617,9 +654,9 @@ poles are visible but overlap, which is why the paper describes a continuum with
 transitions (dashed line = median). The spans are wide in every dimension, which is the quantitative content
 of "heterogeneity".
 
-**Figure 4.** Left: aligned decline paths (mean ± one standard deviation across countries) — the near-universal
-path. Right: mean aligned path by transition class, showing that the classes differ mainly in level and pace,
-with little difference in the aligned path itself.
+**Figure 4.** Left: aligned decline paths (mean ± one standard deviation across countries); the band is narrow
+at the ends by construction and about ±0.15 in the interior. Right: mean aligned path by transition class; the
+early–deep class falls faster early in the window and the two class means differ by up to 0.18.
 
 ## References
 
