@@ -1,0 +1,447 @@
+{
+ "scan_timestamp_utc": "2026-11-24T17:16:01+00:00",
+ "preregistration_commit": "875ffd8",
+ "question": "t* = t_abolition + L_primary; sex-disaggregated bulge outcome",
+ "verdict": "NOT-ESTIMABLE",
+ "inputs": {
+  "L_primary_source": {
+   "required": true,
+   "found": false,
+   "detail": "sourced 0/8; no in-repo primary-cycle-length file for MWI ETH UGA LSO TZA KEN MOZ GHA"
+  },
+  "sex_disaggregated_repetition_or_transition_series": {
+   "required": true,
+   "found": false,
+   "detail": "no committed series in any ref; no file path matches rept/prsl"
+  },
+  "DHS_IR_microdata": {
+   "required": true,
+   "found": false,
+   "detail": "0 .dta across 194 refs; DHS IR login-gated; Africa-11 request not submitted"
+  }
+ },
+ "scans": {
+  "screened_and_rejected": {
+   "reason": "path-keyword hits that are NOT education-system data; screened and rejected, none is a country-year sex-disaggregated repetition/transition series",
+   "groups": {
+    "research/records/2026-11-23-transition{,-gpu}/": "schooling-fertility phase-transition record (long_run_panel.csv = mean years of schooling; trans_*.json = model results) -- not primary->secondary transition",
+    "experiments/massification-2026-11-20/.../coevolve_*/**/A_transitions_derived.csv, transitions_all_arms.csv": "ABM model output, not country-year education data",
+    "research/masseng-v6/model/outputs/PHL/v3/figures/k12_transition.png": "model figure, not a series",
+    "research/records/2026-11-23-dhs-micro/": "DHS API AGGREGATE cells (women's education x fertility); no IR microdata -- see evidence.dhs_ir_microdata",
+    "e6_inputs_and_hashes.csv .dta hits": "GGDC/PWT Stata files, not DHS microdata"
+   }
+  },
+  "all_ref_path_scan": {
+   "n_refs": 197,
+   "n_unique_paths": 5424,
+   "keyword_matches": {
+    "primary_duration_or_cycle_or_structure": [],
+    "repetition": [],
+    "progression_transition": [
+     "experiments/massification-2026-11-20/10_massification/extensions/coevolve_2026-11-21/harness/out/A_transitions_derived.csv",
+     "experiments/massification-2026-11-20/10_massification/extensions/coevolve_2026-11-21/results/transitions_all_arms.csv",
+     "research/masseng-v6/model/outputs/PHL/v3/figures/k12_transition.png",
+     "research/records/2026-11-23-transition-gpu/README.md",
+     "research/records/2026-11-23-transition-gpu/figures/transition_figure.png",
+     "research/records/2026-11-23-transition-gpu/results/trans_collapse.json",
+     "research/records/2026-11-23-transition-gpu/results/trans_collapse_A.json",
+     "research/records/2026-11-23-transition-gpu/results/trans_collapse_B.json",
+     "research/records/2026-11-23-transition-gpu/results/trans_collapse_big.json",
+     "research/records/2026-11-23-transition-gpu/results/trans_power.json",
+     "research/records/2026-11-23-transition-gpu/results/trans_results.json",
+     "research/records/2026-11-23-transition-gpu/scripts/analyse_transition.py",
+     "research/records/2026-11-23-transition-gpu/scripts/dosecore.py",
+     "research/records/2026-11-23-transition-gpu/scripts/engine.py",
+     "research/records/2026-11-23-transition-gpu/scripts/kernel.cu",
+     "research/records/2026-11-23-transition-gpu/scripts/ref_numpy.py",
+     "research/records/2026-11-23-transition-gpu/scripts/test_port.py",
+     "research/records/2026-11-23-transition-gpu/scripts/transition_gpu.py",
+     "research/records/2026-11-23-transition/README.md",
+     "research/records/2026-11-23-transition/data/RAW_SOURCES.md",
+     "research/records/2026-11-23-transition/data/long_run_panel.csv",
+     "research/records/2026-11-23-transition/data/onsets.csv",
+     "research/records/2026-11-23-transition/data/owid_metadata/average-years-of-schooling.metadata.json",
+     "research/records/2026-11-23-transition/data/owid_metadata/birth-rate-total.metadata.json",
+     "research/records/2026-11-23-transition/data/owid_metadata/child-mortality-complete-gapminder.metadata.json",
+     "research/records/2026-11-23-transition/data/owid_metadata/child-mortality-igme.metadata.json",
+     "research/records/2026-11-23-transition/data/owid_metadata/child-mortality.metadata.json",
+     "research/records/2026-11-23-transition/data/owid_metadata/children-per-woman-un.metadata.json",
+     "research/records/2026-11-23-transition/data/owid_metadata/children-per-woman.metadata.json",
+     "research/records/2026-11-23-transition/data/owid_metadata/fertility-rate-with-projections.metadata.json",
+     "research/records/2026-11-23-transition/data/owid_metadata/gdp-per-capita-maddison-project-database.metadata.json",
+     "research/records/2026-11-23-transition/data/owid_metadata/infant-mortality.metadata.json",
+     "research/records/2026-11-23-transition/data/owid_metadata/life-expectancy.metadata.json",
+     "research/records/2026-11-23-transition/data/owid_metadata/literacy.metadata.json",
+     "research/records/2026-11-23-transition/data/owid_metadata/mean-years-of-schooling.metadata.json",
+     "research/records/2026-11-23-transition/data/owid_metadata/share-of-population-urban.metadata.json",
+     "research/records/2026-11-23-transition/data/transition_results.json",
+     "research/records/2026-11-23-transition/figures/fig_a_phase_diagram.png",
+     "research/records/2026-11-23-transition/figures/fig_b_time_series.png",
+     "research/records/2026-11-23-transition/figures/fig_c_lag_distribution.png",
+     "research/records/2026-11-23-transition/figures/fig_d_corners_annotated.png",
+     "research/records/2026-11-23-transition/results/logs/transition.log",
+     "research/records/2026-11-23-transition/scripts/download_raw.sh",
+     "research/records/2026-11-23-transition/scripts/transition.py",
+     "research/records/2026-11-24-paper-boppart/sections/paperF_transition_individuation.md",
+     "research/records/2026-11-25-e1-multiverse/results/progress.log",
+     "research/records/2026-11-25-equation-suite/results/eq04_transitions_gates.csv",
+     "research/records/2026-11-25-equation-suite/results/eq04_transitions_gates.json",
+     "research/records/2026-11-25-equation-suite/scripts/eq04_transitions_gates.py",
+     "research/records/2026-11-25-paper-fertility/sections/section4_transition.md",
+     "research/records/2026-11-25-phase-transition-dense/PREREGISTRATION_PHASE_SWEEP_DENSE.md",
+     "research/records/2026-11-25-phase-transition/PREREGISTRATION_PHASE_SWEEP.md",
+     "research/records/2026-11-25-phase-transition/RUN_REPORT.md",
+     "research/records/2026-11-25-phase-transition/analyze_phase_sweep.py",
+     "research/records/2026-11-25-phase-transition/check_quotes.py",
+     "research/records/2026-11-25-phase-transition/phase_sweep_quick.py",
+     "research/records/2026-11-25-phase-transition/reconcile_lead.py",
+     "research/records/2026-11-25-phase-transition/results/PHASE_DIAGRAMS_all.md",
+     "research/records/2026-11-25-phase-transition/results/PHASE_DIAGRAMS_box.md",
+     "research/records/2026-11-25-phase-transition/results/boundary_stats_all.json",
+     "research/records/2026-11-25-phase-transition/results/boundary_stats_box.json",
+     "research/records/2026-11-25-phase-transition/results/box_quick/MANIFEST.sha256",
+     "research/records/2026-11-25-phase-transition/results/box_quick/phase_sweep_quick.log",
+     "research/records/2026-11-25-phase-transition/results/box_quick/phase_sweep_quick_bar_binding_summary.csv",
+     "research/records/2026-11-25-phase-transition/results/box_quick/phase_sweep_quick_bar_binding_summary.json",
+     "research/records/2026-11-25-phase-transition/results/box_quick/phase_sweep_quick_bar_summary.csv",
+     "research/records/2026-11-25-phase-transition/results/box_quick/phase_sweep_quick_bar_summary.json",
+     "research/records/2026-11-25-phase-transition/results/box_quick/phase_sweep_quick_quota_summary.csv",
+     "research/records/2026-11-25-phase-transition/results/box_quick/phase_sweep_quick_quota_summary.json",
+     "research/records/2026-11-25-phase-transition/results/lead_reconciliation.json",
+     "research/records/2026-11-25-phase-transition/results/quote_checks.json",
+     "research/records/2026-11-25-phase-transition/run_phase_sweep.py",
+     "src/components/ui/progress.tsx"
+    ],
+    "individual_recode_or_dhs_microdata": [
+     "engine/firms/README.md",
+     "engine/firms/__init__.py",
+     "engine/firms/blind_forecast.py",
+     "engine/firms/calibrate_china.py",
+     "engine/firms/categorical.py",
+     "engine/firms/china_sobol.py",
+     "engine/firms/data_china.py",
+     "engine/firms/demand_inversion.py",
+     "engine/firms/export_web.py",
+     "engine/firms/forecast_2024.py",
+     "engine/firms/forecast_strict.py",
+     "engine/firms/model.py",
+     "engine/firms/results/before_input_fix/forecast_strict.json",
+     "engine/firms/results/before_input_fix/forecast_strict.md",
+     "engine/firms/results/before_input_fix/wage_anchor.json",
+     "engine/firms/results/before_input_fix/wage_anchor.md",
+     "engine/firms/results/before_input_fix/wage_joint.json",
+     "engine/firms/results/blind_forecast_2026_11.json",
+     "engine/firms/results/blind_forecast_2026_11.md",
+     "engine/firms/results/china_fit.json",
+     "engine/firms/results/china_fit.md",
+     "engine/firms/results/china_fit.png",
+     "engine/firms/results/china_shapley.png",
+     "engine/firms/results/china_sobol.json",
+     "engine/firms/results/china_sobol.md",
+     "engine/firms/results/demand_inversion.json",
+     "engine/firms/results/demand_inversion.md",
+     "engine/firms/results/forecast_2024.json",
+     "engine/firms/results/forecast_2024.md",
+     "engine/firms/results/forecast_strict.json",
+     "engine/firms/results/forecast_strict.md",
+     "engine/firms/results/seasonal_2024.json",
+     "engine/firms/results/seasonal_2024.md",
+     "engine/firms/results/stories.json",
+     "engine/firms/results/stories.md",
+     "engine/firms/results/stories_strict.json",
+     "engine/firms/results/stories_strict.md",
+     "engine/firms/results/tilly.json",
+     "engine/firms/results/tilly.md",
+     "engine/firms/results/tilly_fit.json",
+     "engine/firms/results/tilly_strict.json",
+     "engine/firms/results/tilly_strict.md",
+     "engine/firms/results/wage_anchor.json",
+     "engine/firms/results/wage_anchor.md",
+     "engine/firms/results/wage_joint.json",
+     "engine/firms/seasonal.py",
+     "engine/firms/seasonal_2024.py",
+     "engine/firms/stories.py",
+     "engine/firms/stories_strict.py",
+     "engine/firms/test_firms.py",
+     "engine/firms/test_tilly.py",
+     "engine/firms/tilly_experiments.py",
+     "engine/firms/tilly_fit.py",
+     "engine/firms/tilly_strict.py",
+     "engine/firms/wage_anchor.py",
+     "engine/requirements.txt",
+     "experiments/ccp-bus/models/C_chatgpt_v6_tilly/empirical_adapter.py",
+     "experiments/ccp-bus/models/C_chatgpt_v6_tilly/requirements-executed.txt",
+     "experiments/ccp-bus/models/C_chatgpt_v6_tilly/requirements.txt",
+     "experiments/ccp-bus/models/C_chatgpt_v6_tilly/results/paired_effects_by_point.csv",
+     "experiments/ccp-bus/models/C_chatgpt_v6_tilly/results/paired_effects_summary.csv",
+     "experiments/ccp-bus/models/D_chatgpt_v7_identification/requirements.txt",
+     "experiments/massification-2026-11-20/05b_experiments/loop8/code/synth_wired.py",
+     "experiments/massification-2026-11-20/05b_experiments/loop8/runs/synth_wired_draws.csv",
+     "experiments/massification-2026-11-20/05b_experiments/loop8/runs/synth_wired_meta.json",
+     "experiments/massification-2026-11-20/05b_experiments/loop8b/code/synth_wired_eci.py",
+     "experiments/massification-2026-11-20/05b_experiments/loop8b/runs/synth_wired_draws.csv",
+     "experiments/massification-2026-11-20/05b_experiments/loop8b/runs/synth_wired_meta.json",
+     "experiments/massification-2026-11-20/08_council/brief_009/DATA_FIRST_LINK.md",
+     "experiments/massification-2026-11-20/10_massification/extensions/codex_2026-11-20/toys_2026-11-20/cluster_D/code/exp10_level_first.py",
+     "experiments/massification-2026-11-20/10_massification/extensions/lab_2026-11-20_b/cluster_3_geo_size/results/X8_citystate_pairwise.csv",
+     "experiments/massification-2026-11-20/10_massification/extensions/model_debug_2026-11-21/cap04_sensitivity/code/run_repaired.py",
+     "experiments/massification-2026-11-20/10_massification/extensions/model_debug_2026-11-21/fix_rerun/code/run_conv_reg_repaired.py",
+     "experiments/massification-2026-11-20/10_massification/extensions/model_debug_2026-11-21/fix_rerun/code/run_repaired.py",
+     "experiments/massification-2026-11-20/10_massification/extensions/model_debug_2026-11-21/fix_rerun/determinism_run2/panels/synthetic_panel_v1_2_repaired.csv",
+     "experiments/massification-2026-11-20/10_massification/extensions/model_debug_2026-11-21/fix_rerun/determinism_run2/panels/synthetic_panel_v1_3_repaired.csv",
+     "experiments/massification-2026-11-20/10_massification/extensions/model_debug_2026-11-21/fix_rerun/results/REPAIRED_CONV_REG.csv",
+     "experiments/massification-2026-11-20/10_massification/extensions/model_debug_2026-11-21/fix_rerun/results/REPAIRED_M_CONSTANCY.csv",
+     "experiments/massification-2026-11-20/10_massification/extensions/model_debug_2026-11-21/fix_rerun/results/panels/synthetic_panel_v1_2_repaired.csv",
+     "experiments/massification-2026-11-20/10_massification/extensions/model_debug_2026-11-21/fix_rerun/results/panels/synthetic_panel_v1_3_repaired.csv",
+     "experiments/massification-2026-11-20/10_massification/extensions/synthetic_2026-11-20/generator_v1_6_repair/results/determinism_run2/panel_A10_repaired.csv",
+     "experiments/massification-2026-11-20/10_massification/extensions/synthetic_2026-11-20/generator_v1_6_repair/results/panel_A10_repaired.csv",
+     "experiments/massification-2026-11-20/10_massification/model2/runs/a5b_pairwise_equivalence.csv",
+     "experiments/shadow-abm/src/tutoring_abm/requirements.txt",
+     "experiments/youth-review/proposed_worlds_wiring.js",
+     "public/research/angkor-paired-results.csv",
+     "public/research/institutions/maintenance-repaired.zip",
+     "public/research/signalling-paired-results.csv",
+     "research/masseng-v6/model/outputs/scored/v1_first_scored_fit.json",
+     "research/masseng-v6/model/outputs/scored/v1_first_scored_table.json",
+     "research/masseng-v6/model/requirements-v5.txt",
+     "research/records/2026-11-22-massification-panel/sources/wdi_sweep/birth_reg.json",
+     "research/records/2026-11-22-session/figures/fig13_farm_direction.png",
+     "research/records/2026-11-23-dhs-micro/results/extract_age_first_birth_education.csv",
+     "research/records/2026-11-23-dhs-micro/results/model_age_first_birth.json",
+     "research/records/2026-11-23-transition/data/owid_metadata/birth-rate-total.metadata.json",
+     "research/records/2026-11-23-un-marriage/data/nevermar_f_4549_direct.json",
+     "research/records/2026-11-23-un-marriage/data/nevermar_f_4549_direct_provenance.csv",
+     "research/records/2026-11-23-un-marriage/data/nevermar_m_4549_direct.json",
+     "research/records/2026-11-23-un-marriage/data/nevermar_m_4549_direct_provenance.csv",
+     "research/records/2026-11-24-apple-silicon-gpu/requirements.txt",
+     "research/records/2026-11-24-codex-handoff/results/synthetic/first_macro.csv",
+     "research/records/2026-11-24-codex-handoff/results/synthetic/first_micro.csv",
+     "research/records/2026-11-24-dhs-acquisition/application/CONFIRMATION_2026-11-24.md",
+     "research/records/2026-11-24-dhs-acquisition/data/dhs_ir_inventory_targets.csv",
+     "research/records/2026-11-25-bulge-micro-dhs/data/dhs_ir_target_waves_e8.csv",
+     "research/records/2026-11-25-masseng-tutoring/logs/server_environment.log",
+     "research/records/2026-11-25-shadow-equations/RESULTS_FIRST_PASS.md",
+     "research/records/2026-11-25-shadow-equations/results_first_pass.json",
+     "research/requirements.txt"
+    ]
+   },
+   "n_dta_files": 0,
+   "n_repetition_indicator_paths": 0,
+   "n_rept_or_prsl_paths": 0
+  },
+  "worktree_content_scan": {
+   "root": "worktree (branch research/gender-split-e6e8-2026-11-25, base bd782be)",
+   "n_files_scanned": 830,
+   "tokens": [
+    "L_primary",
+    "primary_cycle",
+    "primary cycle length",
+    "SE.PRM.REPT",
+    "SE.PRM.PRSL",
+    "repetition rate",
+    "transition rate",
+    "Individual Recode",
+    ".dta"
+   ],
+   "hits": {
+    "L_primary": [
+     "research/records/2026-11-25-gender-split-e6e8/PRE_REGISTRATION.md",
+     "research/records/2026-11-25-gender-split-e6e8/results/legb_data_gate.json",
+     "research/records/2026-11-25-gender-split-e6e8/scripts/legb_data_gate.py"
+    ],
+    "primary_cycle": [
+     "research/records/2026-11-25-gender-split-e6e8/results/legb_data_gate.json",
+     "research/records/2026-11-25-gender-split-e6e8/scripts/legb_data_gate.py"
+    ],
+    "primary cycle length": [
+     "research/records/2026-11-25-gender-split-e6e8/results/legb_data_gate.json",
+     "research/records/2026-11-25-gender-split-e6e8/scripts/legb_data_gate.py"
+    ],
+    "SE.PRM.REPT": [
+     "research/records/2026-11-25-gender-split-e6e8/results/legb_data_gate.json",
+     "research/records/2026-11-25-gender-split-e6e8/scripts/legb_data_gate.py"
+    ],
+    "SE.PRM.PRSL": [
+     "research/records/2026-11-25-gender-split-e6e8/results/legb_data_gate.json",
+     "research/records/2026-11-25-gender-split-e6e8/scripts/legb_data_gate.py"
+    ],
+    "repetition rate": [
+     "research/records/2026-11-25-gender-split-e6e8/PRE_REGISTRATION.md",
+     "research/records/2026-11-25-gender-split-e6e8/results/legb_data_gate.json",
+     "research/records/2026-11-25-gender-split-e6e8/scripts/legb_data_gate.py",
+     "engine/eduengine/struts.py"
+    ],
+    "transition rate": [
+     "research/records/2026-11-25-gender-split-e6e8/results/legb_data_gate.json",
+     "research/records/2026-11-25-gender-split-e6e8/scripts/legb_data_gate.py"
+    ],
+    "Individual Recode": [
+     "research/records/2026-11-25-gender-split-e6e8/results/legb_data_gate.json",
+     "research/records/2026-11-25-gender-split-e6e8/scripts/legb_data_gate.py",
+     "research/records/2026-11-25-council-novelty/DECISION.md",
+     "research/records/2026-11-25-paper-fertility/draft/frame_part2.md",
+     "research/records/2026-11-25-paper-fertility/draft/paperF_draft.md",
+     "research/records/2026-11-25-paper-fertility/sections/section4_dhs.md",
+     "research/records/2026-11-25-paper-fertility/sections/section8_discussion.md",
+     "research/records/2026-11-25-paper-fertility/sections/section6_future.md",
+     "research/records/2026-11-25-paper-fertility/lit/section4_claims_prior_art.md"
+    ],
+    ".dta": [
+     "research/records/2026-11-25-gender-split-e6e8/results/legb_data_gate.json",
+     "research/records/2026-11-25-gender-split-e6e8/scripts/legb_data_gate.py",
+     "research/records/2026-11-25-e6e8-sequencing/results/e6_inputs_and_hashes.csv",
+     "research/records/2026-11-25-e6e8-sequencing/scripts/e6_demand_timing.py",
+     "research/records/2026-11-25-e6e8-sequencing/scripts/n3_threshold_survival.py"
+    ]
+   },
+   "note": "L_primary hits are the new PRE_REGISTRATION.md of this record; no committed series elsewhere"
+  }
+ },
+ "evidence": {
+  "L_primary": {
+   "ref_path": "origin/research/bulge-arrival-2026-11-25:paper2/PREREGISTRATION_BULGE_ARRIVAL.md",
+   "blob_sha": "e3e47094d3874125ca5f1c82efdaf715847208d4",
+   "sha256_of_content": "1078865037ee214f31d3b2384a97e8eba08f84817d59f36dc3322457d79393c7",
+   "lines": [
+    "file exists, the input is `UNSOURCED` and the country is excluded from the main specification \u2014 the value is not",
+    "`t*` is registered as **UNSOURCED** for every country because `L_primary` has no in-repo source. The",
+    "| 1 | MWI | Malawi | **1994** | `\u2026/2026-11-25-e6e8-sequencing/data/fee_dates.csv` @ `research/e6e8-sequencing-2026-11-25` @ `2d19da7\u2026` | **UNSOURCED** | none in repo | **UNSOURCED** | EXCLUDED |",
+    "| 2 | ETH | Ethiopia | **1995** | same | **UNSOURCED** | none in repo | **UNSOURCED** | EXCLUDED |",
+    "| 3 | UGA | Uganda | **1997** | same | **UNSOURCED** | none in repo | **UNSOURCED** | EXCLUDED |",
+    "| 4 | LSO | Lesotho | **2000** | same | **UNSOURCED** | none in repo | **UNSOURCED** | EXCLUDED |",
+    "| 5 | TZA | Tanzania | **2001** | same | **UNSOURCED** | none in repo | **UNSOURCED** | EXCLUDED |",
+    "| 6 | KEN | Kenya | **2003** | same | **UNSOURCED** | none in repo | **UNSOURCED** | EXCLUDED |",
+    "| 7 | MOZ | Mozambique | **2004** | same | **UNSOURCED** | none in repo | **UNSOURCED** | EXCLUDED |",
+    "| 8 | GHA | Ghana | **2005** | same | **UNSOURCED** | none in repo | **UNSOURCED** | EXCLUDED |",
+    "Sourced `t_abolition`: **8 / 8**. Sourced `L_primary`: **0 / 8**. Sourced `t*`: **0 / 8**. Excluded from main",
+    "is `public/reference/east-asia-schools/source/systems.json` (a Hong-Kong/East-Asia city model with stage lags, no",
+    "| UGA | 7-year primary | 1997 + 7 = 2004 | UNSOURCED \u2014 not adopted |",
+    "| MWI | 8-year primary | 1994 + 8 = 2002 | UNSOURCED \u2014 not adopted |",
+    "| TZA | 7-year primary | 2001 + 7 = 2008 | UNSOURCED \u2014 not adopted |",
+    "| KEN | 8-year primary | 2003 + 8 = 2011 | UNSOURCED \u2014 not adopted |",
+    "| GHA | 6-year primary | 2005 + 6 = 2011 | UNSOURCED \u2014 not adopted |",
+    "| ETH, LSO, MOZ | (not supplied) | \u2014 | UNSOURCED \u2014 cannot check |",
+    "| `L_primary` per country-year | **MISSING** | no education-structure/primary-duration file in any ref |"
+   ],
+   "verdict": "MISSING: L_primary sourced 0/8; no primary-cycle-length file in any ref for the 8 SSA countries"
+  },
+  "only_education_structure_candidate": {
+   "ref_path": "public/reference/east-asia-schools/source/systems.json (present on every branch)",
+   "first_keys": [
+    "Hong Kong",
+    "Japan",
+    "South Korea"
+   ],
+   "verdict": "East-Asia/Hong-Kong city school model; no SSA primary-cycle lengths"
+  },
+  "sex_disaggregated_repetition_or_transition": {
+   "ref_path_scan": "see scans.all_ref_path_scan.keyword_matches",
+   "worktree_content_hits": {
+    "SE.PRM.REPT": [
+     "research/records/2026-11-25-gender-split-e6e8/results/legb_data_gate.json",
+     "research/records/2026-11-25-gender-split-e6e8/scripts/legb_data_gate.py"
+    ],
+    "SE.PRM.PRSL": [
+     "research/records/2026-11-25-gender-split-e6e8/results/legb_data_gate.json",
+     "research/records/2026-11-25-gender-split-e6e8/scripts/legb_data_gate.py"
+    ],
+    "repetition rate": [
+     "research/records/2026-11-25-gender-split-e6e8/PRE_REGISTRATION.md",
+     "research/records/2026-11-25-gender-split-e6e8/results/legb_data_gate.json",
+     "research/records/2026-11-25-gender-split-e6e8/scripts/legb_data_gate.py",
+     "engine/eduengine/struts.py"
+    ],
+    "transition rate": [
+     "research/records/2026-11-25-gender-split-e6e8/results/legb_data_gate.json",
+     "research/records/2026-11-25-gender-split-e6e8/scripts/legb_data_gate.py"
+    ]
+   },
+   "public_wdi_probe": {
+    "SE.PRM.REPT.ZS": "HTTP 200; WDI label 'Repeaters, primary, total (% of total enrollment)' -- a TOTAL-sex series, not sex-disaggregated; not committed in repo",
+    "SE.PRM.REPT.FE.ZS / .MA.ZS / SE.PRM.PRSL.ZS / .FE.ZS / .MA.ZS": "probe on 2026-11-25 returned HTTP 429 (rate-limited) -- INCONCLUSIVE as to public existence; does not affect the gate because no such series is committed for the 8 countries in any ref"
+   },
+   "verdict": "MISSING: no sex-disaggregated repetition or primary->secondary transition/progression series is committed in any ref; no such file path exists; WDI's committed/available repetition series is total-sex"
+  },
+  "dhs_ir_microdata": {
+   "repo_scan": "0 .dta files in 194 refs (scans.all_ref_path_scan.n_dta_files); DHS Terms forbid redistribution",
+   "dhs_micro_record": {
+    "ref_path": "origin/research/dhs-micro-2026-11-23:research/records/2026-11-23-dhs-micro/README.md",
+    "blob_sha": "2e182eeb2c4fbbcbd8a83bcfec0b9819b27b8804",
+    "lines": [
+     "## The individual-level test could NOT be run \u2014 data gap stated first",
+     "The pre-registered design was individual-level DHS microdata. **DHS women's Individual Recode files are not",
+     "which **2,005 are Individual Recode files for 85 countries**, e.g. `AFIR71DT.ZIP`); direct flat-file URLs",
+     "(`/data/dataset/AFIR66FL.ZIP`, `/data/AFIR66FL.ZIP`) 404; the dataset landing page 200 but login-gated;",
+     "IPUMS-DHS API 403 (key required); Zenodo search 403; Harvard Dataverse has no DHS recodes; `/root/work/local_data`",
+     "for it. Manual download needs: a free DHS account and dataset-access request, then the Individual Recode Stata",
+     "standard errors clustered by country; 1,291 education cells, 369 surveys, 86 countries, median 401 women per",
+     "cell. These are **ecological** associations; they cannot carry individual-level causal claims."
+    ]
+   },
+   "probe_log": {
+    "ref_path": "origin/research/dhs-micro-2026-11-23:research/records/2026-11-23-dhs-micro/data/microdata_probe.txt",
+    "lines": [
+     "DHS individual-level microdata probing, box2, 2026-11-23T11:50:36.374826Z",
+     "ATTEMPT DHS API indicators (aggregates only): HTTP 200, type application/json;charset=UTF-8, first bytes b'{\"TotalPages\":1,\"Data\":[{\"IndicatorId\":\"FE_FRTR_W_A10\",\"IndicatorOldId\":\"\",\"Label\":\"Age specific fertility rate: 10-14\",'",
+     "ATTEMPT DHS API datasets metadata (file names and sizes; no download link): HTTP 200, type application/json;charset=UTF-8, first bytes b'{\"TotalPages\":3104,\"Data\":[{\"FileName\":\"AFCH66DT.ZIP\",\"CountryName\":\"Afghanistan\",\"SurveyYear\":\"2010\",\"SurveyYearLabel\":'",
+     "ATTEMPT DHS dataset by flat-file name (returns the metadata list, not the file): HTTP 200, type application/json;charset=UTF-8, first bytes b'{\"TotalPages\":4,\"Data\":[{\"FileName\":\"AFCH66DT.ZIP\",\"CountryName\":\"Afghanistan\",\"SurveyYear\":\"2010\",\"SurveyYearLabel\":\"20'",
+     "ATTEMPT DHS direct flat-file URL /data/dataset/AFIR66FL.ZIP: ERROR HTTP Error 404: Not Found",
+     "ATTEMPT DHS direct flat-file URL /data/AFIR66FL.ZIP: ERROR HTTP Error 404: Not Found",
+     "ATTEMPT DHS dataset landing page (account login required for download): HTTP 200, type text/html;charset=UTF-8, first bytes b'<!DOCTYPE html> <html lang=\"en\"> <!-- Content Copyright Macro International -->\\n<!-- Page generated 2026-11-23 06:50:43 '",
+     "ATTEMPT IPUMS-DHS landing: HTTP 200, type text/html, first bytes b'<!doctype html>\\n<html lang=\"en\">\\n<head>\\n\\t<title>IPUMS-DHS</title>\\n\\t<meta name=\"description\" content=\"IPUMS-DHS facilitat'",
+     "ATTEMPT IPUMS API extract endpoint (requires key): ERROR HTTP Error 403: Forbidden",
+     "ATTEMPT Zenodo search API for DHS recode: ERROR HTTP Error 403: Forbidden",
+     "ATTEMPT Harvard Dataverse search for DHS individual recode: HTTP 200, type application/json;charset=UTF-8, first bytes b'{\"status\":\"OK\",\"data\":{\"q\":\"DHS individual recode\",\"total_count\":48453,\"start\":0,\"spelling_alternatives\":{},\"items\":[{\"n'"
+    ]
+   },
+   "bulge_micro_status": {
+    "ref_path": "origin/research/bulge-micro-dhs-2026-11-25:research/records/2026-11-25-bulge-micro-dhs/BULGE_MICRO_STATUS.md",
+    "lines": [
+     "| `t*` = `t_abolition` + `L_primary` | **NOT-ESTIMABLE (0/8)** | `L_primary` has **no in-repo source**; `t_abolition` is sourced 8/8 |",
+     "| DHS IR micro: Q5\u2212Q1 gap in secondary attainment by `t*` cohort | **NOT-ESTIMABLE** | 0 of 54 standard-DHS E8 IR waves held (Africa-11 request not submitted) **and** `t*` unsourced; IR also has no secondary-**entry** variable (attainment only) |",
+     "- Secondary-entry variable: DHS IR has no school-entry date/age; only attained level (`v106`, `v107`, `v133`,",
+     "`v149`). The registered outcome is therefore **attained secondary**, explicitly not entry timing.",
+     "Registered estimand: cohort \u00d7 wealth-quintile interaction `\u03b3_c` \u2014 the change in the Q5\u2212Q1 gap in **attained",
+     "secondary** for the `t*`-completion cohort, with an attained-primary comparator on the same cohorts, pre-trends on"
+    ]
+   },
+   "verdict": "MISSING: 0 DHS IR waves held in repo/box; DHS IR is login-gated and not publicly downloadable; the Africa-11 dataset request (contains all 8 E8 countries) is not yet submitted"
+  },
+  "dhs_api_ecological_aggregates": {
+   "ref_paths": [
+    "origin/research/dhs-api-ecological-2026-11-24:research/records/2026-11-24-dhs-api-ecological/data/panel_survey.csv",
+    "origin/research/dhs-api-ecological-2026-11-24:research/records/2026-11-24-dhs-api-ecological/data/panel_edu2_*.csv",
+    "origin/research/dhs-api-ecological-2026-11-24:research/records/2026-11-24-dhs-api-ecological/data/panel_edu4_*.csv"
+   ],
+   "panel_survey_header": [
+    "survey,country,country_name,year,survey_type,ceb40_agecells,deaths40_agecells,surviving40,ceb40_published_total,tfr,wanted_tfr,want_no_more,pipeline_sec_plus",
+    "AF2015DHS,AF,Afghanistan,2015,DHS,6.9429,0.7691,6.1738,7.0,5.3,4.4,25.5,8.6"
+   ],
+   "unit": "country x survey round x background category cell (DHS-published aggregate); NOT microdata",
+   "dhs_public_indicator_catalogue": {
+    "n_indicators": 4655,
+    "n_indicators_matching_repeat_transition_progression_grade_enrol": 0
+   },
+   "lines": [
+    "and no login. Nothing here is microdata: the unit is the DHS-published cell"
+   ],
+   "verdict": "NOT A VALID SUBSTITUTE (pre-registered): country x survey x education ecological aggregates do not identify the t*-completion cohort and are not a sex-comparable final-grade repetition / transition outcome; the DHS public indicator catalogue has 0 repetition/transition indicators"
+  }
+ },
+ "missing_series": [
+  "L_primary (primary-cycle length by country-year) for MWI, ETH, UGA, LSO, TZA, KEN, MOZ, GHA \u2014 exact missing input",
+  "sex-disaggregated final-grade primary repetition series, annual, 8 countries around t_abolition..t*+6 \u2014 exact missing series",
+  "sex-disaggregated primary->secondary transition/progression series (WDI SE.PRM.PRSL.ZS / UIS equivalent), annual \u2014 exact missing series",
+  "DHS IR individual recode files for the 8 countries' waves near t* (0 of 54 standard-DHS waves held) \u2014 exact missing data"
+ ],
+ "commands": [
+  "git for-each-ref --format='%(refname)' ; git ls-tree -r --name-only <each ref>"
+ ],
+ "pre_registered_consequence": "Leg B reported NOT-ESTIMABLE with the exact missing series; NO proxy, NO borrowed auditor L_primary dates, no estimate (PRE_REGISTRATION.md \u00a7B3)",
+ "not_run": [
+  "t* table",
+  "bulge event study",
+  "SE-disaggregated bulge outcome",
+  "pre-trends/placebo"
+ ]
+}

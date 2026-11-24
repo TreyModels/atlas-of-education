@@ -1,0 +1,2 @@
+series,sample,att0_reproduced,att0_reported_at_bd782be,deviation,tolerance_pp,gate_pass,n_treated,n_control_countries,wdi_vintage,reference
+SE.PRM.ENRR,"SSA 1990-2015, verified-8 cohorts",12.44362392207772,12.4436,2.3922077719618073e-05,0.5,True,8,30,2026-11-11 (see data/input_hashes.csv),"results/e8_event_SE.PRM.ENRR_verified8.csv @ bd782be, event 0 att=12.44362392207772"

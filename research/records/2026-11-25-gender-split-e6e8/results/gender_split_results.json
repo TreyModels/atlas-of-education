@@ -1,0 +1,576 @@
+{
+ "preregistration_commit": "875ffd8",
+ "years": [
+  1990,
+  2015
+ ],
+ "events": [
+  -5,
+  -4,
+  -3,
+  -2,
+  -1,
+  0,
+  1,
+  2,
+  3,
+  4,
+  5,
+  6
+ ],
+ "n_boot": 500,
+ "seed_base": 20261125,
+ "gate_target": 12.4436,
+ "gate_tolerance": 0.5,
+ "indicators": {
+  "F": "SE.PRM.ENRR.FE",
+  "M": "SE.PRM.ENRR.MA",
+  "pooled": "SE.PRM.ENRR"
+ },
+ "sample": "Sub-Saharan Africa (WDI metadata), 1990-2015",
+ "gate": {
+  "series": "SE.PRM.ENRR",
+  "sample": "SSA 1990-2015, verified-8 cohorts",
+  "att0_reproduced": 12.44362392207772,
+  "att0_reported_at_bd782be": 12.4436,
+  "deviation": 2.3922077719618073e-05,
+  "tolerance_pp": 0.5,
+  "gate_pass": true,
+  "n_treated": 8,
+  "n_control_countries": 30,
+  "wdi_vintage": "2026-11-11 (see data/input_hashes.csv)",
+  "reference": "results/e8_event_SE.PRM.ENRR_verified8.csv @ bd782be, event 0 att=12.44362392207772",
+  "event_by_event_vs_bd782be": {
+   "max_abs_deviation": 2.220446049250313e-16,
+   "deviations": {
+    "-5": 0.0,
+    "-4": 2.220446049250313e-16,
+    "-3": -2.7755575615628914e-17,
+    "-2": -4.163336342344337e-17,
+    "0": 0.0,
+    "1": 0.0,
+    "2": 0.0,
+    "3": 0.0,
+    "4": 0.0,
+    "5": 0.0,
+    "6": 0.0
+   },
+   "reference": "research/records/2026-11-25-e6e8-sequencing/results/e8_event_SE.PRM.ENRR_verified8.csv @ bd782be",
+   "bootstrap_note": "this run uses the pre-registered seeds 20261125+i, so CI endpoints are not expected to equal the E8 record's (seeds 1000+i); point estimates are the gate"
+  }
+ },
+ "samples": {
+  "F": {
+   "n_countries": 48,
+   "n_treated": 8,
+   "treated": [
+    "ETH",
+    "GHA",
+    "KEN",
+    "LSO",
+    "MOZ",
+    "MWI",
+    "TZA",
+    "UGA"
+   ],
+   "treated_missing": [],
+   "n_controls_at_event0": 30
+  },
+  "M": {
+   "n_countries": 48,
+   "n_treated": 8,
+   "treated": [
+    "ETH",
+    "GHA",
+    "KEN",
+    "LSO",
+    "MOZ",
+    "MWI",
+    "TZA",
+    "UGA"
+   ],
+   "treated_missing": [],
+   "n_controls_at_event0": 30
+  },
+  "pooled": {
+   "n_countries": 48,
+   "n_treated": 8,
+   "treated": [
+    "ETH",
+    "GHA",
+    "KEN",
+    "LSO",
+    "MOZ",
+    "MWI",
+    "TZA",
+    "UGA"
+   ],
+   "treated_missing": [],
+   "n_controls_at_event0": 30
+  }
+ },
+ "female": {
+  "att0": 11.62660888372228,
+  "att0_ci": [
+   3.341628302918508,
+   29.681383687683965
+  ],
+  "n_treated_at_0": 7,
+  "mean_post_1_6": 22.806080628508454,
+  "event_table": [
+   {
+    "event": -5,
+    "att": 6.458134414719868,
+    "ci_lo": -2.727274553721281,
+    "ci_hi": 12.108999761113965,
+    "n_boot_used": 498,
+    "n": 6,
+    "n_treated": 6,
+    "n_controls": 28,
+    "outcome": "SE.PRM.ENRR.FE",
+    "dates": "verified8",
+    "series_label": "OBSERVED (WDI/UIS)"
+   },
+   {
+    "event": -4,
+    "att": 1.0666254247887819,
+    "ci_lo": -8.8742389665323,
+    "ci_hi": 7.81526159782707,
+    "n_boot_used": 500,
+    "n": 7,
+    "n_treated": 7,
+    "n_controls": 27,
+    "outcome": "SE.PRM.ENRR.FE",
+    "dates": "verified8",
+    "series_label": "OBSERVED (WDI/UIS)"
+   },
+   {
+    "event": -3,
+    "att": 0.7366176472650582,
+    "ci_lo": -9.117436080091823,
+    "ci_hi": 6.9825991587275045,
+    "n_boot_used": 500,
+    "n": 7,
+    "n_treated": 7,
+    "n_controls": 28,
+    "outcome": "SE.PRM.ENRR.FE",
+    "dates": "verified8",
+    "series_label": "OBSERVED (WDI/UIS)"
+   },
+   {
+    "event": -2,
+    "att": 0.19101053858848166,
+    "ci_lo": -3.571128462264584,
+    "ci_hi": 4.960103408846701,
+    "n_boot_used": 500,
+    "n": 7,
+    "n_treated": 7,
+    "n_controls": 30,
+    "outcome": "SE.PRM.ENRR.FE",
+    "dates": "verified8",
+    "series_label": "OBSERVED (WDI/UIS)"
+   },
+   {
+    "event": 0,
+    "att": 11.62660888372228,
+    "ci_lo": 3.341628302918508,
+    "ci_hi": 29.681383687683965,
+    "n_boot_used": 500,
+    "n": 7,
+    "n_treated": 7,
+    "n_controls": 30,
+    "outcome": "SE.PRM.ENRR.FE",
+    "dates": "verified8",
+    "series_label": "OBSERVED (WDI/UIS)"
+   },
+   {
+    "event": 1,
+    "att": 21.818252357732266,
+    "ci_lo": 6.90437005539928,
+    "ci_hi": 44.30213439300648,
+    "n_boot_used": 500,
+    "n": 7,
+    "n_treated": 7,
+    "n_controls": 28,
+    "outcome": "SE.PRM.ENRR.FE",
+    "dates": "verified8",
+    "series_label": "OBSERVED (WDI/UIS)"
+   },
+   {
+    "event": 2,
+    "att": 23.525750062728065,
+    "ci_lo": 8.059739775661244,
+    "ci_hi": 46.443254915995105,
+    "n_boot_used": 500,
+    "n": 7,
+    "n_treated": 7,
+    "n_controls": 27,
+    "outcome": "SE.PRM.ENRR.FE",
+    "dates": "verified8",
+    "series_label": "OBSERVED (WDI/UIS)"
+   },
+   {
+    "event": 3,
+    "att": 20.036619365096357,
+    "ci_lo": 6.091080647802937,
+    "ci_hi": 43.020135802939194,
+    "n_boot_used": 498,
+    "n": 6,
+    "n_treated": 6,
+    "n_controls": 28,
+    "outcome": "SE.PRM.ENRR.FE",
+    "dates": "verified8",
+    "series_label": "OBSERVED (WDI/UIS)"
+   },
+   {
+    "event": 4,
+    "att": 20.438459677285625,
+    "ci_lo": 8.438250187327768,
+    "ci_hi": 44.97269239362282,
+    "n_boot_used": 498,
+    "n": 6,
+    "n_treated": 6,
+    "n_controls": 28,
+    "outcome": "SE.PRM.ENRR.FE",
+    "dates": "verified8",
+    "series_label": "OBSERVED (WDI/UIS)"
+   },
+   {
+    "event": 5,
+    "att": 26.564837277331947,
+    "ci_lo": 8.918732228591296,
+    "ci_hi": 51.02016202219433,
+    "n_boot_used": 500,
+    "n": 6,
+    "n_treated": 6,
+    "n_controls": 28,
+    "outcome": "SE.PRM.ENRR.FE",
+    "dates": "verified8",
+    "series_label": "OBSERVED (WDI/UIS)"
+   },
+   {
+    "event": 6,
+    "att": 24.45256503087646,
+    "ci_lo": 8.771307483484343,
+    "ci_hi": 46.660053532526184,
+    "n_boot_used": 500,
+    "n": 7,
+    "n_treated": 7,
+    "n_controls": 27,
+    "outcome": "SE.PRM.ENRR.FE",
+    "dates": "verified8",
+    "series_label": "OBSERVED (WDI/UIS)"
+   }
+  ]
+ },
+ "male": {
+  "att0": 13.379866676721432,
+  "att0_ci": [
+   4.730662796705957,
+   34.056211525823635
+  ],
+  "n_treated_at_0": 7,
+  "mean_post_1_6": 26.750031611073666,
+  "event_table": [
+   {
+    "event": -5,
+    "att": 6.285111570280453,
+    "ci_lo": -0.09069502963213759,
+    "ci_hi": 11.700179844733723,
+    "n_boot_used": 498,
+    "n": 6,
+    "n_treated": 6,
+    "n_controls": 28,
+    "outcome": "SE.PRM.ENRR.MA",
+    "dates": "verified8",
+    "series_label": "OBSERVED (WDI/UIS)"
+   },
+   {
+    "event": -4,
+    "att": 1.8242266321680078,
+    "ci_lo": -5.969595182996228,
+    "ci_hi": 7.6024608828802425,
+    "n_boot_used": 500,
+    "n": 7,
+    "n_treated": 7,
+    "n_controls": 27,
+    "outcome": "SE.PRM.ENRR.MA",
+    "dates": "verified8",
+    "series_label": "OBSERVED (WDI/UIS)"
+   },
+   {
+    "event": -3,
+    "att": -0.8246887438880589,
+    "ci_lo": -7.2865277332986285,
+    "ci_hi": 4.375060690333655,
+    "n_boot_used": 500,
+    "n": 7,
+    "n_treated": 7,
+    "n_controls": 28,
+    "outcome": "SE.PRM.ENRR.MA",
+    "dates": "verified8",
+    "series_label": "OBSERVED (WDI/UIS)"
+   },
+   {
+    "event": -2,
+    "att": -0.09327225968822796,
+    "ci_lo": -3.8992990272791457,
+    "ci_hi": 3.6400275087668508,
+    "n_boot_used": 500,
+    "n": 7,
+    "n_treated": 7,
+    "n_controls": 30,
+    "outcome": "SE.PRM.ENRR.MA",
+    "dates": "verified8",
+    "series_label": "OBSERVED (WDI/UIS)"
+   },
+   {
+    "event": 0,
+    "att": 13.379866676721432,
+    "ci_lo": 4.730662796705957,
+    "ci_hi": 34.056211525823635,
+    "n_boot_used": 500,
+    "n": 7,
+    "n_treated": 7,
+    "n_controls": 30,
+    "outcome": "SE.PRM.ENRR.MA",
+    "dates": "verified8",
+    "series_label": "OBSERVED (WDI/UIS)"
+   },
+   {
+    "event": 1,
+    "att": 25.80506186566412,
+    "ci_lo": 10.081297814151224,
+    "ci_hi": 49.50426076805417,
+    "n_boot_used": 500,
+    "n": 7,
+    "n_treated": 7,
+    "n_controls": 28,
+    "outcome": "SE.PRM.ENRR.MA",
+    "dates": "verified8",
+    "series_label": "OBSERVED (WDI/UIS)"
+   },
+   {
+    "event": 2,
+    "att": 28.193840780726312,
+    "ci_lo": 12.359640561123133,
+    "ci_hi": 51.9313367824248,
+    "n_boot_used": 500,
+    "n": 7,
+    "n_treated": 7,
+    "n_controls": 27,
+    "outcome": "SE.PRM.ENRR.MA",
+    "dates": "verified8",
+    "series_label": "OBSERVED (WDI/UIS)"
+   },
+   {
+    "event": 3,
+    "att": 24.198344041254902,
+    "ci_lo": 8.25438179280391,
+    "ci_hi": 44.415245598444606,
+    "n_boot_used": 498,
+    "n": 6,
+    "n_treated": 6,
+    "n_controls": 28,
+    "outcome": "SE.PRM.ENRR.MA",
+    "dates": "verified8",
+    "series_label": "OBSERVED (WDI/UIS)"
+   },
+   {
+    "event": 4,
+    "att": 24.117054357493732,
+    "ci_lo": 9.700653661180654,
+    "ci_hi": 44.31693845437797,
+    "n_boot_used": 498,
+    "n": 6,
+    "n_treated": 6,
+    "n_controls": 28,
+    "outcome": "SE.PRM.ENRR.MA",
+    "dates": "verified8",
+    "series_label": "OBSERVED (WDI/UIS)"
+   },
+   {
+    "event": 5,
+    "att": 30.432665257909175,
+    "ci_lo": 13.409433572876734,
+    "ci_hi": 47.98614661751069,
+    "n_boot_used": 500,
+    "n": 6,
+    "n_treated": 6,
+    "n_controls": 28,
+    "outcome": "SE.PRM.ENRR.MA",
+    "dates": "verified8",
+    "series_label": "OBSERVED (WDI/UIS)"
+   },
+   {
+    "event": 6,
+    "att": 27.753223363393786,
+    "ci_lo": 11.849395171822225,
+    "ci_hi": 43.71164717160468,
+    "n_boot_used": 500,
+    "n": 7,
+    "n_treated": 7,
+    "n_controls": 27,
+    "outcome": "SE.PRM.ENRR.MA",
+    "dates": "verified8",
+    "series_label": "OBSERVED (WDI/UIS)"
+   }
+  ]
+ },
+ "difference": {
+  "primary_statistic": "D = mean_{e=+1..+6} ATT_F(e) - mean_{e=+1..+6} ATT_M(e)",
+  "D": -3.9439509825652124,
+  "D_ci95": [
+   -8.717832601194601,
+   0.29456768330537014
+  ],
+  "n_events_used": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6
+  ],
+  "n_boot_reps_used": 498,
+  "ci_excludes_zero": false,
+  "sign": "male_higher",
+  "event_table": [
+   {
+    "event": -5,
+    "att_F": 6.458134414719868,
+    "att_M": 6.285111570280453,
+    "att_diff_F_minus_M": 0.17302284443941485,
+    "diff_ci_lo": -3.977093762455437,
+    "diff_ci_hi": 3.7990279712557395,
+    "diff_n_boot_used": 498,
+    "n_treated_F": 6.0,
+    "n_treated_M": 6.0
+   },
+   {
+    "event": -4,
+    "att_F": 1.0666254247887819,
+    "att_M": 1.8242266321680078,
+    "att_diff_F_minus_M": -0.757601207379226,
+    "diff_ci_lo": -4.075814767067257,
+    "diff_ci_hi": 1.8314488268286142,
+    "diff_n_boot_used": 500,
+    "n_treated_F": 7.0,
+    "n_treated_M": 7.0
+   },
+   {
+    "event": -3,
+    "att_F": 0.7366176472650582,
+    "att_M": -0.8246887438880589,
+    "att_diff_F_minus_M": 1.561306391153117,
+    "diff_ci_lo": -2.2798160878249094,
+    "diff_ci_hi": 4.124437950757892,
+    "diff_n_boot_used": 500,
+    "n_treated_F": 7.0,
+    "n_treated_M": 7.0
+   },
+   {
+    "event": -2,
+    "att_F": 0.19101053858848166,
+    "att_M": -0.09327225968822796,
+    "att_diff_F_minus_M": 0.2842827982767096,
+    "diff_ci_lo": -3.49312584410499,
+    "diff_ci_hi": 2.9836784179046547,
+    "diff_n_boot_used": 500,
+    "n_treated_F": 7.0,
+    "n_treated_M": 7.0
+   },
+   {
+    "event": -1,
+    "att_F": NaN,
+    "att_M": NaN,
+    "att_diff_F_minus_M": NaN,
+    "diff_ci_lo": NaN,
+    "diff_ci_hi": NaN,
+    "diff_n_boot_used": 0,
+    "n_treated_F": NaN,
+    "n_treated_M": NaN
+   },
+   {
+    "event": 0,
+    "att_F": 11.62660888372228,
+    "att_M": 13.379866676721432,
+    "att_diff_F_minus_M": -1.7532577929991522,
+    "diff_ci_lo": -4.532978004588614,
+    "diff_ci_hi": 0.34460706436405425,
+    "diff_n_boot_used": 500,
+    "n_treated_F": 7.0,
+    "n_treated_M": 7.0
+   },
+   {
+    "event": 1,
+    "att_F": 21.818252357732266,
+    "att_M": 25.80506186566412,
+    "att_diff_F_minus_M": -3.986809507931852,
+    "diff_ci_lo": -7.08674786423488,
+    "diff_ci_hi": -0.5254153269746658,
+    "diff_n_boot_used": 500,
+    "n_treated_F": 7.0,
+    "n_treated_M": 7.0
+   },
+   {
+    "event": 2,
+    "att_F": 23.525750062728065,
+    "att_M": 28.193840780726312,
+    "att_diff_F_minus_M": -4.668090717998247,
+    "diff_ci_lo": -8.614641406553776,
+    "diff_ci_hi": -0.8689041046952876,
+    "diff_n_boot_used": 500,
+    "n_treated_F": 7.0,
+    "n_treated_M": 7.0
+   },
+   {
+    "event": 3,
+    "att_F": 20.036619365096357,
+    "att_M": 24.198344041254902,
+    "att_diff_F_minus_M": -4.161724676158546,
+    "diff_ci_lo": -10.473415580557786,
+    "diff_ci_hi": -0.004376995001580022,
+    "diff_n_boot_used": 498,
+    "n_treated_F": 6.0,
+    "n_treated_M": 6.0
+   },
+   {
+    "event": 4,
+    "att_F": 20.438459677285625,
+    "att_M": 24.117054357493732,
+    "att_diff_F_minus_M": -3.678594680208107,
+    "diff_ci_lo": -9.864390727179119,
+    "diff_ci_hi": 1.7361630515108417,
+    "diff_n_boot_used": 498,
+    "n_treated_F": 6.0,
+    "n_treated_M": 6.0
+   },
+   {
+    "event": 5,
+    "att_F": 26.564837277331947,
+    "att_M": 30.432665257909175,
+    "att_diff_F_minus_M": -3.8678279805772284,
+    "diff_ci_lo": -9.50522763528095,
+    "diff_ci_hi": 3.415731907431135,
+    "diff_n_boot_used": 500,
+    "n_treated_F": 6.0,
+    "n_treated_M": 6.0
+   },
+   {
+    "event": 6,
+    "att_F": 24.45256503087646,
+    "att_M": 27.753223363393786,
+    "att_diff_F_minus_M": -3.300658332517326,
+    "diff_ci_lo": -9.122182430729255,
+    "diff_ci_hi": 2.2610278679063187,
+    "diff_n_boot_used": 500,
+    "n_treated_F": 7.0,
+    "n_treated_M": 7.0
+   }
+  ]
+ },
+ "bootstrap_universe_countries": 48,
+ "bootstrap_note": "paired: replicate i draws countries with replacement from the union of F/M country sets using numpy.random.default_rng(20261125+i); the same draw builds both sexes' panels",
+ "gate_assessment": "PASS: sex split interpreted (prereg A5)"
+}

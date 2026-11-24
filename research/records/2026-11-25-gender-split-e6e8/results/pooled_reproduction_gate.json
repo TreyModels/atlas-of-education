@@ -1,0 +1,31 @@
+{
+ "series": "SE.PRM.ENRR",
+ "sample": "SSA 1990-2015, verified-8 cohorts",
+ "att0_reproduced": 12.44362392207772,
+ "att0_reported_at_bd782be": 12.4436,
+ "deviation": 2.3922077719618073e-05,
+ "tolerance_pp": 0.5,
+ "gate_pass": true,
+ "n_treated": 8,
+ "n_control_countries": 30,
+ "wdi_vintage": "2026-11-11 (see data/input_hashes.csv)",
+ "reference": "results/e8_event_SE.PRM.ENRR_verified8.csv @ bd782be, event 0 att=12.44362392207772",
+ "event_by_event_vs_bd782be": {
+  "max_abs_deviation": 2.220446049250313e-16,
+  "deviations": {
+   "-5": 0.0,
+   "-4": 2.220446049250313e-16,
+   "-3": -2.7755575615628914e-17,
+   "-2": -4.163336342344337e-17,
+   "0": 0.0,
+   "1": 0.0,
+   "2": 0.0,
+   "3": 0.0,
+   "4": 0.0,
+   "5": 0.0,
+   "6": 0.0
+  },
+  "reference": "research/records/2026-11-25-e6e8-sequencing/results/e8_event_SE.PRM.ENRR_verified8.csv @ bd782be",
+  "bootstrap_note": "this run uses the pre-registered seeds 20261125+i, so CI endpoints are not expected to equal the E8 record's (seeds 1000+i); point estimates are the gate"
+ }
+}
