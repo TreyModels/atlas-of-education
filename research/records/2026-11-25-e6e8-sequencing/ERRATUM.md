@@ -303,7 +303,7 @@ python3 scripts/erratum_check_e8_prose.py
 ```
 
 Reads `results/e8_results.json`, prints both control-range comparisons, the verified-8 mean post, all sensitivity
-mean posts (including placebo and leave-one-out range), and asserts the 28–30 / 25–30 and 21 V / 2 U / 1 W facts.
+mean posts (including placebo and leave-one-out range), and asserts the 28–30 / 25–30 facts. The 21 V / 2 U / 1 W recount is in the source-verification record's `scripts/erratum_check_prior_art_statuses.py` (head `ea6bc61`).
 
 ### Effect on the papers
 
