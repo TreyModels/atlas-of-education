@@ -1,0 +1,436 @@
+{
+ "provenance": {
+  "long_run_panel.csv": {
+   "sha256": "cd30d7ea7beb77b63de092c53f9b143065b94651f1ac95535ac70eebb3280f2d",
+   "source": "f71b789 research/records/2026-11-25-q2-pathways/data/long_run_panel.csv",
+   "record_quotes_sha256": "cd30d7ea7beb77b63de092c53f9b143065b94651f1ac95535ac70eebb3280f2d"
+  },
+  "families_for_fdr_check.csv": {
+   "sha256": "ffc74f9b088d318f1b6e4a1fb881e77f85dc037519e566bd8c54db35f3bdd12f",
+   "source": "db7814d research/records/2026-11-25-q3-calibration/results/families_for_fdr_check.csv"
+  },
+  "verdict_by_R.csv": {
+   "sha256": "074bd11506518d498c165bbe297b99ee83d2b2c9b89d914ee66e7be30d387296",
+   "source": "7e6f7b5 research/records/2026-11-25-e1-multiverse/results/verdict_by_R.csv"
+  },
+  "pilot_recovery_bic.json": {
+   "sha256": "a36fcd3d4748ff44b60332350f9c68ec8dd63a0a0f44c6b83645e5c21d6d3783",
+   "source": "9b0cabe research/records/2026-11-25-q1-mechanisms/results/pilot_recovery_bic.json"
+  },
+  "q1_construct_audit.json": {
+   "sha256": "1a9122391cdf7f54906f59ad62ee536fef3157b51e8a4d9e233f519db181c1e2",
+   "source": "e926575 research/records/2026-11-25-e11-fertility-audit/results/q1_construct_audit.json"
+  },
+  "e6_classification.csv": {
+   "sha256": "d7b98a30acc661fa24263d1a68492435921284e23799fd489c565ab17a60e524",
+   "source": "2d19da7 research/records/2026-11-25-e6e8-sequencing/results/e6_classification.csv"
+  },
+  "q2_smoke_pairs.csv": {
+   "sha256": "5682fd721501b2819ac872eb6eb5cddeaaffe816d449c09d0511817bfd359c87",
+   "source": "f71b789 research/records/2026-11-25-q2-pathways/results/smoke/pairs.csv"
+  },
+  "q2_smoke_meta.json": {
+   "sha256": "99dedb9e5643599d97ea519c78bfd438f6763457b5bc534ca0eaf9d185f96c82",
+   "source": "f71b789 research/records/2026-11-25-q2-pathways/results/smoke/pairs_metadata.json"
+  },
+  "subsistence_event_dates.csv": {
+   "sha256": "d0c02f95ade0850eacfb4edb73a3a9e5a837624a6bdefe1dbe12043bd10413af",
+   "source": "ce66cfc research/records/2026-11-23-subsistence-v2/results/event_dates.csv",
+   "annotated_at": "8caaeac"
+  }
+ },
+ "Q1_zero_signal": {
+  "reps_per_world": 40,
+  "mse_winner_R3_share_W1": 0.975,
+  "mse_winner_R3_share_W2": 0.975,
+  "mse_winner_R1_share_W3": 0.675,
+  "mse_winner_R3_share_W3": 0.325,
+  "bic_winner_R1_share_all_worlds": {
+   "W1_direct": 1.0,
+   "W2_selection": 1.0,
+   "W3_joint": 1.0
+  },
+  "reading": "a valid discriminator would be ~1/3. Raw MSE picks the flexible kernel R3 in 97.5% of W1 and W2 reps; BIC picks the parsimonious R1 in 100% of every world. Both criteria are degenerate on this pre-registered control, so a 'model winner' is not mechanism evidence. The branch REPORT rounds 97.5% to '97 per cent'."
+ },
+ "Q3": {
+  "H_272": 6.184854840123505,
+  "up": {
+   "n": 272,
+   "BH_272": 35,
+   "BY_272": 0,
+   "BH_meff157": 44,
+   "min_p": 0.00249377
+  },
+  "down": {
+   "n": 272,
+   "BH_272": 19,
+   "BY_272": 0,
+   "BH_meff157": 28,
+   "min_p": 0.00249377
+  },
+  "flip": {
+   "n": 272,
+   "BH_272": 15,
+   "BY_272": 0,
+   "BH_meff157": 27,
+   "min_p": 0.00249377
+  },
+  "het": {
+   "n": 272,
+   "BH_272": 53,
+   "BY_272": 0,
+   "BH_meff157": 56,
+   "min_p": 0.00249377
+  },
+  "fdr_check_output_counts": {
+   "up": {
+    "BH": 35,
+    "BY": 0
+   },
+   "down": {
+    "BH": 19,
+    "BY": 0
+   },
+   "sign_flip": {
+    "BH": 15,
+    "BY": 0
+   },
+   "heterogeneity": {
+    "BH": 53,
+    "BY": 0
+   }
+  },
+  "minority_calibration": {
+   "reps": 400,
+   "ROBUST+H_count": 193,
+   "ROBUST-but-GROUP_count": 155,
+   "any_robust_share_recomputed": 0.87,
+   "planted_tag_flagged_count": 168,
+   "planted_tag_hit_rate": 0.42,
+   "null_false_positive_recomputed": 0.0425,
+   "uniform_strong_false_negative_recomputed": 0.025,
+   "ladder_b006_strict_rate": 0.19
+  }
+ },
+ "E1": {
+  "n_links": 272,
+  "robust_everywhere_Rmax": 5,
+  "R400": {
+   "up": {
+    "BH": 35,
+    "BY": 0
+   },
+   "down": {
+    "BH": 19,
+    "BY": 0
+   },
+   "flip": {
+    "BH": 15,
+    "BY": 0
+   },
+   "het": {
+    "BH": 53,
+    "BY": 0
+   }
+  },
+  "R800": {
+   "up": {
+    "BH": 41,
+    "BY": 0
+   },
+   "down": {
+    "BH": 20,
+    "BY": 0
+   },
+   "flip": {
+    "BH": 17,
+    "BY": 0
+   },
+   "het": {
+    "BH": 53,
+    "BY": 0
+   }
+  },
+  "R1200": {
+   "up": {
+    "BH": 41,
+    "BY": 0
+   },
+   "down": {
+    "BH": 23,
+    "BY": 0
+   },
+   "flip": {
+    "BH": 20,
+    "BY": 0
+   },
+   "het": {
+    "BH": 53,
+    "BY": 32
+   }
+  },
+  "reading": "five of 272 links are robust in every grouping (sum of robust_everywhere_Rmax); at R=400 BY certifies 0 in all four families; at R=800 still 0; at R=1200 the heterogeneity family alone crosses the BY step-up line (32 links), while up/down/sign-flip stay at 0. 'BY = 0' is a draw-budget statement, not a universal one."
+ },
+ "E11": {
+  "lead_lag_efr_committed": 0.541,
+  "lead_lag_efr_recomputed": 0.5412,
+  "lead_lag_tfr_committed": 1.555,
+  "lead_lag_tfr_recomputed": 1.5552,
+  "committed_median_abs_diff": 0.3041941999999995,
+  "committed_max_abs_diff": 4.2677227,
+  "panel_recomputed": {
+   "n_rows": 2955,
+   "n_countries": 197,
+   "median_abs_diff": 0.3042,
+   "max_abs_diff": 4.2677,
+   "afg_1950": [
+    {
+     "effective_fertility": 3.3990664,
+     "tfr_observed_1950plus": 7.248
+    }
+   ]
+  },
+  "reading": "effective fertility = surviving children per woman; TFR = births per woman. On a matched 5-year grid they differ by median 0.3042 and max 4.2677, and the level association with schooling is lag-dominant for EFR (lead/lag 0.541) but future-dominant for TFR (1.555). Neither series is a correction of the other."
+ },
+ "E6": {
+  "by_proxy_window": {
+   "ggdc_nonag_emp": {
+    "1900-2012": {
+     "n_in_window": 30,
+     "forward": 2,
+     "reverse": 5,
+     "forward_or_tie": 13,
+     "undetermined": 10,
+     "identifiable": 20,
+     "forward_share_identified": 10.0,
+     "lower_bound_over_inwindow": 6.7,
+     "upper_bound_over_inwindow": 40.0,
+     "tie_or_censored_share_inwindow": 43.3
+    },
+    "1960-2010": {
+     "n_in_window": 9,
+     "forward": 1,
+     "reverse": 3,
+     "forward_or_tie": 3,
+     "undetermined": 2,
+     "identifiable": 7,
+     "forward_share_identified": 14.3,
+     "lower_bound_over_inwindow": 11.1,
+     "upper_bound_over_inwindow": 33.3,
+     "tie_or_censored_share_inwindow": 33.3
+    },
+    "1965-2010": {
+     "n_in_window": 5,
+     "forward": 1,
+     "reverse": 3,
+     "forward_or_tie": 1,
+     "undetermined": 0,
+     "identifiable": 5,
+     "forward_share_identified": 20.0,
+     "lower_bound_over_inwindow": 20.0,
+     "upper_bound_over_inwindow": 20.0,
+     "tie_or_censored_share_inwindow": 20.0
+    },
+    "1970-2015": {
+     "n_in_window": 3,
+     "forward": 1,
+     "reverse": 1,
+     "forward_or_tie": 1,
+     "undetermined": 0,
+     "identifiable": 3,
+     "forward_share_identified": 33.3,
+     "lower_bound_over_inwindow": 33.3,
+     "upper_bound_over_inwindow": 33.3,
+     "tie_or_censored_share_inwindow": 33.3
+    }
+   },
+   "urban": {
+    "1900-2012": {
+     "n_in_window": 101,
+     "forward": 10,
+     "reverse": 14,
+     "forward_or_tie": 41,
+     "undetermined": 36,
+     "identifiable": 65,
+     "forward_share_identified": 15.4,
+     "lower_bound_over_inwindow": 9.9,
+     "upper_bound_over_inwindow": 45.5,
+     "tie_or_censored_share_inwindow": 40.6
+    },
+    "1960-2010": {
+     "n_in_window": 65,
+     "forward": 10,
+     "reverse": 7,
+     "forward_or_tie": 41,
+     "undetermined": 7,
+     "identifiable": 58,
+     "forward_share_identified": 17.2,
+     "lower_bound_over_inwindow": 15.4,
+     "upper_bound_over_inwindow": 26.2,
+     "tie_or_censored_share_inwindow": 63.1
+    },
+    "1965-2010": {
+     "n_in_window": 11,
+     "forward": 7,
+     "reverse": 4,
+     "forward_or_tie": 0,
+     "undetermined": 0,
+     "identifiable": 11,
+     "forward_share_identified": 63.6,
+     "lower_bound_over_inwindow": 63.6,
+     "upper_bound_over_inwindow": 63.6,
+     "tie_or_censored_share_inwindow": 0.0
+    },
+    "1970-2015": {
+     "n_in_window": 2,
+     "forward": 1,
+     "reverse": 1,
+     "forward_or_tie": 0,
+     "undetermined": 0,
+     "identifiable": 2,
+     "forward_share_identified": 50.0,
+     "lower_bound_over_inwindow": 50.0,
+     "upper_bound_over_inwindow": 50.0,
+     "tie_or_censored_share_inwindow": 0.0
+    }
+   },
+   "ind_va": {
+    "1900-2012": {
+     "n_in_window": 76,
+     "forward": 13,
+     "reverse": 25,
+     "forward_or_tie": 16,
+     "undetermined": 22,
+     "identifiable": 54,
+     "forward_share_identified": 24.1,
+     "lower_bound_over_inwindow": 17.1,
+     "upper_bound_over_inwindow": 46.1,
+     "tie_or_censored_share_inwindow": 21.1
+    },
+    "1960-2010": {
+     "n_in_window": 54,
+     "forward": 13,
+     "reverse": 13,
+     "forward_or_tie": 16,
+     "undetermined": 12,
+     "identifiable": 42,
+     "forward_share_identified": 31.0,
+     "lower_bound_over_inwindow": 24.1,
+     "upper_bound_over_inwindow": 46.3,
+     "tie_or_censored_share_inwindow": 29.6
+    },
+    "1965-2010": {
+     "n_in_window": 34,
+     "forward": 8,
+     "reverse": 9,
+     "forward_or_tie": 8,
+     "undetermined": 9,
+     "identifiable": 25,
+     "forward_share_identified": 32.0,
+     "lower_bound_over_inwindow": 23.5,
+     "upper_bound_over_inwindow": 50.0,
+     "tie_or_censored_share_inwindow": 23.5
+    },
+    "1970-2015": {
+     "n_in_window": 15,
+     "forward": 3,
+     "reverse": 3,
+     "forward_or_tie": 4,
+     "undetermined": 5,
+     "identifiable": 10,
+     "forward_share_identified": 30.0,
+     "lower_bound_over_inwindow": 20.0,
+     "upper_bound_over_inwindow": 53.3,
+     "tie_or_censored_share_inwindow": 26.7
+    }
+   },
+   "agri_va": {
+    "1900-2012": {
+     "n_in_window": 83,
+     "forward": 9,
+     "reverse": 21,
+     "forward_or_tie": 18,
+     "undetermined": 35,
+     "identifiable": 48,
+     "forward_share_identified": 18.8,
+     "lower_bound_over_inwindow": 10.8,
+     "upper_bound_over_inwindow": 53.0,
+     "tie_or_censored_share_inwindow": 21.7
+    },
+    "1960-2010": {
+     "n_in_window": 58,
+     "forward": 9,
+     "reverse": 15,
+     "forward_or_tie": 18,
+     "undetermined": 16,
+     "identifiable": 42,
+     "forward_share_identified": 21.4,
+     "lower_bound_over_inwindow": 15.5,
+     "upper_bound_over_inwindow": 43.1,
+     "tie_or_censored_share_inwindow": 31.0
+    },
+    "1965-2010": {
+     "n_in_window": 36,
+     "forward": 7,
+     "reverse": 10,
+     "forward_or_tie": 7,
+     "undetermined": 12,
+     "identifiable": 24,
+     "forward_share_identified": 29.2,
+     "lower_bound_over_inwindow": 19.4,
+     "upper_bound_over_inwindow": 52.8,
+     "tie_or_censored_share_inwindow": 19.4
+    },
+    "1970-2015": {
+     "n_in_window": 14,
+     "forward": 2,
+     "reverse": 3,
+     "forward_or_tie": 3,
+     "undetermined": 6,
+     "identifiable": 8,
+     "forward_share_identified": 25.0,
+     "lower_bound_over_inwindow": 14.3,
+     "upper_bound_over_inwindow": 57.1,
+     "tie_or_censored_share_inwindow": 21.4
+    }
+   }
+  },
+  "reading": "primary window 1900-2012 (full overlap; the preregistered 1960-2010 window selects against pre-1960 demand take-offs and is reported as robustness): demand-first among identifiable countries = 10.0% GGDC non-ag employment, 15.4% urbanisation, 24.1% industry VA, 18.8% agriculture VA; bounds over all in-window countries 6.7-53.0%; weak ties/left-censoring 21.1-43.3% of in-window countries."
+ },
+ "Q2": {
+  "pairs": 52,
+  "distinct_paired_countries": 104,
+  "unpaired_countries": 1,
+  "baseline_complete_recomputed": 105,
+  "pairs_both_school_changes": 52,
+  "pairs_both_tfr_changes": 52,
+  "panel_sha256_matches_metadata": true
+ },
+ "ordering": {
+  "source_sha256": "d0c02f95ade0850eacfb4edb73a3a9e5a837624a6bdefe1dbe12043bd10413af",
+  "three_event_sample": {
+   "n": 64,
+   "schooling_first": 24,
+   "ties": 20,
+   "fertility_first": 20,
+   "strict_share_pct": 37.5,
+   "ties_share_pct": 31.25,
+   "fertility_first_share_pct": 31.25
+  },
+  "all_with_both_dates": {
+   "n": 81,
+   "schooling_first": 29,
+   "ties": 27,
+   "fertility_first": 25,
+   "strict_share_pct": 35.8,
+   "ties_share_pct": 33.33,
+   "fertility_first_share_pct": 30.86
+  },
+  "bootstrap_ci95_schooling_first": [
+   26.56,
+   50.0
+  ],
+  "old_record_json_field": "pct_schooling_before_fertility = 68.75",
+  "artefact": "the 44/64 = 68.75% figure adds the 20 simultaneous (tie) countries to the 24 strict schooling-first countries; strict ordering is 24/64 = 37.5%, ties 20/64 = 31.25%, fertility-first 20/64 = 31.25%"
+ }
+}
