@@ -2,8 +2,8 @@
 
 **Branch:** `research/paper-massification-2026-11-25` (base `76d929a`).
 **Record:** `research/records/2026-11-25-paper-massification/`.
-**Revision date:** 25 November 2026 (session). **Revision commit:** `417c87a` (the revision of `paper.md`; this log entry is committed immediately after it and
-records the hash).
+**Revision date:** 25 November 2026 (session). **Revision commit:** `417c87a` (the main revision of `paper.md`); `7bf978d` is a follow-up commit that fixes the
+limitation numbering order (10-12). The hash of this log entry's own commit is in `git log`.
 **Draft after revision:** 17,968 words (was 17,433; target 12,000–18,000).
 
 ## Why
