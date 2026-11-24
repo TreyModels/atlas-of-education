@@ -6,6 +6,32 @@ dashboard / handoff D3–D4 text from this file until Neon's patch is applied an
 
 **Branch:** `research/dhs-corrected-2026-11-25` (additive, cut from `fe762b9`). Nothing pushed yet.
 
+## Provenance and authorship (read this before citing)
+
+**Who ran it.** This corrected run was executed on the box by a **lingering agent from the retired
+window** — not by the Commander of the 25 Nov session and not by the Lead. Evidence: `/root/work/run_neon_fix.sh`
+has mtime 00:17 CST (before the 25 Nov session's first action at 00:18), and the dhs-api script edits and
+`results/` writes are 00:15–00:20 CST. That same retired-window worker later wrote the on-box
+`shutdown_after_two.sh` that powered the instance off at 00:31:04 CST (see `POWER_RULES_2026-11-25.md`
+in `research/handoff-2026-11-24`).
+
+**Exact provenance.** box `autodl-container-a8f742b5ee-292349c5`
+(`ssh -p 45973 root@connect.cqa1.seetacloud.com`); work dir `/root/work/dhs-api`; runner
+`/root/work/run_neon_fix.sh`; log `/root/work/neon_fix.log` (+ `neon_fix_stats.txt`, WALL_SECONDS=211);
+run window ~00:15–00:20 CST / 16:15–16:20 UTC; 8 workers; numpy 1.24.1. Logs preserved in
+`results/server_box3_corrected/`.
+
+**Why it is trustworthy anyway.** The Commander of the 25 Nov session re-fetched the run's scripts and
+outputs, re-ran `corrected_reduction.py` **host-side** against the committed panels, and reproduced
+every reported number to ~1e-12 (Africa-11 2-group ratio 1.069843350505824, CI [0.9987338159871082,
+1.1403490938072518]; A_vs_B −0.19669737936298431; C_vs_B −0.0031318298867118), with the built-in
+validation gate passing against the prior record (max |Δ| 0.0036). Inputs verified unchanged
+(`sha256sum -c data/MANIFEST.sha256` → 28/28 OK on the box).
+
+**Status.** PROVISIONAL: produced by an unattributed box run that has been host-reproduced. It does not
+substitute for Neon's `ir_pipeline.py`/`estimate.py` diff; when that lands, re-run under a known runner
+and reconcile. Dashboard and migration-handoff D3–D4 text remain untouched until then.
+
 ## What changed
 
 Neon's line audit found that `_boot_task()` in `scripts/estimate.py` (and `ratio_boot()` in
