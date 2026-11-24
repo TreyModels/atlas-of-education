@@ -10,7 +10,7 @@ verified or unverified throughout.
 
 ## Abstract
 
-Most theories of mass schooling are demand stories. This paper is built around one ordering claim, stated before the theory: in late-industrialising countries, the schooling take-off typically precedes the release of agricultural labour, and the structural-change proxies the demand story names do not usually turn on first. Families invest in education because returns rise, employers demand literate workers, and the labour market pulls children through school. In a panel of 64 late-industrialising countries where both events can be dated, the schooling take-off **precedes** the release of labour out of agriculture in 61 of them (95%), with a median lead of 26 years (bootstrap 95% interval 22–26 years); the reverse ordering occurs in 5% (0–11%). On pre-1990 structural-change series the demand take-off precedes the schooling take-off in **10.0%** of identifiable countries (GGDC non-agricultural employment), **15.4%** (urbanisation), **24.1%** (industry value added) and **18.8%** (agricultural value added); all-country bounds are **6.7–53.0%**, and another **21–43%** are weak ties or left-censored. Demand is neither eliminated nor cleanly ordered: the honest summary is that **schooling and structural change move together, with schooling typically but not universally first**. In a horse race with country and period fixed effects, supply-side measures carry the association with schooling expansion (+0.456, SE 0.174) while demand-side measures do not (+0.006, SE 0.203; n=78 country-periods, 51 countries). The raw event ordering looks demand-led (73% of countries, 64–82%), but that is an artefact of when the series begin: 61 of 108 schooling take-offs sit on the first observable year of the common window, and the supply series start in the median country only in 1975; in the fair sample (33 countries) supply precedes schooling in 76% and demand in 79%, and the two sides turn together. One supply-side shock can be tested with an event study: fee abolition in eight African countries with verified dates (1994–2005) is followed by large primary-enrolment gains (Callaway–Sant'Anna post-effects of roughly +22 to +29 points at +1 to +6, TWFE similar, flat pre-trends at −2/−3/−4); the on-impact effect includes zero, the treated sample is small (7 countries), and it is **consistent with** a supply effect, not a causal estimate. The historical record splits: Prussia's compulsory schooling state precedes industrialisation and the farm exodus by 80–120 years; France's 1833 statute precedes but attainment follows demand until the 1880s; in Britain — the first industrialiser — industrialisation and the farm exodus precede mass schooling by 40–90 years; the northern United States is supply-side in the local-public-goods sense. We read the evidence as a **late-industrialiser regularity, not a universal law**, and as an association rather than a causal sequence: where the state built the pipeline first, schooling typically led; where industrialisation came first, demand led. The paper also reports the agricultural-floor mechanism (real in the cross-section, not identified in the dynamics), scaling regularities that are between-country regularities rather than laws of change, and credential and care mechanisms unsupported in the data they can be tested on. Data tiers are labelled throughout: GGDC/WDI/PWT structural-change and enrolment series are **observed**; the long-run schooling event series is **reconstructed**; the WDI total-fertility series is **observed** (births per woman) and is not the project's effective-fertility measure. The contribution is a systematic, pre-registered, multi-country **event-ordering** of massification against structural change, joined to the historical cases, with the demand-side theory's own variables given a fair test. The project's own forward tests are reported as negative results: exposure matching removes 88–98% of the apparent synthetic order effect, no feedback elasticity rescues it, the aggregate staging test fails out of sample, and the Bayesian screens are not usable posteriors — simulations and exploratory aggregates, not country evidence.
+Most theories of mass schooling are demand stories. This paper is built around one ordering claim, stated before the theory: in late-industrialising countries, the schooling take-off typically precedes the release of agricultural labour, and the structural-change proxies the demand story names do not usually turn on first. Families invest in education because returns rise, employers demand literate workers, and the labour market pulls children through school. In a panel of 64 late-industrialising countries where both events can be dated, the schooling take-off **precedes** the release of labour out of agriculture in 61 of them (95%), with a median lead of 26 years (bootstrap 95% interval 22–26 years); the reverse ordering occurs in 5% (0–11%). On pre-1990 structural-change series the demand take-off precedes the schooling take-off in **10.0%** of identifiable countries (GGDC non-agricultural employment), **15.4%** (urbanisation), **24.1%** (industry value added) and **18.8%** (agricultural value added); all-country bounds are **6.7–53.0%**, and another **21–43%** are weak ties or left-censored. Demand is neither eliminated nor cleanly ordered: the honest summary is that **schooling and structural change move together, with schooling typically but not universally first**. In a horse race with country and period fixed effects, supply-side measures carry the association with schooling expansion (+0.456, SE 0.174) while demand-side measures do not (+0.006, SE 0.203; n=78 country-periods, 51 countries). The raw event ordering looks demand-led (73% of countries, 64–82%), but that is an artefact of when the series begin: 61 of 108 schooling take-offs sit on the first observable year of the common window, and the supply series start in the median country only in 1975; in the fair sample (33 countries) supply precedes schooling in 76% and demand in 79%, and the two sides turn together. One supply-side shock can be tested with an event study: fee abolition in eight African countries with verified dates (1994–2005) is followed by large primary-enrolment gains (Callaway–Sant'Anna post-effects of roughly +22 to +29 points at +1 to +6, TWFE similar, flat pre-trends at −2/−3/−4); the on-impact effect includes zero, the treated sample is small (7 countries), and it is **consistent with** a supply effect, not a causal estimate. The historical record splits: Prussia's compulsory schooling state precedes industrialisation and the farm exodus by 80–120 years; France's 1833 statute precedes but attainment follows demand until the 1880s; in Britain — the first industrialiser — industrialisation and the farm exodus precede mass schooling by 40–90 years; the northern United States is supply-side in the local-public-goods sense. We read the evidence as a **late-industrialiser regularity, not a universal law**, and as an association rather than a causal sequence: where the state built the pipeline first, schooling typically led; where industrialisation came first, demand led. The paper also reports the agricultural-floor mechanism (real in the cross-section, not identified in the dynamics), scaling regularities that are between-country regularities rather than laws of change, and credential and care mechanisms unsupported in the data they can be tested on. Data tiers are labelled throughout: GGDC/WDI/PWT structural-change and enrolment series are **observed**; the long-run schooling event series is **reconstructed**; the WDI total-fertility series is **observed** (births per woman) and is not the project's effective-fertility measure. The contribution is a systematic, pre-registered, multi-country **event-ordering** of massification against structural change, joined to the historical cases, with the demand-side theory's own variables given a fair test. A pre-registered toy full-system multiverse (1,440 runs, simulation) locates the leverage in that synthetic world in household affordability, gate design, the jobs/credential regime and rural structure; tutoring is gate-driven and second-order; none of it is causal or empirical evidence. The project's own forward tests are reported as negative results: exposure matching removes 88–98% of the apparent synthetic order effect, no feedback elasticity rescues it, the aggregate staging test fails out of sample, and the Bayesian screens are not usable posteriors — simulations and exploratory aggregates, not country evidence.
 
 **Keywords:** mass schooling; structural transformation; compulsory education; supply-side schooling expansion;
 event sequencing; late industrialisation.
@@ -641,6 +641,53 @@ reading it as a staging mechanism.
 aggregate support** for treating it as a staging mechanism. "Schooling and structural change move together" is the
 claim the data support, and the mechanism remains open.
 
+### 7.9 What the full-system multiverse adds: gates, affordability, jobs and rural structure
+
+A second synthetic exercise extends the toy model into a full massification system: a pre-registered 1,440-run
+multiverse (144 equation-choice combinations × 10 seeds; N=400 children per cohort, T=70, cohorts measured from year
+35; `research/masseng-edsystem-2026-11-25` @ `b7108da`, pre-registration `3679f2d`) with independent statistical tests
+(cluster-robust OLS with seed fixed effects, 144 design-cell clusters, Holm correction across 9 outcomes and stratum
+sign checks; `research/edsystem-tests-2026-11-25` @ `aadbbb4`). It is a **toy, uncalibrated simulation**: every
+parameter is illustrative, it is not fitted to any country, and no result here is a causal or empirical estimate.
+With that label fixed, the pre-declared η² decomposition and the independent tests agree on where the leverage sits
+in this world:
+
+| margin | dominant axis (η²) | contrast in the toy multiverse |
+|---|---|---|
+| lower completion | **gates .70** | bar **.720** [.592, .849] vs quota **.550** [.549, .550]; quota−bar **−17.0pp** [−18.4, −15.7] |
+| upper completion | **gates .69** | bar **.609** [.493, .746] vs quota **.449** [.446, .450]; quota−bar **−16.0pp** |
+| primary completion | **affordability .69** | cash-only **.797** [.746, .852] vs credit **.929** [.865, .977] / credit+poverty-line need **.910** [.831, .968]; credit effects **+13.2pp** [12.6, 13.9] / **+11.3pp** [10.6, 12.0] |
+| tertiary completion | **affordability .41** (gates .35) | cash-only **.296** [.245, .392] vs credit **.362** [.283, .497] / credit+poverty **.428** [.340, .569]; credit **+6.6pp** [5.6, 7.7] / **+13.2pp** [12.1, 14.4] |
+| formal share / education spending | **jobs .96** | queue-with-floors **.293** [.275, .331] vs competitive **.627** [.556, .707]; competitive−queue **+33.4pp** [32.4, 34.4] |
+| wealth parity (lower) | **rural .51** | low penalty **.245** [.124, .393] vs high penalty **.100** [.043, .180]; high−low **−14.6pp** |
+| wealth completion gap (upper) | **gates .66** | gate design dominates; under bar the lower-completion quintile-1/quintile-5 shares are .174/.966 (absolute gap .792), under quota .121/.767 (gap .646) — the quota narrows the absolute gap but lowers completion for all |
+| public quality `q_pub` | **supply .42** | fixed budget **0.99** vs fiscal loop **1.12**; the test supports public quality **+0.132** [0.115, 0.149] but **completion effects are not supported** (variant ranges overlap; supply not identifiable from attainment, overlap 1.00) |
+| tutoring at gate-adjacent grades | **gates .89** | bar **.273** vs quota **.499** (gate-adjacent .320 vs .604); quota−bar **+22.6pp** [21.3, 23.9]; tutoring is pro-rich in both and rises at every quintile under quota, but it is **not a major attainment determinant** (η² ≈ 0 for completion; learning arm +3.5pp primary, −0.09 skill premium) |
+
+The bar gate is a **screen**: lower-secondary completion runs from .174 in the poorest quintile to .966 in the
+richest. The quota lowers completion for everyone (especially the middle), narrows the absolute top-bottom gap
+(.792→.646) and raises gate-prep tutoring (q1 .068→.235; q5 .405→.578), reallocating prep from tertiary to
+lower/primary. Credit access is the largest single access lever for the poorest quintile's lower completion
+(.091→.195). In this toy world the structural axes — **affordability, gate design, jobs/credential regime and rural
+penalty** — dominate attainment and distribution, while supply/funding moves public quality without being
+identifiable from attainment and tutoring is gate-driven and second-order.
+
+**Engine boundaries (stated, not hidden).** The prototype is a constrained toy model. There is no persistent
+learning state and no exam-score gate — the gates are bar-vs-quota seat rules, not score cut-offs; the labour market
+and rural/urban blocks are stylised (queue-with-credential-floors vs competitive skill premium; rural distance cost
+and urban share), not estimated; migration, rural–urban sorting and remittances are absent, as are coupled income
+growth and country calibration. A push-out decomposition by liquidity vs choice is unusable because the engine
+overwrites exit-reason codes. The PHL level check is construct-limited (simulated lower completion mean .635
+[.550, .833] vs observed `lsc` 84.8% in 2024; no calibration). The data gaps are the binding constraint: household
+demand/affordability, learning grade profiles, exam/quota rules, migration flows and credential requirements are not
+identified by available public data.
+
+**Reading.** These are simulation results, not evidence about real systems, and they identify no causal effect. They
+matter for this paper because they say where a future measurement programme should look — affordability and gate
+rules first, not tutoring alone — and because they again refuse the shortcut from a descriptive ordering to a
+mechanism. The paper's cross-country ordering and the full-system toy world are consistent in one narrow sense only:
+both point away from tutoring or a single supply lever as the explanation of massification.
+
 ## 8. The historical cases as a typology: Prussia and Britain as the two poles
 *This section integrates the historical-sequence record (`research/historical-sequence-2026-11-23` @ `ab658c7`,
 definitions first committed at `74e0fe2`), drafted for this paper by the historical-sequence lead and edited into
@@ -926,7 +973,7 @@ the paper's supply measures are spending, teachers and enrolment capacity, and i
 outcomes, which the growth literature shows matter more than years of schooling. Third, **credential inflation is
 a real risk of supply-side expansion**: the credential literature (Collins 1979; Spence 1973; Arrow 1973) and the
 project's own credential test (Section 11) warn that expansion can outrun the jobs that justify it, and the care
-loop and gap tests come back null rather than reassuring. The project's synthetic gate simulations sharpen the credential risk: quota gates raised gate-prep tutoring by 17.6–21.1pp and widened the top-to-bottom tutoring gap by 13.0–14.5pp, and raising rural access widened rather than narrowed the wealth gap (X2, stipulated toy worlds, not causal estimates); gate design can be inequality-relevant. The policy reading is therefore "build the pipeline
+loop and gap tests come back null rather than reassuring. The project's synthetic gate simulations sharpen the credential risk: quota gates raised gate-prep tutoring by 17.6–21.1pp and widened the top-to-bottom tutoring gap by 13.0–14.5pp, and raising rural access widened rather than narrowed the wealth gap (X2, stipulated toy worlds, not causal estimates); gate design can be inequality-relevant. The full-system multiverse points the same way: credit access and gate rules, not tutoring, are the largest levers in that toy system (Section 7.9). The policy reading is therefore "build the pipeline
 early, and watch the quality and the credential gap", not "build schools and growth follows".
 
 ### 12.4 What the implications are not
@@ -1028,6 +1075,8 @@ massification. The evidence, taken together, supports a conditional synthesis:
 
 7. **The project's forward tests do not support a staging mechanism**: the audited synthetic staging experiment was exposure- and fiscal-confounded; exposure matching removed 88–98% of the apparent order effect; no feedback elasticity produced a reversal or a rescue; the honest-split aggregate test returned FAIL_NO_EVIDENCE; and the Bayesian screens are not posteriors (X1–X5; simulations/exploratory aggregates, not evidence).
 
+8. **The full-system toy multiverse locates the leverage in affordability, gate design, jobs regime and rural structure**: in a pre-registered 1,440-run simulation (X-series; not evidence), gates dominate lower/upper completion and the wealth completion gaps (bar .720/.609 vs quota .550/.449; quota−bar −17.0/−16.0pp; bar screens the poorest hardest, .174 vs .966), affordability dominates primary/tertiary completion and the poorest quintile's lower completion (cash-only .797/.296 vs credit up to .929/.428; q1 lower .091→.195), jobs regime dominates formal share (.293 queue vs .627 competitive), and rural structure dominates wealth parity (.245 vs .100); supply moves public quality (0.99 vs 1.12) but is not identifiable from attainment; tutoring is gate-driven (.273→.499) and second-order.
+
 ### 14.2 "What we know now" box
 
 > **What we know now — massification**
@@ -1055,6 +1104,9 @@ massification. The evidence, taken together, supports a conditional synthesis:
 > - **Forward tests**: synthetic staging experiment exposure/fiscal-confounded; exposure matching removes 88–98% of the
 >   order effect; no feedback-elasticity reversal or rescue; aggregate staging FAIL_NO_EVIDENCE; Bayesian screens not
 >   posteriors. Simulations, not evidence.
+> - **Full-system toy multiverse (simulation)**: affordability, gate design, jobs regime and rural structure dominate
+>   attainment/distribution; supply moves public quality but not attainment; tutoring is gate-driven and second-order
+>   (1,440 runs; not evidence).
 > - **The framing**: a late-industrialiser regularity, not a universal law; the data are better described
 >   as schooling and structural change moving together, with a supply-side conditional association in the
 >   horse race — not an identified cause.
@@ -1156,6 +1208,14 @@ importance screens are conditional weights, not posteriors. None of these are co
 change the descriptive ordering; they do mean the paper treats the ordering as description, not as a demonstrated
 staging mechanism.
 
+**14. "What about the full-system simulation — does it not identify the mechanism?"** No. It is a toy, uncalibrated
+`eduengine` multiverse (1,440 runs; illustrative parameters; no country fit) with independent statistical tests, and
+its result is that in that synthetic system the structural axes — affordability, gate design, jobs/credential
+regime, rural penalty — dominate, supply/funding moves public quality but is not identifiable from attainment, and
+tutoring is gate-driven and second-order (Section 7.9). Its documented boundaries (no persistent learning state, no
+exam-score gate, stylised labour market, no migration/sorting/remittances, unusable push-out decomposition) rule out
+reading it as an empirical mechanism. It is a design guide for measurement, not evidence.
+
 ## 16. Conclusion
 Massification is usually told as a demand story: factories and cities raise the return to schooling, and
 schooling follows. This paper tested the timing that story requires across 64 late-industrialising countries and
@@ -1170,7 +1230,7 @@ Prussia built its schools a century before it industrialised; Britain industrial
 framing that survives is **a late-industrialiser regularity, not a universal law**, and the verb is "is better
 described as" rather than "is caused by". The agricultural floor is real but does not deliver the sequence;
 scaling regularities are regularities, not laws; the credential and care mechanisms are null in the data they
-can be tested on. The project's own forward tests are negative — exposure matching removes most of the synthetic order effect and the aggregate staging test fails out of sample — so the ordering is a description, not a demonstrated sequence. What remains is a clear, traceable, falsifiable statement about the order of events in
+can be tested on. The project's own forward tests are negative — exposure matching removes most of the synthetic order effect and the aggregate staging test fails out of sample — so the ordering is a description, not a demonstrated sequence. A full-system toy multiverse (1,440 runs) adds that affordability, gate design, jobs regime and rural structure are the dominant margins in that synthetic world, with tutoring second-order and supply not identifiable from attainment — simulation, not evidence. What remains is a clear, traceable, falsifiable statement about the order of events in
 massification, an honest set of limits, and a research agenda — cohort-linked microdata, archival verification
 of the historical dates, and an instrument for state capacity — that would let the next pass turn the
 correlation into identification.

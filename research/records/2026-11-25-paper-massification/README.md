@@ -5,7 +5,7 @@ Lead: panel-matrix (task-37). This record consolidates everything the project fo
 synthesis-length paper (target 12,000–18,000 words) with an exhaustive, DOI-verified literature review.
 
 ## Deliverables
-- **`paper.md`** — full draft, **18,809 words** (about 4.5% above the 12,000–18,000 target because the 24 Nov 2026 negative-results integration adds a required results subsection (§7.8) and synthesis/limitation entries; flagged for a trim pass), restructured around the finding (Section 2) with explicit Implications (12) and Future research (13), with abstract, introduction,
+- **`paper.md`** — full draft, **19,898 words** (about 10.5% above the 12,000–18,000 target because the 24–25 Nov 2026 negative-results and full-system integrations add required results subsections (§7.8–§7.9) and synthesis/limitation entries; flagged for a trim pass), restructured around the finding (Section 2) with explicit Implications (12) and Future research (13), with abstract, introduction,
   four-literature theory section, data and measurement (with a data-tier table), empirical strategy, results sections including the E6 pre-1990 demand-timing re-estimate (7.5) and the E8 fee-abolition event study (7.6), synthesis and
   "What we know now" box, limitations/referee objections, conclusion, and three appendices (evidence labels/data tiers,
   reproduction, data gaps). The 25 Nov revision is logged in `REVISION_LOG.md`. Every number carries sample and uncertainty; the historical dates are labelled
@@ -81,6 +81,21 @@ Britain demand-led by 40–90 years. **Late-industrialiser regularity, not a uni
 
 ## Revision of 25 November 2026 (E6/E8 integration)
 Applied after the Codex wave retracted the 7% labour-demand figure and verified the E6/E8 record (`e6e8 @ 2d19da7`) and the fee dates (`task-49 @ 9a0fd69`). Changes: replaced the 7% figure and all "demand is ruled out" framing with E6's pre-1990 numbers and the "schooling and structural change move together" framing (with bounds and ties/censoring flagged); softened supply-led/sequencing causal language to association/consistency language; added the E8 fee-abolition section (7.6) and the N3 threshold-smoothing caveat (7.5); added a data-tier table and labelled every series; corrected subsection numbering; rechecked abstract/results/limitations against each other; recomputed the quoted numbers. Details, sources and commit: `REVISION_LOG.md`.
+
+## Full-system multiverse integration (25 November 2026, task-45)
+
+Adds §7.9 "What the full-system multiverse adds: gates, affordability, jobs and rural structure" (pre-registered
+1,440-run toy `eduengine` multiverse, 144 equation-choice combinations × 10 seeds, with independent cluster-robust
+OLS/seed-FE/Holm/stratum tests), plus an abstract sentence, synthesis point 8, a "What we know now" bullet,
+limitation objection 14, a conclusion sentence and the §12.3 cross-reference. Core numbers: gates dominate
+lower/upper completion and the wealth completion gaps (bar .720/.609 vs quota .550/.449; quota−bar −17.0/−16.0pp;
+bar screens q1 hardest, .174 vs .966); affordability dominates primary/tertiary completion and the poverty margin
+(cash-only .797/.296 vs credit up to .929/.428; q1 lower .091→.195); jobs regime dominates formal share (.293 queue
+vs .627 competitive); rural structure dominates wealth parity (.245 vs .100); supply/funding moves public quality
+(0.99 vs 1.12) but is not identifiable from attainment; tutoring is gate-driven (.273→.499) and second-order.
+**All of it is a toy, uncalibrated simulation, not evidence**; engine boundaries are stated in §7.9. Sources:
+`research/masseng-edsystem-2026-11-25` @ `b7108da` (pre-registration `3679f2d`) and
+`research/edsystem-tests-2026-11-25` @ `aadbbb4`; details in `EDSYSTEM_INTEGRATION.md`.
 
 ## Negative-results integration (24 November 2026, task-37)
 Adds §7.8 "What the project's own simulations found: negative results" (staging audit exposure/fiscal confound; X1 exposure matching removes 88–98% of the apparent order effect; X3 no elasticity reversal or rescue; X4 aggregate FAIL_NO_EVIDENCE; X5 Bayesian screens not posteriors; X2 gate/tutoring inequality), plus abstract/conclusion sentences, synthesis point 7, the "What we know now" bullet and limitation 13, and the §12.3 gate-design caution. All X results are labelled **simulations** or **exploratory aggregates**, not evidence. Sources: `research/masseng-staging-x1-2026-11-24` @ `fef7428`, `research/masseng-staging-x2-2026-11-24` @ `f592bae`, `research/masseng-bayes-audit-2026-11-24` @ `0ecd4be`, `research/masseng-timing-audit-2026-11-24` @ `ff84e75`; details in `X_RESULTS_INTEGRATION.md`.
