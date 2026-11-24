@@ -2,6 +2,7 @@ import json, os, sys, time, subprocess
 import numpy as np
 HERE=os.path.dirname(os.path.abspath(__file__)); REC=os.path.dirname(HERE); RES=os.path.join(REC,"results"); sys.path.insert(0,HERE)
 import model, fertility
+countries=72
 PHASE_A=os.path.join(REC,"..","2026-11-24-synthetic-loop","results","calibration.json")
 cal=json.load(open(PHASE_A)); NUIS={w:cal["cells"][w]["chosen"]["nuisance"] for w in model.WORLDS}; NUIS["s0"]=cal["cells"]["s0"]["chosen"]["nuisance"]
 def jable(o):
@@ -50,6 +51,7 @@ def holm(ps):
         val=(m-rank)*ps[i]; run=max(run,val); adj[i]=min(1.0,run)
     return adj
 def main():
+    countries=72
     os.makedirs(RES,exist_ok=True); t0=time.time()
     cu,hu,ru=block(CAL),block(HELD),block(REPL); s0c,s0h=block(CAL,0),block(HELD,0)
     res={}
@@ -76,17 +78,30 @@ def main():
     if not eligible: verdict=("cannot_test","cannot test (F3): all dynamic observables rejected by the admissibility gate")
     elif seps: verdict=("separates",f"separates (dynamic observables: {seps})")
     else: verdict=("cannot_separate","cannot separate (no dynamic observable beats chance after Holm)")
-    strata_res={}
-    means=np.array([np.mean([panels[w][c][t]["dger"] for t in range(10,25) if panels[w][c][t]["dger"] is not None]) for c in range(countries)])
-    strata={"low_expansion":np.where(means<=np.median(means))[0],"high_expansion":np.where(means>np.median(means))[0]}
-    def slope(w,idx):
+    countries=72
+    rr=np.random.default_rng(20261124)
+    RR=dict(sigma_y=(0.35,0.75),sigma_a=(0.12,0.30),mu_y=(-0.2,0.3),mu_a=(0.85,1.2),w_child=(0.05,0.35),shadow_cost=(0.15,0.5),f_pub_pre=(0.05,0.30),y_sub0=(0.65,1.05))
+    nus=[{k:float(rr.uniform(*v)) for k,v in RR.items()} for _ in range(countries)]
+    panels={}
+    for w in model.WORLDS:
         rows=[]
+        for c in range(countries):
+            ys=model.year_stats(model.run_unit(w,1,20270101+100*c,**nus[c]))
+            rows.append({t:{"dger":float(ys["ger"][t]-ys["ger"][t-10]) if t>=10 else None,"dcl":float(ys["cl_observed"][t]-ys["cl_observed"][t-10]) if t>=10 else None} for t in range(25)})
+        panels[w]=rows
+    countries=len(panels[model.WORLDS[0]])
+    base=[panels[model.WORLDS[0]][c][t]["dger"] for c in range(countries) for t in range(10,25) if panels[model.WORLDS[0]][c][t]["dger"] is not None]
+    med=np.median([np.mean([panels[model.WORLDS[0]][c][t]["dger"] for t in range(10,25)]) for c in range(countries)])
+    strata={"low_expansion":[c for c in range(countries) if np.mean([panels[model.WORLDS[0]][c][t]["dger"] for t in range(10,25)])<=med],"high_expansion":[c for c in range(countries) if np.mean([panels[model.WORLDS[0]][c][t]["dger"] for t in range(10,25)])>med]}
+    def slope(w,idx):
+        R=[]
         for c in idx:
             for t in range(10,25):
                 d=panels[w][c][t]
                 if d["dger"] is None: continue
-                rows.append((1 if t<15 else (2 if t<20 else 3),d["dcl"],d["dger"]))
-        A=np.array(rows); X=np.column_stack([np.ones(len(A)),A[:,2],(A[:,0]==2).astype(float),(A[:,0]==3).astype(float)]); beta,*_=np.linalg.lstsq(X,A[:,1],rcond=None); return float(beta[1])
+                R.append((1 if t<15 else (2 if t<20 else 3),d["dcl"],d["dger"]))
+        A=np.array(R); X=np.column_stack([np.ones(len(A)),A[:,2],(A[:,0]==2).astype(float),(A[:,0]==3).astype(float)]); beta,*_=np.linalg.lstsq(X,A[:,1],rcond=None); return float(beta[1])
+    strata_res={}
     for name,idx in strata.items():
         sl={w:slope(w,idx) for w in model.WORLDS}; vals=list(sl.values()); strata_res[name]={"slopes":sl,"spread":float(max(vals)-min(vals)),"separated":bool((max(vals)-min(vals))>0.05)}
     out={"dynamic_tiebreakers":res,"chance_band_95":band,"holm":{k:float(v) for k,v in zip(names,adj)},"verdict":{"code":verdict[0],"text":verdict[1]},"fertility_strata":strata_res,"note":"SIMULATION; B1=death-spacing, B2=PPR gradient, B3=age-at-first-birth gradient; fertility layer is a declared minimal approximation, not the full dose ABM","label":"SIMULATION"}
