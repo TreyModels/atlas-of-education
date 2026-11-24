@@ -16,6 +16,13 @@ import json
 import os
 import sys
 
+# Server policy: one BLAS thread per worker; parallelise with multiprocessing instead (region-42, 96 cores).
+for _v in ("OMP_NUM_THREADS", "MKL_NUM_THREADS", "OPENBLAS_NUM_THREADS", "NUMEXPR_NUM_THREADS",
+           "VECLIB_MAXIMUM_THREADS"):
+    os.environ.setdefault(_v, "1")
+
+import multiprocessing as mp
+
 import numpy as np
 
 HERE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -86,6 +93,46 @@ def fit(y, X, w, cluster):
     t = np.divide(beta, se, out=np.full_like(beta, np.nan), where=se > 0)
     p = np.array([2 * (1 - 0.5 * (1 + erf(abs(v) / sqrt(2)))) for v in t])
     return dict(beta=beta, se=se, n=len(y), k=X.shape[1], p=p, V=V, t=t)
+
+
+_W = {}
+
+
+def _init_worker(panels):
+    _W.update(panels)
+
+
+def _country_task(c):
+    rows2 = _W["A2"]
+    rs = [r for r in rows2 if r["country"] == c]
+    if len({r["survey"] for r in rs}) < 2:
+        return None
+    y = np.array([r["value"] for r in rs])
+    e = np.array([r["edu_level"] for r in rs], float)
+    s, _ = dummies([r["survey"] for r in rs])
+    X = np.column_stack([e, s])
+    w = np.array([r["n"] for r in rs], float)
+    f = fit(y, X, w, np.arange(len(rs)))  # HC0: one country per model
+    return {"country": c, "b": float(f["beta"][0]), "se": float(f["se"][0]),
+            "p": float(f["p"][0]), "n_surveys": len({r["survey"] for r in rs}),
+            "n_cells": f["n"]}
+
+
+def _boot_task(args):
+    which, seed = args
+    pa, pb, twog_a, twog_b = _W["boot"][which]
+    common = sorted(set(r["country"] for r in pa) & set(r["country"] for r in pb))
+    rng = np.random.default_rng(seed)
+    samp = list(rng.choice(common, size=len(common), replace=True))
+    ra = [r for r in pa if r["country"] in samp]
+    rb = [r for r in pb if r["country"] in samp]
+    oa = run_spec(ra, "M1", twogroup=twog_a, weight=False, standardise=True)
+    ob = run_spec(rb, "M1", twogroup=twog_b, weight=False, standardise=True)
+    if not oa or not ob:
+        return which, None
+    ka = "edu_secplus" if twog_a else "edu_secondary"
+    kb = "edu_secplus" if twog_b else "edu_secondary"
+    return which, ob["coef"][kb]["b"] / oa["coef"][ka]["b"]
 
 
 def zscore(y):
@@ -252,7 +299,8 @@ def per_country_gradient(rows2):
         s, _ = dummies([r["survey"] for r in rs])
         X = np.column_stack([e, s])
         w = np.array([r["n"] for r in rs], float)
-        f = fit(y, X, w, np.array([r["country"] for r in rs]))
+        # one country per model -> cluster-robust SE is degenerate; use heteroskedasticity-robust (HC0)
+        f = fit(y, X, w, np.arange(len(rs)))
         out.append({"country": c, "b": float(f["beta"][0]), "se": float(f["se"][0]),
                     "p": float(f["p"][0]), "n_surveys": len({r["survey"] for r in rs}),
                     "n_cells": f["n"]})
@@ -271,6 +319,7 @@ def bh(pvals, q=0.05):
 
 # ------------------------------------------------------------------------------------ main
 def main():
+    workers = int(os.environ.get("DHS_WORKERS", "48"))
     R = {"provenance": {
         "source": "api.dhsprogram.com public API, no key/no login",
         "pull_date": "2026-11-24", "preregistration_commit": "88073d0",
@@ -307,42 +356,47 @@ def main():
     B4 = load_panel("edu4", "FE_FRTR_W_TFR")
     B2 = load_panel("edu2", "FE_FRTR_W_TFR")
     R["Q2a"] = {"models": {}}
+    R["workers"] = workers
+    pool = mp.Pool(workers, initializer=_init_worker,
+                   initargs=({"A2": A2,
+                              "boot": {"A_vs_B": (A4, B4, False, False),
+                                       "A2_vs_B2": (A2, B2, True, True)}},))
+
+    def ratio_boot_par(which, draws=500):
+        pa, pb, ta, tb = {"A_vs_B": (A4, B4, False, False),
+                          "A2_vs_B2": (A2, B2, True, True)}[which]
+        common = sorted(set(r["country"] for r in pa) & set(r["country"] for r in pb))
+        # point estimates on the COMMON-country sample so the ratio and its bootstrap CI are
+        # computed on the same countries (the bootstrap resamples the common list).
+        pa_c = [r for r in pa if r["country"] in common]
+        pb_c = [r for r in pb if r["country"] in common]
+        oa = run_spec(pa_c, "M1", twogroup=ta, weight=False, standardise=True)
+        ob = run_spec(pb_c, "M1", twogroup=tb, weight=False, standardise=True)
+        ka = "edu_secplus" if ta else "edu_secondary"
+        kb = "edu_secplus" if tb else "edu_secondary"
+        point_a, point_b = oa["coef"][ka]["b"], ob["coef"][kb]["b"]
+        tasks = [(which, 20261124 + i) for i in range(draws)]
+        vals = [v for w, v in pool.map(_boot_task, tasks, chunksize=5) if v is not None]
+        vals = np.array(vals)
+        return {"beta_A": point_a, "beta_B": point_b,
+                "ratio_B_over_A": point_b / point_a,
+                "ratio_ci": [float(np.percentile(vals, 2.5)), float(np.percentile(vals, 97.5))],
+                "draws_requested": draws, "draws_used": int(vals.size),
+                "countries": len(common)}
     for nm, panel, twog in (("A_completed", A4, False), ("B_tfr", B4, False),
                             ("A2_completed", A2, True), ("B2_tfr", B2, True)):
         o = run_spec(panel, "M1", twogroup=twog, weight=False, standardise=True)
         if o:
             R["Q2a"]["models"][nm] = o
     # ratio of standardised secondary coefficients, cluster bootstrap by country
-    def ratio_boot(pa, pb, twog_a=False, twog_b=False, draws=300):
-        a_countries = sorted({r["country"] for r in pa})
-        b_countries = sorted({r["country"] for r in pb})
-        common = sorted(set(a_countries) & set(b_countries))
-        def est(countries):
-            ra = [r for r in pa if r["country"] in countries]
-            rb = [r for r in pb if r["country"] in countries]
-            oa = run_spec(ra, "M1", twogroup=twog_a, weight=False, standardise=True)
-            ob = run_spec(rb, "M1", twogroup=twog_b, weight=False, standardise=True)
-            if not oa or not ob:
-                return None
-            ka = "edu_secplus" if twog_a else "edu_secondary"
-            kb = "edu_secplus" if twog_b else "edu_secondary"
-            return oa["coef"][ka]["b"], ob["coef"][kb]["b"]
-        point = est(common)
-        if not point:
-            return None
-        bs = []
-        for _ in range(draws):
-            samp = list(RNG.choice(common, size=len(common), replace=True))
-            v = est(samp)
-            if v and v[0] != 0:
-                bs.append(v[1] / v[0])
-        bs = np.array(bs)
-        return {"beta_A": point[0], "beta_B": point[1],
-                "ratio_B_over_A": point[1] / point[0],
-                "ratio_ci": [float(np.percentile(bs, 2.5)), float(np.percentile(bs, 97.5))],
-                "draws_used": len(bs), "countries": len(common)}
-    R["Q2a"]["ratio_B_over_A"] = ratio_boot(A4, B4)
-    R["Q2a"]["ratio_B2_over_A2"] = ratio_boot(A2, B2, twog_a=True, twog_b=True)
+    R["Q2a"]["raw_models"] = {}
+    for nm, panel in (("A_completed_raw", A4), ("B_tfr_raw", B4)):
+        o = run_spec(panel, "M1", weight=(nm.startswith("A")), standardise=False)
+        if o:
+            R["Q2a"]["raw_models"][nm] = {k: {"b": v["b"], "se": v["se"], "ci": v["ci"]}
+                                          for k, v in o["coef"].items()}
+    R["Q2a"]["ratio_B_over_A"] = ratio_boot_par("A_vs_B")
+    R["Q2a"]["ratio_B2_over_A2"] = ratio_boot_par("A2_vs_B2")
 
     # ---------- Q2b1: stacked construct contrast (births-based A vs B; wanted vs actual C vs B) ----------
     def stacked(pa, pb, tag, twog=False):
@@ -469,14 +523,29 @@ def main():
     order = np.array([r["survey"] for r in g1])
     g1s = sorted(g1, key=lambda r: r["gradient"])
     sv_grad = np.array([r["gradient"] for r in g1])
+    # per-period gradients (pre-registered heterogeneity family)
+    per_rows = {}
+    for r in A2:
+        per_rows.setdefault(5 * (r["year"] // 5), []).append(r)
+    per_out = []
+    for per in sorted(per_rows):
+        rs = per_rows[per]
+        g = per_survey_gradient(rs)
+        if g:
+            vals = np.array([x["gradient"] for x in g])
+            per_out.append({"period": per, "n_surveys": len(vals),
+                            "median_gradient": float(np.median(vals)),
+                            "share_negative": float((vals < 0).mean())})
+    pc = [x for x in pool.map(_country_task, sorted({r["country"] for r in A2})) if x]
     R["heterogeneity"] = {
+        "per_period": per_out,
         "per_survey_2group": {
             "n_surveys": len(sv_grad), "share_negative": float((sv_grad < 0).mean()),
             "median": float(np.median(sv_grad)),
             "iqr": [float(np.percentile(sv_grad, 25)), float(np.percentile(sv_grad, 75))],
             "min": float(sv_grad.min()), "max": float(sv_grad.max()),
         },
-        "per_country": per_country_gradient(A2),
+        "per_country": pc,
     }
     R["Q1_models_unused"] = []
 
@@ -497,6 +566,8 @@ def main():
         }
 
     # ---------- write ----------
+    pool.close()
+    pool.join()
     R["Q1_table"] = [{k: v for k, v in o.items() if k != "coef"} for o in rows_out]
     json.dump(R, open(os.path.join(RES, "results.json"), "w"), indent=1)
 
@@ -538,9 +609,14 @@ def main():
             f.write(",".join("" if r[c] is None else str(r[c]) for c in cols) + "\n")
 
     print(json.dumps({k: v for k, v in R.items()
-                      if k in ("D1_replication", "Q2a", "Q2b2_survey_level", "D4_desired_vs_actual",
-                               "heterogeneity", "cohort_proxy")},
-                     indent=1, default=str)[:12000])
+                      if k in ("D1_replication", "Q2b2_survey_level", "D4_desired_vs_actual",
+                               "cohort_proxy")}, indent=1, default=str))
+    print("Q1 headline:", [(o["label"], {k: round(v["b"], 3) for k, v in o["coef"].items()})
+                            for o in rows_out if o["label"].startswith("A_completed_fertility_M1_weighted")])
+    print("Q2a ratio:", R["Q2a"].get("ratio_B_over_A"), R["Q2a"].get("ratio_B2_over_A2"))
+    print("het:", R["heterogeneity"]["per_survey_2group"])
+    print("cohort:", {k: {kk: round(vv["b"], 4) for kk, vv in v["coef"].items()}
+                      for k, v in R["cohort_proxy"].items()})
 
 
 if __name__ == "__main__":

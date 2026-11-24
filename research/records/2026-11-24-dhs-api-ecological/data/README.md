@@ -37,3 +37,21 @@ GET https://api.dhsprogram.com/rest/dhs/data?indicatorIds=<ID>&breakdown=backgro
 - The catalogue and cache are snapshots: DHS releases new surveys and re-releases indicators. The `sha256`
   manifest pins the vintage used in the analysis.
 - Region category labels/counts differ across surveys; regions are never pooled across rounds.
+
+## Pull revisions (2026-11-24, before any estimate)
+
+1. `PR_DESL_W_WNM` is published crossed with a second dimension (number of living children). The first pull did
+   not request `ByVariableId`, so the cache held 8 rows per education label. Fixed by re-pulling this one
+   indicator with `ByVariableId,ByVariableLabel` and keeping `ByVariableId == 1000` (the main-effect cells);
+   the national-total pull is filtered the same way. See `../AMENDMENT_01.md` A1.2.
+2. Rate/median indicators (`FE_FRTR_W_TFR`, `FE_FRTR_W_GFR`, `PR_WTFR_W_WFR`, `FE_AAFB_W_M25`) publish **no
+   denominators**; their cells are kept with `n = 0, has_denom = 0` and enter unweighted models only. See
+   `../AMENDMENT_01.md` A1.1.
+3. Panels in `data/panel_*.csv` are the pre-registered analysis inputs; `data/panel_checks.json` records the
+   structural checks. `data/MANIFEST.sha256` pins every cached JSON and panel CSV.
+
+## Compute location
+
+The API pull and `build_panel.py` are network/IO-light and were run on the Mac. **All estimation ran on
+region-42** (`/root/work/dhs-api/`, 48-worker `multiprocessing`, 13 s wall); see `../REPORT.md` §10 and
+`../results/server/`. No estimate was computed on the Mac.
