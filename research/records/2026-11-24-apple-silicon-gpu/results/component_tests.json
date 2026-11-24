@@ -1,0 +1,22 @@
+{
+ "philox_vector_equals_scalar": true,
+ "philox_first_uniforms": [
+  0.7353634238243103,
+  0.6787192225456238,
+  0.13947658240795135,
+  0.627648115158081
+ ],
+ "shim_import": {
+  "file": "/Users/treymenefee/atlas-work-2026-11-23/cuda-scale/repo/research/records/2026-11-24-apple-silicon-gpu/shim/cupy/__init__.py",
+  "backend": "mlx",
+  "has_attrs": true
+ },
+ "rawmodule_arbitrary_cuda_refused": {
+  "refused": true,
+  "msg": "get_function('other'): the Apple Silicon port supports only the suite kernel 'sim_step'; CUDA C cannot be compiled on ma"
+ },
+ "suite_kernel_accepted": {
+  "fingerprint": "e24ca67fb9d580de",
+  "name": "sim_step"
+ }
+}

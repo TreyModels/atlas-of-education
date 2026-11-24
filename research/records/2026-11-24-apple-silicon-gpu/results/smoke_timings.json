@@ -1,0 +1,15 @@
+{
+  "machine": "Apple M1 (arm64), macOS 26.6.2",
+  "commands": {
+    "numpy": "APPLE_GPU_BACKEND=numpy APPLE_PY=/tmp/apple_venv/bin/python ./run_apple.sh smoke",
+    "mlx": "APPLE_GPU_BACKEND=mlx   APPLE_PY=/tmp/apple_venv/bin/python ./run_apple.sh smoke"
+  },
+  "numpy": {"runner_wall_s": 3, "shell_real_s": 4.04, "user_s": 0.88, "sys_s": 0.13,
+            "includes": ["exp1 --smoke (2 seeds, 5 DGPs, 3 arms, 15 years, N=10,000)",
+                         "exp3 small (draws=20, batch_n=2,000, World Bank API pull)"]},
+  "mlx": {"runner_wall_s": 4, "shell_real_s": 3.86, "user_s": 1.32, "sys_s": 0.41,
+          "includes": ["exp1 --smoke (2 seeds, 5 DGPs, 3 arms, 15 years, N=10,000)",
+                       "exp3 small (draws=20, batch_n=2,000, World Bank API pull)"]},
+  "equivalence_suite": {"shell_real_s": 7.85,
+                        "includes": ["6 subprocesses: 2 kernel probes + 2 full exp1 smoke + 2 exp3 small"]}
+}
