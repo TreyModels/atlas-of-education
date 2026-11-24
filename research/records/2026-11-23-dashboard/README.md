@@ -728,3 +728,54 @@ The **ten claims in AUDIT §9 must not be published** in their current form: the
 The **Apple Silicon work is portability only**: the port reproduces the CuPy subset and the `sim_step` kernel bit-identically (NumPy vs MLX) and its full run is labelled **PORT-PRODUCTION, not research results** (`research/apple-silicon-gpu-2026-11-24`, port complete at `fd933d9`; branch head `be42c4d`). It does not repair the inferential objects.
 
 Therefore the **"macro wall" and the "micro tie-breaker" remain UNTESTED by simulation.** In progress is a **strength-separable, macro-moment-matched redesign with a survey measurement layer**, pre-registered as design only (no run) at `research/records/2026-11-24-suite-tiebreakers/PRE_REGISTRATION.md` @ `e526c94` on `research/suite-tiebreakers-2026-11-24`: worlds `θ_w(s) = θ_0 + s·Δ_w` that are identical at `s = 0`; per-world nuisance search to a common macro vector `M*`; measured-variable tie-breakers with sampling, non-response, heaping, reference-period and under-reporting layers; algebraic-equivalence and label-permutation placebos; out-of-seed, out-of-parameter-region and mixture-world validation. Audit source: `research/records/2026-11-24-suite-lit-review/AUDIT.md` @ `4649cae` on `research/suite-lit-review-2026-11-24`. Until the redesign runs and passes its pre-registered controls, no suite output may be cited as evidence for the wall or for a tie-breaker.
+
+---
+
+## Evening results (24–25 Nov 2026): staging experiments X1–X5 and the shadow-equation reality check
+
+**Status at write time (~23:45 local).** Everything below is **SIMULATION or aggregate-exploratory**; nothing is causal, historical, or a claim about a country. The earlier sections of this dashboard are left unchanged. Compute site is **region-42** (96 cores); the T4 is **off**.
+
+### Heads (`git ls-remote` is authoritative)
+
+| Item | Branch | Head | Record |
+|---|---|---|---|
+| Staging audit (confounds + five bounded experiments) | `research/masseng-timing-audit-2026-11-24` | `ff84e75` | `STAGING_AUDIT_AND_MASSENG_INVENTORY.md` |
+| X1 exposure-matched sequencing + X3 feedback surface | `research/masseng-staging-x1-2026-11-24` | `fef7428` | `RUN_REPORT.md` |
+| X2 gate/quota × tutoring inequality + X4 honest-split aggregate test | `research/masseng-staging-x2-2026-11-24` | `f592bae` | `RUN_REPORT.md` |
+| X5 Bayesian screen validation + synthetic recovery | `research/masseng-bayes-audit-2026-11-24` | `0ecd4be` | `AUDIT.md` addendum |
+| Shadow equations first pass + Bray reality check | `research/shadow-equations-2026-11-25` | `fdc8da0` | `RESULTS_FIRST_PASS.md`, `bray_reality_check*.json` |
+
+**In flight at write time (no result committed):** region-42 is running a **2M-draw parallel check** and a **MASSENG coupling** run.
+
+### What was found, in plain words
+
+**The staging audit removed the old sequencing claim's support.** The audited staging experiment reproduced exactly (160 runs, N=400, T=70, 10 seeds, 16.5 s; stored summary identical), but its arms were not exposure-matched: school-first carried +1.8 more education-share-years and jobs-first +1.2 more vacancy-years; the fiscal loop gave jobs-first a 9.5% higher cumulative education budget; a one-year fiscal lag makes "simultaneous" not simultaneous; quota/ban effects are partly gate arithmetic; completion rankings change across seeds; and migration is not simulated. Time order in that experiment is not causal evidence.
+
+**X1 (the confound fixed): the sequencing falsifier fired.** With cumulative exposure equalised (18.36 education-share-years / 9.44 vacancy-years for every matched arm), the unmatched "school-first beats jobs-first" formal-share gap of −5.4…−4.8 pp (0 positive / 20 negative seeds) **collapses to −0.13…+0.56 pp, i.e. 2–12% of its size**; completion and equity show no material effect before or after matching (<0.5 pp). A +10-year calendar placebo moves the unmatched contrast to −6.2…−7.6 pp (outside the unmatched CI), so calendar position was also doing work. The pre-declared strict A/≈0 rule is met in only 2/4 conditions (feedback=0), so the label is "inconsistent" by the pre-declared ≥3/4 rule, reported as such; the pre-declared magnitude criterion confirms the falsifier (88–98% of the gap removed). A model-internal fiscal-timing effect (education-first lowers public quality 2.4–7.1 pp; jobs-first raises it early) and tutoring responses are toy dynamics, not sequencing evidence. X1 run 1 was invalid (matched arms were not actually exposure-matched), is preserved, and is not interpreted.
+
+**X3 (feedback robustness): no reversals, but no rescue.** 800 runs across job_elasticity {0, .25, .5, .75, 1}; **zero sign reversals**. The sequencing contrast is NULL on 9–11 of 13 metrics; the only robust sequencing difference is the mechanically exposed formal share (−5.4…−4.8 pp), which is exactly what X1 removes. The both-early-vs-neither contrast is robust on 10–13/13 metrics. The feedback assumption changes magnitudes, not conclusions; no point on the surface is selected as "the answer".
+
+**X2 (gate/tutoring): the falsifier was NOT confirmed — the claim is worse than neutral.** Quota gates raise gate-prep tutoring by +17.6…+21.1 pp overall (+23.8…+28.9 pp at gate-adjacent grades; 3/3 access levels) and **widen the top-vs-bottom tutoring gap by +13.0…+14.5 pp**; the gate-specificity DiD is +9.0…+9.6 pp. The own-teacher ban cuts tutoring −11.0…−22.6 pp. A pre-declared secondary hypothesis was falsified in the opposite direction: raising rural tutoring access did **not** narrow the wealth gap — it widened it (+7.9 pp bar, +9.4 pp quota). Quota vs bar caps completion (lower −11.7…−12.3 pp, upper −13.5…−14.5 pp) and narrows the wealth completion gap. 240 runs, 24.5 s. Toy worlds only.
+
+**X4 (aggregate observed data): FAIL_NO_EVIDENCE.** Honest 40-train/21-validation split, frozen before the run. The model-implied ordering score has point-estimate MAE 8.81 vs persistence 11.30 and pooled trend 9.48, but the paired country-level differences are −2.49 [−5.76, +0.77] and −0.67 [−2.04, +0.66] (90% CIs include 0), and its coefficient is −2.05 [−4.44, +0.87] — not positive. All four robustness specs likewise FAIL_NO_EVIDENCE. No window or split hunting; two code failures are preserved with no results. Binding caveat: these aggregates contain only attainment/enrolment — no child-work, tutoring or learning — so this is a thin observable implication, not the full model.
+
+**X5 (Bayesian screens): not usable as posterior-style inference.** Real-data importance screens have ESS 1.7–2.3% and max weight 2.3–10.6%; a σ-grid moves the weighted means materially (no σ selected), so inference is prior/scale-dominated. Synthetic recovery is **MIXED**: median ESS 12.79%, coverage 91.67%, median error 12.76% of the prior range, but error ≤15% in only 56.25% of cases (<60% criterion) and confusion diagonal 50% (<60%; S3 and S4 near non-identified). The true-model ESS improvement says the real-data degeneracy is largely model misspecification/prior conflict, but recovery is only partial: **no real-data posterior or mechanism claims**.
+
+**Shadow equations (first pass + Bray reality check): they do not fit Bray.** The first-pass illustrative model (20k pupils, 10 seeds, 7 scenarios, 1.3 s) gives baseline tutoring participation 36.8%, own-teacher share 20.3%, learning Gini 0.568, admission gap +15.6 pp; a ban cuts participation 15.6 pp and **raises** the learning Gini 9.6 pp; a hard quota flips the admission gap to −29.2 pp but leaves learning Gini unchanged; cash transfers and rural access are weak. Against Bray's six-school targets, rejection ABC **found 0 fits in 200,000 draws** (best max-z 1.168). The provider-share denominator bug was fixed (shares must be among tutored pupils, as Bray reports), giving best max-z 1.14 at 8,000 draws; a 300,000-draw run is in progress on the new server. **The first-pass shadow equations do not reproduce Bray's patterns**; treat the scenarios as illustrative simulation awaiting the literature-fit check.
+
+### What not to believe
+
+- **Not causal, not historical, not a country claim.** X1–X3 and the shadow simulations are stipulated toy worlds; X4 is aggregate-exploratory; X5 is a diagnostic on a screening method. None identifies a mechanism.
+- **Do not quote the audited staging experiment's order contrasts as sequencing.** They mix cumulative exposure, the fiscal loop and calendar position; X1 removes most of the apparent effect.
+- **Do not quote X1 run 1.** It was not exposure-matched, is preserved as invalid, and is not interpreted.
+- **Do not call the Bayesian importances a posterior.** ESS/max-weight diagnostics fail and synthetic recovery is partial; no mechanism or parameter claim from real data.
+- **Do not quote the first-pass shadow scenarios as evidence.** They are illustrative and the Bray check found no fit at 200k draws; the literature-fit question is still open.
+- **Missing channels:** rural migration, urbanisation, remittances, spatial job access and composition change are not simulated. No comparison with E1's 1.8% or with any observed country history.
+
+### Next actions
+
+1. **Read the region-42 results when they land:** the 2M-draw parallel check and the MASSENG coupling are in flight; nothing is committed yet. Do not interpret until committed.
+2. **Shadow equations:** finish the 300k-draw Bray check; then add the separate "other/grade-9" channels flagged by the run; relabel anything that does not survive the literature check.
+3. **Staging:** do not revive the old order claim. If followed up at all, the fiscal-timing and tutoring responses are model-internal dynamics and need a separate pre-registered test.
+4. **X4:** the aggregate route gives no support at this honest split; the only real upgrade remains DHS individual microdata (application pending), not another aggregate panel.
+5. **Housekeeping:** region-42 is the compute site (96 cores); the T4 is off. Keep SIMULATION / OBSERVED labels attached to every number above.
