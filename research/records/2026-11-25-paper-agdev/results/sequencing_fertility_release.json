@@ -1,0 +1,15 @@
+{
+ "n": 64,
+ "fertility_censored_fertility_first": 28,
+ "both_exact_fertility_first": 19,
+ "both_exact_release_first": 4,
+ "both_exact_tie": 0,
+ "release_censored_release_first_or_tie": 0,
+ "undetermined": 13,
+ "exact_comparison_only": {
+  "n": 23,
+  "fertility_first": 19,
+  "release_first": 4
+ },
+ "note": "Fertility-censored pairs are fertility-first by the windows; only the both-exact block says anything about timing."
+}
