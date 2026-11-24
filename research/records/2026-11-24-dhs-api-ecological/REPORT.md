@@ -1,5 +1,15 @@
 # REPORT — schooling → fertility across **all** public DHS survey rounds (ecological, observed data)
 
+> **SUPERSEDED NUMBERS — read with the corrected record.** The D4 construct-contrast numbers quoted
+> below (`−0.0775`, and the single-interaction framing around it) are **pre-correction**. The
+> authoritative corrected record is `research/dhs-corrected-2026-11-25` @ `22de735`
+> (`CORRECTED_RUN_2026-11-25.md`): with the full construct×schooling interaction set,
+> **C_vs_B = −0.1962 (SE 0.0495)**, **A_vs_B = +0.0711**, **higher×cohort = +0.1804 (p=0.030)**;
+> the bootstrap-multiplicity fix changes **CIs only** and cannot move a point estimate. This branch
+> (`research/dhs-api-ecological-2026-11-24`) is the **code chain**, not the authoritative corrected record.
+> See `SUPERSESSION_2026-11-25.md` in this record.
+
+
 **Status:** complete, **corrected**. Pre-registration committed **before any value was pulled** (`88073d0`);
 Amendment 01 and the pull/panels committed **before any estimate** (`856c421`); first estimation on region-42
 (`708e34a`); **fixed-effect bug found and corrected on 2026-11-24 23:55** (second box; see §0).
@@ -21,7 +31,7 @@ DHS record (`research/dhs-micro-2026-11-23 @ 31ded00`) is unaffected** — it us
 within-transform, and the corrected run now reproduces it to **≤0.004**.
 
 **What changed:** full-sample M1 secondary −1.5685 → **−1.5837**; primary −0.5355 → **−0.5541**; higher −2.5201 →
-**−2.5382**; Q2a 4-level ratio 1.017 → **1.003**; Q2b1 wanted-vs-actual −0.0893 → **−0.0775**; cohort 2-group
+**−2.5382**; Q2a 4-level ratio 1.017 → **1.003**; Q2b1 wanted-vs-actual −0.0893 → **−0.0775**; cohort 2-group **[SUPERSEDED → corrected full-interaction value −0.1962 (SE 0.0495); authoritative: research/dhs-corrected-2026-11-25 @22de735]**
 interaction +0.1515 (p=0.26) → **+0.2438 (p=0.016)** — so **D6 moves from "indeterminate" to "attenuation"**.
 Per-survey/per-period gradients and the survey-level construct statistics are unaffected (simple differences /
 correlations of published aggregates). Full account with old and new values:
@@ -45,7 +55,7 @@ Python 3.10.8). **No project compute on the Mac.** Logs: `results/server_box2/`.
 | 2 | **Gradient holds across all public rounds, with a minority.** Per-survey secondary+ gradient (2-group), 346 surveys | **98.8% negative**, median **−1.90** children (IQR −2.48 to −1.43), range −4.60 to +0.70; 4/346 non-negative |
 | 3 | **Not a fixed-effects artefact.** Country FE + 5-year-period FE vs saturated country×survey FE vs country trends | M0 **−0.557 / −1.593 / −2.550**; M1 **−0.554 / −1.584 / −2.538**; M5 (+ country trends) **−0.553 / −1.584 / −2.536** |
 | 4 | **Window contrast (Q2a): period TFR vs cumulative completed fertility gives the same gradient.** Standardised secondary-vs-none ratio β(TFR)/β(CEB40) | **1.0029**, cluster-bootstrap 95% CI **[0.932, 1.077]** (65 countries, 500 draws); 2-group **0.9582 [0.915, 0.998]** (80 countries) |
-| 5 | **Construct contrast (b1): period-vs-cumulative births is null; desired-vs-actual is not.** Stacked, standardised, country×survey FE, clustered by country | A vs B interaction **+0.016 (SE 0.041, p=0.70)**; wanted-TFR vs actual-TFR **−0.0775 (0.0217, p=0.0004)** — wanted-fertility gradient is *smaller* than actual by 0.078 SD |
+| 5 | **Construct contrast (b1): period-vs-cumulative births is null; desired-vs-actual is not.** Stacked, standardised, country×survey FE, clustered by country | A vs B interaction **+0.016 (SE 0.041, p=0.70)**; wanted-TFR vs actual-TFR **−0.0775 (0.0217, p=0.0004)** — wanted-fertility gradient is *smaller* than actual by 0.078 SD | **[SUPERSEDED → corrected full-interaction value −0.1962 (SE 0.0495); authoritative: research/dhs-corrected-2026-11-25 @22de735]**
 | 6 | **Construct contrast (b2): the surviving-children measure and period TFR are different series.** 368 surveys, 87 countries, 1985–2025 | corr(surviving₄₀, TFR) **0.822**; corr(CEB₄₀, TFR) **0.899**; median \|TFR − surviving₄₀\| **0.6305**, max **2.681**; median \|TFR − CEB₄₀\| **1.009**, max **3.172**; within-country change corr **0.321** vs **0.509** (65 countries) |
 | 7 | **Cohort proxy: attenuation in the full sample, steepening in the African-11.** Education × cohort (per decade) | full sample: secondary **+0.240 (0.131, p=0.067)**, higher **+0.367 (0.148, p=0.013)**, 2-group **+0.244 (0.102, p=0.016)**; African-11: secondary **−0.186 (0.076, p=0.014)** — see [`AFRICA11_EXTENSION.md`](AFRICA11_EXTENSION.md) §5 |
 
@@ -186,7 +196,7 @@ Stacked standardised model, wanted TFR (construct 0) vs actual TFR (construct 1)
 
 | term | coefficient (SD units) | SE | p |
 |---|---|---|---|
-| secondary × construct (actual = 1) | **−0.0775** | 0.0217 | **0.0004** |
+| secondary × construct (actual = 1) | **−0.0775** | 0.0217 | **0.0004** | **[SUPERSEDED → corrected full-interaction value −0.1962 (SE 0.0495); authoritative: research/dhs-corrected-2026-11-25 @22de735]**
 
 Separate standardised models: actual TFR secondary **−1.298** (0.076) vs wanted TFR **−1.085** (0.089) — a gap of
 ~0.21 SD. **D4 prediction confirmed** (`|β_wanted| < |β_actual|`): the gradient is not purely a stated-demand
@@ -256,7 +266,7 @@ away; the individual data are needed.
 | **D1** replication of prior magnitudes | **PASS — exact** | deltas 0.000 / 0.002 / 0.004; panel exact |
 | **D2** coverage/generality | **"near-universal"** (98.8% ≥ 90% threshold); minority named | 346 surveys; 4 non-negative |
 | **D3** window/construct agreement (A vs B) | 4-level: **"same sign, similar magnitude"** (1.003 [0.932, 1.077]); 2-group: same sign, **materially different magnitude** by rule (0.958 [0.915, 0.998]) | §4 |
-| **D4** desired vs realised | **prediction confirmed** (`\|β_wanted\| < \|β_actual\|`) | −0.0775 (0.0217), p=0.0004 |
+| **D4** desired vs realised | **prediction confirmed** (`\|β_wanted\| < \|β_actual\|`) | −0.0775 (0.0217), p=0.0004 | **[SUPERSEDED → corrected full-interaction value −0.1962 (SE 0.0495); authoritative: research/dhs-corrected-2026-11-25 @22de735]**
 | **D5** survey-level construct gap | **different series, as expected**; no correction implied | §5.3 |
 | **D6** cohort proxy | **attenuation** (full sample); **steepening** in the African-11 | §6, Africa-11 §5 |
 | **D7** nulls | all nulls reported with intervals | Q2b1 A-vs-B p=0.70; pipeline secondary p=0.068 |
