@@ -54,7 +54,7 @@ class Params:
     transfer_q1: float = 0.0
     # gate (81-82; quota variant)
     quota: bool = False
-    quota_share_low: float = 0.30
+    quota_share_low: float = 0.50
     seat_share: float = 0.50
     years_add: float = 3.0
     # earnings (42-43)
