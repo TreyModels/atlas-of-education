@@ -9,18 +9,29 @@ from eq_common import ols, rng, write_result, save_csv, smoke_parser
 REC = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
+def require_positive(x, what):
+    """Gini/Theil are defined only on a strictly positive level domain. Refuse silently
+    invalid input instead of returning NaN / out-of-range values."""
+    x = np.asarray(x, float)
+    if x.size == 0 or not np.all(np.isfinite(x)) or np.any(x <= 0):
+        raise ValueError("%s: Gini/Theil need strictly positive level-domain values "
+                         "(got min=%r, non-finite=%d)" % (what, float(np.min(x)) if x.size else None,
+                                                          int(np.sum(~np.isfinite(x)))))
+    return x
+
+
 def gini(x):
-    x = np.sort(np.asarray(x, float)); n = len(x); c = np.cumsum(x)
+    x = np.sort(require_positive(x, "gini")); n = len(x); c = np.cumsum(x)
     return float((2 * np.sum(np.arange(1, n + 1) * x) / (n * c[-1])) - (n + 1) / n)
 
 
 def theil(y):
-    y = np.asarray(y, float); m = y.mean()
-    return float(np.mean((y / m) * np.log(y / m))) if m > 0 else 0.0
+    y = require_positive(y, "theil"); m = y.mean()
+    return float(np.mean((y / m) * np.log(y / m)))
 
 
 def theil_decomp(y, group):
-    y = np.asarray(y, float); group = np.asarray(group)
+    y = require_positive(y, "theil_decomp"); group = np.asarray(group)
     mu = y.mean(); out = {"within": 0.0, "between": 0.0}
     for g in np.unique(group):
         m = group == g
@@ -82,7 +93,8 @@ def dashboard_real():
 def run(args):
     reps = 10 if args.smoke else 40
     n = 5000 if args.smoke else 50000
-    out = {"script": "eq07_inequality_dashboard", "prereg": "S7", "data_tier": "SYNTHETIC",
+    out = {"script": "eq07_inequality_dashboard", "prereg": "S7",
+           "data_tier": "SYNTHETIC + OBSERVED/RECONSTRUCTED descriptive dashboard check",
            "label": "SIMULATION - stipulated two-generation DGP; no causal claim",
            "n": n, "reps": reps}
     rows, summary = [], {}
@@ -92,7 +104,12 @@ def run(args):
             pe, py, ce, cy = gen(rng(args.seed + (1 if persistence else 2) * 1000 + r), n, persistence)
             ige = ols(cy, np.column_stack([np.ones(n), py]))["b"][1]
             els.append(ige)
-            ginis.append(gini(cy)); theils.append(theil(cy))
+            # Gini/Theil are defined only on a strictly positive level domain. cy is LOG
+            # child income (can be negative); exp(cy) is level income (Neon line audit /
+            # handoff quarantine #4: Theil/Gini domains). The old code passed the log
+            # values straight in, so the Theil within component was NaN.
+            cy_lvl = np.exp(cy)
+            ginis.append(gini(cy_lvl)); theils.append(theil(cy_lvl))
             rk = ols(np.argsort(np.argsort(cy)) / n,
                      np.column_stack([np.ones(n), np.argsort(np.argsort(py)) / n]))["b"][1]
             rankr.append(rk)
@@ -104,8 +121,8 @@ def run(args):
                 for j in range(5):
                     M[i, j] = np.mean(cq[m] == j)
             diag.append(float(np.trace(M) / 5))
-            td = theil_decomp(cy, np.where(pe <= np.quantile(pe, 1 / 3), 0,
-                                          np.where(pe <= np.quantile(pe, 2 / 3), 1, 2)))
+            td = theil_decomp(cy_lvl, np.where(pe <= np.quantile(pe, 1 / 3), 0,
+                                               np.where(pe <= np.quantile(pe, 2 / 3), 1, 2)))
             rows.append([world, r, round(ige, 4), round(ginis[-1], 4), round(theils[-1], 4),
                          round(td["within"], 4), round(td["between"], 4), round(rk, 4), round(diag[-1], 4)])
         # Oaxaca: high vs low parent-education tercile child income, explained by child education
@@ -157,7 +174,7 @@ def run(args):
                                  (null_s["elasticity_ci90"][0], null_s["elasticity_ci90"][1],
                                   per_s["mean_intergen_elasticity"], per_s["mean_theil_between"]))})
     out["data_map"] = {'module': 'inequality/dashboard', 'observed': 'WID/SWIID, Barro-Lee, Learning Poverty; committed long_run_panel used descriptively', 'assumed': 'mobility process, dashboard thresholds', 'gap': 'descriptive use only'}
-    out["statistical_frame"] = {'estimand': 'inequality/mobility summaries; dashboard association', 'identification': 'descriptive; country+year FE for the observed dashboard check only', 'testable_restrictions': 'two-generation DGP; observed panel association', 'benchmark_split': 'null vs persistent synthetic worlds; observed panel descriptive', 'pass_fail': 'PASS if null-world IGE CI includes 0 and persistent-world IGE positive'}
+    out["statistical_frame"] = {'estimand': 'inequality/mobility summaries; dashboard association', 'identification': 'descriptive; country+year FE for the observed dashboard check only', 'testable_restrictions': 'two-generation DGP; observed panel association', 'benchmark_split': 'null vs persistent synthetic worlds; observed panel descriptive', 'pass_fail': 'PASS if null-world IGE CI includes 0 and persistent-world IGE positive', 'inequality_domain': 'Gini/Theil/within-between on exp(child log income) i.e. level income (strictly positive); IGE, rank-rank and Oaxaca gap on log child income (Oaxaca in log points)'}
     write_result(args.outdir, "eq07_inequality_dashboard", out)
     save_csv(args.outdir, "eq07_inequality_dashboard",
              ["world", "rep", "ige", "gini", "theil", "theil_within", "theil_between", "rank_rank", "diag"], rows)
