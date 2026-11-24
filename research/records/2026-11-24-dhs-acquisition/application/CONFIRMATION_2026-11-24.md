@@ -41,3 +41,16 @@ The pre-registration fixes a 14-country panel: 8 sub-Saharan (MWI, ETH, UGA, LSO
 - HTML: `/Users/treymenefee/atlas-work-2026-11-23/snapshots/dhs-2026-11-24/page_20261124-183152.html` — sha256 `199f59332501473ba6b9ebcf25a274e6ac3df9aac362f79aee6179d9647fa796`
 
 Raw files are not committed because the repository is public; this transcription is the record.
+
+## Update 2026-11-24 18:40 — the one-region constraint explains the set
+
+The applicant reports that the DHS request form allows **only one region per project request**. The submitted project is therefore the 9-country Asia set, not an error of selection.
+
+Revised reading of the P0 flag above:
+
+- The pre-registered 14-country panel decomposes as **11 African countries** (MWI, ETH, UGA, LSO, TZA, KEN, MOZ, GHA, BEN, NAM, SWZ) + **3 Asian countries** (KHM, PHL, VNM).
+- The **3 Asian countries are already inside** the pending 9-country request (Cambodia, Philippines, Vietnam).
+- The **11 African countries require a second project request** under the same account, same study — recommended title "The Atlas of Education — sub-Saharan Africa panel", same abstract text, **no GPS ticket** (the pre-registered test uses region fixed effects, not coordinates).
+- After both approvals, the pre-registered 14-country panel is covered. The six extra Asian countries (India, Indonesia, Myanmar, Nepal, Sri Lanka, Thailand) are outside the pre-registration and may be used only as descriptive robustness or under a separate pre-registration.
+
+No analysis runs until the African request is submitted and the preregistration mapping is confirmed. Status of the Asian request remains **pending**.
