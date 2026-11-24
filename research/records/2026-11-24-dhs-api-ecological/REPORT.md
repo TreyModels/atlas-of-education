@@ -1,5 +1,15 @@
 # REPORT — schooling → fertility across **all** public DHS survey rounds (ecological, observed data)
 
+> **25 Nov 2026 SUPERSESSION (read before quoting any number below).** This file describes the run at
+> `fe762b9`. `CORRECTED_RUN_2026-11-25.md` supersedes the key numbers: the **D4** wanted-vs-actual gap is
+> now **−0.1962 (0.0495)** (its point estimate moved because the full construct×schooling interaction set
+> replaced the single-secondary interaction), and the **bootstrap CIs** widen (full-sample Q2a 2-group
+> 0.958 [0.906, 1.019]; Africa-11 2-group ratio 1.0698 [0.9987, 1.1403] — **now includes 1.0**, so that
+> verdict moves to indeterminate). The two changes are separable: multiplicities move CIs only; the
+> interaction set moves D4. Both are **provisional** pending Neon's diff. Numbers below that disagree are
+> pre-correction values, not current claims.
+
+
 **Status:** complete, **corrected**. Pre-registration committed **before any value was pulled** (`88073d0`);
 Amendment 01 and the pull/panels committed **before any estimate** (`856c421`); first estimation on region-42
 (`708e34a`); **fixed-effect bug found and corrected on 2026-11-24 23:55** (second box; see §0).

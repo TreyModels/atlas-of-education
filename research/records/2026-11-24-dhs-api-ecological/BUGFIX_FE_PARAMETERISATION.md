@@ -1,5 +1,15 @@
 # BUGFIX — fixed-effect parameterisation in the ecological estimator (supersedes `708e34a` numbers)
 
+> **25 Nov 2026 SUPERSESSION (read before quoting any number below).** This file describes the run at
+> `fe762b9`. `CORRECTED_RUN_2026-11-25.md` supersedes the key numbers: the **D4** wanted-vs-actual gap is
+> now **−0.1962 (0.0495)** (its point estimate moved because the full construct×schooling interaction set
+> replaced the single-secondary interaction), and the **bootstrap CIs** widen (full-sample Q2a 2-group
+> 0.958 [0.906, 1.019]; Africa-11 2-group ratio 1.0698 [0.9987, 1.1403] — **now includes 1.0**, so that
+> verdict moves to indeterminate). The two changes are separable: multiplicities move CIs only; the
+> interaction set moves D4. Both are **provisional** pending Neon's diff. Numbers below that disagree are
+> pre-correction values, not current claims.
+
+
 **Found:** 2026-11-24 ~23:40, while validating a closed-form reduction against the committed region-42 results
 (task-36). **Fixed:** `scripts/estimate.py` (intercept pre-pended; indices shifted), verified on the new box.
 **Nothing here touches DHS microdata** — all numbers are OBSERVED / ECOLOGICAL published cells.
@@ -52,7 +62,7 @@ validated against the prior record. It matched the prior record exactly (−0.57
 | Q2a ratio, 4-level | 1.0170 [0.944, 1.102] | **1.0029 [0.932, 1.077]** | still "same sign, similar magnitude" |
 | Q2a ratio, 2-group | 0.9602 [0.918, 1.002] | **0.9582 [0.915, 0.998]** | unchanged verdict (4 % lower) |
 | Q2b1 A-vs-B interaction | −0.0044 (p=0.92) | **+0.0158 (p=0.70)** | still null |
-| Q2b1 C-vs-B interaction | −0.0893 (p=0.00025) | **−0.0775 (p=0.0004)** | D4 still confirmed |
+| Q2b1 C-vs-B interaction | −0.0893 (p=0.00025) | **−0.0775 (p=0.0004)** — *pre-interaction-set; superseded by −0.1962 in `CORRECTED_RUN_2026-11-25.md`* | D4 still confirmed |
 | cohort 2-group × decade | +0.1515 (p=0.26) | **+0.2438 (p=0.016)** | **D6 changes: indeterminate → attenuation** |
 | per-survey share negative | 98.84 % | 98.84 % | unaffected (simple differences) |
 | Q2b2 survey-level construct | unchanged | unchanged | unaffected (correlations of published aggregates) |

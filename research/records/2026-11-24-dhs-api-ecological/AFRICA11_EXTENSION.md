@@ -1,5 +1,15 @@
 # AFRICA-11 EXTENSION — the ecological schooling→fertility replication restricted to the 11 African countries
 
+> **25 Nov 2026 SUPERSESSION (read before quoting any number below).** This file describes the run at
+> `fe762b9`. `CORRECTED_RUN_2026-11-25.md` supersedes the key numbers: the **D4** wanted-vs-actual gap is
+> now **−0.1962 (0.0495)** (its point estimate moved because the full construct×schooling interaction set
+> replaced the single-secondary interaction), and the **bootstrap CIs** widen (full-sample Q2a 2-group
+> 0.958 [0.906, 1.019]; Africa-11 2-group ratio 1.0698 [0.9987, 1.1403] — **now includes 1.0**, so that
+> verdict moves to indeterminate). The two changes are separable: multiplicities move CIs only; the
+> interaction set moves D4. Both are **provisional** pending Neon's diff. Numbers below that disagree are
+> pre-correction values, not current claims.
+
+
 **Task:** task-36 part 1. **Branch:** `research/dhs-api-ecological-2026-11-24`. **Status:** complete.
 **Scope:** the 11 African countries of the acquisition panel — **MWI, ETH, UGA, LSO, TZA, KEN, MOZ, GHA, BEN,
 NAM, SWZ** (the 8 verified E8 countries + 3 comparators), using the **already-pulled public-API panels** and the
