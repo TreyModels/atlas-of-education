@@ -209,12 +209,17 @@ placebo should be nearly as strong as the correct-time relation. Table 3 reports
 
 The placebo is not null. For the schooling–fertility pairs it is about **90 per cent as strong** as the
 correct-time relation in the share of negative-significant cells, and about 80 per cent as strong in median
-magnitude. The pre-registered decision rule — if the placebo reaches 80 per cent of the correct-time share, the
-level relation is a development-gradient association and not an identified schooling effect — therefore fires.
-The levelled relation is descriptive: countries with more schooling have fewer births, and the association is
-global and robust, but it cannot be interpreted as the effect of changing schooling while holding development
-constant, because future schooling "predicts" current fertility almost as well. The result is not a defect of
-the schooling measures; it is what a development gradient looks like in a cross-section, and it means that the
+magnitude. The pre-registered decision rule — if the placebo reaches 80 per cent of the correct-time share, the level
+relation is not an identified schooling effect — therefore fires. The level relation is not an identified
+schooling effect, and it is not evidence for a pure development gradient either: common development trends,
+anticipation/quantity-quality, and a long-lag schooling effect all predict the same future-schooling pattern.
+The change-on-change ladder in the E11 fertility audit (`research/e11-fertility-audit-2026-11-25` @ `e926575`)
+returns "does not discriminate", so the placebo cannot isolate a development gradient. The levelled relation is
+descriptive: countries with more schooling have fewer births, and the association is global and robust, but it
+cannot be interpreted as the effect of changing schooling while holding development constant, because future
+schooling "predicts" current fertility almost as well. The result is not a defect of the schooling measures; it
+is what a development gradient — or anticipation, or a long-lag schooling effect — looks like in a cross-section,
+and it means that the
 cross-country literature's practice of interpreting the level coefficient causally is unsupported. The same
 conclusion was reached on the smaller earlier grid (where the placebo was negative-significant in 24 of 24
 specifications, median −0.68); the large-grid result is a measured version of that caveat rather than a
@@ -227,10 +232,11 @@ schooling–fertility gradient — negative for all eight measures, robust acros
 reproduced in 71–99 per cent of 13,800 arbitrary country groupings; (ii) a clear demonstration that the
 within-country change design erases that gradient, with the change coefficient for several measures
 significantly positive, which explains why panel fixed-effects studies have returned nulls; and (iii) a
-quantified development-gradient caveat: the level relation is not an identified causal effect of schooling, and
-future-schooling placebos are the right diagnostic for this literature. What does not survive is the causal
-reading of the level coefficient, and with it the practice of citing the between-country gradient as evidence
-that expanding schooling will reduce fertility. The section's contribution is not a new causal estimate; it is
+quantified caveat that the level relation is not an identified causal effect; the future-schooling placebo cannot
+distinguish a development gradient from anticipation or a long-lag schooling effect. What does not survive is the
+causal reading of the level coefficient, and with it the practice of citing the between-country gradient as
+evidence that expanding schooling will reduce fertility; the placebo cannot distinguish a development gradient
+from anticipation or a long-lag schooling effect. The section's contribution is not a new causal estimate; it is
 the demonstration that the level-of-analysis choice determines the empirical answer, that the level answer is
 real and global, and that its causal interpretation is exactly what the placebo rules out. The next sections
 of the synthesis ask what the between-country gradient is a gradient *of*, and whether the within-country

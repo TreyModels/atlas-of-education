@@ -14,7 +14,7 @@ data, with the missing observation named.
 | 2 | The levels result is robust across the specification space | S | 99.7% of 288 period specs negative; 91.3% negative-significant; 0% positive-significant; median −0.475 |
 | 3 | The level relation is a global between-country property | S (this relation) | 71–99% of 13,800 random six-group partitions negative-significant vs 0–7% in changes |
 | 4 | The standard change design erases or reverses the relation | S | women's attainment +0.111 (0.045); 0/8 negative-significant; 3/8 positive-significant |
-| 5 | The level relation is a development gradient, not an identified schooling effect | S | future-schooling placebo 52.9% vs 58.8% negative-significant (~90% as strong) |
+| 5 | The level relation is not an identified schooling effect; the association is consistent with common development trends, anticipation/quantity-quality and a schooling effect | S (descriptive; mechanism not identified) | future-schooling placebo 52.9% vs 58.8% negative-significant (~90% as strong); E11 change-on-change ladder: "does not discriminate" |
 | 6 | The gradient is steepest at the massification margin (shape), with conventional hinge locations | S (shape) / C (hinge locations) | below 6y −0.326 [−0.405, −0.248]; 6–9y −0.092 [−0.175, −0.013]; >9y +0.112 [+0.057, +0.171]; hinges at 6 and 9 years are conventional, not data-searched |
 | 7 | A survey-level (DHS) negative gradient exists across 86 countries | S (ecological) | primary −0.57 (0.06), secondary −1.62 (0.17), higher −2.54 (0.24); 99% of 346 surveys negative |
 | 8 | The gradient steepens in later cohorts and denser pipelines | F | attenuates instead: cohort +0.26 (0.13); pipeline +0.13 (0.05) |
@@ -35,7 +35,8 @@ same panel give weak or positive coefficients, with no negative-significant chan
 design property, not a substantive finding: the within estimator removes the between-country variation in which
 the gradient lives, and the paper's decomposition of that variation is the audit's core. Fourth, the level
 gradient is descriptive: the future-schooling placebo is about 90 per cent as strong as the correct-time
-relation, which is the signature of a shared development process rather than an identified effect of schooling.
+relation — consistent with a shared development process, with anticipation/quantity-quality, or with a long-lag
+schooling effect; the design cannot distinguish them or reject a schooling effect.
 
 Three things remain open, and the paper names them rather than resolving them. The individual-level mechanism is
 open because the DHS microdata were not obtainable; the survey-level gradient is consistent with an individual
@@ -90,11 +91,14 @@ that way.
 
 The contribution is therefore a structural demonstration about a known correlation, not a new correlation: it
 shows what the field's standard change specification does to the gradient, measures the erasure with a full
-specification space and a random-re-partition yardstick, quantifies the development-gradient caveat with a
-placebo, and places the gradient in the schooling distribution. The project's nulls — the care-work loop
+specification space and a random-re-partition yardstick, quantifies the caveat that the level relation is not an identified effect — indistinguishable here from a
+development gradient, anticipation, or a long-lag schooling effect — with a placebo, and places the gradient in
+the schooling distribution. The project's nulls — the care-work loop
 absorbed by income, the falsified strong no-off-switch, the absent tipping point, the mortality counterfactual
 that removes 3.2 per cent, the tolerance ladder that is an identification limit — are reported with the same
 discipline, because a synthesis that reported only the surviving results would be doing to its own evidence what
-the paper criticises in the literature. What survives is a development gradient at the massification margin;
-what fails is the causal reading of it; what cannot be tested with these data is the individual-level mechanism,
+the paper criticises in the literature. What survives is a non-causal, global, between-country gradient at the massification margin;
+what is not identified is its mechanism — a development gradient, anticipation and a long-lag schooling effect
+remain observationally equivalent in this design; what cannot be tested with these data is the individual-level
+mechanism,
 and the paper names the data that would test it.

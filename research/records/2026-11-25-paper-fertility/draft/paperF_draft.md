@@ -22,8 +22,8 @@ effects and country trends the same measures are weak or reverse: women's attain
 no measure has a negative-significant change coefficient. Across 13,800 random re-partitions of countries into
 six groups, the schooling–fertility level relation is negative and significant in 71–99% of groups; the change
 relation in 0–7%. A future-schooling placebo is about 90% as strong as the correct-time relation (52.9% versus
-58.8% of cells negative-significant), so the level gradient is a development-gradient association and not an
-identified schooling effect. The gradient is steepest below six years of schooling (−0.326, 95% CI [−0.405,
+58.8% of cells negative-significant), so the level gradient is consistent with a development gradient — or with anticipation or a long-lag
+schooling effect — but is not an identified schooling effect. The gradient is steepest below six years of schooling (−0.326, 95% CI [−0.405,
 −0.248]), flattens at 6–9 years (−0.092 [−0.175, −0.013]), and reverses above nine (+0.112 [+0.057, +0.171]).
 Supporting sections report a survey-level DHS gradient (secondary education −1.62 children, 99% of 346 surveys
 negative), falsified dynamic predictions (cohort and pipeline attenuation), a care-work loop absorbed by income
@@ -83,12 +83,15 @@ reported alongside it (22.7 per cent for levels against 11.1 per cent for change
 is the honest version of the same test: the global-property claim is about the schooling–fertility relation, not
 about every pair in the data.
 
-**The gradient is a development gradient, not an identified schooling effect.** The future-schooling placebo,
+**The association is consistent with a common development gradient, with anticipation/quantity-quality, and with a schooling effect.** The future-schooling placebo,
 in which schooling measured ten years after fertility predicts current fertility on the identical design
 cells, is 52.9 per cent negative-significant against 58.8 per cent for the correct-time relation — about 90 per
-cent as strong, and about 80 per cent as large in median magnitude. The pre-registered decision rule therefore
-fires: the level relation is descriptive. Countries with more schooling have fewer births, and the association
-cannot be read as the effect of changing schooling while holding development constant.
+cent as strong, and about 80 per cent as large in median magnitude. The pre-registered decision rule fires: the level relation cannot be read as the effect of changing schooling.
+But the placebo does not identify a development gradient either. Future schooling at t+10 can move with parents'
+fertility plans at t (anticipation/quantity-quality), and a schooling effect with a long lag predicts the same
+pattern. The association is consistent with all three; this design cannot distinguish them or reject a schooling
+effect. The change-on-change ladder in the E11 fertility audit (`research/e11-fertility-audit-2026-11-25` @
+`e926575`) returns "does not discriminate", so the placebo cannot isolate a development gradient.
 
 **The gradient is concentrated at the massification margin.** Piecewise-linear estimates put the slope at
 −0.326 (95% CI [−0.405, −0.248]) below six years of schooling, −0.092 [−0.175, −0.013] between six and nine,
@@ -103,7 +106,8 @@ this relation. First, the specification curve: the levels result is not a select
 result is not either; both distributions are reported in full. Second, the re-partition transportability test:
 rather than asserting that the level relation is a general property, the paper re-partitions the panel 13,800
 times and reports the distribution. Third, the placebo: the development-gradient caveat is measured, not
-asserted, so the descriptive claim survives while the causal one is rejected with evidence. Fourth, the
+asserted, so the descriptive claim survives while no mechanism — common development trends,
+anticipation/quantity-quality, or a schooling effect — is identified or rejected. Fourth, the
 threshold location: the gradient is placed in the schooling distribution, which is what connects the
 cross-section to the historical transition. The paper then uses the same discipline on the project's other
 fertility workstreams — a survey-level gradient, care-work and no-off-switch nulls, a transition model, a
@@ -321,7 +325,12 @@ countries), not only the nominal one.
 
 ## 3.2 Measures
 
-Fertility is the total fertility rate (births per woman). Schooling is measured eight ways: mean years of
+Fertility is the total fertility rate (births per woman). The project's other fertility series,
+"effective fertility" (surviving children per woman), is a **different construct**: on a matched 5-year sample
+(n = 2,955 country-years, 197 countries) the median absolute difference between the two series is 0.3042 and the
+maximum 4.2677, and their schooling lead/lag terms differ (0.541 versus 1.555); the two are not interchangeable
+and neither corrects the other, so every table names its construct and "TFR" is never used for effective
+fertility (E11 fertility audit, `research/e11-fertility-audit-2026-11-25` @ `e926575`). Schooling is measured eight ways: mean years of
 schooling for women and for the total adult population; gross secondary enrolment; lower-secondary completion;
 primary completion; tertiary enrolment; and gender-parity indices for secondary and tertiary enrolment. The
 multiplicity is deliberate: the literature disagrees about the right measure, and the paper's claim is that the
@@ -589,12 +598,17 @@ placebo should be nearly as strong as the correct-time relation. Table 3 reports
 
 The placebo is not null. For the schooling–fertility pairs it is about **90 per cent as strong** as the
 correct-time relation in the share of negative-significant cells, and about 80 per cent as strong in median
-magnitude. The pre-registered decision rule — if the placebo reaches 80 per cent of the correct-time share, the
-level relation is a development-gradient association and not an identified schooling effect — therefore fires.
-The levelled relation is descriptive: countries with more schooling have fewer births, and the association is
-global and robust, but it cannot be interpreted as the effect of changing schooling while holding development
-constant, because future schooling "predicts" current fertility almost as well. The result is not a defect of
-the schooling measures; it is what a development gradient looks like in a cross-section, and it means that the
+magnitude. The pre-registered decision rule — if the placebo reaches 80 per cent of the correct-time share, the level
+relation is not an identified schooling effect — therefore fires. The level relation is not an identified
+schooling effect, and it is not evidence for a pure development gradient either: common development trends,
+anticipation/quantity-quality, and a long-lag schooling effect all predict the same future-schooling pattern.
+The change-on-change ladder in the E11 fertility audit (`research/e11-fertility-audit-2026-11-25` @ `e926575`)
+returns "does not discriminate", so the placebo cannot isolate a development gradient. The levelled relation is
+descriptive: countries with more schooling have fewer births, and the association is global and robust, but it
+cannot be interpreted as the effect of changing schooling while holding development constant, because future
+schooling "predicts" current fertility almost as well. The result is not a defect of the schooling measures; it
+is what a development gradient — or anticipation, or a long-lag schooling effect — looks like in a cross-section,
+and it means that the
 cross-country literature's practice of interpreting the level coefficient causally is unsupported. The same
 conclusion was reached on the smaller earlier grid (where the placebo was negative-significant in 24 of 24
 specifications, median −0.68); the large-grid result is a measured version of that caveat rather than a
@@ -607,10 +621,11 @@ schooling–fertility gradient — negative for all eight measures, robust acros
 reproduced in 71–99 per cent of 13,800 arbitrary country groupings; (ii) a clear demonstration that the
 within-country change design erases that gradient, with the change coefficient for several measures
 significantly positive, which explains why panel fixed-effects studies have returned nulls; and (iii) a
-quantified development-gradient caveat: the level relation is not an identified causal effect of schooling, and
-future-schooling placebos are the right diagnostic for this literature. What does not survive is the causal
-reading of the level coefficient, and with it the practice of citing the between-country gradient as evidence
-that expanding schooling will reduce fertility. The section's contribution is not a new causal estimate; it is
+quantified caveat that the level relation is not an identified causal effect; the future-schooling placebo cannot
+distinguish a development gradient from anticipation or a long-lag schooling effect. What does not survive is the
+causal reading of the level coefficient, and with it the practice of citing the between-country gradient as
+evidence that expanding schooling will reduce fertility; the placebo cannot distinguish a development gradient
+from anticipation or a long-lag schooling effect. The section's contribution is not a new causal estimate; it is
 the demonstration that the level-of-analysis choice determines the empirical answer, that the level answer is
 real and global, and that its causal interpretation is exactly what the placebo rules out. The next sections
 of the synthesis ask what the between-country gradient is a gradient *of*, and whether the within-country
@@ -1267,7 +1282,7 @@ data, with the missing observation named.
 | 2 | The levels result is robust across the specification space | S | 99.7% of 288 period specs negative; 91.3% negative-significant; 0% positive-significant; median −0.475 |
 | 3 | The level relation is a global between-country property | S (this relation) | 71–99% of 13,800 random six-group partitions negative-significant vs 0–7% in changes |
 | 4 | The standard change design erases or reverses the relation | S | women's attainment +0.111 (0.045); 0/8 negative-significant; 3/8 positive-significant |
-| 5 | The level relation is a development gradient, not an identified schooling effect | S | future-schooling placebo 52.9% vs 58.8% negative-significant (~90% as strong) |
+| 5 | The level relation is not an identified schooling effect; the association is consistent with common development trends, anticipation/quantity-quality and a schooling effect | S (descriptive; mechanism not identified) | future-schooling placebo 52.9% vs 58.8% negative-significant (~90% as strong); E11 change-on-change ladder: "does not discriminate" |
 | 6 | The gradient is steepest at the massification margin (shape), with conventional hinge locations | S (shape) / C (hinge locations) | below 6y −0.326 [−0.405, −0.248]; 6–9y −0.092 [−0.175, −0.013]; >9y +0.112 [+0.057, +0.171]; hinges at 6 and 9 years are conventional, not data-searched |
 | 7 | A survey-level (DHS) negative gradient exists across 86 countries | S (ecological) | primary −0.57 (0.06), secondary −1.62 (0.17), higher −2.54 (0.24); 99% of 346 surveys negative |
 | 8 | The gradient steepens in later cohorts and denser pipelines | F | attenuates instead: cohort +0.26 (0.13); pipeline +0.13 (0.05) |
@@ -1288,7 +1303,8 @@ same panel give weak or positive coefficients, with no negative-significant chan
 design property, not a substantive finding: the within estimator removes the between-country variation in which
 the gradient lives, and the paper's decomposition of that variation is the audit's core. Fourth, the level
 gradient is descriptive: the future-schooling placebo is about 90 per cent as strong as the correct-time
-relation, which is the signature of a shared development process rather than an identified effect of schooling.
+relation — consistent with a shared development process, with anticipation/quantity-quality, or with a long-lag
+schooling effect; the design cannot distinguish them or reject a schooling effect.
 
 Three things remain open, and the paper names them rather than resolving them. The individual-level mechanism is
 open because the DHS microdata were not obtainable; the survey-level gradient is consistent with an individual
@@ -1343,13 +1359,16 @@ that way.
 
 The contribution is therefore a structural demonstration about a known correlation, not a new correlation: it
 shows what the field's standard change specification does to the gradient, measures the erasure with a full
-specification space and a random-re-partition yardstick, quantifies the development-gradient caveat with a
-placebo, and places the gradient in the schooling distribution. The project's nulls — the care-work loop
+specification space and a random-re-partition yardstick, quantifies the caveat that the level relation is not an identified effect — indistinguishable here from a
+development gradient, anticipation, or a long-lag schooling effect — with a placebo, and places the gradient in
+the schooling distribution. The project's nulls — the care-work loop
 absorbed by income, the falsified strong no-off-switch, the absent tipping point, the mortality counterfactual
 that removes 3.2 per cent, the tolerance ladder that is an identification limit — are reported with the same
 discipline, because a synthesis that reported only the surviving results would be doing to its own evidence what
-the paper criticises in the literature. What survives is a development gradient at the massification margin;
-what fails is the causal reading of it; what cannot be tested with these data is the individual-level mechanism,
+the paper criticises in the literature. What survives is a non-causal, global, between-country gradient at the massification margin;
+what is not identified is its mechanism — a development gradient, anticipation and a long-lag schooling effect
+remain observationally equivalent in this design; what cannot be tested with these data is the individual-level
+mechanism,
 and the paper names the data that would test it.
 
 

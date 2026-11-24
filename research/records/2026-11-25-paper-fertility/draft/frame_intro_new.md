@@ -22,8 +22,8 @@ effects and country trends the same measures are weak or reverse: women's attain
 no measure has a negative-significant change coefficient. Across 13,800 random re-partitions of countries into
 six groups, the schooling–fertility level relation is negative and significant in 71–99% of groups; the change
 relation in 0–7%. A future-schooling placebo is about 90% as strong as the correct-time relation (52.9% versus
-58.8% of cells negative-significant), so the level gradient is a development-gradient association and not an
-identified schooling effect. The gradient is steepest below six years of schooling (−0.326, 95% CI [−0.405,
+58.8% of cells negative-significant), so the level gradient is consistent with a development gradient — or with anticipation or a long-lag
+schooling effect — but is not an identified schooling effect. The gradient is steepest below six years of schooling (−0.326, 95% CI [−0.405,
 −0.248]), flattens at 6–9 years (−0.092 [−0.175, −0.013]), and reverses above nine (+0.112 [+0.057, +0.171]).
 Supporting sections report a survey-level DHS gradient (secondary education −1.62 children, 99% of 346 surveys
 negative), falsified dynamic predictions (cohort and pipeline attenuation), a care-work loop absorbed by income
@@ -83,12 +83,15 @@ reported alongside it (22.7 per cent for levels against 11.1 per cent for change
 is the honest version of the same test: the global-property claim is about the schooling–fertility relation, not
 about every pair in the data.
 
-**The gradient is a development gradient, not an identified schooling effect.** The future-schooling placebo,
+**The association is consistent with a common development gradient, with anticipation/quantity-quality, and with a schooling effect.** The future-schooling placebo,
 in which schooling measured ten years after fertility predicts current fertility on the identical design
 cells, is 52.9 per cent negative-significant against 58.8 per cent for the correct-time relation — about 90 per
-cent as strong, and about 80 per cent as large in median magnitude. The pre-registered decision rule therefore
-fires: the level relation is descriptive. Countries with more schooling have fewer births, and the association
-cannot be read as the effect of changing schooling while holding development constant.
+cent as strong, and about 80 per cent as large in median magnitude. The pre-registered decision rule fires: the level relation cannot be read as the effect of changing schooling.
+But the placebo does not identify a development gradient either. Future schooling at t+10 can move with parents'
+fertility plans at t (anticipation/quantity-quality), and a schooling effect with a long lag predicts the same
+pattern. The association is consistent with all three; this design cannot distinguish them or reject a schooling
+effect. The change-on-change ladder in the E11 fertility audit (`research/e11-fertility-audit-2026-11-25` @
+`e926575`) returns "does not discriminate", so the placebo cannot isolate a development gradient.
 
 **The gradient is concentrated at the massification margin.** Piecewise-linear estimates put the slope at
 −0.326 (95% CI [−0.405, −0.248]) below six years of schooling, −0.092 [−0.175, −0.013] between six and nine,
@@ -103,7 +106,8 @@ this relation. First, the specification curve: the levels result is not a select
 result is not either; both distributions are reported in full. Second, the re-partition transportability test:
 rather than asserting that the level relation is a general property, the paper re-partitions the panel 13,800
 times and reports the distribution. Third, the placebo: the development-gradient caveat is measured, not
-asserted, so the descriptive claim survives while the causal one is rejected with evidence. Fourth, the
+asserted, so the descriptive claim survives while no mechanism — common development trends,
+anticipation/quantity-quality, or a schooling effect — is identified or rejected. Fourth, the
 threshold location: the gradient is placed in the schooling distribution, which is what connects the
 cross-section to the historical transition. The paper then uses the same discipline on the project's other
 fertility workstreams — a survey-level gradient, care-work and no-off-switch nulls, a transition model, a

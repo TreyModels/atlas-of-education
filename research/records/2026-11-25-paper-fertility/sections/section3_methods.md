@@ -13,7 +13,12 @@ countries), not only the nominal one.
 
 ## 3.2 Measures
 
-Fertility is the total fertility rate (births per woman). Schooling is measured eight ways: mean years of
+Fertility is the total fertility rate (births per woman). The project's other fertility series,
+"effective fertility" (surviving children per woman), is a **different construct**: on a matched 5-year sample
+(n = 2,955 country-years, 197 countries) the median absolute difference between the two series is 0.3042 and the
+maximum 4.2677, and their schooling lead/lag terms differ (0.541 versus 1.555); the two are not interchangeable
+and neither corrects the other, so every table names its construct and "TFR" is never used for effective
+fertility (E11 fertility audit, `research/e11-fertility-audit-2026-11-25` @ `e926575`). Schooling is measured eight ways: mean years of
 schooling for women and for the total adult population; gross secondary enrolment; lower-secondary completion;
 primary completion; tertiary enrolment; and gender-parity indices for secondary and tertiary enrolment. The
 multiplicity is deliberate: the literature disagrees about the right measure, and the paper's claim is that the
