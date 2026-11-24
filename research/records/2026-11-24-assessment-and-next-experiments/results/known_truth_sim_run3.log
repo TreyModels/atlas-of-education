@@ -1,0 +1,6 @@
+A {'25': {'ROBUST+H': 93, 'ROBUST-HET': 7}, '100': {'ROBUST+H': 97, 'ROBUST-HET': 3}, '400': {'ROBUST+H': 98, 'ROBUST-but-GROUP': 1, 'ROBUST-HET': 1}}
+W {'25': {'NONE': 87, 'ROBUST+H': 10, 'ROBUST-HET': 3}, '100': {'NONE': 87, 'ROBUST+H': 11, 'ROBUST-HET': 2}, '400': {'NONE': 86, 'ROBUST+H': 11, 'ROBUST-HET': 2, 'GROUP': 1}}
+B {'25': {'ROBUST-HET': 63, 'ROBUST+H': 22, 'NONE': 15, 'planted_tag_flagged': 0}, '100': {'ROBUST-HET': 35, 'ROBUST+H': 47, 'GROUP': 3, 'NONE': 12, 'ROBUST-but-GROUP': 3, 'planted_tag_flagged': 6}, '400': {'ROBUST-but-GROUP': 34, 'ROBUST+H': 51, 'GROUP': 15, 'planted_tag_flagged': 49}}
+C {'25': {'NONE': 100}, '100': {'NONE': 100}, '400': {'NONE': 100}}
+D {'25': {'NONE': 100}, '100': {'NONE': 100}, '400': {'NONE': 98, 'GROUP': 2}}
+S {'25': {'NONE': 100}, '100': {'GROUP': 99, 'NONE': 1}, '400': {'GROUP': 100}}

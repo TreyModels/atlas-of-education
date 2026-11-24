@@ -1,0 +1,6 @@
+wage_emp first observed year: min/median/max {'min': 1991, 'median': 1991.0, 'max': 1991}
+emp_agri first observed year: min/median/max {'min': 1991, 'median': 1991.0, 'max': 1991}
+agri_va first observed year: min/median/max {'min': 1960, 'median': 1981.0, 'max': 2016}
+schooling take-offs dated <=1990: 0.917 of 108
+countries where schooling take-off is later than first paid-employment year + 5: 7
+=> narrow labour-market demand can precede schooling in at most that many countries; the "7%" is mechanically capped.

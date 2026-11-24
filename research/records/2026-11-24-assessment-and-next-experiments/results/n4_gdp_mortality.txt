@@ -1,0 +1,17 @@
+coverage: lgdp at onset 68 | u5 start 66 | u5 t75 66 | of 105
+onset ['lgdp'] {'n': 68, 'coef': {'lgdp': [-0.318, 0.583]}, 'r2': 0.01}
+onset ['school_50'] {'n': 90, 'coef': {'school_50': [0.164, 0.047]}, 'r2': 0.13}
+onset ['school_50', 'lgdp'] {'n': 63, 'coef': {'school_50': [0.278, 0.061], 'lgdp': [0.279, 0.498]}, 'r2': 0.27}
+onset ['u5_t75'] {'n': 66, 'coef': {'u5_t75': [0.083, 0.132]}, 'r2': 0.01}
+onset ['u5_start'] {'n': 66, 'coef': {'u5_start': [5.339, 1.081]}, 'r2': 0.29}
+onset ['school_50', 'u5_start'] {'n': 60, 'coef': {'school_50': [0.115, 0.047], 'u5_start': [4.541, 1.183]}, 'r2': 0.34}
+onset ['school_50', 'u5_start', 'lgdp'] {'n': 49, 'coef': {'school_50': [0.191, 0.055], 'u5_start': [4.657, 1.193], 'lgdp': [1.06, 0.541]}, 'r2': 0.43}
+onset ['school_50', 'u5_t75', 'lgdp', 'urban_onset'] {'n': 49, 'coef': {'school_50': [0.277, 0.067], 'u5_t75': [-0.135, 0.146], 'lgdp': [1.206, 1.018], 'urban_onset': [-0.073, 0.054]}, 'r2': 0.31}
+midpoint ['lgdp'] {'n': 68, 'coef': {'lgdp': [-1.074, 0.793]}, 'r2': 0.03}
+midpoint ['school_50'] {'n': 90, 'coef': {'school_50': [0.27, 0.072]}, 'r2': 0.16}
+midpoint ['school_50', 'lgdp'] {'n': 63, 'coef': {'school_50': [0.33, 0.077], 'lgdp': [-0.015, 0.695]}, 'r2': 0.24}
+midpoint ['u5_t75'] {'n': 66, 'coef': {'u5_t75': [0.371, 0.174]}, 'r2': 0.06}
+midpoint ['u5_start'] {'n': 66, 'coef': {'u5_start': [10.157, 1.141]}, 'r2': 0.53}
+midpoint ['school_50', 'u5_start'] {'n': 60, 'coef': {'school_50': [0.121, 0.062], 'u5_start': [8.633, 1.123]}, 'r2': 0.53}
+midpoint ['school_50', 'u5_start', 'lgdp'] {'n': 49, 'coef': {'school_50': [0.186, 0.069], 'u5_start': [7.996, 1.288], 'lgdp': [0.146, 0.595]}, 'r2': 0.56}
+midpoint ['school_50', 'u5_t75', 'lgdp', 'urban_onset'] {'n': 49, 'coef': {'school_50': [0.333, 0.09], 'u5_t75': [0.056, 0.249], 'lgdp': [-0.63, 1.527], 'urban_onset': [-0.004, 0.085]}, 'r2': 0.3}

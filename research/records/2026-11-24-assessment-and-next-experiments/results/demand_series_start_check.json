@@ -1,0 +1,20 @@
+{
+ "wage_emp": {
+  "min": 1991,
+  "median": 1991.0,
+  "max": 1991
+ },
+ "emp_agri": {
+  "min": 1991,
+  "median": 1991.0,
+  "max": 1991
+ },
+ "agri_va": {
+  "min": 1960,
+  "median": 1981.0,
+  "max": 2016
+ },
+ "n_countries": 108,
+ "schooling_takeoff_by_1990_share": 0.917,
+ "schooling_after_first_paid_emp_year_plus5": 7
+}
