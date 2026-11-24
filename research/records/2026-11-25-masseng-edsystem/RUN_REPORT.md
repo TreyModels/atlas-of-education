@@ -200,7 +200,7 @@ Pre-declared rule: an axis is not distinguished by an outcome when variant 5–9
 - **Tutoring rate/gate mass**: affordability, supply, learning, jobs not identified; only gates
   move it strongly.
 - **Formal share/edu_gdp**: supply/gates/rural not identified; jobs dominates.
-- **Liquidity vs choice exits: not identifiable** in this engine version (bookkeeping issue above).
+- **Liquidity vs choice exits: not identifiable** in this engine version (bookkeeping issue above). **Withdrawn 25 Nov:** it was the driver read bug, not the engine (see correction above and `4679ddb` §3.8).
 - More fundamentally (task-41): **household demand/affordability, learning grade profiles, exam/quota
   rules, migration flows and credential requirements are not identified by available public data**;
   any target for them here would be invented.
