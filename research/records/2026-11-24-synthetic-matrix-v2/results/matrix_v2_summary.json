@@ -1,0 +1,73 @@
+{
+ "design": {
+  "n_countries": 256,
+  "worlds": [
+   "P",
+   "S",
+   "C",
+   "R",
+   "Rm"
+  ],
+  "links": 7,
+  "groupings": 40,
+  "specs": 4,
+  "doses": [
+   0.0,
+   0.05,
+   0.1
+  ],
+  "blocks": [
+   1,
+   2
+  ]
+ },
+ "n_cells": 6720,
+ "n_indistinguishable": 1752,
+ "cross_world_indistinguishable_share": 0.26071428571428573,
+ "wall_rule": 0.75,
+ "wall_verdict": "separable",
+ "dose_ladder": {
+  "0.0": {
+   "n": 2240,
+   "share": 0.225
+  },
+  "0.05": {
+   "n": 2240,
+   "share": 0.25357142857142856
+  },
+  "0.1": {
+   "n": 2240,
+   "share": 0.30357142857142855
+  }
+ },
+ "robust_across_groupings": {
+  "P": {
+   "n_robust": 71,
+   "n_links": 84,
+   "share": 0.8452380952380952
+  },
+  "S": {
+   "n_robust": 59,
+   "n_links": 84,
+   "share": 0.7023809523809523
+  },
+  "C": {
+   "n_robust": 59,
+   "n_links": 84,
+   "share": 0.7023809523809523
+  },
+  "R": {
+   "n_robust": 59,
+   "n_links": 84,
+   "share": 0.7023809523809523
+  },
+  "Rm": {
+   "n_robust": 59,
+   "n_links": 84,
+   "share": 0.7023809523809523
+  }
+ },
+ "label": "SIMULATION",
+ "workers": 96,
+ "nproc": 96
+}

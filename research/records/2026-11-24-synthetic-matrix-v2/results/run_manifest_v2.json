@@ -1,0 +1,9 @@
+{
+ "wall_s": 155.3,
+ "nproc": 96,
+ "workers": 96,
+ "numpy": "2.2.6",
+ "python": "3.10.8",
+ "seed": 20261124,
+ "label": "SIMULATION"
+}
