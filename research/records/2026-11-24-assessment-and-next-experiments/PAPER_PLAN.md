@@ -20,6 +20,7 @@ Absorbs the massification draft (M) and the agricultural-development sequencing 
 - **Must drop or restate:** "labour-market demand precedes schooling in only 7% of 58 countries". That figure is largely a
   data-start artefact (wage-employment and agricultural-employment series begin in 1991 for every country; 92% of schooling
   take-offs are dated by 1990). See `results/demand_series_start_check.txt`. Replace with the redesigned test (E6) or delete.
+- **Threshold sensitivity (24 Nov, `research/records/2026-11-24-next-tests/results/q1_sweep.csv`):** the 91% holds at the pre-registered default (+1.0 year of schooling in 10; release -3 points in 10) and across windows, but falls to 65-70% when a stricter take-off (+1.5 years) is used and rises to 96-97% with a looser one (+0.5). The abstract must state the threshold and the range.
 - **Binding conditions (Council):** frame as dating, not causation; keep the schooling-vs-fertility strict ordering (24/64 =
   37.5%) separate from the release-vs-fertility ordering; never use the retracted 68.75%; dedicated paragraph on endogeneity and
   coarse dating.

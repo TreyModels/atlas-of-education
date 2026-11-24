@@ -119,7 +119,7 @@ def verdicts(x, y, L, rng, Rlist):
     return out, famtag
 
 def main():
-    Rlist = [r for r in (25, 100, 400) if r <= RMAX]
+    Rlist = [r for r in (25, 100, 400, 1200) if r <= RMAX]
     res = {}
     for regime in ('A', 'W', 'B', 'C', 'D', 'S'):
         rng = np.random.default_rng({'A':1,'W':2,'B':3,'C':4,'D':5,'S':6}[regime]*1000+7)

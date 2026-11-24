@@ -1,0 +1,73 @@
+RMSE in original units by horizon band (years before the 1990 anchor); skill = 1 - RMSE/RMSE(M0); cov80 = coverage of an 80% interval built from the calibration half (|error| 80th percentile by method, series, scenario, band; in transformed units)
+
+tfr_observed_1950plus | RANDOM(avg of 3) | targets per scenario ~ 99
+  M0: 1-10 RMSE 0.609 skill +0.00 cov80 0.78  11-20 RMSE 1.29 skill +0.00 cov80 0.81  21-30 RMSE 1.89 skill +0.00 cov80 0.78  31-40 RMSE 1.99 skill +0.00 cov80 0.80
+  M1: 1-10 RMSE 0.523 skill +0.14 cov80 0.83  11-20 RMSE 1.82 skill -0.40 cov80 0.94  21-30 RMSE 4.28 skill -1.27 cov80 0.94  31-40 RMSE 9.23 skill -3.63 cov80 0.90
+  M2: 1-10 RMSE 0.355 skill +0.42 cov80 0.82  11-20 RMSE 0.755 skill +0.42 cov80 0.82  21-30 RMSE 1 skill +0.47 cov80 0.82  31-40 RMSE 1.03 skill +0.48 cov80 0.76
+  M3: 1-10 RMSE 0.317 skill +0.48 cov80 0.82  11-20 RMSE 0.727 skill +0.44 cov80 0.80  21-30 RMSE 0.921 skill +0.51 cov80 0.82  31-40 RMSE 1.01 skill +0.49 cov80 0.77
+
+tfr_observed_1950plus | RICH->POOR | targets per scenario ~ 81
+  M0: 1-10 RMSE 0.731 skill +0.00 cov80 0.89  11-20 RMSE 1.4 skill +0.00 cov80 0.81  21-30 RMSE 1.81 skill +0.00 cov80 0.75  31-40 RMSE 1.77 skill +0.00 cov80 0.84
+  M1: 1-10 RMSE 0.6 skill +0.18 cov80 0.86  11-20 RMSE 2.07 skill -0.48 cov80 0.76  21-30 RMSE 4.84 skill -1.68 cov80 0.76  31-40 RMSE 10.3 skill -4.85 cov80 0.73
+  M2: 1-10 RMSE 0.415 skill +0.43 cov80 0.86  11-20 RMSE 0.809 skill +0.42 cov80 0.80  21-30 RMSE 1.01 skill +0.44 cov80 0.72  31-40 RMSE 1.08 skill +0.39 cov80 0.65
+  M3: 1-10 RMSE 0.637 skill +0.13 cov80 0.71  11-20 RMSE 1.35 skill +0.04 cov80 0.67  21-30 RMSE 1.6 skill +0.12 cov80 0.65  31-40 RMSE 1.57 skill +0.11 cov80 0.65
+
+child_mortality_per100 | RANDOM(avg of 3) | targets per scenario ~ 98
+  M0: 1-10 RMSE 2.69 skill +0.00 cov80 0.78  11-20 RMSE 5.7 skill +0.00 cov80 0.82  21-30 RMSE 8.99 skill +0.00 cov80 0.83  31-40 RMSE 13.4 skill +0.00 cov80 0.78
+  M1: 1-10 RMSE 3.67 skill -0.37 cov80 0.85  11-20 RMSE 9.11 skill -0.60 cov80 0.87  21-30 RMSE 19.5 skill -1.17 cov80 0.84  31-40 RMSE 41.2 skill -2.08 cov80 0.82
+  M2: 1-10 RMSE 1.87 skill +0.30 cov80 0.87  11-20 RMSE 3.18 skill +0.44 cov80 0.84  21-30 RMSE 4.54 skill +0.50 cov80 0.80  31-40 RMSE 6.04 skill +0.55 cov80 0.76
+  M3: 1-10 RMSE 2.03 skill +0.24 cov80 0.85  11-20 RMSE 3.46 skill +0.39 cov80 0.85  21-30 RMSE 4.85 skill +0.46 cov80 0.80  31-40 RMSE 6.68 skill +0.50 cov80 0.79
+
+child_mortality_per100 | RICH->POOR | targets per scenario ~ 81
+  M0: 1-10 RMSE 3.01 skill +0.00 cov80 0.82  11-20 RMSE 7.81 skill +0.00 cov80 0.82  21-30 RMSE 11.5 skill +0.00 cov80 0.84  31-40 RMSE 16.2 skill +0.00 cov80 0.83
+  M1: 1-10 RMSE 3.54 skill -0.18 cov80 0.77  11-20 RMSE 9.48 skill -0.21 cov80 0.79  21-30 RMSE 19.5 skill -0.70 cov80 0.84  31-40 RMSE 37.6 skill -1.32 cov80 0.89
+  M2: 1-10 RMSE 2.22 skill +0.26 cov80 0.75  11-20 RMSE 5.39 skill +0.31 cov80 0.80  21-30 RMSE 7.57 skill +0.34 cov80 0.81  31-40 RMSE 9.54 skill +0.41 cov80 0.70
+  M3: 1-10 RMSE 2.65 skill +0.12 cov80 0.72  11-20 RMSE 6.51 skill +0.17 cov80 0.70  21-30 RMSE 9.2 skill +0.20 cov80 0.81  31-40 RMSE 13.1 skill +0.19 cov80 0.62
+
+life_expectancy_years | RANDOM(avg of 3) | targets per scenario ~ 99
+  M0: 1-10 RMSE 3.34 skill +0.00 cov80 0.75  11-20 RMSE 7.07 skill +0.00 cov80 0.75  21-30 RMSE 10.3 skill +0.00 cov80 0.70  31-40 RMSE 15.4 skill +0.00 cov80 0.71
+  M1: 1-10 RMSE 4.08 skill -0.22 cov80 0.77  11-20 RMSE 8.16 skill -0.15 cov80 0.72  21-30 RMSE 11.9 skill -0.15 cov80 0.70  31-40 RMSE 16.7 skill -0.09 cov80 0.64
+  M2: 1-10 RMSE 2.41 skill +0.28 cov80 0.83  11-20 RMSE 4.82 skill +0.32 cov80 0.87  21-30 RMSE 5.8 skill +0.44 cov80 0.80  31-40 RMSE 7.34 skill +0.52 cov80 0.82
+  M3: 1-10 RMSE 2.25 skill +0.33 cov80 0.84  11-20 RMSE 4.62 skill +0.35 cov80 0.77  21-30 RMSE 5.28 skill +0.49 cov80 0.74  31-40 RMSE 6.61 skill +0.57 cov80 0.73
+
+life_expectancy_years | RICH->POOR | targets per scenario ~ 81
+  M0: 1-10 RMSE 3.51 skill +0.00 cov80 0.80  11-20 RMSE 8.21 skill +0.00 cov80 0.80  21-30 RMSE 11.7 skill +0.00 cov80 0.85  31-40 RMSE 16.6 skill +0.00 cov80 0.84
+  M1: 1-10 RMSE 3.98 skill -0.14 cov80 0.76  11-20 RMSE 8.27 skill -0.01 cov80 0.79  21-30 RMSE 12.5 skill -0.08 cov80 0.80  31-40 RMSE 17.8 skill -0.07 cov80 0.80
+  M2: 1-10 RMSE 3.8 skill -0.08 cov80 0.72  11-20 RMSE 9.19 skill -0.12 cov80 0.63  21-30 RMSE 16.4 skill -0.40 cov80 0.65  31-40 RMSE 28 skill -0.69 cov80 0.65
+  M3: 1-10 RMSE 2.43 skill +0.31 cov80 0.80  11-20 RMSE 5.21 skill +0.37 cov80 0.77  21-30 RMSE 5.85 skill +0.50 cov80 0.77  31-40 RMSE 7.28 skill +0.56 cov80 0.78
+
+urban_share_pct | RANDOM(avg of 3) | targets per scenario ~ 96
+  M0: 1-10 RMSE 4.62 skill +0.00 cov80 0.74  11-20 RMSE 10.8 skill +0.00 cov80 0.72  21-30 RMSE 17.6 skill +0.00 cov80 0.68  31-40 RMSE 23.5 skill +0.00 cov80 0.70
+  M1: 1-10 RMSE 3.42 skill +0.26 cov80 0.83  11-20 RMSE 7.77 skill +0.28 cov80 0.80  21-30 RMSE 12.7 skill +0.28 cov80 0.69  31-40 RMSE 17.1 skill +0.27 cov80 0.68
+  M2: 1-10 RMSE 3.08 skill +0.33 cov80 0.78  11-20 RMSE 6.85 skill +0.36 cov80 0.81  21-30 RMSE 10.1 skill +0.43 cov80 0.79  31-40 RMSE 11.8 skill +0.50 cov80 0.80
+  M3: 1-10 RMSE 2.88 skill +0.38 cov80 0.83  11-20 RMSE 6.81 skill +0.37 cov80 0.81  21-30 RMSE 10.4 skill +0.41 cov80 0.78  31-40 RMSE 12.3 skill +0.47 cov80 0.74
+
+urban_share_pct | RICH->POOR | targets per scenario ~ 79
+  M0: 1-10 RMSE 5.28 skill +0.00 cov80 0.83  11-20 RMSE 11.2 skill +0.00 cov80 0.86  21-30 RMSE 17.3 skill +0.00 cov80 0.93  31-40 RMSE 21.9 skill +0.00 cov80 0.95
+  M1: 1-10 RMSE 3.94 skill +0.25 cov80 0.80  11-20 RMSE 8.01 skill +0.28 cov80 0.76  21-30 RMSE 12.3 skill +0.29 cov80 0.81  31-40 RMSE 15.8 skill +0.28 cov80 0.80
+  M2: 1-10 RMSE 3.2 skill +0.39 cov80 0.67  11-20 RMSE 6.37 skill +0.43 cov80 0.84  21-30 RMSE 8.82 skill +0.49 cov80 0.89  31-40 RMSE 9.45 skill +0.57 cov80 0.89
+  M3: 1-10 RMSE 3.3 skill +0.38 cov80 0.83  11-20 RMSE 6.39 skill +0.43 cov80 0.86  21-30 RMSE 8.44 skill +0.51 cov80 0.95  31-40 RMSE 8.68 skill +0.60 cov80 0.94
+
+mean_years_schooling | RANDOM(avg of 3) | targets per scenario ~ 55
+  M0: 1-10 RMSE 1.46 skill +0.00 cov80 0.72  11-20 RMSE 2.62 skill +0.00 cov80 0.57  21-30 RMSE 3.62 skill +0.00 cov80 0.64  31-40 RMSE 4.19 skill +0.00 cov80 0.72
+  M1: 1-10 RMSE 0.546 skill +0.62 cov80 0.74  11-20 RMSE 1.09 skill +0.58 cov80 0.70  21-30 RMSE 1.6 skill +0.56 cov80 0.87  31-40 RMSE 1.85 skill +0.56 cov80 0.87
+  M2: 1-10 RMSE 0.439 skill +0.70 cov80 0.82  11-20 RMSE 0.738 skill +0.72 cov80 0.66  21-30 RMSE 0.941 skill +0.74 cov80 0.74  31-40 RMSE 0.9 skill +0.79 cov80 0.78
+  M3: 1-10 RMSE 0.468 skill +0.68 cov80 0.81  11-20 RMSE 0.769 skill +0.71 cov80 0.78  21-30 RMSE 0.972 skill +0.73 cov80 0.89  31-40 RMSE 1.01 skill +0.76 cov80 0.82
+
+mean_years_schooling | RICH->POOR | targets per scenario ~ 52
+  M0: 1-10 RMSE 1.42 skill +0.00 cov80 0.77  11-20 RMSE 2.57 skill +0.00 cov80 0.77  21-30 RMSE 3.48 skill +0.00 cov80 0.69  31-40 RMSE 3.92 skill +0.00 cov80 0.75
+  M1: 1-10 RMSE 0.418 skill +0.71 cov80 0.85  11-20 RMSE 0.996 skill +0.61 cov80 0.75  21-30 RMSE 1.46 skill +0.58 cov80 0.67  31-40 RMSE 1.64 skill +0.58 cov80 0.81
+  M2: 1-10 RMSE 0.369 skill +0.74 cov80 0.87  11-20 RMSE 0.739 skill +0.71 cov80 0.88  21-30 RMSE 0.934 skill +0.73 cov80 0.90  31-40 RMSE 0.789 skill +0.80 cov80 0.90
+  M3: 1-10 RMSE 0.355 skill +0.75 cov80 0.87  11-20 RMSE 0.66 skill +0.74 cov80 0.90  21-30 RMSE 0.833 skill +0.76 cov80 0.92  31-40 RMSE 0.808 skill +0.79 cov80 0.92
+
+gdp_pc_maddison_1990int | RANDOM(avg of 3) | targets per scenario ~ 70
+  M0: 1-10 RMSE 2.99e+03 skill +0.00 cov80 0.77  11-20 RMSE 7.61e+03 skill +0.00 cov80 0.69  21-30 RMSE 9.02e+03 skill +0.00 cov80 0.68  31-40 RMSE 1.09e+04 skill +0.00 cov80 0.70
+  M1: 1-10 RMSE 3.46e+03 skill -0.16 cov80 0.78  11-20 RMSE 8.36e+03 skill -0.10 cov80 0.74  21-30 RMSE 8.27e+03 skill +0.08 cov80 0.71  31-40 RMSE 9.2e+03 skill +0.15 cov80 0.68
+  M2: 1-10 RMSE 2.62e+03 skill +0.12 cov80 0.80  11-20 RMSE 7.23e+03 skill +0.05 cov80 0.73  21-30 RMSE 7.01e+03 skill +0.22 cov80 0.69  31-40 RMSE 7.92e+03 skill +0.27 cov80 0.62
+  M3: 1-10 RMSE 2.47e+03 skill +0.17 cov80 0.76  11-20 RMSE 6.93e+03 skill +0.09 cov80 0.74  21-30 RMSE 7.01e+03 skill +0.22 cov80 0.74  31-40 RMSE 8e+03 skill +0.26 cov80 0.68
+
+gdp_pc_maddison_1990int | RICH->POOR | targets per scenario ~ 69
+  M0: 1-10 RMSE 770 skill +0.00 cov80 0.85  11-20 RMSE 1.17e+03 skill +0.00 cov80 0.84  21-30 RMSE 1.19e+03 skill +0.00 cov80 0.89  31-40 RMSE 1.23e+03 skill +0.00 cov80 0.82
+  M1: 1-10 RMSE 1.04e+03 skill -0.35 cov80 0.83  11-20 RMSE 1.5e+03 skill -0.28 cov80 0.71  21-30 RMSE 1.39e+03 skill -0.17 cov80 0.76  31-40 RMSE 1.39e+03 skill -0.13 cov80 0.73
+  M2: 1-10 RMSE 830 skill -0.08 cov80 0.77  11-20 RMSE 1.43e+03 skill -0.22 cov80 0.82  21-30 RMSE 1.36e+03 skill -0.14 cov80 0.81  31-40 RMSE 1.26e+03 skill -0.02 cov80 0.80
+  M3: 1-10 RMSE 679 skill +0.12 cov80 0.83  11-20 RMSE 1.16e+03 skill +0.01 cov80 0.80  21-30 RMSE 1.16e+03 skill +0.02 cov80 0.85  31-40 RMSE 1.08e+03 skill +0.12 cov80 0.85

@@ -1,0 +1,14 @@
+countries with a pre-1900 plateau: 9; windows fitted: 17
+transition end = first sustained rebound (baby boom excluded) or 2023
+
+FULL: n=9 BIC winners: double_logistic 6 (67%), logistic 2 (22%), exp_floor 1 (11%)
+  hold-out RMSE (last 10 y) logistic         median 0.342  mean 0.471  (n=9)
+  hold-out RMSE (last 10 y) gompertz         median 0.355  mean 0.510  (n=9)
+  hold-out RMSE (last 10 y) exp_floor        median 0.288  mean 0.445  (n=9)
+  hold-out RMSE (last 10 y) double_logistic  median 0.288  mean 0.364  (n=9)
+
+CENSORED_20PCT: n=8 BIC winners: double_logistic 3 (38%), exp_floor 2 (25%), gompertz 2 (25%), logistic 1 (12%)
+  hold-out RMSE (last 10 y) logistic         median 0.112  mean 0.172  (n=5)
+  hold-out RMSE (last 10 y) gompertz         median 0.185  mean 0.192  (n=5)
+  hold-out RMSE (last 10 y) exp_floor        median 0.236  mean 0.185  (n=5)
+  hold-out RMSE (last 10 y) double_logistic  median 0.154  mean 0.201  (n=5)

@@ -1,0 +1,16 @@
+=== A. level ladder, outcome effective_fertility: n=1417 countries=109 years 1950-2010
+  S only                 year FE          {'S': (np.float64(-1.102), np.float64(0.068))}
+  S only                 country+year FE  {'S': (np.float64(-1.608), np.float64(0.209))}
+  S(t-10), S, S(t+10)    year FE          {'Sm10': (np.float64(-0.618), np.float64(0.206)), 'S': (np.float64(-0.515), np.float64(0.184)), 'Sp10': (np.float64(0.031), np.float64(0.232))}
+  S(t-10), S, S(t+10)    country+year FE  {'Sm10': (np.float64(-1.021), np.float64(0.199)), 'S': (np.float64(-0.597), np.float64(0.165)), 'Sp10': (np.float64(-0.323), np.float64(0.192))}
+  four-term ladder      country+year FE  {'Sm10': (np.float64(-1.223), np.float64(0.228)), 'S': (np.float64(-0.542), np.float64(0.183)), 'Sp10': (np.float64(-0.225), np.float64(0.152)), 'Sp20': (np.float64(-0.16), np.float64(0.215))} n= 1199
+=== A. level ladder, outcome tfr_observed_1950plus: n=1417 countries=109 years 1950-2010
+  S only                 year FE          {'S': (np.float64(-1.824), np.float64(0.091))}
+  S only                 country+year FE  {'S': (np.float64(-1.348), np.float64(0.219))}
+  S(t-10), S, S(t+10)    year FE          {'Sm10': (np.float64(-0.246), np.float64(0.254)), 'S': (np.float64(-0.377), np.float64(0.234)), 'Sp10': (np.float64(-1.227), np.float64(0.241))}
+  S(t-10), S, S(t+10)    country+year FE  {'Sm10': (np.float64(-0.3), np.float64(0.217)), 'S': (np.float64(-0.538), np.float64(0.188)), 'Sp10': (np.float64(-0.836), np.float64(0.2))}
+  four-term ladder      country+year FE  {'Sm10': (np.float64(-0.552), np.float64(0.234)), 'S': (np.float64(-0.677), np.float64(0.193)), 'Sp10': (np.float64(-0.184), np.float64(0.167)), 'Sp20': (np.float64(-0.646), np.float64(0.206))} n= 1199
+
+=== B. direction test, 10-year changes (standardised), country FE: n=1013 countries=109
+  dF(t,t+10) on dS prev/next/next2 {'dS_prev': (np.float64(-0.238), np.float64(0.06)), 'dS_next': (np.float64(-0.217), np.float64(0.056)), 'dS_next2': (np.float64(-0.111), np.float64(0.038))}
+  dS(t,t+10) on dF prev/next/next2 {'dF_prev': (np.float64(-0.078), np.float64(0.037)), 'dF_next': (np.float64(-0.192), np.float64(0.042)), 'dF_next2': (np.float64(-0.122), np.float64(0.036))}

@@ -1,0 +1,46 @@
+{
+  "_note": "Parameters for E1/E2/E3 (methods paper). Not run in the sandbox (needs the multiverse panel and 16 cores). Prepared 24 Nov 2026.",
+  "E0_prerequisite": {
+    "check": "ls $GM_DATA/meta.json and the series json files; confirm 20+ series incl. grouping variables. Gemini's runbook says /root/work/data and /root/work/groups/out/final400.pkl exist on the AutoDL box 'autodl2'; this was NOT verified here.",
+    "if_missing": "rebuild from research/records/2026-11-23-corr-rebuild/data/RAW_SOURCES.md and scripts/download_raw.sh, or ask the owner"
+  },
+  "E1_extend_draws": {
+    "code": "research/records/2026-11-23-grouping-multiverse-400/scripts/run_multiverse400.py (+ gm_core.py, analyse400.py, determinism_check.py) on branch research/grouping-multiverse-400-2026-11-23",
+    "env": {"GM_DATA": "/root/work/data", "GM_R": "1200", "GM_NPROC": "16", "GM_OUT": "out/final1200.pkl"},
+    "command": "cd <scripts dir> && python3 determinism_check.py && GM_R=1200 GM_NPROC=16 GM_DATA=/root/work/data GM_OUT=out/final1200.pkl nohup python3 run_multiverse400.py > run1200.log 2>&1 &",
+    "notes": [
+      "The runner has no start-at-r option; it recomputes r=0..R. Replicate r uses seed 1000+r so the first 400 must reproduce final400.pkl exactly: compare them (this is itself the determinism check). Do not merge pickles by hand unless the runner is first modified and re-tested.",
+      "Expected wall time about 3x the 400-draw run (~3 h on 16 cores for 1,200)."
+    ],
+    "arithmetic": {
+      "links_M": 272, "H_M": 6.185,
+      "BY_threshold_for_rank_j": "j * 0.05 / (272 * 6.185) = j * 2.97e-5",
+      "empirical_p_floor": "1/(R+1)",
+      "R_needed_for_cluster_of_size_j": "R + 1 >= 1 / (j * 2.97e-5)  ->  j=30: R >= 1,121 ; j=29: R >= 1,160 ; j=84: R >= 400",
+      "at_R_1200": "floor = 8.33e-4 clears rank j >= 29",
+      "correction_to_runbook": "the runbook's 'alpha_BY = 0.05/6.185 = 0.00808' is the BY level for the whole family, not the per-rank threshold; use the per-rank formula above"
+    },
+    "report": "for each of the 272 links the verdict at R = 74, 400, 800, 1200 under BH and BY; split-halves agreement at 1200 (two disjoint 600s); per-replicate wall times"
+  },
+  "E2_known_truth": {
+    "design_frozen_before_running": true,
+    "code_in_repo_now": "research/records/2026-11-24-assessment-and-next-experiments/scripts/known_truth_sim.py (simplified estimator). Run it as: python3 -I known_truth_sim.py 200 1200  (adds R=1200 column; ~1-2 h single core)",
+    "real_estimator_version": "re-implement the regimes below on the real panel's country set, missingness and 50 groupings using gm_core; 200 replicates per regime; R in {74, 400, 1200}",
+    "regimes": {
+      "A": "uniform effect b=0.15 on the full series (truth: robust)",
+      "W": "weak uniform b=0.06 (truth: robust, low power)",
+      "B": "b=0.40 only in the top tercile of one grouping family (truth: group-specific)",
+      "C": "null, independent series",
+      "D": "null with shared country-specific trends (spurious levels link; the electricity case)",
+      "S": "sign split +0.25/-0.25 by the median of a second family (truth: group-specific)",
+      "G_runbook": "Gemini's variants: null; uniform beta=-0.05, AR(1) rho=0.85, sigma_eps=0.15; beta=-0.10 in Sub-Saharan Africa only. Add as extra regimes, do not replace A-S"
+    },
+    "report": "type-I error per verdict (target <= 5%), power for A/B/S, share of regime-B replicates labelled robust everywhere, share of regime-D replicates labelled anything but none",
+    "benchmarks_from_simplified_sim_R400": {"A_robust": 1.0, "B_labelled_robust": 0.85, "B_planted_tag_detected": 0.49, "C_false_positive": 0.0, "D_false_positive": 0.02, "S_detected": 1.0}
+  },
+  "E3_heterogeneity_condition": {
+    "rule": "robust-everywhere additionally requires: real heterogeneity rate (share of groupings whose group estimates are jointly heterogeneous at 5%, already computed) <= 95th percentile of the random-draw heterogeneity rate",
+    "also": "report group-specific tags for every link even when it is also robust",
+    "decision": "if >= 2 of the 5 links that 'travel' lose the label, rewrite paper Section 5.3"
+  }
+}

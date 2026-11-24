@@ -9,6 +9,7 @@ paper or reviewer; not recomputed in this session). "Source" names the branch/fi
 | # | Claim | Number | Status | Source |
 |---|---|---|---|---|
 | A1 | Schooling take-off precedes agricultural labour release | 31 forward, 3 reverse of 34 identifiable; 30 undetermined; both-exact median lead 18 y (n=18, IQR 8.0-30.8) | HOLDS (recomputed in fix/sequencing) | `fix/sequencing-censoring-2026-11-24`, `results/sequencing_stats.json` |
+| A1b | **Threshold sensitivity of A1 (new, `research/records/2026-11-24-next-tests/`)**: the paper's default reproduces exactly (64/64 dates, 31/3/30, median lead 18, n=18), but the forward share of identifiable countries is 95.8-97.0% at +0.5 y of schooling per decade, 83.9-91.2% at +1.0 (default), 65.4-70.4% at +1.5 (7-10 reverse cases) | NARROWED: report a range, not 91% | `q1_sweep.csv` |
 | A2 | Robustness of A1 to a +15 y schooling-date error | 26 of 34 still forward | HOLDS | same |
 | A3 | Schooling vs fertility ordering | strict schooling-first 24/64 = 37.5% (CI 26.6-50.0), 20 ties, 20 fertility-first | HOLDS (Council recomputation) | `research/records/2026-11-25-council-novelty/DECISION.md` |
 | A4 | Schooling-fertility link is a level gradient | 71-99% negative-significant in levels vs 0-7% in ten-year changes over 13,800 partitions | UNVERIFIED here (23 Nov battery record) | `corr-battery-2026-11-23` |
