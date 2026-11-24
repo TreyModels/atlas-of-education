@@ -6,8 +6,9 @@ from .modules.tutoring import TutoringMarket
 from .modules.state import FiscalState
 from .modules.sdg4 import SDG4
 from .modules.anchor import Anchor
+from .modules.migration import Migration
 
-ORDER = ['public_schools', 'private_schools', 'tutoring', 'fiscal_state', 'queue_labour', 'competitive_labour', 'anchor', 'sdg4']
+ORDER = ['public_schools', 'private_schools', 'tutoring', 'fiscal_state', 'queue_labour', 'competitive_labour', 'migration', 'anchor', 'sdg4']
 
 
 def build(modules, **params):
@@ -18,7 +19,7 @@ def build(modules, **params):
     # parameters of modules not in this build are dropped (so one parameter file can serve many module mixes);
     # anything no module knows is an error
     known_all = set(CORE_DEFAULTS)
-    for cls in (QueueLabour, CompetitiveLabour, PublicSchools, PrivateSchools, TutoringMarket, FiscalState, Anchor):
+    for cls in (QueueLabour, CompetitiveLabour, PublicSchools, PrivateSchools, TutoringMarket, FiscalState, Anchor, Migration):
         known_all |= set(cls.defaults)
     bad = [k for k in params if k not in known_all]
     if bad:

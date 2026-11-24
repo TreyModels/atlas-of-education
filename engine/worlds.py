@@ -4,11 +4,13 @@ import eduengine as ee
 BASE = dict(subsist=0.40, borrow=0.20, fee_tertiary=0.35, vac0=0.20, vac_growth=0.010)
 
 
-def modules(labour='queue', private=True, tutoring=True, fiscal=False):
+def modules(labour='queue', private=True, tutoring=True, fiscal=False, migration='closed'):
     m = [ee.PublicSchools()]
     if private: m.append(ee.PrivateSchools())
     if tutoring: m.append(ee.TutoringMarket())
     if fiscal: m.append(ee.FiscalState())
+    if migration != 'closed':
+        m.append(ee.Migration(migration=migration))
     m.append(ee.QueueLabour() if labour == 'queue' else ee.CompetitiveLabour())
     return m
 
