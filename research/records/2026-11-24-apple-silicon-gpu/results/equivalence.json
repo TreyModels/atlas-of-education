@@ -1,0 +1,95 @@
+{
+ "tolerance": {
+  "state_mismatches_max": 0,
+  "cont_max_abs": 1e-05,
+  "cont_max_rel": 0.0001
+ },
+ "probe_numpy_ok": true,
+ "probe_mlx_ok": true,
+ "kernel_level": {
+  "state": {
+   "dtype": "int32",
+   "max_abs": 0.0,
+   "max_rel": 0.0,
+   "n_diff": 0
+  },
+  "tutor": {
+   "dtype": "int32",
+   "max_abs": 0.0,
+   "max_rel": 0.0,
+   "n_diff": 0
+  },
+  "learn": {
+   "dtype": "float32",
+   "max_abs": 0.0,
+   "max_rel": 0.0,
+   "n_diff": 0
+  },
+  "work": {
+   "dtype": "float32",
+   "max_abs": 0.0,
+   "max_rel": 0.0,
+   "n_diff": 0
+  },
+  "y_hh": {
+   "dtype": "float32",
+   "max_abs": 0.0,
+   "max_rel": 0.0,
+   "n_diff": 0
+  },
+  "state_mismatches": 0,
+  "tutor_mismatches": 0,
+  "equivalent": true
+ },
+ "exp1_smoke": {
+  "n_rows": 450,
+  "int_metrics_exact": {
+   "ger": true,
+   "study_work": true,
+   "work_only": true,
+   "hidden_work": true,
+   "cl_total": true,
+   "tutoring": true
+  },
+  "cont_metrics": {
+   "enrolled_work_hrs_p90": {
+    "max_abs": 9.5367431640625e-07,
+    "median_abs": 0.0
+   },
+   "tutor_income_corr": {
+    "max_abs": 8.041901977673405e-08,
+    "median_abs": 0.0
+   },
+   "mean_learn": {
+    "max_abs": 0.0,
+    "median_abs": 0.0
+   },
+   "q_pub": {
+    "max_abs": 0.0,
+    "median_abs": 0.0
+   }
+  },
+  "equivalent": true
+ },
+ "exp3_smoke": {
+  "equivalent": true,
+  "detail": {
+   "w_pov": {
+    "width_ratio_abs_diff": 0.0,
+    "identified_same": true
+   },
+   "w_push": {
+    "width_ratio_abs_diff": 0.0,
+    "identified_same": true
+   },
+   "w_tutor": {
+    "width_ratio_abs_diff": 0.0,
+    "identified_same": true
+   },
+   "div_beta": {
+    "width_ratio_abs_diff": 0.0,
+    "identified_same": true
+   }
+  }
+ }
+}

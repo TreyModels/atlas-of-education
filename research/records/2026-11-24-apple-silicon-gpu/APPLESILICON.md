@@ -1,0 +1,71 @@
+# Running the unified GPU suite on Apple Silicon (M1/M2/M3)
+
+This directory contains a **minimal CuPy compatibility layer** that lets
+`unified_gpu_suite_2026_11_24` run on an Apple Silicon Mac without CUDA, **without editing the upstream
+scripts**. It is a portability layer, not a CUDA emulator and not a research re-run.
+
+## What you need
+
+- macOS 13+ on Apple Silicon (tested: M1, macOS 26.6.2, arm64).
+- Python 3.10–3.13 with `numpy`, `pandas`, `requests`, `scikit-learn`, `statsmodels`, and **`mlx`**
+  (preferred backend): `python3 -m venv .venv && . .venv/bin/activate && pip install numpy pandas requests
+  scikit-learn statsmodels mlx`.
+- No CUDA, no CuPy, no GPU toolkit. PyTorch is optional; if installed with MPS it is used only if
+  `APPLE_GPU_BACKEND=torch`/`mps` and the layer falls back to NumPy when unavailable.
+
+## Quick start
+
+```bash
+cd research/records/2026-11-24-apple-silicon-gpu
+APPLE_PY=/path/to/venv/bin/python APPLE_GPU_BACKEND=mlx ./run_apple.sh smoke      # ~4 s
+APPLE_PY=/path/to/venv/bin/python APPLE_GPU_BACKEND=numpy ./run_apple.sh smoke    # NumPy fallback
+APPLE_PY=/path/to/venv/bin/python APPLE_GPU_BACKEND=mlx ./run_apple.sh production # full config
+```
+
+`run_apple.sh` puts this directory, `./shim` and the suite's `scripts/` on `PYTHONPATH`, so
+`import cupy as cp` inside the upstream scripts resolves to `shim/cupy/__init__.py` → `gpu_compat.py`.
+Nothing in `suite/unified_gpu_suite/` is modified; the suite is kept byte-for-byte as delivered.
+
+## How it works (and what it cannot do)
+
+| CuPy API used by the suite | Apple Silicon implementation |
+|---|---|
+| `cp.float32`, `cp.int32` | NumPy dtype constants (backend-neutral) |
+| `cp.empty(size, dtype)` | backend zeros (MLX `mx.zeros` / `np.zeros`) wrapped in `Array` |
+| `cp.exp`, `cp.clip` | `mx.exp`/`mx.clip` or `np.exp`/`np.clip` |
+| `cp.asnumpy` | `np.array(mx.array)` / NumPy view |
+| `cp.random.default_rng(seed).normal(...)` | NumPy `Generator(Philox(seed))` (documented mapping; see REPORT §RNG) |
+| `cp.cuda.Stream.null.synchronize()` | no-op / `mx.synchronize()` |
+| `cp.RawModule(code).get_function("sim_step")` | **only** the suite's `sim_step` kernel is transcribed (NumPy + MLX) |
+
+**The hard limit:** `cp.RawModule` compiles CUDA C. CUDA C cannot be compiled or run on macOS. The layer
+recognises the suite's one kernel by source fingerprint and dispatches to a line-by-line transcription in
+`kernels_np_mlx.py`; **any other CUDA kernel raises `PortabilityError`**. To port a new kernel you must add a
+transcription (see "Adding a kernel" below); there is no automatic CUDA→MLX translator.
+
+## Adding a kernel
+
+1. Add a function `run_<name>(backend, args)` to `kernels_np_mlx.py` implementing the C semantics for both
+   backends (or a host-vectorised NumPy version and an MLX version).
+2. Extend `gpu_compat.RawModule.get_function` to recognise the new kernel name and source markers; raise
+   `PortabilityError` for everything else.
+3. Add a fixed-seed probe to `tests/` and extend `tests/run_equivalence.py` with the same tolerances
+   (integer state exact; float32 continuous `max_abs ≤ 1e-5`). Keep the upstream script unmodified.
+
+## Equivalence and honesty
+
+- `tests/run_equivalence.py` compares the NumPy reference and the MLX backend on the same fixed-seed kernel:
+  integer states must match exactly; continuous arrays are checked against `1e-5` abs / `1e-4` rel
+  (float32 rounding). `results/equivalence.json` records the outcome.
+- **No CUDA equivalence is claimed.** The CUDA kernel cannot be executed here, so the port is equivalent to
+  the *NumPy transcription of the same CUDA source*, and the data-generation RNG uses a documented NumPy
+  Philox mapping (CuPy's exact stream cannot be checked without CUDA). CUDA-run numbers and port numbers can
+  differ because the data draws differ even at the same seed.
+- Outputs from this layer are labelled **PORT-SMOKE / PORT-PRODUCTION** and are not research results.
+
+## Files
+
+`gpu_compat.py` (CuPy subset + RawModule dispatch), `kernels_np_mlx.py` (kernel transcription),
+`shim/cupy/__init__.py` (import shim), `tests/` (equivalence, components, projection),
+`run_apple.sh` (runner), `results/` (evidence), `REPORT.md` (full report), `PRE_REGISTRATION.md` (scope and
+tolerances fixed before coding).

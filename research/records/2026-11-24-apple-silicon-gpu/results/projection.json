@@ -1,0 +1,40 @@
+{
+ "backend": "mlx",
+ "calls": {
+  "N10000": {
+   "median_s": 0.0013840000028721988,
+   "times_s": [
+    0.00177,
+    0.001384,
+    0.001255,
+    0.00119,
+    0.001399
+   ]
+  },
+  "N50000": {
+   "median_s": 0.0038135829963721335,
+   "times_s": [
+    0.003814,
+    0.003371,
+    0.010207
+   ]
+  },
+  "N250000": {
+   "median_s": 0.022734416997991502,
+   "times_s": [
+    0.022734,
+    0.023738,
+    0.020284
+   ]
+  }
+ },
+ "projection": {
+  "exp1_production_calls": 7500,
+  "exp1_projection_s": 170.50812748493627,
+  "exp1_projection_hours": 0.04736336874581563,
+  "exp3_production_calls": 5000,
+  "exp3_projection_s": 19.067914981860667,
+  "exp3_projection_hours": 0.005296643050516852,
+  "note": "kernel-call cost only; excludes host RNG generation, Python overhead and I/O. Production is NOT run."
+ }
+}

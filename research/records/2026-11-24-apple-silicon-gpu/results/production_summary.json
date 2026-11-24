@@ -1,0 +1,54 @@
+{
+ "machine": "Apple M1 (arm64), macOS 26.6.2",
+ "backend": "mlx 0.32.4",
+ "python": "3.12.14 (/tmp/apple_venv)",
+ "command": "APPLE_GPU_BACKEND=mlx APPLE_PY=/tmp/apple_venv/bin/python ./run_apple.sh production",
+ "wall_s": 313,
+ "label": "PORT-PRODUCTION \u2014 portability demonstration, NOT research results",
+ "outputs": {
+  "exp1_abm_mlx.json": {
+   "rows": 7500,
+   "seeds": 20,
+   "dgps": 5,
+   "arms": 3,
+   "batch_N": 250000,
+   "years": 25,
+   "sha256": "dda35da93d1e963bfac5968238605fcce152d974c60c1cb56f621f100499ad4d",
+   "file": "results/exp1_abm_mlx.json"
+  },
+  "exp2_macro_wall_mlx.csv": {
+   "sha256": "0623cbf292bbb024903c4820f8773ec930764d664f61b2eb2d348c2ffe3437cb",
+   "file": "results/exp2_macro_wall_mlx.csv",
+   "port_output_discrimination": {
+    "macro_only_accuracy": 0.767,
+    "micro_signature_accuracy": 1.0
+   }
+  },
+  "exp3_abc_posterior_mlx.json": {
+   "draws": 5000,
+   "accepted": 500,
+   "batch_n": 50000,
+   "sha256": "9f5ba1cc9d77be2e0c64a30df1d55b2e651ed33ca99e3620d6985556f6ca5f61",
+   "file": "results/exp3_abc_posterior_mlx.json",
+   "identifiability_width_ratio": {
+    "w_pov": [
+     0.914,
+     false
+    ],
+    "w_push": [
+     0.53,
+     true
+    ],
+    "w_tutor": [
+     0.286,
+     true
+    ],
+    "div_beta": [
+     0.795,
+     true
+    ]
+   }
+  }
+ },
+ "note": "These are port outputs from the transcribed kernel; they are not the CUDA outputs and must not be reported as research findings. CUDA bit-equivalence is not claimed."
+}

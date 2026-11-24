@@ -97,3 +97,15 @@ computation; smoke outputs are labelled **PORT-SMOKE, not research results**.
 ## 7. Declared deviations log (append during work)
 
 - (to be filled)
+
+## Declared deviations log (continued)
+
+- Kernel-fingerprint markers were initially too strict (included a Python-side string not present in the CUDA
+  source); corrected before any reported run. No effect on results.
+- PyTorch/MPS is not installed on this machine (documented blocker for backend preference #2); MLX was used,
+  and the NumPy fallback was verified end-to-end.
+- **Production decision executed:** measured projection (kernel-only 171 s exp1 + 19 s exp3, host overhead
+  bounded) put the full configuration well inside the ~2 h budget, so the full production configuration was
+  run once on MLX and completed in **313 s**; its outputs are labelled PORT-PRODUCTION, not research results.
+- Final status: MLX and NumPy smoke/equivalence pass; full production completed; CUDA bit-equivalence not
+  claimed (CUDA unavailable).
