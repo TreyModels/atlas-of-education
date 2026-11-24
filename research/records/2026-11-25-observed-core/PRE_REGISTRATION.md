@@ -239,3 +239,20 @@ Written before `scripts/observed_core.py` was executed.
    appear in `results/predictive.csv`.
 
 No other change.
+
+---
+
+## Amendment 04 — stronger trend benchmark for the LOO folds (dated 2026-11-25, before the full run)
+
+Written after the local smoke run (2 cells, ger_primary/ger_secondary h=1) and before the full server
+run. The smoke showed that a pooled global linear year trend is such a weak cross-country benchmark
+(RMSE ≈ 19–24 vs model ≈ 4) that "skill vs trend ≥ 0" would be trivially satisfied, making the PASS rule
+uninformative. The trend benchmark for LOO and leave-region-out folds becomes:
+
+- **region-specific linear year trend**: pooled OLS of the outcome on year within the test country's World
+  Bank region, fitted on the training rows only; fallback to the global pooled trend if the region has < 30
+  training rows. Time-block folds keep the per-country trend (last ≤ 10 training observations, min 3,
+  fallback persistence).
+
+This makes the trend comparison harder, not easier, and it does not change the PASS thresholds (§4) or any
+data source. It is the only change in this amendment.
