@@ -1,0 +1,17 @@
+proxy,window,delta_demand,direction,n_all,n_in_window,excluded_events_outside_window,forward,reverse,reverse_or_tie,forward_or_tie,undetermined,forward_share_identified,share_identifiable,forward_lower_bound_all,forward_upper_bound_all,median_demand_lead_forward,series_label
+ggdc_nonag_emp,1900-2012,3.0,up,37,30,7,2,5,0,13,10,10.0,66.7,6.7,40.0,-5.5,"OBSERVED (GGDC 10-Sector EMP, 42 countries, 1947-2012)"
+ggdc_nonag_emp,1960-2010,3.0,up,37,9,28,1,3,0,3,2,14.3,77.8,11.1,33.3,-4.0,"OBSERVED (GGDC 10-Sector EMP, 42 countries, 1947-2012)"
+ggdc_nonag_emp,1965-2010,3.0,up,37,5,32,1,3,0,1,0,20.0,100.0,20.0,20.0,-4.0,"OBSERVED (GGDC 10-Sector EMP, 42 countries, 1947-2012)"
+ggdc_nonag_emp,1970-2015,3.0,up,37,3,34,1,1,0,1,0,33.3,100.0,33.3,33.3,-4.0,"OBSERVED (GGDC 10-Sector EMP, 42 countries, 1947-2012)"
+urban,1900-2012,3.0,up,143,101,42,10,14,0,41,36,15.4,64.4,9.9,45.5,-10.0,OBSERVED
+urban,1960-2010,3.0,up,143,65,78,10,7,0,41,7,17.2,89.2,15.4,26.2,-10.0,OBSERVED
+urban,1965-2010,3.0,up,143,11,132,7,4,0,0,0,63.6,100.0,63.6,63.6,-10.0,OBSERVED
+urban,1970-2015,3.0,up,143,2,141,1,1,0,0,0,50.0,100.0,50.0,50.0,-1.0,OBSERVED
+ind_va,1900-2012,3.0,up,143,76,67,13,25,0,16,22,24.1,71.1,17.1,46.1,-6.0,OBSERVED
+ind_va,1960-2010,3.0,up,143,54,89,13,13,0,16,12,31.0,77.8,24.1,46.3,-6.0,OBSERVED
+ind_va,1965-2010,3.0,up,143,34,109,8,9,0,8,9,32.0,73.5,23.5,50.0,-10.0,OBSERVED
+ind_va,1970-2015,3.0,up,143,15,128,3,3,0,4,5,30.0,66.7,20.0,53.3,-19.0,OBSERVED
+agri_va,1900-2012,3.0,down,143,83,60,9,21,0,18,35,18.8,57.8,10.8,53.0,-14.0,OBSERVED
+agri_va,1960-2010,3.0,down,143,58,85,9,15,0,18,16,21.4,72.4,15.5,43.1,-14.0,OBSERVED
+agri_va,1965-2010,3.0,down,143,36,107,7,10,0,7,12,29.2,66.7,19.4,52.8,-8.0,OBSERVED
+agri_va,1970-2015,3.0,down,143,14,129,2,3,0,3,6,25.0,57.1,14.3,57.1,-13.5,OBSERVED

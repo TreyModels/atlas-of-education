@@ -1,0 +1,10 @@
+file,source,sha256,size_bytes
+ggdc_10sd_2014.zip,https://www.rug.nl/ggdc/docs/10sd_jan15_2014.zip,061a076739d36d14d089ffa31178ac7894925ebf886e40746323893d702279a7,554865
+ggdc_10sd_2014/10SD_jan15.dta,https://www.rug.nl/ggdc/docs/10sd_jan15_2014.zip (extracted),7447311a9a9a968a9456b4028cf18c75210c20c374647f31d17b6978ccf00bb8,1031204
+pwt1001.dta,https://dataverse.nl/api/access/datafile/354098 (PWT 10.01),746a483666a5371f8e686f8bfea6c20e211e5ecdd928842c6e01d2bd623ffb4c,3452645
+long_run_panel.csv,research/records/2026-11-24-next-tests/data/long_run_panel.csv @ origin/research/assessment-and-next-experiments-2026-11-24,cd30d7ea7beb77b63de092c53f9b143065b94651f1ac95535ac70eebb3280f2d,2798331
+event_dates.csv,research/records/2026-11-25-paper-sequencing-novel/results/event_dates.csv @ origin/research/paper-sequencing-novel-2026-11-25,d0c02f95ade0850eacfb4edb73a3a9e5a837624a6bdefe1dbe12043bd10413af,6310
+wdi_SP.URB.TOTL.IN.ZS.zip,https://api.worldbank.org/v2/en/indicator/SP.URB.TOTL.IN.ZS?downloadformat=csv,0f0f5e09134f35e4d8986f08497915809728a1112e9ea59e7b3b450ad5b238c6,160134
+wdi_NV.IND.TOTL.ZS.zip,https://api.worldbank.org/v2/en/indicator/NV.IND.TOTL.ZS?downloadformat=csv,5c987a4319aaff7f7f077a534c15b826fe7f09ced15e7349edf7dde8387579d9,113521
+wdi_NV.AGR.TOTL.ZS.zip,https://api.worldbank.org/v2/en/indicator/NV.AGR.TOTL.ZS?downloadformat=csv,adb17a1cd49f70015f966cbf2a449305c7b511084c3a46872963c3a4458fbe32,115190
+wdi_SL.AGR.EMPL.ZS.zip,https://api.worldbank.org/v2/en/indicator/SL.AGR.EMPL.ZS?downloadformat=csv,3b5e81a8215cf08fa12638da062cc9458048fa0ba9293f51d4e5021f29c99b79,87616
