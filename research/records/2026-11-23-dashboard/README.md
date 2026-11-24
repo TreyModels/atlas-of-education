@@ -658,3 +658,58 @@ Seven manuscripts were mined from the verified branches, each with a claim-by-cl
 **Corrections made during the wave (all documented):** the 68.75%-vs-37.5% schooling-before-fertility figure (a tie-counting artefact; strict ordering is 37.5%, CI 26.6–50.0%) in Paper M and its source record; four wrong world-polity DOIs and book-as-article DOIs in Paper M; wrong-title references in Paper F; the release-vs-fertility ordering (6.25% release-first) verified separate from schooling-vs-fertility; and a commit-message overclaim in Paper F, corrected by rebuilding and grepping the assembled draft.
 
 **Open for the next session:** DHS Individual Recode acquisition (the biggest available upgrade to Paper F); the GPU negative-result paper (the only paper-carrying candidate without a draft); Paper M's alternative-threshold recoding and date-by-source table (blocked by the downed box); Part C DOI re-verification; and the auditor's request to stress-test the multiverse draw-count rule before the methods paper goes out.
+
+---
+
+## Codex wave addendum (24 November 2026) — closed and verified
+
+**This addendum is the current status.** The sections above describe the 23 November waves and are left unchanged (no rewrite). Where an earlier sentence is superseded by the closed Codex wave, the supersession is listed below; read those sentences through this list. Full provenance, the recomputation script and every UNVERIFIED mark are in the synthesis record:
+`research/records/2026-11-24-codex-wave-synthesis/SYNTHESIS.md` on `research/codex-wave-synthesis-2026-11-24`.
+
+### The nine verified heads
+
+| Item | Branch | Head |
+|---|---|---|
+| Q1 mechanisms (synthetic known-truth pilot + GPU gate) | `research/q1-mechanisms-2026-11-25` | `9b0cabe` |
+| Q2 country pathways (pair benchmark, audit, cases) | `research/q2-pathways-2026-11-25` | `f71b789` |
+| Q3 multiverse calibration + full BH/BY | `research/q3-multiverse-calibration-2026-11-25` | `db7814d` |
+| E1 multiverse at R = 1,200 | `research/e1-multiverse-1200-2026-11-25` | `7e6f7b5` |
+| E6/E8 sequencing repairs | `research/e6e8-sequencing-2026-11-25` | `2d19da7` |
+| E11 fertility audit (EFR vs TFR) | `research/e11-fertility-audit-2026-11-25` | `e926575` |
+| Source verification (fee dates, demand series, prior art) | `research/codex-source-verification-2026-11-25` | `9a0fd69` |
+| Methods paper | `research/methods-multiverse-paper-2026-11-23` | `d7e8f9f` |
+| Paper F | `research/paper-fertility-2026-11-25` | `ec899cc` |
+
+Verification ledger: `research/records/2026-11-24-handoff/codex_wave_ledger.md` @ `51f9f02`. The dashboard's "Papers produced" table is stale on two heads: the methods paper is now `d7e8f9f` (was `1fef07e`) and Paper F is `ec899cc` (was `6f4d6fb`). Paper M and N1 revisions remain open on their branches.
+
+### What the wave established (numbers recomputed from committed files)
+
+- **The macro wall:** only **5 of 272** within-country links are robust in every grouping; the other 267 fall under the remaining verdicts (group-specific, beats-random-without-a-clear-group, or no better than random) under this estimator. This is a transportability description, not a causal claim.
+- **The selection criteria fail their own control (synthetic):** on the pre-registered zero-signal control, raw held-out MSE picks the flexible kernel in **97.5%** of W1 and W2 replicates and BIC picks the parsimonious one in **100%** of every world. A "model winner" is a complexity artefact. Simulation, not history.
+- **"Robust everywhere" is not a homogeneity certificate:** in known-truth calibration it labels a minority-effect world robust **87.0%** of the time (348/400 replicates) while localising the planted group only **42.0%**. The null false-positive rate is 4.25% and a strong uniform effect is found 97.5% of the time.
+- **"BY certifies zero" is a draw-budget statement:** dependence-robust BY certifies **0/0/0/0** at R = 400 and stays 0 at R = 800; at R = 1,200 it certifies **32 heterogeneity links** only, while up/down/sign-flip stay 0. Nominal BH is **35/19/15/53** at 400 and **41/23/20/53** at 1,200.
+- **No identified causal schooling→fertility effect, no mechanism winner, and no claim that demand is ruled out.** The three candidate mechanisms remain observationally equivalent at the aggregate level; the E11 change ladder returns "does not discriminate".
+- **Effective fertility is not TFR:** surviving children vs births differ by median **0.3042** (max **4.2677**) and flip the schooling lead/lag (**0.541** vs **1.555**). The two constructs are not interchangeable and neither corrects the other.
+- **The 68.75%/69% figure was a tie-counting artefact:** strict schooling-before-fertility is **37.5%** (24/64; bootstrap 95% CI **26.6–50.0%**), with **31.25% simultaneous** and **31.25% fertility-first**; the old figure counted the ties as schooling-first.
+- **The 7% labour-demand figure is retracted** (1991+ data start). E6's replacement on pre-1990 series: demand-first **10.0%** (GGDC non-ag employment), **15.4%** (urbanisation), **24.1%** (industry VA), **18.8%** (agriculture VA), bounds **6.7–53.0%**, ties/censoring **21.1–43.3%** → **"schooling and structural change move together"**, with schooling typically but not universally first.
+- **Source verification:** 8 of 12 fee-abolition dates verified (4 unresolved: CMR, ZMB, RWA, BDI); **no pre-1990 wage-employment series exists** in the standard public sources checked (WDI/ILO modelled wage series begin 1991); prior art verified with DOI status.
+- **E8 event study (design-conditional):** fee abolition shows a large positive primary-GER post effect with flat −2/−3/−4 pre-trends (on-impact +12.44 [−2.36, 27.24]; +6 25.92 [8.64, 43.20]); placebo −0.39; leave-one-out 18.17–26.16. **"Consistent with"** a fee-abolition effect; no causal claim. The secondary-GER proxy shows no clear effect.
+
+### Superseded text in this dashboard (do not quote the earlier sentences without this list)
+
+1. **"schooling before fertility in 69% (58–80%)"** (Subsistence v2, line 614) — retracted; use 37.5% strict (24/64, CI 26.6–50.0). The corrections note in the Papers section records the 68.75-vs-37.5 fix, but the finding sentence was not rewritten.
+2. **"labour-market demand … precedes schooling in only 7%"** (Supply-led or demand-led?, line 618) — retracted as a 1991+ artefact; use the E6 numbers above. Do not use it as evidence against demand.
+3. **"supply-led is the better description"** (line 618) — softened; the defensible statement is "schooling and structural change move together".
+4. **"BY certifies 0 in every procedure at 400 draws"** (Papers table, line 648) — true at 400 and 800 draws, not universal: at 1,200 BY certifies 32 heterogeneity links.
+5. **"a causal reading is rejected" / "development gradient, not identified causality"** (lines 513, 598; and Codex F11) — too strong; the level association is consistent with a common development gradient, anticipation/quantity-quality, and a long-lag schooling effect, and the design cannot reject a schooling effect.
+6. **"robust everywhere" as an effect-homogeneity claim** (lines 136, 356, 358, 362) — it is a descriptive significance-share rule; the minority-world calibration above is the reason.
+7. **The 61/64 "schooling precedes agricultural labour release" result** (line 614) is a *separate ordering* from the retracted schooling-vs-fertility 69%; the Codex wave does not re-examine it, so it retains its existing descriptive late-industrialiser panel status (the 19th-century US/UK gaps remain), and the two orderings must not be merged.
+8. **Header status (line 3)** describes the 23 November dashboard; current status is this addendum.
+
+### Recompute status
+
+The addendum's headline numbers were recomputed from committed source files before being quoted (8 recomputation rows in the synthesis record §6, including the 5/272 wall, the 97.5%/100% zero-signal control, the 87.0%/42.0% minority calibration, the BH/BY counts at R = 400/800/1,200, the EFR/TFR lead-lag and |diff| figures, the E6 shares and bounds, the Q2 105/52/1/52, and the 37.5% strict ordering). Numbers that were not recomputed — the E8 event ATTs, the Q2 matching/yardstick shares, the Q3 design grid, and the methods-paper 76/161 counts — are marked **UNVERIFIED (committed field only)** in the synthesis record §7; do not quote them as established.
+
+### Forward programme
+
+The aggregate regression route is exhausted at this resolution. Next: **micro-simulation** with explicit simulation-vs-history labels (the GPU suite, Apple Silicon port first); **micro tie-breakers** that separate observationally equivalent mechanisms; and **DHS Individual Recode microdata** (individual schooling → children-ever-born, cohort comparisons, EFR/TFR construct split). Keep the EFR-vs-TFR labels and the draw-budget/dependence caveats attached to every "robust" or "BY" statement.
