@@ -1,0 +1,539 @@
+{
+  "cuda_dump": "cuda_reference/cuda_kernel_dump.npz",
+  "cuda_dump_sha256": "bf934925af800242421b27c9632ff2b275c030441ff3bf739007d239cf9b2856",
+  "cuda_capture": {
+    "gpu": "Tesla T4 (16 GB), driver 565.57.01, CUDA 12.7",
+    "n": 10000,
+    "seed": 20261125,
+    "threads": 256,
+    "blocks": 40,
+    "n_launches": 10,
+    "cupy": "13.6.0",
+    "numpy": "2.2.6",
+    "data_stream": "numpy Philox(seed) -> float64 normal -> float32 (port mapping)"
+  },
+  "port_environment": {
+    "interpreter": "/Users/treymenefee/atlas-work-2026-11-23/apple-venv310/bin/python",
+    "python": "3.10.2",
+    "numpy": "2.2.6",
+    "mlx": null
+  },
+  "tolerance": {
+    "int_mismatches": 0,
+    "float_max_abs": 1e-05,
+    "float_max_rel": 0.0001,
+    "rel_floor": 1e-06
+  },
+  "results": [
+    {
+      "launch": "DGP_ZERO_SIGNAL_t0",
+      "backend": "numpy",
+      "dgp": "DGP_ZERO_SIGNAL",
+      "year": 0,
+      "int": {
+        "state": 0,
+        "tutor": 0
+      },
+      "float": {
+        "learn": {
+          "max_abs": 0.0,
+          "max_rel": 0.0
+        },
+        "work": {
+          "max_abs": 3.814697265625e-06,
+          "max_rel": 1.191500455331899e-07
+        },
+        "y_hh": {
+          "max_abs": 0.0,
+          "max_rel": 0.0
+        }
+      },
+      "pass": true
+    },
+    {
+      "launch": "DGP_ZERO_SIGNAL_t0",
+      "backend": "mlx",
+      "dgp": "DGP_ZERO_SIGNAL",
+      "year": 0,
+      "int": {
+        "state": 0,
+        "tutor": 0
+      },
+      "float": {
+        "learn": {
+          "max_abs": 0.0,
+          "max_rel": 0.0
+        },
+        "work": {
+          "max_abs": 3.814697265625e-06,
+          "max_rel": 1.191500455331899e-07
+        },
+        "y_hh": {
+          "max_abs": 0.0,
+          "max_rel": 0.0
+        }
+      },
+      "pass": true
+    },
+    {
+      "launch": "DGP_ZERO_SIGNAL_t12",
+      "backend": "numpy",
+      "dgp": "DGP_ZERO_SIGNAL",
+      "year": 12,
+      "int": {
+        "state": 0,
+        "tutor": 0
+      },
+      "float": {
+        "learn": {
+          "max_abs": 0.0,
+          "max_rel": 0.0
+        },
+        "work": {
+          "max_abs": 3.814697265625e-06,
+          "max_rel": 1.1919887390439845e-07
+        },
+        "y_hh": {
+          "max_abs": 0.0,
+          "max_rel": 0.0
+        }
+      },
+      "pass": true
+    },
+    {
+      "launch": "DGP_ZERO_SIGNAL_t12",
+      "backend": "mlx",
+      "dgp": "DGP_ZERO_SIGNAL",
+      "year": 12,
+      "int": {
+        "state": 0,
+        "tutor": 0
+      },
+      "float": {
+        "learn": {
+          "max_abs": 0.0,
+          "max_rel": 0.0
+        },
+        "work": {
+          "max_abs": 3.814697265625e-06,
+          "max_rel": 1.1919887390439845e-07
+        },
+        "y_hh": {
+          "max_abs": 0.0,
+          "max_rel": 0.0
+        }
+      },
+      "pass": true
+    },
+    {
+      "launch": "DGP_POVERTY_t0",
+      "backend": "numpy",
+      "dgp": "DGP_POVERTY",
+      "year": 0,
+      "int": {
+        "state": 0,
+        "tutor": 0
+      },
+      "float": {
+        "learn": {
+          "max_abs": 0.0,
+          "max_rel": 0.0
+        },
+        "work": {
+          "max_abs": 3.814697265625e-06,
+          "max_rel": 1.191500455331899e-07
+        },
+        "y_hh": {
+          "max_abs": 0.0,
+          "max_rel": 0.0
+        }
+      },
+      "pass": true
+    },
+    {
+      "launch": "DGP_POVERTY_t0",
+      "backend": "mlx",
+      "dgp": "DGP_POVERTY",
+      "year": 0,
+      "int": {
+        "state": 0,
+        "tutor": 0
+      },
+      "float": {
+        "learn": {
+          "max_abs": 0.0,
+          "max_rel": 0.0
+        },
+        "work": {
+          "max_abs": 3.814697265625e-06,
+          "max_rel": 1.191500455331899e-07
+        },
+        "y_hh": {
+          "max_abs": 0.0,
+          "max_rel": 0.0
+        }
+      },
+      "pass": true
+    },
+    {
+      "launch": "DGP_POVERTY_t12",
+      "backend": "numpy",
+      "dgp": "DGP_POVERTY",
+      "year": 12,
+      "int": {
+        "state": 0,
+        "tutor": 0
+      },
+      "float": {
+        "learn": {
+          "max_abs": 5.960464477539063e-08,
+          "max_rel": 7.129111706265198e-08
+        },
+        "work": {
+          "max_abs": 3.814697265625e-06,
+          "max_rel": 1.1919887390439845e-07
+        },
+        "y_hh": {
+          "max_abs": 0.0,
+          "max_rel": 0.0
+        }
+      },
+      "pass": true
+    },
+    {
+      "launch": "DGP_POVERTY_t12",
+      "backend": "mlx",
+      "dgp": "DGP_POVERTY",
+      "year": 12,
+      "int": {
+        "state": 0,
+        "tutor": 0
+      },
+      "float": {
+        "learn": {
+          "max_abs": 5.960464477539063e-08,
+          "max_rel": 7.129111706265198e-08
+        },
+        "work": {
+          "max_abs": 3.814697265625e-06,
+          "max_rel": 1.1919887390439845e-07
+        },
+        "y_hh": {
+          "max_abs": 0.0,
+          "max_rel": 0.0
+        }
+      },
+      "pass": true
+    },
+    {
+      "launch": "DGP_SCHOOL_PUSH_t0",
+      "backend": "numpy",
+      "dgp": "DGP_SCHOOL_PUSH",
+      "year": 0,
+      "int": {
+        "state": 0,
+        "tutor": 0
+      },
+      "float": {
+        "learn": {
+          "max_abs": 0.0,
+          "max_rel": 0.0
+        },
+        "work": {
+          "max_abs": 3.814697265625e-06,
+          "max_rel": 1.191500455331899e-07
+        },
+        "y_hh": {
+          "max_abs": 0.0,
+          "max_rel": 0.0
+        }
+      },
+      "pass": true
+    },
+    {
+      "launch": "DGP_SCHOOL_PUSH_t0",
+      "backend": "mlx",
+      "dgp": "DGP_SCHOOL_PUSH",
+      "year": 0,
+      "int": {
+        "state": 0,
+        "tutor": 0
+      },
+      "float": {
+        "learn": {
+          "max_abs": 0.0,
+          "max_rel": 0.0
+        },
+        "work": {
+          "max_abs": 3.814697265625e-06,
+          "max_rel": 1.191500455331899e-07
+        },
+        "y_hh": {
+          "max_abs": 0.0,
+          "max_rel": 0.0
+        }
+      },
+      "pass": true
+    },
+    {
+      "launch": "DGP_SCHOOL_PUSH_t12",
+      "backend": "numpy",
+      "dgp": "DGP_SCHOOL_PUSH",
+      "year": 12,
+      "int": {
+        "state": 0,
+        "tutor": 0
+      },
+      "float": {
+        "learn": {
+          "max_abs": 0.0,
+          "max_rel": 0.0
+        },
+        "work": {
+          "max_abs": 3.814697265625e-06,
+          "max_rel": 1.1919887390439845e-07
+        },
+        "y_hh": {
+          "max_abs": 0.0,
+          "max_rel": 0.0
+        }
+      },
+      "pass": true
+    },
+    {
+      "launch": "DGP_SCHOOL_PUSH_t12",
+      "backend": "mlx",
+      "dgp": "DGP_SCHOOL_PUSH",
+      "year": 12,
+      "int": {
+        "state": 0,
+        "tutor": 0
+      },
+      "float": {
+        "learn": {
+          "max_abs": 0.0,
+          "max_rel": 0.0
+        },
+        "work": {
+          "max_abs": 3.814697265625e-06,
+          "max_rel": 1.1919887390439845e-07
+        },
+        "y_hh": {
+          "max_abs": 0.0,
+          "max_rel": 0.0
+        }
+      },
+      "pass": true
+    },
+    {
+      "launch": "DGP_CROWDING_TUTOR_t0",
+      "backend": "numpy",
+      "dgp": "DGP_CROWDING_TUTOR",
+      "year": 0,
+      "int": {
+        "state": 0,
+        "tutor": 0
+      },
+      "float": {
+        "learn": {
+          "max_abs": 5.960464477539063e-08,
+          "max_rel": 8.839181261996427e-08
+        },
+        "work": {
+          "max_abs": 3.814697265625e-06,
+          "max_rel": 1.191500455331899e-07
+        },
+        "y_hh": {
+          "max_abs": 0.0,
+          "max_rel": 0.0
+        }
+      },
+      "pass": true
+    },
+    {
+      "launch": "DGP_CROWDING_TUTOR_t0",
+      "backend": "mlx",
+      "dgp": "DGP_CROWDING_TUTOR",
+      "year": 0,
+      "int": {
+        "state": 0,
+        "tutor": 0
+      },
+      "float": {
+        "learn": {
+          "max_abs": 5.960464477539063e-08,
+          "max_rel": 8.839181261996427e-08
+        },
+        "work": {
+          "max_abs": 3.814697265625e-06,
+          "max_rel": 1.191500455331899e-07
+        },
+        "y_hh": {
+          "max_abs": 0.0,
+          "max_rel": 0.0
+        }
+      },
+      "pass": true
+    },
+    {
+      "launch": "DGP_CROWDING_TUTOR_t12",
+      "backend": "numpy",
+      "dgp": "DGP_CROWDING_TUTOR",
+      "year": 12,
+      "int": {
+        "state": 0,
+        "tutor": 0
+      },
+      "float": {
+        "learn": {
+          "max_abs": 5.960464477539063e-08,
+          "max_rel": 1.104056557726094e-07
+        },
+        "work": {
+          "max_abs": 3.814697265625e-06,
+          "max_rel": 1.1913230225914159e-07
+        },
+        "y_hh": {
+          "max_abs": 0.0,
+          "max_rel": 0.0
+        }
+      },
+      "pass": true
+    },
+    {
+      "launch": "DGP_CROWDING_TUTOR_t12",
+      "backend": "mlx",
+      "dgp": "DGP_CROWDING_TUTOR",
+      "year": 12,
+      "int": {
+        "state": 0,
+        "tutor": 0
+      },
+      "float": {
+        "learn": {
+          "max_abs": 5.960464477539063e-08,
+          "max_rel": 1.104056557726094e-07
+        },
+        "work": {
+          "max_abs": 3.814697265625e-06,
+          "max_rel": 1.1913230225914159e-07
+        },
+        "y_hh": {
+          "max_abs": 0.0,
+          "max_rel": 0.0
+        }
+      },
+      "pass": true
+    },
+    {
+      "launch": "DGP_MIXED_t0",
+      "backend": "numpy",
+      "dgp": "DGP_MIXED",
+      "year": 0,
+      "int": {
+        "state": 0,
+        "tutor": 0
+      },
+      "float": {
+        "learn": {
+          "max_abs": 0.0,
+          "max_rel": 0.0
+        },
+        "work": {
+          "max_abs": 3.814697265625e-06,
+          "max_rel": 1.191500455331899e-07
+        },
+        "y_hh": {
+          "max_abs": 0.0,
+          "max_rel": 0.0
+        }
+      },
+      "pass": true
+    },
+    {
+      "launch": "DGP_MIXED_t0",
+      "backend": "mlx",
+      "dgp": "DGP_MIXED",
+      "year": 0,
+      "int": {
+        "state": 0,
+        "tutor": 0
+      },
+      "float": {
+        "learn": {
+          "max_abs": 0.0,
+          "max_rel": 0.0
+        },
+        "work": {
+          "max_abs": 3.814697265625e-06,
+          "max_rel": 1.191500455331899e-07
+        },
+        "y_hh": {
+          "max_abs": 0.0,
+          "max_rel": 0.0
+        }
+      },
+      "pass": true
+    },
+    {
+      "launch": "DGP_MIXED_t12",
+      "backend": "numpy",
+      "dgp": "DGP_MIXED",
+      "year": 12,
+      "int": {
+        "state": 0,
+        "tutor": 0
+      },
+      "float": {
+        "learn": {
+          "max_abs": 5.960464477539063e-08,
+          "max_rel": 9.805301039901202e-08
+        },
+        "work": {
+          "max_abs": 3.814697265625e-06,
+          "max_rel": 1.1919887390439845e-07
+        },
+        "y_hh": {
+          "max_abs": 0.0,
+          "max_rel": 0.0
+        }
+      },
+      "pass": true
+    },
+    {
+      "launch": "DGP_MIXED_t12",
+      "backend": "mlx",
+      "dgp": "DGP_MIXED",
+      "year": 12,
+      "int": {
+        "state": 0,
+        "tutor": 0
+      },
+      "float": {
+        "learn": {
+          "max_abs": 5.960464477539063e-08,
+          "max_rel": 9.805301039901202e-08
+        },
+        "work": {
+          "max_abs": 3.814697265625e-06,
+          "max_rel": 1.1919887390439845e-07
+        },
+        "y_hh": {
+          "max_abs": 0.0,
+          "max_rel": 0.0
+        }
+      },
+      "pass": true
+    }
+  ],
+  "summary": {
+    "n_launches": 20,
+    "n_pass": 20,
+    "n_fail": 0,
+    "int_mismatches_total": 0,
+    "max_abs_overall": 3.814697265625e-06,
+    "max_rel_overall": 1.1919887390439845e-07,
+    "verdict": "PASS",
+    "note": "Inputs are the CUDA run's own saved base_y/ability, so this isolates the transcription; the port's data-generation stream is not involved. PORT-PROVENANCE test, not a research result."
+  }
+}

@@ -8,8 +8,10 @@ scripts**. It is a portability layer, not a CUDA emulator and not a research re-
 
 - macOS 13+ on Apple Silicon (tested: M1, macOS 26.6.2, arm64).
 - Python 3.10–3.13 with `numpy`, `pandas`, `requests`, `scikit-learn`, `statsmodels`, and **`mlx`**
-  (preferred backend): `python3 -m venv .venv && . .venv/bin/activate && pip install numpy pandas requests
-  scikit-learn statsmodels mlx`.
+  (preferred backend). The tested environment is pinned in `requirements.txt` (Python 3.10.2, mlx 0.32.4,
+  numpy 2.2.6); reproducible interpreter and provenance are in `env_provenance.json`. The committed results
+  were produced under `/private/tmp/apple_venv` and reproduced bit-identically under the durable
+  `apple-venv310`.
 - No CUDA, no CuPy, no GPU toolkit. PyTorch is optional; if installed with MPS it is used only if
   `APPLE_GPU_BACKEND=torch`/`mps` and the layer falls back to NumPy when unavailable.
 
@@ -57,15 +59,25 @@ transcription (see "Adding a kernel" below); there is no automatic CUDA→MLX tr
 - `tests/run_equivalence.py` compares the NumPy reference and the MLX backend on the same fixed-seed kernel:
   integer states must match exactly; continuous arrays are checked against `1e-5` abs / `1e-4` rel
   (float32 rounding). `results/equivalence.json` records the outcome.
-- **No CUDA equivalence is claimed.** The CUDA kernel cannot be executed here, so the port is equivalent to
-  the *NumPy transcription of the same CUDA source*, and the data-generation RNG uses a documented NumPy
-  Philox mapping (CuPy's exact stream cannot be checked without CUDA). CUDA-run numbers and port numbers can
-  differ because the data draws differ even at the same seed.
-- Outputs from this layer are labelled **PORT-SMOKE / PORT-PRODUCTION** and are not research results.
+- **The kernel transcription is verified against the real CUDA kernel.** A T4 capture of 10 unmodified CUDA
+  `sim_step` launches (same inputs) is replayed through both transcriptions by
+  `tests/verify_cuda_kernel.py`: **0 integer mismatches, max abs 3.815e-6, max rel 1.192e-7** on 10 launches
+  x 2 backends (`results/cuda_vs_transcription.json`).
+- **CUDA *data-stream* equivalence is not claimed.** Under CuPy 13.6 the real `cp.random.default_rng(seed)` is
+  **XORWOW** and has **no `.normal`** (the upstream scripts fail as shipped on that CuPy; failure preserved in
+  `cuda_reference/run_as_shipped.log`). The port defines the data stream as NumPy Philox, so a CUDA run and a
+  port run at the same seed consume different data draws. Same-seed CUDA-vs-port *end-to-end* numbers are
+  therefore not comparable; the kernel-level verification above is.
+- Outputs from this layer are labelled **PORT-SMOKE / PORT-PRODUCTION** and are not research results. The
+  suite's own audit (`research/suite-lit-review-2026-11-24` @ `4649cae`, `AUDIT.md` §9) shows the shipped exp2
+  implements no H1 test and no zero-signal control (H4); the port's exp2/exp3 numbers are construction-implied
+  artefacts, not evidence.
 
 ## Files
 
 `gpu_compat.py` (CuPy subset + RawModule dispatch), `kernels_np_mlx.py` (kernel transcription),
-`shim/cupy/__init__.py` (import shim), `tests/` (equivalence, components, projection),
-`run_apple.sh` (runner), `results/` (evidence), `REPORT.md` (full report), `PRE_REGISTRATION.md` (scope and
-tolerances fixed before coding).
+`shim/cupy/__init__.py` (import shim), `tests/` (equivalence, components, projection, **verify_cuda_kernel**),
+`run_apple.sh` (runner), `requirements.txt` + `env_provenance.json` (pinned, durable environment),
+`cuda_reference/` (real CUDA kernel ground truth + as-shipped failure), `results/` (evidence), `REPORT.md`
+(full report), `PRE_REGISTRATION.md` (scope and tolerances fixed before coding) and
+`ADDENDUM_2026-11-24_env.md` (environment and RNG facts, corrections).

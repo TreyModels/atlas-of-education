@@ -133,3 +133,42 @@ NumPy stream compatibility") is not true for CuPy 13.6's default generator.
 4. **T4 used only for the CUDA reference**, then shut down (`关机`, not release).
 5. No change to hypotheses, tolerances, smoke/scale decision, or the rule that the
    NumPy backend is the reference.
+
+## E. Correction to §A — the pre-registration was right about MLX; the environment scan was wrong
+
+**§A above is itself incorrect and is corrected here (append-only; §A is not rewritten).** The claim that
+MLX was "not installed" when the pre-registration was written was wrong. The Lead's environment scan (and the
+Commander's initial scan) checked the standard interpreters and `~/.venvs` but missed **`/tmp/apple_venv`**,
+created **2026-11-24 17:51:25 local — before the seam (17:53)**. That venv has Python 3.10.2, **mlx 0.32.4**,
+numpy 2.2.6, and `mx.default_device()` → `Device(gpu, 0)`. **That is the environment the pre-registration's
+"MLX (installed, tested)" refers to, and the pre-registration was accurate.**
+
+The port venv `/Users/treymenefee/atlas-work-2026-11-23/apple-venv` (Python 3.11.17, mlx 0.32.4, numpy 2.4.6,
+pandas 3.1.1, scikit-learn 1.9.1, statsmodels 0.15.0, scipy 1.17.1) exists as a **second, independent
+environment** created by the Commander; it was not a repair of a missing dependency and is not the canonical
+one.
+
+**Timeline correction.** §A also said this addendum was "written before any port code was written". In commit
+order that is not accurate: the port-completion commit `fd933d9` (18:03:52) was produced in parallel from the
+pre-registered design, and *then* this addendum was committed (`5ca8b43`, 18:04:41). What is true, and what
+matters for the pre-registration's integrity: **no hypothesis, tolerance, smoke/scale rule, backend-selection
+rule or decision criterion was changed after seeing results.** The addendum records environment facts and
+declared deviations; §B (CuPy 13.6 RNG reality) and §D (MPS unimplemented, T4 use) stand unchanged.
+
+**Which interpreter produced each reported run** (full detail in `env_provenance.json`):
+
+| artifact | interpreter that produced the committed artifact | durable reproduction |
+|---|---|---|
+| `results/smoke_exp1_{numpy,mlx}.json`, `smoke_exp3_*.json`, `equivalence.json`, `component_tests.json`, `projection.json` | `/private/tmp/apple_venv/bin/python` — Python 3.10.2, mlx 0.32.4, numpy 2.2.6 | re-run under `apple-venv310` (Python 3.10.2, identical pinned versions): **bit-identical outputs**, only wall-time log lines differ |
+| `results/exp1_abm_mlx.json`, `exp2_macro_wall_mlx.csv`, `exp3_abc_posterior_mlx.json` (production) | `/private/tmp/apple_venv/bin/python` (313 s) | re-run under `apple-venv310`: **374 s, all three sha256 identical** |
+| `results/cuda_vs_transcription.json` | `apple-venv310` (durable) | deterministic given the saved CUDA dump |
+
+The canonical durable environment is therefore
+`/Users/treymenefee/atlas-work-2026-11-23/apple-venv310/bin/python` (pinned by `requirements.txt`,
+recorded in `env_provenance.json`). `/tmp/apple_venv` is not durable and is documented only as the original run
+environment.
+
+**Provenance defect corrected.** `results/production_summary.json` previously said
+`"python": "3.12.14 (/tmp/apple_venv)"`. Both parts were wrong: `/tmp/apple_venv` is Python **3.10.2**, and
+3.12.14 is `/tmp/shape-venv` (no mlx, created 07:20, predates the port). The summary now records the true
+interpreter, the durable re-run, and the audit caveat.

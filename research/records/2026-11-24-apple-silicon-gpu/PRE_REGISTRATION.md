@@ -109,3 +109,19 @@ computation; smoke outputs are labelled **PORT-SMOKE, not research results**.
   run once on MLX and completed in **313 s**; its outputs are labelled PORT-PRODUCTION, not research results.
 - Final status: MLX and NumPy smoke/equivalence pass; full production completed; CUDA bit-equivalence not
   claimed (CUDA unavailable).
+
+- **Explicit override of §5's default decision (corrected).** §5's default is *not* to run the full
+  production configuration on this laptop. The full configuration **was run** (the forward programme's job #2
+  requires the ported run). This is a **declared override of that default**, not an application of the
+  pre-registered rule as the log line above states; outputs remain labelled PORT-PRODUCTION, not research.
+  Justification: the measured MLX projection was time-bounded, and the run doubles as the port's scale test.
+- **CUDA reference captured (T4, 2026-11-24).** The kernel transcription was verified against 10 real CUDA
+  launches of the unmodified `sim_step` (5 DGPs x t=0/12, seed 20261125, N=10,000): **0 integer mismatches,
+  max abs 3.815e-06, max rel 1.192e-07** — inside §4's tolerances (`results/cuda_vs_transcription.json`).
+  What cannot be compared is the data-generation stream: CuPy 13.6's `default_rng` is XORWOW with no `.normal`,
+  so the port's NumPy-Philox stream is the port's own definition. See `ADDENDUM_2026-11-24_env.md` §B/§E.
+- **Environment provenance corrected.** The originally committed runs used `/private/tmp/apple_venv`
+  (Python 3.10.2, mlx 0.32.4, numpy 2.2.6; not durable). A durable pinned re-creation
+  (`apple-venv310`, same versions) reproduces every output bit-identically; production re-run 374 s vs 313 s,
+  identical sha256. `results/production_summary.json` previously recorded a wrong interpreter string
+  ("3.12.14"), now fixed. Canonical environment: `env_provenance.json`, `requirements.txt`.

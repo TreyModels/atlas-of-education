@@ -1,0 +1,52 @@
+[run_apple] backend=mlx python=/Users/treymenefee/atlas-work-2026-11-23/apple-venv310/bin/python
+EXP-1 complete in 318.62s | rows=7500 | batch_N=250000
+3-DGP discrimination | Macro-only accuracy: 0.767 | Micro-signature accuracy: 1.000
+                                               d_ger  d_study_work  d_hidden_work    d_tutoring
+dgp                arm                                                                         
+DGP_CROWDING_TUTOR binary_ban           2.663816e-02 -7.066538e-02       0.841396  7.069799e-02
+                   protective_capacity  8.600045e-01  4.435255e-01       0.000000  9.003631e-01
+                   tuition_only         5.572017e-01  3.842604e-01       0.000000  4.613432e-01
+DGP_MIXED          binary_ban          -5.603667e-04 -5.658200e-04       0.999991 -3.516667e-04
+                   protective_capacity  9.055987e-01  6.375091e-01       0.000000  8.931412e-01
+                   tuition_only         1.548085e-01  1.525738e-01       0.000000  1.408244e-01
+DGP_POVERTY        binary_ban          -2.200000e-07 -2.200000e-07       0.998552 -1.800000e-07
+                   protective_capacity  6.113566e-01  5.027320e-01      -0.001392  9.047695e-02
+                   tuition_only         8.874258e-02  8.224045e-02      -0.001392  2.469914e-02
+DGP_SCHOOL_PUSH    binary_ban           0.000000e+00  0.000000e+00       1.000000  0.000000e+00
+                   protective_capacity  6.251259e-01  5.617422e-01       0.000000  2.025716e-01
+                   tuition_only         4.986667e-06  4.986667e-06       0.000000  4.546667e-06
+DGP_ZERO_SIGNAL    binary_ban           0.000000e+00  0.000000e+00       1.000000  0.000000e+00
+                   protective_capacity  1.012363e-01  1.012363e-01       0.000000  0.000000e+00
+                   tuition_only         0.000000e+00  0.000000e+00       0.000000  0.000000e+00
+Pulled public WDI/ILO-UCW targets for 14 countries.
+{
+  "w_pov": {
+    "q05": 0.1226347839484726,
+    "median": 1.3511177978936586,
+    "q95": 2.8631936788510197,
+    "width_ratio": 0.9135196316341824,
+    "identified": false
+  },
+  "w_push": {
+    "q05": 0.04677058915029525,
+    "median": 0.5730339545886252,
+    "q95": 1.6360833088450597,
+    "width_ratio": 0.5297709065649215,
+    "identified": true
+  },
+  "w_tutor": {
+    "q05": 2.1016216497951046,
+    "median": 2.673331959181958,
+    "q95": 2.9601851091920963,
+    "width_ratio": 0.28618781979899727,
+    "identified": true
+  },
+  "div_beta": {
+    "q05": 0.008195292916205058,
+    "median": 0.10636279738207109,
+    "q95": 0.286562381398796,
+    "width_ratio": 0.7953345385216883,
+    "identified": true
+  }
+}
+[run_apple] production wall 374 s

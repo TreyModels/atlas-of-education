@@ -1,10 +1,50 @@
 {
  "machine": "Apple M1 (arm64), macOS 26.6.2",
  "backend": "mlx 0.32.4",
- "python": "3.12.14 (/tmp/apple_venv)",
- "command": "APPLE_GPU_BACKEND=mlx APPLE_PY=/tmp/apple_venv/bin/python ./run_apple.sh production",
- "wall_s": 313,
  "label": "PORT-PRODUCTION \u2014 portability demonstration, NOT research results",
+ "warning": "Construction-implied port outputs, not an H1/H4 test. The audited shipped suite implements no macro FE regression / overlap statistic (H1 undefined) and no zero-signal control (strength appears only in a docstring; H4 cannot run); the four 'micro signatures' are transforms of the same state mix. See research/suite-lit-review-2026-11-24 @ 4649cae, AUDIT.md \u00a79 (withdrawn claims 1, 2, 4, 5, 10).",
+ "environment": {
+  "original_run": {
+   "interpreter": "/private/tmp/apple_venv/bin/python",
+   "python_version": "3.10.2",
+   "packages": {
+    "mlx": "0.32.4",
+    "numpy": "2.2.6",
+    "pandas": "2.3.3",
+    "scikit-learn": "1.7.2",
+    "scipy": "1.15.3",
+    "statsmodels": "0.15.0"
+   },
+   "durable": false,
+   "used_for": "the originally committed artifacts (fd933d9), wall 313 s"
+  },
+  "durable_reproduction": {
+   "interpreter": "/Users/treymenefee/atlas-work-2026-11-23/apple-venv310/bin/python",
+   "python_version": "3.10.2",
+   "packages": {
+    "mlx": "0.32.4",
+    "numpy": "2.2.6",
+    "pandas": "2.3.3",
+    "scikit-learn": "1.7.2",
+    "scipy": "1.15.3",
+    "statsmodels": "0.15.0"
+   },
+   "durable": true,
+   "wall_s": 374,
+   "sha256_identical_to_original": true
+  },
+  "not_used": {
+   "interpreter": "/private/tmp/shape-venv/bin/python",
+   "python_version": "3.12.14",
+   "has_mlx": false,
+   "note": "created 07:20, predates the port; never ran a port artifact. The earlier '3.12.14' string here was wrong."
+  },
+  "provenance_file": "env_provenance.json",
+  "requirements_file": "requirements.txt"
+ },
+ "command": "APPLE_PY=/Users/treymenefee/atlas-work-2026-11-23/apple-venv310/bin/python APPLE_GPU_BACKEND=mlx ./run_apple.sh production",
+ "wall_s": 374,
+ "wall_s_original_run": 313,
  "outputs": {
   "exp1_abm_mlx.json": {
    "rows": 7500,
@@ -14,7 +54,8 @@
    "batch_N": 250000,
    "years": 25,
    "sha256": "dda35da93d1e963bfac5968238605fcce152d974c60c1cb56f621f100499ad4d",
-   "file": "results/exp1_abm_mlx.json"
+   "file": "results/exp1_abm_mlx.json",
+   "batch_layout": "pinned N=250000, threads=256, blocks=ceil(N/256)=977"
   },
   "exp2_macro_wall_mlx.csv": {
    "sha256": "0623cbf292bbb024903c4820f8773ec930764d664f61b2eb2d348c2ffe3437cb",
@@ -22,7 +63,8 @@
    "port_output_discrimination": {
     "macro_only_accuracy": 0.767,
     "micro_signature_accuracy": 1.0
-   }
+   },
+   "caveat": "CONSTRUCTION-IMPLIED: exp2 implements no macro FE regression and no overlap statistic, and the micro signatures are transforms of the state mix \u2014 classifier recovery is tautological. Not an H1/H4 result. AUDIT.md \u00a76.1, \u00a76.2, \u00a79."
   },
   "exp3_abc_posterior_mlx.json": {
    "draws": 5000,
@@ -47,8 +89,19 @@
      0.795,
      true
     ]
-   }
+   },
+   "caveat": "CONSTRUCTION-IMPLIED: four parameters vs two pooled moments, fixed nuisance params, one kernel step, sparse survey targets; the 0.80 width gate is not an identification result. AUDIT.md \u00a76.3, \u00a79 claims 5 and 9."
   }
  },
- "note": "These are port outputs from the transcribed kernel; they are not the CUDA outputs and must not be reported as research findings. CUDA bit-equivalence is not claimed."
+ "audit_cross_reference": {
+  "branch": "research/suite-lit-review-2026-11-24",
+  "head": "4649cae",
+  "file": "AUDIT.md",
+  "sections": [
+   "\u00a76.1 macro wall not implemented",
+   "\u00a76.2 zero-signal control not implemented",
+   "\u00a79 claims that must be withdrawn (1,2,4,5,10)"
+  ]
+ },
+ "note": "These are port outputs from the transcribed kernel; they are not CUDA outputs and must not be reported as research findings. The kernel transcription itself IS verified against 10 real CUDA launches (0 integer mismatches, max abs 3.815e-6; results/cuda_vs_transcription.json); the data-generation stream is not CUDA-equivalent (CuPy 13.6 default_rng is XORWOW, no .normal)."
 }

@@ -1,0 +1,68 @@
+{
+  "canonical_environment": {
+    "label": "apple-venv310 \u2014 durable, pinned re-creation of the original run environment",
+    "interpreter": "/Users/treymenefee/atlas-work-2026-11-23/apple-venv310/bin/python",
+    "python_version": "3.10.2",
+    "python_build": "v3.10.2:a58ebcc701, Jan 13 2022, Clang 13.0.0",
+    "python_home": "/Library/Frameworks/Python.framework/Versions/3.10/bin",
+    "platform": "macOS 26.6.2, arm64, Apple M1 (7 GPU cores)",
+    "packages": {
+      "mlx": "0.32.4",
+      "numpy": "2.2.6",
+      "pandas": "2.3.3",
+      "requests": "2.34.2",
+      "scikit-learn": "1.7.2",
+      "scipy": "1.15.3",
+      "statsmodels": "0.15.0"
+    },
+    "requirements_file": "requirements.txt",
+    "mlx_device": "Device(gpu, 0)"
+  },
+  "original_run_environment": {
+    "label": "/private/tmp/apple_venv \u2014 NOT durable",
+    "interpreter": "/private/tmp/apple_venv/bin/python",
+    "python_version": "3.10.2",
+    "packages": {
+      "mlx": "0.32.4",
+      "numpy": "2.2.6",
+      "pandas": "2.3.3",
+      "requests": "2.34.2",
+      "scikit-learn": "1.7.2",
+      "scipy": "1.15.3",
+      "statsmodels": "0.15.0"
+    },
+    "note": "pre-existing at 2026-11-24 17:51:25 local, before the seam (17:53); this is the venv the pre-registration's 'MLX (installed, tested)' refers to. It produced the originally committed artifacts (fd933d9)."
+  },
+  "not_used": {
+    "interpreter": "/private/tmp/shape-venv/bin/python",
+    "python_version": "3.12.14",
+    "has_mlx": false,
+    "note": "created 07:20, predates the port; never ran a port artifact. An earlier production summary wrongly recorded '3.12.14 (/tmp/apple_venv)'; both parts were incorrect."
+  },
+  "reproduction_check": {
+    "smoke_and_equivalence": "re-run under canonical_environment: smoke_exp1_{numpy,mlx}.json, smoke_exp3_*.json, equivalence.json and component_tests.json are bit-identical; only wall-time log lines differ",
+    "production": {
+      "original_wall_s": 313,
+      "rerun_wall_s": 374,
+      "sha256_identical": true,
+      "outputs": {
+        "results/exp1_abm_mlx.json": "dda35da93d1e963bfac5968238605fcce152d974c60c1cb56f621f100499ad4d",
+        "results/exp2_macro_wall_mlx.csv": "0623cbf292bbb024903c4820f8773ec930764d664f61b2eb2d348c2ffe3437cb",
+        "results/exp3_abc_posterior_mlx.json": "9f5ba1cc9d77be2e0c64a30df1d55b2e651ed33ca99e3620d6985556f6ca5f61"
+      }
+    }
+  },
+  "artifact_map": {
+    "results/smoke_exp1_numpy.json": "original: /private/tmp/apple_venv -> reproduced: apple-venv310 (identical)",
+    "results/smoke_exp1_mlx.json": "original: /private/tmp/apple_venv -> reproduced: apple-venv310 (identical)",
+    "results/smoke_exp3_numpy.json": "original: /private/tmp/apple_venv -> reproduced: apple-venv310 (identical)",
+    "results/smoke_exp3_mlx.json": "original: /private/tmp/apple_venv -> reproduced: apple-venv310 (identical)",
+    "results/equivalence.json": "original: /private/tmp/apple_venv -> reproduced: apple-venv310 (identical)",
+    "results/component_tests.json": "original: /private/tmp/apple_venv -> reproduced: apple-venv310 (identical)",
+    "results/projection.json": "original: /private/tmp/apple_venv (timings only; not re-run)",
+    "results/exp1_abm_mlx.json": "original: /private/tmp/apple_venv (313 s) -> reproduced: apple-venv310 (374 s, identical sha256)",
+    "results/exp2_macro_wall_mlx.csv": "same as exp1",
+    "results/exp3_abc_posterior_mlx.json": "same as exp1",
+    "results/cuda_vs_transcription.json": "produced under apple-venv310 from cuda_reference/cuda_kernel_dump.npz"
+  }
+}
