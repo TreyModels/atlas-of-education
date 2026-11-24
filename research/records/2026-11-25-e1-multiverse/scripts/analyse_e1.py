@@ -158,7 +158,7 @@ def analysis(subset, label):
     R = len(idx)
     out = dict(R=R, floor=float(1.0 / (R + 1)), label=label, families={})
     pset = {}
-    for proc, side in (("up", "up"), ("down", "dn"), ("flip", "dn"), ("het", "up")):
+    for proc, side in (("up", "up"), ("down", "dn"), ("flip", "up"), ("het", "up")):
         data = {"up": (Tr_sig, nt), "down": (Tr_sig, nt), "flip": (FR, nf), "het": (QR, nq)}[proc]
         real, null = data
         p = emp_p(real, null, side)
@@ -175,6 +175,10 @@ def analysis(subset, label):
             rank_floor=int(np.nansum(p[J] <= 1.0 / (R + 1) + 1e-15)),
             first_rank_BH=first_rank(p[J], "BH"), first_rank_BY=first_rank(p[J], "BY"),
             p=p[J], q_bh=q_bh, q_by=q_by)
+        if proc == "flip":
+            p_flip_dn = emp_p(FR, nf, "dn")
+            out["families"][proc]["sensitivity_flip_less_floor_count"] = int(np.nansum(p_flip_dn[J] <= 1.0 / (R + 1) + 1e-15))
+            out["families"][proc]["sensitivity_flip_less_certified_BH"] = int(np.nansum(bh_vec(p_flip_dn[J]) < ALPHA))
     # parity-136 sensitivity for BH/BY
     for proc in ("up", "down", "flip", "het"):
         p = pset[proc]
@@ -243,7 +247,7 @@ for proc in ("up", "down", "flip", "het"):
     summary["BY_tier_changes"][proc] = {
         f"{a}->{b}": dict(gained=len(by_sets[proc][b] - by_sets[proc][a]),
                           lost=len(by_sets[proc][a] - by_sets[proc][b]),
-                          n_at_{b}=len(by_sets[proc][b]))
+                          n_at_later=len(by_sets[proc][b]))
         for a, b in zip(Rs[:-1], Rs[1:])}
 json.dump(summary, open(os.path.join(RES, "summary_by_R.json"), "w"), indent=1, default=float)
 

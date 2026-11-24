@@ -1,0 +1,2 @@
+{'n_groupings': 50, 'cells': 179, 'NE': 544, 'C': 217, 'R': 1200, 'nproc': 8}
+total_wall=5426.9

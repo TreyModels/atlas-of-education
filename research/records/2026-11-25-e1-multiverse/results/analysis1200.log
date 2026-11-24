@@ -1,0 +1,246 @@
+available draws: 1200
+/root/work/e1/scripts/analyse_e1.py:63: RuntimeWarning: Mean of empty slice
+  per_g[gi] = np.nanmean(S[m], 0)
+{
+ "available_R": 1200,
+ "robust_everywhere_count": 5
+}
+families: {
+ "20": {
+  "up": [
+   0,
+   0
+  ],
+  "down": [
+   0,
+   0
+  ],
+  "flip": [
+   0,
+   0
+  ],
+  "het": [
+   0,
+   0
+  ]
+ },
+ "74": {
+  "up": [
+   0,
+   0
+  ],
+  "down": [
+   0,
+   0
+  ],
+  "flip": [
+   0,
+   0
+  ],
+  "het": [
+   0,
+   0
+  ]
+ },
+ "400": {
+  "up": [
+   35,
+   0
+  ],
+  "down": [
+   19,
+   0
+  ],
+  "flip": [
+   15,
+   0
+  ],
+  "het": [
+   53,
+   0
+  ]
+ },
+ "800": {
+  "up": [
+   41,
+   0
+  ],
+  "down": [
+   20,
+   0
+  ],
+  "flip": [
+   17,
+   0
+  ],
+  "het": [
+   53,
+   0
+  ]
+ },
+ "1200": {
+  "up": [
+   41,
+   0
+  ],
+  "down": [
+   23,
+   0
+  ],
+  "flip": [
+   20,
+   0
+  ],
+  "het": [
+   53,
+   32
+  ]
+ }
+}
+split halves: {
+ "up": {
+  "certified_A": 0,
+  "certified_B": 0,
+  "certified_both": 0,
+  "certified_one_half": 0,
+  "jaccard": 0.0,
+  "BH_A": 34,
+  "BH_B": 38
+ },
+ "down": {
+  "certified_A": 0,
+  "certified_B": 0,
+  "certified_both": 0,
+  "certified_one_half": 0,
+  "jaccard": 0.0,
+  "BH_A": 21,
+  "BH_B": 23
+ },
+ "flip": {
+  "certified_A": 0,
+  "certified_B": 0,
+  "certified_both": 0,
+  "certified_one_half": 0,
+  "jaccard": 0.0,
+  "BH_A": 15,
+  "BH_B": 21
+ },
+ "het": {
+  "certified_A": 0,
+  "certified_B": 0,
+  "certified_both": 0,
+  "certified_one_half": 0,
+  "jaccard": 0.0,
+  "BH_A": 53,
+  "BH_B": 51
+ }
+}
+repro: {
+ "available": true,
+ "max_abs_share_TR_diff": 4.999999999866223e-07,
+ "median_abs_share_TR_diff": 4.4444444447649945e-08,
+ "certified_BH_ours": {
+  "up": 35,
+  "down": 19,
+  "flip": 15,
+  "het": 53
+ },
+ "certified_BH_committed": {
+  "up": 35,
+  "down": 19,
+  "flip": 15,
+  "het": 53
+ },
+ "robust_ours": 5,
+ "robust_committed": 5
+}
+{
+ "n_robust": 5,
+ "n_robust_group_concentrated": 1,
+ "n_by_links": 32,
+ "n_by_group_concentrated": 20,
+ "n_by_checked": 33
+}
+## BH/BY counts by R (four procedures; 272-link family; conservative p)
+| R | family | floor 1/(R+1) | floor count | BH cert | BY cert | first rank BH | first rank BY | BY cert (136 parity) |
+|---|---|---|---|---|---|---|---|---|
+| 20 | up | 0.04762 | 59 | 0 | 0 | None | None | 0 |
+| 20 | down | 0.04762 | 51 | 0 | 0 | None | None | 0 |
+| 20 | flip | 0.04762 | 38 | 0 | 0 | None | None | 0 |
+| 20 | het | 0.04762 | 70 | 0 | 0 | None | None | 0 |
+| 74 | up | 0.01333 | 41 | 0 | 0 | None | None | 0 |
+| 74 | down | 0.01333 | 28 | 0 | 0 | None | None | 0 |
+| 74 | flip | 0.01333 | 29 | 0 | 0 | None | None | 0 |
+| 74 | het | 0.01333 | 52 | 0 | 0 | None | None | 0 |
+| 400 | up | 0.00249 | 30 | 35 | 0 | 14 | None | 0 |
+| 400 | down | 0.00249 | 19 | 19 | 0 | 14 | None | 0 |
+| 400 | flip | 0.00249 | 15 | 15 | 0 | 14 | None | 0 |
+| 400 | het | 0.00249 | 39 | 53 | 0 | 14 | None | 39 |
+| 800 | up | 0.00125 | 19 | 41 | 0 | 7 | None | 19 |
+| 800 | down | 0.00125 | 16 | 20 | 0 | 7 | None | 0 |
+| 800 | flip | 0.00125 | 13 | 17 | 0 | 7 | None | 0 |
+| 800 | het | 0.00125 | 34 | 53 | 0 | 7 | None | 41 |
+| 1200 | up | 0.00083 | 17 | 41 | 0 | 5 | None | 25 |
+| 1200 | down | 0.00083 | 15 | 23 | 0 | 5 | None | 15 |
+| 1200 | flip | 0.00083 | 12 | 20 | 0 | 5 | None | 0 |
+| 1200 | het | 0.00083 | 32 | 53 | 32 | 5 | 29 | 39 |
+
+## BY tier changes across R
+- up 20->74: gained 0, lost 0, n at later R 0
+- up 74->400: gained 0, lost 0, n at later R 0
+- up 400->800: gained 0, lost 0, n at later R 0
+- up 800->1200: gained 0, lost 0, n at later R 0
+- down 20->74: gained 0, lost 0, n at later R 0
+- down 74->400: gained 0, lost 0, n at later R 0
+- down 400->800: gained 0, lost 0, n at later R 0
+- down 800->1200: gained 0, lost 0, n at later R 0
+- flip 20->74: gained 0, lost 0, n at later R 0
+- flip 74->400: gained 0, lost 0, n at later R 0
+- flip 400->800: gained 0, lost 0, n at later R 0
+- flip 800->1200: gained 0, lost 0, n at later R 0
+- het 20->74: gained 0, lost 0, n at later R 0
+- het 74->400: gained 0, lost 0, n at later R 0
+- het 400->800: gained 0, lost 0, n at later R 0
+- het 800->1200: gained 32, lost 0, n at later R 32
+
+## Split halves at R = 1200
+up-procedure empirical p rank correlation: 0.9965053913620758
+- up: certified A=0 B=0 both=0 one-half=0 jaccard=0.000 BH A/B=34/38
+- down: certified A=0 B=0 both=0 one-half=0 jaccard=0.000 BH A/B=21/23
+- flip: certified A=0 B=0 both=0 one-half=0 jaccard=0.000 BH A/B=15/21
+- het: certified A=0 B=0 both=0 one-half=0 jaccard=0.000 BH A/B=53/51
+
+## Group localisation
+{
+ "n_robust": 5,
+ "n_robust_group_concentrated": 1,
+ "n_by_links": 32,
+ "n_by_group_concentrated": 20,
+ "n_by_checked": 33
+}
+- robust link gdppc_log -> urban: b=2.317 t=3.98, top5=['BWA', 'GNQ', 'OMN', 'LBY', 'LBR'], top5 signal share=0.22, t without top5=2.465373042031018, concentrated=True
+- robust link agri_va -> gdppc_log: b=-0.004122 t=-2.63, top5=['NER', 'GHA', 'RWA', 'BWA', 'GUY'], top5 signal share=0.25, t without top5=-3.3000825235566618, concentrated=False
+- robust link life_exp -> fertility: b=-0.04818 t=-6.06, top5=['RWA', 'CAF', 'DZA', 'CHN', 'SOM'], top5 signal share=0.29, t without top5=-8.689224555775823, concentrated=False
+- robust link u5mr -> life_exp: b=-0.02655 t=-3.04, top5=['KHM', 'OMN', 'ZMB', 'RWA', 'BWA'], top5 signal share=0.30, t without top5=-4.461582257757995, concentrated=False
+- robust link u5mr -> fertility: b=0.006107 t=5.39, top5=['KHM', 'CAF', 'SOM', 'DZA', 'RWA'], top5 signal share=0.34, t without top5=7.257593416572762, concentrated=False
+
+## R=400 comparison with committed headline
+{
+ "available": true,
+ "max_abs_share_TR_diff": 4.999999999866223e-07,
+ "median_abs_share_TR_diff": 4.4444444447649945e-08,
+ "certified_BH_ours": {
+  "up": 35,
+  "down": 19,
+  "flip": 15,
+  "het": 53
+ },
+ "certified_BH_committed": {
+  "up": 35,
+  "down": 19,
+  "flip": 15,
+  "het": 53
+ },
+ "robust_ours": 5,
+ "robust_committed": 5
+}

@@ -132,3 +132,16 @@ job finishes; `REPORT.md` records the shutdown.
   grouping construction to module level (job logic unchanged; determinism re-checked after the change).
 - **Compute:** CPU only (8-core cgroup); the GPU engine is not used, so no GPU batch layout applies.
 
+- **2026-11-24 07:10 UTC — run complete.** 1,200/1,200 draws + real pass, total wall 5,426.8 s on 8 workers
+  (4.52 s/draw effective; per-draw worker wall mean 37.8 s, median 36.4 s). All 1,201 checkpoints valid
+  (sha256 manifest in `results/reps_sha256.txt`); no failed draws, no resume events.
+- **2026-11-24 — flip-family direction (declared analysis deviation).** The pre-registration wrote the
+  sign-flip family as "real flip rate <= null". The committed analysis and the substantive object are
+  "real flip rate >= null" (flips *more* than random; `analyse400.py` uses `emp_p(FR, nF, "up")`). Primary
+  results use >= and reproduce the committed R=400 count of 15; the <= direction is retained as a sensitivity
+  and certifies 0 at every R. This was corrected before the final report; no other analysis direction changed.
+- **Final headline (filled at completion):** BH up/down/flip/het = 35/19/15/53 at R=400, 41/20/17/53 at R=800,
+  41/23/20/53 at R=1200; BY = 0 for all four families at R<=800 and **32 for heterogeneity at R=1200**
+  (first BY rank 29, floor 32), with up/down/flip still 0 at 1200. R=400 BH counts and the 5 robust links
+  reproduce the committed headline exactly; `share_TR` differs by <=5e-7; pooled t-stats differ by max 3.97e-5
+  (declared panel vintage).

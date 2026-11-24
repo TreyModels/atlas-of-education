@@ -1,0 +1,19 @@
+{
+ "available": true,
+ "max_abs_share_TR_diff": 4.999999999866223e-07,
+ "median_abs_share_TR_diff": 4.4444444447649945e-08,
+ "certified_BH_ours": {
+  "up": 35,
+  "down": 19,
+  "flip": 15,
+  "het": 53
+ },
+ "certified_BH_committed": {
+  "up": 35,
+  "down": 19,
+  "flip": 15,
+  "het": 53
+ },
+ "robust_ours": 5,
+ "robust_committed": 5
+}
