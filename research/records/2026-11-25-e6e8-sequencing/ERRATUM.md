@@ -102,6 +102,9 @@ the only correction site.
 | **sha256 identity** | `1a08d4652371f7a3c79a54725b79c48429a793e3d88252d170715018ddd8e2ab` at **both** commits, and the same sha256 for the copy at `data/fee_dates.csv` in this record |
 | head the papers cite | `9a0fd69` (Paper M §7.6 and Paper N1 §8 both cite `9a0fd69`) |
 
+*(Metadata note: the quoted commit-message phrase "24 DOI-verified" is itself an overstatement — the record marks
+21 V / 2 U / 1 W; see §D.3.)*
+
 **Reading:** citing `bfb8c6f` for the fee dates is not wrong about *which commit introduced* `fee_dates.csv`, but
 it is the fee-date commit, not the verified head under which the independent audit was accepted. Because the file
 is byte-identical at both commits, the fix is provenance-only: the record now states both commits, the sha256
@@ -227,7 +230,85 @@ are recorded here for a follow-up correction and are **not** changed in this com
    value from an earlier table; a reproducible replacement would be "mean post 12.3–26.2 across the ±1-year and
    leave-one-out checks, against −0.39 under the placebo".
 
+**Update (task-12):** items 1 and 2 in this list are now formally annotated in §D (control range) and §D.2
+(mean-post range); the metadata item is §D.3.
+
 Everything else audited reproduced: E6 demand-first 10–24% of identifiable countries and weak ties 21–43% of
 in-window countries; E6 bounds 6.7–53.0%; the eight E6 table rows (0 mismatches); the eleven E8 event-table rows
 (0 mismatches); E8 leave-one-out 18.17–26.16 and t0 7.00–13.94; 7–8 treated countries; N3 54 definitions all with
 n ≥ 20; q1 default 6.2 / 70.6 / 17.6 / 5.9 and bounds 5.9–82.4; and the 100% below-75% statement.
+
+---
+
+## §D — consolidated task-12 corrections: E8 control range, E8 mean-post range, and the metadata overstatement
+
+*(Added 25 Nov 2026, task-12. This section formally annotates the two E8 ranges listed in §C's "other
+prose-vs-table ranges" and records the commit-message metadata erratum. Issues A and C above stand.)*
+
+### D.1 — "25–30 control countries per event" belongs to the all-12 sensitivity, not the verified-8 table
+
+**Where.** `REPORT.md`, §2 E8, "Estimator" paragraph: "Seven treated countries have outcome data (one verified
+country lacks GER coverage); **25–30 control countries per event**." The sentence sits immediately above the
+primary (verified-8) event table.
+
+**What reproduces.** `results/e8_results.json`:
+
+| sample | `n_controls` per event | range |
+|---|---|---|
+| `SE.PRM.ENRR_verified8.event_table` (primary table) | 28–30 | **28–30** |
+| `SE.PRM.ENRR_all12.event_table` (all-dates sensitivity) | 25–30 | 25–30 |
+
+The prose's 25–30 is the all-12 sensitivity range; the verified-8 table it describes has **28–30** controls per
+event. **Recommended correction:** "**28–30** control countries per event" in the estimator paragraph, with the
+all-12 sensitivity's 25–30 noted separately.
+
+### D.2 — "(mean post 18–29 points against ~0 under placebo)" does not reproduce
+
+**Where.** `REPORT.md`, §2 E8, "Decision-rule assessment" paragraph: "…survives the CS estimator and the
+±1-year/leave-one-out checks in direction and rough magnitude (**mean post 18–29 points against ~0 under
+placebo**)…".
+
+**What reproduces.** `results/e8_results.json` (`event_table` and `sensitivity`):
+
+| quantity | value |
+|---|---|
+| verified-8 mean of CS post ATTs at +1..+6 | **25.26** |
+| sensitivity `mean_att_post`: `all+1` | 12.31 |
+| sensitivity `mean_att_post`: `all-1` | 18.65 |
+| sensitivity `mean_att_post`: `all12` | 20.80 |
+| leave-one-out `mean_att_post` range | **18.17–26.16** |
+| `mean_att_post`: placebo (−6 years) | **−0.39** |
+
+No mean-post quantity spans 18–29. **Recommended correction:** "**mean post 12.3–26.2 across the ±1-year and
+leave-one-out checks, against −0.39 under the placebo**" (the range that contains every reported sensitivity
+mean while the verified-8 post mean is 25.26).
+
+### D.3 — metadata: the quoted `9a0fd69` commit message says "24 DOI-verified" but the record marks 21 V / 2 U / 1 W
+
+**Where.** §B above quotes the verified branch head as: "`9a0fd69` — Codex source verification: … prior art Q1-Q3
+(**24 DOI-verified**), unverified-list marks".
+
+**What reproduces.** The source-verification record's own Job-3 tables mark **21 V / 2 U / 1 W** across 24 works
+(21 DOIs verified; 2 works without DOI; 1 working-paper version whose published DOI was not verified). The
+commit message cannot be edited without rewriting the branch, so the correction is recorded in that record's
+`ERRATUM.md` (branch `research/codex-source-verification-2026-11-25`, new head `ea6bc61`) with this E6/E8
+cross-reference. **No E6/E8 date, result or table changes**; §B's provenance conclusion (the file is identical
+at `bfb8c6f` and `9a0fd69`, papers cite `9a0fd69`) is unaffected.
+
+### Reproduction
+
+```
+python3 scripts/erratum_check_e8_prose.py
+# -> results/erratum_check_e8_prose.json
+```
+
+Reads `results/e8_results.json`, prints both control-range comparisons, the verified-8 mean post, all sensitivity
+mean posts (including placebo and leave-one-out range), and asserts the 28–30 / 25–30 and 21 V / 2 U / 1 W facts.
+
+### Effect on the papers
+
+- **No number changes.** Papers cite the verified-8 event study and its qualitative "consistent with" reading;
+  neither Paper M nor Paper N1 quotes the control-count range or the "mean post 18–29" phrase (they quote the
+  event-table ATTs and the sensitivity/LOO values that reproduce).
+- The E6 18–33% and N3 56–84% items flagged by the task-11 audit are already annotated in §A and §C; §D adds no
+  new number for them.

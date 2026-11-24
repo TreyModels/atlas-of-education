@@ -1,0 +1,53 @@
+{
+ "issue_D1_controls": {
+  "original_sentence": "Seven treated countries have outcome data (one verified country lacks GER coverage); 25-30 control countries per event.",
+  "source": "results/e8_results.json SE.PRM.ENRR_verified8.event_table / SE.PRM.ENRR_all12.event_table, n_controls",
+  "recomputed": {
+   "verified8_n_controls_min": 28,
+   "verified8_n_controls_max": 30,
+   "all12_n_controls_min": 25,
+   "all12_n_controls_max": 30
+  },
+  "prose_claim": {
+   "min": 25,
+   "max": 30
+  },
+  "verdict": "MISMATCH for the verified-8 table: actual 28-30; 25-30 is the all-12 sensitivity. Recommended: '28-30 controls per event' for the main table, with 25-30 noted for the all-12 sensitivity."
+ },
+ "issue_D2_mean_post": {
+  "original_sentence": "(mean post 18-29 points against ~0 under placebo)",
+  "source": "results/e8_results.json event_table + sensitivity",
+  "recomputed": {
+   "verified8_mean_post_att_+1_to_+6": 25.26,
+   "sensitivity_mean_att_post": {
+    "all+1": 12.31,
+    "all-1": 18.65,
+    "placebo-6": -0.39,
+    "all12": 20.8,
+    "drop-MWI": 20.8,
+    "drop-ETH": 24.38,
+    "drop-UGA": 18.17,
+    "drop-LSO": 24.83,
+    "drop-TZA": 23.82,
+    "drop-KEN": 26.16,
+    "drop-MOZ": 23.24,
+    "drop-GHA": 25.33
+   },
+   "leave_one_out_range": [
+    18.17,
+    26.16
+   ],
+   "placebo_mean_att_post": -0.39
+  },
+  "prose_claim": {
+   "min": 18,
+   "max": 29
+  },
+  "verdict": "MISMATCH: no mean-post quantity spans 18-29. Reproducible range across the +-1-year and leave-one-out checks is 12.31-26.16; recommended replacement: 'mean post 12.3-26.2 across the +-1-year and leave-one-out checks, against -0.39 under the placebo'."
+ },
+ "issue_D3_metadata": {
+  "note": "E6/E8 ERRATUM \u00a7B quotes the 9a0fd69 commit message, which says 'prior art Q1-Q3 (24 DOI-verified)'. The source-verification record's own tables mark 21 V / 2 U / 1 W; that record now carries a metadata erratum (head ea6bc61). No E6/E8 data change."
+ },
+ "reproduction": "python3 scripts/erratum_check_e8_prose.py (this record; stdlib only)",
+ "audit_reference": "research/prose-data-audit-2026-11-24 @ ff390fe, research/records/2026-11-24-prose-data-audit/AUDIT.md checks E6-11 and E8 decision-rule"
+}

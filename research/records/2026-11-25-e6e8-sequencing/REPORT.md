@@ -85,6 +85,9 @@ and year FE, binned endpoints, cluster by country) is the comparison. SSA sample
 Seven treated countries have outcome data (one verified country lacks GER coverage); 25–30 control countries per
 event.
 
+**CORRECTION (see `ERRATUM.md` §D.1):** the verified-8 event table this paragraph describes has **28–30** control
+countries per event; **25–30** is the all-12 sensitivity range. Original text left visible.
+
 **Primary outcome (WDI primary GER), verified-8 dates.**
 
 | event | CS ATT | boot SE | 95% CI | TWFE ATT | TWFE SE | treated n |
@@ -121,6 +124,10 @@ pre-trend) **survives the CS estimator and the ±1-year/leave-one-out checks in 
 (mean post 18–29 points against ~0 under placebo), with two honest caveats: the on-impact estimate is sensitive to
 date shifts, and the treated sample is small (7–8) so CIs are wide and the +0 horizon includes zero. No causal
 language is used: the finding is "consistent with" a fee-abolition effect on primary GER.
+
+**CORRECTION (see `ERRATUM.md` §D.2):** "mean post 18–29 points" does not reproduce; the reproducible values are
+12.31 / 18.65 / 20.80 / leave-one-out 18.17–26.16 / placebo −0.39, i.e. **12.3–26.2 across the ±1-year and
+leave-one-out checks, against −0.39 under the placebo**. Original text left visible.
 
 ## 3. N3 — threshold smoothing, left-truncated survival dating, and the abstract rule
 
