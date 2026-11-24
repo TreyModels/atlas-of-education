@@ -6,7 +6,7 @@
 
 ## 4.1 The question, and the data gap stated first
 
-The between-country gradient of Section 3 is a country-level object. The literature that most demographers
+The between-country gradient of Section 4 is a country-level object. The literature that most demographers
 have in mind when they say "education lowers fertility" is an individual-level object: within a population,
 women with more schooling have fewer children. The two can differ in size and even in sign, and the difference
 is the ecological fallacy in its most consequential form (Robinson, 1950). This section asks what the
@@ -32,7 +32,7 @@ higher minus none/primary — is negative in **99 per cent of 346 surveys**, wit
 regularity gets, and it is large in the units that matter: nearly two children between women with secondary
 schooling and women with none, within the same survey.
 
-This is the survey-level counterpart of Section 3's country-level gradient, and the two agree in sign and
+This is the survey-level counterpart of Section 4's country-level gradient, and the two agree in sign and
 importance. A country with more schooling has fewer births, and within a country women with more schooling have
 fewer children. The agreement is reassuring for the descriptive claim; it does not resolve the causal question,
 and the rest of this section explains why not.
@@ -75,7 +75,7 @@ gradient is real and universal, and not as evidence about its mechanism.
 
 What it adds: an independent, survey-based confirmation that the schooling-fertility gradient is negative and
 large at the education-cell level across 86 countries and four decades of surveys, which rules out the
-possibility that Section 3's country-level gradient is an artefact of national aggregates; and a set of
+possibility that Section 4's country-level gradient is an artefact of national aggregates; and a set of
 *negative* results — cohort attenuation and pipeline attenuation in the opposite direction from the
 pre-registered predictions — that matter for the massification interpretation. If the gradient were purely a
 development-level marker, one might expect it to weaken as schooling spreads; the survey data show exactly that
@@ -87,4 +87,4 @@ quantum/tempo decomposition, all of which require microdata. The record states t
 download procedure (a free DHS account, dataset-access request, Individual Recode Stata files, and the
 specified variables) rather than substituting country aggregates for the missing test. A synthesis that claimed
 the survey-level gradient settled the individual-level question would be committing the same ecological error
-it criticises in Section 3.
+it criticises in Section 4.

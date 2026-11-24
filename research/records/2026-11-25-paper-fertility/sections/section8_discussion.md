@@ -2,11 +2,11 @@
 
 ## 8.1 The verdict table
 
-Table 8 collects the paper's claims and their evidence grades. **S** = survives the reported specification space
+Table 5 collects the paper's claims and their evidence grades. **S** = survives the reported specification space
 and its designed falsifiers; **F** = contradicted by the reported evidence; **C** = cannot be tested with these
 data, with the missing observation named.
 
-**Table 8. What the project knows now.**
+**Table 5. What the project knows now.**
 
 | # | claim | grade | key number |
 |---|---|---|---|
@@ -22,7 +22,7 @@ data, with the missing observation named.
 | 10 | A care-work loop generates a self-reinforcing low-fertility trap | F | care-work gradient +0.009 (t 0.17) once income (+0.242, t 2.47) and urbanisation (+0.42, t 3.38) enter; male-care placebo +0.179 (t 2.10); manufacturing placebo −0.189 (t −3.47) |
 | 11 | A strong "no-off-switch" | F (strong); S (weak) | 34/396 country-episodes rebound (8.6%, upper 11.3%); 5/38 within 10y; ceiling 1.83; event study +0.035 (0.025), MDE 0.070 |
 | 12 | A tipping point / critical slowing down | F | autocorrelation −0.025 (0.008), wrong sign; variance +0.079 (0.034) fails surrogate (0.42) |
-| 13 | Mortality decline is the leading driver of the collapse | F | freezing pre-antibiotic mortality removes 3.2% (range −1.8 to +8.2%); ±50% band 0.9–4.7%; 4.5× check 10% |
+| 13 | Mortality decline is the leading driver of the collapse | F | freezing pre-antibiotic mortality removes 3.2% of the fall in the calibrated model (model-internal; range −1.8 to +8.2%); ±50% band 0.9–4.7%; 4.5× check 10% |
 | 14 | The individuation model beats a development-only rival out of sample | F (tie) | 24.43 vs 21.10, diff +3.32 [−3.76, +11.14]; 3/6 countries |
 | 15 | Wide model intervals are a statistical artefact | F | four of five spreads stay 0.87–1.01 across the tolerance ladder |
 

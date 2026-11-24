@@ -32,7 +32,7 @@ for cohorts 1930 to 1995 across eight fit countries, and compares births by age 
 | history (child mortality follows history) | 4.96 | 3.60 | **-1.36** |
 | frozen (pre-antibiotic child mortality) | 5.01 | 3.70 | **-1.31** |
 
-Freezing the mortality decline removes **3.2 per cent of the fall** (country range -1.8 to +8.2 per cent:
+Freezing the mortality decline removes **3.2 per cent of the fall in the calibrated model** (a model-internal counterfactual, not an empirical estimate of mortality's causal role) (country range -1.8 to +8.2 per cent:
 Bangladesh +8.2, Egypt +7.3, Indonesia +4.8, India +0.3, Vietnam -1.8). The counterfactual does raise the
 *level* of fertility — 5.01 against 4.96 in the 1930 cohort — but it adds births roughly evenly and cannot stop
 a fall that the schooling rise drives. Three falsifiers were run and did not flip the verdict: a ±50 per cent

@@ -69,7 +69,11 @@ design that produced the original null, and we keep it intact so that the compar
 Table 1 reports the two designs side by side for the seven measures available in both the rebuild and the
 extended battery (the eighth, the secondary gender-parity index, is in the extended table). Columns 1 and 2 are
 the levels and change coefficients for each measure; columns 3 and 4 give the sample size and the number of
-countries in the levels specification.
+countries in the levels specification. These coefficients are from the rebuilt-panel run. The companion paper on
+levels versus changes reports the same specifications from the correlation-battery run, which gives slightly
+different change estimates (women's mean years +0.115 (0.046), total +0.189 (0.054), lower-secondary +0.0064
+(0.0031)); the two are separate runs of the same design, not a contradiction, and neither should be quoted without
+saying which run it comes from.
 
 **Table 1. Schooling and fertility, levels versus ten-year changes (same measures, same period).**
 

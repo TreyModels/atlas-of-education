@@ -28,7 +28,7 @@ identified schooling effect. The gradient is steepest below six years of schooli
 Supporting sections report a survey-level DHS gradient (secondary education −1.62 children, 99% of 346 surveys
 negative), falsified dynamic predictions (cohort and pipeline attenuation), a care-work loop absorbed by income
 and urbanisation, a strong "no-off-switch" that fails, an absent tipping point, and a transition model whose
-mortality counterfactual removes 3.2% of the fertility collapse. The contribution is a quantified audit of a
+mortality counterfactual removes 3.2% of the model's own fertility collapse (a model-internal result, not an empirical estimate). The contribution is a quantified audit of a
 known correlation: the between-country gradient is real, global, and located at the massification margin, and
 the standard change design erases exactly the variation it lives in. It is descriptive, not causal.
 
@@ -449,7 +449,11 @@ design that produced the original null, and we keep it intact so that the compar
 Table 1 reports the two designs side by side for the seven measures available in both the rebuild and the
 extended battery (the eighth, the secondary gender-parity index, is in the extended table). Columns 1 and 2 are
 the levels and change coefficients for each measure; columns 3 and 4 give the sample size and the number of
-countries in the levels specification.
+countries in the levels specification. These coefficients are from the rebuilt-panel run. The companion paper on
+levels versus changes reports the same specifications from the correlation-battery run, which gives slightly
+different change estimates (women's mean years +0.115 (0.046), total +0.189 (0.054), lower-secondary +0.0064
+(0.0031)); the two are separate runs of the same design, not a contradiction, and neither should be quoted without
+saying which run it comes from.
 
 **Table 1. Schooling and fertility, levels versus ten-year changes (same measures, same period).**
 
@@ -766,7 +770,7 @@ The four subsections that follow are the project's supporting workstreams. They 
 
 ### 7.1.1 The question, and the data gap stated first
 
-The between-country gradient of Section 3 is a country-level object. The literature that most demographers
+The between-country gradient of Section 4 is a country-level object. The literature that most demographers
 have in mind when they say "education lowers fertility" is an individual-level object: within a population,
 women with more schooling have fewer children. The two can differ in size and even in sign, and the difference
 is the ecological fallacy in its most consequential form (Robinson, 1950). This section asks what the
@@ -792,7 +796,7 @@ higher minus none/primary — is negative in **99 per cent of 346 surveys**, wit
 regularity gets, and it is large in the units that matter: nearly two children between women with secondary
 schooling and women with none, within the same survey.
 
-This is the survey-level counterpart of Section 3's country-level gradient, and the two agree in sign and
+This is the survey-level counterpart of Section 4's country-level gradient, and the two agree in sign and
 importance. A country with more schooling has fewer births, and within a country women with more schooling have
 fewer children. The agreement is reassuring for the descriptive claim; it does not resolve the causal question,
 and the rest of this section explains why not.
@@ -835,7 +839,7 @@ gradient is real and universal, and not as evidence about its mechanism.
 
 What it adds: an independent, survey-based confirmation that the schooling-fertility gradient is negative and
 large at the education-cell level across 86 countries and four decades of surveys, which rules out the
-possibility that Section 3's country-level gradient is an artefact of national aggregates; and a set of
+possibility that Section 4's country-level gradient is an artefact of national aggregates; and a set of
 *negative* results — cohort attenuation and pipeline attenuation in the opposite direction from the
 pre-registered predictions — that matter for the massification interpretation. If the gradient were purely a
 development-level marker, one might expect it to weaken as schooling spreads; the survey data show exactly that
@@ -847,7 +851,7 @@ quantum/tempo decomposition, all of which require microdata. The record states t
 download procedure (a free DHS account, dataset-access request, Individual Recode Stata files, and the
 specified variables) rather than substituting country aggregates for the missing test. A synthesis that claimed
 the survey-level gradient settled the individual-level question would be committing the same ecological error
-it criticises in Section 3.
+it criticises in Section 4.
 
 
 ## 7.2 Care work, policy bounds, and tipping points: three falsifiable mechanisms
@@ -1031,7 +1035,7 @@ for cohorts 1930 to 1995 across eight fit countries, and compares births by age 
 | history (child mortality follows history) | 4.96 | 3.60 | **-1.36** |
 | frozen (pre-antibiotic child mortality) | 5.01 | 3.70 | **-1.31** |
 
-Freezing the mortality decline removes **3.2 per cent of the fall** (country range -1.8 to +8.2 per cent:
+Freezing the mortality decline removes **3.2 per cent of the fall in the calibrated model** (a model-internal counterfactual, not an empirical estimate of mortality's causal role) (country range -1.8 to +8.2 per cent:
 Bangladesh +8.2, Egypt +7.3, Indonesia +4.8, India +0.3, Vietnam -1.8). The counterfactual does raise the
 *level* of fertility — 5.01 against 4.96 in the 1930 cohort — but it adds births roughly evenly and cannot stop
 a fall that the schooling rise drives. Three falsifiers were run and did not flip the verdict: a ±50 per cent
@@ -1161,7 +1165,7 @@ cited because these results have to be read against it, not replaced by it.
 
 ### 7.4.1 Why a linear coefficient is the wrong summary
 
-The levels coefficient in Section 1 is a summary of a relation across the whole schooling distribution, from
+The levels coefficient in Section 4 is a summary of a relation across the whole schooling distribution, from
 countries where adults average two or three years of schooling to countries where they average twelve. A single
 slope of −0.129 births per year of women's schooling is a useful first description, but it cannot be the end of
 the story, for a simple reason: the distribution of schooling across countries is not uniform, and the
@@ -1174,7 +1178,7 @@ We estimate a piecewise-linear (spline) version of the levels specification with
 schooling, which are the conventional boundaries between minimal, lower-secondary, and upper-secondary
 completion in the cross-national attainment literature, and which also turn out to be the boundaries that the
 data support: the three-slope model fits the cross-section better than a single slope, and the six-year hinge
-is the one that carries most of the association. The specification keeps the Section 1 design (decade and
+is the one that carries most of the association. The specification keeps the Section 4 design (decade and
 region fixed effects, log income, urbanisation, country-clustered standard errors) and replaces the single
 schooling variable with three: the minimum of schooling and six years; the amount between six and nine years,
 clipped at zero; and the amount above nine years. The three slopes are the gradients below six years, between
@@ -1183,9 +1187,9 @@ six and nine, and above nine.
 ### 7.4.2 The shape: steep below six years, flat in the middle, and a reversal above nine
 
 The point estimates from the rebuild, and their country-clustered bootstrap intervals from the extended battery
-(500 replications per measure, resampling countries), are in Table 5.
+(500 replications per measure, resampling countries), are in Table 4.
 
-**Table 5. The gradient by segment of the schooling distribution (levels specification; births per woman per
+**Table 4. The gradient by segment of the schooling distribution (levels specification; births per woman per
 year of schooling; 500-rep country-clustered bootstrap).**
 
 | segment | women's mean years (rebuild) | women's mean years (battery, 95% CI) | total mean years (battery, 95% CI) |
@@ -1226,7 +1230,7 @@ transition is now happening. This is why the paper's synthesis treats "more scho
 country sits in the development gradient rather than as a lever with a constant effect: the same change in
 schooling means very different things at two and at eleven years.
 
-The threshold shape also makes the placebo result in Section 1 more interpretable rather than less. If the
+The threshold shape also makes the placebo result in Section 4 more interpretable rather than less. If the
 level gradient were a schooling effect operating through the quantity–quality mechanism, we would expect it to
 be strongest where the quantity–quality trade-off is strongest — plausibly in the low-schooling range where
 child labour and mortality risk are high, which is what we see. But a development gradient would produce the
@@ -1255,11 +1259,11 @@ connect the cross-country gradient to the historical transition.
 
 ## 8.1 The verdict table
 
-Table 8 collects the paper's claims and their evidence grades. **S** = survives the reported specification space
+Table 5 collects the paper's claims and their evidence grades. **S** = survives the reported specification space
 and its designed falsifiers; **F** = contradicted by the reported evidence; **C** = cannot be tested with these
 data, with the missing observation named.
 
-**Table 8. What the project knows now.**
+**Table 5. What the project knows now.**
 
 | # | claim | grade | key number |
 |---|---|---|---|
@@ -1275,7 +1279,7 @@ data, with the missing observation named.
 | 10 | A care-work loop generates a self-reinforcing low-fertility trap | F | care-work gradient +0.009 (t 0.17) once income (+0.242, t 2.47) and urbanisation (+0.42, t 3.38) enter; male-care placebo +0.179 (t 2.10); manufacturing placebo −0.189 (t −3.47) |
 | 11 | A strong "no-off-switch" | F (strong); S (weak) | 34/396 country-episodes rebound (8.6%, upper 11.3%); 5/38 within 10y; ceiling 1.83; event study +0.035 (0.025), MDE 0.070 |
 | 12 | A tipping point / critical slowing down | F | autocorrelation −0.025 (0.008), wrong sign; variance +0.079 (0.034) fails surrogate (0.42) |
-| 13 | Mortality decline is the leading driver of the collapse | F | freezing pre-antibiotic mortality removes 3.2% (range −1.8 to +8.2%); ±50% band 0.9–4.7%; 4.5× check 10% |
+| 13 | Mortality decline is the leading driver of the collapse | F | freezing pre-antibiotic mortality removes 3.2% of the fall in the calibrated model (model-internal; range −1.8 to +8.2%); ±50% band 0.9–4.7%; 4.5× check 10% |
 | 14 | The individuation model beats a development-only rival out of sample | F (tie) | 24.43 vs 21.10, diff +3.32 [−3.76, +11.14]; 3/6 countries |
 | 15 | Wide model intervals are a statistical artefact | F | four of five spreads stay 0.87–1.01 across the tolerance ladder |
 
@@ -1381,7 +1385,7 @@ and the paper names the data that would test it.
 - Deaton, A. (2010). Instruments, Randomization, and Learning about Development. Journal of Economic Literature, 48(2), 424-455. https://doi.org/10.1257/jel.48.2.424 *[V (Crossref)]*
 - Ditlevsen, P. D., & Johnsen, S. J. (2010). Tipping points: Early warning and wishful thinking. Geophysical Research Letters, 37(19). https://doi.org/10.1029/2010gl044486 *[V (Crossref)]*
 - Doepke, M. (2001). Accounting for Fertility Decline During the Transition to Growth. Elsevier BV. https://doi.org/10.2139/ssrn.279519 *[V (Crossref)]*
-- Doepke, M. (2003). Child Mortality and Fertility Decline: Does the Barro-Becker
+- Doepke, M. (2005). Child mortality and fertility decline: Does the Barro-Becker model fit the facts? Journal of Population Economics, 18(2), 337-366. https://doi.org/10.1007/s00148-004-0208-z *[V (publisher/RePEc record, checked 24 Nov 2026; the earlier entry was truncated and dated 2003, the working-paper year)]*
 - Duflo, E. (2000). Schooling and Labor Market Consequences of School Construction in Indonesia: Evidence from an Unusual Policy Experiment. National Bureau of Economic Research. https://doi.org/10.3386/w7860 *[V (Crossref)]*
 - Duflo, E. (2012). Women Empowerment and Economic Development. Journal of Economic Literature, 50(4), 1051-1079. https://doi.org/10.1257/jel.50.4.1051 *[V (Crossref)]*
 - Easterlin, R. A. (1975). An Economic Framework for Fertility Analysis. Studies in Family Planning, 6(3), 54. https://doi.org/10.2307/1964934 *[V (Crossref)]*
@@ -1389,7 +1393,7 @@ and the paper names the data that would test it.
 - Frejka, T., & Sobotka, T. (2008). Overview Chapter 1: Fertility in Europe. Demographic Research, 19, 15-46. https://doi.org/10.4054/demres.2008.19.3 *[V (Crossref)]*
 - Galor, O., & Weil, D. (1998). Population, Technology, and Growth:  From the Malthusian Regime to the  Demographic Transition and Beyond. National Bureau of Economic Research. https://doi.org/10.3386/w6811 *[V (Crossref)]*
 - Gauthier, A. H. (2007). The impact of family policies on fertility in industrialized countries: a review of the literature. Population Research and Policy Review, 26(3), 323-346. https://doi.org/10.1007/s11113-007-9033-x *[V (Crossref)]*
-- Giudice, M. D., & Gangestad, S. W. (2021). A Traveler’s Guide to the Multiverse: Promises, Pitfalls, and a Framework for the Evaluation of Analytic Decisions. Advances in Methods and Practices in Psychological Science, 4(1). https://doi.org/10.1177/2515245920954925 *[V (Crossref)]*
+- Del Giudice, M., & Gangestad, S. W. (2021). A Traveler’s Guide to the Multiverse: Promises, Pitfalls, and a Framework for the Evaluation of Analytic Decisions. Advances in Methods and Practices in Psychological Science, 4(1). https://doi.org/10.1177/2515245920954925 *[V (Crossref)]*
 - Guinnane, T. W. (2010). The Historical Fertility Transition: A Guide for Economists. Elsevier BV. https://doi.org/10.2139/ssrn.1692848 *[V (Crossref)]*
 - Hanushek, E. A. (1992). The Trade-off between Child Quantity and Quality. Journal of Political Economy, 100(1), 84-117. https://doi.org/10.1086/261808 *[V (Crossref)]*
 - Hastings, A., & Wysham, D. B. (2010). Regime shifts in ecological systems can occur with no warning. Ecology Letters, 13(4), 464-472. https://doi.org/10.1111/j.1461-0248.2010.01439.x *[V (Crossref)]*
@@ -1407,7 +1411,7 @@ and the paper names the data that would test it.
 - Notestein, F. W. (1945). Population — the long view. In T. W. Schultz (Ed.), Food for the world (pp. 36–57). University of Chicago Press. *[U (no DOI; hand-cited)]*
 - Osili, U. O., & Long, B. T. (2007). Does Female Schooling Reduce Fertility? Evidence from Nigeria. National Bureau of Economic Research. https://doi.org/10.3386/w13070 *[V (Crossref)]*
 - Pearl, J., & Bareinboim, E. (2011). Transportability of Causal and Statistical Relations: A Formal Approach. 2011 IEEE 11th International Conference on Data Mining Workshops, 540-547. https://doi.org/10.1109/icdmw.2011.169 *[V (Crossref)]*
-- Psacharopoulos, G., & *, H. A. P. (2004). Returns to investment in education: a further update. Education Economics, 12(2), 111-134. https://doi.org/10.1080/0964529042000239140 *[V (Crossref)]*
+- Psacharopoulos, G., & Patrinos, H. A. (2004). Returns to investment in education: a further update. Education Economics, 12(2), 111-134. https://doi.org/10.1080/0964529042000239140 *[V (Crossref)]*
 - Robinson, W. S. (1950). Ecological Correlations and the Behavior of Individuals. American Sociological Review, 15(3), 351. https://doi.org/10.2307/2087176 *[V (Crossref)]*
 - Roth, J. (2022). Pretest with Caution: Event-Study Estimates after Testing for Parallel Trends. American Economic Review: Insights, 4(3), 305-322. https://doi.org/10.1257/aeri.20210236 *[V (Crossref)]*
 - Rutstein, S. O., & Johnson, K. (2004). The DHS wealth index (DHS Comparative Reports No. 6). ORC Macro. *[U (no DOI; hand-cited)]*
@@ -1415,7 +1419,7 @@ and the paper names the data that would test it.
 - Schultz, T. W. (1961). Investment in human capital. American Economic Review, 51(1), 1–17. *[U (no DOI; hand-cited)]*
 - Silberzahn, R., Uhlmann, E. L., Martin, D. P., Anselmi, P., Aust, F., Awtrey, E., Bahník, Š., Bai, F., Bannard, C., Bonnier, E., Carlsson, R., Cheung, F., Christensen, G., Clay, R., Craig, M. A., Rosa, A. D., Dam, L., Evans, M. H., Cervantes, I. F., Fong, N., Gamez-Djokic, M., Glenz, A., Gordon-McKeon, S., Heaton, T. J., Hederos, K., Heene, M., Mohr, A. J. H., Högden, F., Hui, K., Johannesson, M., Kalodimos, J., Kaszubowski, E., Kennedy, D. M., Lei, R., Lindsay, T. A., Liverani, S., Madan, C. R., Molden, D., Molleman, E., Morey, R. D., Mulder, L. B., Nijstad, B. R., Pope, N. G., Pope, B., Prenoveau, J. M., Rink, F., Robusto, E., Roderique, H., Sandberg, A., Schlüter, E., Schönbrodt, F. D., Sherman, M. F., Sommer, S. A., Sotak, K., Spain, S., Spörlein, C., Stafford, T., Stefanutti, L., Tauber, S., Ullrich, J., Vianello, M., Wagenmakers, E.-J., Witkowiak, M., Yoon, S., & Nosek, B. A. (2018). Many Analysts, One Data Set: Making Transparent How Variations in Analytic Choices Affect Results. Advances in Methods and Practices in Psychological Science, 1(3), 337-356. https://doi.org/10.1177/2515245917747646 *[V (Crossref)]*
 - Skirbekk, V. (2008). Fertility trends by social status. Demographic Research, 18, 145-180. https://doi.org/10.4054/demres.2008.18.5 *[V (Crossref)]*
-- Thévenon, O., & Gauthier, A. H. (2011). Family policies in developed countries: a ‘fertility-booster’ with side-effects. Community, Work &amp; Family, 14(2), 197-216. https://doi.org/10.1080/13668803.2011.571400 *[V (Crossref)]*
+- Thévenon, O., & Gauthier, A. H. (2011). Family policies in developed countries: a ‘fertility-booster’ with side-effects. Community, Work & Family, 14(2), 197-216. https://doi.org/10.1080/13668803.2011.571400 *[V (Crossref)]*
 - Trow, M. (1974). Problems in the transition from elite to mass higher education. Carnegie Commission on Higher Education. *[U (no DOI; hand-cited)]*
 - Vivalt, E. (2020). How Much Can We Generalize From Impact Evaluations?. Journal of the European Economic Association, 18(6), 3045-3089. https://doi.org/10.1093/jeea/jvaa019 *[V (Crossref)]*
 - Zakharov, S. (2008). Russian Federation: From the first to second demographic transition. Demographic Research, 19, 907-972. https://doi.org/10.4054/demres.2008.19.24 *[V (Crossref)]*

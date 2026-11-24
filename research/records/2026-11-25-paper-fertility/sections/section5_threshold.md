@@ -5,7 +5,7 @@
 
 ## 5.1 Why a linear coefficient is the wrong summary
 
-The levels coefficient in Section 1 is a summary of a relation across the whole schooling distribution, from
+The levels coefficient in Section 4 is a summary of a relation across the whole schooling distribution, from
 countries where adults average two or three years of schooling to countries where they average twelve. A single
 slope of −0.129 births per year of women's schooling is a useful first description, but it cannot be the end of
 the story, for a simple reason: the distribution of schooling across countries is not uniform, and the
@@ -18,7 +18,7 @@ We estimate a piecewise-linear (spline) version of the levels specification with
 schooling, which are the conventional boundaries between minimal, lower-secondary, and upper-secondary
 completion in the cross-national attainment literature, and which also turn out to be the boundaries that the
 data support: the three-slope model fits the cross-section better than a single slope, and the six-year hinge
-is the one that carries most of the association. The specification keeps the Section 1 design (decade and
+is the one that carries most of the association. The specification keeps the Section 4 design (decade and
 region fixed effects, log income, urbanisation, country-clustered standard errors) and replaces the single
 schooling variable with three: the minimum of schooling and six years; the amount between six and nine years,
 clipped at zero; and the amount above nine years. The three slopes are the gradients below six years, between
@@ -27,9 +27,9 @@ six and nine, and above nine.
 ## 5.2 The shape: steep below six years, flat in the middle, and a reversal above nine
 
 The point estimates from the rebuild, and their country-clustered bootstrap intervals from the extended battery
-(500 replications per measure, resampling countries), are in Table 5.
+(500 replications per measure, resampling countries), are in Table 4.
 
-**Table 5. The gradient by segment of the schooling distribution (levels specification; births per woman per
+**Table 4. The gradient by segment of the schooling distribution (levels specification; births per woman per
 year of schooling; 500-rep country-clustered bootstrap).**
 
 | segment | women's mean years (rebuild) | women's mean years (battery, 95% CI) | total mean years (battery, 95% CI) |
@@ -70,7 +70,7 @@ transition is now happening. This is why the paper's synthesis treats "more scho
 country sits in the development gradient rather than as a lever with a constant effect: the same change in
 schooling means very different things at two and at eleven years.
 
-The threshold shape also makes the placebo result in Section 1 more interpretable rather than less. If the
+The threshold shape also makes the placebo result in Section 4 more interpretable rather than less. If the
 level gradient were a schooling effect operating through the quantity–quality mechanism, we would expect it to
 be strongest where the quantity–quality trade-off is strongest — plausibly in the low-schooling range where
 child labour and mortality risk are high, which is what we see. But a development gradient would produce the
