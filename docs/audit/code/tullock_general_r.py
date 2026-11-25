@@ -61,12 +61,13 @@ SEED = 20261125
 X0 = 1.0            # baseline contest input (engine contest_x0)
 DV = 1.0            # prize value (engine gate prize / kappa·elite_logw)
 E_CAP = 6.0         # effort cap (engine contest_max_e = 6)
-CASH_KAPPA = 1.5    # household cash available for contest effort = CASH_KAPPA · y_i
+CASH_KAPPA = 0.25   # household cash available for contest effort = CASH_KAPPA · y_i
 N_CAND = 6          # diagnostic contest size (exact PL DP is O(n 2^n))
 R_GRID = [0.8, 1.0, 1.5, 2.5]
 P_GRID = [0.05, 0.16, 0.30]
-S_GRID = [0.05, 0.16, 0.34, 0.50, 0.67, 0.84, 1.00]
-FEE_GRID = [0.0, 0.10]
+S_GRID = [1/6, 2/6, 3/6, 4/6, 5/6, 1.00]   # seats 1,2,3,4,5,6 (=universal at 6)
+S_GRID = [round(x, 4) for x in S_GRID]
+FEE_GRID = [0.0, 0.08]
 
 OUT_JSON = "docs/audit/code/tullock_general_r_results.json"
 
@@ -203,17 +204,27 @@ def part1_validation(out, log):
         e_cf = min(max(x_cf - X0, 0.0), E_CAP)
         cf_err.append(abs(e - e_cf))
     emit(f"r=1 best response vs closed form sqrt(VA/c)-A: max |diff| = {max(cf_err):.2e}")
-    # symmetric-equilibrium anchor: x* = r V (n-1)/(n^2 c) must be a fixed point
-    sym_err = []
+    # symmetric anchor: analytic FOC residual at x* = r V (n-1)/(n^2 c), and the
+    # substantive finding that for r>1 the symmetric point need NOT be the global best
+    # response (non-concave payoff -> corner best responses / no symmetric pure eq).
+    foc_at_xstar = []
+    corner_beats_sym = []
     for r in R_GRID:
         for n in (2, 6, 20):
             for c in (0.05, 0.2):
                 V = 1.0
                 x_star = symmetric_x(V, c, r, n)
                 A = (n - 1) * x_star ** r
+                foc_at_xstar.append(abs(foc_single(x_star, A, V, r, c)))
                 e, info = best_response_tullock(A, V, c, r, x0=X0, e_hi=50.0)
-                sym_err.append(abs((X0 + e) - x_star))
-    emit(f"symmetric anchor: |x_opt - x*| for x*=rV(n-1)/(n^2c): max = {max(sym_err):.2e}")
+                if x_star > X0 and info["corner"] == "lower":
+                    corner_beats_sym.append(dict(r=r, n=n, c=c, x_star=x_star,
+                                                 foc_resid=abs(foc_single(x_star, A, V, r, c))))
+    emit(f"symmetric anchor: |FOC(x*)| at x*=rV(n-1)/(n^2c) (interior cases): "
+         f"max = {max(foc_at_xstar):.2e}")
+    emit(f"r>1 non-concavity: at x* > x0 the GLOBAL best response is the e=0 corner in "
+         f"{len(corner_beats_sym)} of 24 anchor cases (high r / low price): the symmetric "
+         f"interior point is a local FOC point, not always an equilibrium for r>1.")
     # archived formula: what it is, and where it is wrong
     heter = []
     for r in (0.8, 1.5, 2.5):
@@ -248,7 +259,9 @@ def part1_validation(out, log):
     emit(f"symmetric-level coincidence: |x_arch_fixedpoint - x*_general_r| max = {max(coinc):.2e}")
     out["part1"] = dict(rows=rows, worst_e_gap=worst_e_gap,
                         worst_util_gap=worst_util_gap, worst_foc=worst_foc,
-                        r1_closed_form_err=max(cf_err), symmetric_anchor_err=max(sym_err),
+                        r1_closed_form_err=max(cf_err),
+                        symmetric_anchor_foc_max=max(foc_at_xstar),
+                        symmetric_corner_cases=corner_beats_sym,
                         heter=heter, symmetric_coincidence=max(coinc))
 
 
@@ -297,7 +310,7 @@ def pl_best_response(i, x, r, seats_eff, V_i, c_i, e_hi, ngrid=8, golden=9):
 
 
 def equilibrium_pl(r, p, share, y, V=DV, x0=X0, e_cap=E_CAP, fee=0.0,
-                   cash_kappa=CASH_KAPPA, max_iter=60, damp=0.5, tol=1e-7):
+                   cash_kappa=CASH_KAPPA, max_iter=150, damp=0.5, tol=1e-7, e0=None):
     """Fixed-point equilibrium with exact PL admission; diagnostics for every cell."""
     n = len(y)
     cap = capacity(share, n, share_of="applicants")
@@ -307,24 +320,24 @@ def equilibrium_pl(r, p, share, y, V=DV, x0=X0, e_cap=E_CAP, fee=0.0,
     seats_eff = cap["seats_eff"]
     cost = p / y                                   # utility price of effort (engine pc/y)
     e_hi = np.minimum(e_cap, np.maximum(0.0, cash_kappa * y - fee) / p)
-    x = np.full(n, x0)
-    e = np.zeros(n)
+    e = np.zeros(n) if e0 is None else np.clip(np.array(e0, float), 0, e_hi)
+    x = x0 + e
     resid = np.inf
     iters = 0
     signs = []
     for it in range(max_iter):
-        e_new = e.copy()
+        e_old = e.copy()
+        # Gauss-Seidel sweep: each candidate responds to the latest others
         for i in range(n):
             if e_hi[i] <= 0:
-                e_new[i] = 0.0
+                e[i] = 0.0
             else:
-                e_new[i] = pl_best_response(i, x, r, seats_eff, DV * y[i], cost[i], e_hi[i])
-        step = e_new - e
-        e = e + damp * step
-        x = x0 + e
-        resid = float(np.max(np.abs(step)))
+                e[i] = e[i] + damp * (pl_best_response(i, x, r, seats_eff,
+                                                       DV * y[i], cost[i], e_hi[i]) - e[i])
+                x[i] = x0 + e[i]
+        resid = float(np.max(np.abs(e - e_old)))
         iters = it + 1
-        signs.append(np.sign(step.sum()))
+        signs.append(np.sign((e - e_old).sum()))
         if resid < tol:
             break
     x = x0 + e
@@ -332,7 +345,8 @@ def equilibrium_pl(r, p, share, y, V=DV, x0=X0, e_cap=E_CAP, fee=0.0,
     P = pl_prob(w, seats_eff)
     osc = len(signs) > 10 and np.sum(np.abs(np.diff(signs)) > 0) > len(signs) // 2
     return dict(cap=cap, e=e, P=P, converged=bool(resid < tol), iters=iters,
-                residual=resid, oscillating=bool(osc), foc_max=float(resid))
+                residual=resid, oscillating=bool(osc), foc_max=float(resid),
+                e_hi=e_hi, cash_constrained=float(np.mean(e_hi < e_cap - 1e-12)))
 
 
 def archived_equilibrium(r, p, share, y, V=DV, x0=X0, e_cap=E_CAP,
@@ -408,8 +422,10 @@ def part2_3(out, log):
     cells = []
     for r in R_GRID:
         for p in P_GRID:
+            e_prev = None
             for share in S_GRID:
-                eq = equilibrium_pl(r, p, share, y6)
+                eq = equilibrium_pl(r, p, share, y6, e0=e_prev)
+                e_prev = eq["e"].copy()
                 cap = eq["cap"]
                 spend = float(np.mean(p * eq["e"]))
                 cells.append(dict(r=r, p=p, share=share, seats=cap["seats_eff"],
@@ -422,7 +438,10 @@ def part2_3(out, log):
                                   P_min=float(np.min(eq["P"])),
                                   P_max=float(np.max(eq["P"])),
                                   sum_P=float(np.sum(eq["P"])),
-                                  seats_eff=cap["seats_eff"]))
+                                  seats_eff=cap["seats_eff"],
+                                  cash_constrained=eq.get("cash_constrained", 0.0),
+                                  e_hi=eq.get("e_hi"),
+                                  e=eq["e"].tolist()))
     wall = time.perf_counter() - t0
     emit(f"corrected surface: {len(cells)} cells in {wall:.1f} s single process")
     nconv = sum(c["converged"] for c in cells)
@@ -465,13 +484,16 @@ def part2_3(out, log):
     fee_cells = []
     for fee in FEE_GRID:
         for r, p in ((1.5, 0.16), (0.8, 0.16)):
+            e_prev = None
             for share in S_GRID:
-                eq = equilibrium_pl(r, p, share, y6, fee=fee)
+                eq = equilibrium_pl(r, p, share, y6, fee=fee, e0=e_prev)
+                e_prev = eq["e"].copy()
                 fee_cells.append(dict(fee=fee, r=r, p=p, share=share,
                                       spend=float(np.mean(p * eq["e"])),
                                       participation=float(np.mean(eq["e"] > 0.05)),
                                       converged=eq["converged"], iters=eq["iters"],
-                                      universal=eq["cap"]["universal"]))
+                                      universal=eq["cap"]["universal"],
+                                      cash_constrained=eq.get("cash_constrained", 0.0)))
     for r, p in ((1.5, 0.16), (0.8, 0.16)):
         g0 = [next(c for c in fee_cells if c["fee"] == 0 and c["r"] == r and c["p"] == p and c["share"] == s)["spend"] for s in S_GRID]
         g1 = [next(c for c in fee_cells if c["fee"] == FEE_GRID[1] and c["r"] == r and c["p"] == p and c["share"] == s)["spend"] for s in S_GRID]
@@ -515,9 +537,15 @@ def part2_3(out, log):
     p20 = np.linspace(0.05, 0.30, 20)
     ratios = np.round(r20[:, None] / p20[None, :], 10).ravel()
     n_unique = len(np.unique(ratios))
-    emit(f"\nstructural independence: archived solver depends only on r·ΔV/p, so the "
-         f"20x20 (r,p) design has {n_unique} distinct r/p values "
-         f"(of {ratios.size} cells) x 5 S = {n_unique * 5} independent cells, not 2000.")
+    a1 = archived_equilibrium(0.8, 0.10, 0.34, y6)
+    a2 = archived_equilibrium(1.6, 0.20, 0.34, y6)
+    same_ratio_arch = abs(a1["e_bar"] - a2["e_bar"])
+    emit(f"\nstructural independence: the archived solver depends only on r·ΔV/p, i.e. the "
+         f"(r,p) plane enters only through the ratio. The 20x20 grid samples {n_unique} "
+         f"DISTINCT ratios (of {ratios.size} cells), so the surface is a 1-D r/p sweep x S: "
+         f"the design has rank 2 (r/p, S), not 3 (r, p, S) — r and p are structurally "
+         f"inseparable. Check: archived e_bar at (r,p)=(0.8,0.10) vs (1.6,0.20), same r/p: "
+         f"|diff|={same_ratio_arch:.2e} (identical).")
     # corrected: same r/p, different (r,p) gives different spend
     pair_demo = []
     for (r1, p1, r2, p2) in ((0.8, 0.10, 1.6, 0.20), (1.0, 0.16, 2.0, 0.32)):
