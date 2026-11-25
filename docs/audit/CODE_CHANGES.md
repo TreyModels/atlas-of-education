@@ -145,3 +145,9 @@ failures above are preserved verbatim as the historical record.
 | 2026-11-25 | `f31e176` | Gate 1a Phase B landed: gate kinds, KR track consequence, PL expected/realized probabilities, event-keyed RNG, labour prize audit (13/13 checks) |
 | 2026-11-25 | `98baf6b` | external GPU-bundle audit recorded + docs corrected; GPU conclusions quarantined (Lead) |
 | 2026-11-25 | `28a7d20` | contract amendment A7 (`contest_candidates` = sitting cohort) + dashboard Phase-B verification delta |
+| 2026-11-25 | `79bc919`, `5fcee05`, `8281dd9` | P0 task-6 ABC identification audit (rank 4/5, 2-dim null space, analytic δ, reduced-system rank 3) |
+| 2026-11-25 | `66abc13`, `0f56621` | P0 task-9 general-r Tullock validation (100 % paradox CONTRADICTED as S-grid truncation; analytic symmetric anchor) |
+| 2026-11-25 | `c114a61`, `307b59c` | P0 task-11 corrected GPU harness + experiment manifest + scientific claim ledger (GPU conclusions quarantined) |
+| 2026-11-25 | `01cb4d3`, `9e04236`, `47b342a`, `ffed664` | P0 task-7 DGP validation (rank 5/5 in 500/500) + task-8 bootstrap size/power factorial |
+| 2026-11-25 | `d1acdf3`, `1b34d36` | P0 task-12 perf: KEEP-MEMO-ONLY shipped, outputs bit-identical, 1.113× (2–5× unproven) |
+| 2026-11-25 | `8148998` | **Gate-1 close**: repaired-engine 540 migration table (`GATE1_MIGRATION_TABLE.md`), CF4 flip, honest-P decomposition, Gate-1 report pack, pool-hang incident + stack, P0 annex to claim ledger |
