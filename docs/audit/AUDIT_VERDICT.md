@@ -897,6 +897,39 @@ S lever; EP-2 needs the additive series); the clean public-S follow-up is theref
 **Verdict: still CONDITIONAL — not cleared for preregistered-final.** No confirmatory compute until the four residual
 fixes land, the body is canonical, and Codex's protocol/Kaplan confirmation arrives.
 
+### Re-review — Paper C prereg **Amendment A2** (2026-11-25): **CONDITIONALLY CLEARED (2 textual pre-launch amendments)**
+
+File: `docs/audit/PAPER_C_CONFIRMATORY_PREREG.md` sha256
+**`04532581e768983734664c2dac94dc8af2cb834ea723882f483761c94b4a1647`** (commit `bb26d49`). **All four A1 residual
+items are addressed in-file:** (1) authority rule at top (`§8 A1 supersedes §§1–6`; authoritative design = §8 +
+Appendix); (2) explicit **36-row appendix** with ids, factors, seed mapping, **gate kind = contest**, `share_of='cohort'`,
+**`contest_r` mapped by L** (r=1.2 at L=.25, r=1.6 at L=.45 — fixed by L, not an independent factor); (3) **T3 remapped
+to A|P55 vs A|P12** at the same S,L (own access open both; exposed arm h≈.144/own_share≈.53 vs h=0; binding assertions
+must hold or the contrast is INVALID); (4) **compute recalibrated from measured Pilot-0** (~6.9 CPU-min/run at N=1500;
+N=600 ≈2.8 CPU-min/run → screening 288 runs ≈**13.4 CPU-h**; confirmatory ≤6 passers ×32 seeds ×N=1500 ≈**22 CPU-h**;
+**≤36 CPU-h total**; "screening-confirmation on pre-declared passers"; **launch manifest** requires engine core, spec,
+runner+analysis commit, seeds, cells, frozen passer list). **Pilot-0 record corrected to 128/16**, stale `dcd0ad9`
+explicitly superseded (`PILOT0_RECORD.md` sha `601e13ce…`); capacity reserve recorded: **X-29 diagnostic at 6 workers**
+(COMPUTE_SCHEDULE §13.28; ~45–50 min, not 35).
+
+**Conditional clearance — 2 required textual pre-launch amendments (no design change):**
+1. **Pre-declare the >6-passer selection rule.** Screening may pass more than 6 cells; state e.g. "all passers if ≤6;
+   if >6, the first 6 in the fixed appendix cell order are confirmatory and the remaining passers are reported as
+   screening-only" (or raise the cap). No post-hoc choice; the frozen passer list goes in the manifest.
+2. **Resolve the all-cell fallback vs the ≤36 CPU-h envelope.** All-36 confirmatory at 32 seeds × N=1500 is ≈**132
+   CPU-h**, far outside the cap. State that the fallback is a **separate re-approved run/new budget** (not part of
+   ≤36 CPU-h) or drop it; otherwise the compute claim and the fallback are inconsistent.
+
+**Recommended (wording):** (a) explicitly exempt the no-withholding control **A|P12** from the `h>0/own_share>0.1`
+binding assertions (apply to the exposed/withholding arms only; failed exposed arm = INVALID); (b) state that **L is a
+gate-pressure bundle** (share + contest_r fixed by L) and T4 cannot separate the two components; (c) screening is also
+compute and starts only after clearance + Codex.
+
+**Verdict: CONDITIONALLY CLEARED for preregistration-final.** Launch only after the two textual amendments and Codex's
+protocol/Kaplan confirmation; the launch manifest must carry engine core `e111397b…`, spec `e5ddef6b…`, engine commit
+`846c9e0`, runner+analysis commit hashes, screening seeds 0–7 / confirmatory seeds 100–131, the 36-cell list + frozen
+passer list, N/T/T0/measure_from, fail routing, per-run `unfired_events==[]`, and the 1–2 slot capacity reserve.
+
 ## 5. Evidence-status register (programme level)
 
 | Status | Count (paper + programme rows) | Notes |

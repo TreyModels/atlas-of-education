@@ -260,3 +260,15 @@ Add to the methods/negative paper: summary-level QA would have missed all three.
 re-pinned internally at `f4167fc`: baseline `55f75eea…`/132, ledger `3e9dbbc1…` unchanged, proof-status `af6232cd…`;
 QA R1–R8 PASS remains valid (ids/statuses/row count unchanged). After Pilot-0/X-29, make **one batched** CSV update in a
 single commit and notify audit-runner + qa-verifier with old→new sha and a row/id/status diff for a single re-pin/re-audit.
+
+**PAPER C A2 RE-REVIEW (2026-11-25): CONDITIONALLY CLEARED — 2 textual pre-launch amendments.**
+`PAPER_C_CONFIRMATORY_PREREG.md` sha256 `04532581…` (commit `bb26d49`) addresses all four A1 residual items: authority
+rule (§8 supersedes §§1–6), explicit 36-row appendix with gate kind contest / `share_of='cohort'` / `contest_r` mapped
+by L, T3 remapped to A|P55 vs A|P12 at same S,L, and compute recalibrated from Pilot-0 (screening ≈13.4 CPU-h;
+confirmatory ≤6 passers ≈22 CPU-h; ≤36 total; screening-confirmation wording; manifest hashes). Pilot-0 record corrected
+to **128/16** (`PILOT0_RECORD.md` `601e13ce…`; stale `dcd0ad9` superseded); capacity reserve **X-29 at 6 workers**.
+**Required textual amendments before launch:** (1) pre-declare the >6-passer selection rule (e.g. fixed appendix-order
+first 6; rest screening-only) — no post-hoc choice; (2) resolve all-cell fallback vs ≤36 CPU-h (all-36 at 32 seeds
+≈132 CPU-h → separate re-approved budget, or drop). Recommended: exempt A|P12 control from h>0/own_share>0.1
+assertions; state L is a gate-pressure bundle (share+contest_r) with no component-separation claim; screening is compute
+and starts only after clearance + Codex. **No confirmatory compute until amendments + Codex.**
