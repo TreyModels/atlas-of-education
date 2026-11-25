@@ -863,3 +863,17 @@ manifest 17/17; log clean. Non-blocking note: `completion_primary`/`completion_u
 **X-29 diagnostic** (10 workers, resumed): **827/1,280 rows** at 23:09:16 (42.4 rows/min; 34/40 cell files; driver
 46562 + workers 46587–46596), **cgroup 10.0/10 (100 %)**, **ETA ~23:18–23:22**. Resume proven (473 rows preserved).
 DIAGNOSTIC-ONLY label/separate dir intact; Luna reserve still suspended per operator override.
+
+### 13.34 X-29 diagnostic COMPUTE COMPLETE 1,280/1,280; driver crashed post-write (KeyError 'bar')
+
+23:27:09: `/root/work/gate846/results_diag/` = **40/40 cell ckpts, 1,280/1,280 rows**, final
+`gate_architecture_results.json` (72,947 B, 23:24) **sha256 `57889777afd358adce843d7f2b35acfb037d1439d195643223a30bd7f2e78652`**.
+Parse check: H1/cells/design_diagnostics/exploratory_bar_archs/label/metadata/primary_H2_contest/secondary; metadata
+`total_runs=1280`, `n_cells=40`, `n_seeds=32`, `engine_commit=846c9e0`, **`elapsed_seconds=0.0`** (suspect). Driver then
+exited with **`KeyError: 'bar'` at `run_gate_architecture.py:233`** — exploratory/printing block indexes the `bar`
+architecture unconditionally while X-29 ran `--archs contest` → crash **after** the JSON write (same class as the earlier
+missing-`np` aggregation defect: main output written, post-processing dies). Commander notified; runner needs a guard for
+restricted `--archs` runs. **Resume evidence:** 473 rows preserved at the 10-worker restart (no recomputation); 10-worker
+rate ~42 rows/min; DIAGNOSTIC-ONLY label + separate dir intact.
+**Box now IDLE (~1/10); no processes.** Awaiting next campaign/assignment; Pilot-0 PASS (qa `0f1013e`), payload copied;
+Luna reserve suspended per operator override.
