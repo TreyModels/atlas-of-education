@@ -891,3 +891,16 @@ verified cleared 23:38:39.
 On launch: verify 10 workers + cgroup ~10/10 + BLAS=1 + out-dir/pin; publish **measured percentage-vs-time ETA**
 (CPU reference ≈13.4 CPU-h ⇒ ~1.3–1.4 h at 10 workers, to be refined from first cells); monitor at cell boundaries;
 on completion publish screening JSON sha256 + row/cell counts (expect 288 = 36×8). G2-B remains queued.
+
+### 13.36 Screening launched 23:48:42 — found at 7 workers / `screen_final` (brief said 10 / `screen_results`); flagged
+
+Verified 23:54:23: driver **50226** `run_paperC_screening.py driver --workers 7 --seeds 0-7 --n 600 --t 46
+--analysis-commit dc90ee56e6e2f77c2af9b8e8e5e6994450a26de3 --out-dir /root/work/paperC/screen_final`, env
+`PAPER_C_P12_MODE=pay_gap`; **7 cell workers** 50229/50232/50234/50236/50237/50239/50240 (cell ids `S0.85|L0.25|A|P55` …);
+declared venv, nice 10, BLAS/OMP=1. **Cgroup 7.0/10.** Runner sha256 `d2d25c1cd6681c4271ab90d2df3afe18687b231b6b84fb7472392f23bef2562c`;
+log `screen_final.log` 0 B (buffered); **26 rows / 7 cells at 5.7 min ≈ 4.6 rows/min** → raw ETA ~60–65 min if 288 runs
+(to be re-measured at 32/64/128-row boundaries).
+**Deviation flagged to Lead + commander:** workers **7 vs 10 briefed**, out-dir **`screen_final` vs `screen_results`**;
+asked whether to (a) leave at 7, or (b) **relaunch at 10 from per-cell checkpoints** (resume-safe, ETA toward briefed
+~1.3–1.4 h). Staging leftovers found: empty `/root/work/paperC_screen/screen_results/` + 0-byte `screen.log` (23:45);
+a `/root/work/queue/finalize.sh` process (0 % CPU) is running, not started by this scheduler. No other CPU jobs.
