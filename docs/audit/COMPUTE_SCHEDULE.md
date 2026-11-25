@@ -852,3 +852,14 @@ same `--archs contest --seeds 0-31 --no-sensitivity --out-dir /root/work/gate846
 DIAGNOSTIC-ONLY label and separate dir intact. **Resume proven: 473 rows in `ckpt_*` before the restart and 473 after it**
 (no recomputation; completed seeds skipped). cgroup **10.0/10 (100 %)**. 2-worker ETA would have been ~00:05; at 10 workers
 expected **~20–25 min**. 1,280-run design; ~807 rows remaining at restart.
+
+### 13.33 23:09 — Pilot-0 QA PASS; X-29 at 827/1,280 on 10 workers (42 rows/min, ETA ~23:20)
+
+**Pilot-0 QA: PASS A1–A10** (qa-verifier; report `docs/audit/PILOT0_QA.md`, commit `0f1013e`): payload sha
+`c6e50bc1…523f9d` verified; 16 cells/128 runs/8 seeds; params/design as declared; runtime pin `846c9e0` / core
+`e111397b…` / spec `e5ddef6b…` verified against git; non-market no-op guard 12/12; ckpt↔summary consistency;
+manifest 17/17; log clean. Non-blocking note: `completion_primary`/`completion_upper` all-NaN (do not cite);
+`tut_*_by_grade_last` clean. Paper C screening may proceed after adjudicator's final record.
+**X-29 diagnostic** (10 workers, resumed): **827/1,280 rows** at 23:09:16 (42.4 rows/min; 34/40 cell files; driver
+46562 + workers 46587–46596), **cgroup 10.0/10 (100 %)**, **ETA ~23:18–23:22**. Resume proven (473 rows preserved).
+DIAGNOSTIC-ONLY label/separate dir intact; Luna reserve still suspended per operator override.
