@@ -967,21 +967,21 @@ prereg: `docs/audit/PAPER_C_CONFIRMATORY_PREREG.md` sha256
 **"PREREGISTRATION FINAL (design frozen 2026-11-25; no compute yet)"**; §8 historical-status line corrected (A1
 superseded by A3; overall status FINAL); authority rule, A1.4 struck fallback, and §10 Codex trail unchanged.
 Frozen manifest: `docs/audit/PAPER_C_LAUNCH_MANIFEST.json` sha256
-**`4602a9e4f96e04dca329a2645f1b8e36aa6f149719770fd359a6d4ce221c2081`** (commit `7975e56`), status **FROZEN**, carrying
+**`6400c9db99b567faa01d9c1e62df552280170b00c062762250302daa0bb2f01a`** (commit `62dc609`), status **FROZEN (reconciled)**, carrying
 engine `846c9e0`/core `e111397b…`, spec `e5ddef6b…`, runner file+sha (`fbeba460…` with the pre-launch extension note),
 36 cells, screening seeds 0–7 / confirmatory 100–131, N=600/1500, T=46, measure_from=18, T0 n/a, fail routing (G6→G9
 contest, `share_of='cohort'`, `contest_r` fixed by L), per-run `unfired_events==[]` + exposed-arm assertions (`A|P12`
 exempt; failed exposed = INVALID), >6-passer rule (first 6 in appendix order), ≤36 CPU-h envelope (13.4 screening +
 22 confirmatory), 1–2 slot Luna/MASSENG reserve (X-29 at 6 workers), and the no-compute gates.
 
-**Provenance reconciliation (recorded, one-line action at launch):** the frozen manifest's `prereg.sha256` is
-`ff61f1e6…` — the prereg **at manifest-freeze time** — while the final canonical prereg is `445ec423…`. `git diff`
-between those versions shows **only the §8 historical-status sentence** changed; **no design content differs**. The
-manifest's design fields are therefore canonical/frozen, but **the screening run manifest must cite the final
-`445ec423…` hash** (or the launch manifest be re-emitted with that one-line hash update) so an automated hash check
-does not fail. **No screening/confirmatory compute until that reconciliation is in the run manifest, the 1–2 slot
-reserve is in place, and the Codex trail is cited.** Adjudication status: **PREREGISTRATION FINAL (design frozen);
-MANIFEST FROZEN; launch gated on the run-manifest hash citation + reserve.**
+**Provenance reconciliation — DONE (2026-11-25).** The frozen manifest now cites the **final canonical prereg
+`445ec423…`** (commit `e34b901`); `prereg.sha256_at_freeze_time = ff61f1e6…` and `prereg.superseded_by` record that
+the only difference is the §8 historical-status sentence (no design change). Manifest sha
+**`6400c9db…`** (commit `62dc609`), status **FROZEN (reconciled)**; engine pins, 36 cells, seeds 0–7/100–131,
+N=600/1500, T=46/measure_from=18, fail routing, assertions (`A|P12` exempt; failed exposed INVALID), >6-passer rule,
+≤36 CPU-h envelope, 1–2 slot reserve (X-29 at 6 workers), and Codex trail are unchanged. **No screening/confirmatory
+compute until the 1–2 slot reserve is in place** (the hash citation and Codex trail are now satisfied).
+Adjudication status: **PREREGISTRATION FINAL (design frozen); MANIFEST FROZEN (reconciled); launch gated only on the 1–2 slot reserve.**
 
 ## 5. Evidence-status register (programme level)
 
