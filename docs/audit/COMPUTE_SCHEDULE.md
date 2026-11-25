@@ -14,8 +14,8 @@ Box-side ledger with PIDs/hashes: `/root/work/compute/ledger/COMPUTE_LEDGER.md` 
 | item | value |
 |---|---|
 | quota | **10 CPUs** (`/sys/fs/cgroup/cpu.max = 1000000 100000`); `nproc`=80 is the host and is **misleading** |
-| current utilization | **6.0 / 10 CPU (60 %)** at 15:07:56 — our 6-worker 540 cross-env replication only. Legacy tenant **ENDED BY OPERATOR ORDER at ~15:07** (§7c); 3–4 CPUs must now be filled by qa task-7 (cap 3) |
-| band check | 60 % is **below** the 8.5–10.0 target band → filling from queue now; `loadavg` 11.9 is host-wide and is not our container (see §2) |
+| current utilization | **9.0 / 10 CPU (90 %)** at 15:12:07 — `cmd` 540 (6 workers, 9.0 % done) + `qa` task-7 (3 workers); contest-math 1-worker replication starting → 10.0/10 |
+| band check | 90 % is **inside** the 8.5–10.0 target band; hard worker cap respected (see §3b for the withdrawn 540→8 proposal); `loadavg` 18.8 is host-wide and is not our container (see §2) |
 | headline | **Gate-1 AFTER invariant suite is GREEN on the declared stack** (box replication: 27 passed in 56.73 s, 5 workers) |
 | ETA (controller box 540) | 540 × ~31 CPU-s/run ÷ 6 workers ≈ 47 min from 15:07:45 → **~15:55**, now with the full 6 cores (legacy ended) |
 | driver resolution | legacy "relaunch loop" = box-side **`run_parts.sh`**, a finite 4-part script (not an infinite watcher); killed 7×, re-issued by an external agent session within 5 s each time; current instance is being **allowed to finish** (§7) |
@@ -56,12 +56,21 @@ Total box budget **≤ 10 concurrent worker processes**, keep 1 slot for control
 
 | lane | box cap | in use | queue (strict order) | note |
 |---|---|---|---|---|
-| `qa-verifier` | **3** (was 5; lowered while 540 runs) | 0 | 1) Gate-1 AFTER suite ✅ done · 2) task-7 DGP 100 populations · 3) task-8 bootstrap factorial | biggest CPU consumer once it starts |
-| `atlas-commander` | **6** | 6 | independent 540 repaired-engine verification = **cross-environment replication** (authoritative 540 = host) | started 15:03:31 (relaunch 13168, 6 workers) |
+| `qa-verifier` | **3** | 3 | 1) Gate-1 AFTER suite ✅ done · 2) task-7 DGP 500 populations (5 configs × 100) — 1st config RUNNING since 15:10:40 (parent 15122 + workers 15124–15126) · 3) task-8 bootstrap factorial | pure NumPy ABC, 0 engine runs |
+| `atlas-commander` | **6** | 6 | 540 repaired-engine **cross-environment replication** (authoritative 540 = host); `/root/work/cmd` now controller-managed | parent 14765 + workers 14767–14772, started 15:07:45 |
 | `contest-math` | **1** | 0 | task-6 rank/Jacobian ~1,000 pts (analytic, ≤15 s single proc) · task-9 general-r Tulloch (~5–15 s) | box harness staged 15:02; releases immediately |
 | `audit-runner` | **1** | 0 | task-11 harness/manifest/ledger (box job done, 3 s) | releases immediately |
 | `engine-core`, `engine-tutoring` | **0** | 0 | host-only deterministic probes | no box jobs requested |
 | control / reserve | **1** | 0–1 | monitoring, pilots | this scheduler |
+
+### 3b. Cap arithmetic decision (15:13) — recorded for the operator
+
+Lead proposed raising the 540 from 6 → 8 workers to fill the quota while qa runs 3. **Withdrawn at the scheduler's
+recommendation, Lead concurred:** 8 + 3 = **11 worker processes > the hard 10 cap**, i.e. the "fill" would have
+re-created oversubscription; and restarting the 540 to change its pool size would discard **9 % of completed CPU work**
+(1,518 of 16,794 CPU-s). The 10th slot is instead filled by the only **non-duplicative** ready job — contest-math
+task-9 box cross-env replication at exactly 1 process (host remains authoritative). Final split: **540 6 + qa 3 +
+contest-math 1 = 10 workers = 10.0/10**, automatic trim if any lane asks for more.
 
 Rules the scheduler enforces: total ≤ 10; a lane exceeding its cap is messaged and flagged here; a job with
 no output progress for >10 min is messaged and flagged; any box job must report PID + worker count + ETA.
@@ -76,7 +85,7 @@ no output progress for >10 min is messaged and flagged; any box job must report 
 | J-02 | 540 repaired-engine cross-env replication | atlas-commander | 6 | 15:03:31 | **RUNNING** | ~31 CPU-s/run (pilot) → ~2.2 runs/min aggregate | ~15:50–16:00 | `/root/work/cmd/run_540.log`, then `papers/.../results/hk_korea_comparative_with_cf4.json` |
 | J-03 | task-6 rank/Jacobian audit (~1,000 prior-box points) | contest-math | 1 (analytic; 0 pool) | ~15:02 | staging/analytic on host | 1 moment-map + Jacobian per point; 0 `pl_win_probs` calls | <5 s once launched | `/root/work/contest` harness currently staged |
 | J-04 | task-11 harness/manifest/ledger box proof | audit-runner | 1 | 15:00:49 | ✅ DONE 15:00:52 | 3 s wall | done | `/root/work/audit/p07_box_evidence.tar.gz`, 18/18 PASS |
-| J-05 | task-7 synthetic DGP 100 populations | qa-verifier | 3 (cap) | not started | **QUEUED — start now** | provisional ~1 engine run/pop | ~9–17 min (provisional) | `/root/work/qa` |
+| J-05 | task-7 synthetic DGP (500 pops = 5 configs × 100, 20k draws × 16 moments, pure NumPy ABC) | qa-verifier | 3 | 15:10:40 | **RUNNING (config 1/5)** | 76 CPU-s/worker after 77 s; per-pop rate pending first artifact | first config ETA pending; total ~5 sequential configs | `/root/work/qa/full_out` (parquet, written at config end) |
 | J-06 | task-8 bootstrap factorial | qa-verifier | ≤3 | blocked on J-05 | queued | unknown until scoped (resample stored results; expect minutes) | — | `/root/work/qa` |
 | J-07 | task-9 general-r Tulloch validation | contest-math | 1 (analytic) | blocked on J-03 | queued | ~200 PL calls × 14–49 ms ≈ 3–10 s | <1 min | `/root/work/contest` |
 
@@ -203,7 +212,9 @@ e1ce873a0a106b9632fae97cf923ab6432ebc6e32043f64fb501d8c93ec9025b  results/policy
 | 15:05:19–24 | 20.9 | **10.0** (100 %) | legacy 8 + 540 6 | kill #7 at 15:05:19; relaunch #8 at 15:05:24 (5 s) |
 | 15:06:40 | 18.4 | **9.0** (90 %) | legacy 8 + 540 6 (+1 contest parent) | bounded-plan overlap; inside band |
 | **15:07:56** | **11.9** | **6.0** (60 %) | 540 6 | **legacy ENDED by operator order**; 6/10 → fill with qa task-7 |
-| 15:0x (next refresh) | — | — | — | target 9.5–10/10: 540 6 + qa 3 + control 1 |
+| 15:0x (next refresh) | — | — | — | target 9.5–10/10: 540 6 + qa 3 + contest-math 1 = 10 |
+| **15:12:07** | **18.8** | **9.0** (90 %) | 540 6 + qa 3 | qa task-7 live (config 1/5); 540 9.0 % done (1,518/16,794 CPU-s) |
+| 15:14 (next refresh) | — | — | — | + contest-math 1-worker replication → **10.0/10** |
 
 Band discipline: flag **<7** idle (fill from queue), **>11** oversubscribed (throttle the lowest-priority lane).
 `loadavg` is host-wide and is reported only because it was the issued metric; the cgroup number is the truth.
@@ -278,5 +289,12 @@ Band discipline: flag **<7** idle (fill from queue), **>11** oversubscribed (thr
 - **15:08** util 6.0/10 (60 %) = 540 alone → gap 3–4 CPUs; qa task-7 (0 engine runs, pure NumPy ABC, 500 populations
   = 5 configs × 100, 20k draws × 16 moments per population) asked to launch box pilot at 3 workers immediately;
   host authoritative run (4 host workers) already in flight since 15:03.
-- (next refresh: qa box PIDs + measured per-population seconds; util 9.5–10/10; 540 progress; relapse check dropped
-  after one more cycle per Lead)
+- **15:10:40** qa task-7 launched on the box at its 3-worker cap (config 1/5): PID 15122 parent + 15124–15126,
+  `docs/audit/code/dgp_validation.py --out-dir /root/work/qa/full_out --workers 3 --n-pop 100 --n-draws 20000`;
+  declared venv (numpy 2.2.6); 0 engine runs (pure NumPy ABC).
+- **15:12:37** util **9.4/10 (94 %)**; 540 at **10.1 % done** (1,698/16,794 CPU-s, ETA ~15:54); qa 318 CPU-s in
+  config 1 with no artifact yet; no legacy relapse (operator stop holds).
+- **15:13** 540→8 proposal withdrawn (cap arithmetic, §3b); 10th slot = contest-math task-9 box replication at 1 worker
+  (requested; host remains authoritative). If contest-math declines, the box holds 9.4/10 with the control slot free —
+  still inside band.
+- (next refresh: qa measured per-population seconds + config ETA; contest-math 10th-slot decision; 540 progress)
