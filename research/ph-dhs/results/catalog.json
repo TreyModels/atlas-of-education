@@ -1,0 +1,38 @@
+[
+  {
+    "wave": "2003",
+    "path": "/Users/treymenefee/neon-boot/pulled/dhs/philippines/2003/PHPR41SD/PHPR41FL.SAS7BDAT",
+    "sha256": "c24ab33bc505de983a04031458822f816abe2ecdcd13edaf431cafe4adab070f",
+    "n_rows": 17993,
+    "hv121": [
+      0.0,
+      1.0
+    ],
+    "n_missing_hv121": 10,
+    "n_missing_hv270": 0
+  },
+  {
+    "wave": "2017",
+    "path": "/Users/treymenefee/neon-boot/pulled/dhs/philippines/2017/PHPR71SD/PHPR71FL.SAS7BDAT",
+    "sha256": "73679b7dcbdd9e613fe94bd25548e7a2a30f1ada1013f4daa419108851ff6455",
+    "n_rows": 32515,
+    "hv121": [
+      0.0,
+      2.0
+    ],
+    "n_missing_hv121": 0,
+    "n_missing_hv270": 0
+  },
+  {
+    "wave": "2022",
+    "path": "/Users/treymenefee/neon-boot/pulled/dhs/philippines/2022/PHPR82DT/PHPR82FL.DTA",
+    "sha256": "a6be521d51255914825e964068184ed87a1d325683fee59b0b79f414023308f0",
+    "n_rows": 33783,
+    "hv121": [
+      0.0,
+      2.0
+    ],
+    "n_missing_hv121": 0,
+    "n_missing_hv270": 0
+  }
+]
