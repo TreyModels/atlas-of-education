@@ -834,6 +834,22 @@ engine is NOT formally verified.** Repro:
 `python3 docs/audit/lemma_audit.py --claims results/audit/paper_claims.csv --ledger docs/audit/LEMMA_LEDGER.csv --lean-dir
 verification/lean`.
 
+**Delivery refresh (`e0a5662`):** Luna starter `LeanStarter.lean` sha
+`6cfa77e770199a887a8160eba424c5c996e6a480f9190df3116665463cff7590` compiled with four documented fixes (statements
+unchanged, no `sorry`). **`Atlas/Model.lean` sha `f6acc321…`** proves `gap_nonneg`, `gap_eq_zero_iff_met`,
+`gap_pos_iff_shortfall`, `accepted_le_capacity`, `zero_extra_input_no_increment`, accounting/additivity, time-budget
+invariants, **`rank_invariant_under_common_shift`** (deterministic rank with an explicit tie rule) and
+`accepted_monotone_fixed_capacity`; **counterexamples** `fixed_seat_relative_rank_counterexample`,
+`complementarity_counterexample`, `feedback_capacity_counterexample`, `max_not_additive`. **Proof-status:** 107
+declarations / **46 theorems**, build 16 jobs PASS, 0 `sorry`, 0 prohibited/non-`propext` deps; `LEAN_PROOF_STATUS.md`
+sha `c02b4085650f714ec81c40e93c515e2bfa95a218a73f8eabb65bb6bc702efeaa`, `.csv` sha
+`1ff80fb0cf3e0a84a70976612c29a35ef06eb8e3ef166ea7a9afed90f745f0c9`, axioms `LEAN_AXIOMS_ALL.txt` sha
+`f9c05bc43384fdbf74fecfc66f4814fb2d5b8cb66522c12b2583968ec35a2281`; **differential bridge 22/22 exact**
+(`56cdfd7b…`). Ledger re-pinned to baseline `55f75eea…`/132 (ledger `3e9dbbc1…`, `.md` `eb639671…`, baseline JSON
+`52dee893…`, proof-status `af6232cd…`). **Boundary:** formal statements under stated assumptions ≠ engine/empirical
+truth; Tier 3 remains reproducible-artefact evidence; **no claim that 183 inventory equations or the float runtime are
+verified.**
+
 **Install provenance (honest):** elan 4.4.0 → Lean `v4.36.0` via the GitHub release mirror because the default CDN
 measured **70 B/s**; 608.4 MiB download, **~23 min** install window, **3.0 GiB** unpacked, disk 12 → 8.9 GiB free;
 **Mathlib not installed** (multi-GB, not viable on this Mac) — Tier 2 is CI-only.
