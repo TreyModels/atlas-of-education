@@ -84,3 +84,22 @@ sha256. Code edits only on the Mac worktree, never on the box.
   Box verified live: load 16.3, 251 GB RAM, overlay 27 G free, numpy 1.24.1 / scipy 1.13.1 on
   `/root/miniconda3/bin/python`; torch cu118 pip still downloading on one core (parked, GPU out of wave 1).
   No box job results yet.
+
+- 2026-11-25T14:38+08:00 · Commander · **Gate-0 independent verification (host) COMPLETE** — re-ran the legacy
+  540-run job from a clean `git archive HEAD` extraction (`/tmp/cmd-verify`; engine hashes core `618bd6dd…`,
+  tutoring `b2d213b6…`, runner `dd0b1d8d…` = the verified artifacts). exit 0, 540/540, wall 100.79 s; output JSON
+  sha256 `722c370b…eaf54`. vs committed reference: **9,174/9,180 seed values exact, 6 differ ≤3.55e-15; 842/846
+  summary values exact, 4 differ ≤4.44e-16; all 2-d.p. spend indices identical**; only `elapsed_seconds` differs
+  among metadata. Cross-lane: differs from audit-runner's host run in exactly one stored field
+  (`elapsed_seconds`), all 10,025 other numeric values identical. CF4 verdict reproduced unchanged (only CF1b
+  Win-Win in both; CF4a fails HK equity 48.64 % vs 46.36 %; CF4b fails spend 90.88/88.04). Artifacts:
+  `results/audit/commander/` (README + JSON + comparison + SHA256SUMS), commit 48d1670. Verdict: REPRODUCED
+  SIMULATION (bit-level: last-bit float only). Box environment-independence re-run still pending from audit-runner.
+
+- 2026-11-25T14:38+08:00 · Commander · **engine-core Phase A delivered** (`docs/audit/ENGINE_CORE_AUDIT.md`,
+  commit 6403089): defect list with anchors plus measured tracer evidence on the unmodified engine — D1 0 elite
+  flags at KR G9 and 51.0 % of contest-prep spend (21,100/41,350 wage units) targeting the phantom gate; D2 KR G12
+  mean expected P 0.292 vs realized 0.121 (HK 0.455 vs 0.232); D3 zero-seat quota admits everyone, double admission
+  noise, in-sample cutoff; plus credential/track, closed-level, queue-premium, pass_rate and RNG-path defects.
+  Phase B started against contract §1/§2/§3/§6/§7/§8. contest-math's deterministic `auto` path remains the
+  integration dependency (A5) — flagged to that lane.
