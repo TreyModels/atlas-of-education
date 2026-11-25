@@ -1,17 +1,17 @@
 # LEMMA LEDGER — mechanical consistency audit (Paper C / programme claims)
 
-**Owner:** qa-verifier · **date:** 2026-11-25 ~22:00 · **mode:** host-only
-**Artefacts audited:** full Lean package `verification/lean/{Atlas.lean, LeanStarter.lean, Atlas/{Claims,Definitions,Identities,PlackettLuce,Model}.lean}` at commit **`e0a5662`** (content `cf1d995`), `docs/audit/LEMMA_LEDGER.md` (sha `bf270f0f…`), `LEMMA_LEDGER.csv` (sha `3e9dbbc1…`, **132 rows**), `LEMMA_LEDGER_BASELINE.json` (sha `9c521416…`), frozen baseline `results/audit/paper_claims.csv` (sha **`3ff88d39…ddbc5`**, **132 rows**). Prior pairs (130-row `f2ce655e…`@`4d42101`; `b990c99f…`@`4c06025`) preserved in git history.
-**Verdict: PASS — SIGNED OFF for mechanical ledger consistency + Lean axiom hygiene on the pinned pair below (R1–R8 all PASS at commit `e0a5662`).** This certifies the claim→declaration mapping and axiom hygiene, not the truth of empirical claims nor engine numerics; the engine is NOT formally verified. The earlier PASS on the 130-row pair (`f2ce655e…` + `da956fc1…`, commit `4a9afd7`) is preserved in git history and superseded **only as the current record**; nothing was silently rewritten.
+**Owner:** qa-verifier · **date:** 2026-11-25 ~22:20 · **mode:** host-only
+**Artefacts audited:** full Lean package `verification/lean/{Atlas.lean, LeanStarter.lean, Atlas/{Claims,Definitions,Identities,PlackettLuce,Model}.lean}`, `docs/audit/LEMMA_LEDGER.md` (sha `eb639671…`), `LEMMA_LEDGER.csv` (sha **`3e9dbbc1…`**, **132 rows**, unchanged), `LEMMA_LEDGER_BASELINE.json` (sha `52dee893…`), frozen baseline `results/audit/paper_claims.csv` (sha **`55f75eea…cd212`**, **132 rows**) at freeze commit **`f4167fc`**. Prior pins: `e0a5662` with baseline `3ff88d39…`; earlier 130-row `f2ce655e…`@`4d42101` and `b990c99f…`@`4c06025` preserved in git history. The `3ff88d39→55f75eea` change is **content-only (same 132 rows/ids/statuses; ledger CSV byte-identical)** — re-verified, no re-baseline semantics change.
+**Verdict: PASS — SIGNED OFF for mechanical ledger consistency + Lean axiom hygiene on the pinned pair below (R1–R8 all PASS; re-verified at content-edit pin `f4167fc` / baseline `55f75eea…` — same rows/ids/statuses, ledger unchanged).** This certifies the claim→declaration mapping and axiom hygiene, not the truth of empirical claims nor engine numerics; the engine is NOT formally verified. The earlier PASS on the 130-row pair (`f2ce655e…` + `da956fc1…`, commit `4a9afd7`) is preserved in git history and superseded **only as the current record**; nothing was silently rewritten.
 
 ## 1. Frozen baseline and ledger (this is the pinned pair)
 
 | item | value |
 |---|---|
-| baseline | `results/audit/paper_claims.csv` — sha256 `3ff88d3950364bcc6ffcd12d516064fd6c20edb50ca72bc7ac43bd46756ddbc5`, **132 rows**, 132 unique ids, freeze commit **`e0a5662`** |
-| baseline record | `docs/audit/LEMMA_LEDGER_BASELINE.json` — sha256 `9c521416335b9317c23f97bad51bcc47474800203dae4ec24a7f6f6c3fab1f5b`; rows 132, missing_from_ledger [] |
+| baseline | `results/audit/paper_claims.csv` — sha256 `55f75eeac6dc0e0c96454238e60f0bcc06c1c4e4874145fc8ad78516f3bcd212`, **132 rows**, 132 unique ids, freeze commit **`f4167fc`** (re-pin of content-only edit from `3ff88d39…`/`e0a5662`; same rows/ids/statuses) |
+| baseline record | `docs/audit/LEMMA_LEDGER_BASELINE.json` — sha256 `52dee893a47c9f984d4529ff6e2b434da63ba59c42c5fdc2db37e9a81ba698e9`; rows 132, missing_from_ledger [] |
 | ledger CSV | `docs/audit/LEMMA_LEDGER.csv` — sha256 `3e9dbbc188a4309156310bd0696967261e11d0f2243c66c4da53daa4144e1287`, **132 rows** |
-| ledger MD | `docs/audit/LEMMA_LEDGER.md` — sha256 `bf270f0ff8840ede189556c810b19441ee56e5629fe0c80719d96ba927e8ec14` |
+| ledger MD | `docs/audit/LEMMA_LEDGER.md` — sha256 `eb639671093a6584b162432b4ec81276bdadcc7f356dcae7c64cb279278624b5`; proof-status MD `af6232cd…` (CSV unchanged `1ff80fb0…`) |
 | declared / explicit NOT-YET | **18 declared** (A-34…A-39, B-41…B-44, C-01…C-04, D-01…D-04) + **114 explicit `NOT-YET-LEMMATISED`** = 132 |
 | C-05 / X-28 / X-29 / X-30 / D-05 / D-06 | all present (C-05 and X-30 added after the previous freeze; regeneration at `4c06025` closes the drift) |
 | generator | `verification/lean/tools/gen_lemma_ledger.py` now derives sha/row counts from the CSV, supports `--expect-sha/--expect-rows` loud failure, writes `LEMMA_LEDGER_BASELINE.json` — no hard-coded 118/100 counts |
@@ -83,13 +83,14 @@ now fails loudly on the pinned sha/rows; re-run generator + this audit and repin
 `paperC_pilot0_results.json`); host-only QA remains blocked on the completed copy.
 
 
-## 7. Post-sign-off content edit (no re-baseline needed for the mapping)
+## 7. Post-sign-off content edits (no re-baseline needed for the mapping)
 
-paper-adjudicator's `4673bda`/`3ff88d39…` changed only the **X-30 action text** (same 132 rows and ids).
-Re-ran the audit against `3ff88d39…` × ledger `3e9dbbc1…` (132 rows): **R1–R7 still PASS**, ids/rows equal,
-mapping unchanged. The ledger's X-30 row is an explicit NOT-YET record keyed by id, so the text edit does
-not stale the mechanical audit. If any *id/row* change lands, regenerate the ledger with the pinned
-`--expect-sha/--expect-rows` first.
+Two content-only edits after the `e0a5662` sign-off: `3ff88d39…` (X-30 action text) and `55f75eea…`
+(MZ-01/MZ-02/C-05/X-30 text). Row count, id set and claim statuses are unchanged (audit-runner verified
+programmatically against the `e0a5662` snapshot; this audit independently confirms 132/132 ids and all
+checks). Re-ran against **`55f75eea…` × ledger `3e9dbbc1…`** (132 rows, byte-identical): **R1–R8 all PASS**.
+The ledger keys rows by id, so text edits do not stale the mechanical audit. If an **id/row/status** change
+lands, regenerate the ledger with the pinned `--expect-sha/--expect-rows` and re-pin first.
 
 
 ## 8. Audit-script refinements applied at this re-pin (QA-side, not engine defects)
