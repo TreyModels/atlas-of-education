@@ -1,0 +1,42 @@
+{
+  "part_a_bray_6param_abc": {
+    "n_draws": 200000,
+    "n_accepted": 77,
+    "accept_rate_pct": 0.0385,
+    "best_max_z": 0.4075,
+    "n_params": 6,
+    "dropped_param": "teacher_threshold (index 5; unused in shipped script)",
+    "best_theta_6param": [
+      -0.6343,
+      0.2392,
+      0.9809,
+      1.349,
+      1.2229,
+      -0.6682
+    ],
+    "posterior_corr_cond_6active": 21.03,
+    "elapsed_sec": 0.3
+  },
+  "part_b_contest_sensitivity_surface": {
+    "grid_points": 2000,
+    "r_range": [
+      0.8,
+      2.5
+    ],
+    "price_range": [
+      0.05,
+      0.3
+    ],
+    "seat_shares": [
+      0.12,
+      0.16,
+      0.23,
+      0.35,
+      0.5
+    ],
+    "share_cells_paradox_S012_to_S016": 1.0,
+    "share_cells_paradox_S012_to_S050": 1.0,
+    "mean_participation_jump_S012_to_S050": 0.3709,
+    "elapsed_sec": 0.034
+  }
+}

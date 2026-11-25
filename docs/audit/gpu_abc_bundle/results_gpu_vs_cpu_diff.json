@@ -1,0 +1,77 @@
+{
+  "note": "GPU vs CPU-forced run of the SAME built-in selftest (gpu_e1_q3_wild_cluster_ri.py --B 2000). CPU run forced with CUDA_VISIBLE_DEVICES=\"\". Deterministic OLS/CR1 quantities share identical inputs, so their diff measures GPU float64 numerical agreement. Bootstrap/permutation resamples use torch CUDA vs CPU RNG streams for the same seed, so percentile/moment differences reflect RNG-stream differences, not numerical error; the reported p-values are identical.",
+  "deterministic_quantities": [
+    {
+      "stat": "wild_cluster.beta1",
+      "gpu": 0.4447407388610457,
+      "cpu": 0.44474073886104437,
+      "abs_diff": 1.3322676295501878e-15,
+      "rel_diff": 2.9956051090845627e-15
+    },
+    {
+      "stat": "wild_cluster.se_cr1",
+      "gpu": 0.08291358451449403,
+      "cpu": 0.08291358451449392,
+      "abs_diff": 1.1102230246251565e-16,
+      "rel_diff": 1.339012215098578e-15
+    },
+    {
+      "stat": "wild_cluster.t_obs",
+      "gpu": 5.363906788800104,
+      "cpu": 5.3639067888000955,
+      "abs_diff": 8.881784197001252e-15,
+      "rel_diff": 1.6558423825608844e-15
+    },
+    {
+      "stat": "block_perm.beta_obs",
+      "gpu": 0.4447407388610457,
+      "cpu": 0.44474073886104437,
+      "abs_diff": 1.3322676295501878e-15,
+      "rel_diff": 2.9956051090845627e-15
+    }
+  ],
+  "deterministic_max_abs_diff": 8.881784197001252e-15,
+  "deterministic_max_rel_diff": 2.9956051090845627e-15,
+  "rng_dependent_quantities": [
+    {
+      "stat": "wild_cluster.p_wild_cluster",
+      "gpu": 0.0004997501249375312,
+      "cpu": 0.0004997501249375312,
+      "abs_diff": 0.0
+    },
+    {
+      "stat": "wild_cluster.t_boot_q025",
+      "gpu": -2.1115961184341767,
+      "cpu": -2.021618221882221,
+      "abs_diff": 0.08997789655195554
+    },
+    {
+      "stat": "wild_cluster.t_boot_q975",
+      "gpu": 2.1203792544146487,
+      "cpu": 2.113851710027801,
+      "abs_diff": 0.006527544386847772
+    },
+    {
+      "stat": "block_perm.p_block_perm",
+      "gpu": 0.000999000999000999,
+      "cpu": 0.000999000999000999,
+      "abs_diff": 0.0
+    },
+    {
+      "stat": "block_perm.perm_mean",
+      "gpu": 0.08294635904079041,
+      "cpu": 0.08294974317464446,
+      "abs_diff": 3.3841338540480104e-06
+    },
+    {
+      "stat": "block_perm.perm_sd",
+      "gpu": 0.05217447130835428,
+      "cpu": 0.0527962008283913,
+      "abs_diff": 0.0006217295200370218
+    }
+  ],
+  "p_wild_cluster_equal": true,
+  "p_block_perm_equal": true,
+  "gpu_elapsed_sec": 1.234,
+  "cpu_elapsed_sec": 0.316
+}
