@@ -1,0 +1,46 @@
+{
+  "stage": "A5",
+  "timestamp_utc": "2026-11-25T23:34:22Z",
+  "seeds": [
+    100,
+    101,
+    102,
+    103,
+    104,
+    105,
+    106,
+    107,
+    108,
+    109,
+    110,
+    111,
+    112,
+    113,
+    114,
+    115
+  ],
+  "n_seeds": 16,
+  "cells": 6,
+  "n_runs": 96,
+  "n": 1500,
+  "t": 46,
+  "reason": "measured ~13-15 min/seed at N=1500 with treated G6->G9 contest gate; 32 seeds ~42-48 CPU-h vs <=22 envelope",
+  "envelope_cpu_h": 24,
+  "precision": "SE x sqrt(2) vs 32 seeds; report achieved CI/MDE (A5 interim precision)",
+  "unchanged": {
+    "passers": "b64a69f0...",
+    "a4": "8c967eab...",
+    "runner": "ddeffe42...@1b3a510",
+    "engine": "846c9e0",
+    "core": "e111397b...",
+    "spec": "e5ddef6b...",
+    "holm": "m=2 alpha=.05 T2/T3 only",
+    "minima": {
+      "T2": 0.1,
+      "T3": 0.05
+    }
+  },
+  "no_outcome_inspection": true,
+  "no_optional_stopping": true,
+  "exclude_seeds_116_131": true
+}
