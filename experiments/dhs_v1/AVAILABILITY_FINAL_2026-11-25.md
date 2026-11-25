@@ -68,3 +68,19 @@ country-year keys, weights, units, timing and provenance. Subnational linkage BL
 displaced GPS); macro candidates = M6 public DHS-API panels; M1/M3 declared not local. R 4.5.3 `survey` 4.5
 cross-check on KH 2021-22 E1 reproduced Python estimates/SEs exactly (0.446623 / 0.017073). This layer is the
 L1 input to `INTEGRATION_SCHEMA_v0.1.md`; household microdata is never included.
+
+## Frozen inputs and run preflight (data-team follow-ups, commit `d0e832a`)
+
+* `harmonize/_out/singleton_ledger.csv` (sha256 `9df4c109…a1895c`, 6,464 stratum rows) — **22 singleton strata**:
+  PH 2008 19, VN 1997 1, VN 2002 1, ID 2007 1. This is the authoritative D-07 ledger QA must reconcile against.
+* `harmonize/_out/run_map.csv` (sha256 `fa751827…b02e38b0`, 28 rows) — per-file feasible experiments derived from
+  the verified availability matrix (person files → E1/E2/E3/E6 per D-01; woman files → E4/E5/E7/E8; PH2008/2013
+  empty; E1 dropped where wealth is absent).
+* `harmonize/_out/normalized_output_hashes.csv` (sha256 `3fd87f6e…f1841b9a`, 28 local files) — the normalized
+  inputs are **FINAL/FROZEN**: path, sha256, bytes, rows. Any recode change requires a new commit + hash list.
+* The run harness (`runs/run_all.py`) now **refuses** to run if any input's sha256 is not pinned, if the run map is
+  missing, or if a feasible (file, experiment) pair produces no estimate; it writes `feasibility_gaps.csv` and
+  records the singleton-ledger/hash-list/run-map sha256 in `run_manifest.json`. A simulated unpinned input is
+  rejected with `[preflight] REFUSED: … not in normalized_output_hashes.csv` (verified).
+* Benchmark source policy (data team, README §9): public-report references only (KH FR377 Table 2.12; PH FR381;
+  ID 2017 final report); no further "published" numbers; B005–B008 stay PENDING unless an exact table is located.

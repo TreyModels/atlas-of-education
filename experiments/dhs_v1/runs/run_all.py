@@ -49,6 +49,9 @@ def default_engine() -> Path:
     return ENGINE_CANDIDATES[0]
 DEFAULT_BENCH = ROOT / "benchmarks" / "benchmark_registry_v0.2.csv"
 SIGNOFF = ROOT / "qa" / "QA_SIGNOFF.json"
+RUN_MAP = ROOT / "harmonize" / "_out" / "run_map.csv"
+HASH_LIST = ROOT / "harmonize" / "_out" / "normalized_output_hashes.csv"
+SINGLETON_LEDGER = ROOT / "harmonize" / "_out" / "singleton_ledger.csv"
 
 SUPPRESS_N = 30        # n_unweighted
 SUPPRESS_PSU = 2       # n_psu
@@ -95,6 +98,52 @@ def gate(mode: str, engine: Path) -> None:
         sys.exit(f"[gate] REFUSED: engine sha256 changed after QA sign-off "
                  f"(signed {signed[:12]}..., actual {actual[:12]}...)")
     print(f"[gate] QA sign-off verified for engine {actual[:12]}...")
+
+
+def preflight(inputs: list[Path], skip: bool, hash_list: Path, run_map: Path, singleton_ledger: Path) -> dict:
+    """Pin the normalized inputs and reconcile the run map before any estimation.
+
+    * every input must match `normalized_output_hashes.csv` (frozen adapter output);
+    * every feasible (file, experiment) pair from `run_map.csv` must be produced;
+    * the singleton-PSU ledger (D-07) must exist and be recorded.
+    Synthetic/test fixtures bypass hash pinning via --skip-preflight.
+    """
+    report: dict = {"hash_pins": {}, "run_map": str(run_map), "singleton_ledger": None}
+    if skip:
+        report["skipped"] = True
+        print("[preflight] skipped (synthetic/test mode)")
+        return report
+    if not hash_list.exists():
+        sys.exit(f"[preflight] REFUSED: missing input hash list {hash_list}")
+    pins = pd.read_csv(hash_list)
+    pins = {str(r["file"]): str(r["sha256"]) for _, r in pins.iterrows()}
+    report["hash_list_sha256"] = sha256(hash_list)
+    for inp in inputs:
+        name = inp.name
+        actual = sha256(inp)
+        expected = pins.get(name)
+        if expected is None:
+            sys.exit(f"[preflight] REFUSED: {name} not in normalized_output_hashes.csv")
+        if actual != expected:
+            sys.exit(f"[preflight] REFUSED: {name} sha256 mismatch (adapter output changed after freeze)")
+        report["hash_pins"][name] = actual
+    if not run_map.exists():
+        sys.exit(f"[preflight] REFUSED: missing run map {run_map}")
+    rm = pd.read_csv(run_map)
+    report["run_map_sha256"] = sha256(run_map)
+    report["expected"] = {str(r["file"]): str(r.get("experiments_feasible", "")) for _, r in rm.iterrows()}
+    if singleton_ledger.exists():
+        led = pd.read_csv(singleton_ledger)
+        report["singleton_ledger"] = {
+            "path": str(singleton_ledger), "sha256": sha256(singleton_ledger),
+            "rows": int(len(led)), "singleton_strata": int(led["singleton_psu"].sum())
+            if "singleton_psu" in led.columns else None,
+        }
+        print(f"[preflight] singleton ledger: {report['singleton_ledger']['singleton_strata']} singleton strata")
+    else:
+        sys.exit("[preflight] REFUSED: missing singleton_ledger.csv (D-07 requires it)")
+    print(f"[preflight] {len(report['hash_pins'])} inputs hash-pinned; run map reconciled")
+    return report
 
 
 def run_engine(rscript: str, engine: Path, inp: Path, outdir: Path) -> dict:
@@ -221,6 +270,11 @@ def main() -> int:
     ap.add_argument("--benchmarks", type=Path, default=DEFAULT_BENCH)
     ap.add_argument("--mode", choices=["synthetic", "test", "real"], default="test")
     ap.add_argument("--rscript", default=str(Path.home() / "neon-boot" / "r-env" / "bin" / "Rscript"))
+    ap.add_argument("--run-map", type=Path, default=RUN_MAP)
+    ap.add_argument("--hash-list", type=Path, default=HASH_LIST)
+    ap.add_argument("--singleton-ledger", type=Path, default=SINGLETON_LEDGER)
+    ap.add_argument("--skip-preflight", action="store_true",
+                    help="synthetic/test fixtures only: bypass hash pinning")
     args = ap.parse_args()
 
     engine = (args.engine or default_engine()).resolve()
@@ -241,6 +295,7 @@ def main() -> int:
     if not inputs:
         sys.exit("no input CSVs found")
 
+    pre = preflight(inputs, args.skip_preflight, args.hash_list, args.run_map, args.singleton_ledger)
     out = args.out.resolve()
     out.mkdir(parents=True, exist_ok=True)
     runs, frames = [], []
@@ -258,6 +313,20 @@ def main() -> int:
     if not frames:
         sys.exit("engine produced no estimates.csv rows")
     est = pd.concat(frames, ignore_index=True)
+    # reconcile feasibility: every feasible (file, experiment) pair must appear
+    gaps = []
+    if pre.get("expected"):
+        for fname, exp_csv in pre["expected"].items():
+            feasible = {e.strip() for e in str(exp_csv).split(";") if e.strip()}
+            got = set(est.loc[est.get("run_input") == fname, "experiment"].astype(str))
+            for e in sorted(feasible - got):
+                gaps.append({"file": fname, "experiment": e, "issue": "feasible but no estimate rows"})
+            unexpected = got - feasible
+            for e in sorted(unexpected):
+                gaps.append({"file": fname, "experiment": e, "issue": "estimate for infeasible experiment"})
+        pd.DataFrame(gaps).to_csv(out / "feasibility_gaps.csv", index=False)
+        if gaps:
+            print(f"[warn] {len(gaps)} feasibility gaps written to feasibility_gaps.csv")
     est, ledger = apply_rules(est)
     est = multiplicity(est)
     est["exploratory_descriptive"] = True
@@ -276,6 +345,7 @@ def main() -> int:
         "r": r_version(args.rscript),
         "runs": runs,
         "gate": {"signoff_present": SIGNOFF.exists(), "mode": args.mode},
+        "preflight": pre,
         "estimates_rows": int(len(est)),
         "suppressed_rows": int(est["suppressed"].sum()),
         "outputs": {name: sha256(out / name) for name in
