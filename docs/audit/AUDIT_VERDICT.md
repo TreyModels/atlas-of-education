@@ -252,11 +252,21 @@ and sensitivity. Full plan: `docs/audit/PAPER_A_REPRODUCTION_ATTEMPT.md` (reimpl
 
 | # | computation | new-generation design | status |
 |---|---|---|---|
-| (a) | E8 fee-abolition event study | fresh hashed WDI vintage; CS ATT; 10k+10k Fisher; gender; full lead vector | **READY / partly DONE** — committed records already reproduce the numbers (`bd782be`, `fb8b67e`, `b4eb680`); new-gen adds hashed vintage + secondary outcome |
-| (b) | Delayed secondary-bulge `t*` | fresh hashed WDI/UIS 5 indicators; documented `L_primary`; 2,500 perms/scheme | **DATA-BLOCKED** — one-file `L_primary` gap + outcome series |
+| (a) | E8 fee-abolition event study | fresh hashed WDI vintage; simple DiD (equal weights); 2,500 Fisher/scheme; full lead vector | **DONE (REPRODUCED EMPIRICAL ANALYSIS)** — fresh-WDI impact **+12.322 pp** vs author +12.44 (Fisher p 0.0056/0.0044) **replicates**; post mean **+2.54 pp** vs author +25.26 does **not** replicate under simple DiD → **UNRESOLVED / ESTIMATOR-DEPENDENT** (simple DiD ≠ CS group-time ATT) |
+| (b) | Delayed secondary-bulge `t*` | fresh hashed WDI; `t* = abolition + SE.PRM.DURS`; outcome SE.SEC.ENRR; 2,500 perms/scheme | **DONE (fresh WDI)** — ATT at `t*` **−0.956 pp**, post +0.30, Fisher p **0.251 / 0.384** → **no detectable secondary-bulge jump**; **UNRESOLVED** (no-effect evidence), consistent with the manuscript's honest-null framing |
 | (c) | Gate-architecture / H2 (≥5,000 runs) | repaired `98baf6b`; pre-registered gate kinds/grid; ≥5,000 runs; H2 with seed CIs | **DESIGN READY / RUN PENDING** — ~43–60 CPU-h |
 | (d) | Multi-seed identifiability/Jacobian | explicit 3-option MNL; analytic Jacobian; rank/null across seeds; two-moment remedy; local-only | **DESIGN READY / MODEL SPEC NEEDED** — ABC harness is the template |
 | (e) | Fee-abolition forecast with held-out | training-only calibration; e=+5/+6 (and country) holdout; ≥40 seeds | **DESIGN READY / RUN PENDING** — ~1–3 CPU-h |
+
+**New-generation E8 empirical result (fresh hashed WDI, label `REPRODUCED EMPIRICAL ANALYSIS`):** the
+**abolition impact replicates** — ATT(e=0) **+12.322 pp** vs author +12.44 (Fisher p 0.0056 dates / 0.0044
+countries, 2,500 perms; full lead vector available). The **post-abolition amplification does not replicate** under a
+simple DiD — post mean **+2.54 pp** vs author +25.26 — and is recorded as **UNRESOLVED / ESTIMATOR-DEPENDENT**
+(simple DiD ≠ the author's CS group-time ATT; not proof the author's number is wrong). The **delayed-bulge `t*`**
+gives ATT **−0.956 pp** and Fisher p **0.251 / 0.384**: **no detectable secondary-bulge jump**, recorded as
+**UNRESOLVED** (no-effect evidence), consistent with the manuscript's honest-null framing. Artefacts:
+`docs/audit/E8_BULGE_NEWGEN.md` and `results/audit/newgen/e8_bulge_fresh_wdi_2026-11-25.json`; WDI manifest sha256
+`d7296e1fed3eb6806ba5111de2538e7fcd206323832307a1fabeeaefc6c55ee4`.
 
 **Paper B:** the **420 design is AUTHOR-REPORTED BASELINE** (runner/raw output not found where searched; docx tables
 == self-reported JSON). The **540 is reproduced** — scripts/data in hand (`hk_korea_exact_bundle.zip` /
@@ -317,15 +327,18 @@ procedures unchanged, or if it claims global identification from a local rank, o
 
 | Status | Count (paper + programme rows) | Notes |
 |---|---|---|
-| VERIFIED EMPIRICAL | **4** (4 A, 0 B, 0 programme) | descriptive/associational; not causal; E8 empirical block only |
+| VERIFIED EMPIRICAL | **4** (4 A) | descriptive/associational; not causal; author committed E8 record |
+| **REPRODUCED EMPIRICAL ANALYSIS** *(new-generation label, Lead-defined)* | **1** (1 A) | A-34: fresh-WDI simple-DiD replication of the E8 **impact** (+12.322 vs +12.44); manifest-hashed WDI vintage |
 | REPRODUCED SIMULATION | **14** (0 A, 8 B, 6 programme) | all conditional and/or uncalibrated unless marked; includes the re-executed ABC audit, the re-executed bootstrap factorial, and the Paper B 540 table regeneration |
 | VALIDATED SIMULATION | **3** (programme) | engine/PL module validation, corrected DGP design, bootstrap size/power — audit artifacts, not paper claims |
 | AUTHOR-REPORTED | **44** (20 A, 18 B, 6 programme) | **AUTHOR-REPORTED BASELINE**: the 420 generation, the Paper A Exp 1/3/4/5 legacy numbers, the author JSON bundle; not results, not reproduced, not to be silently replaced |
 | CONTRADICTED | **30** (8 A, 14 B, 8 programme) | only where committed code/algebra/measured audit output refutes the claim; includes the 100 % paradox, invalid E1/Q3, legacy DGP, "published benchmark" attributions, and the Paper B policy reversals |
-| UNRESOLVED | **4** (1 A, 0 B, 3 programme) | pending verification items (e.g., A-31 replication inventory; canonical spec/Gate-2; GPU quarantine) — tasks, never results |
+| UNRESOLVED | **6** (3 A, 0 B, 3 programme) | A-31 replication inventory; A-35 E8 amplification (estimator-dependent); A-36 bulge `t*` (no-effect evidence); canonical spec/Gate-2; GPU quarantine |
 
-The machine-readable one-row-per-claim record is `results/audit/paper_claims.csv` (99 rows; sha256
-`b3348748a212d4df4368e8d0b05086a75feeeab6c7dd584c92437f57238f6e97`).
+The machine-readable one-row-per-claim record is `results/audit/paper_claims.csv` (102 rows; sha256
+`57299a5f4017af984b03c7700416483960701272a1265a7d56aa73beb0277a38`). The Lead-defined new-generation labels **REPRODUCED EMPIRICAL ANALYSIS** and
+**UNRESOLVED / ESTIMATOR-DEPENDENT** are used for the fresh-WDI E8 rows; all other rows use the verbatim six-status
+taxonomy.
 
 ---
 
@@ -394,14 +407,20 @@ run failed twice in the pool-completion phase; the box run is the labelled sourc
 
 **Current combined manuscript: NOT PUBLISHABLE.**
 
-* Publishable core: the E8 empirical block (event study + Fisher RI + gender). That is a solid descriptive paper,
-  perhaps a short article or a chapter, with association-only wording.
-* Not publishable: the identifiability "theorem", the 1,640-run H2 experiment, the `t*` null, the simulator
-  forecast, Table 3, and the causal framing. There is no code, no seeds, and no result artifact for any of them, and
-  the one independent recomputation contradicts the headline identifiability numbers.
-* Salvage plan: **Paper A1** = E8 empirical short paper. **Paper A2** = measurement proposal as a pre-registration /
-  conjecture with an independently computed local-rank appendix and the corrected DGP design, on a different branch,
-  with no "theorem" language.
+* Publishable core: **the E8 abolition impact** — author-record +12.44 pp **and** the fresh-WDI simple-DiD
+  replication **+12.322 pp** (Fisher p 0.0056/0.0044; manifest-hashed vintage), labelled **REPRODUCED EMPIRICAL
+  ANALYSIS**. That is the verified empirical core, with association-only wording.
+* **The delayed-amplification story is estimator-dependent**: author +25.26 pp (CS) vs **+2.54 pp** fresh-WDI simple
+  DiD; **UNRESOLVED / ESTIMATOR-DEPENDENT** until the CS estimator is re-run on fresh data. Do not present +25.26 as
+  robust.
+* **The bulge `t*` is a no-effect result on fresh data** (ATT −0.956 pp; Fisher p 0.251/0.384) — **UNRESOLVED**
+  (no-effect evidence), consistent with the manuscript's honest-null framing; not a contradiction.
+* Not publishable: the identifiability "theorem", the 1,640-run H2 experiment, the simulator forecast, Table 3, and
+  the causal framing; the one independent recomputation contradicts the headline identifiability numbers.
+* Salvage plan: **Paper A1** = short empirical paper on the **abolition impact**, with the estimator-dependence of the
+  amplification explicitly reported (or the CS re-run on fresh data added first). **Paper A2** = measurement
+  proposal as a pre-registration / conjecture with an independently computed local-rank appendix and the corrected
+  DGP design, with no "theorem" language.
 
 ### Paper B — *Why Tutoring Taxes Backfire and Expanding Elite Seats Fuels the Arms Race*
 

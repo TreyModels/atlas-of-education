@@ -17,8 +17,7 @@ supersedes the earlier "reproduction attempt" framing.
 
 Five computations define Paper A: (a) the E8 fee-abolition event study, (b) the delayed secondary-bulge `t*`, (c) the
 gate-architecture/H2 experiment, (d) multi-seed identifiability/Jacobian, (e) the fee-abolition forecast with
-held-out horizons. **(a) is ready and already has verified empirical numbers; (c), (d), (e) are design-ready and
-server-runnable; (b) is data-blocked on a fresh hashed WDI/UIS pull.** None of the five depends on recovering the
+held-out horizons. **(a) and (b) are DONE on fresh hashed WDI — the impact replicates (+12.322 vs +12.44), the post mean does not (+2.54 vs +25.26, estimator-dependent), and the bulge `t*` shows no detectable jump (−0.956, p .251/.384); (c), (d), (e) are design-ready and server-runnable.** None of the five depends on recovering the
 Gemini code. The new-generation baseline is the repaired 540 (`98baf6b`, sha256 `455649da…`) and the P0 audit
 artefacts, which already establish the engine's behaviour and the identifiability limits.
 
@@ -28,8 +27,8 @@ artefacts, which already establish the engine's behaviour and the identifiabilit
 
 | # | computation | new-generation design | status | compute class | blocker |
 |---|---|---|---|---|---|
-| (a) | **E8 fee-abolition event study** | re-estimate from a fresh hashed WDI vintage; CS group-time ATT; 10,000 + 10,000 Fisher permutations; gender split; full lead vector; secondary outcome | **READY / partly DONE** — committed records already reproduce the numbers (`bd782be`, `fb8b67e`, `b4eb680`); the new-generation version adds a hashed vintage + export and the secondary outcome | host, minutes | none (data committed); a fresh WDI pull is desirable |
-| (b) | **Delayed secondary-bulge `t*`** | fresh hashed WDI/UIS pull of 5 indicators; documented `L_primary` source; pre-registered `t*`; CS event study; 2,500 permutations/scheme; capacity strata | **DATA-BLOCKED** — one-file `L_primary` gap + outcome series; no result exists | host, minutes once data lands | WDI/UIS network fetch + `L_primary` source |
+| (a) | **E8 fee-abolition event study** | fresh hashed WDI vintage; simple DiD (equal weights); 2,500 Fisher/scheme; full lead vector | **DONE (REPRODUCED EMPIRICAL ANALYSIS)** — impact **+12.322 pp** vs author +12.44 (Fisher p 0.0056/0.0044) replicates; post mean **+2.54 pp** vs +25.26 does not → **UNRESOLVED / ESTIMATOR-DEPENDENT**; artefacts `E8_BULGE_NEWGEN.md` + `results/audit/newgen/e8_bulge_fresh_wdi_2026-11-25.json` | host, 8.7 s | none; CS-estimator re-run on fresh data optional |
+| (b) | **Delayed secondary-bulge `t*`** | fresh hashed WDI; `t* = abolition + SE.PRM.DURS`; outcome SE.SEC.ENRR; 2,500 perms/scheme | **DONE (fresh WDI)** — ATT at `t*` **−0.956 pp**, post +0.30, Fisher p **0.251/0.384** → **no detectable secondary-bulge jump**; **UNRESOLVED** (no-effect evidence), consistent with the manuscript's honest-null framing | host, 8.7 s | none |
 | (c) | **Gate-architecture / H2 (≥5,000 runs)** | repaired engine `98baf6b`; pre-registered gate kinds `bar/bar_high/quota/contest`; S ∈ {.25,.35,.45,.55,.70}; fee ∈ {0,.19}; vac0 ∈ {.02,.08,.25,.50}; **≥5,000 runs** (30–40 matched seeds/cell, expanded grid); H2 = Δcut(S=.25) − Δcut(S=.70); report H1/H2/inverted-U with seed uncertainty and baselines | **DESIGN READY / RUN PENDING** — no new-generation run yet; the paper's 1,640-run version is AUTHOR-REPORTED BASELINE only | server, ~43–60 CPU-h for ≥5,000 runs at `N≈400`/`T≈70`; ~5–8 h wall at ≤10 CPUs | pre-registration + engine config freeze (no SSA config exists in the engine — must be specified in the prereg) |
 | (d) | **Multi-seed identifiability / Jacobian (declared perturbations)** | explicit 3-option MNL `masseng-tutoring` model; analytic Jacobian; rank/null-space at **multi-seed declared perturbations** (e.g., 100 population draws); aggregate moments vs micro-moments; report local rank, condition, finite non-identification, and the two-moment remedy; no global "theorem" | **DESIGN READY / MODEL SPEC NEEDED** — the independent ABC harness is the template; Paper A's own model spec must be written down | host, minutes–hours | a documented model specification + declared perturbation grid |
 | (e) | **Fee-abolition forecast with held-out horizons** | calibrate `fee_public` to pre-abolition GER on training horizons **only**; hold out e = +5/+6 (and a country holdout if feasible); ≥40 paired seeds; report RMSE/MAE vs persistence on the **held-out** horizons; sensitivity to engine caps | **DESIGN READY / RUN PENDING** — the SSA country config must be specified in the prereg; the paper's numbers are AUTHOR-REPORTED BASELINE | server, ~1–3 CPU-h at `N≈400`/`T≈70` | engine config + prereg |
@@ -66,9 +65,10 @@ blocker**, and we are not waiting for them.
   family; secondary outcome.
 * **New-generation additions:** pinned WDI vintage + hashes; full lead-vector reporting; pre-registered placebo
   family; secondary outcome; explicit association-only language.
-* **Status:** the numbers already reproduce the committed records (impact ATT **+12.44**, post mean **+25.26**,
-  event path +23.82/+25.94/+22.12/+25.19/+28.56/+25.92; RI p = 9.999e-05 / 5.999e-04 / 2.9997e-04; gender
-  **−3.94 [−8.72, +0.29]**). A fresh-vintage re-run is a hardening step, not a rescue.
+* **Status:** **DONE on fresh hashed WDI (simple DiD).** Impact **+12.322 pp** vs author +12.44 (Fisher p **0.0056**
+  dates / **0.0044** countries); post mean **+2.54 pp** vs author +25.26 (**UNRESOLVED / ESTIMATOR-DEPENDENT** —
+  simple DiD ≠ CS group-time ATT); full lead vector available. The author-record E8 numbers (impact +12.44, post
+  +25.26, RI .0001/.0003–.0006, gender −3.94 [−8.72, +0.29]) remain VERIFIED EMPIRICAL against the committed record.
 
 ### (b) Delayed secondary-bulge `t*` — DATA-BLOCKED
 
@@ -76,9 +76,9 @@ blocker**, and we are not waiting for them.
   `SE.SEC.ENRL.TC.ZS` (1990–2020); a **documented** `L_primary` source (ISCED/UNESCO mapping); `fee_dates`.
 * **Design:** `t* = t_ab + L_primary` by country; CS event studies centred on `t*`; 2,500 permutations/scheme;
   pre-registered capacity strata; report estimable cells and NOT-ESTIMABLE cells honestly; no imputation.
-* **Status:** **DATA-BLOCKED.** The committed bulge record registers `t*` NOT-ESTIMABLE (`L_primary` 0/8); the
-  outcome series are absent from the repo. This is a one-file data gap plus an acquisition task, not a modelling
-  problem. Once data lands: minutes of compute.
+* **Status:** **DONE on fresh hashed WDI.** `t*` per country from `SE.PRM.DURS`; ATT at `t*` **−0.956 pp**, post mean
+  **+0.30 pp**, Fisher p **0.251** dates / **0.384** countries → **no detectable secondary-bulge jump** (UNRESOLVED,
+  no-effect evidence). Consistent with the manuscript's honest-null framing; no causal claim.
 
 ### (c) Gate-architecture / H2 — DESIGN READY / RUN PENDING
 
@@ -148,7 +148,9 @@ blocker**, and we are not waiting for them.
 | ABC identification audit | VALIDATED/RE-EXECUTED | rank 4/5, 2-dim null, 44 θ, analytic δ; local 5/5 after two moments |
 | DGP corrected design | VALIDATED SIMULATION | rank 5/5 in 500/500; legacy 3/5 |
 | Bootstrap size/power + invalid permutation | VALIDATED SIMULATION | pooled size 0.996–1.000; FE 0.052–0.062; within-invariance 6.66e-16 |
-| E8 empirical block | VERIFIED EMPIRICAL | committed records `bd782be`/`fb8b67e`/`b4eb680` |
+| E8 empirical block (author record) | VERIFIED EMPIRICAL | committed records `bd782be`/`fb8b67e`/`b4eb680` |
+| **E8 fresh-WDI new generation** | **REPRODUCED EMPIRICAL ANALYSIS** | impact +12.322 vs +12.44; post +2.54 vs +25.26 (estimator-dependent); `E8_BULGE_NEWGEN.md` sha256 `97734cdc…`; JSON `5c2439…`; WDI manifest `d7296e1f…` |
+| **Bulge `t*` fresh-WDI** | **UNRESOLVED** (no-effect evidence) | ATT −0.956, post +0.30, p .251/.384 |
 | Paper B 540 regenerated tables | REPRODUCED SIMULATION, uncalibrated | `PAPER_B_TABLE_REGENERATION.md`; csv sha256 `da40a2ee…` |
 
 **Adjudicator re-executions (host):** the ABC identification audit was re-run and its output is **bit-identical**
@@ -168,8 +170,8 @@ committed result (rank 5/5 vs legacy 3/5) stands and is labelled as the audit's.
 | 1 | (c) gate architecture ≥5,000 runs | freeze config + pre-register (1 h) | server, 43–60 CPU-h | H1/H2 + inverted-U with seed CIs; all cells reported; hashes |
 | 2 | (d) multi-seed Jacobian | write model spec + perturbation grid (1 h) | host, minutes–hours | rank/null space across seeds/perturbations; local-only statement; two-moment remedy |
 | 3 | (e) forecast held-out | SSA config + pre-register | server, 1–3 CPU-h | held-out RMSE vs persistence; sensitivity |
-| 4 | (b) bulge `t*` | acquire/pin WDI/UIS + `L_primary` | host, minutes | estimable/NOT-ESTIMABLE cells; no imputation |
-| 5 | (a) E8 fresh-vintage re-run | pin WDI vintage | host, minutes | full lead vector; RI; gender CI; hashes |
+| 4 | (b) bulge `t*` | **DONE** — fresh WDI; no detectable jump | — | artefact hashed; report as no-effect evidence |
+| 5 | (a) E8 fresh-vintage re-run | **DONE** — impact replicates; post mean estimator-dependent | — | artefact hashed; report estimator dependence or re-run CS on fresh data |
 
 ---
 

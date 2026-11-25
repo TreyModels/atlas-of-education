@@ -41,13 +41,14 @@ Paper A is **two different papers stapled together**, and only one of them curre
   proposed two micro-moments restore **local rank 5/5 only** — not global identification, not rank 7/7. "Proves"
   and "theorem" must be deleted; "local" must be stated.
 
-**Publishability verdict:** the current combined manuscript is **not publishable**. The E8 block is publishable as
-a short descriptive empirical paper; the measurement proposal is publishable only as a conjecture/pre-registration
-with an independently computed local-rank appendix; the Tullock H2 experiment and the fee-abolition forecast must
-be **replaced by the NEW-GENERATION runs** (`PAPER_A_REPRODUCTION_ATTEMPT.md`: gate architecture ≥5,000 runs;
-multi-seed Jacobian; forecast with held-out horizons) before they can be cited. The legacy numbers stay visible as
-the **AUTHOR-REPORTED BASELINE** in a two-column comparison
-(`PAPER_A_BASELINE_VS_NEWGEN_TEMPLATE.md`).
+**Publishability verdict:** the current combined manuscript is **not publishable**. The **verified empirical core is
+the abolition impact** (+12.44 author; **+12.32 pp fresh-WDI replication**, A-34); the **delayed-amplification story
+is estimator-dependent** (+25.26 author vs +2.54 fresh-WDI simple DiD, A-35) and cannot be presented as robust until
+the CS estimator is re-run on fresh data. The measurement proposal is publishable only as a
+conjecture/pre-registration with an independently computed local-rank appendix; the Tullock H2 experiment and the
+fee-abolition forecast must be **replaced by the NEW-GENERATION runs** (`PAPER_A_REPRODUCTION_ATTEMPT.md`: gate
+architecture ≥5,000 runs; multi-seed Jacobian; forecast with held-out horizons). The legacy numbers stay visible as
+the **AUTHOR-REPORTED BASELINE** in a two-column comparison (`PAPER_A_BASELINE_VS_NEWGEN_TEMPLATE.md`).
 
 ## 1. Evidence rule used here
 
@@ -68,12 +69,33 @@ the **AUTHOR-REPORTED BASELINE** in a two-column comparison
 
 | ID | Claim (manuscript location) | Supporting / refuting artifact | Status | Required change |
 |---|---|---|---|---|
-| A-01 | Abolition-year primary-GER ATT = **+12.44 pp** (abstract, Results ¶1, Table 1) | `research/records/2026-11-25-e6e8-sequencing/results/e8_event_SE.PRM.ENRR_verified8.csv` @ `bd782be` (e=0 ATT 12.44362392207772); reproduction gate in `research/records/2026-11-25-e8-fisher-ri/results/repro_gate.json` (ATT diff 0.0) | **VERIFIED EMPIRICAL** | Keep value; add record + branch + commit; call it an ATT association, not "the surge". |
+| A-01 | Abolition-year primary-GER ATT = **+12.44 pp** (abstract, Results ¶1, Table 1) | `research/records/2026-11-25-e6e8-sequencing/results/e8_event_SE.PRM.ENRR_verified8.csv` @ `bd782be` (e=0 ATT 12.44362392207772); reproduction gate in `research/records/2026-11-25-e8-fisher-ri/results/repro_gate.json` (ATT diff 0.0) | **VERIFIED EMPIRICAL** | Keep value; add record + branch + commit; call it an ATT association, not "the surge". **Fresh-WDI replication A-34: +12.322 pp (REPRODUCED EMPIRICAL ANALYSIS).** |
 | A-02 | Mean post-abolition ATT **+25.26 pp**; event range **+22.12 … +28.56 pp** (e=+1…+6); Table 1 empirical column | same committed event CSV: +23.8244, +25.9429, +22.1208, +25.1932, +28.5608, +25.9224; mean 25.2607 | **VERIFIED EMPIRICAL** | Keep values and full 6-row path; state `n=6–7` cohorts per event. |
 | A-03 | Fisher-RI **p = .0001** (placebo-date), **p = .0003–.0006** (placebo-country); 20,000 permutations = 10,000 + 10,000 | `research/records/2026-11-25-e8-fisher-ri/results/e8_ri_results.json` (p2_date T0 = 9.999e-05; p2_country T0 = 5.999e-04; p2_country Tpost = 2.9997e-04; B=10,000/family); `REPORT.md` §5–6 | **VERIFIED EMPIRICAL** | Keep; state that .0001 is the 1/(B+1) resolution floor, not a precise tail probability; add the MCSE (1.0e-4). |
 | A-04 | Gender differential **D = −3.94 pp, 95% CI [−8.72, +0.29]**; "no statistically detectable gender gap" | `research/records/2026-11-25-gender-split-e6e8/results/gender_split_results.json` (D = −3.94395; paired percentile CI [−8.7178, +0.2946]); `REPORT.md` §3.4 | **VERIFIED EMPIRICAL** | Keep point estimate/CI and the pre-registered "no detected sex difference" wording. |
 | A-05 | "flat pre-trends (−0.03 and −0.13 pp) and a clean −6-year placebo (−0.39 pp)" (Results ¶1) | `e8_event_SE.PRM.ENRR_verified8.csv`: leads e=−5 **+6.389** (CI −0.08, 12.86), e=−4 **+1.345**, e=−3 −0.128, e=−2 −0.027. `e8_results.json` `sensitivity.placebo-6`: `mean_att_post = −0.3910`, `att_t0 = −0.2358` | **CONTRADICTED** | Delete "flat pre-trends (−0.03, −0.13)" and "clean −6-year placebo (−0.39)". Report the full lead vector; state the −0.39 is the **mean post-period ATT under a placebo-6 assignment** (placebo e=0 ATT −0.24), not a lead coefficient. |
 | A-06 | Gender non-detection is "robust to inverse-variance weighting and leave-one-out exclusion of Mozambique" (Results ¶1); Discussion "lifting boys and girls alike" | `gender-split-e6e8` `FOLLOWUP.md` (EXPLORATORY POST-HOC): IV point −4.05 (IV CI [−5.94, −2.17], excludes 0); LOO −4.07…−3.80; drop-MOZ −3.947 [−8.32, +0.24]; **"near-boundary non-detection, not a precise zero"**; paired percentile upper endpoint +0.29 | **CONTRADICTED** (as stated) | Replace with: "point estimate stable under IV/LOO, but the pre-registered paired CI upper endpoint is +0.29; an unpaired normal framing excludes zero. Treat as a near-boundary non-detection." Delete "lifting boys and girls alike" — the CI admits a female shortfall up to 8.72 pp. |
+
+### 2.1b NEW-GENERATION empirical re-analysis — fresh hashed WDI (label: REPRODUCED EMPIRICAL ANALYSIS)
+
+**Artefacts:** `docs/audit/E8_BULGE_NEWGEN.md` (sha256 `97734cdc98b9fdc4221110d61233233cc9b53587f6341ae0de98708aa28b4ca5`);
+`results/audit/newgen/e8_bulge_fresh_wdi_2026-11-25.json` (sha256 `5c243943957e5d865fbf1608e9a2e6a8569624ef7d7eb454306471c06ab69ef3`);
+WDI manifest sha256 `d7296e1fed3eb6806ba5111de2538e7fcd206323832307a1fabeeaefc6c55ee4` (fresh download
+2026-11-25T08:38:30Z); design pre-registered in `GATE2_PREREGISTRATION.md` §2(a),(b); 8 treated countries, 40 donors,
+2,500 Fisher permutations per scheme; **simple DiD** (equal country weights), not the author's Callaway–Sant'Anna
+estimator. The label **REPRODUCED EMPIRICAL ANALYSIS** is a new-generation evidence class introduced by the Lead; it
+is stronger than AUTHOR-REPORTED but weaker than the author-record-verified `VERIFIED EMPIRICAL`.
+
+| ID | Claim | New-generation result | AUTHOR-REPORTED baseline | Status | Required action |
+|---|---|---|---|---|---|
+| A-34 | E8 abolition-year impact ATT(e=0) | **+12.322 pp** (simple DiD, fresh WDI; Fisher p **0.0056** dates / **0.0044** countries, 2,500 perms) | +12.44 pp (CS; p .0001/.0003–.0006) | **REPRODUCED EMPIRICAL ANALYSIS** | Keep the impact as the verified empirical core; report the fresh-WDI replication and the estimator/vintage difference; add manifest hash + code. |
+| A-35 | E8 post-abolition amplification, mean e=+1..+6 | **+2.54 pp** (simple DiD; path peaks on impact and fades) | +25.26 pp (CS) | **UNRESOLVED / ESTIMATOR-DEPENDENT** | Do **not** present +25.26 as a robust amplification. The difference is an **estimator/vintage** difference (simple DiD with equal weights ≠ CS group-time ATT with not-yet-treated controls, cohort-size weighting, cluster bootstrap), **not proof the author's number is wrong**. Either re-run the CS estimator on fresh data or state the number is estimator-specific. |
+| A-36 | Delayed secondary-bulge `t*` jump | ATT at `t*` **−0.956 pp**, post mean **+0.30 pp**, Fisher p **0.251** dates / **0.384** countries; 2,500 perms, 2495 effective for countries | manuscript's own HONEST_NULL framing (no claim of a jump) | **UNRESOLVED** (no-effect evidence) | Report as **no detectable secondary-bulge jump** on fresh aggregate data; consistent with the manuscript's honest-null framing. Not a contradiction of the author; the author's null concerned aggregate-WDI detectability. |
+
+**Caveats binding for citation:** (i) simple DiD ≠ the author's CS estimator; (ii) fresh WDI vintage may differ from
+the author's snapshot; (iii) equal country weighting, not cohort-size weighting; (iv) association-only language.
+The original `VERIFIED EMPIRICAL` rows A-01/A-02 remain verified **against the committed author record**; A-34 is an
+independent fresh-vintage replication of the impact only. A-02's +25.26 is now cross-referenced to A-35.
 
 ### 2.2 Exp 1 — delayed secondary-bulge `t*` "honest null"
 
@@ -137,13 +159,14 @@ the **AUTHOR-REPORTED BASELINE** in a two-column comparison
 | Status | Count | Claim IDs |
 |---|---|---|
 | VERIFIED EMPIRICAL | 4 | A-01, A-02, A-03, A-04 |
+| REPRODUCED EMPIRICAL ANALYSIS | 1 | A-34 (fresh-WDI simple-DiD impact replication) |
 | REPRODUCED SIMULATION | 0 | — |
 | VALIDATED SIMULATION | 0 | — |
 | AUTHOR-REPORTED | 20 | A-07, A-08, A-09, A-10, A-11, A-12, A-13, A-15, A-16, A-19, A-21, A-22, A-23, A-24, A-25, A-26, A-27, A-28, A-29, A-30 |
 | CONTRADICTED | 8 | A-05, A-06, A-14, A-17, A-18, A-20, A-32, A-33 |
-| UNRESOLVED | 1 | A-31 |
+| UNRESOLVED | 3 | A-31, A-35, A-36 |
 
-*(33 adjudicated rows: A-01 … A-33. A-33 is a quarantine note for a claim that is not in the received
+*(36 adjudicated rows: A-01 … A-36 (A-34…A-36 are the new-generation fresh-WDI rows). A-33 is a quarantine note for a claim that is not in the received
 manuscript but is part of the declared replication bundle; it is included so the quarantine is explicit.)*
 
 ## 4. What survives, what must be done before any resubmission

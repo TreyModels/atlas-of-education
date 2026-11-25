@@ -27,13 +27,13 @@ Codex column: Codex is the independent auditor; it did not run a competing Paper
 
 | # | quantity | Gemini docx baseline (AUTHOR-REPORTED) | New generation (ours) | difference | reason / status |
 |---|---|---|---|---|---|
-| (a) | E8 impact ATT (e = 0) | **+12.44 pp** | *fill* — verified baseline already matches committed record: **+12.4436** | *fill* | committed `bd782be`; new-gen = fresh-vintage re-run with hashes |
-| (a) | E8 post mean (e = +1..+6) | **+25.26 pp** | *fill* — verified **25.2607** | *fill* | committed record; full event path must be reported |
+| (a) | E8 impact ATT (e = 0) | **+12.44 pp** | **+12.322 pp** (fresh-WDI simple DiD; Fisher p 0.0056/0.0044) — **REPRODUCED EMPIRICAL ANALYSIS** | **match in magnitude** (−0.12 pp) | estimator/vintage difference; manifest-hashed fresh WDI |
+| (a) | E8 post mean (e = +1..+6) | **+25.26 pp** | **+2.54 pp** (fresh-WDI simple DiD) — **UNRESOLVED / ESTIMATOR-DEPENDENT** | **mismatch** | simple DiD ≠ CS group-time ATT; not proof the author is wrong; re-run CS on fresh data |
 | (a) | E8 event path | +23.82 / +25.94 / +22.12 / +25.19 / +28.56 / +25.92 | *fill* — verified same | *fill* | committed record; report leads too |
 | (a) | E8 Fisher RI p (date / country) | .0001 / .0003–.0006 | *fill* — verified 9.999e-05 / 5.999e-04 / 2.9997e-04 | *fill* | B = 10,000/family; resolution floor |
 | (a) | E8 gender D (95% CI) | −3.94 pp [−8.72, +0.29] | *fill* — verified same | *fill* | near-boundary non-detection; paired CI |
-| (b) | Bulge `t*` T0 (SE.PRM.REPT.ZS) | +1.061; p_date .141; p_country .279 | *not run — DATA-BLOCKED* | *not-comparable* | `L_primary` 0/8 + outcome series absent |
-| (b) | Bulge sample/permutations | 7,290 obs; 2,500/scheme | *not run* | *not-comparable* | fresh hashed WDI/UIS pull required |
+| (b) | Bulge `t*` ATT (SE.SEC.ENRR) | manuscript HONEST_NULL (no jump claimed) | **−0.956 pp** at `t*`; post +0.30; Fisher p **0.251 / 0.384** — **UNRESOLVED** (no-effect evidence) | **not-comparable** (different outcome/indicators) | fresh WDI; no detectable jump; consistent with honest-null framing |
+| (b) | Bulge sample/permutations | 7,290 obs; 2,500/scheme | fresh WDI, 2,500/scheme (2,495 effective country perms) | *not-comparable* | estimator/outcome differences |
 | (c) | H2 fee×scarcity (contest grid) | **+0.1086** (CI +0.0924, +0.1248; p = 1.9e-11) | *fill* (≥5,000-run pre-registered run) | *fill* | legacy 1,640-run had no committed artifact; repaired engine re-prices expected P |
 | (c) | H2 quota grid | **−0.0145** (CI −0.0214, −0.0076) | *fill* | *fill* | same |
 | (c) | H1 (S=.25 − .70) contest fee=0 | **+0.3430** (Spearman −1.00) | *fill* | *fill* | same |
