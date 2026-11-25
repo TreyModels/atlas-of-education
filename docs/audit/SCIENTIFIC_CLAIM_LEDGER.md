@@ -283,12 +283,15 @@ Manifest requirements listed. **Housekeeping (one-line, non-blocking):** top aut
 §8 A1 where inconsistent" because A1.4 still mentions the removed fallback; status DRAFT→FINAL on sign-off. **Final
 designation/compute gated on the housekeeping edit + explicit Codex protocol/Kaplan confirmation + manifest/capacity.**
 
-**PAPER C FINAL FREEZE (2026-11-25): PREREGISTRATION FINAL (design frozen).** Commit `32399c1`; file sha256
-`be4db13080b0537ad65c3d2bc2ae6f83ea6fd89a117da2c36c091dd2591b54fb`. Verified title FINAL; authority rule "§9 A3
-supersedes §8 A1 where inconsistent"; A1.4 all-cell fallback struck (separate 132 CPU-h budget only); §10 launch trail
-records Codex bridge ids and content (Kaplan = Bryan Caplan probable, V; protocol both competing models + complementary
-modules; D1/D2 engine probes EP-1/EP-2; seeds 0–7 exposed / 100–131 confirmatory; launch gated on frozen manifest +
-adjudication final + 1–2 slot reserve; X-29 at 6 workers). **One stale intro line (line 7) still says DRAFT/not-yet-final
-— correct to FINAL in the manifest-freeze commit (textual only).** No screening/confirmatory compute until manifest
-frozen + reserve.
+**PAPER C FINAL FREEZE (2026-11-25): PREREGISTRATION FINAL (design frozen) + LAUNCH MANIFEST FROZEN.** Final
+prereg `docs/audit/PAPER_C_CONFIRMATORY_PREREG.md` sha256
+`445ec423c03ffdc8521a820694a72662cabbe342331dc1c8a839023e00053a8d` (commit `e34b901`): line 7 FINAL, §8 historical
+status corrected. Frozen manifest `docs/audit/PAPER_C_LAUNCH_MANIFEST.json` sha256
+`4602a9e4f96e04dca329a2645f1b8e36aa6f149719770fd359a6d4ce221c2081` (commit `7975e56`): engine 846c9e0/core
+e111397b/spec e5ddef6b, runner fbeba460 (pre-launch extension note), 36 cells, seeds 0–7/100–131, N=600/1500, T=46,
+measure_from=18, fail routing contest/share_of cohort/contest_r by L, unfired assertion + exposed-arm assertions (A|P12
+exempt/INVALID), >6-passer rule, ≤36 CPU-h (13.4+22), 1–2 slot reserve (X-29 at 6 workers), no-compute gates.
+**Provenance reconciliation:** manifest prereg.sha `ff61f1e6…` (freeze-time) vs final `445ec423…`; git diff = only §8
+historical-status sentence, no design change — the screening run manifest must cite the final `445ec423…` (or one-line
+re-emit) before compute. Launch remains gated on that + reserve + Codex trail.
 

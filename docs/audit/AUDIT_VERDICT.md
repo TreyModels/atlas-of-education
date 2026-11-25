@@ -961,24 +961,27 @@ designation and any compute remain gated on:** (i) the authority/status housekee
 protocol/Kaplan confirmation recorded in the launch trail**, (iii) the launch manifest and 1–2 slot capacity reserve.
 Screening is compute and must not start before all three.
 
-**FINAL FREEZE VERIFIED — PREREGISTRATION FINAL (design frozen 2026-11-25).** Commit `32399c1`; file sha256
-**`be4db13080b0537ad65c3d2bc2ae6f83ea6fd89a117da2c36c091dd2591b54fb`**: title reads PREREGISTRATION FINAL; authority
-rule now **"§9 A3 supersedes §8 A1 where inconsistent; latest amendment + Appendix wins"**; **A1.4 all-cell fallback
-struck** ("REMOVED by A3.2; all-36 ≈132 CPU-h is a separate re-approved budget only, not within the ≤36 CPU-h
-envelope"); **§10 launch trail** records the Codex bridge ids (`a1642bdf…`, `82089ecd…`, `017027a1…`) with
-**Kaplan = Bryan Caplan (probable, UNCONFIRMED, tag V; primary source cited; no straw man)**, protocol = **both
-competing models on the same evidence AND complementary modules**, **D1/D2 = engine probes** (EP-1 matched
-public-feedback with `feedback_intensity=0` placebo; EP-2 own-access × firm-constraint with baseline-matched seeds,
-fixed `own_share_financial` denominator, contest-prep classification, absolute own/firm quantities), **seeds 0–7
-exposed / 100–131 confirmatory**, and launch gated on frozen manifest + adjudication final + 1–2 slot Luna/MASSENG
-reserve (X-29 at 6 workers). **Adjudication record: PREREGISTRATION FINAL (design frozen).**
+**FINAL FREEZE VERIFIED — PREREGISTRATION FINAL (design frozen 2026-11-25) + LAUNCH MANIFEST FROZEN.** Final
+prereg: `docs/audit/PAPER_C_CONFIRMATORY_PREREG.md` sha256
+**`445ec423c03ffdc8521a820694a72662cabbe342331dc1c8a839023e00053a8d`** (commit `e34b901`): line 7 now reads
+**"PREREGISTRATION FINAL (design frozen 2026-11-25; no compute yet)"**; §8 historical-status line corrected (A1
+superseded by A3; overall status FINAL); authority rule, A1.4 struck fallback, and §10 Codex trail unchanged.
+Frozen manifest: `docs/audit/PAPER_C_LAUNCH_MANIFEST.json` sha256
+**`4602a9e4f96e04dca329a2645f1b8e36aa6f149719770fd359a6d4ce221c2081`** (commit `7975e56`), status **FROZEN**, carrying
+engine `846c9e0`/core `e111397b…`, spec `e5ddef6b…`, runner file+sha (`fbeba460…` with the pre-launch extension note),
+36 cells, screening seeds 0–7 / confirmatory 100–131, N=600/1500, T=46, measure_from=18, T0 n/a, fail routing (G6→G9
+contest, `share_of='cohort'`, `contest_r` fixed by L), per-run `unfired_events==[]` + exposed-arm assertions (`A|P12`
+exempt; failed exposed = INVALID), >6-passer rule (first 6 in appendix order), ≤36 CPU-h envelope (13.4 screening +
+22 confirmatory), 1–2 slot Luna/MASSENG reserve (X-29 at 6 workers), and the no-compute gates.
 
-**One stale line to correct before the manifest is frozen (textual, non-blocking for design):** the intro paragraph at
-line 7 still says "Status: DRAFT for adjudicator review … Not yet preregistered-final", contradicting the title and §10
-("Preregistration status: FINAL"). Replace it with "PREREGISTRATION FINAL (design frozen 2026-11-25; no compute yet)"
-in the same commit that freezes the manifest. No screening/confirmatory compute until the manifest is frozen and the
-1–2 slot reserve is in place.
-
+**Provenance reconciliation (recorded, one-line action at launch):** the frozen manifest's `prereg.sha256` is
+`ff61f1e6…` — the prereg **at manifest-freeze time** — while the final canonical prereg is `445ec423…`. `git diff`
+between those versions shows **only the §8 historical-status sentence** changed; **no design content differs**. The
+manifest's design fields are therefore canonical/frozen, but **the screening run manifest must cite the final
+`445ec423…` hash** (or the launch manifest be re-emitted with that one-line hash update) so an automated hash check
+does not fail. **No screening/confirmatory compute until that reconciliation is in the run manifest, the 1–2 slot
+reserve is in place, and the Codex trail is cited.** Adjudication status: **PREREGISTRATION FINAL (design frozen);
+MANIFEST FROZEN; launch gated on the run-manifest hash citation + reserve.**
 
 ## 5. Evidence-status register (programme level)
 
