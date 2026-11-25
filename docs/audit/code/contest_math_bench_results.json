@@ -1,0 +1,107 @@
+{
+ "reference_commit": "0f56621",
+ "numpy": "1.24.1",
+ "equivalence": {
+  "n_fixtures": 130,
+  "max_abs_diff": 0.0
+ },
+ "batch_api": "not shipped (measured 0.87-0.96x slower; reverted per keep-memo-only decision)",
+ "determinism": true,
+ "microbench": [
+  {
+   "n": 300,
+   "seats": 69,
+   "dispersion": 1.0,
+   "reference_ms": 51.57657153904438,
+   "optimised_cold_ms": 52.79809422791004,
+   "speedup_cold": 0.97686426552457,
+   "optimised_warm_ms": 0.022318214178085327
+  },
+  {
+   "n": 300,
+   "seats": 69,
+   "dispersion": 2.0,
+   "reference_ms": 61.07220519334078,
+   "optimised_cold_ms": 63.733055256307125,
+   "speedup_cold": 0.9582500783578389,
+   "optimised_warm_ms": 0.021997839212417603
+  },
+  {
+   "n": 300,
+   "seats": 36,
+   "dispersion": 1.0,
+   "reference_ms": 35.71342397481203,
+   "optimised_cold_ms": 36.02107148617506,
+   "speedup_cold": 0.9914592348680936,
+   "optimised_warm_ms": 0.021877698600292206
+  },
+  {
+   "n": 600,
+   "seats": 69,
+   "dispersion": 1.0,
+   "reference_ms": 125.0955443829298,
+   "optimised_cold_ms": 126.91934034228325,
+   "speedup_cold": 0.9856302754612896,
+   "optimised_warm_ms": 0.024799257516860962
+  }
+ ],
+ "engine_group": {
+  "sequential_ms": 474.9507624655962
+ },
+ "cache_stats": {
+  "grid_hit": 8,
+  "grid_miss": 164,
+  "result_hit": 29,
+  "result_miss": 190
+ },
+ "ship_decision": {
+  "choice": "keep-memo-only",
+  "retained": [
+   "_simpson_grid memo (bit-identical)",
+   "result LRU keyed by (method,seats,exact weight bytes), 64 entries, returns copies",
+   "pl_stats observability"
+  ],
+  "reverted": [
+   "forward float64 re-association (1.4e-15 diff) -> restored original loop for bit-identity",
+   "pl_win_probs_batch API (measured 0.87-0.96x, slower)"
+  ],
+  "output_vs_pre_task12": "bit-identical (max abs diff 0.0 on 130 fixtures)"
+ },
+ "cache_stats_e2e_run": {
+  "result_hit": 37,
+  "result_miss": 368,
+  "grid_hit": 0,
+  "grid_miss": 368,
+  "total_pl_calls": 405
+ },
+ "tests_box": {
+  "command": "pytest tests/test_contest_math.py -q",
+  "result": "68 passed in 14.05 s",
+  "suite": "unchanged"
+ },
+ "controller_independent": {
+  "reference_cpu_s": 22.183,
+  "optimised_cpu_s": 18.55,
+  "speedup": 1.196,
+  "note": "compute-controller measurement of commit 191de03 (forward-opt build); batched variant 21.088 s = 1.052x vs reference"
+ },
+ "provenance": {
+  "box": "/root/work/contest",
+  "commit": "d1acdf3",
+  "python": "3.10.8",
+  "numpy": "1.24.1",
+  "processes": 1
+ },
+ "end_to_end_shipped": {
+  "reference_cpu_s": 21.035712975,
+  "memo_only_cpu_s": 18.904175172,
+  "speedup": 1.112754869419383,
+  "note": "clean same-core adjacent pair, box, commit d1acdf3; reference = contest_math from 0f56621"
+ },
+ "end_to_end_earlier_forward_opt_build": {
+  "reference_cpu_s": 20.905822600238025,
+  "optimised_cpu_s": 19.06944490969181,
+  "speedup": 1.096,
+  "note": "pre-revert build 191de03; superseded by bit-identical memo-only"
+ }
+}
