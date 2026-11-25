@@ -1,7 +1,7 @@
 {
   "task": "P0-04/P0-05 bootstrap size/power factorial + permutation replacement",
-  "date_utc": "2026-11-25T07:23:28Z",
-  "runtime_sec": 70.21,
+  "date_utc": "2026-11-25T08:27:30Z",
+  "runtime_sec": 68.41,
   "design": {
     "G": 60,
     "T": 20,
