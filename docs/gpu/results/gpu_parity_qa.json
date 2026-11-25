@@ -1,0 +1,1236 @@
+{
+ "manifest": {
+  "engine_commit": "",
+  "env": {
+   "ATLAS_PL_BACKEND": "gpu",
+   "backend": "cpu",
+   "contest_math_sha256": "5fceb4d5094a63249bffdc2f5712801d52e3a83c5ce64c32a85b0f2e805ee944",
+   "cuda": "11.8",
+   "cuda_available": true,
+   "device": "NVIDIA GeForce RTX 3080 Ti",
+   "fixture_seed": 20261125,
+   "n_fixtures": 130,
+   "numpy": "1.24.1",
+   "platform": "Linux-5.15.0-78-generic-x86_64-with-glibc2.35",
+   "python": "3.10.8",
+   "tolerance": 1e-07,
+   "torch": "2.7.1+cu118"
+  },
+  "files": {
+   "engine/eduengine/contest_gpu.py": "ab08a53b188cc645981200f02461994ec179483b493ec520a8aea7d9114c596f",
+   "engine/eduengine/contest_math.py": "5fceb4d5094a63249bffdc2f5712801d52e3a83c5ce64c32a85b0f2e805ee944",
+   "engine/eduengine/core.py": "5bcbc0b3516334320660d5c7a0306a38c2bf835e7c788318d9f96d6ad8279f75",
+   "engine/eduengine/modules/tutoring.py": "b3d32ceecd7b79c3d7deb2df2d3f44d988a8cab5a18cfa4fe594980ebb9c3fdf"
+  },
+  "staged_note": "cross-replica batching NOT implemented (staged after bounded pilot)",
+  "utc": "2026-11-25T15:04:22Z"
+ },
+ "max_abs_diff": 4.832148292610583e-08,
+ "mean_abs_diff": 1.698424181981504e-08,
+ "n": 130,
+ "n_gt_1e6": 0,
+ "n_gt_1e7": 0,
+ "pl_stats": {
+  "batch_calls": 112,
+  "batch_road": 18,
+  "batch_rows": 130,
+  "gpu": {
+   "capture_s": 41.72736000176519,
+   "engine_builds": 112,
+   "feed_s": 0.3598854625597596,
+   "gpu_batches": 112,
+   "gpu_calls": 112,
+   "gpu_s": 0.0,
+   "replay_s": 1.4636520836502314
+  },
+  "grid_hit": 16,
+  "grid_miss": 208,
+  "result_hit": 1,
+  "result_miss": 147,
+  "single_calls": 147
+ },
+ "rows": [
+  {
+   "d": 1.4800028980133106e-08,
+   "disp": 0.25,
+   "n": 80,
+   "seats": 29,
+   "seats_expected": 29,
+   "sum": 29.000000000000004,
+   "winner_flips": 0
+  },
+  {
+   "d": 0.0,
+   "disp": 6.0,
+   "n": 12,
+   "seats": 7,
+   "seats_expected": 7,
+   "sum": 6.999999999999999,
+   "winner_flips": 0
+  },
+  {
+   "d": 2.710279545237171e-08,
+   "disp": 0.5,
+   "n": 300,
+   "seats": 176,
+   "seats_expected": 176,
+   "sum": 176.00000000000006,
+   "winner_flips": 0
+  },
+  {
+   "d": 0.0,
+   "disp": 4.0,
+   "n": 20,
+   "seats": 16,
+   "seats_expected": 16,
+   "sum": 16.000000000000007,
+   "winner_flips": 0
+  },
+  {
+   "d": 5.551115123125783e-17,
+   "disp": 1.0,
+   "n": 21,
+   "seats": 3,
+   "seats_expected": 3,
+   "sum": 3.0,
+   "winner_flips": 0
+  },
+  {
+   "d": 1.8436934423604612e-08,
+   "disp": 0.25,
+   "n": 80,
+   "seats": 57,
+   "seats_expected": 57,
+   "sum": 57.0,
+   "winner_flips": 0
+  },
+  {
+   "d": 3.186404154420508e-08,
+   "disp": 6.0,
+   "n": 300,
+   "seats": 215,
+   "seats_expected": 215,
+   "sum": 215.00000000000003,
+   "winner_flips": 0
+  },
+  {
+   "d": 8.291728637033202e-09,
+   "disp": 0.25,
+   "n": 60,
+   "seats": 50,
+   "seats_expected": 50,
+   "sum": 50.0,
+   "winner_flips": 0
+  },
+  {
+   "d": 4.344687920543322e-08,
+   "disp": 4.0,
+   "n": 600,
+   "seats": 192,
+   "seats_expected": 192,
+   "sum": 192.00000000000003,
+   "winner_flips": 0
+  },
+  {
+   "d": 5.551115123125783e-17,
+   "disp": 4.0,
+   "n": 120,
+   "seats": 4,
+   "seats_expected": 4,
+   "sum": 4.0,
+   "winner_flips": 0
+  },
+  {
+   "d": 2.818476574351081e-08,
+   "disp": 3.0,
+   "n": 300,
+   "seats": 124,
+   "seats_expected": 124,
+   "sum": 124.0,
+   "winner_flips": 0
+  },
+  {
+   "d": 1.1189338455785958e-08,
+   "disp": 0.25,
+   "n": 40,
+   "seats": 31,
+   "seats_expected": 31,
+   "sum": 31.0,
+   "winner_flips": 0
+  },
+  {
+   "d": 2.2001747701505536e-08,
+   "disp": 4.0,
+   "n": 600,
+   "seats": 553,
+   "seats_expected": 553,
+   "sum": 553.0,
+   "winner_flips": 0
+  },
+  {
+   "d": 3.196250808468193e-08,
+   "disp": 2.0,
+   "n": 300,
+   "seats": 122,
+   "seats_expected": 122,
+   "sum": 122.00000000000001,
+   "winner_flips": 0
+  },
+  {
+   "d": 0.0,
+   "disp": 0.5,
+   "n": 12,
+   "seats": 1,
+   "seats_expected": 1,
+   "sum": 1.0,
+   "winner_flips": 0
+  },
+  {
+   "d": 1.9656393124289906e-08,
+   "disp": 2.0,
+   "n": 60,
+   "seats": 33,
+   "seats_expected": 33,
+   "sum": 33.0,
+   "winner_flips": 0
+  },
+  {
+   "d": 9.913702747610387e-09,
+   "disp": 0.5,
+   "n": 21,
+   "seats": 15,
+   "seats_expected": 15,
+   "sum": 15.0,
+   "winner_flips": 0
+  },
+  {
+   "d": 1.8388014444425949e-09,
+   "disp": 3.0,
+   "n": 40,
+   "seats": 35,
+   "seats_expected": 35,
+   "sum": 34.99999999999999,
+   "winner_flips": 0
+  },
+  {
+   "d": 0.0,
+   "disp": 4.0,
+   "n": 12,
+   "seats": 4,
+   "seats_expected": 4,
+   "sum": 4.0,
+   "winner_flips": 0
+  },
+  {
+   "d": 0.0,
+   "disp": 3.0,
+   "n": 20,
+   "seats": 9,
+   "seats_expected": 9,
+   "sum": 8.999999999999998,
+   "winner_flips": 0
+  },
+  {
+   "d": 1.510790978431764e-08,
+   "disp": 3.0,
+   "n": 200,
+   "seats": 183,
+   "seats_expected": 183,
+   "sum": 183.0,
+   "winner_flips": 0
+  },
+  {
+   "d": 1.3751371374937094e-08,
+   "disp": 1.5,
+   "n": 80,
+   "seats": 69,
+   "seats_expected": 69,
+   "sum": 69.0,
+   "winner_flips": 0
+  },
+  {
+   "d": 2.678523003396549e-08,
+   "disp": 3.0,
+   "n": 300,
+   "seats": 86,
+   "seats_expected": 86,
+   "sum": 86.00000000000001,
+   "winner_flips": 0
+  },
+  {
+   "d": 2.4780598240070617e-08,
+   "disp": 2.0,
+   "n": 120,
+   "seats": 19,
+   "seats_expected": 19,
+   "sum": 19.0,
+   "winner_flips": 0
+  },
+  {
+   "d": 0.0,
+   "disp": 3.0,
+   "n": 20,
+   "seats": 8,
+   "seats_expected": 8,
+   "sum": 8.000000000000002,
+   "winner_flips": 0
+  },
+  {
+   "d": 1.804905550017999e-08,
+   "disp": 4.0,
+   "n": 600,
+   "seats": 534,
+   "seats_expected": 534,
+   "sum": 534.0,
+   "winner_flips": 0
+  },
+  {
+   "d": 1.3320434533170555e-08,
+   "disp": 0.5,
+   "n": 300,
+   "seats": 52,
+   "seats_expected": 52,
+   "sum": 52.0,
+   "winner_flips": 0
+  },
+  {
+   "d": 2.3292143852549074e-08,
+   "disp": 3.0,
+   "n": 120,
+   "seats": 92,
+   "seats_expected": 92,
+   "sum": 92.0,
+   "winner_flips": 0
+  },
+  {
+   "d": 0.0,
+   "disp": 6.0,
+   "n": 20,
+   "seats": 11,
+   "seats_expected": 11,
+   "sum": 11.0,
+   "winner_flips": 0
+  },
+  {
+   "d": 2.072685423293308e-08,
+   "disp": 2.0,
+   "n": 40,
+   "seats": 26,
+   "seats_expected": 26,
+   "sum": 26.0,
+   "winner_flips": 0
+  },
+  {
+   "d": 9.58032253528529e-09,
+   "disp": 3.0,
+   "n": 120,
+   "seats": 19,
+   "seats_expected": 19,
+   "sum": 19.0,
+   "winner_flips": 0
+  },
+  {
+   "d": 0.0,
+   "disp": 1.0,
+   "n": 12,
+   "seats": 4,
+   "seats_expected": 4,
+   "sum": 4.0,
+   "winner_flips": 0
+  },
+  {
+   "d": 1.4848484108931359e-08,
+   "disp": 0.5,
+   "n": 200,
+   "seats": 36,
+   "seats_expected": 36,
+   "sum": 36.00000000000001,
+   "winner_flips": 0
+  },
+  {
+   "d": 3.2402991623214916e-08,
+   "disp": 1.0,
+   "n": 200,
+   "seats": 89,
+   "seats_expected": 89,
+   "sum": 89.0,
+   "winner_flips": 0
+  },
+  {
+   "d": 0.0,
+   "disp": 3.0,
+   "n": 20,
+   "seats": 17,
+   "seats_expected": 17,
+   "sum": 16.999999999999996,
+   "winner_flips": 0
+  },
+  {
+   "d": 3.581530211294037e-08,
+   "disp": 1.0,
+   "n": 600,
+   "seats": 406,
+   "seats_expected": 406,
+   "sum": 406.0,
+   "winner_flips": 0
+  },
+  {
+   "d": 2.813360711062529e-08,
+   "disp": 3.0,
+   "n": 60,
+   "seats": 35,
+   "seats_expected": 35,
+   "sum": 35.0,
+   "winner_flips": 0
+  },
+  {
+   "d": 1.695862820658145e-08,
+   "disp": 4.0,
+   "n": 120,
+   "seats": 79,
+   "seats_expected": 79,
+   "sum": 79.0,
+   "winner_flips": 0
+  },
+  {
+   "d": 2.422975231564095e-08,
+   "disp": 4.0,
+   "n": 300,
+   "seats": 28,
+   "seats_expected": 28,
+   "sum": 28.0,
+   "winner_flips": 0
+  },
+  {
+   "d": 1.3265116838301338e-08,
+   "disp": 0.5,
+   "n": 600,
+   "seats": 66,
+   "seats_expected": 66,
+   "sum": 66.0,
+   "winner_flips": 0
+  },
+  {
+   "d": 3.770283255044582e-08,
+   "disp": 2.0,
+   "n": 400,
+   "seats": 229,
+   "seats_expected": 229,
+   "sum": 229.0,
+   "winner_flips": 0
+  },
+  {
+   "d": 2.3629103007571928e-08,
+   "disp": 1.5,
+   "n": 120,
+   "seats": 48,
+   "seats_expected": 48,
+   "sum": 48.00000000000001,
+   "winner_flips": 0
+  },
+  {
+   "d": 2.282101507766754e-08,
+   "disp": 2.0,
+   "n": 400,
+   "seats": 113,
+   "seats_expected": 113,
+   "sum": 113.0,
+   "winner_flips": 0
+  },
+  {
+   "d": 1.8926049172307557e-08,
+   "disp": 0.0,
+   "n": 120,
+   "seats": 92,
+   "seats_expected": 92,
+   "sum": 92.0,
+   "winner_flips": 0
+  },
+  {
+   "d": 1.2594167177887305e-08,
+   "disp": 6.0,
+   "n": 120,
+   "seats": 81,
+   "seats_expected": 81,
+   "sum": 81.0,
+   "winner_flips": 0
+  },
+  {
+   "d": 2.5658750235635353e-08,
+   "disp": 0.0,
+   "n": 300,
+   "seats": 244,
+   "seats_expected": 244,
+   "sum": 244.0,
+   "winner_flips": 0
+  },
+  {
+   "d": 3.58836138580898e-08,
+   "disp": 6.0,
+   "n": 300,
+   "seats": 50,
+   "seats_expected": 50,
+   "sum": 50.0,
+   "winner_flips": 0
+  },
+  {
+   "d": 0.0,
+   "disp": 6.0,
+   "n": 12,
+   "seats": 7,
+   "seats_expected": 7,
+   "sum": 7.0,
+   "winner_flips": 0
+  },
+  {
+   "d": 8.541232554559741e-09,
+   "disp": 2.0,
+   "n": 21,
+   "seats": 11,
+   "seats_expected": 11,
+   "sum": 11.0,
+   "winner_flips": 0
+  },
+  {
+   "d": 2.5318642904448296e-08,
+   "disp": 0.5,
+   "n": 300,
+   "seats": 194,
+   "seats_expected": 194,
+   "sum": 194.0,
+   "winner_flips": 0
+  },
+  {
+   "d": 3.516997426622481e-08,
+   "disp": 1.0,
+   "n": 300,
+   "seats": 87,
+   "seats_expected": 87,
+   "sum": 87.0,
+   "winner_flips": 0
+  },
+  {
+   "d": 1.1918360631746339e-08,
+   "disp": 1.0,
+   "n": 60,
+   "seats": 16,
+   "seats_expected": 16,
+   "sum": 16.0,
+   "winner_flips": 0
+  },
+  {
+   "d": 1.3057546155437194e-08,
+   "disp": 4.0,
+   "n": 40,
+   "seats": 26,
+   "seats_expected": 26,
+   "sum": 26.000000000000004,
+   "winner_flips": 0
+  },
+  {
+   "d": 5.1981106641285635e-09,
+   "disp": 4.0,
+   "n": 200,
+   "seats": 195,
+   "seats_expected": 195,
+   "sum": 195.0,
+   "winner_flips": 0
+  },
+  {
+   "d": 9.583219107156538e-09,
+   "disp": 2.0,
+   "n": 200,
+   "seats": 181,
+   "seats_expected": 181,
+   "sum": 181.0,
+   "winner_flips": 0
+  },
+  {
+   "d": 2.2071709571136466e-08,
+   "disp": 0.25,
+   "n": 120,
+   "seats": 81,
+   "seats_expected": 81,
+   "sum": 81.0,
+   "winner_flips": 0
+  },
+  {
+   "d": 2.8615683045352114e-08,
+   "disp": 1.5,
+   "n": 300,
+   "seats": 53,
+   "seats_expected": 53,
+   "sum": 52.999999999999986,
+   "winner_flips": 0
+  },
+  {
+   "d": 1.2341009825167504e-08,
+   "disp": 1.0,
+   "n": 120,
+   "seats": 110,
+   "seats_expected": 110,
+   "sum": 110.0,
+   "winner_flips": 0
+  },
+  {
+   "d": 3.8803414370569556e-09,
+   "disp": 0.25,
+   "n": 40,
+   "seats": 6,
+   "seats_expected": 6,
+   "sum": 6.0,
+   "winner_flips": 0
+  },
+  {
+   "d": 1.3451862734825681e-08,
+   "disp": 6.0,
+   "n": 80,
+   "seats": 35,
+   "seats_expected": 35,
+   "sum": 35.0,
+   "winner_flips": 0
+  },
+  {
+   "d": 1.9180973087618014e-08,
+   "disp": 6.0,
+   "n": 60,
+   "seats": 38,
+   "seats_expected": 38,
+   "sum": 38.00000000000001,
+   "winner_flips": 0
+  },
+  {
+   "d": 0.0,
+   "disp": 0.0,
+   "n": 12,
+   "seats": 11,
+   "seats_expected": 11,
+   "sum": 10.999999999999991,
+   "winner_flips": 0
+  },
+  {
+   "d": 4.6971764922076886e-08,
+   "disp": 1.5,
+   "n": 400,
+   "seats": 196,
+   "seats_expected": 196,
+   "sum": 196.0,
+   "winner_flips": 0
+  },
+  {
+   "d": 2.6889567461552133e-08,
+   "disp": 4.0,
+   "n": 600,
+   "seats": 60,
+   "seats_expected": 60,
+   "sum": 60.0,
+   "winner_flips": 0
+  },
+  {
+   "d": 6.909572747293424e-09,
+   "disp": 0.5,
+   "n": 21,
+   "seats": 6,
+   "seats_expected": 6,
+   "sum": 6.000000000000001,
+   "winner_flips": 0
+  },
+  {
+   "d": 2.9650467664454894e-08,
+   "disp": 1.5,
+   "n": 200,
+   "seats": 131,
+   "seats_expected": 131,
+   "sum": 131.0,
+   "winner_flips": 0
+  },
+  {
+   "d": 2.7755575615628914e-17,
+   "disp": 3.0,
+   "n": 300,
+   "seats": 2,
+   "seats_expected": 2,
+   "sum": 2.0,
+   "winner_flips": 0
+  },
+  {
+   "d": 2.1202197886260876e-08,
+   "disp": 1.0,
+   "n": 120,
+   "seats": 34,
+   "seats_expected": 34,
+   "sum": 34.0,
+   "winner_flips": 0
+  },
+  {
+   "d": 1.1920062048531577e-08,
+   "disp": 1.5,
+   "n": 40,
+   "seats": 19,
+   "seats_expected": 19,
+   "sum": 19.0,
+   "winner_flips": 0
+  },
+  {
+   "d": 2.8864910350812067e-08,
+   "disp": 6.0,
+   "n": 300,
+   "seats": 100,
+   "seats_expected": 100,
+   "sum": 100.0,
+   "winner_flips": 0
+  },
+  {
+   "d": 1.024088047696381e-08,
+   "disp": 1.5,
+   "n": 300,
+   "seats": 18,
+   "seats_expected": 18,
+   "sum": 18.0,
+   "winner_flips": 0
+  },
+  {
+   "d": 3.5973997003502234e-08,
+   "disp": 3.0,
+   "n": 600,
+   "seats": 107,
+   "seats_expected": 107,
+   "sum": 107.0,
+   "winner_flips": 0
+  },
+  {
+   "d": 2.9145531210694742e-08,
+   "disp": 2.0,
+   "n": 300,
+   "seats": 182,
+   "seats_expected": 182,
+   "sum": 182.00000000000003,
+   "winner_flips": 0
+  },
+  {
+   "d": 1.7375077931980343e-08,
+   "disp": 4.0,
+   "n": 40,
+   "seats": 18,
+   "seats_expected": 18,
+   "sum": 18.0,
+   "winner_flips": 0
+  },
+  {
+   "d": 2.8622377190590242e-08,
+   "disp": 2.0,
+   "n": 300,
+   "seats": 168,
+   "seats_expected": 168,
+   "sum": 168.0,
+   "winner_flips": 0
+  },
+  {
+   "d": 2.2980951919215897e-08,
+   "disp": 0.0,
+   "n": 80,
+   "seats": 43,
+   "seats_expected": 43,
+   "sum": 43.0,
+   "winner_flips": 0
+  },
+  {
+   "d": 1.8331126061532643e-08,
+   "disp": 0.25,
+   "n": 300,
+   "seats": 263,
+   "seats_expected": 263,
+   "sum": 262.99999999999994,
+   "winner_flips": 0
+  },
+  {
+   "d": 6.443112932075223e-09,
+   "disp": 0.5,
+   "n": 200,
+   "seats": 192,
+   "seats_expected": 192,
+   "sum": 191.99999999999997,
+   "winner_flips": 0
+  },
+  {
+   "d": 1.1154792312062511e-08,
+   "disp": 0.5,
+   "n": 300,
+   "seats": 288,
+   "seats_expected": 288,
+   "sum": 288.0,
+   "winner_flips": 0
+  },
+  {
+   "d": 2.581835523152165e-08,
+   "disp": 0.0,
+   "n": 200,
+   "seats": 126,
+   "seats_expected": 126,
+   "sum": 126.0,
+   "winner_flips": 0
+  },
+  {
+   "d": 2.3856227805707508e-08,
+   "disp": 4.0,
+   "n": 300,
+   "seats": 179,
+   "seats_expected": 179,
+   "sum": 179.0,
+   "winner_flips": 0
+  },
+  {
+   "d": 2.0537532563480454e-08,
+   "disp": 3.0,
+   "n": 300,
+   "seats": 16,
+   "seats_expected": 16,
+   "sum": 15.999999999999996,
+   "winner_flips": 0
+  },
+  {
+   "d": 1.6359994303716263e-08,
+   "disp": 0.5,
+   "n": 400,
+   "seats": 45,
+   "seats_expected": 45,
+   "sum": 44.99999999999999,
+   "winner_flips": 0
+  },
+  {
+   "d": 1.2625869572069348e-08,
+   "disp": 0.0,
+   "n": 300,
+   "seats": 60,
+   "seats_expected": 60,
+   "sum": 60.0,
+   "winner_flips": 0
+  },
+  {
+   "d": 3.6538457037771366e-08,
+   "disp": 0.5,
+   "n": 60,
+   "seats": 26,
+   "seats_expected": 26,
+   "sum": 26.000000000000004,
+   "winner_flips": 0
+  },
+  {
+   "d": 2.7000072150284993e-08,
+   "disp": 4.0,
+   "n": 200,
+   "seats": 159,
+   "seats_expected": 159,
+   "sum": 158.99999999999997,
+   "winner_flips": 0
+  },
+  {
+   "d": 1.1389194753963494e-08,
+   "disp": 0.0,
+   "n": 300,
+   "seats": 56,
+   "seats_expected": 56,
+   "sum": 56.0,
+   "winner_flips": 0
+  },
+  {
+   "d": 9.02384034162651e-09,
+   "disp": 0.0,
+   "n": 200,
+   "seats": 175,
+   "seats_expected": 175,
+   "sum": 175.00000000000003,
+   "winner_flips": 0
+  },
+  {
+   "d": 3.63405516234927e-08,
+   "disp": 2.0,
+   "n": 400,
+   "seats": 268,
+   "seats_expected": 268,
+   "sum": 268.0,
+   "winner_flips": 0
+  },
+  {
+   "d": 2.3858377828922528e-08,
+   "disp": 2.0,
+   "n": 120,
+   "seats": 63,
+   "seats_expected": 63,
+   "sum": 63.0,
+   "winner_flips": 0
+  },
+  {
+   "d": 2.505584850709397e-08,
+   "disp": 2.0,
+   "n": 600,
+   "seats": 66,
+   "seats_expected": 66,
+   "sum": 66.0,
+   "winner_flips": 0
+  },
+  {
+   "d": 3.359076927722526e-08,
+   "disp": 0.0,
+   "n": 300,
+   "seats": 218,
+   "seats_expected": 218,
+   "sum": 218.0,
+   "winner_flips": 0
+  },
+  {
+   "d": 1.921854220210406e-08,
+   "disp": 4.0,
+   "n": 300,
+   "seats": 198,
+   "seats_expected": 198,
+   "sum": 198.0,
+   "winner_flips": 0
+  },
+  {
+   "d": 1.3359471418006308e-08,
+   "disp": 0.0,
+   "n": 21,
+   "seats": 12,
+   "seats_expected": 12,
+   "sum": 11.999999999999996,
+   "winner_flips": 0
+  },
+  {
+   "d": 2.41581304405436e-08,
+   "disp": 0.5,
+   "n": 40,
+   "seats": 22,
+   "seats_expected": 22,
+   "sum": 22.0,
+   "winner_flips": 0
+  },
+  {
+   "d": 1.5053365554074105e-08,
+   "disp": 2.0,
+   "n": 60,
+   "seats": 39,
+   "seats_expected": 39,
+   "sum": 38.99999999999999,
+   "winner_flips": 0
+  },
+  {
+   "d": 2.2480848849149027e-08,
+   "disp": 3.0,
+   "n": 80,
+   "seats": 22,
+   "seats_expected": 22,
+   "sum": 22.0,
+   "winner_flips": 0
+  },
+  {
+   "d": 6.8620851084721934e-09,
+   "disp": 3.0,
+   "n": 60,
+   "seats": 36,
+   "seats_expected": 36,
+   "sum": 36.0,
+   "winner_flips": 0
+  },
+  {
+   "d": 1.5348928489311575e-08,
+   "disp": 2.0,
+   "n": 40,
+   "seats": 28,
+   "seats_expected": 28,
+   "sum": 28.000000000000004,
+   "winner_flips": 0
+  },
+  {
+   "d": 1.2177358343912204e-08,
+   "disp": 1.0,
+   "n": 600,
+   "seats": 37,
+   "seats_expected": 37,
+   "sum": 36.99999999999999,
+   "winner_flips": 0
+  },
+  {
+   "d": 2.13839137508387e-08,
+   "disp": 2.0,
+   "n": 80,
+   "seats": 42,
+   "seats_expected": 42,
+   "sum": 42.0,
+   "winner_flips": 0
+  },
+  {
+   "d": 1.9340579027193883e-08,
+   "disp": 2.0,
+   "n": 21,
+   "seats": 7,
+   "seats_expected": 7,
+   "sum": 7.0,
+   "winner_flips": 0
+  },
+  {
+   "d": 0.0,
+   "disp": 3.0,
+   "n": 12,
+   "seats": 2,
+   "seats_expected": 2,
+   "sum": 1.9999999999999998,
+   "winner_flips": 0
+  },
+  {
+   "d": 0.0,
+   "disp": 4.0,
+   "n": 12,
+   "seats": 7,
+   "seats_expected": 7,
+   "sum": 6.999999999999999,
+   "winner_flips": 0
+  },
+  {
+   "d": 2.2872173200544355e-08,
+   "disp": 6.0,
+   "n": 120,
+   "seats": 63,
+   "seats_expected": 63,
+   "sum": 63.0,
+   "winner_flips": 0
+  },
+  {
+   "d": 2.190437931037792e-08,
+   "disp": 6.0,
+   "n": 200,
+   "seats": 21,
+   "seats_expected": 21,
+   "sum": 21.0,
+   "winner_flips": 0
+  },
+  {
+   "d": 1.0939262176656861e-08,
+   "disp": 3.0,
+   "n": 120,
+   "seats": 108,
+   "seats_expected": 108,
+   "sum": 108.00000000000001,
+   "winner_flips": 0
+  },
+  {
+   "d": 1.3877787807814457e-17,
+   "disp": 4.0,
+   "n": 21,
+   "seats": 2,
+   "seats_expected": 2,
+   "sum": 1.9999999999999996,
+   "winner_flips": 0
+  },
+  {
+   "d": 3.598183850872516e-08,
+   "disp": 1.5,
+   "n": 200,
+   "seats": 144,
+   "seats_expected": 144,
+   "sum": 144.00000000000003,
+   "winner_flips": 0
+  },
+  {
+   "d": 3.1531486199831704e-08,
+   "disp": 1.0,
+   "n": 300,
+   "seats": 146,
+   "seats_expected": 146,
+   "sum": 146.0,
+   "winner_flips": 0
+  },
+  {
+   "d": 4.3070935706879254e-09,
+   "disp": 2.0,
+   "n": 21,
+   "seats": 16,
+   "seats_expected": 16,
+   "sum": 15.999999999999996,
+   "winner_flips": 0
+  },
+  {
+   "d": 1.0253330628984259e-08,
+   "disp": 1.5,
+   "n": 120,
+   "seats": 18,
+   "seats_expected": 18,
+   "sum": 17.999999999999996,
+   "winner_flips": 0
+  },
+  {
+   "d": 2.6400177155494475e-08,
+   "disp": 3.0,
+   "n": 200,
+   "seats": 70,
+   "seats_expected": 70,
+   "sum": 70.0,
+   "winner_flips": 0
+  },
+  {
+   "d": 0.0,
+   "disp": 2.0,
+   "n": 12,
+   "seats": 9,
+   "seats_expected": 9,
+   "sum": 9.000000000000004,
+   "winner_flips": 0
+  },
+  {
+   "d": 1.0770646152735708e-08,
+   "disp": 1.5,
+   "n": 80,
+   "seats": 14,
+   "seats_expected": 14,
+   "sum": 14.0,
+   "winner_flips": 0
+  },
+  {
+   "d": 0.0,
+   "disp": 4.0,
+   "n": 12,
+   "seats": 4,
+   "seats_expected": 4,
+   "sum": 4.0,
+   "winner_flips": 0
+  },
+  {
+   "d": 2.8898059500903628e-08,
+   "disp": 1.5,
+   "n": 300,
+   "seats": 55,
+   "seats_expected": 55,
+   "sum": 55.00000000000001,
+   "winner_flips": 0
+  },
+  {
+   "d": 2.2980225944380095e-08,
+   "disp": 6.0,
+   "n": 200,
+   "seats": 14,
+   "seats_expected": 14,
+   "sum": 14.000000000000002,
+   "winner_flips": 0
+  },
+  {
+   "d": 4.832148292610583e-08,
+   "disp": 2.0,
+   "n": 400,
+   "seats": 159,
+   "seats_expected": 159,
+   "sum": 159.0,
+   "winner_flips": 0
+  },
+  {
+   "d": 0.0,
+   "disp": 4.0,
+   "n": 20,
+   "seats": 8,
+   "seats_expected": 8,
+   "sum": 7.999999999999997,
+   "winner_flips": 0
+  },
+  {
+   "d": 0.0,
+   "disp": 1.0,
+   "n": 12,
+   "seats": 5,
+   "seats_expected": 5,
+   "sum": 4.999999999999999,
+   "winner_flips": 0
+  },
+  {
+   "d": 3.7119464058044116e-08,
+   "disp": 0.5,
+   "n": 400,
+   "seats": 201,
+   "seats_expected": 201,
+   "sum": 201.0,
+   "winner_flips": 0
+  },
+  {
+   "d": 2.5084646609885297e-08,
+   "disp": 3.0,
+   "n": 300,
+   "seats": 245,
+   "seats_expected": 245,
+   "sum": 245.0,
+   "winner_flips": 0
+  },
+  {
+   "d": 9.94125115560962e-09,
+   "disp": 0.5,
+   "n": 21,
+   "seats": 6,
+   "seats_expected": 6,
+   "sum": 6.0,
+   "winner_flips": 0
+  },
+  {
+   "d": 3.865390729718143e-09,
+   "disp": 0.0,
+   "n": 200,
+   "seats": 15,
+   "seats_expected": 15,
+   "sum": 15.0,
+   "winner_flips": 0
+  },
+  {
+   "d": 1.5017035087661057e-08,
+   "disp": 6.0,
+   "n": 80,
+   "seats": 49,
+   "seats_expected": 49,
+   "sum": 48.99999999999999,
+   "winner_flips": 0
+  },
+  {
+   "d": 1.1102230246251565e-16,
+   "disp": 6.0,
+   "n": 40,
+   "seats": 4,
+   "seats_expected": 4,
+   "sum": 4.0,
+   "winner_flips": 0
+  },
+  {
+   "d": 2.7005410116465178e-08,
+   "disp": 2.0,
+   "n": 300,
+   "seats": 248,
+   "seats_expected": 248,
+   "sum": 248.0,
+   "winner_flips": 0
+  },
+  {
+   "d": 0.0,
+   "disp": 3.0,
+   "n": 20,
+   "seats": 9,
+   "seats_expected": 9,
+   "sum": 8.999999999999998,
+   "winner_flips": 0
+  },
+  {
+   "d": 5.421713966669017e-09,
+   "disp": 1.5,
+   "n": 60,
+   "seats": 7,
+   "seats_expected": 7,
+   "sum": 6.999999999999999,
+   "winner_flips": 0
+  }
+ ],
+ "seat_sum_violations": 0,
+ "winner_flip_fixtures": 0,
+ "winner_flips_total": 0,
+ "worst": {
+  "d": 4.832148292610583e-08,
+  "disp": 2.0,
+  "n": 400,
+  "seats": 159,
+  "seats_expected": 159,
+  "sum": 159.0,
+  "winner_flips": 0
+ }
+}
