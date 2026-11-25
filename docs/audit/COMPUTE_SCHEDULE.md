@@ -555,3 +555,12 @@ AUTHOR-REPORTED baseline".
 **Slots:** task-13 + E8 released → box at **8.0/10 (80 %)** at 16:45:59 (Paper B 8 workers). Requested commander fill the
 2 free slots with forecast (e, 1w) + Paper B table regeneration (1w, previously paused) to hold 90–100 % while Paper B
 continues (8 HK arms checkpointing at 16:46, 10 min elapsed). Paper B primary ETA **~18:35–18:45**, full **~19:50–20:10**.
+
+**task-13 evidence detail (from audit-runner, 16:46):** exit 0; walls straight **311.72 s**, interrupt **73.99 s (rc=3)**,
+resume **296.62 s**, aggregate-only **0.32 s**; total ≈ **11.8 min**; log `smoke.log` sha256
+`c21799bea2245f99113323773420fc1cc85bfba34f7363f84285aa503ee5c1e0`; assertions — straight_ok **PASS** (12/12 runs,
+out sha `edd525e3…cbc3f`), interrupted_nonzero_no_final_json_checkpoints_preserved **PASS** (rc=3, `run_failure.json` +
+`stall_20261125T084017Z.json`, no final JSON, 1/12 rows preserved), resume_success_resumed_flag_value_equal **PASS**
+(rc=0, `resumed=true`, computed=11, values equal to straight), aggregate_only_zero_compute_value_equal **PASS**
+(rc=0, computed=0, values equal). Intermediates `smoke_work/{ckpt_ref,ckpt_int,ref/int/agg JSONs}` kept; evidence tar
+copied to `docs/audit/results/box_evidence/`.
