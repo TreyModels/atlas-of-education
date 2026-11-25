@@ -15,7 +15,7 @@
 | engine pin | payload `engine_commit=846c9e0`, `engine_core_sha256=e111397b…`; **verified against git** (`846c9e0` resolves; `engine/eduengine/core.py` at that commit hashes to `e111397b…`); box core file also matched |
 | spec provenance | payload `spec_sha256=e5ddef6b…` = canonical spec **file at re-pin `46c080d`**; the `846c9e0` git tree's in-tree spec (`35576f…`) is expected old content (lead-confirmed provenance, not a defect) |
 | runner | `runner_sha256=bc833b76…` = the live box runner (v3, 4-regime code; the old 96-run v2 docstring is superseded). **Design-record correction:** any earlier "96 runs / 12 cells" note is wrong for this campaign. |
-| manifest | `MANIFEST_SHA256SUMS.txt` verified here: **17/17 files OK** (payload + 16 ckpts) |
+| manifest | `MANIFEST_SHA256SUMS.txt` verified here: **17/17 files OK** (payload + 16 ckpts); `MANIFEST.txt` sha256 `81e6d6db…` states the same pins/design/guards and is consistent with the payload |
 
 ## 1. Mechanical checks (`docs/audit/pilot0_qa.py`, run against the copied bundle)
 
@@ -35,7 +35,7 @@
 ## 2. Caveats / findings (do not over-read)
 
 * **C1 — driver log is minimal** (587 B: only the final write line plus two numpy "Mean of empty slice" warnings). A9 therefore evidences *absence of failure strings*, not a full per-run `unfired_events` audit trail; the runner raises on non-empty `unfired_events`, and a completed 128/128 payload implies no run aborted. For future campaigns, keep the full driver log.
-* **C2 — two metrics are all-NaN:** `completion_primary` and `completion_upper` are NaN for all 16 cells / all seeds (32 summary entries). The keys and `n` are present; **do not cite these two metrics**. Likely a measurement-window/config artefact; not a reason to fail the campaign (core outcomes are non-NaN).
+* **C2 — exactly two metrics are all-NaN:** `completion_primary` and `completion_upper` are NaN in **all 16 cells / all 8 seeds** (32 summary entries; the raw ckpt rows are NaN too). The keys and `n` are present and internally consistent (A10 passes); **do not cite these two metrics**. The runner's `RuntimeWarning: Mean of empty slice` comes from summarising those empty fields. **Correction to the hand-off note:** `tut_own_by_grade_last` / `tut_firm_by_grade_last` are **clean (non-NaN)** in this payload — all other 21 of 23 metrics are clean. This is a reporting-field artefact, not a run failure.
 * **C3 — contamination note stands:** `own_share` / `tut_firm_by_grade` mix contest-prep with firm tutoring (runner's documented contamination note); report as recorded, do not relabel.
 * **C4 — exploratory only:** hypothesis-generating; no confirmatory, multiplicity-adjusted, causal or welfare claims. `withheld`/`own_share` are engine constructs, not estimated policy effects.
 * **C5 — GPU separation (lead instruction):** **Pilot-0 is a CPU-only campaign on the canonical engine pin.** The GPU PL port (`research/gpu-pl-port-auditv2-2026-11-25`) is a *separate artefact* for gate-grid/sensitivity runs only; GPU runs must not replace CPU primary artefacts or the canonical spec hash, and are not part of this Pilot-0 record.
