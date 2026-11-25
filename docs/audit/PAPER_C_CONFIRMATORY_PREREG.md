@@ -80,3 +80,58 @@ box, scheduled only after G2-B and Codex review.
 engine pin + core sha / spec sha / runner sha; cells/seeds declared; primary outcome per test; predicted signs + minimum
 effects; decision + indeterminate rules; binding assertions; contamination declarations; evidence layering; negative
 result preservation; compute envelope; no post-hoc cells; no confirmatory use of Pilot-0.
+
+## 8. Amendment A1 — adjudicator conditional-review fixes + Codex protocol (pending final review)
+
+**Status: still DRAFT until re-reviewed; no confirmatory compute.**
+
+**(A1.1) 36-cell appendix.** Cells = S{0.85,1.0,1.15} × L{0.25,0.45} × supply{A: own_ban0/firm_ban0, B: own_ban.95/firm_ban0,
+C: own_ban0/firm_ban.9} × settings{pay_ratio .55/monitoring .2, pay_ratio 1.2/monitoring .5} = 36; cell ids
+`S{s}|L{l}|{A|B|C}|{P55|P12}`; each cell runs 8 screening seeds (N=600). **Screening seeds = 0–7 (EXPOSED/exploratory,
+never confirmatory).** **Confirmatory seeds = 100–131 (32 matched, frozen and disjoint)**; confirmatory runs only for
+pre-declared passers and only after the amended prereg is signed.
+
+**(A1.2) One primary per test.** T1 primary = K-12 tutoring participation. T2 primary = `own_share_financial`
+(definition: own-teacher tutoring events / (own+firm tutoring events), with contest-prep events classified separately and
+excluded from the denominator; **absolute own and firm quantities and spends also reported**). T3 primary =
+`withheld` (school-level withholding h; the `h>0/own>0.1` binding checks are ASSERTIONS, not outcomes; T3 tests the
+supply-form outcome `own_share_financial` against market-only as secondary). T4 primary = Q5−Q1 spend gap (per-student
+outcome; participation is secondary). One primary each; everything else secondary/exploratory.
+
+**(A1.3) T4 overclaim removed.** No "positional not learning" claim: T5 (learning decomposition) is **wave-2/not
+testable** with current levers (learning-prep mode inert at small gain). T4 is a gate-pressure association on spend gap,
+not a positional-vs-learning discrimination.
+
+**(A1.4) Screening→confirmatory selection bias.** Screening cells are never reused for confirmatory estimates: the
+confirmatory block uses **disjoint seeds 100–131**, and the screening→confirmatory passing rule is pre-declared
+(|effect| ≥ minimum effect AND binding assertions hold); all cells (passing and failing) are reported, and the
+confirmatory analysis is runnable only on the frozen passing list (no post-hoc additions). Alternative accepted design
+(all-cell confirmatory) is pre-declared as the fallback if screening power is inadequate.
+
+**(A1.5) Four-criticism section (in-file).** (i) no identification/rank claim is made by this design — the 4θ map and the
+6-parameter ABC rank-4/6 criticism are recorded elsewhere and not addressed here; (ii) grade×urban cell counts are a
+design check only, never an estimation population (no empty cell enters an estimator); (iii) uncertainty is seed
+Monte-Carlo only — no pooled/FE selftest claim; (iv) no permutation inference or country blocking.
+
+**(A1.6) T1 relabelled.** `q0` scales public **and** private school quality, so T1 is **not** a clean public-S
+substitution test: relabel T1 as a **school-quality-bundle treatment** ("does raising measured school quality reduce
+private tutoring demand?") and declare that separating public-only S requires the wave-2 public-feedback lever (EP-1,
+with a no-effect toggle/negative control: `feedback_intensity=0` bit-identical control).
+
+**(A1.7) T2/T3 contrasts specified; market-only near-trivial.** T2 contrast = C (own access open, firm banned) vs A
+(market-only) on `own_share_financial`, baseline-matched seeds, and **absolute own/firm counts+spends**; T3 contrast =
+B (own-open, pay-gap, pay_ratio .55) vs A on `withheld` and `own_share_financial`. Market-only is a near-trivial control
+for own_share by construction — stated; conclusions rest on magnitude/CI, not sign alone. Binding assertions are
+assertions, not outcomes.
+
+**(A1.8) Runnable provenance, exclusions, power.** Runner commit + sha and analysis commit recorded before launch; stop
+rules: any binding-assertion failure aborts the cell (no silent no-op); exclusion rule = cells with failed assertions are
+reported as INVALID, not dropped; pre-declared MDE per test: T1 −3 pp, T2 +0.10, T3 h>0.05 (assertion-support), T4 +2 pp;
+Holm across T1–T4 for confirmatory; secondary families (absolute quantities, quintiles) reported separately and labelled
+exploratory; L/gate definitions fixed in the appendix (share_of='cohort'; contest_r only where the gate is contest-based);
+regime anchors are hypothesis-generating contexts and never enter the confirmatory estimand. Compute recalibrated after
+Pilot-0 (pilot observed ~5–7 min/seed at N=1500; screening N=600 projected from measured pilot wall, not assumed).
+**D/L/V tags:** design (D) = declared; L = lever exists in engine; V = unverified/unavailable (Caplan attribution V,
+SEA-PLM item wording V). **Model row 8 = Bryan Caplan (probable, UNCONFIRMED, tag V)**, not a straw man; protocol = both
+competing models on the same evidence AND complementary modules, with holds/fails/indeterminate/not-testable.
+Negative-result wording: "holds / fails / indeterminate-by-context", never "model is wrong"; all results preserved.
