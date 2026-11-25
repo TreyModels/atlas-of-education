@@ -579,39 +579,55 @@ approved.** When the Commander drafts it, review with the same four-criticism di
 overclaim; grade×urban/design-cell counts only; seed-MC uncertainty; no permutation inference. **Paper D compute is
 gated** on the Paper C confirmatory run and an approved prereg (Commander rule).
 
-## 4I. Model Zoo / D1–D2 discriminators — pre-registration review (design-only; **no run yet**)
+## 4I. Model Zoo v2 / engine probes EP-1–EP-2 — pre-registration review (design-only; **no run yet**)
 
-Artefact: `docs/audit/MODEL_ZOO_DISCRIMINATORS.md` **sha256 `5a67fcf1db9648dda02be88c3cedace5ff0818e9ad1dd8261cbabcd1caf1f48f`**
-(commit `6e780c2`). Design-only; nothing has run.
+Artefact: `docs/audit/MODEL_ZOO_DISCRIMINATORS.md` **sha256
+`bd0bf29efe6705b029937cbaf6aa5c886c1196a1911f06998ab6671bc2a2eeb1`** (commit `9035547`), superseding v1
+(`5a67fcf1…`, `6e780c2`). Design-only; nothing has run.
 
-**D1/D2 32-run confirmatory core (reviewed):** N=600, T=46, seeds 0–7 matched, HK base; D1A/D1B and D2A/D2B reuse
-the four Paper C Pilot-0 **v3** cell definitions (N=1500 exploratory → N=600 re-execution; cell definitions reused,
-results new). Optional D1C q0=0.8 (+8) and mechanism-grade D2 (+16).
-* **D1 (S in demand vs demand-only):** primary paired Δ K–12 tutoring participation (D1B − D1A: q0 1.2 vs 1.0);
-  standard/demand-only prediction **≈0 pp**, mechanism-rich prediction **≤ −2.0 pp** (probe prior −3.7 pp, spend
-  −6.6 %). Decision/indeterminate rules: |Δ| < 1.0 pp → indeterminate (extend seeds, do not reinterpret).
-* **D2 (cap vs withholding displacement):** primary paired Δ `own_share` (D2B − D2A: `own_open_gap` ± `firm_ban=.9`);
-  X (reduced-form) predicts proportional spend fall, **own_share flat**; Y (mechanism) predicts **Δown_share ≥ +0.20**
-  and firm-revenue collapse exceeding the spend fall; Δown_share < 0.05 → X not rejected/indeterminate in this regime.
-* **Pre-registration content checked and adequate:** 12-item checklist (§6) — exact cells, seeds 0–7, one primary
-  outcome per test + Holm-corrected secondary family, predicted signs/thresholds, decision/indeterminate rules,
-  paired per-seed CIs, contamination declarations, no-op binding assertions, engine/spec hashes, exclusion rules,
-  report-all-cells/no selective reporting.
-* **Run gate (binding):** D1/D2 + the model zoo need **Codex's protocol/Kaplan confirmation** and this prereg review
-  before any run; **no run may start until that lands.**
-* **Pilot-0 script inconsistency (flagged):** the `run_paperC_pilot0.py` docstring says "96 runs / 3 supply regimes /
-  `pay_ratio=0.8`", but the committed **v3 code** has **4 regimes (→128 runs)** and `pay_ratio=0.55`,
-  `monitoring=0.2`, matching commit `fbc1991`; the prereg must quote **code + commit**, not the docstring. (Pilot-0 v3
-  = 128 runs, not 96; earlier 96 was v2. The Commander is checking which version actually launched.)
+**Reclassification (Codex/Lead, binding):** **D1/D2 are ENGINE PROBES, not named-theory discriminators.** Omitting S
+from a demand regression is not the same as a zero true response; `q0` shifts **both** public and private quality; and
+the Lean omission lemma is **definitional invariance**, not an empirical magnitude claim.
 
-**10-model zoo (reviewed):** ten candidates mapped to 2–3 observable predictions each, with five **discriminating
-moment families** (gate pressure; school supply S; supplier availability; credential-vs-skill; time; state-vs-market).
-Explicitly **UNFALSIFIABLE / data-blocked now:** (i) student/teacher **time allocation** (no time variables; engine
-lacks the time budget); (ii) **Mincer returns** (no earnings in DHS); (iii) **withholding magnitudes / provider mix**
-(no own-provider/teacher-pay data); (iv) **Kaplan-type firm profits** (no firm-market entry/price/profit data);
-(v) **exact CES substitution sign** (needs `production='ces'` extension). DHS has no tutoring module → all
-shadow-education moments are ILSA/CEPS/theory-only. **These are pre-registerable tests, not results**; the
-unfalsifiable list is binding so that later no one claims those were tested.
+* **EP-1 — matched public-feedback intervention** (mechanism probe, not a theory test): arms C0 (none), **P**
+  (`school_feedback=x`, `feedback_intensity=0` — the declared inert toggle / **no-effect negative control**, must be
+  **bit-identical to C0** on every declared outcome, pre-run assertion), **T** (`feedback_intensity=1`, public basic
+  schools only, costed in teacher marking time — manipulation check S>0 and marking hours increase), B (`q0` raised to
+  the same average quality increase — declared **bundle** contrast showing why `q0` cannot isolate public S). Matched
+  seeds **100–131**, same cohorts and teacher-time budget in P/T. Primary: Δ K–12 tutoring participation T−C0, with
+  P−C0 as the negative control; secondary: spend, absolute own/firm counts/spends, L6/L9, fixed-R gap-close and rank-R
+  admission probability, gap_by_q, teacher marking hours. **STATUS: NOT RUNNABLE TODAY** — the engine has no positive
+  public-school effort/preparation lever; requires the wave-2 `school_feedback` extension. A "mechanism absent" result
+  is an engine-geometry limitation to report, **not** evidence about the world or a named theory.
+* **EP-2 — own access × firm constraint 2×2** (mechanism probe): E00 (own_ban .95, firm_ban 0; own-closed/firm-open
+  baseline), E01 (.95/.9), E10 (0/0), E11 (0/.9); fixed `q0=1.0`, `p_firm=0.08`, HK base, **seeds 100–131 matched
+  across all four cells**. Primary `own_share_financial` (own vs firm among **financial** tutoring; contest-only pupils
+  excluded from the denominator; absolute own/firm counts and spends also reported), E11−E10 with E01−E00 as the
+  contamination-matched control; pre-registered DiD participation sign `(E01−E00)−(E11−E10) < 0`; binding assertions
+  E10/E11 `withheld>1e-3`, E00/E01 `withheld<5e-3`, and `own_count+firm_count+contest_only_count==tutored_count`.
+  `firm_price` reported but **not** mechanism evidence. **STATUS: NOT CONFIRMATORY-RUNNABLE** until the additive
+  reporting series land (fixed denominator + `contest_prep_class` + absolute counts/spends); switches exist.
+* **Seeds:** **0–7 = EXPOSED/exploratory** (Pilot-0 v3, never confirmatory); **confirmatory = 100–131 (32 matched,
+  frozen, disjoint)**; no seed in both blocks.
+* **A/R formalism shared with Lean:** `gap = max(0, R − A)` is definitionally `LeanStarter.gap`; capacity feasibility
+  `Feasible required capacity`; fixed-R and rank-R predictions reported separately, never pooled.
+* **Row 8 "Kaplan" → Bryan Caplan (probable, UNCONFIRMED, tag V):** signalling/human-capital-critique model (likely
+  *The Case Against Education*, 2018); **must be primary-source verified before being cited as Caplan**. Protocol =
+  **both competing models on the same evidence (Mode A) AND complementary modules (Mode B)**; outcomes
+  holds/fails/indeterminate/not-testable; no straw man. If "Kaplan" means Kaplan, Inc. or Kaplan–Meier, §5.1 says what
+  changes (industry case / estimator, not a general theory).
+* **Runnability matrix:** EP-1 blocked on the wave-2 public-only S lever; EP-2 blocked on the additive series;
+  model-zoo *competing* tests need EP-1/EP-2 + external data; *complementary modules* are design-ready but
+  model-fitting is not in-engine "evidence". **No run** until (i) the Paper C prereg is amended per its residual items
+  + Codex protocol/Kaplan confirmation, (ii) this probe design is signed off, (iii) seeds 100–131 + engine/spec/runner
+  hashes are frozen, (iv) capacity is allocated.
+* **UNFALSIFIABLE/data-blocked list retained:** time allocation; Mincer returns (no earnings); withholding magnitudes/
+  own-vs-firm provider mix (no own-provider/teacher-pay data); firm profits/entry (no firm-market data); exact CES
+  substitution sign. Empirical validation requires external data; engine-simulated moments are **not** empirical
+  evidence. The list stays flagged so later nobody claims these were tested.
+
+**Status: design-only, pre-registerable probes, not results.** EP-1/EP-2 are recorded as engine-mechanism probes; the
+D1–D9 "named-theory discriminator" framing is withdrawn.
 
 ## 4J. Evidence-layer limits for Papers C/D and the Model Zoo (binding)
 
@@ -773,9 +789,9 @@ The design's core (orthogonal factors, one-primary intent, binding assertions, s
 Artefacts: commit `4d42101`; `docs/audit/LEAN_VERIFICATION_SCOPE.md` sha256
 `9f31108e496fdc3ac9509547ea388128d156188df9b0540c486d4406d1d3f23c`; `LEMMA_LEDGER.csv` sha256
 `3e9dbbc188a4309156310bd0696967261e11d0f2243c66c4da53daa4144e1287`; `LEMMA_LEDGER.md` sha256
-`5e414bc09d103c183f541da15a4574c1a03aa336980d4d5969c942c5cf4cde71`; baseline
-`LEMMA_LEDGER_BASELINE.json` `87c14a6a…` (current 132-row pair; the earlier 130-row pair `f2ce655e…` + `da956fc1…`
-is preserved in git history, not rewritten).
+`877891888e67474ef08d21d89105c8b26a2874ba71b0fd582aaf79b5cdb7e72d`; baseline
+`LEMMA_LEDGER_BASELINE.json` `b71f1eea…` (current 132-row baseline `55f75eea…`; the earlier 130-row pair
+`f2ce655e…` + `da956fc1…` and the `b990c99f…` freeze are preserved in git history, not rewritten).
 
 **Answer to "can we run everything against Lean?" — NO, and claiming so would be false.** The scope doc is explicit:
 
@@ -792,7 +808,7 @@ is preserved in git history, not rewritten).
   "the engine is verified".** Theorems are about the model objects; empirical claims are `EmpiricalClaim` records with
   artifact hashes, never asserted as theorems. **Unproved ≠ false; empirical ≠ theorem.**
 
-**Prototype (measured, Lean 4.36.0; `lake build` 12 jobs ~2 s, 0 `sorry`, `#print axioms` PASS):** proved
+**Prototype (measured, Lean 4.36.0; `lake build` 16 jobs PASS, 0 `sorry`, `#print axioms` for every theorem → only `propext`, 0 prohibited/non-standard axioms, Mathlib unused):** proved
 `budget_ledger_identity`, `tax_revenue_le_base`, `seat_count_positive`, `prep_recursion_closed_form`; finite PL n=2
 (`pl_top1_sum_eq_denom/_min`, `pl_topK_selected_sum`); Kind-3 `decide` lemmas for the **A-34 tolerance, A-38
 infeasibility, B-41/B-42 Win–Win accounting cells**; **five omission/independence lemmas**
@@ -818,14 +834,69 @@ id/row change (not text) requires ledger regeneration + re-pin.** Repro:
 `python3 docs/audit/lemma_audit.py --claims results/audit/paper_claims.csv --ledger docs/audit/LEMMA_LEDGER.csv --lean-dir
 verification/lean`.
 
+**Delivery refresh (`e0a5662`):** Luna starter compiled (`LeanStarter.lean` sha
+`6cfa77e770199a887a8160eba424c5c996e6a480f9190df3116665463cff7590`) with four documented fixes (doc-comment
+nesting, two unsolved `simp` goals, `Quot.sound` in a `simp` proof; statements unchanged, no `sorry`). **`Atlas/Model.lean`
+sha `f6acc321…`** proves `gap_nonneg`, `gap_eq_zero_iff_met`, `gap_pos_iff_shortfall`, `accepted_le_capacity`,
+`zero_extra_input_no_increment`, accounting/additivity, time-budget invariants,
+**`rank_invariant_under_common_shift`** (deterministic rank with an explicit tie rule) and
+`accepted_monotone_fixed_capacity`; **counterexamples** `fixed_seat_relative_rank_counterexample`,
+`complementarity_counterexample`, `feedback_capacity_counterexample`, `max_not_additive` — monotonicity is proved
+only where assumptions imply it, and false generalisations are countered. **Proof-status package:** 107 declarations
+/ **46 theorems**, build 16 jobs PASS, 0 `sorry`, 0 prohibited/non-`propext` deps; `LEAN_PROOF_STATUS.md` sha
+`c02b4085650f714ec81c40e93c515e2bfa95a218a73f8eabb65bb6bc702efeaa`, `.csv` sha
+`1ff80fb0cf3e0a84a70976612c29a35ef06eb8e3ef166ea7a9afed90f745f0c9`; **differential Lean↔Python bridge 22/22 exact
+fixtures** (`results/LEAN_DIFFERENTIAL_BRIDGE.json` sha `56cdfd7b…`). Ledger re-pinned to the current 132-row baseline
+`55f75eea…` (ledger `3e9dbbc1…`; `.md` `87789188…`; baseline JSON `b71f1eea…`); the MZ-01/MZ-02 rows now carry v2 EP-1/EP-2 wording and the Caplan-V note. **Boundary (kept):** formal statements
+under stated assumptions ≠ engine/empirical truth; Tier 3 remains reproducible-artefact evidence; **no claim that 183
+inventory equations or the float runtime are verified.**
+
 **Install provenance (honest):** elan 4.4.0 → Lean `v4.36.0` via the GitHub release mirror because the default CDN
 measured **70 B/s**; 608.4 MiB download, **~23 min** install window, **3.0 GiB** unpacked, disk 12 → 8.9 GiB free;
 **Mathlib not installed** (multi-GB, not viable on this Mac) — Tier 2 is CI-only.
 
 **Significance for Paper D:** "the classical demand equation provably ignores school supply S / positional fixed seats /
 withholding / time budgets / supply form" is now a **machine-checked invariance statement**, not rhetoric — strong
-support for the omission lemma (M1–M5). It does **not** show the omissions are empirically important (that is the
-D-tests' job) and it carries the Tier-3 disclaimer.
+support for the omission lemma (M1–M5), alongside the counterexample lemmas (`fixed_seat_relative_rank_counterexample`,
+`complementarity_counterexample`, `feedback_capacity_counterexample`, `max_not_additive`) that keep the formal claims
+conditional rather than universal. It does **not** show the omissions are empirically important (that is the EP-1/EP-2
+probe and external-data job) and it carries the Tier-3 disclaimer.
+
+### Re-review — Paper C prereg **Amendment A1** (2026-11-25): **CONDITIONAL; 4 residual fixes**
+
+Amended draft: `docs/audit/PAPER_C_CONFIRMATORY_PREREG.md` sha256
+**`dd58919dc7941c05952c642df804431149258d0d5c5abd1c6868b4ea55b94666`** (commit `c0f4eb6`; §8 A1.1–A1.8). The
+**8 original blocking items are substantively addressed in-file**: 36-cell ids/factor mapping + screening seeds 0–7;
+one primary per test; T4 overclaim removed (T5 wave-2/not testable); disjoint confirmatory seeds 100–131 + pre-declared
+pass rule + all-cell fallback; in-file four-criticism section; T1 relabelled school-quality-bundle; T2/T3 contrasts
+with `own_share_financial` definition + absolute quantities; provenance/stop/exclusion/MDE/Holm/Caplan-V. **Residual
+fixes are still required before preregistered-final:**
+
+1. **Body vs §8 inconsistency.** §§1–6 still carry the pre-A1 wording (16 confirmatory seeds; T2 `own_share`; T3
+   `h and own_share`; T4 "(positional) but not via learning"; §6 ≤4 CPU-h / 16 seeds). A preregistration must have
+   **one canonical spec**: update §§1–6 or add an explicit "**§8 supersedes §§1–6 where inconsistent**" statement.
+2. **T3 cell mapping is internally inconsistent.** §8 A1.1 defines supply **B = own_ban .95 / firm_ban 0** (own channel
+   ~closed), but A1.7 calls B "own-open, pay-gap"; T3 "B vs A on `withheld`" would then test a cell with tiny h and
+   `own_share≈0`, so the `h>0` / `own_share>0.1` assertions cannot pass. Re-map T3 to **A|P55 vs A|P12** (own-open
+   pay-gap vs own-open no-gap) or correct the supply labels; verify the binding assertions in the chosen cells.
+3. **Compute envelope inconsistent with the amended design.** A1.1 uses **32 confirmatory seeds**, but §6 still says
+   **16 seeds / ≤4 CPU-h**; Pilot-0 measured ~5–7 min/seed at N=1500 ⇒ ~3.2 CPU-h **per cell**, so ≤4 CPU-h allows
+   ~one cell, not multiple passers. Recompute and either raise the cap, reduce confirmatory seeds/cells, or pre-limit
+   the passers; state the achieved MDE/power at 32 seeds. Update §6 with the actual projection.
+4. **Gate kind / `contest_r` missing from the 36-cell mapping.** The grid is S×L×supply×settings; `contest_r ∈
+   {1.2,1.6}` is "only where the gate is contest-based", but no gate-kind dimension or fixed-gate declaration is in
+   the cell ids. State the fixed gate kind per cell (or add gate as a factor and change the grid size); the appendix
+   must resolve this before launch.
+
+**Recommended:** (5) add the explicit 36-row table or state "36 = the full Cartesian product; no other cells";
+(6) label the design **"screening-confirmation on pre-declared passers"** — disjoint seeds remove MC reuse but the
+target remains conditional on the screening selection; state the estimand and keep the all-cell fallback;
+(7) pin runner + analysis commit/sha and engine/spec hashes in a **launch manifest** before the run, with per-run
+`event_log`/`unfired_events` assertions. **EP-1/EP-2 probes are not runnable today** (EP-1 needs the wave-2 public-only
+S lever; EP-2 needs the additive series); the clean public-S follow-up is therefore **not** part of Paper C now.
+
+**Verdict: still CONDITIONAL — not cleared for preregistered-final.** No confirmatory compute until the four residual
+fixes land, the body is canonical, and Codex's protocol/Kaplan confirmation arrives.
 
 ## 5. Evidence-status register (programme level)
 
@@ -840,7 +911,7 @@ D-tests' job) and it carries the Tier-3 disclaimer.
 | UNRESOLVED | **19** (2 A, 0 B, 17 programme) | A-31 replication inventory; A-36 bulge `t*` (no-effect evidence); Paper C confirmatory prereg (C-04); Paper D omissions/divergences (D-01/D-03) and inventory attribution risk (D-04); Model Zoo D1/D2 + run gate + Pilot-0 provenance (MZ-01…MZ-04); evidence-layer limits (EV-01…EV-04); X-29 (admission-rate diagnostic gap); X-30 (Lean methods artefact — not a scientific claim); canonical spec/Gate-2; GPU quarantine |
 
 The machine-readable one-row-per-claim record is `results/audit/paper_claims.csv` (132 rows; sha256
-`3ff88d3950364bcc6ffcd12d516064fd6c20edb50ca72bc7ac43bd46756ddbc5`). The Lead-defined new-generation label **REPRODUCED EMPIRICAL ANALYSIS** is used for the fresh-WDI E8 rows; all
+`55f75eeac6dc0e0c96454238e60f0bcc06c1c4e4874145fc8ad78516f3bcd212`). The Lead-defined new-generation label **REPRODUCED EMPIRICAL ANALYSIS** is used for the fresh-WDI E8 rows; all
 other rows use the verbatim six-status taxonomy.
 
 ---

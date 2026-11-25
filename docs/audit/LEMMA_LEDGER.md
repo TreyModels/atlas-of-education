@@ -156,10 +156,10 @@ These rows have **no Lean declaration yet** by design — explicit entries so th
 | X-25 | PROGRAMME | REPRODUCED SIMULATION | Paper B 540 design/CF4 reproduction can be extended to table regeneration |
 | X-26 | PROGRAMME | UNRESOLVED | Paper A five intended computations (E8 event study; bulge t* with fresh hashed WDI; gate architecture >=5,000 runs with H2; multi… |
 | X-27 | PROGRAMME | REPRODUCED SIMULATION | Item (c) gate-architecture: CLOSED — REPRODUCED SIMULATION. Clean JSON results/audit/newgen/gate_architecture_results.json sha256… |
-| MZ-01 | PROGRAMME | UNRESOLVED | Model Zoo D1/D2 32-run confirmatory core (N=600/T=46, seeds 0-7, HK base; D1A/B, D2A/B reuse Pilot-0 v3 cells): D1 standard ~0 pp… |
-| MZ-02 | PROGRAMME | UNRESOLVED | 10-model zoo with five discriminating moment families (gate pressure; school supply S; supplier availability; credential-vs-skill… |
-| MZ-03 | PROGRAMME | UNRESOLVED | Model Zoo run gate: D1/D2 + zoo require Codex protocol/Kaplan confirmation + approved prereg before any run |
-| MZ-04 | PROGRAMME | UNRESOLVED | Pilot-0 script inconsistency: docstring says 96 runs/3 regimes/pay_ratio .8, committed v3 code has 4 regimes (->128 runs) and pay… |
+| MZ-01 | PROGRAMME | UNRESOLVED | EP-1 engine probe (matched public-feedback intervention; NOT a named-theory discriminator): arms C0 / P (school_feedback=x, feedb… |
+| MZ-02 | PROGRAMME | UNRESOLVED | EP-2 engine probe (own access x firm constraint 2x2, seeds 100-131): E00/E01/E10/E11; fixed own_share_financial denominator (own/… |
+| MZ-03 | PROGRAMME | UNRESOLVED | Run gate: no run until (i) Paper C prereg residual fixes land + Codex protocol/Kaplan confirmation, (ii) EP-1/EP-2 probe design s… |
+| MZ-04 | PROGRAMME | UNRESOLVED | Pilot-0 provenance: code-authoritative 128 runs / 16 cells (supersedes earlier 96/12 docstring mention); committed v3 has 4 regim… |
 | EV-01 | PROGRAMME | UNRESOLVED | HK-vs-PH 2019 supply-form unobserved; SEA-PLM 2024 is a candidate route, not yet testable: PISA 2018/2022 has participation/hours… |
 | EV-02 | PROGRAMME | UNRESOLVED | Paper C empirical leg feasible-partial (participation/hours only); supply-form/withholding predictions remain theory/simulation u… |
 | EV-03 | PROGRAMME | UNRESOLVED | DHS E1-E8 cannot test the model zoo: no tutoring, learning, gate/seat, time-use, earnings or expenditure variables; they weakly c… |
@@ -168,7 +168,7 @@ These rows have **no Lean declaration yet** by design — explicit entries so th
 | X-29 | PROGRAMME | UNRESOLVED | X-27 design diagnostics: realized admission rates are NaN in the raw checkpoints and JSON (contest_candidates/seats/admitted/cont… |
 | D-05 | PROGRAMME | CONTRADICTED | Citation verification of inventory section 5: 0 of equations 57-86 verified; every citation is a placeholder (UIS+2, OECD+3, hanu… |
 | D-06 | PROGRAMME | UNRESOLVED | Jayachandran (2014, JDE 108:190-205) published model DOES contain withholding (school-day material m, achievement s(m,t), s_mt<0,… |
-| C-05 | PROGRAMME | UNRESOLVED | Paper C confirmatory prereg draft reviewed (commit 2e69339; sha256 10406a33...bf7): orthogonal 36-cell design + 4 anchors; T1-T4 … |
+| C-05 | PROGRAMME | UNRESOLVED | Paper C confirmatory prereg re-reviewed (Amendment A1, commit c0f4eb6; file sha dd58919d...): 8 original blocking items substanti… |
 | X-30 | PROGRAMME | UNRESOLVED | Lean verification methods artefact (commit 4d42101; LEAN_VERIFICATION_SCOPE sha256 9f31108e...; LEMMA_LEDGER.csv da956fc1.../LEMM… |
 
 ## Sorry ledger
@@ -197,43 +197,7 @@ Claims proved or computationally checked in this prototype: `budget_ledger_ident
 `verification/lean/ci/lean_verify.sh` runs `#print axioms` on every proved theorem and fails if `sorryAx`, `Classical.choice`, `Lean.ofReduceBool` or `Lean.trustCompiler` appear. Last recorded output:
 
 ```
-== axiom audit ==
-'Atlas.budget_ledger_identity' depends on axioms: [propext]
-'Atlas.tax_revenue_le_base' depends on axioms: [propext]
-'Atlas.prep_recursion_closed_form' depends on axioms: [propext]
-'Atlas.pl_top1_sum_eq_denom' does not depend on any axioms
-'Atlas.pl_top1_sum_eq_min' depends on axioms: [propext]
-'Atlas.pl_topK_selected_sum' depends on axioms: [propext]
-'Atlas.Claims.A34_arithmetic' does not depend on any axioms
-'Atlas.Claims.A38_anchor_infeasible' does not depend on any axioms
-'Atlas.Claims.B41_HK_meets_criterion' does not depend on any axioms
-'Atlas.Claims.B42_CF4b_fails_spend_HK' does not depend on any axioms
-'Atlas.Claims.D02_paradox_not_universal' does not depend on any axioms
-'Atlas.Claims.classical_demand_ignores_school_supply' does not depend on any axioms
-'LeanStarter.gap_eq_truncated_sub' depends on axioms: [propext]
-'LeanStarter.gap_pos_of_shortfall' depends on axioms: [propext]
-'LeanStarter.used_plus_remaining_eq_capacity' depends on axioms: [propext]
-'LeanStarter.preparation_within_elapsed' does not depend on any axioms
-'LeanStarter.work_within_elapsed' does not depend on any axioms
-'LeanStarter.review_within_elapsed' does not depend on any axioms
-'Atlas.Model.gap_nonneg' does not depend on any axioms
-'Atlas.Model.gap_eq_zero_iff_met' depends on axioms: [propext]
-'Atlas.Model.gap_pos_iff_shortfall' depends on axioms: [propext]
-'Atlas.Model.accepted_le_capacity' depends on axioms: [propext]
-'Atlas.Model.zero_extra_input_no_increment' does not depend on any axioms
-'Atlas.Model.total_input_eq_sum' does not depend on any axioms
-'Atlas.Model.additive_combine_eq_sum' does not depend on any axioms
-'Atlas.Model.max_not_additive' does not depend on any axioms
-'Atlas.Model.budget_implies_component' does not depend on any axioms
-'Atlas.Model.time_accounting_identity' does not depend on any axioms
-'Atlas.Model.rank_invariant_under_common_shift' depends on axioms: [propext]
-'Atlas.Model.fixed_seat_relative_rank_counterexample' does not depend on any axioms
-'Atlas.Model.accepted_monotone_fixed_capacity' depends on axioms: [propext]
-'Atlas.Model.complementarity_counterexample' does not depend on any axioms
-'Atlas.Model.feedback_capacity_counterexample' does not depend on any axioms
-axiom audit: 33 theorem lines parsed; allowed=['propext']
-axiom audit OK (only allowed axioms: none/propext)
-== claim declarations present ==
+not captured in this generation (run `verification/lean/ci/lean_verify.sh`)
 ```
 
 ## CI and extension plan
