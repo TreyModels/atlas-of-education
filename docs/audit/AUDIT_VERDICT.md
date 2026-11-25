@@ -1195,6 +1195,27 @@ deviation, not an estimand change** — record actual CPU/wall on completion. ET
 will pull/hash-verify, copy to `~/neon-boot/qa/incoming/paperC_confirmatory/`, and send the confirmatory JSON +
 T2/T3 Holm results for adjudication **before any claim**. **No confirmatory number is cited yet.**
 
+**RESOURCE-RUNWAY WARNING (2026-11-26 ~07:33 CST; no outcome numbers cited).** Measured in `confirm_final`
+(PID 1364): 6 cells at ~99.9 % CPU; after ~13 min, 4 cells completed 1 seed each and the L=.45 cells were still on seed
+0 ⇒ **per-seed wall ≈13–15 min, ~800–900 CPU-s/run** at N=1500 with the treated G6→G9 contest gate. Projection:
+**192 runs ≈ 42–48 CPU-h vs the pre-declared ≤22 CPU-h envelope**; wall ≈7–8 h at 6 parallel cells. The
+profile-based 170 s/run estimate was a different gate configuration (seat share .25/.45 makes the PL quadrature ~O(N²)).
+**No confirmatory number has been inspected or cited.**
+
+**Adjudication position:** **prefer option (a) — complete the full pre-registered 32-seed run and record the
+compute-envelope overrun as a protocol/resource deviation**, not a design or estimand change: 6 frozen passers, seeds
+100–131, N=1500/T=46, T2/T3 Holm m=2 α=.05, min effects and proxy/range caveats unchanged. The envelope was a
+pre-launch **estimate**, not a scientific threshold; preserving the pre-registered precision is the scientifically clean
+choice. If box allocation genuinely cannot support ~42–48 CPU-h / 7–8 h, **fallback (b) A5 interim at 16 seeds/cell** is
+acceptable only under strict conditions: **freeze A5 before any outcome inspection**; fixed seeds **100–115** (no
+outcome-based choice); estimands/min effects/Holm family unchanged; **no optional stopping/peeking** (run exactly 16
+seeds/cell or complete all 32); report achieved SE/CI and label **interim precision** (SE ≈ √2 × the 32-seed target), no
+claim of full preregistered precision; T2/T3 proxy/range caveats unchanged. **Option (c) N=600 is rejected** — it
+changes the design/power and is the largest deviation. The run should not be killed without Lead instruction; the
+overrun is **resource, not design.**
+
+**Status: RESOURCE WARNING RECORDED; RUN CONTINUES PENDING LEAD DECISION; no confirmatory number cited.**
+
 **Status: LAUNCH OBSERVED / APPROVED; RESULTS PENDING; pre-launch record remains the adjudication basis.**
 
 

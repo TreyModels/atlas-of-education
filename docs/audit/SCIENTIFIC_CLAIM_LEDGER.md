@@ -413,3 +413,13 @@ cells exist → instantaneous load 6 processes (4 configured workers idle; no ex
 protocol deviation only, not estimand change; record actual CPU/wall on completion. ETA 1.5–2 h; on completion pull/hash,
 QA copy, T2/T3 Holm results for adjudication before any claim. **No confirmatory number cited yet.**
 
+**CONFIRMATORY RESOURCE-RUNWAY WARNING (2026-11-26 ~07:33 CST; no outcome numbers).** Measured `confirm_final`
+PID 1364: 6 cells ~99.9 % CPU; ~13 min → 4 cells at 1 seed, L=.45 still seed 0 ⇒ ~13–15 min/seed, ~800–900 CPU-s/run at
+N=1500 treated gate; projection **192 runs ≈42–48 CPU-h vs ≤22 pre-declared**; wall ~7–8 h at 6 parallel. **Adjudication:
+prefer (a) complete full 32-seed run with overrun recorded as protocol/resource deviation** (estimand, seeds, N, Holm,
+min effects unchanged; envelope was an estimate, not a scientific threshold). **Fallback (b) A5 16-seed interim** only if
+allocation cannot support full: freeze A5 before any outcome inspection; fixed seeds 100–115; estimands/min effects/Holm
+unchanged; no optional stopping/peeking; report achieved SE/CI and label interim precision (SE ≈√2×), no full-precision
+claim; T2/T3 caveats unchanged. **Reject (c) N=600** (design/power change). Run not to be killed without Lead; overrun is
+resource, not design. **No confirmatory number cited.**
+
