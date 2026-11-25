@@ -43,9 +43,9 @@ Codex column: Codex is the independent auditor; it did not run a competing Paper
 | (d) | 5-param core rank / cond | 5/5; 14.41 | *fill* | *fill* | same |
 | (d) | +income micro-moments | 6/7; 3435.49 | *fill* | *fill* | local rank only |
 | (d) | +income +school-quality | 7/7; 43.81 ("full identifiability") | *fill* | *fill* | independent affiliated computation gives **local 5/5**, not 7/7; do not claim global |
-| (e) | Forecast 7-horizon RMSE | 5.13 / 4.68 pp vs persistence 23.93 | **v1 INVALID — runner/calendar-year bug fixed; rerun pending; do not cite v1** | *not-comparable* | runner used simulation index `T0` as `events.year`; event never fired; zero-effect artefact, not model failure; engine fix `846c9e0`; expected ≈ +17 pp at e=+1 → ≈ +25 pp at e=+6 |
-| (e) | Forecast impact ATT | +11.60 / +13.48 pp | **v1 INVALID — do not cite; rerun pending** | *not-comparable* | runner defect fixed; expected numbers to be measured |
-| (e) | Calibration | fee_public=.150 on 74.88 % pre-GER; zero post fitting | **v1 INVALID — do not cite; rerun pending** | *not-comparable* | runner defect fixed; fee grid bracketed 74.88 % (≈59 % at 0.15, ≈84 % at 0) but calibration not yet rerun |
+| (e) | Forecast 7-horizon RMSE | 5.13 / 4.68 pp vs persistence 23.93 | **2.764 / 2.432** vs persistence **23.759 / 23.260** (−88.4 %) — **REPRODUCED SIMULATION (NEW GENERATION)** | *not-comparable* (different world/estimator) | fixed engine `846c9e0`; new-generation conditional simulation; author baseline is not re-derived as a reproduction |
+| (e) | Forecast impact ATT | +11.60 / +13.48 pp | abolition − persistence **+17.19 … +25.35 pp** (e=0..6) — **REPRODUCED SIMULATION (NEW GENERATION)** | *not-comparable* | different world/estimator; held-out e=+5,+6 RMSE 1.637 |
+| (e) | Calibration | fee_public=.150 on 74.88 % pre-GER; zero post fitting | **FALLBACK DECLARED — 74.88 % anchor INFEASIBLE** (max 71.0 % at fee 0; at fee 0.15 pre-attendance 59.44 %): fee 0.15 + engine pre-abolition level, no post tuning (A-38) | *not-comparable* | new-generation finding: the author's anchor is not attainable in the repaired world |
 
 ---
 

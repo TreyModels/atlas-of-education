@@ -17,7 +17,7 @@ supersedes the earlier "reproduction attempt" framing.
 
 Five computations define Paper A: (a) the E8 fee-abolition event study, (b) the delayed secondary-bulge `t*`, (c) the
 gate-architecture/H2 experiment, (d) multi-seed identifiability/Jacobian, (e) the fee-abolition forecast with
-held-out horizons. **(a) is DONE and REPLICATES under the author's estimator family — fresh-WDI CS-style group-time ATT gives impact +12.322 (author +12.44) and post mean +25.083 (author +25.26), with 8-cluster wide CI; (b) is DONE (bulge `t*` no detectable jump, −0.956, p .251/.384); (c), (d) are design-ready; (e) v1 is INVALID because of a runner/calendar-year bug (not a simulator shortcoming); the engine defect is fixed (`846c9e0`) and the rerun is pending.** None of the five depends on recovering the
+held-out horizons. **(a) is DONE and REPLICATES under the author's estimator family — fresh-WDI CS-style group-time ATT gives impact +12.322 (author +12.44) and post mean +25.083 (author +25.26), with 8-cluster wide CI; (b) is DONE (bulge `t*` no detectable jump, −0.956, p .251/.384); (c), (d) are design-ready; (e) is DONE on the fixed engine (`846c9e0`; canonical re-pin `46c080d`, `year_t=T0`, `unfired_events==[]`) and is accepted as a **new-generation conditional simulation** with a declared calibration fallback — the author's 74.88 % anchor is infeasible in the repaired world (max 71.0 % at fee 0).** None of the five depends on recovering the
 Gemini code. The new-generation baseline is the repaired 540 (`98baf6b`, sha256 `455649da…`) and the P0 audit
 artefacts, which already establish the engine's behaviour and the identifiability limits.
 
@@ -31,7 +31,7 @@ artefacts, which already establish the engine's behaviour and the identifiabilit
 | (b) | **Delayed secondary-bulge `t*`** | fresh hashed WDI; `t* = abolition + SE.PRM.DURS`; outcome SE.SEC.ENRR; 2,500 perms/scheme | **DONE (fresh WDI)** — ATT at `t*` **−0.956 pp**, post +0.30, Fisher p **0.251/0.384** → **no detectable secondary-bulge jump**; **UNRESOLVED** (no-effect evidence), consistent with the manuscript's honest-null framing | host, 8.7 s | none |
 | (c) | **Gate-architecture / H2 (≥5,000 runs)** | repaired engine `98baf6b`; pre-registered gate kinds `bar/bar_high/quota/contest`; S ∈ {.25,.35,.45,.55,.70}; fee ∈ {0,.19}; vac0 ∈ {.02,.08,.25,.50}; **≥5,000 runs** (30–40 matched seeds/cell, expanded grid); H2 = Δcut(S=.25) − Δcut(S=.70); report H1/H2/inverted-U with seed uncertainty and baselines | **DESIGN READY / RUN PENDING** — no new-generation run yet; the paper's 1,640-run version is AUTHOR-REPORTED BASELINE only | server, ~43–60 CPU-h for ≥5,000 runs at `N≈400`/`T≈70`; ~5–8 h wall at ≤10 CPUs | pre-registration + engine config freeze (no SSA config exists in the engine — must be specified in the prereg) |
 | (d) | **Multi-seed identifiability / Jacobian (declared perturbations)** | explicit 3-option MNL `masseng-tutoring` model; analytic Jacobian; rank/null-space at **multi-seed declared perturbations** (e.g., 100 population draws); aggregate moments vs micro-moments; report local rank, condition, finite non-identification, and the two-moment remedy; no global "theorem" | **DESIGN READY / MODEL SPEC NEEDED** — the independent ABC harness is the template; Paper A's own model spec must be written down | host, minutes–hours | a documented model specification + declared perturbation grid |
-| (e) | **Fee-abolition forecast with held-out horizons** | calibrate `fee_public` to pre-abolition GER on training horizons **only**; hold out e = +5/+6; ≥40 paired seeds; report RMSE/MAE vs persistence on the **held-out** horizons; sensitivity to engine caps | **v1 INVALID — RUNNER DEFECT IDENTIFIED AND FIXED; RERUN PENDING** — runner used simulation index `T0` as `events.year` vs engine calendar years; event never fired (`event_log==[]`), arm bit-identical to persistence (zero-effect artefact, not model failure); engine fix `846c9e0` (`_validate_events`, `E.unfired_events`, `year_t`; numerics unchanged; new core sha `e111397b…`); expected ≈ +17 pp at e=+1 → ≈ +25 pp at e=+6, to be measured | server, ~1–3 CPU-h | re-run with `year_t`/calendar events + assert `E.unfired_events==[]`; document training-only calibration + held-out |
+| (e) | **Fee-abolition forecast with held-out horizons** | fixed engine `846c9e0` (canonical re-pin `46c080d`); `year_t=T0`; `assert E.unfired_events==[]`; 40 matched seeds; held-out e=+5,+6; training-only calibration attempted | **DONE — ACCEPTED as REPRODUCED SIMULATION (NEW GENERATION)** — abolition − persistence **+17.19…+25.35 pp**; full-7 **RMSE 2.764 / MAE 2.432** vs persistence **23.759 / 23.260 (−88.4 %)**; held-out e=+5,+6 **RMSE 1.637 / MAE 1.350**. **Fallback:** the author's **74.88 % anchor is infeasible** in the repaired world (max 71.0 % at fee 0; A-38); fee 0.15 + engine pre-abolition level, **no post tuning**. Conditional simulation, not a reproduction of the author's calibration. v1 uncited. | host, 13.8 s | none; provenance `FORECAST_NEWGEN.md` sha256 `d4c0a239…d8f1`; JSON `f0eee995…c04` |
 
 ---
 
@@ -118,15 +118,16 @@ blocker**, and we are not waiting for them.
   RMSE/MAE vs persistence on the **held-out** horizons; sensitivity to `max_entry_age`, repetition, and the gate
   regime; no post-abolition fitting in the calibration.
 * **Cost:** ~1–3 CPU-h at `N≈400`/`T≈70`.
-* **Status:** **v1 INVALID — RUNNER DEFECT IDENTIFIED AND FIXED; RERUN PENDING.** Root cause: the runner used
-  the **simulation index `T0` as `events.year`**, while the engine matches **calendar years** (`start_year + t`); the
-  event never fired (`event_log == []`), so the "abolition" arm was bit-identical to persistence — a **zero-effect
-  artefact, not a model failure**. The genuine engine defect (an unreachable calendar event was a silent no-op) is
-  fixed in `846c9e0` (`docs/audit/ENGINE_MIDRUN_EVENTS.md`): `_validate_events`, `E.unfired_events`, additive
-  `year_t`; numerics unchanged (118-series identical; 27 qa tests; ENGINE_CHECKS 14/14); new `core.py` sha
-  `e111397b…`. **Do not cite v1 numbers anywhere.** Expected rerun: ≈ +17 pp at e=+1 → ≈ +25 pp at e=+6 vs
-  persistence (to be measured). The paper's RMSE 5.13/4.68 vs 23.93 and impact +11.60/+13.48 are
-  **AUTHOR-REPORTED BASELINE**, not targets to recover.
+* **Status:** **DONE on the fixed engine — ACCEPTED as a new-generation conditional simulation (REPRODUCED SIMULATION).**
+  The v1 runner/calendar-year bug is fixed (`846c9e0`, canonical re-pin `46c080d`); this run uses `year_t=T0` and
+  asserts `E.unfired_events == []` per arm. Results: abolition − persistence **+17.19, +20.97, +23.37, +25.03,
+  +26.14, +26.18, +25.35 pp** (e=0..6); full-7 **RMSE 2.764 / MAE 2.432** vs persistence **23.759 / 23.260**
+  (**−88.4 %**); held-out e=+5,+6 **RMSE 1.637 / MAE 1.350**. **Calibration caveat (binding):** training-only
+  bisection was attempted and **failed** — the author's **74.88 % anchor is infeasible** in the repaired world
+  (max 71.0 % at fee 0; at fee 0.15 pre-attendance 59.44 %, residual 15.44 pp) — so the documented fallback is
+  manuscript fee 0.15 + engine pre-abolition level, **no post-abolition tuning**; held-out horizons reported
+  separately. This is a **conditional simulation forecast**, not a reproduction of the author's calibration. v1
+  numbers remain uncited. The paper's RMSE 5.13/4.68 vs 23.93 and impact +11.60/+13.48 are AUTHOR-REPORTED baseline.
 
 ---
 
@@ -162,7 +163,8 @@ blocker**, and we are not waiting for them.
 | **E8 fresh-WDI new generation (CS-style)** | **REPRODUCED EMPIRICAL ANALYSIS** | impact +12.322 (bootstrap mean 12.308, CI [4.48, 22.64]); **post +25.083 vs +25.26 (replicates)**; Fisher p 0.0044/0.0040; `CS_ESTIMATOR_NEWGEN.md` sha256 `04faf9dc…b196`; JSON `4ac9551d…1905` |
 | **Bulge `t*` fresh-WDI** | **UNRESOLVED** (no-effect evidence) | ATT −0.956, post +0.30, p .251/.384 |
 | Paper B 540 regenerated tables | REPRODUCED SIMULATION, uncalibrated | `PAPER_B_TABLE_REGENERATION.md`; csv sha256 `da40a2ee…` |
-| Engine mid-run calendar-event fix | VALIDATED SIMULATION (numerics unchanged) | `846c9e0`; `ENGINE_MIDRUN_EVENTS.md`; `_validate_events`/`E.unfired_events`/`year_t`; new core sha `e111397b…`; 118-series identical; 27 qa tests; ENGINE_CHECKS 14/14 |
+| Engine mid-run calendar-event fix | VALIDATED SIMULATION (numerics unchanged) | `846c9e0`; `ENGINE_MIDRUN_EVENTS.md`; `_validate_events`/`E.unfired_events`/`year_t`; new core sha `e111397b…`; 118-series identical; 27 qa tests; ENGINE_CHECKS 14/14; canonical re-pin `46c080d` |
+| **Forecast (e) new generation** | **REPRODUCED SIMULATION (NEW GENERATION)** | abolition − persistence +17.19…+25.35 pp; full-7 RMSE 2.764 vs persistence 23.759 (−88.4 %); held-out e=+5,+6 RMSE 1.637; declared calibration fallback (74.88 % anchor infeasible, A-38); `FORECAST_NEWGEN.md` sha256 `d4c0a239…d8f1`; JSON `f0eee995…c04` |
 
 **Adjudicator re-executions (host):** the ABC identification audit was re-run and its output is **bit-identical**
 to the committed host JSON (`/tmp/abc_identification.json` sha256 `66bb2648…15808`; rank 4/5, 2-dim null, analytic
@@ -180,7 +182,7 @@ committed result (rank 5/5 vs legacy 3/5) stands and is labelled as the audit's.
 |---|---|---|---|---|
 | 1 | (c) gate architecture ≥5,000 runs | freeze config + pre-register (1 h) | server, 43–60 CPU-h | H1/H2 + inverted-U with seed CIs; all cells reported; hashes |
 | 2 | (d) multi-seed Jacobian | write model spec + perturbation grid (1 h) | host, minutes–hours | rank/null space across seeds/perturbations; local-only statement; two-moment remedy |
-| 3 | (e) forecast held-out | SSA config + pre-register | server, 1–3 CPU-h | held-out RMSE vs persistence; sensitivity |
+| 3 | (e) forecast held-out | **DONE** (fixed engine; declared fallback) | — | held-out RMSE 1.637 vs persistence; 74.88 % infeasibility recorded (A-38) |
 | 4 | (b) bulge `t*` | **DONE** — fresh WDI; no detectable jump | — | artefact hashed; report as no-effect evidence |
 | 5 | (a) E8 fresh-vintage re-run | **DONE (both estimators)** — impact and amplification replicate under CS-style; simple DiD is sensitivity | — | artefacts hashed; report CS-style as primary, simple DiD as sensitivity |
 

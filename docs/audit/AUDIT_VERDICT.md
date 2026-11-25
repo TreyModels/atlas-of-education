@@ -256,7 +256,7 @@ and sensitivity. Full plan: `docs/audit/PAPER_A_REPRODUCTION_ATTEMPT.md` (reimpl
 | (b) | Delayed secondary-bulge `t*` | fresh hashed WDI; `t* = abolition + SE.PRM.DURS`; outcome SE.SEC.ENRR; 2,500 perms/scheme | **DONE (fresh WDI)** — ATT at `t*` **−0.956 pp**, post +0.30, Fisher p **0.251 / 0.384** → **no detectable secondary-bulge jump**; **UNRESOLVED** (no-effect evidence), consistent with the manuscript's honest-null framing |
 | (c) | Gate-architecture / H2 (≥5,000 runs) | repaired `98baf6b`; pre-registered gate kinds/grid; ≥5,000 runs; H2 with seed CIs | **DESIGN READY / RUN PENDING** — ~43–60 CPU-h |
 | (d) | Multi-seed identifiability/Jacobian | explicit 3-option MNL; analytic Jacobian; rank/null across seeds; two-moment remedy; local-only | **DESIGN READY / MODEL SPEC NEEDED** — ABC harness is the template |
-| (e) | Fee-abolition forecast with held-out | training-only calibration; e=+5/+6 holdout; ≥40 seeds | **v1 INVALID — RUNNER DEFECT IDENTIFIED AND FIXED; RERUN PENDING** — runner used simulation index `T0` as `events.year` vs engine calendar years, so the event never fired (`event_log==[]`) and the arm was bit-identical to persistence (zero-effect artefact, not a model failure); engine fix `846c9e0` (`_validate_events`, `E.unfired_events`, `year_t`; numerics unchanged; new core sha `e111397b…`); expected ≈ +17 pp at e=+1 → ≈ +25 pp at e=+6, to be measured |
+| (e) | Fee-abolition forecast with held-out | fixed engine `846c9e0` (canonical re-pin `46c080d`); `year_t=T0`; `assert E.unfired_events==[]`; 40 seeds; held-out e=+5,+6 | **ACCEPTED — REPRODUCED SIMULATION (NEW GENERATION)** — abolition − persistence **+17.19 … +25.35 pp** (e=0..6); full-7 RMSE **2.764 / MAE 2.432** vs persistence **23.759 / 23.260** (**−88.4 %**); held-out e=+5,+6 RMSE **1.637 / MAE 1.350**. **Calibration fallback:** the author's **74.88 % anchor is infeasible** in the repaired world (max 71.0 % at fee 0; A-38), so fee 0.15 + engine pre-abolition level, **no post tuning**; conditional simulation, not a reproduction of the author's calibration. v1 numbers remain uncited |
 
 **New-generation E8 empirical result (fresh hashed WDI, label `REPRODUCED EMPIRICAL ANALYSIS`):** **both the
 impact and the delayed amplification replicate under the author's estimator family.** CS-style group-time ATT
@@ -270,9 +270,11 @@ secondary-bulge jump**, recorded as **UNRESOLVED** (no-effect evidence), consist
 framing. Artefacts: `docs/audit/CS_ESTIMATOR_NEWGEN.md` (sha256 `04faf9dc…b196`),
 `results/audit/newgen/cs_estimator_fresh_wdi_2026-11-25.json` (sha256 `4ac9551d…1905`),
 `docs/audit/E8_BULGE_NEWGEN.md` (sha256 `97734cdc…`), WDI manifest sha256
-`d7296e1fed3eb6806ba5111de2538e7fcd206323832307a1fabeeaefc6c55ee4`. **Forecast (e) v1 numbers are invalid for citation because of a runner/calendar-year bug (not a simulator
-shortcoming); the engine defect is fixed (`846c9e0`) and the rerun is pending; expected ≈ +17 pp at e=+1 → ≈ +25 pp
-at e=+6 vs persistence, to be measured.**
+`d7296e1fed3eb6806ba5111de2538e7fcd206323832307a1fabeeaefc6c55ee4`. **Forecast (e) is now a new-generation conditional simulation (REPRODUCED SIMULATION) on the fixed engine:**
+abolition − persistence **+17.19…+25.35 pp**, full-7 RMSE **2.764** vs persistence **23.759** (−88.4 %), held-out
+e=+5,+6 RMSE **1.637**; but the author's **74.88 % level anchor is infeasible** in the repaired world (max 71.0 % at
+fee 0; A-38), so the run uses a declared fallback (fee 0.15, engine pre-abolition level, no post tuning) and does not
+reproduce the author's calibration. v1 numbers remain uncited.**
 
 **Paper B:** the **420 design is AUTHOR-REPORTED BASELINE** (runner/raw output not found where searched; docx tables
 == self-reported JSON). The **540 is reproduced** — scripts/data in hand (`hk_korea_exact_bundle.zip` /
@@ -335,14 +337,14 @@ procedures unchanged, or if it claims global identification from a local rank, o
 |---|---|---|
 | VERIFIED EMPIRICAL | **4** (4 A) | descriptive/associational; not causal; author committed E8 record |
 | **REPRODUCED EMPIRICAL ANALYSIS** *(new-generation label, Lead-defined)* | **2** (2 A) | A-34 impact (+12.322 vs +12.44) and A-35 amplification (+25.083 vs +25.26) — fresh-WDI **CS-style group-time ATT**; manifest-hashed vintage |
-| REPRODUCED SIMULATION | **14** (0 A, 8 B, 6 programme) | all conditional and/or uncalibrated unless marked; includes the re-executed ABC audit, the re-executed bootstrap factorial, and the Paper B 540 table regeneration |
+| REPRODUCED SIMULATION | **16** (2 A, 8 B, 6 programme) | all conditional and/or uncalibrated unless marked; includes the new-generation forecast (A-37), the 74.88 % infeasibility finding (A-38), the re-executed ABC audit, the re-executed bootstrap factorial, and the Paper B 540 table regeneration |
 | VALIDATED SIMULATION | **3** (programme) | engine/PL module validation, corrected DGP design, bootstrap size/power — audit artifacts, not paper claims |
 | AUTHOR-REPORTED | **44** (20 A, 18 B, 6 programme) | **AUTHOR-REPORTED BASELINE**: the 420 generation, the Paper A Exp 1/3/4/5 legacy numbers, the author JSON bundle; not results, not reproduced, not to be silently replaced |
 | CONTRADICTED | **30** (8 A, 14 B, 8 programme) | only where committed code/algebra/measured audit output refutes the claim; includes the 100 % paradox, invalid E1/Q3, legacy DGP, "published benchmark" attributions, and the Paper B policy reversals |
-| UNRESOLVED | **6** (3 A, 0 B, 3 programme) | A-31 replication inventory; A-36 bulge `t*` (no-effect evidence); A-37 forecast (exploratory-invalid, rerun required); canonical spec/Gate-2; GPU quarantine |
+| UNRESOLVED | **5** (2 A, 0 B, 3 programme) | A-31 replication inventory; A-36 bulge `t*` (no-effect evidence); canonical spec/Gate-2; GPU quarantine |
 
-The machine-readable one-row-per-claim record is `results/audit/paper_claims.csv` (103 rows; sha256
-`197852d6c302d4c0c783f676456547a0bb7260a618869ba820fa8fc043bcf74e`). The Lead-defined new-generation label **REPRODUCED EMPIRICAL ANALYSIS** is used for the fresh-WDI E8 rows; all
+The machine-readable one-row-per-claim record is `results/audit/paper_claims.csv` (104 rows; sha256
+`33ffbf00292a21d4e4b3f8576b482d6e83b876c1fa8793788043b0959907251f`). The Lead-defined new-generation label **REPRODUCED EMPIRICAL ANALYSIS** is used for the fresh-WDI E8 rows; all
 other rows use the verbatim six-status taxonomy.
 
 ---
@@ -358,7 +360,7 @@ gate1c), archived in `/root/work/cmd/engine`. File hashes (`docs/audit/canonical
 
 | file | sha256 |
 |---|---|
-| `engine/eduengine/core.py` | `72cbddf7…` **(the repaired 540 was run on this hash)**; a later validation-only fix `846c9e0` gives `e111397bd8a50f94e82bb77715f236ee3d5c0bf863a23d84afdf1c6c71fa8e71` — numerics unchanged (118-series identical), canonical spec re-pin pending |
+| `engine/eduengine/core.py` | `72cbddf7…` **(the repaired 540 was run on this hash)**; a later validation-only fix `846c9e0` gives `e111397bd8a50f94e82bb77715f236ee3d5c0bf863a23d84afdf1c6c71fa8e71` — numerics unchanged (118-series identical); **canonical spec re-pinned at `46c080d`** (content sha `280b5d95…`, file `e5ddef6b…`; 27-suite PASS; old-vs-new max|Δ|=0.0) |
 | `engine/eduengine/rng.py` | `ada4a760d75a14f4d82a8aaf70964dee6a2f7f4130d53018ad190fafa4920b08` |
 | `engine/eduengine/contest_math.py` | `23a01730bf939a9e22befa3ca395094a48c5e870fb10901ceb015cddd793a3c8` |
 | `engine/eduengine/modules/labour.py` | `0ccfb3ce5b4c88fc2969909dbdbbc4d32184052fe5359688f96e00c2667b3f7d` |
@@ -420,11 +422,11 @@ run failed twice in the pool-completion phase; the box run is the labelled sourc
   check beside the CS-style result.
 * **The bulge `t*` is a no-effect result on fresh data** (ATT −0.956 pp; Fisher p 0.251/0.384) — **UNRESOLVED**
   (no-effect evidence), consistent with the manuscript's honest-null framing; not a contradiction.
-* **The forecast (Exp 5) v1 numbers are invalid for citation**: a **runner/calendar-year bug** (simulation index
-  `T0` used as `events.year`; the engine matches `start_year + t`) meant the abolition event never fired and the arm
-  was bit-identical to persistence — **not a simulator shortcoming**. The engine defect (unreachable event = silent
-  no-op) is fixed in `846c9e0`; the rerun is pending, expected ≈ +17 pp at e=+1 → ≈ +25 pp at e=+6 vs persistence.
-  **Do not cite v1 numbers.**
+* **The forecast (Exp 5) is a new-generation conditional simulation** (A-37): fixed-engine run gives
+  abolition − persistence **+17.19…+25.35 pp** (e=0..6), full-7 RMSE **2.764** vs persistence **23.759** (−88.4 %),
+  held-out e=+5,+6 RMSE **1.637**. **Calibration caveat:** the author's **74.88 % anchor is infeasible** in the
+  repaired world (max 71.0 % at fee 0; A-38), so the run uses a declared fallback (fee 0.15, engine pre-abolition
+  level, no post tuning) and is **not** a reproduction of the author's calibration. v1 numbers remain uncited.
 * Not publishable: the identifiability "theorem", the 1,640-run H2 experiment, the simulator forecast, Table 3, and
   the causal framing; the one independent recomputation contradicts the headline identifiability numbers.
 * Salvage plan: **Paper A1** = short empirical paper on the **abolition impact**, with the estimator-dependence of the
