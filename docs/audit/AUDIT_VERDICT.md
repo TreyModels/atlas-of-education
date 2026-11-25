@@ -608,12 +608,18 @@ Sources: `docs/audit/TUTORING_DATA_INVENTORY.md` (current sha256
 `docs/audit/DHS_E1E8_MODEL_MAPPING.md` (current sha256
 `7e27e83c38495bd160d2f055d53c43d20942c5da7053fe90a69e757c46b2d770`; earlier `11252df2…` superseded).
 
-1. **HK-vs-PH supply-form cannot be tested with the current portfolio.** PISA 2018/2022 gives tutoring
-   participation/hours by ESCS quintile for HK/PH/CN but **no expenditure and no own-teacher-vs-firm item**;
-   provider-type data exist only for **Korea** (KOSTAT survey); PH/KH have none; Cambodia only via SEA-PLM 2019
-   (codebook unverified, marked V). Therefore **Paper C's empirical leg is feasible-partial (participation/hours
-   only)**; the supply-form/withholding predictions remain **theory/simulation** until codebooks/access are verified.
-   The "emergence" prediction can be *illustrated*, not tested, with this portfolio.
+1. **HK-vs-PH 2019 supply-form is unobserved; SEA-PLM 2024 is a candidate route, not yet testable.** PISA 2018/2022
+   gives tutoring participation/hours by ESCS quintile for HK/PH/CN but **no expenditure and no own-teacher-vs-firm
+   item**; provider-type data exist only for **Korea** (KOSTAT survey). **The SEA-PLM 2019 parent questionnaire has NO
+   tutoring item** (full 13 pages + 6-page codebook read; the earlier "KH route = SEA-PLM 2019" is **REFUTED**).
+   **SEA-PLM 2024 framework p.89 item PA18 (verified text, D) is a 2×2 supply-form item: PA18A paid assistance
+   outside school / PA18B free tutoring outside school / PA18C paid tutoring provided by the school / PA18D free
+   tutoring provided by the school** — exactly the paid/free × outside/school distinction Paper C's supply-form claim
+   needs; **SEA-PLM 2024 results/data are released (ILSA-Gateway), so 2024 may be usable pending KH/PH coverage +
+   parent–student linkage/codebook checks (dataset presence/linkage still V).** Until that verification, Paper C's
+   empirical leg is **feasible-partial (participation/hours only)** and the supply-form/withholding predictions remain
+   **theory/simulation**; the blanket "theory-only" label is too strong and must be qualified. D/L/V: PA18 text =
+   **D**; dataset presence/linkage = **V**.
 2. **DHS E1–E8 cannot test the model zoo.** They contain no tutoring, learning, gate/seat, time-use, earnings or
    expenditure variables. They can weakly constrain demand-side distributional implications (wealth gradient sign,
    urban–rural gap, sex-gap reversal) and **falsify a proxy** (E8 household size ≠ kin support), but they cannot test
@@ -625,6 +631,27 @@ Sources: `docs/audit/TUTORING_DATA_INVENTORY.md` (current sha256
    remaining V items as unverified: PISA/SEA-PLM exact item wording, expenditure/provider confirmation, CIEFR/CFPS/
    CEPS access). Papers C/D must not imply the empirical leg exists.
 
+## 4K. X-27 gate-architecture grid — RUN COMPLETE, AGGREGATION RUNNER DEFECT, ADJUDICATION PENDING
+
+* **Grid complete:** 5,632/5,632 rows; 176 cell checkpoints (5,120 primary `fail='track'` + 512 `fail='stop'`
+  sensitivity); no cell missing.
+* **Driver crashed post-run at aggregation:** `NameError: name 'np' is not defined` in `h2` (runner line 201). The
+  **grid and model ran to completion**; this is a **runner defect, not a grid/model failure**. **No simulation rerun is
+  needed** — the checkpoints are intact; the Commander is re-aggregating from them (fix `import numpy as np`; commit
+  the fixed runner; re-emit the JSON with runner commit + engine pin + spec hash + row/cell counts + checkpoint hashes).
+* **Methods/negative-paper line (citable):** this is the **third bug of this class caught by reading raw artefacts
+  rather than summaries** — (i) fee no-op (simulation-index vs calendar-year event), (ii) seed-0 hardcode, (iii)
+  missing `np` import. Summary-level QA would have missed all three; raw-artifact inspection is the detection method.
+  Add to the methods/negative paper.
+* **Adjudicator independent re-aggregation (PROVISIONAL; pending the corrected artifact; NOT the adjudicated result):**
+  primary H2 = contest, vac0=.08, `fail='track'`: **+5.0551 pp** (paired-seed bootstrap 95% CI **[2.482, 7.961]**;
+  half-width 2.740); Δcut(S=.25) +5.617 [3.551, 7.884], Δcut(S=.70) +0.562 [−0.992, 2.086]. Secondary: quota H2
+  **+0.9915** [0.5675, 1.4893]; contest vac0 curve **+3.105 / +5.055 / +1.145 / +0.325** (vac0 .02/.08/.25/.50);
+  **H1 = +7.935 pp** with Spearman **−1.00** across S; stop-sensitivity H2 **+5.4715** [2.2078, 8.4476]; bar
+  exploratory **−0.255** [−0.850, 0.325]; bar_high **+0.204** [−0.322, 0.763]. Full output
+  `/tmp/adjud/gate_independent.txt`. These numbers must be cross-checked against the corrected JSON before any ledger
+  move; X-27 stays **UNRESOLVED** until then.
+
 ## 5. Evidence-status register (programme level)
 
 | Status | Count (paper + programme rows) | Notes |
@@ -634,11 +661,11 @@ Sources: `docs/audit/TUTORING_DATA_INVENTORY.md` (current sha256
 | REPRODUCED SIMULATION | **23** (2 A, 12 B, 9 programme) | all conditional and/or uncalibrated unless marked; includes the 100-seed Paper B new generation (CF4 reversal + unmeasured-welfare-change caveat), the three Paper C provisional anchors (C-01…C-03), the new-generation forecast (A-37), the 74.88 % infeasibility finding (A-38), the re-executed ABC audit, the re-executed bootstrap factorial, and the Paper B 540 table regeneration |
 | VALIDATED SIMULATION | **4** (1 A, 3 programme) | **A-39 item (d) local identifiability (stop gate met with declared restriction)**; engine/PL module validation, corrected DGP design, bootstrap size/power |
 | AUTHOR-REPORTED | **44** (20 A, 18 B, 6 programme) | **AUTHOR-REPORTED BASELINE**: the 420 generation, the Paper A Exp 1/3/4/5 legacy numbers, the author JSON bundle; not results, not reproduced, not to be silently replaced |
-| CONTRADICTED | **31** (8 A, 14 B, 9 programme) | only where committed code/algebra/measured audit output refutes the claim; includes the 100 % paradox, invalid E1/Q3, legacy DGP, "published benchmark" attributions, and the Paper B policy reversals |
+| CONTRADICTED | **32** (8 A, 14 B, 10 programme) | only where committed code/algebra/measured audit output refutes the claim; includes the 100 % paradox, invalid E1/Q3, legacy DGP, "published benchmark" attributions, and the Paper B policy reversals |
 | UNRESOLVED | **18** (2 A, 0 B, 16 programme) | A-31 replication inventory; A-36 bulge `t*` (no-effect evidence); Paper C confirmatory prereg (C-04); Paper D omissions/divergences (D-01/D-03) and inventory attribution risk (D-04); Model Zoo D1/D2 + run gate + Pilot-0 provenance (MZ-01…MZ-04); evidence-layer limits (EV-01…EV-04); canonical spec/Gate-2; GPU quarantine |
 
-The machine-readable one-row-per-claim record is `results/audit/paper_claims.csv` (126 rows; sha256
-`2e48cbe29192ece5d1c0a73c5fbdf3c5df956cb4a0713d7185756921de3a517f`). The Lead-defined new-generation label **REPRODUCED EMPIRICAL ANALYSIS** is used for the fresh-WDI E8 rows; all
+The machine-readable one-row-per-claim record is `results/audit/paper_claims.csv` (127 rows; sha256
+`b50c9f36a0f34c42852ae8f76585d45734f204d699937d22b1b357db6dad892a`). The Lead-defined new-generation label **REPRODUCED EMPIRICAL ANALYSIS** is used for the fresh-WDI E8 rows; all
 other rows use the verbatim six-status taxonomy.
 
 ---
