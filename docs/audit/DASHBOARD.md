@@ -235,3 +235,10 @@ of runner+workers only, `/root/work/modelrev/pkg` intact. Its outputs are alread
   (Commander hands-off after the 1-worker/6-worker relaunch race; host run is authoritative). Host authoritative
   540 run in progress (started 14:55, ETA ~15:17–15:20). Hard caps: qa ≤3, contest-math ≤3, audit 0, commander 0–1,
   total ≤10; controller's assignment wins.
+
+- 2026-11-25T15:08+08:00 · Commander · **Host contention controlled for Gate-1.** Host 8-core machine was carrying
+  the authoritative repaired-540 run (6 workers) + qa task-7 DGP (4) + contest task-9 (1) = 11 procs. Asked
+  qa-verifier to cap host pools at 2 until the 540 lands (Gate-1 > P0; box preferred for task-7/8 under controller).
+  540 ETA revised ~15:20–15:25. Box cross-env 540 relaunched by compute-controller at 6 workers
+  (`/root/work/cmd/run_540_w6c.log`, controller-owned; Commander hands-off). Branch: local ahead of origin
+  (`307b59c` remote); push planned with the Gate-1 pack.
