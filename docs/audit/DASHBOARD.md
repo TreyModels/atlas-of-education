@@ -205,3 +205,18 @@ of runner+workers only, `/root/work/modelrev/pkg` intact. Its outputs are alread
   independent harvest of the same outputs already exists in `docs/audit/harvest/model_revision/` (AUTHOR-REPORTED /
   PRE-REPAIR / UNCALIBRATED). Current allocation: qa 5 / contest-math 3 / audit-runner 1 / Commander 0 (host 540
   run) / 1 reserve; box idle after retirement (brief controller pilot blips only). No oversubscription.
+
+- 2026-11-25T15:03+08:00 · Commander · **GATE-1 AFTER SUITE GREEN — 27/27 invariant tests pass on the repaired
+  engine.** qa-verifier commit `5df531d` (clean `git archive 98baf6b`): host **27 passed in 72.85 s**, box
+  **27 passed in 56.73 s** using the declared-stack venv (numpy 2.2.6 — closes the Gate-0 numpy-floor caveat
+  operationally), and my **independent** rerun (fresh archive + qa's committed tests) **27 passed in 112.12 s**.
+  All 7 BEFORE rows (F1–F7: universal seat, non-selective gate, G9 persistence, expected=PL, seat denominator,
+  policy-invariant RNG, gate prize) now PASS; 8 API-absent xfails run and pass; 12 baseline greens still green;
+  **no new failures**. Residual risk recorded: under A7 the legacy-cohort `share=1.0` arm is not literally universal
+  (max e_t 5.97→0.343 via pool-map approximation; use `share_of='applicants'` for universal arms). Commands and
+  per-row table in `docs/audit/TEST_REPORT.md` §4. 540 migration run on the repaired engine (host 6 workers, clean
+  `98baf6b`; box cross-env at 6 workers) in progress; `ENGINE_CHECKS` 13/13 and `TUTORING_CHECKS` 17/17 already
+  verified clean-tree. Tutoring ledger from a real full-size run (KR + HK Baseline seed 0): identities
+  outlay=resource+tax rel 0.0, receipts=Σtax rel 0.0, max e_t = cap 6.0 exactly (cap binds), max(extra_spend−cash)
+  = −0.000636 (KR) / −0.3183 (HK) ≤ 0; `contest_spend_now` present as Σ outlay; expected-vs-realised per gate after
+  repair = 1.0000 (KR G9 0.35/0.35, KR G12 0.12/0.12, HK G12 0.23/0.23) vs the pre-repair 2.41×/1.96× mismatch.

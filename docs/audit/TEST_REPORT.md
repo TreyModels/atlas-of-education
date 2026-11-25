@@ -54,18 +54,51 @@ ac2 (per-quintile register-exact), ac3 (cohort denominators 3·N).
 | invariant suite against the **legacy** `research/model-revision-2026-11-25` engine | 7 failed / 10 passed / 10 xfailed — the same F1–F7 rows; legacy fixes close none of them (`docs/audit/harvest/HARVEST.md` §3) |
 | Gate-0 540 reproduction (pristine) | 9,174/9,180 seed + 842/846 summary exact vs reference; max abs 3.553e-15 / 4.441e-16 (`GATE0_VERIFICATION.md`) |
 
-## 4. AFTER — pending Phase-B commits
+## 4. AFTER — repaired engine (commits `6bc8d61` [gate1b] + `f31e176` [gate1a] + `1a6f3d5` [gate1c]; tip `98baf6b`)
 
-To be filled when `engine-core` (core.py/rng.py/labour.py/planning.py) and `engine-tutoring` (tutoring.py) commit:
+qa-verifier commit `5df531d`; every run below is on a **clean `git archive 98baf6b` engine + tests** tree.
 
-1. re-run the full invariant suite (27 tests) on a clean `git archive <commits>` + committed `contest_math.py`,
-   same command, record pytest summary and per-test status;
-2. per-row AFTER table (F1–F7 + xfail flips + any new failures outside the baseline rows — the most important
-   signal, since a repair that breaks a green guard is a regression);
-3. explicit statement of which commits were in the tree (all three lanes if available, partial otherwise);
-4. my own independent rerun (not the lane's) of the same command, plus the 540 migration check (config must run;
-   numeric delta documented in `CODE_CHANGES.md` §4);
-5. **Gate-1 verdict** only if: all 12 invariant tests green, no baseline-green regression, tax/outlay identities
-   exact, `ΣP = seats` exact, RNG arm-matching test green, 540 config runs, and the 68-test contest_math suite green.
+| run | environment | command | result |
+|---|---|---|---|
+| qa-verifier AFTER (host) | macOS arm64, py 3.10.2, numpy 2.2.6 | `pytest tests/test_engine_invariants.py -q --tb=short -rxXf` | **27 passed, 226 warnings, 72.85 s** — 0 failed / 0 xfailed / 0 errors |
+| qa-verifier AFTER (box, declared venv) | Linux x86_64, py 3.10.8, **numpy 2.2.6** (declared floor satisfied) | same, `QA_WORKERS=4`, `/root/work/venv-declared` | **27 passed, 56.73 s** (rerun 60.10 s, identical) |
+| **Commander independent AFTER** | host, fresh `/tmp/gate1-after` from `git archive 98baf6b` + qa's committed tests | same | **27 passed, 112.12 s** (slower due to a concurrent 540 run; counts identical) |
 
-**No AFTER numbers exist yet; any claim of Gate-1 green before this column is filled is premature.**
+### 4.1 Per-row BEFORE → AFTER (the 7 present-and-wrong rows — original numbers preserved)
+
+| # | test | BEFORE observed | AFTER observed | status |
+|---|---|---|---|---|
+| F1 | 03 universal seat | max `e_t` = 5.968711 (434/434 admitted) | contract path 40 candidates = 40 seats, `P_i = 1.000000000000`, max `e_t` = 0 | **PASS** |
+| F2 | 07 non-selective gate | awards 0, max `e_t` = 5.968711 | `ValueError: kind='open' may not carry 'elite_logw'`; open-arm awards all from the contest gate | **PASS** |
+| F3 | 08b G9 persistence | 557 G9 candidates → 0 awards, 4.731047 `e_t`/yr | 560 G9 candidates → 112 `k['elite']` + 112 `elite_prize` holders; GATE_SPECS TRACKED track ∈{−1,0,1} = 320/364/196; SINGLE all −1 | **PASS** |
+| F4 | d2 expected = exact PL | belief `[0.193617, 0.052377]`, ΣP = 0.245994 | `max |P_engine − P_PL| = 5.55e-17`, `ΣP = 5.000000 = seats_eff` (n40/5) | **PASS** |
+| F5 | d3 seat denominator | declared 0.25, realized admit rate 0.513 | `share_of='applicants'` mean realized admit rate **0.2500**, worst dev 0.0000 | **PASS** |
+| F6 | d6 policy-invariant RNG | 17/51 cohort-covariate groups differ | identical pids, **0 covariate mismatches** | **PASS** |
+| F7 | d7 gate prize | gate `elite_logw`=0.1, paid 0.600000 | all 90 winners store `elite_prize=0.1` exactly | **PASS** |
+
+**API-absent xfails (8):** all now run and PASS, markers flipped, no `XPASS(strict)`. **Baseline-green regressions:**
+all 12 still green. **New failures not in F1–F7: NONE.**
+
+**Test-side fixes (no assertion weakened):** (i) `method='exact'` caps at `EXACT_MAX_N=20` by contract A6, so the
+n=24–40 engine-vs-reference comparisons now use deterministic `method='auto'` (exact ≤20, validated quadrature >20;
+Gate-1c 68-test validation); the analytic anchor `[4,1], seats=1` remains `method='exact'` at 1e-12. (ii) the stale
+gate-kind capability probe was fixed to a T=18 world + `E.gate_kind` check, so the `'open'` test runs for real.
+
+**Residual risk recorded (not a failure):** under amendment A7 (sitting-cohort pool) the *legacy cohort-share*
+`share=1.0` arm is no longer literally "universal" — it buys max `e_t` 5.968711 → **0.343441** (−94.2 %, not exactly
+zero) through the future-gate pool-map approximation, whereas the binding `share_of='applicants', share=1.0` path is
+exact (`P=1`, `e_t=0`). Wave-2 reports must use `share_of='applicants'` for universal-admission arms and must not
+treat cohort-share `share=1.0` as universal.
+
+## 5. SUITE-LEVEL SUMMARY
+
+| suite | before | after |
+|---|---|---|
+| engine invariants (27) | 7 failed / 12 passed / 8 xfailed | **27 passed** (host + box + Commander) |
+| PL reference validation (68) | 68 passed at `47f6bd0` | 68 passed (unchanged, engine-independent) |
+| engine-core acceptance checks (13) | n/a (pre-repair `ENGINE_CHECKS.py` did not exist) | **13/13 PASS** (Commander clean-tree run) |
+| tutoring acceptance checks (17) | n/a | **17/17 PASS** (Commander clean-tree run) |
+| legacy engine (`research/model-revision`) vs our invariants | 7 failed / 10 passed / 10 xfailed | not adopted (see harvest) |
+
+**Gate-1 test verdict: GREEN** on the evidence above, subject to the 540 migration run (§5 of the Gate-1 report) and
+the residual risks listed there. No "tests pass" claim here lacks the command and output above.
