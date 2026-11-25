@@ -468,3 +468,27 @@ per eval, seed 0): **start 0 rank 4/4, SVs [60.015, 32.125, 7.770, 0.683], null_
 Sample every 2–3 min: cgroup delta utilization, per-lane worker counts, per-job progress; flag <7 idle, >10 workers,
 no-progress >10 min. Record PIDs/hashes/exit codes in `/root/work/compute/ledger/COMPUTE_LEDGER.md`. Total concurrent
 worker processes must stay ≤10; DHS and task-13 are the first to be paused if Exp 3 needs the full quota.
+
+### 13.4 Update 16:30 — Exp 3/4/5 are NOT recoverable; revised actual queue
+
+**Finding (commander + paper-adjudicator inventory):** no Exp3/Exp4/Exp5 runner, config, grid, or SSA country config
+exists in any bundle, the archive branch `@46950ab`, the research branches, or any worktree. Paper A's Exp-3 grid
+parameters are undocumented → a rerun would be a **"reconstruct from memory"** new experiment, which is **prohibited**.
+**Exp 3 is therefore NOT queued** and the 14.1 CPU-h cost model for it is void. This is recorded so nobody later
+"fills the box" with an experiment that has no provenance.
+
+Actual jobs (16:30):
+
+| job | owner | workers | status |
+|---|---|---|---|
+| box-job-1: independent re-execution of Paper-A audit harnesses (`abc_identification_audit.py` exit 0 → `bootstrap_factorial.py --workers 4` done → `dgp_validation.py --workers 3` live) | commander | 3–4 (driver 23223; dgp parent 23421 + workers 23423–23425) | RUNNING, started 16:27, **ETA ~16:38–16:40**, outputs `/root/work/pa_jobs/results/`, logs `/root/work/pa_jobs/logs/` |
+| candidate-zip inventory (`INVENTORY2.txt` 47 KB + `INVENTORY2_SHA256SUMS.txt` 75 KB + `extract/`) | commander | 1–2 | DONE (16:29), evidence in `/root/work/pa_zips/` |
+| audit-runner **task-13** (Gate-2 blocker) | audit-runner | ≤2 reserved | **NOT STARTED** at 16:30 (`/root/work/audit13` absent) — nudged 3× |
+| DHS QA (`dhs_qa` R harness) | qa-verifier / DHS | ≤2 cap | finished its current loop (0 procs); must request allocations through scheduler |
+| Paper B table regeneration | paper-adjudicator / commander | 1 | not on box yet; CPU-light |
+
+**Utilization reality:** measured **3.0/10 (30 %)** at 16:30:25, on track to near-idle after ~16:40 — because the only
+sustained CPU job in the programme (Exp 3) does not exist. The scheduler's standing rule applies: **do not invent work.**
+Realistic fillers if the operator wants the cores used: run the remaining Paper-A audit harnesses **concurrently as
+independent shards** (2 workers each), Paper B table regeneration (1w), task-13 (2w), zip extraction/hashing (1–2w).
+Caps stay: total ≤10, DHS ≤2 (pre-emptible), control 1.
