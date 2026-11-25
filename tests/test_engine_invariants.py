@@ -289,32 +289,40 @@ def test_05a_pl_probability_non_decreasing_in_own_weight(pl_reference):
 
 
 @missing(not CAPS["api_contest_weights"],
-         "missing API: Engine.contest_weights/contest_expected_probs (contract §6; defect D2)")
+         "missing API: Engine.contest_weights(..., stock_override=...) / contest_expected_probs (contract §6; D2)")
 def test_05b_engine_expected_probability_monotone_in_own_stock():
-    """#5b: the engine's expected probability is non-decreasing in own prep stock, competitors fixed."""
+    """#5b: the engine's weight for one applicant is non-decreasing in its own prep stock; with
+    competitors fixed, that applicant's exact-PL win probability is non-decreasing."""
     E = small_contest_engine()
     E.run()
     m = 1
-    cand = np.flatnonzero(E.contest_candidates(m))
+    cand = np.flatnonzero(np.asarray(E.contest_candidates(m), bool))
     assert len(cand) > 0, "no candidates at the contest gate"
-    idx, P = E.contest_expected_probs(m)
-    w = np.asarray(E.contest_weights(m)[1], float)
-    seats = int(min(E.contest_seats(m), len(w)))
-    p = np.asarray(P, float)
-    assert len(p) == len(w), f"expected_probs length {len(p)} != weights length {len(w)}"
-    assert np.all(p >= 0.0) and np.all(p <= 1.0 + 1e-12)
-    # Monotone comparative statics of the engine's own reported probabilities: perturb one weight
-    # upward and recompute the exact reference on the perturbed vector.  The engine's reported P must
-    # not be lower than the reference bound for the unperturbed vector.
+    seats = int(E.contest_seats(m))
+    _, w_base = E.contest_weights(m)
+    w_base = np.asarray(w_base, float)
+    pids, _ = E.contest_weights(m, idx=cand)
+    stock = np.asarray(E.kids["prep_stock"], float)[cand, m]
     cm = CAPS["contest_math_module"]
-    for mult in (1.5, 2.0, 4.0):
-        wp = w.copy()
-        wp[0] *= mult
-        ref_p = float(cm.pl_win_probs(wp, seats, method="exact")[0])
-        assert ref_p >= float(p[0]) - 1e-9, (
-            f"P(own win) fell from engine-reported {p[0]:.6f} to reference {ref_p:.6f} when own weight "
-            f"was raised x{mult} (competitors fixed)"
+    prev_own = None
+    for extra in (0.0, 0.5, 1.0, 2.0, 4.0, 8.0):
+        st2 = stock.copy()
+        st2[0] += extra
+        try:
+            _, w2 = E.contest_weights(m, idx=cand, stock_override=st2)
+        except TypeError as exc:  # contract §6 requires stock_override
+            pytest.fail(f"Engine.contest_weights lacks the contract §6 `stock_override` keyword: {exc}")
+        w2 = np.asarray(w2, float)
+        assert w2[0] >= w_base[0] - 1e-12, (
+            f"own contest weight fell from {w_base[0]:.6f} to {w2[0]:.6f} when own prep stock rose by {extra}"
         )
+        p_own = float(cm.pl_win_probs(w2, min(seats, len(w2)), method="exact")[0])
+        if prev_own is not None:
+            assert p_own >= prev_own - 1e-12, (
+                f"P(own win) fell from {prev_own:.6f} to {p_own:.6f} when own prep stock rose by {extra} "
+                f"(competitors fixed, seats={seats})"
+            )
+        prev_own = p_own
 
 
 # =====================================================================================================
@@ -954,6 +962,7 @@ def test_ac6_prep_stock_follows_depreciation_recurrence():
     untouched.  With rho = 0 the recurrence reproduces the legacy undepreciated lifetime sum.
     """
     E, years = tracked_run(gates=legacy_gates_g12(), contest_prep_depreciation=0.0)
+    m = 2                                            # single contest gate of this config (ends at grade 12)
     rho = 0.0
     prev_stock = None
     prev_rows = None
@@ -969,11 +978,15 @@ def test_ac6_prep_stock_follows_depreciation_recurrence():
                     continue
                 e_t = rows[kk]["ce"]
                 expected = (1.0 - rho) * np.asarray(prev_stock[kk], float)
-                expected[1] += e_t  # this year's effort is assigned to the child's upcoming gate (level 1)
-                # the gate itself may consume its own column for children sitting it this year
+                expected[m] += e_t  # this year's effort is assigned to the child's upcoming gate
                 got = np.asarray(st, float)
-                if prev_rows[kk]["cred"] != rows[kk]["cred"]:
+                # the gate consumes its own column for every child sitting it this year
+                if prev_rows[kk]["cred"] == 2 and rows[kk]["cred"] == 3:
                     consumed_gate = True
+                    assert got[m] == pytest.approx(0.0, abs=1e-12), (
+                        f"year {t}: prep_stock[:, {m}] not consumed at the gate for child {kk} "
+                        f"(got {got[m]})"
+                    )
                     continue
                 np.testing.assert_allclose(got, expected, atol=1e-9,
                                            err_msg=f"year {t}: prep_stock recurrence violated for child {kk}")
