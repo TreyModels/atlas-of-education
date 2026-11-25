@@ -877,3 +877,17 @@ restricted `--archs` runs. **Resume evidence:** 473 rows preserved at the 10-wor
 rate ~42 rows/min; DIAGNOSTIC-ONLY label + separate dir intact.
 **Box now IDLE (~1/10); no processes.** Awaiting next campaign/assignment; Pilot-0 PASS (qa `0f1013e`), payload copied;
 Luna reserve suspended per operator override.
+
+### 13.35 NEXT CAMPAIGN — Paper C screening (10 workers reserved); stalled pair-cells killed
+
+Lead brief: **Paper C screening**, `run_paperC_confirmatory.py` screening mode, **36 cells × 8 seeds × N=600 = 288 runs**,
+out-dir `/root/work/paperC/screen_results`, engine pin `846c9e0`, one driver + **10 cell workers**, declared venv,
+`nice -n 10`, BLAS/OMP=1; **no GPU runs** (GPU gate deferred; unbatched GPU loses on wall vs 10 CPU workers).
+Allocation: **10 workers reserved**; Luna/MASSENG reserve stays **suspended** per operator override (if Luna requests,
+preempt ours). Box idle (0.0/10) and clean.
+Housekeeping: killed the stalled pair-cells run (PID **48507** + parent **48505**, `docs/gpu/port_verify.py pair-cells
+--spec canonical_spec.json --n 600 --t 46 --seeds 100-101 --cells market_only,own_open_gap`) — no JSON produced/needed;
+verified cleared 23:38:39.
+On launch: verify 10 workers + cgroup ~10/10 + BLAS=1 + out-dir/pin; publish **measured percentage-vs-time ETA**
+(CPU reference ≈13.4 CPU-h ⇒ ~1.3–1.4 h at 10 workers, to be refined from first cells); monitor at cell boundaries;
+on completion publish screening JSON sha256 + row/cell counts (expect 288 = 36×8). G2-B remains queued.
