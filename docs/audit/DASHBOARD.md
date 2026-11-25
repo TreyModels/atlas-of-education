@@ -85,7 +85,7 @@ sha256. Code edits only on the Mac worktree, never on the box.
   `/root/miniconda3/bin/python`; torch cu118 pip still downloading on one core (parked, GPU out of wave 1).
   No box job results yet.
 
-- 2026-11-25T14:38+08:00 · Commander · **Gate-0 independent verification (host) COMPLETE** — re-ran the legacy
+- 2026-11-25T14:33+08:00 · Commander · **Gate-0 independent verification (host) COMPLETE** — re-ran the legacy
   540-run job from a clean `git archive HEAD` extraction (`/tmp/cmd-verify`; engine hashes core `618bd6dd…`,
   tutoring `b2d213b6…`, runner `dd0b1d8d…` = the verified artifacts). exit 0, 540/540, wall 100.79 s; output JSON
   sha256 `722c370b…eaf54`. vs committed reference: **9,174/9,180 seed values exact, 6 differ ≤3.55e-15; 842/846
@@ -96,10 +96,22 @@ sha256. Code edits only on the Mac worktree, never on the box.
   `results/audit/commander/` (README + JSON + comparison + SHA256SUMS), commit 48d1670. Verdict: REPRODUCED
   SIMULATION (bit-level: last-bit float only). Box environment-independence re-run still pending from audit-runner.
 
-- 2026-11-25T14:38+08:00 · Commander · **engine-core Phase A delivered** (`docs/audit/ENGINE_CORE_AUDIT.md`,
+- 2026-11-25T14:32+08:00 · Commander · **engine-core Phase A delivered** (`docs/audit/ENGINE_CORE_AUDIT.md`,
   commit 6403089): defect list with anchors plus measured tracer evidence on the unmodified engine — D1 0 elite
   flags at KR G9 and 51.0 % of contest-prep spend (21,100/41,350 wage units) targeting the phantom gate; D2 KR G12
   mean expected P 0.292 vs realized 0.121 (HK 0.455 vs 0.232); D3 zero-seat quota admits everyone, double admission
   noise, in-sample cutoff; plus credential/track, closed-level, queue-premium, pass_rate and RNG-path defects.
   Phase B started against contract §1/§2/§3/§6/§7/§8. contest-math's deterministic `auto` path remains the
   integration dependency (A5) — flagged to that lane.
+
+- 2026-11-25T14:33+08:00 · Commander · **Gate-0 box environment-independence re-run VERIFIED** (audit-runner ran it;
+  Commander independently re-invoked the comparator on the box artifacts via /tmp/box_ssh.sh and parsed results):
+  box = 80 vCPU Xeon Gold 6248, py 3.10.8, numpy 1.24.1, scipy 1.13.1 (host: py 3.10.2, numpy 2.2.6, scipy 1.15.3).
+  box 8w vs bundle reference: 9,164/9,180 seed values exact, 16 differ ≤7.105e-15 abs / 3.961e-16 rel; summary
+  831/846 exact, 15 differ ≤1.776e-15; **every 2-d.p. figure identical**; CF4 verdict identical (only CF1b
+  Win-Win both). **box 56w vs box 8w: 9,180/9,180 seed values and 846/846 summary values BIT-IDENTICAL** → worker
+  count does not perturb results. Box 56w used a transparent one-line runner variant (`workers=56` only;
+  results/audit/box56w_runner_variant.diff). Output hashes: box8w `2e1bcb01…`, box56w `7620a983…`. Commander
+  sign-off: `docs/audit/GATE0_VERIFICATION.md` (GATE 0 PASS pending audit-runner's GATE0_REPORT.md); registry
+  independent re-hash 71/87 exact, 1 stale self-referential row (`system_box.txt`, grew after registration),
+  15 post-snapshot Gate-0 outputs, archive inventory separately recorded (not Commander-verified).
