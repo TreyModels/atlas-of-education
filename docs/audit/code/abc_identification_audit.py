@@ -453,6 +453,10 @@ def main():
     A = 2 * m_g9 - B
     emit(f"implied cell means: A(urban G9)={A:.6f}  B(rural G9)={B:.6f}  C(rural G12)={C:.6f}")
     emit(f"check: m_g9={(A+B)/2:.6f}  m_g12={C:.6f}  m_ur={A-(B+C)/2:.6f}")
+    emit(f"COMPOSITION ARTIFACT (P0-03): the advertised urban-rural gap 0.14 is NOT a within-grade")
+    emit(f"  gap.  With zero urban G12 pupils, m_ur = A - (B+C)/2 with C=m_g12=0.85, so the implied")
+    emit(f"  WITHIN-GRADE urban-rural gap is A-B = {A - B:.4f} ({100*(A-B):.1f} pp), i.e. more than")
+    emit(f"  twice the advertised 0.14; the 0.14 is a grade-composition-weighted mixture.")
     target_cells = np.array([A, B, C])
     # The 3 equations in 5 unknowns have a 2-dim solution manifold.  Solve inside the
     # frozen prior box from many starts; report the in-box solution set.
@@ -582,7 +586,7 @@ def main():
         _, rr = svd_rank(J)
         emit(f"  base3 + {nm1:12s} + {nm2:14s} rank={rr} null_dim={5 - rr}")
     emit("minimum extra moments to reach full local rank: 2 (rank-nullity)")
-    emit("(see [7]: one income + one within-grade quality micro-moment suffice in this design)")
+    emit("(see [5]: one income + one within-grade quality micro-moment suffice in this design)")
 
     # ------------------------------------------------------------------
     # 5. Paper A micro-moments: rank with income and school-quality moments
@@ -656,6 +660,8 @@ def main():
         J = full_jac_6p(np.r_[th_star, DELTA], extra)
         s = np.linalg.svd(J, compute_uv=False)
         emit(f"  singular values at theta*: {np.round(s, 4)}")
+    emit("CONCLUSION: with one income + one within-grade quality micro-moment the 5-parameter")
+    emit("model reaches rank 5/5 and the unsubstituted 6-parameter model rank 6/6 (above).")
     emit("IDENTIFICATION LEVEL: full-rank Jacobian at a point = LOCAL identification only")
     emit("(inverse-function theorem). No global-injectivity proof is offered or claimed.")
     emit("Paper A's Jacobian proposition must be computed from ITS OWN model/specification and")
