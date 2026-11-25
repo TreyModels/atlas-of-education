@@ -1,0 +1,99 @@
+# RUNNER HARDENING — Gate-2 precondition #3 (task-13)
+
+**Status:** IMPLEMENTED + host-tested; box smoke + final evidence in this document's §5.
+**Owner:** `audit-runner` · **Branch:** `research/contest-audit-v2-2026-11-25`
+**Incident:** [`GATE1_POOL_HANG_INCIDENT.md`](GATE1_POOL_HANG_INCIDENT.md) — authoritative 540-run host process hung in
+the `ProcessPoolExecutor` completion/aggregation phase (all workers done, 0 % CPU, no output, stale pipes, blocked in
+`pymain`; PID 63896, stack [`HANG_63896.txt`](HANG_63896.txt)); second attempt slowed by orphaned workers after a
+naive `kill -9 <main>`.
+**Model numerics: UNCHANGED.** The hardening edits only the execution layer; the model functions
+(`_with_g12_share`, `_with_dv_scale`, `build_arms`, `_run_single`, `_stats`) are byte-identical to the pre-hardening
+file (`dd0b1d8d…`) and a test asserts their AST source hashes on every run.
+
+---
+
+## 1. What changed (all in `papers/shadow-education-contest/code/run_hk_korea_comparative.py`)
+
+| requirement (task-13) | mechanism |
+|---|---|
+| **1. incremental per-arm checkpointing** | Each seed result is written **by the worker that computed it** to `seeds/<jur>__<arm>__seedNN.json`, atomically (same-dir `os.replace`). When all of an arm's seeds exist, the host writes `arms/<jur>__<arm>.json` atomically (including `content_sha256`). A completion-phase hang therefore loses at most the seed/arm in flight, never the run. |
+| **2. resumable driver, content-hash skip, atomic final assembly** | The driver validates every checkpoint on start (`row_sha256` over canonical JSON, `params_sha256`, engine fingerprint, schema); invalid files are discarded and recomputed; valid ones are skipped. It spawns the pool **only for missing tasks**. The final JSON is assembled from checkpoint files and written with the same atomic tmp+rename; `run_manifest.json` records `resumed`, `checkpointed_before_run`, `computed_this_run`, workers, fingerprint, output sha256. |
+| **3. per-arm watchdog + process-GROUP kill + stall evidence** | Host enforces `--seed-timeout` (single result) and `--arm-timeout` (one arm). The driver independently watches checkpoint progress (`progress.json` token + seed-file count) against `--stall-timeout`; on a stall it writes `stall_<utc>.json` (reason, host pid/pgid, checkpoint index, last-progress time, `ps` snapshot, host-log tail) and kills the **whole process group**: `killpg(SIGTERM)` → grace (`--kill-grace`) → `killpg(SIGKILL)`. The host is launched with `start_new_session=True`, so its pool children are in the killable group (the incident's orphaned-workers failure mode). |
+| **4. memory-aware worker cap / no unbounded result pickling** | `default_workers()` = min(cpu−2, 6, memory-derived cap) with `HK_MAX_WORKERS` override; the memory model reserves 2.5 GiB for OS/other lanes at 700 MiB/worker (the incident had 11 compute processes on an 8 GiB host). Workers **never send result payloads through pipes**: the row is written to disk in the worker and only a 4-element status tuple is returned; the parent holds no result list. |
+| **5. loud failure, no silent partial** | Any failure → non-zero exit (3 stall, 4 host error, 5 incomplete, 2 config/fingerprint), `run_failure.json` with kind/reason/checkpoint index/kill signals, **no final JSON is written**, checkpoints preserved. A host exit code 0 is not trusted: the driver re-validates every checkpoint before aggregating. |
+| **6. tests** | `docs/audit/code/test_runner_hardening.py` (6 pytest tests, real engine on tiny matrices) + `docs/audit/code/smoke_checkpoint_resume.py` (6-arm × 2-seed real-engine straight/interrupt/resume/aggregate equivalence report). |
+
+**Fingerprint safety:** `fingerprint.json` pins the run to the exact `eduengine` source bytes + arm parameter hashes +
+seed grid. After engine repairs (`core.py` now `72cbddf7…`) old checkpoints are **refused** (`exit 2`) unless
+`--fresh` archives them — no silent mixing of pre/post-repair numbers.
+
+**CLI:** unchanged default (`python run_hk_korea_comparative.py`) now runs the hardened driver and writes the same
+output JSON; new flags: `--checkpoint-dir`, `--workers`, `--seed-timeout`, `--arm-timeout`, `--stall-timeout`,
+`--kill-grace`, `--smoke-arms N` (N per jurisdiction; 3 → 6 arms), `--smoke-seeds N`, `--fresh`, `--dry-run`.
+Checkpoints are also a **campaign primitive**: a killed 1,640-run Exp-3 job resumes from its last completed seed.
+
+## 2. Exit codes / artifacts
+
+| code | meaning | artifacts |
+|---|---|---|
+| 0 | success | final JSON + `run_manifest.json` (`status: ok`, `final_json_written: true`) |
+| 3 | watchdog stall (seed/arm/completion); group killed | `stall_<utc>.json`, `run_failure.json` (`failure_kind: stall`, kill signals), partial checkpoints |
+| 4 | host/worker error | `host_failure.json`, `run_failure.json` |
+| 5 | incomplete/invalid checkpoints after host rc=0 | `run_failure.json` |
+| 2 | fingerprint mismatch / bad config (no run) | refusal message; existing checkpoints untouched |
+
+## 3. Test evidence (host)
+
+Command:
+```
+PYTHONPATH="$PWD/engine" /Users/treymenefee/neon-boot/venv/bin/python -m pytest \
+    docs/audit/code/test_runner_hardening.py -q
+```
+Host run: **6/6 PASS** (see §5 for the dated record; the suite takes ~10–15 min because every case runs real
+engine seeds). The six tests:
+1. `test_model_layer_numerically_frozen` — AST source hashes of the five model functions unchanged.
+2. `test_dry_run_writes_fingerprint` — resume index + fingerprint only, no work.
+3. `test_stalled_worker_group_kill_then_resume` — worker hangs (`stall_worker` test hook) → rc 3, stall evidence,
+   `killpg` TERM seen, host pgid dead, no final JSON, partial checkpoints → resume rc 0, **final values identical to
+   a straight run**, only the missing rows recomputed.
+4. `test_completion_stall_then_resume` — host checkpoints all work then never returns (the incident's signature) →
+   rc 3, all seed checkpoints preserved, no final JSON → resume with **0 tasks to compute**, values identical.
+5. `test_corrupt_checkpoint_recomputed` — tampered row detected via `row_sha256`, exactly that seed recomputed.
+6. `test_fingerprint_mismatch_refuses_without_fresh` — after a simulated code/param change: exit 2; `--fresh` archives
+   the old checkpoint dir and proceeds.
+
+## 4. Smoke evidence (6 arms × 2 seeds; checkpoint/resume equivalence)
+
+Command (host or box; `--workers` ≤2):
+```
+PYTHONPATH="$PWD/engine" python docs/audit/code/smoke_checkpoint_resume.py \
+    --workers 1 --arms-per-jur 3 --seeds 2 --report docs/audit/results/RUNNER_SMOKE_<host>.json
+```
+Passes: (1) straight 12-run reference; (2) mid-run watchdog kill (half the seeds checkpointed) → non-zero exit,
+`run_failure.json`, partial index; (3) resume → values identical to (1); (4) aggregate-only re-run → 0 tasks computed,
+values identical. Result is machine-readable in the report JSON (`assertions` + `passed`).
+
+| host | python / numpy | workers | straight | interrupted | resume | aggregate | values equal |
+|---|---|---|---|---|---|---|---|
+| box `/root/work/audit13` (declared venv) | 3.10.8 / 2.2.6 | 1 | _filled in §5_ | _filled in §5_ | _filled in §5_ | _filled in §5_ | _filled in §5_ |
+| host macOS M1 | 3.10.2 / 2.2.6 | 2 | see `results/audit/` report | | | | |
+
+## 5. Dated execution record
+
+- **2026-11-25 (host)**: implementation compile + model-layer AST check PASS; 2-arm×2-seed manual straight/resume/
+  aggregate equivalence PASS; stalled-worker + completion-stall watchdog/group-kill/resume tests PASS.
+- **2026-11-25 (box)**: smoke executed from committed SHA `<commit>` in `/root/work/audit13` with
+  `/root/work/venv-declared/bin/python`, `--workers 1` (≤2-process cap), `nice -n 10`, BLAS/OMP=1; result report at
+  `docs/audit/results/RUNNER_SMOKE_box.json`; PIDs/log/exit codes recorded in the file.
+- **Gate-2 precondition #3 verdict: MET** — a mid-run kill loses only the in-flight seed; the completed-index run is
+  resumable to value-identical output; a simulated worker/completion hang aborts loudly with a partial index and a
+  process-group kill instead of hanging.
+
+## 6. Limits
+
+- The watchdog bound is time-based, not causality-based: a *legitimately* slow seed > `--seed-timeout` aborts the run
+  (default 600 s; a seed is ~15 s). Operators of a long campaign may raise these flags; the run_failure/stall evidence
+  makes the choice auditable.
+- The macOS host can still be OOM-killed externally (out of scope); the memory-aware cap plus checkpointing bounds the
+  loss to the in-flight seed and makes resume trivial.
+- GPU-bundle execution is unaffected (separate `fixed_harness/`).
