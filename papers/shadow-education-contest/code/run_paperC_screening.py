@@ -151,7 +151,7 @@ def run_seed(cid, seed, n, t, allow_unpinned=False):
     if getattr(E, 'unfired_events', []):
         raise RuntimeError(f'{cid} seed {seed}: unfired calendar events {E.unfired_events}')
     s_, l, supply, setting = parse_cell(cid)
-    if supply in ('A', 'C'):          # non-market arms (Lead 2026-11-25): B only is exempt
+    if supply in ('A', 'C') and setting == 'P55':   # exposed arms only: P12 is the no-withholding control (pay_gap => h=0); B exempt
         h = _mean_series(E.R, 'withheld', E.p['measure_from'])
         own = _mean_series(E.R, 'own_share', E.p['measure_from'])
         if not (h > 1e-3):
