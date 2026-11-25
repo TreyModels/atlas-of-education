@@ -1327,6 +1327,44 @@ status may then be flipped from `FROZEN_PENDING_ADJUDICATOR_PRELAUNCH_RECORD` to
 PID/ETA/hashes and write a **separate** confirmatory artefact (`paperC_confirmatory.json` + per-cell checkpoints + run
 manifest), never mixed with screening/Pilot-0.
 
+## 4T. A5 confirmatory — **HALTED by statistical stop; NO RESULT (degenerate T2/T3)**
+
+**Stop (2026-11-26 ~07:57 CST):** driver/cells killed (PIDs 2272/2273/2276–2285), finalizer/poller stopped,
+checkpoints preserved (**10 rows / 6 cells; no aggregation, no summary**), `queue/STOP_CONFIRM_A5` written; no new
+confirmatory run launched. The adjudicator's box check was unreachable (SSH closed); the stop/checkpoint state is
+recorded from the Lead's report and must be hash/row-count verified if the box returns. **No confirmatory numbers are
+cited or usable.**
+
+**Verified defects (from the QA-verified screening artefact `6bcc29a5…`, not confirmatory data):**
+1. **T3 is degenerate.** `withheld` = **exactly 0.144 in all 96 exposed P55 runs — one distinct value**, SE 0; it is the
+   arithmetic `0.4 × (1 − 0.55) × (1 − 0.2)`. There is no estimable effect; T3 is a **setting-arithmetic assertion**, not
+   a confirmatory estimand. (A1.2 already called h>0/own>0.1 assertions; using T3 as a primary confirmatory test was
+   invalid.)
+2. **T2 is a manipulation check.** `own_share` is **C ≈ 0.889–0.945 (overall ≈0.919) vs A ≈0.148–0.524 (overall ≈0.348)**;
+   C−A ≈ **0.406–0.741**, screening SE ≈0.0003. With `firm_ban=.9`, the treatment mechanically moves own/(own+firm);
+   **the input returns as the output**. It is a compliance/validity check, not a behavioural effect.
+3. **A5's m=2 Holm family (T2/T3 only) cannot fail** while the substantive **T1/T4 failed screening** (T1 +0.655 vs ≥3.0;
+   T4 +1.767 vs ≥2.0, CI below 2). A "T2/T3 confirmed" report would present the model's settings as findings; the A5
+   narrowing of the pre-declared T1–T4 family compounds the problem.
+
+**Adjudication:** **A5 confirmatory is VOID/STOPPED — no confirmatory result, no claim.** The preserved 10 checkpoint
+rows must **not** be aggregated or analysed for inference; they are a failed-run record. Screening T1/T4 failures stand.
+T2/T3 are recategorised as **manipulation/compliance checks**, not estimands. The A5 resource amendment is moot.
+
+**Required redesign before any confirmatory rerun (A6/Paper C v2):**
+* Estimands must be **behavioural outcomes not mechanically determined by the treatment**: e.g. K–12 participation/
+  spend/gap, learning L6/L9, fixed-R gap-close, rank-R admission; the treatment lever must **not enter the outcome's
+  definition or denominator** (own_share with `firm_ban`, withheld with `pay_ratio`/`monitoring` are excluded).
+* **Pre-launch degeneracy screen:** for every outcome, report distinct values/within-cell variance and the
+  treatment→outcome mapping; reject SE=0/deterministic or input-derived outcomes; separate manipulation checks.
+* **Multiplicity:** pre-declare the full substantive family (T1–T4 or a fixed new family) for Holm; **no post-screening
+  family narrowing** to trivial tests.
+* **Power/MDE:** re-estimate N/seeds for the behavioural endpoints; do not keep trivial endpoints to manufacture
+  significance; a pilot may estimate variance, not select outcomes.
+* **No reuse of A5 data**; new prereg + manifest + runner pins; report screening failures honestly.
+
+**Status: A5 HALTED/VOID; Paper C confirmatory is not runnable under this design; no confirmatory claim; CSV frozen.**
+
 ## 5. Evidence-status register (programme level)
 
 | Status | Count (paper + programme rows) | Notes |

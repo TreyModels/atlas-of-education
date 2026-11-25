@@ -477,3 +477,17 @@ on 10-CPU quota (4 idle; Luna reserve per Lead). Box verified: confirm_final no 
 watchdog/aggregator. **A5 execution accepted; clean run continues; no numbers.** On completion pull/hash → T2/T3 Holm
 m=2 α=.05 + achieved CI/MDE under A5 interim precision; independent second hash-check accepted.
 
+**A5 CONFIRMATORY HALTED — STATISTICAL STOP (2026-11-26 ~07:57 CST): VOID, no result.** Driver/cells killed
+(PIDs 2272/2273/2276–2285), finalizer/poller stopped, checkpoints preserved (10 rows/6 cells, no aggregation/summary),
+`STOP_CONFIRM_A5` written; no new run. **Verified defects (screening data):** (1) **T3 degenerate** — withheld exactly
+0.144 in all 96 exposed P55 runs (one distinct value, SE 0; =0.4×.45×.8 arithmetic), an assertion not an estimand;
+(2) **T2 manipulation check** — own_share C ≈.889–.945 (overall .919) vs A ≈.148–.524 (.348), C−A .406–.741, SE .0003;
+firm_ban .9 mechanically moves own/(own+firm), input returns as output; (3) **A5 m=2 Holm (T2/T3) cannot fail** while
+substantive T1/T4 failed screening (T1 +.655 vs 3.0; T4 +1.767 vs 2.0, CI below 2); narrowing compounds. **Adjudication:
+A5 VOID/STOPPED; no confirmatory claim; preserved 10 rows not aggregatable/analysable; T2/T3 recategorised as
+manipulation/compliance checks; screening T1/T4 failures stand; A5 resource amendment moot.** **Redesign requirements:**
+behavioural estimands not mechanically determined by treatment (no treatment in outcome definition/denominator);
+pre-launch degeneracy screen (distinct values/within-cell variance, treatment→outcome mapping; reject SE=0/input-derived);
+manipulation checks separate; full pre-declared family for Holm (no post-screening narrowing); adequate power/MDE; no
+reuse of A5 data; new prereg/manifest/runner pins. **No confirmatory number cited.**
+
