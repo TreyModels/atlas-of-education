@@ -281,7 +281,13 @@ reproduce the author's calibration. v1 numbers remain uncited.**
 `hk_korea_contest_code_bundle.zip` / `ALL_ATLAS_WORK_2026_11_25.zip`; runner `dd0b1d8d…`, engine
 `618bd6dd…`/`b2d213b6…`, reference `851bb1df…`) — and all HK/Korea-dependent tables were regenerated as a **NEW
 GENERATION**: `PAPER_B_TABLE_REGENERATION.md`, `results/audit/paper_b_540_regenerated_tables.csv`
-(sha256 `da40a2ee…c5c1`), with the explicit **CF4 reversal**.
+(sha256 `da40a2ee…c5c1`). **The 100-seed Paper B new generation is now complete** (`a4b0808`; TRACKED `cf801af8…`,
+SINGLE `2b69fa08…`, provenance `8f08164d…`; engine `98baf6b`, frozen spec, seed-MC only): **CF4a meets the pre-stated
+both-jurisdiction Win-Win** (HK 70.59/23.21 vs 24.82; KR-TRACKED 73.13/22.16 vs 23.90; KR-SINGLE 75.43/22.04 vs
+24.08) — the **CF4 reversal is explicit** — while **CF4b (89.99/109.70) and CF1b (97.25/99.19) fail spend** and
+**CF3b also passes both** (70.88/23.43; 73.21/22.21). **Caveat: participation falls ~13 pp under CF4a** (HK 61.93 →
+48.60; KR 55.79 → 42.81) — the criterion is spend+elite only. Full record: §4F; the pre-repair failure remains
+reported.
 
 **What was re-executed (adjudicator, host):** (i) the independent ABC identification audit ran and produced
 `/tmp/abc_identification.json` sha256 `66bb2648…15808`, **bit-identical to the committed host output** in
@@ -301,8 +307,10 @@ repaired engine and the server are.
 This is the distinction the papers and the errata must carry:
 
 * **NEW-GENERATION EVIDENCE (REPRODUCED SIMULATION / VALIDATED SIMULATION):** the repaired 540 (`98baf6b`, sha256
-  `455649da…`), the migration table, the **CF4 reversal** (CF4a Win-Win both; CF1b no longer passes; CF4b fails;
-  CF3b passes), the D2 calibration artefact (KR gap 68.36 → 29.71; ratio 18.01 → 2.11 without re-estimation), the
+  `455649da…`), the migration table, the **100-seed Paper B new generation** (corrected artifacts `cf801af8…` /
+  `2b69fa08…` / `8f08164d…`; engine `98baf6b`; **CF4a meets the pre-stated both-jurisdiction Win-Win** with a ~13 pp
+  participation cost; CF4b/CF1b fail spend; CF3b also passes), the **CF4 reversal** (CF4a Win-Win both; CF1b no
+  longer passes; CF4b fails; CF3b passes), the D2 calibration artefact (KR gap 68.36 → 29.71; ratio 18.01 → 2.11 without re-estimation), the
   regenerated Paper B tables, the P0 audits (ABC rank 4/5 + 2-dim null + analytic δ + local 5/5; corrected DGP 5/5
   vs legacy 3/5; bootstrap FE size 0.052–0.062 vs pooled 0.996–1.000; permutation within-invariance 6.66e-16), and
   the verified E8 empirical block. **These are what we can cite.**
@@ -451,20 +459,68 @@ counts as a design check only; (4) report H1 uncertainty if feasible; (5) report
 (MDE) and interpret a small/negative H2 as inconclusive-or-null. Result will be adjudicated against the prereg when
 the grid completes; X-27 moves from amendment-pending to adjudicated then.
 
+## 4F. Paper B NEW GENERATION — CF4 reversal confirmed, **with a participation-cost caveat** (100 matched seeds)
+
+**Provenance (verified).** Corrected artifacts at `a4b0808`, re-aggregated from intact checkpoints (HK aggregation
+bug fixed; **no rerun**): TRACKED **`cf801af8e07f9ebf615d075c42ec742f00d5a98a19a0e938005a3632e28836d3`**
+(HK+KR, `total_runs=1,800`); SINGLE **`2b69fa08ea521c664bda59da4d6fce0d9b48d494d5cee793b69987795bef0330`**
+(`total_runs=900`); provenance **`8f08164d08006d5c0225cd2115352270560806fe4055294ff16f453dd62e3301`** (campaign
+2,700; wall 11,234.49 s; 8 workers). **Engine `98baf6b`** (pre-re-pin; 118-series numerics unchanged vs `846c9e0`);
+spec content `c5f9e2de…`; 100 matched seeds; frozen parameters → **zero calibrated-parameter uncertainty**, seed-MC
+only. The adjudicator's independent HK re-aggregation from the raw checkpoints matches the corrected JSON **exactly**
+(max |mean diff| 0.0; all spend indices identical); KR-TRACKED/SINGLE match the committed summaries exactly. The
+superseded defective artifacts (`14fc2a31…`, `697e7ca9…`, `cba8ee0f…`) must not be cited.
+
+**Result (pre-stated criterion: spend index < 80 AND elite Q5 below same-jurisdiction baseline, both jurisdictions):**
+
+| arm | HK spend / elite | KR-TRACKED spend / elite | KR-SINGLE spend / elite | both-jurisdiction Win-Win? |
+|---|---|---|---|---|
+| **CF4a** | **70.59 / 23.21** (base 24.82) | **73.13 / 22.16** (base 23.90) | **75.43 / 22.04** (base 24.08) | **YES** — primary and sensitivity |
+| CF4b | 89.99 / 23.07 | 109.70 / 23.61 | 117.74 / 23.59 | NO (spend) |
+| CF1b | 97.25 / 23.49 | 99.19 / 23.53 | 98.99 / 23.64 | NO (spend) |
+| **CF3b** | **70.88 / 23.43** | **73.21 / 22.21** | **75.53 / 22.09** | **YES — single lever** |
+
+**Explicit CF4 reversal.** Pre-repair 540: CF4a **failed HK** (48.64 > 46.36), CF1b the only pass. Repaired 540
+(legacy gate list, 30 seeds): CF4a **passes both** (70.58/23.44; 72.48/21.47). New generation (frozen V540-FREEZE,
+100 seeds): CF4a **passes both** (70.59/23.21; 73.13/22.16), and under KR-SINGLE (75.43/22.04). The reversal is
+robust across two repaired-engine specs and 30 vs 100 seeds; the pre-repair failure remains reported as the prior
+result and is not erased.
+
+**FIRST-CLASS CAVEAT — participation cost.** The criterion is spend + elite share; it does **not** capture
+participation. Under CF4a, K–12 participation falls **HK 61.93 → 48.60 (−13.33 pp)** and **KR-TRACKED 55.79 → 42.81
+(−12.98 pp)**; G12 falls HK 49.37 → 39.14 (−10.23) and KR 36.25 → 30.56 (−5.69). CF3b has a similar drop (48.56 /
+42.80). Correct phrasing: **"CF4a meets the pre-stated spend/elite criterion while reducing participation by ~13 pp"**
+— not "win-win" unqualified. This is a material welfare cost and belongs in the abstract.
+
+**Uncertainty.** Paired-seed elite deltas for CF4a: HK **−1.62 [−1.73,−1.50]**, KR-TRACKED **−1.74 [−1.87,−1.61]**,
+KR-SINGLE **−2.03 [−2.19,−1.87]**; spend-index seed CIs tight (CF4a HK [70.54,70.64], KR [73.07,73.19]). CF4b's KR
+elite delta [−0.58,+0.01] includes zero (irrelevant: spend fails).
+
+**Against the AUTHOR-REPORTED 420 tables and the repaired-540 migration.** 420 baseline elite HK 30.0 / KR 24.6;
+**no CF4a/CF4b rows exist in the 420 tables** (the pairing claim was asserted, not tabulated); 420 CF1b 82.1/74.1
+spend, 25.1/22.9 elite (HK spend > 80 → also fails); 420 CF3b 52.8/54.9 spend, 36.3/27.5 elite (regressive). New-gen
+CF3b is **not** regressive (23.43/22.21) — the "wage compression is regressive" reading is contradicted; new-gen CF1a
+spend 96.47/97.12 < 100 — "tax backfires on spending" is contradicted. New-gen baseline K–12 is 61.93/55.79, not the
+420's 40.0/76.5; the generations are not interchangeable.
+
+**Status: REPRODUCED SIMULATION (new generation; frozen spec; uncalibrated; seed-MC only).** Not VALIDATED. The
+paper's "only pairing compression with caps/seats works" conclusion is **CONTRADICTED** (CF3b, a single lever, also
+meets the criterion); the CF4 reversal itself is a **reproduced new-generation result**.
+
 ## 5. Evidence-status register (programme level)
 
 | Status | Count (paper + programme rows) | Notes |
 |---|---|---|
 | VERIFIED EMPIRICAL | **4** (4 A) | descriptive/associational; not causal; author committed E8 record |
 | **REPRODUCED EMPIRICAL ANALYSIS** *(new-generation label, Lead-defined)* | **2** (2 A) | A-34 impact (+12.322 vs +12.44) and A-35 amplification (+25.083 vs +25.26) — fresh-WDI **CS-style group-time ATT**; manifest-hashed vintage |
-| REPRODUCED SIMULATION | **16** (2 A, 8 B, 6 programme) | all conditional and/or uncalibrated unless marked; includes the new-generation forecast (A-37), the 74.88 % infeasibility finding (A-38), the re-executed ABC audit, the re-executed bootstrap factorial, and the Paper B 540 table regeneration |
+| REPRODUCED SIMULATION | **20** (2 A, 12 B, 6 programme) | all conditional and/or uncalibrated unless marked; includes the 100-seed Paper B new generation (CF4 reversal + participation-cost caveat), the new-generation forecast (A-37), the 74.88 % infeasibility finding (A-38), the re-executed ABC audit, the re-executed bootstrap factorial, and the Paper B 540 table regeneration |
 | VALIDATED SIMULATION | **4** (1 A, 3 programme) | **A-39 item (d) local identifiability (stop gate met with declared restriction)**; engine/PL module validation, corrected DGP design, bootstrap size/power |
 | AUTHOR-REPORTED | **44** (20 A, 18 B, 6 programme) | **AUTHOR-REPORTED BASELINE**: the 420 generation, the Paper A Exp 1/3/4/5 legacy numbers, the author JSON bundle; not results, not reproduced, not to be silently replaced |
 | CONTRADICTED | **30** (8 A, 14 B, 8 programme) | only where committed code/algebra/measured audit output refutes the claim; includes the 100 % paradox, invalid E1/Q3, legacy DGP, "published benchmark" attributions, and the Paper B policy reversals |
 | UNRESOLVED | **5** (2 A, 0 B, 3 programme) | A-31 replication inventory; A-36 bulge `t*` (no-effect evidence); canonical spec/Gate-2; GPU quarantine |
 
-The machine-readable one-row-per-claim record is `results/audit/paper_claims.csv` (106 rows; sha256
-`021e08b04ea062b52a3e2860ceab9f4ec8272dc367bef600fd5f474b0f3f0fdd`). The Lead-defined new-generation label **REPRODUCED EMPIRICAL ANALYSIS** is used for the fresh-WDI E8 rows; all
+The machine-readable one-row-per-claim record is `results/audit/paper_claims.csv` (110 rows; sha256
+`4374558c3abf708c97d1f0cf309897996ec6ada9ed76952f758e9c9766190384`). The Lead-defined new-generation label **REPRODUCED EMPIRICAL ANALYSIS** is used for the fresh-WDI E8 rows; all
 other rows use the verbatim six-status taxonomy.
 
 ---
@@ -561,13 +617,18 @@ run failed twice in the pool-completion phase; the box run is the labelled sourc
 * Every causal/counterfactual headline is either (i) from the non-reproducible 420 generation, (ii) a D2 artefact,
   or (iii) spec-dependent to the point of sign reversal. The tables are not the reproduced run, and the reproduced
   run is not calibrated.
-* The only defensible future output is a **methods/negative paper** on specification dependence and
-  expected-probability consistency, reporting the D2 migration, the three-generation CF4 flip, and the corrected
-  Tullock surface. That paper is honest and useful, but it requires Gate-2 calibration + Gate-3 policy re-runs that
-  have not happened, and it is not the paper currently written.
+* **The new generation now gives a coherent, citable core for a methods/negative paper:** the CF4 reversal is
+  reproduced on two repaired-engine specs and 30 vs 100 seeds (CF4a meets the pre-stated spend/elite criterion in
+  both jurisdictions, **while participation falls ~13 pp**; CF4b/CF1b fail spend; **CF3b, a single lever, also
+  meets it**, so "only pairing" is false); the D2 migration explains the pre-repair calibration failure; the
+  100-seed run has seed-MC uncertainty only (frozen parameters, zero parameter uncertainty).
+* The methods/negative paper is honest and useful, but it still requires Gate-2 calibration + Gate-3 policy re-runs
+  for any calibrated policy claim, and it must not use "win-win" without the participation cost. It is not the paper
+  currently written.
 
 ### Do not submit either draft. Do not cite the 420 tables, the H2 numbers, the identifiability theorem, the
-simulator RMSE, the `t*` null, the Paper B counterfactual tables, or any GPU/ABC output.
+simulator RMSE, the `t*` null, or any GPU/ABC output. For Paper B, the **new-generation** table
+(`cf801af8…`) may be cited — with the participation-cost caveat — but not the 420 tables.
 
 ---
 

@@ -131,3 +131,38 @@ result or an empirical claim.**
 **Gate-1 impact: none.** These are P0 annex items; Gate-1 evidence (invariants/checks/540 migration) is unaffected and
 the task-12 patch is bit-identical (Gate-1 540 used the pre-task-12 `98baf6b` engine). Any future citation of these
 items must carry the artifact/commit and status above.
+
+---
+
+## ADJUDICATOR ADDENDUM — Paper B NEW GENERATION (2026-11-25)
+
+**Appended by `paper-adjudicator` (independent). The ledger body and the commander's P0 annex above are unchanged;
+this addendum records the 100-seed Paper B new-generation result and its provenance.** Corrected artifacts at commit
+`a4b0808`, re-aggregated from intact checkpoints (HK aggregation bug fixed; **no simulation rerun**):
+`results/newgen/paperB_new_generation_TRACKED.json` **sha256 `cf801af8e07f9ebf615d075c42ec742f00d5a98a19a0e938005a3632e28836d3`**
+(HK+KR; `total_runs=1,800`); `paperB_new_generation_SINGLE_KR.json`
+**`2b69fa08ea521c664bda59da4d6fce0d9b48d494d5cee793b69987795bef0330`** (`total_runs=900`); provenance
+**`8f08164d08006d5c0225cd2115352270560806fe4055294ff16f453dd62e3301`** (campaign 2,700; wall 11,234.49 s; 8
+workers). **Engine `98baf6b`** (pre-re-pin; 118-series numerics unchanged vs `846c9e0`); spec content `c5f9e2de…`;
+100 matched seeds; frozen parameters ⇒ **zero calibrated-parameter uncertainty**, seed-MC only. The earlier defective
+artifacts (`14fc2a31…`, `697e7ca9…`, `cba8ee0f…`) are **SUPERSEDED — do not cite**. Independent cross-check: the
+adjudicator re-aggregated the raw HK checkpoints (9×100) and the KR checkpoints; the result matches the corrected
+JSON **exactly** (max |mean diff| 0.0; all spend indices identical).
+
+| # | claim now in play | status | exact artifact / evidence |
+|---|---|---|---|
+| NB-01 | **CF4a meets the pre-stated both-jurisdiction Win-Win** under the new generation | **REPRODUCED SIMULATION** (new generation; frozen spec; seed-MC only) | HK 70.59 spend / elite 23.21 vs baseline 24.82; KR-TRACKED 73.13 / 22.16 vs 23.90; KR-SINGLE 75.43 / 22.04 vs 24.08. CF4 reversal vs pre-repair 540 (which failed HK 48.64 > 46.36); repaired 540 legacy-gate-list also passed (70.58/23.44; 72.48/21.47). Robust across two repaired specs and 30 vs 100 seeds. |
+| NB-02 | CF4b fails; CF1b fails; **CF3b (single lever) passes both** ⇒ the paper's "only pairing compression with caps/seats works" is false | **REPRODUCED SIMULATION** for the pass/fail pattern; the paper's "only pairing" claim **CONTRADICTED** | CF4b 89.99 / 109.70 / 117.74 spend; CF1b 97.25 / 99.19 / 98.99; CF3b 70.88/23.43 (HK), 73.21/22.21 (KR-TRACKED), 75.53/22.09 (KR-SINGLE). |
+| NB-03 | **Participation cost under CF4a is material** (~13 pp K–12) | **REPRODUCED SIMULATION — first-class caveat** | HK K–12 61.93 → 48.60 (−13.33 pp), G12 49.37 → 39.14 (−10.23); KR-TRACKED 55.79 → 42.81 (−12.98), G12 36.25 → 30.56 (−5.69); CF3b similar (48.56 / 42.80). The pre-stated criterion is spend + elite share only. Phrase "meets the pre-stated spend/elite criterion while reducing participation by ~13 pp", never "win-win" unqualified. |
+| NB-04 | Earlier new-gen artifacts had an **empty HK summary** due to an aggregator key bug (`TRACKED` vs `PRIMARY`) | **PROVENANCE CORRECTION — not a model defect** | Corrected at `a4b0808` by re-aggregating the intact `ckpt_HK_*_PRIMARY.jsonl` (9×100) and KR checkpoints; no rerun. Engine label corrected to `98baf6b`; TRACKED `total_runs=1,800`; campaign total 2,700. |
+
+**Status changes to earlier Paper B rows in this ledger:** B-03/B-04/B-05 remain REPRODUCED SIMULATION for the
+pre-repair direction but the manuscript's readings are now decisively **CONTRADICTED** by the new generation — "tax
+backfires on spending" (new-gen CF1a 96.47/97.12 < 100), "wage compression is regressive" (new-gen CF3b elite
+23.43/22.21 below baseline), and "only pairing" (CF3b single lever passes) do not survive. The pre-repair CF4 failure
+(B-35) and the repaired-540 pass (B-36) both remain reported; the new generation **confirms the reversal**. Paper B
+now has a citable **methods/negative-paper core**, but is still **not calibrated** (Gate-2 not run) and must not use
+"win-win" without the participation-cost caveat.
+
+**Still open:** X-27 / item (c) gate-architecture grid (5,632 runs, launched 19:46) — adjudicate against Amendment A3
+when its result JSON lands.

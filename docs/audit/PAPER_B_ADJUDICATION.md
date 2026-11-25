@@ -154,18 +154,94 @@ It carries its own engine and parameter provenance, and it must be cited with th
 | B-39 | **CF4 verdict is specification-dependent**: 420-port legacy V1 → CF4a passes both; 540 pre-repair → CF4a fails HK; 540 repaired → CF4a passes both | `docs/audit/harvest/HARVEST.md` §4b (420-port V1, AUTHOR-REPORTED/PRE-REPAIR/UNCALIBRATED); `GATE1_MIGRATION_TABLE.md`; `GATE0`/`REPRODUCTION_CF4` | **REPRODUCED SIMULATION** (the spec-dependence fact) | State explicitly that the combined-policy conclusion is **spec-dependent and not established**; no policy recommendation may rest on it. |
 | B-40 | **Provenance of the reproduced 540** (correction to the "missing Paper B scripts" framing): the 540 scripts/data are in hand and reproduced | `~/neon-boot/pulled/gemini-bundles/hk_korea_exact_bundle.zip` sha256 `e9cc02c2…be4e` (runner `dd0b1d8d…`, `core.py 618bd6dd…`, `tutoring.py b2d213b6…`, patch); `hk_korea_contest_code_bundle.zip` `da5cd1ee…e47f` (+ reference `851bb1df…`); `ALL_ATLAS_WORK_2026_11_25.zip` `f602ede3…4f74`; reproduced in Gate 0, rerun on the repaired engine (`455649da…`). The **420** design is the only Paper B artefact that is genuinely missing. | **REPRODUCED SIMULATION** | Cite this provenance for every 540 number; never describe the Paper B scripts/data as missing. The 420 tables remain AUTHOR-REPORTED (B-01). |
 
+### 2.6 New-generation Paper B — 100 matched seeds, frozen V540-FREEZE (ADJUDICATED)
+
+**Provenance (verified by the adjudicator).** Corrected artifacts committed at `a4b0808`, re-aggregated from intact
+checkpoints (HK aggregation bug fixed; **no simulation rerun**):
+`results/newgen/paperB_new_generation_TRACKED.json` **sha256 `cf801af8e07f9ebf615d075c42ec742f00d5a98a19a0e938005a3632e28836d3`**
+(HK + KR summaries; `total_runs=1,800`); `paperB_new_generation_SINGLE_KR.json`
+**`2b69fa08ea521c664bda59da4d6fce0d9b48d494d5cee793b69987795bef0330`** (`total_runs=900`); provenance
+**`8f08164d08006d5c0225cd2115352270560806fe4055294ff16f453dd62e3301`** (campaign total 2,700; 27 jobs; wall
+11,234.49 s; 8 workers). **Engine `98baf6b`** (pre-re-pin; 118-series numerics unchanged vs `846c9e0`); spec content
+`c5f9e2de…`; 100 matched seeds; seeds paired across arms. **Independent cross-check:** my re-aggregation of the raw
+HK checkpoints (`ckpt_HK_*_PRIMARY.jsonl`, 9×100) matches the corrected JSON **exactly** (max |mean diff| 0.0; all
+spend indices identical), and my KR-TRACKED/SINGLE re-aggregations match the committed summaries exactly. The earlier
+defective artifacts (`14fc2a31…`, `697e7ca9…`, `cba8ee0f…`) are **superseded; do not cite them**.
+
+**Primary arms (mean; spend index; elite Q5 %; K–12 %; G12 %; gap pp; ratio).** Seed sd in the CSV
+`results/audit/newgen/paperB_newgen_tables.csv`.
+
+| arm | HK spend idx | HK elite Q5 | HK K–12 / G12 | HK gap / ratio | KR-TRACKED spend idx | KR-TRACKED elite Q5 | KR-TRACKED K–12 / G12 | KR-TRACKED gap / ratio |
+|---|---|---|---|---|---|---|---|---|
+| Baseline | 100.0 | **24.82** | 61.93 / 49.37 | 34.89 / 2.473 | 100.0 | **23.90** | 55.79 / 36.25 | 31.26 / 2.205 |
+| CF1a (+50 % tax) | 96.47 | 24.43 | 61.39 / 42.61 | 35.29 / 2.63 | 97.12 | 22.85 | 55.45 / 32.42 | 30.71 / 2.10 |
+| CF1b (−50 % cap) | 97.25 | 23.49 | 62.02 / 50.69 | 34.71 / 2.26 | 99.19 | 23.53 | 55.83 / 36.79 | 31.24 / 2.15 |
+| CF2a (S=0.28/0.16) | 109.28 | 24.57 | 65.85 / 52.46 | 32.77 / 2.25 | 113.45 | 24.50 | 60.92 / 41.42 | 29.82 / 2.14 |
+| CF2b (S=0.50/0.40) | 131.73 | 22.94 | 75.05 / 56.40 | 25.54 / 1.72 | 164.81 | 23.79 | 76.20 / 55.30 | 17.79 / 1.61 |
+| CF3a (ΔV −30 %) | 82.45 | 24.33 | 54.19 / 42.76 | 36.61 / 2.74 | 83.67 | 22.83 | 48.19 / 32.29 | 31.82 / 2.31 |
+| **CF3b** (ΔV −50 %) | **70.88** | **23.43** | 48.56 / 38.59 | 36.36 / 2.80 | **73.21** | **22.21** | 42.80 / 30.42 | 31.15 / 2.40 |
+| **CF4a** (ΔV −50 %+cap) | **70.59** | **23.21** | **48.60 / 39.14** | 36.39 / 2.76 | **73.13** | **22.16** | **42.81 / 30.56** | 31.20 / 2.39 |
+| CF4b (ΔV −50 %+seats) | 89.99 | 23.07 | 57.90 / 45.74 | 34.43 / 2.41 | 109.70 | 23.61 | 58.37 / 42.66 | 29.37 / 2.11 |
+
+**KR-SINGLE sensitivity (KR only; HK unchanged):** Baseline elite 24.08; CF4a spend **75.43**, elite **22.04**;
+CF3b 75.53 / 22.09; CF4b 117.74 / 23.59; CF1b 98.99 / 23.64.
+
+**CF4 / Win–Win verdict (pre-stated: spend index < 80 AND elite Q5 below same-jurisdiction baseline, both
+jurisdictions):**
+
+| arm | HK verdict | KR-TRACKED verdict | KR-SINGLE verdict | both-jurisdiction |
+|---|---|---|---|---|
+| **CF4a** | **PASS** (70.59; 23.21 < 24.82) | **PASS** (73.13; 22.16 < 23.90) | **PASS** (75.43; 22.04 < 24.08) | **YES** (primary and sensitivity) |
+| CF4b | FAIL (spend 89.99) | FAIL (spend 109.70) | FAIL (spend 117.74) | NO |
+| CF1b | FAIL (spend 97.25) | FAIL (spend 99.19) | FAIL (spend 98.99) | NO |
+| **CF3b** | **PASS** (70.88; 23.43 < 24.82) | **PASS** (73.21; 22.21 < 23.90) | **PASS** (75.53; 22.09 < 24.08) | **YES — single lever** |
+
+**Explicit CF4 reversal.** Pre-repair 540: CF4a **failed HK** (48.64 > 46.36) and CF1b was the only pass. Repaired
+540 (legacy gate list, 30 seeds): CF4a **passes both** (70.58/23.44; 72.48/21.47). New generation (frozen
+V540-FREEZE, 100 seeds): CF4a **passes both** again (70.59/23.21; 73.13/22.16) and also under KR-SINGLE. The
+reversal is therefore robust across two repaired-engine specs and 30 vs 100 seeds; the pre-repair failure remains
+reported as the prior result and is **not** erased.
+
+**FIRST-CLASS CAVEAT — participation cost.** "Win–Win" is the pre-stated **spend + elite-share** criterion; it does
+**not** capture participation. Under CF4a, K–12 participation falls **HK 61.93 → 48.60 (−13.33 pp)** and
+**KR-TRACKED 55.79 → 42.81 (−12.98 pp)**; G12 falls HK 49.37 → 39.14 (−10.23) and KR 36.25 → 30.56 (−5.69). CF3b
+has a similar participation drop (48.56 / 42.80). The correct phrasing is: **"CF4a meets the pre-stated spend/elite
+criterion while reducing participation by ~13 pp"**, not "Win–Win" unqualified. This is a material welfare cost and
+must be in the abstract.
+
+**Uncertainty.** Seed/MC only: 100 matched seeds; paired-seed elite deltas for CF4a are HK **−1.62 [−1.73,−1.50]**,
+KR-TRACKED **−1.74 [−1.87,−1.61]**, KR-SINGLE **−2.03 [−2.19,−1.87]**; spend-index seed CIs are tight (e.g. CF4a HK
+[70.54,70.64], KR [73.07,73.19]). CF4b's KR elite delta **[−0.58,+0.01]** includes zero (equity gain not separated
+from zero) — irrelevant to the verdict because spend fails. **Calibrated-parameter uncertainty is zero by
+construction** (frozen spec; no fitting in this stage) and must be stated as such.
+
+**Contrast with the AUTHOR-REPORTED 420 tables and the repaired-540 migration.** 420 baseline elite Q5 HK 30.0 / KR
+24.6; 420 has **no CF4a/CF4b rows** (the paper's pairing claim was asserted, not tabulated), CF1b 82.1/74.1 spend,
+25.1/22.9 elite (HK spend 82.1 > 80, so CF1b also fails the cost criterion on the 420 table), CF3b 52.8/54.9 spend,
+36.3/27.5 elite (regressive on 420). New-gen baseline elite is 24.82/23.90 (generation difference, not a
+calibration); new-gen CF3b is **not** regressive (23.43/22.21), so the paper's "wage compression regressive" reading
+is contradicted; new-gen CF1a spend 96.47/97.12 < 100, so "tax backfires on spending" is contradicted. The new-gen
+baseline K–12 is 61.93/55.79, not the 420's 40.0/76.5 — the generations are not interchangeable.
+
+| ID | Claim | Artifact | Status | Required change |
+|---|---|---|---|---|
+| B-41 | **New-generation CF4a meets the pre-stated both-jurisdiction Win–Win** (HK 70.59/23.21 vs 24.82; KR-TRACKED 73.13/22.16 vs 23.90; KR-SINGLE 75.43/22.04 vs 24.08), with participation cost ~−13 pp | corrected artifacts `cf801af8…`, `2b69fa08…`, provenance `8f08164d…`; independent cross-check identical | **REPRODUCED SIMULATION** (new generation; frozen spec; seed-MC only) | Report the reversal; preserve the pre-repair failure; **always** pair "meets the criterion" with the ~13 pp participation drop; not "win-win" unqualified; old failure stays reported. |
+| B-42 | New-generation **CF4b fails spend** (89.99 / 109.70 / 117.74), **CF1b fails spend** (97.25 / 99.19 / 98.99), **CF3b passes both** (70.88/23.43; 73.21/22.21; 75.53/22.09) — so the "only pairing compression with caps/seats works" reading is false | same | **REPRODUCED SIMULATION** (new generation) | Delete "only pairing"; report CF3b as a single-lever pass and CF1b/CF4b failures; the paper's ranking is not supported. |
+| B-43 | Provenance/correction: the earlier JSONs (`14fc2a31…`, `697e7ca9…`, `cba8ee0f…`) had an empty HK summary (aggregator looked up `TRACKED` instead of `PRIMARY` for HK); corrected artifacts re-aggregated from intact checkpoints with **no rerun**; engine label `98baf6b`; TRACKED `total_runs=1,800`, campaign 2,700 | `a4b0808`; corrected hashes; `reaggregate_new_generation.py` | **REPRODUCED SIMULATION** (provenance) | Cite only the corrected hashes; do not cite the superseded artifacts; record the aggregation-bug correction as a provenance note, not a model defect. |
+| B-44 | Participation cost under CF4a/CF3b is large (K–12 −13.33 pp HK / −12.98 pp KR under CF4a; G12 −10.23 / −5.69; CF3b similar) | same | **REPRODUCED SIMULATION** (first-class caveat) | Put the participation cost in the abstract and conclusion; the pre-stated criterion does not capture it; do not call the result a welfare win. |
+
 ## 3. Status summary (Paper B)
 
 | Status | Count | Claim IDs |
 |---|---|---|
 | VERIFIED EMPIRICAL | 0 | — |
-| REPRODUCED SIMULATION | 8 | B-17, B-18, B-35, B-36, B-37, B-38, B-39, B-40 |
+| REPRODUCED SIMULATION | 12 | B-17, B-18, B-35, B-36, B-37, B-38, B-39, B-40, B-41, B-42, B-43, B-44 |
 | VALIDATED SIMULATION | 0 | — |
 | AUTHOR-REPORTED | 18 | B-01, B-02, B-03, B-04, B-05, B-06, B-07, B-09, B-10, B-11, B-12, B-13, B-27, B-28, B-29, B-30, B-31, B-32 |
 | CONTRADICTED | 14 | B-08, B-14, B-15, B-16, B-19, B-20, B-21, B-22, B-23, B-24, B-25, B-26, B-33, B-34 |
 | UNRESOLVED | 0 | — |
 
-*(Counts in the AUTHOR-REPORTED and CONTRADICTED rows include every ID listed; the totals are 40 adjudicated rows.)*
+*(Counts in the AUTHOR-REPORTED and CONTRADICTED rows include every ID listed; the totals are 44 adjudicated rows.)*
 
 ## 4. The two findings the programme must absorb
 
