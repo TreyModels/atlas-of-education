@@ -1027,3 +1027,30 @@ Checklist for whoever restores/pulls (all hashes observed live before the box we
 4. Only then close screening/QA. **No screening numbers cited until pulled + verified.** Process lesson recorded in
    `docs/audit/PAPER_C_SCREENING_LAUNCH.md` (commander) and §13.41b: the pull/verify must be a mandatory separate step
    before `SHUTDOWN_OK` is touched.
+
+### 13.42 2026-11-26 07:35 — box back/reachable (never powered off) + screening recovery VERIFIED + confirmatory run measured
+
+**A. Screening recovery — CLOSED (independent verification by scheduler):** pulled copy in
+`~/neon-boot/qa/incoming/paperC_screening/` (42 files): summary `paperC_screening.json` = `paperC_screening_results.json`,
+**1,337,854 B, sha256 `6bcc29a50d41dc2c63a5959c0b023eb203c5bf1bd0cd04ffaee908a5ebb5b6d4`** (matches artefact of record);
+`sha256sum -c paperC_screening_queue/SHA256SUMS` (3,802 B) → **all OK** (36 ckpts + 2 JSONs + .sha256 files);
+`STATUS` = `OK 2026-11-25T17:15:58Z`; `PULL_VERIFIED.txt` present with summary/runner/engine/P12 record. No numbers cited by
+scheduler; citation gate is Lead/adjudicator.
+
+**B. UPTIME CORRECTION (incident record):** box `uptime` = **90 days 12:08** at 07:34 → the instance was **never powered
+off**; the finalizer's `shutdown -h now` was a **container no-op** and the 01:17–07:16 unreachability was **network/SSH-side
+only**. Screening data was never at risk; the 07:16 pull recovered everything. §13.41's "powered off" assumption is corrected.
+
+**C. Confirmatory run (Paper C, PID 1364 driver, `confirm_final`, started 07:20:36):** `PAPER_C_STAGE=confirmatory`,
+`PAPER_C_P12_MODE=pay_gap`, `--workers 10` over **6 cells**, seeds 100–131 (32/cell), N=1500/T=46, `--allow-subset`,
+analysis-commit `8121bf6`, engine pin `846c9e0`; workers 1368/1369/1371/1374/1375/1376; confirm finalizer armed
+(`confirm_finalize.sh`, start 23:23:12Z). **Measured 07:34:06 (13.5 min):** each worker **809 CPU-s / 810 s elapsed (100 %
+busy)**; **cgroup 6.02/10 = 60.2 %** (4 CPUs idle); 4 ckpts × 1 seed.
+**Cost/ETA:** ~**13.5 min/seed/cell**, ~**809 CPU-s/run** → 192 runs = **~43.2 CPU-h**; wall at 6 concurrent =
+**32 × 13.5 min = 7.2 h → ETA ~14:35–15:00 CST**. %-vs-time: 16.7 % (32 runs) ≈08:33 · 33 % ≈09:45 · 50 % ≈10:57 ·
+67 % ≈12:09 · 83 % ≈13:21 · 100 % ≈14:33 (+stragglers).
+**Flags/decisions:** (i) **envelope breach** — pre-declared ≤22 CPU-h vs measured projection ~43.2 CPU-h (~2×): Lead/adjudicator
+decision (continue/descope/abort); scheduler kills nothing; (ii) **4 idle CPUs** — available for queued work only on Lead
+instruction (X-31 conditional / G2-B / GPU feeding); Luna/MASSENG reserve status needs Lead confirmation; (iii) **interim
+copies** requested at 8/16/24 seeds with sha256 + two-sided verify (scheduler will independently verify each); **seed-sharding
+to use idle CPUs is unsafe as-is** (per-cell checkpoint files → writer race) without a runner change.
