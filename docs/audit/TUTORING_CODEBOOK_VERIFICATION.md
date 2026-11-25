@@ -144,3 +144,81 @@ informal prices/teacher hours/firm capacity) **remains intact** and must not be 
 8. CIEFR-HS **tutoring item wording** (questionnaire is access-restricted; access route is D-verified).
 **Remaining D (not V):** CIEFR-HS waves/samples/access/DOI/restriction metadata; CEPS platform/access; PISA item
 existence (snippet-level); DHS absence of tutoring variables; the binding HK-vs-PH limitation below.
+
+
+## 6. ADDENDUM — verified from lead-supplied official PDFs (2026-11-25)
+
+The Lead fetched the official PDFs from a shell with open egress and left them locally (`/tmp/pdfs/`: SEA-PLM 2024
+Test Questionnaire Framework, SEA-PLM 2019 Parent Questionnaire + 6-page codebook, PISA 2022 Technical Report,
+plus `SEAPLM_EVIDENCE.txt`). Text was extracted locally with `pypdf`; the checks below are **D (verified from the
+official document text)**, with page references.
+
+### 6.1 SEA-PLM 2019 Parent Questionnaire — NO tutoring item (verified absence, converts earlier V → D-absent)
+
+Full text of `seaplm2019_parent.pdf` (13 pages) and `seaplm2019_parent_codebook.pdf` (6 pages) searched: **zero
+occurrences** of `PA18`, "additional instruction", "tutor", "extra class", "extra lesson", "outside of school",
+"paid". Codebook has no PA18. **Verdict: SEA-PLM 2019 cannot measure tutoring for Cambodia/Philippines.** This
+kills the earlier (unverified) hope that SEA-PLM 2019 was the KH route.
+
+### 6.2 SEA-PLM 2024 Test Questionnaire Framework, p.89 — PA18 "additional instruction" (verified wording)
+
+Exact item text (parent questionnaire, p.89):
+> "18. In this past school year, has your child attended the following types of additional instruction? …
+> Additional instruction may be any extra assistance outside regular schooling to support students.
+> a) Paid assistance outside of school — PA18A
+> b) Free tutoring outside of school — PA18B
+> c) Paid tutoring provided by your child's school — PA18C
+> d) Free tutoring provided by your child's school — PA18D"
+
+**Response scale (important):** the framework gives four response columns — **"Yes in Literacy", "Yes in
+Numeracy", "Yes in Literacy and Numeracy", "No"** — not a binary yes/no. A participation indicator therefore
+requires a coding decision (any yes vs both vs literacy/numeracy separately), and a paid-vs-free / school-vs-outside
+supply-form share must be defined on that coding. The item is a **2×2 supply-form distinction** (paid/free ×
+outside/school) — exactly Paper C's supply-form variable, with the caveat that it is *parent-reported
+participation in additional instruction*, not hours/expenditure/provider-firm identity.
+
+### 6.3 SEA-PLM 2024 coverage and data availability
+
+* 2024 is a **six-country** cycle (SEA-PLM 2024 Main Regional Report / Datasets page). **Confirmed participants
+  relevant to us: Cambodia (national report published), Philippines, Malaysia (national summary published),
+  Vietnam (results/news)**. The other two countries are **not verified here** — do not assume; candidates (Lao
+  PDR, Timor-Leste) are unconfirmed, and Myanmar's 2024 status is unconfirmed.
+* Data release: per the Lead, ILSA-Gateway announced **"SEA-PLM 2024: Writing Results and Data Now Available"**.
+  Official pages located: Datasets & Questionnaires 2024
+  (`seaplm.org/index.php/sea-plm-2024/datasets-and-questionnaires-2024`), **SEA-PLM 2024 Data User Manual**
+  (December 2025, `seaplm.org/images/PUBLICATION/2025/Datasets__Questionnaires_2024/SEA-PLM_2024_data_manual_December_2025.pdf`),
+  Coding/Scaling/Scoring report (2026, documents parent-questionnaire content), and the 2024 Main Regional Report.
+* **Data access route: V (not yet read).** The Datasets page and Data User Manual are public documents but could
+  not be fetched from this sandbox. Expected pattern (to verify from the data manual): registration/agreement,
+  then download of student/parent/teacher/school files. **Parent↔student linkage: V** — the data manual is the
+  document that defines the linking IDs; it must be read before assuming parent records can be merged to student
+  records.
+* **Codebook status for PA18A–D: V** — the framework defines the items; whether the public 2024 dataset includes
+  PA18A–D variables and their exact coded values must be confirmed in the 2024 codebook/data manual.
+
+### 6.4 PISA 2022 — student-level "additional mathematics instruction" vs school-level MACTIV (verified distinction)
+
+From the PISA 2022 Technical Report (local `pisa2022_tech.pdf`, 545 pages):
+* **Student level:** item **ST297 "Out-of-school experiences — Participation in additional mathematics
+  instruction"** appears in the PISA 2022 student questionnaire item list (Annex 5.A.3; the row indicates
+  **not in 2018, present in 2022**). It is a participation item (yes/no style); **no hours, no expenditure, no
+  provider type**. Exact question wording/response options: **V** (the questionnaire itself is not in this bundle;
+  the technical report gives the item label, not the wording).
+* **School level:** **MACTIV** is a *school*-level index built from SC181 ("additional mathematics lessons offered
+  at the school": enrichment/remedial/without differentiation) and SC053 (maths club, competitions, computer club),
+  range 0–5 (technical report §19, p.415 context). **MACTIV is not a student out-of-school-lesson measure** — the
+  Lead's caution is confirmed.
+* PISA 2022 has **no tutoring expenditure item and no own-teacher-vs-firm provider item** among the located
+  variables; no hours-of-out-of-school-lessons item surfaced in this report (the older-cycle "out-of-school
+  lessons" analyses, e.g. PISA 2009/2018, need their own questionnaire checks — still V).
+
+### 6.5 Net effect on Paper C's data feasibility
+
+* **Cambodia/Philippines gain a real supply-form test** — participation plus **paid/free × school/outside**
+  (PA18A–D) — **conditional on** (i) 2024 coverage/codebook confirmation, (ii) data access, (iii) parent↔student
+  linkage, and (iv) a documented coding rule for the 4-column response scale. Until those are confirmed, the
+  correct label is **"feasible pending verification"**, not "available".
+* **Own-teacher withholding, hours, expenditure and firm identity remain unobserved** in SEA-PLM 2019/2024 and
+  PISA; the theory-only list therefore stands for those constructs. The HK-vs-PH **own-teacher-vs-firm share**
+  remains unobserved in both settings (PISA has no provider item; SEA-PLM PA18 gives school-vs-outside, not
+  own-teacher-sell-back).

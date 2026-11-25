@@ -141,3 +141,45 @@ labelled **theory-only or data-blocked**. See `TUTORING_CODEBOOK_VERIFICATION.md
    unobserved stays theory-only.
 
 **Do not** substitute PISA ESCS for income, hours for expenditure, or report-level HK figures for microdata.
+
+
+## 7. UPDATE 2026-11-25 (verified from official PDFs, supersedes the SEA-PLM rows above)
+
+**SEA-PLM 2019: tutoring ABSENT (verified, not V).** Full text of the 2019 parent questionnaire (13 pp) and its
+6-page codebook contains no PA18 / "additional instruction" / "tutor" / "extra class" / "extra lesson" item. The
+2019 cycle cannot measure tutoring for Cambodia/Philippines. **The earlier "KH route = SEA-PLM 2019" is
+withdrawn.**
+
+**SEA-PLM 2024: PA18A–D present (verified, p.89 of the 2024 Test Questionnaire Framework).** Parent questionnaire
+item PA18 asks about "additional instruction" in four types: **PA18A paid assistance outside school, PA18B free
+tutoring outside school, PA18C paid tutoring provided by the child's school, PA18D free tutoring provided by the
+child's school.** Response columns: Yes in Literacy / Yes in Numeracy / Yes in Literacy and Numeracy / No — i.e. a
+2×2 *supply-form* distinction (paid/free × outside/school) with subject-specific participation, **not** a binary
+item and **not** hours/expenditure/provider identity.
+Coverage: 2024 is a six-country cycle; **Cambodia (national report published), Philippines, Malaysia (summary
+published) and Vietnam (results/news) are confirmed**; the other two are unverified here. 2024 results/data were
+released (per ILSA-Gateway announcement); public pages located for the 2024 Datasets & Questionnaires and the
+**SEA-PLM 2024 Data User Manual (Dec 2025)**.
+
+**Revised verdicts (replaces §2b and the §2 country verdicts where they conflict):**
+* **Cambodia — feasible (supply-form included), conditional.** PA18A–D gives participation + paid/free ×
+  school/outside for 2024, **pending**: 2024 codebook confirming the variables, data access, parent↔student
+  linkage, and a pre-declared coding rule for the four-column response scale. Until those are confirmed, label
+  "feasible pending verification", not available.
+* **Philippines — feasible (supply-form included), conditional**, same conditions; PISA 2018/2022 gives
+  participation/intensity cross-check.
+* **HK — feasible-partial (participation/hours via PISA only).** No provider-type or expenditure microdata; the
+  own-teacher-vs-firm share remains unobserved.
+* **China — strongest, still partial** (PISA participation; CFPS/CIEFR expenditure; Double Reduction before/after;
+  provider type partial).
+* **Korea — reference only** (KOSTAT provider/expenditure aggregates).
+* **PISA 2022 update:** student item **ST297 "Participation in additional mathematics instruction"** exists
+  (technical report Annex 5.A.3; participation only), while **MACTIV is school-level** (SC181/SC053) — do not
+  confuse them. PISA has no expenditure and no provider-type item.
+* **Still theory-only / unobserved:** own-teacher withholding (teacher sell-back), teacher effort/time budget and
+  positive school-supply `S`, learning decomposition `G=max(0,L−S)`, firm identity/capacity/entry, informal prices,
+  and hourly/duration measures of tutoring. The **HK-vs-PH own-teacher-vs-firm comparison remains unobserved in
+  both** — with PA18 the *school-vs-outside* form becomes testable for KH/PH, but not the own-teacher channel.
+* **Still V:** SEA-PLM 2024 PA18A–D in the public dataset + codebook values; 2024 parent↔student linkage IDs;
+  2024 access route/terms; PISA ST297 exact wording; PISA 2018 item wording; PISA absence of expenditure/provider
+  items (strongly indicated, not codebook-confirmed).
