@@ -1,7 +1,6 @@
 # GATE 0 VERIFICATION — Commander independent sign-off
 
-**Owner:** `atlas-commander` (execution owner). **Status: HOST + BOX EVIDENCE VERIFIED; formal sign-off on
-audit-runner's `GATE0_REPORT.md` pending that file's delivery** (this file does not replace it).
+**Owner:** `atlas-commander` (execution owner). **Status: SIGNED OFF — GATE 0 PASS (2026-11-25T14:40 CST).**
 **Date:** 2026-11-25 ~14:33 CST. **Branch:** `research/contest-audit-v2-2026-11-25`.
 
 This is the Commander's *independent* check of Gate 0, as required by the Directive. I did not rely on
@@ -147,3 +146,52 @@ inventory hashes are audit-runner-verified, not Commander-verified; (iii) the 42
 
 *Formal sign-off line to be completed when `docs/audit/GATE0_REPORT.md` is delivered: the report's verdict, hashes
 and mismatch table must match §2–§3 above; any divergence is to be recorded here before Gate 0 is declared closed.*
+
+---
+
+## 7. Sign-off on `docs/audit/GATE0_REPORT.md` (accepted as the Gate-0 record)
+
+**Sign-off: GATE 0 PASS.** `docs/audit/GATE0_REPORT.md` (audit-runner, commit `9536870`) is accepted as the
+Gate-0 record; it is **not** overwritten by this file. I independently reproduced its three headline claims:
+
+| claim in GATE0_REPORT | Commander independent check | match |
+|---|---|---|
+| host repro output is textually identical to the committed 540 JSON `c1fa0926…` **except** `metadata.elapsed_seconds` (178.65 → 118.36) | re-flattened both JSONs: exactly **1** differing stored field (`metadata.elapsed_seconds`); 9,180 seed + 846 summary numerics identical | ✅ |
+| host vs supplied reference: 9,174/9,180 seed + 842/846 summary exact; max abs `3.553e-15` / `4.441e-16`; max rel `2.094e-16` / `2.486e-16` | my own clean-`git archive HEAD` run + my own comparator invocation: same counts, same maxima, same 3 changed rows (130/311/379) | ✅ |
+| box (NumPy 1.24.1) vs reference: 9,164/9,180 + 831/846 exact; max abs `7.105e-15`; max rel `4.971e-16`; 0 diffs at 2 d.p. | my own comparator invocation **on the box** over SSH: same counts/maxima; all 18×2 `total_spend_index` values identical; CF4 verdict identical | ✅ |
+| box 56-worker vs box 8-worker: all 9,180 + 846 numerics bit-identical | same, re-invoked by me: 9,180/9,180 and 846/846 exactly equal, max abs 0.0 | ✅ |
+| artifact registry 87 rows with real sha256 | **after the `25fd953` correction** I re-derived **87/87 rows from immutable snapshot blobs myself** (15 archive rows at `46950ab` with the `research/atlas-all-work-2026-11-25/` prefix stripped, 72 rows at `9536870`/`7356c97`/`1c3417c`) → **0 mismatches**. Phase-B files (`rng.py`, `contest_math.py`) are correctly absent from the Gate-0 registry. | ✅ |
+
+**(a) The one-field difference.** audit-runner's host reproduction of the 540-run job is *bit-identical* to the
+committed 540-run JSON apart from `metadata.elapsed_seconds`; against the author-supplied reference it differs by
+last-bit floating-point rounding only (6/9,180 seed values ≤3.553e-15; 4/846 summary values ≤4.441e-16). The
+`elapsed_seconds` field is machine wall time and is excluded from every "identical" claim. Whole-file sha256s of
+reproduction outputs therefore differ run-to-run by design; Gate 0 is judged on value diffs.
+
+**(b) Box NumPy caveat (recorded; remediation decided).** The box runs NumPy **1.24.1** (py 3.10.8) while
+`engine/requirements.txt` declares `numpy>=1.26` (`research/requirements.txt`: `numpy>=1.26,<3`; host: 2.2.6).
+The box re-run is therefore an **independent-environment stress test, not a certified in-range environment** — and
+it still reproduces every reported figure. Decision (Lead directive, recorded): create `/root/work/venv-declared` on
+the box (python3 -m venv) with the declared stack (`engine/requirements.txt` + `pytest pandas pyarrow psutil`),
+record its `pip freeze` in `docs/audit/system_box_venv.txt`, and use it for **all future box CPU work** (Gate 2/3
+calibration). Status at sign-off: venv created (`/root/work/venv-declared`, py 3.10.8), declared-stack install
+running detached (`nice -n 10`, log `/root/work/venv-declared/install.log`); it does not block Gate 1.
+
+**(c) What remains AUTHOR-REPORTED / UNRESOLVED (carried verbatim into Gate 1+).**
+* **420-run generation** (`verified_results_2026_11_25.json`; Paper B docx tables: HK elite Q5 30.0 %, KR 24.6 %) —
+  **AUTHOR-REPORTED**, not reproducible: no 420-era runner/engine generation exists in the tree. The Paper B tables
+  must not be presented as Gate-0-reproduced.
+* **Paper A Exp 1/3/4/5 simulations and the identifiability result** — **UNRESOLVED** (runners and raw outputs absent;
+  `code/MISSING_ARTIFACTS.md` confirmed still accurate).
+* **GPU (RTX 3080 Ti) outputs** — **UNRESOLVED**: nothing supplied, nothing run; the review-confirmed estimator
+  defects (unused `theta[:,5]`, panel `X=[1,x]` drops controls/FE) stand. Torch/cu118 now installs on the box but
+  GPU work remains parked for wave 2.
+* **All Gate-0 reproduction claims are SIMULATION evidence** (REPRODUCED SIMULATION), never empirical.
+
+**Conditions carried into final packaging:** (i) `GATE0_REPORT.md` is the immutable Gate-0 record — do not
+overwrite; (ii) registry rows are frozen from commit snapshots, never from the live worktree (the `25fd953`
+correction fixes the one row that violated this); (iii) the full 1,123-entry archive-branch inventory hashes are
+audit-runner-verified (MANIFEST 13/13 OK), not independently re-derived by the Commander (the 15 registry-covered
+archive rows *are* Commander-verified); (iv) 420-run/Paper A/GPU statuses above stay AUTHOR-REPORTED / UNRESOLVED.
+
+**GATE 0 CLOSED (PASS, WITHIN TOLERANCE).**
