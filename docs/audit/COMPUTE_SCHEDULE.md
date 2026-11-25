@@ -969,3 +969,22 @@ RESULTS_DONE, no SHUTDOWN_OK, no poweroff** (correct failure semantics — box s
 **Remedy (Lead/commander action; scheduler did not start a second finalizer):** check `d['n_runs']==288 and d['n_cells']==36
 and d['invalid_cells']==[]` then re-run the corrected finalizer once → markers → puller SHUTDOWN_OK → poweroff.
 Scheduler: monitor-only throughout; nothing killed/moved/deleted; box ON and idle.
+
+### 13.41 01:17+ — BOX UNREACHABLE after screening; Mac pull dir EMPTY (pull did not land) — flagged
+
+**Screening result of record (verified by scheduler on the live box at 01:15:38, before loss of contact):**
+`/root/work/paperC/screen_final/paperC_screening.json` (= byte-identical `paperC_screening_results.json`), 1,337,854 B,
+**sha256 `6bcc29a50d41dc2c63a5959c0b023eb203c5bf1bd0cd04ffaee908a5ebb5b6d4`**; `n_runs=288`, `n_cells=36`,
+`invalid_cells=[]`, `wall_seconds=1879.17`, 36 checkpoint hashes; independent ckpt recount 288 rows / 36 cells.
+
+**Sequence:** at 01:15:58 `/root/work/queue/SHA256SUMS` (3,802 B) was present and the **patched finalizer** (runner/commander
+fixed the `manifest.runs` check to `n_runs`/`n_cells`/`invalid_cells`) was re-running; STATUS/RESULTS_DONE not yet observed;
+box idle. From **01:17 to 01:20, four consecutive SSH attempts fail with "Connection closed by 198.18.2.127 port 36934"** —
+box powered off / instance stopped, consistent with the Lead finalizer chain (poweroff is performed by that script; **the
+scheduler never issued shutdown/poweroff**). **Mac `~/neon-boot/qa/incoming/paperC_screening/` is EMPTY** (created 23:53,
+no files) → the poller pull did not land before the box went dark; pull/SHUTDOWN_OK handshake unconfirmed.
+
+**Recovery:** AutoDL container disk normally persists across power state; on restart/next reachability, re-pull
+`/root/work/paperC/screen_final/*` + `/root/work/queue/SHA256SUMS` and verify against **sha256 `6bcc29a5…b6d4`**. Boxing
+up/down is an operator action; scheduler remains monitor-only. Recorded here because the box ledger could not be written
+after 01:16.
