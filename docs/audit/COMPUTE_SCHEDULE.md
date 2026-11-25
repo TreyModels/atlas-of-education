@@ -86,8 +86,8 @@ no output progress for >10 min is messaged and flagged; any box job must report 
 | J-03 | task-6 rank/Jacobian audit (~1,000 prior-box points) | contest-math | 1 (analytic; 0 pool) | ~15:02 | staging/analytic on host | 1 moment-map + Jacobian per point; 0 `pl_win_probs` calls | <5 s once launched | `/root/work/contest` harness currently staged |
 | J-04 | task-11 harness/manifest/ledger box proof | audit-runner | 1 | 15:00:49 | ✅ DONE 15:00:52 | 3 s wall | done | `/root/work/audit/p07_box_evidence.tar.gz`, 18/18 PASS |
 | J-05 | task-7 synthetic DGP (500 pops = 5 configs × 100, 20k draws × 16 moments, pure NumPy ABC, **0 engine runs**) | qa-verifier | 3 | 15:10:40 | ✅ **DONE ~15:18** | measured: 500 pops / ~7.3 min @3w = **2.6 CPU-s/pop, 1.14 pops/s aggregate** | done | `/root/work/qa/full_out` (6 artifacts, sha256 in ledger: accepted_draws `62fa1b4b…`, posterior_predictive `0cf9ce27…`, summary `698649f6…`) |
-| J-06 | task-8 bootstrap factorial | qa-verifier | 3 | ~15:21 | ✅ **DONE ~15:23** | 70.21 s wall; acceptance: FE size median 0.05925 (holds), pooled size under confounding 1.0, permutation invariant (dev 6.7e-16) | done | `/root/work/qa/bs_out` (`BOOTSTRAP_SIZE_POWER_RESULTS.parquet`, `boostrap_factorial_summary.json`); `qa_results.tgz` 18 MB |
-| J-08 | **second independent DGP seed band** (new, Lead-approved) | qa-verifier | 2 | queued (asked 15:25) | pending launch | 2.6 CPU-s/pop (measured) → 500 pops ≈ 1,300 CPU-s | ~11 min at 2 workers | `/root/work/qa/<new out-dir>` |
+| J-06 | task-8 bootstrap factorial | qa-verifier | 4 | 15:22 | ✅ **DONE** | 70.21 s wall; FE size 0.052–0.062 across confounding; pooled size 0.996–1.000 (OVB); permutation invariance 6.66e-16; shipped stats reproduced | done (commit `01cb4d3`) | `/root/work/qa/bs_out`: parquet sha256 **`41c62895…9216ebf`**, summary sha256 **`e266710d…755ab6d13`** |
+| J-08 | **second independent DGP seed band** (Lead-approved) | qa-verifier | 2 | 15:25:12 | **RUNNING** (PIDs 16670 + 16672, 16673; `--seed 20261126`) | 2.6 CPU-s/pop → 500 pops ≈ 1,300 CPU-s | ~15:36–15:38 | `/root/work/qa/band2_out` |
 | J-09 | **task-12 optimisation of `contest_math.py`** (Lead-approved; owner = contest-math, not engine-core) | contest-math | 2 → 4 when qa finishes | queued (asked 15:25) | pending claim/launch | benchmark 1 HK run = 20.3 CPU-s baseline; profile: 92.7 % in PL quadrature | target 2–5×; report CPU-s/run before/after | `/root/work/contest` |
 | J-07 | task-9 general-r Tulloch validation | contest-math | 1 (analytic) | blocked on J-03 | queued | ~200 PL calls × 14–49 ms ≈ 3–10 s | <1 min | `/root/work/contest` |
 
@@ -222,7 +222,8 @@ e1ce873a0a106b9632fae97cf923ab6432ebc6e32043f64fb501d8c93ec9025b  results/policy
 | 15:19:21 | 25.0 | **6.0** (60 %) | 540 6 | qa task-7 finished (6 artifacts written 15:18); gap before task-8 |
 | 15:20:55 | 28.4 | **7.0** (70 %) | 540 6 + profiling 1 | profiler pilot done: 92.7 % of a run = PL quadrature |
 | 15:25:04 | 16.3 | **6.5** (65 %) | 540 6 | qa task-8 ✅ done; waiting on qa band-2 + contest-math task-12 launches to return to 10/10 |
-| 15:2x (next refresh) | — | — | — | target: 540 6 + qa 2 + contest-math 2 = 10/10 until 540 completes ~15:54 |
+| 15:33:05 | 23.6 | **8.0** (80 %) | 540 6 + qa band-2 2 | contest-math task-9 + task-12 baseline probe finished; task-12 patch being coded (bursts will use its 2 reserved slots) |
+| 15:36–15:54 (projected) | — | **60–100 %** | 540 6 + bursts | band-2 ends ~15:36 → box at 60 % unless qa runs a third band or contest-math's after-patch benches sustain; 540 completes ~15:54 |
 
 Band discipline: flag **<7** idle (fill from queue), **>11** oversubscribed (throttle the lowest-priority lane).
 `loadavg` is host-wide and is reported only because it was the issued metric; the cgroup number is the truth.
@@ -330,4 +331,10 @@ Band discipline: flag **<7** idle (fill from queue), **>11** oversubscribed (thr
   after qa's band finishes.
 - **15:25:04** util **6.5/10 (65 %)** = 540 6 + measurement overhead; gate: waiting on qa band-2 and contest-math
   task-12 launches. 540 at **36.7 %** (6,157/16,794 CPU-s), ETA **~15:54**.
-- (next refresh: both launches confirmed → 10/10; 540 completion ~15:54 → pull output+sha256 for commander)
+- **15:25–15:33** contest-math used its 2 reserved slots: task-9 box replication (PID 16730, 15:26:36, ~4 min) and the
+  **task-12 baseline probe** (PID 17017, 15:28:35: HK Baseline seed 0 with call-pattern instrumentation + wall clock)
+  → before/after pair will be contention-matched on the box (host deliberately not used for the speedup number;
+  host load ~109 from other lanes). qa band-2 (`--seed 20261126`, 2 workers) on track ~15:36–15:38.
+- **15:33:05** util **8.0/10 (80 %)**; 540 at **54.7 %** (9,186/16,794 CPU-s), ETA **~15:54:40**.
+- (next refresh: band-2 completion + qa band-3 decision; task-12 baseline/after CPU-s; **540 completion → pull output
+  + sha256 and hand to commander**)
