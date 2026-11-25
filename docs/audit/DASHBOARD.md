@@ -116,7 +116,7 @@ sha256. Code edits only on the Mac worktree, never on the box.
   independent re-hash 71/87 exact, 1 stale self-referential row (`system_box.txt`, grew after registration),
   15 post-snapshot Gate-0 outputs, archive inventory separately recorded (not Commander-verified).
 
-- 2026-11-25T14:45+08:00 · Commander · **BOX QUOTA CORRECTION + FREEZE + LEGACY HARVEST.** (i) Lead verified the box is
+- 2026-11-25T14:41+08:00 · Commander · **BOX QUOTA CORRECTION + FREEZE + LEGACY HARVEST.** (i) Lead verified the box is
   a **10-CPU cgroup** (`/sys/fs/cgroup/cpu.max = 1000000 100000`), not 80; my 56/80-worker allocation is withdrawn.
   All lanes messaged: box CPU work **frozen** until the legacy 1080-sim run (`/root/work/modelrev`) finishes, then
   total ≤8 workers globally / ≤4 per lane, nice -n 10, BLAS threads=1; directory claims relayed
@@ -143,7 +143,7 @@ sha256. Code edits only on the Mac worktree, never on the box.
   refreshed baseline still 7F/12P/8xfail in 6.41 s). contest-math committed 47f6bd0 (68-test validation record +
   legacy `1−exp(−λx^r)` approximation-error study). No Phase-B engine commit yet.
 
-- 2026-11-25T14:48+08:00 · Commander · **Gate 1c CLOSED (contest-math) + Lead pushed branch public.** contest-math
+- 2026-11-25T14:43+08:00 · Commander · **Gate 1c CLOSED (contest-math) + Lead pushed branch public.** contest-math
   delivered `1a6f3d5` (deterministic `pl_win_probs`: exact subset DP n≤20, deterministic Poisson-binomial /
   exponential-race quadrature n>20, seat-sum ΣP=seats hard-checked; `pl_realize` deterministic; 68-test suite) and
   `47f6bd0` (`CONTEST_MATH_VALIDATION.md`, `CONTEST_MATH_APPROX_ERROR.md`: 1-exp(−λx^r) approximation error
@@ -153,3 +153,21 @@ sha256. Code edits only on the Mac worktree, never on the box.
   Lead pushed `research/contest-audit-v2-2026-11-25` public (packet `b3ca85d`); pushes on this branch approved.
   Box: legacy 1080-sim still live (8 workers on the 10-CPU cgroup) — our freeze remains; declared-stack venv
   still installing (scipy 37.7 MB on the slow mirror). Gate 1a/1b Phase B still uncommitted.
+
+- 2026-11-25T14:53+08:00 · Commander · **Gate-1 Phase B VERIFIED (independent, clean-tree) — awaiting qa AFTER column.**
+  Both engine lanes committed and the branch is public: `6bc8d61` [gate1b] and `f31e176` [gate1a] (tip `98baf6b`).
+  My independent clean-tree (`git archive 98baf6b`) checks: `docs/audit/ENGINE_CHECKS.py --runner` → **13/13 PASS**;
+  `docs/audit/TUTORING_CHECKS.py` → **17/17 PASS**; `pytest tests/test_contest_math.py` → **68 passed**. Invariant
+  suite on the clean tree: **91 passed / 4 failed**, and the 4 are TEST-SIDE (3 × `method='exact'` used with n>20 —
+  A6 correctly raises; 1 × stale XPASS-strict CAPS for the now-existing `'open'` kind) — qa-verifier is fixing its
+  own tests and re-running; no engine failure found. Contract amendment **A7** recorded (`contest_candidates(m)` =
+  same-year sitting cohort; expected and realised P are the same object) + residual risk of future-gate pool-map
+  interpolation noted. Fresh repaired-engine 540 run from clean `git archive 98baf6b` in progress (~20–30 min) for
+  the headline migration reproduction with expected-vs-realised decomposition. Repaired-engine file hashes under
+  verification: core/rng/contest_math/planning/labour/tutoring from `98baf6b`.
+- 2026-11-25T14:53+08:00 · Commander · **P0 GPU-audit track routed by Lead; GPU conclusions QUARANTINED.**
+  Lead's external audit of GPU bundle `045a63e` recorded at `docs/audit/EXTERNAL_AUDIT_GPU_2026-11-25.md` (`98baf6b`);
+  all GPU ABC / contest-surface / E1-Q3 conclusions remain AUTHOR-REPORTED / PRE-REPAIR / UNRESOLVED. Routing:
+  task-6 + task-9 → contest-math (messaged); task-7 + task-8 → qa-verifier AFTER Gate-1 AFTER suite (messaged);
+  task-10 execution half → task-11 → audit-runner (Lead messaged); Commander keeps only coordination/dashboard
+  recording (this delta). Gate-1 remains higher priority; no campaigns; GPUs parked.

@@ -334,7 +334,7 @@ silently substitute the old `1-exp` formula.
 | `E.gates` | list[dict] | normalised gates (§1) |
 | `E.gate_kind(m)` | str | canonical kind |
 | `E.contest_gates` | list[(m, gate)] | gates with `kind='contest'` |
-| `E.contest_candidates(m)` | bool mask `(N,)` | attending, `cred<=m`, `academic_only` respected, and (if `track_consequence` gate) nobody already placed |
+| `E.contest_candidates(m)` | bool mask `(N,)` | **amendment A7 (2026-11-25): the same-year *sitting cohort*** — pre-promotion `cred==m & g==ends[m]-1` (fallback `cred==m` if that is empty), `academic_only` respected, and (if `track_consequence`) `track==-1`; NOT the literal `cred<=m` pool, which spans year groups and would re-introduce D2. Used by `values()`, tutoring and the realised gate, so expected and realised probabilities are the same object. |
 | `E.contest_seats(m)` | int | `max(round(share·denominator),1)` per `share_of`, candidates not yet capped |
 | `E.contest_weights(m, idx=None)` | `(pids, w)` | `w` per §1.3 using current `prep_stock`; `idx` restricts the returned order; weight definition is owned by core, tutoring must not re-derive it. Optional keyword `stock_override` (array-like aligned with `idx`) replaces those children's stock for a counterfactual probability call — this is how tutoring evaluates `P(x_eff(e))` without a cross-call cache; the override never mutates state. |
 | `E.contest_expected_probs(m, idx=None)` | `(idx_or_pids, P)` | `pl_win_probs` on `E.contest_weights(m)` over the full candidate set, subset-selected; `ΣP = min(seats, n_cand)` |
@@ -345,6 +345,13 @@ silently substitute the old `1-exp` formula.
 
 `pl_win_probs`/`pl_realize` live in `engine/eduengine/contest_math.py`; `core.py` **imports** them. No re-implementation
 of PL anywhere else (a grep for `gumbel`/`argsort(-` in core/tutoring after repair must show no private PL code).
+
+**Residual risk recorded for the Gate-1 report (expected-P for *future* gates).** For a child valued at a gate it
+has not reached yet, `_gate_expected_P` evaluates PL once on the current same-year sitting cohort and maps the
+child's projected weight through that pool's probability curve (monotone interpolation), because the future
+cohort's weight distribution is unknown. This is a documented approximation: it is exact for pool members, and
+for future-gate valuations it is the official-pool-map approximation. It is reported, not hidden (engine-core
+`ENGINE_CORE_AUDIT.md` §B12).
 
 ---
 
@@ -520,3 +527,4 @@ beyond `E.gates`, `E.R`, `E.kids`, `E.ALL`, `E.yr` and the methods in §6.
 | A4 | 2026-11-25 | `E.values(..., track_state=None)` extension | needed for `gate_prize_dv` to price the actual track continuation value; backward compatible (default `None` = `k['track']`). |
 | A5 | 2026-11-25 | `pl_win_probs(method='auto'/'exact')` must be **deterministic**; `auto` above `n=12` uses a documented deterministic algorithm, not unseeded MC. Added `pl_win_probs_detail`, seat-sum renormalisation + hard failure, accuracy/perf targets. | contest-math's draft had `auto → pl_win_probs_mc(rng=None)` (fresh unseeded generator) for `n>12`, which would make household expected probabilities non-reproducible. MC is retained only as `method='mc'` validation. |
 | A6 | 2026-11-25 | `method='exact'` may support a documented cap larger than 12 (draft: `EXACT_MAX_N=20`) and must raise beyond it. | the draft's exact subset DP is genuinely exact to n=20; capping at 12 would be artificial. The binding requirement is "exact for n≤12, raise rather than approximate". |
+| A7 | 2026-11-25 | `contest_candidates(m)` fixed as the **same-year sitting cohort** `cred==m & g==ends[m]-1` (fallback `cred==m`), superseding the literal `cred<=m` wording in §1.3/§6 | with the literal `cred<=m` pool the expected-probability object spans several year groups and is no longer the pool the Gumbel-max draw actually ranks — i.e. it would re-introduce the D2 mismatch the repair exists to remove. engine-core implemented this; Commander accepts and records it. Resolved by making the pool identical in `values()`, tutoring and the gate. |
