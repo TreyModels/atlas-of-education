@@ -346,3 +346,20 @@ G2-A), KEIA/SBS/SeoulStart secondary. **183-equation inventory placeholders excl
 invented, no manuscript/claim altered, no box job**. Register only — **no claim upgraded by listing; Caplan 2018 stays V;
 source DOIs do not make inventory equations citable.**
 
+---
+
+**PAPER C SCREENING QA (2026-11-26): PASS S1–S11 — integrity only; SCREENING-ONLY; no claims moved.**
+`SCREENING_QA.md` sha256 `25cc4909…` (commit `f065458`), machine `screening_qa.json` `f720e584…`; payload
+`paperC_screening.json` sha256 `6bcc29a50d41dc2c63a5959c0b023eb203c5bf1bd0cd04ffaee908a5ebb5b6d4` (1,337,854 B;
+duplicate `_results` byte-identical). **288 runs = 36 appendix-order cells × 8 seeds**, `invalid_cells=[]`, wall
+1879.17 s. Verified: 40/40 SHA256SUMS + ckpt map 36/36; pins engine 846c9e0/core e111397b/spec e5ddef6b/runner
+d2d25c1c (matches repo file)/prereg 445ec423 = launch manifest; exact 36-cell grid, params/gate/settings, `unfired_events`;
+exposed-arm assertions correct; summary 36×18 n=8; ckpt→summary exact; no completion_* NaNs; SCREENING-ONLY label/queue OK.
+**Defects:** D-S1 (low, fix before confirmatory) — runner metadata flags A|P12 as exposed (96 row flags, rule text says
+only B exempt; `run_paperC_screening.py:207`), but actual binding check (`:154`) correctly applies only A/C AND P55; no
+effect on results (`invalid_cells=[]`), metadata contradicts prereg A3.3 — fix before confirmatory. D-S0 info
+(pre-launch fbeba460 vs executed d2d25c1c, documented/reconciled). D-S2 info (static `params.contest_r` 1.5 vs gate.r by
+L; gate override authoritative). **Caveats:** screening-only, no Paper C claims/numbers interpreted; **P12=pay_gap needs
+A4/prereg clarification before confirmatory**; >6-passer/frozen passer list downstream; confirmatory gated on D-S1 fix +
+A4 clarification + frozen list + 1–2 slot reserve. CSV frozen.
+

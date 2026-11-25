@@ -1073,6 +1073,36 @@ DIAGNOSTIC-ONLY, separate `results_diag/`, no effect on X-27; aggregation-only r
 re-compression of the identical directory (same payload/ckpts/MANIFEST; gzip timestamp/ordering only) — **not a second
 bundle, no file changes**.
 
+## 4P. Paper C screening — **QA PASS S1–S11 (integrity only; SCREENING-ONLY; no claims moved)**
+
+Artefacts: `docs/audit/SCREENING_QA.md` sha256
+**`25cc49092dd78747720444434f931129e4d65fa7b8a28ca54b3e7fd11fd063f6`** (commit `f065458`), machine
+`docs/audit/results/screening_qa.json` sha256 `f720e584…`; payload `paperC_screening.json` sha256
+**`6bcc29a50d41dc2c63a5959c0b023eb203c5bf1bd0cd04ffaee908a5ebb5b6d4`** (1,337,854 B; duplicate `_results`
+byte-identical). **288 runs = 36 appendix-order cells × 8 seeds (0–7)**; `invalid_cells=[]`; wall 1879.17 s.
+
+**Verified (S1–S11 all PASS):** 40/40 SHA256SUMS + checkpoint map 36/36; pins engine `846c9e0`/core
+`e111397b…`/spec `e5ddef6b…`/runner `d2d25c1c…` (matches repo file)/prereg `445ec423…` = launch-manifest prereg;
+36-cell grid exactly in fixed appendix order; 288 unique rows with N=600/T=46/measure_from=18; per-row
+supply/settings/q0/gate (G6→G9 contest, share_of cohort, r by L), `unfired_events==[]`; exposed-arm assertions
+correct; summary 36×18 with n=8; ckpt→summary exact (1e-12); no `completion_*` NaNs; `SCREENING-ONLY` label + queue
+`STATUS=OK` + `RESULTS_DONE`.
+
+**Defects/notes (recorded):**
+* **D-S1 (low; fix before confirmatory):** runner row metadata flags **A|P12 as exposed** (96 row flags; rule text says
+  only "B exempt"; `run_paperC_screening.py:207`), while the **actual binding check** (`:154`) correctly applies only to
+  `A/C AND P55`; A|P12 (h=0) was not asserted, `invalid_cells=[]`, S7 passes. **No effect on screening results**, but
+  the metadata contradicts prereg A3.3 — fix flag/rule text before any confirmatory bundle.
+* **D-S0 (info):** launch manifest records pre-launch runner `fbeba460…` while executed runner is `d2d25c1c…`
+  (documented extension; actual file matches run manifest) — reconciled.
+* **D-S2 (info):** row `params.contest_r` is static 1.5 while the gate override sets `gate.r` by L (1.2/1.6); the
+  engine uses the gate override, which is authoritative — harmless but potentially confusing downstream.
+
+**Caveats / pre-confirmatory conditions:** **SCREENING-ONLY** — no Paper C claims/numbers are interpreted or moved;
+**P12=pay_gap requires the A4/prereg clarification** before confirmatory use; the >6-passer rule/frozen passer list is
+downstream; confirmatory remains gated on the D-S1 metadata fix + A4 clarification + frozen passer list + the 1–2 slot
+reserve. **Status: screening QUEUE/ARTEFACT integrity PASS; not a confirmatory result; CSV frozen.**
+
 ## 5. Evidence-status register (programme level)
 
 | Status | Count (paper + programme rows) | Notes |
