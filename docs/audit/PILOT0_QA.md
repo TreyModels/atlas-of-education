@@ -16,6 +16,7 @@
 | spec provenance | payload `spec_sha256=e5ddef6b…` = canonical spec **file at re-pin `46c080d`**; the `846c9e0` git tree's in-tree spec (`35576f…`) is expected old content (lead-confirmed provenance, not a defect) |
 | runner | `runner_sha256=bc833b76…` = the live box runner (v3, 4-regime code; the old 96-run v2 docstring is superseded). **Design-record correction:** any earlier "96 runs / 12 cells" note is wrong for this campaign. |
 | manifest | `MANIFEST_SHA256SUMS.txt` verified here: **17/17 files OK** (payload + 16 ckpts); `MANIFEST.txt` sha256 `81e6d6db…` states the same pins/design/guards and is consistent with the payload |
+| canonical bundle | `~/neon-boot/qa/incoming/paperC_results_bundle.tar.gz` sha256 **`ec868a57af2ad2a5e33a9b028baadad64e4caab18218b53e7d5e237129a4fb0b`** (33,095 B), extracts to `results/` with 18 files (payload + 16 ckpts + `MANIFEST_SHA256SUMS.txt`); **all 18 hashes equal the validated extracted directory** (only `MANIFEST.txt` is directory-only, added outside the bundle). The Commander's `14567f66…ac06` tar is an **independent re-gzip of the identical directory** — recorded as informal re-compression, **not** a second bundle; validation from the extracted directory stands. |
 
 ## 1. Mechanical checks (`docs/audit/pilot0_qa.py`, run against the copied bundle)
 
