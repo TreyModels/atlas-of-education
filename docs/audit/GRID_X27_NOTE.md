@@ -49,3 +49,11 @@ Runs after Pilot-0 completes.
 with the X-27 primary/secondary artefacts). The run first completed 1,280/1,280 rows, aggregation crashed on the
 arch-filtered exploratory block (`KeyError: 'bar'`) — fixed by making the exploratory dict arch-aware; **re-aggregation
 only, no simulation re-run**.
+
+## Runner defect log (methods note) — four silent/fatal bug classes found in campaign code
+
+1. **fee-event no-op** (runner passed simulation index as calendar year; engine now validates unreachable events; fixed `846c9e0`).
+2. **seed-0 hardcode** in the multi-seed Jacobian evaluator (all columns silently seed 0; fixed + per-seed cache keys).
+3. **missing module-level `import numpy as np`** in the gate-grid aggregator (`NameError` after 5,632 runs; fixed + `--aggregate-only` path).
+4. **arch-restricted post-processing crash** (`KeyError: 'bar'` after the JSON write in an `--archs contest` run; fixed by making the exploratory/printing block arch-aware). Also `metadata.elapsed_seconds=0.0` on aggregate-only re-runs is now recorded as `null` + `aggregation_only=true` (metadata defect, did not affect the adjudicated 1,280/40-cell numbers).
+Lesson: aggregation/post-processing must be exercised on restricted-arch and resume/aggregate-only paths before a campaign launch; loud failure after the main artefact is still a defect.
