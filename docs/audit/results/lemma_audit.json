@@ -7,7 +7,7 @@
  },
  "ledger": {
   "path": "docs/audit/LEMMA_LEDGER.csv",
-  "sha256": "3e9dbbc188a4309156310bd0696967261e11d0f2243c66c4da53daa4144e1287",
+  "sha256": "840945ffcef2698cdc1093b145e0d9b902a7af44f6f8d4af3ab031205e755940",
   "rows": 132,
   "unique": 132
  },

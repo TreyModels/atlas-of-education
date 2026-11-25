@@ -21,7 +21,10 @@ Rules:
 """
 import argparse, csv, hashlib, json, os, re, sys
 
-DECL_RE = re.compile(r'^\s*(?:@\[[^\]]*\]\s*)*(theorem|lemma|def|abbrev|structure|instance)\s+([A-Za-z0-9_\.\']+)')
+DECL_RE = re.compile(r'^\s*(?:@\[[^\]]*\]\s*)*(?:noncomputable\s+)?(theorem|lemma|def|abbrev|structure|instance|inductive)\s+([A-Za-z0-9_\.\']+)')
+NS_RE = re.compile(r'^\s*namespace\s+([A-Za-z0-9_\.\']+)\s*$')
+SEC_RE = re.compile(r'^\s*section(?:\s+[A-Za-z0-9_\.\']+)?\s*$')
+END_RE = re.compile(r'^\s*end(?:\s+([A-Za-z0-9_\.\']+))?\s*$')
 CLAIM_ID_RE = re.compile(r'^[A-Z]{1,3}-\d{1,3}$')
 SORRY_RE = re.compile(r'\bsorry\b')
 LEAN_BLOCK_SPLIT = re.compile(r'\{\s*claimId\s*:=')
@@ -59,10 +62,32 @@ def parse_lean(lean_dir):
     for f in lean_files(lean_dir):
         raw = open(f, encoding='utf-8', errors='replace').read(); texts[f] = raw
         code = strip_comments(raw)
+        # bridge/ holds the executable witness program (tested by the 22/22 differential bridge), not part
+        # of the Atlas library; exclude its helper defs from the declaration/proof-status mapping.
+        in_bridge = '/bridge/' in f.replace('\\', '/')
+        stack = []          # list of ('namespace', name) / ('section', None)
         cur = None
         for ln, line in enumerate(code.splitlines(), 1):
+            mns = NS_RE.match(line)
+            if mns: stack.append(('namespace', mns.group(1))); continue
+            if SEC_RE.match(line): stack.append(('section', None)); continue
+            mend = END_RE.match(line)
+            if mend and stack:
+                want = mend.group(1)
+                # pop the nearest matching namespace if a name is given, else the top construct
+                if want:
+                    for k in range(len(stack) - 1, -1, -1):
+                        if stack[k][1] == want: stack = stack[:k]; break
+                    else: stack.pop()
+                else: stack.pop()
+                continue
             m = DECL_RE.match(line)
-            if m: cur = m.group(2); decls.setdefault(cur, []).append(dict(file=f, line=ln, kind=m.group(1)))
+            if m and not in_bridge:
+                ns = [n for kind, n in stack if kind == 'namespace' and n]
+                simple = m.group(2)
+                qual = '.'.join(ns + [simple]) if ns else simple
+                cur = qual
+                decls.setdefault(qual, []).append(dict(file=f, line=ln, kind=m.group(1), simple=simple))
             if SORRY_RE.search(line): sorries.append(dict(file=f, line=ln, decl=cur, code=line.strip()))
     return decls, sorries, texts
 
@@ -109,7 +134,7 @@ def main():
         rows = [r for r in lrows if r['claim_id'] == cid]
         if len(rows) != 1: multi_row.append((cid, len(rows))); continue
         r = rows[0]; names = re.findall(r'[A-Za-z0-9_\.\']+', r.get('lean_declaration', ''))
-        resolved = [n for n in names if n in all_decl_names]
+        resolved = [n for n in names if n in all_decl_names or any(q.endswith('.' + n) for q in all_decl_names)]
         if resolved: continue           # declaration group exists (>=1 declaration)
         if is_notyet(r): continue       # explicit not-yet entry with status/kind/note
         missing_decl.append(cid)
@@ -155,6 +180,26 @@ def main():
     out['declared_but_notyet'] = bad_status
     chk('R7', not bad_status, f'declared rows with notYetLemmatised status={bad_status} (status/declaration inconsistency)')
     # QA note: declaration-with-notYet status is internally inconsistent (reported, not silently passed)
+    # R8: proof-status table coverage (if present) — every Lean declaration has exactly one row,
+    # compiled=yes, sorry_free=yes, axioms only ''/propext; report missing/extra/duplicate/bad.
+    ps_candidates = [os.path.join(os.getcwd(), 'docs/audit/LEAN_PROOF_STATUS.csv'),
+                     os.path.join(os.getcwd(), 'docs/audit/results/LEAN_PROOF_STATUS.csv')]
+    ps_path = next((x for x in ps_candidates if os.path.exists(x)), None)
+    if ps_path:
+        ps_rows = list(csv.DictReader(open(ps_path)))
+        ps_ids = [r['declaration'] for r in ps_rows]
+        ps_dup = sorted({i for i in ps_ids if ps_ids.count(i) > 1})
+        lean_ids = set(all_decl_names); ps_set = set(ps_ids)
+        missing_ps = sorted(lean_ids - ps_set); extra_ps = sorted(ps_set - lean_ids)
+        bad_status = [r['declaration'] for r in ps_rows
+                      if str(r.get('compiled', '')).lower() != 'yes' or str(r.get('sorry_free', '')).lower() != 'yes'
+                      or str(r.get('axioms', '')).strip().lower() not in ('', 'propext')]
+        out['proof_status'] = dict(path=ps_path, rows=len(ps_rows), duplicate_ids=ps_dup,
+                                   missing=[missing_ps[:10]], extra=[extra_ps[:10]], bad=bad_status[:10])
+        chk('R8', not (ps_dup or missing_ps or extra_ps or bad_status),
+            f'proof-status rows={len(ps_rows)} vs Lean declarations={len(lean_ids)}; dup={ps_dup[:5]} missing={missing_ps[:10]} extra={extra_ps[:10]} bad={bad_status[:10]}')
+    else:
+        chk('R8', None, 'LEAN_PROOF_STATUS.csv not found — coverage check skipped')
     if a.json_out:
         os.makedirs(os.path.dirname(a.json_out), exist_ok=True); json.dump(out, open(a.json_out, 'w'), indent=1)
     print(json.dumps(out, indent=1))
