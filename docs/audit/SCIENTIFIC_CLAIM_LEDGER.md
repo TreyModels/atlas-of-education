@@ -456,3 +456,14 @@ analysed/stopping source). Attestation no outcome values read before freeze. **A
 on completion report T2/T3 Holm m=2 α=.05 with achieved CI/MDE under A5 interim precision, T2 proxy/range caveats, T3
 assertion support, T1/T4 screening failures, no S-generalisation; no confirmatory number cited yet.**
 
+**CLEAN A5 RUN PLAN CONFIRMED (with two provenance reconciliations).** Overrun run killed 07:33; clean `confirm_a5`
+started 07:34 (PID 2273, workers 6, seeds 100–115, 6 passers, N=1500/T=46, out-dir confirm_a5) with committed runner
+`ddeffe42…`@`1b3a510`; driver aggregates with committed code; stop16/snap8 stood down; old `confirm_final` not used.
+Duplicate A5 `PAPER_C_A5_16SEED_TRUNCATION.*` (`94d1d5be…`/`e6253c6d…`, commit `b825796`) **SUPERSEDED**; canonical A5 =
+`aa1d0bd` rule `36515596…` (current doc `f1916573…`; diff aa1d0bd→HEAD = appendices only, rule unchanged); manifest
+`0b70c105…` corrected. **Two reconciliations before analysis/report:** (1) manifest `launch_observed` still records old
+overrun `confirm_final` (PID 1364, workers 10, analysis-commit 8121bf6) — update to clean `confirm_a5` (PID 2273,
+workers 6, seeds 100–115) and mark old run killed/abandoned, no outcomes used; (2) clean run's `--analysis-commit
+b825796` is the superseded duplicate A5 — final artefact/manifest must cite canonical A5 (`aa1d0bd`/`36515596…`,
+adjudication `1c51f17`) with a mapping note; b825796 not authoritative. **No confirmatory number cited.**
+

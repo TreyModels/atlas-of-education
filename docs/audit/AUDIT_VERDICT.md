@@ -1268,6 +1268,27 @@ non-inferential** (crash insurance only; must not be analysed or used for stoppi
    `7512c7f5…`/`ecb02ad` appended only). **8-seed snapshot is non-inferential** (crash insurance only; not analysed, not
    a stopping source). Attestation (no per-cell outcome values read before freeze) recorded.
 
+**CLEAN A5 RUN PLAN — CONFIRMED (with two execution-provenance reconciliations).** Lead killed the overrun run at
+07:33 and relaunched a **clean A5 run** (`confirm_a5`, started 07:34, PID **2273**, `--workers 6`, `--seeds 100–115`,
+6 frozen passers, N=1500/T=46, out-dir `/root/work/paperC/confirm_a5`) using the **committed runner
+`ddeffe42…`@`1b3a510`**; the **driver itself aggregates** with committed code; `stop16.sh`/`snap8.sh` are stood down and
+the untracked/committed external aggregator is not the production path; the old overrun `confirm_final` is killed and
+must not be used. Duplicate A5 `PAPER_C_A5_16SEED_TRUNCATION.*` (sha `94d1d5be…`/`e6253c6d…`, commit `b825796`) is
+**SUPERSEDED**; canonical A5 = `aa1d0bd` rule sha `36515596…` (current doc `f1916573…` = rule + execution/provenance
+appendices only; `git diff aa1d0bd HEAD` verified no rule changes; manifest `0b70c105…` cites the canonical rule and
+corrected uncertainty/A5/wall).
+
+**Two reconciliation items remain (do not block the run; must be in the final artefact/manifest before analysis):**
+1. **Manifest `launch_observed` still records the old overrun run** (`confirm_final`, PID 1364, workers 10,
+   `--analysis-commit 8121bf6`). It must be updated to the clean `confirm_a5` run (PID 2273, workers 6, seeds 100–115,
+   clean out-dir) and mark the old run **killed/abandoned, no outcomes used**.
+2. **Clean run cites `--analysis-commit b825796`** — the **superseded duplicate A5** commit. The final artefact/manifest
+   must cite the canonical A5 (`aa1d0bd`/`36515596…`, adjudication `1c51f17`) and record a provenance note mapping
+   `b825796` → canonical A5 (same rule, duplicate superseded); `b825796` must not be presented as authoritative.
+
+**Status: clean A5 run CONFIRMED; aggregation path satisfies the holds; two provenance reconciliations required before
+analysis/report; no confirmatory number cited yet.**
+
 **Status: aggregation AUTHORIZED on seeds 100–115 only; on completion pull/hash-verify and report T2/T3 Holm m=2 α=.05
 results with achieved CI/MDE under A5 interim precision; T2 proxy/range caveats; T3 assertion support; T1/T4 screening
 failures; no S-generalisation; no confirmatory number cited yet.**
