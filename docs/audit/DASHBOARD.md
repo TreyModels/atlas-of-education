@@ -142,3 +142,14 @@ sha256. Code edits only on the Mac worktree, never on the box.
   serial=repeat=chunksize1=chunksize4=shuffled bit-identical, QA_WORKERS=4 (commit 5f72ef0;
   refreshed baseline still 7F/12P/8xfail in 6.41 s). contest-math committed 47f6bd0 (68-test validation record +
   legacy `1−exp(−λx^r)` approximation-error study). No Phase-B engine commit yet.
+
+- 2026-11-25T14:48+08:00 · Commander · **Gate 1c CLOSED (contest-math) + Lead pushed branch public.** contest-math
+  delivered `1a6f3d5` (deterministic `pl_win_probs`: exact subset DP n≤20, deterministic Poisson-binomial /
+  exponential-race quadrature n>20, seat-sum ΣP=seats hard-checked; `pl_realize` deterministic; 68-test suite) and
+  `47f6bd0` (`CONTEST_MATH_VALIDATION.md`, `CONTEST_MATH_APPROX_ERROR.md`: 1-exp(−λx^r) approximation error
+  misleading up to 7.7 pp in the 5×-effort/5 %-seat tail; mean-only reconciliation cannot detect D2 — use
+  distributional checks). engine-core imports the module (`core.py` L24/L447, `tutoring.py` L341 in the in-progress
+  tree). Master `docs/audit/TEST_REPORT.md` written with the BEFORE column and the (still empty) AFTER plan.
+  Lead pushed `research/contest-audit-v2-2026-11-25` public (packet `b3ca85d`); pushes on this branch approved.
+  Box: legacy 1080-sim still live (8 workers on the 10-CPU cgroup) — our freeze remains; declared-stack venv
+  still installing (scipy 37.7 MB on the slow mirror). Gate 1a/1b Phase B still uncommitted.
