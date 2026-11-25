@@ -195,3 +195,152 @@ export PYTHONPATH="$PWD/engine"
 ```
 
 Companion document: `docs/audit/CONTEST_MATH_APPROX_ERROR.md` (legacy `1−exp(−λx^r)` vs exact PL).
+
+---
+
+# Part B — P0-06: general-r Tullock contest validation and retirement of the archived 2,000-point toy surface
+
+**Lane:** `contest-math` (P0-06 of the external GPU-bundle audit; task-9). **Date:** 2026-11-25.
+**Deliverables:** this addendum + `docs/audit/code/tullock_general_r.py` (sha256
+`d2098a8`-lineage, final `66abc13`) + `docs/audit/code/tullock_general_r_results.json`
+(sha256 `2b054dcceab8c4091038ac01d745460e19d149b3734c025e56c269764c7b67c0`).
+**Evidence class:** deterministic numerical validation of a reduced contest model — not an empirical or
+calibration claim. The archived GPU surface remains `AUTHOR-REPORTED` / `QUARANTINED`; nothing below cites it
+as evidence.
+
+## B.1 The archived solver, and the general-r problem
+
+Archived code (`gpu_bray_abc_and_contest_surface_6param.py` L151–169, frozen):
+
+```python
+A   = clamp(1/S - 1, min=0.05) * (x0 + e_bar)          # rival mass in x units (r = 1 convention)
+e_i = sqrt(r * dV * A * y_i / p) - A - x0               # "closed form"
+```
+
+For `P_i = x_i^r / (x_i^r + A)` with `x_i = x0 + e_i` and utility `U_i = V_i·P_i − c_i·e_i`, the interior
+first-order condition is
+
+```
+∂P_i/∂e_i = V_i · r · A · x^{r−1} / (x^r + A)^2 = c_i .
+```
+
+Only `r = 1` has a closed form (`x = sqrt(V A / c) − A`). The archived expression is that r=1 solution with the
+prize multiplied by `r` and with `A` in *x* units; it is **not** the general-r best response. For `r ≠ 1` the
+FOC must be solved numerically.
+
+**Symmetric-equilibrium anchor (derived here, new).** Imposing `A = (n−1)x^r` and `P = 1/n`:
+
+```
+V · r · (n−1) x^r · x^{r−1} / (n x^r)^2 = c   ⇒   x* = r V (n−1) / (n² c)   (for every r > 0).
+```
+
+This closed form is used only to validate the numerical optimizer. It also explains a **nuance**: the archived
+solver's *symmetric fixed point* coincides exactly with `x*` (verified to 0.0e+00), so the archived *level* in
+symmetric equilibrium is accidentally right. What is wrong is the **individual response function** under
+heterogeneity and asymmetric rival mass.
+
+## B.2 Validated general-r optimizer
+
+`best_response_tullock(A, V, c, r, x0, e_hi)`: scans the FOC for sign changes on a log grid, bisects every
+bracket, and chooses the utility argmax among all roots and the two corners (`e=0`, `e=e_hi`) — valid when the
+payoff is non-concave (`r > 1` gives multiple roots; a single-root bisection would silently return a local
+point). Diagnostics per call: corner type, root count, FOC residual, iterations.
+
+| validation (40 random `(A,V,c,e_hi)` per r ∈ {0.8,1,1.5,2.5}) | result |
+|---|---|
+| max \|e_FOC − e_dense-grid\| | 1.27e-04 (grid spacing 3.0e-04) |
+| max utility loss vs dense grid | 2.08e-09 |
+| max interior FOC residual | 2.22e-16 |
+| r=1 vs closed form `sqrt(VA/c) − A` | 0.00e+00 |
+| `|FOC(x*)|` at derived symmetric anchor | ≤ 5.55e-17 |
+| r>1 non-concavity: at `x* > x0` the **global** best response is the `e=0` corner | **5 of 24** anchor cases |
+
+The last row is substantive: for high discrimination and low price the symmetric interior point is only a local
+FOC point; there is no symmetric pure-strategy equilibrium in those cells, and the archived smooth closure
+cannot represent them.
+
+## B.3 What the archived closed form does and does not support
+
+Same rival weight mass, heterogeneous incomes (`y ~ lognormal`), `r ∈ {0.8,1.5,2.5}`:
+
+| r | max \|e_correct − e_archived\| | mean utility loss | max utility loss |
+|---|---|---|---|
+| 0.8 | 0.622 | 0.0002 | 0.0018 |
+| 1.5 | 0.874 | 0.0016 | 0.0095 |
+| 2.5 | 2.679 | 0.0246 | 0.1621 |
+
+So: (i) in *symmetric* equilibrium the archived level equals `x*` (coincidence, B.1); (ii) away from symmetry —
+which is where effort heterogeneity lives — the archived response is wrong by up to ~2.7 effort units and loses
+up to 0.16 utility per child at r=2.5; (iii) it has no corner logic, no convergence diagnostics, and depends
+only on `r·ΔV/p` (B.7).
+
+## B.4 Benchmark against the engine's exact Plackett–Luce module
+
+* **Seats = 1:** the single-prize Tullock law `w_i/Σw` equals exact PL top-1 to **1.1e-16** for n ∈ {5,8,12}
+  across the r-grid — the single-prize reduction is exact there.
+* **Seats = K > 1:** the single-prize imputation `w_i/Σw` is a biased approximation of exact PL top-K
+  (n=10, r=1.5): max/mean absolute bias `0.231/0.100` (K=2), `0.407/0.200` (K=3), `0.533/0.300` (K=4),
+  `0.617/0.400` (K=5). The corrected surface therefore uses **exact PL top-K admission probabilities** (the
+  engine module), not the single-prize reduction, and labels the reduction error.
+
+## B.5 Capacity clearing, fee and universal admission
+
+Capacity: `seats = max(round(share × denominator), 1)`, `seats_eff = min(seats, n_cand)`, denominator explicitly
+`applicants` or `cohort`; universal branch when `seats ≥ n_cand` (`⇒ P=1`, `e=0`). Verified on the diagnostic
+contest (n_cand = 6): seats 1,2,3,4,5,6 for share 1/6…1; universal at share 1.0 (12/12 such cells have `P=1`
+exactly and spend exactly 0). **`Σ_i P_i = seats_eff` for every one of the 72 surface cells** (exact PL
+identity). A **fee** `f` reduces the household cash budget for contest effort,
+`e_hi = min(e_cap, max(0, κ·y − f)/p)`; fee abolition is `f=0`. Measured H2 fee×scarcity interaction (change in
+the mean spend-vs-seats gradient when the fee is introduced): **+0.0053** (r=1.5, p=0.16) and **+0.0010**
+(r=0.8, p=0.16) — small but non-zero, i.e. the corrected solver makes the H2 boundary testable in principle.
+
+## B.6 Corrected diagnostic surface and the "100 % paradox"
+
+72 cells: r ∈ {0.8,1,1.5,2.5} × p ∈ {0.05,0.16,0.30} × S ∈ {1/6,…,1} (seats 1…6), exact-PL equilibrium,
+Gauss–Seidel fixed point with warm start. **Convergence flags: 71/72 converged** (1 unresolved cell flagged and
+excluded from qualitative conclusions); capacity-clearing identity holds in every cell.
+
+Spend (price × mean effort) by seat share — the descending arm and the universal-admission zero are now visible:
+
+| r | p | S=0.17 | 0.33 | 0.50 | 0.67 | 0.83 | 1.00 |
+|---|---|---|---|---|---|---|---|
+| 0.8 | 0.05 | 0.100 | 0.127 | 0.151 | 0.153 | 0.090 | 0 |
+| 1.0 | 0.16 | 0.100 | 0.132 | 0.146 | 0.129 | 0.060 | 0 |
+| 1.5 | 0.16 | 0.132 | 0.147 | 0.176 | 0.197 | 0.099 | 0 |
+| 2.5 | 0.16 | 0.132 | 0.169 | 0.202 | 0.231 | 0.117 | 0 |
+
+**Retirement of the toy claim.** The archived surface sampled only `S ∈ {0.12,…,0.50}` — the rising arm. On the
+corrected model restricted to `S ≤ 0.50`, `dSpend/dS > 0` in **100 %** of adjacent steps too; extending `S` to
+1 reveals the descending arm and universal admission, and the positive share falls to 0.52 overall while the
+spend path becomes an **inverted-U ending at 0**. The archived **"100 % Seat-Expansion Paradox" is therefore a
+truncation artefact of the S-grid, not a paradox** — the corrected, capacity-clearing, exact-PL model is
+consistent with an inverted-U. Cell-wise convergence and seat-sum counts are in the results JSON.
+
+## B.7 Structural independence of the archived grid
+
+The archived solver depends only on the ratio `r·ΔV/p`: `(r,p)=(0.8,0.10)` and `(1.6,0.20)` give **identical**
+`e_bar` (|diff| = 0.0e+00). Hence the 20×20 `(r,p)` design probes a 1-D `r/p` sweep crossed with `S`: the design
+has rank 2 (`r/p`, `S`), not 3 (`r`, `p`, `S`) — `r` and `p` are structurally inseparable in the toy. The
+corrected exact-PL model separates them: same-ratio pairs give different spends, e.g.
+`(0.5,0.05)→0.0978` vs `(1.0,0.10)→0.1438` (|diff| 0.046) and `(1.5,0.16)→0.1472` vs
+`(2.5,0.2667)→0.1695` (|diff| 0.022); when the cash budget binds everywhere the separation vanishes
+(`(1.0,0.16)` vs `(2.0,0.32)`, both 0.1317), which is correctly reported rather than hidden.
+
+## B.8 Reproduction, hashes, limits
+
+```bash
+cd /Users/treymenefee/neon-boot/wt4/auditv2
+OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 OMP_NUM_THREADS=1 PYTHONPATH="$PWD/engine" \
+  /Users/treymenefee/neon-boot/venv/bin/python docs/audit/code/tullock_general_r.py
+```
+
+Box replication (declared-stack x86, 1 process, `nice -n 10`, BLAS/OMP=1, 10-CPU cgroup,
+`/root/miniconda3` Python 3.10.8 / NumPy 1.24.1, read-only deploy from commit `66abc13`): exit 0, wall 250.7 s;
+results JSON sha256 `2b054dcc…7c0c0` (identical on host and box); box log sha256 `aa8b4bb0…f9e65`. Host was
+heavily loaded by other lanes during this window, so wall times are not used as performance evidence here.
+
+**Limits.** This is a reduced diagnostic contest (n_cand=6, single cohort, lognormal income, cash/fee
+abstraction), not the engine and not a calibration; exact PL is used for n ≤ 12 and the surface is small by
+design (sequencing gate: no full-scale experiment). The archived r=1 closed form is *not* validated for general
+r — its symmetric level coincides with the correct general-r level only in symmetric equilibrium, and its
+individual response is quantitatively wrong for r ≠ 1. No GPU/ABC conclusion is cited or promoted.
