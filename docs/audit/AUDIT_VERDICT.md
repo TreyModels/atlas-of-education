@@ -705,6 +705,112 @@ uncalibrated; seed-MC only) — **explicitly NOT VALIDATED**. X-27 is closed on 
 (`bce3da36…`; identical numbers, diff 0.0); the **X-29 admission-rate diagnostic gap remains open** (diagnostic-only
 rerun planned after Pilot-0) and stays attached to the X-27 record as a declared deviation, not a model failure.
 
+## 4L. Paper C confirmatory pre-registration — FOUR-CRITICISM REVIEW (**CONDITIONAL; amendments required before preregistered-final**)
+
+Draft: `docs/audit/PAPER_C_CONFIRMATORY_PREREG.md` sha256
+`10406a33dcc8bbd51392907291950ceaf96e02a9196c34424f7f5ffef8e94bf7` (commit `2e69339`). Design-only; **no compute
+authorized**; Pilot-0 v3 (128 runs) is correctly declared **EXPLORATORY** and excluded from confirmatory evidence. The
+design is materially better than the Paper B-generation specs (explicit factors, one-primary-per-test intent, binding
+assertions, contamination declarations, MDE/indeterminate rules, evidence layering, compute cap). **It is not yet
+preregistered-final**; the following must be amended.
+
+**BLOCKING (must be fixed before preregistration-final):**
+1. **The 36-cell appendix table is missing.** §1 promises "cells declared in the appendix table" but the file has no
+   appendix; the six private-supply configurations, the pay_ratio/monitoring pairing, gate kind(s), `contest_r`
+   placement and per-cell seeds are not enumerated. Without it "no post-hoc cells" cannot be audited. Attach the full
+   36-row table (S, L/gate kind, own_ban, firm_ban, pay_ratio, monitoring, contest_r, seeds, expected assertions).
+2. **One primary outcome per test is violated in T3 and T4.** T3 lists "withheld `h` and `own_share`"; T4 lists
+   "Q5−Q1 spend gap / participation". Pick exactly one primary per test; move the other to a pre-declared secondary
+   family with Holm or mark exploratory. (T1 and T2 already have one each.)
+3. **T4 overclaims "positional but not via learning."** The design does not use `contest_prep_mode='learning'` and T5
+   is declared wave-2/not-testable; therefore T4 can only show that gate pressure raises the gap/participation, **not**
+   that the channel is positional rather than learning. Rewrite T4 as "gate pressure raises Q5−Q1 spend gap (or
+   participation), consistent with positional demand; the positional-vs-learning decomposition is not testable in this
+   design (T5 wave-2)".
+4. **Two-stage screening→confirmatory selection is not handled.** "N=1500 confirmatory only for cells passing
+   screening (|effect| ≥ min effect)" selects on the observed effect → winner's-curse/conditional bias. Amend either
+   (a) run **all 36 cells** at confirmatory N (recompute cost), or (b) pre-declare **disjoint seeds** (screening 0–7,
+   confirmatory e.g. 8–23), a fixed pass rule and an explicit "screening-confirmation, selection acknowledged"
+   label; do not present a selected subset as independent confirmation.
+5. **The four Codex criticisms are only in the covering message, not in the prereg.** Add an explicit section: (i) no
+   identification/rank claim (the 4θ map and 6-param ABC rank-4/6 are recorded elsewhere and not addressed); (ii)
+   grade×urban cell counts reported as a **design check only** (no empty cell enters an estimator); (iii) seed-MC
+   uncertainty only, no pooled/FE selftest claim; (iv) no permutation inference/country blocking.
+6. **T1 is not a clean S-substitution test.** `q0` scales **both** public and private school quality (the prereg says
+   so); therefore the T1 contrast is a **quality-bundle** effect, not public school provision S. Rename/qualify T1
+   ("q0 quality-bundle substitution; cannot isolate public-only S") or add a public-only lever (not available; wave-2).
+   The −3 pp minimum effect also needs a power justification.
+7. **T2/T3 contrasts and `own_share` definition are underspecified.** T2 must state the exact cells (e.g., own_ban=0,
+   pay_ratio=.55, monitoring=.2, same S/L, firm_ban .9 vs 0) and the `own_share` formula/denominator; the declared
+   mixing of contest-prep with firm tutoring must be carried into the estimand (or a clean `tut_own_by_grade`-based
+   robustness check). T3's "vs market-only" is near-trivial because market-only has own_ban=.95 (own_share≈0 by
+   construction); use a meaningful control (own-open, withholding off, pay_ratio=1.2) and treat h>0/own_share>0.1 as
+   **binding assertions, not outcomes**.
+8. **Provenance/stop rules missing:** freeze and commit the runner **before launch** and record runner/engine/spec
+   hashes in every output; commit the analysis script; pre-declare exclusion rules, assertion-failure handling (invalid
+   cell reported, not silently dropped), stopping rules, and confirmatory seed disjointness.
+
+**RECOMMENDED (amend before final, not necessarily blocking):**
+9. Pre-declare **power/MDE per test** (T1 −3 pp, T2 +0.10, T4 threshold) at 8-seed screening and 16-seed confirmatory;
+   otherwise screening is directional/descriptive only.
+10. Pre-declare secondary outcome families and their Holm/exploratory labels (currently only "all other outcomes
+    secondary/exploratory").
+11. Clarify **L**: which gate (G6→G9 share vs bar-threshold pair) and where `contest_r ∈ {1.2,1.6}` sits (separate
+    factor → grid size changes; fixed → justify).
+12. Declare the **4 regime anchors'** role, seeds and compute (not used in T1–T4); recalibrate the ≤7 CPU-h envelope
+    with Pilot-0 measured costs before launch.
+13. Tag evidence status **D/L/V** for PISA 2022 ST297, SEA-PLM 2024 PA18A–D, CIEFR-HS/CEPS/CFPS; keep the empirical
+    leg feasible-partial (participation only) and withholding/S/learning theory-only. X-29 diagnostic rerun separate.
+14. Add "no result means the model is wrong" wording (holds/fails/indeterminate-by-context) and negative-result
+    preservation explicitly to the prereg body, not just the checklist.
+
+**Verdict: CONDITIONAL APPROVAL — not cleared for preregistered-final.** No confirmatory compute until (a) these
+amendments land, (b) the four-criticism section is in the file, and (c) Codex's protocol/Kaplan confirmation arrives.
+The design's core (orthogonal factors, one-primary intent, binding assertions, seed-MC, evidence layering) is sound.
+
+## 4M. Lean verification track — **methods artefact (X-30); the engine is NOT formally verified**
+
+Artefacts: commit `4d42101`; `docs/audit/LEAN_VERIFICATION_SCOPE.md` sha256
+`9f31108e496fdc3ac9509547ea388128d156188df9b0540c486d4406d1d3f23c`; `LEMMA_LEDGER.csv` sha256
+`da956fc1e1d3a3ff18c31c98cf30f8dcd5d5c8817fab2ed55b2f0f55f5617df5`; `LEMMA_LEDGER.md` sha256
+`f8be23a7da854d6b52489e63c7c765be5ccb7ed7c025c2640ccae9639d875c33`; baseline
+`LEMMA_LEDGER_BASELINE.json` `b777b93f…`.
+
+**Answer to "can we run everything against Lean?" — NO, and claiming so would be false.** The scope doc is explicit:
+
+* **Tier 1 (recommended and prototyped):** accounting identities, budget/teacher-salary ledger, seat-share
+  denominators, prep-stock recursion, tax/resource ledger, gate accounting, and the **inventory/omission lemmas**
+  (each Paper D omitted channel M1–M5 as a *definitional invariance* theorem of the classical demand equation).
+* **Tier 2 (conditional on CI Mathlib):** general-n Plackett–Luce top-K identities. **Mathlib is not installed on this
+  host** (multi-GB cache/oleans, not viable against the free disk/RAM); Tier 2 is **CI-only**. The n=2 symbolic seed is
+  done.
+* **Tier 3 (NOT Lean-provable as theorems):** float32 numpy numerics, DID/bootstrap *inference*, the 5,632-run outputs,
+  and empirical claims about the world. These are **computations/data claims, not theorems**; they stay
+  reproducible-artifact evidence under hashes and tests.
+* **Architecture:** Lean-verified reference mathematics + differential tests + reproducible artefacts. **That is not
+  "the engine is verified".** Theorems are about the model objects; empirical claims are `EmpiricalClaim` records with
+  artifact hashes, never asserted as theorems. **Unproved ≠ false; empirical ≠ theorem.**
+
+**Prototype (measured, Lean 4.36.0; `lake build` 12 jobs ~2 s, 0 `sorry`, `#print axioms` PASS):** proved
+`budget_ledger_identity`, `tax_revenue_le_base`, `seat_count_positive`, `prep_recursion_closed_form`; finite PL n=2
+(`pl_top1_sum_eq_denom/_min`, `pl_topK_selected_sum`); Kind-3 `decide` lemmas for the **A-34 tolerance, A-38
+infeasibility, B-41/B-42 Win–Win accounting cells**; **five omission/independence lemmas**
+`classical_demand_ignores_{school_supply, positional_seats, withholding, time_budget, supply_form}` (Paper D M1–M5)
+plus `D02_paradox_not_universal` counterexample. **LEMMA_LEDGER:** 130 rows (18 declared + 112 NOT-YET) frozen to the
+130-row CSV baseline `f2ce655e…`; differential Lean↔Python bridge **9/9 exact fixtures**; CI hook (`lake build`,
+comment-aware `sorry` scan, axiom allow-list, 18/18 claim-id check) PASS. **Note:** the CSV has since grown
+(X-27 closure + Paper C/C-05 + X-30) — the ledger must be **re-baselined** to the current CSV before the CI hook is
+cited as current.
+
+**Install provenance (honest):** elan 4.4.0 → Lean `v4.36.0` via the GitHub release mirror because the default CDN
+measured **70 B/s**; 608.4 MiB download, **~23 min** install window, **3.0 GiB** unpacked, disk 12 → 8.9 GiB free;
+**Mathlib not installed** (multi-GB, not viable on this Mac) — Tier 2 is CI-only.
+
+**Significance for Paper D:** "the classical demand equation provably ignores school supply S / positional fixed seats /
+withholding / time budgets / supply form" is now a **machine-checked invariance statement**, not rhetoric — strong
+support for the omission lemma (M1–M5). It does **not** show the omissions are empirically important (that is the
+D-tests' job) and it carries the Tier-3 disclaimer.
+
 ## 5. Evidence-status register (programme level)
 
 | Status | Count (paper + programme rows) | Notes |
@@ -715,10 +821,10 @@ rerun planned after Pilot-0) and stays attached to the X-27 record as a declared
 | VALIDATED SIMULATION | **4** (1 A, 3 programme) | **A-39 item (d) local identifiability (stop gate met with declared restriction)**; engine/PL module validation, corrected DGP design, bootstrap size/power |
 | AUTHOR-REPORTED | **44** (20 A, 18 B, 6 programme) | **AUTHOR-REPORTED BASELINE**: the 420 generation, the Paper A Exp 1/3/4/5 legacy numbers, the author JSON bundle; not results, not reproduced, not to be silently replaced |
 | CONTRADICTED | **33** (8 A, 14 B, 11 programme) | only where committed code/algebra/measured audit output refutes the claim; includes the 100 % paradox, invalid E1/Q3, legacy DGP, "published benchmark" attributions, and the Paper B policy reversals |
-| UNRESOLVED | **19** (2 A, 0 B, 17 programme) | A-31 replication inventory; A-36 bulge `t*` (no-effect evidence); Paper C confirmatory prereg (C-04); Paper D omissions/divergences (D-01/D-03) and inventory attribution risk (D-04); Model Zoo D1/D2 + run gate + Pilot-0 provenance (MZ-01…MZ-04); evidence-layer limits (EV-01…EV-04); X-29 (admission-rate diagnostic gap); canonical spec/Gate-2; GPU quarantine |
+| UNRESOLVED | **19** (2 A, 0 B, 17 programme) | A-31 replication inventory; A-36 bulge `t*` (no-effect evidence); Paper C confirmatory prereg (C-04); Paper D omissions/divergences (D-01/D-03) and inventory attribution risk (D-04); Model Zoo D1/D2 + run gate + Pilot-0 provenance (MZ-01…MZ-04); evidence-layer limits (EV-01…EV-04); X-29 (admission-rate diagnostic gap); X-30 (Lean methods artefact — not a scientific claim); canonical spec/Gate-2; GPU quarantine |
 
-The machine-readable one-row-per-claim record is `results/audit/paper_claims.csv` (130 rows; sha256
-`f2ce655eb232a97f3ef5338334c8ed2f2dad953b328ab6a80fe066823c655a40`). The Lead-defined new-generation label **REPRODUCED EMPIRICAL ANALYSIS** is used for the fresh-WDI E8 rows; all
+The machine-readable one-row-per-claim record is `results/audit/paper_claims.csv` (132 rows; sha256
+`96e1685e4a712fb95b86517b84f15c45d20db62048c35da15bfe97959c2eacc0`). The Lead-defined new-generation label **REPRODUCED EMPIRICAL ANALYSIS** is used for the fresh-WDI E8 rows; all
 other rows use the verbatim six-status taxonomy.
 
 ---
