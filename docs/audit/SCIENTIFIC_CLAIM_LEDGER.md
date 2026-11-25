@@ -404,3 +404,12 @@ h(A|P55)≥.05/h(A|P12)≤.01; seed-MC 32 matched seeds; parameter uncertainty z
 S-generalisation**; seeds 100–131, N=1500/T=46, ≤22 CPU-h, 8 workers, 1–2 slot reserve. **Cleared for launch once Lead
 allocates box + reserve confirmed**; separate confirmatory artefact only; no compute launched yet.
 
+**CONFIRMATORY LAUNCH OBSERVED (2026-11-26 ~07:20 CST): manifest FROZEN_APPROVED sha `bf7b7842…` (commit `5f0bfbc`),
+citing adjudication 9506640.** Driver PID 1364; `PAPER_C_STAGE=confirmatory`; P12 pay_gap; seeds 100–131; N=1500/T=46;
+6 frozen `--cells` + `--allow-subset`; `--analysis-commit 8121bf6`; out-dir `/root/work/paperC/confirm_final`; box runner
+`ddeffe42…` = committed `1b3a510`; engine pins `846c9e0`/core `e111397b…`/spec `e5ddef6b…`; screening `6bcc29a5…`
+unchanged. **Capacity deviation:** `--workers 10` vs manifest 8; 1–2 slot reserve not explicitly enforced, but only 6
+cells exist → instantaneous load 6 processes (4 configured workers idle; no external job affected at launch). Capacity/
+protocol deviation only, not estimand change; record actual CPU/wall on completion. ETA 1.5–2 h; on completion pull/hash,
+QA copy, T2/T3 Holm results for adjudication before any claim. **No confirmatory number cited yet.**
+

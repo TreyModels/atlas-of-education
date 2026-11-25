@@ -1182,6 +1182,22 @@ mixing; no clean own-vs-firm spend split) — T2 claims must carry that caveat; 
 L=.45 (P55), not the full 2×2; T3 is the assertion-support test; **T1/T4 screening failures are reportable results, not
 confirmatory findings**; no S-generalisation beyond .85.
 
+**LAUNCH OBSERVED (2026-11-26 ~07:20 CST) — manifest flipped FROZEN_APPROVED.** Manifest sha
+**`bf7b7842e418d5b9e272a866ec0d7d798f824d79c1671829c63ac834cb042499`** (commit `5f0bfbc`), status
+`FROZEN_APPROVED`, citing adjudication `9506640` and the observed box allocation. Launch: driver PID **1364**,
+`PAPER_C_STAGE=confirmatory`, `PAPER_C_P12_MODE=pay_gap`, seeds **100–131**, N=1500/T=46, the 6 frozen `--cells`,
+`--allow-subset`, `--analysis-commit 8121bf6`, out-dir `/root/work/paperC/confirm_final`; box runner sha
+`ddeffe42…` **= committed `1b3a510`** (enforcement verified); engine pins `846c9e0`/core `e111397b…`/spec
+`e5ddef6b…`; screening artefact on disk unchanged (`6bcc29a5…`). **Capacity deviation recorded:** `--workers 10` vs
+manifest's 8 and the 1–2 slot Luna/MASSENG reserve **not explicitly enforced**; only 6 cells exist, so instantaneous
+load is 6 processes (4 configured workers idle; no external job affected at launch). This is a **capacity/protocol
+deviation, not an estimand change** — record actual CPU/wall on completion. ETA 1.5–2 h; on completion the Commander
+will pull/hash-verify, copy to `~/neon-boot/qa/incoming/paperC_confirmatory/`, and send the confirmatory JSON +
+T2/T3 Holm results for adjudication **before any claim**. **No confirmatory number is cited yet.**
+
+**Status: LAUNCH OBSERVED / APPROVED; RESULTS PENDING; pre-launch record remains the adjudication basis.**
+
+
 **Status: CLEARED FOR LAUNCH once the Lead allocates the box and the 1–2 slot reserve is confirmed.** The manifest
 status may then be flipped from `FROZEN_PENDING_ADJUDICATOR_PRELAUNCH_RECORD` to frozen/approved. The run must report
 PID/ETA/hashes and write a **separate** confirmatory artefact (`paperC_confirmatory.json` + per-cell checkpoints + run
