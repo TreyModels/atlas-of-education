@@ -626,7 +626,12 @@ def _dispatch(weights, seats, method, rng, n_mc):
     # exact weight bytes and seats, so a hit returns bit-identical probabilities.
     cache_key = None
     if method in ("auto", "exact") and 0 < seats < n:
-        cache_key = (int(seats), w.tobytes())
+        if method == "exact" and n > EXACT_MAX_N:
+            raise ValueError(
+                f"exact subset DP supports n <= {EXACT_MAX_N}; got n={n}. "
+                "Use method='auto' (deterministic quadrature) or method='mc'."
+            )
+        cache_key = (method, int(seats), w.tobytes())
         hit = _RESULT_CACHE.get(cache_key)
         if hit is not None:
             _STATS["result_hit"] += 1
