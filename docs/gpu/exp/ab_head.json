@@ -1,0 +1,54 @@
+{
+ "HK": {
+  "arm_id": "Baseline",
+  "contest_e_mean": "0x1.5dce383477ecdp-5",
+  "elite_q5_share_pct": "0x1.937a6f4de9bd3p+4",
+  "g12_pct": "0x1.8a4924924924ap+5",
+  "jurisdiction": "HK",
+  "k12_rate_by_q": [
+   "0x1.334d34d34d34ep+5",
+   "0x1.d973cf3cf3cf3p+5",
+   "0x1.09934d34d34d5p+6",
+   "0x1.1832cb2cb2cb2p+6",
+   "0x1.2ab5d75d75d76p+6"
+  ],
+  "k12_rate_pct": "0x1.edf1c71c71c72p+5",
+  "k12_spend": "0x1.39038cf99db59p+7",
+  "k12_spend_by_q": [
+   "0x1.82427aa207232p-6",
+   "0x1.3ac99385bc0fep-5",
+   "0x1.6bba96a257a40p-5",
+   "0x1.990a2c713fba3p-5",
+   "0x1.f403e9192a312p-5"
+  ],
+  "q5_q1_gap_pp": "0x1.221e79e79e79ep+5",
+  "q5_q1_spend_ratio": "0x1.4b64b5f9b4798p+1",
+  "seed": 0
+ },
+ "KR": {
+  "arm_id": "Baseline",
+  "contest_e_mean": "0x1.10e95b51e212ap-6",
+  "elite_q5_share_pct": "0x1.4d9d0ac19d0acp+4",
+  "g12_pct": "0x1.2230c30c30c31p+5",
+  "jurisdiction": "KR",
+  "k12_rate_by_q": [
+   "0x1.3f34d34d34d35p+5",
+   "0x1.aeb6db6db6db6p+5",
+   "0x1.e8228a28a28a1p+5",
+   "0x1.063df7df7df7ep+6",
+   "0x1.192baebaebaebp+6"
+  ],
+  "k12_rate_pct": "0x1.d0f9e79e79e79p+5",
+  "k12_spend": "0x1.0dbea0d38fdbep+7",
+  "k12_spend_by_q": [
+   "0x1.88269c07f2799p-6",
+   "0x1.0b875df4df62fp-5",
+   "0x1.32ff24de1ededp-5",
+   "0x1.54e8b8fe9a9dbp-5",
+   "0x1.a709919f6765bp-5"
+  ],
+  "q5_q1_gap_pp": "0x1.e645145145141p+4",
+  "q5_q1_spend_ratio": "0x1.1429be1c320e9p+1",
+  "seed": 0
+ }
+}

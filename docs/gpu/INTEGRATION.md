@@ -111,6 +111,47 @@ Unset `ATLAS_PL_BACKEND` (or `cm.set_pl_backend('cpu')`) → the process is back
 path with no other change. The G2 code is additive except for three small call-site edits; `git revert` of the
 G2 commit restores the pre-G2 tree.
 
+## 6b. Verification: full-run CPU A/B is bit-identical (base `e0508f3` vs HEAD `7c6f9ac`)
+
+The G2 refactor changes how the **default CPU path** is *called* (the 9-point prep grid now goes through
+`pl_win_probs_batch`, the engine's gate call through a one-row batch) even though it runs the same arithmetic.
+Bit-identity was argued by construction; this is the run-level demonstration.
+
+**Method.** HK Baseline seed 0 **and** KR Baseline seed 0, default CPU backend (`ATLAS_PL_BACKEND` unset), run
+from the same box harness (`run_hk_korea_comparative._run_single`) in **separate processes** for the two engine
+trees, same discipline (1 process, `nice -n 10`, `OPENBLAS/MKL/OMP=1`). Every value `_run_single` returns is
+serialised as `float.hex()` (so signed zero and any NaN would still show), then the two JSON files are compared
+**byte-for-byte**. Engines: base worktree at `e0508f3` (`contest_math.py` sha `cd7b5ba6…`), HEAD at `7c6f9ac`
+(`contest_math.py` sha `5fceb4d5…`).
+
+**Result: max abs diff = 0.0 — exactly zero. The two output files are byte-identical.**
+
+Fields compared (13 numeric values x 2 jurisdictions): `contest_e_mean`, `elite_q5_share_pct`, `g12_pct`,
+`k12_rate_pct`, `k12_spend`, `q5_q1_gap_pp`, `q5_q1_spend_ratio`, the 5-element `k12_rate_by_q` and 5-element
+`k12_spend_by_q` vectors, and the `seed`/`arm_id`/`jurisdiction` labels. Coverage: HK and KR, i.e. both contest
+jurisdictions and both parameter sets.
+
+**Interpretation.** On the default CPU path the G2 batching refactor is **bit-identical at the run level**, not
+merely equivalent; only the GPU backend carries the declared ≤1e-7 deviation. This closes the last verification
+item for G2.
+
+**Reproduce (box, ~2 min, 1 CPU process):**
+
+```bash
+cd /root/work/contest
+export OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 OMP_NUM_THREADS=1
+PYTHONPATH=/root/work/gpuport/base/engine nice -n 10 /root/miniconda3/bin/python \
+  /root/work/gpuport/base/ab_run.py /root/work/gpuport/base/ab_base.json
+PYTHONPATH=/root/work/gpuport/head/engine nice -n 10 /root/miniconda3/bin/python \
+  /root/work/gpuport/base/ab_run.py /root/work/gpuport/head/ab_head.json
+cmp /root/work/gpuport/base/ab_base.json /root/work/gpuport/head/ab_head.json && echo BYTE-IDENTICAL
+```
+
+Artifacts (`docs/gpu/exp/`): `ab_run.py` sha256
+`02e9fe996b3e1fb770c51e12b5b89cfc36b76ed9647aba5378f774ba10161c68`; `ab_base.json` and `ab_head.json` are
+**identical**, sha256 `95517cf58d70c6d623d30448f6556e89de5ecb3c54243140acc68e686ca9df3b` both. Box load during the
+A/B: 18.7–20.3 (campaign running, untouched).
+
 ## 7. Artifact hashes (this commit)
 
 | artifact | sha256 |
@@ -123,6 +164,8 @@ G2 commit restores the pre-G2 tree.
 | `tests/test_contest_math_gpu.py` | `498c8698e6a069d5308a9e8e02217f33f20c731a7d544f4ecf32da1428c5f960` |
 | `tests/test_contest_math.py` (unchanged) | `23e7881e20142d782c7f59752efff25c296217a542696de4d7b5579a6ea7c074` |
 | box `eq2.json` (equivalence artifact) | `0bb75933334537938f60f0fa993d50a5903e319a14ecfc2186d0e0b8d4d35915` |
+| `docs/gpu/exp/ab_run.py` (A/B harness) | `02e9fe996b3e1fb770c51e12b5b89cfc36b76ed9647aba5378f774ba10161c68` |
+| `docs/gpu/exp/ab_base.json` = `ab_head.json` (bit-identical A/B outputs) | `95517cf58d70c6d623d30448f6556e89de5ecb3c54243140acc68e686ca9df3b` |
 
 ## 8. What is NOT in this integration
 
