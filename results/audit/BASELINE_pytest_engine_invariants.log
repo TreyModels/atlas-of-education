@@ -1,0 +1,106 @@
+..F..x..xFxF.x.x.FFFF...xxx                                              [100%]
+=================================== FAILURES ===================================
+___________ test_03_universal_seat_has_no_positional_marginal_return ___________
+tests/test_engine_invariants.py:225: in test_03_universal_seat_has_no_positional_marginal_return
+    assert _effort_zero(E), (
+E   AssertionError: every applicant is admitted, so the positional marginal return of contest effort is zero, yet max e_t = 5.968711 was purchased (expected 0).  The expected-probability model caps the win probability at 0.99 instead of 1.0 (core.py:418 target_s = min(seats/n_candidates, 0.99)), leaving a positive gradient at e=0.
+E   assert False
+E    +  where False = _effort_zero(<eduengine.core.Engine object at 0x1044c0f70>)
+____________ test_07_nonselective_gate_creates_no_elite_wage_prize _____________
+tests/test_engine_invariants.py:422: in test_07_nonselective_gate_creates_no_elite_wage_prize
+    assert awards > 0 or _effort_zero(E), (
+E   AssertionError: the gate never pays an elite wage premium (elite awards = 0, k['elite'] is only set for fail='track' at core.py:428-429), yet households bought positional effort priced on elite_logw=0.60: max e_t = 5.968711 (torch: the prize is priced by tutoring.py:94-101 but never delivered)
+E   assert (0 > 0 or False)
+E    +  where False = _effort_zero(<eduengine.core.Engine object at 0x104c09780>)
+________________ test_08b_g9_declared_elite_prize_is_persisted _________________
+tests/test_engine_invariants.py:490: in test_08b_g9_declared_elite_prize_is_persisted
+    assert awards > 0 or prize_state > 0, (
+E   AssertionError: a Grade-9 contest with a declared elite_logw=0.15 is priced by contest_prep (max e_t = 4.731047/year) but no child carries any persistent award (k['elite'] awards = 0, elite_prize holders = 0, expected > 0). core.py:428-429 sets k['elite'] only for m_ == nlev-2 (Grade 12).
+E   assert (0 > 0 or 0 > 0)
+___________ test_d2_expected_probability_matches_exact_pl_reference ____________
+tests/test_engine_invariants.py:653: in test_d2_expected_probability_matches_exact_pl_reference
+    np.testing.assert_allclose(belief, exact, atol=1e-9,
+E   AssertionError: 
+E   Not equal to tolerance rtol=1e-07, atol=1e-09
+E   engine expected-probability form 1-exp(-lam*x^r) with lam=0.053799045492252895 gives [0.19361677 0.05237748], but exact PL for the 4:1 / one-seat contest is [0.8 0.2]
+E   Mismatched elements: 2 / 2 (100%)
+E   Max absolute difference among violations: 0.60638323
+E   Max relative difference among violations: 0.75797903
+E    ACTUAL: array([0.193617, 0.052377])
+E    DESIRED: array([0.8, 0.2])
+_____________________ test_d3_seat_share_is_of_applicants ______________________
+tests/test_engine_invariants.py:693: in test_d3_seat_share_is_of_applicants
+    assert abs(obs - share) <= 0.05, (
+E   AssertionError: declared seat share 0.25 of the cohort but the realised admission rate among applicants is 0.513 on average (per-year ['0.53', '0.48', '0.53', '0.71', '0.62', '0.40', '0.45', '0.53', '0.43', '0.56', '0.40']); seats/year = 10, applicants/year = [19, 21, 19, 14, 16, 25, 22, 19, 23, 18, 25].  core.py:400 uses max(round(share*N),1) with N = entering cohort, and no applicant/seat/admit-rate series is recorded (contract §1.4).
+E   assert 0.26266428888126414 <= 0.05
+E    +  where 0.26266428888126414 = abs((0.5126642888812641 - 0.25))
+_______________ test_d6_policy_invariant_rng_across_policy_arms ________________
+tests/test_engine_invariants.py:738: in test_d6_policy_invariant_rng_across_policy_arms
+    assert n_bad == 0, (
+E   AssertionError: changing only the public-school fee (a policy parameter) changed the exogenous draws of 51 cohort-covariate groups (first: cohort 5, covariate 'z'); the single sequential RNG stream (core.py:93/331/408) makes policy arms non-comparable person-by-person
+E   assert 51 == 0
+____________________ test_d7_gate_prize_is_paid_as_declared ____________________
+tests/test_engine_invariants.py:772: in test_d7_gate_prize_is_paid_as_declared
+    assert abs(observed - 0.1) <= 1e-9, (
+E   AssertionError: the gate declares elite_logw=0.1, so switching the global default from 0.0 to 0.6 must leave the paid prize at 0.1; observed paid log premium = 0.600000 (global elite_logw is applied directly at core.py:498-499 instead of the gate prize)
+E   assert 0.5 <= 1e-09
+E    +  where 0.5 = abs((0.6 - 0.1))
+=============================== warnings summary ===============================
+engine/eduengine/modules/labour.py:170: 1 warning
+tests/test_engine_invariants.py: 9 warnings
+  /private/tmp/qa1d/base/engine/eduengine/modules/labour.py:170: RuntimeWarning: Mean of empty slice
+    formal_by_cred=list(np.nanmean(fr, 0)), inc_by_cred=list(np.nanmean(ic, 0)),
+
+engine/eduengine/modules/sdg4.py:36: 1 warning
+tests/test_engine_invariants.py: 12 warnings
+  /private/tmp/qa1d/base/engine/eduengine/modules/sdg4.py:36: RuntimeWarning: Mean of empty slice.
+    out[f'completion_{nm}'] = float(done[sel].mean())
+
+../../../../Users/treymenefee/neon-boot/venv/lib/python3.10/site-packages/numpy/_core/_methods.py:145: 1 warning
+tests/test_engine_invariants.py: 12 warnings
+  /Users/treymenefee/neon-boot/venv/lib/python3.10/site-packages/numpy/_core/_methods.py:145: RuntimeWarning: invalid value encountered in scalar divide
+    ret = ret.dtype.type(ret / rcount)
+
+engine/eduengine/modules/sdg4.py:39: 1 warning
+tests/test_engine_invariants.py: 12 warnings
+  /private/tmp/qa1d/base/engine/eduengine/modules/sdg4.py:39: RuntimeWarning: Mean of empty slice.
+    out[f'completion_{nm}_q'] = [float(d[q == j].mean()) for j in range(5)]
+
+engine/eduengine/modules/sdg4.py:40: 1 warning
+tests/test_engine_invariants.py: 12 warnings
+  /private/tmp/qa1d/base/engine/eduengine/modules/sdg4.py:40: RuntimeWarning: Mean of empty slice.
+    out[f'parity_wealth_{nm}'] = parity(d[q == 0].mean(), d[q == 4].mean())
+
+engine/eduengine/modules/sdg4.py:41: 1 warning
+tests/test_engine_invariants.py: 12 warnings
+  /private/tmp/qa1d/base/engine/eduengine/modules/sdg4.py:41: RuntimeWarning: Mean of empty slice.
+    out[f'parity_location_{nm}'] = parity(d[~u].mean(), d[u].mean())
+
+../../../../Users/treymenefee/neon-boot/venv/lib/python3.10/site-packages/numpy/_core/fromnumeric.py:3860: 1 warning
+tests/test_engine_invariants.py: 12 warnings
+  /Users/treymenefee/neon-boot/venv/lib/python3.10/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+    return _methods._mean(a, axis=axis, dtype=dtype,
+
+engine/eduengine/modules/sdg4.py:57: 1 warning
+tests/test_engine_invariants.py: 12 warnings
+  /private/tmp/qa1d/base/engine/eduengine/modules/sdg4.py:57: RuntimeWarning: Mean of empty slice.
+    out['mean_years'] = float(X['g'][sel].mean())
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+XFAIL tests/test_engine_invariants.py::test_05b_engine_expected_probability_monotone_in_own_stock - missing API: Engine.contest_weights/contest_expected_probs (contract §6; defect D2)
+XFAIL tests/test_engine_invariants.py::test_06c_reported_expected_seats_sum_to_seats_eff - missing API: contest_candidates/contest_seats/contest_admitted/contest_expected_seats series (contract §1.4/§11 #6)
+XFAIL tests/test_engine_invariants.py::test_08a_g9_track_persists_kr_tracked_vs_single - missing API: core.GATE_SPECS (KR-SINGLE/KR-TRACKED) and k['track'] persistent state (contract §2/§3/§11 #8; defect D1)
+XFAIL tests/test_engine_invariants.py::test_10_gross_outlay_reconciles_to_resource_cost_plus_tax - missing API: TutoringMarket.defaults contest_tax_rate + E.yr res_cost/tut_tax/tut_outlay/gov_tut_tax + E.R contest_resource_cost/contest_tax_paid/gov_tut_receipt (contract §4.1/§4.3; defect D4)
+XFAIL tests/test_engine_invariants.py::test_11b_zero_effort_contests_match_forced_open_gate - missing API: gate kind 'open' normalisation + Engine.gate_kind (contract §1; defect D8)
+XFAIL tests/test_engine_invariants.py::test_ac4_contest_denominators_are_reported - missing API: contest_applicant_seat_ratio/contest_admit_rate/contest_expected_p_mean series (contract §1.4)
+XFAIL tests/test_engine_invariants.py::test_ac5_expected_vs_realized_reconciliation_over_seeds - missing API: contest_expected_p_mean / contest_admit_rate series for expected-vs-realized reconciliation (contract §1.4)
+XFAIL tests/test_engine_invariants.py::test_ac6_prep_stock_follows_depreciation_recurrence - missing API: k['prep_stock'][:, m] persistent preparation stock (contract §2/§5; defect D5)
+FAILED tests/test_engine_invariants.py::test_03_universal_seat_has_no_positional_marginal_return
+FAILED tests/test_engine_invariants.py::test_07_nonselective_gate_creates_no_elite_wage_prize
+FAILED tests/test_engine_invariants.py::test_08b_g9_declared_elite_prize_is_persisted
+FAILED tests/test_engine_invariants.py::test_d2_expected_probability_matches_exact_pl_reference
+FAILED tests/test_engine_invariants.py::test_d3_seat_share_is_of_applicants
+FAILED tests/test_engine_invariants.py::test_d6_policy_invariant_rng_across_policy_arms
+FAILED tests/test_engine_invariants.py::test_d7_gate_prize_is_paid_as_declared
+7 failed, 12 passed, 8 xfailed, 101 warnings in 3.31s
