@@ -103,6 +103,11 @@ already BLOCKED for E1–E3. The aggregate variance uses the full-design PSU uni
 
 ## 6. Benchmark validation (registry v0.2 in `benchmark_registry_v0.2.csv`)
 
+**Benchmark source policy:** only public DHS final-report tables/web sources are cited — KH 2021-22 Final Report
+FR377 Table 2.12 (nis.gov.kh public PDF), Philippines DHS 2022 Final Report FR381 (dhsprogram.com), Indonesia
+DHS 2017 final report. No further numbers are added as "published" unless the exact table is located; B005–B008
+therefore remain PENDING rather than being back-filled from prior runs.
+
 | id | country/wave | published (public report) | our matched estimate | verdict |
 |---|---|---|---|---|
 | B001 | KH 2021-22 | primary NAR 72.8 (FR377 Table 2.12) | 74.65 (ages 6–11 current attendance) | +1.85 pp within ±2.5 definitional tolerance |
@@ -140,4 +145,14 @@ $R  harmonize/validate_adapter.R ~/neon-boot/dhs-normalized/KH/normalized_KH_202
    public DHS-API panels and is descriptive/ecological, never causal.
 5. Singleton-PSU strata exist in 4 normalized files (see §5) — execution/QA must document the design treatment.
 6. `experiments.R` remains an untested starter; this lane only verified adapters/aggregates, not E1–E8 execution.
+
+## 9. Pinning artifacts for the execution harness (follow-up, no new analysis)
+
+* `_out/singleton_ledger.csv` — full 28-file strata scan (`file,country,wave,record_type,stratum,n_psu,n_rows`,
+  `singleton_psu` flag): 6,464 stratum rows, 22 singleton-PSU strata (PH2008 19, VN1997 1, VN2002 1, ID2007 1).
+* `_out/run_map.csv` — each normalized file → country/wave/record_type → candidate and feasible experiments
+  (`experiments_candidate`, `experiments_feasible` derived from the verified availability matrix).
+* `_out/normalized_output_hashes.csv` — sha256/bytes/rows of all 28 LOCAL normalized files, so the run manifest
+  pins exactly what was executed (input raw-file hashes are in `adapter_manifest.json`).
+* Reproduction: `python harmonize/make_run_manifest.py`.
 7. The normalized row-level files and raw microdata are **not** committed and never leave the Mac.
