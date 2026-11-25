@@ -94,3 +94,28 @@ the Lead correction; our lanes were told: total ≤8 workers, ≤4 per lane, `ni
 * Nothing from this directory may be cited in the Gate-0/Gate-1 reports as repaired behaviour, calibration, or
   E1/Q3 reconstruction. Reuse requires the item to be re-expressed under `ENGINE_INTERFACE_CONTRACT.md` and to pass
   our invariant suite — none of it currently does.
+
+## 4b. Legacy policy-arm result under the 420 port (AUTHOR-REPORTED, PRE-REPAIR, UNCALIBRATED)
+
+Harvested after the legacy lane's 1080-simulation run finished (14:39): `model_revision/policy_arms_v1v2v3.json`
+(6,123,293 B, sha256 `18bdd648…`) + `box_policy_arms_policy_run.log`. 12 arms × 30 seeds × 3 variants
+(V1 canonical with G9 placement consequences; V2 G9 removed; V3 G9 kept but no consequence), 391.55 s, 8 workers
+(within the 10-CPU quota), engine_root `/root/work/modelrev/pkg/engine`, numpy 1.24.1.
+
+| variant | jurisdiction | Baseline elite Q5 % | CF4a spend idx / elite % | CF4b spend idx / elite % | CF1b spend idx / elite % |
+|---|---|---|---|---|---|
+| V1_canonical | HK | 35.38 | **52.55 / 33.02** (both criteria met) | 111.76 / 29.90 (spend fails) | 67.78 / 25.62 |
+| V1_canonical | KR | 23.74 | **51.92 / 23.43** (both criteria met) | 95.69 / 21.87 (spend fails) | 62.39 / 21.60 |
+| V2_g9_removed | KR | 46.41 | 51.29 / 44.05 (both criteria met for KR) | 127.47 / 34.50 (spend fails) | 70.89 / 33.09 |
+| V3_g9_no_consequence | KR | 20.75 | 51.78 / **20.79 > baseline** (equity fails) | 94.76 / 20.38 (spend fails) | 61.67 / 20.19 |
+
+**Why this matters and why it is NOT a result.** Under the legacy **420-generation** spec (with their G9 placement
+consequences), **CF4a appears to pass the pre-stated Win-Win criterion in both jurisdictions** — whereas under the
+reproduced **540-generation** spec it fails Hong Kong equity (Gate 0: 48.64 % vs 46.36 % baseline). That is a
+**spec-dependent sign flip** and is exactly the canonical-spec question the Lead has held open (DASHBOARD decision 1).
+But the same legacy lane's calibration sweep **failed** (§4: untuned 66.27 % participation / 80.77 pp gap / 5.32×
+spend; best grid 91.63 %/37.11 pp/1.59× vs targets 76.5/32.1/3.4), so this 420-port policy result is produced by an
+**uncalibrated** model; it is **AUTHOR-REPORTED / PRE-REPAIR / UNCALIBRATED**, not a validated simulation, and must
+not be used to overturn the reproduced CF4 failure. It is preserved because the *spec dependence of the CF4 verdict*
+is itself a finding the canonical-spec decision must account for; resolving it requires Gate 2 calibration + Gate 3
+policy campaign on the repaired engine (blocked).
