@@ -45,7 +45,7 @@ def run_seed(q0, L, sup, setting, seed):
     p = params(q0, L, sup, setting, seed)
     E = Engine([PublicSchools(), PrivateSchools(), TutoringMarket(), QueueLabour(), SDG4()], **p); E.run()
     if E.unfired_events: raise RuntimeError(f'unfired events {E.unfired_events}')
-    if sup != 'A' or setting != 'P12':
+    if setting == 'P55' and sup in ('A', 'C'):   # exposed arms only (B = own_ban .95 market-only; P12 = no withholding)
         if not (float(np.nanmean(E.R['withheld'])) > 1e-3 and float(np.nanmean(E.R['own_share'])) > 0.1):
             raise RuntimeError(f'NO-OP cell q0={q0} L={L} {sup}/{setting}: withheld/own_share too low')
     m = E.p['measure_from']; R = E.R
