@@ -1007,3 +1007,23 @@ Lead-confirmed sequence for the pull gap (the gap is Lead-owned, not a compute f
 - **Scheduler: STAND DOWN.** Do **not** boot the instance (operator action), do **not** retry SSH, no box jobs. The incident and
   corrected recovery steps are also recorded by Lead in `docs/audit/RUN_QUEUE_2026-11-25.md` (commit `5ebf601`) and reported
   to the operator. Nothing else can run until the instance is restored.
+
+### 13.41c Recovery verification checklist (scheduler holds no copy; instance power-on is operator-only)
+
+Scheduler checked its own storage: **no screening copy is held locally** — `~/neon-boot/qa/incoming/paperC_screening/` is
+empty and a filesystem-wide search finds no `paperC_screening*` / `screen_final*` / `ckpt_S0.85*` files. The only local
+copy held is the **Pilot-0** payload (`paperC_results/paperC_pilot0_results.json`, sha256 `c6e50bc1…`), which is a
+different campaign. **Instance power-on is an operator action**; per Lead the scheduler will not boot it and will not
+retry SSH while it is down (`autodl` reports `reachable=false`).
+
+Checklist for whoever restores/pulls (all hashes observed live before the box went dark at ~01:17):
+1. Power on (operator) → corrected **two-sided `scp`** (explicit `root@host:<remote path> <local path>`), pulling BOTH:
+   - `/root/work/paperC/screen_final/` (36 `ckpt_*.jsonl` + `paperC_screening.json` + `paperC_screening_results.json`),
+   - `/root/work/queue/` markers (`SHA256SUMS` 3,802 B, `STATUS`, `RESULTS_DONE`, `finalize.log`, `finalize.out`,
+     `finalize2.out`, `finalize_rerun.out`, patched `finalize.sh`).
+2. Verify summary: **1,337,854 B**, **sha256 `6bcc29a50d41dc2c63a5959c0b023eb203c5bf1bd0cd04ffaee908a5ebb5b6d4`**;
+   `n_runs=288`, `n_cells=36`, `invalid_cells=[]`, `wall_seconds=1879.17`, 36 `checkpoint_sha256` entries.
+3. Verify ckpts with `SHA256SUMS` (288 rows / 36 cells); confirm `STATUS=OK 2026-11-25T17:15:58Z` + `RESULTS_DONE`.
+4. Only then close screening/QA. **No screening numbers cited until pulled + verified.** Process lesson recorded in
+   `docs/audit/PAPER_C_SCREENING_LAUNCH.md` (commander) and §13.41b: the pull/verify must be a mandatory separate step
+   before `SHUTDOWN_OK` is touched.
