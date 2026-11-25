@@ -14,7 +14,7 @@ Box-side ledger with PIDs/hashes: `/root/work/compute/ledger/COMPUTE_LEDGER.md` 
 | item | value |
 |---|---|
 | quota | **10 CPUs** (`/sys/fs/cgroup/cpu.max = 1000000 100000`); `nproc`=80 is the host and is **misleading** |
-| current utilization | **9.9 / 10 CPU (99 %)** at 15:14:38 — `cmd` 540 (6 workers, 14.4 % done) + `qa` task-7 (3 workers, configs 1–5 in one invocation); inside band |
+| current utilization | **7.0 / 10 CPU (70 %)** at 15:20:55 — `cmd` 540 (6 workers, 27.8 % done) + profiling pilot; qa task-7 **DONE**, qa task-8 not yet launched; 3–4 CPUs idle → fill from queue |
 | band check | 90 % is **inside** the 8.5–10.0 target band; hard worker cap respected (see §3b for the withdrawn 540→8 proposal); `loadavg` 18.8 is host-wide and is not our container (see §2) |
 | headline | **Gate-1 AFTER invariant suite is GREEN on the declared stack** (box replication: 27 passed in 56.73 s, 5 workers) |
 | ETA (controller box 540) | 540 × ~31 CPU-s/run ÷ 6 workers ≈ 47 min from 15:07:45 → **~15:55**, now with the full 6 cores (legacy ended) |
@@ -85,7 +85,7 @@ no output progress for >10 min is messaged and flagged; any box job must report 
 | J-02 | 540 repaired-engine cross-env replication | atlas-commander | 6 | 15:03:31 | **RUNNING** | ~31 CPU-s/run (pilot) → ~2.2 runs/min aggregate | ~15:50–16:00 | `/root/work/cmd/run_540.log`, then `papers/.../results/hk_korea_comparative_with_cf4.json` |
 | J-03 | task-6 rank/Jacobian audit (~1,000 prior-box points) | contest-math | 1 (analytic; 0 pool) | ~15:02 | staging/analytic on host | 1 moment-map + Jacobian per point; 0 `pl_win_probs` calls | <5 s once launched | `/root/work/contest` harness currently staged |
 | J-04 | task-11 harness/manifest/ledger box proof | audit-runner | 1 | 15:00:49 | ✅ DONE 15:00:52 | 3 s wall | done | `/root/work/audit/p07_box_evidence.tar.gz`, 18/18 PASS |
-| J-05 | task-7 synthetic DGP (500 pops = 5 configs × 100, 20k draws × 16 moments, pure NumPy ABC, **0 engine runs**) | qa-verifier | 3 | 15:10:40 | **RUNNING** (all 5 configs, one invocation) | pilot measured: **5 pops / 7.43 s wall @3 workers = ~4–5 CPU-s/pop**; 500 pops ≈ 2,200–2,500 CPU-s | **~15:23–15:28** (750 s of 3-worker wall from 15:10:40) | `/root/work/qa/full_out`, pilot at `/root/work/qa/pilot_out` |
+| J-05 | task-7 synthetic DGP (500 pops = 5 configs × 100, 20k draws × 16 moments, pure NumPy ABC, **0 engine runs**) | qa-verifier | 3 | 15:10:40 | ✅ **DONE ~15:18** | measured: 500 pops / ~7.3 min @3w = **2.6 CPU-s/pop, 1.14 pops/s aggregate** | done | `/root/work/qa/full_out` (6 artifacts, sha256 in ledger: accepted_draws `62fa1b4b…`, posterior_predictive `0cf9ce27…`, summary `698649f6…`) |
 | J-06 | task-8 bootstrap factorial | qa-verifier | ≤3 | blocked on J-05 | queued | scoped: 60 cells (5 × 4 × 3) × 2,000 datasets = 120,000 vectorized OLS/panel fits; est **600–900 CPU-s** | ~5 min at 3 workers | `/root/work/qa` |
 | J-07 | task-9 general-r Tulloch validation | contest-math | 1 (analytic) | blocked on J-03 | queued | ~200 PL calls × 14–49 ms ≈ 3–10 s | <1 min | `/root/work/contest` |
 
@@ -108,6 +108,7 @@ Pilots were run from a clean `git archive 98baf6b` bundle in `/root/work/compute
 | — | Gate-1 invariant suite (27 tests) | declared venv, QA_WORKERS=5 | **56.73 s wall** | full suite, CPU-bound; host equivalent 132 s at 4 workers |
 | — | task-11 dry-run harness | miniconda, 1 proc | **3 s wall** | 2 subprocesses, negligible |
 | — | **task-7 DGP pilot** (5 populations = 1/config) | declared venv (numpy 2.2.6, pandas 2.3.3), 3 workers | **7.43 s wall for 5 pops ≈ 4–5 CPU-s/pop** (n1000 config ~2–3 s/pop, n100 ~0.3 s, legacy ~0.8 s) | **0 engine runs**; pandas/pyarrow already present, no pip needed |
+| — | **engine cProfile** (1 HK Baseline seed 0; `cProfile`, 1 proc) | declared venv (numpy 2.2.6) | **19.82 s wall**; 2.37 M calls | **92.7 % of a run is the PL-probability quadrature**: 405 `pl_win_probs` calls = 18.37 s, dominated by `contest_math._quadrature_win_probs` (10.17 s tottime) + numpy `cumsum` (4.64 s) + `einsum` (2.38 s); 46 year-`step()`s = 19.81 s. This is the mechanism behind the 20–39× slowdown vs the legacy engine and the **#1 optimisation target**. |
 
 Per-unit planning numbers (box, repaired engine): **HK arm = 20.3 CPU-s**, **KR arm = 41.9 CPU-s**,
 **540-run mix (270 HK + 270 KR assumed 9+9 arms) = 16,794 CPU-s = 4.7 CPU-h**.
@@ -216,7 +217,9 @@ e1ce873a0a106b9632fae97cf923ab6432ebc6e32043f64fb501d8c93ec9025b  results/policy
 | 15:0x (next refresh) | — | — | — | target 9.5–10/10: 540 6 + qa 3 + contest-math 1 = 10 |
 | **15:12:07** | **18.8** | **9.0** (90 %) | 540 6 + qa 3 | qa task-7 live (config 1/5); 540 9.0 % done (1,518/16,794 CPU-s) |
 | **15:14:38** | **23.8** | **9.9** (99 %) | 540 6 + qa 3 | qa pilot measured (5 pops / 7.43 s @3w = 4–5 CPU-s/pop); 540 14.4 % done |
-| 15:1x (next refresh) | — | — | — | qa task-7 done ~15:23–15:28 → qa task-8 (≤3w) immediately; after qa release box drops to 540 6/10 (60 %) — needs a fill job (contest-math task-9 or engine profiling pilot) |
+| 15:19:21 | 25.0 | **6.0** (60 %) | 540 6 | qa task-7 finished (6 artifacts written 15:18); gap before task-8 |
+| 15:20:55 | 28.4 | **7.0** (70 %) | 540 6 + profiling 1 | profiler pilot done: 92.7 % of a run = PL quadrature |
+| 15:2x (next refresh) | — | — | — | qa task-8 at 4 workers → ~10/10 for ~3–4 min; then projected gap ~60 % until 540 completes (~15:54) unless a fill job is assigned |
 
 Band discipline: flag **<7** idle (fill from queue), **>11** oversubscribed (throttle the lowest-priority lane).
 `loadavg` is host-wide and is reported only because it was the issued metric; the cgroup number is the truth.
@@ -231,8 +234,12 @@ Band discipline: flag **<7** idle (fill from queue), **>11** oversubscribed (thr
    ~60–75 % of a core each → 540 ETA +~15 %. **Permanent fix: operator closes the external agent window.**
 2. **Repaired engine is 20–39× slower than legacy** (§1/§5). Planning consequence: the repaired-engine 540 is
    ~4.7–6.2 CPU-h, and G2/G3 campaigns must be costed from engine-run counts, not from legacy elapsed times.
-   **What would help:** a one-hour profile of `core.py` per-year loop (the new gate/PL solve is the suspect);
-   even a 2× win halves every remaining campaign. Recommend assigning to `engine-core` after Gate 1 signs off.
+   **Profiled (15:20, 1 HK run, cProfile):** 92.7 % of the run is the PL-probability quadrature — 405
+   `pl_win_probs` calls = 18.37 s of 19.82 s, with `contest_math._quadrature_win_probs` 10.17 s tottime and
+   `np.cumsum` 4.64 s + `np.einsum` 2.38 s inside it. The legacy engine used the closed-form `1−exp(−λx^r)`;
+   the honest PL object is what costs 20–39×. **Action: hand this profile to `engine-core`** for a targeted
+   optimisation pass (vectorise/cache the quadrature across the 46 years, hoist the seat-sum renormalisation) —
+   even a 2× win halves every remaining campaign; a 5× win would bring the repaired engine near legacy speed.
 3. **Worker count vs quota**: `nproc` reports 80 and an earlier 56-worker allocation was issued against it; it is
    withdrawn. All current allocations total ≤10.
 4. **Declared venv now functional** (`/root/work/venv-declared`, numpy 2.2.6): the Gate-1 AFTER box run used it,
@@ -302,5 +309,12 @@ Band discipline: flag **<7** idle (fill from queue), **>11** oversubscribed (thr
 - **15:14:38** util **9.9/10 (99 %)**, 540 14.4 % done (2,412/16,794 CPU-s, ETA ~15:54); qa pilot returned
   **5 populations / 7.43 s wall @3 workers = 4–5 CPU-s/pop**, 0 engine runs, pandas/pyarrow already present
   (no pip) → full 500-population run ETA **~15:23–15:28**; task-8 scoped at 600–900 CPU-s (~5 min at 3 w).
-- (next refresh ~15:23–15:25: qa task-7 completion + artifacts; qa task-8 launch; 540 progress; fill plan for the
-  60 % gap after qa releases its 3 workers)
+- **15:18** qa task-7 box run **DONE** (500 pops in ~7.3 min at 3 workers = **2.6 CPU-s/pop, 1.14 pops/s**;
+  6 artifacts in `/root/work/qa/full_out`, sha256 recorded: accepted_draws `62fa1b4b…`, moment_recovery `c5b55201…`,
+  posterior_predictive `0cf9ce27…`, rank_diagnostics `b3c2f6a1…`, recovery_samples `4ed67041…`, summary `698649f6…`).
+- **15:20:55** profiling pilot (1 HK run, cProfile, 1 proc): **19.82 s**, **92.7 % in PL quadrature** (405 calls,
+  18.37 s; `_quadrature_win_probs` 10.17 s tottime; `cumsum` 4.64 s; `einsum` 2.38 s) → concrete optimisation target
+  for engine-core; util 7.0/10 (540 27.8 % + profiler).
+- **15:15–15:20** contest-math task-9 box replication (1 worker, PID 15740) ran and exited; host stays authoritative.
+- (next refresh: qa task-8 launch at 4 workers; 540 progress; projected ~60 % gap 15:25–15:54 unless Lead assigns a
+  fill job — candidates: engine-core profiling fix benchmark, a second qa seed band, or nothing and accept 60 %)
