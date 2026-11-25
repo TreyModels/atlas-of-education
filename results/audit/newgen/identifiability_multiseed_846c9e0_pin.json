@@ -1,0 +1,127 @@
+{
+  "frozen_spec": "docs/audit/canonical_spec.json",
+  "method": "MULTI-SEED central finite differences (5 seeds/column); max 2 concurrent eval columns, seeds sequential; frozen V540-FREEZE KR-TRACKED",
+  "theta_names": [
+    "price_mult",
+    "alpha_mult",
+    "prize_mult",
+    "ymed_mult"
+  ],
+  "moments": [
+    "KR_participation_pct",
+    "KR_gap_pp",
+    "KR_spend_ratio",
+    "HK_grade9_participation_pct"
+  ],
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "concurrency": 2,
+  "starts": [
+    {
+      "theta": {
+        "price_mult": 1.0,
+        "alpha_mult": 1.0,
+        "prize_mult": 1.0,
+        "ymed_mult": 1.0
+      },
+      "base_moments": {
+        "KR_participation_pct": 55.832827411257014,
+        "KR_gap_pp": 31.425958490192187,
+        "KR_spend_ratio": 2.2328589002560584,
+        "HK_grade9_participation_pct": 68.77619047619048
+      },
+      "jacobian": [
+        [
+          -0.14285273491054795,
+          -0.006623858158268603,
+          23.306787743671293,
+          23.287341360065472
+        ],
+        [
+          -2.936906963432584,
+          1.7704182536012543,
+          -1.7916063007115213,
+          -40.03570860458634
+        ],
+        [
+          -0.42482924847908166,
+          0.5633989279853073,
+          -0.17574000101619358,
+          -2.073342655288013
+        ],
+        [
+          0.7380952380954398,
+          0.19841269841217962,
+          29.33333333333337,
+          0.0
+        ]
+      ],
+      "singular_values": [
+        50.029862917857386,
+        32.59558463931236,
+        1.9066349978611792,
+        0.34094552053797433
+      ],
+      "rank": 4,
+      "null_space_basis": []
+    },
+    {
+      "theta": {
+        "price_mult": 1.5,
+        "alpha_mult": 0.8,
+        "prize_mult": 1.5,
+        "ymed_mult": 0.95
+      },
+      "base_moments": {
+        "KR_participation_pct": 64.36501603826233,
+        "KR_gap_pp": 28.89687291668242,
+        "KR_spend_ratio": 2.0088642656720292,
+        "HK_grade9_participation_pct": 80.68095238095238
+      },
+      "jacobian": [
+        [
+          -0.628993063366039,
+          1.3581557760905603,
+          17.844775113959628,
+          22.383000611542148
+        ],
+        [
+          -2.460400093520647,
+          8.485641828821855,
+          -12.839490790679378,
+          -33.79753291473677
+        ],
+        [
+          -0.17562166689258696,
+          0.9760004199030966,
+          -0.24235139693721486,
+          -1.3823137326043482
+        ],
+        [
+          1.2142857142856656,
+          -2.857142857142729,
+          17.857142857142634,
+          0.0
+        ]
+      ],
+      "singular_values": [
+        46.9155694504174,
+        17.058226201454897,
+        6.801364344549416,
+        0.12779595670752128
+      ],
+      "rank": 4,
+      "null_space_basis": []
+    }
+  ],
+  "stability": {
+    "max_abs_dJ": 11.476190476190737,
+    "rel_max": 0.286648866129375
+  },
+  "runtime_sec": 1361.28
+}
