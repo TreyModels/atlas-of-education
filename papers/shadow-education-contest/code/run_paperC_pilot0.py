@@ -23,12 +23,13 @@ import argparse, hashlib, json, os, subprocess, sys, time, warnings
 
 HERE = os.path.dirname(os.path.abspath(__file__)); REPO = os.path.abspath(os.path.join(HERE, '..', '..', '..'))
 ENGINE = os.path.join(REPO, 'engine'); SPEC = os.path.join(REPO, 'docs', 'audit', 'canonical_spec.json')
-LABEL = ('PAPER C PILOT-0 (REVISED) — EXPLORATORY / HYPOTHESIS-GENERATING (engine 846c9e0; existing switches only); '
+LABEL = ('PAPER C PILOT-0 (REVISED v3, 4 regimes) — EXPLORATORY / HYPOTHESIS-GENERATING (engine 846c9e0; existing switches only); '
          'NOT confirmatory, NOT a reproduction of any prior run')
 REGIMES = [
-    ('market_only', dict(own_ban=0.95, pay_ratio=0.8, withhold_mode='pay_gap')),
-    ('own_open_gap', dict(own_ban=0.0, pay_ratio=0.8, withhold_mode='pay_gap')),
-    ('own_open_incentive', dict(own_ban=0.0, pay_ratio=1.2, withhold_mode='incentive')),
+    ('market_only', dict(own_ban=0.95, pay_ratio=0.55, monitoring=0.2, withhold_mode='pay_gap')),
+    ('own_open_gap', dict(own_ban=0.0, pay_ratio=0.55, monitoring=0.2, withhold_mode='pay_gap')),
+    ('own_open_incentive', dict(own_ban=0.0, pay_ratio=1.2, monitoring=0.2, withhold_mode='incentive')),
+    ('own_open_gap_firm_ban', dict(own_ban=0.0, pay_ratio=0.55, monitoring=0.2, withhold_mode='pay_gap', firm_ban=0.9)),
 ]
 Q0S = [1.0, 1.2]; PFIRMS = [0.03, 0.08]; NSEEDS = 8
 
@@ -94,7 +95,7 @@ def run_cell(regime, q0, p_firm, seeds, out_dir):
     if regime != 'market_only':
         h = float(np_mean([r['withheld'] for r in all_rows]))
         os_ = float(np_mean([r['own_share'] for r in all_rows]))
-        if h <= 1e-6 or os_ <= 1e-6:
+        if h <= 1e-3 or os_ <= 0.1:
             raise RuntimeError(f'NO-OP regime {tag}: withheld={h} own_share={os_} — withholding mechanism did not bind')
     return tag
 
