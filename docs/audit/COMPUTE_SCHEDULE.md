@@ -680,9 +680,12 @@ published here immediately. No fee pilot (Lead: already passed). Cap 10; g2a off
 
 **Paper B new generation COMPLETE.** Driver 24480 exited ~19:43; **2,700/2,700 seed rows** (HK PRIMARY 900 + KR-TRACKED
 900 + KR-SINGLE 900); wall 16:35:47 → 19:43 ≈ **3 h 07 min**; average rate 14.4 rows/min over the campaign. Final artifacts:
-- `paperB_new_generation_TRACKED.json` (33,240 B) **sha256 `14fc2a312eec293d8450c4cdc3278b972d3a9448bb9a0e9c99bec134c2adf3a2`**
-- `paperB_new_generation_SINGLE_KR.json` (33,283 B) **sha256 `697e7ca97dcec8f5615b35651b7bfe0e89f4e8079e28359f22e848f5b4d18421`**
-- `new_generation_provenance.json` (4,216 B) **sha256 `cba8ee0f4591461c6fca68ff5ddd996a39b641ad7dd822941eafc2850b08434c`**
+- `paperB_new_generation_TRACKED.json` **sha256 `cf801af8e07f9ebf615d075c42ec742f00d5a98a19a0e938005a3632e28836d3`**
+- `paperB_new_generation_SINGLE_KR.json` **sha256 `2b69fa08ea521c664bda59da4d6fce0d9b48d494d5cee793b69987795bef0330`**
+- `new_generation_provenance.json` **sha256 `8f08164d08006d5c0225cd2115352270560806fe4055294ff16f453dd62e3301`**
+- (commit `a4b0808`, HK summary present, `total_runs` 1,800/900/2,700) — **these are the ONLY valid hashes.** The earlier
+  `14fc2a31…` / `697e7ca9…` / `cba8ee0f…` files were **superseded/defective** (aggregator TRACKED-vs-PRIMARY key bug →
+  empty HK summary) and must never be cited.
 
 **Gate grid LAUNCHED** at 19:45:30 (commander's runner `run_gate_architecture.py`, commit `07808d9`, pin `846c9e0`,
 spec `canonical_spec.json` sha `e5ddef6b…`): driver **PID 34331**, **8 cell workers** 34335/34337/34340/34342/34343/34344/
@@ -700,3 +703,14 @@ at 32/32) → **~134 rows/min (2.2 runs/s)** across 8 workers. Distribution: dri
 g2a off-box; `grid.log` clean. **ETA: full 5,632 runs ≈ 20:25–20:30** (remaining 3,804 ÷ 134/min ≈ 28 min; total ~42–45 min
 — much faster than the 1.5–2.5 h box estimate because bar-gate cells are ~3.6 s/run effective). 2 CPUs idle; holding
 80 % per Lead's 8-worker instruction; no mid-flight resize.
+
+### 13.20 CORRECTION 20:05 — Paper B final hashes (supersedes §13.18 originals)
+
+The Paper B artifacts originally recorded in §13.18 (`14fc2a31…` TRACKED / `697e7ca9…` SINGLE / `cba8ee0f…` provenance)
+were **superseded defective files**: the aggregator had a TRACKED-vs-PRIMARY key bug producing an **empty HK summary**.
+The **adjudicated corrected artifacts** (commit `a4b0808`; `reaggregate.log` on box; HK summary present; `total_runs`
+1,800/900/2,700) are, with full sha256 computed on box 20:05:36:
+- `paperB_new_generation_TRACKED.json` — **`cf801af8e07f9ebf615d075c42ec742f00d5a98a19a0e938005a3632e28836d3`**
+- `paperB_new_generation_SINGLE_KR.json` — **`2b69fa08ea521c664bda59da4d6fce0d9b48d494d5cee793b69987795bef0330`**
+- `new_generation_provenance.json` — **`8f08164d08006d5c0225cd2115352270560806fe4055294ff16f453dd62e3301`**
+All in `/root/work/newgen/results/`. **The §13.18 hashes are retracted and must not be cited.** Grid unaffected (separate tree).
