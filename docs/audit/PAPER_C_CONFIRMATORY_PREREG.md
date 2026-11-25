@@ -182,3 +182,28 @@ must hold in the exposed arm or the contrast is INVALID.
 after G2-B + Codex review; 1–2 box slots reserved for Luna/MASSENG per operator policy. **Screening-confirmation is on
 pre-declared passers only**; launch manifest records engine core sha, spec sha, runner+analysis commit hashes, seeds,
 cells, and the frozen passer list.
+
+## 9. Amendment A3 — textual pre-launch amendments (no design change)
+
+**(A3.1) >6-passer selection rule (pre-declared, no post-hoc choice).** If screening passes **≤6 cells**, all passers run
+confirmatory. If screening passes **>6 cells**, the **first 6 passers in the fixed appendix order** (row order of the
+Appendix table) run confirmatory and **all remaining passers are reported screening-only**. The frozen passer list is
+written into the launch manifest before any confirmatory run; no cap raising without a separately approved budget.
+
+**(A3.2) All-cell fallback REMOVED.** The earlier "all-cell confirmatory fallback" is **dropped**: all-36 confirmatory
+at 32 seeds × N=1500 is ≈132 CPU-h, far outside the ≤36 CPU-h envelope. If such a run is ever wanted it is a
+**separate, re-approved run/new budget**, explicitly not part of this prereg's compute envelope.
+
+**(A3.3) Assertion exemptions and bundle declarations.** The no-withholding control **`A|P12` is exempt** from the
+`h>0` / `own_share>0.1` binding assertions (its purpose is h=0 under pay_gap). Assertions apply to **exposed arms only**;
+a failed exposed arm is **INVALID** and reported as such (never silently dropped). **L is a gate-pressure bundle**
+(contest `share` + `contest_r` fixed jointly by L); T4 therefore cannot separate the two components — no component
+separation claim is made.
+
+**(A3.4) Screening timing.** Screening is *compute* and starts **only after** (i) this prereg is marked final by the
+adjudicator, (ii) Codex's protocol/Kaplan confirmation is in, and (iii) the 1–2 slot Luna/MASSENG reserve is honoured.
+
+**Launch manifest requirements:** engine commit `846c9e0`, core sha `e111397b…8e71`, spec sha `e5ddef6b…`, runner commit
++ sha, analysis commit + sha, seeds 0–7 exploratory / 100–131 confirmatory, 36-cell list + frozen passer list, N/T/T0/
+measure_from, fail routing, per-run `unfired_events==[]` assertion, workers (≤8 with 1–2 slot reserve), wall/CPU, and
+output hashes.
