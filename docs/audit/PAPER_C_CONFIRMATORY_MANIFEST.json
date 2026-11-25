@@ -29,6 +29,11 @@
       "file": "papers/shadow-education-contest/code/run_paperC_screening.py",
       "sha256": "ddeffe42026eff865e939a4d8276171bb9b124fca52c2de9edeaaad909e40aac",
       "commit": "1b3a510"
+    },
+    "aggregator": {
+      "file": "papers/shadow-education-contest/code/paperC_confirm_aggregate.py",
+      "sha256": "223628668355a1a68f16def0e0171fd7c528de6c82b536da2bc670857961c978",
+      "commit": "COMMITTED_AGG_SHA_PLACEHOLDER"
     }
   },
   "engine": {
@@ -117,13 +122,20 @@
       "assertion_support": "h(A|P55)>=0.05 and h(A|P12)<=0.01"
     },
     "multiplicity": "Holm (m=2) at alpha=.05",
-    "uncertainty": "seed Monte-Carlo (32 matched seeds); parameter uncertainty zero (frozen params)"
+    "uncertainty": "seed Monte-Carlo on 16 matched seeds (100-115) per A5; parameter uncertainty zero (frozen params); SE = sqrt(2) x the 32-seed plan; label A5 interim precision; NO full-precision claim",
+    "n_seeds_used": 16,
+    "a5": {
+      "file": "docs/audit/PAPER_C_A5_SEED_TRUNCATION.md",
+      "sha256": "365155965423b4f9171b5ad69a87dd0ef11c0710b5216190d043beebfb16bf99",
+      "approved": "1c51f17",
+      "record": "aa1d0bd"
+    }
   },
   "compute": {
     "estimate_cpu_h_upper": 24.0,
     "workers": 8,
     "reserve": "1-2 box slots reserved for Luna/MASSENG",
-    "wall_note": "~22/8 ~= 2.8 h wall at 8 workers; do not exceed 10 incl. reserve",
+    "wall_note": "A5 16-seed: 96 runs at measured ~809 CPU-s/run (from the 32-seed launch telemetry: ~13.5 min/seed/cell) => ~21.6 CPU-h total; 6 cells in parallel, 16 seeds/cell => ~3.6 h wall from 07:20 (~10:55-11:15 CST); envelope <=24 CPU-h. observed_runaway: the 32-seed plan projected 43.2 CPU-h / 7.2 h wall, hence A5 truncation approved before aggregation.",
     "observed_runaway": "32-seed confirmatory projected 42-48 CPU-h (~800-900 CPU-s/run); truncated to 16 seeds by A5 before aggregation"
   },
   "gates": {
