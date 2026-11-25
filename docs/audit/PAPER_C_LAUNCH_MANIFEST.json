@@ -97,5 +97,19 @@
     ]
   },
   "outputs": "results/audit/newgen/paperC_screening.json + paperC_confirmatory.json + per-cell checkpoints + run manifest (hashes)",
-  "manifest_version": "1.1 (GPU provenance fields added; design unchanged; CPU remains default)"
+  "manifest_version": "1.1 (GPU provenance fields added; design unchanged; CPU remains default)",
+  "profiling": {
+    "when": "2026-11-25 ~22:31 host",
+    "config": "Pilot-0 cell market_only q0=1.0 p_firm=.03 seed 0, N=1500, T=46, engine pin 846c9e0",
+    "total_run_seconds": 170.426,
+    "engine_step_cumtime": 170.411,
+    "pl_win_probs_cumtime": 168.426,
+    "pl_share_pct": 98.8,
+    "quadrature_cumtime": 166.956,
+    "quadrature_share_pct": 98.0,
+    "cumsum_cumtime": 114.036,
+    "cumsum_share_pct": 66.9,
+    "einsum_cumtime": 6.412,
+    "note": "PL quadrature dominates (98% of a pilot run), cumsum is 67%: batching the quadrature across replicates is the GPU lever; single-run N=300 arrays are too small, replicate batching is required"
+  }
 }
