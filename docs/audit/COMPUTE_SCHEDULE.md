@@ -612,3 +612,13 @@ CPU-light GPU-lane pytest validation proc) → cgroup **9.9/10 (99 %)**. Cap res
 **Paper B: 504 seed rows at ~22 min → ~28 rows/min** aggregate (HK wave ~3.5 rows/min/arm); primary ETA **~18:50–19:00**,
 full 2,700 **~20:00–20:20**. After g2a completes its slot stays idle until Paper B primary, then goes to the corrected-
 environment forecast re-run; the old fan-out version will not be relaunched.
+
+### 13.11 Paper B HK wave complete, KR wave started (17:10)
+
+Measured 17:10:21: **781 seed rows** in 34.5 min = **22.6 rows/min** aggregate. Six of eight arm workers finished their
+first (HK) arm by ~17:07:30 and started the next (KR-class) arms (2:30–2:56 elapsed at 17:10); two workers remain on the
+slow HK arms CF2a/CF2b (34:34 elapsed; rows were 81/53 at 17:05). g2a fixed multi-seed: **17/80 evals** at ~1 eval/min.
+
+**Refined ETA:** Paper B primary **~18:20–18:35**; full 2,700 (incl. KR-SINGLE sensitivity) **~19:40–20:00**.
+Distribution: Paper B 8 + g2a 1 = 9 compute workers (~90–99 % cgroup), GPU lane CPU-light only, control 1 — cap respected.
+g2a completes ~18:15; its slot stays idle until Paper B primary, then the corrected-environment forecast re-run.
