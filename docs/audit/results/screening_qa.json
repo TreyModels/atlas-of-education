@@ -1,0 +1,78 @@
+{
+ "results": "/Users/treymenefee/neon-boot/qa/incoming/paperC_screening",
+ "queue": "/Users/treymenefee/neon-boot/qa/incoming/paperC_screening_queue",
+ "checks": [
+  {
+   "id": "S1",
+   "status": "PASS",
+   "detail": "payload present; duplicate _results identical=True; sidecars ok=True; ckpts=36"
+  },
+  {
+   "id": "S2",
+   "status": "PASS",
+   "detail": "queue SHA256SUMS entries bad=[]; checkpoint_sha256 map ok=True"
+  },
+  {
+   "id": "S3",
+   "status": "PASS",
+   "detail": "pins: engine_commit=True, core=True, spec=True, runner=True, runner_file=True, launch_engine=True, launch_core=True, launch_spec=True, prereg=True"
+  },
+  {
+   "id": "S4",
+   "status": "PASS",
+   "detail": "cells=36; appendix order exact=True; ckpt cells=36"
+  },
+  {
+   "id": "S5",
+   "status": "PASS",
+   "detail": "runs=288; problems=[]"
+  },
+  {
+   "id": "S6",
+   "status": "PASS",
+   "detail": "param/gate/engine/unfired problems=[]"
+  },
+  {
+   "id": "S7",
+   "status": "PASS",
+   "detail": "exposed-arm enforcement (A/C AND P55) failures=[]; non-blocking metadata exposed-flag mismatches=96 (A|P12 mislabelled; actual check correct)"
+  },
+  {
+   "id": "S8",
+   "status": "PASS",
+   "detail": "completion_* keys present=[]; non-finite summary=[]; non-finite rows=[]"
+  },
+  {
+   "id": "S9",
+   "status": "PASS",
+   "detail": "summary cells=36; problems=[]"
+  },
+  {
+   "id": "S10",
+   "status": "PASS",
+   "detail": "ckpt->summary reproduction problems=[]"
+  },
+  {
+   "id": "S11",
+   "status": "PASS",
+   "detail": "status=SCREENING-ONLY; label_screening=True; invalid=[]; p12_mode=pay_gap; queue_ok=True; finalize_verified=True; wall=1879.17"
+  }
+ ],
+ "defects": [
+  {
+   "id": "D-S0",
+   "severity": "info",
+   "detail": "launch manifest runner sha fbeba460cfb8\u2026 differs from executed runner d2d25c1cd668\u2026 \u2014 documented as 'screening runner extended before launch, launch sha recorded in run manifest'; actual runner file hash matches manifest"
+  },
+  {
+   "id": "D-S2",
+   "severity": "info",
+   "detail": "row params.contest_r is the static engine default 1.5, while the G6\u2192G9 gate override sets gate.r by L (1.2/1.6) and the engine uses the gate override (core.py: r = p[\"contest_r\"] if r is None else r) \u2014 harmless but potentially confusing; record gate.r as authoritative"
+  },
+  {
+   "id": "D-S1",
+   "severity": "low",
+   "detail": "runner metadata defect: per-row assertions.exposed is set to (supply in (A,C)) and rule text says only \"B exempt\" (runner line 207), so A|P12 is labelled exposed though A3.3 exempts it; the actual binding check (line 154) correctly applies only to A/C AND P55. Fix metadata before confirmatory (no effect on screening results; invalid_cells=[] and A|P12 not asserted)."
+  }
+ ]
+}
