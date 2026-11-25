@@ -714,3 +714,10 @@ The **adjudicated corrected artifacts** (commit `a4b0808`; `reaggregate.log` on 
 - `paperB_new_generation_SINGLE_KR.json` — **`2b69fa08ea521c664bda59da4d6fce0d9b48d494d5cee793b69987795bef0330`**
 - `new_generation_provenance.json` — **`8f08164d08006d5c0225cd2115352270560806fe4055294ff16f453dd62e3301`**
 All in `/root/work/newgen/results/`. **The §13.18 hashes are retracted and must not be cited.** Grid unaffected (separate tree).
+
+### 13.21 Grid progress 20:23 — 75 %, entering slower contest cells; ETA revised ~20:45–20:55
+
+Measured 20:23:22: **4,237/5,632 grid runs (75 %)**, **136 `ckpt_*` cell files (~132/176 cells)**. Rate dropped from
+~134 to **~50 rows/min** as the runner reached the heavier **`contest` architecture cells** (bar cells ~3.6 s/run,
+contest cells materially costlier). Driver 34331 at 37:52; 8 workers; cgroup **8.0/10 (80 %)**; `grid.log` clean.
+**Revised full-completion ETA ~20:45–20:55** (1,395 rows, 44 cells ÷ 8 workers ≈ 5.5 waves). No extra jobs slotted; no resize.
