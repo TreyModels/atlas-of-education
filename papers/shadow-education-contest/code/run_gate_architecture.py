@@ -1,54 +1,57 @@
 #!/usr/bin/env python3
-"""NEW-GENERATION Paper A (c): gate-architecture sweep >=5,000 runs (prereg GATE2_PREREGISTRATION.md §2(c)).
+"""NEW-GENERATION Paper A (c): gate-architecture sweep (amended per adjudicator review, prereg A3).
 
-Design (declared NEW; not a reconstruction of Gemini's undocumented parameterisation):
-  gate architectures at the G6->G9 transition: bar, bar_high, quota, contest  (gate 0 = primary completion bar,
-  gate 2 = G12 contest, gate 3 = tertiary bar are held fixed); seat share S in {0.25,0.35,0.45,0.55,0.70} for the
-  share-based architectures (quota/contest) and the corresponding bar quantile for the bar architectures;
-  fee regimes {0.19 (kept), 0.00 (abolished at t0)}; formal-vacancy vac0 in {0.02,0.08,0.25,0.50};
-  seeds 0..31 per cell -> 4 x 5 x 2 x 4 x 32 = 5,120 runs.
-  Outcome: Q5-Q1 K-12 tutoring-participation gap (pp), pre (t0-4..t0-1) vs post (t0+1..t0+4);
-  Delta_cut = gap_delta(fee abolished) - gap_delta(fee kept); H2 = mean Delta_cut at S=0.25 minus S=0.70 (contest/quota).
-  Runner: per-cell subprocess, per-seed atomic checkpoints, resume by skip, arm failure raises (loud).
-Label: NEW GENERATION — REPRODUCED SIMULATION (repaired engine 98baf6b, frozen spec), NOT a reproduction of the
-Gemini 1,640-run experiment.
+Design (declared NEW; engine pin 846c9e0; not a reconstruction of the Gemini 1,640-run experiment):
+  * Gate under test = G6->G9 transition; fail routing PRIMARY = 'track' (matches canonical KR G9-track design),
+    declared sensitivity block = 'stop' (contest only, S in {0.25,0.70}, all vac0, both fees) -> 512 runs.
+  * Architectures {bar, bar_high, quota, contest} x seat shares S {0.25,0.35,0.45,0.55,0.70}
+    x fee regimes {0.19 kept, 0.00 abolished at T0 via year_t event} x vac0 {0.02,0.08,0.25,0.50} x 32 matched seeds.
+  * Outcomes: Q5-Q1 K-12 tutoring-participation gap pre (T0-4..T0-1) vs post (T0+1..T0+6);
+    gap_delta = post - pre; Delta_cut = gap_delta(fee=0) - gap_delta(fee=0.19) (matched seeds).
+  * PRIMARY estimand (pre-declared): H2_contest = Delta_cut(contest, S=.25) - Delta_cut(contest, S=.70) at
+    vac0=0.08, fail='track'; uncertainty = PAIRED-SEED bootstrap (5,000 resamples of the 32 matched seeds,
+    same seed index for fee0/fee0.19). Secondary: quota H2, per-vac0 Delta_cut curve, H1 (fee=0 gap widening as S
+    falls + Spearman monotonicity). bar/bar_high = EXPLORATORY architecture check only (S maps to a bar threshold,
+    not a realized seat share); realized admission rates reported per cell. Multiplicity: one pre-stated primary;
+    all other contrasts secondary/exploratory. Null/negative H2 is a result; the pre-repair +0.1086 is the
+    AUTHOR-REPORTED baseline, not a target.
+  * Provenance: fees/archs/shares/vacs/N/T0/T/measure_from/start_year, engine core sha, spec sha, runner sha,
+    event_key year_t, per-run event_log, quintile x urban counts, gate applicants/seats/admit rates; per-run
+    assertion E.unfired_events == [].
+Label: NEW GENERATION — REPRODUCED SIMULATION (engine 846c9e0), NOT a reproduction of the Gemini 1,640-run study.
 """
-import argparse, hashlib, json, os, subprocess, sys, time, warnings
+import argparse, copy, hashlib, json, os, subprocess, sys, time, warnings
 
 HERE = os.path.dirname(os.path.abspath(__file__)); REPO = os.path.abspath(os.path.join(HERE, '..', '..', '..'))
 ENGINE = os.path.join(REPO, 'engine'); SPEC = os.path.join(REPO, 'docs', 'audit', 'canonical_spec.json')
-LABEL = ('NEW GENERATION — REPRODUCED SIMULATION (repaired engine 98baf6b, frozen spec); '
+LABEL = ('NEW GENERATION — REPRODUCED SIMULATION (engine 846c9e0, frozen spec); '
          'NOT a reproduction of the Gemini-era 1,640-run experiment')
 ARCHS = ['bar', 'bar_high', 'quota', 'contest']; SHARES = [0.25, 0.35, 0.45, 0.55, 0.70]
 FEES = [0.19, 0.00]; VACS = [0.02, 0.08, 0.25, 0.50]; NSEEDS = 32
-T0 = 12; T = T0 + 8; PRE = list(range(T0 - 4, T0)); POST = list(range(T0 + 1, T0 + 5))
+T0, T = 12, 20; PRE = list(range(T0 - 4, T0)); POST = list(range(T0 + 1, T0 + 7))
+PRIMARY_VAC = 0.08; PRIMARY_ARCH = 'contest'; PRIMARY_LO, PRIMARY_HI = 0.25, 0.70
+SENS_ARCH = 'contest'; SENS_SHARES = [0.25, 0.70]
 
 def sha(p): return hashlib.sha256(open(p, 'rb').read()).hexdigest()
 
-def gate_for(arch, S):
-    """Gate at the G6->G9 transition for architecture/seat share S. Bar thresholds calibrated to S via the
-    pre-registered engine quantile rule (declared in the prereg appendix as NEW)."""
-    if arch == 'bar':
-        return dict(kind='fixed_bar', bar=3.0 + 8.0 * (1.0 - S), fail='stop')
-    if arch == 'bar_high':
-        return dict(kind='fixed_bar', bar=6.0 + 8.0 * (1.0 - S), fail='stop')
-    if arch == 'quota':
-        return dict(kind='quota', share=S, cut0=6.0, fail='stop')
-    if arch == 'contest':
-        return dict(kind='contest', share=S, cut0=6.0, r=0.6, alpha=0.5, fail='stop')
+def gate_for(arch, S, fail):
+    if arch == 'bar': return dict(kind='fixed_bar', bar=3.0 + 8.0 * (1.0 - S), fail=fail)
+    if arch == 'bar_high': return dict(kind='fixed_bar', bar=6.0 + 8.0 * (1.0 - S), fail=fail)
+    if arch == 'quota': return dict(kind='quota', share=S, cut0=6.0, fail=fail)
+    if arch == 'contest': return dict(kind='contest', share=S, cut0=6.0, r=0.6, alpha=0.5, fail=fail)
     raise ValueError(arch)
 
-def params(arch, S, fee, vac0):
+def params(arch, S, fee, vac0, fail='track'):
     spec = json.load(open(SPEC))
     base = json.loads(json.dumps(spec['params']['KR']['primary']))
     p = dict(base)
     p.update(N=300, T=T, measure_from=4, vac0=float(vac0), fee_public=float(fee),
              gates=[dict(kind='fixed_bar', bar=2.0, spec=dict(id='G6', label='primary completion')),
-                    dict(gate_for(arch, S), spec=dict(id=f'G9-{arch}-{S}', label='gate architecture under test')),
+                    dict(gate_for(arch, S, fail), spec=dict(id=f'G9-{arch}-{S}-{fail}', label='gate architecture under test')),
                     dict(kind='contest', share=0.12, fail='track', spec=dict(id='G12', label='university gate')),
                     dict(kind='fixed_bar', bar=10.0, spec=dict(id='TER', label='tertiary completion'))])
     if fee == 0.0:
-        p['events'] = [dict(year=T0, set=dict(fee_public=0.0), label='fee abolition')]
+        p['events'] = [dict(year_t=T0, set=dict(fee_public=0.0), label='fee abolition')]
     return p
 
 def gap(E):
@@ -58,9 +61,22 @@ def gap(E):
     post = 100.0 * float(np.mean(rq[POST, 4] - rq[POST, 0]))
     return pre, post, post - pre
 
-def run_cell(arch, S, fee, vac0, seeds, out_dir):
-    warnings.filterwarnings('ignore')
-    os.makedirs(out_dir, exist_ok=True)
+def design_diag(E):
+    """Quintile x urban counts and gate applicants/seats/admit rates for the gate under test (level index 1)."""
+    import numpy as np
+    X = E.ALL; m = E.p['measure_from']
+    sel = (X['cohort'] >= m) & (X['cohort'] <= E.p['T'] - 14)
+    q = np.asarray(X['q'])[sel]; urban = np.asarray(X['urban'])[sel]
+    cells = {f'q{j}_u{int(u)}': int(np.sum((q == j) & (urban == u))) for j in range(5) for u in (0, 1)}
+    def ser(name):
+        v = np.asarray(E.R.get(name, []), float)
+        return float(np.mean(v[m:])) if v.ndim == 2 else (float(np.mean(v[m:])) if v.size else None)
+    return dict(cells=cells, contest_candidates=ser('contest_candidates'), contest_seats=ser('contest_seats'),
+                contest_admitted=ser('contest_admitted'), contest_applicant_seat_ratio=ser('contest_applicant_seat_ratio'),
+                contest_admit_rate=ser('contest_admit_rate'))
+
+def run_cell(arch, S, fee, vac0, fail, seeds, out_dir):
+    warnings.filterwarnings('ignore'); os.makedirs(out_dir, exist_ok=True)
     sys.path.insert(0, ENGINE)
     import numpy as np
     from eduengine.core import Engine
@@ -68,8 +84,8 @@ def run_cell(arch, S, fee, vac0, seeds, out_dir):
     from eduengine.modules.schools import PrivateSchools, PublicSchools
     from eduengine.modules.sdg4 import SDG4
     from eduengine.modules.tutoring import TutoringMarket
-    p = params(arch, S, fee, vac0)
-    tag = f"{arch}_{S:.2f}_{fee:.2f}_{vac0:.2f}"
+    p = params(arch, S, fee, vac0, fail)
+    tag = f"{arch}_{S:.2f}_{fee:.2f}_{vac0:.2f}_{fail}"
     ckpt = os.path.join(out_dir, f'ckpt_{tag}.jsonl')
     done = set()
     if os.path.exists(ckpt):
@@ -80,13 +96,17 @@ def run_cell(arch, S, fee, vac0, seeds, out_dir):
         if sd in done: continue
         mods = [PublicSchools(), PrivateSchools(), TutoringMarket(), QueueLabour(), SDG4()]
         E = Engine(mods, **dict(p, seed=sd)); E.run()
-        unfired = list(getattr(E, 'unfired_events', []))
-        if unfired:
-            raise RuntimeError(f'unfired calendar events in cell {tag}: {unfired}')
+        if E.unfired_events:
+            raise RuntimeError(f'unfired calendar events in cell {tag}: {E.unfired_events}')
         pre, post, d = gap(E)
-        row = dict(arch=arch, S=S, fee=fee, vac0=vac0, seed=sd, gap_pre=pre, gap_post=post, gap_delta=d,
+        g = copy.deepcopy(E.p['gates'][1])
+        row = dict(arch=arch, S=S, fee=fee, vac0=vac0, fail=fail, seed=sd,
+                   gap_pre=pre, gap_post=post, gap_delta=d,
+                   gate_spec={k: g.get(k) for k in ('kind', 'share', 'bar', 'cut0', 'r', 'alpha', 'fail')},
+                   event_log=list(E.event_log),
                    contest_e_mean=float(np.mean(E.R['contest_e_mean'][E.p['measure_from']:])),
-                   k12_spend=float(np.mean(E.R['tut_k12_spend'][E.p['measure_from']:])))
+                   k12_spend=float(np.mean(E.R['tut_k12_spend'][E.p['measure_from']:])),
+                   design=design_diag(E))
         with open(ckpt, 'a') as f:
             f.write(json.dumps(row) + '\n'); f.flush(); os.fsync(f.fileno())
     return tag
@@ -97,62 +117,105 @@ def stats(v):
     se = sa / np.sqrt(max(n, 1))
     return dict(mean=m, sd=sa, ci95_lo=m - 1.96 * se, ci95_hi=m + 1.96 * se, n=n)
 
-def driver(seeds, workers, out_dir):
+def dcut_for(cells, arch, S, vac, fail):
+    """Paired-seed Delta_cut = mean over seeds of [gap_delta(fee0,seed) - gap_delta(fee0.19,seed)]."""
+    k0 = (arch, S, 0.0, vac, fail); k1 = (arch, S, 0.19, vac, fail)
+    if k0 not in cells or k1 not in cells: return None
+    a = {r['seed']: r['gap_delta'] for r in cells[k0]}; b = {r['seed']: r['gap_delta'] for r in cells[k1]}
+    common = sorted(set(a) & set(b))
+    vals = [a[s] - b[s] for s in common]
+    return dict(values=vals, seeds=common, mean=float(sum(vals) / len(vals)) if vals else None)
+
+def paired_boot(vals, n=5000, seed=20261125):
+    import numpy as np
+    if not vals: return None
+    rng = np.random.default_rng(seed); a = np.array(vals, float)
+    bs = np.array([np.mean(a[rng.integers(0, len(a), len(a))]) for _ in range(n)])
+    return dict(mean=float(a.mean()), ci95_lo=float(np.percentile(bs, 2.5)), ci95_hi=float(np.percentile(bs, 97.5)),
+                half_width=float((np.percentile(bs, 97.5) - np.percentile(bs, 2.5)) / 2.0), n_boot=n)
+
+def spearman(x, y):
+    import numpy as np
+    x = np.asarray(x, float); y = np.asarray(y, float)
+    rx = np.argsort(np.argsort(x)); ry = np.argsort(np.argsort(y))
+    return float(np.corrcoef(rx, ry)[0, 1])
+
+def driver(seeds, workers, out_dir, include_sensitivity=True):
     from concurrent.futures import ThreadPoolExecutor
-    from collections import defaultdict
     os.makedirs(out_dir, exist_ok=True)
-    cells = [(a, S, f, v) for a in ARCHS for S in SHARES for f in FEES for v in VACS]
+    cells = [(a, S, f, v, 'track') for a in ARCHS for S in SHARES for f in FEES for v in VACS]
+    if include_sensitivity:
+        cells += [(SENS_ARCH, S, f, v, 'stop') for S in SENS_SHARES for f in FEES for v in VACS]
     t0 = time.time()
     def launch(c):
-        a, S, f, v = c
-        r = subprocess.run([sys.executable, os.path.abspath(__file__), 'cell', a, str(S), str(f), str(v),
+        a, S, f, v, fail = c
+        r = subprocess.run([sys.executable, os.path.abspath(__file__), 'cell', a, str(S), str(f), str(v), fail,
                             f'{seeds[0]}-{seeds[-1]}', out_dir], capture_output=True, text=True,
-                           env=dict(os.environ, PYTHONPATH=ENGINE, OPENBLAS_NUM_THREADS='1', MKL_NUM_THREADS='1',
-                                    OMP_NUM_THREADS='1'))
+                           env=dict(os.environ, PYTHONPATH=ENGINE, OPENBLAS_NUM_THREADS='1', MKL_NUM_THREADS='1', OMP_NUM_THREADS='1'))
         if r.returncode != 0:
-            raise RuntimeError(f'cell {c} failed rc={r.returncode}: {r.stderr[-1000:]}')
+            raise RuntimeError(f'cell {c} failed rc={r.returncode}: {r.stderr[-1200:]}')
         return c
     with ThreadPoolExecutor(max_workers=workers) as ex:
         list(ex.map(launch, cells))
     wall = time.time() - t0
     rows = []
-    for a, S, f, v in cells:
-        tag = f"{a}_{S:.2f}_{f:.2f}_{v:.2f}"
+    for c in cells:
+        a, S, f, v, fail = c
+        tag = f"{a}_{S:.2f}_{f:.2f}_{v:.2f}_{fail}"
         rows.extend(json.loads(l) for l in open(os.path.join(out_dir, f'ckpt_{tag}.jsonl')))
-    # cell means and H1/H2
-    cells_out = {}
+    cells_rows = {}
     for r in rows:
-        key = (r['arch'], r['S'], r['fee'], r['vac0'])
-        cells_out.setdefault(key, []).append(r)
+        cells_rows.setdefault((r['arch'], r['S'], r['fee'], r['vac0'], r['fail']), []).append(r)
     summary = {}
-    for (a, S, f, v), rr in cells_out.items():
-        summary.setdefault(a, {}).setdefault(str(S), {})[f'{f:.2f}_{v:.2f}'] = {m: stats([x[m] for x in rr]) for m in
-                                                                               ('gap_pre', 'gap_post', 'gap_delta')}
-    # Delta_cut by (arch,S,vac): fee0 delta - fee0.19 delta (matched cells, independent seeds)
-    dcut = {}
-    for a in ARCHS:
-        for S in SHARES:
-            for v in VACS:
-                k0 = (a, S, 0.0, v); k1 = (a, S, 0.19, v)
-                if k0 in cells_out and k1 in cells_out:
-                    d0 = float(np.mean([x['gap_delta'] for x in cells_out[k0]]))
-                    d1 = float(np.mean([x['gap_delta'] for x in cells_out[k1]]))
-                    dcut[f'{a}|{S}|{v}'] = d0 - d1
-    def h2(arch):
-        a = [dcut[f'{arch}|0.25|{v}'] for v in VACS if f'{arch}|0.25|{v}' in dcut]
-        b = [dcut[f'{arch}|0.70|{v}'] for v in VACS if f'{arch}|0.70|{v}' in dcut]
-        return float(np.mean(a) - np.mean(b)) if a and b else None
+    for (a, S, f, v, fail), rr in cells_rows.items():
+        summary.setdefault(fail, {}).setdefault(a, {}).setdefault(str(S), {})[f'{f:.2f}_{v:.2f}'] = {
+            m: stats([x[m] for x in rr]) for m in ('gap_pre', 'gap_post', 'gap_delta')}
+    # primary H2 (contest, vac0=.08, track)
+    def h2(arch, fail='track', vac=PRIMARY_VAC):
+        d_lo = dcut_for(cells_rows, arch, PRIMARY_LO, vac, fail)
+        d_hi = dcut_for(cells_rows, arch, PRIMARY_HI, vac, fail)
+        if d_lo is None or d_hi is None: return None
+        vals = [lo - hi for lo, hi in zip(d_lo['values'], d_hi['values'])]
+        return dict(mean=float(np.mean(vals)), stats=stats(vals), paired_bootstrap=paired_boot(vals),
+                    dcut_lo=paired_boot(d_lo['values']), dcut_hi=paired_boot(d_hi['values']))
+    primary = h2(PRIMARY_ARCH, 'track')
+    secondary = {'quota_H2': h2('quota', 'track'), 'contest_vac0_curve': {}}
+    for v in VACS:
+        r = h2('contest', 'track', vac=v)
+        secondary['contest_vac0_curve'][f'{v:.2f}'] = r
+    # H1: fee=0 gap widening as S falls (contest, track, vac0=.08) + Spearman across shares
+    h1 = None
+    if all((PRIMARY_ARCH, S, 0.0, PRIMARY_VAC, 'track') in cells_rows for S in SHARES):
+        gd = {S: float(np.mean([r['gap_delta'] for r in cells_rows[(PRIMARY_ARCH, S, 0.0, PRIMARY_VAC, 'track')]])) for S in SHARES}
+        h1 = dict(gap_delta_fee0_by_share={f'{S:.2f}': gd[S] for S in SHARES},
+                  H1_S025_minus_S070=gd[0.25] - gd[0.70],
+                  spearman_gapdelta_vs_share=spearman(SHARES, [gd[S] for S in SHARES]),
+                  note='H1 = fee=0 gap_delta(S=.25) - gap_delta(S=.70); negative Spearman means gap widens as seats shrink')
+    exploratory = {a: {f'{S:.2f}': {f'{f:.2f}_{v:.2f}': {'gap_delta': summary['track'][a].get(str(S), {}).get(f'{f:.2f}_{v:.2f}', {}).get('gap_delta', {})}
+                                    for f in FEES for v in VACS} for S in SHARES} for a in ('bar', 'bar_high')}
+    # realized admission / design diagnostics per cell (mean over runs)
+    design = {}
+    for (a, S, f, v, fail), rr in cells_rows.items():
+        design[f'{a}|{S}|{f}|{v}|{fail}'] = {
+            'admit_rate': stats([x['design']['contest_admit_rate'] for x in rr if x['design']['contest_admit_rate'] is not None]),
+            'applicant_seat_ratio': stats([x['design']['contest_applicant_seat_ratio'] for x in rr if x['design']['contest_applicant_seat_ratio'] is not None]),
+            'quintile_urban_cells': rr[0]['design']['cells'] if rr else None,
+            'gate_spec': rr[0]['gate_spec'] if rr else None}
     payload = dict(label=LABEL,
-                   metadata=dict(generation='NEW GENERATION', spec=sha(SPEC), engine_commit='846c9e0',
-                                 unfired_events_asserted=True,
+                   metadata=dict(generation='NEW GENERATION', engine_commit='846c9e0',
                                  engine_core_sha256=sha(os.path.join(ENGINE, 'eduengine', 'core.py')),
-                                 runner_sha256=sha(os.path.abspath(__file__)), seeds=list(seeds),
-                                 n_seeds=len(seeds), n_cells=len(cells), total_runs=len(rows), workers=workers,
-                                 elapsed_seconds=round(wall, 2), T0=T0, T=T,
-                                 env='py3.10.8 numpy2.2.6; BLAS/OMP=1; nice 10',
-                                 preregistration='docs/audit/GATE2_PREREGISTRATION.md'),
-                   cells={f'{a}|{S}|{f}|{v}': summary[a][str(S)][f'{f:.2f}_{v:.2f}'] for a in ARCHS for S in SHARES for f in FEES for v in VACS if a in summary},
-                   delta_cut=dcut, H2={a: h2(a) for a in ARCHS})
+                                 spec_sha256=sha(SPEC), runner_sha256=sha(os.path.abspath(__file__)),
+                                 archs=ARCHS, shares=SHARES, fees=FEES, vacs=VACS, N=300, T0=T0, T=T,
+                                 measure_from=4, start_year=0, event_key='year_t',
+                                 seeds=list(seeds), n_seeds=len(seeds), n_cells=len(cells), total_runs=len(rows),
+                                 workers=workers, elapsed_seconds=round(wall, 2), unfired_events_asserted=True,
+                                 fail_routing=dict(primary='track', sensitivity='stop (contest only, S .25/.70, all vac0, both fees)'),
+                                 primary_estimand=f'H2_contest(vac0={PRIMARY_VAC}, fail=track) = Delta_cut(S=.25)-Delta_cut(S=.70); paired-seed bootstrap 95% CI',
+                                 mde_proxy='bootstrap 95% CI half-width of the primary H2 (reported); 32 matched seeds',
+                                 multiplicity='one pre-stated primary (contest H2 at vac0=.08); quota H2, vac0 curve, H1 secondary; bar/bar_high exploratory',
+                                 baseline_note='pre-repair +0.1086 is AUTHOR-REPORTED baseline, not a target'),
+                   primary_H2_contest=primary, secondary=secondary, H1=h1, exploratory_bar_archs=exploratory,
+                   cells=summary, design_diagnostics=design)
     path = os.path.join(out_dir, 'gate_architecture_results.json')
     json.dump(payload, open(path, 'w'), indent=2)
     print('wrote', path, 'sha', sha(path), 'runs', len(rows), 'wall', round(wall, 1))
@@ -160,17 +223,19 @@ def driver(seeds, workers, out_dir):
 
 def main():
     if len(sys.argv) > 1 and sys.argv[1] == 'cell':
-        a, S, f, v, ss, out = sys.argv[2:8]
-        run_cell(a, float(S), float(f), float(v), [int(x) for x in ss.split('-')] if '-' in ss else [int(ss)], out)
+        a, S, f, v, fail, ss, out = sys.argv[2:9]
+        run_cell(a, float(S), float(f), float(v), fail, [int(x) for x in ss.split('-')] if '-' in ss else [int(ss)], out)
         return 0
     ap = argparse.ArgumentParser()
     ap.add_argument('--seeds', default=f'0-{NSEEDS - 1}'); ap.add_argument('--workers', type=int, default=8)
     ap.add_argument('--out-dir', default=os.path.join(REPO, 'results', 'newgen_gate'))
-    ap.add_argument('--fees', default='0.19,0.00', help='comma list of fee regimes; use 0.19 for the fee-free subset')
+    ap.add_argument('--fees', default='0.19,0.00')
+    ap.add_argument('--no-sensitivity', action='store_true')
     a = ap.parse_args()
     global FEES
     FEES = [float(x) for x in a.fees.split(',')]
-    return driver([int(x) for x in a.seeds.split('-')] if '-' in a.seeds else [int(a.seeds)], a.workers, a.out_dir)
+    return driver([int(x) for x in a.seeds.split('-')] if '-' in a.seeds else [int(a.seeds)], a.workers, a.out_dir,
+                  include_sensitivity=not a.no_sensitivity)
 
 if __name__ == '__main__':
     sys.exit(main())

@@ -128,3 +128,48 @@ theorem, simulator RMSE, t* null, or GPU/ABC outputs.
 
 **Label rule for anything launched before this addendum:** EXPLORATORY; re-reported under the preregistered label
 once the addendum is committed. This addendum commits before the Paper B launch.
+
+## 6. Amendment A3 — Paper A (c) gate-architecture: adjudicator conditions applied (pre-launch)
+
+**Authority:** adjudicator conditional approval `456ecac` / Lead instruction 2026-11-25. This amendment is committed
+**before** any fee-contrast run.
+
+**Design (final):** repaired engine **pin `846c9e0`**; declared NEW world N=300, T=20, T0=12, measure_from=4,
+start_year=0; gate under test = G6→G9 transition; **4 architectures** {bar, bar_high, quota, contest} × **S**
+{0.25,0.35,0.45,0.55,0.70} × **fee** {0.19 kept, 0.00 abolished at T0 via `year_t`} × **vac0** {0.02,0.08,0.25,0.50}
+× **32 matched seeds** = **5,120 runs (primary, `fail='track'`)**; plus a declared **`fail='stop'` sensitivity block**
+(contest only, S∈{0.25,0.70}, all vac0, both fees, 32 seeds = **512 runs**) for a total of **5,632 runs**.
+
+**(1) Fail routing declared:** primary `fail='track'` (matches canonical KR G9-track vertical-tier design; failing the
+gate places the child on the non-elite track rather than removing them), so the Q5−Q1 tutoring gap is not confounded
+with dropout/selection. The `fail='stop'` block is a declared sensitivity factor (dropout routing), reported separately.
+
+**(2) POST window:** e = **+1…+6** (years 13–18), matching the paper's 7-horizon post window; no truncation.
+
+**(3) Primary estimand / uncertainty (pre-declared):**
+* **Primary H2** = `Delta_cut(contest, S=.25) − Delta_cut(contest, S=.70)` at **vac0=.08, fail='track'**, where
+  `Delta_cut = gap_delta(fee=0) − gap_delta(fee=0.19)` with **paired seeds** (same seed index for both fee cells), and
+  `gap_delta = post(e=+1..+6) − pre(T0−4..T0−1)` Q5−Q1 K-12 tutoring-participation gap (pp).
+* **Uncertainty = paired-seed bootstrap 95 % CI** (5,000 resamples of the 32 matched seeds, pairing fee cells by seed);
+  the **MDE proxy = bootstrap 95 % CI half-width** of the primary H2 (reported); seed sd/CI also reported.
+* **Secondary:** quota H2 (same construction), the per-vac0 Delta_cut curve for contest, and **H1** =
+  `gap_delta(fee=0, S=.25) − gap_delta(fee=0, S=.70)` plus a **Spearman monotonicity statistic** of fee=0 `gap_delta`
+  across S (pre-stated: widening as seats shrink).
+* **Exploratory only:** bar / bar_high "H2" (their S is a bar-threshold mapping, not a realized seat share) — reported
+  with **realized admission rates** per cell, never as the paper's H2.
+* **Multiplicity:** exactly one pre-stated primary (contest H2 at vac0=.08); everything else is secondary/exploratory;
+  no post-hoc primary switching.
+* **Null-reporting rule:** the pre-repair +0.1086 is the **AUTHOR-REPORTED baseline**, not a target; a null or negative
+  repaired-engine H2 is a result to report, not a failure.
+* **Achievable MDE:** with 32 matched seeds the primary H2 CI half-width is the reported MDE proxy; if the estimated H2
+  is small relative to it, the result is **inconclusive**, not evidence of no effect.
+
+**Provenance recorded in the output:** archs/shares/fees/vacs, N, T0, T, measure_from, start_year, engine_commit,
+`engine_core_sha256`, spec sha256, runner sha256, event_key `year_t`, per-run `event_log`, quintile×urban cell counts,
+gate applicants/seats/admit rates, per-run `E.unfired_events == []` assertion, realized r/alpha in `gate_spec`.
+
+**Four Codex criticisms — explicit positions for (c):** (i) **no identification claim** is made from (c); the 4θ map
+limitation and the 6-parameter ABC rank-4/6 criticism are recorded elsewhere and are **not** addressed by this
+experiment; (ii) grade×urban **cell counts are reported as a design check**, not used as an estimation population
+(no empty synthetic cell enters any estimator); (iii) uncertainty is **seed Monte-Carlo only** — no pooled/FE selftest
+claim is made; (iv) **no permutation inference / country blocking** is used (this is a within-engine simulation).
