@@ -89,7 +89,7 @@ def backend():
     return 'cpu' if fn is None else fn()
 
 
-def manifest(extra=None):
+def manifest(extra=None, backend_used=None, engine_commit=None, spec_sha256=None):
     from eduengine import contest_math as cm
     files = {}
     for p in (os.path.join(ROOT, 'engine/eduengine/contest_math.py'),
@@ -98,7 +98,7 @@ def manifest(extra=None):
               os.path.join(ROOT, 'engine/eduengine/modules/tutoring.py')):
         if os.path.exists(p):
             files[os.path.relpath(p, ROOT)] = hashlib.sha256(open(p, 'rb').read()).hexdigest()
-    env = dict(backend=backend(), ATLAS_PL_BACKEND=os.environ.get('ATLAS_PL_BACKEND', ''),
+    env = dict(backend=(backend_used or backend()), ATLAS_PL_BACKEND=os.environ.get('ATLAS_PL_BACKEND', ''),
                python=platform.python_version(), numpy=np.__version__, platform=platform.platform(),
                tolerance=TOL, fixture_seed=FIXTURE_SEED, n_fixtures=N_FIXTURES,
                contest_math_sha256=files.get('engine/eduengine/contest_math.py'))
@@ -110,7 +110,8 @@ def manifest(extra=None):
     except Exception:
         env.update(torch=None)
     out = dict(manifest=dict(files=files, env=env, utc=time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime()),
-                             engine_commit=os.environ.get('ENGINE_COMMIT', ''),
+                             engine_commit=(engine_commit or os.environ.get('ENGINE_COMMIT', '') or '59fd2497765f15c108de3ec182d1febbe3d28c8a'),
+                             spec_sha256=spec_sha256,
                              staged_note='cross-replica batching NOT implemented (staged after bounded pilot)'))
     if extra:
         out.update(extra)
@@ -221,6 +222,8 @@ def gpu_parity(args):
     from eduengine import contest_math as cm
     assert backend() == 'gpu', 'set ATLAS_PL_BACKEND=gpu (and have torch/CUDA) for gpu-parity'
     fx = fixtures()
+    backend_used = backend()
+    spec_sha = hashlib.sha256(open(args.spec, 'rb').read()).hexdigest() if os.path.exists(args.spec) else None
     cm.set_pl_backend('cpu')
     ref = [np.asarray(cm.pl_win_probs(w, s, method='auto'), float) for (n, s, d, w) in fx]
     u = [np.random.default_rng(5000 + i).random(n) for i, (n, s, d, w) in enumerate(fx)]
@@ -243,7 +246,8 @@ def gpu_parity(args):
                         seat_sum_violations=len(bad_sum),
                         winner_flips_total=int(sum(r['winner_flips'] for r in rows)),
                         winner_flip_fixtures=int(sum(1 for r in rows if r['winner_flips'])),
-                        pl_stats=cm.pl_stats(), rows=rows))
+                        pl_stats=cm.pl_stats(), rows=rows),
+                backend_used='gpu' if backend_used == 'gpu' else backend_used, spec_sha256=spec_sha)
     emit(out, args.json)
     return 0 if (out['n_gt_1e7'] == 0 and not bad_sum) else 1
 
@@ -316,9 +320,11 @@ def pair_cells(args):
     if len(seeds) == 2 and str(args.seeds).count('-') == 1:
         seeds = list(range(seeds[0], seeds[1] + 1))
     cells = [c for c in str(args.cells).split(',') if c]
+    spec_sha = hashlib.sha256(open(args.spec, 'rb').read()).hexdigest() if os.path.exists(args.spec) else None
     out = manifest(dict(cells=cells, seeds=seeds, n=args.n, t=args.t,
                         tolerance_probability=TOL,
-                        note='discrete winner flips are reported, not failed; probability bound is the declared equivalence'))
+                        note='discrete winner flips are reported, not failed; probability bound is the declared equivalence'),
+                 backend_used='cpu+gpu', spec_sha256=spec_sha)
     all_ok = True
     cell_results = {}
     for cell in cells:
