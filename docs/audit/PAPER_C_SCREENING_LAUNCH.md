@@ -106,6 +106,8 @@ and hash-verified.
 - **Passer freeze (host-only):** `PAPER_C_PASSERS.json` computed from the pulled screening JSON per T1–T4 + Holm (α=.05)
   + the >6 rule (first 6 in appendix order): **24 candidates → 6 frozen passers**
   `S0.85|L0.25|A|P55`, `S0.85|L0.25|C|P55`, `S0.85|L0.25|A|P12`, `S0.85|L0.25|C|P12`, `S0.85|L0.45|A|P55`,
-  `S0.85|L0.45|C|P55` (remainder screening-only). Test results: T1 passes, T2 passes, T3 passes (A|P55 h≈0.144 vs
-  A|P12 h=0, assertion-support satisfied), T4 fails the pre-declared +2 pp minimum (effect ≈ +1.77 pp). No confirmatory
+  `S0.85|L0.45|C|P55` (remainder screening-only). Test results (correction to the earlier sentence): **T1 FAILS** its pre-declared +3 pp minimum (effect +0.66 pp,
+  direction positive, Holm-significant); **T2 passes** (+0.540 vs min 0.10); **T3 passes** (A|P55 h≈0.144 vs A|P12 h=0,
+  assertion-support satisfied); **T4 FAILS** the pre-declared +2 pp minimum (effect ≈ +1.77 pp). Candidates therefore
+  derive from T2/T3 (A/C cells), not T1. No confirmatory
   compute until the adjudicator signs this freeze and the Lead allocates a box.
