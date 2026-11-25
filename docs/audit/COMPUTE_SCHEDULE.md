@@ -598,3 +598,17 @@ amplification question on the fresh vintage (E8 e0 was also 12.322; post paths 2
 **386 seed rows at 17 min → ~28 rows/min aggregate** (HK arms ~3.5/min each); primary ETA window **~18:50–19:00**,
 to be tightened when the HK wave completes (~17:10) and KR arms start. Two slots held idle under the Lead cap; only a
 ≤2-worker, non-fanning-out job may be slotted. g2a multi-seed stays failed/not relaunched until its eval concurrency is capped.
+
+### 13.10 Fixed g2a multi-seed run live at 1 worker; 99 % utilization (16:57)
+
+The sequential fix was already prepared and launched: **`identify_multiseed2.py` PID 27382**, started **16:53:46**,
+`/root/work/g2a`, declared venv, `nice -n 10`, BLAS/OMP=1. It is sequential by construction — **one `eval_one.py` child
+at a time** (PID 27888 observed), `eval_ms2/` = **4/80 evals** at 16:57:40; the failed fan-out script `identify_multiseed.py`
+(0-byte log, 5 partial eval JSONs, no report) is left on disk as evidence and is **not** running. ETA ≈ **18:15–18:35** at
+the observed ~1 eval/min.
+
+**Distribution 16:57:40:** Paper B newgen **8 workers** + g2a **1 worker** = 9 compute workers (+ control and one
+CPU-light GPU-lane pytest validation proc) → cgroup **9.9/10 (99 %)**. Cap respected, no oversubscription.
+**Paper B: 504 seed rows at ~22 min → ~28 rows/min** aggregate (HK wave ~3.5 rows/min/arm); primary ETA **~18:50–19:00**,
+full 2,700 **~20:00–20:20**. After g2a completes its slot stays idle until Paper B primary, then goes to the corrected-
+environment forecast re-run; the old fan-out version will not be relaunched.
