@@ -311,3 +311,18 @@ of runner+workers only, `/root/work/modelrev/pkg` intact. Its outputs are alread
   years/jurisdictions). `docs/audit/GATE2_BENCHMARK_REGISTRY.csv` draft: 7 moments with claim/jurisdiction/survey
   year/population/denominator/outcome definition/source/uncertainty/calibration-vs-held-out; all empirical citations
   still to be verified before use (AUTHOR-REPORTED). No calibration run launched.
+
+- 2026-11-25T16:30+08:00 · Commander · **Gate-2 G2-A baseline APPROVED by Lead with six fixes applied (`GATE2_PLAN.md`,
+  `GATE2_BENCHMARK_REGISTRY.csv` revised).** (1) same-instrument dependence declared: KR 2024/2025 adjacent years of
+  the same KEDI instrument → 2025 = **temporal holdout, not independent validation**; HK G9/G12 same 2011/12 survey →
+  dependent; (2) 76.5 % blended target = **DIAGNOSTIC ONLY, never in fit**; calibration moments are KR 2024 80.0 %,
+  HK G9 53.8 %, KR gap 32.1 pp, KR per-student spend ratio 3.4× (each only if citation verifies); (3) citation
+  verification is a **hard gate** — unsourced moments demoted to UNRESOLVED and dropped, reduced training set
+  reported; (4) `k['q']` mapping (simulated quintile ≠ household-income bracket) must be declared with a
+  bracket-matched statistic before fitting; (5) per-student vs per-participant fixed before fitting (3.4× is
+  per-student; re-derive if only per-participant data); (6) identifiability Jacobian/rank/null-space artefact produced
+  **for the chosen canonical spec after freeze**. Lead **budget decision: full staged budget APPROVED** (~271 CPU-h,
+  ~40 h wall at 10 CPUs) **conditional on two stop gates** — G2-A rank adequate or pre-registered reduced system, and
+  G2-B pilot ≥5 candidates inside declared bands (else stop before the ~216 CPU-h search); reduced 1,000×5 search
+  (~6.5 h wall) documented as operator's faster alternative. **Gate 2 remains blocked** on (a) operator
+  canonical-spec + budget word and (b) task-13 hardening. No compute launched.

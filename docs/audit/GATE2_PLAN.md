@@ -64,6 +64,12 @@ All estimates below assume the 540 spec and **no** speed-up beyond the shipped 1
 | G2-E final held-out | ~60 selected specs × 30 seeds | ~1,800 | **15.5** | ~2.3 h |
 | **total core** | | ~31,300 | **~271 CPU-h** | **~40 h** |
 
+**Lead budget decision (2026-11-25):** the full staged budget above is **APPROVED** (≈271 CPU-h, ~40 h wall at 10
+CPUs), **conditional on two stop gates**: (i) G2-A identifiability rank adequate or the system pre-registered
+reduced; (ii) G2-B pilot finds **≥5 candidates inside the declared bands**. If either fails, **stop and report** —
+do not spend the ~216 CPU-h search. The **reduced 1,000×5 search (~6.5 h wall at 10 CPUs)** is documented as the
+operator's faster alternative and is being put to the operator alongside the canonical-spec decision.
+
 Budget notes: (i) search stage is the dominant cost — a 5,000×5 grid is ~9 days of single-core work; it is feasible
 on the 10-CPU cgroup only at ~2 days wall, or must be reduced (e.g. 1,000×5 ≈ 4.3 days single-core → ~6.5 h at 10
 CPUs); this reduction is a Lead decision. (ii) policy-arm re-runs are **Gate 3**, not in this budget. (iii) if the
@@ -118,9 +124,34 @@ citations are provisional and must be verified or demoted to UNRESOLVED before G
 | KR overall participation 2025 = 75.7 % | **held-out** | never used in fitting; scored out-of-sample |
 | HK Grade 12 participation 2011/12 = 71.8 % | **held-out** | never used in fitting; note same survey as G9 (declare dependence) |
 
-At least **two held-out moments** are reserved (KR 2025 participation; HK Grade 12). If a derived target cannot
-acquire an empirical source, it is dropped and the training set shrinks — the plan reports that, it does not
-improvise a substitute.
+At least **two held-out moments** are reserved (KR 2025 participation; HK Grade 12).
+
+**Same-instrument dependence (Lead-required declaration).** KR 2024 (calibration) and KR 2025 (held-out) are
+**adjacent years of the same KEDI instrument** — 2025 is a **temporal holdout, NOT an independent validation**;
+correlated sampling/instrument error means it cannot certify external validity. Likewise HK Grade 9 (calibration)
+and HK Grade 12 (held-out) come from the **same 2011/12 survey** and are dependent moments. The calibration report
+must state this and treat held-out success as temporal/within-instrument evidence only. No pooling across years or
+jurisdictions, ever.
+
+**Citation verification is a HARD GATE (G2-A).** Each empirical moment must be verified against the actual survey
+source (KEDI 2024/2025; HK 2011/12 survey) with citation, survey year, population and denominator recorded. **Any
+moment that cannot be sourced is demoted to UNRESOLVED and dropped from the training set**; the calibration report
+states the reduced training set explicitly. No improvised substitute, no relabelling, no borrowed number.
+
+**The 76.5 % blended participation target is DIAGNOSTIC ONLY** (`KR_part_target_76_5` in the registry): it overlaps
+the 2024 and 2025 survey rows and must **never enter the fit**. Calibration moments are only: KR 2024 = 80.0 %,
+HK Grade 9 = 53.8 %, KR Q5−Q1 gap = 32.1 pp, KR Q5/Q1 per-student spend ratio = 3.4× — each conditional on its
+citation verifying.
+
+**`k['q']` mapping (hard declaration).** The model's `k['q']` is a simulated cohort ability/income quintile, NOT an
+empirical household-income bracket. Before fitting the bracket-based gap and spend-ratio targets, G2-A must declare
+the mapping and choose a bracket-matched model statistic (e.g. map simulated `q` to income brackets via the model's
+income distribution and verify the match), or drop the bracket-based targets. No silent substitution of quintile
+definitions.
+
+**Per-student vs per-participant (hard declaration).** The 3.4× spend-ratio target is a **per-student** ratio. If the
+verified source provides only per-participant expenditure, the target must be **re-derived** from the source
+(per-student = participation × per-participant) with the procedure recorded — never re-labelled.
 
 ## 4c. Identifiability assessment BEFORE joint estimation (ABC lesson, mandatory)
 
@@ -135,7 +166,9 @@ Requirements:
 * include a local + finite-domain check (multiple starting points across the prior box), not a single point;
 * if the moment map is not differentiable, use a finite-difference Jacobian with step-size sensitivity reported;
 * the identifiability report is a G2-A artefact and a **stop gate**: no joint estimation until rank is adequate or
-  the reduced system is pre-registered.
+  the reduced system is pre-registered;
+* it is computed **for the chosen canonical spec** (after the operator freezes V540-freeze or V420-port); drafting
+  both variants in §1b is not a substitute for the chosen-spec Jacobian/rank/null-space artefact.
 
 ## 4d. Uncertainty reporting (separate, mandatory)
 
@@ -191,7 +224,7 @@ measured-budget table (§2) accepted as the planning basis (no assumed speed-up)
 
 ```
 G2-A freeze spec + registry + evidence ledger (no compute)     → Lead approves
-G2-B pilot 500×3 (≈1.9 h)                                     → stop if <5 feasible candidates
+G2-B pilot 500×3 (≈1.9 h)                                     → STOP if <5 feasible candidates or G2-A rank inadequate
 G2-C search (≈32 h, or reduced per Lead)                       → top-100 table
 G2-D refine 100×30 (≈3.9 h)                                   → seed-uncertainty report
 G2-E held-out evaluation (~2.3 h)                             → pass/fail vs pre-stated tolerances
