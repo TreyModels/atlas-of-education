@@ -675,3 +675,19 @@ Measured 19:26:43: HK **900/900 ✅**, KR-SINGLE **900/900 ✅**, KR-TRACKED **8
 (5,632-run cleared design, 8 workers, fee-free block first) starts the moment the driver exits and writes its final
 artifacts — commander asked for the exact runner/SHA/out-dir and launch command; final artifact names + sha256 will be
 published here immediately. No fee pilot (Lead: already passed). Cap 10; g2a off-box.
+
+### 13.18 MILESTONE 19:43–19:47 — Paper B COMPLETE (2,700/2,700); gate grid launched at 8 workers
+
+**Paper B new generation COMPLETE.** Driver 24480 exited ~19:43; **2,700/2,700 seed rows** (HK PRIMARY 900 + KR-TRACKED
+900 + KR-SINGLE 900); wall 16:35:47 → 19:43 ≈ **3 h 07 min**; average rate 14.4 rows/min over the campaign. Final artifacts:
+- `paperB_new_generation_TRACKED.json` (33,240 B) **sha256 `14fc2a312eec293d8450c4cdc3278b972d3a9448bb9a0e9c99bec134c2adf3a2`**
+- `paperB_new_generation_SINGLE_KR.json` (33,283 B) **sha256 `697e7ca97dcec8f5615b35651b7bfe0e89f4e8079e28359f22e848f5b4d18421`**
+- `new_generation_provenance.json` (4,216 B) **sha256 `cba8ee0f4591461c6fca68ff5ddd996a39b641ad7dd822941eafc2850b08434c`**
+
+**Gate grid LAUNCHED** at 19:45:30 (commander's runner `run_gate_architecture.py`, commit `07808d9`, pin `846c9e0`,
+spec `canonical_spec.json` sha `e5ddef6b…`): driver **PID 34331**, **8 cell workers** 34335/34337/34340/34342/34343/34344/
+34346/34347 (100 % each; cells `bar 0.25 … track 0-31`), declared venv, `nice -n 10`, BLAS/OMP=1, out-dir
+`/root/work/gate846/results`. Cgroup **8.0/10 (80 %)**; 8 workers = cap; control 1; g2a off-box; no fee pilot.
+Design: **5,632 runs** = 5,120 primary `fail='track'` (4 archs × 5 shares × 2 fees × 4 vac0 × 32 seeds) + 512
+`fail='stop'` sensitivity; fee arms cleared (per-run `unfired_events==[]`). Cell checkpoints (`ckpt_bar_*.jsonl`) appearing
+17–20 KB by 19:46. ETA: commander pilot 65–95 min ideal, box estimate 1.5–2.5 h; measured rate to be published at ~20:00.
