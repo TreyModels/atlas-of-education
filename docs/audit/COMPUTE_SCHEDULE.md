@@ -775,3 +775,13 @@ with `import numpy as np`, mtime 21:09):
   **128 rows → ~23:00** (commander/Lead to confirm). Reporting at each 8-row boundary; on
   `paperC_pilot0_results.json`: copy payload to `~/neon-boot/qa/incoming/paperC_results/` + notify qa-verifier.
   X-29 diagnostic (1,280 runs, ~35 min) queued after the pilot; cap stays 8; no other jobs.
+
+### 13.26 Pilot-0 design confirmed: 96 runs (12 cells × 8 seeds), ETA ~22:25–22:35
+
+Runner source header (`run_paperC_pilot0.py`): *"Design (96 runs): 3 supply regimes × 2 S proxies (q0 1.0/1.2) × 2
+private-supply (p_firm 0.03 low / 0.08 high) × 8 seeds"* → **12 cells × 8 seeds = 96 rows** (driver schedules 12 cells
+over 8 workers: 8 running, 4 queued; `ckpt_*` set grows 8 → 12 files). Measured **~1.12 rows/min** → **ETA ≈ 22:25–22:35**
+(21:04:30 + ~86 min). Status 21:17:26: cgroup **8.0/10 (80 %)**, BLAS single-thread verified, 14 rows
+(2 market_only cells at 4, six at 1 — per-seed incremental appends). Reporting at each 8-row boundary + first completed
+cell; payload watch armed for `paperC_pilot0_results.json` → copy to `~/neon-boot/qa/incoming/paperC_results/` and
+notify qa-verifier. Cap 8; X-29 diagnostic queued after.
