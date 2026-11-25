@@ -583,3 +583,18 @@ copied to `docs/audit/results/box_evidence/`.
 - **Forecast (e): DONE** 16:50 — `/root/work/forecast/forecast_results.json` (3,223 B) sha256
   `7346e1f3ded039cf4d82504ed62ccd490387126300155580ee7f0677299f755d`, label "NEW GENERATION — simulation forecast with
   genuine held-out horizons; empirical target = REPRODUCED EMPIRICAL ANALYSIS (fresh WDI)".
+
+### 13.9 CSA re-implementation result + 16:52 distribution (no launch needed)
+
+The CSA (Callaway–Sant'Anna-style group-time ATT) re-implementation had already run and completed at **16:51** (1 worker,
+`/root/work/cs`), so no new allocation was required. Result: `cs_results.json` (2,477 B) **sha256
+`4ac9551d0c4b5b2c9180131859a6f4c3876d527ae158f70a7e039fe34c1d1905`**, estimator `981119b2c1d5bfe73e28ad8d4cd5f3eccafe7f1dc06e5b0af3ec6aa2682ef7a3`;
+fresh WDI panel (same manifest `d7296e1f…` as E8): **impact_e0 12.322, post_mean 25.08, pretrend(−3) 0.138**, bootstrap-500
+CIs e0 [4.48, 22.64], e1 [9.99, 37.34], e2 [11.44, 39.29], Fisher date/country p 0.0044/0.0040; label "REPRODUCED
+EMPIRICAL ANALYSIS — fresh hashed WDI vintage; Paper A numbers AUTHOR-REPORTED baseline". This settles the +25.26
+amplification question on the fresh vintage (E8 e0 was also 12.322; post paths 2.54 vs 25.08 are estimator-side).
+
+**Distribution 16:52:48:** Paper B newgen **8 workers** = **8.0/10 (80 %)**; CSA/g2a/forecast/GPU-smoke all exited; control 1.
+**386 seed rows at 17 min → ~28 rows/min aggregate** (HK arms ~3.5/min each); primary ETA window **~18:50–19:00**,
+to be tightened when the HK wave completes (~17:10) and KR arms start. Two slots held idle under the Lead cap; only a
+≤2-worker, non-fanning-out job may be slotted. g2a multi-seed stays failed/not relaunched until its eval concurrency is capped.
