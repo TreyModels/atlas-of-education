@@ -21,3 +21,9 @@ inspected** before this record.
 ## Consequence
 **Precision halves (SE ×√2)**; report achieved CI/MDE and label **A5 interim precision** — no claim of full 32-seed
 precision. No optional stopping: exactly seeds 100–115 per cell.
+
+## Provenance note (superseded duplicate)
+This file/JSON were created by the Lead as a duplicate A5 record (commit `b825796`) before seeing the canonical A5 record.
+**Canonical A5 = `docs/audit/PAPER_C_A5_SEED_TRUNCATION.md` @ `aa1d0bd` (sha `36515596…`), approval `1c51f17`,
+manifest `0b70c105…`.** The clean A5 run was launched with `--analysis-commit b825796`; that hash maps to this duplicate
+(same rule, no analysis) and **must not be presented as authoritative** — cite canonical A5 instead.
