@@ -13,12 +13,18 @@ steps 5 %/3 %/5 %/4 %, central differences, 2 starting points; 90 evaluations; h
 
 | start | rank | singular values | null dim |
 |---|---|---|---|
-| (1.0, 1.0, 1.0, 1.0) | **4/4** | 50.030, 32.596, 1.907, **0.341** | 0 |
-| (1.5, 0.8, 1.5, 0.95) | **4/4** | 46.916, 17.058, 6.801, **0.128** | 0 |
+| (1.0, 1.0, 1.0, 1.0) | **4/4** | 50.030, 32.596, 1.907, **0.3409** | 0 |
+| (1.5, 0.8, 1.5, 0.95) | **4/4** | 46.916, 17.058, 6.801, **0.1278** | 0 |
+| (0.7, 1.2, 0.8, 1.3) | **4/4** | 46.852, 23.579, 1.993, **0.0457** | 0 |
 
-**Stability:** max |ΔJ| = **11.476**, relative **0.287** (one-seed forward-difference run was max|ΔJ| 26.5, rel 0.52).
-Multi-seed averaging roughly halves the start-to-start Jacobian drift but does **not** eliminate it; the smallest
-singular value still moves 0.341 → 0.128 across starts.
+**Stability (3 starts, all pairs):** max |ΔJ| = **11.476** (0-1), **14.006** (0-2), **14.071** (1-2); relative
+**0.287 / 0.350 / 0.416** (one-seed forward-difference run was max|ΔJ| 26.5, rel 0.52). Smallest-SV trajectory
+**0.3409 → 0.1278 → 0.0457** — it keeps drifting downward rather than stabilising.
+
+**Stop-gate verdict (3 starts): `LOCAL_FULL_RANK_CONDITIONING_UNRESOLVED`** — rank 4/4 and null_dim 0 at every start,
+so the map is locally full-rank at these points, but the fourth direction is not stable; Gate-2 must declare a reduced
+parameterisation or a ridge/prior for the fourth direction. No global-identification claim; no condition-number
+evidence claim.
 
 ## Interpretation (binding for Gate 2)
 

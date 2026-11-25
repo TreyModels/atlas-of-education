@@ -117,11 +117,144 @@
       ],
       "rank": 4,
       "null_space_basis": []
+    },
+    {
+      "theta": {
+        "price_mult": 0.7,
+        "alpha_mult": 1.2,
+        "prize_mult": 0.8,
+        "ymed_mult": 1.3
+      },
+      "base_moments": {
+        "KR_participation_pct": 57.568849206349206,
+        "KR_gap_pp": 23.83829365079366,
+        "KR_spend_ratio": 1.9975450745557903,
+        "HK_grade9_participation_pct": 62.75476190476191
+      },
+      "jacobian": [
+        [
+          -3.3373015873015532,
+          1.2136243386243233,
+          26.775793650793602,
+          14.709821428571512
+        ],
+        [
+          1.875000000000071,
+          0.04960317460328173,
+          -10.367063492063373,
+          -26.029265873016172
+        ],
+        [
+          0.1920180942795957,
+          -0.007222423760511187,
+          -0.47641570353629925,
+          -0.9476401329657519
+        ],
+        [
+          0.16666666666651508,
+          0.1587301587302174,
+          31.92857142857136,
+          0.0
+        ]
+      ],
+      "singular_values": [
+        46.85229302024298,
+        23.579351502905926,
+        1.993115572355921,
+        0.04567221603799629
+      ],
+      "rank": 4,
+      "null_space_basis": []
     }
   ],
   "stability": {
     "max_abs_dJ": 11.476190476190737,
     "rel_max": 0.286648866129375
   },
-  "runtime_sec": 1361.28
+  "runtime_sec": 1361.28,
+  "n_evals_by_start": [
+    45,
+    45,
+    45
+  ],
+  "pairwise_stability": [
+    {
+      "pair": [
+        0,
+        1
+      ],
+      "max_abs_dJ": 11.476190476190737,
+      "rel_max": 0.286648866129375
+    },
+    {
+      "pair": [
+        0,
+        2
+      ],
+      "max_abs_dJ": 14.006442731570168,
+      "rel_max": 0.3498487530195892
+    },
+    {
+      "pair": [
+        1,
+        2
+      ],
+      "max_abs_dJ": 14.071428571428726,
+      "rel_max": 0.4163448440727207
+    }
+  ],
+  "sv_trajectory": [
+    [
+      50.029862917857386,
+      32.59558463931236,
+      1.9066349978611792,
+      0.34094552053797433
+    ],
+    [
+      46.9155694504174,
+      17.058226201454897,
+      6.801364344549416,
+      0.12779595670752128
+    ],
+    [
+      46.85229302024298,
+      23.579351502905926,
+      1.993115572355921,
+      0.04567221603799629
+    ]
+  ],
+  "ranks": [
+    4,
+    4,
+    4
+  ],
+  "null_dims": [
+    0,
+    0,
+    0
+  ],
+  "stop_gate": {
+    "required_starts": 3,
+    "n_starts": 3,
+    "all_rank_full": true,
+    "conditioning_settled": false,
+    "verdict": "LOCAL_FULL_RANK_CONDITIONING_UNRESOLVED",
+    "reason": "rank 4/4 and null_dim 0 at all 3 starts, but the fourth singular value keeps falling (0.340946 -> 0.127796 -> 0.045672) and pairwise relative |dJ| reaches 0.416: the fourth direction is not stable across starting points, so local full rank is established but conditioning is unresolved; no global-identification or condition-number claim; Gate-2 must declare a reduced parameterisation or a ridge/prior for the fourth direction."
+  },
+  "runtime_add_sec": 1439.25,
+  "engine_pin": "98baf6b (pre-re-pin; numerics unchanged vs 846c9e0)",
+  "engine_core_sha256": "72cbddf7d97db85269081ae1c8ab692153c27b0553d4ce59691beab20bbfcb99",
+  "steps": {
+    "price_mult": 0.05,
+    "alpha_mult": 0.03,
+    "prize_mult": 0.05,
+    "ymed_mult": 0.04
+  },
+  "n_starts": 3,
+  "unfired_events": "not_applicable \u2014 calibration-map evaluations schedule no calendar events",
+  "smallest_sv_trajectory": [
+    0.34094552053797433,
+    0.12779595670752128,
+    0.04567221603799629
+  ]
 }
