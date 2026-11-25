@@ -1,4 +1,9 @@
-# PAPER C CONFIRMATORY — preregistration draft (design-only, pending review; no compute authorized)
+# PAPER C CONFIRMATORY — preregistration (design-only; §8 Amendment A1 SUPERSEDES §§1–6)
+
+> **AUTHORITY RULE: where §§1–6 conflict with §8 Amendment A1 + the Appendix, §8/Appendix wins.** The body §§1–6 are
+> retained for the review trail; the authoritative design is §8 (A1.1–A1.8) plus the 36-row cell list in the Appendix
+> below. No confirmatory compute is authorized until the adjudicator clears this file and Codex's protocol/Kaplan
+> confirmation is in.
 
 **Status: DRAFT for adjudicator review against the four Codex criticisms. Not yet preregistered-final, no confirmatory
 run launched.** The current 128-run Pilot-0 v3 is **EXPLORATORY/hypothesis-generating** and **cannot** be used as
@@ -135,3 +140,45 @@ Pilot-0 (pilot observed ~5–7 min/seed at N=1500; screening N=600 projected fro
 SEA-PLM item wording V). **Model row 8 = Bryan Caplan (probable, UNCONFIRMED, tag V)**, not a straw man; protocol = both
 competing models on the same evidence AND complementary modules, with holds/fails/indeterminate/not-testable.
 Negative-result wording: "holds / fails / indeterminate-by-context", never "model is wrong"; all results preserved.
+
+
+## Appendix — explicit 36-row cell list (screening; 8 seeds 0–7 each; confirmatory = frozen passers × seeds 100–131)
+
+Supply configurations: **A** = own_ban 0 / firm_ban 0 (own access open); **B** = own_ban .95 / firm_ban 0 (own closed,
+market only); **C** = own_ban 0 / firm_ban .9 (own open, firms banned). Settings: **P55** = pay_ratio .55, monitoring .2,
+withhold_mode='pay_gap'; **P12** = pay_ratio 1.2, monitoring .5, withhold_mode='pay_gap'.
+Gate kind: G6→G9 gate = **contest** with `share_of='cohort'`, `contest_r` ∈ {1.2, 1.6} mapped as r=1.2 for L=0.25 and
+r=1.6 for L=0.45 (declared; the pair is fixed by L, not an independent factor). L=0.25 or 0.45 sets the contest share.
+
+| id | S | L | supply | settings | id | S | L | supply | settings |
+|---|---|---|---|---|---|---|---|---|---|
+| S0.85\|L0.25\|A\|P55 | 0.85 | 0.25 | A | P55 | S0.85\|L0.25\|B\|P55 | 0.85 | 0.25 | B | P55 |
+| S0.85\|L0.25\|C\|P55 | 0.85 | 0.25 | C | P55 | S0.85\|L0.25\|A\|P12 | 0.85 | 0.25 | A | P12 |
+| S0.85\|L0.25\|B\|P12 | 0.85 | 0.25 | B | P12 | S0.85\|L0.25\|C\|P12 | 0.85 | 0.25 | C | P12 |
+| S0.85\|L0.45\|A\|P55 | 0.85 | 0.45 | A | P55 | S0.85\|L0.45\|B\|P55 | 0.85 | 0.45 | B | P55 |
+| S0.85\|L0.45\|C\|P55 | 0.85 | 0.45 | C | P55 | S0.85\|L0.45\|A\|P12 | 0.85 | 0.45 | A | P12 |
+| S0.85\|L0.45\|B\|P12 | 0.85 | 0.45 | B | P12 | S0.85\|L0.45\|C\|P12 | 0.85 | 0.45 | C | P12 |
+| S1.00\|L0.25\|A\|P55 | 1.00 | 0.25 | A | P55 | S1.00\|L0.25\|B\|P55 | 1.00 | 0.25 | B | P55 |
+| S1.00\|L0.25\|C\|P55 | 1.00 | 0.25 | C | P55 | S1.00\|L0.25\|A\|P12 | 1.00 | 0.25 | A | P12 |
+| S1.00\|L0.25\|B\|P12 | 1.00 | 0.25 | B | P12 | S1.00\|L0.25\|C\|P12 | 1.00 | 0.25 | C | P12 |
+| S1.00\|L0.45\|A\|P55 | 1.00 | 0.45 | A | P55 | S1.00\|L0.45\|B\|P55 | 1.00 | 0.45 | B | P55 |
+| S1.00\|L0.45\|C\|P55 | 1.00 | 0.45 | C | P55 | S1.00\|L0.45\|A\|P12 | 1.00 | 0.45 | A | P12 |
+| S1.00\|L0.45\|B\|P12 | 1.00 | 0.45 | B | P12 | S1.00\|L0.45\|C\|P12 | 1.00 | 0.45 | C | P12 |
+| S1.15\|L0.25\|A\|P55 | 1.15 | 0.25 | A | P55 | S1.15\|L0.25\|B\|P55 | 1.15 | 0.25 | B | P55 |
+| S1.15\|L0.25\|C\|P55 | 1.15 | 0.25 | C | P55 | S1.15\|L0.25\|A\|P12 | 1.15 | 0.25 | A | P12 |
+| S1.15\|L0.25\|B\|P12 | 1.15 | 0.25 | B | P12 | S1.15\|L0.25\|C\|P12 | 1.15 | 0.25 | C | P12 |
+| S1.15\|L0.45\|A\|P55 | 1.15 | 0.45 | A | P55 | S1.15\|L0.45\|B\|P55 | 1.15 | 0.45 | B | P55 |
+| S1.15\|L0.45\|C\|P55 | 1.15 | 0.45 | C | P55 | S1.15\|L0.45\|A\|P12 | 1.15 | 0.45 | A | P12 |
+| S1.15\|L0.45\|B\|P12 | 1.15 | 0.45 | B | P12 | S1.15\|L0.45\|C\|P12 | 1.15 | 0.45 | C | P12 |
+
+**T3 remap (required):** T3 compares **A|P55 vs A|P12** at the same S and L (own access open in both; pay_ratio/monitoring
+differ) — this is the only contrast that can satisfy h>0 **and** own_share>0.1 in the exposed arm. State cells explicitly:
+e.g. `S1.00|L0.25|A|P55` (h≈0.144, own_share≈0.53 expected) vs `S1.00|L0.25|A|P12` (h=0 under pay_gap); binding assertions
+must hold in the exposed arm or the contrast is INVALID.
+
+**Compute envelope (recalibrated from Pilot-0, measured ~6.9 CPU-min/run at N=1500):** N=600 ≈2.8 CPU-min/run → screening
+36 cells × 8 seeds = 288 runs ≈ **13.4 CPU-h** (≈1.7 h wall at 8 workers); confirmatory (pre-declared passers, capped at
+**≤6 cells**) × 32 seeds × N=1500 × 6.9 CPU-min ≈ **22 CPU-h** (≈2.8 h wall at 8). **Total ≤ ~36 CPU-h**, and only
+after G2-B + Codex review; 1–2 box slots reserved for Luna/MASSENG per operator policy. **Screening-confirmation is on
+pre-declared passers only**; launch manifest records engine core sha, spec sha, runner+analysis commit hashes, seeds,
+cells, and the frozen passer list.

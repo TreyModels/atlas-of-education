@@ -12,7 +12,7 @@
 * Binding assertions (active in v3 runner): non-market regimes require `withheld > 1e-3` and `own_share > 0.1`;
   a no-op cell raises. Contamination: `own_share`/`tut_firm_by_grade` mix contest prep with firm tutoring.
 * **Status: EXPLORATORY / hypothesis-generating; NOT confirmatory; 128 runs/16 cells is the QA-validated target.**
-* The earlier **96-run / 3-regime / pay_ratio .8** text was a superseded draft (v2); it must not stand. Docstring,
+* The earlier **96-run / 3-regime / pay_ratio .8** text (including stale commit-message wording such as `dcd0ad9`) was a superseded draft (v2); it must not stand. **Authoritative: 128 runs / 16 cells, v3 params above**, payload/manifest labels must say 128/16. Docstring,
   QA validator and payload must use **128/16** and the v3 parameters above.
 * Runner sha256 recorded in the pilot manifest at completion; source commits: v3 code `fbc1991`, docstring alignment
   `69e38b2`, latest runner `edc6a59` (diagnostic extraction only).
