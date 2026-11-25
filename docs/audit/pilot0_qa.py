@@ -29,6 +29,10 @@ METRICS = ['tut_k12_rate','tut_k12_spend','tut_g12_rate','own_share','firm_price
            'completion_upper','contest_e_mean','tut_rate','elite_q5_share_pct','tut_own_by_grade_last',
            'tut_firm_by_grade_last','L_mean','L6_mean','L9_mean']
 PIN = '846c9e0'; CORE_SHA = 'e111397bd8a50f94e82bb77715f236ee3d5c0bf863a23d84afdf1c6c71fa8e71'
+# Provenance (lead-confirmed): engine at 846c9e0 + canonical_spec.json FILE from the re-pin commit 46c080d
+# (file sha e5ddef6b…b755; spec content sha 280b5d95…). The git tree at 846c9e0 predates the re-pin, so an
+# in-tree spec hash of 35576f… is expected old content, not a defect.
+SPEC_SHA = 'e5ddef6b4ecd04a0e96f480b43a97f0567bed7654ec032c1779c9e20f6beb755'
 results = []
 def rec(sid, ok, msg): results.append((sid, 'PASS' if ok is True else ('FAIL' if ok is False else 'BLOCKED'), msg))
 
@@ -40,6 +44,7 @@ def cellkey(r, q0, pf):
 
 def main():
     ap = argparse.ArgumentParser(); ap.add_argument('--results', required=True); ap.add_argument('--engine-repo', default=None)
+    ap.add_argument('--log', default=None, help='optional pilot driver log; checks absence of unfired_events/RuntimeError')
     a = ap.parse_args(); root = a.results
     payload_path = os.path.join(root, 'paperC_pilot0_results.json') if os.path.isdir(root) else root
     if not os.path.exists(payload_path):
@@ -49,8 +54,10 @@ def main():
     p = json.load(open(payload_path)); rec('A1', True, f'payload present: {payload_path}')
     man = p.get('manifest', {}); summ = p.get('summary', {})
     # A2 engine pin
-    ok2 = man.get('engine_commit') == PIN and man.get('engine_core_sha256') == CORE_SHA
-    msg2 = f"engine_commit={man.get('engine_commit')} core_sha={str(man.get('engine_core_sha256'))[:12]}"
+    ok2 = (man.get('engine_commit') == PIN and man.get('engine_core_sha256') == CORE_SHA
+           and man.get('spec_sha256') == SPEC_SHA)
+    msg2 = f"engine_commit={man.get('engine_commit')} core_sha={str(man.get('engine_core_sha256'))[:12]} spec_sha={str(man.get('spec_sha256'))[:12]}"
+    msg2 += ' (provenance: engine 846c9e0 + spec file from re-pin 46c080d e5ddef6b…; in-tree 846c9e0 spec 35576f… is expected old content)' if man.get('spec_sha256') == SPEC_SHA else ' — EXPECTED spec_sha e5ddef6b…'
     if a.engine_repo and ok2:
         try:
             commit = subprocess.check_output(['git','-C',a.engine_repo,'rev-parse',PIN], text=True).strip()
@@ -113,6 +120,14 @@ def main():
     lab = str(p.get('label','')) + ' ' + json.dumps(man)
     ok8 = ('EXPLORATORY' in lab.upper()) and not re.search(r'\bCAUSAL\b|\bCONFIRMATORY RESULT\b', lab.upper().replace('NOT CONFIRMATORY',''))
     rec('A8', ok8, f'label starts: {str(p.get("label",""))[:100]}')
+    # A9 unfired events / loud-failure evidence (runner raises on non-empty unfired_events)
+    log = a.log if a.log else None
+    if log and os.path.exists(log):
+        txt = open(log, encoding='utf-8', errors='replace').read()
+        bad = ('unfired events' in txt) or ('RuntimeError' in txt) or ('Traceback' in txt)
+        rec('A9', not bad, f'log={log}: unfired/RuntimeError/Traceback found={bad}')
+    else:
+        rec('A9', None, 'no driver log supplied (--log): unfired_events==[] is enforced per run by the runner (raises), but attach pilot_v3_8w.log for evidence')
     print(json.dumps(dict(results=results), indent=1))
     print('\nSUMMARY:', 'PASS' if all(s=='PASS' for _,s,_ in results) else 'FAIL/BLOCKED')
     return 0 if all(s=='PASS' for _,s,_ in results) else 1

@@ -46,12 +46,13 @@ PASS/FAIL/BLOCKED per item; this file records the **static code audit** that can
   `engine/eduengine/core.py` = `e111397bd8a50f94e82bb77715f236ee3d5c0bf863a23d84afdf1c6c71fa8e71`
   = the pinned `846c9e0` core hash ⇒ the running engine code matches the pin. This is box-side evidence;
   the payload's own `engine_core_sha256` still must be checked when it lands.
-* **Spec-hash discrepancy (flag):** box `docs/audit/canonical_spec.json` sha256 =
-  `e5ddef6b4ecd04a0e96f480b43a97f0567bed7654ec032c1779c9e20f6beb755`, which matches the *declared* pin in
-  `GATE2_PREREGISTRATION.md`/pin commit message ("file e5ddef6b"), but the `docs/audit/canonical_spec.json`
-  blob in the git tree at commit `846c9e0` hashes to `35576f…b95f`. The runner records the box copy's sha;
-  QA must treat the *declared* spec pin as the authoritative one and record the mismatch rather than
-  silently accepting either. (No numeric effect is asserted here.)
+* **Spec provenance (lead-confirmed, expected — not a defect):** the box spec file
+  `docs/audit/canonical_spec.json` sha256 = `e5ddef6b4ecd04a0e96f480b43a97f0567bed7654ec032c1779c9e20f6beb755`
+  is the canonical spec **at the re-pin commit `46c080d`** (content sha `280b5d95…`), which pins engine
+  `846c9e0` (core `e111397b…`). The git tree at `846c9e0` predates the re-pin, so its in-tree spec hashes
+  to `35576f…` (old content). Correct provenance statement: **engine at `846c9e0` + spec file from re-pin
+  `46c080d` (`e5ddef6b…`)**. The validator checks the payload's `spec_sha256` against `e5ddef6b…`;
+  `35576f…` is expected old content, not an error.
 * **Driver log is empty** (`/root/work/paperC/pilot0.log` = 0 bytes): the run's console provenance is
   absent, so per-run failures are only visible through missing checkpoint rows. Flag for the run record.
 * Snapshot schema: rows contain `regime,q0,p_firm,seed` + 23 outcomes/metrics, matching the runner's
@@ -69,7 +70,7 @@ PASS/FAIL/BLOCKED per item; this file records the **static code audit** that can
 
 | id | severity | finding |
 |---|---|---|
-| P1 | medium | **Pin is a label, not an enforced invariant.** `LABEL` and `manifest.engine_commit` hard-code `'846c9e0'` (runner lines 33, 143); the runner never checks `git rev-parse`/`core.py` sha at run time. A stale or dirty engine tree would still be labelled `846c9e0`. QA must verify `engine_core_sha256` in the payload against the pin (the validator does). |
+| P1 | medium | **Pin is a label, not an enforced invariant.** `LABEL` and `manifest.engine_commit` hard-code `'846c9e0'` (runner lines 33, 143); the runner never checks `git rev-parse` at run time, but it does compute `engine_core_sha256`/`spec_sha256` from the tree it actually imported. QA must verify those two hashes in the payload (the validator checks core `e111397b…` and spec `e5ddef6b…` — re-pin provenance). |
 | P2 | low | **No-op guard double-counts rows on resume.** `all_rows = rows_this + [json.loads(l) for l in open(ck)]` (line ~104) counts each newly appended row twice; harmless for the pass/fail decision but the reported guard mean is not the plain cell mean on restart. Guard is a cell-level mean, not per-seed. |
 | P3 | low | Guard wording conflates the two conditions (`NO-OP regime … withheld=… own_share=…`), so a failure message does not say which threshold failed; the validator reports both values per cell. |
 | P4 | low | Pilot-0 summary CIs are normal-approximation 95% intervals on 8 seeds (line 131), no multiplicity handling. Acceptable for EXPLORATORY but must not be read as confirmatory. |
@@ -87,6 +88,7 @@ PASS/FAIL/BLOCKED per item; this file records the **static code audit** that can
 | A6 summary keys | all 16 cell keys, all 23 metrics, `n=8` | blocked on A1 |
 | A7 no-op guard fired | 12/12 non-market cells: withheld > 1e-3 AND own_share > 0.1 | blocked on A1 |
 | A8 label | EXPLORATORY, no confirmatory/causal claim | blocked on A1 (static PASS) |
+| A9 unfired events | no `unfired events` / `RuntimeError` / `Traceback` in the driver log; runner raises per run if `unfired_events` non-empty | blocked on A1 (needs `pilot_v3_8w.log`) |
 
 **Verdict:** Pilot-0 **cannot be QA-signed off until the run payload is copied from the box** (or the
 instance is restarted and the pull is done through the Commander). Static code audit finds the declared
