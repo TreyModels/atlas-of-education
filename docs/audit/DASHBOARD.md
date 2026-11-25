@@ -242,3 +242,10 @@ of runner+workers only, `/root/work/modelrev/pkg` intact. Its outputs are alread
   540 ETA revised ~15:20–15:25. Box cross-env 540 relaunched by compute-controller at 6 workers
   (`/root/work/cmd/run_540_w6c.log`, controller-owned; Commander hands-off). Branch: local ahead of origin
   (`307b59c` remote); push planned with the Gate-1 pack.
+
+- 2026-11-25T15:12+08:00 · Commander · **Authorised host-DGP kill (resource decision, not scoping) + Gate-1 ETA.**
+  Lead authorised killing qa-verifier's HOST `dgp_validation.py` duplicate (PIDs 60095/60097–60100 + wrappers) because
+  its BOX pilot (`/root/work/qa/full.log`, 3 workers since 15:10:40) is the authoritative P0 run; qa's box job was
+  NOT touched. Host now dedicated to the authoritative Gate-1 540 (6 workers, clean `98baf6b`), which was ~50 % done
+  at 3,756 core-s; ETA improves to **~15:22–15:25**. Box stays at 10/10 (commander 540×6, qa DGP×3, contest task-9×1,
+  controller-owned); no oversubscription. qa's P0 deliverable unaffected (box run continues; appeal route noted).
