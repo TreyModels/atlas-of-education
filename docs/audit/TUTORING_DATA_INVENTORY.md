@@ -49,6 +49,16 @@ HK/PH/KH/CN. Any Paper C empirical design must combine sources with explicit joi
 | **Supplementary — expenditure levels** | KOSTAT (KR, aggregate), CFPS (CN, micro), CEPS (CN, pre-2021), HK reports | expenditure per student/per household, by income band | no expenditure in PISA/SEA-PLM/TIMSS; PH/KH only education-total proxies |
 | **Supplementary — HK vs PH emergence/supply-form comparison** | PISA 2018/2022 (participation+hours both), KOSTAT KR for provider benchmark, literature (HK) | cross-country descriptive contrast of participation/intensity gradients | **supply-form (own vs firm) comparison is not feasible for HK vs PH** — HK provider data are report-level at best, PH has none; the emergence prediction can be *illustrated*, not tested, with this portfolio |
 
+## 2b. Paper C claims boundary (binding — must not be buried)
+
+**HK-vs-PH supply-form (own-teacher vs firm) is unobserved in both settings.** With the current portfolio the
+**emergence/supply-form prediction cannot be tested**; Paper C's empirical leg is **feasible-partial
+(participation/hours only)** until (i) PISA 2018/2022 codebooks are checked, (ii) the SEA-PLM 2019 tutoring item is
+confirmed or ruled out for Cambodia/Philippines, and (iii) China microdata access (CIEFR-HS/CFPS) is granted.
+Participation and hours can be described for HK/PH via PISA and (pending codebook) for KH/PH via SEA-PLM 2019;
+expenditure only via China/Korea; provider type only via Korea. Any Paper C claim beyond participation must be
+labelled **theory-only or data-blocked**. See `TUTORING_CODEBOOK_VERIFICATION.md` for item-level status.
+
 ## 3. What remains theory-only (must not be imputed or asserted)
 
 1. **Own-teacher withholding** — `h = h_max·driver(w_T/w_out)·(1−monitoring)·(1−own_ban)`; no dataset observes

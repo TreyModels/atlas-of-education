@@ -46,6 +46,15 @@ Prediction families: **HC** = Becker human capital (#1); **POS** = Hirsch positi
 6. **Policy-change tests (China Double Reduction, HK/KR caps)** — no policy variation or tutoring variables in DHS.
 7. **Mincer returns (#2)** — no earnings.
 
+## 2b. Binding limitation for Paper C (carried from the data inventory)
+
+**HK-vs-PH supply-form (own-teacher vs firm) is unobserved in both settings**, so the **emergence/supply-form
+prediction cannot be tested with the current portfolio**; Paper C's empirical leg is **feasible-partial
+(participation/hours only)** until codebooks/access are verified (`TUTORING_CODEBOOK_VERIFICATION.md`). The
+theory-only list (withholding, positive school-supply `S`, learning decomposition `G=max(0,L−S)`, supply-form
+equilibrium, informal prices/teacher hours/firm capacity) remains intact. The DHS experiments therefore cannot
+fill this gap either: they contain no tutoring variables at all.
+
 ## 3. How the Zoo should use these eight experiments
 
 * Use E1–E8 as **auxiliary distributional targets** only (wealth gradient sign, urban-rural gap, sex-gap reversal,
