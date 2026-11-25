@@ -26,8 +26,10 @@ Paper A is **two different papers stapled together**, and only one of them curre
   2026-11-25-e6e8-sequencing` @ `bd782be`, `research/records/2026-11-25-e8-fisher-ri`,
   `research/records/2026-11-25-gender-split-e6e8` @ `b4eb680`) to machine precision, and those records carry
   passed reproduction gates. This is the manuscript's only citable evidence. It is **descriptive/associational**;
-  the source record explicitly forbids causal language. The manuscript over-reads it in two places (pre-trends and
-  the gender conclusion) — see A-05/A-06.
+  the source record explicitly forbids causal language. **A fresh hashed-WDI CS-style replication reproduces both
+  the impact (+12.322 vs +12.44) and the delayed amplification (+25.083 vs +25.26)** — A-34/A-35, with the wide-CI /
+  8-cluster caveat. The manuscript over-reads the empirical block in two places (pre-trends and the gender
+  conclusion) — see A-05/A-06.
 * **The simulation/identifiability half is AUTHOR-REPORTED BASELINE, not evidence.** Exp 1, Exp 3, Exp 4 and Exp 5
   have **no recovered runner, seeds, or result files** (not found in the locations searched; the originals are not
   the blocker). The only result artifact is a self-reported JSON, and its stated `base_commit` (`68da16e`) did not
@@ -42,9 +44,10 @@ Paper A is **two different papers stapled together**, and only one of them curre
   and "theorem" must be deleted; "local" must be stated.
 
 **Publishability verdict:** the current combined manuscript is **not publishable**. The **verified empirical core is
-the abolition impact** (+12.44 author; **+12.32 pp fresh-WDI replication**, A-34); the **delayed-amplification story
-is estimator-dependent** (+25.26 author vs +2.54 fresh-WDI simple DiD, A-35) and cannot be presented as robust until
-the CS estimator is re-run on fresh data. The measurement proposal is publishable only as a
+now both the impact and the delayed amplification**: author +12.44 / +25.26, and **fresh-WDI CS-style replication
++12.322 / +25.083** (A-34/A-35), with the declared deviations (equal weights, no DR covariates, **8 clusters → wide
+CI** [4.48, 22.64], fresh vintage). The simple-DiD +2.54 is estimator sensitivity, not a contradiction. The forecast
+(Exp 5) is **exploratory-invalid and must be re-run** (A-37). The measurement proposal is publishable only as a
 conjecture/pre-registration with an independently computed local-rank appendix; the Tullock H2 experiment and the
 fee-abolition forecast must be **replaced by the NEW-GENERATION runs** (`PAPER_A_REPRODUCTION_ATTEMPT.md`: gate
 architecture ≥5,000 runs; multi-seed Jacobian; forecast with held-out horizons). The legacy numbers stay visible as
@@ -88,14 +91,19 @@ is stronger than AUTHOR-REPORTED but weaker than the author-record-verified `VER
 
 | ID | Claim | New-generation result | AUTHOR-REPORTED baseline | Status | Required action |
 |---|---|---|---|---|---|
-| A-34 | E8 abolition-year impact ATT(e=0) | **+12.322 pp** (simple DiD, fresh WDI; Fisher p **0.0056** dates / **0.0044** countries, 2,500 perms) | +12.44 pp (CS; p .0001/.0003–.0006) | **REPRODUCED EMPIRICAL ANALYSIS** | Keep the impact as the verified empirical core; report the fresh-WDI replication and the estimator/vintage difference; add manifest hash + code. |
-| A-35 | E8 post-abolition amplification, mean e=+1..+6 | **+2.54 pp** (simple DiD; path peaks on impact and fades) | +25.26 pp (CS) | **UNRESOLVED / ESTIMATOR-DEPENDENT** | Do **not** present +25.26 as a robust amplification. The difference is an **estimator/vintage** difference (simple DiD with equal weights ≠ CS group-time ATT with not-yet-treated controls, cohort-size weighting, cluster bootstrap), **not proof the author's number is wrong**. Either re-run the CS estimator on fresh data or state the number is estimator-specific. |
+| A-34 | E8 abolition-year impact ATT(e=0) | **+12.322 pp** (CS-style group-time ATT, fresh WDI; bootstrap mean 12.308, 95% CI **[4.48, 22.64]**; Fisher p **0.0044** dates / **0.0040** countries, 2,500 perms; 500 cluster bootstraps) | +12.44 pp (CS; p .0001/.0003–.0006) | **REPRODUCED EMPIRICAL ANALYSIS** | Keep the impact as the verified empirical core; report the fresh-WDI replication and the declared deviations; add manifest hash + code. |
+| A-35 | E8 post-abolition amplification, mean e=+1..+6 | **+25.083 pp** (CS-style group-time ATT, fresh WDI; event path e=0..6 **12.32, 23.66, 25.79, 21.88, 24.94, 28.45, 25.78**; pre-trend e=−3 **+0.138**) | +25.26 pp (CS) | **REPRODUCED EMPIRICAL ANALYSIS (CS-style group-time ATT, fresh WDI vintage)** | The delayed amplification **replicates**. Declared deviations: **equal country weights** (no cohort-size weighting), **no doubly-robust covariates**, **8 treated clusters → wide CI**, fresh WDI vintage. The earlier simple-DiD **+2.54 pp** is recorded as **estimator sensitivity**, not a data difference and not a contradiction. |
 | A-36 | Delayed secondary-bulge `t*` jump | ATT at `t*` **−0.956 pp**, post mean **+0.30 pp**, Fisher p **0.251** dates / **0.384** countries; 2,500 perms, 2495 effective for countries | manuscript's own HONEST_NULL framing (no claim of a jump) | **UNRESOLVED** (no-effect evidence) | Report as **no detectable secondary-bulge jump** on fresh aggregate data; consistent with the manuscript's honest-null framing. Not a contradiction of the author; the author's null concerned aggregate-WDI detectability. |
+| A-37 | Fee-abolition forecast / out-of-sample (Exp 5, new-generation run (e)) | **EXPLORATORY-INVALID** — the calibration bisection was misframed and produced a zero-effect artefact; **no citable numbers exist** and none are quoted here | author's RMSE 5.13/4.68 vs 23.93; impact +11.60/+13.48 (AUTHOR-REPORTED) | **UNRESOLVED** (invalid for citation; rerun required) | Do **not** cite any forecast number from the invalid run. Rebuild the calibration (training-only, documented bisection), hold out e=+5/+6, re-run and hash; then compare to the baseline. |
 
-**Caveats binding for citation:** (i) simple DiD ≠ the author's CS estimator; (ii) fresh WDI vintage may differ from
-the author's snapshot; (iii) equal country weighting, not cohort-size weighting; (iv) association-only language.
-The original `VERIFIED EMPIRICAL` rows A-01/A-02 remain verified **against the committed author record**; A-34 is an
-independent fresh-vintage replication of the impact only. A-02's +25.26 is now cross-referenced to A-35.
+**Caveats binding for citation:** (i) the CS-style estimator is a re-implementation, not the author's exact code:
+**equal country weights** (no cohort-size weighting), **no doubly-robust covariates**, **8 treated clusters → wide
+CI**, fresh WDI vintage; (ii) the fresh vintage may contain revisions; (iii) association-only language, no causal
+claim beyond the author's design; (iv) the simple-DiD **+2.54 pp** is retained as **estimator sensitivity** and is
+not a contradiction. The original `VERIFIED EMPIRICAL` rows A-01/A-02 remain verified **against the committed
+author record**; A-34/A-35 are independent fresh-vintage replications under the author's estimator family. Artefacts:
+`docs/audit/CS_ESTIMATOR_NEWGEN.md` (sha256 `04faf9dc…b196`), `results/audit/newgen/cs_estimator_fresh_wdi_2026-11-25.json`
+(sha256 `4ac9551d…1905`), panel manifest `d7296e1f…5ee4`.
 
 ### 2.2 Exp 1 — delayed secondary-bulge `t*` "honest null"
 
@@ -159,14 +167,14 @@ independent fresh-vintage replication of the impact only. A-02's +25.26 is now c
 | Status | Count | Claim IDs |
 |---|---|---|
 | VERIFIED EMPIRICAL | 4 | A-01, A-02, A-03, A-04 |
-| REPRODUCED EMPIRICAL ANALYSIS | 1 | A-34 (fresh-WDI simple-DiD impact replication) |
+| REPRODUCED EMPIRICAL ANALYSIS | 2 | A-34 (impact), A-35 (delayed amplification) — fresh-WDI CS-style group-time ATT |
 | REPRODUCED SIMULATION | 0 | — |
 | VALIDATED SIMULATION | 0 | — |
 | AUTHOR-REPORTED | 20 | A-07, A-08, A-09, A-10, A-11, A-12, A-13, A-15, A-16, A-19, A-21, A-22, A-23, A-24, A-25, A-26, A-27, A-28, A-29, A-30 |
 | CONTRADICTED | 8 | A-05, A-06, A-14, A-17, A-18, A-20, A-32, A-33 |
-| UNRESOLVED | 3 | A-31, A-35, A-36 |
+| UNRESOLVED | 3 | A-31, A-36, A-37 |
 
-*(36 adjudicated rows: A-01 … A-36 (A-34…A-36 are the new-generation fresh-WDI rows). A-33 is a quarantine note for a claim that is not in the received
+*(37 adjudicated rows: A-01 … A-37 (A-34…A-36 are the new-generation fresh-WDI rows; A-37 is the invalid forecast run). A-33 is a quarantine note for a claim that is not in the received
 manuscript but is part of the declared replication bundle; it is included so the quarantine is explicit.)*
 
 ## 4. What survives, what must be done before any resubmission

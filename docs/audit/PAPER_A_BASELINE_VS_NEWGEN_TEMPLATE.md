@@ -27,8 +27,8 @@ Codex column: Codex is the independent auditor; it did not run a competing Paper
 
 | # | quantity | Gemini docx baseline (AUTHOR-REPORTED) | New generation (ours) | difference | reason / status |
 |---|---|---|---|---|---|
-| (a) | E8 impact ATT (e = 0) | **+12.44 pp** | **+12.322 pp** (fresh-WDI simple DiD; Fisher p 0.0056/0.0044) — **REPRODUCED EMPIRICAL ANALYSIS** | **match in magnitude** (−0.12 pp) | estimator/vintage difference; manifest-hashed fresh WDI |
-| (a) | E8 post mean (e = +1..+6) | **+25.26 pp** | **+2.54 pp** (fresh-WDI simple DiD) — **UNRESOLVED / ESTIMATOR-DEPENDENT** | **mismatch** | simple DiD ≠ CS group-time ATT; not proof the author is wrong; re-run CS on fresh data |
+| (a) | E8 impact ATT (e = 0) | **+12.44 pp** | **+12.322 pp** (fresh-WDI CS-style group-time ATT; bootstrap mean 12.308, 95% CI [4.48, 22.64]; Fisher p 0.0044/0.0040) — **REPRODUCED EMPIRICAL ANALYSIS** | **match in magnitude** (−0.12 pp) | 8 clusters → wide CI; fresh vintage; equal weights/no DR covariates (declared) |
+| (a) | E8 post mean (e = +1..+6) | **+25.26 pp** | **+25.083 pp** (fresh-WDI CS-style) — **REPRODUCED EMPIRICAL ANALYSIS** | **match** (−0.18 pp) | CS-style replicates; simple-DiD +2.54 is estimator sensitivity (report as sensitivity) |
 | (a) | E8 event path | +23.82 / +25.94 / +22.12 / +25.19 / +28.56 / +25.92 | *fill* — verified same | *fill* | committed record; report leads too |
 | (a) | E8 Fisher RI p (date / country) | .0001 / .0003–.0006 | *fill* — verified 9.999e-05 / 5.999e-04 / 2.9997e-04 | *fill* | B = 10,000/family; resolution floor |
 | (a) | E8 gender D (95% CI) | −3.94 pp [−8.72, +0.29] | *fill* — verified same | *fill* | near-boundary non-detection; paired CI |
@@ -43,9 +43,9 @@ Codex column: Codex is the independent auditor; it did not run a competing Paper
 | (d) | 5-param core rank / cond | 5/5; 14.41 | *fill* | *fill* | same |
 | (d) | +income micro-moments | 6/7; 3435.49 | *fill* | *fill* | local rank only |
 | (d) | +income +school-quality | 7/7; 43.81 ("full identifiability") | *fill* | *fill* | independent affiliated computation gives **local 5/5**, not 7/7; do not claim global |
-| (e) | Forecast 7-horizon RMSE | 5.13 / 4.68 pp vs persistence 23.93 | *fill* (held-out horizons) | *fill* | legacy numbers AUTHOR-REPORTED; held-out design required |
-| (e) | Forecast impact ATT | +11.60 / +13.48 pp | *fill* | *fill* | same |
-| (e) | Calibration | fee_public=.150 on 74.88 % pre-GER; zero post fitting | *fill* (training-only calibration; holdout) | *fill* | 74.88 % not independently reproduced |
+| (e) | Forecast 7-horizon RMSE | 5.13 / 4.68 pp vs persistence 23.93 | **EXPLORATORY-INVALID — RERUN REQUIRED; do not cite** | *not-comparable* | calibration bisection misframed → zero-effect artefact |
+| (e) | Forecast impact ATT | +11.60 / +13.48 pp | **EXPLORATORY-INVALID — do not cite** | *not-comparable* | rerun required |
+| (e) | Calibration | fee_public=.150 on 74.88 % pre-GER; zero post fitting | **EXPLORATORY-INVALID — do not cite** | *not-comparable* | rerun with documented training-only calibration |
 
 ---
 

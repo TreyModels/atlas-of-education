@@ -17,7 +17,7 @@ supersedes the earlier "reproduction attempt" framing.
 
 Five computations define Paper A: (a) the E8 fee-abolition event study, (b) the delayed secondary-bulge `t*`, (c) the
 gate-architecture/H2 experiment, (d) multi-seed identifiability/Jacobian, (e) the fee-abolition forecast with
-held-out horizons. **(a) and (b) are DONE on fresh hashed WDI — the impact replicates (+12.322 vs +12.44), the post mean does not (+2.54 vs +25.26, estimator-dependent), and the bulge `t*` shows no detectable jump (−0.956, p .251/.384); (c), (d), (e) are design-ready and server-runnable.** None of the five depends on recovering the
+held-out horizons. **(a) is DONE and REPLICATES under the author's estimator family — fresh-WDI CS-style group-time ATT gives impact +12.322 (author +12.44) and post mean +25.083 (author +25.26), with 8-cluster wide CI; (b) is DONE (bulge `t*` no detectable jump, −0.956, p .251/.384); (c), (d) are design-ready; (e) is EXPLORATORY-INVALID and must be re-run.** None of the five depends on recovering the
 Gemini code. The new-generation baseline is the repaired 540 (`98baf6b`, sha256 `455649da…`) and the P0 audit
 artefacts, which already establish the engine's behaviour and the identifiability limits.
 
@@ -27,11 +27,11 @@ artefacts, which already establish the engine's behaviour and the identifiabilit
 
 | # | computation | new-generation design | status | compute class | blocker |
 |---|---|---|---|---|---|
-| (a) | **E8 fee-abolition event study** | fresh hashed WDI vintage; simple DiD (equal weights); 2,500 Fisher/scheme; full lead vector | **DONE (REPRODUCED EMPIRICAL ANALYSIS)** — impact **+12.322 pp** vs author +12.44 (Fisher p 0.0056/0.0044) replicates; post mean **+2.54 pp** vs +25.26 does not → **UNRESOLVED / ESTIMATOR-DEPENDENT**; artefacts `E8_BULGE_NEWGEN.md` + `results/audit/newgen/e8_bulge_fresh_wdi_2026-11-25.json` | host, 8.7 s | none; CS-estimator re-run on fresh data optional |
+| (a) | **E8 fee-abolition event study** | fresh hashed WDI; **CS-style group-time ATT** (not-yet-treated controls), 500 cluster bootstraps + 2,500 Fisher/scheme; full event path | **DONE (REPRODUCED EMPIRICAL ANALYSIS)** — impact **+12.322 pp** (bootstrap mean 12.308, 95% CI [4.48, 22.64]) AND post mean **+25.083 pp** vs author +12.44 / +25.26 — **both replicate**; event path 12.32, 23.66, 25.79, 21.88, 24.94, 28.45, 25.78; Fisher p 0.0044/0.0040. Simple-DiD +2.54 is estimator sensitivity. Artefacts `CS_ESTIMATOR_NEWGEN.md` + `results/audit/newgen/cs_estimator_fresh_wdi_2026-11-25.json` | host, 8.2 s | none; declared deviations (equal weights, no DR covariates, 8 clusters, fresh vintage) |
 | (b) | **Delayed secondary-bulge `t*`** | fresh hashed WDI; `t* = abolition + SE.PRM.DURS`; outcome SE.SEC.ENRR; 2,500 perms/scheme | **DONE (fresh WDI)** — ATT at `t*` **−0.956 pp**, post +0.30, Fisher p **0.251/0.384** → **no detectable secondary-bulge jump**; **UNRESOLVED** (no-effect evidence), consistent with the manuscript's honest-null framing | host, 8.7 s | none |
 | (c) | **Gate-architecture / H2 (≥5,000 runs)** | repaired engine `98baf6b`; pre-registered gate kinds `bar/bar_high/quota/contest`; S ∈ {.25,.35,.45,.55,.70}; fee ∈ {0,.19}; vac0 ∈ {.02,.08,.25,.50}; **≥5,000 runs** (30–40 matched seeds/cell, expanded grid); H2 = Δcut(S=.25) − Δcut(S=.70); report H1/H2/inverted-U with seed uncertainty and baselines | **DESIGN READY / RUN PENDING** — no new-generation run yet; the paper's 1,640-run version is AUTHOR-REPORTED BASELINE only | server, ~43–60 CPU-h for ≥5,000 runs at `N≈400`/`T≈70`; ~5–8 h wall at ≤10 CPUs | pre-registration + engine config freeze (no SSA config exists in the engine — must be specified in the prereg) |
 | (d) | **Multi-seed identifiability / Jacobian (declared perturbations)** | explicit 3-option MNL `masseng-tutoring` model; analytic Jacobian; rank/null-space at **multi-seed declared perturbations** (e.g., 100 population draws); aggregate moments vs micro-moments; report local rank, condition, finite non-identification, and the two-moment remedy; no global "theorem" | **DESIGN READY / MODEL SPEC NEEDED** — the independent ABC harness is the template; Paper A's own model spec must be written down | host, minutes–hours | a documented model specification + declared perturbation grid |
-| (e) | **Fee-abolition forecast with held-out horizons** | calibrate `fee_public` to pre-abolition GER on training horizons **only**; hold out e = +5/+6 (and a country holdout if feasible); ≥40 paired seeds; report RMSE/MAE vs persistence on the **held-out** horizons; sensitivity to engine caps | **DESIGN READY / RUN PENDING** — the SSA country config must be specified in the prereg; the paper's numbers are AUTHOR-REPORTED BASELINE | server, ~1–3 CPU-h at `N≈400`/`T≈70` | engine config + prereg |
+| (e) | **Fee-abolition forecast with held-out horizons** | calibrate `fee_public` to pre-abolition GER on training horizons **only**; hold out e = +5/+6; ≥40 paired seeds; report RMSE/MAE vs persistence on the **held-out** horizons; sensitivity to engine caps | **EXPLORATORY-INVALID — RERUN REQUIRED** — the calibration bisection was misframed and produced a zero-effect artefact; **no numbers are citable** | server, ~1–3 CPU-h | rewrite calibration (documented bisection, training-only) + prereg |
 
 ---
 
@@ -65,10 +65,12 @@ blocker**, and we are not waiting for them.
   family; secondary outcome.
 * **New-generation additions:** pinned WDI vintage + hashes; full lead-vector reporting; pre-registered placebo
   family; secondary outcome; explicit association-only language.
-* **Status:** **DONE on fresh hashed WDI (simple DiD).** Impact **+12.322 pp** vs author +12.44 (Fisher p **0.0056**
-  dates / **0.0044** countries); post mean **+2.54 pp** vs author +25.26 (**UNRESOLVED / ESTIMATOR-DEPENDENT** —
-  simple DiD ≠ CS group-time ATT); full lead vector available. The author-record E8 numbers (impact +12.44, post
-  +25.26, RI .0001/.0003–.0006, gender −3.94 [−8.72, +0.29]) remain VERIFIED EMPIRICAL against the committed record.
+* **Status:** **DONE on fresh hashed WDI — REPLICATES under the author's estimator family.** CS-style group-time
+  ATT: impact **+12.322 pp** (bootstrap mean 12.308, 95% CI [4.48, 22.64]); post mean **+25.083 pp** vs author
+  +25.26; event path 12.32, 23.66, 25.79, 21.88, 24.94, 28.45, 25.78; pre-trend e=−3 +0.138; Fisher p
+  **0.0044 / 0.0040**. Declared deviations: equal weights, no DR covariates, 8 clusters → wide CI, fresh vintage.
+  The earlier simple-DiD +2.54 is **estimator sensitivity**. The author-record E8 numbers remain VERIFIED EMPIRICAL
+  against the committed record.
 
 ### (b) Delayed secondary-bulge `t*` — DATA-BLOCKED
 
@@ -116,8 +118,10 @@ blocker**, and we are not waiting for them.
   RMSE/MAE vs persistence on the **held-out** horizons; sensitivity to `max_entry_age`, repetition, and the gate
   regime; no post-abolition fitting in the calibration.
 * **Cost:** ~1–3 CPU-h at `N≈400`/`T≈70`.
-* **Status:** design ready; engine config + pre-registration needed. The paper's RMSE 5.13/4.68 vs 23.93 and
-  impact +11.60/+13.48 are **AUTHOR-REPORTED BASELINE**, not targets to recover.
+* **Status:** **EXPLORATORY-INVALID — RERUN REQUIRED.** The new-generation forecast run (e) misframed the
+  calibration bisection and produced a zero-effect artefact; **no numbers from it are citable**. Rebuild the
+  calibration (training-only, documented bisection), hold out e = +5/+6, re-run with seeds/hashes. The paper's RMSE
+  5.13/4.68 vs 23.93 and impact +11.60/+13.48 are **AUTHOR-REPORTED BASELINE**, not targets to recover.
 
 ---
 
@@ -149,7 +153,8 @@ blocker**, and we are not waiting for them.
 | DGP corrected design | VALIDATED SIMULATION | rank 5/5 in 500/500; legacy 3/5 |
 | Bootstrap size/power + invalid permutation | VALIDATED SIMULATION | pooled size 0.996–1.000; FE 0.052–0.062; within-invariance 6.66e-16 |
 | E8 empirical block (author record) | VERIFIED EMPIRICAL | committed records `bd782be`/`fb8b67e`/`b4eb680` |
-| **E8 fresh-WDI new generation** | **REPRODUCED EMPIRICAL ANALYSIS** | impact +12.322 vs +12.44; post +2.54 vs +25.26 (estimator-dependent); `E8_BULGE_NEWGEN.md` sha256 `97734cdc…`; JSON `5c2439…`; WDI manifest `d7296e1f…` |
+| **E8 fresh-WDI new generation (simple DiD)** | **REPRODUCED EMPIRICAL ANALYSIS** | impact +12.322 vs +12.44; simple-DiD post +2.54 (estimator sensitivity); `E8_BULGE_NEWGEN.md` sha256 `97734cdc…`; JSON `5c2439…`; WDI manifest `d7296e1f…` |
+| **E8 fresh-WDI new generation (CS-style)** | **REPRODUCED EMPIRICAL ANALYSIS** | impact +12.322 (bootstrap mean 12.308, CI [4.48, 22.64]); **post +25.083 vs +25.26 (replicates)**; Fisher p 0.0044/0.0040; `CS_ESTIMATOR_NEWGEN.md` sha256 `04faf9dc…b196`; JSON `4ac9551d…1905` |
 | **Bulge `t*` fresh-WDI** | **UNRESOLVED** (no-effect evidence) | ATT −0.956, post +0.30, p .251/.384 |
 | Paper B 540 regenerated tables | REPRODUCED SIMULATION, uncalibrated | `PAPER_B_TABLE_REGENERATION.md`; csv sha256 `da40a2ee…` |
 
@@ -171,7 +176,7 @@ committed result (rank 5/5 vs legacy 3/5) stands and is labelled as the audit's.
 | 2 | (d) multi-seed Jacobian | write model spec + perturbation grid (1 h) | host, minutes–hours | rank/null space across seeds/perturbations; local-only statement; two-moment remedy |
 | 3 | (e) forecast held-out | SSA config + pre-register | server, 1–3 CPU-h | held-out RMSE vs persistence; sensitivity |
 | 4 | (b) bulge `t*` | **DONE** — fresh WDI; no detectable jump | — | artefact hashed; report as no-effect evidence |
-| 5 | (a) E8 fresh-vintage re-run | **DONE** — impact replicates; post mean estimator-dependent | — | artefact hashed; report estimator dependence or re-run CS on fresh data |
+| 5 | (a) E8 fresh-vintage re-run | **DONE (both estimators)** — impact and amplification replicate under CS-style; simple DiD is sensitivity | — | artefacts hashed; report CS-style as primary, simple DiD as sensitivity |
 
 ---
 
