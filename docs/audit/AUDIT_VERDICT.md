@@ -631,26 +631,55 @@ Sources: `docs/audit/TUTORING_DATA_INVENTORY.md` (current sha256
    remaining V items as unverified: PISA/SEA-PLM exact item wording, expenditure/provider confirmation, CIEFR/CFPS/
    CEPS access). Papers C/D must not imply the empirical leg exists.
 
-## 4K. X-27 gate-architecture grid — RUN COMPLETE, AGGREGATION RUNNER DEFECT, ADJUDICATION PENDING
+## 4K. X-27 gate-architecture grid — ADJUDICATED AGAINST AMENDMENT A3 (provisional until clean re-run)
 
-* **Grid complete:** 5,632/5,632 rows; 176 cell checkpoints (5,120 primary `fail='track'` + 512 `fail='stop'`
-  sensitivity); no cell missing.
-* **Driver crashed post-run at aggregation:** `NameError: name 'np' is not defined` in `h2` (runner line 201). The
-  **grid and model ran to completion**; this is a **runner defect, not a grid/model failure**. **No simulation rerun is
-  needed** — the checkpoints are intact; the Commander is re-aggregating from them (fix `import numpy as np`; commit
-  the fixed runner; re-emit the JSON with runner commit + engine pin + spec hash + row/cell counts + checkpoint hashes).
-* **Methods/negative-paper line (citable):** this is the **third bug of this class caught by reading raw artefacts
-  rather than summaries** — (i) fee no-op (simulation-index vs calendar-year event), (ii) seed-0 hardcode, (iii)
-  missing `np` import. Summary-level QA would have missed all three; raw-artifact inspection is the detection method.
-  Add to the methods/negative paper.
-* **Adjudicator independent re-aggregation (PROVISIONAL; pending the corrected artifact; NOT the adjudicated result):**
-  primary H2 = contest, vac0=.08, `fail='track'`: **+5.0551 pp** (paired-seed bootstrap 95% CI **[2.482, 7.961]**;
-  half-width 2.740); Δcut(S=.25) +5.617 [3.551, 7.884], Δcut(S=.70) +0.562 [−0.992, 2.086]. Secondary: quota H2
-  **+0.9915** [0.5675, 1.4893]; contest vac0 curve **+3.105 / +5.055 / +1.145 / +0.325** (vac0 .02/.08/.25/.50);
-  **H1 = +7.935 pp** with Spearman **−1.00** across S; stop-sensitivity H2 **+5.4715** [2.2078, 8.4476]; bar
-  exploratory **−0.255** [−0.850, 0.325]; bar_high **+0.204** [−0.322, 0.763]. Full output
-  `/tmp/adjud/gate_independent.txt`. These numbers must be cross-checked against the corrected JSON before any ledger
-  move; X-27 stays **UNRESOLVED** until then.
+**Artefact (verified):** `/root/work/gate846/results/gate_architecture_results.json`, **294,532 B**, sha256
+**`685db398a9e6052446312e6dacfc2b06f09aa809d60b2f2b145e8e6cf2453f40`**; `runs 5632`, `n_cells 176`, aggregation
+wall **7.63 s** (all cells skipped from existing checkpoints — **no simulation rerun**). Provenance in JSON: engine
+**`846c9e0`**, core `e111397b…`, spec `e5ddef6b…`, runner `92d3055e…`, `event_key year_t`, `unfired_events_asserted
+true`, N=300/T=20/T0=12, 32 seeds, fail routing track primary/stop sensitivity, pre-stated primary/quota/secondary/
+exploratory multiplicity, null rule recorded. **Cross-check:** every primary/secondary/H1/bar number matches the
+adjudicator's independent checkpoint re-aggregation **exactly** (all diffs 0.0).
+
+**Provenance caveat (honest record):** the box runner copy lacked module-scope `import numpy as np`; the JSON was
+produced by executing the **unmodified script logic** with `builtins.np = numpy` injected (no simulation code edit, no
+seed recomputed). It is **provisional-but-complete**; the Commander is committing the one-line fix and re-running the
+aggregation to confirm the same sha or report a diff. **X-27 moves only after that clean re-run corroborates.**
+
+**Amendment-A3 adjudication (pre-stated rules):**
+* **Primary H2 = +5.0551 pp** (contest, vac0=.08, `fail='track'`; Δcut(S=.25) − Δcut(S=.70)); paired-seed bootstrap
+  95 % CI **[2.4820, 7.9614]**, **half-width/MDE proxy 2.7397**. |H2| > MDE and the CI excludes 0 → **primary met**
+  (positive: the fee-abolition gap effect is larger at low seat share than high). Δcut(S=.25) = **+5.6170** [3.5509,
+  7.8840]; Δcut(S=.70) = **+0.5619** [−0.9924, 2.0855] — the high-S effect is not separated from zero, which is where
+  the H2 contrast comes from.
+* **Secondary quota H2 = +0.9915** [0.5675, 1.4893] — positive but ~5× smaller than contest, supporting an
+  architecture-specific (contest vs quota) contrast, not a generic "any gate" effect.
+* **Stop-sensitivity (contest, `fail='stop'`) = +5.4715** [2.2078, 8.4476] — positive and similar to primary;
+  the result is **robust to the fail-routing sensitivity factor**.
+* **Per-vac0 Δcut curve (contest, track):** +3.105 / **+5.055** / +1.145 / +0.325 at vac0 .02/.08/.25/.50 — non-monotone
+  with a peak at .08; **the primary vac0=.08 was pre-declared**, the whole curve is reported, no post-hoc switching.
+* **H1 = +7.9350 pp** [6.9585, 8.9127] (fee=0 gap_delta(S=.25) − gap_delta(S=.70)); **Spearman = −1.00** across S
+  (fee=0 gap_delta by S: +1.017, −2.498, −5.033, −6.432, −6.918) — monotone widening as seats shrink, as pre-stated.
+* **Exploratory bar/bar_high:** bar H2 = **−0.255** [−0.850, 0.325]; bar_high = **+0.204** [−0.322, 0.763] — no
+  evidence either way (CIs include 0); reported only as exploratory, **never as the paper's H2**.
+* **Null rule:** the pre-repair +0.1086 is the **AUTHOR-REPORTED baseline, not a target**; the repaired-engine
+  +5.055 is the new-generation result, not a "failure" to match +0.1086.
+* **Four Codex criticisms:** no identification claim is made from (c); grade×urban counts are a design check only
+  (reported; no empty synthetic cell enters an estimator); uncertainty is seed-MC only; no permutation inference or
+  country blocking. All four recorded in the JSON metadata and honored here.
+
+**Prereg deviation / diagnostic gap (declared):** `design_diagnostics` realized admission rates are **NaN for every
+cell** — `contest_candidates`, `contest_seats`, `contest_admitted`, `contest_applicant_seat_ratio`,
+`contest_admit_rate` are all NaN in the **raw checkpoints themselves**, not just the aggregated JSON; only
+`quintile_urban_cells` and `gate_spec` (r/alpha/cut0/share) are valid. Therefore the pre-registered requirement to
+report **realized admission rates** for bar/bar_high (and contest) is **not met**; re-aggregation cannot recover them
+(the series were never recorded). The **primary and secondary estimands do not use these series** and are unaffected;
+a future rerun with the diagnostic series enabled would be needed to report realized admission rates. Recorded as a
+**diagnostic gap / prereg deviation, not a model failure**.
+
+**Status: primary and secondary adjudicated; proposed status REPRODUCED SIMULATION (pre-registered confirmatory
+new-generation simulation; frozen spec; uncalibrated; seed-MC only) — NOT VALIDATED.** X-27 remains **UNRESOLVED**
+until the clean re-run confirms the artifact; then it moves and the diagnostic gap stays attached.
 
 ## 5. Evidence-status register (programme level)
 
@@ -662,10 +691,10 @@ Sources: `docs/audit/TUTORING_DATA_INVENTORY.md` (current sha256
 | VALIDATED SIMULATION | **4** (1 A, 3 programme) | **A-39 item (d) local identifiability (stop gate met with declared restriction)**; engine/PL module validation, corrected DGP design, bootstrap size/power |
 | AUTHOR-REPORTED | **44** (20 A, 18 B, 6 programme) | **AUTHOR-REPORTED BASELINE**: the 420 generation, the Paper A Exp 1/3/4/5 legacy numbers, the author JSON bundle; not results, not reproduced, not to be silently replaced |
 | CONTRADICTED | **32** (8 A, 14 B, 10 programme) | only where committed code/algebra/measured audit output refutes the claim; includes the 100 % paradox, invalid E1/Q3, legacy DGP, "published benchmark" attributions, and the Paper B policy reversals |
-| UNRESOLVED | **18** (2 A, 0 B, 16 programme) | A-31 replication inventory; A-36 bulge `t*` (no-effect evidence); Paper C confirmatory prereg (C-04); Paper D omissions/divergences (D-01/D-03) and inventory attribution risk (D-04); Model Zoo D1/D2 + run gate + Pilot-0 provenance (MZ-01…MZ-04); evidence-layer limits (EV-01…EV-04); canonical spec/Gate-2; GPU quarantine |
+| UNRESOLVED | **19** (2 A, 0 B, 17 programme) | A-31 replication inventory; A-36 bulge `t*` (no-effect evidence); Paper C confirmatory prereg (C-04); Paper D omissions/divergences (D-01/D-03) and inventory attribution risk (D-04); Model Zoo D1/D2 + run gate + Pilot-0 provenance (MZ-01…MZ-04); evidence-layer limits (EV-01…EV-04); X-27/X-29 (clean re-run + admission-rate diagnostic gap); canonical spec/Gate-2; GPU quarantine |
 
-The machine-readable one-row-per-claim record is `results/audit/paper_claims.csv` (127 rows; sha256
-`b50c9f36a0f34c42852ae8f76585d45734f204d699937d22b1b357db6dad892a`). The Lead-defined new-generation label **REPRODUCED EMPIRICAL ANALYSIS** is used for the fresh-WDI E8 rows; all
+The machine-readable one-row-per-claim record is `results/audit/paper_claims.csv` (128 rows; sha256
+`853ff22381402303f11d112cfed93b438c0b9ba590ad8ec6af3ec0bd077c75e5`). The Lead-defined new-generation label **REPRODUCED EMPIRICAL ANALYSIS** is used for the fresh-WDI E8 rows; all
 other rows use the verbatim six-status taxonomy.
 
 ---

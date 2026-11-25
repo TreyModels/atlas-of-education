@@ -215,13 +215,29 @@ the standard literature is wrong or that the engine is validated.
 **Status:** all Model Zoo and zoo/evidence claims are **pre-registerable designs or binding limits, not results**.
 Paper C/D sections must not imply the empirical leg exists; the unfalsifiable list is binding.
 
-**X-27 STATUS (gate-architecture grid, 2026-11-25):** grid **5,632/5,632 complete** (176 cell checkpoints); aggregation
-runner crashed post-run with `NameError: name 'np' is not defined` in `h2` (line 201) — a **runner defect, not a
-grid/model failure**; no simulation rerun needed, re-aggregation from checkpoints pending. Adjudicator independent
-re-aggregation (provisional, pending corrected artifact): primary H2 contest vac0=.08 track **+5.055 pp** [95% CI
-2.482, 7.961]; quota H2 +0.992 [0.568, 1.489]; stop-sensitivity +5.472 [2.208, 8.448]; vac0 curve +3.105/+5.055/
-+1.145/+0.325; H1 +7.935 with Spearman −1.00; bar −0.255, bar_high +0.204. X-27 stays **UNRESOLVED** until the
-corrected JSON is cross-checked and the Amendment-A3 adjudication is recorded.
+**X-27 STATUS (gate-architecture grid, 2026-11-25): ADJUDICATED against Amendment A3; clean re-run pending.**
+JSON: `/root/work/gate846/results/gate_architecture_results.json` sha256
+`685db398a9e6052446312e6dacfc2b06f09aa809d60b2f2b145e8e6cf2453f40` (294,532 B; `runs 5632`, `n_cells 176`,
+aggregation 7.63 s, no simulation rerun; engine 846c9e0/core e111397b; spec e5ddef6b; runner 92d3055e; `year_t`;
+`unfired_events_asserted`). Cross-check: matches the adjudicator's independent checkpoint re-aggregation **exactly**
+(all diffs 0.0).
+
+* **Primary H2 +5.0551 pp** [paired-bootstrap 95 % CI **2.4820, 7.9614**; MDE proxy 2.7397] → CI excludes 0, |H2| > MDE
+  → **primary met**. Δcut(S=.25) +5.6170 [3.5509, 7.8840]; Δcut(S=.70) +0.5619 [−0.9924, 2.0855].
+* Quota H2 +0.9915 [0.5675, 1.4893] (positive, ~5× smaller → architecture-specific); stop-sensitivity +5.4715
+  [2.2078, 8.4476] (robust to fail routing); vac0 curve +3.105/+5.055/+1.145/+0.325 (pre-declared .08; no post-hoc
+  switching); H1 +7.9350 [6.9585, 8.9127], Spearman −1.00 (monotone widening as seats shrink); bar −0.255
+  [−0.850, 0.325], bar_high +0.204 [−0.322, 0.763] exploratory only (CIs include 0).
+* Null rule: pre-repair +0.1086 is AUTHOR-REPORTED baseline, not a target. Four Codex positions honored (no
+  identification claim; design-cell counts only; seed-MC; no permutation inference).
+* **Diagnostic gap / prereg deviation:** realized admission rates are **NaN in the raw checkpoints** and JSON
+  (`contest_candidates/seats/admitted/ratio/admit_rate`), so the pre-registered realized-admission reporting for
+  bar/bar_high/contest is **not met**; primary/secondary do not use those series and are unaffected; a future rerun
+  would be needed to populate them. Not a model failure.
+* **Provenance caveat:** JSON produced with `builtins.np = numpy` injection (unmodified script logic; no seeds
+  recomputed) because the box runner lacked module-scope `import numpy as np`; **provisional-but-complete**. X-27
+  remains **UNRESOLVED** until the clean re-run confirms the same sha/diff; proposed status **REPRODUCED SIMULATION**
+  (pre-registered confirmatory new-generation; frozen spec; uncalibrated; seed-MC only), not VALIDATED.
 
 **Methods lesson (citable):** this is the **third bug of this class found by reading raw artefacts rather than
 summaries** — (i) fee no-op (simulation index vs calendar-year event), (ii) seed-0 hardcode, (iii) missing `np` import.
