@@ -2,6 +2,8 @@
 
 Owner lane: `engine-core` · 2026-11-25 · branch **`research/gpu-pl-port-auditv2-2026-11-25`** (short-lived,
 branched off `research/contest-audit-v2-2026-11-25` @ `b0925ae`).
+**Engine port commit: `59fd2497765f15c108de3ec182d1febbe3d28c8a`** (the commit that contains the engine files and
+`port_verify.py`; later commits on this branch are documentation-only).
 Source: `~/neon-boot/wt5/gpuport` @ `research/gpu-port-2026-11-25` (`7c6f9ac` GPU commit, `c80b43c` artefacts).
 Status: **HOST PORT COMPLETE + MAC CHECKS PASS; BOX PARITY PENDING (Commander runs it).**
 No box job was started from this lane.
@@ -67,7 +69,7 @@ Deploy the branch commit read-only to the box, then run **one process at a time*
 
 ```bash
 # 0) DEPLOY (Commander; from the Mac host)
-git -C ~/neon-boot/wt4/auditv2 archive <COMMIT> | /tmp/box_ssh.sh \
+git -C ~/neon-boot/wt4/auditv2 archive 59fd2497765f15c108de3ec182d1febbe3d28c8a | /tmp/box_ssh.sh \
   "mkdir -p /root/work/gpuport_audit && tar -x -C /root/work/gpuport_audit"
 
 # On the box:
