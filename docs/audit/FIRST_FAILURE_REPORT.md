@@ -12,13 +12,13 @@
 | why a snapshot tree | four lanes share the worktree; at baseline time `engine/eduengine/modules/tutoring.py` already carried an **uncommitted** Phase-B edit, so the raw worktree was *not* the unrepaired baseline. The snapshot is the pristine pre-repair state and was used for every number below. |
 | command (exact) | `OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 OMP_NUM_THREADS=1 PYTHONPATH="$PWD/engine" /Users/treymenefee/neon-boot/venv/bin/python -m pytest tests/test_engine_invariants.py -q --tb=short -rxXf` |
 | host | macOS arm64, Python 3.10.2, numpy 2.2.6, scipy 1.15.3, pytest 9.2.0 (installed into `neon-boot/venv` for this lane) |
-| runtime | **3.31 s** (27 tests) |
+| runtime | **6.41 s** (27 tests; test 12 runs 4 workers on the 8-core host, box per-lane cap 4) |
 | raw output | `results/audit/BASELINE_pytest_engine_invariants.log` |
 | environment manifest | `results/audit/BASELINE_manifest.txt` |
 
 ## Headline
 
-**`7 failed, 12 passed, 8 xfailed (strict), 0 errors`** in 3.31 s.
+**`7 failed, 12 passed, 8 xfailed (strict), 0 errors`** in 6.41 s.
 
 * **7 present-and-wrong failures** — live defect in the pre-repair tree, each with an
   observed-vs-expected number and a responsible line (D1/D2/D3/D6/D7 of the contract + two
@@ -116,7 +116,7 @@ lane lands. A stale marker (feature present **and** test passing) fails as `XPAS
 | `test_06b_no_ineligible_applicant_is_admitted` | §11 #6 | 0 of N vocational pupils admitted by an `academic_only` contest; all awards on children with cred ≥ 3 |
 | `test_09_annual_expenditure_within_available_funds` | §11 #9 | 0 child-year violations of `extra_spend ≤ E._cash` (22 years) |
 | `test_11a_zero_effort_contest_parameters_are_inert` | §11 #11 | `contest_max_e=0` ⇒ arms differing in `alpha`/`price` bit-identical on recorded series |
-| `test_12_parallel_and_task_order_stability` | §11 #12 | serial = same-seed repeat = `ProcessPoolExecutor` chunksize 1 and 4 (fork) = shuffled order, bit-identical seed rows |
+| `test_12_parallel_and_task_order_stability` | §11 #12 | serial = same-seed repeat = `ProcessPoolExecutor` chunksize 1 and 4 (fork, `QA_WORKERS=4`, 8 tasks, full task-order shuffle) = bit-identical seed rows |
 | `test_ac1_tax_revenue_identity` | Directive: tax totals | revenue = `tax_formal·formal + tax_cons·(formal+informal)` every year (22/22), rebuilt independently from the labour earnings stock; `tax_gdp` and `edu_budget = max(edu_share·revenue+aid, floor)` hold; 0 discrepancies |
 | `test_ac2_per_quintile_accounting_reconciles` | Directive: per-quintile | every year/quintile: recorded spend mean = register mean (1e-12); Σ_q n_q·mean_q = total; quintile-weighted rate = aggregate rate; quintile population shares = 0.2 ± 1 child |
 | `test_ac3_cohort_denominators` | Directive: cohort denominators | `enrolled[t] = Σ att_by_grade[t]` all years; census cells ≤ N and unique per cohort; `completion_cohort` denominator = 3·N (each intended age exactly once); `gross_intake_last` = entrants/N |

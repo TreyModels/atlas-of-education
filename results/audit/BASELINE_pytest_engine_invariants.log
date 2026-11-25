@@ -5,20 +5,20 @@ tests/test_engine_invariants.py:225: in test_03_universal_seat_has_no_positional
     assert _effort_zero(E), (
 E   AssertionError: every applicant is admitted, so the positional marginal return of contest effort is zero, yet max e_t = 5.968711 was purchased (expected 0).  The expected-probability model caps the win probability at 0.99 instead of 1.0 (core.py:418 target_s = min(seats/n_candidates, 0.99)), leaving a positive gradient at e=0.
 E   assert False
-E    +  where False = _effort_zero(<eduengine.core.Engine object at 0x1044c0f70>)
+E    +  where False = _effort_zero(<eduengine.core.Engine object at 0x1062d9000>)
 ____________ test_07_nonselective_gate_creates_no_elite_wage_prize _____________
 tests/test_engine_invariants.py:422: in test_07_nonselective_gate_creates_no_elite_wage_prize
     assert awards > 0 or _effort_zero(E), (
 E   AssertionError: the gate never pays an elite wage premium (elite awards = 0, k['elite'] is only set for fail='track' at core.py:428-429), yet households bought positional effort priced on elite_logw=0.60: max e_t = 5.968711 (torch: the prize is priced by tutoring.py:94-101 but never delivered)
 E   assert (0 > 0 or False)
-E    +  where False = _effort_zero(<eduengine.core.Engine object at 0x104c09780>)
+E    +  where False = _effort_zero(<eduengine.core.Engine object at 0x106d01ae0>)
 ________________ test_08b_g9_declared_elite_prize_is_persisted _________________
 tests/test_engine_invariants.py:490: in test_08b_g9_declared_elite_prize_is_persisted
     assert awards > 0 or prize_state > 0, (
 E   AssertionError: a Grade-9 contest with a declared elite_logw=0.15 is priced by contest_prep (max e_t = 4.731047/year) but no child carries any persistent award (k['elite'] awards = 0, elite_prize holders = 0, expected > 0). core.py:428-429 sets k['elite'] only for m_ == nlev-2 (Grade 12).
 E   assert (0 > 0 or 0 > 0)
 ___________ test_d2_expected_probability_matches_exact_pl_reference ____________
-tests/test_engine_invariants.py:653: in test_d2_expected_probability_matches_exact_pl_reference
+tests/test_engine_invariants.py:659: in test_d2_expected_probability_matches_exact_pl_reference
     np.testing.assert_allclose(belief, exact, atol=1e-9,
 E   AssertionError: 
 E   Not equal to tolerance rtol=1e-07, atol=1e-09
@@ -29,18 +29,18 @@ E   Max relative difference among violations: 0.75797903
 E    ACTUAL: array([0.193617, 0.052377])
 E    DESIRED: array([0.8, 0.2])
 _____________________ test_d3_seat_share_is_of_applicants ______________________
-tests/test_engine_invariants.py:693: in test_d3_seat_share_is_of_applicants
+tests/test_engine_invariants.py:699: in test_d3_seat_share_is_of_applicants
     assert abs(obs - share) <= 0.05, (
 E   AssertionError: declared seat share 0.25 of the cohort but the realised admission rate among applicants is 0.513 on average (per-year ['0.53', '0.48', '0.53', '0.71', '0.62', '0.40', '0.45', '0.53', '0.43', '0.56', '0.40']); seats/year = 10, applicants/year = [19, 21, 19, 14, 16, 25, 22, 19, 23, 18, 25].  core.py:400 uses max(round(share*N),1) with N = entering cohort, and no applicant/seat/admit-rate series is recorded (contract §1.4).
 E   assert 0.26266428888126414 <= 0.05
 E    +  where 0.26266428888126414 = abs((0.5126642888812641 - 0.25))
 _______________ test_d6_policy_invariant_rng_across_policy_arms ________________
-tests/test_engine_invariants.py:738: in test_d6_policy_invariant_rng_across_policy_arms
+tests/test_engine_invariants.py:744: in test_d6_policy_invariant_rng_across_policy_arms
     assert n_bad == 0, (
 E   AssertionError: changing only the public-school fee (a policy parameter) changed the exogenous draws of 51 cohort-covariate groups (first: cohort 5, covariate 'z'); the single sequential RNG stream (core.py:93/331/408) makes policy arms non-comparable person-by-person
 E   assert 51 == 0
 ____________________ test_d7_gate_prize_is_paid_as_declared ____________________
-tests/test_engine_invariants.py:772: in test_d7_gate_prize_is_paid_as_declared
+tests/test_engine_invariants.py:778: in test_d7_gate_prize_is_paid_as_declared
     assert abs(observed - 0.1) <= 1e-9, (
 E   AssertionError: the gate declares elite_logw=0.1, so switching the global default from 0.0 to 0.6 must leave the paid prize at 0.1; observed paid log premium = 0.600000 (global elite_logw is applied directly at core.py:498-499 instead of the gate prize)
 E   assert 0.5 <= 1e-09
@@ -103,4 +103,4 @@ FAILED tests/test_engine_invariants.py::test_d2_expected_probability_matches_exa
 FAILED tests/test_engine_invariants.py::test_d3_seat_share_is_of_applicants
 FAILED tests/test_engine_invariants.py::test_d6_policy_invariant_rng_across_policy_arms
 FAILED tests/test_engine_invariants.py::test_d7_gate_prize_is_paid_as_declared
-7 failed, 12 passed, 8 xfailed, 101 warnings in 3.31s
+7 failed, 12 passed, 8 xfailed, 101 warnings in 6.41s

@@ -591,9 +591,10 @@ def _parallel_task(payload):
 
 
 def _tasks():
-    # N/T chosen so every module's summary series exists on the pre-repair baseline too
+    # 8 independent tasks so chunksize=1 and chunksize=4 genuinely differ; N/T chosen so every
+    # module's summary series exists on the pre-repair baseline too.
     return [dict(N=24, T=20, measure_from=6, seed=s, share=sh)
-            for s in (0, 1) for sh in (0.20, 0.40)]
+            for s in (0, 1, 2, 3) for sh in (0.15, 0.40)]
 
 
 def test_12_parallel_and_task_order_stability():
@@ -604,15 +605,20 @@ def test_12_parallel_and_task_order_stability():
     assert serial == [_parallel_task(t) for t in tasks], "repeating the same task changed the seed row"
 
     ctx = multiprocessing.get_context("fork")
-    workers = max(1, min(WORKERS, len(tasks), os.cpu_count() or 1))
+    # Box CPU quota (Lead-verified 2026-11-25): the container is a 10-CPU cgroup and the per-lane
+    # cap is 4 concurrent workers; the host has 8 cores.  The invariant (serial == parallel ==
+    # shuffled) does not need more workers than that.
+    workers = max(1, min(WORKERS, len(tasks), os.cpu_count() or 1, 4))
+    assert workers <= 4, f"per-lane worker cap is 4 (box cpu.max = 1000000 100000); got {workers}"
     for chunksize in (1, 4):
         with ProcessPoolExecutor(max_workers=workers, mp_context=ctx) as ex:
             par = list(ex.map(_parallel_task, tasks, chunksize=chunksize))
         assert par == serial, (
             f"ProcessPoolExecutor(chunksize={chunksize}, workers={workers}) results differ from serial"
         )
-    # deterministic task-order shuffle
-    order = [2, 0, 3, 1]
+    # deterministic task-order shuffle (a full permutation, not a rotation)
+    order = [5, 2, 7, 0, 3, 1, 6, 4][:len(tasks)]
+    assert sorted(order) == list(range(len(tasks)))
     shuffled = [_parallel_task(tasks[i]) for i in order]
     restored = [shuffled[order.index(j)] for j in range(len(tasks))]
     assert restored == serial, "task order changed the seed rows"

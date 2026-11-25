@@ -6,14 +6,14 @@ baseline tree: git archive HEAD engine tests + Gate-1c contest_math snapshot
 raw pytest log: results/audit/BASELINE_pytest_engine_invariants.log
 pytest command:
   OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 OMP_NUM_THREADS=1 PYTHONPATH="$PWD/engine" /Users/treymenefee/neon-boot/venv/bin/python -m pytest tests/test_engine_invariants.py -q --tb=short -rxXf
-result: 7 failed, 12 passed, 8 xfailed (strict), 0 errors, 3.31 s
+result: 7 failed, 12 passed, 8 xfailed (strict), 0 errors, 6.41 s  (test 12 run with QA_WORKERS=4, host 8 cores)
 
 software: python 3.10.2 numpy 2.2.6 scipy 1.15.3 pytest 9.2.0
 
 file sha256 (baseline):
 81781ce7d6338e26eb6681d18b07d5c3a6c609976cd94c05075d9a7a26729649  /tmp/qa1d/base/engine/eduengine/contest_math.py
 e2df6a40ece31c62a1a7f19a37e5e0e7a72af550ed3beeae777134138b1f3887  /tmp/qa1d/base/tests/conftest.py
-7c782a651da706761ad329115b8e5eb399b1b17aa94ed31c994478d239a9561c  /tmp/qa1d/base/tests/test_engine_invariants.py
+a578f55a489722672768d5c1731660cc68180ce2698798854dd945dbfee55a0f  /tmp/qa1d/base/tests/test_engine_invariants.py
 
 working-tree engine edits EXCLUDED from the baseline (other lanes, uncommitted at capture):
   NB: core.py/labour.py/planning.py/tutoring.py in the shared worktree were already edited by engine-core/engine-tutoring
