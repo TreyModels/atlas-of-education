@@ -1,0 +1,27 @@
+{
+  "experiment": "job2_bray_abc_7param",
+  "archived_command": "/root/miniconda3/bin/python gpu_bray_abc_and_contest_surface.py --n-abc 200000 --out-dir ./results_rtx3080ti/bray_and_contest",
+  "script": "gpu_abc_bundle/gpu_bray_abc_and_contest_surface.py",
+  "script_sha256": "0709032c043372cafd79d1df4c62dd352403e881afc1fc395cb5956a19a15d2e",
+  "parameters": {
+    "n_abc": 200000,
+    "n_pupils": 630,
+    "n_g9": 420,
+    "n_g12": 210,
+    "n_urban": 210,
+    "n_rural": 420,
+    "batch": 20000,
+    "moments": {"part": 0.73, "g9": 0.67, "g12": 0.85, "ur_gap": 0.14, "own_share": 0.68},
+    "tolerances": {"part": 0.05, "g9": 0.05, "g12": 0.05, "ur_gap": 0.04, "own_share": 0.06},
+    "prior_bounds_lo": [-1.0, 0.0, 0.0, 0.0, -0.5, 0.1, -2.5],
+    "prior_bounds_hi": [2.5, 2.0, 2.5, 2.5, 1.5, 0.9, 1.5],
+    "archived_seed": 20261125,
+    "seed_policy": "independent validation seed generated per run by tools/make_seeds.py (archived seed NOT reused)"
+  },
+  "config_hash_note": "sha256 of this file is recorded per job attempt; it pins the parameter block above.",
+  "known_defects": [
+    "theta[5] teacher_threshold never enters utilities or moments (dead parameter)",
+    "only 5 advertised moments computed; other_share and teacher_tut never computed",
+    "overall participation is identically 2/3*G9 + 1/3*G12 => 4 independent moments, rank deficiency"
+  ]
+}

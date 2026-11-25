@@ -1,0 +1,9 @@
+{
+  "harness_version": 1,
+  "description": "Dry-run failure-propagation matrix: stub_a succeeds, stub_fail intentionally exits 7, stub_b MUST NEVER RUN. Expected: harness aborts at stub_fail with overall exit 7; stub_b has no output dir; no partial result JSON for stub_fail; no manifest.json assembled.",
+  "jobs": [
+    {"id": "dryrun_stub_ok_a", "worker_count": 1, "evidence_status": null, "notes": "tiny CPU stub n=8; runs before the failing job"},
+    {"id": "dryrun_stub_fail", "worker_count": 1, "evidence_status": null, "notes": "deliberately failing stub (exit code 7); proves fail-fast propagation"},
+    {"id": "dryrun_stub_ok_b_must_not_run", "worker_count": 1, "evidence_status": null, "notes": "must not execute; absence of its directory/job record proves the harness aborted"}
+  ]
+}

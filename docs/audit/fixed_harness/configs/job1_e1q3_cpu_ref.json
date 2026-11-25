@@ -1,0 +1,18 @@
+{
+  "experiment": "job1_e1_q3_cpu_ref",
+  "archived_command": "CUDA_VISIBLE_DEVICES=\"\" /root/miniconda3/bin/python gpu_e1_q3_wild_cluster_ri.py --B 2000 --out-dir ./results_rtx3080ti/e1_q3_selftest_cpu_ref",
+  "script": "gpu_abc_bundle/gpu_e1_q3_wild_cluster_ri.py",
+  "script_sha256": "3bbbc19ac42020b64a6d88c57118d75702c42dabddc0038f8ea087a6b2caf6c9",
+  "parameters": {
+    "mode": "selftest_minority_effect_15pct (built-in synthetic)",
+    "B_wild_cluster": 2000,
+    "B_block_perm": 1000,
+    "cuda_visible_devices": "",
+    "archived_seed": 20261125,
+    "seed_policy": "independent validation seed generated per run by tools/make_seeds.py (archived seed NOT reused)"
+  },
+  "config_hash_note": "sha256 of this file is recorded per job attempt; it pins the parameter block above.",
+  "known_defects": [
+    "CPU-forced reference is for arithmetic comparison only; same inferential defects as the GPU selftest"
+  ]
+}

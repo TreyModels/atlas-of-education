@@ -1,0 +1,8 @@
+{
+  "description": "Parameters for the deliberately failing dry-run stub (tiny n; CPU only; no CUDA/torch).",
+  "experiment": "harness_self_test_stub_fail",
+  "n": 8,
+  "exit_code": 7,
+  "cuda_visible_devices": "",
+  "note": "Intentionally fails. Proves the corrected harness aborts and propagates the exact non-zero exit code."
+}

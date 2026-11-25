@@ -1,0 +1,19 @@
+RUN_ID=dryrun-control-20261125T070011Z MODE=dry-run JOBSET=control STARTED=2026-11-25T07:00:11Z HOST=Treys-MacBook-Air.local
+PYTHON=/Users/treymenefee/neon-boot/venv/bin/python (Python 3.10.2)
+-- bundle manifest verification (read-only) --
+bundle_file_count=14
+manifest_rc=0
+bundle_dir_digest_sha256=8d58e6ff750c8e512124f74474efd33ed71fe81c200f772e76c9539966f3cfbf
+MANIFEST.sha256: OK (14 files, digest 8d58e6ff750c8e51...)
+wrote /Users/treymenefee/neon-boot/wt4/auditv2/docs/audit/fixed_harness/evidence/dry_runs/dryrun-control-20261125T070011Z/seeds.json (os_csprng, 2 seeds)
+== job dryrun_stub_ok_a start=2026-11-25T07:00:12Z
+== job dryrun_stub_ok_a ok rc=0 wall=0.162s output=/Users/treymenefee/neon-boot/wt4/auditv2/docs/audit/fixed_harness/evidence/dry_runs/dryrun-control-20261125T070011Z/jobs/dryrun_stub_ok_a/result.json sha256=a36e4546df0efd9c95993f6fac147271996f3af32f913bd17adb7105817f0e04
+== job dryrun_stub_ok_b start=2026-11-25T07:00:12Z
+== job dryrun_stub_ok_b ok rc=0 wall=0.15s output=/Users/treymenefee/neon-boot/wt4/auditv2/docs/audit/fixed_harness/evidence/dry_runs/dryrun-control-20261125T070011Z/jobs/dryrun_stub_ok_b/result.json sha256=dc045c4a18f5e526257fbffbfedd556926cb5e2cf12572752bcf26a913abe67d
+-- post-run bundle verification (must equal pre-run digest) --
+bundle_file_count=14
+manifest_rc=0
+bundle_dir_digest_sha256=8d58e6ff750c8e512124f74474efd33ed71fe81c200f772e76c9539966f3cfbf
+MANIFEST.sha256: OK (14 files, digest 8d58e6ff750c8e51...)
+manifest: /Users/treymenefee/neon-boot/wt4/auditv2/docs/audit/fixed_harness/evidence/dry_runs/dryrun-control-20261125T070011Z/manifest.json status=ok attempts=2 failed=0
+RUN COMPLETE run_id=dryrun-control-20261125T070011Z mode=dry-run jobs=2 dir=/Users/treymenefee/neon-boot/wt4/auditv2/docs/audit/fixed_harness/evidence/dry_runs/dryrun-control-20261125T070011Z

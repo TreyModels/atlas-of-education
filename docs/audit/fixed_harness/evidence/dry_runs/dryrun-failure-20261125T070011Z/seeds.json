@@ -1,0 +1,11 @@
+{
+  "archived_seed_not_reused": 20261125,
+  "base_seed": null,
+  "generated_at_utc": "2026-11-25T07:00:14Z",
+  "seeds": {
+    "dryrun_stub_fail": 1789868791,
+    "dryrun_stub_ok_a": 1459173496,
+    "dryrun_stub_ok_b_must_not_run": 721539391
+  },
+  "source": "os_csprng"
+}

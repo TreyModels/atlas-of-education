@@ -1,0 +1,45 @@
+{
+  "config_files": {
+    "job1_e1q3_cpu_ref.json": {
+      "bytes": 923,
+      "sha256": "99619d3918ca8db6d0be355b7256420b16965e8b84e2c17b563bb540ef168a20"
+    },
+    "job1_e1q3_gpu.json": {
+      "bytes": 1143,
+      "sha256": "477450855fac0c50cc2e3dbcf291a3821bf4bdd8d6a849152083e396ee03c0db"
+    },
+    "job1_gpu_vs_cpu_diff.json": {
+      "bytes": 781,
+      "sha256": "7158401a5f3766bf870d469543a11a6f184d84fb562cef940f2405350d64fa02"
+    },
+    "job2_abc_7param.json": {
+      "bytes": 1371,
+      "sha256": "601f3f4718e67a217552644e1b29c9c8d9102e39d71afb3d197f46946291e07a"
+    },
+    "job2b_abc_6param.json": {
+      "bytes": 1282,
+      "sha256": "56acc53141165537212cbe4581914a5404d6e0b2e43c96a6a7d7022e777564d6"
+    },
+    "jobs_dry_run_control.json": {
+      "bytes": 506,
+      "sha256": "d0ca998f7b1feb10a84fb9b0412c95bec82a514c17ad8aa83921c988cfd7bc5a"
+    },
+    "jobs_dry_run_failure.json": {
+      "bytes": 798,
+      "sha256": "9262ff52cbe855156fa9b48c381216a146313dedc1539d8488b140f5ec9d93dd"
+    },
+    "jobs_real.json": {
+      "bytes": 5197,
+      "sha256": "8300c5d574ea1a67f8ddc846d3611bcf9bef7174e8bfd4c817c3339dd62e5057"
+    },
+    "stub_fail.json": {
+      "bytes": 331,
+      "sha256": "cf06207d30280e5a9701ac29993c265fa8b719f18bffab02c68b0659fbd8076e"
+    },
+    "stub_ok.json": {
+      "bytes": 282,
+      "sha256": "2741c3b7627ae990cf5cea567f35c28d46c4c58c8de4a7fff5969fa14b91430f"
+    }
+  },
+  "generated_at_utc": "2026-11-25T07:00:12Z"
+}

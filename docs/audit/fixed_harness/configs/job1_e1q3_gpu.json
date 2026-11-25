@@ -1,0 +1,20 @@
+{
+  "experiment": "job1_e1_q3_selftest_gpu",
+  "archived_command": "/root/miniconda3/bin/python gpu_e1_q3_wild_cluster_ri.py --B 2000 --out-dir ./results_rtx3080ti/e1_q3_selftest",
+  "script": "gpu_abc_bundle/gpu_e1_q3_wild_cluster_ri.py",
+  "script_sha256": "3bbbc19ac42020b64a6d88c57118d75702c42dabddc0038f8ea087a6b2caf6c9",
+  "parameters": {
+    "mode": "selftest_minority_effect_15pct (built-in synthetic; N=1200, G=60, T=20)",
+    "B_wild_cluster": 2000,
+    "B_block_perm": 1000,
+    "panel_csv": null,
+    "archived_seed": 20261125,
+    "seed_policy": "independent validation seed generated per run by tools/make_seeds.py (archived seed NOT reused)"
+  },
+  "config_hash_note": "sha256 of this file is recorded per job attempt; it pins the parameter block above.",
+  "known_defects": [
+    "selftest DGP has omitted country-effect bias; pooled regression carries OVB, so 'minority-effect leakage' is not identified (external audit P0-04)",
+    "country-block permutation is within-invariant under country FE => it cannot test the within-country estimand (P0-05)",
+    "this is a GPU-numerics selftest, not an E1/Q3 reconstruction"
+  ]
+}

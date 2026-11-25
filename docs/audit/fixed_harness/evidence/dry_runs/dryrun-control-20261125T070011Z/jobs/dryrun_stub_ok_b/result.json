@@ -1,0 +1,9 @@
+{
+  "job_id": "dryrun_stub_ok_b",
+  "n": 5,
+  "note": "dry-run stub; not a scientific experiment",
+  "seed": 1768893840,
+  "stub": "ok",
+  "sum": 1.6975715939587372,
+  "sum_sq": 1.1160826650344928
+}

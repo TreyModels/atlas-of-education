@@ -1,0 +1,48 @@
+{
+  "assertions": {
+    "archived_pattern_echoes_exit_7": true,
+    "archived_pattern_overall_exit_is_0_despite_failing_job": true,
+    "archived_pattern_prints_DONE_anyway": true,
+    "control_all_jobs_exit_0": true,
+    "control_bundle_unchanged": true,
+    "control_exit_0": true,
+    "control_manifest_assembled": true,
+    "control_outputs_exist_and_match_manifest": true,
+    "failing_job_left_no_result_json": true,
+    "failing_job_no_partial_files_remain": true,
+    "failing_job_staging_removed": true,
+    "failure_marker_records_job_and_rc": true,
+    "failure_marker_written": true,
+    "failure_overall_exit_equals_failing_job_rc_7": true,
+    "failure_overall_exit_nonzero": true,
+    "no_manifest_assembled_on_failure": true,
+    "sentinel_job_has_no_manifest_record": true,
+    "sentinel_job_never_ran": true
+  },
+  "cases": {
+    "archived_pattern_demo": {
+      "overall_exit_code": 0,
+      "run_dir": "/Users/treymenefee/neon-boot/wt4/auditv2/docs/audit/fixed_harness/evidence/archived_demo-20261125T070011Z",
+      "stdout_log": "/Users/treymenefee/neon-boot/wt4/auditv2/docs/audit/fixed_harness/evidence/archived_demo-20261125T070011Z/stdout.log"
+    },
+    "control": {
+      "manifest": "/Users/treymenefee/neon-boot/wt4/auditv2/docs/audit/fixed_harness/evidence/dry_runs/dryrun-control-20261125T070011Z/manifest.json",
+      "manifest_sha256": "337c49b329dd82554415fb810dc5e5655f3ec29e650ac34861c68abf23943022",
+      "overall_exit_code": 0,
+      "run_dir": "/Users/treymenefee/neon-boot/wt4/auditv2/docs/audit/fixed_harness/evidence/dry_runs/dryrun-control-20261125T070011Z",
+      "run_id": "dryrun-control-20261125T070011Z"
+    },
+    "failure": {
+      "overall_exit_code": 7,
+      "run_dir": "/Users/treymenefee/neon-boot/wt4/auditv2/docs/audit/fixed_harness/evidence/dry_runs/dryrun-failure-20261125T070011Z",
+      "run_failure": "/Users/treymenefee/neon-boot/wt4/auditv2/docs/audit/fixed_harness/evidence/dry_runs/dryrun-failure-20261125T070011Z/run_failure.json",
+      "run_failure_sha256": "1c41340f87244990a926f680e0bc7eaf22a88f9d4bfb7cb6802dd097f2a0cecb",
+      "run_id": "dryrun-failure-20261125T070011Z"
+    }
+  },
+  "failed_assertions": [],
+  "generated_at_utc": "2026-11-25T07:00:15Z",
+  "passed": true,
+  "purpose": "P0-07 acceptance: a failing job aborts the corrected harness with a non-zero overall exit; the archived pattern does not.",
+  "python": "/Users/treymenefee/neon-boot/venv/bin/python"
+}

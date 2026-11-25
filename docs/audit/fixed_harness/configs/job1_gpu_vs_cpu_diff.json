@@ -1,0 +1,17 @@
+{
+  "experiment": "job1_gpu_vs_cpu_diff",
+  "archived_command": "derived artifact - no standalone job in the archived runner",
+  "script": "fixed_harness/tools/gpu_vs_cpu_diff.py",
+  "parameters": {
+    "inputs": [
+      "jobs/job1_e1_q3_selftest_gpu/wild_cluster_ri_results.json",
+      "jobs/job1_e1_q3_cpu_ref/wild_cluster_ri_results.json"
+    ],
+    "method": "deterministic-quantity abs/rel diff; RNG-dependent quantities reported separately",
+    "scope": "ARITHMETIC ONLY - not a validation of any scientific claim"
+  },
+  "config_hash_note": "sha256 of this file is recorded per job attempt; it pins the parameter block above.",
+  "known_defects": [
+    "the archived diff artifact was produced ad hoc, not by the archived runner; it validates float arithmetic only"
+  ]
+}

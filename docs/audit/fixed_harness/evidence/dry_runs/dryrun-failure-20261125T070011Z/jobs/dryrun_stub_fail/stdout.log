@@ -1,0 +1,2 @@
+stub_job_fail: simulating a crashed job (partial file /Users/treymenefee/neon-boot/wt4/auditv2/docs/audit/fixed_harness/evidence/dry_runs/dryrun-failure-20261125T070011Z/jobs/dryrun_stub_fail/.staging/result.json.tmp.partial)
+stub_job_fail: intentional exit code 7

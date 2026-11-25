@@ -1,0 +1,12 @@
+RUN_ID=dryrun-failure-20261125T070011Z MODE=dry-run JOBSET=failure STARTED=2026-11-25T07:00:13Z HOST=Treys-MacBook-Air.local
+PYTHON=/Users/treymenefee/neon-boot/venv/bin/python (Python 3.10.2)
+-- bundle manifest verification (read-only) --
+bundle_file_count=14
+manifest_rc=0
+bundle_dir_digest_sha256=8d58e6ff750c8e512124f74474efd33ed71fe81c200f772e76c9539966f3cfbf
+MANIFEST.sha256: OK (14 files, digest 8d58e6ff750c8e51...)
+wrote /Users/treymenefee/neon-boot/wt4/auditv2/docs/audit/fixed_harness/evidence/dry_runs/dryrun-failure-20261125T070011Z/seeds.json (os_csprng, 3 seeds)
+== job dryrun_stub_ok_a start=2026-11-25T07:00:14Z
+== job dryrun_stub_ok_a ok rc=0 wall=0.138s output=/Users/treymenefee/neon-boot/wt4/auditv2/docs/audit/fixed_harness/evidence/dry_runs/dryrun-failure-20261125T070011Z/jobs/dryrun_stub_ok_a/result.json sha256=65e4bf3a6eaa03128b2363d2362fac0aec805c7e6b9e7a5a0451c9c373fff8fd
+== job dryrun_stub_fail start=2026-11-25T07:00:14Z
+ERROR: job dryrun_stub_fail FAILED rc=7 -> aborting run dryrun-failure-20261125T070011Z (fail-fast)

@@ -1,0 +1,7 @@
+{
+  "description": "Parameters for the dry-run success stub (tiny n; CPU only; no CUDA/torch).",
+  "experiment": "harness_self_test_stub_ok",
+  "n": 8,
+  "cuda_visible_devices": "",
+  "note": "Not a scientific experiment. exists only to exercise the corrected harness machinery."
+}

@@ -1,0 +1,23 @@
+{
+  "experiment": "job2b_bray_abc_6param",
+  "archived_command": "/root/miniconda3/bin/python gpu_bray_abc_and_contest_surface_6param.py --n-abc 200000 --out-dir ./results_rtx3080ti/bray_and_contest_6param",
+  "script": "gpu_abc_bundle/gpu_bray_abc_and_contest_surface_6param.py",
+  "script_sha256": "012b14bb93ef9e668c1a578f7f98273fed3a41d9f7cf404a6ed26fa2e9c1623f",
+  "parameters": {
+    "n_abc": 200000,
+    "n_params": 6,
+    "dropped_param": "teacher_threshold (index 5 of the as-shipped script)",
+    "n_pupils": 630,
+    "batch": 20000,
+    "moments": {"part": 0.73, "g9": 0.67, "g12": 0.85, "ur_gap": 0.14, "own_share": 0.68},
+    "prior_bounds_lo": [-1.0, 0.0, 0.0, 0.0, -0.5, -2.5],
+    "prior_bounds_hi": [2.5, 2.0, 2.5, 2.5, 1.5, 1.5],
+    "archived_seed": 20261125,
+    "seed_policy": "independent validation seed generated per run by tools/make_seeds.py (archived seed NOT reused)"
+  },
+  "config_hash_note": "sha256 of this file is recorded per job attempt; it pins the parameter block above.",
+  "known_defects": [
+    "6 active parameters against 4 independent moments => at least 2 unidentified directions; posterior is prior-bounded",
+    "the 6-param variant was NOT present in the archived runner; the archived bundle cannot be reproduced by that runner"
+  ]
+}

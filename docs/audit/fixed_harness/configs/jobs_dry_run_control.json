@@ -1,0 +1,8 @@
+{
+  "harness_version": 1,
+  "description": "Dry-run control matrix: tiny CPU-only stub jobs, no CUDA, no torch. Exercises unique output dirs, config hashing, atomic writes, seeds and manifest assembly. Expected overall exit 0.",
+  "jobs": [
+    {"id": "dryrun_stub_ok_a", "worker_count": 1, "evidence_status": null, "notes": "tiny CPU stub n=8; harness self-test only"},
+    {"id": "dryrun_stub_ok_b", "worker_count": 1, "evidence_status": null, "notes": "tiny CPU stub n=5; harness self-test only"}
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "harness_version": 1,
+  "description": "Real-mode job matrix for the corrected GPU-experiment harness. Mirrors the archived run_gpu_jobs.sh jobs and adds the missing 6-parameter run, a derived GPU-vs-CPU diff job, and independent validation seeds. Real mode requires a Python with torch+numpy; it is NOT executed in this audit (CPU-only, torch parked).",
+  "archived_runner": "../gpu_abc_bundle/run_gpu_jobs.sh",
+  "archived_runner_sha256": "b0334816dc442647ff6d788ed4e7434b6887f6d67564ffa303b838edb7396df3",
+  "jobs": [
+    {
+      "id": "job2_bray_abc_7param",
+      "script": "gpu_abc_bundle/gpu_bray_abc_and_contest_surface.py",
+      "script_sha256": "0709032c043372cafd79d1df4c62dd352403e881afc1fc395cb5956a19a15d2e",
+      "output": "bray_abc_and_contest_surface.json",
+      "worker_count": 1,
+      "evidence_status": "AUTHOR-REPORTED",
+      "archived_command": "/root/miniconda3/bin/python gpu_bray_abc_and_contest_surface.py --n-abc 200000 --out-dir ./results_rtx3080ti/bray_and_contest",
+      "archived_exit_code": 0,
+      "archived_wall_time_sec": 2.73,
+      "archived_output": "gpu_abc_bundle/results_bray_abc_7param.json",
+      "archived_output_sha256": "79ceddbf409934b92b29f839931a19e61f30b4ef7b42c2f9ed652e110f4979f7",
+      "notes": "As-shipped 7-coordinate ABC: theta[5] teacher_threshold is dead; only 5 advertised (4 independent) moments computed. Identification claim CONTRADICTED by external audit P0-01/P0-02."
+    },
+    {
+      "id": "job2b_bray_abc_6param",
+      "script": "gpu_abc_bundle/gpu_bray_abc_and_contest_surface_6param.py",
+      "script_sha256": "012b14bb93ef9e668c1a578f7f98273fed3a41d9f7cf404a6ed26fa2e9c1623f",
+      "output": "bray_abc_and_contest_surface.json",
+      "worker_count": 1,
+      "evidence_status": "AUTHOR-REPORTED",
+      "archived_command": "/root/miniconda3/bin/python gpu_bray_abc_and_contest_surface_6param.py --n-abc 200000 --out-dir ./results_rtx3080ti/bray_and_contest_6param",
+      "archived_exit_code": 0,
+      "archived_wall_time_sec": null,
+      "archived_wall_time_sec_note": "not recorded in the archived RUN_REPORT; ABC internal elapsed 0.30 s + surface 0.036 s",
+      "archived_output": "gpu_abc_bundle/results_bray_abc_6param.json",
+      "archived_output_sha256": "3d1027b41c0ac6647eebb272961532d20e9507141006aa1c250e411a1e9c5d09",
+      "notes": "Corrective 6-parameter variant. Was NOT in the archived runner -- the runner could not reproduce the deposited bundle (P0-07 defect #2). 6 active parameters vs 4 independent moments => still not point-identified; AUTHOR-REPORTED only."
+    },
+    {
+      "id": "job1_e1_q3_selftest_gpu",
+      "script": "gpu_abc_bundle/gpu_e1_q3_wild_cluster_ri.py",
+      "script_sha256": "3bbbc19ac42020b64a6d88c57118d75702c42dabddc0038f8ea087a6b2caf6c9",
+      "output": "wild_cluster_ri_results.json",
+      "worker_count": 1,
+      "evidence_status": "AUTHOR-REPORTED",
+      "archived_command": "/root/miniconda3/bin/python gpu_e1_q3_wild_cluster_ri.py --B 2000 --out-dir ./results_rtx3080ti/e1_q3_selftest",
+      "archived_exit_code": 0,
+      "archived_wall_time_sec": 3.59,
+      "archived_output": "gpu_abc_bundle/results_e1_q3_selftest.json",
+      "archived_output_sha256": "9dc07b4493a45f67ece8c68eca864b98d51548299030fd962b337913208a158e",
+      "notes": "Built-in synthetic selftest only (N=1200, G=60). Performs GPU-vs-CPU numeric agreement, NOT an E1/Q3 reconstruction; the inference claims are CONTRADICTED by external audit P0-04/P0-05."
+    },
+    {
+      "id": "job1_e1_q3_cpu_ref",
+      "script": "gpu_abc_bundle/gpu_e1_q3_wild_cluster_ri.py",
+      "script_sha256": "3bbbc19ac42020b64a6d88c57118d75702c42dabddc0038f8ea087a6b2caf6c9",
+      "output": "wild_cluster_ri_results.json",
+      "worker_count": 1,
+      "evidence_status": "AUTHOR-REPORTED",
+      "archived_command": "CUDA_VISIBLE_DEVICES=\"\" /root/miniconda3/bin/python gpu_e1_q3_wild_cluster_ri.py --B 2000 --out-dir ./results_rtx3080ti/e1_q3_selftest_cpu_ref",
+      "archived_exit_code": 0,
+      "archived_wall_time_sec": 2.41,
+      "archived_output": "gpu_abc_bundle/results_e1_q3_selftest_cpu_ref.json",
+      "archived_output_sha256": "1b325e9d36e56cd1ee5e5e3a879fe28aaaf68c96c374382d78979b05adf276ca",
+      "notes": "CPU-forced reference run of the same selftest (CUDA_VISIBLE_DEVICES=\"\"). Used for the arithmetic diff only."
+    },
+    {
+      "id": "job1_gpu_vs_cpu_diff",
+      "script": "fixed_harness/tools/gpu_vs_cpu_diff.py",
+      "script_sha256": null,
+      "output": "results_gpu_vs_cpu_diff.json",
+      "worker_count": 1,
+      "evidence_status": "VALIDATED SIMULATION (arithmetic only)",
+      "archived_command": "derived artifact (no standalone job in the archived runner)",
+      "archived_exit_code": null,
+      "archived_wall_time_sec": null,
+      "archived_output": "gpu_abc_bundle/results_gpu_vs_cpu_diff.json",
+      "archived_output_sha256": "08fbc5c9920ba0afe91b5c55e151eae1608152f90058f19172c7508b5dce0e7a",
+      "notes": "Arithmetic agreement only: deterministic quantities max abs diff 8.88e-15; p-values identical; RNG-dependent bootstrap moments differ by design. Does NOT validate any scientific claim (external audit section 2)."
+    }
+  ]
+}

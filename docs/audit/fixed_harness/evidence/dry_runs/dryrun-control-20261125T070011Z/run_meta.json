@@ -1,0 +1,15 @@
+{
+  "bundle_digest_after": "8d58e6ff750c8e512124f74474efd33ed71fe81c200f772e76c9539966f3cfbf",
+  "bundle_digest_before": "8d58e6ff750c8e512124f74474efd33ed71fe81c200f772e76c9539966f3cfbf",
+  "bundle_unchanged_during_run": true,
+  "config_hashes_sha256": "dfcfab2f25783dc5810392faa4c0ea693e1aedfc7ae4b8cf5c0463206c85e04a",
+  "ended_utc": "2026-11-25T07:00:13Z",
+  "host": "Treys-MacBook-Air.local",
+  "jobset": "control",
+  "mode": "dry-run",
+  "python": "/Users/treymenefee/neon-boot/venv/bin/python",
+  "run_id": "dryrun-control-20261125T070011Z",
+  "seeds_file_sha256": "cc2da3547ed1d39eb4e0c57bfad90bb78d546663d5bdac02772772ffac5a79b6",
+  "started_utc": "2026-11-25T07:00:11Z",
+  "status": "ok"
+}
