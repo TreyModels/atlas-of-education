@@ -803,15 +803,18 @@ differential Lean↔Python bridge **9/9 exact fixtures**; CI hook (`lake build`,
 allow-list, 18/18 claim-id check) PASS. The earlier 130-row pair (`f2ce655e…` + `da956fc1…`) is preserved in git
 history; **drift resolved at `54b1f74` / audit-runner `4c06025`**.
 
-**QA mechanical audit — PASS (recorded):** `docs/audit/LEMMA_LEDGER_AUDIT.md` sha256
-`80be8e1d21a5b0861e4a0dc9877370658165de568a517be27f4592c081f7f867` (commit `54b1f74`, at audit-runner commit `4c06025`):
-R1–R7 all PASS on the **current 132-row pinned pair** — baseline `paper_claims.csv` sha `b990c99f…` (132 rows) +
-ledger `3e9dbbc1…` (132 rows; 18 declared + 114 explicit NOT-YET; C-05/X-30 present; D-04 `hypothesis`); independently
-re-verified `lake build` 12 jobs exit 0, comment-aware `sorry` scan 0 tokens, `#print axioms` only `propext`/none,
-differential bridge 9/9 exact. **This certifies the claim→declaration mapping and axiom hygiene only — not the truth
-of empirical claims and not engine numerics** (empirical claims are `EmpiricalClaim` hypotheses, never theorems). The
-earlier 130-row PASS (`f2ce655e…` + `da956fc1…`, commit `4a9afd7`) is preserved in git history; **the drift caveat is
-resolved as of `54b1f74`/`4c06025` — the current record is the 132-row pair.** Repro:
+**QA mechanical audit — PASS (recorded; re-verified against the content-only edit):**
+`docs/audit/LEMMA_LEDGER_AUDIT.md` (commit `54b1f74`, audit-runner `4c06025`; latest report sha
+`3b0a516003bdcc7e7407e2d828eb96357f8da4491e94fddd05c426570d019167` at commit `9f8f4b0`, §7 addendum): **R1–R7 all
+PASS** on the **current 132-row pair** — baseline `paper_claims.csv` sha **`3ff88d39…`** (132 rows/ids; content-only
+X-30 action-text edit after the `b990c99f…` freeze) + ledger `3e9dbbc1…` (132 rows; 18 declared + 114 explicit
+NOT-YET; C-05/X-30 present; D-04 `hypothesis`); ids/rows/mapping unchanged by the text edit, so **no re-baseline was
+required for the mechanical audit**. Independently re-verified `lake build` 12 jobs exit 0, comment-aware `sorry` scan
+0 tokens, `#print axioms` only `propext`/none, differential bridge 9/9 exact. **This certifies the claim→declaration
+mapping and axiom hygiene only — not the truth of empirical claims and not engine numerics** (empirical claims are
+`EmpiricalClaim` hypotheses, never theorems). The earlier 130-row PASS (`f2ce655e…` + `da956fc1…`, commit `4a9afd7`)
+and the `b990c99f…` freeze at `4c06025` are preserved in git history; the drift caveat is resolved, and **a future
+id/row change (not text) requires ledger regeneration + re-pin.** Repro:
 `python3 docs/audit/lemma_audit.py --claims results/audit/paper_claims.csv --ledger docs/audit/LEMMA_LEDGER.csv --lean-dir
 verification/lean`.
 
