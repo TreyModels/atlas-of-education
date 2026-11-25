@@ -165,7 +165,7 @@ These rows have **no Lean declaration yet** by design — explicit entries so th
 | EV-03 | PROGRAMME | UNRESOLVED | DHS E1-E8 cannot test the model zoo: no tutoring, learning, gate/seat, time-use, earnings or expenditure variables; they weakly c… |
 | EV-04 | PROGRAMME | UNRESOLVED | D/L/V verification-status convention: D = documented snippet/committed file, L = located/access-route, V = verified item/source; … |
 | X-28 | PROGRAMME | CONTRADICTED | Runner-defect class: three silent/fatal bugs found by reading raw artefacts, not summaries - (i) fee no-op (simulation index vs c… |
-| X-29 | PROGRAMME | UNRESOLVED | X-27 design diagnostics: realized admission rates are NaN in the raw checkpoints and JSON (contest_candidates/seats/admitted/cont… |
+| X-29 | PROGRAMME | REPRODUCED SIMULATION | X-29 diagnostic CLOSED: results/audit/newgen/gate_architecture_diagnostic.json sha256 57889777afd358adce843d7f2b35acfb037d1439d19… |
 | D-05 | PROGRAMME | CONTRADICTED | Citation verification of inventory section 5: 0 of equations 57-86 verified; every citation is a placeholder (UIS+2, OECD+3, hanu… |
 | D-06 | PROGRAMME | UNRESOLVED | Jayachandran (2014, JDE 108:190-205) published model DOES contain withholding (school-day material m, achievement s(m,t), s_mt<0,… |
 | C-05 | PROGRAMME | UNRESOLVED | Paper C confirmatory prereg re-reviewed (Amendment A1, commit c0f4eb6; file sha dd58919d...): 8 original blocking items substanti… |
