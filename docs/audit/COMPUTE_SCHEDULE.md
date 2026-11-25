@@ -937,3 +937,19 @@ This **contradicts the confirmed intended state** in §13.37 (7 workers, no rela
 either a new order not copied to this scheduler, or an unauthorised relaunch. **Scheduler took no action** (no kill, no
 relaunch, no move, no cleanup); reported to Lead at 00:42 and asked which run is authoritative. ETA to be measured and
 published once the Lead confirms the authoritative run.
+
+### 13.39 AUTHORITATIVE CONFIRMED 00:42 — 10-worker resumed continuation (operator order), 7-worker superseded
+
+Lead confirmed: **authoritative = the 10-worker resumed continuation** (direct operator order "you have 23 % CPU to use",
+superseding the earlier "leave at 7"):
+- Driver **57751**, `run_paperC_screening.py driver --workers 10 --seeds 0-7 --n 600 --t 46 --analysis-commit dc90ee5…
+  --out-dir /root/work/paperC/screen_final`, launched **00:40:22** (wrapper 57750), log **`screen_final_10w.log`**;
+  runner sha256 `d2d25c1c…`, `PAPER_C_P12_MODE=pay_gap`; **resumed from 189/288 rows with no duplicate rows**, completed
+  cells 8/8 seeds; **cgroup 100 %**.
+- **Opis/Opus reserve RELEASED** by this order (if Opis asks for cores, preempt our workers then). §13.37's "7 deliberate /
+  3 free" is superseded; the old 7-worker run (50226) is historical — its partial rows live in the same dir and were resumed,
+  so nothing is lost.
+- **Finalizer unchanged and correct:** waits for all screening processes to exit, verifies 288 rows/36 cells, writes
+  SHA256SUMS + RESULTS_DONE, waits for `SHUTDOWN_OK`, then powers off; failure leaves the box on.
+- **Monitor-only role:** publish rows at **224/256/288**, ETA at the 10-worker rate, and the **summary JSON sha256** on
+  completion. Measured after restart: 189→235 rows over 8.7 min = **5.29 rows/min** → 53 rows left ≈ **~01:00** completion.
