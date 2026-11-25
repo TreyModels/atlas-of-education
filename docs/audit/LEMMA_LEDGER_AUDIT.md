@@ -9,9 +9,9 @@
 | item | value |
 |---|---|
 | baseline | `results/audit/paper_claims.csv` — sha256 `07f83156cb6f4cb22a46516ebbe313f5db47d22e7a6de0025f2d6625ddf6f9cb`, **132 rows**, 132 unique ids. Batched update at adjudication commit **`1227593`**: only the **X-29 row changed** (status `UNRESOLVED` → `REPRODUCED SIMULATION`, claim/action text); no ids/rows added/removed (tally R25/U20). Prior baseline `55f75eea…`/`f4167fc` preserved in git history. |
-| baseline record | `docs/audit/LEMMA_LEDGER_BASELINE.json` — sha256 `77098a5dfa1d32a067374ffa843002e2ba3e16c3099227317705c606dc3e7b23`; **records `07f83156…` / 132 rows, declared 18, not_yet 114, missing_from_ledger []** (regenerated with the loud pins) |
+| baseline record | `docs/audit/LEMMA_LEDGER_BASELINE.json` — sha256 `77098a5dfa1d32a067374ffa843002e2ba3e16c3099227317705c606dc3e7b23`; **records `07f83156…` / 132 rows, declared 18, not_yet 114, missing_from_ledger []** (regenerated with the loud pins at audit-runner commit **`5c485c0`**, pushed `1227593..5c485c0`) |
 | ledger CSV | `docs/audit/LEMMA_LEDGER.csv` — sha256 **`840945ffcef2698cdc1093b145e0d9b902a7af44f6f8d4af3ab031205e755940`**, **132 rows** (regenerated after the status-only CSV update; ids/rows identical to the previous `3e9dbbc1…`; only the stored X-29 status text changed) |
-| ledger MD | `docs/audit/LEMMA_LEDGER.md` — sha256 `c9bb869173d833166f0d7d802e84bd700da14d7e7c059b15c0745e97692d70c2` (regenerated); proof-status MD `af6232cd…` (CSV unchanged `1ff80fb0…`) |
+| ledger MD | `docs/audit/LEMMA_LEDGER.md` — sha256 `c9bb869173d833166f0d7d802e84bd700da14d7e7c059b15c0745e97692d70c2` (regenerated); proof-status MD `7c0e753c…` (refreshed to cite baseline `07f83156…`); proof-status CSV `1ff80fb0…` and axioms `f9c05bc4…` unchanged; Lean sources/build/bridge unchanged |
 | declared / explicit NOT-YET | **18 declared** (A-34…A-39, B-41…B-44, C-01…C-04, D-01…D-04) + **114 explicit `NOT-YET-LEMMATISED`** = 132 |
 | C-05 / X-28 / X-29 / X-30 / D-05 / D-06 | all present (C-05 and X-30 added after the previous freeze; regeneration at `4c06025` closes the drift) |
 | generator | `verification/lean/tools/gen_lemma_ledger.py` now derives sha/row counts from the CSV, supports `--expect-sha/--expect-rows` loud failure, writes `LEMMA_LEDGER_BASELINE.json` — no hard-coded 118/100 counts |
@@ -121,7 +121,10 @@ regenerate the ledger with the pinned `--expect-sha/--expect-rows` and rerun thi
 
 After the X-29 diagnostic closed, the adjudicator applied the single agreed batched CSV update
 (`1227593`): baseline `55f75eea…` → **`07f83156…`**, 132 rows, **only the X-29 row changed**
-(`UNRESOLVED` → `REPRODUCED SIMULATION`); no ids/rows added or removed. Re-ran the audit against
+(`UNRESOLVED` → `REPRODUCED SIMULATION`); no ids/rows added or removed. **X-29 remains an explicit
+`notYetLemmatised` ledger row with no Lean declaration** — the status change only edits its baseline-status
+note; the declared set stays the 18 Lead-scoped claims. audit-runner re-pinned the ledger at `5c485c0`
+(`--expect-sha 07f83156… --expect-rows 132`); the final hashes are the ones in §1 above. Re-ran the audit against
 `07f83156…` × ledger `3e9dbbc1…` (132 rows, byte-identical): **R1–R8 all PASS** (132/132 unique ids,
 18 declared + 114 explicit NOT-YET, 0 code sorries, in-Lean 18/18, D-04 `hypothesis`, proof-status
 107/107). No mapping change is implied by a status-text update. audit-runner is re-pinning the ledger
