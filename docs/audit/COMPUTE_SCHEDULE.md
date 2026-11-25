@@ -14,7 +14,7 @@ Box-side ledger with PIDs/hashes: `/root/work/compute/ledger/COMPUTE_LEDGER.md` 
 | item | value |
 |---|---|
 | quota | **10 CPUs** (`/sys/fs/cgroup/cpu.max = 1000000 100000`); `nproc`=80 is the host and is **misleading** |
-| current utilization | **7.0 / 10 CPU (70 %)** at 15:20:55 — `cmd` 540 (6 workers, 27.8 % done) + profiling pilot; qa task-7 **DONE**, qa task-8 not yet launched; 3–4 CPUs idle → fill from queue |
+| current utilization | **6.5 / 10 CPU (65 %)** at 15:25:04 — `cmd` 540 (6 workers, 36.7 % done) only; qa task-8 ✅ done, qa 2nd seed band + contest-math task-12 allocation issued, waiting on lane launches |
 | band check | 90 % is **inside** the 8.5–10.0 target band; hard worker cap respected (see §3b for the withdrawn 540→8 proposal); `loadavg` 18.8 is host-wide and is not our container (see §2) |
 | headline | **Gate-1 AFTER invariant suite is GREEN on the declared stack** (box replication: 27 passed in 56.73 s, 5 workers) |
 | ETA (controller box 540) | 540 × ~31 CPU-s/run ÷ 6 workers ≈ 47 min from 15:07:45 → **~15:55**, now with the full 6 cores (legacy ended) |
@@ -56,10 +56,10 @@ Total box budget **≤ 10 concurrent worker processes**, keep 1 slot for control
 
 | lane | box cap | in use | queue (strict order) | note |
 |---|---|---|---|---|
-| `qa-verifier` | **3** | 3 | 1) Gate-1 AFTER suite ✅ done · 2) task-7 DGP 500 populations (5 configs × 100) — 1st config RUNNING since 15:10:40 (parent 15122 + workers 15124–15126) · 3) task-8 bootstrap factorial | pure NumPy ABC, 0 engine runs |
-| `atlas-commander` | **6** | 6 | 540 repaired-engine **cross-environment replication** (authoritative 540 = host); `/root/work/cmd` now controller-managed | parent 14765 + workers 14767–14772, started 15:07:45 |
-| `contest-math` | **1** | 0 | task-6 rank/Jacobian ~1,000 pts (analytic, ≤15 s single proc) · task-9 general-r Tulloch (~5–15 s) | box harness staged 15:02; releases immediately |
-| `audit-runner` | **1** | 0 | task-11 harness/manifest/ledger (box job done, 3 s) | releases immediately |
+| `qa-verifier` | **2** (band-2; was 3–4 for task-7/8) | 0 | 1) Gate-1 AFTER ✅ · 2) task-7 DGP 500 pops ✅ (2.6 CPU-s/pop) · 3) task-8 bootstrap ✅ (70.2 s) · 4) **second independent DGP seed band** (2w, queued) | pure NumPy ABC, 0 engine runs |
+| `atlas-commander` | **6** | 6 | 540 repaired-engine **cross-environment replication** (authoritative 540 = host); `/root/work/cmd` controller-managed | parent 14765 + workers 14767–14772, started 15:07:45 |
+| `contest-math` | **2 → 4** | 0 | task-6 ✅ (box, 5 s) · task-9 ✅ (box replication 15:15–15:20, 1 proc) · **task-12 optimisation of `contest_math.py`** (2w now, 4 after qa) | owns the hot file; host authoritative for correctness |
+| `audit-runner` | **1** | 0 | task-11 harness/manifest/ledger ✅ (box job 3 s) | released |
 | `engine-core`, `engine-tutoring` | **0** | 0 | host-only deterministic probes | no box jobs requested |
 | control / reserve | **1** | 0–1 | monitoring, pilots | this scheduler |
 
@@ -86,7 +86,9 @@ no output progress for >10 min is messaged and flagged; any box job must report 
 | J-03 | task-6 rank/Jacobian audit (~1,000 prior-box points) | contest-math | 1 (analytic; 0 pool) | ~15:02 | staging/analytic on host | 1 moment-map + Jacobian per point; 0 `pl_win_probs` calls | <5 s once launched | `/root/work/contest` harness currently staged |
 | J-04 | task-11 harness/manifest/ledger box proof | audit-runner | 1 | 15:00:49 | ✅ DONE 15:00:52 | 3 s wall | done | `/root/work/audit/p07_box_evidence.tar.gz`, 18/18 PASS |
 | J-05 | task-7 synthetic DGP (500 pops = 5 configs × 100, 20k draws × 16 moments, pure NumPy ABC, **0 engine runs**) | qa-verifier | 3 | 15:10:40 | ✅ **DONE ~15:18** | measured: 500 pops / ~7.3 min @3w = **2.6 CPU-s/pop, 1.14 pops/s aggregate** | done | `/root/work/qa/full_out` (6 artifacts, sha256 in ledger: accepted_draws `62fa1b4b…`, posterior_predictive `0cf9ce27…`, summary `698649f6…`) |
-| J-06 | task-8 bootstrap factorial | qa-verifier | ≤3 | blocked on J-05 | queued | scoped: 60 cells (5 × 4 × 3) × 2,000 datasets = 120,000 vectorized OLS/panel fits; est **600–900 CPU-s** | ~5 min at 3 workers | `/root/work/qa` |
+| J-06 | task-8 bootstrap factorial | qa-verifier | 3 | ~15:21 | ✅ **DONE ~15:23** | 70.21 s wall; acceptance: FE size median 0.05925 (holds), pooled size under confounding 1.0, permutation invariant (dev 6.7e-16) | done | `/root/work/qa/bs_out` (`BOOTSTRAP_SIZE_POWER_RESULTS.parquet`, `boostrap_factorial_summary.json`); `qa_results.tgz` 18 MB |
+| J-08 | **second independent DGP seed band** (new, Lead-approved) | qa-verifier | 2 | queued (asked 15:25) | pending launch | 2.6 CPU-s/pop (measured) → 500 pops ≈ 1,300 CPU-s | ~11 min at 2 workers | `/root/work/qa/<new out-dir>` |
+| J-09 | **task-12 optimisation of `contest_math.py`** (Lead-approved; owner = contest-math, not engine-core) | contest-math | 2 → 4 when qa finishes | queued (asked 15:25) | pending claim/launch | benchmark 1 HK run = 20.3 CPU-s baseline; profile: 92.7 % in PL quadrature | target 2–5×; report CPU-s/run before/after | `/root/work/contest` |
 | J-07 | task-9 general-r Tulloch validation | contest-math | 1 (analytic) | blocked on J-03 | queued | ~200 PL calls × 14–49 ms ≈ 3–10 s | <1 min | `/root/work/contest` |
 
 Completed / released: J-01, J-04. No lane currently exceeds its cap.
@@ -219,7 +221,8 @@ e1ce873a0a106b9632fae97cf923ab6432ebc6e32043f64fb501d8c93ec9025b  results/policy
 | **15:14:38** | **23.8** | **9.9** (99 %) | 540 6 + qa 3 | qa pilot measured (5 pops / 7.43 s @3w = 4–5 CPU-s/pop); 540 14.4 % done |
 | 15:19:21 | 25.0 | **6.0** (60 %) | 540 6 | qa task-7 finished (6 artifacts written 15:18); gap before task-8 |
 | 15:20:55 | 28.4 | **7.0** (70 %) | 540 6 + profiling 1 | profiler pilot done: 92.7 % of a run = PL quadrature |
-| 15:2x (next refresh) | — | — | — | qa task-8 at 4 workers → ~10/10 for ~3–4 min; then projected gap ~60 % until 540 completes (~15:54) unless a fill job is assigned |
+| 15:25:04 | 16.3 | **6.5** (65 %) | 540 6 | qa task-8 ✅ done; waiting on qa band-2 + contest-math task-12 launches to return to 10/10 |
+| 15:2x (next refresh) | — | — | — | target: 540 6 + qa 2 + contest-math 2 = 10/10 until 540 completes ~15:54 |
 
 Band discipline: flag **<7** idle (fill from queue), **>11** oversubscribed (throttle the lowest-priority lane).
 `loadavg` is host-wide and is reported only because it was the issued metric; the cgroup number is the truth.
@@ -258,8 +261,11 @@ Band discipline: flag **<7** idle (fill from queue), **>11** oversubscribed (thr
    ~56 min to ~47 min and lets qa task-7 run at full 3-worker cap without contention. Cost: 0 box resources.
 2. **Run the 540 at 8 workers, not 6**, once qa's task-7 has a measured size and the box is clear → 42 min vs 56 min
    (with legacy) / 35 vs 47 (clean). Diminishing beyond 8 because of the 10-CPU cap + control slot.
-3. **Profile the repaired engine** (§9.2): a 2× per-run win is worth ~2.3 CPU-h on the 540 alone and multiplies across
-   every later campaign. Cheapest high-leverage compute task on the board.
+3. **Optimise the one hot function** (§5 profile, §9.2): **92.7 % of every repaired-engine run is `pl_win_probs`**
+   (405 calls = 18.37 s of 19.82 s; `_quadrature_win_probs` 10.17 s tottime + `cumsum` 4.64 s + `einsum` 2.38 s).
+   Assigned to **contest-math as task-12** (it owns `contest_math.py`). A 2× win cuts the 540-class job from 4.7 to
+   2.35 CPU-h and halves every Gate-2/Gate-3 campaign; a 5× win returns near-legacy speed and changes the whole
+   Gate-2 budget. Highest-leverage compute task on the board.
 4. **Keep latency-critical engine work on the host** (2× faster per run than the box) and use the box for
    throughput-parallel sweeps (e.g. the 540 replication, DGP populations) where the host cores are needed for authoring.
 5. **Pilot every job type before launch** (this file's §5): the 1-worker box 540 would have burned 4.7 h; a 2-minute
@@ -316,5 +322,12 @@ Band discipline: flag **<7** idle (fill from queue), **>11** oversubscribed (thr
   18.37 s; `_quadrature_win_probs` 10.17 s tottime; `cumsum` 4.64 s; `einsum` 2.38 s) → concrete optimisation target
   for engine-core; util 7.0/10 (540 27.8 % + profiler).
 - **15:15–15:20** contest-math task-9 box replication (1 worker, PID 15740) ran and exited; host stays authoritative.
-- (next refresh: qa task-8 launch at 4 workers; 540 progress; projected ~60 % gap 15:25–15:54 unless Lead assigns a
-  fill job — candidates: engine-core profiling fix benchmark, a second qa seed band, or nothing and accept 60 %)
+- **15:23** qa **task-8 DONE** (70.21 s wall, 3 workers): FE size median 0.05925 (holds), pooled size under
+  confounding 1.0, permutation invariant (6.7e-16); artifacts `/root/work/qa/bs_out` + `qa_results.tgz` (18 MB).
+- **15:25** Lead decisions: (a) optimisation of `contest_math.py` → **contest-math task-12** (2–3 box workers, not
+  engine-core, to keep file ownership single); (b) qa gets a **second independent DGP seed band**. Cap arithmetic:
+  6 + 4 + 2 = 12 > 10, so the remaining 4 CPUs split **qa 2 + contest-math 2** now, with contest-math rising to 4
+  after qa's band finishes.
+- **15:25:04** util **6.5/10 (65 %)** = 540 6 + measurement overhead; gate: waiting on qa band-2 and contest-math
+  task-12 launches. 540 at **36.7 %** (6,157/16,794 CPU-s), ETA **~15:54**.
+- (next refresh: both launches confirmed → 10/10; 540 completion ~15:54 → pull output+sha256 for commander)
