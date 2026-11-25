@@ -164,6 +164,30 @@ and `Σ tutoring outlay_i <= E._cash_i` in every year, `max e_t <= contest_max_e
 
 ---
 
+### 2.4 CLEAN-TREE STAMP + full-size runner ledger numbers (gate 1b sign-off evidence)
+
+Clean tree: `git archive 98baf6b` (branch tip; engine-core `f31e176` is in the tree, contest-math
+`1a6f3d5`) → `docs/audit/TUTORING_CHECKS.py` **17/17 PASS**. Committed `tutoring.py` sha256
+`7a6fd4c33cc2aefcd47da097b47ac7945744cc1adf9dedbb8ab1ec57d8adc2f8` (identical to the archive).
+Full-size runner configuration HK N=300/T=46, 1 seed, `contest_tax_rate=0.10`, rho=0 (unless stated):
+
+| quantity | value |
+|---|---|
+| `contest_spend_now` in `E.R` | present; Σ series = **861.864940** = Σ household contest outlay over all K–12 pupil-years (the K-12 post-promotion gauge artifact: sitters carry `g=12` after promotion, so a `g<12` filter misses them; the series is the gross contest outlay and is the binding quantity) |
+| ledger identity per year | Σ outlay = Σ res + Σ tax; max per-year rel err **3.91e-16**; Σres **783.513582**, Σtax **78.351358**, Σgov **78.351358** (exact) |
+| firm_rev double-count | actual Σ **6231.414966**; old-style (outlay-based) would be **6309.766324** ⇒ wedge = Σtax **78.351358** — `firm_rev` is resource-cost-only |
+| cap / cash | max e_t = **6.0** = `contest_max_e` (binds); max(extra_spend − `E._cash`) = **−0.309** ≤ 1e-9 in every child-year |
+| rho grid (HK tax=.10) | prep_stock_mean **0.475467 / 0.442238 / 0.451151**; contest_e_mean **0.029896 / 0.029477 / 0.030912**; k12_spend_mean **155.845 / 154.826 / 154.833** for rho = 0 / .5 / 1 |
+| rho anchor (pid-matched, 739,200 (pid,gate) pairs) | rho=0 vs legacy undepreciated cumulative stock: **max abs diff 0.0**; rho=1 vs memoryless current-year contribution (after core gate consumption): **max abs diff 0.0** |
+| learning switch (HK, `mode='both'`, gain 0.3) | `contest_learning_added` Σ **1729.64**; mean learned skill (cred≥1) **18.845104** vs positional **18.706977** (**+0.138127**); contest_e_mean 0.035199 vs 0.034762; positional default unchanged |
+| timing (host, single process) | HK 33.4–38 s full-size; KR 58.4 s; cold first run 155 s (cache). ≈30–45 min for the 540 campaign on 8 workers |
+
+Candidate-pool item is resolved by contract amendment A7 (sitting cohort): the effort assignment uses
+`E.contest_candidates(m)` directly, i.e. exactly the same pool as the realised gate. Residual documented in §3.1:
+under the sitting-cohort pool a child prepares only in the year it sits (retakers excepted), so `rho` has little
+room to act on the canonical 540 spec; multi-year preparation would need a gate-approaching-pool extension
+(wave-2 decision, not a defect in this lane).
+
 ## 3. Remaining risks / open items
 
 1. **Canonical-pool wording.** Tutoring prepares only for the gate level (`cred==m`, core's authoritative
@@ -185,8 +209,6 @@ and `Σ tutoring outlay_i <= E._cash_i` in every year, `max e_t <= contest_max_e
 4. **Learning-only mode at a top-level gate** can legitimately choose `e=0` when the marginal value of learning
    is zero (`mvl=0`, no further level); that is economically correct, not a switch failure (`'both'`/bar-gate
    configs show the positive direction).
-5. **Clean-tree verification pending.** The check run above used the shared dirty worktree while engine-core's
-   `core.py`/`rng.py` were still uncommitted local edits. Re-run on a clean `git archive <core commit>` tree once
-   engine-core commits, before Gate 1 sign-off (Commander-owned step). The numbers in §2.2 are current-tree
-   measurements and must be re-stamped with the core commit sha at that point.
+5. **Clean-tree verification DONE** — see §2.4 (clean `git archive 98baf6b`, core `f31e176`: 17/17 PASS; stamped
+   numbers above). Note §2.2's dirty-tree timings are superseded by the stamped ones.
 6. **Box usage:** none needed; all checks are small and ran on the host (no box quota consumed by this lane).
