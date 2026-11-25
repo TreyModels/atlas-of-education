@@ -220,3 +220,18 @@ of runner+workers only, `/root/work/modelrev/pkg` intact. Its outputs are alread
   outlay=resource+tax rel 0.0, receipts=Σtax rel 0.0, max e_t = cap 6.0 exactly (cap binds), max(extra_spend−cash)
   = −0.000636 (KR) / −0.3183 (HK) ≤ 0; `contest_spend_now` present as Σ outlay; expected-vs-realised per gate after
   repair = 1.0000 (KR G9 0.35/0.35, KR G12 0.12/0.12, HK G12 0.23/0.23) vs the pre-repair 2.41×/1.96× mismatch.
+
+- 2026-11-25T15:07+08:00 · Commander · **P0 track progress + compute reconciliation.** `contest-math` task-6 COMPLETE
+  (commits `5fcee05`, `8281dd9`, `79bc919`; box reproduction exit 0, 1 process, hashes in report): 5 advertised ABC
+  moments **rank 4/5** (structural m_part ≡ ⅔m_g9+⅓m_g12; left-null certificate ≤3.4e-16), 6 active params ⇒
+  2-dim null space, **44 distinct θ** inside the prior box reproduce the same moments, analytic Jacobian vs FD
+  4.3e-6, analytic δ = −0.7537718023763802 exact/covariate-free, archived deltas inside the 6 pp tolerance,
+  reduced 5-param/3-moment rank 3 ⇒ 2 further independent moments required, urban-rural gap is a composition
+  artifact. Now on task-9. `audit-runner` task-11 COMPLETE (`c114a61`, `307b59c`): corrected harness 18/18 assertions
+  host+box, failing job aborts with rc=7, `CORRECTED_GPU_EXPERIMENT_MANIFEST.json` (7/7 integrity defects),
+  `SCIENTIFIC_CLAIM_LEDGER.md` (36 claims: CONTRADICTED 16 / AUTHOR-REPORTED 9 / UNRESOLVED 6 / REPRODUCED
+  SIMULATION 4 / VALIDATED SIMULATION 1 arithmetic / VERIFIED EMPIRICAL 0) — accepted; worker released.
+  Box: legacy driver DEAD (15:05:19); controller owns `/root/work/cmd` 540 cross-env replication at 6 workers
+  (Commander hands-off after the 1-worker/6-worker relaunch race; host run is authoritative). Host authoritative
+  540 run in progress (started 14:55, ETA ~15:17–15:20). Hard caps: qa ≤3, contest-math ≤3, audit 0, commander 0–1,
+  total ≤10; controller's assignment wins.
