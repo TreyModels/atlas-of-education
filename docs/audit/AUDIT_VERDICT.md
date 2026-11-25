@@ -1256,6 +1256,22 @@ non-inferential** (crash insurance only; must not be analysed or used for stoppi
    `observed_runaway` records the truncation — correct the stats/uncertainty fields before aggregation. The A5 rule
    itself is valid; this is a manifest-consistency fix.
 
+**A5 EXECUTION ACCEPTED — HOLDS LIFTED; AGGREGATION AUTHORIZED (2026-11-26).** Both provenance fixes are in:
+1. **Aggregator committed** at **`0324205`**, sha **`223628668…978`**: reads per-cell checkpoints, filters **seeds
+   100–115 only**, writes `paperC_confirmatory.json` (`n_runs=96`, `n_cells=6`, `invalid_cells=[]`) with A5/A4/passers/
+   runner citations + `SHA256SUMS`/`CONFIRM_RESULTS_DONE`; no outcome-based selection; the watchdog runs this exact sha.
+2. **Manifest corrected** — final sha **`0b70c105…3c01`** (commit `f15f559`; the commander's interim `3d3da8d7…` is
+   superseded): `uncertainty` = **16 matched seeds (A5, 100–115), SE = √2 × the 32-seed plan, label A5 interim
+   precision, NO full-precision claim**; `n_seeds_used=16`; A5 citation/approval (`1c51f17`, record `aa1d0bd`) linked;
+   aggregator commit cited; `wall_note` reconciled (**16-seed ≈21.6 CPU-h / ~3.6 h** vs 32-seed 43.2 CPU-h / 7.2 h);
+   `observed_runaway` retained. A5 rule remains the committed `36515596…` version (`aa1d0bd`; execution update
+   `7512c7f5…`/`ecb02ad` appended only). **8-seed snapshot is non-inferential** (crash insurance only; not analysed, not
+   a stopping source). Attestation (no per-cell outcome values read before freeze) recorded.
+
+**Status: aggregation AUTHORIZED on seeds 100–115 only; on completion pull/hash-verify and report T2/T3 Holm m=2 α=.05
+results with achieved CI/MDE under A5 interim precision; T2 proxy/range caveats; T3 assertion support; T1/T4 screening
+failures; no S-generalisation; no confirmatory number cited yet.**
+
 **Status: A5 EXECUTION ACCEPTED CONDITIONALLY — HOLD AGGREGATION until the aggregator is committed/pinned and the
 manifest uncertainty/citation fields are corrected; then analyse seeds 100–115 only, report achieved CI/MDE and A5
 interim precision; no confirmatory number cited.**

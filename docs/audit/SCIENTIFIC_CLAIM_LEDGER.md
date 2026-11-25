@@ -445,3 +445,14 @@ seeds (A5, 100–115)** and A5 citation/approval linked; `wall_note` reconciled.
 achieved CI/MDE and **A5 interim precision**; T2 proxy/T3 assertion-support/Holm m=2 unchanged; T1/T4 screening failures;
 no S-generalisation. **No confirmatory number cited.**
 
+**A5 EXECUTION ACCEPTED — HOLDS LIFTED; AGGREGATION AUTHORIZED (2026-11-26).** Aggregator committed `0324205`, sha
+`223628668…`, filters **seeds 100–115 only**, writes `paperC_confirmatory.json` (96/6/invalid []) with A5/A4/passers/
+runner citations + SHA256SUMS/CONFIRM_RESULTS_DONE; no outcome-based selection. Manifest corrected, **final sha
+`0b70c105…` (commit f15f559; interim `3d3da8d7…` superseded)**: uncertainty = 16 matched seeds (A5, 100–115), SE √2×,
+A5 interim precision/no full-precision claim, n_seeds_used 16, A5 citation/approval linked, aggregator commit cited,
+wall_note 16-seed ≈21.6 CPU-h/~3.6 h vs 32-seed 43.2/7.2, observed_runaway retained. A5 rule = committed `36515596…`
+(`aa1d0bd`; execution update `7512c7f5…` appended only). **8-seed snapshot non-inferential** (crash insurance only; not
+analysed/stopping source). Attestation no outcome values read before freeze. **Aggregation authorized on seeds 100–115;
+on completion report T2/T3 Holm m=2 α=.05 with achieved CI/MDE under A5 interim precision, T2 proxy/range caveats, T3
+assertion support, T1/T4 screening failures, no S-generalisation; no confirmatory number cited yet.**
+
