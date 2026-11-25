@@ -1,0 +1,40 @@
+{
+ "version": "l1-m6-extension-v0.1",
+ "inputs": {
+  "prototype": {
+   "path": "/Users/treymenefee/neon-boot/wt5/dhs8/experiments/dhs_v1/integration/prototype_l1_m6_final.csv",
+   "sha256": "c2c012548d731a64bcbbc98760a19a40dc6209823b1b7d0705c2f634f155d30b"
+  }
+ },
+ "method": {
+  "unit": "L1 survey-wave domain-mean cell matched to same-year public DHS-API indicator",
+  "models": "inverse-variance WLS: pooled y~x; within-between y ~ (x-country_mean) + country_mean",
+  "holdouts": "leave-one-country-out and last-wave holdout; baseline = training weighted mean",
+  "effective_n": "number of countries (4) for cross-country statements; cells are not independent"
+ },
+ "guardrails": {
+  "context_not_exposure": true,
+  "causal_claim": false,
+  "ecological_fallacy": "country-level indicator is not a household measurement",
+  "no_interpolation": true,
+  "descriptive_only": true
+ },
+ "counts": {
+  "series": 88,
+  "holdout_tests": 572
+ },
+ "summary": {
+  "last_wave_holdout": {
+   "n_tests": 242,
+   "median_rmse_model": 0.1793473995756426,
+   "median_rmse_baseline": 0.19856382325067534,
+   "share_model_better": 0.5371900826446281
+  },
+  "leave_one_country_out": {
+   "n_tests": 330,
+   "median_rmse_model": 0.1799269282596507,
+   "median_rmse_baseline": 0.16940895979634762,
+   "share_model_better": 0.43333333333333335
+  }
+ }
+}
