@@ -106,3 +106,28 @@ not reproduced. (B-05's empirical Korean seat-expansion episode remains AUTHOR-R
 4. **GPU-vs-CPU agreement is arithmetic validation only** and must never be quoted as scientific validation. (G-16)
 5. The corrected harness demonstrates **execution integrity**; it does **not** by itself validate any experiment.
    The real-mode matrix is defined but was **not executed** (CPU-only audit; torch parked; no GPU campaign).
+
+---
+
+## P0 ANNEX — Commander record of task-6 / task-9 / task-12 / task-7 / task-8 outcomes
+
+**Appended by `atlas-commander` 2026-11-25 ~16:00 (Lead-directed). The ledger body above is audit-runner's task-11
+record; this annex adds the later P0 findings. All GPU conclusions remain QUARANTINED; nothing here is a Gate-1
+result or an empirical claim.**
+
+| # | claim previously in play | status now | exact artifact / evidence |
+|---|---|---|---|
+| A1 | "7-parameter ABC is identifiable / 5 moments pin 6 active params" | **CONTRADICTED** (already listed; confirmed quantitatively) | task-6 `79bc919` / `ABC_IDENTIFICATION_AUDIT.md`: 5 advertised moments **rank 4/5** at 1000/1000 prior-box points; 6 active params ⇒ 2-dim null space; **44 distinct θ** inside the prior reproduce the same 5 moments (null motion |Δθ|=0.266, residual 1e-16); analytic Jacobian vs FD 4.3e-6; δ = −0.7537718023763802 exact |
+| A2 | "Archived 7/6-param ABC deltas validate the model" | **UNVALIDATED/INSIDE-TOLERANCE ONLY** | task-6: archived deltas 69.51 %/66.11 % inside the 6 pp own-tolerance, i.e. the tolerance masked an exactly solvable parameter; reduced 5-param/3-moment rank 3 ⇒ exactly two further independent moments required |
+| A3 | "Paper A micro-moments are identified" | **LOCAL ONLY** (not global) | task-6: rank 5/5 substituted, 6/6 unsubstituted local; Paper A's Jacobian must be independently computed; must NOT cite archived ABC outputs |
+| A4 | "Urban–rural participation gap is 0.14" | **COMPOSITION ARTEFACT** | task-6: empty G12×urban cell implies a 30.7 pp within-grade G9 gap (A−B) behind the 0.14 aggregate |
+| A5 | "100 % seat-expansion paradox" | **CONTRADICTED** | task-9 `66abc13`/`0f56621`: archived S-grid truncated at 0.50 (rising arm only); corrected 72-cell exact-PL surface is an **inverted-U ending at 0** at universal admission (positive-gradient share falls to 52 % as S→1) |
+| A6 | "Tullock structural map = 3-D surface" | **CONTRADICTED** | task-9: archived solver depends only on r·ΔV/p ((0.8,0.10) and (1.6,0.20) give identical effort, |diff|=0); the 20×20 (r,p) grid is a 1-D r/p sweep × S (rank 2); core/context for A4 |
+| A7 | "Archived Tullock solver is a valid general-r mirror" | **UNVALIDATED** | task-9: archived r=1-with-multiplier formula's fixed point is accidentally right (matches analytic x*=rV(n−1)/(n²c)), but its individual response is wrong by up to 0.87 (r=1.5)/2.68 (r=2.5) effort units under heterogeneity (utility loss up to 0.162/child); for r>1 a corner e=0 is the global best response in 5/24 anchors |
+| A8 | "2–5× engine speed-up is available for Gate 2/3" | **UNPROVEN** | task-12 `d1acdf3`/`1b34d36`: KEEP-MEMO-ONLY shipped (bit-identical outputs, 68/68 tests), end-to-end **1.113×** (controller 1.196× on superseded build); 2–5× unproven because 93.6 % of runtime is 405 float32 DP calls that cannot be re-associated within ≤1e-12. Levers: prep grid 9→5 ⇒ ~1.7×, 9→4 ⇒ ~2.0×; compiled kernel 5–10× (violates pure-NumPy) |
+| A9 | "Shipped E1/Q3 pooled selftest can separate OVB from minority-effect leakage" | **CONTRADICTED** | task-8 `ffed664`/`01cb4d3`: FE size 0.052–0.062 vs pooled size **0.996–1.000** under zero-effect null (bias +0.23/+0.39/+0.49; coverage 0.02/0/0); permutation within-invariance 6.66e-16; replacements WCR size 0.025–0.042, cluster bootstrap 0.033–0.050 / coverage 0.95–0.97 |
+| A10 | "Legacy symmetric DGP design is usable" | **CONTRADICTED** | task-7 `01cb4d3`/`9e04236`/`47b342a`: legacy 3/5 rank with min singular value exactly 0; corrected crossed design rank **5/5 in 500/500** populations, recovery RMSE 0.04–0.13 vs legacy 0.58–0.64; 182,212 accepted + 106,902 posterior-predictive draws retained |
+
+**Gate-1 impact: none.** These are P0 annex items; Gate-1 evidence (invariants/checks/540 migration) is unaffected and
+the task-12 patch is bit-identical (Gate-1 540 used the pre-task-12 `98baf6b` engine). Any future citation of these
+items must carry the artifact/commit and status above.

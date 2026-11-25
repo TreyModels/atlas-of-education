@@ -269,3 +269,19 @@ of runner+workers only, `/root/work/modelrev/pkg` intact. Its outputs are alread
   incremental checkpointing + memory-aware worker caps. qa tasks 7/8 delivered (`01cb4d3`); contest task-9 delivered
   (`66abc13`,`0f56621`) with the toy 100 % paradox CONTRADICTED and the general-r anchor; contest-math asked to keep
   host-local benches paused until the 540 lands.
+
+- 2026-11-25T16:00+08:00 · Commander · **GATE 1 GREEN — migration source landed (box cross-env) and pack assembled.**
+  Box repaired-engine 540 run complete: `Completed 540 runs in 2960.4s`, 540/540 exit 0, output
+  `results/audit/commander/hk_korea_540_REPAIRED_box98baf6b_2026-11-25.json` sha256
+  `455649daf2a1e3367820004c3338deb41236991814887c295b6e7a2bb634ec21` (declared venv py3.10.8/numpy 2.2.6; clean
+  `98baf6b` engine; pre-task-12). Host authoritative run failed **twice** in pool completion (loud, no partial data;
+  stack at `docs/audit/HANG_63896.txt`, hardening in `GATE1_POOL_HANG_INCIDENT.md`) → migration source labelled
+  "box cross-env declared venv". Migration table: `docs/audit/GATE1_MIGRATION_TABLE.md`. Headline (30-seed): KR
+  baseline gap 68.36→**29.71** pp (target 32.1), spend ratio 18.01→**2.11×** (target 3.4), elite Q5 36.12→22.13;
+  HK gap 70.63→34.76 pp, ratio 39.81→2.47, elite 46.36→25.01; participation unchanged; contest effort −98–99 %.
+  **CF4 verdict flips:** CF4a now Win-Win in both (HK 70.58/23.44; KR 72.48/21.47); CF1b no longer passes (spend
+  97.21/99.25); CF4b fails (89.98/105.54). Driver: honest-P re-pricing (expected/realised 1.0000 after vs
+  2.41×/1.96× before), not calibration → "540 calibration loss" is largely a D2 artefact. `GATE1_REPORT.md` complete
+  (sections 5/7/9/10 filled), P0 annex appended to `SCIENTIFIC_CLAIM_LEDGER.md` (A1–A10: ABC identification,
+  paradox, Tullock, perf unproven, DGP/bootstrap findings). Verdict: **Gate-1 GREEN, GO for Gate 2** under the
+  report's preconditions. Single Gate 0+1 report sent to Lead.
