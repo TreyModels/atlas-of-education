@@ -363,3 +363,20 @@ L; gate override authoritative). **Caveats:** screening-only, no Paper C claims/
 A4/prereg clarification before confirmatory**; >6-passer/frozen passer list downstream; confirmatory gated on D-S1 fix +
 A4 clarification + frozen list + 1–2 slot reserve. CSV frozen.
 
+---
+
+**SCREENING → PASSER FREEZE (2026-11-26): BLOCKED pending amendment A4; test results computed.** QA-verified payload
+`6bcc29a5…` (36 cells × 8 seeds, per-seed rows). **A4 formal clarification:** `P12=pay_gap` is the no-withholding
+control; exposed arms = A/C ∧ P55; `A|P12` exempt from h>0/own_share>0.1 (matches A3.3 and the actual assertion;
+D-S1 metadata defect only). **Computed:** T1 participation S=.85−S=1.15 = +0.32…+1.08 pp, **0/12 meet the ≥3 pp
+minimum**, all 95 % CI upper <3 pp → **indeterminate/underpowered at screening**; T2 own_share C−A **12/12** ≥+0.10
+(0.359–0.709); T3 A|P55 binding **6/6** (h=.144, own .429–.524); T4 primary spend gap **18/18 positive** (+0.011–0.023
+spend units; +2 pp threshold units unresolved), secondary participation gap **18/18 negative** (−0.66…−5.07 pp,
+opposite predicted sign). **Blocking rule issues:** (i) "cells" vs "tests" undefined — all-tests cell rule gives zero
+passers (T1), any-passing-test rule gives nearly all; (ii) >6 → first-6 appendix-order block is all S=.85/L=.25 and
+contains **no S or L contrast**, so cannot test T1/T4; (iii) T4 units/threshold and secondary sign need resolution.
+**Proposed A4:** passers = **complete contrast blocks**; pre-declare the 6-cell anchor block S0.85/L0.25/A/P55,
+S1.00/L0.25/A/P55, S1.15/L0.25/A/P55 (T1), S1.00/L0.25/C/P55 (T2), S1.00/L0.25/A/P12 (T3), S1.00/L0.45/A/P55 (T4);
+T1 reported screening-indeterminate, confirmatory can still test it; ~22 CPU-h. Alternative: raise cap/restrict tests.
+**No passer list frozen; no confirmatory compute until Lead chooses and the list is signed + in manifest.**
+

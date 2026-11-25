@@ -1103,6 +1103,43 @@ correct; summary 36×18 with n=8; ckpt→summary exact (1e-12); no `completion_*
 downstream; confirmatory remains gated on the D-S1 metadata fix + A4 clarification + frozen passer list + the 1–2 slot
 reserve. **Status: screening QUEUE/ARTEFACT integrity PASS; not a confirmatory result; CSV frozen.**
 
+## 4Q. Screening→passer freeze — **BLOCKED pending rule amendment (A4); computed tests below**
+
+Computed by the adjudicator from the QA-verified screening payload (`6bcc29a5…`; per-seed rows, 8 seeds/cell, paired).
+**A4 recorded (formal clarification, no design change):** **`P12 = pay_gap` is the no-withholding control**; **exposed
+arms = A/C ∧ P55**; **`A|P12` is exempt** from `h>0`/`own_share>0.1`; failed exposed arm = INVALID. This matches A3.3
+and the actual screening assertion (`run_paperC_screening.py:154`), despite the D-S1 metadata defect.
+
+**Test-level screening results (lead-specified tests):**
+* **T1 (participation, S=.85 − S=1.15, min −3 pp):** 12/12 contrasts **do not reach** the minimum; observed means
+  **+0.32 … +1.08 pp** and every 95 % CI upper bound is **< 3 pp**. This is **indeterminate/underpowered at N=600 × 8
+  seeds**, not a clean failure (direction is positive, magnitude below the pre-declared MDE).
+* **T2 (own_share C−A, min +0.10):** **12/12 pass** (0.359 … 0.709).
+* **T3 (binding, A|P55):** **6/6 pass** (`h=0.144`; own_share 0.429 … 0.524 > 0.1); `A|P12` exempt (A4).
+* **T4 (L=.45 − .25):** primary **Q5−Q1 spend gap** positive **18/18** (+0.011 … +0.023 in spend units; the pre-declared
+  "+2 pp" threshold is in pp and does not map directly to this spend-gap scale — **units/threshold need confirmation**);
+  secondary **Q5−Q1 participation gap negative 18/18** (−0.66 … −5.07 pp), **opposite** to the predicted L↑ gap↑. So T4
+  primary direction is positive but threshold/scale is ambiguous, and the secondary contradicts the predicted sign.
+
+**Blocking rule problems (why I cannot freeze a passer list yet):**
+1. **"Cells" vs "tests" is undefined.** If a cell must pass **all** T1–T4, there are **zero passers** (T1). If a cell
+   passes when implicated by **any** passing test, nearly all 36 cells pass via T2/T3/T4.
+2. **The >6 → first-6 appendix-order rule is structurally incoherent with T1/T4.** The first six cells are all
+   **S=.85, L=.25** (A/B/C × P55/P12): they contain **no S contrast** (only S=.85) and **no L contrast** (only L=.25),
+   so a confirmatory block of those six **cannot test T1 or T4**. The cap rule and the test design conflict.
+3. **T4 threshold/units** need a pre-declared scale (+2 pp vs spend units) and a decision on the contradicting
+   participation-gap secondary.
+
+**Proposed amendment A4 (for Lead decision; no compute until accepted):** define passers as **complete contrast blocks**
+(not first-N raw cells) and pre-declare a **6-cell contrast-complete anchor block** covering T1–T4 at one coherent anchor:
+`S0.85|L0.25|A|P55`, `S1.00|L0.25|A|P55`, `S1.15|L0.25|A|P55` (T1 S contrast), `S1.00|L0.25|C|P55` (T2 C−A),
+`S1.00|L0.25|A|P12` (T3 A|P55 vs P12), `S1.00|L0.45|A|P55` (T4 L contrast). Six cells ≈ the same 22 CPU-h envelope.
+T1 is screening-indeterminate; confirmatory can still test it as pre-registered, with T1 reported as underpowered at
+screening (not silently promoted). Alternative: raise the cap to cover a contrast-complete set / restrict confirmatory
+to T2/T3/T4. **No confirmatory compute until the Lead chooses and the frozen list is signed and put in the manifest.**
+
+**Status: screening QA PASS (artefact integrity); PASSER FREEZE BLOCKED — amendment A4 required; no confirmatory run.**
+
 ## 5. Evidence-status register (programme level)
 
 | Status | Count (paper + programme rows) | Notes |
