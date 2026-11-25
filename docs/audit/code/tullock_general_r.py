@@ -527,6 +527,7 @@ def part2_3(out, log):
          f"{max(c['residual_after_30'] for c in arch_cells):.2e}")
     # archived window S in [0.12, 0.50] only: compute the corrected gradient ON THAT WINDOW
     # (the toy never sampled the descending arm or universal admission)
+    c_pos_now = [g["n_pos"] for g in grad]
     win = [s for s in S_GRID if s <= 0.5]
     win_pos = []
     for r in R_GRID:
@@ -540,7 +541,7 @@ def part2_3(out, log):
          f"{np.mean(win_pos):.2f} (min {min(win_pos):.2f}, max {max(win_pos):.2f}) - "
          f"the toy's '100% paradox' is a truncation artefact, not a paradox.")
     emit(f"  Corrected model over the FULL range S -> 1 (universal admission): positive share "
-         f"falls to {np.mean(c_pos):.2f}; the spend path is an inverted-U ending at 0.")
+         f"falls to {np.mean(c_pos_now):.2f}; the spend path is an inverted-U ending at 0.")
     a_pos = []
     for r in R_GRID:
         for p in P_GRID:
