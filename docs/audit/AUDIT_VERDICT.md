@@ -255,7 +255,7 @@ and sensitivity. Full plan: `docs/audit/PAPER_A_REPRODUCTION_ATTEMPT.md` (reimpl
 | (a) | E8 fee-abolition event study | fresh hashed WDI vintage; **CS-style group-time ATT** (not-yet-treated controls), 500 cluster bootstraps + 2,500 Fisher/scheme; full event path | **DONE (REPRODUCED EMPIRICAL ANALYSIS)** — impact **+12.322 pp** (bootstrap mean 12.308, 95% CI [4.48, 22.64]) and post mean **+25.083 pp** (author +25.26) **both replicate**; event path 12.32, 23.66, 25.79, 21.88, 24.94, 28.45, 25.78; Fisher p 0.0044/0.0040. Declared deviations: equal weights, no DR covariates, 8 clusters → wide CI, fresh vintage. Simple-DiD +2.54 is **estimator sensitivity**, not a data difference |
 | (b) | Delayed secondary-bulge `t*` | fresh hashed WDI; `t* = abolition + SE.PRM.DURS`; outcome SE.SEC.ENRR; 2,500 perms/scheme | **DONE (fresh WDI)** — ATT at `t*` **−0.956 pp**, post +0.30, Fisher p **0.251 / 0.384** → **no detectable secondary-bulge jump**; **UNRESOLVED** (no-effect evidence), consistent with the manuscript's honest-null framing |
 | (c) | Gate-architecture / H2 (≥5,000 runs) | repaired `98baf6b`; pre-registered gate kinds/grid; ≥5,000 runs; H2 with seed CIs | **DESIGN READY / RUN PENDING** — ~43–60 CPU-h |
-| (d) | Multi-seed identifiability/Jacobian | frozen V540-FREEZE 4θ × 4-moment calibration map; 5 matched seeds/column; declared steps 5/3/5/4 %; central differences; ≥3 starts required by the Gate-2 stop gate | **PROVISIONAL — NOT SIGNED OFF (2 of 3 required starts).** Rank **4/4**, null dim **0** at both tested starts; SVs start-1 50.030/32.596/1.907/**0.341**, start-2 46.916/17.058/6.801/**0.128**; multi-seed instability max|ΔJ| **11.476**, rel **0.287** (one-seed was 26.5/0.52). Local full rank only — **no global identification**; the **fourth-direction conditioning is unresolved**; a **condition number is not identification evidence**. Third start running; re-review on landing. |
+| (d) | Multi-seed identifiability/Jacobian | frozen V540-FREEZE 4θ × 4-moment calibration map; 5 matched seeds/column; declared steps 5/3/5/4 %; central differences; **3 starts** (stop gate satisfied); report rank/SV/null across starts, local-only | **REVIEWED — STOP GATE MET WITH DECLARED RESTRICTION** (`LOCAL_FULL_RANK_CONDITIONING_UNRESOLVED`): local full rank established at the tested points — rank **4/4**, null dim **0** at **3/3** starts (SVs 50.030/32.596/1.907/**0.341**; 46.916/17.058/6.801/**0.128**; 46.852/23.579/1.993/**0.046**). The fourth direction is not stable (pairwise rel |ΔJ| **0.287 / 0.350 / 0.416**; s4 0.3409 → 0.1278 → 0.0457), so the conditioning is unresolved and Gate-2 must declare a reduced parameterisation or a ridge/prior for that direction. **No global-identification or condition-number claim.** |
 | (e) | Fee-abolition forecast with held-out | fixed engine `846c9e0` (canonical re-pin `46c080d`); `year_t=T0`; `assert E.unfired_events==[]`; 40 seeds; held-out e=+5,+6 | **ACCEPTED — REPRODUCED SIMULATION (NEW GENERATION)** — abolition − persistence **+17.19 … +25.35 pp** (e=0..6); full-7 RMSE **2.764 / MAE 2.432** vs persistence **23.759 / 23.260** (**−88.4 %**); held-out e=+5,+6 RMSE **1.637 / MAE 1.350**. **Calibration fallback:** the author's **74.88 % anchor is infeasible** in the repaired world (max 71.0 % at fee 0; A-38), so fee 0.15 + engine pre-abolition level, **no post tuning**; conditional simulation, not a reproduction of the author's calibration. v1 numbers remain uncited |
 
 **New-generation E8 empirical result (fresh hashed WDI, label `REPRODUCED EMPIRICAL ANALYSIS`):** **both the
@@ -331,48 +331,62 @@ criticisms. Each must be **fixed by design**, and the pre-registration must name
 procedures unchanged, or if it claims global identification from a local rank, or if it presents the repaired 540
 (`455649da…`, legacy gate list) as the frozen `canonical_spec.json` V540 run.
 
-## 4D. Review of new-generation identifiability — item (d) — **PROVISIONAL, NOT SIGNED OFF**
+## 4D. Review of new-generation identifiability — item (d) — **REVIEWED: STOP GATE MET WITH DECLARED RESTRICTION**
 
-Artefacts: `docs/audit/G2A_IDENTIFIABILITY_MULTISEED.md` (sha256 `692460db…9084`) and
-`results/audit/newgen/identifiability_multiseed_846c9e0_pin.json` (sha256 `22426155…90c3`). The map is the **frozen
+Artefacts: `docs/audit/G2A_IDENTIFIABILITY_MULTISEED.md` (sha256 `9c40aeed…3b07`) and
+`results/audit/newgen/identifiability_multiseed_846c9e0_pin.json` (sha256 `66535941…4be3`). The map is the **frozen
 V540-FREEZE calibration map** (4 θ: price/alpha/prize/ymed multipliers; 4 moments: KR participation, KR gap, KR
-spend ratio, HK G9 participation), evaluated with **5 matched seeds per finite-difference column**, declared steps
-5 %/3 %/5 %/4 %, central differences, **2 starts, 90 evaluations** (1,361 s). Engine `/tmp/gate1-540/engine` = clean
-`98baf6b` (numerics unchanged vs `846c9e0`; pre-fix pin recorded). It is **not** Paper A's legacy 10-parameter
-`masseng-tutoring` model; it is the operational Gate-2 calibration-map identifiability.
+spend ratio, HK G9 participation), **5 matched seeds per finite-difference column**, declared steps 5 %/3 %/5 %/4 %,
+central differences, **3 starts**, 90 + 45 evaluations, engine pin `98baf6b` (core `72cbddf7…`; numerics unchanged vs
+`846c9e0`; pre-re-pin recorded). It is **not** Paper A's legacy 10-parameter `masseng-tutoring` model; it is the
+operational Gate-2 calibration-map identifiability.
 
-| start | rank | singular values | null dim |
-|---|---|---|---|
-| (1.0, 1.0, 1.0, 1.0) | **4/4** | 50.030, 32.596, 1.907, **0.341** | 0 |
-| (1.5, 0.8, 1.5, 0.95) | **4/4** | 46.916, 17.058, 6.801, **0.128** | 0 |
+| start | θ | rank | singular values | null dim |
+|---|---|---|---|---|
+| 0 | (1.0, 1.0, 1.0, 1.0) | **4/4** | 50.0299, 32.5956, 1.9066, **0.3409** | 0 |
+| 1 | (1.5, 0.8, 1.5, 0.95) | **4/4** | 46.9156, 17.0582, 6.8014, **0.1278** | 0 |
+| 2 | (0.7, 1.2, 0.8, 1.3) | **4/4** | 46.8523, 23.5794, 1.9931, **0.0457** | 0 |
 
-Multi-seed instability: max |ΔJ| **11.476**, relative **0.287** — better than the one-seed run (26.5 / 0.52) but not
-eliminated; the smallest singular value still moves **0.341 → 0.128** across starts.
+**Pairwise start-to-start stability (max |ΔJ| / rel):** 0-1 **11.476 / 0.287**; 0-2 **14.006 / 0.350**; 1-2
+**14.071 / 0.416**; global max **14.071 / 0.416**. **s4 trajectory: 0.3409 → 0.1278 → 0.0457 — it keeps drifting
+downward; there is no stable fourth direction.**
 
-**Gate-2 stop-gate status: NOT PASSED (PROVISIONAL).** The declared stop gate requires **≥3 starts**; this artefact
-has **2**. A third start is running on the host (~25–30 min) and must be appended before (d) can be signed off. The
-required decision when it lands: **does rank stay 4/4 with null dim 0 at all ≥3 starts, and is the fourth-direction
-conditioning stable enough to declare local identifiability?** If not, (d) stays unresolved and Gate-2 calibration
-must use a reduced parameterisation or a declared ridge/prior.
+**Stop-gate verdict (verbatim from the artefact): `LOCAL_FULL_RANK_CONDITIONING_UNRESOLVED`.** The declared
+`conditioning_settled` criterion (pairwise rel |ΔJ| < 0.10) **fails at all three pairs** (0.287 / 0.350 / 0.416);
+rank is full and null dim is 0 at every start, but the fourth direction is not stable across starting points.
+Therefore:
+
+* **local full rank at the tested points: YES** (rank 4/4, null dim 0, 3/3 starts);
+* **global identification: NO** — and none is claimed;
+* **fourth-direction conditioning: UNRESOLVED** — the smallest singular value is unstable and shrinking;
+* **Gate-2 stop-gate decision: MET WITH DECLARED RESTRICTION.** Local full rank at the tested points is
+  established (3/3 starts, rank 4/4, null dim 0), so the gate's rank requirement is satisfied; but the fourth
+  direction's conditioning is **not settled** (s4 drifts 0.3409 → 0.1278 → 0.0457; pairwise rel |ΔJ| up to 0.416).
+  Gate-2 therefore proceeds **only** with a declared **reduced parameterisation** or a **ridge/prior for the fourth
+  direction**, recorded in the pre-registration. The 4-parameter map must **not** be treated as identified in its
+  fourth direction merely because the numerical rank is 4.
+* **A condition number is not identification evidence.** Report rank/SV/null space and their start-to-start
+  variation — not a single condition number.
 
 **Assessment against the four Codex criticisms (measured P0 numbers):**
 
-| criticism | status for (d) | what is still required |
+| criticism | status for (d) | carried to the pre-registration review |
 |---|---|---|
-| **rank 4/6** (original 5-moment ABC: rank 4/5 at 1,000/1,000 points; 6 active params ⇒ 2-dim null; 44 θ replicate; analytic δ) | **partly answered only for the reduced 4θ map**: rank 4/4 with null dim 0 is full rank for the *declared reduced parameterisation*, not for the 6-parameter ABC. The reduction deliberately drops the income/school-gap directions that were the null directions. | do **not** claim the 6-parameter ABC is identified; state that (d) is a 4θ reduced map, and that the fourth direction is weakly conditioned (SV 0.341/0.128, start-dependent) |
-| **empty G12×urban / no school IDs** (legacy synthetic DGP; legacy rank 3/5 vs corrected 5/5 in 500/500) | **not addressed by (d)**: the 4 moments do not include a grade×urban cross or school-level moments; this is an engine calibration map, not the synthetic ABC population. | any identification claim must use the corrected crossed grade×urban, school-identified design for the DGP part; do not cite legacy-DGP rank |
-| **pooled E1/Q3 selftest size ≈1.0 vs FE 0.05–0.06** (OVB) | **not applicable to (d)** (identifiability, not E1/Q3 inference) | any E1/Q3 claim in the same pre-registration must use the FE estimator + WCR/whole-trajectory bootstrap, never the pooled selftest |
+| **rank 4/6** (original 5-moment ABC: rank 4/5 at 1,000/1,000 points; 6 active params ⇒ 2-dim null; 44 θ replicate; analytic δ) | **not answered** — (d) is a **reduced 4θ** map. Rank 4/4 for 4 parameters does not establish identification for the 6-parameter ABC; the reduction drops the income/school-gap null directions. | the prereg must not claim the 6-param ABC is identified; state the reduction explicitly |
+| **empty G12×urban / no school IDs** (legacy synthetic DGP rank 3/5; corrected 5/5 in 500/500) | **not addressed by (d)** — the four moments have no grade×urban cross or school-level moments; this is an engine calibration map, not the synthetic ABC design. | a **(c)/design issue**: any identification claim must use the corrected crossed grade×urban, school-identified design |
+| **pooled E1/Q3 selftest size ≈1.0 vs FE 0.05–0.06** | **not applicable to (d)** (identifiability, not E1/Q3) | any E1/Q3 claim in the same prereg must use the FE estimator + WCR/whole-trajectory bootstrap, never the pooled selftest |
 | **within-invariant permutation 6.66e-16** | **not applicable to (d)** | any E1/Q3 permutation claim must not use the shipped country-block permutation |
 
-**Explicit flags:** (i) **a condition number is not identification evidence**; report rank/SV/null space and their
-start-to-start variation, not a single condition number. (ii) **Local full rank is not global identification**; no
-global claim is permitted. (iii) The **fourth-direction conditioning is unresolved** until the third start (and a
-declared perturbation-stability check) lands. (iv) The one-seed v1 run had a hidden defect (all columns seed 0) and
-must not be cited; this multi-seed artefact is the authoritative provisional result.
+**Ledger:** A-39 is **VALIDATED SIMULATION (STOP GATE MET WITH DECLARED RESTRICTION)** — the deterministic
+identification computation is validated and the **local** full-rank claim is established at the tested points; the
+claim/action record the 3-start numbers, pairwise instability, s4 trajectory, the
+`LOCAL_FULL_RANK_CONDITIONING_UNRESOLVED` label, and the required restriction. **No global-identification and no
+condition-number claim is made.**
 
-**Item (c) review** — the gate-architecture pre-registration has **not landed**; when it does, review it against the
-same four criticisms (rank-4/6 structure, empty G12×urban, pooled selftest, within-invariant permutation) before any
-(c) run is accepted.
+**Item (c) review — the ONLY remaining Paper A computation.** The gate-architecture pre-registration has **not
+landed**; when it does, review it against the same four criticisms (rank-4/6 structure, empty G12×urban, pooled
+selftest, within-invariant permutation) before any (c) run is accepted. (d) is now closed with the declared
+restriction; (a), (b), (e) are closed (A-34/A-35, A-36, A-37).
 
 ## 5. Evidence-status register (programme level)
 
@@ -381,13 +395,13 @@ same four criticisms (rank-4/6 structure, empty G12×urban, pooled selftest, wit
 | VERIFIED EMPIRICAL | **4** (4 A) | descriptive/associational; not causal; author committed E8 record |
 | **REPRODUCED EMPIRICAL ANALYSIS** *(new-generation label, Lead-defined)* | **2** (2 A) | A-34 impact (+12.322 vs +12.44) and A-35 amplification (+25.083 vs +25.26) — fresh-WDI **CS-style group-time ATT**; manifest-hashed vintage |
 | REPRODUCED SIMULATION | **16** (2 A, 8 B, 6 programme) | all conditional and/or uncalibrated unless marked; includes the new-generation forecast (A-37), the 74.88 % infeasibility finding (A-38), the re-executed ABC audit, the re-executed bootstrap factorial, and the Paper B 540 table regeneration |
-| VALIDATED SIMULATION | **3** (programme) | engine/PL module validation, corrected DGP design, bootstrap size/power — audit artifacts, not paper claims |
+| VALIDATED SIMULATION | **4** (1 A, 3 programme) | **A-39 item (d) local identifiability (stop gate met with declared restriction)**; engine/PL module validation, corrected DGP design, bootstrap size/power |
 | AUTHOR-REPORTED | **44** (20 A, 18 B, 6 programme) | **AUTHOR-REPORTED BASELINE**: the 420 generation, the Paper A Exp 1/3/4/5 legacy numbers, the author JSON bundle; not results, not reproduced, not to be silently replaced |
 | CONTRADICTED | **30** (8 A, 14 B, 8 programme) | only where committed code/algebra/measured audit output refutes the claim; includes the 100 % paradox, invalid E1/Q3, legacy DGP, "published benchmark" attributions, and the Paper B policy reversals |
-| UNRESOLVED | **6** (3 A, 0 B, 3 programme) | A-31 replication inventory; A-36 bulge `t*` (no-effect evidence); **A-39 item (d) identifiability (provisional, 2/3 starts, not signed off)**; canonical spec/Gate-2; GPU quarantine |
+| UNRESOLVED | **5** (2 A, 0 B, 3 programme) | A-31 replication inventory; A-36 bulge `t*` (no-effect evidence); canonical spec/Gate-2; GPU quarantine |
 
 The machine-readable one-row-per-claim record is `results/audit/paper_claims.csv` (105 rows; sha256
-`4e522e4fe7b587ddef04159b30f420146bfb21e27d26868dc9e7fc54dabd6513`). The Lead-defined new-generation label **REPRODUCED EMPIRICAL ANALYSIS** is used for the fresh-WDI E8 rows; all
+`9adf990ea6c346861021713a5bca244eb0d290695537a724acb5da5a8138b867`). The Lead-defined new-generation label **REPRODUCED EMPIRICAL ANALYSIS** is used for the fresh-WDI E8 rows; all
 other rows use the verbatim six-status taxonomy.
 
 ---
