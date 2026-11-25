@@ -209,13 +209,10 @@ falls **HK 61.93 → 48.60 (−13.33 pp)** and **KR-TRACKED 55.79 → 42.81 (−
 is: **"CF4a meets the pre-stated spend/elite criterion while reducing participation by ~13 pp"**, not "Win–Win"
 unqualified.
 
-**A participation fall is NOT automatically a welfare cost (Codex correction).** It could mean (i) students lost
-useful support, (ii) school-provided preparation substituted for paid tutoring, or (iii) families stopped buying
-low-value preparation. **We cannot tell which** without learning, access, teacher-workload, student-time and
-spending outcomes — none of which this run measures. The engine already implements the withholding / own-teacher /
-positional-vs-learning mechanisms, but **Paper B's spec (`own_ban=0.95`, `mode=positional`) suppressed them**; the
-"does school provision emerge?" question is a separate, upcoming track (**Paper C**), not something Paper B answers.
-The numbers must be kept; the welfare interpretation must be stated as unresolved, not asserted.
+A ~13 pp K-12 participation fall under CF4a is an **unmeasured welfare change**, not automatically a welfare cost: it could be lost useful support, substitution by school-provided preparation, or families dropping low-value tutoring purchases. Interpretation requires learning/access/teacher-workload/student-time data that the programme does not yet have. The criterion's Win-Win is therefore an **accounting statement about spend and elite-Q5, not a welfare statement**.
+
+The engine already implements the withholding / own-teacher / positional-vs-learning mechanisms, but Paper B's spec (`own_ban=0.95`, `mode=positional`) suppressed them; the emergence question is a separate, upcoming track (**Paper C**), not something Paper B answers.
+
 
 **Uncertainty.** Seed/MC only: 100 matched seeds; paired-seed elite deltas for CF4a are HK **−1.62 [−1.73,−1.50]**,
 KR-TRACKED **−1.74 [−1.87,−1.61]**, KR-SINGLE **−2.03 [−2.19,−1.87]**; spend-index seed CIs are tight (e.g. CF4a HK

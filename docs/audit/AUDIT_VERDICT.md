@@ -490,12 +490,10 @@ result and is not erased.
 participation. Under CF4a, K–12 participation falls **HK 61.93 → 48.60 (−13.33 pp)** and **KR-TRACKED 55.79 → 42.81
 (−12.98 pp)**; G12 falls HK 49.37 → 39.14 (−10.23) and KR 36.25 → 30.56 (−5.69). CF3b has a similar drop (48.56 /
 42.80). Correct phrasing: **"CF4a meets the pre-stated spend/elite criterion while reducing participation by ~13 pp"**
-— not "win-win" unqualified. **A participation fall is not automatically a welfare cost** (Codex correction): it
-could be lost useful support, substitution by school-provided preparation, or reduced low-value purchase — we cannot
-tell which without learning, access, teacher-workload, student-time and spending outcomes, which this run does not
-measure. The engine already has the withholding/own-teacher/positional-vs-learning mechanisms, but Paper B's spec
-(`own_ban=0.95`, `mode=positional`) suppressed them; the emergence question is a separate, upcoming track (**Paper
-C**), not something Paper B answers. **Welfare interpretation: unresolved.**
+— not "win-win" unqualified. A ~13 pp K-12 participation fall under CF4a is an **unmeasured welfare change**, not automatically a welfare cost: it could be lost useful support, substitution by school-provided preparation, or families dropping low-value tutoring purchases. Interpretation requires learning/access/teacher-workload/student-time data that the programme does not yet have. The criterion's Win-Win is therefore an **accounting statement about spend and elite-Q5, not a welfare statement**.
+
+The engine already implements the withholding / own-teacher / positional-vs-learning mechanisms, but Paper B's spec (`own_ban=0.95`, `mode=positional`) suppressed them; the emergence question is a separate, upcoming track (**Paper C**), not something Paper B answers.
+
 
 **Uncertainty.** Paired-seed elite deltas for CF4a: HK **−1.62 [−1.73,−1.50]**, KR-TRACKED **−1.74 [−1.87,−1.61]**,
 KR-SINGLE **−2.03 [−2.19,−1.87]**; spend-index seed CIs tight (CF4a HK [70.54,70.64], KR [73.07,73.19]). CF4b's KR
@@ -525,7 +523,7 @@ meets the criterion); the CF4 reversal itself is a **reproduced new-generation r
 | UNRESOLVED | **5** (2 A, 0 B, 3 programme) | A-31 replication inventory; A-36 bulge `t*` (no-effect evidence); canonical spec/Gate-2; GPU quarantine |
 
 The machine-readable one-row-per-claim record is `results/audit/paper_claims.csv` (110 rows; sha256
-`aeff6213b35c5b52a1bf8ea6543e8fd30e3de9d509bc9393e77f21eb906f8ec8`). The Lead-defined new-generation label **REPRODUCED EMPIRICAL ANALYSIS** is used for the fresh-WDI E8 rows; all
+`41555d51d239d0873ade34e84ecb60b9f2dc4844924ec94ce836e609cf3bdfec`). The Lead-defined new-generation label **REPRODUCED EMPIRICAL ANALYSIS** is used for the fresh-WDI E8 rows; all
 other rows use the verbatim six-status taxonomy.
 
 ---
