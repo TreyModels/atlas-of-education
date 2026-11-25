@@ -197,3 +197,11 @@ of runner+workers only, `/root/work/modelrev/pkg` intact. Its outputs are alread
 - contest-math: task-6 then task-9 (Gate 1c closed and verified: 68/68).
 - audit-runner: task-11 (P0-07 execution integrity + manifest + claim ledger).
 - engine-core / engine-tutoring: idle; Phase B committed and independently verified; available for fixes only.
+
+- 2026-11-25T14:57+08:00 · Commander · **Legacy tenant retired + compute ledger.** compute-controller SIGTERMed the
+  14:50 relaunch of `/root/work/modelrev` `run_hk_korea_canonical.py policy` (runner PID 9433 + workers 9561–9568)
+  at **14:56 CST**; outputs hashed and snapshotted to `/root/work/compute/legacy_snapshot/` (+ `.sha256`),
+  `/root/work/modelrev/pkg` untouched; compute ledger at `/root/work/compute/ledger/COMPUTE_LEDGER.md`. Commander's
+  independent harvest of the same outputs already exists in `docs/audit/harvest/model_revision/` (AUTHOR-REPORTED /
+  PRE-REPAIR / UNCALIBRATED). Current allocation: qa 5 / contest-math 3 / audit-runner 1 / Commander 0 (host 540
+  run) / 1 reserve; box idle after retirement (brief controller pilot blips only). No oversubscription.
