@@ -2,7 +2,8 @@
 
 **Owner:** qa-verifier · **date:** 2026-11-25 ~21:30 · **mode:** host-only
 **Artefacts audited:** `verification/lean/Atlas/Claims.lean` + `Atlas/{Definitions,Identities,PlackettLuce}.lean` (commit `4d42101`), `docs/audit/LEMMA_LEDGER.md` (sha `f8be23a7…`), `docs/audit/LEMMA_LEDGER.csv` (sha `da956fc1…`, 130 rows), `docs/audit/LEMMA_LEDGER_BASELINE.json`, frozen baseline `results/audit/paper_claims.csv` (sha **`f2ce655e…c655a40`**, **130 rows**).
-**Verdict: PASS — SIGNED OFF for mechanical ledger consistency (R1–R7 all PASS).** This certifies the claim→declaration mapping, not the truth of empirical claims nor engine numerics.
+**Verdict: PASS — SIGNED OFF for mechanical ledger consistency on the pinned pair below (R1–R7 all PASS at commit `4a9afd7`).** This certifies the claim→declaration mapping, not the truth of empirical claims nor engine numerics.
+**Open caveat (§6):** the live claims CSV has since advanced to **132 rows (`b990c99f…`)**; the CI hook must **not** be cited as current for the 132-row baseline until the ledger is regenerated (C-05, X-30 missing). The PASS below remains valid for the frozen 130-row pair it names.
 
 ## 1. Frozen baseline and ledger (this is the pinned pair)
 
@@ -63,3 +64,28 @@ python3 docs/audit/lemma_audit.py --claims results/audit/paper_claims.csv \
 | L4 | independent `lake build`/axiom evidence missing | **CLOSED** — independently re-verified here (`12 jobs`, `propext`/none only, bridge 9/9) |
 
 **Sign-off:** `docs/audit/LEMMA_LEDGER_AUDIT.md` PASS on the pinned pair (baseline `f2ce655e…`, ledger `da956fc1…`); report to lead and paper-adjudicator. No causal-language or truth claims are implied.
+
+
+## 6. Baseline drift after sign-off (open caveat — re-baseline required)
+
+The PASS above is pinned to the frozen pair (baseline `f2ce655e…`, 130 rows; ledger `da956fc1…`). After
+that freeze the live `results/audit/paper_claims.csv` advanced again:
+
+| item | value |
+|---|---|
+| current baseline | `results/audit/paper_claims.csv` sha256 **`b990c99f4bf666786ad1f87a91cdf4eb1f2a831a51f245d770c7ccdb41ff6f24`**, **132 rows** |
+| additions after freeze | **C-05** (Paper C confirmatory prereg review) and **X-30** (Lean methods artefact / verification-scope boundaries) |
+| ledger state | `LEMMA_LEDGER.csv` still 130 rows (`da956fc1…`) → **C-05 and X-30 have no ledger row** |
+| drift audit result | R1/R3/R5/R6/R7 PASS; **R2/R4 FAIL** on exactly `['C-05','X-30']` — a regeneration-lag gap, not a Lean omission; machine record `docs/audit/results/lemma_audit_drift.json` |
+
+**Closure condition:** regenerate the ledger against the 132-row baseline with the loud-failure pins, e.g.
+
+```
+python3 verification/lean/tools/gen_lemma_ledger.py   --expect-sha b990c99f4bf666786ad1f87a91cdf4eb1f2a831a51f245d770c7ccdb41ff6f24 --expect-rows 132
+```
+
+(recorded in `LEMMA_LEDGER_BASELINE.json`), commit, then rerun the audit; expected 18 declared +
+114 explicit NOT-YET = 132, R1–R7 PASS. Until then, cite the PASS **only** for the frozen 130-row pair
+and record the drift caveat (as the adjudication record X-30/§4M does).
+
+**Pilot-0 note:** payload still absent (8-worker run at 14/128 rows; host-only QA remains blocked).
