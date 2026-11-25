@@ -1,0 +1,237 @@
+{
+  "assertions": {
+    "aggregate_only_zero_compute_value_equal_to_straight": true,
+    "interrupted_nonzero_no_final_json_checkpoints_preserved": [
+      "stall_20261125T084017Z.json"
+    ],
+    "resume_success_resumed_flag_value_equal_to_straight": true,
+    "straight_ok": true
+  },
+  "cases": {
+    "aggregate_only": {
+      "cmd": [
+        "/root/work/venv-declared/bin/python",
+        "/root/work/audit13/papers/shadow-education-contest/code/run_hk_korea_comparative.py",
+        "--checkpoint-dir",
+        "/root/work/audit13/smoke_work/ckpt_int",
+        "--out",
+        "/root/work/audit13/smoke_work/agg.json",
+        "--smoke-arms",
+        "3",
+        "--smoke-seeds",
+        "2",
+        "--workers",
+        "1",
+        "--stall-timeout",
+        "180"
+      ],
+      "exit_code": 0,
+      "manifest": {
+        "checkpoint_dir": "/root/work/audit13/smoke_work/ckpt_int",
+        "checkpointed_before_run": 12,
+        "completed_utc": "2026-11-25T08:45:24Z",
+        "computed_this_run": 0,
+        "elapsed_seconds": 0.013,
+        "final_json_written": true,
+        "fingerprint": "e4c06ee63e7d1722efaf514aef7ee5ee4068b4ec5e6deb81aa2d79ab643eee43",
+        "hardening_version": "hardened-1",
+        "n_arms": 6,
+        "n_seeds": 2,
+        "out": "/root/work/audit13/smoke_work/agg.json",
+        "out_sha256": "a1196033412c75471b2d558b4b18d683c7dee2b8a6b68ef523f8f611df87098c",
+        "resumed": true,
+        "schema": 1,
+        "status": "ok",
+        "total_runs": 12,
+        "workers": 1
+      },
+      "out_sha256": "a1196033412c75471b2d558b4b18d683c7dee2b8a6b68ef523f8f611df87098c",
+      "stderr_tail": [],
+      "stdout_tail": [
+        "=== KR (2 matched seeds) ===",
+        "Arm    | Label                                  | SpendIdx | G12 %   | Q5-Q1 Gap | Q5/Q1 Ratio | Elite Q5 %",
+        "---------------------------------------------------------------------------------------------------------",
+        "Baseline | Baseline (S12=0.12)                    |    100.0 |   36.5% |    30.8pp |       2.19x |      21.3%",
+        "CF1a   | CF1a (+50% tax)                        |     96.7 |   32.1% |    29.7pp |       2.02x |      20.8%",
+        "CF1b   | CF1b (-50% cap)                        |     99.0 |   36.3% |    30.4pp |       2.11x |      21.1%",
+        "",
+        "manifest: /root/work/audit13/smoke_work/ckpt_int/run_manifest.json status=ok resumed=True computed=0"
+      ],
+      "wall_sec": 0.32
+    },
+    "interrupted": {
+      "checkpointed": 1,
+      "cmd": [
+        "/root/work/venv-declared/bin/python",
+        "/root/work/audit13/papers/shadow-education-contest/code/run_hk_korea_comparative.py",
+        "--checkpoint-dir",
+        "/root/work/audit13/smoke_work/ckpt_int",
+        "--out",
+        "/root/work/audit13/smoke_work/int.json",
+        "--smoke-arms",
+        "3",
+        "--smoke-seeds",
+        "2",
+        "--workers",
+        "1",
+        "--stall-timeout",
+        "45.0"
+      ],
+      "exit_code": 3,
+      "failure": {
+        "checkpoint_done": 1,
+        "expected": 12,
+        "failure_kind": "stall",
+        "final_json_written": false,
+        "host_exit_code": -15,
+        "host_log": "/root/work/audit13/smoke_work/ckpt_int/host.log",
+        "host_pgid": 24852,
+        "host_pid": 24852,
+        "kill_signals": [
+          "killpg(24852, SIGTERM) ok",
+          "killpg(24852, SIGKILL) ok"
+        ],
+        "reason": "no checkpoint progress for 45.0s while host alive",
+        "schema": 1,
+        "stall_evidence": "/root/work/audit13/smoke_work/ckpt_int/stall_20261125T084017Z.json",
+        "status": "failed",
+        "updated_utc": "2026-11-25T08:40:27Z"
+      },
+      "final_json_written": false,
+      "stall_evidence": [
+        "stall_20261125T084017Z.json"
+      ],
+      "stderr_tail": [
+        "WATCHDOG: no checkpoint progress for 45.0s while host alive. Killing process group 24852 (SIGTERM -> SIGKILL). evidence: /root/work/audit13/smoke_work/ckpt_int/stall_20261125T084017Z.json",
+        "FAILED: run aborted by watchdog; checkpoints preserved in /root/work/audit13/smoke_work/ckpt_int. Re-run the SAME command to resume."
+      ],
+      "stdout_tail": [
+        "checkpoint dir: /root/work/audit13/smoke_work/ckpt_int",
+        "fingerprint: e4c06ee63e7d1722\u2026  checkpointed: 0/12  arms=6 seeds=2",
+        "spawning host: 12 tasks on 1 workers (seed_timeout=600.0s, stall_timeout=45.0s, arm_timeout=1800.0s)",
+        "host pid=24852 pgid=24852 started 2026-11-25T08:39:14Z"
+      ],
+      "wall_sec": 73.99
+    },
+    "resumed": {
+      "checkpointed": 12,
+      "cmd": [
+        "/root/work/venv-declared/bin/python",
+        "/root/work/audit13/papers/shadow-education-contest/code/run_hk_korea_comparative.py",
+        "--checkpoint-dir",
+        "/root/work/audit13/smoke_work/ckpt_int",
+        "--out",
+        "/root/work/audit13/smoke_work/int.json",
+        "--smoke-arms",
+        "3",
+        "--smoke-seeds",
+        "2",
+        "--workers",
+        "1",
+        "--stall-timeout",
+        "180"
+      ],
+      "exit_code": 0,
+      "manifest": {
+        "checkpoint_dir": "/root/work/audit13/smoke_work/ckpt_int",
+        "checkpointed_before_run": 1,
+        "completed_utc": "2026-11-25T08:45:24Z",
+        "computed_this_run": 11,
+        "elapsed_seconds": 296.315,
+        "final_json_written": true,
+        "fingerprint": "e4c06ee63e7d1722efaf514aef7ee5ee4068b4ec5e6deb81aa2d79ab643eee43",
+        "hardening_version": "hardened-1",
+        "n_arms": 6,
+        "n_seeds": 2,
+        "out": "/root/work/audit13/smoke_work/int.json",
+        "out_sha256": "b6c02ceb2e31333d645fe6c0b070f22275aaeda5f2195c7dbb425ae037e2493f",
+        "resumed": true,
+        "schema": 1,
+        "status": "ok",
+        "total_runs": 12,
+        "workers": 1
+      },
+      "out_sha256": "b6c02ceb2e31333d645fe6c0b070f22275aaeda5f2195c7dbb425ae037e2493f",
+      "stderr_tail": [],
+      "stdout_tail": [
+        "=== KR (2 matched seeds) ===",
+        "Arm    | Label                                  | SpendIdx | G12 %   | Q5-Q1 Gap | Q5/Q1 Ratio | Elite Q5 %",
+        "---------------------------------------------------------------------------------------------------------",
+        "Baseline | Baseline (S12=0.12)                    |    100.0 |   36.5% |    30.8pp |       2.19x |      21.3%",
+        "CF1a   | CF1a (+50% tax)                        |     96.7 |   32.1% |    29.7pp |       2.02x |      20.8%",
+        "CF1b   | CF1b (-50% cap)                        |     99.0 |   36.3% |    30.4pp |       2.11x |      21.1%",
+        "",
+        "manifest: /root/work/audit13/smoke_work/ckpt_int/run_manifest.json status=ok resumed=True computed=11"
+      ],
+      "wall_sec": 296.62
+    },
+    "straight": {
+      "checkpointed": 12,
+      "cmd": [
+        "/root/work/venv-declared/bin/python",
+        "/root/work/audit13/papers/shadow-education-contest/code/run_hk_korea_comparative.py",
+        "--checkpoint-dir",
+        "/root/work/audit13/smoke_work/ckpt_ref",
+        "--out",
+        "/root/work/audit13/smoke_work/ref.json",
+        "--smoke-arms",
+        "3",
+        "--smoke-seeds",
+        "2",
+        "--workers",
+        "1",
+        "--stall-timeout",
+        "180"
+      ],
+      "exit_code": 0,
+      "manifest": {
+        "checkpoint_dir": "/root/work/audit13/smoke_work/ckpt_ref",
+        "checkpointed_before_run": 0,
+        "completed_utc": "2026-11-25T08:39:13Z",
+        "computed_this_run": 12,
+        "elapsed_seconds": 311.346,
+        "final_json_written": true,
+        "fingerprint": "e4c06ee63e7d1722efaf514aef7ee5ee4068b4ec5e6deb81aa2d79ab643eee43",
+        "hardening_version": "hardened-1",
+        "n_arms": 6,
+        "n_seeds": 2,
+        "out": "/root/work/audit13/smoke_work/ref.json",
+        "out_sha256": "edd525e34c2744a9a53082f31666145e8027948516c8e1e7b781a1321a3cbc3f",
+        "resumed": false,
+        "schema": 1,
+        "status": "ok",
+        "total_runs": 12,
+        "workers": 1
+      },
+      "out_sha256": "edd525e34c2744a9a53082f31666145e8027948516c8e1e7b781a1321a3cbc3f",
+      "stderr_tail": [],
+      "stdout_tail": [
+        "=== KR (2 matched seeds) ===",
+        "Arm    | Label                                  | SpendIdx | G12 %   | Q5-Q1 Gap | Q5/Q1 Ratio | Elite Q5 %",
+        "---------------------------------------------------------------------------------------------------------",
+        "Baseline | Baseline (S12=0.12)                    |    100.0 |   36.5% |    30.8pp |       2.19x |      21.3%",
+        "CF1a   | CF1a (+50% tax)                        |     96.7 |   32.1% |    29.7pp |       2.02x |      20.8%",
+        "CF1b   | CF1b (-50% cap)                        |     99.0 |   36.3% |    30.4pp |       2.11x |      21.1%",
+        "",
+        "manifest: /root/work/audit13/smoke_work/ckpt_ref/run_manifest.json status=ok resumed=False computed=12"
+      ],
+      "wall_sec": 311.72
+    }
+  },
+  "engine_dir": "/root/work/audit13/engine",
+  "generated_utc": "2026-11-25T08:45:24Z",
+  "matrix": {
+    "arms_per_jurisdiction": 3,
+    "expected_runs": 12,
+    "seeds": 2
+  },
+  "numpy_version": "2.2.6",
+  "passed": true,
+  "python": "/root/work/venv-declared/bin/python",
+  "python_version": "3.10.8",
+  "runner": "/root/work/audit13/papers/shadow-education-contest/code/run_hk_korea_comparative.py",
+  "runner_sha256": "d1c60f0340d6607cfd0833562d4014e8ff60df0af13a8fc15786779b9920bd73",
+  "schema": 1,
+  "workdir": "/root/work/audit13/smoke_work",
+  "workers": 1
+}

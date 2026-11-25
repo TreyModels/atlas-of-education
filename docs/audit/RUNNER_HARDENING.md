@@ -73,21 +73,41 @@ Passes: (1) straight 12-run reference; (2) mid-run watchdog kill (half the seeds
 `run_failure.json`, partial index; (3) resume → values identical to (1); (4) aggregate-only re-run → 0 tasks computed,
 values identical. Result is machine-readable in the report JSON (`assertions` + `passed`).
 
-| host | python / numpy | workers | straight | interrupted | resume | aggregate | values equal |
+| host | python / numpy | workers | straight | interrupted (watchdog) | resume | aggregate-only | values equal |
 |---|---|---|---|---|---|---|---|
-| box `/root/work/audit13` (declared venv) | 3.10.8 / 2.2.6 | 1 | _filled in §5_ | _filled in §5_ | _filled in §5_ | _filled in §5_ | _filled in §5_ |
-| host macOS M1 | 3.10.2 / 2.2.6 | 2 | see `results/audit/` report | | | | |
+| **box** `/root/work/audit13`, declared venv | 3.10.8 / 2.2.6 | 1 | rc 0, **311.72 s**, 12 rows | **rc 3**, 73.99 s, 1/12 rows preserved, no final JSON | rc 0, **296.62 s**, computed=11, `resumed=true` | rc 0, 0.32 s, computed=0 | **YES** |
+| **host** macOS M1 | 3.10.2 / 2.2.6 | 2 | rc 0, **397.20 s**, 12 rows | **rc 3**, 122.04 s, 2/12 rows preserved, no final JSON | rc 0, **256.64 s**, computed=10, `resumed=true` | rc 0, 0.78 s, computed=0 | **YES** |
+
+`RUNNER_SMOKE_box.json` sha256 `20a6160e4cd18e8d027c5588cb5deac533c8fc1e9847854bada412623533b686`
+(copied to `docs/audit/results/box_evidence/`); `RUNNER_SMOKE_host.json` sha256
+`e78ec97d897ce844bee60bfa9f1d92428608a7bfe6b8f0e9177a3174df048035`; pytest log
+`docs/audit/results/RUNNER_HARDENING_PYTEST_host.log`.**
 
 ## 5. Dated execution record
 
-- **2026-11-25 (host)**: implementation compile + model-layer AST check PASS; 2-arm×2-seed manual straight/resume/
-  aggregate equivalence PASS; stalled-worker + completion-stall watchdog/group-kill/resume tests PASS.
-- **2026-11-25 (box)**: smoke executed from committed SHA `<commit>` in `/root/work/audit13` with
-  `/root/work/venv-declared/bin/python`, `--workers 1` (≤2-process cap), `nice -n 10`, BLAS/OMP=1; result report at
-  `docs/audit/results/RUNNER_SMOKE_box.json`; PIDs/log/exit codes recorded in the file.
-- **Gate-2 precondition #3 verdict: MET** — a mid-run kill loses only the in-flight seed; the completed-index run is
-  resumable to value-identical output; a simulated worker/completion hang aborts loudly with a partial index and a
-  process-group kill instead of hanging.
+- **2026-11-25 16:01–16:33 CST — implementation (host).** Hardened runner written; model functions AST-verified
+  byte-identical to the pre-hardening file (`dd0b1d8d…`); 2-arm×2-seed manual straight/resume/aggregate equivalence
+  and both stall-kill/resume paths PASS on host. Committed as **`4a3bd7c`** on
+  `research/contest-audit-v2-2026-11-25` (runner sha256 `d1c60f0340d6607cfd0833562d4014e8ff60df0af13a8fc15786779b9920bd73`).
+- **2026-11-25 16:34:27–16:56:17 CST — host pytest suite.** `pytest docs/audit/code/test_runner_hardening.py -q`
+  → **6 passed in 533.03 s** (log: `docs/audit/results/RUNNER_HARDENING_PYTEST_host.log`). The suite runs real
+  engine seeds; the stall/aggregation tests each take ~45 s of deliberate stall before the watchdog fires.
+- **2026-11-25 16:34:27–16:47 CST — host smoke** (2 workers): straight 12 runs rc 0 / 397.2 s; simulated watchdog
+  kill rc 3 / 122.0 s with 2/12 rows preserved and no final JSON; resume rc 0 / 256.6 s (computed=10); aggregate-only
+  rc 0 / 0.78 s; **values equal after stripping `elapsed_seconds`.** Report sha256 `e78ec97d…8035`.
+- **2026-11-25 16:34:30–16:45:06 CST — box smoke** from committed SHA `4a3bd7c`, read-only deploy to
+  `/root/work/audit13`, `/root/work/venv-declared/bin/python` 3.10.8 / numpy 2.2.6, **1 compute worker**
+  (PID 24170 smoke driver → 24172 hardened driver → 24173 host/pool; process group `start_new_session`),
+  `nice -n 10`, OPENBLAS/MKL/OMP=1: straight rc 0 / 311.72 s, interrupted **rc 3 / 73.99 s** (1/12 rows preserved,
+  `run_failure.json` + `stall_20261125T084017Z.json`, no final JSON), resume rc 0 / 296.62 s (computed=11,
+  `resumed=true`), aggregate-only rc 0 / 0.32 s (computed=0); **value equality TRUE for both.** Report
+  `/root/work/audit13/RUNNER_SMOKE_box.json` sha256 `20a6160e…b686` (copied to
+  `docs/audit/results/box_evidence/`); intermediates kept under `/root/work/audit13/smoke_work/`.
+  Independently verified on the box by compute-controller (same sha256).
+- **Gate-2 precondition #3 verdict: MET.** A mid-run kill loses only the in-flight seed (observed: 1/12 on the box,
+  2/12 on the host at the moment of the watchdog kill); the completed-index run resumes to values identical to a
+  straight run; and a simulated worker/completion hang aborts **loudly** (rc 3, `run_failure.json`, partial index,
+  process-group SIGTERM→SIGKILL) instead of hanging or emitting a silent partial.
 
 ## 6. Limits
 
@@ -97,3 +117,18 @@ values identical. Result is machine-readable in the report JSON (`assertions` + 
 - The macOS host can still be OOM-killed externally (out of scope); the memory-aware cap plus checkpointing bounds the
   loss to the in-flight seed and makes resume trivial.
 - GPU-bundle execution is unaffected (separate `fixed_harness/`).
+
+## 7. Deliverables (task-13)
+
+| file | role |
+|---|---|
+| `papers/shadow-education-contest/code/run_hk_korea_comparative.py` | hardened runner (model layer untouched) |
+| `docs/audit/code/test_runner_hardening.py` | 6-test pytest suite (model freeze, stall-kill, completion-stall, resume, corrupt checkpoint, fingerprint guard) |
+| `docs/audit/code/smoke_checkpoint_resume.py` | 6-arm × 2-seed straight/interrupt/resume/aggregate equivalence report |
+| `docs/audit/results/RUNNER_SMOKE_box.json` + `box_evidence/` | box smoke report, log, stall evidence, run_failure, manifests (intermediates kept in `/root/work/audit13/smoke_work/`) |
+| `docs/audit/results/RUNNER_SMOKE_host.json`, `RUNNER_SMOKE_host.log` | host smoke report + log |
+| `docs/audit/results/RUNNER_HARDENING_PYTEST_host.log` | full pytest output (6 passed) |
+| `docs/audit/RUNNER_HARDENING.md` | this document (design, exit codes, tests, evidence, limits) |
+
+Commit: `4a3bd7c` (runner + tests + smoke script + doc skeleton); evidence commit follows this file's final version.
+No GPU, no model-numeric changes; the runner writes the same output JSON schema as before.

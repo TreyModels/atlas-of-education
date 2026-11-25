@@ -1,0 +1,20 @@
+{
+  "action": "killpg(SIGTERM); killpg(SIGKILL) after grace period",
+  "checkpoint_done": 1,
+  "detected_utc": "2026-11-25T08:40:17Z",
+  "expected": 12,
+  "host_log_tail": [],
+  "host_pgid": 24852,
+  "host_pid": 24852,
+  "kind": "watchdog_stall",
+  "last_progress_utc": "2026-11-25T08:39:32Z",
+  "process_snapshot": [
+    "   PID   PPID   PGID     ELAPSED STAT %CPU   RSS COMMAND",
+    " 24852  24850  24852       01:04 SNsl  0.4 63624 python",
+    " 24864  24852  24852       01:03 SN    0.0 10404 python",
+    " 24865  24852  24852       01:03 SN   27.6 94652 python"
+  ],
+  "reason": "no checkpoint progress for 45.0s while host alive",
+  "schema": 1,
+  "stall_timeout_sec": 45.0
+}

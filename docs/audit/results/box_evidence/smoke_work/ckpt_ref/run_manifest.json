@@ -1,0 +1,19 @@
+{
+  "checkpoint_dir": "/root/work/audit13/smoke_work/ckpt_ref",
+  "checkpointed_before_run": 0,
+  "completed_utc": "2026-11-25T08:39:13Z",
+  "computed_this_run": 12,
+  "elapsed_seconds": 311.346,
+  "final_json_written": true,
+  "fingerprint": "e4c06ee63e7d1722efaf514aef7ee5ee4068b4ec5e6deb81aa2d79ab643eee43",
+  "hardening_version": "hardened-1",
+  "n_arms": 6,
+  "n_seeds": 2,
+  "out": "/root/work/audit13/smoke_work/ref.json",
+  "out_sha256": "edd525e34c2744a9a53082f31666145e8027948516c8e1e7b781a1321a3cbc3f",
+  "resumed": false,
+  "schema": 1,
+  "status": "ok",
+  "total_runs": 12,
+  "workers": 1
+}

@@ -1,0 +1,8 @@
+smoke workdir: /root/work/audit13/smoke_work
+matrix: 3 arms/jur x 2 seeds = 12 runs, python=/root/work/venv-declared/bin/python, workers=1
+[1/4] straight: rc=0 wall=311.72s rows=12
+[2/4] interrupt: rc=3 wall=73.99s checkpointed=1/12 final_json=False
+[3/4] resume: rc=0 wall=296.62s computed=11 value_equal=True
+[4/4] aggregate-only: rc=0 wall=0.32s value_equal=True computed=0
+report: /root/work/audit13/RUNNER_SMOKE_box.json
+RESULT: PASS

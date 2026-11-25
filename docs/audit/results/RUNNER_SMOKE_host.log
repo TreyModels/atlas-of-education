@@ -1,0 +1,8 @@
+smoke workdir: /tmp/t13_host_smoke
+matrix: 3 arms/jur x 2 seeds = 12 runs, python=/Users/treymenefee/neon-boot/venv/bin/python, workers=2
+[1/4] straight: rc=0 wall=397.2s rows=12
+[2/4] interrupt: rc=3 wall=122.04s checkpointed=2/12 final_json=False
+[3/4] resume: rc=0 wall=256.64s computed=10 value_equal=True
+[4/4] aggregate-only: rc=0 wall=0.78s value_equal=True computed=0
+report: docs/audit/results/RUNNER_SMOKE_host.json
+RESULT: PASS

@@ -1,0 +1,19 @@
+{
+  "checkpoint_done": 1,
+  "expected": 12,
+  "failure_kind": "stall",
+  "final_json_written": false,
+  "host_exit_code": -15,
+  "host_log": "/root/work/audit13/smoke_work/ckpt_int/host.log",
+  "host_pgid": 24852,
+  "host_pid": 24852,
+  "kill_signals": [
+    "killpg(24852, SIGTERM) ok",
+    "killpg(24852, SIGKILL) ok"
+  ],
+  "reason": "no checkpoint progress for 45.0s while host alive",
+  "schema": 1,
+  "stall_evidence": "/root/work/audit13/smoke_work/ckpt_int/stall_20261125T084017Z.json",
+  "status": "failed",
+  "updated_utc": "2026-11-25T08:40:27Z"
+}
