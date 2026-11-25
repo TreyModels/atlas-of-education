@@ -87,7 +87,7 @@ result preservation; compute envelope; no post-hoc cells; no confirmatory use of
 
 ## 8. Amendment A1 — adjudicator conditional-review fixes + Codex protocol (pending final review)
 
-**Status: still DRAFT until re-reviewed; no confirmatory compute.**
+**Status of this section: historical amendment A1 (superseded by §9 A3; overall file status = FINAL at top). No confirmatory compute.**
 
 **(A1.1) 36-cell appendix.** Cells = S{0.85,1.0,1.15} × L{0.25,0.45} × supply{A: own_ban0/firm_ban0, B: own_ban.95/firm_ban0,
 C: own_ban0/firm_ban.9} × settings{pay_ratio .55/monitoring .2, pay_ratio 1.2/monitoring .5} = 36; cell ids
