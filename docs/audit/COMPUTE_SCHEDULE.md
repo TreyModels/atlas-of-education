@@ -643,3 +643,12 @@ progress **993/1,800 seed rows**; rate on the KR wave **~12.3 rows/min** (105 ro
 Arm state: 7 workers on KR-class arms (~19–20 min each), 1 finishing slow HK CF2b (51:24), 1 on HK CF4b (15:43).
 Checkpoints now include `ckpt_KR_*_TRACKED`. **Primary ETA ~18:30–18:45; full 2,700 ~19:40–20:00.** One slot free by design
 (held for the gate-grid fee pilot when a Paper B worker frees, per Lead).
+
+### 13.14 Progress 18:28 — primary threshold crossed; sensitivity wave mixing (1,879/2,700)
+
+Box 18:28:05: **1,879/2,700 seed rows (70 %)** — HK PRIMARY **894/900**, KR-TRACKED **735/900**, KR-SINGLE **250/900**.
+Checkpoint files present for 9 KR-TRACKED arms, 4+ KR-SINGLE arms, 8+ HK PRIMARY arms; `run.log` 0 B (driver buffers).
+The driver dynamically mixes remaining KR-TRACKED arms (CF2b 1:19:57, CF3b 57:32, CF4a 27:18, CF4b 15:59) with 4
+KR-SINGLE arms (11–15 min) across the 8 workers — all 8 busy, none free, so the gate-grid fee pilot still waits.
+Rate ~12–14 rows/min → **KR-TRACKED primary complete ~18:50**, **full 2,700 ~19:30–19:40**. Box **8.0/10 (80 %)**,
+g2a on host, GPU lane CPU-light, control 1; cap respected.
