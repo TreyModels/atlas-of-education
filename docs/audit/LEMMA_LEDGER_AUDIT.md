@@ -2,13 +2,13 @@
 
 **Owner:** qa-verifier · **date:** 2026-11-25 ~21:45 · **mode:** host-only
 **Artefacts audited:** `verification/lean/Atlas/Claims.lean` + `Atlas/{Definitions,Identities,PlackettLuce}.lean`, `docs/audit/LEMMA_LEDGER.md` (sha `5e414bc0…`), `docs/audit/LEMMA_LEDGER.csv` (sha `3e9dbbc1…`, **132 rows**), `docs/audit/LEMMA_LEDGER_BASELINE.json` (sha `87c14a6a…`), frozen baseline `results/audit/paper_claims.csv` (sha **`b990c99f…ff6f24`**, **132 rows**) at commit **`4c06025`**.
-**Verdict: PASS — SIGNED OFF for mechanical ledger consistency on the pinned 132-row pair below (R1–R7 all PASS).** This certifies the claim→declaration mapping, not the truth of empirical claims nor engine numerics. The earlier PASS on the 130-row pair (`f2ce655e…` + `da956fc1…`, commit `4a9afd7`) is preserved in git history and superseded **only as the current record**; nothing was silently rewritten.
+**Verdict: PASS — SIGNED OFF for mechanical ledger consistency on the pinned 132-row pair below (R1–R7 all PASS; re-verified against baseline `3ff88d39…` — a content-only X-30 edit, same rows/ids/mapping).** This certifies the claim→declaration mapping, not the truth of empirical claims nor engine numerics. The earlier PASS on the 130-row pair (`f2ce655e…` + `da956fc1…`, commit `4a9afd7`) is preserved in git history and superseded **only as the current record**; nothing was silently rewritten.
 
 ## 1. Frozen baseline and ledger (this is the pinned pair)
 
 | item | value |
 |---|---|
-| baseline | `results/audit/paper_claims.csv` — sha256 `b990c99f4bf666786ad1f87a91cdf4eb1f2a831a51f245d770c7ccdb41ff6f24`, **132 rows**, 132 unique ids, freeze commit `4c06025` |
+| baseline | `results/audit/paper_claims.csv` — sha256 `3ff88d3950364bcc6ffcd12d516064fd6c20edb50ca72bc7ac43bd46756ddbc5`, **132 rows**, 132 unique ids (content-only X-30 action-text edit after `4c06025`; row count/ids unchanged). The pair frozen at `4c06025` was `b990c99f…ff6f24` — same 132 rows/ids, mapping identical. |
 | baseline record | `docs/audit/LEMMA_LEDGER_BASELINE.json` — sha256 `87c14a6a…`; rows 132, missing_from_ledger [] |
 | ledger CSV | `docs/audit/LEMMA_LEDGER.csv` — sha256 `3e9dbbc188a4309156310bd0696967261e11d0f2243c66c4da53daa4144e1287`, **132 rows** |
 | ledger MD | `docs/audit/LEMMA_LEDGER.md` — sha256 `5e414bc09d103c183f541da15a4574c1a03aa336980d4d5969c942c5cf4cde71` |
@@ -78,3 +78,12 @@ now fails loudly on the pinned sha/rows; re-run generator + this audit and repin
 
 **Pilot-0 note (unchanged):** payload still absent (live 8-worker run at 14/128 rows, no
 `paperC_pilot0_results.json`); host-only QA remains blocked on the completed copy.
+
+
+## 7. Post-sign-off content edit (no re-baseline needed for the mapping)
+
+paper-adjudicator's `4673bda`/`3ff88d39…` changed only the **X-30 action text** (same 132 rows and ids).
+Re-ran the audit against `3ff88d39…` × ledger `3e9dbbc1…` (132 rows): **R1–R7 still PASS**, ids/rows equal,
+mapping unchanged. The ledger's X-30 row is an explicit NOT-YET record keyed by id, so the text edit does
+not stale the mechanical audit. If any *id/row* change lands, regenerate the ledger with the pinned
+`--expect-sha/--expect-rows` first.
