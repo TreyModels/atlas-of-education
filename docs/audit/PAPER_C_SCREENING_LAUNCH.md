@@ -65,3 +65,25 @@ to be left off tonight. The screening data is safe on the instance disk.
    a verified pull.
 4) No box actions were taken after the Lead's stand-down order except the corrected finalizer run (marker repair only;
    no simulation, no relaunch). X-31 remains conditional; G2-B queued for next session; GPU gate deferred.
+
+## Recovery checklist (confirmed with compute-controller, 2026-11-26)
+
+**Controller holds NO copy of the screening artefact** (filesystem-wide search: no `paperC_screening*`, `screen_final*`,
+`ckpt_S0.85*` outside the box); the only local copy is the Pilot-0 payload (`c6e50bc1…`). **Power-on is an operator
+action** — neither the controller nor the Commander may boot the instance, and per Lead the box stays off tonight.
+
+**On operator power-on, pull BOTH directories and verify on both sides:**
+1) `scp -r -P 36934 root@connect.nmb2.seetacloud.com:/root/work/paperC/screen_final/* ~/neon-boot/qa/incoming/paperC_screening/`
+2) `scp -r -P 36934 root@connect.nmb2.seetacloud.com:/root/work/queue/* ~/neon-boot/qa/incoming/paperC_screening_queue/`
+   (markers: `SHA256SUMS` ≈3,802 B, `STATUS`, `RESULTS_DONE`, `finalize.log/.out`, `finalize2.out`, `finalize_rerun.out`,
+   patched `finalize.sh`)
+3) Verify summary: `paperC_screening.json` (**1,337,854 B**) sha256 == `6bcc29a5…b5b6d4`; `paperC_screening_results.json`
+   byte-identical; `n_runs=288`, `n_cells=36`, `invalid_cells=[]`, `wall_seconds=1879.17`, 36 `checkpoint_sha256`
+   entries; verify 36 ckpt files / **288 rows** against `SHA256SUMS`.
+4) Only after `PULL_VERIFIED` (two-sided hash match, qa-verifier notified) → touch `SHUTDOWN_OK`.
+**Known marker history:** first finalizer wrote `FAILED` at 01:15:32Z; corrected finalizer wrote `STATUS=OK
+2026-11-25T17:15:58Z` + `RESULTS_DONE` + `SHA256SUMS` at 01:15:58Z. Both marker states may be present in logs; `OK` is
+authoritative. Controller will independently hash-check against `6bcc29a5…` on request.
+**Provenance preserved locally:** controller §13.40/13.41/13.41b records (incl. the hash) committed/pushed on the audit
+branch; Lead's `RUN_QUEUE_2026-11-25.md` and this document capture the incident. No screening numbers cited until pulled
+and hash-verified.
