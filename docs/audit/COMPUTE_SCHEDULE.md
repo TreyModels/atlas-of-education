@@ -412,3 +412,21 @@ Band discipline: flag **<7** idle (fill from queue), **>11** oversubscribed (thr
 | evidence retained | legacy snapshot `/root/work/compute/legacy_snapshot/` + hashes; profile `profile_hk.log`; task-12 bench results; host-hang notes; 540 JSON + `.sha256` |
 | next | **Gate-2 brief** from Lead after Gate-1 sign-off (calibration pilot → search → refinement), costed at the measured engine costs above |
 | idle-slot note | **all 10 CPUs idle; no queued box work exists.** Per Lead: stand down, do not invent work, keep one slot for emergencies only |
+
+### 12b. Post-stand-down allocation (2026-11-25 16:15 CST) — task-13
+
+audit-runner requested a **Lead-directed task-13** box leg (runner hardening / Gate-2 precondition #3: checkpoint/resume
+equivalence smoke on 6 arms × 2 seeds + pytest hardening suite). **Allocation granted**, because the box is idle
+(measured 0.0/10 CPU, no lane processes) and the footprint is tiny:
+
+| field | value |
+|---|---|
+| lane / job | audit-runner / task-13 runner-hardening smoke |
+| box cap | **≤2 worker processes** (parent + pool children included; pytest serial with the smoke, not concurrent) |
+| dir | `/root/work/audit13` (new; legacy dirs untouched) |
+| stack | `/root/work/venv-declared/bin/python` (declared stack, numpy 2.2.6) |
+| rules | `nice -n 10`, BLAS/MKL/OMP=1, read-only deploy from committed SHA, `start_new_session`, no watchers/timers |
+| planned start / ETA | ~16:25–16:35 CST; ~4–6 min smoke + ~4–5 min pytest |
+| box state at grant | idle 0.0/10 cgroup delta; only the legacy `gpu` pip process (2.2 %) present and untouched |
+| conditions | no second concurrent box job from the lane; message PID/start/workers at launch and exit code + wall + artifact sha256 at completion; keep intermediates |
+| record | result to be appended to `/root/work/compute/ledger/COMPUTE_LEDGER.md`; monitoring resumed only for this allocation |
