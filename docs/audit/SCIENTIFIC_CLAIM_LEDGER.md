@@ -293,3 +293,20 @@ measure_from=18, fail routing contest/share_of cohort/contest_r by L, unfired as
 exempt/INVALID), >6-passer rule, ≤36 CPU-h (13.4+22), 1–2 slot reserve (X-29 at 6 workers), no-compute gates.
 **Provenance reconciliation — DONE:** manifest now cites final prereg `445ec423…`; `sha256_at_freeze_time=ff61f1e6…` and `superseded_by` record the §8 historical-status-only diff (no design change). Launch gated only on the 1–2 slot reserve; no screening/confirmatory compute until then.
 
+---
+
+**METHODS ARTEFACT X-31 — GPU Plackett–Luce port (2026-11-25).** Branch
+`research/gpu-pl-port-auditv2-2026-11-25` (tip `2399aa1`); engine port commit `59fd2497765f15c108de3ec182d1febbe3d28c8a`.
+Files: `contest_gpu.py` `ab08a53b…` (new, byte-identical GPU backend); `contest_math.py` `5fceb4d5…` (+169 L GPU
+section/batch API; task-12 caches and `pl_realize` untouched); `__init__.py` `2c082d5c…` (+11-line optional registration);
+`core.py` `5bcbc0b3…` (exactly two hunks; `_validate_events`/`EVENT_CACHED_PARAMS` intact); `modules/tutoring.py`
+`b3d32cee…` (9-point batched grid + helper); `docs/gpu/port_verify.py` `6ba6013c…`; `docs/gpu/PORT_REPORT.md`
+`23b7a8c1…`. **Mac evidence (flag unset):** 68/68 tests; 130-fixture digest identical; CPU batch ≡ per-row 0.0; full-run
+HK Baseline seed 0 digests identical; RNG-realise digests identical; 23 boundary cases OK; torch-free default import +
+graceful CPU fallback. **Boundaries (binding):** branch core `5bcbc0b3…` is NOT canonical `e111397b…` → GPU runs are
+**gate-grid/sensitivity only**; must not replace CPU primary artifacts/spec hash/Gate-1 evidence; no retroactive
+substitution; cross-replica batching **staged, not implemented**; **no GPU numbers claimed**. **Parity gate OPEN:** box
+parity (fixtures + discrete-winner comparison + full-wall benchmark) with Commander; QA to add
+`tests/test_contest_math_gpu.py` and sign off only on ≤1e-7 agreement with flips quantified. Methods artefact; six-status
+taxonomy does not apply.
+

@@ -983,6 +983,41 @@ N=600/1500, T=46/measure_from=18, fail routing, assertions (`A|P12` exempt; fail
 compute until the 1–2 slot reserve is in place** (the hash citation and Codex trail are now satisfied).
 Adjudication status: **PREREGISTRATION FINAL (design frozen); MANIFEST FROZEN (reconciled); launch gated only on the 1–2 slot reserve.**
 
+## 4N. GPU Plackett–Luce port — **methods artefact (X-31); no GPU numbers claimed; box parity pending**
+
+Branch **`research/gpu-pl-port-auditv2-2026-11-25`** (tip `2399aa1`); engine port commit
+**`59fd2497765f15c108de3ec182d1febbe3d28c8a`** (later branch commits are documentation-only). Host port complete; **Mac
+checks pass; box parity pending (Commander)**. No box job started from this lane.
+
+| file | post-port sha256 | change |
+|---|---|---|
+| `engine/eduengine/contest_gpu.py` | **`ab08a53b…596f`** | new, byte-identical to the validated GPU backend |
+| `engine/eduengine/contest_math.py` | **`5fceb4d5…e944`** | +169 L GPU section/batch API; canonical task-12 caches and `pl_realize` untouched |
+| `engine/eduengine/__init__.py` | **`2c082d5c…348f`** | +11-line optional registration (`ATLAS_PL_BACKEND=gpu`) |
+| `engine/eduengine/core.py` | **`5bcbc0b3…9f75`** | exactly two hunks (import + `_pl_probs` one-row batch); `_validate_events`/`EVENT_CACHED_PARAMS` intact |
+| `engine/eduengine/modules/tutoring.py` | **`b3d32cee…3fdf`** | 9-point batched prep grid + helper |
+| `docs/gpu/port_verify.py` | **`6ba6013c…4026`** | harness |
+| `docs/gpu/PORT_REPORT.md` | **`23b7a8c1…5650`** | report (`59fd249` pinned as engine port commit) |
+
+**Mac evidence (flag unset / CPU path):** 68/68 tests; **130-fixture digest identical**; CPU batch ≡ per-row **0.0**;
+full-run HK Baseline seed 0 digests identical; RNG-realise digests identical (no RNG consumed by probability calls); 23
+boundary cases OK; default import **torch-free** with graceful CPU fallback (`pl_backend()=='cpu'`; forcing GPU without
+torch raises the documented `RuntimeError`). Diff is additive: 4 files +222/−10 + new `contest_gpu.py` (10,469 B).
+
+**BINDING BOUNDARIES (recorded):**
+* The branch's **core hash `5bcbc0b3…` is NOT the canonical pin `e111397b…`**, so **GPU runs are gate-grid/sensitivity
+  only**; they **must not replace CPU primary artifacts**, the canonical spec hash, or any Gate-1 evidence; **no
+  retroactive substitution** of CPU results.
+* **Cross-replica batching is staged, not implemented**; no multi-GPU claims.
+* **No GPU numbers are claimed in this adjudication**; none may be cited until the parity gate clears.
+
+**Pending parity gate (before any GPU use):** box parity — fixtures, discrete-winner comparison, and full-wall
+benchmark — run by the Commander; QA to add `tests/test_contest_math_gpu.py` and sign off **only on ≤1e-7 agreement with
+flips quantified**. Until then: **no GPU runs; no substitution; no performance claims.**
+
+**Status: METHODS ARTEFACT (X-31) — recorded for traceability; the six-status scientific taxonomy does not apply; no
+GPU numbers claimed. Parity gate OPEN.**
+
 ## 5. Evidence-status register (programme level)
 
 | Status | Count (paper + programme rows) | Notes |
