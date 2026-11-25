@@ -217,37 +217,26 @@ the standard literature is wrong or that the engine is validated.
 **Status:** all Model Zoo and zoo/evidence claims are **pre-registerable designs or binding limits, not results**.
 Paper C/D sections must not imply the empirical leg exists; the unfalsifiable list is binding.
 
-**X-27 STATUS (gate-architecture grid, 2026-11-25): ADJUDICATED against Amendment A3; clean re-run pending.**
-JSON: `/root/work/gate846/results/gate_architecture_results.json` sha256
-`685db398a9e6052446312e6dacfc2b06f09aa809d60b2f2b145e8e6cf2453f40` (294,532 B; `runs 5632`, `n_cells 176`,
-aggregation 7.63 s, no simulation rerun; engine 846c9e0/core e111397b; spec e5ddef6b; runner 92d3055e; `year_t`;
-`unfired_events_asserted`). Cross-check: matches the adjudicator's independent checkpoint re-aggregation **exactly**
-(all diffs 0.0).
+**X-27 STATUS (gate-architecture grid, 2026-11-25): CLOSED — REPRODUCED SIMULATION.** Clean artefact
+`results/audit/newgen/gate_architecture_results.json` sha256
+**`bce3da363afbdcfd16052d2c661107dc8c88d082d640625ef1b0b334d8f72638`** (294,532 B; `runs 5632`, `n_cells 176`;
+aggregation-only 13.5 s from the same checkpoints, **no simulation rerun**; engine `846c9e0`/core `e111397b`; spec
+`e5ddef6b`; clean runner `cbdea3cd`; `year_t`; `unfired_events_asserted`). The provisional artefact was `685db398…`;
+a NaN-aware semantic diff shows **only `metadata.runner_sha256` and `metadata.elapsed_seconds` changed — every result
+is identical (diff 0.0)**. The earlier `builtins.np` injection note is **superseded provenance**, retained for lineage.
 
 * **Primary H2 +5.0551 pp** [paired-bootstrap 95 % CI **2.4820, 7.9614**; MDE proxy 2.7397] → CI excludes 0, |H2| > MDE
   → **primary met**. Δcut(S=.25) +5.6170 [3.5509, 7.8840]; Δcut(S=.70) +0.5619 [−0.9924, 2.0855].
-* Quota H2 +0.9915 [0.5675, 1.4893] (positive, ~5× smaller → architecture-specific); stop-sensitivity +5.4715
-  [2.2078, 8.4476] (robust to fail routing); vac0 curve +3.105/+5.055/+1.145/+0.325 (pre-declared .08; no post-hoc
-  switching); H1 +7.9350 [6.9585, 8.9127], Spearman −1.00 (monotone widening as seats shrink); bar −0.255
-  [−0.850, 0.325], bar_high +0.204 [−0.322, 0.763] exploratory only (CIs include 0).
-* Null rule: pre-repair +0.1086 is AUTHOR-REPORTED baseline, not a target. Four Codex positions honored (no
-  identification claim; design-cell counts only; seed-MC; no permutation inference).
-* **Diagnostic gap / prereg deviation:** realized admission rates are **NaN in the raw checkpoints** and JSON
-  (`contest_candidates/seats/admitted/ratio/admit_rate`), so the pre-registered realized-admission reporting for
-  bar/bar_high/contest is **not met**; primary/secondary do not use those series and are unaffected; a future rerun
-  would be needed to populate them. Not a model failure.
-* **Provenance caveat:** JSON produced with `builtins.np = numpy` injection (unmodified script logic; no seeds
-  recomputed) because the box runner lacked module-scope `import numpy as np`; **provisional-but-complete**. X-27
-  remains **UNRESOLVED** until the clean re-run confirms the same sha/diff; proposed status **REPRODUCED SIMULATION**
-  (pre-registered confirmatory new-generation; frozen spec; uncalibrated; seed-MC only), not VALIDATED.
+* Quota H2 +0.9915 [0.5675, 1.4893]; stop-sensitivity +5.4715 [2.2078, 8.4476]; vac0 curve +3.105/+5.055/+1.145/+0.325;
+  H1 +7.9350 [6.9585, 8.9127], Spearman −1.00; bar −0.255 [−0.850, 0.325], bar_high +0.204 [−0.322, 0.763]
+  exploratory only. Null rule honored (pre-repair +0.1086 = AUTHOR-REPORTED baseline, not a target). Four Codex
+  positions honored.
+* **Status: REPRODUCED SIMULATION** (pre-registered confirmatory new-generation; frozen spec; uncalibrated; seed-MC
+  only) — **explicitly NOT VALIDATED**.
+* **X-29 remains open:** realized admission rates are NaN in the raw checkpoints and cannot be recovered by
+  aggregation; diagnostic-only rerun (1,280 runs ≈35 min, bar/bar_high + contest if feasible) planned after Pilot-0;
+  recorded as a declared deviation, not a model failure.
 
 **Methods lesson (citable):** this is the **third bug of this class found by reading raw artefacts rather than
 summaries** — (i) fee no-op (simulation index vs calendar-year event), (ii) seed-0 hardcode, (iii) missing `np` import.
 Add to the methods/negative paper: summary-level QA would have missed all three.
-
-**X-29 DIAGNOSTIC-RERUN PLAN (accepted, 2026-11-25):** realized admission rates are NaN in the raw X-27 checkpoints, so
-the pre-registered realized-admission reporting is unmet and **not recoverable by aggregation**. A **diagnostic-only**
-rerun with the admission series enabled is planned, scoped to `bar`/`bar_high` (+ `contest` if feasible): **1,280 runs
-≈ 35 min at 8 workers**, after Pilot-0, labelled **diagnostic-only** and kept **separate** from the primary/secondary
-results. **X-29 stays open until it runs**; it is recorded in the Paper-A(c) write-up as a declared deviation, not a
-model failure.

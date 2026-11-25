@@ -654,10 +654,14 @@ true`, N=300/T=20/T0=12, 32 seeds, fail routing track primary/stop sensitivity, 
 exploratory multiplicity, null rule recorded. **Cross-check:** every primary/secondary/H1/bar number matches the
 adjudicator's independent checkpoint re-aggregation **exactly** (all diffs 0.0).
 
-**Provenance caveat (honest record):** the box runner copy lacked module-scope `import numpy as np`; the JSON was
-produced by executing the **unmodified script logic** with `builtins.np = numpy` injected (no simulation code edit, no
-seed recomputed). It is **provisional-but-complete**; the Commander is committing the one-line fix and re-running the
-aggregation to confirm the same sha or report a diff. **X-27 moves only after that clean re-run corroborates.**
+**Provenance (clean re-run confirmed):** the provisional JSON (`685db398…3f40`) was produced by executing the
+unmodified script logic with `builtins.np = numpy` injected (no simulation code edit, no seeds recomputed) because the
+deployed box runner copy lacked module-scope `import numpy as np`. The **clean re-run** with a literal module-top
+`import numpy as np` (runner `cbdea3cd…`, aggregation-only 13.5 s, 5,632 runs from the same checkpoints) produced
+**`bce3da363afbdcfd16052d2c661107dc8c88d082d640625ef1b0b334d8f72638`**; a NaN-aware semantic diff shows **only
+`metadata.runner_sha256` and `metadata.elapsed_seconds` changed — every result is identical (diff 0.0)**. The clean
+artifact is committed at `results/audit/newgen/gate_architecture_results.json` (+ `docs/audit/GRID_X27_NOTE.md`);
+the injection note is **superseded provenance**, retained only for lineage.
 
 **Amendment-A3 adjudication (pre-stated rules):**
 * **Primary H2 = +5.0551 pp** (contest, vac0=.08, `fail='track'`; Δcut(S=.25) − Δcut(S=.70)); paired-seed bootstrap
@@ -696,9 +700,10 @@ finishes**; labelled **diagnostic-only** and kept **separate** from the primary/
 until it runs**. The series cannot be recovered by re-aggregation (they were never recorded). Recorded here and in the
 Paper-A(c) write-up.
 
-**Status: primary and secondary adjudicated; proposed status REPRODUCED SIMULATION (pre-registered confirmatory
-new-generation simulation; frozen spec; uncalibrated; seed-MC only) — NOT VALIDATED.** X-27 remains **UNRESOLVED**
-until the clean re-run confirms the artifact; then it moves and the diagnostic gap stays attached.
+**Status: CLOSED — REPRODUCED SIMULATION** (pre-registered confirmatory new-generation simulation; frozen spec;
+uncalibrated; seed-MC only) — **explicitly NOT VALIDATED**. X-27 is closed on the clean re-run
+(`bce3da36…`; identical numbers, diff 0.0); the **X-29 admission-rate diagnostic gap remains open** (diagnostic-only
+rerun planned after Pilot-0) and stays attached to the X-27 record as a declared deviation, not a model failure.
 
 ## 5. Evidence-status register (programme level)
 
@@ -706,14 +711,14 @@ until the clean re-run confirms the artifact; then it moves and the diagnostic g
 |---|---|---|
 | VERIFIED EMPIRICAL | **4** (4 A) | descriptive/associational; not causal; author committed E8 record |
 | **REPRODUCED EMPIRICAL ANALYSIS** *(new-generation label, Lead-defined)* | **2** (2 A) | A-34 impact (+12.322 vs +12.44) and A-35 amplification (+25.083 vs +25.26) — fresh-WDI **CS-style group-time ATT**; manifest-hashed vintage |
-| REPRODUCED SIMULATION | **23** (2 A, 12 B, 9 programme) | all conditional and/or uncalibrated unless marked; includes the 100-seed Paper B new generation (CF4 reversal + unmeasured-welfare-change caveat), the three Paper C provisional anchors (C-01…C-03), the new-generation forecast (A-37), the 74.88 % infeasibility finding (A-38), the re-executed ABC audit, the re-executed bootstrap factorial, and the Paper B 540 table regeneration |
+| REPRODUCED SIMULATION | **24** (2 A, 12 B, 10 programme) | all conditional and/or uncalibrated unless marked; includes the 100-seed Paper B new generation (CF4 reversal + unmeasured-welfare-change caveat), the closed X-27 pre-registered gate-architecture grid (primary H2 +5.0551 pp; clean re-run confirmed), the three Paper C provisional anchors (C-01…C-03), the new-generation forecast (A-37), the 74.88 % infeasibility finding (A-38), the re-executed ABC audit, the re-executed bootstrap factorial, and the Paper B 540 table regeneration |
 | VALIDATED SIMULATION | **4** (1 A, 3 programme) | **A-39 item (d) local identifiability (stop gate met with declared restriction)**; engine/PL module validation, corrected DGP design, bootstrap size/power |
 | AUTHOR-REPORTED | **44** (20 A, 18 B, 6 programme) | **AUTHOR-REPORTED BASELINE**: the 420 generation, the Paper A Exp 1/3/4/5 legacy numbers, the author JSON bundle; not results, not reproduced, not to be silently replaced |
 | CONTRADICTED | **33** (8 A, 14 B, 11 programme) | only where committed code/algebra/measured audit output refutes the claim; includes the 100 % paradox, invalid E1/Q3, legacy DGP, "published benchmark" attributions, and the Paper B policy reversals |
-| UNRESOLVED | **20** (2 A, 0 B, 18 programme) | A-31 replication inventory; A-36 bulge `t*` (no-effect evidence); Paper C confirmatory prereg (C-04); Paper D omissions/divergences (D-01/D-03) and inventory attribution risk (D-04); Model Zoo D1/D2 + run gate + Pilot-0 provenance (MZ-01…MZ-04); evidence-layer limits (EV-01…EV-04); X-27/X-29 (clean re-run + admission-rate diagnostic gap); canonical spec/Gate-2; GPU quarantine |
+| UNRESOLVED | **19** (2 A, 0 B, 17 programme) | A-31 replication inventory; A-36 bulge `t*` (no-effect evidence); Paper C confirmatory prereg (C-04); Paper D omissions/divergences (D-01/D-03) and inventory attribution risk (D-04); Model Zoo D1/D2 + run gate + Pilot-0 provenance (MZ-01…MZ-04); evidence-layer limits (EV-01…EV-04); X-29 (admission-rate diagnostic gap); canonical spec/Gate-2; GPU quarantine |
 
 The machine-readable one-row-per-claim record is `results/audit/paper_claims.csv` (130 rows; sha256
-`23ecde418dded6d316fe44bc11e1d9b62f9dcf25085db10fa3bd1c5f2d6ec8f5`). The Lead-defined new-generation label **REPRODUCED EMPIRICAL ANALYSIS** is used for the fresh-WDI E8 rows; all
+`f2ce655eb232a97f3ef5338334c8ed2f2dad953b328ab6a80fe066823c655a40`). The Lead-defined new-generation label **REPRODUCED EMPIRICAL ANALYSIS** is used for the fresh-WDI E8 rows; all
 other rows use the verbatim six-status taxonomy.
 
 ---
