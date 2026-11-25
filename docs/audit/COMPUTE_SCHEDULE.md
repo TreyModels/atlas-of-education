@@ -691,3 +691,12 @@ spec `canonical_spec.json` sha `e5ddef6b…`): driver **PID 34331**, **8 cell wo
 Design: **5,632 runs** = 5,120 primary `fail='track'` (4 archs × 5 shares × 2 fees × 4 vac0 × 32 seeds) + 512
 `fail='stop'` sensitivity; fee arms cleared (per-run `unfired_events==[]`). Cell checkpoints (`ckpt_bar_*.jsonl`) appearing
 17–20 KB by 19:46. ETA: commander pilot 65–95 min ideal, box estimate 1.5–2.5 h; measured rate to be published at ~20:00.
+
+### 13.19 Grid early rate 19:59 — fast (134 rows/min); ETA tightened to ~20:28
+
+Measured 19:59:06, 13.6 min after launch: **1,828/5,632 grid runs** (60 `ckpt_*` cell files; **~57/176 cells complete**
+at 32/32) → **~134 rows/min (2.2 runs/s)** across 8 workers. Distribution: driver 34331 + 8 cell workers
+(34335/34337/34340/34342/34343/34344/34346/34347) = **8 workers, cgroup 8.0/10 (80 %)**; cap 10 respected; control 1;
+g2a off-box; `grid.log` clean. **ETA: full 5,632 runs ≈ 20:25–20:30** (remaining 3,804 ÷ 134/min ≈ 28 min; total ~42–45 min
+— much faster than the 1.5–2.5 h box estimate because bar-gate cells are ~3.6 s/run effective). 2 CPUs idle; holding
+80 % per Lead's 8-worker instruction; no mid-flight resize.
