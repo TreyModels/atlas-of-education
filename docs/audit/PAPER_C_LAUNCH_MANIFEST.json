@@ -1,11 +1,13 @@
 {
   "document": "Paper C confirmatory launch manifest (frozen before any screening/confirmatory compute)",
-  "status": "FROZEN",
+  "status": "FROZEN (reconciled hash citation 2026-11-25)",
   "frozen_utc": "2026-11-25",
   "prereg": {
     "file": "docs/audit/PAPER_C_CONFIRMATORY_PREREG.md",
-    "sha256": "ff61f1e67e4c227c0a56caa89ba1b93d8e04b73125fc22fc58e21b81187d8d21",
-    "adjudication_record": "ce57087 (final); amendments A1/A2/A3"
+    "sha256": "445ec423c03ffdc8521a820694a72662cabbe342331dc1c8a839023e00053a8d",
+    "adjudication_record": "ce57087 (final); amendments A1/A2/A3",
+    "sha256_at_freeze_time": "ff61f1e67e4c227c0a56caa89ba1b93d8e04b73125fc22fc58e21b81187d8d21",
+    "superseded_by": "final canonical prereg 445ec423... (commit e34b901); diff vs freeze-time ff61f1e6... is only the \u00a78 historical-status sentence (no design change)"
   },
   "engine": {
     "commit": "846c9e0",
