@@ -761,3 +761,17 @@ with `import numpy as np`, mtime 21:09):
   `685db398a9e6052446312e6dacfc2b06f09aa809d60b2f2b145e8e6cf2453f40` — **no longer present on box** (same path overwritten
   by the clean rerun). Recorded for provenance; X-27-vs-clean value diff to come from commander. Runner defect (post-run
   aggregation crash with intact checkpoints) is logged in §13.23.
+
+### 13.25 Pilot-0 monitoring 21:17 — cgroup 80 %, BLAS=1 verified, measured row rate 1.12 rows/min
+
+- **Container cgroup delta: 8.0/10 CPU (80 %)** over 8 s. `loadavg` 40.15 is **host-wide** (80-core host + other tenants);
+  our quota has exactly 8 pilot workers → no oversubscription, and host load is not attributable to us.
+- **BLAS single-threading VERIFIED:** `/proc/<pid>/environ` of pilot cell workers (40062/40064/40066) contains
+  `OPENBLAS_NUM_THREADS=1`, `MKL_NUM_THREADS=1`, `OMP_NUM_THREADS=1` — no thread inflation from our lane.
+- **Measured row rate:** 14 seed rows at 12.5 min (21:04:30 → 21:17:01) = **~1.12 rows/min aggregate**, i.e. ~7.1 min per
+  seed per cell with 8 cells in parallel. Per-cell rows: `market_only q1.00 pf0.030=4`, `pf0.080=4`, `market_only 1.2 ×2=1`,
+  `own_open_gap ×4=1` (8 ckpt files).
+- **ETA depends on total rows:** current 8 cells × seeds 0-7 = **64 rows → ~22:00**; if a second batch/variant set makes it
+  **128 rows → ~23:00** (commander/Lead to confirm). Reporting at each 8-row boundary; on
+  `paperC_pilot0_results.json`: copy payload to `~/neon-boot/qa/incoming/paperC_results/` + notify qa-verifier.
+  X-29 diagnostic (1,280 runs, ~35 min) queued after the pilot; cap stays 8; no other jobs.
