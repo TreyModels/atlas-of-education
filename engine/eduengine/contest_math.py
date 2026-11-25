@@ -81,7 +81,6 @@ __all__ = [
     "pl_win_probs_detail",
     "pl_win_probs_exact",
     "pl_win_probs_mc",
-    "pl_win_probs_batch",
     "pl_stats",
     "pl_realize",
     "AUTO_EXACT_N",
@@ -397,12 +396,7 @@ def _quadrature_win_probs(w, seats):
     # (cum[a] = sum_{b<=a} Suf[b]).
     np.cumsum(Suf, axis=1, out=Suf)
 
-    # Hoisted float64 work: P_i = w_i · Σ_j (q_i · sw · t)_j G_ij .  The DP arrays
-    # are unchanged float32; only the final float64 reduction is regrouped, which
-    # is exact to float64 round-off (equivalence fixtures: max |diff| <= 5e-16).
-    swt = sw * t
-    qsw = q_above.astype(np.float64) * swt[None, :]
-    P = np.empty(n, dtype=np.float64)
+    P = np.zeros(n, dtype=np.float64)
     Pre = np.zeros((d + 1, m + 1), dtype=dt)
     Pre[0, :] = 1.0
     tmp = np.empty((d + 1, m + 1), dtype=dt)
@@ -412,137 +406,13 @@ def _quadrature_win_probs(w, seats):
         # sum_{a=0..d} Pre[a] * cum[d-a] = P(count_others <= d)
         tail = np.einsum("am,am->m", Pre, Suf[i + 1][::-1]).astype(np.float64)
         G = np.clip(offset + sign * tail, 0.0, 1.0)
-        P[i] = wn[i] * float(np.dot(qsw[i], G))
+        kernel = wn[i] * t * q_above[i].astype(np.float64)
+        P[i] = float(np.dot(sw, kernel * G))
         # advance prefix DP with the same factors
         np.multiply(Pre, f_stay[i][None, :], out=tmp)
         tmp[1:] += f_inc[i][None, :] * Pre[:-1]
         Pre, tmp = tmp, Pre
     return P, m + 1
-
-
-def _quadrature_win_probs_batch(W, seats):
-    """Vectorised quadrature over B weight vectors of common length n and seats.
-
-    Each row's arithmetic is identical to :func:`_quadrature_win_probs` (same
-    float32 DP, same cumsum order, same einsum contraction); rows whose Simpson
-    grid is shorter are padded with ``t=0`` nodes and zero Simpson weights, which
-    contribute exactly zero.  Returns ``(P, m_max)`` with ``P`` shape ``(B, n)``.
-    """
-    B, n = W.shape
-    logW = np.log(W)
-    wn = np.exp(logW - logW.max(axis=1, keepdims=True))
-    wn = np.maximum(wn, _QUAD_W_FLOOR)
-    w_min = wn.min(axis=1)
-    if seats <= 0:
-        return np.zeros((B, n), dtype=np.float64), 0
-    if seats >= n:
-        return np.ones((B, n), dtype=np.float64), 0
-    below = (seats - 1) <= (n - seats - 1)
-    d = max(seats - 1 if below else (n - seats - 1), 0)
-    # per-row Simpson grids, padded to the longest
-    grids = [_simpson_grid(float(v)) for v in w_min]
-    m_max = max(g[2] for g in grids)
-    dt = np.float32
-    t = np.zeros((B, m_max + 1), dtype=np.float64)
-    sw = np.zeros((B, m_max + 1), dtype=np.float64)
-    for b, (tb, swb, mb) in enumerate(grids):
-        t[b, :mb + 1] = tb
-        sw[b, :mb + 1] = swb
-    p_below = (-np.expm1(-(wn[:, :, None] * t[:, None, :]))).astype(dt)
-    q_above = np.exp(-(wn[:, :, None] * t[:, None, :])).astype(dt)
-    f_stay, f_inc = (q_above, p_below) if below else (p_below, q_above)
-    Suf = np.empty((B, n + 1, d + 1, m_max + 1), dtype=dt)
-    Suf[:, n, :, :] = 0.0
-    Suf[:, n, 0, :] = 1.0
-    for i in range(n - 1, -1, -1):
-        cur = Suf[:, i + 1]
-        nxt = Suf[:, i]
-        np.multiply(cur, f_stay[:, i][:, None, :], out=nxt)
-        nxt[:, 1:] += f_inc[:, i][:, None, :] * cur[:, :-1]
-    np.cumsum(Suf, axis=2, out=Suf)
-    qsw = q_above.astype(np.float64) * (sw * t)[:, None, :]
-    P = np.empty((B, n), dtype=np.float64)
-    Pre = np.zeros((B, d + 1, m_max + 1), dtype=dt)
-    Pre[:, 0, :] = 1.0
-    tmp = np.empty_like(Pre)
-    sign = 1.0 if below else -1.0
-    offset = 0.0 if below else 1.0
-    for i in range(n):
-        tail = np.einsum("bam,bam->bm", Pre, Suf[:, i + 1][:, ::-1, :]).astype(np.float64)
-        G = np.clip(offset + sign * tail, 0.0, 1.0)
-        P[:, i] = wn[:, i] * np.einsum("bj,bj->b", qsw[:, i], G)
-        np.multiply(Pre, f_stay[:, i][:, None, :], out=tmp)
-        tmp[:, 1:] += f_inc[:, i][:, None, :] * Pre[:, :-1]
-        Pre, tmp = tmp, Pre
-    return P, m_max + 1
-
-
-def pl_win_probs_batch(weights, seats, method="auto"):
-    """Win probabilities for B contests sharing ``(n, seats)`` — deterministic.
-
-    Parameters
-    ----------
-    weights : array_like, shape (B, n) or (n,)
-        Positive weight vectors.  A 1-D input is a single contest.
-    seats : int
-        Common number of winners.
-    method : {"auto", "exact"}
-        Deterministic methods only (``"mc"`` is validation-only and not batched).
-
-    Returns
-    -------
-    numpy.ndarray
-        Shape ``(B, n)``; row ``b`` equals ``pl_win_probs(weights[b], seats)`` to
-        floating-point round-off (bit-identical for the quadrature path).
-
-    Notes
-    -----
-    This is an additive API for callers that evaluate several weight vectors with
-    the same contest size (e.g. a prep-effort grid inside one gate-year).  The
-    single-call API is unchanged.  Rows are processed in memory-bounded chunks.
-    """
-    W = np.asarray(weights, dtype=np.float64)
-    if W.ndim == 1:
-        W = W[None, :]
-    if W.ndim != 2:
-        raise ValueError("weights must be 1-D or 2-D")
-    B, n = W.shape
-    if not np.all(np.isfinite(W)):
-        raise ValueError("weights must be finite")
-    if np.any(W <= 0.0):
-        raise ValueError("weights must be strictly positive")
-    seats = _as_seats(seats, n)
-    if method not in ("auto", "exact"):
-        raise ValueError("batch path supports deterministic methods 'auto'/'exact' only")
-    if method == "exact" and n > EXACT_MAX_N:
-        raise ValueError(f"exact subset DP supports n <= {EXACT_MAX_N}; got n={n}")
-    out = np.empty((B, n), dtype=np.float64)
-    if seats <= 0:
-        out[:] = 0.0
-        return out
-    if seats >= n:
-        out[:] = 1.0
-        return out
-    if n <= AUTO_EXACT_N:
-        for b in range(B):
-            out[b] = pl_win_probs_exact(W[b], seats)
-    else:
-        # chunk so the (B, n+1, d+1, m+1) float32 DP stays below the byte target
-        d = max(min(seats - 1, n - seats - 1), 0) + 1
-        w_min = (W / W.max(axis=1, keepdims=True)).min(axis=1)
-        m_max = 1
-        for v in w_min:
-            t_hi = _QUAD_TAIL_C / max(float(v), _QUAD_W_FLOOR)
-            m = int(np.ceil((np.log(t_hi) - np.log(_QUAD_T_LO)) / _QUAD_H))
-            m = max(2, m + (m % 2))
-            m_max = max(m_max, min(m + 1, _QUAD_MAX_NODES))
-        per_row = max(1, (n + 1) * d * (m_max + 1) * 4)
-        chunk = max(1, min(B, _BATCH_TARGET_BYTES // per_row))
-        for start in range(0, B, chunk):
-            Pb, _ = _quadrature_win_probs_batch(W[start:start + chunk], seats)
-            for j in range(Pb.shape[0]):
-                out[start + j] = _renormalize_to_seats(Pb[j], seats)
-    return out
 
 
 # ---------------------------------------------------------------------------

@@ -77,21 +77,6 @@ def fixtures(ref, cur, n_fixtures=130, seed=20261125):
     return rows, worst
 
 
-def batch_fixtures(cur, seed=7, cases=30):
-    rng = np.random.default_rng(seed)
-    worst = 0.0
-    for _ in range(cases):
-        n = int(rng.choice([30, 60, 120, 300]))
-        seats = int(rng.integers(1, n))
-        B = int(rng.integers(2, 10))
-        W = np.exp(rng.uniform(0.2, 3.0) * rng.standard_normal((B, n)))
-        P = cur.pl_win_probs_batch(W, seats)
-        for b in range(B):
-            d = float(np.max(np.abs(P[b] - cur.pl_win_probs(W[b], seats))))
-            worst = max(worst, d)
-    return worst
-
-
 def microbench(ref, cur, reps=7):
     """Cold-call timing (fresh weights per rep, so no memoisation hits) + warm-call time."""
     rng = np.random.default_rng(11)
@@ -122,75 +107,14 @@ def engine_group(cur, reps=3):
     """9-call gate-year pattern with COLD weights in every repetition (no cache hits)."""
     rng = np.random.default_rng(5)
     n, seats = 300, 69
-
-    def fresh():
-        return [np.exp(1.0 * rng.standard_normal(n)) for _ in range(9)]
-
-    ts_seq = []
+    ts = []
     for _ in range(reps):
-        Ws = fresh()
+        Ws = [np.exp(1.0 * rng.standard_normal(n)) for _ in range(9)]
         t0 = time.perf_counter()
         for w in Ws:
             cur.pl_win_probs(w, seats)
-        ts_seq.append(time.perf_counter() - t0)
-    res = {"sequential_ms": 1000 * float(np.median(ts_seq))}
-    for B in (2, 3, 5, 9):
-        ts_bat = []
-        for _ in range(reps):
-            Ws = fresh()
-            t0 = time.perf_counter()
-            for start in range(0, 9, B):
-                cur.pl_win_probs_batch(np.vstack(Ws[start:start + B]), seats)
-            ts_bat.append(time.perf_counter() - t0)
-        res[f"batch_B{B}_ms"] = 1000 * float(np.median(ts_bat))
-        res[f"batch_B{B}_speedup"] = float(np.median(ts_seq) / np.median(ts_bat))
-    return res
-
-
-_TUTOR_OLD = """                    U_grid = np.full((_PREP_GRID.size, len(sub)), -np.inf)
-                    act = np.flatnonzero(active)
-                    for gi, frac in enumerate(_PREP_GRID):
-                        e_try = frac * e_hi
-                        over = np.where(active, prep_col + pos_share * e_try, prep_col)
-                        w = self._weights_with_override(E, m_, pids_full, w_full, sub, over)
-                        Pall = _pl_win_probs(w, seats_eff, method=method)
-                        prob_evals += 1"""
-
-_TUTOR_NEW = """                    U_grid = np.full((_PREP_GRID.size, len(sub)), -np.inf)
-                    act = np.flatnonzero(active)
-                    _Ws = []
-                    _e_try = []
-                    for gi, frac in enumerate(_PREP_GRID):
-                        e_try = frac * e_hi
-                        over = np.where(active, prep_col + pos_share * e_try, prep_col)
-                        _Ws.append(self._weights_with_override(E, m_, pids_full, w_full, sub, over))
-                        _e_try.append(e_try)
-                    _Pall = _pl_win_probs_batch(np.vstack(_Ws), seats_eff, method=method)
-                    prob_evals += _PREP_GRID.size
-                    for gi, e_try in enumerate(_e_try):
-                        Pall = _Pall[gi]"""
-
-
-def patched_engine_copy(tmpdir):
-    """Copy the current engine and patch tutoring to use the batched PL API."""
-    import shutil
-    dst = os.path.join(tmpdir, "engine")
-    shutil.copytree(ENGINE, dst)
-    tut = os.path.join(dst, "eduengine/modules/tutoring.py")
-    src = open(tut).read()
-    if _TUTOR_OLD not in src:
-        raise RuntimeError("tutoring loop pattern not found; patch needs updating")
-    src = src.replace(_TUTOR_OLD, _TUTOR_NEW)
-    # import the batch API in the helper module namespace
-    src = src.replace("from ..contest_math import pl_win_probs",
-                      "from ..contest_math import pl_win_probs, pl_win_probs_batch")
-    src = src.replace("def _pl_win_probs(weights, seats, method='auto'):",
-                      "def _pl_win_probs_batch(weights, seats, method='auto'):\n"
-                      "    from ..contest_math import pl_win_probs_batch\n"
-                      "    return np.asarray(pl_win_probs_batch(weights, seats, method=method), float)\n\n\n"
-                      "def _pl_win_probs(weights, seats, method='auto'):")
-    open(tut, "w").write(src)
-    return dst
+        ts.append(time.perf_counter() - t0)
+    return {"sequential_ms": 1000 * float(np.median(ts))}
 
 
 def end_to_end(commit=REFERENCE_COMMIT, ref_path=None, seeds=(0,)):
@@ -216,15 +140,8 @@ def end_to_end(commit=REFERENCE_COMMIT, ref_path=None, seeds=(0,)):
         "t0=time.perf_counter(); _run_single((b[0],b[1],0,b[3]));"
         "print(json.dumps({'cpu_s': time.perf_counter()-t0}))"
     )
-    batch_root = tempfile.mkdtemp(prefix="batch_engine_")
-    try:
-        batch_engine = patched_engine_copy(batch_root)
-    except Exception as exc:  # pragma: no cover - defensive
-        print("batched engine patch failed:", exc)
-        batch_engine = None
     for label, path in (("reference", os.path.join(ref_engine, "engine")),
-                        ("optimised", ENGINE),
-                        ("optimised_batched", batch_engine)):
+                        ("optimised", ENGINE)):
         env = dict(os.environ)
         env["PYTHONPATH"] = path
         for k in ("OPENBLAS_NUM_THREADS", "MKL_NUM_THREADS", "OMP_NUM_THREADS"):
@@ -239,9 +156,7 @@ def end_to_end(commit=REFERENCE_COMMIT, ref_path=None, seeds=(0,)):
             results[label] = json.loads(r.stdout.strip().splitlines()[-1])
     ref_cpu = results.get("reference", {}).get("cpu_s", float("nan"))
     opt_cpu = results.get("optimised", {}).get("cpu_s", float("nan"))
-    bat_cpu = results.get("optimised_batched", {}).get("cpu_s", float("nan"))
     results["speedup"] = ref_cpu / opt_cpu if opt_cpu else float("nan")
-    results["speedup_batched"] = ref_cpu / bat_cpu if bat_cpu else float("nan")
     return results
 
 
@@ -260,10 +175,8 @@ def main():
     out["equivalence"] = {"n_fixtures": len(rows), "max_abs_diff": worst}
     print(f"equivalence: {len(rows)} fixtures, max |new-reference| = {worst:.3e} "
           f"(acceptance <= 1e-12: {'PASS' if worst <= 1e-12 else 'FAIL'})")
-    bw = batch_fixtures(cur)
-    out["batch_equivalence"] = bw
-    print(f"batch vs per-row: max |diff| = {bw:.3e} "
-          f"({'PASS' if bw <= 1e-12 else 'FAIL'})")
+    out["batch_api"] = "not shipped (measured 0.87-0.96x slower; reverted per keep-memo-only decision)"
+    print("batch API: not shipped (measured slower; reverted per keep-memo-only decision)")
     p1 = cur.pl_win_probs(np.exp(0.5 * np.arange(50)), 7)
     p2 = cur.pl_win_probs(np.exp(0.5 * np.arange(50)), 7)
     out["determinism"] = bool(np.array_equal(p1, p2))
@@ -275,10 +188,7 @@ def main():
               f"({r['speedup_cold']:.2f}x); memoised opt call {r['optimised_warm_ms']:.3f} ms")
     out["engine_group"] = engine_group(cur)
     g = out["engine_group"]
-    print("9-call gate-year group: sequential %.0f ms" % g["sequential_ms"])
-    for B in (2, 3, 5, 9):
-        print(f"  batch B={B}: {g[f'batch_B{B}_ms']:.0f} ms "
-              f"({g[f'batch_B{B}_speedup']:.2f}x)")
+    print("9-call gate-year group (cold, sequential): %.0f ms" % g["sequential_ms"])
     if not args.quick:
         out["end_to_end"] = end_to_end(args.commit, ref_path=args.ref_module)
         print("end-to-end HK Baseline:", out["end_to_end"])
