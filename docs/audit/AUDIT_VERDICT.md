@@ -1158,6 +1158,35 @@ the confirmatory **Holm family explicitly** (T2/T3 only, or T1–T4 with T1/T4 m
 seeds 100–131, 6 cells, ≤22 CPU-h, 1–2 slot reserve; no compute until the manifest is frozen and the Lead allocates the
 box. **Status: PASSER FREEZE SIGNED (conditional); no confirmatory compute launched.**
 
+## 4R. Paper C confirmatory — **PRE-LAUNCH RECORD: CLEARED (pending Lead allocation + reserve)**
+
+Manifest: `docs/audit/PAPER_C_CONFIRMATORY_MANIFEST.json` sha256
+**`f34751d861bfe863e1db530502171e11824780d8b68307c62796a9a58626ee14`** (commit `4a4a8fa`), status
+`FROZEN_PENDING_ADJUDICATOR_PRELAUNCH_RECORD`. **All three prior conditions are met:**
+1. **Citations/hashes verified:** prereg FINAL `445ec423…` (`e34b901`); **A4** `8c967eab…`; **passer freeze**
+   `b64a69f0…` (signed `bbc0b92`); screening source `6bcc29a5…` (288/36, `invalid_cells=[]`); **committed runner**
+   `run_paperC_screening.py` sha **`ddeffe42…` @ commit `1b3a510`** (HEAD; no uncommitted runner; the untracked
+   `run_paperC_confirmatory.py` `fcf86c8b…` is explicitly **NON-AUTHORITATIVE — do not use**). Code enforcement verified:
+   `PAPER_C_STAGE=confirmatory` requires seeds **100–131**, requires `--cells` + `--allow-subset`, and screening mode
+   refuses seeds 100–131.
+2. **Holm family pre-declared:** **T2/T3 only (m=2, α=.05)**; **T1/T4 are screening failures** (T1 +0.655 pp vs ≥3.0;
+   T4 +1.767 pp vs ≥2.0, CI below 2) and are **not tested confirmatorily**; **no threshold change**. T2 estimand =
+   `own_share_financial_proxy` (C−A), min 0.10, paired by seed; T3 = `withheld` (A|P55−A|P12), min 0.05 with
+   h(A|P55)≥0.05 and h(A|P12)≤0.01; seed-MC uncertainty (32 matched seeds), parameter uncertainty zero.
+3. **Design/gates:** 6 frozen passers (all **S=0.85** — **no S-generalisation claim**), seeds 100–131, N=1500/T=46,
+   ≤**22 CPU-h** upper estimate, 8 workers, **1–2 slot Luna/MASSENG reserve**; gates = this pre-launch record + Lead box
+   allocation + reserve confirmed; no confirmatory compute launched.
+
+**Caveats recorded for the confirmatory write-up:** T2 is **proxy-based** (`own_share_financial_proxy`; contest-prep
+mixing; no clean own-vs-firm spend split) — T2 claims must carry that caveat; T2 is tested only at L=.25 (P55/P12) and
+L=.45 (P55), not the full 2×2; T3 is the assertion-support test; **T1/T4 screening failures are reportable results, not
+confirmatory findings**; no S-generalisation beyond .85.
+
+**Status: CLEARED FOR LAUNCH once the Lead allocates the box and the 1–2 slot reserve is confirmed.** The manifest
+status may then be flipped from `FROZEN_PENDING_ADJUDICATOR_PRELAUNCH_RECORD` to frozen/approved. The run must report
+PID/ETA/hashes and write a **separate** confirmatory artefact (`paperC_confirmatory.json` + per-cell checkpoints + run
+manifest), never mixed with screening/Pilot-0.
+
 ## 5. Evidence-status register (programme level)
 
 | Status | Count (paper + programme rows) | Notes |

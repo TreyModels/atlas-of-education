@@ -389,3 +389,18 @@ no threshold change; passers all S=.85 (no S-generalisation).** Conditions: mani
 runner sha 48ec3485 (worktree currently has uncommitted screen-runner edits ddeffe42 and untracked
 run_paperC_confirmatory.py fcf86c8b — commit/pin before use); explicit confirmatory Holm family; N=1500, seeds 100–131,
 6 cells, ≤22 CPU-h, 1–2 slot reserve. **Signed conditional; no confirmatory compute launched.**
+
+---
+
+**PAPER C CONFIRMATORY PRE-LAUNCH RECORD (2026-11-26): CLEARED pending Lead allocation + reserve.**
+Manifest `PAPER_C_CONFIRMATORY_MANIFEST.json` sha `f34751d8…` (commit `4a4a8fa`, status
+FROZEN_PENDING_ADJUDICATOR_PRELAUNCH_RECORD) cites prereg FINAL `445ec423…`, A4 `8c967eab…`, passers `b64a69f0…`
+(signed `bbc0b92`), screening `6bcc29a5…` (288/36/invalid[]), committed runner `ddeffe42…` @ `1b3a510` (HEAD; no
+uncommitted runner; untracked run_paperC_confirmatory.py `fcf86c8b…` marked NON-AUTHORITATIVE). **Holm family T2/T3 only
+(m=2, α=.05); T1 (+.655 vs 3.0) and T4 (+1.767 vs 2.0, CI below 2) are screening failures, not tested confirmatorily; no
+threshold change.** T2 = own_share_financial_proxy (C−A), min .10 (proxy caveat: contest-prep mixing, no clean
+own-vs-firm split; tested only at L=.25 P55/P12 and L=.45 P55); T3 = withheld A|P55−A|P12, min .05, assertion support
+h(A|P55)≥.05/h(A|P12)≤.01; seed-MC 32 matched seeds; parameter uncertainty zero. 6 passers all S=.85 → **no
+S-generalisation**; seeds 100–131, N=1500/T=46, ≤22 CPU-h, 8 workers, 1–2 slot reserve. **Cleared for launch once Lead
+allocates box + reserve confirmed**; separate confirmatory artefact only; no compute launched yet.
+
