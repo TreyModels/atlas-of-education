@@ -430,3 +430,41 @@ equivalence smoke on 6 arms × 2 seeds + pytest hardening suite). **Allocation g
 | box state at grant | idle 0.0/10 cgroup delta; only the legacy `gpu` pip process (2.2 %) present and untouched |
 | conditions | no second concurrent box job from the lane; message PID/start/workers at launch and exit code + wall + artifact sha256 at completion; keep intermediates |
 | record | result to be appended to `/root/work/compute/ledger/COMPUTE_LEDGER.md`; monitoring resumed only for this allocation |
+
+---
+
+## 13. Priority change 16:25 CST — Paper A reproduction owns the box
+
+**Operator order via Lead (16:25):** allocate box compute to the **Paper A reproduction** workstream, ahead of DHS and
+Gate-2 prep, because Paper A's maths (Exp 1/3/4/5: bulge t*, 1,640-run gate architecture, identifiability/Jacobian,
+E8 shock) has never been rerun (only Paper B's 540 was). G2-A is superseded for CPU; DHS is lower priority.
+
+### 13.1 Queue and caps (total ≤10 workers; declared venv py3.10.8/numpy2.2.6; `nice -n 10`; BLAS/MKL/OMP=1; own dirs; hashes+logs+exit codes; loud failure, no silent partials)
+
+| # | job | owner | cap | status at 16:26 |
+|---|---|---|---|---|
+| a | artefact search/inventory (archive @46950ab, bundles, worktrees, legacy branches) | commander | 1 | **not yet launched** (box 9/10 idle) |
+| b | **Exp 3 — 1,640-run gate-architecture experiment** (locate or reimplement runner/configs, rerun on repaired engine) | commander / engine-core if slot frees | **up to 8** (7 while inventory runs, 6 while task-13 active) | pending runner/config; ETA model: 1,640 ≈ 3.04× the 540 mix ≈ **51 k CPU-s ≈ 14.1 CPU-h → ~106 min @8w / ~121 min @7w** (HK-heavy mixes are ~2× cheaper) |
+| c | Exp 4 — tutoring identifiability/Jacobian recompute | commander | ≤2 | after/parallel-if-light; G2-A harness + task-6 analytic prior-box audit reusable |
+| d | Exp 5 — E8 fee-abolition shock | commander | ≤2 | data-dependent |
+| e | Paper B table regeneration from frozen canonical 540 (`sha 455649da…`) | commander | 1 | CPU-light; label as NEW canonical GATE_SPECS run, not the legacy-gate migration run |
+| — | audit-runner task-13 (runner hardening / Gate-2 precondition #3) | audit-runner | ≤2 | reserved; not started at 16:26 (Gate-2 blocked on it) |
+| — | DHS eight-experiment fleet (new tenant, `dhs_qa` R harness already running ~1 %) | DHS lead | **≤2** (capped; must request allocation) | pre-emptible QA loops; R is installed on the box |
+| — | control / reserve | scheduler | 1 | monitoring |
+
+Engine: frozen `/root/work/cmd/engine` (= clean `98baf6b`; `core.py` sha `72cbddf7…`, `contest_math.py` sha `23a01730…`)
+for reproduction; the ×1.113 memo engine at `/root/work/contest/engine` is available but labelled and not used for
+reproduction. Pilot harness for per-run wall/CPU: `/root/work/compute/pilot/e2e_engine.py`. Measured costs: HK 20.3,
+KR 41.9 CPU-s; 540 mix 16,794 CPU-s.
+
+### 13.2 G2-A result (completed 16:25 before the override — superseded for CPU, kept as evidence)
+
+`/root/work/g2a/identifiability_report.json` (frozen `V540-FREEZE`, 4 theta × 4 moments, forward FD, isolated subprocess
+per eval, seed 0): **start 0 rank 4/4, SVs [60.015, 32.125, 7.770, 0.683], null_dim 0**;
+**start 1 rank 4/4, SVs [36.451, 14.423, 4.407, 0.091], null_dim 0** → locally identifiable at both starts.
+
+### 13.3 Monitoring (resumed for this workstream only)
+
+Sample every 2–3 min: cgroup delta utilization, per-lane worker counts, per-job progress; flag <7 idle, >10 workers,
+no-progress >10 min. Record PIDs/hashes/exit codes in `/root/work/compute/ledger/COMPUTE_LEDGER.md`. Total concurrent
+worker processes must stay ≤10; DHS and task-13 are the first to be paused if Exp 3 needs the full quota.
