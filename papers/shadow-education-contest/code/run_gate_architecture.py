@@ -251,7 +251,8 @@ def driver(seeds, workers, out_dir, include_sensitivity=True):
 def main():
     if len(sys.argv) > 1 and sys.argv[1] == 'cell':
         a, S, f, v, fail, ss, out = sys.argv[2:9]
-        run_cell(a, float(S), float(f), float(v), fail, [int(x) for x in ss.split('-')] if '-' in ss else [int(ss)], out)
+        seeds = (list(range(int(ss.split('-')[0]), int(ss.split('-')[1]) + 1)) if '-' in ss else [int(ss)])
+        run_cell(a, float(S), float(f), float(v), fail, seeds, out)
         return 0
     ap = argparse.ArgumentParser()
     ap.add_argument('--seeds', default=f'0-{NSEEDS - 1}'); ap.add_argument('--workers', type=int, default=8)
@@ -261,8 +262,9 @@ def main():
     a = ap.parse_args()
     global FEES
     FEES = [float(x) for x in a.fees.split(',')]
-    return driver([int(x) for x in a.seeds.split('-')] if '-' in a.seeds else [int(a.seeds)], a.workers, a.out_dir,
-                  include_sensitivity=not a.no_sensitivity)
+    seeds = (list(range(int(a.seeds.split('-')[0]), int(a.seeds.split('-')[1]) + 1)) if '-' in a.seeds
+             else [int(x) for x in a.seeds.split(',')])
+    return driver(seeds, a.workers, a.out_dir, include_sensitivity=not a.no_sensitivity)
 
 if __name__ == '__main__':
     sys.exit(main())
