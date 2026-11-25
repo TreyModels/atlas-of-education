@@ -80,6 +80,9 @@ def run_cell(arch, S, fee, vac0, seeds, out_dir):
         if sd in done: continue
         mods = [PublicSchools(), PrivateSchools(), TutoringMarket(), QueueLabour(), SDG4()]
         E = Engine(mods, **dict(p, seed=sd)); E.run()
+        unfired = list(getattr(E, 'unfired_events', []))
+        if unfired:
+            raise RuntimeError(f'unfired calendar events in cell {tag}: {unfired}')
         pre, post, d = gap(E)
         row = dict(arch=arch, S=S, fee=fee, vac0=vac0, seed=sd, gap_pre=pre, gap_post=post, gap_delta=d,
                    contest_e_mean=float(np.mean(E.R['contest_e_mean'][E.p['measure_from']:])),
@@ -140,7 +143,8 @@ def driver(seeds, workers, out_dir):
         b = [dcut[f'{arch}|0.70|{v}'] for v in VACS if f'{arch}|0.70|{v}' in dcut]
         return float(np.mean(a) - np.mean(b)) if a and b else None
     payload = dict(label=LABEL,
-                   metadata=dict(generation='NEW GENERATION', spec=sha(SPEC), engine_commit='98baf6b',
+                   metadata=dict(generation='NEW GENERATION', spec=sha(SPEC), engine_commit='846c9e0',
+                                 unfired_events_asserted=True,
                                  engine_core_sha256=sha(os.path.join(ENGINE, 'eduengine', 'core.py')),
                                  runner_sha256=sha(os.path.abspath(__file__)), seeds=list(seeds),
                                  n_seeds=len(seeds), n_cells=len(cells), total_runs=len(rows), workers=workers,
