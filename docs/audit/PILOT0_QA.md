@@ -3,9 +3,15 @@
 **Owner:** qa-verifier · **date:** 2026-11-25 · **mode:** host-only, no box jobs, no microdata off-Mac
 **Artefact under audit:** `/root/work/paperC/results` (Paper C Pilot-0 v3, runner
 `papers/shadow-education-contest/code/run_paperC_pilot0.py`, engine pin `846c9e0`)
-**Status: ARTEFACT UNAVAILABLE → checks BLOCKED.** The box was powered off on 2026-11-24 17:44Z
-(`~/neon-boot/box_lease.jsonl`, final `powered_off` entry) and no local copy of `/root/work/paperC/results`
-exists on this Mac. A read-only copy was requested from `atlas-commander`; when it lands, run:
+**Status: ARTEFACT EXISTS BUT IS IN-PROGRESS → result-level checks BLOCKED.** Live correction to the
+earlier "box powered off" note: the box is **up and busy** on the current instance
+(`ssh -p 36934 root@connect.nmb2.seetacloud.com`); the powered-off entry in `box_lease.jsonl` was the
+previous instance. Read-only inspection (2026-11-25 ~20:56–21:00) shows the Pilot-0 process 37049 running
+with `--workers 2`, writing `/root/work/paperC/results`; at snapshot there were **2/16 cells with 2/8 seeds
+each (4 of 128 runs)** and **no `paperC_pilot0_results.json` payload yet** (the payload is written only at
+driver completion). Per-run cost ~4–5 min on 2 workers ⇒ ETA for 128 runs is ~10 h, so a complete `results`
+/`results_v3` payload is **not imminent**. Box CPU is shared with the gate grid (~96 %), which explains the
+slow throughput. When the payload lands, run:
 
 ```
 python3 docs/audit/pilot0_qa.py --results <copy>/results --engine-repo ~/neon-boot/repos/atlas
@@ -25,6 +31,29 @@ PASS/FAIL/BLOCKED per item; this file records the **static code audit** that can
 | manifest | `paperC_pilot0_results.json` → `label`, `manifest{status=EXPLORATORY, generation, engine_commit='846c9e0', engine_core_sha256, spec_sha256, runner_sha256, base, regimes, q0_proxy, p_firm, seeds, n_seeds, cells, runs, workers, wall_seconds, notes}`, `summary` (lines 126–155) | static PASS (keys defined); **needs artefact** |
 | summary keys | 16 cell keys `"<regime>|q0=|p_firm="`, 23 metrics each with `mean, sd, ci95_lo, ci95_hi, n` (lines 126–142) | static PASS (keys defined); **needs artefact** |
 | label | `EXPLORATORY / HYPOTHESIS-GENERATING`, no confirmatory claim, L varied in Pilot-1 (line 33) | static PASS |
+
+## 1b. Live-box observations (read-only, 2026-11-25 ~21:00) and version correction
+
+* **Live runner code is v3**, contrary to the lead's "v2 (96-run, pay_ratio .8)" note: the on-box script
+  `/root/work/paperC/papers/shadow-education-contest/code/run_paperC_pilot0.py` has `REGIMES` with
+  **4 regimes** (incl. `own_open_gap_firm_ban`, firm_ban .9), `pay_ratio .55`, `monitoring .2`,
+  `Q0S=[1.0,1.2]`, `PFIRMS=[.03,.08]`, `NSEEDS=8` → 16 cells/128 runs (only the stale docstring block at
+  the top still describes the superseded 96-run v2 design). The live process writes to
+  `/root/work/paperC/results`; no `results_v3` exists yet.
+* **Runtime pin (P1) partially closed on the box:** `sha256sum` of the box
+  `engine/eduengine/core.py` = `e111397bd8a50f94e82bb77715f236ee3d5c0bf863a23d84afdf1c6c71fa8e71`
+  = the pinned `846c9e0` core hash ⇒ the running engine code matches the pin. This is box-side evidence;
+  the payload's own `engine_core_sha256` still must be checked when it lands.
+* **Spec-hash discrepancy (flag):** box `docs/audit/canonical_spec.json` sha256 =
+  `e5ddef6b4ecd04a0e96f480b43a97f0567bed7654ec032c1779c9e20f6beb755`, which matches the *declared* pin in
+  `GATE2_PREREGISTRATION.md`/pin commit message ("file e5ddef6b"), but the `docs/audit/canonical_spec.json`
+  blob in the git tree at commit `846c9e0` hashes to `35576f…b95f`. The runner records the box copy's sha;
+  QA must treat the *declared* spec pin as the authoritative one and record the mismatch rather than
+  silently accepting either. (No numeric effect is asserted here.)
+* **Driver log is empty** (`/root/work/paperC/pilot0.log` = 0 bytes): the run's console provenance is
+  absent, so per-run failures are only visible through missing checkpoint rows. Flag for the run record.
+* Snapshot schema: rows contain `regime,q0,p_firm,seed` + 23 outcomes/metrics, matching the runner's
+  per-seed dict; no `pay_ratio` field (it lives in `manifest.regimes`). No payload/summary exists yet.
 
 ## 2. Engine-pin verification (independent, host-side)
 
