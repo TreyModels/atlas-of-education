@@ -307,8 +307,7 @@ graceful CPU fallback. **Boundaries (binding):** branch core `5bcbc0b3…` is NO
 **gate-grid/sensitivity only**; must not replace CPU primary artifacts/spec hash/Gate-1 evidence; no retroactive
 substitution; cross-replica batching **staged, not implemented**; **no GPU numbers claimed**. **Parity gate OPEN:** box
 parity (fixtures + discrete-winner comparison + full-wall benchmark) with Commander; QA to add
-`tests/test_contest_math_gpu.py` and sign off only on ≤1e-7 agreement with flips quantified. Methods artefact; six-status
-taxonomy does not apply.
+`tests/test_contest_math_gpu.py` and sign off only on ≤1e-7 agreement with flips quantified. **QA tests (conditional):** branch `6c68d96`; test file sha `9ee72f9e…` (8 tests), `GPU_TESTS_QA.md` sha `7ab291f0…`, `gpu_parity_qa.json` sha `3df35bd7…`; Mac 5 passed/3 skipped; CUDA box 8/8 in 57.29 s; parity max|dP| 4.83e-8, 0/130 >1e-7, 0 seat-sum violations, 0 fixture flips. **Harness provenance defects (not engine failures): `env.backend='cpu'` (reset at port_verify.py:236 before manifest write :239), `engine_commit` empty (:113), `spec_sha256` missing — Commander fixing/re-emitting. Remaining gate: cell-level parity (2 Pilot-0 cells x seeds 100-101, per-gate-year Jaccard/sym-diff/flipped seats) + full-wall benchmark; sign off only if <=1e-7 and no unresolved flip changes a headline outcome, else CPU fallback.** Methods artefact; six-status taxonomy does not apply.
 
 ---
 
@@ -318,8 +317,7 @@ taxonomy does not apply.
 {1.0,1.2} × p_firm {.03,.08}) × 8 seeds (0–7); wall **6860.01 s ≈1 h 54 min** at 8 workers; 16 ckpts +
 `MANIFEST_SHA256SUMS.txt`; QA copy `~/neon-boot/qa/incoming/paperC_results/` (`sha256sum -c` OK; bundle
 `paperC_results_bundle.tar.gz` sha `ec868a57…a4fb0b`); qa-verifier notified. Manifest engine `846c9e0`/core
-`e111397b…`/spec `e5ddef6b…`/runner `bc833b76…`, status EXPLORATORY with withholding/contamination notes. **Status:
-EXPLORATORY/hypothesis-generating, pending QA A1–A9; not a result; no Paper C claim moved.** No claims until QA sign-off
+`e111397b…`/spec `e5ddef6b…`/runner `bc833b76…`, status EXPLORATORY with withholding/contamination notes. **QA PASS A1–A10:** `PILOT0_QA.md` sha `620375a6…` (commit `0f1013e`): 128/16, 8 seeds/cell, runtime pin `846c9e0`/core `e111397b…` + spec `e5ddef6b…` verified against git, no-op guard 12/12 non-market, A10 ckpt→summary reproduction, manifest 17/17, A9 log clean. **Caveats:** `completion_primary`/`completion_upper` all-NaN in every cell — not citable; `tut_*_by_grade_last` clean; contamination note; exploratory only; CPU-only. **Status: EXPLORATORY-VALIDATED (QA PASS A1–A10), not a confirmatory result; no Paper C claim moved.** No claims until QA sign-off
 + X-29 close; CSV frozen. **X-29 (observed):** restarted at **10 workers** (driver `46562`), 473 rows preserved (resume
 confirmed), cgroup 100%, DIAGNOSTIC-ONLY `results_diag/` separate; rate/ETA to be published; operator capacity update
 from the earlier 6-worker plan, no effect on X-27/primary results.

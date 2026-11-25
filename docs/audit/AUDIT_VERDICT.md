@@ -1015,8 +1015,18 @@ torch raises the documented `RuntimeError`). Diff is additive: 4 files +222/−1
 benchmark — run by the Commander; QA to add `tests/test_contest_math_gpu.py` and sign off **only on ≤1e-7 agreement with
 flips quantified**. Until then: **no GPU runs; no substitution; no performance claims.**
 
-**Status: METHODS ARTEFACT (X-31) — recorded for traceability; the six-status scientific taxonomy does not apply; no
-GPU numbers claimed. Parity gate OPEN.**
+**QA tests (conditional):** branch commit `6c68d96`; `tests/test_contest_math_gpu.py` sha
+**`9ee72f9e…8729`** (8 tests), `GPU_TESTS_QA.md` sha **`7ab291f0…f950`**, `docs/gpu/results/gpu_parity_qa.json` sha
+**`3df35bd7…81cc`**. **Mac 5 passed/3 skipped; CUDA box (torch 2.7.1+cu118, RTX 3080 Ti) 8/8 passed in 57.29 s;
+independent `port_verify.py gpu-parity`: max|dP| 4.83e-8, 0/130 >1e-7, 0 seat-sum violations, 0 fixture winner
+flips**; engine file hashes match the port. **Harness provenance defects (not engine failures; Commander fixing and
+re-emitting):** `env.backend='cpu'` recorded because the backend is reset at `port_verify.py:236` before the manifest
+write at `:239`; `engine_commit` empty at `:113`; `spec_sha256` missing. **Remaining GPU gate:** Commander's cell-level
+parity (2 Pilot-0 cells × seeds 100–101; per-gate-year Jaccard/sym-diff/flipped seats) + **full-wall benchmark**; sign
+off only if ≤1e-7 and no unresolved flip changes a headline outcome, otherwise CPU fallback.
+
+**Status: METHODS ARTEFACT (X-31) — CONDITIONAL; no GPU numbers claimed. Parity gate PARTIALLY CLEARED (fixtures) but
+cell-level + full-wall benchmark remain OPEN.**
 
 ## 4O. Paper C Pilot-0 payload — **EXPLORATORY / PENDING QA (X-Pilot); not a result**
 
@@ -1028,10 +1038,17 @@ cleanly; 16 `ckpt_*.jsonl` + `MANIFEST_SHA256SUMS.txt`. Copied to `~/neon-boot/q
 notified. Manifest: engine `846c9e0`, core `e111397b…`, spec `e5ddef6b…`, runner `bc833b76…`, status
 **EXPLORATORY**, `withholding_note`/`contamination_note` recorded.
 
-**Status: EXPLORATORY / HYPOTHESIS-GENERATING — PENDING QA SIGN-OFF; not a result, not confirmatory, no Paper C claim
-moved.** QA validator checks A1–A9 (128/16, seeds, params, no-op guards on the 12 non-market cells, engine pin, spec
-provenance, `unfired_events`, exploratory label). **No Paper C claims until (a) QA sign-off and (b) X-29 closes; CSV
-remains frozen.**
+**QA: PASS A1–A10** — `docs/audit/PILOT0_QA.md` sha256
+**`620375a6361380176f430130e2be1013bf28db0fad39073ca9f284b2d07d676a`** (commit `0f1013e`; CPU-only campaign):
+payload `c6e50bc1…`; design/params 128/16, 8 seeds/cell; runtime pin `846c9e0`/core `e111397b…` + spec
+`e5ddef6b…` (re-pin `46c080d` provenance) verified against git; **no-op guard 12/12 non-market cells**; A10 ckpt→summary
+reproduction all 16 cells; manifest **17/17** hashes OK; A9 log clean (short/minimal). **Caveats:** `completion_primary`
+and `completion_upper` are **all-NaN in every cell/seed — do not cite** (reporting-field artefact, not run failure);
+`tut_*_by_grade_last` clean; own_share/tut_firm contamination note stands; **exploratory only, no causal/multiplicity/
+welfare claims**; CPU-only on the canonical pin (GPU is a separate artefact).
+
+**Status: EXPLORATORY-VALIDATED (QA PASS A1–A10), not a confirmatory result; no Paper C claim moved.** No Paper C
+claims until **X-29 closes**; CSV remains frozen.
 
 **X-29 diagnostic (observed, not adjudicated):** restarted at **10 workers** from checkpoints (driver `46562`), rows
 **473 preserved** (resume confirmed, no recomputation), cgroup 100%, **DIAGNOSTIC-ONLY**, `results_diag/` separate;
