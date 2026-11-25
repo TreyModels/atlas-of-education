@@ -436,3 +436,34 @@ def test_boundary_seats():
     np.testing.assert_array_equal(pl_win_probs_exact(w, 7), np.ones(7))
     assert pl_realize(w, 7, np.zeros(7)).sum() == 7
     assert pl_realize(w, 0, np.zeros(7)).sum() == 0
+
+
+def _brute_force_topk(weights, seats):
+    """Independent exact truth: enumerate all n! Plackett-Luce orderings."""
+    from itertools import permutations
+
+    w = np.asarray(weights, float)
+    n = w.size
+    p = np.zeros(n)
+    for perm in permutations(range(n)):
+        prob = 1.0
+        remaining = float(w.sum())
+        for idx in perm:
+            prob *= w[idx] / remaining
+            remaining -= w[idx]
+        for idx in perm[:seats]:
+            p[idx] += prob
+    return p
+
+
+@pytest.mark.parametrize("n", [4, 5, 6])
+@pytest.mark.parametrize("sigma", [0.0, 1.0])
+def test_exact_dp_matches_permutation_bruteforce(n, sigma):
+    """Subset DP equals full n! enumeration of the PL ranking distribution."""
+    rng = np.random.default_rng(SEED + 3000 + n + int(10 * sigma))
+    w = np.ones(n) if sigma == 0.0 else np.exp(sigma * rng.standard_normal(n))
+    for k in range(1, n):
+        p_dp = pl_win_probs_exact(w, k)
+        p_bf = _brute_force_topk(w, k)
+        np.testing.assert_allclose(p_dp, p_bf, atol=1e-12,
+                                   err_msg=f"n={n} sigma={sigma} k={k}")
