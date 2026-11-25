@@ -14,7 +14,7 @@ Box-side ledger with PIDs/hashes: `/root/work/compute/ledger/COMPUTE_LEDGER.md` 
 | item | value |
 |---|---|
 | quota | **10 CPUs** (`/sys/fs/cgroup/cpu.max = 1000000 100000`); `nproc`=80 is the host and is **misleading** |
-| current utilization | **9.0 / 10 CPU (90 %)** at 15:12:07 — `cmd` 540 (6 workers, 9.0 % done) + `qa` task-7 (3 workers); contest-math 1-worker replication starting → 10.0/10 |
+| current utilization | **9.9 / 10 CPU (99 %)** at 15:14:38 — `cmd` 540 (6 workers, 14.4 % done) + `qa` task-7 (3 workers, configs 1–5 in one invocation); inside band |
 | band check | 90 % is **inside** the 8.5–10.0 target band; hard worker cap respected (see §3b for the withdrawn 540→8 proposal); `loadavg` 18.8 is host-wide and is not our container (see §2) |
 | headline | **Gate-1 AFTER invariant suite is GREEN on the declared stack** (box replication: 27 passed in 56.73 s, 5 workers) |
 | ETA (controller box 540) | 540 × ~31 CPU-s/run ÷ 6 workers ≈ 47 min from 15:07:45 → **~15:55**, now with the full 6 cores (legacy ended) |
@@ -85,8 +85,8 @@ no output progress for >10 min is messaged and flagged; any box job must report 
 | J-02 | 540 repaired-engine cross-env replication | atlas-commander | 6 | 15:03:31 | **RUNNING** | ~31 CPU-s/run (pilot) → ~2.2 runs/min aggregate | ~15:50–16:00 | `/root/work/cmd/run_540.log`, then `papers/.../results/hk_korea_comparative_with_cf4.json` |
 | J-03 | task-6 rank/Jacobian audit (~1,000 prior-box points) | contest-math | 1 (analytic; 0 pool) | ~15:02 | staging/analytic on host | 1 moment-map + Jacobian per point; 0 `pl_win_probs` calls | <5 s once launched | `/root/work/contest` harness currently staged |
 | J-04 | task-11 harness/manifest/ledger box proof | audit-runner | 1 | 15:00:49 | ✅ DONE 15:00:52 | 3 s wall | done | `/root/work/audit/p07_box_evidence.tar.gz`, 18/18 PASS |
-| J-05 | task-7 synthetic DGP (500 pops = 5 configs × 100, 20k draws × 16 moments, pure NumPy ABC) | qa-verifier | 3 | 15:10:40 | **RUNNING (config 1/5)** | 76 CPU-s/worker after 77 s; per-pop rate pending first artifact | first config ETA pending; total ~5 sequential configs | `/root/work/qa/full_out` (parquet, written at config end) |
-| J-06 | task-8 bootstrap factorial | qa-verifier | ≤3 | blocked on J-05 | queued | unknown until scoped (resample stored results; expect minutes) | — | `/root/work/qa` |
+| J-05 | task-7 synthetic DGP (500 pops = 5 configs × 100, 20k draws × 16 moments, pure NumPy ABC, **0 engine runs**) | qa-verifier | 3 | 15:10:40 | **RUNNING** (all 5 configs, one invocation) | pilot measured: **5 pops / 7.43 s wall @3 workers = ~4–5 CPU-s/pop**; 500 pops ≈ 2,200–2,500 CPU-s | **~15:23–15:28** (750 s of 3-worker wall from 15:10:40) | `/root/work/qa/full_out`, pilot at `/root/work/qa/pilot_out` |
+| J-06 | task-8 bootstrap factorial | qa-verifier | ≤3 | blocked on J-05 | queued | scoped: 60 cells (5 × 4 × 3) × 2,000 datasets = 120,000 vectorized OLS/panel fits; est **600–900 CPU-s** | ~5 min at 3 workers | `/root/work/qa` |
 | J-07 | task-9 general-r Tulloch validation | contest-math | 1 (analytic) | blocked on J-03 | queued | ~200 PL calls × 14–49 ms ≈ 3–10 s | <1 min | `/root/work/contest` |
 
 Completed / released: J-01, J-04. No lane currently exceeds its cap.
@@ -107,6 +107,7 @@ Pilots were run from a clean `git archive 98baf6b` bundle in `/root/work/compute
 | legacy | 540 runs, 8 workers (old engine) | miniconda / numpy 1.24.1 | **71.9 s wall = 575 CPU-s total = 1.07 CPU-s/run** | `/root/work/gate0/run_box_8w.log`; **20–39× faster than repaired** |
 | — | Gate-1 invariant suite (27 tests) | declared venv, QA_WORKERS=5 | **56.73 s wall** | full suite, CPU-bound; host equivalent 132 s at 4 workers |
 | — | task-11 dry-run harness | miniconda, 1 proc | **3 s wall** | 2 subprocesses, negligible |
+| — | **task-7 DGP pilot** (5 populations = 1/config) | declared venv (numpy 2.2.6, pandas 2.3.3), 3 workers | **7.43 s wall for 5 pops ≈ 4–5 CPU-s/pop** (n1000 config ~2–3 s/pop, n100 ~0.3 s, legacy ~0.8 s) | **0 engine runs**; pandas/pyarrow already present, no pip needed |
 
 Per-unit planning numbers (box, repaired engine): **HK arm = 20.3 CPU-s**, **KR arm = 41.9 CPU-s**,
 **540-run mix (270 HK + 270 KR assumed 9+9 arms) = 16,794 CPU-s = 4.7 CPU-h**.
@@ -214,7 +215,8 @@ e1ce873a0a106b9632fae97cf923ab6432ebc6e32043f64fb501d8c93ec9025b  results/policy
 | **15:07:56** | **11.9** | **6.0** (60 %) | 540 6 | **legacy ENDED by operator order**; 6/10 → fill with qa task-7 |
 | 15:0x (next refresh) | — | — | — | target 9.5–10/10: 540 6 + qa 3 + contest-math 1 = 10 |
 | **15:12:07** | **18.8** | **9.0** (90 %) | 540 6 + qa 3 | qa task-7 live (config 1/5); 540 9.0 % done (1,518/16,794 CPU-s) |
-| 15:14 (next refresh) | — | — | — | + contest-math 1-worker replication → **10.0/10** |
+| **15:14:38** | **23.8** | **9.9** (99 %) | 540 6 + qa 3 | qa pilot measured (5 pops / 7.43 s @3w = 4–5 CPU-s/pop); 540 14.4 % done |
+| 15:1x (next refresh) | — | — | — | qa task-7 done ~15:23–15:28 → qa task-8 (≤3w) immediately; after qa release box drops to 540 6/10 (60 %) — needs a fill job (contest-math task-9 or engine profiling pilot) |
 
 Band discipline: flag **<7** idle (fill from queue), **>11** oversubscribed (throttle the lowest-priority lane).
 `loadavg` is host-wide and is reported only because it was the issued metric; the cgroup number is the truth.
@@ -297,4 +299,8 @@ Band discipline: flag **<7** idle (fill from queue), **>11** oversubscribed (thr
 - **15:13** 540→8 proposal withdrawn (cap arithmetic, §3b); 10th slot = contest-math task-9 box replication at 1 worker
   (requested; host remains authoritative). If contest-math declines, the box holds 9.4/10 with the control slot free —
   still inside band.
-- (next refresh: qa measured per-population seconds + config ETA; contest-math 10th-slot decision; 540 progress)
+- **15:14:38** util **9.9/10 (99 %)**, 540 14.4 % done (2,412/16,794 CPU-s, ETA ~15:54); qa pilot returned
+  **5 populations / 7.43 s wall @3 workers = 4–5 CPU-s/pop**, 0 engine runs, pandas/pyarrow already present
+  (no pip) → full 500-population run ETA **~15:23–15:28**; task-8 scoped at 600–900 CPU-s (~5 min at 3 w).
+- (next refresh ~15:23–15:25: qa task-7 completion + artifacts; qa task-8 launch; 540 progress; fill plan for the
+  60 % gap after qa releases its 3 workers)
