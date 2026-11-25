@@ -1,253 +1,348 @@
-# MODEL_ZOO_DISCRIMINATORS — pilot-ready D1/D2 designs and model-zoo discriminating moments
+# MODEL_ZOO_DISCRIMINATORS — engine probes EP-1/EP-2, model-zoo protocol (both modes), and the A/R formalism
 
 Owner lane: `engine-core` (design-only) · 2026-11-25 · branch `research/contest-audit-v2-2026-11-25`
-Status: **DESIGN ONLY — NOT PREREGISTERED, NOT RUN.** No engine change, no box job. Companion to
-`PAPER_D_EQUATION_AUDIT.md` (divergence tests D1–D9), `PAPER_C_MODEL_GAP.md` (S/L/G extension design),
-`MODEL_ZOO_SCOPE.md` (model-zoo protocol draft) and `TUTORING_DATA_INVENTORY.md` (data availability).
-Engine pinned at commit `846c9e0` (core.py sha256 `e111397b…8e71`); frozen canonical spec
-`docs/audit/canonical_spec.json`; Paper C pilot runner `papers/shadow-education-contest/code/run_paperC_pilot0.py`
-(regime anchor definitions). Everything here is **REPRODUCED SIMULATION or DESIGN**; no empirical claim.
+**Revision v2, superseding commit `6e780c2`** after the Codex reply (Lead-relayed, 2026-11-25). Status:
+**DESIGN ONLY — NOT PREREGISTERED-FINAL, NOT RUN.** No engine change and no box job in this revision.
+
+Inputs: `PAPER_D_EQUATION_AUDIT.md` (D1–D9), `PAPER_C_MODEL_GAP.md` (S/L/G/time/supply-form extensions),
+`MODEL_ZOO_SCOPE.md` (protocol draft), `PAPER_C_CONFIRMATORY_PREREG.md` (draft under review),
+`SCIENTIFIC_CLAIM_LEDGER.md` rows MZ-01…MZ-04 / EV-01…EV-03, `TUTORING_DATA_INVENTORY.md`,
+`verification/lean/LeanStarter.lean` + `verification/lean/Atlas/{Definitions,Claims}.lean`.
+Engine pin `846c9e0` (core `e111397b…8e71`); canonical spec `docs/audit/canonical_spec.json`.
 
 ---
 
-## 0. TL;DR
+## 0. What changed in v2 (Codex corrections, all adopted)
 
-* **A single 32-run confirmatory core** covers D1 (D1A/D1B) and D2 (D2A/D2B) at **N=600, T=46, seeds 0–7 matched**,
-  reusing all four Paper C Pilot-0 **v3** cell definitions (Pilot-0 v3 is the 4-regime / 128-run design, N=1500,
-  exploratory; here the same cells are re-executed at N=600 — **no new cell definitions in the 32-run core**). The only
-  new cells are optional: the D1 q0=0.8 third S level (+8 runs) and the mechanism-grade D2 `market_only + firm_ban`
-  arm (+8 runs).
-* **Ten model-zoo candidates** are mapped to 2–3 observable predictions each, with the exact current outcome keys that
-  can test them and a DHS/ILSA evidence verdict. Five **discriminating moment families** separate the models; five
-  predictions are marked **UNFALSIFIABLE with current data/engine** (time allocation, Mincer returns in DHS,
-  withholding magnitude/provider mix, Kaplan-type firm profits, exact CES substitution sign).
-* **Nothing may run until the prereg checklist in §6 is signed off** (cells, seeds, outcomes, predicted signs,
-  thresholds, multiplicity, engine/spec hashes, no-op binding assertions, exclusion rules).
+1. **"Kaplan" is likely Bryan Caplan, not a test-prep company.** Row 8 of the zoo is replaced by the
+   **Caplan signalling/human-capital-critique model**, tagged **V (unverified citation)**; the primary source is
+   *probably* *The Case Against Education* (2018) — must be checked; if "Kaplan" means something else, §5.1 says what
+   changes (Kaplan, Inc. = an industry supplier, not a general theory; Kaplan–Meier = an estimator, not a model).
+2. **Protocol = both modes**: (A) *competing* models tested against the same evidence with pre-declared discriminating
+   moments, and (B) *complementary modules* combined in one mechanism-rich model. Decision vocabulary is
+   **holds / fails / indeterminate / not-testable**, never "the model is wrong" (§6–§7).
+3. **D1/D2 are reclassified as ENGINE PROBES, not named-theory discriminators.** A demand-regression omission of S
+   does **not** imply zero true response — the Lean omission lemmas are *definitional invariance*
+   (`Atlas/Claims.lean:129–148`), i.e. the classical equation cannot see the channel, not that the channel is absent.
+   And `q0` shifts **public and private** school quality, so it cannot isolate public S. Replaced by:
+   * **EP-1** — a matched **public-feedback intervention** with a **no-effect toggle / negative control** (§2);
+   * **EP-2** — own-access × firm-constraint interaction with **baseline-matched seeds**, a **fixed `own_share`
+     denominator** with explicit contest-prep classification, and **absolute own/firm quantities** (§3);
+   * **Seeds 0–7 are EXPOSED/exploratory** (used by Pilot-0 v3) and are excluded from confirmatory inference; the
+     confirmatory seed set is the independent block **100–131 (32 matched seeds)**.
+4. **A/R formalism adopted** and shared with the Lean starter: **A = achieved learning**, **R = required
+   proficiency/cutoff** (fixed threshold *or* endogenous rank), **gap = max(0, R − A)** — definitionally the Lean
+   `gap (required achieved : Nat) := Nat.max 0 (required - achieved)` (`LeanStarter.lean:8`), with capacity
+   feasibility `Feasible required capacity := required ≤ capacity` (`LeanStarter.lean:25`). All model definitions and
+   probe outcomes use A/R/gap; the Paper C/D equations and the machine-checked lemmas share one vocabulary (§1.1).
+5. The unfalsifiable/data-blocked list is retained and now states explicitly: **empirical validation requires external
+   observations**; engine runs are mechanism plausibility only (§8).
 
 ---
 
-## 1. Common design conventions (both tests)
+## 1. Conventions
+
+### 1.1 The A/R vocabulary (shared with Lean)
+
+| symbol | definition (engine units) | engine object / key | Lean object |
+|---|---|---|---|
+| **A** | achieved learning: cumulative grade-equivalents at a decision point | `k['L']`, `E.ALL['L']`, `L6`, `L9` (and `L12` after the wave-2 gate-snapshot extension) | `Nat`-encoded learning in the exact prototype; units documented in `Atlas/Definitions.lean` |
+| **R** | required proficiency/cutoff: **(a) fixed threshold** (`fixed_bar` gate `bar`; MPL `mpl_primary`/`mpl_lower`) or **(b) endogenous rank** (contest/quota seat rank: the k-th competitor score; admission probability via Plackett–Luce) | gate `bar`, `contest_seats` rank, `cut`/`cut_adm`, `sdg4.py:48–56` MPL thresholds | fixed-threshold predicate vs rank predicate; `Gate`/`seatCount` in `Atlas/Definitions.lean` |
+| **gap** | `max(0, R − A)` | computed per child from A and the gate's R; expected vs realised gap reported separately | `gap R A` (`LeanStarter.lean:8`); `gap_eq_zero_of_met`, `gap_pos_of_shortfall` |
+| **capacity** | seats, student time, teacher hours | seats (`contest_seats`), `E._cash` (cash capacity), student/teacher time after the wave-2 extension | `Feasible required capacity` (`LeanStarter.lean:25`), `remainingCapacity` (`:31`) |
+
+Rules: (i) never compare an A across units without stating the grade-equivalent scale; (ii) fixed-R and rank-R tests
+are separate outcomes (fixed-R gap-closing is a human-capital prediction; rank-R order preservation is a positional/
+signalling prediction); (iii) the Lean prototype is exact integer/rational — engine floats are reported separately as
+REPRODUCED SIMULATION, not as proofs (claim status is recorded in `docs/audit/LEMMA_LEDGER.md`).
+
+### 1.2 Run conventions
 
 | item | value |
 |---|---|
-| base params | `docs/audit/canonical_spec.json` → `params.HK.primary` (canonical HK gate list **fixed**; L is not varied in this design — L goes to a later Pilot-1) |
+| engine pin | commit `846c9e0`, core sha256 `e111397bd8a50f94e82bb77715f236ee3d5c0bf863a23d84afdf1c6c71fa8e71`, frozen spec sha (re-pinned `e5ddef6b…`), runner sha — all in every manifest |
+| base params | `docs/audit/canonical_spec.json` → `params.HK.primary` (canonical HK gates fixed; L not varied in probes) |
 | modules | `[PublicSchools(), PrivateSchools(), TutoringMarket(), QueueLabour(), SDG4()]` |
-| N / T / measure_from | **N=600, T=46, measure_from=18** (pilot uses N=1500; N=600 is the confirmatory budget) |
-| seeds | **0–7, matched** (identical `EventRNG` streams; paired differences per seed) |
-| runner pattern | one process per cell, per-seed JSONL checkpoints, atomic final JSON, `assert E.unfired_events == []` (mirror `run_paperC_pilot0.py`) |
-| regimes (from the pilot runner code, not its docstring — see §7 gotcha) | `market_only`: `own_ban=.95, pay_ratio=.55, monitoring=.2, withhold_mode='pay_gap'`; `own_open_gap`: `own_ban=0, pay_ratio=.55, monitoring=.2, pay_gap`; `own_open_incentive`: `own_ban=0, pay_ratio=1.2, monitoring=.2, withhold_mode='incentive'`; `own_open_gap_firm_ban`: `own_open_gap + firm_ban=.9` |
-| expected withholding under each regime | `h = h_max·max(0,1−pay_ratio)·(1−monitoring)·(1−own_ban)`: market_only **0.0072**, own_open_gap **0.144**, own_open_incentive **0.320**, firm_ban variant **0.144** |
-| binding assertions (run invalid otherwise) | non-market cells: `withheld > 1e-3` and `own_share > 0.10`; all cells: `q_pub` monotone in `q0`, `firm_price > 0`, no `event_log` surprises |
-| primary-outcome rule | **one pre-registered primary outcome per test**; the rest are a secondary family with Holm correction within family; report all cells, no selective reporting |
-| pairing / inference | paired per-seed differences; report mean, per-seed SD, 95% CI (t with 7 df), and the paired sign count; no pooling across N |
-| contamination notes to carry in every output | (i) `q0` scales **public and private** school quality (it is school-sector-wide, not public-only); (ii) `own_share`/`tut_firm_by_grade` mix contest-prep pupils with firm tutoring (`tut_any` includes `contest_e>1e-4`); (iii) `firm_price` is an **outcome** and under `firm_ban` its rise is partly *mechanical* (`p_firm·(1+firm_ban)`), so price is not mechanism evidence |
+| N / T / measure_from | N=600 screening, N=1500 confirmatory (per draft prereg); T=46, measure_from=18 |
+| **seeds** | **0–7 = EXPOSED / exploratory only** (Pilot-0 v3, N=1500); **confirmatory = 100–131 (32 matched seeds)**, identical seed sets across cells of a contrast, paired per-seed differences; no seed may appear in both blocks |
+| regimes | **v3 code values** (authoritative; the runner docstring is stale — see §10): `market_only` = own_ban .95, pay_ratio .55, monitoring .2, pay_gap (h≈.0072); `own_open_gap` = own_ban 0, pay_ratio .55 (h=.144); `own_open_incentive` = own_ban 0, pay_ratio 1.2, monitoring .2, incentive (h=.32); `own_open_gap_firm_ban` = own_open_gap + firm_ban .9 |
+| assertions | `E.unfired_events == []`; manipulation checks per probe; binding/no-op assertions (h, own access, S moved); any failure ⇒ cell reported invalid, not silently dropped |
+| inference | paired per-seed differences, seed-MC sd and 95 % CI; MDE declared pre-run; estimate below MDE ⇒ **indeterminate**, not "no effect"; Holm within a declared family |
+| determinism | same seed ⇒ bit-identical engine run; event-keyed RNG (contract §7) makes arms share exogenous draws |
 
-**Compute (measured, host, 1 process):** canonical HK N=300/T=46 = 9.1 s; scaling to N=600 ≈ 2.1–2.5× (candidate
-count and seats double; PL quadrature grows with n) ⇒ **≈20–23 s/run**. The 32-run core ≈ **11–12 CPU-min** (≈6 min at
-2 workers, ≈12 min at 1 worker); add 20 % margin → ~14 CPU-min. Mechanism-grade D2 (+16 runs) → ~18 CPU-min. Host-only
-screening is cheap; a box allocation is optional, not required.
+### 1.3 Outcome keys (current + required additions)
 
----
+**Current** (all in `E.R`, most in module `summary()`; exact names unchanged): `tut_rate`, `tut_k12_rate`,
+`tut_g12_rate`, `tut_by_grade`, `tut_by_q`, `tut_k12_rate_by_q`, `tut_k12_spend`, `tut_k12_spend_by_q`,
+`tut_own_by_grade`, `tut_firm_by_grade`, `own_share`, `firm_price`, `firm_rev`, `contest_spend_now`,
+`contest_resource_cost`, `contest_tax_paid`, `gov_tut_receipt`, `q_pub`, `withheld`, `ptr`, `teacher_pay`,
+`pub_spend`, `pub_budget`, `rationed`, `priv_share`, `elite_share`, `track_share`, `elite_prize_mean`,
+`track_prize_mean`, `completion_*`, `mpl_primary`, `mpl_lower`, `parity_*`, `learning_poverty`, `mean_years`,
+`L6`/`L9` (per child, `E.ALL`), `elite`/`q`/`track` (`E.ALL`), `inc_by_cred`, `formal_by_cred`, `floor_skilled`.
 
-## 2. D1 — school supply S and tutoring demand (omitted-S divergence)
-
-**Question.** Does the standard demand equation (inventory eq 58/65, no S) mispredict when school-supplied preparation
-changes? **Mechanism-rich prediction:** S enters the tutoring demand through the marginal value of learning and through
-substitution, so participation/spend fall as S rises and the income gradient attenuates; a school-blind demand equation
-predicts no effect.
-
-| cell | regime | overrides | runs | reuse status |
-|---|---|---|---|---|
-| D1A | `market_only` | `q0=1.0, p_firm=0.08` | 8 (seeds 0–7) | **cell definition reused from Pilot-0** (pilot N=1500; this is an N=600 re-execution) |
-| D1B | `market_only` | `q0=1.2, p_firm=0.08` | 8 | **reused cell definition** |
-| D1C *(optional)* | `market_only` | `q0=0.8, p_firm=0.08` | +8 | **NEW cell** (adds a third S level; only if the prereg wants a monotone response with a below-baseline point) |
-
-**Primary outcome:** paired Δ K-12 tutoring participation (`tut_k12_rate`, D1B − D1A).
-**Secondary (Holm):** Δ `tut_k12_spend`; Δ `tut_k12_rate_by_q` (income gradient); Δ `tut_k12_spend_by_q`; `own_share`;
-`firm_price`; `q_pub` (manipulation check); `L6`, `L9`, `mpl_lower`, `completion_upper` (learning side); `contest_e_mean`.
-
-**Predicted X (standard demand, no S):** `Δ participation ≈ 0`, `Δ spend ≈ 0` after S change; income gradient unchanged.
-**Predicted Y (mechanism):** `Δ participation < 0`, `Δ spend < 0`; the fall is larger at the extensive margin for the
-cash-constrained quintiles than for Q5 (gradient attenuation) because high-S substitutes for compensating tutoring.
-Probe prior (N=300/T=30, not the design): overall participation .528→.491 (−3.7 pp), spend 145.5→135.9 (−6.6 %).
-
-**Decision rule (pre-registered before running):**
-* Y supported iff paired mean Δparticipation ≤ **−2.0 pp** and Δspend ≤ **−3 %**, each with 95 % CI excluding 0;
-* X rejected iff also the CI excludes 0 (i.e. the "no effect" prediction is outside the interval);
-* **indeterminate** if |Δparticipation| < 1.0 pp (underpowered: extend seeds to 16 rather than reinterpret);
-* gradient attenuation is a secondary test: report Δ by quintile and the Q1–Q5 difference with CI; only claim it if the
-  pre-registered ordering holds in ≥7/8 paired seeds.
-**Manipulation check:** `q_pub` must rise with `q0` in the expected direction (`q = q0·min(1.25,(ptr_target/ptr)^.25)`,
-`schools.py:49`); if q_pub is flat the cell is void. **Contamination caveat:** q0 also raises private quality → the claim
-is about school-sector supply, not public-only S (isolating public S needs the wave-2 `school_prep` lever).
-
-Runs: **16** (24 with D1C) ≈ 6 (9) CPU-min.
+**Required additive series for the probes (design; no numerics change):** `own_count`, `firm_count`,
+`contest_only_count`; `own_spend`, `firm_spend`, `contest_only_spend`; `own_share_financial`
+(= `own_count/(own_count+firm_count)`, financial tutoring only, contest-only pupils excluded);
+`contest_prep_class` (0 none / 1 own / 2 firm / 3 contest-only / 4 own+contest / 5 firm+contest);
+per-quintile versions of `own_count`/`firm_count`/`own_spend`/`firm_spend`; A/R series: `A_mean`, `gap_mean`,
+`gap_by_q`, and pass/admit counts at fixed-R and at rank-R gates. These are reporting-only additions in
+`tutoring.py` (reporting block) and `core.py`/`sdg4.py` (A/R snapshots); they must not change any probability path.
 
 ---
 
-## 3. D2 — tutoring cap/ban: reduced-form vs withholding displacement
+## 2. EP-1 — matched public-feedback intervention (ENGINE PROBE, not a theory discriminator)
 
-**Question.** Inventory eq 86 (reduced-form cap/ban) predicts lower tutoring spending and participation with no supplier
-shift. The mechanism-rich model predicts **displacement**: a firm ban raises the firm price, collapses firm supply, and
-shifts demand to the own teacher **iff sell-back/withholding is available** (`sell = 1−own_ban > 0`, `h>0`). The
-discriminating part is not the total spend fall (both models predict some) but **supplier substitution and the
-interaction with the withholding channel**.
+**Purpose.** Test whether the *engine's* school-supply channel produces the substitution/learning response that a
+public-only effective-preparation lever should generate, with a matched no-effect control so that a null result is
+unambiguous. This is a probe of mechanism implementability — it does **not** test or rank any named theory. (The
+classical demand equation cannot see S by construction; the Lean omission lemma is definitional invariance,
+`Atlas/Claims.lean:129–132`.)
 
-### 3.1 Minimal D2 (fits the 32-run core)
+**Design status:** **NOT RUNNABLE TODAY** — the engine has no positive public-school effort/preparation lever
+(`PAPER_C_MODEL_GAP.md` §3.1; `q0` is a both-sector quality bundle, so it is *not* a valid substitute; Codex confirmed).
+The design is ready for the wave-2 `school_feedback` extension.
 
-| cell | regime | overrides | runs | reuse status |
-|---|---|---|---|---|
-| D2A | `own_open_gap` | `q0=1.0, p_firm=0.08` | 8 | **cell definition reused from Pilot-0** |
-| D2B | `own_open_gap_firm_ban` | `q0=1.0, p_firm=0.08` (i.e. D2A + `firm_ban=0.9`) | 8 | **reused cell definition from Pilot-0 v3** (regime R4; N=600 re-execution) |
-
-**Primary outcome:** paired Δ `own_share` (D2B − D2A).
-**Secondary (Holm):** Δ `tut_k12_spend`; Δ `tut_k12_rate`; Δ `firm_price`; Δ `firm_rev`; Δ `tut_k12_rate_by_q`;
-`contest_e_mean`; `withheld` (manipulation check); `L9`/`completion_upper` (learning side).
-
-**Predicted X (reduced-form ban):** total spend falls roughly in proportion to the firm share; `own_share ≈ unchanged`;
-relative price unchanged; participation falls uniformly.
-**Predicted Y (displacement):** `own_share` jumps (probe: 0.53→0.98), firm-side spend collapses while own-teacher spending
-rises (total spend falls less than the firm component), firm price rises, and participation falls **less** where the own
-channel is open. Probe prior (N=300/T=30): own_share .528→.978, K-12 participation .776→.627, spend 165.0→118.1,
-firm price 0.070→2.096.
-
-**Decision rule:** Y supported iff paired Δ`own_share` ≥ **+0.20** with CI excluding 0, and the firm-revenue collapse
-accounts for more than the total-spend fall (i.e. displacement absorbs part of it); X rejected iff both hold. The
-**firm-price prediction is NOT used as evidence** (mechanical in `p_firm·(1+firm_ban)`, `tutoring.py:96-101`). If
-Δ`own_share` < 0.05 → X not rejected (indeterminate mechanism in this regime).
-
-### 3.2 Mechanism-grade D2 (recommended if 16 extra runs are affordable)
-
-2×2 design isolating the withholding channel: **own channel** (`own_ban` 0.95 vs 0) × **firm ban** (0 vs 0.9), all at
-`q0=1.0, p_firm=0.08`, 8 seeds = **32 runs**:
-
-| cell | regime | purpose | reuse |
+| arm | lever | requirement | role |
 |---|---|---|---|
-| D2A′ | `market_only` (own ≈ closed, h≈.007) | control: no own displacement channel | reused cell definition (Pilot-0 R1) |
-| D2B′ | `market_only + firm_ban=.9` | ban without displacement | **NEW cell** (only regime/combination not already in Pilot-0 v3) |
-| D2A | `own_open_gap` (own open, h=.144) | displacement channel active | reused (Pilot-0 v3 R2) |
-| D2B | `own_open_gap + firm_ban=.9` | ban with displacement | reused (Pilot-0 v3 R4) |
+| **C0** | none | baseline cell | control |
+| **P** | `school_feedback = x` with `feedback_intensity = 0` (declared inert toggle), or a matched dummy that consumes the same teacher marking time | **must be bit-identical to C0** on every declared outcome; pre-run assertion | **no-effect negative control** (validates the comparison) |
+| **T** | `school_feedback = x` with `feedback_intensity = 1`, **public basic schools only**, costed in teacher marking time | manipulation check: S > 0 and teacher marking hours increase | treatment |
+| **B** | `q0` raised to give the same average school-quality increase (both sectors) | declared bundle contrast, not treatment | shows why `q0` cannot isolate public S (contamination demonstration) |
 
-**Key mechanism prediction (the discriminator vs a reduced-form cap):** the ban's participation loss is **larger when
-the own-teacher channel is closed** (`own_ban=.95`), because there is no substitute supplier — i.e. the
-`own-banned × ban` interaction on `tut_k12_rate` is negative. A reduced-form ban model predicts the same drop in both
-arms (no supplier substitution). Pre-register the interaction sign and test it with the paired 2×2 contrast.
-Runs: **32** ≈ 11–12 CPU-min (8 of them on a new cell, 24 re-executing pilot v3 cells at N=600).
-
----
-
-## 4. The 32-run confirmatory core (D1 + D2 minimal)
-
-| # | cell | regime | q0 | p_firm | seeds | purpose | new? |
-|---|---|---|---|---|---|---|---|
-| 1 | D1A | market_only | 1.0 | 0.08 | 0–7 | D1 baseline | reused cell |
-| 2 | D1B | market_only | 1.2 | 0.08 | 0–7 | D1 S↑ | reused cell |
-| 3 | D2A | own_open_gap | 1.0 | 0.08 | 0–7 | D2 no ban | reused cell |
-| 4 | D2B | own_open_gap_firm_ban | 1.0 | 0.08 | 0–7 | D2 ban | reused cell (Pilot-0 v3 R4) |
-
-= **32 runs, N=600/T=46, seeds 0–7 matched**, ≈11–12 CPU-min (≈6 min at 2 workers). This is a *confirmatory-ready*
-design: **all four cells are Pilot-0 v3 design points re-executed at N=600**, so no new design space is introduced and no
-exploratory cherry-picking is possible. Optional add-ons: D1C q0=0.8 (+8 runs, one new cell) and §3.2 mechanism-grade D2
-2×2 (+32 runs, of which 24 re-execute pilot cells and 8 are the new `market_only + firm_ban` arm) — total 72 runs if all
-extensions are used (≈26 CPU-min).
+* Matched aspects: same seeds (100–131), same cohorts, same teacher-time budget consumed in P and T (so any time-cost
+  channel is matched and cannot explain a T−P difference), same computational path; P and T differ only in
+  `feedback_intensity`.
+* **Primary outcome:** Δ K–12 tutoring participation, T − C0, with the P − C0 contrast as the negative control.
+* **Secondary (Holm):** Δ `tut_k12_spend`; Δ absolute `own_count`/`firm_count` and spends (not just shares);
+  Δ `A` (`L6`,`L9`), Δ fixed-R gap-close rate and rank-R admission probability; Δ `gap_by_q`; teacher marking hours and
+  any binding time/capacity indicator.
+* **Validating conditions:** P ≡ C0 bit-identical; S moved in T; no `unfired_events`; placebo and treatment consume the
+  same declared teacher-time budget.
+* **Decision rule:** probe is *informative* if validating conditions hold. Then:
+  **mechanism present** iff Δ participation ≤ −MDE_participation **and** Δ spend ≤ −MDE_spend with CI excluding 0;
+  **mechanism absent in this geometry** iff |Δ| < MDE with a CI that excludes the mechanism's minimum effect;
+  **indeterminate** otherwise (extend seeds within 100–131, never reuse 0–7). A "mechanism absent" result is an engine
+  limitation to report, **not** evidence about the world or about a theory.
+* **A/R reading:** the fixed-R prediction is `gap`-closing (A↑ ⇒ gap↓) **and** tutoring participation↓ (school
+  substitutes for bought preparation); the rank-R prediction is admission-probability↑ with rivals' A fixed. Report
+  both fixed-R and rank-R outcomes; do not pool them.
+* Compute (once the extension lands): C0/P/T/B = 4 arms × 32 seeds × N=600 ≈ 128 runs ≈ **45–50 CPU-min** host
+  (measured HK N=300/T=46 = 9.1 s ⇒ N=600 ≈20–23 s/run); a 16-seed screening subset (100–115) halves it.
 
 ---
 
-## 5. Model-zoo discriminating moments
+## 3. EP-2 — own access × firm constraint, with fixed denominators and absolute quantities (ENGINE PROBE)
 
-Each model gets 2–3 **observable** predictions, the discriminating counterpart(s), the current engine outcome keys that
-can test them, and a data verdict. "Engine" = simulated test bed; "DHS/ILSA" = empirical test with current data routes
-(`TUTORING_DATA_INVENTORY.md`); **PROXY** = only indirect measures; **UNFALSIFIABLE** = no current data/mechanism.
+**Purpose.** Establish how the engine's two shadow-education suppliers reallocate when one is constrained, under
+baseline-matched seeds — an **engine probe**, not a test of any named model. It supplies the mechanism evidence a later
+model-zoo test would need, with the measurement defects of the earlier D2 fixed.
 
-| # | model | observable predictions (2–3) | discriminates against | engine outcome keys | DHS/ILSA verdict |
-|---|---|---|---|---|---|
-| 1 | **Becker human capital** | (i) higher returns/income → more schooling investment; (ii) tutoring raises **learning** (`L6/L9`, `mpl_*`) and later completion, not only credentials; (iii) borrowing constraints bite (completion gap by income) | Spence (no learning effect), Hirsch (no absolute-skill claim), pure demand models | `completion_*`, `mpl_primary/lower`, `L6/L9`, `completion_*_q`, `inc_by_cred` | **PROXY** (DHS completion by wealth; no earnings, weak identification) |
-| 2 | **Mincer returns** | (i) log earnings linear in schooling; (ii) returns stable across contexts/supply regimes; (iii) experience–earnings profile (not modelled) | Becker (dynamic investment), Spence (credential jumps) | `inc_by_cred`, `formal_rate`, `theta_L`, `cred_step` (simulated returns); no experience variable | **UNFALSIFIABLE in DHS** (no earnings); engine can simulate but that is not evidence |
-| 3 | **Spence signalling / screening** | (i) credential premium with **flat L** (`formal_by_cred`, `inc_by_cred` vs same-L comparison); (ii) gate/elite pressure raises effort (`contest_e_mean`, `elite_share`) without learning gain; (iii) credential floors persist (`floor_skilled`, `queue`) | Becker/Hanushek (skills drive outcomes), Hirsch (relative rank drives demand, not employer screen) | `inc_by_cred`, `formal_by_cred`, `floor_skilled`, `queue`, `elite_share`, `contest_e_mean`, `L9` | **PROXY** (DHS education levels but no skills; PISA skills + education partially identify) |
-| 4 | **Hanushek production function** | (i) school inputs (q0, budget, PTR, teacher pay) raise learning; (ii) diminishing returns; (iii) class size/teacher quality matter | Hirsch/Bray (learning flat while spend rises), Spence | `q_pub`, `ptr`, `teacher_pay`, `mpl_*`, `L6/L9`, `completion_*` | **PROXY** (PISA/SEA-PLM school questionnaire; DHS has no school inputs) |
-| 5 | **Hirsch positional competition** | (i) tutoring/prep rises with fixed-seat contest intensity (`contest_e_mean`, `tut_k12_rate` vs gate share) while learning is flat; (ii) spending tracks relative rank (`elite_q5_share`, Q5–Q1 gap) not q; (iii) seat expansion lowers effort (inverted-U) | Becker/Hanushek (absolute skill), Bray (exam motive alone doesn't distinguish positional vs human-capital demand) | `contest_e_mean`, `tut_k12_rate`, `tut_k12_spend`, `elite_share`, `elite_q5_share_pct`, Q5–Q1 gap | **PROXY** (needs seat/admission + tutoring spend: PISA/CEPS + exam-seat data; DHS no) |
-| 6 | **Bray shadow-education demand** | (i) participation rises with exam stakes (`tut_k12_rate`, `tut_g12_rate` vs gate share); (ii) falls with household capacity (income gradient `tut_k12_rate_by_q`); (iii) responds to school supply S (`q0` cells D1) | Hirsch (Bray is demand-side, not positional mechanism), human-capital supply models | `tut_k12_rate`, `tut_g12_rate`, `tut_k12_rate_by_q`, `tut_k12_spend_by_q` | **PROXY/FALSIFIABLE IF VERIFIED**: PISA 2022 HK/PH tutoring items; SEA-PLM PH/KH; CEPS China (per inventory, items must be verified) |
-| 7 | **Biswal / Jayachandran withholding** | (i) `h>0` when pay gap and lessons sellable (`withheld`, `own_share`); (ii) own-teacher tutored share rises with h and falls with monitoring/own_ban (`own_share` vs regime); (iii) banning own tutoring lowers h (supply side) and own supply (`withheld`, `own_share`) | Bray (demand-only), Kaplan (firm supply), Becker (no teacher rent) | `withheld`, `own_share`, `tut_own_by_grade`, `q_pub`, `teacher_pay` | **UNFALSIFIABLE magnitudes** (teacher pay + own-provider data absent; see inventory §2/§3); engine-only mechanism |
-| 8 | **Kaplan-type test-prep supply** | (i) for-profit prep scales with exam stakes and ability to pay (`firm_rev`, `firm_price`, firm share vs income/`elite_logw`); (ii) entry expands capacity when demand high (`firm_openings`, `D/K`); (iii) bans raise price sharply (`firm_price`) — *mechanical in engine, not evidence* | Bray (household demand), state-provision (crowd-out), withholding (supply by teachers) | `firm_rev`, `firm_price`, `tutor_openings`, `contest_spend_now`, `tut_firm_by_grade` | **UNFALSIFIABLE firm-market data** (no entry/price/profit data; CEPS expenditure only); theory-only until verified |
-| 9 | **China state provision / DL model** | (i) state supply S crowds out private tutoring (`tut_k12_rate`, firm/own share vs q0/budget); (ii) for-profit ban shifts supply to own/residual and raises price (`own_share`, `firm_price`); (iii) state capacity expansion lowers household shadow share (`household_share_spending`) | market models (Bray/Kaplan), withholding (state as supplier) | `q0`/`budget_per_child` → `tut_k12_rate`, `own_share`, `firm_rev`, `household_share_spending`, `priv_share` | **PROXY** (CEPS China + 2021 DL timing; DHS no tutoring) |
-| 10 | **Household time allocation** | (i) time (not cash) is the binding constraint on tutoring; (ii) contest prep crowds out other study time; (iii) time binds more in higher grades | all cash-only demand models | **none** — no student/teacher time variables exist (`PAPER_C_MODEL_GAP.md` §1.4); `time_*` params not implemented | **UNFALSIFIABLE NOW** (no time-use data; engine lacks time budget; wave-2 extension + time-use survey needed) |
+**Status:** switches exist, but the probe is **NOT CONFIRMATORY-RUNNABLE** until the §1.3 additive series land
+(fixed `own_share` denominator + contest-prep classification + absolute counts/spends). The existing `own_share`
+denominator is `own/(any tutored)` where `tut_any` includes contest-prep pupils (`tutoring.py:429`), so it is
+contaminated; and only shares are available.
 
-### 5.1 Discriminating moment families (which moments separate which pairs)
+### 3.1 Design (2×2, baseline-matched)
 
-| family | moment / manipulation | separates | engine test | data status |
+| cell | `own_ban` | `firm_ban` | role |
+|---|---|---|---|
+| E00 | 0.95 (own channel ~closed) | 0.0 | own-closed, firm-open (baseline) |
+| E01 | 0.95 | 0.9 | own-closed, firm-constrained |
+| E10 | 0.0 (own open) | 0.0 | own-open, firm-open |
+| E11 | 0.0 | 0.9 | own-open, firm-constrained |
+
+Fixed: `q0=1.0`, `p_firm=0.08`, canonical HK base, N=600 (screening) / N=1500 (confirmatory), **seeds 100–131
+matched across all four cells**; pay_ratio/monitoring from the v3 code values (`.55`/`.2`) so withholding is active
+when own_ban=0 (h=.144) and near-off when own_ban=.95 (h≈.0072).
+
+* **Primary outcome:** `own_share_financial` (own vs firm among financial tutoring, contest-only pupils excluded),
+  E11 − E10 with E01 − E00 as the contamination-matched control (both have the firm constraint; only own access
+  differs).
+* **Secondary (Holm):** Δ absolute `own_count`, `firm_count`, `own_spend`, `firm_spend`, `contest_only_count`,
+  `contest_only_spend`; Δ K–12 participation and spend; Δ A/R outcomes (`gap_by_q`, rank-R admission probability);
+  `firm_rev`. **`firm_price` is reported but NOT used as mechanism evidence** (`firm_ban` mechanically raises the
+  price base, `tutoring.py:96–101`).
+* **Interaction prediction (engine-mechanism):** the firm constraint's effect on *participation* is larger (more
+  negative) when the own channel is closed (E01−E00) than when open (E11−E10), because displacement absorbs demand in
+  E11. Pre-register the difference-in-differences sign: `ΔΔ participation = (E01−E00) − (E11−E10) < 0`.
+* **Decision rule:** displacement present iff `Δ own_share_financial(E11−E10) ≥ +MDE_share` and the DiD interaction is
+  negative with CI excluding 0; absent iff both < MDE with CIs excluding the mechanism minima; indeterminate otherwise.
+  Binding assertions: E10/E11 `withheld > 1e-3`; E00/E01 `withheld < 5e-3`; the classification reconciles
+  `own_count + firm_count + contest_only_count == tutored_count` exactly.
+* **A/R reading:** access to the own channel should reduce the fixed-R `gap` for cash-constrained households (they can
+  buy back withheld S); rank-R incidence should shift toward higher quintiles if firm rationing is income-based.
+* Compute: 4 cells × 32 seeds × N=600 ≈ 128 runs ≈ **45–50 CPU-min**; 16-seed screening (100–115) ≈ 22–25 CPU-min.
+
+---
+
+## 4. Runnability matrix and required engine additions
+
+| item | status | blocker |
+|---|---|---|
+| EP-1 | design-ready | wave-2 positive public-school S lever (`school_feedback`, teacher marking time) + matched placebo semantics; no engine change in this revision |
+| EP-2 | design-ready | §1.3 additive reporting series + contest-prep classification; switches already exist; no probability change |
+| Model-zoo *competing* tests (Mode A) | needs EP-1/EP-2 + external data | see §6–§8; many moments data-blocked |
+| Model-zoo *complementary modules* (Mode B) | design-ready as a module stack; estimation needs external data | model fitting is not runnable in-engine as "evidence" |
+
+**No run may start** until (i) the Paper C prereg draft is amended per its own 8 blocking items + Codex protocol/
+Kaplan confirmation, (ii) this probe design is signed off, (iii) seeds 100–131 + engine/spec/runner hashes are frozen,
+(iv) Commander allocates host/box capacity.
+
+---
+
+## 5. Model zoo (revised)
+
+### 5.1 Row 8 — "Kaplan": Bryan Caplan, **V (unverified)**
+
+* Most likely **Bryan Caplan**, *The Case Against Education* (2018) and related work: education largely **signals**
+  rather than produces skills; **sheepskin/credential discontinuities**; **low returns to marginal schooling**;
+  large private returns with small social skill returns; education as a partly consumption/credential good.
+  **Primary source citation is UNVERIFIED** (tag **V**); per the programme's attribution rule the citation must be
+  checked before any use. The Codex reply says *probable*, so the row is provisional.
+* Testable predictions (engine/probe-level, with A/R): (i) **credential discontinuity**: income/formal-hiring jumps at
+  completion (credential boundaries) while A is continuous — compare `inc_by_cred`/`formal_by_cred` steps against the
+  smooth ∇A gradient; (ii) **signalling share** rises with cohort education/credential abundance (premia shrink as
+  credentials expand) — needs a massification scenario; (iii) **low marginal schooling returns** near completion —
+  sheepskin effect larger than the last-year learning effect on earnings/hiring.
+* What it discriminates against: Becker/Hanushek (skills drive outcomes), Mincer (smooth log-linear schooling return).
+  Complementary to Spence (both signalling; different welfare/consumption claims); the engine cannot separate their
+  welfare implications without a welfare block.
+* **If "Kaplan" is not Bryan Caplan:** (a) *Kaplan, Inc.* (test-prep company) is an **industry supplier case**, not a
+  general model → becomes a supply-form module datum (firm entry/price/market conduct), not a zoo theory row;
+  (b) *Kaplan–Meier* is an estimator → §9 methods, not a model row. Record the ambiguity and do not attribute
+  signalling claims to a different Kaplan.
+
+### 5.2 Zoo table (10 rows; 2–3 observable predictions each; V = citation unverified)
+
+Evidence verdicts use the programme's verified limitations (`SCIENTIFIC_CLAIM_LEDGER.md` EV-01…EV-03): PISA 2018/2022
+has participation/hours by ESCS for HK/PH/CN but **no expenditure and no own-vs-firm item**; **SEA-PLM 2019 has no
+tutoring item** (refuted route); **SEA-PLM 2024 framework item PA18A–D** is the candidate supply-form route (text
+verified, dataset/linkage V); CEPS China expenditure; **DHS E1–E8 cannot test the zoo** (no tutoring/learning/gate/seat/
+time/earnings/expenditure) and is auxiliary descriptive evidence at most.
+
+| # | model (status) | observable predictions (2–3) | discriminates against | engine/outcome keys | A/R reading | data verdict |
+|---|---|---|---|---|---|---|
+| 1 | **Becker human capital** | (i) higher returns/capacity ⇒ more investment; (ii) A rises with school/tutoring inputs and gaps close at fixed R; (iii) borrowing constraints bite | Spence/Caplan (flat A), Hirsch (rank-only), Bray (demand-only) | `completion_*`, `mpl_*`, `L6/L9`, `gap_*`, `inc_by_cred` | A↑ closes fixed-R gap | PROXY (DHS completion by wealth; no earnings) |
+| 2 | **Mincer returns** | (i) log earnings linear in schooling; (ii) smooth returns (no sheepskin jumps); (iii) stable returns across supply regimes | Caplan/Spence (discontinuities), Becker (investment dynamics) | `inc_by_cred`, `formal_rate`, `theta_L`, `cred_step` | smooth A/credential gradient | **UNFALSIFIABLE now** (no DHS earnings; engine-simulated returns are not empirical) |
+| 3 | **Spence signalling/screening** | (i) credential premium with flat A; (ii) effort rises with gate stakes without learning gain; (iii) credential floors persist | Becker/Hanushek, Hirsch (demand mechanism) | `inc_by_cred`, `formal_by_cred`, `floor_skilled`, `contest_e_mean`, `L9` | rank-R preserved, fixed-R gap unchanged | PROXY (PISA skills + education; DHS lacks skills) |
+| 4 | **Hanushek production function** | (i) school inputs raise A; (ii) diminishing returns; (iii) class size/teacher quality matter | Hirsch/Caplan (A flat), time-allocation (capacity) | `q_pub`, `ptr`, `teacher_pay`, `mpl_*`, `L6/L9` | A↑ ⇒ fixed-R gap↓ | PROXY (PISA/SEA-PLM school questionnaire; DHS no school inputs) |
+| 5 | **Hirsch positional competition** | (i) prep rises with fixed-seat intensity while A flat; (ii) spending tracks relative rank not q; (iii) seat expansion lowers effort | Becker/Hanushek (absolute skill), Bray (positional vs demand) | `contest_e_mean`, `tut_k12_rate`, `elite_share`, Q5−Q1 gap | rank-R not fixed-R | PROXY (needs gate/seat + spend; PISA/CEPS) |
+| 6 | **Bray shadow-education demand** | (i) participation rises with exam stakes; (ii) falls with household capacity; (iii) responds to S | Hirsch (mechanism), human-capital supply models | `tut_k12_rate`, `tut_g12_rate`, `tut_k12_rate_by_q` | demand side of A/gap | FALSIFIABLE-PARTIAL if PISA/CEPS items verified (participation/hours only) |
+| 7 | **Biswal / Jayachandran withholding** | (i) h>0 when pay gap + sellable; (ii) own-teacher share rises with h; (iii) banning sell-back lowers h and own supply | Bray, Caplan/Spence, Becker | `withheld`, `own_share_financial`, absolute `own_count`, `teacher_pay` | S lower ⇒ A lower unless bought back | **theory-only magnitudes** (no own-provider/teacher-pay data; engine mechanism only) |
+| 8 | **Caplan signalling critique (Kaplan = Bryan Caplan, V unverified)** | (i) sheepskin/credential discontinuities with continuous A; (ii) signalling share changes with credential massification; (iii) low marginal-schooling returns | Becker/Hanushek/Mincer (skills/smooth returns), Spence (welfare/consumption claims) | `inc_by_cred`, `formal_by_cred`, Vc credential steps, `gap` vs credential | rank-R/credential jumps vs fixed-R A | PROXY/V: citation unverified; engine can simulate sheepskin, external data needed for validation |
+| 9 | **China state provision / DL model** | (i) state S crowds out private tutoring; (ii) for-profit ban shifts supply to own/residual; (iii) state expansion lowers household shadow share | Bray/industry-supply models, withholding | q0/budget → `tut_k12_rate`, `own_share_financial`, `firm_rev`, `household_share_spending` | public S raises A; fixed-R gap↓, private demand↓ | PROXY (CEPS China + 2021 DL timing; DHS no tutoring) |
+| 10 | **Household time allocation** | (i) time, not cash, binds tutoring; (ii) contest prep crowds out study time; (iii) time binds more in higher grades | all cash-only demand models | **none** (no time variables today); needs wave-2 time budget | capacity-feasibility, not gap alone | **NOT-TESTABLE now** (no time-use data; engine lacks time budget) |
+
+---
+
+## 6. Zoo protocol: both competing and complementary
+
+### 6.1 Mode A — competing models on the same evidence
+
+* Every model declares **2–3 observable predictions with a sign/magnitude** on named A/R outcomes before any run.
+* A **discriminating moment** is usable only if two models predict *different signs/magnitudes* for the *same*
+  parameter change (see §7); otherwise the moment is descriptive, not discriminating.
+* Same evidence = the EP-1/EP-2 cells + external data (ILSA/CEPS); results reported for **all** models × moments
+  (family-wise), no selective reporting.
+* Decision: a model **holds** if its pre-declared predictions are confirmed within CI/MDE; **fails** the specific
+  pre-declared falsification test if the opposite sign is established; **indeterminate** if underpowered or mixed;
+  **not-testable** if the lever/data is absent. A fail is a *prediction* failing, not "the model is wrong".
+
+### 6.2 Mode B — complementary modules in one mechanism-rich model
+
+The competing models are also **modules** that can coexist and are jointly needed by Paper C:
+
+| module | source model(s) | what it adds to the engine (design mapping) |
+|---|---|---|
+| production of A | Becker + Hanushek | A accumulation from S, tutoring, family, ability (C1–C2 in `PAPER_D_EQUATION_AUDIT.md` §5) |
+| positional/rank R | Hirsch | fixed-seat contests, rank-R admission, contest prep (C9) |
+| credential/signalling value | Spence + Caplan | credential steps in beliefs/values, sheepskin, signalling share (Vc steps, `B`) |
+| supplier/withholding | Biswal/Jayachandran | teacher rent extraction, own-teacher supply (C8) |
+| market supply | Bray + industry/state | firm entry/price/profit + state provision (C6–C7) |
+| time/capacity | household time allocation | Feasible constraints (C5a/C5b) |
+
+Protocol: inspect/fit **nested module stacks** on the same evidence; a module is retained if it improves the
+pre-declared fit/moment match without violating the others' falsifiers; do not declare a single "winning" model. This
+is the "complementary modules" half of the Codex protocol, and the formal basis of Paper C's mechanism-rich model.
+
+---
+
+## 7. Discriminating moment families (A/R terms) and decision rules
+
+| family | moment / manipulation | separates | A/R formulation | engine/probe |
 |---|---|---|---|---|
-| **M-A gate pressure** | gate share / `elite_logw` ↑ → spend & prep ↑, learning flat | Hirsch/Spence vs Becker/Hanushek; Bray demand amplifies it | `contest_e_mean`, `tut_k12_rate`, `tut_k12_spend`, `L9` | proxy (gate + tutoring spend data needed) |
-| **M-B school supply S** | q0/budget ↑ → tutoring ↓ (substitution) and learning ↑ | Hanushek/Becker vs demand-only models; China state provision | D1 cells, `q_pub`, `tut_k12_rate`, `L6/L9` | proxy (PISA school inputs + ILSA learning) |
-| **M-C supplier availability** | own_ban × firm_ban → own↔firm substitution, price, participation | Biswal/Kaplan/state-provision vs reduced-form cap; D2 | `own_share`, `firm_rev`, `firm_price`, `tut_k12_rate` | withholding magnitudes theory-only |
-| **M-D credential vs skill** | same L, different credential → pay/hiring; same credential, different L | Spence vs Becker/Mincer | `inc_by_cred`, `formal_by_cred`, `floor_skilled`, `L9` | proxy (PISA skills + DHS education) |
-| **M-E time** | time-use vs participation; crowding-out of study time | time-allocation vs all cash models | **absent** (needs wave-2) | **data-blocked** |
-| **M-F state vs market** | q0/budget/firm_ban → private tutoring share and household spending share | China state provision vs Bray/Kaplan market models | `priv_share`, `household_share_spending`, `firm_rev`, `own_share` | proxy (CEPS + DL) |
+| **M-A fixed-R gap-closing** | school input S↑ | Becker/Hanushek vs Caplan/Spence (flat A) / time-capacity | A↑ ⇒ `gap(R_fixed, A)`↓ and pass rate↑ | EP-1 (needs S lever) |
+| **M-B rank-R competition** | gate share/contest intensity↑ | Hirsch/Spence/Caplan (rank/credential) vs Becker (absolute skill) | rank-R probability changes with rivals' A, not own A alone; effort↑, A flat | EP-2 + existing contest cells |
+| **M-C supplier access** | own_ban × firm_ban | Biswal/state/market-supply vs single-good demand models | own/firm absolute quantities and `gap_by_q` reallocation | EP-2 |
+| **M-D credential discontinuity** | credential boundary vs A continuity | Caplan/Spence vs Becker/Mincer | income/hiring jump at credential completion while `gap`/A continuous | engine sheepskin simulation; external earnings data needed |
+| **M-E time/capacity** | student/teacher time binding | time-allocation vs all cash-only models | `Feasible` constraints bind; crowding-out | not-testable now |
+| **M-F state vs market** | q0/budget/firm_ban | China state provision vs Bray/industry supply | S↑ ⇒ A↑, fixed-R gap↓, private demand↓ | EP-1 + EP-2; CEPS proxy |
 
-**Cross-model decision rule (per `MODEL_ZOO_SCOPE.md` §2):** *holds / fails / indeterminate-by-context*, with the
-context (L, S, supply form) named. No model may "win" on engine simulation alone; engine = mechanism plausibility,
-DHS/ILSA = empirical pattern, published estimates = baseline. Multiplicity: report the full model × moment family, no
-selective reporting.
-
----
-
-## 6. What must be pre-registered before any run
-
-1. **Engine pin**: commit + `core.py` sha256 (currently `846c9e0` / `e111397b…8e71`), frozen spec sha256, runner sha256.
-2. **Cells and seeds**: the exact four (or more) cells in §4 with `seed` list 0–7; declare which are pilot-cell
-   re-executions and which are new (D2B); no cell dropped after seeing results.
-3. **Primary outcome per test** (D1: `tut_k12_rate` paired Δ; D2: `own_share` paired Δ) and the ordered secondary
-   family with Holm correction.
-4. **Predicted sign and minimum effect size** for X and Y (D1: Δparticipation ≤ −2.0 pp, Δspend ≤ −3 %; D2:
-   Δown_share ≥ +0.20; mechanism-grade: negative `own-banned × ban` interaction on participation).
-5. **Decision rule and "indeterminate" zone** (powered/underpowered thresholds; if underpowered extend seeds to 16
-   rather than reinterpret).
-6. **Binding / no-op assertions** (h, own_share, q_pub monotone; `unfired_events == []`; regime classification).
-7. **Contamination declarations**: q0 scales both sectors; `own_share` mixes contest prep; firm price is mechanical.
-8. **Data layering**: engine cells are REPRODUCED SIMULATION; DHS/ILSA comparisons are separate evidence statuses; no
-   promotion of a model based on engine alone.
-9. **Negative-result preservation**: failed predictions are reported in full (Paper B precedent).
-10. **Compute envelope**: ≤ ~14 CPU-min host for the 32-run core; no box job without Commander allocation; results
-    committed under `results/paperC_confirmatory/` with manifest + sha256.
-11. **No post-hoc cells**: any new cell (e.g. q0=0.8, mechanism-grade D2) is declared before the run, not after.
-12. **Zoo tests reuse these cells**; any model-zoo claim that needs S/time levers awaits the wave-2 extension and is
-    marked theory-only until then.
+**Holds / fails / indeterminate / not-testable (binding wording):** identical thresholds and MDE discipline for every
+model; an unrejectable prediction is recorded as **not-testable**, never as evidence for the model. Underpowered
+outcomes are **indeterminate**; only a pre-declared falsification test with the opposite established sign is **fails**.
 
 ---
 
-## 7. Gotchas carried from the pilot (must be fixed in the prereg)
+## 8. Data status, unfalsifiable list, and the empirical-validation rule
 
-* **Runner docstring vs code mismatch (two inconsistencies, both must be fixed by taking the code as authoritative)**:
-  the `run_paperC_pilot0.py` module docstring says "96 runs / 3 supply regimes" and `pay_ratio=0.8`, while the code
-  (lines 28–34) has **4 `REGIMES`** (→ 4×2×2×8 = **128 runs**, matching commit `fbc1991`'s "v3 … 128 runs") and uses
-  **`pay_ratio=0.55`, `monitoring=0.2`**. The prereg must quote regime parameters from code + the v3 commit message,
-  not the header; the expected h values in §1 are computed from the code.
-* **Pilot-0 v3 = 128 runs, not 96**: the earlier 96-run figure was v2 (3 regimes); v3 added the `own_open_gap_firm_ban`
-  regime. D2B therefore reuses a v3 cell; the only genuinely new D2 cell is `market_only + firm_ban` in §3.2.
-* **Pilot-0 N=1500** (exploratory, v3 128 runs) vs this design N=600: cell *definitions* are reused, but results are new
-  executions — do not mix pilot numbers into confirmatory tables.
-* **`q0` scaling**: `q = q0·min(1.25, (ptr_target/ptr)^alpha_ptr)` (`schools.py:49`) — the cap is on the ratio term, not
-  on q0; q0 scales public **and** private quality 1:1.
-* **Withholding needs `own_ban<1`**: `sell = 1−own_ban`; `market_only` (own_ban .95) has h≈.007, so D2's no-displacement
-  control is valid; `own_open_gap` (own_ban 0) has h=.144.
-* **`firm_price` is an output**, and `firm_ban` mechanically raises the price base (`p_firm·(1+firm_ban)`) — price is not
-  mechanism evidence; use `own_share`/`firm_rev` decomposition.
-* **Contest-prep contamination**: `own_share` and `tut_firm_by_grade` include contest-prep pupils; D1/D2 primary
-  outcomes are participation/spend and own_share, with the contamination declared.
-* **Learning-side outcomes** (`L6/L9`, `mpl_*`, `completion_*`) are secondary here; a learning claim needs the wave-2
-  S/time decomposition (`PAPER_C_MODEL_GAP.md` §3).
+* **Empirical validation requires external observations.** Engine runs are REPRODUCED SIMULATION (mechanism
+  plausibility); the Lean statements are arithmetic/definitional (identity, omission-invariance, exact finite PL), never
+  empirical. No model may "win" on engine or Lean evidence alone; DHS/ILSA/CEPS comparisons are a separate evidence
+  layer and must be cited with source, survey year, population and denominator.
+* **Falsifiable-partial routes:** PISA 2018/2022 participation/hours by ESCS (HK/PH/CN; no expenditure, no
+  own-vs-firm); SEA-PLM 2024 PA18A–D supply-form item (**candidate** — framework text verified, dataset/linkage V;
+  SEA-PLM 2019 has *no* tutoring item, earlier route refuted); CEPS China expenditure; KOSTAT Korea provider-type.
+* **UNFALSIFIABLE / NOT-TESTABLE now (retained):** (i) **time allocation** (no engine time budget, no time-use data);
+  (ii) **Mincer returns** (no earnings in DHS; engine simulation is not evidence); (iii) **withholding magnitudes /
+  own-vs-firm provider mix** (no own-provider/teacher-pay data; engine mechanism only); (iv) **firm profits/entry**
+  (no firm-market data; engine price/entry rules are mechanical constructs); (v) **CES substitution sign / dynamic
+  complementarity** (engine production is additive today; needs `production='ces'` extension); (vi) **welfare ranking**
+  of supply regimes (no welfare block, no empirical welfare weights). These are pre-registerable tests, not results;
+  later documents must not imply they were tested.
 
 ---
 
-## 8. What stays unfalsifiable / data-blocked at this stage
+## 9. Pre-registration checklist (revised)
 
-* **Household time allocation** (M-E): no student/teacher time variables in the engine and no time-use data in DHS/ILSA;
-  wave-2 extension + time-use survey required.
-* **Mincer returns**: DHS has no earnings; engine-simulated returns are not empirical evidence.
-* **Withholding magnitudes and own-vs-firm provider mix** (Biswal/Jayachandran): teacher pay + own-provider data absent in
-  HK/PH; theory-only (engine mechanism can be tested, magnitudes cannot).
-* **Kaplan-type firm profits/entry** (commercial supply): no firm-market data; `firm_price`/entry rules are mechanical
-  constructs.
-* **CES substitution sign / dynamic complementarity** (eq 30/31/40): the engine's production is additive today; the sign
-  cannot be tested until the `production='ces'` extension lands.
-* **DHS-based tutoring moments**: DHS has no tutoring module — all shadow-education moments are ILSA/CEPS/theory-only,
-  not DHS-testable (state this in every model-zoo row).
+1. **Engine pin** (commit `846c9e0`, core `e111397b…8e71`), spec sha (`e5ddef6b…`), runner sha; every manifest records
+   all three; `unfired_events==[]` per run.
+2. **Seeds:** exploratory 0–7 (EXPOSED, Pilot-0 v3, excluded from confirmatory inference); confirmatory 100–131
+   (32 matched) frozen before any run; seed lists in the manifest; no overlap.
+3. **Cells:** EP-1 arms (C0/P/T/B) and EP-2 2×2 (E00/E01/E10/E11) with exact overrides and N=600 (screening) /
+   N=1500 (confirmatory); any additional cell declared before the run (no post-hoc cells).
+4. **One primary outcome per probe** (EP-1: participation T−C0; EP-2: `own_share_financial` E11−E10); ordered
+   secondary family with Holm; all outcomes reported.
+5. **Predicted signs + MDE** for every primary and key secondary (EP-1: Δparticipation ≤ −MDE and Δspend ≤ −MDE;
+   EP-2: Δown_share ≥ +MDE and negative DiD interaction).
+6. **Validating conditions:** EP-1 placebo P bit-identical to C0; S moved in T; matched teacher-time budget;
+   EP-2 `withheld` assertions and exact classification reconciliation (`own+firm+contest_only = tutored`).
+7. **Measurement definitions locked:** `own_share_financial` denominator (financial tutoring only), contest-prep
+   classification, absolute counts/spends, A/R outcomes (fixed-R gap vs rank-R probability reported separately).
+8. **Contamination declarations:** `q0` = public+private bundle (never used as clean S; EP-1 B-arm demonstrates it);
+   `firm_price` mechanical; `tut_firm_by_grade` mixing; own-teacher availability tied to `own_ban`.
+9. **Protocol both modes:** Mode A competing predictions (all models × moments, family-wise) and Mode B complementary
+   module stack; decisions holds/fails/indeterminate/not-testable only.
+10. **Evidence layering:** engine simulation vs Lean proofs vs external data kept separate; "empirical validation
+    requires external observations" stated in the prereg.
+11. **Kaplan resolution:** Caplan row stays **V** until the primary citation is verified; if it is a different Kaplan,
+    the row is reclassified per §5.1 before any use.
+12. **Compute envelope + process gate:** EP-1 ≈45–50 CPU-min host once the S lever lands; EP-2 ≈45–50 CPU-min once
+    the series land (16-seed screening halves both); no run before the Paper C prereg amendments + Codex protocol/
+    Kaplan confirmation + Commander allocation; negative results preserved.
+
+---
+
+## 10. Gotchas / open items
+
+* **Pilot-0 runner inconsistency:** `run_paperC_pilot0.py` module docstring says "96 runs / 3 supply regimes /
+  pay_ratio=0.8", but committed v3 code has **4 REGIMES (→128 runs)** and `pay_ratio=0.55`, `monitoring=0.2`
+  (matches commit `fbc1991`); the prereg must quote code + commit. Seeds 0–7 are therefore **exposed** in any case.
+* **`q0` is not an S lever** (public+private bundle); only EP-1's public-only `school_feedback` can test S cleanly.
+  The Paper C prereg draft's T1 (q0 0.85→1.15) is a *quality-bundle* test and must be relabelled (its own amendment 6);
+  EP-1 supersedes it once the extension lands.
+* **Existing `own_share` is contaminated** (`tut_any` includes contest prep, `tutoring.py:429`); EP-2 is confirmatory
+  only after the fixed denominator + classification + absolute series land.
+* **Rank-R vs fixed-R outcomes must not be pooled**; A/R vocabulary is binding for Paper C/D and the Lean lemmas.
+* **Kaplan ambiguity (V):** do not attribute signalling claims to a non-Caplan Kaplan; keep the tag until verified.
+* **Unfalsifiable items must stay flagged**; use "not-testable", not "no effect".
