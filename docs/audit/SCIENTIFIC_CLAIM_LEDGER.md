@@ -283,3 +283,12 @@ Manifest requirements listed. **Housekeeping (one-line, non-blocking):** top aut
 §8 A1 where inconsistent" because A1.4 still mentions the removed fallback; status DRAFT→FINAL on sign-off. **Final
 designation/compute gated on the housekeeping edit + explicit Codex protocol/Kaplan confirmation + manifest/capacity.**
 
+**PAPER C FINAL FREEZE (2026-11-25): PREREGISTRATION FINAL (design frozen).** Commit `32399c1`; file sha256
+`be4db13080b0537ad65c3d2bc2ae6f83ea6fd89a117da2c36c091dd2591b54fb`. Verified title FINAL; authority rule "§9 A3
+supersedes §8 A1 where inconsistent"; A1.4 all-cell fallback struck (separate 132 CPU-h budget only); §10 launch trail
+records Codex bridge ids and content (Kaplan = Bryan Caplan probable, V; protocol both competing models + complementary
+modules; D1/D2 engine probes EP-1/EP-2; seeds 0–7 exposed / 100–131 confirmatory; launch gated on frozen manifest +
+adjudication final + 1–2 slot reserve; X-29 at 6 workers). **One stale intro line (line 7) still says DRAFT/not-yet-final
+— correct to FINAL in the manifest-freeze commit (textual only).** No screening/confirmatory compute until manifest
+frozen + reserve.
+

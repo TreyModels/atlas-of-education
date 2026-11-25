@@ -961,6 +961,25 @@ designation and any compute remain gated on:** (i) the authority/status housekee
 protocol/Kaplan confirmation recorded in the launch trail**, (iii) the launch manifest and 1–2 slot capacity reserve.
 Screening is compute and must not start before all three.
 
+**FINAL FREEZE VERIFIED — PREREGISTRATION FINAL (design frozen 2026-11-25).** Commit `32399c1`; file sha256
+**`be4db13080b0537ad65c3d2bc2ae6f83ea6fd89a117da2c36c091dd2591b54fb`**: title reads PREREGISTRATION FINAL; authority
+rule now **"§9 A3 supersedes §8 A1 where inconsistent; latest amendment + Appendix wins"**; **A1.4 all-cell fallback
+struck** ("REMOVED by A3.2; all-36 ≈132 CPU-h is a separate re-approved budget only, not within the ≤36 CPU-h
+envelope"); **§10 launch trail** records the Codex bridge ids (`a1642bdf…`, `82089ecd…`, `017027a1…`) with
+**Kaplan = Bryan Caplan (probable, UNCONFIRMED, tag V; primary source cited; no straw man)**, protocol = **both
+competing models on the same evidence AND complementary modules**, **D1/D2 = engine probes** (EP-1 matched
+public-feedback with `feedback_intensity=0` placebo; EP-2 own-access × firm-constraint with baseline-matched seeds,
+fixed `own_share_financial` denominator, contest-prep classification, absolute own/firm quantities), **seeds 0–7
+exposed / 100–131 confirmatory**, and launch gated on frozen manifest + adjudication final + 1–2 slot Luna/MASSENG
+reserve (X-29 at 6 workers). **Adjudication record: PREREGISTRATION FINAL (design frozen).**
+
+**One stale line to correct before the manifest is frozen (textual, non-blocking for design):** the intro paragraph at
+line 7 still says "Status: DRAFT for adjudicator review … Not yet preregistered-final", contradicting the title and §10
+("Preregistration status: FINAL"). Replace it with "PREREGISTRATION FINAL (design frozen 2026-11-25; no compute yet)"
+in the same commit that freezes the manifest. No screening/confirmatory compute until the manifest is frozen and the
+1–2 slot reserve is in place.
+
+
 ## 5. Evidence-status register (programme level)
 
 | Status | Count (paper + programme rows) | Notes |
