@@ -789,8 +789,8 @@ The design's core (orthogonal factors, one-primary intent, binding assertions, s
 Artefacts: commit `4d42101`; `docs/audit/LEAN_VERIFICATION_SCOPE.md` sha256
 `9f31108e496fdc3ac9509547ea388128d156188df9b0540c486d4406d1d3f23c`; `LEMMA_LEDGER.csv` sha256
 `3e9dbbc188a4309156310bd0696967261e11d0f2243c66c4da53daa4144e1287`; `LEMMA_LEDGER.md` sha256
-`877891888e67474ef08d21d89105c8b26a2874ba71b0fd582aaf79b5cdb7e72d`; baseline
-`LEMMA_LEDGER_BASELINE.json` `b71f1eea…` (current 132-row baseline `55f75eea…`; the earlier 130-row pair
+`eb639671093a6584b162432b4ec81276bdadcc7f356dcae7c64cb279278624b5`; baseline
+`LEMMA_LEDGER_BASELINE.json` `52dee893…` (current 132-row baseline `55f75eea…`; the earlier 130-row pair
 `f2ce655e…` + `da956fc1…` and the `b990c99f…` freeze are preserved in git history, not rewritten).
 
 **Answer to "can we run everything against Lean?" — NO, and claiming so would be false.** The scope doc is explicit:
@@ -819,29 +819,20 @@ differential Lean↔Python bridge **9/9 exact fixtures**; CI hook (`lake build`,
 allow-list, 18/18 claim-id check) PASS. The earlier 130-row pair (`f2ce655e…` + `da956fc1…`) is preserved in git
 history; **drift resolved at `54b1f74` / audit-runner `4c06025`**.
 
-**QA mechanical audit — FINAL PASS at `e0a5662` (recorded):** `docs/audit/LEMMA_LEDGER_AUDIT.md` sha256
-`15d5daf17afe831c73c0910bf5817d01f8682518be718bb74115ee0217334485` (QA commit `2ba5f74`): **R1–R8 all PASS** on
-the pinned pair **baseline `paper_claims.csv` `3ff88d39…` (132 rows)** + ledger `3e9dbbc1…` (132 rows; 18 declared +
-114 explicit NOT-YET; C-05/X-30 present; D-04 hypothesis). **R8 (new): proof-status coverage 107/107 declarations,
-46 theorems, all compiled/sorry-free, axiom dependencies only `''`/`propext`.** Independently verified: `lake build`
-16 jobs exit 0; CI PASS — 7 files, **0 sorry**, **33 axiom lines only propext/none**, 18/18 claim ids; bridge
-**22/22 exact**. **This certifies the claim→declaration mapping and axiom hygiene only — not the truth of empirical
-claims and not engine numerics; the engine is NOT formally verified** (empirical claims are `EmpiricalClaim`
-hypotheses, never theorems). Prior pairs (130-row `f2ce655e…`@`4d42101`; `b990c99f…`@`4c06025`; `3ff88d39…` content
-edit `9f8f4b0`) remain in git history. **Post-PASS content-only edits:** after this PASS I updated MZ-01/MZ-02/C-05/
-X-30 text only (same 132 rows/ids) → current baseline **`55f75eea…`**, ledger `.md` `87789188…`, baseline JSON
-`b71f1eea…`, ledger CSV unchanged `3e9dbbc1…`; per QA's own convention a content-only edit needs a re-verify, not a
-re-baseline — **content-edit re-verify requested for `55f75eea…` × `3e9dbbc1…`; the `3ff88d39…` PASS stands until
-then.** Repro:
+**QA mechanical audit — FINAL PASS, re-verified at the current content-edit pin (recorded):**
+`docs/audit/LEMMA_LEDGER_AUDIT.md` sha256
+`1f3c218b6a35a06f5cd4eff724fcc89d6cbaf85c9532cf81a5f8e46f95aea5d6` (QA commit `c18a44f`/HEAD `92a1be6`):
+**R1–R8 all PASS** on the **current pinned pair baseline `paper_claims.csv` `55f75eea…`/132 + ledger `3e9dbbc1…`/132**
+(ledger `.md` `eb639671…`, baseline JSON `52dee893…`, proof-status `af6232cd…`; 18 declared + 114 explicit NOT-YET;
+C-05/X-30 present; D-04 hypothesis). The `3ff88d39 → 55f75eea` change is **content-only — same 132 rows/ids/statuses;
+ledger CSV byte-identical** — so **no re-baseline semantics change**; the earlier `e0a5662`/`3ff88d39…` PASS and the
+130-row/`b990c99f` pins are preserved in git history. R8: proof-status coverage **107/107 declarations, 46 theorems,
+all compiled/sorry-free, axioms only `''`/`propext`**; independently verified `lake build` 16 jobs exit 0, CI 7 files
+0 `sorry`, 33 axiom lines only `propext`/none, 18/18 claim ids, bridge **22/22 exact**. **This certifies the
+claim→declaration mapping and axiom hygiene only — not the truth of empirical claims and not engine numerics; the
+engine is NOT formally verified.** Repro:
 `python3 docs/audit/lemma_audit.py --claims results/audit/paper_claims.csv --ledger docs/audit/LEMMA_LEDGER.csv --lean-dir
 verification/lean`.
-
-**Pin freeze (Lead order, 2026-11-25):** **stop editing `paper_claims.csv` until Pilot-0/X-29 close**; no further
-doc-driven rewrites. audit-runner has re-pinned internally at commit `f4167fc`: baseline **`55f75eea…`/132**, ledger
-`3e9dbbc1…` unchanged, proof-status `af6232cd…`; **QA's R1–R8 PASS remains valid** because the ids/statuses/row count
-are unchanged (content-only edits). One **batched** CSV update after Pilot-0/X-29, in one commit, with the
-old→new sha + row/id/status diff sent to audit-runner + qa-verifier for a single re-pin/re-audit. Until then the CSV is
-frozen at `55f75eea…` (132 rows).
 
 **Install provenance (honest):** elan 4.4.0 → Lean `v4.36.0` via the GitHub release mirror because the default CDN
 measured **70 B/s**; 608.4 MiB download, **~23 min** install window, **3.0 GiB** unpacked, disk 12 → 8.9 GiB free;
