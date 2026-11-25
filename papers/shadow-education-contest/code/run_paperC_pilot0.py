@@ -1,5 +1,12 @@
 #!/usr/bin/env python3
-"""Paper C PILOT-0 (REVISED, EXPLORATORY) — supply-form emergence with existing engine switches only.
+"""Paper C PILOT-0 v3 (REVISED, EXPLORATORY) — supply-form emergence with existing engine switches only.
+
+CODE-AUTHORITATIVE DESIGN (docstring is the contract): 4 regimes x 2 S proxies (q0 1.0/1.2) x 2 private-supply levels
+(p_firm 0.03/0.08) x 8 matched seeds = **128 runs**; N=1500; base = params.HK.primary (canonical HK gate list fixed).
+Regime params: market_only {own_ban .95, pay_ratio .55, monitoring .2, pay_gap}; own_open_gap {own_ban 0, pay_ratio
+.55, monitoring .2, pay_gap}; own_open_incentive {own_ban 0, pay_ratio 1.2, monitoring .2, incentive}; own_open_gap_
+firm_ban {own_open_gap + firm_ban .9}. Binding assertions: non-market regimes require withheld>1e-3 and own_share>0.1.
+(An earlier v2 draft used 3 regimes and pay_ratio .8; the live v2 pilot was superseded before the 8-worker restart.)
 
 Corrections applied (engine-core mapping): withholding in canonical HK/KR is already zero because pay_ratio=1.2, so
 withholding regimes MUST set pay_ratio<1 (or withhold_mode='incentive') AND own_ban<1; firm_price is an OUTCOME (the
