@@ -162,7 +162,10 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--seeds', default=f'0-{NSEEDS - 1}'); ap.add_argument('--workers', type=int, default=8)
     ap.add_argument('--out-dir', default=os.path.join(REPO, 'results', 'newgen_gate'))
+    ap.add_argument('--fees', default='0.19,0.00', help='comma list of fee regimes; use 0.19 for the fee-free subset')
     a = ap.parse_args()
+    global FEES
+    FEES = [float(x) for x in a.fees.split(',')]
     return driver([int(x) for x in a.seeds.split('-')] if '-' in a.seeds else [int(a.seeds)], a.workers, a.out_dir)
 
 if __name__ == '__main__':
