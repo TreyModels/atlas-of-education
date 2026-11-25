@@ -635,3 +635,11 @@ recorded here when it lands). Box lanes: Paper B 8 workers = **8.0/10 (80 %)**, 
 cap respected, no oversubscription.
 **Paper B: 888 seed rows**; rate **~12.7 rows/min** on the KR-class arms (vs 22.6 on HK) → remaining primary 912 rows
 ≈ 72 min → **primary ETA ~18:30–18:35**, full 2,700 **~19:40–20:00**.
+
+### 13.13 Progress 17:27 — KR wave dominant, 993/1,800 primary rows
+
+Box: Paper B **8 workers**, cgroup **8.0/10 (80 %)**, control 1, GPU lane CPU-light, g2a off-box (host). Paper B primary
+progress **993/1,800 seed rows**; rate on the KR wave **~12.3 rows/min** (105 rows in 8.5 min) — KR runs cost ~2× HK.
+Arm state: 7 workers on KR-class arms (~19–20 min each), 1 finishing slow HK CF2b (51:24), 1 on HK CF4b (15:43).
+Checkpoints now include `ckpt_KR_*_TRACKED`. **Primary ETA ~18:30–18:45; full 2,700 ~19:40–20:00.** One slot free by design
+(held for the gate-grid fee pilot when a Paper B worker frees, per Lead).
