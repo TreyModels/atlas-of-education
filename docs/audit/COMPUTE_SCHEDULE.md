@@ -564,3 +564,22 @@ out sha `edd525e3…cbc3f`), interrupted_nonzero_no_final_json_checkpoints_prese
 (rc=0, `resumed=true`, computed=11, values equal to straight), aggregate_only_zero_compute_value_equal **PASS**
 (rc=0, computed=0, values equal). Intermediates `smoke_work/{ckpt_ref,ckpt_int,ref/int/agg JSONs}` kept; evidence tar
 copied to `docs/audit/results/box_evidence/`.
+
+### 13.8 Incident 16:47–16:50 — transient oversubscription from g2a multi-seed fan-out (resolved naturally)
+
+- **What happened:** commander's multi-seed Jacobian (`/root/work/g2a/identify_multiseed.py`) spawned **10 concurrent
+  `eval_one.py` subprocesses** (5 seeds × 2 starts per finite-difference column) on top of Paper B's 8 workers + forecast 1
+  → **19 compute processes against the 10-CPU quota**; cgroup read 10.0/10 while every process was throttled to a share.
+  Paper B row growth dipped during the ~2 min burst.
+- **Action:** Lead authorised a group pause; at the moment of execution (16:50:19) the entire g2a tree had **already exited**
+  — no processes remained, so **nothing was killed, paused, or destroyed**. Paper B (priority-1) was never restarted.
+- **State after (16:50:40):** Paper B newgen 8 workers = **8.0/10 (80 %)**; no g2a/forecast/task-13 processes; control 1.
+  **Lesson recorded:** any lane job whose design spawns "one isolated subprocess per seed" must cap its own concurrency
+  (≤2 when Paper B runs at 8). Isolation per eval is fine; simultaneous fan-out to 10 is a cap violation.
+- **Row rate:** **326 seed rows / 14.5 min = 22.5 rows/min aggregate** (8 HK arms at ~3 rows/min/arm ≈ 33 min/arm) →
+  primary ETA **~18:50–19:00**, full 2,700 ≈ **20:00–20:20**. On pace.
+- **g2a multi-seed result: FAILED LOUDLY** — `identify_ms.log` 0 bytes, `eval_ms/` partial JSONs, **no
+  `identifiability_multiseed_report.json`**; rerun on host or after Paper B primary with an internal concurrency cap ≤2.
+- **Forecast (e): DONE** 16:50 — `/root/work/forecast/forecast_results.json` (3,223 B) sha256
+  `7346e1f3ded039cf4d82504ed62ccd490387126300155580ee7f0677299f755d`, label "NEW GENERATION — simulation forecast with
+  genuine held-out horizons; empirical target = REPRODUCED EMPIRICAL ANALYSIS (fresh WDI)".
