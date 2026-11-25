@@ -1,6 +1,6 @@
 {
   "document": "Paper C CONFIRMATORY launch manifest (pre-launch; cites A4 + frozen passers + committed runner)",
-  "status": "FROZEN_APPROVED_A5 (16-seed truncation; adjudication 9506640 + A5 1c51f17; launch observed)",
+  "status": "FROZEN_APPROVED_A5 (clean A5 run confirm_a5; canonical A5 aa1d0bd; old overrun killed/abandoned)",
   "frozen_utc": "2026-11-26",
   "stage": "PAPER_C_STAGE=confirmatory",
   "citations": {
@@ -158,19 +158,48 @@
     "lead_allocation_observed": "confirmatory launch on box 2026-11-26 ~07:20 CST"
   },
   "launch_observed": {
-    "driver_pid": 1364,
-    "command": "PAPER_C_STAGE=confirmatory PAPER_C_P12_MODE=pay_gap ... run_paperC_screening.py driver --workers 10 --seeds 100-131 --n 1500 --t 46 --cells 'S0.85|L0.25|A|P55,S0.85|L0.25|C|P55,S0.85|L0.25|A|P12,S0.85|L0.25|C|P12,S0.85|L0.45|A|P55,S0.85|L0.45|C|P55' --allow-subset --analysis-commit 8121bf6 --out-dir /root/work/paperC/confirm_final",
+    "run": "confirm_a5 (CLEAN A5 run)",
+    "driver_pid": 2273,
+    "workers": 6,
+    "seeds": [
+      100,
+      101,
+      102,
+      103,
+      104,
+      105,
+      106,
+      107,
+      108,
+      109,
+      110,
+      111,
+      112,
+      113,
+      114,
+      115
+    ],
+    "n_seeds": 16,
+    "out_dir": "/root/work/paperC/confirm_a5",
+    "log": "/root/work/paperC/confirm_a5.log",
+    "started_utc": "2026-11-25T23:34Z (~07:34 CST)",
+    "command": "PAPER_C_STAGE=confirmatory PAPER_C_P12_MODE=pay_gap ... run_paperC_screening.py driver --workers 6 --seeds 100-115 --n 1500 --t 46 --cells <6 frozen passers> --allow-subset --analysis-commit b825796 --out-dir /root/work/paperC/confirm_a5",
     "runner_sha256_on_box": "ddeffe42026eff865e939a4d8276171bb9b124fca52c2de9edeaaad909e40aac",
-    "workers_configured": 10,
-    "cells_active": 6,
-    "out_dir": "/root/work/paperC/confirm_final",
-    "log": "/root/work/paperC/confirm_final.log",
-    "reserve_note": "configured --workers 10 but only 6 cells exist, so instantaneous load is 6 processes; the 1-2 slot Luna/MASSENG reserve was NOT explicitly enforced by this launch (recorded as a deviation; no external job was affected at launch)"
+    "aggregation": "driver aggregates itself at completion with the committed runner code (n_runs=96/n_cells=6); the standalone aggregator paperC_confirm_aggregate.py (committed 0324205) is retained for the record but is NOT used",
+    "old_overrun": {
+      "run": "confirm_final",
+      "driver_pid": 1364,
+      "workers": 10,
+      "analysis_commit": "8121bf6",
+      "status": "KILLED/ABANDONED \u2014 no outcomes used, no aggregation; aggregator never ran there (no paperC_confirmatory.json / CONFIRM_RESULTS_DONE); stop16/snap8 watchdogs stopped by Lead order"
+    },
+    "reserve_note": "6 workers on a 10-CPU quota; 4 CPUs left idle for possible Opis/Opus; Luna reserve status per Lead"
   },
   "amendment_A5": {
     "file": "docs/audit/PAPER_C_A5_SEED_TRUNCATION.md",
     "sha256": "365155965423b4f9171b5ad69a87dd0ef11c0710b5216190d043beebfb16bf99",
     "adjudication_commit": "1c51f17",
     "rule": "exactly 16 matched seeds 100-115; 116-131 excluded; estimands/Holm unchanged; no optional stopping; precision SE x sqrt(2); report A5 interim precision; envelope <=24 CPU-h"
-  }
+  },
+  "provenance_note": "The clean run was launched with --analysis-commit b825796, which is a SUPERSEDED DUPLICATE A5 record (PAPER_C_A5_16SEED_TRUNCATION.*, mapping b825796 -> canonical A5: same rule, no analysis). The canonical A5 record is docs/audit/PAPER_C_A5_SEED_TRUNCATION.md sha 365155965423b4f9171b5ad69a87dd0ef11c0710b5216190d043beebfb16bf99 (commit aa1d0bd, approved 1c51f17). The final confirmatory artefact/manifest MUST cite the canonical A5; b825796 must not be presented as authoritative. This document is the authoritative manifest (sha recorded in the commit)."
 }
