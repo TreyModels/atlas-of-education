@@ -1018,6 +1018,26 @@ flips quantified**. Until then: **no GPU runs; no substitution; no performance c
 **Status: METHODS ARTEFACT (X-31) — recorded for traceability; the six-status scientific taxonomy does not apply; no
 GPU numbers claimed. Parity gate OPEN.**
 
+## 4O. Paper C Pilot-0 payload — **EXPLORATORY / PENDING QA (X-Pilot); not a result**
+
+Payload: `/root/work/paperC/results/paperC_pilot0_results.json`, **69,286 B**, sha256
+**`c6e50bc1e86f8d41a8d8a332e860898445de4ce90f8f9ec7d004e438fa523f9d`**; **128/128 rows**, 16 cells (4 regimes ×
+q0 {1.0, 1.2} × p_firm {.03, .08}) × 8 seeds (0–7); wall **6860.01 s ≈ 1 h 54 min** at 8 workers, all cells exited
+cleanly; 16 `ckpt_*.jsonl` + `MANIFEST_SHA256SUMS.txt`. Copied to `~/neon-boot/qa/incoming/paperC_results/` (payload +
+16 ckpts + MANIFEST; `sha256sum -c` all OK; bundle `paperC_results_bundle.tar.gz` sha `ec868a57…a4fb0b`); qa-verifier
+notified. Manifest: engine `846c9e0`, core `e111397b…`, spec `e5ddef6b…`, runner `bc833b76…`, status
+**EXPLORATORY**, `withholding_note`/`contamination_note` recorded.
+
+**Status: EXPLORATORY / HYPOTHESIS-GENERATING — PENDING QA SIGN-OFF; not a result, not confirmatory, no Paper C claim
+moved.** QA validator checks A1–A9 (128/16, seeds, params, no-op guards on the 12 non-market cells, engine pin, spec
+provenance, `unfired_events`, exploratory label). **No Paper C claims until (a) QA sign-off and (b) X-29 closes; CSV
+remains frozen.**
+
+**X-29 diagnostic (observed, not adjudicated):** restarted at **10 workers** from checkpoints (driver `46562`), rows
+**473 preserved** (resume confirmed, no recomputation), cgroup 100%, **DIAGNOSTIC-ONLY**, `results_diag/` separate;
+measured rate/ETA to be published. This is an operator capacity update from the earlier 6-worker plan; it does not
+affect X-27 (closed) or any primary/secondary result.
+
 ## 5. Evidence-status register (programme level)
 
 | Status | Count (paper + programme rows) | Notes |

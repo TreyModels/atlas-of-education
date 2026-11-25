@@ -310,3 +310,17 @@ parity (fixtures + discrete-winner comparison + full-wall benchmark) with Comman
 `tests/test_contest_math_gpu.py` and sign off only on ≤1e-7 agreement with flips quantified. Methods artefact; six-status
 taxonomy does not apply.
 
+---
+
+**X-PILOT — Paper C Pilot-0 payload (2026-11-25): EXPLORATORY / PENDING QA, not a result.**
+`/root/work/paperC/results/paperC_pilot0_results.json` 69,286 B sha256
+`c6e50bc1e86f8d41a8d8a332e860898445de4ce90f8f9ec7d004e438fa523f9d`; **128/128 rows**, 16 cells (4 regimes × q0
+{1.0,1.2} × p_firm {.03,.08}) × 8 seeds (0–7); wall **6860.01 s ≈1 h 54 min** at 8 workers; 16 ckpts +
+`MANIFEST_SHA256SUMS.txt`; QA copy `~/neon-boot/qa/incoming/paperC_results/` (`sha256sum -c` OK; bundle
+`paperC_results_bundle.tar.gz` sha `ec868a57…a4fb0b`); qa-verifier notified. Manifest engine `846c9e0`/core
+`e111397b…`/spec `e5ddef6b…`/runner `bc833b76…`, status EXPLORATORY with withholding/contamination notes. **Status:
+EXPLORATORY/hypothesis-generating, pending QA A1–A9; not a result; no Paper C claim moved.** No claims until QA sign-off
++ X-29 close; CSV frozen. **X-29 (observed):** restarted at **10 workers** (driver `46562`), 473 rows preserved (resume
+confirmed), cgroup 100%, DIAGNOSTIC-ONLY `results_diag/` separate; rate/ETA to be published; operator capacity update
+from the earlier 6-worker plan, no effect on X-27/primary results.
+
