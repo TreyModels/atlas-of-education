@@ -85,6 +85,11 @@ _GATE_ALIAS = {'bar': 'fixed_bar'}
 _GATE_NUMERIC_FIELDS = ('bar', 'share', 'cut0', 'elite_logw', 'r', 'alpha', 'x0', 'track_bonus', 'lam0')
 _TRACK_PRIZE_KEYS = ('quality_mult', 'earnings_logw', 'g12_track_bonus')
 
+#: Parameters consumed when the Engine is constructed (arrays/tables computed in ``__init__``).  A calendar
+#: ``events`` entry that sets one of these is accepted by ``p.update`` but cannot change the simulation; the
+#: Engine warns about it (see ``_validate_events``).
+EVENT_CACHED_PARAMS = frozenset({'levels', 'child_wage', 'seed', 'T', 'measure_from'})
+
 #: Canonical Korea Gate-9 specs (contract §3). Data, not fitting: the three track_prize magnitudes are
 #: PRE-REGISTERED STRUCTURAL PLACEHOLDERS, not estimates. ``earnings_logw=0.15`` reuses the old phantom G9
 #: ``elite_logw`` value so the repair converts an unpriced prize into a delivered one; ``quality_mult`` and
@@ -291,8 +296,61 @@ class Engine:
         self.frozen = None                            # frozen implied wedge after anchor_stop
         self.pass_rate = np.ones(self.nlev)           # recent gate pass rates (used by anchored enrolment)
         self.comp_count = {}                          # cohort -> completions by level (for anchoring)
+        self._validate_events()
         for m in self.modules:
             m.setup(self)
+
+    # ------------------------------------------------------------------ calendar events
+    def _validate_events(self):
+        """Make silent calendar-event no-ops loud (Gate-1a follow-up; forecast-(e) defect).
+
+        ``events`` are matched against **calendar years** ``self.year(t) = start_year + t``, never against the
+        simulation index ``t``; an event scheduled outside ``[start_year, start_year + T - 1]`` can never fire.
+        ``engine/policy.py`` also shows the expected convention.  An event may instead use ``year_t=<t>`` for a
+        simulation-index year.  The method warns (never raises for reachable-data compatibility) for:
+        * event years outside the simulated calendar window,
+        * events that set a construction-cached parameter (``EVENT_CACHED_PARAMS``),
+        * events that set a parameter which also has a ``paths`` entry (the path is re-applied each year, so the
+          event is a one-year override only).
+        ``self.unfired_events`` keeps the unreachable ``(year, label)`` pairs so callers/tests can assert on them.
+        """
+        p = self.p
+        lo = int(p['start_year'])
+        hi = lo + int(p['T']) - 1
+        path_names = set(p.get('paths', {}) or {})
+        self.unfired_events = []
+        for ev in p.get('events', []) or []:
+            if not isinstance(ev, dict):
+                continue
+            label = ev.get('label', '')
+            year = ev.get('year', None)
+            year_t = ev.get('year_t', None)
+            if year is None and year_t is None:
+                warnings.warn(f"calendar event {label!r} has neither 'year' nor 'year_t'; it will never fire",
+                              UserWarning, stacklevel=3)
+                self.unfired_events.append((None, label))
+                continue
+            if year is not None and year_t is not None:
+                raise ValueError(f"calendar event {label!r} sets both 'year' and 'year_t'; use exactly one")
+            Y = lo + int(year_t) if year_t is not None else int(year)
+            if Y < lo or Y > hi:
+                self.unfired_events.append((Y, label))
+                warnings.warn(
+                    f"calendar event {label!r} is scheduled for year {Y}, outside the simulated calendar window "
+                    f"[{lo}, {hi}] (start_year={lo}, T={p['T']}): it will never fire. Events match calendar years "
+                    f"(start_year + t); use year_t=<t> for a simulation-index year.", UserWarning, stacklevel=3)
+            for key in (ev.get('set', {}) or {}):
+                if key in EVENT_CACHED_PARAMS:
+                    warnings.warn(
+                        f"calendar event {label!r} sets {key!r}, which is consumed when the Engine is constructed "
+                        f"(cached in __init__); the event cannot change the simulation mid-run.",
+                        UserWarning, stacklevel=3)
+                if key in path_names:
+                    warnings.warn(
+                        f"calendar event {label!r} sets {key!r}, which also has a 'paths' entry; paths are re-applied "
+                        f"every year before events, so the change lasts only the event year. Rewrite the path "
+                        f"(engine/policy.py apply() does this) for a persistent mid-run change.",
+                        UserWarning, stacklevel=3)
 
     # ------------------------------------------------------------------ gate schema
     def _install_gates(self, gates, initial=False):
@@ -809,11 +867,17 @@ class Engine:
         for name, path in p['paths'].items():
             p[name] = interp_path(path, Y)
         for ev in p['events']:
-            if ev['year'] == Y:
+            if not isinstance(ev, dict):
+                continue
+            year_t = ev.get('year_t', None)
+            hit = (int(year_t) == t) if year_t is not None else (ev.get('year') == Y)
+            if hit:
                 p.update(ev['set'])
                 if 'gates' in ev['set']:
                     self.set_gates(p['gates'])
                 self.event_log.append((Y, ev.get('label', ''), dict(ev['set'])))
+                if 'events' in ev['set']:
+                    self._validate_events()
         if p['level_open']:
             self.closed = [bool(lo is not None and interp_path(lo, Y) < 0.5) for lo in p['level_open']]
 

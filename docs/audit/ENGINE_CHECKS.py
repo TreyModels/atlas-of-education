@@ -313,6 +313,69 @@ def check_zero_prize():
     assert np.allclose(E.ALL['elite_prize'], 0.0)
 
 
+
+# --------------------------------------------------------------------------------------- mid-run events
+@check('mid-run events: calendar-year convention, unreachable-event warning, year_t, path shadowing')
+def check_midrun_events():
+    """Regression for the forecast-(e) "inert fee abolition": the runner scheduled the event at year=16 while
+    start_year=1990, so the event never fired.  The engine must make that loud, and year_t must be a working
+    simulation-index alternative.  The fee channel itself must change attendance from the event year."""
+    T0, T, y0 = 16, 24, 1990
+    base = dict(N=60, T=T, measure_from=8, entry_age=6, max_entry_age=9,
+                levels=[('primary', 6), ('lower', 3), ('upper', 3), ('tertiary', 4)],
+                gates=[dict(kind='fixed_bar', bar=-1e9)] * 4,
+                y_median=0.8, y_sigma=0.6, urban_share=0.6, subsist=0.60, borrow=0.0,
+                fee_public=0.15, fee_tertiary=0.25, budget_per_child=0.08, entry_share=0.97,
+                start_year=y0, seed=0)
+    mods = [PublicSchools(), PrivateSchools(), TutoringMarket(), QueueLabour(), SDG4()]
+
+    def run(events=None, **over):
+        p = dict(base, **over)
+        p['events'] = events or []
+        E = Engine(mods, **p)
+        E.run()
+        return E
+
+    def prim(E):
+        A = np.array(E.R['att_by_grade'], float)
+        return A[:, :6].sum(1) / (6.0 * E.p['N']) * 100.0
+
+    noevent = run()
+    # (1) simulation-index year with start_year=1990: never fires; must warn, must be recorded, must be inert
+    with warnings.catch_warnings(record=True) as caught:
+        warnings.simplefilter('always')
+        buggy = run([dict(year=T0, set=dict(fee_public=0.0), label='fee abolition')])
+    assert any('never fire' in str(w.message) for w in caught if issubclass(w.category, UserWarning)), \
+        'an unreachable calendar event did not warn'
+    assert buggy.unfired_events == [(T0, 'fee abolition')]
+    assert np.array_equal(np.array(buggy.R['att_by_grade'], float), np.array(noevent.R['att_by_grade'], float))
+    # (2) correct calendar year: attendance changes from that year
+    fixed = run([dict(year=y0 + T0, set=dict(fee_public=0.0), label='fee abolition')])
+    assert fixed.event_log and fixed.event_log[0][0] == y0 + T0
+    assert abs(prim(fixed)[T0] - prim(noevent)[T0]) > 1.0, 'fee abolition did not change attendance'
+    # (3) year_t=<t> is exactly equivalent to the calendar-year event
+    wt = run([dict(year_t=T0, set=dict(fee_public=0.0), label='fee abolition')])
+    assert wt.event_log and wt.event_log[0][0] == y0 + T0
+    for key in noevent.R:
+        a, b = np.asarray(wt.R[key], float), np.asarray(fixed.R[key], float)
+        if a.shape == b.shape:
+            assert np.array_equal(a, b, equal_nan=True), f'year_t != calendar-year event for {key}'
+    # (4) path shadowing: an event on a param that also has a path is a one-year override and must warn
+    with warnings.catch_warnings(record=True) as caught:
+        warnings.simplefilter('always')
+        E = run([dict(year=y0 + 8, set=dict(y_median=0.5), label='income event')],
+                paths=dict(y_median=[(y0, 1.5), (y0 + T, 3.0)]))
+    assert any("'paths' entry" in str(w.message) for w in caught), 'path-shadowed event did not warn'
+    # (5) a construction-cached parameter cannot be changed mid-run: warn
+    with warnings.catch_warnings(record=True) as caught:
+        warnings.simplefilter('always')
+        run([dict(year=y0 + 8, set=dict(levels=[('primary', 6), ('lower', 3), ('upper', 3)]), label='levels event')])
+    assert any('consumed when the Engine is constructed' in str(w.message) for w in caught), \
+        'cached-parameter event did not warn'
+    # (6) gate-grid style config (start_year=0, event year=t0) fires: those arms are not affected
+    g = run([dict(year=T0, set=dict(fee_public=0.0), label='gate-grid')], start_year=0)
+    assert g.event_log and g.event_log[0][0] == T0
+
 # --------------------------------------------------------------------------------------- compat smoke
 @check('compat: worlds + country packs construct and run (contract §9.2)')
 def check_worlds():
@@ -328,7 +391,74 @@ def check_worlds():
             E.step(t)
 
 
+
+# --------------------------------------------------------------------------------------- mid-run param audit
+def audit_midrun_params():
+    """Sweep calendar `events` over engine/module parameters and report which propagate mid-run.
+
+    Structural classification (see docs/audit/ENGINE_MIDRUN_EVENTS.md §5):
+      PROPAGATES        the parameter is re-read each year and the event changes the simulation;
+      INERT (cached)    the parameter is consumed in Engine.__init__ and the engine now warns;
+      INERT (config)    the parameter's channel is inactive in this test configuration (expected, not a defect).
+    """
+    base = dict(N=60, T=18, measure_from=4, start_year=0, y_median=1.5, y_sigma=0.6, urban_share=0.5,
+                subsist=0.4, borrow=0.2, fee_public=0.1, fee_tertiary=0.25, budget_per_child=0.08,
+                gates=[dict(kind='fixed_bar', bar=2.0), dict(kind='contest', share=0.35, fail='track'),
+                       dict(kind='contest', share=0.15, fail='track'), dict(kind='fixed_bar', bar=8.0)],
+                elite_logw=0.6, contest_r=1.6, contest_alpha=0.25, contest_price=0.16, contest_max_e=6.0,
+                child_wage=((8, 0.0), (11, 0.10), (14, 0.35), (17, 0.70), (20, 0.95)),
+                prior_logw=[0.0, 0.05, 0.15, 0.35, 0.8],
+                levels=[('primary', 6), ('lower', 3), ('upper', 3), ('tertiary', 4)])
+    mods = lambda: [PublicSchools(), PrivateSchools(), TutoringMarket(), QueueLabour(), SDG4()]
+    t0 = 9
+    pairs = [('fee_public', 0.0), ('subsist', 0.2), ('borrow', 0.6), ('y_median', 0.8), ('budget_per_child', 0.2),
+             ('pay_ratio', 1.4), ('contest_price', 0.05), ('contest_max_e', 2.0), ('elite_logw', 0.1),
+             ('q0', 1.3), ('home_effect', 0.35), ('delta', 0.8), ('kappa', 6.0), ('tau', 0.5),
+             ('prior_logw', [0.0, 0.1, 0.3, 0.6, 1.2]), ('child_wage', ((8, 0.0), (11, 0.2), (14, 0.5),
+                                                                     (17, 0.9), (20, 1.2))),
+             ('levels', [('primary', 6), ('lower', 3), ('upper', 3)]), ('seed', 3), ('T', 16),
+             ('measure_from', 2), ('y_growth', 0.03), ('rural_cost', 0.1), ('belief_decay', 0.5),
+             ('monitoring', 0.9), ('max_entry_age', 7), ('entry_share', 0.5), ('gate_retakes', 2),
+             ('kin_support', 0.2), ('street_age', 12), ('floor0', (1, 0)), ('mpl_primary', 3.0),
+             ('gates', [dict(kind='fixed_bar', bar=1.0)] * 4)]
+    def sig(E):
+        out = {}
+        for k, v in E.R.items():
+            try:
+                out['R:' + k] = np.asarray(v, float)
+            except Exception:
+                pass
+        for k in E.ALL:
+            try:
+                out['X:' + k] = np.asarray(E.ALL[k], float)
+            except Exception:
+                pass
+        return out
+    def run(events=None, **over):
+        p = dict(base, **over)
+        p['events'] = events or []
+        E = Engine(mods(), **p)
+        E.run()
+        return E
+    with warnings.catch_warnings():
+        warnings.simplefilter('ignore')
+        ref = sig(run())
+        print('mid-run parameter sweep (event at t=9, start_year=0 calendar year 9):')
+        for param, val in pairs:
+            with warnings.catch_warnings(record=True) as caught:
+                warnings.simplefilter('always')
+                E = run([dict(year=t0, set={param: val}, label='audit')])
+            changed = any(
+                ref[k].shape != v.shape or not np.array_equal(ref[k], v, equal_nan=True)
+                for k, v in sig(E).items() if k in ref)
+            warned = any('consumed when the Engine is constructed' in str(w.message) for w in caught)
+            verdict = 'PROPAGATES' if changed else ('INERT (cached, warns)' if warned else 'INERT (config/measurement-only)')
+            print(f'  {param:<18s} {verdict}')
+    return 0
+
 def main():
+    if '--events-audit' in sys.argv:
+        return audit_midrun_params()
     runner = '--runner' in sys.argv
     failures = 0
     with warnings.catch_warnings():

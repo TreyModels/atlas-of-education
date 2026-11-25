@@ -372,3 +372,17 @@ unmodified 540-runner `_run_single`. qa-verifier's `tests/test_engine_invariants
 5. The legacy 540 KR G9 gate delivers its old `elite_logw` at G9; `elite_q5_share` in the old runner therefore now
    counts G9 winners. The canonical KR specs avoid the ambiguity; the old metric should not be compared across the
    repair without noting this.
+
+
+## B13. Addendum 2026-11-25 — calendar `events` audit (Forecast (e) "inert fee abolition")
+
+A follow-up defect surfaced after Gate 1: the Forecast-(e) runner scheduled its fee-abolition event with a
+*simulation index* (`year=16`) in a world with `start_year=1990`, so the event never fired and the abolition arm was
+bit-identical to persistence. The attendance/fee channel is correct (calendar-year `year=2006` changes attendance
+from 60.4 % to 77.0 % at t=16); the engine defect was accepting an unreachable event silently.
+Fixed in `core.py`: `_validate_events` (`core.py:304`) now warns for unreachable event years, for events on
+construction-cached parameters (`EVENT_CACHED_PARAMS`, `core.py:91`) and for events shadowed by a `paths` entry;
+`E.unfired_events` exposes unreachable events; events may alternatively use `year_t=<t>` (`apply_calendar`,
+`core.py:873`). Numerics are unchanged (118-series A/B identical to `f31e176`); new engine core sha256
+`e111397b…8e71`. Full repro, parameter-propagation audit (which mid-run params propagate / are inert / are
+path-shadowed), gate-grid verdict and the forecast rerun recipe: **`docs/audit/ENGINE_MIDRUN_EVENTS.md`**.
