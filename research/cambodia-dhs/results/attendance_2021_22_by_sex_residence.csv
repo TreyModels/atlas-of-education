@@ -1,0 +1,37 @@
+age_group,sex,res,reg,n,pct,se,ci_lo,ci_hi,variant
+6-11,Female,Rural,Other,3784,69.635,0.977,67.72,71.55,current
+6-11,Female,Urban,Other,1476,68.881,1.544,65.85,71.91,current
+6-11,Female,Urban,Phnom Penh,184,82.79,1.965,78.94,86.64,current
+6-11,Male,Rural,Other,3905,65.901,0.997,63.95,67.85,current
+6-11,Male,Urban,Other,1542,65.805,1.827,62.22,69.39,current
+6-11,Male,Urban,Phnom Penh,225,82.122,2.602,77.02,87.22,current
+12-14,Female,Rural,Other,1990,70.709,1.298,68.16,73.25,current
+12-14,Female,Urban,Other,821,69.014,2.239,64.63,73.4,current
+12-14,Female,Urban,Phnom Penh,119,87.291,5.822,75.88,98.7,current
+12-14,Male,Rural,Other,2008,68.582,1.412,65.81,71.35,current
+12-14,Male,Urban,Other,823,75.587,1.828,72.0,79.17,current
+12-14,Male,Urban,Phnom Penh,93,83.624,4.088,75.61,91.64,current
+15-17,Female,Rural,Other,1462,54.591,1.682,51.29,57.89,current
+15-17,Female,Urban,Other,574,50.286,3.065,44.28,56.29,current
+15-17,Female,Urban,Phnom Penh,105,64.96,5.581,54.02,75.9,current
+15-17,Male,Rural,Other,1534,45.276,1.718,41.91,48.64,current
+15-17,Male,Urban,Other,618,48.749,2.838,43.19,54.31,current
+15-17,Male,Urban,Phnom Penh,107,55.784,6.096,43.84,67.73,current
+6-11,Female,Rural,Other,3784,74.993,0.918,73.19,76.79,any_current_year
+6-11,Female,Urban,Other,1476,74.45,1.467,71.58,77.32,any_current_year
+6-11,Female,Urban,Phnom Penh,184,87.419,1.72,84.05,90.79,any_current_year
+6-11,Male,Rural,Other,3905,71.92,0.987,69.99,73.85,any_current_year
+6-11,Male,Urban,Other,1542,70.128,1.685,66.83,73.43,any_current_year
+6-11,Male,Urban,Phnom Penh,225,86.987,2.167,82.74,91.23,any_current_year
+12-14,Female,Rural,Other,1990,70.714,1.298,68.17,73.26,any_current_year
+12-14,Female,Urban,Other,821,69.014,2.239,64.63,73.4,any_current_year
+12-14,Female,Urban,Phnom Penh,119,87.291,5.822,75.88,98.7,any_current_year
+12-14,Male,Rural,Other,2008,68.582,1.412,65.81,71.35,any_current_year
+12-14,Male,Urban,Other,823,75.587,1.828,72.0,79.17,any_current_year
+12-14,Male,Urban,Phnom Penh,93,83.624,4.088,75.61,91.64,any_current_year
+15-17,Female,Rural,Other,1462,54.591,1.682,51.29,57.89,any_current_year
+15-17,Female,Urban,Other,574,50.286,3.065,44.28,56.29,any_current_year
+15-17,Female,Urban,Phnom Penh,105,64.96,5.581,54.02,75.9,any_current_year
+15-17,Male,Rural,Other,1534,45.276,1.718,41.91,48.64,any_current_year
+15-17,Male,Urban,Other,618,48.749,2.838,43.19,54.31,any_current_year
+15-17,Male,Urban,Phnom Penh,107,55.784,6.096,43.84,67.73,any_current_year

@@ -1,0 +1,77 @@
+{
+  "waves": [
+    {
+      "wave": "2000",
+      "path": "/Users/treymenefee/neon-boot/pulled/dhs/cambodia/2000/KHPR42SD/KHPR42FL.SAS7BDAT",
+      "sha256": "1ccbfb9df4a79c8b6a6a9aceacc76527096888d02cfabe852a80e99b08f2d2b3",
+      "n_rows": 23804,
+      "n_age_6_17": 23804,
+      "hv121_values": [
+        0.0,
+        1.0,
+        2.0
+      ],
+      "missing_hv121": 53,
+      "missing_hv122": 54,
+      "weight_sum": 23598.904472000002
+    },
+    {
+      "wave": "2005",
+      "path": "/Users/treymenefee/neon-boot/pulled/dhs/cambodia/2005/KHPR51SD/KHPR51FL.SAS7BDAT",
+      "sha256": "4dc4997a2132ef045c859ce760bb84880f8f3ee503b13ee087ea46afb021c37c",
+      "n_rows": 23471,
+      "n_age_6_17": 23471,
+      "hv121_values": [
+        0.0,
+        2.0
+      ],
+      "missing_hv121": 32,
+      "missing_hv122": 32,
+      "weight_sum": 22437.39513
+    },
+    {
+      "wave": "2010",
+      "path": "/Users/treymenefee/neon-boot/pulled/dhs/cambodia/2010/KHPR61SD/KHPR61FL.SAS7BDAT",
+      "sha256": "a5d9eddddb04817659158cd551d9934652bdabbfc902f211c00334a94d10f289",
+      "n_rows": 21011,
+      "n_age_6_17": 21011,
+      "hv121_values": [
+        0.0,
+        2.0
+      ],
+      "missing_hv121": 2,
+      "missing_hv122": 3,
+      "weight_sum": 20389.607215999997
+    },
+    {
+      "wave": "2014",
+      "path": "/Users/treymenefee/neon-boot/pulled/dhs/cambodia/2014/KHPR73SD/KHPR73FL.SAS7BDAT",
+      "sha256": "6feef50930d6b456368dda4db2c7c711f9a0d537a426fd6a22467ed505d9996a",
+      "n_rows": 19089,
+      "n_age_6_17": 19089,
+      "hv121_values": [
+        0.0,
+        2.0
+      ],
+      "missing_hv121": 4,
+      "missing_hv122": 4,
+      "weight_sum": 19089.412102
+    },
+    {
+      "wave": "2021-22",
+      "path": "/Users/treymenefee/neon-boot/pulled/dhs/cambodia/2021-22/KHPR82SD/KHPR82FL.SAS7BDAT",
+      "sha256": "745056dae6d00c4a161ab6ab639e0d16d003ae49e3c6e40446f7a8de0984290d",
+      "n_rows": 21370,
+      "n_age_6_17": 21370,
+      "hv121_values": [
+        0.0,
+        2.0
+      ],
+      "missing_hv121": 0,
+      "missing_hv122": 0,
+      "weight_sum": 20916.182582
+    }
+  ],
+  "definition": "current = HV121==1 OR (HV121==2 AND HV122>0)",
+  "note": "raw microdata not committed; derived aggregates only"
+}
