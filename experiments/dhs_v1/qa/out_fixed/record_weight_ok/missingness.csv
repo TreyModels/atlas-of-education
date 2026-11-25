@@ -1,0 +1,6 @@
+"experiment","country","wave","record_type","n_type_rows","n_age_eligible","n_complete","n_outcome_missing","n_group_missing","n_verified_never","n_unknown_birth_union"
+"E1","FIXTURE_WT","2000","person",80,80,80,0,0,0,0
+"E2","FIXTURE_WT","2000","person",80,80,80,0,0,0,0
+"E3","FIXTURE_WT","2000","person",80,80,80,0,0,0,0
+"E4","FIXTURE_WT","2000","woman",60,60,60,0,0,0,0
+"E8","FIXTURE_WT","2000","woman",60,60,60,0,0,0,0

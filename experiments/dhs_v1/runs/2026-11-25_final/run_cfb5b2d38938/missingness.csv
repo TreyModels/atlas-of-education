@@ -1,0 +1,5 @@
+"experiment","country","wave","record_type","n_type_rows","n_age_eligible","n_complete","n_outcome_missing","n_group_missing","n_verified_never","n_unknown_birth_union"
+"E1","VN","2005ais","person",26833,2533,2533,0,0,0,0
+"E2","VN","2005ais","person",26833,2533,2533,0,0,0,0
+"E3","VN","2005ais","person",26833,2533,2533,0,0,0,0
+"E6","VN","2005ais","person",13838,1183,1179,4,0,0,0

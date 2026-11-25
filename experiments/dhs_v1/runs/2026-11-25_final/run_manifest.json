@@ -1,0 +1,187 @@
+{
+ "harness_version": "dhs-runner-v0.1",
+ "mode": "real",
+ "engine": {
+  "path": "/Users/treymenefee/neon-boot/wt5/dhs8/experiments/dhs_v1/qa/experiments_v2.R",
+  "sha256": "46c490652ea9893ce4e2418216c545dc74692a0bd25937da61ec046bc4e78f45"
+ },
+ "benchmarks": {
+  "path": "/Users/treymenefee/neon-boot/wt5/dhs8/experiments/dhs_v1/benchmarks/benchmark_registry_v0.2.csv",
+  "sha256": "b9757389be39d1df02d178ff145123fab770c1613f27fb08be9d8080951366b8"
+ },
+ "r": {
+  "raw": "R version 4.5.3 (2026-03-11) | 4.5"
+ },
+ "runs": [
+  {
+   "input": "/Users/treymenefee/neon-boot/dhs8_local/normalized_all.csv",
+   "input_sha256": "961ef27a6b8800f2ff3079e56c3e82cd1dee867367a73935d1d748bbd4ae3a14",
+   "outdir": "/Users/treymenefee/neon-boot/wt5/dhs8/experiments/dhs_v1/runs/2026-11-25_final/run_9c5778274827",
+   "exit_code": 0,
+   "seconds": 0.0,
+   "log": "/Users/treymenefee/neon-boot/wt5/dhs8/experiments/dhs_v1/runs/2026-11-25_final/run_9c5778274827/engine.log",
+   "reused": true
+  },
+  {
+   "input": "/Users/treymenefee/neon-boot/dhs-normalized/ID/normalized_ID_1991_person.csv",
+   "input_sha256": "2d8725d69a0634e2f27ddc8a32c53fa51bb09baa28ed482ac92439837e623d05",
+   "outdir": "/Users/treymenefee/neon-boot/wt5/dhs8/experiments/dhs_v1/runs/2026-11-25_final/run_5e48461f2ab1",
+   "exit_code": 0,
+   "seconds": 0.0,
+   "log": "/Users/treymenefee/neon-boot/wt5/dhs8/experiments/dhs_v1/runs/2026-11-25_final/run_5e48461f2ab1/engine.log",
+   "reused": true
+  },
+  {
+   "input": "/Users/treymenefee/neon-boot/dhs-normalized/ID/normalized_ID_1994_person.csv",
+   "input_sha256": "86f57204a5a1108bce7cf13254fe93be3d60af38d31ff9d65d78289e4c18fce8",
+   "outdir": "/Users/treymenefee/neon-boot/wt5/dhs8/experiments/dhs_v1/runs/2026-11-25_final/run_66ad04f08a4e",
+   "exit_code": 0,
+   "seconds": 0.0,
+   "log": "/Users/treymenefee/neon-boot/wt5/dhs8/experiments/dhs_v1/runs/2026-11-25_final/run_66ad04f08a4e/engine.log",
+   "reused": true
+  },
+  {
+   "input": "/Users/treymenefee/neon-boot/dhs-normalized/ID/normalized_ID_1997_person.csv",
+   "input_sha256": "a13cd55302e278a7ffbd5cf06a0954867b3d5ac2d3c633f612ab3302dab9f105",
+   "outdir": "/Users/treymenefee/neon-boot/wt5/dhs8/experiments/dhs_v1/runs/2026-11-25_final/run_ac95bc462566",
+   "exit_code": 0,
+   "seconds": 0.0,
+   "log": "/Users/treymenefee/neon-boot/wt5/dhs8/experiments/dhs_v1/runs/2026-11-25_final/run_ac95bc462566/engine.log",
+   "reused": true
+  },
+  {
+   "input": "/Users/treymenefee/neon-boot/dhs-normalized/ID/normalized_ID_2002-03_person.csv",
+   "input_sha256": "928a3c7a1d0f6a414af5aec429030ed90ff12b23606c8bb273555bae735efe23",
+   "outdir": "/Users/treymenefee/neon-boot/wt5/dhs8/experiments/dhs_v1/runs/2026-11-25_final/run_b26ef3d1158d",
+   "exit_code": 0,
+   "seconds": 0.0,
+   "log": "/Users/treymenefee/neon-boot/wt5/dhs8/experiments/dhs_v1/runs/2026-11-25_final/run_b26ef3d1158d/engine.log",
+   "reused": true
+  },
+  {
+   "input": "/Users/treymenefee/neon-boot/dhs-normalized/ID/normalized_ID_2007_person.csv",
+   "input_sha256": "1cec8c1eb306b51c90f92235b3314a3e90f50604a59645e07796e5788bb34e92",
+   "outdir": "/Users/treymenefee/neon-boot/wt5/dhs8/experiments/dhs_v1/runs/2026-11-25_final/run_473e6213cc72",
+   "exit_code": 0,
+   "seconds": 0.0,
+   "log": "/Users/treymenefee/neon-boot/wt5/dhs8/experiments/dhs_v1/runs/2026-11-25_final/run_473e6213cc72/engine.log",
+   "reused": true
+  },
+  {
+   "input": "/Users/treymenefee/neon-boot/dhs-normalized/ID/normalized_ID_2012_person.csv",
+   "input_sha256": "fb562a63b2756af72ae99651fcb573ebfae98b3db00d968af326a28f65508c54",
+   "outdir": "/Users/treymenefee/neon-boot/wt5/dhs8/experiments/dhs_v1/runs/2026-11-25_final/run_a72ca275babe",
+   "exit_code": 0,
+   "seconds": 0.0,
+   "log": "/Users/treymenefee/neon-boot/wt5/dhs8/experiments/dhs_v1/runs/2026-11-25_final/run_a72ca275babe/engine.log",
+   "reused": true
+  },
+  {
+   "input": "/Users/treymenefee/neon-boot/dhs-normalized/PH/normalized_PH_1993_person.csv",
+   "input_sha256": "525c369bd6017ef50be221f5386fad935ea2e684c0075fa5acbeb9d164e63603",
+   "outdir": "/Users/treymenefee/neon-boot/wt5/dhs8/experiments/dhs_v1/runs/2026-11-25_final/run_e43509e84172",
+   "exit_code": 0,
+   "seconds": 0.0,
+   "log": "/Users/treymenefee/neon-boot/wt5/dhs8/experiments/dhs_v1/runs/2026-11-25_final/run_e43509e84172/engine.log",
+   "reused": true
+  },
+  {
+   "input": "/Users/treymenefee/neon-boot/dhs-normalized/PH/normalized_PH_1998_person.csv",
+   "input_sha256": "2fb172515d451abb028ddcab764eea3ca4ce4eb71367537b2f01abc41fd74a20",
+   "outdir": "/Users/treymenefee/neon-boot/wt5/dhs8/experiments/dhs_v1/runs/2026-11-25_final/run_79743dc72a76",
+   "exit_code": 0,
+   "seconds": 0.0,
+   "log": "/Users/treymenefee/neon-boot/wt5/dhs8/experiments/dhs_v1/runs/2026-11-25_final/run_79743dc72a76/engine.log",
+   "reused": true
+  },
+  {
+   "input": "/Users/treymenefee/neon-boot/dhs-normalized/VN/normalized_VN_1997_person.csv",
+   "input_sha256": "976e95de11b1119dc04dcb9dff5cb8c3facdbc44ed75a5e9bfb33acd2e53e109",
+   "outdir": "/Users/treymenefee/neon-boot/wt5/dhs8/experiments/dhs_v1/runs/2026-11-25_final/run_72298d8bfd46",
+   "exit_code": 0,
+   "seconds": 0.0,
+   "log": "/Users/treymenefee/neon-boot/wt5/dhs8/experiments/dhs_v1/runs/2026-11-25_final/run_72298d8bfd46/engine.log",
+   "reused": true
+  },
+  {
+   "input": "/Users/treymenefee/neon-boot/dhs-normalized/VN/normalized_VN_2002_person.csv",
+   "input_sha256": "79409bca29675dc0e74bd396c1c5cce91d64c30500b3087e783ff8c62790b23d",
+   "outdir": "/Users/treymenefee/neon-boot/wt5/dhs8/experiments/dhs_v1/runs/2026-11-25_final/run_66c816a66c2c",
+   "exit_code": 0,
+   "seconds": 0.0,
+   "log": "/Users/treymenefee/neon-boot/wt5/dhs8/experiments/dhs_v1/runs/2026-11-25_final/run_66c816a66c2c/engine.log",
+   "reused": true
+  },
+  {
+   "input": "/Users/treymenefee/neon-boot/dhs-normalized/VN/normalized_VN_2005ais_person.csv",
+   "input_sha256": "ad2d3f09a7804d089758c5333850d89328596caedeaa3dc0666e9180c83607b9",
+   "outdir": "/Users/treymenefee/neon-boot/wt5/dhs8/experiments/dhs_v1/runs/2026-11-25_final/run_cfb5b2d38938",
+   "exit_code": 0,
+   "seconds": 0.0,
+   "log": "/Users/treymenefee/neon-boot/wt5/dhs8/experiments/dhs_v1/runs/2026-11-25_final/run_cfb5b2d38938/engine.log",
+   "reused": true
+  }
+ ],
+ "gate": {
+  "signoff_present": true,
+  "mode": "real"
+ },
+ "preflight": {
+  "hash_pins": {
+   "normalized_all.csv": "961ef27a6b8800f2ff3079e56c3e82cd1dee867367a73935d1d748bbd4ae3a14",
+   "normalized_ID_1991_person.csv": "2d8725d69a0634e2f27ddc8a32c53fa51bb09baa28ed482ac92439837e623d05",
+   "normalized_ID_1994_person.csv": "86f57204a5a1108bce7cf13254fe93be3d60af38d31ff9d65d78289e4c18fce8",
+   "normalized_ID_1997_person.csv": "a13cd55302e278a7ffbd5cf06a0954867b3d5ac2d3c633f612ab3302dab9f105",
+   "normalized_ID_2002-03_person.csv": "928a3c7a1d0f6a414af5aec429030ed90ff12b23606c8bb273555bae735efe23",
+   "normalized_ID_2007_person.csv": "1cec8c1eb306b51c90f92235b3314a3e90f50604a59645e07796e5788bb34e92",
+   "normalized_ID_2012_person.csv": "fb562a63b2756af72ae99651fcb573ebfae98b3db00d968af326a28f65508c54",
+   "normalized_PH_1993_person.csv": "525c369bd6017ef50be221f5386fad935ea2e684c0075fa5acbeb9d164e63603",
+   "normalized_PH_1998_person.csv": "2fb172515d451abb028ddcab764eea3ca4ce4eb71367537b2f01abc41fd74a20",
+   "normalized_VN_1997_person.csv": "976e95de11b1119dc04dcb9dff5cb8c3facdbc44ed75a5e9bfb33acd2e53e109",
+   "normalized_VN_2002_person.csv": "79409bca29675dc0e74bd396c1c5cce91d64c30500b3087e783ff8c62790b23d",
+   "normalized_VN_2005ais_person.csv": "ad2d3f09a7804d089758c5333850d89328596caedeaa3dc0666e9180c83607b9"
+  },
+  "run_map": "/Users/treymenefee/neon-boot/wt5/dhs8/experiments/dhs_v1/harmonize/_out/run_map.csv",
+  "singleton_ledger": {
+   "path": "/Users/treymenefee/neon-boot/wt5/dhs8/experiments/dhs_v1/harmonize/_out/singleton_ledger.csv",
+   "sha256": "9df4c1099042a0beed4f8b48b8ef154f53ffdf3733b5b2641b24482425a1895c",
+   "rows": 6464,
+   "singleton_strata": 22
+  },
+  "hash_list_sha256": "3fd87f6e1a80cf781346a3fe152c2d3871d3599d1dfd2115194671abf1841b9a",
+  "run_map_sha256": "fa751827a1c9f0121920f5f2230064489d552f9542f9b8e5e0e42ab1b02e38b0",
+  "expected": {
+   "normalized_ID_1991_person.csv": "E2;E3;E6",
+   "normalized_ID_1994_person.csv": "E2;E3;E6",
+   "normalized_ID_1997_person.csv": "E2;E3;E6",
+   "normalized_ID_2002-03_person.csv": "E1;E2;E3;E6",
+   "normalized_ID_2007_person.csv": "E1;E2;E3;E6",
+   "normalized_ID_2012_person.csv": "E1;E2;E3;E6",
+   "normalized_PH_1993_person.csv": "E2;E3;E6",
+   "normalized_PH_1998_person.csv": "E2;E3;E6",
+   "normalized_VN_1997_person.csv": "E2;E3;E6",
+   "normalized_VN_2002_person.csv": "E2;E3;E6",
+   "normalized_VN_2005ais_person.csv": "E1;E2;E3;E6"
+  }
+ },
+ "estimates_rows": 241,
+ "suppressed_rows": 3,
+ "outputs": {
+  "estimates_final.csv": "83fc62f08cacafbff5a963b4cfc8998825c6bbbc5f50a9dc47c304e5074d909a",
+  "suppression_ledger.csv": "11b7107cb95076e17b762e570d370fb4a16ca5dc38670b232e496c09bd97d5d5",
+  "benchmark_check.csv": "3817732fc1753188da3067a0a6060212c9b6401f01b0e3f85ebc8188789f8012"
+ },
+ "rules": {
+  "suppress": "n<30 | n_psu<2 | design_df<1 | non-finite",
+  "flags": "n<50, RSE>25%, df<30",
+  "multiplicity": "BH by experiment + global BH",
+  "disclosure": "aggregate cells only; no microdata"
+ },
+ "labels": {
+  "exploratory": true,
+  "causal": false,
+  "wealth_is_not_income": true,
+  "household_size_is_not_kin_support": true
+ },
+ "created": "2026-11-25T17:11:58+0800"
+}

@@ -1,0 +1,4 @@
+WARNING: no weight_variable column in the data file: record-appropriate weight use is NOT machine-verifiable; provenance must come from --meta (README requires it)
+WARNING: no --meta metadata file supplied; country/wave/release/weight/strata/PSU/missing-code/access provenance is NOT fully recorded (README requires it)
+wrote 11 estimates, 8 status rows, 4 missingness rows to qa/logs/real/sens/ID_normalized_ID_2007_person__certainty
+benchmark status: NOT_RUN: no benchmarks file supplied (real DHS microdata/benchmarks are BLOCKED in this worktree)

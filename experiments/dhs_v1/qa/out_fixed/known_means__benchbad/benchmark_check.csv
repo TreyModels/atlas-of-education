@@ -1,0 +1,2 @@
+"benchmark_id","experiment","country","wave","group","estimate","benchmark","diff","tolerance","check","direction","source","citation","definition_match"
+"B1","E1","FIXTURE_KM",2000,4,0.41025641025641,0.99,-0.57974358974359,0.01,"MISMATCH","ours_lower","SYNTHETIC FIXTURE","not a real benchmark; fixture only",NA

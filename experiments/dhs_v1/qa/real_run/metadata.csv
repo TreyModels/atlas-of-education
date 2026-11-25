@@ -1,0 +1,10 @@
+key,value
+country,"ID;KH;PH"
+wave,"1997-2022"
+release,"DHS public recodes delivered by data team (dhs8_local/manifest.json, 2026-11-25)"
+record_type,"person;woman"
+weight_variable,"hv005/1e6 (PR person/household weight); v005/1e6 (IR/WI individual woman weight)"
+strata_variable,"hv022 (PR); v022 (IR/WI)"
+psu_variable,"hv021 (PR); v021 (IR/WI)"
+missing_codes,"97/98/99 DK/inconsistent -> NA; age_first_birth/union 99 = known never (preserved)"
+approved_access,"local authorized Mac only; restricted microdata not redistributed"

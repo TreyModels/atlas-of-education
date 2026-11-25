@@ -1,0 +1,9 @@
+country,lag,cells,experiments,indicators
+ID,lag5y,1056,4,6
+ID,same_year,1632,4,6
+KH,lag5y,1196,8,6
+KH,same_year,3212,8,6
+PH,lag5y,928,8,6
+PH,same_year,1426,8,6
+VN,lag5y,192,3,6
+VN,same_year,384,3,6

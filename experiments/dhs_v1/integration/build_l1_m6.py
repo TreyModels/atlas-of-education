@@ -22,6 +22,7 @@ import json
 import re
 from pathlib import Path
 
+import argparse
 import pandas as pd
 
 ROOT = Path(__file__).resolve().parents[1]        # .../experiments/dhs_v1
@@ -44,8 +45,22 @@ def wave_year(w) -> int | None:
     return int(m.group(0)) if m else None
 
 
-def load_l1() -> pd.DataFrame:
-    d = pd.read_csv(L1)
+OUTCOME_MAP = {"E1": ("attendance", "wealth"), "E2": ("attendance", "urban"),
+               "E3": ("attendance", "sex"), "E4": ("children_ever_born", "education"),
+               "E5": ("early_birth", "education"), "E6": ("currently_in_school", "urban"),
+               "E7": ("early_union", "education"), "E8": ("household_size", "education")}
+
+
+def load_l1(path=None) -> pd.DataFrame:
+    d = pd.read_csv(path or L1)
+    if "complete_n" in d.columns and "n_complete" not in d.columns:
+        d = d.rename(columns={"complete_n": "n_complete"})
+    if "outcome" not in d.columns:
+        d["outcome"] = d["experiment"].map(lambda e: OUTCOME_MAP.get(e, (None, None))[0])
+    if "group_var" not in d.columns:
+        d["group_var"] = d["experiment"].map(lambda e: OUTCOME_MAP.get(e, (None, None))[1])
+    if "group" not in d.columns and "group_value" in d.columns:
+        d = d.rename(columns={"group_value": "group"})
     d["year"] = d["wave"].map(wave_year)
     d = d[d["country"].isin(COUNTRIES)].copy()
     if "suppressed" in d.columns:
@@ -73,8 +88,13 @@ def load_m6() -> tuple[pd.DataFrame, dict]:
 
 
 def main() -> int:
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--l1", type=Path, default=L1, help="L1 estimate table (default: data-team aggregate layer)")
+    ap.add_argument("--tag", default="v0.1", help="output suffix tag")
+    args = ap.parse_args()
     OUT.mkdir(parents=True, exist_ok=True)
-    l1 = load_l1()
+    l1 = load_l1(args.l1)
+    tag = args.tag
     m6, m6meta = load_m6()
     if l1.empty:
         raise SystemExit("no L1 rows")
@@ -82,12 +102,12 @@ def main() -> int:
     for _, cell in l1.iterrows():
         if pd.isna(cell["year"]):
             continue
-        for lag, tag in ((0, "same_year"), (5, "lag5y")):
+        for lag, lag_tag in ((0, "same_year"), (5, "lag5y")):
             target = int(cell["year"]) - lag
             hit = m6[(m6["country"] == cell["country"]) & (m6["year"] == target)]
             if hit.empty:
                 gaps.append({"country": cell["country"], "wave": cell["wave"],
-                             "experiment": cell["experiment"], "lag": tag,
+                             "experiment": cell["experiment"], "lag": lag_tag,
                              "requested_year": target})
                 continue
             for _, m in hit.iterrows():
@@ -100,7 +120,7 @@ def main() -> int:
                     "indicator": m.get("indicator"), "indicator_edu": m.get("edu"),
                     "indicator_edu_level": m.get("edu_level"),
                     "indicator_value": m.get("value"), "indicator_year": int(m["year"]),
-                    "indicator_survey": m.get("survey"), "lag": tag,
+                    "indicator_survey": m.get("survey"), "lag": lag_tag,
                     "lag_years": lag, "source_panel": m.get("source_panel"),
                     "source_sha256": m.get("source_sha256"),
                     "unit": "indicator value as published by DHS API (indicator-specific; see catalogue)",
@@ -109,18 +129,18 @@ def main() -> int:
                     "ecological_caution": True,
                 })
     proto = pd.DataFrame(rows)
-    proto.to_csv(OUT / "prototype_l1_m6.csv", index=False)
-    pd.DataFrame(gaps).to_csv(OUT / "prototype_missing_links.csv", index=False)
+    proto.to_csv(OUT / f"prototype_l1_m6_{tag}.csv", index=False)
+    pd.DataFrame(gaps).to_csv(OUT / f"prototype_missing_links_{tag}.csv", index=False)
 
     # coverage summary
     cov = (proto.groupby(["country", "lag"])
            .agg(cells=("experiment", "size"), experiments=("experiment", "nunique"),
                 indicators=("indicator", "nunique")).reset_index()) if not proto.empty else pd.DataFrame()
-    cov.to_csv(OUT / "prototype_coverage.csv", index=False)
+    cov.to_csv(OUT / f"prototype_coverage_{tag}.csv", index=False)
     manifest = {
         "prototype_version": "l1-m6-v0.1",
         "created_by": "deepseek-dhs (lead)",
-        "inputs": {"l1": {"path": str(L1), "sha256": sha256(L1), "rows": int(len(l1))},
+        "inputs": {"l1": {"path": str(args.l1), "sha256": sha256(args.l1), "rows": int(len(l1))},
                    "m6": m6meta},
         "counts": {"prototype_rows": int(len(proto)), "missing_links": int(len(gaps)),
                    "countries": COUNTRIES, "effective_n_countries": len(COUNTRIES)},
@@ -134,7 +154,7 @@ def main() -> int:
         "m6_restriction": "public DHS API aggregates only; M1/M3 country-year matrices are not local and are declared out of scope for this prototype",
         "subnational": "BLOCKED (survey regions + displaced GPS; no defensible subnational macro source)",
     }
-    (OUT / "prototype_manifest.json").write_text(json.dumps(manifest, indent=1))
+    (OUT / f"prototype_manifest_{tag}.json").write_text(json.dumps(manifest, indent=1))
     print(f"[l1-m6] {len(l1)} L1 cells -> {len(proto)} prototype rows; "
           f"{len(gaps)} missing links; coverage:\n{cov.to_string(index=False) if not cov.empty else 'none'}")
     return 0

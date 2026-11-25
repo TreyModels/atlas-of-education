@@ -1,0 +1,3 @@
+rule_version,suppression_reason,cells
+D-03/v0.1,n_unweighted<30;non_finite,2
+D-03/v0.1,non_finite,1

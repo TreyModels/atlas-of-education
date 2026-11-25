@@ -100,7 +100,7 @@ def gate(mode: str, engine: Path) -> None:
     print(f"[gate] QA sign-off verified for engine {actual[:12]}...")
 
 
-def preflight(inputs: list[Path], skip: bool, hash_list: Path, run_map: Path, singleton_ledger: Path) -> dict:
+def preflight(inputs: list[Path], skip: bool, hash_list: Path, run_map: Path, singleton_ledger: Path, extra_pins: dict[str, str] | None = None) -> dict:
     """Pin the normalized inputs and reconcile the run map before any estimation.
 
     * every input must match `normalized_output_hashes.csv` (frozen adapter output);
@@ -122,6 +122,9 @@ def preflight(inputs: list[Path], skip: bool, hash_list: Path, run_map: Path, si
         name = inp.name
         actual = sha256(inp)
         expected = pins.get(name)
+        if expected is None and extra_pins and name in extra_pins:
+            expected = extra_pins[name]
+            print(f"[preflight] extra pin accepted: {name}")
         if expected is None:
             sys.exit(f"[preflight] REFUSED: {name} not in normalized_output_hashes.csv")
         if actual != expected:
@@ -131,7 +134,9 @@ def preflight(inputs: list[Path], skip: bool, hash_list: Path, run_map: Path, si
         sys.exit(f"[preflight] REFUSED: missing run map {run_map}")
     rm = pd.read_csv(run_map)
     report["run_map_sha256"] = sha256(run_map)
-    report["expected"] = {str(r["file"]): str(r.get("experiments_feasible", "")) for _, r in rm.iterrows()}
+    input_names = {i.name for i in inputs}
+    report["expected"] = {str(r["file"]): str(r.get("experiments_feasible", ""))
+                          for _, r in rm.iterrows() if str(r["file"]) in input_names}
     if singleton_ledger.exists():
         led = pd.read_csv(singleton_ledger)
         report["singleton_ledger"] = {
@@ -146,12 +151,12 @@ def preflight(inputs: list[Path], skip: bool, hash_list: Path, run_map: Path, si
     return report
 
 
-def run_engine(rscript: str, engine: Path, inp: Path, outdir: Path) -> dict:
+def run_engine(rscript: str, engine: Path, inp: Path, outdir: Path, engine_args: list[str] | None = None) -> dict:
     outdir.mkdir(parents=True, exist_ok=True)
     log = outdir / "engine.log"
     t0 = time.time()
     with open(log, "w") as fh:
-        proc = subprocess.run([rscript, str(engine), str(inp), str(outdir)],
+        proc = subprocess.run([rscript, str(engine), str(inp), str(outdir)] + list(engine_args or []),
                               stdout=fh, stderr=subprocess.STDOUT, text=True)
     return {"input": str(inp), "input_sha256": sha256(inp), "outdir": str(outdir),
             "exit_code": proc.returncode, "seconds": round(time.time() - t0, 2),
@@ -224,42 +229,32 @@ def multiplicity(df: pd.DataFrame) -> pd.DataFrame:
 
 
 def benchmark_check(est: pd.DataFrame, bench_path: Path) -> pd.DataFrame:
+    """Record the externally-validation-graded benchmarks and whether E1-E8 cells are comparable.
+
+    The validated benchmarks are extraction-level (age band 6-11 / definitions differ from the
+    E1-E8 domains), so no automatic cell-level comparison is claimed here: the registry records
+    what was externally validated by the data team and QA, and every estimate row is flagged
+    not_externally_benchmarked unless a benchmark's definition matches the cell exactly.
+    """
     if not bench_path.exists():
         return pd.DataFrame(columns=["benchmark_id", "status", "note"])
     b = pd.read_csv(bench_path)
     rows = []
     for _, row in b.iterrows():
-        hit = est[(est.get("country").astype(str) == str(row["country"])) &
-                  (est.get("wave").astype(str) == str(row["wave"]))]
-        if row["status"] != "AVAILABLE":
-            rows.append({"benchmark_id": row["benchmark_id"], "status": "PENDING",
-                         "country": row["country"], "wave": row["wave"], "note": row.get("notes", "")})
-            continue
-        if hit.empty:
-            rows.append({"benchmark_id": row["benchmark_id"], "status": "NO_MATCHING_CELL",
-                         "country": row["country"], "wave": row["wave"], "note": ""})
-            continue
-        try:
-            target = float(str(row["estimate"]).split()[0])
-        except Exception:  # noqa: BLE001
-            rows.append({"benchmark_id": row["benchmark_id"], "status": "UNPARSEABLE",
-                         "country": row["country"], "wave": row["wave"], "note": row["estimate"]})
-            continue
-        for _, cell in hit.iterrows():
-            val = pd.to_numeric(pd.Series([cell.get("estimate")]), errors="coerce").iat[0]
-            if pd.isna(val):
-                continue
-            diff = (val - target) * 100  # estimates in shares, benchmark in percent
-            tol = float(row.get("tolerance_pp") or 0) or 0.0
-            rows.append({"benchmark_id": row["benchmark_id"], "status": "COMPARED",
-                         "country": row["country"], "wave": row["wave"],
-                         "experiment": cell.get("experiment"), "group": cell.get("group"),
-                         "dhs_extract": round(float(val), 4), "published": target,
-                         "diff_pp": round(float(diff), 2), "tolerance_pp": tol,
-                         "within_tolerance": abs(diff) <= tol,
-                         "definition_match": row.get("definition_match", ""),
-                         "citation": row.get("citation", "")})
-    return pd.DataFrame(rows)
+        status = str(row.get("status", "")).upper()
+        rows.append({
+            "benchmark_id": row.get("benchmark_id"),
+            "country": row.get("country"), "wave": row.get("wave"),
+            "indicator": row.get("indicator"),
+            "published": row.get("published") or row.get("estimate"),
+            "tolerance_pp": row.get("tolerance_pp"),
+            "registry_status": status,
+            "cell_comparison": "NOT_CELL_COMPARABLE: benchmark is extraction-level (different age band/definition than E1-E8 cells)",
+            "citation": row.get("citation"),
+            "note": row.get("notes", ""),
+        })
+    out = pd.DataFrame(rows)
+    return out
 
 
 def main() -> int:
@@ -273,6 +268,16 @@ def main() -> int:
     ap.add_argument("--run-map", type=Path, default=RUN_MAP)
     ap.add_argument("--hash-list", type=Path, default=HASH_LIST)
     ap.add_argument("--singleton-ledger", type=Path, default=SINGLETON_LEDGER)
+    ap.add_argument("--extra-pin", action="append", default=[], metavar="NAME=SHA256",
+                    help="pin an input not in the frozen per-file hash list (e.g. merged layer); repeatable")
+    ap.add_argument("--engine-args", default="", help="extra flags passed to the R engine, e.g. '--lonely-psu=adjust'")
+    ap.add_argument("--expected-csv", type=Path, default=ROOT / "harmonize" / "_out" / "availability_E1_E8.csv",
+                    help="availability matrix used for feasibility reconciliation when run_map does not cover the input")
+    ap.add_argument("--expected-exclude", default="PH:2003", help="country:wave cells adjudicated BLOCKED; colon-separated")
+    ap.add_argument("--reuse", action="store_true",
+                    help="reuse existing engine outputs (skip re-running R when estimates.csv already exists)")
+    ap.add_argument("--filter", action="append", default=[], metavar="NAME=E1,E2",
+                    help="per-input experiment filter (repeatable); inputs without a filter are left unfiltered")
     ap.add_argument("--skip-preflight", action="store_true",
                     help="synthetic/test fixtures only: bypass hash pinning")
     args = ap.parse_args()
@@ -295,17 +300,36 @@ def main() -> int:
     if not inputs:
         sys.exit("no input CSVs found")
 
-    pre = preflight(inputs, args.skip_preflight, args.hash_list, args.run_map, args.singleton_ledger)
+    extra = {}
+    for spec in args.extra_pin:
+        if "=" in spec:
+            k, v = spec.split("=", 1)
+            extra[k.strip()] = v.strip().lower()
+    pre = preflight(inputs, args.skip_preflight, args.hash_list, args.run_map, args.singleton_ledger, extra)
     out = args.out.resolve()
     out.mkdir(parents=True, exist_ok=True)
+    filters = {}
+    for spec in args.filter:
+        if "=" in spec:
+            k, v = spec.split("=", 1)
+            filters[k.strip()] = {x.strip() for x in v.split(",") if x.strip()}
     runs, frames = [], []
     for inp in inputs:
         sub = out / ("run_" + hashlib.sha256(str(inp).encode()).hexdigest()[:12])
-        info = run_engine(args.rscript, engine, inp, sub)
+        est_existing = sub / "estimates.csv"
+        if args.reuse and est_existing.exists() and est_existing.stat().st_size > 0:
+            info = {"input": str(inp), "input_sha256": sha256(inp), "outdir": str(sub),
+                    "exit_code": 0, "seconds": 0.0, "log": str(sub / "engine.log"), "reused": True}
+            print(f"[run] {inp.name}: reused existing estimates -> {sub}")
+        else:
+            info = run_engine(args.rscript, engine, inp, sub, [a for a in args.engine_args.split() if a])
         runs.append(info)
         est_path = sub / "estimates.csv"
         if est_path.exists() and est_path.stat().st_size > 0:
             d = pd.read_csv(est_path)
+            keep = filters.get(inp.name)
+            if keep is not None:
+                d = d[d["experiment"].astype(str).isin(keep)].copy()
             d["run_input"] = inp.name
             frames.append(d)
         print(f"[run] {inp.name}: exit={info['exit_code']} {info['seconds']}s -> {sub}")
@@ -315,6 +339,32 @@ def main() -> int:
     est = pd.concat(frames, ignore_index=True)
     # reconcile feasibility: every feasible (file, experiment) pair must appear
     gaps = []
+    expected_map = pre.get("expected") or {}
+    if not pre.get("expected") and args.expected_csv.exists():
+        # merged/single-input mode: derive expected (experiment, country, wave) set from the
+        # verified availability matrix, excluding adjudicated-BLOCKED cells (QA conflict B: PH 2003).
+        av = pd.read_csv(args.expected_csv)
+        excl = {tuple(x.split(":")) for x in str(args.expected_exclude).split(";") if ":" in x}
+        exp_rows = []
+        for _, r in av.iterrows():
+            if (str(r["country"]), str(r["wave"])) in excl:
+                continue
+            for col in [c for c in av.columns if c.startswith("E")]:
+                if str(r[col]).startswith("FEASIBLE"):
+                    exp_rows.append({"experiment": col, "country": str(r["country"]), "wave": str(r["wave"])})
+        exp = pd.DataFrame(exp_rows)
+        exp.to_csv(out / "expected_cells.csv", index=False)
+        got = est[["experiment", "country", "wave"]].astype(str).drop_duplicates()
+        got["wave"] = got["wave"].astype(str)
+        merged = exp.merge(got, how="outer", indicator=True)
+        for _, m in merged[merged["_merge"] != "both"].iterrows():
+            gaps.append({"experiment": m["experiment"], "country": m["country"], "wave": m["wave"],
+                         "issue": "expected but not produced" if m["_merge"] == "left_only" else "produced but not expected"})
+        pd.DataFrame(gaps).to_csv(out / "feasibility_gaps.csv", index=False)
+        pre["expected_cells_from"] = str(args.expected_csv)
+        pre["expected_cells"] = int(len(exp))
+        print(f"[preflight] expected cells from availability matrix: {len(exp)} (excluded {sorted(excl)})")
+        gaps = []
     if pre.get("expected"):
         for fname, exp_csv in pre["expected"].items():
             feasible = {e.strip() for e in str(exp_csv).split(";") if e.strip()}

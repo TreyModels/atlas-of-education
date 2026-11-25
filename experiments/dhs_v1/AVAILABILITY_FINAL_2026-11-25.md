@@ -84,3 +84,13 @@ L1 input to `INTEGRATION_SCHEMA_v0.1.md`; household microdata is never included.
   rejected with `[preflight] REFUSED: … not in normalized_output_hashes.csv` (verified).
 * Benchmark source policy (data team, README §9): public-report references only (KH FR377 Table 2.12; PH FR381;
   ID 2017 final report); no further "published" numbers; B005–B008 stay PENDING unless an exact table is located.
+
+
+## CORRECTION (QA conflict B, post-sign-off)
+
+**PH 2003 is BLOCKED (not feasible).** The data-team availability row shows `hv022` present but with
+non-missing = 0 / 61,864 rows, i.e. the variance stratum is wholly missing; QA adjudicated that there is no
+documented justification to substitute `hv023`, and the scout's exclusion was correct. The execution matrix is
+therefore **92 feasible cells** (96 minus PH 2003 × E1/E2/E3/E6), all of which were executed (milestone 2).
+Also confirmed by QA: PH 2008/2013 E1–E3 blocked (attendance absent); `hv110` is present/non-missing in VN
+1997/2002/2005ais, ID 1991–2012, PH 1993/98/2003 (conflict A resolved: scout's "no attendance item" was wrong).

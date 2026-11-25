@@ -1,0 +1,121 @@
+{
+ "prototype_version": "l1-m6-v0.1",
+ "created_by": "deepseek-dhs (lead)",
+ "inputs": {
+  "l1": {
+   "path": "runs/2026-11-25_final/estimates_final.csv",
+   "sha256": "83fc62f08cacafbff5a963b4cfc8998825c6bbbc5f50a9dc47c304e5074d909a",
+   "rows": 238
+  },
+  "m6": {
+   "panel_edu2_FE_AAFB_W_M25.csv": {
+    "sha256": "fcf60df0021d52191c33be914265cc8b1cc39662d217dae47eeda9f3d76a9f3e",
+    "rows_4countries": 42,
+    "years": [
+     1987,
+     2021
+    ]
+   },
+   "panel_edu2_FE_FRTR_W_GFR.csv": {
+    "sha256": "88ab8298f5abcf05d9394f15598c12190238d2db6ed274ea002b8995dac530c8",
+    "rows_4countries": 44,
+    "years": [
+     1987,
+     2022
+    ]
+   },
+   "panel_edu2_FE_FRTR_W_TFR.csv": {
+    "sha256": "3f8ac1f9580a6b66c65b13661c7a656bc5281cbabb00e8512444a695027aa933",
+    "rows_4countries": 44,
+    "years": [
+     1987,
+     2022
+    ]
+   },
+   "panel_edu2_FE_FRTY_W_MNC.csv": {
+    "sha256": "a4428c363d486e44745cb07b0c578be05dea69280e7a04ae0e8c35663cce852f",
+    "rows_4countries": 44,
+    "years": [
+     1987,
+     2022
+    ]
+   },
+   "panel_edu2_PR_DESL_W_WNM.csv": {
+    "sha256": "8d0a36a3dca3e53f79672132c752a6acd3b256ec57ef07448cf755e66c9126b8",
+    "rows_4countries": 44,
+    "years": [
+     1987,
+     2022
+    ]
+   },
+   "panel_edu2_PR_WTFR_W_WFR.csv": {
+    "sha256": "a01a562138b40646ad2e1152c3c97eee30aef39d914566cffbb7284f5a4603aa",
+    "rows_4countries": 44,
+    "years": [
+     1987,
+     2022
+    ]
+   },
+   "panel_edu4_FE_FRTR_W_GFR.csv": {
+    "sha256": "ac934f90b55adace57fafad7bb3ebc3e3ee36cc777eebe3b91da69fc77e03099",
+    "rows_4countries": 88,
+    "years": [
+     1987,
+     2022
+    ]
+   },
+   "panel_edu4_FE_FRTR_W_TFR.csv": {
+    "sha256": "5601e6df44acfbc67a046602afaddd26cde573566a0562d5e1cd50526aa11061",
+    "rows_4countries": 88,
+    "years": [
+     1987,
+     2022
+    ]
+   },
+   "panel_edu4_FE_FRTY_W_MNC.csv": {
+    "sha256": "bcb15904bc904b25f6d60ca12feda4bce4414b82fe6242c7e8c6f129ab6546d2",
+    "rows_4countries": 80,
+    "years": [
+     1987,
+     2022
+    ]
+   },
+   "panel_edu4_PR_DESL_W_WNM.csv": {
+    "sha256": "917d086aa542c57f2c20e519f2f7b4fad0421b02d3fd49fef28b195fad2eb60a",
+    "rows_4countries": 84,
+    "years": [
+     1987,
+     2022
+    ]
+   },
+   "panel_edu4_PR_WTFR_W_WFR.csv": {
+    "sha256": "b0998de796883abbd45c6e30b45f489392ba7c00224e8f1996e6061dcfab18de",
+    "rows_4countries": 88,
+    "years": [
+     1987,
+     2022
+    ]
+   }
+  }
+ },
+ "counts": {
+  "prototype_rows": 10026,
+  "missing_links": 146,
+  "countries": [
+   "KH",
+   "ID",
+   "PH",
+   "VN"
+  ],
+  "effective_n_countries": 4
+ },
+ "rules": {
+  "join": "country (ISO2) + indicator year; same_year = survey start year, lag5y = start year - 5",
+  "lag_policy": "lagged context attached only as context; no exposure claim; timing recorded per row",
+  "inference_guard": "country-level covariates are not household measurements (ecological fallacy); effective N = 4 countries for cross-country statements",
+  "disclosure": "L1 rows are aggregates; household microdata never included",
+  "evidence_label": "exploratory descriptive; no causal interpretation"
+ },
+ "m6_restriction": "public DHS API aggregates only; M1/M3 country-year matrices are not local and are declared out of scope for this prototype",
+ "subnational": "BLOCKED (survey regions + displaced GPS; no defensible subnational macro source)"
+}
