@@ -1,0 +1,81 @@
+{
+  "box_dir": "/root/work/audit",
+  "bundle_dir_digest_sha256": "8d58e6ff750c8e512124f74474efd33ed71fe81c200f772e76c9539966f3cfbf",
+  "cgroup_cpu_max": "1000000 100000",
+  "cgroup_cpu_stat_head": [
+    "usage_usec 14399501576",
+    "user_usec 12999739550",
+    "system_usec 1399762026"
+  ],
+  "effect": "re-executed the same CPU dry-run proof in the clean box environment; no GPU, no torch",
+  "evidence": {
+    "assertions": {
+      "archived_pattern_echoes_exit_7": true,
+      "archived_pattern_overall_exit_is_0_despite_failing_job": true,
+      "archived_pattern_prints_DONE_anyway": true,
+      "control_all_jobs_exit_0": true,
+      "control_bundle_unchanged": true,
+      "control_exit_0": true,
+      "control_manifest_assembled": true,
+      "control_outputs_exist_and_match_manifest": true,
+      "failing_job_left_no_result_json": true,
+      "failing_job_no_partial_files_remain": true,
+      "failing_job_staging_removed": true,
+      "failure_marker_records_job_and_rc": true,
+      "failure_marker_written": true,
+      "failure_overall_exit_equals_failing_job_rc_7": true,
+      "failure_overall_exit_nonzero": true,
+      "no_manifest_assembled_on_failure": true,
+      "sentinel_job_has_no_manifest_record": true,
+      "sentinel_job_never_ran": true
+    },
+    "cases": {
+      "archived_pattern_demo": {
+        "overall_exit_code": 0,
+        "run_dir": "/root/work/audit/docs/audit/fixed_harness/evidence/archived_demo-20261125T070049Z",
+        "stdout_log": "/root/work/audit/docs/audit/fixed_harness/evidence/archived_demo-20261125T070049Z/stdout.log"
+      },
+      "control": {
+        "manifest": "/root/work/audit/docs/audit/fixed_harness/evidence/dry_runs/dryrun-control-20261125T070049Z/manifest.json",
+        "manifest_sha256": "879fd1406598e1a398bb46fd5e285fdc4a61e67217211e3320a5344c509b068b",
+        "overall_exit_code": 0,
+        "run_dir": "/root/work/audit/docs/audit/fixed_harness/evidence/dry_runs/dryrun-control-20261125T070049Z",
+        "run_id": "dryrun-control-20261125T070049Z"
+      },
+      "failure": {
+        "overall_exit_code": 7,
+        "run_dir": "/root/work/audit/docs/audit/fixed_harness/evidence/dry_runs/dryrun-failure-20261125T070049Z",
+        "run_failure": "/root/work/audit/docs/audit/fixed_harness/evidence/dry_runs/dryrun-failure-20261125T070049Z/run_failure.json",
+        "run_failure_sha256": "6d1e6bf37cb024395a448ef98f01cd76aa1a9678f5136fe3cd9c2f00a4cf7db6",
+        "run_id": "dryrun-failure-20261125T070049Z"
+      }
+    },
+    "failed_assertions": [],
+    "generated_at_utc": "2026-11-25T07:00:52Z",
+    "passed": true,
+    "purpose": "P0-07 acceptance: a failing job aborts the corrected harness with a non-zero overall exit; the archived pattern does not.",
+    "python": "/root/miniconda3/bin/python"
+  },
+  "host": "autodl-container-wjb02xe512-3c3a2b3b",
+  "manifest_check": [
+    "README.md: OK",
+    "RUN_REPORT.md: OK",
+    "env_lock_rtx3080ti.txt: OK",
+    "gpu_bray_abc_and_contest_surface.py: OK",
+    "gpu_bray_abc_and_contest_surface_6param.py: OK",
+    "gpu_e1_q3_wild_cluster_ri.py: OK",
+    "results_bray_abc_6param.json: OK",
+    "results_bray_abc_7param.json: OK",
+    "results_e1_q3_selftest.json: OK",
+    "results_e1_q3_selftest_cpu_ref.json: OK",
+    "results_gpu_vs_cpu_diff.json: OK",
+    "run_gpu_jobs.sh: OK"
+  ],
+  "nice_level": 10,
+  "numpy": "1.24.1",
+  "platform": "Linux-5.15.0-78-generic-x86_64-with-glibc2.35",
+  "python": "3.10.8",
+  "python_executable": "/root/miniconda3/bin/python",
+  "threads_env": "OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 OMP_NUM_THREADS=1",
+  "worker_allocation": 1
+}

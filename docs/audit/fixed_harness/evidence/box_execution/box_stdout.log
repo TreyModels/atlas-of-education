@@ -1,0 +1,29 @@
+[07:00:49Z] case 1/3: archived-pattern defect demonstration (expect overall rc 0 + DONE)
+[07:00:49Z]   archived-pattern rc=0 (defect: 0 despite failing job; EXIT7 lines=1)
+[07:00:49Z] case 2/3: corrected harness, all-succeed control (expect rc 0)
+[07:00:51Z]   control rc=0
+[07:00:51Z] case 3/3: corrected harness with deliberate failure (expect rc 7)
+[07:00:52Z]   failure rc=7
+
+=== ASSERTIONS ===
+  [PASS] archived_pattern_echoes_exit_7
+  [PASS] archived_pattern_overall_exit_is_0_despite_failing_job
+  [PASS] archived_pattern_prints_DONE_anyway
+  [PASS] control_all_jobs_exit_0
+  [PASS] control_bundle_unchanged
+  [PASS] control_exit_0
+  [PASS] control_manifest_assembled
+  [PASS] control_outputs_exist_and_match_manifest
+  [PASS] failing_job_left_no_result_json
+  [PASS] failing_job_no_partial_files_remain
+  [PASS] failing_job_staging_removed
+  [PASS] failure_marker_records_job_and_rc
+  [PASS] failure_marker_written
+  [PASS] failure_overall_exit_equals_failing_job_rc_7
+  [PASS] failure_overall_exit_nonzero
+  [PASS] no_manifest_assembled_on_failure
+  [PASS] sentinel_job_has_no_manifest_record
+  [PASS] sentinel_job_never_ran
+
+Evidence: /root/work/audit/docs/audit/fixed_harness/evidence/dry_run_evidence.json
+RESULT: PASS — corrected harness aborts with rc 7; archived pattern exits 0 and prints DONE 

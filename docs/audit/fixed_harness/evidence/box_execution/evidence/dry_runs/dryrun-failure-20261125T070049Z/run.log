@@ -1,0 +1,12 @@
+RUN_ID=dryrun-failure-20261125T070049Z MODE=dry-run JOBSET=failure STARTED=2026-11-25T07:00:51Z HOST=autodl-container-wjb02xe512-3c3a2b3b
+PYTHON=/root/miniconda3/bin/python (Python 3.10.8)
+-- bundle manifest verification (read-only) --
+bundle_file_count=14
+manifest_rc=0
+bundle_dir_digest_sha256=8d58e6ff750c8e512124f74474efd33ed71fe81c200f772e76c9539966f3cfbf
+MANIFEST.sha256: OK (14 files, digest 8d58e6ff750c8e51...)
+wrote /root/work/audit/docs/audit/fixed_harness/evidence/dry_runs/dryrun-failure-20261125T070049Z/seeds.json (os_csprng, 3 seeds)
+== job dryrun_stub_ok_a start=2026-11-25T07:00:51Z
+== job dryrun_stub_ok_a ok rc=0 wall=0.095s output=/root/work/audit/docs/audit/fixed_harness/evidence/dry_runs/dryrun-failure-20261125T070049Z/jobs/dryrun_stub_ok_a/result.json sha256=17bed9922c471864722016a8f99389efb13f499655ad530c355fe3e9a60d42ea
+== job dryrun_stub_fail start=2026-11-25T07:00:51Z
+ERROR: job dryrun_stub_fail FAILED rc=7 -> aborting run dryrun-failure-20261125T070049Z (fail-fast)

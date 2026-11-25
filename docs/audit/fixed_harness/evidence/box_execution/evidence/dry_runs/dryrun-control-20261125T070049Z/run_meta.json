@@ -1,0 +1,15 @@
+{
+  "bundle_digest_after": "8d58e6ff750c8e512124f74474efd33ed71fe81c200f772e76c9539966f3cfbf",
+  "bundle_digest_before": "8d58e6ff750c8e512124f74474efd33ed71fe81c200f772e76c9539966f3cfbf",
+  "bundle_unchanged_during_run": true,
+  "config_hashes_sha256": "51e59943ddf991c4fc35dda69e47ec1f7f0445f579a43f9a9974b7e08d678543",
+  "ended_utc": "2026-11-25T07:00:50Z",
+  "host": "autodl-container-wjb02xe512-3c3a2b3b",
+  "jobset": "control",
+  "mode": "dry-run",
+  "python": "/root/miniconda3/bin/python",
+  "run_id": "dryrun-control-20261125T070049Z",
+  "seeds_file_sha256": "a8132fa1dd074bc473dce081ab625ba537e5f89187b9fbca595d83ebad612e3b",
+  "started_utc": "2026-11-25T07:00:50Z",
+  "status": "ok"
+}

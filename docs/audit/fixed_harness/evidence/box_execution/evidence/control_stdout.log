@@ -1,0 +1,44 @@
+RUN_ID=dryrun-control-20261125T070049Z MODE=dry-run JOBSET=control STARTED=2026-11-25T07:00:50Z HOST=autodl-container-wjb02xe512-3c3a2b3b
+PYTHON=/root/miniconda3/bin/python (Python 3.10.8)
+-- bundle manifest verification (read-only) --
+README.md: OK
+RUN_REPORT.md: OK
+env_lock_rtx3080ti.txt: OK
+gpu_bray_abc_and_contest_surface.py: OK
+gpu_bray_abc_and_contest_surface_6param.py: OK
+gpu_e1_q3_wild_cluster_ri.py: OK
+results_bray_abc_6param.json: OK
+results_bray_abc_7param.json: OK
+results_e1_q3_selftest.json: OK
+results_e1_q3_selftest_cpu_ref.json: OK
+results_gpu_vs_cpu_diff.json: OK
+run_gpu_jobs.sh: OK
+bundle_file_count=14
+manifest_rc=0
+bundle_dir_digest_sha256=8d58e6ff750c8e512124f74474efd33ed71fe81c200f772e76c9539966f3cfbf
+MANIFEST.sha256: OK (14 files, digest 8d58e6ff750c8e51...)
+hashed 10 config files -> /root/work/audit/docs/audit/fixed_harness/evidence/dry_runs/dryrun-control-20261125T070049Z/evidence/config_hashes.json
+wrote /root/work/audit/docs/audit/fixed_harness/evidence/dry_runs/dryrun-control-20261125T070049Z/seeds.json (os_csprng, 2 seeds)
+== job dryrun_stub_ok_a start=2026-11-25T07:00:50Z
+== job dryrun_stub_ok_a ok rc=0 wall=0.101s output=/root/work/audit/docs/audit/fixed_harness/evidence/dry_runs/dryrun-control-20261125T070049Z/jobs/dryrun_stub_ok_a/result.json sha256=534e3e851cda170cbebdb35f5cbc5d5c24cf0dd627e2901aaf005ced8481a5c6
+== job dryrun_stub_ok_b start=2026-11-25T07:00:50Z
+== job dryrun_stub_ok_b ok rc=0 wall=0.111s output=/root/work/audit/docs/audit/fixed_harness/evidence/dry_runs/dryrun-control-20261125T070049Z/jobs/dryrun_stub_ok_b/result.json sha256=52df90e710aaf5fb3de9ab1ffb9de4d827b03ebeaa4683558afe72b20c6c430b
+-- post-run bundle verification (must equal pre-run digest) --
+README.md: OK
+RUN_REPORT.md: OK
+env_lock_rtx3080ti.txt: OK
+gpu_bray_abc_and_contest_surface.py: OK
+gpu_bray_abc_and_contest_surface_6param.py: OK
+gpu_e1_q3_wild_cluster_ri.py: OK
+results_bray_abc_6param.json: OK
+results_bray_abc_7param.json: OK
+results_e1_q3_selftest.json: OK
+results_e1_q3_selftest_cpu_ref.json: OK
+results_gpu_vs_cpu_diff.json: OK
+run_gpu_jobs.sh: OK
+bundle_file_count=14
+manifest_rc=0
+bundle_dir_digest_sha256=8d58e6ff750c8e512124f74474efd33ed71fe81c200f772e76c9539966f3cfbf
+MANIFEST.sha256: OK (14 files, digest 8d58e6ff750c8e51...)
+manifest: /root/work/audit/docs/audit/fixed_harness/evidence/dry_runs/dryrun-control-20261125T070049Z/manifest.json status=ok attempts=2 failed=0
+RUN COMPLETE run_id=dryrun-control-20261125T070049Z mode=dry-run jobs=2 dir=/root/work/audit/docs/audit/fixed_harness/evidence/dry_runs/dryrun-control-20261125T070049Z

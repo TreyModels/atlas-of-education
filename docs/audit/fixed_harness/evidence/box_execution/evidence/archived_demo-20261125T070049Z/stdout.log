@@ -1,0 +1,5 @@
+job_ok ran
+JOB job_ok EXIT 0 WALL_SEC 0.00
+intentional failure
+JOB job_fail EXIT 7 WALL_SEC 0.00
+===== DONE =====

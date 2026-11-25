@@ -1,0 +1,65 @@
+{
+  "bundle_digest_after": "8d58e6ff750c8e512124f74474efd33ed71fe81c200f772e76c9539966f3cfbf",
+  "bundle_digest_before": "8d58e6ff750c8e512124f74474efd33ed71fe81c200f772e76c9539966f3cfbf",
+  "bundle_dir": "/root/work/audit/docs/audit/gpu_abc_bundle",
+  "bundle_unchanged_during_run": true,
+  "errors": [],
+  "generated_at_utc": "2026-11-25T07:00:51Z",
+  "jobs": [
+    {
+      "command": "/root/miniconda3/bin/python /root/work/audit/docs/audit/fixed_harness/stubs/stub_job_ok.py --job-id dryrun_stub_ok_a --n 8 --seed 1371190321 --out-dir /root/work/audit/docs/audit/fixed_harness/evidence/dry_runs/dryrun-control-20261125T070049Z/jobs/dryrun_stub_ok_a/.staging ",
+      "config_sha256": "2741c3b7627ae990cf5cea567f35c28d46c4c58c8de4a7fff5969fa14b91430f",
+      "configuration": "/root/work/audit/docs/audit/fixed_harness/configs/stub_ok.json",
+      "ended_utc": "2026-11-25T07:00:50Z",
+      "error": null,
+      "evidence_status": null,
+      "exit_code": 0,
+      "job_id": "dryrun_stub_ok_a",
+      "output": "result.json",
+      "output_sha256": "534e3e851cda170cbebdb35f5cbc5d5c24cf0dd627e2901aaf005ced8481a5c6",
+      "script": "/root/work/audit/docs/audit/fixed_harness/stubs/stub_job_ok.py",
+      "script_sha256": "8cd2d2b6f3bc26091434fe171d4d83dbff19237998a5817fa07ddf2790a6f339",
+      "seed": 1371190321,
+      "started_utc": "2026-11-25T07:00:50Z",
+      "wall_time_sec": 0.101,
+      "worker_count": 1
+    },
+    {
+      "command": "/root/miniconda3/bin/python /root/work/audit/docs/audit/fixed_harness/stubs/stub_job_ok.py --job-id dryrun_stub_ok_b --n 5 --seed 1138005348 --out-dir /root/work/audit/docs/audit/fixed_harness/evidence/dry_runs/dryrun-control-20261125T070049Z/jobs/dryrun_stub_ok_b/.staging ",
+      "config_sha256": "2741c3b7627ae990cf5cea567f35c28d46c4c58c8de4a7fff5969fa14b91430f",
+      "configuration": "/root/work/audit/docs/audit/fixed_harness/configs/stub_ok.json",
+      "ended_utc": "2026-11-25T07:00:50Z",
+      "error": null,
+      "evidence_status": null,
+      "exit_code": 0,
+      "job_id": "dryrun_stub_ok_b",
+      "output": "result.json",
+      "output_sha256": "52df90e710aaf5fb3de9ab1ffb9de4d827b03ebeaa4683558afe72b20c6c430b",
+      "script": "/root/work/audit/docs/audit/fixed_harness/stubs/stub_job_ok.py",
+      "script_sha256": "8cd2d2b6f3bc26091434fe171d4d83dbff19237998a5817fa07ddf2790a6f339",
+      "seed": 1138005348,
+      "started_utc": "2026-11-25T07:00:50Z",
+      "wall_time_sec": 0.111,
+      "worker_count": 1
+    }
+  ],
+  "jobs_attempted": 2,
+  "jobs_config": "/root/work/audit/docs/audit/fixed_harness/configs/jobs_dry_run_control.json",
+  "jobs_config_sha256": "d0ca998f7b1feb10a84fb9b0412c95bec82a514c17ad8aa83921c988cfd7bc5a",
+  "jobs_failed": 0,
+  "jobs_succeeded": 2,
+  "mode": "dry-run",
+  "run_dir": "/root/work/audit/docs/audit/fixed_harness/evidence/dry_runs/dryrun-control-20261125T070049Z",
+  "run_id": "dryrun-control-20261125T070049Z",
+  "seeds": {
+    "archived_seed_not_reused": 20261125,
+    "base_seed": null,
+    "generated_at_utc": "2026-11-25T07:00:50Z",
+    "seeds": {
+      "dryrun_stub_ok_a": 1371190321,
+      "dryrun_stub_ok_b": 1138005348
+    },
+    "source": "os_csprng"
+  },
+  "status": "ok"
+}

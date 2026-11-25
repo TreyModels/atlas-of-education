@@ -1,0 +1,10 @@
+{
+  "ended_utc": "2026-11-25T07:00:51Z",
+  "exit_code": 7,
+  "failed_job": "dryrun_stub_fail",
+  "mode": "dry-run",
+  "note": "harness aborted at the first non-zero job; no manifest.json was assembled",
+  "run_id": "dryrun-failure-20261125T070049Z",
+  "started_utc": "2026-11-25T07:00:51Z",
+  "status": "failed"
+}

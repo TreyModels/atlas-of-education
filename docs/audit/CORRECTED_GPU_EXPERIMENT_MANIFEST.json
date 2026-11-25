@@ -1,0 +1,417 @@
+{
+  "deliverable": "P0-07 corrected GPU-experiment manifest",
+  "task": "task-11 (Lead-rerouted P0-07 execution half)",
+  "generated_at_utc": "2026-11-25T07:03:23Z",
+  "generated_by": "audit-runner",
+  "audit_reference": "docs/audit/EXTERNAL_AUDIT_GPU_2026-11-25.md (P0-07 list is binding)",
+  "audit_target": {
+    "bundle_dir": "docs/audit/gpu_abc_bundle",
+    "source_commit": "045a63e",
+    "frozen": true,
+    "manifest": "MANIFEST.sha256",
+    "manifest_entries": 12,
+    "manifest_verified": true,
+    "manifest_verified_by": [
+      "host (shasum -a 256 -c)",
+      "box (sha256sum -c)"
+    ],
+    "manifest_check_exit_code": 0,
+    "bundle_dir_digest_sha256": "8d58e6ff750c8e512124f74474efd33ed71fe81c200f772e76c9539966f3cfbf",
+    "unchanged_before_after_harness_runs": true,
+    "git_status": "clean (docs/audit/gpu_abc_bundle not modified)",
+    "box_manifest_check": [
+      "README.md: OK",
+      "RUN_REPORT.md: OK",
+      "env_lock_rtx3080ti.txt: OK",
+      "gpu_bray_abc_and_contest_surface.py: OK",
+      "gpu_bray_abc_and_contest_surface_6param.py: OK",
+      "gpu_e1_q3_wild_cluster_ri.py: OK",
+      "results_bray_abc_6param.json: OK",
+      "results_bray_abc_7param.json: OK",
+      "results_e1_q3_selftest.json: OK",
+      "results_e1_q3_selftest_cpu_ref.json: OK",
+      "results_gpu_vs_cpu_diff.json: OK",
+      "run_gpu_jobs.sh: OK"
+    ]
+  },
+  "corrected_harness": {
+    "dir": "docs/audit/fixed_harness",
+    "main_script": "docs/audit/fixed_harness/run_gpu_jobs_fixed.sh",
+    "main_script_sha256": "a1be5ecaa90b733154f51241a8376476bf04b44c55ab949046fe57beccd048a3",
+    "acceptance_test": "docs/audit/fixed_harness/dry_run_failure_propagation.sh",
+    "acceptance_test_sha256": "2a7acde2ff82c46d3fd7b5fbe84a55e493e4ccb95bf92d7683cfa24c7820f1c2",
+    "manifest_verifier_sha256": "4eb03e06c1ab692057f64b4339a3fae28c5f4f751596ea9a33f4b832b69bce9c",
+    "proof": {
+      "host": {
+        "evidence": "docs/audit/fixed_harness/evidence/dry_run_evidence.json",
+        "evidence_sha256": "c1922c93e96bc63e2a6536c320db886642cfc409dc96567ff4c4a1a4cccc8e79",
+        "passed": true,
+        "assertions_passed": 18,
+        "assertions_total": 18,
+        "control_exit": 0,
+        "failure_exit": 7,
+        "archived_pattern_exit": 0
+      },
+      "box": {
+        "evidence": "docs/audit/fixed_harness/evidence/box_execution/box_run_meta.json",
+        "evidence_sha256": "60a490bce055ad57592258bca3fa9a9aa172addff1c0b0c349eb712e5fd84a15",
+        "host": "autodl-container-wjb02xe512-3c3a2b3b",
+        "python": "3.10.8",
+        "numpy": "1.24.1",
+        "cgroup_cpu_max": "1000000 100000",
+        "worker_allocation": 1,
+        "nice_level": 10,
+        "passed": true,
+        "assertions_passed": 18,
+        "assertions_total": 18,
+        "manifest_entries_ok": true,
+        "bundle_dir_digest_sha256": "8d58e6ff750c8e512124f74474efd33ed71fe81c200f772e76c9539966f3cfbf"
+      }
+    },
+    "real_mode_matrix_defined": true,
+    "real_mode_executed": false,
+    "real_mode_not_executed_reason": "CPU-only audit mandate; torch parked and no GPU campaign authorised. The harness is validated by CPU dry-run stubs, not by executing the GPU scripts."
+  },
+  "execution_integrity_findings": [
+    {
+      "id": "EI-1",
+      "finding": "Runner does not propagate job failure (no set -e / no pipefail; rc is only echoed).",
+      "evidence": {
+        "file": "gpu_abc_bundle/run_gpu_jobs.sh",
+        "lines": "10-21"
+      },
+      "demonstrated": "evidence/archived_demo-*/stdout.log: overall exit 0 and DONE printed while a job printed EXIT 7",
+      "status": "VERIFIED DEFECT",
+      "fixed_by": "set -euo pipefail + explicit rc capture + fail-fast abort in run_gpu_jobs_fixed.sh"
+    },
+    {
+      "id": "EI-2",
+      "finding": "The 6-parameter run is absent from the archived runner, so the deposited 6-param output cannot be reproduced by it.",
+      "evidence": {
+        "file": "gpu_abc_bundle/run_gpu_jobs.sh",
+        "lines": "18-20 (only 7-param ABC, GPU selftest, CPU ref)"
+      },
+      "status": "VERIFIED DEFECT",
+      "fixed_by": "job2b_bray_abc_6param added as a first-class job"
+    },
+    {
+      "id": "EI-3",
+      "finding": "gpu_bray_abc_and_contest_surface_6param.py keeps the 7-param default --out-dir, so a default run overwrites the 7-param output.",
+      "evidence": {
+        "file": "gpu_abc_bundle/gpu_bray_abc_and_contest_surface_6param.py",
+        "lines": "argparse default --out-dir ./results_rtx3080ti/bray_and_contest"
+      },
+      "status": "VERIFIED DEFECT",
+      "fixed_by": "unique per-run/per-job directories; harness always injects --out-dir"
+    },
+    {
+      "id": "EI-4",
+      "finding": "Job JSON writes are non-atomic (plain open(...,'w')), so a crash can leave a truncated result.",
+      "evidence": {
+        "file": "gpu_abc_bundle/gpu_bray_abc_and_contest_surface.py",
+        "lines": "191-193 (and 235-237 in the E1/Q3 script)"
+      },
+      "status": "VERIFIED DEFECT",
+      "fixed_by": "jobs write to a private staging dir; harness publishes the JSON with an atomic rename"
+    },
+    {
+      "id": "EI-5",
+      "finding": "Job configurations/parameters are not hashed or recorded with the outputs.",
+      "evidence": {
+        "file": "gpu_abc_bundle/run_gpu_jobs.sh",
+        "lines": "10-21 (nothing about configs)"
+      },
+      "status": "VERIFIED DEFECT",
+      "fixed_by": "configs/*.json hashed per job and per run (evidence/config_hashes.json + manifest)"
+    },
+    {
+      "id": "EI-6",
+      "finding": "A single fixed seed (20261125) is used with no provenance; validation runs are indistinguishable from replays.",
+      "evidence": {
+        "file": "gpu_abc_bundle/run_gpu_jobs.sh",
+        "lines": "18-20 (no --seed passed; script defaults 20261125)"
+      },
+      "status": "VERIFIED DEFECT",
+      "fixed_by": "independent OS-CSPRNG validation seeds per job, recorded + hashed; archived seed not reused"
+    },
+    {
+      "id": "EI-7",
+      "finding": "Accepted draws discarded and the advertised 100-Fresh-Seed Stability Bank is not implemented; no posterior/predictive diagnostics are producible from the deposit.",
+      "evidence": {
+        "file": "gpu_abc_bundle/gpu_bray_abc_and_contest_surface.py",
+        "lines": "103-120 (only aggregates returned), 4-8 (advertised bank)"
+      },
+      "status": "VERIFIED DEFECT",
+      "fixed_by": "not fixable by harness alone: requires experiment-code changes; recorded as CONTRADICTED/NOT_IMPLEMENTED"
+    }
+  ],
+  "experiments": [
+    {
+      "job_id": "job2_bray_abc_7param",
+      "script": "gpu_abc_bundle/gpu_bray_abc_and_contest_surface.py",
+      "script_sha256": "0709032c043372cafd79d1df4c62dd352403e881afc1fc395cb5956a19a15d2e",
+      "config": "docs/audit/fixed_harness/configs/job2_abc_7param.json",
+      "config_sha256": "601f3f4718e67a217552644e1b29c9c8d9102e39d71afb3d197f46946291e07a",
+      "seed": {
+        "archived": 20261125,
+        "validation_policy": "independent OS-CSPRNG seed per run (archived seed not reused)"
+      },
+      "command": "/root/miniconda3/bin/python gpu_bray_abc_and_contest_surface.py --n-abc 200000 --out-dir ./results_rtx3080ti/bray_and_contest",
+      "output": "results_bray_abc_7param.json",
+      "output_sha256": "79ceddbf409934b92b29f839931a19e61f30b4ef7b42c2f9ed652e110f4979f7",
+      "exit_code": 0,
+      "exit_code_note": "archived runner echoed EXIT 0 per job; it could not fail-fast, so this value is AUTHOR-REPORTED, not execution-verified",
+      "wall_time_sec": 2.73,
+      "wall_time_note": null,
+      "worker_count": 1,
+      "evidence_status": "AUTHOR-REPORTED",
+      "execution_state": "ARCHIVED_RUN_AUTHOR_REPORTED",
+      "archived_log_line": "[GPU] Using NVIDIA GeForce RTX 3080 Ti (CUDA 11.8)",
+      "known_defects": "As-shipped 7-coordinate ABC: theta[5] teacher_threshold is dead; only 5 advertised (4 independent) moments computed. Identification claim CONTRADICTED by external audit P0-01/P0-02.",
+      "corrected_harness_command": "docs/audit/fixed_harness/run_gpu_jobs_fixed.sh --mode real --jobs real  (job job2_bray_abc_7param; unique run dir; independent seed; atomic output; fail-fast)",
+      "rerun_precondition": "P0-01/P0-02 corrections: drop the dead theta[5]; advertise 4 independent moments; replace ABC identification claims with the analytic moment-rank audit. Do NOT report as a 7-parameter calibration."
+    },
+    {
+      "job_id": "job2b_bray_abc_6param",
+      "script": "gpu_abc_bundle/gpu_bray_abc_and_contest_surface_6param.py",
+      "script_sha256": "012b14bb93ef9e668c1a578f7f98273fed3a41d9f7cf404a6ed26fa2e9c1623f",
+      "config": "docs/audit/fixed_harness/configs/job2b_abc_6param.json",
+      "config_sha256": "56acc53141165537212cbe4581914a5404d6e0b2e43c96a6a7d7022e777564d6",
+      "seed": {
+        "archived": 20261125,
+        "validation_policy": "independent OS-CSPRNG seed per run (archived seed not reused)"
+      },
+      "command": "/root/miniconda3/bin/python gpu_bray_abc_and_contest_surface_6param.py --n-abc 200000 --out-dir ./results_rtx3080ti/bray_and_contest_6param",
+      "output": "results_bray_abc_6param.json",
+      "output_sha256": "3d1027b41c0ac6647eebb272961532d20e9507141006aa1c250e411a1e9c5d09",
+      "exit_code": 0,
+      "exit_code_note": "archived runner echoed EXIT 0 per job; it could not fail-fast, so this value is AUTHOR-REPORTED, not execution-verified",
+      "wall_time_sec": null,
+      "wall_time_note": "whole-script wall not recorded in RUN_REPORT; ABC internal elapsed 0.30 s, surface 0.036 s",
+      "worker_count": 1,
+      "evidence_status": "AUTHOR-REPORTED",
+      "execution_state": "ARCHIVED_RUN_AUTHOR_REPORTED",
+      "archived_log_line": "[GPU] Using NVIDIA GeForce RTX 3080 Ti (CUDA 11.8)",
+      "known_defects": "Corrective 6-parameter variant. Was NOT in the archived runner -- the runner could not reproduce the deposited bundle (P0-07 defect #2). 6 active parameters vs 4 independent moments => still not point-identified; AUTHOR-REPORTED only.",
+      "corrected_harness_command": "docs/audit/fixed_harness/run_gpu_jobs_fixed.sh --mode real --jobs real  (job job2b_bray_abc_6param; unique run dir; independent seed; atomic output; fail-fast)",
+      "rerun_precondition": "P0-01/P0-02: 6 active parameters vs 4 independent moments is rank-deficient; needs additional micro-moments (contest-math ABC_IDENTIFICATION_AUDIT.md) before any calibration claim."
+    },
+    {
+      "job_id": "job1_e1_q3_selftest_gpu",
+      "script": "gpu_abc_bundle/gpu_e1_q3_wild_cluster_ri.py",
+      "script_sha256": "3bbbc19ac42020b64a6d88c57118d75702c42dabddc0038f8ea087a6b2caf6c9",
+      "config": "docs/audit/fixed_harness/configs/job1_e1q3_gpu.json",
+      "config_sha256": "477450855fac0c50cc2e3dbcf291a3821bf4bdd8d6a849152083e396ee03c0db",
+      "seed": {
+        "archived": 20261125,
+        "validation_policy": "independent OS-CSPRNG seed per run (archived seed not reused)"
+      },
+      "command": "/root/miniconda3/bin/python gpu_e1_q3_wild_cluster_ri.py --B 2000 --out-dir ./results_rtx3080ti/e1_q3_selftest",
+      "output": "results_e1_q3_selftest.json",
+      "output_sha256": "9dc07b4493a45f67ece8c68eca864b98d51548299030fd962b337913208a158e",
+      "exit_code": 0,
+      "exit_code_note": "archived runner echoed EXIT 0 per job; it could not fail-fast, so this value is AUTHOR-REPORTED, not execution-verified",
+      "wall_time_sec": 3.59,
+      "wall_time_note": null,
+      "worker_count": 1,
+      "evidence_status": "AUTHOR-REPORTED",
+      "execution_state": "ARCHIVED_RUN_AUTHOR_REPORTED",
+      "archived_log_line": "[GPU] Using NVIDIA GeForce RTX 3080 Ti (CUDA 11.8)",
+      "known_defects": "Built-in synthetic selftest only (N=1200, G=60). Performs GPU-vs-CPU numeric agreement, NOT an E1/Q3 reconstruction; the inference claims are CONTRADICTED by external audit P0-04/P0-05.",
+      "corrected_harness_command": "docs/audit/fixed_harness/run_gpu_jobs_fixed.sh --mode real --jobs real  (job job1_e1_q3_selftest_gpu; unique run dir; independent seed; atomic output; fail-fast)",
+      "rerun_precondition": null
+    },
+    {
+      "job_id": "job1_e1_q3_cpu_ref",
+      "script": "gpu_abc_bundle/gpu_e1_q3_wild_cluster_ri.py",
+      "script_sha256": "3bbbc19ac42020b64a6d88c57118d75702c42dabddc0038f8ea087a6b2caf6c9",
+      "config": "docs/audit/fixed_harness/configs/job1_e1q3_cpu_ref.json",
+      "config_sha256": "99619d3918ca8db6d0be355b7256420b16965e8b84e2c17b563bb540ef168a20",
+      "seed": {
+        "archived": 20261125,
+        "validation_policy": "independent OS-CSPRNG seed per run (archived seed not reused)"
+      },
+      "command": "CUDA_VISIBLE_DEVICES=\"\" /root/miniconda3/bin/python gpu_e1_q3_wild_cluster_ri.py --B 2000 --out-dir ./results_rtx3080ti/e1_q3_selftest_cpu_ref",
+      "output": "results_e1_q3_selftest_cpu_ref.json",
+      "output_sha256": "1b325e9d36e56cd1ee5e5e3a879fe28aaaf68c96c374382d78979b05adf276ca",
+      "exit_code": 0,
+      "exit_code_note": "archived runner echoed EXIT 0 per job; it could not fail-fast, so this value is AUTHOR-REPORTED, not execution-verified",
+      "wall_time_sec": 2.41,
+      "wall_time_note": null,
+      "worker_count": 1,
+      "evidence_status": "AUTHOR-REPORTED",
+      "execution_state": "ARCHIVED_RUN_AUTHOR_REPORTED",
+      "archived_log_line": "[CPU] CUDA not available; falling back to CPU",
+      "known_defects": "CPU-forced reference run of the same selftest (CUDA_VISIBLE_DEVICES=\"\"). Used for the arithmetic diff only.",
+      "corrected_harness_command": "docs/audit/fixed_harness/run_gpu_jobs_fixed.sh --mode real --jobs real  (job job1_e1_q3_cpu_ref; unique run dir; independent seed; atomic output; fail-fast)",
+      "rerun_precondition": null
+    },
+    {
+      "job_id": "job1_gpu_vs_cpu_diff",
+      "script": "fixed_harness/tools/gpu_vs_cpu_diff.py",
+      "script_sha256": null,
+      "config": "docs/audit/fixed_harness/configs/job1_gpu_vs_cpu_diff.json",
+      "config_sha256": "7158401a5f3766bf870d469543a11a6f184d84fb562cef940f2405350d64fa02",
+      "seed": {
+        "archived": 20261125,
+        "validation_policy": "independent OS-CSPRNG seed per run (archived seed not reused)"
+      },
+      "command": "derived artifact (no standalone job in the archived runner)",
+      "output": "results_gpu_vs_cpu_diff.json",
+      "output_sha256": "08fbc5c9920ba0afe91b5c55e151eae1608152f90058f19172c7508b5dce0e7a",
+      "exit_code": null,
+      "exit_code_note": "archived runner echoed EXIT 0 per job; it could not fail-fast, so this value is AUTHOR-REPORTED, not execution-verified",
+      "wall_time_sec": null,
+      "wall_time_note": null,
+      "worker_count": null,
+      "evidence_status": "VALIDATED SIMULATION (arithmetic only)",
+      "execution_state": "DERIVED_ARTIFACT",
+      "archived_log_line": null,
+      "known_defects": "Arithmetic agreement only: deterministic quantities max abs diff 8.88e-15; p-values identical; RNG-dependent bootstrap moments differ by design. Does NOT validate any scientific claim (external audit section 2).",
+      "corrected_harness_command": "docs/audit/fixed_harness/run_gpu_jobs_fixed.sh --mode real --jobs real  (job job1_gpu_vs_cpu_diff; unique run dir; independent seed; atomic output; fail-fast)",
+      "rerun_precondition": null
+    },
+    {
+      "job_id": "job2_partB_contest_surface_7param",
+      "script": "gpu_abc_bundle/gpu_bray_abc_and_contest_surface.py",
+      "script_sha256": "0709032c043372cafd79d1df4c62dd352403e881afc1fc395cb5956a19a15d2e",
+      "config": "docs/audit/fixed_harness/configs/job2_abc_7param.json",
+      "config_sha256": "601f3f4718e67a217552644e1b29c9c8d9102e39d71afb3d197f46946291e07a",
+      "seed": {
+        "archived": 20261125,
+        "validation_policy": "independent OS-CSPRNG seed per run (archived seed not reused)"
+      },
+      "command": "/root/miniconda3/bin/python gpu_bray_abc_and_contest_surface.py --n-abc 200000 --out-dir ./results_rtx3080ti/bray_and_contest",
+      "output": "results_bray_abc_7param.json",
+      "output_sha256": "79ceddbf409934b92b29f839931a19e61f30b4ef7b42c2f9ed652e110f4979f7",
+      "exit_code": 0,
+      "exit_code_note": "archived runner echoed EXIT 0 per job; it could not fail-fast, so this value is AUTHOR-REPORTED, not execution-verified",
+      "wall_time_sec": 0.036,
+      "wall_time_note": "internal elapsed_sec of Part B within the parent process; not a separate process",
+      "worker_count": 1,
+      "evidence_status": "AUTHOR-REPORTED",
+      "execution_state": "ARCHIVED_RUN_AUTHOR_REPORTED",
+      "notes": "Part B of the same process: 2,000-point (r, price, seat-share) approximate Tullock surface. Paradox share saturates at 1.0/1.0; external audit P0-06 CONTRADICTS it as a general-r / engine-PL boundary map (solver is the r=1 FOC with r inserted as a multiplier).",
+      "corrected_harness_command": "docs/audit/fixed_harness/run_gpu_jobs_fixed.sh --mode real --jobs real  (job job2_bray_abc_7param; unique run dir; independent seed; atomic output; fail-fast)",
+      "rerun_precondition": "P0-06: replace the r=1-FOC-with-r-multiplier solver by an independently derived general-r Tullock optimum with capacity clearing and convergence diagnostics; extend seat shares to universal admission."
+    },
+    {
+      "job_id": "job2_partB_contest_surface_6param",
+      "script": "gpu_abc_bundle/gpu_bray_abc_and_contest_surface_6param.py",
+      "script_sha256": "012b14bb93ef9e668c1a578f7f98273fed3a41d9f7cf404a6ed26fa2e9c1623f",
+      "config": "docs/audit/fixed_harness/configs/job2b_abc_6param.json",
+      "config_sha256": "56acc53141165537212cbe4581914a5404d6e0b2e43c96a6a7d7022e777564d6",
+      "seed": {
+        "archived": 20261125,
+        "validation_policy": "independent OS-CSPRNG seed per run (archived seed not reused)"
+      },
+      "command": "/root/miniconda3/bin/python gpu_bray_abc_and_contest_surface_6param.py --n-abc 200000 --out-dir ./results_rtx3080ti/bray_and_contest_6param",
+      "output": "results_bray_abc_6param.json",
+      "output_sha256": "3d1027b41c0ac6647eebb272961532d20e9507141006aa1c250e411a1e9c5d09",
+      "exit_code": 0,
+      "exit_code_note": "archived runner echoed EXIT 0 per job; it could not fail-fast, so this value is AUTHOR-REPORTED, not execution-verified",
+      "wall_time_sec": 0.036,
+      "wall_time_note": "internal elapsed_sec of Part B within the parent process; not a separate process",
+      "worker_count": 1,
+      "evidence_status": "AUTHOR-REPORTED",
+      "execution_state": "ARCHIVED_RUN_AUTHOR_REPORTED",
+      "notes": "Part B unchanged in the 6-parameter variant; same P0-06 contradiction applies.",
+      "corrected_harness_command": "docs/audit/fixed_harness/run_gpu_jobs_fixed.sh --mode real --jobs real  (job job2b_bray_abc_6param; unique run dir; independent seed; atomic output; fail-fast)",
+      "rerun_precondition": "P0-06: replace the r=1-FOC-with-r-multiplier solver by an independently derived general-r Tullock optimum with capacity clearing and convergence diagnostics; extend seat shares to universal admission."
+    },
+    {
+      "job_id": "job1_e1_q3_panel_mode",
+      "script": "gpu_abc_bundle/gpu_e1_q3_wild_cluster_ri.py",
+      "script_sha256": "3bbbc19ac42020b64a6d88c57118d75702c42dabddc0038f8ea087a6b2caf6c9",
+      "config": null,
+      "config_sha256": null,
+      "seed": null,
+      "command": null,
+      "output": null,
+      "output_sha256": null,
+      "exit_code": null,
+      "wall_time_sec": null,
+      "worker_count": null,
+      "evidence_status": "UNRESOLVED",
+      "execution_state": "NOT_RUN",
+      "notes": "Advertised panel mode was never run: the E1/Q3 panel CSV does not exist in the repository (RUN_REPORT.md 'E1/Q3 full panel mode - MISSING'). Even with a CSV it would build X=[1,x] only, dropping controls/FE, so it is not an E1/Q3 reconstruction. Missing experiment => UNRESOLVED."
+    },
+    {
+      "job_id": "job2_100_fresh_seed_stability_bank",
+      "script": "gpu_abc_bundle/gpu_bray_abc_and_contest_surface.py",
+      "script_sha256": "0709032c043372cafd79d1df4c62dd352403e881afc1fc395cb5956a19a15d2e",
+      "config": "fixed_harness/configs/job2_abc_7param.json",
+      "config_sha256": "601f3f4718e67a217552644e1b29c9c8d9102e39d71afb3d197f46946291e07a",
+      "seed": null,
+      "command": null,
+      "output": null,
+      "output_sha256": null,
+      "exit_code": null,
+      "wall_time_sec": null,
+      "worker_count": null,
+      "evidence_status": "CONTRADICTED",
+      "execution_state": "NOT_IMPLEMENTED",
+      "notes": "The as-shipped docstring advertises a '100-Fresh-Seed Stability Bank' (n_per_class in {70,300,700}); grep of the script finds no implementation and no output artifact. Claim CONTRADICTED (P0-07)."
+    },
+    {
+      "job_id": "abc_accepted_draws_posterior",
+      "script": "gpu_abc_bundle/gpu_bray_abc_and_contest_surface.py",
+      "script_sha256": "0709032c043372cafd79d1df4c62dd352403e881afc1fc395cb5956a19a15d2e",
+      "config": "fixed_harness/configs/job2_abc_7param.json",
+      "config_sha256": "601f3f4718e67a217552644e1b29c9c8d9102e39d71afb3d197f46946291e07a",
+      "seed": null,
+      "command": null,
+      "output": null,
+      "output_sha256": null,
+      "exit_code": null,
+      "wall_time_sec": null,
+      "worker_count": null,
+      "evidence_status": "CONTRADICTED",
+      "execution_state": "NOT_AVAILABLE",
+      "notes": "Accepted draws are discarded: only n_accepted / best_theta / posterior condition number are returned, so posterior diagnostics, predictive checks and uncertainty are impossible from the deposit (P0-07)."
+    }
+  ],
+  "what_would_need_to_be_rerun": [
+    {
+      "experiment": "job2_bray_abc_7param",
+      "precondition": "P0-01/P0-02 corrections: drop the dead theta[5]; advertise 4 independent moments; replace ABC identification claims with the analytic moment-rank audit. Do NOT report as a 7-parameter calibration."
+    },
+    {
+      "experiment": "job2b_bray_abc_6param",
+      "precondition": "P0-01/P0-02: 6 active parameters vs 4 independent moments is rank-deficient; needs additional micro-moments (contest-math ABC_IDENTIFICATION_AUDIT.md) before any calibration claim."
+    },
+    {
+      "experiment": "job2_partB_contest_surface",
+      "precondition": "P0-06: replace the r=1-FOC-with-r-multiplier solver by an independently derived general-r Tullock optimum with capacity clearing and convergence diagnostics; extend seat shares to universal admission."
+    },
+    {
+      "experiment": "job1_e1_q3_selftest_gpu / cpu_ref / diff",
+      "precondition": "P0-04/P0-05: replace the confounded DGP negative control with a factorial design; replace the within-invariant country-block permutation with a scheme justified for the FE estimand. The selftest remains arithmetic validation only."
+    },
+    {
+      "experiment": "job1_e1_q3_panel_mode",
+      "precondition": "Commit the E1/Q3 panel CSV + the actual FE/control specification; X=[1,x] is not the estimator."
+    },
+    {
+      "experiment": "job2_100_fresh_seed_stability_bank",
+      "precondition": "Implement it (currently contradicted), save accepted draws, add posterior/predictive outputs."
+    }
+  ],
+  "evidence_status_legend": {
+    "VERIFIED EMPIRICAL": "directly observed/measured fact, not a simulation",
+    "REPRODUCED SIMULATION": "simulation re-executed and reproduced in this audit",
+    "VALIDATED SIMULATION": "numerically validated within a stated scope (arithmetic only for GPU-vs-CPU)",
+    "AUTHOR-REPORTED": "supplied/recorded by the author; hash-verified but not re-executed",
+    "CONTRADICTED": "positively contradicted by verified code/algebra/records",
+    "UNRESOLVED": "evidence missing / experiment cannot be run from the deposit"
+  },
+  "quarantine": "GPU bundles' scientific conclusions remain QUARANTINED (EXTERNAL_AUDIT_GPU_2026-11-25.md \u00a72). No manifest entry promotes a GPU claim beyond AUTHOR-REPORTED / CONTRADICTED / UNRESOLVED; GPU-vs-CPU agreement is arithmetic validation only.",
+  "sources": {
+    "jobs_config": "docs/audit/fixed_harness/configs/jobs_real.json",
+    "jobs_config_sha256": "8300c5d574ea1a67f8ddc846d3611bcf9bef7174e8bfd4c817c3339dd62e5057",
+    "bundle_manifest": "docs/audit/gpu_abc_bundle/MANIFEST.sha256",
+    "bundle_manifest_sha256": "dc6b93fb95baeddd9ded1f18dcf7fc778570fbec1793cb01d89c0de76e5e1bac",
+    "run_report": "docs/audit/gpu_abc_bundle/RUN_REPORT.md",
+    "run_report_sha256": "68c38f7701208e89cf8f4a12a4a461ceee7746a8113e14d497ae857438b2ce06"
+  }
+}

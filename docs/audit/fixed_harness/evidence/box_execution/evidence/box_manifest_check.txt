@@ -1,0 +1,12 @@
+README.md: OK
+RUN_REPORT.md: OK
+env_lock_rtx3080ti.txt: OK
+gpu_bray_abc_and_contest_surface.py: OK
+gpu_bray_abc_and_contest_surface_6param.py: OK
+gpu_e1_q3_wild_cluster_ri.py: OK
+results_bray_abc_6param.json: OK
+results_bray_abc_7param.json: OK
+results_e1_q3_selftest.json: OK
+results_e1_q3_selftest_cpu_ref.json: OK
+results_gpu_vs_cpu_diff.json: OK
+run_gpu_jobs.sh: OK

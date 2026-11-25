@@ -1,0 +1,25 @@
+{
+  "bundle_dir": "/root/work/audit/docs/audit/gpu_abc_bundle",
+  "bundle_dir_digest_sha256": "8d58e6ff750c8e512124f74474efd33ed71fe81c200f772e76c9539966f3cfbf",
+  "bundle_file_count": 14,
+  "check_command": "sha256sum -c MANIFEST.sha256",
+  "check_exit_code": 0,
+  "check_output": [
+    "README.md: OK",
+    "RUN_REPORT.md: OK",
+    "env_lock_rtx3080ti.txt: OK",
+    "gpu_bray_abc_and_contest_surface.py: OK",
+    "gpu_bray_abc_and_contest_surface_6param.py: OK",
+    "gpu_e1_q3_wild_cluster_ri.py: OK",
+    "results_bray_abc_6param.json: OK",
+    "results_bray_abc_7param.json: OK",
+    "results_e1_q3_selftest.json: OK",
+    "results_e1_q3_selftest_cpu_ref.json: OK",
+    "results_gpu_vs_cpu_diff.json: OK",
+    "run_gpu_jobs.sh: OK"
+  ],
+  "checked_at_utc": "2026-11-25T07:00:50Z",
+  "manifest": "MANIFEST.sha256",
+  "manifest_entries_ok": true,
+  "note": "bundle directory digest = sha256 of the sorted sha256sum listing of every file; used as a before/after mutation witness"
+}

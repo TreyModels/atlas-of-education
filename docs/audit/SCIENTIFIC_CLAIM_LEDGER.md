@@ -1,0 +1,108 @@
+# SCIENTIFIC CLAIM LEDGER — GPU bundle + Paper A/B (P0-07)
+
+**Programme:** Atlas contest audit v2 · **Task:** `task-11` (P0-07 execution half) · **Owner:** `audit-runner`
+**Date:** 2026-11-25 · **Audit branch:** `research/contest-audit-v2-2026-11-25`
+**Companion machine-readable record:** [`CORRECTED_GPU_EXPERIMENT_MANIFEST.json`](CORRECTED_GPU_EXPERIMENT_MANIFEST.json)
+**Audit authority:** [`EXTERNAL_AUDIT_GPU_2026-11-25.md`](EXTERNAL_AUDIT_GPU_2026-11-25.md) — **GPU-bundle scientific
+conclusions are QUARANTINED**. P0-07 list is binding.
+
+## Rules used in this ledger
+
+1. **Every claim below has exactly one status** from the programme taxonomy:
+   `VERIFIED EMPIRICAL` · `REPRODUCED SIMULATION` · `VALIDATED SIMULATION` · `AUTHOR-REPORTED` · `CONTRADICTED` ·
+   `UNRESOLVED` (see `LEAD_GROUND_TRUTH.md` §6).
+2. **Arithmetic validation ≠ scientific validation.** GPU-vs-CPU float64 agreement (8.88e-15) validates
+   **arithmetic only**; it does **not** promote any scientific claim to `VALIDATED`.
+3. A claim backed only by an artifact that this audit did **not** execute or independently re-derive is at best
+   `AUTHOR-REPORTED`; if the artifact is missing it is `UNRESOLVED`; if verified code/algebra contradicts it, it is
+   `CONTRADICTED`.
+4. **No GPU-bundle output may be cited** as a calibration, a contest boundary map, or an E1/Q3 reconstruction
+   (external audit §2). The entries below exist so the quarantine is explicit and per-claim, not a blanket.
+5. Bundle integrity (separate from scientific claims): canonical `MANIFEST.sha256` **12/12 entries OK** on host
+   (`shasum -a 256 -c`) and box (`sha256sum -c`); bundle directory digest
+   `8d58e6ff…f3cfbf` unchanged before/after every harness run. That is an **integrity fact**, not a scientific
+   claim (recorded in the manifest deliverable).
+
+---
+
+## A. GPU bundle claims (`docs/audit/gpu_abc_bundle/` @ `045a63e`)
+
+| ID | claim | artifact(s) | status | basis |
+|---|---|---|---|---|
+| G-01 | The 7-coordinate Bray ABC is a **7-parameter calibration** | `gpu_bray_abc_and_contest_surface.py`; `results_bray_abc_7param.json` | **CONTRADICTED** | `θ5` (teacher_threshold) never enters utilities or moments; not identifiable (external audit P0-01/P0-02; P0-07 defect list) |
+| G-02 | The ABC has **5 independent moments** (or "5 moments vs 6 parameters" is tight) | same script L52, L82-90; `results_bray_abc_7param.json` | **CONTRADICTED** | overall participation ≡ ⅔·G9 + ⅓·G12 (420 G9 / 210 G12), and the targets satisfy it exactly (0.73 = ⅔·0.67+⅓·0.85) ⇒ **4 independent moments** (audit P0-01) |
+| G-03 | The **posterior correlation condition number** (25.96 → 21.03) measures/improves identification | `results_bray_abc_7param.json` (`posterior_corr_cond_6active`); `results_bray_abc_6param.json` | **CONTRADICTED** | it is the eigenvalue ratio of the accepted-draw correlation matrix, not the moment-Jacobian; must not be cited as identification evidence (audit P0-01) |
+| G-04 | The ABC identifies the provider-choice parameter (archived δ = −0.8241 7-param; −0.6682 6-param against own-share target 0.68) | `results_bray_abc_7param.json`; `results_bray_abc_6param.json` | **CONTRADICTED** | δ is analytic: `P(own|tutoring)=1/(1+e^δ)` ⇒ δ = ln(0.32/0.68) = **−0.7537718** exactly; the archived estimates imply 69.51 % / 66.11 % own share, both off the exact target (audit P0-02) |
+| G-05 | The ABC posterior is a credible calibration rather than a prior-bounded accepted region | `results_bray_abc_7param.json`; `results_bray_abc_6param.json` | **CONTRADICTED** | 6 active parameters vs 4 independent moments ⇒ ≥2 locally unidentified directions; the uniform priors do the identifying (audit P0-01/P0-02) |
+| G-06 | The ABC fits **7 benchmark moments** (`other_share`, `teacher_tut` included) | `gpu_bray_abc_and_contest_surface.py` docstring L39-41 vs code L52, L82-90 | **CONTRADICTED** | only 5 moments are computed; `other_share` and `teacher_tut` are never computed |
+| G-07 | The synthetic population supports urban/rural and school-level claims | `gpu_bray_abc_and_contest_surface_6param.py` L50-54 | **CONTRADICTED** | population is degenerate: every G12 pupil is rural (zero urban G12), no school identifiers; `school_gap ~ U(0,1)` per pupil (audit P0-03) |
+| G-08 | Accepted draws are retained for posterior/predictive diagnostics | `gpu_bray_abc_and_contest_surface.py` L103-120 | **CONTRADICTED** | accepted draws are discarded; only aggregates returned (audit P0-07) |
+| G-09 | A **“100-Fresh-Seed Stability Bank”** was run | script docstring L4-8 | **CONTRADICTED** | advertised but not implemented anywhere; no output artifact (audit P0-07) |
+| G-10 | The 2,000-point contest surface maps the exact H2 boundary / the engine's contest mechanism | `results_bray_abc_{7,6}param.json` `part_b_*`; script L124-174 | **CONTRADICTED** | approximate symmetric Tullock fixed point, not the engine's Gumbel-max Plackett–Luce gate (audit P0-06; bundle README §3) |
+| G-11 | The **seat-expansion “paradox”** (`dSpend/dS > 0`; share of cells = **1.0**) is a model result | `results_bray_abc_{7,6}param.json` (`share_cells_paradox_*=1.0`) | **CONTRADICTED** | solver is the **r = 1** first-order condition with r inserted as a multiplier (`e = sqrt(r·ΔV·A·y/p) − A − x0`), so r rescales incentives rather than the discrimination exponent; no capacity clearing / convergence diagnostics; seat shares stop at 50 %. **Toy-model result, quarantined** (audit P0-06) |
+| G-12 | The E1/Q3 selftest demonstrates **minority-effect leakage** | `results_e1_q3_selftest.json`; `gpu_e1_q3_wild_cluster_ri.py` L172-185 | **CONTRADICTED** | DGP puts the country effect in both regressor and outcome; pooled regression has omitted-variable bias; auditor negative control (true effect 0) found β=0.3054, t=4.975, p=0.0005 (audit P0-04) |
+| G-13 | Wild-cluster bootstrap p-values provide valid inference for the published E1/Q3 estimators | `results_e1_q3_selftest.json`; `results_gpu_vs_cpu_diff.json` | **CONTRADICTED** | selftest p-values sit at the 1/(B+1) resolution floors (0.00049975, 0.000999) on a confounded DGP; the selftest is GPU-numerics validation only (audit P0-04) |
+| G-14 | The country-block permutation tests the within-country (FE) estimand | `gpu_e1_q3_wild_cluster_ri.py` L144-160; `results_e1_q3_selftest.json` `block_perm` | **CONTRADICTED** | `x*_it − x̄*_i ≡ x_it − x̄_i` for every permutation ⇒ the within regressor is invariant; adding FE cannot repair it (audit P0-05) |
+| G-15 | The bundle is an **E1/Q3 reconstruction** | `gpu_e1_q3_wild_cluster_ri.py` panel mode; `RUN_REPORT.md` | **UNRESOLVED** | panel CSV missing (panel mode never run); even with a CSV, `X=[1,x]` drops controls/FE, so it is not the estimator |
+| G-16 | GPU and CPU agree numerically on the selftest | `results_gpu_vs_cpu_diff.json` | **VALIDATED SIMULATION** *(arithmetic only)* | deterministic quantities max abs diff 8.88e-15; p-values identical; RNG-dependent bootstrap moments differ by design (scope-limited: no scientific claim validated) |
+| G-17 | Reported pooled regression values (β = 0.4447407388610457, SE = 0.08291358451449403, t = 5.363906788800103) | `results_e1_q3_selftest.json` | **AUTHOR-REPORTED** | consistent with committed code and independently reproduced arithmetically by the external auditor; **inference** from these numbers is invalidated separately (G-12/G-13) |
+| G-18 | Environment: torch 2.7.1+cu118, CUDA 11.8, RTX 3080 Ti 12 GB, 152-package env lock | `env_lock_rtx3080ti.txt`; `RUN_REPORT.md` | **AUTHOR-REPORTED** | environment lock deposited; not re-verified in this audit (no GPU campaign; torch parked) |
+| G-19 | The archived runner executed all jobs successfully (`EXIT 0` per job, `DONE`) | `run_gpu_jobs.sh`; `RUN_REPORT.md` | **AUTHOR-REPORTED** | P0-07: the archived runner cannot detect failure (rc only echoed), so its `DONE` is not evidence of success. Corrected harness proof: archived pattern exits 0 with a failing job; corrected harness exits 7 (see `fixed_harness/evidence/`) |
+| G-20 | The GPU bundle's ABC/contest/E1-Q3 outputs are citable scientific evidence | this bundle (all outputs) | **UNRESOLVED** | quarantined by external audit §2 until P0-01…P0-07 corrections are implemented and the corrected experiments are re-run; no GPU campaign authorised |
+
+**GPU ledger summary:** 0 `VERIFIED EMPIRICAL`, 0 `REPRODUCED SIMULATION`, 1 `VALIDATED SIMULATION` (arithmetic
+scope only: G-16), 3 `AUTHOR-REPORTED` (G-17…G-19), **14 `CONTRADICTED`** (G-01…G-14), 2 `UNRESOLVED` (G-15, G-20).
+The only thing that survives without caveat is **arithmetic agreement**, and even that validates no claim.
+
+---
+
+## B. Paper A headline claims (`papers/shadow-education-contest/paper_a_general_mechanism/`)
+
+| ID | claim | artifact(s) | status | basis |
+|---|---|---|---|---|
+| A-01 | Empirical E8 effect: abolition-year GER jump **+12.44 pp** (committed 12.4436), mean post-abolition **+25.26 pp** (25.2607), event range **+22.12…+28.56 pp** | `When_Fee_Abolition_Meets_Rationed_Gates_APA.docx`; `RECONCILIATION.md` (committed E8 record `bd782be`) | **AUTHOR-REPORTED** | manuscript cites a committed E8 record on another branch; not re-derived in this audit. Internal consistency checked in `RECONCILIATION.md` |
+| A-02 | **Exp 1** live-WDI `t*` bulge-arrival test: 7,290 observations, 2,500 Fisher permutations, honest null | manuscript; `MISSING_ARTIFACTS.md` | **UNRESOLVED** | no series/code/result JSON committed; the in-repo bulge record says `t*` **NOT-ESTIMABLE** (`L_primary` sourced 0/8). Cannot be cited until the series + hashes are committed |
+| A-03 | **Exp 3** Tullock `contest` gate: 1,640 matched runs, H2 fee×scarcity `+0.1086` (p = 1.9e-11), H1 `+0.3430` (Spearman −1.00) | manuscript; `MISSING_ARTIFACTS.md` | **UNRESOLVED** | no runner/results/seeds committed; the committed base engine has no `contest` gate (dispatch is bar/quota only), and the reproduction record notes the patch lineage separately |
+| A-04 | **Exp 4** identifiability: rank 5/7 (cond 1.09e13) → 7/7 (43.81) via micro-moments | manuscript; `MISSING_ARTIFACTS.md` | **UNRESOLVED** | no committed code/results; the shadow-equations record is quarantined. External audit P0-01/P0-02 require the rank to be **recomputed** — the GPU bundle cannot support this theorem |
+| A-05 | **Exp 5** E8 out-of-sample shock: 7-horizon RMSE 5.13/4.68 pp vs persistence 23.93 pp; calibrated to 74.88 % pre-abolition GER; predicted on-impact +11.60/+13.48 pp | manuscript; `MISSING_ARTIFACTS.md` | **AUTHOR-REPORTED** | simulation code/results not supplied; empirical +12.44 is the committed E8 value (A-01). Draft numbers, not reproduced |
+| A-06 | Paper A's **Jacobian / micro-identifiability theorem** (7-moment identification claim) | manuscript; GPU ABC bundle (declared evidence) | **UNRESOLVED** | external audit §2: the existing GPU ABC outputs must **not** be used to support the manuscript's Jacobian theorem; the claim requires an independent rank audit (`ABC_IDENTIFICATION_AUDIT.md`, contest-math) |
+
+**Paper A ledger summary:** 0 `VERIFIED EMPIRICAL`, 0 `REPRODUCED SIMULATION`, 0 `VALIDATED SIMULATION`,
+2 `AUTHOR-REPORTED`, 0 `CONTRADICTED`, 4 `UNRESOLVED`. Paper A remains a **draft**: its empirical E8 block is
+author-reported-consistent with a committed record; its four simulation/identification claims are unresolved.
+
+---
+
+## C. Paper B headline claims (`papers/shadow-education-contest/paper_b_hk_korea/`)
+
+| ID | claim | artifact(s) | status | basis |
+|---|---|---|---|---|
+| B-01 | **420-run calibration** (HK G9 53.8 %; HK G12 71.6 % vs 71.8 %; KR K–12 76.5 %; KR Q5−Q1 gap 34.1 pp vs 32.1; KR Q5/Q1 spend 3.19× vs 3.4×) | `Shadow_Education_Arms_Race_HK_Korea_APA.docx`; `results/verified_results_2026_11_25.json` (`paperB_hk_korea_comparative`) | **AUTHOR-REPORTED** | 14-arm / 420-run / N=400 / T=70 design; no runnable 420-era runner was supplied, so the table is not reproduced (this audit reproduced the **540**-run generation only) |
+| B-02 | **420-run counterfactual table** (baseline/CF1a/CF1b/CF2a/CF2b/CF3a/CF3b spend + elite Q5 shares) | same docx + 420 record | **AUTHOR-REPORTED** | author-reported generation; differs from the reproduced 540 design (e.g. HK baseline elite Q5 30.0 % vs 46.36 %). Not reproduced |
+| B-03 | Paper's reading: “only **wage compression paired with effort caps/seat expansion** reaches the win-win frontier” | docx; `NEXT_EXPERIMENTS.md` (Exp 7 criterion) | **CONTRADICTED** | reproduced 540 run: **CF4a fails HK equity** (48.64 % > 46.36 %), **CF4b fails spend in both** (90.88 / 88.04 ≥ 80); the only passing arm is single-lever **CF1b**. Pre-stated falsifier not met |
+| B-04 | Tax +50 % raises total spend and top-quintile elite capture | docx; 420 record; 540 reproduction | **REPRODUCED SIMULATION** | direction holds in the reproduced 540 run (HK spend 107.42, elite Q5 52.43 %; KR 106.46, 41.75 % vs baselines 46.36/36.12 %). Magnitudes are generation-specific |
+| B-05 | Elite-seat expansion raises Grade-12 participation and spend (the 2024 Korean medical-seat shock reading) | docx; 420 record; 540 reproduction | **REPRODUCED SIMULATION** *(direction only)* | 540 run: CF2b spend 149.30 HK / 128.00 KR (both ↑), G12 **85.65 % / 95.58 %** (baselines 72.37 / 73.69 %). The §6 manuscript episode (proposed 2,000 → finalized ~1,500 seats; KRW 29.2 tn 2024 / ~27.5 tn 2025) stays **AUTHOR-REPORTED** empirical context with its own limitations |
+| B-06 | The **540-run bundle job** reproduces the supplied reference and is the canonical simulation evidence | `code/REPRODUCTION_CF4_2026-11-25.md`; `GATE0_REPORT.md`; `results/audit/*` | **REPRODUCED SIMULATION** | Gate 0: host output bit-identical to the committed 540 JSON modulo `elapsed_seconds`; box (numpy 1.24.1) matches reference to ≤7.1e-15; every 2-d.p. figure identical; independent worker-count invariance |
+| B-07 | 540-run headline numbers: HK/KR baseline elite Q5 **46.36 % / 36.12 %**; CF4a HK 48.64 %; CF4b spend 90.88/88.04; CF1b 67.39/41.96 % and 76.42/26.39 % | `results/hk_korea_comparative_with_cf4.json`; `GATE0_REPORT.md` | **REPRODUCED SIMULATION** | reproduced from the exact committed engine+runner (Gate 0; this audit reran the harness integrity) |
+| B-08 | The **540 design is calibrated** (recovers the Korean benchmarks) | `REVIEW_RESPONSE_2026-11-25.md` §4; reproduced 540 baseline | **CONTRADICTED** | 540 baseline Q5−Q1 participation gap 68.36 pp vs 32.1 target; Q5/Q1 spend ratio 18.01× vs 3.4× target; K–12 participation field differs from the 76.5 % benchmark |
+| B-09 | Four embedded charts match the handoff numbers | `paper_b_hk_korea/figures/fig1…fig4.png` | **AUTHOR-REPORTED** | extracted and visually checked, not regenerated from a reproduced generation |
+| B-10 | Cited empirical benchmarks: HK Grade 9 **53.8 %** / Grade 12 **71.8 %** (2011/12 survey); Korea private-education participation **80.0 % (2024)** / **75.7 % (2025)** — used as calibration targets | docx; `README.md`; programme benchmark list | **AUTHOR-REPORTED** | citations exist in the programme record; population/survey-year/denominator must accompany every use; not re-derived from raw survey microdata in this audit |
+
+**Paper B ledger summary:** 0 `VERIFIED EMPIRICAL`, **4 `REPRODUCED SIMULATION`** (B-04, B-05, B-06, B-07),
+**4 `AUTHOR-REPORTED`** (B-01, B-02, B-09, B-10), **2 `CONTRADICTED`** (B-03, B-08), 0 `UNRESOLVED`.
+The reproduced result is the **540**-run generation; the manuscript tables are the **420**-run generation and are
+not reproduced. (B-05's empirical Korean seat-expansion episode remains AUTHOR-REPORTED context inside that row.)
+
+---
+
+## D. What must not be cited (explicit quarantine, after this ledger)
+
+1. **No GPU-bundle output** may be cited as a calibration, a 7-parameter identification, a contest boundary map, an
+   E1/Q3 reconstruction, or evidence for a “100 % seat-expansion paradox”. (G-01…G-14, G-20)
+2. **Paper A's** Exp 1/3/4/5 and the Jacobian theorem remain unresolved; the GPU ABC bundle **cannot** support the
+   Jacobian theorem. (A-02…A-06)
+3. **Paper B's** 420-run tables and the “wage-compression win-win” reading are not reproduced; the win-win reading
+   is **contradicted** by the reproduced 540-run evaluation. (B-01…B-03)
+4. **GPU-vs-CPU agreement is arithmetic validation only** and must never be quoted as scientific validation. (G-16)
+5. The corrected harness demonstrates **execution integrity**; it does **not** by itself validate any experiment.
+   The real-mode matrix is defined but was **not executed** (CPU-only audit; torch parked; no GPU campaign).
