@@ -792,10 +792,10 @@ The design's core (orthogonal factors, one-primary intent, binding assertions, s
 
 Artefacts: commit `4d42101`; `docs/audit/LEAN_VERIFICATION_SCOPE.md` sha256
 `9f31108e496fdc3ac9509547ea388128d156188df9b0540c486d4406d1d3f23c`; `LEMMA_LEDGER.csv` sha256
-`3e9dbbc188a4309156310bd0696967261e11d0f2243c66c4da53daa4144e1287`; `LEMMA_LEDGER.md` sha256
-`eb639671093a6584b162432b4ec81276bdadcc7f356dcae7c64cb279278624b5`; baseline
-`LEMMA_LEDGER_BASELINE.json` `52dee893…` (current 132-row baseline `55f75eea…`; the earlier 130-row pair
-`f2ce655e…` + `da956fc1…` and the `b990c99f…` freeze are preserved in git history, not rewritten).
+`840945ffcef2698cdc1093b145e0d9b902a7af44f6f8d4af3ab031205e755940`; `LEMMA_LEDGER.md` sha256
+`c9bb869173d833166f0d7d802e84bd700da14d7e7c059b15c0745e97692d70c2`; baseline
+`LEMMA_LEDGER_BASELINE.json` `77098a5d…` (current 132-row baseline `07f83156…`; prior 130-row `f2ce655e…`, `b990c99f…`,
+`3ff88d39…`, `55f75eea…` pins preserved in git history, not rewritten).
 
 **Answer to "can we run everything against Lean?" — NO, and claiming so would be false.** The scope doc is explicit:
 
@@ -823,36 +823,18 @@ differential Lean↔Python bridge **9/9 exact fixtures**; CI hook (`lake build`,
 allow-list, 18/18 claim-id check) PASS. The earlier 130-row pair (`f2ce655e…` + `da956fc1…`) is preserved in git
 history; **drift resolved at `54b1f74` / audit-runner `4c06025`**.
 
-**QA mechanical audit — FINAL PASS, re-verified at the current content-edit pin (recorded):**
-`docs/audit/LEMMA_LEDGER_AUDIT.md` sha256
-`1f3c218b6a35a06f5cd4eff724fcc89d6cbaf85c9532cf81a5f8e46f95aea5d6` (QA commit `c18a44f`/HEAD `92a1be6`):
-**R1–R8 all PASS** on the **current pinned pair baseline `paper_claims.csv` `55f75eea…`/132 + ledger `3e9dbbc1…`/132**
-(ledger `.md` `eb639671…`, baseline JSON `52dee893…`, proof-status `af6232cd…`; 18 declared + 114 explicit NOT-YET;
-C-05/X-30 present; D-04 hypothesis). The `3ff88d39 → 55f75eea` change is **content-only — same 132 rows/ids/statuses;
-ledger CSV byte-identical** — so **no re-baseline semantics change**; the earlier `e0a5662`/`3ff88d39…` PASS and the
-130-row/`b990c99f` pins are preserved in git history. R8: proof-status coverage **107/107 declarations, 46 theorems,
-all compiled/sorry-free, axioms only `''`/`propext`**; independently verified `lake build` 16 jobs exit 0, CI 7 files
-0 `sorry`, 33 axiom lines only `propext`/none, 18/18 claim ids, bridge **22/22 exact**. **This certifies the
-claim→declaration mapping and axiom hygiene only — not the truth of empirical claims and not engine numerics; the
-engine is NOT formally verified.** Repro:
+**QA mechanical audit — FINAL PASS, re-affirmed after the X-29 status-only re-pin (recorded):**
+`docs/audit/LEMMA_LEDGER_AUDIT.md` at QA commit `b176c1c` (audit-runner re-pin `5c485c0`): **R1–R8 all PASS** on the
+current pair **baseline `paper_claims.csv` `07f83156…`/132** (only X-29 changed `UNRESOLVED → REPRODUCED SIMULATION`)
+× **ledger `840945ff…`/132** (ledger `.md` `c9bb8691…`, baseline JSON `77098a5d…` records `07f83156…`/132, proof-status
+`7c0e753c…`); **18 declared + 114 explicit NOT-YET = 132**, mapping/declarations unchanged, X-29 remains explicit
+NOT-YET (a baseline-status change is not a Lean declaration); 0 code `sorry`, in-Lean 18/18, proof-status 107/107,
+axioms only `''`/`propext`. This was a **content/status-only** change with no id/row/mapping delta, so R1–R8 were
+**re-affirmed, not re-run from scratch**; the prior `e0a5662`/`3ff88d39`/`55f75eea` and 130-row/`b990c99f` pins remain in
+git history. **This certifies the claim→declaration mapping and axiom hygiene only — not the truth of empirical claims
+and not engine numerics; the engine is NOT formally verified.** Repro:
 `python3 docs/audit/lemma_audit.py --claims results/audit/paper_claims.csv --ledger docs/audit/LEMMA_LEDGER.csv --lean-dir
 verification/lean`.
-
-**Delivery refresh (`e0a5662`):** Luna starter `LeanStarter.lean` sha
-`6cfa77e770199a887a8160eba424c5c996e6a480f9190df3116665463cff7590` compiled with four documented fixes (statements
-unchanged, no `sorry`). **`Atlas/Model.lean` sha `f6acc321…`** proves `gap_nonneg`, `gap_eq_zero_iff_met`,
-`gap_pos_iff_shortfall`, `accepted_le_capacity`, `zero_extra_input_no_increment`, accounting/additivity, time-budget
-invariants, **`rank_invariant_under_common_shift`** (deterministic rank with an explicit tie rule) and
-`accepted_monotone_fixed_capacity`; **counterexamples** `fixed_seat_relative_rank_counterexample`,
-`complementarity_counterexample`, `feedback_capacity_counterexample`, `max_not_additive`. **Proof-status:** 107
-declarations / **46 theorems**, build 16 jobs PASS, 0 `sorry`, 0 prohibited/non-`propext` deps; `LEAN_PROOF_STATUS.md`
-sha `c02b4085650f714ec81c40e93c515e2bfa95a218a73f8eabb65bb6bc702efeaa`, `.csv` sha
-`1ff80fb0cf3e0a84a70976612c29a35ef06eb8e3ef166ea7a9afed90f745f0c9`, axioms `LEAN_AXIOMS_ALL.txt` sha
-`f9c05bc43384fdbf74fecfc66f4814fb2d5b8cb66522c12b2583968ec35a2281`; **differential bridge 22/22 exact**
-(`56cdfd7b…`). Ledger re-pinned to baseline `55f75eea…`/132 (ledger `3e9dbbc1…`, `.md` `eb639671…`, baseline JSON
-`52dee893…`, proof-status `af6232cd…`). **Boundary:** formal statements under stated assumptions ≠ engine/empirical
-truth; Tier 3 remains reproducible-artefact evidence; **no claim that 183 inventory equations or the float runtime are
-verified.**
 
 **Install provenance (honest):** elan 4.4.0 → Lean `v4.36.0` via the GitHub release mirror because the default CDN
 measured **70 B/s**; 608.4 MiB download, **~23 min** install window, **3.0 GiB** unpacked, disk 12 → 8.9 GiB free;
