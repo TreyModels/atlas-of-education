@@ -1214,6 +1214,30 @@ claim of full preregistered precision; T2/T3 proxy/range caveats unchanged. **Op
 changes the design/power and is the largest deviation. The run should not be killed without Lead instruction; the
 overrun is **resource, not design.**
 
+**A5 APPROVED (2026-11-26) — pre-declared 16-seed truncation, estimand untouched (resource-driven precision
+amendment).** Confirmatory uses **16 matched seeds, 100–115** (instead of 32), pre-declared and matched across the 6
+frozen passers; seeds **116–131 are not run/are excluded**. Everything else unchanged: 6 passers `b64a69f0…`;
+N=1500/T=46; engine `846c9e0`/core `e111397b…`/spec `e5ddef6b…`; committed runner `ddeffe42…`@`1b3a510`; P12=pay_gap/A4
+`8c967eab…`; **Holm m=2 α=.05, T2/T3 only**; T1/T4 remain screening failures; min effects unchanged. New envelope
+**≤24 CPU-h** (96 runs ≈21–24 CPU-h; wall ~3.5–4 h). **Consequence: precision halves (SE ×√2); achieved CI/MDE and
+the interim-precision label must be reported; no claim of full 32-seed precision.**
+
+**Approval conditions (binding):**
+1. **No outcome inspection before A5 freeze:** only per-seed timings/row counts were used (Lead attests); no per-cell
+   effect/mean has been inspected or used to choose the truncation. If any outcome was inspected, A5 is invalid — revert
+   to the full 32-seed run (option a) or label exploratory.
+2. **A5 must be recorded before aggregation:** a timestamped A5 record (file or manifest field) with this 16-seed
+   truncation, fixed seeds 100–115, and the unchanged estimands must be committed/cited **before** the 16-seed bundle is
+   aggregated/analysed; the confirmatory manifest must cite A5.
+3. **No optional stopping/peeking:** run exactly seeds 100–115 per cell; do not add seeds or stop based on effects;
+   cells that complete >16 seeds must have 116–131 excluded from the A5 analysis.
+4. **Analysis/reporting:** T2 (`own_share_financial_proxy` C−A, min .10; proxy/range caveats) and T3 (`withheld`
+   A|P55−A|P12, min .05; assertion support) with Holm m=2 α=.05; seed-MC only; parameter uncertainty zero; report
+   achieved CI/MDE and label **A5 interim precision**; decision holds/fails/indeterminate; T1/T4 screening failures
+   reported, not confirmatory; no S-generalisation beyond .85.
+
+**Status: A5 APPROVED (conditional on conditions 1–2 being recorded before aggregation); no confirmatory number cited.**
+
 **Status: RESOURCE WARNING RECORDED; RUN CONTINUES PENDING LEAD DECISION; no confirmatory number cited.**
 
 **Status: LAUNCH OBSERVED / APPROVED; RESULTS PENDING; pre-launch record remains the adjudication basis.**

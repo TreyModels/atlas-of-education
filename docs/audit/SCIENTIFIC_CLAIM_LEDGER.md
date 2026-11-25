@@ -423,3 +423,14 @@ unchanged; no optional stopping/peeking; report achieved SE/CI and label interim
 claim; T2/T3 caveats unchanged. **Reject (c) N=600** (design/power change). Run not to be killed without Lead; overrun is
 resource, not design. **No confirmatory number cited.**
 
+**A5 APPROVED (2026-11-26) — pre-declared 16-seed truncation, estimand untouched.** Confirmatory uses **16 matched
+seeds 100–115** (not 32), matched across the 6 frozen passers; seeds 116–131 not run/excluded; 6 passers `b64a69f0…`;
+N=1500/T=46; engine `846c9e0`/core `e111397b…`/spec `e5ddef6b…`; runner `ddeffe42…`@`1b3a510`; P12 pay_gap/A4
+`8c967eab…`; **Holm m=2 α=.05, T2/T3 only**; T1/T4 screening failures; min effects unchanged; new envelope **≤24 CPU-h**
+(96 runs ≈21–24 CPU-h; wall ~3.5–4 h). **Precision halves (SE ×√2); report achieved CI/MDE and label A5 interim
+precision; no full 32-seed precision claim.** Conditions: (1) no outcome inspection before A5 freeze (only timings/row
+counts used; Lead attests; otherwise revert to full 32 or exploratory); (2) timestamped A5 record/manifest update
+committed/cited **before aggregation**; (3) no optional stopping/peeking — exactly seeds 100–115, exclude 116–131;
+(4) analysis/reporting as above; T1/T4 screening failures; no S-generalisation beyond .85. **No confirmatory number
+cited.**
+
