@@ -81,6 +81,8 @@ __all__ = [
     "pl_win_probs_detail",
     "pl_win_probs_exact",
     "pl_win_probs_mc",
+    "pl_win_probs_batch",
+    "pl_stats",
     "pl_realize",
     "AUTO_EXACT_N",
     "EXACT_MAX_N",
@@ -104,10 +106,11 @@ _QUAD_TAIL_C = 14.0        # t_hi = C / w_min: omitted mass <= exp(-C) ~ 8e-7
 _QUAD_MAX_NODES = 1600     # hard cap; h is coarsened beyond it (documented)
 #: Bounded caches (task-12).  Both are *pure* memoisation of deterministically
 #: computed arrays, keyed by exact float bytes, so they cannot change results.
+_STATS = {"grid_hit": 0, "grid_miss": 0, "result_hit": 0, "result_miss": 0}
 _GRID_CACHE = {}           # w_min (float) -> (t, sw, m)
 _GRID_CACHE_MAX = 64
 _RESULT_CACHE = {}         # (method, seats, w.tobytes()) -> p
-_RESULT_CACHE_MAX = 8
+_RESULT_CACHE_MAX = 64
 _BATCH_TARGET_BYTES = 64_000_000
 _QUAD_W_FLOOR = 1e-30      # weights below floor*max are "never win" (P < ~1e-28)
 _QUAD_EST_ERR = 2e-3       # documented conservative truncation+Simpson bound
@@ -309,7 +312,9 @@ def _simpson_grid(w_min):
     key = float(w_min)
     hit = _GRID_CACHE.get(key)
     if hit is not None:
+        _STATS["grid_hit"] += 1
         return hit
+    _STATS["grid_miss"] += 1
     t_hi = _QUAD_TAIL_C / w_min
     u_lo, u_hi = np.log(_QUAD_T_LO), np.log(t_hi)
     span = u_hi - u_lo
@@ -624,6 +629,7 @@ def _dispatch(weights, seats, method, rng, n_mc):
         cache_key = (int(seats), w.tobytes())
         hit = _RESULT_CACHE.get(cache_key)
         if hit is not None:
+            _STATS["result_hit"] += 1
             p_cached, cached_method = hit
             info.update(method=cached_method,
                         max_error_estimate=(_EXACT_EST_ERR if cached_method == "exact"
@@ -670,6 +676,7 @@ def _dispatch(weights, seats, method, rng, n_mc):
         raise ValueError(f"unknown method {method!r}")
 
     if cache_key is not None:
+        _STATS["result_miss"] += 1
         if len(_RESULT_CACHE) >= _RESULT_CACHE_MAX:
             _RESULT_CACHE.clear()
         _RESULT_CACHE[cache_key] = (p.copy(), info.get("method", method))
@@ -730,6 +737,11 @@ def pl_win_probs_detail(weights, seats, method="auto", rng=None, n_mc=20000):
 # ---------------------------------------------------------------------------
 # deterministic realisation from caller-supplied uniforms
 # ---------------------------------------------------------------------------
+def pl_stats():
+    """Return (and leave untouched) the cache statistics dict (task-12 observability)."""
+    return dict(_STATS)
+
+
 def pl_realize(weights, seats, u):
     """Realise one top-K Plackett-Luce contest from caller-supplied uniforms.
 

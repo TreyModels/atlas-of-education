@@ -33,7 +33,7 @@ import time
 import numpy as np
 
 REFERENCE_COMMIT = os.environ.get("CONTEST_MATH_REF_COMMIT", "0f56621")
-REPO = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
+REPO = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", ".."))
 ENGINE = os.path.join(REPO, "engine")
 
 
@@ -93,19 +93,28 @@ def batch_fixtures(cur, seed=7, cases=30):
 
 
 def microbench(ref, cur, reps=7):
+    """Cold-call timing (fresh weights per rep, so no memoisation hits) + warm-call time."""
     rng = np.random.default_rng(11)
     out = []
     for n, seats, disp in [(300, 69, 1.0), (300, 69, 2.0), (300, 36, 1.0), (600, 69, 1.0)]:
-        w = np.exp(disp * rng.standard_normal(n))
-        def med(mod):
-            mod.pl_win_probs(w, seats)  # warm
+        ws = [np.exp(disp * rng.standard_normal(n)) for _ in range(reps + 1)]
+        def cold(mod):
             ts = []
-            for _ in range(reps):
+            for k in range(reps):
+                w = ws[k]
                 t0 = time.perf_counter(); mod.pl_win_probs(w, seats); ts.append(time.perf_counter() - t0)
             return float(np.median(ts))
-        a = med(ref); b = med(cur)
+        a = cold(ref); b = cold(cur)
+        # warm (memoised) call on the same weights
+        w = ws[-1]
+        cur.pl_win_probs(w, seats)
+        ts = []
+        for _ in range(reps):
+            t0 = time.perf_counter(); cur.pl_win_probs(w, seats); ts.append(time.perf_counter() - t0)
+        warm = float(np.median(ts))
         out.append(dict(n=n, seats=seats, dispersion=disp, reference_ms=1000 * a,
-                        optimised_ms=1000 * b, speedup=a / b))
+                        optimised_cold_ms=1000 * b, speedup_cold=a / b,
+                        optimised_warm_ms=1000 * warm))
     return out
 
 
@@ -125,14 +134,17 @@ def engine_group(cur, reps=3):
         for w in Ws:
             cur.pl_win_probs(w, seats)
         ts_seq.append(time.perf_counter() - t0)
-    ts_bat = []
-    for _ in range(reps):
-        t0 = time.perf_counter()
-        cur.pl_win_probs_batch(np.vstack(Ws), seats)
-        ts_bat.append(time.perf_counter() - t0)
-    return dict(sequential_ms=1000 * float(np.median(ts_seq)),
-                batch_ms=1000 * float(np.median(ts_bat)),
-                speedup=float(np.median(ts_seq) / np.median(ts_bat)))
+    res = {"sequential_ms": 1000 * float(np.median(ts_seq))}
+    for B in (2, 3, 5, 9):
+        ts_bat = []
+        for _ in range(reps):
+            t0 = time.perf_counter()
+            for start in range(0, 9, B):
+                cur.pl_win_probs_batch(np.vstack(Ws[start:start + B]), seats)
+            ts_bat.append(time.perf_counter() - t0)
+        res[f"batch_B{B}_ms"] = 1000 * float(np.median(ts_bat))
+        res[f"batch_B{B}_speedup"] = float(np.median(ts_seq) / np.median(ts_bat))
+    return res
 
 
 _TUTOR_OLD = """                    U_grid = np.full((_PREP_GRID.size, len(sub)), -np.inf)
@@ -255,16 +267,23 @@ def main():
     print(f"determinism (repeat bit-identical): {out['determinism']}")
     out["microbench"] = microbench(ref, cur)
     for r in out["microbench"]:
-        print(f"  n={r['n']} k={r['seats']} disp={r['dispersion']}: "
-              f"ref {r['reference_ms']:.2f} ms -> opt {r['optimised_ms']:.2f} ms "
-              f"({r['speedup']:.2f}x)")
+        print(f"  n={r['n']} k={r['seats']} disp={r['dispersion']}: cold ref "
+              f"{r['reference_ms']:.2f} ms -> opt {r['optimised_cold_ms']:.2f} ms "
+              f"({r['speedup_cold']:.2f}x); memoised opt call {r['optimised_warm_ms']:.3f} ms")
     out["engine_group"] = engine_group(cur)
     g = out["engine_group"]
-    print(f"9-call gate-year group: sequential {g['sequential_ms']:.0f} ms, "
-          f"batch {g['batch_ms']:.0f} ms ({g['speedup']:.2f}x)")
+    print("9-call gate-year group: sequential %.0f ms" % g["sequential_ms"])
+    for B in (2, 3, 5, 9):
+        print(f"  batch B={B}: {g[f'batch_B{B}_ms']:.0f} ms "
+              f"({g[f'batch_B{B}_speedup']:.2f}x)")
     if not args.quick:
         out["end_to_end"] = end_to_end(args.commit)
         print("end-to-end HK Baseline:", out["end_to_end"])
+    try:
+        out["cache_stats"] = cur.pl_stats()
+        print("cache stats:", out["cache_stats"])
+    except Exception:
+        pass
     os.unlink(ref_path)
     with open(os.path.join(REPO, "docs/audit/code/contest_math_bench_results.json"), "w") as fh:
         json.dump(out, fh, indent=1)
