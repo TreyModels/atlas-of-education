@@ -46,6 +46,71 @@
       "key": "pl.top1.denom",
       "expected": 5,
       "contract": "PL common denominator w0+w1"
+    },
+    {
+      "key": "luna.gap.shortfall",
+      "expected": 2,
+      "contract": "Luna starter gap required=5 achieved=3 -> 2"
+    },
+    {
+      "key": "luna.gap.met",
+      "expected": 0,
+      "contract": "Luna starter gap required=3 achieved=5 -> 0 (truncated sub)"
+    },
+    {
+      "key": "luna.remainingCapacity",
+      "expected": 6,
+      "contract": "Luna starter remainingCapacity(10,4)=6"
+    },
+    {
+      "key": "model.gap.shortfall",
+      "expected": 2,
+      "contract": "Model gap max(0,R-A): R=5,A=3 -> 2"
+    },
+    {
+      "key": "model.gap.met",
+      "expected": 0,
+      "contract": "Model gap max(0,R-A): R=3,A=5 -> 0"
+    },
+    {
+      "key": "model.accepted",
+      "expected": 4,
+      "contract": "Accepted=min(applicants=10,capacity=4)=4 (accepted <= capacity)"
+    },
+    {
+      "key": "model.increment.zero",
+      "expected": 0,
+      "contract": "Zero additional input => learningIncrement(7,7)=0"
+    },
+    {
+      "key": "model.totalInput",
+      "expected": 9,
+      "contract": "Source accounting: school 2 + private 3 + home 4 = 9"
+    },
+    {
+      "key": "model.timeUsed",
+      "expected": 6,
+      "contract": "Time accounting: prep 1 + work 2 + review 3 = 6"
+    },
+    {
+      "key": "model.complementarity",
+      "expected": 2,
+      "contract": "Complementarity: min(3,2)=2 (one input alone does not raise it)"
+    },
+    {
+      "key": "model.feedback",
+      "expected": 0,
+      "contract": "Feedback capacity: acceptedWithFeedback(2 applicants,1 seat)=min(2,0)=0"
+    },
+    {
+      "key": "model.rank.tie",
+      "expected": 1,
+      "contract": "Tie rule: equal score, tie-break 0<1 -> outranks true"
+    },
+    {
+      "key": "model.rank.tie.shifted",
+      "expected": 1,
+      "contract": "Rank invariance: same outcome after common +7 shift"
     }
   ]
 }

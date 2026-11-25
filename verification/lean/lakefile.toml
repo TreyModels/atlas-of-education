@@ -7,3 +7,5 @@ defaultTargets = ["Atlas"]
 
 [[lean_lib]]
 name = "Atlas"
+# `LeanStarter` is the Luna starter file (kept at project root; imported by Atlas.lean).
+roots = ["Atlas", "LeanStarter"]

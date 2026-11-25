@@ -1,0 +1,108 @@
+declaration,kind,file,line,compiled,sorry_free,axioms,notes
+LeanStarter.gap,def,LeanStarter.lean,8,yes,yes,,not a theorem (definition/structure)
+LeanStarter.gap_eq_truncated_sub,theorem,LeanStarter.lean,11,yes,yes,propext,
+LeanStarter.gap_eq_zero_of_met,theorem,LeanStarter.lean,15,yes,yes,propext,
+LeanStarter.gap_pos_of_shortfall,theorem,LeanStarter.lean,20,yes,yes,propext,
+LeanStarter.Feasible,def,LeanStarter.lean,26,yes,yes,,not a theorem (definition/structure)
+LeanStarter.required_within_capacity,theorem,LeanStarter.lean,28,yes,yes,,
+LeanStarter.remainingCapacity,def,LeanStarter.lean,32,yes,yes,,not a theorem (definition/structure)
+LeanStarter.remaining_capacity_bounded,theorem,LeanStarter.lean,34,yes,yes,propext,
+LeanStarter.used_plus_remaining_eq_capacity,theorem,LeanStarter.lean,38,yes,yes,propext,
+LeanStarter.elapsedTime,def,LeanStarter.lean,43,yes,yes,,not a theorem (definition/structure)
+LeanStarter.preparation_within_elapsed,theorem,LeanStarter.lean,45,yes,yes,,
+LeanStarter.work_within_elapsed,theorem,LeanStarter.lean,51,yes,yes,,
+LeanStarter.review_within_elapsed,theorem,LeanStarter.lean,57,yes,yes,,
+Atlas.Claims.ClaimKind,inductive,Atlas/Claims.lean,35,yes,yes,,not a theorem (definition/structure)
+Atlas.Claims.ClaimStatus,inductive,Atlas/Claims.lean,47,yes,yes,,not a theorem (definition/structure)
+Atlas.Claims.ClaimEntry,structure,Atlas/Claims.lean,56,yes,yes,,not a theorem (definition/structure)
+Atlas.Claims.EmpiricalClaim,structure,Atlas/Claims.lean,67,yes,yes,,not a theorem (definition/structure)
+Atlas.Claims.SpecClaim,structure,Atlas/Claims.lean,77,yes,yes,,not a theorem (definition/structure)
+Atlas.Claims.withinPp,def,Atlas/Claims.lean,88,yes,yes,,not a theorem (definition/structure)
+Atlas.Claims.A34_arithmetic,theorem,Atlas/Claims.lean,93,yes,yes,,
+Atlas.Claims.winWinCell,def,Atlas/Claims.lean,98,yes,yes,,not a theorem (definition/structure)
+Atlas.Claims.B41_HK_meets_criterion,theorem,Atlas/Claims.lean,103,yes,yes,,
+Atlas.Claims.B41_KR_TRACKED_meets_criterion,theorem,Atlas/Claims.lean,106,yes,yes,,
+Atlas.Claims.B41_KR_SINGLE_meets_criterion,theorem,Atlas/Claims.lean,109,yes,yes,,
+Atlas.Claims.B42_CF4b_fails_spend_HK,theorem,Atlas/Claims.lean,112,yes,yes,,
+Atlas.Claims.B42_CF1b_fails_spend_HK,theorem,Atlas/Claims.lean,115,yes,yes,,
+Atlas.Claims.B42_CF3b_passes_both,theorem,Atlas/Claims.lean,119,yes,yes,,
+Atlas.Claims.A38_anchor_infeasible,theorem,Atlas/Claims.lean,125,yes,yes,,
+Atlas.Claims.classical_demand_ignores_school_supply,theorem,Atlas/Claims.lean,131,yes,yes,,
+Atlas.Claims.classical_demand_ignores_positional_seats,theorem,Atlas/Claims.lean,135,yes,yes,,
+Atlas.Claims.classical_demand_ignores_withholding,theorem,Atlas/Claims.lean,139,yes,yes,,
+Atlas.Claims.classical_demand_ignores_time_budget,theorem,Atlas/Claims.lean,143,yes,yes,,
+Atlas.Claims.classical_demand_ignores_supply_form,theorem,Atlas/Claims.lean,147,yes,yes,,
+Atlas.Claims.paradoxHolds,def,Atlas/Claims.lean,153,yes,yes,,not a theorem (definition/structure)
+Atlas.Claims.D02_paradox_not_universal,theorem,Atlas/Claims.lean,159,yes,yes,,
+Atlas.Claims.A34_empirical,def,Atlas/Claims.lean,167,yes,yes,,not a theorem (definition/structure)
+Atlas.Claims.A35_empirical,def,Atlas/Claims.lean,177,yes,yes,,not a theorem (definition/structure)
+Atlas.Claims.A36_empirical,def,Atlas/Claims.lean,186,yes,yes,,not a theorem (definition/structure)
+Atlas.Claims.C01_empirical,def,Atlas/Claims.lean,193,yes,yes,,not a theorem (definition/structure)
+Atlas.Claims.C02_empirical,def,Atlas/Claims.lean,201,yes,yes,,not a theorem (definition/structure)
+Atlas.Claims.C03_empirical,def,Atlas/Claims.lean,208,yes,yes,,not a theorem (definition/structure)
+Atlas.Claims.D04_attribution,def,Atlas/Claims.lean,216,yes,yes,,not a theorem (definition/structure)
+Atlas.Claims.A37_spec,def,Atlas/Claims.lean,226,yes,yes,,not a theorem (definition/structure)
+Atlas.Claims.A39_spec,def,Atlas/Claims.lean,237,yes,yes,,not a theorem (definition/structure)
+Atlas.Claims.B43_spec,def,Atlas/Claims.lean,248,yes,yes,,not a theorem (definition/structure)
+Atlas.Claims.B44_spec,def,Atlas/Claims.lean,260,yes,yes,,not a theorem (definition/structure)
+Atlas.Claims.C04_spec,def,Atlas/Claims.lean,271,yes,yes,,not a theorem (definition/structure)
+Atlas.Claims.D03_spec,def,Atlas/Claims.lean,281,yes,yes,,not a theorem (definition/structure)
+Atlas.Claims.claimLedger,def,Atlas/Claims.lean,291,yes,yes,,not a theorem (definition/structure)
+Atlas.Cohort,structure,Atlas/Definitions.lean,12,yes,yes,,not a theorem (definition/structure)
+Atlas.GateKind,inductive,Atlas/Definitions.lean,17,yes,yes,,not a theorem (definition/structure)
+Atlas.Gate,structure,Atlas/Definitions.lean,26,yes,yes,,not a theorem (definition/structure)
+Atlas.Gate.valid,def,Atlas/Definitions.lean,34,yes,yes,,not a theorem (definition/structure)
+Atlas.seatCount,def,Atlas/Definitions.lean,41,yes,yes,,not a theorem (definition/structure)
+Atlas.Budget,structure,Atlas/Definitions.lean,49,yes,yes,,not a theorem (definition/structure)
+Atlas.TaxLedger,structure,Atlas/Definitions.lean,56,yes,yes,,not a theorem (definition/structure)
+Atlas.PrepStock,structure,Atlas/Definitions.lean,64,yes,yes,,not a theorem (definition/structure)
+Atlas.Cand,inductive,Atlas/Definitions.lean,70,yes,yes,,not a theorem (definition/structure)
+Atlas.PLWeights,structure,Atlas/Definitions.lean,77,yes,yes,,not a theorem (definition/structure)
+Atlas.EqState,structure,Atlas/Definitions.lean,86,yes,yes,,not a theorem (definition/structure)
+Atlas.classicalDemand,def,Atlas/Definitions.lean,99,yes,yes,,not a theorem (definition/structure)
+Atlas.unallocated,def,Atlas/Identities.lean,17,yes,yes,,not a theorem (definition/structure)
+Atlas.budget_ledger_identity,theorem,Atlas/Identities.lean,22,yes,yes,propext,
+Atlas.taxRevenue,def,Atlas/Identities.lean,29,yes,yes,,not a theorem (definition/structure)
+Atlas.tax_revenue_le_base,theorem,Atlas/Identities.lean,34,yes,yes,propext,
+Atlas.seat_count_positive,theorem,Atlas/Identities.lean,47,yes,yes,propext,
+Atlas.prepStep,def,Atlas/Identities.lean,58,yes,yes,,not a theorem (definition/structure)
+Atlas.prepRec,def,Atlas/Identities.lean,62,yes,yes,,not a theorem (definition/structure)
+Atlas.inflowGeomSum,def,Atlas/Identities.lean,67,yes,yes,,not a theorem (definition/structure)
+Atlas.prep_recursion_closed_form,theorem,Atlas/Identities.lean,75,yes,yes,propext,
+Atlas.Model.Learning,structure,Atlas/Model.lean,19,yes,yes,,not a theorem (definition/structure)
+Atlas.Model.Requirement,inductive,Atlas/Model.lean,25,yes,yes,,not a theorem (definition/structure)
+Atlas.Model.Requirement.cutoff,def,Atlas/Model.lean,32,yes,yes,,not a theorem (definition/structure)
+Atlas.Model.gap,def,Atlas/Model.lean,37,yes,yes,,not a theorem (definition/structure)
+Atlas.Model.gap_nonneg,theorem,Atlas/Model.lean,39,yes,yes,,
+Atlas.Model.gap_eq_zero_iff_met,theorem,Atlas/Model.lean,42,yes,yes,propext,
+Atlas.Model.gap_pos_iff_shortfall,theorem,Atlas/Model.lean,47,yes,yes,propext,
+Atlas.Model.accepted,def,Atlas/Model.lean,56,yes,yes,,not a theorem (definition/structure)
+Atlas.Model.accepted_le_capacity,theorem,Atlas/Model.lean,59,yes,yes,propext,
+Atlas.Model.learningIncrement,def,Atlas/Model.lean,65,yes,yes,,not a theorem (definition/structure)
+Atlas.Model.zero_extra_input_no_increment,theorem,Atlas/Model.lean,67,yes,yes,,
+Atlas.Model.Sources,structure,Atlas/Model.lean,75,yes,yes,,not a theorem (definition/structure)
+Atlas.Model.totalInput,def,Atlas/Model.lean,82,yes,yes,,not a theorem (definition/structure)
+Atlas.Model.total_input_eq_sum,theorem,Atlas/Model.lean,84,yes,yes,,
+Atlas.Model.Additive,def,Atlas/Model.lean,89,yes,yes,,not a theorem (definition/structure)
+Atlas.Model.additive_combine_eq_sum,theorem,Atlas/Model.lean,91,yes,yes,,
+Atlas.Model.max_not_additive,theorem,Atlas/Model.lean,96,yes,yes,,
+Atlas.Model.timeUsed,def,Atlas/Model.lean,104,yes,yes,,not a theorem (definition/structure)
+Atlas.Model.respectsBudget,def,Atlas/Model.lean,107,yes,yes,,not a theorem (definition/structure)
+Atlas.Model.budget_implies_component,theorem,Atlas/Model.lean,111,yes,yes,,
+Atlas.Model.time_accounting_identity,theorem,Atlas/Model.lean,119,yes,yes,,
+Atlas.Model.outranks,def,Atlas/Model.lean,128,yes,yes,,not a theorem (definition/structure)
+Atlas.Model.outranksBool,def,Atlas/Model.lean,132,yes,yes,,not a theorem (definition/structure)
+Atlas.Model.outranksBool_eq_true_iff,theorem,Atlas/Model.lean,136,yes,yes,propext,
+Atlas.Model.rank_invariant_under_common_shift,theorem,Atlas/Model.lean,145,yes,yes,propext,
+Atlas.Model.fixed_seat_relative_rank_counterexample,theorem,Atlas/Model.lean,154,yes,yes,,
+Atlas.Model.accepted_monotone_fixed_capacity,theorem,Atlas/Model.lean,160,yes,yes,propext,
+Atlas.Model.complementaryLearning,def,Atlas/Model.lean,170,yes,yes,,not a theorem (definition/structure)
+Atlas.Model.complementarity_counterexample,theorem,Atlas/Model.lean,173,yes,yes,,
+Atlas.Model.acceptedWithFeedback,def,Atlas/Model.lean,178,yes,yes,,not a theorem (definition/structure)
+Atlas.Model.feedback_capacity_counterexample,theorem,Atlas/Model.lean,183,yes,yes,,
+Atlas.plDenom,def,Atlas/PlackettLuce.lean,21,yes,yes,,not a theorem (definition/structure)
+Atlas.top1Numerator,def,Atlas/PlackettLuce.lean,24,yes,yes,,not a theorem (definition/structure)
+Atlas.pl_top1_sum_eq_denom,theorem,Atlas/PlackettLuce.lean,32,yes,yes,,
+Atlas.pl_top1_sum_eq_min,theorem,Atlas/PlackettLuce.lean,37,yes,yes,propext,
+Atlas.topKSelectedIndicator,def,Atlas/PlackettLuce.lean,44,yes,yes,,not a theorem (definition/structure)
+Atlas.pl_topK_selected_sum,theorem,Atlas/PlackettLuce.lean,49,yes,yes,propext,

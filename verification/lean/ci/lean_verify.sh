@@ -24,7 +24,7 @@ echo "== build =="
 time lake build
 
 echo "== comment-aware sorry scan (must be empty) =="
-python3 ci/sorry_scan.py Atlas Atlas.lean || { echo "FATAL: 'sorry' token found in Lean sources"; exit 3; }
+python3 ci/sorry_scan.py Atlas Atlas.lean LeanStarter.lean || { echo "FATAL: 'sorry' token found in Lean sources"; exit 3; }
 
 echo "== axiom audit =="
 AUDIT=".axiom_audit.lean"
@@ -42,6 +42,27 @@ import Atlas
 #print axioms Atlas.Claims.B42_CF4b_fails_spend_HK
 #print axioms Atlas.Claims.D02_paradox_not_universal
 #print axioms Atlas.Claims.classical_demand_ignores_school_supply
+#print axioms LeanStarter.gap_eq_truncated_sub
+#print axioms LeanStarter.gap_pos_of_shortfall
+#print axioms LeanStarter.used_plus_remaining_eq_capacity
+#print axioms LeanStarter.preparation_within_elapsed
+#print axioms LeanStarter.work_within_elapsed
+#print axioms LeanStarter.review_within_elapsed
+#print axioms Atlas.Model.gap_nonneg
+#print axioms Atlas.Model.gap_eq_zero_iff_met
+#print axioms Atlas.Model.gap_pos_iff_shortfall
+#print axioms Atlas.Model.accepted_le_capacity
+#print axioms Atlas.Model.zero_extra_input_no_increment
+#print axioms Atlas.Model.total_input_eq_sum
+#print axioms Atlas.Model.additive_combine_eq_sum
+#print axioms Atlas.Model.max_not_additive
+#print axioms Atlas.Model.budget_implies_component
+#print axioms Atlas.Model.time_accounting_identity
+#print axioms Atlas.Model.rank_invariant_under_common_shift
+#print axioms Atlas.Model.fixed_seat_relative_rank_counterexample
+#print axioms Atlas.Model.accepted_monotone_fixed_capacity
+#print axioms Atlas.Model.complementarity_counterexample
+#print axioms Atlas.Model.feedback_capacity_counterexample
 LEAN
 lake env lean "$AUDIT" | tee /tmp/atlas_lean_axioms.txt
 rm -f "$AUDIT"

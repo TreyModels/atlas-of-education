@@ -62,15 +62,106 @@
       "key": "pl.top1.denom",
       "lean": 5,
       "match": true
+    },
+    {
+      "contract": "Luna starter gap required=5 achieved=3 -> 2",
+      "expected": 2,
+      "key": "luna.gap.shortfall",
+      "lean": 2,
+      "match": true
+    },
+    {
+      "contract": "Luna starter gap required=3 achieved=5 -> 0 (truncated sub)",
+      "expected": 0,
+      "key": "luna.gap.met",
+      "lean": 0,
+      "match": true
+    },
+    {
+      "contract": "Luna starter remainingCapacity(10,4)=6",
+      "expected": 6,
+      "key": "luna.remainingCapacity",
+      "lean": 6,
+      "match": true
+    },
+    {
+      "contract": "Model gap max(0,R-A): R=5,A=3 -> 2",
+      "expected": 2,
+      "key": "model.gap.shortfall",
+      "lean": 2,
+      "match": true
+    },
+    {
+      "contract": "Model gap max(0,R-A): R=3,A=5 -> 0",
+      "expected": 0,
+      "key": "model.gap.met",
+      "lean": 0,
+      "match": true
+    },
+    {
+      "contract": "Accepted=min(applicants=10,capacity=4)=4 (accepted <= capacity)",
+      "expected": 4,
+      "key": "model.accepted",
+      "lean": 4,
+      "match": true
+    },
+    {
+      "contract": "Zero additional input => learningIncrement(7,7)=0",
+      "expected": 0,
+      "key": "model.increment.zero",
+      "lean": 0,
+      "match": true
+    },
+    {
+      "contract": "Source accounting: school 2 + private 3 + home 4 = 9",
+      "expected": 9,
+      "key": "model.totalInput",
+      "lean": 9,
+      "match": true
+    },
+    {
+      "contract": "Time accounting: prep 1 + work 2 + review 3 = 6",
+      "expected": 6,
+      "key": "model.timeUsed",
+      "lean": 6,
+      "match": true
+    },
+    {
+      "contract": "Complementarity: min(3,2)=2 (one input alone does not raise it)",
+      "expected": 2,
+      "key": "model.complementarity",
+      "lean": 2,
+      "match": true
+    },
+    {
+      "contract": "Feedback capacity: acceptedWithFeedback(2 applicants,1 seat)=min(2,0)=0",
+      "expected": 0,
+      "key": "model.feedback",
+      "lean": 0,
+      "match": true
+    },
+    {
+      "contract": "Tie rule: equal score, tie-break 0<1 -> outranks true",
+      "expected": 1,
+      "key": "model.rank.tie",
+      "lean": 1,
+      "match": true
+    },
+    {
+      "contract": "Rank invariance: same outcome after common +7 shift",
+      "expected": 1,
+      "key": "model.rank.tie.shifted",
+      "lean": 1,
+      "match": true
     }
   ],
-  "elapsed_sec": 0.25,
-  "fixtures_sha256": "83bc1d519eb75903d5e1fdf64d6b8fe9743df81790ff43aed1acf01f44849d4d",
-  "generated_utc": "2026-11-25T13:14:42Z",
+  "elapsed_sec": 0.23,
+  "fixtures_sha256": "ee991db586f69a467ec7e7c7bbb224980bab3ab1b7a8cd3fea177c9a908970d7",
+  "generated_utc": "2026-11-25T13:24:13Z",
   "lean_exit_code": 0,
   "lean_stderr": [],
-  "lean_stdout_sha256": "958e728984753859b7b1a1bee4c9e1b513a91c34ab55d35f616d557d67a56ce8",
+  "lean_stdout_sha256": "6789b319af12c7dfa47bf62f486d1b7dc184c05de2c75fb8b0f347d55f1579fd",
   "passed": true,
   "schema": 1,
-  "witness_sha256": "f69ba60ebc294fc6302567258240eef89785c4d79e931841d1749d5dbcb95425"
+  "witness_sha256": "383dd7c12f5afcbd4f009609dbba41234477a152b968185043c0e9f8c5b21f42"
 }

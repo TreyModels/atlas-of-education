@@ -210,7 +210,28 @@ Claims proved or computationally checked in this prototype: `budget_ledger_ident
 'Atlas.Claims.B42_CF4b_fails_spend_HK' does not depend on any axioms
 'Atlas.Claims.D02_paradox_not_universal' does not depend on any axioms
 'Atlas.Claims.classical_demand_ignores_school_supply' does not depend on any axioms
-axiom audit: 12 theorem lines parsed; allowed=['propext']
+'LeanStarter.gap_eq_truncated_sub' depends on axioms: [propext]
+'LeanStarter.gap_pos_of_shortfall' depends on axioms: [propext]
+'LeanStarter.used_plus_remaining_eq_capacity' depends on axioms: [propext]
+'LeanStarter.preparation_within_elapsed' does not depend on any axioms
+'LeanStarter.work_within_elapsed' does not depend on any axioms
+'LeanStarter.review_within_elapsed' does not depend on any axioms
+'Atlas.Model.gap_nonneg' does not depend on any axioms
+'Atlas.Model.gap_eq_zero_iff_met' depends on axioms: [propext]
+'Atlas.Model.gap_pos_iff_shortfall' depends on axioms: [propext]
+'Atlas.Model.accepted_le_capacity' depends on axioms: [propext]
+'Atlas.Model.zero_extra_input_no_increment' does not depend on any axioms
+'Atlas.Model.total_input_eq_sum' does not depend on any axioms
+'Atlas.Model.additive_combine_eq_sum' does not depend on any axioms
+'Atlas.Model.max_not_additive' does not depend on any axioms
+'Atlas.Model.budget_implies_component' does not depend on any axioms
+'Atlas.Model.time_accounting_identity' does not depend on any axioms
+'Atlas.Model.rank_invariant_under_common_shift' depends on axioms: [propext]
+'Atlas.Model.fixed_seat_relative_rank_counterexample' does not depend on any axioms
+'Atlas.Model.accepted_monotone_fixed_capacity' depends on axioms: [propext]
+'Atlas.Model.complementarity_counterexample' does not depend on any axioms
+'Atlas.Model.feedback_capacity_counterexample' does not depend on any axioms
+axiom audit: 33 theorem lines parsed; allowed=['propext']
 axiom audit OK (only allowed axioms: none/propext)
 == claim declarations present ==
 ```

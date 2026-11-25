@@ -1,6 +1,8 @@
-✔ [2/12] Built Atlas.Definitions (418ms)
-✔ [4/12] Built Atlas.PlackettLuce (226ms)
-✔ [6/12] Built Atlas.Identities (266ms)
-✔ [8/12] Built Atlas.Claims (292ms)
-✔ [10/12] Built Atlas (171ms)
-Build completed successfully (12 jobs).
+✔ [2/16] Built LeanStarter (1.5s)
+✔ [4/16] Built Atlas.Definitions (1.7s)
+✔ [6/16] Built Atlas.Model (1.6s)
+✔ [8/16] Built Atlas.PlackettLuce (213ms)
+✔ [10/16] Built Atlas.Identities (252ms)
+✔ [12/16] Built Atlas.Claims (292ms)
+✔ [14/16] Built Atlas (170ms)
+Build completed successfully (16 jobs).
