@@ -1,0 +1,103 @@
+===== ENV =====
+2026-11-25T06:35:09Z
+torch 2.7.1+cu118
+cuda_available True
+cuda_version 11.8
+gpu NVIDIA GeForce RTX 3080 Ti
+pandas 2.3.3 numpy 1.24.1
+[GPU] Using NVIDIA GeForce RTX 3080 Ti (CUDA 11.8)
+{
+  "part_a_bray_7param_abc": {
+    "n_draws": 200000,
+    "n_accepted": 92,
+    "accept_rate_pct": 0.046,
+    "best_max_z": 0.455,
+    "best_theta_7param": [
+      -0.7231,
+      0.387,
+      1.3392,
+      1.4155,
+      1.316,
+      0.2097,
+      -0.8241
+    ],
+    "posterior_corr_cond_6active": 25.96,
+    "elapsed_sec": 0.31
+  },
+  "part_b_contest_sensitivity_surface": {
+    "grid_points": 2000,
+    "r_range": [
+      0.8,
+      2.5
+    ],
+    "price_range": [
+      0.05,
+      0.3
+    ],
+    "seat_shares": [
+      0.12,
+      0.16,
+      0.23,
+      0.35,
+      0.5
+    ],
+    "share_cells_paradox_S012_to_S016": 1.0,
+    "share_cells_paradox_S012_to_S050": 1.0,
+    "mean_participation_jump_S012_to_S050": 0.3709,
+    "elapsed_sec": 0.036
+  }
+}
+Saved: ./results_rtx3080ti/bray_and_contest/bray_abc_and_contest_surface.json
+JOB job2_bray_abc EXIT 0 WALL_SEC 2.73
+[GPU] Using NVIDIA GeForce RTX 3080 Ti (CUDA 11.8)
+{
+  "mode": "selftest_minority_effect_15pct",
+  "elapsed_sec": 1.234,
+  "wild_cluster": {
+    "N": 1200,
+    "G": 60,
+    "beta1": 0.4447407388610457,
+    "se_cr1": 0.08291358451449403,
+    "t_obs": 5.363906788800104,
+    "p_wild_cluster": 0.0004997501249375312,
+    "B": 2000,
+    "t_boot_q025": -2.1115961184341767,
+    "t_boot_q975": 2.1203792544146487
+  },
+  "block_perm": {
+    "beta_obs": 0.4447407388610457,
+    "p_block_perm": 0.000999000999000999,
+    "perm_mean": 0.08294635904079041,
+    "perm_sd": 0.05217447130835428,
+    "B": 1000
+  }
+}
+Saved: ./results_rtx3080ti/e1_q3_selftest/wild_cluster_ri_results.json
+JOB job1_e1_q3_selftest EXIT 0 WALL_SEC 3.59
+[CPU] CUDA not available; falling back to CPU
+{
+  "mode": "selftest_minority_effect_15pct",
+  "elapsed_sec": 0.316,
+  "wild_cluster": {
+    "N": 1200,
+    "G": 60,
+    "beta1": 0.44474073886104437,
+    "se_cr1": 0.08291358451449392,
+    "t_obs": 5.3639067888000955,
+    "p_wild_cluster": 0.0004997501249375312,
+    "B": 2000,
+    "t_boot_q025": -2.021618221882221,
+    "t_boot_q975": 2.113851710027801
+  },
+  "block_perm": {
+    "beta_obs": 0.44474073886104437,
+    "p_block_perm": 0.000999000999000999,
+    "perm_mean": 0.08294974317464446,
+    "perm_sd": 0.0527962008283913,
+    "B": 1000
+  }
+}
+Saved: ./results_rtx3080ti/e1_q3_selftest_cpu_ref/wild_cluster_ri_results.json
+JOB job1_e1_q3_cpu_ref EXIT 0 WALL_SEC 2.41
+===== DONE =====
+2026-11-25T06:35:21Z

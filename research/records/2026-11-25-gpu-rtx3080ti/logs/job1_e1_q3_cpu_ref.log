@@ -1,0 +1,24 @@
+[CPU] CUDA not available; falling back to CPU
+{
+  "mode": "selftest_minority_effect_15pct",
+  "elapsed_sec": 0.316,
+  "wild_cluster": {
+    "N": 1200,
+    "G": 60,
+    "beta1": 0.44474073886104437,
+    "se_cr1": 0.08291358451449392,
+    "t_obs": 5.3639067888000955,
+    "p_wild_cluster": 0.0004997501249375312,
+    "B": 2000,
+    "t_boot_q025": -2.021618221882221,
+    "t_boot_q975": 2.113851710027801
+  },
+  "block_perm": {
+    "beta_obs": 0.44474073886104437,
+    "p_block_perm": 0.000999000999000999,
+    "perm_mean": 0.08294974317464446,
+    "perm_sd": 0.0527962008283913,
+    "B": 1000
+  }
+}
+Saved: ./results_rtx3080ti/e1_q3_selftest_cpu_ref/wild_cluster_ri_results.json
