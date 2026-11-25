@@ -259,3 +259,13 @@ of runner+workers only, `/root/work/modelrev/pkg` intact. Its outputs are alread
   wave-2 residual risk. Also recorded compute-controller profile: repaired engine ~20–39× slower than legacy, 92.7 %
   of runtime in `contest_math` PL quadrature (19.82 s HK Baseline run), task-12 optimisation assigned to
   contest-math; Gate-2/3 compute budget implication for the Gate-1 report.
+
+- 2026-11-25T15:34+08:00 · Commander · **Host 540 slowdown diagnosed: orphaned workers from the killed first attempt.**
+  The first attempt's `kill -9 <main>` left six `multiprocessing.spawn` workers alive (reparented to PID 1; macOS spawn
+  semantics) at ~38 % CPU each; host swapped 4.0/5.1 GB, load >130/8 cores, restarting 540 workers stuck ~32–64 %.
+  Killed the six orphans at 15:34 by PID; restart recovered to ~64 %/worker. Killed qa's HOST dgp duplicates earlier
+  (authorised). New ETA for the full 540: **~15:50–15:55** (host pressure), box backup ETA ~15:54. Recorded in
+  `GATE1_POOL_HANG_INCIDENT.md` addendum: wave-2 hardening = kill process **group/descendants** (not main PID) +
+  incremental checkpointing + memory-aware worker caps. qa tasks 7/8 delivered (`01cb4d3`); contest task-9 delivered
+  (`66abc13`,`0f56621`) with the toy 100 % paradox CONTRADICTED and the general-r anchor; contest-math asked to keep
+  host-local benches paused until the 540 lands.
