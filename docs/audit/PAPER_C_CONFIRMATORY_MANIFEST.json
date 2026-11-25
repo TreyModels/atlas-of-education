@@ -1,0 +1,140 @@
+{
+  "document": "Paper C CONFIRMATORY launch manifest (pre-launch; cites A4 + frozen passers + committed runner)",
+  "status": "FROZEN_PENDING_ADJUDICATOR_PRELAUNCH_RECORD",
+  "frozen_utc": "2026-11-26",
+  "stage": "PAPER_C_STAGE=confirmatory",
+  "citations": {
+    "prereg_final": {
+      "file": "docs/audit/PAPER_C_CONFIRMATORY_PREREG.md",
+      "sha256": "445ec423c03ffdc8521a820694a72662cabbe342331dc1c8a839023e00053a8d",
+      "commit": "e34b901"
+    },
+    "amendment_A4": {
+      "file": "docs/audit/PAPER_C_A4_P12_CLARIFICATION.md",
+      "sha256": "8c967eabe5d007485ec1fe4a4a28735beeeabeee40c064eb67996c731fcc1ea3"
+    },
+    "passer_freeze": {
+      "file": "docs/audit/PAPER_C_PASSERS.json",
+      "sha256": "b64a69f0391d0089b535b6e43cfd2a55680f6c812159c3f0e37efc6ba95b99e7",
+      "adjudication": "bbc0b92 (signed conditional)"
+    },
+    "screening_artefact": {
+      "file": "paperC_screening.json (QA inbox)",
+      "sha256": "6bcc29a50d41dc2c63a5959c0b023eb203c5bf1bd0cd04ffaee908a5ebb5b6d4",
+      "n_runs": 288,
+      "n_cells": 36,
+      "invalid_cells": []
+    },
+    "runner": {
+      "file": "papers/shadow-education-contest/code/run_paperC_screening.py",
+      "sha256": "ddeffe42026eff865e939a4d8276171bb9b124fca52c2de9edeaaad909e40aac",
+      "commit": "1b3a510"
+    }
+  },
+  "engine": {
+    "commit": "846c9e0",
+    "core_sha256": "e111397bd8a50f94e82bb77715f236ee3d5c0bf863a23d84afdf1c6c71fa8e71",
+    "spec_sha256": "e5ddef6b4ecd04a0e96f480b43a97f0567bed7654ec032c1779c9e20f6beb755"
+  },
+  "design": {
+    "cells": [
+      "S0.85|L0.25|A|P55",
+      "S0.85|L0.25|C|P55",
+      "S0.85|L0.25|A|P12",
+      "S0.85|L0.25|C|P12",
+      "S0.85|L0.45|A|P55",
+      "S0.85|L0.45|C|P55"
+    ],
+    "n_cells": 6,
+    "seeds": [
+      100,
+      101,
+      102,
+      103,
+      104,
+      105,
+      106,
+      107,
+      108,
+      109,
+      110,
+      111,
+      112,
+      113,
+      114,
+      115,
+      116,
+      117,
+      118,
+      119,
+      120,
+      121,
+      122,
+      123,
+      124,
+      125,
+      126,
+      127,
+      128,
+      129,
+      130,
+      131
+    ],
+    "n_seeds": 32,
+    "N": 1500,
+    "T": 46,
+    "measure_from": 18,
+    "gate": {
+      "index": 1,
+      "kind": "contest",
+      "share_of": "cohort",
+      "r_by_L": {
+        "0.25": 1.2,
+        "0.45": 1.6
+      },
+      "fail": "stop",
+      "note": "G6->G9 gate; canonical HK gates otherwise unchanged; gate-level r authoritative over static params.contest_r (D-S2)"
+    },
+    "exposures": "exposed arms = supply A/C AND P55 (assertions h>1e-3, own_share>0.1); B and A|P12 exempt (A4)",
+    "p12_control": "pay_gap => h=0 (no-withholding control; A4)"
+  },
+  "confirmatory_statistics": {
+    "holm_family": [
+      "T2",
+      "T3"
+    ],
+    "family_note": "T1 and T4 are SCREENING FAILURES (T1 +0.655pp vs >=3.0; T4 +1.767pp vs >=2.0, CI below 2) and are NOT tested confirmatorily; no threshold change; Holm applied to T2/T3 only (m=2, alpha=.05)",
+    "T2": {
+      "estimand": "own_share_financial_proxy (C - A), paired by seed",
+      "min_effect": 0.1,
+      "predicted_sign": "positive"
+    },
+    "T3": {
+      "estimand": "withheld (A|P55 - A|P12), paired by seed",
+      "min_effect": 0.05,
+      "assertion_support": "h(A|P55)>=0.05 and h(A|P12)<=0.01"
+    },
+    "multiplicity": "Holm (m=2) at alpha=.05",
+    "uncertainty": "seed Monte-Carlo (32 matched seeds); parameter uncertainty zero (frozen params)"
+  },
+  "compute": {
+    "estimate_cpu_h_upper": 22.0,
+    "workers": 8,
+    "reserve": "1-2 box slots reserved for Luna/MASSENG",
+    "wall_note": "~22/8 ~= 2.8 h wall at 8 workers; do not exceed 10 incl. reserve"
+  },
+  "gates": {
+    "no_compute_until": [
+      "adjudicator pre-launch record of THIS manifest",
+      "Lead box allocation",
+      "1-2 slot reserve confirmed"
+    ]
+  },
+  "outputs": "results/audit/newgen/paperC_confirmatory.json + per-cell checkpoints + run manifest (hashes); separate from screening artefacts",
+  "warnings": {
+    "no_s_generalisation": "all 6 passers are S=0.85; no S-generalisation claim",
+    "t1_t4": "screening failures reported, not confirmatory",
+    "p12": "pay_gap control; incentive-P12 would need A5",
+    "untracked_confirmatory_runner": "papers/.../run_paperC_confirmatory.py is UNTRACKED and NON-AUTHORITATIVE \u2014 do not use; the authoritative runner is run_paperC_screening.py with PAPER_C_STAGE=confirmatory"
+  }
+}
