@@ -168,7 +168,7 @@ Requirements:
 * include a local + finite-domain check (multiple starting points across the prior box), not a single point;
 * if the moment map is not differentiable, use a finite-difference Jacobian with step-size sensitivity reported;
 * the identifiability report is a G2-A artefact and a **stop gate**: no joint estimation until rank is adequate or
-  the reduced system is pre-registered. **G2-A result (`G2A_IDENTIFIABILITY.md`): rank 4/4, null_dim 0 at 2 starts,
+  the reduced system is pre-registered. **G2-A result (`G2A_IDENTIFIABILITY.md`): rank 4/4, null_dim 0 at 2 starts (multi-seed 5/column in `G2A_IDENTIFIABILITY_MULTISEED.md`; **item (d) PROVISIONAL — third start running on host**; stop gate requires ≥3 starts),
   BUT one-seed FD Jacobians are unstable (max|ΔJ| 26.5, rel 0.52) — G2-B MUST use multi-seed Jacobians with the
   registered step sizes (5 %/3 %/5 %/4 %) and ≥3 starts; no prior or condition-number inference;**
 * it is computed **for the chosen canonical spec** (after the operator freezes V540-freeze or V420-port); drafting
