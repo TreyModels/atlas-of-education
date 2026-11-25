@@ -1,0 +1,47 @@
+# HOST ENVIRONMENT MANIFEST — Atlas contest audit v2, Gate 0
+# Captured: 2026-11-25T06:23:19Z UTC / 2026-11-25T14:23:19+0800 local
+# Captured by: audit-runner (Gate 0 lane)
+
+## uname -a
+Darwin Treys-MacBook-Air.local 25.6.0 Darwin Kernel Version 25.6.0: Fri Jul 31 19:17:12 PDT 2026; root:xnu-12377.161.14~5/RELEASE_ARM64_T8103 arm64
+
+## OS / hardware
+ProductName:		macOS
+ProductVersion:		26.6.2
+BuildVersion:		25G83
+hw.ncpu: 8
+hw.logicalcpu: 8
+hw.physicalcpu: 8
+hw.memsize: 8589934592 bytes (8.0 GiB)
+machdep.cpu.brand_string: Apple M1
+model: MacBookAir10,1
+
+## Python interpreter: /Users/treymenefee/neon-boot/venv/bin/python
+Python 3.10.2
+sys.executable: /Users/treymenefee/neon-boot/venv/bin/python
+sys.version: 3.10.2 (v3.10.2:a58ebcc701, Jan 13 2022, 14:50:16) [Clang 13.0.0 (clang-1300.0.29.30)]
+platform: macOS-26.6.2-arm64-arm-64bit
+
+## Key scientific packages (versions)
+numpy 2.2.6
+scipy 1.15.3
+
+## pip freeze (venv)
+numpy==2.2.6
+pandas==2.3.3
+python-dateutil==3.0.0
+pytz==2026.6
+scipy==1.15.3
+six==1.17.0
+tzdata==2026.6
+
+## Git worktrees (repo: /Users/treymenefee/neon-boot)
+# wt4/repro  (pristine Gate-0 tree):
+1c3417c4a2a17f47f31388e0686396a1a3877757
+research/gate0-repro-2026-11-25
+# wt4/auditv2 (audit branch):
+7356c97b7bf343f96bd75edaf8681fac359de3a3
+research/contest-audit-v2-2026-11-25
+
+## git version
+git version 2.50.1 (Apple Git-155)

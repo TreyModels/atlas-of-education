@@ -1,0 +1,30 @@
+Running 540 simulations (18 arms x 30 seeds) on 8 workers...
+
+Completed 540 runs in 118.4s -> /Users/treymenefee/neon-boot/wt4/repro/papers/shadow-education-contest/code/hk_korea_comparative_with_cf4.json
+
+=== HK (30 matched seeds) ===
+Arm    | Label                                  | SpendIdx | G12 %   | Q5-Q1 Gap | Q5/Q1 Ratio | Elite Q5 %
+---------------------------------------------------------------------------------------------------------
+Baseline | Baseline (S=0.23)                      |    100.0 |   72.4% |    70.6pp |      39.81x |      46.4%
+CF1a   | CF1a (+50% tax)                        |    107.4 |   66.4% |    69.0pp |      90.33x |      52.4%
+CF1b   | CF1b (-50% cap)                        |     67.4 |   79.9% |    74.4pp |      19.57x |      42.0%
+CF2a   | CF2a (S=0.28)                          |    110.3 |   75.7% |    72.0pp |      37.03x |      42.9%
+CF2b   | CF2b (S=0.50)                          |    149.3 |   85.6% |    72.6pp |      18.24x |      33.6%
+CF3a   | CF3a (dV -30%)                         |     77.0 |   66.3% |    70.0pp |      64.45x |      51.0%
+CF3b   | CF3b (dV -50%)                         |     59.1 |   60.9% |    68.7pp |      66.35x |      59.0%
+CF4a   | CF4a (Win-Win: dV -50% + Cap -50%)     |     43.8 |   67.1% |    73.6pp |      39.20x |      48.6%
+CF4b   | CF4b (Win-Win: dV -50% + Seats S=0.50) |     90.9 |   77.4% |    78.0pp |      59.11x |      36.0%
+
+=== KR (30 matched seeds) ===
+Arm    | Label                                  | SpendIdx | G12 %   | Q5-Q1 Gap | Q5/Q1 Ratio | Elite Q5 %
+---------------------------------------------------------------------------------------------------------
+Baseline | Baseline (S12=0.12)                    |    100.0 |   73.7% |    68.4pp |      18.01x |      36.1%
+CF1a   | CF1a (+50% tax)                        |    106.5 |   65.8% |    66.2pp |      25.72x |      41.8%
+CF1b   | CF1b (-50% cap)                        |     76.4 |   84.5% |    67.1pp |      13.72x |      26.4%
+CF2a   | CF2a (S12=0.16)                        |    107.2 |   79.1% |    67.6pp |      16.22x |      31.1%
+CF2b   | CF2b (S12=0.40)                        |    128.0 |   95.6% |    55.2pp |       3.75x |      22.0%
+CF3a   | CF3a (dV -30%)                         |     76.6 |   66.2% |    68.6pp |      20.32x |      42.0%
+CF3b   | CF3b (dV -50%)                         |     57.4 |   60.1% |    67.0pp |      25.81x |      47.7%
+CF4a   | CF4a (Win-Win: dV -50% + Cap -50%)     |     46.5 |   68.4% |    67.4pp |      19.37x |      34.1%
+CF4b   | CF4b (Win-Win: dV -50% + Seats S12=0.40) |     88.0 |   83.9% |    65.4pp |      11.57x |      26.5%
+

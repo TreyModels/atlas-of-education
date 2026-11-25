@@ -1,0 +1,4 @@
+205c205
+<     workers = min(os.cpu_count() or 2, 8)
+---
+>     workers = 56
