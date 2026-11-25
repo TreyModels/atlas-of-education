@@ -40,3 +40,10 @@ frozen passers + runner/engine/spec hashes, 16-seed summary schema identical to 
 * **Measured rate (pre-truncation):** ~13.5 min/seed/cell, ~809 CPU-s/run ⇒ 32-seed projection 43.2 CPU-h / 7.2 h wall;
   A5 16-seed envelope ≤24 CPU-h (wall ~3.6 h from 07:20 ⇒ ~10:55–11:15 CST). No outcome values inspected before freeze
   (attested; only timings/row counts observed).
+
+**Provenance fixes (adjudication `b614b78`, before aggregation):** aggregator `paperC_confirm_aggregate.py` sha
+`223628668355a1a68f16def0e0171fd7c528de6c82b536da2bc670857961c978` is **committed at `0324205`**; the confirmatory
+manifest is corrected to **uncertainty = 16 matched seeds (A5, 100–115), SE×√2, no full-precision claim**, cites the
+aggregator commit and the A5 approval (`1c51f17`), and reconciles `wall_note` (~21.6 CPU-h / ~3.6 h wall for the 16-seed
+run) with `observed_runaway` (32-seed plan: 43.2 CPU-h / 7.2 h). The 8-seed snapshot is **non-inferential crash
+insurance only** — it is not analysed and is not a stopping source.

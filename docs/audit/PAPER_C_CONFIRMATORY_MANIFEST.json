@@ -33,7 +33,7 @@
     "aggregator": {
       "file": "papers/shadow-education-contest/code/paperC_confirm_aggregate.py",
       "sha256": "223628668355a1a68f16def0e0171fd7c528de6c82b536da2bc670857961c978",
-      "commit": "COMMITTED_AGG_SHA_PLACEHOLDER"
+      "commit": "0324205"
     }
   },
   "engine": {
