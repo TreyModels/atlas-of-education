@@ -652,3 +652,11 @@ The driver dynamically mixes remaining KR-TRACKED arms (CF2b 1:19:57, CF3b 57:32
 KR-SINGLE arms (11–15 min) across the 8 workers — all 8 busy, none free, so the gate-grid fee pilot still waits.
 Rate ~12–14 rows/min → **KR-TRACKED primary complete ~18:50**, **full 2,700 ~19:30–19:40**. Box **8.0/10 (80 %)**,
 g2a on host, GPU lane CPU-light, control 1; cap respected.
+
+### 13.15 Progress 18:43 — HK arms complete; KR-TRACKED 799/900 (2,245/2,700 total)
+
+Measured 18:43:31: HK PRIMARY **900/900 ✅**, KR-TRACKED **799/900**, KR-SINGLE **546/900** → **total 2,245/2,700 (83 %)**.
+7 arm workers active at the sample (one briefly between arms; driver re-tasks it — fee pilot was NOT launched on a
+transient gap, per Lead rule); cgroup **7.0/10** at sample (5.1–8.0 as arms rotate); g2a on host; control 1.
+**ETA: KR-TRACKED primary complete ~18:55–19:00; full 2,700 ~19:20–19:30.** Final per-arm JSONs are written at campaign
+end; checkpoints current. No cap or progress alarms.
