@@ -31,3 +31,12 @@ The pre-registered realized-admission series (`contest_candidates/seats/admitted
 A **diagnostic-only rerun** (same cells, engine series extraction fixed to per-level `nanmean`; labelled
 DIAGNOSTIC-ONLY) is scoped at 1,280 contest-cell runs ≈ 35 min at 8 workers and will run **after Pilot-0 finishes**.
 No diagnostic numbers are claimed until it lands.
+
+## X-29 diagnostic rerun design (scoped, diagnostic-only)
+
+`design_diag` extraction fixed to **per-level `nanmean`** (`contest_*` series are NaN at non-contest levels; a plain
+mean returned NaN). Diagnostic cells = contest architecture only (the only cells with contest-admission series):
+S∈{.25,.35,.45,.55,.70} × fee∈{0.19,0.00} × vac0∈{.02,.08,.25,.50} × 32 seeds = **1,280 runs** (bar/bar_high have no
+contest gate, so contest-admission series do not apply there; reported as not-applicable rather than NaN). Output:
+`results_diag/gate_architecture_diagnostic.json`, labelled **DIAGNOSTIC-ONLY** (no mixing with the X-27 primary/secondary).
+Runs after Pilot-0 completes.

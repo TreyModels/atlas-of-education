@@ -69,12 +69,23 @@ def design_diag(E):
     sel = (X['cohort'] >= m) & (X['cohort'] <= E.p['T'] - 14)
     q = np.asarray(X['q'])[sel]; urban = np.asarray(X['urban'])[sel]
     cells = {f'q{j}_u{int(u)}': int(np.sum((q == j) & (urban == u))) for j in range(5) for u in (0, 1)}
-    def ser(name):
+    def ser(name, level=None):
         v = np.asarray(E.R.get(name, []), float)
-        return float(np.mean(v[m:])) if v.ndim == 2 else (float(np.mean(v[m:])) if v.size else None)
-    return dict(cells=cells, contest_candidates=ser('contest_candidates'), contest_seats=ser('contest_seats'),
-                contest_admitted=ser('contest_admitted'), contest_applicant_seat_ratio=ser('contest_applicant_seat_ratio'),
-                contest_admit_rate=ser('contest_admit_rate'))
+        if v.size == 0: return None
+        v = v[m:]
+        if v.ndim == 2 and level is not None: v = v[:, level]
+        return float(np.nanmean(v)) if np.isfinite(v).any() else None
+    def by_level(name):
+        v = np.asarray(E.R.get(name, []), float)
+        if v.ndim != 2: return None
+        return [float(np.nanmean(v[m:, j])) if np.isfinite(v[m:, j]).any() else None for j in range(v.shape[1])]
+    # X-29 diagnostic extraction: per-level nanmean (contest series are NaN for non-contest levels; plain mean -> NaN)
+    return dict(cells=cells, contest_level=1,
+                contest_candidates=ser('contest_candidates', 1), contest_seats=ser('contest_seats', 1),
+                contest_admitted=ser('contest_admitted', 1), contest_applicant_seat_ratio=ser('contest_applicant_seat_ratio', 1),
+                contest_admit_rate=ser('contest_admit_rate', 1),
+                contest_admit_rate_by_level=by_level('contest_admit_rate'),
+                contest_seats_by_level=by_level('contest_seats'))
 
 def run_cell(arch, S, fee, vac0, fail, seeds, out_dir):
     warnings.filterwarnings('ignore'); os.makedirs(out_dir, exist_ok=True)
