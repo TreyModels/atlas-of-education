@@ -153,13 +153,13 @@ def driver(seeds, workers, out_dir):
                              ('SINGLE', 'paperB_new_generation_SINGLE_KR.json')):
         summary = {"HK": {}, "KR": {}}
         for jur in summary:
-            base = {(r['seed']): r for r in rows[(jur, 'Baseline', variant)]} if variant == 'TRACKED' else \
-                   {r['seed']: r for r in rows[('KR', 'Baseline', 'SINGLE')]}
+            base_key = ('HK', 'Baseline', 'PRIMARY') if jur == 'HK' else ('KR', 'Baseline', variant)
+            base = {r['seed']: r for r in rows.get(base_key, [])}
             if variant == 'SINGLE' and jur == 'HK':
                 continue
             base_mean_spend = float(sum(r['k12_spend'] for r in base.values()) / max(len(base), 1))
             for arm_id in ARMS:
-                key = (jur, arm_id, variant if jur == 'KR' else 'TRACKED')
+                key = (jur, arm_id, 'PRIMARY') if jur == 'HK' else (jur, arm_id, variant)
                 rr = rows.get(key, [])
                 if not rr: continue
                 entry = {m: _stats([r[m] for r in rr]) for m in metrics}
@@ -174,7 +174,7 @@ def driver(seeds, workers, out_dir):
             metadata=dict(
                 generation='NEW GENERATION', spec='docs/audit/canonical_spec.json',
                 spec_content_sha256=spec['frozen_files_sha256']['canonical_spec_content_sha256'],
-                engine_commit='98baf6b',
+                engine_commit='98baf6b (pre-re-pin; numerics unchanged vs 846c9e0 — engine-core 118-series identical)',
                 engine_files=spec['engine_file_sha256'],
                 runner_sha256=sha(os.path.abspath(__file__)),
                 gate_variant=('KR-TRACKED primary' if variant == 'TRACKED' else 'KR-SINGLE sensitivity (KR only)'),

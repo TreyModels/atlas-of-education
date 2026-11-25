@@ -1,0 +1,269 @@
+{
+  "label": "NEW GENERATION \u2014 REPRODUCED SIMULATION (repaired engine, frozen V540-FREEZE spec); NOT a reproduction of the Gemini-era 420/540 docx tables",
+  "wall_seconds": 11234.49,
+  "workers": 8,
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78,
+    79,
+    80,
+    81,
+    82,
+    83,
+    84,
+    85,
+    86,
+    87,
+    88,
+    89,
+    90,
+    91,
+    92,
+    93,
+    94,
+    95,
+    96,
+    97,
+    98,
+    99
+  ],
+  "jobs": [
+    [
+      "HK",
+      "Baseline",
+      "PRIMARY"
+    ],
+    [
+      "HK",
+      "CF1a",
+      "PRIMARY"
+    ],
+    [
+      "HK",
+      "CF1b",
+      "PRIMARY"
+    ],
+    [
+      "HK",
+      "CF2a",
+      "PRIMARY"
+    ],
+    [
+      "HK",
+      "CF2b",
+      "PRIMARY"
+    ],
+    [
+      "HK",
+      "CF3a",
+      "PRIMARY"
+    ],
+    [
+      "HK",
+      "CF3b",
+      "PRIMARY"
+    ],
+    [
+      "HK",
+      "CF4a",
+      "PRIMARY"
+    ],
+    [
+      "HK",
+      "CF4b",
+      "PRIMARY"
+    ],
+    [
+      "KR",
+      "Baseline",
+      "TRACKED"
+    ],
+    [
+      "KR",
+      "CF1a",
+      "TRACKED"
+    ],
+    [
+      "KR",
+      "CF1b",
+      "TRACKED"
+    ],
+    [
+      "KR",
+      "CF2a",
+      "TRACKED"
+    ],
+    [
+      "KR",
+      "CF2b",
+      "TRACKED"
+    ],
+    [
+      "KR",
+      "CF3a",
+      "TRACKED"
+    ],
+    [
+      "KR",
+      "CF3b",
+      "TRACKED"
+    ],
+    [
+      "KR",
+      "CF4a",
+      "TRACKED"
+    ],
+    [
+      "KR",
+      "CF4b",
+      "TRACKED"
+    ],
+    [
+      "KR",
+      "Baseline",
+      "SINGLE"
+    ],
+    [
+      "KR",
+      "CF1a",
+      "SINGLE"
+    ],
+    [
+      "KR",
+      "CF1b",
+      "SINGLE"
+    ],
+    [
+      "KR",
+      "CF2a",
+      "SINGLE"
+    ],
+    [
+      "KR",
+      "CF2b",
+      "SINGLE"
+    ],
+    [
+      "KR",
+      "CF3a",
+      "SINGLE"
+    ],
+    [
+      "KR",
+      "CF3b",
+      "SINGLE"
+    ],
+    [
+      "KR",
+      "CF4a",
+      "SINGLE"
+    ],
+    [
+      "KR",
+      "CF4b",
+      "SINGLE"
+    ]
+  ],
+  "outputs": {
+    "paperB_new_generation_TRACKED.json": {
+      "path": "/root/work/newgen/results/paperB_new_generation_TRACKED.json",
+      "sha256": "cf801af8e07f9ebf615d075c42ec742f00d5a98a19a0e938005a3632e28836d3"
+    },
+    "paperB_new_generation_SINGLE_KR.json": {
+      "path": "/root/work/newgen/results/paperB_new_generation_SINGLE_KR.json",
+      "sha256": "2b69fa08ea521c664bda59da4d6fce0d9b48d494d5cee793b69987795bef0330"
+    }
+  },
+  "engine_files": {
+    "engine/eduengine/contest_math.py": "23a01730bf939a9e22befa3ca395094a48c5e870fb10901ceb015cddd793a3c8",
+    "engine/eduengine/core.py": "72cbddf7d97db85269081ae1c8ab692153c27b0553d4ce59691beab20bbfcb99",
+    "engine/eduengine/modules/labour.py": "0ccfb3ce5b4c88fc2969909dbdbbc4d32184052fe5359688f96e00c2667b3f7d",
+    "engine/eduengine/modules/schools.py": "9b079280e0b01cc0681dfdb956b9cff8bcc82a9274f03263f209999bc7142745",
+    "engine/eduengine/modules/sdg4.py": "5ce05c8b3663f32169a8a1f8b2407e0d5418a9dca50fdd1cba1af7fb02e592be",
+    "engine/eduengine/modules/state.py": "3c5500ae9b4fc5757be574e508a31b9d8627be979edc884d94d90cea60993068",
+    "engine/eduengine/modules/tutoring.py": "7a6fd4c33cc2aefcd47da097b47ac7945744cc1adf9dedbb8ab1ec57d8adc2f8",
+    "engine/eduengine/planning.py": "13d91bc9cc8c0bccbffb2caf8364b4a3376da582ece25f44fa1660380358987d",
+    "engine/eduengine/rng.py": "ada4a760d75a14f4d82a8aaf70964dee6a2f7f4130d53018ad190fafa4920b08"
+  },
+  "spec_sha256": "35576fed0c132041f8ddbf60d1177f2734a16c3047047169872c6a261fa7b95f",
+  "runner_sha256": "aba150774afd2cbbad6766d427dafaf0370f4c1cce7dbd256fb73d4c5af9cb0a",
+  "reaggregated": true,
+  "note": "HK aggregation key fix; no model re-run; engine pin 98baf6b (pre-re-pin)"
+}
