@@ -40,3 +40,12 @@ S∈{.25,.35,.45,.55,.70} × fee∈{0.19,0.00} × vac0∈{.02,.08,.25,.50} × 32
 contest gate, so contest-admission series do not apply there; reported as not-applicable rather than NaN). Output:
 `results_diag/gate_architecture_diagnostic.json`, labelled **DIAGNOSTIC-ONLY** (no mixing with the X-27 primary/secondary).
 Runs after Pilot-0 completes.
+
+## X-29 diagnostic artefact (COMPLETE)
+
+`results/audit/newgen/gate_architecture_diagnostic.json` sha256 **`57889777afd358adce843d7f2b35acfb037d1439d195643223a30bd7f2e78652`**
+— 1,280 runs (40 contest cells × 32 seeds), per-level `nanmean` extraction, **all 40 cells carry admission diagnostics**
+(e.g. admit_rate ≈0.252 in the first cell), DIAGNOSTIC-ONLY, engine pin `846c9e0`, separate `results_diag/` (never mixed
+with the X-27 primary/secondary artefacts). The run first completed 1,280/1,280 rows, aggregation crashed on the
+arch-filtered exploratory block (`KeyError: 'bar'`) — fixed by making the exploratory dict arch-aware; **re-aggregation
+only, no simulation re-run**.

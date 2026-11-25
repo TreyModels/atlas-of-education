@@ -172,11 +172,12 @@ def h1_bootstrap(cells_rows, arch=PRIMARY_ARCH, vac=PRIMARY_VAC, n_boot=5000, se
                 ci95_lo=float(np.percentile(a, 2.5)), ci95_hi=float(np.percentile(a, 97.5)),
                 half_width=float((np.percentile(a, 97.5) - np.percentile(a, 2.5)) / 2.0), n_boot=n_boot)
 
-def driver(seeds, workers, out_dir, include_sensitivity=True, aggregate_only=False):
+def driver(seeds, workers, out_dir, include_sensitivity=True, aggregate_only=False, archs=None):
     from concurrent.futures import ThreadPoolExecutor
     os.makedirs(out_dir, exist_ok=True)
-    cells = [(a, S, f, v, 'track') for a in ARCHS for S in SHARES for f in FEES for v in VACS]
-    if include_sensitivity:
+    archs = list(archs) if archs else list(ARCHS)
+    cells = [(a, S, f, v, 'track') for a in archs for S in SHARES for f in FEES for v in VACS]
+    if include_sensitivity and SENS_ARCH in archs:
         cells += [(SENS_ARCH, S, f, v, 'stop') for S in SENS_SHARES for f in FEES for v in VACS]
     t0 = time.time()
     rows = []
@@ -230,7 +231,8 @@ def driver(seeds, workers, out_dir, include_sensitivity=True, aggregate_only=Fal
                   h1_seed_bootstrap=h1_bootstrap(cells_rows),
                   note='H1 = fee=0 gap_delta(S=.25) - gap_delta(S=.70); negative Spearman means gap widens as seats shrink; bootstrap resamples seeds (not a proper paired bootstrap for the H1 delta — point + Spearman are the declared minimum)')
     exploratory = {a: {f'{S:.2f}': {f'{f:.2f}_{v:.2f}': {'gap_delta': summary['track'][a].get(str(S), {}).get(f'{f:.2f}_{v:.2f}', {}).get('gap_delta', {})}
-                                    for f in FEES for v in VACS} for S in SHARES} for a in ('bar', 'bar_high')}
+                                    for f in FEES for v in VACS} for S in SHARES}
+                   for a in ('bar', 'bar_high') if a in summary.get('track', {})}
     # realized admission / design diagnostics per cell (mean over runs)
     design = {}
     for (a, S, f, v, fail), rr in cells_rows.items():
@@ -273,12 +275,13 @@ def main():
     ap.add_argument('--fees', default='0.19,0.00')
     ap.add_argument('--no-sensitivity', action='store_true')
     ap.add_argument('--aggregate-only', action='store_true', help='re-aggregate existing ckpt_*.jsonl; never runs cells')
+    ap.add_argument('--archs', default='bar,bar_high,quota,contest')
     a = ap.parse_args()
     global FEES
     FEES = [float(x) for x in a.fees.split(',')]
     seeds = (list(range(int(a.seeds.split('-')[0]), int(a.seeds.split('-')[1]) + 1)) if '-' in a.seeds
              else [int(x) for x in a.seeds.split(',')])
-    return driver(seeds, a.workers, a.out_dir, include_sensitivity=not a.no_sensitivity, aggregate_only=a.aggregate_only)
+    return driver(seeds, a.workers, a.out_dir, include_sensitivity=not a.no_sensitivity, aggregate_only=a.aggregate_only, archs=[x for x in a.archs.split(',') if x])
 
 if __name__ == '__main__':
     sys.exit(main())
