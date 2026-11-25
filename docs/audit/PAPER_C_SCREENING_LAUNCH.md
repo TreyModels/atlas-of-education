@@ -36,14 +36,17 @@ the corrected finalizer once → **`STATUS=OK`, `RESULTS_DONE`, `SHA256SUMS`** w
 for `SHUTDOWN_OK` as designed.
 
 **Pull blocker:** the Mac poller never copied `screen_final/` to `~/neon-boot/qa/incoming/paperC_screening/` (still
-empty), and the box is now **unreachable/powered off**. The screening evidence is on the box disk (AutoDL retains the
+empty), and the box showed **SSH-unreachable** at ~01:17 (later corrected by compute-controller: **the box was never powered off** — `uptime` 90 days 12:08 at 07:34; the finalizer's `shutdown -h now` was a **container no-op** and the unreachability was network/SSH-side only). The screening evidence is on the box disk (AutoDL retains the
 disk across a stop) and known by hash; it must be pulled after the instance is powered on, or restored from the
 controller's/operator's copy. **No screening numbers are cited beyond the summary hash/counts above until the artefact
 is pulled and hash-verified.**
 
-**Box action record:** after the Lead's "nothing on the box" order I only ran the corrected finalizer once (marker
-repair, no simulation); no relaunches, no GPU, no G2-B. The finalizer/shutdown chain then completed without a verified
-Mac pull — process lesson: the pull/verify step must be mandatory and separate from the finalizer's shutdown trigger.
+**Box action record (corrected):** after the Lead's "nothing on the box" order I only ran the corrected finalizer once
+(marker repair, no simulation); no relaunches, no GPU, no G2-B. The box was **never powered off** — the finalizer's
+`shutdown -h now` was a container no-op, and the ~01:17 unreachability was network/SSH-side only. **Recovery completed
+at ~07:16 CST**: the results were pulled, `PULL_VERIFIED.txt` written, and compute-controller independently re-verified
+the summary (`6bcc29a5…`) and `sha256sum -c` of `SHA256SUMS` (all OK) — screening artefact step closed. Process lesson
+stands: pull/verify must be a mandatory separate gate before any `SHUTDOWN_OK`/shutdown token.
 
 ## 2026-11-26 — LEAD DECISION (binding): withhold screening artefact until operator powers the instance on
 

@@ -26,3 +26,17 @@ no `paperC_confirmatory` outcome values were read.
 frozen passers + runner/engine/spec hashes, 16-seed summary schema identical to screening (per-cell seed_stats/rows),
 `SHA256SUMS` + `CONFIRM_RESULTS_DONE` markers for pull/verify. Full 32-seed fallback exists only if A5 is rejected
 (overrun declared) — A5 **is approved**, so the confirmatory artefact is the 96-run one.
+
+## Execution record (A5)
+
+* **A5 record committed before aggregation:** this file sha256 `365155965423b4f9171b5ad69a87dd0ef11c0710b5216190d043beebfb16bf99`
+  (commit `aa1d0bd`); manifest updated (`c8649511…`).
+* **Stop-at-16 watchdog launched on box** (`/root/work/paperC/stop16.sh`, sha `ac979c9a…`, PID 2361, log
+  `stop16.log`): waits until each cell's ckpt has ≥16 rows for seeds 100–115, then stops that cell's process; when all
+  cells are stopped it runs the **16-seed aggregator** (`paperC_confirm_aggregate.py`, sha `223628668…`) → writes
+  `paperC_confirmatory.json` (n_runs=96, n_cells=6, invalid=[]), `SHA256SUMS`, `CONFIRM_RESULTS_DONE`.
+* **8-seed insurance snapshot** (`/root/work/paperC/snap8.sh`, watchdog) tars the ckpts at 8 seeds to
+  `/root/work/paperC/snap8.tar.gz` (pullable if anything goes wrong at ~50 %).
+* **Measured rate (pre-truncation):** ~13.5 min/seed/cell, ~809 CPU-s/run ⇒ 32-seed projection 43.2 CPU-h / 7.2 h wall;
+  A5 16-seed envelope ≤24 CPU-h (wall ~3.6 h from 07:20 ⇒ ~10:55–11:15 CST). No outcome values inspected before freeze
+  (attested; only timings/row counts observed).
