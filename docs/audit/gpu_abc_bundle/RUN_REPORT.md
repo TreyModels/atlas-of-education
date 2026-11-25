@@ -231,3 +231,16 @@ env_lock_rtx3080ti.txt
 ## Box state
 
 Left **RUNNING and idle** (GPU no longer under load after the 8 s burn). `torch 2.7.1+cu118` remains installed in `/root/miniconda3`. No shutdown/reboot/power actions were taken; no watchers/timers were created. No secrets (box password, keys) were printed, copied into this repo, or committed — the only host identifiers committed are the non-secret ubuntu/GPU specs and hostname.
+
+
+---
+
+## POST-AUDIT CORRECTION (2026-11-25, added by the fresh-window Lead — legacy text above preserved)
+
+The sentence above saying **"5 active parameters and 5 moments"** is incorrect. The original ABC samples **7
+coordinates of which 6 are active** (θ0–θ4 and θ6; θ5/`teacher_threshold` is the dead **sixth** coordinate), and
+uses **5 advertised moments whose maximum rank is 4** — overall participation is identically ⅔·G9 + ⅓·G12
+(population 420 G9 / 210 G12; targets 0.73 = ⅔·0.67 + ⅓·0.85). The model is therefore **not identified**
+(≥2 unidentified directions), and no ABC output may be cited as a calibration. The exact provider-choice
+parameter is analytic: δ = ln(0.32/0.68) = −0.7537718. Authoritative record:
+`docs/audit/EXTERNAL_AUDIT_GPU_2026-11-25.md`.

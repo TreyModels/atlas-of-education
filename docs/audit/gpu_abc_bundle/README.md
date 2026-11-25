@@ -1,5 +1,15 @@
 # GPU ABC / E1–Q3 bundle — one folder for the external auditor
 
+> **POST-AUDIT STATUS (2026-11-25): QUARANTINED.** An external audit of commit `045a63e` found two structural
+> defects: the five advertised ABC moments have **rank 4** (overall participation ≡ ⅔·G9 + ⅓·G12, so it is
+> redundant), giving ≥2 unidentified directions; and the country-block permutation is algebraically invariant
+> under country fixed effects, so it cannot test the within-country estimand. The provider-choice parameter is
+> analytic: δ = ln(0.32/0.68) = −0.7537718. Full record + dispositions:
+> [`EXTERNAL_AUDIT_GPU_2026-11-25.md`](../EXTERNAL_AUDIT_GPU_2026-11-25.md). Nothing here is `VALIDATED`;
+> GPU/CPU agreement validates arithmetic only.
+
+
+
 This directory is a **self-contained copy**: the scripts, their raw outputs, the run record and the environment
 lock are together in one place so nothing has to be chased across branches.
 
@@ -24,10 +34,11 @@ lock are together in one place so nothing has to be chased across branches.
 | `results_gpu_vs_cpu_diff.json` | GPU vs CPU agreement: max abs diff 8.9e-15 on deterministic quantities |
 | `RUN_REPORT.md` | the legacy lane's own run record (environment, commands, failure+fix of the torch install) |
 | `env_lock_rtx3080ti.txt` | 152-package `pip freeze` for the GPU environment |
-| `MANIFEST.sha256` | sha256 of every file above, with its original path in the legacy branch |
+| `MANIFEST.sha256` | canonical `sha256sum -c`-compatible checksums for every file above |
+| `MANIFEST_ORIGINS.csv` | original branch path, bytes, sha256 and evidence status per file |
 
 **The one-sentence caution:** the 7-parameter ABC cannot be reported as a 7-parameter calibration, the corrective
-6-parameter fit is still 6 active parameters against only 5 independent moments (prior-dominated), the contest
+6-parameter fit is still 6 active parameters against only **4** independent moments, i.e. rank 4 of 6 (prior-dominated), the contest
 surface is an approximate Tulloch fixed point rather than the engine's realized Plackett–Luce contest, and the
 E1/Q3 panel reconstruction is missing. The full technical audit note — model equations, moments, an audit
 checklist and a verdict table — is the section below.
@@ -101,8 +112,8 @@ aggregate benchmark moments**, plus a 100-fresh-seed stability bank.
 **The defect the auditor should focus on (confirmed by this inspection and by the external review §5):**
 
 1. `θ5 = teacher_threshold` is **dead** — it enters neither the utilities nor any moment. A 7-parameter ABC cannot
-   identify it; `best_theta_7param`'s 7th coordinate is meaningless.
-2. Even after dropping `θ5`, the corrective run has **6 active parameters against only 5 independent moments**.
+   identify it; **`best_theta_7param`'s 6th coordinate (θ5, 0-indexed 5) is meaningless** — the unused parameter is the sixth of the seven, not the seventh.
+2. Even after dropping `θ5`, the corrective run has **6 active parameters against only 4 independent moments** — the five advertised moments have rank 4 because overall participation is identically ⅔·G9 + ⅓·G12 (420 G9 / 210 G12; 0.73 = ⅔·0.67 + ⅓·0.85).
    The posterior is therefore **not point-identified from the moments**; the uniform prior bounds do the
    identifying. The condition numbers (25.96 → 21.03) confirm the remaining parameters are strongly correlated.
 3. The declared 7 moments are not used: only 5 are computed, and `teacher_tut`/`other_share` are absent. Any claim

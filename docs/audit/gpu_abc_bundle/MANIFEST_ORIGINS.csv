@@ -1,0 +1,13 @@
+file,sha256,bytes,origin,evidence_status
+README.md,47ca5d70c9a07d53f597f67377022a42ae7af60e16407594216871f1c58d74f1,15786,"generated: bundle header + docs/audit/GPU_ABC_AUDITOR_PACKET.md + post-audit corrections",derived
+RUN_REPORT.md,68c38f7701208e89cf8f4a12a4a461ceee7746a8113e14d497ae857438b2ce06,17608,"research/records/2026-11-25-gpu-rtx3080ti/RUN_REPORT.md",AUTHOR-REPORTED (corrected)
+env_lock_rtx3080ti.txt,a795eb03b3e589fec786b97fa16fca9fbee7687dd456d0fa0094eec2b506c5a9,3931,"research/records/2026-11-25-gpu-rtx3080ti/env_lock_rtx3080ti.txt",VERIFIED (environment)
+gpu_bray_abc_and_contest_surface.py,0709032c043372cafd79d1df4c62dd352403e881afc1fc395cb5956a19a15d2e,8221,"research/records/2026-11-25-gpu-rtx3080ti/scripts/gpu_bray_abc_and_contest_surface.py",AUTHOR-REPORTED / PRE-REPAIR
+gpu_bray_abc_and_contest_surface_6param.py,012b14bb93ef9e668c1a578f7f98273fed3a41d9f7cf404a6ed26fa2e9c1623f,8633,"research/records/2026-11-25-gpu-rtx3080ti/scripts/gpu_bray_abc_and_contest_surface_6param.py",AUTHOR-REPORTED / PRE-REPAIR
+gpu_e1_q3_wild_cluster_ri.py,3bbbc19ac42020b64a6d88c57118d75702c42dabddc0038f8ea087a6b2caf6c9,8862,"research/records/2026-11-25-gpu-rtx3080ti/scripts/gpu_e1_q3_wild_cluster_ri.py",AUTHOR-REPORTED / UNRESOLVED
+results_bray_abc_6param.json,3d1027b41c0ac6647eebb272961532d20e9507141006aa1c250e411a1e9c5d09,839,"research/records/2026-11-25-gpu-rtx3080ti/results/bray_and_contest_6param/bray_abc_and_contest_surface.json",AUTHOR-REPORTED / UNDERIDENTIFIED
+results_bray_abc_7param.json,79ceddbf409934b92b29f839931a19e61f30b4ef7b42c2f9ed652e110f4979f7,754,"research/records/2026-11-25-gpu-rtx3080ti/results/bray_and_contest/bray_abc_and_contest_surface.json",AUTHOR-REPORTED / INVALID (id)
+results_e1_q3_selftest.json,9dc07b4493a45f67ece8c68eca864b98d51548299030fd962b337913208a158e,550,"research/records/2026-11-25-gpu-rtx3080ti/results/e1_q3_selftest/wild_cluster_ri_results.json",AUTHOR-REPORTED / CONFLATED
+results_e1_q3_selftest_cpu_ref.json,1b325e9d36e56cd1ee5e5e3a879fe28aaaf68c96c374382d78979b05adf276ca,550,"research/records/2026-11-25-gpu-rtx3080ti/results/e1_q3_selftest_cpu_ref/wild_cluster_ri_results.json",AUTHOR-REPORTED / CONFLATED
+results_gpu_vs_cpu_diff.json,08fbc5c9920ba0afe91b5c55e151eae1608152f90058f19172c7508b5dce0e7a,2505,"research/records/2026-11-25-gpu-rtx3080ti/results/e1_q3_selftest/gpu_vs_cpu_diff.json",VERIFIED (arithmetic only)
+run_gpu_jobs.sh,b0334816dc442647ff6d788ed4e7434b6887f6d67564ffa303b838edb7396df3,1101,"research/records/2026-11-25-gpu-rtx3080ti/scripts/run_gpu_jobs.sh",AUTHOR-REPORTED

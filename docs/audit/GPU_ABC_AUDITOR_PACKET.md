@@ -1,5 +1,15 @@
 # GPU scripts (RTX 3080 Ti lane) — auditor packet
 
+> **POST-AUDIT STATUS (2026-11-25): QUARANTINED.** An external audit of commit `045a63e` found two structural
+> defects: the five advertised ABC moments have **rank 4** (overall participation ≡ ⅔·G9 + ⅓·G12, so it is
+> redundant), giving ≥2 unidentified directions; and the country-block permutation is algebraically invariant
+> under country fixed effects, so it cannot test the within-country estimand. The provider-choice parameter is
+> analytic: δ = ln(0.32/0.68) = −0.7537718. Full record + dispositions:
+> `docs/audit/EXTERNAL_AUDIT_GPU_2026-11-25.md`. Nothing here is `VALIDATED`; GPU/CPU agreement validates
+> arithmetic only.
+
+
+
 **Date:** 2026-11-25 · **Purpose:** give an external auditor everything needed to judge the three GPU
 scripts, what they were trying to do, what they actually produced, and what must **not** be claimed from them.
 **Status labels (use verbatim):** `AUTHOR-REPORTED` · `PRE-REPAIR` · `UNRESOLVED`. None of the outputs here is
@@ -65,8 +75,8 @@ aggregate benchmark moments**, plus a 100-fresh-seed stability bank.
 **The defect the auditor should focus on (confirmed by this inspection and by the external review §5):**
 
 1. `θ5 = teacher_threshold` is **dead** — it enters neither the utilities nor any moment. A 7-parameter ABC cannot
-   identify it; `best_theta_7param`'s 7th coordinate is meaningless.
-2. Even after dropping `θ5`, the corrective run has **6 active parameters against only 5 independent moments**.
+   identify it; **`best_theta_7param`'s 6th coordinate (θ5, 0-indexed 5) is meaningless** — the unused parameter is the sixth of the seven, not the seventh.
+2. Even after dropping `θ5`, the corrective run has **6 active parameters against only 4 independent moments** — the five advertised moments have rank 4 because overall participation is identically ⅔·G9 + ⅓·G12 (420 G9 / 210 G12; 0.73 = ⅔·0.67 + ⅓·0.85).
    The posterior is therefore **not point-identified from the moments**; the uniform prior bounds do the
    identifying. The condition numbers (25.96 → 21.03) confirm the remaining parameters are strongly correlated.
 3. The declared 7 moments are not used: only 5 are computed, and `teacher_tut`/`other_share` are absent. Any claim
