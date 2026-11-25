@@ -541,6 +541,19 @@ verification** (Hanushek; Todd & Wolpin; Cunha & Heckman; Becker; Mincer; Dang &
 Biswal; Jayachandran; Kim & Lee; UIS/World Bank/OECD measurement sources). Equation numbering refers to the committed
 inventory text, not the published sources — cite sources, not inventory numbers.
 
+**Citation-verification evidence (engine-tutoring, commit `3d8b80a`; `CITATION_VERIFICATION_SHADOW_ED.md` sha256
+`020ece4f08c00c5b82325fee5d3a98671b903676a7239a2557cb0a0156d9ef45`):** **0 of inventory §5 equations (57–86) are
+verified quotations** of any named source; every "citation" is a **placeholder** (`UIS+2`, `OECD+3`,
+`hanushek.stanford.edu+2`, `doi.org+4`, …); one **false publisher** is attached (`RCNi Company Limited`, a nursing
+publisher, to Becker & Lewis 1973). The named sources contain (Dang & Rogers 2008) a graphical framework + one
+unnumbered naive OLS, (Tansel & Bircan 2006) a Tobit expenditure model, (Bray 1999/2009) monographs with no
+equations, (Kim & Lee 2010) a demand/positional empirical study, and (Biswal 1999) text not retrieved. **Jayachandran
+(2014, JDE 108:190–205) — full published text read — DOES model teacher withholding** (school-day material `m`,
+achievement `s(m,t)` with `s_mt<0`, teacher effort/penalty `φ(m)`, and kickbacks/coercion in an earlier version) but
+**inventory E57–E86 contains no `m`, teacher-effort, or withholding/detection equation** → direct textual support for
+the **M3** omission lemma (and the M1 school-day-material gap). Correct DOIs/pages are listed in the report; this
+does **not** make the inventory equations citable.
+
 **Status: candidate new-generation finding/section (design audit), UNRESOLVED as results.** The omissions are
 pre-registerable hypotheses; the divergences are future work; the already-recorded contradictions remain as recorded.
 
@@ -677,6 +690,12 @@ report **realized admission rates** for bar/bar_high (and contest) is **not met*
 a future rerun with the diagnostic series enabled would be needed to report realized admission rates. Recorded as a
 **diagnostic gap / prereg deviation, not a model failure**.
 
+**X-29 diagnostic-rerun plan (accepted by the Lead):** a **diagnostic-only** rerun with the admission series enabled,
+scoped to `bar`/`bar_high` (+ `contest` if feasible): **1,280 runs ≈ 35 min at 8 workers**, to run **after Pilot-0
+finishes**; labelled **diagnostic-only** and kept **separate** from the primary/secondary results; **X-29 stays open
+until it runs**. The series cannot be recovered by re-aggregation (they were never recorded). Recorded here and in the
+Paper-A(c) write-up.
+
 **Status: primary and secondary adjudicated; proposed status REPRODUCED SIMULATION (pre-registered confirmatory
 new-generation simulation; frozen spec; uncalibrated; seed-MC only) — NOT VALIDATED.** X-27 remains **UNRESOLVED**
 until the clean re-run confirms the artifact; then it moves and the diagnostic gap stays attached.
@@ -690,11 +709,11 @@ until the clean re-run confirms the artifact; then it moves and the diagnostic g
 | REPRODUCED SIMULATION | **23** (2 A, 12 B, 9 programme) | all conditional and/or uncalibrated unless marked; includes the 100-seed Paper B new generation (CF4 reversal + unmeasured-welfare-change caveat), the three Paper C provisional anchors (C-01…C-03), the new-generation forecast (A-37), the 74.88 % infeasibility finding (A-38), the re-executed ABC audit, the re-executed bootstrap factorial, and the Paper B 540 table regeneration |
 | VALIDATED SIMULATION | **4** (1 A, 3 programme) | **A-39 item (d) local identifiability (stop gate met with declared restriction)**; engine/PL module validation, corrected DGP design, bootstrap size/power |
 | AUTHOR-REPORTED | **44** (20 A, 18 B, 6 programme) | **AUTHOR-REPORTED BASELINE**: the 420 generation, the Paper A Exp 1/3/4/5 legacy numbers, the author JSON bundle; not results, not reproduced, not to be silently replaced |
-| CONTRADICTED | **32** (8 A, 14 B, 10 programme) | only where committed code/algebra/measured audit output refutes the claim; includes the 100 % paradox, invalid E1/Q3, legacy DGP, "published benchmark" attributions, and the Paper B policy reversals |
-| UNRESOLVED | **19** (2 A, 0 B, 17 programme) | A-31 replication inventory; A-36 bulge `t*` (no-effect evidence); Paper C confirmatory prereg (C-04); Paper D omissions/divergences (D-01/D-03) and inventory attribution risk (D-04); Model Zoo D1/D2 + run gate + Pilot-0 provenance (MZ-01…MZ-04); evidence-layer limits (EV-01…EV-04); X-27/X-29 (clean re-run + admission-rate diagnostic gap); canonical spec/Gate-2; GPU quarantine |
+| CONTRADICTED | **33** (8 A, 14 B, 11 programme) | only where committed code/algebra/measured audit output refutes the claim; includes the 100 % paradox, invalid E1/Q3, legacy DGP, "published benchmark" attributions, and the Paper B policy reversals |
+| UNRESOLVED | **20** (2 A, 0 B, 18 programme) | A-31 replication inventory; A-36 bulge `t*` (no-effect evidence); Paper C confirmatory prereg (C-04); Paper D omissions/divergences (D-01/D-03) and inventory attribution risk (D-04); Model Zoo D1/D2 + run gate + Pilot-0 provenance (MZ-01…MZ-04); evidence-layer limits (EV-01…EV-04); X-27/X-29 (clean re-run + admission-rate diagnostic gap); canonical spec/Gate-2; GPU quarantine |
 
-The machine-readable one-row-per-claim record is `results/audit/paper_claims.csv` (128 rows; sha256
-`853ff22381402303f11d112cfed93b438c0b9ba590ad8ec6af3ec0bd077c75e5`). The Lead-defined new-generation label **REPRODUCED EMPIRICAL ANALYSIS** is used for the fresh-WDI E8 rows; all
+The machine-readable one-row-per-claim record is `results/audit/paper_claims.csv` (130 rows; sha256
+`23ecde418dded6d316fe44bc11e1d9b62f9dcf25085db10fa3bd1c5f2d6ec8f5`). The Lead-defined new-generation label **REPRODUCED EMPIRICAL ANALYSIS** is used for the fresh-WDI E8 rows; all
 other rows use the verbatim six-status taxonomy.
 
 ---

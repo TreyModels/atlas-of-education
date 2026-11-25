@@ -29,7 +29,7 @@ artefacts, which already establish the engine's behaviour and the identifiabilit
 |---|---|---|---|---|---|
 | (a) | **E8 fee-abolition event study** | fresh hashed WDI; **CS-style group-time ATT** (not-yet-treated controls), 500 cluster bootstraps + 2,500 Fisher/scheme; full event path | **DONE (REPRODUCED EMPIRICAL ANALYSIS)** — impact **+12.322 pp** (bootstrap mean 12.308, 95% CI [4.48, 22.64]) AND post mean **+25.083 pp** vs author +12.44 / +25.26 — **both replicate**; event path 12.32, 23.66, 25.79, 21.88, 24.94, 28.45, 25.78; Fisher p 0.0044/0.0040. Simple-DiD +2.54 is estimator sensitivity. Artefacts `CS_ESTIMATOR_NEWGEN.md` + `results/audit/newgen/cs_estimator_fresh_wdi_2026-11-25.json` | host, 8.2 s | none; declared deviations (equal weights, no DR covariates, 8 clusters, fresh vintage) |
 | (b) | **Delayed secondary-bulge `t*`** | fresh hashed WDI; `t* = abolition + SE.PRM.DURS`; outcome SE.SEC.ENRR; 2,500 perms/scheme | **DONE (fresh WDI)** — ATT at `t*` **−0.956 pp**, post +0.30, Fisher p **0.251/0.384** → **no detectable secondary-bulge jump**; **UNRESOLVED** (no-effect evidence), consistent with the manuscript's honest-null framing | host, 8.7 s | none |
-| (c) | **Gate-architecture / H2 (≥5,000 runs)** | repaired engine `846c9e0`; 4 architectures × 5 seat shares × 2 fee regimes × 4 vacancies × 32 matched seeds = **5,120 runs**; H2 = Δcut(S=.25) − Δcut(S=.70); report H1/H2/inverted-U with paired-seed CIs | **CLEARED FOR LAUNCH (Amendment A3 verified, commit `3d289fd`; runner sha256 `6ac09cff…4f77`); RUN PENDING** — 5,120 primary (`fail='track'`) + 512 `fail='stop'` sensitivity = 5,632; POST e=+1..+6; primary H2 = contest vac0=.08 with paired-seed bootstrap 5,000; report conditions: compute stop-sensitivity H2, assert paired seed alignment, design cohort window, H1 uncertainty, MDE. Run launches after Paper B full (~2.4 h at 8 workers) | server, ~19–21 CPU-h for 5,120 at N=300/T=20 | commit the pre-registration amendment; re-review before the fee contrast |
+| (c) | **Gate-architecture / H2 (≥5,000 runs)** | repaired engine `846c9e0`; 4 architectures × 5 seat shares × 2 fee regimes × 4 vac0 × 32 matched seeds = **5,120 runs** (`fail='track'`) + 512 `fail='stop'` sensitivity = **5,632**; H2 = Δcut(contest,S=.25) − Δcut(contest,S=.70) at vac0=.08 | **RUN COMPLETE; ADJUDICATED AGAINST AMENDMENT A3 (primary met); X-27 held for clean re-run** — 5,632/5,632 rows; JSON sha256 `685db398…3f40` (294,532 B; no simulation rerun); primary H2 **+5.0551 pp** [paired-bootstrap 95% CI **2.4820, 7.9614**; MDE 2.7397]; quota H2 +0.9915 [0.5675,1.4893]; stop-sensitivity +5.4715 [2.2078,8.4476]; vac0 curve +3.105/+5.055/+1.145/+0.325; H1 +7.9350 [6.9585,8.9127], Spearman −1.00; bar −0.255 / bar_high +0.204 exploratory. **X-29 diagnostic gap:** realized admission rates NaN in raw checkpoints; diagnostic-only rerun (1,280 runs ≈35 min) planned after Pilot-0. Proposed status REPRODUCED SIMULATION (pre-registered confirmatory; frozen spec; uncalibrated; seed-MC only; not VALIDATED). | server, ~19–21 CPU-h for 5,120 at N=300/T=20 | clean re-run to confirm same sha; record the injection-provenance note; X-29 open until diagnostic rerun |
 | (d) | **Multi-seed identifiability / Jacobian (declared perturbations)** | frozen V540-FREEZE **4θ × 4-moment** calibration map; 5 matched seeds/column; declared steps 5/3/5/4 %; central differences; **3 starts** (stop gate satisfied); report rank/SV/null across starts, local-only | **REVIEWED — STOP GATE MET WITH DECLARED RESTRICTION** (`LOCAL_FULL_RANK_CONDITIONING_UNRESOLVED`). Rank **4/4**, null dim **0** at **3/3** starts (local full rank established); SVs 50.030/32.596/1.907/0.341, 46.916/17.058/6.801/0.128, 46.852/23.579/1.993/0.046; pairwise rel |ΔJ| 0.287/0.350/0.416; **s4 0.3409→0.1278→0.0457 keeps drifting**. Fourth-direction conditioning unresolved → Gate-2 must declare a reduced parameterisation or ridge/prior for that direction; no global-identification or condition-number claim. Artefacts `G2A_IDENTIFIABILITY_MULTISEED.md` sha256 `9c40aeed…3b07`; JSON `66535941…4be3`. | host, ~24 min | declare the restriction in the prereg; (d) is closed with the restriction, not as a clean pass |
 | (e) | **Fee-abolition forecast with held-out horizons** | fixed engine `846c9e0` (canonical re-pin `46c080d`); `year_t=T0`; `assert E.unfired_events==[]`; 40 matched seeds; held-out e=+5,+6; training-only calibration attempted | **DONE — ACCEPTED as REPRODUCED SIMULATION (NEW GENERATION)** — abolition − persistence **+17.19…+25.35 pp**; full-7 **RMSE 2.764 / MAE 2.432** vs persistence **23.759 / 23.260 (−88.4 %)**; held-out e=+5,+6 **RMSE 1.637 / MAE 1.350**. **Fallback:** the author's **74.88 % anchor is infeasible** in the repaired world (max 71.0 % at fee 0; A-38); fee 0.15 + engine pre-abolition level, **no post tuning**. Conditional simulation, not a reproduction of the author's calibration. v1 uncited. | host, 13.8 s | none; provenance `FORECAST_NEWGEN.md` sha256 `d4c0a239…d8f1`; JSON `f0eee995…c04` |
 
@@ -82,19 +82,32 @@ blocker**, and we are not waiting for them.
   **+0.30 pp**, Fisher p **0.251** dates / **0.384** countries → **no detectable secondary-bulge jump** (UNRESOLVED,
   no-effect evidence). Consistent with the manuscript's honest-null framing; no causal claim.
 
-### (c) Gate-architecture / H2 — DESIGN READY / RUN PENDING
+### (c) Gate-architecture / H2 — **RUN COMPLETE; ADJUDICATED (primary met); X-27 held for clean re-run**
 
-* **Engine:** repaired `98baf6b` (`core.py 72cbddf7…`, `contest_math.py 23a01730…`, `tutoring.py 7a6fd4c3…`); frozen
-  config documented in the pre-registration (no SSA `countries/` config exists; specify the household/liquidity/
-  labour/gate dict).
-* **Design:** gate kinds `bar`, `bar_high`, `quota`, `contest`; S ∈ {.25,.35,.45,.55,.70}; fee ∈ {0,.19}; vac0 ∈
-  {.02,.08,.25,.50}; **≥5,000 runs** (expand seeds to 30–40 and/or add gate/fee cells); H1 = Δ(S=.25 − .70); H2 =
-  Δcut(S=.25) − Δcut(S=.70); report the inverted-U with 95% seed CIs; include a quota-benchmark arm and a
-  no-contest control; report effort, spend, elite share and admission diagnostics.
-* **Cost model:** HK 20.3 CPU-s/run, KR 41.9 CPU-s/run (measured); the 1,640-run Paper A grid at `N=400/T=70` ≈
-  14–30 CPU-h; **≥5,000 runs ≈ 43–60 CPU-h** ≈ 5–8 h wall at ≤10 CPUs. Must be pre-registered and budgeted.
-* **Status:** design ready; no new-generation run yet. This is the largest single item and the one that most
-  directly replaces the paper's most-cited claim.
+* **Engine / design:** repaired `846c9e0` (core `e111397b…`), frozen spec `e5ddef6b…`; 4 architectures × 5 shares ×
+  2 fees × 4 vac0 × 32 matched seeds = **5,120 primary (`fail='track'`)** + **512 `fail='stop'` sensitivity** =
+  **5,632 runs**; POST e=+1..+6; primary H2 = contest vac0=.08 with 5,000-resample paired-seed bootstrap.
+* **Run:** complete 5,632/5,632 (176 cell checkpoints). Output JSON sha256 **`685db398a9e6052446312e6dacfc2b06f09aa809d60b2f2b145e8e6cf2453f40`**
+  (294,532 B; aggregation 7.63 s with all cells skipped — **no simulation rerun**). **Provenance caveat:** the box
+  runner lacked module-scope `import numpy as np`, so the JSON was produced by executing the unmodified script logic
+  with `builtins.np = numpy` injected (no code edit, no seeds recomputed); it is **provisional-but-complete** until the
+  clean re-run confirms the same sha. The Commander's fix (`import numpy as np` + `--aggregate-only`) is committed.
+* **Result (Amendment A3):** primary H2 **+5.0551 pp** [paired-bootstrap 95 % CI **2.4820, 7.9614**; MDE proxy
+  2.7397] → |H2| > MDE, CI excludes 0 → **primary met**. Δcut(S=.25) +5.6170 [3.5509, 7.8840]; Δcut(S=.70) +0.5619
+  [−0.9924, 2.0855]. Quota H2 +0.9915 [0.5675, 1.4893] (~5× smaller → architecture-specific); stop-sensitivity
+  +5.4715 [2.2078, 8.4476] (robust); vac0 curve +3.105/+5.055/+1.145/+0.325 (pre-declared .08; all reported); H1
+  +7.9350 [6.9585, 8.9127] with Spearman −1.00; bar −0.255 [−0.850, 0.325], bar_high +0.204 [−0.322, 0.763]
+  exploratory only. Null rule honored (pre-repair +0.1086 is AUTHOR-REPORTED baseline, not a target). Four Codex
+  positions honored (no ID claim; design-cell counts only; seed-MC; no permutation inference).
+* **X-29 diagnostic gap (declared deviation):** realized admission rates (`contest_candidates/seats/admitted/
+  applicant_seat_ratio/admit_rate`) are **NaN in the raw checkpoints themselves**, so the pre-registered
+  realized-admission reporting for bar/bar_high/contest is **not met**; re-aggregation cannot recover it. A
+  **diagnostic-only rerun** with the series enabled is planned (scoped to bar/bar_high, + contest if feasible;
+  **1,280 runs ≈ 35 min at 8 workers**, after Pilot-0), labelled diagnostic-only and **kept separate** from the
+  primary/secondary; **X-29 stays open until it runs**. Primary/secondary do not use those series and are unaffected.
+* **Status:** primary/secondary adjudicated; **proposed REPRODUCED SIMULATION** (pre-registered confirmatory
+  new-generation; frozen spec; uncalibrated; seed-MC only), **not VALIDATED**. X-27 closes only when the clean re-run
+  confirms the same sha/diff; injection-provenance note carried alongside.
 
 ### (d) Multi-seed identifiability / Jacobian — **PROVISIONAL (2 of 3 starts; not signed off)**
 
@@ -122,8 +135,7 @@ with a reduced parameterisation or a ridge/prior for the fourth direction, recor
 global-identification claim and no condition-number evidence claim**. Against the four Codex criticisms: the 4θ map is
 a *reduced* parameterisation (does not answer rank-4/6 for the 6-param ABC); empty-G12×urban is a **(c)/design**
 issue not addressed here; pooled-selftest and within-invariant-permutation are **not applicable** to (d) but bind any
-E1/Q3 claim. Full review: `AUDIT_VERDICT.md` §4D. **(c) is now the only remaining Paper A computation and its prereg
-still needs the four-criticism review before the run is accepted.**
+E1/Q3 claim. Full review: `AUDIT_VERDICT.md` §4D. **(c) is complete and adjudicated: primary met (+5.0551 pp), with the X-27 clean-re-run confirmation and the X-29 admission-rate diagnostic rerun outstanding; it is no longer the only remaining Paper A computation.**
 
 ### (e) Fee-abolition forecast with held-out horizons — DESIGN READY / RUN PENDING
 

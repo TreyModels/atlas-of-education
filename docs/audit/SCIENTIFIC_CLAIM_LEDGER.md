@@ -186,6 +186,8 @@ Artefacts: `PAPER_D_EQUATION_AUDIT.md` sha256 `b6bafd1490b0a98df021f8b6ad1caff52
 | PD-02 | Already-recorded contradictions (KR G9 phantom prize; expected≠realised; 100 % seat paradox; Paper B pairing) | **CONTRADICTED (as already recorded)** | Kept separate from the omissions; do not conflate "inventory omission" with "equation false". |
 | PD-03 | Divergence tests **D1–D9**: standard-equation prediction X vs mechanism-rich Y, cell, outcome, compute (≈300–420 runs at N=600/T=30, ≈2–3 CPU-h; D3/D7 need wave-2 extensions) | **UNRESOLVED — pre-registerable, not results** | No Paper D compute until Paper C confirmatory run + approved prereg (Commander rule). |
 | PD-04 | Inventory is an **AI-generated candidate map with placeholder citations** ("UIS+2", "OECD+3", "doi.org+4", …) | **UNRESOLVED — attribution risk (binding)** | **No equation or citation may be used without primary-source verification** (Hanushek; Todd & Wolpin; Cunha & Heckman; Becker; Mincer; Dang & Rogers; Bray; Tansel & Bircan; Biswal; Jayachandran; Kim & Lee; UIS/World Bank/OECD). Equation numbers refer to inventory text, not published sources. |
+| PD-05 | **Citation verification of inventory §5:** **0 of 57–86 equations verified**; every 'citation' is a placeholder (`UIS+2`, `OECD+3`, `hanushek.stanford.edu+2`, `doi.org+4` …); one **false publisher** (`RCNi Company Limited`, a nursing publisher, attached to Becker & Lewis 1973); Dang & Rogers = graphical + one naive OLS; Tansel & Bircan = Tobit expenditure; Bray = monographs no equations; Kim & Lee = demand/positional; Biswal 1999 text not retrieved | **CONTRADICTED — no inventory equation is a verified quotation** | `CITATION_VERIFICATION_SHADOW_ED.md` sha256 `020ece4f08c00c5b82325fee5d3a98671b903676a7239a2557cb0a0156d9ef45` (commit `3d8b80a`). **Nothing may be cited from the inventory without primary-source verification**; correct DOIs/pages in the report. |
+| PD-06 | **Jayachandran (2014, JDE 108:190–205) published model DOES contain withholding** — school-day material `m`, achievement `s(m,t)` with `s_mt<0`, teacher effort/penalty `φ(m)`, kickbacks/coercion in an earlier version — but **inventory E57–E86 has no `m`, teacher-effort, or withholding/detection equation** | **UNRESOLVED — textual support for omission lemma M3/M1; numeric importance not shown by text alone** | Same citation-verification report (§5.2, §6). Directly backs the **M3** omission (and the M1 school-day-material gap); the D-tests are still needed for magnitude. |
 
 **Record status:** Paper D is a **candidate new-generation finding/section** (design audit) and Paper C is a
 **design-only plan**; both are pre-registerable and neither is an adjudicated result. Paper C/D wording must not claim
@@ -242,3 +244,10 @@ aggregation 7.63 s, no simulation rerun; engine 846c9e0/core e111397b; spec e5dd
 **Methods lesson (citable):** this is the **third bug of this class found by reading raw artefacts rather than
 summaries** — (i) fee no-op (simulation index vs calendar-year event), (ii) seed-0 hardcode, (iii) missing `np` import.
 Add to the methods/negative paper: summary-level QA would have missed all three.
+
+**X-29 DIAGNOSTIC-RERUN PLAN (accepted, 2026-11-25):** realized admission rates are NaN in the raw X-27 checkpoints, so
+the pre-registered realized-admission reporting is unmet and **not recoverable by aggregation**. A **diagnostic-only**
+rerun with the admission series enabled is planned, scoped to `bar`/`bar_high` (+ `contest` if feasible): **1,280 runs
+≈ 35 min at 8 workers**, after Pilot-0, labelled **diagnostic-only** and kept **separate** from the primary/secondary
+results. **X-29 stays open until it runs**; it is recorded in the Paper-A(c) write-up as a declared deviation, not a
+model failure.
