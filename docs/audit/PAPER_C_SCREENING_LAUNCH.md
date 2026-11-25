@@ -87,3 +87,25 @@ authoritative. Controller will independently hash-check against `6bcc29a5…` on
 **Provenance preserved locally:** controller §13.40/13.41/13.41b records (incl. the hash) committed/pushed on the audit
 branch; Lead's `RUN_QUEUE_2026-11-25.md` and this document capture the incident. No screening numbers cited until pulled
 and hash-verified.
+
+## 2026-11-26 — Screening PULL VERIFIED + QA PASSED; D-S1/D-S2 fixes; A4; passer freeze
+
+- **Pull verified locally:** `~/neon-boot/qa/incoming/paperC_screening/` now holds the screening artefact
+  (`PULL_VERIFIED.txt` present); `paperC_screening.json` sha256 **`6bcc29a50d41dc2c63a5959c0b023eb203c5bf1bd0cd04ffaee908a5ebb5b6d4`**
+  (1,337,854 B), `n_runs=288`, `n_cells=36`, `invalid_cells=[]`, 36 ckpts/288 rows. **QA PASSED S1–S11 (box off, all local).**
+- **D-S1 metadata fix:** runner row metadata `assertions.exposed` now records
+  `supply in ('A','C') and setting == 'P55'`; rule text states the **A|P12** and **B** exemptions explicitly. The
+  wrapper check already had the correct scope; **no results change** (`invalid_cells=[]`). Runner sha bumped to
+  `48ec34854ecbabe51f98470fa564c0f0f9110999d7e14629aaa488b23208fe07`; screening results remain keyed to the run's
+  original runner sha `d2d25c1c…` as recorded in its manifest.
+- **D-S2 note:** gate-level `gate[1].r` is authoritative (r=1.2 at L=.25, r=1.6 at L=.45); the static spec
+  `params.contest_r` does not drive the treated gate — recorded per row (`contest_r_note`) and in the module docstring.
+- **A4 clarification** (`PAPER_C_A4_P12_CLARIFICATION.md`): P12 = `pay_gap` = **no-withholding control** (h=0);
+  exposed arms = **A/C AND P55 only**; **A|P12 and B exempt**; a confirmatory manifest must cite A4 + the frozen passer
+  list; an incentive-P12 variant would need a separate A5.
+- **Passer freeze (host-only):** `PAPER_C_PASSERS.json` computed from the pulled screening JSON per T1–T4 + Holm (α=.05)
+  + the >6 rule (first 6 in appendix order): **24 candidates → 6 frozen passers**
+  `S0.85|L0.25|A|P55`, `S0.85|L0.25|C|P55`, `S0.85|L0.25|A|P12`, `S0.85|L0.25|C|P12`, `S0.85|L0.45|A|P55`,
+  `S0.85|L0.45|C|P55` (remainder screening-only). Test results: T1 passes, T2 passes, T3 passes (A|P55 h≈0.144 vs
+  A|P12 h=0, assertion-support satisfied), T4 fails the pre-declared +2 pp minimum (effect ≈ +1.77 pp). No confirmatory
+  compute until the adjudicator signs this freeze and the Lead allocates a box.
