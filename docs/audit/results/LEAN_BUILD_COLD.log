@@ -1,0 +1,6 @@
+✔ [2/12] Built Atlas.Definitions (418ms)
+✔ [4/12] Built Atlas.PlackettLuce (226ms)
+✔ [6/12] Built Atlas.Identities (266ms)
+✔ [8/12] Built Atlas.Claims (292ms)
+✔ [10/12] Built Atlas (171ms)
+Build completed successfully (12 jobs).

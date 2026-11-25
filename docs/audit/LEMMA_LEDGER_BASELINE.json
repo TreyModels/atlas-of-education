@@ -1,0 +1,10 @@
+{
+  "declared": 18,
+  "generated_utc": "2026-11-25T13:14:57Z",
+  "missing_from_ledger": [],
+  "not_yet_lemmatised": 112,
+  "path": "results/audit/paper_claims.csv",
+  "rows": 130,
+  "schema": 1,
+  "sha256": "f2ce655eb232a97f3ef5338334c8ed2f2dad953b328ab6a80fe066823c655a40"
+}

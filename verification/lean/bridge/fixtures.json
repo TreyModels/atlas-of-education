@@ -1,0 +1,51 @@
+{
+  "schema": 1,
+  "description": "Exact-arithmetic fixtures for the Lean <-> Python differential bridge. Values are the expected exact integer encodings (no floats).",
+  "fixtures": [
+    {
+      "key": "budget.total",
+      "expected": 100,
+      "contract": "budget ledger total"
+    },
+    {
+      "key": "budget.spend",
+      "expected": 60,
+      "contract": "budget ledger spend"
+    },
+    {
+      "key": "budget.unallocated",
+      "expected": 40,
+      "contract": "budget ledger identity: spend + unallocated = total"
+    },
+    {
+      "key": "prep.rec",
+      "expected": 35,
+      "contract": "prep-stock recursion: retention=2, init=3, inflows=[1,2,3]"
+    },
+    {
+      "key": "prep.closed",
+      "expected": 35,
+      "contract": "prep closed form = recursion (identity)"
+    },
+    {
+      "key": "seats.share23.n300",
+      "expected": 69,
+      "contract": "seatCount max 1 (round share*N) for share 23/100, N=300"
+    },
+    {
+      "key": "seats.minimum",
+      "expected": 1,
+      "contract": "seatCount max 1 floor for tiny share"
+    },
+    {
+      "key": "pl.top1.numer.sum",
+      "expected": 5,
+      "contract": "PL top-1 integer-scaled sum = denominator (sum P = min 1 2)"
+    },
+    {
+      "key": "pl.top1.denom",
+      "expected": 5,
+      "contract": "PL common denominator w0+w1"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+== axiom audit ==
+'Atlas.budget_ledger_identity' depends on axioms: [propext]
+'Atlas.tax_revenue_le_base' depends on axioms: [propext]
+'Atlas.prep_recursion_closed_form' depends on axioms: [propext]
+'Atlas.pl_top1_sum_eq_denom' does not depend on any axioms
+'Atlas.pl_top1_sum_eq_min' depends on axioms: [propext]
+'Atlas.pl_topK_selected_sum' depends on axioms: [propext]
+'Atlas.Claims.A34_arithmetic' does not depend on any axioms
+'Atlas.Claims.A38_anchor_infeasible' does not depend on any axioms
+'Atlas.Claims.B41_HK_meets_criterion' does not depend on any axioms
+'Atlas.Claims.B42_CF4b_fails_spend_HK' does not depend on any axioms
+'Atlas.Claims.D02_paradox_not_universal' does not depend on any axioms
+'Atlas.Claims.classical_demand_ignores_school_supply' does not depend on any axioms
+axiom audit: 12 theorem lines parsed; allowed=['propext']
+axiom audit OK (only allowed axioms: none/propext)
+== claim declarations present ==

@@ -1,0 +1,76 @@
+{
+  "comparisons": [
+    {
+      "contract": "budget ledger total",
+      "expected": 100,
+      "key": "budget.total",
+      "lean": 100,
+      "match": true
+    },
+    {
+      "contract": "budget ledger spend",
+      "expected": 60,
+      "key": "budget.spend",
+      "lean": 60,
+      "match": true
+    },
+    {
+      "contract": "budget ledger identity: spend + unallocated = total",
+      "expected": 40,
+      "key": "budget.unallocated",
+      "lean": 40,
+      "match": true
+    },
+    {
+      "contract": "prep-stock recursion: retention=2, init=3, inflows=[1,2,3]",
+      "expected": 35,
+      "key": "prep.rec",
+      "lean": 35,
+      "match": true
+    },
+    {
+      "contract": "prep closed form = recursion (identity)",
+      "expected": 35,
+      "key": "prep.closed",
+      "lean": 35,
+      "match": true
+    },
+    {
+      "contract": "seatCount max 1 (round share*N) for share 23/100, N=300",
+      "expected": 69,
+      "key": "seats.share23.n300",
+      "lean": 69,
+      "match": true
+    },
+    {
+      "contract": "seatCount max 1 floor for tiny share",
+      "expected": 1,
+      "key": "seats.minimum",
+      "lean": 1,
+      "match": true
+    },
+    {
+      "contract": "PL top-1 integer-scaled sum = denominator (sum P = min 1 2)",
+      "expected": 5,
+      "key": "pl.top1.numer.sum",
+      "lean": 5,
+      "match": true
+    },
+    {
+      "contract": "PL common denominator w0+w1",
+      "expected": 5,
+      "key": "pl.top1.denom",
+      "lean": 5,
+      "match": true
+    }
+  ],
+  "elapsed_sec": 0.25,
+  "fixtures_sha256": "83bc1d519eb75903d5e1fdf64d6b8fe9743df81790ff43aed1acf01f44849d4d",
+  "generated_utc": "2026-11-25T13:14:42Z",
+  "lean_exit_code": 0,
+  "lean_stderr": [],
+  "lean_stdout_sha256": "958e728984753859b7b1a1bee4c9e1b513a91c34ab55d35f616d557d67a56ce8",
+  "passed": true,
+  "schema": 1,
+  "witness_sha256": "f69ba60ebc294fc6302567258240eef89785c4d79e931841d1749d5dbcb95425"
+}

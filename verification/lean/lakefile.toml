@@ -1,0 +1,9 @@
+# Atlas formal-verification prototype (host-only; Lean 4 core, no Mathlib dependency
+# for the proofs that must compile today). Mathlib is optional and lives in a
+# separate probe project (see docs/audit/LEAN_VERIFICATION_SCOPE.md).
+name = "atlasVerification"
+version = "0.1.0"
+defaultTargets = ["Atlas"]
+
+[[lean_lib]]
+name = "Atlas"
