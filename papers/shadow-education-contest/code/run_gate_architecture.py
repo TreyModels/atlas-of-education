@@ -21,6 +21,7 @@ Design (declared NEW; engine pin 846c9e0; not a reconstruction of the Gemini 1,6
 Label: NEW GENERATION — REPRODUCED SIMULATION (engine 846c9e0), NOT a reproduction of the Gemini 1,640-run study.
 """
 import argparse, copy, hashlib, json, os, subprocess, sys, time, warnings
+import numpy as np
 
 HERE = os.path.dirname(os.path.abspath(__file__)); REPO = os.path.abspath(os.path.join(HERE, '..', '..', '..'))
 ENGINE = os.path.join(REPO, 'engine'); SPEC = os.path.join(REPO, 'docs', 'audit', 'canonical_spec.json')
@@ -160,14 +161,16 @@ def h1_bootstrap(cells_rows, arch=PRIMARY_ARCH, vac=PRIMARY_VAC, n_boot=5000, se
                 ci95_lo=float(np.percentile(a, 2.5)), ci95_hi=float(np.percentile(a, 97.5)),
                 half_width=float((np.percentile(a, 97.5) - np.percentile(a, 2.5)) / 2.0), n_boot=n_boot)
 
-def driver(seeds, workers, out_dir, include_sensitivity=True):
+def driver(seeds, workers, out_dir, include_sensitivity=True, aggregate_only=False):
     from concurrent.futures import ThreadPoolExecutor
     os.makedirs(out_dir, exist_ok=True)
     cells = [(a, S, f, v, 'track') for a in ARCHS for S in SHARES for f in FEES for v in VACS]
     if include_sensitivity:
         cells += [(SENS_ARCH, S, f, v, 'stop') for S in SENS_SHARES for f in FEES for v in VACS]
     t0 = time.time()
-    def launch(c):
+    rows = []
+    if not aggregate_only:
+      def launch(c):
         a, S, f, v, fail = c
         r = subprocess.run([sys.executable, os.path.abspath(__file__), 'cell', a, str(S), str(f), str(v), fail,
                             f'{seeds[0]}-{seeds[-1]}', out_dir], capture_output=True, text=True,
@@ -175,10 +178,9 @@ def driver(seeds, workers, out_dir, include_sensitivity=True):
         if r.returncode != 0:
             raise RuntimeError(f'cell {c} failed rc={r.returncode}: {r.stderr[-1200:]}')
         return c
-    with ThreadPoolExecutor(max_workers=workers) as ex:
+      with ThreadPoolExecutor(max_workers=workers) as ex:
         list(ex.map(launch, cells))
     wall = time.time() - t0
-    rows = []
     for c in cells:
         a, S, f, v, fail = c
         tag = f"{a}_{S:.2f}_{f:.2f}_{v:.2f}_{fail}"
@@ -259,12 +261,13 @@ def main():
     ap.add_argument('--out-dir', default=os.path.join(REPO, 'results', 'newgen_gate'))
     ap.add_argument('--fees', default='0.19,0.00')
     ap.add_argument('--no-sensitivity', action='store_true')
+    ap.add_argument('--aggregate-only', action='store_true', help='re-aggregate existing ckpt_*.jsonl; never runs cells')
     a = ap.parse_args()
     global FEES
     FEES = [float(x) for x in a.fees.split(',')]
     seeds = (list(range(int(a.seeds.split('-')[0]), int(a.seeds.split('-')[1]) + 1)) if '-' in a.seeds
              else [int(x) for x in a.seeds.split(',')])
-    return driver(seeds, a.workers, a.out_dir, include_sensitivity=not a.no_sensitivity)
+    return driver(seeds, a.workers, a.out_dir, include_sensitivity=not a.no_sensitivity, aggregate_only=a.aggregate_only)
 
 if __name__ == '__main__':
     sys.exit(main())
