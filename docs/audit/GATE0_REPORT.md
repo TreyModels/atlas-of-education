@@ -14,7 +14,7 @@ and reference differences are last-bit floating-point only; **zero** differences
 
 The legacy 18-arm × 30-seed (540-run) HK/Korea contest-gate job reproduces **deterministically from the exact
 committed code** on two independent machines: the host (macOS arm64 / 8-core Apple M1 / Python 3.10.2 / NumPy
-**2.2.6**) and the AutoDL box (Linux x86_64 / 80 vCPU Xeon Gold 6248 / Python 3.10.8 / NumPy **1.24.1**). The host
+**2.2.6**) and the AutoDL box (Linux x86_64 / Xeon Gold 6248 host; **10-CPU cgroup quota**, not the 80 CPUs that `nproc` reports — see §4 correction / Python 3.10.8 / NumPy **1.24.1**). The host
 output is textually identical to the committed 540-run JSON `c1fa0926…` except its wall-clock field, and matches
 the author-supplied reference output to **≤ 3.6e-15** absolute (host) / **≤ 7.1e-15** absolute (box) — last-bit
 float noise from different libm/BLAS builds. Every reported (2 d.p.) figure — all `total_spend_index` values and
@@ -29,10 +29,10 @@ in the tree) and remains AUTHOR-REPORTED.
 | manifest | path | contents |
 |---|---|---|
 | host | [`docs/audit/system_host.txt`](system_host.txt) | `uname -a`, `sw_vers`, `hw.ncpu`=8 / `hw.memsize`=8,589,934,592 B, Python 3.10.2 (`/Users/treymenefee/neon-boot/venv/bin/python`), NumPy 2.2.6 / SciPy 1.15.3, full `pip freeze`, git HEADs of both worktrees (`repro` 1c3417c, `auditv2` 7356c97) |
-| box | [`docs/audit/system_box.txt`](system_box.txt) | `nproc`=80, `free -g` (251 GiB, 213 GiB available at capture), `nvidia-smi` (RTX 3080 Ti 12 GB, 1 MiB used, 0 % util), `df -h` (overlay 30 G, 27 G free), Ubuntu 22.04, `/root/miniconda3/bin/python` 3.10.8, NumPy 1.24.1 / SciPy 1.13.1, full `pip freeze`, live load + in-flight torch install |
+| box | [`docs/audit/system_box.txt`](system_box.txt) | `nproc`=80, `free -g` (251 GiB, 213 GiB available at capture), `nvidia-smi` (RTX 3080 Ti 12 GB, 1 MiB used, 0 % util), `df -h` (overlay 30 G, 27 G free), Ubuntu 22.04, `/root/miniconda3/bin/python` 3.10.8, NumPy 1.24.1 / SciPy 1.13.1, full `pip freeze`, live load + in-flight torch install. **NOTE (post-capture): `nproc`/`lscpu` report the 80-CPU host; the container cgroup quota is 10 CPUs (`cpu.max = 1000000 100000`) — see §4 correction.** |
 
 Host: `MacBookAir10,1`, macOS 26.6.2 arm64, 8 logical cores, 8 GiB RAM. Box: `autodl-container-wjb02xe512-3c3a2b3b`,
-`root@connect.nmb2.seetacloud.com:36934`, 80 vCPU, 251 GiB RAM, RTX 3080 Ti. Captured 2026-11-25T06:23Z.
+`root@connect.nmb2.seetacloud.com:36934`, **10-CPU cgroup quota** (host reports 80 CPUs), 251 GiB RAM, RTX 3080 Ti. Captured 2026-11-25T06:23Z.
 Bare `python3` is **not** on the non-interactive ssh PATH; the absolute `/root/miniconda3/bin/python` was used
 throughout, as the brief required.
 
@@ -136,8 +136,16 @@ git archive --format=tar.gz -o /tmp/gate0_repro.tar.gz HEAD     # HEAD = 1c3417c
 ```
 
 Engine + runner sha256 re-verified **on the box** after extraction → identical to the three hashes in §2.
-Box environment: Python 3.10.8 `/root/miniconda3/bin/python`, NumPy **1.24.1**, 80 vCPU, `nice -n 10`,
-`OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 OMP_NUM_THREADS=1`.
+Box environment: Python 3.10.8 `/root/miniconda3/bin/python`, NumPy **1.24.1**, **10-CPU cgroup quota**,
+`nice -n 10`, `OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 OMP_NUM_THREADS=1`.
+
+**Box CPU correction (issued 2026-11-25 after these runs, Lead-verified).** The box container is a **10-CPU
+cgroup**, not 80: `cat /sys/fs/cgroup/cpu.max` = `1000000 100000`. `nproc`/`lscpu` report the 80-CPU *host* and
+overstate the allocation. Consequences for the Gate-0 record: (a) the canonical box evidence is the
+unmodified-runner **8-worker** run below; (b) the 56-worker variant is a **worker-count invariance check only**
+(56 vs 8 workers produced bit-identical numbers) and is **not** a box-capacity result — it oversubscribed the
+10-CPU quota; (c) no Gate-0 box run may be interpreted as having used more than **8 concurrent workers**, and any
+future box work must respect ≤8 workers across all lanes (≤4 per lane) with `nice -n 10`.
 
 **Run A — unmodified runner (canonical box re-run):**
 
@@ -156,10 +164,11 @@ OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 OMP_NUM_THREADS=1 PYTHONPATH="$PWD/engi
 | output | 431,903 B, sha256 **`2e1bcb01c790dbc4f8229b605925e3190bd40fce6c2ad8d948472dfc377d217f`** |
 | copy kept | [`results/audit/hk_korea_comparative_with_cf4_repro_box8w_2026-11-25.json`](../../results/audit/hk_korea_comparative_with_cf4_repro_box8w_2026-11-25.json) + `.sha256`, stdout [`run_box_8w.log`](../../results/audit/run_box_8w.log), meta [`run_box_8w.meta`](../../results/audit/run_box_8w.meta) |
 
-**Run B — 56-worker parallelization-only variant** (the lane brief asked for 56 workers; a later box-allocation
-message from the execution owner caps heavy CPU work at 16 workers, so Run B — already completed — is retained
-only as a worker-count invariance check, and no further box jobs were run). One line changed in a *copy* of the
-runner — `workers = min(os.cpu_count() or 2, 8)` → `workers = 56`; seeds, arms, tasks, ordering and math untouched:
+**Run B — 56-worker parallelization-only variant** (the lane brief asked for 56 workers; the box allocation was
+later corrected to a **10-CPU cgroup with ≤8 workers across all lanes / ≤4 per lane**, so Run B — already
+completed — is retained only as a worker-count invariance check, and no further box jobs were run). One line
+changed in a *copy* of the runner — `workers = min(os.cpu_count() or 2, 8)` → `workers = 56`; seeds, arms, tasks,
+ordering and math untouched:
 
 ```
 diff (exact, stored at results/audit/box56w_runner_variant.diff):
