@@ -772,9 +772,10 @@ The design's core (orthogonal factors, one-primary intent, binding assertions, s
 
 Artefacts: commit `4d42101`; `docs/audit/LEAN_VERIFICATION_SCOPE.md` sha256
 `9f31108e496fdc3ac9509547ea388128d156188df9b0540c486d4406d1d3f23c`; `LEMMA_LEDGER.csv` sha256
-`da956fc1e1d3a3ff18c31c98cf30f8dcd5d5c8817fab2ed55b2f0f55f5617df5`; `LEMMA_LEDGER.md` sha256
-`f8be23a7da854d6b52489e63c7c765be5ccb7ed7c025c2640ccae9639d875c33`; baseline
-`LEMMA_LEDGER_BASELINE.json` `b777b93f…`.
+`3e9dbbc188a4309156310bd0696967261e11d0f2243c66c4da53daa4144e1287`; `LEMMA_LEDGER.md` sha256
+`5e414bc09d103c183f541da15a4574c1a03aa336980d4d5969c942c5cf4cde71`; baseline
+`LEMMA_LEDGER_BASELINE.json` `87c14a6a…` (current 132-row pair; the earlier 130-row pair `f2ce655e…` + `da956fc1…`
+is preserved in git history, not rewritten).
 
 **Answer to "can we run everything against Lean?" — NO, and claiming so would be false.** The scope doc is explicit:
 
@@ -796,21 +797,21 @@ Artefacts: commit `4d42101`; `docs/audit/LEAN_VERIFICATION_SCOPE.md` sha256
 (`pl_top1_sum_eq_denom/_min`, `pl_topK_selected_sum`); Kind-3 `decide` lemmas for the **A-34 tolerance, A-38
 infeasibility, B-41/B-42 Win–Win accounting cells**; **five omission/independence lemmas**
 `classical_demand_ignores_{school_supply, positional_seats, withholding, time_budget, supply_form}` (Paper D M1–M5)
-plus `D02_paradox_not_universal` counterexample. **LEMMA_LEDGER:** 130 rows (18 declared + 112 NOT-YET) frozen to the
-130-row CSV baseline `f2ce655e…`; differential Lean↔Python bridge **9/9 exact fixtures**; CI hook (`lake build`,
-comment-aware `sorry` scan, axiom allow-list, 18/18 claim-id check) PASS. **Note:** the CSV has since grown
-(X-27 closure + Paper C/C-05 + X-30) — the ledger must be **re-baselined** to the current CSV before the CI hook is
-cited as current.
+plus `D02_paradox_not_universal` counterexample. **LEMMA_LEDGER (current):** **132 rows** (18 declared + **114** explicit NOT-YET) frozen to the current
+**132-row baseline `b990c99f…`** (ledger `3e9dbbc1…`; generator `--expect-sha/--expect-rows` pin enforced);
+differential Lean↔Python bridge **9/9 exact fixtures**; CI hook (`lake build`, comment-aware `sorry` scan, axiom
+allow-list, 18/18 claim-id check) PASS. The earlier 130-row pair (`f2ce655e…` + `da956fc1…`) is preserved in git
+history; **drift resolved at `54b1f74` / audit-runner `4c06025`**.
 
 **QA mechanical audit — PASS (recorded):** `docs/audit/LEMMA_LEDGER_AUDIT.md` sha256
-`eff1d82a428341d9d9d5ffd827cf4e6409b23c81775f0246b16ccfc58ce25d48` (commit `4a9afd7`): R1–R7 all PASS on the pinned
-pair **baseline `paper_claims.csv` sha `f2ce655e…` (130 rows)** + ledger `da956fc1…` (18 declared + 112 explicit
-NOT-YET; X-28/X-29/D-05/D-06 present; D-04 = hypothesis); independently re-verified `lake build` 12 jobs exit 0,
-comment-aware `sorry` scan 0 tokens, `#print axioms` only `propext`/none, differential bridge 9/9 exact. **This
-certifies the claim→declaration mapping and axiom hygiene only — not the truth of empirical claims and not engine
-numerics** (empirical claims are `EmpiricalClaim` hypotheses, never theorems). **Baseline-drift caveat:** the current
-CSV is **132 rows** (C-05 Paper-C prereg review + X-30 Lean row were added after the freeze), so the ledger must be
-**re-baselined/re-audited to the current CSV** before the CI hook is cited as current. Repro:
+`80be8e1d21a5b0861e4a0dc9877370658165de568a517be27f4592c081f7f867` (commit `54b1f74`, at audit-runner commit `4c06025`):
+R1–R7 all PASS on the **current 132-row pinned pair** — baseline `paper_claims.csv` sha `b990c99f…` (132 rows) +
+ledger `3e9dbbc1…` (132 rows; 18 declared + 114 explicit NOT-YET; C-05/X-30 present; D-04 `hypothesis`); independently
+re-verified `lake build` 12 jobs exit 0, comment-aware `sorry` scan 0 tokens, `#print axioms` only `propext`/none,
+differential bridge 9/9 exact. **This certifies the claim→declaration mapping and axiom hygiene only — not the truth
+of empirical claims and not engine numerics** (empirical claims are `EmpiricalClaim` hypotheses, never theorems). The
+earlier 130-row PASS (`f2ce655e…` + `da956fc1…`, commit `4a9afd7`) is preserved in git history; **the drift caveat is
+resolved as of `54b1f74`/`4c06025` — the current record is the 132-row pair.** Repro:
 `python3 docs/audit/lemma_audit.py --claims results/audit/paper_claims.csv --ledger docs/audit/LEMMA_LEDGER.csv --lean-dir
 verification/lean`.
 
@@ -836,7 +837,7 @@ D-tests' job) and it carries the Tier-3 disclaimer.
 | UNRESOLVED | **19** (2 A, 0 B, 17 programme) | A-31 replication inventory; A-36 bulge `t*` (no-effect evidence); Paper C confirmatory prereg (C-04); Paper D omissions/divergences (D-01/D-03) and inventory attribution risk (D-04); Model Zoo D1/D2 + run gate + Pilot-0 provenance (MZ-01…MZ-04); evidence-layer limits (EV-01…EV-04); X-29 (admission-rate diagnostic gap); X-30 (Lean methods artefact — not a scientific claim); canonical spec/Gate-2; GPU quarantine |
 
 The machine-readable one-row-per-claim record is `results/audit/paper_claims.csv` (132 rows; sha256
-`b990c99f4bf666786ad1f87a91cdf4eb1f2a831a51f245d770c7ccdb41ff6f24`). The Lead-defined new-generation label **REPRODUCED EMPIRICAL ANALYSIS** is used for the fresh-WDI E8 rows; all
+`3ff88d3950364bcc6ffcd12d516064fd6c20edb50ca72bc7ac43bd46756ddbc5`). The Lead-defined new-generation label **REPRODUCED EMPIRICAL ANALYSIS** is used for the fresh-WDI E8 rows; all
 other rows use the verbatim six-status taxonomy.
 
 ---
