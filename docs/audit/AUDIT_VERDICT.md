@@ -802,6 +802,18 @@ comment-aware `sorry` scan, axiom allow-list, 18/18 claim-id check) PASS. **Note
 (X-27 closure + Paper C/C-05 + X-30) — the ledger must be **re-baselined** to the current CSV before the CI hook is
 cited as current.
 
+**QA mechanical audit — PASS (recorded):** `docs/audit/LEMMA_LEDGER_AUDIT.md` sha256
+`eff1d82a428341d9d9d5ffd827cf4e6409b23c81775f0246b16ccfc58ce25d48` (commit `4a9afd7`): R1–R7 all PASS on the pinned
+pair **baseline `paper_claims.csv` sha `f2ce655e…` (130 rows)** + ledger `da956fc1…` (18 declared + 112 explicit
+NOT-YET; X-28/X-29/D-05/D-06 present; D-04 = hypothesis); independently re-verified `lake build` 12 jobs exit 0,
+comment-aware `sorry` scan 0 tokens, `#print axioms` only `propext`/none, differential bridge 9/9 exact. **This
+certifies the claim→declaration mapping and axiom hygiene only — not the truth of empirical claims and not engine
+numerics** (empirical claims are `EmpiricalClaim` hypotheses, never theorems). **Baseline-drift caveat:** the current
+CSV is **132 rows** (C-05 Paper-C prereg review + X-30 Lean row were added after the freeze), so the ledger must be
+**re-baselined/re-audited to the current CSV** before the CI hook is cited as current. Repro:
+`python3 docs/audit/lemma_audit.py --claims results/audit/paper_claims.csv --ledger docs/audit/LEMMA_LEDGER.csv --lean-dir
+verification/lean`.
+
 **Install provenance (honest):** elan 4.4.0 → Lean `v4.36.0` via the GitHub release mirror because the default CDN
 measured **70 B/s**; 608.4 MiB download, **~23 min** install window, **3.0 GiB** unpacked, disk 12 → 8.9 GiB free;
 **Mathlib not installed** (multi-GB, not viable on this Mac) — Tier 2 is CI-only.
@@ -824,7 +836,7 @@ D-tests' job) and it carries the Tier-3 disclaimer.
 | UNRESOLVED | **19** (2 A, 0 B, 17 programme) | A-31 replication inventory; A-36 bulge `t*` (no-effect evidence); Paper C confirmatory prereg (C-04); Paper D omissions/divergences (D-01/D-03) and inventory attribution risk (D-04); Model Zoo D1/D2 + run gate + Pilot-0 provenance (MZ-01…MZ-04); evidence-layer limits (EV-01…EV-04); X-29 (admission-rate diagnostic gap); X-30 (Lean methods artefact — not a scientific claim); canonical spec/Gate-2; GPU quarantine |
 
 The machine-readable one-row-per-claim record is `results/audit/paper_claims.csv` (132 rows; sha256
-`96e1685e4a712fb95b86517b84f15c45d20db62048c35da15bfe97959c2eacc0`). The Lead-defined new-generation label **REPRODUCED EMPIRICAL ANALYSIS** is used for the fresh-WDI E8 rows; all
+`b990c99f4bf666786ad1f87a91cdf4eb1f2a831a51f245d770c7ccdb41ff6f24`). The Lead-defined new-generation label **REPRODUCED EMPIRICAL ANALYSIS** is used for the fresh-WDI E8 rows; all
 other rows use the verbatim six-status taxonomy.
 
 ---
