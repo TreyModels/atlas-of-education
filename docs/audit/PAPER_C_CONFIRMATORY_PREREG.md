@@ -1,8 +1,7 @@
-# PAPER C CONFIRMATORY — preregistration (design-only; §8 Amendment A1 SUPERSEDES §§1–6)
+# PAPER C CONFIRMATORY — PREREGISTRATION **FINAL** (design frozen; §9 A3 supersedes §8 A1 where inconsistent; no compute yet)
 
-> **AUTHORITY RULE: where §§1–6 conflict with §8 Amendment A1 + the Appendix, §8/Appendix wins.** The body §§1–6 are
-> retained for the review trail; the authoritative design is §8 (A1.1–A1.8) plus the 36-row cell list in the Appendix
-> below. No confirmatory compute is authorized until the adjudicator clears this file and Codex's protocol/Kaplan
+> **AUTHORITY RULE: §9 Amendment A3 supersedes §8 Amendment A1 where inconsistent; the latest amendment + Appendix wins.** The body §§1–6 are
+> retained for the review trail; the authoritative design is **§9 A3 + §8 A1 + the 36-row cell list in the Appendix**. No confirmatory compute is authorized until the adjudicator clears this file and Codex's protocol/Kaplan
 > confirmation is in.
 
 **Status: DRAFT for adjudicator review against the four Codex criticisms. Not yet preregistered-final, no confirmatory
@@ -110,8 +109,7 @@ not a positional-vs-learning discrimination.
 **(A1.4) Screening→confirmatory selection bias.** Screening cells are never reused for confirmatory estimates: the
 confirmatory block uses **disjoint seeds 100–131**, and the screening→confirmatory passing rule is pre-declared
 (|effect| ≥ minimum effect AND binding assertions hold); all cells (passing and failing) are reported, and the
-confirmatory analysis is runnable only on the frozen passing list (no post-hoc additions). Alternative accepted design
-(all-cell confirmatory) is pre-declared as the fallback if screening power is inadequate.
+confirmatory analysis is runnable only on the frozen passing list (no post-hoc additions). **The all-cell confirmatory fallback is REMOVED by A3.2** (all-36 ≈132 CPU-h is a separate re-approved budget only, not within the ≤36 CPU-h envelope).
 
 **(A1.5) Four-criticism section (in-file).** (i) no identification/rank claim is made by this design — the 4θ map and the
 6-parameter ABC rank-4/6 criticism are recorded elsewhere and not addressed here; (ii) grade×urban cell counts are a
@@ -207,3 +205,11 @@ adjudicator, (ii) Codex's protocol/Kaplan confirmation is in, and (iii) the 1–
 + sha, analysis commit + sha, seeds 0–7 exploratory / 100–131 confirmatory, 36-cell list + frozen passer list, N/T/T0/
 measure_from, fail routing, per-run `unfired_events==[]` assertion, workers (≤8 with 1–2 slot reserve), wall/CPU, and
 output hashes.
+
+
+## 10. Launch trail — Codex protocol/Kaplan confirmation and final freeze record
+
+**Codex confirmation recorded (bridge ids: `a1642bdf-aa13-42eb-ae85-f994c832c7f7` — model-zoo protocol/Kaplan reply; `82089ecd-c3...` — Lean verification guidance; `017027a1-cff5-48f9-be7d-a58cc680c93b` — Luna starter attachment).**
+Content: **Kaplan = Bryan Caplan (probable, UNCONFIRMED, tag V; cite primary source — likely The Case Against Education, 2018; no straw man)**; protocol = **both competing models on the same evidence AND complementary modules**, with pre-registered discriminating moments and holds/fails/indeterminate/not-testable outcomes; **D1/D2 are ENGINE PROBES** (EP-1 matched public-feedback intervention with placebo/`feedback_intensity=0` negative control; EP-2 own-access x firm-constraint 2x2 with baseline-matched seeds, fixed `own_share_financial` denominator, contest-prep classification, absolute own/firm quantities+spends); **absolute quantities as well as shares**; **seeds 0-7 EXPOSED/exploratory, confirmatory seeds 100-131**.
+
+**Preregistration status: FINAL (design frozen 2026-11-25).** No screening/confirmatory compute has been launched; the 128-run Pilot-0 v3 is EXPLORATORY only. Launch remains gated on the frozen manifest, the adjudication record marking this file final, and the operator's 1-2 slot Luna/MASSENG reserve (X-29 diagnostic runs at 6 workers).
