@@ -988,3 +988,22 @@ no files) → the poller pull did not land before the box went dark; pull/SHUTDO
 `/root/work/paperC/screen_final/*` + `/root/work/queue/SHA256SUMS` and verify against **sha256 `6bcc29a5…b6d4`**. Boxing
 up/down is an operator action; scheduler remains monitor-only. Recorded here because the box ledger could not be written
 after 01:16.
+
+### 13.41b CONFIRMED ROOT CAUSE + RECOVERY (Lead, 01:22) — scheduler stands down
+
+Lead-confirmed sequence for the pull gap (the gap is Lead-owned, not a compute failure):
+1) Screening completed and verified — **288/288 rows, 36/36 cells, summary sha256 `6bcc29a5…b5b6d4`** (scheduler numbers match).
+2) First finalizer failed the `manifest['runs']` checker bug → box stayed on (correct failure semantics).
+3) Lead patched the checker and re-ran → `SHA256SUMS` + `STATUS=OK` + `RESULTS_DONE` written.
+4) **The Mac poller then executed a reversed `scp`** (`scp <box path> root@box:<mac path>`), copied nothing, yet still touched
+   `SHUTDOWN_OK` → the finalizer powered the box off at ~01:16. Handshake completed but **the pull never did**.
+5) Box unreachable (AutoDL instance-off signature); container disk retains `/root/work/paperC/screen_final/` +
+   `/root/work/queue/SHA256SUMS` (3,802 B).
+
+**RECORD (binding):**
+- **Artefact of record = screening summary `6bcc29a50d41dc2c63a5959c0b023eb203c5bf1bd0cd04ffaee908a5ebb5b6d4`.**
+- **Local copy: PENDING** (`~/neon-boot/qa/incoming/paperC_screening/` empty; the reversed scp copied nothing).
+- **Recovery = operator power-on → corrected two-sided `scp` → verify sha256 `6bcc29a5…b5b6d4` → then shutdown.**
+- **Scheduler: STAND DOWN.** Do **not** boot the instance (operator action), do **not** retry SSH, no box jobs. The incident and
+  corrected recovery steps are also recorded by Lead in `docs/audit/RUN_QUEUE_2026-11-25.md` (commit `5ebf601`) and reported
+  to the operator. Nothing else can run until the instance is restored.
