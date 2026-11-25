@@ -265,7 +265,9 @@ def test_05a_pl_probability_non_decreasing_in_own_weight(pl_reference):
         prev = -1.0
         for w_own in grid:
             w = np.concatenate([[w_own], others])
-            p = pl_reference.pl_win_probs(w, seats, method="exact")[0]
+            # contract A6: method='exact' raises above EXACT_MAX_N=20; 'auto' is exact for n<=20 and
+            # deterministic quadrature above, i.e. the contract's one expected-probability function.
+            p = pl_reference.pl_win_probs(w, seats, method="auto")[0]
             assert p >= prev - 1e-12, (
                 f"P(own win) fell from {prev} to {p} when own weight rose to {w_own} "
                 f"(seats={seats}, competitors={others.tolist()})"
@@ -284,7 +286,9 @@ def test_05a_pl_probability_non_decreasing_in_own_weight(pl_reference):
             for mult in grid:
                 w = base_w.copy()
                 w[0] *= mult
-                p = pl_reference.pl_win_probs(w, seats, method="exact")[0]
+                # contract A6: method='exact' raises above EXACT_MAX_N=20; 'auto' is exact for n<=20
+                # and deterministic quadrature above, i.e. the contract's one expected-probability function.
+                p = pl_reference.pl_win_probs(w, seats, method="auto")[0]
                 assert p >= prev - 1e-12
 
 
@@ -316,7 +320,7 @@ def test_05b_engine_expected_probability_monotone_in_own_stock():
         assert w2[0] >= w_base[0] - 1e-12, (
             f"own contest weight fell from {w_base[0]:.6f} to {w2[0]:.6f} when own prep stock rose by {extra}"
         )
-        p_own = float(cm.pl_win_probs(w2, min(seats, len(w2)), method="exact")[0])
+        p_own = float(cm.pl_win_probs(w2, min(seats, len(w2)), method="auto")[0])
         if prev_own is not None:
             assert p_own >= prev_own - 1e-12, (
                 f"P(own win) fell from {prev_own:.6f} to {p_own:.6f} when own prep stock rose by {extra} "
@@ -648,7 +652,7 @@ def test_d2_expected_probability_matches_exact_pl_reference():
         idx, P = E.contest_expected_probs(m)
         w = np.asarray(E.contest_weights(m)[1], float)
         seats = int(E.contest_seats(m))
-        ref = CAPS["contest_math_module"].pl_win_probs(w, min(seats, len(w)), method="exact")
+        ref = CAPS["contest_math_module"].pl_win_probs(w, min(seats, len(w)), method="auto")
         np.testing.assert_allclose(np.asarray(P, float), np.asarray(ref, float), atol=1e-9,
                                    err_msg="engine expected P != exact Plackett-Luce P")
         np.testing.assert_allclose(float(np.sum(P)), float(min(seats, len(w))), atol=1e-6)

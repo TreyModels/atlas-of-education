@@ -1,0 +1,51 @@
+spawn ssh -p 36934 -o StrictHostKeyChecking=accept-new -o ConnectTimeout=12 root@connect.nmb2.seetacloud.com cat /root/work/qa/AFTER_box.log
+root@connect.nmb2.seetacloud.com's password: 
+...........................                                              [100%]
+=============================== warnings summary ===============================
+engine/eduengine/core.py:272: 1 warning
+tests/test_engine_invariants.py: 49 warnings
+  /root/work/qa/engine/eduengine/core.py:272: DeprecationWarning: gate kind 'bar' is a deprecated alias of 'fixed_bar'; update the config (fixed in a future release)
+    self._install_gates(p['gates'], initial=True)
+
+engine/eduengine/modules/labour.py:207: 1 warning
+tests/test_engine_invariants.py: 21 warnings
+  /root/work/qa/engine/eduengine/modules/labour.py:207: RuntimeWarning: Mean of empty slice
+    formal_by_cred=list(np.nanmean(fr, 0)), inc_by_cred=list(np.nanmean(ic, 0)),
+
+engine/eduengine/modules/sdg4.py:36: 1 warning
+tests/test_engine_invariants.py: 21 warnings
+  /root/work/qa/engine/eduengine/modules/sdg4.py:36: RuntimeWarning: Mean of empty slice.
+    out[f'completion_{nm}'] = float(done[sel].mean())
+
+../venv-declared/lib/python3.10/site-packages/numpy/_core/_methods.py:145: 1 warning
+tests/test_engine_invariants.py: 21 warnings
+  /root/work/venv-declared/lib/python3.10/site-packages/numpy/_core/_methods.py:145: RuntimeWarning: invalid value encountered in scalar divide
+    ret = ret.dtype.type(ret / rcount)
+
+engine/eduengine/modules/sdg4.py:39: 1 warning
+tests/test_engine_invariants.py: 21 warnings
+  /root/work/qa/engine/eduengine/modules/sdg4.py:39: RuntimeWarning: Mean of empty slice.
+    out[f'completion_{nm}_q'] = [float(d[q == j].mean()) for j in range(5)]
+
+engine/eduengine/modules/sdg4.py:40: 1 warning
+tests/test_engine_invariants.py: 21 warnings
+  /root/work/qa/engine/eduengine/modules/sdg4.py:40: RuntimeWarning: Mean of empty slice.
+    out[f'parity_wealth_{nm}'] = parity(d[q == 0].mean(), d[q == 4].mean())
+
+engine/eduengine/modules/sdg4.py:41: 1 warning
+tests/test_engine_invariants.py: 21 warnings
+  /root/work/qa/engine/eduengine/modules/sdg4.py:41: RuntimeWarning: Mean of empty slice.
+    out[f'parity_location_{nm}'] = parity(d[~u].mean(), d[u].mean())
+
+../venv-declared/lib/python3.10/site-packages/numpy/_core/fromnumeric.py:3860: 1 warning
+tests/test_engine_invariants.py: 21 warnings
+  /root/work/venv-declared/lib/python3.10/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+    return _methods._mean(a, axis=axis, dtype=dtype,
+
+engine/eduengine/modules/sdg4.py:57: 1 warning
+tests/test_engine_invariants.py: 21 warnings
+  /root/work/qa/engine/eduengine/modules/sdg4.py:57: RuntimeWarning: Mean of empty slice.
+    out['mean_years'] = float(X['g'][sel].mean())
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+27 passed, 226 warnings in 56.73s

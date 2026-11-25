@@ -327,8 +327,12 @@ def _capabilities():
             caps["share_of"] = hasattr(E, "contest_seats")
         except Exception as exc:  # pragma: no cover
             caps["contract_error"] += f" legacy run failed: {exc!r}"
+        # Gate-kind support must be probed on a world long enough for labour.summary to have series
+        # (very short runs raise KeyError('formal_by_cred') in labour.summary - unrelated to gates).
         try:
-            E2 = small_contest_engine(N=24, T=8, measure_from=3)
+            E2 = small_contest_engine(N=24, T=18, measure_from=6)
+            kinds = [E2.gate_kind(m) for m in range(E2.nlev)]
+            caps["gate_kinds"] = kinds == ["fixed_bar", "contest", "open"]
             E2.run()
         except Exception:
             caps["gate_kinds"] = False

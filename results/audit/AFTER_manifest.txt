@@ -1,0 +1,30 @@
+GATE 1d AFTER MANIFEST - Atlas contest audit v2 - 2026-11-25T07:00Z
+lane: qa-verifier (task-5) branch: research/contest-audit-v2-2026-11-25
+tree tested: git archive 98baf6b engine tests  (clean archive, NOT the shared worktree)
+Phase-B commits in tree: f31e176 gate1a (core,rng,labour,planning) ; 6bc8d61 gate1b (tutoring) ; 23a0173 gate1c (contest_math)
+engine content identical to branch tip at run time: git diff 98baf6b..bdded9d -- engine/ is empty
+
+tree file sha256:
+72cbddf7d97db85269081ae1c8ab692153c27b0553d4ce59691beab20bbfcb99  /tmp/qa1d/after98/engine/eduengine/core.py
+7a6fd4c33cc2aefcd47da097b47ac7945744cc1adf9dedbb8ab1ec57d8adc2f8  /tmp/qa1d/after98/engine/eduengine/modules/tutoring.py
+23a01730bf939a9e22befa3ca395094a48c5e870fb10901ceb015cddd793a3c8  /tmp/qa1d/after98/engine/eduengine/contest_math.py
+4c4fc11c776b823cb3fe52d3ab16381be684e1af53676b3e411755a242a185bd  /tmp/qa1d/after98/tests/conftest.py
+309ac80586f494b3c5d029756de45379a8a1b788ee98b3ffc2f9a971e8d7013d  /tmp/qa1d/after98/tests/test_engine_invariants.py
+
+HOST command:
+  OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 OMP_NUM_THREADS=1 QA_WORKERS=4 PYTHONPATH="$PWD/engine" /Users/treymenefee/neon-boot/venv/bin/python -m pytest tests/test_engine_invariants.py -q --tb=short -rxXf
+HOST env: macOS arm64 8 cores / python 3.10.2 / numpy 2.2.6 / scipy 1.15.3 / pytest 9.2.0
+HOST result: 27 passed, 226 warnings in 72.85s  (0 failed, 0 xfailed, 0 errors)
+
+BOX command:
+  cd /root/work/qa && nice -n 10 env OPENBLAS/MKL/OMP_NUM_THREADS=1 QA_WORKERS=5 PYTHONPATH=/root/work/qa/engine /root/work/venv-declared/bin/python -m pytest tests/test_engine_invariants.py -q --tb=short -rxXf
+BOX env: 10-CPU cgroup (cpu.max 1000000 100000) / python 3.10.8 / numpy 2.2.6 / scipy 1.15.3 / pytest 9.2.0 (declared-stack venv)
+BOX workers: 5 processes allocated; test-12 pool capped at 4 + pytest parent; nice -n 10; BLAS=1
+BOX result: 27 passed, 226 warnings in 56.73s  (rerun; first run 60.10s, identical summary)
+
+raw logs sha256:
+27583a3dc7ed96925ba463967041b25471877f380ecdbc2b27ac82b72798d981  results/audit/AFTER_pytest_engine_invariants.log
+9b98f4294a9bd2ff26dd8088f410b04ebdaf7df52775c96ac635592c8d2f0c00  results/audit/AFTER_box_pytest.log
+
+BASELINE for comparison: 7 failed, 12 passed, 8 xfailed (strict) on 2f8cfd9 engine (results/audit/BASELINE_manifest.txt)
+test-side fixes vs first AFTER run: A6 method='auto' for n>20 (05a/05b/d2); CAPS gate-kind probe (11b). No assertion weakened.
