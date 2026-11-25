@@ -1,0 +1,405 @@
+Master Equation Inventory: Economics of Education, Education and Development, and Shadow Education
+This is a research-oriented inventory of economic equations, mathematical models, and econometric specifications used across education economics.
+
+I'll organize them by where they belong in an academic paper, thesis, dissertation, or research framework, along with what each equation is designed to explain.
+
+The inventory covers foundational human capital theory, educational investment, school production, household decisions, labor-market returns, private tutoring, inequality, economic growth, public finance, and causal identification.
+
+There is no finite list of every possible equation because researchers develop new specifications for particular questions. The catalog below distinguishes established models from adaptable empirical specifications.
+Placement guide
+Where	What belongs there
+Theoretical framework	Economic mechanisms, behavioral assumptions, optimization, equilibrium models
+Data and measurement	Educational indicators, expenditure measures, inequality indices
+Empirical methodology	Regressions, causal estimators, model specifications
+Results	Estimated coefficients, marginal effects, elasticities, decompositions
+Discussion and policy analysis	Cost-benefit analysis, welfare, economic development implications
+Technical appendix	Derivations, extensions, alternative estimators, sensitivity analyses
+
+1. Educational access, attainment, and measurement
+Placement: Data and measurement, descriptive statistics, educational development indicators.
+
+These are the measurement equations used to describe schooling systems and construct variables for empirical analysis. UNESCO and World Bank statistical frameworks provide the relevant definitions for official enrollment measures. 
+
+Institute for Statistics (UIS)+2
+
+#	Equation	Purpose
+1	\(\displaystyle GER=\frac{E_{\text{all ages}}}{P_{\text{official age}}}\times100\)	Gross enrollment ratio
+2	\(\displaystyle NER=\frac{E_{\text{official age}}}{P_{\text{official age}}}\times100\)	Net enrollment rate
+3	\(\displaystyle AR=\frac{N_{\text{attending}}}{N_{\text{eligible}}}\times100\)	School attendance rate
+4	\(\displaystyle CR=\frac{N_{\text{completers}}}{N_{\text{cohort}}}\times100\)	Cohort completion rate
+5	\(\displaystyle TR=\frac{N_{\text{progressing}}}{N_{\text{eligible to progress}}}\times100\)	Grade transition rate
+6	\(\displaystyle DR=1-PR-RR\)	Dropout rate from promotion and repetition rates
+7	\(\displaystyle PTR=\frac{N_{\text{students}}}{N_{\text{teachers}}}\)	Pupil-teacher ratio
+8	\(\displaystyle EPS=\frac{G_{\text{education}}}{N_{\text{students}}}\)	Public expenditure per student
+9	\(\displaystyle GPI=\frac{I_{\text{female}}}{I_{\text{male}}}\)	Gender parity index for an indicator
+10	\(\displaystyle Z_i=\frac{Score_i-\mu}{\sigma}\)	Standardized learning achievement
+
+Here \(PR\) and \(RR\) are promotion and repetition proportions. Equation 4 is a direct cohort-completion measure; some official completion indicators use different denominators.
+2. Human capital investment and household education decisions
+Placement: Theoretical framework, economics of education literature review.
+
+These equations establish why households invest in education, how they allocate scarce resources, and how schooling compares with other investments. The foundational literature includes Becker, Mincer, and the Becker-Lewis model of household decisions. 
+
+OECD+3
+
+#	Model / equation	Purpose
+11	\(\displaystyle U=U(C,H,L)\)	Household utility from consumption, human capital, and leisure
+12	\(\displaystyle C+p_sS+p_tT+X=Y\)	Household education budget constraint
+13	\(\displaystyle \max_S\left[\sum_{t=0}^{T}\frac{E(w_t\mid S)}{(1+r)^t}-C(S)\right]\)	Optimal schooling investment
+14	\(\displaystyle MB(S^*)=MC(S^*)\)	Marginal benefit equals marginal cost
+15	\(\displaystyle NPV=\sum_{t=0}^{T}\frac{B_t-C_t}{(1+r)^t}\)	Net present value of education
+16	\(\displaystyle 0=\sum_{t=0}^{T}\frac{B_t-C_t}{(1+IRR)^t}\)	Internal rate of return
+17	\(\displaystyle PV(B)=\sum_{t=0}^{T}\frac{B_t}{(1+r)^t}\)	Present value of educational benefits
+18	\(\displaystyle C_{\text{full}}=C_{\text{direct}}+C_{\text{opportunity}}\)	Full economic cost of education
+19	\(\displaystyle C+p_n n+p_qnq\leq Y\)	Becker-Lewis child quantity-quality model
+20	\(\displaystyle H_{t+1}=(1-\delta)H_t+I_t\)	Human capital accumulation
+21	\(\displaystyle T_s+T_t+T_w+T_l=\bar T\)	Allocation of time across schooling, tutoring, work, leisure
+22	\(\displaystyle P(S_i=1\mid X_i)=\frac{e^{X_i'\beta}}{1+e^{X_i'\beta}}\)	Binary schooling participation decision
+23	\(\displaystyle P_{ij}=\frac{e^{V_{ij}}}{\sum_{k\in J_i}e^{V_{ik}}}\)	Multinomial school-choice model
+24	\(\displaystyle B_i\leq\bar B_i\)	Household borrowing constraint
+25	\(\displaystyle \frac{\partial U/\partial S}{\partial U/\partial C}=p_s\)	Optimal private education choice under an interior solution
+
+For equation 12, \(S\) and \(T\) represent quantities of schooling and tutoring purchased, with \(p_s\) and \(p_t\) their prices. Equation 25 assumes that education enters utility directly and that the household can choose schooling continuously.
+
+Equations 15–18 become central when comparing private and social returns, especially when tuition payments, foregone earnings, and public subsidies differ.
+3. Education production functions and skill formation
+Placement: Theoretical framework, empirical production models, school effectiveness analysis.
+
+The education production function connects school, family, and individual inputs to achievement. Hanushek's synthesis, Todd and Wolpin's cumulative production framework, and Cunha and Heckman's skill-formation work are key references. 
+
+hanushek.stanford.edu+2
+
+#	Model / equation	Purpose
+26	\(\displaystyle A_i=f(S_i,F_i,P_i,\theta_i)\)	General education production function
+27	\(\displaystyle A_{it}=f(S_i^t,F_i^t,\theta_i)\)	Cumulative family and school inputs
+28	\(\displaystyle A=BS^\alpha F^\beta T^\gamma\)	Cobb-Douglas educational production
+29	\(\displaystyle MP_T=\frac{\partial A}{\partial T}\)	Marginal productivity of tutoring
+30	\(\displaystyle A=B[\omega S^\rho+(1-\omega)T^\rho]^{1/\rho}\)	CES production function
+31	\(\displaystyle \frac{\partial^2A}{\partial S\,\partial T}>0\)	Complementarity between schooling and tutoring
+32	\(\displaystyle \Delta A_{it}=\beta X_{it}+\varepsilon_{it}\)	Achievement value-added specification
+33	\(\displaystyle A_{it}=\rho A_{i,t-1}+X_{it}'\beta+\varepsilon_{it}\)	Lagged achievement model
+34	\(\displaystyle A_{ijt}=X_{ijt}'\beta+\mu_j+\varepsilon_{ijt}\)	Teacher fixed-effect model
+35	\(\displaystyle A_{is}=X_{is}'\beta+\alpha_s+\varepsilon_{is}\)	School fixed-effect model
+36	\(\displaystyle A_i=\alpha+\beta X_i+\gamma\bar A_{-i}+\varepsilon_i\)	Peer achievement effects
+37	\(\displaystyle A_i=\alpha+\beta_1ClassSize_i+X_i'\gamma+\varepsilon_i\)	Class-size achievement relationship
+38	\(\displaystyle H_{t+1}=f_t(H_t,I_t)\)	Dynamic technology of skill formation
+39	\(\displaystyle \frac{\partial H_{t+1}}{\partial H_t}>0\)	Self-productivity of accumulated skills
+40	\(\displaystyle \frac{\partial^2H_{t+1}}{\partial H_t\partial I_t}>0\)	Dynamic complementarity of early skills and later investment
+41	\(\displaystyle A_i=\alpha+\beta_1S_i+\beta_2T_i+\beta_3S_iT_i+X_i'\gamma+\varepsilon_i\)	Empirical school-tutoring interaction
+
+In equations 30 and 31, \(S\) and \(T\) are educational inputs. A positive cross-partial derivative indicates technological complementarity. In equation 41, the sign of the interaction coefficient indicates how the marginal association of tutoring changes with the schooling input; a causal interpretation requires appropriate identification.
+4. Returns to education, wages, and labor-market outcomes
+Placement: Human capital theory, labor economics, empirical methodology, returns-to-education analysis.
+
+Mincerian earnings functions and their extensions are central to the economics of education. The literature also distinguishes regression coefficients from properly calculated investment returns. 
+
+sciencedirect.com+2
+
+#	Model / equation	Purpose
+42	\(\displaystyle \ln w_i=\alpha+\beta S_i+\gamma_1X_i+\gamma_2X_i^2+\varepsilon_i\)	Classic Mincer earnings function
+43	\(\displaystyle R_S=100(e^\beta-1)\%\)	Exact percentage earnings difference for one additional year of schooling in a log-linear model
+44	\(\displaystyle \frac{\partial\ln w}{\partial X}=\gamma_1+2\gamma_2X\)	Marginal return to experience
+45	\(\displaystyle \ln w_i=\alpha+\sum_k\beta_kD_{ik}+\gamma X_i+\varepsilon_i\)	Returns by educational qualification
+46	\(\displaystyle r_{a\to b}\approx\frac{\beta_b-\beta_a}{S_b-S_a}\)	Approximate annualized earnings premium between education levels
+47	\(\displaystyle WP=\ln(\bar w_{\text{tertiary}})-\ln(\bar w_{\text{secondary}})\)	Average observed tertiary wage premium
+48	\(\displaystyle \ln w_i=\alpha+\beta S_i+\delta Credential_i+X_i'\gamma+\varepsilon_i\)	Sheepskin or credential effect
+49	\(\displaystyle \ln w_i=\alpha+\beta_S S_i+\beta_T T_i+X_i'\gamma+\varepsilon_i\)	Association between tutoring and adult earnings
+50	\(\displaystyle \ln w_i=\alpha+\beta_1S_i+\beta_2Q_i+X_i'\gamma+\varepsilon_i\)	Separate effects of schooling quantity and quality
+51	\(\displaystyle \ln w_i=X_i'\beta+\rho\sigma_\varepsilon\lambda_i+\varepsilon_i\)	Wage equation with Heckman selection correction
+52	\(\displaystyle P(Employed_i=1)=\Lambda(X_i'\beta)\)	Employment probability model
+53	\(\displaystyle \ln w_i=\alpha+\beta_rS_i^r+\beta_oS_i^o+\beta_uS_i^u+\varepsilon_i\)	Required schooling, overeducation, undereducation
+54	\(\displaystyle LE_i=\sum_{t=0}^{T}\frac{P(E_{it}=1)\,E(w_{it}\mid E_{it}=1)}{(1+r)^t}\)	Expected present value of lifetime earnings
+55	\(\displaystyle \ln w_i=\alpha+\beta_1S_i+\beta_2(S_i\times Female_i)+X_i'\gamma+\varepsilon_i\)	Gender differences in schooling premiums
+56	\(\displaystyle Q_\tau(\ln w_i\mid X_i)=X_i'\beta_\tau\)	Returns to education across conditional wage quantiles
+
+\(w\) is earnings, \(S\) is schooling, \(X\) is a vector of relevant covariates, and \(Q\) in equation 50 measures educational quality.
+
+Equations 43 and 46 measure earnings premiums under the stated model. To interpret them as causal financial returns, the design must address selection and the financial calculation must account for educational costs.
+5. Economics of shadow education and private tutoring
+Placement: Shadow education theoretical framework, household demand analysis, private tutoring market analysis, empirical methodology.
+
+This is the specialized section for shadow education. The literature studies private tutoring as a household expenditure, an educational input, a competitive investment, and a potential contributor to inequality.
+
+The foundational literature includes Dang and Rogers (2008), Bray, Tansel and Bircan, and more recent empirical studies using hurdle models. 
+
+doi.org+4
+
+A. Private tutoring participation and demand
+#	Model / equation	Purpose
+57	\(\displaystyle D_i=\mathbf 1(T_i>0)\)	Whether a student receives tutoring
+58	\(\displaystyle P(D_i=1\mid X_i)=\Lambda(X_i'\beta)\)	Logit model of tutoring participation
+59	\(\displaystyle P(D_i=1\mid X_i)=\Phi(X_i'\beta)\)	Probit tutoring participation model
+60	\(\displaystyle \ln T_i=\alpha+X_i'\beta+\varepsilon_i,\quad T_i>0\)	Tutoring intensity among participants
+61	\(\displaystyle E(T_i\mid X_i)=P(D_i=1\mid X_i)E(T_i\mid D_i=1,X_i)\)	Two-part or hurdle model expectation
+62	\(\displaystyle T_i=\max(0,X_i'\beta+\varepsilon_i)\)	Tobit model for censored tutoring expenditure
+63	\(\displaystyle D_i=\mathbf1(Z_i'\gamma+u_i>0),\quad T_i=D_i\max(0,X_i'\beta+\varepsilon_i)\)	Double-hurdle participation and spending model
+64	\(\displaystyle s_i^T=\frac{E_i^T}{Y_i}\)	Tutoring expenditure share of household income
+65	\(\displaystyle \ln E_i^T=\alpha+\beta\ln Y_i+X_i'\gamma+\varepsilon_i\)	Conditional tutoring Engel curve
+66	\(\displaystyle \eta_Y=\frac{\partial\ln E^T}{\partial\ln Y}\)	Income elasticity of tutoring expenditure
+67	\(\displaystyle \eta_P=\frac{\partial\ln T}{\partial\ln P_T}\)	Own-price elasticity of tutoring demand
+68	\(\displaystyle \eta_{TS}=\frac{\partial\ln T}{\partial\ln P_S}\)	Cross-price elasticity between tutoring and schooling
+69	\(\displaystyle s_i^{TE}=\frac{E_i^T}{E_i^{\text{total education}}}\)	Tutoring share of household education spending
+70	\(\displaystyle C_i+P_TT_i+P_SS_i\leq Y_i\)	Joint household schooling and tutoring budget constraint
+
+Equation 65 is estimated for positive tutoring expenditures, or with an appropriate transformation and zero-expenditure model. The income elasticity tells whether tutoring expenditure responds proportionately, more than proportionately, or less than proportionately to household income.
+
+The distinction between equations 61–63 matters. A Tobit model assumes a particular latent-variable mechanism, while hurdle models allow the decision to participate and the amount spent to depend on different processes.
+B. Tutoring productivity and academic outcomes
+#	Model / equation	Purpose
+71	\(\displaystyle A_i=f(S_i,T_i,F_i,\theta_i)\)	Tutoring within the education production function
+72	\(\displaystyle A_i=\alpha+\beta_1T_i+\beta_2S_i+\beta_3(T_iS_i)+X_i'\gamma+\varepsilon_i\)	Empirical tutoring-schooling interaction
+73	\(\displaystyle \frac{\partial A}{\partial T}>0\)	Positive marginal productivity of tutoring
+74	\(\displaystyle A_i=\alpha+\beta T_i+X_i'\gamma+\varepsilon_i\)	Baseline tutoring-achievement regression
+75	\(\displaystyle A_i=\alpha+f(T_i)+X_i'\gamma+\varepsilon_i\)	Nonlinear tutoring dose-response model
+76	\(\displaystyle A_i=\alpha+\beta_1T_i+\beta_2SES_i+\beta_3(T_iSES_i)+X_i'\gamma+\varepsilon_i\)	Heterogeneous tutoring associations by socioeconomic status
+77	\(\displaystyle T_i=\pi_0+\pi_1Z_i+X_i'\pi+\nu_i\)	First stage for instrumented tutoring
+78	\(\displaystyle A_i=\alpha+\beta\widehat T_i+X_i'\gamma+\varepsilon_i\)	Second stage for the effect of tutoring
+79	\(\displaystyle T_i=\alpha+\rho\bar T_{-i}+X_i'\beta+\varepsilon_i\)	Peer effects in private tutoring demand
+80	\(\displaystyle A_i=\alpha+\beta_1T_i+\beta_2Q_{s(i)}+\beta_3(T_iQ_{s(i)})+\varepsilon_i\)	Tutoring productivity conditional on school quality
+
+Equations 77 and 78 form an instrumental-variables design when \(Z_i\) satisfies the relevance and exclusion assumptions. Equations 79 and 80 require particular care with peer selection and correlated educational inputs.
+C. Competition, tutoring markets, and regulation
+#	Model / equation	Purpose
+81	\(\displaystyle P_i(\text{admission})=\frac{e_i^\kappa}{\sum_je_j^\kappa}\)	Contest-success model of competitive educational effort
+82	\(\displaystyle \max_{T_i}\left[V_iP_i(\text{admission})-P_TT_i\right]\)	Household tutoring choice in an admissions contest
+83	\(\displaystyle Q_T^d(P_T,Y,\ldots)=Q_T^s(P_T,W,\ldots)\)	Equilibrium in a private tutoring market
+84	\(\displaystyle \pi_T=P_TQ_T-C(Q_T)\)	Private tutoring provider profit
+85	\(\displaystyle P_T^{\text{consumer}}=P_T(1+\tau)\)	Consumer tutoring price under an ad valorem tax
+86	\(\displaystyle \Delta A_{it}=\alpha+\beta Policy_{it}+X_{it}'\gamma+\varepsilon_{it}\)	Reduced-form association between tutoring regulation and achievement
+
+Equations 81–83 are adaptable theoretical models, rather than universal shadow-education equations. Their assumptions should be specified when modeling educational competition.
+
+For a credible causal evaluation of a tutoring ban, subsidy, or regulation, equation 86 usually needs a research design such as difference-in-differences, an event study, or an instrumental variable strategy.
+6. Education, human capital, and economic development
+Placement: Education and development theoretical framework, macroeconomic methodology, economic growth analysis.
+
+These models examine the relationship between education, skills, economic productivity, technological adoption, and long-run growth.
+
+The established foundations include Mankiw, Romer and Weil's augmented Solow model, Lucas's human-capital model, Nelson and Phelps's diffusion mechanism, and Hanushek and Woessmann's work on cognitive skills and growth. 
+
+OUP Academic+3
+
+#	Model / equation	Purpose
+87	\(\displaystyle Y=AK^\alpha L^{1-\alpha}\)	Basic Solow production function
+88	\(\displaystyle Y=K^\alpha H^\beta(AL)^{1-\alpha-\beta}\)	Human-capital-augmented Solow model
+89	\(\displaystyle y=k^\alpha h^\beta\)	Output per effective worker
+90	\(\displaystyle \dot K=s_KY-\delta K\)	Physical capital accumulation
+91	\(\displaystyle \dot H=s_HY-\delta H\)	Human capital accumulation in the augmented Solow model
+92	\(\displaystyle \ln\frac{Y}{L}=\ln A_0+gt+\frac{\alpha}{1-\alpha-\beta}\ln s_K+\frac{\beta}{1-\alpha-\beta}\ln s_H-\frac{\alpha+\beta}{1-\alpha-\beta}\ln(n+g+\delta)\)	Augmented Solow steady-state income regression
+93	\(\displaystyle \frac{\dot h}{h}=\phi(1-u)\)	Lucas human capital accumulation, linear case
+94	\(\displaystyle Y=AK^\alpha(uhL)^{1-\alpha}\bar h^\gamma\)	Lucas production with an illustrative human-capital externality
+95	\(\displaystyle \frac{\dot A}{A}=\phi(H)\frac{A^*-A}{A}\)	Nelson-Phelps-style technological catch-up
+96	\(\displaystyle Gap_t=\frac{A_t^*-A_t}{A_t}\)	Relative distance from the technological frontier
+97	\(\displaystyle g_{ct}=\alpha+\beta_1Schooling_{ct}+X_{ct}'\gamma+\varepsilon_{ct}\)	Schooling quantity and economic growth
+98	\(\displaystyle g_{ct}=\alpha+\beta_1Skills_{ct}+\beta_2Schooling_{ct}+X_{ct}'\gamma+\varepsilon_{ct}\)	Cognitive skills and economic growth
+99	\(\displaystyle g_c=\alpha-\lambda\ln y_{c0}+X_c'\beta+\varepsilon_c\)	Conditional convergence regression
+100	\(\displaystyle h_i=e^{\phi(S_i)}\)	Mapping schooling into efficiency units of human capital
+101	\(\displaystyle H=\sum_i h_iL_i\)	Aggregation of workers' effective human capital
+102	\(\displaystyle \frac{\partial\ln Y}{\partial\ln H}\)	Output elasticity of human capital
+103	\(\displaystyle \ln Y=\alpha+\beta_K\ln K+\beta_L\ln L+\beta_H\ln H+\varepsilon\)	Growth accounting / aggregate production regression
+104	\(\displaystyle TFP=\frac{Y}{K^\alpha(HL)^{1-\alpha}}\)	Total factor productivity, with \(H\) defined as a labor-efficiency index
+105	\(\displaystyle \Delta\ln y_{ct}=\alpha+\beta\Delta S_{ct}+X_{ct}'\gamma+\mu_c+\tau_t+\varepsilon_{ct}\)	Panel regression linking changes in education and development
+
+In the augmented Solow model, \(H\) is an accumulable human-capital stock. In equation 104, \(H\) instead represents human capital per unit of labor. These conventions must remain consistent within any particular model.
+
+The macroeconomic equations matter when the research moves from individual educational outcomes to national income, productivity, or long-run development.
+7. Education finance, public expenditure, and cost-benefit analysis
+Placement: Public finance framework, education policy analysis, development planning, policy evaluation.
+
+These equations determine how governments finance education, how expenditure reaches different populations, and whether education investments generate economic benefits that justify their costs. They draw on World Bank public expenditure methodology and education-sector cost-benefit guidance. 
+
+World Bank+2
+
+#	Model / equation	Purpose
+106	\(\displaystyle ES_{GDP}=\frac{G_{\text{education}}}{GDP}\times100\)	Education spending as a percentage of GDP
+107	\(\displaystyle ES_G=\frac{G_{\text{education}}}{G_{\text{total}}}\times100\)	Education share of government expenditure
+108	\(\displaystyle UC=\frac{G_{\text{education}}}{N_{\text{students}}}\)	Average public unit cost per student
+109	\(\displaystyle G_t^{real}=\frac{G_t^{nominal}}{P_t/P_0}\)	Inflation-adjusted education spending
+110	\(\displaystyle B_s=\sum_jp_jx_{sj}\)	School expenditure by input category
+111	\(\displaystyle ICER=\frac{C_1-C_0}{E_1-E_0}\)	Incremental cost-effectiveness ratio
+112	\(\displaystyle SNPV=\sum_{t=0}^{T}\frac{SB_t-SC_t}{(1+r)^t}\)	Social net present value of education
+113	\(\displaystyle BCR=\frac{PV(Benefits)}{PV(Costs)}\)	Benefit-cost ratio
+114	\(\displaystyle NB=TB-TC\)	Total net educational benefits
+115	\(\displaystyle FNPV=\sum_{t=0}^{T}\frac{\Delta Tax_t-\Delta G_t}{(1+r)^t}\)	Net present fiscal returns to education
+116	\(\displaystyle BI_q=\sum_\ell N_{q\ell}\frac{G_\ell}{N_\ell}\)	Public education benefit incidence by income group
+117	\(\displaystyle C_B=2\frac{\operatorname{Cov}(B_i,R_i)}{\bar B}\)	Concentration index of educational subsidies
+118	\(\displaystyle P_{\text{effective}}=\max(0,P_{\text{tuition}}-V)\)	Effective tuition price after a voucher
+119	\(\displaystyle Subsidy_i=C_i^{public}-Fees_i\)	Net public subsidy per beneficiary
+120	\(\displaystyle H=[\omega G^\rho+(1-\omega)P^\rho]^{1/\rho}\)	CES aggregation of public and private educational inputs
+121	\(\displaystyle Funding_s=bN_s+\sum_kw_kN_{sk}\)	Per-pupil funding formula with weighted student needs
+122	\(\displaystyle MSB(E^*)=MSC(E^*)\)	Socially efficient education investment
+
+For equation 116, \(N_{q\ell}\) is the number of students from group \(q\) enrolled at educational level \(\ell\). This allocation uses government unit costs as proxies for benefits received.
+8. Educational inequality, social mobility, and distribution
+Placement: Education inequality framework, distributional analysis, social stratification, intergenerational mobility.
+
+These equations help investigate whether differences in educational resources, learning, and private tutoring reinforce economic inequality. The main mathematical foundations include inequality indices, mobility models, and decomposition methods. 
+
+ideas.repec.org+2
+
+#	Model / equation	Purpose
+123	\(\displaystyle G=\frac{\sum_i\sum_j\lvert y_i-y_j\rvert}{2n^2\bar y}\)	Gini coefficient of an educational resource or outcome
+124	\(\displaystyle Theil=\frac1n\sum_i\frac{y_i}{\bar y}\ln\frac{y_i}{\bar y}\)	Theil inequality index
+125	\(\displaystyle T=\sum_gp_g\frac{\mu_g}{\mu}T_g+\sum_gp_g\frac{\mu_g}{\mu}\ln\frac{\mu_g}{\mu}\)	Within-group and between-group Theil decomposition
+126	\(\displaystyle Var(S)=E[(S_i-\bar S)^2]\)	Variance in years of schooling
+127	\(\displaystyle \bar S=\frac1n\sum_iS_i\)	Mean educational attainment
+128	\(\displaystyle Gap_{90/10}=Q_{0.90}(A)-Q_{0.10}(A)\)	90th-to-10th percentile learning gap
+129	\(\displaystyle Gap_{SES}=E(A\mid HighSES)-E(A\mid LowSES)\)	Socioeconomic achievement gap
+130	\(\displaystyle Gap_T=P(T>0\mid Rich)-P(T>0\mid Poor)\)	Inequality in tutoring participation
+131	\(\displaystyle C_T=\frac{2\operatorname{Cov}(T_i,R_i)}{\bar T}\)	Income-related concentration of tutoring
+132	\(\displaystyle \ln Y_i^{child}=\alpha+\beta\ln Y_i^{parent}+\varepsilon_i\)	Intergenerational income elasticity
+133	\(\displaystyle Rank_i^{child}=\alpha+\beta Rank_i^{parent}+\varepsilon_i\)	Intergenerational rank-rank mobility
+134	\(\displaystyle M_{ab}=P(Q_{child}=b\mid Q_{parent}=a)\)	Intergenerational mobility transition matrix
+135	\(\displaystyle \bar y_A-\bar y_B=(\bar X_A-\bar X_B)'\beta_A+\bar X_B'(\beta_A-\beta_B)\)	Twofold Oaxaca-Blinder decomposition
+136	\(\displaystyle Gap_A=\beta_0+\beta_1SES+\beta_2T+\beta_3(SES\times T)+\varepsilon\)	Tutoring and socioeconomic achievement gaps
+137	\(\displaystyle QTE_\tau=Q_\tau(Y(1))-Q_\tau(Y(0))\)	Unconditional quantile treatment effect
+
+For Gini and Theil calculations, the measured variable should be nonnegative, with a positive mean. Theil also uses the conventional \(0\ln0=0\) limit. Equation 125 uses population shares \(p_g\) and group means \(\mu_g\).
+
+These equations are particularly relevant when evaluating whether private tutoring concentrates educational advantages among affluent households.
+9. Econometric and causal identification equations
+Placement: Empirical methodology, identification strategy, model estimation, robustness testing.
+
+These are the main statistical tools used to estimate the relationships in earlier sections. Core references include Angrist and Pischke, Duflo, Glennerster and Kremer, and the modern difference-in-differences literature. 
+
+Princeton University Press+3
+
+A. Regression and panel-data methods
+#	Model / equation	Purpose
+138	\(\displaystyle Y_i=\alpha+X_i'\beta+\varepsilon_i\)	Ordinary least squares specification
+139	\(\displaystyle Y_{it}=X_{it}'\beta+\alpha_i+\varepsilon_{it}\)	Unit fixed effects
+140	\(\displaystyle Y_{it}=X_{it}'\beta+\alpha_i+\lambda_t+\varepsilon_{it}\)	Two-way fixed effects
+141	\(\displaystyle DID=(\bar Y_{T,post}-\bar Y_{T,pre})-(\bar Y_{C,post}-\bar Y_{C,pre})\)	Two-group, two-period difference-in-differences
+142	\(\displaystyle Y_{it}=\alpha_i+\lambda_t+\sum_{k\ne-1}\beta_kD_{it}^k+\varepsilon_{it}\)	Conventional event-study regression
+143	\(\displaystyle ATT(g,t)=E[Y_t(1)-Y_t(0)\mid G=g]\)	Group-time average treatment effect
+144	\(\displaystyle DDD=DID_{group1}-DID_{group2}\)	Triple-difference estimator
+
+Equation 143 is the estimand used in modern staggered-adoption difference-in-differences approaches. Conventional event-study coefficients in equation 142 can mix treatment effects when adoption timing and effects vary across groups. 
+
+doi.org+1
+
+B. Treatment effects and instrumental variables
+#	Model / equation	Purpose
+145	\(\displaystyle ATE=E[Y(1)-Y(0)]\)	Average treatment effect
+146	\(\displaystyle ATT=E[Y(1)-Y(0)\mid D=1]\)	Average treatment effect on treated students
+147	\(\displaystyle ITT=E[Y\mid Z=1]-E[Y\mid Z=0]\)	Intention-to-treat effect under random assignment
+148	\(\displaystyle LATE=\frac{E[Y\mid Z=1]-E[Y\mid Z=0]}{E[D\mid Z=1]-E[D\mid Z=0]}\)	Wald instrumental-variables estimand
+149	\(\displaystyle D_i=\pi_0+\pi_1Z_i+X_i'\pi+\nu_i\)	First-stage instrumental-variable regression
+150	\(\displaystyle Y_i=\alpha+\beta\widehat D_i+X_i'\gamma+\varepsilon_i\)	Second-stage regression
+151	\(\displaystyle \tau_{RD}=\lim_{x\downarrow c}E[Y\mid X=x]-\lim_{x\uparrow c}E[Y\mid X=x]\)	Sharp regression discontinuity
+152	\(\displaystyle \tau_{FRD}=\frac{\Delta_cE[Y\mid X]}{\Delta_cE[D\mid X]}\)	Fuzzy regression discontinuity
+153	\(\displaystyle Y_i=\alpha+\tau D_i+\beta_1(X_i-c)+\beta_2D_i(X_i-c)+\varepsilon_i\)	Local linear discontinuity specification
+154	\(\displaystyle \widehat\tau_{RCT}=\bar Y_{Z=1}-\bar Y_{Z=0}\)	Randomized treatment assignment estimator
+
+The causal interpretations of 145–154 depend on design-specific assumptions, including randomization, exclusion restrictions, monotonicity where appropriate, or continuity at a cutoff.
+C. Selection, distributional, and specialized estimators
+#	Model / equation	Purpose
+155	\(\displaystyle e(X_i)=P(D_i=1\mid X_i)\)	Propensity score
+156	\(\displaystyle \widehat{ATE}_{IPW}=\frac1n\sum_i\left[\frac{D_iY_i}{e(X_i)}-\frac{(1-D_i)Y_i}{1-e(X_i)}\right]\)	Inverse-probability weighting
+157	\(\displaystyle \widehat{ATT}_{match}=\frac1{N_T}\sum_{i:D_i=1}(Y_i-Y_{m(i)})\)	Nearest-neighbor matched treatment effect
+158	\(\displaystyle Q_\tau(Y_i\mid X_i)=X_i'\beta_\tau\)	Conditional quantile regression
+159	\(\displaystyle Y_{is}=\alpha+X_{is}'\beta+u_s+\varepsilon_{is}\)	Multilevel student-school model
+160	\(\displaystyle \widehat V_{cluster}=(X'X)^{-1}\left[\sum_gX_g'\hat u_g\hat u_g'X_g\right](X'X)^{-1}\)	Cluster-robust OLS variance estimator
+161	\(\displaystyle P(Y_i\le k\mid X_i)=\Lambda(\kappa_k-X_i'\beta)\)	Ordered logit model
+162	\(\displaystyle E(Y_i\mid X_i)=e^{X_i'\beta}\)	Poisson conditional mean model
+163	\(\displaystyle Var(Y_i\mid X_i)=\mu_i+\alpha\mu_i^2\)	NB2 negative-binomial variance specification
+164	\(\displaystyle \widehat Y_{1t}(0)=\sum_{j=2}^{J+1}w_jY_{jt},\quad\sum_jw_j=1\)	Synthetic control counterfactual
+165	\(\displaystyle Y_i=\alpha+\beta D_i+X_i'\gamma+\rho\hat\nu_i+\varepsilon_i\)	Linear control-function endogeneity correction
+166	\(\displaystyle M_i=\alpha+aD_i+X_i'\gamma+u_i\)	Mediation first-stage specification
+167	\(\displaystyle Y_i=\alpha+c'D_i+bM_i+X_i'\delta+\varepsilon_i\)	Mediation outcome specification
+
+Equations 166 and 167 form an illustrative linear mediation system. A causal mediation claim needs assumptions beyond those required for a total treatment effect.
+10. Additional equations for education and development research
+Placement: Specialized theoretical framework, education and development outcomes, policy extensions, appendix.
+
+These cover additional links between education, demography, labor supply, school markets, and development.
+#	Model / equation	Purpose
+168	\(\displaystyle LAYS=EYS\times\frac{HLS}{625}\)	Learning-adjusted years of schooling, using the World Bank HLS benchmark
+169	\(\displaystyle LP=1-(1-SD)(1-LD)\)	Learning poverty from schooling and learning deprivation
+170	\(\displaystyle SkillGap=\bar H_A-\bar H_B\)	Human-capital gap between populations
+171	\(\displaystyle P(Migration_i=1)=\Lambda(\alpha+\beta S_i+X_i'\gamma)\)	Education and migration probability
+172	\(\displaystyle H_{t+1}=H_t+H_{\text{new}}+H_{\text{in}}-H_{\text{out}}-\delta H_t\)	Human capital accounting with migration
+173	\(\displaystyle Fertility_i=\alpha+\beta S_i+X_i'\gamma+\varepsilon_i\)	Education and fertility relationship
+174	\(\displaystyle Health_i=\alpha+\beta S_i+X_i'\gamma+\varepsilon_i\)	Education and health outcomes
+175	\(\displaystyle P(TeacherExit_i=1)=\Lambda(\alpha+\beta W_i+X_i'\gamma)\)	Teacher labor supply and attrition
+176	\(\displaystyle U_{teacher}=w+bA(e)-C(e)\)	Teacher incentive and effort model
+177	\(\displaystyle bA'(e^*)=C'(e^*)\)	Optimal teacher effort in the incentive model
+178	\(\displaystyle U_{ij}=\beta'X_{ij}-\alpha P_j+\varepsilon_{ij}\)	Household utility from a school-choice option
+179	\(\displaystyle \sum_i x_{is}\leq Capacity_s\)	School seat allocation constraint
+180	\(\displaystyle A_i=\alpha+\beta EdTech_i+X_i'\gamma+\varepsilon_i\)	Educational technology and achievement
+181	\(\displaystyle H_{child}=f(H_{parents},S_{child},I_{child})\)	Intergenerational human capital transmission
+182	\(\displaystyle SP=\frac{\partial Y_{\text{others}}}{\partial H_i}\)	Marginal external productivity spillover from education
+183	\(\displaystyle SW=\sum_i\omega_iU_i-\lambda C_{\text{public}}\)	Social welfare objective with distributional weights
+
+Equation 168 follows the learning-adjustment approach developed by Filmer and colleagues. 
+
+doi.org+1
+ Equations 169–183 include standardized measurement relationships and adaptable economic specifications; their precise implementation depends on the research design.
+
+Where these equations should go in a dissertation
+This is the practical placement map, particularly for research on shadow education and its relationship to economic development.
+Dissertation section	Equations to draw from
+Chapter 1: Introduction and research problem	1–10, 57, 64, 69, 87–98, 123–131, usually as descriptive measures rather than formal derivations
+Chapter 2: Human capital and theoretical framework	11–25, 26–31, 38–41, 71–73, 81–83
+Chapter 2: Shadow education literature	57–86, with emphasis on household demand, production, positional competition, and inequality
+Chapter 2: Education and development literature	42–56, 87–105, 132–134, 168–174
+Chapter 3: Data and variable construction	1–10, 57, 64, 69, 106–109, 123–131, 168–170
+Chapter 3: Econometric methodology	58–63, 65–68, 74–80, 86, 138–167
+Chapter 4: Empirical results	Coefficients, marginal effects, predicted outcomes, elasticities, and treatment effects from the chosen models
+Chapter 5: Distributional and economic interpretation	43–56, 66–68, 111–117, 123–137
+Chapter 6: Policy implications	81–86, 106–122, 182–183
+Technical appendix	CES derivations, dynamic models, selection corrections, alternative identification designs, and robustness specifications
+
+Core equation sets by research question
+
+What determines participation in shadow education?
+
+Equations 12, 19–24, 57–70. Primary models: participation logit or probit, followed by a two-part, Tobit, or hurdle expenditure model.
+
+
+
+
+Does tutoring improve learning achievement?
+
+Equations 26–41, 71–80, 138–165. Central relationships: educational production, tutoring intensity, treatment effects, and selection.
+
+
+
+
+Does shadow education increase educational inequality?
+
+Equations 64–69, 76, 123–137, 145–158. Focus on income gradients, tutoring participation gaps, educational outcome distributions, and heterogeneous effects.
+
+
+
+
+How does education contribute to economic development?
+
+Equations 42–56, 87–105, 168–174. Use earnings equations for individual returns and human-capital growth models for macroeconomic analysis.
+
+
+
+
+Should governments subsidize or regulate tutoring?
+
+Equations 15–18, 81–86, 106–122, 141–144, 182–183. This combines policy identification, fiscal costs, welfare effects, and distributional consequences.
+
+
+
+Main academic references behind the inventory
+For tracing equations to their theoretical origins and established empirical applications, these are the most useful sources:
+Source	Relevant equations
+Handbook of the Economics of Education	Human capital, production, returns, school policy, inequality  Eric A. Hanushek+1
+Becker and Lewis, On the Interaction between the Quantity and Quality of Children (1973)	Household resource allocation, child quantity-quality models  RCNi Company Limited
+Todd and Wolpin, On the Specification and Estimation of the Production Function for Cognitive Achievement (2003)	Cumulative production functions  OUP Academic
+Cunha and Heckman, The Technology of Skill Formation (2007)	Dynamic human capital investment  nber.org
+Psacharopoulos and Patrinos, Returns to Investment in Education (2018)	Earnings, economic returns, investment appraisal  Taylor & Francis Online
+Mankiw, Romer and Weil, A Contribution to the Empirics of Economic Growth (1992)	Augmented Solow, human capital and growth  OUP Academic
+Lucas, On the Mechanics of Economic Development (1988)	Endogenous human capital accumulation  doi.org
+Dang and Rogers, The Growing Phenomenon of Private Tutoring (2008)	Economics of shadow education, inequality, tutoring effectiveness  doi.org
+Bray, Confronting the Shadow Education System (2009)	Shadow education policies and regulation  International Institute for Educational Planning
+Tansel and Bircan, Demand for Education in Turkey (2006)	Tutoring expenditure and Tobit modeling  sciencedirect.com
+Mostly Harmless Econometrics	Causal identification and econometric methods  Princeton University Press
+Callaway and Sant'Anna (2021), Sun and Abraham (2021)	Modern difference-in-differences and event studies  ideas.repec.org+1
+
+Important distinction for writing: Equations such as the Mincer earnings function, augmented Solow model, Gini index, and Tobit model have established mathematical forms. Many of the tutoring-specific regressions above are research specifications constructed from those foundations. They should be cited to the relevant theory and empirical design, with variable definitions and assumptions stated explicitly. A dissertation normally selects the equations needed for its hypotheses and available data rather than including the entire catalog.
