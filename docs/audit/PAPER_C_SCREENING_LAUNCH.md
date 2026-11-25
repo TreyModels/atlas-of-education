@@ -44,3 +44,24 @@ is pulled and hash-verified.**
 **Box action record:** after the Lead's "nothing on the box" order I only ran the corrected finalizer once (marker
 repair, no simulation); no relaunches, no GPU, no G2-B. The finalizer/shutdown chain then completed without a verified
 Mac pull — process lesson: the pull/verify step must be mandatory and separate from the finalizer's shutdown trigger.
+
+## 2026-11-26 — LEAD DECISION (binding): withhold screening artefact until operator powers the instance on
+
+**Decision (b): do not boot or retry the box.** Power-on is an operator action (billing); the operator asked for the box
+to be left off tonight. The screening data is safe on the instance disk.
+
+1) **Artefact of record (citable now, nothing more):** `paperC_screening.json` sha
+   **`6bcc29a50d41dc2c63a5959c0b023eb203c5bf1bd0cd04ffaee908a5ebb5b6d4`**, **n_runs=288, n_cells=36,
+   invalid_cells=[]**, wall **1,879.17 s**. **Local copy: PENDING.** No screening numbers beyond hash/counts are cited
+   until pulled and hash-verified.
+2) **Recovery owner:** operator powers on next session; then the Commander pulls (corrected direction):
+   `scp -r -P 36934 root@connect.nmb2.seetacloud.com:/root/work/paperC/screen_final/* ~/neon-boot/qa/incoming/paperC_screening/`
+   plus `SHA256SUMS`, `STATUS`, `finalize.log`; **hash-verify the summary against `6bcc29a5…` on both sides**; notify
+   qa-verifier; **only then** permit shutdown (the earlier poller's reversed `scp` wrote `SHUTDOWN_OK` without a verified
+   copy).
+3) **Process lesson (binding):** a **pull/verify is a mandatory separate gate with its own token (`PULL_VERIFIED`)**,
+   never implied by the finalizer's `SHUTDOWN_OK`. Root cause: the Mac poller's reversed scp direction meant it wrote
+   `SHUTDOWN_OK` without a verified copy. Finalizers must not shut down on a token they cannot prove was produced after
+   a verified pull.
+4) No box actions were taken after the Lead's stand-down order except the corrected finalizer run (marker repair only;
+   no simulation, no relaunch). X-31 remains conditional; G2-B queued for next session; GPU gate deferred.
