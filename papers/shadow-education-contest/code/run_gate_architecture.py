@@ -175,11 +175,15 @@ def driver(seeds, workers, out_dir, include_sensitivity=True):
         d_lo = dcut_for(cells_rows, arch, PRIMARY_LO, vac, fail)
         d_hi = dcut_for(cells_rows, arch, PRIMARY_HI, vac, fail)
         if d_lo is None or d_hi is None: return None
+        if d_lo['seeds'] != d_hi['seeds']:
+            raise RuntimeError(f'paired-seed mismatch in {arch}/{vac}/{fail}: {d_lo["seeds"]} vs {d_hi["seeds"]}')
         vals = [lo - hi for lo, hi in zip(d_lo['values'], d_hi['values'])]
         return dict(mean=float(np.mean(vals)), stats=stats(vals), paired_bootstrap=paired_boot(vals),
                     dcut_lo=paired_boot(d_lo['values']), dcut_hi=paired_boot(d_hi['values']))
     primary = h2(PRIMARY_ARCH, 'track')
-    secondary = {'quota_H2': h2('quota', 'track'), 'contest_vac0_curve': {}}
+    secondary = {'quota_H2': h2('quota', 'track'),
+                 'contest_H2_stop_sensitivity': h2('contest', 'stop'),
+                 'contest_vac0_curve': {}}
     for v in VACS:
         r = h2('contest', 'track', vac=v)
         secondary['contest_vac0_curve'][f'{v:.2f}'] = r
@@ -190,7 +194,19 @@ def driver(seeds, workers, out_dir, include_sensitivity=True):
         h1 = dict(gap_delta_fee0_by_share={f'{S:.2f}': gd[S] for S in SHARES},
                   H1_S025_minus_S070=gd[0.25] - gd[0.70],
                   spearman_gapdelta_vs_share=spearman(SHARES, [gd[S] for S in SHARES]),
-                  note='H1 = fee=0 gap_delta(S=.25) - gap_delta(S=.70); negative Spearman means gap widens as seats shrink')
+                  h1_paired_seed_bootstrap=(lambda: (
+                      lambda v: dict(mean=float(__import__('numpy').mean(v)),
+                                     ci95_lo=float(__import__('numpy').percentile(v, 2.5)),
+                                     ci95_hi=float(__import__('numpy').percentile(v, 97.5)),
+                                     half_width=float((__import__('numpy').percentile(v, 97.5) - __import__('numpy').percentile(v, 2.5)) / 2.0),
+                                     n_boot=5000))(np.array([
+                          (lambda mm: float(np.mean([mm[0][s] - mm[1][s] for s in mm[0]])))(
+                              ({r['seed']: r['gap_delta'] for r in cells_rows[(PRIMARY_ARCH, 0.25, 0.0, PRIMARY_VAC, 'track')]},
+                               {r['seed']: r['gap_delta'] for r in cells_rows[(PRIMARY_ARCH, 0.70, 0.0, PRIMARY_VAC, 'track')]}))
+                          for _ in range(5000)])))() if (
+                          (PRIMARY_ARCH, 0.25, 0.0, PRIMARY_VAC, 'track') in cells_rows and
+                          (PRIMARY_ARCH, 0.70, 0.0, PRIMARY_VAC, 'track') in cells_rows) else None,
+                  note='H1 = fee=0 gap_delta(S=.25) - gap_delta(S=.70); negative Spearman means gap widens as seats shrink; bootstrap resamples seeds (not a proper paired bootstrap for the H1 delta — point + Spearman are the declared minimum)')
     exploratory = {a: {f'{S:.2f}': {f'{f:.2f}_{v:.2f}': {'gap_delta': summary['track'][a].get(str(S), {}).get(f'{f:.2f}_{v:.2f}', {}).get('gap_delta', {})}
                                     for f in FEES for v in VACS} for S in SHARES} for a in ('bar', 'bar_high')}
     # realized admission / design diagnostics per cell (mean over runs)
@@ -213,7 +229,9 @@ def driver(seeds, workers, out_dir, include_sensitivity=True):
                                  primary_estimand=f'H2_contest(vac0={PRIMARY_VAC}, fail=track) = Delta_cut(S=.25)-Delta_cut(S=.70); paired-seed bootstrap 95% CI',
                                  mde_proxy='bootstrap 95% CI half-width of the primary H2 (reported); 32 matched seeds',
                                  multiplicity='one pre-stated primary (contest H2 at vac0=.08); quota H2, vac0 curve, H1 secondary; bar/bar_high exploratory',
-                                 baseline_note='pre-repair +0.1086 is AUTHOR-REPORTED baseline, not a target'),
+                                 baseline_note='pre-repair +0.1086 is AUTHOR-REPORTED baseline, not a target',
+                                 design_check_note='quintile x urban counts use cohorts measure_from..T-14 (partial cohorts expected); reported as a design check only, NOT an estimation population',
+                                 achieved_mde_proxy='primary_H2 paired-seed bootstrap 95% CI half-width (see primary_H2_contest.paired_bootstrap.half_width); a |H2| below it is inconclusive-or-null, not evidence of no effect'),
                    primary_H2_contest=primary, secondary=secondary, H1=h1, exploratory_bar_archs=exploratory,
                    cells=summary, design_diagnostics=design)
     path = os.path.join(out_dir, 'gate_architecture_results.json')
