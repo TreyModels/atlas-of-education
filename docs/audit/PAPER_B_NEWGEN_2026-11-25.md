@@ -45,8 +45,10 @@ passes spend/elite but K-12 falls to 42.80.
 
 Pre-repair 540: **CF4a failed** the Win-Win criterion. New generation (100 matched seeds, repaired engine):
 **CF4a meets the pre-stated Win-Win condition in BOTH HK and KR**, while **CF4b still fails** (HK spend 90.0; KR 109.7);
-participation falls under CF4a (HK 61.93→48.60; KR 55.79→42.81), which is a cost the Win-Win criterion does not capture
-and must be reported alongside. The old CF4 failure is preserved in `GATE1_MIGRATION_TABLE.md` / `paper_claims.csv`.
+participation falls under CF4a (HK 61.93→48.60; KR 55.79→42.81), which is an **unmeasured welfare change**, not automatically a welfare cost: it could be lost useful support,
+substitution by school-provided preparation, or families dropping low-value tutoring purchases. Interpretation requires
+learning/access/teacher-workload/student-time data that the programme does not yet have. The Win-Win statement is an
+accounting statement about spend and elite-Q5, **not a welfare statement**. The old CF4 failure is preserved in `GATE1_MIGRATION_TABLE.md` / `paper_claims.csv`.
 
 ## Uncertainty and labels
 
