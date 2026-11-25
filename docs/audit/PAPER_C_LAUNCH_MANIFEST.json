@@ -13,7 +13,11 @@
     "commit": "846c9e0",
     "core_sha256": "e111397bd8a50f94e82bb77715f236ee3d5c0bf863a23d84afdf1c6c71fa8e71",
     "spec": "docs/audit/canonical_spec.json",
-    "spec_file_sha256": "e5ddef6b4ecd04a0e96f480b43a97f0567bed7654ec032c1779c9e20f6beb755"
+    "spec_file_sha256": "e5ddef6b4ecd04a0e96f480b43a97f0567bed7654ec032c1779c9e20f6beb755",
+    "backend": "cpu (default; GPU backend permitted only after paired parity report, see engine.gpu_scope)",
+    "pl_tolerance": "declared per backend: CPU reference = canonical float32-DP quadrature (documented ~2e-3 bound); GPU if adopted = <=1e-7 on 130 fixtures + 68 tests (Lead-ratified gate-grid tolerance) with per-run equivalence hash",
+    "equivalence_artifact_sha": "pending (GPU parity report required before any GPU run; no GPU numbers cited yet)",
+    "gpu_scope": "operator scope extension pending: GPU backend (torch 2.7.1+cu118, /root/miniconda3) is integrated at /root/work/gpuport/e2e/engine with core.py 3e6754c9..., NOT the canonical pin 846c9e0/e111397b; port to the canonical pin + paired CPU-vs-GPU parity (<=1e-7 fixtures + 2 pilot cells e2e) and measured campaign throughput are required before adoption; CPU reference retained for any headline number unless declared otherwise"
   },
   "runner": {
     "file": "papers/shadow-education-contest/code/run_paperC_pilot0.py",
@@ -92,5 +96,6 @@
       "Codex protocol/Kaplan confirmation in launch trail (\u00a710)"
     ]
   },
-  "outputs": "results/audit/newgen/paperC_screening.json + paperC_confirmatory.json + per-cell checkpoints + run manifest (hashes)"
+  "outputs": "results/audit/newgen/paperC_screening.json + paperC_confirmatory.json + per-cell checkpoints + run manifest (hashes)",
+  "manifest_version": "1.1 (GPU provenance fields added; design unchanged; CPU remains default)"
 }
