@@ -254,7 +254,7 @@ and sensitivity. Full plan: `docs/audit/PAPER_A_REPRODUCTION_ATTEMPT.md` (reimpl
 |---|---|---|---|
 | (a) | E8 fee-abolition event study | fresh hashed WDI vintage; **CS-style group-time ATT** (not-yet-treated controls), 500 cluster bootstraps + 2,500 Fisher/scheme; full event path | **DONE (REPRODUCED EMPIRICAL ANALYSIS)** — impact **+12.322 pp** (bootstrap mean 12.308, 95% CI [4.48, 22.64]) and post mean **+25.083 pp** (author +25.26) **both replicate**; event path 12.32, 23.66, 25.79, 21.88, 24.94, 28.45, 25.78; Fisher p 0.0044/0.0040. Declared deviations: equal weights, no DR covariates, 8 clusters → wide CI, fresh vintage. Simple-DiD +2.54 is **estimator sensitivity**, not a data difference |
 | (b) | Delayed secondary-bulge `t*` | fresh hashed WDI; `t* = abolition + SE.PRM.DURS`; outcome SE.SEC.ENRR; 2,500 perms/scheme | **DONE (fresh WDI)** — ATT at `t*` **−0.956 pp**, post +0.30, Fisher p **0.251 / 0.384** → **no detectable secondary-bulge jump**; **UNRESOLVED** (no-effect evidence), consistent with the manuscript's honest-null framing |
-| (c) | Gate-architecture / H2 (≥5,000 runs) | repaired `98baf6b`; pre-registered gate kinds/grid; ≥5,000 runs; H2 with seed CIs | **DESIGN READY / RUN PENDING** — ~43–60 CPU-h |
+| (c) | Gate-architecture / H2 (≥5,000 runs) | repaired `846c9e0`; **Amendment A3**: 4 architectures × 5 S × 2 fee × 4 vac0 × 32 matched seeds = 5,120 primary (`fail='track'`) + 512 `fail='stop'` sensitivity = **5,632 runs**; POST e=+1..+6; primary H2 = contest vac0=.08; paired-seed bootstrap 5,000; secondaries quota/vac0-curve/H1/Spearman; bar exploratory | **CLEARED FOR LAUNCH (A3 verified); RUN PENDING** — report conditions recorded in §4E; run launches after Paper B full (~2.4 h at 8 workers); no fee-contrast result yet |
 | (d) | Multi-seed identifiability/Jacobian | frozen V540-FREEZE 4θ × 4-moment calibration map; 5 matched seeds/column; declared steps 5/3/5/4 %; central differences; **3 starts** (stop gate satisfied); report rank/SV/null across starts, local-only | **REVIEWED — STOP GATE MET WITH DECLARED RESTRICTION** (`LOCAL_FULL_RANK_CONDITIONING_UNRESOLVED`): local full rank established at the tested points — rank **4/4**, null dim **0** at **3/3** starts (SVs 50.030/32.596/1.907/**0.341**; 46.916/17.058/6.801/**0.128**; 46.852/23.579/1.993/**0.046**). The fourth direction is not stable (pairwise rel |ΔJ| **0.287 / 0.350 / 0.416**; s4 0.3409 → 0.1278 → 0.0457), so the conditioning is unresolved and Gate-2 must declare a reduced parameterisation or a ridge/prior for that direction. **No global-identification or condition-number claim.** |
 | (e) | Fee-abolition forecast with held-out | fixed engine `846c9e0` (canonical re-pin `46c080d`); `year_t=T0`; `assert E.unfired_events==[]`; 40 seeds; held-out e=+5,+6 | **ACCEPTED — REPRODUCED SIMULATION (NEW GENERATION)** — abolition − persistence **+17.19 … +25.35 pp** (e=0..6); full-7 RMSE **2.764 / MAE 2.432** vs persistence **23.759 / 23.260** (**−88.4 %**); held-out e=+5,+6 RMSE **1.637 / MAE 1.350**. **Calibration fallback:** the author's **74.88 % anchor is infeasible** in the repaired world (max 71.0 % at fee 0; A-38), so fee 0.15 + engine pre-abolition level, **no post tuning**; conditional simulation, not a reproduction of the author's calibration. v1 numbers remain uncited |
 
@@ -388,7 +388,7 @@ landed**; when it does, review it against the same four criticisms (rank-4/6 str
 selftest, within-invariant permutation) before any (c) run is accepted. (d) is now closed with the declared
 restriction; (a), (b), (e) are closed (A-34/A-35, A-36, A-37).
 
-## 4E. Review of item (c) gate-architecture pre-registration — **CONDITIONAL APPROVAL; AMENDMENTS REQUIRED BEFORE THE FEE-CONTRAST LAUNCH**
+## 4E. Review of item (c) gate-architecture pre-registration — **CLEARED FOR LAUNCH (Amendment A3 verified); report conditions recorded**
 
 Sources reviewed: `docs/audit/GATE2_PREREGISTRATION.md` §2(c); runner
 `papers/shadow-education-contest/code/run_gate_architecture.py` (sha256 `b046318c…e3a`). Design as submitted:
@@ -435,6 +435,22 @@ pooled/FE claim; (iv) no permutation inference / country blocking.
 **Label:** NEW GENERATION — REPRODUCED SIMULATION; not a reproduction of the Gemini 1,640-run design; paper H2/H1
 numbers remain AUTHOR-REPORTED baseline.
 
+**A3 VERIFIED — LAUNCH CLEARED (2026-11-25).** Amendment A3 (commit `3d289fd`; prereg §6) and runner v2
+(sha256 `6ac09cff84c06ec2ecbbc9d6461bfbdb1b6f0771bb07e298be278a99e0af4f77`) satisfy the three launch conditions and the
+provenance fixes: primary `fail='track'` 5,120 runs + declared contest/S∈{.25,.70}/all vac0/both fees/32-seed
+`fail='stop'` sensitivity 512 = **5,632 runs**; POST e=+1..+6; primary H2 = contest at vac0=.08 with paired-seed
+bootstrap 5,000, MDE proxy, quota/vac0-curve/H1/Spearman secondaries, bar/bar_high exploratory, one-primary/multiplicity
+and null rules; engine label 846c9e0, `year_t=T0`, per-run `event_log`, `unfired_events==[]`, gate r/alpha in
+`gate_spec`, quintile×urban counts, applicants/seats/admit rates. Engine core `e111397b…` and spec file
+`e5ddef6b…` verified in tree; runner compiles.
+
+**Report conditions (non-blocking):** (1) compute the **stop-sensitivity H2** explicitly (runner v2 executes the 512
+stop cells but does not compute their H2 — add `h2('contest','stop')` or compute in analysis); (2) assert
+`d_lo['seeds'] == d_hi['seeds']` before zipping in `h2`; (3) report the design cohort window for the quintile×urban
+counts as a design check only; (4) report H1 uncertainty if feasible; (5) report the achieved primary CI half-width
+(MDE) and interpret a small/negative H2 as inconclusive-or-null. Result will be adjudicated against the prereg when
+the grid completes; X-27 moves from amendment-pending to adjudicated then.
+
 ## 5. Evidence-status register (programme level)
 
 | Status | Count (paper + programme rows) | Notes |
@@ -448,7 +464,7 @@ numbers remain AUTHOR-REPORTED baseline.
 | UNRESOLVED | **5** (2 A, 0 B, 3 programme) | A-31 replication inventory; A-36 bulge `t*` (no-effect evidence); canonical spec/Gate-2; GPU quarantine |
 
 The machine-readable one-row-per-claim record is `results/audit/paper_claims.csv` (106 rows; sha256
-`f401182b7f81fc36f8f22f88ad1a030f4d2913173423f889d2c5d9baa63cae61`). The Lead-defined new-generation label **REPRODUCED EMPIRICAL ANALYSIS** is used for the fresh-WDI E8 rows; all
+`021e08b04ea062b52a3e2860ceab9f4ec8272dc367bef600fd5f474b0f3f0fdd`). The Lead-defined new-generation label **REPRODUCED EMPIRICAL ANALYSIS** is used for the fresh-WDI E8 rows; all
 other rows use the verbatim six-status taxonomy.
 
 ---
