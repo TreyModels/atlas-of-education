@@ -536,3 +536,22 @@ lane (`/root/work/gpu2`). It is a **sibling model, not the repaired gate engine*
 allocation: Paper B stays at **8 workers**, task-13 **1**, control **1** (90 % target). **A GPU job gets box CPU only if the
 Commander explicitly requests it through the scheduler.** The legacy GPU scripts in `/root/work/gpu` remain quarantined
 and must not be touched.
+
+### 13.7 Task-13 PASS + E8/bulge finished (16:45–16:46) — Gate-2 unblocked
+
+**task-13 runner-hardening smoke: PASS** (box, `/root/work/audit13`, commit `4a3bd7c`, 1 compute worker, declared venv):
+- report `RUNNER_SMOKE_box.json` **sha256 `20a6160e4cd18e8d027c5588cb5deac533c8fc1e9847854bada412623533b686`** (9,515 B),
+  `passed: True`, schema 1, generated `2026-11-25T08:45:24Z`, `runner_sha256 d1c60f0340d6607cfd0833562d4014e8ff60df0af13a8fc15786779b9920bd73`;
+- log: pass 3/4 resume `rc=0 wall=296.62 s computed=11 value_equal=True`, pass 4/4 aggregate-only `rc=0 wall=0.32 s
+  value_equal=True computed=0` → **RESULT: PASS**. Intermediates kept (`smoke_work/`). **Gate-2 blocker cleared.**
+
+**E8 + delayed-bulge empirical analysis: DONE** (16:44, 1 worker, `/root/work/e8bulge`, stdlib CPU-light):
+`e8_bulge_results.json` (2,436 B) + `run.log`; fresh hashed WDI vintage, manifest sha256
+`d7296e1fed3eb6806ba5111de2538e7fcd206323832307a1fabeeaefc6c55ee4`; treated MWI 1994, ETH 1995, UGA 1997, LSO 2000,
+TZA 2001, KEN 2003, MOZ 2004, GHA 2005; 40 donors; **impact_e0 = 12.322, post_mean = 2.540, pretrend(−3) = −1.019**,
+Fisher permutation (2,500 draws); labelled "REPRODUCED EMPIRICAL ANALYSIS — fresh hashed WDI vintage; Paper A numbers =
+AUTHOR-REPORTED baseline".
+
+**Slots:** task-13 + E8 released → box at **8.0/10 (80 %)** at 16:45:59 (Paper B 8 workers). Requested commander fill the
+2 free slots with forecast (e, 1w) + Paper B table regeneration (1w, previously paused) to hold 90–100 % while Paper B
+continues (8 HK arms checkpointing at 16:46, 10 min elapsed). Paper B primary ETA **~18:35–18:45**, full **~19:50–20:10**.
