@@ -1,17 +1,17 @@
 # LEMMA LEDGER — mechanical consistency audit (Paper C / programme claims)
 
-**Owner:** qa-verifier · **date:** 2026-11-25 ~21:45 · **mode:** host-only
-**Artefacts audited:** `verification/lean/Atlas/Claims.lean` + `Atlas/{Definitions,Identities,PlackettLuce}.lean`, `docs/audit/LEMMA_LEDGER.md` (sha `5e414bc0…`), `docs/audit/LEMMA_LEDGER.csv` (sha `3e9dbbc1…`, **132 rows**), `docs/audit/LEMMA_LEDGER_BASELINE.json` (sha `87c14a6a…`), frozen baseline `results/audit/paper_claims.csv` (sha **`b990c99f…ff6f24`**, **132 rows**) at commit **`4c06025`**.
-**Verdict: PASS — SIGNED OFF for mechanical ledger consistency on the pinned 132-row pair below (R1–R7 all PASS; re-verified against baseline `3ff88d39…` — a content-only X-30 edit, same rows/ids/mapping).** This certifies the claim→declaration mapping, not the truth of empirical claims nor engine numerics. The earlier PASS on the 130-row pair (`f2ce655e…` + `da956fc1…`, commit `4a9afd7`) is preserved in git history and superseded **only as the current record**; nothing was silently rewritten.
+**Owner:** qa-verifier · **date:** 2026-11-25 ~22:00 · **mode:** host-only
+**Artefacts audited:** full Lean package `verification/lean/{Atlas.lean, LeanStarter.lean, Atlas/{Claims,Definitions,Identities,PlackettLuce,Model}.lean}` at commit **`e0a5662`** (content `cf1d995`), `docs/audit/LEMMA_LEDGER.md` (sha `bf270f0f…`), `LEMMA_LEDGER.csv` (sha `3e9dbbc1…`, **132 rows**), `LEMMA_LEDGER_BASELINE.json` (sha `9c521416…`), frozen baseline `results/audit/paper_claims.csv` (sha **`3ff88d39…ddbc5`**, **132 rows**). Prior pairs (130-row `f2ce655e…`@`4d42101`; `b990c99f…`@`4c06025`) preserved in git history.
+**Verdict: PASS — SIGNED OFF for mechanical ledger consistency + Lean axiom hygiene on the pinned pair below (R1–R8 all PASS at commit `e0a5662`).** This certifies the claim→declaration mapping and axiom hygiene, not the truth of empirical claims nor engine numerics; the engine is NOT formally verified. The earlier PASS on the 130-row pair (`f2ce655e…` + `da956fc1…`, commit `4a9afd7`) is preserved in git history and superseded **only as the current record**; nothing was silently rewritten.
 
 ## 1. Frozen baseline and ledger (this is the pinned pair)
 
 | item | value |
 |---|---|
-| baseline | `results/audit/paper_claims.csv` — sha256 `3ff88d3950364bcc6ffcd12d516064fd6c20edb50ca72bc7ac43bd46756ddbc5`, **132 rows**, 132 unique ids (content-only X-30 action-text edit after `4c06025`; row count/ids unchanged). The pair frozen at `4c06025` was `b990c99f…ff6f24` — same 132 rows/ids, mapping identical. |
-| baseline record | `docs/audit/LEMMA_LEDGER_BASELINE.json` — sha256 `87c14a6a…`; rows 132, missing_from_ledger [] |
+| baseline | `results/audit/paper_claims.csv` — sha256 `3ff88d3950364bcc6ffcd12d516064fd6c20edb50ca72bc7ac43bd46756ddbc5`, **132 rows**, 132 unique ids, freeze commit **`e0a5662`** |
+| baseline record | `docs/audit/LEMMA_LEDGER_BASELINE.json` — sha256 `9c521416335b9317c23f97bad51bcc47474800203dae4ec24a7f6f6c3fab1f5b`; rows 132, missing_from_ledger [] |
 | ledger CSV | `docs/audit/LEMMA_LEDGER.csv` — sha256 `3e9dbbc188a4309156310bd0696967261e11d0f2243c66c4da53daa4144e1287`, **132 rows** |
-| ledger MD | `docs/audit/LEMMA_LEDGER.md` — sha256 `5e414bc09d103c183f541da15a4574c1a03aa336980d4d5969c942c5cf4cde71` |
+| ledger MD | `docs/audit/LEMMA_LEDGER.md` — sha256 `bf270f0ff8840ede189556c810b19441ee56e5629fe0c80719d96ba927e8ec14` |
 | declared / explicit NOT-YET | **18 declared** (A-34…A-39, B-41…B-44, C-01…C-04, D-01…D-04) + **114 explicit `NOT-YET-LEMMATISED`** = 132 |
 | C-05 / X-28 / X-29 / X-30 / D-05 / D-06 | all present (C-05 and X-30 added after the previous freeze; regeneration at `4c06025` closes the drift) |
 | generator | `verification/lean/tools/gen_lemma_ledger.py` now derives sha/row counts from the CSV, supports `--expect-sha/--expect-rows` loud failure, writes `LEMMA_LEDGER_BASELINE.json` — no hard-coded 118/100 counts |
@@ -35,16 +35,19 @@ python3 docs/audit/lemma_audit.py --claims results/audit/paper_claims.csv \
 | R5 | no duplicate ledger rows / declaration names | **PASS** — 132 unique ledger ids; 61 Lean declaration names, none duplicated |
 | R6 | in-Lean `claimLedger` agrees with CSV | **PASS** — 18/18 records match on id, `leanDecl`, status |
 | R7 | declared row must not be `notYetLemmatised` | **PASS** — D-04 now `hypothesis` ("declared as an empirical hypothesis record, never a theorem") |
+| R8 | proof-status table covers every Lean library declaration; all `compiled=yes`, `sorry_free=yes`, axioms only `''`/`propext` | **PASS** — `LEAN_PROOF_STATUS.csv` 107 rows vs 107 library declarations; 0 missing/extra/duplicate/bad; 46 theorems all compiled/sorry-free |
 
 ## 3. Independent build / axiom evidence (verified, not just quoted)
 
 | evidence | result |
 |---|---|
-| `lake build` (host, Lean 4.36.0, `verification/lean`) | **PASS — 12 jobs completed, exit 0** (independently re-run by QA; `Atlas.Claims` 2.8 s, `Atlas` 173 ms) |
-| comment-aware `sorry` scan (`ci/lean_verify.sh`) | **PASS — 5 Lean files, 0 `sorry` tokens** (log `docs/audit/results/LEAN_VERIFY_host.log`) |
-| `#print axioms` allow-list | **PASS — 12 theorem lines parsed; only `propext` / none**; no `sorryAx`, no `choice`, no `ofReduceBool` (`docs/audit/results/LEAN_AXIOM_AUDIT.txt`) |
-| 18 Lead-scoped claim ids present | **PASS (18/18)** per the same log |
-| Lean↔Python differential bridge | **PASS — 9/9 exact fixture matches, `passed=true`, `lean_exit_code=0`** (`docs/audit/results/LEAN_DIFFERENTIAL_BRIDGE.json`) |
+| `lake build` (host, Lean 4.36.0, `verification/lean`) | **PASS — 16 jobs completed, exit 0** (independently re-run by QA at `e0a5662`) |
+| comment-aware `sorry` scan (`ci/lean_verify.sh`) | **PASS — 7 Lean files, 0 `sorry` tokens** (independently re-run) |
+| `#print axioms` allow-list | **PASS — 33 theorem lines parsed; only `propext` / none**; no `sorryAx`/`choice`/`ofReduceBool` (`LEAN_AXIOMS_ALL.txt` sha `f9c05bc4…`; CI: `axiom audit OK`) |
+| proof-status package | **PASS — 107 declarations / 46 theorems, `LEAN_PROOF_STATUS.csv` sha `1ff80fb0…`, `.md` `c02b4085…`; all compiled, all sorry-free** |
+| 18 Lead-scoped claim ids present | **PASS (18/18)** per `ci/lean_verify.sh` |
+| Lean↔Python differential bridge | **PASS — 22/22 exact fixture matches, `passed=true`, `lean_exit_code=0`** (`LEAN_DIFFERENTIAL_BRIDGE.json` sha `56cdfd7b…`) |
+| new package proofs/counterexamples | `Atlas/Model.lean` compiles: gap/capacity/accounting/additivity/time lemmas + `rank_invariant_under_common_shift`, monotonicity, and counterexamples (`fixed_seat_relative_rank_counterexample`, `complementarity_counterexample`, `feedback_capacity_counterexample`); Luna starter `LeanStarter.lean` compiled (4 documented fixes) |
 
 ## 4. Residual caveats (not defects)
 
@@ -87,3 +90,21 @@ Re-ran the audit against `3ff88d39…` × ledger `3e9dbbc1…` (132 rows): **R1�
 mapping unchanged. The ledger's X-30 row is an explicit NOT-YET record keyed by id, so the text edit does
 not stale the mechanical audit. If any *id/row* change lands, regenerate the ledger with the pinned
 `--expect-sha/--expect-rows` first.
+
+
+## 8. Audit-script refinements applied at this re-pin (QA-side, not engine defects)
+
+* **Namespace-aware declaration names.** The Lean sources now define `gap` in both `LeanStarter` and
+  `Atlas.Model`; the audit tracks fully-qualified names so these are distinct (the earlier
+  `duplicated=['gap']` flag was a parser artefact, resolved).
+* **Library vs witness scope.** `verification/lean/bridge/lean_witness.lean` is the executable witness
+  program (validated by the 22/22 differential bridge), not part of the Atlas library; its helper defs
+  (`jLine`, `main`) are excluded from the declaration/proof-status mapping. Library declarations now price
+  exactly to the 107-row proof-status table (0 missing/extra) — R8.
+* **Qualified-or-basename resolution.** Ledger `leanDecl` strings use simple names (e.g.
+  `A34_arithmetic`); R2 resolves them against qualified Lean names by suffix.
+
+No claim is made that the formal layer verifies the Python engine or the empirical claims; the scope
+document (`LEAN_VERIFICATION_SCOPE.md`, sha `575c8966…`) and the Codex/Luna fixes are recorded as methods
+artefacts, and the "engine NOT formally verified" boundary stands. If `paper_claims.csv` changes ids/rows,
+regenerate the ledger with the pinned `--expect-sha/--expect-rows` and rerun this audit.

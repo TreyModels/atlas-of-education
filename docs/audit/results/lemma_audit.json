@@ -21,7 +21,7 @@
   {
    "id": "R5",
    "status": "PASS",
-   "detail": "ledger rows=132 duplicate ledger ids=[]; Lean declaration names=61 duplicated=[]"
+   "detail": "ledger rows=132 duplicate ledger ids=[]; Lean declaration names=107 duplicated=[]"
   },
   {
    "id": "R4",
@@ -47,6 +47,11 @@
    "id": "R7",
    "status": "PASS",
    "detail": "declared rows with notYetLemmatised status=[] (status/declaration inconsistency)"
+  },
+  {
+   "id": "R8",
+   "status": "PASS",
+   "detail": "proof-status rows=107 vs Lean declarations=107; dup=[] missing=[] extra=[] bad=[]"
   }
  ],
  "missing": [],
@@ -56,5 +61,17 @@
  "ledger_mismatch": [],
  "code_sorry_count": 0,
  "inlean_rows": 18,
- "declared_but_notyet": []
+ "declared_but_notyet": [],
+ "proof_status": {
+  "path": "/Users/treymenefee/neon-boot/wt4/auditv2/docs/audit/LEAN_PROOF_STATUS.csv",
+  "rows": 107,
+  "duplicate_ids": [],
+  "missing": [
+   []
+  ],
+  "extra": [
+   []
+  ],
+  "bad": []
+ }
 }
