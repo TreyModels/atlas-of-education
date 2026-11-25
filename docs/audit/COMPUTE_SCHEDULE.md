@@ -622,3 +622,16 @@ slow HK arms CF2a/CF2b (34:34 elapsed; rows were 81/53 at 17:05). g2a fixed mult
 **Refined ETA:** Paper B primary **~18:20–18:35**; full 2,700 (incl. KR-SINGLE sensitivity) **~19:40–20:00**.
 Distribution: Paper B 8 + g2a 1 = 9 compute workers (~90–99 % cgroup), GPU lane CPU-light only, control 1 — cap respected.
 g2a completes ~18:15; its slot stays idle until Paper B primary, then the corrected-environment forecast re-run.
+
+### 13.12 Scheduling call: g2a moves to host; box holds Paper B at 8 (17:18)
+
+Lead's call: g2a multi-seed Jacobian moves **off the box to the host at 2 workers** (content-keyed cache copied), so the
+box stays at **8 Paper B workers + control**; fallback is 1 box worker until Paper B full, then 2 alongside the gate grid.
+Gate-grid fee pilot may take **one** slot only when a Paper B worker frees; full **5,120-run** grid runs after Paper B full.
+
+**Verified 17:18:43:** g2a box processes gone (host move done); `eval_ms2/` left with **21/80 partial evals**, **no
+`identifiability_multiseed_report.json` on box** (expected; host path is now authoritative and its result will be
+recorded here when it lands). Box lanes: Paper B 8 workers = **8.0/10 (80 %)**, GPU lane CPU-light, control 1 —
+cap respected, no oversubscription.
+**Paper B: 888 seed rows**; rate **~12.7 rows/min** on the KR-class arms (vs 22.6 on HK) → remaining primary 912 rows
+≈ 72 min → **primary ETA ~18:30–18:35**, full 2,700 **~19:40–20:00**.
