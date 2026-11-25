@@ -64,3 +64,29 @@ for the run script, not for sign-off.
 * QA: code review D1–D10 (D1 verified by lead); synthetic fixtures mostly passing; T04/T05 under debug.
 * Lead: local R 4.5.3 + survey 4.5 ready; benchmark registry v0.1; matrix inventory + schema v0.1 committed
   (`5a8fa2b`); rules in force (no causal language, no restricted data off-Mac, no synthetic data as real).
+
+
+## D-07 Singleton-PSU treatment (pre-declared; blocking)
+
+Data-team audit found singleton-PSU strata in PH 2008 (19), VN 1997 (1), VN 2002 (1), ID 2007 (1); all other 24
+normalized files have none. QA's earlier "none" is to be reconciled (likely caused by auditing the merged
+`normalized_all.csv`, where file-level PSU/stratum codes are not preserved). The README requires investigating
+the design rather than quietly changing options, so the treatment is **pre-declared here**:
+
+* **Primary:** `options(survey.lonely.psu = "adjust")` — singleton strata are centred at the population mean and
+  contribute no between-PSU variance; every affected cell is flagged with the count of singleton strata included.
+* **Sensitivity:** repeat affected cells with `"certainty"` (and, where feasible, `"remove"`); report the range of
+  estimates/SEs. No cell may be interpreted if the primary/sensitivity range crosses the suppression/reliability
+  thresholds.
+* **Pre-flight:** a machine-readable `singleton_ledger.csv` (file, stratum, PSUs) must exist in `qa/` and be
+  reproduced by the run harness manifest before any estimation.
+* PH 2008's 19 singleton strata are outside the feasible cells (attendance absent) but remain in the ledger.
+
+## D-08 Accepted coverage corrections (data team, verified)
+
+* `WI` files are **wealth-index** files, not woman recodes ⇒ **E4/E5/E7/E8 = KH 5 waves + PH 2022 only**.
+* **VN E2/E3 are FEASIBLE**; E1 needs wealth and is feasible only where wealth exists (ID 2002-03+, PH 2003/2017/
+  2022, VN 2005ais, KH 2005+); PH 2008/2013 E1–E3 blocked (attendance absent); E6 is the person-record domain.
+* 96 feasible cells of 176 wave×experiment cells; `AVAILABILITY_FINAL_2026-11-25.md` is the execution source of truth.
+* Benchmarks: KH 74.65 vs published NAR 72.8 (+1.85 pp, inside ±2.5 pp) recorded; B002 F is +2.64 pp (report the
+  definitional gap); B003 excluded as validation (level-specific vs any-level); B005–B008 remain BENCHMARK-PENDING.

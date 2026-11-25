@@ -47,7 +47,7 @@ def default_engine() -> Path:
         if cand.exists():
             return cand
     return ENGINE_CANDIDATES[0]
-DEFAULT_BENCH = ROOT / "benchmarks" / "benchmark_registry_v0.1.csv"
+DEFAULT_BENCH = ROOT / "benchmarks" / "benchmark_registry_v0.2.csv"
 SIGNOFF = ROOT / "qa" / "QA_SIGNOFF.json"
 
 SUPPRESS_N = 30        # n_unweighted
