@@ -140,6 +140,26 @@ def spearman(x, y):
     rx = np.argsort(np.argsort(x)); ry = np.argsort(np.argsort(y))
     return float(np.corrcoef(rx, ry)[0, 1])
 
+
+def h1_bootstrap(cells_rows, arch=PRIMARY_ARCH, vac=PRIMARY_VAC, n_boot=5000, seed=20261125):
+    """Seed-resampled 95% CI for H1 = gap_delta(fee=0,S=.25) - gap_delta(fee=0,S=.70) (secondary statistic)."""
+    import numpy as np
+    k_lo = (arch, 0.25, 0.0, vac, 'track'); k_hi = (arch, 0.70, 0.0, vac, 'track')
+    if k_lo not in cells_rows or k_hi not in cells_rows: return None
+    lo = {r['seed']: r['gap_delta'] for r in cells_rows[k_lo]}
+    hi = {r['seed']: r['gap_delta'] for r in cells_rows[k_hi]}
+    common = sorted(set(lo) & set(hi))
+    if not common: return None
+    rng = np.random.default_rng(seed)
+    vals = []
+    for _ in range(n_boot):
+        pick = rng.integers(0, len(common), len(common))
+        vals.append(float(np.mean([lo[common[i]] - hi[common[i]] for i in pick])))
+    a = np.array(vals)
+    return dict(mean=float(np.mean([lo[s] - hi[s] for s in common])),
+                ci95_lo=float(np.percentile(a, 2.5)), ci95_hi=float(np.percentile(a, 97.5)),
+                half_width=float((np.percentile(a, 97.5) - np.percentile(a, 2.5)) / 2.0), n_boot=n_boot)
+
 def driver(seeds, workers, out_dir, include_sensitivity=True):
     from concurrent.futures import ThreadPoolExecutor
     os.makedirs(out_dir, exist_ok=True)
@@ -194,18 +214,7 @@ def driver(seeds, workers, out_dir, include_sensitivity=True):
         h1 = dict(gap_delta_fee0_by_share={f'{S:.2f}': gd[S] for S in SHARES},
                   H1_S025_minus_S070=gd[0.25] - gd[0.70],
                   spearman_gapdelta_vs_share=spearman(SHARES, [gd[S] for S in SHARES]),
-                  h1_paired_seed_bootstrap=(lambda: (
-                      lambda v: dict(mean=float(__import__('numpy').mean(v)),
-                                     ci95_lo=float(__import__('numpy').percentile(v, 2.5)),
-                                     ci95_hi=float(__import__('numpy').percentile(v, 97.5)),
-                                     half_width=float((__import__('numpy').percentile(v, 97.5) - __import__('numpy').percentile(v, 2.5)) / 2.0),
-                                     n_boot=5000))(np.array([
-                          (lambda mm: float(np.mean([mm[0][s] - mm[1][s] for s in mm[0]])))(
-                              ({r['seed']: r['gap_delta'] for r in cells_rows[(PRIMARY_ARCH, 0.25, 0.0, PRIMARY_VAC, 'track')]},
-                               {r['seed']: r['gap_delta'] for r in cells_rows[(PRIMARY_ARCH, 0.70, 0.0, PRIMARY_VAC, 'track')]}))
-                          for _ in range(5000)])))() if (
-                          (PRIMARY_ARCH, 0.25, 0.0, PRIMARY_VAC, 'track') in cells_rows and
-                          (PRIMARY_ARCH, 0.70, 0.0, PRIMARY_VAC, 'track') in cells_rows) else None,
+                  h1_seed_bootstrap=h1_bootstrap(cells_rows),
                   note='H1 = fee=0 gap_delta(S=.25) - gap_delta(S=.70); negative Spearman means gap widens as seats shrink; bootstrap resamples seeds (not a proper paired bootstrap for the H1 delta — point + Spearman are the declared minimum)')
     exploratory = {a: {f'{S:.2f}': {f'{f:.2f}_{v:.2f}': {'gap_delta': summary['track'][a].get(str(S), {}).get(f'{f:.2f}_{v:.2f}', {}).get('gap_delta', {})}
                                     for f in FEES for v in VACS} for S in SHARES} for a in ('bar', 'bar_high')}
