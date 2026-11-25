@@ -3,7 +3,7 @@
 **Owner:** `audit-runner` · **Date:** 2026-11-25 · **Host-only** (no box use)
 
 **Machine-readable companion:** [`LEMMA_LEDGER.csv`](LEMMA_LEDGER.csv) (one row per `paper_claims.csv` claim).
-**Lean source:** [`verification/lean/Atlas/Claims.lean`](../../verification/lean/Atlas/Claims.lean) (18 Lead-scoped claims, one declaration group each). **Baseline:** [`results/audit/paper_claims.csv`](../../results/audit/paper_claims.csv) (130 rows, committed).
+**Lean source:** [`verification/lean/Atlas/Claims.lean`](../../verification/lean/Atlas/Claims.lean) (18 Lead-scoped claims, one declaration group each). **Baseline:** [`results/audit/paper_claims.csv`](../../results/audit/paper_claims.csv) (132 rows, committed).
 
 **Binding rule:** *Lean proves the reference mathematics and the accounting/inventory identities; the Python engine is differential-tested against Lean witnesses on fixtures; numerical results remain reproducible-artifact evidence. This is not "the engine is verified".*
 
@@ -12,7 +12,7 @@
 ## Scope of this ledger generation
 
 - **Declared now:** 18 Lead-scoped claims — A-34…A-39, B-41…B-44, C-01…C-04, D-01…D-04.
-- **Explicit NOT-YET-LEMMATISED:** 112 of the 130 baseline rows (listed individually below with their ids — no silent omissions).
+- **Explicit NOT-YET-LEMMATISED:** 114 of the 132 baseline rows (listed individually below with their ids — no silent omissions).
 - Extension plan: next pass adds the remaining rows in paper order; the four-kind schema and status vocabulary are stable, so adding a row is one declaration + one ledger row.
 
 ## Four statement kinds
@@ -50,7 +50,7 @@ Status counts: `computationallyChecked` = 4, `hypothesis` = 6, `proved` = 2, `sp
 | D-03 | PROGRAMME | spec (differential contract) | `specified` | `D03_spec` | Paper D divergence tests D1-D9: standard-equation prediction X vs mechanism-rich prediction Y, cell/outcome/c… | pre-registerable divergence tests, not results |
 | D-04 | PROGRAMME | empirical (hypothesis) | `hypothesis` | `D04_attribution` | Inventory is an AI-generated candidate map with placeholder citations ('UIS+2', 'OECD+3', 'doi.org+4', etc.) … | citation/attribution risk is not a mathematical proposition; declared as an empirical hypothesis record, never a theorem |
 
-## Not-yet-lemmatised claims (112)
+## Not-yet-lemmatised claims (114)
 
 These rows have **no Lean declaration yet** by design — explicit entries so the QA check has no silent gaps. Status: `NOT-YET-LEMMATISED`; paper claims' own evidence status is preserved in the baseline (`results/audit/paper_claims.csv`).
 
@@ -168,6 +168,8 @@ These rows have **no Lean declaration yet** by design — explicit entries so th
 | X-29 | PROGRAMME | UNRESOLVED | X-27 design diagnostics: realized admission rates are NaN in the raw checkpoints and JSON (contest_candidates/seats/admitted/cont… |
 | D-05 | PROGRAMME | CONTRADICTED | Citation verification of inventory section 5: 0 of equations 57-86 verified; every citation is a placeholder (UIS+2, OECD+3, hanu… |
 | D-06 | PROGRAMME | UNRESOLVED | Jayachandran (2014, JDE 108:190-205) published model DOES contain withholding (school-day material m, achievement s(m,t), s_mt<0,… |
+| C-05 | PROGRAMME | UNRESOLVED | Paper C confirmatory prereg draft reviewed (commit 2e69339; sha256 10406a33...bf7): orthogonal 36-cell design + 4 anchors; T1-T4 … |
+| X-30 | PROGRAMME | UNRESOLVED | Lean verification methods artefact (commit 4d42101; LEAN_VERIFICATION_SCOPE sha256 9f31108e...; LEMMA_LEDGER.csv da956fc1.../LEMM… |
 
 ## Sorry ledger
 

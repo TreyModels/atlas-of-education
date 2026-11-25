@@ -42,8 +42,8 @@ lake build          # 12 jobs, ~2 s cold (Lean 4.36.0); compiles Atlas.Definitio
 - `ci/lean_verify.sh` → **PASS**: build 12 jobs; **0 sorry tokens** (comment-aware scan); axiom audit 12 theorem
   lines, only allowed axioms (`propext`/none); 18/18 claim ids present. Log: `docs/audit/results/LEAN_VERIFY_host.log`.
 - `bridge/differential_test.py` → **PASS 9/9** exact fixtures. Result: `docs/audit/results/LEAN_DIFFERENTIAL_BRIDGE.json`.
-- Ledger: 18 declared + 112 explicit not-yet = **130 rows**, pinned to claims baseline sha256
-  `f2ce655eb232a97f3ef5338334c8ed2f2dad953b328ab6a80fe066823c655a40`
+- Ledger: 18 declared + 112 explicit not-yet = **130 rows**, re-baselined to claims baseline sha256
+  `b990c99f4bf666786ad1f87a91cdf4eb1f2a831a51f245d770c7ccdb41ff6f24` (132 rows)
   (`docs/audit/LEMMA_LEDGER_BASELINE.json`).
 
 ## Quick verification
