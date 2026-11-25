@@ -1,0 +1,26 @@
+[
+  {
+    "wave": "1997",
+    "path": "/Users/treymenefee/neon-boot/pulled/dhs/vietnam/1997/VNPR31DT/VNPR31FL.DTA",
+    "sha256": "ca23cd71fcc978f8d715b836129cc846fb817897afcd5e3e12f29e504e430627",
+    "n_rows": 32962,
+    "q_missing": 0,
+    "completed_sec_missing": 0
+  },
+  {
+    "wave": "2002",
+    "path": "/Users/treymenefee/neon-boot/pulled/dhs/vietnam/2002/VNPR41DT/VNPR41FL.DTA",
+    "sha256": "fcd688b4e61c7579d4b269b4c3ac77670757d0cf2ddefa6d862884eaee287e5b",
+    "n_rows": 31529,
+    "q_missing": 0,
+    "completed_sec_missing": 0
+  },
+  {
+    "wave": "2005ais",
+    "path": "/Users/treymenefee/neon-boot/pulled/dhs/vietnam/2005ais/VNPR53DT/VNPR53FL.DTA",
+    "sha256": "a2b8dce22c0a91d09b55cdbba9bb119ddec166612684b6cfadbab0d33e216b21",
+    "n_rows": 26833,
+    "q_missing": 0,
+    "completed_sec_missing": 7
+  }
+]
