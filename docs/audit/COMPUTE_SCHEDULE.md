@@ -806,3 +806,12 @@ copy complete results dir to `~/neon-boot/qa/incoming/paperC_results/` + notify 
 4. If Luna requests a box slot: **allocate immediately and preempt/queue ours** — MASSENG has the reserve, not leftovers.
 5. Keep our concurrent host/Mac probes to **≤2** while Luna runs, to keep the Mac responsive.
 Total box ceiling remains 10 worker processes; the reserve is inside that ceiling, not on top of it.
+
+### 13.29 Pilot progress 22:08 — first wave complete (64 rows), second wave heavier; ETA 23:10–23:25
+
+**70/128 rows (55 %).** All **8 first-wave cells COMPLETE (8/8 = 64 rows)**: `market_only` ×4 + `own_open_gap` ×4.
+Second wave running: `own_open_incentive 1.0` (3/8 seeds each; PIDs 42823/42828, 28 min elapsed) and four newest cells
+(`own_open_incentive 1.2`, `own_open_gap_firm_ban 1.0/1.2`, 6:50 elapsed, 0 rows yet — rows append at seed completion).
+**Diagnosis of the rate drop (0.66 rows/min over 12 min): NOT a stall/startup issue** — all 8 workers at 99.9–100 % CPU,
+cgroup 8.0/10 (80 %); the second-wave regimes are inherently heavier (**`own_open_incentive` ≈9.3 min/seed vs ~7 min**
+first wave). Revised ETA: remaining 58 rows ≈ 65–70 min → **23:10–23:25**; re-baseline at 88 rows. Cap 8, Luna reserve intact.
