@@ -1,0 +1,53 @@
+[T01] PASS  all 8 experiments: fixed estimate == independently computed weighted domain mean (1e-8) obs=23/23 match 
+[T02] PASS  weighted domain mean exact AND weights genuinely change the answer (not an unweighted test) obs=weight-sensitive groups: 1; 2; 3; 4; 5 
+[T03] PASS  known design-based SE recovered: 2 PSUs, PSU means 1 and 0 -> se=0.5 obs=0:0.5, 1:0.5 
+[T04] PASS  genuine singleton stratum: v1 fails opaquely, v2 fails ACTIONABLY by default and can run under documented adjust policy obs=v1=TRUE; v2fail_actionable=TRUE; v2adjust_finite=TRUE 
+[T05] PASS  domain estimates use ALL base-design PSUs: v2 matches the independent stratified-PSU-total variance reference; v1 subset(design,domain) either errors (survey<4.x) or returns a subset-design SE that differs from the reference obs=v2_ok=TRUE; v1_error=FALSE; v1_max_SE_deviation=1.570092e-16 
+[T06] PASS  99 = verified never maps to early=0 (NOT unknown); NA = unknown stays unknown, excluded but counted in the missingness table obs=E5ok=TRUE; E7ok=TRUE; never=19; unknown=6 
+[T07] PASS  missing children_ever_born excluded from mean AND denominator (not treated as 0) obs=groups=2; means=2; 3 
+[T08] PASS  structural invalidity rejected by v2 (non-finite/zero weights, invalid sex, implausible age, PSU label in two strata, shared weight labels, empty stratum); v1 accepted most (before/after recorded) obs=bad_inf_weight: v1=accept v2=reject; bad_zero_weight: v1=reject v2=reject; bad_sex: v1=acc 
+[T08b] PASS  DHS DK/sentinel codes 95-99 are defensively mapped to NA in-script (never counted as values) and the mapping is recorded in the manifest warnings obs=bad_cev99: v2_runs=TRUE warning_recorded=TRUE; bad_school99: v2_runs=TRUE warning_recorded 
+[T09] PASS  both versions reject missing columns / missing strata-PSU / bad wealth / bad binary / bad record_type obs=bad_missing_col: v1=reject v2=reject; bad_stratum_na: v1=reject v2=reject; bad_psu_na: v1= 
+[T10] PASS  person rows weighted by person weight and woman rows by woman weight; distinct weight labels validated; manifest records provenance obs=E1ok=TRUE; E4ok=TRUE; provenance=person weight = person_weight; woman weight = woman_weigh 
+[T11] PASS  unweighted n<25 cell suppressed (estimate NA + flag) by v2; v1 published it obs=v1_published_small=TRUE; v2_suppressed=TRUE 
+[T12] PASS  configurable min-cell rule (--min-cell=50 suppresses n<50) obs=suppressed groups=2; 3; 4; 5 
+[T13] PASS  multiplicity recorded: BH q-value column, exploratory flag, manifest note; v1 had none obs=v2_cols=TRUE; manifest_note=TRUE; v1_cols=FALSE 
+[T14] PASS  manifest.json records input+script sha256, R/survey versions, design vars, lonely policy, weight provenance, non-causal disclaimer, benchmark status obs=input_sha=1a862810df356e5d; survey=4.5; bench=NOT_RUN: no benchmar 
+[T15] PASS  benchmark harness: published benchmark within tolerance -> MATCH; outside tolerance -> MISMATCH; status recorded in manifest obs=ok=MATCH; bad=MISMATCH; manifest=TRUE 
+[T16] PASS  adapter metadata (release/weight/strata/PSU/missing codes/access) embedded in manifest; incomplete metadata rejected obs=accepted=TRUE; recorded=TRUE; missing_key_rejected=TRUE 
+[T17] PASS  E1-E8 ages (inclusive 14-17, 40-49, 25-34, 20-24), record types, cohorts and education boundaries (<6,<12) match README obs=E1:60/60 E2:60/60 E3:60/60 E4:60/60 E5:60/60 E6:60/60 E7:60/60 E8:60/60 
+[T18] PASS  countries/waves estimated separately (no auto-combination of cross-sections) obs=FIXTURE_C1 2000, FIXTURE_C1 2001, FIXTURE_C2 2000 
+[T19] PASS  identical input -> identical estimates.csv (deterministic analysis) obs=md5:132974f61ca37763eeecfe75fea8773a 
+[T20] PASS  no causal language in the E1-E8 descriptions; manifest carries an explicit "NOT causal" interpretation note (timing, E8 != kin support, wealth != income) obs=desc_hits=0 (); manifest_not_causal=TRUE 
+[T21] FAIL  per-group complete_n: recorded correctly (both versions) and v2 also reports unweighted/weighted n, PSU/strata counts, design df, missingness table obs=13/15/15/13/14 
+[T22] PASS  v2 reports age-eligible vs complete vs outcome-missing vs group-missing counts (v1 reported only one number) obs=rows=8; cols=11 
+[T23] PASS  E6 (currently_in_school) and E8 (household_size) variable/record-type choices are documented adapter risks, not silently assumed obs=within country-wave-record_type; E1-E3 persons aged 14-17; E4 women 40 
+[T24] PASS  full-design NA-indicator domain estimator equals the analytic stratified-PSU-total variance reference across 60 synthetic two-stage samples; subset()-bias is design/survey-version dependent (lead MC cited in QA_REPORT) obs=max|diff|=4.16e-17; lead MC: empirical 0.206/0.447, NA 0.212/0.427, subset 0.150/0.300 
+[T25] PASS  registry-driven benchmark check: within-tolerance row -> MATCH; off-tolerance row -> MISMATCH; PENDING rows are reported, never compared obs=ok=MATCH; bad=MISMATCH 
+
+QA harness: 26 tests, 25 PASS, 1 FAILoriginal script sha256: 6705c9ec3a4b8cee2bb8b1c34d36a0dfb58e1dae0e26059d4545f96a3f3da817fixed script sha256: 46c490652ea9893ce4e2418216c545dc74692a0bd25937da61ec046bc4e78f45R 4.5.3 / survey 4.5 / 2026-11-25T09:08:04ZT01 PASS  all 8 experiments: fixed estimate == independently computed weighted domain mean (1e-8)
+T02 PASS  weighted domain mean exact AND weights genuinely change the answer (not an unweighted test)
+T03 PASS  known design-based SE recovered: 2 PSUs, PSU means 1 and 0 -> se=0.5
+T04 PASS  genuine singleton stratum: v1 fails opaquely, v2 fails ACTIONABLY by default and can run under documented adjust policy
+T05 PASS  domain estimates use ALL base-design PSUs: v2 matches the independent stratified-PSU-total variance reference; v1 subset(design,domain) either errors (survey<4.x) or returns a subset-design SE that differs from the reference
+T06 PASS  99 = verified never maps to early=0 (NOT unknown); NA = unknown stays unknown, excluded but counted in the missingness table
+T07 PASS  missing children_ever_born excluded from mean AND denominator (not treated as 0)
+T08 PASS  structural invalidity rejected by v2 (non-finite/zero weights, invalid sex, implausible age, PSU label in two strata, shared weight labels, empty stratum); v1 accepted most (before/after recorded)
+T08b PASS  DHS DK/sentinel codes 95-99 are defensively mapped to NA in-script (never counted as values) and the mapping is recorded in the manifest warnings
+T09 PASS  both versions reject missing columns / missing strata-PSU / bad wealth / bad binary / bad record_type
+T10 PASS  person rows weighted by person weight and woman rows by woman weight; distinct weight labels validated; manifest records provenance
+T11 PASS  unweighted n<25 cell suppressed (estimate NA + flag) by v2; v1 published it
+T12 PASS  configurable min-cell rule (--min-cell=50 suppresses n<50)
+T13 PASS  multiplicity recorded: BH q-value column, exploratory flag, manifest note; v1 had none
+T14 PASS  manifest.json records input+script sha256, R/survey versions, design vars, lonely policy, weight provenance, non-causal disclaimer, benchmark status
+T15 PASS  benchmark harness: published benchmark within tolerance -> MATCH; outside tolerance -> MISMATCH; status recorded in manifest
+T16 PASS  adapter metadata (release/weight/strata/PSU/missing codes/access) embedded in manifest; incomplete metadata rejected
+T17 PASS  E1-E8 ages (inclusive 14-17, 40-49, 25-34, 20-24), record types, cohorts and education boundaries (<6,<12) match README
+T18 PASS  countries/waves estimated separately (no auto-combination of cross-sections)
+T19 PASS  identical input -> identical estimates.csv (deterministic analysis)
+T20 PASS  no causal language in the E1-E8 descriptions; manifest carries an explicit "NOT causal" interpretation note (timing, E8 != kin support, wealth != income)
+T21 FAIL  per-group complete_n: recorded correctly (both versions) and v2 also reports unweighted/weighted n, PSU/strata counts, design df, missingness table
+T22 PASS  v2 reports age-eligible vs complete vs outcome-missing vs group-missing counts (v1 reported only one number)
+T23 PASS  E6 (currently_in_school) and E8 (household_size) variable/record-type choices are documented adapter risks, not silently assumed
+T24 PASS  full-design NA-indicator domain estimator equals the analytic stratified-PSU-total variance reference across 60 synthetic two-stage samples; subset()-bias is design/survey-version dependent (lead MC cited in QA_REPORT)
+T25 PASS  registry-driven benchmark check: within-tolerance row -> MATCH; off-tolerance row -> MISMATCH; PENDING rows are reported, never compared

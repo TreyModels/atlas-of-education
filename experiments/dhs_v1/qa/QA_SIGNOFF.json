@@ -1,0 +1,59 @@
+{
+  "signed_off": true,
+  "date_utc": "2026-11-25",
+  "engine_path": "experiments/dhs_v1/qa/experiments_v2.R",
+  "engine_sha256": "46c490652ea9893ce4e2418216c545dc74692a0bd25937da61ec046bc4e78f45",
+  "adopted_engine": "qa engine (full-design NA-indicator domain variance, per-group svymean; pinned). Scout engine/experiments_v2.R is EXPLORATORY only (subset-domain variance defect + 41-cell coverage gap); its point estimates verified but SEs/contrasts must be regenerated.",
+  "conflict_a": "scout WRONG: hv110 is present/non-missing in VN 1997/2002/2005ais, ID 1991/94/97/2002-03/2007/2012, PH 1993/98/2003 (frozen attendance non-missing 26,826-177,818; age profile valid); 41 previously unexecuted cells are feasible (design/wealth permitting).",
+  "conflict_b": "scout RIGHT: PH 2003 hv022 (variance stratum) non-missing = 0/61,864 rows -> BLOCKED; no documented justification to substitute hv023. Data-team availability matrix must be corrected. PH 2008/2013 E1-E3 blocked (attendance absent).",
+  "e6_definition": "person-record females 20-24 (PR hv121/hv110, person weight hv005) per lead D-01; documented deviation from README woman-recode E6.",
+  "singleton_ledger": {
+    "path": "experiments/dhs_v1/qa/singleton_ledger.csv",
+    "sha256": "2a6aad847720677550b4e482f7bcf85ec7423dfa505b7e9d96b0fa413886f66f",
+    "n_singleton_strata": 22,
+    "files": {"PH 2008": 19, "VN 1997": 1, "VN 2002": 1, "ID 2007": 1}
+  },
+  "d07_policy": {
+    "primary": "adjust",
+    "sensitivity": ["certainty", "remove"],
+    "result": "estimates identical across policies (max |delta|=0); SE differences <= 7.4e-5 on affected feasible files"
+  },
+  "benchmarks": {
+    "registry": "benchmarks/benchmark_registry_v0.2.csv",
+    "B001_primary": {"ours": 74.65, "published": 72.8, "delta_pp": 1.85, "tol": 2.5, "verdict": "MATCH (definitional)"},
+    "B002_male": {"ours": 73.23, "published": 72.0, "delta_pp": 1.23, "verdict": "MATCH"},
+    "B002_female": {"ours": 76.14, "published": 73.5, "delta_pp": 2.64, "verdict": "OUTSIDE tol; definitional gap reported"},
+    "B003_secondary": {"ours": 60.18, "published": 42.0, "verdict": "NOT A VALIDATION (definition mismatch); direction only"},
+    "B004_urban_rural": {"ours": [76.93, 73.44], "published": [75.5, 71.3], "verdict": "MATCH (definitional)"},
+    "B005_B008": "PENDING; results carry not_externally_benchmarked=true, no validation claim"
+  },
+  "conditions": [
+    "Execution must use the pinned engine path/sha256 above; any change invalidates this sign-off.",
+    "Domain variance must use the full-design NA-indicator per-group svymean (not subset()/svyby on subset); lonely-PSU primary adjust with certainty/remove sensitivity, ledger hash in manifest, affected cells flagged.",
+    "BLOCKING for E5/E7 on frozen per-file data: verified never is encoded as blank/NA there (0 rows with 99) while README requires 99=never; engine treats NA as unknown, so E5/E7 on that layer would exclude never women. Data team must encode verified never as 99 (or document a rule); until then E5/E7 run from the merged layer (99 preserved).",
+    "Disclosure rule: suppress n_unweighted<30 OR n_psu<2 OR design_df<1 OR non-finite SE; flags n<50, RSE>25/30%, df<30; keep suppressed-cell ledger.",
+    "Only KH 2021-22 FR377 NAR family is externally validation-graded; all other results are not_externally_benchmarked with no validation claim; B003 excluded as validation.",
+    "Exploratory/descriptive only: no causal or inferential claims; schooling may postdate early birth/union; E8 is current household size, not kin support; wealth is a relative index, not income.",
+    "Extension must run all 96 feasible cells through the pinned engine; scout 55-cell pass is EXPLORATORY with attribution (point estimates verified, SEs/contrasts not execution-grade).",
+    "BLOCKED coverage: PH 2003 (hv022 missing), PH 2008/2013 E1-E3 (attendance absent); availability matrix to be corrected.",
+    "No restricted microdata off this Mac; box not used; outputs are non-disclosive aggregates only."
+  ],
+  "scout_verdict": {
+    "point_estimates": "SOUND (155/155 verified; 154 match <1e-6; 1 differs 0.013pp due to one implausible age-9 first-birth record)",
+    "inference": "UNSOUND for execution (subset-domain variance): SE ratio median 1.0016 but 19/155 cells >10% off (up to +40% conservative, 1 cell -8%)",
+    "coverage": "INCOMPLETE (55/96 feasible cells; conflict A)",
+    "status": "EXPLORATORY-CANDIDATE with attribution; not execution evidence"
+  },
+  "evidence": {
+    "synthetic_harness": "qa/qa_tests.R (26 tests; fixtures labelled synthetic only) + qa/logs/results.csv",
+    "real_data_audit": "qa/logs/real/real_data_audit.json",
+    "scout_audit": "qa/logs/real/scout_audit_summary.json",
+    "benchmark_checks": "qa/logs/real/benchmark_check_v02.csv",
+    "singleton_sensitivity": "qa/logs/real/singleton_sensitivity_summary.csv",
+    "defects": "qa/DEFECTS.md",
+    "qa_report": "qa/QA_REPORT.md"
+  },
+  "restricted_data_off_mac": false,
+  "box_used_for_dhs": false,
+  "interpreter": "R 4.5.3 (2026-03-11) / survey 4.5 at /Users/treymenefee/neon-boot/r-env/bin/Rscript"
+}

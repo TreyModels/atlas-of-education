@@ -1,0 +1,36 @@
+{
+ "n": 155,
+ "max_abs_mean_diff": 0.0001276814450412722,
+ "n_mean_diff_gt_1e_8": 1,
+ "se_ratio_median": 1.0015801503927526,
+ "se_ratio_p05": 0.9972417638659774,
+ "se_ratio_p95": 1.397890864637698,
+ "n_se_under_10pct": 0,
+ "n_se_over_10pct": 19,
+ "worst_under": [
+  {
+   "experiment": "E8",
+   "country": "KH",
+   "wave": "2010",
+   "group": "12+",
+   "se_ratio": 0.9178768790314834,
+   "n": 110
+  },
+  {
+   "experiment": "E1",
+   "country": "KH",
+   "wave": "2014",
+   "group": "5",
+   "se_ratio": 0.9797115999545,
+   "n": 1375
+  },
+  {
+   "experiment": "E5",
+   "country": "KH",
+   "wave": "2010",
+   "group": "12+",
+   "se_ratio": 0.9863082540565188,
+   "n": 414
+  }
+ ]
+}

@@ -1,0 +1,1290 @@
+{
+ "data_file": "/Users/treymenefee/neon-boot/dhs8_local/normalized_all.csv",
+ "manifest": "/Users/treymenefee/neon-boot/dhs8_local/manifest.json",
+ "n_rows": 939684,
+ "surveys": {
+  "ID-2017:person": {
+   "n_rows": 197723,
+   "n_psu": 1970,
+   "n_strata": 67,
+   "singleton_strata": 0,
+   "dup_psu_ids_within_stratum": -2519,
+   "psu_label_shared_across_strata": 0,
+   "pos_psus": 1970,
+   "weight_missing": 0,
+   "weight_nonpositive": 0,
+   "weight_min": 57602.0,
+   "weight_sum": 188565613132.0,
+   "year_min": 0,
+   "age_max": 98,
+   "nonmissing_age": 197704,
+   "nonmissing_sex": 197723,
+   "nonmissing_urban": 197723,
+   "nonmissing_wealth": 197723,
+   "nonmissing_attendance": 197164,
+   "nonmissing_school_years": 197309,
+   "nonmissing_children_ever_born": 0,
+   "nonmissing_age_first_birth": 0,
+   "nonmissing_currently_in_school": 197164,
+   "nonmissing_age_first_union": 0,
+   "nonmissing_household_size": 197723,
+   "afb_99_known_never": 0,
+   "afb_97_98": 0,
+   "afb_95_96": 0,
+   "afb_0": 0,
+   "afu_99_known_never": 0,
+   "afu_97_98": 0,
+   "school_years_gt_25": 0,
+   "ceb_99": 0,
+   "ceb_gt_25": 0,
+   "hh_lt1_or_gt60": 0,
+   "wealth_values": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "sex_values": [
+    1,
+    2
+   ],
+   "urban_values": [
+    0,
+    1
+   ],
+   "attendance_share_9_14": 0.9700435264999573,
+   "attendance_share_25_49": 0.0,
+   "experiments": {
+    "E1": {
+     "n": 15052
+    },
+    "E2": {
+     "n": 15052
+    },
+    "E3": {
+     "n": 15052
+    },
+    "E6_person_alt": {
+     "n": 7075
+    }
+   }
+  },
+  "KH-2000:person": {
+   "n_rows": 66285,
+   "n_psu": 471,
+   "n_strata": 226,
+   "singleton_strata": 0,
+   "dup_psu_ids_within_stratum": -50605,
+   "psu_label_shared_across_strata": 0,
+   "pos_psus": 471,
+   "weight_missing": 0,
+   "weight_nonpositive": 0,
+   "weight_min": 92901.0,
+   "weight_sum": 65887915669.0,
+   "year_min": 0,
+   "age_max": 97,
+   "nonmissing_age": 66285,
+   "nonmissing_sex": 66284,
+   "nonmissing_urban": 66285,
+   "nonmissing_wealth": 0,
+   "nonmissing_attendance": 66074,
+   "nonmissing_school_years": 66147,
+   "nonmissing_children_ever_born": 0,
+   "nonmissing_age_first_birth": 0,
+   "nonmissing_currently_in_school": 66074,
+   "nonmissing_age_first_union": 0,
+   "nonmissing_household_size": 66285,
+   "afb_99_known_never": 0,
+   "afb_97_98": 0,
+   "afb_95_96": 0,
+   "afb_0": 0,
+   "afu_99_known_never": 0,
+   "afu_97_98": 0,
+   "school_years_gt_25": 0,
+   "ceb_99": 0,
+   "ceb_gt_25": 0,
+   "hh_lt1_or_gt60": 0,
+   "wealth_values": [],
+   "sex_values": [
+    1,
+    2
+   ],
+   "urban_values": [
+    0,
+    1
+   ],
+   "attendance_share_9_14": 0.7754321808510638,
+   "attendance_share_25_49": 0.0,
+   "experiments": {
+    "E1": {
+     "n": 0
+    },
+    "E2": {
+     "n": 6559
+    },
+    "E3": {
+     "n": 6559
+    },
+    "E6_person_alt": {
+     "n": 2056
+    }
+   }
+  },
+  "KH-2000:woman": {
+   "n_rows": 15351,
+   "n_psu": 471,
+   "n_strata": 226,
+   "singleton_strata": 0,
+   "dup_psu_ids_within_stratum": -50605,
+   "psu_label_shared_across_strata": 0,
+   "pos_psus": 471,
+   "weight_missing": 0,
+   "weight_nonpositive": 0,
+   "weight_min": 91221.0,
+   "weight_sum": 15351000095.0,
+   "year_min": 15,
+   "age_max": 49,
+   "nonmissing_age": 15351,
+   "nonmissing_sex": 15351,
+   "nonmissing_urban": 15351,
+   "nonmissing_wealth": 0,
+   "nonmissing_attendance": 0,
+   "nonmissing_school_years": 15285,
+   "nonmissing_children_ever_born": 15351,
+   "nonmissing_age_first_birth": 15351,
+   "nonmissing_currently_in_school": 0,
+   "nonmissing_age_first_union": 15351,
+   "nonmissing_household_size": 15351,
+   "afb_99_known_never": 5421,
+   "afb_97_98": 0,
+   "afb_95_96": 0,
+   "afb_0": 0,
+   "afu_99_known_never": 4646,
+   "afu_97_98": 0,
+   "school_years_gt_25": 0,
+   "ceb_99": 0,
+   "ceb_gt_25": 0,
+   "hh_lt1_or_gt60": 0,
+   "wealth_values": [],
+   "sex_values": [
+    2
+   ],
+   "urban_values": [
+    0,
+    1
+   ],
+   "attendance_share_9_14": null,
+   "attendance_share_25_49": null,
+   "experiments": {
+    "E4": {
+     "n": 3232
+    },
+    "E5": {
+     "n": 4372
+    },
+    "E6": {
+     "n": 0
+    },
+    "E7": {
+     "n": 4372
+    },
+    "E8": {
+     "n": 3232
+    }
+   }
+  },
+  "KH-2005:person": {
+   "n_rows": 73010,
+   "n_psu": 557,
+   "n_strata": 270,
+   "singleton_strata": 0,
+   "dup_psu_ids_within_stratum": -72343,
+   "psu_label_shared_across_strata": 0,
+   "pos_psus": 557,
+   "weight_missing": 0,
+   "weight_nonpositive": 0,
+   "weight_min": 36548.0,
+   "weight_sum": 71344271572.0,
+   "year_min": 0,
+   "age_max": 97,
+   "nonmissing_age": 73010,
+   "nonmissing_sex": 73010,
+   "nonmissing_urban": 73010,
+   "nonmissing_wealth": 73010,
+   "nonmissing_attendance": 72891,
+   "nonmissing_school_years": 72723,
+   "nonmissing_children_ever_born": 0,
+   "nonmissing_age_first_birth": 0,
+   "nonmissing_currently_in_school": 72891,
+   "nonmissing_age_first_union": 0,
+   "nonmissing_household_size": 73010,
+   "afb_99_known_never": 0,
+   "afb_97_98": 0,
+   "afb_95_96": 0,
+   "afb_0": 0,
+   "afu_99_known_never": 0,
+   "afu_97_98": 0,
+   "school_years_gt_25": 0,
+   "ceb_99": 0,
+   "ceb_gt_25": 0,
+   "hh_lt1_or_gt60": 0,
+   "wealth_values": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "sex_values": [
+    1,
+    2
+   ],
+   "urban_values": [
+    0,
+    1
+   ],
+   "attendance_share_9_14": 0.8781393144842837,
+   "attendance_share_25_49": 0.0,
+   "experiments": {
+    "E1": {
+     "n": 7397
+    },
+    "E2": {
+     "n": 7397
+    },
+    "E3": {
+     "n": 7397
+    },
+    "E6_person_alt": {
+     "n": 3349
+    }
+   }
+  },
+  "KH-2005:woman": {
+   "n_rows": 16823,
+   "n_psu": 557,
+   "n_strata": 270,
+   "singleton_strata": 0,
+   "dup_psu_ids_within_stratum": -72343,
+   "psu_label_shared_across_strata": 0,
+   "pos_psus": 557,
+   "weight_missing": 0,
+   "weight_nonpositive": 0,
+   "weight_min": 36228.0,
+   "weight_sum": 16822991548.0,
+   "year_min": 15,
+   "age_max": 49,
+   "nonmissing_age": 16823,
+   "nonmissing_sex": 16823,
+   "nonmissing_urban": 16823,
+   "nonmissing_wealth": 0,
+   "nonmissing_attendance": 0,
+   "nonmissing_school_years": 16820,
+   "nonmissing_children_ever_born": 16823,
+   "nonmissing_age_first_birth": 16823,
+   "nonmissing_currently_in_school": 0,
+   "nonmissing_age_first_union": 16823,
+   "nonmissing_household_size": 16823,
+   "afb_99_known_never": 6032,
+   "afb_97_98": 0,
+   "afb_95_96": 0,
+   "afb_0": 0,
+   "afu_99_known_never": 5186,
+   "afu_97_98": 0,
+   "school_years_gt_25": 0,
+   "ceb_99": 0,
+   "ceb_gt_25": 0,
+   "hh_lt1_or_gt60": 0,
+   "wealth_values": [],
+   "sex_values": [
+    2
+   ],
+   "urban_values": [
+    0,
+    1
+   ],
+   "attendance_share_9_14": null,
+   "attendance_share_25_49": null,
+   "experiments": {
+    "E4": {
+     "n": 3771
+    },
+    "E5": {
+     "n": 4139
+    },
+    "E6": {
+     "n": 0
+    },
+    "E7": {
+     "n": 4139
+    },
+    "E8": {
+     "n": 3771
+    }
+   }
+  },
+  "KH-2010:person": {
+   "n_rows": 76920,
+   "n_psu": 611,
+   "n_strata": 38,
+   "singleton_strata": 0,
+   "dup_psu_ids_within_stratum": -833,
+   "psu_label_shared_across_strata": 0,
+   "pos_psus": 611,
+   "weight_missing": 0,
+   "weight_nonpositive": 0,
+   "weight_min": 53016.0,
+   "weight_sum": 75391252491.0,
+   "year_min": 0,
+   "age_max": 98,
+   "nonmissing_age": 76919,
+   "nonmissing_sex": 76919,
+   "nonmissing_urban": 76920,
+   "nonmissing_wealth": 76920,
+   "nonmissing_attendance": 76904,
+   "nonmissing_school_years": 76735,
+   "nonmissing_children_ever_born": 0,
+   "nonmissing_age_first_birth": 0,
+   "nonmissing_currently_in_school": 76904,
+   "nonmissing_age_first_union": 0,
+   "nonmissing_household_size": 76920,
+   "afb_99_known_never": 0,
+   "afb_97_98": 0,
+   "afb_95_96": 0,
+   "afb_0": 0,
+   "afu_99_known_never": 0,
+   "afu_97_98": 0,
+   "school_years_gt_25": 0,
+   "ceb_99": 0,
+   "ceb_gt_25": 0,
+   "hh_lt1_or_gt60": 0,
+   "wealth_values": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "sex_values": [
+    1,
+    2
+   ],
+   "urban_values": [
+    0,
+    1
+   ],
+   "attendance_share_9_14": 0.9068664643399089,
+   "attendance_share_25_49": 0.0,
+   "experiments": {
+    "E1": {
+     "n": 7127
+    },
+    "E2": {
+     "n": 7127
+    },
+    "E3": {
+     "n": 7127
+    },
+    "E6_person_alt": {
+     "n": 3582
+    }
+   }
+  },
+  "KH-2010:woman": {
+   "n_rows": 18754,
+   "n_psu": 611,
+   "n_strata": 38,
+   "singleton_strata": 0,
+   "dup_psu_ids_within_stratum": -833,
+   "psu_label_shared_across_strata": 0,
+   "pos_psus": 611,
+   "weight_missing": 0,
+   "weight_nonpositive": 0,
+   "weight_min": 56289.0,
+   "weight_sum": 18754000102.0,
+   "year_min": 15,
+   "age_max": 49,
+   "nonmissing_age": 18754,
+   "nonmissing_sex": 18754,
+   "nonmissing_urban": 18754,
+   "nonmissing_wealth": 0,
+   "nonmissing_attendance": 0,
+   "nonmissing_school_years": 18752,
+   "nonmissing_children_ever_born": 18754,
+   "nonmissing_age_first_birth": 18754,
+   "nonmissing_currently_in_school": 0,
+   "nonmissing_age_first_union": 18754,
+   "nonmissing_household_size": 18754,
+   "afb_99_known_never": 6898,
+   "afb_97_98": 0,
+   "afb_95_96": 0,
+   "afb_0": 0,
+   "afu_99_known_never": 5926,
+   "afu_97_98": 0,
+   "school_years_gt_25": 0,
+   "ceb_99": 0,
+   "ceb_gt_25": 0,
+   "hh_lt1_or_gt60": 0,
+   "wealth_values": [],
+   "sex_values": [
+    2
+   ],
+   "urban_values": [
+    0,
+    1
+   ],
+   "attendance_share_9_14": null,
+   "attendance_share_25_49": null,
+   "experiments": {
+    "E4": {
+     "n": 4284
+    },
+    "E5": {
+     "n": 5386
+    },
+    "E6": {
+     "n": 0
+    },
+    "E7": {
+     "n": 5386
+    },
+    "E8": {
+     "n": 4284
+    }
+   }
+  },
+  "KH-2014:person": {
+   "n_rows": 74122,
+   "n_psu": 611,
+   "n_strata": 38,
+   "singleton_strata": 0,
+   "dup_psu_ids_within_stratum": -833,
+   "psu_label_shared_across_strata": 0,
+   "pos_psus": 611,
+   "weight_missing": 0,
+   "weight_nonpositive": 0,
+   "weight_min": 45782.0,
+   "weight_sum": 73848855829.0,
+   "year_min": 0,
+   "age_max": 98,
+   "nonmissing_age": 74122,
+   "nonmissing_sex": 74122,
+   "nonmissing_urban": 74122,
+   "nonmissing_wealth": 74122,
+   "nonmissing_attendance": 74111,
+   "nonmissing_school_years": 74109,
+   "nonmissing_children_ever_born": 0,
+   "nonmissing_age_first_birth": 0,
+   "nonmissing_currently_in_school": 74111,
+   "nonmissing_age_first_union": 0,
+   "nonmissing_household_size": 74122,
+   "afb_99_known_never": 0,
+   "afb_97_98": 0,
+   "afb_95_96": 0,
+   "afb_0": 0,
+   "afu_99_known_never": 0,
+   "afu_97_98": 0,
+   "school_years_gt_25": 0,
+   "ceb_99": 0,
+   "ceb_gt_25": 0,
+   "hh_lt1_or_gt60": 0,
+   "wealth_values": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "sex_values": [
+    1,
+    2
+   ],
+   "urban_values": [
+    0,
+    1
+   ],
+   "attendance_share_9_14": 0.8911405295315682,
+   "attendance_share_25_49": 0.0,
+   "experiments": {
+    "E1": {
+     "n": 5696
+    },
+    "E2": {
+     "n": 5696
+    },
+    "E3": {
+     "n": 5696
+    },
+    "E6_person_alt": {
+     "n": 3376
+    }
+   }
+  },
+  "KH-2014:woman": {
+   "n_rows": 17578,
+   "n_psu": 611,
+   "n_strata": 38,
+   "singleton_strata": 0,
+   "dup_psu_ids_within_stratum": -833,
+   "psu_label_shared_across_strata": 0,
+   "pos_psus": 611,
+   "weight_missing": 0,
+   "weight_nonpositive": 0,
+   "weight_min": 47240.0,
+   "weight_sum": 17578000047.0,
+   "year_min": 15,
+   "age_max": 49,
+   "nonmissing_age": 17578,
+   "nonmissing_sex": 17578,
+   "nonmissing_urban": 17578,
+   "nonmissing_wealth": 0,
+   "nonmissing_attendance": 0,
+   "nonmissing_school_years": 17578,
+   "nonmissing_children_ever_born": 17578,
+   "nonmissing_age_first_birth": 17578,
+   "nonmissing_currently_in_school": 0,
+   "nonmissing_age_first_union": 17578,
+   "nonmissing_household_size": 17578,
+   "afb_99_known_never": 5855,
+   "afb_97_98": 0,
+   "afb_95_96": 0,
+   "afb_0": 0,
+   "afu_99_known_never": 4651,
+   "afu_97_98": 0,
+   "school_years_gt_25": 0,
+   "ceb_99": 0,
+   "ceb_gt_25": 0,
+   "hh_lt1_or_gt60": 0,
+   "wealth_values": [],
+   "sex_values": [
+    2
+   ],
+   "urban_values": [
+    0,
+    1
+   ],
+   "attendance_share_9_14": null,
+   "attendance_share_25_49": null,
+   "experiments": {
+    "E4": {
+     "n": 3896
+    },
+    "E5": {
+     "n": 5862
+    },
+    "E6": {
+     "n": 0
+    },
+    "E7": {
+     "n": 5862
+    },
+    "E8": {
+     "n": 3896
+    }
+   }
+  },
+  "KH-2021-22:person": {
+   "n_rows": 85804,
+   "n_psu": 709,
+   "n_strata": 49,
+   "singleton_strata": 0,
+   "dup_psu_ids_within_stratum": -1692,
+   "psu_label_shared_across_strata": 0,
+   "pos_psus": 709,
+   "weight_missing": 0,
+   "weight_nonpositive": 0,
+   "weight_min": 39587.0,
+   "weight_sum": 86184444629.0,
+   "year_min": 0,
+   "age_max": 98,
+   "nonmissing_age": 85804,
+   "nonmissing_sex": 85804,
+   "nonmissing_urban": 85804,
+   "nonmissing_wealth": 85804,
+   "nonmissing_attendance": 85804,
+   "nonmissing_school_years": 85437,
+   "nonmissing_children_ever_born": 0,
+   "nonmissing_age_first_birth": 0,
+   "nonmissing_currently_in_school": 85804,
+   "nonmissing_age_first_union": 0,
+   "nonmissing_household_size": 85804,
+   "afb_99_known_never": 0,
+   "afb_97_98": 0,
+   "afb_95_96": 0,
+   "afb_0": 0,
+   "afu_99_known_never": 0,
+   "afu_97_98": 0,
+   "school_years_gt_25": 0,
+   "ceb_99": 0,
+   "ceb_gt_25": 0,
+   "hh_lt1_or_gt60": 0,
+   "wealth_values": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "sex_values": [
+    1,
+    2
+   ],
+   "urban_values": [
+    0,
+    1
+   ],
+   "attendance_share_9_14": 0.7613179748191803,
+   "attendance_share_25_49": 0.0,
+   "experiments": {
+    "E1": {
+     "n": 6337
+    },
+    "E2": {
+     "n": 6337
+    },
+    "E3": {
+     "n": 6337
+    },
+    "E6_person_alt": {
+     "n": 2890
+    }
+   }
+  },
+  "KH-2021-22:woman": {
+   "n_rows": 19496,
+   "n_psu": 709,
+   "n_strata": 49,
+   "singleton_strata": 0,
+   "dup_psu_ids_within_stratum": -1692,
+   "psu_label_shared_across_strata": 0,
+   "pos_psus": 709,
+   "weight_missing": 0,
+   "weight_nonpositive": 0,
+   "weight_min": 38261.0,
+   "weight_sum": 19495999819.0,
+   "year_min": 15,
+   "age_max": 49,
+   "nonmissing_age": 19496,
+   "nonmissing_sex": 19496,
+   "nonmissing_urban": 19496,
+   "nonmissing_wealth": 0,
+   "nonmissing_attendance": 0,
+   "nonmissing_school_years": 19496,
+   "nonmissing_children_ever_born": 19496,
+   "nonmissing_age_first_birth": 19496,
+   "nonmissing_currently_in_school": 0,
+   "nonmissing_age_first_union": 19496,
+   "nonmissing_household_size": 19496,
+   "afb_99_known_never": 5622,
+   "afb_97_98": 0,
+   "afb_95_96": 0,
+   "afb_0": 0,
+   "afu_99_known_never": 4616,
+   "afu_97_98": 0,
+   "school_years_gt_25": 0,
+   "ceb_99": 0,
+   "ceb_gt_25": 0,
+   "hh_lt1_or_gt60": 0,
+   "wealth_values": [],
+   "sex_values": [
+    2
+   ],
+   "urban_values": [
+    0,
+    1
+   ],
+   "attendance_share_9_14": null,
+   "attendance_share_25_49": null,
+   "experiments": {
+    "E4": {
+     "n": 4228
+    },
+    "E5": {
+     "n": 6244
+    },
+    "E6": {
+     "n": 0
+    },
+    "E7": {
+     "n": 6244
+    },
+    "E8": {
+     "n": 4228
+    }
+   }
+  },
+  "PH-2017:person": {
+   "n_rows": 120273,
+   "n_psu": 1249,
+   "n_strata": 117,
+   "singleton_strata": 0,
+   "dup_psu_ids_within_stratum": -12440,
+   "psu_label_shared_across_strata": 0,
+   "pos_psus": 1249,
+   "weight_missing": 0,
+   "weight_nonpositive": 0,
+   "weight_min": 9113.0,
+   "weight_sum": 117065939758.0,
+   "year_min": 0,
+   "age_max": 98,
+   "nonmissing_age": 120273,
+   "nonmissing_sex": 120273,
+   "nonmissing_urban": 120273,
+   "nonmissing_wealth": 120273,
+   "nonmissing_attendance": 120272,
+   "nonmissing_school_years": 120150,
+   "nonmissing_children_ever_born": 0,
+   "nonmissing_age_first_birth": 0,
+   "nonmissing_currently_in_school": 120272,
+   "nonmissing_age_first_union": 0,
+   "nonmissing_household_size": 120273,
+   "afb_99_known_never": 0,
+   "afb_97_98": 0,
+   "afb_95_96": 0,
+   "afb_0": 0,
+   "afu_99_known_never": 0,
+   "afu_97_98": 0,
+   "school_years_gt_25": 0,
+   "ceb_99": 0,
+   "ceb_gt_25": 0,
+   "hh_lt1_or_gt60": 0,
+   "wealth_values": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "sex_values": [
+    1,
+    2
+   ],
+   "urban_values": [
+    0,
+    1
+   ],
+   "attendance_share_9_14": 0.9691063778434803,
+   "attendance_share_25_49": 0.0,
+   "experiments": {
+    "E1": {
+     "n": 10339
+    },
+    "E2": {
+     "n": 10339
+    },
+    "E3": {
+     "n": 10339
+    },
+    "E6_person_alt": {
+     "n": 4381
+    }
+   }
+  },
+  "PH-2022:person": {
+   "n_rows": 129724,
+   "n_psu": 1247,
+   "n_strata": 117,
+   "singleton_strata": 0,
+   "dup_psu_ids_within_stratum": -12442,
+   "psu_label_shared_across_strata": 0,
+   "pos_psus": 1247,
+   "weight_missing": 0,
+   "weight_nonpositive": 0,
+   "weight_min": 11658.0,
+   "weight_sum": 128452333957.0,
+   "year_min": 0,
+   "age_max": 98,
+   "nonmissing_age": 129724,
+   "nonmissing_sex": 129724,
+   "nonmissing_urban": 129724,
+   "nonmissing_wealth": 129724,
+   "nonmissing_attendance": 129724,
+   "nonmissing_school_years": 129472,
+   "nonmissing_children_ever_born": 0,
+   "nonmissing_age_first_birth": 0,
+   "nonmissing_currently_in_school": 129724,
+   "nonmissing_age_first_union": 0,
+   "nonmissing_household_size": 129724,
+   "afb_99_known_never": 0,
+   "afb_97_98": 0,
+   "afb_95_96": 0,
+   "afb_0": 0,
+   "afu_99_known_never": 0,
+   "afu_97_98": 0,
+   "school_years_gt_25": 0,
+   "ceb_99": 0,
+   "ceb_gt_25": 0,
+   "hh_lt1_or_gt60": 0,
+   "wealth_values": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "sex_values": [
+    1,
+    2
+   ],
+   "urban_values": [
+    0,
+    1
+   ],
+   "attendance_share_9_14": 0.9665253039298841,
+   "attendance_share_25_49": 0.0,
+   "experiments": {
+    "E1": {
+     "n": 11351
+    },
+    "E2": {
+     "n": 11351
+    },
+    "E3": {
+     "n": 11351
+    },
+    "E6_person_alt": {
+     "n": 4941
+    }
+   }
+  },
+  "PH-2022:woman": {
+   "n_rows": 27821,
+   "n_psu": 1247,
+   "n_strata": 117,
+   "singleton_strata": 0,
+   "dup_psu_ids_within_stratum": -12442,
+   "psu_label_shared_across_strata": 0,
+   "pos_psus": 1247,
+   "weight_missing": 0,
+   "weight_nonpositive": 0,
+   "weight_min": 11281.0,
+   "weight_sum": 27821000218.0,
+   "year_min": 15,
+   "age_max": 49,
+   "nonmissing_age": 27821,
+   "nonmissing_sex": 27821,
+   "nonmissing_urban": 27821,
+   "nonmissing_wealth": 0,
+   "nonmissing_attendance": 0,
+   "nonmissing_school_years": 27800,
+   "nonmissing_children_ever_born": 27821,
+   "nonmissing_age_first_birth": 27821,
+   "nonmissing_currently_in_school": 0,
+   "nonmissing_age_first_union": 27821,
+   "nonmissing_household_size": 27821,
+   "afb_99_known_never": 11925,
+   "afb_97_98": 0,
+   "afb_95_96": 0,
+   "afb_0": 0,
+   "afu_99_known_never": 11400,
+   "afu_97_98": 0,
+   "school_years_gt_25": 0,
+   "ceb_99": 0,
+   "ceb_gt_25": 0,
+   "hh_lt1_or_gt60": 0,
+   "wealth_values": [],
+   "sex_values": [
+    2
+   ],
+   "urban_values": [
+    0,
+    1
+   ],
+   "attendance_share_9_14": null,
+   "attendance_share_25_49": null,
+   "experiments": {
+    "E4": {
+     "n": 6601
+    },
+    "E5": {
+     "n": 7432
+    },
+    "E6": {
+     "n": 0
+    },
+    "E7": {
+     "n": 7432
+    },
+    "E8": {
+     "n": 6601
+    }
+   }
+  }
+ },
+ "readiness": [
+  {
+   "survey": "ID-2017:person",
+   "experiment": "E1",
+   "n_domain": 15052,
+   "runnable": true
+  },
+  {
+   "survey": "ID-2017:person",
+   "experiment": "E2",
+   "n_domain": 15052,
+   "runnable": true
+  },
+  {
+   "survey": "ID-2017:person",
+   "experiment": "E3",
+   "n_domain": 15052,
+   "runnable": true
+  },
+  {
+   "survey": "ID-2017:person",
+   "experiment": "E6_person_alt",
+   "n_domain": 7075,
+   "runnable": true
+  },
+  {
+   "survey": "KH-2000:person",
+   "experiment": "E1",
+   "n_domain": 0,
+   "runnable": false
+  },
+  {
+   "survey": "KH-2000:person",
+   "experiment": "E2",
+   "n_domain": 6559,
+   "runnable": true
+  },
+  {
+   "survey": "KH-2000:person",
+   "experiment": "E3",
+   "n_domain": 6559,
+   "runnable": true
+  },
+  {
+   "survey": "KH-2000:person",
+   "experiment": "E6_person_alt",
+   "n_domain": 2056,
+   "runnable": true
+  },
+  {
+   "survey": "KH-2000:woman",
+   "experiment": "E4",
+   "n_domain": 3232,
+   "runnable": true
+  },
+  {
+   "survey": "KH-2000:woman",
+   "experiment": "E5",
+   "n_domain": 4372,
+   "runnable": true
+  },
+  {
+   "survey": "KH-2000:woman",
+   "experiment": "E6",
+   "n_domain": 0,
+   "runnable": false
+  },
+  {
+   "survey": "KH-2000:woman",
+   "experiment": "E7",
+   "n_domain": 4372,
+   "runnable": true
+  },
+  {
+   "survey": "KH-2000:woman",
+   "experiment": "E8",
+   "n_domain": 3232,
+   "runnable": true
+  },
+  {
+   "survey": "KH-2005:person",
+   "experiment": "E1",
+   "n_domain": 7397,
+   "runnable": true
+  },
+  {
+   "survey": "KH-2005:person",
+   "experiment": "E2",
+   "n_domain": 7397,
+   "runnable": true
+  },
+  {
+   "survey": "KH-2005:person",
+   "experiment": "E3",
+   "n_domain": 7397,
+   "runnable": true
+  },
+  {
+   "survey": "KH-2005:person",
+   "experiment": "E6_person_alt",
+   "n_domain": 3349,
+   "runnable": true
+  },
+  {
+   "survey": "KH-2005:woman",
+   "experiment": "E4",
+   "n_domain": 3771,
+   "runnable": true
+  },
+  {
+   "survey": "KH-2005:woman",
+   "experiment": "E5",
+   "n_domain": 4139,
+   "runnable": true
+  },
+  {
+   "survey": "KH-2005:woman",
+   "experiment": "E6",
+   "n_domain": 0,
+   "runnable": false
+  },
+  {
+   "survey": "KH-2005:woman",
+   "experiment": "E7",
+   "n_domain": 4139,
+   "runnable": true
+  },
+  {
+   "survey": "KH-2005:woman",
+   "experiment": "E8",
+   "n_domain": 3771,
+   "runnable": true
+  },
+  {
+   "survey": "KH-2010:person",
+   "experiment": "E1",
+   "n_domain": 7127,
+   "runnable": true
+  },
+  {
+   "survey": "KH-2010:person",
+   "experiment": "E2",
+   "n_domain": 7127,
+   "runnable": true
+  },
+  {
+   "survey": "KH-2010:person",
+   "experiment": "E3",
+   "n_domain": 7127,
+   "runnable": true
+  },
+  {
+   "survey": "KH-2010:person",
+   "experiment": "E6_person_alt",
+   "n_domain": 3582,
+   "runnable": true
+  },
+  {
+   "survey": "KH-2010:woman",
+   "experiment": "E4",
+   "n_domain": 4284,
+   "runnable": true
+  },
+  {
+   "survey": "KH-2010:woman",
+   "experiment": "E5",
+   "n_domain": 5386,
+   "runnable": true
+  },
+  {
+   "survey": "KH-2010:woman",
+   "experiment": "E6",
+   "n_domain": 0,
+   "runnable": false
+  },
+  {
+   "survey": "KH-2010:woman",
+   "experiment": "E7",
+   "n_domain": 5386,
+   "runnable": true
+  },
+  {
+   "survey": "KH-2010:woman",
+   "experiment": "E8",
+   "n_domain": 4284,
+   "runnable": true
+  },
+  {
+   "survey": "KH-2014:person",
+   "experiment": "E1",
+   "n_domain": 5696,
+   "runnable": true
+  },
+  {
+   "survey": "KH-2014:person",
+   "experiment": "E2",
+   "n_domain": 5696,
+   "runnable": true
+  },
+  {
+   "survey": "KH-2014:person",
+   "experiment": "E3",
+   "n_domain": 5696,
+   "runnable": true
+  },
+  {
+   "survey": "KH-2014:person",
+   "experiment": "E6_person_alt",
+   "n_domain": 3376,
+   "runnable": true
+  },
+  {
+   "survey": "KH-2014:woman",
+   "experiment": "E4",
+   "n_domain": 3896,
+   "runnable": true
+  },
+  {
+   "survey": "KH-2014:woman",
+   "experiment": "E5",
+   "n_domain": 5862,
+   "runnable": true
+  },
+  {
+   "survey": "KH-2014:woman",
+   "experiment": "E6",
+   "n_domain": 0,
+   "runnable": false
+  },
+  {
+   "survey": "KH-2014:woman",
+   "experiment": "E7",
+   "n_domain": 5862,
+   "runnable": true
+  },
+  {
+   "survey": "KH-2014:woman",
+   "experiment": "E8",
+   "n_domain": 3896,
+   "runnable": true
+  },
+  {
+   "survey": "KH-2021-22:person",
+   "experiment": "E1",
+   "n_domain": 6337,
+   "runnable": true
+  },
+  {
+   "survey": "KH-2021-22:person",
+   "experiment": "E2",
+   "n_domain": 6337,
+   "runnable": true
+  },
+  {
+   "survey": "KH-2021-22:person",
+   "experiment": "E3",
+   "n_domain": 6337,
+   "runnable": true
+  },
+  {
+   "survey": "KH-2021-22:person",
+   "experiment": "E6_person_alt",
+   "n_domain": 2890,
+   "runnable": true
+  },
+  {
+   "survey": "KH-2021-22:woman",
+   "experiment": "E4",
+   "n_domain": 4228,
+   "runnable": true
+  },
+  {
+   "survey": "KH-2021-22:woman",
+   "experiment": "E5",
+   "n_domain": 6244,
+   "runnable": true
+  },
+  {
+   "survey": "KH-2021-22:woman",
+   "experiment": "E6",
+   "n_domain": 0,
+   "runnable": false
+  },
+  {
+   "survey": "KH-2021-22:woman",
+   "experiment": "E7",
+   "n_domain": 6244,
+   "runnable": true
+  },
+  {
+   "survey": "KH-2021-22:woman",
+   "experiment": "E8",
+   "n_domain": 4228,
+   "runnable": true
+  },
+  {
+   "survey": "PH-2017:person",
+   "experiment": "E1",
+   "n_domain": 10339,
+   "runnable": true
+  },
+  {
+   "survey": "PH-2017:person",
+   "experiment": "E2",
+   "n_domain": 10339,
+   "runnable": true
+  },
+  {
+   "survey": "PH-2017:person",
+   "experiment": "E3",
+   "n_domain": 10339,
+   "runnable": true
+  },
+  {
+   "survey": "PH-2017:person",
+   "experiment": "E6_person_alt",
+   "n_domain": 4381,
+   "runnable": true
+  },
+  {
+   "survey": "PH-2022:person",
+   "experiment": "E1",
+   "n_domain": 11351,
+   "runnable": true
+  },
+  {
+   "survey": "PH-2022:person",
+   "experiment": "E2",
+   "n_domain": 11351,
+   "runnable": true
+  },
+  {
+   "survey": "PH-2022:person",
+   "experiment": "E3",
+   "n_domain": 11351,
+   "runnable": true
+  },
+  {
+   "survey": "PH-2022:person",
+   "experiment": "E6_person_alt",
+   "n_domain": 4941,
+   "runnable": true
+  },
+  {
+   "survey": "PH-2022:woman",
+   "experiment": "E4",
+   "n_domain": 6601,
+   "runnable": true
+  },
+  {
+   "survey": "PH-2022:woman",
+   "experiment": "E5",
+   "n_domain": 7432,
+   "runnable": true
+  },
+  {
+   "survey": "PH-2022:woman",
+   "experiment": "E6",
+   "n_domain": 0,
+   "runnable": false
+  },
+  {
+   "survey": "PH-2022:woman",
+   "experiment": "E7",
+   "n_domain": 7432,
+   "runnable": true
+  },
+  {
+   "survey": "PH-2022:woman",
+   "experiment": "E8",
+   "n_domain": 6601,
+   "runnable": true
+  }
+ ],
+ "issues": []
+}

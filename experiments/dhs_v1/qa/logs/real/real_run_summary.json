@@ -1,0 +1,99 @@
+{
+ "n_estimates": 155,
+ "n_status": 64,
+ "n_missing_rows": 56,
+ "status_by_experiment": {
+  "('E1', 'insufficient complete cases (<50 complete cases in the domain)')": 1,
+  "('E1', 'ok')": 7,
+  "('E2', 'ok')": 8,
+  "('E3', 'ok')": 8,
+  "('E4', 'no rows for this record_type')": 2,
+  "('E4', 'ok')": 6,
+  "('E5', 'no rows for this record_type')": 2,
+  "('E5', 'ok')": 6,
+  "('E6', 'ok')": 8,
+  "('E7', 'no rows for this record_type')": 2,
+  "('E7', 'ok')": 6,
+  "('E8', 'no rows for this record_type')": 2,
+  "('E8', 'ok')": 6
+ },
+ "status_non_ok": {
+  "('E1', 'insufficient complete cases (<50 complete cases in the domain)')": 1,
+  "('E4', 'no rows for this record_type')": 2,
+  "('E5', 'no rows for this record_type')": 2,
+  "('E7', 'no rows for this record_type')": 2,
+  "('E8', 'no rows for this record_type')": 2
+ },
+ "estimates_by_experiment": {
+  "E1": 35,
+  "E2": 16,
+  "E3": 16,
+  "E4": 18,
+  "E5": 18,
+  "E6": 16,
+  "E7": 18,
+  "E8": 18
+ },
+ "surveys_by_experiment": {
+  "E1": 3,
+  "E2": 3,
+  "E3": 3,
+  "E4": 2,
+  "E5": 2,
+  "E6": 3,
+  "E7": 2,
+  "E8": 2
+ },
+ "suppressed_by_experiment": {
+  "E4": 1,
+  "E5": 1,
+  "E8": 1
+ },
+ "suppression_reasons": {
+  "n<30": 2,
+  "RSE": 6,
+  "fewer than 2 PSUs": 0,
+  "design df": 0,
+  "non-finite SE": 0
+ },
+ "published_cells": 152,
+ "disclosure_violations": {
+  "n_lt_30": 0,
+  "n_psu_lt_2": 0,
+  "df_lt_1": 0,
+  "nonfinite": 0
+ },
+ "columns_present": [
+  "n_unweighted",
+  "n_weighted",
+  "n_psu_domain",
+  "n_strata_domain",
+  "design_df",
+  "rse",
+  "suppressed",
+  "flags",
+  "q_value_bh",
+  "externally_benchmarked",
+  "not_externally_benchmarked"
+ ],
+ "multiplicity": {
+  "all_exploratory": true,
+  "n_q_values": 152
+ },
+ "benchmark": {
+  "manifest_status": "NOT_RUN: no benchmarks file supplied (real DHS microdata/benchmarks are BLOCKED in this worktree)",
+  "n_externally_benchmarked": 0,
+  "n_benchmark_pending": 155
+ },
+ "e6_definition": "person (DEVIATION: PR females 20-24 with person weight; needs lead sign-off; NOT the v1 woman-record E6)",
+ "lonely_policy": "fail",
+ "weight_provenance": "single weight column (weight) -- adapter must certify record-appropriate weight; NOT machine-verified",
+ "adapter_metadata_recorded": true,
+ "independent_recompute": {
+  "n_compared": 152,
+  "max_abs_diff": 5.970204768390719e-05,
+  "unmatched": 0
+ },
+ "manifest_input_sha256": "961ef27a6b8800f2",
+ "manifest_has_hashes": true
+}

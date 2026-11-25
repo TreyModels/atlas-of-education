@@ -1,0 +1,11 @@
+benchmark_id,indicator,our_statistic,published,diff_pp,tolerance_pp,direction,within_tolerance,check
+B001,"primary NAR (age 6-11), any-level current attendance",74.65,72.8,1.85,2.5,ours_higher,True,MATCH (definitional; any-attendance vs attending-primary NAR)
+B002:M,primary NAR by sex (M),73.23,72.0,1.23,2.5,ours_higher,True,MATCH (definitional)
+B002:F,primary NAR by sex (F),76.14,73.5,2.64,2.5,ours_higher,False,"MISMATCH (>2.5pp; report definitional gap, matches data-team finding)"
+B003,secondary NAR (age 12-18),60.18,42.0,18.18,3.0,ours_higher,False,NOT A VALIDATION: any-level current attendance vs attending-secondary NAR; report direction only (registry marks NOT MATCHED)
+B004:urban,primary NAR urban,76.93,75.5,1.43,3.0,ours_higher,True,MATCH (definitional)
+B004:rural,primary NAR rural,73.44,71.3,2.14,3.0,ours_higher,True,MATCH (definitional)
+B005,PH adolescent attendance by wealth,,,,,,,PENDING (no published value retrieved; not_externally_benchmarked=true)
+B006,ID adolescent attendance by wealth,,,,,,,PENDING
+B007,VN attendance / women outcomes,,,,,,,PENDING
+B008,E4-E8 women outcomes,,,,,,,PENDING (published tables use different age/education bands)

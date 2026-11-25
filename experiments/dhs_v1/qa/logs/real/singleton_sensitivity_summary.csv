@@ -1,0 +1,7 @@
+file,cells,max_d_est,max_d_se,note
+ID_2007_person,11,0.0,1.63e-06,adjust vs certainty vs remove identical estimates; SE differences negligible
+VN_1997_person,6,0.0,7.41e-05,identical estimates; SE differences negligible
+VN_2002_person,6,0.0,6.3e-05,identical estimates; SE differences negligible
+PH_2008_person,0,,,no estimates: attendance absent (E1-E3 blocked); design also has 19 singleton strata (ledger)
+PH_2013_person,0,,,no estimates: attendance absent (E1-E3 blocked)
+PH_2003_person,0,,,BLOCKED: hv022 (variance stratum) missing on all rows; no documented justification to substitute hv023

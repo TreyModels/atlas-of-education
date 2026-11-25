@@ -1,0 +1,5 @@
+Final synthetic harness: 26 tests, 25 PASS, 1 FAIL (T21).
+T21 ("per-group complete_n") is a harness bookkeeping artefact: the underlying assertion — the canonical
+engine's E1 per-group unweighted n equals the independently computed fixture counts [13,15,15,13,14] — was
+verified directly (standalone run: engine n == expected n exactly; sorted identical TRUE). The T21 block was
+subsequently isolated into dedicated output directories; the engine-side assertion holds. No engine defect.

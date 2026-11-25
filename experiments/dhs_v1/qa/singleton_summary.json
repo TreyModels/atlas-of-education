@@ -1,0 +1,321 @@
+{
+ "n_files": 28,
+ "n_files_with_singletons": 4,
+ "n_singleton_strata_total": 22,
+ "by_file": {
+  "ID/normalized_ID_2007_person.csv": 1,
+  "PH/normalized_PH_2008_person.csv": 19,
+  "VN/normalized_VN_1997_person.csv": 1,
+  "VN/normalized_VN_2002_person.csv": 1
+ },
+ "files": [
+  {
+   "file": "ID/normalized_ID_1991_person.csv",
+   "country": "ID",
+   "wave": "1991",
+   "record_type": "person",
+   "n_rows": 129757,
+   "n_strata": 521,
+   "n_psu": 1069,
+   "n_singleton_strata": 0,
+   "attendance_nonmissing": 128783
+  },
+  {
+   "file": "ID/normalized_ID_1994_person.csv",
+   "country": "ID",
+   "wave": "1994",
+   "record_type": "person",
+   "n_rows": 158497,
+   "n_strata": 677,
+   "n_psu": 1416,
+   "n_singleton_strata": 0,
+   "attendance_nonmissing": 158048
+  },
+  {
+   "file": "ID/normalized_ID_1997_person.csv",
+   "country": "ID",
+   "wave": "1997",
+   "record_type": "person",
+   "n_rows": 154343,
+   "n_strata": 676,
+   "n_psu": 1413,
+   "n_singleton_strata": 0,
+   "attendance_nonmissing": 154340
+  },
+  {
+   "file": "ID/normalized_ID_2002-03_person.csv",
+   "country": "ID",
+   "wave": "2002-03",
+   "record_type": "person",
+   "n_rows": 149222,
+   "n_strata": 680,
+   "n_psu": 1392,
+   "n_singleton_strata": 0,
+   "attendance_nonmissing": 147901
+  },
+  {
+   "file": "ID/normalized_ID_2007_person.csv",
+   "country": "ID",
+   "wave": "2007",
+   "record_type": "person",
+   "n_rows": 178843,
+   "n_strata": 754,
+   "n_psu": 1694,
+   "n_singleton_strata": 1,
+   "attendance_nonmissing": 177818
+  },
+  {
+   "file": "ID/normalized_ID_2012_person.csv",
+   "country": "ID",
+   "wave": "2012",
+   "record_type": "person",
+   "n_rows": 185345,
+   "n_strata": 65,
+   "n_psu": 1832,
+   "n_singleton_strata": 0,
+   "attendance_nonmissing": 59351
+  },
+  {
+   "file": "ID/normalized_ID_2017_person.csv",
+   "country": "ID",
+   "wave": "2017",
+   "record_type": "person",
+   "n_rows": 197723,
+   "n_strata": 67,
+   "n_psu": 1970,
+   "n_singleton_strata": 0,
+   "attendance_nonmissing": 197164
+  },
+  {
+   "file": "KH/normalized_KH_2000_person.csv",
+   "country": "KH",
+   "wave": "2000",
+   "record_type": "person",
+   "n_rows": 66285,
+   "n_strata": 226,
+   "n_psu": 471,
+   "n_singleton_strata": 0,
+   "attendance_nonmissing": 66100
+  },
+  {
+   "file": "KH/normalized_KH_2000_woman.csv",
+   "country": "KH",
+   "wave": "2000",
+   "record_type": "woman",
+   "n_rows": 15351,
+   "n_strata": 226,
+   "n_psu": 471,
+   "n_singleton_strata": 0,
+   "attendance_nonmissing": 0
+  },
+  {
+   "file": "KH/normalized_KH_2005_person.csv",
+   "country": "KH",
+   "wave": "2005",
+   "record_type": "person",
+   "n_rows": 73010,
+   "n_strata": 270,
+   "n_psu": 557,
+   "n_singleton_strata": 0,
+   "attendance_nonmissing": 72891
+  },
+  {
+   "file": "KH/normalized_KH_2005_woman.csv",
+   "country": "KH",
+   "wave": "2005",
+   "record_type": "woman",
+   "n_rows": 16823,
+   "n_strata": 270,
+   "n_psu": 557,
+   "n_singleton_strata": 0,
+   "attendance_nonmissing": 0
+  },
+  {
+   "file": "KH/normalized_KH_2010_person.csv",
+   "country": "KH",
+   "wave": "2010",
+   "record_type": "person",
+   "n_rows": 76920,
+   "n_strata": 38,
+   "n_psu": 611,
+   "n_singleton_strata": 0,
+   "attendance_nonmissing": 76904
+  },
+  {
+   "file": "KH/normalized_KH_2010_woman.csv",
+   "country": "KH",
+   "wave": "2010",
+   "record_type": "woman",
+   "n_rows": 18754,
+   "n_strata": 38,
+   "n_psu": 611,
+   "n_singleton_strata": 0,
+   "attendance_nonmissing": 0
+  },
+  {
+   "file": "KH/normalized_KH_2014_person.csv",
+   "country": "KH",
+   "wave": "2014",
+   "record_type": "person",
+   "n_rows": 74122,
+   "n_strata": 38,
+   "n_psu": 611,
+   "n_singleton_strata": 0,
+   "attendance_nonmissing": 74111
+  },
+  {
+   "file": "KH/normalized_KH_2014_woman.csv",
+   "country": "KH",
+   "wave": "2014",
+   "record_type": "woman",
+   "n_rows": 17578,
+   "n_strata": 38,
+   "n_psu": 611,
+   "n_singleton_strata": 0,
+   "attendance_nonmissing": 0
+  },
+  {
+   "file": "KH/normalized_KH_2021-22_person.csv",
+   "country": "KH",
+   "wave": "2021-22",
+   "record_type": "person",
+   "n_rows": 85804,
+   "n_strata": 49,
+   "n_psu": 709,
+   "n_singleton_strata": 0,
+   "attendance_nonmissing": 85804
+  },
+  {
+   "file": "KH/normalized_KH_2021-22_woman.csv",
+   "country": "KH",
+   "wave": "2021-22",
+   "record_type": "woman",
+   "n_rows": 19496,
+   "n_strata": 49,
+   "n_psu": 709,
+   "n_singleton_strata": 0,
+   "attendance_nonmissing": 0
+  },
+  {
+   "file": "PH/normalized_PH_1993_person.csv",
+   "country": "PH",
+   "wave": "1993",
+   "record_type": "person",
+   "n_rows": 70247,
+   "n_strata": 349,
+   "n_psu": 744,
+   "n_singleton_strata": 0,
+   "attendance_nonmissing": 69339
+  },
+  {
+   "file": "PH/normalized_PH_1998_person.csv",
+   "country": "PH",
+   "wave": "1998",
+   "record_type": "person",
+   "n_rows": 64846,
+   "n_strata": 354,
+   "n_psu": 752,
+   "n_singleton_strata": 0,
+   "attendance_nonmissing": 64461
+  },
+  {
+   "file": "PH/normalized_PH_2003_person.csv",
+   "country": "PH",
+   "wave": "2003",
+   "record_type": "person",
+   "n_rows": 61864,
+   "n_strata": 1,
+   "n_psu": 819,
+   "n_singleton_strata": 0,
+   "attendance_nonmissing": 61796
+  },
+  {
+   "file": "PH/normalized_PH_2008_person.csv",
+   "country": "PH",
+   "wave": "2008",
+   "record_type": "person",
+   "n_rows": 60901,
+   "n_strata": 365,
+   "n_psu": 792,
+   "n_singleton_strata": 19,
+   "attendance_nonmissing": 0
+  },
+  {
+   "file": "PH/normalized_PH_2013_person.csv",
+   "country": "PH",
+   "wave": "2013",
+   "record_type": "person",
+   "n_rows": 71893,
+   "n_strata": 33,
+   "n_psu": 800,
+   "n_singleton_strata": 0,
+   "attendance_nonmissing": 0
+  },
+  {
+   "file": "PH/normalized_PH_2017_person.csv",
+   "country": "PH",
+   "wave": "2017",
+   "record_type": "person",
+   "n_rows": 120273,
+   "n_strata": 117,
+   "n_psu": 1249,
+   "n_singleton_strata": 0,
+   "attendance_nonmissing": 120272
+  },
+  {
+   "file": "PH/normalized_PH_2022_person.csv",
+   "country": "PH",
+   "wave": "2022",
+   "record_type": "person",
+   "n_rows": 129724,
+   "n_strata": 117,
+   "n_psu": 1247,
+   "n_singleton_strata": 0,
+   "attendance_nonmissing": 129724
+  },
+  {
+   "file": "PH/normalized_PH_2022_woman.csv",
+   "country": "PH",
+   "wave": "2022",
+   "record_type": "woman",
+   "n_rows": 27821,
+   "n_strata": 117,
+   "n_psu": 1247,
+   "n_singleton_strata": 0,
+   "attendance_nonmissing": 0
+  },
+  {
+   "file": "VN/normalized_VN_1997_person.csv",
+   "country": "VN",
+   "wave": "1997",
+   "record_type": "person",
+   "n_rows": 32962,
+   "n_strata": 103,
+   "n_psu": 205,
+   "n_singleton_strata": 1,
+   "attendance_nonmissing": 32962
+  },
+  {
+   "file": "VN/normalized_VN_2002_person.csv",
+   "country": "VN",
+   "wave": "2002",
+   "record_type": "person",
+   "n_rows": 31529,
+   "n_strata": 103,
+   "n_psu": 205,
+   "n_singleton_strata": 1,
+   "attendance_nonmissing": 31516
+  },
+  {
+   "file": "VN/normalized_VN_2005ais_person.csv",
+   "country": "VN",
+   "wave": "2005ais",
+   "record_type": "person",
+   "n_rows": 26833,
+   "n_strata": 123,
+   "n_psu": 251,
+   "n_singleton_strata": 0,
+   "attendance_nonmissing": 26826
+  }
+ ]
+}

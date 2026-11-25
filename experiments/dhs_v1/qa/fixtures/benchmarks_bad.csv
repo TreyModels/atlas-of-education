@@ -1,0 +1,2 @@
+"experiment","country","wave","group","benchmark","tolerance","source","citation"
+"E1","FIXTURE_KM",2000,"4",0.99,0.01,"SYNTHETIC FIXTURE","not a real benchmark; fixture only"
