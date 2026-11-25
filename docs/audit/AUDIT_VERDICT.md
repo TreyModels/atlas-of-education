@@ -1138,7 +1138,25 @@ T1 is screening-indeterminate; confirmatory can still test it as pre-registered,
 screening (not silently promoted). Alternative: raise the cap to cover a contrast-complete set / restrict confirmatory
 to T2/T3/T4. **No confirmatory compute until the Lead chooses and the frozen list is signed and put in the manifest.**
 
-**Status: screening QA PASS (artefact integrity); PASSER FREEZE BLOCKED — amendment A4 required; no confirmatory run.**
+**PASSER FREEZE SIGNED (2026-11-26) — conditional on manifest/runner provenance.** Verified
+`docs/audit/PAPER_C_PASSERS.json` sha256 **`b64a69f0391d0089b535b6e43cfd2a55680f6c812159c3f0e37efc6ba95b99e7`**
+(source screening `6bcc29a5…`; 288 runs/36 cells; `invalid_cells=[]`) and `PAPER_C_A4_P12_CLARIFICATION.md` sha
+`8c967eab…`. Rules: α=.05, **Holm across T1–T4**, 8 matched seeds, pre-declared min effects, >6 → first 6 in appendix
+order. Test outcomes: **T1 +0.655 pp (se .021) vs min 3.0 → FAILS**; **T2 +0.540 (se .0003) vs min .10 → PASSES**;
+**T3 +0.144 (se 0) vs min .05 with assertion-support h(A|P55)=.144/h(A|P12)=0 → PASSES**; **T4 +1.7668 pp (se .024) vs
+min 2.0 → FAILS** (95 % CI ≈[1.72, 1.81], entirely below 2; no threshold change). **24 candidates (A/C cells from T2/T3)
+→ 6 frozen passers in appendix order:** `S0.85|L0.25|A|P55`, `S0.85|L0.25|C|P55`, `S0.85|L0.25|A|P12`,
+`S0.85|L0.25|C|P12`, `S0.85|L0.45|A|P55`, `S0.85|L0.45|C|P55`; remainder screening-only.
+
+**Signed meaning:** T2/T3 are the only confirmatory tests; **T1 and T4 are screening failures to be reported, not
+confirmatory tests** (no post-hoc threshold change, no promotion). The six passers are all **S=.85**; T2 is testable at
+L=.25 P55/P12 and L=.45 P55, T3 at L=.25/.45 — **no S-generalisation** beyond .85. **Conditions before any confirmatory
+compute:** (i) the confirmatory manifest must cite A4 `8c967eab…` + passers `b64a69f0…` + a **committed** runner sha
+(HEAD `48ec3485…`) and its commit; the worktree currently has **uncommitted** screening-runner edits (`ddeffe42…`) and an
+**untracked** `run_paperC_confirmatory.py` (`fcf86c8b…`) — commit/pin before use, no uncommitted runner; (ii) pre-declare
+the confirmatory **Holm family explicitly** (T2/T3 only, or T1–T4 with T1/T4 marked screening-fail/not-run); (iii) N=1500,
+seeds 100–131, 6 cells, ≤22 CPU-h, 1–2 slot reserve; no compute until the manifest is frozen and the Lead allocates the
+box. **Status: PASSER FREEZE SIGNED (conditional); no confirmatory compute launched.**
 
 ## 5. Evidence-status register (programme level)
 

@@ -380,3 +380,12 @@ S1.00/L0.25/A/P55, S1.15/L0.25/A/P55 (T1), S1.00/L0.25/C/P55 (T2), S1.00/L0.25/A
 T1 reported screening-indeterminate, confirmatory can still test it; ~22 CPU-h. Alternative: raise cap/restrict tests.
 **No passer list frozen; no confirmatory compute until Lead chooses and the list is signed + in manifest.**
 
+**PASSER FREEZE SIGNED (2026-11-26, conditional) — `PAPER_C_PASSERS.json` sha `b64a69f0…`; A4 `8c967eab…`; screening
+`6bcc29a5…`.** T1 +0.655 pp (se .021) fails min 3.0; T2 +0.540 (se .0003) passes min .10; T3 +.144 (se 0) passes
+min .05 with assertion support; T4 +1.7668 pp (se .024) fails min 2.0 (CI below 2). 24 candidates (A/C from T2/T3) → 6
+frozen passers (appendix order): S0.85/L0.25/A/P55, S0.85/L0.25/C/P55, S0.85/L0.25/A/P12, S0.85/L0.25/C/P12,
+S0.85/L0.45/A/P55, S0.85/L0.45/C/P55. **T2/T3 are the only confirmatory tests; T1/T4 are screening failures to report;
+no threshold change; passers all S=.85 (no S-generalisation).** Conditions: manifest cites A4 + passers + **committed**
+runner sha 48ec3485 (worktree currently has uncommitted screen-runner edits ddeffe42 and untracked
+run_paperC_confirmatory.py fcf86c8b — commit/pin before use); explicit confirmatory Holm family; N=1500, seeds 100–131,
+6 cells, ≤22 CPU-h, 1–2 slot reserve. **Signed conditional; no confirmatory compute launched.**
