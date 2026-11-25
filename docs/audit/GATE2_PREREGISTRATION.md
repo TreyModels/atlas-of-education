@@ -91,6 +91,8 @@ evidence**. This directly addresses the G2-A caveat (one-seed rank 4/4 unstable,
 | # | date | change | reason |
 |---|---|---|---|
 | — | 2026-11-25 | initial registration before launch | operator directive |
+| A1 | 2026-11-25 | adjudication fold-in (claim labels, budgets, review gate) committed before launch | adjudication `32718ba` |
+| A2 | 2026-11-25 | engine re-pin `98baf6b` -> `846c9e0` (mid-run calendar-event fix; core `e111397b…`; numerics unchanged): Paper B and g2a runs remain on `98baf6b` and are labelled so; gate grid and forecast rerun use `846c9e0` | engine-core `846c9e0`; 27-suite PASS; max|Δ|=0.0 |
 
 ## 5. Addendum A1 — adjudication fold-in and budget (before launch, 2026-11-25)
 

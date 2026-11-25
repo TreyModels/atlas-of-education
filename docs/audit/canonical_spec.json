@@ -8,9 +8,10 @@
     "CF4a": "CF3b + contest_max_e *= 0.5",
     "CF4b": "CF3b + gate[2]['share'] = S_maj"
   },
+  "engine_commit": "846c9e0",
   "engine_file_sha256": {
-    "engine/eduengine/contest_math.py": "23a01730bf939a9e22befa3ca395094a48c5e870fb10901ceb015cddd793a3c8",
-    "engine/eduengine/core.py": "72cbddf7d97db85269081ae1c8ab692153c27b0553d4ce59691beab20bbfcb99",
+    "engine/eduengine/contest_math.py": "cd7b5ba6cb55d250dfce9479cfd6b3d8dfcd7cf4120208ecd26c4116a0ab38bb",
+    "engine/eduengine/core.py": "e111397bd8a50f94e82bb77715f236ee3d5c0bf863a23d84afdf1c6c71fa8e71",
     "engine/eduengine/modules/labour.py": "0ccfb3ce5b4c88fc2969909dbdbbc4d32184052fe5359688f96e00c2667b3f7d",
     "engine/eduengine/modules/schools.py": "9b079280e0b01cc0681dfdb956b9cff8bcc82a9274f03263f209999bc7142745",
     "engine/eduengine/modules/sdg4.py": "5ce05c8b3663f32169a8a1f8b2407e0d5418a9dca50fdd1cba1af7fb02e592be",
@@ -20,7 +21,7 @@
     "engine/eduengine/rng.py": "ada4a760d75a14f4d82a8aaf70964dee6a2f7f4130d53018ad190fafa4920b08"
   },
   "frozen_files_sha256": {
-    "canonical_spec_content_sha256": "c5f9e2de1c04b4ef467f4e9016c942616f7c7e67f94bc3a08be9bbd7b2f34a05",
+    "canonical_spec_content_sha256": "280b5d953cb17b9f2d5c08e354b16d58cb66882b77f66464ab87cfc6c9a12932",
     "note": "content hash computed over the spec without this field"
   },
   "metadata": {

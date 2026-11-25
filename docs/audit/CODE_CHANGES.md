@@ -151,3 +151,20 @@ failures above are preserved verbatim as the historical record.
 | 2026-11-25 | `01cb4d3`, `9e04236`, `47b342a`, `ffed664` | P0 task-7 DGP validation (rank 5/5 in 500/500) + task-8 bootstrap size/power factorial |
 | 2026-11-25 | `d1acdf3`, `1b34d36` | P0 task-12 perf: KEEP-MEMO-ONLY shipped, outputs bit-identical, 1.113× (2–5× unproven) |
 | 2026-11-25 | `8148998` | **Gate-1 close**: repaired-engine 540 migration table (`GATE1_MIGRATION_TABLE.md`), CF4 flip, honest-P decomposition, Gate-1 report pack, pool-hang incident + stack, P0 annex to claim ledger |
+
+
+## Re-pin 2026-11-25 (gate1a mid-run calendar events, engine-core `846c9e0`)
+
+* New engine pin: clean `git archive 846c9e0`; `engine/eduengine/core.py` sha256 `e111397bd8a50f94e82bb77715f236ee3d5c0bf863a23d84afdf1c6c71fa8e71`
+  (was `72cbddf7…` @ `98baf6b`); `contest_math.py` sha256 `cd7b5ba6cb55d250dfce9479cfd6b3d8dfcd7cf4120208ecd26c4116a0ab38bb` (task-12 version).
+* `docs/audit/canonical_spec.json` re-pinned: engine_commit `846c9e0`, engine_file_sha256 refreshed, content sha256
+  `280b5d953cb17b9f2d5c08e354b16d58cb66882b77f66464ab87cfc6c9a12932`, file sha256
+  `e5ddef6b4ecd04a0e96f480b43a97f0567bed7654ec032c1779c9e20f6beb755`.
+* Why: `Engine.apply_calendar` silently accepted events whose `year` never coincides with `start_year + t`; a runner that
+  passed a simulation index as `year` got a silent no-op (root cause of the forecast-(e) zero-effect artefact). Fix adds
+  `_validate_events` warnings, `E.unfired_events`, `year_t=<t>` event key, cached-param/path-shadow audits, and
+  regression tests.
+* Evidence: `ENGINE_CHECKS.py` 14/14 PASS; `tests/test_engine_invariants.py` **27 passed** on the pinned tree; numeric
+  comparison old vs new (HK baseline, all 46 `tut_k12_rate` values) **max|Δ| = 0.0**; engine-core's 118-series
+  signature identical. All pre-re-pin new-generation runs (Paper B, g2a) remain valid and must be labelled with the
+  `98baf6b`/`72cbddf7…` pin in their manifests.
