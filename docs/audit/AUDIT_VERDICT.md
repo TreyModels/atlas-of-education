@@ -819,37 +819,22 @@ differential Lean↔Python bridge **9/9 exact fixtures**; CI hook (`lake build`,
 allow-list, 18/18 claim-id check) PASS. The earlier 130-row pair (`f2ce655e…` + `da956fc1…`) is preserved in git
 history; **drift resolved at `54b1f74` / audit-runner `4c06025`**.
 
-**QA mechanical audit — PASS (recorded; re-verified against the content-only edit):**
-`docs/audit/LEMMA_LEDGER_AUDIT.md` (commit `54b1f74`, audit-runner `4c06025`; latest report sha
-`3b0a516003bdcc7e7407e2d828eb96357f8da4491e94fddd05c426570d019167` at commit `9f8f4b0`, §7 addendum): **R1–R7 all
-PASS** on the **current 132-row pair** — baseline `paper_claims.csv` sha **`3ff88d39…`** (132 rows/ids; content-only
-X-30 action-text edit after the `b990c99f…` freeze) + ledger `3e9dbbc1…` (132 rows; 18 declared + 114 explicit
-NOT-YET; C-05/X-30 present; D-04 `hypothesis`); ids/rows/mapping unchanged by the text edit, so **no re-baseline was
-required for the mechanical audit**. Independently re-verified `lake build` 12 jobs exit 0, comment-aware `sorry` scan
-0 tokens, `#print axioms` only `propext`/none, differential bridge 9/9 exact. **This certifies the claim→declaration
-mapping and axiom hygiene only — not the truth of empirical claims and not engine numerics** (empirical claims are
-`EmpiricalClaim` hypotheses, never theorems). The earlier 130-row PASS (`f2ce655e…` + `da956fc1…`, commit `4a9afd7`)
-and the `b990c99f…` freeze at `4c06025` are preserved in git history; the drift caveat is resolved, and **a future
-id/row change (not text) requires ledger regeneration + re-pin.** Repro:
+**QA mechanical audit — FINAL PASS at `e0a5662` (recorded):** `docs/audit/LEMMA_LEDGER_AUDIT.md` sha256
+`15d5daf17afe831c73c0910bf5817d01f8682518be718bb74115ee0217334485` (QA commit `2ba5f74`): **R1–R8 all PASS** on
+the pinned pair **baseline `paper_claims.csv` `3ff88d39…` (132 rows)** + ledger `3e9dbbc1…` (132 rows; 18 declared +
+114 explicit NOT-YET; C-05/X-30 present; D-04 hypothesis). **R8 (new): proof-status coverage 107/107 declarations,
+46 theorems, all compiled/sorry-free, axiom dependencies only `''`/`propext`.** Independently verified: `lake build`
+16 jobs exit 0; CI PASS — 7 files, **0 sorry**, **33 axiom lines only propext/none**, 18/18 claim ids; bridge
+**22/22 exact**. **This certifies the claim→declaration mapping and axiom hygiene only — not the truth of empirical
+claims and not engine numerics; the engine is NOT formally verified** (empirical claims are `EmpiricalClaim`
+hypotheses, never theorems). Prior pairs (130-row `f2ce655e…`@`4d42101`; `b990c99f…`@`4c06025`; `3ff88d39…` content
+edit `9f8f4b0`) remain in git history. **Post-PASS content-only edits:** after this PASS I updated MZ-01/MZ-02/C-05/
+X-30 text only (same 132 rows/ids) → current baseline **`55f75eea…`**, ledger `.md` `87789188…`, baseline JSON
+`b71f1eea…`, ledger CSV unchanged `3e9dbbc1…`; per QA's own convention a content-only edit needs a re-verify, not a
+re-baseline — **content-edit re-verify requested for `55f75eea…` × `3e9dbbc1…`; the `3ff88d39…` PASS stands until
+then.** Repro:
 `python3 docs/audit/lemma_audit.py --claims results/audit/paper_claims.csv --ledger docs/audit/LEMMA_LEDGER.csv --lean-dir
 verification/lean`.
-
-**Delivery refresh (`e0a5662`):** Luna starter compiled (`LeanStarter.lean` sha
-`6cfa77e770199a887a8160eba424c5c996e6a480f9190df3116665463cff7590`) with four documented fixes (doc-comment
-nesting, two unsolved `simp` goals, `Quot.sound` in a `simp` proof; statements unchanged, no `sorry`). **`Atlas/Model.lean`
-sha `f6acc321…`** proves `gap_nonneg`, `gap_eq_zero_iff_met`, `gap_pos_iff_shortfall`, `accepted_le_capacity`,
-`zero_extra_input_no_increment`, accounting/additivity, time-budget invariants,
-**`rank_invariant_under_common_shift`** (deterministic rank with an explicit tie rule) and
-`accepted_monotone_fixed_capacity`; **counterexamples** `fixed_seat_relative_rank_counterexample`,
-`complementarity_counterexample`, `feedback_capacity_counterexample`, `max_not_additive` — monotonicity is proved
-only where assumptions imply it, and false generalisations are countered. **Proof-status package:** 107 declarations
-/ **46 theorems**, build 16 jobs PASS, 0 `sorry`, 0 prohibited/non-`propext` deps; `LEAN_PROOF_STATUS.md` sha
-`c02b4085650f714ec81c40e93c515e2bfa95a218a73f8eabb65bb6bc702efeaa`, `.csv` sha
-`1ff80fb0cf3e0a84a70976612c29a35ef06eb8e3ef166ea7a9afed90f745f0c9`; **differential Lean↔Python bridge 22/22 exact
-fixtures** (`results/LEAN_DIFFERENTIAL_BRIDGE.json` sha `56cdfd7b…`). Ledger re-pinned to the current 132-row baseline
-`55f75eea…` (ledger `3e9dbbc1…`; `.md` `87789188…`; baseline JSON `b71f1eea…`); the MZ-01/MZ-02 rows now carry v2 EP-1/EP-2 wording and the Caplan-V note. **Boundary (kept):** formal statements
-under stated assumptions ≠ engine/empirical truth; Tier 3 remains reproducible-artefact evidence; **no claim that 183
-inventory equations or the float runtime are verified.**
 
 **Install provenance (honest):** elan 4.4.0 → Lean `v4.36.0` via the GitHub release mirror because the default CDN
 measured **70 B/s**; 608.4 MiB download, **~23 min** install window, **3.0 GiB** unpacked, disk 12 → 8.9 GiB free;
