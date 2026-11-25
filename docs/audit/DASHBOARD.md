@@ -132,3 +132,13 @@ sha256. Code edits only on the Mac worktree, never on the box.
   37.11 pp / 1.59× vs targets 76.5 / 32.1 / 3.4. (iii) contest-math committed **1a6f3d5**: deterministic
   `pl_win_probs` (exact n≤20, deterministic quadrature above; n=300/seats=36 accuracy ≤0.0029 vs 200k MC, 13.8–49.1
   ms/call; 62 tests) — engine-core unblocked for Phase B integration. `system_box_venv.txt` still pending install.
+
+- 2026-11-25T14:43+08:00 · Commander · **BOX FREEZE RE-IMPOSED (correction).** qa-verifier detected that the legacy
+  1080-sim relaunched at 14:42 (`run_hk_korea_canonical.py policy --seeds 30 --workers 8`, live PIDs ~8854+,
+  ~100 % × 8 on the 10-CPU cgroup, load 11.8); the `policy_arms_v1v2v3.json` file-existence signal was stale (file is
+  being rewritten). All lanes re-notified: **no box jobs until `ps aux | grep run_hk_korea_canonical` is empty and
+  loadavg < 8**, confirmed by Commander. Host work unaffected. qa-verifier test 12 is already satisfied on the host
+  at the corrected cap: 8 tasks, ProcessPoolExecutor(fork) chunksize 1/4, full task-order permutation,
+  serial=repeat=chunksize1=chunksize4=shuffled bit-identical, QA_WORKERS=4 (commit 5f72ef0;
+  refreshed baseline still 7F/12P/8xfail in 6.41 s). contest-math committed 47f6bd0 (68-test validation record +
+  legacy `1−exp(−λx^r)` approximation-error study). No Phase-B engine commit yet.
