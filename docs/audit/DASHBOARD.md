@@ -326,3 +326,17 @@ of runner+workers only, `/root/work/modelrev/pkg` intact. Its outputs are alread
   G2-B pilot ≥5 candidates inside declared bands (else stop before the ~216 CPU-h search); reduced 1,000×5 search
   (~6.5 h wall) documented as operator's faster alternative. **Gate 2 remains blocked** on (a) operator
   canonical-spec + budget word and (b) task-13 hardening. No compute launched.
+
+## 2026-11-25 ~17:00 CST — NEW-GENERATION CAMPAIGN STATUS (Commander)
+
+- **Paper B NEW GENERATION running** (PID 24480, 8 arm workers, 18 arms×100 seeds KR-TRACKED + 900 KR-SINGLE; ~337 seed-rows by 16:50; ETA primary ~18:50, full ~20:00; per-seed checkpoints; runner sha `a84132ae…`). Prereg `dba0ecc` (frozen V540-FREEZE + GATE_SPECS) committed before launch.
+- **Gate-2 precondition #3 MET — G2-B UNBLOCKED.** `docs/audit/RUNNER_HARDENING.md` (committed, origin tree) records: model numerics byte-identical, per-seed worker checkpoints, content-hash resume, watchdog + process-group kill, memory cap, loud failure; **box smoke PASS 4/4** (`RUNNER_SMOKE_box.json` sha `20a6160e…`: straight 311.72 s, interrupt rc=3 with checkpoints, resume rc=0 value-equal, aggregate-only zero-compute value-equal) + host pytest 6/6. Declared under Lead rule "declare G2-B unblocked on the lane's committed green report".
+- **Paper A new generation:**
+  * (a) E8 fresh-WDI **simple DiD**: impact +12.322 (author baseline +12.44 → replicates), post +2.54 vs +25.26 (estimator-dependent) — `E8_BULGE_NEWGEN.md`.
+  * (a) **CS-style group-time ATT on fresh WDI: REPLICATES** — impact +12.322, **post mean +25.083 vs author +25.26**, Fisher p .0044/.0040, bootstrap 95 % CI impact [4.48, 22.64]; **A-35 resolved to REPLICATED under the CS estimator** — `CS_ESTIMATOR_NEWGEN.md` + `results/audit/newgen/cs_estimator_fresh_wdi_2026-11-25.json`.
+  * (b) delayed-bulge t*: ATT −0.956 pp, post +0.30, Fisher p .251/.384 → no detectable jump (consistent with the manuscript's HONEST_NULL); fresh hashed WDI manifest `d7296e1f…`.
+  * (c) gate-architecture ≥5,000 grid: queued for the 8 workers after Paper B full completes; design in `GATE2_PREREGISTRATION.md` §2(c), to be reviewed by paper-adjudicator before launch.
+  * (d) multi-seed Jacobian: first job **failed on a cap breach** (10 concurrent eval subprocesses; killed to enforce cap; no report). Cap-2 sequential runner staged (`/root/work/g2a/identify_multiseed2.py`); relaunch **after Paper B primary**, expected runtime ~95 min at 1 worker.
+  * (e) forecast with held-out: first run **EXPLORATORY-INVALID** (calibration misframed; fee binding confirmed separately: attendance 85 % at fee 0 vs 34 % at fee 0.6) — to be rerun with corrected calibration; no forecast numbers are cited.
+- **GPU lane:** sibling CuPy suite deployed `/root/work/gpu2`; `cupy-cuda11x` wheel install still slow/retrying; targeted PL-port go/no-go (≥3× end-to-end AND ≤1e-12) remains open; sibling suite runs its own pre-registered H1–H4 and does not accelerate A/B.
+- **Labels:** Gemini docx numbers = AUTHOR-REPORTED baseline; our fresh analyses = REPRODUCED EMPIRICAL ANALYSIS (WDI vintage); simulation runs = NEW GENERATION — REPRODUCED SIMULATION (frozen spec); no VALIDATED claim.
