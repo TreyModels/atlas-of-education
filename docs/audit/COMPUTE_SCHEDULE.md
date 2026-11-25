@@ -18,7 +18,8 @@ Box-side ledger with PIDs/hashes: `/root/work/compute/ledger/COMPUTE_LEDGER.md` 
 | band check | 90 % is **inside** the 8.5–10.0 target band; hard worker cap respected (see §3b for the withdrawn 540→8 proposal); `loadavg` 18.8 is host-wide and is not our container (see §2) |
 | headline | **Gate-1 AFTER invariant suite is GREEN on the declared stack** (box replication: 27 passed in 56.73 s, 5 workers) |
 | ETA (controller box 540) | 540 × ~31 CPU-s/run ÷ 6 workers ≈ 47 min from 15:07:45 → **~15:54:30**, now with the full 6 cores (legacy ended) |
-| box 540 backup status | **64.0 % at 15:38** (10,746/16,794 CPU-s), ETA **~15:54:30**; host authoritative ETA ~15:43–15:46 (commander, relaunched 15:26 at 8 workers after a first-attempt aggregation hang). **Fallback rule: any subset fallback must be explicitly LABELLED (e.g. "54-run 3-seed subset") — never a silent partial.** |
+| box 540 backup status | box **74.9 % at 15:42:55** (12,582/16,794 CPU-s), ETA **~15:54:40**; host authoritative ETA ~15:43–15:46 (commander, relaunched 15:26 at 8 workers after a first-attempt aggregation hang). **Fallback rule: any subset fallback must be explicitly LABELLED (e.g. "54-run 3-seed subset") — never a silent partial.** |
+| **task-12 measured result** | end-to-end **1.11–1.20×** (two independent box measurements: scheduler ref 18.812 → opt 16.905 CPU-s; lane harness 22.183 → 18.550), outputs identical; **2–5× UNPROVEN**. Lead rule: keep LRU memo only if net-positive, revert slower batch path. **Gate-2/Gate-3 budgets must assume CURRENT engine cost** (~20.3 CPU-s/HK, ~41.9 CPU-s/KR, 540 ≈ 4.7 CPU-h) until a real win is proven. |
 | driver resolution | legacy "relaunch loop" = box-side **`run_parts.sh`**, a finite 4-part script (not an infinite watcher); killed 7×, re-issued by an external agent session within 5 s each time; current instance is being **allowed to finish** (§7) |
 | ETA (commander host 540) | authoritative run; host is ≈2× faster per run (Apple core vs Xeon) → ≈22–25 min from 14:55 → ~15:17–15:20 |
 | ETA (qa task-7 DGP) | **not yet launched**; provisional 100 populations × ~1 engine run ≈ 100 × 31 CPU-s = 0.86 CPU-h → ~9 min at 6 workers / 17 min at 3 workers (to be replaced by a measured pilot) |
@@ -90,7 +91,7 @@ no output progress for >10 min is messaged and flagged; any box job must report 
 | J-06 | task-8 bootstrap factorial | qa-verifier | 4 | 15:22 | ✅ **DONE** | 70.21 s wall; FE size 0.052–0.062 across confounding; pooled size 0.996–1.000 (OVB); permutation invariance 6.66e-16; shipped stats reproduced | done (commit `01cb4d3`) | `/root/work/qa/bs_out`: parquet sha256 **`41c62895…9216ebf`**, summary sha256 **`e266710d…755ab6d13`** |
 | J-08 | **second independent DGP seed band** (Lead-approved) | qa-verifier | 2 | 15:25:12 | ✅ **DONE ~15:36** | 2.6 CPU-s/pop; 6 artifacts in `band2_out` | done | `/root/work/qa/band2_out` |
 | J-10 | **third independent DGP seed band** (Lead-approved filler) | qa-verifier | 2 | 15:36:5x | **RUNNING** (driver 17845, workers 17847–17848, `--seed 20261127`) | 2.6 CPU-s/pop → ~1,300 CPU-s | ~15:47–15:48 | `/root/work/qa/band3_out` |
-| J-09b | task-12 bench/optimisation of `contest_math.py` | contest-math | 2 (1 bench proc + 1 reserved) | 15:35:05, patch `191de03` | **BENCH RUNNING** (PID 17640 `contest_math_bench.py`; 2 earlier bench attempts crashed in the end-to-end section on box paths, being fixed) | equivalence PASS (130 fixtures, max diff **1.40e-15** ≤1e-12); determinism bit-identical; **cold-path 0.97–1.21×**, **memoised/LRU-hit path ~0.02 ms/call**, 9-call batch group not yet faster (0.87×) | end-to-end CPU-s/run pending | `/root/work/contest/box_out/perf_bench*.log` |
+| J-09b | task-12 bench/optimisation of `contest_math.py` | contest-math | 2 (1 bench proc + 1 reserved) | 15:35:05, patch `191de03` | **BENCH DONE — keep/revert decision pending (Lead rule)**: keep LRU memo if net-positive, **revert slower batch path**; `CONTEST_MATH_PERF.md` to be written | **end-to-end 1.113× (scheduler) / 1.196× (lane harness)**; equivalence 130 fixtures max diff 1.40e-15; determinism bit-identical; cold 1.02–1.21×; LRU-hit 0.02 ms; batch 0.87× slower | end-to-end CPU-s measured → **2–5× target UNPROVEN** | `/root/work/contest/box_out/perf_bench*.log`, `contest_math_bench_results.json` |
 | J-09 | **task-12 optimisation of `contest_math.py`** (Lead-approved; owner = contest-math, not engine-core) | contest-math | 2 → 4 when qa finishes | queued (asked 15:25) | pending claim/launch | benchmark 1 HK run = 20.3 CPU-s baseline; profile: 92.7 % in PL quadrature | target 2–5×; report CPU-s/run before/after | `/root/work/contest` |
 | J-07 | task-9 general-r Tulloch validation | contest-math | 1 (analytic) | blocked on J-03 | queued | ~200 PL calls × 14–49 ms ≈ 3–10 s | <1 min | `/root/work/contest` |
 
@@ -114,6 +115,7 @@ Pilots were run from a clean `git archive 98baf6b` bundle in `/root/work/compute
 | — | task-11 dry-run harness | miniconda, 1 proc | **3 s wall** | 2 subprocesses, negligible |
 | — | **task-7 DGP pilot** (5 populations = 1/config) | declared venv (numpy 2.2.6, pandas 2.3.3), 3 workers | **7.43 s wall for 5 pops ≈ 4–5 CPU-s/pop** (n1000 config ~2–3 s/pop, n100 ~0.3 s, legacy ~0.8 s) | **0 engine runs**; pandas/pyarrow already present, no pip needed |
 | — | **engine cProfile** (1 HK Baseline seed 0; `cProfile`, 1 proc) | declared venv (numpy 2.2.6) | **19.82 s wall**; 2.37 M calls | **92.7 % of a run is the PL-probability quadrature**: 405 `pl_win_probs` calls = 18.37 s, dominated by `contest_math._quadrature_win_probs` (10.17 s tottime) + numpy `cumsum` (4.64 s) + `einsum` (2.38 s); 46 year-`step()`s = 19.81 s. This is the mechanism behind the 20–39× slowdown vs the legacy engine and the **#1 optimisation target**. |
+| — | **task-12 end-to-end perf** (1 HK Baseline seed 0, ref `98baf6b` vs patch `191de03`) | declared venv, 1 proc each | ref **18.812 s** / opt **16.905 s** CPU-s = **1.113×** (contest-math harness: 22.183 → 18.550 = **1.196×**) | outputs identical to 10 d.p. (equivalence PASS); cold path 1.02–1.21×; LRU-hit 0.02 ms; batch path 0.87× **slower**; **2–5× UNPROVEN** |
 
 Per-unit planning numbers (box, repaired engine): **HK arm = 20.3 CPU-s**, **KR arm = 41.9 CPU-s**,
 **540-run mix (270 HK + 270 KR assumed 9+9 arms) = 16,794 CPU-s = 4.7 CPU-h**.
@@ -263,10 +265,17 @@ Band discipline: flag **<7** idle (fill from queue), **>11** oversubscribed (thr
    permutation within-invariance 6.66e-16 confirms the within algebra numerically; shipped/auditor statistics
    reproduced exactly. (b) **92.7 % of repaired-engine runtime is one function** (`contest_math` PL quadrature) →
    Gate-2/Gate-3 budget consequence + optimisation target, assigned as task-12.
-8. **task-12 measurement caveat (in flight):** the patch gives huge wins only on the **memoised/cached** path
-   (~0.02 ms vs ~35–124 ms cold); **cold-path is only 0.97–1.21×** and the 9-call batch group was *slower* (0.87×)
-   in the first benchmarks. End-to-end CPU-s/run is not yet measured (harness crashed twice in its end-to-end
-   section on box paths). Do not bank a 2–5× speedup until end-to-end lands — record measured, not hoped.
+8. **task-12 performance claim — measured, and the 2–5× target is UNPROVEN.** Two independent end-to-end box
+   measurements of 1 HK `Baseline` seed 0, single process, CPU-s, pre-optimisation engine `98baf6b` vs patch `191de03`:
+   - contest-math harness: reference **22.183 s** → optimised **18.550 s** = **1.196×**; optimised+batched 21.088 s = 1.052×.
+   - scheduler independent re-measure (`/root/work/compute/pilot/e2e_engine.py`): reference **18.812 s** →
+     optimised **16.905 s** = **1.113×**; **outputs identical to 10 decimal places** (k12_spend 156.5069349294,
+     k12_rate 61.7430555556, gap 36.2648809524, ratio 2.589010951, elite 25.2173913043, contest_e 0.0427008722).
+   Supporting: equivalence 130 fixtures max diff **1.40e-15**; determinism bit-identical; cold path 1.02–1.21×;
+   LRU-hit ~0.02 ms/call; 37/405 duplicate weight vectors; 9-call batch group **0.87× (slower)**; cache grid
+   163 hits/445 misses, result 29/354. **Net: ~1.11–1.20× end-to-end, not 2–5×.** Lead rule: contest-math must give
+   an explicit keep/revert decision — keep only the LRU memoisation if net-positive, **revert the slower batch path**.
+   **Gate-2/Gate-3 budgets must assume the CURRENT engine cost** (~20.3 CPU-s/HK, ~41.9 CPU-s/KR) until a real win is proven.
 
 ---
 
@@ -359,4 +368,9 @@ Band discipline: flag **<7** idle (fill from queue), **>11** oversubscribed (thr
   NOT yet demonstrated — noted as caveat §9.8, awaiting contest-math's end-to-end number.
 - **15:37:49** util **8.1/10 (81 %)**; 540 at **64.0 %** (10,746/16,794 CPU-s), ETA **~15:54:30**; host 540
   authoritative ETA ~15:43–15:46 (commander; fallback rule recorded: labelled subset only, never silent partial).
-- (next refresh: 540 completion → pull JSON + sha256 and hand to commander; band-3 completion; task-12 end-to-end)
+- **15:44** task-12 end-to-end finally measured: lane harness ref **22.183 s** → opt **18.550 s** = **1.196×**;
+  scheduler independent re-measure ref **18.812 s** → opt **16.905 s** = **1.113×**, outputs identical to 10 d.p.
+  → **2–5× target UNPROVEN**; keep/revert rule relayed to contest-math (keep LRU memo only if net-positive, revert
+  slower 9-call batch path); Gate-2 budget correction relayed to commander (assume current engine cost).
+- (next refresh: 540 completion ~15:54:40 → pull JSON + sha256 → commander; band-3 completion; final utilization
+  summary + idle-slot note)
