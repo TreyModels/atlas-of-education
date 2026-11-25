@@ -238,45 +238,155 @@ bootstrap, never the shipped permutation.
 
 ---
 
-## 4A. Phase-2 reproduction attempt (Lead order, 2026-11-25)
+## 4A. Reimplementation plan (operator decision, 2026-11-25)
 
-The Lead ordered a genuine reproduction attempt after the documentary verdict. Full record:
-`docs/audit/PAPER_A_REPRODUCTION_ATTEMPT.md`. Outcome:
+The operator clarified that **Gemini ran both papers inside its app and made other mistakes**. We are **not
+recovering its files; there is no Codex Paper-A re-run to compare against** (Codex is the independent auditor, and it
+did not like what Gemini did). We are **reimplementing what Gemini was trying to do — bigger and better — on the
+repaired engine, using the server**. The old docx numbers are the **AUTHOR-REPORTED
+BASELINE**; the new runs are a **NEW GENERATION** with pre-registration, hashes, provenance, uncertainty, baselines
+and sensitivity. Full plan: `docs/audit/PAPER_A_REPRODUCTION_ATTEMPT.md` (reimplementation plan + status) and
+`docs/audit/PAPER_A_BASELINE_VS_NEWGEN_TEMPLATE.md` (two columns: AUTHOR-REPORTED baseline vs NEW GENERATION).
 
-* **Paper A Exp 1/3/4/5 are not reproducible** — no author runner, seed list, raw data or result file exists in
-  `~/neon-boot/pulled/gemini-bundles/`, the archive branch `46950ab`, any `research/*` branch, `~/neon-boot/wt2|3|5`,
-  `~/massification_live`, or the iCloud Downloads bundles. The only artefacts are the `.docx` and the self-reported
-  `verified_results_2026_11_25.json`; the `paper2/` bulge record registers `t*` NOT-ESTIMABLE. The engine has no SSA
-  `countries/` config, so Exp 3/Exp 5 cannot be run without **inventing** a parameterisation — which would be a new
-  experiment, not a reproduction. These are recorded as **UNRESOLVED verification tasks**, not results.
-* **Paper B's 420 design is not reproducible** (no runner/raw output; docx tables == self-reported JSON). Its **540
-  design is fully reproduced** — the scripts and data are in hand (`hk_korea_exact_bundle.zip` / `hk_korea_contest_code_bundle.zip`
-  / `ALL_ATLAS_WORK_2026_11_25.zip`; runner `dd0b1d8d…`, engine `618bd6dd…`/`b2d213b6…`, reference `851bb1df…`) — and
-  all HK/Korea-dependent tables were regenerated: `docs/audit/PAPER_B_TABLE_REGENERATION.md`,
-  `results/audit/paper_b_540_regenerated_tables.csv` (sha256 `da40a2ee…c5c1`).
-* **What was re-executed:** the independent ABC identification audit (the audit's own deterministic harness) ran on
-  the host and produced `/tmp/abc_identification.json` sha256 `66bb2648…15808` — **bit-identical to the committed
-  host output** in `ABC_IDENTIFICATION_AUDIT.md` §6. It confirms rank 4/5, 2-dim null, analytic δ
-  −0.7537718023763802, cell means 0.8233/0.5167/0.85, and local rank 5/5 after two micro-moments. Bootstrap and DGP
-  harness re-executions were started on the host; their committed results stand either way.
-* **Nothing was reconstructed from memory.** The box cannot close the Paper A gap: there is nothing to run. The
-  blocker is author/data deposit, not compute.
+**Paper A — five computations and status:**
+
+| # | computation | new-generation design | status |
+|---|---|---|---|
+| (a) | E8 fee-abolition event study | fresh hashed WDI vintage; CS ATT; 10k+10k Fisher; gender; full lead vector | **READY / partly DONE** — committed records already reproduce the numbers (`bd782be`, `fb8b67e`, `b4eb680`); new-gen adds hashed vintage + secondary outcome |
+| (b) | Delayed secondary-bulge `t*` | fresh hashed WDI/UIS 5 indicators; documented `L_primary`; 2,500 perms/scheme | **DATA-BLOCKED** — one-file `L_primary` gap + outcome series |
+| (c) | Gate-architecture / H2 (≥5,000 runs) | repaired `98baf6b`; pre-registered gate kinds/grid; ≥5,000 runs; H2 with seed CIs | **DESIGN READY / RUN PENDING** — ~43–60 CPU-h |
+| (d) | Multi-seed identifiability/Jacobian | explicit 3-option MNL; analytic Jacobian; rank/null across seeds; two-moment remedy; local-only | **DESIGN READY / MODEL SPEC NEEDED** — ABC harness is the template |
+| (e) | Fee-abolition forecast with held-out | training-only calibration; e=+5/+6 (and country) holdout; ≥40 seeds | **DESIGN READY / RUN PENDING** — ~1–3 CPU-h |
+
+**Paper B:** the **420 design is AUTHOR-REPORTED BASELINE** (runner/raw output not found where searched; docx tables
+== self-reported JSON). The **540 is reproduced** — scripts/data in hand (`hk_korea_exact_bundle.zip` /
+`hk_korea_contest_code_bundle.zip` / `ALL_ATLAS_WORK_2026_11_25.zip`; runner `dd0b1d8d…`, engine
+`618bd6dd…`/`b2d213b6…`, reference `851bb1df…`) — and all HK/Korea-dependent tables were regenerated as a **NEW
+GENERATION**: `PAPER_B_TABLE_REGENERATION.md`, `results/audit/paper_b_540_regenerated_tables.csv`
+(sha256 `da40a2ee…c5c1`), with the explicit **CF4 reversal**.
+
+**What was re-executed (adjudicator, host):** (i) the independent ABC identification audit ran and produced
+`/tmp/abc_identification.json` sha256 `66bb2648…15808`, **bit-identical to the committed host output** in
+`ABC_IDENTIFICATION_AUDIT.md` §6 (rank 4/5, 2-dim null, analytic δ −0.7537718023763802, cell means
+0.8233/0.5167/0.85, local 5/5 after two micro-moments); (ii) the bootstrap size/power factorial re-ran to exit 0 and
+its summary matches the committed result to last-bit float (FE size median **0.05925**, pooled size under
+confounding **1.0**, permutation within-invariance **6.661338147750939e-16**, `permutation_invariant=true`,
+`benchmark_matches=true`; only date/runtime/last-bit fields differ); (iii) the corrected-DGP harness was still
+running under host load at finalisation — its committed result (rank 5/5 vs legacy 3/5) stands and is labelled as the
+audit's.
+
+**Nothing was reconstructed from memory.** The missing original artefacts are noted but are **not the blocker**; the
+repaired engine and the server are.
+
+## 4B. NEW-GENERATION EVIDENCE vs AUTHOR-REPORTED LEGACY vs CONTRADICTED (honesty register)
+
+This is the distinction the papers and the errata must carry:
+
+* **NEW-GENERATION EVIDENCE (REPRODUCED SIMULATION / VALIDATED SIMULATION):** the repaired 540 (`98baf6b`, sha256
+  `455649da…`), the migration table, the **CF4 reversal** (CF4a Win-Win both; CF1b no longer passes; CF4b fails;
+  CF3b passes), the D2 calibration artefact (KR gap 68.36 → 29.71; ratio 18.01 → 2.11 without re-estimation), the
+  regenerated Paper B tables, the P0 audits (ABC rank 4/5 + 2-dim null + analytic δ + local 5/5; corrected DGP 5/5
+  vs legacy 3/5; bootstrap FE size 0.052–0.062 vs pooled 0.996–1.000; permutation within-invariance 6.66e-16), and
+  the verified E8 empirical block. **These are what we can cite.**
+* **AUTHOR-REPORTED LEGACY (AUTHOR-REPORTED BASELINE):** the Paper B 420 tables, and Paper A Exp 1/3/4/5 (bulge `t*`,
+  1,640-run gate matrix, Jacobian, forecast). These are baseline for comparison — **not results, not reproduced, not
+  to be silently replaced**.
+* **CONTRADICTED BY THE REPAIRED ENGINE / MEASURED AUDITS:** the Paper B "tax backfires", "wage compression is
+  regressive", "only CF1b", "only pairing compression with caps/seats" claims (all reverse or become spec-dependent);
+  the "published benchmarks" attributions (G2-A: all four moments dropped/UNRESOLVED); the archived ABC "7-parameter
+  calibration", the "100 % seat-expansion paradox", and the pooled E1/Q3 selftest. **These must be removed or
+  rewritten.**
+
+## 4C. Pre-registration review criteria (for when the Commander's design lands)
+
+When the reimplementation pre-registration and design land, review them against the independent auditor's four
+criticisms. Each must be **fixed by design**, and the pre-registration must name the acceptance test:
+
+| Codex audit criticism (measured in our P0 annex) | required design fix | acceptance test |
+|---|---|---|
+| **Moment rank 4/6**: with 6 active parameters the advertised 5-moment Jacobian has rank **4/5** at 1,000/1,000 prior-box points; null space **2-dimensional**; **44 distinct θ** reproduce the same moments; analytic δ = −0.7537718023763802 | run a **rank audit before estimation**; declare a reduced parameterisation or add independent moments until rank = number of free parameters; fix δ analytically; no condition-number-as-identification claims | rank ≥ free parameters at every declared perturbation; null space dimension 0; report the null vectors if not |
+| **Empty G12×urban cell / no school identifiers** in the legacy synthetic DGP (legacy rank 3/5; corrected crossed design rank **5/5 in 500/500**) | cross grade × urban cells; add school identifiers + within-school dependence; positive income–quality relationship; declare the design assumptions (ρ, school count, ICC) | G12×urban cell non-empty; rank 5/5 across 500 populations and 3 seed bands; recovery RMSE reported |
+| **Pooled E1/Q3 selftest size ≈ 1.0 under the null** vs country-FE size **0.052–0.062** (OVB) | use the **FE estimator** with a **restricted wild-cluster bootstrap** (size 0.025–0.042) or a whole-trajectory cluster bootstrap (size 0.033–0.050, coverage 0.95–0.97); never the pooled selftest as evidence | nominal size control in a pre-registered Monte Carlo; no pooled-selftest claim |
+| **Country-block permutation within-invariant** (6.66e-16; FE β changes ≤9.71e-17) | do **not** use the shipped permutation; use wild-cluster / whole-trajectory bootstrap for the within estimand | permutation invariance check fails by design (i.e., the chosen method actually moves the within estimand); size control demonstrated |
+
+**Verdict requirement:** the pre-registration must be rejected by this review if it uses any of the four legacy
+procedures unchanged, or if it claims global identification from a local rank, or if it presents the repaired 540
+(`455649da…`, legacy gate list) as the frozen `canonical_spec.json` V540 run.
 
 ## 5. Evidence-status register (programme level)
 
 | Status | Count (paper + programme rows) | Notes |
 |---|---|---|
-| VERIFIED EMPIRICAL | **4** (4 A, 0 B, 0 programme) | descriptive/associational; not causal |
-| REPRODUCED SIMULATION | **14** (0 A, 8 B, 6 programme) | all conditional and/or uncalibrated unless marked; includes the re-executed ABC audit and the Paper B 540 table regeneration |
+| VERIFIED EMPIRICAL | **4** (4 A, 0 B, 0 programme) | descriptive/associational; not causal; E8 empirical block only |
+| REPRODUCED SIMULATION | **14** (0 A, 8 B, 6 programme) | all conditional and/or uncalibrated unless marked; includes the re-executed ABC audit, the re-executed bootstrap factorial, and the Paper B 540 table regeneration |
 | VALIDATED SIMULATION | **3** (programme) | engine/PL module validation, corrected DGP design, bootstrap size/power — audit artifacts, not paper claims |
-| AUTHOR-REPORTED | **29** (9 A, 18 B, 2 programme) | 420 generation, author JSON bundle, untested simulations |
-| CONTRADICTED | **32** (10 A, 14 B, 8 programme) | see `SCIENTIFIC_CLAIM_LEDGER.md` and the two paper files; includes the 100 % paradox, invalid E1/Q3, legacy DGP and the "published benchmark" attributions |
-| UNRESOLVED | **16** (10 A, 0 B, 6 programme) | missing artefacts are tasks, never results; includes all four Paper A experiments and the 420 Paper B design |
+| AUTHOR-REPORTED | **44** (20 A, 18 B, 6 programme) | **AUTHOR-REPORTED BASELINE**: the 420 generation, the Paper A Exp 1/3/4/5 legacy numbers, the author JSON bundle; not results, not reproduced, not to be silently replaced |
+| CONTRADICTED | **30** (8 A, 14 B, 8 programme) | only where committed code/algebra/measured audit output refutes the claim; includes the 100 % paradox, invalid E1/Q3, legacy DGP, "published benchmark" attributions, and the Paper B policy reversals |
+| UNRESOLVED | **4** (1 A, 0 B, 3 programme) | pending verification items (e.g., A-31 replication inventory; canonical spec/Gate-2; GPU quarantine) — tasks, never results |
 
-The machine-readable one-row-per-claim record is `results/audit/paper_claims.csv` (98 rows; sha256
-`04e55143429816710973875f29c69738f4163f95908bcf2856402f383e10b2ea`).
+The machine-readable one-row-per-claim record is `results/audit/paper_claims.csv` (99 rows; sha256
+`b3348748a212d4df4368e8d0b05086a75feeeab6c7dd584c92437f57238f6e97`).
 
 ---
+
+## 5A. The repaired-engine runs are a **NEW GENERATION** (not a recovery of the 420 generation)
+
+Per the operator decision, the repaired-engine results are framed as a **new generation** — a different model
+generation with its own provenance, not a corrected version of the manuscript's 420 numbers. Everything below is
+REPRODUCED SIMULATION, **uncalibrated**, not validated.
+
+**Engine provenance.** Commit **`98baf6b`** (Gate-1 tree: `f31e176` gate1a + `6bc8d61` gate1b + `1a6f3d5`/`23a0173`
+gate1c), archived in `/root/work/cmd/engine`. File hashes (`docs/audit/canonical_spec.json` / `GATE1_REPORT.md`):
+
+| file | sha256 |
+|---|---|
+| `engine/eduengine/core.py` | `72cbddf7d97db85269081ae1c8ab692153c27b0553d4ce59691beab20bbfcb99` |
+| `engine/eduengine/rng.py` | `ada4a760d75a14f4d82a8aaf70964dee6a2f7f4130d53018ad190fafa4920b08` |
+| `engine/eduengine/contest_math.py` | `23a01730bf939a9e22befa3ca395094a48c5e870fb10901ceb015cddd793a3c8` |
+| `engine/eduengine/modules/labour.py` | `0ccfb3ce5b4c88fc2969909dbdbbc4d32184052fe5359688f96e00c2667b3f7d` |
+| `engine/eduengine/modules/tutoring.py` | `7a6fd4c33cc2aefcd47da097b47ac7945744cc1adf9dedbb8ab1ec57d8adc2f8` |
+| `engine/eduengine/planning.py` | `13d91bc9cc8c0bccbffb2caf8364b4a3376da582ece25f44fa1660380358987d` |
+| `engine/eduengine/modules/schools.py` | `9b079280e0b01cc0681dfdb956b9cff8bcc82a9274f03263f209999bc7142745` *(still legacy sequential RNG - residual)* |
+| `engine/eduengine/modules/sdg4.py` | `5ce05c8b3663f32169a8a1f8b2407e0d5418a9dca50fdd1cba1af7fb02e592be` |
+| `engine/eduengine/modules/state.py` | `3c5500ae9b4fc5757be574e508a31b9d8627be979edc884d94d90cea60993068` |
+
+**Design / gate definitions.** The 540 generation: `N=300`, `T=46`, `measure_from=18`, **18 arms x 30 matched seeds =
+540 runs**; HK single G12 gate `share=0.23`; KR stacked G9 (`share=0.35`) + G12 (`share=0.12`). The frozen
+`canonical_spec.json` is **V540-FREEZE** with `GATE_SPECS` = **KR-TRACKED primary / KR-SINGLE sensitivity** and the
+hardened runner sha256 `932515ca...`. **The repaired 540 run actually used (`455649da...`) predates that freeze and
+used the legacy 540 gate list** - so the regenerated tables are repaired-engine + legacy-gate-list, and the
+frozen-spec V540 run is a **new Gate-2 job not yet executed**. State this wherever the regeneration is cited.
+
+**What changed in the new generation** (`CODE_CHANGES.md`, `GATE1_REPORT.md` section 4):
+* **D1** KR G9 phantom prize -> explicit persistent `k['track']` consequence (learning multiplier, later-gate weight,
+  earnings premium); the legacy G9 prize is now *delivered*, not priced as a phantom.
+* **D2** expected admission P changed from `1-exp(-lambda x^r)` (lambda re-solved to aggregate seats) to the **exact
+  Plackett-Luce object**; pre-repair expected/realised = **2.41x (KR G12) / 1.96x (HK G12)** -> **1.0000** per gate.
+* **D3** seat denominator `share` now of **applicants** (realised admit rate 0.513 -> 0.2500 in the invariant test),
+  with per-gate applicants/seats/ratio/admit-rate/expected-P diagnostics.
+* **D6** policy-invariant, event-keyed RNG (`rng.py`): 51 mismatched cohort-covariate groups -> **0**.
+* **D4/D5** tax / outlay / receipt ledger split; `firm_rev` resource-only; per-gate `prep_stock`.
+* **D7** labour prizes applied last, multiplicatively, to leavers and queuers; per-child `elite_prize`.
+
+**The CF4 reversal (must be reported, old result preserved).** Pre-stated Win-Win criterion: spend index < 80 **and**
+elite Q5 share below the same-jurisdiction baseline, **both** jurisdictions.
+
+| arm | pre-repair 540 | **repaired 540 (NEW GENERATION)** |
+|---|---|---|
+| **CF4a** (delta-V -50 % + cap) | **FALSE** - HK elite 48.64 % > 46.36 % baseline | **TRUE** - HK 70.58 / 23.44 %; KR 72.48 / 21.47 % |
+| CF1b (cap -50 %) | **TRUE (only arm)** - HK 67.39/41.96; KR 76.42/26.39 | **FALSE** - HK 97.21; KR 99.25 (spend >= 80) |
+| CF3b (delta-V -50 %) | FALSE | **TRUE** - HK 70.88/23.64; KR 72.55/21.48 |
+| CF4b (delta-V -50 % + seats) | FALSE - spend 90.88/88.04 | FALSE - spend 89.98/105.54 |
+
+This is the single most consequential new-generation fact for Paper B: the combined-policy ranking **reverses**
+(CF4a passes; CF1b fails), so neither the manuscript's "only pairing compression with caps/seats" nor the review's
+"only CF1b" is an established result.
+
+**Provenance of the new-generation run.** old (pre-repair) 540 = `results/audit/commander/hk_korea_540_commander_independent_2026-11-25.json`
+sha256 `722c370b...af54`; new (repaired) 540 = `results/audit/commander/hk_korea_540_REPAIRED_box98baf6b_2026-11-25.json`
+sha256 `455649da...ec21` (box cross-env, declared venv py3.10.8/numpy 2.2.6, 6 workers, 540/540 exit 0, 49.3 min);
+migration table `GATE1_MIGRATION_TABLE.md`; regenerated tables `PAPER_B_TABLE_REGENERATION.md`. The host authoritative
+run failed twice in the pool-completion phase; the box run is the labelled source.
 
 ## 6. Publishability, bluntly
 

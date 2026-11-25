@@ -8,6 +8,15 @@
 Severity 3 (language / inference) → Severity 4 (mechanical / citation / note). Every correction is
 **before → after** and names the artifact that forces it.
 
+## 0. Framing (operator decision, 2026-11-25)
+
+The manuscript's numbers are the **AUTHOR-REPORTED BASELINE**. Gemini ran the papers inside its app; we are not
+recovering its files and there is no Codex Paper-A re-run to compare against. The **NEW GENERATION** is the
+repaired-engine reimplementation (pre-registered, hashed, with uncertainty/baselines/sensitivity), reported
+separately. These errata therefore use two labels throughout: **AUTHOR-REPORTED BASELINE** for the docx numbers and
+**NEW GENERATION** for the repaired-engine runs. Nothing in the docx is to be silently replaced; the corrected table
+shows both columns with the reason for each difference.
+
 ## 0. Required label convention (use on every table, figure and results paragraph)
 
 Because the programme has three result generations, every numeric block must carry one of these labels:

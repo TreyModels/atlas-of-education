@@ -3,6 +3,10 @@
 **Adjudicator:** `paper-adjudicator` (independent). **Date:** 2026-11-25.
 **Purpose (Lead order, Phase 2):** regenerate every Paper B table that depends on the HK/Korea runs from the
 repaired-engine 540, and mark every number that changes; the old numbers stay visible as prior.
+> **Framing (operator decision, 2026-11-25).** The docx tables are the **AUTHOR-REPORTED BASELINE**. The repaired
+> 540 is the **NEW GENERATION** (pre-registered, hashed, uncalibrated). This report shows both columns plus the
+> pre-repair generation; it never silently replaces the baseline. Two-column comparison template:
+> `docs/audit/PAPER_A_BASELINE_VS_NEWGEN_TEMPLATE.md` (§B, same convention).
 **Sources (hashes re-derived for this report):**
 
 | source | path | sha256 | status |
