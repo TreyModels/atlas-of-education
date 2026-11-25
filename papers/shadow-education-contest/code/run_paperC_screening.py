@@ -22,6 +22,11 @@ Cells (36 = 3 S × 2 L × 3 supply × 2 settings):
 Base: canonical HK params from docs/audit/canonical_spec.json params.HK.primary + canonical gate list, with
 gate index 1 (G6→G9) replaced by the contest gate above. N=600, T=46, measure_from=18, seeds 0–7.
 
+Contest pressure L is applied to the G6->G9 gate (index 1) as a gate-level override: r=1.2 at L=.25 and r=1.6 at
+L=.45 (gate-level `r` is authoritative; the static spec `contest_r` parameter does not drive this gate). P12 uses
+withhold_mode='pay_gap' so A|P12 is the no-withholding control (h=0) and is EXEMPT from the exposed-arm assertions;
+exposed arms = supply A/C AND setting P55.
+
 Per-run assertions (fail loud, no silent no-op):
   * E.unfired_events == [] (calendar-event validation);
   * EXPOSED arms only (prereg A3.3 + Lead): supply ∈ {A, C} AND settings == P55 → withheld > 1e-3 and own_share > 0.1.
@@ -204,7 +209,11 @@ def run_seed(cid, seed, n, t, allow_unpinned=False):
         firm_price=float(np.nanmean(fp)),
         contest_admission_by_gate=cont,
         unfired_events=list(getattr(E, 'unfired_events', [])),
-        assertions=dict(exposed=(supply in ('A', 'C')), checked=True, rule='A/C non-market require withheld>1e-3 and own_share>0.1; B exempt'),
+        assertions=dict(exposed=(supply in ('A', 'C') and setting == 'P55'), checked=True,
+                        rule='exposed arms = supply A/C AND setting P55 require withheld>1e-3 and own_share>0.1; '
+                             'B (own_ban .95, market-only) and A|P12 (no-withholding control under pay_gap) exempt'),
+        contest_r_note=('gate-level gate[1].r is authoritative (r=1.2 at L=.25, r=1.6 at L=.45); the static '
+                        'params.contest_r from the spec does not drive the treated gate'),
         params={k: p[k] for k in ('N', 'T', 'measure_from', 'seed', 'q0', 'own_ban', 'firm_ban', 'pay_ratio',
                                   'monitoring', 'withhold_mode', 'contest_r')},
         gate=p['gates'][1],
