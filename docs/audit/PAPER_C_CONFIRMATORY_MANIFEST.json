@@ -1,6 +1,6 @@
 {
   "document": "Paper C CONFIRMATORY launch manifest (pre-launch; cites A4 + frozen passers + committed runner)",
-  "status": "FROZEN_APPROVED (adjudication 9506640; box allocation/launch observed; reserve deviation noted)",
+  "status": "FROZEN_APPROVED_A5 (16-seed truncation; adjudication 9506640 + A5 1c51f17; launch observed)",
   "frozen_utc": "2026-11-26",
   "stage": "PAPER_C_STAGE=confirmatory",
   "citations": {
@@ -62,7 +62,26 @@
       112,
       113,
       114,
-      115,
+      115
+    ],
+    "n_seeds": 16,
+    "N": 1500,
+    "T": 46,
+    "measure_from": 18,
+    "gate": {
+      "index": 1,
+      "kind": "contest",
+      "share_of": "cohort",
+      "r_by_L": {
+        "0.25": 1.2,
+        "0.45": 1.6
+      },
+      "fail": "stop",
+      "note": "G6->G9 gate; canonical HK gates otherwise unchanged; gate-level r authoritative over static params.contest_r (D-S2)"
+    },
+    "exposures": "exposed arms = supply A/C AND P55 (assertions h>1e-3, own_share>0.1); B and A|P12 exempt (A4)",
+    "p12_control": "pay_gap => h=0 (no-withholding control; A4)",
+    "excluded_seeds": [
       116,
       117,
       118,
@@ -79,24 +98,7 @@
       129,
       130,
       131
-    ],
-    "n_seeds": 32,
-    "N": 1500,
-    "T": 46,
-    "measure_from": 18,
-    "gate": {
-      "index": 1,
-      "kind": "contest",
-      "share_of": "cohort",
-      "r_by_L": {
-        "0.25": 1.2,
-        "0.45": 1.6
-      },
-      "fail": "stop",
-      "note": "G6->G9 gate; canonical HK gates otherwise unchanged; gate-level r authoritative over static params.contest_r (D-S2)"
-    },
-    "exposures": "exposed arms = supply A/C AND P55 (assertions h>1e-3, own_share>0.1); B and A|P12 exempt (A4)",
-    "p12_control": "pay_gap => h=0 (no-withholding control; A4)"
+    ]
   },
   "confirmatory_statistics": {
     "holm_family": [
@@ -118,10 +120,11 @@
     "uncertainty": "seed Monte-Carlo (32 matched seeds); parameter uncertainty zero (frozen params)"
   },
   "compute": {
-    "estimate_cpu_h_upper": 22.0,
+    "estimate_cpu_h_upper": 24.0,
     "workers": 8,
     "reserve": "1-2 box slots reserved for Luna/MASSENG",
-    "wall_note": "~22/8 ~= 2.8 h wall at 8 workers; do not exceed 10 incl. reserve"
+    "wall_note": "~22/8 ~= 2.8 h wall at 8 workers; do not exceed 10 incl. reserve",
+    "observed_runaway": "32-seed confirmatory projected 42-48 CPU-h (~800-900 CPU-s/run); truncated to 16 seeds by A5 before aggregation"
   },
   "gates": {
     "no_compute_until": [
@@ -151,5 +154,11 @@
     "out_dir": "/root/work/paperC/confirm_final",
     "log": "/root/work/paperC/confirm_final.log",
     "reserve_note": "configured --workers 10 but only 6 cells exist, so instantaneous load is 6 processes; the 1-2 slot Luna/MASSENG reserve was NOT explicitly enforced by this launch (recorded as a deviation; no external job was affected at launch)"
+  },
+  "amendment_A5": {
+    "file": "docs/audit/PAPER_C_A5_SEED_TRUNCATION.md",
+    "sha256": "365155965423b4f9171b5ad69a87dd0ef11c0710b5216190d043beebfb16bf99",
+    "adjudication_commit": "1c51f17",
+    "rule": "exactly 16 matched seeds 100-115; 116-131 excluded; estimands/Holm unchanged; no optional stopping; precision SE x sqrt(2); report A5 interim precision; envelope <=24 CPU-h"
   }
 }
