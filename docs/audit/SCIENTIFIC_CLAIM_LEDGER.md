@@ -190,3 +190,27 @@ Artefacts: `PAPER_D_EQUATION_AUDIT.md` sha256 `b6bafd1490b0a98df021f8b6ad1caff52
 **Record status:** Paper D is a **candidate new-generation finding/section** (design audit) and Paper C is a
 **design-only plan**; both are pre-registerable and neither is an adjudicated result. Paper C/D wording must not claim
 the standard literature is wrong or that the engine is validated.
+
+---
+
+## ADJUDICATOR ADDENDUM — MODEL ZOO / D1–D2 and EVIDENCE-LAYER LIMITS (2026-11-25)
+
+**Design-only. No run has started.** `MODEL_ZOO_DISCRIMINATORS.md` sha256
+`5a67fcf1db9648dda02be88c3cedace5ff0818e9ad1dd8261cbabcd1caf1f48f` (commit `6e780c2`);
+`TUTORING_DATA_INVENTORY.md` current sha256 `3469c644f7112e4b8de0c635e1ec72e7598b0a0c3b7ef0fb9e905fbc6cbe2608`
+(commits `f95164d`/`2c315c0`; the Lead-cited `a33fa368…` is superseded); `DHS_E1E8_MODEL_MAPPING.md` current sha256
+`7e27e83c38495bd160d2f055d53c43d20942c5da7053fe90a69e757c46b2d770` (earlier `11252df2…` superseded).
+
+| # | item | status | evidence / binding condition |
+|---|---|---|---|
+| MZ-01 | **D1/D2 32-run confirmatory core** (N=600/T=46, seeds 0–7, HK base; D1A/B, D2A/B reuse Pilot-0 v3 cells): D1 standard ≈0 pp vs mechanism ≤ −2.0 pp (probe −3.7 pp / spend −6.6 %); D2 X proportional spend fall/own_share flat vs Y Δown_share ≥ +0.20 + firm-revenue collapse > spend fall; 12-item prereg checklist, decision/indeterminate rules, Holm family, paired per-seed CIs | **UNRESOLVED — PRE-REGISTERABLE TEST, not a result** | `MODEL_ZOO_DISCRIMINATORS.md` §2–§4, §6. **No run until Codex's protocol/Kaplan confirmation lands and this prereg is reviewed.** |
+| MZ-02 | **10-model zoo**, five discriminating moment families (gate pressure; school supply S; supplier availability; credential-vs-skill; time; state-vs-market); five predictions explicitly **UNFALSIFIABLE/data-blocked now**: time allocation, Mincer returns (no earnings), withholding magnitudes/provider mix (no own-provider data), Kaplan firm profits (no firm-market data), exact CES substitution sign | **UNRESOLVED — pre-registerable tests, not results** | `MODEL_ZOO_DISCRIMINATORS.md` §5, §8. Recorded so later nobody claims those were tested. |
+| MZ-03 | **Run gate:** D1/D2 + zoo need Codex protocol/Kaplan confirmation + approved prereg before any run | **UNRESOLVED — process gate** | Lead/Commander instruction; do not start a run until both land. |
+| MZ-04 | **Pilot-0 script inconsistency:** docstring says 96 runs / 3 regimes / `pay_ratio=.8`; committed v3 code has 4 regimes (→128 runs) and `pay_ratio=.55`, `monitoring=.2` (matches `fbc1991`); earlier 96-run figure was v2 | **UNRESOLVED — provenance** | The prereg must quote **code + commit**, not the docstring; Commander is checking which version launched. |
+| EV-01 | **HK-vs-PH supply-form cannot be tested** with the current portfolio: PISA 2018/2022 has participation/hours by ESCS quintile for HK/PH/CN but **no expenditure and no own-teacher-vs-firm item**; provider-type data only Korea (KOSTAT); PH/KH none; Cambodia only SEA-PLM 2019 (codebook unverified, V) | **UNRESOLVED — binding limitation** | `TUTORING_DATA_INVENTORY.md` §2–§3. The emergence prediction can be illustrated, not tested. |
+| EV-02 | **Paper C's empirical leg is feasible-partial (participation/hours only)**; supply-form/withholding predictions remain **theory/simulation** until codebooks/access verified | **UNRESOLVED — binding limitation** | Same. Papers C/D must not imply the empirical leg exists. |
+| EV-03 | **DHS E1–E8 cannot test the model zoo:** no tutoring, learning, gate/seat, time-use, earnings or expenditure variables; they weakly constrain demand-side distributions and falsify a proxy (E8 household size ≠ kin support) only | **UNRESOLVED — binding limitation** | `DHS_E1E8_MODEL_MAPPING.md`. **No model may "win" on DHS alone**; DHS = auxiliary descriptive evidence layer. |
+| EV-04 | **D/L/V convention:** `D` documented snippet, `L` located/access-route, `V` verified source — **nothing marked V may be asserted as fact** | **BINDING CONVENTION** | Remaining V items (PISA/SEA-PLM wording, expenditure/provider confirmation, CIEFR/CFPS/CEPS access) are explicitly unverified. |
+
+**Status:** all Model Zoo and zoo/evidence claims are **pre-registerable designs or binding limits, not results**.
+Paper C/D sections must not imply the empirical leg exists; the unfalsifiable list is binding.

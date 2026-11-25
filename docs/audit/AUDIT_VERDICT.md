@@ -566,6 +566,65 @@ approved.** When the Commander drafts it, review with the same four-criticism di
 overclaim; grade×urban/design-cell counts only; seed-MC uncertainty; no permutation inference. **Paper D compute is
 gated** on the Paper C confirmatory run and an approved prereg (Commander rule).
 
+## 4I. Model Zoo / D1–D2 discriminators — pre-registration review (design-only; **no run yet**)
+
+Artefact: `docs/audit/MODEL_ZOO_DISCRIMINATORS.md` **sha256 `5a67fcf1db9648dda02be88c3cedace5ff0818e9ad1dd8261cbabcd1caf1f48f`**
+(commit `6e780c2`). Design-only; nothing has run.
+
+**D1/D2 32-run confirmatory core (reviewed):** N=600, T=46, seeds 0–7 matched, HK base; D1A/D1B and D2A/D2B reuse
+the four Paper C Pilot-0 **v3** cell definitions (N=1500 exploratory → N=600 re-execution; cell definitions reused,
+results new). Optional D1C q0=0.8 (+8) and mechanism-grade D2 (+16).
+* **D1 (S in demand vs demand-only):** primary paired Δ K–12 tutoring participation (D1B − D1A: q0 1.2 vs 1.0);
+  standard/demand-only prediction **≈0 pp**, mechanism-rich prediction **≤ −2.0 pp** (probe prior −3.7 pp, spend
+  −6.6 %). Decision/indeterminate rules: |Δ| < 1.0 pp → indeterminate (extend seeds, do not reinterpret).
+* **D2 (cap vs withholding displacement):** primary paired Δ `own_share` (D2B − D2A: `own_open_gap` ± `firm_ban=.9`);
+  X (reduced-form) predicts proportional spend fall, **own_share flat**; Y (mechanism) predicts **Δown_share ≥ +0.20**
+  and firm-revenue collapse exceeding the spend fall; Δown_share < 0.05 → X not rejected/indeterminate in this regime.
+* **Pre-registration content checked and adequate:** 12-item checklist (§6) — exact cells, seeds 0–7, one primary
+  outcome per test + Holm-corrected secondary family, predicted signs/thresholds, decision/indeterminate rules,
+  paired per-seed CIs, contamination declarations, no-op binding assertions, engine/spec hashes, exclusion rules,
+  report-all-cells/no selective reporting.
+* **Run gate (binding):** D1/D2 + the model zoo need **Codex's protocol/Kaplan confirmation** and this prereg review
+  before any run; **no run may start until that lands.**
+* **Pilot-0 script inconsistency (flagged):** the `run_paperC_pilot0.py` docstring says "96 runs / 3 supply regimes /
+  `pay_ratio=0.8`", but the committed **v3 code** has **4 regimes (→128 runs)** and `pay_ratio=0.55`,
+  `monitoring=0.2`, matching commit `fbc1991`; the prereg must quote **code + commit**, not the docstring. (Pilot-0 v3
+  = 128 runs, not 96; earlier 96 was v2. The Commander is checking which version actually launched.)
+
+**10-model zoo (reviewed):** ten candidates mapped to 2–3 observable predictions each, with five **discriminating
+moment families** (gate pressure; school supply S; supplier availability; credential-vs-skill; time; state-vs-market).
+Explicitly **UNFALSIFIABLE / data-blocked now:** (i) student/teacher **time allocation** (no time variables; engine
+lacks the time budget); (ii) **Mincer returns** (no earnings in DHS); (iii) **withholding magnitudes / provider mix**
+(no own-provider/teacher-pay data); (iv) **Kaplan-type firm profits** (no firm-market entry/price/profit data);
+(v) **exact CES substitution sign** (needs `production='ces'` extension). DHS has no tutoring module → all
+shadow-education moments are ILSA/CEPS/theory-only. **These are pre-registerable tests, not results**; the
+unfalsifiable list is binding so that later no one claims those were tested.
+
+## 4J. Evidence-layer limits for Papers C/D and the Model Zoo (binding)
+
+Sources: `docs/audit/TUTORING_DATA_INVENTORY.md` (current sha256
+`3469c644f7112e4b8de0c635e1ec72e7598b0a0c3b7ef0fb9e905fbc6cbe2608`; commits `f95164d`/`2c315c0`; the earlier
+`a33fa368…` version cited by the Lead is superseded by the codebook-verification commits) and
+`docs/audit/DHS_E1E8_MODEL_MAPPING.md` (current sha256
+`7e27e83c38495bd160d2f055d53c43d20942c5da7053fe90a69e757c46b2d770`; earlier `11252df2…` superseded).
+
+1. **HK-vs-PH supply-form cannot be tested with the current portfolio.** PISA 2018/2022 gives tutoring
+   participation/hours by ESCS quintile for HK/PH/CN but **no expenditure and no own-teacher-vs-firm item**;
+   provider-type data exist only for **Korea** (KOSTAT survey); PH/KH have none; Cambodia only via SEA-PLM 2019
+   (codebook unverified, marked V). Therefore **Paper C's empirical leg is feasible-partial (participation/hours
+   only)**; the supply-form/withholding predictions remain **theory/simulation** until codebooks/access are verified.
+   The "emergence" prediction can be *illustrated*, not tested, with this portfolio.
+2. **DHS E1–E8 cannot test the model zoo.** They contain no tutoring, learning, gate/seat, time-use, earnings or
+   expenditure variables. They can weakly constrain demand-side distributional implications (wealth gradient sign,
+   urban–rural gap, sex-gap reversal) and **falsify a proxy** (E8 household size ≠ kin support), but they cannot test
+   tutoring demand, withholding, test-prep/state supply, positional-vs-human-capital, signalling, Hanushek, time
+   allocation, or any policy-change prediction. **No model may "win" on DHS alone**; use DHS only as auxiliary
+   descriptive targets in a separate evidence layer.
+3. **D/L/V convention is binding:** `D` = documented snippet/committed file; `L` = located/access-route; `V` =
+   verified item/source. **Nothing marked V may be asserted as fact** (the current inventory explicitly lists the
+   remaining V items as unverified: PISA/SEA-PLM exact item wording, expenditure/provider confirmation, CIEFR/CFPS/
+   CEPS access). Papers C/D must not imply the empirical leg exists.
+
 ## 5. Evidence-status register (programme level)
 
 | Status | Count (paper + programme rows) | Notes |
@@ -576,10 +635,10 @@ gated** on the Paper C confirmatory run and an approved prereg (Commander rule).
 | VALIDATED SIMULATION | **4** (1 A, 3 programme) | **A-39 item (d) local identifiability (stop gate met with declared restriction)**; engine/PL module validation, corrected DGP design, bootstrap size/power |
 | AUTHOR-REPORTED | **44** (20 A, 18 B, 6 programme) | **AUTHOR-REPORTED BASELINE**: the 420 generation, the Paper A Exp 1/3/4/5 legacy numbers, the author JSON bundle; not results, not reproduced, not to be silently replaced |
 | CONTRADICTED | **31** (8 A, 14 B, 9 programme) | only where committed code/algebra/measured audit output refutes the claim; includes the 100 % paradox, invalid E1/Q3, legacy DGP, "published benchmark" attributions, and the Paper B policy reversals |
-| UNRESOLVED | **10** (2 A, 0 B, 8 programme) | A-31 replication inventory; A-36 bulge `t*` (no-effect evidence); Paper C confirmatory prereg (C-04); Paper D omissions/divergences (D-01/D-03) and inventory attribution risk (D-04); canonical spec/Gate-2; GPU quarantine |
+| UNRESOLVED | **18** (2 A, 0 B, 16 programme) | A-31 replication inventory; A-36 bulge `t*` (no-effect evidence); Paper C confirmatory prereg (C-04); Paper D omissions/divergences (D-01/D-03) and inventory attribution risk (D-04); Model Zoo D1/D2 + run gate + Pilot-0 provenance (MZ-01…MZ-04); evidence-layer limits (EV-01…EV-04); canonical spec/Gate-2; GPU quarantine |
 
-The machine-readable one-row-per-claim record is `results/audit/paper_claims.csv` (118 rows; sha256
-`f3480b4db57fcf6e9b7499697e3b30ecc09619bf42db65eb73e1d3037886c31c`). The Lead-defined new-generation label **REPRODUCED EMPIRICAL ANALYSIS** is used for the fresh-WDI E8 rows; all
+The machine-readable one-row-per-claim record is `results/audit/paper_claims.csv` (126 rows; sha256
+`2e48cbe29192ece5d1c0a73c5fbdf3c5df956cb4a0713d7185756921de3a517f`). The Lead-defined new-generation label **REPRODUCED EMPIRICAL ANALYSIS** is used for the fresh-WDI E8 rows; all
 other rows use the verbatim six-status taxonomy.
 
 ---
