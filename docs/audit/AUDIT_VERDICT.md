@@ -388,6 +388,53 @@ landed**; when it does, review it against the same four criticisms (rank-4/6 str
 selftest, within-invariant permutation) before any (c) run is accepted. (d) is now closed with the declared
 restriction; (a), (b), (e) are closed (A-34/A-35, A-36, A-37).
 
+## 4E. Review of item (c) gate-architecture pre-registration — **CONDITIONAL APPROVAL; AMENDMENTS REQUIRED BEFORE THE FEE-CONTRAST LAUNCH**
+
+Sources reviewed: `docs/audit/GATE2_PREREGISTRATION.md` §2(c); runner
+`papers/shadow-education-contest/code/run_gate_architecture.py` (sha256 `b046318c…e3a`). Design as submitted:
+repaired engine pin `846c9e0`; NEW SSA-like world (N=300, T=20, T0=12, KR primary base); 4 architectures
+{bar, bar_high, quota, contest} at the G6→G9 transition × 5 seat shares {0.25,0.35,0.45,0.55,0.70} × 2 fee regimes
+{0.19 kept, 0.00 abolished at T0} × 4 vacancy rates {0.02,0.08,0.25,0.50} × 32 matched seeds = **5,120 runs**;
+per-run `E.unfired_events == []`; fee-cell pilot verified `event_log == [(12,'fee abolition',{'fee_public':0.0})]`.
+
+**Verdict: structure is sound; the run is CONDITIONAL. Do not launch the fee contrast until the pre-registration is
+amended with the three must-fix items below; the `--fees 0.19` fee-free block may launch meanwhile.**
+
+**Must fix before the fee-contrast launch:**
+
+1. **Fail routing undeclared and currently `fail='stop'`.** The canonical KR primary G9 gate is `fail='track'`
+   (`canonical_spec.json`: KR-G9-track, share 0.35, `track_consequence`). With `stop`, the experiment becomes a
+   **dropout** experiment and the Q5−Q1 tutoring gap is confounded with selection/dropout, so it is not comparable to
+   the paper's vertical-tier/universal-K12 design. Declare **primary = `fail='track'`** (matches the KR spec) with
+   `stop` as a declared sensitivity (extra cells), or run both as an explicit 2-level factor.
+2. **POST window truncated at +4** (`POST = range(T0+1, T0+5)` = e=+1..+4) although `T=20` allows e=+1..+6. The
+   paper's H2 is over post e=+1..+6. Extend to `range(T0+1, T0+7)` (free; no extra runs) or declare the +4 truncation
+   as a deviation and do not compare H2 magnitude to the paper's.
+3. **Primary estimand and uncertainty not pre-declared.** Specify: primary H2 = **contest at vac0 = 0.08** (the
+   paper's 2×2) — the runner currently averages H2 over vac0 and computes it for bar/bar_high too (averaging can
+   cancel the inverted-U); quota H2 as comparator; bar/bar_high H2 **exploratory only** (their S is a bar-threshold
+   mapping, not a realized seat share — report realized admission rates); H1 = gap_delta(fee=0, S=.25) −
+   gap_delta(fee=0, S=.70) plus a monotonicity/Spearman statistic; **paired-seed bootstrap 95% CI** (resample the 32
+   matched seeds, pair fee0/fee0.19 by seed) for H2/H1/per-vac0 Δcut — currently H2 is a difference of independent
+   means with **no CI**; a multiplicity rule; and a **null-reporting rule** (the pre-repair +0.1086 is
+   AUTHOR-REPORTED baseline, not a target; a null/negative repaired-engine H2 is a result, not a failure).
+
+**Analysis/provenance fixes (commit with the amendment):** (4) engine label says "98baf6b" in the docstring/LABEL but
+metadata hardcodes `846c9e0` — make consistent; (5) record `fees/archs/shares/vacs/N/T0/T/measure_from/start_year`,
+spec hash, runner hash, `event_key`, and per-run `event_log` in metadata/output; (6) use **`year_t=T0`** for the fee
+event (additive engine feature; bit-identical; robust to `start_year`) and keep the unfired assertion; (7) verify and
+print the effective gate-level `r=0.6/alpha=0.5` (engine supports them; add a smoke assertion); (8) report per-quintile
+× urban cell counts and per-gate applicants/seats/realized admit rate per cell; (9) state an MDE/achievable CI
+half-width for H2 at 32 seeds, and that a null is inconclusive if the effect is below it.
+
+**Four Codex criticisms — positions accepted subject to four sentences in §2(c):** (i) no identification claim from
+(c); the 4θ map limitation and the 6-param ABC rank-4/6 are recorded elsewhere and not addressed; (ii) grade×urban cell
+counts are a design check, not an estimation population (no empty synthetic cell); (iii) seed-MC uncertainty only, no
+pooled/FE claim; (iv) no permutation inference / country blocking.
+
+**Label:** NEW GENERATION — REPRODUCED SIMULATION; not a reproduction of the Gemini 1,640-run design; paper H2/H1
+numbers remain AUTHOR-REPORTED baseline.
+
 ## 5. Evidence-status register (programme level)
 
 | Status | Count (paper + programme rows) | Notes |
@@ -400,8 +447,8 @@ restriction; (a), (b), (e) are closed (A-34/A-35, A-36, A-37).
 | CONTRADICTED | **30** (8 A, 14 B, 8 programme) | only where committed code/algebra/measured audit output refutes the claim; includes the 100 % paradox, invalid E1/Q3, legacy DGP, "published benchmark" attributions, and the Paper B policy reversals |
 | UNRESOLVED | **5** (2 A, 0 B, 3 programme) | A-31 replication inventory; A-36 bulge `t*` (no-effect evidence); canonical spec/Gate-2; GPU quarantine |
 
-The machine-readable one-row-per-claim record is `results/audit/paper_claims.csv` (105 rows; sha256
-`9adf990ea6c346861021713a5bca244eb0d290695537a724acb5da5a8138b867`). The Lead-defined new-generation label **REPRODUCED EMPIRICAL ANALYSIS** is used for the fresh-WDI E8 rows; all
+The machine-readable one-row-per-claim record is `results/audit/paper_claims.csv` (106 rows; sha256
+`f401182b7f81fc36f8f22f88ad1a030f4d2913173423f889d2c5d9baa63cae61`). The Lead-defined new-generation label **REPRODUCED EMPIRICAL ANALYSIS** is used for the fresh-WDI E8 rows; all
 other rows use the verbatim six-status taxonomy.
 
 ---
