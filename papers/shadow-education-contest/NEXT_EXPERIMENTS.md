@@ -1,7 +1,9 @@
 # Proposed next experiments (from Gemini, bridge task `ce886de8`, 25 Nov 2026 05:23Z)
 
-**Status: PROPOSALS ONLY — not run, not pre-registered, not committed results.** Recorded because the bridge
-handoff asked for them to be saved here. None of the four has been executed in this repository.
+**Status: PROPOSALS ONLY, with one update — Exp 7 has since been run (2026-11-25 14:00 CST).** The exact
+contest-gate engine patch and tested runner arrived; the CF4a/CF4b arms were run as part of the 540-run
+HK/Korea job, and the pre-stated falsifier was **not met** (details under Exp 7). The other three proposals
+remain unrun.
 
 ## Exp 7 — Paper B combined win-win arms (highest ROI; ~15 s on M1)
 
@@ -13,8 +15,22 @@ Add two explicit combined arms to `code/run_hk_korea_comparative.py` (30 matched
 Falsifier: `CF4a`/`CF4b` land in the Win-Win Zone (total spend index < 80 **and** Q5 elite share below baseline)
 in both jurisdictions.
 
-**Blocker:** this requires the contest-gate engine patch. The supplied runner does not run against the committed
-engine (see `RUNNER_STATUS.md`); the patched `core.py`/`tutoring.py` have not been supplied.
+**Blocker (resolved 2026-11-25 14:00 CST):** this required the contest-gate engine patch. The exact patched
+`core.py`/`tutoring.py`, the matching runner and `contest_gate.patch` were received in the operator bundle,
+applied additively on this branch, and run (540/540, reproduces the supplied reference output to last-bit
+float).
+
+**Result (SIMULATION): FALSIFIER NOT MET.** Neither composite arm clears the criterion in both jurisdictions:
+
+| arm | HK | KR | both |
+|---|---|---|---|
+| CF4a | FAIL — spend 43.78 ✓, elite Q5 48.64 % vs 46.36 % baseline (+2.28 pp) ✗ | PASS — 46.50 ✓, 34.10 % (−2.02 pp) ✓ | **FAIL** |
+| CF4b | FAIL — spend 90.88 ✗ | FAIL — spend 88.04 ✗ (elite share falls in both) | **FAIL** |
+| CF1b (cap −50 %, single lever) | PASS — 67.39 ✓, 41.96 % (−4.40 pp) ✓ | PASS — 76.42 ✓, 26.39 % (−9.73 pp) ✓ | **PASS (only arm)** |
+
+Unexpected direction worth a follow-up decomposition: every ΔV-compression arm lowers spend but **raises**
+elite Q5 share relative to baseline in both jurisdictions. Full numbers and caveats:
+`code/REPRODUCTION_CF4_2026-11-25.md`.
 
 ## Exp 2 — LSMS-ISA household tutoring check (empirical; local CPU; needs data access)
 
@@ -41,7 +57,8 @@ Add a non-exam elementary enrichment/childcare floor in Grades 1–6 for South K
 reproduces the real-world age profile (~86% elementary > ~75% middle > ~67% high school) while keeping the
 Grade-12 CSAT counterfactual ordering invariant.
 
-**Blocker:** same engine-patch requirement as Exp 7.
+**Blocker:** same engine-patch requirement as Exp 7 — now resolved (the patch is committed and applied on this
+branch), but Exp 8 itself is still **not run**.
 
 ## No paid GPU needed
 

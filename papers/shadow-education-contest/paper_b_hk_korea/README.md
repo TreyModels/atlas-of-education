@@ -2,6 +2,8 @@
 
 **A comparative structural study of shadow education in Hong Kong and South Korea.**
 Trey Menefee, Atlas of Education Research Program. **Draft (author-reported); simulation only.**
+(An 18-arm / 540-run bundle run was reproduced against its supplied reference on 2026-11-25 — see
+"Verification status" below; it is a different design from this draft's table and its CF4 result is negative.)
 
 Manuscript: `Shadow_Education_Arms_Race_HK_Korea_APA.docx` (APA 7th, 4 embedded 200-DPI charts,
 15 references as supplied). sha256 `fe63be84fe873ef57f1dde5ae0d588077d957b75d127b7a656a7fc884d8b9602`.
@@ -43,13 +45,27 @@ Paper's reading: a +50% tutoring tax raises total spend and top-quintile elite c
 raises Grade-12 participation and spend (the 2024 Korean medical-seat shock); only wage compression paired with
 effort caps/seat expansion reaches the win-win frontier.
 
+**Update 2026-11-25 14:00 CST (SIMULATION).** The exact patched engine + tested runner were received and the
+540-run bundle job was reproduced (18 arms × 30 seeds; matches the supplied reference to last-bit float). On
+the pre-stated Win-Win criterion (spend index < 80 **and** elite Q5 share below baseline, in both
+jurisdictions), **the combined arms CF4a/CF4b fail**: CF4a fails in Hong Kong on elite capture (+2.28 pp above
+baseline; Korea passes), and CF4b fails in both on spend (90.88 / 88.04). The only arm that passes is the
+single effort-cap arm **CF1b**. So this reproduction does **not** support the "only wage compression paired
+with caps/seats reaches the win-win frontier" reading. Note also that the reproduced run is an
+**18-arm / 540-run / `N=300` / `T=46`** design — not the 14-arm / 420-run / `N=400` / `T=70` design tabulated
+above, so the table is **not** reproduced here. Full numbers: `../code/REPRODUCTION_CF4_2026-11-25.md`.
+
 ## Verification status
 
 - The four embedded charts were extracted and checked against the handoff numbers: **all four match**
   (calibration, counterfactual spend, seat-expansion, trade-off frontier).
-- The **run code and results files are not in this repository** (`run_hk_korea_comparative.py` and the
-  HK/Korea JSON were not attached). Numbers above are therefore **author-reported**, not independently
-  reproducible from this deposit.
+- The exact patched engine files, the tested runner and the bundle reference output have now been received,
+  verified byte-identical, committed, and **reproduced** (540/540 runs; see
+  `../code/REPRODUCTION_CF4_2026-11-25.md`). That reproduction covers the bundle's 18-arm design, **not** the
+  14-arm / 420-run design tabulated in this README, whose run code and results file are still not in the
+  repository. The table above therefore remains **author-reported**.
+- The reproduced CF4a/CF4b result is **negative** on the stated criterion (above); report it as SIMULATION and
+  do not cite the win-win reading as reproduced.
 - Treat as a draft. Do not quote as verified empirical findings; it is a simulation study.
 
 ## Charts

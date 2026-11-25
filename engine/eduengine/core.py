@@ -47,6 +47,13 @@ CORE_DEFAULTS = dict(
     kin_support=0.7, street_age=15,
     # struts that can be switched off for strut-removal tests (see struts.py)
     belief_floor=True,
+    # Tullock contest gate (vertical-tier positional race)
+    elite_logw=0.0,              # log-wage premium for winning a fail='track' elite contest gate
+    contest_r=1.5,               # Tullock contest discrimination exponent (Plackett-Luce / Gumbel-max)
+    contest_alpha=1.0,           # effectiveness of contest tutoring effort in effective contest input
+    contest_price=0.05,          # unit price of contest tutoring effort (wage units)
+    contest_x0=1.0,              # baseline contest input (free schooling / zero-tutoring floor)
+    contest_max_e=10.0,          # regulatory cap on annual contest tutoring effort
 )
 
 
@@ -91,6 +98,7 @@ class Engine:
         self.Bn = np.zeros(self.nlev + 1)
         self.cut = [g.get('cut0', 0.0) for g in p['gates']]   # believed/realised score cutoff for quota gates
         self.cut_adm = [g.get('admit', {}).get('cut0', 0.0) for g in p['gates']]   # admission cutoffs (e.g. gaokao)
+        self.lam_contest = [g.get('lam0', 0.5) for g in p['gates']]  # believed Plackett-Luce intensity lambda = exp(-c*)
         self.lrate = p['q0']                          # believed mean learning per school year
         self.kids = None
         self.labour_module = [m for m in self.modules if m.labour.__func__ is not Module.labour]
@@ -123,7 +131,8 @@ class Engine:
                    L6=np.full(N, np.nan), L9=np.full(N, np.nan), spend=np.zeros(N), pub_years=np.zeros(N),
                    comp_age=np.full((N, self.nlev), np.nan),
                    q=np.searchsorted(np.quantile(z, [0.2, 0.4, 0.6, 0.8]), z), street=np.zeros(N, bool),
-                   gtimes=np.zeros(N, int), repeats=np.zeros(N, int), retakes=np.zeros(N, int), voc=np.zeros(N, bool))
+                   gtimes=np.zeros(N, int), repeats=np.zeros(N, int), retakes=np.zeros(N, int), voc=np.zeros(N, bool),
+                   contest_e=np.zeros(N), elite=np.zeros(N, bool), tut_k12=np.zeros(N))
         if self.kids is None:
             self.kids = new
         else:
@@ -161,12 +170,29 @@ class Engine:
             yrs_left = np.where(lev_now == m, self.ends[m] - g, self.ends[m] - start_g)
             Lend = L + lam * np.maximum(self.ends[m] - g, 0)
             gate = p['gates'][m]
-            ref = gate['bar'] if gate['kind'] == 'bar' else self.cut[m]
-            P = ndtr((Lend - ref) / p['exam_sd'])
-            if gate.get('academic_only'):
-                P = np.where(voc, 0.0, P)                # vocational-track pupils cannot sit this exam
-            Vfail = Vc[m + 1] if gate.get('fail') == 'track' else Vc[m]   # failing a tracking exam still gives the credential
-            Upass = U
+            if gate['kind'] == 'contest':
+                r_c = gate.get('r', p['contest_r'])
+                alpha_c = gate.get('alpha', p['contest_alpha'])
+                x0_c = gate.get('x0', p['contest_x0'])
+                x_eff = np.maximum(x0_c * np.maximum(Lend, 0.1) / max(self.ends[m], 1) + alpha_c * k['contest_e'][sl], 1e-6)
+                P = 1.0 - np.exp(-np.clip(self.lam_contest[m] * (x_eff ** r_c), 0.0, 50.0))
+                if gate.get('academic_only'):
+                    P = np.where(voc, 0.0, P)
+                elw = gate.get('elite_logw', p['elite_logw'])
+                dV_elite = p['kappa'] * elw
+                if gate.get('fail') == 'track':
+                    Vfail = U                                # vertical-tier routing: non-elite track still continues
+                    Upass = U + dV_elite
+                else:
+                    Vfail = Vc[m]
+                    Upass = U + dV_elite
+            else:
+                ref = gate['bar'] if gate['kind'] == 'bar' else self.cut[m]
+                P = ndtr((Lend - ref) / p['exam_sd'])
+                if gate.get('academic_only'):
+                    P = np.where(voc, 0.0, P)                # vocational-track pupils cannot sit this exam
+                Vfail = Vc[m + 1] if gate.get('fail') == 'track' else Vc[m]   # failing a tracking exam still gives the credential
+                Upass = U
             adm = gate.get('admit')
             if adm and m + 1 < self.nlev:              # passing completes level m; a quota rations entry to level m+1
                 Pa = ndtr((Lend - self.cut_adm[m]) / p['exam_sd'])
@@ -368,6 +394,39 @@ class Engine:
             score = k['L'] + p['exam_sd'] * r.standard_normal(n)
             if gate['kind'] == 'bar':
                 ok = score >= gate['bar']
+            elif gate['kind'] == 'contest':
+                cand_mask = at_gate & (~k['voc'] if gate.get('academic_only') else True)
+                ci = np.flatnonzero(cand_mask)
+                seats = max(int(round(gate['share'] * p['N'])), 1)
+                r_c = gate.get('r', p['contest_r'])
+                alpha_c = gate.get('alpha', p['contest_alpha'])
+                x0_c = gate.get('x0', p['contest_x0'])
+                ok = np.zeros(n, bool)
+                if len(ci) > 0:
+                    x_eff = np.maximum(x0_c * np.maximum(k['L'][ci], 0.1) / max(self.ends[m_], 1) + alpha_c * k['contest_e'][ci], 1e-6)
+                    w_log = r_c * np.log(x_eff)
+                    u = np.clip(r.random(len(ci)), 1e-12, 1.0 - 1e-12)
+                    gumbel = -np.log(-np.log(u))
+                    pl_score = w_log + gumbel
+                    if len(ci) > seats:
+                        order = np.argsort(-pl_score)
+                        ok[ci[order[:seats]]] = True
+                    else:
+                        ok[ci] = True
+                    # Market-clearing Plackett-Luce intensity lambda: mean(1 - exp(-lam * x_eff^r)) = min(seats / len(ci), 0.99)
+                    w = x_eff ** r_c
+                    target_s = min(seats / max(len(ci), 1), 0.99)
+                    lo, hi = 1e-12, 50.0 / max(float(np.percentile(w, 10)), 1e-9)
+                    for _ in range(30):
+                        mid = 0.5 * (lo + hi)
+                        if float(np.mean(1.0 - np.exp(-np.clip(mid * w, 0.0, 50.0)))) < target_s:
+                            lo = mid
+                        else:
+                            hi = mid
+                    self.lam_contest[m_] = 0.7 * self.lam_contest[m_] + 0.3 * (0.5 * (lo + hi))
+                k['contest_e'][at_gate] = 0.0
+                if gate.get('fail') == 'track' and m_ == self.nlev - 2:
+                    k['elite'][at_gate & ok] = True
             else:   # quota: seats = share x cohort size (as zhongkao/gaokao places are planned); cutoff -> next year's belief
                 # (fixed 1 Nov after the first run: a share of *takers* let selective dropout ratchet the cutoff upward)
                 s = np.sort(score[at_gate])[::-1]
@@ -377,9 +436,12 @@ class Engine:
                 ok = score >= c
             if gate.get('academic_only'):
                 ok = ok & ~k['voc']
-            if gate.get('fail') == 'track':            # failers continue on a vocational track (e.g. zhongkao)
+            if gate.get('fail') == 'track':            # failers continue on a vocational/non-elite track (e.g. zhongkao)
                 tracked = at_gate & ~ok
-                k['voc'][tracked] = True
+                if gate['kind'] != 'contest':
+                    k['voc'][tracked] = True
+                elif gate.get('set_voc', True):
+                    k['voc'][tracked] = True
                 ok = ok | tracked
             passed = at_gate & ok
             self.pass_rate[m_] = 0.8 * self.pass_rate[m_] + 0.2 * passed.sum() / max(at_gate.sum(), 1)
@@ -433,6 +495,8 @@ class Engine:
             inc = self.labour_module[0].labour(self, t, ex)
         if inc is None:          # no labour module: Mincer-style fixed returns
             inc = np.exp(0.08 * k['g'][ex] + 0.05 * (k['L'][ex] - k['g'][ex]))
+        if len(ex) and p['elite_logw'] != 0.0:
+            inc = np.where(k['elite'][ex], inc * np.exp(p['elite_logw']), inc)
         self.update_beliefs(ex, inc)
         self.leaver_income = inc
         for m in self.modules:

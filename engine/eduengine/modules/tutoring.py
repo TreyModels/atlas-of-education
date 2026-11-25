@@ -69,22 +69,103 @@ class TutoringMarket(Module):
         y['buyback'] |= own
         y['withheld'] = np.where(firm, y['withheld'] * (1 - p['buyback_firm']), y['withheld'])
         y['extra_spend'] += np.where(own, p['p_own'], 0.0) + np.where(firm, pf, 0.0)
+        # ---- Tullock contest tutoring (only active when at least one gate has kind='contest')
+        contest_e_now = np.zeros(n)
+        contest_spend_now = np.zeros(n)
+        contest_gates = [(m_, gt) for m_, gt in enumerate(p['gates']) if gt.get('kind') == 'contest']
+        if contest_gates and len(idx):
+            pc = float(p['contest_price'])
+            e_cap = float(p['contest_max_e'])
+            cash_rem = np.maximum(E._cash[idx] - y['extra_spend'][idx], 0.0)
+            yy = np.maximum(k['y'][idx], 0.05)
+            # Assign each attending child to their nearest upcoming contest gate
+            cred_i = k['cred'][idx]
+            g_i = k['g'][idx]
+            voc_i = k['voc'][idx]
+            lam_learn = E.lrate * np.exp(p['beta_a'] * k['a'][idx])
+            assigned = np.full(len(idx), -1, int)
+            for m_, gt in contest_gates:
+                elig_m = (assigned < 0) & (cred_i <= m_) & (~voc_i if gt.get('academic_only') else True)
+                assigned[elig_m] = m_
+            for m_, gt in contest_gates:
+                sub = np.flatnonzero(assigned == m_)
+                if len(sub) == 0:
+                    continue
+                r_c = float(gt.get('r', p['contest_r']))
+                alpha_c = float(gt.get('alpha', p['contest_alpha']))
+                x0_c = float(gt.get('x0', p['contest_x0']))
+                elw = float(gt.get('elite_logw', p['elite_logw']))
+                if elw <= 0.0 and gt.get('fail') != 'track':
+                    elw = max(float(E.B[min(m_ + 1, E.nlev)] - E.B[m_]), 0.1)
+                yrs_left = np.maximum(E.ends[m_] - g_i[sub], 1)
+                dV = (p['delta'] ** (yrs_left - 1)) * p['kappa'] * elw
+                L_proj = k['L'][idx[sub]] + lam_learn[sub] * yrs_left
+                b_i = x0_c * np.maximum(L_proj, 0.1) / max(E.ends[m_], 1)
+                e_cum = k['contest_e'][idx[sub]]
+                lam_m = float(E.lam_contest[m_])
+                e_hi = np.minimum(e_cap, cash_rem[sub] / max(pc, 1e-9))
+                e_hi = np.maximum(e_hi, 0.0)
+                c_y = pc / yy[sub]
+                # Vectorized 25-point grid search + 8 golden-section refinement steps for exact global max on [0, e_hi]
+                grid = np.linspace(0.0, 1.0, 25)[None, :] * e_hi[:, None]
+                x_g = np.maximum(b_i[:, None] + alpha_c * (e_cum[:, None] + grid), 1e-6)
+                u_g = dV[:, None] * (1.0 - np.exp(-np.clip(lam_m * (x_g ** r_c), 0.0, 50.0))) - c_y[:, None] * grid
+                best_j = np.argmax(u_g, axis=1)
+                step_w = e_hi / 24.0
+                lo = np.maximum(0.0, (best_j - 1) * step_w)
+                hi = np.minimum(e_hi, (best_j + 1) * step_w)
+                phi = 0.6180339887498949
+                for _ in range(8):
+                    e1 = hi - phi * (hi - lo)
+                    e2 = lo + phi * (hi - lo)
+                    x1 = np.maximum(b_i + alpha_c * (e_cum + e1), 1e-6)
+                    x2 = np.maximum(b_i + alpha_c * (e_cum + e2), 1e-6)
+                    u1 = dV * (1.0 - np.exp(-np.clip(lam_m * (x1 ** r_c), 0.0, 50.0))) - c_y * e1
+                    u2 = dV * (1.0 - np.exp(-np.clip(lam_m * (x2 ** r_c), 0.0, 50.0))) - c_y * e2
+                    lo = np.where(u1 < u2, e1, lo)
+                    hi = np.where(u1 < u2, hi, e2)
+                e_opt = 0.5 * (lo + hi)
+                # Compare against e=0 corner explicitly
+                x0_val = np.maximum(b_i + alpha_c * e_cum, 1e-6)
+                u0_val = dV * (1.0 - np.exp(-np.clip(lam_m * (x0_val ** r_c), 0.0, 50.0)))
+                x_opt = np.maximum(b_i + alpha_c * (e_cum + e_opt), 1e-6)
+                u_opt = dV * (1.0 - np.exp(-np.clip(lam_m * (x_opt ** r_c), 0.0, 50.0))) - c_y * e_opt
+                e_opt = np.where((u_opt > u0_val + 1e-9) & (e_opt > 1e-4), e_opt, 0.0)
+                contest_e_now[idx[sub]] = e_opt
+                contest_spend_now[idx[sub]] = pc * e_opt
+            k['contest_e'] += contest_e_now
+            y['extra_spend'] += contest_spend_now
         y['tut_kind'] = choice
         g = k['g']                                   # grade being studied this year = g (before increment) + 1
+        k12 = att & (g < 12)
+        k['tut_k12'] += np.where(k12, y['extra_spend'], 0.0)
+        tut_any = (choice > 0) | (contest_e_now > 1e-4)
         G = E.ends[-1]
-        by_grade = [float(((choice > 0) & att & (g == j)).sum() / max((att & (g == j)).sum(), 1)) for j in range(G)]
+        by_grade = [float((tut_any & att & (g == j)).sum() / max((att & (g == j)).sum(), 1)) for j in range(G)]
         own_g = [float((own & att & (g == j)).sum() / max((att & (g == j)).sum(), 1)) for j in range(G)]
-        firm_g = [float((firm & att & (g == j)).sum() / max((att & (g == j)).sum(), 1)) for j in range(G)]
-        by_q = [float(((choice > 0) & att & (k['q'] == j)).sum() / max((att & (k['q'] == j)).sum(), 1)) for j in range(5)]
-        E.note(tut_rate=float((choice > 0)[att].mean()) if att.any() else 0.0, tut_by_grade=by_grade,
+        firm_g = [float(((firm | (contest_e_now > 1e-4)) & att & (g == j)).sum() / max((att & (g == j)).sum(), 1)) for j in range(G)]
+        by_q = [float((tut_any & att & (k['q'] == j)).sum() / max((att & (k['q'] == j)).sum(), 1)) for j in range(5)]
+        k12_rate_q = [float((tut_any & k12 & (k['q'] == j)).sum() / max((k12 & (k['q'] == j)).sum(), 1)) for j in range(5)]
+        k12_spend_q = [float(y['extra_spend'][k12 & (k['q'] == j)].mean()) if (k12 & (k['q'] == j)).any() else 0.0 for j in range(5)]
+        g12_mask = att & (g == 11)
+        E.note(tut_rate=float(tut_any[att].mean()) if att.any() else 0.0, tut_by_grade=by_grade,
                tut_own_by_grade=own_g, tut_firm_by_grade=firm_g, tut_by_q=by_q, firm_price=pf,
                tut_spend=float(y['extra_spend'][att].sum()),
-               firm_rev=float(pf * (firm & att).sum()),          # commercial tutoring revenue: pays tutors (labour module)
-               own_share=float(own.sum() / max((choice > 0).sum(), 1)))
+               firm_rev=float(pf * (firm & att).sum() + contest_spend_now[att].sum()),  # commercial tutoring revenue
+               own_share=float(own.sum() / max(tut_any.sum(), 1)),
+               tut_k12_rate=float(tut_any[k12].mean()) if k12.any() else 0.0,
+               tut_k12_spend=float(y['extra_spend'][k12].sum()),
+               tut_k12_rate_by_q=k12_rate_q,
+               tut_k12_spend_by_q=k12_spend_q,
+               tut_g12_rate=float(tut_any[g12_mask].mean()) if g12_mask.any() else 0.0,
+               contest_e_mean=float(contest_e_now[k12].mean()) if k12.any() else 0.0)
 
     def summary(self, E):
         R, m = E.R, E.p['measure_from']
         A = lambda key: np.mean(np.array(R[key][m:], float), 0)
         return dict(tut_rate=float(A('tut_rate')), tut_by_grade=list(A('tut_by_grade')),
                     tut_own_by_grade=list(A('tut_own_by_grade')), tut_firm_by_grade=list(A('tut_firm_by_grade')),
-                    tut_by_q=list(A('tut_by_q')), firm_price=float(A('firm_price')), own_share=float(A('own_share')))
+                    tut_by_q=list(A('tut_by_q')), firm_price=float(A('firm_price')), own_share=float(A('own_share')),
+                    tut_k12_rate=float(A('tut_k12_rate')), tut_k12_spend=float(A('tut_k12_spend')),
+                    tut_k12_rate_by_q=list(A('tut_k12_rate_by_q')), tut_k12_spend_by_q=list(A('tut_k12_spend_by_q')),
+                    tut_g12_rate=float(A('tut_g12_rate')), contest_e_mean=float(A('contest_e_mean')))
