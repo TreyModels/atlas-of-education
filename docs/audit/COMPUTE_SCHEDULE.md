@@ -904,3 +904,23 @@ log `screen_final.log` 0 B (buffered); **26 rows / 7 cells at 5.7 min ≈ 4.6 ro
 asked whether to (a) leave at 7, or (b) **relaunch at 10 from per-cell checkpoints** (resume-safe, ETA toward briefed
 ~1.3–1.4 h). Staging leftovers found: empty `/root/work/paperC_screen/screen_results/` + 0-byte `screen.log` (23:45);
 a `/root/work/queue/finalize.sh` process (0 % CPU) is running, not started by this scheduler. No other CPU jobs.
+
+### 13.37 CONFIRMED intended state 00:01 — screening at 7 workers (deliberate), Lead finalizer/shutdown chain armed; monitor-only
+
+Lead + Commander both confirmed the current single run is the **authoritative** screening and the deviations are deliberate:
+- **Authoritative:** driver **50226**, `run_paperC_screening.py driver --workers 7 --seeds 0-7 --n 600 --t 46
+  --analysis-commit dc90ee56e6e2f77c2af9b8e8e5e6994450a26de3 --out-dir /root/work/paperC/screen_final`, env
+  `PAPER_C_P12_MODE=pay_gap`, 7 cell workers, declared venv, nice 10, BLAS/OMP=1, **runner sha256
+  `d2d25c1cd6681c4271ab90d2df3afe18687b231b6b84fb7472392f23bef2562c`**. **7/10 workers is DELIBERATE** — 3 cores kept
+  free for Opis/Opus (Lean). **No relaunch at 10, no out-dir move, no cleaning, no killing.**
+- **Non-evidence/stray (ignore, keep):** `screen_results`, `screen_results_ABORTED_*`, `screen_canonical`,
+  `/root/work/paperC_screen/*` — aborted partials from the superseded `--workers 10` attempt (zero real ckpts at kill).
+- **Finalizer:** `/root/work/queue/finalize.sh` is Lead-commissioned and intentional — waits for the run, verifies
+  **288 rows / 36 cells**, writes `SHA256SUMS` + `RESULTS_DONE`, waits for `SHUTDOWN_OK` from the Mac puller, then
+  **powers the box off**; on failure writes `FAILED` and does NOT power off. **No second finalizer.** Mac poller pulls
+  `screen_final/*` into `~/neon-boot/qa/incoming/paperC_screening/`.
+- **Scheduler role:** **monitor only** — report rows at **32/64/128/192/288** with measured rate and the summary JSON
+  sha256 at completion; record problems in §13 and notify Lead, never act on the box. This scheduler issues no
+  shutdown/poweroff; the power-down is by the Lead finalizer after the puller signal (recorded for provenance).
+- **Measured 00:01:14:** 54/288 rows (18.8 %), 7 workers, cgroup **7.0/10**, rate **4.09 rows/min** (26→54 over 6.85 min)
+  → **ETA ~00:55–01:00** for 288 rows, to be re-baselined at each boundary.
