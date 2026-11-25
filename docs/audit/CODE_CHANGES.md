@@ -55,30 +55,46 @@ support a documented cap >12 but must raise beyond it.
 
 ---
 
-## 4. Gate 1 Phase B — engine repairs (**PENDING: not yet committed at the time of writing**)
+## 4. Gate 1 Phase B — engine repairs (LANDED at `f31e176` [core] + `6bc8d61` [tutoring]; tip `98baf6b`)
 
-This table is the acceptance map; each row is filled with the committed `file:line` once the lane commits.
-No Phase-B entry may be marked DONE without (i) the lane's commit hash, (ii) the pytest/invariant result, and
-(iii) the Commander's independent re-run.
+Line numbers are in the committed audit-branch files at `98baf6b`. Each row was independently checked by the
+Commander on a clean `git archive 98baf6b` tree (see §4b).
 
-| # | repair | expected file(s) | closes | status |
+| # | repair | file:line (committed) | closes | status |
 |---|---|---|---|---|
-| P1 | Explicit gate kinds `open|fixed_bar|quota|contest` + constructor/calendar normalisation + `ValueError` on unknown; `'bar'`→`fixed_bar` deprecation alias | `engine/eduengine/core.py` | D8; review §3.A | PENDING (engine-core) |
-| P2 | Persistent state: `k['pid']`, `k['track']`, `k['elite_prize']`, `k['prep_stock']`; `k['elite']` no longer restricted to `m_==nlev-2`; `GATE_SPECS` KR-SINGLE/KR-TRACKED; `values(..., track_state=)`; `gate_prize_dv` | `engine/eduengine/core.py` | D1, D5 (allocation), D6 (pid) | PENDING (engine-core) |
-| P3 | Replace `1−exp(−λx^r)`/λ-solve with `contest_math.pl_win_probs` for expected probabilities in `values()` + `E.contest_expected_probs`; realized gate via `pl_realize` from event-keyed stream | `engine/eduengine/core.py` | D2; review §3.B | PENDING (engine-core) |
-| P4 | Seat diagnostics + `share_of='applicants'` option; fix zero-seat admission, non-selective contest, double admission noise | `engine/eduengine/core.py`, `engine/eduengine/planning.py` (`gate_accounting`) | D3; review §3.C | PENDING (engine-core) |
-| P5 | `EventRNG` (event-keyed streams) + migrate all core/labour draws; policy-invariant covariates | `engine/eduengine/rng.py` (new, 232 L written), `engine/eduengine/core.py`, `engine/eduengine/modules/labour.py` | D6; review §7/reproducibility | PARTIAL (rng.py written; core/labour migration PENDING) |
-| P6 | Labour premium audit: per-child `elite_prize` + track earnings premium applied to all applicable incomes (leavers + queuers), raw/direct/composition decomposition series; wage-compression invariance | `engine/eduengine/modules/labour.py`, `engine/eduengine/core.py` | D7; review §3.A/§8 | PENDING (engine-core) |
-| P7 | Tutoring ledger split: `res_cost`/`tut_tax`/`tut_outlay`/`gov_tut_tax`, outlay-based cash budget + assertions; `firm_rev` resource-only (double-count fix); additive series (`contest_spend_now` = outlay, `contest_resource_cost`, `contest_tax_paid`, `gov_tut_receipt`, `*_by_q`, `contest_prep_stock_mean`) | `engine/eduengine/modules/tutoring.py` (522 L written) | D4; review §3.A | PARTIAL (written; needs core §6 API to run) |
-| P8 | Per-gate `prep_stock` with `contest_prep_depreciation` (rho), annual cap binding `e_t`, positional/learning switches | `engine/eduengine/modules/tutoring.py` + core allocation/consume | D5; review §4 | PARTIAL (written; needs core §6 API) |
-| P9 | Deterministic large-n `pl_win_probs` `auto` path (A5) + approximation-error table vs legacy `1−exp` | `engine/eduengine/contest_math.py`, `docs/audit/CONTEST_MATH_*.md` | D2; review §3.B | PENDING (contest-math) |
-| P10 | Contractor: GATE_SPECS updated in the 540 runner / canonical spec decision (canonical spec NOT frozen in Gate 1 — Lead open decision) | `papers/shadow-education-contest/code/…` | review §1, §4 | NOT IN GATE 1 (wave 2) |
+| P1 | Explicit gate kinds `open|fixed_bar|quota|contest`, normalised at construction, `'bar'`→`fixed_bar` with a `DeprecationWarning`, unknown/missing kind raises `ValueError`, gate lists re-normalised when a calendar event replaces them | `engine/eduengine/core.py:121-143` (validation), `:298-304` (alias warning), `:980` (runtime guard) | D8 | **DONE** |
+| P2 | Persistent state allocated in `add_cohort`: immutable `k['pid']=t*N+arange(N)`, `k['track']` int8 −1/0/1, `k['elite']`, `k['elite_prize']`, `k['prep_stock']` (N,nlev); `k['elite']` no longer restricted to `m_==nlev-2`; `GATE_SPECS` KR-SINGLE/KR-TRACKED; `values(..., track_state=None)`; `gate_prize_dv` from the household recursion | `core.py:93-118` (`GATE_SPECS`), `:540-554` (state), `:568-577` (`values`/`_value_recursion`), `:708` (`gate_prize_dv`), `:923-1000` (gate loop / track placement) | D1, D5 (allocation), D6 (pid) | **DONE** |
+| P3 | Delete `1−exp(−λx^r)` + λ re-solve; expected P = `pl_win_probs` (imported from `eduengine.contest_math`) on the same-year sitting cohort, `ΣP=seats` hard-checked; realised draw = `pl_realize(w, seats_eff, u)` with event-keyed `u`; no private PL code left | `core.py:25` (import), `:358-531` (`contest_candidates/seats/weights/expected_probs/_gate_expected_P`), `:944-975` (realisation); λ-solve deleted | D2; review §3.B | **DONE** |
+| P4 | Seat denominator: `share_of ∈ {cohort, applicants}`; zero-seat quota no longer admits everyone; double admission noise removed; admission rank-based; per-gate diagnostics series + `contest_summary()` merged into `Engine.run()`; `planning.gate_accounting()` reader | `core.py:374-414` (`contest_seats`), `:1069-1129` (diagnostics), `:1105` (`contest_summary`), `:1191-1200` (`run` merge), `planning.py:122` | D3; review §3.C | **DONE** |
+| P5 | `engine/eduengine/rng.py` new: `SHOCK_TYPES` registry + `EventRNG` hash-keyed by (seed, replicate, year, shock_type, pid), vectorised, subset/order-independent; legacy methods for unmigrated modules; all core+labour exogenous draws migrated (cohort covariates, continuation, income shock, gate exam, PL, promotion, anchor, street, queue, labour signal/lottery) | `rng.py:36-92` (`SHOCK_TYPES`), `:108-196` (`EventRNG`), `:198-230` (legacy API); call sites `core.py:540-560`, `:891`, `:944-975`, etc.; `labour.py` signal/lottery | D6 | **DONE** (unmigrated `schools.py`/`anchor.py` draws remain legacy — residual risk) |
+| P6 | Labour prize audit: prizes applied **last**, multiplicatively, to every applicable income (leavers + queuers via `k['elite_prize']`/`Q['elite_prize']` and track premium); raw/direct/composition decomposition series; wage-compression invariance test | `engine/eduengine/modules/labour.py:77-90` (queue prize state), `:139-148` (prizes last), `:156-162` (queue carry), `:183-197` (audit decomposition), `core.py:924-960` (prize award) | D7; review §3.A/§8 | **DONE** |
+| P7 | Tutoring ledger split: `res_cost`, `tut_tax`, `tut_outlay`, `gov_tax` per child-year; outlay-based cash budget with in-code assertions; `firm_rev` uses **resource cost only** (double-count fix); additive series (`contest_spend_now` = Σ outlay for back-compat, `contest_resource_cost`, `contest_tax_paid`, `gov_tut_receipt`, `*_by_q`, `contest_prep_stock_mean`) | `modules/tutoring.py:63-69` (params), `:72-96` (validation), `:261-266` (ledger arrays), `:326-329` (outlay bound), `:397-409` (assertions), `:411-421` (E.yr ledger), `:459` (`firm_rev` resource-only), `:468-481` (series), `:493+` (summary) | D4; review §3.A/§4 | **DONE** |
+| P8 | Per-gate `prep_stock` with `contest_prep_depreciation` (rho = depreciation rate; 0 = legacy undepreciated anchor), annual cap binding `e_t`, positional/learning switches, rebate policy | `modules/tutoring.py:63-69` (params), `:276-292` (decay + accumulation), `:326` (cap), `:390-392` (flow-only `k['contest_e']`); core allocation/consume `core.py:553-554`, `:923-1000`; contract §5/A1 | D5; review §4 | **DONE** |
+| P9 | `contest_math.py`: deterministic expected probabilities (exact DP n≤20, Poisson-binomial/exponential-race quadrature above, A5), `pl_realize`, `pl_win_probs_detail`; validation + approximation-error study | `engine/eduengine/contest_math.py` (commit `1a6f3d5`), `docs/audit/CONTEST_MATH_VALIDATION.md`, `CONTEST_MATH_APPROX_ERROR.md` (commit `47f6bd0`) | D2; review §3.B | **DONE** |
+| P10 | Canonical-spec migration in the runner / 420-vs-540 freeze | `papers/shadow-education-contest/code/…` | review §1, §4 | **NOT IN GATE 1** (canonical spec not frozen; Gate 2/Lead decision) |
 
-**Compatibility obligations checked when Phase B lands** (contract §9): `Engine(modules, **params)` unchanged;
-unknown params still `KeyError`; `engine/worlds.py`/`experiments.py`/`countries/*` smoke-run; **540 runner unmodified
-must run** against the repaired engine (documented numeric delta, no `KeyError`); series additive-only; default config
-legacy-neutral (tax 0, depreciation 0, pure positional, no tracking gates) except the honest D2/D6 changes, which are
-quantified here when measured; page-level `firm_rev` correction numerically identical at tax 0.
+**Compatibility:** all `worlds`/`experiments`/`countries` configs construct and run (checked in `ENGINE_CHECKS.py`
+compat item); the unmodified 540 runner's `_run_single` runs on the repaired engine (checked; full fresh 540 run in
+§4b); series are additive-only (`firm_rev` resource-cost correction is numerically identical at tax 0); default
+params are legacy-neutral (tax 0, rho 0, positional, no tracking gates) except the honest D2/D6 changes, which are
+quantified in §4b; `Engine(modules, **params)` unchanged; unknown params still `KeyError`.
+
+### 4b. Independent verification of Phase B (Commander, clean `git archive 98baf6b`)
+
+| check | command | result |
+|---|---|---|
+| engine-core acceptance checks | `PYTHONPATH="$PWD/engine:$PWD/papers/shadow-education-contest/code" python docs/audit/ENGINE_CHECKS.py --runner` | **13/13 PASS**, exit 0 |
+| tutoring acceptance checks | `PYTHONPATH="$PWD/engine" python docs/audit/TUTORING_CHECKS.py` | **17/17 PASS**, exit 0 |
+| PL module validation | `pytest tests/test_contest_math.py -q` | **68 passed** (13.9 s) |
+| invariant suite (qa, pre-fix of 4 test-side items) | `pytest tests/ -q` | **91 passed, 4 failed** — all 4 test-side (3× `method='exact'` with n>20, correctly raising per A6; 1× stale XPASS-strict CAPS for the now-existing `'open'` kind); qa-verifier fixing its own tests → AFTER column in `TEST_REPORT.md` |
+| fixed/committed repair-environment hashes | `git archive 98baf6b` | core.py / rng.py / contest_math.py / labour.py / planning.py / tutoring.py hashes recorded in the Gate-1 report |
+| fresh 540 run on the repaired engine | clean archive of `98baf6b`, 6 workers | in progress → results + old-vs-new migration table + expected-vs-realised decomposition in the Gate-1 report |
+
+**Expected-vs-realised decomposition claim under test (Lead ask):** engine-core reports the 540 migration moves KR
+Q5−Q1 gap 68.4→30.1 pp, spend ratio 18.1→2.14×, elite Q5 36.7→22.0 %, with the driver being the honest PL
+expectation (pre-repair mean expected P ≈ 2.4× realised at KR G12) rather than recalibration. This is
+**REPRODUCED SIMULATION on the repaired engine**, not calibration and not VALIDATED; the decomposition and the fresh
+hashes are in the Gate-1 report once my run lands.
 
 ---
 
@@ -125,4 +141,7 @@ failures above are preserved verbatim as the historical record.
 | 2026-11-25 | `5ac7a2b` | Gate 0: box 10-CPU cgroup correction recorded in GATE0_REPORT |
 | 2026-11-25 | `1a6f3d5` | Gate 1c: deterministic `contest_math` (`pl_win_probs` auto/exact, `pl_win_probs_detail`, `pl_realize`; 62 tests) — engine-core unblocked |
 | 2026-11-25 | `…` | Gate 0 addendum: legacy-work harvest (`docs/audit/harvest/`, 25 files, AUTHOR-REPORTED/PRE-REPAIR; invariant suite rejects legacy fixes 7F/10P/10xfail; calibration failure preserved) |
-| 2026-11-25 | `…` | Gate 1 Phase B engine repairs — **pending** |
+| 2026-11-25 | `6bc8d61` | Gate 1b Phase B landed: tutoring ledger split + per-gate prep stock + switches (17/17 checks) |
+| 2026-11-25 | `f31e176` | Gate 1a Phase B landed: gate kinds, KR track consequence, PL expected/realized probabilities, event-keyed RNG, labour prize audit (13/13 checks) |
+| 2026-11-25 | `98baf6b` | external GPU-bundle audit recorded + docs corrected; GPU conclusions quarantined (Lead) |
+| 2026-11-25 | `28a7d20` | contract amendment A7 (`contest_candidates` = sitting cohort) + dashboard Phase-B verification delta |

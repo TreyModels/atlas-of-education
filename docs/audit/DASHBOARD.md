@@ -171,3 +171,29 @@ sha256. Code edits only on the Mac worktree, never on the box.
   task-6 + task-9 → contest-math (messaged); task-7 + task-8 → qa-verifier AFTER Gate-1 AFTER suite (messaged);
   task-10 execution half → task-11 → audit-runner (Lead messaged); Commander keeps only coordination/dashboard
   recording (this delta). Gate-1 remains higher priority; no campaigns; GPUs parked.
+
+## Compute allocation (compute-controller, from 2026-11-25T14:55+08:00)
+
+Box = 10-CPU cgroup (`cpu.max = 1000000 100000`); `nproc`=80 is the host and must be ignored. All box jobs
+`nice -n 10` with `OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 OMP_NUM_THREADS=1`; target load 8.5–10.0, no
+oversubscription. `compute-controller` owns scheduling/monitoring/ETA; lanes request allocations through it.
+
+| lane | worker-process cap | current job |
+|---|---|---|
+| qa-verifier | 5 | Gate-1 AFTER invariant suite first, then task-7 DGP / task-8 bootstrap |
+| contest-math | 3 | task-6 ABC rank/Jacobian audit, then task-9 general-r Tulloch |
+| audit-runner | 1 | task-11 GPU execution-integrity / manifest / claim ledger |
+| atlas-commander | 0 (host 6-worker 540 run in flight) | independent fresh-540 repaired-engine verification on host |
+| **total** | **9–10 / 10** | legacy tenant retired (3rd relaunch) |
+
+**Legacy tenant retirement (authorised by Lead, executed by compute-controller):** `/root/work/modelrev` relaunched
+an 8-worker policy campaign for the 3rd time against its handover terms; outputs snapshotted (hashes) before SIGTERM
+of runner+workers only, `/root/work/modelrev/pkg` intact. Its outputs are already harvested read-only by Commander in
+`docs/audit/harvest/model_revision/` (AUTHOR-REPORTED / PRE-REPAIR / UNCALIBRATED; see HARVEST.md §4/§4b).
+
+## Lanes resumed (2026-11-25T14:56+08:00)
+
+- qa-verifier: Gate-1 AFTER first (fix own 4 test-side items, clean-tree rerun), then task-7/task-8.
+- contest-math: task-6 then task-9 (Gate 1c closed and verified: 68/68).
+- audit-runner: task-11 (P0-07 execution integrity + manifest + claim ledger).
+- engine-core / engine-tutoring: idle; Phase B committed and independently verified; available for fixes only.
