@@ -710,16 +710,20 @@ report **realized admission rates** for bar/bar_high (and contest) is **not met*
 a future rerun with the diagnostic series enabled would be needed to report realized admission rates. Recorded as a
 **diagnostic gap / prereg deviation, not a model failure**.
 
-**X-29 diagnostic-rerun plan (accepted by the Lead):** a **diagnostic-only** rerun with the admission series enabled,
-scoped to `bar`/`bar_high` (+ `contest` if feasible): **1,280 runs ≈ 35 min at 8 workers**, to run **after Pilot-0
-finishes**; labelled **diagnostic-only** and kept **separate** from the primary/secondary results; **X-29 stays open
-until it runs**. The series cannot be recovered by re-aggregation (they were never recorded). Recorded here and in the
-Paper-A(c) write-up.
-
-**Status: CLOSED — REPRODUCED SIMULATION** (pre-registered confirmatory new-generation simulation; frozen spec;
+**X-29 diagnostic — COMPLETE / RESOLVED (2026-11-25).** `results/audit/newgen/gate_architecture_diagnostic.json`
+sha256 **`57889777afd358adce843d7f2b35acfb037d1439d195643223a30bd7f2e78652`** (72,947 B), **1,280 runs** = 40 contest
+cells (S .25/.35/.45/.55/.70 × fee .19/.00 × vac0 .02/.08/.25/.50) × 32 seeds, engine `846c9e0`/core `e111397b…`/spec
+`e5ddef6b…`, runner `e5c4075c…`, aggregation-only. **Per-level `nanmean` extraction restored admission diagnostics in
+40/40 cells** (`contest_candidates/seats/admitted/applicant_seat_ratio/admit_rate`; first-cell admit_rate 0.2517; range
+0.2500–0.7067; `applicant_seat_ratio` and `gate_spec` r/alpha present). **DIAGNOSTIC-ONLY, separate `results_diag/`, never
+mixed with X-27 primary/secondary**; the primary H2 fields are identical to X-27 (diagnostic does not alter them). Recovery
+was **aggregation-only** — the run completed 1,280/1,280 rows, an arch-filtered `KeyError: 'bar'` was fixed with an
+arch-aware exploratory dict, no simulation rerun. **No admission number was cited before this artefact.** Bar/bar_high
+contest-admission series are not applicable. **X-29 CLOSED — diagnostic met; not a primary/secondary result; no effect on
+X-27.****Status: CLOSED — REPRODUCED SIMULATION** (pre-registered confirmatory new-generation simulation; frozen spec;
 uncalibrated; seed-MC only) — **explicitly NOT VALIDATED**. X-27 is closed on the clean re-run
-(`bce3da36…`; identical numbers, diff 0.0); the **X-29 admission-rate diagnostic gap remains open** (diagnostic-only
-rerun planned after Pilot-0) and stays attached to the X-27 record as a declared deviation, not a model failure.
+(`bce3da36…`; identical numbers, diff 0.0); the **X-29 admission-rate diagnostic gap is now RESOLVED** (diagnostic-only artefact `57889777…`; 40/40 cells
+with admission diagnostics, never mixed with X-27) — X-29 closed; X-27 primary/secondary unaffected.
 
 ## 4L. Paper C confirmatory pre-registration — FOUR-CRITICISM REVIEW (**CONDITIONAL; amendments required before preregistered-final**)
 
@@ -1058,10 +1062,13 @@ welfare claims**; CPU-only on the canonical pin (GPU is a separate artefact).
 **Status: EXPLORATORY-VALIDATED (QA PASS A1–A10), not a confirmatory result; no Paper C claim moved.** No Paper C
 claims until **X-29 closes**; CSV remains frozen.
 
-**X-29 diagnostic (observed, not adjudicated):** restarted at **10 workers** from checkpoints (driver `46562`), rows
-**473 preserved** (resume confirmed, no recomputation), cgroup 100%, **DIAGNOSTIC-ONLY**, `results_diag/` separate;
-measured rate/ETA to be published. This is an operator capacity update from the earlier 6-worker plan; it does not
-affect X-27 (closed) or any primary/secondary result.
+**X-29 diagnostic — COMPLETE/RESOLVED:** `results/audit/newgen/gate_architecture_diagnostic.json` sha256
+`57889777…8652`; 1,280 runs, 40/40 cells with non-NaN admission diagnostics (admit_rate range 0.2500–0.7067);
+DIAGNOSTIC-ONLY, separate `results_diag/`, no effect on X-27; aggregation-only recovery (no simulation rerun).
+**Bundle reconciliation:** canonical QA bundle `~/neon-boot/qa/incoming/paperC_results_bundle.tar.gz` sha
+`ec868a57…a4fb0b` (33,095 B); the Commander's `/tmp/paperC_results.tar.gz` (`14567f66…ac06`) is an informal
+re-compression of the identical directory (same payload/ckpts/MANIFEST; gzip timestamp/ordering only) — **not a second
+bundle, no file changes**.
 
 ## 5. Evidence-status register (programme level)
 
@@ -1069,14 +1076,14 @@ affect X-27 (closed) or any primary/secondary result.
 |---|---|---|
 | VERIFIED EMPIRICAL | **4** (4 A) | descriptive/associational; not causal; author committed E8 record |
 | **REPRODUCED EMPIRICAL ANALYSIS** *(new-generation label, Lead-defined)* | **2** (2 A) | A-34 impact (+12.322 vs +12.44) and A-35 amplification (+25.083 vs +25.26) — fresh-WDI **CS-style group-time ATT**; manifest-hashed vintage |
-| REPRODUCED SIMULATION | **24** (2 A, 12 B, 10 programme) | all conditional and/or uncalibrated unless marked; includes the 100-seed Paper B new generation (CF4 reversal + unmeasured-welfare-change caveat), the closed X-27 pre-registered gate-architecture grid (primary H2 +5.0551 pp; clean re-run confirmed), the three Paper C provisional anchors (C-01…C-03), the new-generation forecast (A-37), the 74.88 % infeasibility finding (A-38), the re-executed ABC audit, the re-executed bootstrap factorial, and the Paper B 540 table regeneration |
+| REPRODUCED SIMULATION | **25** (2 A, 12 B, 11 programme) | all conditional and/or uncalibrated unless marked; includes the 100-seed Paper B new generation (CF4 reversal + unmeasured-welfare-change caveat), the closed X-27 pre-registered gate-architecture grid (primary H2 +5.0551 pp; clean re-run confirmed), the three Paper C provisional anchors (C-01…C-03), the new-generation forecast (A-37), the 74.88 % infeasibility finding (A-38), the re-executed ABC audit, the re-executed bootstrap factorial, and the Paper B 540 table regeneration |
 | VALIDATED SIMULATION | **4** (1 A, 3 programme) | **A-39 item (d) local identifiability (stop gate met with declared restriction)**; engine/PL module validation, corrected DGP design, bootstrap size/power |
 | AUTHOR-REPORTED | **44** (20 A, 18 B, 6 programme) | **AUTHOR-REPORTED BASELINE**: the 420 generation, the Paper A Exp 1/3/4/5 legacy numbers, the author JSON bundle; not results, not reproduced, not to be silently replaced |
 | CONTRADICTED | **33** (8 A, 14 B, 11 programme) | only where committed code/algebra/measured audit output refutes the claim; includes the 100 % paradox, invalid E1/Q3, legacy DGP, "published benchmark" attributions, and the Paper B policy reversals |
-| UNRESOLVED | **19** (2 A, 0 B, 17 programme) | A-31 replication inventory; A-36 bulge `t*` (no-effect evidence); Paper C confirmatory prereg (C-04); Paper D omissions/divergences (D-01/D-03) and inventory attribution risk (D-04); Model Zoo D1/D2 + run gate + Pilot-0 provenance (MZ-01…MZ-04); evidence-layer limits (EV-01…EV-04); X-29 (admission-rate diagnostic gap); X-30 (Lean methods artefact — not a scientific claim); canonical spec/Gate-2; GPU quarantine |
+| UNRESOLVED | **20** (2 A, 0 B, 18 programme) | A-31 replication inventory; A-36 bulge `t*` (no-effect evidence); Paper C confirmatory prereg (C-04); Paper D omissions/divergences (D-01/D-03) and inventory attribution risk (D-04); Model Zoo D1/D2 + run gate + Pilot-0 provenance (MZ-01…MZ-04); evidence-layer limits (EV-01…EV-04); X-30 (Lean methods artefact — not a scientific claim); canonical spec/Gate-2; GPU quarantine |
 
 The machine-readable one-row-per-claim record is `results/audit/paper_claims.csv` (132 rows; sha256
-`55f75eeac6dc0e0c96454238e60f0bcc06c1c4e4874145fc8ad78516f3bcd212`). The Lead-defined new-generation label **REPRODUCED EMPIRICAL ANALYSIS** is used for the fresh-WDI E8 rows; all
+`07f83156cb6f4cb22a46516ebbe313f5db47d22e7a6de0025f2d6625ddf6f9cb`). The Lead-defined new-generation label **REPRODUCED EMPIRICAL ANALYSIS** is used for the fresh-WDI E8 rows; all
 other rows use the verbatim six-status taxonomy.
 
 ---

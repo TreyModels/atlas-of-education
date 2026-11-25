@@ -318,7 +318,15 @@ parity (fixtures + discrete-winner comparison + full-wall benchmark) with Comman
 `MANIFEST_SHA256SUMS.txt`; QA copy `~/neon-boot/qa/incoming/paperC_results/` (`sha256sum -c` OK; bundle
 `paperC_results_bundle.tar.gz` sha `ec868a57…a4fb0b`); qa-verifier notified. Manifest engine `846c9e0`/core
 `e111397b…`/spec `e5ddef6b…`/runner `bc833b76…`, status EXPLORATORY with withholding/contamination notes. **QA PASS A1–A10:** `PILOT0_QA.md` sha `620375a6…` (commit `0f1013e`): 128/16, 8 seeds/cell, runtime pin `846c9e0`/core `e111397b…` + spec `e5ddef6b…` verified against git, no-op guard 12/12 non-market, A10 ckpt→summary reproduction, manifest 17/17, A9 log clean. **Caveats:** `completion_primary`/`completion_upper` all-NaN in every cell — not citable; `tut_*_by_grade_last` clean; contamination note; exploratory only; CPU-only. **Status: EXPLORATORY-VALIDATED (QA PASS A1–A10), not a confirmatory result; no Paper C claim moved.** No claims until QA sign-off
-+ X-29 close; CSV frozen. **X-29 (observed):** restarted at **10 workers** (driver `46562`), 473 rows preserved (resume
-confirmed), cgroup 100%, DIAGNOSTIC-ONLY `results_diag/` separate; rate/ETA to be published; operator capacity update
-from the earlier 6-worker plan, no effect on X-27/primary results.
++ X-29 close; CSV frozen. **Bundle reconciliation:** canonical QA bundle `~/neon-boot/qa/incoming/paperC_results_bundle.tar.gz` sha `ec868a57af2ad2a5e33a9b028baadad64e4caab18218b53e7d5e237129a4fb0b` (33,095 B); Commander `/tmp/paperC_results.tar.gz` `14567f66…ac06` is an **informal re-compression of the identical directory** (same payload/16 ckpts/MANIFEST; gzip timestamp/ordering only), not a second bundle — no file changes.
+
+**X-29 RESOLVED — diagnostic met (2026-11-25).** `results/audit/newgen/gate_architecture_diagnostic.json` sha256
+`57889777afd358adce843d7f2b35acfb037d1439d195643223a30bd7f2e78652` (72,947 B): **1,280 runs** = 40 contest cells ×
+32 seeds; engine `846c9e0`/core `e111397b…`/spec `e5ddef6b…`; **per-level `nanmean` restored admission diagnostics in
+40/40 cells** (`contest_candidates/seats/admitted/applicant_seat_ratio/admit_rate`; first-cell admit_rate 0.2517; range
+0.2500–0.7067; `applicant_seat_ratio` and gate_spec r/alpha present); **DIAGNOSTIC-ONLY**, separate `results_diag/`,
+never mixed with X-27; primary H2 fields identical to X-27 (no effect). Recovery was aggregation-only: 1,280/1,280 rows
+completed, an arch-filtered `KeyError: 'bar'` fixed with an arch-aware exploratory dict, **no simulation rerun**. No
+admission number was cited before this artefact; bar/bar_high contest-admission not applicable. **X-29 closed; Paper C
+claims remain gated on QA sign-off (done) + prereg final/manifest and no screening/confirmatory compute until reserve.**
 

@@ -111,7 +111,7 @@ blocker**, and we are not waiting for them.
   `metadata.elapsed_seconds` changed; all results identical (diff 0.0)**; the `builtins.np` injection note is
   **superseded provenance**. Committed with `docs/audit/GRID_X27_NOTE.md`.
 * **Status: CLOSED — REPRODUCED SIMULATION** (pre-registered confirmatory new-generation; frozen spec; uncalibrated;
-  seed-MC only) — **explicitly NOT VALIDATED**. X-29 remains open (diagnostic rerun) as a declared deviation.
+  seed-MC only) — **explicitly NOT VALIDATED**. X-29 closed (diagnostic-only admission artefact; primary/secondary unaffected).
 
 ### (d) Multi-seed identifiability / Jacobian — **PROVISIONAL (2 of 3 starts; not signed off)**
 
