@@ -434,3 +434,14 @@ committed/cited **before aggregation**; (3) no optional stopping/peeking — exa
 (4) analysis/reporting as above; T1/T4 screening failures; no S-generalisation beyond .85. **No confirmatory number
 cited.**
 
+**A5 EXECUTION RECORD — ACCEPTED CONDITIONALLY (aggregation hold).** A5 rule committed before aggregation at `aa1d0bd`
+sha `36515596…` (cited by manifest `c8649511…`); later execution-record update `ecb02ad` file sha `7512c7f5…`, diff =
+Execution-record section only (rule unchanged). 16 seeds 100–115, 116–131 excluded; stop-at-16 watchdog `ac979c9a…`;
+aggregator `223628668…`; measured ~13.5 min/seed/~809 CPU-s; ETA ~10:55–11:15 CST. **Attestation:** no per-cell outcome
+values read before freeze (timings/row counts only); no effect-based stopping. **8-seed insurance snapshot non-inferential**
+(crash insurance only). **HOLD AGGREGATION until:** (1) aggregator `223628668…` is committed/pinned (currently untracked,
+`??`) and recorded; (2) manifest `confirmatory_statistics.uncertainty` corrected from "32 matched seeds" to **16 matched
+seeds (A5, 100–115)** and A5 citation/approval linked; `wall_note` reconciled. Then analyse seeds 100–115 only, report
+achieved CI/MDE and **A5 interim precision**; T2 proxy/T3 assertion-support/Holm m=2 unchanged; T1/T4 screening failures;
+no S-generalisation. **No confirmatory number cited.**
+

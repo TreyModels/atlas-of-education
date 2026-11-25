@@ -1236,6 +1236,30 @@ the interim-precision label must be reported; no claim of full 32-seed precision
    achieved CI/MDE and label **A5 interim precision**; decision holds/fails/indeterminate; T1/T4 screening failures
    reported, not confirmatory; no S-generalisation beyond .85.
 
+**A5 EXECUTION RECORD — ACCEPTED CONDITIONALLY (aggregation hold).** A5 rule committed **before aggregation** at
+`aa1d0bd`: `PAPER_C_A5_SEED_TRUNCATION.md` sha **`36515596…bf99`** (the version cited by the manifest); the later
+execution-record update (`ecb02ad`) has file sha **`7512c7f5…fac8`** but `git diff aa1d0bd..ecb02ad` shows **only the
+Execution-record section appended — the A5 rule text is unchanged**. Manifest `PAPER_C_CONFIRMATORY_MANIFEST.json` sha
+`c8649511…` status `FROZEN_APPROVED_A5`, `amendment_A5` cites `1c51f17` + `36515596…`; 16-seed design (100–115);
+stop-at-16 watchdog `ac979c9a…`; 16-seed aggregator `223628668…`; measured ~13.5 min/seed, ~809 CPU-s/run; A5 ETA
+~10:55–11:15 CST. **Attestation recorded:** before freeze only process CPU/wall times and checkpoint row counts were
+observed; **no per-cell outcome values were read**; no effect-based stopping/peeking. **8-seed insurance snapshot is
+non-inferential** (crash insurance only; must not be analysed or used for stopping/inference).
+
+**Aggregation hold — two provenance items must be fixed before the 16-seed bundle is aggregated/analysed:**
+1. **Aggregator is untracked.** `papers/shadow-education-contest/code/paperC_confirm_aggregate.py` sha
+   `223628668…` is currently `??` (untracked). It must be **committed** (and the commit recorded in A5/manifest) before
+   it runs; otherwise the 96-run artefact would be produced by uncommitted code. (The untracked
+   `run_paperC_confirmatory.py` remains NON-AUTHORITATIVE.)
+2. **Manifest still says "32 matched seeds."** `confirmatory_statistics.uncertainty` must be corrected to **16 matched
+   seeds (A5, 100–115)** and the A5 citation/approval linked; `compute.wall_note` still says "≤22/8" while
+   `observed_runaway` records the truncation — correct the stats/uncertainty fields before aggregation. The A5 rule
+   itself is valid; this is a manifest-consistency fix.
+
+**Status: A5 EXECUTION ACCEPTED CONDITIONALLY — HOLD AGGREGATION until the aggregator is committed/pinned and the
+manifest uncertainty/citation fields are corrected; then analyse seeds 100–115 only, report achieved CI/MDE and A5
+interim precision; no confirmatory number cited.**
+
 **Status: A5 APPROVED (conditional on conditions 1–2 being recorded before aggregation); no confirmatory number cited.**
 
 **Status: RESOURCE WARNING RECORDED; RUN CONTINUES PENDING LEAD DECISION; no confirmatory number cited.**
