@@ -930,6 +930,37 @@ protocol/Kaplan confirmation; the launch manifest must carry engine core `e11139
 `846c9e0`, runner+analysis commit hashes, screening seeds 0–7 / confirmatory seeds 100–131, the 36-cell list + frozen
 passer list, N/T/T0/measure_from, fail routing, per-run `unfired_events==[]`, and the 1–2 slot capacity reserve.
 
+### Re-review — Paper C prereg **Amendment A3** (2026-11-25): **CLEARED FOR PREREGISTRATION-FINAL**
+
+File: `docs/audit/PAPER_C_CONFIRMATORY_PREREG.md` sha256
+**`0089f2830781dd74696db75e863f40edca2d9559b9a81b6496f9d730785a044c`** (commit `a61ffa8`). The two required A2
+pre-launch amendments and the recommended wording are in-file and **no design change** was made:
+
+* **A3.1 — >6-passer rule:** if screening passes ≤6 cells, all run confirmatory; if >6, the **first 6 in fixed appendix
+  row order** run confirmatory and **all remaining passers are screening-only**; the **frozen passer list goes into the
+  launch manifest before any confirmatory run**; no cap raising without a separately approved budget. No post-hoc
+  choice.
+* **A3.2 — all-cell fallback removed:** all-36 confirmatory at 32 seeds × N=1500 (≈**132 CPU-h**) is **explicitly not
+  part of the ≤36 CPU-h envelope**; if ever run it is a separate, re-approved run/new budget.
+* **A3.3 — assertions/bundle:** **`A|P12` is exempt** from `h>0`/`own_share>0.1` (no-withholding control); assertions
+  apply to exposed arms only; a failed exposed arm is **INVALID** and reported, never dropped; **L is a gate-pressure
+  bundle** (contest `share` + `contest_r` fixed jointly by L), so T4 makes **no component-separation claim**.
+* **A3.4 — screening timing:** screening is compute and starts only after (i) this prereg is marked final, (ii) Codex's
+  protocol/Kaplan confirmation is in, (iii) the 1–2 slot Luna/MASSENG reserve is honoured.
+* **Manifest requirements** listed: engine `846c9e0`, core `e111397b…8e71`, spec `e5ddef6b…`, runner+analysis
+  commit+sha, seeds 0–7 exploratory / 100–131 confirmatory, 36 cells + frozen passer list, N/T/T0/measure_from, fail
+  routing, per-run `unfired_events==[]`, workers (≤8, reserve), wall/CPU, output hashes.
+
+**Housekeeping flag (textual, non-blocking for design):** the top authority rule still says only "§8 A1 supersedes
+§§1–6", while **A1.4 (line 114) still mentions the now-removed all-cell fallback**. For a single canonical spec, the
+top rule should read "**§9 A3 supersedes §8 A1 where inconsistent**" (or A1.4 should be struck), and the status line
+should change from DRAFT to FINAL when signed. This is a one-line edit, not a design change.
+
+**Verdict: CLEARED FOR PREREGISTRATION-FINAL** — A3 satisfies the A2 conditional-clearance requirements. **Final
+designation and any compute remain gated on:** (i) the authority/status housekeeping edit, (ii) **explicit Codex
+protocol/Kaplan confirmation recorded in the launch trail**, (iii) the launch manifest and 1–2 slot capacity reserve.
+Screening is compute and must not start before all three.
+
 ## 5. Evidence-status register (programme level)
 
 | Status | Count (paper + programme rows) | Notes |

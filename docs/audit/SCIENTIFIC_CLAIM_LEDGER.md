@@ -272,3 +272,14 @@ first 6; rest screening-only) — no post-hoc choice; (2) resolve all-cell fallb
 ≈132 CPU-h → separate re-approved budget, or drop). Recommended: exempt A|P12 control from h>0/own_share>0.1
 assertions; state L is a gate-pressure bundle (share+contest_r) with no component-separation claim; screening is compute
 and starts only after clearance + Codex. **No confirmatory compute until amendments + Codex.**
+
+**PAPER C A3 RE-REVIEW (2026-11-25): CLEARED FOR PREREGISTRATION-FINAL.** `PAPER_C_CONFIRMATORY_PREREG.md` sha256
+`0089f283…` (commit `a61ffa8`) adds the two required A2 amendments with no design change: (A3.1) >6-passer rule — first
+6 in fixed appendix order confirmatory, remainder screening-only, frozen list in manifest; (A3.2) all-cell fallback
+REMOVED (all-36 ≈132 CPU-h explicitly outside the ≤36 CPU-h envelope; separate re-approved budget only); (A3.3) `A|P12`
+exempt from h>0/own_share>0.1, exposed arms only, failed exposed arm INVALID, L is a gate-pressure bundle with no
+component-separation claim; (A3.4) screening only after prereg-final + Codex protocol/Kaplan + 1–2 slot reserve.
+Manifest requirements listed. **Housekeeping (one-line, non-blocking):** top authority rule should say "§9 A3 supersedes
+§8 A1 where inconsistent" because A1.4 still mentions the removed fallback; status DRAFT→FINAL on sign-off. **Final
+designation/compute gated on the housekeeping edit + explicit Codex protocol/Kaplan confirmation + manifest/capacity.**
+
