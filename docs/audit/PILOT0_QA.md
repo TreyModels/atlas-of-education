@@ -10,9 +10,12 @@ previous instance. Read-only inspection (2026-11-25 ~20:56–21:00) shows the Pi
 with `--workers 2`, writing `/root/work/paperC/results`; at the first snapshot there were **2/16 cells with 2/8 seeds
 each (4 of 128 runs)**; a later check (24 min elapsed) shows the same 2 cells at **6/128 rows**
 (≈0.25 rows/min) and there is **still no `paperC_pilot0_results.json` payload** (the payload is written only at
-driver completion). Per-run cost ~4–5 min on 2 workers (only 2 cell workers launched) ⇒ ETA for 128 runs is
-**~8–10 h**, so a complete `results`/`results_v3` payload is **not imminent**; no `results_v3`
-directory exists yet. Box CPU is shared with the gate grid (~96 %), which explains the
+driver completion). Restarted with **8 workers** (PID 40056/40058, 4 market_only + 4 own_open_gap cells): **14/128 rows**
+after ~11 min, row count flat for ~10 min under **box load average ≈ 40** (pilot 8 workers + grid and
+other jobs), so per-seed wall time is contention-bound; ETA is uncertain (commander estimate ~23:00).
+A complete `results` payload is **not imminent**; no `results_v3` directory exists yet. Partial copies
+are not a valid QA target (commander will copy `paperC_pilot0_results.json` + 16 `ckpt_*.jsonl` +
+`pilot_v3_8w.log` + `MANIFEST.txt` to `~/neon-boot/qa/incoming/paperC_results/` at completion). Box CPU is shared with the gate grid (~96 %), which explains the
 slow throughput. When the payload lands, run:
 
 ```

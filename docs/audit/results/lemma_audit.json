@@ -1,15 +1,15 @@
 {
  "baseline": {
   "path": "results/audit/paper_claims.csv",
-  "sha256": "23ecde418dded6d316fe44bc11e1d9b62f9dcf25085db10fa3bd1c5f2d6ec8f5",
+  "sha256": "f2ce655eb232a97f3ef5338334c8ed2f2dad953b328ab6a80fe066823c655a40",
   "rows": 130,
   "unique": 130
  },
  "ledger": {
   "path": "docs/audit/LEMMA_LEDGER.csv",
-  "sha256": "a3a95bba20e11329392bb8cbe9722136877b3da7759510893ecdca192807f19a",
-  "rows": 127,
-  "unique": 127
+  "sha256": "da956fc1e1d3a3ff18c31c98cf30f8dcd5d5c8817fab2ed55b2f0f55f5617df5",
+  "rows": 130,
+  "unique": 130
  },
  "lean_dir": "verification/lean",
  "checks": [
@@ -21,17 +21,17 @@
   {
    "id": "R5",
    "status": "PASS",
-   "detail": "ledger rows=127 duplicate ledger ids=[]; Lean declaration names=60 duplicated=[]"
+   "detail": "ledger rows=130 duplicate ledger ids=[]; Lean declaration names=61 duplicated=[]"
   },
   {
    "id": "R4",
-   "status": "FAIL",
-   "detail": "claims missing from ledger=['X-29', 'D-05', 'D-06']; ledger ids not in claims=[]"
+   "status": "PASS",
+   "detail": "claims missing from ledger=[]; ledger ids not in claims=[]"
   },
   {
    "id": "R2",
-   "status": "FAIL",
-   "detail": "declared=18 explicit-not-yet=109 missing declaration/not-yet=[] rows not exactly one=[('X-29', 0), ('D-05', 0), ('D-06', 0)]"
+   "status": "PASS",
+   "detail": "declared=18 explicit-not-yet=112 missing declaration/not-yet=[] rows not exactly one=[]"
   },
   {
    "id": "R3",
