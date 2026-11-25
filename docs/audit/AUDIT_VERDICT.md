@@ -836,6 +836,13 @@ then.** Repro:
 `python3 docs/audit/lemma_audit.py --claims results/audit/paper_claims.csv --ledger docs/audit/LEMMA_LEDGER.csv --lean-dir
 verification/lean`.
 
+**Pin freeze (Lead order, 2026-11-25):** **stop editing `paper_claims.csv` until Pilot-0/X-29 close**; no further
+doc-driven rewrites. audit-runner has re-pinned internally at commit `f4167fc`: baseline **`55f75eea…`/132**, ledger
+`3e9dbbc1…` unchanged, proof-status `af6232cd…`; **QA's R1–R8 PASS remains valid** because the ids/statuses/row count
+are unchanged (content-only edits). One **batched** CSV update after Pilot-0/X-29, in one commit, with the
+old→new sha + row/id/status diff sent to audit-runner + qa-verifier for a single re-pin/re-audit. Until then the CSV is
+frozen at `55f75eea…` (132 rows).
+
 **Install provenance (honest):** elan 4.4.0 → Lean `v4.36.0` via the GitHub release mirror because the default CDN
 measured **70 B/s**; 608.4 MiB download, **~23 min** install window, **3.0 GiB** unpacked, disk 12 → 8.9 GiB free;
 **Mathlib not installed** (multi-GB, not viable on this Mac) — Tier 2 is CI-only.
