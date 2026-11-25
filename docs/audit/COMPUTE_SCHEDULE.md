@@ -731,3 +731,15 @@ workers = **8.0 CPU**, 4,774/5,632 rows (85 %, 152 cell files). **Total 10 compu
 cap exactly respected, grid not disturbed, no other jobs.
 Grid ETA with contest cells (~34 rows/min): remaining 858 rows ≈ **25 min → ~21:02–21:10**. On grid completion its 8 workers
 free and **Pilot-0 expands to 8 workers** (verify PIDs/worker count then; total ≤10 with control slack).
+
+### 13.23 Grid compute COMPLETE 5,632/5,632 but driver CRASHED at aggregation (21:02) — loud failure
+
+21:02:46: `/root/work/gate846/results/` contains **176/176 cell checkpoints and 5,632/5,632 rows** — the grid COMPUTE is
+100 % complete. The driver (34331) then **crashed in the final aggregation**: `NameError: name 'np' is not defined`
+at `run_gate_architecture.py:201` (`h2` → `np.mean`, called from `driver` line 203) → **no `gate_architecture_results.json`
+written** (correct loud failure, no silent partial). Runner bug (missing numpy import in the aggregation module); raw
+cell evidence intact. Reported to commander with traceback; fix = patch import → aggregation-only rerun (cells are
+checkpointed). Final JSON sha256/row/cell counts to be published on the fixed rerun.
+**Box after grid exit: Pilot-0 only — driver 37049 + workers 37053/37054, cgroup 2.0/10 (20 %)**; pilot cells
+`market_only q1.00 pf0.030/080` checkpointed 2.5 KB at 20:59. Lead plan: Pilot-0 expands to **8 workers** using the
+grid's freed workers — commanded, PIDs to be confirmed. Cap unchanged (10), no other jobs.
