@@ -119,17 +119,16 @@ def microbench(ref, cur, reps=7):
 
 
 def engine_group(cur, reps=3):
-    """9-call gate-year pattern: 9 distinct weight vectors, engine sizes."""
+    """9-call gate-year pattern with COLD weights in every repetition (no cache hits)."""
     rng = np.random.default_rng(5)
     n, seats = 300, 69
-    Ws = [np.exp(1.0 * rng.standard_normal(n)) for _ in range(9)]
-    t0 = time.perf_counter()
-    for w in Ws:
-        cur.pl_win_probs(w, seats)
-    seq = (time.perf_counter() - t0) / reps if False else None
-    # time both sequential and batch paths
+
+    def fresh():
+        return [np.exp(1.0 * rng.standard_normal(n)) for _ in range(9)]
+
     ts_seq = []
     for _ in range(reps):
+        Ws = fresh()
         t0 = time.perf_counter()
         for w in Ws:
             cur.pl_win_probs(w, seats)
@@ -138,6 +137,7 @@ def engine_group(cur, reps=3):
     for B in (2, 3, 5, 9):
         ts_bat = []
         for _ in range(reps):
+            Ws = fresh()
             t0 = time.perf_counter()
             for start in range(0, 9, B):
                 cur.pl_win_probs_batch(np.vstack(Ws[start:start + B]), seats)
@@ -193,7 +193,7 @@ def patched_engine_copy(tmpdir):
     return dst
 
 
-def end_to_end(commit=REFERENCE_COMMIT, seeds=(0,)):
+def end_to_end(commit=REFERENCE_COMMIT, ref_path=None, seeds=(0,)):
     """Time one HK Baseline run: reference engine vs optimised vs optimised+batched."""
     import shutil
     import importlib
@@ -202,8 +202,11 @@ def end_to_end(commit=REFERENCE_COMMIT, seeds=(0,)):
     # reference engine copy
     ref_engine = tempfile.mkdtemp(prefix="ref_engine_")
     shutil.copytree(ENGINE, os.path.join(ref_engine, "engine"))
-    src = subprocess.check_output(
-        ["git", "-C", REPO, "show", f"{commit}:engine/eduengine/contest_math.py"], text=True)
+    if ref_path:
+        src = open(ref_path).read()
+    else:
+        src = subprocess.check_output(
+            ["git", "-C", REPO, "show", f"{commit}:engine/eduengine/contest_math.py"], text=True)
     open(os.path.join(ref_engine, "engine/eduengine/contest_math.py"), "w").write(src)
     code = (
         "import sys, json, time;"
@@ -277,7 +280,7 @@ def main():
         print(f"  batch B={B}: {g[f'batch_B{B}_ms']:.0f} ms "
               f"({g[f'batch_B{B}_speedup']:.2f}x)")
     if not args.quick:
-        out["end_to_end"] = end_to_end(args.commit)
+        out["end_to_end"] = end_to_end(args.commit, ref_path=args.ref_module)
         print("end-to-end HK Baseline:", out["end_to_end"])
     try:
         out["cache_stats"] = cur.pl_stats()
