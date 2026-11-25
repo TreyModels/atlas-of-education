@@ -49,7 +49,7 @@ Mechanisms that standard equations typically omit (the "M-tags"):
 |---|---|---|---|---|---|
 | 11 | `U=U(C,H,L)` | (b) | separable/representative utility; no intra-household conflict, no peer/positional terms | implicit value recursion `core.py:626,635`; `delta`, `kappa`, logit noise `tau` (`core.py:926`) | M2 |
 | 12 | `C+p_sS+p_tT+X=Y` | (a) identity **as a constraint**, (d) as a mechanism | static; no borrowing limit dynamics, no time; treats schooling and tutoring as perfect cash substitutes | cash/need `core.py:933-935`; `borrow`, `subsist`, `shock_sigma` | M4 |
-| 13 | `max_S Σ E(w_t|S)/(1+r)^t − C(S)` | (b) | expected-wage objective, rational expectations, no credit constraints, no peer effects | `values()` backward induction + beliefs `B` (`core.py:626-635,1136+`) | M2, M5 |
+| 13 | `max_S Σ E(w_t|S)/(1+r)^t − C(S)` | (b) | expected-wage objective, rational expectations, no credit constraints, no peer effects | `values()` backward induction + beliefs `B` (`core.py:626-635,1200-1226`) | M2, M5 |
 | 14 | `MB(S*)=MC(S*)` | (b) | interior optimum; with discrete school sectors/credit constraints the choice is a corner | discrete continue decision ('go' logit `core.py:926`; liquidity `core.py:937-944`) | — |
 | 15–18 | NPV / IRR / PV / full cost | (b)/(c) | require an income path and a discount rate; the engine has `delta`/`kappa` but does not output r or IRR | `delta=0.93`, `kappa=12`; `inc_by_cred` (`labour.py` summary) | — |
 | 19 | Becker–Lewis `C+p_n n+p_q nq ≤ Y` | (b) | fertility-quality trade-off; not modelled (cohort size fixed) | — | — |
