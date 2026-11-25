@@ -87,3 +87,45 @@ app text to UIS. No shipped model or app text was changed in this record.
 - Weights `HV005/1e6`; Taylor-linearized SE with PSU (`HV021`) within strata (`HV022`); unweighted n in
   the CSVs.
 - 2021–22 fieldwork during COVID school closures; the “current school year” question is affected.
+
+## 7. Credential-floor test — the decisive use of this data
+
+The relational-floor / credential-floor note (`docs/engine/relational_floor_countries.md`) says the observable
+that would settle the theory comparison is **wealth-quintile attendance at ages 14–17**, specifically the
+**share of non-attenders from the bottom two quintiles (bottom 40%)**. Its model predictions are:
+
+| structure | predicted share of exits from bottom 40% |
+|---|---:|
+| human capital only | **65%** |
+| relational floor | **98%** |
+
+Our DHS PR extraction (`quintile_profile.py`, `results/quintile_attendance_14_17.csv`):
+
+| wave | 14–17 attendance | Q1 | Q2 | Q3 | Q4 | Q5 | **bottom-40 share of non-attenders** |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| 2005 | 66.8% | 53.5 | 59.2 | 67.4 | 74.9 | 75.9 | **47.5%** |
+| 2010 | 59.8% | 41.1 | 48.9 | 59.2 | 67.7 | 80.3 | **51.0%** |
+| 2014 | 54.9% | 36.2 | 47.3 | 53.9 | 65.7 | 72.3 | **51.6%** |
+| 2021–22 | 55.6% | 44.7 | 51.9 | 56.7 | 56.9 | 69.6 | **48.7%** |
+
+There is a clear wealth gradient in attendance (Q1 vs Q5 ≈ 36–53% vs 70–80%), but the **composition of
+non-attenders is close to proportional**: the bottom two quintiles supply about **48–52%** of non-attenders
+against a 40% population share. This is:
+
+- far below the relational-floor prediction (**98%**) — the relational floor is strongly disfavoured by this
+  observable;
+- also below the human-capital prediction (**65%**) — the data do not show the bottom-heavy exit pattern the
+  human-capital version predicts either;
+- stable across 2005–2021–22, and essentially unchanged between 2014 and the COVID-era 2021–22 (51.6% vs 48.7%),
+  so the **quintile composition is robust to the COVID level shift** even though the 2021–22 attendance level is
+  not usable as a calibration target.
+
+Caveats: (i) the model's "exits" (credential non-completion/leaving) are not exactly "non-attenders at 14–17";
+the mapping should be made explicit in the credential-floor code before the formal test. (ii) The 2000 wave
+does not carry `HV270` in the PR recode used here. (iii) The model's predicted shares are medians from the
+country runs; the formal comparison should use the full five-quintile profile (or the ABC posterior over the
+four structures), not just this one statistic.
+
+**Implication:** the credential-floor paper's central Cambodia test is now computable and does **not** support
+the relational floor; the next step is to feed the full quintile profile into the credential-floor ABC
+(`research/credential-floor`, `engine/relfloor_countries.py`) and report the four-structure posterior.
