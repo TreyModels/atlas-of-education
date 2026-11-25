@@ -166,3 +166,27 @@ now has a citable **methods/negative-paper core**, but is still **not calibrated
 
 **Still open:** X-27 / item (c) gate-architecture grid (5,632 runs, launched 19:46) — adjudicate against Amendment A3
 when its result JSON lands.
+
+---
+
+## ADJUDICATOR ADDENDUM — Paper C / Paper D DESIGN AUDIT (2026-11-25)
+
+**Appended by `paper-adjudicator`. Design-only artefacts; no box compute. No inventory equation is declared false.**
+Artefacts: `PAPER_D_EQUATION_AUDIT.md` sha256 `b6bafd1490b0a98df021f8b6ad1caff52b6ddf1a18b5606d4982ef8e1050a49d`
+(commits `02990f9`+`044f7d0`); `PAPER_C_MODEL_GAP.md` sha256
+`d994df74d10ac2888e2646dad7f59469c8305cd308c644f3660a4b9192643ffc`; inventory
+`refs/education-equation-inventory-20261124.txt` sha256
+`0fd30f770a75ee55cdf26d3ce332df795f78d29d070bed01af38810bfa4752df`.
+
+| # | item | status | exact evidence / caveat |
+|---|---|---|---|
+| PC-01 | Paper C probe anchors: Paper B canonical is a **private-market regime** (withheld `0.00000`; own-teacher share 2.47 % HK / 2.82 % KR); q0 0.8→1.2 lowers K–12 tutoring **0.605→0.491** and spend **161.7→135.9**; withholding regime (`pay_ratio=.55`, `monitoring=.2`, `own_ban=0`) → `h=0.144`, own share **0.528**; +`firm_ban=.9` → own **0.978**, spend **118.1**, firm price **2.0957** | **REPRODUCED SIMULATION — PROVISIONAL ANCHORS (design-only)** | `PAPER_C_MODEL_GAP.md` §2; host probes, read-only. These are anchors, not Paper C results and not adjudicated claims. |
+| PC-02 | Paper C confirmatory grid: 3 (S) × 3 (L) × 4 (supply) = **36 cells** + 4 regime anchors; N=600/T=46 screening ≈320 runs ≈**2.2 CPU-h**; N=1500 confirmatory subset ≈12 CPU-h | **UNRESOLVED — PRE-REGISTRATION REQUIRED** | No box compute until a prereg is approved; review with the four-criticism discipline (no identification overclaim; design-cell counts only; seed-MC; no permutation inference). |
+| PD-01 | Paper D omissions **M1–M5** (school prep S; positional fixed seats; teacher withholding/rent; time budgets; supply form) | **CANDIDATE GAPS — UNRESOLVED, not errors** | `PAPER_D_EQUATION_AUDIT.md` §3; engine evidence that each can matter; **no inventory equation declared false**. |
+| PD-02 | Already-recorded contradictions (KR G9 phantom prize; expected≠realised; 100 % seat paradox; Paper B pairing) | **CONTRADICTED (as already recorded)** | Kept separate from the omissions; do not conflate "inventory omission" with "equation false". |
+| PD-03 | Divergence tests **D1–D9**: standard-equation prediction X vs mechanism-rich Y, cell, outcome, compute (≈300–420 runs at N=600/T=30, ≈2–3 CPU-h; D3/D7 need wave-2 extensions) | **UNRESOLVED — pre-registerable, not results** | No Paper D compute until Paper C confirmatory run + approved prereg (Commander rule). |
+| PD-04 | Inventory is an **AI-generated candidate map with placeholder citations** ("UIS+2", "OECD+3", "doi.org+4", …) | **UNRESOLVED — attribution risk (binding)** | **No equation or citation may be used without primary-source verification** (Hanushek; Todd & Wolpin; Cunha & Heckman; Becker; Mincer; Dang & Rogers; Bray; Tansel & Bircan; Biswal; Jayachandran; Kim & Lee; UIS/World Bank/OECD). Equation numbers refer to inventory text, not published sources. |
+
+**Record status:** Paper D is a **candidate new-generation finding/section** (design audit) and Paper C is a
+**design-only plan**; both are pre-registerable and neither is an adjudicated result. Paper C/D wording must not claim
+the standard literature is wrong or that the engine is validated.

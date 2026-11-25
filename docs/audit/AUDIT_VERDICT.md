@@ -510,20 +510,76 @@ spend 96.47/97.12 < 100 — "tax backfires on spending" is contradicted. New-gen
 paper's "only pairing compression with caps/seats works" conclusion is **CONTRADICTED** (CF3b, a single lever, also
 meets the criterion); the CF4 reversal itself is a **reproduced new-generation result**.
 
+## 4G. Paper D — candidate new-generation finding (design audit; **no inventory equation is declared false**)
+
+Artefacts: `docs/audit/PAPER_D_EQUATION_AUDIT.md` **sha256 `b6bafd1490b0a98df021f8b6ad1caff52b6ddf1a18b5606d4982ef8e1050a49d`**
+(commits `02990f9` + `044f7d0`); inventory `docs/audit/refs/education-equation-inventory-20261124.txt` **sha256
+`0fd30f770a75ee55cdf26d3ce332df795f78d29d070bed01af38810bfa4752df`**; companion
+`docs/audit/PAPER_C_MODEL_GAP.md` **sha256 `d994df74d10ac2888e2646dad7f59469c8305cd308c644f3660a4b9192643ffc`**
+(commit `02990f9`).
+
+**Stance (binding):** the audit uses the engine as a mechanism-rich test bed; it **does not declare any inventory
+equation false**. It separates:
+
+* **Omissions (candidate gaps, not errors):** **M1** school-supplied effective preparation S; **M2** positional
+  externalities with fixed seats; **M3** teacher-as-supplier withholding/rent extraction; **M4** student/teacher time
+  budgets; **M5** supply-form choice (own teacher vs firm vs state). The engine evidence that each omission can
+  matter is recorded in `PAPER_D_EQUATION_AUDIT.md` §3 (e.g. M1 q0 0.8→1.2 lowers K–12 tutoring 0.605→0.491 and spend
+  161.7→135.9; M3 switching withholding on raises h 0→0.144 and own share 0.04→0.53; M5 firm ban moves own share
+  0.53→0.98 and price 0.07→2.10).
+* **Already-recorded contradictions (measured, not "inventory is wrong"):** KR G9 phantom prize (D1), expected ≠
+  realised admission probabilities (D2), the 100 % seat-expansion paradox, and Paper B's pairing claim. These remain
+  CONTRADICTED in this ledger for the reasons already recorded elsewhere.
+* **Divergence tests D1–D9** each state a **standard-equation prediction X vs a mechanism-rich prediction Y**, the
+  engine cell, the discriminating outcome and minimal compute (≈300–420 runs at N=600/T=30, ≈2–3 CPU-h; D3/D7 need
+  wave-2 extensions; D1/D2/D4/D5/D6/D8/D9 are runnable on the current engine). They are **pre-registerable, not
+  results**; no Paper D compute until the Paper C confirmatory run and an approved prereg.
+
+**Attribution-risk checklist (binding):** the inventory is an **AI-generated candidate map with placeholder citations**
+("UIS+2", "OECD+3", "doi.org+4", etc.). **No equation or citation may be used from it without primary-source
+verification** (Hanushek; Todd & Wolpin; Cunha & Heckman; Becker; Mincer; Dang & Rogers; Bray; Tansel & Bircan;
+Biswal; Jayachandran; Kim & Lee; UIS/World Bank/OECD measurement sources). Equation numbering refers to the committed
+inventory text, not the published sources — cite sources, not inventory numbers.
+
+**Status: candidate new-generation finding/section (design audit), UNRESOLVED as results.** The omissions are
+pre-registerable hypotheses; the divergences are future work; the already-recorded contradictions remain as recorded.
+
+## 4H. Paper C — design-only provisional anchors and the pre-registration gate
+
+Artefact: `docs/audit/PAPER_C_MODEL_GAP.md` (sha256 `d994df74…3ffc`). The probes are **read-only host anchors**, not
+adjudicated claims.
+
+| anchor | value | reading |
+|---|---|---|
+| Paper B canonical = private-market regime | `withheld = 0.00000` (HK and KR); own-teacher share of tutored **2.47 % HK / 2.82 % KR**; K–12 tutoring 0.617 / 0.556; spend 156.5 / 128.3 | Paper B suppresses the withholding/own-teacher channel (`own_ban=0.95`, `mode=positional`); it is a firm-market regime |
+| better school provision substitutes | `q0` 0.8→1.2 lowers K–12 tutoring **0.605→0.491** and spend **161.7→135.9** | the S-substitution channel Paper C needs |
+| withholding regime ON (`pay_ratio=.55`, `monitoring=.2`, `own_ban=0`) | `h = 0.144`, own share **0.528**, K–12 tutoring 0.776, spend 165.0 | teacher withholding/rent is a live mechanism when enabled |
+| withholding ON + `firm_ban=.9` | own share **0.978**, spend **118.1**, firm price **2.0957** | supply-form/ban interaction; firm price ×30 |
+
+**Status of the anchors: REPRODUCED SIMULATION (provisional, design-only)** — they establish that the mechanisms
+exist and are switchable; they are **not** Paper C results and must not be cited as such.
+
+**Paper C confirmatory grid (pre-registration required):** 3 (S) × 3 (L) × 4 (private supply) = **36 cells** × 8
+matched seeds = 288 runs + 4 regime anchors × 8 = 32 runs = **320 runs**; suggested N=600/T=46 screening (≈**2.2
+CPU-h**; ≈20 min at 8 CPUs) and N=1500 confirmatory subset (≈12 CPU-h). **No box compute until a pre-registration is
+approved.** When the Commander drafts it, review with the same four-criticism discipline: no identification
+overclaim; grade×urban/design-cell counts only; seed-MC uncertainty; no permutation inference. **Paper D compute is
+gated** on the Paper C confirmatory run and an approved prereg (Commander rule).
+
 ## 5. Evidence-status register (programme level)
 
 | Status | Count (paper + programme rows) | Notes |
 |---|---|---|
 | VERIFIED EMPIRICAL | **4** (4 A) | descriptive/associational; not causal; author committed E8 record |
 | **REPRODUCED EMPIRICAL ANALYSIS** *(new-generation label, Lead-defined)* | **2** (2 A) | A-34 impact (+12.322 vs +12.44) and A-35 amplification (+25.083 vs +25.26) — fresh-WDI **CS-style group-time ATT**; manifest-hashed vintage |
-| REPRODUCED SIMULATION | **20** (2 A, 12 B, 6 programme) | all conditional and/or uncalibrated unless marked; includes the 100-seed Paper B new generation (CF4 reversal + participation-cost caveat), the new-generation forecast (A-37), the 74.88 % infeasibility finding (A-38), the re-executed ABC audit, the re-executed bootstrap factorial, and the Paper B 540 table regeneration |
+| REPRODUCED SIMULATION | **23** (2 A, 12 B, 9 programme) | all conditional and/or uncalibrated unless marked; includes the 100-seed Paper B new generation (CF4 reversal + unmeasured-welfare-change caveat), the three Paper C provisional anchors (C-01…C-03), the new-generation forecast (A-37), the 74.88 % infeasibility finding (A-38), the re-executed ABC audit, the re-executed bootstrap factorial, and the Paper B 540 table regeneration |
 | VALIDATED SIMULATION | **4** (1 A, 3 programme) | **A-39 item (d) local identifiability (stop gate met with declared restriction)**; engine/PL module validation, corrected DGP design, bootstrap size/power |
 | AUTHOR-REPORTED | **44** (20 A, 18 B, 6 programme) | **AUTHOR-REPORTED BASELINE**: the 420 generation, the Paper A Exp 1/3/4/5 legacy numbers, the author JSON bundle; not results, not reproduced, not to be silently replaced |
-| CONTRADICTED | **30** (8 A, 14 B, 8 programme) | only where committed code/algebra/measured audit output refutes the claim; includes the 100 % paradox, invalid E1/Q3, legacy DGP, "published benchmark" attributions, and the Paper B policy reversals |
-| UNRESOLVED | **5** (2 A, 0 B, 3 programme) | A-31 replication inventory; A-36 bulge `t*` (no-effect evidence); canonical spec/Gate-2; GPU quarantine |
+| CONTRADICTED | **31** (8 A, 14 B, 9 programme) | only where committed code/algebra/measured audit output refutes the claim; includes the 100 % paradox, invalid E1/Q3, legacy DGP, "published benchmark" attributions, and the Paper B policy reversals |
+| UNRESOLVED | **10** (2 A, 0 B, 8 programme) | A-31 replication inventory; A-36 bulge `t*` (no-effect evidence); Paper C confirmatory prereg (C-04); Paper D omissions/divergences (D-01/D-03) and inventory attribution risk (D-04); canonical spec/Gate-2; GPU quarantine |
 
-The machine-readable one-row-per-claim record is `results/audit/paper_claims.csv` (110 rows; sha256
-`41555d51d239d0873ade34e84ecb60b9f2dc4844924ec94ce836e609cf3bdfec`). The Lead-defined new-generation label **REPRODUCED EMPIRICAL ANALYSIS** is used for the fresh-WDI E8 rows; all
+The machine-readable one-row-per-claim record is `results/audit/paper_claims.csv` (118 rows; sha256
+`f3480b4db57fcf6e9b7499697e3b30ecc09619bf42db65eb73e1d3037886c31c`). The Lead-defined new-generation label **REPRODUCED EMPIRICAL ANALYSIS** is used for the fresh-WDI E8 rows; all
 other rows use the verbatim six-status taxonomy.
 
 ---
