@@ -953,3 +953,19 @@ superseding the earlier "leave at 7"):
   SHA256SUMS + RESULTS_DONE, waits for `SHUTDOWN_OK`, then powers off; failure leaves the box on.
 - **Monitor-only role:** publish rows at **224/256/288**, ETA at the 10-worker rate, and the **summary JSON sha256** on
   completion. Measured after restart: 189→235 rows over 8.7 min = **5.29 rows/min** → 53 rows left ≈ **~01:00** completion.
+
+### 13.40 SCREENING COMPLETE 288/288 — but finalizer FAILED on a field-name bug (box on, data intact)
+
+**Screening result (authoritative 10-worker continuation, driver 57751):** COMPLETE 01:11 CST.
+`/root/work/paperC/screen_final/paperC_screening.json` (**byte-identical copy** `paperC_screening_results.json`), 1,337,854 B,
+**sha256 `6bcc29a50d41dc2c63a5959c0b023eb203c5bf1bd0cd04ffaee908a5ebb5b6d4`**; top-level **`n_runs=288`, `n_cells=36`,
+`invalid_cells=[]`, `wall_seconds=1879.17`**; `checkpoint_sha256` = 36 entries; manifest carries engine/spec/runner/pin/
+assertions/fail_routing/P12 mode. Independent ckpt recount: **288 rows / 36 cells**. All screening processes exited; box idle.
+
+**FINALIZER FAILURE (checker bug, not data):** `finalize.sh` evaluates `m = d['manifest']; m['runs'] == 288 and m['cells'] == 36`,
+but the JSON exposes runs as **top-level `n_runs`** and `manifest` has **no `runs` key** (its `cells` is the 36-id list).
+`finalize.out`: `rows None cells [36 ids]` → `FAIL row/cell verification` → `STATUS=FAILED`; **no SHA256SUMS, no
+RESULTS_DONE, no SHUTDOWN_OK, no poweroff** (correct failure semantics — box stayed ON).
+**Remedy (Lead/commander action; scheduler did not start a second finalizer):** check `d['n_runs']==288 and d['n_cells']==36
+and d['invalid_cells']==[]` then re-run the corrected finalizer once → markers → puller SHUTDOWN_OK → poweroff.
+Scheduler: monitor-only throughout; nothing killed/moved/deleted; box ON and idle.
