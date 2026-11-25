@@ -776,12 +776,33 @@ with `import numpy as np`, mtime 21:09):
   `paperC_pilot0_results.json`: copy payload to `~/neon-boot/qa/incoming/paperC_results/` + notify qa-verifier.
   X-29 diagnostic (1,280 runs, ~35 min) queued after the pilot; cap stays 8; no other jobs.
 
-### 13.26 Pilot-0 design confirmed: 96 runs (12 cells × 8 seeds), ETA ~22:25–22:35
+### 13.26 Pilot-0 design confirmed: **128 runs (16 cells × 8 seeds)**, ETA ~22:55–23:10 (corrected 21:32)
 
 Runner source header (`run_paperC_pilot0.py`): *"Design (96 runs): 3 supply regimes × 2 S proxies (q0 1.0/1.2) × 2
-private-supply (p_firm 0.03 low / 0.08 high) × 8 seeds"* → **12 cells × 8 seeds = 96 rows** (driver schedules 12 cells
-over 8 workers: 8 running, 4 queued; `ckpt_*` set grows 8 → 12 files). Measured **~1.12 rows/min** → **ETA ≈ 22:25–22:35**
-(21:04:30 + ~86 min). Status 21:17:26: cgroup **8.0/10 (80 %)**, BLAS single-thread verified, 14 rows
+private-supply (p_firm 0.03 low / 0.08 high) × 8 seeds"* → **16 cells × 8 seeds = 128 rows** (REGIMES has **4** regimes: `market_only`, `own_open_gap`, `own_open_incentive`,
+`own_open_gap_firm_ban` × Q0S 2 × PFIRMS 2 × 8 seeds; runner sha256 `bc833b767d43f45273ed674b005bcb8b57eedf9c2d1c9202d3a4ae04e84a6d6b`).
+Driver schedules 16 cells over 8 workers (8 running now, **8 more queued**, not 4); `ckpt_*` set grows 8 → 16 files.
+Measured **~1.16 rows/min** → from 30 rows at 21:30, remaining 98 rows ≈ 84 min → **ETA ≈ 22:55–23:10**. Status 21:17:26: cgroup **8.0/10 (80 %)**, BLAS single-thread verified, 14 rows
 (2 market_only cells at 4, six at 1 — per-seed incremental appends). Reporting at each 8-row boundary + first completed
 cell; payload watch armed for `paperC_pilot0_results.json` → copy to `~/neon-boot/qa/incoming/paperC_results/` and
 notify qa-verifier. Cap 8; X-29 diagnostic queued after.
+
+### 13.27 CORRECTION 21:32 — pilot is 16 cells / 128 runs (supersedes §13.26 count)
+
+Runner sha256 **`bc833b767d43f45273ed674b005bcb8b57eedf9c2d1c9202d3a4ae04e84a6d6b`** (matches Lead's box check):
+`REGIMES = [` has **4** entries (`market_only`, `own_open_gap`, `own_open_incentive`, `own_open_gap_firm_ban`),
+`Q0S=[1.0,1.2]`, `PFIRMS=[0.03,0.08]`, `NSEEDS=8` → **16 cells × 8 seeds = 128 runs**. The "96 runs / 12 cells" figure came
+from a **stale docstring** and is retracted. First 8 cells run now; **8 more cells queued** after them.
+Measured rate **~1.16 rows/min** (14 rows at 21:17 → 30 rows at 21:30) → remaining 98 rows from 30 ≈ 84 min →
+**ETA 22:55–23:10**. Reporting at **40/56/72/88/104/120-row boundaries**. Cap stays 8; on `paperC_pilot0_results.json`:
+copy complete results dir to `~/neon-boot/qa/incoming/paperC_results/` + notify qa-verifier, then hand box to X-29.
+
+### 13.28 CAPACITY RESERVATION 21:32 — Luna/MASSENG reserve (Lead order)
+
+**Reserve 1–2 box CPU slots for Luna/MASSENG from now on.** Policy (binding for the scheduler):
+1. Paper C pilot stays at **8 workers**; the 9th slot + control remain free — **do not fill with our work**.
+2. **X-29 diagnostic → launch at 6 workers** (not 8) so 2 slots stay free for Luna; report its slower ETA (~45–50 min, not 35).
+3. Every future campaign (G2-B, confirmations) **holds a 1–2 slot reserve for MASSENG** unless Lead says otherwise.
+4. If Luna requests a box slot: **allocate immediately and preempt/queue ours** — MASSENG has the reserve, not leftovers.
+5. Keep our concurrent host/Mac probes to **≤2** while Luna runs, to keep the Mac responsive.
+Total box ceiling remains 10 worker processes; the reserve is inside that ceiling, not on top of it.
