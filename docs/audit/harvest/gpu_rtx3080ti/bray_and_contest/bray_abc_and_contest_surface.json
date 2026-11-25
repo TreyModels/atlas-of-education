@@ -1,0 +1,41 @@
+{
+  "part_a_bray_7param_abc": {
+    "n_draws": 200000,
+    "n_accepted": 92,
+    "accept_rate_pct": 0.046,
+    "best_max_z": 0.455,
+    "best_theta_7param": [
+      -0.7231,
+      0.387,
+      1.3392,
+      1.4155,
+      1.316,
+      0.2097,
+      -0.8241
+    ],
+    "posterior_corr_cond_6active": 25.96,
+    "elapsed_sec": 0.31
+  },
+  "part_b_contest_sensitivity_surface": {
+    "grid_points": 2000,
+    "r_range": [
+      0.8,
+      2.5
+    ],
+    "price_range": [
+      0.05,
+      0.3
+    ],
+    "seat_shares": [
+      0.12,
+      0.16,
+      0.23,
+      0.35,
+      0.5
+    ],
+    "share_cells_paradox_S012_to_S016": 1.0,
+    "share_cells_paradox_S012_to_S050": 1.0,
+    "mean_participation_jump_S012_to_S050": 0.3709,
+    "elapsed_sec": 0.036
+  }
+}

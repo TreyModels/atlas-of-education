@@ -1,0 +1,316 @@
+diff --git a/engine/eduengine/core.py b/engine/eduengine/core.py
+index aefca21..4e147e5 100644
+--- a/engine/eduengine/core.py
++++ b/engine/eduengine/core.py
+@@ -54,6 +54,16 @@ CORE_DEFAULTS = dict(
+     contest_price=0.05,          # unit price of contest tutoring effort (wage units)
+     contest_x0=1.0,              # baseline contest input (free schooling / zero-tutoring floor)
+     contest_max_e=10.0,          # regulatory cap on annual contest tutoring effort
++    contest_mc_draws=256,        # Gumbel draws used to estimate the expected top-K admission probability curve
++    # non-terminal contest placement (the Korean Grade-9 gate): persistent consequences of winning a
++    # fail='track' contest gate that is *not* the final elite gate (m_ < nlev-2). Fixes the phantom-prize bug:
++    # before this, a G9 win changed nothing and contest prep bought only noise. The household's *anticipated*
++    # value is still the gate's elite_logw (reduced-form belief, used in values()); the realised consequences
++    # are the two channels below.
++    g9_consequence=1.0,          # 0 = legacy behaviour (contest prizes nothing); 1 = full placement consequences
++    g9_learn_boost=0.0,          # extra grade-equivalents of learning per upper-secondary year for G9 placements
++    g9_contest_boost=0.0,        # multiplicative boost to effective contest input at later gates for G9 placements
++    g9_elite_logw=0.0,           # optional direct log-wage premium for G9 placements (0 in the canonical spec)
+ )
+ 
+ 
+@@ -98,7 +108,20 @@ class Engine:
+         self.Bn = np.zeros(self.nlev + 1)
+         self.cut = [g.get('cut0', 0.0) for g in p['gates']]   # believed/realised score cutoff for quota gates
+         self.cut_adm = [g.get('admit', {}).get('cut0', 0.0) for g in p['gates']]   # admission cutoffs (e.g. gaokao)
+-        self.lam_contest = [g.get('lam0', 0.5) for g in p['gates']]  # believed Plackett-Luce intensity lambda = exp(-c*)
++        self.lam_contest = [g.get('lam0', 0.5) for g in p['gates']]  # DEPRECATED (kept for old configs);
++        # expected top-K admission probabilities now come from contest_prob(), fitted to the gate's own mechanism
++        # separate RNG stream for the Gumbel-MC fit, so arms/seeds stay matched and the main stream is untouched
++        self.rng_fit = np.random.default_rng(int(p['seed']) + 1_000_003)
++        self.contest_beta = [1.0] * self.nlev                       # logistic slope d logit / d log x_eff
++        self.contest_cut = [float(np.log(max(p['contest_x0'], 0.1)))] * self.nlev   # log-x effective cutoff c_K
++        # per-gate diagnostic accumulators (expected vs realised admission, seat accounting); read by the runner
++        self.contest_calib = {
++            m_: dict(n_years=0, applicants=0, seats=0, admitted=0, ratio_sum=0.0,
++                     brier=0.0, brier_flat=0.0, n_pred=0,
++                     cnt_bin=[0] * 10, exp_bin=[0.0] * 10, real_bin=[0.0] * 10,
++                     cnt_eff=[0] * 5, exp_eff=[0.0] * 5, real_eff=[0.0] * 5, eff_sum=[0.0] * 5,
++                     beta_last=float('nan'), cut_last=float('nan'))
++            for m_ in range(self.nlev)}
+         self.lrate = p['q0']                          # believed mean learning per school year
+         self.kids = None
+         self.labour_module = [m for m in self.modules if m.labour.__func__ is not Module.labour]
+@@ -132,7 +155,7 @@ class Engine:
+                    comp_age=np.full((N, self.nlev), np.nan),
+                    q=np.searchsorted(np.quantile(z, [0.2, 0.4, 0.6, 0.8]), z), street=np.zeros(N, bool),
+                    gtimes=np.zeros(N, int), repeats=np.zeros(N, int), retakes=np.zeros(N, int), voc=np.zeros(N, bool),
+-                   contest_e=np.zeros(N), elite=np.zeros(N, bool), tut_k12=np.zeros(N))
++                   contest_e=np.zeros(N), elite=np.zeros(N, bool), elite9=np.zeros(N, bool), tut_k12=np.zeros(N))
+         if self.kids is None:
+             self.kids = new
+         else:
+@@ -175,7 +198,8 @@ class Engine:
+                 alpha_c = gate.get('alpha', p['contest_alpha'])
+                 x0_c = gate.get('x0', p['contest_x0'])
+                 x_eff = np.maximum(x0_c * np.maximum(Lend, 0.1) / max(self.ends[m], 1) + alpha_c * k['contest_e'][sl], 1e-6)
+-                P = 1.0 - np.exp(-np.clip(self.lam_contest[m] * (x_eff ** r_c), 0.0, 50.0))
++                x_eff = self._contest_boost(x_eff, k['elite9'][sl])
++                P = self.contest_prob(m, x_eff)
+                 if gate.get('academic_only'):
+                     P = np.where(voc, 0.0, P)
+                 elw = gate.get('elite_logw', p['elite_logw'])
+@@ -213,6 +237,116 @@ class Engine:
+         cont_now = np.where(cred >= self.nlev, -np.inf, cont_now)
+         return V_stop, cont_now
+ 
++    # ------------------------------------------------------------------ contest expected probabilities
++    def _contest_boost(self, x_eff, elite9):
++        """Persistent Grade-9 placement advantage in a later contest's effective input (multiplicative, unit-free)."""
++        p = self.p
++        b = p['g9_consequence'] * p['g9_contest_boost']
++        if b <= 0.0:
++            return x_eff
++        return x_eff * (1.0 + b * np.asarray(elite9, float))
++
++    def contest_prob(self, m_, x_eff):
++        """Expected top-K (seats) admission probability under the gate's own Gumbel-max Plackett-Luce mechanism.
++
++        Logistic in log effective contest input: P = sigmoid(beta * (log x_eff - c_K)). beta and c_K are
++        re-estimated every gate year by vectorised Monte Carlo of the *same* ranking the gate uses (see
++        `_fit_contest_prob`), then re-centred so the mean expected probability equals min(seats/applicants, 0.99).
++        The identical function is used by household values (`values`) and effort choice (`TutoringMarket.extras`),
++        so expected and realised probabilities are one mechanism, not two approximations.
++        """
++        b = float(self.contest_beta[m_])
++        c = float(self.contest_cut[m_])
++        z = np.clip(b * (np.log(np.maximum(np.asarray(x_eff, float), 1e-6)) - c), -30.0, 30.0)
++        return 1.0 / (1.0 + np.exp(-z))
++
++    def _fit_contest_prob(self, m_, x_eff, seats, r_c):
++        """Estimate the expected top-K admission curve by Monte Carlo of the gate's Gumbel-max ranking.
++
++        For each candidate i, p_i = share of M independent Gumbel draws in which i ranks in the top `seats`
++        (weights w = x_eff**r). A weighted least-squares logit link in log x_eff gives the slope beta; the
++        intercept is then chosen by bisection so that mean(p) = min(seats/n, 0.99) (market clearing). The fit is
++        deliberately re-estimated every gate year from the current candidate field, so it tracks the realised
++        mechanism rather than a fixed approximation. Degenerate fits fall back to beta = 1 (flagged by leaving
++        beta at the fallback; the runner reports beta_last per gate).
++        """
++        n = int(len(x_eff))
++        if n == 0:
++            return
++        M = max(int(self.p['contest_mc_draws']), 16)
++        x_eff = np.maximum(np.asarray(x_eff, float), 1e-9)
++        w = np.log(x_eff) * float(r_c)
++        u = self.rng_fit.random((M, n))
++        g = -np.log(-np.log(np.clip(u, 1e-12, 1.0 - 1e-12)))
++        score = w[None, :] + g
++        order = np.argsort(-score, axis=1)
++        rank = np.empty((M, n), dtype=np.int32)
++        rank[np.arange(M)[:, None], order] = np.arange(n, dtype=np.int32)
++        p_mc = (rank < int(max(seats, 1))).mean(0)
++        ph = np.clip(p_mc, 0.5 / (M + 2.0), 1.0 - 0.5 / (M + 2.0))
++        yv = np.log(ph / (1.0 - ph))
++        lx = np.log(x_eff)
++        ww = ph * (1.0 - ph)
++        A = np.array([[np.sum(ww), np.sum(ww * lx)], [np.sum(ww * lx), np.sum(ww * lx * lx)]])
++        rhs = np.array([np.sum(ww * yv), np.sum(ww * lx * yv)])
++        try:
++            a, b = np.linalg.solve(A + 1e-9 * np.eye(2), rhs)
++        except np.linalg.LinAlgError:
++            a, b = float(np.mean(yv)), 1.0
++        a, b = float(a), float(b)
++        if not (0.1 <= b <= 5.0):        # degenerate field (near-constant x_eff / all/none admitted): fall back
++            b = 1.0
++            a = float(np.mean(yv - b * lx))
++        target = min(float(seats) / n, 0.99)
++        lo, hi = -60.0, 60.0
++        for _ in range(50):
++            mid = 0.5 * (lo + hi)
++            if float(np.mean(1.0 / (1.0 + np.exp(-np.clip(mid + b * lx, -30.0, 30.0))))) < target:
++                lo = mid
++            else:
++                hi = mid
++        a = 0.5 * (lo + hi)
++        self.contest_beta[m_] = b
++        self.contest_cut[m_] = -a / b
++
++    def _record_contest_calib(self, m_, x_eff, effort, p_exp, ok, seats):
++        """Accumulate expected-vs-realised admission and seat denominators for the runner (§3-§4 of the plan)."""
++        C = self.contest_calib[m_]
++        n = int(len(p_exp))
++        C['n_years'] += 1
++        C['applicants'] += n
++        C['seats'] += int(seats)
++        C['admitted'] += int(np.sum(ok))
++        C['ratio_sum'] += float(n) / max(int(seats), 1)
++        C['beta_last'] = float(self.contest_beta[m_])
++        C['cut_last'] = float(self.contest_cut[m_])
++        if n == 0:
++            return
++        p = np.clip(np.asarray(p_exp, float), 1e-6, 1.0 - 1e-6)
++        ok = np.asarray(ok, bool)
++        C['brier'] += float(np.sum((p - ok) ** 2))
++        C['n_pred'] += n
++        flat = min(float(seats) / n, 0.99)
++        C['brier_flat'] += float(np.sum((flat - ok) ** 2))
++        b = np.clip((p * 10.0).astype(int), 0, 9)
++        for j in range(10):
++            msk = b == j
++            c = int(msk.sum())
++            C['cnt_bin'][j] += c
++            C['exp_bin'][j] += float(np.sum(p[msk]))
++            C['real_bin'][j] += float(np.sum(ok[msk]))
++        e = np.asarray(effort, float)
++        if n >= 5:
++            qs = np.quantile(e, [0.2, 0.4, 0.6, 0.8])
++            eq = np.clip(np.searchsorted(qs, e, side='left'), 0, 4)
++            for j in range(5):
++                msk = eq == j
++                c = int(msk.sum())
++                C['cnt_eff'][j] += c
++                C['exp_eff'][j] += float(np.sum(p[msk]))
++                C['real_eff'][j] += float(np.sum(ok[msk]))
++                C['eff_sum'][j] += float(np.sum(e[msk]))
++
+     def _target(self, m, Y):
+         T = self.p['enrol_targets']
+         if m not in T and str(m) not in T:
+@@ -364,6 +498,9 @@ class Engine:
+         dL = eff * np.exp(p['beta_a'] * k['a']) + y['tut_gain'] + p['home_effect'] * (k['home'] - 0.5) \
+             + p['learn_noise'] * r.standard_normal(n)
+         dL = np.where(att, np.maximum(dL, 0.0), 0.0)
++        if p['g9_consequence'] > 0.0 and p['g9_learn_boost'] > 0.0:   # G9 placement -> better upper-secondary school
++            placed = att & k['elite9'] & (k['g'] >= 9) & (k['g'] < 12)
++            dL = dL + np.where(placed, p['g9_consequence'] * p['g9_learn_boost'], 0.0)
+         k['L'] += dL
+         if att.any():
+             self.lrate = 0.8 * self.lrate + 0.2 * float(np.mean((dL[att]) / np.exp(p['beta_a'] * k['a'][att])))
+@@ -404,6 +541,10 @@ class Engine:
+                 ok = np.zeros(n, bool)
+                 if len(ci) > 0:
+                     x_eff = np.maximum(x0_c * np.maximum(k['L'][ci], 0.1) / max(self.ends[m_], 1) + alpha_c * k['contest_e'][ci], 1e-6)
++                    x_eff = self._contest_boost(x_eff, k['elite9'][ci])
++                    # expected probabilities that households acted on this year come from the previous fit; then the
++                    # realised gate draws the SAME Gumbel-max Plackett-Luce ranking it always did.
++                    p_exp = self.contest_prob(m_, x_eff)
+                     w_log = r_c * np.log(x_eff)
+                     u = np.clip(r.random(len(ci)), 1e-12, 1.0 - 1e-12)
+                     gumbel = -np.log(-np.log(u))
+@@ -413,17 +554,14 @@ class Engine:
+                         ok[ci[order[:seats]]] = True
+                     else:
+                         ok[ci] = True
+-                    # Market-clearing Plackett-Luce intensity lambda: mean(1 - exp(-lam * x_eff^r)) = min(seats / len(ci), 0.99)
+-                    w = x_eff ** r_c
+-                    target_s = min(seats / max(len(ci), 1), 0.99)
+-                    lo, hi = 1e-12, 50.0 / max(float(np.percentile(w, 10)), 1e-9)
+-                    for _ in range(30):
+-                        mid = 0.5 * (lo + hi)
+-                        if float(np.mean(1.0 - np.exp(-np.clip(mid * w, 0.0, 50.0)))) < target_s:
+-                            lo = mid
+-                        else:
+-                            hi = mid
+-                    self.lam_contest[m_] = 0.7 * self.lam_contest[m_] + 0.3 * (0.5 * (lo + hi))
++                    # refresh the expected-admission curve by MC of this same mechanism (used from next year on)
++                    self._fit_contest_prob(m_, x_eff, seats, r_c)
++                    if t >= p['measure_from']:   # diagnostics in the scored window only: pre-burn-in gate years have
++                        self._record_contest_calib(m_, x_eff, k['contest_e'][ci], p_exp, ok[ci], seats)  # not-yet-
++                        # converged expected curves (the fit is still learning the candidate field), so they are not
++                        # evidence about the model's steady-state calibration
++                    if gate.get('fail') == 'track' and m_ < self.nlev - 2:   # non-terminal placement (Korean Grade-9)
++                        k['elite9'][at_gate & ok] = True
+                 k['contest_e'][at_gate] = 0.0
+                 if gate.get('fail') == 'track' and m_ == self.nlev - 2:
+                     k['elite'][at_gate & ok] = True
+@@ -495,8 +633,11 @@ class Engine:
+             inc = self.labour_module[0].labour(self, t, ex)
+         if inc is None:          # no labour module: Mincer-style fixed returns
+             inc = np.exp(0.08 * k['g'][ex] + 0.05 * (k['L'][ex] - k['g'][ex]))
+-        if len(ex) and p['elite_logw'] != 0.0:
+-            inc = np.where(k['elite'][ex], inc * np.exp(p['elite_logw']), inc)
++        if len(ex):
++            if p['elite_logw'] != 0.0:
++                inc = np.where(k['elite'][ex], inc * np.exp(p['elite_logw']), inc)
++            if p['g9_consequence'] > 0.0 and p['g9_elite_logw'] != 0.0:   # optional direct G9 placement premium
++                inc = np.where(k['elite9'][ex], inc * np.exp(p['g9_consequence'] * p['g9_elite_logw']), inc)
+         self.update_beliefs(ex, inc)
+         self.leaver_income = inc
+         for m in self.modules:
+diff --git a/engine/eduengine/modules/tutoring.py b/engine/eduengine/modules/tutoring.py
+index 1426c01..b832d27 100644
+--- a/engine/eduengine/modules/tutoring.py
++++ b/engine/eduengine/modules/tutoring.py
+@@ -20,6 +20,7 @@ class TutoringMarket(Module):
+         firm_elast=1.0, firm_entry=0.3,
+         own_ban=0.0, firm_ban=0.0,                  # enforcement share of a ban on own-pupil / commercial tutoring
+         rural_firm_access=0.4, buyback_firm=0.3, r0=0.0, tut_taste=0.03,
++        contest_min_e=0.0,                          # lumpy contest purchase margin (420-generation value: 0.25)
+     )
+ 
+     def setup(self, E):
+@@ -102,35 +103,46 @@ class TutoringMarket(Module):
+                 L_proj = k['L'][idx[sub]] + lam_learn[sub] * yrs_left
+                 b_i = x0_c * np.maximum(L_proj, 0.1) / max(E.ends[m_], 1)
+                 e_cum = k['contest_e'][idx[sub]]
+-                lam_m = float(E.lam_contest[m_])
++                # persistent G9 placement advantage in this contest's effective input (same map as core step)
++                mult = 1.0 + p['g9_consequence'] * p['g9_contest_boost'] * k['elite9'][idx[sub]]
+                 e_hi = np.minimum(e_cap, cash_rem[sub] / max(pc, 1e-9))
+                 e_hi = np.maximum(e_hi, 0.0)
+                 c_y = pc / yy[sub]
+-                # Vectorized 25-point grid search + 8 golden-section refinement steps for exact global max on [0, e_hi]
+-                grid = np.linspace(0.0, 1.0, 25)[None, :] * e_hi[:, None]
+-                x_g = np.maximum(b_i[:, None] + alpha_c * (e_cum[:, None] + grid), 1e-6)
+-                u_g = dV[:, None] * (1.0 - np.exp(-np.clip(lam_m * (x_g ** r_c), 0.0, 50.0))) - c_y[:, None] * grid
++                # Expected admission probability uses the SAME Gumbel-max mechanism as the gate: contest_prob() is the
++                # logistic top-K curve re-fitted each gate year by MC of the realised ranking (core.contest_prob).
++                def P(e):
++                    if np.ndim(e) == 1:
++                        x = np.maximum(b_i + alpha_c * (e_cum + e), 1e-6) * mult
++                    else:
++                        x = np.maximum(b_i[:, None] + alpha_c * (e_cum[:, None] + e), 1e-6) * mult[:, None]
++                    return E.contest_prob(m_, x)
++                # Lumpy purchase margin: the 420-generation runner imposed a minimum contest purchase (0.25 effort
++                # units). It matters: the participation decision is {0} U [contest_min_e, e_hi], not a continuum, so
++                # households with weak incentives buy nothing instead of an epsilon. contest_min_e=0 reproduces the
++                # continuous-margin 540 behaviour.
++                emin = float(p.get('contest_min_e', 0.0))
++                e_lo = np.where(e_hi >= emin, np.minimum(emin, e_hi), e_hi)
++                # Vectorized 25-point grid search + 8 golden-section refinement steps for exact global max on [e_lo, e_hi]
++                grid = e_lo[:, None] + np.linspace(0.0, 1.0, 25)[None, :] * (e_hi - e_lo)[:, None]
++                u_g = dV[:, None] * P(grid) - c_y[:, None] * grid
+                 best_j = np.argmax(u_g, axis=1)
+-                step_w = e_hi / 24.0
+-                lo = np.maximum(0.0, (best_j - 1) * step_w)
+-                hi = np.minimum(e_hi, (best_j + 1) * step_w)
++                step_w = (e_hi - e_lo) / 24.0
++                lo = np.maximum(e_lo, e_lo + (best_j - 1) * step_w)
++                hi = np.minimum(e_hi, e_lo + (best_j + 1) * step_w)
+                 phi = 0.6180339887498949
+                 for _ in range(8):
+                     e1 = hi - phi * (hi - lo)
+                     e2 = lo + phi * (hi - lo)
+-                    x1 = np.maximum(b_i + alpha_c * (e_cum + e1), 1e-6)
+-                    x2 = np.maximum(b_i + alpha_c * (e_cum + e2), 1e-6)
+-                    u1 = dV * (1.0 - np.exp(-np.clip(lam_m * (x1 ** r_c), 0.0, 50.0))) - c_y * e1
+-                    u2 = dV * (1.0 - np.exp(-np.clip(lam_m * (x2 ** r_c), 0.0, 50.0))) - c_y * e2
++                    u1 = dV * P(e1) - c_y * e1
++                    u2 = dV * P(e2) - c_y * e2
+                     lo = np.where(u1 < u2, e1, lo)
+                     hi = np.where(u1 < u2, hi, e2)
+                 e_opt = 0.5 * (lo + hi)
+                 # Compare against e=0 corner explicitly
+-                x0_val = np.maximum(b_i + alpha_c * e_cum, 1e-6)
+-                u0_val = dV * (1.0 - np.exp(-np.clip(lam_m * (x0_val ** r_c), 0.0, 50.0)))
+-                x_opt = np.maximum(b_i + alpha_c * (e_cum + e_opt), 1e-6)
+-                u_opt = dV * (1.0 - np.exp(-np.clip(lam_m * (x_opt ** r_c), 0.0, 50.0))) - c_y * e_opt
+-                e_opt = np.where((u_opt > u0_val + 1e-9) & (e_opt > 1e-4), e_opt, 0.0)
++                u0_val = dV * P(np.zeros_like(e_opt))
++                u_opt = dV * P(e_opt) - c_y * e_opt
++                e_opt = np.where(((e_hi >= emin) | (emin <= 1e-12)) & (u_opt > u0_val + 1e-9) & (e_opt > 1e-4),
++                                 e_opt, 0.0)
+                 contest_e_now[idx[sub]] = e_opt
+                 contest_spend_now[idx[sub]] = pc * e_opt
+             k['contest_e'] += contest_e_now

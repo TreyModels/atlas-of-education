@@ -195,3 +195,32 @@ audit-runner-verified (MANIFEST 13/13 OK), not independently re-derived by the C
 archive rows *are* Commander-verified); (iv) 420-run/Paper A/GPU statuses above stay AUTHOR-REPORTED / UNRESOLVED.
 
 **GATE 0 CLOSED (PASS, WITHIN TOLERANCE).**
+
+---
+
+## 8. Post-sign-off addenda (still Gate 0 records, do not invalidate the runs)
+
+**8.1 Box CPU quota correction (Lead-verified 2026-11-25 ~14:40 CST).** The box is a **10-CPU cgroup**, not 80
+cores: `cat /sys/fs/cgroup/cpu.max` = `1000000 100000`; `nproc` reports the 80-CPU host and is misleading. Audit-runner
+recorded this in `GATE0_REPORT.md` (§0/§1/§4, commit `5ac7a2b`) without touching `system_box.txt`, so the independently
+verified 87/87 registry and its manifest row (`151b3024…`/9,468 B) are unchanged.
+**Effect on Gate 0: none on any stored number.** The canonical box evidence is the unmodified-runner **8-worker** run
+(within quota); the 56-worker run is retained **only** as a worker-count invariance check (it oversubscribed the quota;
+8-vs-56 outputs are bit-identical), never as a box-capacity claim. CPU quota/worker count do not enter any output
+value — the invariance result is exactly what makes that statement checkable. Our lanes were instructed: box work
+frozen while a legacy 1080-sim run finished, then total ≤8 workers globally, ≤4 per lane, `nice -n 10`,
+`OPENBLAS/MKL/OMP_NUM_THREADS=1`.
+
+**8.2 Declared-stack box venv.** `/root/work/venv-declared` (py 3.10.8) was created and the declared stack
+(`engine/requirements.txt` + `pytest pandas pyarrow psutil`) installed; `pip freeze` is captured to
+`docs/audit/system_box_venv.txt`. All future box CPU work (Gate 2/3 calibration) must use it, so the NumPy 1.24.1
+deviation documented in §7(b) cannot recur. This is an environment remediation, not a Gate-0 result.
+
+**8.3 Legacy (previous-window) work harvested; not Gate-0 evidence.** Two unreachable legacy lanes finished and
+stopped. Their outputs were copied read-only into `docs/audit/harvest/` with sha256 and labelled
+**AUTHOR-REPORTED / PRE-REPAIR**: `model-revision` branch (engine fixes 3A–3C, Korean calibration **FAILURE**:
+untuned 66.27 %/80.77 pp/5.32×, best grid 91.63 %/37.11 pp/1.59× vs targets 76.5/32.1/3.4) and `gpu-rtx3080ti`
+branch (7-param ABC with dead `theta[:,5]`, approximate contest surface, E1/Q3 panel MISSING). Our invariant suite run
+against the legacy `model-revision` engine still fails the same seven contract rows (7 failed/10 passed/10 xfailed),
+so none of its code is reusable; see `docs/audit/harvest/HARVEST.md` and `HARVEST_MANIFEST.csv`. Nothing here changes
+the Gate-0 verdict.

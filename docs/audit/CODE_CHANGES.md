@@ -122,4 +122,7 @@ failures above are preserved verbatim as the historical record.
 | 2026-11-25 | `48d1670`, `2f8cfd9` | Gate 0: Commander independent run + GATE0_VERIFICATION |
 | 2026-11-25 | `25fd953` | Gate 0: registry correction to immutable snapshot |
 | 2026-11-25 | `6844628` | Gate 1d: test-first invariant suite + FIRST_FAILURE_REPORT |
+| 2026-11-25 | `5ac7a2b` | Gate 0: box 10-CPU cgroup correction recorded in GATE0_REPORT |
+| 2026-11-25 | `1a6f3d5` | Gate 1c: deterministic `contest_math` (`pl_win_probs` auto/exact, `pl_win_probs_detail`, `pl_realize`; 62 tests) — engine-core unblocked |
+| 2026-11-25 | `…` | Gate 0 addendum: legacy-work harvest (`docs/audit/harvest/`, 25 files, AUTHOR-REPORTED/PRE-REPAIR; invariant suite rejects legacy fixes 7F/10P/10xfail; calibration failure preserved) |
 | 2026-11-25 | `…` | Gate 1 Phase B engine repairs — **pending** |

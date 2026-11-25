@@ -115,3 +115,20 @@ sha256. Code edits only on the Mac worktree, never on the box.
   sign-off: `docs/audit/GATE0_VERIFICATION.md` (GATE 0 PASS pending audit-runner's GATE0_REPORT.md); registry
   independent re-hash 71/87 exact, 1 stale self-referential row (`system_box.txt`, grew after registration),
   15 post-snapshot Gate-0 outputs, archive inventory separately recorded (not Commander-verified).
+
+- 2026-11-25T14:45+08:00 · Commander · **BOX QUOTA CORRECTION + FREEZE + LEGACY HARVEST.** (i) Lead verified the box is
+  a **10-CPU cgroup** (`/sys/fs/cgroup/cpu.max = 1000000 100000`), not 80; my 56/80-worker allocation is withdrawn.
+  All lanes messaged: box CPU work **frozen** until the legacy 1080-sim run (`/root/work/modelrev`) finishes, then
+  total ≤8 workers globally / ≤4 per lane, nice -n 10, BLAS threads=1; directory claims relayed
+  (`gate0`,`qa`,`core`,`tut`,`venv-declared` ours; `modelrev`,`gpu` legacy read-only). audit-runner recorded the
+  correction in `GATE0_REPORT.md` (`5ac7a2b`) without touching the verified registry. No Gate-0 number affected
+  (canonical box run = 8 workers; 56-worker = invariance check only). (ii) Legacy work **harvested read-only** into
+  `docs/audit/harvest/` (25 files, `HARVEST_MANIFEST.csv` with sha256): `model-revision` branch `d20ba6e` (engine
+  fixes 3A–3C + calibration sweep) and `gpu-rtx3080ti` branch `9f7dfa9` (5 result JSONs byte-identical to box).
+  Labels: **AUTHOR-REPORTED / PRE-REPAIR, NOT Gate-1 evidence**. Our invariant suite re-run against the legacy
+  `model-revision` engine (`git archive` + our tests) still fails the same 7 contract rows (7F/10P/10xfail) → none of
+  its code is reusable (`HARVEST.md` diffs 3A/3B/3C vs contract). Preserved negative result: Korean calibration
+  **FAILED** — untuned 420 port 66.27 % participation / 80.77 pp Q5−Q1 / 5.32× spend; best grid point 91.63 % /
+  37.11 pp / 1.59× vs targets 76.5 / 32.1 / 3.4. (iii) contest-math committed **1a6f3d5**: deterministic
+  `pl_win_probs` (exact n≤20, deterministic quadrature above; n=300/seats=36 accuracy ≤0.0029 vs 200k MC, 13.8–49.1
+  ms/call; 62 tests) — engine-core unblocked for Phase B integration. `system_box_venv.txt` still pending install.

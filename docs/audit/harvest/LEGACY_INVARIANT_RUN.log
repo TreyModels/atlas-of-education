@@ -1,0 +1,58 @@
+..Fxxx..xFxF.x.x.FFFF...xxx                                              [100%]
+=============================== warnings summary ===============================
+engine/eduengine/modules/labour.py:170
+tests/test_engine_invariants.py::test_01_zero_elite_prize_yields_zero_positional_effort
+tests/test_engine_invariants.py::test_02_zero_effectiveness_effort_cannot_raise_admission
+tests/test_engine_invariants.py::test_06c_reported_expected_seats_sum_to_seats_eff
+tests/test_engine_invariants.py::test_11a_zero_effort_contest_parameters_are_inert
+tests/test_engine_invariants.py::test_12_parallel_and_task_order_stability
+tests/test_engine_invariants.py::test_d6_policy_invariant_rng_across_policy_arms
+tests/test_engine_invariants.py::test_ac3_cohort_denominators
+  /private/tmp/legacy-modelrev/engine/eduengine/modules/labour.py:170: RuntimeWarning: Mean of empty slice
+    formal_by_cred=list(np.nanmean(fr, 0)), inc_by_cred=list(np.nanmean(ic, 0)),
+
+engine/eduengine/modules/sdg4.py:36: 1 warning
+tests/test_engine_invariants.py: 10 warnings
+  /private/tmp/legacy-modelrev/engine/eduengine/modules/sdg4.py:36: RuntimeWarning: Mean of empty slice.
+    out[f'completion_{nm}'] = float(done[sel].mean())
+
+../../../Users/treymenefee/neon-boot/venv/lib/python3.10/site-packages/numpy/_core/_methods.py:145: 1 warning
+tests/test_engine_invariants.py: 10 warnings
+  /Users/treymenefee/neon-boot/venv/lib/python3.10/site-packages/numpy/_core/_methods.py:145: RuntimeWarning: invalid value encountered in scalar divide
+    ret = ret.dtype.type(ret / rcount)
+
+engine/eduengine/modules/sdg4.py:39: 1 warning
+tests/test_engine_invariants.py: 10 warnings
+  /private/tmp/legacy-modelrev/engine/eduengine/modules/sdg4.py:39: RuntimeWarning: Mean of empty slice.
+    out[f'completion_{nm}_q'] = [float(d[q == j].mean()) for j in range(5)]
+
+engine/eduengine/modules/sdg4.py:40: 1 warning
+tests/test_engine_invariants.py: 10 warnings
+  /private/tmp/legacy-modelrev/engine/eduengine/modules/sdg4.py:40: RuntimeWarning: Mean of empty slice.
+    out[f'parity_wealth_{nm}'] = parity(d[q == 0].mean(), d[q == 4].mean())
+
+engine/eduengine/modules/sdg4.py:41: 1 warning
+tests/test_engine_invariants.py: 10 warnings
+  /private/tmp/legacy-modelrev/engine/eduengine/modules/sdg4.py:41: RuntimeWarning: Mean of empty slice.
+    out[f'parity_location_{nm}'] = parity(d[~u].mean(), d[u].mean())
+
+../../../Users/treymenefee/neon-boot/venv/lib/python3.10/site-packages/numpy/_core/fromnumeric.py:3860: 1 warning
+tests/test_engine_invariants.py: 10 warnings
+  /Users/treymenefee/neon-boot/venv/lib/python3.10/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+    return _methods._mean(a, axis=axis, dtype=dtype,
+
+engine/eduengine/modules/sdg4.py:57: 1 warning
+tests/test_engine_invariants.py: 10 warnings
+  /private/tmp/legacy-modelrev/engine/eduengine/modules/sdg4.py:57: RuntimeWarning: Mean of empty slice.
+    out['mean_years'] = float(X['g'][sel].mean())
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED tests/test_engine_invariants.py::test_03_universal_seat_has_no_positional_marginal_return
+FAILED tests/test_engine_invariants.py::test_07_nonselective_gate_creates_no_elite_wage_prize
+FAILED tests/test_engine_invariants.py::test_08b_g9_declared_elite_prize_is_persisted
+FAILED tests/test_engine_invariants.py::test_d2_expected_probability_matches_exact_pl_reference
+FAILED tests/test_engine_invariants.py::test_d3_seat_share_is_of_applicants
+FAILED tests/test_engine_invariants.py::test_d6_policy_invariant_rng_across_policy_arms
+FAILED tests/test_engine_invariants.py::test_d7_gate_prize_is_paid_as_declared
+7 failed, 10 passed, 10 xfailed, 85 warnings in 5.19s
