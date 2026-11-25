@@ -197,6 +197,25 @@ Reading:
 ABC estimates were **−0.8241** (7-param; error 0.0703) and **−0.6682** (6-param; error 0.0856) — both
 off the exact value, consistent with the audit's P0-02 finding.
 
+### 5.5 Seed robustness — three independent seed bands
+
+The whole 500-population experiment was repeated under two further independent seeds (box, 2 workers
+each; consumer-tracked). Results are stable to within Monte-Carlo noise:
+
+| statistic | band 1 (seed …125) | band 2 (seed …126) | band 3 (seed …127) |
+|---|---|---|---|
+| crossed Jacobian rank (all 400 crossed populations) | 5/5 | 5/5 | 5/5 |
+| legacy degenerate rank | 3/3 | 3/3 | 3/3 |
+| RMSE n400-A (b0, income, gap, ΔG12, urban) | 0.040 / 0.076 / 0.100 / 0.126 / 0.060 | 0.040 / 0.071 / 0.098 / 0.112 / 0.056 | 0.037 / 0.074 / 0.101 / 0.111 / 0.061 |
+| RMSE n400-B | 0.043 / 0.110 / 0.100 / 0.071 / 0.078 | 0.037 / 0.104 / 0.105 / 0.067 / 0.079 | 0.041 / 0.109 / 0.102 / 0.080 / 0.081 |
+| legacy RMSE (b_income / b_school_gap) | 0.641 / 0.581 | 0.642 / 0.580 | 0.642 / 0.583 |
+| mean accepted draws (n400-A) | 28.0 | 27.3 | 27.3 |
+
+Full-draw parquets for bands 2–3 stay box-side (`/root/work/qa/band{2,3}_out`, sha256 manifests in
+`results/audit/dgp_band{2,3}_sha256.txt`); band-1 full draws are committed. The three bands use
+independent populations and independent prior draws, so the rank/recovery statements are
+seed-independent, not a lucky-draw artefact.
+
 ## 6. What the degenerate design cost (old vs new)
 
 | property | OLD degenerate design | CORRECTED design |

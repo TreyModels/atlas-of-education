@@ -1,0 +1,722 @@
+{
+  "p0": "P0-03 corrected synthetic DGP + 100-population parameter recovery",
+  "date_utc": "2026-11-25T07:36:46Z",
+  "runtime_sec": 694.01,
+  "workers": 2,
+  "n_pop_per_config": 100,
+  "n_draws": 20000,
+  "seed": 20261126,
+  "params": [
+    "b0_eff",
+    "b_income",
+    "b_school_gap",
+    "delta_g12",
+    "urban_demand"
+  ],
+  "prior": [
+    [
+      -1.0,
+      2.5
+    ],
+    [
+      0.0,
+      2.0
+    ],
+    [
+      0.0,
+      2.5
+    ],
+    [
+      0.0,
+      2.5
+    ],
+    [
+      -0.5,
+      1.5
+    ]
+  ],
+  "truths": {
+    "A": [
+      0.3,
+      0.55,
+      0.7,
+      1.1,
+      0.35
+    ],
+    "B": [
+      -0.2,
+      1.1,
+      0.35,
+      0.6,
+      0.9
+    ]
+  },
+  "delta_analytic": -0.7537718023763804,
+  "delta_note": {
+    "analytic_delta": -0.7537718023763804,
+    "shipped_7param_delta": -0.8241,
+    "shipped_6param_delta": -0.6682,
+    "shipped_7param_error": 0.07032819762361964,
+    "shipped_6param_error": 0.0855718023763804
+  },
+  "design_assumptions": {
+    "n_schools": 32,
+    "rho_inc_qual": 0.5,
+    "school_quality_sd": 1.0,
+    "within_school_share": 0.55,
+    "school_gap_sd": 0.45,
+    "school_gap_idio_sd": 0.25,
+    "ability_sd": 1.0
+  },
+  "benchmark_moments": {
+    "participation": 0.73,
+    "g9": 0.67,
+    "g12": 0.85,
+    "urban_gap": 0.14,
+    "own_share": 0.68
+  },
+  "configs": [
+    {
+      "id": "NEW-crossed-n100-truthA",
+      "kind": "crossed",
+      "truth": "A",
+      "n_per_cell": 100,
+      "moment_set": "crossed",
+      "n_pop": 100
+    },
+    {
+      "id": "NEW-crossed-n400-truthA",
+      "kind": "crossed",
+      "truth": "A",
+      "n_per_cell": 400,
+      "moment_set": "crossed",
+      "n_pop": 100
+    },
+    {
+      "id": "NEW-crossed-n1000-truthA",
+      "kind": "crossed",
+      "truth": "A",
+      "n_per_cell": 1000,
+      "moment_set": "crossed",
+      "n_pop": 100
+    },
+    {
+      "id": "NEW-crossed-n400-truthB",
+      "kind": "crossed",
+      "truth": "B",
+      "n_per_cell": 400,
+      "moment_set": "crossed",
+      "n_pop": 100
+    },
+    {
+      "id": "OLD-degenerate-truthA",
+      "kind": "legacy",
+      "truth": "A",
+      "n_per_cell": 0,
+      "moment_set": "legacy",
+      "n_pop": 100
+    }
+  ],
+  "summary": {
+    "NEW-crossed-n100-truthA": {
+      "n_pop": 100,
+      "mean_n_accepted": 945.59,
+      "mean_accept_rate": 0.04727950000000001,
+      "jac_rank_mean": 5.0,
+      "jac_rank_min": 5,
+      "jac_rank_max": 5,
+      "g12_urban_cell_mean": 100.0,
+      "n_schools_mean": 32.0,
+      "params": {
+        "b0_eff": {
+          "truth_A": 0.3,
+          "bias_mean": 0.08592513265478739,
+          "rmse": 0.09050326460411709,
+          "rmse_rel": 0.3016775486803903,
+          "coverage95": 1.0,
+          "post_sd_mean": 0.34717951682457054
+        },
+        "b_income": {
+          "truth_A": 0.55,
+          "bias_mean": 0.21975123018424805,
+          "rmse": 0.22113510586831545,
+          "rmse_rel": 0.4020638288514826,
+          "coverage95": 1.0,
+          "post_sd_mean": 0.3415899685207038
+        },
+        "b_school_gap": {
+          "truth_A": 0.7,
+          "bias_mean": 0.36236657034715875,
+          "rmse": 0.3652616613634457,
+          "rmse_rel": 0.521802373376351,
+          "coverage95": 1.0,
+          "post_sd_mean": 0.5876462882830129
+        },
+        "delta_g12": {
+          "truth_A": 1.1,
+          "bias_mean": 0.3209036280572268,
+          "rmse": 0.32264835269887676,
+          "rmse_rel": 0.2933166842717061,
+          "coverage95": 1.0,
+          "post_sd_mean": 0.5593556365380956
+        },
+        "urban_demand": {
+          "truth_A": 0.35,
+          "bias_mean": 0.12784717853476624,
+          "rmse": 0.13222901750991273,
+          "rmse_rel": 0.377797192885465,
+          "coverage95": 1.0,
+          "post_sd_mean": 0.47801057932573343
+        }
+      }
+    },
+    "NEW-crossed-n400-truthA": {
+      "n_pop": 100,
+      "mean_n_accepted": 27.28,
+      "mean_accept_rate": 0.001364,
+      "jac_rank_mean": 5.0,
+      "jac_rank_min": 5,
+      "jac_rank_max": 5,
+      "g12_urban_cell_mean": 400.0,
+      "n_schools_mean": 32.0,
+      "params": {
+        "b0_eff": {
+          "truth_A": 0.3,
+          "bias_mean": 0.02071132905698959,
+          "rmse": 0.04018821370912616,
+          "rmse_rel": 0.13396071236375387,
+          "coverage95": 1.0,
+          "post_sd_mean": 0.16878979482786377
+        },
+        "b_income": {
+          "truth_A": 0.55,
+          "bias_mean": 0.06111468365762331,
+          "rmse": 0.0706145481837558,
+          "rmse_rel": 0.1283900876068287,
+          "coverage95": 1.0,
+          "post_sd_mean": 0.16662983661310712
+        },
+        "b_school_gap": {
+          "truth_A": 0.7,
+          "bias_mean": 0.07767503943089474,
+          "rmse": 0.09814983587754318,
+          "rmse_rel": 0.14021405125363312,
+          "coverage95": 1.0,
+          "post_sd_mean": 0.29168906277220485
+        },
+        "delta_g12": {
+          "truth_A": 1.1,
+          "bias_mean": 0.0967261791508325,
+          "rmse": 0.11157325966743827,
+          "rmse_rel": 0.10143023606130751,
+          "coverage95": 1.0,
+          "post_sd_mean": 0.27868020893932943
+        },
+        "urban_demand": {
+          "truth_A": 0.35,
+          "bias_mean": 0.028438353508840785,
+          "rmse": 0.056096925084991506,
+          "rmse_rel": 0.16027692881426145,
+          "coverage95": 1.0,
+          "post_sd_mean": 0.24354608428135915
+        }
+      }
+    },
+    "NEW-crossed-n1000-truthA": {
+      "n_pop": 100,
+      "mean_n_accepted": 16.4,
+      "mean_accept_rate": 0.0008200000000000001,
+      "jac_rank_mean": 5.0,
+      "jac_rank_min": 5,
+      "jac_rank_max": 5,
+      "g12_urban_cell_mean": 1000.0,
+      "n_schools_mean": 32.0,
+      "params": {
+        "b0_eff": {
+          "truth_A": 0.3,
+          "bias_mean": 0.016165790246175572,
+          "rmse": 0.04361825262670029,
+          "rmse_rel": 0.14539417542233432,
+          "coverage95": 1.0,
+          "post_sd_mean": 0.14431573392065944
+        },
+        "b_income": {
+          "truth_A": 0.55,
+          "bias_mean": 0.05058132685505981,
+          "rmse": 0.06582174938480403,
+          "rmse_rel": 0.11967590797237096,
+          "coverage95": 1.0,
+          "post_sd_mean": 0.1444338618892263
+        },
+        "b_school_gap": {
+          "truth_A": 0.7,
+          "bias_mean": 0.07984471720807479,
+          "rmse": 0.10259651740956352,
+          "rmse_rel": 0.1465664534422336,
+          "coverage95": 1.0,
+          "post_sd_mean": 0.2690070466417971
+        },
+        "delta_g12": {
+          "truth_A": 1.1,
+          "bias_mean": 0.09933272758465352,
+          "rmse": 0.12267564652579169,
+          "rmse_rel": 0.11152331502344698,
+          "coverage95": 0.99,
+          "post_sd_mean": 0.2602750830912708
+        },
+        "urban_demand": {
+          "truth_A": 0.35,
+          "bias_mean": 0.019332601208118985,
+          "rmse": 0.05858122890343259,
+          "rmse_rel": 0.16737493972409312,
+          "coverage95": 1.0,
+          "post_sd_mean": 0.21699325035010086
+        }
+      }
+    },
+    "NEW-crossed-n400-truthB": {
+      "n_pop": 100,
+      "mean_n_accepted": 22.97,
+      "mean_accept_rate": 0.0011485,
+      "jac_rank_mean": 5.0,
+      "jac_rank_min": 5,
+      "jac_rank_max": 5,
+      "g12_urban_cell_mean": 400.0,
+      "n_schools_mean": 32.0,
+      "params": {
+        "b0_eff": {
+          "truth_A": -0.2,
+          "bias_mean": 0.00461543547867384,
+          "rmse": 0.03656342611721022,
+          "rmse_rel": 0.18281713058605106,
+          "coverage95": 1.0,
+          "post_sd_mean": 0.1764484754926087
+        },
+        "b_income": {
+          "truth_A": 1.1,
+          "bias_mean": 0.09301035831772658,
+          "rmse": 0.10367606839221592,
+          "rmse_rel": 0.09425097126565084,
+          "coverage95": 1.0,
+          "post_sd_mean": 0.18923809978406736
+        },
+        "b_school_gap": {
+          "truth_A": 0.35,
+          "bias_mean": 0.0851557275699763,
+          "rmse": 0.10476475895803776,
+          "rmse_rel": 0.29932788273725075,
+          "coverage95": 1.0,
+          "post_sd_mean": 0.2472727395179435
+        },
+        "delta_g12": {
+          "truth_A": 0.6,
+          "bias_mean": 0.04600551938530721,
+          "rmse": 0.06727961355518332,
+          "rmse_rel": 0.11213268925863887,
+          "coverage95": 1.0,
+          "post_sd_mean": 0.2520592212204429
+        },
+        "urban_demand": {
+          "truth_A": 0.9,
+          "bias_mean": 0.058263580834290105,
+          "rmse": 0.07873821655842995,
+          "rmse_rel": 0.0874869072871444,
+          "coverage95": 1.0,
+          "post_sd_mean": 0.24359128429740046
+        }
+      }
+    },
+    "OLD-degenerate-truthA": {
+      "n_pop": 100,
+      "mean_n_accepted": 793.69,
+      "mean_accept_rate": 0.0396845,
+      "jac_rank_mean": 3.0,
+      "jac_rank_min": 3,
+      "jac_rank_max": 3,
+      "g12_urban_cell_mean": 0.0,
+      "n_schools_mean": 0.0,
+      "params": {
+        "b0_eff": {
+          "truth_A": 0.3,
+          "bias_mean": 0.007606905997901145,
+          "rmse": 0.04348241807633714,
+          "rmse_rel": 0.14494139358779048,
+          "coverage95": 1.0,
+          "post_sd_mean": 0.48920362699025866
+        },
+        "b_income": {
+          "truth_A": 0.55,
+          "bias_mean": 0.6416760442794726,
+          "rmse": 0.6420468619768376,
+          "rmse_rel": 1.1673579308669773,
+          "coverage95": 1.0,
+          "post_sd_mean": 0.5661863920072505
+        },
+        "b_school_gap": {
+          "truth_A": 0.7,
+          "bias_mean": 0.5795381113453033,
+          "rmse": 0.580143118771479,
+          "rmse_rel": 0.8287758839592557,
+          "coverage95": 1.0,
+          "post_sd_mean": 0.7233875675315052
+        },
+        "delta_g12": {
+          "truth_A": 1.1,
+          "bias_mean": 0.27722575983951014,
+          "rmse": 0.2815368495922553,
+          "rmse_rel": 0.2559425905384139,
+          "coverage95": 1.0,
+          "post_sd_mean": 0.5385171725849711
+        },
+        "urban_demand": {
+          "truth_A": 0.35,
+          "bias_mean": 0.08476230429775804,
+          "rmse": 0.10347407076335789,
+          "rmse_rel": 0.29564020218102255,
+          "coverage95": 1.0,
+          "post_sd_mean": 0.2968637237036523
+        }
+      }
+    }
+  },
+  "old_vs_new": {
+    "NEW-crossed-n100-truthA": {
+      "moments": {
+        "part_g9_rural": {
+          "observed": 0.6525039654840082,
+          "target": 0.6503186833430078
+        },
+        "part_g9_urban": {
+          "observed": 0.7204373726871967,
+          "target": 0.7196429550419762
+        },
+        "part_g12_rural": {
+          "observed": 0.8378287726828308,
+          "target": 0.8382815055744927
+        },
+        "part_g12_urban": {
+          "observed": 0.8781214885771136,
+          "target": 0.878539366256718
+        },
+        "part_inc_q1": {
+          "observed": 0.6534869043043713,
+          "target": 0.6530974802912052
+        },
+        "part_inc_q2": {
+          "observed": 0.753551491175831,
+          "target": 0.7525949838142381
+        },
+        "part_inc_q3": {
+          "observed": 0.8096428830186152,
+          "target": 0.8093041677626108
+        },
+        "part_inc_q4": {
+          "observed": 0.8722103209323321,
+          "target": 0.8717858783481413
+        },
+        "part_qual_t1": {
+          "observed": 0.7254464493659288,
+          "target": 0.7238624572752868
+        },
+        "part_qual_t2": {
+          "observed": 0.778004719184111,
+          "target": 0.7773095820104414
+        },
+        "part_qual_t3": {
+          "observed": 0.8179907476117562,
+          "target": 0.8181367649586551
+        },
+        "part_gap_q1": {
+          "observed": 0.6980029801805141,
+          "target": 0.6962869371539131
+        },
+        "part_gap_q2": {
+          "observed": 0.7589334835682141,
+          "target": 0.7586458730564317
+        },
+        "part_gap_q3": {
+          "observed": 0.7935702279121105,
+          "target": 0.7941976890282182
+        },
+        "part_gap_q4": {
+          "observed": 0.8383849077703108,
+          "target": 0.8376520109776322
+        },
+        "own_share": {
+          "observed": 0.6800000000000002,
+          "target": 0.6800000000000002
+        }
+      },
+      "g12_urban_cell_mean": 100.0,
+      "n_schools_mean": 32.0,
+      "school_icc_income_mean": 0.24502605773559338,
+      "jac_rank_mean": 5.0,
+      "jac_rank_min": 5,
+      "jac_rank_max": 5,
+      "n_moments": 16
+    },
+    "NEW-crossed-n400-truthA": {
+      "moments": {
+        "part_g9_rural": {
+          "observed": 0.6487783925852305,
+          "target": 0.6502834003523487
+        },
+        "part_g9_urban": {
+          "observed": 0.720881985026568,
+          "target": 0.7193786619305375
+        },
+        "part_g12_rural": {
+          "observed": 0.8378876828542335,
+          "target": 0.8403153731711012
+        },
+        "part_g12_urban": {
+          "observed": 0.8791629061320917,
+          "target": 0.8774269764377689
+        },
+        "part_inc_q1": {
+          "observed": 0.653230427166246,
+          "target": 0.6530694258545198
+        },
+        "part_inc_q2": {
+          "observed": 0.7535896478673867,
+          "target": 0.7528240542241714
+        },
+        "part_inc_q3": {
+          "observed": 0.8091540393892436,
+          "target": 0.8093649861052454
+        },
+        "part_inc_q4": {
+          "observed": 0.8707368521752475,
+          "target": 0.87214594570782
+        },
+        "part_qual_t1": {
+          "observed": 0.7260369468945078,
+          "target": 0.7233712028312611
+        },
+        "part_qual_t2": {
+          "observed": 0.7768629787841163,
+          "target": 0.7774345068578757
+        },
+        "part_qual_t3": {
+          "observed": 0.8161788550320126,
+          "target": 0.8190372488553542
+        },
+        "part_gap_q1": {
+          "observed": 0.6946962970028453,
+          "target": 0.6939617545381027
+        },
+        "part_gap_q2": {
+          "observed": 0.7576042370428915,
+          "target": 0.7560680905986367
+        },
+        "part_gap_q3": {
+          "observed": 0.7943118886388831,
+          "target": 0.7942676497484874
+        },
+        "part_gap_q4": {
+          "observed": 0.8400985439135041,
+          "target": 0.8431069170065296
+        },
+        "own_share": {
+          "observed": 0.6800000000000002,
+          "target": 0.6800000000000002
+        }
+      },
+      "g12_urban_cell_mean": 400.0,
+      "n_schools_mean": 32.0,
+      "school_icc_income_mean": 0.24624501494178078,
+      "jac_rank_mean": 5.0,
+      "jac_rank_min": 5,
+      "jac_rank_max": 5,
+      "n_moments": 16
+    },
+    "NEW-crossed-n1000-truthA": {
+      "moments": {
+        "part_g9_rural": {
+          "observed": 0.6485588094499457,
+          "target": 0.6492543447413681
+        },
+        "part_g9_urban": {
+          "observed": 0.7180944810740354,
+          "target": 0.7203193170620605
+        },
+        "part_g12_rural": {
+          "observed": 0.835792843468083,
+          "target": 0.838679614332581
+        },
+        "part_g12_urban": {
+          "observed": 0.8771414019924682,
+          "target": 0.8790021395615122
+        },
+        "part_inc_q1": {
+          "observed": 0.6511367059693508,
+          "target": 0.6531809293930627
+        },
+        "part_inc_q2": {
+          "observed": 0.7512490711865858,
+          "target": 0.752573309230917
+        },
+        "part_inc_q3": {
+          "observed": 0.8074799061040763,
+          "target": 0.8093294648041001
+        },
+        "part_inc_q4": {
+          "observed": 0.8697218527245192,
+          "target": 0.8721717122694425
+        },
+        "part_qual_t1": {
+          "observed": 0.7224481844117447,
+          "target": 0.7246539644758488
+        },
+        "part_qual_t2": {
+          "observed": 0.7749311641635225,
+          "target": 0.7756344142664111
+        },
+        "part_qual_t3": {
+          "observed": 0.8165075565541694,
+          "target": 0.8194871159415318
+        },
+        "part_gap_q1": {
+          "observed": 0.6953448486707979,
+          "target": 0.6943098425104892
+        },
+        "part_gap_q2": {
+          "observed": 0.7549054567821268,
+          "target": 0.7575227727545993
+        },
+        "part_gap_q3": {
+          "observed": 0.7918208584722284,
+          "target": 0.7960093672755005
+        },
+        "part_gap_q4": {
+          "observed": 0.8375163720593792,
+          "target": 0.8394134331569328
+        },
+        "own_share": {
+          "observed": 0.6800000000000002,
+          "target": 0.6800000000000002
+        }
+      },
+      "g12_urban_cell_mean": 1000.0,
+      "n_schools_mean": 32.0,
+      "school_icc_income_mean": 0.2503217477382854,
+      "jac_rank_mean": 5.0,
+      "jac_rank_min": 5,
+      "jac_rank_max": 5,
+      "n_moments": 16
+    },
+    "NEW-crossed-n400-truthB": {
+      "moments": {
+        "part_g9_rural": {
+          "observed": 0.5310189359190916,
+          "target": 0.5314532734180408
+        },
+        "part_g9_urban": {
+          "observed": 0.7061655510905638,
+          "target": 0.7072754606670469
+        },
+        "part_g12_rural": {
+          "observed": 0.6483679379191938,
+          "target": 0.6465490053264956
+        },
+        "part_g12_urban": {
+          "observed": 0.7974602244914492,
+          "target": 0.7982568243840731
+        },
+        "part_inc_q1": {
+          "observed": 0.39807990817912847,
+          "target": 0.3989844176121408
+        },
+        "part_inc_q2": {
+          "observed": 0.6279240177142316,
+          "target": 0.6274208952277958
+        },
+        "part_inc_q3": {
+          "observed": 0.765928384565916,
+          "target": 0.7662577223758426
+        },
+        "part_inc_q4": {
+          "observed": 0.8910803389610226,
+          "target": 0.8908715285798775
+        },
+        "part_qual_t1": {
+          "observed": 0.5626260638566899,
+          "target": 0.5660887471775545
+        },
+        "part_qual_t2": {
+          "observed": 0.6864873556989372,
+          "target": 0.6792651978731392
+        },
+        "part_qual_t3": {
+          "observed": 0.7723853580250488,
+          "target": 0.7769383114807619
+        },
+        "part_gap_q1": {
+          "observed": 0.6260641803874092,
+          "target": 0.6318720847446083
+        },
+        "part_gap_q2": {
+          "observed": 0.6634040622845212,
+          "target": 0.658427924279097
+        },
+        "part_gap_q3": {
+          "observed": 0.68241434887928,
+          "target": 0.6806343185929888
+        },
+        "part_gap_q4": {
+          "observed": 0.7111300578690881,
+          "target": 0.7126002361789625
+        },
+        "own_share": {
+          "observed": 0.6800000000000002,
+          "target": 0.6800000000000002
+        }
+      },
+      "g12_urban_cell_mean": 400.0,
+      "n_schools_mean": 32.0,
+      "school_icc_income_mean": 0.2484728384105873,
+      "jac_rank_mean": 5.0,
+      "jac_rank_min": 5,
+      "jac_rank_max": 5,
+      "n_moments": 16
+    },
+    "OLD-degenerate-truthA": {
+      "moments": {
+        "part_overall": {
+          "observed": 0.7964842614885025,
+          "target": 0.7721973007792127
+        },
+        "part_g9": {
+          "observed": 0.7538237032280318,
+          "target": 0.685729858444758
+        },
+        "part_g12": {
+          "observed": 0.8818053780094444,
+          "target": 0.858664743113668
+        },
+        "urban_gap": {
+          "observed": -0.019198690857369874,
+          "target": -0.1266485796661704
+        },
+        "own_share": {
+          "observed": 0.6800000000000002,
+          "target": 0.6800000000000002
+        }
+      },
+      "g12_urban_cell_mean": 0.0,
+      "n_schools_mean": 0.0,
+      "school_icc_income_mean": NaN,
+      "jac_rank_mean": 3.0,
+      "jac_rank_min": 3,
+      "jac_rank_max": 3,
+      "n_moments": 5
+    }
+  },
+  "artifacts": [
+    "dgp_recovery_samples.parquet",
+    "dgp_accepted_draws.parquet",
+    "dgp_posterior_predictive.parquet",
+    "dgp_rank_diagnostics.parquet",
+    "dgp_moment_recovery.parquet"
+  ]
+}
