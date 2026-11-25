@@ -837,3 +837,18 @@ measured, and a pilot↔X-29 split change can be made if Lead wants it faster (t
   (driver 44152 + 44155/44156) → **ETA ~00:00–00:10**. On pilot completion 8 CPUs free; X-29 has per-cell checkpoints and
   could be **resumed at 8–10 workers** (ETA ~30–40 min) if Lead approves.
 - Cgroup 10 s delta 9.995/10 = **100 %**; 10 workers exactly; Luna reserve still suspended per operator override.
+
+### 13.32 MILESTONE 22:58–23:01 — Pilot-0 COMPLETE (128/128) + payload copied/verified; X-29 resumed at 10 workers
+
+**Paper C Pilot-0 COMPLETE**: **128/128 rows** (16 cells × 8 seeds; 4 regimes × q0 2 × pf 2), driver 40058 + 8 workers
+exited cleanly 22:58; wall 21:04:30→22:58 ≈ **1 h 54 min**. Payload
+`/root/work/paperC/results/paperC_pilot0_results.json` (69,286 B) **sha256
+`c6e50bc1e86f8d41a8d8a332e860898445de4ce90f8f9ec7d004e438fa523f9d`**; 16 `ckpt_*.jsonl` + `MANIFEST_SHA256SUMS.txt`
+(all 17 entries verified with `sha256sum -c` → OK). **Copied to `~/neon-boot/qa/incoming/paperC_results/`** on the Mac
+(bundle `paperC_results_bundle.tar.gz` 33,095 B sha256 `ec868a57…a4fb0b`); **qa-verifier notified**.
+
+**X-29 diagnostic resumed at 10 workers from checkpoints** (Lead-approved): driver **46562** + 10 cell workers (46587–46596),
+same `--archs contest --seeds 0-31 --no-sensitivity --out-dir /root/work/gate846/results_diag`, log `diag10w.log`,
+DIAGNOSTIC-ONLY label and separate dir intact. **Resume proven: 473 rows in `ckpt_*` before the restart and 473 after it**
+(no recomputation; completed seeds skipped). cgroup **10.0/10 (100 %)**. 2-worker ETA would have been ~00:05; at 10 workers
+expected **~20–25 min**. 1,280-run design; ~807 rows remaining at restart.
