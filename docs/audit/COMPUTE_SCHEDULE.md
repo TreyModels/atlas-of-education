@@ -828,3 +828,12 @@ Verified 22:20:07:
 - **Cgroup 10 s delta 9.996/10 = 100 %**; 10 workers exactly, cap respected; `loadavg` host-wide noise.
 Pilot ETA re-baselined under contention (report at 88/104/120 rows); X-29 at 2 workers is slow — first-row rate to be
 measured, and a pilot↔X-29 split change can be made if Lead wants it faster (total stays 10).
+
+### 13.31 Progress 22:30 — pilot 98/128 (77 %), X-29 170/1,280; cgroup 100 %
+
+- Pilot: **98/128 rows (77 %)**, rate recovered to **1.54 rows/min** (86→98 in 7.8 min) → **ETA ~22:48–22:55**; 8 workers,
+  single-threaded; 16/16 cell files (8 first-wave complete, second wave 2–5/8 seeds). Payload watch armed.
+- X-29 diagnostic (separate `results_diag/`, DIAGNOSTIC-ONLY): **170/1,280 rows** at 22:30 = **~11.3 rows/min** on 2 workers
+  (driver 44152 + 44155/44156) → **ETA ~00:00–00:10**. On pilot completion 8 CPUs free; X-29 has per-cell checkpoints and
+  could be **resumed at 8–10 workers** (ETA ~30–40 min) if Lead approves.
+- Cgroup 10 s delta 9.995/10 = **100 %**; 10 workers exactly; Luna reserve still suspended per operator override.
