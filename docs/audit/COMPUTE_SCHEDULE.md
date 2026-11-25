@@ -526,3 +526,13 @@ fresh-vintage event study (1–2 CPU-h) and forecast (1–3 CPU-h) and multi-see
 slots; bulge t* small CPU (now WDI-unblocked). GPU lane (`/root/work/gpu2`, 3080 Ti float64 PL prototype) is **separate
 and outside the CPU cgroup**; CPU allocation unchanged until a ≥3× @≤1e-12 prototype result justifies moving the gate
 grid to GPU.
+
+### 13.6 GPU lane — separate, outside the CPU cgroup (16:42 update)
+
+GPU plan changed: **no new port is being written.** The existing CUDA port was recovered —
+`unified_gpu_suite_2026_11_24.zip` → a **CuPy/raw-CUDA-kernel ABM** (`exp1_unified_gpu_abm.py`, Philox RNG, N=250k) with
+exp2/3/4 and its own **PRE_REGISTRATION**. `atlas-commander` will validate/run that suite on the 3080 Ti in a separate
+lane (`/root/work/gpu2`). It is a **sibling model, not the repaired gate engine**, so it does **not** change Paper A/B CPU
+allocation: Paper B stays at **8 workers**, task-13 **1**, control **1** (90 % target). **A GPU job gets box CPU only if the
+Commander explicitly requests it through the scheduler.** The legacy GPU scripts in `/root/work/gpu` remain quarantined
+and must not be touched.
