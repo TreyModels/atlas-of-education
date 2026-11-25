@@ -1,0 +1,6 @@
+Paper C Pilot-0 v3 (EXPLORATORY) — code-authoritative: 4 regimes x q0{1.0,1.2} x p_firm{0.03,0.08} x 8 seeds = 16 cells x 8 = 128 runs; N=1500; base=canonical HK primary gates.
+Engine pin 846c9e0; core sha256 e111397bd8a50f94e82bb77715f236ee3d5c0bf863a23d84afdf1c6c71fa8e71; spec sha256 e5ddef6b4ecd04a0e96f480b43a97f0567bed7654ec032c1779c9e20f6beb755.
+Regime params: market_only {own_ban .95,pay_ratio .55,monitoring .2,pay_gap}; own_open_gap {own_ban 0,pay_ratio .55,monitoring .2,pay_gap}; own_open_incentive {own_ban 0,pay_ratio 1.2,monitoring .2,incentive}; own_open_gap_firm_ban {own_open_gap+firm_ban .9}.
+Binding guard: non-market regimes require withheld>1e-3 and own_share>0.1 (else cell raises); A|P12-equivalent exemption not applicable in pilot.
+Payload paperC_pilot0_results.json sha256 c6e50bc1e86f8d41a8d8a332e860898445de4ce90f8f9ec7d004e438fa523f9d; 128 rows; 16 ckpt_*.jsonl; wall 6860.0 s at 8 workers.
+Label: EXPLORATORY / hypothesis-generating; NOT confirmatory evidence.
