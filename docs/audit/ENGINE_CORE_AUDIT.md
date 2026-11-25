@@ -4,19 +4,18 @@ Scope: `engine/eduengine/core.py` (580 L), `planning.py`, `modules/labour.py`, `
 lane engine-tutoring), the 540 runner `papers/shadow-education-contest/code/run_hk_korea_comparative.py`, and the
 country packs. Read-only audit against the pre-repair tree at commit `7356c97`; no engine file was edited in Phase A.
 
-Reproduction commands (Mac host venv, from `/Users/treymenefee/neon-boot/wt4/auditv2`):
+Reproduction: the Phase-A numbers below were measured with a line-event tracer and synthetic small engines on the
+unmodified `core.py` (the transient probe scripts are not retained: their line anchors are pre-repair). The
+post-repair regression suite is `docs/audit/ENGINE_CHECKS.py`:
 
 ```
-OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 OMP_NUM_THREADS=1 PYTHONPATH="$PWD/engine" \
-  /Users/treymenefee/neon-boot/venv/bin/python docs/audit/ENGINE_core_probe.py       # population/gate inventory
-OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 OMP_NUM_THREADS=1 PYTHONPATH="$PWD/engine" \
-  /Users/treymenefee/neon-boot/venv/bin/python docs/audit/ENGINE_gate_trace.py      # expected-vs-realised, seat shares
-OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 OMP_NUM_THREADS=1 PYTHONPATH="$PWD/engine" \
-  /Users/treymenefee/neon-boot/venv/bin/python docs/audit/ENGINE_synthetic_gate_checks.py  # structural defects
+cd /Users/treymenefee/neon-boot/wt4/auditv2
+OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 OMP_NUM_THREADS=1 PYTHONPATH="$PWD/engine:$PWD/papers/shadow-education-contest/code" \
+  /Users/treymenefee/neon-boot/venv/bin/python docs/audit/ENGINE_CHECKS.py --runner
 ```
 
-The checks drive the real 540 configs through `build_arms()` and a line-event tracer on the unmodified `core.py`.
-Post-repair regression checks live in `docs/audit/ENGINE_CHECKS.py` (added in Phase B).
+It drives the real 540 configs through `build_arms()`, small deterministic engines, and the unmodified 540 runner's
+`_run_single`; it asserts the contract invariants this lane owns (13 checks, all green on 2026-11-25).
 Evidence taxonomy: every item below is **REPRODUCED SIMULATION** (measured on this tree), not empirical.
 
 ---
@@ -211,3 +210,165 @@ ignoring the realised `voc_quality` learning wedge (documented approximation, af
 algorithm required by contract amendment A5 — the current untracked draft falls back to *unseeded* MC above n=12;
 engine-core will enforce the seat-sum invariant and flag this dependency to the Commander if the module is not
 deterministic when integration starts.
+
+
+---
+
+# PHASE B — implementation (engine-core), 2026-11-25
+
+Implemented against `docs/audit/ENGINE_INTERFACE_CONTRACT.md` v1.0 @ `37e78fb` (plus amendments A1–A6).
+Files: `engine/eduengine/core.py` (580 → 1204 L), `engine/eduengine/rng.py` (new, 232 L),
+`engine/eduengine/modules/labour.py` (206 → 243 L), `engine/eduengine/planning.py` (113 → 175 L),
+`docs/audit/ENGINE_CHECKS.py` (new regression suite). Nothing outside this lane's scope was edited.
+
+## B1. Gate schema (§1; D8/D4.1)
+
+* `normalise_gates()` (`core.py:117`) validates one gate per level; canonical kinds `open|fixed_bar|quota|contest`;
+  `'bar'` → `fixed_bar` alias with one `DeprecationWarning` per Engine; **missing/unknown kind raises `ValueError`**
+  (never falls through to quota); `share∈(0,1]`, `share_of∈{cohort,applicants}`, `fail∈{track,stop}` normalised,
+  `admit={share,cut0,academic_only,kind∈{quota,open},share_of}`, `spec` may not carry numeric fields.
+* `_install_gates()` (`core.py:298`) runs at construction **and** after every calendar `events` gate replacement
+  (`apply_calendar`, `core.py:807`), carrying `cut`/`cut_adm`/`lam_contest` over for unchanged indices.
+* Tracking-gate validation: requires `contest`, `fail='track'`, `track_prize` keys exactly
+  `{quality_mult,earnings_logw,g12_track_bonus}` (numeric, at least one non-neutral), forbids `elite_logw`/`set_voc`,
+  at most one tracking gate. `GATE_SPECS = {'KR-SINGLE':…, 'KR-TRACKED':…}` (`core.py:93`) exactly per contract §3
+  (G9 open vs selective tracking gate; G12 `track_bonus=1.25`); the three magnitudes are the pre-registered
+  structural placeholders of contract §3, not estimates.
+
+## B2. Persistent state (§2; D1)
+
+`add_cohort` (`core.py:538`) allocates `k['pid'] = t*N + arange(N)` (immutable), `k['track']` int8 −1/0/1,
+`k['elite']` bool, `k['elite_prize']` float64 (max won effective log prize), `k['prep_stock']` (N,nlev) float64.
+Compaction on exit is automatic (`core.py:1057-1064`). `contest_e` survives only as the current-year effort flow
+(reset in `step`, `core.py:882`) and feeds no probability path.
+
+## B3. Track consequence (§3; D1)
+
+`values(t, L=None, idx=None, track_state=None)` (`core.py:568`) / `_value_recursion` (`core.py:577`) implement the
+dual-state recursion: for levels above the tracking gate the value tables are computed for track=1 and track=0
+(`quality_mult` on projected learning, track-conditional credential values `kappa*(B+earnings_logw)`, `track_bonus`
+on own contest weight at later gates); at the tracking gate pass → track=1 continuation, fail → track=0 continuation.
+`gate_prize_dv(m, idx)` (`core.py:708`) returns `delta**yrs_left * (U_track1 − U_track0)` from that same recursion
+for tracking gates (only prize tutoring may price) and `kappa*effective_elite_logw` for elite gates. Realised
+channels: learning line multiplies quality by `quality_mult` for `track==1` (`core.py:899-901`), later contest weight
+multiplies by `track_bonus` (`_contest_w`, `core.py:394-412`), labour applies `exp(earnings_logw)` to track=1 leavers
+(`labour.py:139-148`).
+
+## B4. Plackett–Luce probabilities (§1.3; D2)
+
+The `1−exp(−λx^r)` household probability and the λ re-solve are deleted (`self.lam_contest` remains only as an
+initialised, unused compatibility attribute). `pl_win_probs`/`pl_realize` are imported from
+`eduengine.contest_math` (`core.py:22`): expected P in `_gate_expected_P` (`core.py:486`) and in the
+`contest_expected_probs` API (`core.py:464`); realised admission uses `pl_realize` with event-keyed uniforms
+`(year, f'contest_pl_{m}', pid)` (`core.py:944-949`). `_pl_probs` (`core.py:437`) enforces
+`|ΣP − seats_eff| ≤ 1e-3` and renormalises, raising otherwise (contract §1.3). No private Gumbel/argsort PL code
+remains in `core.py`/`labour.py` (checked by `ENGINE_CHECKS.py`).
+**Performance engineering:** the sitting-cohort pool (`_contest_pool_mask`, `core.py:344`) plus a cached monotone
+probability map (`_gate_expected_P`, `core.py:486`) reduce a 540-config run from 76 s to 4.4 s (KR) / 2.4 s (HK) on
+the host, while every expected probability still comes from `pl_win_probs` on the official candidate pool.
+
+## B5. Seat accounting and diagnostics (§1.2/§1.4; D3)
+
+Seats are `max(round(share·denominator),1)` with `share_of='cohort'` (legacy `N`) or `'applicants'` (candidate count);
+quota cutoffs are now set by *rank* (exact seat count, no zero-seat all-pass, no double exam noise in admission);
+the realised admission quota ranks on the exam score without an extra noise draw. Every year records
+`contest_candidates/seats/expected_seats/admitted/applicant_seat_ratio/admit_rate/expected_p_mean/expected_p_by_q/
+realized_by_q/prep_stock_mean_by_q` per gate (`core.py:1069-1104`); `contest_summary()` (`core.py:1105`) is merged
+additively into `Engine.run()` output. `planning.gate_accounting(E)` (`planning.py:122`) reads the series into the
+per-gate applicant/seat/admission table the review asked for.
+
+## B6. Event-keyed randomness (§7; D6)
+
+New `engine/eduengine/rng.py`: `EventRNG` = splitmix64 hash of `(seed, replicate, year, shock_type, pid, tap)`,
+vectorised over pid, subset/order independent; `SHOCK_TYPES` registry append-only; gate-indexed families
+(`gate_exam_{m}`, `contest_pl_{m}`, `admit_{m}`) stable. `E.rng` remains an `EventRNG`; unmigrated modules keep a
+private legacy generator exposed as `random/standard_normal/legacy_logistic/permutation/choice` (residual
+path-dependence documented). All core.py + labour.py exogenous draws listed in contract §7.2 are event-keyed.
+Measured: identical pids and identical cohort covariates across arms; Baseline vs CF1a same-seed exogenous z now
+matches in **all** cohorts (phase A: 9/20).
+
+## B7. Labour (§8; D7)
+
+Prizes are applied inside `QueueLabour.labour` **after** tier assignment/queueing and **last**, multiplicatively:
+`inc *= exp(elite_prize) * (exp(track_earnings_logw) if track==1 else 1)` (`labour.py:139-148`); the same multiplier
+covers queuers (their prize/track are carried in the queue dict), so beliefs, the earnings stock and the tax base are
+consistent. `elite/prize/track` no longer touch wage parameters or hiring signals. Audit series
+`elite_share, elite_prize_mean, track_share, track_prize_mean, elite_inc_gap_raw/direct/composition` are recorded
+per year (`labour.py:183`). Measured decomposition (KR-TRACKED, N=40/T=22): raw elite log-income gap 2.32,
+direct multiplier component 0.29, composition/selection 2.04 — i.e. the raw gap is mostly selection, as contract §8
+warns. Wage-compression invariance is asserted exactly: `inc_after == inc_base * multiplier` to 1e-12, the
+multiplier equals `exp(elite_prize)·[exp(0.15) if track=1]`, and non-track incomes are untouched by the track premium.
+
+## B8. Compatibility (§9)
+
+`Engine(modules, **params)` unchanged; unknown params still `KeyError`; `'bar'` alias covers every existing world /
+country pack. Smoke-run: all four `engine/worlds.py` worlds and the China/Cambodia/Philippines packs construct and
+run (`EGINE_CHECKS.py` `compat` check); the unmodified 540 runner's `_run_single` runs (KR seed 0, N=120/T=26).
+Series keys are additive-only; the one documented meaning change is the intended D7 correction (the elite premium is
+now the *won* per-child prize, not the global parameter).
+
+## B9. Documented deviations / clarifications (for Commander + qa)
+
+1. **`contest_candidates(m)` uses the sitting cohort** (`cred==m` and `g==ends[m]-1`, i.e. the children who sit the
+   gate this year) rather than the literal contract wording `cred<=m`. With `cred<=m` the pool would span several
+   year groups and *expected* P would no longer be the same object as the realised top-seat draw — the exact defect
+   D2 is fixing. Flagged to the Commander as a wording clarification; no lane's call sites are affected.
+2. **Expected P for children valued at a future gate** uses the official pool probabilities' monotone map by own
+   weight (exact for the sitting cohort). This is a documented approximation: the future cohort's weight
+   distribution is represented by this year's sitting cohort. No probability is produced by any formula other than
+   `pl_win_probs` on the official pool.
+3. **`fail='track'` on fixed_bar/quota gates** is now valued as the continuation it actually is (`Vfail = Vcont`),
+   fixing D4.3; the vocational learning-quality wedge is realised in learning but not separately valued (documented
+   approximation; affects the China pack's zhongkao only).
+4. **Zero/absent seats** now floor at 1 (contract §1.3), so a tiny quota share no longer admits everybody; quota
+   admission is rank-based and no longer adds a second exam-noise draw.
+5. **Legacy 540 config**: because `k['elite']` may now be set at any level (§2), the old KR G9 gate's
+   `elite_logw=0.15` is *delivered* as a direct premium instead of remaining a phantom. The canonical repair is
+   `GATE_SPECS['KR-TRACKED']`; the unmodified 540 run is kept runnable and its numerics change is quantified below.
+
+## B10. Migration table — unmodified 540 Baseline, old record vs repaired engine (3 matched seeds, mean)
+
+| metric | KR old | KR new | Δ | HK old | HK new | Δ |
+|---|---|---|---|---|---|---|
+| `k12_spend` (household) | 1067.9 | 134.6 | −933.2 | 1336.1 | 156.4 | −1179.7 |
+| `k12_rate_pct` | 57.48 | 58.13 | +0.65 | 59.08 | 61.82 | +2.74 |
+| `g12_pct` (tutoring at G12) | 73.22 | 36.17 | −37.05 | 72.47 | 49.45 | −23.01 |
+| `q5_q1_gap_pp` | 68.38 | 30.13 | −38.25 | 70.37 | 35.23 | −35.15 |
+| `q5_q1_spend_ratio` | 18.12 | 2.14 | −15.98 | 39.92 | 2.52 | −37.40 |
+| `elite_q5_share_pct` | 36.73 | 21.99 | −14.74 | 46.09 | 24.70 | −21.39 |
+| `contest_e_mean` | 1.710 | 0.016 | −1.694 | 2.177 | 0.043 | −2.134 |
+
+Causes, in order of magnitude: (i) D2 — honest Plackett–Luce expected probabilities replace the old exponential
+form, whose mean expected probability was 2.4× the realised admission (audit §B), so contest preparation collapses
+(old contest prep was ~92 % of K-12 household spend per audit §A); (ii) D6 — arms no longer drift on the RNG stream;
+(iii) the legacy G9 premium is delivered rather than phantom. The KR Q5−Q1 participation gap moves from 68.4 pp to
+30.1 pp (review target 32.1 pp) and the Q5/Q1 spend ratio from 18.1× to 2.14× (target 3.4×) *without any
+calibration* — i.e. most of the review's "540 calibration lost" finding was the contest-architecture defect, not a
+parameter problem. This is a migration record, not a calibration: the canonical spec stays unfrozen (Dashboard
+decision 1) and no wave-1 numbers should be read as empirical.
+
+## B11. Checks run (all green, 2026-11-25)
+
+`docs/audit/ENGINE_CHECKS.py --runner` → **13/13** checks pass (~60 s on host; no box job used):
+gate schema/alias/length/tracking validation; calendar re-normalisation; PL seat-sum & no-private-PL grep;
+D1 track persistence + all three channels + `gate_prize_dv == V(track=1)−V(track=0)`; KR-SINGLE no-track;
+D3 seat denominators/diagnostics/`planning.gate_accounting`/share_of; D6 bit-determinism + matched exogenous draws;
+D7 multiplicative-last identity + decomposition; zero-prize ⇒ zero effort; worlds/countries smoke;
+unmodified 540-runner `_run_single`. qa-verifier's `tests/test_engine_invariants.py` currently shows 23 pass /
+4 fail, all four failures being test-side (`method='exact'` used with n>EXACT_MAX_N=20, and a strict
+`xfail` that now XPASSes because the API exists) — reported to qa-verifier, not engine defects.
+
+## B12. Residual risks
+
+1. `contest_math` quadrature cost (~14–50 ms per gate-year, contract target ≤50 ms) sets a floor on run time; the
+   repaired 540 config runs at 4.4 s (KR) / 2.4 s (HK) with the pool-map cache, so the full 540 rerun is ~20–30 min
+   on 8 host workers (legacy: ~3 min). A cached/vectorised probability service is a wave-2 optimisation.
+2. Future-gate expected probabilities use the current sitting cohort's weight distribution (documented
+   approximation, §B9.2); the sitting-cohort P itself is exact from `pl_win_probs`.
+3. Unmigrated modules (`schools.py`, `tutoring.py`, `anchor.py`) still consume the private legacy stream: their own
+   draws are deterministic for a run but not matched across policy arms (contract §7 rule 2, recorded residual).
+4. `quota`/`fixed_bar` expected probabilities remain the legacy normal CDF at a lagged cutoff (contract mandates PL
+   only for contest gates); the cutoff is still an in-sample order statistic, now recorded per gate for audibility.
+5. The legacy 540 KR G9 gate delivers its old `elite_logw` at G9; `elite_q5_share` in the old runner therefore now
+   counts G9 winners. The canonical KR specs avoid the ambiguity; the old metric should not be compared across the
+   repair without noting this.

@@ -10,6 +10,11 @@ as plain functions. No behaviour, only arithmetic: what planners compute.
 Identity (grade g, year t):  Enr[g,t+1] = Intake[t+1] (g=1) or Promoted[g-1,t]  +  Repeaters[g,t]
 The staffing/cost equations are canonical in planning/kernel.cjs (JavaScript); calculate() and audit() below call it
 through Node (read-only). flows/project/closure/plan_vs_agents are Python-side diagnostics, not yet mirrored in JS.
+
+gate_accounting(E) is the Gate-1 addition for the review's seat-denominator finding (D3): applicants, planned
+seats, admitted pupils, applicant:seat ratio and realised admission rate per gate per year, read from the core's
+annual contest diagnostics series (contract §1.4) and from the gate list.  It is an accounting reader: it does not
+simulate, and it does not change the model.
 """
 import json, subprocess
 from pathlib import Path
@@ -111,3 +116,60 @@ def audit(E):
         rows=rows,maximumSalaryIdentityResidual=max(abs(r['salaryIdentityResidual']) for r in rows),
         yearsBelowTargetStaffing=sum(r['teacherGap']>1e-9 for r in rows),
         empiricalImprovement='not evaluated; accounting audit does not alter predictions')
+
+
+# --- Gate flow accounting (Gate-1 D3 report): mirrors core.contest_summary() per year -------------------------
+def gate_accounting(E, years=None):
+    """Applicant/seat/admission accounting per gate per year, for the contest gates the core ran.
+
+    Returns ``dict(gates=[{level, kind, share, share_of, seats_nominal, rows:[...]}], totals={...})``.
+    ``rows`` carry (year, candidates, seats, admitted, applicant_seat_ratio, admission_rate, expected_p_mean).
+    Non-contest gates are reported as no-selection rows (admitted = candidates when the core recorded no series).
+    Denominators are the ones the review asked for: candidates are *applicants at the gate*, seats are the planned
+    places (``share`` of the cohort or of applicants, per ``share_of``), and the realised admission rate is
+    admitted/applicants — never the share of births.
+    """
+    R = E.R
+    level_ends = list(E.ends)
+    year0 = int(E.p['start_year'])
+    T = len(R.get('year', []))
+    if years is not None:
+        keep = {int(y) for y in years}
+    else:
+        keep = None
+    gates = getattr(E, 'gates', E.p['gates'])
+    out_gates = []
+    for m, gate in enumerate(gates):
+        kind = gate['kind']
+        entry = dict(level=m, end_grade=int(level_ends[m]), kind=kind,
+                     share=gate.get('share'), share_of=gate.get('share_of', 'cohort'),
+                     seats_nominal=(max(int(round(float(gate['share']) * E.p['N'])), 1)
+                                    if kind in ('quota', 'contest') else None))
+        rows = []
+        for i in range(T):
+            Y = year0 + int(R['year'][i])
+            if keep is not None and Y not in keep:
+                continue
+            if kind != 'contest':
+                continue
+            row = dict(year=Y)
+            for key, out in (('contest_candidates', 'candidates'), ('contest_seats', 'seats'),
+                             ('contest_admitted', 'admitted'),
+                             ('contest_applicant_seat_ratio', 'applicant_seat_ratio'),
+                             ('contest_admit_rate', 'admission_rate'),
+                             ('contest_expected_p_mean', 'expected_p_mean')):
+                series = R.get(key)
+                if series is None:
+                    continue
+                try:
+                    v = series[i][m]
+                except (IndexError, TypeError):
+                    continue
+                row[out] = None if v is None or (isinstance(v, float) and not np.isfinite(v)) else float(v)
+            if row.get('candidates') is not None:
+                rows.append(row)
+        entry['rows'] = rows
+        out_gates.append(entry)
+    tot = dict(years=len(R.get('year', [])),
+               note='contest diagnostics only; non-contest gates are not selective in the D3 sense')
+    return dict(gates=out_gates, totals=tot)

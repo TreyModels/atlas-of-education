@@ -73,28 +73,34 @@ class QueueLabour(Module):
         n = len(ex)
         # applicants = this year's leavers + anyone queuing from earlier years
         cred = k['cred'][ex].astype(int); L = k['L'][ex].astype(float); y = k['y'][ex].astype(float)
+        pid = k['pid'][ex].astype(np.int64)
+        elite_prize = k['elite_prize'][ex].astype(float)
+        track = np.asarray(k['track'][ex], int)
         nq = 0 if self.Q is None else len(self.Q['cred'])
         if nq:
             cred = np.concatenate([cred, self.Q['cred']]); L = np.concatenate([L, self.Q['L']])
-            y = np.concatenate([y, self.Q['y']])
+            y = np.concatenate([y, self.Q['y']]); pid = np.concatenate([pid, self.Q['pid']])
+            elite_prize = np.concatenate([elite_prize, self.Q['elite_prize']])
+            track = np.concatenate([track, self.Q['track']])
         wait = np.concatenate([np.zeros(n), self.Q['wait'] if nq else np.zeros(0)])
         m = n + nq
         inc = np.full(m, np.nan)
         if m == 0:
             self.stock.add(0.0, 0.0); E.bill = self.stock.bill(); return np.zeros(0)
         zL = (L - L.mean()) / (L.std() + 1e-9)
-        sig = cred + p['signal_rho'] * (zL + r.standard_normal(m)) - 0.15 * wait   # long waits read as a weak signal
+        # event-keyed signal noise (contract §7): a person's signal does not depend on who else applied
+        sig = cred + p['signal_rho'] * (zL + r.normal(t, 'labour_signal', pid)) - 0.15 * wait
         V = p['N'] * self.vacancies(E, t)
         Vs, Vr = int(round(V * p['skilled_share'])), int(round(V * (1 - p['skilled_share'])))
         tier = np.zeros(m, int)                 # 0 informal / waiting, 1 routine, 2 skilled
-        order = np.argsort(-sig)
-        lottery = r.permutation(m)
+        order = np.argsort(sig)[::-1]
+        lottery = np.argsort(r.uniform(t, 'labour_lottery', pid), kind='stable')   # per-pid U replaces r.permutation
         for vac, j in [(Vs, 0), (Vr, 1)]:
             o_ = order if (j == 0 or p['rank_routine']) else lottery
             elig = o_[(tier[o_] == 0) & (cred[o_] >= self.floor[j])]
             hire = elig[:vac]
             tier[hire] = 2 - j
-            if p['floor_adapt'] and r.random() < p['floor_p']:
+            if p['floor_adapt'] and float(r.uniform(t, 'labour_floor', -1)) < p['floor_p']:
                 up = np.count_nonzero((tier == 0) & (cred >= self.floor[j] + 1)) + len(hire)
                 if len(elig) > p['screen_kappa'] * max(vac, 1) and up >= 1.5 * vac and self.floor[j] < E.nlev:
                     self.floor[j] += 1
@@ -127,20 +133,33 @@ class QueueLabour(Module):
             gain = ph * (wf(np.ones(m, int)) - winf) * p['queue_horizon'] - winf          # expected gain of waiting a year
             pr = 1 / (1 + np.exp(-p['queue_k'] * gain / np.maximum(winf, 1e-3)))
             can = unh & (cred >= p['queue_min_cred']) & (wait < p['queue_max_years']) & (y >= p['queue_support'])
-            queue = can & (r.random(m) < pr)
+            queue = can & (r.uniform(t, 'queue_accept', pid) < pr)
         informal = unh & ~queue
         inc = np.where(informal, winf, inc)
+        # ---- Gate-1 prizes (contract §8): applied LAST, multiplicatively, to every applicable income.
+        # The direct elite-status premium (won prize, not a global parameter) and the persistent G9 track
+        # earnings premium are kept separate from wage structure: they never enter tier assignment or queueing.
+        base_inc = inc.copy()
+        mult = np.exp(elite_prize)
+        if getattr(E, 'track_effect', None):
+            mult = mult * np.where(track == 1, np.exp(float(E.track_earnings_logw)), 1.0)
+        inc = inc * mult
+        if n:
+            self._record_prize_audit(E, ex, elite_prize[:n], track[:n], base_inc[:n], inc[:n], mult[:n])
         # bookkeeping
         new_inc = inc[:n].copy()
         hired_q = np.flatnonzero(~np.isnan(inc[n:])) + n
         if len(hired_q):          # queuers who now have an income: beliefs learn the wait (discounted income)
             E.observe(cred[hired_q], inc[hired_q] * p.get('delta', 0.93) ** wait[hired_q])
         keepq = np.flatnonzero(queue)
-        self.Q = dict(cred=cred[keepq], L=L[keepq], y=y[keepq], wait=wait[keepq] + 1) if len(keepq) else None
+        self.Q = (dict(cred=cred[keepq], L=L[keepq], y=y[keepq], wait=wait[keepq] + 1, pid=pid[keepq],
+                       elite_prize=elite_prize[keepq], track=track[keepq]) if len(keepq) else None)
         if displaced and p['queue_on']:       # laid-off tutors (young degree holders) look for formal work next year
             dg = cred >= p['tutor_min_cred']
             add = dict(cred=np.full(displaced, p['tutor_min_cred']), L=np.full(displaced, float(L[dg].mean()) if dg.any() else float(L.mean())),
-                       y=np.full(displaced, float(np.median(y))), wait=np.ones(displaced))
+                       y=np.full(displaced, float(np.median(y))), wait=np.ones(displaced),
+                       pid=-(t * 100000 + np.arange(displaced, dtype=np.int64) + 1),
+                       elite_prize=np.zeros(displaced), track=np.full(displaced, -1, int))
             self.Q = add if self.Q is None else {kk: np.concatenate([self.Q[kk], add[kk]]) for kk in add}
             keepq = np.arange(len(self.Q['cred']))
         worked = ~np.isnan(inc)
@@ -159,6 +178,24 @@ class QueueLabour(Module):
                formal_by_cred=[float(np.mean(tier[:n][cred[:n] == c] > 0)) if (cred[:n] == c).any() else np.nan for c in range(E.nlev + 1)],
                inc_by_cred=[float(np.nanmean(inc[cred == c])) if ((cred == c) & worked).any() else np.nan for c in range(E.nlev + 1)])
         return new_inc
+
+    @staticmethod
+    def _record_prize_audit(E, ex, elite_prize, track, base_inc, inc_after, mult):
+        """§8 audit series: the raw elite gap and its direct/composition decomposition (leavers only)."""
+        elite = np.asarray(E.kids['elite'][ex], bool)
+        fin = np.isfinite(inc_after)
+        raw = np.nan
+        if fin.any() and (elite & fin).any() and (~elite & fin).any():
+            raw = float(np.nanmean(inc_after[elite & fin]) - np.nanmean(inc_after[~elite & fin]))
+        direct = float(np.nanmean((mult - 1.0) * base_inc)) if fin.any() else np.nan
+        composition = (raw - direct) if np.isfinite(raw) and np.isfinite(direct) else np.nan
+        track1 = np.asarray(track) == 1
+        E.note(elite_share=float(elite.mean()) if len(elite) else 0.0,
+               elite_prize_mean=float(np.mean(elite_prize)) if len(elite_prize) else 0.0,
+               track_share=float(track1.mean()) if len(track1) else 0.0,
+               track_prize_mean=float(E.track_earnings_logw) if (track1.any() and getattr(E, 'track_effect', None)) else 0.0,
+               elite_inc_gap_raw=raw, elite_inc_gap_direct=direct,
+               elite_inc_gap_composition=composition)
 
     def summary(self, E):
         R = E.R; m = E.p['measure_from']
