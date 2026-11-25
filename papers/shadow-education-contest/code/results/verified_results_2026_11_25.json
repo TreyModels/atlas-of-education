@@ -1,0 +1,145 @@
+{
+  "generated_at": "2026-11-25T13:25:00+08:00",
+  "repo": "https://github.com/TreyModels/atlas-of-education",
+  "experiments": {
+    "exp1_wdi_bulge_arrival_tstar": {
+      "status": "HONEST_NULL",
+      "source": "World Bank WDI API (1990-2020, 7290 obs, 8 E8 countries + 40 SSA donors)",
+      "fisher_ri_perms": 2500,
+      "outcomes": {
+        "SE.PRM.REPT.ZS": {
+          "status": "ESTIMABLE",
+          "base_non_missing": "6/8",
+          "T0": 1.061,
+          "T0_ci95": [0.251, 1.871],
+          "Tpost": 1.238,
+          "Tpost_ci95": [-1.041, 3.517],
+          "pretrend_e_minus3": -3.489,
+          "placebo_minus6_T0": -1.792,
+          "ri_p2_date_T0": 0.1407,
+          "ri_p2_country_T0": 0.2791
+        },
+        "SE.SEC.PROG.ZS": {
+          "status": "ESTIMABLE_SPARSE",
+          "base_non_missing": "4/8",
+          "T0": 1.205,
+          "T0_ci95": [-1.430, 3.840],
+          "Tpost": 7.846,
+          "Tpost_ci95": [-1.675, 17.368],
+          "pretrend_e_minus2": 5.474,
+          "ri_p2_date_T0": 0.5626,
+          "ri_p2_country_T0": 0.6479
+        },
+        "SE.SEC.ENRR": {
+          "status": "ESTIMABLE",
+          "base_non_missing": "5/8",
+          "T0": -0.957,
+          "Tpost": 1.002,
+          "pretrend_e_minus4": -5.962,
+          "ri_p2_date_T0": 0.2175,
+          "ri_p2_country_T0": 0.4180
+        },
+        "SE.SEC.ENRL.TC.ZS": {
+          "status": "NOT_ESTIMABLE",
+          "reason": "Only 2/8 treated countries have non-missing post-arrival e>=1 observations"
+        }
+      },
+      "capacity_split": {
+        "expanded": ["MWI", "GHA", "KEN", "MOZ"],
+        "tight": ["ETH", "UGA", "LSO"],
+        "unclassified": ["TZA"],
+        "verdict": "Indistinguishable (all Delta CIs span zero; exact stratum-permutation p = 0.200-1.000)"
+      }
+    },
+    "exp3_tullock_contest_gate_h1_h2": {
+      "status": "SUPPORTED",
+      "base_commit": "68da16e",
+      "total_runs": 1640,
+      "H1_scarcity_S025_minus_S070_vac008": {
+        "quota_pooled": 0.1413,
+        "quota_fee0": 0.1521,
+        "contest_pooled": 0.2424,
+        "contest_fee0": 0.3430,
+        "contest_fee0_ci95": [0.3200, 0.3661],
+        "contest_fee0_spearman_rho": -1.00
+      },
+      "H2_fee_x_scarcity_post_minus_pre": {
+        "quota_grid": {"est": -0.0145, "se": 0.0033, "ci95": [-0.0214, -0.0076]},
+        "contest_grid": {"est": 0.1086, "se": 0.0078, "ci95": [0.0924, 0.1248], "p": 1.9e-11},
+        "quota_2x2_vac008": {"est": 0.0215, "se": 0.0042, "ci95": [0.0129, 0.0302]},
+        "contest_2x2_vac008": {"est": 0.2013, "se": 0.0217, "ci95": [0.1564, 0.2461], "p": 2.1e-9},
+        "contest_by_vac0": {
+          "0.02": {"est": 0.0138, "ci95": [-0.0069, 0.0346]},
+          "0.08": {"est": 0.1865, "ci95": [0.1349, 0.2381]},
+          "0.25": {"est": 0.2573, "ci95": [0.2179, 0.2967]},
+          "0.50": {"est": -0.0232, "ci95": [-0.0470, 0.0006]}
+        }
+      }
+    },
+    "exp4_masseng_tutoring_identifiability": {
+      "status": "PROVED",
+      "base_commit": "b9d68c1",
+      "switch_off_max_abs_diff_vs_Model5": 0.0,
+      "mnl_3opt_parity_price_other": 0.5,
+      "posterior_corr_cond": {
+        "10_param_baseline": 447.16,
+        "7_param_bijection": 23.97,
+        "5_param_core": 8.05
+      },
+      "fresh_100_seed_fail_rate": {
+        "10_param_baseline_n70": "58/100 (median max|z|=1.1214)",
+        "7_param_opt_n70": "54/100 (median max|z|=1.0054)",
+        "5_param_core_n70": "53/100 (median max|z|=1.0333)",
+        "5_param_core_n700": "20/100 (median max|z|=0.6091)"
+      },
+      "jacobian_rank_theorem": {
+        "aggregate_only": {"rank": "5/7", "cond": 1.09e13},
+        "plus_income_micro_moments": {"rank": "6/7", "cond": 3435.49},
+        "plus_income_and_school_quality_micro_moments": {"rank": "7/7", "cond": 43.81}
+      }
+    },
+    "exp5_out_of_sample_e8_shock": {
+      "status": "SUPPORTED",
+      "base_commit": "4679ddb",
+      "pre_abolition_target_ger": 74.88,
+      "calibrated_fee_public": 0.150,
+      "paired_seeds": 40,
+      "empirical_e8": {"ATT0": 12.44, "T_post": 25.26},
+      "open_bar": {"ATT0": 11.60, "T_post": 20.45, "rmse_7h": 5.13, "mae_7h": 4.24, "rmse_reduction_pct": -78.6},
+      "tight_sec_quota": {"ATT0": 13.48, "T_post": 21.04, "rmse_7h": 4.68, "mae_7h": 3.92, "rmse_reduction_pct": -80.5},
+      "mv_quota": {"ATT0": 11.22, "T_post": 19.99, "rmse_7h": 5.52, "mae_7h": 4.69, "rmse_reduction_pct": -76.9},
+      "persistence": {"ATT0": 0.00, "T_post": 0.00, "rmse_7h": 23.93, "mae_7h": 23.43}
+    },
+    "paperB_hk_korea_comparative": {
+      "status": "COMPLETED",
+      "runs": 420,
+      "seeds_per_arm": 30,
+      "estimated_m1_8core_seconds": 50,
+      "calibration": {
+        "HK_G9": {"target": 53.8, "sim": 53.8, "ci95_half": 0.1},
+        "HK_G12": {"target": 71.8, "sim": 71.6, "ci95_half": 0.1},
+        "KR_K12": {"target_band": [75.7, 78.5], "sim": 76.5, "ci95_half": 0.1},
+        "KR_Q5_minus_Q1_pp": {"target": 32.1, "sim": 34.1, "ci95_half": 0.3},
+        "KR_Q5_over_Q1_spend": {"target": 3.4, "sim": 3.19, "ci95_half": 0.02}
+      },
+      "counterfactuals_hk": {
+        "baseline_S023": {"k12": 40.0, "g9": 53.8, "g12": 71.6, "q5_q1_pp": 52.8, "spend_ratio": 11.83, "spend_idx": 100.0, "elite_q5_pct": 30.0},
+        "CF1a_tax_plus50": {"k12": 36.3, "g9": 49.4, "g12": 67.7, "q5_q1_pp": 51.2, "spend_ratio": 16.85, "spend_idx": 104.8, "elite_q5_pct": 34.2},
+        "CF1b_cap_minus50": {"k12": 51.1, "g9": 66.7, "g12": 82.0, "q5_q1_pp": 55.9, "spend_ratio": 5.43, "spend_idx": 82.1, "elite_q5_pct": 25.1},
+        "CF2a_seats_028": {"k12": 48.0, "g9": 63.3, "g12": 79.3, "q5_q1_pp": 55.5, "spend_ratio": 9.86, "spend_idx": 117.4, "elite_q5_pct": 28.6},
+        "CF2b_seats_050": {"k12": 79.2, "g9": 91.7, "g12": 97.1, "q5_q1_pp": 43.1, "spend_ratio": 5.05, "spend_idx": 173.8, "elite_q5_pct": 24.8},
+        "CF3a_wage_minus30": {"k12": 36.6, "g9": 49.8, "g12": 68.1, "q5_q1_pp": 51.4, "spend_ratio": 16.27, "spend_idx": 73.1, "elite_q5_pct": 33.7},
+        "CF3b_wage_minus50": {"k12": 34.9, "g9": 47.7, "g12": 66.2, "q5_q1_pp": 50.7, "spend_ratio": 19.87, "spend_idx": 52.8, "elite_q5_pct": 36.3}
+      },
+      "counterfactuals_kr": {
+        "baseline_S012": {"k12": 76.5, "g9": 89.3, "g12": 71.8, "q5_q1_pp": 34.1, "spend_ratio": 3.19, "spend_idx": 100.0, "elite_q5_pct": 24.6},
+        "CF1a_tax_plus50": {"k12": 71.1, "g9": 86.6, "g12": 62.7, "q5_q1_pp": 36.7, "spend_ratio": 4.13, "spend_idx": 107.4, "elite_q5_pct": 26.0},
+        "CF1b_cap_minus50": {"k12": 86.0, "g9": 94.4, "g12": 84.3, "q5_q1_pp": 26.2, "spend_ratio": 1.82, "spend_idx": 74.1, "elite_q5_pct": 22.9},
+        "CF2a_seats_016": {"k12": 79.2, "g9": 89.3, "g12": 82.0, "q5_q1_pp": 32.5, "spend_ratio": 2.98, "spend_idx": 105.9, "elite_q5_pct": 23.7},
+        "CF2b_seats_040": {"k12": 84.1, "g9": 89.3, "g12": 99.6, "q5_q1_pp": 24.5, "spend_ratio": 2.16, "spend_idx": 122.3, "elite_q5_pct": 21.6},
+        "CF3a_wage_minus30": {"k12": 71.7, "g9": 86.9, "g12": 63.7, "q5_q1_pp": 36.5, "spend_ratio": 4.01, "spend_idx": 74.8, "elite_q5_pct": 25.8},
+        "CF3b_wage_minus50": {"k12": 68.3, "g9": 85.2, "g12": 57.4, "q5_q1_pp": 37.6, "spend_ratio": 4.62, "spend_idx": 54.9, "elite_q5_pct": 27.5}
+      }
+    }
+  }
+}

@@ -43,3 +43,17 @@ code/data in this repository, and some conflict with committed records. This fil
 - Contest gate, live-WDI `t*`, identifiability, calibration, and Paper B's run: **cannot be cited as verified**
   until the missing artifacts are committed with code, data, seeds, and hashes.
 - Paper A must correct the empirical table if the earlier draft is the deposited version.
+
+## Update 2026-11-25 13:29 CST — later artifacts received
+
+Gemini subsequently attached `verified_results_2026_11_25.json` (sha256 `b14e2816…b1de`),
+`run_hk_korea_comparative.py` (`da07107c…4926`) and `contest_gate_spec.md` (`4c470ba3…d2d2`). Status:
+
+- The JSON is **self-reported**, not a committed run. It records the same Exp 1/3/4/5 and Paper B numbers as
+  author-reported and does not by itself resolve the conflicts above.
+- The spec is a **description** of the contest-gate patch, not the patched `core.py`/`tutoring.py`; without
+  those files the committed engine still has no `contest` kind.
+- The runner does **not** fit the committed API (`Engine(modules, **params)`, no `.history`, `contest` absent),
+  so it cannot reproduce Paper B against this tree. See `code/RUNNER_STATUS.md`.
+
+Paper B remains a draft / author-reported simulation. The citable committed results are unchanged.

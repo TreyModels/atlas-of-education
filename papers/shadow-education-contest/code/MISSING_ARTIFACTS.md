@@ -5,15 +5,16 @@ they are not in this deposit. Nothing here has been reconstructed or approximate
 
 | # | artifact | status | needed for |
 |---|---|---|---|
-| 1 | Paper A `.docx` (Google Doc `1NFXSjzRaAXR2nhM6iZVTlhJKcE5puj7PI43ZZkP2cns`) | NOT RECEIVED | Paper A text |
-| 2 | `engine/eduengine/core.py` patch (Tullock `contest` gate) | NOT RECEIVED | Exp 3, 5, Paper B |
-| 3 | `engine/eduengine/modules/tutoring.py` patch (`contest_e` in any_tut/tut_rate/tut_by_q/…) | NOT RECEIVED | Exp 3, 5, Paper B |
-| 4 | `run_hk_korea_comparative.py` | NOT RECEIVED | Paper B |
-| 5 | `results/exp1_bulge_arrival_summary.json` | NOT RECEIVED | Paper A Exp 1 |
-| 6 | `results/exp3_contest_h1_h2_summary.json` | NOT RECEIVED | Paper A Exp 3 |
-| 7 | `results/exp4_tutoring_identifiability_summary.json` | NOT RECEIVED | Paper A Exp 4 |
-| 8 | `results/exp5_e8_shock_summary.json` | NOT RECEIVED | Paper A Exp 5 |
-| 9 | `results/hk_korea_comparative.json` | NOT RECEIVED | Paper B |
+| 1 | Paper A `.docx` (Google Doc `1NFXSjzRaAXR2nhM6iZVTlhJKcE5puj7PI43ZZkP2cns`) | **NOT RECEIVED** | Paper A text |
+| 2 | `engine/eduengine/core.py` **patched file/diff** (Tullock `contest` gate) | **NOT RECEIVED** (spec received only) | Exp 3, 5, Paper B |
+| 3 | `engine/eduengine/modules/tutoring.py` **patched file/diff** | **NOT RECEIVED** (spec received only) | Exp 3, 5, Paper B |
+| 4 | `run_hk_korea_comparative.py` | RECEIVED — but static check shows it does not fit the committed `Engine` API; see `RUNNER_STATUS.md` | Paper B |
+| 5 | `results/exp1_bulge_arrival_summary.json` | bundled inside `results/verified_results_2026_11_25.json` (self-reported) | Paper A Exp 1 |
+| 6 | `results/exp3_contest_h1_h2_summary.json` | bundled inside `verified_results_2026_11_25.json` (self-reported) | Paper A Exp 3 |
+| 7 | `results/exp4_tutoring_identifiability_summary.json` | bundled inside `verified_results_2026_11_25.json` (self-reported) | Paper A Exp 4 |
+| 8 | `results/exp5_e8_shock_summary.json` | bundled inside `verified_results_2026_11_25.json` (self-reported) | Paper A Exp 5 |
+| 9 | `results/hk_korea_comparative.json` | bundled inside `verified_results_2026_11_25.json` (self-reported) | Paper B |
+| 10 | Exact patched engine commit / pre-registration hashes | **NOT RECEIVED** | reproduction of all simulation claims |
 
 ## Why this matters
 
