@@ -1,0 +1,302 @@
+{
+  "task": "P0-04/P0-05 bootstrap size/power factorial + permutation replacement",
+  "date_utc": "2026-11-25T07:23:28Z",
+  "runtime_sec": 70.21,
+  "design": {
+    "G": 60,
+    "T": 20,
+    "N": 1200,
+    "tau": 0.8,
+    "shares": [
+      0.0,
+      0.05,
+      0.15,
+      0.5,
+      1.0
+    ],
+    "confoundings": [
+      0.0,
+      0.25,
+      0.5,
+      1.0
+    ],
+    "estimators": [
+      "pooled",
+      "country_fe",
+      "country_year_fe"
+    ],
+    "n_datasets": 2000,
+    "seed": 20261125
+  },
+  "benchmark_reproduction": {
+    "mode": "shipped_selftest_reproduction",
+    "tau": 0.8,
+    "N": 1200,
+    "G": 60,
+    "beta1": 0.4447407388610453,
+    "se_cr1": 0.08291358451449392,
+    "t_obs": 5.363906788800106,
+    "p_wild_cluster": 0.0004997501249375312,
+    "expected": {
+      "beta1": 0.4447407388610457,
+      "se_cr1": 0.08291358451449403,
+      "t_obs": 5.363906788800104,
+      "p_wild_cluster": 0.0004997501249375312
+    }
+  },
+  "negative_control": {
+    "mode": "shipped_selftest_reproduction",
+    "tau": 0.0,
+    "N": 1200,
+    "G": 60,
+    "beta1": 0.30544388867506994,
+    "se_cr1": 0.06140133751221107,
+    "t_obs": 4.974547803854034,
+    "p_wild_cluster": 0.0004997501249375312,
+    "expected": {
+      "beta1": 0.4447407388610457,
+      "se_cr1": 0.08291358451449403,
+      "t_obs": 5.363906788800104,
+      "p_wild_cluster": 0.0004997501249375312
+    }
+  },
+  "permutation_invariance": {
+    "mode": "country_block_permutation_invariance",
+    "B_perm": 200,
+    "within_max_abs_deviation": 6.661338147750939e-16,
+    "fe_beta_original": 0.10534536554775698,
+    "fe_beta_perm_mean": 0.10534536554775699,
+    "fe_beta_perm_max_abs_dev_from_original": 9.71445146547012e-17,
+    "pooled_perm_sd": 0.05628785725335809,
+    "pooled_perm_min": -0.0635402569103389,
+    "pooled_perm_max": 0.2662347964294216,
+    "conclusion": "within coefficient is permutation-invariant (deviation <= 1e-12): the shipped permutation cannot test the within estimand"
+  },
+  "replacement_inference": [
+    {
+      "confounding": 0.0,
+      "method": "fe_restricted_wild",
+      "n_rep": 120,
+      "size_rejection_rate": 0.025,
+      "coverage95": NaN
+    },
+    {
+      "confounding": 0.0,
+      "method": "fe_cluster_bootstrap",
+      "n_rep": 120,
+      "size_rejection_rate": 0.041666666666666664,
+      "coverage95": 0.9583333333333334
+    },
+    {
+      "confounding": 0.25,
+      "method": "fe_restricted_wild",
+      "n_rep": 120,
+      "size_rejection_rate": 0.025,
+      "coverage95": NaN
+    },
+    {
+      "confounding": 0.25,
+      "method": "fe_cluster_bootstrap",
+      "n_rep": 120,
+      "size_rejection_rate": 0.03333333333333333,
+      "coverage95": 0.9666666666666667
+    },
+    {
+      "confounding": 0.5,
+      "method": "fe_restricted_wild",
+      "n_rep": 120,
+      "size_rejection_rate": 0.041666666666666664,
+      "coverage95": NaN
+    },
+    {
+      "confounding": 0.5,
+      "method": "fe_cluster_bootstrap",
+      "n_rep": 120,
+      "size_rejection_rate": 0.03333333333333333,
+      "coverage95": 0.9666666666666667
+    },
+    {
+      "confounding": 1.0,
+      "method": "fe_restricted_wild",
+      "n_rep": 120,
+      "size_rejection_rate": 0.03333333333333333,
+      "coverage95": NaN
+    },
+    {
+      "confounding": 1.0,
+      "method": "fe_cluster_bootstrap",
+      "n_rep": 120,
+      "size_rejection_rate": 0.05,
+      "coverage95": 0.95
+    }
+  ],
+  "factorial_file": "BOOTSTRAP_SIZE_POWER_RESULTS.parquet",
+  "size_table": [
+    {
+      "conf": 0.0,
+      "estimator": "country_fe",
+      "rejection_rate": 0.0535,
+      "coverage95": 0.9465
+    },
+    {
+      "conf": 0.0,
+      "estimator": "country_year_fe",
+      "rejection_rate": 0.0555,
+      "coverage95": 0.9445
+    },
+    {
+      "conf": 0.0,
+      "estimator": "pooled",
+      "rejection_rate": 0.0505,
+      "coverage95": 0.9495
+    },
+    {
+      "conf": 0.25,
+      "estimator": "country_fe",
+      "rejection_rate": 0.0565,
+      "coverage95": 0.9435
+    },
+    {
+      "conf": 0.25,
+      "estimator": "country_year_fe",
+      "rejection_rate": 0.056,
+      "coverage95": 0.944
+    },
+    {
+      "conf": 0.25,
+      "estimator": "pooled",
+      "rejection_rate": 0.9965,
+      "coverage95": 0.0035
+    },
+    {
+      "conf": 0.5,
+      "estimator": "country_fe",
+      "rejection_rate": 0.062,
+      "coverage95": 0.938
+    },
+    {
+      "conf": 0.5,
+      "estimator": "country_year_fe",
+      "rejection_rate": 0.0525,
+      "coverage95": 0.9475
+    },
+    {
+      "conf": 0.5,
+      "estimator": "pooled",
+      "rejection_rate": 1.0,
+      "coverage95": 0.0
+    },
+    {
+      "conf": 1.0,
+      "estimator": "country_fe",
+      "rejection_rate": 0.0625,
+      "coverage95": 0.9375
+    },
+    {
+      "conf": 1.0,
+      "estimator": "country_year_fe",
+      "rejection_rate": 0.0525,
+      "coverage95": 0.9475
+    },
+    {
+      "conf": 1.0,
+      "estimator": "pooled",
+      "rejection_rate": 1.0,
+      "coverage95": 0.0
+    }
+  ],
+  "power_table": [
+    {
+      "conf": 0.0,
+      "estimator": "country_fe",
+      "rejection_rate": 0.786,
+      "bias": 0.00021089554146916378,
+      "rmse": 0.03204740701514959
+    },
+    {
+      "conf": 0.0,
+      "estimator": "country_year_fe",
+      "rejection_rate": 0.785,
+      "bias": -0.0006856820083052106,
+      "rmse": 0.03197263502976715
+    },
+    {
+      "conf": 0.0,
+      "estimator": "pooled",
+      "rejection_rate": 0.613,
+      "bias": 0.0011460189681447852,
+      "rmse": 0.04217103961585906
+    },
+    {
+      "conf": 0.25,
+      "estimator": "country_fe",
+      "rejection_rate": 0.7875,
+      "bias": 0.0014206433757493336,
+      "rmse": 0.03284102791674916
+    },
+    {
+      "conf": 0.25,
+      "estimator": "country_year_fe",
+      "rejection_rate": 0.8015,
+      "bias": 0.0012463794036784714,
+      "rmse": 0.03223697242789696
+    },
+    {
+      "conf": 0.25,
+      "estimator": "pooled",
+      "rejection_rate": 1.0,
+      "bias": 0.23118494806377188,
+      "rmse": 0.2380855445149514
+    },
+    {
+      "conf": 0.5,
+      "estimator": "country_fe",
+      "rejection_rate": 0.7925,
+      "bias": 0.00046655031282751003,
+      "rmse": 0.0319083784423476
+    },
+    {
+      "conf": 0.5,
+      "estimator": "country_year_fe",
+      "rejection_rate": 0.789,
+      "bias": -0.0017894934737151258,
+      "rmse": 0.03162091161446066
+    },
+    {
+      "conf": 0.5,
+      "estimator": "pooled",
+      "rejection_rate": 1.0,
+      "bias": 0.39363465904536477,
+      "rmse": 0.39918144094155955
+    },
+    {
+      "conf": 1.0,
+      "estimator": "country_fe",
+      "rejection_rate": 0.779,
+      "bias": 0.0007295194736813976,
+      "rmse": 0.03257719004574828
+    },
+    {
+      "conf": 1.0,
+      "estimator": "country_year_fe",
+      "rejection_rate": 0.797,
+      "bias": 9.903762211480038e-05,
+      "rmse": 0.0322785138464061
+    },
+    {
+      "conf": 1.0,
+      "estimator": "pooled",
+      "rejection_rate": 1.0,
+      "bias": 0.4925687943621109,
+      "rmse": 0.4958576624317936
+    }
+  ],
+  "acceptance": {
+    "fe_size_median": 0.05925,
+    "fe_size_holds": true,
+    "pooled_size_under_confounding": 1.0,
+    "permutation_within_deviation": 6.661338147750939e-16,
+    "permutation_invariant": true,
+    "benchmark_matches": true
+  }
+}

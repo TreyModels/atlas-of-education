@@ -1,0 +1,11 @@
+{
+  "runtime_sec": 70.21,
+  "acceptance": {
+    "fe_size_median": 0.05925,
+    "fe_size_holds": true,
+    "pooled_size_under_confounding": 1.0,
+    "permutation_within_deviation": 6.661338147750939e-16,
+    "permutation_invariant": true,
+    "benchmark_matches": true
+  }
+}

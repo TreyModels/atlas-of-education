@@ -1,0 +1,11 @@
+/root/work/qa/docs/audit/code/dgp_validation.py:551: RuntimeWarning: Mean of empty slice
+  school_icc_income_mean=float(np.nanmean(rk.school_icc_income)),
+{
+  "runtime_sec": 7.43,
+  "delta_analytic": -0.7537718023763804
+}
+  NEW-crossed-n100-truthA: n=1 rank=5..5 accept=1044.0 | b0_eff: bias=+0.051 rmse=0.051 cov=1.00 | b_income: bias=+0.229 rmse=0.229 cov=1.00 | b_school_gap: bias=+0.410 rmse=0.410 cov=1.00 | delta_g12: bias=+0.386 rmse=0.386 cov=1.00 | urban_demand: bias=+0.141 rmse=0.141 cov=1.00
+  NEW-crossed-n400-truthA: n=1 rank=5..5 accept=21.0 | b0_eff: bias=-0.015 rmse=0.015 cov=1.00 | b_income: bias=+0.117 rmse=0.117 cov=1.00 | b_school_gap: bias=+0.114 rmse=0.114 cov=1.00 | delta_g12: bias=+0.195 rmse=0.195 cov=1.00 | urban_demand: bias=+0.080 rmse=0.080 cov=1.00
+  NEW-crossed-n1000-truthA: n=1 rank=5..5 accept=21.0 | b0_eff: bias=-0.013 rmse=0.013 cov=1.00 | b_income: bias=+0.022 rmse=0.022 cov=1.00 | b_school_gap: bias=+0.048 rmse=0.048 cov=1.00 | delta_g12: bias=+0.129 rmse=0.129 cov=1.00 | urban_demand: bias=+0.062 rmse=0.062 cov=1.00
+  NEW-crossed-n400-truthB: n=1 rank=5..5 accept=19.0 | b0_eff: bias=-0.026 rmse=0.026 cov=1.00 | b_income: bias=+0.038 rmse=0.038 cov=1.00 | b_school_gap: bias=+0.070 rmse=0.070 cov=1.00 | delta_g12: bias=+0.010 rmse=0.010 cov=1.00 | urban_demand: bias=+0.124 rmse=0.124 cov=1.00
+  OLD-degenerate-truthA: n=1 rank=3..3 accept=792.0 | b0_eff: bias=+0.073 rmse=0.073 cov=1.00 | b_income: bias=+0.681 rmse=0.681 cov=1.00 | b_school_gap: bias=+0.581 rmse=0.581 cov=1.00 | delta_g12: bias=+0.286 rmse=0.286 cov=1.00 | urban_demand: bias=+0.076 rmse=0.076 cov=1.00
