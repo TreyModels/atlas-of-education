@@ -721,3 +721,13 @@ Measured 20:23:22: **4,237/5,632 grid runs (75 %)**, **136 `ckpt_*` cell files (
 ~134 to **~50 rows/min** as the runner reached the heavier **`contest` architecture cells** (bar cells ~3.6 s/run,
 contest cells materially costlier). Driver 34331 at 37:52; 8 workers; cgroup **8.0/10 (80 %)**; `grid.log` clean.
 **Revised full-completion ETA ~20:45–20:55** (1,395 rows, 44 cells ÷ 8 workers ≈ 5.5 waves). No extra jobs slotted; no resize.
+
+### 13.22 Paper C Pilot-0 launched alongside grid (20:39) — 10 workers, 90 % util
+
+Operator override: allocate the 2 idle CPUs to **Paper C Pilot-0 emergence campaign** (grid untouched mid-flight).
+Verified 20:38:57: `paperC` driver **PID 37049** (`run_paperC_pilot0.py --workers 2 --out-dir /root/work/paperC/results`)
++ workers **37053/37054** (cells `market_only 1.0 0.03 / 0.08`, seeds 0-7) = **2.0 CPU**; grid driver 34331 + 8 cell
+workers = **8.0 CPU**, 4,774/5,632 rows (85 %, 152 cell files). **Total 10 compute workers, cgroup 9.0/10 (90 %)** —
+cap exactly respected, grid not disturbed, no other jobs.
+Grid ETA with contest cells (~34 rows/min): remaining 858 rows ≈ **25 min → ~21:02–21:10**. On grid completion its 8 workers
+free and **Pilot-0 expands to 8 workers** (verify PIDs/worker count then; total ≤10 with control slack).
