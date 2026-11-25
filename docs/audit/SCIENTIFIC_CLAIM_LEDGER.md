@@ -467,3 +467,13 @@ workers 6, seeds 100–115) and mark old run killed/abandoned, no outcomes used;
 b825796` is the superseded duplicate A5 — final artefact/manifest must cite canonical A5 (`aa1d0bd`/`36515596…`,
 adjudication `1c51f17`) with a mapping note; b825796 not authoritative. **No confirmatory number cited.**
 
+**A5 EXECUTION RECONCILED (2026-11-26): both provenance items satisfied.** Manifest `8d0edbe7…` (commit `217aa31`,
+FROZEN_APPROVED_A5): clean `confirm_a5` PID 2273, 6 workers, seeds 100–115, N=1500/T=46, started 07:34, runner
+`ddeffe42…`@`1b3a510`, driver self-aggregates; old `confirm_final` PID 1364/workers 10/analysis 8121bf6
+**KILLED/ABANDONED — no outcomes/aggregation**; stop16/snap8 stopped; aggregator `0324205` retained unused. Duplicate A5
+`b825796` is superseded; canonical A5 `aa1d0bd`/`36515596…` (approved `1c51f17`) authoritative; final artefact must cite
+canonical and not present b825796 as authoritative. uncertainty 16/A5/SE√2/no full-precision; wall reconciled; 6 workers
+on 10-CPU quota (4 idle; Luna reserve per Lead). Box verified: confirm_final no JSON/DONE; confirm_a5 driver running; no
+watchdog/aggregator. **A5 execution accepted; clean run continues; no numbers.** On completion pull/hash → T2/T3 Holm
+m=2 α=.05 + achieved CI/MDE under A5 interim precision; independent second hash-check accepted.
+

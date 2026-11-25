@@ -1286,6 +1286,24 @@ corrected uncertainty/A5/wall).
    must cite the canonical A5 (`aa1d0bd`/`36515596…`, adjudication `1c51f17`) and record a provenance note mapping
    `b825796` → canonical A5 (same rule, duplicate superseded); `b825796` must not be presented as authoritative.
 
+**A5 EXECUTION RECONCILED — both provenance items satisfied (2026-11-26).** Manifest `PAPER_C_CONFIRMATORY_MANIFEST.json`
+sha **`8d0edbe7c3418e69215db1ed26b10746e5a7a116e6ea00562dd904ec25a18244`** (commit `217aa31`, status
+`FROZEN_APPROVED_A5`):
+1. **Clean run recorded:** `confirm_a5`, PID **2273**, **6 workers**, seeds **100–115**, N=1500/T=46, started 07:34 CST,
+   runner `ddeffe42…`@`1b3a510`, driver self-aggregates; **old `confirm_final` (PID 1364, workers 10, analysis-commit
+   `8121bf6`) marked KILLED/ABANDONED — no outcomes used, no aggregation**; stop16/snap8 watchdogs stopped; committed
+   aggregator `0324205` retained but **NOT used**.
+2. **Provenance mapping recorded:** clean run's `--analysis-commit b825796` is the **superseded duplicate A5**; canonical
+   A5 = `aa1d0bd`/`36515596…` (approved `1c51f17`) is authoritative; final artefact must cite canonical A5 and `b825796`
+   must not be presented as authoritative.
+   `uncertainty` = 16 matched seeds (A5, SE×√2, no full-precision); `wall_note` reconciled; 6 workers on a 10-CPU quota
+   (4 CPUs idle; Luna reserve per Lead). **Box verified:** `confirm_final` has no `paperC_confirmatory.json`/
+   `CONFIRM_RESULTS_DONE`; `confirm_a5` driver PID 2273 running; no watchdog/aggregator processes remain.
+
+**Status: both reconciliations satisfied; A5 execution accepted; clean run continues (ETA ~10:55–11:15 CST). No
+confirmatory number cited. On completion: pull/hash-verify → T2/T3 Holm (m=2, α=.05) + achieved CI/MDE under A5 interim
+precision; independent second hash-check accepted (send path/sha).**
+
 **Status: clean A5 run CONFIRMED; aggregation path satisfies the holds; two provenance reconciliations required before
 analysis/report; no confirmatory number cited yet.**
 
