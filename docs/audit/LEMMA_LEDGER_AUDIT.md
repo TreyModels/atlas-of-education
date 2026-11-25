@@ -16,6 +16,12 @@
 | C-05 / X-28 / X-29 / X-30 / D-05 / D-06 | all present (C-05 and X-30 added after the previous freeze; regeneration at `4c06025` closes the drift) |
 | generator | `verification/lean/tools/gen_lemma_ledger.py` now derives sha/row counts from the CSV, supports `--expect-sha/--expect-rows` loud failure, writes `LEMMA_LEDGER_BASELINE.json` — no hard-coded 118/100 counts |
 
+**For the record (both pins):** the audited PASS pair was baseline **`3ff88d39…`** + ledger **`3e9dbbc1…`** at
+commit **`e0a5662`** (QA report `2ba5f74`, R1–R8 PASS). The current re-pin is baseline **`55f75eea…`** at commit
+**`f4167fc`** with the *same* 132 rows, ids and statuses and a byte-identical ledger CSV (`3e9dbbc1…`) — the
+content-only edit was re-verified here (`c18a44f`), so the PASS carries over with the "same rows/ids/statuses"
+note rather than a new audited pair.
+
 ## 2. Mechanical checks (`docs/audit/lemma_audit.py`) — all PASS
 
 Repro (re-hashes baseline each run; comment-aware Lean scan; block-aware in-Lean ledger parse):
