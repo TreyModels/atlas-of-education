@@ -81,7 +81,10 @@ __all__ = [
     "pl_win_probs_detail",
     "pl_win_probs_exact",
     "pl_win_probs_mc",
+    "pl_win_probs_batch",
     "pl_stats",
+    "pl_backend",
+    "set_pl_backend",
     "pl_realize",
     "AUTO_EXACT_N",
     "EXACT_MAX_N",
@@ -105,7 +108,8 @@ _QUAD_TAIL_C = 14.0        # t_hi = C / w_min: omitted mass <= exp(-C) ~ 8e-7
 _QUAD_MAX_NODES = 1600     # hard cap; h is coarsened beyond it (documented)
 #: Bounded caches (task-12).  Both are *pure* memoisation of deterministically
 #: computed arrays, keyed by exact float bytes, so they cannot change results.
-_STATS = {"grid_hit": 0, "grid_miss": 0, "result_hit": 0, "result_miss": 0}
+_STATS = {"grid_hit": 0, "grid_miss": 0, "result_hit": 0, "result_miss": 0,
+          "single_calls": 0, "batch_calls": 0, "batch_rows": 0, "batch_road": 0}
 _GRID_CACHE = {}           # w_min (float) -> (t, sw, m)
 _GRID_CACHE_MAX = 64
 _RESULT_CACHE = {}         # (method, seats, w.tobytes()) -> p
@@ -416,6 +420,106 @@ def _quadrature_win_probs(w, seats):
 
 
 # ---------------------------------------------------------------------------
+# optional GPU backend (Gate-1 amendment A-GPU-1; default OFF)
+# ---------------------------------------------------------------------------
+_GPU_MODULE = None
+
+
+def register_gpu_backend(module):
+    """Attach an optional accelerator backend (Gate-1 amendment A-GPU-1; default none).
+
+    The reference module stays independent (it imports nothing from ``eduengine``); the
+    backend is *injected* by :mod:`eduengine` when ``ATLAS_PL_BACKEND=gpu``. The injected
+    object must expose ``get_backend()``, ``set_backend(name)``, ``B_MAX`` and ``dp_batch``.
+    """
+    global _GPU_MODULE
+    _GPU_MODULE = module
+    return module
+
+
+def _get_gpu_module():
+    return _GPU_MODULE
+
+
+def pl_backend():
+    """Return the active Plackett-Luce backend: ``"cpu"`` (default) or ``"gpu"``."""
+    g = _get_gpu_module()
+    return g.get_backend() if g is not None else "cpu"
+
+
+def set_pl_backend(name):
+    """Select ``"cpu"`` (bit-identical reference, default) or ``"gpu"`` (amendment A-GPU-1).
+
+    The GPU backend is declared numerically equivalent to within max abs diff 1e-7 and is
+    **not bit-identical**; it is permitted for gate-grid / sensitivity runs only. Paper B's
+    preregistered primary computations must use the CPU path.
+
+    The GPU backend is registered by :mod:`eduengine` when ``ATLAS_PL_BACKEND=gpu`` is set
+    before import (see ``docs/gpu/INTEGRATION.md``); it is never imported by this module.
+    """
+    g = _get_gpu_module()
+    if g is None:
+        if str(name).strip().lower() == "cpu":
+            return "cpu"
+        raise RuntimeError(
+            "GPU backend requested but none is registered. Import the engine with "
+            "ATLAS_PL_BACKEND=gpu set (the package registers eduengine.contest_gpu), or call "
+            "eduengine.contest_math.register_gpu_backend(eduengine.contest_gpu) after checking "
+            "eduengine.contest_gpu.available()."
+        )
+    return g.set_backend(name)
+
+
+def _quadrature_inputs(wn, seats):
+    """The reference's float64 preprocessing for one call, shared by the CPU and GPU paths.
+
+    Identical to what ``_quadrature_win_probs`` builds: normalised weights, the Simpson grid in
+    ``u = log t``, and the float32 DP factors ``p_below = -expm1(-w t)``, ``q_above = exp(-w t)``.
+    """
+    n = wn.size
+    t, sw, m = _simpson_grid(float(wn.min()))
+    below = (seats - 1) <= (n - seats - 1)
+    d = max((seats - 1) if below else (n - seats - 1), 0)
+    ang = wn[:, None] * t[None, :]
+    PB = (-np.expm1(-ang)).astype(np.float32)
+    QA = np.exp(-ang).astype(np.float32)
+    return {"wn": wn, "t": t, "sw": sw, "m": m, "PB": PB, "QA": QA,
+            "below": below, "d": d, "sign": 1.0 if below else -1.0,
+            "offc": 0.0 if below else 1.0, "n": n, "seats": seats}
+
+
+def _gpu_dp(inputs, use_graph=True):
+    """Run the quadrature DP for a list of same-(n, seats) calls on the GPU; returns (B, n).
+
+    ``use_graph=True`` is for batches (one captured CUDA graph per shape — what makes the
+    port fast); single-call dispatch uses eager mode so a first call never pays a graph
+    capture and can stay inside the contract's 50 ms per-call target.
+    """
+    gpu = _gpu_backend()
+    out = np.empty((len(inputs), inputs[0]["n"]), dtype=np.float64)
+    for s in range(0, len(inputs), gpu.B_MAX):
+        chunk = inputs[s:s + gpu.B_MAX]
+        M1 = max(c["m"] + 1 for c in chunk)
+        out[s:s + len(chunk)] = gpu.dp_batch(
+            [c["wn"] for c in chunk], [c["PB"] for c in chunk], [c["QA"] for c in chunk],
+            [c["t"] for c in chunk], [c["sw"] for c in chunk],
+            n=chunk[0]["n"], d=chunk[0]["d"], below=chunk[0]["below"],
+            sign=chunk[0]["sign"], offc=chunk[0]["offc"], M1=M1, use_graph=use_graph)
+    return out
+
+
+def _gpu_backend():
+    """Return the contest_gpu module iff the GPU backend is currently selected, else None."""
+    g = _get_gpu_module()
+    if g is None:
+        return None
+    try:
+        return g if g.get_backend() == "gpu" else None
+    except Exception:                           # pragma: no cover
+        return None
+
+
+# ---------------------------------------------------------------------------
 # Monte-Carlo validation path
 # ---------------------------------------------------------------------------
 def pl_win_probs_mc(weights, seats, rng=None, n_mc=20000):
@@ -531,9 +635,14 @@ def _dispatch(weights, seats, method, rng, n_mc):
                 f"exact subset DP supports n <= {EXACT_MAX_N}; got n={n}"
             )
         else:
+            # Single calls stay on the CPU path: the contract's per-call target (<= 50 ms) and
+            # the declared-deviation boundary are defined on the reference algorithm, and a
+            # one-call GPU launch is not materially faster. The GPU backend accelerates only the
+            # batched tower (pl_win_probs_batch), which is where the engine's 9-point grid lives.
             p, n_nodes = _quadrature_win_probs(w, seats)
             info.update(method="quadrature", max_error_estimate=_QUAD_EST_ERR,
                         n_quadrature_nodes=n_nodes)
+        _STATS["single_calls"] = _STATS.get("single_calls", 0) + 1
         p = _renormalize_to_seats(p, seats)
         if abs(p.sum() - seats) > 1e-9:          # hard invariant (contract: <=1e-6)
             raise RuntimeError(
@@ -610,11 +719,65 @@ def pl_win_probs_detail(weights, seats, method="auto", rng=None, n_mc=20000):
 
 
 # ---------------------------------------------------------------------------
+# batched public API (independent calls; the engine's 9-point tutoring grid)
+# ---------------------------------------------------------------------------
+def pl_win_probs_batch(weights, seats, method="auto"):
+    """Win probabilities for ``B`` independent calls, optionally on the GPU in one batch.
+
+    Parameters
+    ----------
+    weights : array_like, shape (B, n)
+        One weight vector per independent call. Rows must share ``n`` and ``seats``
+        (the engine's tutoring grid varies only ``prep_stock``, so this holds).
+    seats : int
+        Number of winners (shared by all rows).
+    method : {"auto", "exact", "mc"}
+        Same semantics as :func:`pl_win_probs`. The GPU backend accelerates ``"auto"``
+        with ``n > AUTO_EXACT_N``; every other case falls back to the per-row CPU path.
+
+    Returns
+    -------
+    numpy.ndarray, shape (B, n)
+        ``P[b] = pl_win_probs(weights[b], seats)`` up to the active backend's declared
+        equivalence: bit-identical on ``"cpu"`` (default), max abs diff <= 1e-7 on ``"gpu"``.
+    """
+    _check_method(method, ("auto", "exact", "mc"))
+    W = np.asarray(weights, dtype=np.float64)
+    if W.ndim != 2:
+        raise ValueError("pl_win_probs_batch expects a 2-D (B, n) array of weights")
+    B, n = W.shape
+    if B == 0:
+        return np.zeros((0, n), dtype=np.float64)
+    seats = _as_seats(seats, n)
+    gpu = _gpu_backend()
+    if gpu is None or method != "auto" or seats <= 0 or seats >= n or n <= AUTO_EXACT_N:
+        _STATS["batch_rows"] = _STATS.get("batch_rows", 0) + B
+        _STATS["batch_road"] = _STATS.get("batch_road", 0) + (0 if gpu is None else 1)
+        return np.stack([np.asarray(pl_win_probs(W[b], seats, method=method), dtype=np.float64)
+                         for b in range(B)])
+    inputs = []
+    for b in range(B):
+        wn = np.maximum(_normalized_weights(W[b]), _QUAD_W_FLOOR)
+        inputs.append(_quadrature_inputs(wn, seats))
+    P = _gpu_dp(inputs)
+    _STATS["batch_rows"] = _STATS.get("batch_rows", 0) + B
+    _STATS["batch_calls"] = _STATS.get("batch_calls", 0) + 1
+    return np.stack([_renormalize_to_seats(P[b], seats) for b in range(B)])
+
+
+# ---------------------------------------------------------------------------
 # deterministic realisation from caller-supplied uniforms
 # ---------------------------------------------------------------------------
 def pl_stats():
-    """Return (and leave untouched) the cache statistics dict (task-12 observability)."""
-    return dict(_STATS)
+    """Return (and leave untouched) the cache statistics dict (task-12 observability).
+
+    Also includes the GPU backend's counters when a backend is registered.
+    """
+    out = dict(_STATS)
+    g = _get_gpu_module()
+    if g is not None:
+        out["gpu"] = g.stats()
+    return out
 
 
 def pl_realize(weights, seats, u):

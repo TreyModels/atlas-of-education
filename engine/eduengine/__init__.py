@@ -28,3 +28,14 @@ def build(modules, **params):
 
 # Optional read-only planning comparison; importing does not require Node.
 from .planning import audit as planning_audit
+
+
+# Optional GPU backend for the Plackett-Luce quadrature (Gate-1 amendment A-GPU-1).
+# Default OFF and torch-free: only registered when ATLAS_PL_BACKEND=gpu at import time.
+import os as _os
+
+if _os.environ.get('ATLAS_PL_BACKEND', 'cpu').strip().lower() == 'gpu':
+    from . import contest_gpu as _contest_gpu
+    from . import contest_math as _contest_math
+    if _contest_gpu.available() and _contest_gpu.warmup():
+        _contest_math.register_gpu_backend(_contest_gpu)

@@ -338,14 +338,21 @@ class TutoringMarket(Module):
                     # --- explicit proportional grid over each child's own [0, e_hi] (one batched call/point)
                     U_grid = np.full((_PREP_GRID.size, len(sub)), -np.inf)
                     act = np.flatnonzero(active)
+                    # One batched probability call for the whole grid. Each point is an
+                    # independent evaluation of the same deterministic function, so this is
+                    # exactly equivalent to the per-point loop; on the GPU backend (amendment
+                    # A-GPU-1) it becomes a single batched kernel instead of 9 sequential calls.
+                    _Ws = []
                     for gi, frac in enumerate(_PREP_GRID):
                         e_try = frac * e_hi
                         over = np.where(active, prep_col + pos_share * e_try, prep_col)
-                        w = self._weights_with_override(E, m_, pids_full, w_full, sub, over)
-                        Pall = _pl_win_probs(w, seats_eff, method=method)
-                        prob_evals += 1
+                        _Ws.append(self._weights_with_override(E, m_, pids_full, w_full, sub, over))
+                    _Palls = _pl_win_probs_batch(_Ws, seats_eff, method=method)
+                    prob_evals += len(_Ws)
+                    for gi, frac in enumerate(_PREP_GRID):
+                        e_try = frac * e_hi
                         # candidate order in w_full corresponds to the candidate mask; select sub positions
-                        Psub = self._p_sub(Pall, sub, cand_mask)
+                        Psub = self._p_sub(_Palls[gi], sub, cand_mask)
                         U_grid[gi, act] = (dV[act] * Psub[act] + learn_value[act] * e_try[act]
                                            - cost_norm[act] * e_try[act])
                     best_j = np.argmax(U_grid, axis=0)
@@ -548,4 +555,30 @@ def _pl_win_probs(weights, seats, method='auto'):
         total = float(P.sum())
         if total > 0.0:
             P = P * (seats / total)
+    return P
+
+
+def _pl_win_probs_batch(weight_rows, seats, method='auto'):
+    """Batched form of :func:`_pl_win_probs` for the 9-point prep grid.
+
+    Delegates to ``contest_math.pl_win_probs_batch``, which is bit-identical to the per-point
+    loop on the default CPU backend and uses one GPU batch under amendment A-GPU-1. The same
+    documented seat-sum renormalisation is applied per row.
+    """
+    try:
+        from ..contest_math import pl_win_probs_batch
+    except ImportError as exc:  # pragma: no cover
+        raise RuntimeError(
+            "tutoring.py: eduengine.contest_math.pl_win_probs_batch is required for the batched "
+            f"contest expected probability (contract §1.3/§6); import failed ({exc})."
+        ) from exc
+    W = np.asarray(weight_rows, dtype=float)
+    if W.ndim != 2 or W.shape[0] == 0:
+        raise ValueError("_pl_win_probs_batch expects a non-empty (B, n) weight array")
+    P = np.asarray(pl_win_probs_batch(W, seats, method=method), dtype=float)
+    seats = int(min(max(int(seats), 0), P.shape[1]))
+    if seats > 0 and P.shape[1]:
+        totals = P.sum(axis=1)
+        scale = np.where(totals > 0.0, seats / np.where(totals > 0.0, totals, 1.0), 1.0)
+        P = P * scale[:, None]
     return P
