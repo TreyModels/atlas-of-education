@@ -249,3 +249,13 @@ of runner+workers only, `/root/work/modelrev/pkg` intact. Its outputs are alread
   NOT touched. Host now dedicated to the authoritative Gate-1 540 (6 workers, clean `98baf6b`), which was ~50 % done
   at 3,756 core-s; ETA improves to **~15:22–15:25**. Box stays at 10/10 (commander 540×6, qa DGP×3, contest task-9×1,
   controller-owned); no oversubscription. qa's P0 deliverable unaffected (box run continues; appeal route noted).
+
+- 2026-11-25T15:26+08:00 · Commander · **Host 540 incident + restart.** First authoritative host 540 attempt
+  (6 workers, 14:56) finished all worker compute but **hung in the ProcessPool completion/aggregation phase**
+  (no output file, 0 % CPU, workers gone); killed at 15:26, no partial results (runner writes only at end). Relaunched
+  the FULL 540 on the now-free host at **8 workers, chunksize 2**, same clean `98baf6b` tree/config, started 15:26 →
+  ETA **~15:43–15:46**. Box cross-env 540 (controller) remains backup ETA ~15:54. Fallback if repeat hang: robust
+  chunked driver / 54-run 3-seed subset, clearly labelled. Incident = runner orchestration, not model; recorded as a
+  wave-2 residual risk. Also recorded compute-controller profile: repaired engine ~20–39× slower than legacy, 92.7 %
+  of runtime in `contest_math` PL quadrature (19.82 s HK Baseline run), task-12 optimisation assigned to
+  contest-math; Gate-2/3 compute budget implication for the Gate-1 report.
