@@ -91,3 +91,38 @@ evidence**. This directly addresses the G2-A caveat (one-seed rank 4/4 unstable,
 | # | date | change | reason |
 |---|---|---|---|
 | — | 2026-11-25 | initial registration before launch | operator directive |
+
+## 5. Addendum A1 — adjudication fold-in and budget (before launch, 2026-11-25)
+
+**Authority:** adjudication `32718ba` (`AUDIT_VERDICT.md`, `PAPER_A_VERIFICATION.md`, `PAPER_B_ADJUDICATION.md`,
+`paper_claims.csv`). Legacy manuscript numbers are the **AUTHOR-REPORTED BASELINE**; the repaired runs are the
+**NEW GENERATION**; nothing below implies reproduction of Gemini.
+
+**Paper A baseline labels:** 4 **VERIFIED EMPIRICAL** (E8 block only: +12.44 impact, +25.26 post, RI p 9.999e-05 /
+5.999e-04, gender −3.94 [−8.72, +0.29]); 20 AUTHOR-REPORTED; 8 **CONTRADICTED even as baseline** (flat pre-trends,
+gender-IV, theorem 7/7, condition-number identification, out-of-sample validation, legacy DGP/ABC). The E8 empirical
+block may be used as an external comparator only, with its cited provenance; the contradicted items may not be cited.
+
+**Paper B baseline labels:** 8 REPRODUCED (540-generation only); 18 AUTHOR-REPORTED (420 tables); 14 CONTRADICTED —
+every policy headline reverses/dissolves under the repaired/540 work (tax backfires→spend falls; wage compression
+regressive→falls; CF1b→fails spend; CF4a→Win-Win both; CF4b fails; CF3b passes). Old 420/540 tables remain visible
+as baseline only.
+
+**Reimplementation budget (used for scheduling):** (a) E8 fresh-vintage event study — READY, ~1–2 CPU-h; (b) bulge t*
+— **DATA-BLOCKED** (needs fresh hashed WDI/UIS + L_primary; not launched); (c) gate architecture ≥5,000 runs —
+**43–60 CPU-h** (≈5.5–7.5 h at 8 workers); (d) multi-seed Jacobian — ~2–6 CPU-h; (e) forecast with held-out —
+1–3 CPU-h. Combined A-side ≈47–71 CPU-h; scheduled after/alongside Paper B (26 CPU-h for 2,700 runs).
+
+**Prereg review gate (binding, from AUDIT_VERDICT §4C):** reject any design that (i) keeps the rank-4/6
+advertised-moment structure without a rank audit, (ii) leaves the empty G12×urban cell / omits school IDs (the
+"smarter Paper A" must use a crossed grade×urban population with school random effects), (iii) uses the pooled
+selftest instead of FE + WCR/whole-trajectory bootstrap, or (iv) uses country-block permutation (within-invariant
+under FE). The Gate-2 design uses crossed synthetic populations with school IDs (per P0-03), FE + wild-cluster /
+whole-trajectory bootstrap (per P0-04/05), and multi-seed Jacobians — these are recorded as *satisfied by design*.
+
+**Publishability (recorded):** neither manuscript is submittable; Paper A → E8 empirical short + measurement
+conjecture after (c)–(e); Paper B → methods/negative paper after Gate-2/3. No citation of 420 tables, H2 numbers,
+theorem, simulator RMSE, t* null, or GPU/ABC outputs.
+
+**Label rule for anything launched before this addendum:** EXPLORATORY; re-reported under the preregistered label
+once the addendum is committed. This addendum commits before the Paper B launch.
