@@ -43,9 +43,9 @@ Codex column: Codex is the independent auditor; it did not run a competing Paper
 | (d) | 5-param core rank / cond | 5/5; 14.41 | *fill* | *fill* | same |
 | (d) | +income micro-moments | 6/7; 3435.49 | *fill* | *fill* | local rank only |
 | (d) | +income +school-quality | 7/7; 43.81 ("full identifiability") | *fill* | *fill* | independent affiliated computation gives **local 5/5**, not 7/7; do not claim global |
-| (e) | Forecast 7-horizon RMSE | 5.13 / 4.68 pp vs persistence 23.93 | **EXPLORATORY-INVALID — RERUN REQUIRED; do not cite** | *not-comparable* | calibration bisection misframed → zero-effect artefact |
-| (e) | Forecast impact ATT | +11.60 / +13.48 pp | **EXPLORATORY-INVALID — do not cite** | *not-comparable* | rerun required |
-| (e) | Calibration | fee_public=.150 on 74.88 % pre-GER; zero post fitting | **EXPLORATORY-INVALID — do not cite** | *not-comparable* | rerun with documented training-only calibration |
+| (e) | Forecast 7-horizon RMSE | 5.13 / 4.68 pp vs persistence 23.93 | **v1 INVALID — runner/calendar-year bug fixed; rerun pending; do not cite v1** | *not-comparable* | runner used simulation index `T0` as `events.year`; event never fired; zero-effect artefact, not model failure; engine fix `846c9e0`; expected ≈ +17 pp at e=+1 → ≈ +25 pp at e=+6 |
+| (e) | Forecast impact ATT | +11.60 / +13.48 pp | **v1 INVALID — do not cite; rerun pending** | *not-comparable* | runner defect fixed; expected numbers to be measured |
+| (e) | Calibration | fee_public=.150 on 74.88 % pre-GER; zero post fitting | **v1 INVALID — do not cite; rerun pending** | *not-comparable* | runner defect fixed; fee grid bracketed 74.88 % (≈59 % at 0.15, ≈84 % at 0) but calibration not yet rerun |
 
 ---
 

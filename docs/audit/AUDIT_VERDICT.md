@@ -256,7 +256,7 @@ and sensitivity. Full plan: `docs/audit/PAPER_A_REPRODUCTION_ATTEMPT.md` (reimpl
 | (b) | Delayed secondary-bulge `t*` | fresh hashed WDI; `t* = abolition + SE.PRM.DURS`; outcome SE.SEC.ENRR; 2,500 perms/scheme | **DONE (fresh WDI)** — ATT at `t*` **−0.956 pp**, post +0.30, Fisher p **0.251 / 0.384** → **no detectable secondary-bulge jump**; **UNRESOLVED** (no-effect evidence), consistent with the manuscript's honest-null framing |
 | (c) | Gate-architecture / H2 (≥5,000 runs) | repaired `98baf6b`; pre-registered gate kinds/grid; ≥5,000 runs; H2 with seed CIs | **DESIGN READY / RUN PENDING** — ~43–60 CPU-h |
 | (d) | Multi-seed identifiability/Jacobian | explicit 3-option MNL; analytic Jacobian; rank/null across seeds; two-moment remedy; local-only | **DESIGN READY / MODEL SPEC NEEDED** — ABC harness is the template |
-| (e) | Fee-abolition forecast with held-out | training-only calibration; e=+5/+6 holdout; ≥40 seeds | **EXPLORATORY-INVALID — RERUN REQUIRED** — the calibration bisection was misframed and produced a zero-effect artefact; **no citable numbers** |
+| (e) | Fee-abolition forecast with held-out | training-only calibration; e=+5/+6 holdout; ≥40 seeds | **v1 INVALID — RUNNER DEFECT IDENTIFIED AND FIXED; RERUN PENDING** — runner used simulation index `T0` as `events.year` vs engine calendar years, so the event never fired (`event_log==[]`) and the arm was bit-identical to persistence (zero-effect artefact, not a model failure); engine fix `846c9e0` (`_validate_events`, `E.unfired_events`, `year_t`; numerics unchanged; new core sha `e111397b…`); expected ≈ +17 pp at e=+1 → ≈ +25 pp at e=+6, to be measured |
 
 **New-generation E8 empirical result (fresh hashed WDI, label `REPRODUCED EMPIRICAL ANALYSIS`):** **both the
 impact and the delayed amplification replicate under the author's estimator family.** CS-style group-time ATT
@@ -270,8 +270,9 @@ secondary-bulge jump**, recorded as **UNRESOLVED** (no-effect evidence), consist
 framing. Artefacts: `docs/audit/CS_ESTIMATOR_NEWGEN.md` (sha256 `04faf9dc…b196`),
 `results/audit/newgen/cs_estimator_fresh_wdi_2026-11-25.json` (sha256 `4ac9551d…1905`),
 `docs/audit/E8_BULGE_NEWGEN.md` (sha256 `97734cdc…`), WDI manifest sha256
-`d7296e1fed3eb6806ba5111de2538e7fcd206323832307a1fabeeaefc6c55ee4`. **Forecast (e) is exploratory-invalid and must
-be re-run; no numbers from it are citable.**
+`d7296e1fed3eb6806ba5111de2538e7fcd206323832307a1fabeeaefc6c55ee4`. **Forecast (e) v1 numbers are invalid for citation because of a runner/calendar-year bug (not a simulator
+shortcoming); the engine defect is fixed (`846c9e0`) and the rerun is pending; expected ≈ +17 pp at e=+1 → ≈ +25 pp
+at e=+6 vs persistence, to be measured.**
 
 **Paper B:** the **420 design is AUTHOR-REPORTED BASELINE** (runner/raw output not found where searched; docx tables
 == self-reported JSON). The **540 is reproduced** — scripts/data in hand (`hk_korea_exact_bundle.zip` /
@@ -341,9 +342,8 @@ procedures unchanged, or if it claims global identification from a local rank, o
 | UNRESOLVED | **6** (3 A, 0 B, 3 programme) | A-31 replication inventory; A-36 bulge `t*` (no-effect evidence); A-37 forecast (exploratory-invalid, rerun required); canonical spec/Gate-2; GPU quarantine |
 
 The machine-readable one-row-per-claim record is `results/audit/paper_claims.csv` (103 rows; sha256
-`a974b3ef865934ce4d34c5dff49e3a4f0052cb2ae38c4fe47bece90ef020c07c`). The Lead-defined new-generation labels **REPRODUCED EMPIRICAL ANALYSIS** and
-**UNRESOLVED / ESTIMATOR-DEPENDENT** are used for the fresh-WDI E8 rows; all other rows use the verbatim six-status
-taxonomy.
+`197852d6c302d4c0c783f676456547a0bb7260a618869ba820fa8fc043bcf74e`). The Lead-defined new-generation label **REPRODUCED EMPIRICAL ANALYSIS** is used for the fresh-WDI E8 rows; all
+other rows use the verbatim six-status taxonomy.
 
 ---
 
@@ -358,7 +358,7 @@ gate1c), archived in `/root/work/cmd/engine`. File hashes (`docs/audit/canonical
 
 | file | sha256 |
 |---|---|
-| `engine/eduengine/core.py` | `72cbddf7d97db85269081ae1c8ab692153c27b0553d4ce59691beab20bbfcb99` |
+| `engine/eduengine/core.py` | `72cbddf7…` **(the repaired 540 was run on this hash)**; a later validation-only fix `846c9e0` gives `e111397bd8a50f94e82bb77715f236ee3d5c0bf863a23d84afdf1c6c71fa8e71` — numerics unchanged (118-series identical), canonical spec re-pin pending |
 | `engine/eduengine/rng.py` | `ada4a760d75a14f4d82a8aaf70964dee6a2f7f4130d53018ad190fafa4920b08` |
 | `engine/eduengine/contest_math.py` | `23a01730bf939a9e22befa3ca395094a48c5e870fb10901ceb015cddd793a3c8` |
 | `engine/eduengine/modules/labour.py` | `0ccfb3ce5b4c88fc2969909dbdbbc4d32184052fe5359688f96e00c2667b3f7d` |
@@ -420,8 +420,11 @@ run failed twice in the pool-completion phase; the box run is the labelled sourc
   check beside the CS-style result.
 * **The bulge `t*` is a no-effect result on fresh data** (ATT −0.956 pp; Fisher p 0.251/0.384) — **UNRESOLVED**
   (no-effect evidence), consistent with the manuscript's honest-null framing; not a contradiction.
-* **The forecast (Exp 5) is exploratory-invalid** (misframed calibration bisection → zero-effect artefact):
-  **do not cite its numbers**; re-run before any forecast claim.
+* **The forecast (Exp 5) v1 numbers are invalid for citation**: a **runner/calendar-year bug** (simulation index
+  `T0` used as `events.year`; the engine matches `start_year + t`) meant the abolition event never fired and the arm
+  was bit-identical to persistence — **not a simulator shortcoming**. The engine defect (unreachable event = silent
+  no-op) is fixed in `846c9e0`; the rerun is pending, expected ≈ +17 pp at e=+1 → ≈ +25 pp at e=+6 vs persistence.
+  **Do not cite v1 numbers.**
 * Not publishable: the identifiability "theorem", the 1,640-run H2 experiment, the simulator forecast, Table 3, and
   the causal framing; the one independent recomputation contradicts the headline identifiability numbers.
 * Salvage plan: **Paper A1** = short empirical paper on the **abolition impact**, with the estimator-dependence of the
@@ -448,8 +451,11 @@ simulator RMSE, the `t*` null, the Paper B counterfactual tables, or any GPU/ABC
 
 ## 7. Required sequence before any submission or citation
 
-1. **Freeze the canonical spec** (operator decision; recommended 540 parameterisation on the repaired engine with
-   explicit `GATE_SPECS`, 420 documented as alternative). `GATE2_PLAN.md` §1/§1b.
+1. **Freeze/re-pin the canonical spec** (operator decision; recommended 540 parameterisation on the repaired engine
+   with explicit `GATE_SPECS`, 420 documented as alternative). **Re-pin to engine commit `846c9e0` / `core.py`
+   `e111397b…`** after the mid-run-calendar-event fix (numerics unchanged vs `98baf6b`, 118-series identical), and
+   record the `E.unfired_events == []` assertion for every forecast/event arm. `GATE2_PLAN.md` §1/§1b;
+   `ENGINE_MIDRUN_EVENTS.md`.
 2. **Finish runner hardening** (`task-13`) so a Gate-2 campaign cannot lose a run.
 3. **Gate-2 calibration** against the benchmark registry only (sourced moments; derived targets marked; KR 2025
    held out; no target without a source). Report the residual honestly — gap/ratio and, especially, participation.
