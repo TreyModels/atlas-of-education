@@ -21,7 +21,7 @@ import warnings
 import numpy as np
 from scipy.special import ndtr
 
-from .contest_math import pl_win_probs, pl_realize
+from .contest_math import pl_win_probs, pl_win_probs_batch, pl_backend, pl_realize
 from .rng import EventRNG
 
 CORE_DEFAULTS = dict(
@@ -503,8 +503,13 @@ class Engine:
         rng = None
         if method == 'mc':                      # validation-only path (never the default decision path)
             rng = self.rng.mc_rng(self.p['contest_prob_seed_offset'])
-        P = np.asarray(pl_win_probs(w, seats, method=method, rng=rng,
-                                    n_mc=int(self.p['contest_prob_mc'])), float)
+        if method != 'mc' and pl_backend() == 'gpu':
+            # GPU backend (Gate-1 amendment A-GPU-1): one-row batch through the same declared-equivalent
+            # path that serves the tutoring grid, so the GPU engine is reused instead of rebuilding.
+            P = np.asarray(pl_win_probs_batch(w[None, :], seats, method=method)[0], float)
+        else:
+            P = np.asarray(pl_win_probs(w, seats, method=method, rng=rng,
+                                        n_mc=int(self.p['contest_prob_mc'])), float)
         if P.shape != (n,):
             raise ValueError(f'contest probability module returned shape {P.shape}, expected ({n},)')
         if seats > 0:
