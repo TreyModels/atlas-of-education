@@ -924,3 +924,16 @@ Lead + Commander both confirmed the current single run is the **authoritative** 
   shutdown/poweroff; the power-down is by the Lead finalizer after the puller signal (recorded for provenance).
 - **Measured 00:01:14:** 54/288 rows (18.8 %), 7 workers, cgroup **7.0/10**, rate **4.09 rows/min** (26→54 over 6.85 min)
   → **ETA ~00:55–01:00** for 288 rows, to be re-baselined at each boundary.
+
+### 13.38 ⚠ STATE CHANGE 00:40 — 10-worker relaunch replaced the confirmed 7-worker screening run (not acted on)
+
+Sensor fact at 00:41:14: the confirmed **7-worker driver 50226 is gone**; a **new 10-worker driver 57751** is running
+`run_paperC_screening.py driver --workers 10 --seeds 0-7 --n 600 --t 46 --analysis-commit dc90ee5… --out-dir
+/root/work/paperC/screen_final`, launched **00:40:22** (wrapper 57750), log **`screen_final_10w.log`** — **same out-dir** as
+the authoritative run. Progress **189/288 rows (65.6 %)**, 25 cell files, completed cells 8/8 seeds, **no duplicate rows**
+(checkpoints resumed cleanly). 10 workers at ~99 %, **cgroup 100 % (9.97/10)** ⇒ the 3 cores deliberately held for
+Opis/Opus are now consumed. Finalizer still waiting (no RESULTS_DONE/SHUTDOWN_OK).
+This **contradicts the confirmed intended state** in §13.37 (7 workers, no relaunch) and the commander's confirmation —
+either a new order not copied to this scheduler, or an unauthorised relaunch. **Scheduler took no action** (no kill, no
+relaunch, no move, no cleanup); reported to Lead at 00:42 and asked which run is authoritative. ETA to be measured and
+published once the Lead confirms the authoritative run.
