@@ -1,0 +1,62 @@
+{
+ "baseline": {
+  "path": "results/audit/paper_claims.csv",
+  "sha256": "b50c9f36a0f34c42852ae8f76585d45734f204d699937d22b1b357db6dad892a",
+  "rows": 127,
+  "unique": 127
+ },
+ "ledger": {
+  "path": "docs/audit/LEMMA_LEDGER.csv",
+  "sha256": "2278f7d49439eb25e74aa716c8de42b416fc4135cd3315d12d242b050e80694c",
+  "rows": 126,
+  "unique": 126
+ },
+ "lean_dir": "verification/lean",
+ "checks": [
+  {
+   "id": "R1",
+   "status": "PASS",
+   "detail": "127 claims, 127 unique; duplicate ids=[]"
+  },
+  {
+   "id": "R5",
+   "status": "PASS",
+   "detail": "ledger rows=126 duplicate ledger ids=[]; Lean declaration names=60 duplicated=[]"
+  },
+  {
+   "id": "R4",
+   "status": "FAIL",
+   "detail": "claims missing from ledger=['X-28']; ledger ids not in claims=[]"
+  },
+  {
+   "id": "R2",
+   "status": "FAIL",
+   "detail": "declared=18 explicit-not-yet=109 missing declaration/not-yet=[] rows not exactly one=[('X-28', 0)]"
+  },
+  {
+   "id": "R3",
+   "status": "PASS",
+   "detail": "0 code `sorry` occurrence(s) after stripping comments/docstrings; silent/untracked=[]"
+  },
+  {
+   "id": "R6",
+   "status": "PASS",
+   "detail": "in-Lean claimLedger rows=18 (CSV declared=18); mismatches=[]"
+  },
+  {
+   "id": "R7",
+   "status": "FAIL",
+   "detail": "declared rows with notYetLemmatised status=['D-04'] (status/declaration inconsistency)"
+  }
+ ],
+ "missing": [],
+ "orphans": [],
+ "duplicates": [],
+ "silent_sorry": [],
+ "ledger_mismatch": [],
+ "code_sorry_count": 0,
+ "inlean_rows": 18,
+ "declared_but_notyet": [
+  "D-04"
+ ]
+}

@@ -7,10 +7,12 @@
 earlier "box powered off" note: the box is **up and busy** on the current instance
 (`ssh -p 36934 root@connect.nmb2.seetacloud.com`); the powered-off entry in `box_lease.jsonl` was the
 previous instance. Read-only inspection (2026-11-25 ~20:56–21:00) shows the Pilot-0 process 37049 running
-with `--workers 2`, writing `/root/work/paperC/results`; at snapshot there were **2/16 cells with 2/8 seeds
-each (4 of 128 runs)** and **no `paperC_pilot0_results.json` payload yet** (the payload is written only at
-driver completion). Per-run cost ~4–5 min on 2 workers ⇒ ETA for 128 runs is ~10 h, so a complete `results`
-/`results_v3` payload is **not imminent**. Box CPU is shared with the gate grid (~96 %), which explains the
+with `--workers 2`, writing `/root/work/paperC/results`; at the first snapshot there were **2/16 cells with 2/8 seeds
+each (4 of 128 runs)**; a later check (24 min elapsed) shows the same 2 cells at **6/128 rows**
+(≈0.25 rows/min) and there is **still no `paperC_pilot0_results.json` payload** (the payload is written only at
+driver completion). Per-run cost ~4–5 min on 2 workers (only 2 cell workers launched) ⇒ ETA for 128 runs is
+**~8–10 h**, so a complete `results`/`results_v3` payload is **not imminent**; no `results_v3`
+directory exists yet. Box CPU is shared with the gate grid (~96 %), which explains the
 slow throughput. When the payload lands, run:
 
 ```
