@@ -17,7 +17,8 @@ Box-side ledger with PIDs/hashes: `/root/work/compute/ledger/COMPUTE_LEDGER.md` 
 | current utilization | **6.5 / 10 CPU (65 %)** at 15:25:04 — `cmd` 540 (6 workers, 36.7 % done) only; qa task-8 ✅ done, qa 2nd seed band + contest-math task-12 allocation issued, waiting on lane launches |
 | band check | 90 % is **inside** the 8.5–10.0 target band; hard worker cap respected (see §3b for the withdrawn 540→8 proposal); `loadavg` 18.8 is host-wide and is not our container (see §2) |
 | headline | **Gate-1 AFTER invariant suite is GREEN on the declared stack** (box replication: 27 passed in 56.73 s, 5 workers) |
-| ETA (controller box 540) | 540 × ~31 CPU-s/run ÷ 6 workers ≈ 47 min from 15:07:45 → **~15:55**, now with the full 6 cores (legacy ended) |
+| ETA (controller box 540) | 540 × ~31 CPU-s/run ÷ 6 workers ≈ 47 min from 15:07:45 → **~15:54:30**, now with the full 6 cores (legacy ended) |
+| box 540 backup status | **64.0 % at 15:38** (10,746/16,794 CPU-s), ETA **~15:54:30**; host authoritative ETA ~15:43–15:46 (commander, relaunched 15:26 at 8 workers after a first-attempt aggregation hang). **Fallback rule: any subset fallback must be explicitly LABELLED (e.g. "54-run 3-seed subset") — never a silent partial.** |
 | driver resolution | legacy "relaunch loop" = box-side **`run_parts.sh`**, a finite 4-part script (not an infinite watcher); killed 7×, re-issued by an external agent session within 5 s each time; current instance is being **allowed to finish** (§7) |
 | ETA (commander host 540) | authoritative run; host is ≈2× faster per run (Apple core vs Xeon) → ≈22–25 min from 14:55 → ~15:17–15:20 |
 | ETA (qa task-7 DGP) | **not yet launched**; provisional 100 populations × ~1 engine run ≈ 100 × 31 CPU-s = 0.86 CPU-h → ~9 min at 6 workers / 17 min at 3 workers (to be replaced by a measured pilot) |
@@ -87,7 +88,9 @@ no output progress for >10 min is messaged and flagged; any box job must report 
 | J-04 | task-11 harness/manifest/ledger box proof | audit-runner | 1 | 15:00:49 | ✅ DONE 15:00:52 | 3 s wall | done | `/root/work/audit/p07_box_evidence.tar.gz`, 18/18 PASS |
 | J-05 | task-7 synthetic DGP (500 pops = 5 configs × 100, 20k draws × 16 moments, pure NumPy ABC, **0 engine runs**) | qa-verifier | 3 | 15:10:40 | ✅ **DONE ~15:18** | measured: 500 pops / ~7.3 min @3w = **2.6 CPU-s/pop, 1.14 pops/s aggregate** | done | `/root/work/qa/full_out` (6 artifacts, sha256 in ledger: accepted_draws `62fa1b4b…`, posterior_predictive `0cf9ce27…`, summary `698649f6…`) |
 | J-06 | task-8 bootstrap factorial | qa-verifier | 4 | 15:22 | ✅ **DONE** | 70.21 s wall; FE size 0.052–0.062 across confounding; pooled size 0.996–1.000 (OVB); permutation invariance 6.66e-16; shipped stats reproduced | done (commit `01cb4d3`) | `/root/work/qa/bs_out`: parquet sha256 **`41c62895…9216ebf`**, summary sha256 **`e266710d…755ab6d13`** |
-| J-08 | **second independent DGP seed band** (Lead-approved) | qa-verifier | 2 | 15:25:12 | **RUNNING** (PIDs 16670 + 16672, 16673; `--seed 20261126`) | 2.6 CPU-s/pop → 500 pops ≈ 1,300 CPU-s | ~15:36–15:38 | `/root/work/qa/band2_out` |
+| J-08 | **second independent DGP seed band** (Lead-approved) | qa-verifier | 2 | 15:25:12 | ✅ **DONE ~15:36** | 2.6 CPU-s/pop; 6 artifacts in `band2_out` | done | `/root/work/qa/band2_out` |
+| J-10 | **third independent DGP seed band** (Lead-approved filler) | qa-verifier | 2 | 15:36:5x | **RUNNING** (driver 17845, workers 17847–17848, `--seed 20261127`) | 2.6 CPU-s/pop → ~1,300 CPU-s | ~15:47–15:48 | `/root/work/qa/band3_out` |
+| J-09b | task-12 bench/optimisation of `contest_math.py` | contest-math | 2 (1 bench proc + 1 reserved) | 15:35:05, patch `191de03` | **BENCH RUNNING** (PID 17640 `contest_math_bench.py`; 2 earlier bench attempts crashed in the end-to-end section on box paths, being fixed) | equivalence PASS (130 fixtures, max diff **1.40e-15** ≤1e-12); determinism bit-identical; **cold-path 0.97–1.21×**, **memoised/LRU-hit path ~0.02 ms/call**, 9-call batch group not yet faster (0.87×) | end-to-end CPU-s/run pending | `/root/work/contest/box_out/perf_bench*.log` |
 | J-09 | **task-12 optimisation of `contest_math.py`** (Lead-approved; owner = contest-math, not engine-core) | contest-math | 2 → 4 when qa finishes | queued (asked 15:25) | pending claim/launch | benchmark 1 HK run = 20.3 CPU-s baseline; profile: 92.7 % in PL quadrature | target 2–5×; report CPU-s/run before/after | `/root/work/contest` |
 | J-07 | task-9 general-r Tulloch validation | contest-math | 1 (analytic) | blocked on J-03 | queued | ~200 PL calls × 14–49 ms ≈ 3–10 s | <1 min | `/root/work/contest` |
 
@@ -223,7 +226,8 @@ e1ce873a0a106b9632fae97cf923ab6432ebc6e32043f64fb501d8c93ec9025b  results/policy
 | 15:20:55 | 28.4 | **7.0** (70 %) | 540 6 + profiling 1 | profiler pilot done: 92.7 % of a run = PL quadrature |
 | 15:25:04 | 16.3 | **6.5** (65 %) | 540 6 | qa task-8 ✅ done; waiting on qa band-2 + contest-math task-12 launches to return to 10/10 |
 | 15:33:05 | 23.6 | **8.0** (80 %) | 540 6 + qa band-2 2 | contest-math task-9 + task-12 baseline probe finished; task-12 patch being coded (bursts will use its 2 reserved slots) |
-| 15:36–15:54 (projected) | — | **60–100 %** | 540 6 + bursts | band-2 ends ~15:36 → box at 60 % unless qa runs a third band or contest-math's after-patch benches sustain; 540 completes ~15:54 |
+| 15:37:49 | 21.1 | **8.1** (81 %) | 540 6 + band-3 2 | band-2 done; band-3 (`--seed 20261127`) running; task-12 bench partial (equivalence PASS) |
+| 15:47–15:54 (projected) | — | **60–80 %** | 540 6 + task-12 bursts | band-3 ends ~15:47; contest-math after-patch pairs are bursts; 540 completes ~15:54:30 → then box idle unless new work is assigned (recorded idle slot) |
 
 Band discipline: flag **<7** idle (fill from queue), **>11** oversubscribed (throttle the lowest-priority lane).
 `loadavg` is host-wide and is reported only because it was the issued metric; the cgroup number is the truth.
@@ -253,6 +257,16 @@ Band discipline: flag **<7** idle (fill from queue), **>11** oversubscribed (thr
    `loadavg` misleads by construction; do not substitute it for cgroup numbers.
 6. **Lane over-cap / stalled-job policy**: message the lane, record here, rebalance. None so far. The only
    over-cap event of the day was the legacy tenant (8 workers on a 10-CPU box, repeatedly).
+7. **Programme-level findings from compute work today** (Lead asked these be explicit; both handed to commander):
+   (a) **task-8 size control is decisive** — FE size 0.052–0.062 vs **pooled size 0.996–1.000 under a zero-effect
+   null**, i.e. the pooled estimator over-rejects at ~100 %, exactly the OVB the external audit identified;
+   permutation within-invariance 6.66e-16 confirms the within algebra numerically; shipped/auditor statistics
+   reproduced exactly. (b) **92.7 % of repaired-engine runtime is one function** (`contest_math` PL quadrature) →
+   Gate-2/Gate-3 budget consequence + optimisation target, assigned as task-12.
+8. **task-12 measurement caveat (in flight):** the patch gives huge wins only on the **memoised/cached** path
+   (~0.02 ms vs ~35–124 ms cold); **cold-path is only 0.97–1.21×** and the 9-call batch group was *slower* (0.87×)
+   in the first benchmarks. End-to-end CPU-s/run is not yet measured (harness crashed twice in its end-to-end
+   section on box paths). Do not bank a 2–5× speedup until end-to-end lands — record measured, not hoped.
 
 ---
 
@@ -336,5 +350,13 @@ Band discipline: flag **<7** idle (fill from queue), **>11** oversubscribed (thr
   → before/after pair will be contention-matched on the box (host deliberately not used for the speedup number;
   host load ~109 from other lanes). qa band-2 (`--seed 20261126`, 2 workers) on track ~15:36–15:38.
 - **15:33:05** util **8.0/10 (80 %)**; 540 at **54.7 %** (9,186/16,794 CPU-s), ETA **~15:54:40**.
-- (next refresh: band-2 completion + qa band-3 decision; task-12 baseline/after CPU-s; **540 completion → pull output
-  + sha256 and hand to commander**)
+- **15:36** band-2 DONE (artifacts `band2_out`); qa self-started **band-3** immediately (`--seed 20261127`,
+  2 workers, driver 17845 + workers 17847–17848) per Lead approval → ETA ~15:47–15:48.
+- **15:35–15:38** task-12 patch `191de03` benchmark: **equivalence PASS** (130 randomised fixtures, max diff
+  1.40e-15 ≤1e-12), determinism bit-identical; **cold path 0.97–1.21×**, **memoised path ~0.02 ms/call**,
+   batch group 0.87× (slower); end-to-end section crashed twice on box paths → retry running (PID 17640).
+  Honest read: caching wins on duplicate weight vectors only (engine has 37/405); a large end-to-end speedup is
+  NOT yet demonstrated — noted as caveat §9.8, awaiting contest-math's end-to-end number.
+- **15:37:49** util **8.1/10 (81 %)**; 540 at **64.0 %** (10,746/16,794 CPU-s), ETA **~15:54:30**; host 540
+  authoritative ETA ~15:43–15:46 (commander; fallback rule recorded: labelled subset only, never silent partial).
+- (next refresh: 540 completion → pull JSON + sha256 and hand to commander; band-3 completion; task-12 end-to-end)
