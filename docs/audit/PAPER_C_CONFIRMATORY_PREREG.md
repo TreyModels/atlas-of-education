@@ -4,7 +4,7 @@
 > retained for the review trail; the authoritative design is **§9 A3 + §8 A1 + the 36-row cell list in the Appendix**. No confirmatory compute is authorized until the adjudicator clears this file and Codex's protocol/Kaplan
 > confirmation is in.
 
-**Status: DRAFT for adjudicator review against the four Codex criticisms. Not yet preregistered-final, no confirmatory
+**Status: PREREGISTRATION FINAL (design frozen 2026-11-25; no compute yet).** The earlier "DRAFT for adjudicator review / Not yet preregistered-final" wording is superseded.
 run launched.** The current 128-run Pilot-0 v3 is **EXPLORATORY/hypothesis-generating** and **cannot** be used as
 confirmatory evidence. Paper C asks: *why does shadow education emerge, and what determines its supply form* — private
 tutor vs the pupil's own (public) teacher vs school-provided preparation. Engine pin to be frozen at the confirmatory

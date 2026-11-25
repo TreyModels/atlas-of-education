@@ -1,0 +1,94 @@
+{
+  "document": "Paper C confirmatory launch manifest (frozen before any screening/confirmatory compute)",
+  "status": "FROZEN",
+  "frozen_utc": "2026-11-25",
+  "prereg": {
+    "file": "docs/audit/PAPER_C_CONFIRMATORY_PREREG.md",
+    "sha256": "ff61f1e67e4c227c0a56caa89ba1b93d8e04b73125fc22fc58e21b81187d8d21",
+    "adjudication_record": "ce57087 (final); amendments A1/A2/A3"
+  },
+  "engine": {
+    "commit": "846c9e0",
+    "core_sha256": "e111397bd8a50f94e82bb77715f236ee3d5c0bf863a23d84afdf1c6c71fa8e71",
+    "spec": "docs/audit/canonical_spec.json",
+    "spec_file_sha256": "e5ddef6b4ecd04a0e96f480b43a97f0567bed7654ec032c1779c9e20f6beb755"
+  },
+  "runner": {
+    "file": "papers/shadow-education-contest/code/run_paperC_pilot0.py",
+    "sha256": "fbeba460cfb801e45524b71bf3b9babe03ae61c619f25b8703fc3333bff97481",
+    "note": "screening runner to be extended with the model-zoo additive reporting series before launch; launch sha recorded in the run manifest"
+  },
+  "design": {
+    "cells": 36,
+    "screening_seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "confirmatory_seeds": [
+      100,
+      101,
+      102,
+      103,
+      104,
+      105,
+      106,
+      107,
+      108,
+      109,
+      110,
+      111,
+      112,
+      113,
+      114,
+      115,
+      116,
+      117,
+      118,
+      119,
+      120,
+      121,
+      122,
+      123,
+      124,
+      125,
+      126,
+      127,
+      128,
+      129,
+      130,
+      131
+    ],
+    "screening_N": 600,
+    "confirmatory_N": 1500,
+    "T": 46,
+    "measure_from": 18,
+    "T0": "not_applicable (no calendar event)",
+    "fail_routing": {
+      "withholding_arms": "fail routing from canonical HK gates; G6->G9 gate kind=contest, share_of='cohort'; contest_r fixed by L (1.2 for L=.25, 1.6 for L=.45)"
+    },
+    "passer_rule": "if screening passes <=6 cells all passers run confirmatory; if >6, the first 6 in fixed appendix order run confirmatory and the rest are reported screening-only; frozen passer list in this manifest at screening time",
+    "assertions": "per-run E.unfired_events==[]; exposed arms require withheld>1e-3 and own_share>0.1; A|P12 exempt; failed exposed arm = INVALID"
+  },
+  "compute": {
+    "screening_cpu_h_est": 13.4,
+    "confirmatory_cpu_h_est": 22.0,
+    "total_cpu_h_cap": 36.0,
+    "workers": 8,
+    "reserve": "1-2 box slots reserved for Luna/MASSENG; X-29 diagnostic runs at 6 workers"
+  },
+  "gates": {
+    "no_compute_until": [
+      "manifest frozen (this file)",
+      "adjudication record final (ce57087)",
+      "Luna/MASSENG reserve in place",
+      "Codex protocol/Kaplan confirmation in launch trail (\u00a710)"
+    ]
+  },
+  "outputs": "results/audit/newgen/paperC_screening.json + paperC_confirmatory.json + per-cell checkpoints + run manifest (hashes)"
+}
