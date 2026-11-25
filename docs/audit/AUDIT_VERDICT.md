@@ -1025,8 +1025,16 @@ write at `:239`; `engine_commit` empty at `:113`; `spec_sha256` missing. **Remai
 parity (2 Pilot-0 cells × seeds 100–101; per-gate-year Jaccard/sym-diff/flipped seats) + **full-wall benchmark**; sign
 off only if ≤1e-7 and no unresolved flip changes a headline outcome, otherwise CPU fallback.
 
-**Status: METHODS ARTEFACT (X-31) — CONDITIONAL; no GPU numbers claimed. Parity gate PARTIALLY CLEARED (fixtures) but
-cell-level + full-wall benchmark remain OPEN.**
+**Gate-status check (2026-11-25):** QA searched the Mac and box work dirs (`/root/work/gpuport*`, `gpu_qa`, `gpu`,
+`gpu2`) — the **Commander's cell-level pair-cells artefacts and full-wall benchmark are NOT present yet**; only the
+fixture-level parity (`gpu_parity_qa.json`: max|dP| 4.83e-8, 0/130 >1e-7, 0 flips) exists. QA added a ready checker
+`docs/gpu/qa_parity_review.py` (commit `ee7e3ef`; sha **`02afa739…f0fa`**) implementing the gate: **P1 ≤1e-7; P2
+Jaccard/sym-diff/flips reported, not failed; P3 any unresolved headline-outcome flip → CPU fallback; P4 full-wall
+benchmark; P5 provenance (engine commit/core hash equal on both sides)**. When the Commander uploads the pair-cell and
+benchmark paths/hashes, QA returns PASS/FAIL + benchmark comparison. **No GPU numbers are claimed in the meantime.**
+
+**Status: METHODS ARTEFACT (X-31) — CONDITIONAL; no GPU numbers claimed. Parity gate OPEN: fixture parity exists, but
+cell-level + full-wall benchmark artefacts are missing; QA checker ready.**
 
 ## 4O. Paper C Pilot-0 payload — **EXPLORATORY / PENDING QA (X-Pilot); not a result**
 
