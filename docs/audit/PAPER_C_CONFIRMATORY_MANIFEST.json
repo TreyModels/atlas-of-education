@@ -1,6 +1,6 @@
 {
   "document": "Paper C CONFIRMATORY launch manifest (pre-launch; cites A4 + frozen passers + committed runner)",
-  "status": "FROZEN_PENDING_ADJUDICATOR_PRELAUNCH_RECORD",
+  "status": "FROZEN_APPROVED (adjudication 9506640; box allocation/launch observed; reserve deviation noted)",
   "frozen_utc": "2026-11-26",
   "stage": "PAPER_C_STAGE=confirmatory",
   "citations": {
@@ -136,5 +136,20 @@
     "t1_t4": "screening failures reported, not confirmatory",
     "p12": "pay_gap control; incentive-P12 would need A5",
     "untracked_confirmatory_runner": "papers/.../run_paperC_confirmatory.py is UNTRACKED and NON-AUTHORITATIVE \u2014 do not use; the authoritative runner is run_paperC_screening.py with PAPER_C_STAGE=confirmatory"
+  },
+  "approval": {
+    "adjudication_commit": "9506640",
+    "approved_utc": "2026-11-26",
+    "lead_allocation_observed": "confirmatory launch on box 2026-11-26 ~07:20 CST"
+  },
+  "launch_observed": {
+    "driver_pid": 1364,
+    "command": "PAPER_C_STAGE=confirmatory PAPER_C_P12_MODE=pay_gap ... run_paperC_screening.py driver --workers 10 --seeds 100-131 --n 1500 --t 46 --cells 'S0.85|L0.25|A|P55,S0.85|L0.25|C|P55,S0.85|L0.25|A|P12,S0.85|L0.25|C|P12,S0.85|L0.45|A|P55,S0.85|L0.45|C|P55' --allow-subset --analysis-commit 8121bf6 --out-dir /root/work/paperC/confirm_final",
+    "runner_sha256_on_box": "ddeffe42026eff865e939a4d8276171bb9b124fca52c2de9edeaaad909e40aac",
+    "workers_configured": 10,
+    "cells_active": 6,
+    "out_dir": "/root/work/paperC/confirm_final",
+    "log": "/root/work/paperC/confirm_final.log",
+    "reserve_note": "configured --workers 10 but only 6 cells exist, so instantaneous load is 6 processes; the 1-2 slot Luna/MASSENG reserve was NOT explicitly enforced by this launch (recorded as a deviation; no external job was affected at launch)"
   }
 }
