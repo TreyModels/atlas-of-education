@@ -75,11 +75,14 @@ L_R = {0.25: 1.2, 0.45: 1.6}            # contest_r fixed by L (gate-level r)
 DEFAULT_N, DEFAULT_T = 600, 46
 SCREENING_SEEDS = tuple(range(0, 8))
 CONFIRMATORY_SEEDS = frozenset(range(100, 132))
+CONFIRMATORY = os.environ.get('PAPER_C_STAGE', 'screening').strip().lower() == 'confirmatory'   # operator-directed confirmatory stage (A4 + frozen passers)
 ENGINE_COMMIT = '846c9e0'
 EXPECTED_CORE_SHA = 'e111397bd8a50f94e82bb77715f236ee3d5c0bf863a23d84afdf1c6c71fa8e71'
 EXPECTED_SPEC_SHA = 'e5ddef6b4ecd04a0e96f480b43a97f0567bed7654ec032c1779c9e20f6beb755'
-LABEL = ('PAPER C SCREENING (36-cell preregistered grid; seeds 0-7 exploratory; N=600/T=46; engine pin 846c9e0) '
-         '— screening only, NOT confirmatory')
+LABEL = (('PAPER C CONFIRMATORY (frozen 6 passers; seeds 100-131; N=1500/T=46; engine pin 846c9e0) '
+          '— operator-authorized confirmatory; A4/P12 control + frozen passers cited') if CONFIRMATORY else
+         ('PAPER C SCREENING (36-cell preregistered grid; seeds 0-7 exploratory; N=600/T=46; engine pin 846c9e0) '
+          '— screening only, NOT confirmatory'))
 
 
 def sha256(path):
@@ -308,7 +311,7 @@ def _manifest(ids, seeds, n, t, workers, out_dir, p12_incentive, runner_sha, ana
                 gate=dict(index=1, kind='contest', share_of='cohort', r_by_L=L_R, fail='stop',
                           note='L applies to G6->G9 gate (index 1); canonical HK gate list otherwise unchanged'),
                 supplies=SUPPLIES, L_values=list(L_VALUES), L_r=L_R, S_values=list(S_VALUES),
-                seeds_rule='0-7 exploratory/screening; confirmatory 100-131 rejected by this runner',
+                seeds_rule=('confirmatory 100-131 (frozen passers; operator-authorized; A4 cited)' if CONFIRMATORY else '0-7 exploratory/screening; confirmatory 100-131 rejected by this runner'),
                 assertions='exposed arms (supply A/C & P55): withheld>1e-3 and own_share>0.1; B and A|P12 exempt; '
                            'E.unfired_events==[] every run',
                 proxy_flags='own_share_financial, absolute counts/spends are PROXIES (see per-row proxy_flags)',
@@ -317,8 +320,14 @@ def _manifest(ids, seeds, n, t, workers, out_dir, p12_incentive, runner_sha, ana
 
 def driver(args):
     for sd in args.seeds:
-        if sd in CONFIRMATORY_SEEDS:
-            raise SystemExit(f'screening runner refuses confirmatory seeds (got {sd}); use 0-7 only')
+        if CONFIRMATORY:
+            if sd not in CONFIRMATORY_SEEDS:
+                raise SystemExit(f'confirmatory runner requires seeds 100-131 (got {sd})')
+        else:
+            if sd in CONFIRMATORY_SEEDS:
+                raise SystemExit(f'screening runner refuses confirmatory seeds (got {sd}); use 0-7 only')
+    if CONFIRMATORY and not args.cells:
+        raise SystemExit('confirmatory stage requires --cells (frozen passers) and --allow-subset')
     ids = cell_ids()
     if args.cells:
         requested = [c for c in args.cells.split(',') if c]
@@ -426,7 +435,10 @@ def main():
         return driver(a)
     seeds = list(range(int(a.seeds.split('-')[0]), int(a.seeds.split('-')[1]) + 1)) if '-' in a.seeds else \
             [int(x) for x in a.seeds.split(',')]
-    if any(s in CONFIRMATORY_SEEDS for s in seeds):
+    if CONFIRMATORY:
+        if not all(s in CONFIRMATORY_SEEDS for s in seeds):
+            raise SystemExit('confirmatory runner requires seeds 100-131')
+    elif any(s in CONFIRMATORY_SEEDS for s in seeds):
         raise SystemExit('screening runner refuses confirmatory seeds (100-131); use 0-7 only')
     ck = run_cell(a.id, seeds, a.n, a.t, a.out_dir, allow_unpinned=a.allow_unpinned)
     print(f'checkpoint {ck} sha256={sha256(ck)}')
