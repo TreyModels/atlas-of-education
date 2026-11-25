@@ -425,6 +425,11 @@ def part2_3(out, log):
             e_prev = None
             for share in S_GRID:
                 eq = equilibrium_pl(r, p, share, y6, e0=e_prev)
+                if not eq["converged"]:                 # diagnostic retry (documented)
+                    eq2 = equilibrium_pl(r, p, share, y6, e0=eq["e"], damp=0.2,
+                                         max_iter=500)
+                    if eq2["converged"]:
+                        eq = eq2
                 e_prev = eq["e"].copy()
                 cap = eq["cap"]
                 spend = float(np.mean(p * eq["e"]))
@@ -440,7 +445,7 @@ def part2_3(out, log):
                                   sum_P=float(np.sum(eq["P"])),
                                   seats_eff=cap["seats_eff"],
                                   cash_constrained=eq.get("cash_constrained", 0.0),
-                                  e_hi=eq.get("e_hi"),
+                                  e_hi=(eq.get("e_hi").tolist() if eq.get("e_hi") is not None else None),
                                   e=eq["e"].tolist()))
     wall = time.perf_counter() - t0
     emit(f"corrected surface: {len(cells)} cells in {wall:.1f} s single process")
@@ -520,6 +525,22 @@ def part2_3(out, log):
          f"{n_noisy}/{len(arch_cells)} cells (no convergence diagnostic shipped)")
     emit(f"  archived max residual after 30 iters: "
          f"{max(c['residual_after_30'] for c in arch_cells):.2e}")
+    # archived window S in [0.12, 0.50] only: compute the corrected gradient ON THAT WINDOW
+    # (the toy never sampled the descending arm or universal admission)
+    win = [s for s in S_GRID if s <= 0.5]
+    win_pos = []
+    for r in R_GRID:
+        for p in P_GRID:
+            ss = [next(c for c in cells if c["r"] == r and c["p"] == p and c["share"] == s)
+                  for s in win]
+            d = np.diff([c["spend"] for c in ss])
+            win_pos.append(float(np.mean(d > 0)))
+    emit(f"\n  TRUNCATION DIAGNOSIS: the archived S grid stops at 0.50 (rising arm only).")
+    emit(f"  Corrected model restricted to S <= 0.50: dSpend/dS>0 share = "
+         f"{np.mean(win_pos):.2f} (min {min(win_pos):.2f}, max {max(win_pos):.2f}) - "
+         f"the toy's '100% paradox' is a truncation artefact, not a paradox.")
+    emit(f"  Corrected model over the FULL range S -> 1 (universal admission): positive share "
+         f"falls to {np.mean(c_pos):.2f}; the spend path is an inverted-U ending at 0.")
     a_pos = []
     for r in R_GRID:
         for p in P_GRID:
@@ -548,7 +569,9 @@ def part2_3(out, log):
          f"|diff|={same_ratio_arch:.2e} (identical).")
     # corrected: same r/p, different (r,p) gives different spend
     pair_demo = []
-    for (r1, p1, r2, p2) in ((0.8, 0.10, 1.6, 0.20), (1.0, 0.16, 2.0, 0.32)):
+    for (r1, p1, r2, p2) in ((0.8, 0.10, 1.6, 0.20), (0.5, 0.05, 1.0, 0.10),
+                             (1.5, 0.16, 2.5, 0.266667),
+                             (1.0, 0.16, 2.0, 0.32)):
         c1 = equilibrium_pl(r1, p1, 0.34, y6)
         c2 = equilibrium_pl(r2, p2, 0.34, y6)
         s1 = float(np.mean(p1 * c1["e"])); s2 = float(np.mean(p2 * c2["e"]))
