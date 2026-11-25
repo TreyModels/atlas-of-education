@@ -743,3 +743,21 @@ checkpointed). Final JSON sha256/row/cell counts to be published on the fixed re
 **Box after grid exit: Pilot-0 only — driver 37049 + workers 37053/37054, cgroup 2.0/10 (20 %)**; pilot cells
 `market_only q1.00 pf0.030/080` checkpointed 2.5 KB at 20:59. Lead plan: Pilot-0 expands to **8 workers** using the
 grid's freed workers — commanded, PIDs to be confirmed. Cap unchanged (10), no other jobs.
+
+### 13.24 21:10 — Pilot-0 v3 at 8 workers verified; grid JSON clean-rerun hash (X-27 overwritten)
+
+**Pilot-0 v3 VERIFIED** 21:10:21: driver **40058** (`run_paperC_pilot0.py --workers 8 --out-dir /root/work/paperC/results`)
++ **8 cell workers** 40062/40064/40066/40067/40071/40072/40073/40074 (100 % each; `market_only 1.0/1.2 × pf 0.03/0.08` +
+`own_open_gap 1.0/1.2 × pf 0.03/0.08`, seeds 0-7) = **8 workers, cgroup 8.0/10 (80 %)**; cap 8 respected; no other jobs.
+Log `pilot_v3_8w.log` (0 B, buffered); checkpoints resumed from 6 rows; per-seed appends expected at cell boundaries.
+Pilot ETA per Lead ~1.5–2 h; progress to be reported at next cell boundary; **qa-verifier to be notified when
+`paperC_pilot0_results.json` is written**.
+
+**GRID final JSON — the file on disk is now the CLEAN rerun** (aggregation-only from 176 checkpoints, 7.6 s; runner fixed
+with `import numpy as np`, mtime 21:09):
+- current: `gate_architecture_results.json` (294,532 B, 21:10) **sha256 `bce3da363afbdcfd16052d2c661107dc8c88d082d640625ef1b0b334d8f72638`**,
+  `total_runs` **5,632**, `n_cells` **176**, spec sha `e5ddef6b…`, runner sha **`cbdea3cd…70056`** (fixed).
+- X-27 interim (Lead-reported, produced via `builtins.np` injection because the runner lacked the module-level import):
+  `685db398a9e6052446312e6dacfc2b06f09aa809d60b2f2b145e8e6cf2453f40` — **no longer present on box** (same path overwritten
+  by the clean rerun). Recorded for provenance; X-27-vs-clean value diff to come from commander. Runner defect (post-run
+  aggregation crash with intact checkpoints) is logged in §13.23.
