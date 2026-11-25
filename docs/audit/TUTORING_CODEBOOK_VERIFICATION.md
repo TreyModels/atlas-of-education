@@ -38,6 +38,60 @@ are marked **D(snippet)** or **V**, never asserted as codebook-verified.
 | HK EDB tutoring survey content | HK EDB commissioned survey | Volume 3 includes a "Demand for tutoring" section | **D(snippet)** | EDB T-survey Volume 3 PDF indexed with that heading | participation/expenditure/provider tables; whether microdata exist (none located) |
 | DHS tutoring variables | DHS programme | **none** — standard DHS core questionnaires contain no tutoring or education-expenditure module; the eight DHS experiments here have no tutoring variable | **D (verified in-repo)** | DHS experiment schema (`experiments/dhs_v1`) and DHS questionnaire scope | — (none expected) |
 
+## 1b. Verification attempt log — tool-based fetch was also blocked (important)
+
+The Lead asked for tool-based retrieval (not `curl`). I retried with the platform's `web_fetch` tool on the
+specific documents and on alternative mirrors/hosts. **Result: every external education host was refused by the
+sandbox's DNS resolution step** (`URL hostname "<host>" resolves to a non-public IP address`), including:
+`www.oecd.org`, `www.oecd-ilibrary.org`, `www.seaplm.org`, `omb.report`, `files.eric.ed.gov`, `nces.ed.gov`,
+`timssandpirls.bc.edu`, `unesdoc.unesco.org`, `core.ac.uk`, `www.moe.gov.my`, `ied.edu.hk`, `teric.naer.edu.tw`,
+`www.naer.edu.tw`, `www.unicef.org`, `mods.go.kr`, `scispace.com`, `plp.moeys.gov.kh`, `pioneered-project.eu`,
+`link.springer.com`. Only Peking University / Renmin University / CIEFR hosts resolved
+(`opendata.pku.edu.cn`, `ciefr.pku.edu.cn`, `ceps.ruc.edu.cn`, `cssd.ruc.edu.cn`).
+
+**Consequence:** exact PISA/SEA-PLM **item codes, wording and page numbers could not be read from the source
+documents in this environment**, despite retrying via the tool. They remain **V** (unverified) and must not be
+presented as verified. `web_search` returns only indexed snippets/URLs (with occasional page anchors) and cannot
+substitute for a codebook read. Workaround: retrieve the four documents below from a host with open egress (or the
+operator's machine) and read the item text directly; the URLs are known-good public documents:
+PISA 2018 student questionnaire (OECD iLibrary PISA-2018-datasets/questionnaires directory), PISA 2022 technical
+report (`.../pisa-2022-technical-report_599753f0/01820d6d-en.pdf`, questionnaire appendix), SEA-PLM 2019 codebooks
+(`seaplm.org/PUBLICATIONS/SEA-PLM_2019_Datasets/Codebooks/`), SEA-PLM 2019 Cambodia national report
+(`seaplm.org/images/DOWNLOADS/SEA-PLM_National_Report_Cambodia.pdf`).
+
+## 1c. Handoff prerequisites (NO applications submitted — operator action)
+
+Per the Lead's instruction, no CIEFR-HS / CFPS / CEPS access application was submitted (they require the
+operator's institutional email and data-use agreement). Exact steps, to be handed to Trey:
+
+* **CIEFR-HS (China, preferred for Double Reduction)** — *verified from fetched PKU pages/metadata JSON*:
+  1. Register at <https://opendata.pku.edu.cn/> (PKU Open Research Data Platform).
+  2. After approval, request the dataset at <https://opendata.pku.edu.cn/dataverse/ciefrhs>.
+  3. **Institutional email required** (`xxx@xxx.edu.cn`); personal emails (qq/163) are rejected — this is the
+     reason the operator must do it, not the agent.
+  4. Terms: academic use only; no redistribution; no upload to other platforms (dataverse terms of access, fetched);
+     contact `ciefrhs@ciefr.pku.edu.cn`. Note: **all files are access-restricted, including the questionnaire PDFs**
+     (dataset metadata: `restricted: true` on 2021/2022 questionnaires, data `.rar`, and the user guide; the
+     dataset *metadata* is CC0 but that does not grant file access).
+  5. DOIs: 2021 `10.18170/DVN/QOM4FT`, 2019 `10.18170/DVN/YDQJ3D`, 2017 update `10.18170/DVN/B6HK6Y`, original
+     `10.18170/DVN/KE1JYM`. 2021 fieldwork: 2021-07 to 2022-08. Files: 2021 data `.rar` 4.45 MB, questionnaire
+     PDFs ~600 KB each, user guide 542 KB.
+  6. Expected turnaround: **not published**; plan on staff review (estimate 1–4 weeks; treat as an estimate, not a
+     promise). After access, the first check is the tutoring/extra-lesson item wording in the 2021 questionnaire.
+* **CFPS (China, open)** — register at PKU ISSS CFPS site (Data Acquisition page:
+  <https://www.isss.pku.edu.cn/cfps/en/faq/data23/>); free registration for academic research. **Verify current
+  licence and download terms on site (V — page could not be fetched here).** Tutoring items located in indexed
+  questionnaire PDFs (“whether hired a tutor”; “hours per week in other tutoring classes”).
+* **CEPS (China, pre-2021 policy only)** — Renmin CSSD platform <https://cssd.ruc.edu.cn/>: real-name
+  authentication + signed data-use agreement; already-published waves are one-click downloadable, restricted data
+  by online application/approval (verified from the fetched CSSD launch page). Expected turnaround: immediate for
+  public waves; application/approval for restricted (unpublished SLA).
+* **SEA-PLM 2019 (KH/PH)** — codebooks/questionnaires are public documents on `seaplm.org`; no application needed,
+  but the host was unreachable from this environment → operator-side download then codebook search for the
+  extra-lesson/tutoring item.
+* **PISA 2018/2022** — public-use microdata via OECD registration; questionnaires/technical report public. No
+  application needed for the codebook check; only the sandbox's egress blocks the documents.
+
 ## 2. One-line verdict per country — what can be tested
 
 * **Hong Kong — feasible-partial (participation/hours only).** PISA 2018/2022 gives participation and hours (ESCS
@@ -76,3 +130,17 @@ informal prices/teacher hours/firm capacity) **remains intact** and must not be 
    confirm tutoring item wording in CIEFR-HS 2021 questionnaire once access allows.
 4. Only after 1–3: draft Paper C's pre-registration with a data-availability matrix per regime, keeping anything
    unobserved theory-only.
+
+## 5. What remains V after this pass (explicit)
+
+1. PISA 2018/2022 **exact item codes and wording** for out-of-school/after-school lessons, hours categories and
+   subject coverage (item existence remains D-snippet only).
+2. PISA **absence** of expenditure and provider-type items (strongly indicated, not codebook-confirmed).
+3. PISA country/variant composition for China 2022 (B-S-J-Z confirmation).
+4. SEA-PLM 2019 **tutoring/extra-lesson item existence, wording and coverage** for Cambodia/Philippines.
+5. PISA-D 2017 Cambodia out-of-school-lesson item.
+6. CFPS exact variable names/years and current licence terms.
+7. KOSTAT income breakdown and exact provider categories/turnaround; TIMSS/PIRLS exact items; HK EDB tables.
+8. CIEFR-HS **tutoring item wording** (questionnaire is access-restricted; access route is D-verified).
+**Remaining D (not V):** CIEFR-HS waves/samples/access/DOI/restriction metadata; CEPS platform/access; PISA item
+existence (snippet-level); DHS absence of tutoring variables; the binding HK-vs-PH limitation below.
