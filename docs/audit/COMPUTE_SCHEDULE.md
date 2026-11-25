@@ -815,3 +815,16 @@ Second wave running: `own_open_incentive 1.0` (3/8 seeds each; PIDs 42823/42828,
 **Diagnosis of the rate drop (0.66 rows/min over 12 min): NOT a stall/startup issue** — all 8 workers at 99.9–100 % CPU,
 cgroup 8.0/10 (80 %); the second-wave regimes are inherently heavier (**`own_open_incentive` ≈9.3 min/seed vs ~7 min**
 first wave). Revised ETA: remaining 58 rows ≈ 65–70 min → **23:10–23:25**; re-baseline at 88 rows. Cap 8, Luna reserve intact.
+
+### 13.30 22:20 — ALL 10 CORES IN USE: pilot 8 + X-29 diagnostic 2; cgroup 100 %; Luna reserve suspended
+
+Operator override: use all 10 cores; **Luna/MASSENG reserve suspended until further notice** (preempt then if Luna asks).
+Verified 22:20:07:
+- **Paper C Pilot-0: 8 workers** (driver 40058 + 40062/40064/40066/40067/40071/40072/40073/40074), **86/128 rows (67 %)**,
+  16/16 cell files present, rate recovered to **1.36 rows/min**.
+- **X-29 diagnostic: 2 workers** — driver **44152** `run_gate_architecture.py --workers 2 --seeds 0-31 --archs contest
+  --no-sensitivity --out-dir /root/work/gate846/results_diag` (workers 44155/44156, cells `contest 0.25 … track 0-31`),
+  started 22:15:30, `diag.log`; **DIAGNOSTIC-ONLY**, separate output dir, not mixed with primary/secondary.
+- **Cgroup 10 s delta 9.996/10 = 100 %**; 10 workers exactly, cap respected; `loadavg` host-wide noise.
+Pilot ETA re-baselined under contention (report at 88/104/120 rows); X-29 at 2 workers is slow — first-row rate to be
+measured, and a pilot↔X-29 split change can be made if Lead wants it faster (total stays 10).
