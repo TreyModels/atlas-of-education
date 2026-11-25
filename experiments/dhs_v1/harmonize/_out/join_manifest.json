@@ -1,0 +1,512 @@
+{
+ "generated_by": "harmonize/aggregate_layer.py",
+ "schema": "experiments/dhs_v1/experiments.R",
+ "raw_microdata": "local only (~/neon-boot/pulled/dhs); never committed/uploaded",
+ "normalized_microdata": "local only (~/neon-boot/dhs-normalized); never committed/uploaded",
+ "country_year_keys": [
+  {
+   "country": "ID",
+   "wave": "1991",
+   "year": 1991
+  },
+  {
+   "country": "ID",
+   "wave": "1994",
+   "year": 1994
+  },
+  {
+   "country": "ID",
+   "wave": "1997",
+   "year": 1997
+  },
+  {
+   "country": "ID",
+   "wave": "2002-03",
+   "year": 2002
+  },
+  {
+   "country": "ID",
+   "wave": "2007",
+   "year": 2007
+  },
+  {
+   "country": "ID",
+   "wave": "2012",
+   "year": 2012
+  },
+  {
+   "country": "ID",
+   "wave": "2017",
+   "year": 2017
+  },
+  {
+   "country": "KH",
+   "wave": "2000",
+   "year": 2000
+  },
+  {
+   "country": "KH",
+   "wave": "2005",
+   "year": 2005
+  },
+  {
+   "country": "KH",
+   "wave": "2010",
+   "year": 2010
+  },
+  {
+   "country": "KH",
+   "wave": "2014",
+   "year": 2014
+  },
+  {
+   "country": "KH",
+   "wave": "2021-22",
+   "year": 2021
+  },
+  {
+   "country": "PH",
+   "wave": "1993",
+   "year": 1993
+  },
+  {
+   "country": "PH",
+   "wave": "1998",
+   "year": 1998
+  },
+  {
+   "country": "PH",
+   "wave": "2003",
+   "year": 2003
+  },
+  {
+   "country": "PH",
+   "wave": "2008",
+   "year": 2008
+  },
+  {
+   "country": "PH",
+   "wave": "2013",
+   "year": 2013
+  },
+  {
+   "country": "PH",
+   "wave": "2017",
+   "year": 2017
+  },
+  {
+   "country": "PH",
+   "wave": "2022",
+   "year": 2022
+  },
+  {
+   "country": "VN",
+   "wave": "1997",
+   "year": 1997
+  },
+  {
+   "country": "VN",
+   "wave": "2002",
+   "year": 2002
+  },
+  {
+   "country": "VN",
+   "wave": "2005ais",
+   "year": 2005
+  }
+ ],
+ "subnational": "BLOCKED: DHS regions/clusters are survey-specific; cluster GPS displaced (DHS terms) and no genuine compatible admin-unit join key exists in the harmonized schema. No subnational-year link is claimed.",
+ "macro_link_candidates": [
+  {
+   "file": "panel_edu2_FE_AAFB_W_M25.csv",
+   "indicator": "FE_AAFB_W_M25",
+   "country": "KH",
+   "years": [
+    2000,
+    2005,
+    2010,
+    2014,
+    2021
+   ],
+   "n_rows": 10,
+   "provenance": "public DHS API aggregate (M6)",
+   "permission": "public aggregate; no restricted microdata"
+  },
+  {
+   "file": "panel_edu2_FE_AAFB_W_M25.csv",
+   "indicator": "FE_AAFB_W_M25",
+   "country": "ID",
+   "years": [
+    1987,
+    1991,
+    1994,
+    1997,
+    2003,
+    2007,
+    2012,
+    2017
+   ],
+   "n_rows": 16,
+   "provenance": "public DHS API aggregate (M6)",
+   "permission": "public aggregate; no restricted microdata"
+  },
+  {
+   "file": "panel_edu2_FE_AAFB_W_M25.csv",
+   "indicator": "FE_AAFB_W_M25",
+   "country": "PH",
+   "years": [
+    1993,
+    1998,
+    2003,
+    2008,
+    2013,
+    2017
+   ],
+   "n_rows": 12,
+   "provenance": "public DHS API aggregate (M6)",
+   "permission": "public aggregate; no restricted microdata"
+  },
+  {
+   "file": "panel_edu2_FE_AAFB_W_M25.csv",
+   "indicator": "FE_AAFB_W_M25",
+   "country": "VN",
+   "years": [
+    1997,
+    2002
+   ],
+   "n_rows": 4,
+   "provenance": "public DHS API aggregate (M6)",
+   "permission": "public aggregate; no restricted microdata"
+  },
+  {
+   "file": "panel_edu2_FE_FRTR_W_GFR.csv",
+   "indicator": "FE_FRTR_W_GFR",
+   "country": "KH",
+   "years": [
+    2000,
+    2005,
+    2010,
+    2014,
+    2021
+   ],
+   "n_rows": 10,
+   "provenance": "public DHS API aggregate (M6)",
+   "permission": "public aggregate; no restricted microdata"
+  },
+  {
+   "file": "panel_edu2_FE_FRTR_W_GFR.csv",
+   "indicator": "FE_FRTR_W_GFR",
+   "country": "ID",
+   "years": [
+    1987,
+    1991,
+    1994,
+    1997,
+    2003,
+    2007,
+    2012,
+    2017
+   ],
+   "n_rows": 16,
+   "provenance": "public DHS API aggregate (M6)",
+   "permission": "public aggregate; no restricted microdata"
+  },
+  {
+   "file": "panel_edu2_FE_FRTR_W_GFR.csv",
+   "indicator": "FE_FRTR_W_GFR",
+   "country": "PH",
+   "years": [
+    1993,
+    1998,
+    2003,
+    2008,
+    2013,
+    2017,
+    2022
+   ],
+   "n_rows": 14,
+   "provenance": "public DHS API aggregate (M6)",
+   "permission": "public aggregate; no restricted microdata"
+  },
+  {
+   "file": "panel_edu2_FE_FRTR_W_GFR.csv",
+   "indicator": "FE_FRTR_W_GFR",
+   "country": "VN",
+   "years": [
+    1997,
+    2002
+   ],
+   "n_rows": 4,
+   "provenance": "public DHS API aggregate (M6)",
+   "permission": "public aggregate; no restricted microdata"
+  },
+  {
+   "file": "panel_edu2_FE_FRTR_W_TFR.csv",
+   "indicator": "FE_FRTR_W_TFR",
+   "country": "KH",
+   "years": [
+    2000,
+    2005,
+    2010,
+    2014,
+    2021
+   ],
+   "n_rows": 10,
+   "provenance": "public DHS API aggregate (M6)",
+   "permission": "public aggregate; no restricted microdata"
+  },
+  {
+   "file": "panel_edu2_FE_FRTR_W_TFR.csv",
+   "indicator": "FE_FRTR_W_TFR",
+   "country": "ID",
+   "years": [
+    1987,
+    1991,
+    1994,
+    1997,
+    2003,
+    2007,
+    2012,
+    2017
+   ],
+   "n_rows": 16,
+   "provenance": "public DHS API aggregate (M6)",
+   "permission": "public aggregate; no restricted microdata"
+  },
+  {
+   "file": "panel_edu2_FE_FRTR_W_TFR.csv",
+   "indicator": "FE_FRTR_W_TFR",
+   "country": "PH",
+   "years": [
+    1993,
+    1998,
+    2003,
+    2008,
+    2013,
+    2017,
+    2022
+   ],
+   "n_rows": 14,
+   "provenance": "public DHS API aggregate (M6)",
+   "permission": "public aggregate; no restricted microdata"
+  },
+  {
+   "file": "panel_edu2_FE_FRTR_W_TFR.csv",
+   "indicator": "FE_FRTR_W_TFR",
+   "country": "VN",
+   "years": [
+    1997,
+    2002
+   ],
+   "n_rows": 4,
+   "provenance": "public DHS API aggregate (M6)",
+   "permission": "public aggregate; no restricted microdata"
+  },
+  {
+   "file": "panel_edu2_FE_FRTY_W_MNC.csv",
+   "indicator": "FE_FRTY_W_MNC",
+   "country": "KH",
+   "years": [
+    2000,
+    2005,
+    2010,
+    2014,
+    2021
+   ],
+   "n_rows": 10,
+   "provenance": "public DHS API aggregate (M6)",
+   "permission": "public aggregate; no restricted microdata"
+  },
+  {
+   "file": "panel_edu2_FE_FRTY_W_MNC.csv",
+   "indicator": "FE_FRTY_W_MNC",
+   "country": "ID",
+   "years": [
+    1987,
+    1991,
+    1994,
+    1997,
+    2003,
+    2007,
+    2012,
+    2017
+   ],
+   "n_rows": 16,
+   "provenance": "public DHS API aggregate (M6)",
+   "permission": "public aggregate; no restricted microdata"
+  },
+  {
+   "file": "panel_edu2_FE_FRTY_W_MNC.csv",
+   "indicator": "FE_FRTY_W_MNC",
+   "country": "PH",
+   "years": [
+    1993,
+    1998,
+    2003,
+    2008,
+    2013,
+    2017,
+    2022
+   ],
+   "n_rows": 14,
+   "provenance": "public DHS API aggregate (M6)",
+   "permission": "public aggregate; no restricted microdata"
+  },
+  {
+   "file": "panel_edu2_FE_FRTY_W_MNC.csv",
+   "indicator": "FE_FRTY_W_MNC",
+   "country": "VN",
+   "years": [
+    1997,
+    2002
+   ],
+   "n_rows": 4,
+   "provenance": "public DHS API aggregate (M6)",
+   "permission": "public aggregate; no restricted microdata"
+  },
+  {
+   "file": "panel_edu2_PR_DESL_W_WNM.csv",
+   "indicator": "PR_DESL_W_WNM",
+   "country": "KH",
+   "years": [
+    2000,
+    2005,
+    2010,
+    2014,
+    2021
+   ],
+   "n_rows": 10,
+   "provenance": "public DHS API aggregate (M6)",
+   "permission": "public aggregate; no restricted microdata"
+  },
+  {
+   "file": "panel_edu2_PR_DESL_W_WNM.csv",
+   "indicator": "PR_DESL_W_WNM",
+   "country": "ID",
+   "years": [
+    1987,
+    1991,
+    1994,
+    1997,
+    2003,
+    2007,
+    2012,
+    2017
+   ],
+   "n_rows": 16,
+   "provenance": "public DHS API aggregate (M6)",
+   "permission": "public aggregate; no restricted microdata"
+  },
+  {
+   "file": "panel_edu2_PR_DESL_W_WNM.csv",
+   "indicator": "PR_DESL_W_WNM",
+   "country": "PH",
+   "years": [
+    1993,
+    1998,
+    2003,
+    2008,
+    2013,
+    2017,
+    2022
+   ],
+   "n_rows": 14,
+   "provenance": "public DHS API aggregate (M6)",
+   "permission": "public aggregate; no restricted microdata"
+  },
+  {
+   "file": "panel_edu2_PR_DESL_W_WNM.csv",
+   "indicator": "PR_DESL_W_WNM",
+   "country": "VN",
+   "years": [
+    1997,
+    2002
+   ],
+   "n_rows": 4,
+   "provenance": "public DHS API aggregate (M6)",
+   "permission": "public aggregate; no restricted microdata"
+  },
+  {
+   "file": "panel_edu2_PR_WTFR_W_WFR.csv",
+   "indicator": "PR_WTFR_W_WFR",
+   "country": "KH",
+   "years": [
+    2000,
+    2005,
+    2010,
+    2014,
+    2021
+   ],
+   "n_rows": 10,
+   "provenance": "public DHS API aggregate (M6)",
+   "permission": "public aggregate; no restricted microdata"
+  },
+  {
+   "file": "panel_edu2_PR_WTFR_W_WFR.csv",
+   "indicator": "PR_WTFR_W_WFR",
+   "country": "ID",
+   "years": [
+    1987,
+    1991,
+    1994,
+    1997,
+    2003,
+    2007,
+    2012,
+    2017
+   ],
+   "n_rows": 16,
+   "provenance": "public DHS API aggregate (M6)",
+   "permission": "public aggregate; no restricted microdata"
+  },
+  {
+   "file": "panel_edu2_PR_WTFR_W_WFR.csv",
+   "indicator": "PR_WTFR_W_WFR",
+   "country": "PH",
+   "years": [
+    1993,
+    1998,
+    2003,
+    2008,
+    2013,
+    2017,
+    2022
+   ],
+   "n_rows": 14,
+   "provenance": "public DHS API aggregate (M6)",
+   "permission": "public aggregate; no restricted microdata"
+  },
+  {
+   "file": "panel_edu2_PR_WTFR_W_WFR.csv",
+   "indicator": "PR_WTFR_W_WFR",
+   "country": "VN",
+   "years": [
+    1997,
+    2002
+   ],
+   "n_rows": 4,
+   "provenance": "public DHS API aggregate (M6)",
+   "permission": "public aggregate; no restricted microdata"
+  }
+ ],
+ "macro_spine_declared_not_local": [
+  {
+   "id": "M1",
+   "name": "imputed lead-lag matrix",
+   "path": "origin/research/imputed-matrix-2026-11-23@5e4602b",
+   "status": "DECLARED-NOT-LOCAL: committed result CSVs are the durable record; not fetched in this lane"
+  },
+  {
+   "id": "M3",
+   "name": "marriage-extended matrix",
+   "path": "origin/research/matrix-marriage-2026-11-23@559a4e9",
+   "status": "DECLARED-NOT-LOCAL"
+  }
+ ],
+ "linkage_rules": {
+  "timing": "link only same or earlier survey year; all cross-sectional links are descriptive, not causal",
+  "geography": "country-year only; region-year BLOCKED",
+  "missingness": "aggregate cells carry n_complete/n_domain and suppression flags; macro joins must carry the DHS survey year and are ambiguous where wave spans two calendar years (e.g. 2021-22)",
+  "permissions": "DHS microdata restricted (local only); DHS API panels are public aggregates; matrix M1/M3 are committed country-year aggregates, placebos show 21.7% wrong-country significance (not causal)"
+ }
+}

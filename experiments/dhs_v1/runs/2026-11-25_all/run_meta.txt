@@ -1,0 +1,8 @@
+input: /Users/treymenefee/neon-boot/dhs8_local/normalized_all.csv
+input_sha256: 07eef759025b70b7f93da32ad72f397f
+lonely_policy: 0
+run_utc: 2026-11-25 08:42:19 UTC
+survey_version: 4.5
+R_version: R version 4.4.3 (2025-02-28)
+rows_in: 939684
+estimate_rows: 155

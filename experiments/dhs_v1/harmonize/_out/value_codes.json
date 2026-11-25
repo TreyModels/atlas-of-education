@@ -1,0 +1,1128 @@
+{
+ "ID/2012/PR/hv110": {
+  "0": "no",
+  "1": "yes"
+ },
+ "ID/2012/PR/hv121": {
+  "0": "no",
+  "1": "currently attending",
+  "2": "attended at some time"
+ },
+ "ID/2012/PR/hv122": {
+  "0": "no education, preschool",
+  "1": "primary",
+  "2": "secondary",
+  "3": "higher",
+  "8": "don't know"
+ },
+ "ID/2012/PR/hv270": {
+  "1": "poorest",
+  "2": "poorer",
+  "3": "middle",
+  "4": "richer",
+  "5": "richest"
+ },
+ "ID/2012/PR/hv108": {
+  "97": "inconsistent",
+  "98": "don't know"
+ },
+ "ID/2012/PR/hv024": {
+  "11": "aceh",
+  "12": "north sumatera",
+  "13": "west sumatera",
+  "14": "riau",
+  "15": "jambi",
+  "16": "south sumatera",
+  "17": "bengkulu",
+  "18": "lampung",
+  "19": "bangka belitung",
+  "21": "riau islands",
+  "31": "jakarta",
+  "32": "west java",
+  "33": "central java",
+  "34": "yogyakarta",
+  "35": "east java",
+  "36": "banten",
+  "51": "bali",
+  "52": "west nusa tenggara",
+  "53": "east nusa tenggara",
+  "61": "west kalimantan",
+  "62": "central kalimantan",
+  "63": "south kalimantan",
+  "64": "east kalimantan",
+  "71": "north sulawesi",
+  "72": "central sulawesi",
+  "73": "south sulawesi",
+  "74": "southeast sulawesi",
+  "75": "gorontalo",
+  "76": "west sulawesi",
+  "81": "maluku",
+  "82": "north maluku",
+  "91": "west papua",
+  "94": "papua"
+ },
+ "ID/2012/PR/hv025": {
+  "1": "urban",
+  "2": "rural"
+ },
+ "ID/2012/PR/hv104": {
+  "1": "male",
+  "2": "female"
+ },
+ "ID/2012/PR/hv105": {
+  "95": "95+",
+  "98": "don't know"
+ },
+ "ID/1994/PR/hv110": {
+  "0": "no",
+  "1": "yes"
+ },
+ "ID/1994/PR/hv108": {
+  "97": "inconsistent",
+  "98": "dk"
+ },
+ "ID/1994/PR/hv023": {
+  "1": "di aceh - urb",
+  "2": "di aceh - rur",
+  "3": "north sumatra - urb",
+  "5": "west sumatra - urb",
+  "7": "riau - urb",
+  "9": "jambi - urb",
+  "11": "south sumatra - urb",
+  "13": "bengkulu - urb",
+  "15": "lampung - urb",
+  "17": "dki jakarta",
+  "19": "west java - urb",
+  "21": "central java - urb",
+  "23": "di yogyakarta - urb",
+  "25": "east java - urb",
+  "27": "bali - urb",
+  "29": "west nusa tenggara u",
+  "31": "east nusa tenggara u",
+  "33": "east timor - urb",
+  "35": "west kalimantan - ur",
+  "37": "central kalimantan u",
+  "39": "south kalimantan -ur",
+  "41": "east kalimantan - ur",
+  "43": "north sulawesi - urb",
+  "45": "central sulawesi -ur",
+  "47": "south sulawesi - urb",
+  "49": "southeast sulawesi u",
+  "51": "maluku - urb",
+  "53": "irian jaya - urb",
+  "54": "irian jaya - rur"
+ },
+ "ID/1994/PR/hv024": {
+  "0": "java-bali",
+  "1": "dki jakarta",
+  "2": "west java",
+  "3": "central java",
+  "4": "di yogyakarta",
+  "5": "east java",
+  "6": "bali",
+  "7": "outer java-bali i",
+  "8": "di aceh",
+  "9": "north sumatra",
+  "10": "west sumatra",
+  "11": "south sumatra",
+  "12": "lampung",
+  "13": "west nusa tenggara",
+  "14": "west kalimantan",
+  "15": "south kalimantan",
+  "16": "north sulawesi",
+  "17": "south sulawesi",
+  "18": "outer java-bali ii",
+  "19": "riau",
+  "20": "jambi",
+  "21": "bengkulu",
+  "22": "east nusa tenggara",
+  "23": "east timor",
+  "24": "central kalimantan",
+  "25": "east kalimantan",
+  "26": "cenrtal sulawesi",
+  "27": "southeast sulawesi",
+  "28": "maluku",
+  "29": "irian jaya"
+ },
+ "ID/1994/PR/hv025": {
+  "1": "urban",
+  "2": "rural"
+ },
+ "ID/1994/PR/hv104": {
+  "1": "male",
+  "2": "female"
+ },
+ "ID/1994/PR/hv105": {
+  "97": "97+",
+  "98": "dk"
+ },
+ "ID/2002-03/PR/hv110": {
+  "0": "no",
+  "1": "yes"
+ },
+ "ID/2002-03/PR/hv121": {
+  "0": "",
+  "1": "",
+  "2": ""
+ },
+ "ID/2002-03/PR/hv122": {
+  "0": "",
+  "1": "",
+  "2": "",
+  "3": "",
+  "8": ""
+ },
+ "ID/2002-03/PR/hv270": {
+  "1": "poorest",
+  "2": "poorer",
+  "3": "middle",
+  "4": "richer",
+  "5": "richest"
+ },
+ "ID/2002-03/PR/hv108": {
+  "97": "inconsistent",
+  "98": "dk"
+ },
+ "ID/2002-03/PR/hv023": {
+  "11": "di aceh",
+  "12": "north sumatra",
+  "13": "west sumatra",
+  "14": "riau",
+  "15": "jambi",
+  "16": "south sumatra",
+  "17": "bengkulu",
+  "18": "lampung",
+  "19": "bangka belitung",
+  "31": "dki jakarta",
+  "32": "west java",
+  "33": "central java",
+  "34": "di yogyakarta",
+  "35": "east java",
+  "36": "banten",
+  "51": "bali",
+  "52": "west nusa tenggara",
+  "53": "east nusa tenggara",
+  "54": "east timor",
+  "61": "west kalimantan",
+  "62": "central kalimantan",
+  "63": "south kalimantan",
+  "64": "east kalimantan",
+  "71": "north sulawesi",
+  "72": "cenrtal sulawesi",
+  "73": "south sulawesi",
+  "74": "southeast sulawesi",
+  "75": "gorontalo",
+  "81": "maluku",
+  "93": "irian jaya"
+ },
+ "ID/2002-03/PR/hv024": {
+  "11": "di aceh",
+  "12": "north sumatra",
+  "13": "west sumatra",
+  "14": "riau",
+  "15": "jambi",
+  "16": "south sumatra",
+  "17": "bengkulu",
+  "18": "lampung",
+  "19": "bangka belitung",
+  "31": "dki jakarta",
+  "32": "west java",
+  "33": "central java",
+  "34": "di yogyakarta",
+  "35": "east java",
+  "36": "banten",
+  "51": "bali",
+  "52": "west nusa tenggara",
+  "53": "east nusa tenggara",
+  "54": "east timor",
+  "61": "west kalimantan",
+  "62": "central kalimantan",
+  "63": "south kalimantan",
+  "64": "east kalimantan",
+  "71": "north sulawesi",
+  "72": "cenrtal sulawesi",
+  "73": "south sulawesi",
+  "74": "southeast sulawesi",
+  "75": "gorontalo",
+  "81": "maluku",
+  "93": "irian jaya"
+ },
+ "ID/2002-03/PR/hv025": {
+  "1": "urban",
+  "2": "rural"
+ },
+ "ID/2002-03/PR/hv104": {
+  "1": "male",
+  "2": "female"
+ },
+ "ID/2002-03/PR/hv105": {
+  "97": "97+",
+  "98": "dk"
+ },
+ "ID/2007/PR/hv110": {
+  "0": "no",
+  "1": "yes"
+ },
+ "ID/2007/PR/hv121": {
+  "0": "no",
+  "1": "currently attending",
+  "2": "attended at some time"
+ },
+ "ID/2007/PR/hv122": {
+  "0": "no education, preschool",
+  "1": "primary",
+  "2": "secondary",
+  "3": "higher",
+  "8": "dk"
+ },
+ "ID/2007/PR/hv270": {
+  "1": "poorest",
+  "2": "poorer",
+  "3": "middle",
+  "4": "richer",
+  "5": "richest"
+ },
+ "ID/2007/PR/hv108": {
+  "97": "inconsistent",
+  "98": "dk"
+ },
+ "ID/2007/PR/hv023": {
+  "0": "national",
+  "1": "country specific"
+ },
+ "ID/2007/PR/hv024": {
+  "11": "di aceh",
+  "12": "north sumatra",
+  "13": "west sumatra",
+  "14": "riau",
+  "15": "jambi",
+  "16": "south sumatra",
+  "17": "bengkulu",
+  "18": "lampung",
+  "19": "bangka belitung",
+  "21": "kep bangka belitung",
+  "31": "dki jakarta",
+  "32": "west java",
+  "33": "central java",
+  "34": "di yogyakarta",
+  "35": "east java",
+  "36": "banten",
+  "51": "bali",
+  "52": "west nusa tenggara",
+  "53": "east nusa tenggara",
+  "61": "west kalimantan",
+  "62": "central kalimantan",
+  "63": "south kalimantan",
+  "64": "east kalimantan",
+  "71": "north sulawesi",
+  "72": "cenrtal sulawesi",
+  "73": "south sulawesi",
+  "74": "southeast sulawesi",
+  "75": "gorontalo",
+  "76": "sulawesi barat",
+  "81": "maluku",
+  "82": "maluku utara",
+  "91": "papua barat",
+  "94": "papua"
+ },
+ "ID/2007/PR/hv025": {
+  "1": "urban",
+  "2": "rural"
+ },
+ "ID/2007/PR/hv104": {
+  "1": "male",
+  "2": "female"
+ },
+ "ID/2007/PR/hv105": {
+  "97": "97+",
+  "98": "dk"
+ },
+ "ID/2017/PR/hv110": {
+  "0": "no",
+  "1": "yes"
+ },
+ "ID/2017/PR/hv121": {
+  "0": "no",
+  "1": "currently attending",
+  "2": "attended at some time"
+ },
+ "ID/2017/PR/hv122": {
+  "0": "no education, preschool",
+  "1": "primary",
+  "2": "secondary",
+  "3": "higher",
+  "8": "don't know"
+ },
+ "ID/2017/PR/hv270": {
+  "1": "poorest",
+  "2": "poorer",
+  "3": "middle",
+  "4": "richer",
+  "5": "richest"
+ },
+ "ID/2017/PR/hv108": {
+  "97": "inconsistent",
+  "98": "don't know"
+ },
+ "ID/2017/PR/hv022": {
+  "1": "aceh urban",
+  "2": "aceh rural",
+  "3": "north sumatera urban",
+  "4": "north sumatera rural",
+  "5": "west sumatera urban",
+  "6": "west sumatera rural",
+  "7": "riau urban",
+  "8": "riau rural",
+  "9": "jambi urban",
+  "10": "jambi rural",
+  "11": "south sumatera urban",
+  "12": "south sumatera rural",
+  "13": "bengkulu urban",
+  "14": "bengkulu rural",
+  "15": "lampung urban",
+  "16": "lampung rural",
+  "17": "bangka belitung urban",
+  "18": "bangka belitung rural",
+  "19": "riau islands urban",
+  "20": "riau islands rural",
+  "21": "jakarta urban",
+  "22": "jakarta rural",
+  "23": "west java urban",
+  "24": "west java rural",
+  "25": "central java urban",
+  "26": "central java rural",
+  "27": "yogyakarta urban",
+  "28": "yogyakarta rural",
+  "29": "east java urban",
+  "30": "east java rural",
+  "31": "banten urban",
+  "32": "banten rural",
+  "33": "bali urban",
+  "34": "bali rural",
+  "35": "west nusa tenggara urban",
+  "36": "west nusa tenggara rural",
+  "37": "east nusa tenggara urban",
+  "38": "east nusa tenggara rural",
+  "39": "west kalimantan urban",
+  "40": "west kalimantan rural",
+  "41": "central kalimantan urban",
+  "42": "central kalimantan rural",
+  "43": "south kalimantan urban",
+  "44": "south kalimantan rural",
+  "45": "east kalimantan urban",
+  "46": "east kalimantan rural",
+  "47": "north kalimantan urban",
+  "48": "north kalimantan rural",
+  "49": "north sulawesi urban",
+  "50": "north sulawesi rural",
+  "51": "central sulawesi urban",
+  "52": "central sulawesi rural",
+  "53": "south sulawesi urban",
+  "54": "south sulawesi rural",
+  "55": "southeast sulawesi urban",
+  "56": "southeast sulawesi rural",
+  "57": "gorontalo urban",
+  "58": "gorontalo rural",
+  "59": "west sulawesi urban",
+  "60": "west sulawesi rural",
+  "61": "maluku urban",
+  "62": "maluku rural",
+  "63": "north maluku urban",
+  "64": "north maluku rural",
+  "65": "west papua urban",
+  "66": "west papua rural",
+  "67": "papua urban",
+  "68": "papua rural"
+ },
+ "ID/2017/PR/hv023": {
+  "1": "aceh urban",
+  "2": "aceh rural",
+  "3": "north sumatera urban",
+  "4": "north sumatera rural",
+  "5": "west sumatera urban",
+  "6": "west sumatera rural",
+  "7": "riau urban",
+  "8": "riau rural",
+  "9": "jambi urban",
+  "10": "jambi rural",
+  "11": "south sumatera urban",
+  "12": "south sumatera rural",
+  "13": "bengkulu urban",
+  "14": "bengkulu rural",
+  "15": "lampung urban",
+  "16": "lampung rural",
+  "17": "bangka belitung urban",
+  "18": "bangka belitung rural",
+  "19": "riau islands urban",
+  "20": "riau islands rural",
+  "21": "jakarta urban",
+  "22": "jakarta rural",
+  "23": "west java urban",
+  "24": "west java rural",
+  "25": "central java urban",
+  "26": "central java rural",
+  "27": "yogyakarta urban",
+  "28": "yogyakarta rural",
+  "29": "east java urban",
+  "30": "east java rural",
+  "31": "banten urban",
+  "32": "banten rural",
+  "33": "bali urban",
+  "34": "bali rural",
+  "35": "west nusa tenggara urban",
+  "36": "west nusa tenggara rural",
+  "37": "east nusa tenggara urban",
+  "38": "east nusa tenggara rural",
+  "39": "west kalimantan urban",
+  "40": "west kalimantan rural",
+  "41": "central kalimantan urban",
+  "42": "central kalimantan rural",
+  "43": "south kalimantan urban",
+  "44": "south kalimantan rural",
+  "45": "east kalimantan urban",
+  "46": "east kalimantan rural",
+  "47": "north kalimantan urban",
+  "48": "north kalimantan rural",
+  "49": "north sulawesi urban",
+  "50": "north sulawesi rural",
+  "51": "central sulawesi urban",
+  "52": "central sulawesi rural",
+  "53": "south sulawesi urban",
+  "54": "south sulawesi rural",
+  "55": "southeast sulawesi urban",
+  "56": "southeast sulawesi rural",
+  "57": "gorontalo urban",
+  "58": "gorontalo rural",
+  "59": "west sulawesi urban",
+  "60": "west sulawesi rural",
+  "61": "maluku urban",
+  "62": "maluku rural",
+  "63": "north maluku urban",
+  "64": "north maluku rural",
+  "65": "west papua urban",
+  "66": "west papua rural",
+  "67": "papua urban",
+  "68": "papua rural"
+ },
+ "ID/2017/PR/hv024": {
+  "11": "aceh",
+  "12": "north sumatera",
+  "13": "west sumatera",
+  "14": "riau",
+  "15": "jambi",
+  "16": "south sumatera",
+  "17": "bengkulu",
+  "18": "lampung",
+  "19": "bangka belitung",
+  "21": "riau islands",
+  "31": "jakarta",
+  "32": "west java",
+  "33": "central java",
+  "34": "yogyakarta",
+  "35": "east java",
+  "36": "banten",
+  "51": "bali",
+  "52": "west nusa tenggara",
+  "53": "east nusa tenggara",
+  "61": "west kalimantan",
+  "62": "central kalimantan",
+  "63": "south kalimantan",
+  "64": "east kalimantan",
+  "65": "north kalimantan",
+  "71": "north sulawesi",
+  "72": "central sulawesi",
+  "73": "south sulawesi",
+  "74": "southeast sulawesi",
+  "75": "gorontalo",
+  "76": "west sulawesi",
+  "81": "maluku",
+  "82": "north maluku",
+  "91": "west papua",
+  "94": "papua"
+ },
+ "ID/2017/PR/hv025": {
+  "1": "urban",
+  "2": "rural"
+ },
+ "ID/2017/PR/hv104": {
+  "1": "male",
+  "2": "female"
+ },
+ "ID/2017/PR/hv105": {
+  "95": "95+",
+  "98": "don't know"
+ },
+ "ID/1997/PR/hv110": {
+  "0": "no",
+  "1": "yes"
+ },
+ "ID/1997/PR/hv108": {
+  "97": "inconsistent",
+  "98": "dk"
+ },
+ "ID/1997/PR/hv023": {
+  "1": "di aceh - urban",
+  "2": "di aceh - rural",
+  "3": "north sumatra - urban",
+  "4": "north sumatra - rural",
+  "5": "west sumatra - urban",
+  "6": "west sumatra - rural",
+  "7": "riau - urban",
+  "8": "riau - rural",
+  "9": "jambi - urban",
+  "10": "jambi - rural",
+  "11": "south sumatra - urban",
+  "12": "south sumatra - rural",
+  "13": "bengkulu - urban",
+  "14": "bengkulu - rural",
+  "15": "lampung - urban",
+  "16": "lampung - rural",
+  "17": "dki jakarta",
+  "19": "west java - urban",
+  "20": "west java - rural",
+  "21": "central java - urban",
+  "22": "central java - rural",
+  "23": "di yogyakarta - urban",
+  "24": "di yogyakarta - rural",
+  "25": "east java - urban",
+  "26": "east java - rural",
+  "27": "bali - urban",
+  "28": "bali - rural",
+  "29": "west nusa tenggara - urban",
+  "30": "west nusa tenggara - rural",
+  "31": "east nusa tenggara - urban",
+  "32": "east nusa tenggara - rural",
+  "33": "east timor - urban",
+  "34": "east timor - rural",
+  "35": "west kalimantan - urban",
+  "36": "west kalimantan - rural",
+  "37": "central kalimantan - urban",
+  "38": "central kalimantan - rural",
+  "39": "south kalimantan - urban",
+  "40": "south kalimantan - rural",
+  "41": "east kalimantan - urban",
+  "42": "east kalimantan - rural",
+  "43": "north sulawesi - urban",
+  "44": "north sulawesi - rural",
+  "45": "central sulawesi - urban",
+  "46": "central sulawesi - rural",
+  "47": "south sulawesi - urban",
+  "48": "south sulawesi - rural",
+  "49": "southeast sulawesi - urban",
+  "50": "southeast sulawesi - rural",
+  "51": "maluku - urban",
+  "52": "maluku - rural",
+  "53": "irian jaya - urban",
+  "54": "irian jaya - rural"
+ },
+ "ID/1997/PR/hv024": {
+  "0": "java-bali",
+  "1": "dki jakarta",
+  "2": "west java",
+  "3": "central java",
+  "4": "di yogyakarta",
+  "5": "east java",
+  "6": "bali",
+  "7": "outer java-bali i",
+  "8": "di aceh",
+  "9": "north sumatra",
+  "10": "west sumatra",
+  "11": "south sumatra",
+  "12": "lampung",
+  "13": "west nusa tenggara",
+  "14": "west kalimantan",
+  "15": "south kalimantan",
+  "16": "north sulawesi",
+  "17": "south sulawesi",
+  "18": "outer java-bali ii",
+  "19": "riau",
+  "20": "jambi",
+  "21": "bengkulu",
+  "22": "east nusa tenggara",
+  "23": "east timor",
+  "24": "central kalimantan",
+  "25": "east kalimantan",
+  "26": "cenrtal sulawesi",
+  "27": "southeast sulawesi",
+  "28": "maluku",
+  "29": "irian jaya"
+ },
+ "ID/1997/PR/hv025": {
+  "1": "urban",
+  "2": "rural"
+ },
+ "ID/1997/PR/hv104": {
+  "1": "male",
+  "2": "female"
+ },
+ "ID/1997/PR/hv105": {
+  "97": "97+",
+  "98": "dk"
+ },
+ "ID/1991/PR/hv110": {
+  "0": "no",
+  "1": "yes"
+ },
+ "ID/1991/PR/hv108": {
+  "97": "inconsistent",
+  "98": "dk"
+ },
+ "ID/1991/PR/hv023": {
+  "1": "di aceh        u",
+  "2": "di aceh        r",
+  "3": "north sumatra  u",
+  "4": "north sumatra  r",
+  "5": "west sumatra   u",
+  "7": "riau           u",
+  "9": "jambi          u",
+  "11": "south sumatra  u",
+  "13": "bengkulu       u",
+  "15": "lampung        u",
+  "17": "dki jakarta    u",
+  "19": "west java      u",
+  "21": "central java   u",
+  "23": "di yogyakarta  u",
+  "25": "east java      u",
+  "27": "bali           u",
+  "29": "west nusa tenggara u",
+  "31": "east nusa tenggara u",
+  "33": "east timor     u",
+  "35": "west kalimantan    u",
+  "37": "central kalimantan u",
+  "39": "south kalimantan   u",
+  "41": "east kalimantan    u",
+  "43": "north sulawesi u",
+  "45": "central sulawesi   u",
+  "47": "south sulawesi u",
+  "49": "southeast sulawesi u",
+  "51": "maluku         u",
+  "53": "irian jaya     u",
+  "54": "irian jaya     r"
+ },
+ "ID/1991/PR/hv024": {
+  "0": "java-bali",
+  "1": "dki jakarta",
+  "2": "west java",
+  "3": "central java",
+  "4": "di yogyakarta",
+  "5": "east java",
+  "6": "bali",
+  "7": "outer java-bali i",
+  "8": "outer java-bali ii"
+ },
+ "ID/1991/PR/hv025": {
+  "1": "urban",
+  "2": "rural"
+ },
+ "ID/1991/PR/hv104": {
+  "1": "male",
+  "2": "female"
+ },
+ "ID/1991/PR/hv105": {
+  "97": "97+",
+  "98": "dk"
+ },
+ "PH/2013/PR/hv110": {
+  "0": "no",
+  "1": "yes"
+ },
+ "PH/2013/PR/hv121": {
+  "0": "no",
+  "1": "currently attending",
+  "2": "attended at some time"
+ },
+ "PH/2013/PR/hv122": {
+  "0": "no education, preschool",
+  "1": "primary",
+  "2": "secondary",
+  "3": "higher",
+  "8": "don't know"
+ },
+ "PH/2013/PR/hv270": {
+  "1": "poorest",
+  "2": "poorer",
+  "3": "middle",
+  "4": "richer",
+  "5": "richest"
+ },
+ "PH/2013/PR/hv108": {
+  "97": "inconsistent",
+  "98": "don't know"
+ },
+ "PH/2013/PR/hv022": {
+  "1": "national capital region - urban",
+  "2": "national capital region - rural",
+  "3": "cordillera admin region - urban",
+  "4": "cordillera admin region - rural",
+  "5": "i - ilocos region - urban",
+  "6": "i - ilocos region - rural",
+  "7": "ii - cagayan valley - urban",
+  "8": "ii - cagayan valley _rural",
+  "9": "iii - central luzon - urban",
+  "10": "iii - central luzon - rural",
+  "11": "iva - calabarzon - urban",
+  "12": "iva - calabarzon - rural",
+  "13": "ivb - mimaropa - urban",
+  "14": "ivb - mimaropa - rural",
+  "15": "v - bicol - urban",
+  "16": "v - bicol - rural",
+  "17": "vi - western visayas - urban",
+  "18": "vi - western visayas - rural",
+  "19": "vii - central visayas - urban",
+  "20": "vii - central visayas - rural",
+  "21": "viii - eastern visayas - urban",
+  "22": "viii - eastern visayas - rural",
+  "23": "ix - zamboanga peninsula - urban",
+  "24": "ix - zamboanga peninsula - rural",
+  "25": "x - northern mindanao - urban",
+  "26": "x - northern mindanao - rural",
+  "27": "xi - davao - urban",
+  "28": "xi - davao - rural",
+  "29": "xii - soccsksargen - urban",
+  "30": "xii - soccsksargen - rural",
+  "31": "xiii - caraga - urban",
+  "32": "xiii - caraga - rural",
+  "33": "armm - urban",
+  "34": "armm - rural"
+ },
+ "PH/2013/PR/hv023": {
+  "1": "national capital region - urban",
+  "2": "national capital region - rural",
+  "3": "cordillera admin region - urban",
+  "4": "cordillera admin region - rural",
+  "5": "i - ilocos region - urban",
+  "6": "i - ilocos region - rural",
+  "7": "ii - cagayan valley - urban",
+  "8": "ii - cagayan valley _rural",
+  "9": "iii - central luzon - urban",
+  "10": "iii - central luzon - rural",
+  "11": "iva - calabarzon - urban",
+  "12": "iva - calabarzon - rural",
+  "13": "ivb - mimaropa - urban",
+  "14": "ivb - mimaropa - rural",
+  "15": "v - bicol - urban",
+  "16": "v - bicol - rural",
+  "17": "vi - western visayas - urban",
+  "18": "vi - western visayas - rural",
+  "19": "vii - central visayas - urban",
+  "20": "vii - central visayas - rural",
+  "21": "viii - eastern visayas - urban",
+  "22": "viii - eastern visayas - rural",
+  "23": "ix - zamboanga peninsula - urban",
+  "24": "ix - zamboanga peninsula - rural",
+  "25": "x - northern mindanao - urban",
+  "26": "x - northern mindanao - rural",
+  "27": "xi - davao - urban",
+  "28": "xi - davao - rural",
+  "29": "xii - soccsksargen - urban",
+  "30": "xii - soccsksargen - rural",
+  "31": "xiii - caraga - urban",
+  "32": "xiii - caraga - rural",
+  "33": "armm - urban",
+  "34": "armm - rural"
+ },
+ "PH/2013/PR/hv024": {
+  "1": "national capital region",
+  "2": "cordillera admin region",
+  "3": "i - ilocos region",
+  "4": "ii - cagayan valley",
+  "5": "iii - central luzon",
+  "6": "iva - calabarzon",
+  "7": "ivb - mimaropa",
+  "8": "v - bicol",
+  "9": "vi - western visayas",
+  "10": "vii - central visayas",
+  "11": "viii - eastern visayas",
+  "12": "ix - zamboanga peninsula",
+  "13": "x - northern mindanao",
+  "14": "xi - davao",
+  "15": "xii - soccsksargen",
+  "16": "xiii - caraga",
+  "17": "armm"
+ },
+ "PH/2013/PR/hv025": {
+  "1": "urban",
+  "2": "rural"
+ },
+ "PH/2013/PR/hv104": {
+  "1": "male",
+  "2": "female"
+ },
+ "PH/2013/PR/hv105": {
+  "96": "96+",
+  "98": "don't know"
+ },
+ "PH/2022/PR/hv110": {
+  "0": "no",
+  "1": "yes"
+ },
+ "PH/2022/PR/hv121": {
+  "0": "no",
+  "1": "currently attending",
+  "2": "attended at some time"
+ },
+ "PH/2022/PR/hv122": {
+  "0": "no education, preschool/early childhood education",
+  "1": "primary",
+  "2": "secondary",
+  "3": "higher",
+  "8": "don't know"
+ },
+ "PH/2022/PR/hv270": {
+  "1": "poorest",
+  "2": "poorer",
+  "3": "middle",
+  "4": "richer",
+  "5": "richest"
+ },
+ "PH/2022/PR/hv108": {
+  "97": "inconsistent",
+  "98": "don't know"
+ },
+ "PH/2022/PR/hv024": {
+  "1": "region i - ilocos",
+  "2": "region ii - cagayan valley",
+  "3": "region iii - central luzon",
+  "4": "region iva - calabarzon",
+  "5": "region v - bicol",
+  "6": "region vi - western visayas",
+  "7": "region vii - central visayas",
+  "8": "region viii - eastern visayas",
+  "9": "region ix - zamboanga peninsula",
+  "10": "region x - northern mindanao",
+  "11": "region xi - davao",
+  "12": "region xii - soccsksargen",
+  "13": "national capital region",
+  "14": "car - cordillera",
+  "15": "barmm - bangsamoro autonomous region in muslim mindanao",
+  "16": "caraga",
+  "17": "mimaropa"
+ },
+ "PH/2022/PR/hv025": {
+  "1": "urban",
+  "2": "rural"
+ },
+ "PH/2022/PR/hv104": {
+  "1": "male",
+  "2": "female"
+ },
+ "PH/2022/PR/hv105": {
+  "95": "95+",
+  "98": "don't know"
+ },
+ "PH/2022/IR/v024": {
+  "1": "region i - ilocos",
+  "2": "region ii - cagayan valley",
+  "3": "region iii - central luzon",
+  "4": "region iva - calabarzon",
+  "5": "region v - bicol",
+  "6": "region vi - western visayas",
+  "7": "region vii - central visayas",
+  "8": "region viii - eastern visayas",
+  "9": "region ix - zamboanga peninsula",
+  "10": "region x - northern mindanao",
+  "11": "region xi - davao",
+  "12": "region xii - soccsksargen",
+  "13": "national capital region",
+  "14": "car - cordillera",
+  "15": "barmm - bangsamoro autonomous region in muslim mindanao",
+  "16": "caraga",
+  "17": "mimaropa"
+ },
+ "PH/2022/IR/v025": {
+  "1": "urban",
+  "2": "rural"
+ },
+ "PH/2022/IR/v133": {
+  "97": "inconsistent",
+  "98": "don't know"
+ },
+ "PH/2022/IR/v190": {
+  "1": "poorest",
+  "2": "poorer",
+  "3": "middle",
+  "4": "richer",
+  "5": "richest"
+ },
+ "PH/2022/IR/v525": {
+  "0": "not had sex",
+  "96": "at first union",
+  "97": "inconsistent",
+  "98": "don't know"
+ },
+ "PH/2022/IR/v716": {
+  "0": "not working and didn't work in last 12 months",
+  "1": "commissioned armed forces officers",
+  "2": "non-commissioned armed forces officers",
+  "3": "armed forces occupations, other ranks",
+  "9": "non-gainful activities and special occupations",
+  "11": "chief executives, senior officials and legislators",
+  "12": "administrative and commercial managers",
+  "13": "production and specialized services managers",
+  "14": "hospitality, retail and other services managers",
+  "21": "science and engineering professionals",
+  "22": "health professionals",
+  "23": "teaching professionals",
+  "24": "business and administration professionals",
+  "25": "information and communications technology professionals",
+  "26": "legal, social and cultural professionals",
+  "31": "science and engineering associate professionals",
+  "32": "health associate professionals",
+  "33": "business and administration associate professionals",
+  "34": "legal, social, cultural and related professionals",
+  "35": "information and communications technicians",
+  "41": "general and keyboard clerks",
+  "42": "customer service clerks",
+  "43": "numerical amd material recording clerks",
+  "44": "other clerical support workers",
+  "51": "personal service workers",
+  "52": "sales workers",
+  "53": "personal care workers",
+  "54": "protective services workers",
+  "61": "market-oriented skilled agricultural workers",
+  "62": "market-oriented skilled forestry, fishery and hunting workers",
+  "63": "subsistence farmers, fishers, hunter and gatherers",
+  "71": "building and related trades workers, excluding electricians",
+  "72": "metal, machinery and related trades workers",
+  "73": "handicraft and printing workers",
+  "74": "electrical and electronics trades workers",
+  "75": "food processing, wood working, garment and other craft and related trades worker",
+  "81": "stationary plant and machine operators",
+  "82": "assemblers",
+  "83": "drivers and mobile plant operator",
+  "91": "cleaners and helpers",
+  "92": "agricultural, forestry and fishery laborers",
+  "93": "laborers in mining, construction, manufacturing and transport",
+  "94": "food preparation assistant",
+  "95": "street and related sales and service workers",
+  "96": "refuse workers and other elementary workers",
+  "99": "other (specify)",
+  "99998": "don't know"
+ },
+ "PH/2022/IR/v717": {
+  "0": "not working",
+  "1": "professional/technical/managerial",
+  "2": "clerical",
+  "3": "sales",
+  "4": "agricultural - self employed",
+  "5": "agricultural - employee",
+  "6": "household and domestic",
+  "7": "services",
+  "8": "skilled manual",
+  "9": "unskilled manual",
+  "98": "don't know"
+ },
+ "PH/2022/IR/v731": {
+  "0": "no",
+  "1": "in the past year",
+  "2": "currently working",
+  "3": "have a job, but on leave last 7 days"
+ },
+ "VN/1997/PR/hv110": {
+  "0": "no",
+  "1": "yes"
+ },
+ "VN/1997/PR/hv108": {
+  "97": "inconsistent",
+  "98": "dk"
+ },
+ "VN/1997/PR/hv023": {
+  "0": "national",
+  "1": "country specific"
+ },
+ "VN/1997/PR/hv024": {
+  "1": "northern uplands",
+  "2": "red river delta",
+  "3": "north central",
+  "4": "central coast",
+  "5": "central highlands",
+  "6": "southeast",
+  "7": "mekong river delta"
+ },
+ "VN/1997/PR/hv025": {
+  "1": "urban",
+  "2": "rural"
+ },
+ "VN/1997/PR/hv104": {
+  "1": "male",
+  "2": "female"
+ },
+ "VN/1997/PR/hv105": {
+  "95": "95+",
+  "98": "dk"
+ },
+ "VN/2002/PR/hv110": {
+  "0": "no",
+  "1": "yes"
+ },
+ "VN/2002/PR/hv108": {
+  "97": "inconsistent",
+  "98": "dk"
+ },
+ "VN/2002/PR/hv023": {
+  "0": "national",
+  "1": "country specific"
+ },
+ "VN/2002/PR/hv024": {
+  "1": "northern uplands",
+  "2": "red river delta",
+  "3": "north central",
+  "4": "central coast",
+  "5": "central highlands",
+  "6": "southeast",
+  "7": "mekong river delta"
+ },
+ "VN/2002/PR/hv025": {
+  "1": "urban",
+  "2": "rural"
+ },
+ "VN/2002/PR/hv104": {
+  "1": "male",
+  "2": "female"
+ },
+ "VN/2002/PR/hv105": {
+  "95": "95+",
+  "98": "dk"
+ },
+ "VN/2005ais/PR/hv110": {
+  "0": "no",
+  "1": "yes"
+ },
+ "VN/2005ais/PR/hv270": {
+  "1": "poorest",
+  "2": "poorer",
+  "3": "middle",
+  "4": "richer",
+  "5": "richest"
+ },
+ "VN/2005ais/PR/hv108": {
+  "97": "inconsistent",
+  "98": "dk"
+ },
+ "VN/2005ais/PR/hv023": {
+  "1": "ha noi",
+  "2": "ho chi minh city",
+  "3": "hai phong",
+  "4": "quang ninh",
+  "5": "north region",
+  "6": "center region",
+  "7": "south region"
+ },
+ "VN/2005ais/PR/hv024": {
+  "1": "north",
+  "2": "center",
+  "3": "south"
+ },
+ "VN/2005ais/PR/hv025": {
+  "1": "urban",
+  "2": "rural"
+ },
+ "VN/2005ais/PR/hv104": {
+  "1": "male",
+  "2": "female"
+ },
+ "VN/2005ais/PR/hv105": {
+  "97": "97+",
+  "98": "dk"
+ }
+}
