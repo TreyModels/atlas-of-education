@@ -1,0 +1,195 @@
+{
+  "label": "NEW GENERATION \u2014 REPRODUCED SIMULATION forecast with genuine held-out horizons; empirical target = REPRODUCED EMPIRICAL ANALYSIS (fresh WDI CS-style); author RMSE claim = AUTHOR-REPORTED baseline",
+  "config": {
+    "N": 300,
+    "T": 24,
+    "measure_from": 8,
+    "entry_age": 6,
+    "max_entry_age": 9,
+    "levels": [
+      [
+        "primary",
+        6
+      ],
+      [
+        "lower",
+        3
+      ],
+      [
+        "upper",
+        3
+      ],
+      [
+        "tertiary",
+        4
+      ]
+    ],
+    "gates": [
+      {
+        "kind": "fixed_bar",
+        "bar": -1000000000.0
+      },
+      {
+        "kind": "fixed_bar",
+        "bar": -1000000000.0
+      },
+      {
+        "kind": "fixed_bar",
+        "bar": -1000000000.0
+      },
+      {
+        "kind": "fixed_bar",
+        "bar": -1000000000.0
+      }
+    ],
+    "y_median": 0.8,
+    "y_sigma": 0.6,
+    "urban_share": 0.6,
+    "subsist": 0.6,
+    "borrow": 0.0,
+    "fee_public": 0.15,
+    "fee_tertiary": 0.25,
+    "budget_per_child": 0.08,
+    "entry_share": 0.97,
+    "delta": 0.93,
+    "kappa": 12.0,
+    "tau": 0.25,
+    "q0": 1.0,
+    "beta_a": 0.25,
+    "home_effect": 0.15,
+    "ses_home": 0.6,
+    "learn_noise": 0.15,
+    "mpl_primary": 4.5,
+    "mpl_lower": 7.0,
+    "start_year": 1990
+  },
+  "T0": 16,
+  "horizons": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "heldout": [
+    5,
+    6
+  ],
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39
+  ],
+  "engine_commit": "846c9e0",
+  "calibration": {
+    "rule": "TRAINING-ONLY: pre-abolition year T0-1 attendance only; bisection on fee in [0,0.15]; post horizons never used for tuning",
+    "fee": 0.15,
+    "pre_attendance_pct": 59.44444444444444,
+    "target_pct": 74.88,
+    "residual_pp": 15.435555555555553,
+    "status": "CALIBRATION_FAILED",
+    "level_anchor_status": "FALLBACK_DECLARED \u2014 anchor infeasible; manuscript fee 0.15 used; no post tuning"
+  },
+  "simulated_abolition_delta_pp": [
+    17.491666666666664,
+    21.515277777777776,
+    23.765277777777783,
+    25.454166666666666,
+    26.490277777777777,
+    26.651388888888892,
+    25.640277777777776
+  ],
+  "simulated_persistence_delta_pp": [
+    0.3041666666666661,
+    0.5430555555555557,
+    0.393055555555555,
+    0.42222222222222233,
+    0.3541666666666668,
+    0.47499999999999964,
+    0.2888888888888873
+  ],
+  "simulated_abolition_minus_persistence_pp": [
+    17.1875,
+    20.97222222222222,
+    23.372222222222224,
+    25.031944444444445,
+    26.13611111111111,
+    26.17638888888889,
+    25.35138888888889
+  ],
+  "empirical_cs_path_pp": [
+    12.322000468040875,
+    23.660180736383328,
+    25.78912194653808,
+    21.87768354035259,
+    24.940028177798382,
+    28.452044050427663,
+    25.775971091918375
+  ],
+  "score_vs_empirical": {
+    "full7": {
+      "rmse": 2.764015289459353,
+      "mae": 2.431562710344133
+    },
+    "heldout_e5_e6": {
+      "rmse": 1.636898967769151,
+      "mae": 1.350118682284128
+    },
+    "persistence_baseline": {
+      "rmse_full7": 23.758523877205526,
+      "mae_full7": 23.259575715922754,
+      "rmse_heldout": null
+    }
+  },
+  "empirical_provenance": {
+    "cs_json": "/Users/treymenefee/neon-boot/wt4/auditv2/results/audit/newgen/cs_estimator_fresh_wdi_2026-11-25.json",
+    "cs_sha256": "4ac9551d0c4b5b2c9180131859a6f4c3876d527ae158f70a7e039fe34c1d1905"
+  },
+  "runtime_sec": 13.82,
+  "engine_files": {
+    "core.py": "e111397bd8a50f94e82bb77715f236ee3d5c0bf863a23d84afdf1c6c71fa8e71",
+    "modules/tutoring.py": "7a6fd4c33cc2aefcd47da097b47ac7945744cc1adf9dedbb8ab1ec57d8adc2f8",
+    "modules/labour.py": "0ccfb3ce5b4c88fc2969909dbdbbc4d32184052fe5359688f96e00c2667b3f7d"
+  },
+  "event_key": "year_t",
+  "unfired_events_asserted": true
+}
