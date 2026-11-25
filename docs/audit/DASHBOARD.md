@@ -285,3 +285,29 @@ of runner+workers only, `/root/work/modelrev/pkg` intact. Its outputs are alread
   (sections 5/7/9/10 filled), P0 annex appended to `SCIENTIFIC_CLAIM_LEDGER.md` (A1–A10: ABC identification,
   paradox, Tullock, perf unproven, DGP/bootstrap findings). Verdict: **Gate-1 GREEN, GO for Gate 2** under the
   report's preconditions. Single Gate 0+1 report sent to Lead.
+
+- 2026-11-25T16:10+08:00 · Commander · **GATE 1 CLOSED — signed by lead, tree `8148998`.** Lead accepted the single
+  Gate 0+1 pack in full: Gate 0 PASS (87/87 registry, box independence, NumPy caveat operationalised); Gate-1
+  repairs; BEFORE 7F/12P/8xf → **AFTER 27/27** (host 72.85 s / box 56.73 s / Commander 112.12 s), ENGINE_CHECKS 13/13,
+  TUTORING_CHECKS 17/17, contest_math 68/68, ledger identities 0.0; fresh-540 migration REPRODUCED SIMULATION (box
+  cross-env sha `455649da…`, host failures disclosed); CF4 flip conditional with old failure preserved; P0 annex,
+  residual risks, A7 accepted. Compute-controller stand-down acknowledged (`dc3141c`, box idle, ledger `bac993cc…`).
+  **Gate 2 = GO, CONDITIONAL** — no campaign until (a) operator freezes canonical spec, (b) `task-13` runner
+  hardening lands (audit-runner), (c) A7 residual declared in the Gate-2 plan. Commander preparing (not running)
+  `docs/audit/GATE2_PLAN.md` + `GATE2_BENCHMARK_REGISTRY.csv` (measured budget ~4.7 CPU-h/540-class; ×1.113 max,
+  no 2–5×; staged pilot→search→refine→held-out; benchmark registry with citation/year/population/denominator;
+  evidence ledger; QUARANTINED/AUTHOR-REPORTED/UNRESOLVED items excluded).
+
+- 2026-11-25T16:20+08:00 · Commander · **Gate-2 preparation artifacts (NO COMPUTE RUN) committed.** Lead sign-off
+  recorded in `GATE1_REPORT.md` §7bis ("GATE 1: GREEN / CLOSED, signed by lead, tree 8148998"). `docs/audit/GATE2_PLAN.md`:
+  preconditions checklist (a operator canonical-spec decision OPEN, b task-13 runner hardening PENDING, c A7 residual
+  DECLARED); both spec variants drafted (V540-freeze recommended / V420-port documented alternative, decision OPEN);
+  measured budget (HK 20.3 / KR 41.9 CPU-s per run; 540-class 4.66 CPU-h; shipped 1.113× only; 420 spec ≈2×; staged
+  pilot 500×3 ≈13 CPU-h → search 5,000×5 ≈216 CPU-h → refine 100×30 ≈26 CPU-h → held-out ≈15.5 CPU-h; search stage
+  reduction is a Lead decision); pre-declared calibration moments + tolerances; held-out moments (KR 2025
+  participation, HK Grade 12); mandatory identifiability assessment (Jacobian rank/null space, not condition
+  number, ABC lesson); separate MC vs calibrated-parameter uncertainty reporting; definition discipline
+  (household income brackets vs simulated quintiles; per-student vs per-participant expenditure; never pool survey
+  years/jurisdictions). `docs/audit/GATE2_BENCHMARK_REGISTRY.csv` draft: 7 moments with claim/jurisdiction/survey
+  year/population/denominator/outcome definition/source/uncertainty/calibration-vs-held-out; all empirical citations
+  still to be verified before use (AUTHOR-REPORTED). No calibration run launched.

@@ -161,6 +161,22 @@ AUTHOR-REPORTED / UNRESOLVED.
   leakage), permutation within-invariance 6.66e-16, replacement WCR size 0.025–0.042 and cluster bootstrap
   0.033–0.050 / coverage 0.95–0.97.
 
+## 7bis. Lead sign-off — GATE 1 CLOSED
+
+**GATE 1: GREEN / CLOSED, signed by `lead` 2026-11-25; Gate-1 pack tree `8148998`.**
+Accepted in full: Gate-0 PASS (within tolerance; 87/87 registry independently re-derived; box independence; NumPy
+caveat operationalised via `/root/work/venv-declared`); Gate-1 repairs; BEFORE `7F/12P/8xf` → AFTER **27/27**
+(host 72.85 s, box 56.73 s, Commander independent 112.12 s); `ENGINE_CHECKS` 13/13; `TUTORING_CHECKS` 17/17;
+`contest_math` 68/68; real-run ledger identities 0.0 relative error; fresh-540 migration accepted as
+REPRODUCED SIMULATION with the exact source label ("box cross-env, declared venv, clean `98baf6b`, 6 workers,
+49.3 min, sha256 `455649da…`") and both host failures disclosed; CF4 flip accepted as **conditional simulation**
+with the old failure preserved; P0 annex accepted; residual risks accepted; A7 declared. Compute-controller
+stand-down acknowledged (`dc3141c`; box idle; ledger sha `bac993cc…`).
+
+**Gate 2 = GO, CONDITIONAL.** Do not launch the campaign until: (a) operator decides the canonical spec; (b) runner
+hardening (`task-13`, audit-runner) reports; (c) the A7 residual is declared in the Gate-2 plan. Preparation (no
+runs) is in `docs/audit/GATE2_PLAN.md` and `docs/audit/GATE2_BENCHMARK_REGISTRY.csv`.
+
 ## 8. Compute record
 
 10-CPU cgroup (`cpu.max=1000000 100000`); 56/80-worker rule void. Declared-stack venv `/root/work/venv-declared`
