@@ -44,8 +44,10 @@ The operator has not yet chosen the canonical spec. Both variants are drafted he
   repaired engine. Evidence for this variant is **AUTHOR-REPORTED / PRE-REPAIR / UNCALIBRATED** (legacy branch
   `d20ba6e`, calibration **FAILED**: untuned 66.27 %/80.77 pp/5.32×; best grid 91.63 %/37.11 pp/1.59× vs targets
   76.5/32.1/3.4 — see `harvest/HARVEST.md` §4). Cost ≈2× V540 (see §2).
-**Decision status: OPEN.** G2-A produces `canonical_spec.json` for whichever variant the operator freezes; no
-calibration run may start before that artefact and Lead approval.
+**Decision status: DECIDED (operator, 2026-11-25): V540-FREEZE.** Frozen artefact `docs/audit/canonical_spec.json`
+(content sha256 `c5f9e2de…4a05`, file `35576fed…7b95`); GATE_SPECS KR-TRACKED primary / KR-SINGLE sensitivity; 420
+is a documented alternative only (no 420 port work). New-generation campaign preregistered in
+`docs/audit/GATE2_PREREGISTRATION.md` (frozen before launch).
 
 ## 2. Measured compute budget (do not plan on a hoped-for speed-up)
 
@@ -166,7 +168,9 @@ Requirements:
 * include a local + finite-domain check (multiple starting points across the prior box), not a single point;
 * if the moment map is not differentiable, use a finite-difference Jacobian with step-size sensitivity reported;
 * the identifiability report is a G2-A artefact and a **stop gate**: no joint estimation until rank is adequate or
-  the reduced system is pre-registered;
+  the reduced system is pre-registered. **G2-A result (`G2A_IDENTIFIABILITY.md`): rank 4/4, null_dim 0 at 2 starts,
+  BUT one-seed FD Jacobians are unstable (max|ΔJ| 26.5, rel 0.52) — G2-B MUST use multi-seed Jacobians with the
+  registered step sizes (5 %/3 %/5 %/4 %) and ≥3 starts; no prior or condition-number inference;**
 * it is computed **for the chosen canonical spec** (after the operator freezes V540-freeze or V420-port); drafting
   both variants in §1b is not a substitute for the chosen-spec Jacobian/rank/null-space artefact.
 
