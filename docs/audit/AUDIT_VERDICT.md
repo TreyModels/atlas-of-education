@@ -309,7 +309,7 @@ This is the distinction the papers and the errata must carry:
 * **NEW-GENERATION EVIDENCE (REPRODUCED SIMULATION / VALIDATED SIMULATION):** the repaired 540 (`98baf6b`, sha256
   `455649da…`), the migration table, the **100-seed Paper B new generation** (corrected artifacts `cf801af8…` /
   `2b69fa08…` / `8f08164d…`; engine `98baf6b`; **CF4a meets the pre-stated both-jurisdiction Win-Win** with a ~13 pp
-  participation cost; CF4b/CF1b fail spend; CF3b also passes), the **CF4 reversal** (CF4a Win-Win both; CF1b no
+  participation reduction whose welfare interpretation is unresolved; CF4b/CF1b fail spend; CF3b also passes), the **CF4 reversal** (CF4a Win-Win both; CF1b no
   longer passes; CF4b fails; CF3b passes), the D2 calibration artefact (KR gap 68.36 → 29.71; ratio 18.01 → 2.11 without re-estimation), the
   regenerated Paper B tables, the P0 audits (ABC rank 4/5 + 2-dim null + analytic δ + local 5/5; corrected DGP 5/5
   vs legacy 3/5; bootstrap FE size 0.052–0.062 vs pooled 0.996–1.000; permutation within-invariance 6.66e-16), and
@@ -486,11 +486,16 @@ superseded defective artifacts (`14fc2a31…`, `697e7ca9…`, `cba8ee0f…`) mus
 robust across two repaired-engine specs and 30 vs 100 seeds; the pre-repair failure remains reported as the prior
 result and is not erased.
 
-**FIRST-CLASS CAVEAT — participation cost.** The criterion is spend + elite share; it does **not** capture
+**FIRST-CLASS CAVEAT — substantial participation reduction; welfare interpretation unresolved.** The criterion is spend + elite share; it does **not** capture
 participation. Under CF4a, K–12 participation falls **HK 61.93 → 48.60 (−13.33 pp)** and **KR-TRACKED 55.79 → 42.81
 (−12.98 pp)**; G12 falls HK 49.37 → 39.14 (−10.23) and KR 36.25 → 30.56 (−5.69). CF3b has a similar drop (48.56 /
 42.80). Correct phrasing: **"CF4a meets the pre-stated spend/elite criterion while reducing participation by ~13 pp"**
-— not "win-win" unqualified. This is a material welfare cost and belongs in the abstract.
+— not "win-win" unqualified. **A participation fall is not automatically a welfare cost** (Codex correction): it
+could be lost useful support, substitution by school-provided preparation, or reduced low-value purchase — we cannot
+tell which without learning, access, teacher-workload, student-time and spending outcomes, which this run does not
+measure. The engine already has the withholding/own-teacher/positional-vs-learning mechanisms, but Paper B's spec
+(`own_ban=0.95`, `mode=positional`) suppressed them; the emergence question is a separate, upcoming track (**Paper
+C**), not something Paper B answers. **Welfare interpretation: unresolved.**
 
 **Uncertainty.** Paired-seed elite deltas for CF4a: HK **−1.62 [−1.73,−1.50]**, KR-TRACKED **−1.74 [−1.87,−1.61]**,
 KR-SINGLE **−2.03 [−2.19,−1.87]**; spend-index seed CIs tight (CF4a HK [70.54,70.64], KR [73.07,73.19]). CF4b's KR
@@ -520,7 +525,7 @@ meets the criterion); the CF4 reversal itself is a **reproduced new-generation r
 | UNRESOLVED | **5** (2 A, 0 B, 3 programme) | A-31 replication inventory; A-36 bulge `t*` (no-effect evidence); canonical spec/Gate-2; GPU quarantine |
 
 The machine-readable one-row-per-claim record is `results/audit/paper_claims.csv` (110 rows; sha256
-`4374558c3abf708c97d1f0cf309897996ec6ada9ed76952f758e9c9766190384`). The Lead-defined new-generation label **REPRODUCED EMPIRICAL ANALYSIS** is used for the fresh-WDI E8 rows; all
+`aeff6213b35c5b52a1bf8ea6543e8fd30e3de9d509bc9393e77f21eb906f8ec8`). The Lead-defined new-generation label **REPRODUCED EMPIRICAL ANALYSIS** is used for the fresh-WDI E8 rows; all
 other rows use the verbatim six-status taxonomy.
 
 ---
@@ -623,7 +628,7 @@ run failed twice in the pool-completion phase; the box run is the labelled sourc
   meets it**, so "only pairing" is false); the D2 migration explains the pre-repair calibration failure; the
   100-seed run has seed-MC uncertainty only (frozen parameters, zero parameter uncertainty).
 * The methods/negative paper is honest and useful, but it still requires Gate-2 calibration + Gate-3 policy re-runs
-  for any calibrated policy claim, and it must not use "win-win" without the participation cost. It is not the paper
+  for any calibrated policy claim, and it must not use "win-win" without the participation reduction and its unresolved welfare interpretation. It is not the paper
   currently written.
 
 ### Do not submit either draft. Do not cite the 420 tables, the H2 numbers, the identifiability theorem, the

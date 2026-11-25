@@ -202,12 +202,20 @@ V540-FREEZE, 100 seeds): CF4a **passes both** again (70.59/23.21; 73.13/22.16) a
 reversal is therefore robust across two repaired-engine specs and 30 vs 100 seeds; the pre-repair failure remains
 reported as the prior result and is **not** erased.
 
-**FIRST-CLASS CAVEAT — participation cost.** "Win–Win" is the pre-stated **spend + elite-share** criterion; it does
-**not** capture participation. Under CF4a, K–12 participation falls **HK 61.93 → 48.60 (−13.33 pp)** and
-**KR-TRACKED 55.79 → 42.81 (−12.98 pp)**; G12 falls HK 49.37 → 39.14 (−10.23) and KR 36.25 → 30.56 (−5.69). CF3b
-has a similar participation drop (48.56 / 42.80). The correct phrasing is: **"CF4a meets the pre-stated spend/elite
-criterion while reducing participation by ~13 pp"**, not "Win–Win" unqualified. This is a material welfare cost and
-must be in the abstract.
+**FIRST-CLASS CAVEAT — substantial participation reduction; welfare interpretation unresolved.** "Win–Win" is the
+pre-stated **spend + elite-share** criterion; it does **not** capture participation. Under CF4a, K–12 participation
+falls **HK 61.93 → 48.60 (−13.33 pp)** and **KR-TRACKED 55.79 → 42.81 (−12.98 pp)**; G12 falls HK 49.37 → 39.14
+(−10.23) and KR 36.25 → 30.56 (−5.69). CF3b has a similar participation drop (48.56 / 42.80). The correct phrasing
+is: **"CF4a meets the pre-stated spend/elite criterion while reducing participation by ~13 pp"**, not "Win–Win"
+unqualified.
+
+**A participation fall is NOT automatically a welfare cost (Codex correction).** It could mean (i) students lost
+useful support, (ii) school-provided preparation substituted for paid tutoring, or (iii) families stopped buying
+low-value preparation. **We cannot tell which** without learning, access, teacher-workload, student-time and
+spending outcomes — none of which this run measures. The engine already implements the withholding / own-teacher /
+positional-vs-learning mechanisms, but **Paper B's spec (`own_ban=0.95`, `mode=positional`) suppressed them**; the
+"does school provision emerge?" question is a separate, upcoming track (**Paper C**), not something Paper B answers.
+The numbers must be kept; the welfare interpretation must be stated as unresolved, not asserted.
 
 **Uncertainty.** Seed/MC only: 100 matched seeds; paired-seed elite deltas for CF4a are HK **−1.62 [−1.73,−1.50]**,
 KR-TRACKED **−1.74 [−1.87,−1.61]**, KR-SINGLE **−2.03 [−2.19,−1.87]**; spend-index seed CIs are tight (e.g. CF4a HK
@@ -225,10 +233,10 @@ baseline K–12 is 61.93/55.79, not the 420's 40.0/76.5 — the generations are 
 
 | ID | Claim | Artifact | Status | Required change |
 |---|---|---|---|---|
-| B-41 | **New-generation CF4a meets the pre-stated both-jurisdiction Win–Win** (HK 70.59/23.21 vs 24.82; KR-TRACKED 73.13/22.16 vs 23.90; KR-SINGLE 75.43/22.04 vs 24.08), with participation cost ~−13 pp | corrected artifacts `cf801af8…`, `2b69fa08…`, provenance `8f08164d…`; independent cross-check identical | **REPRODUCED SIMULATION** (new generation; frozen spec; seed-MC only) | Report the reversal; preserve the pre-repair failure; **always** pair "meets the criterion" with the ~13 pp participation drop; not "win-win" unqualified; old failure stays reported. |
+| B-41 | **New-generation CF4a meets the pre-stated both-jurisdiction Win–Win** (HK 70.59/23.21 vs 24.82; KR-TRACKED 73.13/22.16 vs 23.90; KR-SINGLE 75.43/22.04 vs 24.08), with a substantial participation reduction (~−13 pp; welfare interpretation unresolved) | corrected artifacts `cf801af8…`, `2b69fa08…`, provenance `8f08164d…`; independent cross-check identical | **REPRODUCED SIMULATION** (new generation; frozen spec; seed-MC only) | Report the reversal; preserve the pre-repair failure; **always** pair "meets the criterion" with the ~13 pp participation drop; not "win-win" unqualified; state that the welfare interpretation of the participation fall is **unresolved** (lost support vs school substitution vs reduced low-value purchase) and requires learning/access/teacher-workload/student-time data; old failure stays reported. |
 | B-42 | New-generation **CF4b fails spend** (89.99 / 109.70 / 117.74), **CF1b fails spend** (97.25 / 99.19 / 98.99), **CF3b passes both** (70.88/23.43; 73.21/22.21; 75.53/22.09) — so the "only pairing compression with caps/seats works" reading is false | same | **REPRODUCED SIMULATION** (new generation) | Delete "only pairing"; report CF3b as a single-lever pass and CF1b/CF4b failures; the paper's ranking is not supported. |
 | B-43 | Provenance/correction: the earlier JSONs (`14fc2a31…`, `697e7ca9…`, `cba8ee0f…`) had an empty HK summary (aggregator looked up `TRACKED` instead of `PRIMARY` for HK); corrected artifacts re-aggregated from intact checkpoints with **no rerun**; engine label `98baf6b`; TRACKED `total_runs=1,800`, campaign 2,700 | `a4b0808`; corrected hashes; `reaggregate_new_generation.py` | **REPRODUCED SIMULATION** (provenance) | Cite only the corrected hashes; do not cite the superseded artifacts; record the aggregation-bug correction as a provenance note, not a model defect. |
-| B-44 | Participation cost under CF4a/CF3b is large (K–12 −13.33 pp HK / −12.98 pp KR under CF4a; G12 −10.23 / −5.69; CF3b similar) | same | **REPRODUCED SIMULATION** (first-class caveat) | Put the participation cost in the abstract and conclusion; the pre-stated criterion does not capture it; do not call the result a welfare win. |
+| B-44 | Substantial participation reduction under CF4a/CF3b (K–12 −13.33 pp HK / −12.98 pp KR under CF4a; G12 −10.23 / −5.69; CF3b similar) | same | **REPRODUCED SIMULATION** (first-class caveat) | Report the numbers in the abstract/conclusion; **welfare interpretation is unresolved** — it could be lost support, substituted school provision, or reduced low-value purchase, and requires learning/access/teacher-workload/student-time data we do not have. Paper B's spec (`own_ban=0.95`, `mode=positional`) suppressed the engine's withholding/own-teacher/positional-vs-learning mechanisms; the emergence question is Paper C. |
 
 ## 3. Status summary (Paper B)
 
