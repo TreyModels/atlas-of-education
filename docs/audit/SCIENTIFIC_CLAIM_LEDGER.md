@@ -330,3 +330,19 @@ completed, an arch-filtered `KeyError: 'bar'` fixed with an arch-aware explorato
 admission number was cited before this artefact; bar/bar_high contest-admission not applicable. **X-29 closed; Paper C
 claims remain gated on QA sign-off (done) + prereg final/manifest and no screening/confirmatory compute until reserve.**
 
+---
+
+**REFS/DOIs REGISTER (2026-11-25; citation/register pass, commit `f77e8f1`; `REFS_DOIS.md` sha256
+`9ecf1a67ab82bb7e80c9c1a60e3ce6a3efc5dc3ae349effc769373127573989e`):** one row per source cited in the audit corpus —
+**52 sources: 27 Crossref DOIs, 1 dataset-DOI family (CEPS), 20 no-DOI book/report/data rows (ISBN/publisher), 0
+unregistered DOIs, 0 unflagged citation-like mentions.** Separates (a) verified records (Dang & Rogers, Tansel &
+Bircan, Jayachandran, Biswal, Kim & Lee, Dang 2007, Callaway–Sant'Anna, Sun–Abraham, Todd–Wolpin, Cunha–Heckman,
+Becker–Lewis, Spence, PISA 2018/2022 with DOIs); (b) no-DOI books/reports (Becker 1964, Mincer 1974, Hirsch 1977,
+**Caplan 2018 [V]**, Bray 1999/2009, Bray & Lykins 2012, Tullock 1980 original, Hanushek 1986, institutional
+DHS/UIS/World Bank/OECD/SEA-PLM/KOSTAT sources); (c) **unverified**: Biswal (paywalled), Dang 2007 (paywalled), Kim &
+Lee (abstract-only), "Hanushek" without year/title, benchmark moments KEDI 2024/2025 + HK 2011/12 (already DROPPED at
+G2-A), KEIA/SBS/SeoulStart secondary. **183-equation inventory placeholders excluded** (candidate map ≠ bibliography).
+`PAPER_D_EQUATION_AUDIT.md`, `MODEL_ZOO_DISCRIMINATORS.md`, `MODEL_ZOO_SCOPE.md` cross-reference the register; **no DOI
+invented, no manuscript/claim altered, no box job**. Register only — **no claim upgraded by listing; Caplan 2018 stays V;
+source DOIs do not make inventory equations citable.**
+

@@ -554,6 +554,25 @@ achievement `s(m,t)` with `s_mt<0`, teacher effort/penalty `φ(m)`, and kickback
 the **M3** omission lemma (and the M1 school-day-material gap). Correct DOIs/pages are listed in the report; this
 does **not** make the inventory equations citable.
 
+**REFS/DOIs register (citation/register pass, commit `f77e8f1`; `REFS_DOIS.md` sha256
+`9ecf1a67ab82bb7e80c9c1a60e3ce6a3efc5dc3ae349effc769373127573989e`):** one row per source cited anywhere in the
+audit corpus — **52 sources**: **27 Crossref DOIs**, **1 dataset-DOI family (CEPS)**, **20 no-DOI book/report/data rows**
+(ISBN or publisher recorded), **0 unregistered DOIs**, **0 unflagged citation-like mentions**. The register separates
+(a) verified records (e.g. Dang & Rogers `10.1093/wbro/lkn004`; Tansel & Bircan `10.1016/j.econedurev.2005.02.003`;
+Jayachandran `10.1016/j.jdeveco.2014.02.008`; Biswal `10.1111/j.1746-1049.1999.tb00232.x`; Kim & Lee `10.1086/648186`;
+Dang 2007 `10.1016/j.econedurev.2007.10.003`; Callaway–Sant'Anna `10.1016/j.jeconom.2020.12.001`; Sun–Abraham
+`10.1016/j.jeconom.2020.09.006`; Todd–Wolpin `10.1111/1468-0297.00097`; Cunha–Heckman `10.1257/aer.97.2.31`;
+Becker–Lewis `10.1086/260166`; Spence `10.2307/1882010`; PISA 2018 `10.1787/b5fd1b8f-en`, 2022 `10.1787/53f23881-en`);
+(b) **no-DOI books/reports** (Becker 1964, Mincer 1974, Hirsch 1977, **Caplan 2018 [model-zoo tag V]**, Bray 1999/2009,
+Bray & Lykins 2012, Tullock 1980 original, Hanushek 1986, plus DHS/UIS/World Bank/OECD/SEA-PLM/KOSTAT institutional
+sources); (c) **unverified** sources (Biswal paywalled, Dang 2007 paywalled, Kim & Lee abstract-only, "Hanushek" cited
+without year/title, benchmark moments **KEDI 2024/2025 + HK 2011/12 already DROPPED at G2-A**, KEIA/SBS/SeoulStart
+secondary material). **The 183-equation inventory's placeholder citations are explicitly excluded** from the register
+(candidate map ≠ bibliography, per the attribution rule). `PAPER_D_EQUATION_AUDIT.md`, `MODEL_ZOO_DISCRIMINATORS.md`
+and `MODEL_ZOO_SCOPE.md` now end with DOI/ISBN cross-reference sections; **no DOI was invented**, no manuscript/claim
+was altered, and no box job was run. **Status: register only — no claim is upgraded by being listed; Caplan 2018 stays
+V; verified source DOIs do not make the inventory equations citable.**
+
 **Status: candidate new-generation finding/section (design audit), UNRESOLVED as results.** The omissions are
 pre-registerable hypotheses; the divergences are future work; the already-recorded contradictions remain as recorded.
 
@@ -627,7 +646,9 @@ the Lean omission lemma is **definitional invariance**, not an empirical magnitu
   evidence. The list stays flagged so later nobody claims these were tested.
 
 **Status: design-only, pre-registerable probes, not results.** EP-1/EP-2 are recorded as engine-mechanism probes; the
-D1–D9 "named-theory discriminator" framing is withdrawn.
+D1–D9 "named-theory discriminator" framing is withdrawn. **DOI/ISBN cross-references are now in
+`MODEL_ZOO_DISCRIMINATORS.md`/`MODEL_ZOO_SCOPE.md` pointing at `REFS_DOIS.md` (commit `f77e8f1`); Caplan 2018 remains
+`V` (unverified citation) and no source listing upgrades a model claim.**
 
 ## 4J. Evidence-layer limits for Papers C/D and the Model Zoo (binding)
 
