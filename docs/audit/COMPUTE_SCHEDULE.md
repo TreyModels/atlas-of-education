@@ -667,3 +667,11 @@ Measured 19:07:09: HK **900/900 ✅**, KR-TRACKED **860/900**, KR-SINGLE **832/9
 Only **3 arm workers** still running (KR CF4b TRACKED, KR CF2b SINGLE, KR CF4b SINGLE) → **cgroup 3.0/10**; five Paper B
 workers idle (driver has no more arms). Per Lead's rule, **one slot is now available for the gate-grid fee pilot** (1 worker;
 commander notified to launch if ready); the full 5,120-run grid waits until Paper B full. Full-completion ETA **~19:28–19:32**.
+
+### 13.17 Near-complete 19:26 — 2,682/2,700; only KR CF4b TRACKED left
+
+Measured 19:26:43: HK **900/900 ✅**, KR-SINGLE **900/900 ✅**, KR-TRACKED **882/900** — only `KR CF4b TRACKED` still running
+(18 rows, 1:14:54 elapsed; ETA ~19:35–19:40). Driver 24480 alive; 7 of 8 workers idle (cgroup 1.0/10). The gate grid
+(5,632-run cleared design, 8 workers, fee-free block first) starts the moment the driver exits and writes its final
+artifacts — commander asked for the exact runner/SHA/out-dir and launch command; final artifact names + sha256 will be
+published here immediately. No fee pilot (Lead: already passed). Cap 10; g2a off-box.
