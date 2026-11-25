@@ -660,3 +660,10 @@ Measured 18:43:31: HK PRIMARY **900/900 ✅**, KR-TRACKED **799/900**, KR-SINGLE
 transient gap, per Lead rule); cgroup **7.0/10** at sample (5.1–8.0 as arms rotate); g2a on host; control 1.
 **ETA: KR-TRACKED primary complete ~18:55–19:00; full 2,700 ~19:20–19:30.** Final per-arm JSONs are written at campaign
 end; checkpoints current. No cap or progress alarms.
+
+### 13.16 Progress 19:07 — Paper B 2,592/2,700; workers freeing
+
+Measured 19:07:09: HK **900/900 ✅**, KR-TRACKED **860/900**, KR-SINGLE **832/900** → **total 2,592/2,700 (96 %)**.
+Only **3 arm workers** still running (KR CF4b TRACKED, KR CF2b SINGLE, KR CF4b SINGLE) → **cgroup 3.0/10**; five Paper B
+workers idle (driver has no more arms). Per Lead's rule, **one slot is now available for the gate-grid fee pilot** (1 worker;
+commander notified to launch if ready); the full 5,120-run grid waits until Paper B full. Full-completion ETA **~19:28–19:32**.
