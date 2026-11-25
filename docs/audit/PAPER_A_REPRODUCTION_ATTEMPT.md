@@ -30,7 +30,7 @@ artefacts, which already establish the engine's behaviour and the identifiabilit
 | (a) | **E8 fee-abolition event study** | fresh hashed WDI; **CS-style group-time ATT** (not-yet-treated controls), 500 cluster bootstraps + 2,500 Fisher/scheme; full event path | **DONE (REPRODUCED EMPIRICAL ANALYSIS)** — impact **+12.322 pp** (bootstrap mean 12.308, 95% CI [4.48, 22.64]) AND post mean **+25.083 pp** vs author +12.44 / +25.26 — **both replicate**; event path 12.32, 23.66, 25.79, 21.88, 24.94, 28.45, 25.78; Fisher p 0.0044/0.0040. Simple-DiD +2.54 is estimator sensitivity. Artefacts `CS_ESTIMATOR_NEWGEN.md` + `results/audit/newgen/cs_estimator_fresh_wdi_2026-11-25.json` | host, 8.2 s | none; declared deviations (equal weights, no DR covariates, 8 clusters, fresh vintage) |
 | (b) | **Delayed secondary-bulge `t*`** | fresh hashed WDI; `t* = abolition + SE.PRM.DURS`; outcome SE.SEC.ENRR; 2,500 perms/scheme | **DONE (fresh WDI)** — ATT at `t*` **−0.956 pp**, post +0.30, Fisher p **0.251/0.384** → **no detectable secondary-bulge jump**; **UNRESOLVED** (no-effect evidence), consistent with the manuscript's honest-null framing | host, 8.7 s | none |
 | (c) | **Gate-architecture / H2 (≥5,000 runs)** | repaired engine `98baf6b`; pre-registered gate kinds `bar/bar_high/quota/contest`; S ∈ {.25,.35,.45,.55,.70}; fee ∈ {0,.19}; vac0 ∈ {.02,.08,.25,.50}; **≥5,000 runs** (30–40 matched seeds/cell, expanded grid); H2 = Δcut(S=.25) − Δcut(S=.70); report H1/H2/inverted-U with seed uncertainty and baselines | **DESIGN READY / RUN PENDING** — no new-generation run yet; the paper's 1,640-run version is AUTHOR-REPORTED BASELINE only | server, ~43–60 CPU-h for ≥5,000 runs at `N≈400`/`T≈70`; ~5–8 h wall at ≤10 CPUs | pre-registration + engine config freeze (no SSA config exists in the engine — must be specified in the prereg) |
-| (d) | **Multi-seed identifiability / Jacobian (declared perturbations)** | explicit 3-option MNL `masseng-tutoring` model; analytic Jacobian; rank/null-space at **multi-seed declared perturbations** (e.g., 100 population draws); aggregate moments vs micro-moments; report local rank, condition, finite non-identification, and the two-moment remedy; no global "theorem" | **DESIGN READY / MODEL SPEC NEEDED** — the independent ABC harness is the template; Paper A's own model spec must be written down | host, minutes–hours | a documented model specification + declared perturbation grid |
+| (d) | **Multi-seed identifiability / Jacobian (declared perturbations)** | frozen V540-FREEZE **4θ × 4-moment** calibration map; 5 matched seeds/column; declared steps 5/3/5/4 %; central differences; **≥3 starts required** by the Gate-2 stop gate; report rank/SV/null across starts, local-only | **PROVISIONAL — NOT SIGNED OFF (2 of 3 required starts).** Rank **4/4**, null dim **0** at both tested starts; SVs start-1 50.030/32.596/1.907/0.341, start-2 46.916/17.058/6.801/0.128; multi-seed instability max|ΔJ| **11.476**, rel **0.287** (one-seed 26.5/0.52). Local full rank only — **no global identification**; **fourth-direction conditioning unresolved**; **a condition number is not identification evidence**. Third start running (~25–30 min); re-review on landing. Artefacts `G2A_IDENTIFIABILITY_MULTISEED.md` sha256 `692460db…9084`; JSON `22426155…90c3`. | host, ~23 min | append the third start; then decide if rank 4/4/null 0 holds at ≥3 starts and the 4th direction is stable |
 | (e) | **Fee-abolition forecast with held-out horizons** | fixed engine `846c9e0` (canonical re-pin `46c080d`); `year_t=T0`; `assert E.unfired_events==[]`; 40 matched seeds; held-out e=+5,+6; training-only calibration attempted | **DONE — ACCEPTED as REPRODUCED SIMULATION (NEW GENERATION)** — abolition − persistence **+17.19…+25.35 pp**; full-7 **RMSE 2.764 / MAE 2.432** vs persistence **23.759 / 23.260 (−88.4 %)**; held-out e=+5,+6 **RMSE 1.637 / MAE 1.350**. **Fallback:** the author's **74.88 % anchor is infeasible** in the repaired world (max 71.0 % at fee 0; A-38); fee 0.15 + engine pre-abolition level, **no post tuning**. Conditional simulation, not a reproduction of the author's calibration. v1 uncited. | host, 13.8 s | none; provenance `FORECAST_NEWGEN.md` sha256 `d4c0a239…d8f1`; JSON `f0eee995…c04` |
 
 ---
@@ -96,7 +96,7 @@ blocker**, and we are not waiting for them.
 * **Status:** design ready; no new-generation run yet. This is the largest single item and the one that most
   directly replaces the paper's most-cited claim.
 
-### (d) Multi-seed identifiability / Jacobian — DESIGN READY / MODEL SPEC NEEDED
+### (d) Multi-seed identifiability / Jacobian — **PROVISIONAL (2 of 3 starts; not signed off)**
 
 * **Model:** the 3-option MNL (`none / own-teacher / other-provider`) with the documented covariates (income,
   school-quality gap, grade bonuses, urban demand, teacher threshold); the exact 10-parameter vector and the 7
@@ -110,6 +110,18 @@ blocker**, and we are not waiting for them.
   δ = −0.7537718023763802, local 5/5 after two moments). It is **not** Paper A's model, but it sets the standard.
 * **Status:** design ready; a documented model spec + perturbation grid is the only missing input; compute is
   minutes–hours on host.
+
+**Status: PROVISIONAL — NOT SIGNED OFF.** The operational Gate-2 artefact is the **frozen V540-FREEZE 4θ × 4-moment**
+map (`G2A_IDENTIFIABILITY_MULTISEED.md`; 5 matched seeds/column, declared steps 5/3/5/4 %, central differences,
+2 starts, 90 evaluations, engine clean `98baf6b`, numerics unchanged vs `846c9e0`). Results: rank **4/4**, null dim
+**0** at both starts; SVs 50.030/32.596/1.907/**0.341** and 46.916/17.058/6.801/**0.128**; multi-seed instability
+max|ΔJ| **11.476**, rel **0.287** (better than the one-seed 26.5/0.52 but not eliminated). **Gate-2 stop gate requires
+≥3 starts; this has 2, so (d) is NOT passed.** A third start is running; when it lands, decide whether rank stays 4/4
+with null dim 0 at ≥3 starts and the fourth direction is stable. **Local full rank is not global identification; a
+condition number is not identification evidence; the fourth-direction conditioning is unresolved.** Against the four
+Codex criticisms: the 4θ map is a *reduced* parameterisation (does not answer rank-4/6 for the 6-param ABC); the
+empty-G12×urban criticism is **not addressed** by this map; the pooled-selftest and within-invariant-permutation
+criticisms are **not applicable** to (d) but bind any E1/Q3 claim. Full review: `AUDIT_VERDICT.md` §4D.
 
 ### (e) Fee-abolition forecast with held-out horizons — DESIGN READY / RUN PENDING
 
@@ -164,6 +176,7 @@ blocker**, and we are not waiting for them.
 | **Bulge `t*` fresh-WDI** | **UNRESOLVED** (no-effect evidence) | ATT −0.956, post +0.30, p .251/.384 |
 | Paper B 540 regenerated tables | REPRODUCED SIMULATION, uncalibrated | `PAPER_B_TABLE_REGENERATION.md`; csv sha256 `da40a2ee…` |
 | Engine mid-run calendar-event fix | VALIDATED SIMULATION (numerics unchanged) | `846c9e0`; `ENGINE_MIDRUN_EVENTS.md`; `_validate_events`/`E.unfired_events`/`year_t`; new core sha `e111397b…`; 118-series identical; 27 qa tests; ENGINE_CHECKS 14/14; canonical re-pin `46c080d` |
+| **Item (d) identifiability (provisional)** | **UNRESOLVED (PROVISIONAL — 2/3 starts)** | rank 4/4, null 0 both starts; SVs 0.341/0.128 fourth direction; max|ΔJ| 11.476 rel 0.287; `G2A_IDENTIFIABILITY_MULTISEED.md` sha256 `692460db…9084`; JSON `22426155…90c3` |
 | **Forecast (e) new generation** | **REPRODUCED SIMULATION (NEW GENERATION)** | abolition − persistence +17.19…+25.35 pp; full-7 RMSE 2.764 vs persistence 23.759 (−88.4 %); held-out e=+5,+6 RMSE 1.637; declared calibration fallback (74.88 % anchor infeasible, A-38); `FORECAST_NEWGEN.md` sha256 `d4c0a239…d8f1`; JSON `f0eee995…c04` |
 
 **Adjudicator re-executions (host):** the ABC identification audit was re-run and its output is **bit-identical**
@@ -181,7 +194,7 @@ committed result (rank 5/5 vs legacy 3/5) stands and is labelled as the audit's.
 | order | item | prepare | run | acceptance |
 |---|---|---|---|---|
 | 1 | (c) gate architecture ≥5,000 runs | freeze config + pre-register (1 h) | server, 43–60 CPU-h | H1/H2 + inverted-U with seed CIs; all cells reported; hashes |
-| 2 | (d) multi-seed Jacobian | write model spec + perturbation grid (1 h) | host, minutes–hours | rank/null space across seeds/perturbations; local-only statement; two-moment remedy |
+| 2 | (d) multi-seed Jacobian | **PROVISIONAL** — 2/3 starts; append third start | host, ~25–30 min | rank 4/4/null 0 at all ≥3 starts; 4th-direction stability; local-only statement; condition number not identification evidence |
 | 3 | (e) forecast held-out | **DONE** (fixed engine; declared fallback) | — | held-out RMSE 1.637 vs persistence; 74.88 % infeasibility recorded (A-38) |
 | 4 | (b) bulge `t*` | **DONE** — fresh WDI; no detectable jump | — | artefact hashed; report as no-effect evidence |
 | 5 | (a) E8 fresh-vintage re-run | **DONE (both estimators)** — impact and amplification replicate under CS-style; simple DiD is sensitivity | — | artefacts hashed; report CS-style as primary, simple DiD as sensitivity |
