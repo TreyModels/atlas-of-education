@@ -492,3 +492,37 @@ sustained CPU job in the programme (Exp 3) does not exist. The scheduler's stand
 Realistic fillers if the operator wants the cores used: run the remaining Paper-A audit harnesses **concurrently as
 independent shards** (2 workers each), Paper B table regeneration (1w), task-13 (2w), zip extraction/hashing (1–2w).
 Caps stay: total ≤10, DHS ≤2 (pre-emptible), control 1.
+
+### 13.5 New-generation campaign + data unblock (16:35–16:39)
+
+**Paper B new generation LAUNCHED** at 16:35:47 (prereg commit `dba0ecc`): `run_new_generation.py --seeds 0-99 --workers 8
+--out-dir /root/work/newgen/results`, driver PID **24480**, 8 arm workers (24483/24486/24487/24490/24491/24493/24495/24496),
+declared venv, `nice -n 10`, BLAS/OMP=1. Scope: **2,700 runs** = 1,800 KR-TRACKED primary (18 arms × 100 matched seeds)
++ 900 KR-SINGLE sensitivity. Per-seed atomic checkpoints (`ckpt_<jur>_<arm>_<variant>.jsonl`), arm-level subprocess
+isolation, resume-on-restart, loud failure (no final JSON on rc≠0); **not** the hardened driver (no watchdog) — accepted
+because checkpoints make restart safe; do **not** swap drivers mid-run.
+
+**Allocation at 16:39 (measured cgroup delta 9.3/10 = 93 %):** Paper B 8 · task-13 1 · WDI network 1 · control 1 = 10.
+DHS 0 (capped), Paper B table regen 0 (paused), no further audit harnesses.
+
+**BOX-JOB-1 released (all stages exit 0):**
+- `abc_identification_audit`: advertised 5×6 moment Jacobian **rank 4/5, null dim 2**, left-null certificate 1.25e-16,
+  44 distinct in-box θ, **δ = −0.7537718023763802**, P(own|tutoring) = 0.68 exact (1.11e-16) → MATCH.
+- `bootstrap_factorial --workers 4`: FE size median **0.05925**, pooled size **1.0**, within-invariance
+  **6.661338147750939e-16**, shipped/auditor stats reproduced → MATCH.
+- `dgp_validation --workers 3`: **479 s**, corrected design rank **5/5**, legacy **3/5**, δ_analytic −0.7537718023763804.
+  Results + `SHA256SUMS` in `/root/work/pa_jobs/results/`; wall `TOTAL_WALL_SEC=556`.
+
+**Data unblock:** the box can reach the **World Bank API (HTTP 200)** → Paper A (b) bulge t* is **not data-blocked**.
+Fresh hashed WDI download on box: `/root/work/wdi/WDI_MANIFEST.json` (944 B, timestamped sha256 of every file) +
+indicator JSONs (SE.PRM.DURS, SE.PRM.REPT.ZS, SE.SEC.PROG.ZS, SE.SEC.ENRR, SE.SEC.ENRL.TC.ZS, SE.PRM.ENRR, metadata
+SSF region), 16:38. Analysis follows.
+
+**ETA model (measured):** primary 1,800 runs = 900×20.3 + 900×41.9 = **55,980 CPU-s → 117 min @8 workers → ~18:35–18:45**;
+full 2,700 ≈ **19:50–20:10**; refined from completed-arm timings as they land.
+
+**Queue after Paper B primary:** gate-architecture ≥5,000-run grid = **43–60 CPU-h → 5.4–7.5 h at 8 workers**; E8
+fresh-vintage event study (1–2 CPU-h) and forecast (1–3 CPU-h) and multi-seed Jacobian (2–6 CPU-h) share the 1–2 free
+slots; bulge t* small CPU (now WDI-unblocked). GPU lane (`/root/work/gpu2`, 3080 Ti float64 PL prototype) is **separate
+and outside the CPU cgroup**; CPU allocation unchanged until a ≥3× @≤1e-12 prototype result justifies moving the gate
+grid to GPU.
