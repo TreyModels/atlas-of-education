@@ -2,16 +2,17 @@
 
 **Owner:** qa-verifier · **date:** 2026-11-25 ~21:10 · **mode:** host-only
 **Artefacts audited:** `verification/lean/Atlas/Claims.lean` (330 lines, landed 20:56), `docs/audit/LEMMA_LEDGER.md` (203 lines), `docs/audit/LEMMA_LEDGER.csv` (126 rows), `docs/audit/LEAN_VERIFICATION_SCOPE.md`, baseline `results/audit/paper_claims.csv`.
-**Verdict: NOT SIGNED OFF — 2 mechanical defects (stale ledger row; D-04 status/declaration inconsistency). No silent `sorry`; the two-tier structure is otherwise correct.**
+**Verdict: NOT SIGNED OFF — 1 blocking defect (ledger lag: 3 newly committed claims X-29/D-05/D-06 not yet mapped) + build evidence pending. No silent `sorry`; two-tier structure, id uniqueness and in-Lean/CSV agreement are correct.**
 
 ## 1. Baseline re-hash (the file moves — always pin before auditing)
 
-| snapshot | rows | sha256 | note |
+| snapshot | rows | sha256 | ledger state |
 |---|---|---|---|
-| initial QA pin (~20:50) | 118 | `f3480b4d…31c` | before Paper C/D rows landed |
-| at ledger generation | 126 | (ledger row count 126) | 18 declared + 108 explicit NOT-YET |
-| **current audit baseline (~21:10)** | **127** | **`b50c9f36a0f34c42852ae8f76585d45734f204d699937d22b1b357db6dad892a`** | **X-28 added (CONTRADICTED runner-defect class), CSV line 128** |
-| ledger CSV | 126 | `2278f7d49439eb25e74aa716c8de42b416fc4135cd3315d12d242b050e80694c` | one row short of baseline |
+| initial QA pin (~20:50) | 118 | `f3480b4d…31c` | ledger not yet landed |
+| at first ledger audit (~21:05) | 126 | — | ledger 126 rows (X-28 absent; D-04 status inconsistent) |
+| after ledger regeneration (~21:06) | 127 | — | ledger 127 rows (X-28 included; D-04 fixed to `hypothesis`) |
+| **current audit baseline (~21:14)** | **130** | **`23ecde418dded6d316fe44bc11e1d9b62f9dcf25085db10fa3bd1c5f2d6ec8f5`** | ledger 127 rows → **3 rows behind** (X-29, D-05, D-06) |
+| ledger CSV at audit | 127 | `a3a95bba20e11329392bb8cbe9722136877b3da7759510893ecdca192807f19a` | regenerated 21:06; D-04 `hypothesis`; X-28 present |
 
 ## 2. Mechanical checks (`docs/audit/lemma_audit.py`)
 
@@ -23,28 +24,28 @@ python3 docs/audit/lemma_audit.py --claims results/audit/paper_claims.csv \
   --json-out docs/audit/results/lemma_audit.json
 ```
 
-| id | rule | result |
+| id | rule | result (latest run) |
 |---|---|---|
-| R1 | claim ids non-empty, unique | **PASS** — 127 claims, 127 unique, no duplicates |
-| R2 | exactly one ledger row per claim AND (≥1 existing Lean declaration group OR explicit not-yet entry) | **FAIL** — 18 declared + 108 explicit not-yet; **X-28 has no ledger row** (`rows not exactly one=[('X-28', 0)]`) |
-| R3 | no silent `sorry` (code only, comments/docstrings stripped; each sorry needs a ledger reason) | **PASS** — **0 code `sorry`** occurrences; the only textual "sorry" is prose in `Claims.lean:18` ("no `sorry`s…"), correctly ignored |
-| R4 | ledger ids == claims ids (orphans/missing reported) | **FAIL** — `claims missing from ledger=['X-28']`; orphans = none |
-| R5 | no duplicate ledger rows / declaration names | **PASS** — 126 ledger rows, 126 unique ids; 60 Lean declaration names, none duplicated |
-| R6 | in-Lean `claimLedger` agrees with CSV (ids, `leanDecl`, status) | **PASS** — 18/18 declared rows present in `Claims.lean` block and identical (e.g. `A-34`, `B-41` 3-declaration group, `D-04`) |
-| R7 | declared row must not carry `notYetLemmatised` status | **FAIL** — `D-04` |
+| R1 | claim ids non-empty, unique | **PASS** — 130 claims, 130 unique |
+| R2 | exactly one ledger row per claim AND (≥1 existing Lean declaration group OR explicit not-yet entry) | **FAIL** — 18 declared + 109 explicit not-yet; **X-29, D-05, D-06 have no ledger row** |
+| R3 | no silent `sorry` (code only, comments/docstrings stripped) | **PASS** — **0 code `sorry`**; only prose "sorry" at `Claims.lean:18` |
+| R4 | ledger ids == claims ids | **FAIL** — missing `['X-29','D-05','D-06']`, orphans none |
+| R5 | no duplicate ledger rows / declaration names | **PASS** — 127 unique ledger ids; 60 Lean declarations, none duplicated |
+| R6 | in-Lean `claimLedger` agrees with CSV | **PASS** — 18/18 declared rows present and identical |
+| R7 | declared row must not be `notYetLemmatised` | **PASS** — D-04 fixed to `hypothesis` (`LEMMA_LEDGER.csv` D-04 row; note: "declared as an empirical hypothesis record, never a theorem") |
 
 ## 3. Defects (file:line)
 
 | id | severity | finding |
 |---|---|---|
-| **L1** | **blocking (stale ledger)** | `docs/audit/LEMMA_LEDGER.csv` (126 rows) and `.md` (line 15 "108 of the 126 baseline rows") predate the **X-28** row now present in `results/audit/paper_claims.csv:128` (PROGRAMME, CONTRADICTED, runner-defect class). Mechanical consequence: R2/R4 fail; this is a **staleness gap, not a silent omission in Lean** (the 126 covered rows are all mapped). The generator `verification/lean/tools/gen_lemma_ledger.py:1-12` still hard-codes the old "118 rows / remaining 100" counts → it will reproduce staleness unless updated and re-run. Fix: regenerate ledger/CSV from the 127-row baseline (include X-28 as explicit NOT-YET), refresh the generator docstring counts, commit, then rerun the audit. |
-| **L2** | **medium (internal inconsistency)** | `docs/audit/LEMMA_LEDGER.csv:119` (and `Claims.lean:327`) lists **D-04** with `lean_declaration = D04_attribution` **and** status `notYetLemmatised` ("citation/attribution risk is not a mathematical proposition"). A row cannot be both declared and not-yet-lemmatised. Fix: either status `hypothesis`/`specified` with the note (declaration is an `EmpiricalClaim` record, not a theorem) or drop `D04_attribution` and leave the not-yet entry. R7 will then pass. |
-| **L3** | **informational (CI hygiene)** | `Claims.lean:18` contains the word "sorry" in a docstring; a naive `grep sorry` reports a false positive. The audit strips comments/docstrings and confirms **0 code sorries**; the CI `sorry` scan should be comment-aware (or exclude `/- … -/` and `--`), and the build log + `#print axioms` evidence should be attached to the ledger. |
-| **L4** | **informational (build evidence)** | Independent `lake build` was attempted from `verification/lean`; Lean 4.36.0 toolchain was still downloading from `releases.lean-lang.org` at audit time (`~/.elan/toolchains` only contains the lock), so **the build was not independently confirmed here**. `verification/lean/ci/lean_verify.sh` exists; attach its `lake build` + `#print axioms` output before sign-off. The consistency checks above do not depend on the build. |
+| **L1** | **blocking (ledger lag, live race)** | Claims baseline advanced to **130 rows** while `LEMMA_LEDGER.csv/.md` were regenerated at 127: **X-29** (gate diagnostic gap; `verify` row in baseline), **D-05**, **D-06** are absent from the ledger → R2/R4 fail. This is not a silent omission in Lean; it is a regeneration-lag race (several claims landed while the ledger was being rebuilt). The generator `verification/lean/tools/gen_lemma_ledger.py:1-12` still hard-codes old "118 rows / remaining 100" counts and must be updated/re-run **after the claims file freezes**. |
+| **L2** | resolved | D-04 was declared (`D04_attribution`) with status `notYetLemmatised` in the 21:05 ledger; the 21:06 regeneration sets it to `hypothesis` with note "declared as an empirical hypothesis record, never a theorem" → R7 now passes. |
+| **L3** | informational (CI hygiene) | `Claims.lean:18` prose contains "sorry"; a naive grep false-positives. Audit strips comments and confirms **0 code sorries**; make the CI scan comment-aware. |
+| **L4** | informational (build evidence) | Independent `lake build` not confirmed (Lean 4.36.0 toolchain download incomplete; only lock in `~/.elan/toolchains`). Attach `verification/lean/ci/lean_verify.sh` output (`lake build`, `#print axioms`) before sign-off. |
 
 ## 4. What is already correct
 
-* Two-tier mapping is real: **18 Lead-scoped claims** (A-34…A-39, B-41…B-44, C-01…C-04, D-01…D-04) have Lean declarations; **108 remaining rows are individually listed as explicit `NOT-YET-LEMMATISED`** — no silent omissions among the 126 covered rows.
+* Two-tier mapping is real: **18 Lead-scoped claims** (A-34…A-39, B-41…B-44, C-01…C-04, D-01…D-04) have Lean declarations; **109 remaining rows are individually listed as explicit `NOT-YET-LEMMATISED`** — no silent omissions among the 127 covered rows (X-28 now included; D-04 status fixed).
 * **No silent `sorry`**: zero code sorries; unproved content is encoded as `EmpiricalClaim`/`SpecClaim` records (`Claims.lean:64-84`), matching the declared "no sorry" policy.
 * In-Lean `claimLedger` (18 records, `Claims.lean:287-329`) agrees with the CSV/ledger on ids, declarations and statuses (R6 PASS); no duplicate declarations (R5 PASS); ids unique (R1 PASS).
 * The audit re-hashes the baseline on every run, so future row additions cannot silently pass (as X-28 demonstrates).

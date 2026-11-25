@@ -1,37 +1,37 @@
 {
  "baseline": {
   "path": "results/audit/paper_claims.csv",
-  "sha256": "b50c9f36a0f34c42852ae8f76585d45734f204d699937d22b1b357db6dad892a",
-  "rows": 127,
-  "unique": 127
+  "sha256": "23ecde418dded6d316fe44bc11e1d9b62f9dcf25085db10fa3bd1c5f2d6ec8f5",
+  "rows": 130,
+  "unique": 130
  },
  "ledger": {
   "path": "docs/audit/LEMMA_LEDGER.csv",
-  "sha256": "2278f7d49439eb25e74aa716c8de42b416fc4135cd3315d12d242b050e80694c",
-  "rows": 126,
-  "unique": 126
+  "sha256": "a3a95bba20e11329392bb8cbe9722136877b3da7759510893ecdca192807f19a",
+  "rows": 127,
+  "unique": 127
  },
  "lean_dir": "verification/lean",
  "checks": [
   {
    "id": "R1",
    "status": "PASS",
-   "detail": "127 claims, 127 unique; duplicate ids=[]"
+   "detail": "130 claims, 130 unique; duplicate ids=[]"
   },
   {
    "id": "R5",
    "status": "PASS",
-   "detail": "ledger rows=126 duplicate ledger ids=[]; Lean declaration names=60 duplicated=[]"
+   "detail": "ledger rows=127 duplicate ledger ids=[]; Lean declaration names=60 duplicated=[]"
   },
   {
    "id": "R4",
    "status": "FAIL",
-   "detail": "claims missing from ledger=['X-28']; ledger ids not in claims=[]"
+   "detail": "claims missing from ledger=['X-29', 'D-05', 'D-06']; ledger ids not in claims=[]"
   },
   {
    "id": "R2",
    "status": "FAIL",
-   "detail": "declared=18 explicit-not-yet=109 missing declaration/not-yet=[] rows not exactly one=[('X-28', 0)]"
+   "detail": "declared=18 explicit-not-yet=109 missing declaration/not-yet=[] rows not exactly one=[('X-29', 0), ('D-05', 0), ('D-06', 0)]"
   },
   {
    "id": "R3",
@@ -45,8 +45,8 @@
   },
   {
    "id": "R7",
-   "status": "FAIL",
-   "detail": "declared rows with notYetLemmatised status=['D-04'] (status/declaration inconsistency)"
+   "status": "PASS",
+   "detail": "declared rows with notYetLemmatised status=[] (status/declaration inconsistency)"
   }
  ],
  "missing": [],
@@ -56,7 +56,5 @@
  "ledger_mismatch": [],
  "code_sorry_count": 0,
  "inlean_rows": 18,
- "declared_but_notyet": [
-  "D-04"
- ]
+ "declared_but_notyet": []
 }
