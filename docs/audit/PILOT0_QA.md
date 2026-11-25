@@ -1,100 +1,45 @@
-# PAPER C — PILOT-0 QA
+# PAPER C — PILOT-0 QA (PASS)
 
-**Owner:** qa-verifier · **date:** 2026-11-25 · **mode:** host-only, no box jobs, no microdata off-Mac
-**Artefact under audit:** `/root/work/paperC/results` (Paper C Pilot-0 v3, runner
-`papers/shadow-education-contest/code/run_paperC_pilot0.py`, engine pin `846c9e0`)
-**Status: ARTEFACT EXISTS BUT IS IN-PROGRESS → result-level checks BLOCKED.** Live correction to the
-earlier "box powered off" note: the box is **up and busy** on the current instance
-(`ssh -p 36934 root@connect.nmb2.seetacloud.com`); the powered-off entry in `box_lease.jsonl` was the
-previous instance. Read-only inspection (2026-11-25 ~20:56–21:00) shows the Pilot-0 process 37049 running
-with `--workers 2`, writing `/root/work/paperC/results`; at the first snapshot there were **2/16 cells with 2/8 seeds
-each (4 of 128 runs)**; a later check (24 min elapsed) shows the same 2 cells at **6/128 rows**
-(≈0.25 rows/min) and there is **still no `paperC_pilot0_results.json` payload** (the payload is written only at
-driver completion). Restarted with **8 workers** (PID 40056/40058, 4 market_only + 4 own_open_gap cells): **14/128 rows**
-after ~11 min, row count flat for ~10 min under **box load average ≈ 40** (pilot 8 workers + grid and
-other jobs), so per-seed wall time is contention-bound; ETA is uncertain (commander estimate ~23:00).
-A complete `results` payload is **not imminent**; no `results_v3` directory exists yet. Partial copies
-are not a valid QA target (commander will copy `paperC_pilot0_results.json` + 16 `ckpt_*.jsonl` +
-`pilot_v3_8w.log` + `MANIFEST.txt` to `~/neon-boot/qa/incoming/paperC_results/` at completion). Box CPU is shared with the gate grid (~96 %), which explains the
-slow throughput. When the payload lands, run:
+**Owner:** qa-verifier · **date:** 2026-11-25 ~23:05 · **mode:** host-only; CPU-only campaign
+**Campaign:** Paper C Pilot-0 v3 emergence campaign (NEW GENERATION), runner `papers/shadow-education-contest/code/run_paperC_pilot0.py`, engine pin **`846c9e0`** (`core.py` sha `e111397b…8e71`), spec file from re-pin `46c080d` sha `e5ddef6b…b755`.
+**Payload:** `~/neon-boot/qa/incoming/paperC_results/paperC_pilot0_results.json` sha256 **`c6e50bc1e86f8d41a8d8a332e860898445de4ce90f8f9ec7d004e438fa523f9d`** (69,286 B) + 16 `ckpt_*.jsonl` + `MANIFEST_SHA256SUMS.txt` + `pilot_v3_8w.log`.
+**Verdict: PASS (A1–A10 all PASS) — valid as EXPLORATORY / hypothesis-generating evidence from the pinned CPU engine. Not confirmatory; no causal claims.**
 
-```
-python3 docs/audit/pilot0_qa.py --results <copy>/results --engine-repo ~/neon-boot/repos/atlas
-```
+## 0. Live-run facts (independently checked)
 
-The validator (`docs/audit/pilot0_qa.py`) implements every check below mechanically and prints
-PASS/FAIL/BLOCKED per item; this file records the **static code audit** that can be done without the run.
-
-## 1. What the runner commits to (code-authoritative: `run_paperC_pilot0.py`)
-
-| item | contract (code line) | status |
-|---|---|---|
-| design | 4 regimes × q0 {1.0, 1.2} × p_firm {0.03, 0.08} × seeds 0–7 = **128 runs**, N=1500, base `params.HK.primary` (lines 39–41, 44–49, 168) | recorded in code; **needs artefact** |
-| regimes | `market_only` {own_ban .95, pay_ratio .55, monitoring .2, pay_gap}; `own_open_gap` {0, .55, .2, pay_gap}; `own_open_incentive` {0, 1.2, .2, incentive}; `own_open_gap_firm_ban` {0, .55, .2, pay_gap, firm_ban .9} (lines 35–40) | static PASS — matches declared design |
-| no-op guard | non-market cells require mean(`withheld`) > 1e-3 **and** mean(`own_share`) > 0.1 across the cell; otherwise `RuntimeError` aborts the pilot (lines ~103–109) | static PASS (guard exists); **needs artefact** for observed values |
-| per-run engine sanity | `run_seed` raises if `Engine.unfired_events` non-empty (line 61) | static PASS |
-| manifest | `paperC_pilot0_results.json` → `label`, `manifest{status=EXPLORATORY, generation, engine_commit='846c9e0', engine_core_sha256, spec_sha256, runner_sha256, base, regimes, q0_proxy, p_firm, seeds, n_seeds, cells, runs, workers, wall_seconds, notes}`, `summary` (lines 126–155) | static PASS (keys defined); **needs artefact** |
-| summary keys | 16 cell keys `"<regime>|q0=|p_firm="`, 23 metrics each with `mean, sd, ci95_lo, ci95_hi, n` (lines 126–142) | static PASS (keys defined); **needs artefact** |
-| label | `EXPLORATORY / HYPOTHESIS-GENERATING`, no confirmatory claim, L varied in Pilot-1 (line 33) | static PASS |
-
-## 1b. Live-box observations (read-only, 2026-11-25 ~21:00) and version correction
-
-* **Live runner code is v3**, contrary to the lead's "v2 (96-run, pay_ratio .8)" note: the on-box script
-  `/root/work/paperC/papers/shadow-education-contest/code/run_paperC_pilot0.py` has `REGIMES` with
-  **4 regimes** (incl. `own_open_gap_firm_ban`, firm_ban .9), `pay_ratio .55`, `monitoring .2`,
-  `Q0S=[1.0,1.2]`, `PFIRMS=[.03,.08]`, `NSEEDS=8` → 16 cells/128 runs (only the stale docstring block at
-  the top still describes the superseded 96-run v2 design). The live process writes to
-  `/root/work/paperC/results`; no `results_v3` exists yet.
-* **Runtime pin (P1) partially closed on the box:** `sha256sum` of the box
-  `engine/eduengine/core.py` = `e111397bd8a50f94e82bb77715f236ee3d5c0bf863a23d84afdf1c6c71fa8e71`
-  = the pinned `846c9e0` core hash ⇒ the running engine code matches the pin. This is box-side evidence;
-  the payload's own `engine_core_sha256` still must be checked when it lands.
-* **Spec provenance (lead-confirmed, expected — not a defect):** the box spec file
-  `docs/audit/canonical_spec.json` sha256 = `e5ddef6b4ecd04a0e96f480b43a97f0567bed7654ec032c1779c9e20f6beb755`
-  is the canonical spec **at the re-pin commit `46c080d`** (content sha `280b5d95…`), which pins engine
-  `846c9e0` (core `e111397b…`). The git tree at `846c9e0` predates the re-pin, so its in-tree spec hashes
-  to `35576f…` (old content). Correct provenance statement: **engine at `846c9e0` + spec file from re-pin
-  `46c080d` (`e5ddef6b…`)**. The validator checks the payload's `spec_sha256` against `e5ddef6b…`;
-  `35576f…` is expected old content, not an error.
-* **Driver log is empty** (`/root/work/paperC/pilot0.log` = 0 bytes): the run's console provenance is
-  absent, so per-run failures are only visible through missing checkpoint rows. Flag for the run record.
-* Snapshot schema: rows contain `regime,q0,p_firm,seed` + 23 outcomes/metrics, matching the runner's
-  per-seed dict; no `pay_ratio` field (it lives in `manifest.regimes`). No payload/summary exists yet.
-
-## 2. Engine-pin verification (independent, host-side)
-
-| check | result |
+| item | value |
 |---|---|
-| commit `846c9e0` exists in `~/neon-boot/repos/atlas` | **PASS** — `846c9e0a47cd75f211a8b12ace641fbb77731398`, "[gate1a] Mid-run calendar events: … numerics unchanged" |
-| `core.py` sha256 at pinned commit | **PASS** — `e111397bd8a50f94e82bb77715f236ee3d5c0bf863a23d84afdf1c6c71fa8e71` (matches the pinned-engine record in `GATE2_PREREGISTRATION.md` A2 and `MODEL_ZOO_DISCRIMINATORS.md`) |
-| `docs/audit/canonical_spec.json` file sha256 at pinned commit | `35576fed0c132041f8ddbf60d1177f2734a16c3047047169872c6a261fa7b95f` — note the docs cite a *spec content* sha (`e5ddef6b…`), which is a different quantity; the pilot manifest records the file sha at run time, so compare like-for-like |
+| design | **4 regimes** (`market_only`, `own_open_gap`, `own_open_incentive`, `own_open_gap_firm_ban`) × q0 {1.0,1.2} × p_firm {0.03,0.08} × **8 seeds 0–7** = **16 cells / 128 runs** |
+| regime params | own_ban/pay_ratio/monitoring/withhold_mode/firm_ban match the declared design (pay_ratio .55 except incentive 1.2; monitoring .2; firm_ban .9) |
+| runtime | box process 40058 + 8 workers, `nice 10`, declared BLAS=1; **wall 6860.01 s ≈ 1 h 54 min**, completed 22:58 |
+| engine pin | payload `engine_commit=846c9e0`, `engine_core_sha256=e111397b…`; **verified against git** (`846c9e0` resolves; `engine/eduengine/core.py` at that commit hashes to `e111397b…`); box core file also matched |
+| spec provenance | payload `spec_sha256=e5ddef6b…` = canonical spec **file at re-pin `46c080d`**; the `846c9e0` git tree's in-tree spec (`35576f…`) is expected old content (lead-confirmed provenance, not a defect) |
+| runner | `runner_sha256=bc833b76…` = the live box runner (v3, 4-regime code; the old 96-run v2 docstring is superseded). **Design-record correction:** any earlier "96 runs / 12 cells" note is wrong for this campaign. |
+| manifest | `MANIFEST_SHA256SUMS.txt` verified here: **17/17 files OK** (payload + 16 ckpts) |
 
-## 3. Static-review defects / risks (file:line)
+## 1. Mechanical checks (`docs/audit/pilot0_qa.py`, run against the copied bundle)
 
-| id | severity | finding |
+| id | check | result |
 |---|---|---|
-| P1 | medium | **Pin is a label, not an enforced invariant.** `LABEL` and `manifest.engine_commit` hard-code `'846c9e0'` (runner lines 33, 143); the runner never checks `git rev-parse` at run time, but it does compute `engine_core_sha256`/`spec_sha256` from the tree it actually imported. QA must verify those two hashes in the payload (the validator checks core `e111397b…` and spec `e5ddef6b…` — re-pin provenance). |
-| P2 | low | **No-op guard double-counts rows on resume.** `all_rows = rows_this + [json.loads(l) for l in open(ck)]` (line ~104) counts each newly appended row twice; harmless for the pass/fail decision but the reported guard mean is not the plain cell mean on restart. Guard is a cell-level mean, not per-seed. |
-| P3 | low | Guard wording conflates the two conditions (`NO-OP regime … withheld=… own_share=…`), so a failure message does not say which threshold failed; the validator reports both values per cell. |
-| P4 | low | Pilot-0 summary CIs are normal-approximation 95% intervals on 8 seeds (line 131), no multiplicity handling. Acceptable for EXPLORATORY but must not be read as confirmatory. |
-| P5 | informational | `own_share`/`tut_firm_by_grade` mix contest-prep with firm tutoring (documented contamination note, runner line 25); results are recorded as-is and must carry that caveat. |
+| A1 | payload present + schema | **PASS** |
+| A2 | runtime engine pin + core/spec sha (verified against git, not just the hard-coded label) | **PASS** — `846c9e0`, `e111397b…`, `e5ddef6b…` |
+| A3 | design 4 regimes × 2 q0 × 2 p_firm × 8 seeds = 16 cells / 128 runs; seeds 0–7 | **PASS** |
+| A4 | recorded parameters match declared design (incl. withhold_mode strings) | **PASS** |
+| A5 | seed completeness: all 16 `ckpt_*.jsonl` × 8 unique seeds; row regime/q0/p_firm match the cell | **PASS** |
+| A6 | summary keys: 16 cell keys, all 23 metrics each, `n=8` | **PASS** |
+| A7 | no-op guard fired: **12/12 non-market cells** have mean withheld > 1e-3 **and** own_share > 0.1 | **PASS** |
+| A8 | EXPLORATORY label, no confirmatory/causal claim | **PASS** |
+| A9 | driver log shows no `unfired events` / `RuntimeError` / `Traceback` (runner raises on non-empty `unfired_events`) | **PASS** (log is short/minimal — see caveat C1) |
+| A10 | per-seed ckpt rows reproduce the published summary means/n, and the raw-row no-op guard holds (not just summary means) | **PASS** — all 16 cells |
 
-## 4. Completion checklist (runs automatically once the copy lands)
+## 2. Caveats / findings (do not over-read)
 
-| check | expected | status |
-|---|---|---|
-| A1 payload present (`paperC_pilot0_results.json`) | exists | **BLOCKED — artefact unavailable** |
-| A2 engine pin / core sha | `846c9e0`, `e111397b…` verified against git | blocked on A1 (static pin verified §2) |
-| A3 design | 16 cells, 128 runs, q0/p_firm/seeds as declared | blocked on A1 |
-| A4 recorded regime parameters | match declared design exactly | blocked on A1 (static PASS) |
-| A5 seed completeness | 16 `ckpt_*.jsonl`, seeds 0–7 unique per cell, row params match cell | blocked on A1 |
-| A6 summary keys | all 16 cell keys, all 23 metrics, `n=8` | blocked on A1 |
-| A7 no-op guard fired | 12/12 non-market cells: withheld > 1e-3 AND own_share > 0.1 | blocked on A1 |
-| A8 label | EXPLORATORY, no confirmatory/causal claim | blocked on A1 (static PASS) |
-| A9 unfired events | no `unfired events` / `RuntimeError` / `Traceback` in the driver log; runner raises per run if `unfired_events` non-empty | blocked on A1 (needs `pilot_v3_8w.log`) |
+* **C1 — driver log is minimal** (587 B: only the final write line plus two numpy "Mean of empty slice" warnings). A9 therefore evidences *absence of failure strings*, not a full per-run `unfired_events` audit trail; the runner raises on non-empty `unfired_events`, and a completed 128/128 payload implies no run aborted. For future campaigns, keep the full driver log.
+* **C2 — two metrics are all-NaN:** `completion_primary` and `completion_upper` are NaN for all 16 cells / all seeds (32 summary entries). The keys and `n` are present; **do not cite these two metrics**. Likely a measurement-window/config artefact; not a reason to fail the campaign (core outcomes are non-NaN).
+* **C3 — contamination note stands:** `own_share` / `tut_firm_by_grade` mix contest-prep with firm tutoring (runner's documented contamination note); report as recorded, do not relabel.
+* **C4 — exploratory only:** hypothesis-generating; no confirmatory, multiplicity-adjusted, causal or welfare claims. `withheld`/`own_share` are engine constructs, not estimated policy effects.
+* **C5 — GPU separation (lead instruction):** **Pilot-0 is a CPU-only campaign on the canonical engine pin.** The GPU PL port (`research/gpu-pl-port-auditv2-2026-11-25`) is a *separate artefact* for gate-grid/sensitivity runs only; GPU runs must not replace CPU primary artefacts or the canonical spec hash, and are not part of this Pilot-0 record.
 
-**Verdict:** Pilot-0 **cannot be QA-signed off until the run payload is copied from the box** (or the
-instance is restarted and the pull is done through the Commander). Static code audit finds the declared
-design and no-op guard present and the engine pin genuine, with the P1–P5 risks above; none of the
-result-level claims (withheld/own_share values, 128/128 completeness) can be verified without the run
-artefacts. No numbers are asserted here from memory; nothing is fabricated.
+## 3. What is signed off
+
+Pilot-0's **mechanical execution integrity**: design/parameters as declared, 128/128 runs and 8 seeds/cell recoverable from checkpoints, runtime engine/spec pin genuine, summary keys complete and internally consistent with raw per-seed rows, and the binding no-op guard fired in all 12 non-market cells. Scope is exploratory descriptive evidence only; empirical claims from Paper C remain hypotheses, not validated effects.

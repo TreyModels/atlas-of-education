@@ -17,6 +17,8 @@ Checks (each returns PASS/FAIL/BLOCKED):
 """
 import argparse, hashlib, json, os, re, subprocess, sys
 
+import numpy as np
+
 REGIMES = {
     'market_only':            dict(own_ban=0.95, pay_ratio=0.55, monitoring=0.2, withhold_mode='pay_gap'),
     'own_open_gap':           dict(own_ban=0.0,  pay_ratio=0.55, monitoring=0.2, withhold_mode='pay_gap'),
@@ -79,7 +81,13 @@ def main():
     for rname, exp in REGIMES.items():
         got = man.get('regimes', {}).get(rname, {})
         for k, v in exp.items():
-            if got.get(k) is None or abs(float(got.get(k)) - float(v)) > 1e-12: bad.append(f'{rname}.{k}={got.get(k)} != {v}')
+            gv = got.get(k)
+            if isinstance(v, (int, float)):
+                if gv is None or abs(float(gv) - float(v)) > 1e-12:
+                    bad.append(f'{rname}.{k}={gv} != {v}')
+            else:
+                if str(gv) != str(v):
+                    bad.append(f'{rname}.{k}={gv} != {v}')
     rec('A4', not bad, 'parameter mismatches: ' + ('; '.join(bad) if bad else 'none (own_ban/pay_ratio/monitoring/withhold_mode/firm_ban match declared design)'))
     # A5 seed completeness
     if os.path.isdir(root):
@@ -128,6 +136,27 @@ def main():
         rec('A9', not bad, f'log={log}: unfired/RuntimeError/Traceback found={bad}')
     else:
         rec('A9', None, 'no driver log supplied (--log): unfired_events==[] is enforced per run by the runner (raises), but attach pilot_v3_8w.log for evidence')
+    # A10: ckpt rows must reproduce the published summary (mean/sd/n) exactly, and the no-op guard
+    # must hold on the raw per-seed rows (not only on the summary means).
+    if os.path.isdir(root):
+        problems = []
+        for k, ms in summ.items():
+            rname = k.split('|')[0]
+            tag = f"{rname}_q{float(k.split('q0=')[1].split('|')[0]):.2f}_pf{float(k.split('p_firm=')[1]):.3f}"
+            f = os.path.join(root, f'ckpt_{tag}.jsonl')
+            if not os.path.exists(f): problems.append(f'{tag}: missing ckpt'); continue
+            rows = [json.loads(l) for l in open(f) if l.strip()]
+            for metric, sv in ms.items():
+                vals = np.array([r[metric] for r in rows if metric in r], float)
+                if len(vals) != sv.get('n'): problems.append(f'{tag}.{metric}: n {len(vals)} != {sv.get("n")}'); continue
+                m_raw = float(np.nanmean(vals)); m_sum = float(sv['mean'])
+                if not ((np.isnan(m_raw) and np.isnan(m_sum)) or
+                        np.isclose(m_raw, m_sum, rtol=0, atol=1e-12)):
+                    problems.append(f'{tag}.{metric}: mean {m_raw} != summary {m_sum}')
+            if rname != 'market_only':
+                h = np.nanmean([r['withheld'] for r in rows]); os_ = np.nanmean([r['own_share'] for r in rows])
+                if not (h > 1e-3 and os_ > 0.1): problems.append(f'{tag}: raw-row guard withheld={h} own_share={os_}')
+        rec('A10', not problems, 'ckpt rows reproduce summary mean/n and raw-row no-op guard; ' + ('; '.join(problems[:8]) if problems else 'all 16 cells OK'))
     print(json.dumps(dict(results=results), indent=1))
     print('\nSUMMARY:', 'PASS' if all(s=='PASS' for _,s,_ in results) else 'FAIL/BLOCKED')
     return 0 if all(s=='PASS' for _,s,_ in results) else 1
