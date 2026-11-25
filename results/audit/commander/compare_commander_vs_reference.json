@@ -1,0 +1,813 @@
+{
+  "reference": "/Users/treymenefee/neon-boot/wt4/auditv2/papers/shadow-education-contest/code/results/reference/hk_korea_comparative_with_cf4_bundle_reference.json",
+  "reproduced": "papers/shadow-education-contest/code/hk_korea_comparative_with_cf4.json",
+  "comparison": {
+    "metadata": {
+      "repo": {
+        "reference": "https://github.com/TreyModels/atlas-of-education.git",
+        "reproduced": "https://github.com/TreyModels/atlas-of-education.git",
+        "equal": true
+      },
+      "branch": {
+        "reference": "research/binding-gate-2026-11-25",
+        "reproduced": "research/binding-gate-2026-11-25",
+        "equal": true
+      },
+      "base_commit": {
+        "reference": "68da16e",
+        "reproduced": "68da16e",
+        "equal": true
+      },
+      "n_arms": {
+        "reference": 18,
+        "reproduced": 18,
+        "equal": true
+      },
+      "n_seeds": {
+        "reference": 30,
+        "reproduced": 30,
+        "equal": true
+      },
+      "total_runs": {
+        "reference": 540,
+        "reproduced": 540,
+        "equal": true
+      },
+      "elapsed_seconds": {
+        "reference": 165.47,
+        "reproduced": 100.79,
+        "equal": false
+      },
+      "history_api": {
+        "reference": "E.R (core.py L99; populated via E.note(...))",
+        "reproduced": "E.R (core.py L99; populated via E.note(...))",
+        "equal": true
+      },
+      "_extra_keys_reproduced": []
+    },
+    "seeds": {
+      "n_values": 9180,
+      "n_exact": 9174,
+      "max_abs": 3.552713678800501e-15,
+      "max_rel": 2.0937494438879354e-16,
+      "max_abs_at": [
+        130,
+        "q5_q1_spend_ratio",
+        21.035636941397684,
+        21.03563694139768
+      ],
+      "max_rel_at": [
+        379,
+        "q5_q1_spend_ratio",
+        16.968189241418393,
+        16.96818924141839
+      ],
+      "changed_rows": [
+        {
+          "row": 130,
+          "jurisdiction": "HK",
+          "arm_id": "CF2b",
+          "seed": 10,
+          "fields": [
+            "q5_q1_spend_ratio",
+            "k12_spend_by_q[0]"
+          ]
+        },
+        {
+          "row": 311,
+          "jurisdiction": "KR",
+          "arm_id": "CF1a",
+          "seed": 11,
+          "fields": [
+            "q5_q1_spend_ratio",
+            "k12_spend_by_q[0]"
+          ]
+        },
+        {
+          "row": 379,
+          "jurisdiction": "KR",
+          "arm_id": "CF2a",
+          "seed": 19,
+          "fields": [
+            "q5_q1_spend_ratio",
+            "k12_spend_by_q[0]"
+          ]
+        }
+      ],
+      "row_key_mismatch": [],
+      "extra_keys": [],
+      "n_diff": 6,
+      "seed_rows_match": true,
+      "exact": false,
+      "n_rows": {
+        "reference": 540,
+        "reproduced": 540
+      }
+    },
+    "summary": {
+      "n_numeric": 846,
+      "n_exact": 842,
+      "max_abs": 4.440892098500626e-16,
+      "max_rel": 2.48557243661945e-16,
+      "max_abs_at": [
+        "KR.CF2a.delta_vs_baseline.q5_q1_spend_ratio.mean",
+        -1.7866677442483005,
+        -1.786667744248301
+      ],
+      "max_rel_at": [
+        "KR.CF2a.delta_vs_baseline.q5_q1_spend_ratio.mean",
+        -1.7866677442483005,
+        -1.786667744248301
+      ],
+      "mismatched_non_numeric": [],
+      "missing_in_reproduced": [],
+      "n_diff": 4,
+      "total_spend_index_all_equal": true,
+      "exact": false
+    }
+  },
+  "cf4": {
+    "reference": {
+      "criterion": {
+        "spend_index_below": 80.0,
+        "elite_q5_share": "below same-jurisdiction Baseline mean",
+        "requires_both_jurisdictions": [
+          "HK",
+          "KR"
+        ]
+      },
+      "per_jurisdiction": {
+        "HK": {
+          "baseline_spend_index": 100.0,
+          "baseline_elite_q5_share_pct": 46.36070853462158,
+          "arms": {
+            "Baseline": {
+              "spend_index": 100.0,
+              "spend_index_delta_pts": 0.0,
+              "spend_below_80": false,
+              "elite_q5_share_pct": 46.36070853462158,
+              "baseline_elite_q5_share_pct": 46.36070853462158,
+              "elite_delta_pp": 0.0,
+              "elite_below_baseline": false,
+              "win_win": false
+            },
+            "CF1a": {
+              "spend_index": 107.42,
+              "spend_index_delta_pts": 7.42,
+              "spend_below_80": false,
+              "elite_q5_share_pct": 52.43156199677939,
+              "baseline_elite_q5_share_pct": 46.36070853462158,
+              "elite_delta_pp": 6.070853462157812,
+              "elite_below_baseline": false,
+              "win_win": false
+            },
+            "CF1b": {
+              "spend_index": 67.39,
+              "spend_index_delta_pts": -32.61,
+              "spend_below_80": true,
+              "elite_q5_share_pct": 41.9645732689211,
+              "baseline_elite_q5_share_pct": 46.36070853462158,
+              "elite_delta_pp": -4.396135265700483,
+              "elite_below_baseline": true,
+              "win_win": true
+            },
+            "CF2a": {
+              "spend_index": 110.29,
+              "spend_index_delta_pts": 10.29,
+              "spend_below_80": false,
+              "elite_q5_share_pct": 42.910052910052904,
+              "baseline_elite_q5_share_pct": 46.36070853462158,
+              "elite_delta_pp": -3.450655624568668,
+              "elite_below_baseline": true,
+              "win_win": false
+            },
+            "CF2b": {
+              "spend_index": 149.3,
+              "spend_index_delta_pts": 49.3,
+              "spend_below_80": false,
+              "elite_q5_share_pct": 33.61877025848594,
+              "baseline_elite_q5_share_pct": 46.36070853462158,
+              "elite_delta_pp": -12.741938276135638,
+              "elite_below_baseline": true,
+              "win_win": false
+            },
+            "CF3a": {
+              "spend_index": 76.98,
+              "spend_index_delta_pts": -23.02,
+              "spend_below_80": true,
+              "elite_q5_share_pct": 51.03381642512078,
+              "baseline_elite_q5_share_pct": 46.36070853462158,
+              "elite_delta_pp": 4.673107890499195,
+              "elite_below_baseline": false,
+              "win_win": false
+            },
+            "CF3b": {
+              "spend_index": 59.11,
+              "spend_index_delta_pts": -40.89,
+              "spend_below_80": true,
+              "elite_q5_share_pct": 59.01771336553945,
+              "baseline_elite_q5_share_pct": 46.36070853462158,
+              "elite_delta_pp": 12.657004830917874,
+              "elite_below_baseline": false,
+              "win_win": false
+            },
+            "CF4a": {
+              "spend_index": 43.78,
+              "spend_index_delta_pts": -56.22,
+              "spend_below_80": true,
+              "elite_q5_share_pct": 48.64412238325282,
+              "baseline_elite_q5_share_pct": 46.36070853462158,
+              "elite_delta_pp": 2.2834138486312394,
+              "elite_below_baseline": false,
+              "win_win": false
+            },
+            "CF4b": {
+              "spend_index": 90.88,
+              "spend_index_delta_pts": -9.12,
+              "spend_below_80": false,
+              "elite_q5_share_pct": 35.97925925925926,
+              "baseline_elite_q5_share_pct": 46.36070853462158,
+              "elite_delta_pp": -10.38144927536232,
+              "elite_below_baseline": true,
+              "win_win": false
+            }
+          }
+        },
+        "KR": {
+          "baseline_spend_index": 100.0,
+          "baseline_elite_q5_share_pct": 36.123456790123456,
+          "arms": {
+            "Baseline": {
+              "spend_index": 100.0,
+              "spend_index_delta_pts": 0.0,
+              "spend_below_80": false,
+              "elite_q5_share_pct": 36.123456790123456,
+              "baseline_elite_q5_share_pct": 36.123456790123456,
+              "elite_delta_pp": 0.0,
+              "elite_below_baseline": false,
+              "win_win": false
+            },
+            "CF1a": {
+              "spend_index": 106.46,
+              "spend_index_delta_pts": 6.46,
+              "spend_below_80": false,
+              "elite_q5_share_pct": 41.75308641975308,
+              "baseline_elite_q5_share_pct": 36.123456790123456,
+              "elite_delta_pp": 5.629629629629631,
+              "elite_below_baseline": false,
+              "win_win": false
+            },
+            "CF1b": {
+              "spend_index": 76.42,
+              "spend_index_delta_pts": -23.58,
+              "spend_below_80": true,
+              "elite_q5_share_pct": 26.38888888888889,
+              "baseline_elite_q5_share_pct": 36.123456790123456,
+              "elite_delta_pp": -9.734567901234566,
+              "elite_below_baseline": true,
+              "win_win": true
+            },
+            "CF2a": {
+              "spend_index": 107.17,
+              "spend_index_delta_pts": 7.17,
+              "spend_below_80": false,
+              "elite_q5_share_pct": 31.083333333333336,
+              "baseline_elite_q5_share_pct": 36.123456790123456,
+              "elite_delta_pp": -5.040123456790123,
+              "elite_below_baseline": true,
+              "win_win": false
+            },
+            "CF2b": {
+              "spend_index": 128.0,
+              "spend_index_delta_pts": 28.0,
+              "spend_below_80": false,
+              "elite_q5_share_pct": 22.011111111111113,
+              "baseline_elite_q5_share_pct": 36.123456790123456,
+              "elite_delta_pp": -14.112345679012348,
+              "elite_below_baseline": true,
+              "win_win": false
+            },
+            "CF3a": {
+              "spend_index": 76.63,
+              "spend_index_delta_pts": -23.37,
+              "spend_below_80": true,
+              "elite_q5_share_pct": 41.96296296296296,
+              "baseline_elite_q5_share_pct": 36.123456790123456,
+              "elite_delta_pp": 5.8395061728395055,
+              "elite_below_baseline": false,
+              "win_win": false
+            },
+            "CF3b": {
+              "spend_index": 57.36,
+              "spend_index_delta_pts": -42.64,
+              "spend_below_80": true,
+              "elite_q5_share_pct": 47.66049382716049,
+              "baseline_elite_q5_share_pct": 36.123456790123456,
+              "elite_delta_pp": 11.537037037037038,
+              "elite_below_baseline": false,
+              "win_win": false
+            },
+            "CF4a": {
+              "spend_index": 46.5,
+              "spend_index_delta_pts": -53.5,
+              "spend_below_80": true,
+              "elite_q5_share_pct": 34.10493827160494,
+              "baseline_elite_q5_share_pct": 36.123456790123456,
+              "elite_delta_pp": -2.018518518518518,
+              "elite_below_baseline": true,
+              "win_win": true
+            },
+            "CF4b": {
+              "spend_index": 88.04,
+              "spend_index_delta_pts": -11.96,
+              "spend_below_80": false,
+              "elite_q5_share_pct": 26.507407407407406,
+              "baseline_elite_q5_share_pct": 36.123456790123456,
+              "elite_delta_pp": -9.616049382716051,
+              "elite_below_baseline": true,
+              "win_win": false
+            }
+          }
+        }
+      },
+      "win_win_both_jurisdictions": {
+        "Baseline": {
+          "HK": false,
+          "KR": false,
+          "BOTH": false
+        },
+        "CF1a": {
+          "HK": false,
+          "KR": false,
+          "BOTH": false
+        },
+        "CF1b": {
+          "HK": true,
+          "KR": true,
+          "BOTH": true
+        },
+        "CF2a": {
+          "HK": false,
+          "KR": false,
+          "BOTH": false
+        },
+        "CF2b": {
+          "HK": false,
+          "KR": false,
+          "BOTH": false
+        },
+        "CF3a": {
+          "HK": false,
+          "KR": false,
+          "BOTH": false
+        },
+        "CF3b": {
+          "HK": false,
+          "KR": false,
+          "BOTH": false
+        },
+        "CF4a": {
+          "HK": false,
+          "KR": true,
+          "BOTH": false
+        },
+        "CF4b": {
+          "HK": false,
+          "KR": false,
+          "BOTH": false
+        }
+      },
+      "single_lever_comparison": {
+        "CF4a": {
+          "levers": [
+            "CF3b",
+            "CF1b"
+          ],
+          "HK": {
+            "combo": {
+              "spend_index": 43.78,
+              "elite_q5_share_pct": 48.64412238325282,
+              "win_win": false
+            },
+            "levers": {
+              "CF3b": {
+                "spend_index": 59.11,
+                "elite_q5_share_pct": 59.01771336553945,
+                "win_win": false
+              },
+              "CF1b": {
+                "spend_index": 67.39,
+                "elite_q5_share_pct": 41.9645732689211,
+                "win_win": true
+              }
+            }
+          },
+          "KR": {
+            "combo": {
+              "spend_index": 46.5,
+              "elite_q5_share_pct": 34.10493827160494,
+              "win_win": true
+            },
+            "levers": {
+              "CF3b": {
+                "spend_index": 57.36,
+                "elite_q5_share_pct": 47.66049382716049,
+                "win_win": false
+              },
+              "CF1b": {
+                "spend_index": 76.42,
+                "elite_q5_share_pct": 26.38888888888889,
+                "win_win": true
+              }
+            }
+          }
+        },
+        "CF4b": {
+          "levers": [
+            "CF3b",
+            "CF2b"
+          ],
+          "HK": {
+            "combo": {
+              "spend_index": 90.88,
+              "elite_q5_share_pct": 35.97925925925926,
+              "win_win": false
+            },
+            "levers": {
+              "CF3b": {
+                "spend_index": 59.11,
+                "elite_q5_share_pct": 59.01771336553945,
+                "win_win": false
+              },
+              "CF2b": {
+                "spend_index": 149.3,
+                "elite_q5_share_pct": 33.61877025848594,
+                "win_win": false
+              }
+            }
+          },
+          "KR": {
+            "combo": {
+              "spend_index": 88.04,
+              "elite_q5_share_pct": 26.507407407407406,
+              "win_win": false
+            },
+            "levers": {
+              "CF3b": {
+                "spend_index": 57.36,
+                "elite_q5_share_pct": 47.66049382716049,
+                "win_win": false
+              },
+              "CF2b": {
+                "spend_index": 128.0,
+                "elite_q5_share_pct": 22.011111111111113,
+                "win_win": false
+              }
+            }
+          }
+        }
+      }
+    },
+    "reproduced": {
+      "criterion": {
+        "spend_index_below": 80.0,
+        "elite_q5_share": "below same-jurisdiction Baseline mean",
+        "requires_both_jurisdictions": [
+          "HK",
+          "KR"
+        ]
+      },
+      "per_jurisdiction": {
+        "HK": {
+          "baseline_spend_index": 100.0,
+          "baseline_elite_q5_share_pct": 46.36070853462158,
+          "arms": {
+            "Baseline": {
+              "spend_index": 100.0,
+              "spend_index_delta_pts": 0.0,
+              "spend_below_80": false,
+              "elite_q5_share_pct": 46.36070853462158,
+              "baseline_elite_q5_share_pct": 46.36070853462158,
+              "elite_delta_pp": 0.0,
+              "elite_below_baseline": false,
+              "win_win": false
+            },
+            "CF1a": {
+              "spend_index": 107.42,
+              "spend_index_delta_pts": 7.42,
+              "spend_below_80": false,
+              "elite_q5_share_pct": 52.43156199677939,
+              "baseline_elite_q5_share_pct": 46.36070853462158,
+              "elite_delta_pp": 6.070853462157812,
+              "elite_below_baseline": false,
+              "win_win": false
+            },
+            "CF1b": {
+              "spend_index": 67.39,
+              "spend_index_delta_pts": -32.61,
+              "spend_below_80": true,
+              "elite_q5_share_pct": 41.9645732689211,
+              "baseline_elite_q5_share_pct": 46.36070853462158,
+              "elite_delta_pp": -4.396135265700483,
+              "elite_below_baseline": true,
+              "win_win": true
+            },
+            "CF2a": {
+              "spend_index": 110.29,
+              "spend_index_delta_pts": 10.29,
+              "spend_below_80": false,
+              "elite_q5_share_pct": 42.910052910052904,
+              "baseline_elite_q5_share_pct": 46.36070853462158,
+              "elite_delta_pp": -3.450655624568668,
+              "elite_below_baseline": true,
+              "win_win": false
+            },
+            "CF2b": {
+              "spend_index": 149.3,
+              "spend_index_delta_pts": 49.3,
+              "spend_below_80": false,
+              "elite_q5_share_pct": 33.61877025848594,
+              "baseline_elite_q5_share_pct": 46.36070853462158,
+              "elite_delta_pp": -12.741938276135638,
+              "elite_below_baseline": true,
+              "win_win": false
+            },
+            "CF3a": {
+              "spend_index": 76.98,
+              "spend_index_delta_pts": -23.02,
+              "spend_below_80": true,
+              "elite_q5_share_pct": 51.03381642512078,
+              "baseline_elite_q5_share_pct": 46.36070853462158,
+              "elite_delta_pp": 4.673107890499195,
+              "elite_below_baseline": false,
+              "win_win": false
+            },
+            "CF3b": {
+              "spend_index": 59.11,
+              "spend_index_delta_pts": -40.89,
+              "spend_below_80": true,
+              "elite_q5_share_pct": 59.01771336553945,
+              "baseline_elite_q5_share_pct": 46.36070853462158,
+              "elite_delta_pp": 12.657004830917874,
+              "elite_below_baseline": false,
+              "win_win": false
+            },
+            "CF4a": {
+              "spend_index": 43.78,
+              "spend_index_delta_pts": -56.22,
+              "spend_below_80": true,
+              "elite_q5_share_pct": 48.64412238325282,
+              "baseline_elite_q5_share_pct": 46.36070853462158,
+              "elite_delta_pp": 2.2834138486312394,
+              "elite_below_baseline": false,
+              "win_win": false
+            },
+            "CF4b": {
+              "spend_index": 90.88,
+              "spend_index_delta_pts": -9.12,
+              "spend_below_80": false,
+              "elite_q5_share_pct": 35.97925925925926,
+              "baseline_elite_q5_share_pct": 46.36070853462158,
+              "elite_delta_pp": -10.38144927536232,
+              "elite_below_baseline": true,
+              "win_win": false
+            }
+          }
+        },
+        "KR": {
+          "baseline_spend_index": 100.0,
+          "baseline_elite_q5_share_pct": 36.123456790123456,
+          "arms": {
+            "Baseline": {
+              "spend_index": 100.0,
+              "spend_index_delta_pts": 0.0,
+              "spend_below_80": false,
+              "elite_q5_share_pct": 36.123456790123456,
+              "baseline_elite_q5_share_pct": 36.123456790123456,
+              "elite_delta_pp": 0.0,
+              "elite_below_baseline": false,
+              "win_win": false
+            },
+            "CF1a": {
+              "spend_index": 106.46,
+              "spend_index_delta_pts": 6.46,
+              "spend_below_80": false,
+              "elite_q5_share_pct": 41.75308641975308,
+              "baseline_elite_q5_share_pct": 36.123456790123456,
+              "elite_delta_pp": 5.629629629629631,
+              "elite_below_baseline": false,
+              "win_win": false
+            },
+            "CF1b": {
+              "spend_index": 76.42,
+              "spend_index_delta_pts": -23.58,
+              "spend_below_80": true,
+              "elite_q5_share_pct": 26.38888888888889,
+              "baseline_elite_q5_share_pct": 36.123456790123456,
+              "elite_delta_pp": -9.734567901234566,
+              "elite_below_baseline": true,
+              "win_win": true
+            },
+            "CF2a": {
+              "spend_index": 107.17,
+              "spend_index_delta_pts": 7.17,
+              "spend_below_80": false,
+              "elite_q5_share_pct": 31.083333333333336,
+              "baseline_elite_q5_share_pct": 36.123456790123456,
+              "elite_delta_pp": -5.040123456790123,
+              "elite_below_baseline": true,
+              "win_win": false
+            },
+            "CF2b": {
+              "spend_index": 128.0,
+              "spend_index_delta_pts": 28.0,
+              "spend_below_80": false,
+              "elite_q5_share_pct": 22.011111111111113,
+              "baseline_elite_q5_share_pct": 36.123456790123456,
+              "elite_delta_pp": -14.112345679012348,
+              "elite_below_baseline": true,
+              "win_win": false
+            },
+            "CF3a": {
+              "spend_index": 76.63,
+              "spend_index_delta_pts": -23.37,
+              "spend_below_80": true,
+              "elite_q5_share_pct": 41.96296296296296,
+              "baseline_elite_q5_share_pct": 36.123456790123456,
+              "elite_delta_pp": 5.8395061728395055,
+              "elite_below_baseline": false,
+              "win_win": false
+            },
+            "CF3b": {
+              "spend_index": 57.36,
+              "spend_index_delta_pts": -42.64,
+              "spend_below_80": true,
+              "elite_q5_share_pct": 47.66049382716049,
+              "baseline_elite_q5_share_pct": 36.123456790123456,
+              "elite_delta_pp": 11.537037037037038,
+              "elite_below_baseline": false,
+              "win_win": false
+            },
+            "CF4a": {
+              "spend_index": 46.5,
+              "spend_index_delta_pts": -53.5,
+              "spend_below_80": true,
+              "elite_q5_share_pct": 34.10493827160494,
+              "baseline_elite_q5_share_pct": 36.123456790123456,
+              "elite_delta_pp": -2.018518518518518,
+              "elite_below_baseline": true,
+              "win_win": true
+            },
+            "CF4b": {
+              "spend_index": 88.04,
+              "spend_index_delta_pts": -11.96,
+              "spend_below_80": false,
+              "elite_q5_share_pct": 26.507407407407406,
+              "baseline_elite_q5_share_pct": 36.123456790123456,
+              "elite_delta_pp": -9.616049382716051,
+              "elite_below_baseline": true,
+              "win_win": false
+            }
+          }
+        }
+      },
+      "win_win_both_jurisdictions": {
+        "Baseline": {
+          "HK": false,
+          "KR": false,
+          "BOTH": false
+        },
+        "CF1a": {
+          "HK": false,
+          "KR": false,
+          "BOTH": false
+        },
+        "CF1b": {
+          "HK": true,
+          "KR": true,
+          "BOTH": true
+        },
+        "CF2a": {
+          "HK": false,
+          "KR": false,
+          "BOTH": false
+        },
+        "CF2b": {
+          "HK": false,
+          "KR": false,
+          "BOTH": false
+        },
+        "CF3a": {
+          "HK": false,
+          "KR": false,
+          "BOTH": false
+        },
+        "CF3b": {
+          "HK": false,
+          "KR": false,
+          "BOTH": false
+        },
+        "CF4a": {
+          "HK": false,
+          "KR": true,
+          "BOTH": false
+        },
+        "CF4b": {
+          "HK": false,
+          "KR": false,
+          "BOTH": false
+        }
+      },
+      "single_lever_comparison": {
+        "CF4a": {
+          "levers": [
+            "CF3b",
+            "CF1b"
+          ],
+          "HK": {
+            "combo": {
+              "spend_index": 43.78,
+              "elite_q5_share_pct": 48.64412238325282,
+              "win_win": false
+            },
+            "levers": {
+              "CF3b": {
+                "spend_index": 59.11,
+                "elite_q5_share_pct": 59.01771336553945,
+                "win_win": false
+              },
+              "CF1b": {
+                "spend_index": 67.39,
+                "elite_q5_share_pct": 41.9645732689211,
+                "win_win": true
+              }
+            }
+          },
+          "KR": {
+            "combo": {
+              "spend_index": 46.5,
+              "elite_q5_share_pct": 34.10493827160494,
+              "win_win": true
+            },
+            "levers": {
+              "CF3b": {
+                "spend_index": 57.36,
+                "elite_q5_share_pct": 47.66049382716049,
+                "win_win": false
+              },
+              "CF1b": {
+                "spend_index": 76.42,
+                "elite_q5_share_pct": 26.38888888888889,
+                "win_win": true
+              }
+            }
+          }
+        },
+        "CF4b": {
+          "levers": [
+            "CF3b",
+            "CF2b"
+          ],
+          "HK": {
+            "combo": {
+              "spend_index": 90.88,
+              "elite_q5_share_pct": 35.97925925925926,
+              "win_win": false
+            },
+            "levers": {
+              "CF3b": {
+                "spend_index": 59.11,
+                "elite_q5_share_pct": 59.01771336553945,
+                "win_win": false
+              },
+              "CF2b": {
+                "spend_index": 149.3,
+                "elite_q5_share_pct": 33.61877025848594,
+                "win_win": false
+              }
+            }
+          },
+          "KR": {
+            "combo": {
+              "spend_index": 88.04,
+              "elite_q5_share_pct": 26.507407407407406,
+              "win_win": false
+            },
+            "levers": {
+              "CF3b": {
+                "spend_index": 57.36,
+                "elite_q5_share_pct": 47.66049382716049,
+                "win_win": false
+              },
+              "CF2b": {
+                "spend_index": 128.0,
+                "elite_q5_share_pct": 22.011111111111113,
+                "win_win": false
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
