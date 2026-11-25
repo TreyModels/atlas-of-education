@@ -14,11 +14,11 @@ Box-side ledger with PIDs/hashes: `/root/work/compute/ledger/COMPUTE_LEDGER.md` 
 | item | value |
 |---|---|
 | quota | **10 CPUs** (`/sys/fs/cgroup/cpu.max = 1000000 100000`); `nproc`=80 is the host and is **misleading** |
-| current utilization | **6.5 / 10 CPU (65 %)** at 15:25:04 — `cmd` 540 (6 workers, 36.7 % done) only; qa task-8 ✅ done, qa 2nd seed band + contest-math task-12 allocation issued, waiting on lane launches |
+| current utilization | **0.0 / 10 CPU (idle)** at 15:59:27 — **all box work complete**; 540 finished ~15:57 and every lane has released its workers. Box idle since then (see §12 final state). |
 | band check | 90 % is **inside** the 8.5–10.0 target band; hard worker cap respected (see §3b for the withdrawn 540→8 proposal); `loadavg` 18.8 is host-wide and is not our container (see §2) |
 | headline | **Gate-1 AFTER invariant suite is GREEN on the declared stack** (box replication: 27 passed in 56.73 s, 5 workers) |
 | ETA (controller box 540) | 540 × ~31 CPU-s/run ÷ 6 workers ≈ 47 min from 15:07:45 → **~15:54:30**, now with the full 6 cores (legacy ended) |
-| box 540 backup status | **now PRIMARY for the Gate-1 migration table** — the host authoritative 540 **hung again** (PID 63896, 0 % CPU, 23 min, no JSON; Lead relay 15:50) and the box run completes first. Box: 6 workers, started 15:07:45, ETA **~15:54:40**; on completion → verify log/JSON, sha256, provenance (**declared venv numpy 2.2.6**, engine tree `98baf6b`), hand to commander + Lead, keep intermediates. **Fallback rule: any subset fallback must be explicitly LABELLED (e.g. "54-run 3-seed subset") — never a silent partial.** One slot kept free for the commander's fallback driver. |
+| box 540 backup status | **COMPLETE — now the PRIMARY Gate-1 migration source** (host hung again, PID 63896, 0 % CPU, no JSON). `Completed 540 runs in 2960.4s` = 49.3 min, 6 workers, started 15:07:45 / finished ~15:57; verified 540 seed rows + 18 arms; **sha256 `455649da…34ec21`**; provenance declared venv py3.10.8 / **numpy 2.2.6**, engine clean `98baf6b`; intermediates kept; handed to commander + Lead. **Fallback rule unchanged: any subset fallback must be explicitly LABELLED, never a silent partial.** |
 | **task-12 measured result** | **SHIPPED keep-memo-only** (commits `fceca3b`, `d1acdf3`; report `1b34d36`): post-revert ref **21.036** → shipped **18.904 CPU-s = 1.113×**, **outputs bit-identical (0.000e+00, 130 fixtures)**, 68/68 tests pass in 14.05 s; forward re-association (≤1.4e-15 drift, not bit-identical) **reverted**; batch path (0.87–0.96×, slower) **reverted**. **2–5× UNPROVEN.** Gate-2/Gate-3 budgets use the pre-optimisation cost; shipped engine ≈1.11× faster (540 ≈ 42 min). |
 | driver resolution | legacy "relaunch loop" = box-side **`run_parts.sh`**, a finite 4-part script (not an infinite watcher); killed 7×, re-issued by an external agent session within 5 s each time; current instance is being **allowed to finish** (§7) |
 | ETA (commander host 540) | authoritative run; host is ≈2× faster per run (Apple core vs Xeon) → ≈22–25 min from 14:55 → ~15:17–15:20 |
@@ -84,7 +84,7 @@ no output progress for >10 min is messaged and flagged; any box job must report 
 | id | job | owner | workers | start (CST) | status | measured rate | ETA / done | output |
 |---|---|---|---|---|---|---|---|---|
 | J-01 | Gate-1 AFTER invariant suite, box replication (declared venv, numpy 2.2.6) | qa-verifier | 5 (test-12 caps pool ≤4 + parent) | 14:59:1x | ✅ DONE | 27 tests / 56.73 s | done ~15:00:10 | `/root/work/qa/AFTER_box.log` |
-| J-02 | 540 repaired-engine cross-env replication | atlas-commander | 6 | 15:03:31 | **RUNNING** | ~31 CPU-s/run (pilot) → ~2.2 runs/min aggregate | ~15:50–16:00 | `/root/work/cmd/run_540.log`, then `papers/.../results/hk_korea_comparative_with_cf4.json` |
+| J-02 | 540 repaired-engine **cross-env replication — now PRIMARY Gate-1 migration source** | controller (commander handoff) | 6 | 15:07:45 | ✅ **DONE ~15:57** (`Completed 540 runs in 2960.4s`) | 540 runs × 32.9 CPU-s/run = 17,762 CPU-s; verified 540 seed rows, 18 arms (HK 9 + KR 9) | done in **49.3 min** | `/root/work/cmd/papers/shadow-education-contest/code/hk_korea_comparative_with_cf4.json` — **sha256 `455649daf2a1e3367820004c3338deb41236991814887c295b6e7a2bb634ec21`**; stable copy `/root/work/cmd/hk_korea_comparative_with_cf4_boxw6_2026-11-25.json` (+`.sha256`); log `run_540_w6c.log`; provenance: declared venv py3.10.8 / **numpy 2.2.6**, engine clean `98baf6b` (`core.py` `72cbddf7…`, `contest_math.py` `23a01730…` = pre-task-12) |
 | J-03 | task-6 rank/Jacobian audit (~1,000 prior-box points) | contest-math | 1 (analytic; 0 pool) | ~15:02 | staging/analytic on host | 1 moment-map + Jacobian per point; 0 `pl_win_probs` calls | <5 s once launched | `/root/work/contest` harness currently staged |
 | J-04 | task-11 harness/manifest/ledger box proof | audit-runner | 1 | 15:00:49 | ✅ DONE 15:00:52 | 3 s wall | done | `/root/work/audit/p07_box_evidence.tar.gz`, 18/18 PASS |
 | J-05 | task-7 synthetic DGP (500 pops = 5 configs × 100, 20k draws × 16 moments, pure NumPy ABC, **0 engine runs**) | qa-verifier | 3 | 15:10:40 | ✅ **DONE ~15:18** | measured: 500 pops / ~7.3 min @3w = **2.6 CPU-s/pop, 1.14 pops/s aggregate** | done | `/root/work/qa/full_out` (6 artifacts, sha256 in ledger: accepted_draws `62fa1b4b…`, posterior_predictive `0cf9ce27…`, summary `698649f6…`) |
@@ -95,7 +95,7 @@ no output progress for >10 min is messaged and flagged; any box job must report 
 | J-09 | **task-12 optimisation of `contest_math.py`** (Lead-approved; owner = contest-math, not engine-core) | contest-math | 2 → 4 when qa finishes | queued (asked 15:25) | pending claim/launch | benchmark 1 HK run = 20.3 CPU-s baseline; profile: 92.7 % in PL quadrature | target 2–5×; report CPU-s/run before/after | `/root/work/contest` |
 | J-07 | task-9 general-r Tulloch validation | contest-math | 1 (analytic) | blocked on J-03 | queued | ~200 PL calls × 14–49 ms ≈ 3–10 s | <1 min | `/root/work/contest` |
 
-Completed / released: J-01, J-04. No lane currently exceeds its cap.
+Completed / released: J-01, J-04, J-05, J-06, J-08, J-10, J-09b, J-02. **FINAL (15:59): every lane has released its workers; box idle 0/10; total 0.** No lane currently exceeds its cap.
 
 ---
 
@@ -229,7 +229,9 @@ e1ce873a0a106b9632fae97cf923ab6432ebc6e32043f64fb501d8c93ec9025b  results/policy
 | 15:25:04 | 16.3 | **6.5** (65 %) | 540 6 | qa task-8 ✅ done; waiting on qa band-2 + contest-math task-12 launches to return to 10/10 |
 | 15:33:05 | 23.6 | **8.0** (80 %) | 540 6 + qa band-2 2 | contest-math task-9 + task-12 baseline probe finished; task-12 patch being coded (bursts will use its 2 reserved slots) |
 | 15:37:49 | 21.1 | **8.1** (81 %) | 540 6 + band-3 2 | band-2 done; band-3 (`--seed 20261127`) running; task-12 bench partial (equivalence PASS) |
-| 15:47–15:54 (projected) | — | **60–80 %** | 540 6 + task-12 bursts | band-3 ends ~15:47; contest-math after-patch pairs are bursts; 540 completes ~15:54:30 → then box idle unless new work is assigned (recorded idle slot) |
+| 15:47–15:54 | — | **60–80 %** | 540 6 + task-12 bursts | band-3 ended ~15:48; task-12 bench/revert bursts; 540 last stragglers |
+| 15:53:54 | 15.4 | **5.0** (50 %) | 540 2–3 of 6 | 540 tail: most workers done, last KR arms finishing |
+| **15:57–15:59** | **7.9** | **0.0** (idle) | 0 | **540 COMPLETE (49.3 min)**; every lane released; box idle by design (§12) |
 
 Band discipline: flag **<7** idle (fill from queue), **>11** oversubscribed (throttle the lowest-priority lane).
 `loadavg` is host-wide and is reported only because it was the issued metric; the cgroup number is the truth.
@@ -383,5 +385,30 @@ Band discipline: flag **<7** idle (fill from queue), **>11** oversubscribed (thr
   PRIMARY for the Gate-1 migration table**; on completion: verify log/JSON, sha256, provenance (declared venv numpy
   2.2.6, engine `98baf6b`, 6 workers), hand to commander + Lead, keep intermediates; **keep 1 CPU slot free** for the
   commander's fallback subset driver.
-- (next refresh: 540 completion → deliver path+sha256+wall to commander & Lead; then final utilization summary +
-  idle-slot note)
+- **15:57** **BOX 540 COMPLETE** — `Completed 540 runs in 2960.4s` (49.3 min), 6 workers, started 15:07:45;
+  JSON 435,872 B, **sha256 `455649daf2a1e3367820004c3338deb41236991814887c295b6e7a2bb634ec21`**, verified 540 seed
+  rows / 18 arms (HK 9 + KR 9) / metadata elapsed 2960.41; stable copy + `.sha256` in `/root/work/cmd/`; provenance
+  declared venv py3.10.8 / numpy 2.2.6, engine clean `98baf6b` (`core.py` `72cbddf7…`, `contest_math.py` `23a01730…`).
+  Handed to commander + Lead; **Lead accepted it as the primary Gate-1 migration source and cancelled the 54-run
+  fallback.**
+- **15:59** all lanes released (qa task-7/8 + 3 bands; contest-math task-6/9/12; audit-runner task-11; commander 540).
+  **Box idle 0/10 by design. STAND DOWN** per Lead: no new work until Gate-1 sign-off and the Gate-2 brief; keep
+  ledger + profile/hang evidence; no shutdown/power-off/watchers. Idle slot: 10 CPUs (no queue — do not invent work).
+
+---
+
+## 12. Final state (15:59 CST) — stand-down record
+
+| item | final value |
+|---|---|
+| quota | 10 CPUs (`cpu.max = 1000000 100000`) — never exceeded by our lanes |
+| peak utilization | **9.9/10 = 99 %** at 15:14:38 (540 6w + qa task-7 3w) |
+| steady-state | 8.5–10.0/10 whenever work existed; dips = queue gaps between lane jobs, **not** oversubscription |
+| only oversubscription event | legacy tenant 8 workers before the **operator stop** (~15:07); 8 kills recorded, root-caused to a finite external `run_parts.sh` driver |
+| final utilization | **0.0/10 (idle by design)** — all box jobs complete ~15:57, all lanes released ~15:59 |
+| box jobs completed | Gate-1 AFTER suite (27 passed/56.73 s) · 540 cross-env **primary** (49.3 min, sha `455649da…`) · task-7 DGP 500 pops · task-8 bootstrap · 3 DGP seed bands · task-6 · task-9 replication · task-11 · task-12 perf/optimisation |
+| measured engine costs (planning) | HK arm **20.3 CPU-s**, KR arm **41.9 CPU-s**, 540-class ≈ **16.8 k CPU-s (4.7 CPU-h)** pre-task-12; **×1.113** with shipped memo-only (not 2–5×) |
+| deliverables | `docs/audit/COMPUTE_SCHEDULE.md` (this file, committed on `research/contest-audit-v2-2026-11-25`); box ledger `/root/work/compute/ledger/COMPUTE_LEDGER.md`; pilots/profiler `/root/work/compute/pilot/` |
+| evidence retained | legacy snapshot `/root/work/compute/legacy_snapshot/` + hashes; profile `profile_hk.log`; task-12 bench results; host-hang notes; 540 JSON + `.sha256` |
+| next | **Gate-2 brief** from Lead after Gate-1 sign-off (calibration pilot → search → refinement), costed at the measured engine costs above |
+| idle-slot note | **all 10 CPUs idle; no queued box work exists.** Per Lead: stand down, do not invent work, keep one slot for emergencies only |
