@@ -94,29 +94,37 @@ chk("T2 stratified cluster SE == manual linearisation", near(e2$se[e2$group == "
     sprintf("engine=%.8f manual=%.8f", e2$se[e2$group == "1"], m2["se"]))
 
 ## ---------------------------- T3: domain whose PSUs are partly outside it ----
-# Half the PSUs have no eligible person at all. A naive "drop rows then build
-# design" analysis loses those PSUs and understates the variance.
+# 12 strata x 8 PSUs. In half the PSUs every member is age 30, so the age-15
+# domain has NO members there. Urban identifies the comparison group, so the
+# grouping variable and the domain are genuinely different. The engine's E2
+# estimate for urban==1 must equal the hand linearisation over dom=(age==15 & urban==1).
 set.seed(33)
 S3 <- do.call(rbind, lapply(1:12, function(h) {
-  do.call(rbind, lapply(1:8, function(p) {
+  do.call(rbind, lapply(1:12, function(p) {
     in_dom <- (h + p) %% 2 == 0
     data.frame(stratum = as.character(h), psu = paste0(h, "-", p),
                age = if (in_dom) 15 else 30,
+               urban = as.integer(p <= 6),
                y = rnorm(1, 0.5, 0.2))
   }))
 }))
 S3$country <- "SYN"; S3$wave <- "T3"; S3$weight <- 1; S3$record_type <- "person"
-S3$sex <- 1; S3$wealth <- 1; S3$school_years <- 6; S3$urban <- 1
+S3$sex <- 1; S3$wealth <- 1; S3$school_years <- 6
 S3$attendance <- as.numeric(S3$y > 0.5)
 r3 <- run_engine(S3, "t3"); e3 <- r3$est[r3$est$experiment == "E2", ]
-m3 <- manual_domain(S3$attendance, S3$weight, S3$stratum, S3$psu, S3$age == 15)
-chk("T3 domain SE with PSUs outside domain == manual", near(e3$se[1], m3["se"], 1e-6),
-    sprintf("engine=%.8f manual=%.8f", e3$se[1], m3["se"]))
-# compare with the WRONG approach for the record
+dom3 <- S3$age == 15 & S3$urban == 1
+m3 <- manual_domain(S3$attendance, S3$weight, S3$stratum, S3$psu, dom3)
+chk("T3a domain SE with PSUs outside the domain == manual linearisation",
+    near(e3$se[e3$group == "1"], m3["se"], 1e-6),
+    sprintf("engine=%.8f manual=%.8f", e3$se[e3$group == "1"], m3["se"]))
+chk("T3b domain mean with PSUs outside the domain == manual linearisation",
+    near(e3$estimate[e3$group == "1"], m3["mean"], 1e-8),
+    sprintf("engine=%.8f manual=%.8f", e3$estimate[e3$group == "1"], m3["mean"]))
+# The naive alternative (drop non-domain rows, then build the design) is wrong.
 des_wrong <- svydesign(ids = ~psu, strata = ~stratum, weights = ~weight,
-                       data = S3[S3$age == 15, ], nest = TRUE)
+                       data = S3[dom3, ], nest = TRUE)
 wrong <- as.numeric(SE(svymean(~attendance, des_wrong)))
-chk("T3 naive row-drop SE differs (documents the trap)", !near(wrong, m3["se"], 1e-4),
+chk("T3c naive row-drop SE differs (documents the trap)", !near(wrong, m3["se"], 1e-4),
     sprintf("naive=%.6f correct=%.6f", wrong, m3["se"]))
 
 ## --------------------------------------------------- T4: lonely PSU policy ---

@@ -137,9 +137,9 @@ variant (requiring `HV122 > 0`) differs by up to 5.4 pp **only at ages 6–11** 
 level-0 records). Within the E1–E3 domain (14–17) the two definitions differ by ≤0.035 pp,
 so no conclusion here depends on the choice.
 
-**Synthetic engine tests** — `engine/run_tests.R`, 12 checks, all passing:
-SRS mean/SE vs closed form; stratified-cluster mean and SE vs a hand-written linearisation
-(exact to 1e-8); domain variance when PSUs lie wholly outside the domain (plus a
+**Synthetic engine tests** — `engine/run_tests.R`, 14 checks, all passing:
+SRS mean/SE vs closed form;  stratified-cluster mean and SE vs a hand-written linearisation
+(exact to 1e-8); domain mean **and SE** when PSUs lie wholly outside the domain (plus a
 demonstration that the naive row-drop analysis differs — the classic trap); domain-lonely
 and design-level-lonely PSU handling; 99-as-never vs NA-as-unknown (hand-computable 20/60);
 `school_years=98` not binned as 12+; malformed input failing loudly; run determinism.

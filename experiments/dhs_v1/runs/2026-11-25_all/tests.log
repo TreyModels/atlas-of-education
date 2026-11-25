@@ -1,0 +1,16 @@
+PASS  T1 SRS point estimate equals closed form                   engine=0.517000 closed=0.517000
+PASS  T1 SRS SE within 2% of s/sqrt(n)                           engine=0.011175 closed=0.011177
+PASS  T2 stratified cluster mean == manual linearisation         engine=0.70000000 manual=0.70000000
+PASS  T2 stratified cluster SE == manual linearisation           engine=0.03212555 manual=0.03212555
+PASS  T3a domain SE with PSUs outside the domain == manual linearisation engine=0.08500017 manual=0.08500017
+PASS  T3b domain mean with PSUs outside the domain == manual linearisation engine=0.50000000 manual=0.50000000
+PASS  T3c naive row-drop SE differs (documents the trap)         naive=0.092128 correct=0.085000
+PASS  T4a domain-lonely PSU is detected and reported             fewer than 2 usable groups | ok (1 lonely PSU in domain) | no records of this type for this country-wave | insufficient complete cases (0 < 50)
+PASS  T4b design-level lonely PSU stops the run under policy=fail fewer than 2 usable groups | design error: Stratum (99) has only one PSU at stage 1 | no records of this type for this country-wave | insufficient complete cases (0 < 50)
+PASS  T5a 99='never' is a known not-early-birth (20/60=0.3333)   engine=0.333333 expected=0.333333
+PASS  T5b NA unknown is excluded, not zeroed (n=60 not 80)       n=60
+PASS  T6 school_years=98 is not binned as 12+ (zero estimates rows) rows=NULL
+PASS  T7 negative weight fails loudly                            Error: Missing survey keys or invalid weights
+PASS  T8 repeated runs are identical                              
+
+TOTAL: 14 passed, 0 failed
