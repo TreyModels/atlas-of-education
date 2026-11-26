@@ -514,14 +514,13 @@ that can plausibly reach minima (justified; variance-only pilot) **or** relabel 
 min, **HOLDS** when above, **INDETERMINATE** only if CI crosses min. Gates: A6 runner commit+sha in manifest; Lead/Trey
 approval; degeneracy pilot; allocation/reserve; frozen manifest. **No A6 compute.**
 
-**A6 RELABELLED ESTIMATION/PRECISION — CLEARED AS NON-CONFIRMATORY (2 metadata fixes).** `b7f2ac5c…`/JSON
-`32572561…`/script `611248fb…`@`852cdc8`. Status `ESTIMATION_PRECISION_STUDY_RELABELLED`; same 36 cells/S/L/N=600;
+**A6 RELABELLED ESTIMATION/PRECISION — CLEARED AS NON-CONFIRMATORY (metadata fixes DONE).** Final `0467c165…`/JSON
+`184c87ed…`/script `611248fb…`@`852cdc8` (commit `e5ed19a`). Status `ESTIMATION_PRECISION_STUDY_RELABELLED`; same 36 cells/S/L/N=600;
 screening T1′ +.655 pp/T4′ +1.767 pp below minima +3/+2; fresh seeds add MC noise; **expected FAILS (CI entirely below
 minimum) pre-declared; no confirmatory claim**; A7 needs a lever/estimand that can plausibly reach minima. Decision rule
 fixed: FAILS if direction wrong or CI entirely below min; HOLDS only if CI entirely above min + Holm p<.05; INDETERMINATE
 only if CI crosses min (or above without Holm). Seeds 200–207; T2/T3→M1/M2; no A5 reuse; Holm m=2; 5k bootstrap;
-degeneracy screen; ≤10 CPU-h. **Before launch:** (1) update prereg MD line 107 + JSON `analysis` from stale
-`93d762e0…@e6cd2d0` to **`611248fb…@852cdc8`** (and manifest); (2) correct line 60 "powered ≫0.99" to precision/expected
-FAIL wording. Gates: runner commit+sha; Lead/Trey; pilot PASS; allocation/reserve; frozen manifest. **No A6 compute; not
+degeneracy screen; ≤10 CPU-h. **Metadata fixes done:** prereg MD/JSON now cite `611248fb…@852cdc8`; power wording corrected to pre-declared-minima
+detection / precision estimate with pre-declared expectation FAILS; no confirmation claim. Gates: runner commit+sha; Lead/Trey; pilot PASS; allocation/reserve; frozen manifest. **No A6 compute; not
 confirmatory.**
 

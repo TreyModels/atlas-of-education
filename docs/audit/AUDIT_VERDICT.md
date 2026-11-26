@@ -1410,8 +1410,11 @@ approval; degeneracy pilot PASS; allocation/reserve; frozen A6 manifest. **Statu
 
 ## 4V. A6 relabelled estimation/precision study — **CLEARED AS NON-CONFIRMATORY (2 metadata fixes before launch)**
 
-Artefacts verified: `PAPER_C_A6_PREREG.md` sha **`b7f2ac5c…279d`**, `.json` **`32572561…3d5c`**, analysis script
-`analyze_paperC_A6.py` sha **`611248fb…b1b6`** (commit `852cdc8`). The relabel is correct and accepted: status
+Artefacts verified (final metadata fix `e5ed19a`): `PAPER_C_A6_PREREG.md` sha **`0467c165…3de83`**, `.json`
+**`184c87ed…db80a`**, analysis script `analyze_paperC_A6.py` sha **`611248fb…b1b6`** @ `852cdc8`; prereg §8 and JSON
+`analysis` now cite **611248fb…@852cdc8** (stale `93d762e0…` removed), and the power wording is corrected
+(pre-declared-minima detection; A6 is a precision estimate with pre-declared expectation **FAILS (CI entirely below the
+minima)**; no confirmation claim). The relabel is correct and accepted: status
 **`ESTIMATION_PRECISION_STUDY_RELABELLED`**; same 36 cells/S/L/N=600 as screening; screening effects T1′ +0.655 pp
 (SD .224) and T4′ +1.767 pp (SD .290) are below minima +3.0/+2.0; fresh seeds add MC noise; **expected decision FAILS
 (CI entirely below minimum) is pre-declared; no confirmatory claim**; route to genuine confirmation is a new **A7**
@@ -1420,16 +1423,15 @@ amendment with a lever/estimand that can plausibly reach the minima. Decision ru
 `INDETERMINATE` only if CI crosses min (or above without Holm significance). Fresh seeds 200–207; T2/T3 = M1/M2
 manipulation checks; no A5 reuse; T1′/T4′ precision family; Holm m=2; 5k bootstrap; degeneracy screen; ≤10 CPU-h.
 
-**Two metadata fixes required before launch (not design changes):**
-1. **Stale analysis-script citation:** prereg MD (line 107) and JSON `analysis` block still cite
-   `93d762e0…@e6cd2d0`; update both to **`611248fb…@852cdc8`** (and ensure the A6 manifest cites it).
-2. **Residual power wording:** line 60 still says "the tests are powered ≫0.99 for the declared effects"; correct to the
-   relabel language — power is to detect the pre-declared minima; A6 is a **precision estimate** and the pre-declared
-   expectation is **FAILS** because the design's effects are below the minima; no confirmation claim.
+**Metadata fixes — DONE (commit `e5ed19a`).** Prereg MD/JSON now cite the corrected analysis script **611248fb…@852cdc8**
+(stale `93d762e0…@e6cd2d0` removed), and the power wording is corrected: power is to detect the **pre-declared minima**,
+not the observed effects; A6 is a **precision estimate** whose pre-declared expectation is **FAILS (CI entirely below
+the minima)**; no confirmation claim. **No further metadata changes required.**
 
 **Gates unchanged:** A6 runner `run_paperC_A6.py` authored/committed and cited by sha in the frozen A6 manifest; Lead/Trey
-approval; degeneracy pilot PASS; allocation/reserve. **Status: CLEARED ONLY AS A NON-CONFIRMATORY ESTIMATION/PRECISION
-STUDY; no confirmatory claim; expected FAILS; A7 required for genuine confirmation; no A6 compute yet.**
+approval; degeneracy pilot PASS; allocation/reserve. **Status: metadata complete; A6 CLEARED ONLY AS A NON-CONFIRMATORY ESTIMATION/PRECISION STUDY; no confirmatory
+claim; expected FAILS; A7 required for genuine confirmation. Remaining gates: A6 runner authored/committed + sha in the
+frozen manifest; degeneracy pilot PASS; allocation/reserve; Lead/Trey approval. No A6 compute yet.**
 
 ## 5. Evidence-status register (programme level)
 
