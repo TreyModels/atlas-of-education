@@ -1435,10 +1435,12 @@ frozen manifest; degeneracy pilot PASS; allocation/reserve; Lead/Trey approval. 
 
 ## 4W. A6 final pre-launch record — **RESOLVED: NON-CONFIRMATORY PRECISION STUDY, CLEARED FOR OPERATIONAL GATES**
 
-**Smoke hygiene fixed at commit `3bfa4fe` (current authoritative state; the earlier cited `7f7b3c11…`/`101f9000…` are
-superseded).** Verified current hashes: `PAPER_C_A6_PREREG.md` **`be8ff7a4…50a`**, `.json` **`1f338a62…30ef`**,
-`analyze_paperC_A6.py` **`ed46ff40…e4d3`**, `run_paperC_A6.py` **`41a35bd2…a2c1`** @ `3bfa4fe`;
-`PAPER_C_A6_MANIFEST.json` **`cd498079…6262`** @ `3bfa4fe`, status `FROZEN_PENDING_LAUNCH_RECORD`, citing all four.
+**Smoke hygiene fixed; canonical provenance package at branch tip `3228322` (provenance repair `3bfa4fe`).**
+Verified canonical hashes: `PAPER_C_A6_PREREG.md` **`be8ff7a4…50a`** @ `ebab41d`, `.json` **`1f338a62…30ef`** @ `3bfa4fe`,
+`run_paperC_A6.py` **`41a35bd2…2c1`** @ `ebab41d`, `analyze_paperC_A6.py` **`ed46ff40…4d3`** @ `ebab41d`;
+`PAPER_C_A6_MANIFEST.json` **`f425cea7…374b`** @ `3228322`, status `FROZEN_PENDING_LAUNCH_RECORD`, citing all four.
+(A post-record manifest update `fd43806a…@c2ca2f4` records adjudication `581aa25`; it supersedes the pre-record manifest
+only by adding the record and the remaining gates — design pins unchanged.)
 
 * **Fresh confirmatory block moved to 400–407**, never executed; block **200–207 EXCLUDED** after the seed-200 host
   smoke — row deleted, **no outcome values read (attested)**, runner refuses 200–207; the prior seed-200 smoke is a
@@ -1451,7 +1453,8 @@ superseded).** Verified current hashes: `PAPER_C_A6_PREREG.md` **`be8ff7a4…50a
   A5 excluded; ≤10 CPU-h; prereg/JSON/runner/analysis hashes all cited in the manifest.
 
 **Final pre-launch record: A6 is CLEARED ONLY AS A NON-CONFIRMATORY ESTIMATION/PRECISION STUDY; no Paper C confirmatory
-claim.** Remaining operational gates before any compute: **(1)** Lead/**Trey approval**; **(2)** box allocation + 1–2 slot
+claim.** (The earlier `cd498079…@3bfa4fe` manifest reference was pre-record and is superseded by `f425cea7…@3228322`; the
+post-record `fd43806a…@c2ca2f4` only adds the adjudication.) Remaining operational gates before any compute: **(1)** Lead/**Trey approval**; **(2)** box allocation + 1–2 slot
 reserve; **(3)** **blocking degeneracy pilot PASS** (block 300–307, variance-only); **(4)** frozen manifest final hashes.
 **No A6 compute has run; A5 remains VOID; CSV frozen.**
 

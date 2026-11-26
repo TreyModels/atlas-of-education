@@ -525,8 +525,10 @@ detection / precision estimate with pre-declared expectation FAILS; no confirmat
 confirmatory.**
 
 **A6 FINAL PRE-LAUNCH RECORD — NON-CONFIRMATORY PRECISION STUDY, CLEARED FOR OPERATIONAL GATES (2026-11-26).** Smoke
-hygiene fixed at commit `3bfa4fe`; current hashes: prereg MD `be8ff7a4…`, JSON `1f338a62…`, analysis `ed46ff40…`, runner
-`41a35bd2…`, manifest `cd498079…` (status FROZEN_PENDING_LAUNCH_RECORD; earlier `7f7b3c11…`/`101f9000…` superseded).
+hygiene fixed; canonical package @ `3228322` (repair `3bfa4fe`): prereg MD `be8ff7a4…`@`ebab41d`, JSON `1f338a62…`@`3bfa4fe`,
+runner `41a35bd2…`@`ebab41d`, analysis `ed46ff40…`@`ebab41d`, manifest **`f425cea7…`@`3228322`**
+(FROZEN_PENDING_LAUNCH_RECORD). Earlier `7f7b3c11…`/`101f9000…`/`cd498079…` superseded; post-record manifest
+`fd43806a…@c2ca2f4` adds the adjudication only.
 Fresh block **400–407** (never executed); **200–207 excluded** after seed-200 smoke (row deleted, no outcomes read
 attested; runner refuses); smoke seed **900 only** (separate, not aggregated); runner/analysis reject 0-7/100-115/200-207/
 300-307; pilot 300–307 variance-only. A6 relabelled estimation/precision (expected FAILS vs minima +3/+2; no confirmation
