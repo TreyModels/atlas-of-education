@@ -1054,3 +1054,16 @@ decision (continue/descope/abort); scheduler kills nothing; (ii) **4 idle CPUs**
 instruction (X-31 conditional / G2-B / GPU feeding); Luna/MASSENG reserve status needs Lead confirmation; (iii) **interim
 copies** requested at 8/16/24 seeds with sha256 + two-sided verify (scheduler will independently verify each); **seed-sharding
 to use idle CPUs is unsafe as-is** (per-cell checkpoint files → writer race) without a runner change.
+
+### 13.43 2026-11-26 07:45+ — box SSH unreachable again (network-side); confirmatory monitoring blind
+
+Last successful sample **07:34:06**: confirmatory run healthy (driver 1364, 6 cell workers 100 % busy, 4 ckpts × 1 seed,
+cgroup 6.02/10 = 60.2 %, confirm finalizer armed). From **07:45:06** every SSH attempt returns
+**"Connection closed by 198.18.2.127 port 36934"** (3 attempts including 08:00). This is the **same signature as the
+2026-11-25/26 overnight outage**, which proved to be **network/SSH-side only** — the box was never powered off (`uptime`
+90 days; the finalizer's `shutdown -h now` was a container no-op) and data was never at risk. Therefore the confirmatory
+run is most likely still progressing under the on-box `confirm_finalize.sh`; the scheduler simply cannot observe it.
+**Impact:** cannot verify progress/cap, interim copies, or that the run is the only job until connectivity returns.
+**Action:** light retry cadence only (one attempt per check, no hammering); resume monitoring immediately on reconnect,
+then re-baseline rows/ETA and independently hash-verify any interim copy. No box action by scheduler; no `SHUTDOWN_OK`
+should be touched during the blackout. Escalated to Lead + commander for a network/operator check.
