@@ -1,6 +1,6 @@
 {
   "document": "Paper C A6 manifest (host-only; PENDING pre-launch gates; no compute)",
-  "status": "FROZEN_PENDING_LAUNCH_RECORD (fresh block moved to 400-407 after smoke contamination of 200-207; awaiting adjudicator final record + Lead/Trey approval + allocation + degeneracy pilot)",
+  "status": "FROZEN_PENDING_LAUNCH_RECORD (adjudication 581aa25 issued; remaining gates: Lead/Trey approval, allocation + 1-2 slot reserve, degeneracy pilot PASS on 300-307 variance-only, final manifest hashes)",
   "study_type": "ESTIMATION_PRECISION_STUDY (non-confirmatory relabel; expected FAILS vs minima; no confirmation claim; genuine confirmation would need A7)",
   "citations": {
     "prereg_md": {
@@ -222,5 +222,11 @@
     },
     "note": "smoke rows are execution/pin verification only, never confirmatory data"
   },
-  "smoke_attestation": "The only executed smoke after the exclusion is seed 900 (non-declared, stage=smoke, separate dir, never aggregated). The earlier seed-200 row was deleted; no outcome values were read; block 200-207 is excluded; fresh confirmatory block is 400-407 never executed."
+  "smoke_attestation": "The only executed smoke after the exclusion is seed 900 (non-declared, stage=smoke, separate dir, never aggregated). The earlier seed-200 row was deleted; no outcome values were read; block 200-207 is excluded; fresh confirmatory block is 400-407 never executed.",
+  "adjudication": {
+    "prelaunch_record_commit": "581aa25",
+    "date": "2026-11-26",
+    "status": "A6 CLEARED ONLY AS NON-CONFIRMATORY ESTIMATION/PRECISION STUDY",
+    "verified_hashes": "prereg MD be8ff7a4, JSON 1f338a62, runner 41a35bd2, analysis ed46ff40, manifest cd498079 @3bfa4fe"
+  }
 }
