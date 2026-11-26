@@ -79,3 +79,11 @@ Relayed by the author (English): "Like Beijing, Beijing's the same" (in answer t
 - Out-of-school tutoring during term concentrates at both tails (very weak; very ambitious) and in holidays (summer pre-learning; winter except ~3 days; senior 3 winter break ~7-10 days).
 - Full-time institutional study while keeping school registration: one-to-one ~100,000+/month; small classes (~15, repeat-year style) 60,000-80,000/semester. Clientele includes art/sport-track pupils and Hong Kong/Macau/Taiwan students.
 - Interprovincial admission quotas (Beijing locals vs others) flagged as a larger equity layer than within-Guangdong hukou.
+
+## 7. Two routes around the gaokao (23:29)
+
+> 就是现在有一些，呃，富裕一点的家庭，他们会送他们的孩子去学艺术生，就是那个艺术生呢，他要考专业和文化科，但是他们专业那一个方面其实很容易过的，所以他们可以以很低的高考分数去录取很好的学校，这是一个途径。还有另外一个途径就是，呃，从零五年出生的一些在大陆出生的父母不不是，还有另外一些群体就是，呃，爸爸妈妈会利用那个香港的装空子，就是他们怀孕的时候就过去香港，然后在香港生这些孩子，然后这些孩子呢就会在大陆长大。但是他们会拥有香港、澳门或者是台湾他们的那个户籍，所以他们这些群体来讲，他们想考国内的高考是以香港的身份去考，那这些孩子去考国内的大学，大陆的大学也很容也很容易。
+
+Translation: Some wealthier families now send their children to study as art students. Art students take a specialist exam and the academic subjects, but the specialist part is actually easy to pass, so they can be admitted to very good universities with a very low gaokao score. That is one route. Another route: from children born around 2005, there is another group whose parents [transcription: "装空子", likely 钻空子, "exploit a loophole"] in Hong Kong: while pregnant they go to Hong Kong and give birth there; the children grow up on the mainland but hold Hong Kong, Macau or Taiwan status, so when they want to take the mainland university exam they take it with Hong Kong status, and it is also very easy for them to get into mainland universities.
+
+Author's addition (English, same time): China is remarkably homogeneous; at his school nearly all pupils are Han; he sees essentially no gender disparity. The study's scope is the average Guangzhou family, not ethnic or regional peripheries.
