@@ -73,3 +73,10 @@ the v4 scenarios. The v5 equation tests were rerun with the fix (results/V5_EQ_A
 - M3 rich routes under 5 admission points per 100,000 yuan: NOT SUPPORTED at the 80% bar (72%). Median 2.9 points per 100,000 yuan.
 - M4 double reduction on its own terms (partly by construction): pre-gate take-up 40% to 27%, mean household tutoring spend 40,500 to 29,800 yuan (-26%), equal-talent gap 1.43 to 1.35 (current lower in 84% of draws).
 - Equal-talent gap (CURRENT) median 1.35 (1.12-1.88); by head-start fade from 1.55 to 1.16.
+
+## v7: second-review analyses, 150 draws, seed 20261202 (PREREG_V7.md)
+- S* (score and talent both held fixed): 1.18 (1.07-1.40), above 1 in 99% of draws, while S = 0.91. The same-score result is largely composition (collider); after admission richer pupils gain more.
+- Realistic counterfactual (boarding, holidays and routes kept; no ban, no re-banding) to now: T 1.41 to 1.35 (lower in 79%); spend 34,600 to 29,000 yuan per pupil over junior 1-3 and senior 1-2 (lower in 99%).
+- Shapley shares (all off to all on), T: ban -0.01, boarding -0.01, re-banding -0.04, substitution into holidays/institutions/routes +0.10. Spend: ban -4,600, boarding -5,600, substitution +13,600.
+- Interventions on the current system, T: no home advantage 1.19, equal zone teachers 1.25, no pre-gate tutoring effect 1.32, all three 1.09, no art/joint-exam routes 1.27.
+- Paper: Claude Docs "Same Score, Same Chance: Procedural Equity and Positional Competition in Guangzhou's Education System" (https://claude.ai/artifact/7z9mQBi5KTjdggJBtnMrWC).
