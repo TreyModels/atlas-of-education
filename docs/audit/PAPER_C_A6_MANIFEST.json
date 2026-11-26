@@ -1,26 +1,28 @@
 {
   "document": "Paper C A6 manifest (host-only; PENDING pre-launch gates; no compute)",
-  "status": "FROZEN_PENDING_LAUNCH_RECORD (host smoke PASS; awaiting final pre-launch record + Lead/Trey approval + allocation + degeneracy pilot)",
+  "status": "FROZEN_PENDING_LAUNCH_RECORD",
   "study_type": "ESTIMATION_PRECISION_STUDY (non-confirmatory relabel; expected FAILS vs minima; no confirmation claim; genuine confirmation would need A7)",
   "citations": {
     "prereg_md": {
       "file": "docs/audit/PAPER_C_A6_PREREG.md",
-      "sha256": "0467c1659482747109d3c27e3f5ac3a0dc2cccd6c82140885ab5e2a629e3de83",
-      "note": "metadata fixes per adjudication 6962317 applied at e5ed19a"
+      "sha256": "be8ff7a45c3f812acc57825f61e0fd0c3f4f9629e036d459549914684103c50a",
+      "note": "metadata fixes per adjudication 6962317 applied at e5ed19a",
+      "commit": "ebab41d"
     },
     "prereg_json": {
       "file": "docs/audit/PAPER_C_A6_PREREG.json",
-      "sha256": "184c87edd258575a7f414f6c59895522b1d4ee6ae87205dbdfb574a9de4db80a"
+      "sha256": "101f9000e7b9a629230c404f82f0110f7e4b2f4058a6ea2b90f56ce9df5780f1",
+      "commit": "ebab41d"
     },
     "analysis_script": {
       "file": "papers/shadow-education-contest/code/analyze_paperC_A6.py",
-      "sha256": "611248fb29861bc6733861edf48dfc2b418f2bc953418243de644d914c78b1b6",
-      "commit": "852cdc8"
+      "sha256": "ed46ff40dd6662b7ffffde0f2093d0e005fecceae8347354360ced9ca5b3e4d3",
+      "commit": "ebab41d"
     },
     "runner": {
       "file": "papers/shadow-education-contest/code/run_paperC_A6.py",
-      "sha256": "392d98471a0330ddad82b5ba65499e88297dad1c488dc46c34258a5de9c3f63c",
-      "commit": "6adf0a2"
+      "sha256": "41a35bd2620327b4589e11f2bd3ec5dadfbb7988d810ca8f24ca81cb5936a2c1",
+      "commit": "ebab41d"
     },
     "a5_status": "VOID (no A5 data reused)",
     "adjudication": "6962317"
@@ -57,64 +59,16 @@
         "0.45": 1.6
       }
     },
-    "seeds": {
-      "confirmatory": [
-        200,
-        201,
-        202,
-        203,
-        204,
-        205,
-        206,
-        207
-      ],
-      "fresh": true,
-      "never_used": "not used in screening (0-7), A5 (100-115), or pilots (300-307)",
-      "pilot_variance_only": [
-        300,
-        301,
-        302,
-        303,
-        304,
-        305,
-        306,
-        307
-      ],
-      "forbidden": [
-        0,
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        100,
-        101,
-        102,
-        103,
-        104,
-        105,
-        106,
-        107,
-        108,
-        109,
-        110,
-        111,
-        112,
-        113,
-        114,
-        115,
-        300,
-        301,
-        302,
-        303,
-        304,
-        305,
-        306,
-        307
-      ]
-    },
+    "seeds": [
+      400,
+      401,
+      402,
+      403,
+      404,
+      405,
+      406,
+      407
+    ],
     "runner_rejects": "runner rejects 0-7/100-115/300-307 for confirmatory runs; analysis asserts seeds==200-207"
   },
   "family": {
@@ -179,31 +133,24 @@
     "csv": "frozen 07f83156.../132"
   },
   "host_smoke": {
-    "rejection_tests": {
-      "seeds_0_7": "rc=1 refused",
-      "seeds_100_115": "rc=1 refused",
-      "seeds_300_307_confirmatory": "rc=1 refused"
-    },
-    "single_seed_run": {
-      "cell": "S0.85|L0.25|A|P55",
+    "executed_seed": 900,
+    "cell": "S0.85|L0.25|A|P55",
+    "mode": "--smoke",
+    "out_dir_separate": true,
+    "aggregated": false,
+    "stage": "smoke",
+    "prior_smoke": {
       "seed": 200,
-      "N": 600,
-      "T": 46,
-      "out": "/tmp/a6smoke/ckpt_S0.85_L0.25_A_P55.jsonl",
-      "row_written": true,
-      "wall_seconds": 2.8808,
-      "fields": [
-        "tut_k12_rate",
-        "tut_k12_spend",
-        "q5_q1_part_gap_pp",
-        "q5_q1_spend_gap",
-        "L6_mean",
-        "L9_mean",
-        "own_share",
-        "withheld",
-        "fixed_R_gap_close"
-      ]
+      "block": "200-207",
+      "disposition": "row deleted; no outcome values read; block excluded"
     },
-    "note": "engine pinned 846c9e0 (core e111397b...) on host; smoke is execution/pin verification only, NOT confirmatory data (seed 200 is part of the fresh block; this single row is a runner smoke and will not be aggregated into the A6 estimation run \u2014 the A6 run will use its own out-dir and the committed runner)"
-  }
+    "refused_blocks": [
+      "0-7",
+      "100-115",
+      "200-207",
+      "300-307"
+    ],
+    "pins": "engine core e111397b..."
+  },
+  "smoke_attestation": "The only executed smoke after the exclusion is seed 900 (non-declared, stage=smoke, separate dir, never aggregated). The earlier seed-200 row was deleted; no outcome values were read; block 200-207 is excluded; fresh confirmatory block is 400-407 never executed."
 }
