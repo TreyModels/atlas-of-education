@@ -1378,6 +1378,36 @@ claim exists; T1/T4 remain screening failures; no S-generalisation.**
 
 **Status: A5 HALTED/VOID; Paper C confirmatory is not runnable under this design; no confirmatory claim; CSV frozen.**
 
+## 4U. A6 / Paper C v2 prereg — **NOT CLEARED (2 blockers; seed fix accepted)**
+
+Artefacts verified: `PAPER_C_A6_PREREG.md` sha **`36cb9afb…0310`**, `.json` **`66ef2170…5f3d`**, analysis script
+`analyze_paperC_A6.py` sha **`56e55861…294a`** (commit `9674f01`). **Seed fix accepted:** fresh block **200–207**,
+script asserts exactly 200–207 and rejects 0–7/100–115; pilot separation (300–307 or screening SDs only) stated; A5 not
+reused. T2/T3 demoted to M1/M2 manipulation checks; T1′/T4′ only confirmatory family; Holm m=2 α/2=.025; 5,000-draw
+bootstrap; degeneracy screen; ≤10 CPU-h; runner still to be committed; Trey approval required. **No A6 compute.**
+
+**BLOCKER 1 — design/effect-size adequacy (not power).** A6 uses the **same 36 cells, same S/L levels, same N=600/T=46**
+as screening. The screening effects under A6's own definitions are **T1′ = +0.655 pp** (12 pairs, SD across pairs 0.224)
+and **T4′ = +1.767 pp** (18 pairs, SD 0.290) — both **below the declared minima (+3.0 / +2.0 pp)**. Per-seed paired
+contrast SDs (0.0598 / 0.0680) give SE ≈0.021 / 0.024 at 8 seeds; reaching the minima would need ≈38 / ≈10 SE, i.e.
+fresh seeds add only Monte-Carlo noise and cannot move the effect across the thresholds. A6 as designed can at best
+produce a **precise below-minimum result**, not a confirmation; the statement "powered ≫0.99 for the declared effects"
+conflates power-to-detect-the-minimum with the observed effect and must be corrected. **Required:** either (a) pre-declare
+a **new design/lever set or estimand that can plausibly reach the minima** (e.g. wider S/L contrast or a behavioural
+outcome with a larger standardized effect; justify and re-pilot variance only), or (b) **relabel A6 as an
+estimation/precision study** of the screening effects (no "confirmatory holds" claim; report CI vs minimum and expect
+FAIL). Re-running the identical design on fresh seeds is not a confirmation strategy.
+
+**BLOCKER 2 — decision-rule defect in `analyze_paperC_A6.py`.** `decide()` returns **INDETERMINATE** for any
+below-minimum effect (`meets=False` → fall-through), even when the CI is entirely below the minimum with the correct
+direction. That would mislabel a precise failure as underpowered. **Required:** `FAILS` when direction is correct and
+the CI is entirely below the minimum; `HOLDS` when direction correct and CI entirely above the minimum (or effect ≥ min
+with significance, as pre-declared); `INDETERMINATE` only when the CI **crosses** the minimum / effect is genuinely
+unresolved. Commit the corrected script with a new sha before launch.
+
+**Gates still open:** A6 runner `run_paperC_A6.py` authored/committed and cited by sha in the A6 manifest; Lead/Trey
+approval; degeneracy pilot PASS; allocation/reserve; frozen A6 manifest. **Status: NOT CLEARED; no A6 compute.**
+
 ## 5. Evidence-status register (programme level)
 
 | Status | Count (paper + programme rows) | Notes |

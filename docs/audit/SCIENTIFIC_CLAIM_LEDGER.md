@@ -502,3 +502,15 @@ outcome definition/denominator; pre-launch degeneracy screen; manipulation check
 family; adequate power/MDE; pilot for variance only; no A5 data reuse; new A6 prereg/manifest/runner pins. **No Paper C
 confirmatory claim; T1/T4 screening failures; no S-generalisation.**
 
+**A6 PREREG REVIEW (2026-11-26): NOT CLEARED — seed fix accepted; 2 blockers.** A6 `36cb9afb…`/JSON `66ef2170…`/script
+`56e55861…` (commit `9674f01`): fresh seeds **200–207** asserted and 0–7/100–115 rejected; pilot separation; T2/T3→M1/M2;
+T1′/T4′ family; Holm m=2; 5k bootstrap; degeneracy screen; no A5 reuse; ≤10 CPU-h; runner/Trey gates. **Blocker 1:**
+same 36-cell/levels/N=600 design as screening; screening effects T1′ **+0.655 pp** (12 pairs, SD .224) and T4′ **+1.767 pp**
+(18 pairs, SD .290) are **below minima +3.0/+2.0**; per-seed SD .0598/.0680 → SE ~.021/.024; reaching minima needs
+~38/~10 SE, so fresh seeds cannot confirm; A6 can only produce a precise below-min result. Fix: new lever/design/estimand
+that can plausibly reach minima (justified; variance-only pilot) **or** relabel A6 as estimation/precision (no
+"confirmatory holds" claim); correct "powered ≫.99 for declared effects" wording (power is to detect minima). **Blocker 2:**
+`decide()` returns INDETERMINATE for below-min effects; must return **FAILS** when direction correct and CI entirely below
+min, **HOLDS** when above, **INDETERMINATE** only if CI crosses min. Gates: A6 runner commit+sha in manifest; Lead/Trey
+approval; degeneracy pilot; allocation/reserve; frozen manifest. **No A6 compute.**
+
