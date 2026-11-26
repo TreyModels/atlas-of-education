@@ -1090,3 +1090,19 @@ first successful reconnect — (i) `queue/STOP_CONFIRM_A5` exists; (ii) confirm 
 path seen earlier) has **10 rows / 6 ckpts and NO `paperC_*.json`**; (iii) **no** `run_paperC_screening` driver/cell
 processes; (iv) record hashes/row counts to Lead+adjudicator. Then stop. **Scheduler stands down** — no resume, no
 aggregation, no new confirmatory run; next work is the A6/Paper C v2 redesign, not compute.
+
+### 13.44b A5 path reconciliation + reconnect checklist (commander-confirmed 08:12)
+
+Two distinct confirmatory paths must be reported separately on any reconnect:
+- **`/root/work/paperC/confirm_a5`** = the **clean A5 run** (driver 2273, seeds 100–115 → 16 seeds, 6 workers; preserved
+  **10 rows / 6 ckpts**, **no `paperC_*.json` summary**, `queue/STOP_CONFIRM_A5` marker). This is the **A5 VOID record only**.
+- **`/root/work/paperC/confirm_final`** = the **earlier overrun** (driver 1364, `--workers 10`, seeds 100–131,
+  `analysis-commit 8121bf6`) — **killed/abandoned, no outcomes, no aggregation**; its rows are failed-run cost calibration,
+  not evidence (and not part of A5's 10-row record).
+**Armed reconnect checklist (identical scheduler/commander):** STOP_CONFIRM_A5 exists → `confirm_a5` has 10 rows / 6 ckpts
+(seeds 100–115) and **no `paperC_*.json`** → no `run_paperC_screening` processes → per-cell hashes + read-only tarball to
+`~/neon-boot/qa/incoming/paperC_a5_void/` → report to Lead + adjudicator → **stop**. `SHUTDOWN_OK` untouched; no resume,
+no aggregation, no new confirmatory run.
+**Status 08:15:37:** box still unreachable (same `Connection closed by 198.18.2.127` signature; 5th light probe). Record-keeping
+verification remains pending; scheduler standing down pending A6/Paper C v2 design (will publish allocation + measured cost
+envelope before any launch).
