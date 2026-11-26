@@ -1,0 +1,6 @@
+name = "angkor"
+version = "0.1.0"
+defaultTargets = ["Angkor"]
+
+[[lean_lib]]
+name = "Angkor"
