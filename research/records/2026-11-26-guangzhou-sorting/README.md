@@ -62,3 +62,14 @@ Pre-registration `prereg/PREREG_V5_EQUATIONS.md`; results `results/V5_EQ_ANALYSI
 - E35 school FE and E159 variance shares measure intake, not value added; E36 peer, E152 RD, E32 VA and E34 teacher effects are biased or noisy in this system.
 - Art and Hong Kong routes take a median 10% of elite seats (3.5-19%, depends on assumed size and bonus) and add 0.07 to the equal-talent wealth ratio.
 - Proposed new equations: class as the unit of provision; school-vs-class margin trade-off; positional-insurance demand (both tails, fear of falling, peer escalation, time windows by term and holiday); gate switching (admission on the best of several routes, with access by wealth or status).
+
+## Erratum (2026-11-27 00:20 CST)
+Partial re-banding in gz_v4/gz_v5 (v4 and v5 runs above) let the top-band size grow. Fixed (composite rank). v6 supersedes
+the v4 scenarios. The v5 equation verdicts were computed with the bug and should be rerun before citing.
+
+## v6: the author's four claims, 400 draws, seed 20261201 (PREREG_V6.md)
+- M1 fair by its own idea of merit ("same score, same chance"): SUPPORTED, 93.5% of draws <= 1.10. Median ratio 0.90: at the same zhongkao score, poorer local pupils do slightly better later.
+- M2 fairer than a stylised Hong Kong: NOT SUPPORTED at the 90% bar. Equal talent: lower in 76.5% of draws (median -0.05); unconditional: 63.7%. The stylised Hong Kong is built from Guangzhou's population; buying elite-school seats does little when school value added is small.
+- M3 rich routes under 5 admission points per 100,000 yuan: NOT SUPPORTED at the 80% bar (72%). Median 2.9 points per 100,000 yuan.
+- M4 double reduction on its own terms (partly by construction): pre-gate take-up 40% to 27%, mean household tutoring spend 40,500 to 29,800 yuan (-26%), equal-talent gap 1.43 to 1.35 (current lower in 84% of draws).
+- Equal-talent gap (CURRENT) median 1.35 (1.12-1.88); by head-start fade from 1.55 to 1.16.

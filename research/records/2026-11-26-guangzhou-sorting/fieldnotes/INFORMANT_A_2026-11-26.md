@@ -87,3 +87,9 @@ Relayed by the author (English): "Like Beijing, Beijing's the same" (in answer t
 Translation: Some wealthier families now send their children to study as art students. Art students take a specialist exam and the academic subjects, but the specialist part is actually easy to pass, so they can be admitted to very good universities with a very low gaokao score. That is one route. Another route: from children born around 2005, there is another group whose parents [transcription: "装空子", likely 钻空子, "exploit a loophole"] in Hong Kong: while pregnant they go to Hong Kong and give birth there; the children grow up on the mainland but hold Hong Kong, Macau or Taiwan status, so when they want to take the mainland university exam they take it with Hong Kong status, and it is also very easy for them to get into mainland universities.
 
 Author's addition (English, same time): China is remarkably homogeneous; at his school nearly all pupils are Han; he sees essentially no gender disparity. The study's scope is the average Guangzhou family, not ethnic or regional peripheries.
+
+## 8. Confirmation of the class-16-to-class-1 path (2026-11-27 00:03, relayed by the author in English)
+
+> "Let's say you get into my school through very hard work, at some like shitty village or whatever, some place where like you had less opportunity, but you scored well. ... You land in my school in class 16, and then you, because I mean, that's just like you, you barely broke in. And then you study your fucking ass off. My girlfriend is confirming, yes, you can make it to class one."
+
+Coding note: performance-based movement between bands exists alongside subject-combination re-banding (section 4).

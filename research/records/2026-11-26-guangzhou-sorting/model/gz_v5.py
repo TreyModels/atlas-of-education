@@ -46,7 +46,10 @@ P = dict(n=60_000, seed=0, TAL_WEALTH=0.10, SEG=0.6, HOME=0.15,
          ART_SHARE=0.04,   # share of cohort on the art-exam route (wealth-weighted, weaker academically)
          ART_BONUS=0.8,    # SD by which the art route lowers the academic score needed for the same university
          HK_SHARE=0.01,    # share of cohort sitting as Hong Kong/Macau/Taiwan residents (wealth top 30%)
-         HK_BONUS=1.0)     # SD advantage of the joint-exam route       # gaokao effect of full-time study relative to staying in school classes (SD; unknown sign)
+         HK_BONUS=1.0,
+         # stylised Hong Kong regime levers (0 in Guangzhou scenarios)
+         ELITE_BUY=0.0,    # share of elite seats obtained by paying (fee-paying direct-subsidy schools), by wealth among academic pupils
+         ZONE_ADMIT=0.0)   # weight of neighbourhood (school net) in elite admission ranking, SD per SD     # SD advantage of the joint-exam route       # gaokao effect of full-time study relative to staying in school classes (SD; unknown sign)
 
 
 def run(**kw):
@@ -92,7 +95,10 @@ def run(**kw):
             idx = np.flatnonzero(elig & (jr == j) & (zk >= floor))
             if k and idx.size: elite[idx[np.argsort(-zk[idx])[:k]]] = True
     zhib = elite.copy()
-    rest = np.flatnonzero(acad & ~elite); rest = rest[np.argsort(-zk[rest])]
+    if p['ELITE_BUY'] > 0:
+        cand_b = np.flatnonzero(acad & ~elite); kb = int(p['ELITE_BUY'] * n_el)
+        elite[cand_b[np.argsort(-logw[cand_b])[:kb]]] = True
+    rest = np.flatnonzero(acad & ~elite); rest = rest[np.argsort(-(zk[rest] + p['ZONE_ADMIT'] * zone_j[jr][rest]))]
     nh_cap = int(p['QUOTA'] * n_el) - int((elite & ~hukou).sum())
     nhr = ~hukou[rest]; ok = ~nhr | (np.cumsum(nhr) <= nh_cap)
     elite[rest[ok][:max(n_el - elite.sum(), 0)]] = True
@@ -125,8 +131,9 @@ def run(**kw):
     skill16 = tal + (1 - p['DECAY']) * head + p['GROW'] * tal + school_va + hteach1 + peer1
     obs16 = skill16 + p['NOISE'] * rng.normal(size=n)
     if p['REBAND']:
-        perf_band, cls2 = band_and_class(obs16)
-        band2 = np.where(rng.random(n) < p['REBAND_PERF'], perf_band, band1)
+        # v5.1 fix: composite rank keeps the top-band size fixed (previous version let it grow)
+        r16 = (np.argsort(np.argsort(obs16)) + .5) / n; r15 = (np.argsort(np.argsort(zk)) + .5) / n
+        band2, cls2 = band_and_class(p['REBAND_PERF'] * r16 + (1 - p['REBAND_PERF']) * r15)
         uniq2 = np.unique(cls2[cls2 >= 0]); tdraw2 = dict(zip(uniq2, p['HS_TEACH_SD'] * rng.normal(size=uniq2.size)))
         hteach2 = np.array([tdraw2.get(c, 0.0) for c in cls2]) + band2 * p['TOP_TEACH']
     else:

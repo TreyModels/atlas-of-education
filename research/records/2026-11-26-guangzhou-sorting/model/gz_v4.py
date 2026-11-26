@@ -117,8 +117,9 @@ def run(**kw):
     skill16 = tal + (1 - p['DECAY']) * head + p['GROW'] * tal + school_va + hteach1 + peer1
     obs16 = skill16 + p['NOISE'] * rng.normal(size=n)
     if p['REBAND']:
-        perf_band, cls2 = band_and_class(obs16)
-        band2 = np.where(rng.random(n) < p['REBAND_PERF'], perf_band, band1)
+        # v5.1 fix: composite rank keeps the top-band size fixed (previous version let it grow)
+        r16 = (np.argsort(np.argsort(obs16)) + .5) / n; r15 = (np.argsort(np.argsort(zk)) + .5) / n
+        band2, cls2 = band_and_class(p['REBAND_PERF'] * r16 + (1 - p['REBAND_PERF']) * r15)
         uniq2 = np.unique(cls2[cls2 >= 0]); tdraw2 = dict(zip(uniq2, p['HS_TEACH_SD'] * rng.normal(size=uniq2.size)))
         hteach2 = np.array([tdraw2.get(c, 0.0) for c in cls2]) + band2 * p['TOP_TEACH']
     else:

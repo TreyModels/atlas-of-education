@@ -1,0 +1,9 @@
+{
+ "gz_v5.py": "b2a1a1b572d41001917f282019afa170dd3c1985871e52d4455d28c96fdd4b58",
+ "run_v6.py": "af1033bf5cefb67028bbfda6734a2128852fcf4a28bcd25a3926540bf82339df",
+ "PREREG_V6.md": "90cf22212ca74cd645fb103ddb2c2ac2e29bca186cbaffcc2c5d4ff8b1f0a295",
+ "v6_results.jsonl": "cc7f03a20e0e8b4122d2c6546b85f8b221d65411c5f3e690ce0d58efbdbecf06",
+ "n_draws": 400,
+ "n": 40000,
+ "seed": 20261201
+}
