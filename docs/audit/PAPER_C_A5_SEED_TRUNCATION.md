@@ -76,3 +76,20 @@ variance only; no A5 data reuse; new **A6** prereg/manifest/runner pins.
 **Communication/incident:** box SSH became unreachable ~07:45 CST (same network-side signature as 01:17; box is
 **not** powered off — `uptime` 90 d; the finalizer `shutdown` was a container no-op). Controller monitoring is blind
 until connectivity returns; `SHUTDOWN_OK` must not be touched.
+
+## Carry-over: measured cost calibration (failed-run, not evidence) + path reconciliation
+
+* **Measured N=1500 confirmatory cost (overrun telemetry, failed run):** **≈809 CPU-s/run, ≈13.5 min/seed/cell** (contested
+  contest-gate configuration). Implication: 6 cells × 32 seeds ≈ **43 CPU-h / ~7.2 h wall at 6 concurrent**; if a future
+  design is safely shardable, ≈26 CPU-h at 10 concurrent. Recorded as **failed-run cost calibration only — not evidence,
+  not a claim**, for A6/v2 sizing.
+* **Path reconciliation:** `/root/work/paperC/confirm_a5` is the clean A5 run (driver 2273, seeds 100–115, 6 workers,
+  preserved 10 rows/6 ckpts, no summary, `queue/STOP_CONFIRM_A5`); `/root/work/paperC/confirm_final` is the earlier
+  overrun run (driver 1364, workers 10, analysis-commit 8121bf6) which is **KILLED/ABANDONED with no outcomes used, no
+  aggregation** (no `paperC_confirmatory.json`/`CONFIRM_RESULTS_DONE`). Any post-reconnect verification must check both
+  paths and report them separately.
+* **Reconnect verification checklist (armed by Commander + controller):** `queue/STOP_CONFIRM_A5` exists → confirm_a5
+  has **10 rows / 6 ckpts, seeds 100–115, no `paperC_*.json`** and confirm_final has **no summary/aggregation** → no
+  `run_paperC_screening` processes → hash `ckpt_*.jsonl`, copy read-only tarball to
+  `~/neon-boot/qa/incoming/paperC_a5_void/`, report row counts/hashes to Lead + adjudicator, then stop. `SHUTDOWN_OK`
+  stays untouched; no resume/relaunch.
