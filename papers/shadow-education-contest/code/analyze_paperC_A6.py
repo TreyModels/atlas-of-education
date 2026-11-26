@@ -4,7 +4,7 @@
 Declared before launch (see docs/audit/PAPER_C_A6_PREREG.md):
   T1prime = mean over design cells of rate(S=.85) - rate(S=1.15) (pp); direction S up => participation down; min +3.0 pp
   T4prime = mean over design cells of spend_gap(L=.45) - spend_gap(L=.25) (pp); direction L up => gap up; min +2.0 pp
-  family = {T1prime, T4prime}, Holm m=2, alpha=.05 two-sided; 8 matched seeds 0-7; N=600.
+  family = {T1prime, T4prime}, Holm m=2, alpha=.05 two-sided; 8 fresh matched seeds 200-207 (never used in screening/A5/pilot); N=600.
   5,000-draw seed bootstrap CIs; achieved MDE from pre-declared SDs and n; degeneracy-screen report.
   Manipulation checks M1 (own supply) and M2 (withheld deterministic) reported separately, never as claims.
 Input: A6 results JSON (cells -> rows, same schema as screening) OR a directory of ckpt_*.jsonl.
@@ -71,7 +71,10 @@ def main():
     d = load(path); cells = d['cells']
     seeds = [int(r['seed']) for c in cells.values() for r in c['rows']]
     seeds = sorted(set(seeds))
-    design_seeds = [s for s in seeds if s in range(0, 8)] or seeds
+    A6_SEEDS = tuple(range(200, 208))   # fresh block, never used in screening (0-7), A5, or any pilot
+    design_seeds = sorted(set(seeds))
+    if tuple(design_seeds) != A6_SEEDS:
+        raise SystemExit(f'A6 requires the fresh declared seed block {A6_SEEDS}; got {design_seeds}')
     pairs_T1 = [(cid(S=.85, L=L, sup=sup, st=st), cid(S=1.15, L=L, sup=sup, st=st)) for L in (0.25, 0.45) for sup in 'ABC' for st in ('P55', 'P12')]
     pairs_T4 = [(cid(S=S, L=.45, sup=sup, st=st), cid(S=S, L=.25, sup=sup, st=st)) for S in (0.85, 1.0, 1.15) for sup in 'ABC' for st in ('P55', 'P12')]
     v1 = paired_contrast(cells, pairs_T1, 'tut_k12_rate', design_seeds, 100.0)

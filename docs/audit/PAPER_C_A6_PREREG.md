@@ -16,7 +16,7 @@ pre-declared Holm family (no post-screening narrowing); power/MDE-derived seed c
   pay_ratio .55, monitoring .2, pay_gap; P12: pay_ratio 1.2, monitoring .5, pay_gap (no-withholding control)}.
 * **N=600, T=46, measure_from=18** (N=600 is the declared confirmatory resolution; screening/pilot variance was measured
   at N=600; N=1500 measured ~809 CPU-s/run and is not used — see §5).
-* **Seeds = 8 matched seeds (0–7)** — derived by the power rule in §3 (power-required n≈1 for both tests at
+* **Seeds = 8 fresh matched seeds (200–207)** — derived by the power rule in §3 (power-required n≈1 for both tests at
   Bonferroni-adjusted α; a **declared minimum of 8** is required for the seed bootstrap/robustness and is the larger of
   the two rules; no effect-based seed choice).
 * **Runner:** to be authored/committed as `run_paperC_A6.py` (new, pinned to the frozen spec; records per-seed rows for
@@ -53,8 +53,8 @@ hypotheses):
 | T4' | **0.0680 pp** | 2.0 pp | n≈0.011 → 1 |
 
 **Rule (frozen):** α family = .05, Holm m=2 ⇒ worst-case per-test α/2=.025 (z=2.394); power 1−β=.80 (z=0.842).
-Power-required n is 1 for both tests; **declared seed count = max(power-required n, 8) = 8 matched seeds (0–7)**, the
-minimum for a stable seed bootstrap and for the degeneracy screen. **Achieved MDE at n=8** = (z_a+z_b)·SD/√8:
+Power-required n is 1 for both tests; **declared seed count = max(power-required n, 8) = 8 fresh matched seeds (200–207)**, the
+minimum for a stable seed bootstrap and for the degeneracy screen. **The block 200–207 is fresh: it was not used for screening (0–7), A5 (100–115), or any pilot; a pilot, if run, uses a separate block (300–307) or only the existing screening SDs; the A6 runner must reject 0–7 and 100–115.** **Achieved MDE at n=8** = (z_a+z_b)·SD/√8:
 **T1' ≈0.065 pp**, **T4' ≈0.074 pp** (far below the substantive minima; the tests are powered ≫0.99 for the declared
 effects). The report must state achieved MDE and that seed-level variance is small; statistical significance alone is
 not the claim — the **minimum substantively meaningful effect** is the decision threshold.

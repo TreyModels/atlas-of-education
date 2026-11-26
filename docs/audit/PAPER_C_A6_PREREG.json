@@ -41,14 +41,14 @@
       "fail": "from canonical HK gates"
     },
     "seeds": [
-      0,
-      1,
-      2,
-      3,
-      4,
-      5,
-      6,
-      7
+      200,
+      201,
+      202,
+      203,
+      204,
+      205,
+      206,
+      207
     ],
     "n_seeds": 8,
     "runner": "run_paperC_A6.py (to be committed/pinned before launch; not yet authored)"
@@ -99,7 +99,7 @@
       "T1prime": 1,
       "T4prime": 1
     },
-    "seed_rule": "n=max(power-required,8)=8 matched seeds 0-7",
+    "seed_rule": "n=max(power-required,8)=8 matched seeds 200-207",
     "achieved_mde_at_n8_pp": {
       "T1prime": 0.065,
       "T4prime": 0.074
