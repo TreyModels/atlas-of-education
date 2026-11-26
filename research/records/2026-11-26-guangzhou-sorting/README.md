@@ -43,3 +43,12 @@ Pre-registration hashes are local, not publicly timestamped before the runs; thi
 
 ## Next
 Rerun as v4 with items 1-6, fade as the organizing variable, and tutoring effects swept; extend Lean to v3 rules.
+
+## v4 (informant corrections), 400 draws, seed 20261129 — added 2026-11-26 23:25 CST
+Pre-registration `prereg/PREREG_V4.md`; model `model/gz_v4.py`; results `results/v4_results.jsonl`, `results/V4_ANALYSIS.txt`.
+- V1 current system fairer than the pre-2021 regime at equal talent: 66% of draws (needed 90%) — NOT SUPPORTED. Median improvement 0.02.
+- V2 post-gate tutoring (term, holiday, full-time) still leaks wealth: 83% (needed 80%) — supported; median 0.04.
+- V3 pre-gate tutoring still leaks wealth: 76.5% (needed 80%) — NOT SUPPORTED; median 0.03.
+- Equal-talent wealth ratio (locals): median 1.31 (1.09-1.82); by head-start fade from 1.57 (no fade) to 1.15 (75-90% fade). At equal zhongkao score: 0.87. Unconditional: 2.28.
+- Largest drivers: head-start fade (-0.64), home inputs (+0.56), zone teachers (+0.30); tutoring parameters are secondary (post-gate effect +0.18).
+- Reading: with tutoring persisting as the informant describes, the model's earlier "near-level" result disappears, and the tutoring and boarding policies explain little of the remaining gap; home inputs and zone schools before 15, and how fast their advantage fades, explain most of it.

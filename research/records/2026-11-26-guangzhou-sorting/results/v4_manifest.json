@@ -1,0 +1,11 @@
+{
+ "gz_v4.py": "d77bdda30c1bea1d84fe4a45eb74c160bf5391b145ff7ede775a1cd05c30ff75",
+ "run_v4.py": "3d670cba300a03981ecc7e12f92e4910b5b15b53f16077f08770d3cfc20c4be4",
+ "run_v31.py": "5d50c4dba3b5a82b9d2c3966e5427a47ca619ff3a76a07b0f6aa0f55b91a13ce",
+ "eq_tests.py": "df055c0e1839867991aa27dcf6cce973bef9c9c9d69e7f6daca01131333f7499",
+ "PREREG_V4.md": "bf9405c9d2a95ccad8f4529c5bde47c09e3f71df14a5891c81d5680d7a4f69c7",
+ "v4_results.jsonl": "85db79bf20c8487dec57270eeb434d66f20191468dcf15be3f93abbff6922b67",
+ "n_draws": 400,
+ "n": 40000,
+ "seed": 20261129
+}
