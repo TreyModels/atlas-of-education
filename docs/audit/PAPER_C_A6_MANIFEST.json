@@ -12,7 +12,7 @@
     "prereg_json": {
       "file": "docs/audit/PAPER_C_A6_PREREG.json",
       "sha256": "1f338a62959d20a8b130dabfeccef545b90045c554eccd0d3635cb9a803d30ef",
-      "commit": "ebab41d"
+      "commit": "3bfa4fe"
     },
     "analysis_script": {
       "file": "papers/shadow-education-contest/code/analyze_paperC_A6.py",
