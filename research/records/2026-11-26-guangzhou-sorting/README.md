@@ -65,7 +65,7 @@ Pre-registration `prereg/PREREG_V5_EQUATIONS.md`; results `results/V5_EQ_ANALYSI
 
 ## Erratum (2026-11-27 00:20 CST)
 Partial re-banding in gz_v4/gz_v5 (v4 and v5 runs above) let the top-band size grow. Fixed (composite rank). v6 supersedes
-the v4 scenarios. The v5 equation verdicts were computed with the bug and should be rerun before citing.
+the v4 scenarios. The v5 equation tests were rerun with the fix (results/V5_EQ_ANALYSIS_fixed.txt); every verdict is unchanged.
 
 ## v6: the author's four claims, 400 draws, seed 20261201 (PREREG_V6.md)
 - M1 fair by its own idea of merit ("same score, same chance"): SUPPORTED, 93.5% of draws <= 1.10. Median ratio 0.90: at the same zhongkao score, poorer local pupils do slightly better later.
