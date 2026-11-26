@@ -168,5 +168,6 @@
     "row_disposition": "separate smoke dir, never aggregated, discarded for inference",
     "fresh_block": "400-407",
     "smoke_rule": "future smoke uses only non-declared seed 900"
-  }
+  },
+  "seeds_note": "Fresh confirmatory block 400-407; 200-207 excluded (seed 200 executed in a pre-freeze host smoke, contaminated); pilot variance-only block 300-307; host smoke seed 900 only; runner rejects 0-7/100-115/200-207/300-307."
 }

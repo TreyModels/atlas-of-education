@@ -1,6 +1,6 @@
 {
   "document": "Paper C A6 manifest (host-only; PENDING pre-launch gates; no compute)",
-  "status": "FROZEN_PENDING_LAUNCH_RECORD",
+  "status": "FROZEN_PENDING_LAUNCH_RECORD (fresh block moved to 400-407 after smoke contamination of 200-207; awaiting adjudicator final record + Lead/Trey approval + allocation + degeneracy pilot)",
   "study_type": "ESTIMATION_PRECISION_STUDY (non-confirmatory relabel; expected FAILS vs minima; no confirmation claim; genuine confirmation would need A7)",
   "citations": {
     "prereg_md": {
@@ -11,7 +11,7 @@
     },
     "prereg_json": {
       "file": "docs/audit/PAPER_C_A6_PREREG.json",
-      "sha256": "101f9000e7b9a629230c404f82f0110f7e4b2f4058a6ea2b90f56ce9df5780f1",
+      "sha256": "1f338a62959d20a8b130dabfeccef545b90045c554eccd0d3635cb9a803d30ef",
       "commit": "ebab41d"
     },
     "analysis_script": {
@@ -59,16 +59,86 @@
         "0.45": 1.6
       }
     },
-    "seeds": [
-      400,
-      401,
-      402,
-      403,
-      404,
-      405,
-      406,
-      407
-    ],
+    "seeds": {
+      "confirmatory": [
+        400,
+        401,
+        402,
+        403,
+        404,
+        405,
+        406,
+        407
+      ],
+      "fresh": true,
+      "never_used": "400-407 not used in screening (0-7), A5 (100-115), or pilots (300-307)",
+      "contaminated_excluded": [
+        200,
+        201,
+        202,
+        203,
+        204,
+        205,
+        206,
+        207
+      ],
+      "contamination_note": "seed 200 was executed in a pre-freeze host smoke; block 200-207 EXCLUDED from confirmatory use (runner refuses it); the smoke row was not aggregated and its file was deleted (attested)",
+      "pilot_variance_only": [
+        300,
+        301,
+        302,
+        303,
+        304,
+        305,
+        306,
+        307
+      ],
+      "smoke_only": [
+        900
+      ],
+      "forbidden": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        200,
+        201,
+        202,
+        203,
+        204,
+        205,
+        206,
+        207,
+        300,
+        301,
+        302,
+        303,
+        304,
+        305,
+        306,
+        307
+      ]
+    },
     "runner_rejects": "runner rejects 0-7/100-115/300-307 for confirmatory runs; analysis asserts seeds==200-207"
   },
   "family": {
@@ -133,24 +203,24 @@
     "csv": "frozen 07f83156.../132"
   },
   "host_smoke": {
-    "executed_seed": 900,
-    "cell": "S0.85|L0.25|A|P55",
-    "mode": "--smoke",
-    "out_dir_separate": true,
-    "aggregated": false,
-    "stage": "smoke",
-    "prior_smoke": {
-      "seed": 200,
-      "block": "200-207",
-      "disposition": "row deleted; no outcome values read; block excluded"
+    "seed200_incident": {
+      "status": "CONTAMINATED/DISCARDED",
+      "detail": "pre-freeze smoke executed cell S0.85|L0.25|A|P55 seed 200 (inside then-declared block 200-207); row never aggregated; smoke files deleted; block 200-207 now excluded and refused by runner"
     },
-    "refused_blocks": [
-      "0-7",
-      "100-115",
-      "200-207",
-      "300-307"
-    ],
-    "pins": "engine core e111397b..."
+    "rejection_tests_after_fix": {
+      "seeds_0_7": "rc=1 refused",
+      "seeds_100_115": "rc=1 refused",
+      "seeds_200_207": "rc=1 refused (contaminated)",
+      "seeds_300_307_confirmatory": "rc=1 refused"
+    },
+    "clean_smoke": {
+      "seed": 900,
+      "cell": "S0.85|L0.25|A|P55",
+      "out": "/tmp/a6smoke900/ckpt_S0.85_L0.25_A_P55.jsonl",
+      "row_written": true,
+      "note": "seed 900 is outside all declared blocks; smoke-only, never aggregated; some secondary fields null (execution check only)"
+    },
+    "note": "smoke rows are execution/pin verification only, never confirmatory data"
   },
   "smoke_attestation": "The only executed smoke after the exclusion is seed 900 (non-declared, stage=smoke, separate dir, never aggregated). The earlier seed-200 row was deleted; no outcome values were read; block 200-207 is excluded; fresh confirmatory block is 400-407 never executed."
 }
