@@ -1,0 +1,9 @@
+{
+ "gz_talent.py": "d1c4768db5c7abd144349223d91ef670c626f6c6be24f92ebc2a7b1dd189d0c0",
+ "run_sweep.py": "95271cd10db41183b164de75d38c002d7ce8e159def1f1bb0012485a1fc29878",
+ "PREREG_GZ_SORTING.md": "b0d10b20f9013e55953509a19c5f50cb1df710cd67c0131e66d43cfb32a93590",
+ "sweep_results.jsonl": "1fd8d68478c0fe2f92acfcb21b659a1242e42279aa5839e55a5cf6229f797449",
+ "n_draws": 2000,
+ "n_pupils": 40000,
+ "seed": 20261126
+}

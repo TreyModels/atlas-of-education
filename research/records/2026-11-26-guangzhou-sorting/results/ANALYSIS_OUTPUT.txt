@@ -1,0 +1,32 @@
+C1 track gate level       0.978 needs >=0.95 -> SUPPORTED
+C2 reband narrows gap     0.974 needs >=0.95 -> SUPPORTED
+C3 reband lifts climbers  0.986 needs >=0.95 -> SUPPORTED  lift pct [0.069, 0.116, 0.166, 0.235, 0.33]
+C4 current < 2015         1.0 needs >=0.95 -> SUPPORTED
+C5 zone teachers >=half   0.625 needs >=0.80 -> NOT SUPPORTED  excluded 74  share pct [0.188, 0.405, 0.575, 0.748, 1.004]
+
+EO_uni percentiles 5/25/50/75/95
+  CURRENT      [1.032, 1.149, 1.293, 1.517, 1.992]
+  NO_REBAND    [1.083, 1.222, 1.376, 1.624, 2.11]
+  EQUAL_ZONES  [0.992, 1.04, 1.117, 1.241, 1.505]
+  COHORT_2015  [1.322, 1.584, 1.908, 2.364, 3.386]
+  conc index CURRENT [0.069, 0.157, 0.226, 0.301, 0.393]  2015 [0.158, 0.264, 0.335, 0.403, 0.499]
+  share of draws CURRENT EO_uni < 1.2: 0.349  <1.5: 0.734
+
+what drives CURRENT EO_uni (Spearman):
+  DECAY      -0.73
+  HOME       +0.42
+  ZONE_TEACH +0.33
+  SEG        +0.20
+  GROW       -0.13
+  CLASS_EFF  -0.08
+  SCHOOL_EFF +0.08
+  TAL_WEALTH +0.04
+  ACAD       -0.04
+  NOISE      +0.02
+
+2015 minus current: drivers
+  PRE_TUT    +0.62
+  DECAY      -0.43
+  POST_TUT   +0.38
+  HOME       +0.27
+  gap pct [0.195, 0.388, 0.588, 0.871, 1.551]

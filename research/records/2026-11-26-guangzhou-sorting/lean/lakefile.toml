@@ -1,0 +1,6 @@
+name = "gzlean"
+version = "0.1.0"
+defaultTargets = ["GZSorting"]
+
+[[lean_lib]]
+name = "GZSorting"

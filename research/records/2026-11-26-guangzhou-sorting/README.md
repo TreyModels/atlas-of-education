@@ -1,0 +1,45 @@
+# Guangzhou sorting system: shadow education and equity (2026-11-26)
+
+**Status: EXPLORATORY / SIMULATION.** Synthetic pupils; parameters are dossier figures or stated assumptions. Nothing here
+is an estimate from Guangzhou microdata. One small real-data test (boarding vs admission cutoff) is exploratory.
+Working-paper draft: Claude Docs artifact https://claude.ai/artifact/G2AxLfRyeZNvzWguusBRZ6 (two papers: shadow
+education under controlled time; equity after the gate). Assumption checklist reviewed by an informant:
+https://claude.ai/artifact/FMkZ1CQKrk8Gw3HRC1K29D
+
+## Files
+| Folder | What |
+| --- | --- |
+| `fieldnotes/INFORMANT_A_2026-11-26.md` | **Primary data.** Verbatim (voice-transcribed) statements of a Guangzhou tutoring-institution teacher, with translations. Privacy handled by the author. |
+| `model/` | `gz_system.py` (first version), `gz_talent.py` (talent vs skill), `gz_v3_0.py` (v3 as run for `v3_results`), `gz_v3.py` (v3.1, admissions rules corrected), `eq_tests.py` (inventory equations vs model truth), sweep and analysis scripts, `fade_sweep.py` |
+| `prereg/` | `PREREG_GZ_SORTING.md` (talent model), `PREREG_V3.md` (v3, with Amendment 1 for v3.1) |
+| `results/` | Raw sweep outputs (jsonl), manifests with sha256, analysis printouts |
+| `lean/` | Lean 4.36 project `GZSorting` (26 theorems on the formulas of `gz_system.py`/`gz_talent.py`; built on the author's Mac; axioms propext, Classical.choice, Quot.sound only). Does not yet cover v3. |
+| `dossier/` | Guangzhou dossiers supplied by the author (compiled by an AI agent, secondary, unverified): Tianhe inventory, double-reduction policy, boarding census (216 campuses), teacher/school quality evidence, private schools, boarding history, costs, subsidies; external review of the draft. The 209-page 2026 admissions guide PDF is not included. |
+| `inventory/Atlas_Inventory.xlsx` | Inventory of all 188 repo branches plus bridge to-dos (408 rows), same day |
+
+Note: `run_v3.py` imports `gz_v3`; the v3 results in `results/v3_results.jsonl` were produced before Amendment 1, i.e. by
+the code now saved as `model/gz_v3_0.py`. `run_v31.py` with the current `gz_v3.py` produced `v31_results.jsonl`.
+Pre-registration hashes are local, not publicly timestamped before the runs; this commit is the first public record.
+
+## Results in brief (medians over sweeps; ranges are 5th-95th percentile of sampled configurations, not confidence intervals)
+- Talent model (2,000 draws): 4 of 5 pre-registered claims supported; "zone teachers carry most of the remaining gap" not supported.
+- v3 (800 draws): 3 of 8 supported. v3.1 with corrected zhibiao/hukou rules (400 draws): same 3 of 8.
+- Equal-talent wealth ratio for locals (elite university): v3.1 1.18 (1.03-1.60). At equal zhongkao score the ratio is 0.85 (0.62-1.03): poorer pupils do better than richer pupils with the same gate score. Unconditional: 2.04 (1.22-3.27).
+- Head-start fade is the dominant driver (rank correlation about -0.5 to -0.8). Fade sweep: equal-talent ratio 1.44 at no fade to 1.01 at 90% fade (school VA 0.1).
+- Non-hukou cohort (v3.1, shares of all non-hukou pupils): public academic 37%, private 12%, leave/return home 18%, vocational 33%. The hukou gap among those who stay is small (1.16) while exclusion at entry is large; the cohort share of non-hukou pupils (unknown) drives exit.
+- Zhibiao effect on the local wealth gap: median +0.002 (helps in 59% of draws). Re-banding: +0.04 (helps in 78%).
+- Equation tests: school fixed effects report 2.2-2.4 SD elite-school gaps where the causal label effect is 0-0.5 SD; between-school variance share about 60% vs about 0.1% true value-added share; linear-in-means peer coefficient flips sign without re-banding; RD at the elite cutoff is too noisy at this sample size.
+
+## Known problems (from external review and the informant, not yet fixed in the model)
+1. Pre-gate tutoring did not stop after 2021 (private 家教; primary and junior). The "current cohort near-level" result is too optimistic.
+2. Holiday tutoring (summer pre-learning; winter except ~3 days) is absent from the model; time control holds in term only.
+3. Senior-2 re-banding is often by subject combination, not performance.
+4. Term-time tutoring concentrates at both tails (very weak, very ambitious), not near cutoffs.
+5. Full-time institutional study while keeping school registration (one-to-one ~100,000+ yuan/month; small classes 60,000-80,000/semester; informant estimate ~5% of gaokao takers, denominator unconfirmed) is not modelled.
+6. Academic-track share may be ~50% (informant), not 60-70%.
+7. Interprovincial admission quotas are outside the model.
+8. Fairness results are conditional on the "equal latent talent" definition; see v3.1 equal-zhongkao and unconditional measures.
+9. Three citywide seat totals disagree (101,724 / about 93,000 / 104,584); 30 of 153 schools lack district matches.
+
+## Next
+Rerun as v4 with items 1-6, fade as the organizing variable, and tutoring effects swept; extend Lean to v3 rules.

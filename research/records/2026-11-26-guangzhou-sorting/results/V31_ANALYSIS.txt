@@ -1,0 +1,40 @@
+H1a HUKOU_ratio(no quota) < current                        0.675  need 0.95  -> NOT SUPPORTED
+H1b quota share >= minban share of hukou gap               0.430  need 0.80  -> NOT SUPPORTED
+H2 zhibiao narrows local wealth gap                        0.588  need 0.90  -> NOT SUPPORTED
+H3 re-banding narrows local wealth gap                     0.775  need 0.90  -> NOT SUPPORTED
+Q1 E35 school FE >= 5x true                                0.993  need 0.95  -> SUPPORTED
+Q2 E159 between share >= 10x VA share                      1.000  need 0.95  -> SUPPORTED
+Q3 RD below true school VA gap                             0.570  need 0.90  -> NOT SUPPORTED
+Q4 peer coef >0 with reband and lower without              0.983  need 0.80  -> SUPPORTED
+
+Descriptive (5/25/50/75/95 pct)
+  CURRENT       EO_local         [1.026, 1.092, 1.184, 1.319, 1.604]
+  NO_ZHIBIAO    EO_local         [1.025, 1.1, 1.185, 1.321, 1.614]
+  NO_REBAND     EO_local         [1.064, 1.139, 1.231, 1.373, 1.674]
+  CURRENT       HUKOU_ratio      [1.011, 1.08, 1.159, 1.249, 1.438]
+  NO_QUOTA      HUKOU_ratio      [0.996, 1.046, 1.1, 1.173, 1.31]
+  EQUAL_MIGRANT HUKOU_ratio      [0.988, 1.011, 1.033, 1.058, 1.115]
+  CURRENT       NH_hiTal_public  [0.691, 0.857, 0.955, 0.993, 0.999]
+  CURRENT       NH_hiTal_private [0.0, 0.0, 0.01, 0.046, 0.127]
+  CURRENT       NH_hiTal_exit    [0.0, 0.002, 0.034, 0.093, 0.19]
+  CURRENT       SUB_conc         [0.004, 0.011, 0.021, 0.037, 0.066]
+  CURRENT       SUB_gap          [166365.239, 176588.467, 202848.358, 231645.086, 253303.898]
+  CURRENT       E35              [2.025, 2.201, 2.356, 2.525, 2.775]
+  CURRENT       E159             [0.481, 0.556, 0.609, 0.664, 0.73]
+  CURRENT       E152             [-0.484, -0.083, 0.209, 0.471, 0.965]
+  CURRENT       E36              [0.361, 0.525, 0.636, 0.77, 0.925]
+  NO_REBAND     E36              [-0.666, -0.31, -0.09, 0.163, 0.479]
+drivers of HUKOU_ratio: DECAY -0.51, NONHUKOU +0.50, MINBAN_PEN +0.31, SCHOOL_VA +0.30
+drivers of EO_local: DECAY -0.68, HOME +0.48, SCHOOL_VA +0.19, TEACH_ZONE +0.17
+drivers of NH exit share: NONHUKOU +0.81, QUOTA -0.52, TEACH_SD +0.20, HOME +0.17
+drivers of zhibiao benefit: SCHOOL_VA +0.16, ZHIBIAO +0.10, NONHUKOU +0.09, PEER -0.09
+
+v3.1 extra (5/25/50/75/95)
+  CURRENT       EO_equal_zk              [0.621, 0.76, 0.854, 0.933, 1.031]
+  CURRENT       EO_uncond                [1.217, 1.566, 2.035, 2.58, 3.269]
+  CURRENT       NH_public_of_cohort      [0.173, 0.269, 0.369, 0.52, 0.608]
+  CURRENT       NH_private_of_cohort     [0.0, 0.032, 0.119, 0.208, 0.296]
+  CURRENT       NH_exit_of_cohort        [0.0, 0.049, 0.182, 0.305, 0.429]
+  CURRENT       NH_vocational_of_cohort  [0.104, 0.214, 0.325, 0.389, 0.436]
+  zhibiao effect on EO_local (no-zhibiao minus current): [-0.023, -0.006, 0.002, 0.013, 0.033]  helps in 0.588
+  re-banding effect on EO_local: [-0.035, 0.006, 0.041, 0.078, 0.156]  helps in 0.775

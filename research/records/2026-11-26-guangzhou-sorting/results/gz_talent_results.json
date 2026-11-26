@@ -1,0 +1,312 @@
+{
+ "cohort 2015 (pre-gate tutoring legal, no reband)": {
+  "EO_track": 1.0078484875923786,
+  "EO_topband_entry": 1.5856741789970525,
+  "EO_topband_s2": 1.5856741789970525,
+  "EO_uni": 1.8153553590153613,
+  "conc_uni": 0.27574553916666666,
+  "weakzone_hiTal_topband_entry": 0.15452817352770115,
+  "weakzone_hiTal_topband_s2": 0.15452817352770115,
+  "hiTal_vocational_weakzone": 0.015045072805646398
+ },
+ "cohort 2026 (no tutoring, reband at S2)": {
+  "EO_track": 1.0021078106381078,
+  "EO_topband_entry": 1.3239188023123938,
+  "EO_topband_s2": 0.8460068619375004,
+  "EO_uni": 1.2793844945451496,
+  "conc_uni": 0.1744878772222222,
+  "weakzone_hiTal_topband_entry": 0.18754888902784014,
+  "weakzone_hiTal_topband_s2": 0.3824055767787992,
+  "hiTal_vocational_weakzone": 0.004332257326979906
+ },
+ "cohort 2026 but NO reband": {
+  "EO_track": 1.0021078106381078,
+  "EO_topband_entry": 1.3239188023123938,
+  "EO_topband_s2": 1.3239188023123938,
+  "EO_uni": 1.3878242389249125,
+  "conc_uni": 0.20056587472222223,
+  "weakzone_hiTal_topband_entry": 0.18754888902784014,
+  "weakzone_hiTal_topband_s2": 0.18754888902784014,
+  "hiTal_vocational_weakzone": 0.004332257326979906
+ },
+ "cohort 2026, zone teachers = 0 (equal schools)": {
+  "EO_track": 1.0001803316057156,
+  "EO_topband_entry": 1.1417328470529853,
+  "EO_topband_s2": 0.9056450359274336,
+  "EO_uni": 1.1185627532430444,
+  "conc_uni": 0.1326612361111111,
+  "weakzone_hiTal_topband_entry": 0.2873447218114487,
+  "weakzone_hiTal_topband_s2": 0.3825517532270246,
+  "hiTal_vocational_weakzone": 0.0003260995899965302
+ },
+ "sens 0.0 0.15 0.25": {
+  "EO_track": 1.0009993131864894,
+  "EO_topband_entry": 1.2373219263384274,
+  "EO_topband_s2": 0.9604846892719024,
+  "EO_uni": 1.3644573335590906,
+  "conc_uni": 0.10309758,
+  "weakzone_hiTal_topband_entry": 0.23081050297252492,
+  "weakzone_hiTal_topband_s2": 0.3478536986054667,
+  "hiTal_vocational_weakzone": 0.0017858526673185768
+ },
+ "sens 0.0 0.15 0.5": {
+  "EO_track": 1.0009993131864894,
+  "EO_topband_entry": 1.2373219263384274,
+  "EO_topband_s2": 0.8551456416329956,
+  "EO_uni": 1.2079692087131575,
+  "conc_uni": 0.06450509499999997,
+  "weakzone_hiTal_topband_entry": 0.23081050297252492,
+  "weakzone_hiTal_topband_s2": 0.38631440708312487,
+  "hiTal_vocational_weakzone": 0.0017858526673185768
+ },
+ "sens 0.0 0.15 0.75": {
+  "EO_track": 1.0009993131864894,
+  "EO_topband_entry": 1.2373219263384274,
+  "EO_topband_s2": 0.7568953355086547,
+  "EO_uni": 1.0680980942745735,
+  "conc_uni": 0.026041762499999975,
+  "weakzone_hiTal_topband_entry": 0.23081050297252492,
+  "weakzone_hiTal_topband_s2": 0.4309650695630137,
+  "hiTal_vocational_weakzone": 0.0017858526673185768
+ },
+ "sens 0.0 0.25 0.25": {
+  "EO_track": 1.0031995216075156,
+  "EO_topband_entry": 1.3153959808362976,
+  "EO_topband_s2": 0.9596095495091618,
+  "EO_uni": 1.4731500289818091,
+  "conc_uni": 0.12840688444444445,
+  "weakzone_hiTal_topband_entry": 0.19034540462994687,
+  "weakzone_hiTal_topband_s2": 0.3297428209430401,
+  "hiTal_vocational_weakzone": 0.006106762460056238
+ },
+ "sens 0.0 0.25 0.5": {
+  "EO_track": 1.0031995216075156,
+  "EO_topband_entry": 1.3153959808362976,
+  "EO_topband_s2": 0.8329011916492812,
+  "EO_uni": 1.2750446221900977,
+  "conc_uni": 0.08162489166666667,
+  "weakzone_hiTal_topband_entry": 0.19034540462994687,
+  "weakzone_hiTal_topband_s2": 0.3870240615466313,
+  "hiTal_vocational_weakzone": 0.006106762460056238
+ },
+ "sens 0.0 0.25 0.75": {
+  "EO_track": 1.0031995216075156,
+  "EO_topband_entry": 1.3153959808362976,
+  "EO_topband_s2": 0.7199745045948647,
+  "EO_uni": 1.0976908364982758,
+  "conc_uni": 0.03485541611111111,
+  "weakzone_hiTal_topband_entry": 0.19034540462994687,
+  "weakzone_hiTal_topband_s2": 0.4472568178472612,
+  "hiTal_vocational_weakzone": 0.006106762460056238
+ },
+ "sens 0.0 0.4 0.25": {
+  "EO_track": 1.0111544035301732,
+  "EO_topband_entry": 1.503790983642315,
+  "EO_topband_s2": 1.0000771962117927,
+  "EO_uni": 1.6646453189829873,
+  "conc_uni": 0.16725284583333339,
+  "weakzone_hiTal_topband_entry": 0.13571329632701032,
+  "weakzone_hiTal_topband_s2": 0.29547439573619544,
+  "hiTal_vocational_weakzone": 0.022531147676722284
+ },
+ "sens 0.0 0.4 0.5": {
+  "EO_track": 1.0111544035301732,
+  "EO_topband_entry": 1.503790983642315,
+  "EO_topband_s2": 0.8406397602442646,
+  "EO_uni": 1.3975649577162665,
+  "conc_uni": 0.1098329708333333,
+  "weakzone_hiTal_topband_entry": 0.13571329632701032,
+  "weakzone_hiTal_topband_s2": 0.3746483750177341,
+  "hiTal_vocational_weakzone": 0.022531147676722284
+ },
+ "sens 0.0 0.4 0.75": {
+  "EO_track": 1.0111544035301732,
+  "EO_topband_entry": 1.503790983642315,
+  "EO_topband_s2": 0.7082321199443289,
+  "EO_uni": 1.1642923859225929,
+  "conc_uni": 0.05178848833333331,
+  "weakzone_hiTal_topband_entry": 0.13571329632701032,
+  "weakzone_hiTal_topband_s2": 0.4591826164880047,
+  "hiTal_vocational_weakzone": 0.022531147676722284
+ },
+ "sens 0.1 0.15 0.25": {
+  "EO_track": 1.000623953312881,
+  "EO_topband_entry": 1.234681021838324,
+  "EO_topband_s2": 0.9686005804324704,
+  "EO_uni": 1.3677871782658546,
+  "conc_uni": 0.1938205411111112,
+  "weakzone_hiTal_topband_entry": 0.2315284613650308,
+  "weakzone_hiTal_topband_s2": 0.3455680655859264,
+  "hiTal_vocational_weakzone": 0.001263204816264552
+ },
+ "sens 0.1 0.15 0.5": {
+  "EO_track": 1.000623953312881,
+  "EO_topband_entry": 1.234681021838324,
+  "EO_topband_s2": 0.8574948059714493,
+  "EO_uni": 1.2117460388711112,
+  "conc_uni": 0.15726668916666667,
+  "weakzone_hiTal_topband_entry": 0.2315284613650308,
+  "weakzone_hiTal_topband_s2": 0.3873286739020879,
+  "hiTal_vocational_weakzone": 0.001263204816264552
+ },
+ "sens 0.1 0.15 0.75": {
+  "EO_track": 1.000623953312881,
+  "EO_topband_entry": 1.234681021838324,
+  "EO_topband_s2": 0.7607099659975243,
+  "EO_uni": 1.0694090153844382,
+  "conc_uni": 0.11955692916666665,
+  "weakzone_hiTal_topband_entry": 0.2315284613650308,
+  "weakzone_hiTal_topband_s2": 0.4319593521774319,
+  "hiTal_vocational_weakzone": 0.001263204816264552
+ },
+ "sens 0.1 0.25 0.25": {
+  "EO_track": 1.0021078106381078,
+  "EO_topband_entry": 1.3239188023123938,
+  "EO_topband_s2": 0.9761893256760509,
+  "EO_uni": 1.4803473360787531,
+  "conc_uni": 0.21829977750000001,
+  "weakzone_hiTal_topband_entry": 0.18754888902784014,
+  "weakzone_hiTal_topband_s2": 0.32374618971887653,
+  "hiTal_vocational_weakzone": 0.004332257326979906
+ },
+ "sens 0.1 0.25 0.5": {
+  "EO_track": 1.0021078106381078,
+  "EO_topband_entry": 1.3239188023123938,
+  "EO_topband_s2": 0.8460068619375004,
+  "EO_uni": 1.2793844945451496,
+  "conc_uni": 0.1744878772222222,
+  "weakzone_hiTal_topband_entry": 0.18754888902784014,
+  "weakzone_hiTal_topband_s2": 0.3824055767787992,
+  "hiTal_vocational_weakzone": 0.004332257326979906
+ },
+ "sens 0.1 0.25 0.75": {
+  "EO_track": 1.0021078106381078,
+  "EO_topband_entry": 1.3239188023123938,
+  "EO_topband_s2": 0.7295329231522841,
+  "EO_uni": 1.100573087508511,
+  "conc_uni": 0.12836643749999993,
+  "weakzone_hiTal_topband_entry": 0.18754888902784014,
+  "weakzone_hiTal_topband_s2": 0.4456319245597367,
+  "hiTal_vocational_weakzone": 0.004332257326979906
+ },
+ "sens 0.1 0.4 0.25": {
+  "EO_track": 1.0086598629511685,
+  "EO_topband_entry": 1.4855179143064745,
+  "EO_topband_s2": 1.0138288727626306,
+  "EO_uni": 1.6677882765590764,
+  "conc_uni": 0.25363967111111096,
+  "weakzone_hiTal_topband_entry": 0.13066947931860914,
+  "weakzone_hiTal_topband_s2": 0.2844455360534129,
+  "hiTal_vocational_weakzone": 0.018215340445717747
+ },
+ "sens 0.1 0.4 0.5": {
+  "EO_track": 1.0086598629511685,
+  "EO_topband_entry": 1.4855179143064745,
+  "EO_topband_s2": 0.8496885516118855,
+  "EO_uni": 1.398100874809836,
+  "conc_uni": 0.1997282866666666,
+  "weakzone_hiTal_topband_entry": 0.13066947931860914,
+  "weakzone_hiTal_topband_s2": 0.36750353231234356,
+  "hiTal_vocational_weakzone": 0.018215340445717747
+ },
+ "sens 0.1 0.4 0.75": {
+  "EO_track": 1.0086598629511685,
+  "EO_topband_entry": 1.4855179143064745,
+  "EO_topband_s2": 0.713609268045728,
+  "EO_uni": 1.1636178398210475,
+  "conc_uni": 0.14456123999999995,
+  "weakzone_hiTal_topband_entry": 0.13066947931860914,
+  "weakzone_hiTal_topband_s2": 0.4555844294696871,
+  "hiTal_vocational_weakzone": 0.018215340445717747
+ },
+ "sens 0.2 0.15 0.25": {
+  "EO_track": 1.0004705978649813,
+  "EO_topband_entry": 1.2307099919157685,
+  "EO_topband_s2": 0.9781571531776512,
+  "EO_uni": 1.3643532006004322,
+  "conc_uni": 0.2816708347222222,
+  "weakzone_hiTal_topband_entry": 0.23403925695558891,
+  "weakzone_hiTal_topband_s2": 0.3473510176811827,
+  "hiTal_vocational_weakzone": 0.000857063199298614
+ },
+ "sens 0.2 0.15 0.5": {
+  "EO_track": 1.0004705978649813,
+  "EO_topband_entry": 1.2307099919157685,
+  "EO_topband_s2": 0.8676592043833091,
+  "EO_uni": 1.2075442871292281,
+  "conc_uni": 0.24705040499999992,
+  "weakzone_hiTal_topband_entry": 0.23403925695558891,
+  "weakzone_hiTal_topband_s2": 0.3911245489476075,
+  "hiTal_vocational_weakzone": 0.000857063199298614
+ },
+ "sens 0.2 0.15 0.75": {
+  "EO_track": 1.0004705978649813,
+  "EO_topband_entry": 1.2307099919157685,
+  "EO_topband_s2": 0.7689763461125907,
+  "EO_uni": 1.0688655027593297,
+  "conc_uni": 0.2118333327777778,
+  "weakzone_hiTal_topband_entry": 0.23403925695558891,
+  "weakzone_hiTal_topband_s2": 0.4372942664535183,
+  "hiTal_vocational_weakzone": 0.000857063199298614
+ },
+ "sens 0.2 0.25 0.25": {
+  "EO_track": 1.0014249389408618,
+  "EO_topband_entry": 1.329296170467187,
+  "EO_topband_s2": 0.9878930841114133,
+  "EO_uni": 1.4775341041225394,
+  "conc_uni": 0.3035422922222223,
+  "weakzone_hiTal_topband_entry": 0.18358448117644932,
+  "weakzone_hiTal_topband_s2": 0.31489337063353035,
+  "hiTal_vocational_weakzone": 0.0029030551349753836
+ },
+ "sens 0.2 0.25 0.5": {
+  "EO_track": 1.0014249389408618,
+  "EO_topband_entry": 1.329296170467187,
+  "EO_topband_s2": 0.8578848674536783,
+  "EO_uni": 1.2795676068056296,
+  "conc_uni": 0.2630758525,
+  "weakzone_hiTal_topband_entry": 0.18358448117644932,
+  "weakzone_hiTal_topband_s2": 0.3769514831766715,
+  "hiTal_vocational_weakzone": 0.0029030551349753836
+ },
+ "sens 0.2 0.25 0.75": {
+  "EO_track": 1.0014249389408618,
+  "EO_topband_entry": 1.329296170467187,
+  "EO_topband_s2": 0.7431383497865186,
+  "EO_uni": 1.1042285340593145,
+  "conc_uni": 0.22060455138888888,
+  "weakzone_hiTal_topband_entry": 0.18358448117644932,
+  "weakzone_hiTal_topband_s2": 0.4440520314675981,
+  "hiTal_vocational_weakzone": 0.0029030551349753836
+ },
+ "sens 0.2 0.4 0.25": {
+  "EO_track": 1.0069950056712524,
+  "EO_topband_entry": 1.489205832189485,
+  "EO_topband_s2": 1.0203986572232424,
+  "EO_uni": 1.6643108254156413,
+  "conc_uni": 0.334914303611111,
+  "weakzone_hiTal_topband_entry": 0.12677927093957223,
+  "weakzone_hiTal_topband_s2": 0.2771527790878115,
+  "hiTal_vocational_weakzone": 0.014962305258593617
+ },
+ "sens 0.2 0.4 0.5": {
+  "EO_track": 1.0069950056712524,
+  "EO_topband_entry": 1.489205832189485,
+  "EO_topband_s2": 0.8660641313277079,
+  "EO_uni": 1.397668193040913,
+  "conc_uni": 0.28657717833333335,
+  "weakzone_hiTal_topband_entry": 0.12677927093957223,
+  "weakzone_hiTal_topband_s2": 0.35410258057623445,
+  "hiTal_vocational_weakzone": 0.014962305258593617
+ },
+ "sens 0.2 0.4 0.75": {
+  "EO_track": 1.0069950056712524,
+  "EO_topband_entry": 1.489205832189485,
+  "EO_topband_s2": 0.7270976031533569,
+  "EO_uni": 1.1642114190227109,
+  "conc_uni": 0.23496509749999994,
+  "weakzone_hiTal_topband_entry": 0.12677927093957223,
+  "weakzone_hiTal_topband_s2": 0.4487727426573091,
+  "hiTal_vocational_weakzone": 0.014962305258593617
+ }
+}
