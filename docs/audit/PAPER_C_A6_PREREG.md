@@ -97,3 +97,10 @@ the pilot seeds are used for variance only). Envelope: **≤10 CPU-h including p
 1. Adjudicator review of this prereg + analysis script sha; 2. Lead/Trey approval; 3. runner committed and pinned; 4.
 degeneracy pilot PASS; 5. box allocation + reserve; 6. manifest frozen with all hashes. **No A6 compute before 1–6.**
 No Paper C claim exists until the A6 confirmatory artefact is verified and adjudicated.
+
+## 8. Committed artefacts (hashes for the reviewer)
+
+* This prereg: `docs/audit/PAPER_C_A6_PREREG.md` sha256 **`2c74bf2e6bc2be6363490042316188f2cb031669c75a18922de9d6e6d5d284dc`**
+* Machine-readable prereg: `docs/audit/PAPER_C_A6_PREREG.json` (sha recorded at commit; updated with script hash)
+* Committed analysis script: `papers/shadow-education-contest/code/analyze_paperC_A6.py` sha256 **`93d762e0f9a7eeb0f7462e2d7768b7446954ca4e06fdefe366960d4da480caef`** at commit **`e6cd2d0`**
+  (must be cited in the A6 manifest before launch; no uncommitted analysis code).

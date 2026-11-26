@@ -128,7 +128,7 @@
   },
   "analysis": {
     "script": "papers/shadow-education-contest/code/analyze_paperC_A6.py",
-    "sha256": "PENDING_COMMIT",
+    "sha256": "93d762e0f9a7eeb0f7462e2d7768b7446954ca4e06fdefe366960d4da480caef",
     "methods": [
       "per-seed paired contrasts (matched seeds)",
       "5,000-draw seed bootstrap 95% CI",
@@ -136,7 +136,8 @@
       "achieved MDE",
       "degeneracy-screen report",
       "manipulation checks separate"
-    ]
+    ],
+    "commit": "e6cd2d0"
   },
   "launch_gates": [
     "adjudicator review",
