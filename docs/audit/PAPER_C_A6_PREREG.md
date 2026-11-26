@@ -57,8 +57,7 @@ hypotheses):
 **Rule (frozen):** α family = .05, Holm m=2 ⇒ worst-case per-test α/2=.025 (z=2.394); power 1−β=.80 (z=0.842).
 Power-required n is 1 for both tests; **declared seed count = max(power-required n, 8) = 8 fresh matched seeds (200–207)**, the
 minimum for a stable seed bootstrap and for the degeneracy screen. **The block 200–207 is fresh: it was not used for screening (0–7), A5 (100–115), or any pilot; a pilot, if run, uses a separate block (300–307) or only the existing screening SDs; the A6 runner must reject 0–7 and 100–115.** **Achieved MDE at n=8** = (z_a+z_b)·SD/√8:
-**T1' ≈0.065 pp**, **T4' ≈0.074 pp** (far below the substantive minima; the tests are powered ≫0.99 for the declared
-effects). The report must state achieved MDE and that seed-level variance is small; statistical significance alone is
+**T1' ≈0.065 pp**, **T4' ≈0.074 pp** (far below the substantive minima). **Power is to detect the pre-declared minima, not the observed effects:** A6 is a **precision estimate** whose pre-declared expectation is **FAILS (CI entirely below the minima)** because the design's effects are below the minima; there is no confirmation claim. The report must state achieved MDE and that seed-level variance is small; statistical significance alone is
 not the claim — the **minimum substantively meaningful effect** is the decision threshold.
 
 ## 4. Pre-launch degeneracy-screen gate (blocking)
@@ -102,7 +101,7 @@ No Paper C claim exists until the A6 confirmatory artefact is verified and adjud
 
 ## 8. Committed artefacts (hashes for the reviewer)
 
-* This prereg: `docs/audit/PAPER_C_A6_PREREG.md` sha256 **`2c74bf2e6bc2be6363490042316188f2cb031669c75a18922de9d6e6d5d284dc`**
-* Machine-readable prereg: `docs/audit/PAPER_C_A6_PREREG.json` (sha recorded at commit; updated with script hash)
-* Committed analysis script: `papers/shadow-education-contest/code/analyze_paperC_A6.py` sha256 **`93d762e0f9a7eeb0f7462e2d7768b7446954ca4e06fdefe366960d4da480caef`** at commit **`e6cd2d0`**
+* This prereg: `docs/audit/PAPER_C_A6_PREREG.md` (sha256 to be recorded in the A6 manifest; superseded hashes are not cited as authoritative)
+* Machine-readable prereg: `docs/audit/PAPER_C_A6_PREREG.json` (sha recorded at commit; cites script `611248fb29661…`@`852cdc8`)
+* Committed analysis script: `papers/shadow-education-contest/code/analyze_paperC_A6.py` sha256 **`611248fb29861bc6733861edf48dfc2b418f2bc953418243de644d914c78b1b6`** at commit **`852cdc8`**
   (must be cited in the A6 manifest before launch; no uncommitted analysis code).

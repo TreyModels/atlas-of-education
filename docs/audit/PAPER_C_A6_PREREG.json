@@ -124,11 +124,12 @@
     "wall_h_at_8w": 0.5,
     "wall_h_at_6w": 0.7,
     "envelope_cpu_h_incl_pilot": 10.0,
-    "reserve": "1-2 slots for other lanes; N=1500 rejected (~809 CPU-s/run)"
+    "reserve": "1-2 slots for other lanes; N=1500 rejected (~809 CPU-s/run)",
+    "power_note": "power is to detect the pre-declared minima; A6 is a precision estimate with pre-declared expectation FAILS (CI entirely below minima); no confirmation claim"
   },
   "analysis": {
     "script": "papers/shadow-education-contest/code/analyze_paperC_A6.py",
-    "sha256": "93d762e0f9a7eeb0f7462e2d7768b7446954ca4e06fdefe366960d4da480caef",
+    "sha256": "611248fb29861bc6733861edf48dfc2b418f2bc953418243de644d914c78b1b6",
     "methods": [
       "per-seed paired contrasts (matched seeds)",
       "5,000-draw seed bootstrap 95% CI",
@@ -137,7 +138,7 @@
       "degeneracy-screen report",
       "manipulation checks separate"
     ],
-    "commit": "e6cd2d0"
+    "commit": "852cdc8"
   },
   "launch_gates": [
     "adjudicator review",
