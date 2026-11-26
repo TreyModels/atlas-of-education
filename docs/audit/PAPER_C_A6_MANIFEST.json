@@ -1,6 +1,6 @@
 {
   "document": "Paper C A6 manifest (host-only; PENDING pre-launch gates; no compute)",
-  "status": "PENDING_GATES (no launch; adjudicator relabel 6962317; waiting Lead/Trey approval + degeneracy pilot + allocation)",
+  "status": "FROZEN_PENDING_LAUNCH_RECORD (host smoke PASS; awaiting final pre-launch record + Lead/Trey approval + allocation + degeneracy pilot)",
   "study_type": "ESTIMATION_PRECISION_STUDY (non-confirmatory relabel; expected FAILS vs minima; no confirmation claim; genuine confirmation would need A7)",
   "citations": {
     "prereg_md": {
@@ -177,5 +177,33 @@
     "no_claim": "no Paper C claim until A6 artefact verified/adjudicated; expected FAILS; A7 needed for genuine confirmation",
     "no_a5": "A5 VOID; no A5 data reuse",
     "csv": "frozen 07f83156.../132"
+  },
+  "host_smoke": {
+    "rejection_tests": {
+      "seeds_0_7": "rc=1 refused",
+      "seeds_100_115": "rc=1 refused",
+      "seeds_300_307_confirmatory": "rc=1 refused"
+    },
+    "single_seed_run": {
+      "cell": "S0.85|L0.25|A|P55",
+      "seed": 200,
+      "N": 600,
+      "T": 46,
+      "out": "/tmp/a6smoke/ckpt_S0.85_L0.25_A_P55.jsonl",
+      "row_written": true,
+      "wall_seconds": 2.8808,
+      "fields": [
+        "tut_k12_rate",
+        "tut_k12_spend",
+        "q5_q1_part_gap_pp",
+        "q5_q1_spend_gap",
+        "L6_mean",
+        "L9_mean",
+        "own_share",
+        "withheld",
+        "fixed_R_gap_close"
+      ]
+    },
+    "note": "engine pinned 846c9e0 (core e111397b...) on host; smoke is execution/pin verification only, NOT confirmatory data (seed 200 is part of the fresh block; this single row is a runner smoke and will not be aggregated into the A6 estimation run \u2014 the A6 run will use its own out-dir and the committed runner)"
   }
 }
