@@ -491,3 +491,14 @@ pre-launch degeneracy screen (distinct values/within-cell variance, treatment→
 manipulation checks separate; full pre-declared family for Holm (no post-screening narrowing); adequate power/MDE; no
 reuse of A5 data; new prereg/manifest/runner pins. **No confirmatory number cited.**
 
+**A5 FINAL VOID RECORD (commit `803c994`).** `PAPER_C_A5_SEED_TRUNCATION.md` sha
+`cd049ccd0002e62b170d4087ea350b04261ac604a4b6344f2b8c2346b8dc99d9`; `PAPER_C_CONFIRMATORY_MANIFEST.json` sha
+`c0767c820bc8cde75c362e4b3efe9ac7ee174e3832eea871ec823c24bdb2821c`, status **VOID** + `void_record`. Stop **07:58 CST**;
+driver/cells/finalizer killed; `queue/STOP_CONFIRM_A5`; **checkpoints preserved 10 rows/6 cells** (reported; box SSH
+unreachable ~07:45+, independent hash/row-count verification pending); no aggregation/summary; Mac poller stopped; box
+stays on. **Do not resume A5 or start a new confirmatory run.** Preserved rows are a failed-run record, not analysable.
+A6 requirements recorded verbatim: behavioural estimands not mechanically determined by treatment; treatment not in
+outcome definition/denominator; pre-launch degeneracy screen; manipulation checks separate; full pre-declared T1–T4 Holm
+family; adequate power/MDE; pilot for variance only; no A5 data reuse; new A6 prereg/manifest/runner pins. **No Paper C
+confirmatory claim; T1/T4 screening failures; no S-generalisation.**
+

@@ -1329,7 +1329,7 @@ manifest), never mixed with screening/Pilot-0.
 
 ## 4T. A5 confirmatory — **HALTED by statistical stop; NO RESULT (degenerate T2/T3)**
 
-**Stop (2026-11-26 ~07:57 CST):** driver/cells killed (PIDs 2272/2273/2276–2285), finalizer/poller stopped,
+**Stop (2026-11-26 ~07:58 CST):** driver/cells killed (PIDs 2272/2273/2276–2285), finalizer/poller stopped,
 checkpoints preserved (**10 rows / 6 cells; no aggregation, no summary**), `queue/STOP_CONFIRM_A5` written; no new
 confirmatory run launched. The adjudicator's box check was unreachable (SSH closed); the stop/checkpoint state is
 recorded from the Lead's report and must be hash/row-count verified if the box returns. **No confirmatory numbers are
@@ -1362,6 +1362,19 @@ T2/T3 are recategorised as **manipulation/compliance checks**, not estimands. Th
 * **Power/MDE:** re-estimate N/seeds for the behavioural endpoints; do not keep trivial endpoints to manufacture
   significance; a pilot may estimate variance, not select outcomes.
 * **No reuse of A5 data**; new prereg + manifest + runner pins; report screening failures honestly.
+
+**Final void record (commit `803c994`):** `PAPER_C_A5_SEED_TRUNCATION.md` sha
+**`cd049ccd0002e62b170d4087ea350b04261ac604a4b6344f2b8c2346b8dc99d9`**; `PAPER_C_CONFIRMATORY_MANIFEST.json` sha
+**`c0767c820bc8cde75c362e4b3efe9ac7ee174e3832eea871ec823c24bdb2821c`**, status **VOID** + `void_record` (stopped
+07:58 CST; defects; state; A6 next). Execution state per the verified record: driver/cells killed
+(2272/2273/2276–2285), finalizer killed, `queue/STOP_CONFIRM_A5`, **checkpoints preserved 10 rows / 6 cells**, no
+aggregation/summary, Mac poller stopped, **box stays on**. Box SSH was unreachable (~07:45+) at the adjudicator check —
+the preserved checkpoint/`STOP_CONFIRM_A5` state is **reported, not yet independently verified**; it will be hash/row-count
+verified if connectivity returns. **Do not resume A5, do not start a new confirmatory run.** The preserved rows are a
+failed-run record, not analysable. A6 redesign requirements recorded verbatim (see §4T above). **No Paper C confirmatory
+claim exists; T1/T4 remain screening failures; no S-generalisation.**
+
+
 
 **Status: A5 HALTED/VOID; Paper C confirmatory is not runnable under this design; no confirmatory claim; CSV frozen.**
 
