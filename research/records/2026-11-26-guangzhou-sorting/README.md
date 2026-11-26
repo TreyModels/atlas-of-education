@@ -52,3 +52,13 @@ Pre-registration `prereg/PREREG_V4.md`; model `model/gz_v4.py`; results `results
 - Equal-talent wealth ratio (locals): median 1.31 (1.09-1.82); by head-start fade from 1.57 (no fade) to 1.15 (75-90% fade). At equal zhongkao score: 0.87. Unconditional: 2.28.
 - Largest drivers: head-start fade (-0.64), home inputs (+0.56), zone teachers (+0.30); tutoring parameters are secondary (post-gate effect +0.18).
 - Reading: with tutoring persisting as the informant describes, the model's earlier "near-level" result disappears, and the tutoring and boarding policies explain little of the remaining gap; home inputs and zone schools before 15, and how fast their advantage fades, explain most of it.
+
+## v5 equation tests (insurance demand, art and Hong Kong routes), 300 draws, seed 20261130 — 2026-11-27 00:00 CST
+Pre-registration `prereg/PREREG_V5_EQUATIONS.md`; results `results/V5_EQ_ANALYSIS.txt`.
+- E74 tutoring-achievement with prior-score and SES controls MISLEADS: it understates the true effect by a median 0.14 SD because both-tail selection (weak pupils tutor more) survives the controls. This can produce the null or negative estimates in the CEPS literature even when tutoring helps.
+- E76 SES x tutoring interaction: spurious (|t| > 2) in 63% of draws although the true interaction is zero.
+- E58 participation logit on income: misses the both-tail (U-shaped) demand; pseudo-R2 0.06 vs 0.35 with score and score squared.
+- E79 peer effect in tutoring demand: about 0.9 in every draw whatever the true peer effect (rank correlation 0.2): an artefact of class sorting.
+- E35 school FE and E159 variance shares measure intake, not value added; E36 peer, E152 RD, E32 VA and E34 teacher effects are biased or noisy in this system.
+- Art and Hong Kong routes take a median 10% of elite seats (3.5-19%, depends on assumed size and bonus) and add 0.07 to the equal-talent wealth ratio.
+- Proposed new equations: class as the unit of provision; school-vs-class margin trade-off; positional-insurance demand (both tails, fear of falling, peer escalation, time windows by term and holiday); gate switching (admission on the best of several routes, with access by wealth or status).

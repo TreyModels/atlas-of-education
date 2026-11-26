@@ -1,0 +1,16 @@
+E74 tutoring-achievement, naive                  within tolerance  0.32  -> BIASED
+E74/E72 with prior score + SES                   within tolerance  0.04  -> MISLEADS
+   naive minus truth [-0.163, -0.068, 0.005, 0.094, 0.196]  controls minus truth [-0.238, -0.182, -0.144, -0.11, -0.055]
+E76 SES x tutoring (truth 0)                     spurious |t|>2 in 0.63 -> MISLEADS
+E58 participation logit, income only             U-shape adds <0.01 R2 in 0.00 -> MISSES U-SHAPE   R2 income [0.025, 0.044, 0.064, 0.09, 0.136] with U [0.24, 0.329, 0.354, 0.372, 0.393]
+E79 peer effect in demand                        spurious >0.1 when true <0.1: 1.00 (n=30) -> MISLEADS  rank corr with truth 0.2  est [0.815, 0.864, 0.896, 0.919, 0.943]
+E35 school fixed effects vs true VA gap          within tolerance  0.00  -> BIASED
+E159 variance share vs VA share (within 2x)      within tolerance  0.00  -> BIASED
+E36 linear-in-means peer vs true peer share      within tolerance  0.16  -> BIASED
+E152 fuzzy RD vs true school VA                  within tolerance  0.27  -> BIASED
+E32 value added with prior score                 within tolerance  0.35  -> BIASED
+E34 teacher effects (corr >= 0.7)                within tolerance  0.57  -> BIASED
+
+routes: EO with art/HK [1.145, 1.259, 1.398, 1.602, 2.009]  without [1.082, 1.195, 1.326, 1.523, 1.894]  diff [0.018, 0.049, 0.073, 0.109, 0.175]
+share of elite seats via art/HK [0.035, 0.066, 0.105, 0.137, 0.191]  tutoring take-up [0.422, 0.523, 0.609, 0.677, 0.761]
+rank-rank E133 [0.14, 0.242, 0.307, 0.37, 0.44]  concentration E131 [0.106, 0.201, 0.266, 0.33, 0.402]
