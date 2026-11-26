@@ -80,3 +80,10 @@ the v4 scenarios. The v5 equation tests were rerun with the fix (results/V5_EQ_A
 - Shapley shares (all off to all on), T: ban -0.01, boarding -0.01, re-banding -0.04, substitution into holidays/institutions/routes +0.10. Spend: ban -4,600, boarding -5,600, substitution +13,600.
 - Interventions on the current system, T: no home advantage 1.19, equal zone teachers 1.25, no pre-gate tutoring effect 1.32, all three 1.09, no art/joint-exam routes 1.27.
 - Paper: Claude Docs "Same Score, Same Chance: Procedural Equity and Positional Competition in Guangzhou's Education System" (https://claude.ai/artifact/7z9mQBi5KTjdggJBtnMrWC).
+
+## v8: third-review analyses, 150 draws, seed 20261203 (PREREG_V8.md). Model frozen at v5.1 for circulation.
+- S* robust to grid: 1.19 (5x5), 1.20 (10x10), 1.16 (20x20); common support 99%, 92%, 47%.
+- Post-gate ablation (same pupils, all wealth-dependent post-gate mechanisms off): S* 1.19 to 1.09 (still > 1 in 94%); median 49% of the excess removed. The rest is persisting pre-gate advantage.
+- Ordinary exam only: T 1.25, S 0.85, S* 1.11, U 2.20 (all routes: 1.35, 0.91, 1.19, 2.34).
+- Historically anchored (boarding, holidays, routes held on): T paired change -0.06 (lower in 84%); spend paired -4,800 yuan (lower in 99%). Shapley: ban T -0.02, spend -5,000; re-banding T -0.04, spend ~0.
+- Interventions (paired): no home advantage -0.15 (44% of excess), equal zone teachers -0.07 (22%), no pre-gate tutoring effect -0.03 (8%), all three -0.24 (74%); learning change among academic pupils 0.00 to -0.02 SD.
