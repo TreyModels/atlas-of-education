@@ -2,7 +2,7 @@
 
 **Status: DRAFT FOR ADJUDICATOR REVIEW. No A6 compute has been launched.**
 
-**DESIGN RELABEL (per adjudication 0e5caae, 2026-11-26):** A6 is an **ESTIMATION / PRECISION study**, not a confirmatory test. It uses the same 36 cells/S/L/N=600 as screening, whose screening effects under A6 definitions are T1′ = +0.655 pp (SD .224) and T4′ = +1.767 pp (SD .290) — both below the minima (+3.0/+2.0). Fresh seeds add only MC noise, so A6 can at best produce a **precise below-minimum estimate**; expected decision **FAILS (CI entirely below minimum)**. No "confirmatory holds" claim will be made. A genuine confirmatory test would require a new amendment **A7** with a lever/estimand that can plausibly reach the minima (e.g. widened L gate contrast, or a behavioural outcome with a larger standardised effect), pre-declared and piloted for variance only. A5 is **VOID** (no A5 data reused:
+**DESIGN RELABEL (per adjudication 0e5caae, 2026-11-26):** A6 is an **ESTIMATION / PRECISION study**, not a confirmatory test. It uses the same 36 cells/S/L/N=600 as screening, whose screening effects under A6 definitions are T1′ = +0.655 pp (SD .224) and T4′ = +1.767 pp (SD .290) — both below the minima (+3.0/+2.0). Fresh seeds add only MC noise, so A6 can at best produce a **precise below-minimum estimate**; expected decision **FAILS (CI entirely below minimum)**. No "confirmatory holds" claim will be made. A genuine confirmatory test would require a new amendment **A7** with a lever/estimand that can plausibly reach the minima (e.g. widened L gate contrast, or a behavioural outcome with a larger standardised effect), pre-declared and piloted for variance only. **SMOKE/EXCLUSION ATTESTATION (2026-11-26):** a host smoke executed **seed 200** from the previously-declared block 200–207 (row written to a separate smoke dir, never aggregated); that block is **excluded** from A6 and the fresh block is now **400–407**, never executed. Future smoke uses only non-declared seed 900. A5 is **VOID** (no A5 data reused:
 the preserved 10 rows / 6 cells are a failed-run record only; A5 manifest status VOID). This A6 prereg follows Claude's
 redesign Part 2 and the adjudicator's A6 requirements: behavioural estimands not mechanically determined by treatment;
 treatment absent from outcome definition/denominator; pre-launch degeneracy screen; manipulation checks separate; full
@@ -18,7 +18,7 @@ pre-declared Holm family (no post-screening narrowing); power/MDE-derived seed c
   pay_ratio .55, monitoring .2, pay_gap; P12: pay_ratio 1.2, monitoring .5, pay_gap (no-withholding control)}.
 * **N=600, T=46, measure_from=18** (N=600 is the declared confirmatory resolution; screening/pilot variance was measured
   at N=600; N=1500 measured ~809 CPU-s/run and is not used — see §5).
-* **Seeds = 8 fresh matched seeds (200–207)** — derived by the power rule in §3 (power-required n≈1 for both tests at
+* **Seeds = 8 fresh matched seeds (400–407)** — derived by the power rule in §3 (power-required n≈1 for both tests at
   Bonferroni-adjusted α; a **declared minimum of 8** is required for the seed bootstrap/robustness and is the larger of
   the two rules; no effect-based seed choice).
 * **Runner:** to be authored/committed as `run_paperC_A6.py` (new, pinned to the frozen spec; records per-seed rows for
@@ -55,8 +55,8 @@ hypotheses):
 | T4' | **0.0680 pp** | 2.0 pp | n≈0.011 → 1 |
 
 **Rule (frozen):** α family = .05, Holm m=2 ⇒ worst-case per-test α/2=.025 (z=2.394); power 1−β=.80 (z=0.842).
-Power-required n is 1 for both tests; **declared seed count = max(power-required n, 8) = 8 fresh matched seeds (200–207)**, the
-minimum for a stable seed bootstrap and for the degeneracy screen. **The block 200–207 is fresh: it was not used for screening (0–7), A5 (100–115), or any pilot; a pilot, if run, uses a separate block (300–307) or only the existing screening SDs; the A6 runner must reject 0–7 and 100–115.** **Achieved MDE at n=8** = (z_a+z_b)·SD/√8:
+Power-required n is 1 for both tests; **declared seed count = max(power-required n, 8) = 8 fresh matched seeds (400–407)**, the
+minimum for a stable seed bootstrap and for the degeneracy screen. **The block 400–407 is fresh: it was not used for screening (0–7), A5 (100–115), or any pilot; a pilot, if run, uses a separate block (300–307) or only the existing screening SDs; the A6 runner must reject 0–7 and 100–115.** **Achieved MDE at n=8** = (z_a+z_b)·SD/√8:
 **T1' ≈0.065 pp**, **T4' ≈0.074 pp** (far below the substantive minima). **Power is to detect the pre-declared minima, not the observed effects:** A6 is a **precision estimate** whose pre-declared expectation is **FAILS (CI entirely below the minima)** because the design's effects are below the minima; there is no confirmation claim. The report must state achieved MDE and that seed-level variance is small; statistical significance alone is
 not the claim — the **minimum substantively meaningful effect** is the decision threshold.
 

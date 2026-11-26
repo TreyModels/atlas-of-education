@@ -4,7 +4,8 @@
 Design (A6 prereg, HEAD): 36 cells = S=q0 {0.85,1.0,1.15} x L {0.25,0.45} x supply {A,B,C} x settings {P55,P12};
 N=600, T=46; canonical HK gates; treated gate G6->G9 (index 1, kind=contest, share_of cohort, gate-level r by L:
 1.2 at L=.25, 1.6 at L=.45, fail from canonical HK gates).
-Seeds: FRESH confirmatory block 200-207 only; the runner REJECTS screening 0-7, A5 100-115 and pilot 300-307.
+Seeds: FRESH confirmatory block 400-407 only; the runner REJECTS screening 0-7, A5 100-115, the smoke-contaminated
+200-207, and pilot 300-307. Host smoke uses ONLY the non-declared seed 900 (--smoke) and is never aggregated.
 Pilot (variance only) uses the separate block 300-307 and is invoked with --variance-pilot; pilot rows are never
 confirmatory rows. A6 is an ESTIMATION/PRECISION study (pre-declared expectation FAILS vs minima); no confirmation claim.
 Outcomes: behavioural only; manipulation-check series (own_share/withheld) recorded but never used as estimands.
@@ -13,8 +14,9 @@ import argparse, hashlib, json, os, sys, warnings
 
 HERE = os.path.dirname(os.path.abspath(__file__)); REPO = os.path.abspath(os.path.join(HERE, '..', '..', '..'))
 ENGINE = os.path.join(REPO, 'engine'); SPEC = os.path.join(REPO, 'docs', 'audit', 'canonical_spec.json')
-CONFIRM_SEEDS = tuple(range(200, 208)); PILOT_SEEDS = tuple(range(300, 308))
-FORBIDDEN = tuple(range(0, 8)) + tuple(range(100, 116)) + PILOT_SEEDS
+CONFIRM_SEEDS = tuple(range(400, 408)); PILOT_SEEDS = tuple(range(300, 308))
+SMOKE_ONLY_SEED = 900   # host smoke must use this non-declared seed; never aggregated
+FORBIDDEN = tuple(range(0, 8)) + tuple(range(100, 116)) + tuple(range(200, 208)) + PILOT_SEEDS
 Q0S = [0.85, 1.0, 1.15]; LS = [0.25, 0.45]
 SUPPLY = {'A': dict(own_ban=0.0, firm_ban=0.0), 'B': dict(own_ban=0.95, firm_ban=0.0), 'C': dict(own_ban=0.0, firm_ban=0.9)}
 SETTINGS = {'P55': dict(pay_ratio=0.55, monitoring=0.2, withhold_mode='pay_gap'),
@@ -56,21 +58,25 @@ def run_seed(S, L, sup, st, seed):
     row.update(fixed_R_gap_close=float(np.mean(L9[q1] >= FIXED_R)) if q1.any() else None,
                L9_q1_mean=float(np.nanmean(L9[q1])) if q1.any() else None,
                cid=cid(S, L, sup, st), S=S, L=L, supply=sup, settings=st, seed=seed, N=N, T=T, measure_from=m,
-               stage=('pilot' if seed in PILOT_SEEDS else 'confirmatory'), unfired_events=list(getattr(E, 'unfired_events', [])))
+               stage=('smoke' if seed == SMOKE_ONLY_SEED else ('pilot' if seed in PILOT_SEEDS else 'confirmatory')), unfired_events=list(getattr(E, 'unfired_events', [])))
     return row
 
 def main():
     ap = argparse.ArgumentParser(); ap.add_argument('cell', nargs='?'); ap.add_argument('--id')
     ap.add_argument('--seeds', required=True); ap.add_argument('--out-dir', required=True)
     ap.add_argument('--variance-pilot', action='store_true')
+    ap.add_argument('--smoke', action='store_true', help='smoke only: single non-declared seed 900, never aggregated')
     a = ap.parse_args()
     seeds = list(range(int(a.seeds.split('-')[0]), int(a.seeds.split('-')[1]) + 1)) if '-' in a.seeds else [int(x) for x in a.seeds.split(',')]
-    if a.variance_pilot:
+    if a.smoke:
+        bad = [s for s in seeds if s != SMOKE_ONLY_SEED]
+        if bad: raise SystemExit(f'smoke must use the non-declared seed {SMOKE_ONLY_SEED}; got {bad}')
+    elif a.variance_pilot:
         bad = [s for s in seeds if s not in PILOT_SEEDS]
         if bad: raise SystemExit(f'variance pilot must use pilot block {PILOT_SEEDS}; got {bad}')
     else:
         bad = [s for s in seeds if s not in CONFIRM_SEEDS]
-        if bad: raise SystemExit(f'A6 estimation run requires fresh block {CONFIRM_SEEDS}; refusing {bad}; forbidden blocks: 0-7, 100-115, 300-307')
+        if bad: raise SystemExit(f'A6 estimation run requires fresh block {CONFIRM_SEEDS}; refusing {bad}; forbidden blocks: 0-7, 100-115, 200-207 (smoke-contaminated), 300-307')
     cidv = a.cell or a.id
     if not cidv: raise SystemExit('provide cell id as positional or --id')
     if cidv not in cells(): raise SystemExit(f'unknown A6 cell {cidv}')
@@ -81,6 +87,7 @@ def main():
     for sd in seeds:
         if sd in done: continue
         row = run_seed(float(S), float(L), sup, st, sd)
+        if a.smoke: row['stage'] = 'smoke'
         with open(fn, 'a') as f: f.write(json.dumps(row) + '\n'); f.flush(); os.fsync(f.fileno())
     print('cell', cidv, 'seeds', seeds, '->', fn)
 

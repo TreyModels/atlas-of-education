@@ -41,14 +41,14 @@
       "fail": "from canonical HK gates"
     },
     "seeds": [
-      200,
-      201,
-      202,
-      203,
-      204,
-      205,
-      206,
-      207
+      400,
+      401,
+      402,
+      403,
+      404,
+      405,
+      406,
+      407
     ],
     "n_seeds": 8,
     "runner": "run_paperC_A6.py (to be committed/pinned before launch; not yet authored)"
@@ -99,7 +99,7 @@
       "T1prime": 1,
       "T4prime": 1
     },
-    "seed_rule": "n=max(power-required,8)=8 matched seeds 200-207",
+    "seed_rule": "n=max(power-required,8)=8 matched seeds 400-407",
     "achieved_mde_at_n8_pp": {
       "T1prime": 0.065,
       "T4prime": 0.074
@@ -160,5 +160,13 @@
     "expected_decision": "FAILS (CI entirely below minimum) for both",
     "no_confirmatory_claim": true,
     "route_to_confirmatory": "new amendment A7 with a lever/estimand that can plausibly reach the minima, pre-declared, pilot variance only"
+  },
+  "smoke_exclusion_attestation": {
+    "date": "2026-11-26",
+    "touched_block": "200-207",
+    "touched_seed": 200,
+    "row_disposition": "separate smoke dir, never aggregated, discarded for inference",
+    "fresh_block": "400-407",
+    "smoke_rule": "future smoke uses only non-declared seed 900"
   }
 }

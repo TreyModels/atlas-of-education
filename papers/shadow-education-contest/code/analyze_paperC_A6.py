@@ -4,7 +4,7 @@
 Declared before launch (see docs/audit/PAPER_C_A6_PREREG.md):
   T1prime = mean over design cells of rate(S=.85) - rate(S=1.15) (pp); direction S up => participation down; min +3.0 pp
   T4prime = mean over design cells of spend_gap(L=.45) - spend_gap(L=.25) (pp); direction L up => gap up; min +2.0 pp
-  family = {T1prime, T4prime}, Holm m=2, alpha=.05 two-sided; 8 fresh matched seeds 200-207 (never used in screening/A5/pilot); N=600.
+  family = {T1prime, T4prime}, Holm m=2, alpha=.05 two-sided; 8 fresh matched seeds 400-407 (never used in screening/A5/pilot); N=600.
   5,000-draw seed bootstrap CIs; achieved MDE from pre-declared SDs and n; degeneracy-screen report.
   Manipulation checks M1 (own supply) and M2 (withheld deterministic) reported separately, never as claims.
 Input: A6 results JSON (cells -> rows, same schema as screening) OR a directory of ckpt_*.jsonl.
@@ -71,7 +71,7 @@ def main():
     d = load(path); cells = d['cells']
     seeds = [int(r['seed']) for c in cells.values() for r in c['rows']]
     seeds = sorted(set(seeds))
-    A6_SEEDS = tuple(range(200, 208))   # fresh block, never used in screening (0-7), A5, or any pilot
+    A6_SEEDS = tuple(range(400, 408))   # fresh block, never executed; 400-407 never used in screening (0-7), A5 (100-115), or pilots (300-307); block 200-207 excluded because a host smoke executed seed 200, A5, or any pilot
     design_seeds = sorted(set(seeds))
     if tuple(design_seeds) != A6_SEEDS:
         raise SystemExit(f'A6 requires the fresh declared seed block {A6_SEEDS}; got {design_seeds}')
