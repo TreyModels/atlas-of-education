@@ -1067,3 +1067,26 @@ run is most likely still progressing under the on-box `confirm_finalize.sh`; the
 **Action:** light retry cadence only (one attempt per check, no hammering); resume monitoring immediately on reconnect,
 then re-baseline rows/ETA and independently hash-verify any interim copy. No box action by scheduler; no `SHUTDOWN_OK`
 should be touched during the blackout. Escalated to Lead + commander for a network/operator check.
+
+### 13.44 2026-11-26 08:00 — A5 CONFIRMATORY RUN VOID (fatal defects; stopped 07:58); scheduler stands down
+
+**A5 is VOID — failed-run record only, no aggregation, no inference, no numbers cited.** Lead stopped `confirm_a5` at
+**07:58 CST** on a Bridge order (Opus relaying Trey) after independently verifying two fatal defects:
+- **T3 degenerate:** `withheld` is deterministically **0.144 in 96/96 exposed P55 runs** (single value, SE 0; it is the
+  `.4*.45*.8` arithmetic of the setting, not an estimand).
+- **T2 manipulation check:** `own_share` C≈0.889–0.945 vs A≈0.148–0.524 under `firm_ban=.9` — firm_ban enters
+  `own/(own+firm)` in both outcome and denominator (input returns as output, SE ~0.0003).
+- A5's m=2 narrowing is unjustifiable against prereg T1–T4 (T1/T4 failed screening); adjudicator recorded **VOID**.
+**Execution:** drivers/cells killed; `queue/STOP_CONFIRM_A5` written; **checkpoints preserved on disk (10 rows / 6 cells),
+no summary JSON, no aggregation**; `confirm_a5_finalize.sh` + Mac poller stopped; `SHUTDOWN_OK` untouched; box not powered
+off (and past evidence: container shutdown is a no-op). Deliverables committed: `PAPER_C_A5_SEED_TRUNCATION.md` sha
+`cd049ccd…`, `PAPER_C_CONFIRMATORY_MANIFEST.json` sha `c0767c82…` (status VOID + defects + next-A6 record). **Do not resume
+A5; do not start a new confirmatory run.**
+**Scheduler measurement note:** the confirm-run cost measurements in §13.42 (**~809 CPU-s/run, ~13.5 min/seed/cell at
+N=1500, 6-cell stage ≈7.2 h / ~43 CPU-h**) are now **failed-run cost calibration only** — useful for A6/Paper C v2 sizing,
+never confirmatory evidence.
+**Record-keeping verification PENDING (box unreachable since 07:45; retried 08:06 — same network signature):** checklist for
+first successful reconnect — (i) `queue/STOP_CONFIRM_A5` exists; (ii) confirm dir (`confirm_a5`, and the `confirm_final`
+path seen earlier) has **10 rows / 6 ckpts and NO `paperC_*.json`**; (iii) **no** `run_paperC_screening` driver/cell
+processes; (iv) record hashes/row counts to Lead+adjudicator. Then stop. **Scheduler stands down** — no resume, no
+aggregation, no new confirmatory run; next work is the A6/Paper C v2 redesign, not compute.
