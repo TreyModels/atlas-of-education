@@ -524,14 +524,14 @@ degeneracy screen; ≤10 CPU-h. **Metadata fixes done:** prereg MD/JSON now cite
 detection / precision estimate with pre-declared expectation FAILS; no confirmation claim. Gates: runner commit+sha; Lead/Trey; pilot PASS; allocation/reserve; frozen manifest. **No A6 compute; not
 confirmatory.**
 
-**A6 FINAL PRE-LAUNCH WITHHELD (2026-11-26): smoke executed confirmatory seed 200; fresh-block claim false.** Runner
-`392d9847…@6adf0a2`; manifest `b6af6030…@41a7235` FROZEN_PENDING_LAUNCH_RECORD; citations/prereg/JSON/analysis/runner
-verified; runner rejects 0–7/100–115/300–307; 36 cells; N=600/T=46; estimation/precision relabel; CI decision rule;
-T2/T3→M1/M2; A5 excluded; ≤10 CPU-h. **BUT host smoke ran cell S0.85|L0.25|A|P55 seed 200 (confirmatory block 200–207),
-row written; manifest still says 200–207 fresh/never used.** Even if not aggregated, the fresh-block precondition and
-manifest provenance are compromised. **Required:** (1) smoke with non-declared seed (900), discard seed-200 row, attest
-no outcomes read; (2) restore untouched block — preferably new fresh **400–407** with runner/analysis/prereg/JSON/manifest
-updates (or signed exclusion + new 8-seed block); (3) correct manifest `seeds.fresh/never_used`/`host_smoke`; (4) gates
-Lead/Trey, allocation/reserve, degeneracy pilot PASS (300–307 variance-only), frozen manifest. **No A6 compute; A5 VOID;
-no confirmatory claim; CSV frozen.**
+**A6 FINAL PRE-LAUNCH RECORD — NON-CONFIRMATORY PRECISION STUDY, CLEARED FOR OPERATIONAL GATES (2026-11-26).** Smoke
+hygiene fixed at commit `3bfa4fe`; current hashes: prereg MD `be8ff7a4…`, JSON `1f338a62…`, analysis `ed46ff40…`, runner
+`41a35bd2…`, manifest `cd498079…` (status FROZEN_PENDING_LAUNCH_RECORD; earlier `7f7b3c11…`/`101f9000…` superseded).
+Fresh block **400–407** (never executed); **200–207 excluded** after seed-200 smoke (row deleted, no outcomes read
+attested; runner refuses); smoke seed **900 only** (separate, not aggregated); runner/analysis reject 0-7/100-115/200-207/
+300-307; pilot 300–307 variance-only. A6 relabelled estimation/precision (expected FAILS vs minima +3/+2; no confirmation
+claim; A7 for genuine confirmation); 36 cells, N=600/T=46, CI decision rule, T2/T3→M1/M2, A5 excluded, ≤10 CPU-h.
+**Pre-launch record issued: cleared only as non-confirmatory precision study. Remaining gates: Lead/Trey approval;
+allocation + reserve; blocking degeneracy pilot PASS (300–307 variance-only); frozen manifest final hashes. No A6 compute;
+A5 VOID; CSV frozen.**
 

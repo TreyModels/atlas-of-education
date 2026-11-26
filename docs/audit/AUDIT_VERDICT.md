@@ -1433,32 +1433,27 @@ approval; degeneracy pilot PASS; allocation/reserve. **Status: metadata complete
 claim; expected FAILS; A7 required for genuine confirmation. Remaining gates: A6 runner authored/committed + sha in the
 frozen manifest; degeneracy pilot PASS; allocation/reserve; Lead/Trey approval. No A6 compute yet.**
 
-## 4W. A6 final pre-launch record — **WITHHELD: smoke executed confirmatory seed 200 (fresh-block claim false)**
+## 4W. A6 final pre-launch record — **RESOLVED: NON-CONFIRMATORY PRECISION STUDY, CLEARED FOR OPERATIONAL GATES**
 
-Runner/manifest verified: `run_paperC_A6.py` sha **`392d9847…f63c`** @ `6adf0a2`; `PAPER_C_A6_MANIFEST.json` sha
-**`b6af6030025f17d5c4b65e994a59faa6e0ba95c50922a96013c79b0c1c362f96`** @ `41a7235`, status
-`FROZEN_PENDING_LAUNCH_RECORD`; cites prereg MD `0467c165…`, JSON `184c87ed…`, analysis `611248fb…@852cdc8`, runner
-`392d9847…@6adf0a2`. Runner rejects 0–7/100–115/300–307; 36 cells; N=600/T=46; estimation/precision relabel; CI decision
-rule; ≤10 CPU-h; T2/T3→M1/M2; A5 excluded. **But the host smoke executed cell `S0.85|L0.25|A|P55` with seed 200**,
-which belongs to the declared confirmatory block **200–207** (row written, wall 2.88 s). The manifest still says the
-block is **"fresh / never used in screening (0-7), A5 (100-115), or pilots (300-307)"** — that claim is now **false**:
-at least one confirmatory seed has been executed. Even if the smoke row is kept out of the A6 out-dir and never
-aggregated, the **fresh-block precondition for a clean confirmatory/precision run is compromised** and the manifest
-provenance is inaccurate.
+**Smoke hygiene fixed at commit `3bfa4fe` (current authoritative state; the earlier cited `7f7b3c11…`/`101f9000…` are
+superseded).** Verified current hashes: `PAPER_C_A6_PREREG.md` **`be8ff7a4…50a`**, `.json` **`1f338a62…30ef`**,
+`analyze_paperC_A6.py` **`ed46ff40…e4d3`**, `run_paperC_A6.py` **`41a35bd2…a2c1`** @ `3bfa4fe`;
+`PAPER_C_A6_MANIFEST.json` **`cd498079…6262`** @ `3bfa4fe`, status `FROZEN_PENDING_LAUNCH_RECORD`, citing all four.
 
-**Required before the final pre-launch record:**
-1. **Smoke with a non-declared seed** (e.g. **900**) outside all blocks; delete/archive the seed-200 smoke row and attest
-   that no outcome values from it were read.
-2. **Restore an untouched confirmatory block.** Cleanest: re-declare a new fresh block (e.g. **400–407**), update the
-   runner's CONFIRM_SEEDS/forbidden lists, analysis assert, prereg MD/JSON, and manifest; or provide a signed attestation
-   that seed 200 was executed but not read and exclude it — but the power rule requires 8 seeds, so a new block is
-   preferable.
-3. **Correct the manifest** `seeds.fresh/never_used` and `host_smoke` to describe exactly what was executed.
-4. Then remaining gates: **Lead/Trey approval; box allocation + reserve; blocking degeneracy pilot PASS (300–307,
-   variance-only); frozen manifest with final hashes.**
+* **Fresh confirmatory block moved to 400–407**, never executed; block **200–207 EXCLUDED** after the seed-200 host
+  smoke — row deleted, **no outcome values read (attested)**, runner refuses 200–207; the prior seed-200 smoke is a
+  recorded contamination event, not data.
+* **Smoke re-run with non-declared seed 900 only** (`--smoke`, stage smoke, separate dir, never aggregated);
+  runner refuses 0–7/100–115/200–207/300–307 and any non-400–407 seed in normal mode; analysis script asserts 400–407;
+  pilot block 300–307 remains variance-only.
+* Design/citations: 36 cells, N=600/T=46, canonical gates, relabelled **ESTIMATION/PRECISION** study (expected **FAILS**
+  vs minima +3/+2; no confirmation claim; A7 required for genuine confirmation); CI decision rule; T2/T3→M1/M2;
+  A5 excluded; ≤10 CPU-h; prereg/JSON/runner/analysis hashes all cited in the manifest.
 
-**No A6 compute has run; A5 remains VOID; no Paper C confirmatory claim; CSV frozen. This is a provenance/smoke-hygiene
-hold, not a design objection — the relabelled precision design and decision rule were otherwise accepted.**
+**Final pre-launch record: A6 is CLEARED ONLY AS A NON-CONFIRMATORY ESTIMATION/PRECISION STUDY; no Paper C confirmatory
+claim.** Remaining operational gates before any compute: **(1)** Lead/**Trey approval**; **(2)** box allocation + 1–2 slot
+reserve; **(3)** **blocking degeneracy pilot PASS** (block 300–307, variance-only); **(4)** frozen manifest final hashes.
+**No A6 compute has run; A5 remains VOID; CSV frozen.**
 
 ## 5. Evidence-status register (programme level)
 
