@@ -1408,6 +1408,29 @@ unresolved. Commit the corrected script with a new sha before launch.
 **Gates still open:** A6 runner `run_paperC_A6.py` authored/committed and cited by sha in the A6 manifest; Lead/Trey
 approval; degeneracy pilot PASS; allocation/reserve; frozen A6 manifest. **Status: NOT CLEARED; no A6 compute.**
 
+## 4V. A6 relabelled estimation/precision study — **CLEARED AS NON-CONFIRMATORY (2 metadata fixes before launch)**
+
+Artefacts verified: `PAPER_C_A6_PREREG.md` sha **`b7f2ac5c…279d`**, `.json` **`32572561…3d5c`**, analysis script
+`analyze_paperC_A6.py` sha **`611248fb…b1b6`** (commit `852cdc8`). The relabel is correct and accepted: status
+**`ESTIMATION_PRECISION_STUDY_RELABELLED`**; same 36 cells/S/L/N=600 as screening; screening effects T1′ +0.655 pp
+(SD .224) and T4′ +1.767 pp (SD .290) are below minima +3.0/+2.0; fresh seeds add MC noise; **expected decision FAILS
+(CI entirely below minimum) is pre-declared; no confirmatory claim**; route to genuine confirmation is a new **A7**
+amendment with a lever/estimand that can plausibly reach the minima. Decision rule **fixed** in `decide()`:
+`FAILS` if direction wrong or CI entirely below min; `HOLDS` only if CI entirely above min + Holm p<.05;
+`INDETERMINATE` only if CI crosses min (or above without Holm significance). Fresh seeds 200–207; T2/T3 = M1/M2
+manipulation checks; no A5 reuse; T1′/T4′ precision family; Holm m=2; 5k bootstrap; degeneracy screen; ≤10 CPU-h.
+
+**Two metadata fixes required before launch (not design changes):**
+1. **Stale analysis-script citation:** prereg MD (line 107) and JSON `analysis` block still cite
+   `93d762e0…@e6cd2d0`; update both to **`611248fb…@852cdc8`** (and ensure the A6 manifest cites it).
+2. **Residual power wording:** line 60 still says "the tests are powered ≫0.99 for the declared effects"; correct to the
+   relabel language — power is to detect the pre-declared minima; A6 is a **precision estimate** and the pre-declared
+   expectation is **FAILS** because the design's effects are below the minima; no confirmation claim.
+
+**Gates unchanged:** A6 runner `run_paperC_A6.py` authored/committed and cited by sha in the frozen A6 manifest; Lead/Trey
+approval; degeneracy pilot PASS; allocation/reserve. **Status: CLEARED ONLY AS A NON-CONFIRMATORY ESTIMATION/PRECISION
+STUDY; no confirmatory claim; expected FAILS; A7 required for genuine confirmation; no A6 compute yet.**
+
 ## 5. Evidence-status register (programme level)
 
 | Status | Count (paper + programme rows) | Notes |
