@@ -1,6 +1,6 @@
 {
   "document": "Paper C CONFIRMATORY launch manifest (pre-launch; cites A4 + frozen passers + committed runner)",
-  "status": "FROZEN_APPROVED_A5 (clean A5 run confirm_a5; canonical A5 aa1d0bd; old overrun killed/abandoned)",
+  "status": "VOID (run stopped 2026-11-26 07:58 CST; defects verified; no aggregation/summary; A5 superseded by A6 redesign)",
   "frozen_utc": "2026-11-26",
   "stage": "PAPER_C_STAGE=confirmatory",
   "citations": {
@@ -201,5 +201,16 @@
     "adjudication_commit": "1c51f17",
     "rule": "exactly 16 matched seeds 100-115; 116-131 excluded; estimands/Holm unchanged; no optional stopping; precision SE x sqrt(2); report A5 interim precision; envelope <=24 CPU-h"
   },
-  "provenance_note": "The clean run was launched with --analysis-commit b825796, which is a SUPERSEDED DUPLICATE A5 record (PAPER_C_A5_16SEED_TRUNCATION.*, mapping b825796 -> canonical A5: same rule, no analysis). The canonical A5 record is docs/audit/PAPER_C_A5_SEED_TRUNCATION.md sha 365155965423b4f9171b5ad69a87dd0ef11c0710b5216190d043beebfb16bf99 (commit aa1d0bd, approved 1c51f17). The final confirmatory artefact/manifest MUST cite the canonical A5; b825796 must not be presented as authoritative. This document is the authoritative manifest (sha recorded in the commit)."
+  "provenance_note": "The clean run was launched with --analysis-commit b825796, which is a SUPERSEDED DUPLICATE A5 record (PAPER_C_A5_16SEED_TRUNCATION.*, mapping b825796 -> canonical A5: same rule, no analysis). The canonical A5 record is docs/audit/PAPER_C_A5_SEED_TRUNCATION.md sha 365155965423b4f9171b5ad69a87dd0ef11c0710b5216190d043beebfb16bf99 (commit aa1d0bd, approved 1c51f17). The final confirmatory artefact/manifest MUST cite the canonical A5; b825796 must not be presented as authoritative. This document is the authoritative manifest (sha recorded in the commit).",
+  "void_record": {
+    "stopped_utc": "2026-11-26T07:58Z CST approx",
+    "authority": "Lead + operator relay (Claude/Opus -> Trey), defects independently verified by Lead",
+    "defects": [
+      "T3 withheld deterministically 0.144 in 96/96 exposed P55 runs (SE 0; setting not estimand)",
+      "T2 own_share C .889-.945 vs A .148-.524 is a manipulation check; firm_ban enters own/(own+firm) outcome+denominator",
+      "A5 Holm m=2 narrowing (vs prereg T1-T4) means T2/T3 can only pass while T1/T4 failed screening -> indefensible confirmatory claim"
+    ],
+    "state": "driver/cells killed 2272/2273/2276-2285; finalizer killed; queue/STOP_CONFIRM_A5; checkpoints 10 rows/6 cells preserved; no aggregation/summary; Mac poller stopped",
+    "next": "A6 redesign required: behavioural estimands not mechanically determined; treatment not in outcome definition/denominator; pre-launch degeneracy screen; manipulation checks separate; full T1-T4 Holm family; adequate power/MDE; pilot for variance only; no A5 data reuse; new A6 prereg/manifest/runner pins. Do not resume A5 or start new confirmatory run."
+  }
 }

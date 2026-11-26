@@ -47,3 +47,32 @@ manifest is corrected to **uncertainty = 16 matched seeds (A5, 100–115), SE×�
 aggregator commit and the A5 approval (`1c51f17`), and reconciles `wall_note` (~21.6 CPU-h / ~3.6 h wall for the 16-seed
 run) with `observed_runaway` (32-seed plan: 43.2 CPU-h / 7.2 h). The 8-seed snapshot is **non-inferential crash
 insurance only** — it is not analysed and is not a stopping source.
+
+## 2026-11-26 07:58 CST — A5 RUN STOPPED / VOID (Lead + operator relay; defects verified independently)
+
+**Status: VOID / NO RESULT.** Lead stopped `confirm_a5` at **07:58 CST** on an operator relay (Claude/Opus → Trey) and
+independently verified the defects from the screening artefact (not merely relayed):
+
+1. **T3 is deterministic by construction:** `withheld` = exactly **0.144** in **96/96 exposed P55 runs** (1 distinct
+   value; SE 0; arithmetic `h_max*(1-pay_ratio)*(1-monitoring) = 0.4*0.45*0.8`). It is a **setting**, not an estimand;
+   more seeds cannot test it.
+2. **T2 is a manipulation check:** `own_share` C ≈ 0.889–0.945 vs A ≈ 0.148–0.524 (SE ≈0.0003), driven by
+   `firm_ban=.9` inside an **own/(own+firm)** outcome — the treatment input returns in the outcome, and the denominator
+   embeds the treatment.
+3. Consequently the m=2 (T2/T3) family can only "pass" while the substantive hypotheses **T1/T4 failed screening**;
+   combined with the A5 narrowing (Holm m=2 vs prereg T1–T4) a confirmatory claim is indefensible.
+
+**Execution state:** driver+cells killed (PIDs 2272/2273/2276–2285), finalizer killed, `queue/STOP_CONFIRM_A5` written;
+**checkpoints preserved: 10 rows / 6 cells in `/root/work/paperC/confirm_a5/`; no aggregation, no summary JSON**;
+Mac poller stopped. Box stays on (no shutdown; next-compute decision with operator/Lead). **Do not resume A5, do not
+start a new confirmatory run.** The preserved rows are a failed-run record, not analysable.
+
+**Redesign requirements recorded (Paper C confirmatory not runnable under this design; no claim):** behavioural
+estimands not mechanically determined by treatment; treatment not in the outcome definition/denominator; pre-launch
+degeneracy screen (distinct values/variance/input→output mapping; reject SE=0/input-derived); manipulation checks
+separate; full pre-declared T1–T4 family for Holm (no post-screening narrowing); adequate power/MDE; pilot used for
+variance only; no A5 data reuse; new **A6** prereg/manifest/runner pins.
+
+**Communication/incident:** box SSH became unreachable ~07:45 CST (same network-side signature as 01:17; box is
+**not** powered off — `uptime` 90 d; the finalizer `shutdown` was a container no-op). Controller monitoring is blind
+until connectivity returns; `SHUTDOWN_OK` must not be touched.
