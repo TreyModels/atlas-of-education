@@ -1,6 +1,6 @@
 {
   "document": "Paper C v2 / A6 preregistration (DRAFT for adjudicator review; no compute)",
-  "status": "DRAFT_PENDING_ADJUDICATOR_REVIEW_AND_LEAD_TREY_APPROVAL",
+  "status": "ESTIMATION_PRECISION_STUDY_RELABELLED",
   "engine": {
     "commit": "846c9e0",
     "core_sha256": "e111397bd8a50f94e82bb77715f236ee3d5c0bf863a23d84afdf1c6c71fa8e71",
@@ -151,5 +151,13 @@
     "no_claim": "no Paper C claim until A6 confirmatory artefact verified and adjudicated",
     "screening_note": "screening T1/T4 effects used ONLY for variance/MDE, not as hypotheses or design choices",
     "manipulation_checks": "M1/M2 reported separately, never as estimands/claims"
+  },
+  "relabel": {
+    "authority": "adjudication 0e5caae",
+    "date": "2026-11-26",
+    "reason": "same 36 cells/S/L/N=600 as screening; screening T1prime=+0.655pp (SD .224), T4prime=+1.767pp (SD .290) below minima +3.0/+2.0; fresh seeds add only MC noise",
+    "expected_decision": "FAILS (CI entirely below minimum) for both",
+    "no_confirmatory_claim": true,
+    "route_to_confirmatory": "new amendment A7 with a lever/estimand that can plausibly reach the minima, pre-declared, pilot variance only"
   }
 }

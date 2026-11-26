@@ -1,6 +1,8 @@
 # PAPER C v2 / A6 — preregistration (host-only draft; no compute until Lead/Trey approval)
 
-**Status: DRAFT FOR ADJUDICATOR REVIEW. No A6 compute has been launched.** A5 is **VOID** (no A5 data reused:
+**Status: DRAFT FOR ADJUDICATOR REVIEW. No A6 compute has been launched.**
+
+**DESIGN RELABEL (per adjudication 0e5caae, 2026-11-26):** A6 is an **ESTIMATION / PRECISION study**, not a confirmatory test. It uses the same 36 cells/S/L/N=600 as screening, whose screening effects under A6 definitions are T1′ = +0.655 pp (SD .224) and T4′ = +1.767 pp (SD .290) — both below the minima (+3.0/+2.0). Fresh seeds add only MC noise, so A6 can at best produce a **precise below-minimum estimate**; expected decision **FAILS (CI entirely below minimum)**. No "confirmatory holds" claim will be made. A genuine confirmatory test would require a new amendment **A7** with a lever/estimand that can plausibly reach the minima (e.g. widened L gate contrast, or a behavioural outcome with a larger standardised effect), pre-declared and piloted for variance only. A5 is **VOID** (no A5 data reused:
 the preserved 10 rows / 6 cells are a failed-run record only; A5 manifest status VOID). This A6 prereg follows Claude's
 redesign Part 2 and the adjudicator's A6 requirements: behavioural estimands not mechanically determined by treatment;
 treatment absent from outcome definition/denominator; pre-launch degeneracy screen; manipulation checks separate; full
@@ -24,7 +26,7 @@ pre-declared Holm family (no post-screening narrowing); power/MDE-derived seed c
 
 ## 2. Estimands and tests (declared family)
 
-**Primary confirmatory family (Holm, m=2, α=.05, two-sided):**
+**Primary estimation family (Holm, m=2, α=.05, two-sided; reported as precision estimates, NOT confirmatory claims):**
 * **T1' (substantive S estimand):** K-12 tutoring **participation rate** (`tut_k12_rate`, pp). Pre-declared direction:
   **S↑ ⇒ participation↓**; contrast = mean over design cells of `rate(S=.85) − rate(S=1.15)` (pp); **minimum effect
   +3.0 pp** (i.e. participation at least 3 pp lower at S=1.15).

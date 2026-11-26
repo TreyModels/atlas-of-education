@@ -87,14 +87,20 @@ def main():
     z_a, z_b = 2.3940, 0.8416
     mde = {k: (z_a + z_b) * decl_sd[k] / math.sqrt(max(len(v1 if k == 'T1prime' else v4), 1)) for k in decl_sd}
     def decide(k, mean, ci, p_holm, min_e):
-        dir_ok = mean > 0
-        meets = abs(mean) >= min_e
-        sig = p_holm < 0.05
-        if dir_ok and meets and sig: return 'HOLDS'
-        if not dir_ok: return 'FAILS (direction)'
-        return 'INDETERMINATE'
+        """Adjudicator-corrected rule (A6 relabel): a precise below-min result is FAILS, not INDETERMINATE.
+        HOLDS only if the whole CI lies above the minimum (correct direction + Holm-significant);
+        FAILS if direction is wrong, or if the whole CI lies below the minimum; otherwise INDETERMINATE."""
+        lo, hi = (ci[0], ci[1]) if ci else (float('nan'), float('nan'))
+        sig = (p_holm is not None) and (p_holm < 0.05)
+        if mean is None or ci is None: return 'NO_DATA'
+        if mean <= 0: return 'FAILS (direction)'
+        if hi < min_e: return 'FAILS (CI entirely below minimum)'
+        if lo > min_e and sig: return 'HOLDS (CI entirely above minimum)'
+        if lo > min_e and not sig: return 'INDETERMINATE (CI above minimum but not Holm-significant)'
+        return 'INDETERMINATE (CI crosses minimum)'
+
     res = dict(
-        paper='Paper C A6 confirmatory analysis', source=path, source_sha256=sha(path),
+        paper='Paper C A6 ESTIMATION/PRECISION study (relabelled per adjudication 0e5caae; not confirmatory)', source=path, source_sha256=sha(path),
         design=dict(n=d.get('n_runs'), n_cells=d.get('n_cells'), seeds=design_seeds, n_seeds=len(design_seeds),
                     N=600, T=46, family=['T1prime', 'T4prime'], holm_m=2, alpha=0.05,
                     methods=['paired seed contrasts','5,000-draw seed bootstrap','Holm m=2','MDE from pre-declared SDs','degeneracy screen']),
