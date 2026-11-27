@@ -148,7 +148,7 @@ export function Navigation({ route, navigate, t, language, setLanguage }: Naviga
       <button className={route === 'catalogue' ? 'active' : ''} onClick={() => go('catalogue')}><BookOpen size={17} /><span>{t('Research catalogue')}</span></button>
       <a href="research/index.html"><ArrowUpRight size={17} /><span>{t('Research library')}</span></a>
       <a href="research/fertility.html"><ArrowUpRight size={17} /><span>{t('Fertility collapse lab')}</span></a>
-      <a href="research/shadow-education.html"><ArrowUpRight size={17} /><span>{t('Shadow education lab')}</span></a>
+      <button onClick={() => go('story-shadow')}><School size={17} /><span>Guangzhou model</span></button>
       <a href="research/out-of-africa.html"><ArrowUpRight size={17} /><span>{t('Coast or herds? Out of Africa')}</span></a>
       <a href="reference/education/index.html"><ArrowUpRight size={17} /><span>{t('Full Education Atlas')}</span></a>
     </div>

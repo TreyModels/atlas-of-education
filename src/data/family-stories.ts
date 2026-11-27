@@ -221,34 +221,11 @@ export const familyStories: Record<ModelFamily, FamilyStory> = {
   },
 
   shadow: {
-    kicker: 'What our models support',
-    title: 'Why do pupils pay their own teachers?',
-    lede: 'In Cambodia, about four in five secondary pupils buy private tutoring, and most of it comes from their own teachers. An agent-based model of 72 teachers and 1,260 pupils tests three rival explanations against seven published patterns.',
-    sections: [
-      {
-        heading: 'Three rival explanations, one calibration',
-        blocks: [
-          { kind: 'para', tag: 'sim', text: 'The thin timetable (the curriculum does not fit the official hours), diversion (teachers hold content back for paid sessions) and favour (paying buys goodwill) each fit the seven published patterns about equally well after ABC-SMC calibration. The data cannot tell them apart.' },
-          { kind: 'para', tag: 'sim', text: 'All three also agree on what policies would do, but only because they share most of their code. That agreement is not evidence.' },
-          { kind: 'para', tag: 'sim', text: 'Favour is not even a separate model. A favour for buying from your own teacher is the same as raising everyone’s demand and both outside costs by the same amount. Rewritten that way, all 116 fitted favour settings give exactly the same results as thin settings.' },
-        ],
-      },
-      {
-        heading: 'What the calibrated worlds say',
-        blocks: [
-          { kind: 'para', tag: 'sim', text: 'Even under the diversion explanation, calibrated teachers withhold almost nothing — median 0% of content held back. In about a fifth of fresh school systems, diversion settings withhold more than 1% (95th percentile 9%). In about a fifth of fresh school systems, diversion settings withhold more than 1% (95th percentile 9%).' },
-          { kind: 'para', tag: 'open', text: 'Recalibrated across 10 school systems, settings fit 37–44% of fresh random systems (up from 17–19%), but only 1–7% fit in most of them. The explanations agree on policy because the effect comes from code they share: removing the shared thin-market or alternative-provider channel moves all of them together, while the diversion mechanism changes nothing. Treat the policy effects as model-conditional.' },
-        ],
-      },
-      {
-        heading: 'Who leaves school: the credential-floor test',
-        blocks: [
-          { kind: 'para', tag: 'data', text: 'A separate model offers three explanations for who leaves school, each predicting a share of lower-secondary non-completers from the poorest 40% of households. UIS completion rates by wealth quintile (from the Cambodia DHS 2021–22) put that share at 55–64%. With a hard liquidity threshold the relational floor predicts 85% and fails. With a graded threshold, which also fits the full quintile profile, all three predict 57–58% and fit.' },
-          { kind: 'para', tag: 'open', text: 'The verdict depends on how the liquidity constraint is modelled. The hard version misses the shape of the wealth gradient. The graded version fits it and cannot rank the explanations. These data do not discriminate the relational floor.' },
-        ],
-      },
-    ],
-    bottomLine: 'Shadow education is not one disease with one cause. The model cannot crown a single explanation. Its explanations agree on policy only because they share most of their code, so the agreement is not independent evidence. Keep measuring to break the tie.',
+    kicker: 'Guangzhou working paper',
+    title: 'Same score, same chance?',
+    lede: 'Explore how family resources and tutoring shape opportunities in a simulated Guangzhou cohort.',
+    sections: [],
+    bottomLine: 'The outcomes are conditional on model assumptions.',
   },
 
   angkor: {

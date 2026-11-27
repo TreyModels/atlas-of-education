@@ -76,6 +76,11 @@ export function Library({ t, navigate }: { t: Translate; navigate: (id: string) 
 
   return <main id="main-content">
     <section className="landing-hero shell">
+      <p className="eyebrow">FEATURED RESEARCH · GUANGZHOU</p>
+      <h2>Same score, same chance?</h2>
+      <p className="landing-lede">Explore how tutoring, family resources and fixed seats shape simulated opportunities in Guangzhou.</p>
+      <button className="button button-primary" onClick={() => navigate('story-shadow')}>Explore the Guangzhou model</button>
+      <hr />
       <p className="eyebrow">{t('COMPUTATIONAL SOCIAL SCIENCE · BY TREY MENEFEE')}</p>
       <h1>{t('Social science you can run.')}</h1>
       <p className="landing-lede">{t('Explore questions about schools, families, cities and states through models you can inspect and change. Some reproduce published findings; others test proposed mechanisms or teach an idea. Each states its assumptions, results and limits. Start with a question, then follow the reasoning.')}</p>

@@ -12,7 +12,7 @@ import { Workbench } from './components/Workbench'
 
 import { AngkorJourney } from './components/AngkorJourney'
 import { ccpJourney } from './data/ccp-journey'
-import { shadowJourney } from './data/shadow-journey'
+import { Guangzhou } from './components/Guangzhou'
 import { educationJourney } from './data/education-journey'
 import { systemsJourney } from './data/systems-journey'
 import { ArticlePage } from './components/ArticlePage'
@@ -111,7 +111,7 @@ export default function App() {
       {route === 'how-models-work' && <ArticlePage article={howModelsWork} t={t} />}
       {route === 'workflow' && <ArticlePage article={workflow} t={t} />}
       {storyFamily === 'angkor' && <AngkorJourney key="angkor" t={t} navigate={navigate} />}
-      {storyFamily === 'shadow' && <AngkorJourney key="shadow" t={t} navigate={navigate} journey={shadowJourney} />}
+      {storyFamily === 'shadow' && <Guangzhou />}
       {storyFamily === 'politics' && <AngkorJourney key="politics" t={t} navigate={navigate} journey={ccpJourney} />}
       {storyFamily === 'extension' && <AngkorJourney key="extension" t={t} navigate={navigate} journey={extensionJourney} />}
       {storyFamily === 'fertility' && <AngkorJourney key="fertility" t={t} navigate={navigate} journey={fertilityJourney} />}

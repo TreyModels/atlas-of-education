@@ -12,8 +12,8 @@ export const statusIntro = {
 }
 
 export const familyStatus: FamilyStatus[] = [
+  { family: 'shadow', route: 'story-shadow', narrated: true, purposes: ['mechanism'], states: ['developing'], line: 'Guangzhou scenario analysis with transparent assumptions, synthetic cohorts and selected Lean proofs.' },
   { family: 'angkor', route: 'story-angkor', narrated: true, purposes: ['published', 'mechanism', 'teaching', 'accounting'], states: ['checked', 'developing', 'historical'], line: 'Built on a peer-reviewed study (Klassen et al. 2022); the extensions are mechanism explorations, labelled one by one.' },
-  { family: 'shadow', route: 'story-shadow', narrated: true, purposes: ['mechanism'], states: ['historical', 'developing'], line: 'Three explanations of tutoring fit the published patterns equally well; the archived calibration predates later corrections.' },
   { family: 'politics', route: 'story-politics', narrated: true, purposes: ['mechanism'], states: ['checked', 'developing', 'evaluated'], line: 'Four versions of a path-dependence model; a holdout test cannot yet tell it apart from simpler mechanisms. Synthetic agents only.' },
   { family: 'extension', route: 'story-extension', narrated: true, purposes: ['mechanism'], states: ['developing', 'historical'], line: 'Farmer field schools and food politics: two developing mechanism models and two historical mechanism cards. Observational motivation is not calibrated validation.' },
   { family: 'planning', route: 'story-planning', narrated: true, purposes: ['teaching', 'accounting'], states: ['checked', 'developing'], line: 'Planning methods in the UN education-planning tradition, with the arithmetic shown. Not official UNESCO software.' },

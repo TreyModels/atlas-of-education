@@ -92,9 +92,7 @@ const fertility: CatalogueItemInput[] = [
 ]
 
 const shadow: CatalogueItemInput[] = [
-  { id: 'shadow-education', family: 'shadow', title: 'Shadow education lab', question: 'Why do pupils pay their own teachers? Three rival explanations tested against seven published patterns.', method: 'Agent-based model · Cambodia', format: 'Write-up', href: 'research/shadow-education.html', keywords: 'shadow education private tutoring Cambodia Bray diversion favour' },
-  { id: 'shadow-abm', family: 'shadow', title: 'Tutoring ABM bundle', question: 'Historical calibration bundle. Provider observation equations and the SMC evidence estimator were subsequently corrected; new calibration runs are required.', method: 'Code & data · download', format: 'Code & data download', route: 'story-shadow', downloadHref: 'research/shadow/tutoring_abm.zip', keywords: 'tutoring agent based model code download' },
-  { id: 'shadow-dhs', family: 'education', title: 'Credential-floor DHS test', question: 'Who leaves school? Three structures predict different shares of leavers from the poorest 40% of households, checked against the Cambodia DHS.', method: 'Code & data · download', format: 'Code & data download', route: 'story-shadow', downloadHref: 'research/shadow/credential_floor_dhs.zip', keywords: 'credential floor DHS Cambodia poorest households download' },
+  { id: 'shadow-education', family: 'shadow', title: 'Same score, same chance?', question: 'How do family resources and tutoring shape simulated opportunities in Guangzhou?', method: 'Monte Carlo · Guangzhou', format: 'Narrated journey', route: 'story-shadow', keywords: 'Guangzhou shadow education tutoring fairness zhongkao gaokao' },
 ]
 
 const deephistory: CatalogueItemInput[] = [
@@ -173,8 +171,8 @@ export const familyInfo: Record<ModelFamily, { title: string; short: string; que
   },
   shadow: {
     title: 'Shadow education', short: 'Shadow ed',
-    question: 'Why do pupils pay their own teachers?',
-    description: 'Explore rival mechanisms for private tutoring in Cambodia. Corrected provider measurements require recalibration; policy comparisons depend on shared rules.',
+    question: 'Does the same score mean the same chance?',
+    description: 'Explore family resources, tutoring and fixed seats in an illustrative Guangzhou simulation.',
   },
   deephistory: {
     title: 'Deep history · Human dispersal', short: 'Deep history',
@@ -215,9 +213,7 @@ export const familyResearch: Record<ModelFamily, { label: string; href: string }
     { label: 'Research bundle · code, data & findings', href: 'research/fertility/fertility-research-full.zip' },
   ],
   shadow: [
-    { label: 'Shadow education lab', href: 'research/shadow-education.html' },
-    { label: 'Tutoring ABM bundle', href: 'research/shadow/tutoring_abm.zip' },
-    { label: 'Credential-floor DHS test', href: 'research/shadow/credential_floor_dhs.zip' },
+    { label: 'Guangzhou working paper', href: 'research/guangzhou/paper.pdf' },
   ],
   deephistory: [
     { label: 'Coast or herds? Full write-up', href: 'research/out-of-africa.html' },
