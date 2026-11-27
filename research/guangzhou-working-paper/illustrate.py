@@ -23,7 +23,7 @@ C=canvas.Canvas(str(D.parent/'Same Score Same Chance.pdf'),pagesize=(612,792),pa
 C.setTitle('Same score, same chance? | Guangzhou working paper')
 C.setAuthor('James W. Menefee III')
 ink='#182F37'; teal='#006F68'; red='#A64B26'; soft='#DBE9E6'; muted='#486369'; light='#D1DDDC'; paper='#F7F7F2'
-tag='https://github.com/TreyModels/atlas-of-education/releases/tag/v2026.11.27-guangzhou'
+tag='https://github.com/TreyModels/atlas-of-education/releases/tag/v2026.11.27-guangzhou-r1'
 doi='https://doi.org/10.5281/zenodo.24369167'
 def color(x):return HexColor(x)
 def txt(x,y,s,size=11,font='Sans',c=ink):
@@ -53,9 +53,9 @@ def caption(y,s):return para(y,s,size=9.5,font='Sans')
 def link(url,s):return '<a href="'+url+'" color="#006F68"><u>'+s+'</u></a>'
 head(1,'Research question','Same score, same chance?')
 para(151,'Shadow education and the route to university in Guangzhou',size=17)
-para(195,'James W. Menefee III   ·   27 November 2026',size=10,font='Sans')
+para(195,'James W. Menefee III   ·   27 November 2026 · Revision 1.1',size=10,font='Sans')
 y=para(246,'Imagine two pupils entering senior high school with the same exam score. One had strong teachers and private lessons. The other reached that score with fewer resources. If both later win university places at similar rates, what can we conclude about the fairness of the competition?',size=16,leading=23)
-y=para(y,'We follow synthetic pupils through the zhongkao (senior-high entrance exam), school and class placement, tutoring and a ranked university-admission proxy. We ask how the answer changes when we compare families at the same entrance score, the same starting ability, or both.')
+y=para(y,'We follow synthetic pupils through the zhongkao (senior-high entrance exam), school and class placement, tutoring and a ranked university-admission proxy. We ask how the answer changes when we compare families at comparable entrance-score bands, comparable modeled starting-ability bands, or both.')
 rect(48,y+1,516,93,soft)
 para(y+14,'Across 1,024 simulated cohorts, the richer-to-poorer admission ratio was 0.91 at comparable entrance scores, 1.19 at comparable scores and starting ability, and 1.36 at comparable starting ability. All three statements describe the same model.',x=64,w=483,size=12)
 y+=117
@@ -106,7 +106,7 @@ y=para(y,'Lean 4.36.0 checked these rates by exact rational arithmetic. For any 
 y=para(y,'Banding uses a ranked list of distinct pupil IDs. Taking its first k IDs yields exactly the smaller of k and school size for every ranking, including a ranking containing score ties. University admission uses a different rule in Python: everyone at or above the cutoff qualifies. Two scores of 8 at a one-seat cutoff form a checked counterexample to universal exact capacity.')
 para(y,'Scope: proofs apply to the stated mathematical rules. The finite tests below connect those rules to sampled Python outputs. Clinical, psychological or biological interpretations of “talent” are outside the model.',size=10,font='Sans')
 end()
-head(5,'Historical scenario','A smaller gap in most cohorts')
+head(5,'Paired model scenarios','A smaller gap in most cohorts')
 y=para(150,'We run the same parameter setting twice, starting with the same random seed. Both scenarios include boarding, holiday tutoring and alternative routes. The “before” scenario switches off the pre-gate tutoring restriction and senior-2 re-banding. This design pairs comparable settings and initial pupils. Later random events can differ when the scenarios follow different paths.')
 delta=col('T')-col('T_before')
 sub(y+13,'Change in the rich-to-poor ratio at comparable ability');y+=35
@@ -156,7 +156,7 @@ items=[
 ('The school-choice margin','N2 subtracts the expected loss of top-class access from a stronger school’s value added. Suppose the school adds 0.20 skill units, the top class adds 0.44, and the chance of that class falls from 65% to 15%. The net is 0.20 − 0.44 × 0.50 = −0.02. This example holds other channels fixed.'),
 ('Why families buy tutoring','N3 proposes that families weigh price against the risk of missing a consequential threshold. A marginal benefit calculation describes an interior candidate. The optimum can also be zero or all affordable hours. Python uses a simpler demand rule: both tails have four times the middle group’s base weight, wealth increases demand, and one round of class-average demand influences take-up. A monotonicity proof for the insurance term alone cannot characterize total demand.'),
 ('How a seat is won','N4 describes separate gates with their own eligibility and capacities. The frozen simulation implements one ranking. Its 4,000-seat target equals 10% of the whole synthetic age cohort, with only academic-track students eligible. Wealth-related selection into proxy routes is an assumption. No full matching market or response of all families to one another’s investments is estimated.'),
-('What a regression recovers','Bray (2014) explains why research on tutoring effects is difficult to compare. Families select tutoring for different reasons and buy different amounts. A coefficient comparing any tutoring with none also combines term and holiday doses. Manski (1993) identifies a related difficulty for peer effects. The archived peer coefficient and simulated band premium use different units, leaving quantitative recovery unresolved.')]
+('What a regression recovers','Bray (2014) explains why research on tutoring effects is difficult to compare. Families select tutoring for different reasons and buy different amounts. The archived regressions require further validation: a coefficient comparing any tutoring with none combines term and holiday doses. Manski (1993) identifies a related difficulty for peer effects. The archived peer coefficient and simulated band premium use different units, leaving quantitative recovery unresolved.')]
 y=150
 for h,body in items:
     sub(y+11,h);y=para(y+22,body,size=10.8)
@@ -176,8 +176,8 @@ y=para(150,'The frozen generator is gz_v5.py (v5.1, archive commit 2082f47). The
 y=para(y,'For the primary extension, 31 inputs were sampled independently and uniformly across the archived ranges. One fresh cohort was generated for each of 1,024 parameter vectors. Each paired comparison reused the same vector and initial seed. The collection is an experiment over a chosen distribution of possible worlds. Its frequencies depend on the endpoints, independence assumption and uniform weights (Morris et al., 2019).')
 y=para(y,'The second experiment crossed 128 fresh parameter settings with eight seeds each. For change in T, the within-setting variance is the mean of the 128 sample variances. The variance of setting means includes cohort variance divided by eight, which we subtracted to estimate between-setting variance. The unit for uncertainty about settings is the setting. Treating eight replicates as eight new parameter settings would understate uncertainty.')
 y=para(y,'A local run and a Linux server run using different NumPy patch versions generated identical primary CSV bytes (SHA-256 in the package). This checks implementation reproducibility across two environments. Both executed the same code. Independent reimplementation, calibration on Guangzhou pupils, and independent statistical peer review remain open.')
-y=para(y,'The model was informed by the author’s observations and one confidential conversation with a tutoring provider in November 2026. Prices, schedules and client descriptions are contextual field evidence. The release contains synthetic draw-level results and source-linked aggregate benchmarks. Interview transcripts, recordings and pupil records are excluded. The author’s archived account reports consent; this analysis does not independently authenticate the consent record or establish institutional ethics approval.')
-para(y,'The full manuscript, archived scenario comparisons, checked Lean source, axiom output and input dictionary accompany this edition. The collected Atlas models have a '+link(doi,'collection DOI')+'. The '+link(tag,'versioned release')+' identifies this paper and its exact package. The simulation can be rerun independently of this document.',size=11)
+y=para(y,'The model was informed by the author’s observations and one confidential conversation with a tutoring provider in November 2026. Prices, schedules and client descriptions are contextual field evidence. The release contains synthetic draw-level results and source-linked aggregate benchmarks. Interview transcripts, recordings and pupil records are excluded. The conversation is informal context. Consent scope and institutional ethics approval have not been authenticated in this release.')
+para(y,'This illustrated paper is the canonical working paper. The technical supplement preserves the detailed equations and archived exploratory diagnostics. The archived scenario comparisons, checked Lean source, axiom output and input dictionary accompany this edition. The collected Atlas models have a '+link(doi,'collection DOI')+'. The '+link(tag,'versioned release')+' identifies this paper and its exact package. AI assisted the text, code, figures and proofs. The author is responsible for the final interpretation.',size=11)
 end()
 head(11,'Sources','References')
 refs=[
@@ -216,7 +216,7 @@ def arrow(x,y):
 box(48,235,516,52,'Primary school → junior secondary school','Nine years of compulsory education')
 arrow(306,287)
 box(48,300,516,55,'Zhongkao, eligibility and school preferences','Scores, registration, school plans and admissions batches interact.')
-arrow(306,355)
+line(306,355,306,361,teal);line(172,361,440,361,teal);line(172,361,172,368,teal);line(440,361,440,368,teal)
 box(48,368,249,80,'General senior high school','Public or private; admission through several categories.')
 box(315,368,249,80,'Vocational secondary education','Different schools and programmes, with routes to further study or work.')
 arrow(172,448);arrow(440,448)
@@ -230,7 +230,7 @@ para(150,'The code simplifies the real pathway. It generates pupils and ranks th
 box(48,226,516,55,'Synthetic pupils and junior-school inputs','Family wealth, modeled starting ability, teacher effects and pre-gate tutoring.')
 arrow(306,281)
 box(48,294,516,67,'Simulated entrance score and public academic-seat ranking','A single modeled cap limits non-local pupils in public academic places.')
-arrow(306,361)
+line(306,361,306,367,teal);line(128,367,484,367,teal);line(128,367,128,374,teal);line(306,367,306,374,teal);line(484,367,484,374,teal)
 box(48,374,160,116,'Public academic','Elite or regular school; some elite seats follow junior-school quota rules.')
 box(226,374,160,116,'Private academic','Only certain non-local pupils shut out of public seats, above the public cutoff and able to afford fees.')
 box(404,374,160,116,'Outside academic','Others are not followed through later education or work in this model.')

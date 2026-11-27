@@ -1,11 +1,30 @@
-# Same Score, Same Chance
+# Same Score, Same Chance — revision 1.1
 
-Working paper by James W. Menefee III. The illustrated paper and manuscript report synthetic scenarios, not estimates of Guangzhou outcomes. Code, exact Lean statements, synthetic data, public benchmarks and assumptions are included.
+James W. Menefee III, 27 November 2026.
 
-Run with Python 3 and NumPy: `python sweep.py`, `python summarize.py`. Run `python repeats.py > repeats.csv` for the repeated-cohort experiment. Run `lean Admission.lean` with Lean 4.36.0. `illustrate.py` builds the PDF with ReportLab and system fonts.
+Read paper.pdf as the canonical illustrated working paper. manuscript.md is its technical supplement, including equations and archived exploratory diagnostics. FORMAL_AUDIT.md and RELEASE_CHECKS.md document checks and remaining limitations.
 
-The archived 150-draw v8 table and parameter register reproduce the earlier analysis. New 1,024-draw and repeated-cohort experiments are exploratory. Field transcripts and recordings are excluded. The code is the frozen historical model and retains its original comments.
+This is an exploratory simulation of synthetic cohorts. Model parameters are not calibrated to Guangzhou pupil records. The paired scenarios do not identify Double Reduction's causal effect.
 
-Contributions welcome via issues or pull requests. Please specify the parameter, source, population, year, units and plausible range. In particular, evidence on persistence of home, school and tutoring inputs would improve the model.
+Reproduce with Python 3 and NumPy:
+- python sweep.py
+- python summarize.py
+- python repeats.py > repeats.csv
 
-Atlas collection DOI: https://doi.org/10.5281/zenodo.24369167
+Check the stated mathematical propositions with Lean 4.36.0:
+- lean Admission.lean
+
+Build the PDF with Python, ReportLab, NumPy and Georgia/Arial or Liberation fonts:
+- python illustrate.py
+
+illustrate.py writes the paper to the parent directory. The release also includes paper.pdf at this directory's root for convenience. Charts are generated from the included draw-level outputs. ASSUMPTIONS.md documents the inputs and structural rules.
+
+The old 150-draw v8 results are preserved separately. Their preregistration timing has not been independently authenticated. New experiments are exploratory. No interview transcript or personal pathway is included.
+
+Please contribute source-linked corrections through issues or pull requests. Specify population, year, units, estimate, uncertainty and proposed parameter range.
+
+Earlier release DOI: https://doi.org/10.5281/zenodo.24575246
+Collection DOI: https://doi.org/10.5281/zenodo.24369167
+Revision 1.1: https://github.com/TreyModels/atlas-of-education/releases/tag/v2026.11.27-guangzhou-r1
+
+AI assistants helped draft code, text, figures and proofs. The author is responsible for the final scholarly interpretation. License follows the Atlas repository, CC BY-NC 4.0.
