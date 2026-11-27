@@ -1,0 +1,6 @@
+'Guangzhou.displacement' depends on axioms: [propext, Quot.sound]
+'Guangzhou.rival_bonus' depends on axioms: [propext, Quot.sound]
+'Guangzhou.strict_displacement_witness' does not depend on any axioms
+'Guangzhou.band_size' depends on axioms: [propext, Quot.sound]
+'Guangzhou.cutoff_tie' does not depend on any axioms
+'Guangzhou.conditioning_witness' depends on axioms: [propext, Classical.choice, Quot.sound]

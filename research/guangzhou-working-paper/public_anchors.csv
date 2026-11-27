@@ -1,0 +1,12 @@
+geography,year,measure,value,unit,denominator_or_scope,source
+China,2017,off-campus academic tutoring participation,36.1,percent,survey-weighted school pupils,https://ciefr.pku.edu.cn/docs/2024-12/bcd3767a1681440c99e79c5c9e94fcd0.pdf
+China,2019,off-campus academic tutoring participation,21.9,percent,survey-weighted school pupils,https://ciefr.pku.edu.cn/docs/2024-12/bcd3767a1681440c99e79c5c9e94fcd0.pdf
+China,2021,off-campus academic tutoring participation,23.0,percent,survey-weighted school pupils,https://ciefr.pku.edu.cn/docs/2024-12/bcd3767a1681440c99e79c5c9e94fcd0.pdf
+China,2022,off-campus academic tutoring participation,16.5,percent,survey-weighted school pupils,https://ciefr.pku.edu.cn/docs/2024-12/bcd3767a1681440c99e79c5c9e94fcd0.pdf
+China,2023,off-campus academic tutoring participation,13.5,percent,survey-weighted school pupils,https://ciefr.pku.edu.cn/docs/2024-12/bcd3767a1681440c99e79c5c9e94fcd0.pdf
+Guangzhou,2026,minimum official allocation share,50,percent,admission plan at each applicable high school,https://jyj.gz.gov.cn/gk/zfxxgkml/ywgz/zsks/content/post_10788402.html
+Guangzhou,2026,school migrant cap lower endpoint,8,percent,public high school plan,https://gzzk.gz.gov.cn/gkmlpt/content/10/10910/post_10910997.html
+Guangzhou,2026,school migrant cap upper endpoint,18,percent,public high school plan,https://gzzk.gz.gov.cn/gkmlpt/content/10/10910/post_10910997.html
+Guangzhou,2026,allocated seats,31858,seats,quota allocation plan,https://gzzk.gz.gov.cn/zkzz/zkxx/zkzx/content/post_10809606.html
+Guangzhou,2026,eligible pupils,115739,pupils,quota allocation eligibility,https://gzzk.gz.gov.cn/zkzz/zkxx/zkzx/content/post_10809606.html
+Guangzhou,2026,receiving junior schools,491,schools,quota allocation plan,https://gzzk.gz.gov.cn/zkzz/zkxx/zkzx/content/post_10809606.html
