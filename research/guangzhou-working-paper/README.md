@@ -1,8 +1,8 @@
-# Same Score, Same Chance — revision 1.1
+# Same Score, Same Chance
 
 James W. Menefee III, 27 November 2026.
 
-Read paper.pdf as the canonical illustrated working paper. manuscript.md is its technical supplement, including equations and archived exploratory diagnostics. FORMAL_AUDIT.md and RELEASE_CHECKS.md document checks and remaining limitations.
+Read paper.pdf for the paper. manuscript.md contains detailed methods, equations and exploratory diagnostics. FORMAL_AUDIT.md and RELEASE_CHECKS.md document checks and remaining limitations.
 
 This is an exploratory simulation of synthetic cohorts. Model parameters are not calibrated to Guangzhou pupil records. The paired scenarios do not identify Double Reduction's causal effect.
 
@@ -19,7 +19,7 @@ Build the PDF with Python, ReportLab, NumPy and Georgia/Arial or Liberation font
 
 illustrate.py writes the paper to the parent directory. The release also includes paper.pdf at this directory's root for convenience. Charts are generated from the included draw-level outputs. ASSUMPTIONS.md documents the inputs and structural rules.
 
-The old 150-draw v8 results are preserved separately. Their preregistration timing has not been independently authenticated. New experiments are exploratory. No interview transcript or personal pathway is included.
+The 150-setting mechanism experiment and 1,024-setting principal experiment are documented separately. All experiments are exploratory. No interview transcript or personal pathway is included.
 
 Please contribute source-linked corrections through issues or pull requests. Specify population, year, units, estimate, uncertainty and proposed parameter range.
 

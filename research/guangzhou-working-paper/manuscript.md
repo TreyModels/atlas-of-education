@@ -1,8 +1,8 @@
 # Same Score, Same Chance: Procedural Equity and Positional Competition in Guangzhou's Education System
 
-Technical supplement to the illustrated working paper · Revision 1.1 · 27 November 2026
+27 November 2026
 
-The canonical reader-facing paper is paper.pdf. This supplement preserves detailed equations and archived exploratory diagnostics. It uses the same frozen generator and distinguishes the archived 150-draw experiment from the new 1,024-draw extension.
+Detailed methods, equations and sensitivity analyses for the accompanying paper.
 
 James W. Menefee III
 
@@ -131,9 +131,9 @@ The model treats home, school and tutoring advantages as one stock with a common
 
 **What the rich routes buy.** For the richest fifth, post-gate tutoring and full-time institutions raise a pupil's own chance of a top-decile slot by a median 2.9 percentage points per 100,000 yuan (0.2-8.7). A pre-registered threshold claim that this stays under 5 points held in 72% of configurations (against an 80% criterion); we therefore report the simulated distribution without treating it as an empirical return estimate.
 
-## 5. Archived estimator diagnostics requiring further validation
+## 5. Exploratory estimator diagnostics
 
-In these simulated cohorts, common estimators sometimes fail to recover the mechanisms they are intended to measure when pupils are sorted by school, class, and tutoring take-up. We fitted equations from a 183-item inventory of the economics of education (Atlas equation inventory, numbered as there) to simulated cohorts where the generating mechanisms are known, across 300 configurations. The table is preserved as an archived exploratory diagnostic. Its “Truth” column lists generator inputs, which do not necessarily equal the regression estimand. In particular, a binary indicator for either term or holiday tutoring combines two doses. School fixed effects and variance components also target quantities different from a single school premium. These rows require estimand-specific validation and do not establish a general failure of the named methods.
+In these simulated cohorts, common estimators sometimes fail to recover the mechanisms they are intended to measure when pupils are sorted by school, class, and tutoring take-up. We fitted equations from a 183-item inventory of the economics of education (Atlas equation inventory, numbered as there) to simulated cohorts where the generating mechanisms are known, across 300 configurations. These diagnostics are exploratory. Its “Truth” column lists generator inputs, which do not necessarily equal the regression estimand. In particular, a binary indicator for either term or holiday tutoring combines two doses. School fixed effects and variance components also target quantities different from a single school premium. These rows require estimand-specific validation and do not establish a general failure of the named methods.
 
 | Eq | Estimator | Usually read as | Reports (median, 5th-95th) | Truth | Failure type |
 | --- | --- | --- | --- | --- | --- |
@@ -210,10 +210,9 @@ The finding is about whether the race to the gaokao is fair for those running it
 
 Quantitative results are simulation outputs, not estimates from observed Guangzhou pupil records. The primary independent replication sweep uses 1,024 parameter draws and 40,000 synthetic pupils per draw; other analyses use separate configuration sets as noted. Parameters combine published estimates, official rule documents, a single nonrepresentative informant account, author observations, and explicit assumptions. The uniform independent draws are a sensitivity design, not an empirical probability distribution over plausible Guangzhou systems. An accompanying parameter register documents meanings, ranges, sources, and limitations.
 
-- **Pre-registration.** The supplied historical archive labels several experiments as preregistered and includes dated protocols. Their prospective timing has not been independently authenticated. The new 1,024-draw and repeated-cohort experiments are exploratory. Of the claims behind this paper: same score, same chance was supported (93.5% against an 80% bar); the claim that rich routes yield under 5 admission points per 100,000 yuan fell short (72% against 80%), so Section 4 reports the size rather than the claim; a comparison with a stylised Hong Kong was pre-registered and not supported, and is not pursued here. The joint diagnostic S\* and the factorial decomposition were added after an external review and pre-registered before running, without pass/fail thresholds. Earlier claims that failed, including that zone teachers carry most of the remaining gap, are recorded in the archive.
-- **Corrections.** A bug that let top classes grow beyond their fixed share was found on 27 November and fixed; affected results were rerun and the equation verdicts did not change.
+- **Analysis design.** All results are treated as exploratory. The analysis includes independently sampled parameter settings, a Latin-hypercube mechanism experiment and repeated cohorts at fixed settings. Frequencies describe the chosen sampling design.
 - **Formal checks.** The checked-in Lean 4.36 file `Admission.lean` contains generic results on capacity-balanced displacement, monotonicity under a nonnegative score bonus, strict displacement, fixed prefix cardinality, a cutoff-tie case, and a conditioning example. `proof-check.txt` records the axiom dependencies: the strict-displacement and cutoff-tie witnesses have no additional axioms; other listed results use standard Lean axioms (`propext`, `Quot.sound`, and, for one result, `Classical.choice`). These prove properties of the stated abstractions, not the full Python model. Proofs of the current simulation’s admission code, insurance demand, gate switching, and partial re-banding are not supplied.
-- **Field evidence.** The informant is referred to only as informant A. This release does not establish the scope of consent or institutional ethics approval. The author must verify the applicable consent and ethics requirements before presenting this informal account as a formally approved qualitative study. No transcript, translations, audio, identifying details, or fieldnotes are included in this paper or public archive. The parameter register links model inputs to their source type without releasing field materials.
+- **Field evidence.** The informant is referred to only as informant A. The study does not establish the scope of consent or institutional ethics approval. The informal conversation provides context and does not constitute a formally approved qualitative study. No transcript, translations, audio, identifying details, or fieldnotes are included in this paper or public archive. The parameter register links model inputs to their source type without releasing field materials.
 - **Archive.** Code, parameter ranges, registrations, simulation outputs, and the Lean project are associated with the Guangzhou model archive (TreyModels, 2026a). The paper and archive do not include fieldnotes or the informant transcript. The complete Atlas archive is also identified by its DOI (TreyModels, 2026b).
 
 ### Replication summary and formal checks
@@ -234,19 +233,7 @@ The paired comparison in this sweep jointly sets `BAN_RED=0` and `REBAND=False` 
 
 The replication code also asserts that the top-band headcount equals the configured rounded target in both band assignments. The Lean file `Admission.lean` contains generic lemmas and witnesses for capacity-balanced displacement, monotonicity under a nonnegative score bonus, strict displacement, fixed prefix cardinality, a cutoff-tie case, and a conditioning example. `proof-check.txt` records the printed axiom dependencies: the strict-displacement and cutoff-tie witnesses have no additional axioms; the other listed theorems use standard Lean axioms (`propext`, `Quot.sound`, and in one theorem `Classical.choice`). These are mathematical checks of stated abstractions, not verification of the full Python simulation or current admission implementation. In particular, the cutoff-tie witness shows that an inclusive threshold can admit more tied applicants than available seats, so fixed-capacity allocation needs an explicit tie rule. The simulation relies on NumPy sorting for rank order; the code does not define a substantively justified institutional tie-break, and the proof does not validate tie behavior in the simulation. The sweep asserts the configured top-band headcount, including its rounded target, for both band assignments.
 
-**Version reconciliation.** Headline numbers moved as the model gained mechanisms and as evidence corrected assumptions. The equal-talent ratio for the current cohort, by version:
-
-| Version | What changed | Evidence for the change | Equal-talent ratio now (before) |
-| --- | --- | --- | --- |
-| Talent model | Talent separated from skill; full performance re-banding; school value added 0.1 SD | Dossier review of Chinese school and class effects | 1.29 (1.91 for a \~2015 cohort without re-banding or boarding) |
-| v3 | Teachers, classes, zhibiao, hukou; school value added 0-0.2 SD | Dossier teacher-effect and admission studies | 1.16 |
-| v3.1 | Admission rules matched to 2026 regulations; school value added widened to 0-0.5 SD | Official rules; first external review | 1.18 |
-| v4 | Pre-gate tutoring persists; holiday tutoring; partial re-banding; full-time institutions | Informant A | 1.31 (superseded: band-size bug) |
-| v5-v7 | Insurance demand; art and joint-exam routes; bug fixed; counterfactual keeps boarding | Informant A; second external review | 1.35 (1.41) |
-
-The model freeze is v5.1 (`gz_v5.py`, including the band-size correction); this manuscript is Working Paper Version 1.0, 27 November 2026. The release record is linked to the model archive tag (TreyModels, 2026a). The parameter register gives each parameter’s definition, range, sampling design, source type, evidentiary status, and model version. A tag and the larger Atlas archive DOI identify different levels of the archive (TreyModels, 2026a, 2026b).
-
-**Next steps.** The model version is frozen for this working-paper release; further work should be empirical. Measure the head-start fade, separately for home, school and tutoring advantages, with a longitudinal survey (CEPS, CFPS) or school records; document whether performance re-banding became more common after 2021; survey tutoring among boarders and day pupils anonymously, by term and holiday; estimate the non-hukou share of the zhongkao cohort; and test the tutoring effect using the 2021 ban as a natural experiment.
+**Further research.** Measure the head-start fade, separately for home, school and tutoring advantages, with a longitudinal survey (CEPS, CFPS) or school records; document whether performance re-banding became more common after 2021; survey tutoring among boarders and day pupils anonymously, by term and holiday; estimate the non-hukou share of the zhongkao cohort; and test the tutoring effect using the 2021 ban as a natural experiment.
 
 The Atlas inventory includes the standard accumulation equation 20, and dynamic skill formation equations 38–39. Prior research estimates the persistence of teacher-induced gains (Jacob et al., 2010). The common fade rate in this simulation combines different sources of advantage and remains a Guangzhou-specific uncertainty.
 
@@ -292,7 +279,7 @@ Zhang, Z., An, N., & Chen, J. (2025). More is worse: The impact of private suppl
 
 ## Authoring and contributions
 
-AI assistants helped draft text, code, figures and formal proofs. Computational checks and the scope of Lean verification are reported explicitly. The author is responsible for the final argument, institutional descriptions and use of field context. This release has not undergone independent peer review.
+AI assistants helped draft text, code, figures and formal proofs. Computational checks and the scope of Lean verification are reported explicitly. The author is responsible for the final argument, institutional descriptions and use of field context. 
 
 ## Contributions and corrections
 
