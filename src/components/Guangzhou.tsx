@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import type { Language } from '../types'
 import './guangzhou.css'
 
 const bins = [
@@ -8,9 +9,19 @@ const bins = [
 ]
 const release = 'https://github.com/TreyModels/atlas-of-education/releases/tag/v2026.11.27-guangzhou'
 
-export function Guangzhou() {
+export function Guangzhou({ language }: { language: Language }) {
   const [fade, setFade] = useState(3)
   const current = bins[fade]
+  if (language === 'zh-Hans') return <main id="main-content" className="gz">
+    <header className="gz-hero"><div className="gz-wrap"><p className="gz-kicker">教育世界地图 · 广州</p><h1>同样的分数，<br/><em>同样的机会？</em></h1><p className="gz-lead">家庭资源、课外补习和升学竞争如何影响学生的机会？</p><div className="gz-actions"><a className="gz-primary" href="research/guangzhou/paper.pdf">阅读工作论文（英文）</a><a href={release}>代码和模拟结果 ↗</a></div></div></header>
+    <div className="gz-wrap">
+      <aside className="gz-note"><strong>请先了解：</strong>这是模拟研究，并非对广州学生真实录取差距的测量。</aside>
+      <section className="gz-section"><p className="gz-kicker">从小学到大学</p><h2>广州学生怎样升学？</h2><p>中国的义务教育通常包括六年小学和三年初中。学生完成初中后参加中考。广州的普通高中、职业学校和不同招生类别有不同的录取规则和志愿安排。</p><p>进入普通高中后，学生通常学习三年，参加高考申请大学。学校可能按照成绩分班，也可能在高中阶段重新编班。实际做法因学校和年份而异。户籍、居住地、学籍、志愿和招生计划也会影响可选择的学校。</p><p>我们的模型把复杂过程简化为几个步骤：初中前的家庭、学校和补习影响中考成绩；学生进入不同学校和班级；部分学生在高二重新分班；普通高中学生最后竞争有限的模拟大学名额。</p></section>
+      <section className="gz-section"><p className="gz-kicker">政策背景</p><h2>什么是“双减”？</h2><p>2021年，中国出台“双减”政策，旨在减轻义务教育阶段学生的作业负担和校外培训负担。政策对义务教育阶段的学科类培训机构、营利和培训时间作出限制，同时要求学校提高课后服务质量。高中不属于这项政策的主要义务教育阶段范围，不能把政策理解为禁止所有年龄学生的一切补习。</p><p>这项研究关心的是：减少中考前的校外补习，可能怎样改变家庭支出和学生机会？模型中的“政策前”情景还关闭了高二重新分班，因此两种机制同时变化。我们尚未证实高二重新分班在2021年后变得更常见。</p><p><a href="https://www.moe.gov.cn/jyb_xxgk/moe_1777/moe_1778/202107/t20210724_546576.html">阅读2021年政策原文</a></p></section>
+      <section className="gz-section"><p className="gz-kicker">我们测量什么</p><h2>三个公平问题</h2><p>模型用一个有限的“优质大学名额”代表竞争结果，名额数相当于整个模拟年龄队列的10%。它不是实际大学录取数据。我们比较广州户籍学生中家庭财富最高的40%与最低的40%。比例1代表两组录取率相同。</p><div className="gz-ratios">{[['中考成绩相近',0.91,'两组机会比较接近'],['成绩和模拟初始能力相近',1.19,'较富裕组机会高约19%'],['模拟初始能力相近',1.36,'较富裕组机会高约36%']].map(([label,value,description]) => <div className="gz-ratio" key={label}><div className="gz-ratio-label"><strong>{label}</strong><b>{Number(value).toFixed(2)}</b></div><div className="gz-track"><div className="gz-bar" style={{width: `${Number(value)/1.6*100}%`}} /></div><p>{description}</p></div>)}</div><p>“初始能力”是模型设定，不能直接观察。三个比例比较的人群和分组方式不同，不能相加，也不是广州真实录取差距。</p></section>
+      <section className="gz-section gz-split"><div><p className="gz-kicker">探索假设</p><h2>早期优势能持续多久？</h2><p>拖动滑块，比较已完成模拟中不同的早期优势消退范围。其他假设也在变化，因此这不是单独改变一个因素得到的因果效果。</p></div><div className="gz-explore"><label htmlFor="gz-fade">早期优势消退比例 <strong>{current.label}</strong></label><input id="gz-fade" type="range" min="0" max="5" step="1" value={fade} onChange={e => setFade(Number(e.target.value))}/><div className="gz-ends"><span>消退较少</span><span>消退较多</span></div><div className="gz-big" aria-live="polite">{current.value.toFixed(2)} <span>倍的录取机会</span></div><div className="gz-track"><div className="gz-bar" style={{width:`${current.value/1.8*100}%`}}/></div><p>这个范围内模拟结果的中位数。</p></div></section>
+      <section className="gz-section"><p className="gz-kicker">主要结果和局限</p><h2>名额有限，政策效果需要数据检验</h2><p>在1,024组模拟中，807组显示，假设的补习限制和重新分班共同实施后，同等模拟能力学生之间的机会差距缩小。家庭五年补习支出的模拟变化中位数为减少约5,069元。这不是对“双减”实际因果效果的估计。</p><p>在固定4,000个名额的比较中，模拟路线加分后，中位数为187个名额换了获得者。实际艺术类和联招有各自的资格与名额规则，模型将其简化为同一排名中的加分。</p><p>Lean检查了特定数学命题，包括两种排名录取人数相同时，新获得的名额数等于失去的名额数。它没有验证模型参数或广州的真实情况。</p><div className="gz-actions"><a className="gz-primary" href="research/guangzhou/paper.pdf">阅读完整工作论文（英文）</a><a href={release}>代码、假设和数据 ↗</a><a href="https://doi.org/10.5281/zenodo.24575246">版本 DOI ↗</a></div></section>
+    </div></main>
   return <main id="main-content" className="gz">
     <header className="gz-hero"><div className="gz-wrap">
       <p className="gz-kicker">ATLAS OF EDUCATION · GUANGZHOU</p>
@@ -21,6 +32,8 @@ export function Guangzhou() {
     </div></header>
     <div className="gz-wrap">
       <aside className="gz-note"><strong>A simulation, not a survey.</strong> These results describe synthetic cohorts under explicit assumptions. They are not estimates of Guangzhou’s actual admission gaps or causal effects of policy.</aside>
+      <section className="gz-section"><p className="gz-kicker">THE SCHOOL PATHWAY</p><h2>How students move through the system</h2><p>Compulsory education in China normally covers six years of primary school and three years of junior secondary school. At the end of junior secondary school, Guangzhou students take the zhongkao, an entrance examination used in admissions to senior secondary education. Students and families submit preferences, and admission depends on the relevant school plans, categories, scores and eligibility rules.</p><p>Senior secondary education includes general academic high schools and vocational routes. General high school usually lasts three years and leads toward the gaokao, the national university entrance examination. School and class assignment, residence, household registration (hukou), eligibility and available places can all affect a student’s path. Rules vary across schools and years.</p><p>This model follows a simplified pathway from family and junior-school inputs through the zhongkao, high-school placement, possible class reassignment, tutoring and competition for a simulated university place. It leaves important parts of the real system, including vocational outcomes and individual university preferences, outside its analysis.</p></section>
+      <section className="gz-section"><p className="gz-kicker">POLICY BACKGROUND</p><h2>What was Double Reduction?</h2><p>In 2021, China introduced Double Reduction to reduce homework and off-campus tutoring burdens for pupils in compulsory education. The policy restricted academic tutoring providers and when they could offer lessons, while calling for stronger school-based after-school services. Senior high school is outside the core compulsory-education scope. The policy did not prohibit all tutoring for every age group.</p><p>In our hypothetical comparison, the model reduces pre-gate tutoring and switches on senior-2 re-banding together. We do not have evidence that re-banding became more common after 2021, so this combined contrast cannot identify the policy’s causal effect.</p><p><a href="https://www.moe.gov.cn/jyb_xxgk/moe_1777/moe_1778/202107/t20210724_546576.html">Read the 2021 policy directive (Chinese)</a></p></section>
       <section className="gz-section"><p className="gz-kicker">HOW TO READ THIS MODEL</p><h2>What you are looking at</h2>
         <p>This page summarizes an exploratory simulation of students moving through Guangzhou’s education system. The computer creates synthetic pupils, gives them different family resources and school experiences, and follows their path from the zhongkao entrance exam through high school to a simulated university admission.</p>
         <div className="gz-steps">

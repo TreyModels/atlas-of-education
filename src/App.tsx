@@ -111,7 +111,7 @@ export default function App() {
       {route === 'how-models-work' && <ArticlePage article={howModelsWork} t={t} />}
       {route === 'workflow' && <ArticlePage article={workflow} t={t} />}
       {storyFamily === 'angkor' && <AngkorJourney key="angkor" t={t} navigate={navigate} />}
-      {storyFamily === 'shadow' && <Guangzhou />}
+      {storyFamily === 'shadow' && <Guangzhou language={language} />}
       {storyFamily === 'politics' && <AngkorJourney key="politics" t={t} navigate={navigate} journey={ccpJourney} />}
       {storyFamily === 'extension' && <AngkorJourney key="extension" t={t} navigate={navigate} journey={extensionJourney} />}
       {storyFamily === 'fertility' && <AngkorJourney key="fertility" t={t} navigate={navigate} journey={fertilityJourney} />}
