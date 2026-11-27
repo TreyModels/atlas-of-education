@@ -9,6 +9,31 @@ const bins = [
 ]
 const release = 'https://github.com/TreyModels/atlas-of-education/releases/tag/v2026.11.27-guangzhou'
 
+
+function Pathways({ chinese = false }: { chinese?: boolean }) {
+  return <section className="gz-section gz-pathways">
+    <p className="gz-kicker">{chinese ? '升学路径' : 'FOLLOW THE PATHWAYS'}</p>
+    <h2>{chinese ? '真实制度与模拟模型' : 'The real system and the model'}</h2>
+    <p>{chinese ? '第一张图概括升学路径。实际录取取决于当年政策、资格、志愿和招生计划。第二张图展示程序如何简化这些规则。图中的连接表示可能的路径，不表示所有学生都会走完每一步。' : 'The first diagram outlines possible paths. Actual admission depends on the year, eligibility, preferences and school plans. The second shows how the program simplifies those rules. A connection indicates a possible path, not a guaranteed outcome.'}</p>
+    <h3>{chinese ? '广州的升学路径（简化）' : 'Guangzhou’s education pathway, simplified'}</h3>
+    <div className="gz-flow" aria-label={chinese ? '广州教育路径图' : 'Guangzhou education pathways'}>
+      <div className="gz-node">{chinese ? '小学 → 初中（义务教育）' : 'Primary → junior secondary (compulsory education)'}</div><div className="gz-arrow">↓</div>
+      <div className="gz-node">{chinese ? '中考、报考资格与志愿' : 'Zhongkao, eligibility and school preferences'}</div><div className="gz-arrow">↓</div>
+      <div className="gz-branches"><div className="gz-node"><strong>{chinese ? '普通高中' : 'General senior high'}</strong><span>{chinese ? '公办或民办；不同批次、资格和计划' : 'Public or private; different admission batches, eligibility and plans'}</span></div><div className="gz-node"><strong>{chinese ? '中等职业教育' : 'Vocational secondary'}</strong><span>{chinese ? '包括不同学校与专业路径' : 'Different schools and programme pathways'}</span></div></div>
+      <div className="gz-arrow">↓</div><div className="gz-node">{chinese ? '高中后可继续学习或就业；普通高中学生通常参加高考' : 'Further study or work after secondary school; general-high-school pupils commonly take the gaokao'}</div>
+    </div>
+    <p className="gz-caption">{chinese ? '名额分配是部分优质普通高中招生的一种途径，按政策规定向符合条件的初中学生开放；它与普通招生及其他类别并行。职业教育学生也可能继续升学。' : 'Quota allocation is one route to certain public high schools for eligible junior-school pupils, alongside general and other admissions categories. Vocational students can also pursue further education.'} <a href="https://jyj.gz.gov.cn/gk/zfxxgkml/ywgz/zsks/content/post_10788402.html">{chinese ? '2026年名额分配规则' : '2026 quota rules'}</a></p>
+    <h3>{chinese ? '模拟程序中的路径' : 'Pathways inside the simulation'}</h3>
+    <div className="gz-flow" aria-label={chinese ? '模拟模型路径图' : 'Simulation pathways'}>
+      <div className="gz-node">{chinese ? '合成学生：家庭资源、初中教师、补习和初始能力' : 'Synthetic pupils: family resources, junior teachers, tutoring and starting ability'}</div><div className="gz-arrow">↓</div>
+      <div className="gz-node">{chinese ? '模拟中考成绩与公办普通高中名额排序；非本地户籍受模型名额上限约束' : 'Simulated entrance score and public academic-seat ranking; a modeled cap applies to non-local pupils'}</div><div className="gz-arrow">↓</div>
+      <div className="gz-branches"><div className="gz-node"><strong>{chinese ? '公办普通高中' : 'Public academic high school'}</strong><span>{chinese ? '部分名额按初中分配，其余按排名；模型使用简化规则' : 'Some elite seats use junior-school quotas; remaining seats use a simplified ranking'}</span></div><div className="gz-node"><strong>{chinese ? '模型中的民办路径' : 'Modeled private route'}</strong><span>{chinese ? '仅限未获公办名额、达到分数条件且负担得起费用的非本地学生' : 'Only non-local pupils meeting the modeled score condition, denied a public place and able to afford fees'}</span></div><div className="gz-node"><strong>{chinese ? '其他学生' : 'Other pupils'}</strong><span>{chinese ? '未进入模型的普通高中路径；模型不追踪其升学或就业' : 'Outside the modeled academic route; later education and work are not followed'}</span></div></div>
+      <div className="gz-arrow">↓</div><div className="gz-node">{chinese ? '普通高中学生：分班 → 可选高二重新分班 → 模拟考试与路线加分 → 全队列10%的大学名额代理' : 'Academic-track pupils: class banding → optional senior-2 re-banding → simulated score and route bonuses → university-place proxy equal to 10% of the full cohort'}</div>
+    </div>
+    <p className="gz-caption">{chinese ? '模型并未模拟每一所学校、真实志愿、单独的艺术类或联招名额，也未估计这些路径在广州的实际人数。' : 'The model does not simulate each school, actual application choices, separate art or joint-exam capacities, or observed numbers on each pathway.'}</p>
+  </section>
+}
+
 export function Guangzhou({ language }: { language: Language }) {
   const [fade, setFade] = useState(3)
   const current = bins[fade]
@@ -16,6 +41,7 @@ export function Guangzhou({ language }: { language: Language }) {
     <header className="gz-hero"><div className="gz-wrap"><p className="gz-kicker">教育世界地图 · 广州</p><h1>同样的分数，<br/><em>同样的机会？</em></h1><p className="gz-lead">家庭资源、课外补习和升学竞争如何影响学生的机会？</p><div className="gz-actions"><a className="gz-primary" href="research/guangzhou/paper.pdf">阅读工作论文（英文）</a><a href={release}>代码和模拟结果 ↗</a></div></div></header>
     <div className="gz-wrap">
       <aside className="gz-note"><strong>请先了解：</strong>这是模拟研究，并非对广州学生真实录取差距的测量。</aside>
+      <Pathways chinese />
       <section className="gz-section"><p className="gz-kicker">从小学到大学</p><h2>广州学生怎样升学？</h2><p>中国的义务教育通常包括六年小学和三年初中。学生完成初中后参加中考。广州的普通高中、职业学校和不同招生类别有不同的录取规则和志愿安排。</p><p>进入普通高中后，学生通常学习三年，参加高考申请大学。学校可能按照成绩分班，也可能在高中阶段重新编班。实际做法因学校和年份而异。户籍、居住地、学籍、志愿和招生计划也会影响可选择的学校。</p><p>我们的模型把复杂过程简化为几个步骤：初中前的家庭、学校和补习影响中考成绩；学生进入不同学校和班级；部分学生在高二重新分班；普通高中学生最后竞争有限的模拟大学名额。</p></section>
       <section className="gz-section"><p className="gz-kicker">政策背景</p><h2>什么是“双减”？</h2><p>2021年，中国出台“双减”政策，旨在减轻义务教育阶段学生的作业负担和校外培训负担。政策对义务教育阶段的学科类培训机构、营利和培训时间作出限制，同时要求学校提高课后服务质量。高中不属于这项政策的主要义务教育阶段范围，不能把政策理解为禁止所有年龄学生的一切补习。</p><p>这项研究关心的是：减少中考前的校外补习，可能怎样改变家庭支出和学生机会？模型中的“政策前”情景还关闭了高二重新分班，因此两种机制同时变化。我们尚未证实高二重新分班在2021年后变得更常见。</p><p><a href="https://www.moe.gov.cn/jyb_xxgk/moe_1777/moe_1778/202107/t20210724_546576.html">阅读2021年政策原文</a></p></section>
       <section className="gz-section"><p className="gz-kicker">我们测量什么</p><h2>三个公平问题</h2><p>模型用一个有限的“优质大学名额”代表竞争结果，名额数相当于整个模拟年龄队列的10%。它不是实际大学录取数据。我们比较广州户籍学生中家庭财富最高的40%与最低的40%。比例1代表两组录取率相同。</p><div className="gz-ratios">{[['中考成绩相近',0.91,'两组机会比较接近'],['成绩和模拟初始能力相近',1.19,'较富裕组机会高约19%'],['模拟初始能力相近',1.36,'较富裕组机会高约36%']].map(([label,value,description]) => <div className="gz-ratio" key={label}><div className="gz-ratio-label"><strong>{label}</strong><b>{Number(value).toFixed(2)}</b></div><div className="gz-track"><div className="gz-bar" style={{width: `${Number(value)/1.6*100}%`}} /></div><p>{description}</p></div>)}</div><p>“初始能力”是模型设定，不能直接观察。三个比例比较的人群和分组方式不同，不能相加，也不是广州真实录取差距。</p></section>
@@ -32,6 +58,7 @@ export function Guangzhou({ language }: { language: Language }) {
     </div></header>
     <div className="gz-wrap">
       <aside className="gz-note"><strong>A simulation, not a survey.</strong> These results describe synthetic cohorts under explicit assumptions. They are not estimates of Guangzhou’s actual admission gaps or causal effects of policy.</aside>
+      <Pathways />
       <section className="gz-section"><p className="gz-kicker">THE SCHOOL PATHWAY</p><h2>How students move through the system</h2><p>Compulsory education in China normally covers six years of primary school and three years of junior secondary school. At the end of junior secondary school, Guangzhou students take the zhongkao, an entrance examination used in admissions to senior secondary education. Students and families submit preferences, and admission depends on the relevant school plans, categories, scores and eligibility rules.</p><p>Senior secondary education includes general academic high schools and vocational routes. General high school usually lasts three years and leads toward the gaokao, the national university entrance examination. School and class assignment, residence, household registration (hukou), eligibility and available places can all affect a student’s path. Rules vary across schools and years.</p><p>This model follows a simplified pathway from family and junior-school inputs through the zhongkao, high-school placement, possible class reassignment, tutoring and competition for a simulated university place. It leaves important parts of the real system, including vocational outcomes and individual university preferences, outside its analysis.</p></section>
       <section className="gz-section"><p className="gz-kicker">POLICY BACKGROUND</p><h2>What was Double Reduction?</h2><p>In 2021, China introduced Double Reduction to reduce homework and off-campus tutoring burdens for pupils in compulsory education. The policy restricted academic tutoring providers and when they could offer lessons, while calling for stronger school-based after-school services. Senior high school is outside the core compulsory-education scope. The policy did not prohibit all tutoring for every age group.</p><p>In our hypothetical comparison, the model reduces pre-gate tutoring and switches on senior-2 re-banding together. We do not have evidence that re-banding became more common after 2021, so this combined contrast cannot identify the policy’s causal effect.</p><p><a href="https://www.moe.gov.cn/jyb_xxgk/moe_1777/moe_1778/202107/t20210724_546576.html">Read the 2021 policy directive (Chinese)</a></p></section>
       <section className="gz-section"><p className="gz-kicker">HOW TO READ THIS MODEL</p><h2>What you are looking at</h2>
