@@ -9,6 +9,11 @@ This is an exploratory simulation of synthetic cohorts. Model parameters are not
 Reproduce with Python 3 and NumPy:
 - python sweep.py
 - python summarize.py
+- python mechanisms.py
+- python enforcement.py
+- python analyze_mechanisms.py
+- python sensitivity.py
+- python verify_model.py
 - python repeats.py > repeats.csv
 
 Check the stated mathematical propositions with Lean 4.36.0:
@@ -25,6 +30,8 @@ Please contribute source-linked corrections through issues or pull requests. Spe
 
 Earlier release DOI: https://doi.org/10.5281/zenodo.24575246
 Collection DOI: https://doi.org/10.5281/zenodo.24369167
-Revision 1.1: https://github.com/TreyModels/atlas-of-education/releases/tag/v2026.11.27-guangzhou-r1
+Revision 1.2: https://github.com/TreyModels/atlas-of-education/releases/tag/v2026.11.27-guangzhou-r2
 
 AI assistants helped draft code, text, figures and proofs. The author is responsible for the final scholarly interpretation. License follows the Atlas repository, CC BY-NC 4.0.
+
+This package sweeps 32 inputs. SENSITIVITY.md reports all rank diagnostics. Verification includes a 20-cohort neutral-world check, exact cumulative premium scaling, route exclusivity and no-restriction equivalence. The current patched outputs were regenerated locally; cross-machine reproduction of this revision remains open.

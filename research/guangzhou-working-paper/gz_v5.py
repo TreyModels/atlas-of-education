@@ -1,39 +1,31 @@
 #!/usr/bin/env python3
-"""Guangzhou sorting model v5 = v4 + insurance demand (peer escalation, fear of falling), art-exam route and
-Hong Kong-status route (informant A, 23:29). v4 docstring follows.
-Guangzhou sorting model v4 (v3.1 + informant corrections, 2026-11-26). v3 docstring follows.
-v4 adds: pre-gate tutoring that survives the ban (家教), partial performance re-banding, term-weekend and holiday
-tutoring at both tails, a full-time institution route (keep school place), boarding switch for the pre-2021 regime.
-Guangzhou sorting model v3: explicit teachers, classes, schools. ILLUSTRATIVE (synthetic pupils).
-Teacher/school parameters taken from the dossier '学校与教师质量_Model2参数证据.md' [D]:
-  school brand value-added 0-0.2 SD (RD studies)            -> SCHOOL_VA = 0.10
-  top/magnet class effect 0.435 SD (double RD, one county)  -> split: TOP_TEACH + PEER
-  teacher: median -> top 16% = +0.3-0.5 SD; teacher SD ~0.2  -> TEACH_SD = 0.20 per teacher
-  within-school teacher variance net 8-11%, between-school large (sorting) -> junior teacher quality tracks zone (TEACH_ZONE)
-  zhibiao dao xiao: ~50% of seats allocated to each junior school's own top pupils  -> ZHIBIAO
-Life course: talent, zone wealth -> junior school (zone) with teachers -> skill15 -> zhongkao
- -> elite / regular high school (with ZHIBIAO quota) or vocational -> classes banded by score, best teachers to top band
- -> senior 1 growth -> re-band at senior 2 -> gaokao.  Truth is stored so estimators can be checked against it.
+"""Illustrative Guangzhou education model.
+
+TOP_TEACH and PEER are cumulative two-stage top-band premiums, applied at half
+their value per stage. BAN_GRAD controls a hypothesized wealth gradient in
+effective tutoring restrictions. Alternative-route bonuses are mutually exclusive.
+See ASSUMPTIONS.md for evidence, units, and limitations.
 """
 import numpy as np
 
 P = dict(n=60_000, seed=0, TAL_WEALTH=0.10, SEG=0.6, HOME=0.15,
          N_JUNIOR=300, JR_CLASSES=6, TEACH_SD=0.20, TEACH_ZONE=0.10,
          ACAD=0.65, ELITE=0.10, ZHIBIAO=0.5, N_HS=60, HS_CLASS=50,
-         SCHOOL_VA=0.10, TOP_BAND=1 / 8, TOP_TEACH=0.30, PEER=0.14, HS_TEACH_SD=0.20,
+         SCHOOL_VA=0.10, TOP_BAND=1 / 8, TOP_TEACH=0.15, PEER=0.29, HS_TEACH_SD=0.20,
          GROW=0.5, DECAY=0.5, REBAND=True, NOISE=0.35,
-         # hukou layer [D = Guangzhou cost/subsidy dossiers]
+         # stylized hukou and cost inputs; see ASSUMPTIONS.md
          NONHUKOU=0.20,     # share of cohort without local hukou (assumption; teacher saw 10-20% non-locals in an elite school)
          NH_WEALTH=-0.3,    # mean log-wealth shift of non-hukou families (assumption)
-         MINBAN_PEN=0.15,   # junior teacher-quality penalty in minban / purchased places (assumption; dossier: private VA ~0)
+         MINBAN_PEN=0.15,   # junior teacher-quality penalty in minban / purchased places (assumed penalty)
          QUOTA=0.15,        # max share of PUBLIC academic seats for non-hukou [D 8-15% core, 8-18% outer; 8-20% from 2027]
          PRIVATE_COST=75_000, AFFORD=0.40, MED_INCOME=200_000,
          N_PRIV=12, ZB_FLOOR=0.30,
-         # v4 [informant A, 2026-11-26]
+         # tutoring and alternative-route assumptions
          PRE_SHARE=0.4,    # share of families buying pre-gate tutoring with no ban (wealth-weighted)
-         BAN_RED=0.4,      # share of that removed by the 2021 ban (informant: much continues as private 家教)
+         BAN_RED=0.4,      # central effective reduction in pre-gate tutoring
+         BAN_GRAD=0.5,     # assumed wealth gradient in the effective reduction
          PRE_EFF=0.15,     # skill gain (SD) for a pre-gate tutoring taker
-         REBAND_PERF=0.3,  # share of pupils re-banded by performance at senior 2 (rest by subject combination)
+         REBAND_PERF=0.3,  # weight on current rank in the senior-2 composite ranking
          BOARD=True,       # boarding: term tutoring only at weekends; False = day schools, evenings open
          TERM_SHARE=0.10,  # share of academic pupils tutoring in term when boarding (both tails); x3 when not boarding
          HOL_SHARE=0.40,   # share of academic pupils tutoring in holidays (both tails, wealth-weighted)
@@ -66,7 +58,8 @@ def run(**kw):
     jcls = rng.integers(0, p['JR_CLASSES'], n)                    # random assignment within junior school (balanced classes rule)
     jteach = np.where(hukou, tq_j[jr, jcls], -p['MINBAN_PEN'] + p['TEACH_SD'] * rng.normal(size=n))
     wr = (np.argsort(np.argsort(logw)) + .5) / n                  # wealth rank
-    pre_p = np.clip(p['PRE_SHARE'] * 2 * wr, 0, 1) * (1 - p['BAN_RED'])
+    ban_eff = np.clip(p['BAN_RED'] * (1.0 + p['BAN_GRAD'] * (1.0 - 2.0 * wr)), 0.0, 1.0)
+    pre_p = np.clip(p['PRE_SHARE'] * 2 * wr, 0, 1) * (1.0 - ban_eff)
     pre = rng.random(n) < pre_p
     head = jteach + p['HOME'] * logw + p['PRE_EFF'] * pre
     skill15 = tal + head
@@ -81,7 +74,7 @@ def run(**kw):
     private = shut & (p['PRIVATE_COST'] < p['AFFORD'] * income)
     exitp = shut & ~private
     acad = public
-    # v3.1 (2026 rules, per review): zhibiao only for Guangzhou-hukou pupils; seats per junior school in proportion to
+    # Simplified 2026 rules: zhibiao only for Guangzhou-hukou pupils; seats per junior school in proportion to
     # its ELIGIBLE pupils; a minimum score (top ZB_FLOOR of the cohort); unused seats revert to open admission.
     # Open elite admission caps non-hukou at QUOTA of elite seats (school-specific cap applied to the elite tier).
     n_el = int(p['ELITE'] * n); elite = np.zeros(n, bool)
@@ -124,21 +117,21 @@ def run(**kw):
             for c, part in enumerate(np.array_split(idx, max(1, idx.size // p['HS_CLASS']))): cls[part] = s * 1000 + c
         return band, cls
     band1, cls1 = band_and_class(zk)
-    # high-school teachers: top band gets +TOP_TEACH, every class a random teacher draw
+    # Half the cumulative top-band premium is applied at each stage.
     uniq = np.unique(cls1[cls1 >= 0]); tdraw = dict(zip(uniq, p['HS_TEACH_SD'] * rng.normal(size=uniq.size)))
-    hteach1 = np.array([tdraw.get(c, 0.0) for c in cls1]) + band1 * p['TOP_TEACH']
-    peer1 = band1 * p['PEER']
+    hteach1 = np.array([tdraw.get(c, 0.0) for c in cls1]) + band1 * (0.5 * p['TOP_TEACH'])
+    peer1 = band1 * (0.5 * p['PEER'])
     skill16 = tal + (1 - p['DECAY']) * head + p['GROW'] * tal + school_va + hteach1 + peer1
     obs16 = skill16 + p['NOISE'] * rng.normal(size=n)
     if p['REBAND']:
-        # v5.1 fix: composite rank keeps the top-band size fixed (previous version let it grow)
+        # Composite ranking preserves each school’s top-band size
         r16 = (np.argsort(np.argsort(obs16)) + .5) / n; r15 = (np.argsort(np.argsort(zk)) + .5) / n
         band2, cls2 = band_and_class(p['REBAND_PERF'] * r16 + (1 - p['REBAND_PERF']) * r15)
         uniq2 = np.unique(cls2[cls2 >= 0]); tdraw2 = dict(zip(uniq2, p['HS_TEACH_SD'] * rng.normal(size=uniq2.size)))
-        hteach2 = np.array([tdraw2.get(c, 0.0) for c in cls2]) + band2 * p['TOP_TEACH']
+        hteach2 = np.array([tdraw2.get(c, 0.0) for c in cls2]) + band2 * (0.5 * p['TOP_TEACH'])
     else:
         band2, cls2, hteach2 = band1, cls1, hteach1
-    peer2 = band2 * p['PEER']
+    peer2 = band2 * (0.5 * p['PEER'])
     # post-gate tutoring: both tails of the academic skill distribution, wealth-weighted
     a_idx = acad
     sr = np.full(n, .5); sr[a_idx] = (np.argsort(np.argsort(skill16[a_idx])) + .5) / a_idx.sum()
@@ -165,12 +158,17 @@ def run(**kw):
     skill18 = skill16 + in_school + p['POST_EFF'] * (term.astype(float) + hol) + ft * p['FT_EFF']
     gk = skill18 + p['NOISE'] * rng.normal(size=n)
     # alternative gates bought by wealth: art-exam route and Hong Kong-status route (seats fixed; ranking on effective score)
-    w_art = np.where(a_idx, (wr ** 2) * (1.5 - sr), 0); art = np.zeros(n, bool)
-    if p['ART_SHARE'] > 0 and w_art.sum() > 0:
-        k = int(p['ART_SHARE'] * n); art[rng.choice(n, k, replace=False, p=w_art / w_art.sum())] = True
-    hkr = np.zeros(n, bool); rich = np.flatnonzero(a_idx & (wr > .7))
+    # Joint-exam eligibility proxy is sampled first. Art-route pupils are distinct.
+    hkr = np.zeros(n, bool)
+    rich = np.flatnonzero(a_idx & (wr > .7))
     if p['HK_SHARE'] > 0 and rich.size:
-        hkr[rng.choice(rich, min(int(p['HK_SHARE'] * n), rich.size), replace=False)] = True
+        k = min(int(p['HK_SHARE'] * n), rich.size)
+        hkr[rng.choice(rich, k, replace=False)] = True
+    w_art = np.where(a_idx & ~hkr, (wr ** 2) * (1.5 - sr), 0)
+    art = np.zeros(n, bool)
+    if p['ART_SHARE'] > 0 and w_art.sum() > 0:
+        k = min(int(p['ART_SHARE'] * n), np.count_nonzero(w_art))
+        art[rng.choice(n, k, replace=False, p=w_art / w_art.sum())] = True
     gk_eff = gk + p['ART_BONUS'] * art + p['HK_BONUS'] * hkr
     gk_acad = np.where(acad, gk_eff, -np.inf)
     uni = gk_acad >= np.sort(gk_acad)[::-1][int(.10 * n) - 1]

@@ -10,6 +10,11 @@ import gz_v5
 ROOT = Path(__file__).resolve().parent
 RANGES = json.loads((ROOT / 'ranges.json').read_text())
 N, DRAWS, SEED = 40000, 1024, 27112026
+# Yuan per pupil, cumulative junior 1–3 / senior 1–2 spending assumptions.
+PRE_COST = 15000 * 3       # annual pre-gate tutoring cost × three junior years
+TERM_COST = 17540 * 2      # annual term-time tutoring cost × two senior years
+HOLIDAY_COST = 10000 * 2   # annual holiday tutoring cost × two senior years
+FULL_TIME_YEARS = 2
 
 
 def rates(data, outcome, variable):
@@ -43,8 +48,8 @@ def joint_ratio(d):
 
 
 def spend(d):
-    return (45000 * d['pre'] + 35080 * d['term'] + 20000 * d['hol']
-            + 2 * d['p']['FT_COST'] * d['ft']).mean()
+    return (PRE_COST * d['pre'] + TERM_COST * d['term'] + HOLIDAY_COST * d['hol']
+            + FULL_TIME_YEARS * d['p']['FT_COST'] * d['ft']).mean()
 
 
 def simulate(i):
@@ -55,6 +60,8 @@ def simulate(i):
     seed = int(cohort.generate_state(1)[0])
     d = gz_v5.run(n=N, seed=seed, **p)
     before = gz_v5.run(n=N, seed=seed, **{**p, 'BAN_RED': 0, 'REBAND': False})
+    noban = gz_v5.run(n=N, seed=seed, **{**p, 'BAN_RED': 0})
+    assert not np.any(d['art'] & d['hkr'])
     cutoff = np.sort(d['gk'][d['acad']])[-(N // 10)]
     ordinary = d['acad'] & (d['gk'] >= cutoff)
     gain = d['uni'] & ~ordinary
@@ -67,7 +74,7 @@ def simulate(i):
         assert np.array_equal(np.bincount(d['hs'][d[key]], minlength=len(sizes)), target)
     joint, support = joint_ratio(d)
     return dict(Sstar=joint, support=support, spend_change=spend(d)-spend(before), draw=i, seed=seed, T=rates(d, d['uni'], 'tal'), S=rates(d, d['uni'], 'zk'),
-                T_before=rates(before, before['uni'], 'tal'), displaced=int(loss.sum()), **p)
+                T_before=rates(before, before['uni'], 'tal'), T_noban=rates(noban, noban['uni'], 'tal'), displaced=int(loss.sum()), **p)
 
 
 if __name__ == '__main__':

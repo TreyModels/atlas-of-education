@@ -14,16 +14,17 @@ for key,mac,linux in [('Body','Georgia.ttf','LiberationSerif-Regular.ttf'),('Tit
     candidates=[Path('/System/Library/Fonts/Supplemental')/mac,Path('/usr/share/fonts/truetype/liberation2')/linux]
     pdfmetrics.registerFont(TTFont(key,next(str(x) for x in candidates if x.exists())))
 rows=list(csv.DictReader((D/'draws.csv').open()))
-rep=list(csv.DictReader((D/'repeats.csv').open()))
-old=[json.loads(x) for x in (D/'archived_v8.jsonl').read_text().splitlines()]
+summary=json.loads((D/'summary.json').read_text())
+mechanism=json.loads((D/'mechanism_summary.json').read_text())
+med=lambda key: summary[key]['median']
+mm=lambda scenario,key: mechanism[scenario][key]['median']
 def col(k):return np.array([float(r[k]) for r in rows])
-def oldcol(k,field):return np.array([r[k][field] for r in old])
 q=lambda x:np.quantile(x,[.05,.5,.95])
 C=canvas.Canvas(str(D.parent/'Same Score Same Chance.pdf'),pagesize=(612,792),pageCompression=1)
 C.setTitle('Same score, same chance? | Guangzhou working paper')
 C.setAuthor('James W. Menefee III')
 ink='#182F37'; teal='#006F68'; red='#A64B26'; soft='#DBE9E6'; muted='#486369'; light='#D1DDDC'; paper='#F7F7F2'
-tag='https://github.com/TreyModels/atlas-of-education/releases/tag/v2026.11.27-guangzhou-r1'
+tag='https://github.com/TreyModels/atlas-of-education/releases/tag/v2026.11.27-guangzhou-r2'
 doi='https://doi.org/10.5281/zenodo.24369167'
 def color(x):return HexColor(x)
 def txt(x,y,s,size=11,font='Sans',c=ink):
@@ -39,9 +40,10 @@ def para(y,s,x=48,w=516,size=12,font='Body',leading=None):
     p=Paragraph(s,st);_,h=p.wrap(w,900);p.drawOn(C,x,792-y-h)
     assert y+h < 745,(page,s[:65],y+h)
     return y+h+12
+page=0
 def head(n,section,title):
     global page
-    page=n
+    page+=1
     txt(48,38,'GUANGZHOU   /   SHADOW EDUCATION',8,'Bold',teal)
     txt(455,38,'WORKING PAPER   ·   2026',8,'Sans',muted)
     line(48,50,564,50);txt(48,82,section.upper(),9,'Bold',teal)
@@ -57,7 +59,7 @@ para(195,'James W. Menefee III   ·   27 November 2026',size=10,font='Sans')
 y=para(246,'Imagine two pupils entering senior high school with the same exam score. One had strong teachers and private lessons. The other reached that score with fewer resources. If both later win university places at similar rates, what can we conclude about the fairness of the competition?',size=16,leading=23)
 y=para(y,'We follow synthetic pupils through the zhongkao (senior-high entrance exam), school and class placement, tutoring and a ranked university-admission proxy. We ask how the answer changes when we compare families at comparable entrance-score bands, comparable modeled starting-ability bands, or both.')
 rect(48,y+1,516,93,soft)
-para(y+14,'Across 1,024 simulated cohorts, the richer-to-poorer admission ratio was 0.91 at comparable entrance scores, 1.19 at comparable scores and starting ability, and 1.36 at comparable starting ability. All three statements describe the same model.',x=64,w=483,size=12)
+para(y+14,'Across 1,024 simulated cohorts, the richer-to-poorer admission ratio was 0.91 at comparable entrance scores, 1.19 at comparable scores and starting ability, and 1.41 at comparable starting ability. All three statements describe the same model.',x=64,w=483,size=12)
 y+=117
 y=para(y,'The simulated spending decline aligns directionally with national household evidence. The equity change also depends on an unverified assumption about changes in class reassignment after 2021. Neither comparison identifies a Guangzhou policy effect.')
 para(y,link(tag,'Paper, code, data and contribution details')+'  ·  '+link(doi,'Atlas collection DOI'),font='Sans',size=10)
@@ -67,7 +69,7 @@ y=para(149,'At the author’s Guangzhou boarding school, evening study and weeke
 y=para(y,'Mark Bray (2007) defines shadow education by its relationship to mainstream schooling. As the curriculum or examination changes, the private lesson changes with it. Bray and Lykins (2012) distinguish the reach, intensity and forms of tutoring. Here, counting participants alone would give equal weight to a holiday lesson and a semester away from school. The model therefore distinguishes term, holiday and full-time provision.')
 y=para(y,'Zhang and Bray (2021) trace how tutoring in urban China changes location and organizational form as the regulatory environment changes. Their account motivates asking where instruction moves when time or supply is constrained. Wang (2020) documented pupils in Taiyuan attending full-time providers while remaining enrolled elsewhere. The Guangzhou interview suggests a local instance. Its prevalence remains unknown.')
 sub(y+16,'National survey evidence');y+=35
-y=para(y,'The 2021 Double Reduction directive restricted academic tutoring during compulsory education (General Offices, 2021). Wei (2024, Figure 1) reports weighted participation in off-campus academic tutoring. The decline was already underway before the directive.')
+y=para(y,'The 2021 Double Reduction directive restricted academic tutoring during compulsory education (General Office of the CCP Central Committee &amp; General Office of the State Council, 2021). Wei (2024, Figure 1) reports weighted participation in off-campus academic tutoring. The decline was already underway before the directive.')
 xs=[77,192,307,422,537];vals=[36.1,21.9,23,16.5,13.5];years=['2017','2019','2021','2022','2023']
 # Plot calendar time on a linear scale.
 xs=[72+(int(v)-2017)*77 for v in years]
@@ -77,6 +79,13 @@ for i,(x,v) in enumerate(zip(xs,vals)):
     if i: line(xs[i-1],base-vals[i-1]*2.3,x,yy,teal,2.5)
     dot(x,yy,4,teal);txt(x-13,yy-10,f'{v:g}%',10,'Bold');txt(x-12,base+10,years[i],9,'Sans',muted)
 caption(base+24,'Figure 1. National household survey estimates, 2017–2023. The source measures participation in academic tutoring. City-level changes and hours purchased are separate questions.')
+end()
+head(0,'Evidence and calibration','What informs the assumptions?')
+y=para(150,'Liu et al. (2024) surveyed 486 parents and interviewed 23 in a Guangzhou school setting. Their retrospective accounts connect socioeconomic resources with tutoring choices and spending. Liu and Bray (2025) document continuing demand through hidden channels. These studies motivate a wealth gradient in effective restrictions, but do not estimate the coefficient used here.')
+y=para(y,'Effective restriction is clipped to [0,1] and equals BAN_RED × [1 + BAN_GRAD × (1 − 2 × wealth rank)]. BAN_GRAD ranges from 0 to 1. Zero gives a uniform reduction. At one, the poorest pupils face up to twice the central reduction, while the wealthiest face nearly none. This is a sensitivity specification.')
+y=para(y,'Wu et al. (2019) estimate a 0.435 SD final-exam effect of magnet-class enrollment near a cutoff in one rural county. Their suggestive decomposition puts the teacher component at about 40% of the peer component, roughly 29/71 of the total. Our default cumulative premiums are 0.15 and 0.29. Each is halved at each of two stages. Both are independently varied from 0.10 to 0.35; these ranges and the stage allocation are assumptions.')
+y=para(y,'School effects vary across settings (Park et al., 2015; Dee &amp; Lan, 2015). Tutoring findings also depend on design and measurement (Zhang, Y., 2013; Zhang, L., 2024; Zhang, Z., et al., 2025). None directly calibrates our entire synthetic Guangzhou cohort. Literature estimates motivate mechanisms and sensitivity ranges rather than a fitted population prediction.')
+para(y,'Bray’s (2024) timescapes perspective motivates distinguishing term and holiday provision. Zhang (2023) examines regulatory responses internationally. Zhang and Bray (2018) connect tutoring access with tracking; Reardon et al. (2016) model college sorting. Zhou (2019) explains selection concerns when conditioning on credentials, a related problem in a different setting.',size=11)
 end()
 head(3,'Measurement','What does “the same” mean?')
 y=para(149,'Richer and poorer mean the top and bottom 40% of simulated local-hukou families by wealth. For each group we calculate the share winning a seat. A ratio of 1.20 means 12 richer pupils would win for every 10 poorer pupils winning in equally sized groups. It does not mean a 20-percentage-point gap.')
@@ -89,8 +98,8 @@ for j,(k,label) in enumerate([('S','Entrance score'),('Sstar','Score and ability
     l,m,h=q(col(k));yy=y+26+j*46;txt(48,yy+3,label,12,'Bold');line(toX(l),yy,toX(h),yy,teal,3);dot(toX(m),yy,5,teal);txt(toX(m)-12,yy-10,f'{m:.2f}',11,'Bold')
 y=caption(y+162,'Figure 2. Dots mark medians. Lines span the 5th to 95th percentiles across model settings and synthetic cohorts. The reference at 1 means equal admission rates.')
 y=para(y,'S and T use the highest fifth of entrance scores or simulated starting ability, respectively, split into ten equal-count bands. Within each band we calculate rich and poor rates, then divide their equally weighted averages. Cutoffs use the whole cohort. Wealth comparisons include local pupils who did not enter academic high school. Such pupils cannot win a seat in this model.')
-y=para(y,'S* takes the highest fifth by entrance score and groups by both score and ability. Each retained cell needs at least five rich and five poor pupils. Both groups receive the same cell weights, proportional to their combined counts. The 5 × 5 grid retained a median 98.6% of eligible rich and poor pupils. In the 150-setting grid-sensitivity experiment, 10 × 10 retained 92% and 20 × 20 retained 47%.')
-para(y,'The unconditional ratio in the 150-setting experiment, with no score or ability restriction, was 2.34. Differences among these ratios cannot be added: each comparison asks about a different set or mix of pupils.',size=11)
+y=para(y,'S* takes the highest fifth by entrance score and groups by both score and ability. Each retained cell needs at least five rich and five poor pupils. Both groups receive the same cell weights, proportional to their combined counts. The 5 × 5 grid retained a median 98.6% of eligible rich and poor pupils. In the 150-setting grid experiment, the corresponding support at 10 × 10 and 20 × 20 was 91% and 45%.')
+para(y,'The unconditional ratio in the 150-setting mechanism experiment, with no score or ability restriction, was 2.56. Differences among these ratios cannot be added: each comparison asks about a different set or mix of pupils.',size=11)
 end()
 head(4,'Formal verification','Eight pupils explain the problem')
 y=para(149,'Give all eight pupils identical starting ability. Four come from richer homes and four from poorer homes. Everyone scoring high wins a place. Three richer pupils and one poorer pupil score high. The example assumes a score distribution to establish what is logically possible.')
@@ -102,11 +111,11 @@ for j,(label,n) in enumerate([('Richer',3),('Poorer',1)]):
 y=caption(y+108,'Figure 3. H = high score and admitted. L = low score and unadmitted. Both wealth groups contain pupils at both scores.')
 y=para(y,'At either score, pupils receive exactly the same decision. Give the high and low score groups equal weight, and each wealth group’s standardized admission rate is one-half. Their ratio is 1. Across all pupils of this identical ability, however, the rates are three-quarters and one-quarter. Their ratio is 3. A score-based rule can therefore deliver exact score parity while family advantage enters upstream.')
 sub(y+13,'What Lean checked');y+=31
-y=para(y,'Lean 4.36.0 checked these rates by exact rational arithmetic. For any finite before-and-after roster, it also proved that gains in admissions equal losses whenever the total admitted stays fixed. For integer scores, increasing a rival’s score can only worsen or preserve a focal pupil’s rank. With one place and scores of 8 and 7, a two-point bonus to the second pupil displaces the first.')
+y=para(y,'Lean 4.36.0 checked these rates by exact rational arithmetic. For any finite list of before/after Boolean admission indicators, gains equal losses when the two admission totals are equal. For integer scores, increasing a rival’s score can only worsen or preserve a focal pupil’s rank. With one place and scores of 8 and 7, a two-point bonus to the second pupil displaces the first.')
 y=para(y,'Banding uses a ranked list of distinct pupil IDs. Taking its first k IDs yields exactly the smaller of k and school size for every ranking, including a ranking containing score ties. University admission uses a different rule in Python: everyone at or above the cutoff qualifies. Two scores of 8 at a one-seat cutoff form a checked counterexample to universal exact capacity.')
 para(y,'Scope: proofs apply to the stated mathematical rules. The finite tests below connect those rules to sampled Python outputs. Clinical, psychological or biological interpretations of “talent” are outside the model.',size=10,font='Sans')
 end()
-head(5,'Paired model scenarios','A smaller gap in most cohorts')
+head(5,'Paired model scenarios','A small and uncertain equity change')
 y=para(150,'We run the same parameter setting twice, starting with the same random seed. Both scenarios include boarding, holiday tutoring and alternative routes. The “before” scenario switches off the pre-gate tutoring restriction and senior-2 re-banding. This design pairs comparable settings and initial pupils. Later random events can differ when the scenarios follow different paths.')
 delta=col('T')-col('T_before')
 sub(y+13,'Change in the rich-to-poor ratio at comparable ability');y+=35
@@ -118,21 +127,37 @@ for a,b,n in zip(edges,edges[1:],counts):
 line(hx(0),y+6,hx(0),base+6,ink);txt(hx(0)-18,y,'No change',9,'Bold')
 for t in [-.3,-.2,-.1,0,.1,.2]:
     if edges[0]<=t<=edges[-1]:txt(hx(t)-9,base+14,f'{t:.1f}',9,'Sans',muted)
-y=caption(base+25,'Figure 4. Each bar counts configurations in a 0.025-wide interval. Bars to the left of zero show a narrower rich-to-poor gap. The median paired change was −0.051. The middle 90% ranged from −0.188 to +0.052.')
-y=para(y,'T fell in 807 of 1,024 draws (78.8%). A 95% Wilson interval for repeated sampling from this specified design is 76.2%–81.2%. A separate 150-setting Latin-hypercube experiment gave 126 of 150 (84%). For the 1,024-setting experiment, median T was 1.41 before and 1.36 under the current scenario. Median paired tutoring expenditure fell ¥5,069 over five school years (middle 90%: ¥405–¥12,424 saved).')
-y=para(y,'A separate test held each of 128 new parameter settings fixed and generated eight cohorts per setting. At 75 settings the direction of change differed between cohorts. The pooled within-setting standard deviation of the paired change was 0.056. The estimated between-setting standard deviation of the mean change was 0.042 after subtracting sampling variation. This explains why a single cohort per setting can give an unstable sign.')
-para(y,'The 150-setting factorial experiment attributed a median −0.017 in T to the restriction and −0.036 to re-banding by averaging each change over both orders of introduction. Spending levels were ¥35,838 before (¥23,474–¥46,359) and ¥28,771 after (¥19,886–¥41,678). No longitudinal Guangzhou series establishes that re-banding intensified after 2021.',size=10.5)
+y=caption(base+25,'Figure 4. Each bar counts configurations in a 0.025-wide interval. Bars to the left of zero show a narrower rich-to-poor gap. The median paired change was −0.013. The middle 90% ranged from −0.123 to +0.093.')
+y=para(y,'T fell in 598 of 1,024 draws (58.4%). A Wilson 95% interval for repeated sampling from this design is 55.4%–61.4%. Median T was 1.42 in the no-restriction/no-reband scenario and 1.41 in the baseline. Median paired tutoring spending fell ¥4,159 over five school years (middle 90%: ¥336–¥10,642 saved). The paired comparison provides weak evidence of a consistent equity direction within the design.')
+y=para(y,'At 128 independently sampled settings, each repeated with eight cohorts, 119 settings produced both positive and negative paired changes. The pooled within-setting standard deviation was 0.057, compared with a between-setting standard deviation of 0.031 after subtracting cohort variation. The direction of a small change is therefore sensitive to the generated cohort.')
+para(y,'A two-factor decomposition at 150 settings gave median contributions to T of −0.006 from the restriction and −0.005 from re-banding. These are hypothetical contributions averaged over both introduction orders. No longitudinal Guangzhou series establishes that re-banding intensified after 2021.',size=10.5)
+end()
+head(0,'Restriction-only sensitivity','Who can evade the restriction?')
+y=para(150,'The isolated restriction comparison sets BAN_RED to zero while keeping senior-2 re-banding on. Across all 1,024 settings, the median effect on T is −0.0047 (middle 90%: −0.073 to +0.056). T falls in 585 runs (57.1%; Wilson 95%: 54.1%–60.1%). This small effect differs from the combined scenario comparison.')
+y=para(y,'To examine the enforcement gradient directly, we hold each of 256 parameter settings fixed and compare BAN_GRAD = 0, 0.5 and 1. The no-restriction comparison uses the same initial seed and setting. Other simulated events can diverge as pupils follow different paths.')
+sub(y+12,'Median restriction-only change in T');y+=38
+for i,row in enumerate(mechanism['enforcement']):
+    yy=y+i*53
+    txt(50,yy+4,'Gradient '+str(row['gradient']),11,'Bold')
+    lo,mid,hi=row['p05'],row['median'],row['p95']
+    xx=lambda v: 370+v*1100
+    line(xx(lo),yy,xx(hi),yy,teal,2);dot(xx(mid),yy,5,teal)
+    txt(500,yy+4,f"{mid:+.4f}",11,'Bold')
+line(370,y-14,370,y+122,muted,1)
+y=caption(y+145,'Lines show the middle 90% across settings. Zero is unchanged equity. Positive values mean a higher rich-to-poor ratio under the restriction.')
+y=para(y,'At gradient 1, the median is +0.0009 and T falls in 123 of 256 settings (48.0%). This does not demonstrate a robust increase. It shows that the direction of a small modeled restriction effect can reverse when informal access is strongly wealth-graded.')
+para(y,'Yang (2026) likewise models how imperfect enforcement and unequal informal access can change distributional outcomes. Its overlapping-generations analysis and our scenario exercise have different structures. Neither comparison identifies the observed causal effect of Double Reduction.',size=11)
 end()
 head(6,'Mechanisms','Who gets a seat after a bonus?')
 y=para(148,'Hold pupils, academic eligibility and exam scores fixed. Rank academic pupils once by their ordinary exam scores, then again after applying the modeled art and joint-exam bonuses. Count pupils admitted under the first ranking who lose their place in the second. This isolates the effect of ranking rules in the simulation.')
 sub(y+14,'4,000 seats in each ranking');y+=34
-rect(49,y+15,510,32,soft);rect(49,y+15,510*187/4000,32,red)
-line(61,y+47,61,y+62,red);txt(49,y+79,'187 seats change hands',12,'Bold',red);txt(288,y+79,'3,813 keep the same pupil',12,'Bold',teal)
-y=caption(y+94,'Figure 5. Median displacement, a 4.7% turnover of seats. The middle 90% ranged from about 53 to 418 seats. Counting everyone who uses a route would also count candidates who would have won anyway.')
+rect(49,y+15,510,32,soft);rect(49,y+15,510*189/4000,32,red)
+line(61,y+47,61,y+62,red);txt(49,y+79,'189 seats change hands',12,'Bold',red);txt(288,y+79,'3,811 keep the same pupil',12,'Bold',teal)
+y=caption(y+94,'Figure 5. Median displacement, a 4.7% turnover of seats. The middle 90% ranged from about 52 to 422 seats. Counting everyone who uses a route would also count candidates who would have won anyway.')
 y=para(y,'Every one of the 1,024 current-scenario cohorts allocated exactly 4,000 places under each ranking. Every gain matched a loss, and every new winner received a bonus. Both class placements met the intended headcount at every represented school. Continuous synthetic scores made cutoff ties uncommon. Real exam systems need an explicit tie rule.')
 sub(y+14,'Where does the remaining advantage come from?');y+=35
-y=para(y,'In the 150-setting intervention experiment, disabling term and holiday tutoring, full-time instruction and both route bonuses reduced median S* from 1.19 to 1.09. The median within-draw share of excess above parity removed was 49%. The residual is consistent with earlier advantages persisting and with pupils differing within score-and-ability cells. Its precise source remains unresolved.')
-y=para(y,'The ordinary-exam ranking gave a lower rich-family advantage under T (1.25 against 1.35) and S* (1.11 against 1.19). Under S, its ratio of 0.85 lay farther from equal admission rates than 0.91. A claim that one ranking is “fairer” therefore requires a choice of criterion.')
+y=para(y,'In the 150-setting intervention experiment, disabling term and holiday tutoring, full-time instruction and the mutually exclusive route bonuses reduced median S* from 1.19 to 1.10. The median within-draw share of excess above parity removed was 50%. The residual is consistent with earlier advantages persisting and with pupils differing within score-and-ability cells. Its precise source remains unresolved.')
+y=para(y,'The ordinary-exam ranking gave a lower rich-family advantage under T (1.33 against 1.42) and S* (1.11 against 1.19) in the same 150-setting sample. Under S, its ratio of 0.87 lay farther from equal admission rates than 0.91. A claim that one ranking is “fairer” therefore requires a choice of criterion.')
 para(y,'A real art or joint-exam applicant faces distinct eligibility rules, academic and specialist requirements, and capacities. The single-ranking bonus is an approximation. The model cannot estimate how many actual Guangzhou places changed hands.',size=11)
 end()
 head(7,'Sensitivity','How long does an early advantage last?')
@@ -146,13 +171,13 @@ for j in range(6):
     ii=(col('DECAY')>=j*.15)&(col('DECAY')<(j+1)*.15);lo,m,hi=q(col('T')[ii]);yy=y+12+25*j
     txt(53,yy+4,f'{15*j}–{15*(j+1)}% fades',10,'Sans');line(fx(lo),yy,fx(hi),yy,teal,2);dot(fx(m),yy,4,teal);txt(518,yy+4,f'{m:.2f}',10,'Bold')
 y=caption(y+179,'Figure 6. Medians and middle 90% of current-scenario ratios within six parameter bands, from the new 1,024 draws. Other parameters and pupils also vary within each band. This is a sensitivity comparison.')
-y=para(y,'In the paired intervention experiment, removing the wealth-linked home input removed a median 44% of excess T above 1. Removing the zone gradient in teacher inputs removed 22%, and setting pre-gate tutoring effectiveness to zero removed 8%. Removing all three together removed 74%. The corresponding median changes in mean academic-track skill were 0.00, 0.00, −0.02 and −0.02 model units.')
+y=para(y,'In the paired intervention experiment, removing the wealth-linked home input removed a median 47% of excess T above 1. Removing the zone gradient in teacher inputs removed 26%, and setting pre-gate tutoring effectiveness to zero removed 10%. Removing all three together removed 78%. The corresponding median changes in mean academic-track skill were 0.00, 0.00, −0.02 and −0.02 model units.')
 y=para(y,'The small mean changes partly reflect additive learning: a gain for one pupil can offset a loss for another. These interventions say where the simulated gap comes from. Their costs and practical feasibility were never estimated. Diminishing returns, interactions and distinct persistence rates could alter the result.')
 para(y,'The most informative new evidence would link zhongkao subject results to later term scores, class and teacher assignments, senior-2 reassignments, family resources, tutoring histories and gaokao outcomes. Even one school could test the timing of re-banding and the persistence of early score differences.',size=10.5)
 end()
 head(8,'Research design','What the equations assume')
 items=[
-('Class provision','In N1, a pupil’s later score combines early skill, school value added, teaching, peers and tutoring. In the implementation, only top-band pupils receive a fixed teacher and peer premium. Entry classes use zhongkao rank. Senior-2 classes use a weighted mix of entry and later performance ranks. Each nonempty school takes at least one top-band pupil, otherwise the nearest integer to one-eighth of enrollment.'),
+('Class provision','In N1, a pupil’s later score combines early skill, school value added, teaching, peers and tutoring. In the implementation, each stage adds half the cumulative teacher and peer premiums. A pupil in the top band at both stages receives their sum. Wu et al. (2019) motivate the cumulative scale; its equal allocation across stages is assumed. Entry classes use zhongkao rank. Senior-2 classes use a weighted mix of entry and later performance ranks. Each nonempty school takes at least one top-band pupil, otherwise the nearest integer to one-eighth of enrollment.'),
 ('The school-choice margin','N2 subtracts the expected loss of top-class access from a stronger school’s value added. Suppose the school adds 0.20 skill units, the top class adds 0.44, and the chance of that class falls from 65% to 15%. The net is 0.20 − 0.44 × 0.50 = −0.02. This example holds other channels fixed.'),
 ('Why families buy tutoring','N3 proposes that families weigh price against the risk of missing a consequential threshold. A marginal benefit calculation describes an interior candidate. The optimum can also be zero or all affordable hours. Python uses a simpler demand rule: both tails have four times the middle group’s base weight, wealth increases demand, and one round of class-average demand influences take-up. A monotonicity proof for the insurance term alone cannot characterize total demand.'),
 ('How a seat is won','N4 describes separate gates with their own eligibility and capacities. The frozen simulation implements one ranking. Its 4,000-seat target equals 10% of the whole synthetic age cohort, with only academic-track students eligible. Wealth-related selection into proxy routes is an assumption. No full matching market or response of all families to one another’s investments is estimated.'),
@@ -167,39 +192,37 @@ sub(y+14,'School and family surveys');y+=35
 y=para(y,'In the China Education Panel Survey, baseline parent questions A2–A3 ask whether a child attended cram school or an extracurricular course that semester and what the family paid. The 2013–14 baseline covers grades 7 and 9 across 438 classes and 112 schools. Estimate weighted participation and semester spending, including zero spenders. The broad item mixes academic and other courses, and the cohort predates Double Reduction (National Survey Research Center, 2014).')
 y=para(y,'China Family Panel Studies provides household resources and longitudinal family information through an application for public-use files. Match child and household identifiers, check definitions by wave and use survey weights and sampling units. For expenditure comparisons, harmonize recall periods and prices. Public files mask locations below province level, so claiming a Guangzhou city estimate from them would be unjustified (Institute of Social Science Survey, n.d.).')
 sub(y+12,'Local administrative anchors');y+=33
-y=para(y,'Guangzhou reports 31,858 quota places across 491 receiving junior schools in 2026. Eligible high schools allocate at least 50% of planned places. Public-school migrant caps span 8%–18%. The model sweeps 30%–60% for allocation and 8%–20% for caps, applied at an aggregated tier. Of 1,024 draws, 284 satisfy both numerical limits. T fell in 78.5% of that subset, with median change −0.051. This post-hoc check still abstracts from school-specific rules (Guangzhou Admissions Office, 2026a, 2026b, 2026c).')
+y=para(y,'Guangzhou reports 31,858 quota places across 491 receiving junior schools in 2026. Eligible high schools allocate at least 50% of planned places. Public-school migrant caps span 8%–18%. The model sweeps 30%–60% for allocation and 8%–20% for caps, applied at an aggregated tier. Of 1,024 draws, 284 satisfy both numerical limits. T fell in 58.1% of that subset, with median change −0.014. This post-hoc check still abstracts from school-specific rules (Guangzhou Admissions Office, 2026a, 2026b, 2026c).')
 sub(y+11,'An invitation to contribute');y+=32
 para(y,'The '+link(tag,'research repository')+' includes every parameter range, fixed assumption, public benchmark, proof and synthetic result. Contributions can take the form of an issue or a pull request. Please identify the parameter, population, years, units, exact source or table, and the proposed range. Estimates of separate home, school and tutoring persistence would be especially valuable. Aggregate evidence and shareable code are welcome.',size=11)
 end()
 head(10,'Methods and research record','How to reproduce the comparisons')
-y=para(150,'The analysis uses synthetic cohorts of 40,000 pupils. The principal experiment samples 1,024 parameter settings independently. Mechanism ablations and the factorial decomposition use 150 Latin-hypercube settings, while a separate experiment repeats 128 settings across eight cohorts each. All experiments are exploratory. Reported quantiles give each setting equal weight within its experiment.')
-y=para(y,'For the principal experiment, 31 inputs were sampled independently and uniformly over the ranges in the parameter register. One fresh cohort was generated for each of 1,024 parameter vectors. Each paired comparison reused the same vector and initial seed. The collection is an experiment over a chosen distribution of possible worlds. Its frequencies depend on the endpoints, independence assumption and uniform weights (Morris et al., 2019).')
+y=para(150,'The analysis uses synthetic cohorts of 40,000 pupils. The principal experiment samples 1,024 parameter settings independently. Mechanism ablations and the factorial decomposition reuse the first 150 settings, while a separate experiment repeats 128 settings across eight cohorts each. A further check fixes the enforcement gradient at three values on 256 settings. All experiments are exploratory. Reported quantiles give each setting equal weight within its experiment.')
+y=para(y,'For the principal experiment, 32 inputs were sampled independently and uniformly over the ranges in the parameter register. One fresh cohort was generated for each of 1,024 parameter vectors. Each paired comparison reused the same vector and initial seed. The collection is an experiment over a chosen distribution of possible worlds. Its frequencies depend on the endpoints, independence assumption and uniform weights (Morris et al., 2019).')
 y=para(y,'The second experiment crossed 128 fresh parameter settings with eight seeds each. For change in T, the within-setting variance is the mean of the 128 sample variances. The variance of setting means includes cohort variance divided by eight, which we subtracted to estimate between-setting variance. The unit for uncertainty about settings is the setting. Treating eight replicates as eight new parameter settings would understate uncertainty.')
-y=para(y,'A local run and a Linux server run using different NumPy patch versions generated identical primary CSV bytes (SHA-256 in the package). This checks implementation reproducibility across two environments. Both executed the same code. Independent reimplementation, calibration on Guangzhou pupils, and independent statistical peer review remain open.')
+y=para(y,'The packaged outputs were regenerated locally after the cumulative-premium, enforcement-gradient and route-exclusivity corrections. Deterministic seeds, regression checks and file checksums support reproduction. These corrected outputs have not been independently reproduced on another machine. Independent reimplementation, calibration on Guangzhou pupils, and independent statistical peer review remain open.')
 y=para(y,'The model was informed by the author’s observations and one confidential conversation with a tutoring provider in November 2026. Prices, schedules and client descriptions are contextual field evidence. The accompanying data contain synthetic draw-level results and source-linked aggregate benchmarks. Interview transcripts, recordings and pupil records are excluded. The conversation is informal context. The study does not establish documented consent for public dissemination or institutional ethics approval.')
 para(y,'Detailed equations, scenario comparisons, Lean proofs and the parameter register accompany the paper. The research materials are available through the '+link(doi,'data and code archive')+'. '+link(tag,'Download the reproducibility package')+'. AI tools assisted drafting, programming and figure preparation; the author is responsible for the interpretation.',size=11)
 end()
+head(11,'Verification and sensitivity','Which assumptions matter most?')
+y=para(150,'We ranked all 32 sampled inputs and each outcome, then removed the linear rank association with the other 31 inputs. The remaining correlation is a partial rank correlation (PRCC). This is a diagnostic for approximately monotone relationships over our chosen ranges, not a causal effect or a share of variance. The full table also reports ordinary Spearman correlations.')
+sub(y+12,'Largest associations with the equal-ability ratio T');y+=40
+sens=list(csv.DictReader((D/'sensitivity.csv').open()))
+top=sorted([r for r in sens if r['outcome']=='T'],key=lambda r:abs(float(r['prcc'])),reverse=True)[:5]
+for r in top:
+    value=float(r['prcc']);txt(48,y+12,r['parameter'],10,'Bold');line(330,y+6,330,y+19,muted)
+    rect(min(330,330+value*150),y+5,abs(value)*150,12,teal if value>0 else red)
+    txt(500,y+15,f'{value:+.2f}',11,'Bold');y+=32
+y=para(y+10,'Negative values mean larger input values tend to accompany smaller T after controlling the other input ranks. DECAY is the fraction of early advantage that disappears. HOME is the wealth-related home input. TEACH_SD also sets senior-high teacher variability, so its coefficient combines both roles.',size=11)
+y=para(y,'For S*, persistence is again the strongest rank association (DECAY PRCC −0.81). Associations with the paired policy changes are much weaker: the largest absolute PRCC is 0.21 for the combined contrast and 0.13 for the isolated restriction. Interactions, nonmonotonic responses and cohort noise limit what these rankings can show.',size=11)
+y=para(y,'Verification includes exact cumulative-premium scaling, mutually exclusive routes, a no-restriction equivalence check and a neutral-world experiment. With wealth-related channels disabled, 20 independent cohorts gave geometric-mean ratios T=1.000, S=1.004 and S*=1.002. Finite random samples need not equal 1 exactly.',size=11)
+para(y,'The model does not match survey moments or validate an out-of-sample empirical target. Families do not solve a new spending optimization after a policy switch, and prices are fixed. Some downstream choices respond mechanically to changed scores and classes; this is not an equilibrium model of substitution.',size=11)
+end()
 head(11,'Sources','References')
-refs=[
-('Bray, M. (2007). <i>The shadow education system: Private tutoring and its implications for planners</i> (2nd ed.). UNESCO International Institute for Educational Planning.','https://etico.iiep.unesco.org/sites/default/files/2017-09/118486e.pdf'),
-('Bray, M. (2014). The impact of shadow education on student academic achievement: Why the research is inconclusive and what can be done about it. <i>Asia Pacific Education Review, 15</i>(3), 381–389.','https://doi.org/10.1007/s12564-014-9326-9'),
-('Cunha, F., &amp; Heckman, J. (2007). The technology of skill formation. <i>American Economic Review, 97</i>(2), 31–47.', 'https://doi.org/10.1257/aer.97.2.31'),
-('Bray, M., &amp; Lykins, C. (2012). <i>Shadow education: Private supplementary tutoring and its implications for policy makers in Asia.</i> Asian Development Bank &amp; Comparative Education Research Centre, University of Hong Kong.','https://www.adb.org/sites/default/files/publication/29777/shadow-education.pdf'),
-('General Office of the Central Committee of the Communist Party of China, &amp; General Office of the State Council. (2021, July 24). <i>Opinions on further reducing homework and off-campus training burdens for students in compulsory education</i> [Policy directive, in Chinese].','https://www.moe.gov.cn/jyb_xxgk/moe_1777/moe_1778/202107/t20210724_546576.html'),
-('Guangzhou Admissions Office. (2026a). <i>Notice on quota allocation for ordinary senior high schools in 2026</i> [In Chinese].','https://jyj.gz.gov.cn/gk/zfxxgkml/ywgz/zsks/content/post_10788402.html'),
-('Guangzhou Admissions Office. (2026b, May 12). <i>Results of the 2026 quota allocation lottery</i> [In Chinese].','https://gzzk.gz.gov.cn/zkzz/zkxx/zkzx/content/post_10809606.html'),
-('Guangzhou Admissions Office. (2026c). <i>Third- and fourth-batch ordinary high school admissions completed</i> [In Chinese].','https://gzzk.gz.gov.cn/gkmlpt/content/10/10910/post_10910997.html'),
-('Institute of Social Science Survey, Peking University. (n.d.). <i>China Family Panel Studies: Public-use and restricted data access guidelines.</i>','https://www.isss.pku.edu.cn/cfps/en/data/restricted/index.htm'),
-('Jacob, B. A., Lefgren, L., &amp; Sims, D. P. (2010). The persistence of teacher-induced learning. <i>Journal of Human Resources, 45</i>(4), 915–943.', 'https://doi.org/10.3368/jhr.45.4.915'),
-('Manski, C. F. (1993). Identification of endogenous social effects: The reflection problem. <i>The Review of Economic Studies, 60</i>(3), 531–542.','https://doi.org/10.2307/2298123'),
-('Morris, T. P., White, I. R., &amp; Crowther, M. J. (2019). Using simulation studies to evaluate statistical methods. <i>Statistics in Medicine, 38</i>(11), 2074–2102.','https://doi.org/10.1002/sim.8086'),
-('National Survey Research Center, Renmin University of China. (2014). <i>China Education Panel Survey: Baseline parent questionnaire, 2013–2014.</i>','https://ceps.ruc.edu.cn/Enlish/dfiles/11184/14391214047032.pdf'),
-('Wang, F. (2020, November 26). Students retain school enrollment while training providers offer full-time schooling [In Chinese]. <i>Xinhua.</i>','https://www.xinhuanet.com/politics/2020-11/26/c_1126790587.htm'),
-('Wei, Y. (2024). Short-term effects of burden-reduction policy: Evidence from the China household survey of education finance [In Chinese]. <i>China Education Finance</i> (No. 11, cumulative No. 255). Peking University.','https://ciefr.pku.edu.cn/docs/2024-12/bcd3767a1681440c99e79c5c9e94fcd0.pdf'),
-('Zhang, W., &amp; Bray, M. (2021). A changing environment of urban education: Historical and spatial analysis of private supplementary tutoring in China. <i>Environment and Urbanization, 33</i>(1), 43–62.','https://doi.org/10.1177/0956247820981820')]
+refs=[(r['entry'],r['url']) for r in json.loads((D/'references.json').read_text())]
 y=150
 for i,(ref,url) in enumerate(refs):
-    if i==9:
+    if i and i % 7 == 0:
         end();head(12,'Sources','References and research materials');y=150
     y=para(y,ref+' '+link(url,url if 'doi.org' in url else 'Source'),size=10.5)
 end()
