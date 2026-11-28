@@ -62,6 +62,7 @@ let current = 'access';
 let index = 0;
 let activeCategory = 'all';
 let focusedAssumption = '';
+const tinkerSelections = new Map();
 
 const T = () => (window.GZ_I18N && window.GZ_I18N[lang]) || window.GZ_I18N.en;
 const locTopic = (id) => {
@@ -671,6 +672,7 @@ function buildInlineTinker(r) {
     }
   }
 
+  localIdx = tinkerSelections.get(r.id) ?? localIdx;
   const wrap = make('div', undefined, 'inline-tinker');
   const head = make('div', undefined, 'inline-tinker-head');
   const title = make('strong', dict.inlineTinkerTitle(t.label));
@@ -691,6 +693,7 @@ function buildInlineTinker(r) {
     const c = t.cases[idx];
     const ref = t.cases[t.default];
     caseLbl.textContent = `${c.label} (${idx + 1}/${t.cases.length})`;
+    slider.setAttribute('aria-valuetext', c.label);
     readout.innerHTML = c.values.map(([v, lo, hi], i) => {
       const diff = v - ref.values[i][0];
       const diffTag = idx !== t.default ? ` (${fmtSigned(diff)} ${dict.vsBaseline})` : ` (${dict.baselineTag})`;
@@ -698,7 +701,11 @@ function buildInlineTinker(r) {
       return `<span><strong>${t.series[i]}:</strong> ${fmt(v)}${rangeTag}<span class="fine">${diffTag}</span></span>`;
     }).join('');
   }
-  slider.addEventListener('input', () => updateReadout(Number(slider.value)));
+  slider.addEventListener('input', () => {
+    const selected = Number(slider.value);
+    tinkerSelections.set(r.id, selected);
+    updateReadout(selected);
+  });
   updateReadout(localIdx);
 
   sliderRow.append(make('span', dict.inlineSavedSetting, 'fine'), slider);
@@ -755,8 +762,9 @@ function showAssumptions() {
       jumpBtn.addEventListener('click', () => {
         const [target, step] = exactCasesFor[r.id] ?? [topicsFor[r.id], undefined];
         setMode('explorer', 'findings', false);
-        pick(target, step);
-        $('findings').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        pick(target, tinkerSelections.get(r.id) ?? step);
+        $('metric').focus({ preventScroll: true });
+        $('metric').closest('figure').scrollIntoView({ block: 'start' });
       });
       actions.append(jumpBtn);
     }
