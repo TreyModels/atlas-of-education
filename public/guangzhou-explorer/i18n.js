@@ -11,44 +11,44 @@ window.GZ_I18N = {
     skipToExplorer: 'Skip → Full Explorer',
     backToStory: '← Guided Storyboard',
     kicker: 'INTERACTIVE RESEARCH COMPANION · REVISION 1.4',
-    heroTitle: 'If you are academically gifted, how much does your family’s SES hold you back?',
-    heroLead: 'Follow one synthetic student through Guangzhou’s two-gate sorting machine across 40.96 million Monte Carlo runs—then test boarding timescapes, tutoring efficacy, early-advantage decay, and all 134 documented assumptions.',
+    heroTitle: 'Can talented pupils from poorer families reach a selective university in Guangzhou?',
+    heroLead: 'This is a simulation study of educational opportunity. We modeled 40,000 synthetic pupils in each of 1,024 sets of assumptions about families, schools and tutoring, then compared who secured a fixed number of university proxy places.',
     bylineAuthor: 'Dr. Trey Menefee',
     bylineMeta: 'Working paper companion · 28 November 2026',
     badgePrecomputed: 'Precomputed saved runs only · Zero invented numbers',
     storyPrev: '← Previous',
     storyNext: 'Next →',
     storyStepOf: (i, n) => `${i} / ${n}`,
-    btnReplay: 'Replay paths',
+    btnReplay: 'Replay result',
     btnPause: 'Pause',
     btnResume: 'Resume',
     storyBeats: [
       {
-        tag: 'STEP 1 · FOLLOW ONE SYNTHETIC STUDENT (MONTE CARLO)',
-        title: 'One gifted student, 40.96 million simulated paths',
-        lead: 'Start with a single locally registered student in Guangzhou: top 10% starting ability, bottom 10% family wealth. What happens to that glowing teal path depends on exam-day luck, school placement, and which assumptions hold—so we don’t run one student once. The faded ghost trails show how a Monte Carlo simulation tests 40,000 synthetic pupils across 1,024 parameter worlds (40.96 million student-runs).',
+        tag: 'STEP 1 · RESEARCH QUESTION AND DESIGN',
+        title: 'What did we simulate, and what did we find?',
+        lead: 'We gave synthetic pupils different starting abilities and family resources, applied modeled school and university admissions rules, and varied the assumptions across 1,024 settings. Across settings, about 66 in 100 high-ability pupils from poorer local families reached the university proxy, compared with 82 in 100 from richer local families.',
         subNote: 'In the saved 40,000-pupil cohort shown here, 100% of these high-ability lower-income students reach academic senior high, and 61.8% secure a selective university proxy (59.4% median across all 1,024 parameter worlds; 65.8% for the poorer 40%).',
-        controlLabel: 'Animation controls (real trajectories from rank_bands_example_pupils.csv.gz):'
+        controlLabel: 'Replay the result from one saved cohort:'
       },
       {
-        tag: 'STEP 2 · THE TWO-GATE SORTING MACHINE & SENIOR-1 REBANDING',
+        tag: 'STEP 2 · ADMISSIONS AND CLASS REASSIGNMENT',
         title: 'How Chinese families experience the gates—and who beats whom',
-        lead: 'Guangzhou’s system runs through two sequential gates: the Zhongkao (high-school entrance exam, separating vocational and academic tracks) and the Gaokao (selective university entry). In between sits Senior-1 rebanding: even if a poorer talented pupil lands in a top-20% school, performance-based rebanding can lift them into a top-10% advanced class (+4.0 percentage points in our 150-setting ablation).',
+        lead: 'Guangzhou’s system runs through two sequential gates: the Zhongkao (high-school entrance exam, separating vocational and academic tracks) and the Gaokao (selective university entry). Between the two gates, the model can reassign pupils to classes based on performance. Enabling that rule raised the poorer high-ability group’s modeled university proxy rate by a median paired 4.0 percentage points in 150 settings.',
         subNote: 'Toggle the amber comparison student below. Against a 60th-percentile-ability rich peer (top 10% wealth), talent dominates: 61.8% vs. 0.6% reach a selective university. Against an equally gifted rich peer (top 10% ability & wealth), SES opens a 27-point gap (59.4% vs. 86.3% across 1,024 settings; 0.91 by entrance score vs. 1.37 by starting ability).',
         controlLabel: 'Compare against (real saved outcomes):'
       },
       {
         tag: 'STEP 3 · THE BOARDING HYPOTHESIS & TIMESCAPES',
-        title: 'Boarding didn’t end tutoring—it shifted it in time',
-        lead: 'Teaching in Guangzhou’s boarding high schools, it first looked like campus lock-in had ended private tutoring: students lived on campus and went home one day a week. In reality, tutoring shifted across the calendar—nearly zero during term when free time is tight (0.08%), yet 27.8% of boarders still buy in summer and winter breaks.',
+        title: 'When can boarding pupils fit in tutoring?',
+        lead: 'Teaching in Guangzhou’s boarding high schools, it first looked like campus lock-in had ended private tutoring: students lived on campus and went home one day a week. In the central saved scenario, 0.08% of academic-track Grade 11 boarders took tutoring during term and 27.8% bought tutoring in at least one holiday.',
         subNote: 'Toggle the saved boarding timetable and parental-belief scenarios below. Expanding usable boarding term time from 1 to 3 hours unlocks term demand (0.08% → 24.7%). Independently, raising what parents expect tutoring to deliver lifts Grade 11 participation from 29.5% to 35.0% even when actual learning gains stay fixed.',
         controlLabel: 'Saved calendar & parental-belief scenarios:'
       },
       {
         tag: 'STEP 4 · MECHANISM 1: DOES SHADOW EDUCATION ACTUALLY WORK?',
-        title: 'Why the “1 in 6” number fell when we upgraded the math',
+        title: 'How much does tutoring change the seat list?',
         lead: 'If wealthier families still buy tutoring across holidays, how much does that push lower-SES talent down? That depends both on whether paid tutoring actually raises scores—and on how realistically you model household choices.',
-        subNote: 'Our earlier reduced-form stress test (mechanical wealth-linked probabilities) pushed 4.1% (baseline) to 16.2% (~1 in 6, strong effect) of poorer top-talent pupils down a rank band. When we upgraded the methodology to a real household-choice menu—with one shared annual budget, boarding free-time limits, and full-time tutoring replacing formal school inputs—displacement dropped to 3.0% centrally (0.18 SD) and 9.8% (~1 in 10) at the Korean upper-quantile sensitivity (0.39 SD).',
+        subNote: 'Our earlier reduced-form stress test (mechanical wealth-linked probabilities) pushed 4.1% (baseline) to 16.2% (~1 in 6, strong effect) of poorer top-talent pupils down a rank band. In a revised household-choice model with different efficacy inputs and a shared annual budget, displacement was 3.0% centrally (0.18 SD) and 9.8% (~1 in 10) at the Korean upper-quantile sensitivity (0.39 SD).',
         controlLabel: 'Switch methodology or slide assumed tutoring gain (real saved runs):'
       },
       {
@@ -65,7 +65,7 @@ window.GZ_I18N = {
         subNote: 'Explore all 14 saved topics and 134 documented assumptions right here—or download the open-source Python model and data (DOI: 10.5281/zenodo.24369167), drop them into ChatGPT, Claude, Gemini, DeepSeek, or Kimi, tell it which rules or parameters to change, and run your own Guangzhou counterfactual.',
         bullets: [
           'Why simulate a restricted market: Highlights the highest-leverage empirical gaps—early-advantage fade, usable boarding hours, real package efficacy, and household liquid assets beyond annual income.',
-          'Strict scientific guardrails: Every chart and animation on this site reads precomputed, SHA-256-verified saved runs; all public summaries exclude identifiable field material.',
+          'Strict scientific guardrails: Charts replay checksummed saved outputs. The animation reveals saved cohort rates. This page uses synthetic pupil data.',
           'Fork it in minutes: Download the repo from GitHub or Zenodo (DOI 10.5281/zenodo.24369167) and ask any AI coding assistant to tweak the rules and re-run.'
         ],
         ctaExplorer: 'Open Full 14-Topic Explorer',
@@ -77,7 +77,7 @@ window.GZ_I18N = {
       { id: 'rich10_p60', label: '60th-pct ability · Top 10% wealth (0.6% uni)' },
       { id: 'rich10_top10', label: 'Top 10% ability · Top 10% wealth (86.3% median)' }
     ],
-    beat2RebandCallout: 'Senior-1 Rebanding (+4.0 pp): Turning off performance-based class reassignment drops poorer top-10% access from 66.0% to 62.1% across 150 matched settings. Equity ratios: 0.91 (entrance score) → 1.17 (joint) → 1.37 (starting ability).',
+    beat2RebandCallout: 'Later class reassignment (+4.0 pp): Turning off performance-based class reassignment drops poorer top-10% access from 66.0% to 62.1% across 150 matched settings. Equity ratios: 0.91 (entrance score) → 1.17 (joint) → 1.37 (starting ability).',
     beat3Options: [
       { id: 'cal_main', label: 'Boarding: 1 h/wk free time (0.08% term · 27.8% holiday)', topic: 'calendar', caseId: 'main' },
       { id: 'cal_3h', label: 'Boarding: 3 h/wk free time (24.7% term · 30.0% holiday)', topic: 'calendar', caseId: 'board_longer_term' },
@@ -85,7 +85,7 @@ window.GZ_I18N = {
       { id: 'bel_high', label: 'Grade 11 beliefs: higher expectations only (35.0% annual)', topic: 'grade', caseId: 'g11_belief_only_039' }
     ],
     beat4MathModes: [
-      { id: 'choice', label: 'Upgraded math: Household-choice menu (3.0% central · 9.8% at 0.39 SD)' },
+      { id: 'choice', label: 'Revised household-choice menu (3.0% central · 9.8% at 0.39 SD)' },
       { id: 'legacy', label: 'Original math: Reduced-form probabilities (4.1% · 16.2% / ~1 in 6)' }
     ],
     beat4RestrictionNote: 'Saved 40% pre-gate restriction (central efficacy): +0.25 pp if borne equally · +0.02 pp if richer families evade.',
@@ -149,13 +149,13 @@ window.GZ_I18N = {
     dlHeading: 'Download verified data snapshots',
     dlData: 'All 14 topics & saved cases',
     dlAssump: 'Full 134-parameter register',
-    dlStory: 'Real Monte Carlo trajectories (story_paths.json)',
+    dlStory: 'Real saved example-cohort results (story_paths.json)',
     dlProv: 'Experiment scope & SHA-256 hashes',
     dlGithub: 'GitHub repository (full Python simulation code)',
     dlZenodo: 'Zenodo Atlas of Education collection',
     anchorsHeading: 'Empirical & institutional anchors',
     provHeading: 'Cryptographic provenance (SHA-256)',
-    provLead: 'Loaded live from provenance.json so every displayed chart and storyboard trajectory traces directly back to its saved output file.',
+    provLead: 'Loaded live from provenance.json so every displayed chart and storyboard chart traces directly back to its saved output file.',
     provColLayer: 'Layer',
     provColFile: 'File',
     provColHash: 'SHA-256',
@@ -186,44 +186,44 @@ window.GZ_I18N = {
     skipToExplorer: '跳过导览 → 完整浏览器',
     backToStory: '← 返回6步故事导览',
     kicker: '交互式研究伴侣 · 修订版 1.4',
-    heroTitle: '如果一名学生天资出众，家庭社会经济地位（SES）会把他拖慢多少？',
-    heroLead: '跟随一名合成学生穿越广州中考、高一分班与高考两道闸口（4,096 万次蒙特卡洛模拟轨迹），再亲手检验住校时间景观、补习效力、早期优势消退与全部 134 项公开假设。',
+    heroTitle: '在广州，家庭资源较少的高能力学生能否进入重点大学？',
+    heroLead: '这是一项关于教育机会的模拟研究。我们在 1,024 组家庭、学校和补习假设下各模拟 40,000 名学生，比较谁获得固定数量的模拟重点大学名额。',
     bylineAuthor: 'Dr. Trey Menefee',
     bylineMeta: '工作论文交互伴侣 · 2026年11月28日',
     badgePrecomputed: '仅展示已保存预计算结果 · 零虚构数字',
     storyPrev: '← 上一步',
     storyNext: '下一步 →',
     storyStepOf: (i, n) => `${i} / ${n}`,
-    btnReplay: '重播轨迹',
+    btnReplay: '重播结果',
     btnPause: '暂停',
     btnResume: '继续',
     storyBeats: [
       {
         tag: '第 1 步 · 跟随一名合成学生（蒙特卡洛模拟原理）',
-        title: '一名寒门优生，4,096 万次平行宇宙模拟',
-        lead: '先看这一名广州本地户籍学生：初始能力前 10%，家庭财富后 10%。这条发光的青色轨迹最终走向哪里，取决于考场发挥、学校分配与制度假设——所以我们绝不只模拟一次。背后散开的浅色“影子轨迹”，直观展示了蒙特卡洛模拟如何在 1,024 组参数世界里反复运行 40,000 人队列（总计 4,096 万学生次）。',
+        title: '我们模拟了什么？结果是什么？',
+        lead: '我们为合成学生设定不同的初始能力和家庭资源，应用中考与高考规则，并在 1,024 组设定中改变假设。各组设定的中位数显示，本地高能力学生中，较贫困家庭约 66% 获得模拟重点大学名额，较富裕家庭约 82%。',
         subNote: '在已保存的 40,000 人示例队列中，这批贫困高能力本地生 100% 考入公办/民办普高，61.8% 进入模拟重点大学通道（全 1,024 组设定的中位数为 59.4%；收入后 40% 群体为 65.8%）。',
-        controlLabel: '动画控制（真实轨迹采样自 rank_bands_example_pupils.csv.gz）：'
+        controlLabel: '重播一个已保存队列的结果：',
       },
       {
-        tag: '第 2 步 · 两道升学闸口与高一分班机制',
+        tag: '第 2 步 · 两道升学闸口与高中阶段重新分班机制',
         title: '中国家庭眼中的筛选机器：谁能真正胜出？',
-        lead: '广州升学体系由两道闸口构成：中考（分离普高与职高通道）与高考（重点大学选拔）。两道闸口之间还有关键的「高一分班」：即便寒门优生进入的是前 20% 而非顶尖高中，仍可凭成绩进入前 10% 重点班（在 150 组配对实验中，高一分班将贫困优生重点大学机会提升了 +4.0 个百分点）。',
+        lead: '学生先参加中考，再参加高考。在两个阶段之间，模型允许学校按表现重新分班。150 组配对设定中，启用该规则使较贫困高能力学生的模拟重点大学录取率提高了 4.0 个百分点（配对差值的中位数）。',
         subNote: '切换下方琥珀色对比学生：对比「能力第 60 百分位、财富前 10%」的富裕同学，天赋压倒财富（重点大学通道率 61.8% 对比 0.6%）；但对比「同样能力前 10% 且财富前 10%」的同龄人，家庭背景仍拉开 27 个百分点差距（59.4% 对比 86.3%；按中考分数比 0.91，按初始能力比 1.37）。',
         controlLabel: '切换对比学生（真实已保存结果）：'
       },
       {
         tag: '第 3 步 · 住校假说与补习的“时间景观”',
-        title: '高中住校没有消灭补习——而是把它挤压进了寒暑假',
-        lead: '在广州寄宿制高中任教时，最初的直觉是：学生几乎全周住校、每周只回家一天，校外补习应该难以为继。但现实中，补习并未消失，而是沿着日历发生了时间转移——学期内可用空余极紧时，住校生学期补习率近乎为零（0.08%），但寒暑假参与率仍达 27.8%。',
+        title: '住校生什么时候有时间参加补习？',
+        lead: '在中心模拟场景中，学术轨道高二住校生有 0.08% 在学期内参加补习，27.8% 至少在一个假期参加补习。',
         subNote: '切换下方已保存情境：把住校生学期可用空余从每周 1 小时放宽到 3 小时，学期补习立刻反弹至 24.7%。此外，仅提高家长对补习收益的预期，高二参与率就从 29.5% 升至 35.0%，即使真实提分效果毫无变化。',
         controlLabel: '对比已保存的住校作息与家长预期情境：'
       },
       {
         tag: '第 4 步 · 机制一：补习到底有效吗？为何升级数学模型后数字下降？',
-        title: '从“六分之一”到 3%–10%：当模型纳入真实家庭预算与住校约束',
+        title: '补习会在多大程度上改变录取排序？',
         lead: '既然富裕家庭仍在假期补习，这究竟把贫困优生往下挤了多少？答案既取决于补习是否真的提分，也取决于我们如何刻画家庭决策。',
-        subNote: '早期简化模型（直接按财富分配补习概率）在强效压力测试下显示约 16.2%（约六分之一）的贫困优生下滑排位档。当我们升级方法论，改为包含统一年度预算、住校时间窗以及“全日制补习替代校内教学”的家庭选择菜单后，基准排位挤出率降至 3.0%（0.18 SD），在韩国高分位效力敏感性（0.39 SD）下为 9.8%（约十分之一）。',
+        subNote: '原模型在较低和较高的补习效果设定下，分别有 4.1% 和 16.2% 的较贫困高能力学生下降至少一个排名档。新版使用不同的补习菜单和效果假设，中心结果为 3.0%，较高效果场景为 9.8%。这些结果无法单独识别改用新模型的影响。',
         controlLabel: '切换新旧方法论或拖动假设提分幅度（真实保存数据）：'
       },
       {
@@ -252,7 +252,7 @@ window.GZ_I18N = {
       { id: 'rich10_p60', label: '能力第60百分位 · 财富前10%（重点大学 0.6%）' },
       { id: 'rich10_top10', label: '能力前10% · 财富前10%（1,024组中位数 86.3%）' }
     ],
-    beat2RebandCallout: '高一分班提升（+4.0 百分点）：关闭按成绩重新分班后，贫困前 10% 学生的通道率从 66.0% 降至 62.1%（150 组配对实验）。富贫比率：中考口径 0.91 → 联合口径 1.17 → 初始能力口径 1.37。',
+    beat2RebandCallout: '高中阶段重新分班提升（+4.0 百分点）：关闭按成绩重新分班后，贫困前 10% 学生的通道率从 66.0% 降至 62.1%（150 组配对实验）。富贫比率：中考口径 0.91 → 联合口径 1.17 → 初始能力口径 1.37。',
     beat3Options: [
       { id: 'cal_main', label: '住校生：每周 1 小时空余（学期 0.08% · 假期 27.8%）', topic: 'calendar', caseId: 'main' },
       { id: 'cal_3h', label: '住校生：每周 3 小时空余（学期 24.7% · 假期 30.0%）', topic: 'calendar', caseId: 'board_longer_term' },
@@ -324,13 +324,13 @@ window.GZ_I18N = {
     dlHeading: '下载已校验的数据快照',
     dlData: '全部 14 个主题与已保存情境数据',
     dlAssump: '完整 134 项假设与参数清单',
-    dlStory: '真实蒙特卡洛轨迹数据（story_paths.json）',
+    dlStory: '示例队列的已保存结果（story_paths.json）',
     dlProv: '实验范围与 SHA-256 校验值',
     dlGithub: 'GitHub 开源仓库（完整 Python 模拟代码）',
     dlZenodo: 'Zenodo 教育图谱总合集',
     anchorsHeading: '核心实证与制度参考文献',
     provHeading: '密码学溯源校验（SHA-256）',
-    provLead: '实时读取自 provenance.json，确保每一张图表与轨迹动画均可溯源至原始保存输出文件。',
+    provLead: '实时读取自 provenance.json，确保每一张图表与动画均可溯源至原始保存输出文件。',
     provColLayer: '层级',
     provColFile: '文件名',
     provColHash: 'SHA-256 哈希值',

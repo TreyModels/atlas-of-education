@@ -323,8 +323,8 @@ function renderStoryMonteCarlo(showCompare) {
   }
   $('story-values').replaceChildren(...rows);
   $('story-caption').textContent = lang === 'zh'
-    ? '每一条曲线均来自已保存的 40,000 人合成队列真实个体坐标；顶部阴影区为重点大学前 10% 通道。'
-    : 'Every trajectory plots real coordinates from the saved 40,000-pupil cohort; shaded top band marks the top-10% selective university proxy.';
+    ? '横条显示一个已保存的 40,000 人合成队列中的比例。文字另列 1,024 组设定的中位数。'
+    : 'Bars show rates from one saved 40,000-pupil cohort. The text also reports the median across 1,024 settings where available.';
 
   requestAnimationFrame(() => {
     window.GZ_MC_CANVAS.mount($('story-chart'), {
