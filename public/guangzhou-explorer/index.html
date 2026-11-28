@@ -13,7 +13,6 @@
 <script src="explorer.js" defer></script>
 <script src="sorter.js" defer></script>
 <script src="heatmap.js" defer></script>
-<script src="dotplot.js" defer></script>
 <script src="download.js" defer></script>
 </head>
 <body>
@@ -70,8 +69,7 @@
   </section>
 
   <div id="sorter-root"></div>
-  <div id="heatmap-root"></div>
-  <div id="dotplot-root"></div>
+  <div id="heatmap-root" hidden></div>
   <div id="download-root"></div>
 
   <section class="explainer" id="what-is-this" aria-labelledby="what-title">
@@ -97,7 +95,7 @@
     <h2 id="dr-title" data-i18n="dblTitle">The double reduction policy (双减)</h2>
     <p data-i18n="dblP1">In July 2021 China’s central government issued a national policy, widely called “Double Reduction” (双减), that sharply restricted for-profit academic tutoring for pupils in compulsory education (the nine years of primary and junior-secondary school) and asked schools to reduce homework.</p>
     <p data-i18n="dblP2">Why it matters here: the policy changes how much tutoring a family can buy openly. It could narrow the gap between richer and poorer pupils by making paid help harder to get for everyone. It could also widen or shift the gap if richer families keep buying help in other ways, and tutoring can move out of sight into informal arrangements that are harder to regulate. So how strictly the rules are enforced matters as much as what they say.</p>
-    <p data-i18n="dblP3">How the model represents it: the model has no single “policy on” switch with a fixed effect. It cuts early, pre-entrance tutoring by a set share and asks how that cut is shared across family wealth. The “What if tutoring is restricted” question on the Explore tab compares a cut that falls equally on everyone with a cut that richer families mostly evade. These enforcement-sensitivity runs are the closest the model comes to testing enforcement. They do not estimate the causal effect of Double Reduction.</p>
+    <p data-i18n="dblP3">How the model represents it: the model has no single “policy on” switch with a fixed effect. It tests a stylized 40% pre-gate tutoring cut (BAN_RED) under two enforcement gradients (BAN_GRAD): a cut that falls equally on every family, and a cut that wealthier families mostly evade. The “What if tutoring is restricted” question on the Explore tab compares these two cases. The model varies this mechanism; it does not estimate the empirical causal effect of Double Reduction.</p>
 
     <details class="expert-box">
       <summary data-i18n="specSummary">For specialists</summary>

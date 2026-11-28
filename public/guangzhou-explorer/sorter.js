@@ -1,20 +1,25 @@
 /* Guangzhou explorer: hero "sorting machine".
- * Illustrative replay of SAVED aggregate results (data.json). No per-pupil
- * outcomes exist in the saved file, so every dot is a sampled stand-in.
- * Dots are assigned to baskets so that the shares match the saved rates.
+ * Stylized replay of SAVED aggregate results (data.json). No per-pupil
+ * outcomes exist in the saved file, so every dot is a sampled stand-in whose
+ * group shares match the saved rates.
  * Plain JS, no build step. Mounts into #sorter-root.
  */
 (function () {
   'use strict';
 
   // Saved headline numbers (data.json):
-  //  poorRate / richRate: access.cases[2] (top 10% starting ability, local pupils,
-  //  bottom 40% vs top 40% of wealth), selective-university proxy, in percent / 100.
-  //  ratios: fairness.cases[0..2].values[0] (standardized richer-to-poorer rate ratios).
+  //  poorRate / richRate: access.cases[2] ("Top 10% ability · bottom and top 40%
+  //  of wealth", local-hukou pupils), selective-university proxy, in percent / 100.
+  //  ratios: fairness.cases[0..2].values[0] (standardized richer-to-poorer ratios).
+  //  drShift: restriction.cases[2] (default case, junior 0.075 · senior 0.05 score
+  //  gain), mean paired change for poorer local pupils in the top ability tenth,
+  //  in percentage points (converted to a fraction here, / 100).
+  //  [0] uniform cut ("Cut equally borne"), [1] richer families mostly evade.
   var SAVED = {
     poorRate: 0.658117,
     richRate: 0.818206,
-    ratios: [0.912502, 1.166706, 1.369075]
+    ratios: [0.912502, 1.166706, 1.369075],
+    drShift: [0.25244 / 100, 0.02126 / 100]
   };
 
   var MODES = [
@@ -23,36 +28,37 @@
     { ratio: SAVED.ratios[2], label: 'modeAbility', cap: 'cap2', raw: true }
   ];
 
-  // Group indices: 0 poorer, 1 middle, 2 richer.
+  // Double-reduction states: 0 off, 1 uniform cut, 2 richer families evade.
+  var DR_COUNT = 3;
+
+  // Two groups only: poorer 40% and richer 40% of local pupils (the middle 20%
+  // is outside the rich-to-poor contrast in the paper).
   var GROUPS = [
     { key: 'gPoor', color: '#13857a' },
-    { key: 'gMid', color: '#9aa3ab' },
     { key: 'gRich', color: '#e8793a' }
   ];
-  var BASKET_COUNT = 4;
-  var BX = [0.125, 0.375, 0.625, 0.875];
+  // Two baskets: the saved selective-university proxy share, and everyone else.
+  var BASKET_COUNT = 2;
+  var BX = [0.3, 0.7];
+  var BASKET_HALF = 0.19;
   var GATE_Y = [0.18, 0.36, 0.54];
   var GATE_LABEL = ['bandTutoring', 'bandSchool', 'bandScore'];
   var LANE_Y = 0.66;
   var BASKET_TOP = 0.8;
   var BASKET_BOTTOM = 0.96;
-  // Split of NON-selective pupils across the other baskets. Not in the saved
-  // file; illustrative only.
-  var OTHER_SPLIT = 0.35;
-  var VOC_SPLIT = 0.30;
-  var DR_SHIFT = 0.02; // illustrative double-reduction shift on selective shares
   var SEED = 2201;
-  var SHARE = 0.4; // poorer and richer groups are each 40% of the sample
 
   var STR = {
     en: {
-      badge: 'Illustrative replay of saved results (each dot is a sample pupil; shares match saved rates, not individual pupil records)',
-      sample: 'Sample note: the saved file gives raw rates only for starting ability (65.8% poorer, 81.8% richer). For the other two views, dot rates are matched to the saved ratios on the same poorer base. The split of non-selective pupils is illustrative.',
+      badge: 'Stylized replay of saved results. Each dot is a sample pupil; group shares match saved rates, not individual pupil records.',
+      sample: 'Source: data.json. The saved file gives raw rates only for starting ability (65.8% poorer, 81.8% richer, top 10% ability). For the entrance-score and joint views, the dots are matched to the saved standardized ratios applied to the poorer rate. The sample is drawn from these rates.',
       sortBy: 'Sort by',
       dr: 'Double reduction',
       drOff: 'Off',
-      drOn: 'On',
-      drNote: 'Illustrative only, not a saved run: On moves selective shares 2 points toward parity (poorer up, richer down).',
+      drUni: 'Uniform cut',
+      drEvade: 'Richer families evade',
+      drNote1: 'Stylized mechanism, not an estimate of the real policy effect. Saved paired change in the poorer group’s selective-university proxy rate under a 40% pre-gate cut, uniform enforcement: +0.25 percentage points (data.json, restriction, default case). The richer group is not changed because no saved richer-group change exists.',
+      drNote2: 'Stylized mechanism, not an estimate of the real policy effect. Saved paired change in the poorer group’s selective-university proxy rate under a 40% pre-gate cut, wealthier families mostly evading: +0.02 percentage points (data.json, restriction, default case). The richer group is not changed because no saved richer-group change exists.',
       play: 'Play',
       pause: 'Pause',
       replay: 'Replay',
@@ -62,28 +68,27 @@
       bandTutoring: 'Tutoring',
       bandSchool: 'School type',
       bandScore: 'Entrance score',
-      bName0: 'Selective university',
-      bName1: 'Other university',
-      bName2: 'Vocational',
-      bName3: 'Out of track',
+      bName0: 'Selective university (proxy)',
+      bName1: 'Not selective',
       gPoor: 'Poorer 40%',
-      gMid: 'Middle 20%',
       gRich: 'Richer 40%',
       cap0: 'Similar entrance scores: richer-to-poorer ratio {r} (saved, standardized). Family advantage is largely already in the exam score.',
       cap1: 'Similar scores and starting ability: ratio {r} (saved, standardized).',
       cap2: 'Similar starting ability: ratio {r} (saved, standardized). The raw rates behind this view are 65.8% poorer and 81.8% richer, a smaller raw gap than the standardized ratio.',
       ratioLabel: 'Ratio sequence',
-      canvasLabel: 'Animated sorting of simulated pupils into four baskets: selective university, other university, vocational and out of track. The shares are given in the text below.',
-      summaryLine: '{b}: poorer {p}, middle {m}, richer {r}.'
+      canvasLabel: 'Animated sorting of simulated pupils into two baskets: selective university proxy and not selective. The shares are given in the text below.',
+      summaryLine: '{b}: poorer {p}, richer {r}.'
     },
     'zh-Hans': {
-      badge: '已保存结果的示意回放（每个点是一名抽样学生；比例与已保存结果一致，并非个体学生记录）',
-      sample: '说明：已保存文件中，仅“初始能力”视图给出原始比率（贫困 65.8%，富裕 81.8%）。另外两个视图的点按已保存的比值，在同一贫困基数上匹配。非重点去向的划分仅为示意。',
+      badge: '已保存结果的程式化回放。每个点是一名抽样学生；群体比例与已保存比率一致，并非个体学生记录。',
+      sample: '来源：data.json。已保存文件仅在“初始能力”视图给出原始比率（前 10% 能力，贫困 65.8%，富裕 81.8%）。中考成绩与综合视图中，各点按已保存的标准化比值，在贫困组比率上匹配。抽样依据这些比率。',
       sortBy: '排序依据',
       dr: '双减',
       drOff: '关',
-      drOn: '开',
-      drNote: '仅为示意，并非已保存的运行结果：“开”会使重点大学比率向均等方向移动 2 个百分点（贫困组上升，富裕组下降）。',
+      drUni: '平等削减',
+      drEvade: '富裕家庭规避',
+      drNote1: '程式化机制，并非对真实政策效果的估计。已保存的配对变化：在升学前削减 40% 的情形下，贫困组重点大学代理比率上升 0.25 个百分点（平等执行；data.json，restriction，默认情形）。富裕组未作改动，因已保存结果中没有富裕组的变化。',
+      drNote2: '程式化机制，并非对真实政策效果的估计。已保存的配对变化：在升学前削减 40% 的情形下，富裕家庭大多规避时，贫困组重点大学代理比率上升 0.02 个百分点（data.json，restriction，默认情形）。富裕组未作改动，因已保存结果中没有富裕组的变化。',
       play: '播放',
       pause: '暂停',
       replay: '重播',
@@ -93,26 +98,23 @@
       bandTutoring: '课外辅导',
       bandSchool: '学校类型',
       bandScore: '中考成绩',
-      bName0: '重点大学',
-      bName1: '其他大学',
-      bName2: '职业教育',
-      bName3: '脱离升学轨道',
+      bName0: '重点大学（代理）',
+      bName1: '非重点',
       gPoor: '贫困 40%',
-      gMid: '中间 20%',
       gRich: '富裕 40%',
       cap0: '中考成绩相近：富裕与贫困家庭的比值为 {r}（已保存，标准化）。家庭优势大多已体现在考试成绩中。',
       cap1: '成绩与初始能力相近：比值为 {r}（已保存，标准化）。',
       cap2: '初始能力相近：比值为 {r}（已保存，标准化）。该视图的原始比率为贫困 65.8%、富裕 81.8%，原始差距小于标准化比值。',
       ratioLabel: '比值序列',
-      canvasLabel: '模拟学生被分流到四个去向的动画：重点大学、其他大学、职业教育和脱离升学轨道。具体比例见下方文字。',
-      summaryLine: '{b}：贫困 {p}，中间 {m}，富裕 {r}。'
+      canvasLabel: '模拟学生被分流到两个去向的动画：重点大学代理与非重点。具体比例见下方文字。',
+      summaryLine: '{b}：贫困 {p}，富裕 {r}。'
     }
   };
 
   var state = {
     lang: 'en',
     mode: 0,
-    dr: false,
+    dr: 0,
     dots: [],
     N: 0,
     T: 0,
@@ -131,7 +133,7 @@
     ink: '#1c2430',
     font: 'system-ui, sans-serif',
     cntDone: [],
-    groupDone: [0, 0, 0],
+    groupDone: [0, 0],
     refs: null
   };
 
@@ -162,27 +164,24 @@
     };
   }
 
-  // Rates per group [poorer, middle, richer] for a mode and double-reduction setting.
+  // Selective-university shares per group [poorer, richer] for a mode and
+  // double-reduction state. The saved shift applies to the poorer group only;
+  // the richer group keeps its saved or saved-ratio value.
   function rates(mode, dr) {
-    var poor = SAVED.poorRate;
+    var poorBase = SAVED.poorRate;
     var rich = MODES[mode].raw ? SAVED.richRate : MODES[mode].ratio * SAVED.poorRate;
-    if (dr) {
-      poor = Math.min(1, poor + DR_SHIFT);
-      rich = Math.max(0, rich - DR_SHIFT);
-    }
-    return [poor, (poor + rich) / 2, rich];
+    var poor = poorBase;
+    if (dr > 0) poor = Math.min(1, poorBase + SAVED.drShift[dr - 1]);
+    return [poor, rich];
   }
 
   function makeDots(n) {
     var rnd = seeded(SEED);
-    var nPoor = Math.round(SHARE * n);
-    var nRich = Math.round(SHARE * n);
-    var nMid = n - nPoor - nRich;
+    var nPoor = Math.floor(n / 2);
     var groups = [];
     var i;
     for (i = 0; i < nPoor; i++) groups.push(0);
-    for (i = 0; i < nMid; i++) groups.push(1);
-    for (i = 0; i < nRich; i++) groups.push(2);
+    for (i = nPoor; i < n; i++) groups.push(1);
     for (i = groups.length - 1; i > 0; i--) {
       var k = Math.floor(rnd() * (i + 1));
       var tmp = groups[i];
@@ -209,20 +208,15 @@
   }
 
   // Basket assignment: selective shares are the first nSel dots by u (nested
-  // across settings); the rest are split by v. Counts are exact per group.
+  // across settings); the rest go to the not-selective basket. Counts are exact
+  // per group.
   function assignBaskets() {
     var r = rates(state.mode, state.dr);
-    for (var g = 0; g < 3; g++) {
+    for (var g = 0; g < 2; g++) {
       var m = state.dots.filter(function (d) { return d.g === g; });
       m.sort(function (a, b) { return a.u - b.u; });
       var nSel = Math.round(r[g] * m.length);
-      for (var i = 0; i < nSel; i++) m[i].b = 0;
-      var rest = m.slice(nSel).sort(function (a, b) { return a.v - b.v; });
-      var nOther = Math.round(OTHER_SPLIT * rest.length);
-      var nVoc = Math.round(VOC_SPLIT * rest.length);
-      for (var k = 0; k < rest.length; k++) {
-        rest[k].b = k < nOther ? 1 : (k < nOther + nVoc ? 2 : 3);
-      }
+      for (var i = 0; i < m.length; i++) m[i].b = i < nSel ? 0 : 1;
     }
   }
 
@@ -231,7 +225,7 @@
   }
 
   function finalPos(d) {
-    return { x: BX[d.b] + (d.j[3] - 0.5) * 0.16, y: 0.84 + d.j[2] * 0.1 };
+    return { x: BX[d.b] + (d.j[3] - 0.5) * 0.2, y: 0.84 + d.j[2] * 0.1 };
   }
 
   function spawnX(d) {
@@ -308,8 +302,8 @@
 
   function computeCounts() {
     var cnt = [];
-    for (var b = 0; b < BASKET_COUNT; b++) cnt.push([0, 0, 0]);
-    var gDone = [0, 0, 0];
+    for (var b = 0; b < BASKET_COUNT; b++) cnt.push([0, 0]);
+    var gDone = [0, 0];
     state.dots.forEach(function (d) {
       if (d.active && !d.wp.length) {
         cnt[d.b][d.g]++;
@@ -323,16 +317,16 @@
   // Expected final shares (complete sample, not only arrived dots).
   function finalShares() {
     var cnt = [];
-    var tot = [0, 0, 0];
+    var tot = [0, 0];
     var b;
-    for (b = 0; b < BASKET_COUNT; b++) cnt.push([0, 0, 0]);
+    for (b = 0; b < BASKET_COUNT; b++) cnt.push([0, 0]);
     state.dots.forEach(function (d) {
       cnt[d.b][d.g]++;
       tot[d.g]++;
     });
     var out = [];
     for (b = 0; b < BASKET_COUNT; b++) {
-      out.push([0, 1, 2].map(function (g) {
+      out.push([0, 1].map(function (g) {
         return tot[g] ? cnt[b][g] / tot[g] : 0;
       }));
     }
@@ -345,7 +339,7 @@
     var cnt = state.cntDone;
     var gDone = state.groupDone;
     for (var b = 0; b < BASKET_COUNT; b++) {
-      for (var g = 0; g < 3; g++) {
+      for (var g = 0; g < 2; g++) {
         var el = state.refs.vals[b][g];
         el.textContent = gDone[g] ? pct(cnt[b][g] / gDone[g]) : '—';
       }
@@ -401,7 +395,7 @@
     ctx.globalAlpha = 0.5;
     ctx.lineWidth = 1;
     for (var b = 0; b < BASKET_COUNT; b++) {
-      ctx.strokeRect((BX[b] - 0.1) * W, BASKET_TOP * H, 0.2 * W, (BASKET_BOTTOM - BASKET_TOP) * H);
+      ctx.strokeRect((BX[b] - BASKET_HALF) * W, BASKET_TOP * H, 2 * BASKET_HALF * W, (BASKET_BOTTOM - BASKET_TOP) * H);
     }
     ctx.restore();
 
@@ -410,7 +404,7 @@
     ctx.textAlign = 'center';
     ctx.textBaseline = 'bottom';
     for (b = 0; b < BASKET_COUNT; b++) {
-      var lines = wrapLines(ctx, s['bName' + b], 0.2 * W - 4);
+      var lines = wrapLines(ctx, s['bName' + b], 2 * BASKET_HALF * W - 4);
       for (var i = 0; i < lines.length; i++) {
         ctx.fillText(lines[i], BX[b] * W, BASKET_TOP * H - 4 - (lines.length - 1 - i) * 14);
       }
@@ -476,8 +470,7 @@
       parts.push(fmt(s.summaryLine, {
         b: s['bName' + b],
         p: pct(shares[b][0]),
-        m: pct(shares[b][1]),
-        r: pct(shares[b][2])
+        r: pct(shares[b][1])
       }));
     }
     state.refs.summary.textContent = parts.join(' ');
@@ -493,9 +486,10 @@
       btn.textContent = s[MODES[i].label];
       btn.setAttribute('aria-pressed', state.mode === i ? 'true' : 'false');
     });
+    var drLabels = [s.drOff, s.drUni, s.drEvade];
     R.drBtns.forEach(function (btn, i) {
-      btn.textContent = i === 0 ? s.drOff : s.drOn;
-      btn.setAttribute('aria-pressed', (state.dr === (i === 1)) ? 'true' : 'false');
+      btn.textContent = drLabels[i];
+      btn.setAttribute('aria-pressed', state.dr === i ? 'true' : 'false');
     });
   }
 
@@ -513,12 +507,12 @@
       el.textContent = MODES[i].ratio.toFixed(2);
       el.classList.toggle('is-on', i === state.mode);
     });
-    R.drNote.hidden = !state.dr;
-    R.drNote.textContent = state.dr ? s.drNote : '';
+    R.drNote.hidden = state.dr === 0;
+    R.drNote.textContent = state.dr === 1 ? s.drNote1 : (state.dr === 2 ? s.drNote2 : '');
     for (var b = 0; b < BASKET_COUNT; b++) {
       R.bnames[b].textContent = s['bName' + b];
     }
-    for (var g = 0; g < 3; g++) {
+    for (var g = 0; g < 2; g++) {
       R.gnames[g].forEach(function (el) { el.textContent = s[GROUPS[g].key]; });
     }
     renderControls();
@@ -542,8 +536,8 @@
     afterChange();
   }
 
-  function setDr(on) {
-    state.dr = on;
+  function setDr(k) {
+    state.dr = k;
     afterChange();
   }
 
@@ -639,7 +633,7 @@
     var baskets = el('div', 'sorter-baskets');
     refs.bnames = [];
     refs.vals = [];
-    refs.gnames = [[], [], []];
+    refs.gnames = [[], []];
     for (var b = 0; b < BASKET_COUNT; b++) {
       var card = el('div', 'sorter-basket');
       card.setAttribute('data-b', String(b));
@@ -648,7 +642,7 @@
       card.appendChild(h);
       var ul = el('ul', 'sorter-counts');
       refs.vals.push([]);
-      for (var g = 0; g < 3; g++) {
+      for (var g = 0; g < 2; g++) {
         var li = el('li', 'sorter-row');
         var sw = el('span', 'sorter-sw');
         sw.style.background = GROUPS[g].color;
@@ -700,7 +694,7 @@
     var seg2 = el('div', 'sorter-seg');
     seg2.setAttribute('role', 'group');
     refs.drBtns = [];
-    for (var k = 0; k < 2; k++) {
+    for (var k = 0; k < DR_COUNT; k++) {
       var db = el('button', 'sorter-chip');
       db.type = 'button';
       db.setAttribute('data-dr', String(k));
@@ -770,7 +764,7 @@
       btn.addEventListener('click', function () { setMode(i); });
     });
     R.drBtns.forEach(function (btn, i) {
-      btn.addEventListener('click', function () { setDr(i === 1); });
+      btn.addEventListener('click', function () { setDr(i); });
     });
 
     resizeCanvas();

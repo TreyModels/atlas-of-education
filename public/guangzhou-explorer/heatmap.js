@@ -1,12 +1,10 @@
-/* Heatmap of the 1,024-setting sweep over two chosen parameters.
- * Expects data.json to hold per-setting results as data.sweep: an array of
- * objects, one per saved setting, whose keys other than "value" are parameter
- * values and whose "value" is the saved outcome (percent).
- * Each cell is the mean of the saved outcome across all other parameters.
- * data.json currently holds only band summaries for this sweep, so the module
- * shows a "not available" note rather than inventing a grid.
- * Clicking a cell dispatches CustomEvent 'gz:select-setting' on document with
- * detail {params, value}. */
+/* Heatmap of the 1,024-setting principal sweep over two chosen inputs.
+ * Source: sweep.json, exported from research/guangzhou-working-paper/draws.csv.
+ * Each setting's outcome is T (equal-talent richer-to-poorer rate ratio).
+ * Each input is binned into four equal-width quartiles of its sampled range.
+ * Each cell is the mean T across the settings in that pair of bins.
+ * If sweep.json cannot be loaded, or holds no usable rows, the whole panel
+ * stays hidden: no heading, no grid, and no notice. */
 (function () {
   'use strict';
 
@@ -18,35 +16,29 @@
   var STR = {
     en: {
       heading: 'Whole-sweep heatmap',
-      intro: 'Pick two parameters. Each square is the average saved outcome across all other settings. Select a square to load that setting into the sorter above.',
+      intro: 'Pick two inputs. Each square is the mean equal-talent ratio T across the simulated settings in that pair of quartile bins. Bin 1 is the lowest quarter of an input’s sampled range.',
       rows: 'Rows',
       cols: 'Columns',
-      noSweep: 'Not available in saved results. data.json holds band summaries for the 1,024-setting sweep, not a saved outcome for each setting. A two-parameter grid would need invented values, so none is drawn.',
-      noParams: 'Fewer than two saved parameters are available, so a two-parameter grid cannot be drawn.',
       noCell: 'No saved setting for this combination',
-      cellLabel: '{a}: {av}, {b}: {bv}. Mean saved outcome {v}% across {n} settings. Select to load.',
-      selected: 'Selected {a} = {av}, {b} = {bv}. Mean {v}%.',
-      legend: 'Mean saved outcome (%)',
+      cellLabel: '{a}: bin {av}, {b}: bin {bv}. Mean T {v} across {n} settings.',
+      legend: 'Mean T (equal-talent richer-to-poorer ratio, 1,024 settings)',
       low: 'Lower',
       high: 'Higher',
-      loadFail: 'Saved results could not be loaded. Open this page over http(s), not as a local file.',
-      scrollHint: 'Swipe sideways to see every column.'
+      scrollHint: 'Swipe sideways to see every column.',
+      source: 'Source: sweep.json (principal sweep, 1,024 independent settings, 40,000 synthetic pupils each).'
     },
     'zh-Hans': {
       heading: '全部设定的热力图',
-      intro: '选择两个参数。每个方格是其他所有设定上已保存结果的平均值。点击方格，即可将该设定载入上方的分流模拟。',
+      intro: '选择两个输入参数。每个方格是这一对四分位分段内的各组模拟设定的平均等能力比值 T。第 1 段为该输入抽样范围的最低四分之一。',
       rows: '行',
       cols: '列',
-      noSweep: '已保存结果中没有此项数据。data.json 只保存了 1,024 组设定的区间汇总，没有每组设定各自的结果。若要画两参数网格，就必须编造数字，因此不绘制。',
-      noParams: '可用的已保存参数不足两个，无法绘制两参数网格。',
       noCell: '此参数组合没有已保存的设定',
-      cellLabel: '{a}：{av}，{b}：{bv}。已保存结果均值 {v}%，基于 {n} 组设定。选择即可载入。',
-      selected: '已选择 {a} = {av}，{b} = {bv}。均值 {v}%。',
-      legend: '已保存结果均值（%）',
+      cellLabel: '{a}：第 {av} 段，{b}：第 {bv} 段。平均 T 为 {v}，基于 {n} 组设定。',
+      legend: '平均 T（等能力富裕与贫困家庭比值，1,024 组设定）',
       low: '低',
       high: '高',
-      loadFail: '无法加载已保存的结果。请通过 http(s) 打开此页面，而非直接以本地文件打开。',
-      scrollHint: '左右滑动可查看所有列。'
+      scrollHint: '左右滑动可查看所有列。',
+      source: '来源：sweep.json（主要模拟，1,024 组独立设定，每组 40,000 名模拟学生）。'
     }
   };
 
@@ -69,23 +61,26 @@
   }
 
   function loadData() {
-    return fetch('data.json').then(function (r) {
+    return fetch('sweep.json').then(function (r) {
       if (!r.ok) throw new Error('HTTP ' + r.status);
       return r.json();
     });
   }
 
+  /* Convert the compact [bin..., T] rows into one object per setting. */
   function sweepRows() {
-    var rows = state.data && Array.isArray(state.data.sweep) ? state.data.sweep : [];
-    return rows.filter(function (r) { return r && typeof r.value === 'number' && isFinite(r.value); });
+    var d = state.data;
+    if (!d || !Array.isArray(d.params) || !Array.isArray(d.rows)) return [];
+    return d.rows.map(function (row) {
+      var o = {};
+      d.params.forEach(function (p, i) { o[p] = row[i]; });
+      o.value = row[d.params.length];
+      return o;
+    }).filter(function (r) { return typeof r.value === 'number' && isFinite(r.value); });
   }
 
-  function paramNames(rows) {
-    var names = [];
-    rows.forEach(function (r) {
-      Object.keys(r).forEach(function (k) { if (k !== 'value' && names.indexOf(k) < 0) names.push(k); });
-    });
-    return names;
+  function paramNames() {
+    return state.data.params.slice();
   }
 
   function uniqueValues(rows, name) {
@@ -93,7 +88,7 @@
     rows.forEach(function (r) {
       if (r[name] !== undefined && vals.indexOf(r[name]) < 0) vals.push(r[name]);
     });
-    return vals.sort(function (a, b) { return a < b ? -1 : a > b ? 1 : 0; });
+    return vals.sort(function (a, b) { return a - b; });
   }
 
   function colourFor(t) {
@@ -102,8 +97,7 @@
     var i = Math.min(PALETTE.length - 2, Math.floor(seg));
     var f = seg - i;
     var a = PALETTE[i], b = PALETTE[i + 1];
-    var rgb = [0, 1, 2].map(function (k) { return Math.round(a[k] + (b[k] - a[k]) * f); });
-    return rgb;
+    return [0, 1, 2].map(function (k) { return Math.round(a[k] + (b[k] - a[k]) * f); });
   }
 
   function luminance(rgb) {
@@ -135,10 +129,21 @@
     return wrap;
   }
 
+  function hidePanel(root) {
+    root.replaceChildren();
+    root.hidden = true;
+  }
+
   function render() {
     var root = document.getElementById('heatmap-root');
     if (!root) return;
     var s = S();
+    var rows = (state.data && !state.failed) ? sweepRows() : [];
+    if (!rows.length) {
+      hidePanel(root);
+      return;
+    }
+    root.hidden = false;
     root.replaceChildren();
 
     var card = el('section', 'viz-card hm-card');
@@ -147,25 +152,7 @@
     card.appendChild(h);
     card.appendChild(el('p', 'viz-lead', s.intro));
 
-    if (state.failed || !state.data) {
-      card.appendChild(el('p', 'viz-note', s.loadFail));
-      root.appendChild(card);
-      return;
-    }
-
-    var rows = sweepRows();
-    if (!rows.length) {
-      card.appendChild(el('p', 'viz-note', s.noSweep));
-      root.appendChild(card);
-      return;
-    }
-    var names = paramNames(rows);
-    if (names.length < 2) {
-      card.appendChild(el('p', 'viz-note', s.noParams));
-      root.appendChild(card);
-      return;
-    }
-
+    var names = paramNames();
     if (names.indexOf(state.rowParam) < 0) state.rowParam = names[0];
     if (names.indexOf(state.colParam) < 0 || state.colParam === state.rowParam) {
       state.colParam = names[0] === state.rowParam ? names[1] : names[0];
@@ -183,7 +170,7 @@
     var rVals = uniqueValues(rows, state.rowParam);
     var cVals = uniqueValues(rows, state.colParam);
 
-    /* Cell = mean of saved outcome over all other parameters. */
+    /* Cell = mean T over all settings in that pair of bins. */
     var acc = {};
     var lo = Infinity, hi = -Infinity;
     rows.forEach(function (r) {
@@ -219,21 +206,17 @@
         }
         var t = hi > lo ? (a.mean - lo) / (hi - lo) : 0.5;
         var rgb = colourFor(t);
-        var btn = el('button', 'hm-cell', a.mean.toFixed(1));
+        var btn = el('button', 'hm-cell', a.mean.toFixed(2));
         btn.type = 'button';
         btn.style.background = 'rgb(' + rgb.join(',') + ')';
         btn.style.color = textOn(rgb);
         btn.setAttribute('aria-label', fill(s.cellLabel, {
-          a: state.rowParam, av: r, b: state.colParam, bv: c, v: a.mean.toFixed(1), n: a.n
+          a: state.rowParam, av: r, b: state.colParam, bv: c, v: a.mean.toFixed(2), n: a.n
         }));
         btn.addEventListener('click', function () {
-          var params = {};
-          params[state.rowParam] = r;
-          params[state.colParam] = c;
-          state.status = fill(s.selected, { a: state.rowParam, av: r, b: state.colParam, bv: c, v: a.mean.toFixed(1) });
-          document.dispatchEvent(new CustomEvent('gz:select-setting', {
-            detail: { params: params, value: a.mean }
-          }));
+          state.status = fill(s.cellLabel, {
+            a: state.rowParam, av: r, b: state.colParam, bv: c, v: a.mean.toFixed(2), n: a.n
+          });
           var st = document.getElementById('hm-status');
           if (st) st.textContent = state.status;
         });
@@ -253,10 +236,12 @@
     }).join(', ') + ')';
     legend.appendChild(bar);
     var ends = el('div', 'hm-ends');
-    ends.appendChild(el('span', null, s.low + ' ' + (isFinite(lo) ? lo.toFixed(1) : '')));
-    ends.appendChild(el('span', null, s.high + ' ' + (isFinite(hi) ? hi.toFixed(1) : '')));
+    ends.appendChild(el('span', null, s.low + ' ' + lo.toFixed(2)));
+    ends.appendChild(el('span', null, s.high + ' ' + hi.toFixed(2)));
     legend.appendChild(ends);
     card.appendChild(legend);
+
+    card.appendChild(el('p', 'viz-note', s.source));
 
     var status = el('p', 'hm-status', state.status);
     status.id = 'hm-status';
@@ -269,6 +254,7 @@
   function init() {
     var root = document.getElementById('heatmap-root');
     if (!root) return;
+    root.hidden = true;
     if (!state.data && !state.failed) {
       loadData().then(function (d) {
         state.data = d;

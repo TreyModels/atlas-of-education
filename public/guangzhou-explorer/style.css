@@ -91,7 +91,8 @@ a:hover { color: #05423d; }
   padding: .22rem .62rem;
   font-size: .78rem;
   font-weight: 700;
-  min-height: 26px;
+  min-height: 44px;
+  min-width: 44px;
 }
 .lang-switch button[aria-pressed="true"] {
   background: #c8e6dd;
