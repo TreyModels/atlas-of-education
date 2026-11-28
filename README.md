@@ -6,6 +6,17 @@ Research experiments, literature and contribution guidance are in [research/READ
 
 DOI: [10.5281/zenodo.24369167](https://doi.org/10.5281/zenodo.24369167) (concept DOI; always resolves to the latest release).
 
+## Current public release
+
+The default branch, [`main`](https://github.com/TreyModels/atlas-of-education/tree/main), is the source for the public GitHub Pages build. Branches and open pull requests contain work in progress or historical experiments.
+
+| Project | Live | Source on main |
+| --- | --- | --- |
+| Atlas Worlds | [Open Atlas Worlds](https://treymodels.github.io/atlas-of-education/) | [Application source](src/) |
+| Guangzhou Education Explorer | [Open the explorer](https://treymodels.github.io/atlas-of-education/guangzhou-explorer/) | [Explorer source and saved results](public/guangzhou-explorer/) |
+
+The Guangzhou explorer reads saved simulation results. Its data and provenance manifest sit alongside the page source.
+
 A unified catalogue of 65 entries across the nine research families: Education & work (8),
 Population & school systems (9), the IIEP/UIS planning collection (12), Historical systems:
 Angkor (13), Fertility (11), Shadow education (2), Political economy (4), Deep history (2) and
