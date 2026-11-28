@@ -50,7 +50,7 @@ let lang = (params.get('lang') || savedLanguage || 'en') === 'zh' ? 'zh' : 'en';
 let mode = (params.get('mode') === 'explorer' || params.get('tab') || params.get('topic') || params.get('assumption')) ? 'explorer' : 'storyboard';
 let storyStep = Math.max(0, Math.min(5, Math.trunc(Number(params.get('step')) || 0)));
 
-let beat2Compare = 'rich10_p60';
+let beat2Compare = 'rich10_top10';
 let beat3Opt = 0;
 let beat4Math = 'choice'; // 'choice' | 'legacy'
 let beat4Idx = 2;         // 0.18 SD central in ranks
@@ -321,8 +321,8 @@ function renderStoryMonteCarlo(showCompare) {
     lang === 'zh' ? '能力前10% · 财富后10%（本地生）' : 'Top 10% ability · Bottom 10% wealth (local)',
     lang === 'zh' ? `示例队列 ${p.poor10_top10.selective_uni_pct}% · 全1,024组中位数 ${m.poor10_top10_uni_pct}%` : `${p.poor10_top10.selective_uni_pct}% cohort · ${m.poor10_top10_uni_pct}% median (1,024 worlds)`
   );
-  if (showCompare) {
-    if (beat2Compare === 'rich10_p60') {
+  {
+    if (showCompare && beat2Compare === 'rich10_p60') {
       addRow(colors[1],
         lang === 'zh' ? '能力第60百分位 · 财富前10%（本地生）' : '60th-pct ability · Top 10% wealth (local)',
         lang === 'zh' ? `普高 ${p.rich10_p60.academic_pct}% · 重点大学通道 ${p.rich10_p60.selective_uni_pct}%` : `${p.rich10_p60.academic_pct}% academic · ${p.rich10_p60.selective_uni_pct}% selective uni`
@@ -336,8 +336,8 @@ function renderStoryMonteCarlo(showCompare) {
   }
   $('story-values').replaceChildren(...rows);
   $('story-caption').textContent = lang === 'zh'
-    ? '横条显示一个已保存的 40,000 人合成队列中的比例。文字另列 1,024 组设定的中位数。'
-    : 'Bars show rates from one saved 40,000-pupil cohort. The text also reports the median across 1,024 settings where available.';
+    ? '曲线连接样本中学生的两个已保存排名。图中未绘制中间学校阶段。各组比例使用全部组内学生。'
+    : 'The curves connect two saved ranks for a sample of pupils. They illustrate rank changes between endpoints. Intermediate school stages are not plotted. Cohort rates use all pupils in each group.';
 
   requestAnimationFrame(() => {
     window.GZ_MC_CANVAS.mount($('story-chart'), {

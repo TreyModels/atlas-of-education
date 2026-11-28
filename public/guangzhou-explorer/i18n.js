@@ -25,16 +25,16 @@ window.GZ_I18N = {
     storyBeats: [
       {
         tag: 'STEP 1 · RESEARCH QUESTION AND DESIGN',
-        title: 'What did we simulate, and what did we find?',
-        lead: 'We gave synthetic pupils different starting abilities and family resources, applied modeled school and university admissions rules, and varied the assumptions across 1,024 settings. Across settings, about 66 in 100 high-ability pupils from poorer local families reached the university proxy, compared with 82 in 100 from richer local families.',
-        subNote: 'In the saved 40,000-pupil cohort shown here, 100% of these high-ability lower-income students reach academic senior high, and 61.8% secure a selective university proxy (59.4% median across all 1,024 parameter worlds; 65.8% for the poorer 40%).',
+        title: 'Same ability. Different odds.',
+        lead: 'Two pupils start in the top tenth of ability. One grows up poor, one rich. We simulated Guangzhou’s admissions to see how their chances compare.',
+        subNote: 'Each moving dot is a synthetic pupil from one saved cohort. The left side shows where pupils began. The right side shows where they finished. Teal marks poorer families and amber marks richer families. Across the full study, about 66 in 100 poorer high-ability pupils reached the university proxy, compared with 82 in 100 richer pupils.',
         controlLabel: 'Replay the result from one saved cohort:'
       },
       {
         tag: 'STEP 2 · ADMISSIONS AND CLASS REASSIGNMENT',
         title: 'How Chinese families experience the gates—and who beats whom',
         lead: 'Guangzhou’s system runs through two sequential gates: the Zhongkao (high-school entrance exam, separating vocational and academic tracks) and the Gaokao (selective university entry). Between the two gates, the model can reassign pupils to classes based on performance. Enabling that rule raised the poorer high-ability group’s modeled university proxy rate by a median paired 4.0 percentage points in 150 settings.',
-        subNote: 'Toggle the amber comparison student below. Against a 60th-percentile-ability rich peer (top 10% wealth), talent dominates: 61.8% vs. 0.6% reach a selective university. Against an equally gifted rich peer (top 10% ability & wealth), SES opens a 27-point gap (59.4% vs. 86.3% across 1,024 settings; 0.91 by entrance score vs. 1.37 by starting ability).',
+        subNote: 'Switch the amber comparison group to see what changes when richer pupils start at similar ability or near the 60th percentile. The chart uses one saved cohort. Across the full study, the ratio of richer to poorer admission rates was 0.91 at similar entrance scores and 1.37 at similar starting ability.',
         controlLabel: 'Compare against (real saved outcomes):'
       },
       {
@@ -199,17 +199,17 @@ window.GZ_I18N = {
     btnResume: '继续',
     storyBeats: [
       {
-        tag: '第 1 步 · 跟随一名合成学生（蒙特卡洛模拟原理）',
-        title: '我们模拟了什么？结果是什么？',
-        lead: '我们为合成学生设定不同的初始能力和家庭资源，应用中考与高考规则，并在 1,024 组设定中改变假设。各组设定的中位数显示，本地高能力学生中，较贫困家庭约 66% 获得模拟重点大学名额，较富裕家庭约 82%。',
-        subNote: '在已保存的 40,000 人示例队列中，这批贫困高能力本地生 100% 考入公办/民办普高，61.8% 进入模拟重点大学通道（全 1,024 组设定的中位数为 59.4%；收入后 40% 群体为 65.8%）。',
+        tag: '第 1 步 · 研究问题和设计',
+        title: '起点能力相近，升学机会不同',
+        lead: '设想两名初始能力都排在前 10% 的学生，家庭资源却相差很大。他们进入重点大学的机会一样吗？我们用广州中学分流和升学规则建立模拟来研究这个问题。',
+        subNote: '每个移动的点都是示例队列中的一名合成学生。左侧是初始能力排名，右侧是最终录取排名。蓝绿色代表较贫困家庭，琥珀色代表较富裕家庭。全研究中，较贫困与较富裕家庭的高能力学生进入模拟重点大学的比例分别约为 66% 和 82%。',
         controlLabel: '重播一个已保存队列的结果：',
       },
       {
         tag: '第 2 步 · 两道升学闸口与高中阶段重新分班机制',
         title: '中国家庭眼中的筛选机器：谁能真正胜出？',
         lead: '学生先参加中考，再参加高考。在两个阶段之间，模型允许学校按表现重新分班。150 组配对设定中，启用该规则使较贫困高能力学生的模拟重点大学录取率提高了 4.0 个百分点（配对差值的中位数）。',
-        subNote: '切换下方琥珀色对比学生：对比「能力第 60 百分位、财富前 10%」的富裕同学，天赋压倒财富（重点大学通道率 61.8% 对比 0.6%）；但对比「同样能力前 10% 且财富前 10%」的同龄人，家庭背景仍拉开 27 个百分点差距（59.4% 对比 86.3%；按中考分数比 0.91，按初始能力比 1.37）。',
+        subNote: '切换琥珀色的较富裕组，对比初始能力相近或接近第 60 百分位的学生。图中只显示一个示例队列。全研究中，按中考分数比较时富裕组的录取率是较贫困组的 0.91 倍，按初始能力比较时是 1.37 倍。',
         controlLabel: '切换对比学生（真实已保存结果）：'
       },
       {
