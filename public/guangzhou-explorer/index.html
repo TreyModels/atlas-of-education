@@ -3,11 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Guangzhou Education Explorer · Atlas of Education</title>
-<meta name="description" content="Bilingual (EN/中文) interactive companion to Educational Opportunity and Private Tutoring in Guangzhou (Revision 1.4).">
+<title>Guangzhou Education Explorer · Dr. Trey Menefee · Atlas of Education</title>
+<meta name="description" content="Bilingual (EN/中文) 6-step Monte Carlo storyboard and interactive research companion to Educational Opportunity and Private Tutoring in Guangzhou (Revision 1.4).">
 <meta name="robots" content="index,follow">
 <link rel="stylesheet" href="style.css">
 <script src="i18n.js" defer></script>
+<script src="mc_canvas.js" defer></script>
 <script src="explorer.js" defer></script>
 </head>
 <body>
@@ -23,53 +24,101 @@
       <span class="doi-tag">DOI</span>
       <span>10.5281/zenodo.24369167</span>
     </a>
-    <a class="source-link" href="https://github.com/TreyModels/atlas-of-education" target="_blank" rel="noopener">GitHub Repository</a>
+    <a class="source-link" href="https://github.com/TreyModels/atlas-of-education" target="_blank" rel="noopener" data-i18n="githubRepo">GitHub Repository</a>
+    <div class="lang-switch" role="group" aria-label="Language">
+      <button type="button" data-lang="en" aria-pressed="true">EN</button>
+      <button type="button" data-lang="zh" aria-pressed="false">中文</button>
+    </div>
   </div>
 </header>
 
 <main id="content">
   <section class="intro">
     <div class="intro-copy">
-      <div class="kicker">INTERACTIVE RESEARCH COMPANION · REVISION 1.4</div>
-      <h1>Educational Opportunity &amp; Private Tutoring in Guangzhou</h1>
-      <p class="lead">Can a talented pupil from a low-income family reach a selective university through Guangzhou’s academic track? Explore every precomputed simulation result, trace how school rules and tutoring choices interact, and challenge any of the 134 documented model assumptions.</p>
+      <div class="kicker" data-i18n="kicker">INTERACTIVE RESEARCH COMPANION · REVISION 1.4</div>
+      <h1 data-i18n="heroTitle">If you are academically gifted, how much does your family’s SES hold you back?</h1>
+      <p class="lead" data-i18n="heroLead">Follow one synthetic student through Guangzhou’s two-gate sorting machine across 40.96 million Monte Carlo runs—then test boarding timescapes, tutoring efficacy, early-advantage decay, and all 134 documented assumptions.</p>
       <div class="byline">
-        <span>James W. Menefee III</span>
+        <span data-i18n="bylineAuthor">Dr. Trey Menefee</span>
         <span aria-hidden="true">·</span>
-        <span>Working paper companion · 28 November 2026</span>
+        <span data-i18n="bylineMeta">Working paper companion · 28 November 2026</span>
         <span aria-hidden="true">·</span>
-        <span class="badge-precomputed">Precomputed saved runs only</span>
+        <span class="badge-precomputed" data-i18n="badgePrecomputed">Precomputed saved runs only · Zero invented numbers</span>
+      </div>
+      <div class="mode-bar" role="group" aria-label="Reading mode">
+        <button type="button" class="mode-btn" data-mode="storyboard" aria-pressed="true" data-i18n="modeStory">Guided Storyboard (6 steps)</button>
+        <button type="button" class="mode-btn" data-mode="explorer" aria-pressed="false" data-i18n="modeExplorer">Full Explorer &amp; 134 Assumptions</button>
       </div>
     </div>
 
     <div class="intro-stats" aria-label="Headline results from the principal 1,024-setting experiment">
       <div class="stat">
         <strong>65.8<small>%</small></strong>
-        <span>Poorer 40% (local, top 10% ability)</span>
+        <span data-i18n="statPoor">Poorer 40% (local, top 10% ability)</span>
       </div>
       <div class="stat rich">
         <strong>81.8<small>%</small></strong>
-        <span>Richer 40% (local, top 10% ability)</span>
+        <span data-i18n="statRich">Richer 40% (local, top 10% ability)</span>
       </div>
       <div class="ratio-strip">
-        <span class="ratio-label">Richer-to-poorer rate ratio:</span>
-        <span><b>0.91</b> by entrance score</span>
+        <span class="ratio-label" data-i18n="ratioLabel">Richer-to-poorer rate ratio:</span>
+        <span><b>0.91</b> <span data-i18n="ratioScore">by entrance score</span></span>
         <span aria-hidden="true">→</span>
-        <span><b>1.17</b> joint score &amp; ability</span>
+        <span><b>1.17</b> <span data-i18n="ratioJoint">joint score &amp; ability</span></span>
         <span aria-hidden="true">→</span>
-        <span><b>1.37</b> by starting ability</span>
+        <span><b>1.37</b> <span data-i18n="ratioAbility">by starting ability</span></span>
       </div>
-      <p class="stat-note">Medians across 1,024 settings (40,000 synthetic pupils each). Separate tutoring-choice runs use 40 settings across 8 matched seeds.</p>
+      <p class="stat-note" data-i18n="statNote">Medians across 1,024 settings (40,000 synthetic pupils each = 40.96M student-runs). Tutoring-choice follow-up uses 40 settings × 8 paired seeds.</p>
     </div>
   </section>
 
-  <section class="findings-strip" aria-labelledby="highlights-heading">
-    <div class="strip-head">
-      <h2 id="highlights-heading">Key findings explained</h2>
-      <p class="fine">Select any finding to open its saved chart and compare parameter settings.</p>
+  <section id="storyboard-shell" class="panel storyboard-panel" aria-labelledby="story-title">
+    <div class="story-topbar">
+      <div class="story-dots" id="story-dots" role="tablist" aria-label="Storyboard steps"></div>
+      <div class="story-top-right">
+        <span id="story-step-counter" class="fine"></span>
+        <button type="button" class="ghost small-btn" id="btn-skip-explorer" data-i18n="skipToExplorer">Skip → Full Explorer</button>
+      </div>
     </div>
-    <div class="story-grid" id="story-grid"></div>
+    <div class="story-stage">
+      <div class="story-text">
+        <div id="story-tag" class="kicker"></div>
+        <h2 id="story-title"></h2>
+        <p id="story-lead" class="story-lead"></p>
+        <p id="story-sub" class="fine"></p>
+        <div id="story-controls" class="story-controls"></div>
+        <div id="story-callout" class="delta-box" hidden></div>
+        <ul id="story-bullets" class="story-bullets" hidden></ul>
+        <div id="story-ctas" class="story-ctas" hidden></div>
+      </div>
+      <div class="story-visual" id="story-visual-wrap">
+        <figure class="chart">
+          <div class="chart-top">
+            <div>
+              <figcaption id="story-metric"></figcaption>
+              <div id="story-interval" class="fine"></div>
+            </div>
+            <span id="story-pill" class="case-pill"></span>
+          </div>
+          <div class="canvas-frame">
+            <canvas id="story-chart" role="img" aria-label="Storyboard saved result chart"></canvas>
+          </div>
+          <div id="story-values" class="values" aria-live="polite"></div>
+          <p id="story-caption" class="fine description"></p>
+        </figure>
+      </div>
+    </div>
+    <div class="story-nav">
+      <button type="button" id="story-prev" class="ghost" data-i18n="storyPrev">← Previous</button>
+      <span id="story-nav-counter" class="story-nav-counter"></span>
+      <button type="button" id="story-next" class="secondary" data-i18n="storyNext">Next →</button>
+    </div>
   </section>
+
+  <div id="explorer-shell" hidden>
+    <div class="explorer-top-return">
+      <button type="button" class="ghost small-btn" id="btn-back-story" data-i18n="backToStory">← Guided Storyboard</button>
+    </div>
 
   <nav class="tabs" aria-label="Explorer sections">
     <button type="button" data-tab="findings" aria-controls="findings" aria-pressed="true">
@@ -106,8 +155,9 @@
             <button id="next" type="button" aria-label="Next saved case">+</button>
           </div>
           <div class="control-actions">
-            <button id="reset-case" class="ghost" type="button">Reset to baseline</button>
-            <button id="copy" class="secondary" type="button">Copy link to result</button>
+            <button id="reset-case" class="ghost" type="button" data-i18n="btnReset">Reset to baseline</button>
+            <button id="copy" class="secondary" type="button" data-i18n="btnCopyLink">Copy link</button>
+            <button id="download-png" class="ghost" type="button" data-i18n="btnDownloadPng">Download PNG</button>
           </div>
           <span id="copy-status" class="sr-only" role="status"></span>
         </div>
@@ -188,7 +238,7 @@
       <div class="cite-card">
         <h3>Cite this working paper &amp; collection</h3>
         <p class="fine">Collection DOI: <a href="https://doi.org/10.5281/zenodo.24369167" target="_blank" rel="noopener"><strong>https://doi.org/10.5281/zenodo.24369167</strong></a></p>
-        <pre id="apa-cite" class="cite-block">Menefee, J. W., III. (2026). Educational opportunity and private tutoring in Guangzhou (Working paper, Revision 1.4). Atlas of Education. https://doi.org/10.5281/zenodo.24369167</pre>
+        <pre id="apa-cite" class="cite-block">Menefee, T. (2026). Educational opportunity and private tutoring in Guangzhou (Working paper, Revision 1.4). Atlas of Education. https://doi.org/10.5281/zenodo.24369167</pre>
         <div class="cite-actions">
           <button type="button" class="secondary" id="copy-apa">Copy APA citation</button>
           <button type="button" class="ghost" id="copy-bib">Copy BibTeX</button>
@@ -200,7 +250,8 @@
         <h3>Download verified data snapshots</h3>
         <ul class="download-list">
           <li><a href="data.json" download><code>data.json</code> — All 14 topics &amp; saved cases</a></li>
-          <li><a href="assumptions.json" download><code>assumptions.json</code> — Full 134-parameter register</a></li>
+          <li><a href="assumptions.json" download><code>assumptions.json</code> — <span data-i18n="dlAssump">Full 134-parameter register</span></a></li>
+          <li><a href="story_paths.json" download><code>story_paths.json</code> — <span data-i18n="dlStory">Real Monte Carlo trajectories</span></a></li>
           <li><a href="provenance.json" download><code>provenance.json</code> — Experiment scope &amp; SHA-256 hashes</a></li>
           <li><a href="https://github.com/TreyModels/atlas-of-education/tree/main/research/guangzhou-working-paper" target="_blank" rel="noopener">GitHub working-paper archive (earlier revision)</a></li>
           <li><a href="https://doi.org/10.5281/zenodo.24369167" target="_blank" rel="noopener">Zenodo Atlas of Education collection</a></li>
@@ -224,11 +275,13 @@
     <div id="provenance-table-wrap" class="table-scroll"></div>
   </section>
 
+  </div>
+
   <p id="load-error" role="alert" hidden></p>
 </main>
 
 <footer>
-  <span>Guangzhou Education Explorer · Revision 1.4 · James W. Menefee III</span>
+  <span data-i18n="footerLeft">Guangzhou Education Explorer · Revision 1.4 · Dr. Trey Menefee</span>
   <span>
     <a href="https://doi.org/10.5281/zenodo.24369167" target="_blank" rel="noopener">DOI 10.5281/zenodo.24369167</a>
     ·
