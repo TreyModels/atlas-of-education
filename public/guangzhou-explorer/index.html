@@ -46,7 +46,7 @@
         <span class="badge-precomputed" data-i18n="badgePrecomputed">Precomputed saved runs only · Zero invented numbers</span>
       </div>
       <div class="mode-bar" role="group" aria-label="Reading mode">
-        <button type="button" class="mode-btn" data-mode="storyboard" aria-pressed="true" data-i18n="modeStory">Guided Storyboard (6 steps)</button>
+        <a href="#storyboard-shell" class="mode-btn" data-mode="storyboard" aria-current="location" data-i18n="modeStory">Guided Storyboard (6 steps)</a>
         <button type="button" class="mode-btn" data-mode="explorer" aria-pressed="false" data-i18n="modeExplorer">Full Explorer &amp; 134 Assumptions</button>
       </div>
     </div>
@@ -83,7 +83,7 @@
     <div class="story-stage">
       <div class="story-text">
         <div id="story-tag" class="kicker"></div>
-        <h2 id="story-title"></h2>
+        <h2 id="story-title" tabindex="-1">What did we simulate, and what did we find?</h2>
         <p id="story-lead" class="story-lead"></p>
         <p id="story-sub" class="fine"></p>
         <div id="story-controls" class="story-controls"></div>
@@ -140,7 +140,7 @@
       <div class="controls">
         <label for="topic">Research question</label>
         <select id="topic"></select>
-        <h2 id="explorer-title">Who reaches a selective university</h2>
+        <h2 id="explorer-title" tabindex="-1">Who reaches a selective university</h2>
         <p id="explanation"></p>
 
         <div class="case-control">

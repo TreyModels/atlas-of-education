@@ -44,9 +44,11 @@ let provenance = null;
 let storyPaths = null;
 
 const params = new URLSearchParams(location.search);
-let lang = (params.get('lang') || localStorage.getItem('gz_lang') || 'en') === 'zh' ? 'zh' : 'en';
+let savedLanguage;
+try { savedLanguage = localStorage.getItem('gz_lang'); } catch {}
+let lang = (params.get('lang') || savedLanguage || 'en') === 'zh' ? 'zh' : 'en';
 let mode = (params.get('mode') === 'explorer' || params.get('tab') || params.get('topic') || params.get('assumption')) ? 'explorer' : 'storyboard';
-let storyStep = Math.max(0, Math.min(5, Number(params.get('step') || 0) || 0));
+let storyStep = Math.max(0, Math.min(5, Math.trunc(Number(params.get('step')) || 0)));
 
 let beat2Compare = 'rich10_p60';
 let beat3Opt = 0;
@@ -114,7 +116,10 @@ function setMode(nextMode, targetTab = null, setURL = true) {
   $('storyboard-shell').hidden = mode !== 'storyboard';
   $('explorer-shell').hidden = mode !== 'explorer';
   document.querySelectorAll('[data-mode]').forEach((b) => {
-    b.setAttribute('aria-pressed', String(b.dataset.mode === mode));
+    if (b.tagName === 'A') {
+      if (b.dataset.mode === mode) b.setAttribute('aria-current', 'location');
+      else b.removeAttribute('aria-current');
+    } else b.setAttribute('aria-pressed', String(b.dataset.mode === mode));
   });
   if (mode === 'explorer') {
     if (window.GZ_MC_CANVAS) window.GZ_MC_CANVAS.stop();
@@ -124,6 +129,14 @@ function setMode(nextMode, targetTab = null, setURL = true) {
     renderStoryStep();
   }
   if (setURL) updateURL();
+}
+
+function navigateMode(nextMode, targetTab = null) {
+  setMode(nextMode, targetTab);
+  const panel = $(mode === 'storyboard' ? 'storyboard-shell' : 'explorer-shell');
+  const target = panel.querySelector('h2[tabindex="-1"]');
+  target?.focus({ preventScroll: true });
+  panel.scrollIntoView({ block: 'start' });
 }
 
 function setLanguage(nextLang) {
@@ -446,8 +459,10 @@ function renderStoryStep() {
     slider.addEventListener('input', () => {
       if (beat4Math === 'legacy') beat4LegacyIdx = Number(slider.value);
       else beat4Idx = Number(slider.value);
-      renderStoryStep();
+      lbl.textContent = topics[activeTopic].cases[Number(slider.value)].label;
+      renderStoryDataChart(activeTopic, Number(slider.value));
     });
+    slider.setAttribute('aria-label', beat.controlLabel);
     sliderRow.append(slider);
     const lbl = make('span', topics[activeTopic].cases[curVal].label, 'fine');
     controls.append(sliderRow, lbl);
@@ -465,7 +480,12 @@ function renderStoryStep() {
     slider.max = String(topics.fade.cases.length - 1);
     slider.step = '1';
     slider.value = String(beat5Idx);
-    slider.addEventListener('input', () => { beat5Idx = Number(slider.value); renderStoryStep(); });
+    slider.setAttribute('aria-label', beat.controlLabel);
+    slider.addEventListener('input', () => {
+      beat5Idx = Number(slider.value);
+      lbl.textContent = topics.fade.cases[beat5Idx].label;
+      renderStoryDataChart('fade', beat5Idx);
+    });
     sliderRow.append(slider);
     const lbl = make('span', topics.fade.cases[beat5Idx].label, 'fine');
     controls.append(sliderRow, lbl);
@@ -481,13 +501,13 @@ function renderStoryStep() {
     ctas.hidden = false;
     const b1 = make('button', beat.ctaExplorer, 'secondary');
     b1.type = 'button';
-    b1.addEventListener('click', () => setMode('explorer', 'findings'));
+    b1.addEventListener('click', () => navigateMode('explorer', 'findings'));
     const b2 = make('button', beat.ctaAssumptions, 'ghost');
     b2.type = 'button';
-    b2.addEventListener('click', () => setMode('explorer', 'assumptions'));
+    b2.addEventListener('click', () => navigateMode('explorer', 'assumptions'));
     const b3 = make('button', beat.ctaSources, 'ghost');
     b3.type = 'button';
-    b3.addEventListener('click', () => setMode('explorer', 'sources'));
+    b3.addEventListener('click', () => navigateMode('explorer', 'sources'));
     ctas.replaceChildren(b1, b2, b3);
   }
 }
@@ -819,10 +839,15 @@ async function start() {
     btn.addEventListener('click', () => setLanguage(btn.dataset.lang));
   });
   document.querySelectorAll('[data-mode]').forEach((btn) => {
-    btn.addEventListener('click', () => setMode(btn.dataset.mode));
+    btn.addEventListener('click', (event) => {
+      if (btn.tagName === 'A' && (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey)) return;
+      event.preventDefault();
+      if (btn.dataset.mode === 'storyboard') storyStep = 0;
+      navigateMode(btn.dataset.mode);
+    });
   });
-  $('btn-skip-explorer').addEventListener('click', () => setMode('explorer', 'findings'));
-  $('btn-back-story').addEventListener('click', () => setMode('storyboard'));
+  $('btn-skip-explorer').addEventListener('click', () => navigateMode('explorer', 'findings'));
+  $('btn-back-story').addEventListener('click', () => navigateMode('storyboard'));
   $('story-prev').addEventListener('click', () => { if (storyStep > 0) { storyStep -= 1; renderStoryStep(); updateURL(); } });
   $('story-next').addEventListener('click', () => { if (storyStep < 5) { storyStep += 1; renderStoryStep(); updateURL(); } });
 
@@ -915,12 +940,16 @@ async function start() {
     new ResizeObserver(() => {
       if (mode === 'explorer' && tab === 'findings') plotTopicToCanvas('chart', current, index);
     }).observe($('chart').parentElement);
+    const frame = $('story-chart').parentElement;
+    let frameWidth = frame.clientWidth;
     new ResizeObserver(() => {
-      if (mode === 'storyboard') {
-        if (storyStep <= 1) window.GZ_MC_CANVAS?.redraw();
-        else if (storyStep < 5) renderStoryStep();
-      }
-    }).observe($('story-chart').parentElement);
+      const width = frame.clientWidth;
+      if (!width || width === frameWidth) return;
+      frameWidth = width;
+      if (mode !== 'storyboard') return;
+      if (storyStep <= 1) window.GZ_MC_CANVAS?.redraw();
+      else if (storyStep < 5) renderStoryStep();
+    }).observe(frame);
   } catch (error) {
     $('load-error').hidden = false;
     $('load-error').textContent = T().loadError;

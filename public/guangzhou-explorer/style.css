@@ -64,8 +64,8 @@ p { line-height: 1.62; margin: .45rem 0 .85rem; }
 .badge-precomputed { background: var(--teal-soft); color: var(--teal); font-weight: 650; font-size: .77rem; padding: .2rem .58rem; border-radius: 999px; }
 
 .mode-bar { display: inline-flex; flex-wrap: wrap; gap: .45rem; margin-top: 1.05rem; }
-.mode-btn { min-height: 44px; padding: .48rem 1rem; border-radius: 999px; font-weight: 680; font-size: .88rem; border: 1.5px solid var(--teal); background: #fff; color: var(--teal); }
-.mode-btn[aria-pressed="true"] { background: var(--teal); color: #fff; }
+.mode-btn { display:inline-flex; align-items:center; text-decoration:none; min-height: 44px; padding: .48rem 1rem; border-radius: 999px; font-weight: 680; font-size: .88rem; border: 1.5px solid var(--teal); background: #fff; color: var(--teal); }
+.mode-btn[aria-pressed="true"], .mode-btn[aria-current="location"] { background: var(--teal); color: #fff; }
 .mode-btn:hover:not([aria-pressed="true"]) { background: var(--teal-soft); }
 
 .intro-stats {
@@ -236,3 +236,5 @@ footer { display: flex; justify-content: space-between; flex-wrap: wrap; gap: .8
   .pill-tinker { margin-left: 0; }
   .panel, .storyboard-panel { padding: 1rem; }
 }
+
+#storyboard-shell, #explorer-shell { scroll-margin-top: 1rem; }
