@@ -50,3 +50,18 @@ No access to Bridge from the coding session. Paste this file's "Plan" section in
 - Expert trust: show the ODD, assumptions table (134), DOI, seeds, and "what this cannot show" next to every headline number.
 
 **Design implication:** lead with the dot sorter (frequency framing + colour), step to uncertainty (dotplots), then let experts drop into the heatmap/assumptions. Do a real research pass (haiku agent, WebSearch) tomorrow to confirm each precedent and pull 5-8 concrete design patterns with links.
+
+## Verified by web search (28 Nov 2026)
+- Quantile dotplots: least bias for magnitude/probability estimates (1-3 pp more precise than density plots, Kay et al. transit study); other displays can do better for decisions. Animated hypothetical-outcome plots help non-experts judge trends and compare 2-3 variables better than error bars/violins (Kale, Hullman et al.). Use dotplots for "how likely", animation for trends, plain intervals for experts. Sources: vis.mit.edu/classes/6.859/readings/pdfs/Kay-WhenishIsMyBus.pdf; arxiv.org/abs/2007.14516; hullmanlab.northwestern.edu (HOPs trends); Padilla, Kay & Hullman 2020 review.
+- Parable of the Polygons (Nicky Case & Vi Hart): playable Schelling model, non-blaming tone, hopeful ending; copy the tone for inequality topics. Source: blog.ncase.me/i-do-and-i-understand/.
+- Opportunity Atlas: results keyed to where children grew up; colour scale rescales to visible range; image/data download. Source: census.gov/ces/dataproducts/opportunityatlas.html.
+- ABM parameter sweeps: average many replicates per setting; whole-space view (heatmap) to show parameter interactions; link summary to individual runs interactively (MASSIVE, PLOS ONE 2019; JASSS 18(4)/4).
+- NOT confirmed: NYT Upshot examples; small multiples for ABM sweeps; Gapminder/Pudding/Sankey/natural-frequency claims (memory only).
+
+## Plan changes
+Sorter first; seed variation as quantile dotplot with exact interval one tap away; heatmap averages replicates and a click loads that setting; add data/image download; non-blaming tone in double-reduction text.
+
+## Scripts (modules to build, all in public/guangzhou-explorer/, no build step)
+- `dotplot.js`: quantile dotplot of seed variation for the 8-seed tutoring runs.
+- `heatmap.js`: 1,024-setting heatmap over two chosen parameters, click selects a setting and emits `gz:select-setting`.
+- `download.js`: buttons to download the displayed chart (PNG) and the saved data (CSV/JSON).
