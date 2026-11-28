@@ -7,8 +7,10 @@
 <meta name="description" content="Bilingual (EN/中文) interactive companion to Educational Opportunity and Private Tutoring in Guangzhou (Revision 1.4).">
 <meta name="robots" content="index,follow">
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="sorter.css">
 <script src="i18n.js" defer></script>
 <script src="explorer.js" defer></script>
+<script src="sorter.js" defer></script>
 </head>
 <body>
 <a class="skip" href="#content">Skip to content</a>
@@ -61,6 +63,65 @@
       </div>
       <p class="stat-note">Medians across 1,024 settings (40,000 synthetic pupils each). Separate tutoring-choice runs use 40 settings across 8 matched seeds.</p>
     </div>
+  </section>
+
+  <div id="sorter-root"></div>
+
+  <section class="explainer" id="what-is-this" aria-labelledby="what-title">
+    <h2 id="what-title" data-i18n="whatTitle">What is this?</h2>
+    <p data-i18n="whatP1">The question behind this page is simple: if a child is talented but comes from a poorer family, can they still reach a selective university through Guangzhou’s academic track? At the end of junior high, public senior-high places are allocated largely by an entrance score, and families can also spend money on private tutoring before and during that process.</p>
+    <p data-i18n="whatP2">The pupils here are simulated, not real children. The model builds a synthetic population, gives each pupil a family income, a level of learning ability and a school, then runs them through school rules, tutoring choices and entrance-score sorting. The main experiment covers 1,024 different settings of the model, each with 40,000 simulated pupils: about 41 million simulated pupils in total.</p>
+    <p data-i18n="whatP3">The headline numbers compare two groups of local pupils in the top tenth of ability. Of those from the poorer 40% of families, 65.8% reach a selective university (a proxy in the model); of those from the richer 40%, 81.8% do. The gap between the two is not fixed, though. The richer-to-poorer ratio is 0.91 when pupils are compared at the same entrance score, 1.17 when compared on a joint score and ability measure, and 1.37 when compared on starting ability. A ratio below 1 means richer pupils get in slightly less often. The comparison you choose decides the answer: “who gets in at the same score?” or “who gets in at the same underlying ability?”</p>
+    <p class="cannot-note"><strong data-i18n="whatCannotLabel">What this model cannot tell you.</strong> <span data-i18n="whatCannotText">Every result here is a precomputed saved run, not a live forecast. The pupils are synthetic, so the results show how mechanisms in the model behave under stated assumptions. They do not predict what will happen to any real child or to Guangzhou as a whole. Change an assumption and the answer can move a lot. Use the numbers to test reasoning, not as evidence of what is true today.</span></p>
+
+    <details class="expert-box">
+      <summary data-i18n="specSummary">For specialists</summary>
+      <ul>
+        <li><span data-i18n="specWhat1">Model type: agent-based simulation. Each synthetic pupil carries a family wealth rank, latent talent, skill level, hukou status and school placement. Teaching and peer effects, tutoring choices and entrance-score assignment are computed run by run.</span></li>
+        <li><span data-i18n="specWhat2">Experiments: the principal admissions sweep covers 1,024 settings with 40,000 pupils each, reported as medians with 5th–95th percentile ranges across settings. The tutoring-choice experiment covers 40 settings, each run on 8 matched seeds (2201–2208), so compared settings share the same simulated cohorts.</span></li>
+        <li><span data-i18n="specWhat3">Assumptions: 134 documented parameters, each with a default value, tested range and evidence basis. Many are judgement calls or assumed behavioural coefficients rather than measured quantities.</span></li>
+        <li><span data-i18n="specWhatCite">Working paper and collection:</span> <a href="https://doi.org/10.5281/zenodo.24369167" target="_blank" rel="noopener">https://doi.org/10.5281/zenodo.24369167</a></li>
+        <li><span data-i18n="specWhatRegister">Full parameter register:</span> <a href="?tab=assumptions" data-i18n="linkAssumptionsTab">Assumptions tab</a></li>
+      </ul>
+    </details>
+  </section>
+
+  <section class="explainer" id="double-reduction" aria-labelledby="dr-title">
+    <h2 id="dr-title" data-i18n="dblTitle">The double reduction policy (双减)</h2>
+    <p data-i18n="dblP1">In July 2021 China’s central government issued a national policy, widely called “Double Reduction” (双减), that sharply restricted for-profit academic tutoring for pupils in compulsory education (the nine years of primary and junior-secondary school) and asked schools to reduce homework.</p>
+    <p data-i18n="dblP2">Why it matters here: the policy changes how much tutoring a family can buy openly. It could narrow the gap between richer and poorer pupils by making paid help harder to get for everyone. It could also widen or shift the gap if richer families keep buying help in other ways, and tutoring can move out of sight into informal arrangements that are harder to regulate. So how strictly the rules are enforced matters as much as what they say.</p>
+    <p data-i18n="dblP3">How the model represents it: the model has no single “policy on” switch with a fixed effect. It cuts early, pre-entrance tutoring by a set share and asks how that cut is shared across family wealth. The “What if tutoring is restricted” question on the Explore tab compares a cut that falls equally on everyone with a cut that richer families mostly evade. These enforcement-sensitivity runs are the closest the model comes to testing enforcement. They do not estimate the causal effect of Double Reduction.</p>
+
+    <details class="expert-box">
+      <summary data-i18n="specSummary">For specialists</summary>
+      <ul>
+        <li><span data-i18n="dblSpec1">Early-tutoring cut: effective cut = BAN_RED × (1 + BAN_GRAD × (1 − 2 × wealth rank)), clipped to [0, 1]. BAN_RED is 40% centrally (tested 0–60%). BAN_GRAD is 0.5 (tested 0–1): at 0 everyone is cut equally, and higher values shift the cut onto poorer pupils while richer families evade more.</span></li>
+        <li><span data-i18n="dblSpec2">Other restriction settings: BAN_TARGET solves numerically for a fixed average early reduction (off, 20% or 40%) so that different wealth gradients are comparable. BLOCK_ABOVE (off, or the local 60th wealth percentile) removes tutoring and full-time study for families above that threshold. POST_RED_TERM and POST_RED_HOL cut post-entrance term and holiday tutoring probability by 0% or 25% in paired runs.</span></li>
+        <li><span data-i18n="dblSpec3">Market context: the junior-school stage is run under “before policy” or “after policy” contexts with different annual purchase intercepts. Comparing those contexts does not isolate a policy effect.</span></li>
+        <li><span data-i18n="dblSpec4">Evidence: the size of the early cut is a sensitivity assumption that household trends do not identify. The wealth gradient (BAN_GRAD) is motivated by Liu et al. (2024), Liu and Bray (2025) and Yang (2026), but none of them estimates the range used.</span></li>
+        <li><span data-i18n="specWhatRegister">Full parameter register:</span> <a href="?tab=assumptions" data-i18n="linkAssumptionsTab">Assumptions tab</a></li>
+      </ul>
+    </details>
+  </section>
+
+  <section class="explainer glossary" id="glossary" aria-labelledby="glossary-title">
+    <details class="expert-box">
+      <summary id="glossary-title" data-i18n="glossTitle">Glossary</summary>
+      <dl>
+        <dt data-i18n="gEntranceT">Entrance score</dt>
+        <dd data-i18n="gEntranceD">The score a pupil gets in the exam at the end of junior high. It decides which senior-high places a pupil can compete for. In the model it is the simulated version of that score.</dd>
+        <dt data-i18n="gJointT">Joint score &amp; ability</dt>
+        <dd data-i18n="gJointD">A middle-ground measure that combines the entrance score with underlying ability. It is the middle comparison in the 0.91 → 1.17 → 1.37 ratio.</dd>
+        <dt data-i18n="gSettingT">Setting</dt>
+        <dd data-i18n="gSettingD">One combination of the model’s assumption values. The main experiment runs 1,024 different settings, and each produces its own saved result.</dd>
+        <dt data-i18n="gSeedT">Seed</dt>
+        <dd data-i18n="gSeedD">The starting number for a random generator. The same seed produces the same simulated pupils, so settings run on the same seed can be compared fairly.</dd>
+        <dt data-i18n="gTrackT">Academic track</dt>
+        <dd data-i18n="gTrackD">The senior-high stream that prepares pupils for the university entrance exam, as opposed to vocational or other routes.</dd>
+        <dt data-i18n="gSelT">Selective university</dt>
+        <dd data-i18n="gSelD">In this model, a proxy: a place at a university the model treats as selective, based on its simulated rules. It is not a record of real admissions.</dd>
+      </dl>
+    </details>
   </section>
 
   <section class="findings-strip" aria-labelledby="highlights-heading">
