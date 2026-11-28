@@ -382,6 +382,9 @@ function renderStoryStep() {
   const ctas = $('story-ctas');
   const stage = document.querySelector('.story-stage');
   controls.replaceChildren();
+  const chartSlider = $('story-chart-slider');
+  chartSlider.replaceChildren();
+  chartSlider.hidden = true;
   callout.hidden = true;
   bullets.hidden = true;
   ctas.hidden = true;
@@ -466,7 +469,8 @@ function renderStoryStep() {
     slider.setAttribute('aria-label', beat.controlLabel);
     sliderRow.append(slider);
     const lbl = make('span', topics[activeTopic].cases[curVal].label, 'fine');
-    controls.append(sliderRow, lbl);
+    chartSlider.hidden = false;
+    chartSlider.append(sliderRow, lbl);
     callout.hidden = false;
     callout.textContent = dict.beat4RestrictionNote;
     renderStoryDataChart(activeTopic, curVal);
@@ -489,7 +493,8 @@ function renderStoryStep() {
     });
     sliderRow.append(slider);
     const lbl = make('span', topics.fade.cases[beat5Idx].label, 'fine');
-    controls.append(sliderRow, lbl);
+    chartSlider.hidden = false;
+    chartSlider.append(sliderRow, lbl);
     callout.hidden = false;
     callout.textContent = dict.beat5AblationNote;
     renderStoryDataChart('fade', beat5Idx);
@@ -652,8 +657,6 @@ function renderSweepOverview() {
   });
 
   $('sweep-list').replaceChildren(...rows);
-  const activeEl = $('sweep-list').querySelector('.sweep-row.active');
-  if (activeEl && t.cases.length > 10) activeEl.scrollIntoView({ block: 'nearest' });
 }
 
 function buildInlineTinker(r) {
@@ -920,14 +923,6 @@ async function start() {
         $('copy-status').textContent = T().btnCopied;
         setTimeout(() => { $('copy').textContent = T().btnCopyLink; }, 1600);
       } catch { window.prompt('Copy:', location.href); }
-    });
-
-    $('download-png').addEventListener('click', () => {
-      const c = $('chart');
-      const a = document.createElement('a');
-      a.download = `guangzhou-${current}-case-${index + 1}.png`;
-      a.href = c.toDataURL('image/png');
-      a.click();
     });
 
     $('copy-apa').addEventListener('click', async () => {

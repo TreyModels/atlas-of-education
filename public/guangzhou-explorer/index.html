@@ -94,6 +94,7 @@
             </div>
             <span id="story-pill" class="case-pill"></span>
           </div>
+          <div id="story-chart-slider" hidden></div>
           <div class="canvas-frame">
             <canvas id="story-chart" role="img" aria-label="Storyboard saved result chart"></canvas>
           </div>
@@ -150,15 +151,9 @@
             <span id="case-position" class="fine"></span>
           </div>
           <select id="case-select"></select>
-          <div class="slider-controls">
-            <button id="prev" type="button" aria-label="Previous saved case">−</button>
-            <input type="range" id="case-slider" min="0" max="1" step="1" value="0" aria-label="Saved case slider">
-            <button id="next" type="button" aria-label="Next saved case">+</button>
-          </div>
           <div class="control-actions">
             <button id="reset-case" class="ghost" type="button" data-i18n="btnReset">Reset to baseline</button>
             <button id="copy" class="secondary" type="button" data-i18n="btnCopyLink">Copy link</button>
-            <button id="download-png" class="ghost" type="button" data-i18n="btnDownloadPng">Download PNG</button>
           </div>
           <span id="copy-status" class="sr-only" role="status"></span>
         </div>
@@ -176,6 +171,11 @@
               <div id="interval" class="fine"></div>
             </div>
             <span id="active-case-pill" class="case-pill"></span>
+          </div>
+          <div class="slider-controls">
+            <button id="prev" type="button" aria-label="Previous saved case">−</button>
+            <input type="range" id="case-slider" min="0" max="1" step="1" value="0" aria-label="Saved case slider">
+            <button id="next" type="button" aria-label="Next saved case">+</button>
           </div>
           <div class="canvas-frame">
             <canvas id="chart" role="img" aria-label="Saved result chart" aria-describedby="result-values"></canvas>

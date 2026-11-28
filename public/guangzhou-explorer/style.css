@@ -263,3 +263,9 @@ footer { display: flex; justify-content: space-between; flex-wrap: wrap; gap: .8
   .masthead .doi-pill, .masthead .source-link { display: none; }
   #storyboard-shell, #explorer-shell, #findings .chart { scroll-margin-top: 4rem; }
 }
+
+.chart .slider-controls { margin-top: 0; }
+#story-chart-slider .slider-controls { margin-bottom: .35rem; }
+@media (max-width: 600px) {
+  #findings .chart { gap: .65rem; }
+}
