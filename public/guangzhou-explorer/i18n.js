@@ -26,18 +26,18 @@ window.GZ_I18N = {
     btnResume: 'Resume',
     storyBeats: [
       {
-        tag: 'STEP 1 · RESEARCH QUESTION AND DESIGN',
-        title: 'Same ability. Different odds.',
-        lead: 'Two pupils start in the top tenth of ability. One grows up poor, one rich. We simulated Guangzhou’s admissions to see how their chances compare.',
-        subNote: 'Each moving dot is a synthetic pupil from one saved cohort. The left side shows where pupils began. The right side shows where they finished. Teal marks poorer families and amber marks richer families. Across the full study, about 66 in 100 poorer high-ability pupils reached the university proxy, compared with 82 in 100 richer pupils.',
-        controlLabel: 'Replay the result from one saved cohort:'
+        tag: "STEP 1 · ONE PUPIL, MANY POSSIBILITIES",
+        title: "Follow one pupil",
+        lead: "This blue dot is one simulated Guangzhou pupil. She starts near the 91st percentile in ability and in the poorest tenth of local families. Can she keep her place near the top when she competes for a limited number of university seats?",
+        subNote: "First watch her, then the fainter blue trails of other pupils in her group. That is one cohort. In Monte Carlo simulation we repeat the experiment: 40,000 synthetic pupils per setting, 1,024 sets of assumptions about things like tutoring and home resources. The page replays saved results.",
+        controlLabel: "Control the replay",
       },
       {
-        tag: 'STEP 2 · ADMISSIONS AND CLASS REASSIGNMENT',
-        title: 'How Chinese families experience the gates—and who beats whom',
-        lead: 'Guangzhou’s system runs through two sequential gates: the Zhongkao (high-school entrance exam, separating vocational and academic tracks) and the Gaokao (selective university entry). Between the two gates, the model can reassign pupils to classes based on performance. Enabling that rule raised the poorer high-ability group’s modeled university proxy rate by a median paired 4.0 percentage points in 150 settings.',
-        subNote: 'Switch the amber comparison group to see what changes when richer pupils start at similar ability or near the 60th percentile. The chart uses one saved cohort. Across the full study, the ratio of richer to poorer admission rates was 0.91 at similar entrance scores and 1.37 at similar starting ability.',
-        controlLabel: 'Compare against (real saved outcomes):'
+        tag: "STEP 2 · TWO GATES AND A SECOND CHANCE",
+        title: "Where the system sorts pupils",
+        lead: "Getting into academic high school is one outcome. Competing for a selective university place is another. Compare both for the same two groups below.",
+        subNote: "A published exam score gives one common yardstick for allocating seats. An equity question is whether pupils with similar starting ability had similar chances to earn that score.",
+        controlLabel: "Choose a comparison",
       },
       {
         tag: 'STEP 3 · THE BOARDING HYPOTHESIS & TIMESCAPES',
@@ -75,11 +75,10 @@ window.GZ_I18N = {
         ctaSources: 'Download Data, Code & DOI'
       }
     ],
-    beat2CompareOptions: [
-      { id: 'rich10_p60', label: '60th-pct ability · Top 10% wealth (0.6% uni)' },
-      { id: 'rich10_top10', label: 'Top 10% ability · Top 10% wealth (86.3% median)' }
-    ],
-    beat2RebandCallout: 'Later class reassignment (+4.0 pp): Turning off performance-based class reassignment drops poorer top-10% access from 66.0% to 62.1% across 150 matched settings. Equity ratios: 0.91 (entrance score) → 1.17 (joint) → 1.37 (starting ability).',
+    opening: {"chart": "One pupil, then her cohort peers", "axis": "From starting ability to final simulated placement", "cohort": "One saved cohort", "scrub": "Scrub through the replay", "caption": "The bright trail connects one pupil’s saved starting rank (91st percentile) to her saved final rank (92nd). Faint trails are other pupils from that same group. The curves between endpoints are drawn for illustration."},
+    gates: {"steps": [["Zhongkao · the high-school entrance exam", "In the model, scores and available school places sort pupils into academic high schools or the vocational track."], ["Senior 1 · reassignment within a high school", "A pupil might enter a school in the top fifth, then earn a place in a class in that school’s top tenth. The model tests a rule that lets subsequent performance change class placement."], ["Gaokao · university entrance exam", "Pupils compete for seats again. In the model, the top tenth of the final placement ranking represents selective university access."]], "source": "Guangzhou Education Bureau admissions guide", "compare": "Same pupils, two outcomes", "academic": "Entered academic high school", "university": "Reached the selective university proxy", "poor": "High ability · bottom 10% wealth", "midRich": "Near 60th percentile ability · top 10% wealth", "highRich": "High ability · top 10% wealth", "cohortNote": "One saved cohort. These groups illustrate how sorting can differ at the two gates.", "reband": "What changes when pupils can move up a class?", "without": "Without reassignment", "with": "With reassignment"},
+    beat2CompareOptions: [{"id": "rich10_p60", "label": "Richer pupil around the 60th percentile"}, {"id": "rich10_top10", "label": "Richer pupil with similarly high ability"}],
+    beat2RebandCallout: "Among poorer high-ability pupils, reassignment raised selective university access by a median of 4.0 percentage points across 150 matched settings. The bars show the two scenario medians.",
     beat3Options: [
       { id: 'cal_main', label: 'Boarding: 1 h/wk free time (0.08% term · 27.8% holiday)', topic: 'calendar', caseId: 'main' },
       { id: 'cal_3h', label: 'Boarding: 3 h/wk free time (24.7% term · 30.0% holiday)', topic: 'calendar', caseId: 'board_longer_term' },
@@ -212,18 +211,18 @@ window.GZ_I18N = {
     btnResume: '继续',
     storyBeats: [
       {
-        tag: '第 1 步 · 研究问题和设计',
-        title: '起点能力相近，升学机会不同',
-        lead: '设想两名初始能力都排在前 10% 的学生，家庭资源却相差很大。他们进入重点大学的机会一样吗？我们用广州中学分流和升学规则建立模拟来研究这个问题。',
-        subNote: '每个移动的点都是示例队列中的一名合成学生。左侧是初始能力排名，右侧是最终录取排名。蓝绿色代表较贫困家庭，琥珀色代表较富裕家庭。全研究中，较贫困与较富裕家庭的高能力学生进入模拟重点大学的比例分别约为 66% 和 82%。',
-        controlLabel: '重播一个已保存队列的结果：',
+        tag: "第 1 步 · 一名学生，多种可能",
+        title: "跟随一名学生",
+        lead: "这个蓝点是一名模拟的广州学生。她的起始能力约在第 91 百分位，家庭财富位于本地家庭最低的十分之一。竞争有限的大学名额时，她还能保持靠前的位置吗？",
+        subNote: "先看这名学生，再看同组学生留下的淡蓝色轨迹。这只是一个队列。蒙特卡洛模拟把这一过程重复多次：每组设定有 4 万名合成学生，共测试 1,024 组有关补习和家庭资源等因素的假设。网页回放已保存的结果。",
+        controlLabel: "控制回放",
       },
       {
-        tag: '第 2 步 · 两道升学闸口与高中阶段重新分班机制',
-        title: '中国家庭眼中的筛选机器：谁能真正胜出？',
-        lead: '学生先参加中考，再参加高考。在两个阶段之间，模型允许学校按表现重新分班。150 组配对设定中，启用该规则使较贫困高能力学生的模拟重点大学录取率提高了 4.0 个百分点（配对差值的中位数）。',
-        subNote: '切换琥珀色的较富裕组，对比初始能力相近或接近第 60 百分位的学生。图中只显示一个示例队列。全研究中，按中考分数比较时富裕组的录取率是较贫困组的 0.91 倍，按初始能力比较时是 1.37 倍。',
-        controlLabel: '切换对比学生（真实已保存结果）：'
+        tag: "第 2 步 · 两道升学关口与再次分班",
+        title: "学生在哪里被分流",
+        lead: "进入普通高中和竞争选择性大学名额，是两个不同的结果。下面用同样两组学生分别比较。",
+        subNote: "公开的考试成绩为分配学位提供了共同标准。公平问题还包括：起始能力相近的学生，是否拥有相近的机会取得同样的成绩？",
+        controlLabel: "选择比较对象",
       },
       {
         tag: '第 3 步 · 住校假说与补习的“时间景观”',
@@ -261,11 +260,10 @@ window.GZ_I18N = {
         ctaSources: '下载代码、数据与 DOI 引文'
       }
     ],
-    beat2CompareOptions: [
-      { id: 'rich10_p60', label: '能力第60百分位 · 财富前10%（重点大学 0.6%）' },
-      { id: 'rich10_top10', label: '能力前10% · 财富前10%（1,024组中位数 86.3%）' }
-    ],
-    beat2RebandCallout: '高中阶段重新分班提升（+4.0 百分点）：关闭按成绩重新分班后，贫困前 10% 学生的通道率从 66.0% 降至 62.1%（150 组配对实验）。富贫比率：中考口径 0.91 → 联合口径 1.17 → 初始能力口径 1.37。',
+    opening: {"chart": "一名学生和她的同组学生", "axis": "从起始能力到最终模拟排名", "cohort": "一个已保存队列", "scrub": "拖动查看回放", "caption": "亮蓝色曲线连接该学生已保存的起始排名（第 91 百分位）和最终排名（第 92 百分位）。浅蓝色代表同组的其他学生。曲线中间部分仅用于示意。"},
+    gates: {"steps": [["中考 · 高中阶段学校招生考试", "模型按成绩和学位数量，将学生分入普通高中或职业教育轨道。"], ["高一 · 校内重新分班", "一名学生可以进入排名前五分之一的学校，再争取进入该校排名前十分之一的班级。模型测试了允许后续表现改变分班的规则。"], ["高考 · 大学入学考试", "学生再次竞争有限的名额。模型以最终排名前十分之一代表进入选择性大学。"]], "source": "广州市教育局招生指南", "compare": "同一批学生，两种升学结果", "academic": "进入普通高中", "university": "达到模拟选择性大学录取标准", "poor": "高能力 · 财富后 10%", "midRich": "能力约第 60 百分位 · 财富前 10%", "highRich": "高能力 · 财富前 10%", "cohortNote": "一个已保存队列。这两个群体说明两道关口的筛选结果可以不同。", "reband": "允许重新分班会怎样？", "without": "关闭重新分班", "with": "启用重新分班"},
+    beat2CompareOptions: [{"id": "rich10_p60", "label": "较富裕 · 能力约第 60 百分位"}, {"id": "rich10_top10", "label": "较富裕 · 同样高能力"}],
+    beat2RebandCallout: "在 150 组配对设定中，允许重新分班使较贫困高能力学生的模拟选择性大学录取率提高了 4.0 个百分点（配对差值的中位数）。图中分别展示两种情景的中位数。",
     beat3Options: [
       { id: 'cal_main', label: '住校生：每周 1 小时空余（学期 0.08% · 假期 27.8%）', topic: 'calendar', caseId: 'main' },
       { id: 'cal_3h', label: '住校生：每周 3 小时空余（学期 24.7% · 假期 30.0%）', topic: 'calendar', caseId: 'board_longer_term' },

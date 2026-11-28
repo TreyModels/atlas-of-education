@@ -282,3 +282,19 @@ footer { display: flex; justify-content: space-between; flex-wrap: wrap; gap: .8
 .map-detail { min-height: 2.7rem; background: var(--wash); padding: .65rem .75rem; border-radius: 6px; font-size: .9rem; }
 .policy-note { margin-top: .8rem; border-top: 1px solid var(--rule); padding-top: .65rem; }
 .policy-note summary { cursor: pointer; font-weight: 700; }
+
+#story-chart-slider input[type="range"] { width: 100%; min-height: 44px; margin: 0; accent-color: #176b78; }
+#story-extra { display: grid; gap: .85rem; }
+#story-extra[hidden], #story-figure[hidden] { display: none; }
+.gate-sequence { display: grid; gap: .6rem; margin: 0; padding: 0; list-style: none; }
+.gate-sequence li { display: grid; gap: .25rem; background: #eaf3f5; padding: .8rem 1rem; border-radius: .55rem; border-left: 3px solid #176b78; }
+.gate-sequence li:nth-child(2) { background: #fff8e9; border-color: #b06b26; }
+.gate-chart { display: grid; gap: .65rem; min-width: 0; background: white; border: 1px solid #dce7e6; border-radius: .7rem; padding: .95rem; }
+.gate-chart h3, .gate-chart p { margin: 0; }
+.gate-bars { display: grid; gap: .48rem; }
+.gate-bars h4 { margin: .35rem 0 0; }
+.gate-bar { display: grid; gap: .25rem; font-size: .9rem; }
+.gate-bar > div:first-child { display: flex; justify-content: space-between; gap: .35rem; align-items: baseline; }
+.gate-track { height: .5rem; border-radius: 1rem; background: #e7eeee; overflow: hidden; }
+.gate-track span { display: block; height: 100%; border-radius: inherit; background: #176b78; }
+.gate-bar.accent .gate-track span { background: #a75428; }

@@ -50,7 +50,7 @@ let lang = (params.get('lang') || savedLanguage || 'en') === 'zh' ? 'zh' : 'en';
 let mode = (params.get('mode') === 'explorer' || params.get('tab') || params.get('topic') || params.get('assumption')) ? 'explorer' : 'storyboard';
 let storyStep = Math.max(0, Math.min(5, Math.trunc(Number(params.get('step')) || 0)));
 
-let beat2Compare = 'rich10_top10';
+let beat2Compare = 'rich10_p60';
 let beat3Opt = 0;
 let beat4Math = 'choice'; // 'choice' | 'legacy'
 let beat4Idx = 2;         // 0.18 SD central in ranks
@@ -294,60 +294,91 @@ function renderStoryDataChart(topicId, caseIdxOrId) {
   requestAnimationFrame(() => plotTopicToCanvas('story-chart', topicId, idx));
 }
 
-function renderStoryMonteCarlo(showCompare) {
+function renderStoryMonteCarlo() {
   if (!storyPaths || !window.GZ_MC_CANVAS) return;
-  const p = storyPaths.example_cohort_profiles;
-  const m = storyPaths.principal_medians;
-  $('story-metric').textContent = lang === 'zh'
-    ? '一个保存队列中的模拟升学结果'
-    : 'Selective university outcomes in one saved cohort';
-  $('story-interval').textContent = lang === 'zh'
-    ? '显示各组获得模拟重点大学名额的比例'
-    : 'Share of each group securing a simulated selective university place';
-  $('story-pill').textContent = showCompare
-    ? (beat2Compare === 'rich10_p60' ? (lang === 'zh' ? '天赋 vs 财富' : 'Talent vs Wealth') : (lang === 'zh' ? '同天赋财富差距' : 'Equal Talent, Wealth Gap'))
-    : (lang === 'zh' ? '示例队列' : 'Example cohort');
+  const copy = T().opening;
+  $('story-metric').textContent = copy.chart;
+  $('story-interval').textContent = copy.axis;
+  $('story-pill').textContent = copy.cohort;
+  $('story-values').replaceChildren();
+  $('story-caption').textContent = copy.caption;
+  const scrub = make('input');
+  scrub.type = 'range';
+  scrub.min = '0';
+  scrub.max = '100';
+  scrub.value = '0';
+  scrub.setAttribute('aria-label', copy.scrub);
+  const panel = $('story-chart-slider');
+  panel.hidden = false;
+  panel.append(make('div', copy.scrub, 'fine'), scrub);
+  const canvas = $('story-chart');
+  GZ_MC_CANVAS.mount(canvas, {
+    storyPaths,
+    lang,
+    onProgress: value => { scrub.value = String(Math.round(value * 100)); }
+  });
+  scrub.addEventListener('input', () => {
+    GZ_MC_CANVAS.seek(Number(scrub.value) / 100);
+    $('story-pause').textContent = T().btnResume;
+  });
+}
 
-  const rows = [];
-  const addRow = (col, label, val) => {
-    const r = make('div', undefined, 'value-row');
-    const sp = make('span');
-    const d = make('i', undefined, 'dot');
-    d.style.background = col;
-    sp.append(d, label);
-    r.append(sp, make('b', val));
-    rows.push(r);
-  };
-  addRow(colors[0],
-    lang === 'zh' ? '能力前10% · 财富后10%（本地生）' : 'Top 10% ability · Bottom 10% wealth (local)',
-    lang === 'zh' ? `示例队列 ${p.poor10_top10.selective_uni_pct}% · 全1,024组中位数 ${m.poor10_top10_uni_pct}%` : `${p.poor10_top10.selective_uni_pct}% cohort · ${m.poor10_top10_uni_pct}% median (1,024 worlds)`
-  );
-  {
-    if (showCompare && beat2Compare === 'rich10_p60') {
-      addRow(colors[1],
-        lang === 'zh' ? '能力第60百分位 · 财富前10%（本地生）' : '60th-pct ability · Top 10% wealth (local)',
-        lang === 'zh' ? `普高 ${p.rich10_p60.academic_pct}% · 重点大学通道 ${p.rich10_p60.selective_uni_pct}%` : `${p.rich10_p60.academic_pct}% academic · ${p.rich10_p60.selective_uni_pct}% selective uni`
-      );
-    } else {
-      addRow(colors[1],
-        lang === 'zh' ? '能力前10% · 财富前10%（本地生）' : 'Top 10% ability · Top 10% wealth (local)',
-        lang === 'zh' ? `示例队列 ${p.rich10_top10.selective_uni_pct}% · 全1,024组中位数 ${m.rich10_top10_uni_pct}%` : `${p.rich10_top10.selective_uni_pct}% cohort · ${m.rich10_top10_uni_pct}% median (1,024 worlds)`
-      );
+function renderStoryGates() {
+  if (!storyPaths) return;
+  const copy = T().gates;
+  const panel = $('story-extra');
+  panel.hidden = false;
+  const steps = make('ol', undefined, 'gate-sequence');
+  for (const [title, body] of copy.steps) {
+    const step = make('li');
+    step.append(make('strong', title), make('span', body));
+    steps.append(step);
+  }
+  const source = make('a', copy.source, 'fine');
+  source.href = 'https://jyj.gz.gov.cn/yw/jyyw/content/post_10271257.html';
+  const comparison = make('section', undefined, 'gate-chart');
+  const result = make('div', undefined, 'gate-bars');
+  result.setAttribute('aria-live', 'polite');
+  const choices = make('div', undefined, 'pill-group');
+  const buttons = T().beat2CompareOptions.map(({id, label}) => {
+    const button = make('button', label, 'choice-pill');
+    button.type = 'button';
+    button.addEventListener('click', () => { beat2Compare = id; updateComparison(); });
+    choices.append(button);
+    return [id, button];
+  });
+  function addBar(target, label, value, accent = false) {
+    const row = make('div', undefined, accent ? 'gate-bar accent' : 'gate-bar');
+    const labelRow = make('div');
+    labelRow.append(make('span', label), make('strong', value + '%'));
+    const track = make('div', undefined, 'gate-track');
+    track.setAttribute('aria-hidden', 'true');
+    const fill = make('span');
+    fill.style.width = value + '%';
+    track.append(fill);
+    row.append(labelRow, track);
+    target.append(row);
+  }
+  function updateComparison() {
+    for (const [id, button] of buttons) {
+      button.setAttribute('aria-pressed', String(beat2Compare === id));
+    }
+    result.replaceChildren();
+    const profiles = storyPaths.example_cohort_profiles;
+    for (const [key, label] of [['academic_pct', copy.academic], ['selective_uni_pct', copy.university]]) {
+      result.append(make('h4', label));
+      addBar(result, copy.poor, profiles.poor10_top10[key]);
+      addBar(result, beat2Compare === 'rich10_p60' ? copy.midRich : copy.highRich, profiles[beat2Compare][key], true);
     }
   }
-  $('story-values').replaceChildren(...rows);
-  $('story-caption').textContent = lang === 'zh'
-    ? '曲线连接样本中学生的两个已保存排名。图中未绘制中间学校阶段。各组比例使用全部组内学生。'
-    : 'The curves connect two saved ranks for a sample of pupils. They illustrate rank changes between endpoints. Intermediate school stages are not plotted. Cohort rates use all pupils in each group.';
-
-  requestAnimationFrame(() => {
-    window.GZ_MC_CANVAS.mount($('story-chart'), {
-      storyPaths,
-      lang,
-      showCompare,
-      compareMode: beat2Compare
-    });
-  });
+  comparison.append(make('h3', copy.compare), choices, result, make('p', copy.cohortNote, 'fine'));
+  updateComparison();
+  const reband = make('section', undefined, 'gate-chart');
+  reband.append(make('h3', copy.reband));
+  addBar(reband, copy.without, 62.1);
+  addBar(reband, copy.with, 66.0);
+  reband.append(make('p', T().beat2RebandCallout, 'fine'));
+  panel.replaceChildren(steps, source, comparison, reband);
 }
 
 function renderStoryStep() {
@@ -383,6 +414,9 @@ function renderStoryStep() {
   const stage = document.querySelector('.story-stage');
   controls.replaceChildren();
   const chartSlider = $('story-chart-slider');
+  window.GZ_MC_CANVAS?.stop();
+  $('story-extra').hidden = true;
+  $('story-figure').hidden = storyStep === 1;
   chartSlider.replaceChildren();
   chartSlider.hidden = true;
   callout.hidden = true;
@@ -392,36 +426,27 @@ function renderStoryStep() {
   if (storyStep === 0) {
     $('story-visual-wrap').hidden = false;
     stage.classList.remove('single-col');
-    controls.append(make('label', beat.controlLabel));
     const pg = make('div', undefined, 'pill-group');
     const replay = make('button', dict.btnReplay, 'ghost');
     replay.type = 'button';
-    replay.addEventListener('click', () => window.GZ_MC_CANVAS?.replay());
+    replay.addEventListener('click', () => {
+      window.GZ_MC_CANVAS?.replay();
+      $('story-pause').textContent = dict.btnPause;
+    });
     const pause = make('button', dict.btnPause, 'ghost');
     pause.type = 'button';
+    pause.id = 'story-pause';
     pause.addEventListener('click', () => {
       const isPaused = window.GZ_MC_CANVAS?.togglePause();
       pause.textContent = isPaused ? dict.btnResume : dict.btnPause;
     });
     pg.append(replay, pause);
-    controls.append(pg);
-    renderStoryMonteCarlo(false);
+    renderStoryMonteCarlo();
+    chartSlider.append(pg);
   } else if (storyStep === 1) {
     $('story-visual-wrap').hidden = false;
     stage.classList.remove('single-col');
-    controls.append(make('label', beat.controlLabel));
-    const pg = make('div', undefined, 'pill-group');
-    dict.beat2CompareOptions.forEach((opt) => {
-      const b = make('button', opt.label, 'choice-pill');
-      b.type = 'button';
-      b.setAttribute('aria-pressed', String(beat2Compare === opt.id));
-      b.addEventListener('click', () => { beat2Compare = opt.id; renderStoryStep(); });
-      pg.append(b);
-    });
-    controls.append(pg);
-    callout.hidden = false;
-    callout.textContent = dict.beat2RebandCallout;
-    renderStoryMonteCarlo(true);
+    renderStoryGates();
   } else if (storyStep === 2) {
     $('story-visual-wrap').hidden = false;
     stage.classList.remove('single-col');
