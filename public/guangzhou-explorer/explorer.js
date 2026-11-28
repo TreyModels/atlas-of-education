@@ -285,14 +285,14 @@ function renderStoryMonteCarlo(showCompare) {
   const p = storyPaths.example_cohort_profiles;
   const m = storyPaths.principal_medians;
   $('story-metric').textContent = lang === 'zh'
-    ? '广州两道升学闸口与蒙特卡洛轨迹（40,000人队列采样）'
-    : 'Guangzhou Two-Gate Sorting Machine (Monte Carlo Cohort Paths)';
+    ? '一个保存队列中的模拟升学结果'
+    : 'Selective university outcomes in one saved cohort';
   $('story-interval').textContent = lang === 'zh'
-    ? '实线 = 单名合成学生 · 浅色曲线 = 同类学生平行轨迹（来自 rank_bands_example_pupils.csv.gz）'
-    : 'Solid = lead synthetic pupil · Faded = Monte Carlo cohort fan (from rank_bands_example_pupils.csv.gz)';
+    ? '显示各组获得模拟重点大学名额的比例'
+    : 'Share of each group securing a simulated selective university place';
   $('story-pill').textContent = showCompare
     ? (beat2Compare === 'rich10_p60' ? (lang === 'zh' ? '天赋 vs 财富' : 'Talent vs Wealth') : (lang === 'zh' ? '同天赋财富差距' : 'Equal Talent, Wealth Gap'))
-    : (lang === 'zh' ? '4,096 万次模拟' : '40.96M student-runs');
+    : (lang === 'zh' ? '示例队列' : 'Example cohort');
 
   const rows = [];
   const addRow = (col, label, val) => {
