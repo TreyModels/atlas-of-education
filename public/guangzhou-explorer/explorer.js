@@ -729,7 +729,7 @@ async function start() {
     });
 
     $('copy-bib').addEventListener('click', async () => {
-      const bib = `@misc{menefee2026guangzhou,\n  author = {Menefee, James W., III},\n  title = {Educational Opportunity and Private Tutoring in Guangzhou},\n  year = {2026},\n  note = {Working paper, Revision 1.4, Atlas of Education},\n  doi = {10.5281/zenodo.24369167}\n}`;
+      const bib = `@misc{menefee2026guangzhou,\n  author = {Menefee, Trey},\n  title = {Educational Opportunity and Private Tutoring in Guangzhou},\n  year = {2026},\n  note = {Working paper, Revision 1.4, Atlas of Education},\n  doi = {10.5281/zenodo.24369167}\n}`;
       try {
         await navigator.clipboard.writeText(bib);
         $('cite-status').textContent = T().bibCopied;
