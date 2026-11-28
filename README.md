@@ -15,7 +15,7 @@ The default branch, [`main`](https://github.com/TreyModels/atlas-of-education/tr
 | Atlas Worlds | [Open Atlas Worlds](https://treymodels.github.io/atlas-of-education/) | [Application source](src/) |
 | Guangzhou Education Explorer | [Open the explorer](https://treymodels.github.io/atlas-of-education/guangzhou-explorer/) | [Explorer source and saved results](public/guangzhou-explorer/) |
 
-The Guangzhou explorer reads saved simulation results. Its data and provenance manifest sit alongside the page source.
+The Guangzhou explorer reads saved simulation results. Its main experiment covers 40.96 million simulated pupil-runs. The data and provenance manifest sit alongside the page source. [How we ran the study](https://treymodels.github.io/atlas-of-education/guangzhou-explorer/methods.html).
 
 A unified catalogue of 65 entries across the nine research families: Education & work (8),
 Population & school systems (9), the IIEP/UIS planning collection (12), Historical systems:

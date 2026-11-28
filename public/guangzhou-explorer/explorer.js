@@ -101,6 +101,7 @@ function updateURL() {
 function applyStaticLocalization() {
   const dict = T();
   document.documentElement.lang = dict.htmlLang;
+  $('methods-link').href = lang === 'zh' ? 'methods.html#zh' : 'methods.html';
   document.title = dict.pageTitle;
   document.querySelectorAll('[data-i18n]').forEach((el) => {
     const key = el.dataset.i18n;

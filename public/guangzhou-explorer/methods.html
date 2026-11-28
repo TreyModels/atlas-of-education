@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How we studied Guangzhou · Atlas of Education</title>
+<meta name="description" content="Methods, assumptions, and computational checks for the Guangzhou educational opportunity simulation.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="methods-page">
+<header class="masthead">
+  <a class="atlas" href="./">← Guangzhou Explorer</a>
+  <nav class="masthead-links" aria-label="Language"><a href="#en">English</a><a href="#zh" lang="zh-Hans">中文</a></nav>
+</header>
+<main class="methods-main">
+<article id="en">
+  <header class="methods-hero">
+    <h1>How we studied educational opportunity in Guangzhou</h1>
+    <p class="lead">Can pupils with similar starting ability reach a selective university at similar rates when they grow up with different family resources?</p>
+    <p><strong>40.96 million simulated pupil-runs</strong> in the main experiment. We simulated a 40,000-pupil cohort under each of 1,024 sets of assumptions. Each pass of one synthetic pupil through the model counts once. Follow-up experiments are counted separately.</p>
+  </header>
+  <nav class="methods-nav" aria-label="On this page"><a href="#model">Model</a><a href="#experiments">Experiments</a><a href="#reading">Reading the charts</a><a href="#verification">Verification and sources</a></nav>
+  <section id="model">
+    <h2>How we built the model</h2>
+    <p><strong>Synthetic pupils and two gates.</strong> The model generates starting ability, family wealth, local household registration (hukou), and neighborhood and school assignments. Home resources, teaching, tutoring, and exam noise shape scores. The Zhongkao sorts pupils into academic and vocational pathways under seat and eligibility rules. The model allows later class reassignment and then ranks pupils at the Gaokao stage. The top tenth of final placements stands in for selective university access. This setup lets us follow where an advantage first appears and where pupils can move up or down.</p>
+    <p><strong>Guangzhou evidence and assumed inputs.</strong> We used published admissions rules, school places, and boarding figures to anchor institutional inputs. A robustness variant uses a 216-campus inventory with missing cutoffs imputed for 61 schools. Published tutoring research and informal practitioner observations informed ranges for poorly measured inputs. These sources serve different purposes. The campus comparison tests whether the result depends on a stylized inventory. The practitioner input helps define plausible scenarios. The main sweep varies 32 inputs independently within stated ranges. Its distribution reflects those design choices.</p>
+    <details>
+      <summary>How the original model represents schools and exam routes</summary>
+      <p>School and class inputs enter the learning score separately. Top-class teaching and peer premiums accumulate over two stages. The first assignment uses entrance rank; later assignment can blend entrance rank with Senior 1 performance. This makes it possible for a pupil to gain from joining a stronger class even when moving to a stronger school is out of reach. The ordinary and alternative exam routes share a final rank in the model, with route adjustments standing in for separate admissions processes.</p>
+      <p>The original tutoring specification uses behavioral take-up rules. The revised menu tests an explicit budget and feasible packages. The model holds provider prices and supply assumptions fixed. It leaves borrowing and savings outside the household budget.</p>
+    </details>
+  </section>
+  <section id="experiments">
+    <h2>What we ran and why</h2>
+    <dl class="methods-experiments">
+      <dt>Monte Carlo sweep and grouped sensitivity</dt>
+      <dd>Run one cohort under each of 1,024 sampled settings to see which findings persist as assumptions move. The early-advantage chart groups settings by how much earlier gains fade. The heatmap groups runs by two inputs at a time while other inputs also vary. Rank correlations and partial rank correlations summarize global associations, including after adjusting for other input ranks.</dd>
+      <dt>Equity comparisons and subgroup rates</dt>
+      <dd>Report poorer and richer pupils’ chances separately, then compare standardized rates within entrance-score bands, starting-ability bands, and supported score-and-ability cells. This shows how the answer changes when we compare pupils before or after earlier advantages affect scores. The comparisons can also use different eligible populations. Hukou route charts report pathway shares among nonlocal pupils.</dd>
+      <dt>Paired mechanism tests</dt>
+      <dd>Reuse 150 settings and match simulated cohorts while removing home inputs, neighborhood teaching advantages, early tutoring, post-gate paid inputs, or class reassignment. Removing one mechanism at a time shows how much the result depends on that modeled mechanism. Combined removals test what happens when multiple channels change together.</dd>
+      <dt>Tutoring restrictions and unequal enforcement</dt>
+      <dd>Compare an evenly borne restriction with one richer families mostly evade at the same aggregate reduction in expected early tutoring take-up. Cross those cases with different gains from tutoring. This tests whether enforcement and learning gains change the direction or size of the simulated effect.</dd>
+      <dt>Historical scenarios and policy decomposition</dt>
+      <dd>Earlier runs compare scenario bundles for different policy periods, then isolate tutoring restriction and class reassignment on matched inputs. A two-factor decomposition averages each factor’s contribution over both possible orders so their shared effect is allocated consistently. Ordinary-score and route-adjusted ranking comparisons show who changes position when paid routes or score additions enter the same seat contest.</dd>
+      <dt>Revised household tutoring choice</dt>
+      <dd>Use a shared annual budget within each modeled grade, alongside prices, tutoring access, hours, expected gains, and a choice of packages or no purchase. Grade 9 covers incoming pupils. Grade 11 covers academic-track pupils and allows full-time formats to replace current teacher and peer inputs. A separate 8,000-pupil pilot tunes purchase intercepts against survey-informed participation scenarios, then freezes them. The 40 follow-up configurations and two legacy benchmarks each use eight matched 40,000-pupil cohorts. Varying prices, budgets, boarding time, beliefs, and realized gains helps distinguish affordability, feasible time, and expectations from learning itself.</dd>
+      <dt>Rank displacement</dt>
+      <dd>Compare rank bands with and without the modeled contribution of tutoring bought by richer households. The fixed-placement diagnostic holds school and track assignments in place to isolate rank movement. Full reruns allow pathways to change. The earlier one-in-six strong-effect result and revised household-choice results use different specifications and are labelled separately.</dd>
+      <dt>Structural robustness and repeated cohorts</dt>
+      <dd>Compare the stylized school system with the compiled inventory and run five additional-skill weights to test how strongly conclusions depend on what exams reward. Repeat eight cohorts at each of 128 fixed settings in the original design to separate cohort-to-cohort noise from sensitivity to assumptions.</dd>
+    </dl>
+  </section>
+  <section id="reading">
+    <h2>How to read the results</h2>
+    <p>Most principal charts give the median and the 5th to 95th percentiles across settings. Household-choice charts give a mean and the minimum and maximum across eight matched seeds. Those intervals describe variation within the simulation design. Paired differences compare cases with shared random draws. A percentage-point change measures how many extra pupils per 100 reach a specified outcome. A rate ratio of 1 means equal rates.</p>
+    <p>The animation connects saved start and finish ranks for pupils in one example cohort. The curves between them are illustrative. Sliders, scenario buttons, and the heatmap display or summarize saved runs. Claims about actual citywide tutoring uptake, admissions, and policy effects need observational evidence. Better longitudinal data could narrow assumptions about how fast early advantages fade, when boarders can buy tutoring, and what tutoring delivers.</p>
+  </section>
+  <section id="verification">
+    <h2>What we checked and where to look</h2>
+    <p>Computational checks cover seat counts, exclusive routes, matched exam draws, and whether wealth ratios approach parity when wealth channels are disabled. The revised choice study checks baseline parity, zero-access controls, and reproducibility of reruns. Lean verifies selected mathematical properties of constrained rankings. The full stochastic program and its empirical validity require separate checks.</p>
+    <ul>
+      <li><a href="./?mode=explorer&amp;tab=assumptions">Assumptions and parameter register</a></li>
+      <li><a href="./?mode=explorer&amp;tab=sources">Saved results and provenance</a></li>
+      <li><a href="https://github.com/TreyModels/atlas-of-education/tree/main/public/guangzhou-explorer">Explorer source and served data on GitHub</a></li>
+      <li><a href="https://github.com/TreyModels/atlas-of-education/tree/main/research/guangzhou-working-paper">Earlier working paper, original model code, and audit files</a></li>
+      <li><a href="https://doi.org/10.5281/zenodo.24369167">Atlas collection archive and DOI</a></li>
+    </ul>
+  </section>
+</article>
+<article id="zh" lang="zh-Hans">
+  <header class="methods-hero">
+    <h1>我们如何研究广州的教育机会</h1>
+    <p class="lead">起始能力相近、家庭资源不同的学生，获得选择性大学名额的机会是否相近？</p>
+    <p>主实验共计 <strong>4,096 万模拟学生次</strong>。每组假设模拟 4 万名合成学生，共 1,024 组。每名合成学生每经过模型一次计为一次。后续实验另计。</p>
+  </header>
+  <section>
+    <h2>模型与数据依据</h2>
+    <p>合成学生拥有起始能力、家庭财富、户籍及学校和社区等属性。家庭投入、教师、补习及考试随机波动影响分数。模型依据招生和名额规则模拟中考分流、高中重新分班和高考阶段的竞争，以最终排名前十分之一作为选择性大学录取的代理指标。</p>
+    <p>广州公开的招生规定、招生计划和住宿数据为制度参数提供依据。216 校区版本用于检验学校结构，其中 61 所学校的分数线经过插补。补习研究和从业者的非正式意见用于设定待检验的范围。主实验独立抽取 32 个输入参数，所得分布体现本研究的设计。</p>
+  </section>
+  <section>
+    <h2>实验方法及用途</h2>
+    <dl class="methods-experiments">
+      <dt>蒙特卡洛模拟与敏感性分析</dt><dd>用 1,024 组假设检验结果能否保持。按早期优势消退程度分组，用热图展示两个输入的组合，并用秩相关及偏秩相关衡量参数与结果的关联。</dd>
+      <dt>公平比较与分组结果</dt><dd>分别报告较贫困和较富裕群体的结果，按中考成绩、起始能力或两者联合标准化，观察比较口径改变后得出的结论。按户籍报告不同升学路径。</dd>
+      <dt>配对机制实验</dt><dd>在 150 组配对设定中，逐项或同时关闭家庭资源、社区师资、早期补习、高中付费渠道或重新分班，检验结果依赖哪些机制。</dd>
+      <dt>补习限制与执法</dt><dd>在预期早期补习参与总体减少幅度相同的条件下，对比均匀限制和较富裕家庭大多规避限制，并改变补习收益假设。</dd>
+      <dt>历史情景与政策分解</dt><dd>比较不同时期的整组设定，再分别改变补习限制与重新分班。对两种改变顺序取平均，以分配两项机制的共同作用。对比普通成绩与含其他升学路径调整后的排名，观察名次变化。</dd>
+      <dt>修订后的家庭补习选择</dt><dd>学生面临年度预算、价格、可用时段、补习供给和预期收益约束，可选择补习组合或不购买。九年级覆盖所有入学学生，高二覆盖普通高中学生，并允许全日制补习替代当年学校投入。先用 8,000 名学生的试验队列设定参与情景，再以八个配对队列比较 40 组设定及两项旧模型基准。</dd>
+      <dt>排名档位与稳健性</dt><dd>比较扣除较富裕家庭补习贡献前后的排名档位。固定分流分析保持学校和轨道分配不变，完整重跑允许路径改变。比较不同校园结构和五种额外技能权重。原实验还在 128 组固定设定中各重复八次，以区分抽样波动和设定差异。</dd>
+    </dl>
+  </section>
+  <section>
+    <h2>图表解读与核验</h2>
+    <p>主实验通常展示设定间中位数及第 5 至第 95 百分位，家庭补习选择图通常展示八个种子的均值、最小值和最大值。这些反映模拟设计中的变动。动画连接保存的起点和终点排名，中间曲线用于示意。网页展示已保存的结果。</p>
+    <p>代码核验包括名额、路径互斥、配对考试随机数、财富渠道关闭后比率是否接近 1，以及修订模型的基准一致性和无供给对照。Lean 核验部分排名数学性质。真实政策影响和全市补习率需要独立实证资料。</p>
+    <p><a href="./?lang=zh&amp;mode=explorer&amp;tab=assumptions">查看假设和参数</a> · <a href="./?lang=zh&amp;mode=explorer&amp;tab=sources">查看结果来源</a></p>
+  </section>
+</article>
+</main>
+</body>
+</html>
