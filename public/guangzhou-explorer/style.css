@@ -269,3 +269,16 @@ footer { display: flex; justify-content: space-between; flex-wrap: wrap; gap: .8
 @media (max-width: 600px) {
   #findings .chart { gap: .65rem; }
 }
+
+.parameter-map { margin-top: 1.25rem; }
+.parameter-map h3 { margin-top: 0; }
+.map-controls { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 210px), 1fr)); gap: .65rem; }
+.map-controls label span { display: block; margin-bottom: .35rem; }
+.map-grid { width: 100%; table-layout: fixed; border-spacing: .28rem; }
+.map-grid th:first-child, .map-grid td:first-child { width: 1.55rem; }
+.map-grid th { font-size: .82rem; color: var(--muted); }
+.map-grid button { width: 100%; min-height: 46px; padding: .2rem; border: 1px solid #b2c9c7; border-radius: 6px; background: #fff; font: 680 .87rem system-ui; font-variant-numeric: tabular-nums; }
+.map-grid button[aria-pressed="true"] { outline: 2px solid #972f17; outline-offset: 1px; }
+.map-detail { min-height: 2.7rem; background: var(--wash); padding: .65rem .75rem; border-radius: 6px; font-size: .9rem; }
+.policy-note { margin-top: .8rem; border-top: 1px solid var(--rule); padding-top: .65rem; }
+.policy-note summary { cursor: pointer; font-weight: 700; }

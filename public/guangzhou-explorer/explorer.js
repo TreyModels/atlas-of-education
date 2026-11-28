@@ -473,6 +473,11 @@ function renderStoryStep() {
     chartSlider.append(sliderRow, lbl);
     callout.hidden = false;
     callout.textContent = dict.beat4RestrictionNote;
+    const policy = make('details', undefined, 'policy-note');
+    const source = make('a', dict.policySource);
+    source.href = 'https://www.mee.gov.cn/zcwj/zyygwj/202107/t20210724_849863.shtml';
+    policy.append(make('summary', dict.policyTitle), make('p', dict.policyBody), source);
+    callout.append(policy);
     renderStoryDataChart(activeTopic, curVal);
   } else if (storyStep === 4) {
     $('story-visual-wrap').hidden = false;

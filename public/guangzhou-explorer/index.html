@@ -10,6 +10,7 @@
 <script src="i18n.js" defer></script>
 <script src="mc_canvas.js" defer></script>
 <script src="explorer.js" defer></script>
+<script src="parameter-map.js" defer></script>
 </head>
 <body>
 <a class="skip" href="#content">Skip to content</a>
@@ -193,6 +194,19 @@
         </section>
       </div>
     </div>
+    <section class="sweep-panel parameter-map" aria-labelledby="map-title">
+      <h3 id="map-title" data-i18n="mapTitle">How do two assumptions change the result?</h3>
+      <p data-i18n="mapIntro">The main charts change one saved case at a time. Here you can compare two assumptions across the full 1,024-setting sweep. Each square averages the saved outcomes in that pair of ranges.</p>
+      <div class="map-controls">
+        <label><span data-i18n="mapRows">Rows</span><select id="map-rows"></select></label>
+        <label><span data-i18n="mapColumns">Columns</span><select id="map-columns"></select></label>
+        <label><span data-i18n="mapOutcome">Outcome</span><select id="map-outcome"></select></label>
+      </div>
+      <p class="fine" id="map-legend"></p>
+      <table class="map-grid" id="map-grid" aria-labelledby="map-title" aria-describedby="map-legend"></table>
+      <p class="map-detail" id="map-detail" aria-live="polite"></p>
+      <p class="fine" data-i18n="mapLimit">The four bands divide each input’s sampled range into equal widths. Other assumptions vary within each square, so the colors show patterns across saved runs. An empty square had no sampled settings.</p>
+    </section>
   </section>
 
   <!-- TAB 2: ASSUMPTIONS & TINKER -->
