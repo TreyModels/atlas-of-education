@@ -28,3 +28,25 @@ Audience: **absolute beginners and expert readers (e.g. Mark Bray)**. Must work 
 
 ## Atlas Bridge
 No access to Bridge from the coding session. Paste this file's "Plan" section into the Bridge log.
+
+## Data-type analysis and precedents (from memory, NOT yet verified: re-check with web research)
+
+**What the data is:** a *parameter-sweep ensemble of an agent-based model*. 1,024 settings x 40,000 synthetic pupils; saved outputs are aggregates (rates, ratios, intervals) per setting, plus 40-setting / 8-seed tutoring runs. Three kinds of question: (a) *composition* (who ends where), (b) *comparison across settings* (sensitivity), (c) *measurement choice* (0.91 / 1.17 / 1.37 are the same pupils judged by different yardsticks).
+
+**Mapping data type -> best form**
+- Composition of 40k pupils: unit/dot charts (one mark per person) beat bars; frequency-framed displays are better understood than percentages (Gigerenzer-style natural frequencies). Use dots, not decimals.
+- Uncertainty across seeds: quantile dotplots and hypothetical-outcome-plot animations (Kay et al. 2016; Hullman et al. 2015) beat error bars for lay readers; keep a plain interval for experts.
+- 1,024-setting sweep: small multiples, heatmap over the two most influential parameters, tornado/one-at-a-time sensitivity bars; parallel coordinates for experts. Always let a click load a setting into the main sorter.
+- Pathways: Sankey/alluvial (income -> track -> destination), as in OECD Education at a Glance flows.
+- Metric choice (the 3 ratios): one animated re-sort of the same dots; a slope/"dumbbell" chart per yardstick.
+
+**Precedents to study**
+- Opportunity Insights / Chetty: Opportunity Atlas and College Mobility Report Cards (rich vs poor access, dot/bar summaries, geographic exploration).
+- NYT The Upshot: "Extensive Data Shows Punishing Reach of Racism for Black Boys", "The Rent-or-Buy Calculator", election needle (live uncertainty), "You Draw It".
+- Explorable explanations: Nicky Case (Parable of the Polygons, Schelling segregation; sorting dynamics by colour), Bret Victor, Distill/Pudding pieces; Galton board / Plinko demos for "many random rolls".
+- Gapminder (Rosling): animated bubbles with time/parameter slider and a narrated tour.
+- Scrollytelling: Pudding, Reuters Graphics, Flourish/Scrollama patterns.
+- Model-sharing: NetLogo Web, Observable notebooks, OpenABM/CoMSES documentation norms (ODD protocol, already in repo).
+- Expert trust: show the ODD, assumptions table (134), DOI, seeds, and "what this cannot show" next to every headline number.
+
+**Design implication:** lead with the dot sorter (frequency framing + colour), step to uncertainty (dotplots), then let experts drop into the heatmap/assumptions. Do a real research pass (haiku agent, WebSearch) tomorrow to confirm each precedent and pull 5-8 concrete design patterns with links.
