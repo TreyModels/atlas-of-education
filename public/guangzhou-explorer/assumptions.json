@@ -1,0 +1,1342 @@
+[
+  {
+    "id": "n",
+    "name": "Pupils per synthetic cohort",
+    "group": "Simulation design and sensitivity",
+    "model": "Original Guangzhou model",
+    "value": "60,000",
+    "range": "40,000 in the principal sweep and paired tutoring-choice runs; 151,000 in the 2026 school-structure model",
+    "basis": "Computational design",
+    "description": "The standalone Python function defaults to 60,000. Synthetic cohort size is distinct from an observed pupil count."
+  },
+  {
+    "id": "seed",
+    "name": "Random seed",
+    "group": "Simulation design and sensitivity",
+    "model": "Original Guangzhou model",
+    "value": "0",
+    "range": "Varies by run; principal design seed root 27112026",
+    "basis": "Computational design",
+    "description": "Each cohort seed generates separate random streams for population, school and exam stages."
+  },
+  {
+    "id": "TAL_WEALTH",
+    "name": "Starting ability and family wealth",
+    "group": "Population and household resources",
+    "model": "Original Guangzhou model",
+    "value": "0.1",
+    "range": "0 to 0.3 in principal sweep",
+    "basis": "Correlation; assumed.",
+    "description": "Correlation between latent talent and log wealth."
+  },
+  {
+    "id": "SEG",
+    "name": "Neighborhood wealth and family wealth",
+    "group": "Population and household resources",
+    "model": "Original Guangzhou model",
+    "value": "0.6",
+    "range": "Fixed in the principal sweep",
+    "basis": "Assumed",
+    "description": "Controls how strongly a family’s synthetic wealth follows its assigned junior school zone."
+  },
+  {
+    "id": "HOME",
+    "name": "Learning advantage linked to home resources",
+    "group": "Population and household resources",
+    "model": "Original Guangzhou model",
+    "value": "0.15",
+    "range": "0 to 0.3 in principal sweep",
+    "basis": "SD per wealth SD; assumed and identified as a key driver.",
+    "description": "Home-input contribution to initial skill per SD of log wealth."
+  },
+  {
+    "id": "N_JUNIOR",
+    "name": "Number of junior schools",
+    "group": "School access and hukou",
+    "model": "Original Guangzhou model",
+    "value": "300",
+    "range": "Fixed for the stylized design",
+    "basis": "Model structure",
+    "description": "Three hundred synthetic junior school zones receive standardized wealth draws."
+  },
+  {
+    "id": "JR_CLASSES",
+    "name": "Junior classes per school",
+    "group": "School access and hukou",
+    "model": "Original Guangzhou model",
+    "value": "6",
+    "range": "Fixed",
+    "basis": "Model structure",
+    "description": "Pupils are assigned randomly to a junior class within their school."
+  },
+  {
+    "id": "TEACH_SD",
+    "name": "Variation in junior teacher effects",
+    "group": "School learning",
+    "model": "Original Guangzhou model",
+    "value": "0.2",
+    "range": "0.15 to 0.45 in principal sweep",
+    "basis": "SD units; literature range cited in register is 0.17–0.50 SD.",
+    "description": "SD of teacher effects in junior schools; copied to HS_TEACH_SD for high schools."
+  },
+  {
+    "id": "TEACH_ZONE",
+    "name": "Junior teacher advantage in richer zones",
+    "group": "School learning",
+    "model": "Original Guangzhou model",
+    "value": "0.1",
+    "range": "0 to 0.25 in principal sweep",
+    "basis": "SD per SD of zone wealth; assumed.",
+    "description": "Junior teacher-quality gradient per SD of zone wealth."
+  },
+  {
+    "id": "ACAD",
+    "name": "Public academic-track places",
+    "group": "School access and hukou",
+    "model": "Original Guangzhou model",
+    "value": "65%",
+    "range": "45% to 70% in principal sweep",
+    "basis": "Share; upper end widened so the author-compiled 2026 figure (101,720 seats / about 151,000 candidates = 67.4%) is inside the sweep. Private entrants can raise the final academic share above this.",
+    "description": "Share of cohort initially assigned a public academic-track place before private/exit handling."
+  },
+  {
+    "id": "ELITE",
+    "name": "Selective high-school places",
+    "group": "School access and hukou",
+    "model": "Original Guangzhou model",
+    "value": "10%",
+    "range": "10% in the principal sweep; changes with academic capacity in the era sensitivity",
+    "basis": "Modeling choice",
+    "description": "Share of all pupils eligible for a selective high-school seat. This is a separate admissions stage from the university proxy."
+  },
+  {
+    "id": "ZHIBIAO",
+    "name": "School-based share of selective high-school places",
+    "group": "School access and hukou",
+    "model": "Original Guangzhou model",
+    "value": "50%",
+    "range": "30% to 60% in principal sweep",
+    "basis": "Share; official-rules motivated, but the sweep includes values below the stated 50% minimum (see rule mismatch below).",
+    "description": "Fraction of the model’s elite-seat pool reserved for school-based zhibiao allocation, among local-hukou eligible academic pupils."
+  },
+  {
+    "id": "N_HS",
+    "name": "Number of public high schools",
+    "group": "School access and hukou",
+    "model": "Original Guangzhou model",
+    "value": "60",
+    "range": "60 stylized public schools; 2026 school-structure scenario uses a campus roster",
+    "basis": "Model structure",
+    "description": "Public academic secondary schools in the stylized model."
+  },
+  {
+    "id": "HS_CLASS",
+    "name": "Target senior class size",
+    "group": "School learning",
+    "model": "Original Guangzhou model",
+    "value": "50",
+    "range": "Fixed",
+    "basis": "Model structure",
+    "description": "Pupils are grouped into roughly balanced classes using an integer school size divided by the target."
+  },
+  {
+    "id": "SCHOOL_VA",
+    "name": "Learning gain from a regular public high school",
+    "group": "School learning",
+    "model": "Original Guangzhou model",
+    "value": "0.1",
+    "range": "0 to 0.5 in principal sweep",
+    "basis": "SD; literature range of 0–0.20 widened to 0–0.50.",
+    "description": "School value added per regular tier; elite tier receives twice this amount in the code."
+  },
+  {
+    "id": "TOP_BAND",
+    "name": "Share of pupils in a high school’s top band",
+    "group": "School learning",
+    "model": "Original Guangzhou model",
+    "value": "12.5%",
+    "range": "Fixed",
+    "basis": "Assumed",
+    "description": "Per school, rank pupils and assign the top eighth to the top band, rounded with a minimum of one."
+  },
+  {
+    "id": "TOP_TEACH",
+    "name": "Extra teaching benefit in the top band",
+    "group": "School learning",
+    "model": "Original Guangzhou model",
+    "value": "0.15",
+    "range": "0.1 to 0.35 in principal sweep",
+    "basis": "Model score units; motivated by Wu et al. (2019), not a fitted interval.",
+    "description": "Cumulative two-stage teaching premium; half applied per stage."
+  },
+  {
+    "id": "PEER",
+    "name": "Extra peer benefit in the top band",
+    "group": "School learning",
+    "model": "Original Guangzhou model",
+    "value": "0.29",
+    "range": "0.1 to 0.35 in principal sweep",
+    "basis": "Model score units; default total 0.44. Broad independent ranges are sensitivity choices.",
+    "description": "Cumulative two-stage peer premium; half applied per stage."
+  },
+  {
+    "id": "HS_TEACH_SD",
+    "name": "Variation in senior teacher effects",
+    "group": "School learning",
+    "model": "Original Guangzhou model",
+    "value": "0.2",
+    "range": "Linked to junior teacher SD in the sampled analysis, 0.15–0.45",
+    "basis": "Linked sweep input",
+    "description": "Controls variation of senior class teacher effects. The standalone reference is 0.20."
+  },
+  {
+    "id": "GROW",
+    "name": "Senior learning linked to starting ability",
+    "group": "School learning",
+    "model": "Original Guangzhou model",
+    "value": "0.5",
+    "range": "Fixed",
+    "basis": "Assumed",
+    "description": "A senior-school skill increment of 0.5 model score units per latent talent unit."
+  },
+  {
+    "id": "DECAY",
+    "name": "Share of early advantages that fades",
+    "group": "School learning",
+    "model": "Original Guangzhou model",
+    "value": "50%",
+    "range": "0% to 90% in principal sweep",
+    "basis": "Fraction; unmeasured and flagged as highly influential.",
+    "description": "Fraction of the pre-gate “head start” that fades by the later high-school stage. One common fade rate applies to home, junior-school teacher, and pre-gate tutoring components."
+  },
+  {
+    "id": "REBAND",
+    "name": "Reassign classes in senior year two",
+    "group": "School learning",
+    "model": "Original Guangzhou model",
+    "value": "Yes",
+    "range": "On and off in saved comparisons",
+    "basis": "Structural scenario",
+    "description": "The model may reassign senior-year classes using a weighted composite of original entrance ranking and interim performance."
+  },
+  {
+    "id": "NOISE",
+    "name": "Exam score noise",
+    "group": "School learning",
+    "model": "Original Guangzhou model",
+    "value": "0.35",
+    "range": "0.25 to 0.5 in principal sweep",
+    "basis": "SD; assumed. A common magnitude is reused across exams.",
+    "description": "SD of exam measurement noise, used at zhongkao, interim high-school observation, and gaokao."
+  },
+  {
+    "id": "NONHUKOU",
+    "name": "Share without Guangzhou household registration",
+    "group": "Population and household resources",
+    "model": "Original Guangzhou model",
+    "value": "20%",
+    "range": "10% to 40% in principal sweep",
+    "basis": "Share; unknown.",
+    "description": "Fraction of the synthetic cohort without local hukou."
+  },
+  {
+    "id": "NH_WEALTH",
+    "name": "Wealth shift for families without local registration",
+    "group": "Population and household resources",
+    "model": "Original Guangzhou model",
+    "value": "-0.3",
+    "range": "-0.6 to 0 in principal sweep",
+    "basis": "Wealth-index units; assumed.",
+    "description": "Additive mean wealth shift for non-hukou families."
+  },
+  {
+    "id": "MINBAN_PEN",
+    "name": "Junior-school teacher effect for nonlocals",
+    "group": "School learning",
+    "model": "Original Guangzhou model",
+    "value": "0.15",
+    "range": "0 to 0.3 in principal sweep",
+    "basis": "SD; assumed; register cites private-school VA near zero.",
+    "description": "Junior-school teacher-quality penalty for non-hukou pupils, standing in for minban or purchased-place schooling."
+  },
+  {
+    "id": "QUOTA",
+    "name": "Cap on nonlocal public and selective admissions",
+    "group": "School access and hukou",
+    "model": "Original Guangzhou model",
+    "value": "15%",
+    "range": "8% to 20% in principal sweep",
+    "basis": "Share; rules cited as 8–15% core districts, 8–18% outer districts, and 8–20% from 2027. The sweep reaches beyond the stated 2026 outer-district upper bound.",
+    "description": "Maximum non-hukou fraction used for public academic seats and, separately, for the elite tier."
+  },
+  {
+    "id": "PRIVATE_COST",
+    "name": "Annual private-school fee",
+    "group": "School access and hukou",
+    "model": "Original Guangzhou model",
+    "value": "¥75,000 per year",
+    "range": "Fixed in the principal sweep",
+    "basis": "Assumed price",
+    "description": "Annual private high-school fee in yuan. Code checks whether it is strictly below the stated allowed share of modeled income."
+  },
+  {
+    "id": "AFFORD",
+    "name": "Income share allowed for private-school fees",
+    "group": "School access and hukou",
+    "model": "Original Guangzhou model",
+    "value": "40%",
+    "range": "Fixed in the principal sweep",
+    "basis": "Assumed affordability rule",
+    "description": "The private-school fee must fall below 40% of annual modeled household income. This is separate from the revised tutoring budget."
+  },
+  {
+    "id": "MED_INCOME",
+    "name": "Reference annual household income",
+    "group": "Population and household resources",
+    "model": "Original Guangzhou model",
+    "value": "¥200,000 per year",
+    "range": "Fixed in displayed runs",
+    "basis": "Synthetic income scale",
+    "description": "Income equals the reference value times exp(0.7 × log wealth). The resulting cohort median and upper tail vary."
+  },
+  {
+    "id": "N_PRIV",
+    "name": "Number of private high schools",
+    "group": "School access and hukou",
+    "model": "Original Guangzhou model",
+    "value": "12",
+    "range": "12 in the stylized design; roster used in the 2026 structure scenario",
+    "basis": "Model structure",
+    "description": "Number of private school groups. The stylized default has no separate count cap on private seats."
+  },
+  {
+    "id": "ZB_FLOOR",
+    "name": "Entrance-score floor for school-based quota",
+    "group": "School access and hukou",
+    "model": "Original Guangzhou model",
+    "value": "30%",
+    "range": "20% to 40% in principal sweep",
+    "basis": "Share; assumed, described as consistent with 2026 rules.",
+    "description": "Minimum score threshold for zhibiao eligibility, expressed as the top fraction of the full synthetic cohort."
+  },
+  {
+    "id": "PRE_SHARE",
+    "name": "Pre-entrance tutoring scale without restrictions",
+    "group": "Tutoring and household choices",
+    "model": "Original Guangzhou model",
+    "value": "40%",
+    "range": "20% to 60% in principal sweep",
+    "basis": "Share scale; practitioner check; assumption and CIEFR 2017 survey (38.1%) cited.",
+    "description": "Wealth-weighted probability scale for pre-gate tutoring absent the ban."
+  },
+  {
+    "id": "BAN_RED",
+    "name": "Reduction in early tutoring",
+    "group": "Tutoring and household choices",
+    "model": "Original Guangzhou model",
+    "value": "40%",
+    "range": "0% to 60% in principal sweep",
+    "basis": "Sensitivity assumption; household trends do not identify this effect.",
+    "description": "Central effective tutoring reduction before the wealth gradient."
+  },
+  {
+    "id": "BAN_GRAD",
+    "name": "How restriction changes with wealth",
+    "group": "Tutoring and household choices",
+    "model": "Original Guangzhou model",
+    "value": "0.5",
+    "range": "0 to 1 in principal sweep",
+    "basis": "Assumed coefficient, motivated by Liu et al. (2024), Liu and Bray (2025), and Yang (2026). None estimates this range.",
+    "description": "Wealth gradient in effective restriction, increasing reduction among poorer pupils."
+  },
+  {
+    "id": "PRE_EFF",
+    "name": "Pre-entrance tutoring gain",
+    "group": "Tutoring and household choices",
+    "model": "Original Guangzhou model",
+    "value": "0.075",
+    "range": "0 to 0.15 in principal sweep",
+    "basis": "SD; judgment anchored to null, small or negative findings (Zhang Y. 2013; Zhang L. 2024; Zhang Z. et al. 2025). No source gives these bounds; negative values are not sampled.",
+    "description": "Initial-skill gain for a pupil taking pre-gate tutoring."
+  },
+  {
+    "id": "REBAND_PERF",
+    "name": "Weight on new performance when classes are reassigned",
+    "group": "School learning",
+    "model": "Original Guangzhou model",
+    "value": "0.3",
+    "range": "0 to 0.5 in principal sweep",
+    "basis": "Weight; practitioner check; assumption.",
+    "description": "Weight on observed senior-1 performance versus zhongkao rank in senior-2 class assignment."
+  },
+  {
+    "id": "BOARD",
+    "name": "Boarding or day-school scenario",
+    "group": "School access and hukou",
+    "model": "Original Guangzhou model",
+    "value": "Yes",
+    "range": "Boarding or day school in stylized runs",
+    "basis": "Assumed structural comparison",
+    "description": "Day schools triple the term tutoring probability scale. The separate school-roster scenario uses school bed capacity ratios."
+  },
+  {
+    "id": "TERM_SHARE",
+    "name": "Term tutoring participation scale",
+    "group": "Tutoring and household choices",
+    "model": "Original Guangzhou model",
+    "value": "10%",
+    "range": "2% to 15% in principal sweep",
+    "basis": "Share scale; practitioner check and author observation, uncertain.",
+    "description": "Baseline term tutoring take-up scale for academic pupils when boarding (both skill-distribution tails); tripled when BOARD=False."
+  },
+  {
+    "id": "HOL_SHARE",
+    "name": "Holiday tutoring participation scale",
+    "group": "Tutoring and household choices",
+    "model": "Original Guangzhou model",
+    "value": "40%",
+    "range": "20% to 60% in principal sweep",
+    "basis": "Share scale; practitioner check; assumption.",
+    "description": "Baseline holiday tutoring take-up scale (both tails), before wealth/skill weighting."
+  },
+  {
+    "id": "POST_EFF",
+    "name": "Effect of one senior tutoring episode",
+    "group": "Tutoring and household choices",
+    "model": "Original Guangzhou model",
+    "value": "0.05",
+    "range": "0 to 0.1 in principal sweep",
+    "basis": "SD per episode; same literature and caveat as PRE_EFF. Stress values 0.20 and 0.40 are run in mechanisms.py.",
+    "description": "Gaokao-skill gain per term or holiday tutoring episode."
+  },
+  {
+    "id": "FT_SHARE",
+    "name": "Target for full-time outside study",
+    "group": "Tutoring and household choices",
+    "model": "Original Guangzhou model",
+    "value": "3%",
+    "range": "0% to 5% in principal sweep",
+    "basis": "Share; assumption informed by a practitioner check; denominator unconfirmed.",
+    "description": "Target share of the whole cohort in full-time outside-institution study while retaining a school place."
+  },
+  {
+    "id": "FT_COST",
+    "name": "Annual full-time small-group tuition",
+    "group": "Tutoring and household choices",
+    "model": "Original Guangzhou model",
+    "value": "¥140,000 per year",
+    "range": "Fixed in the principal sweep",
+    "basis": "Illustrative price",
+    "description": "Annual assumed small-group price. Legacy affordability requires the fee to be below half of modeled household income."
+  },
+  {
+    "id": "FT_EFF",
+    "name": "Full-time tutoring gain before accounting for displaced school",
+    "group": "Tutoring and household choices",
+    "model": "Original Guangzhou model",
+    "value": "0",
+    "range": "-0.2 to 0.3 in principal sweep",
+    "basis": "SD; sign unknown. Pupils in this route lose modeled in-school teacher and peer effects.",
+    "description": "Gaokao-skill effect of full-time institution study relative to school-class effects."
+  },
+  {
+    "id": "INSURE",
+    "name": "Tutoring demand when achievement trails wealth rank",
+    "group": "Tutoring and household choices",
+    "model": "Original Guangzhou model",
+    "value": "1",
+    "range": "0 to 2 in principal sweep",
+    "basis": "Behavioral coefficient; assumed approximation of assumed mechanism.",
+    "description": "Strength of tutoring response to a positive gap between family wealth rank and pupil skill rank (“fear of falling”)."
+  },
+  {
+    "id": "RHO_DEMAND",
+    "name": "Classmate influence on tutoring demand",
+    "group": "Tutoring and household choices",
+    "model": "Original Guangzhou model",
+    "value": "0.5",
+    "range": "0 to 1 in principal sweep",
+    "basis": "Behavioral coefficient; assumed.",
+    "description": "Strength of one-round peer escalation in classmates’ tutoring take-up."
+  },
+  {
+    "id": "ART_SHARE",
+    "name": "Target share on art-exam route",
+    "group": "Alternative university routes",
+    "model": "Original Guangzhou model",
+    "value": "4%",
+    "range": "0% to 6% in principal sweep",
+    "basis": "Share; practitioner check; assumption.",
+    "description": "Target share of cohort taking the art-exam route; selection is weighted toward wealthier and lower-skill academic pupils."
+  },
+  {
+    "id": "ART_BONUS",
+    "name": "Art-exam score advantage proxy",
+    "group": "Alternative university routes",
+    "model": "Original Guangzhou model",
+    "value": "0.8",
+    "range": "0.3 to 1.2 in principal sweep",
+    "basis": "SD; assumption that the specialist exam is easier; assumed scale.",
+    "description": "Additive effective-score advantage for art route."
+  },
+  {
+    "id": "HK_SHARE",
+    "name": "Target share on joint-exam route",
+    "group": "Alternative university routes",
+    "model": "Original Guangzhou model",
+    "value": "1%",
+    "range": "0% to 2% in principal sweep",
+    "basis": "Share; practitioner check; assumption.",
+    "description": "Target share of cohort using the Hong Kong/Macau/Taiwan joint-exam route; selected from the wealthiest academic pupils."
+  },
+  {
+    "id": "HK_BONUS",
+    "name": "Joint-exam score advantage proxy",
+    "group": "Alternative university routes",
+    "model": "Original Guangzhou model",
+    "value": "1",
+    "range": "0.5 to 1.5 in principal sweep",
+    "basis": "SD; assumption of easier entry; assumed scale.",
+    "description": "Additive effective-score advantage for the joint-exam route."
+  },
+  {
+    "id": "ELITE_BUY",
+    "name": "Selective high-school seats reserved for purchase",
+    "group": "School access and hukou",
+    "model": "Original Guangzhou model",
+    "value": "0%",
+    "range": "Zero in Guangzhou",
+    "basis": "Off in Guangzhou",
+    "description": "Inactive option retained for a Hong Kong comparison, assigning part of the selective capacity by wealth."
+  },
+  {
+    "id": "ZONE_ADMIT",
+    "name": "Neighborhood weight in selective admission",
+    "group": "School access and hukou",
+    "model": "Original Guangzhou model",
+    "value": "0",
+    "range": "Zero in Guangzhou",
+    "basis": "Off in Guangzhou",
+    "description": "Inactive option retained for a Hong Kong comparison, adding a neighborhood score weight for open selective entry."
+  },
+  {
+    "id": "CN_CORR",
+    "name": "Correlation of cognitive and noncognitive skills",
+    "group": "School learning",
+    "model": "Original Guangzhou model",
+    "value": "0.25",
+    "range": "0 to 0.50 in the extension",
+    "basis": "Assumed extension inputs",
+    "description": "Target association of starting cognitive and noncognitive skills. No pupil data calibrate it."
+  },
+  {
+    "id": "N_WEALTH",
+    "name": "Noncognitive skill and family wealth",
+    "group": "School learning",
+    "model": "Original Guangzhou model",
+    "value": "0.15",
+    "range": "0 to 0.30 in the extension",
+    "basis": "Assumed extension inputs",
+    "description": "Target association between noncognitive skill and modeled log wealth."
+  },
+  {
+    "id": "N_WEIGHT",
+    "name": "Weight on noncognitive skill in senior learning",
+    "group": "School learning",
+    "model": "Original Guangzhou model",
+    "value": "0",
+    "range": "0, 0.125, 0.25, 0.375, 0.50",
+    "basis": "Saved noncognitive extension",
+    "description": "Senior-high gain per unit of noncognitive skill. The paper’s main sweep sets this to zero."
+  },
+  {
+    "id": "SCHOOLS",
+    "name": "School-level data option",
+    "group": "School access and hukou",
+    "model": "Original Guangzhou model",
+    "value": "Stylized school layout",
+    "range": "Stylized layout or optional 216-campus roster",
+    "basis": "Optional public-data sensitivity",
+    "description": "If enabled, school plans, beds, ownership and cutoff order affect assignment. The data are provisional and 61 cutoffs are imputed."
+  },
+  {
+    "id": "COHORT",
+    "name": "Reference size of the entrance-exam cohort",
+    "group": "School access and hukou",
+    "model": "Original Guangzhou model",
+    "value": "151,000",
+    "range": "Fixed for 2026 school-structure sensitivity",
+    "basis": "Reported reference figure",
+    "description": "About 151,000 entrance-exam candidates are used for scaling school capacity."
+  },
+  {
+    "id": "ACAD_PLAN",
+    "name": "Reference number of academic places",
+    "group": "School access and hukou",
+    "model": "Original Guangzhou model",
+    "value": "101,720",
+    "range": "101,720 in the 2026 scenario; roughly 20%–43% of 151,000 in the stylized 2000 scenario",
+    "basis": "Provisional school-plan anchor",
+    "description": "The model rescales the compiled campus plan total of 104,584 to this reference figure. The two totals differ."
+  },
+  {
+    "id": "BLOCK_ABOVE",
+    "name": "Local wealth threshold for removing tutoring purchases",
+    "group": "Tutoring and household choices",
+    "model": "Original Guangzhou model",
+    "value": "Off",
+    "range": "Off or 0.60 in rank-band comparison",
+    "basis": "Counterfactual design",
+    "description": "Removes tutoring and full-time study for families above the local 60th wealth percentile. Comparisons can hold placements fixed or recompute them."
+  },
+  {
+    "id": "EFF_SLOPE",
+    "name": "Change in tutoring gains with family wealth",
+    "group": "Tutoring and household choices",
+    "model": "Original Guangzhou model",
+    "value": "0",
+    "range": "0 or 0.50 in the effectiveness grid",
+    "basis": "Assumed sensitivity",
+    "description": "Tutoring effects are multiplied by 1 + slope × (2 × wealth rank − 1). Positive slope gives richer pupils larger returns."
+  },
+  {
+    "id": "BAN_TARGET",
+    "name": "Target reduction in expected early take-up",
+    "group": "Tutoring and household choices",
+    "model": "Original Guangzhou model",
+    "value": "Off",
+    "range": "Off, 20% or 40%",
+    "basis": "Paired restriction design",
+    "description": "Uses a numerical solver to reach a fixed average expected reduction in early tutoring so different wealth gradients are comparable."
+  },
+  {
+    "id": "POST_RED_TERM",
+    "name": "Reduction in term tutoring probability",
+    "group": "Tutoring and household choices",
+    "model": "Original Guangzhou model",
+    "value": "0%",
+    "range": "0 or 0.25 in paired restriction runs",
+    "basis": "Assumed policy scenario",
+    "description": "Multiplies baseline modeled post-gate term tutoring probability by one minus this cut."
+  },
+  {
+    "id": "POST_RED_HOL",
+    "name": "Reduction in holiday tutoring probability",
+    "group": "Tutoring and household choices",
+    "model": "Original Guangzhou model",
+    "value": "0%",
+    "range": "0 or 0.25 in paired restriction runs",
+    "basis": "Assumed policy scenario",
+    "description": "Multiplies baseline modeled holiday tutoring probability by one minus this cut."
+  },
+  {
+    "id": "BED_SCALE",
+    "name": "Multiplier on school boarding capacity",
+    "group": "School access and hukou",
+    "model": "Original Guangzhou model",
+    "value": "1",
+    "range": "0–0.30 around 2000; 0.60–0.90 around 2017; 1 in 2026 scenario",
+    "basis": "Stylized era sensitivity",
+    "description": "Multiplies the bed-to-plan ratio used as an input to synthetic boarding status. Capacity and actual occupancy can differ."
+  },
+  {
+    "id": "PRIV_FILL",
+    "name": "Share of private places filled",
+    "group": "School access and hukou",
+    "model": "Original Guangzhou model",
+    "value": "80%",
+    "range": "0.60–1.00 in school-structure comparison",
+    "basis": "Assumed range",
+    "description": "Share of the private-seat plan filled before checking uptake. The reported 2025 completion rate was 60.4%."
+  },
+  {
+    "id": "v5_population_draws",
+    "name": "How synthetic pupils and wealth are generated",
+    "group": "Population and household resources",
+    "model": "Original Guangzhou model",
+    "value": "Normal zone and individual wealth draws",
+    "range": "Fixed distribution form",
+    "basis": "Synthetic population",
+    "description": "Pupils are assigned uniformly to junior zones. Household log wealth adds a zone component, an independent normal residual and a nonlocal shift. No pupil microdata are fitted."
+  },
+  {
+    "id": "v5_income_dispersion",
+    "name": "Wealth-to-income multiplier",
+    "group": "Population and household resources",
+    "model": "Original Guangzhou model",
+    "value": "0.70 on log wealth",
+    "range": "Fixed",
+    "basis": "Assumed distribution",
+    "description": "Annual income is the reference value times exp(0.7 × log wealth). Household assets and cash buffers are omitted."
+  },
+  {
+    "id": "v5_talent_draw",
+    "name": "How starting ability is generated",
+    "group": "Population and household resources",
+    "model": "Original Guangzhou model",
+    "value": "Wealth component plus independent normal residual",
+    "range": "Fixed distribution form",
+    "basis": "Synthetic population",
+    "description": "Latent ability includes TAL_WEALTH times log wealth and a scaled residual. It is unobserved in the real school records. Noncognitive skill shares an ability residual so joint correlations can be constructed."
+  },
+  {
+    "id": "v5_junior_teacher",
+    "name": "Junior teacher assignments by registration",
+    "group": "School learning",
+    "model": "Original Guangzhou model",
+    "value": "Assigned school-class draw for locals; separate draw for nonlocals",
+    "range": "Fixed mechanism",
+    "basis": "Stylized institutional assumption",
+    "description": "Locals share a class-level teacher effect; nonlocals receive separate draws centered at minus the modeled penalty. Real schools use more varied arrangements."
+  },
+  {
+    "id": "v5_early_learning",
+    "name": "How the early head start is built",
+    "group": "School learning",
+    "model": "Original Guangzhou model",
+    "value": "Junior teacher + home contribution + early tutoring",
+    "range": "Common fade rate in saved runs",
+    "basis": "Additive learning model",
+    "description": "Starting test skill is initial talent plus the modeled head start. The exam adds independent Gaussian noise. One fade rate applies to all three sources of early advantage."
+  },
+  {
+    "id": "v5_pre_tutoring",
+    "name": "Early tutoring rule in the original model",
+    "group": "Tutoring and household choices",
+    "model": "Original Guangzhou model",
+    "value": "Clipped wealth-weighted probability",
+    "range": "Fixed shape; scale and restriction vary",
+    "basis": "Assumed demand response",
+    "description": "Before enforcement the probability is PRE_SHARE × 2 × wealth rank, clipped at one. The cut is BAN_RED × (1 + BAN_GRAD × (1 − 2 × wealth rank)), clipped between zero and one."
+  },
+  {
+    "id": "v5_school_assignment",
+    "name": "Public and private high-school allocation",
+    "group": "School access and hukou",
+    "model": "Original Guangzhou model",
+    "value": "Public ordering by entrance score under nonlocal quota",
+    "range": "Stylized or roster variant",
+    "basis": "Stylized institutional rule",
+    "description": "In the stylized model, high-scoring nonlocals blocked by the public quota can buy a private place if affordable, else exit. The roster variant allows families that meet the threshold to compete for finite private places. Remaining pupils do not enter the academic track."
+  },
+  {
+    "id": "v5_quota_assignment",
+    "name": "Who gets school-based selective places",
+    "group": "School access and hukou",
+    "model": "Original Guangzhou model",
+    "value": "Local academic pupils above a cohort-wide minimum",
+    "range": "Fixed allocation rule",
+    "basis": "2026 policy-inspired approximation",
+    "description": "The school-based pool is divided proportionally across junior schools using their eligible academic pupils, rounded and filled by score. Open admission uses the remaining seats and separate nonlocal cap. Actual criteria vary."
+  },
+  {
+    "id": "v5_tiers",
+    "name": "High-school sorting and school premiums",
+    "group": "School learning",
+    "model": "Original Guangzhou model",
+    "value": "Twice regular added value in selective public schools",
+    "range": "Fixed multiplier and assignment order",
+    "basis": "Assumed school-effect shape",
+    "description": "Pupils are assigned by score order to selective, regular public and private schools. Private pupils get no public-school value-added term in this construction."
+  },
+  {
+    "id": "v5_stages",
+    "name": "Teacher and peer advantage across two stages",
+    "group": "School learning",
+    "model": "Original Guangzhou model",
+    "value": "Half the cumulative premium per stage",
+    "range": "Fixed schedule",
+    "basis": "Literature-motivated approximation",
+    "description": "Stage 1 and stage 2 each give half of the cumulative teaching and peer premium to pupils in that stage’s top band. A pupil in both receives the full cumulative amount."
+  },
+  {
+    "id": "v5_later_learning",
+    "name": "How later skill is assembled",
+    "group": "School learning",
+    "model": "Original Guangzhou model",
+    "value": "Retained head start + talent-related growth + school terms",
+    "range": "Fixed additive form",
+    "basis": "Model structure",
+    "description": "School value added and class effects are added to initial talent, the retained early advantage and talent-related growth. The optional noncognitive term appears only in senior high school."
+  },
+  {
+    "id": "v5_teacher_table",
+    "name": "Separate school-by-class teacher effects",
+    "group": "School learning",
+    "model": "Original Guangzhou model",
+    "value": "1,000 draws per school-stage table",
+    "range": "Fixed computational ceiling",
+    "basis": "Paired random design",
+    "description": "Class-level teacher draws use stable school-class indices. Without re-banding, the first-stage class and teacher draws carry forward."
+  },
+  {
+    "id": "v5_tail_demand",
+    "name": "Which academic pupils are likelier to seek tutoring",
+    "group": "Tutoring and household choices",
+    "model": "Original Guangzhou model",
+    "value": "2× below the 20th or above the 80th skill percentile; 0.5× between",
+    "range": "Fixed rule",
+    "basis": "Assumed demand shape",
+    "description": "Multiplies these skill weights by 0.5 + family wealth rank. Demand also responds to a positive gap between family wealth rank and pupil skill rank. Nonacademic pupils are excluded."
+  },
+  {
+    "id": "v5_peer_tutoring",
+    "name": "Feedback from classmates’ demand",
+    "group": "Tutoring and household choices",
+    "model": "Original Guangzhou model",
+    "value": "One round of feedback",
+    "range": "Fixed number of rounds",
+    "basis": "Assumed behavior",
+    "description": "Final uptake probabilities depend on average predicted classmate uptake. They are clipped to a probability range. This is not a market equilibrium."
+  },
+  {
+    "id": "v5_legacy_fulltime",
+    "name": "Who takes full-time outside schooling in the original model",
+    "group": "Tutoring and household choices",
+    "model": "Original Guangzhou model",
+    "value": "Academic pupils below median academic skill and price below half of income",
+    "range": "Fixed eligibility; target varies",
+    "basis": "Stylized affordability and selection",
+    "description": "Draw randomly among eligible candidates up to the target. Their final school teacher and peer terms are replaced by a full-time learning term. The legacy rules can still count term and holiday episodes."
+  },
+  {
+    "id": "v5_art_selection",
+    "name": "Art route selection",
+    "group": "Alternative university routes",
+    "model": "Original Guangzhou model",
+    "value": "Weight = wealth rank squared × (1.5 − skill rank)",
+    "range": "Fixed weights",
+    "basis": "Assumed route proxy",
+    "description": "Sample within the academic track after the joint-exam selection. Pupils receive at most one route bonus, applied to the effective exam ranking."
+  },
+  {
+    "id": "v5_joint_selection",
+    "name": "Hong Kong Macao Taiwan joint-exam selection",
+    "group": "Alternative university routes",
+    "model": "Original Guangzhou model",
+    "value": "Academic pupils above the 70th wealth percentile",
+    "range": "Fixed pool",
+    "basis": "Assumed route proxy",
+    "description": "The sampled joint-exam route is a proxy. Actual citizenship, exam eligibility and separately allocated capacities are not implemented."
+  },
+  {
+    "id": "v5_university_capacity",
+    "name": "Selective university outcome",
+    "group": "Outcomes and comparisons",
+    "model": "Original Guangzhou model",
+    "value": "10% of the full cohort, filled from the academic track",
+    "range": "Fixed target; 4,000 in 40,000 principal cohorts",
+    "basis": "Modeled selection outcome",
+    "description": "Admission is based on final effective score. The original code admits all tied at the cutoff, and the principal sweep tests capacity. Alternative routes change who enters the pool."
+  },
+  {
+    "id": "v5_subsidy",
+    "name": "Government subsidy accounting proxy",
+    "group": "Outcomes and comparisons",
+    "model": "Original Guangzhou model",
+    "value": "Six primary, three junior, and three senior years",
+    "range": "Fixed yuan amounts",
+    "basis": "Accounting assumption",
+    "description": "Primary local/nonlocal ¥19,600/¥5,000 annually; junior ¥32,100/¥6,000; senior public academic ¥41,500, other modeled school route ¥38,400, private or exit ¥0. Subsidies do not affect admissions."
+  },
+  {
+    "id": "v5_legacy_spending",
+    "name": "Original five-year spending proxy",
+    "group": "Outcomes and comparisons",
+    "model": "Original Guangzhou model",
+    "value": "¥45,000 early, ¥35,080 senior term, ¥20,000 senior holiday, twice annual full-time fee",
+    "range": "Fixed unit costs",
+    "basis": "Accounting assumption",
+    "description": "Multiply each participation indicator by this amount and add. Assumes early purchases for three years and senior purchases for two years. This differs from the annual revised choice model."
+  },
+  {
+    "id": "v5_strata",
+    "name": "Who counts as poorer, richer and high ability",
+    "group": "Outcomes and comparisons",
+    "model": "Original Guangzhou model",
+    "value": "Local wealth bottom/top 40% or 10%; full cohort top 5%, 10% or 20% of latent talent",
+    "range": "Saved analysis groupings",
+    "basis": "Outcome definitions",
+    "description": "The conditional opportunity rate is a university proxy among these pupils. Local registration and latent starting ability are explicit analytical restrictions."
+  },
+  {
+    "id": "v5_ratios",
+    "name": "Definitions of the three wealth comparisons",
+    "group": "Outcomes and comparisons",
+    "model": "Original Guangzhou model",
+    "value": "Rich-to-poor admission rates within comparable groups",
+    "range": "Score and ability bins; joint support reported",
+    "basis": "Outcome definitions",
+    "description": "Score and ability comparisons average rates within 10 bins in the corresponding top quintile. Joint comparison uses five score by five ability bins within the top score quintile; retain cells with at least five rich and five poor pupils and report pooled support."
+  },
+  {
+    "id": "v5_rank_bands",
+    "name": "Rank bands for the displacement experiment",
+    "group": "Outcomes and comparisons",
+    "model": "Original Guangzhou model",
+    "value": "Top 1%, 1–5%, 5–10%, 10–25%, 25–50%, lower academic, nonacademic",
+    "range": "Fixed bands",
+    "basis": "Outcome definition",
+    "description": "Ranks use the full simulated cohort and final effective score. A move down a band does not necessarily mean losing university proxy admission."
+  },
+  {
+    "id": "v5_design",
+    "name": "Principal sampling design",
+    "group": "Simulation design and sensitivity",
+    "model": "Original Guangzhou model",
+    "value": "1,024 independent parameter settings, 40,000 pupils each",
+    "range": "32 uniformly sampled independent inputs",
+    "basis": "Sensitivity design",
+    "description": "Ranges define the design rather than empirical probability distributions for Guangzhou. The experiment uses matched exam and cohort draws for paired contrasts."
+  },
+  {
+    "id": "v5_switches",
+    "name": "What changes in the restriction and class-policy contrasts",
+    "group": "Simulation design and sensitivity",
+    "model": "Original Guangzhou model",
+    "value": "Combined and isolated policy comparisons",
+    "range": "Saved discrete scenarios",
+    "basis": "Counterfactual design",
+    "description": "The combined arm changes both early tutoring restriction and later class re-banding. The isolated arm changes only early tutoring restriction. Neither estimates a causal effect of Double Reduction."
+  },
+  {
+    "id": "v5_campus_assumptions",
+    "name": "School roster data and policy ranges",
+    "group": "School access and hukou",
+    "model": "Original Guangzhou model",
+    "value": "216 campuses; 104,584 compiled places versus 101,720 reported",
+    "range": "216 rows and 61 imputed cutoffs",
+    "basis": "Provisional administration inputs",
+    "description": "Uses observed cutoff ordering where available and ownership medians where missing. Principal ranges include school-quota values below 50% and nonlocal cap values above some cited 2026 district limits."
+  },
+  {
+    "id": "v5_era",
+    "name": "Approximate 2000 and 2017 scenarios",
+    "group": "Simulation design and sensitivity",
+    "model": "Original Guangzhou model",
+    "value": "2026 institutions held fixed; selected take-up, bedding and place settings changed",
+    "range": "512 matched draws",
+    "basis": "Scenario design",
+    "description": "These sensitivity runs use the same school roster, policies and final university proxy capacity across eras. Circa 2000 academic places vary between 20% and 43% of the cohort."
+  },
+  {
+    "id": "v5_scope",
+    "name": "Excluded long-run outcomes and household costs",
+    "group": "Outcomes and comparisons",
+    "model": "Original Guangzhou model",
+    "value": "University outcome proxy ends the main model",
+    "range": "Fixed scope",
+    "basis": "Model boundary",
+    "description": "Vocational education quality, employment, tuition and dorm costs for public high school, and non-monetary costs of long boarding days are excluded."
+  },
+  {
+    "id": "name",
+    "name": "Scenario identifier",
+    "group": "Simulation design and sensitivity",
+    "model": "Revised tutoring choice",
+    "value": "main",
+    "range": "Saved case names from 40 revised arms",
+    "basis": "Saved experiment design",
+    "description": "Each saved run has its own named scenario. The central case uses middle grades and a 0.18 SD gain and belief reference."
+  },
+  {
+    "id": "junior_period",
+    "name": "Grade 9 market context",
+    "group": "Tutoring and household choices",
+    "model": "Revised tutoring choice",
+    "value": "After policy",
+    "range": "Before or after policy",
+    "basis": "Survey-informed scenario",
+    "description": "The two contexts have different annual purchase intercepts. Comparing contexts does not isolate a policy effect."
+  },
+  {
+    "id": "junior_level",
+    "name": "Grade 9 annual participation target",
+    "group": "Tutoring and household choices",
+    "model": "Revised tutoring choice",
+    "value": "Middle",
+    "range": "Low, middle, high",
+    "basis": "Survey-informed scenario",
+    "description": "After-policy targets are 15%, 25%, 35%; before-policy targets 35%, 45%, 55%. These are model targets for a held-out pilot, not city estimates."
+  },
+  {
+    "id": "senior_level",
+    "name": "Grade 11 annual participation target",
+    "group": "Tutoring and household choices",
+    "model": "Revised tutoring choice",
+    "value": "Middle",
+    "range": "Low, middle, high",
+    "basis": "Exploratory target bracket",
+    "description": "Targets among academic-track pupils are 20%, 30%, 40%. This target is independent of the Grade 9 policy scenario."
+  },
+  {
+    "id": "gain",
+    "name": "Realized tutoring gain",
+    "group": "Tutoring and household choices",
+    "model": "Revised tutoring choice",
+    "value": "0.18 SD",
+    "range": "0, 0.08, 0.18, 0.39, 0.75, 1.00 SD",
+    "basis": "Literature-informed sensitivity",
+    "description": "Expected mean true gain before dose, quality and pupil response. The 0.75 and 1.00 SD scenarios stress the response. Published anchors use other settings and populations."
+  },
+  {
+    "id": "signal",
+    "name": "Public expectation of tutoring gains",
+    "group": "Tutoring and household choices",
+    "model": "Revised tutoring choice",
+    "value": "0.18 SD",
+    "range": "0, 0.08, 0.18, 0.39, 0.75, 1.00 SD",
+    "basis": "Behavioral sensitivity",
+    "description": "The shared signal enters perception alongside format-specific noise and a common prior. It can vary independently from the realized gain."
+  },
+  {
+    "id": "junior_gain",
+    "name": "Grade 9 realized gain override",
+    "group": "Tutoring and household choices",
+    "model": "Revised tutoring choice",
+    "value": "Use shared realized gain",
+    "range": "No override or 0.18 SD",
+    "basis": "Paired experimental control",
+    "description": "Keeps Grade 9 gain at the middle reference when isolating a Grade 11 learning change."
+  },
+  {
+    "id": "junior_signal",
+    "name": "Grade 9 belief signal override",
+    "group": "Tutoring and household choices",
+    "model": "Revised tutoring choice",
+    "value": "Use shared signal",
+    "range": "No override or 0.18 SD",
+    "basis": "Paired experimental control",
+    "description": "Keeps Grade 9 beliefs at the middle reference when isolating a Grade 11 expectation change."
+  },
+  {
+    "id": "budget_share",
+    "name": "Share of household income available for tutoring",
+    "group": "Population and household resources",
+    "model": "Revised tutoring choice",
+    "value": "20%",
+    "range": "10%, 20%, 40%, 80%",
+    "basis": "Assumed annual affordability rule",
+    "description": "One annual cutoff for a pupil’s chosen package across seasons. The model does not deduct rent, food and other expenses or model borrowing, siblings, assets or carryover."
+  },
+  {
+    "id": "part_price",
+    "name": "Part-time fee multiplier",
+    "group": "Tutoring and household choices",
+    "model": "Revised tutoring choice",
+    "value": "1×",
+    "range": "0.60×, 1×, 1.50×",
+    "basis": "Assumed fee sensitivity",
+    "description": "Scales the assumed ¥110 hourly group and ¥250 hourly individual prices at a given quality scenario."
+  },
+  {
+    "id": "full_group_price",
+    "name": "Full-time small-group annual price",
+    "group": "Tutoring and household choices",
+    "model": "Revised tutoring choice",
+    "value": "¥140,000",
+    "range": "¥120,000, ¥140,000, ¥160,000",
+    "basis": "Illustrative price sensitivity",
+    "description": "Cost of the term-only replacement option, corresponding to ¥60,000–¥80,000 per semester."
+  },
+  {
+    "id": "premium_price",
+    "name": "Premium one-to-one annual price",
+    "group": "Tutoring and household choices",
+    "model": "Revised tutoring choice",
+    "value": "¥1,200,000",
+    "range": "¥1,000,000, ¥1,200,000, ¥1,600,000",
+    "basis": "Illustrative price sensitivity",
+    "description": "The reference extends ¥100,000 a month across twelve months. Lower stress prices use ten months. Several premium arms combine price with the 80% budget assumption."
+  },
+  {
+    "id": "premium_quality",
+    "name": "Premium quality multiplier",
+    "group": "Tutoring and household choices",
+    "model": "Revised tutoring choice",
+    "value": "1×",
+    "range": "1× or 1.5×",
+    "basis": "Assumed sensitivity",
+    "description": "Scales both perceived and realized package effects for premium tutoring. Its distance from average tutoring quality is unmeasured."
+  },
+  {
+    "id": "group_quality",
+    "name": "Part-time group quality multiplier",
+    "group": "Tutoring and household choices",
+    "model": "Revised tutoring choice",
+    "value": "1×",
+    "range": "2/3× or 1×",
+    "basis": "Assumed sensitivity",
+    "description": "A two-thirds arm proxies a larger-class quality penalty. The model has no observed relationship between group size and benefit."
+  },
+  {
+    "id": "access",
+    "name": "Provider availability multiplier",
+    "group": "Tutoring and household choices",
+    "model": "Revised tutoring choice",
+    "value": "1×",
+    "range": "0×, 0.50×, 1×, 1.15×",
+    "basis": "Assumed access sensitivity",
+    "description": "Multiplies season- and format-specific supplier probabilities. No access is a paired control."
+  },
+  {
+    "id": "hours",
+    "name": "Weekly part-time package multiplier",
+    "group": "Tutoring and household choices",
+    "model": "Revised tutoring choice",
+    "value": "1×",
+    "range": "1× or 1.5×",
+    "basis": "Assumed dosage sensitivity",
+    "description": "Raises hours, price and the minimum usable time window together. Weekly defaults are two hours for group and one-and-a-half for individual."
+  },
+  {
+    "id": "board_term",
+    "name": "Boarders’ weekly usable term time",
+    "group": "School access and hukou",
+    "model": "Revised tutoring choice",
+    "value": "1 hour",
+    "range": "1 or 3 hours",
+    "basis": "Assumed time-window scenario",
+    "description": "Shorter windows prevent booking a package that requires a larger block. Day pupils have a fixed four-hour modeled window."
+  },
+  {
+    "id": "boarding_rule",
+    "name": "Grade 11 boarding allocation rule",
+    "group": "School access and hukou",
+    "model": "Revised tutoring choice",
+    "value": "Random among academic-track pupils",
+    "range": "Random or ranked by entrance score",
+    "basis": "Assumed allocation sensitivity",
+    "description": "Selects the same 78% share under each rule. Grade 9 boarding remains a random 12%."
+  },
+  {
+    "id": "ses_coef",
+    "name": "Direct effect of wealth rank on tutoring preference",
+    "group": "Tutoring and household choices",
+    "model": "Revised tutoring choice",
+    "value": "0.60 utility units",
+    "range": "−0.60, 0, 0.60, 1.20",
+    "basis": "Assumed behavioral sensitivity",
+    "description": "Adds the coefficient times the difference between household wealth rank and 0.5. Zero leaves the affordability channel and all other covariates in place."
+  },
+  {
+    "id": "force_none",
+    "name": "Force no tutoring purchases",
+    "group": "Tutoring and household choices",
+    "model": "Revised tutoring choice",
+    "value": "No",
+    "range": "On or off",
+    "basis": "Paired comparison control",
+    "description": "If enabled every household chooses the no-purchase option. Ordinary school inputs are retained."
+  },
+  {
+    "id": "decay",
+    "name": "Share of Grade 9 learning gains that fades",
+    "group": "School learning",
+    "model": "Revised tutoring choice",
+    "value": "50%",
+    "range": "10%, 50%, 80%",
+    "basis": "Assumed persistence sensitivity",
+    "description": "Uses the original fade mechanism with paired no-tutoring controls. The carried Grade 9 tutoring term fades with other early inputs."
+  },
+  {
+    "id": "choice_snapshots",
+    "name": "Grades and populations modeled",
+    "group": "Simulation design and sensitivity",
+    "model": "Revised tutoring choice",
+    "value": "Grade 9 and Grade 11",
+    "range": "Fixed grade snapshots",
+    "basis": "Experimental design",
+    "description": "Grade 9 covers the full incoming cohort. Grade 11 covers the academic track after high-school placement, including public and private academic schools. Other routes remain in the full-cohort denominator."
+  },
+  {
+    "id": "choice_menu",
+    "name": "Annual tutoring formats and seasons",
+    "group": "Tutoring and household choices",
+    "model": "Revised tutoring choice",
+    "value": "None, part-time group, part-time individual, full-time small group, premium one-to-one",
+    "range": "Full-time available only in Grade 11",
+    "basis": "Model structure",
+    "description": "Part-time packages can combine any nonempty group of three seasons, within one format. Both full-time modes are term-only and cannot coexist with another package."
+  },
+  {
+    "id": "choice_weeks",
+    "name": "Number of modeled weeks per season",
+    "group": "Tutoring and household choices",
+    "model": "Revised tutoring choice",
+    "value": "36 term, 6 summer, 2 winter",
+    "range": "Fixed",
+    "basis": "Assumed calendar",
+    "description": "These modeled seasons build annual amounts. Participation is the union of the seasonal indicators."
+  },
+  {
+    "id": "choice_base_hours",
+    "name": "Part-time weekly package sizes",
+    "group": "Tutoring and household choices",
+    "model": "Revised tutoring choice",
+    "value": "2 hours group, 1.5 hours individual",
+    "range": "Scaled by weekly package multiplier",
+    "basis": "Assumed delivery model",
+    "description": "Each selected season requires enough weekly time for the whole package. The price is per hour × weekly hours × weeks booked."
+  },
+  {
+    "id": "choice_base_prices",
+    "name": "Part-time baseline prices",
+    "group": "Tutoring and household choices",
+    "model": "Revised tutoring choice",
+    "value": "¥110/hour group, ¥250/hour individual",
+    "range": "Scaled by part-time fee multiplier",
+    "basis": "Assumed reference prices",
+    "description": "All prices describe hypothetical packages. There is no modeled supply curve or firm response to demand."
+  },
+  {
+    "id": "choice_board_shares",
+    "name": "Modeled boarding prevalence",
+    "group": "School access and hukou",
+    "model": "Revised tutoring choice",
+    "value": "12% Grade 9, 78% Grade 11 academic",
+    "range": "Fixed shares; alternative G11 allocation rule",
+    "basis": "Assumed population",
+    "description": "Grade 9 status is independently drawn for each pupil. Academic Grade 11 seats are allocated by sampled random keys or entrance rank."
+  },
+  {
+    "id": "choice_windows",
+    "name": "Time windows by term and holiday",
+    "group": "School access and hukou",
+    "model": "Revised tutoring choice",
+    "value": "Day 4/12/8 hours; boarder 1/8/6 hours per week",
+    "range": "Boarding term can expand to 3 hours",
+    "basis": "Assumed time windows",
+    "description": "Numbers are ordered term/summer/winter. A package fits only if each of its booked seasons has enough time. Full-time options replace the school day and bypass this after-school window."
+  },
+  {
+    "id": "choice_availability",
+    "name": "Seasonal seller probabilities",
+    "group": "Tutoring and household choices",
+    "model": "Revised tutoring choice",
+    "value": "Group G9 85%/92%/88%; G11 87%/94%/90%",
+    "range": "Individual 10 percentage points below group; clipped after multiplier",
+    "basis": "Assumed supply availability",
+    "description": "Term/summer/winter probability is matched by season and format. Full-time base access is 30% small group and 20% premium among affordable eligible households."
+  },
+  {
+    "id": "choice_beliefs",
+    "name": "How families form effectiveness expectations",
+    "group": "Tutoring and household choices",
+    "model": "Revised tutoring choice",
+    "value": "70% current signal + 30% prior of 0.08 SD + normal noise",
+    "range": "Format-level noise SD 0.065; truncated at zero",
+    "basis": "Assumed within-model cognition",
+    "description": "Families see prior performance signals and first-year band, with noise. Future pupil-specific outcomes are unavailable to their choice decision."
+  },
+  {
+    "id": "choice_preference",
+    "name": "Expected learning, price and time in package utility",
+    "group": "Tutoring and household choices",
+    "model": "Revised tutoring choice",
+    "value": "4 × expected net learning − 4 × cost/income",
+    "range": "Fixed utility weights",
+    "basis": "Assumed behavioral coefficients",
+    "description": "Adds a tail/remediation preference, wealth-rank preference, season taste and format preference relative to no tutoring. Deducts 0.0015 × annual hours for part-time; 0.25 for full-time group and 0.40 for premium."
+  },
+  {
+    "id": "choice_preference_tails",
+    "name": "Remediation and extension preferences",
+    "group": "Tutoring and household choices",
+    "model": "Revised tutoring choice",
+    "value": "0.25 × 2 × distance from middle skill rank + 0.14 × positive wealth-achievement gap",
+    "range": "Fixed preference shape",
+    "basis": "Assumed behavior",
+    "description": "Demand can rise for pupils at either end of the prior achievement distribution. The wealth-achievement term applies only when family wealth rank exceeds the pupil’s skill rank."
+  },
+  {
+    "id": "choice_preference_noise",
+    "name": "Random tastes and prior score signals",
+    "group": "Tutoring and household choices",
+    "model": "Revised tutoring choice",
+    "value": "Format Gumbel scale 0.55; season normal SD 0.12; prior score normal SD 0.25",
+    "range": "Fixed distributions",
+    "basis": "Assumed heterogeneity",
+    "description": "Season tastes add over selected periods. A household chooses the best feasible package only if its utility plus the grade-level intercept is positive relative to no purchase."
+  },
+  {
+    "id": "choice_displacement",
+    "name": "Expected and realized school displacement",
+    "group": "School learning",
+    "model": "Revised tutoring choice",
+    "value": "100% of current teacher/peer inputs replaced by either full-time format",
+    "range": "No current school displacement for part-time",
+    "basis": "Choice and score-accounting structure",
+    "description": "Families anticipate 0.05 school units plus 0.16 for a first-year top-band pupil, then normalize to the no-tutoring score scale. Accounting subtracts the actual modeled current teacher and peer terms. Enrollment, earlier school input, placements and other routes remain."
+  },
+  {
+    "id": "choice_dose",
+    "name": "How tutoring hours become a learning dose",
+    "group": "Tutoring and household choices",
+    "model": "Revised tutoring choice",
+    "value": "Part-time annual hours ÷ 88, capped at 1.5×; full-time dose 1×",
+    "range": "Hours and format-quality scenarios",
+    "basis": "Assumed response shape",
+    "description": "Package prices and schedule account for all chosen hours. Realized gross effects use the matched no-tutoring score scale. Grade 9 scale uses all pupils and Grade 11 scale uses academic-track pupils."
+  },
+  {
+    "id": "choice_realized_noise",
+    "name": "Pupil-level variation in realized gains",
+    "group": "Tutoring and household choices",
+    "model": "Revised tutoring choice",
+    "value": "Mean-preserving exp(0.30 × standard-normal draw − 0.045)",
+    "range": "Fixed multiplier distribution",
+    "basis": "Assumed heterogeneity",
+    "description": "Multiply the reference gain by dose, format quality, matched scale and unseen pupil-level realization. A zero true gain can still leave a negative net shift in full-time replacement."
+  },
+  {
+    "id": "choice_brackets",
+    "name": "Annual participation brackets",
+    "group": "Tutoring and household choices",
+    "model": "Revised tutoring choice",
+    "value": "Grade 9 pre 25–40%, 40–50%, 50–65%; post 8–20%, 20–30%, 30–42%; G11 academic 12–25%, 25–35%, 35–50%",
+    "range": "Reference bands are fixed; observed results vary across matched seeds",
+    "basis": "Survey-informed scenario design",
+    "description": "The Grade 9 brackets use descriptive research as context. Grade 11 brackets are independently stipulated. These are assumed ranges rather than named surveys’ city-grade estimates."
+  },
+  {
+    "id": "choice_intercepts",
+    "name": "Participation intercepts by modeled grade and context",
+    "group": "Tutoring and household choices",
+    "model": "Revised tutoring choice",
+    "value": "g9_pre: -1.1007, -0.8598, -0.6012; g9_post: -1.7553, -1.4000, -1.1007; g11: -1.4904, -1.1834, -0.8939",
+    "range": "Low, middle and high per context",
+    "basis": "Fitted to synthetic pilot only",
+    "description": "Intercepts come from the price-adjusted best-offer utility distribution for 8,000 pilot pupils, seed 472001. They were frozen before eight definitive cohorts."
+  },
+  {
+    "id": "choice_matched_design",
+    "name": "Matched tutoring-choice experiment",
+    "group": "Simulation design and sensitivity",
+    "model": "Revised tutoring choice",
+    "value": "40 settings, eight 40,000-pupil seeds, 2201–2208",
+    "range": "336 result rows including two legacy benchmarks",
+    "basis": "Saved paired computations",
+    "description": "Each contrast shares pupil population and random draws where applicable. Seeds and grade differentiate latent choice streams. The 40 study settings do not span every combination."
+  },
+  {
+    "id": "choice_frozen_comparison",
+    "name": "Fixed-placement effect of removing tutoring",
+    "group": "Outcomes and comparisons",
+    "model": "Revised tutoring choice",
+    "value": "Family wealth at or above local 60th percentile",
+    "range": "Net or gross subtraction saved",
+    "basis": "Mechanism comparison",
+    "description": "Schools, class assignment, academic enrollment and exam-route bonuses stay fixed. The net version restores any displaced current school inputs."
+  },
+  {
+    "id": "choice_budget_boundary",
+    "name": "Household budgets and the limits of the price sensitivity",
+    "group": "Population and household resources",
+    "model": "Revised tutoring choice",
+    "value": "One income-based cap per pupil and modeled year",
+    "range": "Assumed cap and synthetic income distribution",
+    "basis": "Model boundary",
+    "description": "Actual available cash, taxes, essential spending, credit, scholarships, siblings and multi-year financial decisions are excluded."
+  }
+]
